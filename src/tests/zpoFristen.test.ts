@@ -119,4 +119,15 @@ describe('ZPO-Fristenrechner (Art. 142–147 ZPO)', () => {
     expect(r.diesAdQuem).toBe('16.04.2025');
     expect(r.warnungen.some((w) => w.includes('[UMSTRITTEN]'))).toBe(true);
   });
+
+  // Art. 145 Abs. 3 ZPO (BGE 139 III 78): fehlt der Hinweis im summarischen Verfahren,
+  // gilt der Stillstand gleichwohl → Frist endet später.
+  it('Summarisch ohne Gerichtshinweis (Art. 145 Abs. 3) → Stillstand gilt → späteres Ende', () => {
+    const mitHinweis = berechneFrist(base({ ereignis: '2025-07-10', einheit: 'tage', laenge: 10, verfahren: 'summarisch', gerichtshinweisStillstand: true }));
+    const ohneHinweis = berechneFrist(base({ ereignis: '2025-07-10', einheit: 'tage', laenge: 10, verfahren: 'summarisch', gerichtshinweisStillstand: false }));
+    expect(mitHinweis.diesAdQuem).not.toBe(ohneHinweis.diesAdQuem);
+    expect(mitHinweis.diesAdQuem).toContain('.07.');   // ohne Stillstand: noch im Juli
+    expect(ohneHinweis.diesAdQuem).toContain('.08.');  // mit Stillstand: erst nach dem Sommerstillstand
+    expect(ohneHinweis.rechenweg.some((s) => s.beschreibung.includes('Art. 145 Abs. 3'))).toBe(true);
+  });
 });

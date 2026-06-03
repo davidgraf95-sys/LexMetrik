@@ -58,9 +58,20 @@ export type KtgKriterien = {
   schriftlichVereinbart?: boolean;            // Gültigkeitsvoraussetzung (Art. 324a Abs. 4 OR)
 };
 
+// Verhinderungsgrund (Art. 324a Abs. 1 / Art. 324b OR) – steuert die Koordination
+// mit obligatorischen Versicherungen.
+export type Verhinderungsgrund =
+  | 'krankheit'        // 324a (ohne obligat. Versicherung; ausser gleichwertige KTG Abs. 4)
+  | 'unfall'           // 324b / UVG: 80% ab 3. Tag, AG trägt 2 Karenztage
+  | 'schwangerschaft'  // 324a Abs. 3 (gleicher Umfang); nach Niederkunft EOG
+  | 'dienst'           // 324b / EO: Militär-/Zivil-/Schutzdienst
+  | 'amt'              // öffentliches Amt; Entschädigung anrechenbar
+  | 'uebrige';         // übrige persönliche Gründe (Art. 329 Abs. 3 OR)
+
 export type LohnfortzahlungInput = {
   vertragsbeginn: string;           // yyyy-MM-dd (= tatsächliche Arbeitsaufnahme)
   verhinderungBeginn: string;       // yyyy-MM-dd (Stichtag A)
+  verhinderungsgrund?: Verhinderungsgrund; // default 'krankheit'
   verhinderungEnde?: string;        // yyyy-MM-dd, optional — für DJ-übergreifende Verhinderung (§2.1)
   arbeitsunfaehigkeitProzent: number; // 1–100, bezogen auf die geschuldete Arbeitsleistung
   pensumProzent?: number;           // Beschäftigungsgrad 1–100 (§2.3), default 100
@@ -96,7 +107,8 @@ export type SperrereignisTyp =
   | 'krankheit_unfall'
   | 'schwangerschaft'
   | 'militaer_zivil'
-  | 'hilfsaktion';
+  | 'hilfsaktion'
+  | 'betreuungsurlaub';
 
 export type Sperrereignis = {
   typ: SperrereignisTyp;

@@ -1,5 +1,18 @@
-import { parseISO, addDays, differenceInDays, isAfter, isBefore, isEqual, endOfMonth, subMonths } from 'date-fns';
+import { parseISO, addDays, addMonths, differenceInDays, isAfter, isBefore, isEqual, endOfMonth, subMonths, format } from 'date-fns';
 import type { SperrfristenInput, Sperrereignis, Berechnungsergebnis, Normverweis } from '../types/legal';
+
+// Reicheres Ergebnis: strukturierte Beendigung bzw. – bei Nichtigkeit – das Datum,
+// ab dem frühestens neu gekündigt werden kann.
+export type SperrfristenErgebnis = Berechnungsergebnis & {
+  beendigungISO?: string;              // gültige Beendigung (yyyy-MM-dd)
+  zugangISO?: string;
+  gehemmtTage?: number;
+  sperrfristEndeISO?: string;          // Ende der massgebenden Sperrfrist (bei Nichtigkeit)
+  fruehesteNeueKuendigungISO?: string; // bei Nichtigkeit: ab hier neu kündbar
+  sperrIntervalle?: { von: string; bis: string; typ: string }[]; // für die Zeitstrahl-Grafik
+};
+
+const iso = (d: Date) => format(d, 'yyyy-MM-dd');
 import {
   berechneDienstjahr,
   formatDatum,
@@ -124,6 +137,21 @@ function berechneSperrfristIntervall(
         normen: [N_336c_1],
       };
     }
+
+    case 'betreuungsurlaub': {
+      // Art. 329i OR: zeitlicher Kündigungsschutz solange Anspruch, längstens 6 Monate
+      // ab Beginn der Rahmenfrist.
+      const maxEnde = addMonths(von, 6);
+      const ende = isBefore(bis, maxEnde) ? bis : maxEnde;
+      return {
+        von,
+        bis: ende,
+        beschreibung:
+          `Betreuungsurlaub (Art. 329i OR): zeitlicher Kündigungsschutz solange der Anspruch besteht, ` +
+          `längstens 6 Monate ab Beginn der Rahmenfrist. ${formatDatum(von)} – ${formatDatum(ende)}.`,
+        normen: [N_336c_1],
+      };
+    }
   }
 }
 
@@ -150,7 +178,7 @@ function unionIntervalle(ivs: Iv[]): Iv[] {
 
 // ─── Hauptberechnung ──────────────────────────────────────────────────────
 
-export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergebnis {
+export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErgebnis {
   const { kuendigendePartei, sperrereignisse = [] } = input;
 
   const rechenweg: Berechnungsergebnis['rechenweg'] = [];
@@ -175,6 +203,8 @@ export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergeb
       annahmen,
       warnungen,
       normverweise: [N_336c_1, ...kb.ergebnis.normverweise],
+      zugangISO: input.zugangKuendigung,
+      beendigungISO: kb.beendigungsdatum ? iso(kb.beendigungsdatum) : undefined,
     };
   }
 
@@ -196,6 +226,8 @@ export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergeb
       annahmen: [...kb.ergebnis.annahmen],
       warnungen,
       normverweise: [N_336c_1],
+      zugangISO: input.zugangKuendigung,
+      beendigungISO: kb.beendigungsdatum ? iso(kb.beendigungsdatum) : undefined,
     };
   }
 
@@ -210,6 +242,8 @@ export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergeb
     return {
       ...kb.ergebnis,
       rechenweg,
+      zugangISO: input.zugangKuendigung,
+      beendigungISO: kb.beendigungsdatum ? iso(kb.beendigungsdatum) : undefined,
     };
   }
 
@@ -219,6 +253,7 @@ export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergeb
   // ─── Sperrfrist-Intervalle berechnen (§1.3: Rückfall ohne eigene Frist) ───
 
   const intervalle: SperrfristIntervall[] = [];
+  const sperrIntervalle: { von: string; bis: string; typ: string }[] = [];
   sperrereignisse.forEach((e, i) => {
     if (e.gleicheUrsacheWieEreignis != null) {
       // §1.3 / BGE 120 II 124: Rückfall derselben Ursache → KEINE neue Sperrfrist.
@@ -233,6 +268,7 @@ export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergeb
     }
     const iv = berechneSperrfristIntervall(e, vb);
     intervalle.push(iv);
+    sperrIntervalle.push({ von: iso(iv.von), bis: iso(iv.bis), typ: e.typ });
     rechenweg.push({
       beschreibung: `Sperrereignis ${i + 1} – ${e.typ} (Art. 336c Abs. 1 OR)`,
       zwischenergebnis: iv.beschreibung,
@@ -249,23 +285,31 @@ export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergeb
   const waehrendSperrfrist = intervalle.find((iv) => istInIntervall(zugang, iv.von, iv.bis));
 
   if (waehrendSperrfrist) {
+    const fruehesteNeue = addDays(waehrendSperrfrist.bis, 1); // frühestens nach Ablauf der Sperrfrist
     rechenweg.push({
       beschreibung: 'C2 – Kündigung während Sperrfrist → NICHTIG (Art. 336c Abs. 2 OR)',
       zwischenergebnis:
         `Zugang der Kündigung (${formatDatum(zugang)}) fällt in die Sperrfrist ${formatDatum(waehrendSperrfrist.von)} – ${formatDatum(waehrendSperrfrist.bis)}. ` +
-        `Die Kündigung ist nichtig. Sie muss nach Ablauf der Sperrfrist unter Einhaltung der ordentlichen Kündigungsfrist wiederholt werden.`,
+        `Die Kündigung ist NICHTIG (sie entfaltet keine Wirkung). Das Arbeitsverhältnis dauert fort. ` +
+        `Die Kündigung muss nach Ablauf der Sperrfrist (Ende der geschützten Verhinderung), also frühestens am ${formatDatum(fruehesteNeue)}, ` +
+        `unter Einhaltung der ordentlichen Kündigungsfrist wiederholt werden.`,
       normen: [N_336c_2],
       rechtsprechung: [rechtsprechung('BGE_134_III_354')],
     });
     return {
       ergebnis:
-        `Kündigung NICHTIG: Zugang (${formatDatum(zugang)}) liegt in der Sperrfrist (${formatDatum(waehrendSperrfrist.von)} – ${formatDatum(waehrendSperrfrist.bis)}). ` +
-        `Nach Ablauf der Sperrfrist mit ordentlicher Frist neu kündigen.`,
+        `Kündigung NICHTIG – kein Beendigungsdatum. Der Zugang (${formatDatum(zugang)}) liegt in der Sperrfrist ` +
+        `(${formatDatum(waehrendSperrfrist.von)} – ${formatDatum(waehrendSperrfrist.bis)}); die Kündigung entfaltet keine Wirkung und das Arbeitsverhältnis besteht weiter. ` +
+        `Sie ist nach Ablauf der Sperrfrist/Verhinderung – frühestens am ${formatDatum(fruehesteNeue)} – mit ordentlicher Frist zu wiederholen.`,
       status: 'nichtig',
       rechenweg,
       annahmen,
       warnungen,
       normverweise: [N_336c_1, N_336c_2],
+      zugangISO: input.zugangKuendigung,
+      sperrfristEndeISO: iso(waehrendSperrfrist.bis),
+      fruehesteNeueKuendigungISO: iso(fruehesteNeue),
+      sperrIntervalle,
     };
   }
 
@@ -328,6 +372,10 @@ export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergeb
       annahmen,
       warnungen,
       normverweise: [N_336c_1, N_336c_2, N_336c_3, N_335c_1, ...kb.ergebnis.normverweise],
+      zugangISO: input.zugangKuendigung,
+      beendigungISO: iso(ende_ungehemmt),
+      gehemmtTage: 0,
+      sperrIntervalle,
     };
   }
 
@@ -373,5 +421,9 @@ export function berechneSperrfristen(input: SperrfristenInput): Berechnungsergeb
     annahmen,
     warnungen,
     normverweise: [N_336c_1, N_336c_2, N_336c_3, N_335c_1, ...kb.ergebnis.normverweise],
+    zugangISO: input.zugangKuendigung,
+    beendigungISO: iso(beendigungEndgueltig),
+    gehemmtTage: totalHemmungTage,
+    sperrIntervalle,
   };
 }

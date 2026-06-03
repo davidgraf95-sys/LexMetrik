@@ -37,8 +37,8 @@ export const CALCULATORS: Calculator[] = [
     kurzbeschrieb: 'Kündigungstermine und -fristen bei Wohn- und Geschäftsräumen.',
     normen: ['Wohn- & Geschäftsräume'], status: 'geplant', icon: 'house' },
   { slug: 'schkg-fristen', titel: 'Betreibungsfristen', kategorie: 'SchKG',
-    kurzbeschrieb: 'Fristen im Betreibungsverfahren inkl. Betreibungsferien.',
-    normen: ['SchKG'], status: 'geplant', icon: 'clipboard' },
+    kurzbeschrieb: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
+    normen: ['Art. 56/63 SchKG', 'Art. 145 ZPO'], status: 'geprüft', icon: 'clipboard' },
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {

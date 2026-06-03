@@ -1,37 +1,56 @@
 import { useState } from 'react';
-import { berechneVerzugszins } from '../../lib/verzugszins';
-import type { VerzugszinsInput, VerzugszinsMethode, SatzGrund, VerzugsgrundTyp, VerzugszinsErgebnis } from '../../lib/verzugszins';
+import { berechneVerzugszins, formatCHF } from '../../lib/verzugszins';
+import type {
+  VerzugszinsInput, VerzugszinsMethode, SatzGrund, VerzugsbeginnTyp, VerzugszinsErgebnis, VzEreignis,
+} from '../../lib/verzugszins';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
+import { VerzugszinsTimeline } from '../VerzugszinsTimeline';
+
+const VERZUGSZINS_DISCLAIMER =
+  'Automatisierte Orientierungsberechnung des Verzugszinses nach Art. 104 OR – keine Rechtsberatung. ' +
+  'Art. 104 OR fixiert den Zinssatz, nicht die Tageszählung; die gewählte Methode ist im Einzelfall zu prüfen. ' +
+  'Ein über den Verzugszins hinausgehender Schaden bleibt vorbehalten (Art. 106 OR).';
 
 const METHODEN: { code: VerzugszinsMethode; label: string }[] = [
+  { code: 'act365', label: 'Tatsächliche Tage / 365 (Zürcher Gerichtsrechner)' },
   { code: 'act360', label: 'Tatsächliche Tage / 360 (Bankusanz)' },
-  { code: 'act365', label: 'Tatsächliche Tage / 365' },
   { code: '30E360', label: '30E/360 (kaufmännisch)' },
 ];
-
 const GRUENDE: { code: SatzGrund; label: string }[] = [
   { code: 'gesetzlich', label: 'Gesetzlich – 5% (Art. 104 Abs. 1)' },
   { code: 'vertraglich', label: 'Vertraglich höher (Art. 104 Abs. 2)' },
   { code: 'kaufmaennisch', label: 'Kaufmännischer Diskonto (Art. 104 Abs. 3)' },
 ];
-
-const VERZUGSGRUND: { code: VerzugsgrundTyp; label: string }[] = [
-  { code: 'mahnung', label: 'Mahnung (ab Erhalt)' },
-  { code: 'verfalltag', label: 'Verfalltag / ohne Mahnung (Art. 108 Ziff. 1)' },
-  { code: 'klage', label: 'Klageeinleitung (ab Zustellung)' },
+const BEGINN: { code: VerzugsbeginnTyp; label: string }[] = [
+  { code: 'mahnung', label: 'Mahnung – ab Erhalt (Art. 102 Abs. 1)' },
+  { code: 'verfalltag', label: 'Verfalltag – Zins ab Folgetag (Art. 102 Abs. 2)' },
+  { code: 'klage', label: 'Klage/Betreibung – ab Zustellung' },
 ];
 
+type EreignisRow = { typ: 'teilzahlung' | 'satzaenderung'; datum: string; wert: number };
+
 const DEFAULTS: VerzugszinsInput = {
-  kapital: 10000,
-  verzugsbeginn: '2024-01-01',
-  verzugsende: '2025-01-01',
-  zinssatzProzent: 5,
-  satzGrund: 'gesetzlich',
-  methode: 'act360',
-  verzugsgrund: 'mahnung',
+  kapital: 10000, verzugsbeginn: '2024-01-01', beginnTyp: 'mahnung', stichtag: '2025-01-01',
+  zinssatzProzent: 5, satzGrund: 'gesetzlich', methode: 'act365',
 };
+
+type State = { form: VerzugszinsInput; rows: EreignisRow[]; zinsforderung: boolean };
+
+const BEISPIELE: { label: string; state: State }[] = [
+  { label: 'Rechnung offen, 5%', state: { form: { ...DEFAULTS, kapital: 5000, verzugsbeginn: '2025-03-01', stichtag: '2025-09-01' }, rows: [], zinsforderung: false } },
+  { label: 'Mit Teilzahlung', state: { form: { ...DEFAULTS, kapital: 10000, verzugsbeginn: '2024-01-01', stichtag: '2025-01-01' }, rows: [{ typ: 'teilzahlung', datum: '2024-07-01', wert: 4000 }], zinsforderung: false } },
+  { label: 'Vertraglich 8%', state: { form: { ...DEFAULTS, kapital: 20000, zinssatzProzent: 8, satzGrund: 'vertraglich', verzugsbeginn: '2024-06-01', stichtag: '2025-06-01' }, rows: [], zinsforderung: false } },
+  { label: 'Satzwechsel', state: { form: { ...DEFAULTS, kapital: 15000, verzugsbeginn: '2024-01-01', stichtag: '2025-06-30' }, rows: [{ typ: 'satzaenderung', datum: '2025-01-01', wert: 4 }], zinsforderung: false } },
+];
+
+function heuteISO(): string {
+  const d = new Date();
+  const p = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
 
 function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
   return (
@@ -45,53 +64,78 @@ function Field({ label, children, hint }: { label: string; children: React.React
 
 export function VerzugszinsForm() {
   const [form, setForm] = useState<VerzugszinsInput>(DEFAULTS);
-  const [ergebnis, setErgebnis] = useState<VerzugszinsErgebnis | null>(null);
+  const [rows, setRows] = useState<EreignisRow[]>([]);
+  const [zinsforderung, setZinsforderung] = useState(false);
 
   const set = <K extends keyof VerzugszinsInput>(k: K, v: VerzugszinsInput[K]) => setForm((f) => ({ ...f, [k]: v }));
+  const addRow = (typ: EreignisRow['typ']) => setRows((r) => [...r, { typ, datum: form.verzugsbeginn, wert: typ === 'teilzahlung' ? 1000 : 5 }]);
+  const updateRow = (i: number, patch: Partial<EreignisRow>) => setRows((r) => r.map((row, j) => (j === i ? { ...row, ...patch } : row)));
+  const removeRow = (i: number) => setRows((r) => r.filter((_, j) => j !== i));
+  const ladeBeispiel = (s: State) => { setForm(s.form); setRows(s.rows); setZinsforderung(s.zinsforderung); };
 
-  const berechne = () => setErgebnis(berechneVerzugszins(form));
+  // Live-Berechnung
+  const ereignisse: VzEreignis[] = rows.map((r) =>
+    r.typ === 'teilzahlung' ? { typ: 'teilzahlung', datum: r.datum, betrag: r.wert } : { typ: 'satzaenderung', datum: r.datum, satz: r.wert });
+  let ergebnis: VerzugszinsErgebnis | null;
+  try { ergebnis = berechneVerzugszins({ ...form, ereignisse, rueckstaendigeZinsforderung: zinsforderung }); } catch { ergebnis = null; }
 
   const eingaben: Record<string, string> = {
     'Geschuldeter Betrag (CHF)': String(form.kapital),
-    'Verzugsbeginn': form.verzugsbeginn,
-    'Verzugsende': form.verzugsende,
-    'Zinssatz': `${form.zinssatzProzent ?? 5} %`,
-    'Grundlage': GRUENDE.find((g) => g.code === form.satzGrund)?.label ?? '',
+    'Verzugsbeginn': `${form.verzugsbeginn} (${BEGINN.find((b) => b.code === form.beginnTyp)?.label ?? ''})`,
+    'Stichtag': form.stichtag,
+    'Zinssatz (Start)': `${form.zinssatzProzent ?? 5} %`,
     'Tageszählung': METHODEN.find((m) => m.code === form.methode)?.label ?? '',
+    ...(rows.length ? { 'Ereignisse': `${rows.length} (Teilzahlungen/Satzänderungen)` } : {}),
+  };
+  const inputNum = 'lc-input num';
+
+  const pdfConfig: PdfDocConfig = {
+    title: 'Verzugszins-Berechnung (Art. 104 OR)',
+    domain: 'verzugszins',
+    fileBase: 'Verzugszins',
+    inputs: eingaben,
+    sections: ergebnis ? [{ titel: 'Verzugszins (Art. 104 OR)', ergebnis }] : [],
+    disclaimer: VERZUGSZINS_DISCLAIMER,
   };
 
   return (
     <div className="space-y-6">
-      <PflichtDisclaimer text="Automatisierte Orientierungsberechnung des Verzugszinses nach Art. 104 OR – keine Rechtsberatung. Art. 104 OR fixiert den Zinssatz, nicht die Tageszählung; die gewählte Methode ist im Einzelfall zu prüfen." />
+      <PflichtDisclaimer text={VERZUGSZINS_DISCLAIMER} />
+
+      {/* Beispiele */}
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
+        {BEISPIELE.map((b) => (
+          <button key={b.label} onClick={() => ladeBeispiel(b.state)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
+        ))}
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Geschuldeter Betrag (CHF)" hint="Verzugszins fällt nur auf dem tatsächlich geschuldeten Betrag an">
-          <input type="number" min={0} step={100} value={form.kapital}
-            onChange={(e) => set('kapital', Number(e.target.value))} className="lc-input num" />
+          <input type="number" min={0} step={100} value={form.kapital} onChange={(e) => set('kapital', Number(e.target.value))} className={inputNum} />
+        </Field>
+        <Field label="Zinssatz (%)" hint="Default 5% (Art. 104 Abs. 1 OR); z.B. ATSG 5%, Steuern variabel">
+          <input type="number" min={0} step={0.25} value={form.zinssatzProzent ?? 5} onChange={(e) => set('zinssatzProzent', Number(e.target.value))} className={inputNum} />
         </Field>
 
-        <Field label="Zinssatz (%)" hint="Default 5% (Art. 104 Abs. 1 OR)">
-          <input type="number" min={0} step={0.25} value={form.zinssatzProzent ?? 5}
-            onChange={(e) => set('zinssatzProzent', Number(e.target.value))} className="lc-input num" />
-        </Field>
-
-        <Field label="Verzugsbeginn" hint="Tag, ab dem der Zins läuft">
+        <Field label="Verzugsbeginn">
           <input type="date" value={form.verzugsbeginn} onChange={(e) => set('verzugsbeginn', e.target.value)} className="lc-input" />
         </Field>
-
-        <Field label="Verzugsende" hint="Zahlung / Urteilstag / Stichtag">
-          <input type="date" value={form.verzugsende} onChange={(e) => set('verzugsende', e.target.value)} className="lc-input" />
-        </Field>
-
-        <Field label="Grundlage des Zinssatzes">
-          <select value={form.satzGrund} onChange={(e) => set('satzGrund', e.target.value as SatzGrund)} className="lc-input">
-            {GRUENDE.map((g) => <option key={g.code} value={g.code}>{g.label}</option>)}
+        <Field label="Art des Verzugsbeginns">
+          <select value={form.beginnTyp} onChange={(e) => set('beginnTyp', e.target.value as VerzugsbeginnTyp)} className="lc-input">
+            {BEGINN.map((b) => <option key={b.code} value={b.code}>{b.label}</option>)}
           </select>
         </Field>
 
-        <Field label="Beginn des Zinsenlaufs">
-          <select value={form.verzugsgrund} onChange={(e) => set('verzugsgrund', e.target.value as VerzugsgrundTyp)} className="lc-input">
-            {VERZUGSGRUND.map((g) => <option key={g.code} value={g.code}>{g.label}</option>)}
+        <Field label="Stichtag (Berechnung bis)" hint="Zahlung / Urteilstag / heute">
+          <div className="flex gap-2">
+            <input type="date" value={form.stichtag} onChange={(e) => set('stichtag', e.target.value)} className="lc-input" />
+            <button type="button" onClick={() => set('stichtag', heuteISO())} className="lc-btn-ghost whitespace-nowrap" style={{ height: '44px' }}>heute</button>
+          </div>
+        </Field>
+        <Field label="Grundlage des Zinssatzes">
+          <select value={form.satzGrund} onChange={(e) => set('satzGrund', e.target.value as SatzGrund)} className="lc-input">
+            {GRUENDE.map((g) => <option key={g.code} value={g.code}>{g.label}</option>)}
           </select>
         </Field>
 
@@ -100,28 +144,74 @@ export function VerzugszinsForm() {
             {METHODEN.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
           </select>
         </Field>
+        <Field label="Rückständige Zins-/Rentenforderung?">
+          <label className="flex items-center gap-2 text-body-s cursor-pointer pt-2 text-ink-700">
+            <input type="checkbox" checked={zinsforderung} onChange={(e) => setZinsforderung(e.target.checked)} />
+            Ja – Verzinsung erst ab Betreibung/Klage (Art. 105 Abs. 1 OR)
+          </label>
+        </Field>
       </div>
 
-      <button onClick={berechne} className="lc-btn-primary">Verzugszins berechnen</button>
+      {/* Teilzahlungen & Satzänderungen */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <h4 className="text-body-s font-semibold text-ink-700">Teilzahlungen &amp; Satzänderungen (Art. 85 OR)</h4>
+          <div className="flex gap-2">
+            <button onClick={() => addRow('teilzahlung')} className="lc-btn-ghost text-body-s" style={{ height: '36px' }}>+ Teilzahlung</button>
+            <button onClick={() => addRow('satzaenderung')} className="lc-btn-ghost text-body-s" style={{ height: '36px' }}>+ Satzänderung</button>
+          </div>
+        </div>
+        {rows.length === 0 && <p className="text-body-s text-ink-400 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
+        {rows.map((row, i) => (
+          <div key={i} className="border border-line rounded-md p-3 bg-surface grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+            <div className="space-y-1">
+              <label className="text-body-s font-medium text-ink-600">Typ</label>
+              <select value={row.typ} onChange={(e) => updateRow(i, { typ: e.target.value as EreignisRow['typ'] })} className="lc-input">
+                <option value="teilzahlung">Teilzahlung (CHF)</option>
+                <option value="satzaenderung">Satzänderung (%)</option>
+              </select>
+            </div>
+            <div className="space-y-1">
+              <label className="text-body-s font-medium text-ink-600">Datum</label>
+              <input type="date" value={row.datum} onChange={(e) => updateRow(i, { datum: e.target.value })} className="lc-input" />
+            </div>
+            <div className="space-y-1">
+              <label className="text-body-s font-medium text-ink-600">{row.typ === 'teilzahlung' ? 'Betrag (CHF)' : 'neuer Satz (%)'}</label>
+              <input type="number" min={0} step={row.typ === 'teilzahlung' ? 100 : 0.25} value={row.wert}
+                onChange={(e) => updateRow(i, { wert: Number(e.target.value) })} className={inputNum} />
+            </div>
+            <button onClick={() => removeRow(i)} className="text-body-s text-danger-700 self-end pb-2 text-left">Entfernen</button>
+          </div>
+        ))}
+      </div>
 
       {ergebnis && (
         <div className="space-y-4">
+          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
           {ergebnis.status === 'ok' && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {[
-                { label: 'Verzugszins', val: `CHF ${ergebnis.zinsbetragCHF}`, stark: true },
-                { label: 'Verzugstage', val: `${ergebnis.tage}` },
-                { label: 'Total inkl. Kapital', val: `CHF ${ergebnis.totalCHF}` },
-              ].map((c) => (
-                <div key={c.label} className="lc-card p-4">
-                  <p className="lc-overline mb-1">{c.label}</p>
-                  <p className={`num text-ink-900 ${c.stark ? 'text-[1.75rem] leading-none font-medium' : 'text-body-l'}`}>{c.val}</p>
-                </div>
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {[
+                  { label: 'Verzugszins (gesamt)', val: `CHF ${ergebnis.zinsTotalCHF}`, stark: true },
+                  { label: 'Offenes Kapital', val: `CHF ${ergebnis.kapitalOffenCHF}` },
+                  { label: 'Total offen', val: `CHF ${ergebnis.totalOffenCHF}`, stark: true },
+                ].map((c) => (
+                  <div key={c.label} className="lc-card p-4">
+                    <p className="lc-overline mb-1">{c.label}</p>
+                    <p className={`num text-ink-900 ${c.stark ? 'text-[1.6rem] leading-none font-medium' : 'text-body-l'}`}>{c.val}</p>
+                  </div>
+                ))}
+              </div>
+              {ergebnis.zinsGetilgt > 0 && (
+                <p className="text-body-s text-ink-500 num">
+                  Durch Teilzahlungen getilgte Zinsen: CHF {formatCHF(ergebnis.zinsGetilgt)} · offener Verzugszins: CHF {ergebnis.zinsOffenCHF} · {ergebnis.tageTotal} Tage ({ergebnis.ersterZinstag}–{ergebnis.stichtag}).
+                </p>
+              )}
+              <VerzugszinsTimeline e={ergebnis} />
+            </>
           )}
           <ErgebnisAnzeige titel="Verzugszins (Art. 104 OR)" ergebnis={ergebnis} />
-          <PdfExportButton abschnitte={[{ titel: 'Verzugszins (Art. 104 OR)', ergebnis }]} eingaben={eingaben} />
+          <PdfExportButton config={pdfConfig} />
         </div>
       )}
     </div>

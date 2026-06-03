@@ -1,35 +1,55 @@
-import { parseISO, differenceInCalendarDays } from 'date-fns';
+import { parseISO, addDays, differenceInCalendarDays, format } from 'date-fns';
 import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/legal';
 import { rechtsprechung } from '../data/verifikation';
 
-// ─── Verzugszins (Art. 104 OR) ────────────────────────────────────────────
+// ─── Verzugszins (Art. 104 OR) — praxistaugliche, event-basierte Berechnung ──
 //
-// Art. 104 fixiert den ZINSSATZ (Abs. 1: 5%/Jahr, dispositiv; Abs. 2: höher vertraglich;
-// Abs. 3: kaufmännischer Diskontsatz), NICHT die Tageszählung. Letztere ist eine
-// methodische Wahl und wird transparent ausgewiesen.
+// Art. 104 fixiert den ZINSSATZ (Abs. 1: 5%/Jahr dispositiv; Abs. 2: höher vertraglich;
+// Abs. 3: kaufmännischer Diskonto), NICHT die Tageszählung. Eingebaut sind ferner:
+//  • Anrechnung von Teilzahlungen Kosten/Zinsen vor Kapital (Art. 85 OR);
+//  • Zinseszinsverbot (Art. 105 Abs. 3 OR): aufgelaufene Zinsen werden NIE verzinst;
+//  • Verzugsbeginn nach Art. 102 (Mahnung / Verfalltag) bzw. Klagezustellung.
 
-export type VerzugszinsMethode = 'act360' | 'act365' | '30E360';
-export type VerzugsgrundTyp = 'mahnung' | 'verfalltag' | 'klage';
+export type VerzugszinsMethode = 'act365' | 'act360' | '30E360';
+export type VerzugsbeginnTyp = 'mahnung' | 'verfalltag' | 'klage';
 export type SatzGrund = 'gesetzlich' | 'vertraglich' | 'kaufmaennisch';
 
+export type VzEreignis =
+  | { typ: 'teilzahlung'; datum: string; betrag: number }
+  | { typ: 'satzaenderung'; datum: string; satz: number };
+
 export type VerzugszinsInput = {
-  kapital: number;            // CHF, > 0 (geschuldeter Betrag)
-  verzugsbeginn: string;      // yyyy-MM-dd
-  verzugsende: string;        // yyyy-MM-dd (Zahlung / Urteilstag / Stichtag)
-  zinssatzProzent?: number;   // default 5 (Art. 104 Abs. 1)
-  satzGrund?: SatzGrund;      // Abs. 1 / 2 / 3
-  methode?: VerzugszinsMethode; // default 'act360'
-  verzugsgrund?: VerzugsgrundTyp; // Semantik des Verzugsbeginns
+  kapital: number;                 // CHF, > 0 (geschuldeter Betrag)
+  verzugsbeginn: string;           // yyyy-MM-dd – Mahnungs-/Klagedatum ODER Verfalltag
+  beginnTyp?: VerzugsbeginnTyp;    // default 'mahnung'
+  stichtag: string;                // yyyy-MM-dd – Ende (Zahlung / Urteilstag / heute)
+  zinssatzProzent?: number;        // Anfangssatz, default 5
+  satzGrund?: SatzGrund;
+  methode?: VerzugszinsMethode;    // default 'act365'
+  ereignisse?: VzEreignis[];       // Teilzahlungen + Satzänderungen
+  rueckstaendigeZinsforderung?: boolean; // Art. 105 Abs. 1 (Zins-/Rentenforderung)
+};
+
+export type VzSegment = {
+  von: string; bis: string; tage: number; kapital: number; satz: number; zins: number;
 };
 
 export type VerzugszinsErgebnis = Berechnungsergebnis & {
-  kapital: number;
-  zinssatz: number;
-  tage: number;
+  ersterZinstag: string;
+  stichtag: string;
   methode: VerzugszinsMethode;
-  zinsbetrag: number;     // gerundet auf Rappen
-  zinsbetragCHF: string;
-  totalCHF: string;
+  tageTotal: number;
+  segmente: VzSegment[];
+  zinsTotal: number;     // gesamter aufgelaufener Verzugszins
+  zinsGetilgt: number;   // durch Teilzahlungen getilgte Zinsen
+  zinsOffen: number;     // noch offener Verzugszins
+  kapitalOffen: number;  // offenes Restkapital
+  totalOffen: number;    // kapitalOffen + zinsOffen
+  // formatiert (CHF)
+  zinsTotalCHF: string;
+  zinsOffenCHF: string;
+  kapitalOffenCHF: string;
+  totalOffenCHF: string;
 };
 
 // ─── Normverweise ─────────────────────────────────────────────────────────
@@ -37,10 +57,16 @@ export type VerzugszinsErgebnis = Berechnungsergebnis & {
 const N_104_1: Normverweis = { artikel: 'Art. 104 Abs. 1 OR', bemerkung: '5% pro Jahr (dispositiv)' };
 const N_104_2: Normverweis = { artikel: 'Art. 104 Abs. 2 OR', bemerkung: 'höherer vertraglicher Zins' };
 const N_104_3: Normverweis = { artikel: 'Art. 104 Abs. 3 OR', bemerkung: 'kaufmännischer Bankdiskonto' };
-const N_102:   Normverweis = { artikel: 'Art. 102 OR', bemerkung: 'Verzug (Inverzugsetzung/Mahnung)' };
-const N_108_1: Normverweis = { artikel: 'Art. 108 Ziff. 1 OR', bemerkung: 'Verzug ohne Mahnung (Verfalltag)' };
+const N_102:   Normverweis = { artikel: 'Art. 102 OR', bemerkung: 'Verzug: Mahnung / Verfalltag' };
+const N_108_1: Normverweis = { artikel: 'Art. 108 Ziff. 1 OR', bemerkung: 'Verzug ohne Mahnung' };
+const N_85:    Normverweis = { artikel: 'Art. 85 OR', bemerkung: 'Anrechnung: Zinsen/Kosten vor Kapital' };
+const N_105_1: Normverweis = { artikel: 'Art. 105 Abs. 1 OR', bemerkung: 'rückständige Zinsen/Renten: ab Betreibung/Klage' };
+const N_105_3: Normverweis = { artikel: 'Art. 105 Abs. 3 OR', bemerkung: 'Zinseszinsverbot' };
+const N_106:   Normverweis = { artikel: 'Art. 106 OR', bemerkung: 'weiterer Verzugsschaden' };
 
 // ─── Helfer ────────────────────────────────────────────────────────────────
+
+const round2 = (x: number) => Math.round(x * 100) / 100;
 
 /** Schweizer Betragsformat mit Tausender-Apostroph: 1'234.50 */
 export function formatCHF(x: number): string {
@@ -49,7 +75,8 @@ export function formatCHF(x: number): string {
   return `${x < 0 ? '-' : ''}${gruppiert}.${dez}`;
 }
 
-/** Tage nach 30E/360 (europäische kaufmännische Methode). */
+const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
+
 function tage30E360(von: Date, bis: Date): number {
   const d1 = Math.min(von.getDate(), 30);
   const d2 = Math.min(bis.getDate(), 30);
@@ -59,34 +86,37 @@ function tage30E360(von: Date, bis: Date): number {
 }
 
 const METHODE_LABEL: Record<VerzugszinsMethode, string> = {
-  act360: 'tatsächliche Kalendertage / 360 (Bankusanz)',
-  act365: 'tatsächliche Kalendertage / 365',
+  act365: 'tatsächliche Tage / 365 (wie Zürcher Gerichtsrechner)',
+  act360: 'tatsächliche Tage / 360 (Bankusanz)',
   '30E360': '30E/360 (kaufmännisch)',
 };
 
-function tageUndBasis(input: VerzugszinsInput, von: Date, bis: Date): { tage: number; basis: number } {
-  switch (input.methode ?? 'act360') {
-    case 'act365': return { tage: differenceInCalendarDays(bis, von), basis: 365 };
+function segmentTageBasis(methode: VerzugszinsMethode, von: Date, bis: Date): { tage: number; basis: number } {
+  switch (methode) {
+    case 'act360': return { tage: differenceInCalendarDays(bis, von), basis: 360 };
     case '30E360': return { tage: tage30E360(von, bis), basis: 360 };
-    case 'act360':
-    default:       return { tage: differenceInCalendarDays(bis, von), basis: 360 };
+    case 'act365':
+    default:       return { tage: differenceInCalendarDays(bis, von), basis: 365 };
   }
 }
 
 // ─── Hauptfunktion ───────────────────────────────────────────────────────────
 
 export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebnis {
-  const methode = input.methode ?? 'act360';
-  const satz = input.zinssatzProzent ?? 5;
+  const methode = input.methode ?? 'act365';
+  const startSatz = input.zinssatzProzent ?? 5;
   const grund: SatzGrund = input.satzGrund ?? 'gesetzlich';
+  const beginnTyp = input.beginnTyp ?? 'mahnung';
 
   const rechenweg: Rechenschritt[] = [];
   const annahmen: string[] = [];
   const warnungen: string[] = [];
 
-  const leer: Omit<VerzugszinsErgebnis, keyof Berechnungsergebnis> = {
-    kapital: input.kapital, zinssatz: satz, tage: 0, methode,
-    zinsbetrag: 0, zinsbetragCHF: formatCHF(0), totalCHF: formatCHF(input.kapital || 0),
+  const leer = {
+    ersterZinstag: '', stichtag: input.stichtag, methode, tageTotal: 0, segmente: [] as VzSegment[],
+    zinsTotal: 0, zinsGetilgt: 0, zinsOffen: 0, kapitalOffen: input.kapital || 0, totalOffen: input.kapital || 0,
+    zinsTotalCHF: formatCHF(0), zinsOffenCHF: formatCHF(0),
+    kapitalOffenCHF: formatCHF(input.kapital || 0), totalOffenCHF: formatCHF(input.kapital || 0),
   };
 
   // Validierung
@@ -98,109 +128,195 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
       normverweise: [N_104_1], ...leer,
     };
   }
-  const von = parseISO(input.verzugsbeginn);
-  const bis = parseISO(input.verzugsende);
-  if (differenceInCalendarDays(bis, von) < 0) {
+
+  // Erster Zinstag: bei Verfalltag ab Folgetag (Art. 102 Abs. 2), sonst = Eingabedatum.
+  const eingabeBeginn = parseISO(input.verzugsbeginn);
+  const ersterZinstag = beginnTyp === 'verfalltag' ? addDays(eingabeBeginn, 1) : eingabeBeginn;
+  const stichtag = parseISO(input.stichtag);
+
+  if (differenceInCalendarDays(stichtag, ersterZinstag) < 0) {
     return {
-      ergebnis: 'Ungültiger Zeitraum: Das Verzugsende liegt vor dem Verzugsbeginn.',
+      ergebnis: 'Ungültiger Zeitraum: Der Stichtag liegt vor dem ersten Zinstag.',
       status: 'unzulaessig', rechenweg, annahmen,
-      warnungen: ['Bitte Verzugsbeginn und -ende prüfen.'],
+      warnungen: ['Bitte Verzugsbeginn/Verfalltag und Stichtag prüfen.'],
       normverweise: [N_104_1], ...leer,
     };
   }
 
-  // Schritt 1 – Voraussetzungen
+  // ── Schritt 1: Voraussetzungen ──
   rechenweg.push({
     beschreibung: 'Schritt 1 – Voraussetzungen des Verzugszinses (Art. 104 Abs. 1 OR)',
-    zwischenergebnis: 'Verzugszins setzt Fälligkeit der Geldforderung und Inverzugsetzung des Schuldners voraus. Ein Schaden- oder Verschuldensnachweis ist nicht erforderlich.',
+    zwischenergebnis: 'Verzugszins setzt Fälligkeit der Geldforderung und Inverzugsetzung voraus; kein Schaden- oder Verschuldensnachweis nötig.',
     normen: [N_104_1, N_102],
     rechtsprechung: [rechtsprechung('BGE_130_III_591')],
   });
 
-  // Schritt 2 – Zinsenlauf-Beginn
-  const grundTyp = input.verzugsgrund ?? 'mahnung';
+  // ── Schritt 2: Verzugsbeginn ──
   const beginnText =
-    grundTyp === 'verfalltag'
-      ? 'Verfalltag / Verzug ohne Mahnung (Art. 108 Ziff. 1 OR): der Zins läuft umgehend ab Verzugseintritt.'
-      : grundTyp === 'klage'
-        ? 'Bei Klageeinleitung läuft der Verzugszins ab Zustellung der Klage bzw. Widerklage.'
-        : 'Der Verzugszins läuft ab dem Tag, an dem der Schuldner die Mahnung erhalten hat.';
+    beginnTyp === 'verfalltag'
+      ? `Bestimmter Verfalltag am ${fmt(eingabeBeginn)} (Art. 102 Abs. 2 / Art. 108 Ziff. 1 OR): Verzug ohne Mahnung; der Zins läuft ab dem Folgetag ${fmt(ersterZinstag)}.`
+      : beginnTyp === 'klage'
+        ? `Klageeinleitung: der Verzugszins läuft ab Zustellung der Klage/Widerklage (${fmt(ersterZinstag)}).`
+        : `Mahnung (Art. 102 Abs. 1 OR): der Zins läuft ab Erhalt der Mahnung (${fmt(ersterZinstag)}).`;
   rechenweg.push({
     beschreibung: 'Schritt 2 – Beginn des Zinsenlaufs',
-    zwischenergebnis: `${beginnText} Angesetzter Verzugsbeginn: ${input.verzugsbeginn}.`,
-    normen: grundTyp === 'verfalltag' ? [N_108_1] : [N_104_1],
-    rechtsprechung: grundTyp === 'verfalltag'
+    zwischenergebnis: beginnText,
+    normen: beginnTyp === 'verfalltag' ? [N_102, N_108_1] : [N_102, N_104_1],
+    rechtsprechung: beginnTyp === 'verfalltag'
       ? [rechtsprechung('BGer_4A_58_2019')]
-      : grundTyp === 'klage' ? [rechtsprechung('BGer_4A_282_2017')] : undefined,
+      : beginnTyp === 'klage' ? [rechtsprechung('BGer_4A_282_2017')] : undefined,
   });
 
-  // Schritt 3 – Zinssatz
+  // ── Schritt 3: Satz ──
   const satzNormen = grund === 'vertraglich' ? [N_104_2] : grund === 'kaufmaennisch' ? [N_104_3] : [N_104_1];
   const satzText =
     grund === 'vertraglich'
-      ? `Vertraglich vereinbarter Verzugszins von ${satz}% (Art. 104 Abs. 2 OR). Die Beweislast für die Vereinbarung des höheren Satzes trägt der Gläubiger.`
+      ? `Vertraglich vereinbarter Verzugszins von ${startSatz}% (Art. 104 Abs. 2 OR); Beweislast für die Vereinbarung beim Gläubiger.`
       : grund === 'kaufmaennisch'
-        ? `Kaufmännischer Verzugszins von ${satz}% (Art. 104 Abs. 3 OR): zulässig im objektiv kaufmännischen Verkehr, soweit der übliche Bankdiskonto (Privatdiskontsatz) am Zahlungsort 5% übersteigt.`
-        : `Gesetzlicher Verzugszins von ${satz}% pro Jahr (Art. 104 Abs. 1 OR).`;
+        ? `Kaufmännischer Verzugszins von ${startSatz}% (Art. 104 Abs. 3 OR): nur im objektiv kaufmännischen Verkehr, soweit der übliche Bankdiskonto (Privatdiskontsatz) 5% übersteigt.`
+        : `Gesetzlicher Verzugszins von ${startSatz}% pro Jahr (Art. 104 Abs. 1 OR).`;
   rechenweg.push({
     beschreibung: 'Schritt 3 – Massgebender Zinssatz',
     zwischenergebnis: satzText,
     normen: satzNormen,
-    rechtsprechung: grund === 'vertraglich'
-      ? [rechtsprechung('BGE_137_III_453')]
+    rechtsprechung: grund === 'vertraglich' ? [rechtsprechung('BGE_137_III_453')]
       : grund === 'kaufmaennisch' ? [rechtsprechung('BGE_116_II_140')]
-      : satz !== 5 ? [rechtsprechung('BGE_117_V_349')] : undefined,
+      : startSatz !== 5 ? [rechtsprechung('BGE_117_V_349')] : undefined,
   });
 
-  // Schritt 4 – Tage
-  const { tage, basis } = tageUndBasis(input, von, bis);
-  rechenweg.push({
-    beschreibung: 'Schritt 4 – Anzahl Verzugstage',
-    zwischenergebnis: `Zeitraum ${input.verzugsbeginn} bis ${input.verzugsende}: ${tage} Tage. Tageszählung: ${METHODE_LABEL[methode]}.`,
-    normen: [N_104_1],
+  // ── Event-Timeline aufbauen ──
+  type Ev = { datum: Date; iso: string } & ({ typ: 'teilzahlung'; betrag: number } | { typ: 'satzaenderung'; satz: number });
+  const events: Ev[] = [];
+  (input.ereignisse ?? []).forEach((e) => {
+    const d = parseISO(e.datum);
+    if (differenceInCalendarDays(d, ersterZinstag) < 0 || differenceInCalendarDays(stichtag, d) < 0) {
+      warnungen.push(`Ereignis vom ${fmt(d)} liegt ausserhalb des Zeitraums (${fmt(ersterZinstag)}–${fmt(stichtag)}) und wird ignoriert.`);
+      return;
+    }
+    events.push(e.typ === 'teilzahlung'
+      ? { datum: d, iso: e.datum, typ: 'teilzahlung', betrag: e.betrag }
+      : { datum: d, iso: e.datum, typ: 'satzaenderung', satz: e.satz });
   });
+  events.sort((a, b) => a.datum.getTime() - b.datum.getTime());
 
-  // Schritt 5 – lineare Zinsberechnung (keine Zinseszinsen)
-  const roh = input.kapital * (satz / 100) * (tage / basis);
-  const zinsbetrag = Math.round(roh * 100) / 100;
+  // Grenzpunkte = Event-Daten + Stichtag (in Reihenfolge)
+  const grenzen: Date[] = [];
+  events.forEach((e) => { if (!grenzen.some((g) => +g === +e.datum)) grenzen.push(e.datum); });
+  if (!grenzen.some((g) => +g === +stichtag)) grenzen.push(stichtag);
+  grenzen.sort((a, b) => a.getTime() - b.getTime());
+
+  // ── Timeline ablaufen (Zinseszinsverbot: aufgelaufeneZinsen werden NIE verzinst) ──
+  let kapital = input.kapital;
+  let satz = startSatz;
+  let aufgelaufeneZinsen = 0;
+  let zinsTotal = 0;
+  let zinsGetilgt = 0;
+  const segmente: VzSegment[] = [];
+  let cursor = ersterZinstag;
+
+  for (const g of grenzen) {
+    const { tage, basis } = segmentTageBasis(methode, cursor, g);
+    if (tage > 0 && kapital > 0) {
+      const zins = round2(kapital * (satz / 100) * (tage / basis));
+      segmente.push({ von: fmt(cursor), bis: fmt(g), tage, kapital: round2(kapital), satz, zins });
+      aufgelaufeneZinsen = round2(aufgelaufeneZinsen + zins);
+      zinsTotal = round2(zinsTotal + zins);
+      rechenweg.push({
+        beschreibung: `Periode ${fmt(cursor)} – ${fmt(g)} (${tage} Tage)`,
+        zwischenergebnis: `CHF ${formatCHF(kapital)} × ${satz}% × ${tage}/${basis} = CHF ${formatCHF(zins)} (${METHODE_LABEL[methode]}).`,
+        normen: [N_104_1],
+      });
+    }
+    // Ereignisse an diesem Grenzpunkt anwenden (Teilzahlung zuerst, dann Satzänderung)
+    const evHier = events.filter((e) => +e.datum === +g);
+    for (const e of evHier.filter((e) => e.typ === 'teilzahlung') as Extract<Ev, { typ: 'teilzahlung' }>[]) {
+      const tilgtZins = Math.min(e.betrag, aufgelaufeneZinsen);
+      const restKapital = round2(e.betrag - tilgtZins);
+      const kapitalVor = kapital;
+      aufgelaufeneZinsen = round2(aufgelaufeneZinsen - tilgtZins);
+      zinsGetilgt = round2(zinsGetilgt + tilgtZins);
+      kapital = round2(Math.max(0, kapital - restKapital));
+      if (restKapital > kapitalVor) warnungen.push(`Teilzahlung vom ${fmt(g)} übersteigt die Restschuld; der Überschuss bleibt unberücksichtigt.`);
+      rechenweg.push({
+        beschreibung: `Teilzahlung CHF ${formatCHF(e.betrag)} am ${fmt(g)} (Art. 85 OR)`,
+        zwischenergebnis:
+          `Anrechnung zuerst auf aufgelaufene Zinsen (CHF ${formatCHF(tilgtZins)}), dann auf das Kapital (CHF ${formatCHF(Math.min(restKapital, kapitalVor))}). ` +
+          `Restkapital neu: CHF ${formatCHF(kapital)}. Aufgelaufene Zinsen werden nicht verzinst (Art. 105 Abs. 3 OR).`,
+        normen: [N_85, N_105_3],
+        rechtsprechung: [rechtsprechung('BGer_4A_514_2007')],
+      });
+    }
+    for (const e of evHier.filter((e) => e.typ === 'satzaenderung') as Extract<Ev, { typ: 'satzaenderung' }>[]) {
+      satz = e.satz;
+      rechenweg.push({
+        beschreibung: `Zinssatz-Änderung ab ${fmt(g)}`,
+        zwischenergebnis: `Neuer Verzugszinssatz: ${satz}%.`,
+        normen: [N_104_1],
+      });
+    }
+    cursor = g;
+    if (kapital <= 0 && aufgelaufeneZinsen <= 0) break;
+  }
+
+  const zinsOffen = aufgelaufeneZinsen;
+  const kapitalOffen = kapital;
+  const totalOffen = round2(kapitalOffen + zinsOffen);
+  const tageTotal = segmentTageBasis(methode, ersterZinstag, stichtag).tage;
+
+  // ── Schritt: Gesamtaufstellung ──
   rechenweg.push({
-    beschreibung: 'Schritt 5 – Zinsberechnung (linear, keine Zinseszinsen)',
+    beschreibung: 'Ergebnis – Aufstellung',
     zwischenergebnis:
-      `CHF ${formatCHF(input.kapital)} × ${satz}% × ${tage}/${basis} = CHF ${formatCHF(zinsbetrag)}. ` +
-      `Die Zinsen wachsen linear auf dem Kapital; Zinseszinsen werden nicht berechnet.`,
-    normen: [N_104_1],
-    rechtsprechung: [rechtsprechung('BGer_4A_514_2007')],
+      `Aufgelaufener Verzugszins gesamt: CHF ${formatCHF(zinsTotal)}` +
+      (zinsGetilgt > 0 ? `, davon durch Teilzahlungen getilgt CHF ${formatCHF(zinsGetilgt)}, offen CHF ${formatCHF(zinsOffen)}.` : '.') +
+      ` Offenes Kapital: CHF ${formatCHF(kapitalOffen)}. Total offen: CHF ${formatCHF(totalOffen)}.`,
+    normen: [N_104_1, N_85],
   });
 
-  // Hinweise
+  // ── Hinweise ──
   warnungen.push(
-    `Tageszählung (${METHODE_LABEL[methode]}) ist nicht durch Art. 104 OR vorgegeben, sondern eine methodische Annahme – im Einzelfall zu prüfen.`,
-    'Verzugszins fällt nur auf dem tatsächlich geschuldeten Betrag an; Zinseszinsen werden nicht berechnet (BGer 4A_514/2007; 4A_117/2014).',
+    `Tageszählung (${METHODE_LABEL[methode]}) ist nicht durch Art. 104 OR vorgegeben, sondern eine methodische Annahme; eine zwingende bundesgerichtliche Methode ist nicht belegt – im Einzelfall zu prüfen.`,
+    'Teilzahlungen werden zuerst auf Zinsen/Kosten, dann auf das Kapital angerechnet (Art. 85 OR; Reihenfolge Kosten→Zinsen→Kapital nach Lehre/Praxis).',
+    'Zinseszinsverbot: Auf aufgelaufene Verzugszinsen werden keine weiteren Verzugszinsen berechnet (Art. 105 Abs. 3 OR).',
+    'Über den Verzugszins hinausgehender Schaden bleibt vorbehalten und ist gesondert nachzuweisen (Art. 106 OR).',
   );
   if (grund === 'vertraglich') warnungen.push('Höherer vertraglicher Zinssatz (Art. 104 Abs. 2 OR): Beweislast für die Vereinbarung beim Gläubiger.');
-  if (grund === 'kaufmaennisch') warnungen.push('Art. 104 Abs. 3 OR gilt nur im objektiv kaufmännischen Verkehr; der konkrete Privatdiskontsatz am Zahlungsort ist nachzuweisen.');
-  if (grund === 'gesetzlich' && satz !== 5) warnungen.push('Art. 104 Abs. 1 OR ist dispositiv; ein abweichender Satz bedarf einer Grundlage (Vereinbarung/Reglement).');
+  if (grund === 'kaufmaennisch') warnungen.push('Art. 104 Abs. 3 OR gilt nur im objektiv kaufmännischen Verkehr; der Privatdiskontsatz am Zahlungsort ist nachzuweisen.');
+  if (grund === 'gesetzlich' && startSatz !== 5) warnungen.push('Art. 104 Abs. 1 OR ist dispositiv; ein abweichender Satz bedarf einer Grundlage (Vereinbarung/Reglement/Sondergesetz).');
+  if (input.rueckstaendigeZinsforderung) warnungen.push('Rückständige Zins-/Rentenforderung: Verzugszinsen laufen erst ab Anhebung der Betreibung oder gerichtlichen Klage (Art. 105 Abs. 1 OR) – der Verzugsbeginn sollte diesem Datum entsprechen.');
 
   annahmen.push(
-    'Ein einziger Zinssatz über den gesamten Zeitraum; bei wechselndem Satz ist je Teilperiode getrennt zu rechnen.',
-    'Geschuldeter Kapitalbetrag als Zinsbasis (ohne aufgelaufene Zinsen).',
+    'Erster Zinstag = Verzugsbeginn (Konvention: Anzahl Tage = Stichtag − erster Zinstag).',
+    'Geschuldeter Kapitalbetrag als Zinsbasis; aufgelaufene Zinsen werden separat geführt und nicht verzinst.',
   );
 
-  const total = Math.round((input.kapital + zinsbetrag) * 100) / 100;
+  const ergebnisText = zinsGetilgt > 0 || (input.ereignisse ?? []).length > 0
+    ? `Offener Verzugszins: CHF ${formatCHF(zinsOffen)}; offenes Kapital: CHF ${formatCHF(kapitalOffen)}; Total offen: CHF ${formatCHF(totalOffen)}. Aufgelaufener Verzugszins gesamt: CHF ${formatCHF(zinsTotal)}.`
+    : `Verzugszins: CHF ${formatCHF(zinsTotal)} (${startSatz}% auf CHF ${formatCHF(input.kapital)} für ${tageTotal} Tage). Total inkl. Kapital: CHF ${formatCHF(totalOffen)}.`;
+
+  const normverweise = [N_104_1, N_104_2, N_104_3, N_102, N_85, N_105_3, N_106];
+  if (input.rueckstaendigeZinsforderung) normverweise.push(N_105_1);
 
   return {
-    ergebnis: `Verzugszins: CHF ${formatCHF(zinsbetrag)} (${satz}% auf CHF ${formatCHF(input.kapital)} für ${tage} Tage). Total inkl. Kapital: CHF ${formatCHF(total)}.`,
+    ergebnis: ergebnisText,
     status: 'ok',
     rechenweg,
     annahmen,
     warnungen,
-    normverweise: [N_104_1, N_104_2, N_104_3],
-    kapital: input.kapital,
-    zinssatz: satz,
-    tage,
+    normverweise,
+    ersterZinstag: fmt(ersterZinstag),
+    stichtag: fmt(stichtag),
     methode,
-    zinsbetrag,
-    zinsbetragCHF: formatCHF(zinsbetrag),
-    totalCHF: formatCHF(total),
+    tageTotal,
+    segmente,
+    zinsTotal,
+    zinsGetilgt,
+    zinsOffen,
+    kapitalOffen,
+    totalOffen,
+    zinsTotalCHF: formatCHF(zinsTotal),
+    zinsOffenCHF: formatCHF(zinsOffen),
+    kapitalOffenCHF: formatCHF(kapitalOffen),
+    totalOffenCHF: formatCHF(totalOffen),
   };
 }

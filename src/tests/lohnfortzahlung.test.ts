@@ -196,3 +196,36 @@ describe('Lohnfortzahlung P1/P2 (Art. 324a OR)', () => {
     expect(r.warnungen.some((w) => w.includes('nicht belegt'))).toBe(true);
   });
 });
+
+describe('Lohnfortzahlung – Koordination Art. 324b OR (Verhinderungsgrund)', () => {
+  const ok = (over: object) => berechneLohnfortzahlung({
+    vertragsbeginn: '2024-01-01', verhinderungBeginn: '2026-01-01',
+    arbeitsunfaehigkeitProzent: 100, kanton: 'BS', ktgGleichwertigVorhanden: false, ...over,
+  });
+
+  it('Unfall → UVG-Koordination (80%, 2 Karenztage), Art. 324b im Rechenweg', () => {
+    const r = ok({ verhinderungsgrund: 'unfall' });
+    expect(r.status).toBe('ok');
+    expect(r.ergebnis).toContain('Karenztage');
+    expect(r.rechenweg.some((s) => s.beschreibung.includes('Koordination Unfall'))).toBe(true);
+    expect(r.normverweise.some((n) => n.artikel === 'Art. 324b Abs. 1 OR')).toBe(true);
+  });
+
+  it('Dienst → EO-Koordination (Differenz zu 80%), Art. 324b', () => {
+    const r = ok({ verhinderungsgrund: 'dienst' });
+    expect(r.rechenweg.some((s) => s.beschreibung.includes('Koordination Dienst'))).toBe(true);
+    expect(r.normverweise.some((n) => n.artikel === 'Art. 324b Abs. 2 OR')).toBe(true);
+  });
+
+  it('Schwangerschaft → Art. 324a Abs. 3 + EOG-Hinweis', () => {
+    const r = ok({ verhinderungsgrund: 'schwangerschaft' });
+    expect(r.ergebnis).toContain('EOG');
+    expect(r.rechenweg.some((s) => s.normen.some((n) => n.artikel === 'Art. 324a Abs. 3 OR'))).toBe(true);
+  });
+
+  it('Krankheit (Default) → keine 324b-Koordination, Basis-Ergebnis unverändert', () => {
+    const r = ok({ verhinderungsgrund: 'krankheit' });
+    expect(r.ergebnis).toContain('Lohnfortzahlung bis und mit');
+    expect(r.normverweise.some((n) => n.artikel.startsWith('Art. 324b'))).toBe(false);
+  });
+});

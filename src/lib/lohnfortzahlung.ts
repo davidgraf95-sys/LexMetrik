@@ -3,6 +3,7 @@ import type { LohnfortzahlungInput, Berechnungsergebnis, Normverweis, SkalaDauer
 import {
   berechneDienstjahr,
   formatDatum,
+  formatISO,
   formatSkalaDauer,
   letzterTagLohnfortzahlung,
   skaliereSkalaDauer,
@@ -18,6 +19,9 @@ const N_324a_2: Normverweis = { artikel: 'Art. 324a Abs. 2 OR', bemerkung: 'Daue
 const N_324a_3: Normverweis = { artikel: 'Art. 324a Abs. 3 OR', bemerkung: 'Schwangerschaft gleicher Umfang' };
 const N_324a_4: Normverweis = { artikel: 'Art. 324a Abs. 4 OR', bemerkung: 'Abweichende (gleichwertige) Regelung' };
 const N_324b:   Normverweis = { artikel: 'Art. 324b OR', bemerkung: 'Koordination mit Sozialversicherung (KTG/UVG)' };
+const N_324b_1: Normverweis = { artikel: 'Art. 324b Abs. 1 OR', bemerkung: 'Befreiung, wenn Versicherung ≥ 80% deckt' };
+const N_324b_2: Normverweis = { artikel: 'Art. 324b Abs. 2 OR', bemerkung: 'Differenz zu 80% bei geringeren Leistungen' };
+const N_324b_3: Normverweis = { artikel: 'Art. 324b Abs. 3 OR', bemerkung: 'mind. 80% während Wartezeit/Karenztagen' };
 const N_362:    Normverweis = { artikel: 'Art. 362 OR', bemerkung: 'Relativ zwingendes Recht' };
 
 // Kantone, deren Skala-Zuordnung aus der vorliegenden SECO-/SHK-Tabelle belegt ist (§2.5).
@@ -49,7 +53,7 @@ function ktgIndikation(k: KtgKriterien): { ok: boolean; befunde: string[] } {
   return { ok, befunde };
 }
 
-export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnungsergebnis {
+export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnungsergebnis & { zeitraumVonISO?: string; letzterTagISO?: string } {
   const {
     vertragsbeginn,
     verhinderungBeginn,
@@ -65,6 +69,7 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
   const vb  = parseISO(vertragsbeginn);
   const vhb = parseISO(verhinderungBeginn);
   const pensum = pensumProzent ?? 100;
+  const grund = input.verhinderungsgrund ?? 'krankheit';
 
   const rechenweg: Berechnungsergebnis['rechenweg'] = [];
   const annahmen: string[] = [
@@ -312,7 +317,45 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
   annahmen.push(
     'Mehrere Absenzen im gleichen Dienstjahr werden kumuliert; das Skala-Kontingent gilt pro Dienstjahr.',
     'Keine Karenztage: Lohnfortzahlung beginnt ab dem ersten Tag der Verhinderung.',
+    'Verschulden: Bei Vorsatz oder grobem Selbstverschulden entfällt der Anspruch ganz (Art. 324a Abs. 1 OR); bei Schwangerschaft, Dienst und öffentlichem Amt ist fehlendes Verschulden keine Voraussetzung.',
   );
+
+  // ─── Schritt 8: Koordination mit obligatorischen Versicherungen (Art. 324b OR) ──
+  let koordHinweis = '';
+  if (grund === 'unfall') {
+    koordHinweis = ' Unfall: UVG-Taggeld 80% ab dem 3. Tag; Arbeitgeber trägt 80% des Lohns für die 2 Karenztage (Art. 324b Abs. 3), darüber hinaus von der Lohnfortzahlung befreit, soweit die UVG-Leistungen ≥ 80% decken (Art. 324b Abs. 1).';
+    rechenweg.push({
+      beschreibung: 'Schritt 8 – Koordination Unfall (Art. 324b OR / UVG)',
+      zwischenergebnis:
+        'Bei Unfall ist der Arbeitnehmer obligatorisch UVG-versichert (Taggeld 80% des versicherten Verdienstes ab dem 3. Tag nach dem Unfall, Höchstlohn beachten). ' +
+        'Der Arbeitgeber schuldet 80% des Lohns für die 2 Karenztage (Art. 324b Abs. 3); im Übrigen ist er von der Lohnfortzahlung befreit, soweit die UVG-Leistungen mindestens 80% des Lohns decken (Art. 324b Abs. 1). ' +
+        'Die nach der Skala bestimmte Dauer bildet das Geld-/Zeitminimum (Art. 324a Abs. 2).',
+      normen: [N_324b_1, N_324b_3, N_324a_2],
+    });
+    warnungen.push('Unfall ohne UVG-Deckung (z.B. < 8 Wochenstunden bei Nichtberufsunfall) oder Lohn über dem UVG-Höchstbetrag: Arbeitgeber zahlt die Differenz zu 80% bzw. den Lohn nach Skala (Art. 324b Abs. 2).');
+  } else if (grund === 'dienst') {
+    koordHinweis = ' Dienst: Die Erwerbsersatzordnung (EO) entschädigt; deckt sie ≥ 80%, ist der Arbeitgeber befreit, sonst schuldet er die Differenz zu 80% (Art. 324b Abs. 1/2).';
+    rechenweg.push({
+      beschreibung: 'Schritt 8 – Koordination Dienst (Art. 324b OR / EO)',
+      zwischenergebnis:
+        'Bei obligatorischem Militär-/Zivil-/Schutzdienst entschädigt die EO den Erwerbsausfall. Decken die EO-Leistungen mindestens 80% des Lohns, ist der Arbeitgeber von der Lohnfortzahlung befreit (Art. 324b Abs. 1); andernfalls schuldet er die Differenz zu 80% (Art. 324b Abs. 2) für die beschränkte Zeit nach der Skala.',
+      normen: [N_324b_1, N_324b_2, N_324a_2],
+    });
+  } else if (grund === 'schwangerschaft') {
+    koordHinweis = ' Schwangerschaft: Lohnfortzahlung im gleichen Umfang (Art. 324a Abs. 3 OR); nach der Niederkunft richtet sich die Entschädigung nach dem EOG (Mutterschaftsentschädigung 80%, max. 14 Wochen).';
+    rechenweg.push({
+      beschreibung: 'Schritt 8 – Schwangerschaft (Art. 324a Abs. 3 OR)',
+      zwischenergebnis:
+        'Bei schwangerschaftsbedingter Arbeitsverhinderung gilt die Lohnfortzahlung im gleichen Umfang wie bei Krankheit (Art. 324a Abs. 3 OR). Nach der Niederkunft greift grundsätzlich das EOG (Mutterschaftsentschädigung, 80%, längstens 14 Wochen), nicht mehr Art. 324a OR.',
+      normen: [N_324a_3],
+    });
+  } else if (grund === 'amt') {
+    rechenweg.push({
+      beschreibung: 'Schritt 8 – Öffentliches Amt (Art. 324a Abs. 1 OR)',
+      zwischenergebnis: 'Eine für die Amtsausübung bezogene Entschädigung ist an den Lohnfortzahlungsanspruch anzurechnen.',
+      normen: [N_324a_1],
+    });
+  }
 
   // ─── Ergebnis-Text ───────────────────────────────────────────────────
 
@@ -322,12 +365,17 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
       `2. Kredit (${dienstjahr + 1}. DJ) ab ${formatDatum(jahrestag)} bis und mit ${formatDatum(letzterTag)}${teilAufZusatz}.`
     : `Lohnfortzahlung bis und mit ${formatDatum(letzterTag)} (${formatSkalaDauer(effektiveDauer)}${teilAufZusatz}).`;
 
+  const normverweise = [N_324a_1, N_324a_2, N_324a_3, N_324a_4, N_362];
+  if (grund === 'unfall' || grund === 'dienst') normverweise.push(N_324b, N_324b_1, N_324b_2, N_324b_3);
+
   return {
-    ergebnis: ergebnisText,
+    ergebnis: ergebnisText + koordHinweis,
     status: 'ok',
     rechenweg,
     annahmen,
     warnungen,
-    normverweise: [N_324a_1, N_324a_2, N_324a_3, N_324a_4, N_362],
+    normverweise,
+    zeitraumVonISO: formatISO(vhb),
+    letzterTagISO: formatISO(letzterTag),
   };
 }

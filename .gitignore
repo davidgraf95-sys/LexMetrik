@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Lokale PDF-Review-Artefakte (regenerierbar: PDF_BEISPIELE=1 npx vitest run src/tests/pdf.test.ts)
+pdf-beispiele/

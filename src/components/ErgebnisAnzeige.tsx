@@ -23,17 +23,41 @@ type Props = {
   ergebnis: Berechnungsergebnis;
 };
 
+function ergebnisAlsText(titel: string, e: Berechnungsergebnis): string {
+  const z: string[] = [titel, '', e.ergebnis, '', 'Rechenweg:'];
+  e.rechenweg.forEach((s, i) => z.push(`${i + 1}. ${s.beschreibung}: ${s.zwischenergebnis}`));
+  if (e.normverweise.length) z.push('', 'Normverweise: ' + e.normverweise.map((n) => n.artikel).join(', '));
+  if (e.warnungen.length) { z.push('', 'Hinweise / Vorbehalte:'); e.warnungen.forEach((w) => z.push('– ' + w)); }
+  z.push('', 'Orientierungsberechnung – keine Rechtsberatung (LegalCalc).');
+  return z.join('\n');
+}
+
 export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
   const [rechenWegOffen, setRechenWegOffen] = useState(false);
   const [annahmenOffen, setAnnahmenOffen] = useState(false);
+  const [warnungenOffen, setWarnungenOffen] = useState(false);
+  const [kopiert, setKopiert] = useState(false);
   const cfg = STATUS_CONFIG[ergebnis.status];
 
+  const kopieren = () => {
+    navigator.clipboard?.writeText(ergebnisAlsText(titel, ergebnis)).then(
+      () => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); },
+      () => {},
+    );
+  };
+
   return (
-    <div className="bg-surface border border-line rounded-lg shadow-md overflow-hidden border-t-[3px] border-t-brass-500">
+    <div className="lc-reveal bg-surface border border-line rounded-lg shadow-md overflow-hidden border-t-[3px] border-t-brass-500">
       {/* Header */}
-      <div className="border-b border-line px-6 py-4">
-        <p className="lc-overline">Ergebnis</p>
-        <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{titel}</h3>
+      <div className="border-b border-line px-6 py-4 flex items-start justify-between gap-3">
+        <div>
+          <p className="lc-overline">Ergebnis</p>
+          <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{titel}</h3>
+        </div>
+        <button onClick={kopieren} className="lc-btn-ghost shrink-0" style={{ height: '36px', padding: '0 12px' }}
+          aria-label="Ergebnis in die Zwischenablage kopieren">
+          {kopiert ? 'Kopiert ✓' : 'Kopieren'}
+        </button>
       </div>
 
       <div className="p-6 space-y-5">
@@ -43,13 +67,19 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
           <p className="text-ink-900 font-medium text-body-l leading-relaxed num">{ergebnis.ergebnis}</p>
         </div>
 
-        {/* Warnungen / Vorbehalte */}
+        {/* Warnungen / Vorbehalte – einklappbar, um das Ergebnis übersichtlich zu halten */}
         {ergebnis.warnungen.length > 0 && (
-          <div className="lc-notice-warn rounded-md space-y-1" style={{ padding: '12px 16px', borderLeft: '3px solid var(--warn-500)' }}>
-            <p className="lc-overline text-warn-700 mb-1">Hinweise / Vorbehalte</p>
-            {ergebnis.warnungen.map((w, i) => (
-              <p key={i} className="text-body-s text-warn-700">{w}</p>
-            ))}
+          <div className="rounded-md overflow-hidden" style={{ border: '1px solid var(--warn-500)' }}>
+            <button onClick={() => setWarnungenOffen(!warnungenOffen)}
+              className="w-full flex items-center justify-between px-4 py-2.5 bg-warn-bg text-left transition-colors">
+              <span className="lc-overline text-warn-700">Hinweise / Vorbehalte ({ergebnis.warnungen.length})</span>
+              <span className="text-warn-700">{warnungenOffen ? '▲' : '▼'}</span>
+            </button>
+            {warnungenOffen && (
+              <div className="bg-warn-bg px-4 pb-3 space-y-1">
+                {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700">{w}</p>)}
+              </div>
+            )}
           </div>
         )}
 

@@ -118,6 +118,109 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
     aussage: 'Üblicher Bankdiskonto (Abs. 3) = Privatdiskontsatz, nicht Kontokorrent-Zinssatz.',
     verifiziert: false,
   },
+
+  // ZPO-Fristen (Art. 142–149 ZPO)
+  BGE_139_III_78: {
+    aktenzeichen: 'BGE 139 III 78',
+    aussage:
+      'Art. 145 Abs. 3 ZPO (Hinweis auf Nichtgeltung des Stillstands) ist Gültigkeitsvorschrift; fehlt der Hinweis, stehen die Fristen still. Die Ausnahme «summarisch» gilt auch für die Berufungsfrist gegen einen Summarentscheid.',
+    verifiziert: false,
+  },
+  BGE_144_III_404: {
+    aktenzeichen: 'BGE 144 III 404',
+    aussage: 'Bei der Frist zur Ablehnung des Urteilsvorschlags ist der Fristenstillstand zu berücksichtigen (Art. 145 Abs. 2 lit. a findet keine Anwendung).',
+    verifiziert: false,
+  },
+  BGE_141_III_554: {
+    aktenzeichen: 'BGE 141 III 554',
+    aussage: 'Gesetzliche Fristen sind nicht erstreckbar (Art. 144 Abs. 1); auch keine «Fristabnahme» (Berufungsantwortfrist).',
+    verifiziert: false,
+  },
+  BGE_141_II_429: {
+    aktenzeichen: 'BGE 141 II 429',
+    aussage: 'Zustellfiktion (7. Tag) gilt unabhängig von einer mit der Post vereinbarten längeren Abholfrist.',
+    verifiziert: false,
+  },
+  BGer_4A_20_2024: {
+    aktenzeichen: 'BGer 4A_20/2024',
+    aussage: 'Der Fristenstillstand (Art. 145 Abs. 1) gilt nicht für die gerichtlich angesetzte Prosekutionsfrist (umstritten).',
+    verifiziert: false,
+  },
+  BGE_140_III_561: {
+    aktenzeichen: 'BGE 140 III 561',
+    aussage: 'Der frühere Vorbehalt in Art. 209 Abs. 4 betrifft nur prozessuale Prosequierungsfristen, nicht materielle Verwirkungsfristen.',
+    verifiziert: false,
+  },
+
+  // SchKG-Fristen (Art. 17 ff., 56, 63 SchKG)
+  BGE_143_III_149: {
+    aktenzeichen: 'BGE 143 III 149',
+    aussage:
+      'Betreibungsferien hemmen – im Gegensatz zu Gerichtsferien – den Fristenlauf nicht (E. 2.1 i.V.m. BGE 114 III 60 E. 2b).',
+    verifiziert: false,
+  },
+  BGE_114_III_60: {
+    aktenzeichen: 'BGE 114 III 60',
+    aussage: 'Betreibungsferien hemmen den Fristenlauf nicht; nur Verlängerung bei Fristende in geschlossener Zeit (Art. 63 SchKG).',
+    verifiziert: false,
+  },
+  BGE_108_III_49: {
+    aktenzeichen: 'BGE 108 III 49',
+    aussage: 'Bei der 3-Tage-Frist nach Art. 63 SchKG zählen Samstag, Sonntag und staatlich anerkannte Feiertage nicht mit.',
+    verifiziert: false,
+  },
+  BGE_119_III_26: {
+    aktenzeichen: 'BGE 119 III 26',
+    aussage: 'Bei verschobener Steigerung gilt die Mindestfrist (Art. 138 Abs. 1 SchKG) nicht erneut.',
+    verifiziert: false,
+  },
+  BGE_149_III_179: {
+    aktenzeichen: 'BGE 149 III 179',
+    aussage:
+      'Die Auflage des Kollokationsplans ist keine Betreibungshandlung → für die Kollokationsklage gelten die ZPO-Gerichtsferien (Art. 145 ZPO), nicht Art. 63 SchKG.',
+    verifiziert: false,
+  },
+  BGE_143_III_38: {
+    aktenzeichen: 'BGE 143 III 38',
+    aussage: 'Altrechtlich (vor 2025): für die Aberkennungsklage galten die Betreibungsferien; Auslöser ist eine Betreibungshandlung.',
+    verifiziert: false,
+  },
+  BGE_141_III_170: {
+    aktenzeichen: 'BGE 141 III 170',
+    aussage: 'Für die Aufsichtsbeschwerde (Art. 17 SchKG) gilt der ZPO-Stillstand nicht (Art. 145 Abs. 4 Satz 2 ZPO).',
+    verifiziert: false,
+  },
+  BGer_5A_190_2023: {
+    aktenzeichen: 'BGer 5A_190/2023',
+    aussage:
+      'In Monaten bemessene Fristen (Art. 166 Abs. 2 SchKG) beginnen am Tag nach der Zustellung; Stillstand während rechtsvorschlagsbedingtem Gerichtsverfahren.',
+    verifiziert: false,
+  },
+  BGer_5A_730_2023: {
+    aktenzeichen: 'BGer 5A_730/2023',
+    aussage: 'Entscheide der Aufsichtsbehörde sind i.d.R. keine Betreibungshandlung → keine Verlängerung nach Art. 63 SchKG.',
+    verifiziert: false,
+  },
+  BGer_5A_611_2023: {
+    aktenzeichen: 'BGer 5A_611/2023',
+    aussage: 'Die Minimalfrist beim Verwertungsbegehren für Grundstücke (Art. 116 SchKG) liegt im Schuldnerinteresse.',
+    verifiziert: false,
+  },
+  BGer_5A_545_2017: {
+    aktenzeichen: 'BGer 5A_545/2017',
+    aussage: 'Arresteinsprache (Art. 278 SchKG): Nur die Einsprache ist fristgebunden; die Begründung kann auf Fristansetzung nachgereicht werden.',
+    verifiziert: false,
+  },
+  BGer_5A_288_2012: {
+    aktenzeichen: 'BGer 5A_288/2012',
+    aussage: 'Arrestprosekution (Art. 279 SchKG): «Einleitung» bedeutet Stellung des Betreibungsbegehrens.',
+    verifiziert: false,
+  },
+  BGer_5A_852_2014: {
+    aktenzeichen: 'BGer 5A_852/2014',
+    aussage: 'Lastenbereinigung (Art. 140 SchKG): Die Bestreitung muss nicht substantiiert werden.',
+    verifiziert: false,
+  },
 };
 
 /** Liefert einen Rechtsprechungshinweis aus dem zentralen Register. */

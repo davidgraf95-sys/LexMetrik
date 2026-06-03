@@ -35,6 +35,10 @@ export type ZpoInput = {
   zustellart?: ZpoZustellart;  // optional, Art. 142 Abs. 1bis
   modus?: ZpoModus;            // optional, default 'bundesgericht'
   erstreckung?: ZpoErstreckung; // optional, Ziff. 7.5 (nur gerichtliche Fristen)
+  // Art. 145 Abs. 3 ZPO (Gültigkeitsvorschrift, BGE 139 III 78): Hat das Gericht im
+  // Schlichtungs-/summarischen Verfahren auf die Nichtgeltung des Stillstands hingewiesen?
+  // Fehlt der Hinweis (false), gilt der Stillstand gleichwohl. Default true.
+  gerichtshinweisStillstand?: boolean;
 };
 
 // Erweitert das gemeinsame Ergebnis um die ZPO-spezifischen Eckdaten.
@@ -43,4 +47,9 @@ export type ZpoErgebnis = Berechnungsergebnis & {
   diesAQuo: string;                 // Beginn des Fristenlaufs
   diesAdQuem: string;               // Fristende (24.00 Uhr)
   erstrecktBis?: string;            // optional, bei Erstreckung
+  // ISO-Daten + Kontext für die Kalender-Visualisierung
+  ereignisISO: string;
+  diesAQuoISO: string;
+  diesAdQuemISO: string;
+  stillstandAktiv: boolean;
 };

@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import type { ArbeitsrechtInput, Kanton, SperrereignisTyp, Sperrereignis } from '../../types/legal';
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
-import { berechneKuendigungsfrist } from '../../lib/kuendigungsfrist';
-import { berechneSperrfristen } from '../../lib/sperrfristen';
+import { berechneSperrfristen, type SperrfristenErgebnis } from '../../lib/sperrfristen';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
-import type { Berechnungsergebnis } from '../../types/legal';
+import { FristenKalender } from '../FristenKalender';
+import { KuendigungTimeline } from '../KuendigungTimeline';
 
 const KANTONE_SELECT: Kanton[] = ['BS','BL','ZH','SH','TG','ZG','GR','BE','AG','SO','LU','SZ','UR','OW','NW','GL','FR','VS','VD','GE','NE','JU','TI','SG','AR','AI'];
 
@@ -14,6 +15,7 @@ const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'schwangerschaft',   label: 'Schwangerschaft (lit. c)' },
   { code: 'militaer_zivil',    label: 'Militär / Zivildienst (lit. a)' },
   { code: 'hilfsaktion',       label: 'Hilfsaktion (lit. d)' },
+  { code: 'betreuungsurlaub',  label: 'Betreuungsurlaub (Art. 329i)' },
 ];
 
 const inputCls = 'lc-input';
@@ -33,11 +35,6 @@ const DEFAULTS: ArbeitsrechtInput = {
 
 export function KombinierteAnsicht() {
   const [form, setForm] = useState<ArbeitsrechtInput>(DEFAULTS);
-  const [ergebnisse, setErgebnisse] = useState<{
-    lohnfortzahlung?: Berechnungsergebnis;
-    kuendigungsfrist?: Berechnungsergebnis;
-    sperrfristen?: Berechnungsergebnis;
-  }>({});
 
   const set = <K extends keyof ArbeitsrechtInput>(k: K, v: ArbeitsrechtInput[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -61,10 +58,11 @@ export function KombinierteAnsicht() {
       sperrereignisse: (f.sperrereignisse ?? []).filter((_, j) => j !== i),
     }));
 
-  const berechne = () => {
-    const next: typeof ergebnisse = {};
+  // Live-Berechnung – B+C als EIN kohärentes Ergebnis (Sperrfristen integrieren die Kündigungsfrist).
+  const ergebnisse: { lohnfortzahlung?: ReturnType<typeof berechneLohnfortzahlung>; kuendigung?: SperrfristenErgebnis } = {};
+  try {
     if (form.verhinderungBeginn) {
-      next.lohnfortzahlung = berechneLohnfortzahlung({
+      ergebnisse.lohnfortzahlung = berechneLohnfortzahlung({
         vertragsbeginn: form.vertragsbeginn,
         verhinderungBeginn: form.verhinderungBeginn,
         arbeitsunfaehigkeitProzent: form.arbeitsunfaehigkeitProzent ?? 100,
@@ -73,15 +71,12 @@ export function KombinierteAnsicht() {
         monatslohnBrutto: form.monatslohnBrutto,
       });
     }
-    next.kuendigungsfrist = berechneKuendigungsfrist(form).ergebnis;
-    next.sperrfristen = berechneSperrfristen(form);
-    setErgebnisse(next);
-  };
+    ergebnisse.kuendigung = berechneSperrfristen(form);
+  } catch { /* unvollständige Eingabe – Ergebnis ausgelassen */ }
 
   const abschnitte = [
     ...(ergebnisse.lohnfortzahlung ? [{ titel: 'Lohnfortzahlung (Art. 324a OR)', ergebnis: ergebnisse.lohnfortzahlung }] : []),
-    ...(ergebnisse.kuendigungsfrist ? [{ titel: 'Kündigungsfrist (Art. 335c OR)', ergebnis: ergebnisse.kuendigungsfrist }] : []),
-    ...((form.sperrereignisse ?? []).length > 0 && ergebnisse.sperrfristen ? [{ titel: 'Sperrfristen (Art. 336c OR)', ergebnis: ergebnisse.sperrfristen }] : []),
+    ...(ergebnisse.kuendigung ? [{ titel: 'Kündigung & Sperrfristen (Art. 335c / 336c OR)', ergebnis: ergebnisse.kuendigung }] : []),
   ];
 
   const eingaben = {
@@ -91,6 +86,22 @@ export function KombinierteAnsicht() {
     'Beginn Verhinderung': form.verhinderungBeginn ?? '',
     'AUF %': String(form.arbeitsunfaehigkeitProzent ?? 100),
     'Kanton': form.kanton ?? '',
+  };
+
+  // PDF: Skalen-Hinweis nur, wenn die Lohnfortzahlung Teil des Berichts ist.
+  const pdfConfig: PdfDocConfig = {
+    title: 'Arbeitsrechtliche Orientierungsberechnung (kombiniert)',
+    domain: 'arbeitsrecht',
+    fileBase: 'Arbeitsrecht-Kombiniert',
+    inputs: eingaben,
+    sections: abschnitte,
+    disclaimer:
+      'Automatisierte Orientierungsberechnung (Art. 324a / 335c / 336c OR) – keine Rechtsberatung. ' +
+      'Massgeblich sind GAV, Einzelvertrag, Versicherungspolice und der konkrete Sachverhalt; abweichende ' +
+      'Regelungen gehen vor. Norm- und Rechtsprechungsverweise sind im Einzelfall zu prüfen.' +
+      (ergebnisse.lohnfortzahlung
+        ? ' Die Lohnfortzahlungsskalen sind Gerichtspraxis und vor Produktiveinsatz gegen die aktuelle kantonale Praxis abzugleichen.'
+        : ''),
   };
 
   return (
@@ -171,18 +182,25 @@ export function KombinierteAnsicht() {
         ))}
       </div>
 
-      <button onClick={berechne} className="px-6 py-2.5 bg-ink-900 hover:bg-ink-700 text-paper text-sm font-medium rounded-lg transition-colors">
-        Alle berechnen
-      </button>
+      <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
 
-      {(form.sperrereignisse ?? []).length > 0 && (ergebnisse.lohnfortzahlung || ergebnisse.sperrfristen) && (
-        <div className="rounded-lg border border-line bg-surface p-4">
-          <p className="text-xs font-semibold text-brass-700 uppercase tracking-wide mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
-          <p className="text-sm text-ink-600">
+      {ergebnisse.kuendigung?.status === 'nichtig' && (
+        <div className="lc-notice-danger rounded-md" style={{ padding: '12px 16px', borderLeft: '3px solid var(--danger-500)' }}>
+          <p className="lc-overline text-danger-700 mb-1">Kündigung nichtig</p>
+          <p className="text-body-s text-danger-700">
+            Der Zugang der Kündigung fällt in eine Sperrfrist – die Kündigung ist nichtig und entfaltet keine Wirkung.
+            Sie ist nach Ablauf der Sperrfrist/Verhinderung zu wiederholen (Details unten).
+          </p>
+        </div>
+      )}
+
+      {(form.sperrereignisse ?? []).length > 0 && (ergebnisse.lohnfortzahlung || ergebnisse.kuendigung) && (
+        <div className="lc-notice">
+          <p className="lc-overline mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
+          <p className="text-body-s text-ink-600">
             Sperrfrist/Hemmung (Art. 336c OR) und Lohnfortzahlung (Art. 324a OR) sind <strong>voneinander unabhängig</strong>:
-            Modul A bestimmt die Lohn-Dauer, Modul C die Verlängerung der Kündigungsfrist (Hemmung).
-            Für die Dauer der gehemmten/verlängerten Kündigungsfrist besteht <strong>nicht automatisch</strong> ein Lohnanspruch
-            (BGE 115 V 437, zu verifizieren).
+            Modul A bestimmt die Lohn-Dauer, die Sperrfrist die Gültigkeit/Verlängerung der Kündigung. Für die gehemmte/verlängerte
+            Kündigungsfrist besteht <strong>nicht automatisch</strong> ein Lohnanspruch (BGE 115 V 437, zu verifizieren).
           </p>
         </div>
       )}
@@ -191,15 +209,22 @@ export function KombinierteAnsicht() {
         {ergebnisse.lohnfortzahlung && (
           <ErgebnisAnzeige titel="A – Lohnfortzahlung (Art. 324a OR)" ergebnis={ergebnisse.lohnfortzahlung} />
         )}
-        {ergebnisse.kuendigungsfrist && (
-          <ErgebnisAnzeige titel="B – Kündigungsfrist (Art. 335b / 335c OR)" ergebnis={ergebnisse.kuendigungsfrist} />
+        {ergebnisse.lohnfortzahlung?.status === 'ok' && ergebnisse.lohnfortzahlung.zeitraumVonISO && ergebnisse.lohnfortzahlung.letzterTagISO && (
+          <FristenKalender
+            ereignisISO={ergebnisse.lohnfortzahlung.zeitraumVonISO}
+            aQuoISO={ergebnisse.lohnfortzahlung.zeitraumVonISO}
+            adQuemISO={ergebnisse.lohnfortzahlung.letzterTagISO}
+            kanton={form.kanton ?? 'BE'}
+            stillstandAktiv={false}
+            feiertage={false}
+            labels={{ ereignis: 'Beginn der Verhinderung', aquo: 'Beginn der Verhinderung', adquem: 'Letzter bezahlter Tag' }}
+          />
         )}
-        {(form.sperrereignisse ?? []).length > 0 && ergebnisse.sperrfristen && (
-          <ErgebnisAnzeige titel="C – Sperrfristen (Art. 336c OR)" ergebnis={ergebnisse.sperrfristen} />
+        {ergebnisse.kuendigung && (
+          <ErgebnisAnzeige titel="B+C – Kündigung & Sperrfristen (Art. 335c / 336c OR)" ergebnis={ergebnisse.kuendigung} />
         )}
-        {abschnitte.length > 0 && (
-          <PdfExportButton abschnitte={abschnitte} eingaben={eingaben} />
-        )}
+        {ergebnisse.kuendigung && <KuendigungTimeline e={ergebnisse.kuendigung} />}
+        <PdfExportButton config={pdfConfig} />
       </div>
     </div>
   );

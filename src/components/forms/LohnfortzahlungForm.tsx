@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import type { LohnfortzahlungInput, Kanton } from '../../types/legal';
+import type { LohnfortzahlungInput, Kanton, Verhinderungsgrund } from '../../types/legal';
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
-import type { Berechnungsergebnis } from '../../types/legal';
+import { FristenKalender } from '../FristenKalender';
 
 const KANTONE: { code: Kanton; name: string }[] = [
   { code: 'BS', name: 'Basel-Stadt' },
@@ -71,10 +72,15 @@ function validiere(f: LohnfortzahlungInput): string[] {
   return fehler;
 }
 
+const BEISPIELE: { label: string; form: Partial<LohnfortzahlungInput> }[] = [
+  { label: 'Krankheit 3. DJ (BS)', form: { vertragsbeginn: '2024-01-01', verhinderungBeginn: '2026-01-01', arbeitsunfaehigkeitProzent: 100, kanton: 'BS' } },
+  { label: 'Teil-AUF 50%', form: { vertragsbeginn: '2024-01-01', verhinderungBeginn: '2026-01-01', arbeitsunfaehigkeitProzent: 50, kanton: 'BS' } },
+  { label: 'DJ-übergreifend', form: { vertragsbeginn: '2024-01-01', verhinderungBeginn: '2025-12-01', verhinderungEnde: '2026-06-01', kanton: 'BS' } },
+  { label: 'KTG vorhanden', form: { ktgGleichwertigVorhanden: true, kanton: 'ZH' } },
+];
+
 export function LohnfortzahlungForm() {
   const [form, setForm] = useState<LohnfortzahlungInput>(DEFAULTS);
-  const [ergebnis, setErgebnis] = useState<Berechnungsergebnis | null>(null);
-  const [fehler, setFehler] = useState<string[]>([]);
   const [erweitert, setErweitert] = useState(false);
 
   const set = <K extends keyof LohnfortzahlungInput>(k: K, v: LohnfortzahlungInput[K]) =>
@@ -83,16 +89,12 @@ export function LohnfortzahlungForm() {
   const setKtg = (k: keyof NonNullable<LohnfortzahlungInput['ktgKriterien']>, v: number | boolean | undefined) =>
     setForm((f) => ({ ...f, ktgKriterien: { ...f.ktgKriterien, [k]: v } }));
 
-  const berechne = () => {
-    const v = validiere(form);
-    setFehler(v);
-    if (v.length > 0) { setErgebnis(null); return; }
-    try {
-      setErgebnis(berechneLohnfortzahlung(form));
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  const ladeBeispiel = (b: Partial<LohnfortzahlungInput>) => setForm({ ...DEFAULTS, ...b });
+
+  // Live-Berechnung
+  const fehler = validiere(form);
+  let ergebnis: ReturnType<typeof berechneLohnfortzahlung> | null = null;
+  if (fehler.length === 0) { try { ergebnis = berechneLohnfortzahlung(form); } catch { ergebnis = null; } }
 
   const eingaben = {
     'Vertragsbeginn': form.vertragsbeginn,
@@ -105,12 +107,34 @@ export function LohnfortzahlungForm() {
     ...(form.monatslohnBrutto ? { 'Monatslohn brutto (CHF)': String(form.monatslohnBrutto) } : {}),
   };
 
+  // PDF: domänenspezifischer Disclaimer (GAV-/Skalen-Hinweis ist HIER einschlägig).
+  const pdfConfig: PdfDocConfig = {
+    title: 'Lohnfortzahlung bei Verhinderung (Art. 324a OR)',
+    domain: 'arbeitsrecht',
+    fileBase: 'Lohnfortzahlung',
+    inputs: eingaben,
+    sections: ergebnis ? [{ titel: 'Lohnfortzahlung (Art. 324a OR)', ergebnis }] : [],
+    disclaimer:
+      'Automatisierte Orientierungsberechnung der Lohnfortzahlung (Art. 324a OR) – keine Rechtsberatung. ' +
+      'Abweichende GAV-/Vertrags-/Versicherungslösungen, der genaue Sachverhalt sowie alle Norm- und ' +
+      'Rechtsprechungsverweise sind im Einzelfall zu prüfen. Die Lohnfortzahlungsskalen sind Gerichtspraxis ' +
+      'und vor Produktiveinsatz gegen die aktuelle kantonale Praxis abzugleichen.',
+  };
+
   return (
     <div className="space-y-6">
-      {/* Skalen-Hinweis */}
-      <div className="lc-notice-warn rounded-md" style={{ padding: '12px 16px', borderLeft: '3px solid var(--warn-500)' }}>
-        <p className="lc-overline text-warn-700 mb-1">Wichtiger Hinweis zu den Skalen</p>
-        <p className="text-body-s text-warn-700">{SKALEN_HINWEIS}</p>
+      {/* Skalen-Hinweis – kompakt, aufklappbar */}
+      <details className="lc-notice-warn rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--warn-500)' }}>
+        <summary className="text-body-s text-warn-700 cursor-pointer">Skalen = Gerichtspraxis, nicht gerichtsverbindlich (Art. 324a Abs. 2 OR). <span className="opacity-80">Details</span></summary>
+        <p className="text-body-s text-warn-700 mt-2">{SKALEN_HINWEIS}</p>
+      </details>
+
+      {/* Beispiele */}
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
+        {BEISPIELE.map((b) => (
+          <button key={b.label} onClick={() => ladeBeispiel(b.form)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
+        ))}
       </div>
 
       {/* Eingaben */}
@@ -121,6 +145,17 @@ export function LohnfortzahlungForm() {
 
         <Field label="Beginn der Arbeitsverhinderung" hint="Stichtag für Dienstjahr-Berechnung">
           <input type="date" value={form.verhinderungBeginn} onChange={(e) => set('verhinderungBeginn', e.target.value)} className={inputCls} />
+        </Field>
+
+        <Field label="Verhinderungsgrund" hint="Steuert die Koordination mit Versicherungen (Art. 324b OR)">
+          <select value={form.verhinderungsgrund ?? 'krankheit'} onChange={(e) => set('verhinderungsgrund', e.target.value as Verhinderungsgrund)} className={inputCls}>
+            <option value="krankheit">Krankheit</option>
+            <option value="unfall">Unfall (UVG)</option>
+            <option value="schwangerschaft">Schwangerschaft (Art. 324a Abs. 3)</option>
+            <option value="dienst">Militär-/Zivil-/Schutzdienst (EO)</option>
+            <option value="amt">Öffentliches Amt</option>
+            <option value="uebrige">Übrige persönliche Gründe</option>
+          </select>
         </Field>
 
         <Field label="Kanton" hint="BS/BL → Basler Skala · ZH/SH/TG → Zürcher Skala · Übrige → Berner Skala">
@@ -253,12 +288,22 @@ export function LohnfortzahlungForm() {
         </div>
       )}
 
-      <button onClick={berechne} className="lc-btn-primary">Berechnen</button>
-
       {ergebnis && (
         <div className="space-y-4">
+          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          {ergebnis.status === 'ok' && ergebnis.zeitraumVonISO && ergebnis.letzterTagISO && (
+            <FristenKalender
+              ereignisISO={ergebnis.zeitraumVonISO}
+              aQuoISO={ergebnis.zeitraumVonISO}
+              adQuemISO={ergebnis.letzterTagISO}
+              kanton={form.kanton}
+              stillstandAktiv={false}
+              feiertage={false}
+              labels={{ ereignis: 'Beginn der Verhinderung', aquo: 'Beginn der Verhinderung', adquem: 'Letzter bezahlter Tag' }}
+            />
+          )}
           <ErgebnisAnzeige titel="Lohnfortzahlung (Art. 324a OR)" ergebnis={ergebnis} />
-          <PdfExportButton abschnitte={[{ titel: 'Lohnfortzahlung (Art. 324a OR)', ergebnis }]} eingaben={eingaben} />
+          <PdfExportButton config={pdfConfig} />
         </div>
       )}
     </div>

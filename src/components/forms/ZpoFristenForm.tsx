@@ -2,8 +2,12 @@ import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { ZpoInput, ZpoEinheit, ZpoVerfahren, ZpoFristnatur, ZpoZustellart, ZpoModus, ZpoErgebnis } from '../../types/zpo';
 import { berechneFrist, zustellfiktion } from '../../lib/zpoFristen';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
+import { zpoPdfCitations, zpoPdfErgebnis } from '../../lib/pdf/zpoPdf';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
+import { FristenKalender } from '../FristenKalender';
+import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
 
 const KANTONE: Kanton[] = ['ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'BS', 'BL', 'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'];
 
@@ -24,13 +28,20 @@ const VERFAHREN: { code: ZpoVerfahren; label: string; stillstand: boolean }[] = 
   { code: 'rechtsmittel_summarisch', label: 'Rechtsmittel gegen summarischen Entscheid', stillstand: false },
 ];
 
-const DISCLAIMER =
+// Disclaimer in drei Teilen: Der Praxis-Satz (BGer 5A_691/2023) betrifft nur
+// Wochen-/Monats-/Jahresfristen und wird in der PDF bei Tagesfristen weggelassen.
+const DISCLAIMER_TEIL1 =
   'Dieser Fristenrechner ist eine rechnerische Orientierungshilfe auf Grundlage der Art. 142–147 ZPO und stellt ' +
-  'keine Rechtsberatung und keine verbindliche Fristberechnung dar. Die Berechnung folgt der bundesgerichtlichen ' +
-  'Praxis (BGer 5A_691/2023 vom 13.8.2024); einzelne Auslegungsfragen sind in Lehre und Rechtsprechung umstritten. ' +
-  'Kantonale und lokale Feiertage sowie die konkrete Verfahrensart sind eigenständig zu prüfen. Massgeblich ist der ' +
-  'Sitz des Gerichts (Gerichtsort). Eine verpasste Frist kann nur unter den Voraussetzungen von Art. 148 ZPO ' +
+  'keine Rechtsberatung und keine verbindliche Fristberechnung dar. ';
+const DISCLAIMER_PRAXIS =
+  'Die Berechnung folgt der bundesgerichtlichen Praxis (BGer 5A_691/2023 vom 13.8.2024); einzelne ' +
+  'Auslegungsfragen sind in Lehre und Rechtsprechung umstritten. ';
+const DISCLAIMER_TEIL2 =
+  'Massgeblich sind die am Gerichtsort (Sitz des Gerichts) anerkannten Feiertage; kantonale und lokale Feiertage ' +
+  'sowie die konkrete Verfahrensart sind eigenständig zu prüfen. Berechnet wird ausschliesslich das Fristende, ' +
+  'nicht die Rechtsfolgen einer Säumnis. Eine verpasste Frist kann nur unter den Voraussetzungen von Art. 148 ZPO ' +
   'wiederhergestellt werden. Für die Fristwahrung im Einzelfall ist allein die nutzende Person verantwortlich.';
+const DISCLAIMER = DISCLAIMER_TEIL1 + DISCLAIMER_PRAXIS + DISCLAIMER_TEIL2;
 
 const DEFAULTS: ZpoInput = {
   ereignis: '2025-01-15',
@@ -57,37 +68,32 @@ const inputCls = 'lc-input';
 
 export function ZpoFristenForm() {
   const [form, setForm] = useState<ZpoInput>(DEFAULTS);
-  const [ergebnis, setErgebnis] = useState<ZpoErgebnis | null>(null);
-  const [fehler, setFehler] = useState<string[]>([]);
+  const [phase, setPhase] = useState<ZpoPhase>('rechtsmittel');
+  const [presetKey, setPresetKey] = useState('');
+  const [presetHinweis, setPresetHinweis] = useState<string | null>(null);
   const [erweitert, setErweitert] = useState(false);
   const [fiktionDatum, setFiktionDatum] = useState('');
   const [erstreckungAn, setErstreckungAn] = useState(false);
   const [erstreckung, setErstreckung] = useState<{ einheit: 'tage' | 'wochen'; laenge: number }>({ einheit: 'tage', laenge: 10 });
 
   const set = <K extends keyof ZpoInput>(k: K, v: ZpoInput[K]) => setForm((f) => ({ ...f, [k]: v }));
-
-  const validiere = (f: ZpoInput): string[] => {
-    const e: string[] = [];
-    if (!Number.isInteger(f.laenge) || f.laenge <= 0) e.push('Fristlänge muss eine ganze Zahl > 0 sein.');
-    if (!f.ereignis) e.push('Bitte ein auslösendes Ereignis (Datum) angeben.');
-    return e;
+  const presetsDerPhase = PRESETS.filter((p) => p.phase === phase);
+  const ladePreset = (p: ZpoPreset) => {
+    setPresetKey(p.key);
+    setPresetHinweis(p.hinweis ?? null);
+    setForm((f) => ({ ...f, einheit: p.einheit, verfahren: p.verfahren, fristnatur: p.fristnatur, ...(p.laenge != null ? { laenge: p.laenge } : {}) }));
+    setErstreckungAn(false);
   };
 
-  const berechne = () => {
-    const eingabe: ZpoInput = {
-      ...form,
-      erstreckung: erstreckungAn && form.fristnatur === 'gerichtlich' ? erstreckung : undefined,
-    };
-    const v = validiere(eingabe);
-    setFehler(v);
-    if (v.length > 0) { setErgebnis(null); return; }
-    try {
-      setErgebnis(berechneFrist(eingabe));
-    } catch (err) {
-      setFehler([(err as Error).message]);
-      setErgebnis(null);
-    }
-  };
+  // Live-Berechnung
+  const eingabe: ZpoInput = { ...form, erstreckung: erstreckungAn && form.fristnatur === 'gerichtlich' ? erstreckung : undefined };
+  const fehler: string[] = [];
+  if (!Number.isInteger(form.laenge) || form.laenge <= 0) fehler.push('Fristlänge muss eine ganze Zahl > 0 sein.');
+  if (!form.ereignis) fehler.push('Bitte ein auslösendes Ereignis (Datum) angeben.');
+  let ergebnis: ZpoErgebnis | null = null;
+  if (fehler.length === 0) {
+    try { ergebnis = berechneFrist(eingabe); } catch (err) { fehler.push((err as Error).message); }
+  }
 
   const aktVerfahren = VERFAHREN.find((v) => v.code === form.verfahren)!;
 
@@ -100,22 +106,64 @@ export function ZpoFristenForm() {
     'Berechnungsmodus': form.modus === 'mindermeinung' ? 'Mindermeinung' : 'bundesgerichtliche Praxis',
   };
 
+  // ── PDF-Konfiguration (zentrale Vorlage, nur einschlägige Bausteine) ──
+  const istTagesfrist = form.einheit === 'tage';
+  const pdfConfig: PdfDocConfig = {
+    title: 'ZPO-Fristberechnung',
+    domain: 'zpo-fristen',
+    fileBase: 'ZPO-Fristen',
+    inputs: eingaben,
+    sections: ergebnis
+      ? [{ titel: 'ZPO-Fristberechnung (Art. 142 ff. ZPO)', ergebnis: zpoPdfErgebnis(ergebnis, form.einheit) }]
+      : [],
+    citations: ergebnis ? zpoPdfCitations(ergebnis) : undefined,
+    disclaimer: DISCLAIMER_TEIL1 + (istTagesfrist ? '' : DISCLAIMER_PRAXIS) + DISCLAIMER_TEIL2,
+  };
+
   return (
     <div className="space-y-6">
-      {/* Pflicht-Disclaimer (Ziff. 9) – immer sichtbar */}
-      <div className="rounded-lg border border-line bg-danger-bg p-4">
-        <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Wichtiger Hinweis – keine Rechtsberatung</p>
-        <p className="text-sm text-danger-700">{DISCLAIMER}</p>
+      {/* Pflicht-Disclaimer (Ziff. 9) – immer sichtbar, kompakt. Volltext im Ergebnis-Panel. */}
+      <details className="lc-notice-danger rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--danger-500)' }}>
+        <summary className="text-body-s text-danger-700 cursor-pointer">
+          <strong>Keine Rechtsberatung</strong> – rechnerische Orientierung (Art. 142–147 ZPO, Praxis BGer 5A_691/2023). Massgeblich ist der Gerichtsort.
+        </summary>
+        <p className="text-body-s text-danger-700 mt-2">{DISCLAIMER}</p>
+      </details>
+
+      {/* Verfahrensphase */}
+      <div className="space-y-2">
+        <p className="lc-overline">Verfahrensphase wählen</p>
+        <div className="flex flex-wrap gap-2">
+          {PHASEN.map((p) => (
+            <button key={p.code} type="button"
+              onClick={() => { setPhase(p.code); setPresetKey(''); setPresetHinweis(null); }}
+              className={`px-3 py-2 rounded-md text-body-s font-medium transition-colors ${
+                phase === p.code ? 'bg-ink-900 text-paper' : 'bg-surface border border-line text-ink-700 hover:bg-brass-100'
+              }`}>
+              {p.label}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Geltungsbereich-Hinweis */}
-      <div className="rounded-lg border border-line bg-surface p-4">
-        <p className="text-xs font-semibold text-brass-700 uppercase tracking-wide mb-1">Geltungsbereich</p>
-        <p className="text-sm text-ink-700">
-          Prozessuale Fristen der ZPO (Art. 142 ff.). <strong>Nicht</strong> anwendbar auf materielle Klage-/Verwirkungsfristen
-          des Bundeszivilrechts (z.B. Art. 75, 521/533 ZGB, Art. 706a OR – diese folgen der Rechtshängigkeit, Art. 64 Abs. 2 ZPO).
-          Massgeblich ist der <strong>Gerichtsort</strong> (Sitz des Gerichts), nicht der Wohnsitz der Partei/Vertretung.
-        </p>
+      {phase === 'materiell' ? (
+        <div className="lc-notice-danger rounded-md" style={{ padding: '12px 16px', borderLeft: '3px solid var(--danger-500)' }}>
+          <p className="lc-overline text-danger-700 mb-1">Materielle Frist – nicht von diesem Rechner erfasst</p>
+          <p className="text-body-s text-danger-700">{MATERIELL_WARNUNG}</p>
+        </div>
+      ) : (
+      <>
+      {/* Frist-Preset */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
+        <Field label="Frist-Vorlage" hint="Setzt Länge, Verfahren, Stillstand und Erstreckbarkeit automatisch">
+          <select value={presetKey} onChange={(e) => { const p = PRESETS.find((x) => x.key === e.target.value); if (p) ladePreset(p); else setPresetKey(''); }} className={inputCls}>
+            <option value="">– Vorlage wählen (oder manuell unten) –</option>
+            {presetsDerPhase.map((p) => <option key={p.key} value={p.key}>{p.label} · {p.norm}</option>)}
+          </select>
+        </Field>
+        {presetHinweis && (
+          <div className="lc-notice"><p className="text-body-s text-ink-600">{presetHinweis}</p></div>
+        )}
       </div>
 
       {/* Eingaben */}
@@ -139,6 +187,16 @@ export function ZpoFristenForm() {
             {VERFAHREN.map((v) => <option key={v.code} value={v.code}>{v.label}</option>)}
           </select>
         </Field>
+
+        {!aktVerfahren.stillstand && (
+          <Field label="Hinweis des Gerichts auf Nichtgeltung des Stillstands?" hint="Art. 145 Abs. 3 ZPO – Gültigkeitsvorschrift (BGE 139 III 78)">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer pt-2 text-ink-700">
+              <input type="checkbox" checked={form.gerichtshinweisStillstand ?? true}
+                onChange={(e) => set('gerichtshinweisStillstand', e.target.checked)} />
+              Gericht hat hingewiesen (sonst gilt der Stillstand gleichwohl)
+            </label>
+          </Field>
+        )}
 
         <Field label="Gerichtsort (Kanton)" hint="Sitz des Gerichts – massgeblich für Feiertage (Art. 142 Abs. 3)">
           <select value={form.kanton} onChange={(e) => set('kanton', e.target.value as Kanton)} className={inputCls}>
@@ -164,7 +222,7 @@ export function ZpoFristenForm() {
       {/* Optionale / erweiterte Funktionen */}
       <div className="border border-line rounded-lg overflow-hidden">
         <button type="button" onClick={() => setErweitert(!erweitert)}
-          className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-surface text-left">
+          className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left">
           <span className="text-sm font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
           <span className="text-ink-400">{erweitert ? '▲' : '▼'}</span>
         </button>
@@ -218,13 +276,9 @@ export function ZpoFristenForm() {
         </div>
       )}
 
-      <button onClick={berechne}
-        className="px-6 py-2.5 bg-ink-900 hover:bg-ink-700 text-paper text-sm font-medium rounded-lg transition-colors">
-        Frist berechnen
-      </button>
-
       {ergebnis && (
         <div className="space-y-4">
+          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
           {/* Prominente Eckdaten */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
@@ -243,9 +297,18 @@ export function ZpoFristenForm() {
               Nach Erstreckung: <strong>{ergebnis.erstrecktBis}</strong> (24.00 Uhr).
             </div>
           )}
+          <FristenKalender
+            ereignisISO={ergebnis.ereignisISO}
+            aQuoISO={ergebnis.diesAQuoISO}
+            adQuemISO={ergebnis.diesAdQuemISO}
+            kanton={form.kanton}
+            stillstandAktiv={ergebnis.stillstandAktiv}
+          />
           <ErgebnisAnzeige titel="ZPO-Fristberechnung (Art. 142 ff. ZPO)" ergebnis={ergebnis} />
-          <PdfExportButton abschnitte={[{ titel: 'ZPO-Fristberechnung (Art. 142 ff. ZPO)', ergebnis }]} eingaben={eingaben} />
+          <PdfExportButton config={pdfConfig} />
         </div>
+      )}
+      </>
       )}
     </div>
   );

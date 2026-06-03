@@ -1,12 +1,19 @@
-import { parseISO, addDays, addMonths, addYears, format, isBefore, isAfter } from 'date-fns';
+import { parseISO, addDays, format } from 'date-fns';
 import type { Normverweis, Rechenschritt } from '../types/legal';
-import type { ZpoInput, ZpoErgebnis, ZpoVerfahren, ZpoEinheit } from '../types/zpo';
+import type { ZpoInput, ZpoErgebnis, ZpoVerfahren } from '../types/zpo';
 import {
   stillstandsperioden,
   stillstandsperiodeFuer,
-  dauerTage,
   istArbeitsfreierTag,
 } from '../data/zpoFeiertage';
+import {
+  fristendeTage,
+  fristendeKalender,
+  normalisiereEnde,
+  OHNE_STILLSTAND,
+  type Stillstand,
+} from './fristenEngine';
+import { rechtsprechung } from '../data/verifikation';
 
 // ─── Feste Normverweise (Art. 142–148 ZPO) ────────────────────────────────
 
@@ -40,12 +47,23 @@ const STILLSTAND_GILT: Record<ZpoVerfahren, boolean> = {
 
 const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
 const iso = (d: Date) => format(d, 'yyyy-MM-dd');
-const leq = (a: Date, b: Date) => !isAfter(a, b);
 
 // ─── Hilfsfunktionen ───────────────────────────────────────────────────────
 
-function imStillstand(d: Date, verfahren: ZpoVerfahren): boolean {
-  return STILLSTAND_GILT[verfahren] && stillstandsperiodeFuer(d) !== null;
+function imStillstand(d: Date, stillstandAktiv: boolean): boolean {
+  return stillstandAktiv && stillstandsperiodeFuer(d) !== null;
+}
+
+// ZPO-Stillstand-Strategie für die gemeinsame Engine (Art. 145/146 ZPO: Ruhen).
+// Gilt der Stillstand nicht, kennt die Strategie keine geschlossenen Zeiten.
+function zpoStillstand(stillstandAktiv: boolean): Stillstand {
+  if (!stillstandAktiv) return OHNE_STILLSTAND;
+  return {
+    periodeFuer: stillstandsperiodeFuer,
+    perioden: stillstandsperioden,
+    ruhenZaehlung: true,
+    endregel: 'ruhen_weiter',
+  };
 }
 
 // Art. 142 Abs. 1bis: Zustellung per gewöhnlicher Post an Sa/So/Feiertag → nächster Werktag.
@@ -56,84 +74,6 @@ function ereignisKorrigiert(input: ZpoInput, ereignis: Date): { tag: Date; korri
     return { tag: d, korrigiert: true };
   }
   return { tag: ereignis, korrigiert: false };
-}
-
-// Endnormalisierung: Art. 142 Abs. 3 und Art. 145 Abs. 1 kumulativ.
-function normalisiereEnde(ende: Date, input: ZpoInput): { tag: Date; verschoben: boolean } {
-  let d = ende;
-  let verschoben = false;
-  // Schutz gegen Endlosschleife (max. ~1 Jahr Verschiebung möglich)
-  for (let guard = 0; guard < 400; guard++) {
-    const p = STILLSTAND_GILT[input.verfahren] ? stillstandsperiodeFuer(d) : null;
-    if (p) { d = addDays(p.bis, 1); verschoben = true; continue; }
-    if (istArbeitsfreierTag(d, input.kanton)) { d = addDays(d, 1); verschoben = true; continue; }
-    break;
-  }
-  return { tag: d, verschoben };
-}
-
-// ─── Tagesfristen (Art. 142 Abs. 1 ZPO, Ziff. 6.3) ────────────────────────
-
-function fristendeTage(input: ZpoInput, massgeblich: Date): { diesAQuo: Date; ende: Date } {
-  let cursor = addDays(massgeblich, 1); // Art. 142 Abs. 1: Beginn am Folgetag
-  let gezaehlt = 0;
-  let diesAQuo: Date | null = null;
-  for (let guard = 0; guard < 4000; guard++) {
-    if (!imStillstand(cursor, input.verfahren)) { // Art. 145/146: Stillstandstage zählen nicht
-      gezaehlt += 1;
-      if (gezaehlt === 1) diesAQuo = cursor;
-      if (gezaehlt === input.laenge) return { diesAQuo: diesAQuo!, ende: cursor };
-    }
-    cursor = addDays(cursor, 1);
-  }
-  throw new Error('Fristberechnung (Tage) konvergiert nicht.');
-}
-
-// ─── Wochen-/Monats-/Jahresfristen (Art. 142 Abs. 2 ZPO, Ziff. 6.4) ───────
-
-function naivesEnde(ref: Date, einheit: ZpoEinheit, N: number): Date {
-  switch (einheit) {
-    case 'wochen': return addDays(ref, 7 * N);     // gleicher Wochentag
-    case 'monate': return addMonths(ref, N);       // date-fns klemmt auf Monatsende
-    case 'jahre':  return addYears(ref, N);        // date-fns klemmt 29.2. → 28.2.
-    case 'tage':   return addDays(ref, N);         // (nicht für Tagesfristen genutzt)
-  }
-}
-
-function fristendeKalender(input: ZpoInput, massgeblich: Date): { diesAQuo: Date; ende: Date; verlaengerungTage: number } {
-  // dies a quo: Ereignistag selbst, bzw. letzter Tag der Stillstandsperiode (Art. 146 Abs. 1).
-  let diesAQuo = massgeblich;
-  if (imStillstand(massgeblich, input.verfahren)) {
-    diesAQuo = stillstandsperiodeFuer(massgeblich)!.bis;
-  }
-  // Berechnungsbasis (Mindermeinung [UMSTRITTEN]: Beginn am Folgetag).
-  let ref = diesAQuo;
-  if (input.modus === 'mindermeinung') ref = addDays(ref, 1);
-
-  let ende = naivesEnde(ref, input.einheit, input.laenge);
-
-  // Kumulative Stillstandsverlängerung (Art. 145 Abs. 1 i.V.m. Art. 146 Abs. 1).
-  let verlaengerungTage = 0;
-  if (STILLSTAND_GILT[input.verfahren]) {
-    const angewandt = new Set<string>();
-    for (let guard = 0; guard < 50; guard++) {
-      let cand: { key: string; von: Date; bis: Date } | null = null;
-      for (let jy = ref.getFullYear() - 1; jy <= ende.getFullYear() + 1; jy++) {
-        for (const p of stillstandsperioden(jy)) {
-          if (angewandt.has(p.key)) continue;
-          if (isAfter(p.von, ref) && leq(p.von, ende)) {
-            if (!cand || isBefore(p.von, cand.von)) cand = p;
-          }
-        }
-      }
-      if (!cand) break;
-      const d = dauerTage(cand);
-      ende = addDays(ende, d);
-      verlaengerungTage += d;
-      angewandt.add(cand.key);
-    }
-  }
-  return { diesAQuo, ende, verlaengerungTage };
 }
 
 // ─── Hauptfunktion ──────────────────────────────────────────────────────────
@@ -148,7 +88,23 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
   const warnungen: string[] = [];
 
   const ereignis = parseISO(input.ereignis);
-  const stillstandGilt = STILLSTAND_GILT[input.verfahren];
+
+  // Stillstand: grundsätzlich nach Verfahren (Art. 145 Abs. 2). ABER: Im Schlichtungs-/
+  // summarischen Verfahren ist der Hinweis nach Art. 145 Abs. 3 ZPO Gültigkeitsvorschrift
+  // (BGE 139 III 78 E. 5) – fehlt er, stehen die Fristen gleichwohl still.
+  const verfahrenStillstand = STILLSTAND_GILT[input.verfahren];
+  const hinweisErfolgt = input.gerichtshinweisStillstand ?? true;
+  const stillstandGilt = verfahrenStillstand || hinweisErfolgt === false;
+  const st = zpoStillstand(stillstandGilt);
+  if (!verfahrenStillstand && stillstandGilt) {
+    rechenweg.push({
+      beschreibung: 'Art. 145 Abs. 3 ZPO – Hinweispflicht (Gültigkeitsvorschrift)',
+      zwischenergebnis:
+        'Im gewählten Verfahren gilt der Stillstand an sich nicht (Art. 145 Abs. 2 ZPO). Da das Gericht jedoch NICHT auf die Nichtgeltung hingewiesen hat, stehen die Fristen gleichwohl still (Art. 145 Abs. 3 ZPO ist Gültigkeitsvorschrift).',
+      normen: [N_145_3, N_145_2],
+      rechtsprechung: [rechtsprechung('BGE_139_III_78')],
+    });
+  }
 
   // Schritt 1: massgeblichen Ereignistag bestimmen (Art. 142 Abs. 1bis)
   const { tag: massgeblich, korrigiert } = ereignisKorrigiert(input, ereignis);
@@ -163,10 +119,9 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
   // Schritt 2: Fristende provisorisch berechnen
   let diesAQuo: Date;
   let endeProvisorisch: Date;
-  let verlaengerungTage = 0;
 
   if (input.einheit === 'tage') {
-    const r = fristendeTage(input, massgeblich);
+    const r = fristendeTage(massgeblich, input.laenge, st);
     diesAQuo = r.diesAQuo;
     endeProvisorisch = r.ende;
     rechenweg.push({
@@ -178,16 +133,16 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
       normen: stillstandGilt ? [N_142_1, N_146_1] : [N_142_1],
     });
   } else {
-    const r = fristendeKalender(input, massgeblich);
+    const r = fristendeKalender(massgeblich, input.einheit, input.laenge, st, input.modus === 'mindermeinung');
     diesAQuo = r.diesAQuo;
     endeProvisorisch = r.ende;
-    verlaengerungTage = r.verlaengerungTage;
+    const verlaengerungTage = r.verlaengerungTage;
     const einheitLabel = input.einheit === 'wochen' ? 'Wochen' : input.einheit === 'monate' ? 'Monate' : 'Jahre';
     rechenweg.push({
       beschreibung: `Schritt 2 – ${einheitLabel}frist (gleichbezeichneter Tag, Art. 142 Abs. 2)`,
       zwischenergebnis:
         `dies a quo: ${fmt(diesAQuo)}` +
-        (imStillstand(massgeblich, input.verfahren) ? ' (Ereignis im Stillstand → letzter Tag der Stillstandsperiode, Art. 146 Abs. 1).' : ' (Ereignistag selbst; Art. 142 Abs. 1 findet keine Anwendung).') +
+        (imStillstand(massgeblich, stillstandGilt) ? ' (Ereignis im Stillstand → letzter Tag der Stillstandsperiode, Art. 146 Abs. 1).' : ' (Ereignistag selbst; Art. 142 Abs. 1 findet keine Anwendung).') +
         (input.modus === 'mindermeinung' ? ' [Mindermeinung: Beginn am Folgetag.]' : '') +
         ` Naives Ende: ${fmt(endeProvisorisch)}.` +
         (verlaengerungTage > 0 ? ` Stillstandsverlängerung: +${verlaengerungTage} Tage (Art. 145 Abs. 1).` : ''),
@@ -196,7 +151,7 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
   }
 
   // Schritt 3: Endnormalisierung (Art. 142 Abs. 3 + Art. 145 kumulativ)
-  const { tag: diesAdQuem, verschoben } = normalisiereEnde(endeProvisorisch, input);
+  const { tag: diesAdQuem, verschoben } = normalisiereEnde(endeProvisorisch, input.kanton, st);
   rechenweg.push({
     beschreibung: 'Schritt 3 – Endnormalisierung (Art. 142 Abs. 3 / Art. 145 Abs. 1)',
     zwischenergebnis: verschoben
@@ -214,13 +169,13 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
     let gezaehlt = 0;
     let ende = cursor;
     for (let guard = 0; guard < 4000 && gezaehlt < tage; guard++) {
-      if (!imStillstand(cursor, input.verfahren)) {
+      if (!imStillstand(cursor, stillstandGilt)) {
         gezaehlt += 1;
         ende = cursor;
       }
       if (gezaehlt < tage) cursor = addDays(cursor, 1);
     }
-    const norm = normalisiereEnde(ende, input);
+    const norm = normalisiereEnde(ende, input.kanton, st);
     erstrecktBis = iso(norm.tag);
     rechenweg.push({
       beschreibung: 'Erstreckung (gerichtliche Frist, Art. 144 Abs. 2 ZPO)',
@@ -250,10 +205,10 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
 
   // Art. 145 Abs. 3: Hinweispflicht bei Nichtgeltung des Stillstands
   if (!stillstandGilt) {
-    warnungen.push('Hat das Gericht nicht auf die Nichtgeltung des Fristenstillstands hingewiesen, kann der Stillstand dennoch zu beachten sein (Art. 145 Abs. 3 ZPO).');
+    warnungen.push('Der Fristenstillstand gilt in diesem Verfahren nicht (Art. 145 Abs. 2 ZPO). Dies setzt voraus, dass das Gericht auf die Nichtgeltung hingewiesen hat (Art. 145 Abs. 3 ZPO – Gültigkeitsvorschrift, BGE 139 III 78); andernfalls steht die Frist gleichwohl still.');
     rechenweg.push({
       beschreibung: 'Geltung des Fristenstillstands (Art. 145 Abs. 2/3 ZPO)',
-      zwischenergebnis: `Im gewählten Verfahren gilt der Fristenstillstand nicht. Hinweispflicht des Gerichts beachten (Art. 145 Abs. 3 ZPO).`,
+      zwischenergebnis: `Im gewählten Verfahren gilt der Fristenstillstand nicht (Hinweis des Gerichts nach Art. 145 Abs. 3 ZPO vorausgesetzt).`,
       normen: [N_145_2, N_145_3],
     });
   }
@@ -310,6 +265,10 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
     diesAQuo: fmt(diesAQuo),
     diesAdQuem: fmt(diesAdQuem),
     erstrecktBis: erstrecktBis ? fmt(parseISO(erstrecktBis)) : undefined,
+    ereignisISO: iso(massgeblich),
+    diesAQuoISO: iso(diesAQuo),
+    diesAdQuemISO: iso(diesAdQuem),
+    stillstandAktiv: stillstandGilt,
   };
 }
 

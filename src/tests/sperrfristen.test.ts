@@ -129,6 +129,22 @@ describe('Sperrfristen P1/P2 (Art. 336c OR)', () => {
     expect(r.status).not.toBe('nichtig');
   });
 
+  // Betreuungsurlaub (Art. 329i OR) – Sperrfrist max. 6 Monate
+  it('Betreuungsurlaub: Sperrfrist gekappt auf 6 Monate ab Beginn', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      vertragsbeginn: '2020-01-01',
+      zugangKuendigung: '2025-11-01',
+      sperrereignisse: [
+        { typ: 'betreuungsurlaub', von: '2025-01-01', bis: '2025-12-31' }, // 1 Jahr → auf 01.07. gekappt
+      ],
+    });
+    const txt = rechenwegText(r);
+    expect(txt).toContain('Betreuungsurlaub');
+    expect(txt).toContain('01.07.2025'); // 6 Monate ab 01.01.2025
+    expect(txt).not.toContain('31.12.2025');
+  });
+
   // §7.9 – Neue AUF in Erstreckungsphase → ignoriert
   it('§7.9: Sperrgrund in Erstreckungsphase (nach Endtermin) → ignoriert', () => {
     const r = berechneSperrfristen({

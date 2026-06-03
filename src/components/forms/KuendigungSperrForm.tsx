@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import type { SperrfristenInput, Sperrereignis, SperrereignisTyp } from '../../types/legal';
-import { berechneKuendigungsfrist } from '../../lib/kuendigungsfrist';
-import { berechneSperrfristen } from '../../lib/sperrfristen';
+import { berechneSperrfristen, type SperrfristenErgebnis } from '../../lib/sperrfristen';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
-import type { Berechnungsergebnis } from '../../types/legal';
+import { KuendigungTimeline } from '../KuendigungTimeline';
+
+const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 
 const DEFAULTS: SperrfristenInput = {
   vertragsbeginn: '2020-01-01',
@@ -30,7 +32,8 @@ const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'krankheit_unfall',  label: 'Krankheit / Unfall (Art. 336c Abs. 1 lit. b)' },
   { code: 'schwangerschaft',   label: 'Schwangerschaft / Niederkunft (lit. c)' },
   { code: 'militaer_zivil',    label: 'Militär / Zivildienst (lit. a)' },
-  { code: 'hilfsaktion',       label: 'Hilfsaktion (lit. d)' },
+  { code: 'hilfsaktion',       label: 'Hilfsaktion im Ausland (lit. d)' },
+  { code: 'betreuungsurlaub',  label: 'Betreuungsurlaub (Art. 329i OR, max. 6 Monate)' },
 ];
 
 function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
@@ -47,9 +50,6 @@ const inputCls = 'lc-input';
 
 export function KuendigungSperrForm() {
   const [form, setForm] = useState<SperrfristenInput>(DEFAULTS);
-  const [ergebnisB, setErgebnisB] = useState<Berechnungsergebnis | null>(null);
-  const [ergebnisC, setErgebnisC] = useState<Berechnungsergebnis | null>(null);
-  const [fehler, setFehler] = useState<string[]>([]);
 
   const set = <K extends keyof SperrfristenInput>(k: K, v: SperrfristenInput[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -83,18 +83,13 @@ export function KuendigungSperrForm() {
       return { ...f, sperrereignisse: list };
     });
 
-  const berechne = () => {
-    const v = validiere(form);
-    setFehler(v);
-    if (v.length > 0) { setErgebnisB(null); setErgebnisC(null); return; }
-    try {
-      const kb = berechneKuendigungsfrist(form);
-      setErgebnisB(kb.ergebnis);
-      setErgebnisC(berechneSperrfristen(form));
-    } catch (e) {
-      console.error(e);
-    }
-  };
+  // Live-Berechnung – EIN kohärentes Ergebnis (Kündigungsfrist inkl. Sperrfristen).
+  const fehler = validiere(form);
+  let gesamt: SperrfristenErgebnis | null = null;
+  if (fehler.length === 0) {
+    try { gesamt = berechneSperrfristen(form); } catch { gesamt = null; }
+  }
+  const hatEreignisse = (form.sperrereignisse ?? []).length > 0;
 
   const eingaben = {
     'Vertragsbeginn': form.vertragsbeginn,
@@ -105,22 +100,22 @@ export function KuendigungSperrForm() {
     ...(form.abweichendeFristMonate != null ? { 'Abweichende Frist (Monate)': String(form.abweichendeFristMonate) } : {}),
   };
 
-  const abschnitte = [
-    ...(ergebnisB ? [{ titel: 'Kündigungsfrist (Art. 335c OR)', ergebnis: ergebnisB }] : []),
-    ...(ergebnisC ? [{ titel: 'Sperrfristen (Art. 336c OR)', ergebnis: ergebnisC }] : []),
-  ];
+  // PDF: Kündigungs-/Sperrfristen-Disclaimer (GAV einschlägig, Lohnfortzahlungsskalen NICHT).
+  const pdfConfig: PdfDocConfig = {
+    title: 'Kündigungs- und Sperrfristen (Art. 335c / 336c OR)',
+    domain: 'arbeitsrecht',
+    fileBase: 'Kuendigung-Sperrfristen',
+    inputs: eingaben,
+    sections: gesamt ? [{ titel: 'Kündigung & Sperrfristen (Art. 335c / 336c OR)', ergebnis: gesamt }] : [],
+    disclaimer:
+      'Automatisierte Orientierungsberechnung zu Kündigungs- und Sperrfristen (Art. 335c / 336c OR) – ' +
+      'keine Rechtsberatung. Massgeblich sind GAV, Einzelvertrag und der konkrete Sachverhalt; abweichende ' +
+      'Regelungen gehen vor. Norm- und Rechtsprechungsverweise sind im Einzelfall zu prüfen.',
+  };
 
   return (
     <div className="space-y-6">
-      {/* Zugangsprinzip-Hinweis */}
-      <div className="rounded-lg border border-line bg-surface p-4">
-        <p className="text-xs font-semibold text-brass-700 uppercase tracking-wide mb-1">Zugangsprinzip</p>
-        <p className="text-sm text-ink-700">
-          Massgebend ist der <strong>Zugang</strong> der Kündigung beim Empfänger (nicht das Ausstell- oder Absendedatum).
-          Stichtag für die Dienstjahr-Berechnung ist der Zugangstag.
-        </p>
-      </div>
-
+      <p className="lc-overline">Eingaben</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Vertragsbeginn">
           <input type="date" value={form.vertragsbeginn} onChange={(e) => set('vertragsbeginn', e.target.value)} className={inputCls} />
@@ -274,34 +269,58 @@ export function KuendigungSperrForm() {
         </div>
       )}
 
-      <button
-        onClick={berechne}
-        className="px-6 py-2.5 bg-ink-900 hover:bg-ink-700 text-paper text-sm font-medium rounded-lg transition-colors"
-      >
-        Berechnen
-      </button>
+      {gesamt && (
+        <div className="space-y-4">
+          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
 
-      {/* Querverbindung */}
-      {ergebnisB && ergebnisC && (form.sperrereignisse ?? []).length > 0 && (
-        <div className="rounded-lg border border-line bg-surface p-4">
-          <p className="text-xs font-semibold text-brass-700 uppercase tracking-wide mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
-          <p className="text-sm text-ink-600">
-            Sperrfrist (Art. 336c OR) und Lohnfortzahlung (Art. 324a OR) sind <strong>voneinander unabhängig</strong>.
-            Eine Sperrfrist von z.B. 90 Tagen bedeutet nicht 90 Tage Lohnfortzahlung.
-            Beide Ansprüche sind separat zu prüfen.
-          </p>
+          {/* Prominente Eckdaten – ein kohärentes Ergebnis */}
+          {gesamt.status === 'nichtig' ? (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="lc-card p-4 border-t-[3px] border-t-danger-500">
+                <p className="lc-overline mb-1">Status</p>
+                <p className="text-[1.5rem] leading-none font-semibold text-danger-700">NICHTIG</p>
+              </div>
+              <div className="lc-card p-4">
+                <p className="lc-overline mb-1">Beendigungsdatum</p>
+                <p className="num text-body-l text-ink-500">– (keines)</p>
+              </div>
+              <div className="lc-card p-4">
+                <p className="lc-overline mb-1">Frühestens neu kündbar</p>
+                <p className="num text-body-l text-ink-900">{fmtISO(gesamt.fruehesteNeueKuendigungISO)}</p>
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="lc-card p-4">
+                <p className="lc-overline mb-1">Status</p>
+                <p className="text-body-l font-semibold text-sage-700">Gültig</p>
+              </div>
+              <div className="lc-card p-4">
+                <p className="lc-overline mb-1">Beendigungsdatum</p>
+                <p className="num text-[1.5rem] leading-none font-medium text-ink-900">{fmtISO(gesamt.beendigungISO)}</p>
+              </div>
+              <div className="lc-card p-4">
+                <p className="lc-overline mb-1">Hemmung</p>
+                <p className="num text-body-l text-ink-900">{gesamt.gehemmtTage ? `${gesamt.gehemmtTage} Tage` : 'keine'}</p>
+              </div>
+            </div>
+          )}
+
+          {/* Querverbindung (nur informativ, bei Sperrereignissen) */}
+          {hatEreignisse && (
+            <div className="lc-notice">
+              <p className="lc-overline mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
+              <p className="text-body-s text-ink-600">
+                Sperrfrist (Art. 336c OR) und Lohnfortzahlung (Art. 324a OR) sind <strong>voneinander unabhängig</strong>:
+                Eine Sperrfrist von z.B. 90 Tagen bedeutet nicht 90 Tage Lohnfortzahlung. Beide sind separat zu prüfen (Modul A).
+              </p>
+            </div>
+          )}
+
+          <KuendigungTimeline e={gesamt} />
+          <ErgebnisAnzeige titel="Kündigung & Sperrfristen (Art. 335c / 336c OR)" ergebnis={gesamt} />
+          <PdfExportButton config={pdfConfig} />
         </div>
-      )}
-
-      {ergebnisB && (
-        <ErgebnisAnzeige titel="Kündigungsfrist (Art. 335b / 335c OR)" ergebnis={ergebnisB} />
-      )}
-      {ergebnisC && (form.sperrereignisse ?? []).length > 0 && (
-        <ErgebnisAnzeige titel="Sperrfristen-Analyse (Art. 336c OR)" ergebnis={ergebnisC} />
-      )}
-
-      {abschnitte.length > 0 && (
-        <PdfExportButton abschnitte={abschnitte} eingaben={eingaben} />
       )}
     </div>
   );
