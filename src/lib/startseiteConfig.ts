@@ -23,7 +23,7 @@ export interface CalculatorCard {
   id: string;
   art: Art;               // Output-Typ → bestimmt die Sektion
   rechtsgebiet: string;   // Filterwert (z. B. «Miete», «Zivilprozess (ZPO)»)
-  category: string;     // Mikro-Label, spezifischste Ebene (z. B. "ZIVILPROZESS · ZPO")
+  category?: string;    // (Legacy-Mikro-Label; Anzeige nutzt rechtsgebiet)
   title: string;
   description: string;
   status: Status;
@@ -35,23 +35,6 @@ export interface CalculatorCard {
   icon?: string;        // bestehende Icon-Komponente (Kartenanatomie unverändert)
 }
 
-export interface Subgroup {            // Rechtsgebiet / Prozessart
-  id: string; title: string; descriptor?: string;
-  clusters?: { label: string; items: CalculatorCard[] }[]; // nur Zivilprozess
-  items?: CalculatorCard[];
-}
-
-export interface DoctrinalClass {      // "Verfahrensrecht" | "Materielles Recht"
-  id: string; title: string; lede?: string; subgroups: Subgroup[];
-}
-
-export interface Pillar {              // I | II | III
-  id: 'fristen' | 'berechnungen' | 'werkzeuge';
-  numeral: 'I' | 'II' | 'III';
-  eyebrow: string; title: string; lede: string;
-  classes?: DoctrinalClass[];   // Säule I (zwei Klassen)
-  subgroups?: Subgroup[];       // Säulen II/III (direkt Rechtsgebiete)
-}
 
 // ─── Hilfen ───────────────────────────────────────────────────────────────
 //
@@ -236,67 +219,29 @@ export function karte(id: string): CalculatorCard {
   return KARTEN[id];
 }
 
-// ─── Säulen-Baum (Zielstruktur) ───────────────────────────────────────────
+// ─── Sektionen: vier Output-Typen (oberste Ebene) ─────────────────────────
 
-export const PILLARS: Pillar[] = [
-  {
-    id: 'fristen',
-    numeral: 'I',
-    eyebrow: 'SÄULE I',
-    title: 'Fristen',
-    lede: 'Prozessuale und materielle Fristen — berechnet mit Stillstand, Ferien und Werktagsregeln.',
-    classes: [
-      {
-        id: 'verfahrensrecht',
-        title: 'Verfahrensrecht',
-        lede: 'Prozessuale Fristen — vom auslösenden Ereignis bis zum letzten Tag.',
-        subgroups: [
-          {
-            id: 'zivilprozess',
-            title: 'Zivilprozess',
-            clusters: [
-              { label: 'Gericht (ZPO)', items: [KARTEN['zpo-fristen']] },
-              { label: 'Betreibung & Konkurs (SchKG)', items: [KARTEN['schkg-fristen']] },
-            ],
-          },
-          { id: 'verwaltungsverfahren', title: 'Verwaltungsverfahren', items: [KARTEN['verwaltungsverfahren']] },
-          { id: 'strafverfahren', title: 'Strafverfahren (StPO)', items: [KARTEN['strafverfahren']] },
-        ],
-      },
-      {
-        id: 'materielles-recht',
-        title: 'Materielles Recht',
-        lede: 'Materielle Fristen — nach Rechtsgebiet.',
-        subgroups: [
-          { id: 'or-schuldrecht', title: 'Vertrags-/Schuldrecht (OR)', items: [KARTEN['or-verjaehrung']] },
-          { id: 'arbeitsrecht-fristen', title: 'Arbeitsrecht', items: [KARTEN['kuendigung-sperrfristen']] },
-          { id: 'mietrecht', title: 'Mietrecht', items: [KARTEN['mietrecht']] },
-          { id: 'erbrecht-fristen', title: 'Erbrecht', items: [KARTEN['erbrecht-fristen']] },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'berechnungen',
-    numeral: 'II',
-    eyebrow: 'SÄULE II',
-    title: 'Berechnungen & Ansprüche',
-    lede: 'Geldansprüche und Quoten — nachvollziehbar hergeleitet, Franken für Franken.',
-    subgroups: [
-      { id: 'zinsen-verzug', title: 'Zinsen & Verzug', items: [KARTEN['verzugszins']] },
-      { id: 'arbeitsrecht-berechnungen', title: 'Arbeitsrecht', items: [KARTEN['lohnfortzahlung']] },
-      { id: 'erbrecht-berechnungen', title: 'Erbrecht', items: [KARTEN['erbteilung']] },
-    ],
-  },
-  {
-    id: 'werkzeuge',
-    numeral: 'III',
-    eyebrow: 'SÄULE III',
-    title: 'Werkzeuge',
-    lede: 'Querschnitts-Hilfen rund um Daten und Fristen.',
-    subgroups: [
-      { id: 'tagerechner', title: 'Fristen-/Tagerechner', items: [KARTEN['tagerechner']] },
-    ],
-  },
+export interface Sektion {
+  art: Art;
+  id: string;            // Anker für Sprungmarken
+  numeral: 'I' | 'II' | 'III' | 'IV';
+  title: string;
+  lede: string;
+}
+
+export const SEKTIONEN: Sektion[] = [
+  { art: 'frist', id: 'fristen', numeral: 'I', title: 'Fristen',
+    lede: 'Prozessuale und materielle Fristen — vom auslösenden Ereignis bis zum letzten Tag.' },
+  { art: 'betrag', id: 'betraege', numeral: 'II', title: 'Beträge & Quoten',
+    lede: 'Geldansprüche, Zinsen, Kosten und Quoten — Franken für Franken hergeleitet.' },
+  { art: 'zuordnung', id: 'zustaendigkeit', numeral: 'III', title: 'Zuständigkeit & Einordnung',
+    lede: 'Welches Gericht, welches Recht, welche Verfahrensart — rechtsbasiert bestimmt.' },
+  { art: 'werkzeug', id: 'werkzeuge', numeral: 'IV', title: 'Werkzeuge',
+    lede: 'Rechtsgebietsübergreifende Hilfsrechner.' },
 ];
 
+/** Flacher Katalog; je Sektion: geprüfte zuerst, danach «In Vorbereitung». */
+export const ALLE_KARTEN: CalculatorCard[] = Object.values(KARTEN);
+
+/** Alle Rechtsgebiete in Katalog-Reihenfolge (für die Filterleiste). */
+export const RECHTSGEBIETE: string[] = [...new Set(ALLE_KARTEN.map((k) => k.rechtsgebiet))];

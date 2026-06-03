@@ -12,10 +12,10 @@ import { Icon } from './Icon';
 
 type Props = {
   card: CalculatorCard;
-  headingLevel?: 'h5' | 'h6'; // unter Rechtsgebiet (h4) bzw. Cluster (h5)
+  headingLevel?: 'h3' | 'h5' | 'h6'; // direkt unter der Typ-Sektion (h2) → h3
 };
 
-export function RechnerKarte({ card, headingLevel = 'h5' }: Props) {
+export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
   const aktiv = card.status === 'geprüft';
   const H = headingLevel;
   const verwandte = (card.related ?? [])
@@ -35,10 +35,13 @@ export function RechnerKarte({ card, headingLevel = 'h5' }: Props) {
             <Icon name={card.icon} />
           </span>
         ) : <span />}
-        <span className={`lc-badge ${aktiv ? 'lc-badge-ok' : 'lc-badge-soft'}`}>{card.status}</span>
+        {/* Status «geplant» wird als «In Vorbereitung» angezeigt */}
+        <span className={`lc-badge ${aktiv ? 'lc-badge-ok' : 'lc-badge-soft'}`}>
+          {aktiv ? 'geprüft' : 'In Vorbereitung'}
+        </span>
       </div>
       <div>
-        <p className="lc-overline">{card.category}</p>
+        <p className="lc-overline">{card.rechtsgebiet}</p>
         <H className="text-h3 font-display font-semibold text-ink-900 mt-1">{card.title}</H>
       </div>
       <p className="text-body-s text-ink-500 leading-relaxed">{card.description}</p>
@@ -74,7 +77,7 @@ export function RechnerKarte({ card, headingLevel = 'h5' }: Props) {
         </div>
       )}
       <p className={`text-body-s font-medium ${aktiv ? 'text-brass-700' : 'text-ink-400'}`}>
-        {aktiv ? 'Öffnen →' : (card.note ?? 'bald verfügbar')}
+        {aktiv ? 'Öffnen →' : (card.note ?? 'In Vorbereitung')}
       </p>
     </article>
   );
