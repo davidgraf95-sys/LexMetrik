@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PILLARS, HAEUFIGE_SITUATIONEN, type Pillar, type Subgroup } from '../lib/startseiteConfig';
 import type { CalculatorCard } from '../lib/startseiteConfig';
@@ -35,8 +36,15 @@ function KartenRaster({ items, headingLevel }: { items: CalculatorCard[]; headin
 }
 
 // L3: Rechtsgebiet / Prozessart als aufklappbare Rubrik-Zeile (Disclosure).
+//
+// Darstellungsforschung (NN/g, Information Foraging):
+// – Starker «Information Scent»: Die enthaltenen Rechner-Namen sind schon in
+//   der zugeklappten Zeile sichtbar (Vorhersagbarkeit vor dem Klick).
+// – Akkordeons nützen mobil, kosten auf Desktop: defaultOpen steuert das
+//   responsive Anfangsverhalten (Desktop offen, Mobile kompakt).
+// – Fitts: ganze Zeile als Klickfläche mit grosszügiger Höhe (≥ 44 px).
 // Rubriken ohne geprüften Rechner sind stille «in Vorbereitung»-Zeilen.
-function SubgroupBlock({ s, headingTag }: { s: Subgroup; headingTag: 'h3' | 'h4' }) {
+function SubgroupBlock({ s, headingTag, defaultOpen }: { s: Subgroup; headingTag: 'h3' | 'h4'; defaultOpen: boolean }) {
   const H = headingTag;
   const alleKarten = s.clusters ? s.clusters.flatMap((c) => c.items) : (s.items ?? []);
   const geprueft = alleKarten.filter((c) => c.status === 'geprüft');
@@ -44,21 +52,31 @@ function SubgroupBlock({ s, headingTag }: { s: Subgroup; headingTag: 'h3' | 'h4'
   // Nur Geplantes → keine Aufklapp-Interaktion, schlanke Hinweis-Zeile.
   if (geprueft.length === 0) {
     return (
-      <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
+      <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line min-h-[44px]">
         <H className="font-display font-semibold text-ink-400 text-h3">{s.title}</H>
         <span className="lc-overline text-ink-400 whitespace-nowrap">in Vorbereitung</span>
       </div>
     );
   }
 
+  const vorschau = geprueft.map((c) => c.title).join(' · ');
+
   return (
-    <details className="group border-b border-line">
-      <summary className="flex items-baseline justify-between gap-4 py-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-brass-100/40 transition-colors rounded-sm -mx-2 px-2">
-        <span className="flex items-baseline gap-3 min-w-0">
-          <span aria-hidden className="text-brass-700 transition-transform group-open:rotate-90 shrink-0">▸</span>
-          <H className="font-display font-semibold text-ink-900 text-h3">{s.title}</H>
+    <details className="group border-b border-line" open={defaultOpen || undefined}>
+      <summary className="flex items-center justify-between gap-4 py-4 min-h-[52px] cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-brass-100/40 transition-colors motion-reduce:transition-none rounded-sm -mx-2 px-2">
+        <span className="flex items-start gap-3 min-w-0">
+          <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 shrink-0 mt-1.5">▸</span>
+          <span className="min-w-0">
+            <H className="font-display font-semibold text-ink-900 text-h3">{s.title}</H>
+            {/* Vorschau (Information Scent): verschwindet, sobald die Karten sichtbar sind */}
+            <span className="block text-body-s text-ink-500 truncate group-open:hidden">{vorschau}</span>
+          </span>
         </span>
-        <span className="lc-overline text-ink-400 whitespace-nowrap">{geprueft.length} Rechner</span>
+        <span className="lc-overline text-ink-400 whitespace-nowrap shrink-0">
+          {geprueft.length} Rechner
+          <span aria-hidden className="ml-2 text-brass-700 group-open:hidden">aufklappen</span>
+          <span aria-hidden className="ml-2 text-brass-700 hidden group-open:inline">zuklappen</span>
+        </span>
       </summary>
       <div className="pt-1 pb-8 space-y-4">
         {s.descriptor && <p className="text-body-s text-ink-500 max-w-reading">{s.descriptor}</p>}
@@ -97,7 +115,7 @@ function WerkzeugNotiz({ p }: { p: Pillar }) {
   );
 }
 
-function SaeulenSektion({ p }: { p: Pillar }) {
+function SaeulenSektion({ p, defaultOpen }: { p: Pillar; defaultOpen: boolean }) {
   const nurGeplant = (p.subgroups ?? []).flatMap((s) => s.items ?? []).every((c) => c.status === 'geplant');
   if (p.id === 'werkzeuge' && !p.classes && nurGeplant) return <WerkzeugNotiz p={p} />;
 
@@ -112,13 +130,13 @@ function SaeulenSektion({ p }: { p: Pillar }) {
             {k.lede && <p className="text-body-s text-ink-500 max-w-reading">{k.lede}</p>}
           </header>
           <div className="border-t border-line">
-            {k.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h4" />)}
+            {k.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h4" defaultOpen={defaultOpen} />)}
           </div>
         </section>
       ))}
       {p.subgroups && (
         <div className="-mt-6">
-          {p.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h3" />)}
+          {p.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h3" defaultOpen={defaultOpen} />)}
         </div>
       )}
     </section>
@@ -128,6 +146,13 @@ function SaeulenSektion({ p }: { p: Pillar }) {
 // ─── Seite ────────────────────────────────────────────────────────────────
 
 export function Startseite() {
+  // NN/g: Akkordeons helfen auf kleinen Screens (kompakte Übersicht), kosten
+  // auf Desktop nur Klicks. Anfangszustand deshalb responsiv: Desktop offen,
+  // Mobile zugeklappt. Einmalig beim Mount ausgewertet; danach uncontrolled.
+  const [defaultOpen] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches,
+  );
+
   return (
     <div className="space-y-16">
       {/* Hero */}
@@ -163,7 +188,7 @@ export function Startseite() {
       </nav>
 
       {/* Säulen I–III (datengetrieben aus startseiteConfig) */}
-      {PILLARS.map((p) => <SaeulenSektion key={p.id} p={p} />)}
+      {PILLARS.map((p) => <SaeulenSektion key={p.id} p={p} defaultOpen={defaultOpen} />)}
 
       {/* Methodik / Vertrauens-Kacheln */}
       <section className="space-y-6">
