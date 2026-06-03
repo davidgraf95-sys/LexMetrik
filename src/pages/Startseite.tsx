@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PILLARS, HAEUFIGE_SITUATIONEN, type Pillar, type Subgroup } from '../lib/startseiteConfig';
+import { PILLARS, type Pillar, type Subgroup } from '../lib/startseiteConfig';
 import type { CalculatorCard } from '../lib/startseiteConfig';
 import { RechnerKarte } from '../components/RechnerKarte';
 
@@ -189,19 +189,6 @@ export function Startseite() {
           <a href="#fristen" className="lc-btn-primary no-underline">Zu den Rechnern</a>
           <Link to="/methodik" className="lc-btn-outline no-underline">Wie LegalCalc rechnet</Link>
         </div>
-      </section>
-
-      {/* Häufige Situationen – fixe Deep-Links, nur geprüfte Rechner */}
-      <section aria-label="Häufige Situationen" className="space-y-4">
-        <SectionHead>Häufige Situationen</SectionHead>
-        <nav className="flex flex-wrap gap-2.5">
-          {HAEUFIGE_SITUATIONEN.map((s) => (
-            <Link key={s.href} to={s.href}
-              className="text-body-s font-medium text-ink-700 hover:text-brass-700 no-underline bg-surface border border-line rounded-full px-4 py-2 hover:border-brass-400 hover:bg-brass-100/50 transition-colors shadow-sm">
-              {s.label}
-            </Link>
-          ))}
-        </nav>
       </section>
 
       {/* Säulen I–III (datengetrieben aus startseiteConfig) */}

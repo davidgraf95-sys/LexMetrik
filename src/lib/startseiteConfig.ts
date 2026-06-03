@@ -273,11 +273,3 @@ export const PILLARS: Pillar[] = [
   },
 ];
 
-// ─── Häufige Situationen (fixe Deep-Links, nur geprüfte Rechner) ──────────
-
-export const HAEUFIGE_SITUATIONEN: { label: string; href: string }[] = [
-  { label: 'Mir wurde gekündigt', href: '/rechner/kuendigung#kuendigung' },
-  { label: 'Offene Rechnung / Verzugszins', href: '/rechner/verzugszins' },
-  { label: 'Betreibung läuft', href: '/rechner/schkg-fristen' },
-  { label: 'Frist im Gerichtsverfahren', href: '/rechner/zpo-fristen' },
-];
