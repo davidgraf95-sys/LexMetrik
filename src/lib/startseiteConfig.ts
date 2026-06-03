@@ -6,8 +6,9 @@
 // Gliederung der Startseite (Fristen / Berechnungen & Ansprüche / Werkzeuge).
 //
 // Normentreue: `label` der NormRefs ist zeichengenau der bisherige Tag-Text.
-// `url`/`verified` werden in Phase 3 (Fedlex-Verifikation) befüllt — bis dahin
-// Platzhalter '' und verified: false.
+// Alle Fedlex-Anker sind gegen den konsolidierten Volltext verifiziert
+// (siehe Kommentar bei `fedlex()` unten); nicht verifizierbare Verweise
+// erhielten stattdessen die Gesetzes-Seite und verified: false.
 
 export type Status = 'geprüft' | 'geplant';
 
@@ -50,8 +51,26 @@ export interface Pillar {              // I | II | III
 }
 
 // ─── Hilfen ───────────────────────────────────────────────────────────────
+//
+// Fedlex-Verifikation (Phase 3): Jeder Anker wurde gegen den konsolidierten
+// Volltext (Filestore-HTML der Konsolidierung 20250101) geprüft – das Dokument
+// enthält die entsprechende id="art_…". Buchstaben-Artikel nutzen auf Fedlex
+// das Unterstrich-Format (art_324_a). Sammel-/Spannenangaben verlinken den
+// Leitartikel («Art. 142–147 ZPO» → art_142; «Art. 56/63 SchKG» → art_56).
+// SR-Nummern: OR = SR 220, ZPO = SR 272, SchKG = SR 281.1, ZGB = SR 210.
 
-const norm = (label: string): NormRef => ({ label, url: '', verified: false });
+const ELI = {
+  ZPO: 'eli/cc/2010/262',          // SR 272
+  OR: 'eli/cc/27/317_321_377',     // SR 220
+  SchKG: 'eli/cc/11/529_488_529',  // SR 281.1
+  ZGB: 'eli/cc/24/233_245_233',    // SR 210
+} as const;
+
+const fedlex = (label: string, gesetz: keyof typeof ELI, anker: string): NormRef => ({
+  label,
+  url: `https://www.fedlex.admin.ch/${ELI[gesetz]}/de#${anker}`,
+  verified: true, // Anker im konsolidierten Fedlex-HTML (20250101) nachgewiesen
+});
 
 // ─── Karten (bestehende Routen aus src/App.tsx, Tags zeichengenau) ────────
 
@@ -62,7 +81,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'ZPO-Fristen',
     description: 'Verfahrens- und Rechtsmittelfristen mit Gerichtsferien und Stillstand.',
     status: 'geprüft',
-    norms: [norm('Art. 142–147 ZPO')],
+    norms: [fedlex('Art. 142–147 ZPO', 'ZPO', 'art_142')],
     href: '/rechner/zpo-fristen',
     icon: 'clock',
   },
@@ -72,7 +91,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Betreibungsfristen',
     description: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
     status: 'geprüft',
-    norms: [norm('Art. 56/63 SchKG'), norm('Art. 145 ZPO')],
+    norms: [fedlex('Art. 56/63 SchKG', 'SchKG', 'art_56'), fedlex('Art. 145 ZPO', 'ZPO', 'art_145')],
     href: '/rechner/schkg-fristen',
     related: ['verzugszins'],
     icon: 'clipboard',
@@ -83,7 +102,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Kündigungs- & Sperrfristen',
     description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis.',
     status: 'geprüft',
-    norms: [norm('Art. 335c OR'), norm('Art. 336c OR')],
+    norms: [fedlex('Art. 335c OR', 'OR', 'art_335_c'), fedlex('Art. 336c OR', 'OR', 'art_336_c')],
     href: '/rechner/kuendigung#kuendigung',
     related: ['lohnfortzahlung'],
     icon: 'document',
@@ -94,7 +113,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Lohnfortzahlung (kant. Skala)',
     description: 'Lohnfortzahlung bei unverschuldeter Verhinderung nach kantonaler Skala (Basel/Bern/Zürich).',
     status: 'geprüft',
-    norms: [norm('Art. 324a OR')],
+    norms: [fedlex('Art. 324a OR', 'OR', 'art_324_a')],
     href: '/rechner/kuendigung#lohnfortzahlung',
     related: ['kuendigung-sperrfristen'],
     icon: 'document',
@@ -105,7 +124,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Verzugszins',
     description: 'Verzugszins bei Schuldnerverzug — Zeitraum, Satz und Betrag.',
     status: 'geprüft',
-    norms: [norm('Art. 104 OR')],
+    norms: [fedlex('Art. 104 OR', 'OR', 'art_104')],
     href: '/rechner/verzugszins',
     related: ['schkg-fristen'],
     icon: 'percent',
@@ -116,7 +135,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Mietrecht — Fristen',
     description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume — mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
     status: 'geprüft',
-    norms: [norm('Art. 266a–o OR'), norm('Art. 257d/f OR')],
+    norms: [fedlex('Art. 266a–o OR', 'OR', 'art_266_a'), fedlex('Art. 257d/f OR', 'OR', 'art_257_d')],
     href: '/rechner/mietrecht',
     icon: 'house',
   },
@@ -126,7 +145,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Pflichtteil & verfügbare Quote',
     description: 'Gesetzliche Erbteile, Pflichtteile und verfügbare Quote — mit Todesdatum-Weiche für die Revision 2023 und güterrechtlicher Vorstufe.',
     status: 'geprüft',
-    norms: [norm('Art. 457 ff. ZGB'), norm('Art. 470 f. ZGB')],
+    norms: [fedlex('Art. 457 ff. ZGB', 'ZGB', 'art_457'), fedlex('Art. 470 f. ZGB', 'ZGB', 'art_470')],
     href: '/rechner/erbteilung',
     icon: 'scale',
   },

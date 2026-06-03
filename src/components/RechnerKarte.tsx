@@ -43,8 +43,20 @@ export function RechnerKarte({ card, headingLevel = 'h5' }: Props) {
       </div>
       <p className="text-body-s text-ink-500 leading-relaxed flex-1">{card.description}</p>
       {aktiv && card.norms.length > 0 && (
-        <div className="flex flex-wrap gap-1.5">
-          {card.norms.map((n) => <span key={n.label} className="lc-chip">{n.label}</span>)}
+        <div className="relative flex flex-wrap gap-1.5">
+          {/* Norm-Pills: Anzeigetext unverändert; Link auf die amtliche
+              konsolidierte Fassung (Fedlex), neues Tab. */}
+          {card.norms.map((n) =>
+            n.url ? (
+              <a key={n.label} href={n.url} target="_blank" rel="noopener noreferrer"
+                className="lc-chip no-underline hover:text-brass-700"
+                title={`${n.label} auf Fedlex öffnen${n.verified ? '' : ' (Gesetzes-Seite)'}`}>
+                {n.label}
+              </a>
+            ) : (
+              <span key={n.label} className="lc-chip">{n.label}</span>
+            ),
+          )}
         </div>
       )}
       <p className={`text-body-s font-medium ${aktiv ? 'text-brass-700' : 'text-ink-400'}`}>
