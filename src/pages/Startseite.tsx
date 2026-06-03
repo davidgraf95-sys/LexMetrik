@@ -181,6 +181,10 @@ export function Startseite() {
           LegalCalc berechnet Fristen und Ansprüche nach Schweizer Recht mit nachvollziehbarem
           Rechenweg und exakten Normverweisen. Orientierung statt Black Box — clientseitig und deterministisch.
         </p>
+        {/* Differenzierung: Berechnung statt KI */}
+        <p className="text-body-s text-ink-500">
+          LegalCalc rät nicht — es rechnet. Feste Rechenregeln statt Sprachmodell, jeder Schritt offen nachvollziehbar.
+        </p>
         <div className="flex flex-wrap gap-3 pt-1">
           <a href="#fristen" className="lc-btn-primary no-underline">Zu den Rechnern</a>
           <Link to="/methodik" className="lc-btn-outline no-underline">Wie LegalCalc rechnet</Link>
@@ -206,8 +210,9 @@ export function Startseite() {
       {/* Methodik / Vertrauens-Kacheln */}
       <section className="space-y-6">
         <SectionHead>So rechnet LegalCalc</SectionHead>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
+            { t: 'Berechnung statt KI', b: 'LegalCalc nutzt kein Sprachmodell und keine Wahrscheinlichkeiten, sondern festgelegte Rechenregeln. Gleiche Eingaben ergeben immer dasselbe Ergebnis. Jeder Schritt wird offengelegt und jede angewandte Norm direkt mit dem Gesetzestext verlinkt — so ist jedes Ergebnis überprüfbar statt geschätzt.' },
             { t: 'Verifizierte Normverweise', b: 'Nur explizit genannte, geprüfte Gesetzesartikel werden fest verdrahtet. Rechtsprechung trägt einen Verifikations-Vorbehalt.' },
             { t: 'Nachvollziehbarer Rechenweg', b: 'Jeder Schritt zeigt Eingangsgrössen, angewandte Norm und Zwischenergebnis — vollständig im PDF-Bericht.' },
             { t: 'Praxis statt Schublade', b: 'Kantonale Skalen und Gerichtspraxis werden als solche gekennzeichnet und sind vor Produktiveinsatz zu prüfen.' },
