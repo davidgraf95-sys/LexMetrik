@@ -15,14 +15,18 @@ function SectionHead({ children }: { children: React.ReactNode }) {
 
 // ─── Säulen-Bausteine (Tiefe über Labels + Weissraum, nicht Einrückung) ───
 
-// Säulen-Öffner: römische Monospace-Eyebrow + Display-Serif-Titel + Lede + Haarlinie.
+// Säulen-Öffner: grosse Editorial-Ziffer + Monospace-Eyebrow + Serif-Titel + Lede.
 function SaeulenOeffner({ p }: { p: Pillar }) {
   return (
-    <header className="space-y-2">
-      <p className="lc-overline num text-brass-700">{p.numeral} — {p.title.toUpperCase()}</p>
-      <h2 className="font-display font-semibold text-ink-900 text-h1">{p.title}</h2>
-      <p className="text-body-l text-ink-600 max-w-reading">{p.lede}</p>
-      <div className="h-px bg-line mt-4" />
+    <header className="flex items-start gap-5 sm:gap-7">
+      <span aria-hidden className="font-display font-semibold text-brass-400 leading-none select-none text-[3rem] sm:text-[3.75rem] -mt-1">
+        {p.numeral}
+      </span>
+      <div className="space-y-1.5 pt-1">
+        <p className="lc-overline text-brass-700">Säule {p.numeral}</p>
+        <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">{p.title}</h2>
+        <p className="text-body-l text-ink-600 max-w-reading">{p.lede}</p>
+      </div>
     </header>
   );
 }
@@ -49,12 +53,14 @@ function SubgroupBlock({ s, headingTag, defaultOpen }: { s: Subgroup; headingTag
   const alleKarten = s.clusters ? s.clusters.flatMap((c) => c.items) : (s.items ?? []);
   const geprueft = alleKarten.filter((c) => c.status === 'geprüft');
 
-  // Nur Geplantes → keine Aufklapp-Interaktion, schlanke Hinweis-Zeile.
+  // Nur Geplantes → keine Aufklapp-Interaktion, schlanke Hinweis-Zeile
+  // (gleicher Raster wie die Aufklapp-Zeilen, leere Chevron-Spalte).
   if (geprueft.length === 0) {
     return (
-      <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line min-h-[44px]">
-        <H className="font-display font-semibold text-ink-400 text-h3">{s.title}</H>
-        <span className="lc-overline text-ink-400 whitespace-nowrap">in Vorbereitung</span>
+      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-x-4 py-5 px-1 min-h-[56px]">
+        <span aria-hidden className="w-4" />
+        <H className="font-display font-semibold text-ink-400 text-h3 leading-snug">{s.title}</H>
+        <span className="lc-overline text-ink-400 whitespace-nowrap justify-self-end">in Vorbereitung</span>
       </div>
     );
   }
@@ -62,23 +68,21 @@ function SubgroupBlock({ s, headingTag, defaultOpen }: { s: Subgroup; headingTag
   const vorschau = geprueft.map((c) => c.title).join(' · ');
 
   return (
-    <details className="group border-b border-line" open={defaultOpen || undefined}>
-      <summary className="flex items-center justify-between gap-4 py-4 min-h-[52px] cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-brass-100/40 transition-colors motion-reduce:transition-none rounded-sm -mx-2 px-2">
-        <span className="flex items-start gap-3 min-w-0">
-          <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 shrink-0 mt-1.5">▸</span>
-          <span className="min-w-0">
-            <H className="font-display font-semibold text-ink-900 text-h3">{s.title}</H>
-            {/* Vorschau (Information Scent): verschwindet, sobald die Karten sichtbar sind */}
-            <span className="block text-body-s text-ink-500 truncate group-open:hidden">{vorschau}</span>
-          </span>
+    <details className="group" open={defaultOpen || undefined}>
+      <summary className="grid grid-cols-[auto_1fr_auto] items-center gap-x-4 py-5 px-1 min-h-[56px] cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-brass-100/40 transition-colors motion-reduce:transition-none">
+        <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 w-4 text-center">▸</span>
+        <span className="min-w-0">
+          <H className="font-display font-semibold text-ink-900 text-h3 leading-snug">{s.title}</H>
+          {/* Vorschau (Information Scent): verschwindet, sobald die Karten sichtbar sind */}
+          <span className="block text-body-s text-ink-500 truncate group-open:hidden">{vorschau}</span>
         </span>
-        <span className="lc-overline text-ink-400 whitespace-nowrap shrink-0">
-          {geprueft.length} Rechner
-          <span aria-hidden className="ml-2 text-brass-700 group-open:hidden">aufklappen</span>
-          <span aria-hidden className="ml-2 text-brass-700 hidden group-open:inline">zuklappen</span>
+        <span className="lc-overline text-ink-400 whitespace-nowrap justify-self-end">
+          <span className="num">{geprueft.length}</span> Rechner
+          <span aria-hidden className="ml-3 text-brass-700 group-open:hidden hidden sm:inline">aufklappen</span>
+          <span aria-hidden className="ml-3 text-brass-700 hidden group-open:sm:inline">zuklappen</span>
         </span>
       </summary>
-      <div className="pt-1 pb-8 space-y-4">
+      <div className="pl-1 sm:pl-9 pt-1 pb-8 space-y-4">
         {s.descriptor && <p className="text-body-s text-ink-500 max-w-reading">{s.descriptor}</p>}
         {s.clusters ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -98,19 +102,18 @@ function SubgroupBlock({ s, headingTag, defaultOpen }: { s: Subgroup; headingTag
   );
 }
 
-// Säule III: nur «in Vorbereitung»-Positionen → schlanke einzeilige Notiz statt voller Karten.
+// Säule III: nur «in Vorbereitung»-Positionen → schlankes einzeiliges Panel.
 function WerkzeugNotiz({ p }: { p: Pillar }) {
   const eintraege = (p.subgroups ?? []).flatMap((s) => s.items ?? []);
   return (
-    <section id={p.id} aria-labelledby={`${p.id}-titel`} className="scroll-mt-20 space-y-3">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <p className="lc-overline num text-brass-700">{p.numeral} — {p.title.toUpperCase()}</p>
-        <h2 id={`${p.id}-titel`} className="sr-only">{p.title}</h2>
-        <p className="text-body-s text-ink-500">
-          {eintraege.map((e) => `${e.title}: ${e.note ?? 'in Vorbereitung'}`).join(' · ')}
-        </p>
-      </div>
-      <div className="h-px bg-line" />
+    <section id={p.id} aria-labelledby={`${p.id}-titel`}
+      className="scroll-mt-20 bg-surface rounded-2xl border border-line px-6 sm:px-10 py-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+      <span aria-hidden className="font-display font-semibold text-brass-400 leading-none text-[1.5rem]">{p.numeral}</span>
+      <p className="lc-overline text-brass-700">Säule {p.numeral} — {p.title}</p>
+      <h2 id={`${p.id}-titel`} className="sr-only">{p.title}</h2>
+      <p className="text-body-s text-ink-500">
+        {eintraege.map((e) => `${e.title}: ${e.note ?? 'in Vorbereitung'}`).join(' · ')}
+      </p>
     </section>
   );
 }
@@ -120,22 +123,23 @@ function SaeulenSektion({ p, defaultOpen }: { p: Pillar; defaultOpen: boolean })
   if (p.id === 'werkzeuge' && !p.classes && nurGeplant) return <WerkzeugNotiz p={p} />;
 
   return (
-    <section id={p.id} className="scroll-mt-20 space-y-10">
+    // Säule als klar abgegrenztes Panel – gleiche Flächensprache wie die Rechner-Seiten.
+    <section id={p.id} className="scroll-mt-20 bg-surface rounded-2xl border border-line p-6 sm:p-10 space-y-8">
       <SaeulenOeffner p={p} />
       {p.classes?.map((k) => (
         <section key={k.id} className="space-y-4">
-          {/* L2: doktrinelle Klasse – Serif-Subhead + Lede */}
-          <header className="space-y-1">
+          {/* L2: doktrinelle Klasse – Overline + Serif-Subhead + Lede über der Liste */}
+          <header className="space-y-1 border-t border-line pt-6">
             <h3 className="font-display font-semibold text-ink-900 text-h2">{k.title}</h3>
             {k.lede && <p className="text-body-s text-ink-500 max-w-reading">{k.lede}</p>}
           </header>
-          <div className="border-t border-line">
+          <div className="divide-y divide-line border-y border-line">
             {k.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h4" defaultOpen={defaultOpen} />)}
           </div>
         </section>
       ))}
       {p.subgroups && (
-        <div className="-mt-6">
+        <div className="divide-y divide-line border-t border-line">
           {p.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h3" defaultOpen={defaultOpen} />)}
         </div>
       )}
@@ -177,15 +181,17 @@ export function Startseite() {
       </section>
 
       {/* Häufige Situationen – fixe Deep-Links, nur geprüfte Rechner */}
-      <nav aria-label="Häufige Situationen" className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
-        <span className="lc-overline text-ink-400">Häufige Situationen</span>
-        {HAEUFIGE_SITUATIONEN.map((s) => (
-          <Link key={s.href} to={s.href}
-            className="text-body-s text-brass-700 hover:text-brass-600 no-underline border border-line rounded-full px-3 py-1 hover:bg-brass-100 transition-colors">
-            {s.label}
-          </Link>
-        ))}
-      </nav>
+      <section aria-label="Häufige Situationen" className="space-y-4">
+        <SectionHead>Häufige Situationen</SectionHead>
+        <nav className="flex flex-wrap gap-2.5">
+          {HAEUFIGE_SITUATIONEN.map((s) => (
+            <Link key={s.href} to={s.href}
+              className="text-body-s font-medium text-ink-700 hover:text-brass-700 no-underline bg-surface border border-line rounded-full px-4 py-2 hover:border-brass-400 hover:bg-brass-100/50 transition-colors shadow-sm">
+              {s.label}
+            </Link>
+          ))}
+        </nav>
+      </section>
 
       {/* Säulen I–III (datengetrieben aus startseiteConfig) */}
       {PILLARS.map((p) => <SaeulenSektion key={p.id} p={p} defaultOpen={defaultOpen} />)}

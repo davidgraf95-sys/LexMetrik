@@ -23,7 +23,7 @@ export function RechnerKarte({ card, headingLevel = 'h5' }: Props) {
     .filter((k) => k && k.status === 'geprüft' && k.href);
 
   return (
-    <article className={`relative h-full lc-card p-6 flex flex-col gap-3 transition-shadow ${
+    <article className={`relative h-full lc-card bg-surface-raised p-6 flex flex-col gap-3 transition-shadow ${
       aktiv ? 'border-t-[3px] border-t-brass-500 hover:shadow-lg' : 'opacity-[0.74] cursor-default'
     }`}>
       {aktiv && card.href && (
