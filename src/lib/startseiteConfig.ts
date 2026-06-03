@@ -83,6 +83,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geprüft',
     norms: [fedlex('Art. 142–147 ZPO', 'ZPO', 'art_142')],
     href: '/rechner/zpo-fristen',
+    keywords: ['Frist', 'Gericht', 'Berufung', 'Beschwerde', 'Klage', 'Gerichtsferien', 'Stillstand', 'Zustellung'],
     icon: 'clock',
   },
   'schkg-fristen': {
@@ -93,6 +94,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geprüft',
     norms: [fedlex('Art. 56/63 SchKG', 'SchKG', 'art_56'), fedlex('Art. 145 ZPO', 'ZPO', 'art_145')],
     href: '/rechner/schkg-fristen',
+    keywords: ['Betreibung', 'Zahlungsbefehl', 'Rechtsvorschlag', 'Konkurs', 'Pfändung', 'Betreibungsferien'],
     related: ['verzugszins'],
     icon: 'clipboard',
   },
@@ -104,6 +106,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geprüft',
     norms: [fedlex('Art. 335c OR', 'OR', 'art_335_c'), fedlex('Art. 336c OR', 'OR', 'art_336_c')],
     href: '/rechner/kuendigung#kuendigung',
+    keywords: ['gekündigt', 'Kündigung', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär'],
     related: ['lohnfortzahlung'],
     icon: 'document',
   },
@@ -115,6 +118,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geprüft',
     norms: [fedlex('Art. 324a OR', 'OR', 'art_324_a')],
     href: '/rechner/kuendigung#lohnfortzahlung',
+    keywords: ['krank', 'Lohnfortzahlung', 'Arztzeugnis', 'Arbeitsunfähigkeit', 'Taggeld', 'Skala'],
     related: ['kuendigung-sperrfristen'],
     icon: 'document',
   },
@@ -126,6 +130,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geprüft',
     norms: [fedlex('Art. 104 OR', 'OR', 'art_104')],
     href: '/rechner/verzugszins',
+    keywords: ['Rechnung', 'Verzug', 'Zins', 'Mahnung', 'offene Forderung', '5 Prozent'],
     related: ['schkg-fristen'],
     icon: 'percent',
   },
@@ -137,6 +142,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geprüft',
     norms: [fedlex('Art. 266a–o OR', 'OR', 'art_266_a'), fedlex('Art. 257d/f OR', 'OR', 'art_257_d')],
     href: '/rechner/mietrecht',
+    keywords: ['Mietwohnung', 'Wohnung kündigen', 'Kündigungstermin', 'Vermieter', 'Mieter', 'Geschäftsraum'],
     icon: 'house',
   },
   erbteilung: {
@@ -147,6 +153,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geprüft',
     norms: [fedlex('Art. 457 ff. ZGB', 'ZGB', 'art_457'), fedlex('Art. 470 f. ZGB', 'ZGB', 'art_470')],
     href: '/rechner/erbteilung',
+    keywords: ['Erbe', 'Pflichtteil', 'Testament', 'Erbteilung', 'verfügbare Quote', 'Todesfall', 'Ehegatte'],
     icon: 'scale',
   },
 
@@ -264,4 +271,13 @@ export const PILLARS: Pillar[] = [
       { id: 'tagerechner', title: 'Fristen-/Tagerechner', items: [KARTEN['tagerechner']] },
     ],
   },
+];
+
+// ─── Häufige Situationen (fixe Deep-Links, nur geprüfte Rechner) ──────────
+
+export const HAEUFIGE_SITUATIONEN: { label: string; href: string }[] = [
+  { label: 'Mir wurde gekündigt', href: '/rechner/kuendigung#kuendigung' },
+  { label: 'Offene Rechnung / Verzugszins', href: '/rechner/verzugszins' },
+  { label: 'Betreibung läuft', href: '/rechner/schkg-fristen' },
+  { label: 'Frist im Gerichtsverfahren', href: '/rechner/zpo-fristen' },
 ];
