@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { Startseite } from './pages/Startseite';
 import { RechnerUebersicht } from './pages/RechnerUebersicht';
@@ -13,9 +14,21 @@ import { Methodik } from './pages/Methodik';
 import { Ueber } from './pages/Ueber';
 import { NotFound } from './pages/NotFound';
 
+// SPA-Scroll-Reset: Beim Routenwechsel nach oben scrollen (sonst behält die
+// neue Seite die alte Scrollposition und man «landet unten»). Sprungmarken
+// auf derselben Seite (#fristen etc.) bleiben dem Browser überlassen.
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
     <Shell>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Startseite />} />
         <Route path="/rechner" element={<RechnerUebersicht />} />

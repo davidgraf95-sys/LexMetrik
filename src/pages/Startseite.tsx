@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { SEKTIONEN, ALLE_KARTEN, RECHTSGEBIETE, type Sektion, type CalculatorCard } from '../lib/startseiteConfig';
 import { RechnerKarte } from '../components/RechnerKarte';
 
@@ -23,17 +22,28 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
   if (sortiert.length === 0) return null;
 
   return (
-    <section id={sektion.id} className="scroll-mt-20 bg-surface rounded-2xl border border-line p-6 sm:p-10 space-y-8">
-      {/* Öffner: römische Monospace-Eyebrow + Serif-Titel + Lede + Haarlinie */}
-      <header className="space-y-2">
-        <p className="lc-overline num text-brass-700">{sektion.numeral} — {sektion.title}</p>
-        <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">{sektion.title}</h2>
-        <p className="text-body-l text-ink-600 max-w-reading">{sektion.lede}</p>
-        <div className="h-px bg-line mt-4" aria-hidden />
-      </header>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sortiert.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
-      </div>
+    <section id={sektion.id} className="scroll-mt-20">
+      {/* Sektion per Mausklick ein-/ausklappbar (Disclosure); standardmässig offen. */}
+      <details open className="group bg-surface rounded-2xl border border-line">
+        <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
+          {/* Öffner: römische Monospace-Eyebrow + Serif-Titel + Lede + Haarlinie */}
+          <span className="block space-y-2">
+            <span className="flex items-center justify-between gap-4">
+              <span className="lc-overline num text-brass-700">{sektion.numeral} — {sektion.title}</span>
+              <span className="lc-overline text-ink-400 whitespace-nowrap inline-flex items-center gap-2">
+                <span className="num">{sortiert.length}</span> Rechner
+                <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
+              </span>
+            </span>
+            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">{sektion.title}</h2>
+            <span className="block text-body-l text-ink-600 max-w-reading">{sektion.lede}</span>
+            <span className="block h-px bg-line mt-4" aria-hidden />
+          </span>
+        </summary>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-10 pb-6 sm:pb-10 pt-2">
+          {sortiert.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
+        </div>
+      </details>
     </section>
   );
 }
@@ -141,10 +151,6 @@ export function Startseite() {
         <p className="text-body-s text-ink-500">
           LegalCalc rät nicht — es rechnet. Feste Rechenregeln statt Sprachmodell, jeder Schritt offen nachvollziehbar.
         </p>
-        <div className="flex flex-wrap gap-3 pt-1">
-          <a href="#fristen" className="lc-btn-primary no-underline">Zu den Rechnern</a>
-          <Link to="/methodik" className="lc-btn-outline no-underline">Wie LegalCalc rechnet</Link>
-        </div>
       </section>
 
       {/* Filter (clientseitig); leere Sektionen werden ausgeblendet */}

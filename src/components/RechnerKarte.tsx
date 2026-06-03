@@ -48,25 +48,25 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
       {/* Verwandte in der flexiblen Zone – Pills + «Öffnen» bleiben dadurch in
           allen Karten als einheitlicher Boden-Block auf gleicher Höhe. */}
       {aktiv && verwandte.length > 0 && (
-        <p className="relative text-body-s text-ink-400">
+        <p className="text-body-s text-ink-400">
           Verwandte Rechner:{' '}
           {verwandte.map((k, i) => (
             <span key={k.id}>
               {i > 0 && ' · '}
-              <Link to={k.href!} className="text-brass-700 hover:text-brass-600 no-underline">{k.title}</Link>
+              <Link to={k.href!} className="relative text-brass-700 hover:text-brass-600 no-underline">{k.title}</Link>
             </span>
           ))}
         </p>
       )}
       <div className="flex-1" aria-hidden />
       {aktiv && card.norms.length > 0 && (
-        <div className="relative flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-1.5">
           {/* Norm-Pills: Anzeigetext unverändert; Link auf die amtliche
               konsolidierte Fassung (Fedlex), neues Tab. */}
           {card.norms.map((n) =>
             n.url ? (
               <a key={n.label} href={n.url} target="_blank" rel="noopener noreferrer"
-                className="lc-chip no-underline hover:text-brass-700"
+                className="relative lc-chip no-underline hover:text-brass-700"
                 title={`${n.label} auf Fedlex öffnen${n.verified ? '' : ' (Gesetzes-Seite)'}`}>
                 {n.label}
               </a>
