@@ -11,7 +11,8 @@ const STATUS_CONFIG: Record<BerechnungsStatus, { label: string; cls: string }> =
 
 const DISCLAIMER =
   'Automatisierte Orientierungsberechnung, keine Rechtsberatung. ' +
-  'Abweichende GAV-/Vertrags-/Versicherungslösungen, der genaue Sachverhalt sowie alle ' +
+  'Massgeblich sind GAV, Einzelvertrag, Versicherungspolice und der konkrete Sachverhalt; ' +
+  'abweichende Regelungen gehen vor. Der genaue Sachverhalt sowie alle ' +
   'Norm- und Rechtsprechungsverweise sind im Einzelfall zu prüfen. Die ' +
   'Lohnfortzahlungsskalen sind Gerichtspraxis und vor Produktiveinsatz gegen die ' +
   'aktuelle kantonale Praxis abzugleichen.';

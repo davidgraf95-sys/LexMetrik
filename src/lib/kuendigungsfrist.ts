@@ -5,12 +5,15 @@ import {
   formatDatum,
   letzerTagDesMonats,
 } from './datumsUtils';
+import { rechtsprechung } from '../data/verifikation';
 
 // ─── Feste Normverweise (Art. 335a–c OR) ─────────────────────────────────
 
-const N_335a: Normverweis = { artikel: 'Art. 335a OR', bemerkung: 'Parität der Kündigungsfristen' };
-const N_335b: Normverweis = { artikel: 'Art. 335b OR', bemerkung: 'Probezeit' };
-const N_335c: Normverweis = { artikel: 'Art. 335c OR', bemerkung: 'Kündigungsfristen und -termine' };
+const N_335a:   Normverweis = { artikel: 'Art. 335a OR', bemerkung: 'Parität der Kündigungsfristen' };
+const N_335b:   Normverweis = { artikel: 'Art. 335b OR', bemerkung: 'Probezeit' };
+const N_335c:   Normverweis = { artikel: 'Art. 335c OR', bemerkung: 'Kündigungsfristen und -termine' };
+const N_335c_2: Normverweis = { artikel: 'Art. 335c Abs. 2 OR', bemerkung: 'Abänderung; < 1 Monat nur GAV & 1. DJ' };
+const N_335c_3: Normverweis = { artikel: 'Art. 335c Abs. 3 OR', bemerkung: 'Verlängerung bei Vaterschaftsurlaub' };
 
 export type KuendigungsfristResultat = {
   ergebnis: Berechnungsergebnis;
@@ -97,49 +100,86 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
     zwischenergebnis:
       `Vertragsbeginn ${formatDatum(vb)}, Zugang ${formatDatum(zugang)}: ${dienstjahr - 1} vollendete Jahre + 1 = ${dienstjahr}. Dienstjahr. Gesetzliche Frist: ${gesetzlicheFristMonate} Monat/e.`,
     normen: [N_335c],
-    rechtsprechung: [
-      {
-        aktenzeichen: 'BGE 134 III 354',
-        aussage: 'Massgeblich ist der Zugang der Kündigung beim Empfänger (Empfangs- bzw. Zugangsprinzip)',
-        verifiziert: false,
-      },
-    ],
+    rechtsprechung: [rechtsprechung('BGE_134_III_354')],
   });
 
-  // ─── Abweichende Frist prüfen ─────────────────────────────────────────
+  // ─── Abweichende Frist prüfen (§3.2 — max() entfernt) ─────────────────
+  //
+  // Art. 335c Abs. 2 OR: Abänderung durch schriftliche Abrede / NAV / GAV; Minimalfrist
+  // 1 Monat (beidseitig zwingend); Verkürzung < 1 Monat nur durch GAV und nur im 1. DJ.
+  // Schriftform ist Gültigkeitsvoraussetzung. Parität: für AG und AN gilt dieselbe Frist
+  // (Art. 335a Abs. 1 OR).
 
   let fristMonate = gesetzlicheFristMonate;
 
   if (abweichendeFristMonate != null) {
-    // Parität: gilt die längere Frist (Art. 335a)
-    fristMonate = Math.max(abweichendeFristMonate, gesetzlicheFristMonate);
+    const formGueltig = input.abweichendeFristFormGueltig ?? false;
+    const quelleGAV = input.abweichendeFristQuelleGAV ?? false;
 
-    if (abweichendeFristMonate < gesetzlicheFristMonate) {
+    if (!formGueltig) {
+      // Schriftform/GAV nicht bestätigt → Abrede unwirksam, gesetzliche Frist gilt.
+      fristMonate = gesetzlicheFristMonate;
       warnungen.push(
-        `Abweichende Frist (${abweichendeFristMonate} Monate) unterschreitet die gesetzliche Mindestfrist (${gesetzlicheFristMonate} Monate). Es gilt die gesetzliche Frist. Verkürzung unter 1 Monat nur im 1. DJ und nur durch GAV zulässig (Art. 335c OR; genaue Absatznummer zu verifizieren).`,
+        abweichendeFristMonate < gesetzlicheFristMonate
+          ? `Abweichende Frist (${abweichendeFristMonate} Monate) unterschreitet die gesetzliche Frist (${gesetzlicheFristMonate} Monate); mangels bestätigter Schriftform/GAV (Art. 335c Abs. 2 OR, Gültigkeitsvoraussetzung) gilt die gesetzliche Frist.`
+          : `Abweichende Frist (${abweichendeFristMonate} Monate) ist mangels bestätigter Schriftform/GAV (Art. 335c Abs. 2 OR) unwirksam; es gilt die gesetzliche Frist (${gesetzlicheFristMonate} Monate).`,
       );
-    }
-
-    if (abweichendeFristMonate !== gesetzlicheFristMonate) {
       rechenweg.push({
-        beschreibung: 'Schritt 3 – Abweichende Kündigungsfrist prüfen (Art. 335a/c OR)',
+        beschreibung: 'Schritt 3 – Abweichende Kündigungsfrist: Schriftform/GAV nicht bestätigt (Art. 335c Abs. 2 OR)',
+        zwischenergebnis: `Abrede unwirksam → gesetzliche Frist ${gesetzlicheFristMonate} Monat/e.`,
+        normen: [N_335c_2, N_335a],
+      });
+    } else if (abweichendeFristMonate >= 1) {
+      // Gültig vereinbarte Frist ≥ 1 Monat gilt — auch wenn KÜRZER als gesetzlich.
+      fristMonate = abweichendeFristMonate;
+      rechenweg.push({
+        beschreibung: 'Schritt 3 – Abweichende Kündigungsfrist gültig vereinbart (Art. 335a/c OR)',
         zwischenergebnis:
-          `Abweichende Frist: ${abweichendeFristMonate} Monate. Gesetzliche Frist: ${gesetzlicheFristMonate} Monate. ` +
-          `Parität (Art. 335a OR): Massgebend ist die längere Frist = ${fristMonate} Monate.`,
-        normen: [N_335a, N_335c],
+          `Schriftlich/GAV vereinbarte Frist ${abweichendeFristMonate} Monat/e (≥ Minimalfrist 1 Monat) gilt` +
+          (abweichendeFristMonate < gesetzlicheFristMonate
+            ? `, auch wenn kürzer als die dispositive gesetzliche Frist (${gesetzlicheFristMonate} Monate).`
+            : abweichendeFristMonate > gesetzlicheFristMonate
+              ? ` (länger als die gesetzliche Frist).`
+              : ` (entspricht der gesetzlichen Frist).`) +
+          ` Parität (Art. 335a Abs. 1 OR): für Arbeitgeber und Arbeitnehmer gilt dieselbe Frist.`,
+        normen: [N_335a, N_335c_2],
+      });
+    } else if (quelleGAV && dienstjahr === 1) {
+      // Verkürzung < 1 Monat nur durch GAV und nur im 1. Dienstjahr.
+      fristMonate = abweichendeFristMonate;
+      rechenweg.push({
+        beschreibung: 'Schritt 3 – Verkürzung < 1 Monat (GAV, 1. Dienstjahr) (Art. 335c Abs. 2 OR)',
+        zwischenergebnis: `Durch GAV im 1. Dienstjahr zulässige Frist < 1 Monat: ${abweichendeFristMonate} Monat/e.`,
+        normen: [N_335c_2],
       });
     } else {
+      // Unzulässige Verkürzung < 1 Monat → gesetzliche Mindestfrist.
+      fristMonate = Math.max(1, gesetzlicheFristMonate);
+      warnungen.push(
+        `Verkürzung unter 1 Monat ist nur durch Gesamtarbeitsvertrag und nur im ersten Dienstjahr zulässig (Art. 335c Abs. 2 OR). Es gilt die gesetzliche Frist (${fristMonate} Monat/e).`,
+      );
       rechenweg.push({
-        beschreibung: 'Schritt 3 – Abweichende Kündigungsfrist (Art. 335c OR)',
-        zwischenergebnis: `Abweichende Frist: ${abweichendeFristMonate} Monate (entspricht der gesetzlichen Frist).`,
-        normen: [N_335a, N_335c],
+        beschreibung: 'Schritt 3 – Unzulässige Verkürzung < 1 Monat (Art. 335c Abs. 2 OR)',
+        zwischenergebnis: `Verkürzung unzulässig → gesetzliche Frist ${fristMonate} Monat/e.`,
+        normen: [N_335c_2],
       });
     }
   }
 
-  // ─── Fristberechnung und Endtermin ────────────────────────────────────
+  // ─── Fristberechnung und Endtermin (inkl. §3.4 Vaterschaftsurlaub) ────
 
-  const fristLaufende = addMonths(zugang, fristMonate);
+  let fristLaufende = addMonths(zugang, fristMonate);
+
+  // §3.4 Art. 335c Abs. 3 OR: Verlängerung um nicht bezogene Vaterschaftsurlaubstage —
+  // nur bei Arbeitgeberkündigung.
+  const vaterschaftResttage =
+    kuendigendePartei === 'arbeitgeber' && input.vaterschaftsurlaubResttage
+      ? Math.max(0, input.vaterschaftsurlaubResttage)
+      : 0;
+  if (vaterschaftResttage > 0) {
+    fristLaufende = addDays(fristLaufende, vaterschaftResttage); // VERIFY: genaue Tagesberechnung
+  }
+
   const beendigung = kuendigungsterminMonatsende
     ? letzerTagDesMonats(fristLaufende)
     : fristLaufende;
@@ -147,12 +187,21 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
   rechenweg.push({
     beschreibung: `Schritt ${abweichendeFristMonate != null ? 4 : 3} – Fristberechnung und Endtermin`,
     zwischenergebnis:
-      `Frist: ${fristMonate} Monat/e ab Zugang ${formatDatum(zugang)} → ${formatDatum(fristLaufende)}. ` +
+      `Frist: ${fristMonate} Monat/e ab Zugang ${formatDatum(zugang)} → ${formatDatum(addMonths(zugang, fristMonate))}. ` +
+      (vaterschaftResttage > 0
+        ? `Verlängerung um ${vaterschaftResttage} nicht bezogene Vaterschaftsurlaubstage (Art. 335c Abs. 3 OR) → ${formatDatum(fristLaufende)}. `
+        : '') +
       (kuendigungsterminMonatsende
         ? `Kündigungstermin = Monatsende: Beendigung ${formatDatum(beendigung)}.`
         : `Kein Monatsendtermin: Beendigung ${formatDatum(beendigung)}.`),
-    normen: [N_335c],
+    normen: vaterschaftResttage > 0 ? [N_335c, N_335c_3] : [N_335c],
   });
+
+  if (vaterschaftResttage > 0) {
+    annahmen.push(
+      'Während des Vaterschaftsurlaubs besteht kein zeitlicher Kündigungsschutz (keine Sperrfrist), die Kündigungsfrist verlängert sich aber um die nicht bezogenen Urlaubstage (Art. 335c Abs. 3 OR; Tagesberechnung zu verifizieren).',
+    );
+  }
 
   annahmen.push(
     `Kündigung durch: ${kuendigendePartei === 'arbeitgeber' ? 'Arbeitgeber' : 'Arbeitnehmer'}.`,

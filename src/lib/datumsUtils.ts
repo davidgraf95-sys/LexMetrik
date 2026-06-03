@@ -79,6 +79,25 @@ export function letzterTagLohnfortzahlung(start: Date, dauer: SkalaDauer): Date 
   return addDays(addSkalaDauer(start, dauer), -1);
 }
 
+// ─── Zwei BEWUSST UNTERSCHIEDLICHE Zählkonventionen (§4.2) ────────────────
+//
+// ACHTUNG: Art. 324a OR (Lohnfortzahlung) und Art. 336c OR (Sperrfrist) zählen
+// den ersten Tag der Verhinderung UNTERSCHIEDLICH. Das ist KEIN Bug:
+//
+//   • Lohnfortzahlung (Art. 324a): Lohn ab dem ERSTEN Verhinderungstag inklusive.
+//     -> letzterTagLohnfortzahlung() = start + Dauer − 1  (Starttag zählt mit)
+//
+//   • Sperrfrist (Art. 336c i.V.m. Art. 77 OR): der Anfangstag der Verhinderung
+//     wird bei der Fristberechnung NICHT mitgezählt.
+//     -> sperrfristEnde() = start + Tage           (Starttag zählt NICHT)
+//
+// NICHT vereinheitlichen.
+
+/** Sperrfrist-Ende nach Art. 77 OR: Anfangstag zählt nicht mit, Kalendertage. */
+export function sperrfristEnde(beginn: Date, tage: number): Date {
+  return addDays(beginn, tage); // Art. 77 OR — bewusst KEIN −1 (vgl. §1.2)
+}
+
 // ─── Skalierung bei Teilarbeitsunfähigkeit (Budget-Modell) ───────────────
 //
 // Kalendarische Dauer = Skala-Dauer / AUF-Quote (z.B. 50% → ×2).

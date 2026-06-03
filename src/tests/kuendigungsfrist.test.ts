@@ -104,6 +104,62 @@ describe('Kündigungsfrist (Art. 335c OR)', () => {
     expect(result.fristMonate).toBe(1);
     expect(ds(result.beendigungsdatum!)).toBe('2025-02-28');
   });
+
+  // §7.17 – Vertraglich kürzere Frist (≥ 1 Monat, schriftlich) → gilt, nicht angehoben
+  it('§7.17: Gültig vereinbarte kürzere Frist (1 Monat, schriftlich) gilt', () => {
+    const result = berechneKuendigungsfrist({
+      vertragsbeginn: '2023-01-01',
+      zugangKuendigung: '2025-04-15',     // dj3 → gesetzlich 2 Monate
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      abweichendeFristMonate: 1,
+      abweichendeFristFormGueltig: true,
+      kuendigungsterminMonatsende: true,
+    });
+    expect(result.fristMonate).toBe(1); // NICHT auf 2 angehoben
+  });
+
+  // §7.18 – Verkürzung < 1 Monat ohne GAV → unzulässig, gesetzliche Frist + Warnung
+  it('§7.18: Verkürzung < 1 Monat ohne GAV → gesetzliche Frist + Warnung', () => {
+    const result = berechneKuendigungsfrist({
+      vertragsbeginn: '2023-01-01',
+      zugangKuendigung: '2025-04-15',     // dj3 → gesetzlich 2 Monate
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      abweichendeFristMonate: 0.5,
+      abweichendeFristFormGueltig: true,
+      abweichendeFristQuelleGAV: false,
+      kuendigungsterminMonatsende: true,
+    });
+    expect(result.fristMonate).toBe(2);
+    expect(result.ergebnis.warnungen.some((w) => w.includes('Verkürzung unter 1 Monat'))).toBe(true);
+  });
+
+  // §7.19 – Probezeit → 7 Tage ab Zugang (vorwärts)
+  it('§7.19: Probezeit → 7 Tage ab Zugang', () => {
+    const result = berechneKuendigungsfrist({
+      vertragsbeginn: '2026-01-01',
+      zugangKuendigung: '2026-01-20',
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+    });
+    expect(result.istProbezeit).toBe(true);
+    expect(ds(result.beendigungsdatum!)).toBe('2026-01-27');
+  });
+
+  // §7.20 – Frist endet im höheren DJ → bleibt bei Frist des Zugangs-DJ
+  it('§7.20: Frist läuft in höheres DJ → Frist des Zugangs-DJ', () => {
+    const result = berechneKuendigungsfrist({
+      vertragsbeginn: '2025-01-01',
+      zugangKuendigung: '2025-12-15',     // dj1 → 1 Monat, endet im dj2 (2026)
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 0,
+      kuendigungsterminMonatsende: true,
+    });
+    expect(result.fristMonate).toBe(1);
+    expect(ds(result.beendigungsdatum!)).toBe('2026-01-31');
+  });
 });
 
 describe('Sperrfristen (Art. 336c OR)', () => {

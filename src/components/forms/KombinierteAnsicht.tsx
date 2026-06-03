@@ -179,8 +179,10 @@ export function KombinierteAnsicht() {
         <div className="rounded-lg border border-purple-200 bg-purple-50 p-4">
           <p className="text-xs font-semibold text-purple-700 uppercase tracking-wide mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
           <p className="text-sm text-purple-800">
-            Sperrfrist und Lohnfortzahlung sind <strong>voneinander unabhängig</strong>.
-            Die Sperrfrist-Dauer bestimmt nicht die Lohnfortzahlungsdauer.
+            Sperrfrist/Hemmung (Art. 336c OR) und Lohnfortzahlung (Art. 324a OR) sind <strong>voneinander unabhängig</strong>:
+            Modul A bestimmt die Lohn-Dauer, Modul C die Verlängerung der Kündigungsfrist (Hemmung).
+            Für die Dauer der gehemmten/verlängerten Kündigungsfrist besteht <strong>nicht automatisch</strong> ein Lohnanspruch
+            (BGE 115 V 437, zu verifizieren).
           </p>
         </div>
       )}

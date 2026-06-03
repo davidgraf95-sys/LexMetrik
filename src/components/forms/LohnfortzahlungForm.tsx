@@ -60,14 +60,33 @@ function Field({ label, children, hint }: { label: string; children: React.React
 
 const inputCls = 'w-full border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500';
 
+// §6 Eingabevalidierung
+function validiere(f: LohnfortzahlungInput): string[] {
+  const fehler: string[] = [];
+  if (f.verhinderungBeginn < f.vertragsbeginn) fehler.push('Beginn der Verhinderung liegt vor dem Vertragsbeginn.');
+  if (f.verhinderungEnde && f.verhinderungEnde < f.verhinderungBeginn) fehler.push('Ende der Verhinderung liegt vor dem Beginn.');
+  if (f.arbeitsunfaehigkeitProzent <= 0 || f.arbeitsunfaehigkeitProzent > 100) fehler.push('Arbeitsunfähigkeit muss zwischen 1 und 100 % liegen.');
+  if (f.pensumProzent != null && (f.pensumProzent <= 0 || f.pensumProzent > 100)) fehler.push('Beschäftigungsgrad muss zwischen 1 und 100 % liegen.');
+  if (f.monatslohnBrutto != null && f.monatslohnBrutto < 0) fehler.push('Monatslohn darf nicht negativ sein.');
+  return fehler;
+}
+
 export function LohnfortzahlungForm() {
   const [form, setForm] = useState<LohnfortzahlungInput>(DEFAULTS);
   const [ergebnis, setErgebnis] = useState<Berechnungsergebnis | null>(null);
+  const [fehler, setFehler] = useState<string[]>([]);
+  const [erweitert, setErweitert] = useState(false);
 
   const set = <K extends keyof LohnfortzahlungInput>(k: K, v: LohnfortzahlungInput[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
 
+  const setKtg = (k: keyof NonNullable<LohnfortzahlungInput['ktgKriterien']>, v: number | boolean | undefined) =>
+    setForm((f) => ({ ...f, ktgKriterien: { ...f.ktgKriterien, [k]: v } }));
+
   const berechne = () => {
+    const v = validiere(form);
+    setFehler(v);
+    if (v.length > 0) { setErgebnis(null); return; }
     try {
       setErgebnis(berechneLohnfortzahlung(form));
     } catch (e) {
@@ -78,7 +97,9 @@ export function LohnfortzahlungForm() {
   const eingaben = {
     'Vertragsbeginn': form.vertragsbeginn,
     'Beginn Verhinderung': form.verhinderungBeginn,
+    ...(form.verhinderungEnde ? { 'Ende Verhinderung': form.verhinderungEnde } : {}),
     'Arbeitsunfähigkeit': `${form.arbeitsunfaehigkeitProzent} %`,
+    ...(form.pensumProzent != null && form.pensumProzent !== 100 ? { 'Pensum': `${form.pensumProzent} %` } : {}),
     'Kanton': form.kanton,
     'KTG gleichwertig': form.ktgGleichwertigVorhanden ? 'Ja' : 'Nein',
     ...(form.monatslohnBrutto ? { 'Monatslohn brutto (CHF)': String(form.monatslohnBrutto) } : {}),
@@ -129,6 +150,15 @@ export function LohnfortzahlungForm() {
           />
         </Field>
 
+        <Field label="Beschäftigungsgrad / Pensum (%)" hint="Teilzeit; getrennt vom AUF-Grad (SHK N 54)">
+          <input
+            type="number" min={1} max={100} step={5}
+            value={form.pensumProzent ?? 100}
+            onChange={(e) => set('pensumProzent', Number(e.target.value))}
+            className={inputCls}
+          />
+        </Field>
+
         <Field label="KTG-Versicherung gleichwertig?">
           <div className="flex items-center gap-4 pt-2">
             <label className="flex items-center gap-2 text-sm cursor-pointer">
@@ -142,6 +172,86 @@ export function LohnfortzahlungForm() {
           </div>
         </Field>
       </div>
+
+      {/* §2.6 KTG-Gleichwertigkeits-Checkliste */}
+      {form.ktgGleichwertigVorhanden && (
+        <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 space-y-3">
+          <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide">Gleichwertigkeits-Checkliste (Art. 324a Abs. 4 OR, Orientierung)</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Field label="Taggeld (% des Lohnes)" hint="Richtwert ≥ 80 %">
+              <input type="number" min={0} max={100} className={inputCls}
+                value={form.ktgKriterien?.taggeldProzent ?? ''} placeholder="z.B. 80"
+                onChange={(e) => setKtg('taggeldProzent', e.target.value ? Number(e.target.value) : undefined)} />
+            </Field>
+            <Field label="Leistungsdauer (Tage)" hint="Richtwert ≥ 720">
+              <input type="number" min={0} className={inputCls}
+                value={form.ktgKriterien?.leistungsdauerTage ?? ''} placeholder="z.B. 720"
+                onChange={(e) => setKtg('leistungsdauerTage', e.target.value ? Number(e.target.value) : undefined)} />
+            </Field>
+            <Field label="Karenzfrist (Tage)" hint="max. 3 Tage zulässig">
+              <input type="number" min={0} className={inputCls}
+                value={form.ktgKriterien?.karenzTage ?? ''} placeholder="z.B. 2"
+                onChange={(e) => setKtg('karenzTage', e.target.value ? Number(e.target.value) : undefined)} />
+            </Field>
+            <Field label="Arbeitgeber-Prämienanteil (%)" hint="mind. 50 %">
+              <input type="number" min={0} max={100} className={inputCls}
+                value={form.ktgKriterien?.praemienAnteilArbeitgeberProzent ?? ''} placeholder="z.B. 50"
+                onChange={(e) => setKtg('praemienAnteilArbeitgeberProzent', e.target.value ? Number(e.target.value) : undefined)} />
+            </Field>
+          </div>
+          <label className="flex items-center gap-2 text-sm cursor-pointer text-blue-800">
+            <input type="checkbox" checked={form.ktgKriterien?.schriftlichVereinbart ?? false}
+              onChange={(e) => setKtg('schriftlichVereinbart', e.target.checked)} />
+            Schriftlich / in GAV-NAV vereinbart (Gültigkeitsvoraussetzung)
+          </label>
+        </div>
+      )}
+
+      {/* Erweiterte Eingaben */}
+      <div className="border border-slate-200 rounded-lg overflow-hidden">
+        <button type="button" onClick={() => setErweitert(!erweitert)}
+          className="w-full flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-slate-100 text-left">
+          <span className="text-sm font-medium text-slate-700">Erweiterte Eingaben (Anspruch, DJ-übergreifend, Lohnbasis)</span>
+          <span className="text-slate-400">{erweitert ? '▲' : '▼'}</span>
+        </button>
+        {erweitert && (
+          <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Field label="Ende der Verhinderung (optional)" hint="§2.1 für DJ-übergreifende Verhinderung (zwei Kredite)">
+              <input type="date" value={form.verhinderungEnde ?? ''} className={inputCls}
+                onChange={(e) => set('verhinderungEnde', e.target.value || undefined)} />
+            </Field>
+            <Field label="Vereinbarte Kündigungsfrist (Monate, optional)" hint="§2.2 > 3 Monate → Anspruch ab Tag 1">
+              <input type="number" min={0} className={inputCls} placeholder="Leer = Standard"
+                value={form.vereinbarteKuendigungsfristMonate ?? ''}
+                onChange={(e) => set('vereinbarteKuendigungsfristMonate', e.target.value ? Number(e.target.value) : undefined)} />
+            </Field>
+            <Field label="Anrechenbare Vordienstzeit (Monate, optional)" hint="§2.2 Lehre/Praktikum/Folge-Befristung (SHK N 44)">
+              <input type="number" min={0} className={inputCls} placeholder="0"
+                value={form.anrechenbareVordienstzeitMonate ?? ''}
+                onChange={(e) => set('anrechenbareVordienstzeitMonate', e.target.value ? Number(e.target.value) : undefined)} />
+            </Field>
+            <div className="flex flex-col justify-end gap-2">
+              <label className="flex items-center gap-2 text-sm cursor-pointer">
+                <input type="checkbox" checked={form.befristetFest ?? false}
+                  onChange={(e) => set('befristetFest', e.target.checked)} />
+                Befristeter Vertrag fester Dauer &gt; 3 Monate
+              </label>
+              <label className="flex items-center gap-2 text-sm cursor-pointer">
+                <input type="checkbox" checked={form.dreizehnterMonatslohn ?? false}
+                  onChange={(e) => set('dreizehnterMonatslohn', e.target.checked)} />
+                13. Monatslohn (anteilig) berücksichtigen
+              </label>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {fehler.length > 0 && (
+        <div className="rounded-lg border border-red-200 bg-red-50 p-4 space-y-1">
+          <p className="text-xs font-semibold text-red-700 uppercase tracking-wide mb-1">Eingabefehler</p>
+          {fehler.map((f, i) => <p key={i} className="text-sm text-red-800">• {f}</p>)}
+        </div>
+      )}
 
       <button
         onClick={berechne}

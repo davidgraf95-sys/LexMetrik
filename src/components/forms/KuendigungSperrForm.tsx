@@ -12,8 +12,19 @@ const DEFAULTS: SperrfristenInput = {
   kuendigendePartei: 'arbeitgeber',
   probezeitMonate: 1,
   kuendigungsterminMonatsende: true,
+  abweichendeFristFormGueltig: true,
   sperrereignisse: [],
 };
+
+// §6 Eingabevalidierung
+function validiere(f: SperrfristenInput): string[] {
+  const fehler: string[] = [];
+  if (f.zugangKuendigung < f.vertragsbeginn) fehler.push('Zugang der Kündigung liegt vor dem Vertragsbeginn.');
+  (f.sperrereignisse ?? []).forEach((e, i) => {
+    if (e.bis < e.von) fehler.push(`Sperrereignis ${i + 1}: «Bis» liegt vor «Von».`);
+  });
+  return fehler;
+}
 
 const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'krankheit_unfall',  label: 'Krankheit / Unfall (Art. 336c Abs. 1 lit. b)' },
@@ -38,6 +49,7 @@ export function KuendigungSperrForm() {
   const [form, setForm] = useState<SperrfristenInput>(DEFAULTS);
   const [ergebnisB, setErgebnisB] = useState<Berechnungsergebnis | null>(null);
   const [ergebnisC, setErgebnisC] = useState<Berechnungsergebnis | null>(null);
+  const [fehler, setFehler] = useState<string[]>([]);
 
   const set = <K extends keyof SperrfristenInput>(k: K, v: SperrfristenInput[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -64,7 +76,17 @@ export function KuendigungSperrForm() {
       sperrereignisse: (f.sperrereignisse ?? []).filter((_, j) => j !== i),
     }));
 
+  const updateEreignisNum = (i: number, field: 'gleicheUrsacheWieEreignis', val: number | null) =>
+    setForm((f) => {
+      const list = [...(f.sperrereignisse ?? [])];
+      list[i] = { ...list[i], [field]: val } as Sperrereignis;
+      return { ...f, sperrereignisse: list };
+    });
+
   const berechne = () => {
+    const v = validiere(form);
+    setFehler(v);
+    if (v.length > 0) { setErgebnisB(null); setErgebnisC(null); return; }
     try {
       const kb = berechneKuendigungsfrist(form);
       setErgebnisB(kb.ergebnis);
@@ -124,15 +146,44 @@ export function KuendigungSperrForm() {
           />
         </Field>
 
-        <Field label="Abweichende Frist (Monate, optional)" hint="Vertraglich / GAV; bei Unterschreitung gilt gesetzliche Frist">
+        <Field label="Abweichende Frist (Monate, optional)" hint="§3.2 schriftlich/GAV; ≥ 1 Monat gilt (auch kürzer)">
           <input
-            type="number" min={1} step={1}
+            type="number" min={0} step={0.5}
             value={form.abweichendeFristMonate ?? ''}
             onChange={(e) => set('abweichendeFristMonate', e.target.value ? Number(e.target.value) : undefined)}
             className={inputCls}
             placeholder="Leer = gesetzliche Frist"
           />
         </Field>
+
+        {form.abweichendeFristMonate != null && (
+          <Field label="Abweichende Frist – Gültigkeit (§3.2)">
+            <div className="flex flex-col gap-2 pt-1">
+              <label className="flex items-center gap-2 text-sm cursor-pointer">
+                <input type="checkbox" checked={form.abweichendeFristFormGueltig ?? false}
+                  onChange={(e) => set('abweichendeFristFormGueltig', e.target.checked)} />
+                Schriftlich / GAV / NAV (Gültigkeitsvoraussetzung)
+              </label>
+              <label className="flex items-center gap-2 text-sm cursor-pointer">
+                <input type="checkbox" checked={form.abweichendeFristQuelleGAV ?? false}
+                  onChange={(e) => set('abweichendeFristQuelleGAV', e.target.checked)} />
+                Quelle GAV (Verkürzung &lt; 1 Monat nur GAV &amp; 1. DJ)
+              </label>
+            </div>
+          </Field>
+        )}
+
+        {form.kuendigendePartei === 'arbeitgeber' && (
+          <Field label="Vaterschaftsurlaub – nicht bezogene Tage (optional)" hint="§3.4 Art. 335c Abs. 3 OR, verlängert die Frist">
+            <input
+              type="number" min={0} step={1}
+              value={form.vaterschaftsurlaubResttage ?? ''}
+              onChange={(e) => set('vaterschaftsurlaubResttage', e.target.value ? Number(e.target.value) : undefined)}
+              className={inputCls}
+              placeholder="0"
+            />
+          </Field>
+        )}
 
         <Field label="Kündigungstermin">
           <div className="flex items-center gap-4 pt-2">
@@ -197,9 +248,31 @@ export function KuendigungSperrForm() {
             {e.typ === 'militaer_zivil' && (
               <p className="text-xs text-blue-600">Bei Dauer &gt; 11 Tage wird die Sperrfrist automatisch je 4 Wochen davor und danach erweitert (Art. 336c Abs. 1 lit. a OR).</p>
             )}
+            {e.typ === 'krankheit_unfall' && i > 0 && (
+              <div className="space-y-1">
+                <label className="text-xs font-medium text-slate-600">Rückfall derselben Ursache wie … (§1.3)</label>
+                <select
+                  className={inputCls + ' text-xs'}
+                  value={e.gleicheUrsacheWieEreignis ?? ''}
+                  onChange={(ev) => updateEreignisNum(i, 'gleicheUrsacheWieEreignis', ev.target.value === '' ? null : Number(ev.target.value))}
+                >
+                  <option value="">Eigenständige Ursache (eigene Sperrfrist)</option>
+                  {(form.sperrereignisse ?? []).slice(0, i).map((_, j) => (
+                    <option key={j} value={j}>Rückfall wie Ereignis {j + 1} (keine neue Sperrfrist)</option>
+                  ))}
+                </select>
+              </div>
+            )}
           </div>
         ))}
       </div>
+
+      {fehler.length > 0 && (
+        <div className="rounded-lg border border-red-200 bg-red-50 p-4 space-y-1">
+          <p className="text-xs font-semibold text-red-700 uppercase tracking-wide mb-1">Eingabefehler</p>
+          {fehler.map((f, i) => <p key={i} className="text-sm text-red-800">• {f}</p>)}
+        </div>
+      )}
 
       <button
         onClick={berechne}

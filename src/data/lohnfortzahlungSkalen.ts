@@ -3,10 +3,17 @@ import type { Skala, Kanton } from '../types/legal';
 // ─── Lohnfortzahlungsskalen ───────────────────────────────────────────────
 //
 // WICHTIG: Diese Werte sind GERICHTSPRAXIS zur Konkretisierung von Art. 324a
-// Abs. 2 OR («angemessen längere Zeit»), KEINE Gesetzesnormen.
+// Abs. 2 OR («angemessen längere Zeit»), KEINE Gesetzesnormen und für die
+// Gerichte nicht verbindlich (SHK Art. 324a N 50).
 // Vor Produktiveinsatz gegen aktuelle kantonale Praxis abzugleichen.
 // Stand der Tabellen: Gerichtspraxis, mehrheitlich anerkannte Werte.
 // Alle Einträge sind als «zu verifizieren» zu behandeln.
+//
+// §2.5: Aus der vorliegenden SECO-/SHK-Tabelle (Seite 232, bis 11. DJ abgedruckt)
+// belegt ist die ZUORDNUNG nur für: Basel BS/BL, Zürich ZH/GR, Bern BE/AG/OW/SG +
+// Westschweiz. Weitere Kantone (SH, TG, ZG sowie übrige Berner-Skala-Kantone) sind
+// eine ANNAHME des Tools (verifiziert: false) und werden mit Warnhinweis versehen.
+// Fortschreibungen über das 11. Dienstjahr hinaus sind aus der Quelle nicht belegt.
 
 export const SKALA_BASEL: Skala = {
   name: 'Basler Skala',

@@ -96,3 +96,103 @@ describe('Lohnfortzahlung (Art. 324a OR)', () => {
     expect(result.ergebnis).toContain('3 Monate');
   });
 });
+
+describe('Lohnfortzahlung P1/P2 (Art. 324a OR)', () => {
+  // §7.10 – Verhinderung über Dienstjahreswechsel → beide Kredite
+  it('§7.10: Verhinderung über DJ-Wechsel → zwei Kredite', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2024-01-01',
+      verhinderungBeginn: '2025-12-01',  // dj2 (Basler: 2 Monate)
+      verhinderungEnde: '2026-06-01',    // reicht über Jahrestag 01.01.2026
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+    });
+    expect(r.status).toBe('ok');
+    expect(r.ergebnis).toContain('2. Kredit');
+    expect(r.ergebnis).toContain('28.02.2026'); // 2. Kredit (dj3, 2 Monate) ab 01.01.2026
+  });
+
+  // §7.11 – Kredit im Vorjahr verbraucht → Anspruch lebt im neuen DJ wieder auf
+  it('§7.11: Kredit verbraucht, neues DJ → Anspruch lebt auf', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2024-01-01',
+      verhinderungBeginn: '2025-09-01',  // 1. Kredit endet 31.10.2025 (vor Jahrestag)
+      verhinderungEnde: '2026-06-01',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+    });
+    expect(r.status).toBe('ok');
+    expect(r.ergebnis).toContain('01.01.2026'); // 2. Kredit ab Jahrestag
+    expect(r.ergebnis).toContain('28.02.2026');
+  });
+
+  // §7.12 – Unbefristet, KF ≤ 3 Monate, Verhinderung in Monat 2 → kein Lohn bis Ablauf 3 Monate
+  it('§7.12: Kündigungsfrist ≤ 3 Monate, Verhinderung in Monat 2 → kein_anspruch', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2026-01-01',
+      verhinderungBeginn: '2026-02-15',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+      vereinbarteKuendigungsfristMonate: 2, // ≤ 3
+    });
+    expect(r.status).toBe('kein_anspruch');
+  });
+
+  // §7.13 – Befristet fest > 3 Monate, Verhinderung in Woche 2 → Anspruch ab Tag 1
+  it('§7.13: Befristet fest > 3 Monate, Verhinderung in Woche 2 → Anspruch', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2026-01-01',
+      verhinderungBeginn: '2026-01-08',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+      befristetFest: true,
+    });
+    expect(r.status).toBe('ok');
+  });
+
+  // §7.14 – Teil-AUF 50 % → doppelte Kalenderdauer, gleicher CHF-Kredit (Geldminimum)
+  it('§7.14: Teil-AUF 50 % → doppelte Kalenderdauer (Geldminimum)', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2024-01-01',
+      verhinderungBeginn: '2026-01-15',   // BS dj3 → 2 Monate
+      arbeitsunfaehigkeitProzent: 50,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+      monatslohnBrutto: 6000,
+    });
+    expect(r.status).toBe('ok');
+    expect(r.ergebnis).toContain('4 Monate'); // 2 Monate ÷ 0.5
+    expect(r.rechenweg.some((s) => s.beschreibung.includes('Geld- statt Zeitminimum'))).toBe(true);
+  });
+
+  // §7.15 – Teilzeit 60 % + AUF 50 % → Pensum und AUF getrennt
+  it('§7.15: Teilzeit 60 % + AUF 50 % → getrennte Grössen im Rechenweg', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2024-01-01',
+      verhinderungBeginn: '2026-01-15',
+      arbeitsunfaehigkeitProzent: 50,
+      pensumProzent: 60,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+    });
+    expect(r.status).toBe('ok');
+    expect(r.rechenweg.some((s) => s.zwischenergebnis.includes('Beschäftigungsgrad 60'))).toBe(true);
+  });
+
+  // §7.16 – DJ > 11 → verifiziert: false, Fortschreibung markiert
+  it('§7.16: DJ > 11 → Warnung «nicht belegt»', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2010-01-01',
+      verhinderungBeginn: '2026-01-15',  // 17. DJ
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+    });
+    expect(r.status).toBe('ok');
+    expect(r.warnungen.some((w) => w.includes('nicht belegt'))).toBe(true);
+  });
+});
