@@ -34,27 +34,49 @@ function KartenRaster({ items, headingLevel }: { items: CalculatorCard[]; headin
   );
 }
 
-// L3: Rechtsgebiet / Prozessart (Monospace-Label) – optional mit Clustern (L4).
+// L3: Rechtsgebiet / Prozessart als aufklappbare Rubrik-Zeile (Disclosure).
+// Rubriken ohne geprüften Rechner sind stille «in Vorbereitung»-Zeilen.
 function SubgroupBlock({ s, headingTag }: { s: Subgroup; headingTag: 'h3' | 'h4' }) {
   const H = headingTag;
+  const alleKarten = s.clusters ? s.clusters.flatMap((c) => c.items) : (s.items ?? []);
+  const geprueft = alleKarten.filter((c) => c.status === 'geprüft');
+
+  // Nur Geplantes → keine Aufklapp-Interaktion, schlanke Hinweis-Zeile.
+  if (geprueft.length === 0) {
+    return (
+      <div className="flex items-baseline justify-between gap-4 py-4 border-b border-line">
+        <H className="font-display font-semibold text-ink-400 text-h3">{s.title}</H>
+        <span className="lc-overline text-ink-400 whitespace-nowrap">in Vorbereitung</span>
+      </div>
+    );
+  }
+
   return (
-    <section className="space-y-4">
-      <H className="lc-overline text-ink-700">{s.title}</H>
-      {s.descriptor && <p className="text-body-s text-ink-500 max-w-reading">{s.descriptor}</p>}
-      {s.clusters ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {s.clusters.map((cl) => (
-            <div key={cl.label} className="space-y-2">
-              {/* L4: Cluster – kleines Monospace-Label über den Karten, kein gefüllter Kasten */}
-              <h5 className="lc-overline text-ink-400" style={{ fontSize: '0.66rem' }}>{cl.label}</h5>
-              {cl.items.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h6" />)}
-            </div>
-          ))}
-        </div>
-      ) : (
-        <KartenRaster items={s.items ?? []} headingLevel="h5" />
-      )}
-    </section>
+    <details className="group border-b border-line">
+      <summary className="flex items-baseline justify-between gap-4 py-4 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-brass-100/40 transition-colors rounded-sm -mx-2 px-2">
+        <span className="flex items-baseline gap-3 min-w-0">
+          <span aria-hidden className="text-brass-700 transition-transform group-open:rotate-90 shrink-0">▸</span>
+          <H className="font-display font-semibold text-ink-900 text-h3">{s.title}</H>
+        </span>
+        <span className="lc-overline text-ink-400 whitespace-nowrap">{geprueft.length} Rechner</span>
+      </summary>
+      <div className="pt-1 pb-8 space-y-4">
+        {s.descriptor && <p className="text-body-s text-ink-500 max-w-reading">{s.descriptor}</p>}
+        {s.clusters ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {s.clusters.map((cl) => (
+              <div key={cl.label} className="space-y-2">
+                {/* L4: Cluster – kleines Monospace-Label über den Karten, kein gefüllter Kasten */}
+                <h5 className="lc-overline text-ink-400" style={{ fontSize: '0.66rem' }}>{cl.label}</h5>
+                {cl.items.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h6" />)}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <KartenRaster items={s.items ?? []} headingLevel="h5" />
+        )}
+      </div>
+    </details>
   );
 }
 
@@ -83,16 +105,22 @@ function SaeulenSektion({ p }: { p: Pillar }) {
     <section id={p.id} className="scroll-mt-20 space-y-10">
       <SaeulenOeffner p={p} />
       {p.classes?.map((k) => (
-        <section key={k.id} className="space-y-8">
+        <section key={k.id} className="space-y-4">
           {/* L2: doktrinelle Klasse – Serif-Subhead + Lede */}
           <header className="space-y-1">
             <h3 className="font-display font-semibold text-ink-900 text-h2">{k.title}</h3>
             {k.lede && <p className="text-body-s text-ink-500 max-w-reading">{k.lede}</p>}
           </header>
-          {k.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h4" />)}
+          <div className="border-t border-line">
+            {k.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h4" />)}
+          </div>
         </section>
       ))}
-      {p.subgroups?.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h3" />)}
+      {p.subgroups && (
+        <div className="-mt-6">
+          {p.subgroups.map((s) => <SubgroupBlock key={s.id} s={s} headingTag="h3" />)}
+        </div>
+      )}
     </section>
   );
 }
