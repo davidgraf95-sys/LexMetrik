@@ -1,0 +1,235 @@
+import { useState } from 'react';
+import type { SperrfristenInput, Sperrereignis, SperrereignisTyp } from '../../types/legal';
+import { berechneKuendigungsfrist } from '../../lib/kuendigungsfrist';
+import { berechneSperrfristen } from '../../lib/sperrfristen';
+import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PdfExportButton } from '../PdfExport';
+import type { Berechnungsergebnis } from '../../types/legal';
+
+const DEFAULTS: SperrfristenInput = {
+  vertragsbeginn: '2020-01-01',
+  zugangKuendigung: '2025-04-15',
+  kuendigendePartei: 'arbeitgeber',
+  probezeitMonate: 1,
+  kuendigungsterminMonatsende: true,
+  sperrereignisse: [],
+};
+
+const TYPEN: { code: SperrereignisTyp; label: string }[] = [
+  { code: 'krankheit_unfall',  label: 'Krankheit / Unfall (Art. 336c Abs. 1 lit. b)' },
+  { code: 'schwangerschaft',   label: 'Schwangerschaft / Niederkunft (lit. c)' },
+  { code: 'militaer_zivil',    label: 'Militär / Zivildienst (lit. a)' },
+  { code: 'hilfsaktion',       label: 'Hilfsaktion (lit. d)' },
+];
+
+function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
+  return (
+    <div className="space-y-1">
+      <label className="block text-sm font-medium text-slate-700">{label}</label>
+      {children}
+      {hint && <p className="text-xs text-slate-500">{hint}</p>}
+    </div>
+  );
+}
+
+const inputCls = 'w-full border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500';
+
+export function KuendigungSperrForm() {
+  const [form, setForm] = useState<SperrfristenInput>(DEFAULTS);
+  const [ergebnisB, setErgebnisB] = useState<Berechnungsergebnis | null>(null);
+  const [ergebnisC, setErgebnisC] = useState<Berechnungsergebnis | null>(null);
+
+  const set = <K extends keyof SperrfristenInput>(k: K, v: SperrfristenInput[K]) =>
+    setForm((f) => ({ ...f, [k]: v }));
+
+  const addEreignis = () =>
+    setForm((f) => ({
+      ...f,
+      sperrereignisse: [
+        ...(f.sperrereignisse ?? []),
+        { typ: 'krankheit_unfall', von: '2025-04-01', bis: '2025-05-31' },
+      ],
+    }));
+
+  const updateEreignis = (i: number, field: keyof Sperrereignis, val: string) =>
+    setForm((f) => {
+      const list = [...(f.sperrereignisse ?? [])];
+      list[i] = { ...list[i], [field]: val } as Sperrereignis;
+      return { ...f, sperrereignisse: list };
+    });
+
+  const removeEreignis = (i: number) =>
+    setForm((f) => ({
+      ...f,
+      sperrereignisse: (f.sperrereignisse ?? []).filter((_, j) => j !== i),
+    }));
+
+  const berechne = () => {
+    try {
+      const kb = berechneKuendigungsfrist(form);
+      setErgebnisB(kb.ergebnis);
+      setErgebnisC(berechneSperrfristen(form));
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const eingaben = {
+    'Vertragsbeginn': form.vertragsbeginn,
+    'Zugang Kündigung': form.zugangKuendigung,
+    'Kündigende Partei': form.kuendigendePartei === 'arbeitgeber' ? 'Arbeitgeber' : 'Arbeitnehmer',
+    'Probezeit (Monate)': String(form.probezeitMonate),
+    'Kündigungstermin Monatsende': form.kuendigungsterminMonatsende ? 'Ja' : 'Nein',
+    ...(form.abweichendeFristMonate != null ? { 'Abweichende Frist (Monate)': String(form.abweichendeFristMonate) } : {}),
+  };
+
+  const abschnitte = [
+    ...(ergebnisB ? [{ titel: 'Kündigungsfrist (Art. 335c OR)', ergebnis: ergebnisB }] : []),
+    ...(ergebnisC ? [{ titel: 'Sperrfristen (Art. 336c OR)', ergebnis: ergebnisC }] : []),
+  ];
+
+  return (
+    <div className="space-y-6">
+      {/* Zugangsprinzip-Hinweis */}
+      <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
+        <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Zugangsprinzip</p>
+        <p className="text-sm text-blue-800">
+          Massgebend ist der <strong>Zugang</strong> der Kündigung beim Empfänger (nicht das Ausstell- oder Absendedatum).
+          Stichtag für die Dienstjahr-Berechnung ist der Zugangstag.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Field label="Vertragsbeginn">
+          <input type="date" value={form.vertragsbeginn} onChange={(e) => set('vertragsbeginn', e.target.value)} className={inputCls} />
+        </Field>
+
+        <Field label="Zugang der Kündigung (Empfänger)" hint="Stichtag für Dienstjahr und Sperrfrist-Prüfung">
+          <input type="date" value={form.zugangKuendigung} onChange={(e) => set('zugangKuendigung', e.target.value)} className={inputCls} />
+        </Field>
+
+        <Field label="Kündigende Partei">
+          <select value={form.kuendigendePartei} onChange={(e) => set('kuendigendePartei', e.target.value as 'arbeitgeber' | 'arbeitnehmer')} className={inputCls}>
+            <option value="arbeitgeber">Arbeitgeber</option>
+            <option value="arbeitnehmer">Arbeitnehmer</option>
+          </select>
+        </Field>
+
+        <Field label="Probezeit (Monate)" hint="0 = keine Probezeit, max. 3 Monate">
+          <input
+            type="number" min={0} max={3} step={1}
+            value={form.probezeitMonate}
+            onChange={(e) => set('probezeitMonate', Number(e.target.value))}
+            className={inputCls}
+          />
+        </Field>
+
+        <Field label="Abweichende Frist (Monate, optional)" hint="Vertraglich / GAV; bei Unterschreitung gilt gesetzliche Frist">
+          <input
+            type="number" min={1} step={1}
+            value={form.abweichendeFristMonate ?? ''}
+            onChange={(e) => set('abweichendeFristMonate', e.target.value ? Number(e.target.value) : undefined)}
+            className={inputCls}
+            placeholder="Leer = gesetzliche Frist"
+          />
+        </Field>
+
+        <Field label="Kündigungstermin">
+          <div className="flex items-center gap-4 pt-2">
+            <label className="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="radio" name="kterm" checked={form.kuendigungsterminMonatsende} onChange={() => set('kuendigungsterminMonatsende', true)} />
+              Monatsende (Standard)
+            </label>
+            <label className="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="radio" name="kterm" checked={!form.kuendigungsterminMonatsende} onChange={() => set('kuendigungsterminMonatsende', false)} />
+              Freies Datum
+            </label>
+          </div>
+        </Field>
+      </div>
+
+      {/* Sperrereignisse */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <h4 className="text-sm font-semibold text-slate-700">
+            Sperrereignisse (Art. 336c OR)
+            {form.kuendigendePartei === 'arbeitnehmer' && (
+              <span className="ml-2 text-xs font-normal text-slate-500">(nur bei Arbeitgeberkündigung relevant)</span>
+            )}
+          </h4>
+          <button
+            onClick={addEreignis}
+            className="text-sm px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition-colors"
+          >
+            + Ereignis
+          </button>
+        </div>
+
+        {(form.sperrereignisse ?? []).length === 0 && (
+          <p className="text-sm text-slate-500 italic">Keine Sperrereignisse erfasst.</p>
+        )}
+
+        {(form.sperrereignisse ?? []).map((e, i) => (
+          <div key={i} className="border border-slate-200 rounded-lg p-4 bg-slate-50 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-600">Ereignis {i + 1}</span>
+              <button onClick={() => removeEreignis(i)} className="text-xs text-red-500 hover:text-red-700">Entfernen</button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="space-y-1">
+                <label className="text-xs font-medium text-slate-600">Typ</label>
+                <select value={e.typ} onChange={(ev) => updateEreignis(i, 'typ', ev.target.value)} className={inputCls + ' text-xs'}>
+                  {TYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
+                </select>
+              </div>
+              <div className="space-y-1">
+                <label className="text-xs font-medium text-slate-600">Von</label>
+                <input type="date" value={e.von} onChange={(ev) => updateEreignis(i, 'von', ev.target.value)} className={inputCls + ' text-xs'} />
+              </div>
+              <div className="space-y-1">
+                <label className="text-xs font-medium text-slate-600">Bis</label>
+                <input type="date" value={e.bis} onChange={(ev) => updateEreignis(i, 'bis', ev.target.value)} className={inputCls + ' text-xs'} />
+              </div>
+            </div>
+            {e.typ === 'schwangerschaft' && (
+              <p className="text-xs text-blue-600">«Von»: Beginn der Schwangerschaft. «Bis»: 16 Wochen (112 Tage) nach Niederkunft (Art. 336c Abs. 1 lit. c OR).</p>
+            )}
+            {e.typ === 'militaer_zivil' && (
+              <p className="text-xs text-blue-600">Bei Dauer &gt; 11 Tage wird die Sperrfrist automatisch je 4 Wochen davor und danach erweitert (Art. 336c Abs. 1 lit. a OR).</p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <button
+        onClick={berechne}
+        className="px-6 py-2.5 bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium rounded-lg transition-colors"
+      >
+        Berechnen
+      </button>
+
+      {/* Querverbindung */}
+      {ergebnisB && ergebnisC && (form.sperrereignisse ?? []).length > 0 && (
+        <div className="rounded-lg border border-purple-200 bg-purple-50 p-4">
+          <p className="text-xs font-semibold text-purple-700 uppercase tracking-wide mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
+          <p className="text-sm text-purple-800">
+            Sperrfrist (Art. 336c OR) und Lohnfortzahlung (Art. 324a OR) sind <strong>voneinander unabhängig</strong>.
+            Eine Sperrfrist von z.B. 90 Tagen bedeutet nicht 90 Tage Lohnfortzahlung.
+            Beide Ansprüche sind separat zu prüfen.
+          </p>
+        </div>
+      )}
+
+      {ergebnisB && (
+        <ErgebnisAnzeige titel="Kündigungsfrist (Art. 335b / 335c OR)" ergebnis={ergebnisB} />
+      )}
+      {ergebnisC && (form.sperrereignisse ?? []).length > 0 && (
+        <ErgebnisAnzeige titel="Sperrfristen-Analyse (Art. 336c OR)" ergebnis={ergebnisC} />
+      )}
+
+      {abschnitte.length > 0 && (
+        <PdfExportButton abschnitte={abschnitte} eingaben={eingaben} />
+      )}
+    </div>
+  );
+}
