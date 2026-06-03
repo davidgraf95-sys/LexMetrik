@@ -111,11 +111,12 @@
   .lc-reveal { animation: lc-fade 200ms ease-out; }
   @keyframes lc-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
-  /* Aufklappbare Hinweise: dezentes Disclosure-Symbol statt Default-Dreieck */
+  /* Aufklappbare Hinweise: dezentes Disclosure-Symbol statt Default-Dreieck.
+     Ausnahme .lc-disclosure: bringt einen eigenen Chevron mit (Rubrik-Zeilen). */
   details > summary { list-style: none; }
   details > summary::-webkit-details-marker { display: none; }
-  details > summary::after { content: '  ▸'; color: var(--ink-400); font-size: .7em; }
-  details[open] > summary::after { content: '  ▾'; }
+  details > summary:not(.lc-disclosure)::after { content: '  ▸'; color: var(--ink-400); font-size: .7em; }
+  details[open] > summary:not(.lc-disclosure)::after { content: '  ▾'; }
 
   .lc-live { display: inline-flex; align-items: center; gap: .4rem; }
   .lc-live::before {

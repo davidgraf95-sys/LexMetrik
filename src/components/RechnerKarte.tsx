@@ -41,7 +41,21 @@ export function RechnerKarte({ card, headingLevel = 'h5' }: Props) {
         <p className="lc-overline">{card.category}</p>
         <H className="text-h3 font-display font-semibold text-ink-900 mt-1">{card.title}</H>
       </div>
-      <p className="text-body-s text-ink-500 leading-relaxed flex-1">{card.description}</p>
+      <p className="text-body-s text-ink-500 leading-relaxed">{card.description}</p>
+      {/* Verwandte in der flexiblen Zone – Pills + «Öffnen» bleiben dadurch in
+          allen Karten als einheitlicher Boden-Block auf gleicher Höhe. */}
+      {aktiv && verwandte.length > 0 && (
+        <p className="relative text-body-s text-ink-400">
+          Verwandte Rechner:{' '}
+          {verwandte.map((k, i) => (
+            <span key={k.id}>
+              {i > 0 && ' · '}
+              <Link to={k.href!} className="text-brass-700 hover:text-brass-600 no-underline">{k.title}</Link>
+            </span>
+          ))}
+        </p>
+      )}
+      <div className="flex-1" aria-hidden />
       {aktiv && card.norms.length > 0 && (
         <div className="relative flex flex-wrap gap-1.5">
           {/* Norm-Pills: Anzeigetext unverändert; Link auf die amtliche
@@ -62,17 +76,6 @@ export function RechnerKarte({ card, headingLevel = 'h5' }: Props) {
       <p className={`text-body-s font-medium ${aktiv ? 'text-brass-700' : 'text-ink-400'}`}>
         {aktiv ? 'Öffnen →' : (card.note ?? 'bald verfügbar')}
       </p>
-      {aktiv && verwandte.length > 0 && (
-        <p className="relative text-body-s text-ink-400 border-t border-line pt-2 -mt-1">
-          Verwandte Rechner:{' '}
-          {verwandte.map((k, i) => (
-            <span key={k.id}>
-              {i > 0 && ' · '}
-              <Link to={k.href!} className="text-brass-700 hover:text-brass-600 no-underline">{k.title}</Link>
-            </span>
-          ))}
-        </p>
-      )}
     </article>
   );
 }

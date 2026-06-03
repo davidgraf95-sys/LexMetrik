@@ -57,10 +57,12 @@ function SubgroupBlock({ s, headingTag, defaultOpen }: { s: Subgroup; headingTag
   // (gleicher Raster wie die Aufklapp-Zeilen, leere Chevron-Spalte).
   if (geprueft.length === 0) {
     return (
-      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-x-4 py-5 px-1 min-h-[56px]">
-        <span aria-hidden className="w-4" />
-        <H className="font-display font-semibold text-ink-400 text-h3 leading-snug">{s.title}</H>
-        <span className="lc-overline text-ink-400 whitespace-nowrap justify-self-end">in Vorbereitung</span>
+      <div className="py-5 px-1">
+        <div className="grid grid-cols-[1rem_1fr_auto] items-center gap-x-4 min-h-[2rem]">
+          <span aria-hidden />
+          <H className="font-display font-semibold text-ink-400 text-h3 leading-snug min-w-0 hyphens-auto [overflow-wrap:anywhere]">{s.title}</H>
+          <span className="lc-overline text-ink-400 text-right sm:whitespace-nowrap justify-self-end">in Vorbereitung</span>
+        </div>
       </div>
     );
   }
@@ -69,17 +71,21 @@ function SubgroupBlock({ s, headingTag, defaultOpen }: { s: Subgroup; headingTag
 
   return (
     <details className="group" open={defaultOpen || undefined}>
-      <summary className="grid grid-cols-[auto_1fr_auto] items-center gap-x-4 py-5 px-1 min-h-[56px] cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-brass-100/40 transition-colors motion-reduce:transition-none">
-        <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 w-4 text-center">▸</span>
-        <span className="min-w-0">
-          <H className="font-display font-semibold text-ink-900 text-h3 leading-snug">{s.title}</H>
-          {/* Vorschau (Information Scent): verschwindet, sobald die Karten sichtbar sind */}
-          <span className="block text-body-s text-ink-500 truncate group-open:hidden">{vorschau}</span>
-        </span>
-        <span className="lc-overline text-ink-400 whitespace-nowrap justify-self-end">
-          <span className="num">{geprueft.length}</span> Rechner
-          <span aria-hidden className="ml-3 text-brass-700 group-open:hidden hidden sm:inline">aufklappen</span>
-          <span aria-hidden className="ml-3 text-brass-700 hidden group-open:sm:inline">zuklappen</span>
+      {/* summary bleibt display:block – nur so lässt sich der native Marker in
+          Chromium zuverlässig entfernen; das Zeilen-Raster sitzt im Innen-Span. */}
+      <summary className="lc-disclosure block py-5 px-1 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-brass-100/40 transition-colors motion-reduce:transition-none">
+        <span className="grid grid-cols-[1rem_1fr_auto] items-center gap-x-4 min-h-[2rem]">
+          <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 text-center leading-none">▸</span>
+          <span className="min-w-0">
+            <H className="font-display font-semibold text-ink-900 text-h3 leading-snug hyphens-auto [overflow-wrap:anywhere]">{s.title}</H>
+            {/* Vorschau (Information Scent): verschwindet, sobald die Karten sichtbar sind */}
+            <span className="block text-body-s text-ink-500 truncate group-open:hidden">{vorschau}</span>
+          </span>
+          <span className="lc-overline text-ink-400 text-right sm:whitespace-nowrap justify-self-end">
+            <span className="num">{geprueft.length}</span> Rechner
+            <span aria-hidden className="ml-3 text-brass-700 hidden sm:inline group-open:hidden">aufklappen</span>
+            <span aria-hidden className="ml-3 text-brass-700 hidden sm:group-open:inline">zuklappen</span>
+          </span>
         </span>
       </summary>
       <div className="pl-1 sm:pl-9 pt-1 pb-8 space-y-4">
@@ -103,13 +109,13 @@ function SubgroupBlock({ s, headingTag, defaultOpen }: { s: Subgroup; headingTag
 }
 
 // Säule III: nur «in Vorbereitung»-Positionen → schlankes einzeiliges Panel.
+// Bewusst nur zwei Textstile auf EINER Baseline (Overline + Fliesstext).
 function WerkzeugNotiz({ p }: { p: Pillar }) {
   const eintraege = (p.subgroups ?? []).flatMap((s) => s.items ?? []);
   return (
     <section id={p.id} aria-labelledby={`${p.id}-titel`}
       className="scroll-mt-20 bg-surface rounded-2xl border border-line px-6 sm:px-10 py-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-      <span aria-hidden className="font-display font-semibold text-brass-400 leading-none text-[1.5rem]">{p.numeral}</span>
-      <p className="lc-overline text-brass-700">Säule {p.numeral} — {p.title}</p>
+      <p className="lc-overline text-brass-700 whitespace-nowrap">{p.numeral} — {p.title}</p>
       <h2 id={`${p.id}-titel`} className="sr-only">{p.title}</h2>
       <p className="text-body-s text-ink-500">
         {eintraege.map((e) => `${e.title}: ${e.note ?? 'in Vorbereitung'}`).join(' · ')}
@@ -128,8 +134,9 @@ function SaeulenSektion({ p, defaultOpen }: { p: Pillar; defaultOpen: boolean })
       <SaeulenOeffner p={p} />
       {p.classes?.map((k) => (
         <section key={k.id} className="space-y-4">
-          {/* L2: doktrinelle Klasse – Overline + Serif-Subhead + Lede über der Liste */}
-          <header className="space-y-1 border-t border-line pt-6">
+          {/* L2: doktrinelle Klasse – Serif-Subhead + Lede über der Liste.
+              Trennung zur Vorgänger-Liste übernimmt deren Unterkante (keine Doppellinie). */}
+          <header className="space-y-1 pt-2">
             <h3 className="font-display font-semibold text-ink-900 text-h2">{k.title}</h3>
             {k.lede && <p className="text-body-s text-ink-500 max-w-reading">{k.lede}</p>}
           </header>
