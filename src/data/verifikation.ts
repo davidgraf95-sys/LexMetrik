@@ -76,6 +76,48 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
     aussage: 'Schwangerschaftsbeginn (Befruchtung) als Anfangstag der Sperrfrist.',
     verifiziert: false,
   },
+
+  // Verzugszins (Art. 104 OR) – Präjudizienbuch OR, Art. 104
+  BGE_130_III_591: {
+    aktenzeichen: 'BGE 130 III 591',
+    aussage: 'Verzugszinspflicht setzt Fälligkeit und Inverzugsetzung voraus; kein Schaden-/Verschuldensnachweis nötig.',
+    verifiziert: false,
+  },
+  BGer_4A_514_2007: {
+    aktenzeichen: 'BGer 4A_514/2007',
+    aussage: 'Zinsen wachsen linear auf dem Kapital; keine Zinseszinsen, auch nicht im Prozess.',
+    verifiziert: false,
+  },
+  BGer_4A_282_2017: {
+    aktenzeichen: 'BGer 4A_282/2017',
+    aussage: 'Bei Klageeinleitung läuft der Verzugszins ab Zustellung der Klage/Widerklage.',
+    verifiziert: false,
+  },
+  BGer_4A_58_2019: {
+    aktenzeichen: 'BGer 4A_58/2019',
+    aussage: 'Tritt Verzug ohne Mahnung ein (Art. 108 Ziff. 1), läuft der Zins umgehend.',
+    verifiziert: false,
+  },
+  BGer_4A_117_2014: {
+    aktenzeichen: 'BGer 4A_117/2014',
+    aussage: 'Verzugszins nur auf geschuldeten Beträgen, nicht auf zu Unrecht verlangten.',
+    verifiziert: false,
+  },
+  BGE_117_V_349: {
+    aktenzeichen: 'BGE 117 V 349',
+    aussage: 'Art. 104 Abs. 1 ist dispositiv; höherer oder tieferer Verzugszins vereinbar.',
+    verifiziert: false,
+  },
+  BGE_137_III_453: {
+    aktenzeichen: 'BGE 137 III 453',
+    aussage: 'War die Schuld vor Verzug höher als 5% verzinst, gilt der vertragliche Satz auch für die Verzugszinsen.',
+    verifiziert: false,
+  },
+  BGE_116_II_140: {
+    aktenzeichen: 'BGE 116 II 140',
+    aussage: 'Üblicher Bankdiskonto (Abs. 3) = Privatdiskontsatz, nicht Kontokorrent-Zinssatz.',
+    verifiziert: false,
+  },
 };
 
 /** Liefert einen Rechtsprechungshinweis aus dem zentralen Register. */

@@ -16,7 +16,7 @@ const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'hilfsaktion',       label: 'Hilfsaktion (lit. d)' },
 ];
 
-const inputCls = 'w-full border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500';
+const inputCls = 'lc-input';
 
 const DEFAULTS: ArbeitsrechtInput = {
   vertragsbeginn: '2020-01-01',
@@ -95,8 +95,8 @@ export function KombinierteAnsicht() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-        <p className="text-sm text-slate-600">
+      <div className="rounded-lg border border-line bg-surface p-4">
+        <p className="text-sm text-ink-600">
           Kombinierte Ansicht: Alle drei Teilberechnungen (A/B/C) mit gemeinsamen Eingaben.
           Stichtage sind je Modul unterschiedlich – details im Rechenweg.
         </p>
@@ -105,21 +105,21 @@ export function KombinierteAnsicht() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-slate-700">Vertragsbeginn</label>
+            <label className="block text-sm font-medium text-ink-700">Vertragsbeginn</label>
             <input type="date" value={form.vertragsbeginn} onChange={(e) => set('vertragsbeginn', e.target.value)} className={inputCls} />
           </div>
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-slate-700">Zugang Kündigung <span className="text-slate-500 font-normal">(Stichtag B/C)</span></label>
+            <label className="block text-sm font-medium text-ink-700">Zugang Kündigung <span className="text-ink-500 font-normal">(Stichtag B/C)</span></label>
             <input type="date" value={form.zugangKuendigung} onChange={(e) => set('zugangKuendigung', e.target.value)} className={inputCls} />
           </div>
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-slate-700">Beginn Verhinderung <span className="text-slate-500 font-normal">(Stichtag A)</span></label>
+            <label className="block text-sm font-medium text-ink-700">Beginn Verhinderung <span className="text-ink-500 font-normal">(Stichtag A)</span></label>
             <input type="date" value={form.verhinderungBeginn ?? ''} onChange={(e) => set('verhinderungBeginn', e.target.value)} className={inputCls} />
           </div>
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm font-medium text-slate-700">Kündigende Partei</label>
+          <label className="block text-sm font-medium text-ink-700">Kündigende Partei</label>
           <select value={form.kuendigendePartei} onChange={(e) => set('kuendigendePartei', e.target.value as 'arbeitgeber' | 'arbeitnehmer')} className={inputCls}>
             <option value="arbeitgeber">Arbeitgeber</option>
             <option value="arbeitnehmer">Arbeitnehmer</option>
@@ -127,19 +127,19 @@ export function KombinierteAnsicht() {
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm font-medium text-slate-700">Kanton</label>
+          <label className="block text-sm font-medium text-ink-700">Kanton</label>
           <select value={form.kanton ?? 'BE'} onChange={(e) => set('kanton', e.target.value as Kanton)} className={inputCls}>
             {KANTONE_SELECT.map((k) => <option key={k} value={k}>{k}</option>)}
           </select>
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm font-medium text-slate-700">AUF % (Lohnfortzahlung)</label>
+          <label className="block text-sm font-medium text-ink-700">AUF % (Lohnfortzahlung)</label>
           <input type="number" min={1} max={100} value={form.arbeitsunfaehigkeitProzent ?? 100} onChange={(e) => set('arbeitsunfaehigkeitProzent', Number(e.target.value))} className={inputCls} />
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm font-medium text-slate-700">Probezeit (Monate)</label>
+          <label className="block text-sm font-medium text-ink-700">Probezeit (Monate)</label>
           <input type="number" min={0} max={3} value={form.probezeitMonate} onChange={(e) => set('probezeitMonate', Number(e.target.value))} className={inputCls} />
         </div>
       </div>
@@ -147,38 +147,38 @@ export function KombinierteAnsicht() {
       {/* Sperrereignisse */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold text-slate-700">Sperrereignisse (Art. 336c OR)</h4>
-          <button onClick={addEreignis} className="text-sm px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">+ Ereignis</button>
+          <h4 className="text-sm font-semibold text-ink-700">Sperrereignisse (Art. 336c OR)</h4>
+          <button onClick={addEreignis} className="text-sm px-3 py-1.5 bg-surface hover:bg-brass-100 rounded-lg transition-colors">+ Ereignis</button>
         </div>
         {(form.sperrereignisse ?? []).map((e, i) => (
-          <div key={i} className="border border-slate-200 rounded-lg p-3 bg-slate-50 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+          <div key={i} className="border border-line rounded-lg p-3 bg-surface grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
             <div className="space-y-1">
-              <label className="text-xs font-medium text-slate-600">Typ</label>
+              <label className="text-xs font-medium text-ink-600">Typ</label>
               <select value={e.typ} onChange={(ev) => updateEreignis(i, 'typ', ev.target.value)} className={inputCls + ' text-xs'}>
                 {TYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
               </select>
             </div>
             <div className="space-y-1">
-              <label className="text-xs font-medium text-slate-600">Von</label>
+              <label className="text-xs font-medium text-ink-600">Von</label>
               <input type="date" value={e.von} onChange={(ev) => updateEreignis(i, 'von', ev.target.value)} className={inputCls + ' text-xs'} />
             </div>
             <div className="space-y-1">
-              <label className="text-xs font-medium text-slate-600">Bis</label>
+              <label className="text-xs font-medium text-ink-600">Bis</label>
               <input type="date" value={e.bis} onChange={(ev) => updateEreignis(i, 'bis', ev.target.value)} className={inputCls + ' text-xs'} />
             </div>
-            <button onClick={() => removeEreignis(i)} className="text-xs text-red-500 hover:text-red-700 self-end pb-2">Entfernen</button>
+            <button onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700 self-end pb-2">Entfernen</button>
           </div>
         ))}
       </div>
 
-      <button onClick={berechne} className="px-6 py-2.5 bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium rounded-lg transition-colors">
+      <button onClick={berechne} className="px-6 py-2.5 bg-ink-900 hover:bg-ink-700 text-paper text-sm font-medium rounded-lg transition-colors">
         Alle berechnen
       </button>
 
       {(form.sperrereignisse ?? []).length > 0 && (ergebnisse.lohnfortzahlung || ergebnisse.sperrfristen) && (
-        <div className="rounded-lg border border-purple-200 bg-purple-50 p-4">
-          <p className="text-xs font-semibold text-purple-700 uppercase tracking-wide mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
-          <p className="text-sm text-purple-800">
+        <div className="rounded-lg border border-line bg-surface p-4">
+          <p className="text-xs font-semibold text-brass-700 uppercase tracking-wide mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
+          <p className="text-sm text-ink-600">
             Sperrfrist/Hemmung (Art. 336c OR) und Lohnfortzahlung (Art. 324a OR) sind <strong>voneinander unabhängig</strong>:
             Modul A bestimmt die Lohn-Dauer, Modul C die Verlängerung der Kündigungsfrist (Hemmung).
             Für die Dauer der gehemmten/verlängerten Kündigungsfrist besteht <strong>nicht automatisch</strong> ein Lohnanspruch

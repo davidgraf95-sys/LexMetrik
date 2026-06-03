@@ -1,0 +1,21 @@
+import { Link } from 'react-router-dom';
+import type { Calculator } from '../../lib/calculators';
+
+// Gemeinsamer Rechner-Kopf (Vorlage Abschnitt 4): Breadcrumb, Overline, H1, Einleitung, Chips.
+export function RechnerKopf({ calc }: { calc: Calculator }) {
+  return (
+    <div className="space-y-3 mb-8">
+      <nav className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>
+        <Link to="/rechner" className="no-underline text-ink-400 hover:text-ink-600">Rechner</Link>
+        <span className="mx-1.5">/</span>
+        <span className="text-ink-500">{calc.titel}</span>
+      </nav>
+      <p className="lc-overline">{calc.kategorie}</p>
+      <h1 className="text-h1 font-display font-semibold text-ink-900">{calc.titel}</h1>
+      <p className="text-body-l text-ink-600 max-w-reading">{calc.kurzbeschrieb}</p>
+      <div className="flex flex-wrap gap-1.5">
+        {calc.normen.map((n) => <span key={n} className="lc-chip">{n}</span>)}
+      </div>
+    </div>
+  );
+}

@@ -1,11 +1,14 @@
 # LegalCalc — Juristisches Review-Dokument
 
 **Gegenstand:** Vollständige Aufstellung der implementierten Berechnungsregeln mit Normverweisen
-**Anwendung:** Swiss Legal Calc — Arbeitsrecht (Fristen & Lohnfortzahlung)
-**Stand:** 2026-06-03
-**Quelle:** Source-Code-Analyse von `src/lib/*.ts` und `src/data/lohnfortzahlungSkalen.ts`
+**Anwendung:** Swiss Legal Calc — Arbeitsrecht (Fristen & Lohnfortzahlung), Modul 1
+**Stand:** 2026-06-03 (nach materiell-rechtlichem Umbau gemäss SHK-Abgleich, Commit `4bd1d9d`)
+**Quelle:** Source-Code-Analyse von `src/lib/*.ts`, `src/data/*.ts`, `src/types/legal.ts`
+**Grundlage:** Art. 324a/b, 335a/b/c, 336c, 362 und neu Art. 77 OR sowie SHK Stämpflis Handkommentar zum Arbeitsvertrag (Etter/Facincani/Sutter, 2021).
 
-> ⚠️ **Charakter des Tools:** Automatisierte **Orientierungsberechnung**, keine Rechtsberatung. Abweichende GAV-, Vertrags- oder Versicherungslösungen, der genaue Sachverhalt sowie alle Norm- und Rechtsprechungsverweise sind im Einzelfall zu prüfen.
+> ⚠️ **Charakter des Tools:** Automatisierte **Orientierungsberechnung**, keine Rechtsberatung. Massgeblich sind GAV, Einzelvertrag, Versicherungspolice und der konkrete Sachverhalt; abweichende Regelungen gehen vor.
+
+> **Normentreue:** Fest verdrahtet sind ausschliesslich Art. 324a/b, 335a/b/c, 336c, 362 **und Art. 77 OR**. Jeder BGE/BGer-Verweis trägt `verifiziert: false` (zentral in `src/data/verifikation.ts`). Materiell-rechtliche Verhaltensänderungen tragen `// VERIFY:`-Kommentare im Code.
 
 ---
 
@@ -14,11 +17,13 @@
 1. [Modul A — Lohnfortzahlung (Art. 324a OR)](#modul-a)
 2. [Modul B — Kündigungsfrist (Art. 335a–c OR)](#modul-b)
 3. [Modul C — Sperrfristen (Art. 336c OR)](#modul-c)
-4. [Querschnittsregeln (Dienstjahr, Fristen, Datumsarithmetik)](#querschnitt)
+4. [Querschnittsregeln & Zählkonventionen](#querschnitt)
 5. [Lohnfortzahlungsskalen (kantonale Gerichtspraxis)](#skalen)
 6. [Normverweis-Register](#normverweise)
-7. [Rechtsprechungsverweise (Verifikationsstatus)](#rechtsprechung)
-8. [Juristische Prüfpunkte / Vorbehalte](#pruefpunkte)
+7. [Verifikations-Register (Rechtsprechung)](#verifikation)
+8. [Testabdeckung (§7)](#tests)
+9. [Juristische Prüfpunkte / Vorbehalte](#pruefpunkte)
+10. [Änderungsprotokoll gegenüber dem alten Stand](#changelog)
 
 ---
 
@@ -26,90 +31,86 @@
 ## 1. Modul A — Lohnfortzahlung (Art. 324a OR)
 
 **Datei:** `src/lib/lohnfortzahlung.ts`
-**Zweck:** Dauer der Lohnfortzahlung bei unverschuldeter Arbeitsverhinderung (Krankheit, Unfall, Schwangerschaft).
-**Stichtag (Dienstjahr-Bestimmung):** Beginn der Arbeitsverhinderung.
+**Stichtag (Dienstjahr):** Beginn der Arbeitsverhinderung.
 
 ### Grundannahmen (fest verdrahtet)
 
 - Unverschuldete Verhinderung (Krankheit, Unfall, Schwangerschaft o.ä.).
-- Kein GAV mit abweichender Regelung unterstellt.
-- Keine Karenztage: Lohnfortzahlung ab dem ersten Tag der Verhinderung.
-- Mehrere Absenzen im gleichen Dienstjahr werden kumuliert; das Skala-Kontingent gilt **pro Dienstjahr**.
+- **Vertragsbeginn = tatsächliche Arbeitsaufnahme** (Karenzfrist ab Arbeitsaufnahme, SHK N 40).
+- Kein GAV mit abweichender Regelung unterstellt; keine Karenztage; Skala-Kontingent pro Dienstjahr.
 
-### Regel A.0 — KTG-Gleichwertigkeitsprüfung
+### Regel A.0 — KTG-Gleichwertigkeitsprüfung mit Checkliste (§2.6)
 
 | | |
 |---|---|
 | **Norm** | Art. 324a Abs. 4 OR; Art. 324b OR; Art. 362 OR |
 | **Bedingung** | `ktgGleichwertigVorhanden === true` |
-| **Rechtsfolge** | KTG-Regime tritt **an die Stelle** der gesetzlichen Skala. Status `ktg_regime`. Anspruch ergibt sich aus der Versicherungspolice; gesetzliche Skala (Art. 324a OR) findet **keine** Anwendung. |
-| **Faustregel (Rechtsprechung)** | Taggeld ≥ 80 % des Lohnes während max. 720 Tagen innert 900 Tagen, hälftige Prämienteilung, wenige Karenztage. |
-| **Rechtsprechung** | BGE 135 III 640 (Gleichwertigkeitsmassstab) — *nicht verifiziert* |
+| **Rechtsfolge** | KTG-Regime tritt an die Stelle der gesetzlichen Skala (Status `ktg_regime`). |
+| **Checkliste** | Optionale Kriterien (`ktgKriterien`): Taggeld ≥ 80 %, Leistungsdauer ≥ 720 Tage, Karenz ≤ 3 Tage, AG-Prämienanteil ≥ 50 %, Risiken, Schriftform → strukturierte **Gleichwertigkeits-Indikation** (Orientierung). Karenz > 3 Tage: „in keinem Fall zulässig" (SHK N 62). |
+| **Formelle Anforderung** | Wirksam nur schriftlich / in GAV-NAV mit allen wesentlichen Punkten (Art. 324a Abs. 4 OR, SHK N 57–59). |
+| **Rechtsprechung** | BGE 135 III 640 — *nicht verifiziert* |
 
-### Regel A.1 — Anspruchsvoraussetzung (3-Monats-Schwelle)
-
-| | |
-|---|---|
-| **Norm** | Art. 324a Abs. 1 OR |
-| **Bedingung** | Arbeitsverhältnis dauert **mehr als 3 Monate** (Vertragsbeginn → Verhinderungsbeginn) |
-| **Implementierung** | `dauerUeberDreiMonate(vb, vhb)`: `differenceInMonths > 3` **oder** (`=== 3` **und** Tagesrest `> 0`) |
-| **Rechtsfolge bei Nichterfüllung** | Status `kein_anspruch`, kein Anspruch nach Art. 324a OR |
-| **Hinweis** | Bei vertraglich fester Dauer > 3 Monate genügt dies für den Anspruch auch ohne Ablauf der Zeit (als Warnung ausgegeben, nicht automatisch berechnet). |
-
-### Regel A.2 — Skala-Zuordnung nach Kanton
+### Regel A.1 — Anspruchsvoraussetzung, differenziert (§2.2)
 
 | | |
 |---|---|
-| **Norm** | Art. 324a Abs. 2 OR («angemessen längere Zeit») |
-| **Implementierung** | `skaleFuerKanton(kanton)` → Basler / Zürcher / Berner Skala (siehe [§5](#skalen)) |
-| **Sonderwarnung** | Kantone **ZG, GR**: Zuordnung zur Zürcher Skala uneinheitlich → Warnhinweis |
-| **Fallback** | Unbekannter Kanton → Berner Skala als Näherung + Warnung |
+| **Norm** | Art. 324a Abs. 1 OR; BGE 131 III 623 (*nicht verifiziert*) |
+| **Vordienstzeit** | `anrechenbareVordienstzeitMonate` verschiebt den Karenzbeginn nach vorne (SHK N 44). |
 
-### Regel A.3 — Dienstjahr-Ermittlung
+| Konstellation | Rechtsfolge |
+|---|---|
+| `befristetFest` (feste Dauer > 3 Mt.) | Anspruch **ab Tag 1** (SHK N 41) |
+| `vereinbarteKuendigungsfristMonate > 3` | Anspruch **ab Tag 1** (SHK N 42) |
+| sonst, Dauer > 3 Monate | Anspruch besteht |
+| sonst, Dauer ≤ 3 Monate | **kein Lohn** bis Ablauf 3 Monate; Anspruch erst ab 1. Tag des 4. Monats (BGE 131 III 623) → Status `kein_anspruch` |
+
+### Regel A.2 — Skala-Zuordnung nach Kanton (§2.5)
 
 | | |
 |---|---|
 | **Norm** | Art. 324a Abs. 2 OR |
-| **Stichtag** | Beginn der Verhinderung |
-| **Formel** | `vollendete Jahre + 1` (siehe [§4](#querschnitt)) |
+| **Implementierung** | `skaleFuerKanton(kanton)` → Basler / Zürcher / Berner Skala |
+| **Zuordnungs-Vorbehalt** | Nur BS/BL, ZH/GR und die SHK-Berner-Kantone (BE/AG/OW/SG + Westschweiz) sind aus der SECO-/SHK-Tabelle **belegt**; alle übrigen (SH, TG, ZG, …) erzeugen eine Warnung „nicht aus der vorliegenden Quelle belegt". |
+| **Sonderwarnung** | ZG, GR: Zuordnung uneinheitlich. |
 
-### Regel A.4 — Skala-Dauer ablesen
-
-| | |
-|---|---|
-| **Norm** | Art. 324a Abs. 2 OR |
-| **Implementierung** | `dauerAusSkala(skala, dienstjahr)`: erster Eintrag mit `dienstjahrVon ≤ DJ ≤ dienstjahrBis` (oder `dienstjahrBis === null` = unbeschränkt) |
-| **Fehlerfall** | Kein passender Eintrag → Status `kein_anspruch`, manuelle Prüfung |
-| **Charakter** | **GERICHTSPRAXIS**, vor Produktiveinsatz zu verifizieren |
-
-### Regel A.5 — Teilarbeitsunfähigkeit (Budget-Modell)
+### Regel A.3 — Dienstjahr & A.4 — Skala ablesen (§2.4)
 
 | | |
 |---|---|
 | **Norm** | Art. 324a Abs. 2 OR |
-| **Bedingung** | `arbeitsunfaehigkeitProzent < 100` |
-| **Formel** | `effektiveDauer = Skala-Dauer ÷ (AUF% / 100)`, gerundet (`Math.round`) — z.B. 50 % → ×2 |
-| **Modell** | Das Lohn-**Budget** (volle Skala-Dauer zu 100 % Lohn) wird über die gestreckte kalendarische Periode aufgebraucht. |
-| **Vorbehalt** | Kalendarische Streckung ist eine **vertretbare Praxis-Auslegung**, im Einzelfall zu prüfen (Warnung). |
+| **Dienstjahr** | `vollendete Jahre + 1` (Stichtag = Verhinderungsbeginn) |
+| **Wortlaut** | 1. DJ: **„mindestens 3 Wochen"** (nicht „genau"); Skalenwert als **Regelmass / nicht gerichtsverbindlich** (SHK N 50). |
+| **DJ > 11** | Fortschreibung aus der Quelle **nicht belegt** → Warnung `verifiziert: false`. |
 
-### Regel A.6 — Enddatum (letzter bezahlter Tag)
-
-| | |
-|---|---|
-| **Norm** | Art. 324a Abs. 2 OR |
-| **Formel** | `letzterTag = Verhinderungsbeginn + effektiveDauer − 1 Tag` (Starttag inklusiv, kalendarisch) |
-| **Beispiel** | 3 Wochen ab 01.01. → +3 Wochen = 22.01. → −1 = **21.01.** |
-
-### Regel A.7 — Lohnbasis (optional, orientierend)
+### Regel A.5 — Teilarbeitsunfähigkeit = Geldminimum (§2.3)
 
 | | |
 |---|---|
-| **Norm** | Art. 324a Abs. 1 OR |
-| **Bedingung** | `monatslohnBrutto != null` |
-| **Formel** | Tagesansatz = `Monatslohn / 30` (Monat = 30 Tage) |
-| **Massgeblich** | Vertraglicher Bruttolohn inkl. 13. Monatslohn (anteilig) und regelmässiger Zulagen; bei schwankendem Lohn 12-Monats-Durchschnitt. |
+| **Norm** | Art. 324a Abs. 2 OR; SHK N 54 |
+| **Dogmatik** | Art. 324a OR gewährt ein **Geld-, kein Zeitminimum**: bei Teil-AUF verlängert sich die Pflicht entsprechend. |
+| **Formel** | `effektiveDauer = Skala-Dauer ÷ (AUF%/100)` (kalendarische Streckung; vertretbare Praxis-Auslegung). |
+| **Teilzeit** | `pensumProzent` und `arbeitsunfaehigkeitProzent` sind **getrennte Grössen**; AUF bezieht sich auf die geschuldete Arbeitsleistung. |
+| **Ausgabe** | CHF-Lohnkredit als primäre Grösse, Kalenderdauer als abgeleitete Hilfsgrösse. |
 
-**Normverweise (Ergebnis):** Art. 324a Abs. 1, Abs. 2, Abs. 4 OR; Art. 362 OR
+### Regel A.6 — Enddatum 1. Kredit & A.6b — zweiter Kredit (§2.1)
+
+| | |
+|---|---|
+| **Norm** | Art. 324a Abs. 2 OR; SHK N 53; BGer 4A_215/2011 (*nicht verifiziert*) |
+| **1. Kredit** | `erstesEnde = Verhinderungsbeginn + effektiveDauer − 1 Tag` (Lohn ab Tag 1 inklusiv). |
+| **Zweiter Kredit (DJ-übergreifend)** | Wenn `verhinderungEnde` über den Jahrestag reicht: frischer Kredit des Folge-Dienstjahres ab Jahrestag (`zweitesEnde`). Beide Kredite werden **sequenziell** zugeteilt; der Anspruch lebt am Jahrestag wieder auf, auch wenn der alte Kredit aufgebraucht war. |
+| **Kappung** | Lohnfortzahlung endet spätestens mit `verhinderungEnde` (Lohnausfallprinzip). |
+
+### Regel A.7 — Lohnbasis / Geldminimum CHF (§2.7)
+
+| | |
+|---|---|
+| **Norm** | Art. 324a Abs. 1 OR; Lohnausfallprinzip (SHK N 47–49) |
+| **Bedingung** | `monatslohnBrutto > 0` |
+| **Berechnung** | Tagesansatz = Monatslohn/30; Geldminimum = Skala-Dauer (Tage) × Tagesansatz. |
+| **Massgeblicher Lohn** | Grundlohn, 13. Monatslohn (anteilig, opt. `dreizehnterMonatslohn`), regelmässige Zulagen, variable Bestandteile (Durchschnitt); **keine** echten Spesen. |
+
+**Normverweise (Ergebnis):** Art. 324a Abs. 1, 2, 3, 4 OR; Art. 362 OR
 
 ---
 
@@ -117,142 +118,127 @@
 ## 2. Modul B — Kündigungsfrist (Art. 335a–c OR)
 
 **Datei:** `src/lib/kuendigungsfrist.ts`
-**Stichtag (Dienstjahr-Bestimmung):** Zugang der Kündigung beim Empfänger (**Zugangsprinzip**).
+**Stichtag:** Zugang der Kündigung (Zugangsprinzip, BGE 134 III 354 *nicht verifiziert*).
 
-### Grundannahmen (fest verdrahtet)
-
-- Massgebend ist der **Zugang** der Kündigung beim Empfänger, nicht das Absendedatum.
-- Kündigungstermin: Monatsende (default) **oder** freies Datum, je nach Eingabe.
-
-### Regel B.1 — Probezeit
+### Regel B.1 — Probezeit (vorwärts ab Zugang)
 
 | | |
 |---|---|
 | **Norm** | Art. 335b OR |
-| **Clamping** | `probezeitMonate` wird auf **0–3 Monate** begrenzt (`Math.min(Math.max(x,0),3)`) |
-| **In Probezeit?** | `Zugang ≤ Vertragsbeginn + probezeitMonate` (inklusiv) |
-| **Rechtsfolge** | Frist **7 Tage** ab Zugang → `Beendigung = Zugang + 7 Tage`. Kein Monatsendtermin, **keine** Sperrfristen. |
-| **Normverweise** | Art. 335b OR, Art. 335a OR |
+| **Clamping** | `probezeitMonate` auf 0–3 begrenzt |
+| **Rechtsfolge** | Frist **7 Tage** ab Zugang (vorwärts), kein Monatsendtermin, keine Sperrfristen. |
 
-### Regel B.2 — Gesetzliche Kündigungsfrist nach Dienstjahr
+### Regel B.2 — Gesetzliche Frist nach Dienstjahr
+
+| Dienstjahr | Frist |
+|---|---|
+| 1. DJ (≤ 1) | 1 Monat |
+| 2.–9. DJ (≤ 9) | 2 Monate |
+| ab 10. DJ | 3 Monate |
+
+Frist endet im höheren DJ → bleibt bei der Frist des Zugangs-DJ (Art. 335c Abs. 1 OR).
+
+### Regel B.3 — Abweichende Frist (§3.2 — `max()` entfernt)
+
+**Norm:** Art. 335c Abs. 2 OR; Parität Art. 335a OR. **Logik:**
+
+| Bedingung | Ergebnis |
+|---|---|
+| keine abweichende Frist | gesetzliche Frist |
+| **Schriftform/GAV nicht bestätigt** (`!formGueltig`) | gesetzliche Frist + Warnung (Abrede unwirksam) |
+| abweichend **≥ 1 Monat**, formgültig | gilt — **auch wenn kürzer** als gesetzlich |
+| abweichend **< 1 Monat**, GAV **und** 1. DJ | gilt (zulässige Verkürzung) |
+| abweichend **< 1 Monat** sonst | unzulässig → gesetzliche Mindestfrist + Warnung |
+
+> Der frühere „zu verifizieren"-Marker für Art. 335c Abs. 2 OR ist **entfernt** (Wortlaut liegt vor).
+
+### Regel B.4 — Fristberechnung, Endtermin & Vaterschaftsurlaub (§3.4)
 
 | | |
 |---|---|
-| **Norm** | Art. 335c OR |
-| **Stichtag** | Zugang der Kündigung |
+| **Norm** | Art. 335c Abs. 1 OR; Abs. 3 OR (Vaterschaftsurlaub) |
+| **Frist laufend** | `Zugang + fristMonate` |
+| **Vaterschaftsurlaub** | nur Arbeitgeberkündigung: `+ vaterschaftsurlaubResttage` Tage (`// VERIFY` Tagesberechnung). Kein zeitlicher Kündigungsschutz während des Urlaubs, aber Fristverlängerung. |
+| **Monatsendtermin** | ggf. `endOfMonth`. |
 
-| Dienstjahr | Gesetzliche Frist |
-|---|---|
-| 1. DJ (DJ ≤ 1) | **1 Monat** |
-| 2.–9. DJ (DJ ≤ 9) | **2 Monate** |
-| ab 10. DJ | **3 Monate** |
-
-| | |
-|---|---|
-| **Rechtsprechung** | BGE 134 III 354 (Zugangs-/Empfangsprinzip) — *nicht verifiziert* |
-
-### Regel B.3 — Abweichende Frist & Parität
-
-| | |
-|---|---|
-| **Norm** | Art. 335a OR (Parität); Art. 335c OR |
-| **Bedingung** | `abweichendeFristMonate != null` |
-| **Regel** | `fristMonate = max(abweichendeFrist, gesetzlicheFrist)` — es gilt die **längere** Frist |
-| **Warnung bei Unterschreitung** | Liegt die abweichende Frist unter der gesetzlichen Mindestfrist, gilt die gesetzliche. Verkürzung unter 1 Monat nur im 1. DJ und nur durch GAV (Art. 335c OR; *genaue Absatznummer zu verifizieren*). |
-
-### Regel B.4 — Fristberechnung & Endtermin
-
-| | |
-|---|---|
-| **Norm** | Art. 335c OR |
-| **Frist laufend** | `fristLaufende = Zugang + fristMonate` (Kalendermonate) |
-| **Bei Monatsendtermin** | `Beendigung = letzter Tag des Monats von fristLaufende` (`endOfMonth`) |
-| **Ohne Monatsendtermin** | `Beendigung = fristLaufende` |
-
-**Normverweise (Ergebnis):** Art. 335a OR, Art. 335b OR, Art. 335c OR
+**Normverweise (Ergebnis):** Art. 335a, 335b, 335c OR
 
 ---
 
 <a name="modul-c"></a>
 ## 3. Modul C — Sperrfristen (Art. 336c OR)
 
-**Datei:** `src/lib/sperrfristen.ts`
-**Baut auf Modul B auf** (ruft `berechneKuendigungsfrist` intern auf).
+**Datei:** `src/lib/sperrfristen.ts` (baut auf Modul B auf).
 
 ### Regel C.0 — Anwendungsausschlüsse
 
-| Konstellation | Rechtsfolge | Norm |
+| Konstellation | Rechtsfolge |
+|---|---|
+| Arbeitnehmerkündigung | keine Sperrfristen/Hemmung; Kündigung bleibt gültig |
+| Probezeit | Art. 336c gilt nicht; Beendigung nach 7-Tages-Frist |
+| keine Sperrereignisse | keine Hemmung |
+
+### Regel C.1 — Sperrfrist-Intervalle (§1.2 Art. 77 OR: Anfangstag zählt nicht)
+
+**Norm:** Art. 336c Abs. 1 OR i.V.m. Art. 77 OR
+
+| Typ | Dauer | Formel |
 |---|---|---|
-| **Arbeitnehmerkündigung** (C7) | Art. 336c OR gilt **nur** für Arbeitgeberkündigungen → keine Sperrfristen, keine Hemmung; Kündigung bleibt gültig | Art. 336c Abs. 1 OR |
-| **Probezeit** | Art. 336c OR gilt nicht in der Probezeit → Beendigung nach 7-Tages-Frist | Art. 336c Abs. 1 OR, Art. 335b OR |
-| **Keine Sperrereignisse** | Keine Hemmung → ordentliche Beendigung aus Modul B | Art. 336c Abs. 1 OR |
+| `krankheit_unfall` | 1. DJ 30 / 2.–5. DJ 90 / ab 6. DJ 180 Tage | `Ende = min(bis, von + maxTage)` (**kein −1**) |
+| `schwangerschaft` | Schwangerschaft + 16 Wochen (112 Tage) | Intervall durch Nutzer (BGE 143 III 21 *n. v.*) |
+| `militaer_zivil` | Dienst; bei > 11 Tagen ± 4 Wochen (28 Tage) | `von−28 … bis+28` |
+| `hilfsaktion` (lit. d) | Dauer der Dienstleistung | Intervall |
 
-### Regel C.1 — Sperrfrist-Intervalle je Ereignistyp
+#### Sonderregel C5 — Dienstjahreswechsel in der Sperrfrist (§1.5)
 
-**Norm:** Art. 336c Abs. 1 OR
+**Norm:** Art. 336c Abs. 1 OR; BGE 133 III 517 (*nicht verifiziert*).
+Läuft beim Übergang **1.→2. DJ** (30→90) oder **5.→6. DJ** (90→180) die Sperrfrist **noch**, wird die längere Sperrfrist **ab dem ersten AUF-Tag** berechnet (`von + neueMaxTage`); alte Tage sind dadurch automatisch angerechnet. Endet die kürzere Frist vor dem Jahrestag → **keine** Verlängerung.
 
-| Typ | Sperrfrist-Dauer | Implementierung |
-|---|---|---|
-| **`krankheit_unfall`** | 1. DJ: **30 Tage**; 2.–5. DJ: **90 Tage**; ab 6. DJ: **180 Tage** | Begrenzt durch tatsächliches Ende der Verhinderung (`bis`). Dienstjahr am Beginn der Verhinderung. |
-| **`schwangerschaft`** | Gesamte Schwangerschaft **+ 16 Wochen (112 Tage)** nach Niederkunft | Intervall `von`–`bis` durch Nutzer angegeben |
-| **`militaer_zivil`** | Dienstdauer; bei **> 11 Tagen** zusätzlich **je 4 Wochen (28 Tage) davor und danach** | `≤ 11 Tage`: nur Dienstdauer |
-| **`hilfsaktion`** (lit. d) | Dauer der Dienstleistung | Intervall `von`–`bis` |
+### Regel C.1b — Kumulation & Rückfall (§1.3)
 
-#### Sonderregel C5 — Dienstjahreswechsel innerhalb der Sperrfrist (nur Krankheit/Unfall)
-
-Fällt der **Jahrestag** für den Übergang **1.→2. DJ** (30→90 Tage) oder **5.→6. DJ** (90→180 Tage) in eine laufende Sperrfrist, wird die Sperrfrist auf das längere Kontingent erweitert:
-
-```
-bereitsVerstrichen = Jahrestag − Verhinderungsbeginn
-verbleibend        = neueMaxTage − bereitsVerstrichen
-erweitertesEnde    = Jahrestag + verbleibend − 1   (gekappt durch tatsächliches "bis")
-```
+- Mehrere Sperrgründe **kumulieren**; parallele Sperren werden per **Union** zusammengefasst (keine Doppelzählung).
+- `gleicheUrsacheWieEreignis` gesetzt → **Rückfall derselben Ursache**: keine eigene Sperrfrist (BGE 120 II 124 *n. v.*).
 
 ### Regel C2 — Kündigung *während* Sperrfrist → NICHTIG
 
 | | |
 |---|---|
 | **Norm** | Art. 336c Abs. 2 OR |
-| **Bedingung** | Zugang fällt in ein Sperrfrist-Intervall (`istInIntervall`) |
-| **Rechtsfolge** | Status `nichtig`. Kündigung muss nach Ablauf der Sperrfrist mit ordentlicher Frist **wiederholt** werden. |
+| **Stichtag** | **Zugang** der Kündigung in einem Intervall → Status `nichtig`. |
 
-### Regel C3 — Hemmung der laufenden Kündigungsfrist
-
-| | |
-|---|---|
-| **Norm** | Art. 336c Abs. 2 OR |
-| **Bedingung** | Sperrfrist überschneidet die Kündigungsfrist `[Zugang, Beendigung]` |
-| **Berechnung** | Pro Ereignis `intervallSchnittTage` (inkl. beider Endpunkte); Summe = `totalHemmungTage` |
-| **Wirkung** | `beendigungNachHemmung = Beendigung + totalHemmungTage` |
-| **Kein Schnitt** | Status `ok`, keine Hemmung |
-
-### Regel C4 — Erstreckung auf Kündigungstermin
+### Regel C3 — Hemmung nach Rückrechnungsprinzip (§1.1)
 
 | | |
 |---|---|
-| **Norm** | Art. 336c Abs. 3 OR |
-| **Bedingung** | `kuendigungsterminMonatsende === true` **und** `beendigungNachHemmung` ist nicht bereits Monatsende |
-| **Wirkung** | Erstreckung auf das **Monatsende** (`endOfMonth`) |
+| **Norm** | Art. 335c Abs. 1 i.V.m. Art. 336c Abs. 2 OR; BGE 134 III 354 / 115 V 437 (h.L.), a.M. BGE 131 III 467 — alle *nicht verifiziert* |
+| **Fenster** | `[Endtermin − Frist, Endtermin]` (rückgerechnet), **nicht** `[Zugang, …]`. `// VERIFY` Rückrechnung Fristbeginn. |
+| **Berechnung** | Union der Sperrintervalle ∩ Fenster = `totalHemmungTage`. Sperrgrund zwischen Zugang und Fristbeginn → **keine** Hemmung. |
+| **Wirkung** | `beendigungNachHemmung = Endtermin + totalHemmungTage`. |
 
-**Normverweise (Ergebnis):** Art. 336c Abs. 1, Abs. 2, Abs. 3 OR + Normverweise Modul B
+### Regel C4 — Erstreckung auf Endtermin (§1.4)
+
+| | |
+|---|---|
+| **Norm** | Art. 336c Abs. 3 OR; BGE 124 III 474 (*nicht verifiziert*) |
+| **Wirkung** | Bei Monatsendtermin Erstreckung auf `endOfMonth`. Ereignisse in der Erstreckungsphase (nach Endtermin) liegen ausserhalb des Fensters → automatisch **ignoriert**. |
+
+**Normverweise (Ergebnis):** Art. 336c Abs. 1–3 OR; Art. 335c Abs. 1 OR + Modul B
 
 ---
 
 <a name="querschnitt"></a>
-## 4. Querschnittsregeln
+## 4. Querschnittsregeln & Zählkonventionen (§4)
 
 **Datei:** `src/lib/datumsUtils.ts`
 
-| Regel | Formel | Verwendung |
-|---|---|---|
-| **Dienstjahr** | `differenceInYears(stichtag, vertragsbeginn) + 1` | Module A, B, C |
-| **> 3 Monate** | `diffMonths > 3` **oder** (`=== 3` **und** Tagesrest `> 0`) | Anspruch Modul A |
-| **Skala-Enddatum** | `start + Dauer − 1 Tag` (Starttag inklusiv) | Modul A |
-| **Teil-AUF-Skalierung** | `anzahl × (100 / AUF%)`, `Math.round` | Modul A |
-| **Intervallschnitt** | überlappende Tage inkl. beider Endpunkte | Modul C Hemmung |
-| **Monatsende** | `endOfMonth(d)` | Module B, C |
+| Regel | Formel |
+|---|---|
+| **Dienstjahr** | `differenceInYears + 1` (identisch für Art. 324a/335c/336c) |
+| **> 3 Monate** | `diffMonths > 3` oder (`=== 3` und Tagesrest `> 0`) |
+| **Sperrfrist-Ende (Art. 77)** | `sperrfristEnde(beginn, tage) = beginn + tage` — **Anfangstag zählt nicht** |
+| **Lohnfortzahlung-Ende** | `letzterTagLohnfortzahlung = beginn + Dauer − 1` — **Anfangstag zählt mit** |
 
-> **Hinweis Dienstjahr:** Beginn 01.01.2020, Stichtag 01.01.2021 → 1 vollendetes Jahr → **2. Dienstjahr**.
+> ⚠️ **Bewusst unterschiedliche Zählweisen** (§4.2): Art. 324a (Lohn ab erstem Tag inkl.) und Art. 336c i.V.m. Art. 77 (Anfangstag der Sperrfrist zählt nicht). Im Code dokumentiert — **nicht vereinheitlichen**.
 
 ---
 
@@ -261,10 +247,9 @@ erweitertesEnde    = Jahrestag + verbleibend − 1   (gekappt durch tatsächlich
 
 **Datei:** `src/data/lohnfortzahlungSkalen.ts`
 
-> ⚠️ **Diese Werte sind GERICHTSPRAXIS** zur Konkretisierung von Art. 324a Abs. 2 OR («angemessen längere Zeit»), **keine Gesetzesnormen**. Alle Einträge sind als «zu verifizieren» zu behandeln und vor Produktiveinsatz gegen die aktuelle kantonale Praxis abzugleichen.
+> ⚠️ Gerichtspraxis, **nicht gerichtsverbindlich** (SHK N 50). Zuordnung nur für die in der SECO-/SHK-Tabelle genannten Kantone belegt; Fortschreibung > 11. DJ aus der Quelle nicht belegt.
 
-### Basler Skala — Kantone BS, BL
-
+### Basler Skala — BS, BL
 | Dienstjahr | Dauer |
 |---|---|
 | 1. | 3 Wochen |
@@ -274,18 +259,14 @@ erweitertesEnde    = Jahrestag + verbleibend − 1   (gekappt durch tatsächlich
 | 16.–20. | 5 Monate |
 | ab 21. | 6 Monate |
 
-### Zürcher Skala — Kantone ZH, SH, TG, ZG ⚠, GR ⚠
-
+### Zürcher Skala — ZH, GR (belegt) · SH, TG, ZG ⚠ (Annahme)
 | Dienstjahr | Dauer |
 |---|---|
 | 1. | 3 Wochen |
 | 2. | 8 Wochen |
-| ab 3. | +1 Woche je weiteres DJ (9, 10, 11 … Wochen), hinterlegt bis 52. DJ |
+| ab 3. | +1 Woche/Jahr (9, 10, 11 …), bis 52. DJ |
 
-> ⚠️ ZG/GR: Zuordnung zur Zürcher Skala in der Praxis uneinheitlich → separater Warnhinweis.
-
-### Berner Skala — Restkantone (BE, AG, AI, AR, FR, GE, GL, JU, LU, NE, NW, OW, SG, SO, SZ, TI, UR, VD, VS)
-
+### Berner Skala — BE, AG, OW, SG, Westschweiz (belegt) · übrige (Annahme)
 | Dienstjahr | Dauer |
 |---|---|
 | 1. | 3 Wochen |
@@ -299,51 +280,90 @@ erweitertesEnde    = Jahrestag + verbleibend − 1   (gekappt durch tatsächlich
 ---
 
 <a name="normverweise"></a>
-## 6. Normverweis-Register
+## 6. Normverweis-Register (fest verdrahtet)
 
-| Artikel | Bemerkung | Verwendet in |
+| Artikel | Inhalt | Verwendung |
 |---|---|---|
-| Art. 324a Abs. 1 OR | Anspruchsvoraussetzung | A.1, A.7 |
-| Art. 324a Abs. 2 OR | Dauer «angemessen länger» | A.2–A.6 |
-| Art. 324a Abs. 4 OR | Abweichende (gleichwertige) Regelung | A.0 |
-| Art. 324b OR | Krankentaggeldversicherung | A.0 |
+| Art. 324a Abs. 1 OR | Anspruch, > 3 Monate, Lohnausfallprinzip | A.1, A.7 |
+| Art. 324a Abs. 2 OR | mindestens 3 Wochen / angemessen länger | A.2–A.6 |
+| Art. 324a Abs. 3 OR | Schwangerschaft gleicher Umfang | A (Ergebnis) |
+| Art. 324a Abs. 4 OR | abweichende, gleichwertige Regelung | A.0 |
+| Art. 324b OR | Koordination Sozialversicherung (KTG/UVG) | A.0 |
 | Art. 335a OR | Parität der Kündigungsfristen | B.1, B.3 |
-| Art. 335b OR | Probezeit | B.1, C.0 |
-| Art. 335c OR | Kündigungsfristen und -termine | B.2–B.4 |
-| Art. 336c Abs. 1 OR | Sperrfristen-Tatbestände | C.0, C.1 |
+| Art. 335b OR | Probezeit, 7-Tage-Frist | B.1, C.0 |
+| Art. 335c Abs. 1 OR | 1/2/3 Monate je DJ, Monatsende, Rückrechnung | B.2, C3 |
+| Art. 335c Abs. 2 OR | Abänderung; < 1 Monat nur GAV & 1. DJ | B.3 |
+| Art. 335c Abs. 3 OR | Verlängerung bei Vaterschaftsurlaub | B.4 |
+| Art. 336c Abs. 1 OR | Sperrfristtatbestände | C.0, C.1 |
 | Art. 336c Abs. 2 OR | Nichtigkeit / Hemmung | C2, C3 |
-| Art. 336c Abs. 3 OR | Erstreckung auf Kündigungstermin | C4 |
-| Art. 362 OR | Relativ zwingendes Recht | A.0, A (Ergebnis) |
+| Art. 336c Abs. 3 OR | Erstreckung auf Endtermin | C4 |
+| **Art. 77 OR** | Fristberechnung, Anfangstag zählt nicht | C.1 (§1.2) |
+| Art. 362 OR | relativ zwingendes Recht | A.0, A (Ergebnis) |
 
 ---
 
-<a name="rechtsprechung"></a>
-## 7. Rechtsprechungsverweise (Verifikationsstatus)
+<a name="verifikation"></a>
+## 7. Verifikations-Register (`src/data/verifikation.ts`)
 
-| Aktenzeichen | Aussage | Verifiziert |
+Zentrale Quelle aller Aktenzeichen; kein Aktenzeichen ohne Eintrag. **Alle `verifiziert: false`** bis Einzelprüfung.
+
+| ID | Aktenzeichen | Aussage |
 |---|---|---|
-| BGE 135 III 640 | Gleichwertigkeitsmassstab bei Krankentaggeldversicherung | ❌ nein |
-| BGE 134 III 354 | Massgeblich ist der Zugang der Kündigung beim Empfänger (Zugangs-/Empfangsprinzip) | ❌ nein |
+| BGE_131_III_623 | BGE 131 III 623 | Karenzfrist/Anspruch ab 4. Monat bei KF ≤ 3 Mt. |
+| BGer_4A_215_2011 | BGer 4A_215/2011 | Anspruch erneuert sich pro Dienstjahr |
+| BGE_135_III_640 | BGE 135 III 640 | KTG-Gleichwertigkeitsmassstab |
+| BGE_131_III_467 | BGE 131 III 467 | Zugang / Gegenmeinung Fristbeginn |
+| BGE_134_III_354 | BGE 134 III 354 | Zugangsprinzip / Rückrechnung |
+| BGE_115_V_437 | BGE 115 V 437 | Rückrechnung; Abgrenzung Hemmung ↔ Lohn |
+| BGE_133_III_517 | BGE 133 III 517 | DJ-Wechsel in Sperrfrist |
+| BGE_124_III_474 | BGE 124 III 474 | Erstreckungsphase, keine neue Sperrfrist |
+| BGE_120_II_124 | BGE 120 II 124 | Rückfall gleiche Ursache «aucun lien» |
+| BGE_143_III_21 | BGE 143 III 21 | Schwangerschaftsbeginn als Anfangstag |
 
-> Alle Rechtsprechungsverweise tragen das Flag `verifiziert: false` und werden in der UI mit Verifikations-Vorbehalt angezeigt. **Vor Produktiveinsatz zu prüfen.**
+---
+
+<a name="tests"></a>
+## 8. Testabdeckung (§7) — 41 Tests grün
+
+| Datei | Abdeckung |
+|---|---|
+| `src/tests/sperrfristen.test.ts` | §7.1–9: Rückrechnung, Art. 77, Union, Rückfall, C5, Nichtigkeit, AN-Kündigung, Erstreckung |
+| `src/tests/lohnfortzahlung.test.ts` | §7.10–16: zwei Kredite, Anspruch-Aufleben, KF ≤ 3 Mt., befristet, Teil-AUF, Teilzeit, DJ > 11 |
+| `src/tests/kuendigungsfrist.test.ts` | §7.17–20: kürzere Frist gültig, Verkürzung < 1 Mt., Probezeit, höheres DJ |
+| `src/tests/querschnitt.test.ts` | §7.21–22: Schaltjahr, getrennte Zählkonventionen |
 
 ---
 
 <a name="pruefpunkte"></a>
-## 8. Juristische Prüfpunkte / Vorbehalte
+## 9. Juristische Prüfpunkte / Vorbehalte (`// VERIFY` & `verifiziert: false`)
 
-Die folgenden Punkte sind im Code als Annahmen/Warnungen markiert und sollten vor produktivem Einsatz juristisch verifiziert werden:
-
-1. **Lohnfortzahlungsskalen** — durchgehend Gerichtspraxis, keine Gesetzesnormen; gegen aktuelle kantonale Praxis abzugleichen.
-2. **ZG / GR** — Zuordnung zur Zürcher Skala uneinheitlich.
-3. **Budget-Modell bei Teil-AUF** — kalendarische Streckung ist eine vertretbare, aber nicht zwingende Auslegung.
-4. **Art. 335c OR, Verkürzung unter 1 Monat** — genaue Absatznummer im Code als „zu verifizieren" markiert.
-5. **C5 Dienstjahreswechsel in der Sperrfrist** — Berechnung der Erweiterung; rechtlich im Einzelfall prüfen.
-6. **Rückfall derselbe Krankheit/Unfall** — löst laut Code keine neue Sperrfrist aus (Rechtsprechung, zu verifizieren).
-7. **Unabhängigkeit Sperrfrist ↔ Lohnfortzahlung** — Hemmung verlängert die Kündigungsfrist, bestimmt aber **nicht** die Dauer der Lohnfortzahlung.
-8. **KTG-Gleichwertigkeit** — im Einzelfall zu prüfen (Leistungsdauer, -höhe, Karenztage, Prämienteilung).
-9. **Rechtsprechungsverweise** — sämtlich `verifiziert: false`.
+1. **Rückrechnung Fristbeginn** (C3): Endtermin − Frist; abweichende Lehre (BGE 131 III 467) offengelegt.
+2. **Vaterschaftsurlaub-Tagesberechnung** (B.4, Art. 335c Abs. 3 OR).
+3. **C5-Erweiterung** (BGE 133 III 517) und **Rückfall** (BGE 120 II 124) — Rechtsfrage im Einzelfall.
+4. **Schwangerschaftsbeginn** als Anfangstag (BGE 143 III 21).
+5. **Skalen**: nicht gerichtsverbindlich; Kantonszuordnung über belegte Kantone hinaus = Annahme; DJ > 11 nicht belegt.
+6. **Budget-/Geldminimum-Streckung** bei Teil-AUF = vertretbare Auslegung.
+7. **KTG-Gleichwertigkeit** = abstrakter Gesamtvergleich im Einzelfall.
+8. **Sämtliche BGE/BGer** tragen `verifiziert: false`.
 
 ---
 
-*Erstellt durch Source-Code-Analyse. Dieses Dokument ersetzt keine juristische Prüfung der Anwendung.*
+<a name="changelog"></a>
+## 10. Änderungsprotokoll gegenüber dem alten Stand
+
+| Bereich | Alt | Neu |
+|---|---|---|
+| C-Hemmung | Vorwärtsfenster ab Zugang | **Rückrechnung** vom Endtermin (§1.1) |
+| C-Sperrfrist-Ende | `von + Tage − 1` | `von + Tage` (Art. 77 OR, §1.2) |
+| C-Kumulation | Einzelschnitt (Doppelzählung möglich) | **Union**; Rückfall ohne neue Frist (§1.3) |
+| C5 | `Jahrestag + Rest − 1` | längere Frist **ab erstem AUF-Tag** (§1.5) |
+| A-Teil-AUF | Budget-Modell (Zeit) | **Geldminimum**, Pensum/AUF getrennt (§2.3) |
+| A-DJ-übergreifend | nur 1 Kredit | **zwei Kredite** via `verhinderungEnde` (§2.1) |
+| A-Anspruch | reine 3-Monats-Schwelle | differenziert (befristet/KF/Vordienstzeit, §2.2) |
+| B-abweichende Frist | `max(abw., gesetzl.)` | sauber: ≥ 1 Mt. gilt, GAV-Sonderfall (§3.2) |
+| B-Vaterschaft | — | Verlängerung Art. 335c Abs. 3 OR (§3.4) |
+| Infrastruktur | hartcodierte Aktenzeichen | zentrales `verifikation.ts` (§5.3); Art. 77 OR fest verdrahtet |
+
+---
+
+*Erstellt durch Source-Code-Analyse (Commit `4bd1d9d`). Ersetzt keine juristische Prüfung der Anwendung.*

@@ -36,14 +36,14 @@ const TYPEN: { code: SperrereignisTyp; label: string }[] = [
 function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
   return (
     <div className="space-y-1">
-      <label className="block text-sm font-medium text-slate-700">{label}</label>
+      <label className="block text-sm font-medium text-ink-700">{label}</label>
       {children}
-      {hint && <p className="text-xs text-slate-500">{hint}</p>}
+      {hint && <p className="text-xs text-ink-500">{hint}</p>}
     </div>
   );
 }
 
-const inputCls = 'w-full border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500';
+const inputCls = 'lc-input';
 
 export function KuendigungSperrForm() {
   const [form, setForm] = useState<SperrfristenInput>(DEFAULTS);
@@ -113,9 +113,9 @@ export function KuendigungSperrForm() {
   return (
     <div className="space-y-6">
       {/* Zugangsprinzip-Hinweis */}
-      <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
-        <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">Zugangsprinzip</p>
-        <p className="text-sm text-blue-800">
+      <div className="rounded-lg border border-line bg-surface p-4">
+        <p className="text-xs font-semibold text-brass-700 uppercase tracking-wide mb-1">Zugangsprinzip</p>
+        <p className="text-sm text-ink-700">
           Massgebend ist der <strong>Zugang</strong> der Kündigung beim Empfänger (nicht das Ausstell- oder Absendedatum).
           Stichtag für die Dienstjahr-Berechnung ist der Zugangstag.
         </p>
@@ -202,55 +202,55 @@ export function KuendigungSperrForm() {
       {/* Sperrereignisse */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold text-slate-700">
+          <h4 className="text-sm font-semibold text-ink-700">
             Sperrereignisse (Art. 336c OR)
             {form.kuendigendePartei === 'arbeitnehmer' && (
-              <span className="ml-2 text-xs font-normal text-slate-500">(nur bei Arbeitgeberkündigung relevant)</span>
+              <span className="ml-2 text-xs font-normal text-ink-500">(nur bei Arbeitgeberkündigung relevant)</span>
             )}
           </h4>
           <button
             onClick={addEreignis}
-            className="text-sm px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition-colors"
+            className="text-sm px-3 py-1.5 bg-surface hover:bg-brass-100 text-ink-700 rounded-lg transition-colors"
           >
             + Ereignis
           </button>
         </div>
 
         {(form.sperrereignisse ?? []).length === 0 && (
-          <p className="text-sm text-slate-500 italic">Keine Sperrereignisse erfasst.</p>
+          <p className="text-sm text-ink-500 italic">Keine Sperrereignisse erfasst.</p>
         )}
 
         {(form.sperrereignisse ?? []).map((e, i) => (
-          <div key={i} className="border border-slate-200 rounded-lg p-4 bg-slate-50 space-y-3">
+          <div key={i} className="border border-line rounded-lg p-4 bg-surface space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-slate-600">Ereignis {i + 1}</span>
-              <button onClick={() => removeEreignis(i)} className="text-xs text-red-500 hover:text-red-700">Entfernen</button>
+              <span className="text-xs font-semibold text-ink-600">Ereignis {i + 1}</span>
+              <button onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700">Entfernen</button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="space-y-1">
-                <label className="text-xs font-medium text-slate-600">Typ</label>
+                <label className="text-xs font-medium text-ink-600">Typ</label>
                 <select value={e.typ} onChange={(ev) => updateEreignis(i, 'typ', ev.target.value)} className={inputCls + ' text-xs'}>
                   {TYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
                 </select>
               </div>
               <div className="space-y-1">
-                <label className="text-xs font-medium text-slate-600">Von</label>
+                <label className="text-xs font-medium text-ink-600">Von</label>
                 <input type="date" value={e.von} onChange={(ev) => updateEreignis(i, 'von', ev.target.value)} className={inputCls + ' text-xs'} />
               </div>
               <div className="space-y-1">
-                <label className="text-xs font-medium text-slate-600">Bis</label>
+                <label className="text-xs font-medium text-ink-600">Bis</label>
                 <input type="date" value={e.bis} onChange={(ev) => updateEreignis(i, 'bis', ev.target.value)} className={inputCls + ' text-xs'} />
               </div>
             </div>
             {e.typ === 'schwangerschaft' && (
-              <p className="text-xs text-blue-600">«Von»: Beginn der Schwangerschaft. «Bis»: 16 Wochen (112 Tage) nach Niederkunft (Art. 336c Abs. 1 lit. c OR).</p>
+              <p className="text-xs text-brass-700">«Von»: Beginn der Schwangerschaft. «Bis»: 16 Wochen (112 Tage) nach Niederkunft (Art. 336c Abs. 1 lit. c OR).</p>
             )}
             {e.typ === 'militaer_zivil' && (
-              <p className="text-xs text-blue-600">Bei Dauer &gt; 11 Tage wird die Sperrfrist automatisch je 4 Wochen davor und danach erweitert (Art. 336c Abs. 1 lit. a OR).</p>
+              <p className="text-xs text-brass-700">Bei Dauer &gt; 11 Tage wird die Sperrfrist automatisch je 4 Wochen davor und danach erweitert (Art. 336c Abs. 1 lit. a OR).</p>
             )}
             {e.typ === 'krankheit_unfall' && i > 0 && (
               <div className="space-y-1">
-                <label className="text-xs font-medium text-slate-600">Rückfall derselben Ursache wie … (§1.3)</label>
+                <label className="text-xs font-medium text-ink-600">Rückfall derselben Ursache wie … (§1.3)</label>
                 <select
                   className={inputCls + ' text-xs'}
                   value={e.gleicheUrsacheWieEreignis ?? ''}
@@ -268,24 +268,24 @@ export function KuendigungSperrForm() {
       </div>
 
       {fehler.length > 0 && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-4 space-y-1">
-          <p className="text-xs font-semibold text-red-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-sm text-red-800">• {f}</p>)}
+        <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
+          <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
+          {fehler.map((f, i) => <p key={i} className="text-sm text-danger-700">• {f}</p>)}
         </div>
       )}
 
       <button
         onClick={berechne}
-        className="px-6 py-2.5 bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium rounded-lg transition-colors"
+        className="px-6 py-2.5 bg-ink-900 hover:bg-ink-700 text-paper text-sm font-medium rounded-lg transition-colors"
       >
         Berechnen
       </button>
 
       {/* Querverbindung */}
       {ergebnisB && ergebnisC && (form.sperrereignisse ?? []).length > 0 && (
-        <div className="rounded-lg border border-purple-200 bg-purple-50 p-4">
-          <p className="text-xs font-semibold text-purple-700 uppercase tracking-wide mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
-          <p className="text-sm text-purple-800">
+        <div className="rounded-lg border border-line bg-surface p-4">
+          <p className="text-xs font-semibold text-brass-700 uppercase tracking-wide mb-1">Querverbindung: Art. 336c ↔ Art. 324a</p>
+          <p className="text-sm text-ink-600">
             Sperrfrist (Art. 336c OR) und Lohnfortzahlung (Art. 324a OR) sind <strong>voneinander unabhängig</strong>.
             Eine Sperrfrist von z.B. 90 Tagen bedeutet nicht 90 Tage Lohnfortzahlung.
             Beide Ansprüche sind separat zu prüfen.

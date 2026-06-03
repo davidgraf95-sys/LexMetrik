@@ -51,14 +51,14 @@ const DEFAULTS: LohnfortzahlungInput = {
 function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
   return (
     <div className="space-y-1">
-      <label className="block text-sm font-medium text-slate-700">{label}</label>
+      <label className="block text-body-s font-medium text-ink-700">{label}</label>
       {children}
-      {hint && <p className="text-xs text-slate-500">{hint}</p>}
+      {hint && <p className="text-body-s text-ink-500">{hint}</p>}
     </div>
   );
 }
 
-const inputCls = 'w-full border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500';
+const inputCls = 'lc-input';
 
 // §6 Eingabevalidierung
 function validiere(f: LohnfortzahlungInput): string[] {
@@ -108,9 +108,9 @@ export function LohnfortzahlungForm() {
   return (
     <div className="space-y-6">
       {/* Skalen-Hinweis */}
-      <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
-        <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-1">Wichtiger Hinweis zu den Skalen</p>
-        <p className="text-sm text-amber-800">{SKALEN_HINWEIS}</p>
+      <div className="lc-notice-warn rounded-md" style={{ padding: '12px 16px', borderLeft: '3px solid var(--warn-500)' }}>
+        <p className="lc-overline text-warn-700 mb-1">Wichtiger Hinweis zu den Skalen</p>
+        <p className="text-body-s text-warn-700">{SKALEN_HINWEIS}</p>
       </div>
 
       {/* Eingaben */}
@@ -175,8 +175,8 @@ export function LohnfortzahlungForm() {
 
       {/* §2.6 KTG-Gleichwertigkeits-Checkliste */}
       {form.ktgGleichwertigVorhanden && (
-        <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 space-y-3">
-          <p className="text-xs font-semibold text-blue-700 uppercase tracking-wide">Gleichwertigkeits-Checkliste (Art. 324a Abs. 4 OR, Orientierung)</p>
+        <div className="lc-card p-4 space-y-3">
+          <p className="lc-overline">Gleichwertigkeits-Checkliste (Art. 324a Abs. 4 OR, Orientierung)</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Taggeld (% des Lohnes)" hint="Richtwert ≥ 80 %">
               <input type="number" min={0} max={100} className={inputCls}
@@ -199,7 +199,7 @@ export function LohnfortzahlungForm() {
                 onChange={(e) => setKtg('praemienAnteilArbeitgeberProzent', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
           </div>
-          <label className="flex items-center gap-2 text-sm cursor-pointer text-blue-800">
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" checked={form.ktgKriterien?.schriftlichVereinbart ?? false}
               onChange={(e) => setKtg('schriftlichVereinbart', e.target.checked)} />
             Schriftlich / in GAV-NAV vereinbart (Gültigkeitsvoraussetzung)
@@ -208,11 +208,11 @@ export function LohnfortzahlungForm() {
       )}
 
       {/* Erweiterte Eingaben */}
-      <div className="border border-slate-200 rounded-lg overflow-hidden">
+      <div className="border border-line rounded-md overflow-hidden">
         <button type="button" onClick={() => setErweitert(!erweitert)}
-          className="w-full flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-slate-100 text-left">
-          <span className="text-sm font-medium text-slate-700">Erweiterte Eingaben (Anspruch, DJ-übergreifend, Lohnbasis)</span>
-          <span className="text-slate-400">{erweitert ? '▲' : '▼'}</span>
+          className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left">
+          <span className="text-body-s font-medium text-ink-700">Erweiterte Eingaben (Anspruch, DJ-übergreifend, Lohnbasis)</span>
+          <span className="text-ink-400">{erweitert ? '▲' : '▼'}</span>
         </button>
         {erweitert && (
           <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -247,18 +247,13 @@ export function LohnfortzahlungForm() {
       </div>
 
       {fehler.length > 0 && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-4 space-y-1">
-          <p className="text-xs font-semibold text-red-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-sm text-red-800">• {f}</p>)}
+        <div className="lc-notice-danger rounded-md space-y-1" style={{ padding: '12px 16px', borderLeft: '3px solid var(--danger-500)' }}>
+          <p className="lc-overline text-danger-700 mb-1">Eingabefehler</p>
+          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
         </div>
       )}
 
-      <button
-        onClick={berechne}
-        className="px-6 py-2.5 bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium rounded-lg transition-colors"
-      >
-        Berechnen
-      </button>
+      <button onClick={berechne} className="lc-btn-primary">Berechnen</button>
 
       {ergebnis && (
         <div className="space-y-4">

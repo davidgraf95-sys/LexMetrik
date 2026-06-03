@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import type { Berechnungsergebnis, BerechnungsStatus } from '../types/legal';
 
+// Status-Badges (Design-Doc 5.8): gesichert→sage · umstritten/kein Anspruch→warn · nichtig/unzulässig→danger.
 const STATUS_CONFIG: Record<BerechnungsStatus, { label: string; cls: string }> = {
-  ok:           { label: 'Gültig',              cls: 'bg-green-100 text-green-800 border-green-300' },
-  nichtig:      { label: 'NICHTIG',             cls: 'bg-red-100 text-red-800 border-red-300' },
-  kein_anspruch:{ label: 'Kein Anspruch',       cls: 'bg-amber-100 text-amber-800 border-amber-300' },
-  unzulaessig:  { label: 'Unzulässig',          cls: 'bg-red-100 text-red-800 border-red-300' },
-  ktg_regime:   { label: 'KTG-Regime',          cls: 'bg-blue-100 text-blue-800 border-blue-300' },
+  ok:            { label: 'Gültig',        cls: 'lc-badge-ok' },
+  nichtig:       { label: 'NICHTIG',       cls: 'lc-badge-danger' },
+  kein_anspruch: { label: 'Kein Anspruch', cls: 'lc-badge-warn' },
+  unzulaessig:   { label: 'Unzulässig',    cls: 'lc-badge-danger' },
+  ktg_regime:    { label: 'KTG-Regime',    cls: 'lc-chip' },
 };
 
 const DISCLAIMER =
@@ -28,61 +29,55 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
   const cfg = STATUS_CONFIG[ergebnis.status];
 
   return (
-    <div className="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+    <div className="bg-surface border border-line rounded-lg shadow-md overflow-hidden border-t-[3px] border-t-brass-500">
       {/* Header */}
-      <div className="bg-slate-50 border-b border-slate-200 px-6 py-4">
-        <h3 className="text-base font-semibold text-slate-700">{titel}</h3>
+      <div className="border-b border-line px-6 py-4">
+        <p className="lc-overline">Ergebnis</p>
+        <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{titel}</h3>
       </div>
 
       <div className="p-6 space-y-5">
         {/* Status + Hauptergebnis */}
         <div className="space-y-3">
-          <span className={`inline-block text-sm font-semibold px-3 py-1 rounded-full border ${cfg.cls}`}>
-            {cfg.label}
-          </span>
-          <p className="text-slate-900 font-medium text-base leading-relaxed">
-            {ergebnis.ergebnis}
-          </p>
+          <span className={cfg.cls}>{cfg.label}</span>
+          <p className="text-ink-900 font-medium text-body-l leading-relaxed num">{ergebnis.ergebnis}</p>
         </div>
 
-        {/* Warnungen */}
+        {/* Warnungen / Vorbehalte */}
         {ergebnis.warnungen.length > 0 && (
-          <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 space-y-1">
-            <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-2">Hinweise / Vorbehalte</p>
+          <div className="lc-notice-warn rounded-md space-y-1" style={{ padding: '12px 16px', borderLeft: '3px solid var(--warn-500)' }}>
+            <p className="lc-overline text-warn-700 mb-1">Hinweise / Vorbehalte</p>
             {ergebnis.warnungen.map((w, i) => (
-              <p key={i} className="text-sm text-amber-800">⚠ {w}</p>
+              <p key={i} className="text-body-s text-warn-700">{w}</p>
             ))}
           </div>
         )}
 
-        {/* Rechenweg */}
-        <div className="border border-slate-200 rounded-lg overflow-hidden">
+        {/* Rechenweg (5.6.1) */}
+        <div className="border border-line rounded-md overflow-hidden">
           <button
             onClick={() => setRechenWegOffen(!rechenWegOffen)}
-            className="w-full flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-slate-100 text-left transition-colors"
+            className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
           >
-            <span className="text-sm font-medium text-slate-700">Rechenweg ({ergebnis.rechenweg.length} Schritte)</span>
-            <span className="text-slate-400 text-lg">{rechenWegOffen ? '▲' : '▼'}</span>
+            <span className="text-body-s font-medium text-ink-700">Rechenweg ({ergebnis.rechenweg.length} Schritte)</span>
+            <span className="text-ink-400">{rechenWegOffen ? '▲' : '▼'}</span>
           </button>
           {rechenWegOffen && (
-            <div className="divide-y divide-slate-100">
+            <div className="divide-y divide-line">
               {ergebnis.rechenweg.map((schritt, i) => (
                 <div key={i} className="px-4 py-3 space-y-2">
-                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide">{schritt.beschreibung}</p>
-                  <p className="text-sm text-slate-800">{schritt.zwischenergebnis}</p>
+                  <p className="lc-overline">{schritt.beschreibung}</p>
+                  <p className="text-body-s text-ink-700 num">{schritt.zwischenergebnis}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {schritt.normen.map((n, j) => (
-                      <span key={j} className="text-xs bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded font-mono">
-                        {n.artikel}
-                        {n.bemerkung && <span className="text-blue-500"> · {n.bemerkung}</span>}
+                      <span key={j} className="lc-chip">
+                        {n.artikel}{n.bemerkung && <span className="opacity-70"> · {n.bemerkung}</span>}
                       </span>
                     ))}
                     {schritt.rechtsprechung?.map((r, j) => (
-                      <span key={j} className="text-xs bg-orange-50 text-orange-700 border border-orange-200 px-2 py-0.5 rounded font-mono flex items-center gap-1">
+                      <span key={j} className="lc-badge lc-badge-danger gap-1 font-mono">
                         {r.aktenzeichen}
-                        {!r.verifiziert && (
-                          <span className="bg-orange-200 text-orange-800 text-[10px] px-1 rounded font-sans">zu verifizieren</span>
-                        )}
+                        {!r.verifiziert && <span className="font-sans" style={{ fontSize: '10px' }}>· zu verifizieren</span>}
                       </span>
                     ))}
                   </div>
@@ -94,18 +89,18 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Annahmen */}
         {ergebnis.annahmen.length > 0 && (
-          <div className="border border-slate-200 rounded-lg overflow-hidden">
+          <div className="border border-line rounded-md overflow-hidden">
             <button
               onClick={() => setAnnahmenOffen(!annahmenOffen)}
-              className="w-full flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-slate-100 text-left transition-colors"
+              className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
             >
-              <span className="text-sm font-medium text-slate-700">Annahmen ({ergebnis.annahmen.length})</span>
-              <span className="text-slate-400 text-lg">{annahmenOffen ? '▲' : '▼'}</span>
+              <span className="text-body-s font-medium text-ink-700">Annahmen ({ergebnis.annahmen.length})</span>
+              <span className="text-ink-400">{annahmenOffen ? '▲' : '▼'}</span>
             </button>
             {annahmenOffen && (
               <ul className="px-4 py-3 space-y-1">
                 {ergebnis.annahmen.map((a, i) => (
-                  <li key={i} className="text-sm text-slate-600">• {a}</li>
+                  <li key={i} className="text-body-s text-ink-600">• {a}</li>
                 ))}
               </ul>
             )}
@@ -115,20 +110,16 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
         {/* Normverweise */}
         {ergebnis.normverweise.length > 0 && (
           <div>
-            <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Normverweise</p>
+            <p className="lc-overline mb-2">Normverweise</p>
             <div className="flex flex-wrap gap-1.5">
-              {ergebnis.normverweise.map((n, i) => (
-                <span key={i} className="text-xs bg-slate-100 text-slate-700 border border-slate-200 px-2 py-1 rounded font-mono">
-                  {n.artikel}
-                </span>
-              ))}
+              {ergebnis.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
             </div>
           </div>
         )}
 
         {/* Disclaimer */}
-        <div className="border-t border-slate-100 pt-4">
-          <p className="text-xs text-slate-400 italic leading-relaxed">{DISCLAIMER}</p>
+        <div className="border-t border-line pt-4">
+          <p className="text-body-s text-ink-400 italic leading-relaxed">{DISCLAIMER}</p>
         </div>
       </div>
     </div>
