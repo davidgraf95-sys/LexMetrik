@@ -69,4 +69,41 @@ describe('SchKG-Fristenrechner', () => {
     expect(r.warnungen.some((w) => /Verwirkungsfrist/.test(w))).toBe(true);
     expect(r.normverweise.some((n) => n.artikel.includes('33 Abs. 4'))).toBe(true);
   });
+
+  // Regression (Sanity-Check): Hemmung über das rechnerische Fristende hinaus –
+  // echtes Ruhen: das GANZE Fenster ab Hemmungsbeginn zählt, kein Clamp am naiven Ende.
+  it('Hemmung über das naive Fristende hinaus wird voll angerechnet', () => {
+    // 30 Tage ab 15.1. (dies a quo 16.1., naives Ende 14.2.); Hemmung 1.2.–30.4. (89 Tage)
+    const r = berechneSchkgFrist(base({
+      ereignis: '2025-01-15', laenge: 30, modus: 'kein', fristnatur: 'verwirkung',
+      hemmungVon: '2025-02-01', hemmungBis: '2025-04-30',
+    }));
+    expect(r.diesAdQuem).toBe('14.05.2025'); // 14.2. + 89 Tage (Mittwoch, keine Verschiebung)
+  });
+
+  it('Hemmungsfenster, das erst NACH dem Fristende beginnt, wirkt nicht', () => {
+    const r = berechneSchkgFrist(base({
+      ereignis: '2025-01-15', laenge: 30, modus: 'kein', fristnatur: 'verwirkung',
+      hemmungVon: '2025-06-01', hemmungBis: '2025-08-01',
+    }));
+    expect(r.diesAdQuem).toBe('14.02.2025');
+  });
+
+  // Regression (Sanity-Check): Überlappen Rechtsstillstand und Betreibungsferien,
+  // ankert Art. 63 am Ende der GESAMTEN geschlossenen Zeit (Verbund-Hülle).
+  it('Rechtsstillstand über die Betreibungsferien hinaus verschiebt den Art.-63-Anker', () => {
+    // Ende rechnerisch 25.7. (in Sommer-BF 15.–31.7.); RS 20.7.–10.8. → 3. Werktag nach 10.8. (So) = 13.8.
+    const r = berechneSchkgFrist(base({
+      ereignis: '2025-07-15', laenge: 10,
+      rechtsstillstandVon: '2025-07-20', rechtsstillstandBis: '2025-08-10',
+    }));
+    expect(r.diesAdQuem).toBe('13.08.2025');
+  });
+
+  it('Rechtsstillstand-Eingabe ausserhalb des Betreibungsferien-Regimes erzeugt eine Warnung', () => {
+    const r = berechneSchkgFrist(base({
+      modus: 'zpo_stillstand', rechtsstillstandVon: '2025-07-20', rechtsstillstandBis: '2025-08-10',
+    }));
+    expect(r.warnungen.some((w) => w.includes('unberücksichtigt'))).toBe(true);
+  });
 });

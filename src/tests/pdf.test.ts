@@ -150,6 +150,7 @@ describe('PDF-Bausteine', () => {
     expect(winAnsiSicher('\u2022 \u2013 \u2014 \u201eTest\u201c')).toBe('\u2022 \u2013 \u2014 \u201eTest\u201c'); // CP1252 bleibt
     expect(winAnsiSicher('\u00ab\u0445\u00bb')).toBe('\u00ab?\u00bb'); // Kyrillisch -> ?
     expect(istWinAnsiSicher('a \u2192 b')).toBe(false);
+    expect(winAnsiSicher('Skala-Dauer \u2248 90 Tage')).toBe('Skala-Dauer ~ 90 Tage'); // \u2248 -> ~
   });
 
   it('typografie setzt gesch\u00fctzte Leerzeichen in Normverweisen', () => {

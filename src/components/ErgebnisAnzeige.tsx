@@ -10,13 +10,13 @@ const STATUS_CONFIG: Record<BerechnungsStatus, { label: string; cls: string }> =
   ktg_regime:    { label: 'KTG-Regime',    cls: 'lc-chip' },
 };
 
+// Domänenneutral – der rechtsgebietsspezifische Disclaimer steht im jeweiligen
+// Formular und in der PDF-Konfiguration. Hier darf kein Text eines einzelnen
+// Rechtsgebiets stehen (kein Cross-Domain-Bleed am Bildschirm).
 const DISCLAIMER =
-  'Automatisierte Orientierungsberechnung, keine Rechtsberatung. ' +
-  'Massgeblich sind GAV, Einzelvertrag, Versicherungspolice und der konkrete Sachverhalt; ' +
-  'abweichende Regelungen gehen vor. Der genaue Sachverhalt sowie alle ' +
-  'Norm- und Rechtsprechungsverweise sind im Einzelfall zu prüfen. Die ' +
-  'Lohnfortzahlungsskalen sind Gerichtspraxis und vor Produktiveinsatz gegen die ' +
-  'aktuelle kantonale Praxis abzugleichen.';
+  'Automatisierte Orientierungsberechnung – keine Rechtsberatung. ' +
+  'Massgeblich sind Gesetz, Vertrag und der konkrete Sachverhalt; abweichende Regelungen gehen vor. ' +
+  'Norm- und Rechtsprechungsverweise sind im Einzelfall zu prüfen.';
 
 type Props = {
   titel: string;

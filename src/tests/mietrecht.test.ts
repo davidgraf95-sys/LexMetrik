@@ -32,11 +32,11 @@ describe('Mietrecht – ordentliche Kündigung (Art. 266a–f OR)', () => {
     expect(verfehlt.endtermin).toBe('31.12.2026');
   });
 
-  it('Ortsüblich AG (März/Juni/Sept): Zugang 10.1. → 30.6.; Art. 78 verschiebt nur den Zustelltag', () => {
+  it('Ortsüblich AG (März/Juni/Sept): Zugang 10.1. → 30.6.', () => {
     const r = berechneMietkuendigung(base({}));
     expect(r.endtermin).toBe('30.06.2025');
     expect(r.verfehlterTermin).toBe('31.03.2025');
-    // spätester Zugang für 30.6.: 30.3.2025 (Sonntag) → 31.3.2025 (Art. 78 OR)
+    // spätester Zugang für 30.6.: 31.3.2025 (drei volle Monate April–Juni)
     expect(r.spaetesterZugang).toBe('31.03.2025');
   });
 
@@ -71,6 +71,24 @@ describe('Mietrecht – ordentliche Kündigung (Art. 266a–f OR)', () => {
   it('Bewegliche Sache: 3 Tage auf beliebigen Zeitpunkt', () => {
     const r = berechneMietkuendigung(base({ objekt: 'bewegliche_sache', zugang: '2025-05-12' }));
     expect(r.endtermin).toBe('15.05.2025');
+  });
+
+  // Regression (Sanity-Check): Monatsfrist auf Monatsende-Termin in kürzerem Monat –
+  // drei VOLLE Monate (April–Juni) → spätester Zugang 31.3., nicht 30.3.
+  it('Monatsfrist-Rückrechnung: Termin 30.6., 3 Monate → Zugang spätestens 31.3. (keine addMonths-Klemmung)', () => {
+    const r = berechneMietkuendigung(base({ zugang: '2026-03-31', terminQuelle: 'vertraglich_monate', vertragsTermineMonate: [6] }));
+    expect(r.endtermin).toBe('30.06.2026'); // 31.3.2026 ist Dienstag – kein Art.-78-Maskeneffekt
+    expect(r.spaetesterZugang).toBe('31.03.2026');
+    const zuSpaet = berechneMietkuendigung(base({ zugang: '2026-04-01', terminQuelle: 'vertraglich_monate', vertragsTermineMonate: [6] }));
+    expect(zuSpaet.endtermin).toBe('30.06.2027');
+  });
+
+  // Regression (Sanity-Check): Auffangregel bei Mietbeginn am Monatsletzten –
+  // Periodenende ist das Monatsende (30.4.), nicht der 29.4. (addMonths-Drift).
+  it('Auffangregel: Mietbeginn 31.1. → Perioden enden am Monatsende (30.4., 31.7., …)', () => {
+    const r = berechneMietkuendigung(base({ zugang: '2025-02-10', terminQuelle: 'gesetzlich', mietbeginn: '2025-01-31' }));
+    expect(r.verfehlterTermin).toBe('30.04.2025'); // nicht 29.04.
+    expect(r.endtermin).toBe('31.07.2025');
   });
 });
 

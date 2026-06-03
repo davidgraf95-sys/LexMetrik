@@ -28,6 +28,7 @@ const ERSATZ: Record<string, string> = {
   '⇒': '=>',   // ⇒
   '≤': '<=',   // ≤
   '≥': '>=',   // ≥
+  '≈': '~',    // ≈ (ungefähr)
   '⚠': '!',    // ⚠ (Hinweise erhalten eigene Auszeichnung im Renderer)
   '✓': '+',    // ✓
   '✗': 'x',    // ✗

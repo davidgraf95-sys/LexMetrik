@@ -1,4 +1,4 @@
-import { parseISO, addDays, addMonths, format, lastDayOfMonth, isBefore, isAfter } from 'date-fns';
+import { parseISO, addDays, addMonths, format, lastDayOfMonth, isLastDayOfMonth, isBefore, isAfter } from 'date-fns';
 import type { Normverweis, Rechenschritt } from '../types/legal';
 import type { MietInput, MietErgebnis, Mietobjekt, TerminQuelle } from '../types/mietrecht';
 import { ORTSUEBLICHE_TERMINE } from '../data/mietTermine';
@@ -72,9 +72,24 @@ function werktagOderNaechster(d: Date, kanton: MietInput['kanton']): { tag: Date
 }
 
 // Spätester rechtzeitiger Zugang für einen Termin T (roh und nach Art. 78).
+// Monatsfristen: Es müssen FRIST volle Monate vor dem Termin liegen (Beispiel
+// Konzept §E: Termin 31.12., 3 Monate → Zugang spätestens 30.9.). Gerechnet
+// wird deshalb vom Folgetag des Termins zurück (Termin 30.6., 3 Monate →
+// 31.3., NICHT 30.3. – addMonths allein klemmt am kürzeren Monat).
 function spaetesterZugangFuer(T: Date, frist: { monate?: number; tage?: number }, kanton: MietInput['kanton']) {
-  const roh = frist.monate != null ? addMonths(T, -frist.monate) : addDays(T, -(frist.tage ?? 0));
+  const roh = frist.monate != null
+    ? addDays(addMonths(addDays(T, 1), -frist.monate), -1)
+    : addDays(T, -(frist.tage ?? 0));
   return { roh, ...werktagOderNaechster(roh, kanton) };
+}
+
+// Ende der k-ten Mietdauer-Periode ab Mietbeginn. Bei Mietbeginn am
+// Monatsletzten endet die Periode am Monatsende (31.1. + 3 Monate → 30.4.,
+// nicht 29.4. – addMonths-Klemmung würde sonst um 1–3 Tage driften).
+function periodenEnde(beginn: Date, monate: number): Date {
+  return isLastDayOfMonth(beginn)
+    ? lastDayOfMonth(addMonths(beginn, monate))
+    : addDays(addMonths(beginn, monate), -1);
 }
 
 // Kandidaten-Termine gemäss Quelle (aufsteigend, ab dem Zugangsmonat).
@@ -85,7 +100,7 @@ function kandidaten(input: MietInput, quelle: TerminQuelle, zugang: Date): Date[
     const beginn = parseISO(input.mietbeginn);
     const periode = AUFFANG_MONATE[input.objekt] || 3;
     for (let k = 1; k <= 600; k++) {
-      const t = addDays(addMonths(beginn, k * periode), -1); // Ende der k-ten Mietdauer-Periode
+      const t = periodenEnde(beginn, k * periode);
       if (isBefore(t, zugang)) continue;
       out.push(t);
       if (out.length >= 24) break;
@@ -205,8 +220,7 @@ export function berechneMietkuendigung(input: MietInput): MietErgebnis {
       });
     }
     const basis = addDays(zugang, 30);
-    let ende = lastDayOfMonth(basis);
-    if (isBefore(ende, basis)) ende = lastDayOfMonth(addMonths(basis, 1));
+    const ende = lastDayOfMonth(basis); // stets ≥ basis → «30 Tage auf Ende eines Monats» gewahrt
     const norm = input.kuendigungsart === 'zahlungsverzug' ? N_257d : N_257f;
     rechenweg.push({
       beschreibung: input.kuendigungsart === 'zahlungsverzug'
@@ -228,7 +242,7 @@ export function berechneMietkuendigung(input: MietInput): MietErgebnis {
     const fruehestens = addDays(zugang, 30);
     let ende: Date | null = null;
     for (let k = 1; k <= 600; k++) {
-      const t = addDays(addMonths(beginn, k * 3), -1);
+      const t = periodenEnde(beginn, k * 3);
       if (leq(fruehestens, t)) { ende = t; break; }
     }
     rechenweg.push({

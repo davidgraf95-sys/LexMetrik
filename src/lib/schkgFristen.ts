@@ -3,6 +3,7 @@ import type { Normverweis, Rechenschritt } from '../types/legal';
 import type { SchkgInput, SchkgErgebnis, SchkgModus, SchkgFristnatur } from '../types/schkg';
 import { stillstandsperioden, stillstandsperiodeFuer } from '../data/zpoFeiertage';
 import { betreibungsferien, betreibungsperiodeFuer } from '../data/schkgFeiertage';
+import { rechtsprechung } from '../data/verifikation';
 import {
   fristendeTage,
   fristendeKalender,
@@ -49,8 +50,22 @@ function baueStrategie(modus: SchkgModus, rsVon?: string, rsBis?: string): Still
   const rs: Periode | null =
     rsVon && rsBis ? { key: 'rechtsstillstand', von: parseISO(rsVon), bis: parseISO(rsBis) } : null;
   const inRs = (d: Date) => rs !== null && !isBefore(d, rs.von) && !isAfter(d, rs.bis);
+  const basisPeriode = (d: Date): Periode | null => betreibungsperiodeFuer(d) ?? (inRs(d) ? rs : null);
   return {
-    periodeFuer: (d) => betreibungsperiodeFuer(d) ?? (inRs(d) ? rs : null),
+    // Überlappen Betreibungsferien und Rechtsstillstand, bilden sie EINE
+    // geschlossene Zeit: die Hülle wird vorwärts gemerged, damit Art. 63 am
+    // Ende der gesamten geschlossenen Zeit ankert (nicht an der ersten Teilperiode).
+    periodeFuer: (d) => {
+      const p = basisPeriode(d);
+      if (!p) return null;
+      let bis = p.bis;
+      for (let guard = 0; guard < 12; guard++) {
+        const next = basisPeriode(addDays(bis, 1));
+        if (!next) break;
+        bis = next.bis;
+      }
+      return bis === p.bis ? p : { key: `${p.key}+verbund`, von: p.von, bis };
+    },
     perioden: betreibungsferien,
     ruhenZaehlung: false,
     endregel: 'verlaengerung_3wt',
@@ -119,6 +134,7 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
           : 'Die Frist läuft ohne Unterbruch (Betreibungsferien hemmen den Lauf nicht, Art. 63 SchKG). ') +
         `Rechnerisches Ende (vor Endnormalisierung): ${fmt(endeProvisorisch)}.`,
       normen: modus === 'zpo_stillstand' ? [N_142_1, N_145_1] : [N_142_1, N_63],
+      rechtsprechung: modus === 'schkg_betreibungsferien' ? [rechtsprechung('BGE_143_III_149')] : undefined,
     });
   } else {
     const r = fristendeKalender(ereignis, input.einheit, input.laenge, st, false);
@@ -135,20 +151,24 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
   }
 
   // Schritt 2b – Hemmung der Verwirkungsfrist (Art. 88 Abs. 2 / Art. 166 Abs. 2)
+  // Echtes Ruhen: Beginnt das hemmende Verfahren während des Fristenlaufs,
+  // pausiert die Frist für das GANZE Fenster – auch über das rechnerische Ende
+  // hinaus (das Verfahren dauert typischerweise länger als der Fristrest).
   if (input.hemmungVon && input.hemmungBis) {
     const hv = parseISO(input.hemmungVon);
     const hb = parseISO(input.hemmungBis);
     const von = isBefore(hv, diesAQuo) ? diesAQuo : hv;
-    const bis = isAfter(hb, endeProvisorisch) ? endeProvisorisch : hb;
-    const tage = differenceInCalendarDays(bis, von) + 1;
-    if (tage > 0) {
+    const beginntImLauf = !isAfter(von, endeProvisorisch) && !isBefore(hb, von);
+    if (beginntImLauf) {
+      const tage = differenceInCalendarDays(hb, von) + 1;
       endeProvisorisch = addDays(endeProvisorisch, tage);
       rechenweg.push({
         beschreibung: 'Schritt 2b – Stillstand der Verwirkungsfrist (Hemmung)',
         zwischenergebnis:
-          `Während des rechtsvorschlagsbedingten Verfahrens (${fmt(hv)}–${fmt(hb)}) steht die Verwirkungsfrist still. ` +
-          `Anrechenbarer Stillstand: ${tage} Tage → neues rechnerisches Ende: ${fmt(endeProvisorisch)}.`,
+          `Während des rechtsvorschlagsbedingten Verfahrens (${fmt(hv)}–${fmt(hb)}) steht die Verwirkungsfrist still: ` +
+          `${tage} Tage (ab ${fmt(von)}); die Frist läuft nach Verfahrensende weiter → neues rechnerisches Ende: ${fmt(endeProvisorisch)}.`,
         normen: [N_88_2, N_166_2],
+        rechtsprechung: [rechtsprechung('BGer_5A_190_2023')],
       });
       warnungen.push(
         'Die Hemmung der Verwirkungsfrist (Art. 88 Abs. 2 / Art. 166 Abs. 2 SchKG) ist als ganztägiger Stillstand im angegebenen Fenster modelliert; der genaue Beginn/Ablauf des hemmenden Verfahrens ist im Einzelfall zu prüfen.',
@@ -169,6 +189,7 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
         : `Das rechnerische Ende ${fmt(endeProvisorisch)} fiel auf einen arbeitsfreien Tag bzw. in einen Stillstand → verschoben auf ${fmt(diesAdQuem)}.`
       : `Ende ${fmt(diesAdQuem)} ist bereits ein Werktag – keine Verschiebung.`,
     normen: modus === 'schkg_betreibungsferien' ? [N_63, N_142_3] : [N_142_3, N_145_1],
+    rechtsprechung: modus === 'schkg_betreibungsferien' && verschoben ? [rechtsprechung('BGE_108_III_49')] : undefined,
   });
 
   // ─── Hinweise / Vorbehalte ──────────────────────────────────────────────
@@ -189,6 +210,11 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
   warnungen.push(
     'Kantonal unterschiedliche Feiertage beeinflussen das Fristende (Art. 31 SchKG i.V.m. Art. 142 Abs. 3 ZPO) und sind eigenständig zu prüfen.',
   );
+  if ((input.rechtsstillstandVon || input.rechtsstillstandBis) && modus !== 'schkg_betreibungsferien') {
+    warnungen.push(
+      'Der eingegebene Rechtsstillstand (Art. 57–62 SchKG) wirkt nur im Regime der Betreibungsferien (Art. 63 SchKG) und bleibt im gewählten Stillstand-Regime unberücksichtigt.',
+    );
+  }
 
   annahmen.push(
     `Stillstand-Regime: ${MODUS_LABEL[modus]}.`,

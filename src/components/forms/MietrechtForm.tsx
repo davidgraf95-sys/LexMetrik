@@ -13,7 +13,7 @@ const MIET_DISCLAIMER =
   'keine Rechtsberatung. Die ortsüblichen Kündigungstermine sind eine Tatfrage, variieren teils nach Gemeinde und ' +
   'sind verbindlich nur bei der Schlichtungsbehörde bzw. Gemeinde zu erfragen. Massgeblich für den Zugang ist die ' +
   'absolute Empfangstheorie; für Art. 257d/269d OR gilt die relative Empfangstheorie. Formvorschriften ' +
-  '(Art. 266l–266o OR), Vertrag, GAV-fremde Sondernormen und der konkrete Sachverhalt sind eigenständig zu prüfen. ' +
+  '(Art. 266l–266o OR), Vertrag, Rahmenmietverträge und kantonale Usanzen sowie der konkrete Sachverhalt sind eigenständig zu prüfen. ' +
   'Für die Wahrung einer Frist im Einzelfall ist allein die nutzende Person verantwortlich.';
 
 const KANTONE: Kanton[] = ['ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'BS', 'BL', 'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'];
