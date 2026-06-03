@@ -10,7 +10,8 @@
 // (siehe Kommentar bei `fedlex()` unten); nicht verifizierbare Verweise
 // erhielten stattdessen die Gesetzes-Seite und verified: false.
 
-export type Status = 'geprüft' | 'geplant';
+export type Status = 'geprüft' | 'geplant'; // geplant wird als «In Vorbereitung» angezeigt
+export type Art = 'frist' | 'betrag' | 'zuordnung' | 'werkzeug'; // Output-Typ → Sektion
 
 export interface NormRef {
   label: string;      // Anzeigetext, unverändert (z. B. "Art. 335c OR")
@@ -20,6 +21,8 @@ export interface NormRef {
 
 export interface CalculatorCard {
   id: string;
+  art: Art;               // Output-Typ → bestimmt die Sektion
+  rechtsgebiet: string;   // Filterwert (z. B. «Miete», «Zivilprozess (ZPO)»)
   category: string;     // Mikro-Label, spezifischste Ebene (z. B. "ZIVILPROZESS · ZPO")
   title: string;
   description: string;
@@ -77,6 +80,8 @@ const fedlex = (label: string, gesetz: keyof typeof ELI, anker: string): NormRef
 const KARTEN: Record<string, CalculatorCard> = {
   'zpo-fristen': {
     id: 'zpo-fristen',
+    art: 'frist',
+    rechtsgebiet: 'Zivilprozess (ZPO)',
     category: 'ZIVILPROZESS · ZPO',
     title: 'ZPO-Fristen',
     description: 'Verfahrens- und Rechtsmittelfristen mit Gerichtsferien und Stillstand.',
@@ -88,6 +93,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   'schkg-fristen': {
     id: 'schkg-fristen',
+    art: 'frist',
+    rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     category: 'ZIVILPROZESS · SCHKG',
     title: 'Betreibungsfristen',
     description: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
@@ -100,6 +107,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   'kuendigung-sperrfristen': {
     id: 'kuendigung-sperrfristen',
+    art: 'frist',
+    rechtsgebiet: 'Arbeit',
     category: 'ARBEITSRECHT · OR',
     title: 'Kündigungs- & Sperrfristen',
     description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis.',
@@ -112,6 +121,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   lohnfortzahlung: {
     id: 'lohnfortzahlung',
+    art: 'betrag',
+    rechtsgebiet: 'Arbeit',
     category: 'ARBEITSRECHT · OR',
     title: 'Lohnfortzahlung (kant. Skala)',
     description: 'Lohnfortzahlung bei unverschuldeter Verhinderung nach kantonaler Skala (Basel/Bern/Zürich).',
@@ -124,6 +135,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   verzugszins: {
     id: 'verzugszins',
+    art: 'betrag',
+    rechtsgebiet: 'Vertrag / OR',
     category: 'ZINSEN & VERZUG · OR',
     title: 'Verzugszins',
     description: 'Verzugszins bei Schuldnerverzug — Zeitraum, Satz und Betrag.',
@@ -136,6 +149,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   mietrecht: {
     id: 'mietrecht',
+    art: 'frist',
+    rechtsgebiet: 'Miete',
     category: 'MIETRECHT · OR',
     title: 'Mietrecht — Fristen',
     description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume — mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
@@ -147,6 +162,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   erbteilung: {
     id: 'erbteilung',
+    art: 'betrag',
+    rechtsgebiet: 'Erbrecht',
     category: 'ERBRECHT · ZGB',
     title: 'Pflichtteil & verfügbare Quote',
     description: 'Gesetzliche Erbteile, Pflichtteile und verfügbare Quote — mit Todesdatum-Weiche für die Revision 2023 und güterrechtlicher Vorstufe.',
@@ -160,6 +177,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   // ── Platzhalter (geplant) ──
   verwaltungsverfahren: {
     id: 'verwaltungsverfahren',
+    art: 'frist',
+    rechtsgebiet: 'Verwaltung & Steuern',
     category: 'VERWALTUNGSVERFAHREN',
     title: 'Verwaltungsverfahren',
     description: 'Fristen im Verwaltungsverfahren.',
@@ -169,6 +188,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   strafverfahren: {
     id: 'strafverfahren',
+    art: 'frist',
+    rechtsgebiet: 'Strafverfahren (StPO)',
     category: 'STRAFVERFAHREN · STPO',
     title: 'Strafverfahren (StPO)',
     description: 'Fristen im Strafverfahren.',
@@ -178,6 +199,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   'or-verjaehrung': {
     id: 'or-verjaehrung',
+    art: 'frist',
+    rechtsgebiet: 'Vertrag / OR',
     category: 'VERTRAGS-/SCHULDRECHT · OR',
     title: 'Vertrags-/Schuldrecht (OR)',
     description: 'Materielle Fristen des Obligationenrechts.',
@@ -187,6 +210,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   'erbrecht-fristen': {
     id: 'erbrecht-fristen',
+    art: 'frist',
+    rechtsgebiet: 'Erbrecht',
     category: 'ERBRECHT · ZGB',
     title: 'Erbrechtliche Fristen',
     description: 'Materielle Fristen des Erbrechts (z. B. Ausschlagung).',
@@ -196,6 +221,8 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
   tagerechner: {
     id: 'tagerechner',
+    art: 'werkzeug',
+    rechtsgebiet: 'übergreifend',
     category: 'QUERSCHNITT',
     title: 'Fristen-/Tagerechner',
     description: 'Allgemeiner Tage- und Fristenrechner.',
