@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SEKTIONEN, ALLE_KARTEN, type Sektion, type CalculatorCard } from '../lib/startseiteConfig';
+import { SEKTIONEN, ALLE_KARTEN, RECHTSGEBIETE, type Sektion, type CalculatorCard } from '../lib/startseiteConfig';
 import { RechnerKarte } from '../components/RechnerKarte';
 
 function SectionHead({ children }: { children: React.ReactNode }) {
@@ -37,9 +38,85 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
   );
 }
 
+// ─── Filterleiste: Rechtsgebiet (Mehrfachauswahl) · Status · Freitextsuche ─
+
+function Filterleiste(props: {
+  gebiete: Set<string>; toggleGebiet: (g: string) => void; reset: () => void;
+  nurGeprueft: boolean; setNurGeprueft: (v: boolean) => void;
+  suche: string; setSuche: (v: string) => void;
+}) {
+  const { gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche } = props;
+  return (
+    <section aria-label="Filter" className="space-y-4">
+      <SectionHead>Rechner filtern</SectionHead>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+        <input
+          type="search"
+          value={suche}
+          onChange={(e) => setSuche(e.target.value)}
+          placeholder="Suchen (z. B. Kündigung, Verjährung, Betreibung) …"
+          className="lc-input sm:max-w-sm"
+          aria-label="Rechner durchsuchen"
+        />
+        {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur geprüfte */}
+        <div className="flex gap-1 p-1 bg-surface rounded-xl w-fit" role="group" aria-label="Status">
+          {([['Alle', false], ['Nur geprüfte', true]] as const).map(([label, wert]) => (
+            <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
+              aria-pressed={nurGeprueft === wert}
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
+              }`}>
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Rechtsgebiete">
+        {RECHTSGEBIETE.map((g) => {
+          const an = gebiete.has(g);
+          return (
+            <button key={g} type="button" onClick={() => toggleGebiet(g)} aria-pressed={an}
+              className={`text-body-s font-medium rounded-full px-3.5 py-1.5 border transition-colors ${
+                an
+                  ? 'bg-ink-900 text-paper border-ink-900'
+                  : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
+              }`}>
+              {g}
+            </button>
+          );
+        })}
+        {gebiete.size > 0 && (
+          <button type="button" onClick={reset}
+            className="text-body-s text-brass-700 hover:text-brass-600 px-2 py-1.5">
+            Zurücksetzen
+          </button>
+        )}
+      </div>
+    </section>
+  );
+}
+
 // ─── Seite ────────────────────────────────────────────────────────────────
 
 export function Startseite() {
+  const [gebiete, setGebiete] = useState<Set<string>>(new Set());
+  const [nurGeprueft, setNurGeprueft] = useState(false);
+  const [suche, setSuche] = useState('');
+
+  const toggleGebiet = (g: string) =>
+    setGebiete((alt) => {
+      const neu = new Set(alt);
+      if (neu.has(g)) neu.delete(g); else neu.add(g);
+      return neu;
+    });
+
+  const q = suche.trim().toLowerCase();
+  const passt = (k: CalculatorCard) =>
+    (gebiete.size === 0 || gebiete.has(k.rechtsgebiet)) &&
+    (!nurGeprueft || k.status === 'geprüft') &&
+    (q === '' ||
+      [k.title, k.rechtsgebiet, ...(k.keywords ?? [])].some((t) => t.toLowerCase().includes(q)));
+
   return (
     <div className="space-y-16">
       {/* Hero */}
@@ -70,9 +147,16 @@ export function Startseite() {
         </div>
       </section>
 
+      {/* Filter (clientseitig); leere Sektionen werden ausgeblendet */}
+      <Filterleiste
+        gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
+        nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
+        suche={suche} setSuche={setSuche}
+      />
+
       {/* Vier Output-Typ-Sektionen (datengetrieben aus startseiteConfig) */}
       {SEKTIONEN.map((s) => (
-        <TypSektion key={s.id} sektion={s} karten={ALLE_KARTEN.filter((k) => k.art === s.art)} />
+        <TypSektion key={s.id} sektion={s} karten={ALLE_KARTEN.filter((k) => k.art === s.art && passt(k))} />
       ))}
 
       {/* Methodik / Vertrauens-Kacheln */}
