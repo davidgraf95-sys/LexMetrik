@@ -37,7 +37,7 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
             </span>
             <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">{sektion.title}</h2>
             <span className="block text-body-l text-ink-600 max-w-reading">{sektion.lede}</span>
-            <span className="block h-px bg-line mt-4" aria-hidden />
+            <span className="scale-rule block mt-4" aria-hidden />
           </span>
         </summary>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-10 pb-6 sm:pb-10 pt-2">

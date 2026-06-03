@@ -47,7 +47,10 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
   };
 
   return (
-    <div className="lc-reveal bg-surface border border-line rounded-lg shadow-md overflow-hidden border-t-[3px] border-t-brass-500">
+    <div className="lc-reveal">
+      {/* Messskala über dem Readout — wie die Ablesekante eines Instruments */}
+      <div className="scale-rule" aria-hidden />
+      <div className="bg-surface border border-line rounded-b-lg rounded-t-none shadow-md overflow-hidden">
       {/* Header */}
       <div className="border-b border-line px-6 py-4 flex items-start justify-between gap-3">
         <div>
@@ -151,6 +154,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
         <div className="border-t border-line pt-4">
           <p className="text-body-s text-ink-400 italic leading-relaxed">{DISCLAIMER}</p>
         </div>
+      </div>
       </div>
     </div>
   );
