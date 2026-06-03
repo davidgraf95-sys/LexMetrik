@@ -1,0 +1,248 @@
+// ─── Startseiten-Konfiguration: Zwei-Säulen-Struktur ──────────────────────
+//
+// Single source of truth für die Startseiten-Karten (Säulen I–III).
+// Die Detailseiten und die /rechner-Übersicht nutzen weiterhin
+// src/lib/calculators.ts; hier liegt ausschliesslich die redaktionelle
+// Gliederung der Startseite (Fristen / Berechnungen & Ansprüche / Werkzeuge).
+//
+// Normentreue: `label` der NormRefs ist zeichengenau der bisherige Tag-Text.
+// `url`/`verified` werden in Phase 3 (Fedlex-Verifikation) befüllt — bis dahin
+// Platzhalter '' und verified: false.
+
+export type Status = 'geprüft' | 'geplant';
+
+export interface NormRef {
+  label: string;      // Anzeigetext, unverändert (z. B. "Art. 335c OR")
+  url: string;        // verifizierter Fedlex-Artikel-Link ODER Gesetz-Seite
+  verified: boolean;  // true nur bei geprüftem Artikel-Anker
+}
+
+export interface CalculatorCard {
+  id: string;
+  category: string;     // Mikro-Label, spezifischste Ebene (z. B. "ZIVILPROZESS · ZPO")
+  title: string;
+  description: string;
+  status: Status;
+  norms: NormRef[];     // Pills nur bei 'geprüft' anzeigen
+  href?: string;        // bestehende Route, nur bei 'geprüft'
+  note?: string;        // z. B. "bald verfügbar" / "in Vorbereitung"
+  related?: string[];   // IDs verwandter Rechner → "Verwandte Rechner"
+  keywords?: string[];  // Vorbereitung für spätere Suche
+  icon?: string;        // bestehende Icon-Komponente (Kartenanatomie unverändert)
+}
+
+export interface Subgroup {            // Rechtsgebiet / Prozessart
+  id: string; title: string; descriptor?: string;
+  clusters?: { label: string; items: CalculatorCard[] }[]; // nur Zivilprozess
+  items?: CalculatorCard[];
+}
+
+export interface DoctrinalClass {      // "Verfahrensrecht" | "Materielles Recht"
+  id: string; title: string; lede?: string; subgroups: Subgroup[];
+}
+
+export interface Pillar {              // I | II | III
+  id: 'fristen' | 'berechnungen' | 'werkzeuge';
+  numeral: 'I' | 'II' | 'III';
+  eyebrow: string; title: string; lede: string;
+  classes?: DoctrinalClass[];   // Säule I (zwei Klassen)
+  subgroups?: Subgroup[];       // Säulen II/III (direkt Rechtsgebiete)
+}
+
+// ─── Hilfen ───────────────────────────────────────────────────────────────
+
+const norm = (label: string): NormRef => ({ label, url: '', verified: false });
+
+// ─── Karten (bestehende Routen aus src/App.tsx, Tags zeichengenau) ────────
+
+const KARTEN: Record<string, CalculatorCard> = {
+  'zpo-fristen': {
+    id: 'zpo-fristen',
+    category: 'ZIVILPROZESS · ZPO',
+    title: 'ZPO-Fristen',
+    description: 'Verfahrens- und Rechtsmittelfristen mit Gerichtsferien und Stillstand.',
+    status: 'geprüft',
+    norms: [norm('Art. 142–147 ZPO')],
+    href: '/rechner/zpo-fristen',
+    icon: 'clock',
+  },
+  'schkg-fristen': {
+    id: 'schkg-fristen',
+    category: 'ZIVILPROZESS · SCHKG',
+    title: 'Betreibungsfristen',
+    description: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
+    status: 'geprüft',
+    norms: [norm('Art. 56/63 SchKG'), norm('Art. 145 ZPO')],
+    href: '/rechner/schkg-fristen',
+    related: ['verzugszins'],
+    icon: 'clipboard',
+  },
+  'kuendigung-sperrfristen': {
+    id: 'kuendigung-sperrfristen',
+    category: 'ARBEITSRECHT · OR',
+    title: 'Kündigungs- & Sperrfristen',
+    description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis.',
+    status: 'geprüft',
+    norms: [norm('Art. 335c OR'), norm('Art. 336c OR')],
+    href: '/rechner/kuendigung#kuendigung',
+    related: ['lohnfortzahlung'],
+    icon: 'document',
+  },
+  lohnfortzahlung: {
+    id: 'lohnfortzahlung',
+    category: 'ARBEITSRECHT · OR',
+    title: 'Lohnfortzahlung (kant. Skala)',
+    description: 'Lohnfortzahlung bei unverschuldeter Verhinderung nach kantonaler Skala (Basel/Bern/Zürich).',
+    status: 'geprüft',
+    norms: [norm('Art. 324a OR')],
+    href: '/rechner/kuendigung#lohnfortzahlung',
+    related: ['kuendigung-sperrfristen'],
+    icon: 'document',
+  },
+  verzugszins: {
+    id: 'verzugszins',
+    category: 'ZINSEN & VERZUG · OR',
+    title: 'Verzugszins',
+    description: 'Verzugszins bei Schuldnerverzug — Zeitraum, Satz und Betrag.',
+    status: 'geprüft',
+    norms: [norm('Art. 104 OR')],
+    href: '/rechner/verzugszins',
+    related: ['schkg-fristen'],
+    icon: 'percent',
+  },
+  mietrecht: {
+    id: 'mietrecht',
+    category: 'MIETRECHT · OR',
+    title: 'Mietrecht — Fristen',
+    description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume — mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
+    status: 'geprüft',
+    norms: [norm('Art. 266a–o OR'), norm('Art. 257d/f OR')],
+    href: '/rechner/mietrecht',
+    icon: 'house',
+  },
+  erbteilung: {
+    id: 'erbteilung',
+    category: 'ERBRECHT · ZGB',
+    title: 'Pflichtteil & verfügbare Quote',
+    description: 'Gesetzliche Erbteile, Pflichtteile und verfügbare Quote — mit Todesdatum-Weiche für die Revision 2023 und güterrechtlicher Vorstufe.',
+    status: 'geprüft',
+    norms: [norm('Art. 457 ff. ZGB'), norm('Art. 470 f. ZGB')],
+    href: '/rechner/erbteilung',
+    icon: 'scale',
+  },
+
+  // ── Platzhalter (geplant) ──
+  verwaltungsverfahren: {
+    id: 'verwaltungsverfahren',
+    category: 'VERWALTUNGSVERFAHREN',
+    title: 'Verwaltungsverfahren',
+    description: 'Fristen im Verwaltungsverfahren.',
+    status: 'geplant',
+    norms: [],
+    note: 'in Vorbereitung',
+  },
+  strafverfahren: {
+    id: 'strafverfahren',
+    category: 'STRAFVERFAHREN · STPO',
+    title: 'Strafverfahren (StPO)',
+    description: 'Fristen im Strafverfahren.',
+    status: 'geplant',
+    norms: [],
+    note: 'in Vorbereitung',
+  },
+  'or-verjaehrung': {
+    id: 'or-verjaehrung',
+    category: 'VERTRAGS-/SCHULDRECHT · OR',
+    title: 'Vertrags-/Schuldrecht (OR)',
+    description: 'Materielle Fristen des Obligationenrechts.',
+    status: 'geplant',
+    norms: [],
+    note: 'in Vorbereitung',
+  },
+  'erbrecht-fristen': {
+    id: 'erbrecht-fristen',
+    category: 'ERBRECHT · ZGB',
+    title: 'Erbrechtliche Fristen',
+    description: 'Materielle Fristen des Erbrechts (z. B. Ausschlagung).',
+    status: 'geplant',
+    norms: [],
+    note: 'in Vorbereitung',
+  },
+  tagerechner: {
+    id: 'tagerechner',
+    category: 'QUERSCHNITT',
+    title: 'Fristen-/Tagerechner',
+    description: 'Allgemeiner Tage- und Fristenrechner.',
+    status: 'geplant',
+    norms: [],
+    note: 'in Vorbereitung',
+  },
+};
+
+export function karte(id: string): CalculatorCard {
+  return KARTEN[id];
+}
+
+// ─── Säulen-Baum (Zielstruktur) ───────────────────────────────────────────
+
+export const PILLARS: Pillar[] = [
+  {
+    id: 'fristen',
+    numeral: 'I',
+    eyebrow: 'SÄULE I',
+    title: 'Fristen',
+    lede: 'Prozessuale und materielle Fristen — berechnet mit Stillstand, Ferien und Werktagsregeln.',
+    classes: [
+      {
+        id: 'verfahrensrecht',
+        title: 'Verfahrensrecht',
+        lede: 'Prozessuale Fristen — vom auslösenden Ereignis bis zum letzten Tag.',
+        subgroups: [
+          {
+            id: 'zivilprozess',
+            title: 'Zivilprozess',
+            clusters: [
+              { label: 'Gericht (ZPO)', items: [KARTEN['zpo-fristen']] },
+              { label: 'Betreibung & Konkurs (SchKG)', items: [KARTEN['schkg-fristen']] },
+            ],
+          },
+          { id: 'verwaltungsverfahren', title: 'Verwaltungsverfahren', items: [KARTEN['verwaltungsverfahren']] },
+          { id: 'strafverfahren', title: 'Strafverfahren (StPO)', items: [KARTEN['strafverfahren']] },
+        ],
+      },
+      {
+        id: 'materielles-recht',
+        title: 'Materielles Recht',
+        lede: 'Materielle Fristen — nach Rechtsgebiet.',
+        subgroups: [
+          { id: 'or-schuldrecht', title: 'Vertrags-/Schuldrecht (OR)', items: [KARTEN['or-verjaehrung']] },
+          { id: 'arbeitsrecht-fristen', title: 'Arbeitsrecht', items: [KARTEN['kuendigung-sperrfristen']] },
+          { id: 'mietrecht', title: 'Mietrecht', items: [KARTEN['mietrecht']] },
+          { id: 'erbrecht-fristen', title: 'Erbrecht', items: [KARTEN['erbrecht-fristen']] },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'berechnungen',
+    numeral: 'II',
+    eyebrow: 'SÄULE II',
+    title: 'Berechnungen & Ansprüche',
+    lede: 'Geldansprüche und Quoten — nachvollziehbar hergeleitet, Franken für Franken.',
+    subgroups: [
+      { id: 'zinsen-verzug', title: 'Zinsen & Verzug', items: [KARTEN['verzugszins']] },
+      { id: 'arbeitsrecht-berechnungen', title: 'Arbeitsrecht', items: [KARTEN['lohnfortzahlung']] },
+      { id: 'erbrecht-berechnungen', title: 'Erbrecht', items: [KARTEN['erbteilung']] },
+    ],
+  },
+  {
+    id: 'werkzeuge',
+    numeral: 'III',
+    eyebrow: 'SÄULE III',
+    title: 'Werkzeuge',
+    lede: 'Querschnitts-Hilfen rund um Daten und Fristen.',
+    subgroups: [
+      { id: 'tagerechner', title: 'Fristen-/Tagerechner', items: [KARTEN['tagerechner']] },
+    ],
+  },
+];
