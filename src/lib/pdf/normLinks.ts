@@ -32,6 +32,9 @@ export type NormLink = {
  * im Register steht (dann wird im PDF bewusst KEIN Link gerendert).
  */
 export function normLink(artikel: string): NormLink | null {
+  // Schlusstitel-Artikel (z. B. «Art. 15 SchlT ZGB») haben auf Fedlex eigene
+  // Anker – ein #art_15-Link zeigte fälschlich auf Art. 15 ZGB. Kein Link.
+  if (/\bSchlT\b/.test(artikel)) return null;
   const k = artikel.match(KUERZEL);
   if (!k) return null;
   const erlass = k[1];

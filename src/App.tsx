@@ -6,6 +6,7 @@ import { RechnerKuendigung } from './pages/RechnerKuendigung';
 import { RechnerZpo } from './pages/RechnerZpo';
 import { RechnerVerzugszins } from './pages/RechnerVerzugszins';
 import { RechnerSchkg } from './pages/RechnerSchkg';
+import { RechnerErbteilung } from './pages/RechnerErbteilung';
 import { RechnerStub } from './pages/RechnerStub';
 import { Methodik } from './pages/Methodik';
 import { Ueber } from './pages/Ueber';
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/rechner/zpo-fristen" element={<RechnerZpo />} />
         <Route path="/rechner/verzugszins" element={<RechnerVerzugszins />} />
         <Route path="/rechner/schkg-fristen" element={<RechnerSchkg />} />
+        <Route path="/rechner/erbteilung" element={<RechnerErbteilung />} />
         {/* Noch nicht implementierte Rechner (geplant / in Vorbereitung) */}
         <Route path="/rechner/:slug" element={<RechnerStub />} />
         <Route path="/methodik" element={<Methodik />} />

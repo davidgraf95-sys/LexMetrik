@@ -1,0 +1,16 @@
+import { ErbteilungForm } from '../components/forms/ErbteilungForm';
+import { RechnerKopf } from '../components/layout/RechnerKopf';
+import { getCalculator } from '../lib/calculators';
+
+// Erbteilungs- und Pflichtteilrechner unter /rechner/erbteilung.
+export function RechnerErbteilung() {
+  const calc = getCalculator('erbteilung')!;
+  return (
+    <div className="space-y-6">
+      <RechnerKopf calc={calc} />
+      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+        <ErbteilungForm />
+      </div>
+    </div>
+  );
+}

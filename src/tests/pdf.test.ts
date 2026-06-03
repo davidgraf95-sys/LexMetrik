@@ -5,6 +5,7 @@ import { berechneSchkgFrist } from '../lib/schkgFristen';
 import { berechneLohnfortzahlung } from '../lib/lohnfortzahlung';
 import { berechneSperrfristen } from '../lib/sperrfristen';
 import { berechneVerzugszins } from '../lib/verzugszins';
+import { berechneErbteilung } from '../lib/erbteilung';
 import { buildPdfModel, modelText, type PdfDocConfig, type PdfModel } from '../lib/pdf/pdfModel';
 import { winAnsiSicher, istWinAnsiSicher, typografie, datumNormalisieren } from '../lib/pdf/winansi';
 import { zpoPdfCitations, zpoPdfErgebnis } from '../lib/pdf/zpoPdf';
@@ -98,12 +99,27 @@ const schkgConfig = (): PdfDocConfig => ({
     'keine Rechtsberatung. Stillstand-Regime und auslösendes Ereignis sind im Einzelfall zu prüfen.',
 });
 
+const erbrechtConfig = (): PdfDocConfig => ({
+  title: 'Erbteilung & Pflichtteil (ZGB)',
+  domain: 'erbrecht',
+  fileBase: 'Erbteilung-Pflichtteil',
+  inputs: { 'Todesdatum': '2025-06-01', 'Zivilstand': 'Verheiratet', 'Lebende Kinder': '2' },
+  sections: [{
+    titel: 'Erbteilung & Pflichtteil (Art. 457 ff., 462, 470 ff. ZGB)',
+    ergebnis: berechneErbteilung({ todesdatum: '2025-06-01', zivilstand: 'verheiratet', kinderLebend: 2 }),
+  }],
+  disclaimer:
+    'Automatisierte Orientierungsberechnung der gesetzlichen Erbteile, Pflichtteile und der verfügbaren Quote ' +
+    '(Art. 457 ff., 470 ff. ZGB) – keine Rechtsberatung. Quoten/Wertansprüche, keine Realteilung.',
+});
+
 const alleConfigs: [string, PdfDocConfig][] = [
   ['zpo-tagesfrist', zpoConfig({})],
   ['zpo-monatsfrist-sommer', zpoConfig({ ereignis: '2025-07-01', einheit: 'monate', laenge: 1 })],
   ['arbeitsrecht-kombiniert', arbeitsrechtConfig()],
   ['verzugszins', verzugszinsConfig()],
   ['schkg-rechtsvorschlag', schkgConfig()],
+  ['erbteilung', erbrechtConfig()],
 ];
 
 const modelle: [string, PdfDocConfig, PdfModel][] = alleConfigs.map(([name, cfg]) => [name, cfg, buildPdfModel(cfg, FIX)]);
@@ -203,6 +219,12 @@ describe('Kein Cross-Domain-Bleed', () => {
   it('SchKG-PDF ohne Arbeitsrecht-Bausteine', () => {
     for (const begriff of ['Lohnfortzahlung', 'GAV', 'Skala']) {
       expect(text('schkg-rechtsvorschlag')).not.toContain(begriff);
+    }
+  });
+
+  it('Erbrecht-PDF ohne fremde Bausteine', () => {
+    for (const begriff of ['Lohnfortzahlung', 'GAV', 'ZPO', 'SchKG', 'Verzugszins', 'Betreibungsferien', 'Gerichtsferien']) {
+      expect(text('erbteilung')).not.toContain(begriff);
     }
   });
 });

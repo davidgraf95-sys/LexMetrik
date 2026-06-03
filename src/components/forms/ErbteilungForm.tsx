@@ -1,0 +1,351 @@
+import { useState } from 'react';
+import type { ErbteilungInput, Zivilstand, Gueterstand, ErbteilungErgebnis } from '../../types/erbrecht';
+import { berechneErbteilung } from '../../lib/erbteilung';
+import { fmtB, zahl, istNull } from '../../lib/bruch';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
+import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PdfExportButton } from '../PdfExport';
+
+const ERB_DISCLAIMER =
+  'Automatisierte Orientierungsberechnung der gesetzlichen Erbteile, Pflichtteile und der verfügbaren Quote ' +
+  '(Art. 457 ff., 462, 470 ff. ZGB; Revision in Kraft seit 1.1.2023) – keine Rechtsberatung. Berechnet werden ' +
+  'Quoten bzw. Wertansprüche, nicht die Realteilung. Hinzurechnungen zur Pflichtteilsberechnungsmasse ' +
+  '(Art. 475/476 ZGB), Ausgleichung (Art. 626 ff. ZGB), Herabsetzung (Art. 522 ff. ZGB) und internationale ' +
+  'Sachverhalte (IPRG) sind nicht modelliert. Die güterrechtliche Auseinandersetzung ist vereinfacht abgebildet; ' +
+  'Ersatzforderungen und Mehrwertanteile (Art. 206/209 ZGB) bleiben unberücksichtigt. Verbindlich ist der ' +
+  'Wortlaut auf Fedlex (SR 210); der konkrete Sachverhalt ist fachlich zu prüfen.';
+
+const ZIVILSTAENDE: { code: Zivilstand; label: string }[] = [
+  { code: 'verheiratet', label: 'Verheiratet' },
+  { code: 'eingetragene_partnerschaft', label: 'Eingetragene Partnerschaft' },
+  { code: 'ledig', label: 'Ledig / verwitwet / geschieden' },
+];
+
+const GUETERSTAENDE: { code: Gueterstand; label: string }[] = [
+  { code: 'errungenschaftsbeteiligung', label: 'Errungenschaftsbeteiligung (ordentlicher Güterstand)' },
+  { code: 'guetertrennung', label: 'Gütertrennung' },
+  { code: 'guetergemeinschaft', label: 'Gütergemeinschaft' },
+];
+
+type ElternStatus = 'lebt' | 'vorverstorben_mit' | 'vorverstorben_ohne' | 'keine_angabe';
+
+const ELTERN_OPTIONEN: { code: ElternStatus; label: string }[] = [
+  { code: 'keine_angabe', label: '– keine Angabe / nicht vorhanden –' },
+  { code: 'lebt', label: 'lebt' },
+  { code: 'vorverstorben_mit', label: 'vorverstorben, hat Nachkommen (Geschwister des Erblassers)' },
+  { code: 'vorverstorben_ohne', label: 'vorverstorben, ohne Nachkommen' },
+];
+
+function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
+  return (
+    <div className="space-y-1">
+      <label className="block text-sm font-medium text-ink-700">{label}</label>
+      {children}
+      {hint && <p className="text-xs text-ink-500">{hint}</p>}
+    </div>
+  );
+}
+
+const inputCls = 'lc-input';
+const fmtCHF = (x: number) => x.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+export function ErbteilungForm() {
+  const [todesdatum, setTodesdatum] = useState('2025-06-01');
+  const [zivilstand, setZivilstand] = useState<Zivilstand>('verheiratet');
+  const [scheidung, setScheidung] = useState(false);
+  const [scheidung472, setScheidung472] = useState(false);
+  const [kinderLebend, setKinderLebend] = useState(2);
+  const [staemme, setStaemme] = useState<{ enkel: number }[]>([]);
+  const [vater, setVater] = useState<ElternStatus>('keine_angabe');
+  const [mutter, setMutter] = useState<ElternStatus>('keine_angabe');
+  const [dritteParentel, setDritteParentel] = useState(false);
+  const [gueterrechtAn, setGueterrechtAn] = useState(false);
+  const [gueterstand, setGueterstand] = useState<Gueterstand>('errungenschaftsbeteiligung');
+  const [betraege, setBetraege] = useState<{ eigengut: string; vorschlagE: string; vorschlagU: string; gesamtgut: string; vermoegen: string; direkt: string }>(
+    { eigengut: '', vorschlagE: '', vorschlagU: '', gesamtgut: '', vermoegen: '', direkt: '' },
+  );
+
+  const elternteil = (s: ElternStatus) =>
+    s === 'keine_angabe' ? undefined : { lebt: s === 'lebt', stammNachkommen: s === 'vorverstorben_mit' };
+  const num = (s: string) => (s.trim() === '' ? undefined : Number(s));
+
+  const hatErste = kinderLebend > 0 || staemme.some((s) => s.enkel > 0);
+
+  const input: ErbteilungInput = {
+    todesdatum,
+    zivilstand,
+    scheidungHaengig: zivilstand !== 'ledig' ? scheidung : undefined,
+    scheidung472Erfuellt: zivilstand !== 'ledig' && scheidung ? scheidung472 : undefined,
+    kinderLebend,
+    kinderVorverstorben: staemme.length ? staemme : undefined,
+    vater: elternteil(vater),
+    mutter: elternteil(mutter),
+    dritteParentelVorhanden: dritteParentel,
+    ...(gueterrechtAn
+      ? betraege.direkt.trim() !== ''
+        ? { nachlassDirekt: num(betraege.direkt) }
+        : {
+            gueterstand,
+            eigengutErblasser: num(betraege.eigengut),
+            vorschlagErblasser: num(betraege.vorschlagE),
+            vorschlagUeberlebender: num(betraege.vorschlagU),
+            gesamtgut: num(betraege.gesamtgut),
+            vermoegenErblasser: num(betraege.vermoegen),
+          }
+      : {}),
+  };
+
+  const fehler: string[] = [];
+  if (!todesdatum) fehler.push('Bitte das Todesdatum angeben (Recht-Schalter, Art. 15/16 SchlT ZGB).');
+  if (!Number.isInteger(kinderLebend) || kinderLebend < 0) fehler.push('Anzahl lebender Kinder: ganze Zahl ≥ 0.');
+  staemme.forEach((s, i) => { if (!Number.isInteger(s.enkel) || s.enkel < 0) fehler.push(`Stamm ${i + 1}: Anzahl Nachkommen als ganze Zahl ≥ 0.`); });
+
+  let ergebnis: ErbteilungErgebnis | null = null;
+  if (fehler.length === 0) {
+    try { ergebnis = berechneErbteilung(input); } catch (err) { fehler.push((err as Error).message); }
+  }
+
+  const eingaben: Record<string, string> = {
+    'Todesdatum': todesdatum,
+    'Zivilstand': ZIVILSTAENDE.find((z) => z.code === zivilstand)?.label ?? zivilstand,
+    ...(zivilstand !== 'ledig' && scheidung ? { 'Scheidungsverfahren hängig': scheidung472 ? 'ja, Voraussetzungen Art. 472 ZGB erfüllt' : 'ja, Voraussetzungen Art. 472 ZGB nicht erfüllt' } : {}),
+    'Lebende Kinder': String(kinderLebend),
+    ...(staemme.length ? { 'Stämme vorverstorbener Kinder': staemme.map((s, i) => `Stamm ${i + 1}: ${s.enkel} Nachkommen`).join('; ') } : {}),
+    ...(vater !== 'keine_angabe' ? { 'Vater': ELTERN_OPTIONEN.find((o) => o.code === vater)!.label } : {}),
+    ...(mutter !== 'keine_angabe' ? { 'Mutter': ELTERN_OPTIONEN.find((o) => o.code === mutter)!.label } : {}),
+    ...(dritteParentel ? { '3. Parentel vorhanden': 'ja' } : {}),
+    ...(ergebnis?.nachlassChf != null ? { 'Nachlass (CHF)': fmtCHF(ergebnis.nachlassChf) } : {}),
+  };
+
+  const pdfConfig: PdfDocConfig = {
+    title: 'Erbteilung & Pflichtteil (ZGB)',
+    domain: 'erbrecht',
+    fileBase: 'Erbteilung-Pflichtteil',
+    inputs: eingaben,
+    sections: ergebnis ? [{ titel: 'Erbteilung & Pflichtteil (Art. 457 ff., 462, 470 ff. ZGB)', ergebnis }] : [],
+    disclaimer: ERB_DISCLAIMER,
+  };
+
+  const nachlass = ergebnis?.nachlassChf;
+
+  return (
+    <div className="space-y-6">
+      {/* Pflicht-Disclaimer */}
+      <details className="lc-notice-danger rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--danger-500)' }}>
+        <summary className="text-body-s text-danger-700 cursor-pointer">
+          <strong>Keine Rechtsberatung</strong> – Quoten-Orientierung (Art. 457 ff., 470 ff. ZGB, Revision 2023). Massgebend ist das Todesdatum.
+        </summary>
+        <p className="text-body-s text-danger-700 mt-2">{ERB_DISCLAIMER}</p>
+      </details>
+
+      {/* Grundangaben */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Field label="Todesdatum" hint="Recht-Schalter: bis 31.12.2022 altes Recht, ab 1.1.2023 neues Recht (Art. 15/16 SchlT ZGB)">
+          <input type="date" value={todesdatum} onChange={(e) => setTodesdatum(e.target.value)} className={inputCls} />
+        </Field>
+        <Field label="Zivilstand des Erblassers" hint="Eingetragene Partner sind Ehegatten gleichgestellt (Art. 462 ZGB)">
+          <select value={zivilstand} onChange={(e) => setZivilstand(e.target.value as Zivilstand)} className={inputCls}>
+            {ZIVILSTAENDE.map((z) => <option key={z.code} value={z.code}>{z.label}</option>)}
+          </select>
+        </Field>
+      </div>
+
+      {zivilstand !== 'ledig' && (
+        <div className="space-y-2">
+          <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+            <input type="checkbox" checked={scheidung} onChange={(e) => setScheidung(e.target.checked)} />
+            Scheidungs-/Auflösungsverfahren beim Tod hängig
+          </label>
+          {scheidung && (
+            <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700 pl-6">
+              <input type="checkbox" checked={scheidung472} onChange={(e) => setScheidung472(e.target.checked)} />
+              Voraussetzungen von Art. 472 ZGB erfüllt (gemeinsames Begehren oder ≥ 2 Jahre getrennt) → Pflichtteilsverlust
+            </label>
+          )}
+        </div>
+      )}
+
+      {/* 1. Parentel */}
+      <div className="space-y-3">
+        <p className="lc-overline">1. Parentel – Nachkommen (Art. 457 ZGB)</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Field label="Lebende Kinder (Anzahl)">
+            <input type="number" min={0} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls + ' w-28'} />
+          </Field>
+          <Field label="Vorverstorbene Kinder mit Nachkommen (Stämme)" hint="Deren Nachkommen treten nach Stämmen ein (Art. 457 Abs. 3)">
+            <div className="space-y-2">
+              {staemme.map((s, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <span className="text-body-s text-ink-500 w-20">Stamm {i + 1}:</span>
+                  <input type="number" min={0} step={1} value={s.enkel}
+                    onChange={(e) => setStaemme((arr) => arr.map((x, j) => (j === i ? { enkel: Number(e.target.value) } : x)))}
+                    className={inputCls + ' w-24'} />
+                  <span className="text-body-s text-ink-500">Nachkommen</span>
+                  <button type="button" onClick={() => setStaemme((arr) => arr.filter((_, j) => j !== i))}
+                    className="text-body-s text-danger-700 hover:underline">entfernen</button>
+                </div>
+              ))}
+              <button type="button" onClick={() => setStaemme((arr) => [...arr, { enkel: 1 }])}
+                className="text-body-s px-3 py-1.5 bg-surface border border-line rounded-md text-ink-700 hover:bg-brass-100">
+                + Stamm hinzufügen
+              </button>
+            </div>
+          </Field>
+        </div>
+      </div>
+
+      {/* 2./3. Parentel – nur relevant ohne Nachkommen */}
+      {!hatErste && (
+        <div className="space-y-3">
+          <p className="lc-overline">2. Parentel – elterlicher Stamm (Art. 458 ZGB)</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Field label="Vater">
+              <select value={vater} onChange={(e) => setVater(e.target.value as ElternStatus)} className={inputCls}>
+                {ELTERN_OPTIONEN.map((o) => <option key={o.code} value={o.code}>{o.label}</option>)}
+              </select>
+            </Field>
+            <Field label="Mutter">
+              <select value={mutter} onChange={(e) => setMutter(e.target.value as ElternStatus)} className={inputCls}>
+                {ELTERN_OPTIONEN.map((o) => <option key={o.code} value={o.code}>{o.label}</option>)}
+              </select>
+            </Field>
+          </div>
+          {vater === 'keine_angabe' && mutter === 'keine_angabe' && zivilstand === 'ledig' && (
+            <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+              <input type="checkbox" checked={dritteParentel} onChange={(e) => setDritteParentel(e.target.checked)} />
+              3. Parentel vorhanden (Grosseltern oder deren Nachkommen, Art. 459 ZGB)
+            </label>
+          )}
+        </div>
+      )}
+
+      {/* Güterrecht (optional) */}
+      <div className="border border-line rounded-lg overflow-hidden">
+        <button type="button" onClick={() => setGueterrechtAn(!gueterrechtAn)}
+          className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left">
+          <span className="text-sm font-medium text-ink-700">Güterrechtliche Vorstufe / Nachlass in CHF (optional)</span>
+          <span className="text-ink-400">{gueterrechtAn ? '▲' : '▼'}</span>
+        </button>
+        {gueterrechtAn && (
+          <div className="p-4 space-y-4">
+            <Field label="Nachlass direkt angeben (CHF)" hint="Alternativ unten güterrechtlich herleiten">
+              <input type="number" value={betraege.direkt} onChange={(e) => setBetraege((b) => ({ ...b, direkt: e.target.value }))} className={inputCls + ' w-44'} />
+            </Field>
+            {betraege.direkt.trim() === '' && (
+              <>
+                <Field label="Güterstand">
+                  <select value={gueterstand} onChange={(e) => setGueterstand(e.target.value as Gueterstand)} className={inputCls}>
+                    {GUETERSTAENDE.map((s) => <option key={s.code} value={s.code}>{s.label}</option>)}
+                  </select>
+                </Field>
+                {gueterstand === 'errungenschaftsbeteiligung' && (
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <Field label="Eigengut Erblasser (CHF)"><input type="number" value={betraege.eigengut} onChange={(e) => setBetraege((b) => ({ ...b, eigengut: e.target.value }))} className={inputCls} /></Field>
+                    <Field label="Vorschlag Erblasser (CHF)" hint="negativ = Rückschlag (zählt 0, Art. 210 Abs. 2)"><input type="number" value={betraege.vorschlagE} onChange={(e) => setBetraege((b) => ({ ...b, vorschlagE: e.target.value }))} className={inputCls} /></Field>
+                    <Field label="Vorschlag Überlebender (CHF)"><input type="number" value={betraege.vorschlagU} onChange={(e) => setBetraege((b) => ({ ...b, vorschlagU: e.target.value }))} className={inputCls} /></Field>
+                  </div>
+                )}
+                {gueterstand === 'guetertrennung' && (
+                  <Field label="Vermögen des Erblassers (CHF)"><input type="number" value={betraege.vermoegen} onChange={(e) => setBetraege((b) => ({ ...b, vermoegen: e.target.value }))} className={inputCls + ' w-44'} /></Field>
+                )}
+                {gueterstand === 'guetergemeinschaft' && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <Field label="Eigengut Erblasser (CHF)"><input type="number" value={betraege.eigengut} onChange={(e) => setBetraege((b) => ({ ...b, eigengut: e.target.value }))} className={inputCls} /></Field>
+                    <Field label="Gesamtgut (CHF)"><input type="number" value={betraege.gesamtgut} onChange={(e) => setBetraege((b) => ({ ...b, gesamtgut: e.target.value }))} className={inputCls} /></Field>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        )}
+      </div>
+
+      {fehler.length > 0 && (
+        <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
+          <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
+          {fehler.map((f, i) => <p key={i} className="text-sm text-danger-700">• {f}</p>)}
+        </div>
+      )}
+
+      {ergebnis && (
+        <div className="space-y-4">
+          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+
+          {/* Eckdaten */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="rounded-xl border border-line bg-surface-raised p-4">
+              <p className="text-xs text-ink-500 mb-1">Rechtsstand</p>
+              <p className="text-lg font-semibold text-ink-900">{ergebnis.rechtsstand === 'neu' ? 'Neues Recht (ab 1.1.2023)' : 'Altes Recht (bis 31.12.2022)'}</p>
+            </div>
+            <div className="rounded-xl border border-line bg-surface-raised p-4">
+              <p className="text-xs text-ink-500 mb-1">Verfügbare Quote</p>
+              <p className="text-lg font-semibold text-ink-900">{fmtB(ergebnis.verfuegbareQuote)}{nachlass != null ? ` · CHF ${fmtCHF(zahl(ergebnis.verfuegbareQuote) * nachlass)}` : ''}</p>
+            </div>
+            <div className="rounded-xl border border-line bg-surface-raised p-4">
+              <p className="text-xs text-ink-500 mb-1">Nachlass</p>
+              <p className="text-lg font-semibold text-ink-900">{nachlass != null ? `CHF ${fmtCHF(nachlass)}` : 'nur Quoten (keine Beträge erfasst)'}</p>
+            </div>
+          </div>
+
+          {/* Erben-Tabelle */}
+          <div className="lc-card p-5 overflow-x-auto">
+            <p className="lc-overline mb-3">Erbteile & Pflichtteile</p>
+            <table className="w-full text-body-s">
+              <thead>
+                <tr className="text-left text-ink-500 border-b border-line">
+                  <th className="py-1.5 pr-3 font-medium">Erbe</th>
+                  <th className="py-1.5 pr-3 font-medium">Gesetzlicher Erbteil</th>
+                  <th className="py-1.5 pr-3 font-medium">Pflichtteil</th>
+                  {nachlass != null && <th className="py-1.5 pr-3 font-medium num">Erbteil (CHF)</th>}
+                  {nachlass != null && <th className="py-1.5 font-medium num">Pflichtteil (CHF)</th>}
+                </tr>
+              </thead>
+              <tbody>
+                {ergebnis.erben.map((e) => (
+                  <tr key={e.bezeichnung} className="border-b border-line last:border-0">
+                    <td className="py-1.5 pr-3 text-ink-900">{e.bezeichnung}{e.anzahl ? ` — ${e.anzahl} Personen, je:` : ''}</td>
+                    <td className="py-1.5 pr-3 num text-ink-900">{fmtB(e.erbteil)}</td>
+                    <td className="py-1.5 pr-3 num">{istNull(e.pflichtteil) ? <span className="text-ink-400">– kein PT</span> : <span className="text-ink-900">{fmtB(e.pflichtteil)}</span>}</td>
+                    {nachlass != null && <td className="py-1.5 pr-3 num text-ink-700">{fmtCHF(zahl(e.erbteil) * nachlass)}</td>}
+                    {nachlass != null && <td className="py-1.5 num text-ink-700">{istNull(e.pflichtteil) ? '–' : fmtCHF(zahl(e.pflichtteil) * nachlass)}</td>}
+                  </tr>
+                ))}
+                <tr className="bg-surface">
+                  <td className="py-1.5 pr-3 font-semibold text-ink-900">Verfügbare Quote</td>
+                  <td className="py-1.5 pr-3" />
+                  <td className="py-1.5 pr-3 num font-semibold text-brass-700">{fmtB(ergebnis.verfuegbareQuote)}</td>
+                  {nachlass != null && <td className="py-1.5 pr-3" />}
+                  {nachlass != null && <td className="py-1.5 num font-semibold text-brass-700">{fmtCHF(zahl(ergebnis.verfuegbareQuote) * nachlass)}</td>}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Quoten-Balken: gebundener Teil vs. verfügbare Quote */}
+          <div className="lc-card p-5">
+            <p className="lc-overline mb-3">Gebundene vs. verfügbare Quote</p>
+            <div className="flex h-7 rounded-md overflow-hidden border border-line">
+              {ergebnis.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => {
+                const breite = zahl(e.pflichtteil) * (e.anzahl ?? 1) * 100;
+                return (
+                  <div key={e.bezeichnung} className="bg-warn-bg border-r border-line flex items-center justify-center"
+                    style={{ width: `${breite}%` }} title={`${e.bezeichnung}: Pflichtteil ${fmtB(e.pflichtteil)}${e.anzahl ? ` × ${e.anzahl}` : ''}`}>
+                    <span className="text-[10px] text-warn-700 truncate px-1">{fmtB(e.pflichtteil)}{e.anzahl ? `×${e.anzahl}` : ''}</span>
+                  </div>
+                );
+              })}
+              <div className="flex items-center justify-center flex-1" style={{ background: 'var(--brass-100)' }}
+                title={`Verfügbare Quote: ${fmtB(ergebnis.verfuegbareQuote)}`}>
+                <span className="text-[10px] text-brass-700 font-semibold">verfügbar {fmtB(ergebnis.verfuegbareQuote)}</span>
+              </div>
+            </div>
+            <p className="text-body-s text-ink-500 mt-2">Gelb: Pflichtteile (gebundene Quote) · Gold: frei verfügbar (Testament/Erbvertrag)</p>
+          </div>
+
+          <ErgebnisAnzeige titel="Erbteilung & Pflichtteil (Art. 457 ff., 462, 470 ff. ZGB)" ergebnis={ergebnis} />
+          <PdfExportButton config={pdfConfig} />
+        </div>
+      )}
+    </div>
+  );
+}
