@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { LohnfortzahlungForm } from '../components/forms/LohnfortzahlungForm';
 import { KuendigungSperrForm } from '../components/forms/KuendigungSperrForm';
 import { KombinierteAnsicht } from '../components/forms/KombinierteAnsicht';
@@ -13,11 +14,23 @@ const TABS: { id: Tab; label: string; sub: string }[] = [
   { id: 'kombiniert', label: 'Kombiniert', sub: 'A + B + C' },
 ];
 
+// Abschnitt-Anker der Startseiten-Split-Karten → Tab-Vorauswahl.
+const HASH_TAB: Record<string, Tab> = {
+  '#lohnfortzahlung': 'a',
+  '#kuendigung': 'b_c',
+};
+
 // Arbeitsrechts-Rechner unter /rechner/kuendigung. Berechnungslogik UNVERÄNDERT;
 // nur der Seitenrahmen (Kopf + Tabs + Disclaimer) ist neu.
 export function RechnerKuendigung() {
   const calc = getCalculator('kuendigung')!;
-  const [tab, setTab] = useState<Tab>('a');
+  const { hash } = useLocation();
+  const [tab, setTab] = useState<Tab>(HASH_TAB[hash] ?? 'a');
+
+  // Hash-Navigation (z. B. «Verwandte Rechner»-Link von der anderen Split-Karte).
+  useEffect(() => {
+    if (HASH_TAB[hash]) setTab(HASH_TAB[hash]);
+  }, [hash]);
 
   return (
     <div className="space-y-6">
