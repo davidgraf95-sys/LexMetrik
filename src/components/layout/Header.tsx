@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { LexmetrikSiegel, LexmetrikWortmarke } from './Logo';
 
 // Header (Design-Doc 5.1): sticky, paper-Grund, untere Hairline, Wortmarke + Navigation.
 const NAV = [
@@ -12,9 +13,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-20 bg-paper backdrop-blur border-b border-line">
       <div className="max-w-content mx-auto px-5 sm:px-6 h-16 flex items-center justify-between gap-4">
-        <Link to="/" className="inline-flex items-center gap-2" aria-label="LegalCalc — Startseite">
-          <span className="lc-seal" aria-hidden="true">§</span>
-          <span className="lc-word">LegalCalc</span>
+        <Link to="/" className="inline-flex items-center gap-2 no-underline" aria-label="Lexmetrik — Startseite">
+          <LexmetrikSiegel size={30} />
+          <LexmetrikWortmarke className="text-[1.35rem]" />
         </Link>
         <nav className="flex items-center gap-1 sm:gap-2">
           {NAV.map((n) => {

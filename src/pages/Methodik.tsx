@@ -1,14 +1,14 @@
-// Optionale Seite "Wie LegalCalc rechnet" (provisorisch).
+// Optionale Seite "Wie Lexmetrik rechnet" (provisorisch).
 export function Methodik() {
   return (
     <div className="space-y-6 max-w-2xl">
       <div className="space-y-2">
         <p className="text-xs font-semibold text-ink-400 uppercase tracking-wide">Methodik</p>
-        <h1 className="text-2xl font-bold text-ink-900">Wie LegalCalc rechnet</h1>
+        <h1 className="text-2xl font-bold text-ink-900">Wie Lexmetrik rechnet</h1>
       </div>
       <div className="space-y-4 text-sm text-ink-600 leading-relaxed">
         <p>
-          LegalCalc bildet die einschlägigen Normen als reine, getestete Berechnungsfunktionen ab.
+          Lexmetrik bildet die einschlägigen Normen als reine, getestete Berechnungsfunktionen ab.
           Jede Rechenregel ist mit ihrem Gesetzesartikel kommentiert; jeder Schritt erscheint mit
           Eingangsgrössen, angewandter Norm und Zwischenergebnis im Rechenweg.
         </p>

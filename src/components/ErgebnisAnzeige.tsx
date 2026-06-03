@@ -28,7 +28,7 @@ function ergebnisAlsText(titel: string, e: Berechnungsergebnis): string {
   e.rechenweg.forEach((s, i) => z.push(`${i + 1}. ${s.beschreibung}: ${s.zwischenergebnis}`));
   if (e.normverweise.length) z.push('', 'Normverweise: ' + e.normverweise.map((n) => n.artikel).join(', '));
   if (e.warnungen.length) { z.push('', 'Hinweise / Vorbehalte:'); e.warnungen.forEach((w) => z.push('– ' + w)); }
-  z.push('', 'Orientierungsberechnung – keine Rechtsberatung (LegalCalc).');
+  z.push('', 'Orientierungsberechnung – keine Rechtsberatung (Lexmetrik).');
   return z.join('\n');
 }
 
