@@ -221,6 +221,41 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
     aussage: 'Lastenbereinigung (Art. 140 SchKG): Die Bestreitung muss nicht substantiiert werden.',
     verifiziert: false,
   },
+
+  // Mietrecht (Art. 253 ff. OR)
+  BGE_137_III_208: {
+    aktenzeichen: 'BGE 137 III 208',
+    aussage:
+      'Absolute Empfangstheorie für den Zugang der Kündigung; Schutz der Familienwohnung auch bei Geschäftsräumen, die zugleich Familienwohnung sind.',
+    verifiziert: false,
+  },
+  BGE_140_III_244: {
+    aktenzeichen: 'BGE 140 III 244',
+    aussage: 'Zugang nach absoluter Empfangstheorie; die zivilprozessuale 7-Tage-Zustellfiktion gilt im materiellen Recht nicht.',
+    verifiziert: false,
+  },
+  BGE_119_II_147: {
+    aktenzeichen: 'BGE 119 II 147',
+    aussage: 'Die Zahlungsfrist nach Art. 257d OR beginnt nach der relativen Empfangstheorie.',
+    verifiziert: false,
+  },
+  BGE_107_II_189: {
+    aktenzeichen: 'BGE 107 II 189',
+    aussage: 'Relative Empfangstheorie bei der Mietzinserhöhung (Art. 269d OR).',
+    verifiziert: false,
+  },
+  BGer_4C_375_2000: {
+    aktenzeichen: 'BGer 4C.375/2000',
+    aussage:
+      'Wichtiger Grund (Art. 266g OR) bejaht bei panikartigen Angstzuständen nach Einbruch (ernsthafte Krankheit); Ende unter Wahrung der gesetzlichen Frist.',
+    verifiziert: false,
+  },
+  BGer_5A_691_2023: {
+    aktenzeichen: 'BGer 5A_691/2023',
+    aussage:
+      'Monatsfristen knüpfen am Tag des fristauslösenden Ereignisses an (nicht am Folgetag) – einheitliche Methode für materielles Recht und Prozessrecht.',
+    verifiziert: false,
+  },
 };
 
 /** Liefert einen Rechtsprechungshinweis aus dem zentralen Register. */

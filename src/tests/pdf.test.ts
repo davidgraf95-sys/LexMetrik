@@ -6,6 +6,7 @@ import { berechneLohnfortzahlung } from '../lib/lohnfortzahlung';
 import { berechneSperrfristen } from '../lib/sperrfristen';
 import { berechneVerzugszins } from '../lib/verzugszins';
 import { berechneErbteilung } from '../lib/erbteilung';
+import { berechneMietkuendigung } from '../lib/mietrecht';
 import { buildPdfModel, modelText, type PdfDocConfig, type PdfModel } from '../lib/pdf/pdfModel';
 import { winAnsiSicher, istWinAnsiSicher, typografie, datumNormalisieren } from '../lib/pdf/winansi';
 import { zpoPdfCitations, zpoPdfErgebnis } from '../lib/pdf/zpoPdf';
@@ -113,6 +114,22 @@ const erbrechtConfig = (): PdfDocConfig => ({
     '(Art. 457 ff., 470 ff. ZGB) – keine Rechtsberatung. Quoten/Wertansprüche, keine Realteilung.',
 });
 
+const mietrechtConfig = (): PdfDocConfig => ({
+  title: 'Mietrecht – Kündigungstermin-Berechnung',
+  domain: 'mietrecht',
+  fileBase: 'Mietrecht-Kuendigung',
+  inputs: { 'Mietobjekt': 'Wohnräume', 'Zugang der Kündigung': '2025-06-23', 'Kanton': 'AG' },
+  sections: [{
+    titel: 'Kündigungstermine und -fristen (Art. 253 ff. OR)',
+    ergebnis: berechneMietkuendigung({
+      kuendigungsart: 'ordentlich', objekt: 'wohnung', zugang: '2025-06-23', kanton: 'AG', partei: 'mieter',
+    }),
+  }],
+  disclaimer:
+    'Automatisierte Orientierungsberechnung der Kündigungstermine im Mietrecht (Art. 253 ff. OR) – keine ' +
+    'Rechtsberatung. Ortsübliche Termine sind Tatfrage; verbindlich ist die Schlichtungsbehörde.',
+});
+
 const alleConfigs: [string, PdfDocConfig][] = [
   ['zpo-tagesfrist', zpoConfig({})],
   ['zpo-monatsfrist-sommer', zpoConfig({ ereignis: '2025-07-01', einheit: 'monate', laenge: 1 })],
@@ -120,6 +137,7 @@ const alleConfigs: [string, PdfDocConfig][] = [
   ['verzugszins', verzugszinsConfig()],
   ['schkg-rechtsvorschlag', schkgConfig()],
   ['erbteilung', erbrechtConfig()],
+  ['mietrecht', mietrechtConfig()],
 ];
 
 const modelle: [string, PdfDocConfig, PdfModel][] = alleConfigs.map(([name, cfg]) => [name, cfg, buildPdfModel(cfg, FIX)]);
@@ -225,6 +243,12 @@ describe('Kein Cross-Domain-Bleed', () => {
   it('Erbrecht-PDF ohne fremde Bausteine', () => {
     for (const begriff of ['Lohnfortzahlung', 'GAV', 'ZPO', 'SchKG', 'Verzugszins', 'Betreibungsferien', 'Gerichtsferien']) {
       expect(text('erbteilung')).not.toContain(begriff);
+    }
+  });
+
+  it('Mietrecht-PDF ohne fremde Bausteine', () => {
+    for (const begriff of ['Lohnfortzahlung', 'SchKG', 'Betreibungsferien', 'Gerichtsferien', 'Pflichtteil']) {
+      expect(text('mietrecht')).not.toContain(begriff);
     }
   });
 });
