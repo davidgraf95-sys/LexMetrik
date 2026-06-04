@@ -64,6 +64,17 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
   }
+
+  /* Druck: UI-Chrome ausblenden, Inhalt auf Weiss — Juristinnen drucken.
+     (Rechenweg/Annahmen vor dem Drucken aufklappen; PDF-Export bleibt der
+     präzisere Weg.) */
+  @media print {
+    header, footer, nav, button, .lc-btn, .lc-live { display: none !important; }
+    body { background: #fff; }
+    .lc-card, [class*='shadow'] { box-shadow: none !important; }
+    .lc-reveal { animation: none !important; }
+    a { color: inherit; text-decoration: none; }
+  }
 }
 
 @layer components {
