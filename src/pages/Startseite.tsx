@@ -1,9 +1,52 @@
 import { Link } from 'react-router-dom';
 import { SEKTIONEN, ALLE_KARTEN } from '../lib/startseiteConfig';
 import { Katalog, SectionHead } from '../components/Katalog';
+import { StufenSchalter } from '../components/StufenSchalter';
 
 // Basis-Seite: zeigt nur die allgemeinen Rechner (tier 'frei').
 // Spezialisierte Rechner stehen im Experten-Panel unter /fachpersonen.
+
+// Teaser für das Experten-Panel — invertierte Ink-Fläche mit Messing-Akzenten
+// («Pro»-Signal), Highlight-Chips und Kennzahlen aus der zentralen Config.
+function ExpertenTeaser() {
+  const experte = ALLE_KARTEN.filter((k) => k.tier === 'experte');
+  const geprueft = experte.filter((k) => k.status === 'geprüft');
+  const highlights = [
+    ...geprueft.map((k) => k.title),
+    'Rechtsmittelfristen Bundesgericht', 'Strafrechtliche Verjährung', 'Arrest — Prosequierungsfristen',
+  ].slice(0, 6);
+
+  return (
+    <section className="relative overflow-hidden rounded-2xl p-8 sm:p-12" style={{ background: 'var(--ink-900)' }}>
+      {/* Messskala als Ablesekante auf dunklem Grund */}
+      <span className="scale-rule absolute left-8 right-8 top-0" aria-hidden />
+      <div className="max-w-reading space-y-4">
+        <p className="lc-overline" style={{ color: 'var(--brass-300)' }}>Experten-Panel</p>
+        <h2 className="font-display font-semibold text-h1 leading-tight" style={{ color: 'var(--paper)' }}>
+          Werkzeuge für die anwaltliche Praxis.
+        </h2>
+        <p className="text-body-l" style={{ color: 'var(--ink-300)' }}>
+          Verfahrens- und Rechtsmittelfristen, Verjährung, Betreibung und Konkurs, Zuständigkeit —
+          derselbe nachvollziehbare Rechenweg, zugeschnitten auf Fachpersonen.
+        </p>
+        <div className="flex flex-wrap gap-1.5 pt-1">
+          {highlights.map((t) => (
+            <span key={t} className="rounded-full px-3 py-1 text-body-s"
+              style={{ color: 'var(--paper)', boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--paper) 25%, transparent)' }}>
+              {t}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-3">
+          <Link to="/fachpersonen" className="lc-btn-brass no-underline">Zum Experten-Panel →</Link>
+          <p className="num text-body-s" style={{ color: 'var(--ink-400)' }}>
+            {experte.length} Rechner · {geprueft.length} geprüft
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function Startseite() {
   const karten = ALLE_KARTEN.filter((k) => k.tier === 'frei');
@@ -14,15 +57,8 @@ export function Startseite() {
     <div className="space-y-16">
       {/* Hero */}
       <section className="space-y-5 max-w-reading">
-        {/* Eyebrow als Sprungmarken zu den Sektionen */}
-        <nav aria-label="Sektionen" className="lc-overline flex flex-wrap gap-x-2 gap-y-1">
-          {sektionen.map((s, i) => (
-            <span key={s.id} className="inline-flex gap-x-2">
-              {i > 0 && <span aria-hidden className="text-ink-300">·</span>}
-              <a href={`#${s.id}`} className="text-ink-500 hover:text-brass-700 no-underline">{s.title}</a>
-            </span>
-          ))}
-        </nav>
+        {/* Stufenwahl: Basis ↔ Experten-Panel */}
+        <StufenSchalter />
         <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.5rem] sm:text-display">
           Schweizer Rechtsfristen und Ansprüche — transparent berechnet.
         </h1>
@@ -36,15 +72,22 @@ export function Startseite() {
           Lexmetrik rät nicht — es rechnet. Feste Rechenregeln statt Sprachmodell: gleiche Eingaben
           ergeben immer dasselbe Ergebnis.
         </p>
-        {/* Verweis auf das Experten-Panel */}
-        <p className="text-body-s text-ink-500">
-          Spezialisierte Rechner für die anwaltliche Praxis finden Sie im{' '}
-          <Link to="/fachpersonen" className="text-brass-700 hover:text-brass-600 no-underline font-medium">Experten-Panel →</Link>
-        </p>
+        {/* Eyebrow als Sprungmarken zu den Sektionen */}
+        <nav aria-label="Sektionen" className="lc-overline flex flex-wrap gap-x-2 gap-y-1 pt-1">
+          {sektionen.map((s, i) => (
+            <span key={s.id} className="inline-flex gap-x-2">
+              {i > 0 && <span aria-hidden className="text-ink-300">·</span>}
+              <a href={`#${s.id}`} className="text-ink-500 hover:text-brass-700 no-underline">{s.title}</a>
+            </span>
+          ))}
+        </nav>
       </section>
 
       {/* Katalog der Basis-Stufe */}
       <Katalog karten={karten} />
+
+      {/* Experten-Panel-Teaser: invertierte Fläche als Signal für die Pro-Stufe */}
+      <ExpertenTeaser />
 
       {/* Methodik / Vertrauens-Kacheln */}
       <section className="space-y-6">
