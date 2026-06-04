@@ -56,7 +56,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
       </div>
       <div>
         <p className="lc-overline">{card.rechtsgebiet}</p>
-        <H className="text-h3 font-display font-semibold text-ink-900 mt-1 hyphens-auto break-words text-balance" lang="de">{sansAmp(card.title)}</H>
+        <H className="text-h3 font-display font-semibold text-ink-900 mt-1 text-balance">{sansAmp(card.title)}</H>
       </div>
       <p className="text-body-s text-ink-500 leading-relaxed">{card.description}</p>
       {/* Konsolidierte Karten: abgedeckte Szenarien; geplante Optionen gedämpft */}
@@ -83,7 +83,6 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
           ))}
         </p>
       )}
-      <div className="flex-1" aria-hidden />
       {aktiv && card.norms.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
           {/* Norm-Pills: Anzeigetext unverändert; Link auf die amtliche
@@ -103,12 +102,14 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
       )}
       {/* Footer: CTA nur bei «geprüft»; der Status steht bereits im Badge oben
           (kein doppeltes «In Vorbereitung»). Eigene Hinweise (note) bleiben. */}
+      {/* Nur der CTA ist am Kartenboden verankert — der Höhenausgleich liegt
+          als ruhiger Abstand UNTER den Pills, nicht als Loch in der Karte. */}
       {aktiv ? (
-        <p className="text-body-s font-medium text-brass-700">
+        <p className="mt-auto pt-1 text-body-s font-medium text-brass-700">
           {card.modus === 'vorlage' ? 'Erstellen →' : 'Öffnen →'}
         </p>
       ) : card.note ? (
-        <p className="text-body-s font-medium text-ink-500">{card.note}</p>
+        <p className="mt-auto pt-1 text-body-s font-medium text-ink-500">{card.note}</p>
       ) : null}
     </article>
   );

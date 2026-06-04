@@ -42,12 +42,12 @@ function TypSektion({ sektion, numeral, karten }: { sektion: Sektion; numeral: s
                 <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
               </span>
             </span>
-            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight hyphens-auto break-words" lang="de">{sansAmp(sektion.title)}</h2>
+            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight text-balance">{sansAmp(sektion.title)}</h2>
             <span className="block text-body-l text-ink-600 max-w-reading">{sektion.lede}</span>
             <span className="scale-rule block mt-4" aria-hidden />
           </span>
         </summary>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 px-6 sm:px-10 pb-6 sm:pb-10 pt-2">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(340px,100%),1fr))] gap-6 px-6 sm:px-10 pb-6 sm:pb-10 pt-2">
           {sortiert.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
         </div>
       </details>
@@ -87,7 +87,7 @@ function BereichSektion({ bereich, numeral, karten }: {
                 <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
               </span>
             </span>
-            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight hyphens-auto break-words" lang="de">{sansAmp(bereich.title)}</h2>
+            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight text-balance">{sansAmp(bereich.title)}</h2>
             <span className="block text-body-l text-ink-600 max-w-reading">{bereich.lede}</span>
             <span className="scale-rule block mt-4" aria-hidden />
           </span>
@@ -101,7 +101,7 @@ function BereichSektion({ bereich, numeral, karten }: {
                 <div className="flex-1 h-px bg-line" />
                 <span className="lc-overline num text-ink-500">{g.karten.length}</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(min(340px,100%),1fr))] gap-6">
                 {g.karten.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
               </div>
             </div>
