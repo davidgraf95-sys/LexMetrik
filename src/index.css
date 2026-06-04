@@ -102,6 +102,15 @@
 
   .lc-card { @apply bg-surface border border-line rounded-lg shadow-md; }
 
+  /* Sanftes Auf-/Zuklappen der Katalog-Sektionen (progressive enhancement:
+     ::details-content + interpolate-size; ältere Browser klappen hart). */
+  :root { interpolate-size: allow-keywords; }
+  details.lc-sektion::details-content {
+    block-size: 0; overflow: clip;
+    transition: block-size var(--dur-slow) var(--ease), content-visibility var(--dur-slow) allow-discrete;
+  }
+  details.lc-sektion[open]::details-content { block-size: auto; }
+
   .lc-input {
     @apply w-full bg-well border border-line rounded-md text-base text-ink-900 transition-colors;
     padding: 12px 14px;

@@ -29,7 +29,7 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
   return (
     <section id={sektion.id} className="scroll-mt-28">
       {/* Sektion per Mausklick ein-/ausklappbar (Disclosure); standardmässig offen. */}
-      <details open className="group bg-surface rounded-2xl border border-line">
+      <details open className="lc-sektion group bg-surface rounded-2xl border border-line">
         <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
           {/* Öffner: römische Monospace-Eyebrow + Serif-Titel + Lede + Akzentlinie */}
           <span className="block space-y-2">
@@ -108,6 +108,17 @@ function Filterleiste(props: {
           </button>
         )}
       </div>
+      {/* Status-Legende: erklärt die Karten-Semantik einmalig */}
+      <p className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-500">
+        <span className="inline-flex items-center gap-1.5">
+          <span aria-hidden className="inline-block w-4 h-3 rounded-[3px] bg-surface-raised border border-line border-t-2 border-t-brass-500" />
+          Goldrand = geprüft, sofort nutzbar
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span aria-hidden className="inline-block w-4 h-3 rounded-[3px] bg-surface-raised border border-line opacity-50" />
+          gedämpft = in Vorbereitung
+        </span>
+      </p>
     </section>
   );
 }

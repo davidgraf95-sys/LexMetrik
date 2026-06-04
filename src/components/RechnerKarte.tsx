@@ -24,8 +24,8 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
     .filter((k) => k && k.status === 'geprüft' && k.href);
 
   return (
-    <article className={`relative h-full lc-card bg-surface-raised p-6 flex flex-col gap-3 transition-shadow ${
-      aktiv ? 'border-t-[3px] border-t-brass-500 hover:shadow-lg' : 'opacity-[0.74] cursor-default'
+    <article className={`relative h-full lc-card bg-surface-raised p-6 flex flex-col gap-3 transition-all duration-200 motion-reduce:transition-none motion-reduce:transform-none ${
+      aktiv ? 'border-t-[3px] border-t-brass-500 hover:shadow-lg hover:-translate-y-0.5' : 'opacity-[0.74] cursor-default'
     }`}>
       {aktiv && card.href && (
         <Link to={card.href} aria-label={`${card.title} öffnen`} className="absolute inset-0 rounded-lg" />
