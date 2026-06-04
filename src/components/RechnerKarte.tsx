@@ -44,10 +44,9 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
             <Icon name={card.icon} />
           </span>
         ) : <span />}
-        {/* Status «geplant» wird als «In Vorbereitung» angezeigt */}
-        <span className={`lc-badge ${aktiv ? 'lc-badge-ok' : 'lc-badge-soft'}`}>
-          {aktiv ? 'geprüft' : 'In Vorbereitung'}
-        </span>
+        {/* EIN dominantes Statussignal pro Karte: der Goldrand sagt «geprüft» —
+            das Wort-Badge erscheint nur dort, wo kein Rand sichtbar ist. */}
+        {!aktiv && <span className="lc-badge lc-badge-soft">In Vorbereitung</span>}
       </div>
       <div>
         <p className="lc-overline">{card.rechtsgebiet}</p>
