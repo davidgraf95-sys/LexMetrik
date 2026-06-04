@@ -18,13 +18,13 @@ const VERJ_DISCLAIMER =
   'Übergangsrecht für Altfälle vor dem 1.1.2020 (Art. 49 SchlT ZGB) sowie die Wirkung unter Mitverpflichteten ' +
   '(Art. 136 OR). Die Verjährung ist Einrede (Art. 142 OR); der konkrete Fall ist fachlich zu prüfen.';
 
-const REGIMES: { code: VerjaehrungRegime; label: string; hint: string }[] = [
-  { code: 'ordentlich', label: 'Ordentliche Forderung — 10 Jahre (Art. 127 OR)', hint: 'Auffangregel für vertragliche Forderungen ohne Sonderfrist' },
-  { code: 'kurz', label: 'Katalogforderung — 5 Jahre (Art. 128 OR)', hint: 'Miet-/Pacht-/Kapitalzinse, periodische Leistungen, Handwerk, Arzt, Anwalt, Arbeitsverhältnis' },
-  { code: 'delikt', label: 'Unerlaubte Handlung — 3 / 10 Jahre (Art. 60 Abs. 1 OR)', hint: 'Sach- und Vermögensschaden' },
-  { code: 'delikt_person', label: 'Unerlaubte Handlung, Personenschaden — 3 / 20 Jahre (Art. 60 Abs. 1bis OR)', hint: 'Tötung oder Körperverletzung' },
-  { code: 'vertrag_person', label: 'Vertraglicher Personenschaden — 3 / 20 Jahre (Art. 128a OR)', hint: 'Körperverletzung/Tötung aus Vertragsverletzung' },
-  { code: 'bereicherung', label: 'Ungerechtfertigte Bereicherung — 3 / 10 Jahre (Art. 67 OR)', hint: 'Rückforderung grundloser Zuwendungen' },
+const REGIMES: { code: VerjaehrungRegime; label: string; hint: string; rel: number; abs: number | null }[] = [
+  { code: 'ordentlich', label: 'Ordentliche Forderung — 10 Jahre (Art. 127 OR)', hint: 'Auffangregel für vertragliche Forderungen ohne Sonderfrist', rel: 10, abs: null },
+  { code: 'kurz', label: 'Katalogforderung — 5 Jahre (Art. 128 OR)', hint: 'Miet-/Pacht-/Kapitalzinse, periodische Leistungen, Handwerk, Arzt, Anwalt, Arbeitsverhältnis', rel: 5, abs: null },
+  { code: 'delikt', label: 'Unerlaubte Handlung — 3 / 10 Jahre (Art. 60 Abs. 1 OR)', hint: 'Sach- und Vermögensschaden', rel: 3, abs: 10 },
+  { code: 'delikt_person', label: 'Unerlaubte Handlung, Personenschaden — 3 / 20 Jahre (Art. 60 Abs. 1bis OR)', hint: 'Tötung oder Körperverletzung', rel: 3, abs: 20 },
+  { code: 'vertrag_person', label: 'Vertraglicher Personenschaden — 3 / 20 Jahre (Art. 128a OR)', hint: 'Körperverletzung/Tötung aus Vertragsverletzung', rel: 3, abs: 20 },
+  { code: 'bereicherung', label: 'Ungerechtfertigte Bereicherung — 3 / 10 Jahre (Art. 67 OR)', hint: 'Rückforderung grundloser Zuwendungen', rel: 3, abs: 10 },
 ];
 
 const U_TYPEN: { code: UnterbrechungsTyp; label: string }[] = [
@@ -59,6 +59,21 @@ function Field({ label, children, hint }: { label: string; children: React.React
 
 const inputCls = 'lc-input';
 const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
+
+// Eckdaten-Karte für eine Verjährungsfrist; die massgebliche (= frühere)
+// Frist erhält Goldrand und Badge.
+function FristKarte({ label, sub, wert, massgeblich }: { label: string; sub: string; wert: string; massgeblich: boolean }) {
+  return (
+    <div className={`rounded-xl border bg-surface-raised p-4 ${massgeblich ? 'border-brass-500 border-t-[3px]' : 'border-line'}`}>
+      <div className="flex items-start justify-between gap-2 mb-1">
+        <p className="text-xs text-ink-500">{label}</p>
+        {massgeblich && <span className="lc-badge lc-badge-ok shrink-0" style={{ background: 'var(--brass-100)', color: 'var(--brass-700)' }}>massgeblich</span>}
+      </div>
+      <p className="text-lg font-semibold text-ink-900 num">{wert}</p>
+      <p className="text-xs text-ink-400 mt-0.5">{sub}</p>
+    </div>
+  );
+}
 
 export function VerjaehrungForm() {
   const heute = format(new Date(), 'yyyy-MM-dd');
@@ -239,17 +254,25 @@ export function VerjaehrungForm() {
         <div className="space-y-4">
           <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
 
-          {/* Eckdaten */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {/* Eckdaten — relative und absolute Frist getrennt; die massgebliche trägt das Badge */}
+          <div className={`grid grid-cols-1 sm:grid-cols-2 ${hatAbsolut ? 'lg:grid-cols-4' : 'sm:grid-cols-3'} gap-3`}>
+            <FristKarte
+              label={hatAbsolut ? `Relative Frist — ${R.rel} Jahre` : `Frist — ${R.rel} Jahre`}
+              sub={`ab ${beginnLabel}`}
+              wert={ergebnis.relativEndeISO ? fmtISO(ergebnis.relativEndeISO) : 'steht still (Art. 138 Abs. 1)'}
+              massgeblich={hatAbsolut && ergebnis.massgeblicheFrist === 'relativ'}
+            />
+            {hatAbsolut && (
+              <FristKarte
+                label={`Absolute Frist — ${R.abs} Jahre`}
+                sub={`ab ${absolutLabel}`}
+                wert={ergebnis.absolutEndeISO ? fmtISO(ergebnis.absolutEndeISO) : '–'}
+                massgeblich={ergebnis.massgeblicheFrist === 'absolut'}
+              />
+            )}
             <div className="rounded-xl border border-line bg-surface-raised p-4">
               <p className="text-xs text-ink-500 mb-1">Verjährungseintritt</p>
-              <p className="text-lg font-semibold text-ink-900">{ergebnis.verjaehrungISO ? `${fmtISO(ergebnis.verjaehrungISO)} · 24.00 Uhr` : 'steht still (Art. 138 Abs. 1)'}</p>
-            </div>
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
-              <p className="text-xs text-ink-500 mb-1">{hatAbsolut ? 'Relative / absolute Frist' : 'Frist'}</p>
-              <p className="text-lg font-semibold text-ink-900 num">
-                {hatAbsolut ? `${fmtISO(ergebnis.relativEndeISO)} / ${fmtISO(ergebnis.absolutEndeISO)}` : fmtISO(ergebnis.relativEndeISO)}
-              </p>
+              <p className="text-lg font-semibold text-ink-900">{ergebnis.verjaehrungISO ? `${fmtISO(ergebnis.verjaehrungISO)} · 24.00 Uhr` : 'noch offen'}</p>
             </div>
             <div className="rounded-xl border border-line bg-surface-raised p-4">
               <p className="text-xs text-ink-500 mb-1">Am Stichtag ({fmtISO(stichtag)})</p>

@@ -40,6 +40,17 @@ describe('Verjährung – Grundregime (Art. 127/128/60/67 OR)', () => {
     expect(r.relativEndeISO).toBe('2027-03-01');  // Mo
     expect(r.absolutEndeISO).toBe('2026-05-11');  // 10.05.2026 = So → Mo (Art. 78)
     expect(r.verjaehrungISO).toBe('2026-05-11');
+    expect(r.massgeblicheFrist).toBe('absolut');
+    expect(r.ergebnis).toContain('absolute Frist');
+    expect(r.rechenweg.some((s) => s.beschreibung.includes('relative vs. absolute'))).toBe(true);
+  });
+
+  it('Delikt: relative Frist massgeblich, wenn sie früher endet', () => {
+    const r = berechneVerjaehrung(base({
+      regime: 'delikt', beginnRelativ: '2024-03-01', beginnAbsolut: '2023-01-10',
+    }));
+    expect(r.massgeblicheFrist).toBe('relativ');
+    expect(r.verjaehrungISO).toBe('2027-03-01');
   });
 
   it('Delikt Personenschaden: absolute Frist 20 Jahre (Art. 60 Abs. 1bis)', () => {

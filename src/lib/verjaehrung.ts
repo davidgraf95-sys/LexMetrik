@@ -54,6 +54,7 @@ export type VerjaehrungErgebnis = Berechnungsergebnis & {
   relativEndeISO?: string;   // Ende der relativen/einheitlichen Frist (nach Modifikatoren)
   absolutEndeISO?: string;   // Ende der absoluten Frist (falls Regime eine kennt)
   verjaehrungISO?: string;   // massgebliches Ende (frühere der beiden, werktagsverschoben)
+  massgeblicheFrist?: 'relativ' | 'absolut'; // welche Frist das Ende bestimmt
   verjaehrtAmStichtag?: boolean;
   verzichtBisISO?: string;   // Einredeverzicht wirkt bis (Art. 141)
   gehemmtTage?: number;
@@ -306,10 +307,36 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
 
   // ── Massgebliches Ende: frühere der beiden Fristen, werktagsverschoben ──
   let verjaehrung: Date | null = null;
+  let massgeblicheFrist: 'relativ' | 'absolut' | undefined;
   if (offeneHemmungSeit) {
     verjaehrung = absolutEnde; // nur die absolute Frist kann noch ablaufen
+    massgeblicheFrist = absolutEnde ? 'absolut' : undefined;
   } else if (relativEnde) {
-    verjaehrung = absolutEnde && isBefore(absolutEnde, relativEnde) ? absolutEnde : relativEnde;
+    if (absolutEnde && isBefore(absolutEnde, relativEnde)) {
+      verjaehrung = absolutEnde;
+      massgeblicheFrist = 'absolut';
+    } else {
+      verjaehrung = relativEnde;
+      massgeblicheFrist = 'relativ';
+    }
+  }
+
+  // Expliziter Vergleichsschritt, sobald beide Fristen parallel laufen
+  if (relativEnde && absolutEnde) {
+    rechenweg.push({
+      beschreibung: 'Massgebliches Fristende – relative vs. absolute Frist',
+      zwischenergebnis: `Relative Frist endet am ${fmt(relativEnde)}, absolute Frist am ${fmt(absolutEnde)}. ` +
+        `Massgeblich ist das frühere Ende — hier die ${massgeblicheFrist === 'absolut' ? 'absolute' : 'relative'} Frist (${fmt(verjaehrung!)}). ` +
+        'Die relative Frist kann nie über die absolute hinauslaufen.',
+      normen: R.normen,
+    });
+  } else if (offeneHemmungSeit && absolutEnde) {
+    rechenweg.push({
+      beschreibung: 'Massgebliches Fristende – nur absolute Frist bestimmbar',
+      zwischenergebnis: `Die relative Frist steht prozessbedingt still (Art. 138 Abs. 1 OR); ` +
+        `unabhängig davon läuft die absolute Frist und endet am ${fmt(absolutEnde)} — sie bleibt einstweilen massgeblich.`,
+      normen: [...R.normen, N_138_1],
+    });
   }
 
   let verschoben: Date | null = null;
@@ -382,10 +409,14 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     N_142,
   ];
 
+  // Bei Zwei-Fristen-Regimes die massgebliche Frist im Ergebnis benennen
+  const fristZusatz = R.absolutJahre != null && massgeblicheFrist
+    ? ` Massgeblich ist die ${massgeblicheFrist === 'absolut' ? `absolute Frist (${R.absolutJahre} Jahre ab ${R.absolutLabel})` : `relative Frist (${R.relativJahre} Jahre ab ${R.beginnLabel})`}.`
+    : '';
   const ergebnisText = verschoben
     ? verjaehrt
-      ? `Verjährt: Die Verjährung ist mit Ablauf des ${fmt(verschoben)} eingetreten (Stichtag ${fmt(stichtag)}). Sie ist als Einrede geltend zu machen (Art. 142 OR).`
-      : `Nicht verjährt: Die Verjährung tritt mit unbenütztem Ablauf des ${fmt(verschoben)} ein${verzichtBis ? `; zufolge Einredeverzichts ist die Einrede bis ${fmt(verzichtBis)} ausgeschlossen` : ''}.`
+      ? `Verjährt: Die Verjährung ist mit Ablauf des ${fmt(verschoben)} eingetreten (Stichtag ${fmt(stichtag)}).${fristZusatz} Sie ist als Einrede geltend zu machen (Art. 142 OR).`
+      : `Nicht verjährt: Die Verjährung tritt mit unbenütztem Ablauf des ${fmt(verschoben)} ein.${fristZusatz}${verzichtBis ? ` Zufolge Einredeverzichts ist die Einrede bis ${fmt(verzichtBis)} ausgeschlossen.` : ''}`
     : `Die Verjährung steht prozessbedingt still (Art. 138 Abs. 1 OR)${absolutEnde ? `; spätestens massgeblich bleibt die absolute Frist per ${fmt(werktagsEnde(absolutEnde, input.kanton))}` : ''}.`;
 
   return {
@@ -398,6 +429,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     relativEndeISO: relativEnde ? iso(werktagsEnde(relativEnde, input.kanton)) : undefined,
     absolutEndeISO: absolutEnde ? iso(werktagsEnde(absolutEnde, input.kanton)) : undefined,
     verjaehrungISO: verschoben ? iso(verschoben) : undefined,
+    massgeblicheFrist,
     verjaehrtAmStichtag: verjaehrt,
     verzichtBisISO: verzichtBis ? iso(verzichtBis) : undefined,
     gehemmtTage: gehemmtTage || undefined,
