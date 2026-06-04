@@ -1,39 +1,76 @@
+import { useMemo } from 'react';
 import type { VerzugszinsErgebnis } from '../lib/verzugszins';
 import { formatCHF } from '../lib/verzugszins';
 
-// Grafische Antwort für den Verzugszins: Perioden-Zeitstrahl + Kapital/Zins-Balken.
-// Mini-Perioden erhalten eine Mindestbreite; Markerpositionen werden aus denselben
-// Gewichten berechnet und bleiben dadurch exakt auf den Periodengrenzen.
-// Ereignisse an derselben Grenze werden zu einem nummerierten Marker zusammengefasst.
+// Grafische Antwort für den Verzugszins. Single Source of Truth: BEIDE Balken
+// rendern ausschliesslich aus e.segmente und den Engine-Summen — keine eigene
+// Rechenlogik in der Komponente.
+//
+// (A) Rate-Zeitstrahl: ein Abschnitt pro Segment, Breite strikt proportional
+//     zu tage/Gesamttage, Farbe eindeutig und konsistent PRO SATZ (nicht pro
+//     Index), Marker an den Ereignisgrenzen. Bei vorzeitiger Volltilgung füllt
+//     ein neutraler «getilgt»-Abschnitt die Achse bis zum Stichtag.
+// (B) Zusammensetzung: Streifenbreiten proportional zu Offenem Kapital bzw.
+//     Offenem Verzugszins; Werte identisch mit den Kennzahlen-Karten.
 
-const TINTS = ['var(--brass-100)', 'var(--brass-200)'];
+// Farbpalette pro Satz (in Reihenfolge des Auftretens); ink-700 bleibt lesbar.
+const SATZ_FARBEN = ['var(--brass-100)', 'var(--brass-300)', 'var(--sage-bg)', 'var(--slate-bg)', 'var(--warn-bg)', 'var(--brass-200)'];
+const GETILGT_FARBE = 'var(--paper-sunken)';
+
+type Abschnitt = { tage: number; label: string; farbe: string; title: string };
+type Marker = { pos: number; texte: string[] };
 
 export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
-  const segmente = e.segmente;
-  if (segmente.length === 0) return null;
-  const totalTage = segmente.reduce((s, x) => s + x.tage, 0) || 1;
+  const { abschnitte, marker, gesamtTage } = useMemo(() => {
+    const segmente = e.segmente;
+    // Eindeutige, konsistente Farbe pro Satz (Reihenfolge des Auftretens)
+    const saetze = Array.from(new Set(segmente.map((s) => s.satz)));
+    const farbe = (satz: number) => SATZ_FARBEN[saetze.indexOf(satz) % SATZ_FARBEN.length];
 
-  // Mindestbreite 3.5 % je Periode, sonst proportional zu den Tagen
-  const gewichte = segmente.map((s) => Math.max(s.tage, totalTage * 0.035));
-  const gewTotal = gewichte.reduce((a, b) => a + b, 0);
+    const abschnitte: Abschnitt[] = segmente.map((s) => ({
+      tage: s.tage,
+      label: `${s.satz}%`,
+      farbe: farbe(s.satz),
+      title: `${s.von} – ${s.bis} · ${s.tage} Tage · Kapitalbasis CHF ${formatCHF(s.kapital)} · ${s.satz}% · Zins CHF ${formatCHF(s.zins)}`,
+    }));
 
-  // Grenz-Ereignisse (Teilzahlung = Kapitalrückgang; Satzwechsel), je Grenze gebündelt
-  type Marker = { pos: number; texte: string[] };
-  const marker: Marker[] = [];
-  let kum = 0;
-  segmente.forEach((s, i) => {
-    kum += gewichte[i];
-    const next = segmente[i + 1];
-    if (!next) return;
-    const texte: string[] = [];
-    if (next.kapital < s.kapital) texte.push(`Teilzahlung am ${next.von}`);
-    if (next.satz !== s.satz) texte.push(`Zinssatz ${next.satz} % ab ${next.von}`);
-    if (texte.length) marker.push({ pos: (kum / gewTotal) * 100, texte });
-  });
+    // Vorzeitige Kapitaltilgung: neutraler Füll-Abschnitt bis zum Stichtag,
+    // damit die Achse (Verzugsbeginn → Stichtag) wahr bleibt. Nur wenn das
+    // Kapital tatsächlich getilgt ist (nicht bei 30E/360-Rundungsdifferenzen);
+    // danach läuft kein Zins mehr (kein Zinseszins, Art. 105 Abs. 3 OR).
+    const segmentTage = segmente.reduce((sum, s) => sum + s.tage, 0);
+    const fillerTage = e.kapitalOffen <= 0 ? e.tageTotal - segmentTage : 0;
+    if (fillerTage > 0 && segmente.length > 0) {
+      abschnitte.push({
+        tage: fillerTage,
+        label: 'getilgt',
+        farbe: GETILGT_FARBE,
+        title: `${segmente[segmente.length - 1].bis} – ${e.stichtag}: Kapital getilgt — kein weiterer Zinslauf`,
+      });
+    }
+    const gesamtTage = abschnitte.reduce((sum, a) => sum + a.tage, 0) || 1;
 
-  // Rechte Achse: letztes Periodenende (bei vorzeitiger Tilgung ≠ Stichtag)
-  const letzteBis = segmente[segmente.length - 1].bis;
-  const vorzeitigGetilgt = letzteBis !== e.stichtag;
+    // Marker an den Ereignisgrenzen (Teilzahlung = Kapitalrückgang; Satzwechsel),
+    // je Grenze gebündelt; Position strikt proportional zu den Segmenttagen.
+    const marker: Marker[] = [];
+    let kum = 0;
+    segmente.forEach((s, i) => {
+      kum += s.tage;
+      const next = segmente[i + 1];
+      const texte: string[] = [];
+      if (next) {
+        if (next.kapital < s.kapital) texte.push(`Teilzahlung am ${next.von}`);
+        if (next.satz !== s.satz) texte.push(`Zinssatz ${next.satz} % ab ${next.von}`);
+      } else if (fillerTage > 0) {
+        texte.push(`Kapital vollständig getilgt am ${s.bis}`);
+      }
+      if (texte.length) marker.push({ pos: (kum / gesamtTage) * 100, texte });
+    });
+
+    return { abschnitte, marker, gesamtTage };
+  }, [e]);
+
+  if (e.segmente.length === 0) return null;
 
   const total = e.totalOffen || 1;
   const kapAnteil = Math.max(0, Math.min(100, (e.kapitalOffen / total) * 100));
@@ -42,15 +79,15 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
     <div className="lc-card p-5 lc-reveal space-y-4">
       <p className="lc-overline">Zeitstrahl</p>
 
-      {/* Perioden-Leiste */}
+      {/* (A) Rate-Zeitstrahl */}
       <div>
         <div className={`relative ${marker.length > 0 ? 'mt-3' : ''}`}>
           <div className="flex h-11 rounded-md overflow-hidden border border-line">
-            {segmente.map((s, i) => (
-              <div key={i} title={`${s.von} – ${s.bis}: ${s.tage} Tage, ${s.satz} %, CHF ${formatCHF(s.zins)}`}
+            {abschnitte.map((a, i) => (
+              <div key={i} title={a.title}
                 className="flex items-center justify-center num text-body-s text-ink-700 min-w-0"
-                style={{ flexGrow: gewichte[i], flexBasis: 0, background: TINTS[i % 2] }}>
-                <span className="truncate px-1">{s.satz}%</span>
+                style={{ flexGrow: a.tage, flexBasis: 0, background: a.farbe }}>
+                <span className="truncate px-1">{a.label}</span>
               </div>
             ))}
           </div>
@@ -64,10 +101,11 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
             </div>
           ))}
         </div>
+        {/* Achse: Verzugsbeginn → Stichtag, Gesamttage in der Mitte */}
         <div className="flex justify-between mt-1.5 num text-body-s text-ink-500">
           <span>{e.ersterZinstag}</span>
-          <span>{e.tageTotal} Tage</span>
-          <span>{letzteBis}{vorzeitigGetilgt ? ' (getilgt)' : ''}</span>
+          <span>{gesamtTage} Tage</span>
+          <span>{e.stichtag}</span>
         </div>
         {marker.length > 0 && (
           <div className="flex flex-col gap-1 mt-2 text-body-s text-ink-600">
@@ -81,14 +119,14 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
         )}
       </div>
 
-      {/* Kapital / Zins-Zusammensetzung */}
+      {/* (B) Zusammensetzung: Offenes Kapital + Offener Verzugszins = Total offen */}
       <div>
         <p className="lc-overline mb-1.5">Total offen: CHF {e.totalOffenCHF}</p>
         <div className="flex h-7 rounded-md overflow-hidden border border-line">
-          <div className="flex items-center justify-center text-paper num text-body-s" style={{ width: `${kapAnteil}%`, background: 'var(--ink-900)' }} title={`Kapital CHF ${e.kapitalOffenCHF}`}>
-            {kapAnteil > 18 ? `Kapital` : ''}
+          <div className="flex items-center justify-center text-paper num text-body-s" style={{ width: `${kapAnteil}%`, background: 'var(--ink-900)' }} title={`Offenes Kapital CHF ${e.kapitalOffenCHF}`}>
+            {kapAnteil > 18 ? 'Kapital' : ''}
           </div>
-          <div className="flex items-center justify-center num text-body-s text-ink-900" style={{ width: `${100 - kapAnteil}%`, background: 'var(--brass-400)' }} title={`Verzugszins CHF ${e.zinsOffenCHF}`}>
+          <div className="flex items-center justify-center num text-body-s text-ink-900" style={{ width: `${100 - kapAnteil}%`, background: 'var(--brass-400)' }} title={`Offener Verzugszins CHF ${e.zinsOffenCHF}`}>
             {100 - kapAnteil > 18 ? 'Zins' : ''}
           </div>
         </div>

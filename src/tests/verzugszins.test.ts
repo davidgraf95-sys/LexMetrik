@@ -121,3 +121,50 @@ describe('Verzugszins – Verzugsbeginn & Validierung', () => {
     expect(formatCHF(0)).toBe('0.00');
   });
 });
+
+// ─── Akzeptanzkriterien «Zeitstrahl-Überarbeitung» ───────────────────────────
+// Beide Balken rendern ausschliesslich aus r.segmente (Single Source of Truth);
+// diese Tests sichern die Segment-Engine, aus der die Visualisierung ableitet.
+
+describe('Verzugszins – Akzeptanzkriterien Zeitstrahl (Segment-Engine)', () => {
+  const akzeptanz = (over: Partial<VerzugszinsInput>): VerzugszinsInput => ({
+    kapital: 10000, verzugsbeginn: '2024-01-01', stichtag: '2025-01-01',
+    zinssatzProzent: 5, methode: 'act365', ...over,
+  });
+
+  it('1 – ereignislos: ein 5%-Segment über 366 Tage; Zins 501.37, Total 10\'501.37', () => {
+    const r = berechneVerzugszins(akzeptanz({}));
+    expect(r.tageTotal).toBe(366);
+    expect(r.segmente).toHaveLength(1);
+    expect(r.segmente[0]).toMatchObject({ tage: 366, satz: 5, kapital: 10000 });
+    expect(r.zinsTotal).toBe(501.37);
+    expect(r.kapitalOffen).toBe(10000);
+    expect(r.totalOffen).toBe(10501.37);
+  });
+
+  it('2 – Teilzahlung 4\'000 am 01.07.2024: Segmente 182/184 Tage, Anrechnung nach Art. 85 OR', () => {
+    const r = berechneVerzugszins(akzeptanz({
+      ereignisse: [{ typ: 'teilzahlung', datum: '2024-07-01', betrag: 4000 }],
+    }));
+    expect(r.segmente).toHaveLength(2);
+    expect(r.segmente[0]).toMatchObject({ tage: 182, satz: 5, kapital: 10000, zins: 249.32 });
+    expect(r.segmente[1]).toMatchObject({ tage: 184, satz: 5, kapital: 6249.32, zins: 157.52 });
+    // Summe der Segmenttage = Gesamttage
+    expect(r.segmente[0].tage + r.segmente[1].tage).toBe(r.tageTotal);
+    expect(r.zinsTotal).toBe(406.84);   // Verzugszins (gesamt)
+    expect(r.zinsGetilgt).toBe(249.32); // Bezahlter Zins
+    expect(r.zinsOffen).toBe(157.52);   // Offener Verzugszins
+    expect(r.kapitalOffen).toBe(6249.32);
+    expect(r.totalOffen).toBe(6406.84);
+  });
+
+  it('3 – Satzwechsel 5% → 8% ab 01.07.2024: zwei Segmente mit segmentweise korrektem Zins', () => {
+    const r = berechneVerzugszins(akzeptanz({
+      ereignisse: [{ typ: 'satzaenderung', datum: '2024-07-01', satz: 8 }],
+    }));
+    expect(r.segmente).toHaveLength(2);
+    expect(r.segmente[0]).toMatchObject({ tage: 182, satz: 5, zins: 249.32 });
+    expect(r.segmente[1]).toMatchObject({ tage: 184, satz: 8, zins: 403.29 });
+    expect(r.zinsTotal).toBe(652.61);
+  });
+});
