@@ -145,12 +145,14 @@ export function Startseite() {
           Schweizer Rechtsfristen und Ansprüche — transparent berechnet.
         </h1>
         <p className="text-body-l text-ink-600">
-          Lexmetrik berechnet Fristen und Ansprüche nach Schweizer Recht mit nachvollziehbarem
-          Rechenweg und exakten Normverweisen. Orientierung statt Black Box — clientseitig und deterministisch.
+          Lexmetrik berechnet Fristen und Ansprüche nach Schweizer Recht — mit nachvollziehbarem
+          Rechenweg und exakten Normverweisen. Jeder Schritt ist überprüfbar, jede angewandte Norm
+          direkt mit dem Gesetzestext verlinkt.
         </p>
         {/* Differenzierung: Berechnung statt KI */}
         <p className="text-body-s text-ink-500">
-          Lexmetrik rät nicht — es rechnet. Feste Rechenregeln statt Sprachmodell, jeder Schritt offen nachvollziehbar.
+          Lexmetrik rät nicht — es rechnet. Feste Rechenregeln statt Sprachmodell: gleiche Eingaben
+          ergeben immer dasselbe Ergebnis.
         </p>
       </section>
 
