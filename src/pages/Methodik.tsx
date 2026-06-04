@@ -1,25 +1,74 @@
-// Optionale Seite "Wie Lexmetrik rechnet" (provisorisch).
+// Seite «Methodik» — vertiefte Fassung; die Kurzfassung («So rechnet Lexmetrik»)
+// auf der Startseite bleibt davon unberührt.
+
+const ABSCHNITTE: { titel: string; text: string }[] = [
+  {
+    titel: 'Berechnung statt KI',
+    text:
+      'Lexmetrik ist kein Chatbot und kein Sprachmodell. Hinter jedem Rechner stehen fest ' +
+      'programmierte Regeln, die direkt aus Gesetz und Rechtsprechung abgeleitet sind. Daraus folgt ' +
+      'unmittelbar: Gleiche Eingaben ergeben immer dasselbe Ergebnis — heute, morgen und bei der ' +
+      'nächsten Person. Keine Wahrscheinlichkeiten, keine Tagesform, keine «wahrscheinlichste Antwort».',
+  },
+  {
+    titel: 'Jeder Schritt liegt offen',
+    text:
+      'Ein Ergebnis ohne Rechenweg ist für die juristische Arbeit wertlos. Lexmetrik zeigt deshalb ' +
+      'nicht nur das Resultat, sondern jeden Zwischenschritt: welcher Fristbeginn angesetzt wurde, ' +
+      'welche Gerichts- oder Betreibungsferien einberechnet oder übersprungen wurden, welche ' +
+      'Wochenend- oder Feiertagsregel gegriffen hat. Jeder Schritt ist einer konkreten Norm ' +
+      'zugeordnet, und jede angewandte Norm ist direkt mit dem amtlichen Gesetzestext auf Fedlex ' +
+      'verlinkt. Der vollständige Rechenweg lässt sich als PDF-Bericht ausgeben.',
+  },
+  {
+    titel: 'Strittige Rechtsfragen werden offengelegt, nicht versteckt',
+    text:
+      'Nicht jede Rechtsfrage ist eindeutig geklärt. Wo Lehre und Rechtsprechung uneins sind oder ' +
+      'eine Minderheitsmeinung vertretbar bleibt, entscheidet Lexmetrik das nicht stillschweigend ' +
+      'zugunsten einer Lesart. Solche Punkte werden ausgewiesen und kurz erläutert, damit die für ' +
+      'den konkreten Fall massgebliche Auffassung selbst gewählt werden kann.',
+  },
+  {
+    titel: 'Geprüft oder In Vorbereitung',
+    text:
+      'Ein Rechner erscheint erst dann als «geprüft» — mit Normverweisen und Direktlinks —, wenn die ' +
+      'zugrunde liegenden Regeln vollständig verifiziert sind. Rechner in Arbeit werden als ' +
+      '«In Vorbereitung» gekennzeichnet und ohne Normangaben gezeigt. Kantonale Skalen und ' +
+      'Gerichtspraxis sind als solche markiert und vor dem Produktiveinsatz zu prüfen ' +
+      '(Verifikations-Vorbehalt).',
+  },
+  {
+    titel: 'Ihre Daten bleiben bei Ihnen',
+    text:
+      'Alle Berechnungen laufen vollständig im Browser. Eingaben werden weder an einen Server ' +
+      'gesendet noch gespeichert — relevant insbesondere mit Blick auf das Berufsgeheimnis.',
+  },
+];
+
 export function Methodik() {
   return (
-    <div className="space-y-6 max-w-2xl">
+    <div className="space-y-10 max-w-reading">
       <div className="space-y-2">
-        <p className="text-xs font-semibold text-ink-400 uppercase tracking-wide">Methodik</p>
-        <h1 className="text-2xl font-bold text-ink-900">Wie Lexmetrik rechnet</h1>
+        <p className="lc-overline">Methodik</p>
+        <h1 className="text-h1 font-display font-semibold text-ink-900">Wie Lexmetrik rechnet</h1>
       </div>
-      <div className="space-y-4 text-sm text-ink-600 leading-relaxed">
-        <p>
-          Lexmetrik bildet die einschlägigen Normen als reine, getestete Berechnungsfunktionen ab.
-          Jede Rechenregel ist mit ihrem Gesetzesartikel kommentiert; jeder Schritt erscheint mit
-          Eingangsgrössen, angewandter Norm und Zwischenergebnis im Rechenweg.
-        </p>
-        <p>
-          Rechtsprechung und kantonale Skalen tragen einen sichtbaren Verifikations-Vorbehalt
-          («zu verifizieren»). Es werden keine Artikelnummern oder Aktenzeichen erfunden.
-          Alle Berechnungen laufen clientseitig im Browser, ohne Datenübertragung, deterministisch.
-        </p>
-        <p className="rounded-lg border border-line bg-warn-bg p-4 text-warn-700">
-          Die Ergebnisse sind eine rechnerische Orientierung und keine Rechtsberatung.
-        </p>
+
+      <div className="space-y-8">
+        {ABSCHNITTE.map((a) => (
+          <section key={a.titel} className="space-y-2">
+            <h2 className="text-h3 font-display font-semibold text-ink-900">{a.titel}</h2>
+            <p className="text-body-s text-ink-600 leading-relaxed">{a.text}</p>
+          </section>
+        ))}
+
+        <section className="lc-notice">
+          <p className="lc-overline mb-1">Grenzen</p>
+          <p className="text-body-s text-ink-600">
+            Lexmetrik liefert automatisierte Orientierungsberechnungen, keine Rechtsberatung.
+            Massgeblich sind Gesetz, GAV, Vertrag und der konkrete Sachverhalt. Für die Wahrung
+            einer Frist im Einzelfall ist allein die nutzende Person verantwortlich.
+          </p>
+        </section>
       </div>
     </div>
   );
