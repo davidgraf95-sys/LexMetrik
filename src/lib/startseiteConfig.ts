@@ -47,7 +47,9 @@ export interface VorlageCard extends BaseItem {
   art: VorlageArt;        // Dokument-Typ → bestimmt die Sektion
   schemaId?: string;      // Vorlagen-Schema (nur bei 'geprüft')
   formvorschrift?: string; // Kurzhinweis für die Karte, z. B. «Eigenhändig zu errichten»
-  output?: ('pdf' | 'docx')[];
+  // Angebotene Download-Formate; 'xlsx' ist vorbereitet (Renderer andockbar),
+  // wird aber noch nirgends ausgeliefert. Steuert die Buttons im Wizard.
+  output?: ('pdf' | 'docx' | 'xlsx')[];
 }
 
 export type CatalogItem = RechnerCard | VorlageCard;
@@ -553,7 +555,8 @@ const VORLAGEN: Record<string, VorlageCard> = {
     href: '/vorlagen/vorsorgeauftrag',
     schemaId: 'vorsorgeauftrag',
     formvorschrift: 'Eigenhändig abzuschreiben ODER öffentlich zu beurkunden',
-    output: ['pdf'],
+    // DOCX nur für den Beurkundungs-Entwurf — Gate im Wizard (Form-Vorrang)
+    output: ['pdf', 'docx'],
     keywords: ['Vorsorgeauftrag', 'Urteilsunfähigkeit', 'Personensorge', 'Vermögenssorge', 'KESB', 'Validierung', 'Beistandschaft'],
     related: ['patientenverfuegung', 'eigenhaendiges-testament'],
     icon: 'document',
@@ -576,7 +579,8 @@ const VORLAGEN: Record<string, VorlageCard> = {
     href: '/vorlagen/patientenverfuegung',
     schemaId: 'patientenverfuegung',
     formvorschrift: 'Schriftlich — ausdrucken, handschriftlich datieren und unterschreiben',
-    output: ['pdf'],
+    // Schriftform mit Unterschrift → DOCX unproblematisch (Pilot Teil II)
+    output: ['pdf', 'docx'],
     keywords: ['Patientenverfügung', 'medizinische Massnahmen', 'Urteilsunfähigkeit', 'Reanimation', 'Vertretungsperson', 'Organspende', 'Behandlungsziel'],
     related: ['vorsorgeauftrag'],
     icon: 'document',

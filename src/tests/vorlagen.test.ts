@@ -342,3 +342,28 @@ describe('Vorlage Vorsorgeauftrag', () => {
     });
   });
 });
+
+// ─── DOCX-Renderer (Teil II «Ausgabe & Export») ──────────────────────────────
+
+import { docxAbsaetze } from '../lib/vorlagen/vorlagenDocx';
+import { BANNER_UNTERSCHREIBEN } from '../lib/vorlagen/vorlagenPdf';
+
+describe('Vorlagen-DOCX (eine Quelle, mehrere Renderer)', () => {
+  it('deterministisch und inhaltsgleich mit dem Dokumentmodell (inkl. Banner)', () => {
+    const e = pvZusammenstellen(pv({ situationen: ['terminal'], ziel: 'palliativ' }));
+    const a1 = docxAbsaetze(e, BANNER_UNTERSCHREIBEN);
+    const a2 = docxAbsaetze(e, BANNER_UNTERSCHREIBEN);
+    expect(JSON.stringify(a1)).toBe(JSON.stringify(a2));
+    // Formhinweis sichtbar im Kopf
+    expect(a1[0]).toEqual({ typ: 'banner-titel', text: BANNER_UNTERSCHREIBEN.titel });
+    // Jeder Modell-Absatz erscheint im DOCX (identischer Inhalt)
+    const texte = a1.map((x) => x.text).join('\n');
+    e.dokument.absaetze.forEach((abs) => {
+      abs.text.split('\n').forEach((zeile) => expect(texte).toContain(zeile));
+      if (abs.ueberschrift) expect(texte).toContain(abs.ueberschrift);
+    });
+    expect(texte).toContain(e.dokument.titel);
+    expect(texte).toContain(e.dokument.disclaimer);
+    expect(texte).toContain(`Bausteine v${e.dokument.version}`);
+  });
+});

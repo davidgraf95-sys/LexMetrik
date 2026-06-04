@@ -322,6 +322,13 @@ export function VorlagePatientenverfuegung() {
               className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
               Entwurf als PDF
             </button>
+            {card?.modus === 'vorlage' && card.output?.includes('docx') && (
+              <button type="button" disabled={!bestaetigt || gates.blocker.length > 0}
+                onClick={async () => (await import('../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: BANNER_UNTERSCHREIBEN, dateiName: 'Patientenverfuegung-Entwurf.docx' })}
+                className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
+                Entwurf als Word (DOCX)
+              </button>
+            )}
             <button type="button" disabled={!bestaetigt || gates.blocker.length > 0} onClick={kopieren}
               className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
               {kopiert ? 'Kopiert ✓' : 'Text kopieren'}

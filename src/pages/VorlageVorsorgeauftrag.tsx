@@ -396,6 +396,14 @@ export function VorlageVorsorgeauftrag() {
               className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
               {eigenhaendig ? 'Mustertext als PDF' : 'Entwurf als PDF'}
             </button>
+            {/* Form-Gate hat Vorrang: Word nur für den Beurkundungs-Entwurf */}
+            {card?.modus === 'vorlage' && card.output?.includes('docx') && !eigenhaendig && (
+              <button type="button" disabled={!bestaetigt || gates.blocker.length > 0}
+                onClick={async () => (await import('../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: BANNER_VA_BEURKUNDUNG, dateiName: 'Vorsorgeauftrag-Entwurf-Beurkundung.docx' })}
+                className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
+                Entwurf als Word (DOCX)
+              </button>
+            )}
             <button type="button" disabled={!bestaetigt || gates.blocker.length > 0} onClick={kopieren}
               className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
               {kopiert ? 'Kopiert ✓' : 'Text kopieren'}
