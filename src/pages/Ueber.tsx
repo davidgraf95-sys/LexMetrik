@@ -28,6 +28,11 @@ export function Ueber() {
           Prüfung nimmt es niemandem ab, aber es liefert eine Grundlage, die sich kontrollieren
           lässt.
         </p>
+        <p>
+          Inzwischen deckt Lexmetrik beides ab: die Berechnung von Fristen, Beträgen und Quoten —
+          und die regelbasierte Zusammenstellung von Rechtsdokumenten aus geprüften Textbausteinen.
+          Beide Modi teilen dieselbe DNA: überprüfbar, normtreu, ohne Black Box.
+        </p>
         {/* Signatur — externe Verlinkung wie übrige externe Links (neues Tab) */}
         <p className="pt-2">
           <a

@@ -38,10 +38,22 @@ const ABSCHNITTE: { titel: string; text: string }[] = [
       '(Verifikations-Vorbehalt).',
   },
   {
+    titel: 'Wie Vorlagen entstehen',
+    text:
+      'Vorlagen entstehen nicht durch generierten Text, sondern durch regelbasierte Zusammenstellung ' +
+      'fester, juristisch vorformulierter Textbausteine — ohne Sprachmodell, ohne Wahrscheinlichkeiten. ' +
+      'Gleiche Eingaben ergeben dasselbe Dokument. Jeder aufgenommene Baustein wird im Bausteinprotokoll ' +
+      'mit seinem Auslöser und, sofern einschlägig, seiner Norm offengelegt; streitige oder optionale ' +
+      'Auslegungen werden angezeigt statt still aufgelöst. Vor jedem Download erklärt ein nicht ' +
+      'überspringbares Form-Gate die massgeblichen Formvorschriften — etwa Eigenhändigkeit oder ' +
+      'öffentliche Beurkundung — und was zu tun ist, damit das Dokument gültig wird. Das Ergebnis ' +
+      'ist ein Entwurf zur Orientierung, kein verbindliches Dokument.',
+  },
+  {
     titel: 'Ihre Daten bleiben bei Ihnen',
     text:
-      'Alle Berechnungen laufen vollständig im Browser. Eingaben werden weder an einen Server ' +
-      'gesendet noch gespeichert — relevant insbesondere mit Blick auf das Berufsgeheimnis.',
+      'Alle Berechnungen und Zusammenstellungen laufen vollständig im Browser. Eingaben werden weder ' +
+      'an einen Server gesendet noch gespeichert — relevant insbesondere mit Blick auf das Berufsgeheimnis.',
   },
 ];
 
@@ -64,9 +76,10 @@ export function Methodik() {
         <section className="lc-notice">
           <p className="lc-overline mb-1">Grenzen</p>
           <p className="text-body-s text-ink-600">
-            Lexmetrik liefert automatisierte Orientierungsberechnungen, keine Rechtsberatung.
-            Massgeblich sind Gesetz, GAV, Vertrag und der konkrete Sachverhalt. Für die Wahrung
-            einer Frist im Einzelfall ist allein die nutzende Person verantwortlich.
+            Lexmetrik liefert automatisierte Orientierungsberechnungen und Dokument-Entwürfe,
+            keine Rechtsberatung. Massgeblich sind Gesetz, GAV, Vertrag und der konkrete
+            Sachverhalt. Für die Wahrung einer Frist und die Einhaltung von Formvorschriften
+            im Einzelfall ist allein die nutzende Person verantwortlich.
           </p>
         </section>
       </div>
