@@ -35,10 +35,10 @@ export const CALCULATORS: Calculator[] = [
     normen: ['Art. 457 ff. ZGB', 'Art. 470 f. ZGB'], status: 'geprüft', icon: 'scale' },
   { slug: 'mietrecht', titel: 'Mietrecht — Fristen', kategorie: 'Mietrecht',
     kurzbeschrieb: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume — mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
-    normen: ['Art. 266a–o OR', 'Art. 257d/f OR'], status: 'geprüft', icon: 'house' },
+    normen: ['Art. 266a–o OR', 'Art. 257d OR', 'Art. 257f OR'], status: 'geprüft', icon: 'house' },
   { slug: 'schkg-fristen', titel: 'Betreibungsfristen', kategorie: 'SchKG',
     kurzbeschrieb: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
-    normen: ['Art. 56/63 SchKG', 'Art. 145 ZPO'], status: 'geprüft', icon: 'clipboard' },
+    normen: ['Art. 56 SchKG', 'Art. 63 SchKG', 'Art. 145 ZPO'], status: 'geprüft', icon: 'clipboard' },
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {

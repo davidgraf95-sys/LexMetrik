@@ -1,0 +1,41 @@
+// ─── Fedlex-Verlinkung (verifizierte Anker) ───────────────────────────────
+//
+// Verifizierte Fedlex-Basis-URLs (Systematische Rechtssammlung, konsolidierte,
+// in Kraft stehende Fassung, Sprache de). Kein ?version=-Parameter, damit der
+// Link stets die geltende Fassung auflöst.
+// SR 220 OR · SR 210 ZGB · SR 272 ZPO · SR 281.1 SchKG
+
+export const FEDLEX = {
+  OR:    'https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de',
+  ZGB:   'https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de',
+  ZPO:   'https://www.fedlex.admin.ch/eli/cc/2010/262/de',
+  SchKG: 'https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de',
+} as const;
+
+export type FedlexGesetz = keyof typeof FEDLEX;
+
+// Anker '#art_<nummer>'. Buchstaben-Artikel nutzen das Fedlex-Unterstrich-
+// Format: 335c → #art_335_c (empirisch gegen die id="art_…"-Anker des
+// konsolidierten Filestore-HTML, Stand 20250101, verifiziert — die Variante
+// ohne Unterstrich existiert dort NICHT). Spannen-/Folgeverweise (–, f., ff.)
+// verlinken den führenden Artikel.
+export function fedlexUrl(gesetz: FedlexGesetz, artikel: string | number): string {
+  const token = String(artikel).toLowerCase().replace(/\s+/g, '').replace(/^(\d+)([a-z])$/, '$1_$2');
+  return `${FEDLEX[gesetz]}#art_${token}`;
+}
+
+// Direktlink aus einem Normverweis-Text, z. B. 'Art. 335c Abs. 1 OR' →
+// OR-Basis + #art_335_c. Absatz-/Ziffer-Angaben ändern den Anker nicht;
+// massgeblich ist der führende Artikel.
+//
+// Fallback (Normentreue, nie auf geratene Anker verlinken):
+// - Schlusstitel (SchlT): eigener Nummernkreis, Anker nicht deterministisch →
+//   Gesetzes-Seite ohne Anker.
+// - Unbekanntes Gesetz → null (kein Link).
+export function fedlexLinkFuerArtikel(text: string): string | null {
+  const gesetz = (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(text.trim()));
+  if (!gesetz) return null;
+  if (/\bSchlT\b/.test(text)) return FEDLEX[gesetz];
+  const m = text.match(/^Art\.\s*(\d+[a-z]?)\b/);
+  return m ? fedlexUrl(gesetz, m[1]) : FEDLEX[gesetz];
+}

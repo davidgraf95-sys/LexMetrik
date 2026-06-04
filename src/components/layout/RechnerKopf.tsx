@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { Calculator } from '../../lib/calculators';
+import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { sansAmp } from '../typografie';
 
 // Gemeinsamer Rechner-Kopf (Vorlage Abschnitt 4): Zurück-Pfeil, Breadcrumb,
@@ -21,7 +22,18 @@ export function RechnerKopf({ calc }: { calc: Calculator }) {
       <h1 className="text-h1 font-display font-semibold text-ink-900">{sansAmp(calc.titel)}</h1>
       <p className="text-body-l text-ink-600 max-w-reading">{calc.kurzbeschrieb}</p>
       <div className="flex flex-wrap gap-1.5">
-        {calc.normen.map((n) => <span key={n} className="lc-chip">{n}</span>)}
+        {/* Norm-Chips mit Fedlex-Direktlink (Spannen/ff. → führender Artikel) */}
+        {calc.normen.map((n) => {
+          const url = fedlexLinkFuerArtikel(n);
+          return url ? (
+            <a key={n} href={url} target="_blank" rel="noopener noreferrer"
+              className="lc-chip no-underline hover:text-brass-700" title={`${n} auf Fedlex öffnen`}>
+              {n}
+            </a>
+          ) : (
+            <span key={n} className="lc-chip">{n}</span>
+          );
+        })}
       </div>
     </div>
   );

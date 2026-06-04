@@ -1,6 +1,28 @@
 import { useState } from 'react';
 import type { Berechnungsergebnis, BerechnungsStatus } from '../types/legal';
+import { fedlexLinkFuerArtikel } from '../lib/fedlex';
 import { sansAmp } from './typografie';
+
+// Norm-Chip mit Fedlex-Direktlink (artikelgenauer Anker); ohne verifizierbares
+// Ziel bleibt der Chip unverlinkt (Normentreue: nie auf geratene Anker).
+function NormChip({ artikel, bemerkung }: { artikel: string; bemerkung?: string }) {
+  const url = fedlexLinkFuerArtikel(artikel);
+  const inhalt = (
+    <>
+      {artikel}
+      {bemerkung && <span className="opacity-70"> · {bemerkung}</span>}
+    </>
+  );
+  return url ? (
+    <a href={url} target="_blank" rel="noopener noreferrer"
+      className="lc-chip no-underline hover:text-brass-700"
+      title={`${artikel} auf Fedlex öffnen`}>
+      {inhalt}
+    </a>
+  ) : (
+    <span className="lc-chip">{inhalt}</span>
+  );
+}
 
 // Status-Badges (Design-Doc 5.8): gesichert→sage · umstritten/kein Anspruch→warn · nichtig/unzulässig→danger.
 const STATUS_CONFIG: Record<BerechnungsStatus, { label: string; cls: string }> = {
@@ -104,9 +126,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
                   <p className="text-body-s text-ink-700 num">{schritt.zwischenergebnis}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {schritt.normen.map((n, j) => (
-                      <span key={j} className="lc-chip">
-                        {n.artikel}{n.bemerkung && <span className="opacity-70"> · {n.bemerkung}</span>}
-                      </span>
+                      <NormChip key={j} artikel={n.artikel} bemerkung={n.bemerkung} />
                     ))}
                     {schritt.rechtsprechung?.map((r, j) => (
                       <span key={j} className="lc-badge lc-badge-danger gap-1 font-mono">
@@ -146,7 +166,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
           <div>
             <p className="lc-overline mb-2">Normverweise</p>
             <div className="flex flex-wrap gap-1.5">
-              {ergebnis.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
+              {ergebnis.normverweise.map((n, i) => <NormChip key={i} artikel={n.artikel} />)}
             </div>
           </div>
         )}

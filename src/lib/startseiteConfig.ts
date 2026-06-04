@@ -41,29 +41,12 @@ export interface Sektion {
   lede: string;
 }
 
-// ─── Fedlex-Verlinkung (verifizierte Anker) ───────────────────────────────
+// ─── Fedlex-Verlinkung ─────────────────────────────────────────────────────
 //
-// Verifizierte Fedlex-Basis-URLs (Systematische Rechtssammlung, konsolidierte,
-// in Kraft stehende Fassung, Sprache de). Kein ?version=-Parameter, damit der
-// Link stets die geltende Fassung auflöst.
-// SR 220 OR · SR 210 ZGB · SR 272 ZPO · SR 281.1 SchKG
-
-const FEDLEX = {
-  OR:    'https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de',
-  ZGB:   'https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de',
-  ZPO:   'https://www.fedlex.admin.ch/eli/cc/2010/262/de',
-  SchKG: 'https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de',
-} as const;
-
-// Anker '#art_<nummer>'. Buchstaben-Artikel nutzen das Fedlex-Unterstrich-
-// Format: 335c → #art_335_c (empirisch gegen die id="art_…"-Anker des
-// konsolidierten Filestore-HTML, Stand 20250101, verifiziert — die Variante
-// ohne Unterstrich existiert dort NICHT). Spannen-/Folgeverweise (–, f., ff.)
-// verlinken den führenden Artikel; Aufzählungen erhalten je ein eigenes Pill.
-function fedlexUrl(gesetz: keyof typeof FEDLEX, artikel: string | number): string {
-  const token = String(artikel).toLowerCase().replace(/\s+/g, '').replace(/^(\d+)([a-z])$/, '$1_$2');
-  return `${FEDLEX[gesetz]}#art_${token}`;
-}
+// Verifizierte Basis-URLs und Anker-Regel zentral in src/lib/fedlex.ts
+// (wird auch für die Normverweise in den Rechnerseiten genutzt).
+// Aufzählungen erhalten je ein eigenes Pill.
+import { fedlexUrl } from './fedlex';
 
 // ─── Sektionen: vier Output-Typen (oberste Ebene) ─────────────────────────
 
