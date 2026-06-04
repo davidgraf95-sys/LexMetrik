@@ -66,6 +66,19 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
     monatslohnBrutto,
   } = input;
 
+  // Engine-Guard (analog verzugszins/zpoFristen): AUF ausserhalb 1–100 %
+  // würde in skaliereSkalaDauer zu Infinity/Invalid Date führen. Das Formular
+  // validiert zwar, aber die öffentliche Funktion muss selbst sauber abbrechen.
+  if (!(arbeitsunfaehigkeitProzent > 0 && arbeitsunfaehigkeitProzent <= 100)) {
+    return {
+      ergebnis: 'Ungültige Eingabe: Die Arbeitsunfähigkeit muss zwischen 1 und 100 % liegen.',
+      status: 'unzulaessig',
+      rechenweg: [], annahmen: [],
+      warnungen: ['Bitte den Grad der Arbeitsunfähigkeit prüfen.'],
+      normverweise: [],
+    };
+  }
+
   const vb  = parseISO(vertragsbeginn);
   const vhb = parseISO(verhinderungBeginn);
   const pensum = pensumProzent ?? 100;

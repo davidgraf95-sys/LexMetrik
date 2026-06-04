@@ -102,11 +102,18 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
   for (const b of schema.bausteine) {
     if (b.includeIf && !erfuellt(b.includeIf, antworten)) continue;
 
+    // Leere Wiederholungsliste ZUERST prüfen — sonst entstünde eine
+    // Nummerierungs-Lücke (Zähler erhöht, Baustein aber übersprungen).
+    let liste: unknown[] | null = null;
+    if (b.wiederholeUeber) {
+      const roh = antworten[b.wiederholeUeber];
+      if (!Array.isArray(roh) || roh.length === 0) continue;
+      liste = roh;
+    }
+
     const nummer = b.nummeriert ? `${++ziffer}. ` : '';
 
-    if (b.wiederholeUeber) {
-      const liste = antworten[b.wiederholeUeber];
-      if (!Array.isArray(liste) || liste.length === 0) continue;
+    if (liste) {
       const texte = liste.map((item) => interpoliere(b.text, antworten, item as Record<string, unknown>));
       absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + texte.join('\n') });
     } else {

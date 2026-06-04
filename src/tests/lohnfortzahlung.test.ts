@@ -229,3 +229,12 @@ describe('Lohnfortzahlung – Koordination Art. 324b OR (Verhinderungsgrund)', (
     expect(r.normverweise.some((n) => n.artikel.startsWith('Art. 324b'))).toBe(false);
   });
 });
+
+describe('Engine-Guard (Bug-Check)', () => {
+  it('AUF 0 % oder negativ → unzulässig statt RangeError', () => {
+    const basis = { vertragsbeginn: '2020-01-01', verhinderungBeginn: '2024-06-01', kanton: 'BE' as const, ktgGleichwertigVorhanden: false };
+    expect(berechneLohnfortzahlung({ ...basis, arbeitsunfaehigkeitProzent: 0 }).status).toBe('unzulaessig');
+    expect(berechneLohnfortzahlung({ ...basis, arbeitsunfaehigkeitProzent: -10 }).status).toBe('unzulaessig');
+    expect(berechneLohnfortzahlung({ ...basis, arbeitsunfaehigkeitProzent: 150 }).status).toBe('unzulaessig');
+  });
+});

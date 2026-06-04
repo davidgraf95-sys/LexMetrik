@@ -150,3 +150,18 @@ describe('Vorlage Eigenhändiges Testament', () => {
     expect(g.warnungen.some((w) => w.includes('472'))).toBe(true);
   });
 });
+
+describe('Vorlagen-Engine — Nummerierung (Bug-Check)', () => {
+  it('leere Wiederholungsliste erzeugt keine Nummerierungs-Lücke', () => {
+    const schema: VorlageSchema = {
+      id: 's', version: '1', titel: 'T', disclaimer: 'D',
+      bausteine: [
+        { id: 'a', text: 'A', nummeriert: true, begruendung: 'x' },
+        { id: 'b', text: '– {{item.t}}', nummeriert: true, wiederholeUeber: 'leer', begruendung: 'x' },
+        { id: 'c', text: 'C', nummeriert: true, begruendung: 'x' },
+      ],
+    };
+    const r = assemble(schema, { leer: [] });
+    expect(r.dokument.absaetze.map((x) => x.text)).toEqual(['1. A', '2. C']);
+  });
+});
