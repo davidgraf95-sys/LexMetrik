@@ -59,6 +59,17 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
         <H className="text-h3 font-display font-semibold text-ink-900 mt-1 hyphens-auto break-words text-balance" lang="de">{sansAmp(card.title)}</H>
       </div>
       <p className="text-body-s text-ink-500 leading-relaxed">{card.description}</p>
+      {/* Konsolidierte Karten: abgedeckte Szenarien; geplante Optionen gedämpft */}
+      {card.modus === 'rechner' && card.szenarien && card.szenarien.length > 0 && (
+        <ul className="space-y-0.5">
+          {card.szenarien.map((sz) => (
+            <li key={sz.label} className={`text-xs leading-relaxed ${sz.status === 'geplant' ? 'text-ink-400' : 'text-ink-600'}`}>
+              <span aria-hidden className={`mr-1 ${sz.status === 'geplant' ? 'text-ink-300' : 'text-warn-500'}`}>–</span>
+              {sz.label}{sz.status === 'geplant' && <span className="text-ink-400"> · in Vorbereitung</span>}
+            </li>
+          ))}
+        </ul>
+      )}
       {/* Verwandte in der flexiblen Zone – Pills + «Öffnen» bleiben dadurch in
           allen Karten als einheitlicher Boden-Block auf gleicher Höhe. */}
       {aktiv && verwandte.length > 0 && (
