@@ -15,6 +15,7 @@ import { RechnerGewaehrleistung } from './pages/RechnerGewaehrleistung';
 import { VorlageTestament } from './pages/VorlageTestament';
 import { VorlagePatientenverfuegung } from './pages/VorlagePatientenverfuegung';
 import { VorlageVorsorgeauftrag } from './pages/VorlageVorsorgeauftrag';
+import { VorlageSchlichtungsgesuchBs } from './pages/VorlageSchlichtungsgesuchBs';
 import { RechnerStub } from './pages/RechnerStub';
 import { Methodik } from './pages/Methodik';
 import { Ueber } from './pages/Ueber';
@@ -53,6 +54,7 @@ export default function App() {
         <Route path="/vorlagen/testament" element={<VorlageTestament />} />
         <Route path="/vorlagen/patientenverfuegung" element={<VorlagePatientenverfuegung />} />
         <Route path="/vorlagen/vorsorgeauftrag" element={<VorlageVorsorgeauftrag />} />
+        <Route path="/vorlagen/schlichtungsgesuch-bs" element={<VorlageSchlichtungsgesuchBs />} />
         {/* Noch nicht implementierte Rechner (geplant / in Vorbereitung) */}
         <Route path="/rechner/:slug" element={<RechnerStub />} />
         <Route path="/methodik" element={<Methodik />} />

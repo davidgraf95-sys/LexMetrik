@@ -651,9 +651,29 @@ const VORLAGEN: Record<string, VorlageCard> = {
   schlichtungsgesuch: {
     id: 'schlichtungsgesuch', modus: 'vorlage', art: 'eingabe', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     rechtsbereich: 'privat',
-    title: 'Schlichtungsgesuch',
-    description: 'Strukturiertes Gesuch an die Schlichtungsbehörde mit Rechtsbegehren und Beilagenliste.',
-    status: 'geplant', norms: [], related: ['zpo-fristen', 'verjaehrung'],
+    title: 'Schlichtungsgesuch (Basel-Stadt)',
+    description: 'Stellt ein Schlichtungsgesuch nach festen Bausteinen für die Basler Schlichtungsbehörden zusammen — Parteien, Zuständigkeits-Routing, Rechtsbegehren, Streitgegenstand, Beilagen.',
+    // Abweichung von der Auftrags-Anweisung (status: 'geplant') offengelegt:
+    // Nach dem neueren Status-Modell-Auftrag erhalten GEBAUTE, fachlich noch
+    // nicht geprüfte Einträge 'entwurf' (orange, verified: false) — als
+    // 'geplant' wäre die Vorlage im Katalog nicht erreichbar.
+    status: 'entwurf',
+    norms: [
+      // Art. 202 ZPO – Schlichtungsgesuch (Pflichtinhalt) — Anker build-verifiziert, fachlich offen
+      { label: 'Art. 202 ZPO', url: fedlexUrl('ZPO', '202'), verified: false },
+      // Art. 130 ZPO – Form (Papier/Signatur)
+      { label: 'Art. 130 ZPO', url: fedlexUrl('ZPO', '130'), verified: false },
+      // Art. 209 ZPO – Klagebewilligung
+      { label: 'Art. 209 ZPO', url: fedlexUrl('ZPO', '209'), verified: false },
+      // Art. 212 ZPO – Entscheid der Schlichtungsbehörde
+      { label: 'Art. 212 ZPO', url: fedlexUrl('ZPO', '212'), verified: false },
+    ],
+    href: '/vorlagen/schlichtungsgesuch-bs',
+    schemaId: 'schlichtungsgesuch-bs',
+    formvorschrift: 'Schriftlich in Papierform, eigenhändig zu unterzeichnen',
+    output: ['pdf', 'docx'],
+    keywords: ['Schlichtung', 'Schlichtungsgesuch', 'Vermittlung', 'Klagebewilligung', 'Art. 202 ZPO', 'Basel', 'Rechtsbegehren'],
+    related: ['zpo-fristen', 'verjaehrung', 'ferien-assistent'],
     icon: 'clipboard',
   },
   'klage-vereinfacht': {
