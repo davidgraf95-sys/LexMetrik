@@ -5,6 +5,7 @@ import type {
 } from '../../lib/verzugszins';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { VerzugszinsTimeline } from '../VerzugszinsTimeline';
@@ -119,7 +120,7 @@ export function VerzugszinsForm() {
         </Field>
 
         <Field label="Verzugsbeginn">
-          <input type="date" value={form.verzugsbeginn} onChange={(e) => set('verzugsbeginn', e.target.value)} className="lc-input" />
+          <DatumsFeld value={form.verzugsbeginn} onChange={(v) => set('verzugsbeginn', v)} className="lc-input" />
         </Field>
         <Field label="Art des Verzugsbeginns">
           <select value={form.beginnTyp} onChange={(e) => set('beginnTyp', e.target.value as VerzugsbeginnTyp)} className="lc-input">
@@ -129,7 +130,7 @@ export function VerzugszinsForm() {
 
         <Field label="Stichtag (Berechnung bis)" hint="Zahlung / Urteilstag / heute">
           <div className="flex gap-2">
-            <input type="date" value={form.stichtag} onChange={(e) => set('stichtag', e.target.value)} className="lc-input" />
+            <DatumsFeld value={form.stichtag} onChange={(v) => set('stichtag', v)} className="lc-input" />
             <button type="button" onClick={() => set('stichtag', heuteISO())} className="lc-btn-ghost whitespace-nowrap" style={{ height: '44px' }}>heute</button>
           </div>
         </Field>
@@ -173,7 +174,7 @@ export function VerzugszinsForm() {
             </div>
             <div className="space-y-1">
               <label className="text-body-s font-medium text-ink-600">Datum</label>
-              <input type="date" value={row.datum} onChange={(e) => updateRow(i, { datum: e.target.value })} className="lc-input" />
+              <DatumsFeld value={row.datum} onChange={(v) => updateRow(i, { datum: v })} className="lc-input" />
             </div>
             <div className="space-y-1">
               <label className="text-body-s font-medium text-ink-600">{row.typ === 'teilzahlung' ? 'Betrag (CHF)' : 'neuer Satz (%)'}</label>

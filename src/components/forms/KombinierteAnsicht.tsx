@@ -4,6 +4,7 @@ import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
 import { berechneSperrfristen, type SperrfristenErgebnis } from '../../lib/sperrfristen';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
 import { KuendigungTimeline } from '../KuendigungTimeline';
@@ -117,15 +118,15 @@ export function KombinierteAnsicht() {
         <div className="sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="space-y-1">
             <label className="block text-sm font-medium text-ink-700">Vertragsbeginn</label>
-            <input type="date" value={form.vertragsbeginn} onChange={(e) => set('vertragsbeginn', e.target.value)} className={inputCls} />
+            <DatumsFeld value={form.vertragsbeginn} onChange={(v) => set('vertragsbeginn', v)} className={inputCls} />
           </div>
           <div className="space-y-1">
             <label className="block text-sm font-medium text-ink-700">Zugang Kündigung <span className="text-ink-500 font-normal">(Stichtag B/C)</span></label>
-            <input type="date" value={form.zugangKuendigung} onChange={(e) => set('zugangKuendigung', e.target.value)} className={inputCls} />
+            <DatumsFeld value={form.zugangKuendigung} onChange={(v) => set('zugangKuendigung', v)} className={inputCls} />
           </div>
           <div className="space-y-1">
             <label className="block text-sm font-medium text-ink-700">Beginn Verhinderung <span className="text-ink-500 font-normal">(Stichtag A)</span></label>
-            <input type="date" value={form.verhinderungBeginn ?? ''} onChange={(e) => set('verhinderungBeginn', e.target.value)} className={inputCls} />
+            <DatumsFeld value={form.verhinderungBeginn ?? ''} onChange={(v) => set('verhinderungBeginn', v)} className={inputCls} />
           </div>
         </div>
 
@@ -171,11 +172,11 @@ export function KombinierteAnsicht() {
             </div>
             <div className="space-y-1">
               <label className="text-xs font-medium text-ink-600">Von</label>
-              <input type="date" value={e.von} onChange={(ev) => updateEreignis(i, 'von', ev.target.value)} className={inputCls + ' text-xs'} />
+              <DatumsFeld value={e.von} onChange={(v) => updateEreignis(i, 'von', v)} className={inputCls + ' text-xs'} />
             </div>
             <div className="space-y-1">
               <label className="text-xs font-medium text-ink-600">Bis</label>
-              <input type="date" value={e.bis} onChange={(ev) => updateEreignis(i, 'bis', ev.target.value)} className={inputCls + ' text-xs'} />
+              <DatumsFeld value={e.bis} onChange={(v) => updateEreignis(i, 'bis', v)} className={inputCls + ' text-xs'} />
             </div>
             <button onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700 self-end pb-2">Entfernen</button>
           </div>

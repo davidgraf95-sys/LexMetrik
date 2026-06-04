@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Berechnungsergebnis, BerechnungsStatus } from '../types/legal';
+import { sansAmp } from './typografie';
 
 // Status-Badges (Design-Doc 5.8): gesichert→sage · umstritten/kein Anspruch→warn · nichtig/unzulässig→danger.
 const STATUS_CONFIG: Record<BerechnungsStatus, { label: string; cls: string }> = {
@@ -55,7 +56,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
       <div className="border-b border-line px-6 py-4 flex items-start justify-between gap-3">
         <div>
           <p className="lc-overline">Ergebnis</p>
-          <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{titel}</h3>
+          <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{sansAmp(titel)}</h3>
         </div>
         <button onClick={kopieren} className="lc-btn-ghost shrink-0" style={{ height: '36px', padding: '0 12px' }}
           aria-label="Ergebnis in die Zwischenablage kopieren">

@@ -1,7 +1,10 @@
 import type { SperrfristenErgebnis } from '../lib/sperrfristen';
 
-// Grafische Antwort für Kündigung + Sperrfristen: Zeitstrahl mit Zugang, Sperrfrist-Block(en)
-// und Beendigung bzw. – bei Nichtigkeit – «frühestens neu kündbar».
+// Grafische Antwort für Kündigung + Sperrfristen: Zeitstrahl mit Zugang,
+// Sperrfrist-Band und Beendigung bzw. – bei Nichtigkeit – «frühestens neu kündbar».
+// Marker sitzen auf der Basislinie; Beschriftungen liegen oben (Zugang) und
+// unten (Endpunkt) und werden an den Rändern bündig verankert, damit nichts
+// überlappt oder aus der Karte ragt.
 
 const TYP_LABEL: Record<string, string> = {
   krankheit_unfall: 'Krankheit/Unfall', schwangerschaft: 'Schwangerschaft',
@@ -22,29 +25,43 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
   const span = (t1 - t0) || 1; t0 -= span * 0.05; t1 += span * 0.05;
   const pos = (iso?: string) => { const x = ms(iso); return isNaN(x) ? 0 : Math.max(0, Math.min(100, ((x - t0) / (t1 - t0)) * 100)); };
 
+  const endIso = nichtig ? e.fruehesteNeueKuendigungISO : e.beendigungISO;
+  const endLabel = nichtig ? 'frühestens neu kündbar' : 'Beendigung';
+  const endFarbe = nichtig ? 'var(--brass-500)' : 'var(--sage-500)';
+
   return (
     <div className="lc-card p-5 lc-reveal space-y-3">
       <p className="lc-overline">Zeitstrahl</p>
-      <div className="relative" style={{ height: '5rem' }}>
+      <div className="relative h-24">
         {/* Basislinie */}
-        <div className="absolute left-0 right-0 h-1 bg-line rounded" style={{ top: '2.4rem' }} />
-        {/* Sperrfrist-Blöcke */}
+        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px" style={{ background: 'var(--line-strong)' }} />
+
+        {/* Sperrfrist-Bänder auf der Linie (vgl. Fristband im Kalender) */}
         {(e.sperrIntervalle ?? []).map((iv, i) => {
           const l = pos(iv.von), r = pos(iv.bis);
+          const breite = Math.max(1.2, r - l);
           return (
-            <div key={i} className="absolute rounded bg-warn-bg" style={{ left: `${l}%`, width: `${Math.max(0.6, r - l)}%`, top: '2rem', height: '1.4rem', boxShadow: 'inset 0 0 0 1px var(--warn-500)' }}
-              title={`Sperrfrist ${TYP_LABEL[iv.typ] ?? iv.typ}: ${fmt(iv.von)} – ${fmt(iv.bis)}`} />
+            <div key={i}
+              className="absolute top-1/2 -translate-y-1/2 h-6 rounded-full bg-warn-bg flex items-center justify-center overflow-hidden"
+              style={{ left: `${l}%`, width: `${breite}%`, boxShadow: 'inset 0 0 0 1px var(--warn-500)' }}
+              title={`Sperrfrist ${TYP_LABEL[iv.typ] ?? iv.typ}: ${fmt(iv.von)} – ${fmt(iv.bis)}`}>
+              {breite > 22 && (
+                <span className="text-warn-700 truncate px-2" style={{ fontSize: '0.6rem' }}>
+                  {TYP_LABEL[iv.typ] ?? iv.typ}
+                </span>
+              )}
+            </div>
           );
         })}
-        <Marker left={pos(e.zugangISO)} iso={e.zugangISO} color="var(--ink-900)" label="Zugang" />
-        {nichtig
-          ? <Marker left={pos(e.fruehesteNeueKuendigungISO)} iso={e.fruehesteNeueKuendigungISO} color="var(--brass-500)" label="neu kündbar" />
-          : <Marker left={pos(e.beendigungISO)} iso={e.beendigungISO} color="var(--sage-500)" label="Beendigung" />}
+
+        {/* Zugang oben beschriftet, Endpunkt unten — Kollisionen ausgeschlossen */}
+        <Marker p={pos(e.zugangISO)} iso={e.zugangISO} color="var(--ink-900)" label="Zugang" oben />
+        {endIso && <Marker p={pos(endIso)} iso={endIso} color={endFarbe} label={endLabel} />}
       </div>
 
       <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-body-s text-ink-600 pt-3 border-t border-line">
         <Leg swatch="bg-ink-900" label="Zugang der Kündigung" />
-        {(e.sperrIntervalle ?? []).length > 0 && <Leg swatch="bg-warn-bg" label="Sperrfrist" />}
+        {(e.sperrIntervalle ?? []).length > 0 && <Leg band label="Sperrfrist" />}
         {nichtig
           ? <Leg style={{ background: 'var(--brass-500)' }} label="frühestens neu kündbar" />
           : <Leg swatch="bg-sage-500" label="Beendigung" />}
@@ -54,23 +71,39 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
   );
 }
 
-// Modul-Ebene (nicht im Render erzeugt): Position wird als Prop übergeben.
-function Marker({ left, iso, color, label }: { left: number; iso?: string; color: string; label: string }) {
+// Marker: Punkt exakt auf der Basislinie, Lot + Beschriftung darüber/darunter.
+// Nahe den Rändern wird die Beschriftung bündig verankert statt zentriert.
+function Marker({ p, iso, color, label, oben = false }: { p: number; iso?: string; color: string; label: string; oben?: boolean }) {
   if (!iso) return null;
+  const anker: React.CSSProperties =
+    p < 10 ? { left: 0, alignItems: 'flex-start', textAlign: 'left' }
+    : p > 90 ? { right: 0, alignItems: 'flex-end', textAlign: 'right' }
+    : { left: `${p}%`, transform: 'translateX(-50%)', alignItems: 'center', textAlign: 'center' };
   return (
-    <div className="absolute top-0 bottom-0 -translate-x-1/2 flex flex-col items-center pointer-events-none" style={{ left: `${left}%` }}>
-      <span className="num text-ink-700 whitespace-nowrap" style={{ fontSize: '0.6rem' }}>{fmt(iso)}</span>
-      <span className="w-px flex-1" style={{ background: color }} />
-      <span className="w-2.5 h-2.5 rounded-full -mb-1" style={{ background: color }} />
-      <span className="whitespace-nowrap" style={{ fontSize: '0.6rem', color }}>{label}</span>
-    </div>
+    <>
+      {/* Lot vom Punkt zur Beschriftung */}
+      <span aria-hidden className="absolute w-px -translate-x-1/2"
+        style={{ left: `${p}%`, background: color, opacity: 0.45,
+          ...(oben ? { top: '0.9rem', bottom: 'calc(50% + 0.45rem)' } : { top: 'calc(50% + 0.45rem)', bottom: '0.9rem' }) }} />
+      {/* Punkt auf der Linie */}
+      <span className="absolute top-1/2 w-3 h-3 rounded-full -translate-x-1/2 -translate-y-1/2 z-10"
+        style={{ left: `${p}%`, background: color, boxShadow: '0 0 0 2px var(--surface)' }} />
+      {/* Beschriftung */}
+      <div className="absolute flex flex-col pointer-events-none"
+        style={{ ...(oben ? { top: 0 } : { bottom: 0 }), ...anker }}>
+        <span className="num text-ink-700 whitespace-nowrap leading-tight" style={{ fontSize: '0.65rem' }}>{fmt(iso)}</span>
+        <span className="whitespace-nowrap font-medium leading-tight" style={{ fontSize: '0.65rem', color, order: oben ? -1 : 1 }}>{label}</span>
+      </div>
+    </>
   );
 }
 
-function Leg({ swatch, style, label }: { swatch?: string; style?: React.CSSProperties; label: string }) {
+function Leg({ swatch, style, label, band }: { swatch?: string; style?: React.CSSProperties; label: string; band?: boolean }) {
   return (
     <span className="inline-flex items-center gap-1.5">
-      <span className={`inline-block w-3.5 h-3.5 rounded ${swatch ?? ''}`} style={style} />
+      {band
+        ? <span className="inline-block w-5 h-3 rounded-full bg-warn-bg" style={{ boxShadow: 'inset 0 0 0 1px var(--warn-500)' }} />
+        : <span className={`inline-block w-3 h-3 rounded-full ${swatch ?? ''}`} style={style} />}
       {label}
     </span>
   );

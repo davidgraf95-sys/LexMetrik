@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { SEKTIONEN, ALLE_KARTEN, RECHTSGEBIETE, type Sektion, type CalculatorCard } from '../lib/startseiteConfig';
 import { RechnerKarte } from '../components/RechnerKarte';
+import { sansAmp } from '../components/typografie';
 
 function SectionHead({ children }: { children: React.ReactNode }) {
   return (
@@ -35,7 +36,7 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
                 <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
               </span>
             </span>
-            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">{sektion.title}</h2>
+            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">{sansAmp(sektion.title)}</h2>
             <span className="block text-body-l text-ink-600 max-w-reading">{sektion.lede}</span>
             <span className="scale-rule block mt-4" aria-hidden />
           </span>

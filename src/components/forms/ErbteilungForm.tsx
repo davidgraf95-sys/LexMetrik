@@ -4,6 +4,7 @@ import { berechneErbteilung } from '../../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../../lib/bruch';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 
 const ERB_DISCLAIMER =
@@ -141,7 +142,7 @@ export function ErbteilungForm() {
       {/* Grundangaben */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Todesdatum" hint="Recht-Schalter: bis 31.12.2022 altes Recht, ab 1.1.2023 neues Recht (Art. 15/16 SchlT ZGB)">
-          <input type="date" value={todesdatum} onChange={(e) => setTodesdatum(e.target.value)} className={inputCls} />
+          <DatumsFeld value={todesdatum} onChange={(v) => setTodesdatum(v)} className={inputCls} />
         </Field>
         <Field label="Zivilstand des Erblassers" hint="Eingetragene Partner sind Ehegatten gleichgestellt (Art. 462 ZGB)">
           <select value={zivilstand} onChange={(e) => setZivilstand(e.target.value as Zivilstand)} className={inputCls}>

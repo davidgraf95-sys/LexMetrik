@@ -5,6 +5,7 @@ import { berechneFrist, zustellfiktion } from '../../lib/zpoFristen';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { zpoPdfCitations, zpoPdfErgebnis } from '../../lib/pdf/zpoPdf';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
@@ -169,7 +170,7 @@ export function ZpoFristenForm() {
       {/* Eingaben */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Auslösendes Ereignis (Datum)" hint="Zustellung/Eröffnung der fristauslösenden Mitteilung">
-          <input type="date" value={form.ereignis} onChange={(e) => set('ereignis', e.target.value)} className={inputCls} />
+          <DatumsFeld value={form.ereignis} onChange={(v) => set('ereignis', v)} className={inputCls} />
         </Field>
 
         <Field label="Fristtyp & Länge">
@@ -257,7 +258,7 @@ export function ZpoFristenForm() {
 
             <Field label="Zustellfiktion-Helfer (Art. 138 Abs. 3 lit. a, optional)" hint="Datum des erfolglosen Zustellversuchs → fingiertes Zustelldatum (+7 Tage)">
               <div className="flex gap-2 items-center">
-                <input type="date" value={fiktionDatum} onChange={(e) => setFiktionDatum(e.target.value)} className={inputCls} />
+                <DatumsFeld value={fiktionDatum} onChange={(v) => setFiktionDatum(v)} className={inputCls} />
                 <button type="button" disabled={!fiktionDatum}
                   onClick={() => set('ereignis', zustellfiktion(fiktionDatum))}
                   className="text-sm px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 rounded-lg whitespace-nowrap">

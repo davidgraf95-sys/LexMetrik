@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { CALCULATORS, calcPath, type Calculator, type CalcStatus } from '../lib/calculators';
 import { Icon } from './Icon';
+import { sansAmp } from './typografie';
 
 // Karten-Raster aus der Registry (Startseite + /rechner). Tokens aus dem Designsystem.
 
@@ -24,7 +25,7 @@ function Karte({ c }: { c: Calculator }) {
       </div>
       <div>
         <p className="lc-overline">{c.kategorie}</p>
-        <h3 className="text-h3 font-display font-semibold text-ink-900 mt-1">{c.titel}</h3>
+        <h3 className="text-h3 font-display font-semibold text-ink-900 mt-1">{sansAmp(c.titel)}</h3>
       </div>
       <p className="text-body-s text-ink-500 leading-relaxed flex-1">{c.kurzbeschrieb}</p>
       <div className="flex flex-wrap gap-1.5">{c.normen.map((n) => <span key={n} className="lc-chip">{n}</span>)}</div>

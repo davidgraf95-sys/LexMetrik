@@ -3,6 +3,7 @@ import type { SperrfristenInput, Sperrereignis, SperrereignisTyp } from '../../t
 import { berechneSperrfristen, type SperrfristenErgebnis } from '../../lib/sperrfristen';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { KuendigungTimeline } from '../KuendigungTimeline';
 
@@ -118,11 +119,11 @@ export function KuendigungSperrForm() {
       <p className="lc-overline">Eingaben</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Vertragsbeginn">
-          <input type="date" value={form.vertragsbeginn} onChange={(e) => set('vertragsbeginn', e.target.value)} className={inputCls} />
+          <DatumsFeld value={form.vertragsbeginn} onChange={(v) => set('vertragsbeginn', v)} className={inputCls} />
         </Field>
 
         <Field label="Zugang der Kündigung (Empfänger)" hint="Stichtag für Dienstjahr und Sperrfrist-Prüfung">
-          <input type="date" value={form.zugangKuendigung} onChange={(e) => set('zugangKuendigung', e.target.value)} className={inputCls} />
+          <DatumsFeld value={form.zugangKuendigung} onChange={(v) => set('zugangKuendigung', v)} className={inputCls} />
         </Field>
 
         <Field label="Kündigende Partei">
@@ -230,11 +231,11 @@ export function KuendigungSperrForm() {
               </div>
               <div className="space-y-1">
                 <label className="text-xs font-medium text-ink-600">Von</label>
-                <input type="date" value={e.von} onChange={(ev) => updateEreignis(i, 'von', ev.target.value)} className={inputCls + ' text-xs'} />
+                <DatumsFeld value={e.von} onChange={(v) => updateEreignis(i, 'von', v)} className={inputCls + ' text-xs'} />
               </div>
               <div className="space-y-1">
                 <label className="text-xs font-medium text-ink-600">Bis</label>
-                <input type="date" value={e.bis} onChange={(ev) => updateEreignis(i, 'bis', ev.target.value)} className={inputCls + ' text-xs'} />
+                <DatumsFeld value={e.bis} onChange={(v) => updateEreignis(i, 'bis', v)} className={inputCls + ' text-xs'} />
               </div>
             </div>
             {e.typ === 'schwangerschaft' && (

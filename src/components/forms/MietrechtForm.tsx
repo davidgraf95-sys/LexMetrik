@@ -5,6 +5,7 @@ import { berechneMietkuendigung } from '../../lib/mietrecht';
 import { ORTSUEBLICHE_TERMINE } from '../../data/mietTermine';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
 
@@ -160,7 +161,7 @@ export function MietrechtForm() {
           </select>
         </Field>
         <Field label="Zugang der Kündigung" hint="Absolute Empfangstheorie; bei Einschreiben i.d.R. Folgetag der Abholungseinladung">
-          <input type="date" value={zugang} onChange={(e) => setZugang(e.target.value)} className={inputCls} />
+          <DatumsFeld value={zugang} onChange={(v) => setZugang(v)} className={inputCls} />
         </Field>
         <Field label="Kanton" hint={ort.hinweis ?? 'Für ortsübliche Termine und Feiertage (Art. 78 OR)'}>
           <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)} className={inputCls}>
@@ -199,7 +200,7 @@ export function MietrechtForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {(brauchtMietbeginn || objekt === 'moebliertes_zimmer' || quelle === 'gesetzlich') && (
           <Field label="Mietbeginn" hint="Für die gesetzliche Auffangregel (Ende einer Mietdauer-Periode)">
-            <input type="date" value={mietbeginn} onChange={(e) => setMietbeginn(e.target.value)} className={inputCls} />
+            <DatumsFeld value={mietbeginn} onChange={(v) => setMietbeginn(v)} className={inputCls} />
           </Field>
         )}
         {art === 'ordentlich' && istRaum && (
@@ -209,7 +210,7 @@ export function MietrechtForm() {
         )}
         {art === 'zahlungsverzug' && (
           <Field label="Zugang der Zahlungsaufforderung (Stufe 1)" hint="Relative Empfangstheorie (BGE 119 II 147)">
-            <input type="date" value={zaZugang} onChange={(e) => setZaZugang(e.target.value)} className={inputCls} />
+            <DatumsFeld value={zaZugang} onChange={(v) => setZaZugang(v)} className={inputCls} />
           </Field>
         )}
       </div>

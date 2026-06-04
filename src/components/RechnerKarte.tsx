@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import type { CalculatorCard } from '../lib/startseiteConfig';
 import { karte } from '../lib/startseiteConfig';
 import { Icon } from './Icon';
+import { sansAmp } from './typografie';
 
 // Startseiten-Karte (Zwei-Säulen-Struktur). Kartenanatomie wie bisher:
 // Icon-Bubble, Status-Badge, Mikro-Label, Serif-Titel, Beschrieb, Norm-Pills,
@@ -42,7 +43,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
       </div>
       <div>
         <p className="lc-overline">{card.rechtsgebiet}</p>
-        <H className="text-h3 font-display font-semibold text-ink-900 mt-1">{card.title}</H>
+        <H className="text-h3 font-display font-semibold text-ink-900 mt-1">{sansAmp(card.title)}</H>
       </div>
       <p className="text-body-s text-ink-500 leading-relaxed">{card.description}</p>
       {/* Verwandte in der flexiblen Zone – Pills + «Öffnen» bleiben dadurch in

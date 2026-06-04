@@ -3,6 +3,7 @@ import type { LohnfortzahlungInput, Kanton, Verhinderungsgrund } from '../../typ
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
 
@@ -140,11 +141,11 @@ export function LohnfortzahlungForm() {
       {/* Eingaben */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Vertragsbeginn">
-          <input type="date" value={form.vertragsbeginn} onChange={(e) => set('vertragsbeginn', e.target.value)} className={inputCls} />
+          <DatumsFeld value={form.vertragsbeginn} onChange={(v) => set('vertragsbeginn', v)} className={inputCls} />
         </Field>
 
         <Field label="Beginn der Arbeitsverhinderung" hint="Stichtag für Dienstjahr-Berechnung">
-          <input type="date" value={form.verhinderungBeginn} onChange={(e) => set('verhinderungBeginn', e.target.value)} className={inputCls} />
+          <DatumsFeld value={form.verhinderungBeginn} onChange={(v) => set('verhinderungBeginn', v)} className={inputCls} />
         </Field>
 
         <Field label="Verhinderungsgrund" hint="Steuert die Koordination mit Versicherungen (Art. 324b OR)">
@@ -252,8 +253,8 @@ export function LohnfortzahlungForm() {
         {erweitert && (
           <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Ende der Verhinderung (optional)" hint="§2.1 für DJ-übergreifende Verhinderung (zwei Kredite)">
-              <input type="date" value={form.verhinderungEnde ?? ''} className={inputCls}
-                onChange={(e) => set('verhinderungEnde', e.target.value || undefined)} />
+              <DatumsFeld value={form.verhinderungEnde ?? ''} className={inputCls}
+                onChange={(v) => set('verhinderungEnde', v || undefined)} />
             </Field>
             <Field label="Vereinbarte Kündigungsfrist (Monate, optional)" hint="§2.2 > 3 Monate → Anspruch ab Tag 1">
               <input type="number" min={0} className={inputCls} placeholder="Leer = Standard"

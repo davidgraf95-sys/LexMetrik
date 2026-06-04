@@ -6,6 +6,8 @@ import { PHASEN_SCHKG, PRESETS_SCHKG, SCHKG_DISCLAIMER, type SchkgPhase, type Sc
 import { rechtsprechung, VERIFIKATION } from '../../data/verifikation';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { DatumsFeld } from '../DatumsFeld';
+import { sansAmp } from '../typografie';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
 
@@ -210,7 +212,7 @@ export function SchkgFristenForm() {
       {/* Eingaben */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Auslösendes Ereignis (Datum)" hint={form.ausloeser}>
-          <input type="date" value={form.ereignis} onChange={(e) => set('ereignis', e.target.value)} className={inputCls} />
+          <DatumsFeld value={form.ereignis} onChange={(v) => set('ereignis', v)} className={inputCls} />
         </Field>
 
         {!istDual && !istInfo && (
@@ -264,9 +266,9 @@ export function SchkgFristenForm() {
           {hemmung.an && (
             <div className="flex flex-wrap gap-2 items-center pl-6">
               <span className="text-body-s text-ink-500">Hemmendes Verfahren von</span>
-              <input type="date" value={hemmung.von} onChange={(e) => setHemmung((s) => ({ ...s, von: e.target.value }))} className={inputCls + ' w-44'} />
+              <DatumsFeld value={hemmung.von} onChange={(v) => setHemmung((s) => ({ ...s, von: v }))} className={inputCls} wrapperClassName="w-44" />
               <span className="text-body-s text-ink-500">bis</span>
-              <input type="date" value={hemmung.bis} onChange={(e) => setHemmung((s) => ({ ...s, bis: e.target.value }))} className={inputCls + ' w-44'} />
+              <DatumsFeld value={hemmung.bis} onChange={(v) => setHemmung((s) => ({ ...s, bis: v }))} className={inputCls} wrapperClassName="w-44" />
             </div>
           )}
         </div>
@@ -280,9 +282,9 @@ export function SchkgFristenForm() {
         {rechtsstillstand.an && (
           <div className="flex flex-wrap gap-2 items-center pl-6">
             <span className="text-body-s text-ink-500">von</span>
-            <input type="date" value={rechtsstillstand.von} onChange={(e) => setRechtsstillstand((s) => ({ ...s, von: e.target.value }))} className={inputCls + ' w-44'} />
+            <DatumsFeld value={rechtsstillstand.von} onChange={(v) => setRechtsstillstand((s) => ({ ...s, von: v }))} className={inputCls} wrapperClassName="w-44" />
             <span className="text-body-s text-ink-500">bis</span>
-            <input type="date" value={rechtsstillstand.bis} onChange={(e) => setRechtsstillstand((s) => ({ ...s, bis: e.target.value }))} className={inputCls + ' w-44'} />
+            <DatumsFeld value={rechtsstillstand.bis} onChange={(v) => setRechtsstillstand((s) => ({ ...s, bis: v }))} className={inputCls} wrapperClassName="w-44" />
           </div>
         )}
       </div>
@@ -310,7 +312,7 @@ export function SchkgFristenForm() {
             return (
               <div key={a.titel} className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-h3 font-display font-semibold text-ink-900">{a.titel}</h3>
+                  <h3 className="text-h3 font-display font-semibold text-ink-900">{sansAmp(a.titel)}</h3>
                   {badge && <span className={`lc-badge ${badge.cls}`}>{badge.label}</span>}
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
