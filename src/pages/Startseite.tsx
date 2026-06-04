@@ -54,7 +54,7 @@ export function Startseite() {
       {/* HERO → Weiche → KATALOG: so wenige Bänder wie möglich vor der ersten
           Karte; Abstände aus der 8-px-Skala. Der Determinismus-Claim steht
           genau einmal — hier. */}
-      <section className="pt-6 sm:pt-12 max-w-[46rem]">
+      <section className="pt-10 sm:pt-16 max-w-[46rem]">
         <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.25rem] sm:text-[2.75rem]">
           Schweizer Recht: berechnen und erstellen.
         </h1>
@@ -72,7 +72,7 @@ export function Startseite() {
 
       {/* Katalog als eigene Sektion: Weissraum + feine Trennlinie markieren
           «jetzt beginnt der Katalog»; die Toolbar lebt IM Katalog. */}
-      <section className="mt-10 sm:mt-16 border-t border-line pt-8 sm:pt-10">
+      <section className="mt-12 sm:mt-16">
         <Katalog karten={karten} sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN} />
       </section>
 
