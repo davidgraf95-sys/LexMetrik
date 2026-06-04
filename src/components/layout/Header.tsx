@@ -4,6 +4,7 @@ import { LexmetrikSiegel, LexmetrikWortmarke } from './Logo';
 // Header (Design-Doc 5.1): sticky, paper-Grund, untere Hairline, Wortmarke + Navigation.
 const NAV = [
   { to: '/rechner', label: 'Rechner', match: (p: string) => p.startsWith('/rechner') },
+  { to: '/fachpersonen', label: 'Fachpersonen', match: (p: string) => p === '/fachpersonen' },
   { to: '/methodik', label: 'Methodik', match: (p: string) => p === '/methodik' },
   { to: '/ueber', label: 'Über', match: (p: string) => p === '/ueber' },
 ];

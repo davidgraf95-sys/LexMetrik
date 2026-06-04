@@ -11,6 +11,7 @@
 
 export type Status = 'geprüft' | 'geplant'; // geplant wird als «In Vorbereitung» angezeigt
 export type Art = 'frist' | 'betrag' | 'zuordnung' | 'werkzeug'; // Output-Typ → Sektion
+export type Tier = 'frei' | 'experte'; // frei = Basis-Seite (/), experte = Experten-Panel (/fachpersonen)
 
 export interface NormRef {
   label: string;      // Anzeigetext, unverändert (z. B. "Art. 335c OR")
@@ -21,6 +22,7 @@ export interface NormRef {
 export interface CalculatorCard {
   id: string;
   art: Art;               // Output-Typ → bestimmt die Sektion
+  tier: Tier;             // Stufe: Basis-Seite oder Experten-Panel
   rechtsgebiet: string;   // Filterwert (z. B. «Miete», «Zivilprozess (ZPO)»)
   title: string;
   description: string;
@@ -82,7 +84,7 @@ export const RECHTSGEBIETE: string[] = [
 const KARTEN: Record<string, CalculatorCard> = {
   // ════ I — Fristen (geprüft) ════
   'zpo-fristen': {
-    id: 'zpo-fristen', art: 'frist', rechtsgebiet: 'Zivilprozess (ZPO)',
+    id: 'zpo-fristen', art: 'frist', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     title: 'Verfahrens- & Rechtsmittelfristen',
     description: 'Verfahrens- und Rechtsmittelfristen mit Gerichtsferien und Stillstand.',
     status: 'geprüft',
@@ -95,7 +97,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     icon: 'clock',
   },
   'schkg-fristen': {
-    id: 'schkg-fristen', art: 'frist', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    id: 'schkg-fristen', art: 'frist', tier: 'experte', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     title: 'Betreibungs- & Konkursfristen',
     description: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
     status: 'geprüft',
@@ -113,7 +115,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     icon: 'clipboard',
   },
   'kuendigung-sperrfristen': {
-    id: 'kuendigung-sperrfristen', art: 'frist', rechtsgebiet: 'Arbeit',
+    id: 'kuendigung-sperrfristen', art: 'frist', tier: 'frei', rechtsgebiet: 'Arbeit',
     title: 'Kündigungs- & Sperrfristen',
     description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis.',
     status: 'geprüft',
@@ -129,7 +131,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     icon: 'document',
   },
   mietrecht: {
-    id: 'mietrecht', art: 'frist', rechtsgebiet: 'Miete',
+    id: 'mietrecht', art: 'frist', tier: 'frei', rechtsgebiet: 'Miete',
     title: 'Kündigung & Fristen im Mietrecht',
     description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume — mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
     status: 'geprüft',
@@ -148,25 +150,25 @@ const KARTEN: Record<string, CalculatorCard> = {
 
   // ════ I — Fristen (in Vorbereitung) ════
   'beschwerde-verwaltung': {
-    id: 'beschwerde-verwaltung', art: 'frist', rechtsgebiet: 'Verwaltung & Steuern',
+    id: 'beschwerde-verwaltung', art: 'frist', tier: 'experte', rechtsgebiet: 'Verwaltung & Steuern',
     title: 'Beschwerde- & Einsprachefristen',
     description: 'Einsprache- und Beschwerdefristen im Verwaltungs- und Steuerverfahren (Bund und Kantone).',
     status: 'geplant', norms: [],
   },
   strafverfahren: {
-    id: 'strafverfahren', art: 'frist', rechtsgebiet: 'Strafverfahren (StPO)',
+    id: 'strafverfahren', art: 'frist', tier: 'experte', rechtsgebiet: 'Strafverfahren (StPO)',
     title: 'Fristen im Strafverfahren',
     description: 'Einsprache gegen Strafbefehl und Rechtsmittelfristen.',
     status: 'geplant', norms: [],
   },
   sozialversicherung: {
-    id: 'sozialversicherung', art: 'frist', rechtsgebiet: 'Sozialversicherung (ATSG)',
+    id: 'sozialversicherung', art: 'frist', tier: 'experte', rechtsgebiet: 'Sozialversicherung (ATSG)',
     title: 'Einsprache- & Beschwerdefristen (Sozialversicherung)',
     description: 'Fristen gegen Verfügungen von IV, AHV, Unfall- und Krankenversicherung.',
     status: 'geplant', norms: [],
   },
   verjaehrung: {
-    id: 'verjaehrung', art: 'frist', rechtsgebiet: 'Vertrag / OR',
+    id: 'verjaehrung', art: 'frist', tier: 'experte', rechtsgebiet: 'Vertrag / OR',
     title: 'Verjährung',
     description: 'Ordentliche und kurze Verjährung sowie deliktische und bereicherungsrechtliche Ansprüche — mit Stillstand, Unterbrechung und Einredeverzicht.',
     status: 'geprüft',
@@ -184,55 +186,55 @@ const KARTEN: Record<string, CalculatorCard> = {
     icon: 'clock',
   },
   gewaehrleistung: {
-    id: 'gewaehrleistung', art: 'frist', rechtsgebiet: 'Vertrag / OR',
+    id: 'gewaehrleistung', art: 'frist', tier: 'experte', rechtsgebiet: 'Vertrag / OR',
     title: 'Gewährleistung & Mängelrüge',
     description: 'Prüf- und Rügefristen sowie Gewährleistungsverjährung bei Kauf und Werkvertrag.',
     status: 'geplant', norms: [],
   },
   'missbraeuchliche-kuendigung': {
-    id: 'missbraeuchliche-kuendigung', art: 'frist', rechtsgebiet: 'Arbeit',
+    id: 'missbraeuchliche-kuendigung', art: 'frist', tier: 'experte', rechtsgebiet: 'Arbeit',
     title: 'Anfechtung missbräuchlicher Kündigung',
     description: 'Einsprache- und Klagefristen bei missbräuchlicher Kündigung.',
     status: 'geplant', norms: [],
   },
   'miete-anfechtung': {
-    id: 'miete-anfechtung', art: 'frist', rechtsgebiet: 'Miete',
+    id: 'miete-anfechtung', art: 'frist', tier: 'experte', rechtsgebiet: 'Miete',
     title: 'Anfechtung & Erstreckung (Miete)',
     description: 'Anfechtung von Kündigung und Mietzins sowie Erstreckungsfristen.',
     status: 'geplant', norms: [],
   },
   'erbrecht-fristen': {
-    id: 'erbrecht-fristen', art: 'frist', rechtsgebiet: 'Erbrecht',
+    id: 'erbrecht-fristen', art: 'frist', tier: 'experte', rechtsgebiet: 'Erbrecht',
     title: 'Ausschlagung, Herabsetzung & Ungültigkeit',
     description: 'Fristen für Ausschlagung der Erbschaft, Herabsetzungs- und Ungültigkeitsklage.',
     status: 'geplant', norms: [],
   },
   'familie-fristen': {
-    id: 'familie-fristen', art: 'frist', rechtsgebiet: 'Familie',
+    id: 'familie-fristen', art: 'frist', tier: 'experte', rechtsgebiet: 'Familie',
     title: 'Familienrechtliche Fristen',
     description: 'Fristen bei Scheidung und Anfechtung des Kindesverhältnisses.',
     status: 'geplant', norms: [],
   },
   klagebewilligung: {
-    id: 'klagebewilligung', art: 'frist', rechtsgebiet: 'Zivilprozess (ZPO)',
+    id: 'klagebewilligung', art: 'frist', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     title: 'Klagebewilligung — Geltungsdauer',
     description: 'Frist zur Einreichung der Klage nach erteilter Klagebewilligung.',
     status: 'geplant', norms: [],
   },
   massenentlassung: {
-    id: 'massenentlassung', art: 'frist', rechtsgebiet: 'Arbeit',
+    id: 'massenentlassung', art: 'frist', tier: 'experte', rechtsgebiet: 'Arbeit',
     title: 'Massenentlassung — Konsultationsfristen',
     description: 'Fristen für die Konsultation der Arbeitnehmer bei Massenentlassung.',
     status: 'geplant', norms: [],
   },
   'gesellschaftsrecht-fristen': {
-    id: 'gesellschaftsrecht-fristen', art: 'frist', rechtsgebiet: 'Vertrag / OR',
+    id: 'gesellschaftsrecht-fristen', art: 'frist', tier: 'experte', rechtsgebiet: 'Vertrag / OR',
     title: 'Gesellschaftsrechtliche Fristen',
     description: 'Einberufungs- und Traktandierungsfristen sowie Verjährung der Verantwortlichkeitsklage.',
     status: 'geplant', norms: [],
   },
   'sv-leistungen': {
-    id: 'sv-leistungen', art: 'frist', rechtsgebiet: 'Sozialversicherung (ATSG)',
+    id: 'sv-leistungen', art: 'frist', tier: 'experte', rechtsgebiet: 'Sozialversicherung (ATSG)',
     title: 'Leistungsverwirkung & Nachzahlung (Sozialversicherung)',
     description: 'Fristen für Anmeldung und rückwirkende Leistungen.',
     status: 'geplant', norms: [],
@@ -240,7 +242,7 @@ const KARTEN: Record<string, CalculatorCard> = {
 
   // ════ II — Beträge & Quoten (geprüft) ════
   verzugszins: {
-    id: 'verzugszins', art: 'betrag', rechtsgebiet: 'Vertrag / OR',
+    id: 'verzugszins', art: 'betrag', tier: 'frei', rechtsgebiet: 'Vertrag / OR',
     title: 'Verzugszins',
     description: 'Verzugszins bei Schuldnerverzug — Zeitraum, Satz und Betrag.',
     status: 'geprüft',
@@ -254,7 +256,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     icon: 'percent',
   },
   lohnfortzahlung: {
-    id: 'lohnfortzahlung', art: 'betrag', rechtsgebiet: 'Arbeit',
+    id: 'lohnfortzahlung', art: 'betrag', tier: 'frei', rechtsgebiet: 'Arbeit',
     title: 'Lohnfortzahlung (kantonale Skala)',
     description: 'Lohnfortzahlung bei unverschuldeter Verhinderung nach kantonaler Skala (Basel/Bern/Zürich).',
     status: 'geprüft',
@@ -268,7 +270,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     icon: 'document',
   },
   erbteilung: {
-    id: 'erbteilung', art: 'betrag', rechtsgebiet: 'Erbrecht',
+    id: 'erbteilung', art: 'betrag', tier: 'frei', rechtsgebiet: 'Erbrecht',
     title: 'Pflichtteil & verfügbare Quote',
     description: 'Gesetzliche Erbteile, Pflichtteile und verfügbare Quote — mit Todesdatum-Weiche für die Revision 2023 und güterrechtlicher Vorstufe.',
     status: 'geprüft',
@@ -285,43 +287,43 @@ const KARTEN: Record<string, CalculatorCard> = {
 
   // ════ II — Beträge & Quoten (in Vorbereitung) ════
   prozesskosten: {
-    id: 'prozesskosten', art: 'betrag', rechtsgebiet: 'Zivilprozess (ZPO)',
+    id: 'prozesskosten', art: 'betrag', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     title: 'Gerichts-, Partei- & Betreibungskosten',
     description: 'Kostenschätzung nach Streitwert und Tarif; kantonale Tarife werden gekennzeichnet.',
     status: 'geplant', norms: [],
   },
   streitwert: {
-    id: 'streitwert', art: 'betrag', rechtsgebiet: 'Zivilprozess (ZPO)',
+    id: 'streitwert', art: 'betrag', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     title: 'Streitwertberechnung',
     description: 'Ermittlung des Streitwerts als Grundlage für Kosten und Verfahrensart.',
     status: 'geplant', norms: [],
   },
   'arbeit-entschaedigung': {
-    id: 'arbeit-entschaedigung', art: 'betrag', rechtsgebiet: 'Arbeit',
+    id: 'arbeit-entschaedigung', art: 'betrag', tier: 'experte', rechtsgebiet: 'Arbeit',
     title: 'Arbeitsrechtliche Entschädigungen & Zuschläge',
     description: 'Überstunden, Ferienlohn, 13. Monatslohn pro rata sowie Entschädigung bei missbräuchlicher oder fristloser Kündigung.',
     status: 'geplant', norms: [],
   },
   'erb-ausgleichung': {
-    id: 'erb-ausgleichung', art: 'betrag', rechtsgebiet: 'Erbrecht',
+    id: 'erb-ausgleichung', art: 'betrag', tier: 'experte', rechtsgebiet: 'Erbrecht',
     title: 'Erbrechtliche Ausgleichung & Güterrecht',
     description: 'Ausgleichung und Hinzurechnung sowie güterrechtliche Auseinandersetzung als Vorstufe.',
     status: 'geplant', norms: [],
   },
   mietzinsanpassung: {
-    id: 'mietzinsanpassung', art: 'betrag', rechtsgebiet: 'Miete',
+    id: 'mietzinsanpassung', art: 'betrag', tier: 'experte', rechtsgebiet: 'Miete',
     title: 'Mietzinsanpassung (Referenzzinssatz)',
     description: 'Anpassung des Mietzinses nach Referenzzinssatz, Teuerung und Kostensteigerung.',
     status: 'geplant', norms: [],
   },
   vorsorgeausgleich: {
-    id: 'vorsorgeausgleich', art: 'betrag', rechtsgebiet: 'Familie',
+    id: 'vorsorgeausgleich', art: 'betrag', tier: 'experte', rechtsgebiet: 'Familie',
     title: 'Vorsorgeausgleich (BVG) bei Scheidung',
     description: 'Teilung der während der Ehe geäufneten Austrittsleistungen der beruflichen Vorsorge.',
     status: 'geplant', norms: [],
   },
   existenzminimum: {
-    id: 'existenzminimum', art: 'betrag', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    id: 'existenzminimum', art: 'betrag', tier: 'experte', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     title: 'Existenzminimum & Pfändungsquote',
     description: 'Ermittlung des pfändbaren Betrags; Richtlinien- und kantonsabhängig.',
     status: 'geplant', norms: [],
@@ -329,25 +331,25 @@ const KARTEN: Record<string, CalculatorCard> = {
 
   // ════ III — Zuständigkeit & Einordnung (in Vorbereitung) ════
   gerichtsstand: {
-    id: 'gerichtsstand', art: 'zuordnung', rechtsgebiet: 'Zivilprozess (ZPO)',
+    id: 'gerichtsstand', art: 'zuordnung', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     title: 'Örtliche Zuständigkeit / Gerichtsstand',
     description: 'Bestimmung des örtlich zuständigen Gerichts im Zivilprozess.',
     status: 'geplant', norms: [],
   },
   verfahrensart: {
-    id: 'verfahrensart', art: 'zuordnung', rechtsgebiet: 'Zivilprozess (ZPO)',
+    id: 'verfahrensart', art: 'zuordnung', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     title: 'Sachliche Zuständigkeit & Verfahrensart',
     description: 'Ordentliches, vereinfachtes oder summarisches Verfahren nach Streitwert und Materie.',
     status: 'geplant', norms: [],
   },
   schlichtung: {
-    id: 'schlichtung', art: 'zuordnung', rechtsgebiet: 'Zivilprozess (ZPO)',
+    id: 'schlichtung', art: 'zuordnung', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     title: 'Schlichtungspflicht & Schlichtungsbehörde',
     description: 'Ob ein Schlichtungsverfahren erforderlich ist und welche Behörde zuständig ist.',
     status: 'geplant', norms: [],
   },
   iprg: {
-    id: 'iprg', art: 'zuordnung', rechtsgebiet: 'Internationales Privatrecht',
+    id: 'iprg', art: 'zuordnung', tier: 'experte', rechtsgebiet: 'Internationales Privatrecht',
     title: 'Anwendbares Recht (IPRG)',
     description: 'Anwendbares Recht und Gerichtsstand bei internationalem Bezug.',
     status: 'geplant', norms: [],
@@ -355,19 +357,19 @@ const KARTEN: Record<string, CalculatorCard> = {
 
   // ════ IV — Werkzeuge (in Vorbereitung) ════
   tagerechner: {
-    id: 'tagerechner', art: 'werkzeug', rechtsgebiet: 'übergreifend',
+    id: 'tagerechner', art: 'werkzeug', tier: 'frei', rechtsgebiet: 'übergreifend',
     title: 'Fristen- & Tagerechner',
     description: 'Tage und Monate ab einem Datum, mit Wochenend- und Feiertagsverschiebung.',
     status: 'geplant', norms: [],
   },
   'ferien-checker': {
-    id: 'ferien-checker', art: 'werkzeug', rechtsgebiet: 'übergreifend',
+    id: 'ferien-checker', art: 'werkzeug', tier: 'experte', rechtsgebiet: 'übergreifend',
     title: 'Gerichts- & Betreibungsferien-Checker',
     description: 'Prüft, ob ein Datum in Gerichts- oder Betreibungsferien fällt.',
     status: 'geplant', norms: [],
   },
   teuerungsrechner: {
-    id: 'teuerungsrechner', art: 'werkzeug', rechtsgebiet: 'übergreifend',
+    id: 'teuerungsrechner', art: 'werkzeug', tier: 'experte', rechtsgebiet: 'übergreifend',
     title: 'Teuerungsrechner (LIK-Indexierung)',
     description: 'Anpassung von Beträgen nach dem Landesindex der Konsumentenpreise.',
     status: 'geplant', norms: [],

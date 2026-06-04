@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { Startseite } from './pages/Startseite';
+import { Fachpersonen } from './pages/Fachpersonen';
 import { RechnerUebersicht } from './pages/RechnerUebersicht';
 import { RechnerKuendigung } from './pages/RechnerKuendigung';
 import { RechnerZpo } from './pages/RechnerZpo';
@@ -32,6 +33,7 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Startseite />} />
+        <Route path="/fachpersonen" element={<Fachpersonen />} />
         <Route path="/rechner" element={<RechnerUebersicht />} />
         <Route path="/rechner/kuendigung" element={<RechnerKuendigung />} />
         <Route path="/rechner/zpo-fristen" element={<RechnerZpo />} />

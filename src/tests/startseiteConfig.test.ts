@@ -37,3 +37,14 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
     geplant.forEach((k) => expect(k.norms, k.id).toEqual([]));
   });
 });
+
+describe('Stufen-Zuteilung (tier)', () => {
+  it('genau sechs Rechner sind «frei» (Basis-Seite); alle übrigen «experte»', () => {
+    const frei = ALLE_KARTEN.filter((k) => k.tier === 'frei').map((k) => k.id).sort();
+    expect(frei).toEqual([
+      'erbteilung', 'kuendigung-sperrfristen', 'lohnfortzahlung',
+      'mietrecht', 'tagerechner', 'verzugszins',
+    ]);
+    ALLE_KARTEN.forEach((k) => expect(['frei', 'experte'], k.id).toContain(k.tier));
+  });
+});
