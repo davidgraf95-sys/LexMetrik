@@ -23,6 +23,25 @@ der Locale; Fedlex-Links folgen ihr ebenfalls (fr/it amtlich, Anker per
 Stichprobe sprachunabhängig verifiziert; en → amtliche de-Fassung). Der Hero ist
 text-geführt einspaltig (Kompass-Grafik entfernt, bewusst nicht animiert/ersetzt).
 
+## Status-Modell (ehrlich, drei Zustände)
+
+`entwurf` (orange Akzentkante + Badge «Entwurf») = gebaut, fachlich noch nicht
+geprüft · `geprüft` (Goldrand) = fachlich geprüft — **aktuell nirgends
+vergeben** · `geplant` (gedämpft) = «In Vorbereitung», ohne Norm-Pills.
+Alle NormRefs tragen `verified: false`, bis fachkundig gegen Fedlex geprüft.
+Form-Gates der Vorlagen bleiben im Entwurf-Status voll funktional.
+
+## Fachpersonen-Gliederung (Modus Rechner)
+
+Zweistufig **Rechtsbereich → Output-Typ** (Privatrecht · Öffentliches Recht ·
+Strafrecht · Übergreifend; `rechtsbereich` auf jeder Karte). Konsolidierung:
+43 → 34 Rechner — absorbierte Einzelkarten laufen als Szenarien/Phasen der
+Zielkarten (`RechnerCard.szenarien`; ZPO/SchKG über die bestehende Phasen-
+Auswahl). Vorlagen bleiben nach Dokument-Typ gegliedert; `rechtsbereich` ist
+dort nur Filterwert (fast alles privat — Bereichs-Sektionen wären leer).
+Grenzfall «Einsprache»: straf zugeordnet (Strafbefehl häufiger),
+Verwaltungsbefehl über Keywords/Filter.
+
 ## Oberste Ebene: vier Output-Typen
 
 | Nr. | Sektion (`art`) | Inhalt |
