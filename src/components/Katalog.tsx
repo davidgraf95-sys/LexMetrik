@@ -16,14 +16,30 @@ export function SectionHead({ children }: { children: React.ReactNode }) {
   );
 }
 
+// ─── Karten-Sortierung: nach Rechtsgebiet geclustert ────────────────────────
+// Alle Karten desselben Rechtsgebiets stehen zusammen (z. B. Erbrecht);
+// Gebiete MIT verfügbaren (nicht-geplanten) Karten zuerst, danach übrige —
+// jeweils in RECHTSGEBIETE-Reihenfolge; innerhalb des Gebiets verfügbare vor
+// geplanten. Deterministisch und datengetrieben.
+
+function sortiereKarten(karten: CalculatorCard[]): CalculatorCard[] {
+  const hatAktiv = new Set(karten.filter((k) => k.status !== 'geplant').map((k) => k.rechtsgebiet));
+  const gebietsRang = (g: string) => {
+    const idx = RECHTSGEBIETE.indexOf(g);
+    return (hatAktiv.has(g) ? 0 : RECHTSGEBIETE.length + 1) + (idx === -1 ? RECHTSGEBIETE.length : idx);
+  };
+  return [...karten].sort((a, b) =>
+    gebietsRang(a.rechtsgebiet) - gebietsRang(b.rechtsgebiet) ||
+    Number(a.status === 'geplant') - Number(b.status === 'geplant'));
+}
+
+// Relevanz einer Sektion: verfügbare Karten zuerst, dann Gesamtzahl.
+const anzAktiv = (karten: CalculatorCard[]) => karten.filter((k) => k.status !== 'geplant').length;
+
 // ─── Typ-Sektion: Editorial-Öffner + flaches Kartenraster ─────────────────
-// Sortierung: geprüfte Rechner zuerst (Goldrand), danach «In Vorbereitung».
 
 function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorCard[] }) {
-  const sortiert = [
-    ...karten.filter((k) => k.status !== 'geplant'),
-    ...karten.filter((k) => k.status === 'geplant'),
-  ];
+  const sortiert = sortiereKarten(karten);
   if (sortiert.length === 0) return null;
 
   return (
@@ -64,14 +80,10 @@ function BereichSektion({ bereich, karten }: {
   karten: CalculatorCard[];
 }) {
   const gruppen = SEKTIONEN
-    .map((sx) => ({
-      sx,
-      karten: [
-        ...karten.filter((k) => k.art === sx.art && k.status !== 'geplant'),
-        ...karten.filter((k) => k.art === sx.art && k.status === 'geplant'),
-      ],
-    }))
-    .filter((g) => g.karten.length > 0);
+    .map((sx) => ({ sx, karten: sortiereKarten(karten.filter((k) => k.art === sx.art)) }))
+    .filter((g) => g.karten.length > 0)
+    // Relevanteste Untergruppe zuerst (verfügbare Karten, dann Gesamtzahl)
+    .sort((a, b) => anzAktiv(b.karten) - anzAktiv(a.karten) || b.karten.length - a.karten.length);
   if (gruppen.length === 0) return null;
 
   return (
@@ -293,12 +305,22 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'art', fil
   const filterAktiv = q !== '' || gebiete.size > 0 || bereiche.size > 0 || arten.size > 0 || nurGeprueft;
   const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setBereiche(new Set()); setArten(new Set()); setNurGeprueft(false); };
 
-  // Sprungmarken für die Seitenleisten-Übersicht (nur belegte Sektionen);
-  // bei zweistufiger Gliederung springen sie auf die Rechtsbereiche.
+  // Sichtbare Sektionen, nach Relevanz sortiert (verfügbare Karten zuerst,
+  // dann Gesamtzahl; Config-Reihenfolge als stabiler Tiebreak). Sprungmarken
+  // und Rendering teilen dieselbe Reihenfolge.
+  const bereichSichtbar = RECHTSBEREICH_SEKTIONEN
+    .map((b) => ({ b, karten: treffer.filter((k) => k.rechtsbereich === b.code) }))
+    .filter((x) => x.karten.length > 0)
+    .sort((x, y) => anzAktiv(y.karten) - anzAktiv(x.karten) || y.karten.length - x.karten.length);
+  const artSichtbar = sektionen
+    .map((sx) => ({ sx, karten: treffer.filter((k) => k.art === sx.art) }))
+    .filter((x) => x.karten.length > 0)
+    .sort((x, y) => anzAktiv(y.karten) - anzAktiv(x.karten) || y.karten.length - x.karten.length);
+
   const sprungmarken = (gliederung === 'bereich'
-    ? RECHTSBEREICH_SEKTIONEN.map((b) => ({ id: b.id, numeral: '', title: b.title, anzahl: treffer.filter((k) => k.rechtsbereich === b.code).length }))
-    : sektionen.map((s) => ({ id: s.id, numeral: s.numeral, title: s.title, anzahl: treffer.filter((k) => k.art === s.art).length }))
-  ).filter((s) => s.anzahl > 0);
+    ? bereichSichtbar.map((x) => ({ id: x.b.id, numeral: '', title: x.b.title, anzahl: x.karten.length }))
+    : artSichtbar.map((x) => ({ id: x.sx.id, numeral: x.sx.numeral, title: x.sx.title, anzahl: x.karten.length }))
+  );
 
   // Scrollspy: oberste sichtbare Sektion in der Übersicht markieren.
   const [aktiveSektion, setAktiveSektion] = useState<string | null>(null);
@@ -405,21 +427,15 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'art', fil
             )}
           </section>
         ) : gliederung === 'bereich' ? (
-          /* Zweistufig: Rechtsbereich → Output-Typ (nur nicht-leere Gruppen) */
-          RECHTSBEREICH_SEKTIONEN
-            .map((b) => ({ b, karten: treffer.filter((k) => k.rechtsbereich === b.code) }))
-            .filter((x) => x.karten.length > 0)
-            .map((x) => (
-              <BereichSektion key={x.b.id} bereich={x.b} karten={x.karten} />
-            ))
+          /* Zweistufig: Rechtsbereich → Output-Typ, relevanteste zuerst */
+          bereichSichtbar.map((x) => (
+            <BereichSektion key={x.b.id} bereich={x.b} karten={x.karten} />
+          ))
         ) : (
-          /* Sektionen (datengetrieben aus der zentralen Config) */
-          sektionen
-            .map((s) => ({ s, karten: treffer.filter((k) => k.art === s.art) }))
-            .filter((x) => x.karten.length > 0)
-            .map((x) => (
-              <TypSektion key={x.s.id} sektion={x.s} karten={x.karten} />
-            ))
+          /* Sektionen (datengetrieben), relevanteste zuerst */
+          artSichtbar.map((x) => (
+            <TypSektion key={x.sx.id} sektion={x.sx} karten={x.karten} />
+          ))
         )}
         </div>
       </div>
