@@ -5,30 +5,32 @@ import { CALCULATORS } from '../lib/calculators';
 // Annahmekriterien «Fedlex-Direktlinks für die Norm-Pills»:
 // artikelgenaue Anker, kein ?version=, geplante Kacheln ohne Pills.
 
-const geprueft = ALLE_KARTEN.filter((k) => k.status === 'geprüft');
+// Ehrliches Status-Modell: «aktiv» = entwurf|geprüft; aktuell ist NICHTS geprüft.
+const aktiv = ALLE_KARTEN.filter((k) => k.status !== 'geplant');
 const geplant = ALLE_KARTEN.filter((k) => k.status === 'geplant');
 
 describe('Norm-Pills (Fedlex-Direktlinks)', () => {
-  it('jede geprüfte Kachel trägt mindestens ein Norm-Pill', () => {
-    geprueft.forEach((k) => expect(k.norms.length, k.id).toBeGreaterThan(0));
+  it('jede aktive Kachel (Entwurf) trägt mindestens ein Norm-Pill', () => {
+    aktiv.forEach((k) => expect(k.norms.length, k.id).toBeGreaterThan(0));
   });
 
   it('jede URL ist ein Fedlex-Direktlink im Format …/de#art_<nummer> (Unterstrich-Format für Buchstaben)', () => {
-    geprueft.flatMap((k) => k.norms).forEach((n) => {
+    aktiv.flatMap((k) => k.norms).forEach((n) => {
       expect(n.url, n.label).toMatch(/^https:\/\/www\.fedlex\.admin\.ch\/eli\/cc\/[\w/]+\/de#art_\d+(_[a-z])?$/);
     });
   });
 
   it('keine URL enthält einen ?version=-Parameter', () => {
-    geprueft.flatMap((k) => k.norms).forEach((n) => expect(n.url, n.label).not.toContain('?version='));
+    aktiv.flatMap((k) => k.norms).forEach((n) => expect(n.url, n.label).not.toContain('?version='));
   });
 
-  it('alle Pills der geprüften Kacheln sind verifiziert', () => {
-    geprueft.flatMap((k) => k.norms).forEach((n) => expect(n.verified, n.label).toBe(true));
+  it('kein Eintrag ist «geprüft»; alle Pills tragen verified:false bis zur fachlichen Prüfung', () => {
+    expect(ALLE_KARTEN.some((k) => k.status === 'geprüft')).toBe(false);
+    aktiv.flatMap((k) => k.norms).forEach((n) => expect(n.verified, n.label).toBe(false));
   });
 
   it('Aufzählungs-Labels (/, ·, «und») sind in Einzel-Pills aufgetrennt', () => {
-    geprueft.flatMap((k) => k.norms).forEach((n) => {
+    aktiv.flatMap((k) => k.norms).forEach((n) => {
       expect(n.label, n.label).not.toMatch(/[/·]| und /);
     });
   });
@@ -54,9 +56,9 @@ describe('Stufen-Zuteilung (tier)', () => {
 const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag']);
 
 describe('Routen-Integrität', () => {
-  it('jede geprüfte Karte verlinkt auf eine registrierte Route', () => {
+  it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
     const slugs = new Set(CALCULATORS.map((c) => c.slug));
-    geprueft.forEach((k) => {
+    aktiv.forEach((k) => {
       if (k.modus === 'vorlage') {
         expect(VORLAGEN_ROUTEN.has(k.href!), `${k.id} → ${k.href}`).toBe(true);
         expect(k.schemaId, k.id).toBeTruthy();
@@ -68,9 +70,9 @@ describe('Routen-Integrität', () => {
     });
   });
 
-  it('jeder registrierte Rechner hat eine geprüfte Katalog-Karte', () => {
-    const hrefs = new Set(geprueft.map((k) => k.href!.split('#')[0]));
-    CALCULATORS.filter((c) => c.status === 'geprüft').forEach((c) => {
+  it('jeder registrierte Rechner hat eine aktive Katalog-Karte', () => {
+    const hrefs = new Set(aktiv.map((k) => k.href!.split('#')[0]));
+    CALCULATORS.filter((c) => c.status === 'entwurf').forEach((c) => {
       expect(hrefs.has(`/rechner/${c.slug}`), c.slug).toBe(true);
     });
   });

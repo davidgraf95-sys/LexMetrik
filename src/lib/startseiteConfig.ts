@@ -133,10 +133,10 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'zpo-fristen', modus: 'rechner', art: 'frist', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
     title: 'Verfahrens- & Rechtsmittelfristen',
     description: 'Verfahrens- und Rechtsmittelfristen mit Gerichtsferien und Stillstand.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 142–147 ZPO – Fristenlauf (Spanne: Anker auf führenden Artikel)
-      { label: 'Art. 142–147 ZPO', url: fedlexUrl('ZPO', '142'), verified: true },
+      { label: 'Art. 142–147 ZPO', url: fedlexUrl('ZPO', '142'), verified: false },
     ],
     href: '/rechner/zpo-fristen',
     related: ['schlichtungsgesuch', 'klage-vereinfacht'],
@@ -147,14 +147,14 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'schkg-fristen', modus: 'rechner', art: 'frist', tier: 'experte', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     title: 'Betreibungs- & Konkursfristen',
     description: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 56 SchKG – Rechtsstillstand
-      { label: 'Art. 56 SchKG', url: fedlexUrl('SchKG', '56'), verified: true },
+      { label: 'Art. 56 SchKG', url: fedlexUrl('SchKG', '56'), verified: false },
       // Art. 63 SchKG – Betreibungsferien
-      { label: 'Art. 63 SchKG', url: fedlexUrl('SchKG', '63'), verified: true },
+      { label: 'Art. 63 SchKG', url: fedlexUrl('SchKG', '63'), verified: false },
       // Art. 145 ZPO – Stillstand (Querverweis: ZPO-Basis, nicht SchKG)
-      { label: 'Art. 145 ZPO', url: fedlexUrl('ZPO', '145'), verified: true },
+      { label: 'Art. 145 ZPO', url: fedlexUrl('ZPO', '145'), verified: false },
     ],
     href: '/rechner/schkg-fristen',
     keywords: ['Betreibung', 'Zahlungsbefehl', 'Rechtsvorschlag', 'Konkurs', 'Pfändung', 'Betreibungsferien'],
@@ -165,12 +165,12 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'kuendigung-sperrfristen', modus: 'rechner', art: 'frist', tier: 'frei', rechtsgebiet: 'Arbeit',
     title: 'Kündigungs- & Sperrfristen',
     description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 335c OR – ordentliche Kündigungsfristen
-      { label: 'Art. 335c OR', url: fedlexUrl('OR', '335c'), verified: true },
+      { label: 'Art. 335c OR', url: fedlexUrl('OR', '335c'), verified: false },
       // Art. 336c OR – Kündigung zur Unzeit (Sperrfristen)
-      { label: 'Art. 336c OR', url: fedlexUrl('OR', '336c'), verified: true },
+      { label: 'Art. 336c OR', url: fedlexUrl('OR', '336c'), verified: false },
     ],
     href: '/rechner/kuendigung#kuendigung',
     keywords: ['gekündigt', 'Kündigung', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär'],
@@ -181,14 +181,14 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'mietrecht', modus: 'rechner', art: 'frist', tier: 'frei', rechtsgebiet: 'Miete',
     title: 'Kündigung & Fristen im Mietrecht',
     description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume — mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 266a–o OR – Kündigungstermine/-fristen (Spanne: Anker auf führenden Artikel)
-      { label: 'Art. 266a–o OR', url: fedlexUrl('OR', '266a'), verified: true },
+      { label: 'Art. 266a–o OR', url: fedlexUrl('OR', '266a'), verified: false },
       // Art. 257d OR – Zahlungsrückstand
-      { label: 'Art. 257d OR', url: fedlexUrl('OR', '257d'), verified: true },
+      { label: 'Art. 257d OR', url: fedlexUrl('OR', '257d'), verified: false },
       // Art. 257f OR – Sorgfaltspflichtverletzung
-      { label: 'Art. 257f OR', url: fedlexUrl('OR', '257f'), verified: true },
+      { label: 'Art. 257f OR', url: fedlexUrl('OR', '257f'), verified: false },
     ],
     href: '/rechner/mietrecht',
     keywords: ['Mietwohnung', 'Wohnung kündigen', 'Kündigungstermin', 'Vermieter', 'Mieter', 'Geschäftsraum'],
@@ -219,14 +219,14 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'verjaehrung', modus: 'rechner', art: 'frist', tier: 'experte', rechtsgebiet: 'Vertrag / OR',
     title: 'Verjährung',
     description: 'Ordentliche und kurze Verjährung sowie deliktische und bereicherungsrechtliche Ansprüche — mit Stillstand, Unterbrechung und Einredeverzicht.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 60 OR – unerlaubte Handlung (3/10 bzw. 3/20 Jahre)
-      { label: 'Art. 60 OR', url: fedlexUrl('OR', '60'), verified: true },
+      { label: 'Art. 60 OR', url: fedlexUrl('OR', '60'), verified: false },
       // Art. 67 OR – ungerechtfertigte Bereicherung (3/10 Jahre)
-      { label: 'Art. 67 OR', url: fedlexUrl('OR', '67'), verified: true },
+      { label: 'Art. 67 OR', url: fedlexUrl('OR', '67'), verified: false },
       // Art. 127–142 OR – Verjährungsordnung (Spanne: Anker auf führenden Artikel)
-      { label: 'Art. 127–142 OR', url: fedlexUrl('OR', '127'), verified: true },
+      { label: 'Art. 127–142 OR', url: fedlexUrl('OR', '127'), verified: false },
     ],
     href: '/rechner/verjaehrung',
     keywords: ['Verjährung', 'verjährt', 'Frist', 'Forderung', 'unerlaubte Handlung', 'Bereicherung', 'Unterbrechung', 'Verzicht', 'Einrede'],
@@ -237,18 +237,18 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'gewaehrleistung', modus: 'rechner', art: 'frist', tier: 'experte', rechtsgebiet: 'Vertrag / OR',
     title: 'Gewährleistung & Mängelrüge',
     description: 'Rüge- und Verjährungsfristen bei Kauf, Werkvertrag und Grundstückkauf — mit Zwei-Regime-Weiche zur Baumängel-Revision 2026.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 201 OR – Prüf-/Rügeobliegenheit (inkl. Abs. 4 neu)
-      { label: 'Art. 201 OR', url: fedlexUrl('OR', '201'), verified: true },
+      { label: 'Art. 201 OR', url: fedlexUrl('OR', '201'), verified: false },
       // Art. 210 OR – Verjährung Kauf
-      { label: 'Art. 210 OR', url: fedlexUrl('OR', '210'), verified: true },
+      { label: 'Art. 210 OR', url: fedlexUrl('OR', '210'), verified: false },
       // Art. 219a OR – Grundstückkauf (neu, in Kraft 1.1.2026)
-      { label: 'Art. 219a OR', url: fedlexUrl('OR', '219a'), verified: true },
+      { label: 'Art. 219a OR', url: fedlexUrl('OR', '219a'), verified: false },
       // Art. 367 OR – Prüfung/Rüge Werkvertrag (inkl. Abs. 1bis neu)
-      { label: 'Art. 367 OR', url: fedlexUrl('OR', '367'), verified: true },
+      { label: 'Art. 367 OR', url: fedlexUrl('OR', '367'), verified: false },
       // Art. 371 OR – Verjährung Werkvertrag (inkl. Abs. 3 neu)
-      { label: 'Art. 371 OR', url: fedlexUrl('OR', '371'), verified: true },
+      { label: 'Art. 371 OR', url: fedlexUrl('OR', '371'), verified: false },
     ],
     href: '/rechner/gewaehrleistung',
     keywords: ['Mangel', 'Mängelrüge', 'Garantie', 'Gewährleistung', 'Kauf', 'Werkvertrag', 'Baumängel', 'Rüge', 'Abnahme', 'SIA'],
@@ -351,10 +351,10 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'verzugszins', modus: 'rechner', art: 'betrag', tier: 'frei', rechtsgebiet: 'Vertrag / OR',
     title: 'Verzugszins',
     description: 'Verzugszins bei Schuldnerverzug — Zeitraum, Satz und Betrag.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 104 OR – Verzugszins
-      { label: 'Art. 104 OR', url: fedlexUrl('OR', '104'), verified: true },
+      { label: 'Art. 104 OR', url: fedlexUrl('OR', '104'), verified: false },
     ],
     href: '/rechner/verzugszins',
     keywords: ['Rechnung', 'Verzug', 'Zins', 'Mahnung', 'offene Forderung', '5 Prozent'],
@@ -365,10 +365,10 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'lohnfortzahlung', modus: 'rechner', art: 'betrag', tier: 'frei', rechtsgebiet: 'Arbeit',
     title: 'Lohnfortzahlung (kantonale Skala)',
     description: 'Lohnfortzahlung bei unverschuldeter Verhinderung nach kantonaler Skala (Basel/Bern/Zürich).',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 324a OR – Lohnfortzahlung bei Verhinderung
-      { label: 'Art. 324a OR', url: fedlexUrl('OR', '324a'), verified: true },
+      { label: 'Art. 324a OR', url: fedlexUrl('OR', '324a'), verified: false },
     ],
     href: '/rechner/kuendigung#lohnfortzahlung',
     keywords: ['krank', 'Lohnfortzahlung', 'Arztzeugnis', 'Arbeitsunfähigkeit', 'Taggeld', 'Skala'],
@@ -379,12 +379,12 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'erbteilung', modus: 'rechner', art: 'betrag', tier: 'frei', rechtsgebiet: 'Erbrecht',
     title: 'Pflichtteil & verfügbare Quote',
     description: 'Gesetzliche Erbteile, Pflichtteile und verfügbare Quote — mit Todesdatum-Weiche für die Revision 2023 und güterrechtlicher Vorstufe.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 457 ff. ZGB – gesetzliche Erben (Folgeverweis: Anker auf führenden Artikel)
-      { label: 'Art. 457 ff. ZGB', url: fedlexUrl('ZGB', '457'), verified: true },
+      { label: 'Art. 457 ff. ZGB', url: fedlexUrl('ZGB', '457'), verified: false },
       // Art. 470 f. ZGB – verfügbare Quote / Pflichtteil
-      { label: 'Art. 470 f. ZGB', url: fedlexUrl('ZGB', '470'), verified: true },
+      { label: 'Art. 470 f. ZGB', url: fedlexUrl('ZGB', '470'), verified: false },
     ],
     href: '/rechner/erbteilung',
     keywords: ['Erbe', 'Pflichtteil', 'Testament', 'Erbteilung', 'verfügbare Quote', 'Todesfall', 'Ehegatte'],
@@ -507,18 +507,18 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'eigenhaendiges-testament', modus: 'vorlage', art: 'vorsorge', tier: 'frei', rechtsgebiet: 'Erbrecht',
     title: 'Eigenhändiges Testament',
     description: 'Letztwillige Verfügung aus geprüften Bausteinen — mit Pflichtteils-Kontrolle, Bausteinprotokoll und Form-Gate; Ausgabe als Mustertext zum eigenhändigen Abschreiben.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 505 ZGB – Form der eigenhändigen Verfügung (Handschrift, Datum, Unterschrift)
-      { label: 'Art. 505 ZGB', url: fedlexUrl('ZGB', '505'), verified: true },
+      { label: 'Art. 505 ZGB', url: fedlexUrl('ZGB', '505'), verified: false },
       // Art. 467 ZGB – Testierfähigkeit
-      { label: 'Art. 467 ZGB', url: fedlexUrl('ZGB', '467'), verified: true },
+      { label: 'Art. 467 ZGB', url: fedlexUrl('ZGB', '467'), verified: false },
       // Art. 471 ZGB – Pflichtteil (Fassung in Kraft seit 1.1.2023)
-      { label: 'Art. 471 ZGB', url: fedlexUrl('ZGB', '471'), verified: true },
+      { label: 'Art. 471 ZGB', url: fedlexUrl('ZGB', '471'), verified: false },
       // Art. 483 ZGB – Erbeinsetzung
-      { label: 'Art. 483 ZGB', url: fedlexUrl('ZGB', '483'), verified: true },
+      { label: 'Art. 483 ZGB', url: fedlexUrl('ZGB', '483'), verified: false },
       // Art. 484 ZGB – Vermächtnis
-      { label: 'Art. 484 ZGB', url: fedlexUrl('ZGB', '484'), verified: true },
+      { label: 'Art. 484 ZGB', url: fedlexUrl('ZGB', '484'), verified: false },
     ],
     href: '/vorlagen/testament',
     schemaId: 'testament-eigenhaendig',
@@ -546,16 +546,16 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'vorsorgeauftrag', modus: 'vorlage', art: 'vorsorge', tier: 'frei', rechtsgebiet: 'Familie',
     title: 'Vorsorgeauftrag',
     description: 'Personensorge, Vermögenssorge und Vertretung im Rechtsverkehr bei Urteilsunfähigkeit — mit Form-Weiche (eigenhändig oder beurkundet), Sondervollmachten und KESB-Hinweisen.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 360 ZGB – Grundsatz (Aufgabenbereiche, Weisungen, Ersatzverfügung)
-      { label: 'Art. 360 ZGB', url: fedlexUrl('ZGB', '360'), verified: true },
+      { label: 'Art. 360 ZGB', url: fedlexUrl('ZGB', '360'), verified: false },
       // Art. 361 ZGB – Form (eigenhändig oder öffentlich beurkundet)
-      { label: 'Art. 361 ZGB', url: fedlexUrl('ZGB', '361'), verified: true },
+      { label: 'Art. 361 ZGB', url: fedlexUrl('ZGB', '361'), verified: false },
       // Art. 363 ZGB – Validierung durch die KESB
-      { label: 'Art. 363 ZGB', url: fedlexUrl('ZGB', '363'), verified: true },
+      { label: 'Art. 363 ZGB', url: fedlexUrl('ZGB', '363'), verified: false },
       // Art. 396 OR – Sondervollmacht (Grundstücke, Vergleich, Schiedsabrede)
-      { label: 'Art. 396 OR', url: fedlexUrl('OR', '396'), verified: true },
+      { label: 'Art. 396 OR', url: fedlexUrl('OR', '396'), verified: false },
     ],
     href: '/vorlagen/vorsorgeauftrag',
     schemaId: 'vorsorgeauftrag',
@@ -570,16 +570,16 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'patientenverfuegung', modus: 'vorlage', art: 'vorsorge', tier: 'frei', rechtsgebiet: 'Familie',
     title: 'Patientenverfügung',
     description: 'Medizinische Massnahmen, Behandlungsziel und Vertretungsperson — mit Konsistenz-Prüfung und Form-Gate; am Computer erstellbar, handschriftlich zu unterschreiben.',
-    status: 'geprüft',
+    status: 'entwurf',
     norms: [
       // Art. 370 ZGB – Grundsatz (Massnahmen, Vertretungsperson, Ersatzverfügung)
-      { label: 'Art. 370 ZGB', url: fedlexUrl('ZGB', '370'), verified: true },
+      { label: 'Art. 370 ZGB', url: fedlexUrl('ZGB', '370'), verified: false },
       // Art. 371 ZGB – Errichtung und Widerruf (schriftlich, datiert, unterzeichnet)
-      { label: 'Art. 371 ZGB', url: fedlexUrl('ZGB', '371'), verified: true },
+      { label: 'Art. 371 ZGB', url: fedlexUrl('ZGB', '371'), verified: false },
       // Art. 372 ZGB – Verbindlichkeit bei Urteilsunfähigkeit
-      { label: 'Art. 372 ZGB', url: fedlexUrl('ZGB', '372'), verified: true },
+      { label: 'Art. 372 ZGB', url: fedlexUrl('ZGB', '372'), verified: false },
       // Art. 378 ZGB – gesetzliche Vertretungskaskade
-      { label: 'Art. 378 ZGB', url: fedlexUrl('ZGB', '378'), verified: true },
+      { label: 'Art. 378 ZGB', url: fedlexUrl('ZGB', '378'), verified: false },
     ],
     href: '/vorlagen/patientenverfuegung',
     schemaId: 'patientenverfuegung',

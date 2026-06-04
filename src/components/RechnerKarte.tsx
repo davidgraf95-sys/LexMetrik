@@ -81,7 +81,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
             n.url ? (
               <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer"
                 className="relative lc-chip no-underline hover:text-brass-700"
-                title={`${n.label} auf Fedlex öffnen${n.verified ? '' : ' (Gesetzes-Seite)'}`}>
+                title={`${n.label} auf Fedlex öffnen${n.verified ? '' : ' — Verweis noch nicht fachlich geprüft'}`}>
                 {n.label}
               </a>
             ) : (
