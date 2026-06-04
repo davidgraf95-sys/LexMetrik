@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { SEKTIONEN, VORLAGE_SEKTIONEN, ALLE_KARTEN, type Modus } from '../lib/startseiteConfig';
 import { Katalog, SectionHead } from '../components/Katalog';
 import { ModusSchalter, useModus } from '../components/ModusSchalter';
-import { HeroVisual } from '../components/HeroVisual';
 
 // Basis-Seite: zeigt nur die allgemeinen Rechner (tier 'frei').
 // Spezialisierte Rechner stehen im Experten-Panel unter /fachpersonen.
@@ -58,19 +57,16 @@ export function Startseite() {
 
   return (
     <div className="space-y-12">
-      {/* Kompakter Hero — die Karten kommen direkt danach */}
-      <section className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
-        <div className="space-y-4 max-w-reading">
-          <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.25rem] sm:text-[2.75rem]">
-            Schweizer Recht: berechnen und erstellen.
-          </h1>
-          <p className="text-body-l text-ink-600">
-            Fristen, Beträge und Rechtsdokumente nach festen Regeln — Schritt für Schritt
-            nachvollziehbar, jede Norm direkt mit dem Gesetzestext verlinkt. Kein Sprachmodell:
-            gleiche Eingaben ergeben immer dasselbe Ergebnis.
-          </p>
-        </div>
-        <HeroVisual className="hidden xl:block w-[220px] justify-self-end" />
+      {/* Kompakter Hero, text-geführt und einspaltig — die Karten kommen direkt danach */}
+      <section className="space-y-4 max-w-[46rem]">
+        <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.25rem] sm:text-[2.75rem]">
+          Schweizer Recht: berechnen und erstellen.
+        </h1>
+        <p className="text-body-l text-ink-600 max-w-reading">
+          Fristen, Beträge und Rechtsdokumente nach festen Regeln — Schritt für Schritt
+          nachvollziehbar, jede Norm direkt mit dem Gesetzestext verlinkt. Kein Sprachmodell:
+          gleiche Eingaben ergeben immer dasselbe Ergebnis.
+        </p>
       </section>
 
       {/* Primärweiche: Modus prominent unter dem Hero (steuert Text + Katalog) */}
