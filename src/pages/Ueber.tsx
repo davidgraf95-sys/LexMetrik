@@ -1,15 +1,45 @@
-// Optionale Seite "Über" (provisorisch).
+// Seite «Über» — Entstehungsgeschichte mit persönlichem Bezug.
 export function Ueber() {
   return (
-    <div className="space-y-6 max-w-2xl">
+    <div className="space-y-10 max-w-reading">
       <div className="space-y-2">
-        <p className="text-xs font-semibold text-ink-400 uppercase tracking-wide">Über</p>
-        <h1 className="text-2xl font-bold text-ink-900">Über Lexmetrik</h1>
+        <p className="lc-overline">Über</p>
+        <h1 className="text-h1 font-display font-semibold text-ink-900">Über Lexmetrik</h1>
       </div>
-      <p className="text-sm text-ink-600 leading-relaxed">
-        Lexmetrik ist eine Sammlung transparenter Rechner für Schweizer Rechtsfristen und Ansprüche.
-        Ziel ist eine nachvollziehbare Orientierung mit exakten Normverweisen — keine Rechtsberatung.
-      </p>
+
+      <div className="space-y-4 text-body-s text-ink-600 leading-relaxed">
+        <p>Die Idee zu Lexmetrik kam mir bei der Vorbereitung auf die Anwaltsprüfung in Basel-Stadt.</p>
+        <p>
+          Wie viele habe ich dabei auch KI-Tools genutzt. Für das Verständnis schwieriger Fragen
+          waren sie oft hilfreich. Bei den Fristberechnungen dagegen, die im Grunde nur saubere
+          Regelanwendung sind, konnte ich mich nicht auf sie verlassen: Mal wurde der Fristbeginn
+          verschoben, mal eine Gerichtsferienperiode übergangen, mal ein Datum genannt, das schlicht
+          nicht stimmte — jedes Mal mit grosser Selbstsicherheit.
+        </p>
+        <p>
+          Das hat mich überrascht, denn eine Frist kennt kein Ermessen. Sie ergibt sich aus dem
+          Gesetz und einigen Entscheiden, und am Ende steht ein einziges richtiges Datum; verpasst
+          man es, ist das Recht verwirkt. Eine solche Berechnung sollte verlässlich sein und sich
+          überprüfen lassen, statt von der Tagesform eines Sprachmodells abzuhängen.
+        </p>
+        <p>
+          Genau dafür ist Lexmetrik gedacht. Es wendet die einschlägigen Regeln nachvollziehbar an,
+          zeigt jeden Schritt und verweist für jede Norm auf den Gesetzestext. Die juristische
+          Prüfung nimmt es niemandem ab, aber es liefert eine Grundlage, die sich kontrollieren
+          lässt.
+        </p>
+        {/* Signatur — externe Verlinkung wie übrige externe Links (neues Tab) */}
+        <p className="pt-2">
+          <a
+            href="https://www.linkedin.com/in/david-graf-a5667624b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium"
+          >
+            David Graf
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
