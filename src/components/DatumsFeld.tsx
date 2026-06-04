@@ -57,9 +57,14 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
     };
   }, [offen]);
 
+  const [rechtsbuendig, setRechtsbuendig] = useState(false);
+
   const oeffnen = () => {
     const d = value ? parseISO(value) : new Date();
     setMonat(isValid(d) ? new Date(d.getFullYear(), d.getMonth(), 1) : new Date());
+    // Popover nach links klappen, wenn rechts kein Platz mehr ist (Viewport-Rand)
+    const rect = wrapRef.current?.getBoundingClientRect();
+    setRechtsbuendig(!!rect && rect.left + 280 > window.innerWidth - 12);
     setOffen(true);
   };
 
@@ -114,7 +119,7 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
       </button>
 
       {offen && (
-        <div className="absolute z-50 top-full left-0 mt-1.5 w-[17.5rem] bg-surface-raised border border-line rounded-lg shadow-lg p-3 lc-reveal">
+        <div className={`absolute z-50 top-full ${rechtsbuendig ? 'right-0' : 'left-0'} mt-1.5 w-[min(17.5rem,calc(100vw-2rem))] bg-surface-raised border border-line rounded-lg shadow-lg p-3 lc-reveal`}>
           {/* Kopf: Jahr-/Monatsblättern, Monat als Ablese-Anzeige */}
           <div className="flex items-center justify-between mb-2">
             <div className="flex">

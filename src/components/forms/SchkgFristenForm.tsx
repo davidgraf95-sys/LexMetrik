@@ -266,9 +266,9 @@ export function SchkgFristenForm() {
           {hemmung.an && (
             <div className="flex flex-wrap gap-2 items-center pl-6">
               <span className="text-body-s text-ink-500">Hemmendes Verfahren von</span>
-              <DatumsFeld value={hemmung.von} onChange={(v) => setHemmung((s) => ({ ...s, von: v }))} className={inputCls} wrapperClassName="w-44" />
+              <DatumsFeld value={hemmung.von} onChange={(v) => setHemmung((s) => ({ ...s, von: v }))} className={inputCls} wrapperClassName="w-full sm:w-44" />
               <span className="text-body-s text-ink-500">bis</span>
-              <DatumsFeld value={hemmung.bis} onChange={(v) => setHemmung((s) => ({ ...s, bis: v }))} className={inputCls} wrapperClassName="w-44" />
+              <DatumsFeld value={hemmung.bis} onChange={(v) => setHemmung((s) => ({ ...s, bis: v }))} className={inputCls} wrapperClassName="w-full sm:w-44" />
             </div>
           )}
         </div>
@@ -282,9 +282,9 @@ export function SchkgFristenForm() {
         {rechtsstillstand.an && (
           <div className="flex flex-wrap gap-2 items-center pl-6">
             <span className="text-body-s text-ink-500">von</span>
-            <DatumsFeld value={rechtsstillstand.von} onChange={(v) => setRechtsstillstand((s) => ({ ...s, von: v }))} className={inputCls} wrapperClassName="w-44" />
+            <DatumsFeld value={rechtsstillstand.von} onChange={(v) => setRechtsstillstand((s) => ({ ...s, von: v }))} className={inputCls} wrapperClassName="w-full sm:w-44" />
             <span className="text-body-s text-ink-500">bis</span>
-            <DatumsFeld value={rechtsstillstand.bis} onChange={(v) => setRechtsstillstand((s) => ({ ...s, bis: v }))} className={inputCls} wrapperClassName="w-44" />
+            <DatumsFeld value={rechtsstillstand.bis} onChange={(v) => setRechtsstillstand((s) => ({ ...s, bis: v }))} className={inputCls} wrapperClassName="w-full sm:w-44" />
           </div>
         )}
       </div>

@@ -189,11 +189,11 @@ export function VerjaehrungForm() {
               {U_TYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
             </select>
             <span className="text-body-s text-ink-500">am</span>
-            <DatumsFeld value={u.datum} onChange={(v) => setU(i, { datum: v })} className={inputCls} wrapperClassName="w-44" />
+            <DatumsFeld value={u.datum} onChange={(v) => setU(i, { datum: v })} className={inputCls} wrapperClassName="w-full sm:w-44" />
             {u.typ === 'klage_schlichtung' && (
               <>
                 <span className="text-body-s text-ink-500">rechtskräftig erledigt am</span>
-                <DatumsFeld value={u.prozessEnde ?? ''} onChange={(v) => setU(i, { prozessEnde: v || undefined })} className={inputCls} wrapperClassName="w-44" />
+                <DatumsFeld value={u.prozessEnde ?? ''} onChange={(v) => setU(i, { prozessEnde: v || undefined })} className={inputCls} wrapperClassName="w-full sm:w-44" />
                 <label className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
                   <input type="checkbox" checked={u.mitUrteil ?? false} onChange={(e) => setU(i, { mitUrteil: e.target.checked })} />
                   durch Urteil (→ 10 Jahre)
@@ -219,9 +219,9 @@ export function VerjaehrungForm() {
               {STILLSTAND_GRUENDE.map((g) => <option key={g} value={g}>{g}</option>)}
             </select>
             <span className="text-body-s text-ink-500">von</span>
-            <DatumsFeld value={s.von} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, von: v } : x)))} className={inputCls} wrapperClassName="w-44" />
+            <DatumsFeld value={s.von} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, von: v } : x)))} className={inputCls} wrapperClassName="w-full sm:w-44" />
             <span className="text-body-s text-ink-500">bis</span>
-            <DatumsFeld value={s.bis} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, bis: v } : x)))} className={inputCls} wrapperClassName="w-44" />
+            <DatumsFeld value={s.bis} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, bis: v } : x)))} className={inputCls} wrapperClassName="w-full sm:w-44" />
             <button type="button" onClick={() => setStillstaende((arr) => arr.filter((_, j) => j !== i))}
               className="text-body-s text-danger-700 hover:underline">entfernen</button>
           </div>
@@ -241,7 +241,7 @@ export function VerjaehrungForm() {
         {verzichtAn && (
           <div className="flex flex-wrap items-center gap-2 pl-6">
             <span className="text-body-s text-ink-500">erklärt am</span>
-            <DatumsFeld value={verzichtDatum} onChange={setVerzichtDatum} className={inputCls} wrapperClassName="w-44" />
+            <DatumsFeld value={verzichtDatum} onChange={setVerzichtDatum} className={inputCls} wrapperClassName="w-full sm:w-44" />
             <span className="text-body-s text-ink-500">für</span>
             <input type="number" min={1} max={10} value={verzichtJahre} placeholder="10"
               onChange={(e) => setVerzichtJahre(e.target.value)} className={inputCls + ' w-24'} />

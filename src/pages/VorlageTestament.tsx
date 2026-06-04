@@ -410,9 +410,10 @@ export function VorlageTestament() {
         })}
       </nav>
 
-      {/* Zweispaltig: Formular links, klebende Vorschau rechts */}
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-8 items-start">
-        <div className="bg-surface-raised rounded-2xl border border-line p-6 space-y-5">
+      {/* Zweispaltig: Formular links, klebende Vorschau rechts;
+          mobil einspaltig mit einklappbarer Vorschau */}
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
+        <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5">
           <h2 className="text-h3 font-display font-semibold text-ink-900">{SCHRITTE[schritt].label}</h2>
           {inhalt()}
 
@@ -434,10 +435,28 @@ export function VorlageTestament() {
           </div>
         </div>
 
-        {/* Vorschau + Pflichtteile + Protokoll */}
-        <div className="space-y-4 lg:sticky lg:top-28">
+        {/* Vorschau + Pflichtteile + Protokoll — mobil einklappbar */}
+        <details className="lg:hidden bg-surface border border-line rounded-xl" open={schritt === SCHRITTE.length - 1}>
+          <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between text-body-s font-medium text-ink-700">
+            <span>Vorschau & Bausteinprotokoll</span>
+            <span aria-hidden className="text-ink-500">▾</span>
+          </summary>
+          <div className="px-4 pb-4"><VorschauSpalte /></div>
+        </details>
+        <div className="hidden lg:block lg:sticky lg:top-28">
+          <VorschauSpalte />
+        </div>
+      </div>
+    </div>
+  );
+
+  // Vorschau-Spalte (Papier, Pflichtteile, Protokoll) — doppelt gerendert
+  // (mobil einklappbar / Desktop klebend), identischer Inhalt.
+  function VorschauSpalte() {
+    return (
+        <div className="space-y-4">
           {/* Live-Vorschau als «Papier» */}
-          <section aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-7 sm:p-9">
+          <section aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-5 sm:p-9">
             <p className="lc-overline mb-4">Vorschau · aktualisiert sich live</p>
             <div className="font-display text-ink-900 space-y-3" style={{ fontSize: '0.95rem', lineHeight: 1.75 }}>
               <p className="text-center font-semibold text-[1.15rem]">{ergebnis.dokument.titel}</p>
@@ -490,7 +509,6 @@ export function VorlageTestament() {
             </ul>
           </details>
         </div>
-      </div>
-    </div>
-  );
+    );
+  }
 }

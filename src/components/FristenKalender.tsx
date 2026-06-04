@@ -54,7 +54,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
           const offset = (new Date(jahr, m, 1).getDay() + 6) % 7; // Mo-first
           const zellen: (Date | null)[] = [...Array(offset).fill(null), ...Array.from({ length: anzahl }, (_, i) => new Date(jahr, m, i + 1))];
           return (
-            <div key={`${jahr}-${m}`} className="w-[15.5rem]">
+            <div key={`${jahr}-${m}`} className="w-[min(15.5rem,100%)]">
               {/* Monat als gravierte Anzeige: Overline + Mono-Jahr */}
               <p className="lc-overline text-ink-600 mb-2">{MONATE[m]} <span className="num text-brass-700">{jahr}</span></p>
               <div className="grid grid-cols-7 gap-x-0 gap-y-0.5 text-center">

@@ -220,20 +220,40 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteKopf, seite
     return () => beobachter.disconnect();
   }, [idsKey]);
 
+  const filterAnzahl = gebiete.size + (q !== '' ? 1 : 0) + (nurGeprueft ? 1 : 0);
+  const seitenleiste = (
+    <>
+      <Seitenleiste
+        rechtsgebiete={rechtsgebiete}
+        gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
+        nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
+        suche={suche} setSuche={setSuche}
+        sprungmarken={sprungmarken}
+        aktiveSektion={aktiveSektion}
+      />
+      {seitenleisteFuss}
+    </>
+  );
+
   return (
-    <div className="lg:grid lg:grid-cols-[270px_minmax(0,1fr)] lg:gap-10 lg:items-start space-y-8 lg:space-y-0">
-      {/* Seitenleiste: klebt auf Desktop unter dem Header */}
-      <aside className="lg:sticky lg:top-28 space-y-6">
+    <div className="lg:grid lg:grid-cols-[270px_minmax(0,1fr)] lg:gap-10 lg:items-start space-y-6 lg:space-y-0">
+      {/* Seitenleiste: klebt auf Desktop unter dem Header; mobil einklappbar,
+          damit die Karten sofort sichtbar sind */}
+      <aside className="lg:sticky lg:top-28 space-y-4 lg:space-y-6">
         {seitenleisteKopf}
-        <Seitenleiste
-          rechtsgebiete={rechtsgebiete}
-          gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
-          nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
-          suche={suche} setSuche={setSuche}
-          sprungmarken={sprungmarken}
-          aktiveSektion={aktiveSektion}
-        />
-        {seitenleisteFuss}
+        <details className="lg:hidden bg-surface border border-line rounded-xl">
+          <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between gap-2 text-body-s font-medium text-ink-700">
+            <span>Filter & Übersicht</span>
+            <span className="flex items-center gap-2">
+              {filterAnzahl > 0 && (
+                <span className="num text-xs rounded-full px-2 py-0.5 bg-brass-100 text-brass-700">{filterAnzahl} aktiv</span>
+              )}
+              <span aria-hidden className="text-ink-500">▾</span>
+            </span>
+          </summary>
+          <div className="px-4 pb-4 space-y-5">{seitenleiste}</div>
+        </details>
+        <div className="hidden lg:block space-y-6">{seitenleiste}</div>
       </aside>
 
       {/* Karten: ab hier beginnt das Produkt */}

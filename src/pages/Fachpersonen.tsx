@@ -38,15 +38,17 @@ export function Fachpersonen() {
         {/* Kennzahlen-Messleiste: Skala als Ablesekante, Haarlinien als Teilung */}
         <div className="pt-1">
           <span className="scale-rule block" aria-hidden />
-          <dl className="flex flex-wrap divide-x divide-line border-b border-line">
+          {/* Mobil 2×2-Raster ohne Trennlinien (divide-x bricht beim Umbruch),
+              ab sm einzeilig mit Haarlinien-Teilung */}
+          <dl className="grid grid-cols-2 gap-y-3 sm:flex sm:flex-wrap sm:divide-x sm:divide-line border-b border-line py-3 sm:py-0">
             {[
               { wert: alle.filter((k) => k.modus === 'rechner').length, label: 'Rechner' },
               { wert: alle.filter((k) => k.modus === 'vorlage').length, label: 'Vorlagen' },
               { wert: geprueft.length, label: 'geprüft' },
               { wert: gebiete, label: 'Rechtsgebiete' },
             ].map((s) => (
-              <div key={s.label} className="px-8 first:pl-0 py-3">
-                <dd className="num text-[1.6rem] leading-none font-medium text-ink-900">{s.wert}</dd>
+              <div key={s.label} className="sm:px-8 sm:first:pl-0 sm:py-3">
+                <dd className="num text-[1.4rem] sm:text-[1.6rem] leading-none font-medium text-ink-900">{s.wert}</dd>
                 <dt className="lc-overline mt-1.5">{s.label}</dt>
               </div>
             ))}
