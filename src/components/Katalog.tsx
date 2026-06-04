@@ -54,43 +54,75 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
   );
 }
 
-// ─── Seitenleiste: Suche · Status · Rechtsgebiete · Sprungmarken · Legende ──
-// Vertikal, auf Desktop klebend — die Karten rücken dadurch nach oben.
+// ─── Filterleiste (horizontal, über dem Katalog): Suche · Status · Gebiete ──
+// Die Inline-Suche FILTERT den aktiven Modus; die ⌘K-Palette navigiert global —
+// bewusst getrennte Einstiege (s. STRUKTUR.md), darum hier «filtern»-Wortlaut.
 
-function Seitenleiste(props: {
+function FilterLeiste(props: {
   rechtsgebiete: string[];
   gebiete: Set<string>; toggleGebiet: (g: string) => void; reset: () => void;
   nurGeprueft: boolean; setNurGeprueft: (v: boolean) => void;
   suche: string; setSuche: (v: string) => void;
+}) {
+  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche } = props;
+  return (
+    <section aria-label="Filter" className="space-y-3">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+        <input
+          type="search"
+          value={suche}
+          onChange={(e) => setSuche(e.target.value)}
+          placeholder="Katalog filtern (Titel, Stichwort, Art. 336c) …"
+          className="lc-input sm:max-w-sm"
+          aria-label="Katalog filtern"
+        />
+        {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur geprüfte */}
+        <div className="flex gap-1 p-1 bg-surface border border-line rounded-xl w-fit" role="group" aria-label="Status">
+          {([['Alle', false], ['Nur geprüfte', true]] as const).map(([label, wert]) => (
+            <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
+              aria-pressed={nurGeprueft === wert}
+              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
+              }`}>
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Rechtsgebiete">
+        {rechtsgebiete.map((g) => {
+          const an = gebiete.has(g);
+          return (
+            <button key={g} type="button" onClick={() => toggleGebiet(g)} aria-pressed={an}
+              className={`text-xs font-medium rounded-full px-2.5 py-1 border transition-colors ${
+                an
+                  ? 'bg-ink-900 text-paper border-ink-900'
+                  : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
+              }`}>
+              {g}
+            </button>
+          );
+        })}
+        {gebiete.size > 0 && (
+          <button type="button" onClick={reset}
+            className="text-xs text-brass-700 hover:text-brass-600 px-1">
+            Zurücksetzen
+          </button>
+        )}
+      </div>
+    </section>
+  );
+}
+
+// ─── Übersicht (schlanke Seitenleiste): Sprungmarken mit Scrollspy + Legende ─
+
+function Uebersicht(props: {
   sprungmarken: { id: string; numeral: string; title: string; anzahl: number }[];
   aktiveSektion: string | null;
 }) {
-  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche, sprungmarken, aktiveSektion } = props;
+  const { sprungmarken, aktiveSektion } = props;
   return (
-    <section aria-label="Filter" className="space-y-5">
-      <input
-        type="search"
-        value={suche}
-        onChange={(e) => setSuche(e.target.value)}
-        placeholder="Suchen (z. B. Art. 336c) …"
-        className="lc-input"
-        aria-label="Katalog durchsuchen"
-      />
-
-      {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur geprüfte */}
-      <div className="flex gap-1 p-1 bg-surface border border-line rounded-xl" role="group" aria-label="Status">
-        {([['Alle', false], ['Nur geprüfte', true]] as const).map(([label, wert]) => (
-          <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
-            aria-pressed={nurGeprueft === wert}
-            className={`flex-1 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-              nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-            }`}>
-            {label}
-          </button>
-        ))}
-      </div>
-
-      {/* Sprungmarken: Übersicht über die Sektionen — Scrollspy markiert die aktive */}
+    <div className="space-y-5">
       {sprungmarken.length > 0 && (
         <nav aria-label="Sektionen" className="space-y-1">
           <p className="lc-overline mb-2">Übersicht</p>
@@ -110,44 +142,14 @@ function Seitenleiste(props: {
         </nav>
       )}
 
-      {/* Rechtsgebiete */}
-      <div className="space-y-2">
-        <p className="lc-overline">Rechtsgebiet</p>
-        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Rechtsgebiete">
-          {rechtsgebiete.map((g) => {
-            const an = gebiete.has(g);
-            return (
-              <button key={g} type="button" onClick={() => toggleGebiet(g)} aria-pressed={an}
-                className={`text-xs font-medium rounded-full px-2.5 py-1 border transition-colors ${
-                  an
-                    ? 'bg-ink-900 text-paper border-ink-900'
-                    : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
-                }`}>
-                {g}
-              </button>
-            );
-          })}
-        </div>
-        {gebiete.size > 0 && (
-          <button type="button" onClick={reset}
-            className="text-body-s text-brass-700 hover:text-brass-600">
-            Zurücksetzen
-          </button>
-        )}
-      </div>
-
-      {/* Status-Legende: erklärt die Karten-Semantik einmalig */}
-      <div className="space-y-1 text-xs text-ink-500 pt-1 border-t border-line">
-        <p className="inline-flex items-center gap-1.5 pt-2">
-          <span aria-hidden className="inline-block w-4 h-3 rounded-[3px] bg-surface-raised border border-line border-t-2 border-t-brass-500" />
-          Goldrand = geprüft, sofort nutzbar
-        </p>
-        <p className="inline-flex items-center gap-1.5">
-          <span aria-hidden className="inline-block w-4 h-3 rounded-[3px] bg-surface-raised border border-line opacity-50" />
-          gedämpft = in Vorbereitung
-        </p>
-      </div>
-    </section>
+      {/* Status-Legende (kompakt) */}
+      <p className="text-[11px] leading-relaxed text-ink-500 pt-2 border-t border-line">
+        <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line border-t-2 border-t-brass-500" />
+        Goldrand = geprüft ·{' '}
+        <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line opacity-50" />
+        gedämpft = in Vorbereitung
+      </p>
+    </div>
   );
 }
 
@@ -221,42 +223,51 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
   }, [idsKey]);
 
   const filterAnzahl = gebiete.size + (q !== '' ? 1 : 0) + (nurGeprueft ? 1 : 0);
-  const seitenleiste = (
+  const filterLeiste = (
+    <FilterLeiste
+      rechtsgebiete={rechtsgebiete}
+      gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
+      nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
+      suche={suche} setSuche={setSuche}
+    />
+  );
+  const uebersicht = (
     <>
-      <Seitenleiste
-        rechtsgebiete={rechtsgebiete}
-        gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
-        nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
-        suche={suche} setSuche={setSuche}
-        sprungmarken={sprungmarken}
-        aktiveSektion={aktiveSektion}
-      />
+      <Uebersicht sprungmarken={sprungmarken} aktiveSektion={aktiveSektion} />
       {seitenleisteFuss}
     </>
   );
 
   return (
-    <div className="lg:grid lg:grid-cols-[270px_minmax(0,1fr)] lg:gap-10 lg:items-start space-y-6 lg:space-y-0">
-      {/* Seitenleiste: klebt auf Desktop unter dem Header; mobil einklappbar,
-          damit die Karten sofort sichtbar sind */}
-      <aside className="lg:sticky lg:top-28 space-y-4 lg:space-y-6">
-        <details className="lg:hidden bg-surface border border-line rounded-xl">
-          <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between gap-2 text-body-s font-medium text-ink-700">
-            <span>Filter & Übersicht</span>
-            <span className="flex items-center gap-2">
-              {filterAnzahl > 0 && (
-                <span className="num text-xs rounded-full px-2 py-0.5 bg-brass-100 text-brass-700">{filterAnzahl} aktiv</span>
-              )}
-              <span aria-hidden className="text-ink-500">▾</span>
-            </span>
-          </summary>
-          <div className="px-4 pb-4 space-y-5">{seitenleiste}</div>
-        </details>
-        <div className="hidden lg:block space-y-6">{seitenleiste}</div>
-      </aside>
+    <div className="space-y-6">
+      {/* Horizontale Filterleiste über dem Katalog (Desktop) */}
+      <div className="hidden lg:block">{filterLeiste}</div>
 
-      {/* Karten: ab hier beginnt das Produkt */}
-      <div className="space-y-8 min-w-0">
+      {/* Mobil: Filter & Übersicht in einem Drawer — die Karten stehen sofort da */}
+      <details className="lg:hidden bg-surface border border-line rounded-xl">
+        <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between gap-2 text-body-s font-medium text-ink-700">
+          <span>Filter & Übersicht</span>
+          <span className="flex items-center gap-2">
+            {filterAnzahl > 0 && (
+              <span className="num text-xs rounded-full px-2 py-0.5 bg-brass-100 text-brass-700">{filterAnzahl} aktiv</span>
+            )}
+            <span aria-hidden className="text-ink-500">▾</span>
+          </span>
+        </summary>
+        <div className="px-4 pb-4 space-y-5">
+          {filterLeiste}
+          {uebersicht}
+        </div>
+      </details>
+
+      <div className="lg:grid lg:grid-cols-[230px_minmax(0,1fr)] lg:gap-10 lg:items-start">
+        {/* Schlanke Übersicht: klebt auf Desktop unter dem Header */}
+        <aside className="hidden lg:block lg:sticky lg:top-28 space-y-6">
+          {uebersicht}
+        </aside>
+
+        {/* Karten: ab hier beginnt das Produkt */}
+        <div className="space-y-8 min-w-0">
         {treffer.length === 0 ? (
           /* Leerer Zustand: kein stilles Verschwinden der Sektionen */
           <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
@@ -280,6 +291,7 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
             <TypSektion key={s.id} sektion={s} karten={treffer.filter((k) => k.art === s.art)} />
           ))
         )}
+        </div>
       </div>
     </div>
   );
