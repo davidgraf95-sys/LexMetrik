@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { SEKTIONEN, VORLAGE_SEKTIONEN, ALLE_KARTEN, type Modus } from '../lib/startseiteConfig';
 import { Katalog, SectionHead } from '../components/Katalog';
 import { ModusSchalter, useModus } from '../components/ModusSchalter';
+import { HeroVisual } from '../components/HeroVisual';
 
 // Basis-Seite: zeigt nur die allgemeinen Rechner (tier 'frei').
 // Spezialisierte Rechner stehen im Experten-Panel unter /fachpersonen.
@@ -78,8 +79,9 @@ export function Startseite() {
 
   return (
     <div className="space-y-16">
-      {/* Übergreifender Hero (modusunabhängig) */}
-      <section className="space-y-5 max-w-reading">
+      {/* Übergreifender Hero (modusunabhängig) — rechts das Instrumenten-Visual */}
+      <section className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
+      <div className="space-y-5 max-w-reading">
         <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.5rem] sm:text-display">
           Schweizer Recht: berechnen und erstellen — Schritt für Schritt nachvollziehbar.
         </h1>
@@ -106,6 +108,8 @@ export function Startseite() {
             </span>
           ))}
         </nav>
+      </div>
+      <HeroVisual className="hidden lg:block w-[280px] xl:w-[320px] justify-self-end" />
       </section>
 
       {/* Primärweiche + modusabhängiger Sub-Hero */}
