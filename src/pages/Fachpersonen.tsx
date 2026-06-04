@@ -56,16 +56,16 @@ export function Fachpersonen() {
         </div>
       </section>
 
-      {/* Katalog: Modus-Wahl, Filter und Direkteinstieg in der Seitenleiste */}
+      {/* Primärweiche: Modus prominent unter dem Hero (steuert Text + Katalog) */}
+      <div className="space-y-2">
+        <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
+        <p className="text-body-s text-ink-500 max-w-reading">{MODUS_BESCHRIEB[modus]}</p>
+      </div>
+
+      {/* Katalog: Filter/Übersicht und Direkteinstieg in der Seitenleiste */}
       <Katalog
         karten={karten}
         sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN}
-        seitenleisteKopf={
-          <div className="space-y-2">
-            <ModusSchalter breit modus={modus} onChange={setModus} anzahl={anzahl} />
-            <p className="text-xs text-ink-500 leading-relaxed">{MODUS_BESCHRIEB[modus]}</p>
-          </div>
-        }
         seitenleisteFuss={modus === 'rechner' ? (
           <nav aria-label="Direkteinstieg" className="space-y-1 pt-3 border-t border-line">
             <p className="lc-overline mb-2">Direkt öffnen</p>

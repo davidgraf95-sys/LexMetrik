@@ -73,17 +73,14 @@ export function Startseite() {
         <HeroVisual className="hidden xl:block w-[220px] justify-self-end" />
       </section>
 
-      {/* Katalog der Basis-Stufe: Modus-Wahl + Filter in der Seitenleiste */}
-      <Katalog
-        karten={karten}
-        sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN}
-        seitenleisteKopf={
-          <div className="space-y-2">
-            <ModusSchalter breit modus={modus} onChange={setModus} anzahl={anzahl} />
-            <p className="text-xs text-ink-500 leading-relaxed">{MODUS_BESCHRIEB[modus]}</p>
-          </div>
-        }
-      />
+      {/* Primärweiche: Modus prominent unter dem Hero (steuert Text + Katalog) */}
+      <div className="space-y-2">
+        <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
+        <p className="text-body-s text-ink-500 max-w-reading">{MODUS_BESCHRIEB[modus]}</p>
+      </div>
+
+      {/* Katalog der Basis-Stufe im aktiven Modus */}
+      <Katalog karten={karten} sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN} />
 
       {/* Experten-Panel-Teaser (Rechner-Modus) */}
       {modus === 'rechner' && <ExpertenTeaser />}

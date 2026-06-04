@@ -2,6 +2,20 @@
 
 **Stand:** Juni 2026
 
+## Informationsarchitektur (Entscheid bestätigt)
+
+**Modus = In-Page-Toggle, Stufe = Route.** Die Primärweiche «Rechner | Vorlagen»
+sitzt als Segmented Control prominent **unter dem Hero** (steuert Modus-Text und
+Katalog; Zustand in `?modus=`). Die Stufe «Allgemein | Fachpersonen» bleibt Route
+(`/` bzw. `/fachpersonen`, Umschalter dezent in der Topbar) — so bleibt das
+spätere Zugriffs-Gating der Experten-Route als Wrapper anschliessbar.
+Sektionsköpfe/Zähler benennen die Einheit modusabhängig («… Rechner» /
+«… Vorlagen»), abgeleitet aus der Sektions-Art — keine fixen Strings.
+
+**Sucheinstiege:** Inline-Suche im Katalog = Filter innerhalb des aktiven Modus;
+⌘K-Befehlspalette = globale Navigation über alle Modi/Stufen/Seiten. Bewusst
+getrennt gehalten und unterschiedlich beschriftet.
+
 ## Oberste Ebene: vier Output-Typen
 
 | Nr. | Sektion (`art`) | Inhalt |

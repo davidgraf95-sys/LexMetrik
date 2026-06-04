@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { SEKTIONEN, RECHTSGEBIETE, type Sektion, type CalculatorCard } from '../lib/startseiteConfig';
+import { SEKTIONEN, RECHTSGEBIETE, istVorlageArt, type Sektion, type CalculatorCard } from '../lib/startseiteConfig';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 
@@ -36,7 +36,8 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
             <span className="flex items-center justify-between gap-4">
               <span className="lc-overline num text-brass-700">{sektion.numeral} — {sektion.title}</span>
               <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
-                <span className="num">{sortiert.length}</span> Rechner
+                {/* Zähler-Einheit folgt dem Modus der Sektion (kein fixer String) */}
+                <span className="num">{sortiert.length}</span> {istVorlageArt(sektion.art) ? 'Vorlagen' : 'Rechner'}
                 <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
               </span>
             </span>
@@ -152,13 +153,12 @@ function Seitenleiste(props: {
 
 // ─── Katalog: klebende Seitenleiste (Filter/Übersicht) + Sektionen ──────────
 // `sektionen` bestimmt die Gliederung (Rechner-Output-Typen bzw. Dokument-Typen).
-// `seitenleisteKopf`/`seitenleisteFuss` sind Slots für seitenspezifische
-// Elemente (z. B. Modus-Umschalter, Direkteinstieg).
+// `seitenleisteFuss` ist ein Slot für seitenspezifische Elemente (Direkteinstieg);
+// die Modus-Weiche sitzt seitenseitig prominent UNTER dem Hero (IA-Entscheid).
 
-export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteKopf, seitenleisteFuss }: {
+export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
   karten: CalculatorCard[];
   sektionen?: Sektion[];
-  seitenleisteKopf?: React.ReactNode;
   seitenleisteFuss?: React.ReactNode;
 }) {
   const [gebiete, setGebiete] = useState<Set<string>>(new Set());
@@ -240,7 +240,6 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteKopf, seite
       {/* Seitenleiste: klebt auf Desktop unter dem Header; mobil einklappbar,
           damit die Karten sofort sichtbar sind */}
       <aside className="lg:sticky lg:top-28 space-y-4 lg:space-y-6">
-        {seitenleisteKopf}
         <details className="lg:hidden bg-surface border border-line rounded-xl">
           <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between gap-2 text-body-s font-medium text-ink-700">
             <span>Filter & Übersicht</span>
