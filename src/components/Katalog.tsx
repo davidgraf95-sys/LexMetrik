@@ -70,7 +70,7 @@ function Filterleiste(props: {
           type="search"
           value={suche}
           onChange={(e) => setSuche(e.target.value)}
-          placeholder="Suchen (z. B. Kündigung, Verjährung, Betreibung) …"
+          placeholder="Suchen (z. B. Kündigung, Betreibung, Art. 336c) …"
           className="lc-input sm:max-w-sm"
           aria-label="Rechner durchsuchen"
         />
@@ -128,11 +128,15 @@ export function Katalog({ karten, sektionen = SEKTIONEN }: { karten: CalculatorC
     });
 
   const q = suche.trim().toLowerCase();
+  // Normverweise kompakt (ohne Leerzeichen) abgleichen, damit «Art. 335c»,
+  // «Art.335c» und «335c» gleichermassen treffen.
+  const qKompakt = q.replace(/\s+/g, '');
   const passt = (k: CalculatorCard) =>
     (gebiete.size === 0 || gebiete.has(k.rechtsgebiet)) &&
     (!nurGeprueft || k.status === 'geprüft') &&
     (q === '' ||
-      [k.title, k.rechtsgebiet, ...(k.keywords ?? [])].some((t) => t.toLowerCase().includes(q)));
+      [k.title, k.rechtsgebiet, ...(k.keywords ?? [])].some((t) => t.toLowerCase().includes(q)) ||
+      k.norms.some((n) => n.label.toLowerCase().replace(/\s+/g, '').includes(qKompakt)));
 
   // Nur Filterwerte anbieten, die in dieser Stufe auch vorkommen (Katalog-Reihenfolge).
   const rechtsgebiete = RECHTSGEBIETE.filter((g) => karten.some((k) => k.rechtsgebiet === g));
