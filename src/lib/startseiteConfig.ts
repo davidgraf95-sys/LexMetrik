@@ -71,6 +71,9 @@ export const RECHTSGEBIETE: string[] = [
   'Miete',
   'Verwaltung & Steuern',
   'Strafverfahren (StPO)',
+  'Strafrecht (StPO/StGB)',
+  'Bundesgericht (BGG)',
+  'Sachenrecht (ZGB)',
   'Sozialversicherung (ATSG)',
   'Vertrag / OR',
   'Erbrecht',
@@ -239,6 +242,48 @@ const KARTEN: Record<string, CalculatorCard> = {
     description: 'Fristen für Anmeldung und rückwirkende Leistungen.',
     status: 'geplant', norms: [],
   },
+  'bgg-fristen': {
+    id: 'bgg-fristen', art: 'frist', tier: 'experte', rechtsgebiet: 'Bundesgericht (BGG)',
+    title: 'Rechtsmittelfristen Bundesgericht',
+    description: 'Beschwerdefristen ans Bundesgericht in Zivil-, Straf- und öffentlich-rechtlichen Sachen, inkl. Stillstand.',
+    status: 'geplant', norms: [],
+  },
+  strafantrag: {
+    id: 'strafantrag', art: 'frist', tier: 'experte', rechtsgebiet: 'Strafrecht (StPO/StGB)',
+    title: 'Strafantragsfrist',
+    description: 'Frist zur Stellung des Strafantrags bei Antragsdelikten.',
+    status: 'geplant', norms: [],
+  },
+  'straf-verjaehrung': {
+    id: 'straf-verjaehrung', art: 'frist', tier: 'experte', rechtsgebiet: 'Strafrecht (StPO/StGB)',
+    title: 'Strafrechtliche Verjährung',
+    description: 'Verfolgungs- und Vollstreckungsverjährung nach Strafrahmen.',
+    status: 'geplant', norms: [],
+  },
+  bauhandwerkerpfandrecht: {
+    id: 'bauhandwerkerpfandrecht', art: 'frist', tier: 'experte', rechtsgebiet: 'Sachenrecht (ZGB)',
+    title: 'Bauhandwerkerpfandrecht — Eintragungsfrist',
+    description: 'Frist zur Eintragung des gesetzlichen Bauhandwerkerpfandrechts.',
+    status: 'geplant', norms: [],
+  },
+  'schkg-klagefristen': {
+    id: 'schkg-klagefristen', art: 'frist', tier: 'experte', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    title: 'Rechtsöffnungs-, Aberkennungs- & Kollokationsfristen',
+    description: 'Fristgebundene Klagen im Betreibungs- und Konkursverfahren.',
+    status: 'geplant', norms: [],
+  },
+  arrest: {
+    id: 'arrest', art: 'frist', tier: 'experte', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    title: 'Arrest — Prosequierungsfristen',
+    description: 'Fristen zur Prosequierung und Einleitung nach Arrestbewilligung.',
+    status: 'geplant', norms: [],
+  },
+  fristwiederherstellung: {
+    id: 'fristwiederherstellung', art: 'frist', tier: 'experte', rechtsgebiet: 'Zivilprozess (ZPO)',
+    title: 'Fristwiederherstellung',
+    description: 'Frist und Voraussetzungen für ein Wiederherstellungsgesuch.',
+    status: 'geplant', norms: [],
+  },
 
   // ════ II — Beträge & Quoten (geprüft) ════
   verzugszins: {
@@ -328,6 +373,12 @@ const KARTEN: Record<string, CalculatorCard> = {
     description: 'Ermittlung des pfändbaren Betrags; Richtlinien- und kantonsabhängig.',
     status: 'geplant', norms: [],
   },
+  'verzugszins-vertieft': {
+    id: 'verzugszins-vertieft', art: 'betrag', tier: 'experte', rechtsgebiet: 'Vertrag / OR',
+    title: 'Verzugszins — vertieft (Anrechnung & vereinbarter Satz)',
+    description: 'Verzugszins mit vertraglichem oder gesetzlichem Satz, Teilzahlungen und Anrechnung.',
+    status: 'geplant', norms: [],
+  },
 
   // ════ III — Zuständigkeit & Einordnung (in Vorbereitung) ════
   gerichtsstand: {
@@ -372,6 +423,12 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'teuerungsrechner', art: 'werkzeug', tier: 'experte', rechtsgebiet: 'übergreifend',
     title: 'Teuerungsrechner (LIK-Indexierung)',
     description: 'Anpassung von Beträgen nach dem Landesindex der Konsumentenpreise.',
+    status: 'geplant', norms: [],
+  },
+  'ferien-assistent': {
+    id: 'ferien-assistent', art: 'werkzeug', tier: 'experte', rechtsgebiet: 'übergreifend',
+    title: 'Friststillstand- & Ferien-Assistent (alle Verfahren)',
+    description: 'Stillstand und Gerichts-/Betreibungsferien über ZPO, StPO, BGG und Verwaltungsverfahren.',
     status: 'geplant', norms: [],
   },
 };
