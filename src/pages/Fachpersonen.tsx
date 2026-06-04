@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ALLE_KARTEN, RECHTSGEBIETE } from '../lib/startseiteConfig';
+import { ALLE_KARTEN, RECHTSGEBIETE, SEKTIONEN, VORLAGE_SEKTIONEN } from '../lib/startseiteConfig';
 import { Katalog } from '../components/Katalog';
+import { ModusSchalter, useModus } from '../components/ModusSchalter';
+import { ModusHero } from './Startseite';
 import { sansAmp } from '../components/typografie';
 
 // Experten-Panel: alle Rechner der Stufe 'experte' (anwaltliche Praxis).
@@ -8,9 +10,11 @@ import { sansAmp } from '../components/typografie';
 // als Messleiste auf der Ablesekante, Direkteinstieg zu den geprüften Rechnern.
 
 export function Fachpersonen() {
-  const karten = ALLE_KARTEN.filter((k) => k.tier === 'experte');
-  const geprueft = karten.filter((k) => k.status === 'geprüft');
-  const gebiete = RECHTSGEBIETE.filter((g) => karten.some((k) => k.rechtsgebiet === g)).length;
+  const [modus, setModus] = useModus();
+  const alleExperte = ALLE_KARTEN.filter((k) => k.tier === 'experte');
+  const karten = alleExperte.filter((k) => k.modus === modus);
+  const geprueft = alleExperte.filter((k) => k.status === 'geprüft' && k.modus === 'rechner');
+  const gebiete = RECHTSGEBIETE.filter((g) => alleExperte.some((k) => k.rechtsgebiet === g)).length;
 
   return (
     <div className="space-y-16">
@@ -31,7 +35,8 @@ export function Fachpersonen() {
           <span className="scale-rule block" aria-hidden />
           <dl className="flex flex-wrap divide-x divide-line border-b border-line">
             {[
-              { wert: karten.length, label: 'Rechner' },
+              { wert: alleExperte.filter((k) => k.modus === 'rechner').length, label: 'Rechner' },
+              { wert: alleExperte.filter((k) => k.modus === 'vorlage').length, label: 'Vorlagen' },
               { wert: geprueft.length, label: 'geprüft' },
               { wert: gebiete, label: 'Rechtsgebiete' },
             ].map((s) => (
@@ -44,19 +49,27 @@ export function Fachpersonen() {
         </div>
 
         {/* Direkteinstieg: geprüfte Rechner sofort öffnen */}
-        <div className="flex flex-wrap items-center gap-2 pt-1">
-          <span className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Direkt öffnen:</span>
-          {geprueft.map((k) => (
-            <Link key={k.id} to={k.href!}
-              className="inline-flex items-center gap-1.5 rounded-full border border-brass-400 px-3.5 py-1.5 text-body-s font-medium text-brass-700 no-underline hover:bg-brass-100 transition-colors">
-              {sansAmp(k.title)} <span aria-hidden>→</span>
-            </Link>
-          ))}
-        </div>
+        {modus === 'rechner' && (
+          <div className="flex flex-wrap items-center gap-2 pt-1">
+            <span className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Direkt öffnen:</span>
+            {geprueft.map((k) => (
+              <Link key={k.id} to={k.href!}
+                className="inline-flex items-center gap-1.5 rounded-full border border-brass-400 px-3.5 py-1.5 text-body-s font-medium text-brass-700 no-underline hover:bg-brass-100 transition-colors">
+                {sansAmp(k.title)} <span aria-hidden>→</span>
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
 
-      {/* Katalog der Experten-Stufe */}
-      <Katalog karten={karten} />
+      {/* Primärweiche + modusabhängiger Sub-Hero */}
+      <div className="space-y-6">
+        <ModusSchalter modus={modus} onChange={setModus} />
+        <ModusHero modus={modus} />
+      </div>
+
+      {/* Katalog der Experten-Stufe im aktiven Modus */}
+      <Katalog karten={karten} sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN} />
 
       {/* Rechtlicher Hinweis */}
       <section className="lc-notice">

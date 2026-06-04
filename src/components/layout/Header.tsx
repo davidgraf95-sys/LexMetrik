@@ -20,8 +20,8 @@ export function Header() {
       {/* Feinschrift-Leiste */}
       <div className="border-b border-line" style={{ background: 'color-mix(in srgb, var(--paper-sunken) 55%, transparent)' }}>
         <div className="max-w-content mx-auto px-5 sm:px-6 h-7 flex items-center justify-between gap-4">
-          <p className="lc-overline text-ink-400 hidden sm:block truncate">Schweizer Recht · feste Rechenregeln statt Schätzung</p>
-          <p className="lc-overline text-ink-400 truncate">Orientierungsrechner — keine Rechtsberatung</p>
+          <p className="lc-overline text-ink-400 hidden sm:block truncate">Schweizer Recht · feste Regeln statt Schätzung</p>
+          <p className="lc-overline text-ink-400 truncate">Orientierung — keine Rechtsberatung</p>
         </div>
       </div>
 

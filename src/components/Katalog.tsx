@@ -113,8 +113,9 @@ function Filterleiste(props: {
 }
 
 // ─── Katalog: Filter + Sektionen über der übergebenen Kartenmenge ──────────
+// `sektionen` bestimmt die Gliederung (Rechner-Output-Typen bzw. Dokument-Typen).
 
-export function Katalog({ karten }: { karten: CalculatorCard[] }) {
+export function Katalog({ karten, sektionen = SEKTIONEN }: { karten: CalculatorCard[]; sektionen?: Sektion[] }) {
   const [gebiete, setGebiete] = useState<Set<string>>(new Set());
   const [nurGeprueft, setNurGeprueft] = useState(false);
   const [suche, setSuche] = useState('');
@@ -146,8 +147,8 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
         suche={suche} setSuche={setSuche}
       />
 
-      {/* Vier Output-Typ-Sektionen (datengetrieben aus startseiteConfig) */}
-      {SEKTIONEN.map((s) => (
+      {/* Vier Sektionen (datengetrieben aus startseiteConfig) */}
+      {sektionen.map((s) => (
         <TypSektion key={s.id} sektion={s} karten={karten.filter((k) => k.art === s.art && passt(k))} />
       ))}
     </>

@@ -3,8 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 // Segmented Control zum Wechsel zwischen Basis-Stufe (/) und Experten-Panel
 // (/fachpersonen). Sitzt zentral im Header; auf schmalen Screens kompakte Labels.
 const STUFEN = [
-  { to: '/', label: 'Allgemeine Rechner', kurz: 'Basis' },
-  { to: '/fachpersonen', label: 'Für Fachpersonen', kurz: 'Fachpersonen' },
+  { to: '/', label: 'Allgemein', kurz: 'Allgemein' },
+  { to: '/fachpersonen', label: 'Fachpersonen', kurz: 'Fachpersonen' },
 ];
 
 export function StufenSchalter() {

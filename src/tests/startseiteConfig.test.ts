@@ -39,12 +39,38 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
 });
 
 describe('Stufen-Zuteilung (tier)', () => {
-  it('genau sechs Rechner sind «frei» (Basis-Seite); alle übrigen «experte»', () => {
-    const frei = ALLE_KARTEN.filter((k) => k.tier === 'frei').map((k) => k.id).sort();
+  it('genau sechs Rechner sind «frei» (Basis-Seite); alle übrigen Rechner «experte»', () => {
+    const frei = ALLE_KARTEN.filter((k) => k.modus === 'rechner' && k.tier === 'frei').map((k) => k.id).sort();
     expect(frei).toEqual([
       'erbteilung', 'kuendigung-sperrfristen', 'lohnfortzahlung',
       'mietrecht', 'tagerechner', 'verzugszins',
     ]);
     ALLE_KARTEN.forEach((k) => expect(['frei', 'experte'], k.id).toContain(k.tier));
+  });
+});
+
+describe('Modus «Vorlagen» (Katalog-Regeln)', () => {
+  const vorlagen = ALLE_KARTEN.filter((k) => k.modus === 'vorlage');
+
+  it('alle vier Dokument-Typen sind belegt', () => {
+    (['vorsorge', 'vertrag', 'eingabe', 'gesellschaft'] as const).forEach((art) => {
+      expect(vorlagen.some((v) => v.art === art), art).toBe(true);
+    });
+  });
+
+  it('geplante Vorlagen: keine Norm-Pills, kein href, keine schemaId', () => {
+    vorlagen.filter((v) => v.status === 'geplant').forEach((v) => {
+      expect(v.norms, v.id).toEqual([]);
+      expect(v.href, v.id).toBeUndefined();
+      expect('schemaId' in v && v.schemaId, v.id).toBeFalsy();
+    });
+  });
+
+  it('jede Karte trägt einen gültigen Modus; related-IDs lösen modusübergreifend auf', () => {
+    const ids = new Set(ALLE_KARTEN.map((k) => k.id));
+    ALLE_KARTEN.forEach((k) => {
+      expect(['rechner', 'vorlage'], k.id).toContain(k.modus);
+      (k.related ?? []).forEach((r) => expect(ids.has(r), `${k.id} → ${r}`).toBe(true));
+    });
   });
 });

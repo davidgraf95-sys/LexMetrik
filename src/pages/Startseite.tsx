@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { SEKTIONEN, ALLE_KARTEN } from '../lib/startseiteConfig';
+import { SEKTIONEN, VORLAGE_SEKTIONEN, ALLE_KARTEN, type Modus } from '../lib/startseiteConfig';
 import { Katalog, SectionHead } from '../components/Katalog';
+import { ModusSchalter, useModus } from '../components/ModusSchalter';
 
 // Basis-Seite: zeigt nur die allgemeinen Rechner (tier 'frei').
 // Spezialisierte Rechner stehen im Experten-Panel unter /fachpersonen.
@@ -40,44 +41,80 @@ function ExpertenTeaser() {
   );
 }
 
+// Modus-abhängiger Sub-Hero (Texte gemäss Umbau-Anweisung 4.3/4.4)
+export function ModusHero({ modus }: { modus: Modus }) {
+  return modus === 'rechner' ? (
+    <div className="space-y-2 max-w-reading">
+      <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">
+        Fristen, Beträge und Zuständigkeiten — transparent berechnet.
+      </h2>
+      <p className="text-body-s text-ink-500">
+        Feste Rechenregeln statt Schätzung: gleiche Eingaben ergeben immer dasselbe Ergebnis,
+        jeder Schritt ist überprüfbar und jede Norm direkt verlinkt.
+      </p>
+    </div>
+  ) : (
+    <div className="space-y-2 max-w-reading">
+      <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">
+        Rechtsdokumente — aus geprüften Bausteinen zusammengestellt.
+      </h2>
+      <p className="text-body-s text-ink-500">
+        Sie beantworten strukturierte Fragen, Lexmetrik setzt das Dokument aus festen, juristisch
+        geprüften Textbausteinen zusammen — ohne Sprachmodell, nachvollziehbar Baustein für Baustein.
+        Das Ergebnis ist ein Entwurf zur Orientierung; massgebliche Formvorschriften (z. B.
+        Eigenhändigkeit oder öffentliche Beurkundung) werden vor dem Download deutlich angezeigt.
+      </p>
+    </div>
+  );
+}
+
 export function Startseite() {
-  const karten = ALLE_KARTEN.filter((k) => k.tier === 'frei');
-  // Sprungmarken nur für Sektionen, die auf dieser Stufe Karten haben
-  const sektionen = SEKTIONEN.filter((s) => karten.some((k) => k.art === s.art));
+  const [modus, setModus] = useModus();
+  const karten = ALLE_KARTEN.filter((k) => k.tier === 'frei' && k.modus === modus);
 
   return (
     <div className="space-y-16">
-      {/* Hero */}
+      {/* Übergreifender Hero (modusunabhängig) */}
       <section className="space-y-5 max-w-reading">
         <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.5rem] sm:text-display">
-          Schweizer Rechtsfristen und Ansprüche — transparent berechnet.
+          Schweizer Recht: berechnen und erstellen — Schritt für Schritt nachvollziehbar.
         </h1>
         <p className="text-body-l text-ink-600">
-          Lexmetrik berechnet Fristen und Ansprüche nach Schweizer Recht — mit nachvollziehbarem
-          Rechenweg und exakten Normverweisen. Jeder Schritt ist überprüfbar, jede angewandte Norm
-          direkt mit dem Gesetzestext verlinkt.
+          Lexmetrik rechnet Fristen, Beträge und Quoten nach festen Regeln und stellt Rechtsdokumente
+          aus geprüften Textbausteinen zusammen — vom Testament über den Vorsorgeauftrag bis zu
+          Gesuchen, Klagen und Einsprachen. Beides regelbasiert: gleiche Eingaben ergeben immer
+          dasselbe Ergebnis, jede angewandte Norm ist direkt mit dem Gesetzestext verlinkt, jeder
+          Schritt wird offengelegt.
         </p>
-        {/* Differenzierung: Berechnung statt KI */}
+        {/* Tagline-Streifen */}
         <p className="text-body-s text-ink-500">
-          Lexmetrik rät nicht — es rechnet. Feste Rechenregeln statt Sprachmodell: gleiche Eingaben
-          ergeben immer dasselbe Ergebnis.
+          Lexmetrik rät nicht — es rechnet und stellt zusammen. Feste Regeln statt Sprachmodell.
         </p>
-        {/* Eyebrow als Sprungmarken zu den Sektionen */}
-        <nav aria-label="Sektionen" className="lc-overline flex flex-wrap gap-x-2 gap-y-1 pt-1">
-          {sektionen.map((s, i) => (
-            <span key={s.id} className="inline-flex gap-x-2">
+        {/* Anker-Streifen: Sprungmarken zu den Modi */}
+        <nav aria-label="Modi" className="lc-overline flex flex-wrap gap-x-2 gap-y-1 pt-1">
+          {(['rechner', 'vorlage'] as const).map((m, i) => (
+            <span key={m} className="inline-flex gap-x-2">
               {i > 0 && <span aria-hidden className="text-ink-300">·</span>}
-              <a href={`#${s.id}`} className="text-ink-500 hover:text-brass-700 no-underline">{s.title}</a>
+              <button type="button" onClick={() => setModus(m)}
+                className={`lc-overline no-underline transition-colors ${modus === m ? 'text-brass-700' : 'text-ink-500 hover:text-brass-700'}`}>
+                {m === 'rechner' ? 'Rechner' : 'Vorlagen'}
+              </button>
             </span>
           ))}
         </nav>
       </section>
 
-      {/* Katalog der Basis-Stufe */}
-      <Katalog karten={karten} />
+      {/* Primärweiche + modusabhängiger Sub-Hero */}
+      <div className="space-y-6">
+        <ModusSchalter modus={modus} onChange={setModus} />
+        <ModusHero modus={modus} />
+      </div>
 
-      {/* Experten-Panel-Teaser: invertierte Fläche als Signal für die Pro-Stufe */}
-      <ExpertenTeaser />
+      {/* Katalog der Basis-Stufe im aktiven Modus */}
+      <Katalog karten={karten} sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN} />
+
+      {/* Experten-Panel-Teaser (Rechner-Modus) */}
+      {modus === 'rechner' && <ExpertenTeaser />}
 
       {/* Methodik / Vertrauens-Kacheln */}
       <section className="space-y-6">

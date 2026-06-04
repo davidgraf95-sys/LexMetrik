@@ -50,7 +50,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
           allen Karten als einheitlicher Boden-Block auf gleicher Höhe. */}
       {aktiv && verwandte.length > 0 && (
         <p className="text-body-s text-ink-400">
-          Verwandte Rechner:{' '}
+          Verwandt:{' '}
           {verwandte.map((k, i) => (
             <span key={k.id}>
               {i > 0 && ' · '}
@@ -78,7 +78,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
         </div>
       )}
       <p className={`text-body-s font-medium ${aktiv ? 'text-brass-700' : 'text-ink-400'}`}>
-        {aktiv ? 'Öffnen →' : (card.note ?? 'In Vorbereitung')}
+        {aktiv ? (card.modus === 'vorlage' ? 'Erstellen →' : 'Öffnen →') : (card.note ?? 'In Vorbereitung')}
       </p>
     </article>
   );
