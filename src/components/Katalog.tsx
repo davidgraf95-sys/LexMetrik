@@ -141,6 +141,10 @@ export function Katalog({ karten, sektionen = SEKTIONEN }: { karten: CalculatorC
   // Nur Filterwerte anbieten, die in dieser Stufe auch vorkommen (Katalog-Reihenfolge).
   const rechtsgebiete = RECHTSGEBIETE.filter((g) => karten.some((k) => k.rechtsgebiet === g));
 
+  const treffer = karten.filter(passt);
+  const filterAktiv = q !== '' || gebiete.size > 0 || nurGeprueft;
+  const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setNurGeprueft(false); };
+
   return (
     <>
       {/* Filter (clientseitig); leere Sektionen werden ausgeblendet */}
@@ -151,10 +155,29 @@ export function Katalog({ karten, sektionen = SEKTIONEN }: { karten: CalculatorC
         suche={suche} setSuche={setSuche}
       />
 
-      {/* Vier Sektionen (datengetrieben aus startseiteConfig) */}
-      {sektionen.map((s) => (
-        <TypSektion key={s.id} sektion={s} karten={karten.filter((k) => k.art === s.art && passt(k))} />
-      ))}
+      {/* Leerer Zustand: kein stilles Verschwinden der Sektionen */}
+      {treffer.length === 0 ? (
+        <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
+          <p className="lc-overline">Keine Treffer</p>
+          <h2 className="font-display font-semibold text-ink-900 text-h2">
+            {q !== '' ? <>Nichts gefunden für «{suche.trim()}».</> : 'Die gewählten Filter ergeben keine Treffer.'}
+          </h2>
+          <p className="text-body-s text-ink-500 max-w-reading mx-auto">
+            Versuchen Sie einen anderen Begriff (z. B. einen Gesetzesartikel wie «Art. 336c») oder
+            setzen Sie die Filter zurück.
+          </p>
+          {filterAktiv && (
+            <button type="button" onClick={allesZuruecksetzen} className="lc-btn-outline mt-2">
+              Filter zurücksetzen
+            </button>
+          )}
+        </section>
+      ) : (
+        /* Vier Sektionen (datengetrieben aus startseiteConfig) */
+        sektionen.map((s) => (
+          <TypSektion key={s.id} sektion={s} karten={treffer.filter((k) => k.art === s.art)} />
+        ))
+      )}
     </>
   );
 }
