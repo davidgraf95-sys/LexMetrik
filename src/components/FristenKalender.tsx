@@ -58,7 +58,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
               {/* Monat als gravierte Anzeige: Overline + Mono-Jahr */}
               <p className="lc-overline text-ink-600 mb-2">{MONATE[m]} <span className="num text-brass-700">{jahr}</span></p>
               <div className="grid grid-cols-7 gap-x-0 gap-y-0.5 text-center">
-                {WTAGE.map((w) => <div key={w} className="lc-overline text-ink-400 py-1" style={{ fontSize: '0.6rem' }}>{w}</div>)}
+                {WTAGE.map((w) => <div key={w} className="lc-overline text-ink-500 py-1" style={{ fontSize: '0.6rem' }}>{w}</div>)}
                 {zellen.map((d, i) => {
                   if (!d) return <div key={i} />;
                   const isEreignis = isSameDay(d, ereignis);
@@ -101,7 +101,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
         })}
       </div>
 
-      {luecken && <p className="text-body-s text-ink-400 mt-3 italic">Dazwischenliegende Monate sind nicht dargestellt.</p>}
+      {luecken && <p className="text-body-s text-ink-500 mt-3 italic">Dazwischenliegende Monate sind nicht dargestellt.</p>}
 
       {/* Legende */}
       <div className="flex flex-wrap gap-x-4 gap-y-1.5 mt-4 pt-3 border-t border-line text-body-s text-ink-600">

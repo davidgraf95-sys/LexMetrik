@@ -70,7 +70,7 @@ function FristKarte({ label, sub, wert, massgeblich }: { label: string; sub: str
         {massgeblich && <span className="lc-badge lc-badge-ok shrink-0" style={{ background: 'var(--brass-100)', color: 'var(--brass-700)' }}>massgeblich</span>}
       </div>
       <p className="text-lg font-semibold text-ink-900 num">{wert}</p>
-      <p className="text-xs text-ink-400 mt-0.5">{sub}</p>
+      <p className="text-xs text-ink-500 mt-0.5">{sub}</p>
     </div>
   );
 }
@@ -252,7 +252,7 @@ export function VerjaehrungForm() {
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
 
           {/* Eckdaten — relative und absolute Frist getrennt; die massgebliche trägt das Badge */}
           <div className={`grid grid-cols-1 sm:grid-cols-2 ${hatAbsolut ? 'lg:grid-cols-4' : 'sm:grid-cols-3'} gap-3`}>

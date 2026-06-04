@@ -37,7 +37,7 @@ export function ModusSchalter({ modus, onChange }: { modus: Modus; onChange: (m:
                 : 'text-ink-600 hover:text-ink-900'
             }`}>
             <span className="block text-sm font-semibold">{m.label}</span>
-            <span className={`block text-xs ${aktiv ? 'text-brass-600' : 'text-ink-400'}`}>{m.sub}</span>
+            <span className={`block text-xs ${aktiv ? 'text-brass-600' : 'text-ink-500'}`}>{m.sub}</span>
           </button>
         );
       })}

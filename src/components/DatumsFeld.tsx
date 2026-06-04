@@ -132,7 +132,7 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
 
           <div className="grid grid-cols-7 gap-0.5 text-center">
             {WTAGE.map((w) => (
-              <div key={w} className="lc-overline text-ink-400 py-1" style={{ fontSize: '0.6rem' }}>{w}</div>
+              <div key={w} className="lc-overline text-ink-500 py-1" style={{ fontSize: '0.6rem' }}>{w}</div>
             ))}
             {zellen.map((d, i) => {
               if (!d) return <div key={i} />;

@@ -226,7 +226,7 @@ export function ZpoFristenForm() {
         <button type="button" onClick={() => setErweitert(!erweitert)}
           className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${erweitert ? '' : 'rounded-b-lg'}`}>
           <span className="text-sm font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
-          <span className="text-ink-400">{erweitert ? '▲' : '▼'}</span>
+          <span className="text-ink-500">{erweitert ? '▲' : '▼'}</span>
         </button>
         {erweitert && (
           <div className="p-4 space-y-4">
@@ -280,7 +280,7 @@ export function ZpoFristenForm() {
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
           {/* Prominente Eckdaten */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[

@@ -35,7 +35,7 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
           <span className="block space-y-2">
             <span className="flex items-center justify-between gap-4">
               <span className="lc-overline num text-brass-700">{sektion.numeral} — {sektion.title}</span>
-              <span className="lc-overline text-ink-400 whitespace-nowrap inline-flex items-center gap-2">
+              <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
                 <span className="num">{sortiert.length}</span> Rechner
                 <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
               </span>

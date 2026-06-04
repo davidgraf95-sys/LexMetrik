@@ -10,7 +10,7 @@ export function Footer() {
           <LexmetrikSiegel size={24} />
           <LexmetrikWortmarke />
         </Link>
-        <p className="lc-overline text-ink-400 normal-case sm:text-right" style={{ letterSpacing: '0.04em' }}>
+        <p className="lc-overline text-ink-500 normal-case sm:text-right" style={{ letterSpacing: '0.04em' }}>
           Lexmetrik · Orientierungsrechner · keine Rechtsberatung · läuft vollständig im Browser
         </p>
       </div>

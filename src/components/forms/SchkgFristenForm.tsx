@@ -199,7 +199,7 @@ export function SchkgFristenForm() {
 
       {verweise.length > 0 && (
         <div className="rounded-lg border border-line bg-surface p-3 space-y-1">
-          <p className="lc-overline text-ink-400">Rechtsprechung (zu verifizieren)</p>
+          <p className="lc-overline text-ink-500">Rechtsprechung (zu verifizieren)</p>
           {verweise.map((r) => (
             <p key={r.aktenzeichen} className="text-body-s text-ink-600">
               <span className="lc-badge lc-badge-warn mr-1.5">{r.verifiziert ? 'verifiziert' : 'zu verifizieren'}</span>
@@ -305,7 +305,7 @@ export function SchkgFristenForm() {
 
       {ausgaben.length > 0 && (
         <div className="space-y-6">
-          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
           {ausgaben.map((a) => {
             const e = a.ergebnis;
             const badge = NATUR_BADGE[a.natur];

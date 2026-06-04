@@ -53,7 +53,7 @@ export function Fachpersonen() {
         {/* Direkteinstieg: geprüfte Rechner sofort öffnen */}
         {modus === 'rechner' && (
           <div className="flex flex-wrap items-center gap-2 pt-1">
-            <span className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Direkt öffnen:</span>
+            <span className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Direkt öffnen:</span>
             {geprueft.map((k) => (
               <Link key={k.id} to={k.href!}
                 className="inline-flex items-center gap-1.5 rounded-full border border-brass-400 px-3.5 py-1.5 text-body-s font-medium text-brass-700 no-underline hover:bg-brass-100 transition-colors">

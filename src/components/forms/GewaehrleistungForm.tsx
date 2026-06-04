@@ -231,7 +231,7 @@ export function GewaehrleistungForm() {
 
       {ergebnis && ergebnis.status === 'ok' && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
 
           {/* Eckdaten: Rügefrist (Verwirkung) und Verjährung (Einrede) strikt getrennt */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -253,7 +253,7 @@ export function GewaehrleistungForm() {
                   <p className="text-xs text-ink-500">{ergebnis.ruege.art === 'tage60' ? '60 Tage' : 'SIA-Garantiefrist (2 Jahre)'} ab {fmtISO(ergebnis.ruege.basisISO)}</p>
                 </>
               )}
-              <p className="text-xs text-ink-400">Versäumnis = Genehmigungsfiktion; keine Unterbrechung/Hemmung</p>
+              <p className="text-xs text-ink-500">Versäumnis = Genehmigungsfiktion; keine Unterbrechung/Hemmung</p>
               {ergebnis.ruege.beurteilung && <p className="text-body-s font-medium text-brass-700">{ergebnis.ruege.beurteilung}</p>}
             </div>
 
@@ -270,7 +270,7 @@ export function GewaehrleistungForm() {
                   ? <span className="text-danger-700 font-semibold">verjährt</span>
                   : <span className="text-sage-700 font-semibold">nicht verjährt</span>}
               </p>
-              <p className="text-xs text-ink-400">
+              <p className="text-xs text-ink-500">
                 Stillstand/Unterbrechung/Verzicht: <Link to="/rechner/verjaehrung" className="text-brass-700 no-underline hover:text-brass-600">Verjährungsrechner →</Link>
               </p>
             </div>

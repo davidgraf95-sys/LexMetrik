@@ -34,7 +34,7 @@ function ExpertenTeaser() {
         </div>
         <div className="flex flex-col items-start lg:items-end gap-2 shrink-0">
           <Link to="/fachpersonen" className="lc-btn-primary no-underline">Zum Experten-Panel →</Link>
-          <p className="num text-body-s text-ink-400">{experte.length} Rechner · {geprueft.length} geprüft</p>
+          <p className="num text-body-s text-ink-500">{experte.length} Rechner · {geprueft.length} geprüft</p>
         </div>
       </div>
     </section>

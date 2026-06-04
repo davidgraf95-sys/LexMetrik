@@ -132,7 +132,7 @@ export function LohnfortzahlungForm() {
 
       {/* Beispiele */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
+        <span className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
         {BEISPIELE.map((b) => (
           <button key={b.label} onClick={() => ladeBeispiel(b.form)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
         ))}
@@ -249,7 +249,7 @@ export function LohnfortzahlungForm() {
         <button type="button" onClick={() => setErweitert(!erweitert)}
           className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-md ${erweitert ? '' : 'rounded-b-md'}`}>
           <span className="text-body-s font-medium text-ink-700">Erweiterte Eingaben (Anspruch, DJ-übergreifend, Lohnbasis)</span>
-          <span className="text-ink-400">{erweitert ? '▲' : '▼'}</span>
+          <span className="text-ink-500">{erweitert ? '▲' : '▼'}</span>
         </button>
         {erweitert && (
           <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -292,7 +292,7 @@ export function LohnfortzahlungForm() {
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
           {ergebnis.status === 'ok' && ergebnis.zeitraumVonISO && ergebnis.letzterTagISO && (
             <FristenKalender
               ereignisISO={ergebnis.zeitraumVonISO}

@@ -29,7 +29,7 @@ function Karte({ c }: { c: Calculator }) {
       </div>
       <p className="text-body-s text-ink-500 leading-relaxed flex-1">{c.kurzbeschrieb}</p>
       <div className="flex flex-wrap gap-1.5">{c.normen.map((n) => <span key={n} className="lc-chip">{n}</span>)}</div>
-      <p className={`text-body-s font-medium ${aktiv ? 'text-brass-700' : 'text-ink-400'}`}>
+      <p className={`text-body-s font-medium ${aktiv ? 'text-brass-700' : 'text-ink-500'}`}>
         {aktiv ? 'Öffnen →' : 'bald verfügbar'}
       </p>
     </div>

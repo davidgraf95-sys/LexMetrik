@@ -116,7 +116,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
           >
             <span className="text-body-s font-medium text-ink-700">Rechenweg ({ergebnis.rechenweg.length} Schritte)</span>
-            <span className="text-ink-400">{rechenWegOffen ? '▲' : '▼'}</span>
+            <span className="text-ink-500">{rechenWegOffen ? '▲' : '▼'}</span>
           </button>
           {rechenWegOffen && (
             <div className="divide-y divide-line">
@@ -149,7 +149,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
               className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
             >
               <span className="text-body-s font-medium text-ink-700">Annahmen ({ergebnis.annahmen.length})</span>
-              <span className="text-ink-400">{annahmenOffen ? '▲' : '▼'}</span>
+              <span className="text-ink-500">{annahmenOffen ? '▲' : '▼'}</span>
             </button>
             {annahmenOffen && (
               <ul className="px-4 py-3 space-y-1">
@@ -173,7 +173,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Disclaimer */}
         <div className="border-t border-line pt-4">
-          <p className="text-body-s text-ink-400 italic leading-relaxed">{DISCLAIMER}</p>
+          <p className="text-body-s text-ink-500 italic leading-relaxed">{DISCLAIMER}</p>
         </div>
       </div>
       </div>

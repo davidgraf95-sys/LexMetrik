@@ -13,8 +13,8 @@ export function RechnerKopf({ calc }: { calc: Calculator }) {
         <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
         Zurück zur Übersicht
       </Link>
-      <nav className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>
-        <Link to="/rechner" className="no-underline text-ink-400 hover:text-ink-600">Rechner</Link>
+      <nav className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>
+        <Link to="/rechner" className="no-underline text-ink-500 hover:text-ink-600">Rechner</Link>
         <span className="mx-1.5">/</span>
         <span className="text-ink-500">{calc.titel}</span>
       </nav>

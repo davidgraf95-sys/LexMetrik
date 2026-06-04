@@ -105,7 +105,7 @@ export function VerzugszinsForm() {
 
       {/* Beispiele */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
+        <span className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
         {BEISPIELE.map((b) => (
           <button key={b.label} onClick={() => ladeBeispiel(b.state)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
         ))}
@@ -162,7 +162,7 @@ export function VerzugszinsForm() {
             <button onClick={() => addRow('satzaenderung')} className="lc-btn-ghost text-body-s" style={{ height: '36px' }}>+ Satzänderung</button>
           </div>
         </div>
-        {rows.length === 0 && <p className="text-body-s text-ink-400 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
+        {rows.length === 0 && <p className="text-body-s text-ink-500 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
         {rows.map((row, i) => (
           <div key={i} className="border border-line rounded-md p-3 bg-surface grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
             <div className="space-y-1">
@@ -188,7 +188,7 @@ export function VerzugszinsForm() {
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-400 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
           {ergebnis.status === 'ok' && (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
