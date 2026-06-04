@@ -60,7 +60,7 @@ export function Startseite() {
           Schweizer Recht: berechnen und erstellen.
         </h1>
         {/* Untertext: eine Zeile, begrenzte Lesebreite (Variante A) */}
-        <p className="mt-4 text-body-l text-ink-600 max-w-[60ch]">
+        <p className="mt-4 text-body-l text-ink-600 max-w-[58ch]">
           Fristen, Beträge und Rechtsdokumente nach festen Regeln — jeder Schritt
           offengelegt, jede Norm verlinkt.
         </p>
