@@ -5,8 +5,8 @@ import { Katalog, SectionHead } from '../components/Katalog';
 // Basis-Seite: zeigt nur die allgemeinen Rechner (tier 'frei').
 // Spezialisierte Rechner stehen im Experten-Panel unter /fachpersonen.
 
-// Teaser für das Experten-Panel — invertierte Ink-Fläche mit Messing-Akzenten
-// («Pro»-Signal), Highlight-Chips und Kennzahlen aus der zentralen Config.
+// Teaser für das Experten-Panel — helle Karte mit Messing-Oberkante (gleiche
+// Sprache wie die geprüften Rechnerkarten), Highlights und Kennzahlen aus der Config.
 function ExpertenTeaser() {
   const experte = ALLE_KARTEN.filter((k) => k.tier === 'experte');
   const geprueft = experte.filter((k) => k.status === 'geprüft');
@@ -16,31 +16,24 @@ function ExpertenTeaser() {
   ].slice(0, 6);
 
   return (
-    <section className="relative overflow-hidden rounded-2xl p-8 sm:p-12" style={{ background: 'var(--ink-900)' }}>
-      {/* Messskala als Ablesekante auf dunklem Grund */}
-      <span className="scale-rule absolute left-8 right-8 top-0" aria-hidden />
-      <div className="max-w-reading space-y-4">
-        <p className="lc-overline" style={{ color: 'var(--brass-300)' }}>Experten-Panel</p>
-        <h2 className="font-display font-semibold text-h1 leading-tight" style={{ color: 'var(--paper)' }}>
-          Werkzeuge für die anwaltliche Praxis.
-        </h2>
-        <p className="text-body-l" style={{ color: 'var(--ink-300)' }}>
-          Verfahrens- und Rechtsmittelfristen, Verjährung, Betreibung und Konkurs, Zuständigkeit —
-          derselbe nachvollziehbare Rechenweg, zugeschnitten auf Fachpersonen.
-        </p>
-        <div className="flex flex-wrap gap-1.5 pt-1">
-          {highlights.map((t) => (
-            <span key={t} className="rounded-full px-3 py-1 text-body-s"
-              style={{ color: 'var(--paper)', boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--paper) 25%, transparent)' }}>
-              {t}
-            </span>
-          ))}
-        </div>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-3">
-          <Link to="/fachpersonen" className="lc-btn-brass no-underline">Zum Experten-Panel →</Link>
-          <p className="num text-body-s" style={{ color: 'var(--ink-400)' }}>
-            {experte.length} Rechner · {geprueft.length} geprüft
+    <section className="lc-card border-t-[3px] border-t-brass-500 p-8 sm:p-10">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-x-12 gap-y-6 items-center">
+        <div className="space-y-3 max-w-reading">
+          <p className="lc-overline text-brass-700">Experten-Panel</p>
+          <h2 className="font-display font-semibold text-h2 leading-tight text-ink-900">
+            Werkzeuge für die anwaltliche Praxis.
+          </h2>
+          <p className="text-body-s text-ink-500 leading-relaxed">
+            Verfahrens- und Rechtsmittelfristen, Verjährung, Betreibung und Konkurs, Zuständigkeit —
+            derselbe nachvollziehbare Rechenweg, zugeschnitten auf Fachpersonen.
           </p>
+          <div className="flex flex-wrap gap-1.5 pt-1">
+            {highlights.map((t) => <span key={t} className="lc-chip">{t}</span>)}
+          </div>
+        </div>
+        <div className="flex flex-col items-start lg:items-end gap-2 shrink-0">
+          <Link to="/fachpersonen" className="lc-btn-primary no-underline">Zum Experten-Panel →</Link>
+          <p className="num text-body-s text-ink-400">{experte.length} Rechner · {geprueft.length} geprüft</p>
         </div>
       </div>
     </section>
