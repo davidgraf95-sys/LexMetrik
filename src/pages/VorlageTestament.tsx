@@ -4,7 +4,7 @@ import {
   TESTAMENT_DEFAULTS, testamentZusammenstellen, pruefeGates,
   type TestamentAntworten, type TestamentErbe, type TestamentVermaechtnis,
 } from '../lib/vorlagen/testament';
-import { vorlagenPdfErzeugen } from '../lib/vorlagen/vorlagenPdf';
+import { vorlagenPdfErzeugen, BANNER_ABSCHREIBEN } from '../lib/vorlagen/vorlagenPdf';
 import { berechneErbteilung } from '../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../lib/bruch';
 import { fedlexLinkFuerArtikel } from '../lib/fedlex';
@@ -348,7 +348,7 @@ export function VorlageTestament() {
 
           <div className="flex flex-wrap gap-3">
             <button type="button" disabled={!bestaetigt || gates.blocker.length > 0}
-              onClick={() => vorlagenPdfErzeugen(ergebnis, { abschreibHinweis: true, dateiName: 'Testament-Mustertext.pdf' })}
+              onClick={() => vorlagenPdfErzeugen(ergebnis, { banner: BANNER_ABSCHREIBEN, dateiName: 'Testament-Mustertext.pdf' })}
               className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
               Mustertext als PDF
             </button>

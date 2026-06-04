@@ -9,7 +9,19 @@ import type { AssembleErgebnis } from './engine';
 const RAND = 22;
 const BREITE = 210 - 2 * RAND;
 
-export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { abschreibHinweis: boolean; dateiName: string }) {
+export type PdfBanner = { titel: string; text: string };
+
+// Vordefinierte Banner je Formvorschrift
+export const BANNER_ABSCHREIBEN: PdfBanner = {
+  titel: 'MUSTERTEXT — VOLLSTÄNDIG VON HAND ABZUSCHREIBEN',
+  text: 'Dieses Blatt ist nicht das Testament. Gültig ist nur die von Anfang bis Ende eigenhändig geschriebene, datierte und unterschriebene Fassung (Art. 505 Abs. 1 ZGB).',
+};
+export const BANNER_UNTERSCHREIBEN: PdfBanner = {
+  titel: 'NACH DEM AUSDRUCK HANDSCHRIFTLICH DATIEREN UND UNTERSCHREIBEN',
+  text: 'Die Erstellung am Computer ist zulässig (Art. 371 Abs. 1 ZGB) — gültig wird das Dokument erst mit handschriftlichem Datum und eigenhändiger Unterschrift.',
+};
+
+export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
   let y = RAND;
 
@@ -30,20 +42,17 @@ export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { abschreibHinwei
     if (y + benoetigt > 297 - 24) { doc.addPage(); y = RAND; }
   };
 
-  // Banner: Mustertext zum Abschreiben (Eigenhändigkeitsfälle)
-  if (opts.abschreibHinweis) {
+  // Formvorschrift-Banner (z. B. Abschreib- oder Unterschrifts-Hinweis)
+  if (opts.banner) {
     doc.setFillColor(243, 226, 221);
     doc.rect(RAND, y, BREITE, 16, 'F');
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(9.5);
     doc.setTextColor(122, 47, 35);
-    doc.text('MUSTERTEXT — VOLLSTÄNDIG VON HAND ABZUSCHREIBEN', RAND + 4, y + 6);
+    doc.text(pdfText(opts.banner.titel), RAND + 4, y + 6);
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(8);
-    const hinweis = doc.splitTextToSize(
-      'Dieses Blatt ist nicht das Testament. Gültig ist nur die von Anfang bis Ende eigenhändig geschriebene, datierte und unterschriebene Fassung (Art. 505 Abs. 1 ZGB).',
-      BREITE - 8,
-    ) as string[];
+    const hinweis = doc.splitTextToSize(pdfText(opts.banner.text), BREITE - 8) as string[];
     doc.text(hinweis, RAND + 4, y + 10.5);
     y += 22;
   }

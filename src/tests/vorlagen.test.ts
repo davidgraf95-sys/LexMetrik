@@ -165,3 +165,90 @@ describe('Vorlagen-Engine — Nummerierung (Bug-Check)', () => {
     expect(r.dokument.absaetze.map((x) => x.text)).toEqual(['1. A', '2. C']);
   });
 });
+
+// ─── Patientenverfügung ──────────────────────────────────────────────────────
+
+import {
+  PV_DEFAULTS, PV_DEFAULT_MASSNAHMEN, PV_SCHEMA, pvZusammenstellen, pruefePvGates, zielDefaults,
+  type PvAntworten,
+} from '../lib/vorlagen/patientenverfuegung';
+
+const pv = (over: Partial<PvAntworten>): PvAntworten => ({
+  ...PV_DEFAULTS,
+  vorname: 'Anna', name: 'Muster', geburtsdatum: '1990-04-12', wohnort: 'Musterweg 1, 4051 Basel',
+  massnahmen: { ...PV_DEFAULT_MASSNAHMEN, ...(over.massnahmen ?? {}) },
+  ...over,
+});
+
+describe('Vorlage Patientenverfügung', () => {
+  it('Minimalfall: Identifikation, Palliativ-Baustein (immer), Ersetzen, Schlussformel', () => {
+    const r = pvZusammenstellen(pv({}));
+    expect(r.aufgenommen).toEqual(['P01_identifikation', 'P06_palliativ', 'P11_ersetzt', 'P12_schluss']);
+    expect(r.dokument.absaetze[0].text).toContain('Anna Muster');
+    const schluss = r.dokument.absaetze.at(-1)!.text;
+    expect(schluss).toContain('Datum (von Hand einzusetzen)');
+    expect(schluss).toContain('eigenhändige Unterschrift');
+  });
+
+  it('Situationen, Ziel und entschiedene Massnahmen erscheinen; «keine Angabe» nicht', () => {
+    const r = pvZusammenstellen(pv({
+      situationen: ['terminal', 'komaWachkoma'],
+      ziel: 'palliativ',
+      massnahmen: { ...PV_DEFAULT_MASSNAHMEN, cpr: 'ablehnen', antibiotika: 'nur_befristet' },
+    }));
+    expect(r.aufgenommen).toEqual(expect.arrayContaining(['P03_situationen', 'P04_ziel', 'P05_massnahmen']));
+    const liste = r.dokument.absaetze.find((x) => x.bausteinId === 'P05b_massnahmenliste')!.text;
+    expect(liste).toContain('Wiederbelebung');
+    expect(liste).toContain('Ich lehne ab');
+    expect(liste).toContain('nur befristet, als therapeutischer Versuch'.slice(4, 20)); // Teilstring
+    expect(liste).not.toContain('Dialyse');
+  });
+
+  it('Vertretungsperson zieht Schweigepflicht-Entbindung automatisch nach (R5); Ersatz/Weisungen bedingt', () => {
+    const ohne = pvZusammenstellen(pv({}));
+    expect(ohne.aufgenommen).not.toContain('P08_schweigepflicht');
+    const mit = pvZusammenstellen(pv({ vertretungName: 'Ben Muster', vertretungWeisungen: 'Keine Heroik.', ersatzName: 'Clara' }));
+    expect(mit.aufgenommen).toEqual(expect.arrayContaining(['P07_vertretung', 'P07b_weisungen', 'P07c_ersatz', 'P08_schweigepflicht']));
+  });
+
+  it('Organspende: Zustimmung mit vorbereitenden Massnahmen / Ablehnung', () => {
+    const ja = pvZusammenstellen(pv({ organspende: 'ja', organspendeVorbereitend: true }));
+    expect(ja.dokument.absaetze.find((x) => x.bausteinId === 'P10_organspende')!.text).toContain('vorbereitenden medizinischen Massnahmen');
+    const nein = pvZusammenstellen(pv({ organspende: 'nein' }));
+    expect(nein.dokument.absaetze.find((x) => x.bausteinId === 'P10_organspende')!.text).toContain('lehne');
+  });
+
+  it('R6: Sterbehilfe-Anordnung im Freitext blockiert hart (Art. 114/115 StGB)', () => {
+    const g = pruefePvGates(pv({ einstellungLeben: 'Ich wünsche aktive Sterbehilfe durch meinen Arzt.' }));
+    expect(g.blocker.length).toBe(1);
+    expect(g.blocker[0]).toContain('114');
+    expect(pruefePvGates(pv({ vertretungWeisungen: 'Bitte Suizidhilfe organisieren', vertretungName: 'B' })).blocker.length).toBe(1);
+    expect(pruefePvGates(pv({ einstellungLeben: 'Leidenslinderung ist mir wichtig.' })).blocker).toEqual([]);
+  });
+
+  it('R2: Widerspruch maximale Lebenserhaltung ↔ Ablehnung CPR/Beatmung warnt', () => {
+    const g = pruefePvGates(pv({ ziel: 'maximal', massnahmen: { ...PV_DEFAULT_MASSNAHMEN, cpr: 'ablehnen' } }));
+    expect(g.warnungen.some((w) => w.includes('Widerspruch'))).toBe(true);
+  });
+
+  it('R1: Palliativ-Ziel setzt Defaults nur für offene Massnahmen', () => {
+    const m = zielDefaults('palliativ', { ...PV_DEFAULT_MASSNAHMEN, cpr: 'zustimmen' });
+    expect(m.cpr).toBe('zustimmen');       // getroffener Entscheid bleibt
+    expect(m.beatmung).toBe('ablehnen');   // offen → Default
+    expect(m.dialyse).toBe('ablehnen');
+    expect(m.antibiotika).toBe('keine_angabe'); // nicht Teil der R1-Defaults
+  });
+
+  it('R3/R7: Kaskaden-Hinweis ohne Vertretung; Hinweis bei psychischer Störung', () => {
+    const g = pruefePvGates(pv({ psychischeStoerungKontext: true }));
+    expect(g.hinweise.some((h) => h.includes('378'))).toBe(true);
+    expect(g.hinweise.some((h) => h.includes('433'))).toBe(true);
+  });
+
+  it('jeder Baustein trägt Begründung und Norm', () => {
+    PV_SCHEMA.bausteine.forEach((b) => {
+      expect(b.begruendung.length, b.id).toBeGreaterThan(5);
+      expect(b.norm, b.id).toBeTruthy();
+    });
+  });
+});

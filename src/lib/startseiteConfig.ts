@@ -545,8 +545,24 @@ const VORLAGEN: Record<string, VorlageCard> = {
   patientenverfuegung: {
     id: 'patientenverfuegung', modus: 'vorlage', art: 'vorsorge', tier: 'frei', rechtsgebiet: 'Familie',
     title: 'Patientenverfügung',
-    description: 'Festlegung medizinischer Massnahmen und vertretungsberechtigter Personen.',
-    status: 'geplant', norms: [],
+    description: 'Medizinische Massnahmen, Behandlungsziel und Vertretungsperson — mit Konsistenz-Prüfung und Form-Gate; am Computer erstellbar, handschriftlich zu unterschreiben.',
+    status: 'geprüft',
+    norms: [
+      // Art. 370 ZGB – Grundsatz (Massnahmen, Vertretungsperson, Ersatzverfügung)
+      { label: 'Art. 370 ZGB', url: fedlexUrl('ZGB', '370'), verified: true },
+      // Art. 371 ZGB – Errichtung und Widerruf (schriftlich, datiert, unterzeichnet)
+      { label: 'Art. 371 ZGB', url: fedlexUrl('ZGB', '371'), verified: true },
+      // Art. 372 ZGB – Verbindlichkeit bei Urteilsunfähigkeit
+      { label: 'Art. 372 ZGB', url: fedlexUrl('ZGB', '372'), verified: true },
+      // Art. 378 ZGB – gesetzliche Vertretungskaskade
+      { label: 'Art. 378 ZGB', url: fedlexUrl('ZGB', '378'), verified: true },
+    ],
+    href: '/vorlagen/patientenverfuegung',
+    schemaId: 'patientenverfuegung',
+    formvorschrift: 'Schriftlich — ausdrucken, handschriftlich datieren und unterschreiben',
+    output: ['pdf'],
+    keywords: ['Patientenverfügung', 'medizinische Massnahmen', 'Urteilsunfähigkeit', 'Reanimation', 'Vertretungsperson', 'Organspende', 'Behandlungsziel'],
+    related: ['vorsorgeauftrag'],
     icon: 'document',
   },
 
