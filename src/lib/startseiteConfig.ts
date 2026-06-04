@@ -43,24 +43,27 @@ export interface Sektion {
 
 // ─── Fedlex-Verlinkung (verifizierte Anker) ───────────────────────────────
 //
-// Jeder Anker wurde gegen den konsolidierten Volltext (Filestore-HTML der
-// Konsolidierung 20250101) geprüft – das Dokument enthält die entsprechende
-// id="art_…". Buchstaben-Artikel nutzen das Unterstrich-Format (art_324_a).
-// Sammel-/Spannenangaben verlinken den Leitartikel. SR-Nummern: OR = SR 220,
-// ZPO = SR 272, SchKG = SR 281.1, ZGB = SR 210.
+// Verifizierte Fedlex-Basis-URLs (Systematische Rechtssammlung, konsolidierte,
+// in Kraft stehende Fassung, Sprache de). Kein ?version=-Parameter, damit der
+// Link stets die geltende Fassung auflöst.
+// SR 220 OR · SR 210 ZGB · SR 272 ZPO · SR 281.1 SchKG
 
-const ELI = {
-  ZPO: 'eli/cc/2010/262',          // SR 272
-  OR: 'eli/cc/27/317_321_377',     // SR 220
-  SchKG: 'eli/cc/11/529_488_529',  // SR 281.1
-  ZGB: 'eli/cc/24/233_245_233',    // SR 210
+const FEDLEX = {
+  OR:    'https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de',
+  ZGB:   'https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de',
+  ZPO:   'https://www.fedlex.admin.ch/eli/cc/2010/262/de',
+  SchKG: 'https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de',
 } as const;
 
-const fedlex = (label: string, gesetz: keyof typeof ELI, anker: string): NormRef => ({
-  label,
-  url: `https://www.fedlex.admin.ch/${ELI[gesetz]}/de#${anker}`,
-  verified: true, // Anker im konsolidierten Fedlex-HTML (20250101) nachgewiesen
-});
+// Anker '#art_<nummer>'. Buchstaben-Artikel nutzen das Fedlex-Unterstrich-
+// Format: 335c → #art_335_c (empirisch gegen die id="art_…"-Anker des
+// konsolidierten Filestore-HTML, Stand 20250101, verifiziert — die Variante
+// ohne Unterstrich existiert dort NICHT). Spannen-/Folgeverweise (–, f., ff.)
+// verlinken den führenden Artikel; Aufzählungen erhalten je ein eigenes Pill.
+function fedlexUrl(gesetz: keyof typeof FEDLEX, artikel: string | number): string {
+  const token = String(artikel).toLowerCase().replace(/\s+/g, '').replace(/^(\d+)([a-z])$/, '$1_$2');
+  return `${FEDLEX[gesetz]}#art_${token}`;
+}
 
 // ─── Sektionen: vier Output-Typen (oberste Ebene) ─────────────────────────
 
@@ -100,7 +103,10 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Verfahrens- & Rechtsmittelfristen',
     description: 'Verfahrens- und Rechtsmittelfristen mit Gerichtsferien und Stillstand.',
     status: 'geprüft',
-    norms: [fedlex('Art. 142–147 ZPO', 'ZPO', 'art_142')],
+    norms: [
+      // Art. 142–147 ZPO – Fristenlauf (Spanne: Anker auf führenden Artikel)
+      { label: 'Art. 142–147 ZPO', url: fedlexUrl('ZPO', '142'), verified: true },
+    ],
     href: '/rechner/zpo-fristen',
     keywords: ['Frist', 'Gericht', 'Berufung', 'Beschwerde', 'Klage', 'Gerichtsferien', 'Stillstand', 'Zustellung'],
     icon: 'clock',
@@ -110,7 +116,14 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Betreibungs- & Konkursfristen',
     description: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
     status: 'geprüft',
-    norms: [fedlex('Art. 56/63 SchKG', 'SchKG', 'art_56'), fedlex('Art. 145 ZPO', 'ZPO', 'art_145')],
+    norms: [
+      // Art. 56 SchKG – Rechtsstillstand
+      { label: 'Art. 56 SchKG', url: fedlexUrl('SchKG', '56'), verified: true },
+      // Art. 63 SchKG – Betreibungsferien
+      { label: 'Art. 63 SchKG', url: fedlexUrl('SchKG', '63'), verified: true },
+      // Art. 145 ZPO – Stillstand (Querverweis: ZPO-Basis, nicht SchKG)
+      { label: 'Art. 145 ZPO', url: fedlexUrl('ZPO', '145'), verified: true },
+    ],
     href: '/rechner/schkg-fristen',
     keywords: ['Betreibung', 'Zahlungsbefehl', 'Rechtsvorschlag', 'Konkurs', 'Pfändung', 'Betreibungsferien'],
     related: ['verzugszins'],
@@ -121,7 +134,12 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Kündigungs- & Sperrfristen',
     description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis.',
     status: 'geprüft',
-    norms: [fedlex('Art. 335c OR', 'OR', 'art_335_c'), fedlex('Art. 336c OR', 'OR', 'art_336_c')],
+    norms: [
+      // Art. 335c OR – ordentliche Kündigungsfristen
+      { label: 'Art. 335c OR', url: fedlexUrl('OR', '335c'), verified: true },
+      // Art. 336c OR – Kündigung zur Unzeit (Sperrfristen)
+      { label: 'Art. 336c OR', url: fedlexUrl('OR', '336c'), verified: true },
+    ],
     href: '/rechner/kuendigung#kuendigung',
     keywords: ['gekündigt', 'Kündigung', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär'],
     related: ['lohnfortzahlung'],
@@ -132,7 +150,14 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Kündigung & Fristen im Mietrecht',
     description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume — mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
     status: 'geprüft',
-    norms: [fedlex('Art. 266a–o OR', 'OR', 'art_266_a'), fedlex('Art. 257d/f OR', 'OR', 'art_257_d')],
+    norms: [
+      // Art. 266a–o OR – Kündigungstermine/-fristen (Spanne: Anker auf führenden Artikel)
+      { label: 'Art. 266a–o OR', url: fedlexUrl('OR', '266a'), verified: true },
+      // Art. 257d OR – Zahlungsrückstand
+      { label: 'Art. 257d OR', url: fedlexUrl('OR', '257d'), verified: true },
+      // Art. 257f OR – Sorgfaltspflichtverletzung
+      { label: 'Art. 257f OR', url: fedlexUrl('OR', '257f'), verified: true },
+    ],
     href: '/rechner/mietrecht',
     keywords: ['Mietwohnung', 'Wohnung kündigen', 'Kündigungstermin', 'Vermieter', 'Mieter', 'Geschäftsraum'],
     icon: 'house',
@@ -224,7 +249,10 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Verzugszins',
     description: 'Verzugszins bei Schuldnerverzug — Zeitraum, Satz und Betrag.',
     status: 'geprüft',
-    norms: [fedlex('Art. 104 OR', 'OR', 'art_104')],
+    norms: [
+      // Art. 104 OR – Verzugszins
+      { label: 'Art. 104 OR', url: fedlexUrl('OR', '104'), verified: true },
+    ],
     href: '/rechner/verzugszins',
     keywords: ['Rechnung', 'Verzug', 'Zins', 'Mahnung', 'offene Forderung', '5 Prozent'],
     related: ['schkg-fristen'],
@@ -235,7 +263,10 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Lohnfortzahlung (kantonale Skala)',
     description: 'Lohnfortzahlung bei unverschuldeter Verhinderung nach kantonaler Skala (Basel/Bern/Zürich).',
     status: 'geprüft',
-    norms: [fedlex('Art. 324a OR', 'OR', 'art_324_a')],
+    norms: [
+      // Art. 324a OR – Lohnfortzahlung bei Verhinderung
+      { label: 'Art. 324a OR', url: fedlexUrl('OR', '324a'), verified: true },
+    ],
     href: '/rechner/kuendigung#lohnfortzahlung',
     keywords: ['krank', 'Lohnfortzahlung', 'Arztzeugnis', 'Arbeitsunfähigkeit', 'Taggeld', 'Skala'],
     related: ['kuendigung-sperrfristen'],
@@ -246,7 +277,12 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Pflichtteil & verfügbare Quote',
     description: 'Gesetzliche Erbteile, Pflichtteile und verfügbare Quote — mit Todesdatum-Weiche für die Revision 2023 und güterrechtlicher Vorstufe.',
     status: 'geprüft',
-    norms: [fedlex('Art. 457 ff. ZGB', 'ZGB', 'art_457'), fedlex('Art. 470 f. ZGB', 'ZGB', 'art_470')],
+    norms: [
+      // Art. 457 ff. ZGB – gesetzliche Erben (Folgeverweis: Anker auf führenden Artikel)
+      { label: 'Art. 457 ff. ZGB', url: fedlexUrl('ZGB', '457'), verified: true },
+      // Art. 470 f. ZGB – verfügbare Quote / Pflichtteil
+      { label: 'Art. 470 f. ZGB', url: fedlexUrl('ZGB', '470'), verified: true },
+    ],
     href: '/rechner/erbteilung',
     keywords: ['Erbe', 'Pflichtteil', 'Testament', 'Erbteilung', 'verfügbare Quote', 'Todesfall', 'Ehegatte'],
     icon: 'scale',
