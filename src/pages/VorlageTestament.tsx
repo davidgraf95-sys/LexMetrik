@@ -7,7 +7,8 @@ import {
 import { vorlagenPdfErzeugen, BANNER_ABSCHREIBEN } from '../lib/vorlagen/vorlagenPdf';
 import { berechneErbteilung } from '../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../lib/bruch';
-import { fedlexLinkFuerArtikel } from '../lib/fedlex';
+import { NormLink } from '../components/vorlagen/ui';
+import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { karte } from '../lib/startseiteConfig';
 
@@ -43,14 +44,8 @@ function Field({ label, children, hint, optional }: { label: string; children: R
   );
 }
 
-function NormLink({ artikel }: { artikel: string }) {
-  const url = fedlexLinkFuerArtikel(artikel);
-  return url
-    ? <a href={url} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{artikel}</a>
-    : <span className="lc-chip">{artikel}</span>;
-}
-
 export function VorlageTestament() {
+  const { locale } = useLocale();
   const [a, setA] = useState<TestamentAntworten>(() => {
     try {
       const roh = localStorage.getItem(SPEICHER_KEY);
@@ -384,7 +379,7 @@ export function VorlageTestament() {
         </p>
         <div className="flex flex-wrap items-center gap-1.5">
           {(card?.norms ?? []).map((n) => (
-            <a key={n.label} href={n.url} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
+            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
           ))}
           <span className="lc-badge lc-badge-warn">Eigenhändig abzuschreiben</span>
         </div>

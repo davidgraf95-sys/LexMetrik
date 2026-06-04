@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { LexmetrikSiegel, LexmetrikWortmarke } from './Logo';
 import { StufenSchalter } from '../StufenSchalter';
 import { Befehlspalette } from '../Befehlspalette';
+import { SprachUmschalter } from '../SprachUmschalter';
 
 // Header neu (zweizeilig, Instrumenten-Look):
 // 1. Feinschrift-Leiste — Mono-Overline mit Einordnung links und Pflichthinweis
@@ -42,6 +43,8 @@ export function Header() {
         <nav className="justify-self-end flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* Suche / Befehlspalette (⌘K) */}
           <Befehlspalette />
+          {/* Sprache (en/fr/it «in Bearbeitung», DE-Fallback) */}
+          <SprachUmschalter />
           <div className="hidden sm:flex items-center gap-1 sm:gap-2">
             {NAV.map((n) => {
               const aktiv = n.match(pathname);

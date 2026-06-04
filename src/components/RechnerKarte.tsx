@@ -3,6 +3,7 @@ import type { CalculatorCard } from '../lib/startseiteConfig';
 import { karte } from '../lib/startseiteConfig';
 import { Icon } from './Icon';
 import { sansAmp } from './typografie';
+import { useLocale, fedlexLokalisiert } from './locale';
 
 // Startseiten-Karte (Zwei-Säulen-Struktur). Kartenanatomie wie bisher:
 // Icon-Bubble, Status-Badge, Mikro-Label, Serif-Titel, Beschrieb, Norm-Pills,
@@ -19,6 +20,7 @@ type Props = {
 export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
   const aktiv = card.status === 'geprüft';
   const H = headingLevel;
+  const { locale } = useLocale();
   const verwandte = (card.related ?? [])
     .map((id) => karte(id))
     .filter((k) => k && k.status === 'geprüft' && k.href);
@@ -72,7 +74,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
               konsolidierte Fassung (Fedlex), neues Tab. */}
           {card.norms.map((n) =>
             n.url ? (
-              <a key={n.label} href={n.url} target="_blank" rel="noopener noreferrer"
+              <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer"
                 className="relative lc-chip no-underline hover:text-brass-700"
                 title={`${n.label} auf Fedlex öffnen${n.verified ? '' : ' (Gesetzes-Seite)'}`}>
                 {n.label}

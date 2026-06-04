@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
+import { LocaleProvider } from './components/locale';
 import { Startseite } from './pages/Startseite';
 import { Fachpersonen } from './pages/Fachpersonen';
 import { RechnerKuendigung } from './pages/RechnerKuendigung';
@@ -32,6 +33,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
+    <LocaleProvider>
     <Shell>
       <ScrollToTop />
       <Routes>
@@ -58,5 +60,6 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Shell>
+    </LocaleProvider>
   );
 }

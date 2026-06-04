@@ -7,6 +7,7 @@ import {
 import { vorlagenPdfErzeugen, type PdfBanner } from '../lib/vorlagen/vorlagenPdf';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, Stepper, inputCls } from '../components/vorlagen/ui';
+import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
 
 // ─── Vorlagen-Wizard: Vorsorgeauftrag (Art. 360–369 ZGB) ────────────────────
@@ -38,6 +39,7 @@ const BANNER_VA_BEURKUNDUNG: PdfBanner = {
 };
 
 export function VorlageVorsorgeauftrag() {
+  const { locale } = useLocale();
   const [a, setA] = useState<VaAntworten>(() => {
     try {
       const roh = localStorage.getItem(SPEICHER_KEY);
@@ -427,7 +429,7 @@ export function VorlageVorsorgeauftrag() {
         </p>
         <div className="flex flex-wrap items-center gap-1.5">
           {(card?.norms ?? []).map((n) => (
-            <a key={n.label} href={n.url} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
+            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
           ))}
           <span className="lc-badge lc-badge-warn">Eigenhändig ODER beurkundet (Art. 361 ZGB)</span>
         </div>

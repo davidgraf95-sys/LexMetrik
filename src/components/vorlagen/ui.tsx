@@ -1,4 +1,5 @@
 import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
+import { useLocale, fedlexLokalisiert } from '../locale';
 
 // Geteilte UI-Bausteine der Vorlagen-Wizards (Testament, Patientenverfügung, …).
 
@@ -19,7 +20,9 @@ export function Field({ label, children, hint, optional }: {
 }
 
 export function NormLink({ artikel }: { artikel: string }) {
-  const url = fedlexLinkFuerArtikel(artikel);
+  const { locale } = useLocale();
+  const roh = fedlexLinkFuerArtikel(artikel);
+  const url = roh ? fedlexLokalisiert(roh, locale) : null;
   return url
     ? <a href={url} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{artikel}</a>
     : <span className="lc-chip">{artikel}</span>;

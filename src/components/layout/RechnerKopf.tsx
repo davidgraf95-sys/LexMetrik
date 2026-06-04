@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import type { Calculator } from '../../lib/calculators';
 import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { sansAmp } from '../typografie';
+import { useLocale, fedlexLokalisiert } from '../locale';
 
 // Gemeinsamer Rechner-Kopf (Vorlage Abschnitt 4): Zurück-Pfeil, Breadcrumb,
 // Overline, H1, Einleitung, Chips.
 export function RechnerKopf({ calc }: { calc: Calculator }) {
+  const { locale } = useLocale();
   return (
     <div className="space-y-3 mb-8">
       {/* Sichtbarer Rückweg zur Rechner-Übersicht (Startseite) */}
@@ -24,7 +26,8 @@ export function RechnerKopf({ calc }: { calc: Calculator }) {
       <div className="flex flex-wrap gap-1.5">
         {/* Norm-Chips mit Fedlex-Direktlink (Spannen/ff. → führender Artikel) */}
         {calc.normen.map((n) => {
-          const url = fedlexLinkFuerArtikel(n);
+          const roh = fedlexLinkFuerArtikel(n);
+          const url = roh ? fedlexLokalisiert(roh, locale) : null;
           return url ? (
             <a key={n} href={url} target="_blank" rel="noopener noreferrer"
               className="lc-chip no-underline hover:text-brass-700" title={`${n} auf Fedlex öffnen`}>

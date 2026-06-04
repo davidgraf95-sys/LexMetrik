@@ -2,11 +2,14 @@ import { useState } from 'react';
 import type { Berechnungsergebnis, BerechnungsStatus } from '../types/legal';
 import { fedlexLinkFuerArtikel } from '../lib/fedlex';
 import { sansAmp } from './typografie';
+import { useLocale, fedlexLokalisiert } from './locale';
 
 // Norm-Chip mit Fedlex-Direktlink (artikelgenauer Anker); ohne verifizierbares
 // Ziel bleibt der Chip unverlinkt (Normentreue: nie auf geratene Anker).
 function NormChip({ artikel, bemerkung }: { artikel: string; bemerkung?: string }) {
-  const url = fedlexLinkFuerArtikel(artikel);
+  const { locale } = useLocale();
+  const roh = fedlexLinkFuerArtikel(artikel);
+  const url = roh ? fedlexLokalisiert(roh, locale) : null;
   const inhalt = (
     <>
       {artikel}

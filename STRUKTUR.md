@@ -16,6 +16,13 @@ Sektionsköpfe/Zähler benennen die Einheit modusabhängig («… Rechner» /
 ⌘K-Befehlspalette = globale Navigation über alle Modi/Stufen/Seiten. Bewusst
 getrennt gehalten und unterschiedlich beschriftet.
 
+**Sprachen:** Sprachumschalter sichtbar (Topbar); EN/FR/IT = «in Bearbeitung»
+mit DE-Fallback und persistentem Hinweis-Banner; keine maschinelle Übersetzung —
+Übersetzungen erfolgen später durch eine fachkundige Person. `<html lang>` folgt
+der Locale; Fedlex-Links folgen ihr ebenfalls (fr/it amtlich, Anker per
+Stichprobe sprachunabhängig verifiziert; en → amtliche de-Fassung). Der Hero ist
+text-geführt einspaltig (Kompass-Grafik entfernt, bewusst nicht animiert/ersetzt).
+
 ## Oberste Ebene: vier Output-Typen
 
 | Nr. | Sektion (`art`) | Inhalt |

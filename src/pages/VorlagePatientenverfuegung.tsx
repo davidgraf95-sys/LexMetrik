@@ -8,6 +8,7 @@ import {
 import { vorlagenPdfErzeugen, BANNER_UNTERSCHREIBEN } from '../lib/vorlagen/vorlagenPdf';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, Stepper, inputCls } from '../components/vorlagen/ui';
+import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
 
 // ─── Vorlagen-Wizard: Patientenverfügung (Art. 370–373 ZGB) ─────────────────
@@ -42,6 +43,7 @@ const ZIELE: { code: Exclude<PvZiel, 'keine_angabe'>; label: string; sub: string
 ];
 
 export function VorlagePatientenverfuegung() {
+  const { locale } = useLocale();
   const [a, setA] = useState<PvAntworten>(() => {
     try {
       const roh = localStorage.getItem(SPEICHER_KEY);
@@ -354,7 +356,7 @@ export function VorlagePatientenverfuegung() {
         </p>
         <div className="flex flex-wrap items-center gap-1.5">
           {(card?.norms ?? []).map((n) => (
-            <a key={n.label} href={n.url} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
+            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
           ))}
           <span className="lc-badge lc-badge-warn">Handschriftlich datieren & unterschreiben</span>
         </div>
