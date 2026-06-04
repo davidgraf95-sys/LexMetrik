@@ -1,0 +1,416 @@
+import type { VorlageSchema, Antworten } from './engine';
+import { assemble } from './engine';
+
+// ─── Schlichtungsgesuch nach Art. 202 ZPO — Kanton Basel-Stadt (Pilot) ──────
+//
+// Normverifizierte Implementierungs-Anweisung (Stand Juni 2026, ZPO-Fassung
+// seit 1.1.2025). Alle zitierten ZPO-/OR-Anker wurden beim Build einmalig
+// gegen das Fedlex-Filestore-HTML geprüft (artikelgenau auflösbar).
+// Terminologie der Revision 2025: «Entscheidvorschlag» (nicht Urteilsvorschlag).
+//
+// Kein LLM, keine Text-API: reines regelbasiertes Zusammensetzen fester
+// Bausteine über die generische Engine (assemble ist rein/deterministisch).
+
+// ── Behörden-Stammdaten (Quelle: offizielle bs.ch-Seiten, Stand 2025/2026) ──
+// PLZ-Vorbehalt Zivilgericht (Postfach 4001 vs. Paketpost 4051): siehe
+// OFFENE_VERIFIKATIONEN — massgeblich sind die aktuellen bs.ch-Angaben.
+export const SCHLICHTUNGSBEHOERDEN_BS = {
+  zivilgericht: {
+    name: 'Schlichtungsbehörde des Zivilgerichts Basel-Stadt',
+    postadresse: ['Zivilgericht Basel-Stadt', 'Schlichtungsbehörde', 'Postfach 964', '4001 Basel'],
+    schalterMuendlich: ['St. Alban-Vorstadt 25', '4052 Basel'], // Ausweichstandort Rheinhof während Sanierung Bäumleingasse
+    tel: '+41 61 267 81 81',
+    verified: true,
+  },
+  miete: {
+    name: 'Staatliche Schlichtungsstelle für Mietstreitigkeiten',
+    postadresse: ['Grenzacherstrasse 62', '4005 Basel'],
+    tel: '+41 61 267 85 21',
+    email: 'ssm@bs.ch',
+    paritaetisch: true, // Art. 200 Abs. 1 ZPO
+    verified: true,
+  },
+  diskriminierung: {
+    name: 'Kantonale Schlichtungsstelle für Diskriminierungsfragen',
+    postadresse: ['Grenzacherstrasse 62', '4005 Basel'], // aktuelle bs.ch-Adresse (04.07.2025); Altadresse Utengasse 36 überholt
+    tel: '+41 61 267 85 22',
+    email: 'ksd@bs.ch',
+    paritaetisch: true, // Art. 200 Abs. 2 ZPO
+    kostenlos: true,
+    verified: true,
+  },
+} as const;
+
+// ── Schwellen (hart codiert, je mit Norm) ───────────────────────────────────
+export const SG_SCHWELLEN = {
+  ENTSCHEID_AUF_ANTRAG: 2000,        // Art. 212 ZPO — Entscheid der Behörde (vermögensrechtlich)
+  ENTSCHEIDVORSCHLAG: 10000,         // Art. 210 Abs. 1 lit. c ZPO (Revision 2025: vorher 5'000)
+  ARBEITSRECHT_KOSTENLOS: 30000,     // Art. 113 Abs. 2 lit. d / 114 lit. c ZPO; Dispens Art. 204 Abs. 3
+  VERZICHT_GEMEINSAM: 100000,        // Art. 199 Abs. 1 ZPO
+  ORDNUNGSBUSSE_MAX: 1000,           // Art. 206 Abs. 4 ZPO (neu; Androhung nötig)
+  KLAGEBEWILLIGUNG_MONATE: 3,        // Art. 209 Abs. 3 ZPO
+  KLAGEBEWILLIGUNG_MIETE_TAGE: 30,   // Art. 209 Abs. 4 ZPO (Miete/Pacht Wohn-/Geschäftsräume)
+  ENTSCHEIDVORSCHLAG_ABLEHNUNG_TAGE: 20, // Art. 211 ZPO
+} as const;
+
+// Offene Verifikationen (in UI offenlegen, nicht raten) — Abschnitt 18 der Anweisung
+export const SG_OFFENE_VERIFIKATIONEN: string[] = [
+  'Kantonale Verweise (GOG BS SG 154.100, EG ZPO SG 221.100, GGR SG 154.810): §-Nummern noch nicht an der amtlichen Fassung bestätigt — verlinkt wird nur die Erlass-Seite.',
+  'PLZ der Schlichtungsbehörde des Zivilgerichts: Postfach 4001 vs. Paketpost 4051 — massgeblich sind die aktuellen bs.ch-Angaben.',
+  'Randtitel «Art. 135 Ziff. 2 OR» vs. «Abs. 2»: Bezeichnung in amtlichen Formularen uneinheitlich.',
+  'Bezifferung bereits im Schlichtungsstadium ist vertretbare Auslegung (streng erst für die Klage); unbezifferte Begehren nur über den Art.-85-Pfad.',
+];
+
+// Kantonale Erlass-Seiten (verifizierte Links; KEINE §-Anker — verified: false)
+export const SG_KANTONALE_ERLASSE = [
+  { label: 'GOG BS (SG 154.100)', url: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.100' },
+  { label: 'EG ZPO BS (SG 221.100)', url: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/221.100' },
+  { label: 'GGR BS (SG 154.810)', url: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810' },
+] as const;
+
+// ── Eingabe-Datentypen ──────────────────────────────────────────────────────
+export type PersonNatuerlich = { typ: 'natuerlich'; vorname: string; name: string; co?: string; strasse: string; plz: string; ort: string; land?: string };
+export type PersonJuristisch = { typ: 'juristisch'; firma: string; rechtsform?: string; uid?: string; sitzStrasse: string; sitzPlz: string; sitzOrt: string; zeichnungsberechtigt?: { name: string; funktion: string } };
+export type SgPartei = PersonNatuerlich | PersonJuristisch;
+
+export type SgVertretung = { bezeichnung: string; zusatz?: string; strasse: string; plz: string; ort: string; mwstPflichtig?: boolean; vollmachtDatum?: string };
+export type SgBetreibung = { nummer: string; betreibungsamt: string; rechtsvorschlagErhoben: boolean; rechtsvorschlagBetrag?: string };
+
+export type SgTyp = 'geldforderung' | 'uebrige_zivilsache' | 'arbeitsrecht' | 'miete_pacht' | 'gleichstellung_glg';
+
+export type SgAnswers = {
+  // Schritt 0 — Routing & Vorprüfung
+  streitgegenstandTyp: SgTyp | '';
+  ausnahmeArt198: boolean;
+  baselForumBestaetigt: boolean;
+  streitwert?: string;             // manuell (übrige Zivilsache); sonst abgeleitet
+  // Schritt 1 — klagende Partei(en) + Vertretung
+  klaeger: SgPartei[];
+  vertretung?: SgVertretung;
+  // Schritt 2 — beklagte Partei(en)
+  beklagte: SgPartei[];
+  betreibung?: SgBetreibung;
+  // Schritt 3 — Rechtsbegehren
+  geld?: { betrag: string; zins?: { satz: string; abDatum: string }; rechtsoeffnung?: boolean };
+  unbeziffert?: { mindestbetrag: string; zins?: { satz: string; abDatum: string }; grund: string };
+  freieRechtsbegehren: string[];
+  weitereRechtsbegehren: string[];
+  // Schritt 4 — Streitgegenstand
+  streitgegenstand: string;        // Pflicht (Art. 202 Abs. 2 ZPO)
+  begruendung?: string;            // möglich, nicht erforderlich
+  // Schritt 5 — Anträge, Beilagen, Ort/Datum
+  antragMediation: boolean;        // Art. 213 ZPO
+  antragEntscheid: boolean;        // Art. 212 ZPO — nur vermögensrechtlich ≤ 2'000
+  beilagen: { bezeichnung: string }[];
+  ort: string;
+  datum: string;                   // ISO
+};
+
+export const SG_PERSON_NATUERLICH: PersonNatuerlich = { typ: 'natuerlich', vorname: '', name: '', strasse: '', plz: '', ort: '' };
+
+export const SG_DEFAULTS: SgAnswers = {
+  streitgegenstandTyp: '',
+  ausnahmeArt198: false,
+  baselForumBestaetigt: false,
+  klaeger: [{ ...SG_PERSON_NATUERLICH }],
+  beklagte: [{ ...SG_PERSON_NATUERLICH }],
+  freieRechtsbegehren: [],
+  weitereRechtsbegehren: [],
+  streitgegenstand: '',
+  antragMediation: false,
+  antragEntscheid: false,
+  beilagen: [],
+  ort: 'Basel',
+  datum: '',
+};
+
+// ── Helfer: Schweizer Formatierung ──────────────────────────────────────────
+export function fmtCHF(roh: string): string {
+  const n = Number(String(roh).replace(/['\s]/g, '').replace(',', '.'));
+  if (!Number.isFinite(n)) return roh;
+  const [ganz, dez] = n.toFixed(2).split('.');
+  return ganz.replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.' + dez;
+}
+const fmtDatum = (iso: string) => (iso?.includes('-') ? iso.split('-').reverse().join('.') : iso || '________');
+
+export function sgStreitwert(a: SgAnswers): number | null {
+  // Geldforderung: Streitwert = Begehren (Art. 91 ZPO); unbeziffert: Mindest-
+  // betrag als vorläufiger Streitwert (Art. 85 ZPO); sonst manuelle Angabe.
+  const roh = a.geld?.betrag ?? a.unbeziffert?.mindestbetrag ?? a.streitwert;
+  if (roh == null || roh === '') return null;
+  const n = Number(String(roh).replace(/['\s]/g, ''));
+  return Number.isFinite(n) ? n : null;
+}
+
+// ── Routing (Art. 200 ZPO: paritätische Behörden → eigene Stellen) ──────────
+export type SgRouting =
+  | { dokument: true; behoerde: typeof SCHLICHTUNGSBEHOERDEN_BS.zivilgericht; arbeitsrecht: boolean }
+  | { dokument: false; stopp: 'miete' | 'glg' | 'art198'; behoerde?: typeof SCHLICHTUNGSBEHOERDEN_BS.miete | typeof SCHLICHTUNGSBEHOERDEN_BS.diskriminierung };
+
+export function sgRouting(a: SgAnswers): SgRouting | null {
+  if (!a.streitgegenstandTyp) return null;
+  if (a.ausnahmeArt198) return { dokument: false, stopp: 'art198' }; // Art. 198 ZPO
+  if (a.streitgegenstandTyp === 'miete_pacht') return { dokument: false, stopp: 'miete', behoerde: SCHLICHTUNGSBEHOERDEN_BS.miete };
+  if (a.streitgegenstandTyp === 'gleichstellung_glg') return { dokument: false, stopp: 'glg', behoerde: SCHLICHTUNGSBEHOERDEN_BS.diskriminierung };
+  return { dokument: true, behoerde: SCHLICHTUNGSBEHOERDEN_BS.zivilgericht, arbeitsrecht: a.streitgegenstandTyp === 'arbeitsrecht' };
+}
+
+// ── Validierung / Mängelliste (deterministisch; Download-Gate) ──────────────
+export type SgMangel = { schritt: number; text: string };
+
+function parteiVollstaendig(p: SgPartei): boolean {
+  return p.typ === 'natuerlich'
+    ? !!(p.vorname.trim() && p.name.trim() && p.strasse.trim() && /^\d{4}$/.test(p.plz) && p.ort.trim())
+    : !!(p.firma.trim() && p.sitzStrasse.trim() && /^\d{4}$/.test(p.sitzPlz) && p.sitzOrt.trim());
+}
+
+export function sgMaengel(a: SgAnswers): SgMangel[] {
+  const m: SgMangel[] = [];
+  const num = (s?: string) => Number(String(s ?? '').replace(/['\s]/g, ''));
+  if (!a.streitgegenstandTyp) m.push({ schritt: 0, text: 'Art des Streitgegenstands wählen.' });
+  if (!a.baselForumBestaetigt) m.push({ schritt: 0, text: 'Basler Gerichtsstand bestätigen (Art. 10 ff. ZPO) — Voraussetzung für den Download.' });
+  if (a.klaeger.length < 1 || !a.klaeger.every(parteiVollstaendig)) m.push({ schritt: 1, text: 'Klagende Partei(en) vollständig erfassen (Name, Strasse, 4-stellige PLZ, Ort).' });
+  if (a.beklagte.length < 1 || !a.beklagte.every(parteiVollstaendig)) m.push({ schritt: 2, text: 'Beklagte Partei(en) vollständig erfassen (Art. 202 Abs. 2 ZPO).' });
+  if (a.streitgegenstandTyp === 'geldforderung' || a.streitgegenstandTyp === 'arbeitsrecht') {
+    if (a.unbeziffert) {
+      if (!(num(a.unbeziffert.mindestbetrag) > 0)) m.push({ schritt: 3, text: 'Mindestbetrag der unbezifferten Forderung angeben (Art. 85 ZPO).' });
+      if (!a.unbeziffert.grund.trim()) m.push({ schritt: 3, text: 'Begründen, warum die Bezifferung nicht möglich/zumutbar ist (Art. 85 ZPO).' });
+    } else if (!(num(a.geld?.betrag) > 0)) {
+      m.push({ schritt: 3, text: 'Geldforderung beziffern (Art. 84 Abs. 2 ZPO) — oder den Art.-85-Pfad wählen.' });
+    }
+    if (a.geld?.zins && (!(num(a.geld.zins.satz) > 0) || !a.geld.zins.abDatum)) {
+      m.push({ schritt: 3, text: 'Zins: Satz und Beginndatum angeben.' });
+    }
+    if (a.geld?.rechtsoeffnung && !a.betreibung?.rechtsvorschlagErhoben) {
+      m.push({ schritt: 3, text: 'Beseitigung des Rechtsvorschlags setzt eine Betreibung mit erhobenem Rechtsvorschlag voraus (Schritt 2).' });
+    }
+  }
+  if (a.streitgegenstandTyp === 'uebrige_zivilsache' && a.freieRechtsbegehren.filter((r) => r.trim()).length === 0) {
+    m.push({ schritt: 3, text: 'Mindestens ein Rechtsbegehren formulieren.' });
+  }
+  if (!a.streitgegenstand.trim()) m.push({ schritt: 4, text: 'Streitgegenstand kurz umschreiben (Pflicht, Art. 202 Abs. 2 ZPO).' });
+  const sw = sgStreitwert(a);
+  if (a.antragEntscheid && !(sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG)) {
+    m.push({ schritt: 5, text: `Antrag auf Entscheid nur bei Streitwert bis CHF ${fmtCHF(String(SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG))} (Art. 212 ZPO).` });
+  }
+  if (!a.datum) m.push({ schritt: 5, text: 'Datum angeben.' });
+  return m;
+}
+
+// Informative Hinweise (blockieren nicht)
+export function sgHinweise(a: SgAnswers): string[] {
+  const h: string[] = [];
+  const sw = sgStreitwert(a);
+  if (sw !== null && sw >= SG_SCHWELLEN.VERZICHT_GEMEINSAM) {
+    h.push('Streitwert ≥ CHF 100\'000: Die Parteien könnten gemeinsam auf die Schlichtung verzichten (Art. 199 Abs. 1 ZPO).'); // Art. 199 Abs. 1 ZPO
+  }
+  if (sw !== null && sw <= SG_SCHWELLEN.ENTSCHEIDVORSCHLAG && (a.streitgegenstandTyp === 'geldforderung' || a.streitgegenstandTyp === 'arbeitsrecht')) {
+    h.push('Streitwert bis CHF 10\'000: Die Behörde kann den Parteien einen Entscheidvorschlag unterbreiten (Art. 210 Abs. 1 lit. c ZPO); Ablehnung innert 20 Tagen (Art. 211 ZPO).');
+  }
+  if (a.streitgegenstandTyp === 'arbeitsrecht' && sw !== null && sw <= SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS) {
+    h.push('Arbeitsrechtliche Streitigkeit bis CHF 30\'000: Das Schlichtungsverfahren ist kostenlos (Art. 113 f. ZPO); Dispens vom persönlichen Erscheinen möglich (Art. 204 Abs. 3 ZPO).');
+  }
+  if (a.unbeziffert) {
+    h.push('Vertretbare Auslegung: Die Engine verlangt bei Geldforderungen grundsätzlich Bezifferung (Art. 84 Abs. 2 ZPO); der unbezifferte Pfad stützt sich auf Art. 85 ZPO — die strenge Bezifferungs-Rechtsprechung betrifft primär die Klage.');
+  }
+  h.push('Rechtsbegehren und Streitgegenstand sorgfältig fassen: Sie fixieren den Streitgegenstand (Art. 62/64 ZPO) und rahmen die spätere Klage (BGer 4A_413/2012 — zu verifizieren).');
+  return h;
+}
+
+// ── Bausteine / Dokumentaufbau ──────────────────────────────────────────────
+// Parteibezeichnung nach ZPO-Terminologie: «klagende Partei» / «beklagte Partei».
+
+function parteiZeilen(p: SgPartei): string[] {
+  if (p.typ === 'natuerlich') {
+    return [
+      `${p.vorname} ${p.name}`.trim(),
+      ...(p.co ? [`c/o ${p.co}`] : []),
+      p.strasse,
+      `${p.plz} ${p.ort}${p.land ? `, ${p.land}` : ''}`,
+    ].filter(Boolean);
+  }
+  return [
+    `${p.firma}${p.rechtsform ? ` (${p.rechtsform})` : ''}`,
+    ...(p.uid ? [`UID ${p.uid}`] : []),
+    p.sitzStrasse,
+    `${p.sitzPlz} ${p.sitzOrt}`,
+  ].filter(Boolean);
+}
+
+const parteiKurz = (p: SgPartei) => (p.typ === 'natuerlich' ? `${p.vorname} ${p.name}`.trim() : p.firma);
+
+export const SG_SCHEMA: VorlageSchema = {
+  id: 'schlichtungsgesuch-bs',
+  version: '1.0.0 (ZPO-Fassung seit 1.1.2025; Behörden-Stammdaten BS Stand 2025/2026)',
+  titel: 'Schlichtungsgesuch nach Art. 202 ZPO',
+  disclaimer:
+    'Entwurf — erstellt mit LexMetrik. Orientierungsdokument, keine Rechtsberatung. Massgeblich sind ' +
+    'Gesetz, Vertrag und der konkrete Sachverhalt; für Fristwahrung, Formgültigkeit und inhaltliche ' +
+    'Richtigkeit ist die nutzende Person verantwortlich. Diese Vorlage setzt einen Basler Gerichtsstand ' +
+    'voraus (örtliche/sachliche Zuständigkeit selbst prüfen).',
+  bausteine: [
+    { id: 'absender', text: '{{absenderBlock}}',
+      begruendung: 'Absenderblock: Vertretung, sonst erste klagende Partei — immer enthalten.',
+      norm: 'Art. 202 ZPO' },
+    { id: 'adressat', text: '{{adressatBlock}}',
+      begruendung: 'Zuständige Behörde gemäss sachlichem Routing (Pilot: Zivilgericht BS).',
+      norm: 'Art. 200 ZPO' },
+    { id: 'ortDatum', text: '{{ort}}, {{datumFmt}}',
+      begruendung: 'Ort und Datum — immer enthalten.', norm: 'Art. 130 ZPO' },
+    { id: 'betreff', text: 'Schlichtungsgesuch nach Art. 202 ZPO\nin Sachen {{klaegerKurz}} gegen {{beklagteKurz}}\nbetreffend {{stichwort}}',
+      begruendung: 'Betreff mit Parteien und Streitgegenstand-Stichwort — immer enthalten.',
+      norm: 'Art. 202 ZPO' },
+    { id: 'rubrum', text: '{{rubrumText}}',
+      begruendung: 'Rubrum: Bezeichnung der Parteien (Pflichtinhalt).',
+      norm: 'Art. 202 Abs. 2 ZPO' },
+    { id: 'rechtsbegehren', ueberschrift: 'Rechtsbegehren', text: '{{item.text}}',
+      wiederholeUeber: 'rbListe', includeIf: { feld: 'rbListe', nichtLeer: true },
+      begruendung: 'Rechtsbegehren (Pflichtinhalt), fortlaufend nummeriert; Kostenfolge als letztes Begehren.',
+      norm: 'Art. 202 Abs. 2 ZPO' },
+    { id: 'antrag_entscheid', ueberschrift: 'Antrag auf Entscheid',
+      text: 'Die klagende Partei beantragt, dass die Schlichtungsbehörde gestützt auf Art. 212 ZPO in der Sache entscheidet.',
+      includeIf: { feld: 'antragEntscheidZulaessig', eq: true },
+      begruendung: 'Aufgenommen, weil beantragt und Streitwert ≤ CHF 2\'000 (vermögensrechtlich).',
+      norm: 'Art. 212 ZPO' },
+    { id: 'antrag_mediation', ueberschrift: 'Antrag auf Mediation',
+      text: 'Die Parteien beantragen, anstelle des Schlichtungsverfahrens eine Mediation durchzuführen (Art. 213 ZPO).\n\n___________________________\n(klagende Partei)\n\n___________________________\n(beklagte Partei)',
+      includeIf: { feld: 'antragMediation', eq: true },
+      begruendung: 'Aufgenommen, weil Mediation beantragt — setzt Zustimmung der Gegenpartei voraus.',
+      norm: 'Art. 213 ZPO',
+      hinweis: 'Kann auch erst an der Schlichtungsverhandlung gestellt werden; Unterschrift beider Parteien.' },
+    { id: 'streitgegenstand_text', ueberschrift: 'Streitgegenstand', text: '{{streitgegenstand}}',
+      begruendung: 'Kurze Umschreibung des Streitgegenstands (Pflichtinhalt).',
+      norm: 'Art. 202 Abs. 2 ZPO' },
+    { id: 'begruendung_text', ueberschrift: 'Begründung', text: '{{begruendung}}',
+      includeIf: { feld: 'begruendung', nichtLeer: true },
+      begruendung: 'Aufgenommen, weil eine (freiwillige) Begründung erfasst wurde — nicht erforderlich.',
+      norm: 'Art. 202 Abs. 2 ZPO' },
+    { id: 'unterschrift', text: '{{ort}}, {{datumFmt}}\n\n\n___________________________\n{{unterschriftZeile}}',
+      begruendung: 'Unterschriftsblock: Papierform mit eigenhändiger Unterschrift.',
+      norm: 'Art. 130 ZPO' },
+    { id: 'beilagenverzeichnis', ueberschrift: 'Beilagen', text: '{{item.text}}',
+      wiederholeUeber: 'beilagenListe', includeIf: { feld: 'beilagenListe', nichtLeer: true },
+      begruendung: 'Beilagenverzeichnis (inkl. automatischer Vollmacht bei Vertretung).',
+      norm: 'Art. 131 ZPO' },
+  ],
+};
+
+export type SgProtokollAusschluss = { label: string; grund: string };
+
+export function sgZusammenstellen(a: SgAnswers) {
+  const sw = sgStreitwert(a);
+  const verm = a.streitgegenstandTyp === 'geldforderung' || a.streitgegenstandTyp === 'arbeitsrecht';
+  const antragEntscheidZulaessig = a.antragEntscheid && verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG;
+
+  // Rechtsbegehren fortlaufend nummerieren (Kostenfolge immer als letztes)
+  const rb: string[] = [];
+  if ((a.streitgegenstandTyp === 'geldforderung' || a.streitgegenstandTyp === 'arbeitsrecht') && !a.unbeziffert && a.geld?.betrag) {
+    // Art. 84 Abs. 2 ZPO (Bezifferung); Zins: Art. 104 OR (5 % Verzugszins)
+    rb.push(a.geld.zins
+      ? `Die beklagte Partei sei zu verpflichten, der klagenden Partei CHF ${fmtCHF(a.geld.betrag)} nebst Zins zu ${a.geld.zins.satz}% seit ${fmtDatum(a.geld.zins.abDatum)} zu bezahlen.`
+      : `Die beklagte Partei sei zu verpflichten, der klagenden Partei CHF ${fmtCHF(a.geld.betrag)} zu bezahlen.`);
+  }
+  if (a.geld?.rechtsoeffnung && a.betreibung?.rechtsvorschlagErhoben) {
+    // BS-Formular-Variante: «aufzuheben» — hier «zu beseitigen» (gleichbedeutend)
+    rb.push(a.betreibung.rechtsvorschlagBetrag
+      ? `In der Betreibung Nr. ${a.betreibung.nummer} des Betreibungsamtes ${a.betreibung.betreibungsamt} sei der Rechtsvorschlag im Umfang von CHF ${fmtCHF(a.betreibung.rechtsvorschlagBetrag)} zu beseitigen.`
+      : `In der Betreibung Nr. ${a.betreibung.nummer} des Betreibungsamtes ${a.betreibung.betreibungsamt} sei der Rechtsvorschlag zu beseitigen.`);
+  }
+  if (a.unbeziffert) {
+    // Art. 85 ZPO — unbezifferte Forderungsklage (Mindestwert als vorläufiger Streitwert)
+    const zins = a.unbeziffert.zins ? `, nebst Zins zu ${a.unbeziffert.zins.satz}% seit ${fmtDatum(a.unbeziffert.zins.abDatum)}` : '';
+    rb.push(`Die beklagte Partei sei zu verpflichten, der klagenden Partei einen nach Durchführung des Beweisverfahrens zu beziffernden Betrag, mindestens jedoch CHF ${fmtCHF(a.unbeziffert.mindestbetrag)}${zins}, zu bezahlen.`);
+  }
+  if (a.streitgegenstandTyp === 'uebrige_zivilsache') {
+    a.freieRechtsbegehren.filter((r) => r.trim()).forEach((r) => rb.push(r.trim())); // 1:1, kein generierter Text
+  }
+  a.weitereRechtsbegehren.filter((r) => r.trim()).forEach((r) => rb.push(r.trim()));
+  // Kostenfolge — immer letztes Begehren
+  rb.push(a.vertretung?.bezeichnung
+    ? `Unter Kosten- und Entschädigungsfolgen${a.vertretung.mwstPflichtig ? ' (zzgl. MwSt.)' : ''} zu Lasten der beklagten Partei.`
+    : 'Unter Kostenfolge zu Lasten der beklagten Partei.');
+  const rbListe = rb.map((text, i) => ({ text: `${i + 1}. ${text}` }));
+
+  // Rubrum
+  const klaegerBlock = a.klaeger.map((p, i) => `${a.klaeger.length > 1 ? `${i + 1}. ` : ''}${parteiZeilen(p).join(', ')}`).join('\n');
+  const beklagteBlock = a.beklagte.map((p, i) => `${a.beklagte.length > 1 ? `${i + 1}. ` : ''}${parteiZeilen(p).join(', ')}`).join('\n');
+  const rubrumText = [
+    klaegerBlock,
+    ...(a.vertretung?.bezeichnung ? [`vertreten durch ${a.vertretung.bezeichnung}${a.vertretung.zusatz ? `, ${a.vertretung.zusatz}` : ''}, ${a.vertretung.strasse}, ${a.vertretung.plz} ${a.vertretung.ort}`] : []),
+    '— klagende Partei —',
+    '',
+    'gegen',
+    '',
+    beklagteBlock,
+    '— beklagte Partei —',
+    '',
+    `betreffend ${stichwortVon(a)}`,
+  ].join('\n');
+
+  // Beilagen (Vollmacht automatisch; HR-Auszug als Vorschlag bei juristischer, unvertretener Klägerschaft)
+  const beilagen: string[] = [];
+  if (a.vertretung?.bezeichnung) beilagen.push(`Vollmacht${a.vertretung.vollmachtDatum ? ` vom ${fmtDatum(a.vertretung.vollmachtDatum)}` : ''}`);
+  if (!a.vertretung?.bezeichnung && a.klaeger.some((p) => p.typ === 'juristisch')) beilagen.push('Handelsregisterauszug (Zeichnungsberechtigung)');
+  a.beilagen.filter((b) => b.bezeichnung.trim()).forEach((b) => beilagen.push(b.bezeichnung.trim()));
+  const beilagenListe = beilagen.map((text, i) => ({ text: `${i + 1}. ${text}` }));
+
+  // Unterschriftszeile
+  const ersteKlagende = a.klaeger[0];
+  const unterschriftZeile = a.vertretung?.bezeichnung
+    ? a.vertretung.bezeichnung
+    : ersteKlagende?.typ === 'juristisch'
+      ? `${ersteKlagende.firma}${ersteKlagende.zeichnungsberechtigt ? ` — ${ersteKlagende.zeichnungsberechtigt.name}, ${ersteKlagende.zeichnungsberechtigt.funktion}` : ''}`
+      : parteiKurz(ersteKlagende ?? { ...SG_PERSON_NATUERLICH });
+
+  const behoerde = SCHLICHTUNGSBEHOERDEN_BS.zivilgericht;
+  const antworten: Antworten = {
+    ...a,
+    absenderBlock: a.vertretung?.bezeichnung
+      ? [a.vertretung.bezeichnung, a.vertretung.zusatz, a.vertretung.strasse, `${a.vertretung.plz} ${a.vertretung.ort}`].filter(Boolean).join('\n')
+      : parteiZeilen(a.klaeger[0] ?? { ...SG_PERSON_NATUERLICH }).join('\n'),
+    adressatBlock: behoerde.postadresse.join('\n'),
+    datumFmt: fmtDatum(a.datum),
+    klaegerKurz: a.klaeger.map(parteiKurz).filter(Boolean).join(' und ') || '________',
+    beklagteKurz: a.beklagte.map(parteiKurz).filter(Boolean).join(' und ') || '________',
+    stichwort: stichwortVon(a),
+    rubrumText,
+    rbListe,
+    antragEntscheidZulaessig,
+    beilagenListe,
+    unterschriftZeile,
+  };
+
+  const ergebnis = assemble(SG_SCHEMA, antworten);
+
+  // Bausteinprotokoll: auch NICHT aufgenommene optionale Bausteine begründen
+  const nichtAufgenommen: SgProtokollAusschluss[] = [];
+  if (!antragEntscheidZulaessig) {
+    nichtAufgenommen.push({
+      label: 'Antrag auf Entscheid (Art. 212 ZPO)',
+      grund: !a.antragEntscheid ? 'nicht beantragt'
+        : !verm ? 'nur in vermögensrechtlichen Streitigkeiten'
+        : `nicht aufgenommen: Streitwert > CHF ${fmtCHF(String(SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG))}`,
+    });
+  }
+  if (!a.antragMediation) nichtAufgenommen.push({ label: 'Antrag auf Mediation (Art. 213 ZPO)', grund: 'nicht beantragt' });
+  if (!(a.geld?.rechtsoeffnung && a.betreibung?.rechtsvorschlagErhoben)) {
+    nichtAufgenommen.push({ label: 'Beseitigung des Rechtsvorschlags', grund: a.geld?.rechtsoeffnung ? 'kein Rechtsvorschlag erhoben' : 'nicht beantragt' });
+  }
+  if (!a.begruendung?.trim()) nichtAufgenommen.push({ label: 'Begründung', grund: 'keine erfasst — nicht erforderlich (Art. 202 ZPO)' });
+
+  return { ...ergebnis, nichtAufgenommen, exemplare: 1 + a.beklagte.length /* Art. 131 ZPO */ };
+}
+
+function stichwortVon(a: SgAnswers): string {
+  const TYP_LABEL: Record<SgTyp, string> = {
+    geldforderung: 'Forderung',
+    uebrige_zivilsache: 'Zivilsache',
+    arbeitsrecht: 'Forderung aus Arbeitsverhältnis',
+    miete_pacht: 'Miete/Pacht',
+    gleichstellung_glg: 'Gleichstellung',
+  };
+  const erste = a.streitgegenstand.trim().split('\n')[0];
+  if (erste && erste.length <= 80) return erste;
+  if (erste) return erste.slice(0, 77) + '…';
+  return a.streitgegenstandTyp ? TYP_LABEL[a.streitgegenstandTyp] : '________';
+}
