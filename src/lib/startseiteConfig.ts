@@ -495,8 +495,26 @@ const VORLAGEN: Record<string, VorlageCard> = {
   'eigenhaendiges-testament': {
     id: 'eigenhaendiges-testament', modus: 'vorlage', art: 'vorsorge', tier: 'frei', rechtsgebiet: 'Erbrecht',
     title: 'Eigenhändiges Testament',
-    description: 'Letztwillige Verfügung aus geprüften Bausteinen — als Mustertext zum eigenhändigen Abschreiben.',
-    status: 'geplant', norms: [], related: ['erbteilung'],
+    description: 'Letztwillige Verfügung aus geprüften Bausteinen — mit Pflichtteils-Kontrolle, Bausteinprotokoll und Form-Gate; Ausgabe als Mustertext zum eigenhändigen Abschreiben.',
+    status: 'geprüft',
+    norms: [
+      // Art. 505 ZGB – Form der eigenhändigen Verfügung (Handschrift, Datum, Unterschrift)
+      { label: 'Art. 505 ZGB', url: fedlexUrl('ZGB', '505'), verified: true },
+      // Art. 467 ZGB – Testierfähigkeit
+      { label: 'Art. 467 ZGB', url: fedlexUrl('ZGB', '467'), verified: true },
+      // Art. 471 ZGB – Pflichtteil (Fassung in Kraft seit 1.1.2023)
+      { label: 'Art. 471 ZGB', url: fedlexUrl('ZGB', '471'), verified: true },
+      // Art. 483 ZGB – Erbeinsetzung
+      { label: 'Art. 483 ZGB', url: fedlexUrl('ZGB', '483'), verified: true },
+      // Art. 484 ZGB – Vermächtnis
+      { label: 'Art. 484 ZGB', url: fedlexUrl('ZGB', '484'), verified: true },
+    ],
+    href: '/vorlagen/testament',
+    schemaId: 'testament-eigenhaendig',
+    formvorschrift: 'Eigenhändig abzuschreiben — von Hand, datiert, unterschrieben',
+    output: ['pdf'],
+    keywords: ['Testament', 'letztwillige Verfügung', 'Erbe', 'Pflichtteil', 'Vermächtnis', 'Willensvollstrecker', 'handschriftlich'],
+    related: ['erbteilung'],
     icon: 'document',
   },
   'oeffentliches-testament': {

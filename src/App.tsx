@@ -11,6 +11,7 @@ import { RechnerErbteilung } from './pages/RechnerErbteilung';
 import { RechnerMietrecht } from './pages/RechnerMietrecht';
 import { RechnerVerjaehrung } from './pages/RechnerVerjaehrung';
 import { RechnerGewaehrleistung } from './pages/RechnerGewaehrleistung';
+import { VorlageTestament } from './pages/VorlageTestament';
 import { RechnerStub } from './pages/RechnerStub';
 import { Methodik } from './pages/Methodik';
 import { Ueber } from './pages/Ueber';
@@ -44,6 +45,8 @@ export default function App() {
         <Route path="/rechner/mietrecht" element={<RechnerMietrecht />} />
         <Route path="/rechner/verjaehrung" element={<RechnerVerjaehrung />} />
         <Route path="/rechner/gewaehrleistung" element={<RechnerGewaehrleistung />} />
+        {/* Vorlagen (Modus «Vorlagen») */}
+        <Route path="/vorlagen/testament" element={<VorlageTestament />} />
         {/* Noch nicht implementierte Rechner (geplant / in Vorbereitung) */}
         <Route path="/rechner/:slug" element={<RechnerStub />} />
         <Route path="/methodik" element={<Methodik />} />

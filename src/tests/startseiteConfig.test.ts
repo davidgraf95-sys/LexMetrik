@@ -50,13 +50,21 @@ describe('Stufen-Zuteilung (tier)', () => {
   });
 });
 
+// Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament']);
+
 describe('Routen-Integrität', () => {
-  it('jede geprüfte Karte verlinkt auf eine registrierte Rechner-Route', () => {
+  it('jede geprüfte Karte verlinkt auf eine registrierte Route', () => {
     const slugs = new Set(CALCULATORS.map((c) => c.slug));
     geprueft.forEach((k) => {
-      expect(k.href, k.id).toMatch(/^\/rechner\//);
-      const slug = k.href!.replace('/rechner/', '').split('#')[0];
-      expect(slugs.has(slug), `${k.id} → ${slug}`).toBe(true);
+      if (k.modus === 'vorlage') {
+        expect(VORLAGEN_ROUTEN.has(k.href!), `${k.id} → ${k.href}`).toBe(true);
+        expect(k.schemaId, k.id).toBeTruthy();
+      } else {
+        expect(k.href, k.id).toMatch(/^\/rechner\//);
+        const slug = k.href!.replace('/rechner/', '').split('#')[0];
+        expect(slugs.has(slug), `${k.id} → ${slug}`).toBe(true);
+      }
     });
   });
 
