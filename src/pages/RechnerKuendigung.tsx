@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { LohnfortzahlungForm } from '../components/forms/LohnfortzahlungForm';
 import { KuendigungSperrForm } from '../components/forms/KuendigungSperrForm';
@@ -27,10 +27,13 @@ export function RechnerKuendigung() {
   const { hash } = useLocation();
   const [tab, setTab] = useState<Tab>(HASH_TAB[hash] ?? 'a');
 
-  // Hash-Navigation (z. B. «Verwandte Rechner»-Link von der anderen Split-Karte).
-  useEffect(() => {
+  // Hash-Navigation (z. B. «Verwandte Rechner»-Link von der anderen Split-Karte) —
+  // Sync während des Renderns statt im Effect (React-Pattern «adjusting state»).
+  const [letzterHash, setLetzterHash] = useState(hash);
+  if (hash !== letzterHash) {
+    setLetzterHash(hash);
     if (HASH_TAB[hash]) setTab(HASH_TAB[hash]);
-  }, [hash]);
+  }
 
   return (
     <div className="space-y-6">

@@ -243,10 +243,11 @@ export function LohnfortzahlungForm() {
         </div>
       )}
 
-      {/* Erweiterte Eingaben */}
-      <div className="border border-line rounded-md overflow-hidden">
+      {/* Erweiterte Eingaben — kein overflow-hidden, sonst wird das
+          DatumsFeld-Popover abgeschnitten; Rundung trägt der Button selbst. */}
+      <div className="border border-line rounded-md">
         <button type="button" onClick={() => setErweitert(!erweitert)}
-          className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left">
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-md ${erweitert ? '' : 'rounded-b-md'}`}>
           <span className="text-body-s font-medium text-ink-700">Erweiterte Eingaben (Anspruch, DJ-übergreifend, Lohnbasis)</span>
           <span className="text-ink-400">{erweitert ? '▲' : '▼'}</span>
         </button>

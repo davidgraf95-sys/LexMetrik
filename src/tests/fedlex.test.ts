@@ -11,6 +11,11 @@ describe('fedlexUrl', () => {
     expect(fedlexUrl('OR', '335c')).toBe(`${FEDLEX.OR}#art_335_c`);
     expect(fedlexUrl('OR', '266a')).toBe(`${FEDLEX.OR}#art_266_a`);
   });
+
+  it('bis/ter-Suffixe im Fedlex-Unterstrich-Format (z. B. Art. 334bis ZGB)', () => {
+    expect(fedlexUrl('ZGB', '334bis')).toBe(`${FEDLEX.ZGB}#art_334_bis`);
+    expect(fedlexUrl('OR', '4ter')).toBe(`${FEDLEX.OR}#art_4_ter`);
+  });
 });
 
 describe('fedlexLinkFuerArtikel', () => {
@@ -23,6 +28,10 @@ describe('fedlexLinkFuerArtikel', () => {
     expect(fedlexLinkFuerArtikel('Art. 335c Abs. 1 OR')).toBe(`${FEDLEX.OR}#art_335_c`);
     expect(fedlexLinkFuerArtikel('Art. 108 Ziff. 1 OR')).toBe(`${FEDLEX.OR}#art_108`);
     expect(fedlexLinkFuerArtikel('Art. 142 Abs. 1bis ZPO')).toBe(`${FEDLEX.ZPO}#art_142`);
+  });
+
+  it('Artikel mit bis/ter-Suffix → korrekter Anker', () => {
+    expect(fedlexLinkFuerArtikel('Art. 334bis ZGB')).toBe(`${FEDLEX.ZGB}#art_334_bis`);
   });
 
   it('Spannen und Folgeverweise → führender Artikel', () => {

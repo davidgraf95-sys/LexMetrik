@@ -15,12 +15,14 @@ export const FEDLEX = {
 export type FedlexGesetz = keyof typeof FEDLEX;
 
 // Anker '#art_<nummer>'. Buchstaben-Artikel nutzen das Fedlex-Unterstrich-
-// Format: 335c → #art_335_c (empirisch gegen die id="art_…"-Anker des
-// konsolidierten Filestore-HTML, Stand 20250101, verifiziert — die Variante
-// ohne Unterstrich existiert dort NICHT). Spannen-/Folgeverweise (–, f., ff.)
-// verlinken den führenden Artikel.
+// Format: 335c → #art_335_c, 334bis → #art_334_bis (empirisch gegen die
+// id="art_…"-Anker des konsolidierten Filestore-HTML, Stand 20250101,
+// verifiziert — Varianten ohne Unterstrich existieren dort NICHT).
+// Spannen-/Folgeverweise (–, f., ff.) verlinken den führenden Artikel.
+const SUFFIX = /^(\d+)(bis|ter|quater|quinquies|[a-z])$/;
+
 export function fedlexUrl(gesetz: FedlexGesetz, artikel: string | number): string {
-  const token = String(artikel).toLowerCase().replace(/\s+/g, '').replace(/^(\d+)([a-z])$/, '$1_$2');
+  const token = String(artikel).toLowerCase().replace(/\s+/g, '').replace(SUFFIX, '$1_$2');
   return `${FEDLEX[gesetz]}#art_${token}`;
 }
 
@@ -36,6 +38,6 @@ export function fedlexLinkFuerArtikel(text: string): string | null {
   const gesetz = (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(text.trim()));
   if (!gesetz) return null;
   if (/\bSchlT\b/.test(text)) return FEDLEX[gesetz];
-  const m = text.match(/^Art\.\s*(\d+[a-z]?)\b/);
+  const m = text.match(/^Art\.\s*(\d+(?:bis|ter|quater|quinquies|[a-z])?)\b/);
   return m ? fedlexUrl(gesetz, m[1]) : FEDLEX[gesetz];
 }

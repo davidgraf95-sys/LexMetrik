@@ -220,10 +220,11 @@ export function ZpoFristenForm() {
         </Field>
       </div>
 
-      {/* Optionale / erweiterte Funktionen */}
-      <div className="border border-line rounded-lg overflow-hidden">
+      {/* Optionale / erweiterte Funktionen — kein overflow-hidden, sonst wird
+          das DatumsFeld-Popover (Zustellfiktion) abgeschnitten. */}
+      <div className="border border-line rounded-lg">
         <button type="button" onClick={() => setErweitert(!erweitert)}
-          className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left">
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${erweitert ? '' : 'rounded-b-lg'}`}>
           <span className="text-sm font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
           <span className="text-ink-400">{erweitert ? '▲' : '▼'}</span>
         </button>
