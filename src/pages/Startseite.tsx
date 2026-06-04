@@ -7,7 +7,7 @@ import { ModusSchalter, useModus } from '../components/ModusSchalter';
 // Spezialisierte Rechner stehen im Experten-Panel unter /fachpersonen.
 
 // Teaser für das Experten-Panel — helle Karte mit Messing-Oberkante (gleiche
-// Sprache wie die geprüften Rechnerkarten), Highlights und Kennzahlen aus der Config.
+// Sprache wie die aktiven Rechnerkarten), Highlights und Kennzahlen aus der Config.
 function ExpertenTeaser() {
   const experte = ALLE_KARTEN.filter((k) => k.tier === 'experte');
   const entwurf = experte.filter((k) => k.status === 'entwurf');

@@ -6,7 +6,7 @@ import { sansAmp } from '../components/typografie';
 
 // Experten-Panel: alle Rechner der Stufe 'experte' (anwaltliche Praxis).
 // Helles, redaktionelles Hero: Typo-Hierarchie statt Farbfläche, Kennzahlen
-// als Messleiste auf der Ablesekante, Direkteinstieg zu den geprüften Rechnern.
+// als Messleiste auf der Ablesekante, Direkteinstieg zu den gebauten Rechnern.
 
 export function Fachpersonen() {
   const [modus, setModus] = useModus();

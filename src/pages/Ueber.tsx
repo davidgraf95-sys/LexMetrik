@@ -30,7 +30,7 @@ export function Ueber() {
         </p>
         <p>
           Inzwischen deckt LexMetrik beides ab: die Berechnung von Fristen, Beträgen und Quoten —
-          und die regelbasierte Zusammenstellung von Rechtsdokumenten aus geprüften Textbausteinen.
+          und die regelbasierte Zusammenstellung von Rechtsdokumenten aus festen, strukturierten Textbausteinen.
           Beide Modi teilen dieselbe DNA: überprüfbar, normtreu, ohne Black Box.
         </p>
         {/* Signatur — externe Verlinkung wie übrige externe Links (neues Tab) */}

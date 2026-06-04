@@ -358,7 +358,7 @@ export function VorlagePatientenverfuegung() {
         <h1 className="text-h1 font-display font-semibold text-ink-900">Patientenverfügung</h1>
         <p className="text-body-l text-ink-600 max-w-reading">
           Legen Sie fest, welchen medizinischen Massnahmen Sie im Fall Ihrer Urteilsunfähigkeit
-          zustimmen — aus festen, juristisch geprüften Bausteinen, ohne Sprachmodell. Widersprüche
+          zustimmen — aus festen, strukturierten Bausteinen, ohne Sprachmodell. Widersprüche
           zwischen Therapieziel und Massnahmen werden geprüft, nie still aufgelöst.
         </p>
         <div className="flex flex-wrap items-center gap-1.5">

@@ -432,7 +432,7 @@ export function VorlageVorsorgeauftrag() {
         <h1 className="text-h1 font-display font-semibold text-ink-900">Vorsorgeauftrag</h1>
         <p className="text-body-l text-ink-600 max-w-reading">
           Bestimmen Sie, wer im Fall Ihrer Urteilsunfähigkeit Personensorge, Vermögenssorge und
-          Vertretung im Rechtsverkehr übernimmt — aus festen, juristisch geprüften Bausteinen,
+          Vertretung im Rechtsverkehr übernimmt — aus festen, strukturierten Bausteinen,
           ohne Sprachmodell. Mit der Form-Weiche eigenhändig ↔ öffentlich beurkundet.
         </p>
         <div className="flex flex-wrap items-center gap-1.5">

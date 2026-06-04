@@ -96,7 +96,7 @@ export const SEKTIONEN: Sektion[] = [
 // Vorlagen-Sektionen: vier Dokument-Typen (Modus «Vorlagen»)
 export const VORLAGE_SEKTIONEN: Sektion[] = [
   { art: 'vorsorge', id: 'vorsorge', numeral: 'I', title: 'Vorsorge & Nachlass',
-    lede: 'Testament, Erbvertrag, Vorsorgeauftrag, Patientenverfügung — aus geprüften Bausteinen.' },
+    lede: 'Testament, Erbvertrag, Vorsorgeauftrag, Patientenverfügung — aus festen Bausteinen.' },
   { art: 'vertrag', id: 'vertraege', numeral: 'II', title: 'Verträge',
     lede: 'Arbeits-, Miet-, Darlehens- und Kaufverträge — Klausel für Klausel nachvollziehbar.' },
   { art: 'eingabe', id: 'eingaben', numeral: 'III', title: 'Eingaben',
@@ -506,7 +506,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   'eigenhaendiges-testament': {
     id: 'eigenhaendiges-testament', modus: 'vorlage', art: 'vorsorge', tier: 'frei', rechtsgebiet: 'Erbrecht',
     title: 'Eigenhändiges Testament',
-    description: 'Letztwillige Verfügung aus geprüften Bausteinen — mit Pflichtteils-Kontrolle, Bausteinprotokoll und Form-Gate; Ausgabe als Mustertext zum eigenhändigen Abschreiben.',
+    description: 'Letztwillige Verfügung aus festen Bausteinen — mit Pflichtteils-Kontrolle, Bausteinprotokoll und Form-Gate; Ausgabe als Mustertext zum eigenhändigen Abschreiben.',
     status: 'entwurf',
     norms: [
       // Art. 505 ZGB – Form der eigenhändigen Verfügung (Handschrift, Datum, Unterschrift)
