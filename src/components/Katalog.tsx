@@ -21,7 +21,7 @@ export function SectionHead({ children }: { children: React.ReactNode }) {
 
 function TypSektion({ sektion, numeral, karten }: { sektion: Sektion; numeral: string; karten: CalculatorCard[] }) {
   const sortiert = [
-    ...karten.filter((k) => k.status === 'geprüft'),
+    ...karten.filter((k) => k.status !== 'geplant'),
     ...karten.filter((k) => k.status === 'geplant'),
   ];
   if (sortiert.length === 0) return null;
@@ -80,7 +80,7 @@ function FilterLeiste(props: {
         />
         {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur geprüfte */}
         <div className="flex h-11 items-stretch gap-1 p-1 bg-surface border border-line rounded-xl w-fit shrink-0" role="group" aria-label="Status">
-          {([['Alle', false], ['Nur geprüfte', true]] as const).map(([label, wert]) => (
+          {([['Alle', false], ['Nur verfügbare', true]] as const).map(([label, wert]) => (
             <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
               aria-pressed={nurGeprueft === wert}
               className={`px-3 rounded-lg text-sm font-medium transition-all ${
@@ -146,12 +146,14 @@ function Uebersicht(props: {
         </nav>
       )}
 
-      {/* Status-Legende (kompakt) */}
+      {/* Status-Legende (drei Zustände) */}
       <p className="text-[11px] leading-relaxed text-ink-500 pt-2 border-t border-line">
-        <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line border-t-2 border-t-brass-500" />
-        Goldrand = geprüft ·{' '}
+        <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line border-t-2 border-t-warn-500" />
+        orange = Entwurf (ungeprüft) ·{' '}
         <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line opacity-50" />
-        gedämpft = in Vorbereitung
+        gedämpft = in Vorbereitung ·{' '}
+        <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line border-t-2 border-t-brass-500" />
+        Goldrand = geprüft (folgt)
       </p>
     </div>
   );
@@ -184,7 +186,7 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
   const qKompakt = q.replace(/\s+/g, '');
   const passt = (k: CalculatorCard) =>
     (gebiete.size === 0 || gebiete.has(k.rechtsgebiet)) &&
-    (!nurGeprueft || k.status === 'geprüft') &&
+    (!nurGeprueft || k.status !== 'geplant') &&
     (q === '' ||
       [k.title, k.rechtsgebiet, ...(k.keywords ?? [])].some((t) => t.toLowerCase().includes(q)) ||
       k.norms.some((n) => n.label.toLowerCase().replace(/\s+/g, '').includes(qKompakt)));

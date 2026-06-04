@@ -9,7 +9,12 @@
 // Artikel-/Tagesangaben in der Beschreibung — nur Titel + neutrale
 // Kurzbeschreibung. Keine Normen erfinden.
 
-export type Status = 'geprüft' | 'geplant'; // geplant wird als «In Vorbereitung» angezeigt
+// Ehrliches Status-Modell: kein Eintrag trägt «geprüft», bis fachlich geprüft.
+//  'entwurf'  → gebaut, fachlich noch nicht geprüft (orange)
+//  'geprüft'  → fachlich geprüft (Goldrand; aktuell nirgends vergeben)
+//  'geplant'  → noch nicht gebaut, «In Vorbereitung» (gedämpft)
+export type Status = 'entwurf' | 'geprüft' | 'geplant';
+export const istAktiv = (s: Status) => s !== 'geplant';
 export type Modus = 'rechner' | 'vorlage'; // inhaltliche Hauptweiche (In-Page-Toggle)
 export type Art = 'frist' | 'betrag' | 'zuordnung' | 'werkzeug'; // Rechner-Output-Typ → Sektion
 export type VorlageArt = 'vorsorge' | 'vertrag' | 'eingabe' | 'gesellschaft'; // Dokument-Typ → Sektion

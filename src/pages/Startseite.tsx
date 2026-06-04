@@ -10,9 +10,9 @@ import { ModusSchalter, useModus } from '../components/ModusSchalter';
 // Sprache wie die geprüften Rechnerkarten), Highlights und Kennzahlen aus der Config.
 function ExpertenTeaser() {
   const experte = ALLE_KARTEN.filter((k) => k.tier === 'experte');
-  const geprueft = experte.filter((k) => k.status === 'geprüft');
+  const entwurf = experte.filter((k) => k.status === 'entwurf');
   const highlights = [
-    ...geprueft.map((k) => k.title),
+    ...entwurf.map((k) => k.title),
     'Rechtsmittelfristen Bundesgericht', 'Strafrechtliche Verjährung', 'Arrest — Prosequierungsfristen',
   ].slice(0, 6);
 
@@ -34,7 +34,7 @@ function ExpertenTeaser() {
         </div>
         <div className="flex flex-col items-start lg:items-end gap-2 shrink-0">
           <Link to="/fachpersonen" className="lc-btn-primary no-underline">Zum Experten-Panel →</Link>
-          <p className="num text-body-s text-ink-500">{experte.length} Rechner · {geprueft.length} geprüft</p>
+          <p className="num text-body-s text-ink-500">{experte.length} Rechner · {entwurf.length} in Entwurf</p>
         </div>
       </div>
     </section>

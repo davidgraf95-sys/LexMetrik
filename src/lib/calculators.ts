@@ -6,7 +6,7 @@
 // Normentreue: Die `normen`-Einträge erscheinen 1:1 als Chips. Keine
 // Artikelnummern erfinden; fehlt eine gesicherte Angabe, bleibt das Feld allgemein.
 
-export type CalcStatus = 'geprüft' | 'in Vorbereitung' | 'geplant';
+export type CalcStatus = 'entwurf' | 'geprüft' | 'in Vorbereitung' | 'geplant';
 
 export interface Calculator {
   slug: string;            // URL: /rechner/<slug>

@@ -36,8 +36,8 @@ function alsEintrag(k: CatalogItem): Eintrag {
   return {
     id: k.id,
     titel: k.title,
-    meta: `${k.rechtsgebiet}${k.status === 'geprüft' ? '' : ' · In Vorbereitung'}`,
-    href: k.status === 'geprüft' && k.href ? k.href : null,
+    meta: `${k.rechtsgebiet}${k.status === 'geplant' ? ' · In Vorbereitung' : k.status === 'entwurf' ? ' · Entwurf' : ''}`,
+    href: k.status !== 'geplant' && k.href ? k.href : null,
     gruppe: k.modus === 'rechner' ? 'Rechner' : 'Vorlagen',
     icon: k.icon ?? 'document',
   };
@@ -86,11 +86,11 @@ export function Befehlspalette() {
     let eintraege: Eintrag[];
     if (ql === '') {
       // Standard: Seiten + alle geprüften Karten
-      eintraege = [...SEITEN, ...ALLE_KARTEN.filter((k) => k.status === 'geprüft').map(alsEintrag)];
+      eintraege = [...SEITEN, ...ALLE_KARTEN.filter((k) => k.status !== 'geplant').map(alsEintrag)];
     } else {
       const seiten = SEITEN.filter((s) => s.titel.toLowerCase().includes(ql));
       const karten = ALLE_KARTEN.filter((k) => trifft(k, ql, qK))
-        .sort((a, b) => (a.status === b.status ? 0 : a.status === 'geprüft' ? -1 : 1))
+        .sort((a, b) => (a.status === b.status ? 0 : a.status !== 'geplant' ? -1 : 1))
         .map(alsEintrag);
       eintraege = [...seiten, ...karten];
     }

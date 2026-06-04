@@ -18,7 +18,8 @@ export function Fachpersonen() {
     rechner: alle.filter((k) => k.modus === 'rechner').length,
     vorlage: alle.filter((k) => k.modus === 'vorlage').length,
   } as const;
-  const geprueft = alle.filter((k) => k.status === 'geprüft' && k.modus === 'rechner');
+  // Ehrliches Status-Modell: keine «geprüft»-Kennzahl, solange nichts geprüft ist
+  const entwurf = alle.filter((k) => k.status === 'entwurf');
   const gebiete = RECHTSGEBIETE.filter((g) => alle.some((k) => k.rechtsgebiet === g)).length;
 
   return (
@@ -43,7 +44,7 @@ export function Fachpersonen() {
             {[
               { wert: alle.filter((k) => k.modus === 'rechner').length, label: 'Rechner' },
               { wert: alle.filter((k) => k.modus === 'vorlage').length, label: 'Vorlagen' },
-              { wert: geprueft.length, label: 'geprüft' },
+              { wert: entwurf.length, label: 'in Entwurf' },
               { wert: gebiete, label: 'Rechtsgebiete' },
             ].map((s) => (
               <div key={s.label} className="sm:px-8 sm:first:pl-0 sm:py-3">
@@ -67,7 +68,7 @@ export function Fachpersonen() {
         seitenleisteFuss={modus === 'rechner' ? (
           <nav aria-label="Direkteinstieg" className="space-y-1 pt-3 border-t border-line">
             <p className="lc-overline mb-2">Direkt öffnen</p>
-            {geprueft.map((k) => (
+            {entwurf.filter((k) => k.modus === 'rechner' && k.href).map((k) => (
               <Link key={k.id} to={k.href!}
                 className="block px-2 py-1 -mx-2 rounded-md text-body-s text-brass-700 no-underline hover:bg-brass-100/50 transition-colors truncate">
                 {sansAmp(k.title)} <span aria-hidden>→</span>

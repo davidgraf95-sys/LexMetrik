@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { CalculatorCard } from '../lib/startseiteConfig';
-import { karte } from '../lib/startseiteConfig';
+import { karte, istAktiv } from '../lib/startseiteConfig';
 import { Icon } from './Icon';
 import { sansAmp } from './typografie';
 import { useLocale, fedlexLokalisiert } from './locale';
@@ -18,19 +18,22 @@ type Props = {
 };
 
 export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
-  const aktiv = card.status === 'geprüft';
+  // Drei distinkte Zustände (ehrliches Status-Modell):
+  // geprüft = Goldrand (aktuell nirgends vergeben) · entwurf = orange,
+  // gebaut aber fachlich ungeprüft · geplant = gedämpft, «In Vorbereitung».
+  const aktiv = istAktiv(card.status);
+  const entwurf = card.status === 'entwurf';
   const H = headingLevel;
   const { locale } = useLocale();
   const verwandte = (card.related ?? [])
     .map((id) => karte(id))
-    .filter((k) => k && k.status === 'geprüft' && k.href);
+    .filter((k) => k && istAktiv(k.status) && k.href);
 
   return (
     <article className={`relative h-full min-w-0 lc-card p-6 flex flex-col gap-3 transition-all duration-200 motion-reduce:transition-none motion-reduce:transform-none ${
       aktiv
-        ? 'bg-surface-raised border-t-[3px] border-t-brass-500 hover:shadow-lg hover:-translate-y-0.5'
+        ? `bg-surface-raised border-t-[3px] ${entwurf ? 'border-t-warn-500' : 'border-t-brass-500'} hover:shadow-lg hover:-translate-y-0.5`
         // «gedämpft» AA-konform: flache Fläche/grauer Akzent statt Opacity
-        // (Opacity drückte den Beschreibungstext unter 4.5:1)
         : 'bg-surface shadow-none cursor-default'
     }`}>
       {aktiv && card.href && (
@@ -39,13 +42,16 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
       <div className="flex items-start justify-between">
         {card.icon ? (
           <span className={`inline-flex items-center justify-center w-10 h-10 rounded-md ${
-            aktiv ? 'bg-brass-100 text-brass-700' : 'bg-paper-sunken text-ink-500'
+            entwurf ? 'bg-warn-bg text-warn-700' : aktiv ? 'bg-brass-100 text-brass-700' : 'bg-paper-sunken text-ink-500'
           }`}>
             <Icon name={card.icon} />
           </span>
         ) : <span />}
-        {/* EIN dominantes Statussignal pro Karte: der Goldrand sagt «geprüft» —
-            das Wort-Badge erscheint nur dort, wo kein Rand sichtbar ist. */}
+        {/* Statussignal: Goldrand allein = geprüft; Entwurf trägt zusätzlich
+            das orange Badge (Unterscheidbarkeit der drei Zustände). */}
+        {entwurf && (
+          <span className="lc-badge lc-badge-warn" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
+        )}
         {!aktiv && <span className="lc-badge lc-badge-soft">In Vorbereitung</span>}
       </div>
       <div>
