@@ -1,3 +1,4 @@
+import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { LohnfortzahlungInput, Kanton, Verhinderungsgrund } from '../../types/legal';
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
@@ -50,17 +51,6 @@ const DEFAULTS: LohnfortzahlungInput = {
   ktgGleichwertigVorhanden: false,
 };
 
-function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-body-s font-medium text-ink-700">{label}</label>
-      {children}
-      {hint && <p className="text-body-s text-ink-500">{hint}</p>}
-    </div>
-  );
-}
-
-const inputCls = 'lc-input';
 
 // §6 Eingabevalidierung
 function validiere(f: LohnfortzahlungInput): string[] {

@@ -1,25 +1,29 @@
-import { useEffect } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
-import { Startseite } from './pages/Startseite';
-import { Fachpersonen } from './pages/Fachpersonen';
-import { RechnerKuendigung } from './pages/RechnerKuendigung';
-import { RechnerZpo } from './pages/RechnerZpo';
-import { RechnerVerzugszins } from './pages/RechnerVerzugszins';
-import { RechnerSchkg } from './pages/RechnerSchkg';
-import { RechnerErbteilung } from './pages/RechnerErbteilung';
-import { RechnerMietrecht } from './pages/RechnerMietrecht';
-import { RechnerVerjaehrung } from './pages/RechnerVerjaehrung';
-import { RechnerGewaehrleistung } from './pages/RechnerGewaehrleistung';
-import { VorlageTestament } from './pages/VorlageTestament';
-import { VorlagePatientenverfuegung } from './pages/VorlagePatientenverfuegung';
-import { VorlageVorsorgeauftrag } from './pages/VorlageVorsorgeauftrag';
-import { VorlageSchlichtungsgesuchBs } from './pages/VorlageSchlichtungsgesuchBs';
-import { RechnerStub } from './pages/RechnerStub';
-import { Methodik } from './pages/Methodik';
-import { Ueber } from './pages/Ueber';
-import { NotFound } from './pages/NotFound';
+
+// Code-Splitting auf Routenebene: Jede Seite ist ein eigener Chunk — der
+// Erstbesuch lädt nur Shell + angefragte Seite, nicht alle Engines/Wizards.
+// Reine Ladezeitpunkt-Änderung (CLAUDE.md §6.4), keine Logik betroffen.
+const Startseite = lazy(() => import('./pages/Startseite').then((m) => ({ default: m.Startseite })));
+const Fachpersonen = lazy(() => import('./pages/Fachpersonen').then((m) => ({ default: m.Fachpersonen })));
+const RechnerKuendigung = lazy(() => import('./pages/RechnerKuendigung').then((m) => ({ default: m.RechnerKuendigung })));
+const RechnerZpo = lazy(() => import('./pages/RechnerZpo').then((m) => ({ default: m.RechnerZpo })));
+const RechnerVerzugszins = lazy(() => import('./pages/RechnerVerzugszins').then((m) => ({ default: m.RechnerVerzugszins })));
+const RechnerSchkg = lazy(() => import('./pages/RechnerSchkg').then((m) => ({ default: m.RechnerSchkg })));
+const RechnerErbteilung = lazy(() => import('./pages/RechnerErbteilung').then((m) => ({ default: m.RechnerErbteilung })));
+const RechnerMietrecht = lazy(() => import('./pages/RechnerMietrecht').then((m) => ({ default: m.RechnerMietrecht })));
+const RechnerVerjaehrung = lazy(() => import('./pages/RechnerVerjaehrung').then((m) => ({ default: m.RechnerVerjaehrung })));
+const RechnerGewaehrleistung = lazy(() => import('./pages/RechnerGewaehrleistung').then((m) => ({ default: m.RechnerGewaehrleistung })));
+const VorlageTestament = lazy(() => import('./pages/VorlageTestament').then((m) => ({ default: m.VorlageTestament })));
+const VorlagePatientenverfuegung = lazy(() => import('./pages/VorlagePatientenverfuegung').then((m) => ({ default: m.VorlagePatientenverfuegung })));
+const VorlageVorsorgeauftrag = lazy(() => import('./pages/VorlageVorsorgeauftrag').then((m) => ({ default: m.VorlageVorsorgeauftrag })));
+const VorlageSchlichtungsgesuchBs = lazy(() => import('./pages/VorlageSchlichtungsgesuchBs').then((m) => ({ default: m.VorlageSchlichtungsgesuchBs })));
+const RechnerStub = lazy(() => import('./pages/RechnerStub').then((m) => ({ default: m.RechnerStub })));
+const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
+const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
+const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 // SPA-Scroll-Reset: Beim Routenwechsel nach oben scrollen (sonst behält die
 // neue Seite die alte Scrollposition und man «landet unten»). Sprungmarken
@@ -37,6 +41,7 @@ export default function App() {
     <LocaleProvider>
     <Shell>
       <ScrollToTop />
+      <Suspense fallback={<div className="py-16 text-center text-sm text-ink-500">Wird geladen …</div>}>
       <Routes>
         <Route path="/" element={<Startseite />} />
         <Route path="/fachpersonen" element={<Fachpersonen />} />
@@ -61,6 +66,7 @@ export default function App() {
         <Route path="/ueber" element={<Ueber />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
     </Shell>
     </LocaleProvider>
   );

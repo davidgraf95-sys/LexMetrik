@@ -1,13 +1,13 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
 import {
   VA_DEFAULTS, VA_BEREICHE, VA_MODULE, vaZusammenstellen, pruefeVaGates, beurkundungsHinweis,
   type VaAntworten, type VaBereich, type VaBeauftragte, type VaFormMode,
 } from '../lib/vorlagen/vorsorgeauftrag';
-import { vorlagenPdfErzeugen, type PdfBanner } from '../lib/vorlagen/vorlagenPdf';
+import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, Stepper, inputCls } from '../components/vorlagen/ui';
-import { useLocale, fedlexLokalisiert } from '../components/locale';
+import { Field, inputCls } from '../components/vorlagen/ui';
+import { useWizardState } from '../components/vorlagen/useWizardState';
+import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
 
 // ─── Vorlagen-Wizard: Vorsorgeauftrag (Art. 360–369 ZGB) ────────────────────
@@ -39,37 +39,21 @@ const BANNER_VA_BEURKUNDUNG: PdfBanner = {
 };
 
 export function VorlageVorsorgeauftrag() {
-  const { locale } = useLocale();
-  const [a, setA] = useState<VaAntworten>(() => {
-    try {
-      const roh = localStorage.getItem(SPEICHER_KEY);
-      if (roh) {
-        const geladen = { ...VA_DEFAULTS, ...JSON.parse(roh) } as VaAntworten;
-        geladen.beauftragte = Array.isArray(geladen.beauftragte) ? geladen.beauftragte : [];
-        geladen.ersatzpersonen = Array.isArray(geladen.ersatzpersonen) ? geladen.ersatzpersonen : [];
-        geladen.module = {
-          personensorge: Array.isArray(geladen.module?.personensorge) ? geladen.module.personensorge : [],
-          vermoegenssorge: Array.isArray(geladen.module?.vermoegenssorge) ? geladen.module.vermoegenssorge : [],
-          rechtsverkehr: Array.isArray(geladen.module?.rechtsverkehr) ? geladen.module.rechtsverkehr : [],
-        };
-        return geladen;
-      }
-    } catch { /* defekter Speicher → Defaults */ }
-    return VA_DEFAULTS;
-  });
-  const [schritt, setSchritt] = useState(0);
-  const [bestaetigt, setBestaetigt] = useState(false);
-  const [kopiert, setKopiert] = useState(false);
-
-  useEffect(() => {
-    try { localStorage.setItem(SPEICHER_KEY, JSON.stringify(a)); } catch { /* voll/blockiert */ }
-  }, [a]);
-
-  const set = <K extends keyof VaAntworten>(k: K, v: VaAntworten[K]) => setA((alt) => ({ ...alt, [k]: v }));
-  const zuruecksetzen = () => {
-    setA(VA_DEFAULTS); setSchritt(0); setBestaetigt(false);
-    try { localStorage.removeItem(SPEICHER_KEY); } catch { /* ignorieren */ }
-  };
+  const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
+    useWizardState<VaAntworten>({
+      defaults: VA_DEFAULTS,
+      speicherKey: SPEICHER_KEY,
+      normalisieren: (g) => ({
+        ...g,
+        beauftragte: Array.isArray(g.beauftragte) ? g.beauftragte : [],
+        ersatzpersonen: Array.isArray(g.ersatzpersonen) ? g.ersatzpersonen : [],
+        module: {
+          personensorge: Array.isArray(g.module?.personensorge) ? g.module.personensorge : [],
+          vermoegenssorge: Array.isArray(g.module?.vermoegenssorge) ? g.module.vermoegenssorge : [],
+          rechtsverkehr: Array.isArray(g.module?.rechtsverkehr) ? g.module.rechtsverkehr : [],
+        },
+      }),
+    });
 
   const ergebnis = useMemo(() => vaZusammenstellen(a), [a]);
   const gates = useMemo(() => pruefeVaGates(a), [a]);
@@ -103,18 +87,6 @@ export function VorlageVorsorgeauftrag() {
   };
   const toggleModul = (ber: VaBereich, id: string) =>
     set('module', { ...a.module, [ber]: a.module[ber].includes(id) ? a.module[ber].filter((x) => x !== id) : [...a.module[ber], id] });
-
-  const dokumentAlsText = () =>
-    [ergebnis.dokument.titel.toUpperCase(), '', ...ergebnis.dokument.absaetze.flatMap((x) => [
-      ...(x.ueberschrift ? [x.ueberschrift] : []), x.text, '',
-    ]), '---', ergebnis.dokument.disclaimer].join('\n');
-
-  const kopieren = () => {
-    navigator.clipboard?.writeText(dokumentAlsText()).then(
-      () => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); },
-      () => {},
-    );
-  };
 
   const card = karte('vorsorgeauftrag');
 
@@ -387,28 +359,15 @@ export function VorlageVorsorgeauftrag() {
             </label>
           </section>
 
-          <div className="flex flex-wrap gap-3">
-            <button type="button" disabled={!bestaetigt || gates.blocker.length > 0}
-              onClick={() => vorlagenPdfErzeugen(ergebnis, {
-                banner: eigenhaendig ? BANNER_VA_ABSCHREIBEN : BANNER_VA_BEURKUNDUNG,
-                dateiName: eigenhaendig ? 'Vorsorgeauftrag-Mustertext.pdf' : 'Vorsorgeauftrag-Entwurf-Beurkundung.pdf',
-              })}
-              className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
-              {eigenhaendig ? 'Mustertext als PDF' : 'Entwurf als PDF'}
-            </button>
-            {/* Form-Gate hat Vorrang: Word nur für den Beurkundungs-Entwurf */}
-            {card?.modus === 'vorlage' && card.output?.includes('docx') && !eigenhaendig && (
-              <button type="button" disabled={!bestaetigt || gates.blocker.length > 0}
-                onClick={async () => (await import('../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: BANNER_VA_BEURKUNDUNG, dateiName: 'Vorsorgeauftrag-Entwurf-Beurkundung.docx' })}
-                className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
-                Entwurf als Word (DOCX)
-              </button>
-            )}
-            <button type="button" disabled={!bestaetigt || gates.blocker.length > 0} onClick={kopieren}
-              className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
-              {kopiert ? 'Kopiert ✓' : 'Text kopieren'}
-            </button>
-          </div>
+          {/* Form-Gate hat Vorrang: Word nur für den Beurkundungs-Entwurf */}
+          <ExportLeiste ergebnis={ergebnis} deaktiviert={!bestaetigt || gates.blocker.length > 0}
+            kopiert={kopiert} onKopieren={kopieren}
+            pdf={eigenhaendig
+              ? { label: 'Mustertext als PDF', banner: BANNER_VA_ABSCHREIBEN, dateiName: 'Vorsorgeauftrag-Mustertext.pdf' }
+              : { label: 'Entwurf als PDF', banner: BANNER_VA_BEURKUNDUNG, dateiName: 'Vorsorgeauftrag-Entwurf-Beurkundung.pdf' }}
+            docx={card?.modus === 'vorlage' && card.output?.includes('docx') && !eigenhaendig
+              ? { label: 'Entwurf als Word (DOCX)', banner: BANNER_VA_BEURKUNDUNG, dateiName: 'Vorsorgeauftrag-Entwurf-Beurkundung.docx' }
+              : undefined} />
 
           <p className="text-xs text-ink-500">
             Bei komplexen Vermögensverhältnissen, Unternehmen oder Auslandsbezug: Notariat bzw.
@@ -421,103 +380,17 @@ export function VorlageVorsorgeauftrag() {
   };
 
   return (
-    <div className="space-y-6">
-      {/* Kopf */}
-      <div className="space-y-3">
-        <Link to="/?modus=vorlagen" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
-          <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
-          Zurück zu den Vorlagen
-        </Link>
-        <p className="lc-overline">{card?.rechtsgebiet ?? 'Familie'} · Vorlage</p>
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Vorsorgeauftrag</h1>
-        <p className="text-body-l text-ink-600 max-w-reading">
-          Bestimmen Sie, wer im Fall Ihrer Urteilsunfähigkeit Personensorge, Vermögenssorge und
-          Vertretung im Rechtsverkehr übernimmt — aus festen, strukturierten Bausteinen,
-          ohne Sprachmodell. Mit der Form-Weiche eigenhändig ↔ öffentlich beurkundet.
-        </p>
-        <div className="flex flex-wrap items-center gap-1.5">
-          {(card?.norms ?? []).map((n) => (
-            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
-          ))}
-          <span className="lc-badge lc-badge-warn">Eigenhändig ODER beurkundet (Art. 361 ZGB)</span>
-        </div>
-        <p className="text-xs text-ink-500">
-          Ihre Eingaben verlassen den Browser nicht (lokale Zwischenspeicherung).{' '}
-          <button type="button" onClick={zuruecksetzen} className="text-brass-700 hover:text-brass-600 underline-offset-2 hover:underline">Eingaben löschen</button>
-        </p>
-      </div>
-
-      <Stepper schritte={SCHRITTE} aktiv={schritt} onWechsel={setSchritt} />
-
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
-        <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5">
-          <h2 className="text-h3 font-display font-semibold text-ink-900">{SCHRITTE[schritt].label}</h2>
-          {inhalt()}
-
-          {fehler.length > 0 && (
-            <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
-              {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
-            </div>
-          )}
-
-          <div className="flex items-center justify-between pt-2 border-t border-line">
-            <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
-              disabled={schritt === 0} className="lc-btn-ghost disabled:opacity-40">← Zurück</button>
-            {schritt < SCHRITTE.length - 1 && (
-              <button type="button" onClick={() => setSchritt((s) => s + 1)}
-                disabled={fehler.length > 0} className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
-                Weiter →
-              </button>
-            )}
-          </div>
-        </div>
-
-        <details className="lg:hidden bg-surface border border-line rounded-xl" open={schritt === SCHRITTE.length - 1}>
-          <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between text-body-s font-medium text-ink-700">
-            <span>Vorschau & Bausteinprotokoll</span>
-            <span aria-hidden className="text-ink-500">▾</span>
-          </summary>
-          <div className="px-4 pb-4">{vorschauSpalte()}</div>
-        </details>
-        <div className="hidden lg:block lg:sticky lg:top-28">
-          {vorschauSpalte()}
-        </div>
-      </div>
-    </div>
+    <VorlagenWizardRahmen
+      overline={`${card?.rechtsgebiet ?? 'Familie'} · Vorlage`}
+      titel="Vorsorgeauftrag"
+      intro="Bestimmen Sie, wer im Fall Ihrer Urteilsunfähigkeit Personensorge, Vermögenssorge und Vertretung im Rechtsverkehr übernimmt — aus festen, strukturierten Bausteinen, ohne Sprachmodell. Mit der Form-Weiche eigenhändig ↔ öffentlich beurkundet."
+      norms={card?.norms ?? []}
+      badge="Eigenhändig ODER beurkundet (Art. 361 ZGB)"
+      zuruecksetzen={zuruecksetzen}
+      schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
+      fehler={fehler}
+      inhalt={inhalt()}
+      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+    />
   );
-
-  function vorschauSpalte() {
-    return (
-      <div className="space-y-4">
-        <section aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-5 sm:p-9">
-          <p className="lc-overline mb-4">Vorschau · aktualisiert sich live</p>
-          <div className="font-display text-ink-900 space-y-3" style={{ fontSize: '0.95rem', lineHeight: 1.75 }}>
-            <p className="text-center font-semibold text-[1.15rem]">{ergebnis.dokument.titel}</p>
-            {ergebnis.dokument.absaetze.map((abs) => (
-              <div key={abs.bausteinId + abs.text.slice(0, 12)}>
-                {abs.ueberschrift && <p className="font-semibold mt-2">{abs.ueberschrift}</p>}
-                <p className="whitespace-pre-line">{abs.text}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[0.65rem] text-ink-500 mt-6 pt-3 border-t border-line">{ergebnis.dokument.disclaimer}</p>
-        </section>
-
-        <details className="lc-card p-4">
-          <summary className="cursor-pointer text-body-s font-medium text-ink-700">
-            Bausteinprotokoll ({ergebnis.protokoll.length} Bausteine)
-          </summary>
-          <ul className="mt-3 space-y-2.5">
-            {ergebnis.protokoll.map((p) => (
-              <li key={p.bausteinId} className="text-body-s text-ink-600 space-y-1">
-                <p><span className="num text-ink-500">{p.bausteinId}</span> — {p.begruendung}</p>
-                {p.hinweis && <p className="text-xs text-warn-700">⚠ {p.hinweis}</p>}
-                {p.norm && <p><NormLink artikel={p.norm} /></p>}
-              </li>
-            ))}
-          </ul>
-        </details>
-      </div>
-    );
-  }
 }

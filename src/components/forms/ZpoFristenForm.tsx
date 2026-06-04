@@ -1,3 +1,5 @@
+import { KANTONE } from '../../lib/kantone';
+import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { ZpoInput, ZpoEinheit, ZpoVerfahren, ZpoFristnatur, ZpoZustellart, ZpoModus, ZpoErgebnis } from '../../types/zpo';
@@ -10,7 +12,6 @@ import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
 
-const KANTONE: Kanton[] = ['ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'BS', 'BL', 'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'];
 
 const EINHEITEN: { code: ZpoEinheit; label: string }[] = [
   { code: 'tage', label: 'Tage' },
@@ -55,17 +56,6 @@ const DEFAULTS: ZpoInput = {
   modus: 'bundesgericht',
 };
 
-function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-sm font-medium text-ink-700">{label}</label>
-      {children}
-      {hint && <p className="text-xs text-ink-500">{hint}</p>}
-    </div>
-  );
-}
-
-const inputCls = 'lc-input';
 
 export function ZpoFristenForm() {
   const [form, setForm] = useState<ZpoInput>(DEFAULTS);

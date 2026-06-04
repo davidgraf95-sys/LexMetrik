@@ -1,3 +1,5 @@
+import { KANTONE } from '../../lib/kantone';
+import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { SchkgInput, SchkgModus, SchkgFristnatur, SchkgEinheit, SchkgErgebnis } from '../../types/schkg';
@@ -11,7 +13,6 @@ import { sansAmp } from '../typografie';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
 
-const KANTONE: Kanton[] = ['ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'BS', 'BL', 'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'];
 
 const EINHEITEN: { code: SchkgEinheit; label: string }[] = [
   { code: 'tage', label: 'Tage' },
@@ -60,17 +61,6 @@ const DEFAULTS: FormState = {
   ausloeser: 'Zustellung Zahlungsbefehl',
 };
 
-function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-sm font-medium text-ink-700">{label}</label>
-      {children}
-      {hint && <p className="text-xs text-ink-500">{hint}</p>}
-    </div>
-  );
-}
-
-const inputCls = 'lc-input';
 
 export function SchkgFristenForm() {
   const [form, setForm] = useState<FormState>(DEFAULTS);

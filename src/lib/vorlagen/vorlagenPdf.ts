@@ -1,25 +1,21 @@
 import { jsPDF } from 'jspdf';
 import { pdfText } from '../pdf/winansi';
 import type { AssembleErgebnis } from './engine';
+import type { PdfBanner } from './banner';
 
 // PDF-Ausgabe einer Vorlage als «Mustertext zum eigenhändigen Abschreiben».
 // Clientseitig (jsPDF), deterministisch; Banner + Fusszeile machen den
 // Entwurfs-Charakter unmissverständlich.
+//
+// Banner-Texte/-Typ leben in banner.ts (ohne jsPDF), damit Seiten sie
+// importieren können, ohne jsPDF in ihren Chunk zu ziehen — dieses Modul
+// wird erst beim Export-Klick dynamisch geladen.
 
 const RAND = 22;
 const BREITE = 210 - 2 * RAND;
 
-export type PdfBanner = { titel: string; text: string };
-
-// Vordefinierte Banner je Formvorschrift
-export const BANNER_ABSCHREIBEN: PdfBanner = {
-  titel: 'MUSTERTEXT — VOLLSTÄNDIG VON HAND ABZUSCHREIBEN',
-  text: 'Dieses Blatt ist nicht das Testament. Gültig ist nur die von Anfang bis Ende eigenhändig geschriebene, datierte und unterschriebene Fassung (Art. 505 Abs. 1 ZGB).',
-};
-export const BANNER_UNTERSCHREIBEN: PdfBanner = {
-  titel: 'NACH DEM AUSDRUCK HANDSCHRIFTLICH DATIEREN UND UNTERSCHREIBEN',
-  text: 'Die Erstellung am Computer ist zulässig (Art. 371 Abs. 1 ZGB) — gültig wird das Dokument erst mit handschriftlichem Datum und eigenhändiger Unterschrift.',
-};
+export type { PdfBanner } from './banner';
+export { BANNER_ABSCHREIBEN, BANNER_UNTERSCHREIBEN } from './banner';
 
 export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });

@@ -1,3 +1,5 @@
+import { KANTONE } from '../../lib/kantone';
+import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { MietInput, MietErgebnis, Mietobjekt, Kuendigungsart, TerminQuelle, MietPartei } from '../../types/mietrecht';
@@ -17,7 +19,6 @@ const MIET_DISCLAIMER =
   '(Art. 266l–266o OR), Vertrag, Rahmenmietverträge und kantonale Usanzen sowie der konkrete Sachverhalt sind eigenständig zu prüfen. ' +
   'Für die Wahrung einer Frist im Einzelfall ist allein die nutzende Person verantwortlich.';
 
-const KANTONE: Kanton[] = ['ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'BS', 'BL', 'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'];
 
 const ARTEN: { code: Kuendigungsart; label: string }[] = [
   { code: 'ordentlich', label: 'Ordentliche Kündigung (Art. 266a–f OR)' },
@@ -46,17 +47,6 @@ const QUELLEN: { code: TerminQuelle; label: string }[] = [
 
 const MONATE = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
 
-function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-sm font-medium text-ink-700">{label}</label>
-      {children}
-      {hint && <p className="text-xs text-ink-500">{hint}</p>}
-    </div>
-  );
-}
-
-const inputCls = 'lc-input';
 
 export function MietrechtForm() {
   const [art, setArt] = useState<Kuendigungsart>('ordentlich');

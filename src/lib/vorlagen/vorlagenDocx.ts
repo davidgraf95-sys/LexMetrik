@@ -3,7 +3,7 @@ import {
   ShadingType, HeadingLevel,
 } from 'docx';
 import type { AssembleErgebnis } from './engine';
-import type { PdfBanner } from './vorlagenPdf';
+import type { PdfBanner } from './banner';
 
 // ─── DOCX-Renderer der Vorlagen (Teil II «Ausgabe & Export») ────────────────
 //

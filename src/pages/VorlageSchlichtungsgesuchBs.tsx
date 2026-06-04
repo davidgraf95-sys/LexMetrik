@@ -1,14 +1,14 @@
-import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
 import {
   SG_DEFAULTS, SG_PERSON_NATUERLICH, SG_SCHWELLEN, SG_OFFENE_VERIFIKATIONEN, SG_KANTONALE_ERLASSE,
   sgZusammenstellen, sgMaengel, sgHinweise, sgRouting, sgStreitwert, fmtCHF,
   type SgAnswers, type SgPartei, type SgTyp,
 } from '../lib/vorlagen/schlichtungsgesuchBs';
-import { vorlagenPdfErzeugen, type PdfBanner } from '../lib/vorlagen/vorlagenPdf';
+import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, Stepper, inputCls } from '../components/vorlagen/ui';
-import { useLocale, fedlexLokalisiert } from '../components/locale';
+import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { useWizardState } from '../components/vorlagen/useWizardState';
+import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
 
 // ─── Vorlagen-Wizard: Schlichtungsgesuch (Art. 202 ZPO) · Basel-Stadt ───────
@@ -41,12 +41,9 @@ const BANNER_SG: PdfBanner = {
 };
 
 export function VorlageSchlichtungsgesuchBs() {
-  const { locale } = useLocale();
-  const [a, setA] = useState<SgAnswers>(SG_DEFAULTS);
-  const [schritt, setSchritt] = useState(0);
-  const [kopiert, setKopiert] = useState(false);
-
-  const set = <K extends keyof SgAnswers>(k: K, v: SgAnswers[K]) => setA((alt) => ({ ...alt, [k]: v }));
+  // KEIN speicherKey: Anweisung «keine Browser-Storage-APIs» — Zustand nur im Speicher.
+  const { a, set, schritt, setSchritt, kopiert, kopieren } =
+    useWizardState<SgAnswers>({ defaults: SG_DEFAULTS });
 
   const routing = useMemo(() => sgRouting(a), [a]);
   const ergebnis = useMemo(() => sgZusammenstellen(a), [a]);
@@ -58,18 +55,6 @@ export function VorlageSchlichtungsgesuchBs() {
 
   const card = karte('schlichtungsgesuch');
   const dateiBasis = `Schlichtungsgesuch_${(ergebnis.dokument ? a.klaeger[0] : null)?.typ === 'juristisch' ? (a.klaeger[0] as { firma: string }).firma : `${(a.klaeger[0] as { name?: string })?.name ?? 'Partei'}`}_${a.datum || 'Entwurf'}`.replace(/[^\w.-]+/g, '_');
-
-  const dokumentAlsText = () =>
-    [ergebnis.dokument.titel.toUpperCase(), '', ...ergebnis.dokument.absaetze.flatMap((x) => [
-      ...(x.ueberschrift ? [x.ueberschrift] : []), x.text, '',
-    ]), '---', ergebnis.dokument.disclaimer].join('\n');
-
-  const kopieren = () => {
-    navigator.clipboard?.writeText(dokumentAlsText()).then(
-      () => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); },
-      () => {},
-    );
-  };
 
   // ── Partei-Editor (klagend/beklagt identisch) ──
   const parteiEditor = (liste: SgPartei[], setListe: (p: SgPartei[]) => void, rolle: string) => (
@@ -448,24 +433,12 @@ export function VorlageSchlichtungsgesuchBs() {
           )}
 
           {!stopp && (
-            <div className="flex flex-wrap gap-3">
-              <button type="button" disabled={maengel.length > 0}
-                onClick={() => vorlagenPdfErzeugen(ergebnis, { banner: BANNER_SG, dateiName: `${dateiBasis}.pdf` })}
-                className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
-                Gesuch als PDF
-              </button>
-              {card?.modus === 'vorlage' && card.output?.includes('docx') && (
-                <button type="button" disabled={maengel.length > 0}
-                  onClick={async () => (await import('../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: BANNER_SG, dateiName: `${dateiBasis}.docx` })}
-                  className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
-                  Gesuch als Word (DOCX)
-                </button>
-              )}
-              <button type="button" disabled={maengel.length > 0} onClick={kopieren}
-                className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
-                {kopiert ? 'Kopiert ✓' : 'Text kopieren'}
-              </button>
-            </div>
+            <ExportLeiste ergebnis={ergebnis} deaktiviert={maengel.length > 0}
+              kopiert={kopiert} onKopieren={kopieren}
+              pdf={{ label: 'Gesuch als PDF', banner: BANNER_SG, dateiName: `${dateiBasis}.pdf` }}
+              docx={card?.modus === 'vorlage' && card.output?.includes('docx')
+                ? { label: 'Gesuch als Word (DOCX)', banner: BANNER_SG, dateiName: `${dateiBasis}.docx` }
+                : undefined} />
           )}
 
           {/* Offene Verifikationen (transparent, dezent) */}
@@ -487,101 +460,20 @@ export function VorlageSchlichtungsgesuchBs() {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="space-y-3">
-        <Link to="/fachpersonen?modus=vorlagen" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
-          <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
-          Zurück zu den Vorlagen
-        </Link>
-        <p className="lc-overline">{card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · Basel-Stadt</p>
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Schlichtungsgesuch (Basel-Stadt)</h1>
-        <p className="text-body-l text-ink-600 max-w-reading">
-          Stellt ein Schlichtungsgesuch nach Art. 202 ZPO für die Basler Schlichtungsbehörde
-          zusammen — Parteien, Rechtsbegehren, Streitgegenstand, Anträge und Beilagen, aus festen
-          Bausteinen ohne Sprachmodell.
-        </p>
-        <div className="flex flex-wrap items-center gap-1.5">
-          {(card?.norms ?? []).map((n) => (
-            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
-          ))}
-          <span className="lc-badge lc-badge-warn">Papierform · eigenhändig unterzeichnen</span>
-        </div>
-        <p className="text-xs text-ink-500">Eingaben werden nicht gespeichert — sie bestehen nur, solange diese Seite geöffnet ist.</p>
-      </div>
-
-      <Stepper schritte={SCHRITTE} aktiv={schritt} onWechsel={setSchritt} />
-
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
-        <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5">
-          <h2 className="text-h3 font-display font-semibold text-ink-900">{SCHRITTE[schritt].label}</h2>
-          {inhalt()}
-          <div className="flex items-center justify-between pt-2 border-t border-line">
-            <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
-              disabled={schritt === 0} className="lc-btn-ghost disabled:opacity-40">← Zurück</button>
-            {schritt < SCHRITTE.length - 1 && (
-              <button type="button" onClick={() => setSchritt((s) => s + 1)}
-                disabled={stopp} className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
-                Weiter →
-              </button>
-            )}
-          </div>
-        </div>
-
-        <details className="lg:hidden bg-surface border border-line rounded-xl" open={schritt === SCHRITTE.length - 1}>
-          <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between text-body-s font-medium text-ink-700">
-            <span>Vorschau & Bausteinprotokoll</span>
-            <span aria-hidden className="text-ink-500">▾</span>
-          </summary>
-          <div className="px-4 pb-4">{vorschauSpalte()}</div>
-        </details>
-        <div className="hidden lg:block lg:sticky lg:top-28">
-          {vorschauSpalte()}
-        </div>
-      </div>
-    </div>
+    <VorlagenWizardRahmen
+      zurueckHref="/fachpersonen?modus=vorlagen"
+      overline={`${card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · Basel-Stadt`}
+      titel="Schlichtungsgesuch (Basel-Stadt)"
+      intro="Stellt ein Schlichtungsgesuch nach Art. 202 ZPO für die Basler Schlichtungsbehörde zusammen — Parteien, Rechtsbegehren, Streitgegenstand, Anträge und Beilagen, aus festen Bausteinen ohne Sprachmodell."
+      norms={card?.norms ?? []}
+      badge="Papierform · eigenhändig unterzeichnen"
+      fussnote="Eingaben werden nicht gespeichert — sie bestehen nur, solange diese Seite geöffnet ist."
+      schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
+      weiterDeaktiviert={stopp}
+      inhalt={inhalt()}
+      vorschau={stopp
+        ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument — siehe Stopp-Hinweis: Dieses Gesuch gehört an eine andere Stelle bzw. direkt ans Gericht.</div>
+        : <VorschauPanel ergebnis={ergebnis} kompakt nichtAufgenommen={ergebnis.nichtAufgenommen} />}
+    />
   );
-
-  function vorschauSpalte() {
-    if (stopp) {
-      return <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument — siehe Stopp-Hinweis: Dieses Gesuch gehört an eine andere Stelle bzw. direkt ans Gericht.</div>;
-    }
-    return (
-      <div className="space-y-4">
-        <section aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-5 sm:p-9">
-          <p className="lc-overline mb-4">Vorschau · aktualisiert sich live</p>
-          <div className="font-display text-ink-900 space-y-3" style={{ fontSize: '0.92rem', lineHeight: 1.7 }}>
-            <p className="text-center font-semibold text-[1.1rem]">{ergebnis.dokument.titel}</p>
-            {ergebnis.dokument.absaetze.map((abs) => (
-              <div key={abs.bausteinId + abs.text.slice(0, 12)}>
-                {abs.ueberschrift && <p className="font-semibold mt-2">{abs.ueberschrift}</p>}
-                <p className="whitespace-pre-line">{abs.text}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[0.65rem] text-ink-500 mt-6 pt-3 border-t border-line">{ergebnis.dokument.disclaimer}</p>
-        </section>
-
-        <details className="lc-card p-4">
-          <summary className="cursor-pointer text-body-s font-medium text-ink-700">
-            Bausteinprotokoll ({ergebnis.protokoll.length} aufgenommen · {ergebnis.nichtAufgenommen.length} nicht aufgenommen)
-          </summary>
-          <ul className="mt-3 space-y-2.5">
-            {ergebnis.protokoll.map((p) => (
-              <li key={p.bausteinId} className="text-body-s text-ink-600 space-y-1">
-                <p><span className="num text-ink-500">{p.bausteinId}</span> — {p.begruendung}</p>
-                {p.hinweis && <p className="text-xs text-warn-700">⚠ {p.hinweis}</p>}
-                {p.norm && <p><NormLink artikel={p.norm} /></p>}
-              </li>
-            ))}
-          </ul>
-          <p className="lc-overline mt-4 mb-2">Nicht aufgenommen</p>
-          <ul className="space-y-1">
-            {ergebnis.nichtAufgenommen.map((n) => (
-              <li key={n.label} className="text-xs text-ink-500">– {n.label}: {n.grund}</li>
-            ))}
-          </ul>
-        </details>
-      </div>
-    );
-  }
 }

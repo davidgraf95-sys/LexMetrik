@@ -1,14 +1,15 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import {
   TESTAMENT_DEFAULTS, testamentZusammenstellen, pruefeGates,
   type TestamentAntworten, type TestamentErbe, type TestamentVermaechtnis,
 } from '../lib/vorlagen/testament';
-import { vorlagenPdfErzeugen, BANNER_ABSCHREIBEN } from '../lib/vorlagen/vorlagenPdf';
+import { BANNER_ABSCHREIBEN } from '../lib/vorlagen/banner';
 import { berechneErbteilung } from '../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../lib/bruch';
-import { NormLink } from '../components/vorlagen/ui';
-import { useLocale, fedlexLokalisiert } from '../components/locale';
+import { Field, inputCls } from '../components/vorlagen/ui';
+import { useWizardState } from '../components/vorlagen/useWizardState';
+import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { karte } from '../lib/startseiteConfig';
 
@@ -30,51 +31,18 @@ const SCHRITTE = [
   { id: 'pruefen', label: 'Prüfen & Abschreiben' },
 ] as const;
 
-const inputCls = 'lc-input';
-
-function Field({ label, children, hint, optional }: { label: string; children: React.ReactNode; hint?: string; optional?: boolean }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-body-s font-medium text-ink-700">
-        {label}{optional && <span className="text-ink-500 font-normal"> · optional</span>}
-      </label>
-      {children}
-      {hint && <p className="text-xs text-ink-500">{hint}</p>}
-    </div>
-  );
-}
-
 export function VorlageTestament() {
-  const { locale } = useLocale();
-  const [a, setA] = useState<TestamentAntworten>(() => {
-    try {
-      const roh = localStorage.getItem(SPEICHER_KEY);
-      if (roh) {
-        const geladen = { ...TESTAMENT_DEFAULTS, ...JSON.parse(roh) } as TestamentAntworten;
-        // Hydration absichern: Array-Felder aus älteren Speicherständen normalisieren
-        geladen.erben = Array.isArray(geladen.erben) ? geladen.erben : [];
-        geladen.vermaechtnisse = Array.isArray(geladen.vermaechtnisse) ? geladen.vermaechtnisse : [];
-        return geladen;
-      }
-    } catch { /* defekter Speicher → Defaults */ }
-    return TESTAMENT_DEFAULTS;
-  });
-  const [schritt, setSchritt] = useState(0);
-  const [bestaetigt, setBestaetigt] = useState(false);
-  const [kopiert, setKopiert] = useState(false);
-
-  // Eingaben lokal sichern (verlassen den Browser nicht)
-  useEffect(() => {
-    try { localStorage.setItem(SPEICHER_KEY, JSON.stringify(a)); } catch { /* Speicher voll/blockiert */ }
-  }, [a]);
-
-  const set = <K extends keyof TestamentAntworten>(k: K, v: TestamentAntworten[K]) =>
-    setA((alt) => ({ ...alt, [k]: v }));
-
-  const zuruecksetzen = () => {
-    setA(TESTAMENT_DEFAULTS); setSchritt(0); setBestaetigt(false);
-    try { localStorage.removeItem(SPEICHER_KEY); } catch { /* ignorieren */ }
-  };
+  const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
+    useWizardState<TestamentAntworten>({
+      defaults: TESTAMENT_DEFAULTS,
+      speicherKey: SPEICHER_KEY,
+      // Hydration absichern: Array-Felder aus älteren Speicherständen normalisieren
+      normalisieren: (g) => ({
+        ...g,
+        erben: Array.isArray(g.erben) ? g.erben : [],
+        vermaechtnisse: Array.isArray(g.vermaechtnisse) ? g.vermaechtnisse : [],
+      }),
+    });
 
   // Zusammenstellung (rein, deterministisch) + Gates
   const ergebnis = useMemo(() => testamentZusammenstellen(a), [a]);
@@ -112,18 +80,6 @@ export function VorlageTestament() {
   const fehler = fehlerImSchritt(schritt);
 
   const erbenSumme = a.erben.reduce((s, e) => s + (Number.isFinite(e.quoteProzent) ? e.quoteProzent : 0), 0);
-
-  const dokumentAlsText = () =>
-    [ergebnis.dokument.titel.toUpperCase(), '', ...ergebnis.dokument.absaetze.flatMap((x) => [
-      ...(x.ueberschrift ? [x.ueberschrift] : []), x.text, '',
-    ]), '---', ergebnis.dokument.disclaimer].join('\n');
-
-  const kopieren = () => {
-    navigator.clipboard?.writeText(dokumentAlsText()).then(
-      () => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); },
-      () => {},
-    );
-  };
 
   const card = karte('eigenhaendiges-testament');
 
@@ -341,17 +297,9 @@ export function VorlageTestament() {
             </label>
           </section>
 
-          <div className="flex flex-wrap gap-3">
-            <button type="button" disabled={!bestaetigt || gates.blocker.length > 0}
-              onClick={() => vorlagenPdfErzeugen(ergebnis, { banner: BANNER_ABSCHREIBEN, dateiName: 'Testament-Mustertext.pdf' })}
-              className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
-              Mustertext als PDF
-            </button>
-            <button type="button" disabled={!bestaetigt || gates.blocker.length > 0} onClick={kopieren}
-              className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
-              {kopiert ? 'Kopiert ✓' : 'Text kopieren'}
-            </button>
-          </div>
+          <ExportLeiste ergebnis={ergebnis} deaktiviert={!bestaetigt || gates.blocker.length > 0}
+            kopiert={kopiert} onKopieren={kopieren}
+            pdf={{ label: 'Mustertext als PDF', banner: BANNER_ABSCHREIBEN, dateiName: 'Testament-Mustertext.pdf' }} />
 
           <p className="text-xs text-ink-500">
             Bei komplexen Verhältnissen, Zweifeln an der Urteilsfähigkeit oder Wünschen wie Nacherbschaft,
@@ -363,153 +311,41 @@ export function VorlageTestament() {
     }
   };
 
+  // Pflichtteils-Panel (Live, aus der Erbteilungs-Engine) — vorlagenspezifisch
+  const pflichtteilePanel = pflichtteile && (a.hatNachkommen || verheiratet) ? (
+    <section className="lc-card p-4 space-y-2">
+      <p className="lc-overline">Pflichtteile (Art. 471 ZGB) — zur Kontrolle</p>
+      <ul className="text-body-s text-ink-700 space-y-0.5">
+        {pflichtteile.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => (
+          <li key={e.bezeichnung} className="flex justify-between gap-3">
+            <span>{e.bezeichnung}{e.anzahl ? ` (je, ${e.anzahl} Personen)` : ''}</span>
+            <span className="num">{fmtB(e.pflichtteil)} ({Math.round(zahl(e.pflichtteil) * 1000) / 10} %)</span>
+          </li>
+        ))}
+        <li className="flex justify-between gap-3 font-semibold text-brass-700 pt-1 border-t border-line">
+          <span>Frei verfügbar</span>
+          <span className="num">{fmtB(pflichtteile.verfuegbareQuote)} ({Math.round(zahl(pflichtteile.verfuegbareQuote) * 1000) / 10} %)</span>
+        </li>
+      </ul>
+      <p className="text-xs text-ink-500">
+        Quoten unter dem Pflichtteil sind nicht nichtig, aber herabsetzbar (Art. 522 ff. ZGB).{' '}
+        <Link to="/rechner/erbteilung" className="text-brass-700 no-underline hover:text-brass-600">Details im Pflichtteils-Rechner →</Link>
+      </p>
+    </section>
+  ) : null;
+
   return (
-    <div className="space-y-6">
-      {/* Kopf */}
-      <div className="space-y-3">
-        <Link to="/?modus=vorlagen" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
-          <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
-          Zurück zu den Vorlagen
-        </Link>
-        <p className="lc-overline">{card?.rechtsgebiet ?? 'Erbrecht'} · Vorlage</p>
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Eigenhändiges Testament</h1>
-        <p className="text-body-l text-ink-600 max-w-reading">
-          Beantworten Sie die Schritte — LexMetrik stellt den Mustertext aus festen, juristisch
-          vorformulierten Bausteinen zusammen. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument.
-        </p>
-        <div className="flex flex-wrap items-center gap-1.5">
-          {(card?.norms ?? []).map((n) => (
-            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
-          ))}
-          <span className="lc-badge lc-badge-warn">Eigenhändig abzuschreiben</span>
-        </div>
-        <p className="text-xs text-ink-500">
-          Ihre Eingaben verlassen den Browser nicht (lokale Zwischenspeicherung).{' '}
-          <button type="button" onClick={zuruecksetzen} className="text-brass-700 hover:text-brass-600 underline-offset-2 hover:underline">Eingaben löschen</button>
-        </p>
-      </div>
-
-      {/* Stepper */}
-      <nav aria-label="Schritte" className="flex flex-wrap gap-x-1 gap-y-2">
-        {SCHRITTE.map((s, i) => {
-          const erledigt = i < schritt;
-          const aktiv = i === schritt;
-          return (
-            <button key={s.id} type="button" onClick={() => i <= schritt && setSchritt(i)}
-              aria-current={aktiv ? 'step' : undefined}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                aktiv ? 'bg-surface-raised border border-line text-brass-700 shadow-sm'
-                : erledigt ? 'text-ink-700 hover:bg-brass-100/50'
-                : 'text-ink-500 cursor-default'
-              }`}>
-              <span className={`num inline-flex items-center justify-center w-5 h-5 rounded-full text-[0.65rem] ${
-                erledigt ? 'bg-brass-500 text-ink-900' : aktiv ? 'border border-brass-500 text-brass-700' : 'border border-line text-ink-500'
-              }`}>{erledigt ? '✓' : i + 1}</span>
-              {s.label}
-            </button>
-          );
-        })}
-      </nav>
-
-      {/* Zweispaltig: Formular links, klebende Vorschau rechts;
-          mobil einspaltig mit einklappbarer Vorschau */}
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
-        <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5">
-          <h2 className="text-h3 font-display font-semibold text-ink-900">{SCHRITTE[schritt].label}</h2>
-          {inhalt()}
-
-          {fehler.length > 0 && (
-            <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
-              {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
-            </div>
-          )}
-
-          <div className="flex items-center justify-between pt-2 border-t border-line">
-            <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
-              disabled={schritt === 0} className="lc-btn-ghost disabled:opacity-40">← Zurück</button>
-            {schritt < SCHRITTE.length - 1 && (
-              <button type="button" onClick={() => setSchritt((s) => s + 1)}
-                disabled={fehler.length > 0} className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
-                Weiter →
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Vorschau + Pflichtteile + Protokoll — mobil einklappbar */}
-        <details className="lg:hidden bg-surface border border-line rounded-xl" open={schritt === SCHRITTE.length - 1}>
-          <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between text-body-s font-medium text-ink-700">
-            <span>Vorschau & Bausteinprotokoll</span>
-            <span aria-hidden className="text-ink-500">▾</span>
-          </summary>
-          <div className="px-4 pb-4">{vorschauSpalte()}</div>
-        </details>
-        <div className="hidden lg:block lg:sticky lg:top-28">
-          {vorschauSpalte()}
-        </div>
-      </div>
-    </div>
+    <VorlagenWizardRahmen
+      overline={`${card?.rechtsgebiet ?? 'Erbrecht'} · Vorlage`}
+      titel="Eigenhändiges Testament"
+      intro="Beantworten Sie die Schritte — LexMetrik stellt den Mustertext aus festen, juristisch vorformulierten Bausteinen zusammen. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument."
+      norms={card?.norms ?? []}
+      badge="Eigenhändig abzuschreiben"
+      zuruecksetzen={zuruecksetzen}
+      schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
+      fehler={fehler}
+      inhalt={inhalt()}
+      vorschau={<VorschauPanel ergebnis={ergebnis} extra={pflichtteilePanel} />}
+    />
   );
-
-  // Vorschau-Spalte (Papier, Pflichtteile, Protokoll) — als Funktionsaufruf
-  // (mobil einklappbar / Desktop klebend), identischer Inhalt.
-  function vorschauSpalte() {
-    return (
-        <div className="space-y-4">
-          {/* Live-Vorschau als «Papier» */}
-          <section aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-5 sm:p-9">
-            <p className="lc-overline mb-4">Vorschau · aktualisiert sich live</p>
-            <div className="font-display text-ink-900 space-y-3" style={{ fontSize: '0.95rem', lineHeight: 1.75 }}>
-              <p className="text-center font-semibold text-[1.15rem]">{ergebnis.dokument.titel}</p>
-              {ergebnis.dokument.absaetze.map((abs) => (
-                <div key={abs.bausteinId + abs.text.slice(0, 12)}>
-                  {abs.ueberschrift && <p className="font-semibold mt-2">{abs.ueberschrift}</p>}
-                  <p className="whitespace-pre-line">{abs.text}</p>
-                </div>
-              ))}
-            </div>
-            <p className="text-[0.65rem] text-ink-500 mt-6 pt-3 border-t border-line">{ergebnis.dokument.disclaimer}</p>
-          </section>
-
-          {/* Pflichtteile (Live, aus der Erbteilungs-Engine) */}
-          {pflichtteile && (a.hatNachkommen || verheiratet) && (
-            <section className="lc-card p-4 space-y-2">
-              <p className="lc-overline">Pflichtteile (Art. 471 ZGB) — zur Kontrolle</p>
-              <ul className="text-body-s text-ink-700 space-y-0.5">
-                {pflichtteile.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => (
-                  <li key={e.bezeichnung} className="flex justify-between gap-3">
-                    <span>{e.bezeichnung}{e.anzahl ? ` (je, ${e.anzahl} Personen)` : ''}</span>
-                    <span className="num">{fmtB(e.pflichtteil)} ({Math.round(zahl(e.pflichtteil) * 1000) / 10} %)</span>
-                  </li>
-                ))}
-                <li className="flex justify-between gap-3 font-semibold text-brass-700 pt-1 border-t border-line">
-                  <span>Frei verfügbar</span>
-                  <span className="num">{fmtB(pflichtteile.verfuegbareQuote)} ({Math.round(zahl(pflichtteile.verfuegbareQuote) * 1000) / 10} %)</span>
-                </li>
-              </ul>
-              <p className="text-xs text-ink-500">
-                Quoten unter dem Pflichtteil sind nicht nichtig, aber herabsetzbar (Art. 522 ff. ZGB).{' '}
-                <Link to="/rechner/erbteilung" className="text-brass-700 no-underline hover:text-brass-600">Details im Pflichtteils-Rechner →</Link>
-              </p>
-            </section>
-          )}
-
-          {/* Bausteinprotokoll */}
-          <details className="lc-card p-4">
-            <summary className="cursor-pointer text-body-s font-medium text-ink-700">
-              Bausteinprotokoll ({ergebnis.protokoll.length} Bausteine)
-            </summary>
-            <ul className="mt-3 space-y-2.5">
-              {ergebnis.protokoll.map((p) => (
-                <li key={p.bausteinId} className="text-body-s text-ink-600 space-y-1">
-                  <p><span className="num text-ink-500">{p.bausteinId}</span> — {p.begruendung}</p>
-                  {p.hinweis && <p className="text-xs text-warn-700">⚠ {p.hinweis}</p>}
-                  {p.norm && <p><NormLink artikel={p.norm} /></p>}
-                </li>
-              ))}
-            </ul>
-          </details>
-        </div>
-    );
-  }
 }

@@ -1,0 +1,57 @@
+// Empirischer Smoke-Test (vite-node): Rendern alle umgebauten Seiten ohne
+// Laufzeitfehler? renderToString führt useState-Initializer, useMemo und den
+// ganzen JSX-Baum aus (useEffect nicht — localStorage-Schreiben irrelevant).
+import { renderToString } from 'react-dom/server';
+import { MemoryRouter } from 'react-router-dom';
+import { LocaleProvider } from '../src/components/locale';
+import { VorlageTestament } from '../src/pages/VorlageTestament';
+import { VorlagePatientenverfuegung } from '../src/pages/VorlagePatientenverfuegung';
+import { VorlageVorsorgeauftrag } from '../src/pages/VorlageVorsorgeauftrag';
+import { VorlageSchlichtungsgesuchBs } from '../src/pages/VorlageSchlichtungsgesuchBs';
+import { Startseite } from '../src/pages/Startseite';
+import { Fachpersonen } from '../src/pages/Fachpersonen';
+import { RechnerVerzugszins } from '../src/pages/RechnerVerzugszins';
+import { RechnerZpo } from '../src/pages/RechnerZpo';
+import { RechnerKuendigung } from '../src/pages/RechnerKuendigung';
+import { RechnerMietrecht } from '../src/pages/RechnerMietrecht';
+import { RechnerVerjaehrung } from '../src/pages/RechnerVerjaehrung';
+import { RechnerGewaehrleistung } from '../src/pages/RechnerGewaehrleistung';
+import { RechnerSchkg } from '../src/pages/RechnerSchkg';
+import { RechnerErbteilung } from '../src/pages/RechnerErbteilung';
+
+const SEITEN: [string, React.ComponentType][] = [
+  ['Startseite', Startseite],
+  ['Fachpersonen', Fachpersonen],
+  ['VorlageTestament', VorlageTestament],
+  ['VorlagePatientenverfuegung', VorlagePatientenverfuegung],
+  ['VorlageVorsorgeauftrag', VorlageVorsorgeauftrag],
+  ['VorlageSchlichtungsgesuchBs', VorlageSchlichtungsgesuchBs],
+  ['RechnerVerzugszins', RechnerVerzugszins],
+  ['RechnerZpo', RechnerZpo],
+  ['RechnerKuendigung', RechnerKuendigung],
+  ['RechnerMietrecht', RechnerMietrecht],
+  ['RechnerVerjaehrung', RechnerVerjaehrung],
+  ['RechnerGewaehrleistung', RechnerGewaehrleistung],
+  ['RechnerSchkg', RechnerSchkg],
+  ['RechnerErbteilung', RechnerErbteilung],
+];
+
+let fehler = 0;
+for (const [name, Comp] of SEITEN) {
+  try {
+    const html = renderToString(
+      <MemoryRouter>
+        <LocaleProvider>
+          <Comp />
+        </LocaleProvider>
+      </MemoryRouter>,
+    );
+    if (html.length < 500) throw new Error(`verdächtig kurzes HTML (${html.length} Zeichen)`);
+    console.log(`OK  ${name} (${html.length} Zeichen)`);
+  } catch (e) {
+    fehler++;
+    console.error(`FEHLER  ${name}:`, e);
+  }
+}
+if (fehler > 0) { console.error(`\n${fehler} Seite(n) mit Renderfehler`); process.exit(1); }
+console.log('\nAlle Seiten rendern fehlerfrei.');

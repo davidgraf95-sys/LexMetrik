@@ -1,3 +1,5 @@
+import { KANTONE } from '../../lib/kantone';
+import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import type { Kanton } from '../../types/legal';
@@ -45,19 +47,7 @@ const STILLSTAND_GRUENDE = [
   'Vereinbarte aussergerichtliche Streitbeilegung (Ziff. 8, schriftlich)',
 ];
 
-const KANTONE: Kanton[] = ['ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'BS', 'BL', 'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'];
 
-function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-body-s font-medium text-ink-700">{label}</label>
-      {children}
-      {hint && <p className="text-body-s text-ink-500">{hint}</p>}
-    </div>
-  );
-}
-
-const inputCls = 'lc-input';
 const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 
 // Eckdaten-Karte für eine Verjährungsfrist; die massgebliche (= frühere)

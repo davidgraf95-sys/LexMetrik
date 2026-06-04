@@ -1,3 +1,4 @@
+import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { ErbteilungInput, Zivilstand, Gueterstand, ErbteilungErgebnis } from '../../types/erbrecht';
 import { berechneErbteilung } from '../../lib/erbteilung';
@@ -37,17 +38,7 @@ const ELTERN_OPTIONEN: { code: ElternStatus; label: string }[] = [
   { code: 'vorverstorben_ohne', label: 'vorverstorben, ohne Nachkommen' },
 ];
 
-function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-sm font-medium text-ink-700">{label}</label>
-      {children}
-      {hint && <p className="text-xs text-ink-500">{hint}</p>}
-    </div>
-  );
-}
 
-const inputCls = 'lc-input';
 const fmtCHF = (x: number) => x.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 export function ErbteilungForm() {

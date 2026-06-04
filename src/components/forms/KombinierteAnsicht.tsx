@@ -1,3 +1,4 @@
+import { inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { ArbeitsrechtInput, Kanton, SperrereignisTyp, Sperrereignis } from '../../types/legal';
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
@@ -20,7 +21,6 @@ const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'betreuungsurlaub',  label: 'Betreuungsurlaub (Art. 329i)' },
 ];
 
-const inputCls = 'lc-input';
 
 const DEFAULTS: ArbeitsrechtInput = {
   vertragsbeginn: '2020-01-01',

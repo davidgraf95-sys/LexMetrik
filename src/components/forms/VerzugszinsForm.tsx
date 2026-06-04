@@ -1,3 +1,4 @@
+import { Field } from '../vorlagen/ui';
 import { useState } from 'react';
 import { berechneVerzugszins, formatCHF } from '../../lib/verzugszins';
 import type {
@@ -53,15 +54,6 @@ function heuteISO(): string {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
-function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-body-s font-medium text-ink-700">{label}</label>
-      {children}
-      {hint && <p className="text-body-s text-ink-500">{hint}</p>}
-    </div>
-  );
-}
 
 export function VerzugszinsForm() {
   const [form, setForm] = useState<VerzugszinsInput>(DEFAULTS);

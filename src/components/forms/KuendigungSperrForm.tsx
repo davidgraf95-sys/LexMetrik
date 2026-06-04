@@ -1,3 +1,4 @@
+import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { SperrfristenInput, Sperrereignis, SperrereignisTyp } from '../../types/legal';
 import { berechneSperrfristen, type SperrfristenErgebnis } from '../../lib/sperrfristen';
@@ -38,17 +39,6 @@ const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'betreuungsurlaub',  label: 'Betreuungsurlaub (Art. 329i OR, max. 6 Monate)' },
 ];
 
-function Field({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
-  return (
-    <div className="space-y-1">
-      <label className="block text-sm font-medium text-ink-700">{label}</label>
-      {children}
-      {hint && <p className="text-xs text-ink-500">{hint}</p>}
-    </div>
-  );
-}
-
-const inputCls = 'lc-input';
 
 export function KuendigungSperrForm() {
   const [form, setForm] = useState<SperrfristenInput>(DEFAULTS);
