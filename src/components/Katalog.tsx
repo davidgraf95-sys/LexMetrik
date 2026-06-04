@@ -27,7 +27,7 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
   if (sortiert.length === 0) return null;
 
   return (
-    <section id={sektion.id} className="scroll-mt-20">
+    <section id={sektion.id} className="scroll-mt-28">
       {/* Sektion per Mausklick ein-/ausklappbar (Disclosure); standardmässig offen. */}
       <details open className="group bg-surface rounded-2xl border border-line">
         <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">

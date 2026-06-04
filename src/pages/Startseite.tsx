@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SEKTIONEN, ALLE_KARTEN } from '../lib/startseiteConfig';
 import { Katalog, SectionHead } from '../components/Katalog';
-import { StufenSchalter } from '../components/StufenSchalter';
 
 // Basis-Seite: zeigt nur die allgemeinen Rechner (tier 'frei').
 // Spezialisierte Rechner stehen im Experten-Panel unter /fachpersonen.
@@ -57,8 +56,6 @@ export function Startseite() {
     <div className="space-y-16">
       {/* Hero */}
       <section className="space-y-5 max-w-reading">
-        {/* Stufenwahl: Basis ↔ Experten-Panel */}
-        <StufenSchalter />
         <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.5rem] sm:text-display">
           Schweizer Rechtsfristen und Ansprüche — transparent berechnet.
         </h1>

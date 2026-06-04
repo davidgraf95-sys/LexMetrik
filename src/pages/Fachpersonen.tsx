@@ -1,6 +1,5 @@
 import { ALLE_KARTEN, RECHTSGEBIETE } from '../lib/startseiteConfig';
 import { Katalog } from '../components/Katalog';
-import { StufenSchalter } from '../components/StufenSchalter';
 
 // Experten-Panel: alle Rechner der Stufe 'experte' (anwaltliche Praxis).
 // Invertiertes Ink-Hero mit Kennzahlen als «Pro»-Signal; Katalog und
@@ -13,9 +12,8 @@ export function Fachpersonen() {
 
   return (
     <div className="space-y-16">
-      {/* Stufenwahl + dunkles Hero */}
+      {/* Dunkles Hero («Pro»-Signal) */}
       <div className="space-y-5">
-        <StufenSchalter />
         <section className="relative overflow-hidden rounded-2xl p-8 sm:p-12" style={{ background: 'var(--ink-900)' }}>
           {/* Messskala als Ablesekante auf dunklem Grund */}
           <span className="scale-rule absolute left-8 right-8 top-0" aria-hidden />
