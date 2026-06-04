@@ -374,7 +374,7 @@ export function VorlageTestament() {
         <p className="lc-overline">{card?.rechtsgebiet ?? 'Erbrecht'} · Vorlage</p>
         <h1 className="text-h1 font-display font-semibold text-ink-900">Eigenhändiges Testament</h1>
         <p className="text-body-l text-ink-600 max-w-reading">
-          Beantworten Sie die Schritte — Lexmetrik stellt den Mustertext aus festen, juristisch
+          Beantworten Sie die Schritte — LexMetrik stellt den Mustertext aus festen, juristisch
           vorformulierten Bausteinen zusammen. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument.
         </p>
         <div className="flex flex-wrap items-center gap-1.5">

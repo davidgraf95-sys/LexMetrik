@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* ── Lexmetrik-Designtokens (Designsystem §2) ─────────────────────── */
+    /* ── LexMetrik-Designtokens (Designsystem §2) ─────────────────────── */
     /* Tinte – Text & Struktur */
     --ink-900:#1A1A17; --ink-700:#3A3A33; --ink-600:#54544B; --ink-500:#6E6E64;
     --ink-400:#8B8B81; --ink-300:#A9A99F;

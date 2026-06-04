@@ -1,11 +1,11 @@
-// Seite «Methodik» — vertiefte Fassung; die Kurzfassung («So rechnet Lexmetrik»)
+// Seite «Methodik» — vertiefte Fassung; die Kurzfassung («So rechnet LexMetrik»)
 // auf der Startseite bleibt davon unberührt.
 
 const ABSCHNITTE: { titel: string; text: string }[] = [
   {
     titel: 'Berechnung statt KI',
     text:
-      'Lexmetrik ist kein Chatbot und kein Sprachmodell. Hinter jedem Rechner stehen fest ' +
+      'LexMetrik ist kein Chatbot und kein Sprachmodell. Hinter jedem Rechner stehen fest ' +
       'programmierte Regeln, die direkt aus Gesetz und Rechtsprechung abgeleitet sind. Daraus folgt ' +
       'unmittelbar: Gleiche Eingaben ergeben immer dasselbe Ergebnis — heute, morgen und bei der ' +
       'nächsten Person. Keine Wahrscheinlichkeiten, keine Tagesform, keine «wahrscheinlichste Antwort».',
@@ -13,7 +13,7 @@ const ABSCHNITTE: { titel: string; text: string }[] = [
   {
     titel: 'Jeder Schritt liegt offen',
     text:
-      'Ein Ergebnis ohne Rechenweg ist für die juristische Arbeit wertlos. Lexmetrik zeigt deshalb ' +
+      'Ein Ergebnis ohne Rechenweg ist für die juristische Arbeit wertlos. LexMetrik zeigt deshalb ' +
       'nicht nur das Resultat, sondern jeden Zwischenschritt: welcher Fristbeginn angesetzt wurde, ' +
       'welche Gerichts- oder Betreibungsferien einberechnet oder übersprungen wurden, welche ' +
       'Wochenend- oder Feiertagsregel gegriffen hat. Jeder Schritt ist einer konkreten Norm ' +
@@ -24,7 +24,7 @@ const ABSCHNITTE: { titel: string; text: string }[] = [
     titel: 'Strittige Rechtsfragen werden offengelegt, nicht versteckt',
     text:
       'Nicht jede Rechtsfrage ist eindeutig geklärt. Wo Lehre und Rechtsprechung uneins sind oder ' +
-      'eine Minderheitsmeinung vertretbar bleibt, entscheidet Lexmetrik das nicht stillschweigend ' +
+      'eine Minderheitsmeinung vertretbar bleibt, entscheidet LexMetrik das nicht stillschweigend ' +
       'zugunsten einer Lesart. Solche Punkte werden ausgewiesen und kurz erläutert, damit die für ' +
       'den konkreten Fall massgebliche Auffassung selbst gewählt werden kann.',
   },
@@ -62,7 +62,7 @@ export function Methodik() {
     <div className="space-y-10 max-w-reading">
       <div className="space-y-2">
         <p className="lc-overline">Methodik</p>
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Wie Lexmetrik rechnet</h1>
+        <h1 className="text-h1 font-display font-semibold text-ink-900">Wie LexMetrik rechnet</h1>
       </div>
 
       <div className="space-y-8">
@@ -76,7 +76,7 @@ export function Methodik() {
         <section className="lc-notice">
           <p className="lc-overline mb-1">Grenzen</p>
           <p className="text-body-s text-ink-600">
-            Lexmetrik liefert automatisierte Orientierungsberechnungen und Dokument-Entwürfe,
+            LexMetrik liefert automatisierte Orientierungsberechnungen und Dokument-Entwürfe,
             keine Rechtsberatung. Massgeblich sind Gesetz, GAV, Vertrag und der konkrete
             Sachverhalt. Für die Wahrung einer Frist und die Einhaltung von Formvorschriften
             im Einzelfall ist allein die nutzende Person verantwortlich.

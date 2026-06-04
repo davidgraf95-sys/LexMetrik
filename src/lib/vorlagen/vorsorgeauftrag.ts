@@ -177,7 +177,7 @@ export const VA_SCHEMA: VorlageSchema = {
   version: '1.0.0 (Rechtsstand Art. 360–369 ZGB, in Kraft seit 1.1.2013)',
   titel: 'Vorsorgeauftrag',
   disclaimer:
-    'Entwurf — erstellt mit Lexmetrik. Keine Rechtsberatung. Gültig ist der Vorsorgeauftrag nur ' +
+    'Entwurf — erstellt mit LexMetrik. Keine Rechtsberatung. Gültig ist der Vorsorgeauftrag nur ' +
     'vollständig eigenhändig (von Hand geschrieben, datiert, unterzeichnet, Art. 361 Abs. 2 ZGB) ' +
     'oder öffentlich beurkundet (Art. 361 Abs. 1 ZGB); wirksam erst nach Validierung durch die ' +
     'KESB (Art. 363 ZGB). Bei komplexen Vermögensverhältnissen oder Unternehmen: Notariat bzw. ' +

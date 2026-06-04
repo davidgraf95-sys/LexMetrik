@@ -89,7 +89,7 @@ export const TESTAMENT_SCHEMA: VorlageSchema = {
   version: '1.0.0 (Rechtsstand 1.1.2023, AS 2021 312)',
   titel: 'Letztwillige Verfügung (Testament)',
   disclaimer:
-    'Entwurf — erstellt mit Lexmetrik. Keine Rechtsberatung. Nur die vollständig ' +
+    'Entwurf — erstellt mit LexMetrik. Keine Rechtsberatung. Nur die vollständig ' +
     'eigenhändig (von Hand) geschriebene, datierte und unterschriebene Fassung ist ' +
     'gültig (Art. 505 Abs. 1 ZGB).',
   bausteine: [

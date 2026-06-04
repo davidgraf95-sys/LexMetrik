@@ -1,10 +1,10 @@
-// Lexmetrik-Bildmarke (Designsystem §6): gestempeltes §-Siegel mit feiner
+// LexMetrik-Bildmarke (Designsystem §6): gestempeltes §-Siegel mit feiner
 // Messing-Schnittkante und graduiertem Bogen — das Siegel trifft die Messskala.
 // Wortmarke zweiton: «Lex» Tinte, «metrik» Messing-700 (kontraststark).
 
-export function LexmetrikSiegel({ size = 32 }: { size?: number }) {
+export function LexMetrikSiegel({ size = 32 }: { size?: number }) {
   return (
-    <svg viewBox="0 0 48 48" width={size} height={size} role="img" aria-label="Lexmetrik" aria-hidden="true">
+    <svg viewBox="0 0 48 48" width={size} height={size} role="img" aria-label="LexMetrik" aria-hidden="true">
       <rect x="3" y="3" width="42" height="42" rx="9" fill="var(--ink-900)" />
       <path d="M12 3 H36 A9 9 0 0 1 45 12" fill="none"
         stroke="var(--brass-500)" strokeWidth="1.5" strokeLinecap="round" />
@@ -20,11 +20,11 @@ export function LexmetrikSiegel({ size = 32 }: { size?: number }) {
   );
 }
 
-export function LexmetrikWortmarke({ className = '' }: { className?: string }) {
+export function LexMetrikWortmarke({ className = '' }: { className?: string }) {
   return (
     <span className={`font-display font-semibold tracking-[.01em] ${className}`}>
       <span className="text-ink-900">Lex</span>
-      <span className="text-brass-700">metrik</span>
+      <span className="text-brass-700">Metrik</span>
     </span>
   );
 }

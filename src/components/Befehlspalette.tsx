@@ -21,8 +21,8 @@ const SEITEN: Eintrag[] = [
   { id: 'p-start', titel: 'Allgemeine Rechner & Vorlagen', meta: 'Startseite', href: '/', gruppe: 'Seiten', icon: 'house' },
   { id: 'p-fachpersonen', titel: 'Fachpersonen — vollständiger Katalog', meta: 'Experten-Panel', href: '/fachpersonen', gruppe: 'Seiten', icon: 'scale' },
   { id: 'p-vorlagen', titel: 'Vorlagen durchsuchen', meta: 'Modus «Vorlagen»', href: '/?modus=vorlagen', gruppe: 'Seiten', icon: 'document' },
-  { id: 'p-methodik', titel: 'Methodik — wie Lexmetrik rechnet', meta: 'Seite', href: '/methodik', gruppe: 'Seiten', icon: 'clipboard' },
-  { id: 'p-ueber', titel: 'Über Lexmetrik', meta: 'Seite', href: '/ueber', gruppe: 'Seiten', icon: 'document' },
+  { id: 'p-methodik', titel: 'Methodik — wie LexMetrik rechnet', meta: 'Seite', href: '/methodik', gruppe: 'Seiten', icon: 'clipboard' },
+  { id: 'p-ueber', titel: 'Über LexMetrik', meta: 'Seite', href: '/ueber', gruppe: 'Seiten', icon: 'document' },
 ];
 
 function trifft(k: CatalogItem, q: string, qKompakt: string): boolean {
@@ -180,7 +180,7 @@ export function Befehlspalette() {
 
             <div className="flex items-center justify-between px-4 py-2 border-t border-line bg-surface">
               <p className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>↑↓ navigieren · ↵ öffnen · esc schliessen</p>
-              <p className="lc-overline text-ink-500">Lexmetrik</p>
+              <p className="lc-overline text-ink-500">LexMetrik</p>
             </div>
           </div>
         </div>

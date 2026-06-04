@@ -174,7 +174,7 @@ export const PV_SCHEMA: VorlageSchema = {
   version: '1.0.0 (Rechtsstand Art. 370–373 ZGB, in Kraft seit 1.1.2013)',
   titel: 'Patientenverfügung',
   disclaimer:
-    'Entwurf — erstellt mit Lexmetrik. Keine Rechts- oder medizinische Beratung. Gültig wird die ' +
+    'Entwurf — erstellt mit LexMetrik. Keine Rechts- oder medizinische Beratung. Gültig wird die ' +
     'Patientenverfügung erst mit handschriftlichem Datum und eigenhändiger Unterschrift ' +
     '(Art. 371 Abs. 1 ZGB). Empfohlen: Kopien an Vertretungsperson und Hausarztpraxis; ' +
     'Erneuerung der Unterschrift etwa alle zwei Jahre (Empfehlung, keine Pflicht).',

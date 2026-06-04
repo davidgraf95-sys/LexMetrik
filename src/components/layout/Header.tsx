@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LexmetrikSiegel, LexmetrikWortmarke } from './Logo';
+import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 import { StufenSchalter } from '../StufenSchalter';
 import { Befehlspalette } from '../Befehlspalette';
 import { SprachUmschalter } from '../SprachUmschalter';
@@ -31,9 +31,9 @@ export function Header() {
           Mobil: nur Siegel + Stufenwahl + Suche — Methodik/Über erst ab sm
           (im Footer und in der Befehlspalette weiterhin erreichbar). */}
       <div className="max-w-content mx-auto px-4 sm:px-6 h-16 grid grid-cols-[auto_1fr_auto] sm:grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-3">
-        <Link to="/" className="inline-flex items-center gap-2 no-underline justify-self-start shrink-0" aria-label="Lexmetrik — Startseite">
-          <LexmetrikSiegel size={30} />
-          <LexmetrikWortmarke className="text-[1.35rem] hidden md:block" />
+        <Link to="/" className="inline-flex items-center gap-2 no-underline justify-self-start shrink-0" aria-label="LexMetrik — Startseite">
+          <LexMetrikSiegel size={30} />
+          <LexMetrikWortmarke className="text-[1.35rem] hidden md:block" />
         </Link>
 
         <div className="justify-self-center min-w-0">

@@ -8,7 +8,7 @@ import { registriereBerichtFonts } from './fonts';
 // State-of-the-art-Bericht mit eingebetteten Markenschriften:
 // Fraunces (Display-Serife: Titel, Sektionsköpfe) · Geist (Sans: Lauftext)
 // · Geist Mono (Kennzahlen, Overlines, Pills, Formeln) — exakt die Web-
-// Typografie. Layout: A4, 20-mm-Raster, Lexmetrik-Kopf mit Goldlinie,
+// Typografie. Layout: A4, 20-mm-Raster, LexMetrik-Kopf mit Goldlinie,
 // Ergebnis-Hero, Eingaben-Tabelle, unzerreissbare Rechenweg-Schritte mit
 // klickbaren Norm-Pills, sichtbare Fedlex-URLs, Fusszeile «Seite X von Y».
 // Die Fonts (~0.4 MB) liegen NUR in diesem lazy geladenen Chunk.
@@ -124,7 +124,7 @@ class Zeichner {
 
   /** 1. Kopf: Wortmarke · Meta · Fraunces-Titel · Rechtsgrundlage · Goldlinie */
   kopf(titel: string, rechtsgrundlage: string | undefined, erstellt: string) {
-    this.overline('Lexmetrik', MARGIN, this.y, BRASS_TEXT);
+    this.overline('LexMetrik', MARGIN, this.y, BRASS_TEXT);
     this.doc.setFont('GeistMono', 'normal');
     this.doc.setFontSize(7);
     this.doc.setTextColor(...DEZENT);
