@@ -11,10 +11,12 @@ import { sansAmp } from '../components/typografie';
 
 export function Fachpersonen() {
   const [modus, setModus] = useModus();
-  const alleExperte = ALLE_KARTEN.filter((k) => k.tier === 'experte');
-  const karten = alleExperte.filter((k) => k.modus === modus);
-  const geprueft = alleExperte.filter((k) => k.status === 'geprüft' && k.modus === 'rechner');
-  const gebiete = RECHTSGEBIETE.filter((g) => alleExperte.some((k) => k.rechtsgebiet === g)).length;
+  // Fachpersonen sehen den VOLLSTÄNDIGEN Katalog (beide Stufen);
+  // die Basis-Seite zeigt nur die allgemeinen Karten (tier 'frei').
+  const alle = ALLE_KARTEN;
+  const karten = alle.filter((k) => k.modus === modus);
+  const geprueft = alle.filter((k) => k.status === 'geprüft' && k.modus === 'rechner');
+  const gebiete = RECHTSGEBIETE.filter((g) => alle.some((k) => k.rechtsgebiet === g)).length;
 
   return (
     <div className="space-y-16">
@@ -25,9 +27,9 @@ export function Fachpersonen() {
           Rechner für die anwaltliche Praxis.
         </h1>
         <p className="text-body-l text-ink-600 max-w-reading">
-          Verfahrens- und Rechtsmittelfristen, Verjährung, Betreibung und Konkurs, Zuständigkeit
-          und mehr — mit nachvollziehbarem Rechenweg und exakten Normverweisen, wie auf der
-          Basis-Stufe.
+          Der vollständige Katalog: Verfahrens- und Rechtsmittelfristen, Verjährung, Betreibung
+          und Konkurs, Zuständigkeit und mehr — einschliesslich aller allgemeinen Rechner und
+          Vorlagen, mit nachvollziehbarem Rechenweg und exakten Normverweisen.
         </p>
 
         {/* Kennzahlen-Messleiste: Skala als Ablesekante, Haarlinien als Teilung */}
@@ -35,8 +37,8 @@ export function Fachpersonen() {
           <span className="scale-rule block" aria-hidden />
           <dl className="flex flex-wrap divide-x divide-line border-b border-line">
             {[
-              { wert: alleExperte.filter((k) => k.modus === 'rechner').length, label: 'Rechner' },
-              { wert: alleExperte.filter((k) => k.modus === 'vorlage').length, label: 'Vorlagen' },
+              { wert: alle.filter((k) => k.modus === 'rechner').length, label: 'Rechner' },
+              { wert: alle.filter((k) => k.modus === 'vorlage').length, label: 'Vorlagen' },
               { wert: geprueft.length, label: 'geprüft' },
               { wert: gebiete, label: 'Rechtsgebiete' },
             ].map((s) => (
