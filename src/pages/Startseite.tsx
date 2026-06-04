@@ -42,32 +42,11 @@ function ExpertenTeaser() {
   );
 }
 
-// Modus-abhängiger Sub-Hero (Texte gemäss Umbau-Anweisung 4.3/4.4)
-export function ModusHero({ modus }: { modus: Modus }) {
-  return modus === 'rechner' ? (
-    <div className="space-y-2 max-w-reading">
-      <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">
-        Fristen, Beträge und Zuständigkeiten — transparent berechnet.
-      </h2>
-      <p className="text-body-s text-ink-500">
-        Feste Rechenregeln statt Schätzung: gleiche Eingaben ergeben immer dasselbe Ergebnis,
-        jeder Schritt ist überprüfbar und jede Norm direkt verlinkt.
-      </p>
-    </div>
-  ) : (
-    <div className="space-y-2 max-w-reading">
-      <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight">
-        Rechtsdokumente — aus geprüften Bausteinen zusammengestellt.
-      </h2>
-      <p className="text-body-s text-ink-500">
-        Sie beantworten strukturierte Fragen, Lexmetrik setzt das Dokument aus festen, juristisch
-        geprüften Textbausteinen zusammen — ohne Sprachmodell, nachvollziehbar Baustein für Baustein.
-        Das Ergebnis ist ein Entwurf zur Orientierung; massgebliche Formvorschriften (z. B.
-        Eigenhändigkeit oder öffentliche Beurkundung) werden vor dem Download deutlich angezeigt.
-      </p>
-    </div>
-  );
-}
+// Kurzbeschrieb je Modus — eine Zeile unter dem Umschalter in der Seitenleiste.
+export const MODUS_BESCHRIEB: Record<Modus, string> = {
+  rechner: 'Fristen, Beträge und Zuständigkeiten — nach festen Regeln, jede Norm direkt verlinkt.',
+  vorlage: 'Dokumente aus geprüften Bausteinen — als Entwurf, mit Form-Gate vor dem Download.',
+};
 
 export function Startseite() {
   const [modus, setModus] = useModus();
@@ -78,48 +57,33 @@ export function Startseite() {
   } as const;
 
   return (
-    <div className="space-y-16">
-      {/* Übergreifender Hero (modusunabhängig) — rechts das Instrumenten-Visual */}
+    <div className="space-y-12">
+      {/* Kompakter Hero — die Karten kommen direkt danach */}
       <section className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
-      <div className="space-y-5 max-w-reading">
-        <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.5rem] sm:text-display">
-          Schweizer Recht: berechnen und erstellen — Schritt für Schritt nachvollziehbar.
-        </h1>
-        <p className="text-body-l text-ink-600">
-          Lexmetrik rechnet Fristen, Beträge und Quoten nach festen Regeln und stellt Rechtsdokumente
-          aus geprüften Textbausteinen zusammen — vom Testament über den Vorsorgeauftrag bis zu
-          Gesuchen, Klagen und Einsprachen. Beides regelbasiert: gleiche Eingaben ergeben immer
-          dasselbe Ergebnis, jede angewandte Norm ist direkt mit dem Gesetzestext verlinkt, jeder
-          Schritt wird offengelegt.
-        </p>
-        {/* Tagline-Streifen */}
-        <p className="text-body-s text-ink-500">
-          Lexmetrik rät nicht — es rechnet und stellt zusammen. Feste Regeln statt Sprachmodell.
-        </p>
-        {/* Anker-Streifen: Sprungmarken zu den Modi */}
-        <nav aria-label="Modi" className="lc-overline flex flex-wrap gap-x-2 gap-y-1 pt-1">
-          {(['rechner', 'vorlage'] as const).map((m, i) => (
-            <span key={m} className="inline-flex gap-x-2">
-              {i > 0 && <span aria-hidden className="text-ink-300">·</span>}
-              <button type="button" onClick={() => setModus(m)}
-                className={`lc-overline no-underline transition-colors ${modus === m ? 'text-brass-700' : 'text-ink-500 hover:text-brass-700'}`}>
-                {m === 'rechner' ? 'Rechner' : 'Vorlagen'}
-              </button>
-            </span>
-          ))}
-        </nav>
-      </div>
-      <HeroVisual className="hidden lg:block w-[280px] xl:w-[320px] justify-self-end" />
+        <div className="space-y-4 max-w-reading">
+          <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.25rem] sm:text-[2.75rem]">
+            Schweizer Recht: berechnen und erstellen.
+          </h1>
+          <p className="text-body-l text-ink-600">
+            Fristen, Beträge und Rechtsdokumente nach festen Regeln — Schritt für Schritt
+            nachvollziehbar, jede Norm direkt mit dem Gesetzestext verlinkt. Kein Sprachmodell:
+            gleiche Eingaben ergeben immer dasselbe Ergebnis.
+          </p>
+        </div>
+        <HeroVisual className="hidden xl:block w-[220px] justify-self-end" />
       </section>
 
-      {/* Primärweiche + modusabhängiger Sub-Hero */}
-      <div className="space-y-6">
-        <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
-        <ModusHero modus={modus} />
-      </div>
-
-      {/* Katalog der Basis-Stufe im aktiven Modus */}
-      <Katalog karten={karten} sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN} />
+      {/* Katalog der Basis-Stufe: Modus-Wahl + Filter in der Seitenleiste */}
+      <Katalog
+        karten={karten}
+        sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN}
+        seitenleisteKopf={
+          <div className="space-y-2">
+            <ModusSchalter breit modus={modus} onChange={setModus} anzahl={anzahl} />
+            <p className="text-xs text-ink-500 leading-relaxed">{MODUS_BESCHRIEB[modus]}</p>
+          </div>
+        }
+      />
 
       {/* Experten-Panel-Teaser (Rechner-Modus) */}
       {modus === 'rechner' && <ExpertenTeaser />}

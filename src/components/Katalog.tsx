@@ -45,7 +45,7 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
             <span className="scale-rule block mt-4" aria-hidden />
           </span>
         </summary>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-10 pb-6 sm:pb-10 pt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 px-6 sm:px-10 pb-6 sm:pb-10 pt-2">
           {sortiert.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
         </div>
       </details>
@@ -53,80 +53,107 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
   );
 }
 
-// ─── Filterleiste: Rechtsgebiet (Mehrfachauswahl) · Status · Freitextsuche ─
+// ─── Seitenleiste: Suche · Status · Rechtsgebiete · Sprungmarken · Legende ──
+// Vertikal, auf Desktop klebend — die Karten rücken dadurch nach oben.
 
-function Filterleiste(props: {
+function Seitenleiste(props: {
   rechtsgebiete: string[];
   gebiete: Set<string>; toggleGebiet: (g: string) => void; reset: () => void;
   nurGeprueft: boolean; setNurGeprueft: (v: boolean) => void;
   suche: string; setSuche: (v: string) => void;
+  sprungmarken: { id: string; numeral: string; title: string; anzahl: number }[];
 }) {
-  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche } = props;
+  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche, sprungmarken } = props;
   return (
-    <section aria-label="Filter" className="space-y-4">
-      <SectionHead>Rechner filtern</SectionHead>
-      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-        <input
-          type="search"
-          value={suche}
-          onChange={(e) => setSuche(e.target.value)}
-          placeholder="Suchen (z. B. Kündigung, Betreibung, Art. 336c) …"
-          className="lc-input sm:max-w-sm"
-          aria-label="Rechner durchsuchen"
-        />
-        {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur geprüfte */}
-        <div className="flex gap-1 p-1 bg-surface rounded-xl w-fit" role="group" aria-label="Status">
-          {([['Alle', false], ['Nur geprüfte', true]] as const).map(([label, wert]) => (
-            <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
-              aria-pressed={nurGeprueft === wert}
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
-                nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-              }`}>
-              {label}
-            </button>
-          ))}
-        </div>
+    <section aria-label="Filter" className="space-y-5">
+      <input
+        type="search"
+        value={suche}
+        onChange={(e) => setSuche(e.target.value)}
+        placeholder="Suchen (z. B. Art. 336c) …"
+        className="lc-input"
+        aria-label="Katalog durchsuchen"
+      />
+
+      {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur geprüfte */}
+      <div className="flex gap-1 p-1 bg-surface border border-line rounded-xl" role="group" aria-label="Status">
+        {([['Alle', false], ['Nur geprüfte', true]] as const).map(([label, wert]) => (
+          <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
+            aria-pressed={nurGeprueft === wert}
+            className={`flex-1 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+              nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
+            }`}>
+            {label}
+          </button>
+        ))}
       </div>
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Rechtsgebiete">
-        {rechtsgebiete.map((g) => {
-          const an = gebiete.has(g);
-          return (
-            <button key={g} type="button" onClick={() => toggleGebiet(g)} aria-pressed={an}
-              className={`text-body-s font-medium rounded-full px-3.5 py-1.5 border transition-colors ${
-                an
-                  ? 'bg-ink-900 text-paper border-ink-900'
-                  : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
-              }`}>
-              {g}
-            </button>
-          );
-        })}
+
+      {/* Sprungmarken: Übersicht über die Sektionen */}
+      {sprungmarken.length > 0 && (
+        <nav aria-label="Sektionen" className="space-y-1">
+          <p className="lc-overline mb-2">Übersicht</p>
+          {sprungmarken.map((s) => (
+            <a key={s.id} href={`#${s.id}`}
+              className="flex items-baseline justify-between gap-2 px-2 py-1 -mx-2 rounded-md text-body-s text-ink-600 no-underline hover:text-ink-900 hover:bg-brass-100/40 transition-colors">
+              <span className="truncate"><span className="num text-brass-700 mr-1.5">{s.numeral}</span>{s.title}</span>
+              <span className="num text-xs text-ink-500">{s.anzahl}</span>
+            </a>
+          ))}
+        </nav>
+      )}
+
+      {/* Rechtsgebiete */}
+      <div className="space-y-2">
+        <p className="lc-overline">Rechtsgebiet</p>
+        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Rechtsgebiete">
+          {rechtsgebiete.map((g) => {
+            const an = gebiete.has(g);
+            return (
+              <button key={g} type="button" onClick={() => toggleGebiet(g)} aria-pressed={an}
+                className={`text-xs font-medium rounded-full px-2.5 py-1 border transition-colors ${
+                  an
+                    ? 'bg-ink-900 text-paper border-ink-900'
+                    : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
+                }`}>
+                {g}
+              </button>
+            );
+          })}
+        </div>
         {gebiete.size > 0 && (
           <button type="button" onClick={reset}
-            className="text-body-s text-brass-700 hover:text-brass-600 px-2 py-1.5">
+            className="text-body-s text-brass-700 hover:text-brass-600">
             Zurücksetzen
           </button>
         )}
       </div>
+
       {/* Status-Legende: erklärt die Karten-Semantik einmalig */}
-      <p className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-500">
-        <span className="inline-flex items-center gap-1.5">
+      <div className="space-y-1 text-xs text-ink-500 pt-1 border-t border-line">
+        <p className="inline-flex items-center gap-1.5 pt-2">
           <span aria-hidden className="inline-block w-4 h-3 rounded-[3px] bg-surface-raised border border-line border-t-2 border-t-brass-500" />
           Goldrand = geprüft, sofort nutzbar
-        </span>
-        <span className="inline-flex items-center gap-1.5">
+        </p>
+        <p className="inline-flex items-center gap-1.5">
           <span aria-hidden className="inline-block w-4 h-3 rounded-[3px] bg-surface-raised border border-line opacity-50" />
           gedämpft = in Vorbereitung
-        </span>
-      </p>
+        </p>
+      </div>
     </section>
   );
 }
 
-// ─── Katalog: Filter + Sektionen über der übergebenen Kartenmenge ──────────
+// ─── Katalog: klebende Seitenleiste (Filter/Übersicht) + Sektionen ──────────
 // `sektionen` bestimmt die Gliederung (Rechner-Output-Typen bzw. Dokument-Typen).
+// `seitenleisteKopf`/`seitenleisteFuss` sind Slots für seitenspezifische
+// Elemente (z. B. Modus-Umschalter, Direkteinstieg).
 
-export function Katalog({ karten, sektionen = SEKTIONEN }: { karten: CalculatorCard[]; sektionen?: Sektion[] }) {
+export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteKopf, seitenleisteFuss }: {
+  karten: CalculatorCard[];
+  sektionen?: Sektion[];
+  seitenleisteKopf?: React.ReactNode;
+  seitenleisteFuss?: React.ReactNode;
+}) {
   const [gebiete, setGebiete] = useState<Set<string>>(new Set());
   const [nurGeprueft, setNurGeprueft] = useState(false);
   const [suche, setSuche] = useState('');
@@ -156,39 +183,52 @@ export function Katalog({ karten, sektionen = SEKTIONEN }: { karten: CalculatorC
   const filterAktiv = q !== '' || gebiete.size > 0 || nurGeprueft;
   const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setNurGeprueft(false); };
 
-  return (
-    <>
-      {/* Filter (clientseitig); leere Sektionen werden ausgeblendet */}
-      <Filterleiste
-        rechtsgebiete={rechtsgebiete}
-        gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
-        nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
-        suche={suche} setSuche={setSuche}
-      />
+  // Sprungmarken für die Seitenleisten-Übersicht (nur belegte Sektionen)
+  const sprungmarken = sektionen
+    .map((s) => ({ id: s.id, numeral: s.numeral, title: s.title, anzahl: treffer.filter((k) => k.art === s.art).length }))
+    .filter((s) => s.anzahl > 0);
 
-      {/* Leerer Zustand: kein stilles Verschwinden der Sektionen */}
-      {treffer.length === 0 ? (
-        <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
-          <p className="lc-overline">Keine Treffer</p>
-          <h2 className="font-display font-semibold text-ink-900 text-h2">
-            {q !== '' ? <>Nichts gefunden für «{suche.trim()}».</> : 'Die gewählten Filter ergeben keine Treffer.'}
-          </h2>
-          <p className="text-body-s text-ink-500 max-w-reading mx-auto">
-            Versuchen Sie einen anderen Begriff (z. B. einen Gesetzesartikel wie «Art. 336c») oder
-            setzen Sie die Filter zurück.
-          </p>
-          {filterAktiv && (
-            <button type="button" onClick={allesZuruecksetzen} className="lc-btn-outline mt-2">
-              Filter zurücksetzen
-            </button>
-          )}
-        </section>
-      ) : (
-        /* Vier Sektionen (datengetrieben aus startseiteConfig) */
-        sektionen.map((s) => (
-          <TypSektion key={s.id} sektion={s} karten={treffer.filter((k) => k.art === s.art)} />
-        ))
-      )}
-    </>
+  return (
+    <div className="lg:grid lg:grid-cols-[270px_minmax(0,1fr)] lg:gap-10 lg:items-start space-y-8 lg:space-y-0">
+      {/* Seitenleiste: klebt auf Desktop unter dem Header */}
+      <aside className="lg:sticky lg:top-28 space-y-6">
+        {seitenleisteKopf}
+        <Seitenleiste
+          rechtsgebiete={rechtsgebiete}
+          gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
+          nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
+          suche={suche} setSuche={setSuche}
+          sprungmarken={sprungmarken}
+        />
+        {seitenleisteFuss}
+      </aside>
+
+      {/* Karten: ab hier beginnt das Produkt */}
+      <div className="space-y-8 min-w-0">
+        {treffer.length === 0 ? (
+          /* Leerer Zustand: kein stilles Verschwinden der Sektionen */
+          <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
+            <p className="lc-overline">Keine Treffer</p>
+            <h2 className="font-display font-semibold text-ink-900 text-h2">
+              {q !== '' ? <>Nichts gefunden für «{suche.trim()}».</> : 'Die gewählten Filter ergeben keine Treffer.'}
+            </h2>
+            <p className="text-body-s text-ink-500 max-w-reading mx-auto">
+              Versuchen Sie einen anderen Begriff (z. B. einen Gesetzesartikel wie «Art. 336c») oder
+              setzen Sie die Filter zurück.
+            </p>
+            {filterAktiv && (
+              <button type="button" onClick={allesZuruecksetzen} className="lc-btn-outline mt-2">
+                Filter zurücksetzen
+              </button>
+            )}
+          </section>
+        ) : (
+          /* Vier Sektionen (datengetrieben aus startseiteConfig) */
+          sektionen.map((s) => (
+            <TypSektion key={s.id} sektion={s} karten={treffer.filter((k) => k.art === s.art)} />
+          ))
+        )}
+      </div>
+    </div>
   );
 }
