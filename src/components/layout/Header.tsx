@@ -1,18 +1,35 @@
 import { Link, useLocation } from 'react-router-dom';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
-import { StufenSchalter } from '../StufenSchalter';
 import { Befehlspalette } from '../Befehlspalette';
 import { SprachUmschalter } from '../SprachUmschalter';
 
-// Header neu (zweizeilig, Instrumenten-Look):
-// 1. Feinschrift-Leiste — Mono-Overline mit Einordnung links und Pflichthinweis
-//    rechts (immer sichtbar, nicht mehr nur ab md).
-// 2. Hauptzeile — Wortmarke links, Stufenwahl (Basis ↔ Fachpersonen) exakt
-//    zentriert als primäre Navigation, sekundäre Links (Methodik, Über) rechts.
+// Header (Iteration 3): ruhiges ZWEI-ZONEN-Layout — Logo links, Aktions-
+// cluster rechts (Suche/⌘K · Sprache · Methodik · Über · Fachpersonen-
+// Button), Mitte bewusst leer. Der frühere Stufen-Umschalter ist aufgelöst:
+// «/» ist der Default; ein einzelner, gerichteter Button führt in den
+// Fachpersonenbereich (gekapselte Route, später Zugriffs-Wrapper) und von
+// dort zurück. Der MODUS-Umschalter (Rechner/Vorlagen) bleibt unberührt.
 const NAV = [
   { to: '/methodik', label: 'Methodik', match: (p: string) => p === '/methodik' },
   { to: '/ueber', label: 'Über', match: (p: string) => p === '/ueber' },
 ];
+
+// Kontextabhängiger Stufen-Button: Hinweg und Rückweg; trägt ?modus= weiter.
+function FachpersonenButton() {
+  const { pathname, search } = useLocation();
+  const imFachbereich = pathname.startsWith('/fachpersonen');
+  return (
+    <Link
+      to={{ pathname: imFachbereich ? '/' : '/fachpersonen', search }}
+      className="inline-flex items-center gap-1 h-9 px-2.5 sm:px-3 rounded-lg border border-brass-400 bg-surface text-body-s font-medium text-brass-700 no-underline hover:bg-brass-100/60 hover:border-brass-500 transition-colors whitespace-nowrap">
+      {imFachbereich ? (
+        <>← <span>Allgemein</span></>
+      ) : (
+        <><span className="hidden sm:inline">Für&nbsp;</span><span>Fachpersonen</span> →</>
+      )}
+    </Link>
+  );
+}
 
 export function Header() {
   const { pathname } = useLocation();
@@ -27,20 +44,14 @@ export function Header() {
         </div>
       </div>
 
-      {/* Hauptzeile: Grid hält die Stufenwahl exakt mittig.
-          Mobil: nur Siegel + Stufenwahl + Suche — Methodik/Über erst ab sm
-          (im Footer und in der Befehlspalette weiterhin erreichbar). */}
-      <div className="max-w-content mx-auto px-4 sm:px-6 h-16 grid grid-cols-[auto_1fr_auto] sm:grid-cols-[1fr_auto_1fr] items-center gap-2 sm:gap-3">
-        <Link to="/" className="inline-flex items-center gap-2 no-underline justify-self-start shrink-0" aria-label="LexMetrik — Startseite">
+      {/* Hauptzeile: Logo links · Aktionscluster rechts · Mitte leer */}
+      <div className="max-w-content mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+        <Link to="/" className="inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik — Startseite">
           <LexMetrikSiegel size={30} />
           <LexMetrikWortmarke className="text-[1.35rem] hidden md:block" />
         </Link>
 
-        <div className="justify-self-center min-w-0">
-          <StufenSchalter />
-        </div>
-
-        <nav className="justify-self-end flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <nav className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* Suche / Befehlspalette (⌘K) */}
           <Befehlspalette />
           {/* Sprache (en/fr/it «in Bearbeitung», DE-Fallback) */}
@@ -60,6 +71,8 @@ export function Header() {
               );
             })}
           </div>
+          {/* Gerichteter Stufen-Zugang: einziges umrandetes Element rechts aussen */}
+          <FachpersonenButton />
         </nav>
       </div>
     </header>

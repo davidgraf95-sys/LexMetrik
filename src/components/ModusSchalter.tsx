@@ -3,8 +3,7 @@ import type { Modus } from '../lib/startseiteConfig';
 
 // Primärweiche «Rechner | Vorlagen» — In-Page-Toggle (Modus ist Inhaltsebene,
 // die Stufe bleibt Route). Zustand in der URL (?modus=vorlagen): teilbar und
-// Back-Button-tauglich. Gleiche Anatomie wie der StufenSchalter, eine Stufe
-// prominenter (grössere Segmente).
+// Back-Button-tauglich. Prominentes Segmented Control unter dem Hero.
 
 export function useModus(): [Modus, (m: Modus) => void] {
   const [params, setParams] = useSearchParams();
