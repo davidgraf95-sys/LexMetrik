@@ -256,6 +256,56 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Monatsfristen knüpfen am Tag des fristauslösenden Ereignisses an (nicht am Folgetag) – einheitliche Methode für materielles Recht und Prozessrecht.',
     verifiziert: false,
   },
+
+  // Verjährung (Art. 60, 67, 127 ff. OR)
+  BGE_131_III_61: {
+    aktenzeichen: 'BGE 131 III 61',
+    aussage:
+      'Kenntnis vom Schaden (Art. 60 OR): Umstände zu Existenz, Natur und Elementen des Schadens, die eine Klage zu veranlassen und zu begründen vermögen; genaue Bezifferung nicht vorausgesetzt.',
+    verifiziert: false,
+  },
+  BGE_111_II_55: {
+    aktenzeichen: 'BGE 111 II 55',
+    aussage:
+      'Kenntnis der Person des Ersatzpflichtigen: Identität muss mit Sicherheit bekannt sein; blosser Verdacht genügt nicht.',
+    verifiziert: false,
+  },
+  BGE_135_III_289: {
+    aktenzeichen: 'BGE 135 III 289',
+    aussage:
+      'Kenntnis des Bereicherungsanspruchs (Art. 67 OR): genügend Informationen, sodass eine gerichtliche Geltendmachung vernünftigerweise zumutbar ist.',
+    verifiziert: false,
+  },
+  BGE_137_III_16: {
+    aktenzeichen: 'BGE 137 III 16',
+    aussage:
+      'Vertragliche Schadenersatzforderungen werden mit der Verletzung der Vertragspflicht fällig (nicht erst mit Schadenseintritt) – Beginn der ordentlichen Verjährung.',
+    verifiziert: false,
+  },
+  BGE_146_III_25: {
+    aktenzeichen: 'BGE 146 III 25',
+    aussage:
+      'Absolute Frist läuft ab dem schädigenden Verhalten und kann vor Erkennbarkeit des Schadens ablaufen (Asbest-Spätschäden).',
+    verifiziert: false,
+  },
+  BGE_147_III_419: {
+    aktenzeichen: 'BGE 147 III 419',
+    aussage:
+      'Art. 138 Abs. 1 OR: Neubeginn der Verjährung erst mit Abschluss des Rechtsstreits vor der befassten Instanz (Ausschöpfung des Instanzenzugs).',
+    verifiziert: false,
+  },
+  BGE_132_III_226: {
+    aktenzeichen: 'BGE 132 III 226',
+    aussage:
+      'Verzicht auf die Verjährungseinrede: Höchstdauer von 10 Jahren bemisst sich ab Verjährungseintritt.',
+    verifiziert: false,
+  },
+  BGE_114_II_335: {
+    aktenzeichen: 'BGE 114 II 335',
+    aussage:
+      'Unterbrechung durch Gläubigerhandlung: Postaufgabe genügt; Kenntnis des Schuldners nicht erforderlich.',
+    verifiziert: false,
+  },
 };
 
 /** Liefert einen Rechtsprechungshinweis aus dem zentralen Register. */

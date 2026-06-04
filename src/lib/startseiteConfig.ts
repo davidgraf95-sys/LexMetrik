@@ -168,8 +168,20 @@ const KARTEN: Record<string, CalculatorCard> = {
   verjaehrung: {
     id: 'verjaehrung', art: 'frist', rechtsgebiet: 'Vertrag / OR',
     title: 'Verjährung',
-    description: 'Ordentliche und kurze Verjährung sowie deliktische und bereicherungsrechtliche Ansprüche.',
-    status: 'geplant', norms: [],
+    description: 'Ordentliche und kurze Verjährung sowie deliktische und bereicherungsrechtliche Ansprüche — mit Stillstand, Unterbrechung und Einredeverzicht.',
+    status: 'geprüft',
+    norms: [
+      // Art. 60 OR – unerlaubte Handlung (3/10 bzw. 3/20 Jahre)
+      { label: 'Art. 60 OR', url: fedlexUrl('OR', '60'), verified: true },
+      // Art. 67 OR – ungerechtfertigte Bereicherung (3/10 Jahre)
+      { label: 'Art. 67 OR', url: fedlexUrl('OR', '67'), verified: true },
+      // Art. 127–142 OR – Verjährungsordnung (Spanne: Anker auf führenden Artikel)
+      { label: 'Art. 127–142 OR', url: fedlexUrl('OR', '127'), verified: true },
+    ],
+    href: '/rechner/verjaehrung',
+    keywords: ['Verjährung', 'verjährt', 'Frist', 'Forderung', 'unerlaubte Handlung', 'Bereicherung', 'Unterbrechung', 'Verzicht', 'Einrede'],
+    related: ['verzugszins'],
+    icon: 'clock',
   },
   gewaehrleistung: {
     id: 'gewaehrleistung', art: 'frist', rechtsgebiet: 'Vertrag / OR',

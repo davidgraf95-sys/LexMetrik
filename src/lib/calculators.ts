@@ -39,6 +39,9 @@ export const CALCULATORS: Calculator[] = [
   { slug: 'schkg-fristen', titel: 'Betreibungsfristen', kategorie: 'SchKG',
     kurzbeschrieb: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
     normen: ['Art. 56 SchKG', 'Art. 63 SchKG', 'Art. 145 ZPO'], status: 'geprüft', icon: 'clipboard' },
+  { slug: 'verjaehrung', titel: 'Verjährung', kategorie: 'Obligationenrecht',
+    kurzbeschrieb: 'Verjährung vertraglicher, deliktischer und bereicherungsrechtlicher Forderungen — mit Stillstand, Unterbrechung und Einredeverzicht.',
+    normen: ['Art. 60 OR', 'Art. 67 OR', 'Art. 127 OR', 'Art. 128 OR', 'Art. 132 OR'], status: 'geprüft', icon: 'clock' },
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {
