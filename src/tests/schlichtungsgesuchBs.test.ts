@@ -125,3 +125,16 @@ describe('Schlichtungsgesuch BS — Akzeptanztests', () => {
     expect(sgMaengel(basis({ geld: { betrag: '3000' } }))).toEqual([]);
   });
 });
+
+describe('Bug-Check-Regressionen', () => {
+  it('Dezimal-Komma wird in allen Schichten gleich behandelt', () => {
+    const a = basis({ geld: { betrag: '2,500' } });
+    expect(sgMaengel(a)).toEqual([]); // kein «beziffern»-Mangel
+    const r = sgZusammenstellen(a);
+    expect(texte(r)).toContain('CHF 2.50'); // 2,500 = 2.5 — konsistent zu fmtCHF
+  });
+  it('Antrag auf Entscheid: Mangel auch bei nicht-vermögensrechtlichem Typ (stale state)', () => {
+    const m = sgMaengel(basis({ streitgegenstandTyp: 'uebrige_zivilsache', streitwert: '1500', antragEntscheid: true, freieRechtsbegehren: ['x'] }));
+    expect(m.some((x) => x.text.includes('212'))).toBe(true);
+  });
+});

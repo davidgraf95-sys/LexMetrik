@@ -138,7 +138,8 @@ export function sgStreitwert(a: SgAnswers): number | null {
   // betrag als vorläufiger Streitwert (Art. 85 ZPO); sonst manuelle Angabe.
   const roh = a.geld?.betrag ?? a.unbeziffert?.mindestbetrag ?? a.streitwert;
   if (roh == null || roh === '') return null;
-  const n = Number(String(roh).replace(/['\s]/g, ''));
+  // gleiche Normalisierung wie fmtCHF (Apostroph, Leerzeichen, Dezimal-Komma)
+  const n = Number(String(roh).replace(/['\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) ? n : null;
 }
 
@@ -166,7 +167,7 @@ function parteiVollstaendig(p: SgPartei): boolean {
 
 export function sgMaengel(a: SgAnswers): SgMangel[] {
   const m: SgMangel[] = [];
-  const num = (s?: string) => Number(String(s ?? '').replace(/['\s]/g, ''));
+  const num = (s?: string) => Number(String(s ?? '').replace(/['\s]/g, '').replace(',', '.')); // wie fmtCHF
   if (!a.streitgegenstandTyp) m.push({ schritt: 0, text: 'Art des Streitgegenstands wählen.' });
   if (!a.baselForumBestaetigt) m.push({ schritt: 0, text: 'Basler Gerichtsstand bestätigen (Art. 10 ff. ZPO) — Voraussetzung für den Download.' });
   if (a.klaeger.length < 1 || !a.klaeger.every(parteiVollstaendig)) m.push({ schritt: 1, text: 'Klagende Partei(en) vollständig erfassen (Name, Strasse, 4-stellige PLZ, Ort).' });
@@ -190,7 +191,9 @@ export function sgMaengel(a: SgAnswers): SgMangel[] {
   }
   if (!a.streitgegenstand.trim()) m.push({ schritt: 4, text: 'Streitgegenstand kurz umschreiben (Pflicht, Art. 202 Abs. 2 ZPO).' });
   const sw = sgStreitwert(a);
-  if (a.antragEntscheid && !(sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG)) {
+  const verm = a.streitgegenstandTyp === 'geldforderung' || a.streitgegenstandTyp === 'arbeitsrecht';
+  // Art. 212 ZPO: nur vermögensrechtlich UND ≤ 2'000 — gleiche Bedingung wie sgZusammenstellen
+  if (a.antragEntscheid && !(verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG)) {
     m.push({ schritt: 5, text: `Antrag auf Entscheid nur bei Streitwert bis CHF ${fmtCHF(String(SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG))} (Art. 212 ZPO).` });
   }
   if (!a.datum) m.push({ schritt: 5, text: 'Datum angeben.' });

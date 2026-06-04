@@ -11,9 +11,10 @@ import { ModusSchalter, useModus } from '../components/ModusSchalter';
 function ExpertenTeaser() {
   const experte = ALLE_KARTEN.filter((k) => k.tier === 'experte');
   const entwurf = experte.filter((k) => k.status === 'entwurf');
+  // Highlights datengetrieben: gebaute zuerst, dann geplante Titel auffüllen
   const highlights = [
     ...entwurf.map((k) => k.title),
-    'Rechtsmittelfristen Bundesgericht', 'Strafrechtliche Verjährung', 'Arrest — Prosequierungsfristen',
+    ...experte.filter((k) => k.status === 'geplant').map((k) => k.title),
   ].slice(0, 6);
 
   return (
