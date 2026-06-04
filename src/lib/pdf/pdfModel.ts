@@ -16,11 +16,22 @@ export type PdfSectionConfig = {
   ergebnis: Berechnungsergebnis;
 };
 
+// Ergebnis-Hero: prominente Hauptkennzahl zuoberst (ersetzt das nackte «OK»).
+// Die Werte stammen aus bereits berechneten Engine-Resultaten — kein neuer Inhalt.
+export type PdfHero = {
+  hauptlabel: string;                       // «Verzugszins»
+  hauptwert: string;                        // «CHF 501.37»
+  nebenwerte?: { label: string; wert: string }[];
+  kontext?: string;                         // «5 % auf CHF 10'000.00 für 366 Tage …»
+};
+
 export type PdfDocConfig = {
   title: string;                      // rechnerspezifischer Dokumenttitel
+  rechtsgrundlage?: string;           // Untertitel im Kopf, z. B. «Berechnung nach Art. 104 OR»
   domain: string;                     // Rechtsgebiet, z. B. 'zpo-fristen'
   fileBase: string;                   // Dateiname-Basis, z. B. 'ZPO-Fristen'
   inputs: Record<string, string>;     // angezeigte Eingaben
+  hero?: PdfHero;                     // optionale Ergebnis-Hauptkennzahl
   sections: PdfSectionConfig[];       // Ergebnis(se) inkl. Status & Rechenweg
   citations?: Normverweis[];          // NUR die tatsächlich einschlägigen Normen;
                                       // fehlt das Feld: Union der Section-Normverweise
@@ -29,15 +40,15 @@ export type PdfDocConfig = {
 };
 
 export type PdfBlock =
-  | { art: 'titel'; text: string }
-  | { art: 'meta'; text: string }
+  | { art: 'kopf'; titel: string; rechtsgrundlage?: string; erstellt: string }
   | { art: 'h2'; text: string }
   | { art: 'h3'; text: string }
-  | { art: 'kv'; key: string; value: string }
+  | { art: 'hero'; hero: PdfHero; status: BerechnungsStatus }
+  | { art: 'tabelle'; zeilen: { label: string; wert: string; rechts: boolean }[] }
   | { art: 'ergebnisbox'; text: string; status: BerechnungsStatus }
   | { art: 'absatz'; text: string; ton: 'normal' | 'warn' | 'dezent' }
-  | { art: 'liste'; text: string; ton: 'normal' | 'warn' }
-  | { art: 'schritt'; nr: number; titel: string; text: string; normen: string; rechtsprechung?: string }
+  | { art: 'hinweisbox'; titel: string; eintraege: string[]; ton: 'warn' | 'normal' }
+  | { art: 'schritt'; nr: number; titel: string; text: string; normen: { label: string; url?: string }[]; rechtsprechung?: string }
   | { art: 'norm'; text: string; url?: string }
   | { art: 'disclaimer'; text: string }
   | { art: 'trenner' };
@@ -49,7 +60,9 @@ export type PdfModel = {
 };
 
 const STATUS_LABEL: Record<BerechnungsStatus, string> = {
-  ok: 'OK',
+  // «Berechnung vollständig» statt nacktem «OK»; abweichende Status bleiben
+  // inhaltstragend (NICHTIG etc.) und unverändert.
+  ok: 'Berechnung vollständig',
   nichtig: 'NICHTIG',
   kein_anspruch: 'KEIN ANSPRUCH',
   unzulaessig: 'UNZULÄSSIG',
@@ -60,31 +73,55 @@ export function statusLabel(s: BerechnungsStatus): string {
   return STATUS_LABEL[s];
 }
 
+// Heuristik für die Eingaben-Tabelle: Beträge/Zahlen rechtsbündig.
+function istZahlWert(wert: string): boolean {
+  return /^(CHF\s)?-?[\d'’.,\s]+(\s?(%|Tage|CHF))?$/.test(wert.trim());
+}
+
 /** Baut das vollständige Dokumentmodell aus der Rechner-Konfiguration. */
 export function buildPdfModel(cfg: PdfDocConfig, jetzt: Date = new Date()): PdfModel {
   const t = pdfText; // Datums-, Typografie- und CP1252-Aufbereitung
   const blocks: PdfBlock[] = [];
 
-  // Kopf
-  blocks.push({ art: 'titel', text: t(cfg.title) });
-  blocks.push({ art: 'meta', text: t(`Erstellt: ${format(jetzt, 'dd.MM.yyyy HH:mm')} Uhr`) });
+  // 1. Kopf: Wortmarke, Titel, Rechtsgrundlage, Meta, Goldlinie (Renderer)
+  blocks.push({
+    art: 'kopf',
+    titel: t(cfg.title),
+    rechtsgrundlage: cfg.rechtsgrundlage ? t(cfg.rechtsgrundlage) : undefined,
+    erstellt: format(jetzt, 'dd.MM.yyyy, HH:mm') + ' Uhr',
+  });
 
-  // Eingaben
+  // 2. Ergebnis-Hero (falls der Rechner eine Hauptkennzahl liefert)
+  if (cfg.hero && cfg.sections.length > 0) {
+    blocks.push({
+      art: 'hero',
+      hero: {
+        hauptlabel: t(cfg.hero.hauptlabel),
+        hauptwert: t(cfg.hero.hauptwert),
+        nebenwerte: cfg.hero.nebenwerte?.map((n) => ({ label: t(n.label), wert: t(n.wert) })),
+        kontext: cfg.hero.kontext ? t(cfg.hero.kontext) : undefined,
+      },
+      status: cfg.sections[0].ergebnis.status,
+    });
+  }
+
+  // 3. Eingaben als scanbare Tabelle (Label | Wert, Beträge rechtsbündig)
   const inputEintraege = Object.entries(cfg.inputs).filter(([, v]) => v);
   if (inputEintraege.length > 0) {
     blocks.push({ art: 'h2', text: 'Eingaben' });
-    inputEintraege.forEach(([k, v]) => blocks.push({ art: 'kv', key: t(k), value: t(v) }));
-    blocks.push({ art: 'trenner' });
+    blocks.push({
+      art: 'tabelle',
+      zeilen: inputEintraege.map(([k, v]) => ({ label: t(k), wert: t(v), rechts: istZahlWert(v) })),
+    });
   }
 
-  // Ergebnisse je Abschnitt
+  // 4. Ergebnisse je Abschnitt
   cfg.sections.forEach((s) => {
     blocks.push({ art: 'h2', text: t(s.titel) });
     blocks.push({ art: 'ergebnisbox', text: t(s.ergebnis.ergebnis), status: s.ergebnis.status });
 
     if (s.ergebnis.warnungen.length > 0) {
-      blocks.push({ art: 'h3', text: 'Hinweise / Vorbehalte' });
-      s.ergebnis.warnungen.forEach((w) => blocks.push({ art: 'liste', text: t(w), ton: 'warn' }));
+      blocks.push({ art: 'hinweisbox', titel: 'Hinweise / Vorbehalte', eintraege: s.ergebnis.warnungen.map(t), ton: 'warn' });
     }
 
     if (s.ergebnis.rechenweg.length > 0) {
@@ -100,15 +137,16 @@ export function buildPdfModel(cfg: PdfDocConfig, jetzt: Date = new Date()): PdfM
           nr: i + 1,
           titel: t(schritt.beschreibung),
           text: t(schritt.zwischenergebnis),
-          normen: t(schritt.normen.map((n) => n.artikel).join(', ')),
+          // Norm-Pills je Schritt — klickbar, Status-Logik wie im Web
+          // (verifizierter Anker via normLink, sonst Gesetzes-Seite/kein Link)
+          normen: schritt.normen.map((n) => ({ label: t(n.artikel), url: normLink(n.artikel)?.url })),
           rechtsprechung: rsp ? t(rsp) : undefined,
         });
       });
     }
 
     if (s.ergebnis.annahmen.length > 0) {
-      blocks.push({ art: 'h3', text: 'Annahmen' });
-      s.ergebnis.annahmen.forEach((a) => blocks.push({ art: 'liste', text: t(a), ton: 'normal' }));
+      blocks.push({ art: 'hinweisbox', titel: 'Annahmen', eintraege: s.ergebnis.annahmen.map(t), ton: 'normal' });
     }
     blocks.push({ art: 'trenner' });
   });
@@ -131,8 +169,7 @@ export function buildPdfModel(cfg: PdfDocConfig, jetzt: Date = new Date()): PdfM
 
   // Zusätzliche Hinweise des Rechners
   if (cfg.notes && cfg.notes.length > 0) {
-    blocks.push({ art: 'h2', text: 'Hinweise' });
-    cfg.notes.forEach((nt) => blocks.push({ art: 'liste', text: t(nt), ton: 'normal' }));
+    blocks.push({ art: 'hinweisbox', titel: 'Hinweise', eintraege: cfg.notes.map(t), ton: 'normal' });
     blocks.push({ art: 'trenner' });
   }
 
@@ -160,8 +197,15 @@ export function modelText(model: PdfModel): string {
   return model.blocks
     .map((b) => {
       switch (b.art) {
-        case 'kv': return `${b.key}: ${b.value}`;
-        case 'schritt': return `${b.nr}. ${b.titel} ${b.text} ${b.normen} ${b.rechtsprechung ?? ''}`;
+        case 'kopf': return `${b.titel} ${b.rechtsgrundlage ?? ''} ${b.erstellt}`;
+        case 'hero': return [
+          b.hero.hauptlabel, b.hero.hauptwert,
+          ...(b.hero.nebenwerte ?? []).map((n) => `${n.label}: ${n.wert}`),
+          b.hero.kontext ?? '',
+        ].join(' ');
+        case 'tabelle': return b.zeilen.map((z) => `${z.label}: ${z.wert}`).join('\n');
+        case 'hinweisbox': return [b.titel, ...b.eintraege].join('\n');
+        case 'schritt': return `${b.nr}. ${b.titel} ${b.text} ${b.normen.map((n) => n.label).join(', ')} ${b.rechtsprechung ?? ''}`;
         case 'trenner': return '';
         default: return 'text' in b ? b.text : '';
       }
