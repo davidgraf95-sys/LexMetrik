@@ -191,8 +191,24 @@ const KARTEN: Record<string, CalculatorCard> = {
   gewaehrleistung: {
     id: 'gewaehrleistung', art: 'frist', tier: 'experte', rechtsgebiet: 'Vertrag / OR',
     title: 'Gewährleistung & Mängelrüge',
-    description: 'Prüf- und Rügefristen sowie Gewährleistungsverjährung bei Kauf und Werkvertrag.',
-    status: 'geplant', norms: [],
+    description: 'Rüge- und Verjährungsfristen bei Kauf, Werkvertrag und Grundstückkauf — mit Zwei-Regime-Weiche zur Baumängel-Revision 2026.',
+    status: 'geprüft',
+    norms: [
+      // Art. 201 OR – Prüf-/Rügeobliegenheit (inkl. Abs. 4 neu)
+      { label: 'Art. 201 OR', url: fedlexUrl('OR', '201'), verified: true },
+      // Art. 210 OR – Verjährung Kauf
+      { label: 'Art. 210 OR', url: fedlexUrl('OR', '210'), verified: true },
+      // Art. 219a OR – Grundstückkauf (neu, in Kraft 1.1.2026)
+      { label: 'Art. 219a OR', url: fedlexUrl('OR', '219a'), verified: true },
+      // Art. 367 OR – Prüfung/Rüge Werkvertrag (inkl. Abs. 1bis neu)
+      { label: 'Art. 367 OR', url: fedlexUrl('OR', '367'), verified: true },
+      // Art. 371 OR – Verjährung Werkvertrag (inkl. Abs. 3 neu)
+      { label: 'Art. 371 OR', url: fedlexUrl('OR', '371'), verified: true },
+    ],
+    href: '/rechner/gewaehrleistung',
+    keywords: ['Mangel', 'Mängelrüge', 'Garantie', 'Gewährleistung', 'Kauf', 'Werkvertrag', 'Baumängel', 'Rüge', 'Abnahme', 'SIA'],
+    related: ['verjaehrung'],
+    icon: 'house',
   },
   'missbraeuchliche-kuendigung': {
     id: 'missbraeuchliche-kuendigung', art: 'frist', tier: 'experte', rechtsgebiet: 'Arbeit',

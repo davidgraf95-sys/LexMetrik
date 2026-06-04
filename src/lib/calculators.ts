@@ -42,6 +42,9 @@ export const CALCULATORS: Calculator[] = [
   { slug: 'verjaehrung', titel: 'Verjährung', kategorie: 'Obligationenrecht',
     kurzbeschrieb: 'Verjährung vertraglicher, deliktischer und bereicherungsrechtlicher Forderungen — mit Stillstand, Unterbrechung und Einredeverzicht.',
     normen: ['Art. 60 OR', 'Art. 67 OR', 'Art. 127 OR', 'Art. 128 OR', 'Art. 132 OR'], status: 'geprüft', icon: 'clock' },
+  { slug: 'gewaehrleistung', titel: 'Gewährleistung & Mängelrüge', kategorie: 'Obligationenrecht',
+    kurzbeschrieb: 'Rüge- und Verjährungsfristen bei Kauf, Werkvertrag und Grundstückkauf — mit Zwei-Regime-Weiche zur Baumängel-Revision 2026.',
+    normen: ['Art. 201 OR', 'Art. 210 OR', 'Art. 219a OR', 'Art. 367 OR', 'Art. 371 OR'], status: 'geprüft', icon: 'house' },
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {

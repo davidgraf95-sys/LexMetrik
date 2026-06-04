@@ -175,7 +175,8 @@ function mitStillstand(start: Date, ende0: Date, intervalle: HemmIntervall[]): {
 
 // Art. 78 (über Art. 132 Abs. 2): Sonntag/Feiertag am Erfüllungsort → nächster
 // Werktag; der Samstag ist nach dem BG über den Fristenlauf an Samstagen gleichgestellt.
-function werktagsEnde(d: Date, kanton: Kanton): Date {
+// Exportiert für Module mit derselben Fristend-Mechanik (z. B. Gewährleistung).
+export function werktagsEnde(d: Date, kanton: Kanton): Date {
   let e = d;
   while (istArbeitsfreierTag(e, kanton)) e = addDays(e, 1);
   return e;

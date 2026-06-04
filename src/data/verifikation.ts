@@ -306,6 +306,50 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Unterbrechung durch Gläubigerhandlung: Postaufgabe genügt; Kenntnis des Schuldners nicht erforderlich.',
     verifiziert: false,
   },
+
+  // Gewährleistung & Mängelrüge (Art. 197 ff., 367 ff. OR)
+  BGer_4A_252_2010: {
+    aktenzeichen: 'BGer 4A_252/2010',
+    aussage:
+      '«Sofortige» Mängelrüge: rechtzeitig, wenn innert längstens sieben Tagen seit Kenntnisnahme erklärt und abgesendet.',
+    verifiziert: false,
+  },
+  BGer_4A_399_2018: {
+    aktenzeichen: 'BGer 4A_399/2018',
+    aussage:
+      'Mängelrüge ausnahmsweise noch rechtzeitig nach elf Kalendertagen seit Kenntnis (Einzelfall).',
+    verifiziert: false,
+  },
+  BGer_4D_25_2010: {
+    aktenzeichen: 'BGer 4D_25/2010',
+    aussage:
+      'Rüge 2–3 Kalendertage nach sicherer Kenntnis des Mangels ist sicher rechtzeitig.',
+    verifiziert: false,
+  },
+  BGE_98_II_191: {
+    aktenzeichen: 'BGE 98 II 191',
+    aussage:
+      'Massstab der sofortigen Mängelrüge; wenige Kalendertage nach Kenntnis genügen stets.',
+    verifiziert: false,
+  },
+  BGE_81_II_56: {
+    aktenzeichen: 'BGE 81 II 56',
+    aussage:
+      'Prüf- und Rügeobliegenheit (Art. 201 OR) gilt analog beim Grundstückkauf und für zugesicherte Eigenschaften.',
+    verifiziert: false,
+  },
+  BGE_118_II_142: {
+    aktenzeichen: 'BGE 118 II 142',
+    aussage:
+      'Bei sich fortentwickelnden Mängeln ist die Rügefrist kürzer zu bemessen.',
+    verifiziert: false,
+  },
+  BGE_108_II_194: {
+    aktenzeichen: 'BGE 108 II 194',
+    aussage:
+      'Vertragliche Verkürzung der Verjährung darf die Rechtsverfolgung nicht in unbilliger Weise erschweren.',
+    verifiziert: false,
+  },
 };
 
 /** Liefert einen Rechtsprechungshinweis aus dem zentralen Register. */
