@@ -82,18 +82,20 @@ export function ErbteilungForm() {
     vater: elternteil(vater),
     mutter: elternteil(mutter),
     dritteParentelVorhanden: dritteParentel,
+    // Beträge: güterrechtliche Herleitung (Panel offen) hat Vorrang,
+    // sonst zählt der direkt erfasste Nachlass; leer = nur Quoten.
     ...(gueterrechtAn
-      ? betraege.direkt.trim() !== ''
+      ? {
+          gueterstand,
+          eigengutErblasser: num(betraege.eigengut),
+          vorschlagErblasser: num(betraege.vorschlagE),
+          vorschlagUeberlebender: num(betraege.vorschlagU),
+          gesamtgut: num(betraege.gesamtgut),
+          vermoegenErblasser: num(betraege.vermoegen),
+        }
+      : betraege.direkt.trim() !== ''
         ? { nachlassDirekt: num(betraege.direkt) }
-        : {
-            gueterstand,
-            eigengutErblasser: num(betraege.eigengut),
-            vorschlagErblasser: num(betraege.vorschlagE),
-            vorschlagUeberlebender: num(betraege.vorschlagU),
-            gesamtgut: num(betraege.gesamtgut),
-            vermoegenErblasser: num(betraege.vermoegen),
-          }
-      : {}),
+        : {}),
   };
 
   const fehler: string[] = [];
@@ -148,6 +150,14 @@ export function ErbteilungForm() {
           <select value={zivilstand} onChange={(e) => setZivilstand(e.target.value as Zivilstand)} className={inputCls}>
             {ZIVILSTAENDE.map((z) => <option key={z.code} value={z.code}>{z.label}</option>)}
           </select>
+        </Field>
+        <Field label="Nachlass (CHF, optional)"
+          hint={gueterrechtAn
+            ? 'Wird unten güterrechtlich hergeleitet — Direkteingabe ist deaktiviert'
+            : 'Leer = nur Quoten; mit Betrag werden Erb- und Pflichtteile in CHF ausgewiesen'}>
+          <input type="number" min={0} value={betraege.direkt} disabled={gueterrechtAn}
+            onChange={(e) => setBetraege((b) => ({ ...b, direkt: e.target.value }))}
+            placeholder="z. B. 500000" className={inputCls + (gueterrechtAn ? ' opacity-50 cursor-not-allowed' : '')} />
         </Field>
       </div>
 
@@ -220,42 +230,35 @@ export function ErbteilungForm() {
         </div>
       )}
 
-      {/* Güterrecht (optional) */}
-      <div className="border border-line rounded-lg overflow-hidden">
+      {/* Güterrechtliche Herleitung (optional) — übersteuert das Direktfeld oben */}
+      <div className="border border-line rounded-lg">
         <button type="button" onClick={() => setGueterrechtAn(!gueterrechtAn)}
-          className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left">
-          <span className="text-sm font-medium text-ink-700">Güterrechtliche Vorstufe / Nachlass in CHF (optional)</span>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${gueterrechtAn ? '' : 'rounded-b-lg'}`}>
+          <span className="text-sm font-medium text-ink-700">Güterrechtliche Vorstufe — Nachlass herleiten (optional)</span>
           <span className="text-ink-400">{gueterrechtAn ? '▲' : '▼'}</span>
         </button>
         {gueterrechtAn && (
           <div className="p-4 space-y-4">
-            <Field label="Nachlass direkt angeben (CHF)" hint="Alternativ unten güterrechtlich herleiten">
-              <input type="number" value={betraege.direkt} onChange={(e) => setBetraege((b) => ({ ...b, direkt: e.target.value }))} className={inputCls + ' w-44'} />
+            <Field label="Güterstand">
+              <select value={gueterstand} onChange={(e) => setGueterstand(e.target.value as Gueterstand)} className={inputCls}>
+                {GUETERSTAENDE.map((s) => <option key={s.code} value={s.code}>{s.label}</option>)}
+              </select>
             </Field>
-            {betraege.direkt.trim() === '' && (
-              <>
-                <Field label="Güterstand">
-                  <select value={gueterstand} onChange={(e) => setGueterstand(e.target.value as Gueterstand)} className={inputCls}>
-                    {GUETERSTAENDE.map((s) => <option key={s.code} value={s.code}>{s.label}</option>)}
-                  </select>
-                </Field>
-                {gueterstand === 'errungenschaftsbeteiligung' && (
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <Field label="Eigengut Erblasser (CHF)"><input type="number" value={betraege.eigengut} onChange={(e) => setBetraege((b) => ({ ...b, eigengut: e.target.value }))} className={inputCls} /></Field>
-                    <Field label="Vorschlag Erblasser (CHF)" hint="negativ = Rückschlag (zählt 0, Art. 210 Abs. 2)"><input type="number" value={betraege.vorschlagE} onChange={(e) => setBetraege((b) => ({ ...b, vorschlagE: e.target.value }))} className={inputCls} /></Field>
-                    <Field label="Vorschlag Überlebender (CHF)"><input type="number" value={betraege.vorschlagU} onChange={(e) => setBetraege((b) => ({ ...b, vorschlagU: e.target.value }))} className={inputCls} /></Field>
-                  </div>
-                )}
-                {gueterstand === 'guetertrennung' && (
-                  <Field label="Vermögen des Erblassers (CHF)"><input type="number" value={betraege.vermoegen} onChange={(e) => setBetraege((b) => ({ ...b, vermoegen: e.target.value }))} className={inputCls + ' w-44'} /></Field>
-                )}
-                {gueterstand === 'guetergemeinschaft' && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Field label="Eigengut Erblasser (CHF)"><input type="number" value={betraege.eigengut} onChange={(e) => setBetraege((b) => ({ ...b, eigengut: e.target.value }))} className={inputCls} /></Field>
-                    <Field label="Gesamtgut (CHF)"><input type="number" value={betraege.gesamtgut} onChange={(e) => setBetraege((b) => ({ ...b, gesamtgut: e.target.value }))} className={inputCls} /></Field>
-                  </div>
-                )}
-              </>
+            {gueterstand === 'errungenschaftsbeteiligung' && (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <Field label="Eigengut Erblasser (CHF)"><input type="number" value={betraege.eigengut} onChange={(e) => setBetraege((b) => ({ ...b, eigengut: e.target.value }))} className={inputCls} /></Field>
+                <Field label="Vorschlag Erblasser (CHF)" hint="negativ = Rückschlag (zählt 0, Art. 210 Abs. 2)"><input type="number" value={betraege.vorschlagE} onChange={(e) => setBetraege((b) => ({ ...b, vorschlagE: e.target.value }))} className={inputCls} /></Field>
+                <Field label="Vorschlag Überlebender (CHF)"><input type="number" value={betraege.vorschlagU} onChange={(e) => setBetraege((b) => ({ ...b, vorschlagU: e.target.value }))} className={inputCls} /></Field>
+              </div>
+            )}
+            {gueterstand === 'guetertrennung' && (
+              <Field label="Vermögen des Erblassers (CHF)"><input type="number" value={betraege.vermoegen} onChange={(e) => setBetraege((b) => ({ ...b, vermoegen: e.target.value }))} className={inputCls + ' w-44'} /></Field>
+            )}
+            {gueterstand === 'guetergemeinschaft' && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Field label="Eigengut Erblasser (CHF)"><input type="number" value={betraege.eigengut} onChange={(e) => setBetraege((b) => ({ ...b, eigengut: e.target.value }))} className={inputCls} /></Field>
+                <Field label="Gesamtgut (CHF)"><input type="number" value={betraege.gesamtgut} onChange={(e) => setBetraege((b) => ({ ...b, gesamtgut: e.target.value }))} className={inputCls} /></Field>
+              </div>
             )}
           </div>
         )}
