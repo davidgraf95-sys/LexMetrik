@@ -19,10 +19,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-line"
       style={{ background: 'color-mix(in srgb, var(--paper) 92%, transparent)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }}>
-      {/* Feinschrift-Leiste */}
-      <div className="border-b border-line" style={{ background: 'color-mix(in srgb, var(--paper-sunken) 55%, transparent)' }}>
-        <div className="max-w-content mx-auto px-5 sm:px-6 h-7 flex items-center justify-between gap-4">
-          <p className="lc-overline text-ink-500 hidden sm:block truncate">Schweizer Recht · feste Regeln statt Schätzung</p>
+      {/* Utility-Bar (schlank): nur der Pflichthinweis rechts — der Claim
+          steht genau einmal im Hero. Auf Mobile ausgeblendet. */}
+      <div className="hidden sm:block border-b border-line" style={{ background: 'color-mix(in srgb, var(--paper-sunken) 55%, transparent)' }}>
+        <div className="max-w-content mx-auto px-5 sm:px-6 h-7 flex items-center justify-end">
           <p className="lc-overline text-ink-500 truncate">Orientierung — keine Rechtsberatung</p>
         </div>
       </div>

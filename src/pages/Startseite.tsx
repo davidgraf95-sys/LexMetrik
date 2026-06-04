@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { SEKTIONEN, VORLAGE_SEKTIONEN, ALLE_KARTEN, type Modus } from '../lib/startseiteConfig';
+import { SEKTIONEN, VORLAGE_SEKTIONEN, ALLE_KARTEN } from '../lib/startseiteConfig';
 import { Katalog, SectionHead } from '../components/Katalog';
 import { ModusSchalter, useModus } from '../components/ModusSchalter';
 
@@ -41,12 +41,6 @@ function ExpertenTeaser() {
   );
 }
 
-// Kurzbeschrieb je Modus — eine Zeile unter dem Umschalter in der Seitenleiste.
-export const MODUS_BESCHRIEB: Record<Modus, string> = {
-  rechner: 'Fristen, Beträge und Zuständigkeiten — nach festen Regeln, jede Norm direkt verlinkt.',
-  vorlage: 'Dokumente aus geprüften Bausteinen — als Entwurf, mit Form-Gate vor dem Download.',
-};
-
 export function Startseite() {
   const [modus, setModus] = useModus();
   const karten = ALLE_KARTEN.filter((k) => k.tier === 'frei' && k.modus === modus);
@@ -56,28 +50,33 @@ export function Startseite() {
   } as const;
 
   return (
-    <div className="space-y-12">
-      {/* Kompakter Hero, text-geführt und einspaltig — die Karten kommen direkt danach */}
-      <section className="space-y-4 max-w-[46rem]">
+    <div>
+      {/* HERO → Weiche → KATALOG: so wenige Bänder wie möglich vor der ersten
+          Karte; Abstände aus der 8-px-Skala. Der Determinismus-Claim steht
+          genau einmal — hier. */}
+      <section className="pt-6 sm:pt-12 max-w-[46rem]">
         <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.25rem] sm:text-[2.75rem]">
           Schweizer Recht: berechnen und erstellen.
         </h1>
-        <p className="text-body-l text-ink-600 max-w-reading">
-          Fristen, Beträge und Rechtsdokumente nach festen Regeln — Schritt für Schritt
-          nachvollziehbar, jede Norm direkt mit dem Gesetzestext verlinkt. Kein Sprachmodell:
-          gleiche Eingaben ergeben immer dasselbe Ergebnis.
+        {/* Untertext: eine Zeile, begrenzte Lesebreite (Variante A) */}
+        <p className="mt-4 text-body-l text-ink-600 max-w-[60ch]">
+          Fristen, Beträge und Rechtsdokumente nach festen Regeln — jeder Schritt
+          offengelegt, jede Norm verlinkt.
         </p>
       </section>
 
-      {/* Primärweiche: Modus prominent unter dem Hero (steuert Text + Katalog) */}
-      <div className="space-y-2">
+      {/* Primärweiche: nur der Umschalter — kein Untertext (war redundant) */}
+      <div className="mt-10 sm:mt-16">
         <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
-        <p className="text-body-s text-ink-500 max-w-reading">{MODUS_BESCHRIEB[modus]}</p>
       </div>
 
-      {/* Katalog der Basis-Stufe im aktiven Modus */}
-      <Katalog karten={karten} sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN} />
+      {/* Katalog als eigene Sektion: Weissraum + feine Trennlinie markieren
+          «jetzt beginnt der Katalog»; die Toolbar lebt IM Katalog. */}
+      <section className="mt-10 sm:mt-16 border-t border-line pt-8 sm:pt-10">
+        <Katalog karten={karten} sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN} />
+      </section>
 
+      <div className="mt-12 space-y-12">
       {/* Experten-Panel-Teaser (Rechner-Modus) */}
       {modus === 'rechner' && <ExpertenTeaser />}
 
@@ -108,6 +107,7 @@ export function Startseite() {
           allein die nutzende Person verantwortlich.
         </p>
       </section>
+      </div>
     </div>
   );
 }

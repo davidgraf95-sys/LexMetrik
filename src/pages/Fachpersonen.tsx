@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { ALLE_KARTEN, RECHTSGEBIETE, SEKTIONEN, VORLAGE_SEKTIONEN } from '../lib/startseiteConfig';
 import { Katalog } from '../components/Katalog';
 import { ModusSchalter, useModus } from '../components/ModusSchalter';
-import { MODUS_BESCHRIEB } from './Startseite';
 import { sansAmp } from '../components/typografie';
 
 // Experten-Panel: alle Rechner der Stufe 'experte' (anwaltliche Praxis).
@@ -59,7 +58,6 @@ export function Fachpersonen() {
       {/* Primärweiche: Modus prominent unter dem Hero (steuert Text + Katalog) */}
       <div className="space-y-2">
         <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
-        <p className="text-body-s text-ink-500 max-w-reading">{MODUS_BESCHRIEB[modus]}</p>
       </div>
 
       {/* Katalog: Filter/Übersicht und Direkteinstieg in der Seitenleiste */}
