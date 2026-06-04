@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { LexmetrikSiegel, LexmetrikWortmarke } from './Logo';
 import { StufenSchalter } from '../StufenSchalter';
+import { Befehlspalette } from '../Befehlspalette';
 
 // Header neu (zweizeilig, Instrumenten-Look):
 // 1. Feinschrift-Leiste — Mono-Overline mit Einordnung links und Pflichthinweis
@@ -34,7 +35,9 @@ export function Header() {
 
         <StufenSchalter />
 
-        <nav className="justify-self-end flex items-center gap-1 sm:gap-2">
+        <nav className="justify-self-end flex items-center gap-1.5 sm:gap-2">
+          {/* Suche / Befehlspalette (⌘K) */}
+          <Befehlspalette />
           {NAV.map((n) => {
             const aktiv = n.match(pathname);
             return (
