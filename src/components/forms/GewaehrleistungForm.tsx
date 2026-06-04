@@ -96,7 +96,7 @@ export function GewaehrleistungForm() {
     stichtag,
   };
 
-  let ergebnis: GewaehrleistungErgebnis | null = null;
+  let ergebnis: GewaehrleistungErgebnis | null;
   try { ergebnis = vertragsdatum && uebergabe && stichtag ? berechneGewaehrleistung(input) : null; } catch { ergebnis = null; }
 
   const eingaben: Record<string, string> = {

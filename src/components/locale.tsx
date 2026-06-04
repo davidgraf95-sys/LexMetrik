@@ -8,6 +8,9 @@ import { createContext, useContext, useEffect, useState } from 'react';
 // wird lokal gespeichert und an <html lang> gekoppelt; Fedlex-Links folgen
 // der Locale (fr/it amtlich; en → amtliche de-Fassung).
 
+/* eslint-disable react-refresh/only-export-components --
+   Infrastruktur-Modul: Provider + Hook + Helfer gehören fachlich zusammen;
+   Fast-Refresh-Optimierung ist hier verzichtbar. */
 export type Locale = 'de' | 'en' | 'fr' | 'it';
 
 export const LOCALES: { code: Locale; label: string; inBearbeitung: boolean }[] = [

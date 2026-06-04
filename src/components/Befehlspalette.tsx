@@ -65,18 +65,25 @@ export function Befehlspalette() {
     return () => window.removeEventListener('keydown', h);
   }, []);
 
-  // Beim Öffnen: Eingabe fokussieren, Zustand zurücksetzen, Scroll sperren
+  // Zustand beim Öffnen zurücksetzen — Render-Zeit-Anpassung statt setState
+  // im Effect (React-Muster «adjusting state during render»).
+  const [warOffen, setWarOffen] = useState(offen);
+  if (offen !== warOffen) {
+    setWarOffen(offen);
+    if (offen) { setQ(''); setSel(0); }
+  }
+
+  // Beim Öffnen: Eingabe fokussieren, Scroll sperren; Fokus-Restore beim Schliessen
   useEffect(() => {
     if (!offen) return;
-    setQ('');
-    setSel(0);
+    const ausloeser = triggerRef.current; // Ref-Wert für den Cleanup kopieren
     const t = setTimeout(() => eingabeRef.current?.focus(), 0);
     const vorher = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
       clearTimeout(t);
       document.body.style.overflow = vorher;
-      triggerRef.current?.focus(); // Fokus zurück auf den Auslöser
+      ausloeser?.focus(); // Fokus zurück auf den Auslöser
     };
   }, [offen]);
 

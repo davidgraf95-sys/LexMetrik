@@ -10,6 +10,7 @@ const TYP_LABEL: Record<string, string> = {
   schwangerschaft: 'Schwangerschaft / Niederkunft',
   militaer_zivil: 'Militär- / Zivildienst',
   hilfsaktion: 'Hilfsaktion im Ausland',
+  betreuungsurlaub: 'Betreuungsurlaub (Art. 329i OR)',
 };
 
 const fmtISO = (s: string) => (s ? s.split('-').reverse().join('.') : '–');

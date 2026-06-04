@@ -326,10 +326,16 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'art', fil
   const [aktiveSektion, setAktiveSektion] = useState<string | null>(null);
   const sichtbar = useRef(new Map<string, boolean>());
   const idsKey = sprungmarken.map((s) => s.id).join(',');
+  // Initial-/Resetwert bei Filterwechsel: Render-Zeit-Anpassung statt
+  // setState im Effect (verhindert kaskadierende Renders).
+  const [letzterIdsKey, setLetzterIdsKey] = useState(idsKey);
+  if (idsKey !== letzterIdsKey) {
+    setLetzterIdsKey(idsKey);
+    setAktiveSektion(idsKey ? idsKey.split(',')[0] : null);
+  }
   useEffect(() => {
     const ids = idsKey ? idsKey.split(',') : [];
     sichtbar.current = new Map();
-    setAktiveSektion(ids[0] ?? null);
     if (ids.length === 0) return;
     const beobachter = new IntersectionObserver(
       (eintraege) => {

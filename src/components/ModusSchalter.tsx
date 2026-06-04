@@ -5,6 +5,7 @@ import type { Modus } from '../lib/startseiteConfig';
 // die Stufe bleibt Route). Zustand in der URL (?modus=vorlagen): teilbar und
 // Back-Button-tauglich. Prominentes Segmented Control unter dem Hero.
 
+// eslint-disable-next-line react-refresh/only-export-components -- Hook gehört fachlich zum Schalter
 export function useModus(): [Modus, (m: Modus) => void] {
   const [params, setParams] = useSearchParams();
   const modus: Modus = params.get('modus') === 'vorlagen' ? 'vorlage' : 'rechner';

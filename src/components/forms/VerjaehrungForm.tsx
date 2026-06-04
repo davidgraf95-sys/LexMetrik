@@ -110,7 +110,7 @@ export function VerjaehrungForm() {
       : undefined,
   };
 
-  let ergebnis: VerjaehrungErgebnis | null = null;
+  let ergebnis: VerjaehrungErgebnis | null;
   try { ergebnis = beginnRelativ && stichtag ? berechneVerjaehrung(input) : null; } catch { ergebnis = null; }
 
   const eingaben: Record<string, string> = {
