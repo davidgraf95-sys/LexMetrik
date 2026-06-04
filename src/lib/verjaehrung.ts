@@ -132,17 +132,37 @@ function rohesEnde(start: Date, jahre: number): Date {
   return addYears(start, jahre);
 }
 
+// Stillstandsperioden normalisieren: ungültige/invertierte Einträge verwerfen,
+// überlappende oder anstossende Perioden zur Union verschmelzen — sonst würden
+// sich überschneidende Eingaben doppelt gezählt und die Frist zu lang.
+type HemmIntervall = { von: Date; bis: Date };
+function normalisiereStillstaende(stillstaende: Stillstand[]): { intervalle: HemmIntervall[]; verworfen: number } {
+  const gueltig = stillstaende
+    .map((s) => ({ von: parseISO(s.von), bis: parseISO(s.bis) }))
+    .filter((s) => !isNaN(s.von.getTime()) && !isNaN(s.bis.getTime()) && !isAfter(s.von, s.bis))
+    .sort((a, b) => a.von.getTime() - b.von.getTime());
+  const intervalle: HemmIntervall[] = [];
+  for (const s of gueltig) {
+    const letzte = intervalle[intervalle.length - 1];
+    if (letzte && !isAfter(s.von, addDays(letzte.bis, 1))) {
+      if (isAfter(s.bis, letzte.bis)) letzte.bis = s.bis; // überlappend/anstossend → verschmelzen
+    } else {
+      intervalle.push({ ...s });
+    }
+  }
+  return { intervalle, verworfen: stillstaende.length - gueltig.length };
+}
+
 // Art. 134: Stillstands-Tage im Fenster (start, ende] zählen und hinten
 // anhängen; iterativ, weil das verlängerte Fenster weitere Hemmung erfassen kann.
-function mitStillstand(start: Date, ende0: Date, stillstaende: Stillstand[]): { ende: Date; tage: number } {
+function mitStillstand(start: Date, ende0: Date, intervalle: HemmIntervall[]): { ende: Date; tage: number } {
   let ende = ende0;
   let gezaehlt = 0;
   for (let i = 0; i < 24; i++) {
     let tage = 0;
-    for (const s of stillstaende) {
-      const von = parseISO(s.von), bis = parseISO(s.bis);
-      const a = isAfter(von, start) ? von : addDays(start, 1);
-      const b = isBefore(bis, ende) ? bis : ende;
+    for (const s of intervalle) {
+      const a = isAfter(s.von, start) ? s.von : addDays(start, 1);
+      const b = isBefore(s.bis, ende) ? s.bis : ende;
       const d = differenceInCalendarDays(b, a) + 1;
       if (d > 0) tage += d;
     }
@@ -168,7 +188,12 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
   const rechenweg: Rechenschritt[] = [];
   const annahmen: string[] = [];
   const warnungen: string[] = [];
-  const stillstaende = input.stillstaende ?? [];
+  const { intervalle: hemmungen, verworfen } = normalisiereStillstaende(input.stillstaende ?? []);
+  if (verworfen > 0) {
+    warnungen.push(
+      `${verworfen} Stillstandsperiode${verworfen > 1 ? 'n' : ''} mit ungültigen Daten (z. B. Ende vor Beginn) bleibt unberücksichtigt.`,
+    );
+  }
 
   const beginn = parseISO(input.beginnRelativ);
   const stichtag = parseISO(input.stichtag);
@@ -229,7 +254,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
 
   for (const u of unterbrechungen) {
     const d = parseISO(u.datum);
-    const aktuellesEnde = mitStillstand(segStart, rohesEnde(segStart, segJahre), stillstaende).ende;
+    const aktuellesEnde = mitStillstand(segStart, rohesEnde(segStart, segJahre), hemmungen).ende;
     if (isAfter(d, aktuellesEnde)) {
       warnungen.push(
         `${TYP_LABEL[u.typ]} vom ${fmt(d)} liegt nach dem Verjährungseintritt (${fmt(aktuellesEnde)}) und bleibt wirkungslos — eine verjährte Forderung wird nicht wiederbelebt.`,
@@ -237,6 +262,16 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
       continue;
     }
     if (u.typ === 'klage_schlichtung') {
+      // Plausibilität: Abschluss kann nicht vor der Unterbrechung liegen
+      if (u.prozessEnde) {
+        const pe = parseISO(u.prozessEnde);
+        if (isNaN(pe.getTime()) || isBefore(pe, d)) {
+          warnungen.push(
+            `Abschlussdatum ${isNaN(pe.getTime()) ? '(ungültig)' : fmt(pe)} der Unterbrechung vom ${fmt(d)} liegt vor der Unterbrechung oder ist ungültig — der Eintrag bleibt unberücksichtigt.`,
+          );
+          continue;
+        }
+      }
       if (!u.prozessEnde) {
         offeneHemmungSeit = d;
         rechenweg.push({
@@ -272,7 +307,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
   let gehemmtTage = 0;
   if (!offeneHemmungSeit) {
     const roh = rohesEnde(segStart, segJahre);
-    const st = mitStillstand(segStart, roh, stillstaende);
+    const st = mitStillstand(segStart, roh, hemmungen);
     relativEnde = st.ende;
     gehemmtTage = st.tage;
     rechenweg.push({
@@ -288,7 +323,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
   if (R.absolutJahre != null && input.beginnAbsolut) {
     const aStart = parseISO(input.beginnAbsolut);
     const roh = rohesEnde(aStart, R.absolutJahre);
-    const st = mitStillstand(aStart, roh, stillstaende);
+    const st = mitStillstand(aStart, roh, hemmungen);
     absolutEnde = st.ende;
     rechenweg.push({
       beschreibung: 'Absolute Frist',
@@ -368,8 +403,10 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
   let verzichtBis: Date | null = null;
   if (input.verzicht && verschoben) {
     const vd = parseISO(input.verzicht.datum);
-    const jahre = Math.min(input.verzicht.jahre ?? 10, 10);
-    if ((input.verzicht.jahre ?? 10) > 10) {
+    // NaN/negative Dauer → Default 10 Jahre; > 10 wird gekürzt (Art. 141 Abs. 1)
+    const roh = input.verzicht.jahre;
+    const jahre = Number.isFinite(roh) && roh! > 0 ? Math.min(roh!, 10) : 10;
+    if (Number.isFinite(roh) && roh! > 10) {
       warnungen.push('Ein Einredeverzicht von mehr als 10 Jahren wird auf die Höchstdauer von 10 Jahren gekürzt (Art. 141 Abs. 1 OR).');
     }
     if (isBefore(vd, beginn)) {
@@ -399,7 +436,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
 
   const normverweise: Normverweis[] = [
     ...R.normen, N_132, N_78,
-    ...(stillstaende.length ? [N_134] : []),
+    ...(hemmungen.length ? [N_134] : []),
     ...(unterbrechungen.length ? [N_135, N_137_1] : []),
     ...(unterbrechungen.some((u) => u.typ === 'urkunde_urteil' || (u.typ === 'klage_schlichtung' && u.mitUrteil)) ? [N_137_2] : []),
     ...(unterbrechungen.some((u) => u.typ === 'klage_schlichtung') ? [N_138_1] : []),

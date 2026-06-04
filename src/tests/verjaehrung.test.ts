@@ -84,6 +84,25 @@ describe('Verjährung – Modifikatoren (Art. 134/135/137/138/141 OR)', () => {
     expect(r.verjaehrungISO).toBe('2030-02-14'); // 15.01. + 30 Tage, Do
   });
 
+  it('überlappende Stillstandsperioden zählen als Union, nicht doppelt', () => {
+    const r = berechneVerjaehrung(base({
+      stillstaende: [
+        { von: '2025-01-01', bis: '2025-02-01' },  // 32 Tage
+        { von: '2025-01-15', bis: '2025-03-01' },  // überlappt → Union 01.01.–01.03. = 60 Tage
+      ],
+    }));
+    expect(r.gehemmtTage).toBe(60);
+    expect(r.verjaehrungISO).toBe('2030-03-18'); // 15.01. + 60 Tage = Sa 16.03. → Mo
+  });
+
+  it('invertierte Stillstandsperiode (Ende vor Beginn) wird mit Warnung verworfen', () => {
+    const r = berechneVerjaehrung(base({
+      stillstaende: [{ von: '2025-03-01', bis: '2025-01-01' }],
+    }));
+    expect(r.verjaehrungISO).toBe('2030-01-15');
+    expect(r.warnungen.some((w) => w.includes('unberücksichtigt'))).toBe(true);
+  });
+
   it('Stillstand ausserhalb der Frist zählt nicht', () => {
     const r = berechneVerjaehrung(base({
       stillstaende: [{ von: '2031-01-01', bis: '2031-03-01' }],
@@ -138,6 +157,21 @@ describe('Verjährung – Modifikatoren (Art. 134/135/137/138/141 OR)', () => {
     }));
     expect(r.verzichtBisISO).toBe('2040-01-15');
     expect(r.warnungen.some((w) => w.includes('gekürzt'))).toBe(true);
+  });
+
+  it('Verzicht mit NaN-/negativer Dauer → Default 10 Jahre, kein Absturz', () => {
+    const r1 = berechneVerjaehrung(base({ verzicht: { datum: '2029-12-01', jahre: NaN } }));
+    expect(r1.verzichtBisISO).toBe('2040-01-15');
+    const r2 = berechneVerjaehrung(base({ verzicht: { datum: '2029-12-01', jahre: -5 } }));
+    expect(r2.verzichtBisISO).toBe('2040-01-15');
+  });
+
+  it('Klage mit Abschlussdatum vor der Unterbrechung wird verworfen (Warnung)', () => {
+    const r = berechneVerjaehrung(base({
+      unterbrechungen: [{ typ: 'klage_schlichtung', datum: '2024-02-01', prozessEnde: '2020-01-01' }],
+    }));
+    expect(r.verjaehrungISO).toBe('2030-01-15'); // Frist unverändert
+    expect(r.warnungen.some((w) => w.includes('unberücksichtigt'))).toBe(true);
   });
 
   it('Vorausverzicht vor Verjährungsbeginn ist unzulässig (Warnung, unberücksichtigt)', () => {
