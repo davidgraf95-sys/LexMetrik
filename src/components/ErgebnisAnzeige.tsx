@@ -71,7 +71,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
   return (
     <div className="lc-reveal">
-      {/* Messskala über dem Readout — wie die Ablesekante eines Instruments */}
+      {/* Messing-Akzentlinie als Ablesekante über dem Readout */}
       <div className="scale-rule" aria-hidden />
       <div className="bg-surface border border-line rounded-b-lg rounded-t-none shadow-md overflow-hidden">
       {/* Header */}

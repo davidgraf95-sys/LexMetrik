@@ -79,20 +79,26 @@
     text-transform: uppercase; color: var(--ink-500);
   }
 
-  /* Signature-Element: graduierte Messskala (Designsystem §4).
-     Sparsam einsetzen — max. ein bis zwei Skalen pro Bildschirm. */
-  .scale-rule { position:relative; height:10px; width:100%; }
-  .scale-rule::before {            /* kurze Striche, alle 12px — bewusst hell */
-    content:""; position:absolute; inset:auto 0 0 0; height:4px;
-    background:repeating-linear-gradient(90deg, var(--brass-200) 0 1px, transparent 1px 12px);
+  /* Signature-Element neu: Messing-Akzentlinie (Designsystem §4) —
+     Haarlinie mit kurzem, nach rechts auslaufendem Messing-Akzent.
+     Ruhiger als die frühere Strichskala; sparsam einsetzen. */
+  .scale-rule { position:relative; height:3px; width:100%; }
+  .scale-rule::before {            /* durchgehende Haarlinie */
+    content:""; position:absolute; left:0; right:0; bottom:1px; height:1px;
+    background:var(--line);
   }
-  .scale-rule::after {             /* lange Striche, jeder 5. */
-    content:""; position:absolute; inset:auto 0 0 0; height:9px;
-    background:repeating-linear-gradient(90deg, var(--brass-400) 0 1px, transparent 1px 60px);
+  .scale-rule::after {             /* Messing-Akzent, ausklingend */
+    content:""; position:absolute; left:0; bottom:0; height:3px; width:84px;
+    border-radius:2px;
+    background:linear-gradient(90deg, var(--brass-500), var(--brass-300) 65%, transparent);
   }
-  .scale-rule-sm { height:7px; }
-  .scale-rule-sm::before { height:3px; }
-  .scale-rule-sm::after { height:6px; }
+  /* Kleine Variante (z. B. aktiver Nav-Punkt): kurzer Messing-Balken */
+  .scale-rule-sm { height:2px; }
+  .scale-rule-sm::before { display:none; }
+  .scale-rule-sm::after {
+    left:0; right:0; width:auto; height:2px; bottom:0; border-radius:1px;
+    background:linear-gradient(90deg, var(--brass-500), var(--brass-300));
+  }
 
   .lc-card { @apply bg-surface border border-line rounded-lg shadow-md; }
 

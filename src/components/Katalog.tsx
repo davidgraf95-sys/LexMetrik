@@ -31,7 +31,7 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
       {/* Sektion per Mausklick ein-/ausklappbar (Disclosure); standardmässig offen. */}
       <details open className="group bg-surface rounded-2xl border border-line">
         <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
-          {/* Öffner: römische Monospace-Eyebrow + Serif-Titel + Lede + Haarlinie */}
+          {/* Öffner: römische Monospace-Eyebrow + Serif-Titel + Lede + Akzentlinie */}
           <span className="block space-y-2">
             <span className="flex items-center justify-between gap-4">
               <span className="lc-overline num text-brass-700">{sektion.numeral} — {sektion.title}</span>
