@@ -19,7 +19,7 @@ export function SectionHead({ children }: { children: React.ReactNode }) {
 // ─── Typ-Sektion: Editorial-Öffner + flaches Kartenraster ─────────────────
 // Sortierung: geprüfte Rechner zuerst (Goldrand), danach «In Vorbereitung».
 
-function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorCard[] }) {
+function TypSektion({ sektion, numeral, karten }: { sektion: Sektion; numeral: string; karten: CalculatorCard[] }) {
   const sortiert = [
     ...karten.filter((k) => k.status === 'geprüft'),
     ...karten.filter((k) => k.status === 'geplant'),
@@ -31,10 +31,11 @@ function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorC
       {/* Sektion per Mausklick ein-/ausklappbar (Disclosure); standardmässig offen. */}
       <details open className="lc-sektion group bg-surface rounded-2xl border border-line">
         <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
-          {/* Öffner: römische Monospace-Eyebrow + Serif-Titel + Lede + Akzentlinie */}
+          {/* Öffner: römische Monospace-Eyebrow (fortlaufend über die SICHTBAREN
+              Sektionen — nie I, II, IV mit Lücke) + Serif-Titel + Lede */}
           <span className="block space-y-2">
             <span className="flex items-center justify-between gap-4">
-              <span className="lc-overline num text-brass-700">{sektion.numeral} — {sektion.title}</span>
+              <span className="lc-overline num text-brass-700">{numeral} — {sektion.title}</span>
               <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
                 {/* Zähler-Einheit folgt dem Modus der Sektion (kein fixer String) */}
                 <span className="num">{sortiert.length}</span> {istVorlageArt(sektion.art) ? 'Vorlagen' : 'Rechner'}
@@ -67,21 +68,22 @@ function FilterLeiste(props: {
   const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche } = props;
   return (
     <section aria-label="Filter" className="space-y-3">
+      {/* Zeile 1: Suchfeld (flex-1) + Status-Toggle — beide auf --control-h (44px) */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3">
         <input
           type="search"
           value={suche}
           onChange={(e) => setSuche(e.target.value)}
           placeholder="Katalog filtern (Titel, Stichwort, Art. 336c) …"
-          className="lc-input sm:max-w-sm"
+          className="lc-input h-11 py-0 sm:flex-1"
           aria-label="Katalog filtern"
         />
         {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur geprüfte */}
-        <div className="flex gap-1 p-1 bg-surface border border-line rounded-xl w-fit" role="group" aria-label="Status">
+        <div className="flex h-11 items-stretch gap-1 p-1 bg-surface border border-line rounded-xl w-fit shrink-0" role="group" aria-label="Status">
           {([['Alle', false], ['Nur geprüfte', true]] as const).map(([label, wert]) => (
             <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
               aria-pressed={nurGeprueft === wert}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+              className={`px-3 rounded-lg text-sm font-medium transition-all ${
                 nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
               }`}>
               {label}
@@ -89,12 +91,13 @@ function FilterLeiste(props: {
           ))}
         </div>
       </div>
-      <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Rechtsgebiete">
+      {/* Zeile 2: Rechtsgebiet-Pills auf --pill-h (36px), umbrechend */}
+      <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Rechtsgebiete">
         {rechtsgebiete.map((g) => {
           const an = gebiete.has(g);
           return (
             <button key={g} type="button" onClick={() => toggleGebiet(g)} aria-pressed={an}
-              className={`text-xs font-medium rounded-full px-2.5 py-1 border transition-colors ${
+              className={`inline-flex items-center h-9 text-xs font-medium rounded-full px-3 border transition-colors ${
                 an
                   ? 'bg-ink-900 text-paper border-ink-900'
                   : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
@@ -105,7 +108,7 @@ function FilterLeiste(props: {
         })}
         {gebiete.size > 0 && (
           <button type="button" onClick={reset}
-            className="text-xs text-brass-700 hover:text-brass-600 px-1">
+            className="inline-flex items-center h-9 text-xs text-brass-700 hover:text-brass-600 px-1">
             Zurücksetzen
           </button>
         )}
@@ -134,7 +137,8 @@ function Uebersicht(props: {
                   aktiv ? 'bg-brass-100/60 text-ink-900 font-medium' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
                 }`}>
                 {aktiv && <span aria-hidden className="absolute left-0 top-1 bottom-1 w-[3px] rounded-full bg-brass-500" />}
-                <span className="truncate pl-1"><span className="num text-brass-700 mr-1.5">{s.numeral}</span>{s.title}</span>
+                {/* ohne Nummern — die Config-Numerale sprängen bei leeren Sektionen (I, II, IV) */}
+                <span className="truncate pl-1">{s.title}</span>
                 <span className="num text-xs text-ink-500">{s.anzahl}</span>
               </a>
             );
@@ -286,10 +290,14 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
             )}
           </section>
         ) : (
-          /* Vier Sektionen (datengetrieben aus startseiteConfig) */
-          sektionen.map((s) => (
-            <TypSektion key={s.id} sektion={s} karten={treffer.filter((k) => k.art === s.art)} />
-          ))
+          /* Sektionen (datengetrieben); Numerale fortlaufend über die
+             tatsächlich SICHTBAREN Sektionen — nie eine Lücke (I, II, IV) */
+          sektionen
+            .map((s) => ({ s, karten: treffer.filter((k) => k.art === s.art) }))
+            .filter((x) => x.karten.length > 0)
+            .map((x, i) => (
+              <TypSektion key={x.s.id} sektion={x.s} numeral={['I', 'II', 'III', 'IV', 'V', 'VI'][i] ?? String(i + 1)} karten={x.karten} />
+            ))
         )}
         </div>
       </div>
