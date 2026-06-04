@@ -98,6 +98,19 @@ export const SEKTIONEN: Sektion[] = [
     lede: 'Rechtsgebietsübergreifende Hilfsrechner.' },
 ];
 
+// Rechtsbereich-Sektionen: Gliederungsachse des Rechner-Modus auf /fachpersonen
+// (zweistufig: Rechtsbereich → Output-Typ als Untergruppe)
+export const RECHTSBEREICH_SEKTIONEN: { code: Rechtsbereich; id: string; title: string; lede: string }[] = [
+  { code: 'privat', id: 'privatrecht', title: 'Privatrecht',
+    lede: 'OR, ZGB, ZPO und SchKG — Fristen, Beträge und Zuständigkeit im Zivilrecht.' },
+  { code: 'oeffentlich', id: 'oeffentliches-recht', title: 'Öffentliches Recht',
+    lede: 'Verwaltungs-, Steuer- und Sozialversicherungsverfahren.' },
+  { code: 'straf', id: 'strafrecht', title: 'Strafrecht',
+    lede: 'Prozessuale und materielle Fristen im Strafrecht — eigene Fristmechanik.' },
+  { code: 'uebergreifend', id: 'uebergreifend', title: 'Übergreifend',
+    lede: 'Rechtsmittel ans Bundesgericht, Einordnung und Werkzeuge über alle Verfahren.' },
+];
+
 // Vorlagen-Sektionen: vier Dokument-Typen (Modus «Vorlagen»)
 export const VORLAGE_SEKTIONEN: Sektion[] = [
   { art: 'vorsorge', id: 'vorsorge', numeral: 'I', title: 'Vorsorge & Nachlass',

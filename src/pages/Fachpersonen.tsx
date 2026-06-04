@@ -65,6 +65,13 @@ export function Fachpersonen() {
       <Katalog
         karten={karten}
         sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN}
+        // Rechner: zweistufig Rechtsbereich → Output-Typ; Filter Suche ·
+        // Rechtsbereich · Output-Typ · Status. Vorlagen: Dokument-Typ-
+        // Gliederung; Rechtsgebiet + Rechtsbereich als Filter.
+        gliederung={modus === 'rechner' ? 'bereich' : 'art'}
+        filterRechtsgebiet={modus !== 'rechner'}
+        filterBereich
+        filterArt={modus === 'rechner'}
         seitenleisteFuss={modus === 'rechner' ? (
           <nav aria-label="Direkteinstieg" className="space-y-1 pt-3 border-t border-line">
             <p className="lc-overline mb-2">Direkt öffnen</p>

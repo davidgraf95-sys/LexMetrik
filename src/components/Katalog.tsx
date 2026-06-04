@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { SEKTIONEN, RECHTSGEBIETE, istVorlageArt, type Sektion, type CalculatorCard } from '../lib/startseiteConfig';
+import { SEKTIONEN, RECHTSGEBIETE, RECHTSBEREICH_SEKTIONEN, istVorlageArt, type Sektion, type CalculatorCard, type Rechtsbereich } from '../lib/startseiteConfig';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 
@@ -55,17 +55,83 @@ function TypSektion({ sektion, numeral, karten }: { sektion: Sektion; numeral: s
   );
 }
 
+// ─── Bereich-Sektion: zweistufig Rechtsbereich → Output-Typ ────────────────
+// Gleiche Anatomie wie TypSektion (Disclosure, Eyebrow, Lede); innen die
+// Output-Typen als kompakte Untergruppen — nur nicht-leere.
+
+function BereichSektion({ bereich, numeral, karten }: {
+  bereich: { code: Rechtsbereich; id: string; title: string; lede: string };
+  numeral: string;
+  karten: CalculatorCard[];
+}) {
+  const gruppen = SEKTIONEN
+    .map((sx) => ({
+      sx,
+      karten: [
+        ...karten.filter((k) => k.art === sx.art && k.status !== 'geplant'),
+        ...karten.filter((k) => k.art === sx.art && k.status === 'geplant'),
+      ],
+    }))
+    .filter((g) => g.karten.length > 0);
+  if (gruppen.length === 0) return null;
+
+  return (
+    <section id={bereich.id} className="scroll-mt-28">
+      <details open className="lc-sektion group bg-surface rounded-2xl border border-line">
+        <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
+          <span className="block space-y-2">
+            <span className="flex items-center justify-between gap-4">
+              <span className="lc-overline num text-brass-700">{numeral} — {bereich.title}</span>
+              <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
+                <span className="num">{karten.length}</span> Rechner
+                <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
+              </span>
+            </span>
+            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight hyphens-auto break-words" lang="de">{sansAmp(bereich.title)}</h2>
+            <span className="block text-body-l text-ink-600 max-w-reading">{bereich.lede}</span>
+            <span className="scale-rule block mt-4" aria-hidden />
+          </span>
+        </summary>
+        <div className="px-6 sm:px-10 pb-6 sm:pb-10 pt-2 space-y-8">
+          {gruppen.map((g) => (
+            <div key={g.sx.id}>
+              {/* Untergruppe: Output-Typ als Mono-Overline mit Haarlinie + Zähler */}
+              <div className="flex items-center gap-4 mb-4">
+                <h3 className="lc-overline text-ink-700">{g.sx.title}</h3>
+                <div className="flex-1 h-px bg-line" />
+                <span className="lc-overline num text-ink-500">{g.karten.length}</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                {g.karten.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </details>
+    </section>
+  );
+}
+
 // ─── Filterleiste (horizontal, über dem Katalog): Suche · Status · Gebiete ──
 // Die Inline-Suche FILTERT den aktiven Modus; die ⌘K-Palette navigiert global —
 // bewusst getrennte Einstiege (s. STRUKTUR.md), darum hier «filtern»-Wortlaut.
+
+export type PillGruppe = {
+  label: string;
+  optionen: { code: string; label: string }[];
+  aktiv: Set<string>;
+  toggle: (code: string) => void;
+};
 
 function FilterLeiste(props: {
   rechtsgebiete: string[];
   gebiete: Set<string>; toggleGebiet: (g: string) => void; reset: () => void;
   nurGeprueft: boolean; setNurGeprueft: (v: boolean) => void;
   suche: string; setSuche: (v: string) => void;
+  zeigeRechtsgebiete: boolean;
+  zusatzGruppen?: PillGruppe[];
 }) {
-  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche } = props;
+  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche, zeigeRechtsgebiete, zusatzGruppen } = props;
   return (
     <section aria-label="Filter" className="space-y-3">
       {/* Zeile 1: Suchfeld (flex-1) + Status-Toggle — beide auf --control-h (44px) */}
@@ -91,8 +157,25 @@ function FilterLeiste(props: {
           ))}
         </div>
       </div>
+      {/* Zusatz-Filtergruppen (z. B. Rechtsbereich, Output-Typ) — gleiche Pill-Optik */}
+      {(zusatzGruppen ?? []).map((gr) => (
+        <div key={gr.label} className="flex flex-wrap items-center gap-2" role="group" aria-label={gr.label}>
+          <span className="lc-overline text-ink-500 mr-1">{gr.label}</span>
+          {gr.optionen.map((o) => {
+            const an = gr.aktiv.has(o.code);
+            return (
+              <button key={o.code} type="button" onClick={() => gr.toggle(o.code)} aria-pressed={an}
+                className={`inline-flex items-center h-9 text-xs font-medium rounded-full px-3 border transition-colors ${
+                  an ? 'bg-ink-900 text-paper border-ink-900' : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
+                }`}>
+                {o.label}
+              </button>
+            );
+          })}
+        </div>
+      ))}
       {/* Zeile 2: Rechtsgebiet-Pills auf --pill-h (36px), umbrechend */}
-      <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Rechtsgebiete">
+      {zeigeRechtsgebiete && <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Rechtsgebiete">
         {rechtsgebiete.map((g) => {
           const an = gebiete.has(g);
           return (
@@ -112,7 +195,7 @@ function FilterLeiste(props: {
             Zurücksetzen
           </button>
         )}
-      </div>
+      </div>}
     </section>
   );
 }
@@ -164,21 +247,32 @@ function Uebersicht(props: {
 // `seitenleisteFuss` ist ein Slot für seitenspezifische Elemente (Direkteinstieg);
 // die Modus-Weiche sitzt seitenseitig prominent UNTER dem Hero (IA-Entscheid).
 
-export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
+export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'art', filterRechtsgebiet = true, filterBereich = false, filterArt = false, seitenleisteFuss }: {
   karten: CalculatorCard[];
   sektionen?: Sektion[];
+  // 'art' = flache Output-/Dokumenttyp-Sektionen · 'bereich' = zweistufig
+  // Rechtsbereich → Output-Typ (/fachpersonen, Modus Rechner)
+  gliederung?: 'art' | 'bereich';
+  filterRechtsgebiet?: boolean;
+  filterBereich?: boolean;
+  filterArt?: boolean;
   seitenleisteFuss?: React.ReactNode;
 }) {
   const [gebiete, setGebiete] = useState<Set<string>>(new Set());
+  const [bereiche, setBereiche] = useState<Set<string>>(new Set());
+  const [arten, setArten] = useState<Set<string>>(new Set());
   const [nurGeprueft, setNurGeprueft] = useState(false);
   const [suche, setSuche] = useState('');
 
-  const toggleGebiet = (g: string) =>
-    setGebiete((alt) => {
+  const toggleIn = (set: (f: (alt: Set<string>) => Set<string>) => void) => (g: string) =>
+    set((alt) => {
       const neu = new Set(alt);
       if (neu.has(g)) neu.delete(g); else neu.add(g);
       return neu;
     });
+  const toggleGebiet = toggleIn(setGebiete);
+  const toggleBereich = toggleIn(setBereiche);
+  const toggleArt = toggleIn(setArten);
 
   const q = suche.trim().toLowerCase();
   // Normverweise kompakt (ohne Leerzeichen) abgleichen, damit «Art. 335c»,
@@ -186,6 +280,8 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
   const qKompakt = q.replace(/\s+/g, '');
   const passt = (k: CalculatorCard) =>
     (gebiete.size === 0 || gebiete.has(k.rechtsgebiet)) &&
+    (bereiche.size === 0 || bereiche.has(k.rechtsbereich)) &&
+    (arten.size === 0 || arten.has(k.art)) &&
     (!nurGeprueft || k.status !== 'geplant') &&
     (q === '' ||
       [k.title, k.rechtsgebiet, ...(k.keywords ?? [])].some((t) => t.toLowerCase().includes(q)) ||
@@ -195,13 +291,15 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
   const rechtsgebiete = RECHTSGEBIETE.filter((g) => karten.some((k) => k.rechtsgebiet === g));
 
   const treffer = karten.filter(passt);
-  const filterAktiv = q !== '' || gebiete.size > 0 || nurGeprueft;
-  const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setNurGeprueft(false); };
+  const filterAktiv = q !== '' || gebiete.size > 0 || bereiche.size > 0 || arten.size > 0 || nurGeprueft;
+  const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setBereiche(new Set()); setArten(new Set()); setNurGeprueft(false); };
 
-  // Sprungmarken für die Seitenleisten-Übersicht (nur belegte Sektionen)
-  const sprungmarken = sektionen
-    .map((s) => ({ id: s.id, numeral: s.numeral, title: s.title, anzahl: treffer.filter((k) => k.art === s.art).length }))
-    .filter((s) => s.anzahl > 0);
+  // Sprungmarken für die Seitenleisten-Übersicht (nur belegte Sektionen);
+  // bei zweistufiger Gliederung springen sie auf die Rechtsbereiche.
+  const sprungmarken = (gliederung === 'bereich'
+    ? RECHTSBEREICH_SEKTIONEN.map((b) => ({ id: b.id, numeral: '', title: b.title, anzahl: treffer.filter((k) => k.rechtsbereich === b.code).length }))
+    : sektionen.map((s) => ({ id: s.id, numeral: s.numeral, title: s.title, anzahl: treffer.filter((k) => k.art === s.art).length }))
+  ).filter((s) => s.anzahl > 0);
 
   // Scrollspy: oberste sichtbare Sektion in der Übersicht markieren.
   const [aktiveSektion, setAktiveSektion] = useState<string | null>(null);
@@ -228,13 +326,29 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
     return () => beobachter.disconnect();
   }, [idsKey]);
 
-  const filterAnzahl = gebiete.size + (q !== '' ? 1 : 0) + (nurGeprueft ? 1 : 0);
+  const filterAnzahl = gebiete.size + bereiche.size + arten.size + (q !== '' ? 1 : 0) + (nurGeprueft ? 1 : 0);
+  const zusatzGruppen: PillGruppe[] = [
+    ...(filterBereich ? [{
+      label: 'Rechtsbereich',
+      optionen: RECHTSBEREICH_SEKTIONEN.filter((b) => karten.some((k) => k.rechtsbereich === b.code))
+        .map((b) => ({ code: b.code as string, label: b.title })),
+      aktiv: bereiche, toggle: toggleBereich,
+    }] : []),
+    ...(filterArt ? [{
+      label: 'Output-Typ',
+      optionen: sektionen.filter((sx) => karten.some((k) => k.art === sx.art))
+        .map((sx) => ({ code: sx.art as string, label: sx.title })),
+      aktiv: arten, toggle: toggleArt,
+    }] : []),
+  ];
   const filterLeiste = (
     <FilterLeiste
       rechtsgebiete={rechtsgebiete}
       gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
       nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
       suche={suche} setSuche={setSuche}
+      zeigeRechtsgebiete={filterRechtsgebiet}
+      zusatzGruppen={zusatzGruppen}
     />
   );
   const uebersicht = (
@@ -291,6 +405,14 @@ export function Katalog({ karten, sektionen = SEKTIONEN, seitenleisteFuss }: {
               </button>
             )}
           </section>
+        ) : gliederung === 'bereich' ? (
+          /* Zweistufig: Rechtsbereich → Output-Typ (nur nicht-leere Gruppen) */
+          RECHTSBEREICH_SEKTIONEN
+            .map((b) => ({ b, karten: treffer.filter((k) => k.rechtsbereich === b.code) }))
+            .filter((x) => x.karten.length > 0)
+            .map((x, i) => (
+              <BereichSektion key={x.b.id} bereich={x.b} numeral={['I', 'II', 'III', 'IV'][i] ?? String(i + 1)} karten={x.karten} />
+            ))
         ) : (
           /* Sektionen (datengetrieben); Numerale fortlaufend über die
              tatsächlich SICHTBAREN Sektionen — nie eine Lücke (I, II, IV) */
