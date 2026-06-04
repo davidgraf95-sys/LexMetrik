@@ -23,7 +23,11 @@ const MODI: { code: Modus; label: string; sub: string }[] = [
   { code: 'vorlage', label: 'Vorlagen', sub: 'erstellen' },
 ];
 
-export function ModusSchalter({ modus, onChange }: { modus: Modus; onChange: (m: Modus) => void }) {
+export function ModusSchalter({ modus, onChange, anzahl }: {
+  modus: Modus;
+  onChange: (m: Modus) => void;
+  anzahl?: Record<Modus, number>; // optionale Zähler je Modus
+}) {
   return (
     <div role="tablist" aria-label="Modus" className="inline-flex gap-1 p-1 bg-surface border border-line rounded-xl">
       {MODI.map((m) => {
@@ -36,7 +40,16 @@ export function ModusSchalter({ modus, onChange }: { modus: Modus; onChange: (m:
                 ? 'bg-surface-raised text-brass-700 shadow-sm border border-line'
                 : 'text-ink-600 hover:text-ink-900'
             }`}>
-            <span className="block text-sm font-semibold">{m.label}</span>
+            <span className="flex items-center gap-2 text-sm font-semibold">
+              {m.label}
+              {anzahl && (
+                <span className={`num text-[0.7rem] font-medium leading-none rounded-full px-1.5 py-0.5 ${
+                  aktiv ? 'bg-brass-100 text-brass-700' : 'bg-paper-sunken text-ink-500'
+                }`}>
+                  {anzahl[m.code]}
+                </span>
+              )}
+            </span>
             <span className={`block text-xs ${aktiv ? 'text-brass-600' : 'text-ink-500'}`}>{m.sub}</span>
           </button>
         );

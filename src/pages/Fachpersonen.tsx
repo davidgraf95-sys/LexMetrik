@@ -15,6 +15,10 @@ export function Fachpersonen() {
   // die Basis-Seite zeigt nur die allgemeinen Karten (tier 'frei').
   const alle = ALLE_KARTEN;
   const karten = alle.filter((k) => k.modus === modus);
+  const anzahl = {
+    rechner: alle.filter((k) => k.modus === 'rechner').length,
+    vorlage: alle.filter((k) => k.modus === 'vorlage').length,
+  } as const;
   const geprueft = alle.filter((k) => k.status === 'geprüft' && k.modus === 'rechner');
   const gebiete = RECHTSGEBIETE.filter((g) => alle.some((k) => k.rechtsgebiet === g)).length;
 
@@ -66,7 +70,7 @@ export function Fachpersonen() {
 
       {/* Primärweiche + modusabhängiger Sub-Hero */}
       <div className="space-y-6">
-        <ModusSchalter modus={modus} onChange={setModus} />
+        <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
         <ModusHero modus={modus} />
       </div>
 

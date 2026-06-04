@@ -71,6 +71,10 @@ export function ModusHero({ modus }: { modus: Modus }) {
 export function Startseite() {
   const [modus, setModus] = useModus();
   const karten = ALLE_KARTEN.filter((k) => k.tier === 'frei' && k.modus === modus);
+  const anzahl = {
+    rechner: ALLE_KARTEN.filter((k) => k.tier === 'frei' && k.modus === 'rechner').length,
+    vorlage: ALLE_KARTEN.filter((k) => k.tier === 'frei' && k.modus === 'vorlage').length,
+  } as const;
 
   return (
     <div className="space-y-16">
@@ -106,7 +110,7 @@ export function Startseite() {
 
       {/* Primärweiche + modusabhängiger Sub-Hero */}
       <div className="space-y-6">
-        <ModusSchalter modus={modus} onChange={setModus} />
+        <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
         <ModusHero modus={modus} />
       </div>
 
