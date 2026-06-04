@@ -1,4 +1,5 @@
 import { jsPDF } from 'jspdf';
+import { pdfText } from '../pdf/winansi';
 import type { AssembleErgebnis } from './engine';
 
 // PDF-Ausgabe einer Vorlage als «Mustertext zum eigenhändigen Abschreiben».
@@ -19,7 +20,7 @@ export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { abschreibHinwei
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(7.5);
       doc.setTextColor(110);
-      const zeilen = doc.splitTextToSize(e.dokument.disclaimer, BREITE) as string[];
+      const zeilen = doc.splitTextToSize(pdfText(e.dokument.disclaimer), BREITE) as string[];
       doc.text(zeilen, RAND, 297 - 14);
       doc.text(`Bausteine v${e.dokument.version} · Seite ${i}/${seiten}`, 210 - RAND, 297 - 6, { align: 'right' });
     }
@@ -51,7 +52,7 @@ export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { abschreibHinwei
   doc.setTextColor(26, 26, 23);
   doc.setFont('times', 'bold');
   doc.setFontSize(16);
-  doc.text(e.dokument.titel, 105, y + 4, { align: 'center' });
+  doc.text(pdfText(e.dokument.titel), 105, y + 4, { align: 'center' });
   y += 14;
 
   // Absätze
@@ -60,13 +61,13 @@ export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { abschreibHinwei
       seitenumbruch(12);
       doc.setFont('times', 'bold');
       doc.setFontSize(12);
-      doc.text(a.ueberschrift, RAND, y);
+      doc.text(pdfText(a.ueberschrift), RAND, y);
       y += 6;
     }
     doc.setFont('times', 'normal');
     doc.setFontSize(11.5);
     for (const absatzZeile of a.text.split('\n')) {
-      const zeilen = doc.splitTextToSize(absatzZeile === '' ? ' ' : absatzZeile, BREITE) as string[];
+      const zeilen = doc.splitTextToSize(absatzZeile === '' ? ' ' : pdfText(absatzZeile), BREITE) as string[];
       seitenumbruch(zeilen.length * 5.4 + 3);
       doc.text(zeilen, RAND, y);
       y += zeilen.length * 5.4;

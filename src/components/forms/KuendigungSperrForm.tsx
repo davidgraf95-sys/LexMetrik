@@ -74,7 +74,17 @@ export function KuendigungSperrForm() {
   const removeEreignis = (i: number) =>
     setForm((f) => ({
       ...f,
-      sperrereignisse: (f.sperrereignisse ?? []).filter((_, j) => j !== i),
+      // Index-Referenzen («Rückfall wie Ereignis …») nachführen: Verweis auf
+      // das entfernte Ereignis zurücksetzen, spätere Indizes verschieben.
+      sperrereignisse: (f.sperrereignisse ?? [])
+        .filter((_, j) => j !== i)
+        .map((e) => {
+          const ref = e.gleicheUrsacheWieEreignis;
+          if (ref == null) return e;
+          if (ref === i) return { ...e, gleicheUrsacheWieEreignis: undefined };
+          if (ref > i) return { ...e, gleicheUrsacheWieEreignis: ref - 1 };
+          return e;
+        }),
     }));
 
   const updateEreignisNum = (i: number, field: 'gleicheUrsacheWieEreignis', val: number | null) =>

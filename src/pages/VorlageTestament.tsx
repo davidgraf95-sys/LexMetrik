@@ -54,7 +54,13 @@ export function VorlageTestament() {
   const [a, setA] = useState<TestamentAntworten>(() => {
     try {
       const roh = localStorage.getItem(SPEICHER_KEY);
-      if (roh) return { ...TESTAMENT_DEFAULTS, ...JSON.parse(roh) };
+      if (roh) {
+        const geladen = { ...TESTAMENT_DEFAULTS, ...JSON.parse(roh) } as TestamentAntworten;
+        // Hydration absichern: Array-Felder aus älteren Speicherständen normalisieren
+        geladen.erben = Array.isArray(geladen.erben) ? geladen.erben : [];
+        geladen.vermaechtnisse = Array.isArray(geladen.vermaechtnisse) ? geladen.vermaechtnisse : [];
+        return geladen;
+      }
     } catch { /* defekter Speicher → Defaults */ }
     return TESTAMENT_DEFAULTS;
   });
@@ -441,18 +447,18 @@ export function VorlageTestament() {
             <span>Vorschau & Bausteinprotokoll</span>
             <span aria-hidden className="text-ink-500">▾</span>
           </summary>
-          <div className="px-4 pb-4"><VorschauSpalte /></div>
+          <div className="px-4 pb-4">{vorschauSpalte()}</div>
         </details>
         <div className="hidden lg:block lg:sticky lg:top-28">
-          <VorschauSpalte />
+          {vorschauSpalte()}
         </div>
       </div>
     </div>
   );
 
-  // Vorschau-Spalte (Papier, Pflichtteile, Protokoll) — doppelt gerendert
+  // Vorschau-Spalte (Papier, Pflichtteile, Protokoll) — als Funktionsaufruf
   // (mobil einklappbar / Desktop klebend), identischer Inhalt.
-  function VorschauSpalte() {
+  function vorschauSpalte() {
     return (
         <div className="space-y-4">
           {/* Live-Vorschau als «Papier» */}
