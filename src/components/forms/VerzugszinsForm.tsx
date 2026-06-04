@@ -90,11 +90,20 @@ export function VerzugszinsForm() {
   };
   const inputNum = 'lc-input num';
 
+  const fmtISO = (s: string) => (s ? s.split('-').reverse().join('.') : '–');
   const pdfConfig: PdfDocConfig = {
-    title: 'Verzugszins-Berechnung (Art. 104 OR)',
+    title: 'Verzugszins',
+    rechtsgrundlage: 'Berechnung nach Art. 104 OR',
     domain: 'verzugszins',
     fileBase: 'Verzugszins',
     inputs: eingaben,
+    // Ergebnis-Hero aus bereits berechneten Werten (kein neuer Inhalt)
+    hero: ergebnis ? {
+      hauptlabel: 'Verzugszins',
+      hauptwert: `CHF ${ergebnis.zinsOffenCHF}`,
+      nebenwerte: [{ label: 'Total inkl. Kapital', wert: `CHF ${ergebnis.totalOffenCHF}` }],
+      kontext: `${form.zinssatzProzent ?? 5} % auf CHF ${form.kapital} für ${ergebnis.tageTotal} Tage (${fmtISO(ergebnis.ersterZinstag)} – ${fmtISO(ergebnis.stichtag)})`,
+    } : undefined,
     sections: ergebnis ? [{ titel: 'Verzugszins (Art. 104 OR)', ergebnis }] : [],
     disclaimer: VERZUGSZINS_DISCLAIMER,
   };

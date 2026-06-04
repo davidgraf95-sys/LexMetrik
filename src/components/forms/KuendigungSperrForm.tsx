@@ -113,10 +113,23 @@ export function KuendigungSperrForm() {
 
   // PDF: Kündigungs-/Sperrfristen-Disclaimer (GAV einschlägig, Lohnfortzahlungsskalen NICHT).
   const pdfConfig: PdfDocConfig = {
-    title: 'Kündigungs- und Sperrfristen (Art. 335c / 336c OR)',
+    title: 'Kündigungs- und Sperrfristen',
+    rechtsgrundlage: 'Berechnung nach Art. 335c / 336c OR',
     domain: 'arbeitsrecht',
     fileBase: 'Kuendigung-Sperrfristen',
     inputs: eingaben,
+    // Ergebnis-Hero aus bereits berechneten Werten (Generik-Gegenprüfung)
+    hero: gesamt ? (gesamt.status === 'nichtig'
+      ? {
+          hauptlabel: 'Frühestens neu kündbar',
+          hauptwert: fmtISO(gesamt.fruehesteNeueKuendigungISO),
+          nebenwerte: [{ label: 'Beendigungsdatum', wert: '– (keines)' }],
+        }
+      : {
+          hauptlabel: 'Beendigungsdatum',
+          hauptwert: fmtISO(gesamt.beendigungISO),
+          nebenwerte: [{ label: 'Hemmung', wert: gesamt.gehemmtTage ? ` Tage` : 'keine' }],
+        }) : undefined,
     sections: gesamt ? [{ titel: 'Kündigung & Sperrfristen (Art. 335c / 336c OR)', ergebnis: gesamt }] : [],
     disclaimer:
       'Automatisierte Orientierungsberechnung zu Kündigungs- und Sperrfristen (Art. 335c / 336c OR) – ' +
