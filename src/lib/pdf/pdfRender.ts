@@ -224,7 +224,21 @@ class Zeichner {
     const titelZeilen = this.zeilen(titel, { size: 9.5, bold: true }, breite);
     const formelZeilen = formel ? this.zeilen(formel, { size: 8.5, font: 'courier' }, breite - 6) : [];
     const formelH = formelZeilen.length > 0 ? formelZeilen.length * this.zh(8.5) + 4 : 0;
-    const pillH = normen.length > 0 ? 5.5 : 0;
+    // Pill-Zeilen vorab messen (Umbrüche kumulieren wie beim Zeichnen),
+    // sonst sprengen viele Normen die reservierte Schritthöhe.
+    let pillZeilen = 0;
+    if (normen.length > 0) {
+      pillZeilen = 1;
+      this.doc.setFontSize(7.5);
+      this.doc.setFont('courier', 'normal');
+      let mx = MARGIN + einzug;
+      normen.forEach((n) => {
+        const w = this.doc.getTextWidth(n.label) + 4.5;
+        if (mx + w > PAGE_W - MARGIN) { mx = MARGIN + einzug; pillZeilen++; }
+        mx += w + 1.8;
+      });
+    }
+    const pillH = pillZeilen * 5.5;
     const rspZeilen = rechtsprechung ? this.zeilen(`Rechtsprechung: ${rechtsprechung}`, { size: 8 }, breite) : [];
     const total =
       titelZeilen.length * this.zh(9.5)
@@ -277,7 +291,7 @@ class Zeichner {
         }
         px += w + 1.8;
       });
-      this.y += pillH + 1.5;
+      this.y += 5.5 + 1.5; // letzte Pill-Zeile (Umbruch-Zeilen wurden oben addiert)
     }
 
     // Rechtsprechung inkl. [zu verifizieren] — sichtbar, dezent

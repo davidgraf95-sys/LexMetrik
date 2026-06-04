@@ -128,7 +128,7 @@ export function KuendigungSperrForm() {
       : {
           hauptlabel: 'Beendigungsdatum',
           hauptwert: fmtISO(gesamt.beendigungISO),
-          nebenwerte: [{ label: 'Hemmung', wert: gesamt.gehemmtTage ? ` Tage` : 'keine' }],
+          nebenwerte: [{ label: 'Hemmung', wert: gesamt.gehemmtTage ? `${gesamt.gehemmtTage} Tage` : 'keine' }],
         }) : undefined,
     sections: gesamt ? [{ titel: 'Kündigung & Sperrfristen (Art. 335c / 336c OR)', ergebnis: gesamt }] : [],
     disclaimer:

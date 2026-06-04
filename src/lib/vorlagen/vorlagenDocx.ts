@@ -106,8 +106,12 @@ export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?:
   const a = document.createElement('a');
   a.href = url;
   a.download = opts.dateiName;
+  // Defensiv: Anchor ins DOM, Revoke verzögert — sonst kann der Download
+  // in einzelnen Browsern abbrechen.
+  document.body.appendChild(a);
   a.click();
-  URL.revokeObjectURL(url);
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 // XLSX (vorbereitet, NICHT ausgeliefert): Ein künftiger Renderer dockt am
