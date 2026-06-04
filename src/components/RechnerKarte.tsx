@@ -77,9 +77,15 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
           )}
         </div>
       )}
-      <p className={`text-body-s font-medium ${aktiv ? 'text-brass-700' : 'text-ink-500'}`}>
-        {aktiv ? (card.modus === 'vorlage' ? 'Erstellen →' : 'Öffnen →') : (card.note ?? 'In Vorbereitung')}
-      </p>
+      {/* Footer: CTA nur bei «geprüft»; der Status steht bereits im Badge oben
+          (kein doppeltes «In Vorbereitung»). Eigene Hinweise (note) bleiben. */}
+      {aktiv ? (
+        <p className="text-body-s font-medium text-brass-700">
+          {card.modus === 'vorlage' ? 'Erstellen →' : 'Öffnen →'}
+        </p>
+      ) : card.note ? (
+        <p className="text-body-s font-medium text-ink-500">{card.note}</p>
+      ) : null}
     </article>
   );
 }
