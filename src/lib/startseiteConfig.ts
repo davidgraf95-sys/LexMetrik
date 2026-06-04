@@ -538,8 +538,24 @@ const VORLAGEN: Record<string, VorlageCard> = {
   vorsorgeauftrag: {
     id: 'vorsorgeauftrag', modus: 'vorlage', art: 'vorsorge', tier: 'frei', rechtsgebiet: 'Familie',
     title: 'Vorsorgeauftrag',
-    description: 'Beauftragung für Personensorge, Vermögenssorge und Rechtsverkehr bei Urteilsunfähigkeit.',
-    status: 'geplant', norms: [],
+    description: 'Personensorge, Vermögenssorge und Vertretung im Rechtsverkehr bei Urteilsunfähigkeit — mit Form-Weiche (eigenhändig oder beurkundet), Sondervollmachten und KESB-Hinweisen.',
+    status: 'geprüft',
+    norms: [
+      // Art. 360 ZGB – Grundsatz (Aufgabenbereiche, Weisungen, Ersatzverfügung)
+      { label: 'Art. 360 ZGB', url: fedlexUrl('ZGB', '360'), verified: true },
+      // Art. 361 ZGB – Form (eigenhändig oder öffentlich beurkundet)
+      { label: 'Art. 361 ZGB', url: fedlexUrl('ZGB', '361'), verified: true },
+      // Art. 363 ZGB – Validierung durch die KESB
+      { label: 'Art. 363 ZGB', url: fedlexUrl('ZGB', '363'), verified: true },
+      // Art. 396 OR – Sondervollmacht (Grundstücke, Vergleich, Schiedsabrede)
+      { label: 'Art. 396 OR', url: fedlexUrl('OR', '396'), verified: true },
+    ],
+    href: '/vorlagen/vorsorgeauftrag',
+    schemaId: 'vorsorgeauftrag',
+    formvorschrift: 'Eigenhändig abzuschreiben ODER öffentlich zu beurkunden',
+    output: ['pdf'],
+    keywords: ['Vorsorgeauftrag', 'Urteilsunfähigkeit', 'Personensorge', 'Vermögenssorge', 'KESB', 'Validierung', 'Beistandschaft'],
+    related: ['patientenverfuegung', 'eigenhaendiges-testament'],
     icon: 'document',
   },
   patientenverfuegung: {

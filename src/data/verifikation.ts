@@ -350,6 +350,20 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Vertragliche Verkürzung der Verjährung darf die Rechtsverfolgung nicht in unbilliger Weise erschweren.',
     verifiziert: false,
   },
+
+  // Vorsorgeauftrag (Art. 360 ff. ZGB)
+  BGE_151_III_81: {
+    aktenzeichen: 'BGE 151 III 81',
+    aussage:
+      'Die öffentliche Beurkundung des Vorsorgeauftrags richtet sich nach kantonalem Recht (Art. 55 SchlT ZGB); kein Beizug zweier Zeugen wie beim öffentlichen Testament erforderlich.',
+    verifiziert: false,
+  },
+  BGer_5A_624_2024: {
+    aktenzeichen: 'BGer 5A_624/2024',
+    aussage:
+      'Das Selbstbestimmungsrecht der auftraggebenden Person ist möglichst weitgehend zu respektieren; die Eignung der beauftragten Person ist nur zurückhaltend zu verneinen.',
+    verifiziert: false,
+  },
 };
 
 /** Liefert einen Rechtsprechungshinweis aus dem zentralen Register. */

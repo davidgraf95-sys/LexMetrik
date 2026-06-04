@@ -252,3 +252,93 @@ describe('Vorlage Patientenverfügung', () => {
     });
   });
 });
+
+// ─── Vorsorgeauftrag ─────────────────────────────────────────────────────────
+
+import {
+  VA_DEFAULTS, VA_SCHEMA, vaZusammenstellen, pruefeVaGates,
+  type VaAntworten,
+} from '../lib/vorlagen/vorsorgeauftrag';
+
+const va = (over: Partial<VaAntworten>): VaAntworten => ({
+  ...VA_DEFAULTS,
+  volljaehrig: true, urteilsfaehigBestaetigt: true, keineUmfassendeBeistandschaft: true,
+  vorname: 'Anna', nachname: 'Muster', geburtsdatum: '1960-04-12',
+  heimatort: 'Basel BS', adresse: 'Musterweg 1, 4051 Basel',
+  beauftragte: [{ name: 'Ben Muster', typ: 'natuerlich', angaben: 'geb. 01.01.1985', bereiche: ['personensorge', 'vermoegenssorge', 'rechtsverkehr'] }],
+  module: { personensorge: ['wohnsituation'], vermoegenssorge: ['verwaltung'], rechtsverkehr: ['behoerden'] },
+  datum: '2026-06-04',
+  ...over,
+  ...(over.module ? { module: { ...{ personensorge: [], vermoegenssorge: [], rechtsverkehr: [] }, ...over.module } } : {}),
+});
+
+describe('Vorlage Vorsorgeauftrag', () => {
+  it('Grundfall: Identifikation, Beauftragte, drei Bereichs-Module, eigenhändige Schlussformel', () => {
+    const r = vaZusammenstellen(va({}));
+    expect(r.aufgenommen).toEqual(expect.arrayContaining([
+      'V01_identifikation', 'V02_beauftragte', 'V04_personensorge', 'V05_vermoegenssorge',
+      'V06_rechtsverkehr', 'V13_ersetzt', 'V14_schluss_eigenhaendig',
+    ]));
+    expect(r.aufgenommen).not.toContain('V14_schluss_beurkundung');
+    expect(r.dokument.absaetze.at(-1)!.text).toContain('den 04.06.2026');
+    expect(r.dokument.absaetze.find((x) => x.bausteinId === 'V02b_beauftragteliste')!.text)
+      .toContain('Personensorge, Vermögenssorge, Vertretung im Rechtsverkehr');
+  });
+
+  it('formMode beurkundet: Beurkundungs-Schluss statt Unterschriftszeile', () => {
+    const r = vaZusammenstellen(va({ formMode: 'oeffentlich_beurkundet', datum: '' }));
+    expect(r.aufgenommen).toContain('V14_schluss_beurkundung');
+    expect(r.aufgenommen).not.toContain('V14_schluss_eigenhaendig');
+    expect(r.dokument.absaetze.at(-1)!.text).toContain('Urkundsperson');
+  });
+
+  it('Liegenschaften-Modul erzwingt die Grundstück-Sondervollmacht (Art. 396 Abs. 3 OR)', () => {
+    const ohne = vaZusammenstellen(va({}));
+    expect(ohne.aufgenommen).not.toContain('V07_grundstueck');
+    const mit = vaZusammenstellen(va({ module: { personensorge: [], vermoegenssorge: ['liegenschaften'], rechtsverkehr: [] } }));
+    expect(mit.aufgenommen).toContain('V07_grundstueck');
+    expect(mit.protokoll.find((p) => p.bausteinId === 'V07_grundstueck')!.hinweis).toContain('umstritten');
+  });
+
+  it('Bereichs-Module erscheinen nur, wenn der Bereich auch übertragen ist', () => {
+    const r = vaZusammenstellen(va({
+      beauftragte: [{ name: 'Ben', typ: 'natuerlich', angaben: 'x', bereiche: ['vermoegenssorge'] }],
+      module: { personensorge: ['wohnsituation'], vermoegenssorge: ['verwaltung'], rechtsverkehr: [] },
+    }));
+    expect(r.aufgenommen).toContain('V05_vermoegenssorge');
+    expect(r.aufgenommen).not.toContain('V04_personensorge'); // Module gewählt, Bereich aber nicht übertragen
+  });
+
+  it('Entschädigungs-Varianten erzeugen die passende Klausel', () => {
+    const pausch = vaZusammenstellen(va({ entschaedigung: 'pauschale', entschaedigungBetrag: 5000 }));
+    expect(pausch.dokument.absaetze.find((x) => x.bausteinId === 'V11_entschaedigung')!.text).toContain('CHF 5000 pro Jahr');
+    const keine = vaZusammenstellen(va({ entschaedigung: 'keine_angabe' }));
+    expect(keine.aufgenommen).not.toContain('V11_entschaedigung');
+  });
+
+  it('Eligibility-Gate blockiert ohne Handlungsfähigkeits-Bestätigung (Art. 13 ZGB)', () => {
+    const g = pruefeVaGates(va({ urteilsfaehigBestaetigt: false }));
+    expect(g.blocker.some((b) => b.includes('Handlungsfähigkeit'))).toBe(true);
+  });
+
+  it('medizinische Vertretung durch juristische Person blockiert', () => {
+    const g = pruefeVaGates(va({
+      beauftragte: [{ name: 'Treuhand AG', typ: 'juristisch', angaben: 'Basel', bereiche: ['personensorge'] }],
+      module: { personensorge: ['medizin'], vermoegenssorge: [], rechtsverkehr: [] },
+    }));
+    expect(g.blocker.some((b) => b.includes('NATÜRLICHEN'))).toBe(true);
+  });
+
+  it('ohne beauftragte Person blockiert; KESB-Validierungs-Hinweis immer', () => {
+    const g = pruefeVaGates(va({ beauftragte: [] }));
+    expect(g.blocker.some((b) => b.includes('360'))).toBe(true);
+    expect(g.hinweise.some((h) => h.includes('363'))).toBe(true);
+  });
+
+  it('jeder Baustein trägt Begründung und Norm', () => {
+    VA_SCHEMA.bausteine.forEach((b) => {
+      expect(b.begruendung.length, b.id).toBeGreaterThan(5);
+      expect(b.norm, b.id).toBeTruthy();
+    });
+  });
+});

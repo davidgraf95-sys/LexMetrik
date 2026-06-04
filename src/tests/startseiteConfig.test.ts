@@ -51,7 +51,7 @@ describe('Stufen-Zuteilung (tier)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag']);
 
 describe('Routen-Integrität', () => {
   it('jede geprüfte Karte verlinkt auf eine registrierte Route', () => {
