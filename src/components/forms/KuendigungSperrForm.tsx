@@ -6,6 +6,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { KuendigungTimeline } from '../KuendigungTimeline';
+import { SperrtageZaehler } from '../SperrtageZaehler';
 
 const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 
@@ -342,6 +343,7 @@ export function KuendigungSperrForm() {
           )}
 
           <KuendigungTimeline e={gesamt} />
+          {gesamt.sperrtage && gesamt.sperrtage.length > 0 && <SperrtageZaehler sperrtage={gesamt.sperrtage} />}
           <ErgebnisAnzeige titel="Kündigung & Sperrfristen (Art. 335c / 336c OR)" ergebnis={gesamt} />
           <PdfExportButton config={pdfConfig} />
         </div>

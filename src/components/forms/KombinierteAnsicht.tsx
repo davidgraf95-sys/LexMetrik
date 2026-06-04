@@ -8,6 +8,7 @@ import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
 import { KuendigungTimeline } from '../KuendigungTimeline';
+import { SperrtageZaehler } from '../SperrtageZaehler';
 
 const KANTONE_SELECT: Kanton[] = ['BS','BL','ZH','SH','TG','ZG','GR','BE','AG','SO','LU','SZ','UR','OW','NW','GL','FR','VS','VD','GE','NE','JU','TI','SG','AR','AI'];
 
@@ -225,6 +226,9 @@ export function KombinierteAnsicht() {
           <ErgebnisAnzeige titel="B+C – Kündigung & Sperrfristen (Art. 335c / 336c OR)" ergebnis={ergebnisse.kuendigung} />
         )}
         {ergebnisse.kuendigung && <KuendigungTimeline e={ergebnisse.kuendigung} />}
+        {ergebnisse.kuendigung?.sperrtage && ergebnisse.kuendigung.sperrtage.length > 0 && (
+          <SperrtageZaehler sperrtage={ergebnisse.kuendigung.sperrtage} />
+        )}
         <PdfExportButton config={pdfConfig} />
       </div>
     </div>

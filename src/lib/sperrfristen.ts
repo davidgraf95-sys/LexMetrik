@@ -10,6 +10,17 @@ export type SperrfristenErgebnis = Berechnungsergebnis & {
   sperrfristEndeISO?: string;          // Ende der massgebenden Sperrfrist (bei Nichtigkeit)
   fruehesteNeueKuendigungISO?: string; // bei Nichtigkeit: ab hier neu kündbar
   sperrIntervalle?: { von: string; bis: string; typ: string }[]; // für die Zeitstrahl-Grafik
+  // Sperrtage-Zähler je Ereignis: beanspruchte Tage; bei Krankheit/Unfall
+  // zusätzlich Kontingent (30/90/180 je DJ) und verbleibende Tage.
+  sperrtage?: {
+    ereignis: number;            // 1-basiert (UI-Nummerierung)
+    typ: string;
+    vonISO: string; bisISO: string;
+    beansprucht: number;         // Krankheit: Art.-77-Zählung (Anfangstag zählt nicht); sonst Kalendertage
+    kontingent?: number;
+    verbleibend?: number;
+    rueckfall?: boolean;         // Rückfall gleicher Ursache: kein neues Kontingent (BGE 120 II 124)
+  }[];
 };
 
 const iso = (d: Date) => format(d, 'yyyy-MM-dd');
@@ -38,6 +49,7 @@ type SperrfristIntervall = {
   bis: Date;
   beschreibung: string;
   normen: Normverweis[];
+  kontingent?: number; // nur Krankheit/Unfall: 30/90/180 Tage je Dienstjahr (Art. 336c Abs. 1 lit. b OR)
 };
 
 function berechneSperrfristIntervall(
@@ -78,6 +90,7 @@ function berechneSperrfristIntervall(
           return {
             von,
             bis: neuEnde,
+            kontingent: neueMaxTage,
             beschreibung:
               `Krankheit/Unfall: Sperrfrist ${kurzeMaxTage} Tage (${dj}. DJ). Dienstjahreswechsel zum ${dj + 1}. DJ ` +
               `am ${formatDatum(jahrestag)} während laufender Sperrfrist → längere Sperrfrist ${neueMaxTage} Tage ` +
@@ -91,6 +104,7 @@ function berechneSperrfristIntervall(
       return {
         von,
         bis: kurzeEnde,
+        kontingent: kurzeMaxTage,
         beschreibung:
           `Krankheit/Unfall: Schutz max. ${kurzeMaxTage} Tage (${dj}. DJ), Anfangstag zählt nicht (Art. 77 OR). ` +
           `Sperrfrist ${formatDatum(von)} – ${formatDatum(kurzeEnde)}.`,
@@ -254,8 +268,13 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
 
   const intervalle: SperrfristIntervall[] = [];
   const sperrIntervalle: { von: string; bis: string; typ: string }[] = [];
+  const sperrtage: NonNullable<SperrfristenErgebnis['sperrtage']> = [];
   sperrereignisse.forEach((e, i) => {
     if (e.gleicheUrsacheWieEreignis != null) {
+      sperrtage.push({
+        ereignis: i + 1, typ: e.typ, vonISO: e.von, bisISO: e.bis,
+        beansprucht: 0, rueckfall: true,
+      });
       // §1.3 / BGE 120 II 124: Rückfall derselben Ursache → KEINE neue Sperrfrist.
       rechenweg.push({
         beschreibung: `Sperrereignis ${i + 1} – ${e.typ}: Rückfall (gleiche Ursache wie Ereignis ${e.gleicheUrsacheWieEreignis + 1})`,
@@ -269,6 +288,17 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
     const iv = berechneSperrfristIntervall(e, vb);
     intervalle.push(iv);
     sperrIntervalle.push({ von: iso(iv.von), bis: iso(iv.bis), typ: e.typ });
+    // Zähler: Krankheit nach Art.-77-Zählung (Anfangstag zählt nicht, daher
+    // ohne +1 — deckungsgleich mit dem Kontingent); übrige Typen Kalendertage.
+    const beansprucht = e.typ === 'krankheit_unfall'
+      ? differenceInDays(iv.bis, iv.von)
+      : differenceInDays(iv.bis, iv.von) + 1;
+    sperrtage.push({
+      ereignis: i + 1, typ: e.typ, vonISO: iso(iv.von), bisISO: iso(iv.bis),
+      beansprucht,
+      kontingent: iv.kontingent,
+      verbleibend: iv.kontingent != null ? Math.max(0, iv.kontingent - beansprucht) : undefined,
+    });
     rechenweg.push({
       beschreibung: `Sperrereignis ${i + 1} – ${e.typ} (Art. 336c Abs. 1 OR)`,
       zwischenergebnis: iv.beschreibung,
@@ -310,6 +340,7 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
       sperrfristEndeISO: iso(waehrendSperrfrist.bis),
       fruehesteNeueKuendigungISO: iso(fruehesteNeue),
       sperrIntervalle,
+      sperrtage,
     };
   }
 
@@ -376,6 +407,7 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
       beendigungISO: iso(ende_ungehemmt),
       gehemmtTage: 0,
       sperrIntervalle,
+      sperrtage,
     };
   }
 
@@ -425,5 +457,6 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
     beendigungISO: iso(beendigungEndgueltig),
     gehemmtTage: totalHemmungTage,
     sperrIntervalle,
+    sperrtage,
   };
 }

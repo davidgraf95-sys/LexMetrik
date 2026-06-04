@@ -160,3 +160,54 @@ describe('Sperrfristen P1/P2 (Art. 336c OR)', () => {
     expect(r.ergebnis).toContain('31.07.2025');
   });
 });
+
+describe('Sperrtage-Zähler (Art. 336c Abs. 1 OR)', () => {
+  it('Krankheit 2. DJ: Kontingent 90, beansprucht nach Art. 77, verbleibend', () => {
+    const e = berechneSperrfristen({
+      vertragsbeginn: '2023-01-01', zugangKuendigung: '2024-07-01', kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1, kuendigungsterminMonatsende: true,
+      sperrereignisse: [{ typ: 'krankheit_unfall', von: '2024-06-01', bis: '2024-07-15' }],
+    });
+    const z = e.sperrtage![0];
+    expect(z.kontingent).toBe(90);
+    expect(z.beansprucht).toBe(44); // 01.06.–15.07., Anfangstag zählt nicht
+    expect(z.verbleibend).toBe(46);
+    expect(z.rueckfall).toBeUndefined();
+  });
+
+  it('Kontingent ausgeschöpft: AUF länger als Sperrfrist → verbleibend 0', () => {
+    const e = berechneSperrfristen({
+      vertragsbeginn: '2023-01-01', zugangKuendigung: '2024-09-01', kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1, kuendigungsterminMonatsende: true,
+      sperrereignisse: [{ typ: 'krankheit_unfall', von: '2024-01-10', bis: '2024-12-31' }],
+    });
+    const z = e.sperrtage![0];
+    expect(z.beansprucht).toBe(90);
+    expect(z.verbleibend).toBe(0);
+  });
+
+  it('Rückfall gleicher Ursache: kein neues Kontingent, 0 beansprucht', () => {
+    const e = berechneSperrfristen({
+      vertragsbeginn: '2023-01-01', zugangKuendigung: '2024-09-01', kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1, kuendigungsterminMonatsende: true,
+      sperrereignisse: [
+        { typ: 'krankheit_unfall', von: '2024-02-01', bis: '2024-02-20' },
+        { typ: 'krankheit_unfall', von: '2024-05-01', bis: '2024-05-10', gleicheUrsacheWieEreignis: 0 },
+      ],
+    });
+    expect(e.sperrtage).toHaveLength(2);
+    expect(e.sperrtage![1].rueckfall).toBe(true);
+    expect(e.sperrtage![1].beansprucht).toBe(0);
+  });
+
+  it('Militärdienst > 11 Tage: Kalendertage inkl. ±4 Wochen, kein Kontingent', () => {
+    const e = berechneSperrfristen({
+      vertragsbeginn: '2020-01-01', zugangKuendigung: '2024-09-01', kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1, kuendigungsterminMonatsende: true,
+      sperrereignisse: [{ typ: 'militaer_zivil', von: '2024-03-04', bis: '2024-03-22' }],
+    });
+    const z = e.sperrtage![0];
+    expect(z.kontingent).toBeUndefined();
+    expect(z.beansprucht).toBe(19 + 56); // 19 Diensttage + je 28 davor/danach
+  });
+});
