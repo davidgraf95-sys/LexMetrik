@@ -2,9 +2,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { LexmetrikSiegel, LexmetrikWortmarke } from './Logo';
 
 // Header (Design-Doc 5.1): sticky, paper-Grund, untere Hairline, Wortmarke + Navigation.
+// Die Stufenwahl (Basis ↔ Fachpersonen) übernimmt der StufenSchalter auf den Seiten;
+// der Katalog liegt direkt auf der Startseite — beides darum nicht im Header.
 const NAV = [
-  { to: '/rechner', label: 'Rechner', match: (p: string) => p.startsWith('/rechner') },
-  { to: '/fachpersonen', label: 'Fachpersonen', match: (p: string) => p === '/fachpersonen' },
   { to: '/methodik', label: 'Methodik', match: (p: string) => p === '/methodik' },
   { to: '/ueber', label: 'Über', match: (p: string) => p === '/ueber' },
 ];
