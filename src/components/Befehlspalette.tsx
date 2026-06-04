@@ -48,6 +48,7 @@ export function Befehlspalette() {
   const [q, setQ] = useState('');
   const [sel, setSel] = useState(0);
   const eingabeRef = useRef<HTMLInputElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const navigate = useNavigate();
 
   // Globaler Hotkey + Escape
@@ -72,7 +73,11 @@ export function Befehlspalette() {
     const t = setTimeout(() => eingabeRef.current?.focus(), 0);
     const vorher = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    return () => { clearTimeout(t); document.body.style.overflow = vorher; };
+    return () => {
+      clearTimeout(t);
+      document.body.style.overflow = vorher;
+      triggerRef.current?.focus(); // Fokus zurück auf den Auslöser
+    };
   }, [offen]);
 
   const { gruppen, waehlbar } = useMemo(() => {
@@ -103,15 +108,16 @@ export function Befehlspalette() {
   };
 
   const tastatur = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowDown') { e.preventDefault(); setSel((s) => Math.min(s + 1, waehlbar.length - 1)); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); setSel((s) => Math.max(s - 1, 0)); }
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (waehlbar.length) setSel((s) => Math.min(s + 1, waehlbar.length - 1)); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); if (waehlbar.length) setSel((s) => Math.max(s - 1, 0)); }
     else if (e.key === 'Enter' && waehlbar[sel]) { e.preventDefault(); oeffnen(waehlbar[sel]); }
+    else if (e.key === 'Tab') { e.preventDefault(); } // Fokus bleibt in der Palette (Eingabe + Pfeile)
   };
 
   return (
     <>
       {/* Trigger im Header */}
-      <button type="button" onClick={() => setOffen(true)} aria-label="Suchen (⌘K)"
+      <button ref={triggerRef} type="button" onClick={() => setOffen(true)} aria-label="Suchen (⌘K)"
         className="inline-flex items-center gap-2 h-9 px-2.5 sm:px-3 rounded-lg border border-line bg-surface text-ink-500 hover:text-ink-900 hover:border-brass-400 transition-colors">
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" aria-hidden>
           <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />

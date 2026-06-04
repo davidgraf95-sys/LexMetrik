@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { ALLE_KARTEN } from '../lib/startseiteConfig';
+import { CALCULATORS } from '../lib/calculators';
 
 // Annahmekriterien «Fedlex-Direktlinks für die Norm-Pills»:
 // artikelgenaue Anker, kein ?version=, geplante Kacheln ohne Pills.
@@ -46,6 +47,24 @@ describe('Stufen-Zuteilung (tier)', () => {
       'mietrecht', 'tagerechner', 'verzugszins',
     ]);
     ALLE_KARTEN.forEach((k) => expect(['frei', 'experte'], k.id).toContain(k.tier));
+  });
+});
+
+describe('Routen-Integrität', () => {
+  it('jede geprüfte Karte verlinkt auf eine registrierte Rechner-Route', () => {
+    const slugs = new Set(CALCULATORS.map((c) => c.slug));
+    geprueft.forEach((k) => {
+      expect(k.href, k.id).toMatch(/^\/rechner\//);
+      const slug = k.href!.replace('/rechner/', '').split('#')[0];
+      expect(slugs.has(slug), `${k.id} → ${slug}`).toBe(true);
+    });
+  });
+
+  it('jeder registrierte Rechner hat eine geprüfte Katalog-Karte', () => {
+    const hrefs = new Set(geprueft.map((k) => k.href!.split('#')[0]));
+    CALCULATORS.filter((c) => c.status === 'geprüft').forEach((c) => {
+      expect(hrefs.has(`/rechner/${c.slug}`), c.slug).toBe(true);
+    });
   });
 });
 

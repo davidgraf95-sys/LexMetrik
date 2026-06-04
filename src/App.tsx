@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { Startseite } from './pages/Startseite';
 import { Fachpersonen } from './pages/Fachpersonen';
-import { RechnerUebersicht } from './pages/RechnerUebersicht';
 import { RechnerKuendigung } from './pages/RechnerKuendigung';
 import { RechnerZpo } from './pages/RechnerZpo';
 import { RechnerVerzugszins } from './pages/RechnerVerzugszins';
@@ -35,7 +34,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Startseite />} />
         <Route path="/fachpersonen" element={<Fachpersonen />} />
-        <Route path="/rechner" element={<RechnerUebersicht />} />
+        {/* Alt-Route: Übersicht ist im Vollkatalog (/fachpersonen) aufgegangen */}
+        <Route path="/rechner" element={<Navigate to="/fachpersonen" replace />} />
         <Route path="/rechner/kuendigung" element={<RechnerKuendigung />} />
         <Route path="/rechner/zpo-fristen" element={<RechnerZpo />} />
         <Route path="/rechner/verzugszins" element={<RechnerVerzugszins />} />

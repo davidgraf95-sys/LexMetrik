@@ -29,11 +29,13 @@ export function ModusSchalter({ modus, onChange, anzahl }: {
   anzahl?: Record<Modus, number>; // optionale Zähler je Modus
 }) {
   return (
-    <div role="tablist" aria-label="Modus" className="inline-flex gap-1 p-1 bg-surface border border-line rounded-xl">
+    // role=group + aria-pressed (wie Status-/Stufen-Toggle) statt Tabs-Pattern:
+    // es ist ein Inhalts-Umschalter ohne Tabpanel-Semantik.
+    <div role="group" aria-label="Modus" className="inline-flex gap-1 p-1 bg-surface border border-line rounded-xl">
       {MODI.map((m) => {
         const aktiv = modus === m.code;
         return (
-          <button key={m.code} type="button" role="tab" aria-selected={aktiv}
+          <button key={m.code} type="button" aria-pressed={aktiv}
             onClick={() => onChange(m.code)}
             className={`px-5 sm:px-7 py-2.5 rounded-lg text-left no-underline transition-all ${
               aktiv
