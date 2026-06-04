@@ -78,7 +78,11 @@
 }
 
 @layer components {
-  .num, .lc-num { font-family: var(--font-mono), ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  /* Zähler/Pills: ausdrücklich Versal- UND Tabellenziffern (Referenzwerk-Optik).
+     Echte Kapitälchen (smcp) führen Geist/Geist Mono nicht → Uppercase+Tracking
+     der Overlines bleibt; Mediävalziffern im Fliesstext bewusst NICHT (Daten und
+     Normzitate sollen versalziffrig bleiben). */
+  .num, .lc-num { font-family: var(--font-mono), ui-monospace, monospace; font-variant-numeric: lining-nums tabular-nums; }
 
   /* «&» in Display-Titeln: ruhige Sans-Glyphe (Geist) statt der
      verschnörkelten Fraunces-Form; leicht reduziert für optischen Ausgleich. */

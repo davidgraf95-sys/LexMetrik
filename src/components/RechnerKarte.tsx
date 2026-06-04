@@ -24,15 +24,21 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
     .filter((k) => k && k.status === 'geprüft' && k.href);
 
   return (
-    <article className={`relative h-full min-w-0 lc-card bg-surface-raised p-6 flex flex-col gap-3 transition-all duration-200 motion-reduce:transition-none motion-reduce:transform-none ${
-      aktiv ? 'border-t-[3px] border-t-brass-500 hover:shadow-lg hover:-translate-y-0.5' : 'opacity-[0.74] cursor-default'
+    <article className={`relative h-full min-w-0 lc-card p-6 flex flex-col gap-3 transition-all duration-200 motion-reduce:transition-none motion-reduce:transform-none ${
+      aktiv
+        ? 'bg-surface-raised border-t-[3px] border-t-brass-500 hover:shadow-lg hover:-translate-y-0.5'
+        // «gedämpft» AA-konform: flache Fläche/grauer Akzent statt Opacity
+        // (Opacity drückte den Beschreibungstext unter 4.5:1)
+        : 'bg-surface shadow-none cursor-default'
     }`}>
       {aktiv && card.href && (
         <Link to={card.href} aria-label={`${card.title} öffnen`} className="absolute inset-0 rounded-lg" />
       )}
       <div className="flex items-start justify-between">
         {card.icon ? (
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-brass-100 text-brass-700">
+          <span className={`inline-flex items-center justify-center w-10 h-10 rounded-md ${
+            aktiv ? 'bg-brass-100 text-brass-700' : 'bg-paper-sunken text-ink-500'
+          }`}>
             <Icon name={card.icon} />
           </span>
         ) : <span />}
