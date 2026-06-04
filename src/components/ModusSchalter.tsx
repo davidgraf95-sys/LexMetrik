@@ -49,9 +49,8 @@ export function ModusSchalter({ modus, onChange, anzahl, breit = false }: {
             <span className="flex items-baseline gap-2">
               <span className="text-sm font-semibold leading-tight">{m.label}</span>
               {anzahl && (
-                <span className={`num text-[0.7rem] font-medium leading-none rounded-full px-1.5 py-0.5 ${
-                  aktiv ? 'bg-brass-100 text-brass-700' : 'bg-paper-sunken text-ink-500'
-                }`}>
+                /* beide Zähler identisch — aktiv/inaktiv vermittelt allein die Zelle */
+                <span className="num text-[0.7rem] font-medium leading-none text-ink-500">
                   {anzahl[m.code]}
                 </span>
               )}

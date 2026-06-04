@@ -19,7 +19,7 @@ export function SectionHead({ children }: { children: React.ReactNode }) {
 // ─── Typ-Sektion: Editorial-Öffner + flaches Kartenraster ─────────────────
 // Sortierung: geprüfte Rechner zuerst (Goldrand), danach «In Vorbereitung».
 
-function TypSektion({ sektion, numeral, karten }: { sektion: Sektion; numeral: string; karten: CalculatorCard[] }) {
+function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorCard[] }) {
   const sortiert = [
     ...karten.filter((k) => k.status !== 'geplant'),
     ...karten.filter((k) => k.status === 'geplant'),
@@ -31,11 +31,11 @@ function TypSektion({ sektion, numeral, karten }: { sektion: Sektion; numeral: s
       {/* Sektion per Mausklick ein-/ausklappbar (Disclosure); standardmässig offen. */}
       <details open className="lc-sektion group bg-surface rounded-2xl border border-line">
         <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
-          {/* Öffner: römische Monospace-Eyebrow (fortlaufend über die SICHTBAREN
-              Sektionen — nie I, II, IV mit Lücke) + Serif-Titel + Lede */}
+          {/* Öffner: Mono-Eyebrow ohne Ziffern (konsistent zur Sidebar) +
+              Serif-Titel + Lede */}
           <span className="block space-y-2">
             <span className="flex items-center justify-between gap-4">
-              <span className="lc-overline num text-brass-700">{numeral} — {sektion.title}</span>
+              <span className="lc-overline text-brass-700">{sektion.title}</span>
               <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
                 {/* Zähler-Einheit folgt dem Modus der Sektion (kein fixer String) */}
                 <span className="num">{sortiert.length}</span> {istVorlageArt(sektion.art) ? 'Vorlagen' : 'Rechner'}
@@ -59,9 +59,8 @@ function TypSektion({ sektion, numeral, karten }: { sektion: Sektion; numeral: s
 // Gleiche Anatomie wie TypSektion (Disclosure, Eyebrow, Lede); innen die
 // Output-Typen als kompakte Untergruppen — nur nicht-leere.
 
-function BereichSektion({ bereich, numeral, karten }: {
+function BereichSektion({ bereich, karten }: {
   bereich: { code: Rechtsbereich; id: string; title: string; lede: string };
-  numeral: string;
   karten: CalculatorCard[];
 }) {
   const gruppen = SEKTIONEN
@@ -81,7 +80,7 @@ function BereichSektion({ bereich, numeral, karten }: {
         <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
           <span className="block space-y-2">
             <span className="flex items-center justify-between gap-4">
-              <span className="lc-overline num text-brass-700">{numeral} — {bereich.title}</span>
+              <span className="lc-overline text-brass-700">{bereich.title}</span>
               <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
                 <span className="num">{karten.length}</span> Rechner
                 <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
@@ -236,7 +235,7 @@ function Uebersicht(props: {
         <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line opacity-50" />
         gedämpft = in Vorbereitung ·{' '}
         <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line border-t-2 border-t-brass-500" />
-        Goldrand = geprüft (folgt)
+        Goldrand = geprüft
       </p>
     </div>
   );
@@ -410,17 +409,16 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'art', fil
           RECHTSBEREICH_SEKTIONEN
             .map((b) => ({ b, karten: treffer.filter((k) => k.rechtsbereich === b.code) }))
             .filter((x) => x.karten.length > 0)
-            .map((x, i) => (
-              <BereichSektion key={x.b.id} bereich={x.b} numeral={['I', 'II', 'III', 'IV'][i] ?? String(i + 1)} karten={x.karten} />
+            .map((x) => (
+              <BereichSektion key={x.b.id} bereich={x.b} karten={x.karten} />
             ))
         ) : (
-          /* Sektionen (datengetrieben); Numerale fortlaufend über die
-             tatsächlich SICHTBAREN Sektionen — nie eine Lücke (I, II, IV) */
+          /* Sektionen (datengetrieben aus der zentralen Config) */
           sektionen
             .map((s) => ({ s, karten: treffer.filter((k) => k.art === s.art) }))
             .filter((x) => x.karten.length > 0)
-            .map((x, i) => (
-              <TypSektion key={x.s.id} sektion={x.s} numeral={['I', 'II', 'III', 'IV', 'V', 'VI'][i] ?? String(i + 1)} karten={x.karten} />
+            .map((x) => (
+              <TypSektion key={x.s.id} sektion={x.s} karten={x.karten} />
             ))
         )}
         </div>
