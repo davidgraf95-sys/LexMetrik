@@ -24,7 +24,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
     .filter((k) => k && k.status === 'geprüft' && k.href);
 
   return (
-    <article className={`relative h-full lc-card bg-surface-raised p-6 flex flex-col gap-3 transition-all duration-200 motion-reduce:transition-none motion-reduce:transform-none ${
+    <article className={`relative h-full min-w-0 lc-card bg-surface-raised p-6 flex flex-col gap-3 transition-all duration-200 motion-reduce:transition-none motion-reduce:transform-none ${
       aktiv ? 'border-t-[3px] border-t-brass-500 hover:shadow-lg hover:-translate-y-0.5' : 'opacity-[0.74] cursor-default'
     }`}>
       {aktiv && card.href && (
@@ -43,7 +43,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
       </div>
       <div>
         <p className="lc-overline">{card.rechtsgebiet}</p>
-        <H className="text-h3 font-display font-semibold text-ink-900 mt-1">{sansAmp(card.title)}</H>
+        <H className="text-h3 font-display font-semibold text-ink-900 mt-1 hyphens-auto break-words text-balance" lang="de">{sansAmp(card.title)}</H>
       </div>
       <p className="text-body-s text-ink-500 leading-relaxed">{card.description}</p>
       {/* Verwandte in der flexiblen Zone – Pills + «Öffnen» bleiben dadurch in
