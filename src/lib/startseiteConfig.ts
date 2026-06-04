@@ -193,6 +193,30 @@ const KARTEN: Record<string, CalculatorCard> = {
     description: 'Fristen bei Scheidung und Anfechtung des Kindesverhältnisses.',
     status: 'geplant', norms: [],
   },
+  klagebewilligung: {
+    id: 'klagebewilligung', art: 'frist', rechtsgebiet: 'Zivilprozess (ZPO)',
+    title: 'Klagebewilligung — Geltungsdauer',
+    description: 'Frist zur Einreichung der Klage nach erteilter Klagebewilligung.',
+    status: 'geplant', norms: [],
+  },
+  massenentlassung: {
+    id: 'massenentlassung', art: 'frist', rechtsgebiet: 'Arbeit',
+    title: 'Massenentlassung — Konsultationsfristen',
+    description: 'Fristen für die Konsultation der Arbeitnehmer bei Massenentlassung.',
+    status: 'geplant', norms: [],
+  },
+  'gesellschaftsrecht-fristen': {
+    id: 'gesellschaftsrecht-fristen', art: 'frist', rechtsgebiet: 'Vertrag / OR',
+    title: 'Gesellschaftsrechtliche Fristen',
+    description: 'Einberufungs- und Traktandierungsfristen sowie Verjährung der Verantwortlichkeitsklage.',
+    status: 'geplant', norms: [],
+  },
+  'sv-leistungen': {
+    id: 'sv-leistungen', art: 'frist', rechtsgebiet: 'Sozialversicherung (ATSG)',
+    title: 'Leistungsverwirkung & Nachzahlung (Sozialversicherung)',
+    description: 'Fristen für Anmeldung und rückwirkende Leistungen.',
+    status: 'geplant', norms: [],
+  },
 
   // ════ II — Beträge & Quoten (geprüft) ════
   verzugszins: {
@@ -253,6 +277,24 @@ const KARTEN: Record<string, CalculatorCard> = {
     description: 'Ausgleichung und Hinzurechnung sowie güterrechtliche Auseinandersetzung als Vorstufe.',
     status: 'geplant', norms: [],
   },
+  mietzinsanpassung: {
+    id: 'mietzinsanpassung', art: 'betrag', rechtsgebiet: 'Miete',
+    title: 'Mietzinsanpassung (Referenzzinssatz)',
+    description: 'Anpassung des Mietzinses nach Referenzzinssatz, Teuerung und Kostensteigerung.',
+    status: 'geplant', norms: [],
+  },
+  vorsorgeausgleich: {
+    id: 'vorsorgeausgleich', art: 'betrag', rechtsgebiet: 'Familie',
+    title: 'Vorsorgeausgleich (BVG) bei Scheidung',
+    description: 'Teilung der während der Ehe geäufneten Austrittsleistungen der beruflichen Vorsorge.',
+    status: 'geplant', norms: [],
+  },
+  existenzminimum: {
+    id: 'existenzminimum', art: 'betrag', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    title: 'Existenzminimum & Pfändungsquote',
+    description: 'Ermittlung des pfändbaren Betrags; Richtlinien- und kantonsabhängig.',
+    status: 'geplant', norms: [],
+  },
 
   // ════ III — Zuständigkeit & Einordnung (in Vorbereitung) ════
   gerichtsstand: {
@@ -291,6 +333,12 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'ferien-checker', art: 'werkzeug', rechtsgebiet: 'übergreifend',
     title: 'Gerichts- & Betreibungsferien-Checker',
     description: 'Prüft, ob ein Datum in Gerichts- oder Betreibungsferien fällt.',
+    status: 'geplant', norms: [],
+  },
+  teuerungsrechner: {
+    id: 'teuerungsrechner', art: 'werkzeug', rechtsgebiet: 'übergreifend',
+    title: 'Teuerungsrechner (LIK-Indexierung)',
+    description: 'Anpassung von Beträgen nach dem Landesindex der Konsumentenpreise.',
     status: 'geplant', norms: [],
   },
 };

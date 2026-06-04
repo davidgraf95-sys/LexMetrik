@@ -28,3 +28,6 @@ keine Schätzung»:
   derzeit nicht deterministisch abbildbar.
 - **Unterhaltsberechnung (Kindes-/Ehegattenunterhalt)** — stark einzelfall-
   und ermessensabhängig.
+- **Geldstrafen-Tagessatz** — wirtschaftliche Verhältnisse, wertend.
+- **Mietzinsherabsetzung bei Mängeln** — wertend.
+- **Konkurrenzverbot — Zulässigkeit** — örtlich/zeitlich/sachlich, wertend.
