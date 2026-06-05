@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 434 Tests in 22 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 440 Tests in 23 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -210,6 +210,15 @@ Wizards 1–3 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
 array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
 
 ## PDF-Rechenbericht (src/lib/pdf/)
+
+**Pro-Katalog-Umbau (5.6.2026, Auftrag):** Tabs Verfügbar(17)/Gesamt(111)
+(?ansicht=, Default Verfügbar), juristische Obergruppen als Super-Trenner
+(lib/rechtsbereichGruppen.ts, 5er-Modell, 4er-Fallback per GRUPPEN_MODELL),
+gruppierte Scrollspy-Seitenleiste (Rechtsbereich-Filter+Direkteinstieg
+entfernt), Schnellzugriff ★Favoriten+Zuletzt (lib/schnellzugriff.ts,
+localStorage, Stern nie auf geplant), istVerfuegbar()-Prädikat, Hero «17
+sofort verfügbar». Free unverändert. BetragsFeld: Tausender-Apostroph in
+22 CHF-Feldern. Visual-Checks (2 Agenten) GRÜN; P1–P3 gefixt.
 
 **Teuerungsrechner (5.6.2026, /rechner/teuerung, Free):** LIK-Indexierung
 mit amtlicher BFS-Reihe (src/data/likReihe.ts, generiert via scripts/
