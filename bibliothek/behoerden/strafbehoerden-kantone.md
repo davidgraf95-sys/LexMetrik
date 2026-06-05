@@ -1,7 +1,7 @@
 # Strafverfolgungsbehörden — Kantone + Bund
 
-**Erstellt:** 5.6.2026 · **Abrufdatum: 5.6.2026** · **Status: einfach belegt;
-zweiter Prüfdurchgang ausstehend.** Strafgerichte/ZMG: siehe
+**Erstellt:** 5.6.2026 · **Abrufdatum: 5.6.2026** · **Status: ZWEIFACH GEPRÜFT**
+(adversarialer Durchgang 5.6.2026 — Befunde unten eingearbeitet). Strafgerichte/ZMG: siehe
 [gerichtsbehoerden-kantone.md](gerichtsbehoerden-kantone.md) und
 [gog-gerichtsorganisation-kantone.md](gog-gerichtsorganisation-kantone.md)
 (dort zweifach geprüft) — hier nur Querverweise, keine Dopplung.
@@ -548,3 +548,52 @@ Quellen: baselland.ch/.../staatsanwaltschaft + /jugendanwaltschaft, bl.clex.ch (
 3. **Übertretungsstrafbehörden (Art. 17 StPO):** Klar belegt nur **TG (Ressort Übertretungen GSTA)** und **AI (EG-StPO Art. 8)** sowie **NE (MP zuständig)**. VD (Préfets) und GE (Service des contraventions) sind allgemein bekannt, hier aber nicht eigens belegt — verifizieren.
 4. **VD/VS/GE/JU/NE Jugend:** «Tribunal des mineurs / juge des mineurs» ist zugleich Anklage- UND Urteilsbehörde (StPO-Min-Modell) — die Anklagefunktion liegt beim juge/magistrat des mineurs, nicht bei einer separaten Jugendanwaltschaft (anders als DE-Schweiz mit eigener «Jugendanwaltschaft»).
 5. **Bund:** Sitz BA = Guisanplatz 1, 3003 Bern (nicht Wabern); Zweigstellen Zürich, Lausanne **und** Lugano.
+
+## ✓2-ERGEBNIS des adversarialen Durchgangs (5.6.2026)
+
+**Alle 6 Teil-A-Stichproben bestätigt** (ZH Güterstrasse 33 · BE Maulbeer-
+strasse 10 · LU Zentralstrasse 28 · BS Binningerstrasse 21 · FR Liebfrauen-
+platz 4 · GL Postgasse 29); **Bund-Zweigstellen am Impressum bestätigt**
+(ZH Werdstrasse 138+140 · Lausanne Rte de Chavannes 31 · Lugano Via
+Sorengo 3, Palazzo Vittoria).
+
+### KORREKTUR SZ (Dossier-Teil A überholt)
+Amtsleitung + 2. Abt. = **Schmiedgasse 21, 6431 Schwyz** (nicht Archivgasse 1,
+6430); 3.+4. Abt. = **Bahnhofstrasse 4, PF 128, 8832 Wollerau**; 1.+5. Abt.
+(inkl. **Jugendstrafsachen**) = **Einsiedlerstrasse 55, 8836 Bennau**.
+Quelle: sz.ch «Kontakte und Standorte».
+
+### Geschlossene Adress-Lücken
+- SO: Abt. Olten **Amthausquai 23, 4600 Olten** · Abt. WSD = Hauptsitz
+  **Barfüssergasse 28, 4502 Solothurn**.
+- BL: Strafjustizzentrum **Grenzacherstrasse 8, 4132 Muttenz** · Rennbahn-
+  turm **Kriegackerstrasse 100, 4132 Muttenz** · Gutsmatte **Rheinstrasse
+  27, 4410 Liestal** (Strafbefehle separat Rheinstrasse 12 — bestätigt).
+- TG: GSTA **Maurerstrasse 8, 8510 Frauenfeld** · reg. Abt. Frauenfeld
+  Maurerstrasse 2 · Bischofszell Poststrasse 5b, 9220 · Kreuzlingen
+  Hauptstrasse 5, 8280.
+- AG: OStA/Kant. StA/JugA **Frey-Herosé-Strasse 20, 5001 Aarau** ·
+  Lenzburg Bahnhofstrasse 4/Seetalplatz (Hausnummern Zofingen/Baden/Muri
+  noch offen — einzige Restlücke).
+- SG: UA Altstätten **Luchsstrasse 11** · UA Uznach **Grynaustrasse 3** ·
+  UA Gossau **Sonnenstrasse 4a** · Kant. UA **Spisergasse 15, 9001 St. Gallen**.
+- VD: MP central **Av. de Longemalle 1, 1020 Renens** · arr. Lausanne
+  Ch. de Couvaloup 6 · Est vaudois Quai Maria-Belgia 18, Vevey · La Côte
+  Place Saint-Louis 4, Morges · Nord vaudois Av. des Sports 18, Yverdon.
+- VS: Haut-Valais **Überlandstrasse 42, 3900 Brig-Glis** · central/Office
+  central **Rue des Vergers 9, 1950 Sion 2** · Bas-Valais **Place
+  Ste-Marie 6, 1890 St-Maurice**.
+
+### Übertretungsstrafbehörden — Rechtsgrundlagen jetzt belegt
+- **VD:** Loi sur les contraventions (LContr, RSV 312.11) — municipalité/
+  **préfet**/MP/Tribunal de police; dazu LPréf RSV 172.165.
+- **GE:** Service des contraventions (SCEM), **Chemin de la Gravière 5,
+  1227 Les Acacias** — LaCP rsGE E 4 10.
+- **NE:** LI-CPP **Art. 6** verbatim bestätigt (MP zuständig; Delegation
+  an Verwaltung möglich).
+
+### Verbleibend offen
+EG-StPO-Artikelnummern VS (LACPP)/JU (LiCPP)/VD (LMPu): Struktur amtlich
+bestätigt, exakte Artikel aus signierten PDFs weiterhin nicht maschinell
+extrahierbar — vor Stammdaten-Übernahme manuell am PDF prüfen. AG-Haus-
+nummern Zofingen/Baden/Muri.
