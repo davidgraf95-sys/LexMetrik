@@ -15,9 +15,14 @@ import { useLocale, fedlexLokalisiert } from './locale';
 type Props = {
   card: CalculatorCard;
   headingLevel?: 'h3' | 'h5' | 'h6'; // direkt unter der Typ-Sektion (h2) → h3
+  /** Schnellzugriff (Pro): Stern-Zustand + Toggle — nur auf verfügbaren Karten gerendert. */
+  favorit?: boolean;
+  onFavorit?: () => void;
+  /** Beim Öffnen des Tools (für «Zuletzt verwendet»). */
+  onOeffnen?: () => void;
 };
 
-export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
+export function RechnerKarte({ card, headingLevel = 'h3', favorit, onFavorit, onOeffnen }: Props) {
   // Drei distinkte Zustände (ehrliches Status-Modell):
   // geprüft = Goldrand (aktuell nirgends vergeben) · entwurf = orange,
   // gebaut aber fachlich ungeprüft · geplant = gedämpft, «In Vorbereitung».
@@ -37,7 +42,8 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
         : 'bg-surface shadow-none cursor-default'
     }`}>
       {aktiv && card.href && (
-        <Link to={card.href} aria-label={`${card.title} öffnen`} className="absolute inset-0 rounded-lg" />
+        <Link to={card.href} aria-label={`${card.title} öffnen`} className="absolute inset-0 rounded-lg"
+          onClick={onOeffnen} />
       )}
       <div className="flex items-start justify-between">
         {card.icon ? (
@@ -49,9 +55,23 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
         ) : <span />}
         {/* Statussignal: Goldrand allein = geprüft; Entwurf trägt zusätzlich
             das orange Badge (Unterscheidbarkeit der drei Zustände). */}
-        {entwurf && (
-          <span className="lc-badge lc-badge-warn" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
-        )}
+        <span className="inline-flex items-center gap-1.5">
+          {/* Stern nur auf VERFÜGBAREN Karten (istVerfuegbar) — Geplantes
+              kann man nicht «nutzen» (Auftrag Phase 4) */}
+          {aktiv && onFavorit && (
+            <button type="button" onClick={(e) => { e.preventDefault(); onFavorit(); }}
+              aria-pressed={!!favorit}
+              aria-label={favorit ? `${card.title} aus Favoriten entfernen` : `${card.title} als Favorit markieren`}
+              className={`relative z-10 w-7 h-7 inline-flex items-center justify-center rounded-md text-[15px] leading-none transition-colors ${
+                favorit ? 'text-brass-700 bg-brass-100' : 'text-ink-400 hover:text-brass-700 hover:bg-brass-100/60'
+              }`}>
+              {favorit ? '★' : '☆'}
+            </button>
+          )}
+          {entwurf && (
+            <span className="lc-badge lc-badge-warn" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
+          )}
+        </span>
         {!aktiv && <span className="lc-badge lc-badge-soft">In Vorbereitung</span>}
       </div>
       <div>

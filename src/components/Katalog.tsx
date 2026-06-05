@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, type CalculatorCard } from '../lib/startseiteConfig';
+import { Link, useSearchParams } from 'react-router-dom';
+import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, istVerfuegbar, karte, type CalculatorCard } from '../lib/startseiteConfig';
+import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
+import { ladeFavoriten, toggleFavorit, ladeZuletzt, merkeZuletzt } from '../lib/schnellzugriff';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 
@@ -38,15 +41,22 @@ function sortiereKarten(karten: CalculatorCard[]): CalculatorCard[] {
 // keine Relevanz-Sortierung); gleiche Disclosure-Anatomie wie die übrigen
 // Sektionen. Nur nicht-leere Untergruppen werden angezeigt.
 
-function GebietSektion({ gebiet, karten, erzwungenOffen }: {
+function GebietSektion({ gebiet, karten, erzwungenOffen, startOffen = false, proZaehler = false, favoriten, onFavorit, onOeffnen }: {
   gebiet: { name: string; id: string; lede: string };
   karten: CalculatorCard[];
   /** Suche/Filter aktiv oder Sprungmarke geklickt → Sektion aufklappen. */
   erzwungenOffen?: boolean;
+  /** Pro: Verfügbar-Tab = offen; Katalog-Tab = offen, wenn Verfügbares da. */
+  startOffen?: boolean;
+  /** Pro: Zähler «X verfügbar · Y in Vorbereitung» statt «N Einträge». */
+  proZaehler?: boolean;
+  favoriten?: Set<string>;
+  onFavorit?: (id: string) => void;
+  onOeffnen?: (id: string) => void;
 }) {
-  // Initial ZUGEKLAPPT (Entscheid 5.6.2026 — weniger Scrollweg); einmal vom
-  // Nutzer geöffnet bleibt offen.
-  const [offen, setOffen] = useState(false);
+  // Free: initial zugeklappt (Entscheid 5.6.2026); Pro steuert über
+  // startOffen (Tab-Wechsel remountet via key → Zustand frisch).
+  const [offen, setOffen] = useState(startOffen);
   const istOffen = offen || !!erzwungenOffen;
 
   const gruppen = ([
@@ -64,7 +74,17 @@ function GebietSektion({ gebiet, karten, erzwungenOffen }: {
             <span className="flex items-center justify-between gap-4">
               <span className="lc-overline text-brass-700">{gebiet.name}</span>
               <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
-                <span className="num">{karten.length}</span> Einträge
+                {proZaehler ? (() => {
+                  const v = karten.filter(istVerfuegbar).length;
+                  const g = karten.length - v;
+                  return <>
+                    {v > 0 && <><span className="num text-brass-700">{v}</span> verfügbar</>}
+                    {v > 0 && g > 0 && ' · '}
+                    {g > 0 && <><span className="num">{g}</span> in Vorbereitung</>}
+                  </>;
+                })() : (
+                  <><span className="num">{karten.length}</span> Einträge</>
+                )}
                 <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
               </span>
             </span>
@@ -86,7 +106,12 @@ function GebietSektion({ gebiet, karten, erzwungenOffen }: {
               </div>
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(340px,100%),1fr))] gap-6">
                 {/* innerhalb der Gruppe: verfügbare vor geplanten (sortiereKarten) */}
-                {sortiereKarten(g.karten).map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
+                {sortiereKarten(g.karten).map((c) => (
+                  <RechnerKarte key={c.id} card={c} headingLevel="h3"
+                    favorit={favoriten?.has(c.id)}
+                    onFavorit={onFavorit && istVerfuegbar(c) ? () => onFavorit(c.id) : undefined}
+                    onOeffnen={onOeffnen ? () => onOeffnen(c.id) : undefined} />
+                ))}
               </div>
             </div>
           ))}
@@ -113,12 +138,14 @@ function FilterLeiste(props: {
   nurGeprueft: boolean; setNurGeprueft: (v: boolean) => void;
   zeigeRechtsgebiete: boolean;
   zusatzGruppen?: PillGruppe[];
+  /** Pro: Status-Schnitt entfällt — die Katalog-Tabs übernehmen ihn. */
+  ohneStatus?: boolean;
 }) {
-  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, zeigeRechtsgebiete, zusatzGruppen } = props;
+  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, zeigeRechtsgebiete, zusatzGruppen, ohneStatus } = props;
   return (
     <section aria-label="Filter" className="space-y-4">
       {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur verfügbare */}
-      <div role="group" aria-label="Status">
+      {!ohneStatus && <div role="group" aria-label="Status">
         <p className="lc-overline mb-1.5">Status</p>
         <div className="flex h-8 items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit">
           {([['Alle', false], ['Nur verfügbare', true]] as const).map(([label, wert]) => (
@@ -131,7 +158,7 @@ function FilterLeiste(props: {
             </button>
           ))}
         </div>
-      </div>
+      </div>}
       {/* Filtergruppen (Rechtsbereich, Output-/Dokument-Typ) — kompakte Pills */}
       {(zusatzGruppen ?? []).map((gr) => (
         <div key={gr.label} role="group" aria-label={gr.label}>
@@ -225,12 +252,85 @@ function Uebersicht(props: {
   );
 }
 
+// ─── Gruppierte Übersicht (Pro): Obergruppe als Überschrift, Gebiete darunter ─
+
+function UebersichtGruppiert(props: {
+  gruppen: { label: string; eintraege: { id: string; title: string; anzahl: number }[] }[];
+  aktiveSektion: string | null;
+  onSprung?: (id: string) => void;
+}) {
+  const { gruppen, aktiveSektion, onSprung } = props;
+  return (
+    <nav aria-label="Rechtsgebiete nach Obergruppen" className="space-y-4">
+      {gruppen.map((gr) => (
+        <div key={gr.label} className="space-y-1">
+          <p className="lc-overline mb-1.5">{gr.label}</p>
+          {gr.eintraege.map((s) => {
+            const aktiv = s.id === aktiveSektion;
+            return (
+              <a key={s.id} href={`#${s.id}`} aria-current={aktiv ? 'true' : undefined}
+                onClick={() => onSprung?.(s.id)}
+                className={`relative flex items-baseline justify-between gap-2 px-2 py-1 -mx-2 rounded-md text-body-s no-underline transition-colors ${
+                  aktiv ? 'bg-brass-100/60 text-ink-900 font-medium' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
+                }`}>
+                {aktiv && <span aria-hidden className="absolute left-0 top-1 bottom-1 w-[3px] rounded-full bg-brass-500" />}
+                <span className="truncate pl-1">{s.title}</span>
+                <span className="num text-xs text-ink-500">{s.anzahl}</span>
+              </a>
+            );
+          })}
+        </div>
+      ))}
+    </nav>
+  );
+}
+
+// ─── Schnellzugriff (Pro): Favoriten + Zuletzt verwendet ────────────────────
+// Zeigt NUR Verfügbares (defensiv gegen entfernte IDs via karte()-Lookup).
+
+function Schnellzugriff(props: {
+  favoriten: Set<string>;
+  zuletzt: string[];
+  onOeffnen: (id: string) => void;
+}) {
+  const { favoriten, zuletzt, onOeffnen } = props;
+  const aufloesen = (ids: string[]) =>
+    ids.map((id) => karte(id)).filter((k): k is NonNullable<ReturnType<typeof karte>> =>
+      !!k && istVerfuegbar(k) && !!k.href);
+  const favKarten = aufloesen([...favoriten]);
+  const zuletztKarten = aufloesen(zuletzt.filter((id) => !favoriten.has(id))).slice(0, 6);
+
+  const chip = (k: NonNullable<ReturnType<typeof karte>>) => (
+    <Link key={k.id} to={k.href!} onClick={() => onOeffnen(k.id)}
+      className="inline-flex items-center gap-1.5 h-8 px-3 rounded-lg border border-line bg-surface-raised text-body-s text-ink-900 no-underline hover:border-brass-400 hover:bg-brass-100/40 transition-colors">
+      {sansAmp(k.title)}
+    </Link>
+  );
+
+  return (
+    <section aria-label="Schnellzugriff" className="space-y-2.5">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="lc-overline text-ink-500 w-32 shrink-0">★ Favoriten</span>
+        {favKarten.length > 0
+          ? favKarten.map(chip)
+          : <span className="text-body-s text-ink-500">Mit ★ markierte Tools erscheinen hier.</span>}
+      </div>
+      {zuletztKarten.length > 0 && (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="lc-overline text-ink-500 w-32 shrink-0">Zuletzt verwendet</span>
+          {zuletztKarten.map(chip)}
+        </div>
+      )}
+    </section>
+  );
+}
+
 // ─── Katalog: klebende Seitenleiste (Filter/Übersicht) + Sektionen ──────────
 // `sektionen` bestimmt die Gliederung (Rechner-Output-Typen bzw. Dokument-Typen).
 // `seitenleisteFuss` ist ein Slot für seitenspezifische Elemente (Direkteinstieg);
 // die Modus-Weiche sitzt seitenseitig prominent UNTER dem Hero (IA-Entscheid).
 
-export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = false, filterArt = false, gebieteZuerst = [], seitenleisteFuss }: {
+export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = false, filterArt = false, gebieteZuerst = [], seitenleisteFuss, proAnsicht = false }: {
   karten: CalculatorCard[];
   filterRechtsgebiet?: boolean;
   filterBereich?: boolean;
@@ -239,7 +339,25 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
       (z. B. Free-Seite: «Übergreifende Werkzeuge» zuerst). */
   gebieteZuerst?: string[];
   seitenleisteFuss?: React.ReactNode;
+  /** Pro-Katalog (Auftrag 5.6.2026): Tabs Verfügbar/Gesamt, juristische
+      Obergruppen, gruppierte Seitenleiste, Schnellzugriff. */
+  proAnsicht?: boolean;
 }) {
+  // ── Pro: Tab Verfügbar/Gesamter Katalog, in der URL gespiegelt ──
+  const [searchParams, setSearchParams] = useSearchParams();
+  const ansicht: 'verfuegbar' | 'katalog' =
+    proAnsicht && searchParams.get('ansicht') === 'katalog' ? 'katalog' : 'verfuegbar';
+  const setAnsicht = (a: 'verfuegbar' | 'katalog') => {
+    const p = new URLSearchParams(searchParams);
+    if (a === 'katalog') p.set('ansicht', 'katalog'); else p.delete('ansicht');
+    setSearchParams(p);
+  };
+
+  // ── Pro: Schnellzugriff (Favoriten + Zuletzt; localStorage, SSR-sicher) ──
+  const [favoriten, setFavoriten] = useState<Set<string>>(() => new Set(ladeFavoriten()));
+  const [zuletzt, setZuletzt] = useState<string[]>(() => ladeZuletzt());
+  const onFavorit = (id: string) => setFavoriten(new Set(toggleFavorit(id)));
+  const onOeffnen = (id: string) => { merkeZuletzt(id); setZuletzt(ladeZuletzt()); };
   const [gebiete, setGebiete] = useState<Set<string>>(new Set());
   const [bereiche, setBereiche] = useState<Set<string>>(new Set());
   const [arten, setArten] = useState<Set<string>>(new Set());
@@ -274,7 +392,9 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
   // Nur Filterwerte anbieten, die in dieser Stufe auch vorkommen (Katalog-Reihenfolge).
   const rechtsgebiete = RECHTSGEBIETE.filter((g) => karten.some((k) => k.rechtsgebiet === g));
 
-  const treffer = karten.filter(passt);
+  // Tab «Verfügbar» blendet Geplantes aus — Daten bleiben unverändert.
+  const basisKarten = proAnsicht && ansicht === 'verfuegbar' ? karten.filter(istVerfuegbar) : karten;
+  const treffer = basisKarten.filter(passt);
   const filterAktiv = q !== '' || gebiete.size > 0 || bereiche.size > 0 || arten.size > 0 || nurGeprueft;
   const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setBereiche(new Set()); setArten(new Set()); setNurGeprueft(false); };
 
@@ -290,7 +410,15 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
     .map((g) => ({ g, karten: treffer.filter((k) => k.rechtsgebiet === g.name) }))
     .filter((x) => x.karten.length > 0);
 
-  const sprungmarken = gebietSichtbar.map((x) => ({ id: x.g.id, numeral: '', title: x.g.name, anzahl: x.karten.length }));
+  // Pro: dieselben sichtbaren Sektionen, gruppiert nach RECHTSBEREICH_GRUPPEN
+  // (Gruppen-/Gebiets-Reihenfolge = Anzeigeordnung; leere Gruppen entfallen).
+  const sektionFuer = new Map(gebietSichtbar.map((x) => [x.g.name, x]));
+  const gruppenSichtbar = RECHTSBEREICH_GRUPPEN
+    .map((gr) => ({ gr, sektionen: gr.gebiete.map((n) => sektionFuer.get(n)).filter((x): x is NonNullable<typeof x> => !!x) }))
+    .filter((x) => x.sektionen.length > 0);
+
+  const sprungmarken = (proAnsicht ? gruppenSichtbar.flatMap((x) => x.sektionen) : gebietSichtbar)
+    .map((x) => ({ id: x.g.id, numeral: '', title: x.g.name, anzahl: x.karten.length }));
 
   // Scrollspy: oberste sichtbare Sektion in der Übersicht markieren.
   const [aktiveSektion, setAktiveSektion] = useState<string | null>(null);
@@ -355,6 +483,7 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
       nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
       zeigeRechtsgebiete={filterRechtsgebiet}
       zusatzGruppen={zusatzGruppen}
+      ohneStatus={proAnsicht /* Tabs Verfügbar/Gesamt übernehmen den Status-Schnitt */}
     />
   );
   // Kompaktes Suchfeld — sitzt in der Seitenleiste (Desktop) bzw. im
@@ -374,8 +503,18 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
   const uebersicht = (
     <>
       {suchFeld}
-      <Uebersicht sprungmarken={sprungmarken} aktiveSektion={aktiveSektion}
-        onSprung={(id) => setSprungOffen(id)} />
+      {proAnsicht ? (
+        <UebersichtGruppiert
+          gruppen={gruppenSichtbar.map((x) => ({
+            label: x.gr.label,
+            eintraege: x.sektionen.map((sx) => ({ id: sx.g.id, title: sx.g.name, anzahl: sx.karten.length })),
+          }))}
+          aktiveSektion={aktiveSektion}
+          onSprung={(id) => setSprungOffen(id)} />
+      ) : (
+        <Uebersicht sprungmarken={sprungmarken} aktiveSektion={aktiveSektion}
+          onSprung={(id) => setSprungOffen(id)} />
+      )}
       {filterLeiste}
       {seitenleisteFuss}
     </>
@@ -407,6 +546,30 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
 
         {/* Karten: ab hier beginnt das Produkt */}
         <div className="space-y-8 min-w-0">
+        {proAnsicht && (
+          <>
+            {/* Tabs: steuern NUR die Sichtbarkeit; Default «Verfügbar»; in der URL gespiegelt */}
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div role="tablist" aria-label="Katalog-Ansicht"
+                className="flex h-9 items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit">
+                {([
+                  ['verfuegbar', `Verfügbar (${karten.filter(istVerfuegbar).length})`],
+                  ['katalog', `Gesamter Katalog (${karten.length})`],
+                ] as const).map(([code, label]) => (
+                  <button key={code} type="button" role="tab" aria-selected={ansicht === code}
+                    onClick={() => setAnsicht(code)}
+                    className={`px-3 rounded-md text-body-s font-medium transition-all ${
+                      ansicht === code ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
+                    }`}>
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {/* Schnellzugriff: Favoriten + Zuletzt — in beiden Tabs, zeigt nur Verfügbares */}
+            <Schnellzugriff favoriten={favoriten} zuletzt={zuletzt} onOeffnen={onOeffnen} />
+          </>
+        )}
         {treffer.length === 0 ? (
           /* Leerer Zustand: kein stilles Verschwinden der Sektionen */
           <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
@@ -425,12 +588,37 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
             )}
           </section>
         ) : (
-          /* Rechtsgebiet → Untergruppen Rechner/Vorlagen, feste §4-Reihenfolge;
-             zu Beginn zugeklappt — Suche/Filter und Sprungmarken klappen auf */
-          gebietSichtbar.map((x) => (
-            <GebietSektion key={x.g.id} gebiet={x.g} karten={x.karten}
-              erzwungenOffen={filterAktiv || sprungOffen === x.g.id} />
-          ))
+          proAnsicht ? (
+            /* Pro: Obergruppen als IMMER OFFENE Super-Trenner (Landkarte),
+               darunter die Gebiets-Sektionen. Verfügbar-Tab: alles offen;
+               Katalog-Tab: Gebiete kollabierbar, offen wenn Verfügbares da.
+               key trägt die ansicht → Tab-Wechsel remountet mit frischem
+               Default (kein Stale-State des details-Elements). */
+            gruppenSichtbar.map((x) => (
+              <section key={x.gr.id} aria-labelledby={`gruppe-${x.gr.id}`} className="space-y-6">
+                <div className="flex items-center gap-4 pt-2">
+                  <h2 id={`gruppe-${x.gr.id}`} className="font-sans font-semibold text-ink-900 text-h3 tracking-tight whitespace-nowrap">
+                    {sansAmp(x.gr.label)}
+                  </h2>
+                  <span aria-hidden className="scale-rule flex-1" />
+                </div>
+                {x.sektionen.map((sx) => (
+                  <GebietSektion key={`${sx.g.id}:${ansicht}`} gebiet={sx.g} karten={sx.karten}
+                    startOffen={ansicht === 'verfuegbar' || sx.karten.some(istVerfuegbar)}
+                    proZaehler
+                    erzwungenOffen={filterAktiv || sprungOffen === sx.g.id}
+                    favoriten={favoriten} onFavorit={onFavorit} onOeffnen={onOeffnen} />
+                ))}
+              </section>
+            ))
+          ) : (
+            /* Free: Rechtsgebiet → Untergruppen, feste §4-Reihenfolge;
+               zu Beginn zugeklappt — Suche/Filter und Sprungmarken klappen auf */
+            gebietSichtbar.map((x) => (
+              <GebietSektion key={x.g.id} gebiet={x.g} karten={x.karten}
+                erzwungenOffen={filterAktiv || sprungOffen === x.g.id} />
+            ))
+          )
         )}
         </div>
       </div>
