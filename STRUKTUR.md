@@ -194,7 +194,7 @@ Quelle: vorlagenPdf (jsPDF, Banner-API, WinAnsi-Sicherung) + vorlagenDocx
 vorbereitet, nirgends ausgeliefert). Geteilte Wizard-UI:
 components/vorlagen/ui.tsx (Field, NormLink locale-bewusst, Stepper).
 
-**7 gebaute Vorlagen (alle entwurf):**
+**8 gebaute Vorlagen (alle entwurf):**
 1. **Testament** (/vorlagen/testament) — eigenhändig: Abschreib-Mustertext,
    Pflichtteils-Panel, Gates 467/505/481/472. KEIN DOCX (Eigenhändigkeit).
 2. **Patientenverfügung** (/vorlagen/patientenverfuegung) — Schriftform;
@@ -244,9 +244,27 @@ components/vorlagen/ui.tsx (Field, NormLink locale-bewusst, Stepper).
    bewusst NICHT wählbar). Ersetzt die geplanten Karten generalvollmacht/
    bankvollmacht. StPO/VwVG in fedlex.ts ergänzt (Anker art_129/art_11
    empirisch verifiziert). 20 Akzeptanztests.
+8. **Klage im vereinfachten Verfahren – BS** (/vorlagen/klage-vereinfacht,
+   Karte `klage-vereinfacht`) — zweite BS-Eingabe der SG-Familie
+   (normverifizierter Auftrag 5.6.2026). Deterministisches BS-Routing:
+   Arbeit ≤30k → Arbeitsgericht (§§ 73 f. GOG), GlG/Mitwirkung →
+   Dreiergericht, Gewaltschutz/DSG/Miete-Kern → Einzelgericht (§ 71 GOG);
+   ehrliche Stopps (>30k ohne Abs.-2-Materie → ordentlich; Arbeit >30k →
+   § 73 Abs. 2-Hinweis; KVG-Zusatz → Sozialversicherungsgericht).
+   Schwellen aus ZPO_SCHWELLEN (SSoT); Klagefrist Art. 209 Abs. 3/4 über
+   die zpoFristen-Engine ('klagefrist_klagebewilligung', Gerichtsferien).
+   ABWEICHUNG vom Auftrag offengelegt: Art. 114 ZPO kennt KEINE Miete-
+   Position (lit. d = Mitwirkungsgesetz) → Miete im Entscheidverfahren
+   nicht kostenfrei. Begründung = freiwilliger strukturierter Platzhalter
+   (Behauptungs-Liste + Beweismittel) mit Verzichts-Baustein (Art. 245
+   Abs. 1); Begehren beziffert/unbeziffert (Art. 84/85), Rechtsöffnungs-
+   Antrag, Beilagen-Automatik (KB/Ausnahme/Vollmacht/Urkunden), Doppel-
+   Hinweis Art. 131. SG-Parteitypen wiederverwendet (parteiZeilen & Co.
+   exportiert). PDF+DOCX, ohne localStorage (wie SG). 20 Akzeptanztests.
 
 Wizards 1–3 und 7 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
-array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
+array-gesichert); Vorschau als Funktionsaufruf (kein Remount). Eingaben
+(4, 8) bewusst OHNE localStorage.
 
 ## PDF-Rechenbericht (src/lib/pdf/)
 

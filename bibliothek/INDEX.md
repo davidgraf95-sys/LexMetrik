@@ -17,8 +17,27 @@ das (noch) nicht Code ist. Regeln (aus CLAUDE.md abgeleitet):
 |---|---|---|
 | [quellen-register.md](quellen-register.md) | Verifizierte Fedlex-Quellen (ELI, Konsolidierung, geprüfte Anker, Filestore-Muster) + externe amtliche Quellen | gepflegt, fortlaufend |
 | [parameter-verfall.md](parameter-verfall.md) | Register aller datierten Parameter im Code mit Prüfrhythmus | gepflegt, fortlaufend |
-| [schlichtungsbehoerden-kantone.md](schlichtungsbehoerden-kantone.md) | Schlichtungsbehörden aller 26 Kantone (Art. 197/200 ZPO): Organisationsform, Adressen, Quellen | Recherche 5.6.2026, **nicht abgenommen** |
-| [normtexte-zpo-zustaendigkeit.md](normtexte-zpo-zustaendigkeit.md) | Wortlaut der 25 Schlüsselartikel für die geplante Zuständigkeitsengine (ZPO, Konsolidierung 1.1.2025 — inkl. Revision 2025) | maschinell extrahiert, **vor Verdrahtung sichtprüfen** |
+| [normtexte-zpo-zustaendigkeit.md](normtexte-zpo-zustaendigkeit.md) | Wortlaut der 25 Schlüsselartikel für die Zuständigkeitsengine (ZPO, Konsolidierung 1.1.2025 — inkl. Revision 2025) | maschinell extrahiert, **vor Verdrahtung sichtprüfen** |
+
+### Behörden (Gerichte & Schlichtung)
+
+| Dokument | Inhalt | Status |
+|---|---|---|
+| [gerichtsbehoerden-kantone.md](gerichtsbehoerden-kantone.md) | Master-Liste der Gerichtsbehörden aller 26 Kantone (Namenslogik, Adressen, Reformen GR/NE) | Recherche 5.6.2026, **2. Prüfdurchgang ausstehend** |
+| [gerichtsadressen-erstliste.md](gerichtsadressen-erstliste.md) | Davids CSV (47 Gerichte) + Verifikationsbefund (21 ✓ / 26 abweichend) | abgeschlossen 5.6.2026 |
+| [gerichte-bund.md](gerichte-bund.md) | BGer/BStGer/BVGer/BPatGer: Standorte, Abteilungen, Zuständigkeiten, Rechtsmittelwege (Art. 74 BGG verifiziert) | Recherche 5.6.2026, **2. Prüfdurchgang ausstehend** |
+| [schlichtungsbehoerden-kantone.md](schlichtungsbehoerden-kantone.md) | Schlichtungsbehörden aller 26 Kantone: Organisationsform, Adressen | **zweifach geprüft** (2 adversariale Re-Checks eingearbeitet), nicht abgenommen |
+| [schlichtungsbehoerden-zh-vollerfassung.md](schlichtungsbehoerden-zh-vollerfassung.md) | ZH komplett: 171 Friedensrichterämter + 12 Miet-Bezirksstellen + GlG-Stelle | einfach belegt 5.6.2026 |
+| [schlichtungsbehoerden-sz-bl-so-zg-sh-lu-vollerfassung.md](schlichtungsbehoerden-sz-bl-so-zg-sh-lu-vollerfassung.md) | Vollerfassung SZ/BL/SO/ZG/SH/LU (SZ grossteils offen — JS-Karte) | einfach belegt; **Agenten-Konflikte markiert** |
+| [schlichtungsbehoerden-ti-vs-gr-vollerfassung.md](schlichtungsbehoerden-ti-vs-gr-vollerfassung.md) | TI 38 Giudicature + Mietbüros, VS-Systematik (juge de commune), GR 11 Vermittlerämter | einfach belegt; **Konflikte markiert (VS-PLZ, TI-Zählung)** |
+
+### Kosten & Tarife
+
+| Dokument | Inhalt | Status |
+|---|---|---|
+| [schlichtungsgebuehren-kantone.md](schlichtungsgebuehren-kantone.md) | Schlichtungsgebühren aller 26 Kantone, wörtlich aus den Erlassen (+ Art. 113 Abs. 2 ZPO-Kopf) | Recherche 5.6.2026, **2. Prüfdurchgang ausstehend** |
+| [gerichtskosten-bund.md](gerichtskosten-bund.md) | Tarife BGer/BVGer/BStGer/BPatGer wörtlich aus Fedlex (Gebühren + Parteientschädigung) | einfach belegt 5.6.2026 |
+| [anwaltstarife-kantone.md](anwaltstarife-kantone.md) | Anwaltstarife (Parteientschädigung/UR) aller 26 Kantone mit Staffeln und Stundenansätzen | einfach belegt 5.6.2026 |
 
 ## Werkzeuge
 
