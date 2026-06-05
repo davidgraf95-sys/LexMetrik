@@ -363,3 +363,49 @@ describe('Zuständigkeit — Praxis-Umbau: Kostenfreiheit (Art. 113 Abs. 2) + Fa
     expect(ZUSTAENDIGKEIT_KOSTEN.JU.schlichtung.text).toContain('Punkte');
   });
 });
+
+describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + Art. 74 BGG verbatim)', () => {
+  const basis = (sw: number | null, extra: Partial<ZustaendigkeitInput> = {}): ZustaendigkeitInput => ({
+    streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: sw, ...extra,
+  });
+  it('kantonal: ≥10k Berufung · <10k Beschwerde · ohne SW offen · nicht vermögensrechtlich Berufung · Art. 5 entfällt', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    expect(bestimmeRechtsmittel(basis(10_000)).kantonal).toBe('berufung');
+    expect(bestimmeRechtsmittel(basis(9_999)).kantonal).toBe('beschwerde');
+    expect(bestimmeRechtsmittel(basis(null)).kantonal).toBe('offen');
+    expect(bestimmeRechtsmittel({ streitsache: 'scheidung', vermoegensrechtlich: false, streitwertCHF: null }).kantonal).toBe('berufung');
+    const ip = bestimmeRechtsmittel(basis(5_000, { streitsache: 'ip_wettbewerb' }));
+    expect(ip.kantonal).toBe('entfaellt_einzige_instanz');
+    expect(ip.bger).toBe('zulaessig'); // Art. 74 Abs. 2 lit. b BGG — streitwertunabhängig
+  });
+  it('BGer-Schwellen: Miete/Arbeit 15k, übrige 30k (Grenzwerte beidseitig)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    expect(bestimmeRechtsmittel(basis(15_000, { streitsache: 'arbeit' })).bger).toBe('zulaessig');
+    expect(bestimmeRechtsmittel(basis(14_999, { streitsache: 'miete_wohn_geschaeft', mieteUnterfall: 'sonstige' })).bger).toBe('schwelle_verfehlt');
+    expect(bestimmeRechtsmittel(basis(30_000)).bger).toBe('zulaessig');
+    expect(bestimmeRechtsmittel(basis(29_999)).bger).toBe('schwelle_verfehlt');
+    expect(bestimmeRechtsmittel(basis(29_999)).bgerText).toContain('grundsätzlicher Bedeutung');
+    expect(bestimmeRechtsmittel({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null }).bger).toBe('zulaessig');
+  });
+  it('obere Instanzen: alle 26 Kantone mit voller Adresse; Namenslogik-Falle korrekt (GL/SH/AR Obergericht, SG/AI/BL/LU Kantonsgericht)', async () => {
+    const { OBERE_INSTANZEN } = await import('../data/obereInstanzen');
+    const { KANTONE } = await import('../lib/kantone');
+    for (const k of KANTONE) {
+      const e = OBERE_INSTANZEN[k];
+      expect(e, k).toBeDefined();
+      expect(e.plzOrt, k).toMatch(/^\d{4} /);
+      expect(e.strasse.length, k).toBeGreaterThan(3);
+    }
+    for (const k of ['GL', 'SH', 'AR', 'OW', 'NW'] as const) expect(OBERE_INSTANZEN[k].name).toContain('Obergericht');
+    for (const k of ['SG', 'AI', 'BL', 'LU'] as const) expect(OBERE_INSTANZEN[k].name).toContain('Kantonsgericht');
+    expect(OBERE_INSTANZEN.BS.name).toContain('Appellationsgericht');
+    expect(OBERE_INSTANZEN.BE.plzOrt).toBe('3012 Bern');   // Audit-Korrektur (nicht 3001)
+    expect(OBERE_INSTANZEN.LU.plzOrt).toBe('6003 Luzern'); // Audit-Korrektur (nicht 6002)
+    expect(OBERE_INSTANZEN.GE.name).toContain('Cour de justice');
+  });
+  it('Fristen-Hinweis trägt die verifizierten Normen (311/314/321 ZPO, 100/46 BGG)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const fh = bestimmeRechtsmittel(basis(50_000)).fristHinweis;
+    for (const n of ['311', '314', '321', '100', '46']) expect(fh).toContain(n);
+  });
+});

@@ -520,3 +520,101 @@ export function zustaendigkeitErgebnis(
     resultat: r,
   };
 }
+
+// ─── Rechtsmittel: obere Instanzen (Ausbau, Anordnung David 5.6.2026) ────────
+//
+// Bundesrechtliche Rechtsmittel-Weiche für erstinstanzliche Zivilentscheide.
+// Wortlaut-verifiziert am Fedlex-Cache (5.6.2026):
+//   Art. 308 Abs. 2 ZPO — Berufung in vermögensrechtlichen Angelegenheiten
+//   nur ab Streitwert 10 000 (zuletzt aufrechterhaltene Rechtsbegehren).
+//   Art. 319 lit. a ZPO — Beschwerde gegen nicht berufungsfähige Endentscheide.
+//   Art. 74 BGG (SR 173.110, Stand 1.1.2025) — Beschwerde in Zivilsachen:
+//   15 000 in arbeits- und mietrechtlichen Fällen, 30 000 übrige; Abs. 2
+//   lit. a Rechtsfrage grundsätzlicher Bedeutung, lit. b einzige kantonale
+//   Instanz (dann streitwertUNabhängig zulässig).
+// Die konkrete obere Instanz je Kanton liefert die Datenschicht
+// (src/data/obereInstanzen.ts) — hier nur Bundesrecht (§3).
+
+export const RECHTSMITTEL_SCHWELLEN = {
+  /** Art. 308 Abs. 2 ZPO */
+  BERUFUNG_MIN: 10_000,
+  /** Art. 74 Abs. 1 lit. a BGG (arbeits- und mietrechtliche Fälle) */
+  BGER_MIETE_ARBEIT: 15_000,
+  /** Art. 74 Abs. 1 lit. b BGG (übrige vermögensrechtliche Fälle) */
+  BGER_UEBRIGE: 30_000,
+} as const;
+
+export interface RechtsmittelErgebnis {
+  /** Kantonales Rechtsmittel gegen den erstinstanzlichen Endentscheid. */
+  kantonal: 'berufung' | 'beschwerde' | 'offen' | 'entfaellt_einzige_instanz';
+  kantonalText: string;
+  /** Beschwerde in Zivilsachen ans Bundesgericht. */
+  bger: 'zulaessig' | 'schwelle_verfehlt' | 'offen';
+  bgerText: string;
+  fristHinweis: string;
+  normverweise: Normverweis[];
+}
+
+export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelErgebnis {
+  const sw = input.vermoegensrechtlich ? input.streitwertCHF : null;
+  const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'; // Art. 5 ZPO
+  const mietArbeit = input.streitsache === 'arbeit' || input.streitsache === 'miete_wohn_geschaeft';
+  const normverweise: Normverweis[] = [];
+
+  // Kantonale Ebene (Art. 308/319 ZPO)
+  let kantonal: RechtsmittelErgebnis['kantonal'];
+  let kantonalText: string;
+  if (istEinzigeInstanz) {
+    kantonal = 'entfaellt_einzige_instanz';
+    kantonalText = 'Die einzige kantonale Instanz (Art. 5 ZPO) entscheidet erst- und letztinstanzlich im Kanton — es gibt KEINE kantonale Berufung; nächste Stufe ist direkt das Bundesgericht (Art. 75 Abs. 2 lit. a BGG).';
+    normverweise.push({ artikel: 'Art. 5 ZPO' }, { artikel: 'Art. 75 Abs. 2 BGG' });
+  } else if (!input.vermoegensrechtlich) {
+    kantonal = 'berufung';
+    kantonalText = 'Nicht vermögensrechtliche Streitigkeit → BERUFUNG an die obere kantonale Instanz (Art. 308 Abs. 1 ZPO; die 10 000er-Grenze von Abs. 2 gilt nur für vermögensrechtliche Fälle).';
+    normverweise.push({ artikel: 'Art. 308 ZPO' });
+  } else if (sw === null) {
+    kantonal = 'offen';
+    kantonalText = `Ohne bezifferten Streitwert nicht bestimmbar: BERUFUNG ab Streitwert CHF ${RECHTSMITTEL_SCHWELLEN.BERUFUNG_MIN.toLocaleString('de-CH')} (zuletzt aufrechterhaltene Rechtsbegehren, Art. 308 Abs. 2 ZPO), darunter BESCHWERDE (Art. 319 lit. a ZPO).`;
+    normverweise.push({ artikel: 'Art. 308 Abs. 2 ZPO' }, { artikel: 'Art. 319 ZPO' });
+  } else if (sw >= RECHTSMITTEL_SCHWELLEN.BERUFUNG_MIN) {
+    kantonal = 'berufung';
+    kantonalText = `Streitwert CHF ${sw.toLocaleString('de-CH')} ≥ ${RECHTSMITTEL_SCHWELLEN.BERUFUNG_MIN.toLocaleString('de-CH')} → BERUFUNG an die obere kantonale Instanz (Art. 308 Abs. 2 ZPO). Massgeblich sind die zuletzt aufrechterhaltenen Rechtsbegehren.`;
+    normverweise.push({ artikel: 'Art. 308 Abs. 2 ZPO' });
+  } else {
+    kantonal = 'beschwerde';
+    kantonalText = `Streitwert CHF ${sw.toLocaleString('de-CH')} unter ${RECHTSMITTEL_SCHWELLEN.BERUFUNG_MIN.toLocaleString('de-CH')} → keine Berufung; BESCHWERDE an die obere kantonale Instanz (Art. 319 lit. a ZPO; nur Rechtsverletzung und offensichtlich unrichtige Sachverhaltsfeststellung, Art. 320 ZPO).`;
+    normverweise.push({ artikel: 'Art. 319 ZPO' }, { artikel: 'Art. 320 ZPO' });
+  }
+
+  // Bundesgericht (Art. 74 BGG)
+  let bger: RechtsmittelErgebnis['bger'];
+  let bgerText: string;
+  const bgerSchwelle = mietArbeit ? RECHTSMITTEL_SCHWELLEN.BGER_MIETE_ARBEIT : RECHTSMITTEL_SCHWELLEN.BGER_UEBRIGE;
+  if (istEinzigeInstanz) {
+    bger = 'zulaessig';
+    bgerText = 'Beschwerde in Zivilsachen ans Bundesgericht streitwertUNABHÄNGIG zulässig, weil ein Bundesgesetz eine einzige kantonale Instanz vorsieht (Art. 74 Abs. 2 lit. b BGG).';
+    normverweise.push({ artikel: 'Art. 74 Abs. 2 BGG' });
+  } else if (!input.vermoegensrechtlich) {
+    bger = 'zulaessig';
+    bgerText = 'Nicht vermögensrechtliche Angelegenheit: Die Streitwertgrenze von Art. 74 Abs. 1 BGG gilt nicht — Beschwerde in Zivilsachen grundsätzlich zulässig.';
+    normverweise.push({ artikel: 'Art. 74 BGG' });
+  } else if (sw === null) {
+    bger = 'offen';
+    bgerText = `Ohne bezifferten Streitwert nicht bestimmbar: Beschwerde in Zivilsachen ab CHF ${bgerSchwelle.toLocaleString('de-CH')} (${mietArbeit ? 'arbeits-/mietrechtlicher Fall, Art. 74 Abs. 1 lit. a' : 'Art. 74 Abs. 1 lit. b'} BGG).`;
+    normverweise.push({ artikel: 'Art. 74 Abs. 1 BGG' });
+  } else if (sw >= bgerSchwelle) {
+    bger = 'zulaessig';
+    bgerText = `Streitwert CHF ${sw.toLocaleString('de-CH')} ≥ ${bgerSchwelle.toLocaleString('de-CH')} (${mietArbeit ? 'arbeits-/mietrechtlicher Fall' : 'übrige Fälle'}) → Beschwerde in Zivilsachen ans Bundesgericht zulässig (Art. 74 Abs. 1 BGG).`;
+    normverweise.push({ artikel: 'Art. 74 Abs. 1 BGG' });
+  } else {
+    bger = 'schwelle_verfehlt';
+    bgerText = `Streitwert CHF ${sw.toLocaleString('de-CH')} unter der BGer-Grenze von CHF ${bgerSchwelle.toLocaleString('de-CH')} (${mietArbeit ? 'Art. 74 Abs. 1 lit. a' : 'Art. 74 Abs. 1 lit. b'} BGG). Ausnahmen: Rechtsfrage von grundsätzlicher Bedeutung (Abs. 2 lit. a) — sonst bleibt die subsidiäre Verfassungsbeschwerde (Art. 113 ff. BGG).`;
+    normverweise.push({ artikel: 'Art. 74 BGG' }, { artikel: 'Art. 113 BGG' });
+  }
+
+  return {
+    kantonal, kantonalText, bger, bgerText,
+    fristHinweis: 'Rechtsmittelfristen: Berufung/Beschwerde 30 Tage ab Zustellung des begründeten Entscheids (Art. 311 Abs. 1/321 Abs. 1 ZPO); im summarischen Verfahren 10 Tage (Art. 314 Abs. 1/321 Abs. 2 ZPO). Kantonal gilt der Gerichtsferien-Stillstand (Art. 145 Abs. 1 ZPO) — NICHT im summarischen Verfahren (Abs. 2 lit. b). Beschwerde ans Bundesgericht: 30 Tage (Art. 100 Abs. 1 BGG) mit eigenem Stillstand nach Art. 46 BGG.',
+    normverweise,
+  };
+}

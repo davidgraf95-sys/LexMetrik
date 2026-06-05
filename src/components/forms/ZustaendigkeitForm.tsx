@@ -10,10 +10,11 @@ import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import {
-  zustaendigkeitErgebnis, ZPO_SCHWELLEN,
+  zustaendigkeitErgebnis, ZPO_SCHWELLEN, bestimmeRechtsmittel,
   type ZustaendigkeitInput, type Streitsache, type MieteUnterfall, type Rechtsweg,
   type DeliktUnterfall, type PersoenlichkeitUnterfall,
 } from '../../lib/zustaendigkeit';
+import { obereInstanzFuer } from '../../data/obereInstanzen';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { kostenFuer } from '../../data/zustaendigkeitKosten';
@@ -231,6 +232,12 @@ export function ZustaendigkeitForm() {
     try { return zustaendigkeitErgebnis(input); } catch { return null; }
   })();
   const r = ergebnis?.resultat ?? null;
+
+  // Rechtsmittel-Auflösung (Ausbau «obere Instanzen», 5.6.2026): Bundesrecht
+  // aus der Engine, konkrete obere Instanz aus der zweifach geprüften
+  // Datenschicht. Nur im Rechtsmittel-Modus berechnet.
+  const rechtsmittel = input && f.instanz === 'rechtsmittel' ? bestimmeRechtsmittel(input) : null;
+  const obereInstanz = f.kanton !== '' ? obereInstanzFuer(f.kanton) : null;
 
   // Stellen-Auflösung (Kantonsschicht): Schlichtungsstellen — nur Einleitung.
   const stelle = r && f.kanton && f.instanz === 'einleitung' && r.schlichtung.obligatorisch
@@ -488,13 +495,53 @@ export function ZustaendigkeitForm() {
         </div>
       )}
 
-      {/* Rechtsmittel: ehrlich noch nicht aufgelöst */}
-      {f.instanz === 'rechtsmittel' && (
-        <p className="lc-notice text-body-s">
-          Rechtsmittel-Zuständigkeit (Berufung/Beschwerde an die obere kantonale Instanz, Art. 308 ff. ZPO)
-          ist noch nicht erfasst — unten gilt die Einordnung für die <strong>Einleitung</strong> des Verfahrens;
-          die zuständige Rechtsmittelinstanz richtet sich nach kantonalem Recht (Art. 4 ZPO).
-        </p>
+      {/* Rechtsmittel: Berufung/Beschwerde + obere Instanz (Ausbau 5.6.2026) */}
+      {f.instanz === 'rechtsmittel' && rechtsmittel && (
+        <div className="lc-reveal space-y-4" aria-live="polite">
+          <LiveHeader />
+          <div className="lc-card p-5 space-y-3">
+            <p className="lc-overline">Kantonales Rechtsmittel</p>
+            <p className="text-body-s text-ink-900 font-medium">
+              {rechtsmittel.kantonal === 'berufung' ? 'Berufung'
+                : rechtsmittel.kantonal === 'beschwerde' ? 'Beschwerde'
+                : rechtsmittel.kantonal === 'entfaellt_einzige_instanz' ? 'Entfällt (einzige kantonale Instanz)'
+                : 'Berufung oder Beschwerde — vom Streitwert abhängig'}
+            </p>
+            <p className="text-body-s text-ink-700">{rechtsmittel.kantonalText}</p>
+            {rechtsmittel.kantonal !== 'entfaellt_einzige_instanz' && (
+              f.kanton !== '' ? (
+                <div className="border-t border-line pt-3">
+                  <p className="lc-overline mb-1.5">Zuständige obere Instanz ({f.kanton})</p>
+                  <p className="text-body-s text-ink-900 whitespace-pre-line">
+                    {obereInstanz!.name}{'\n'}{obereInstanz!.strasse}{'\n'}{obereInstanz!.plzOrt}
+                  </p>
+                  {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1">{obereInstanz!.hinweis}.</p>}
+                  <p className="text-xs text-ink-500 mt-1.5">
+                    Quelle: zweifach geprüftes Gerichts-Dossier (Stand 5.6.2026) — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
+                  </p>
+                </div>
+              ) : (
+                <p className="text-body-s text-ink-500">Kanton wählen, um die zuständige obere Instanz mit Adresse anzuzeigen.</p>
+              )
+            )}
+          </div>
+          <div className="lc-card p-5 space-y-3">
+            <p className="lc-overline">Weiterzug ans Bundesgericht</p>
+            <p className="text-body-s text-ink-900 font-medium">
+              {rechtsmittel.bger === 'zulaessig' ? 'Beschwerde in Zivilsachen: zulässig'
+                : rechtsmittel.bger === 'schwelle_verfehlt' ? 'Streitwertgrenze nicht erreicht'
+                : 'Vom Streitwert abhängig'}
+            </p>
+            <p className="text-body-s text-ink-700">{rechtsmittel.bgerText}</p>
+            <p className="text-body-s text-ink-900 whitespace-pre-line border-t border-line pt-3">
+              Schweizerisches Bundesgericht{'\n'}Av. du Tribunal-fédéral 29{'\n'}1005 Lausanne
+            </p>
+          </div>
+          <div className="lc-notice text-body-s">{rechtsmittel.fristHinweis}</div>
+          <div className="flex flex-wrap gap-1.5">
+            {rechtsmittel.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
+          </div>
+        </div>
       )}
 
       {/* 4 · Ergebnis */}
