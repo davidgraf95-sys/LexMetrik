@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 423 Tests in 21 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 434 Tests in 22 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -210,6 +210,15 @@ Wizards 1–3 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
 array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
 
 ## PDF-Rechenbericht (src/lib/pdf/)
+
+**Teuerungsrechner (5.6.2026, /rechner/teuerung, Free):** LIK-Indexierung
+mit amtlicher BFS-Reihe (src/data/likReihe.ts, generiert via scripts/
+lik-reihe-generieren.py aus cc-d-05.02.08; 10 Originalbasen 1966–Mai 2026;
+OPEN-BY). Basis-AUTO wie BFS-Rechner; Modi Indexmiete (Art. 17 VMWG
+wortlaut-verifiziert, Senkungspflicht)/Unterhalt (286/128 ZGB)/generisch.
+VMWG neu in fedlex.ts. MONATLICHE PFLEGE: Reihe nach BFS-Publikation
+regenerieren. Eingaben: Behörden-Registry +Miete/Diskriminierung BS
+(Staatskalender 5.6.2026); SG-Forum-Häkchen entfernt (Kantonswahl).
 
 **Logik-Nachrechnung + Versimplung (5.6.2026):** 4 Cluster unabhängig vom
 Code aus dem Gesetz nachgerechnet (100+ Handfälle, 6912er-Erbrecht-Gitter,
