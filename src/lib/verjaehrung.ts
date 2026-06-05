@@ -63,7 +63,7 @@ export type VerjaehrungErgebnis = Berechnungsergebnis & {
 
 // ─── Regime-Tabelle ─────────────────────────────────────────────────────────
 
-const REGIME: Record<VerjaehrungRegime, {
+export const REGIME: Record<VerjaehrungRegime, {
   label: string; relativJahre: number; absolutJahre: number | null;
   beginnLabel: string; absolutLabel?: string; normen: Normverweis[];
 }> = {

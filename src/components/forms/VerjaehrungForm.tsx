@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { format } from 'date-fns';
 import type { Kanton } from '../../types/legal';
 import {
-  berechneVerjaehrung,
+  berechneVerjaehrung, REGIME,
   type VerjaehrungInput, type VerjaehrungRegime, type VerjaehrungErgebnis,
   type Unterbrechung, type UnterbrechungsTyp, type Stillstand,
 } from '../../lib/verjaehrung';
@@ -20,13 +20,14 @@ const VERJ_DISCLAIMER =
   'Übergangsrecht für Altfälle vor dem 1.1.2020 (Art. 49 SchlT ZGB) sowie die Wirkung unter Mitverpflichteten ' +
   '(Art. 136 OR). Die Verjährung ist Einrede (Art. 142 OR); der konkrete Fall ist fachlich zu prüfen.';
 
-const REGIMES: { code: VerjaehrungRegime; label: string; hint: string; rel: number; abs: number | null }[] = [
-  { code: 'ordentlich', label: 'Ordentliche Forderung – 10 Jahre (Art. 127 OR)', hint: 'Auffangregel für vertragliche Forderungen ohne Sonderfrist', rel: 10, abs: null },
-  { code: 'kurz', label: 'Katalogforderung – 5 Jahre (Art. 128 OR)', hint: 'Miet-/Pacht-/Kapitalzinse, periodische Leistungen, Handwerk, Arzt, Anwalt, Arbeitsverhältnis', rel: 5, abs: null },
-  { code: 'delikt', label: 'Unerlaubte Handlung – 3 / 10 Jahre (Art. 60 Abs. 1 OR)', hint: 'Sach- und Vermögensschaden', rel: 3, abs: 10 },
-  { code: 'delikt_person', label: 'Unerlaubte Handlung, Personenschaden – 3 / 20 Jahre (Art. 60 Abs. 1bis OR)', hint: 'Tötung oder Körperverletzung', rel: 3, abs: 20 },
-  { code: 'vertrag_person', label: 'Vertraglicher Personenschaden – 3 / 20 Jahre (Art. 128a OR)', hint: 'Körperverletzung/Tötung aus Vertragsverletzung', rel: 3, abs: 20 },
-  { code: 'bereicherung', label: 'Ungerechtfertigte Bereicherung – 3 / 10 Jahre (Art. 67 OR)', hint: 'Rückforderung grundloser Zuwendungen', rel: 3, abs: 10 },
+// UI-Texte und Reihenfolge lokal; die Fristzahlen kommen aus dem Engine-REGIME (§5: eine Quelle).
+const REGIMES: { code: VerjaehrungRegime; label: string; hint: string }[] = [
+  { code: 'ordentlich', label: 'Ordentliche Forderung – 10 Jahre (Art. 127 OR)', hint: 'Auffangregel für vertragliche Forderungen ohne Sonderfrist' },
+  { code: 'kurz', label: 'Katalogforderung – 5 Jahre (Art. 128 OR)', hint: 'Miet-/Pacht-/Kapitalzinse, periodische Leistungen, Handwerk, Arzt, Anwalt, Arbeitsverhältnis' },
+  { code: 'delikt', label: 'Unerlaubte Handlung – 3 / 10 Jahre (Art. 60 Abs. 1 OR)', hint: 'Sach- und Vermögensschaden' },
+  { code: 'delikt_person', label: 'Unerlaubte Handlung, Personenschaden – 3 / 20 Jahre (Art. 60 Abs. 1bis OR)', hint: 'Tötung oder Körperverletzung' },
+  { code: 'vertrag_person', label: 'Vertraglicher Personenschaden – 3 / 20 Jahre (Art. 128a OR)', hint: 'Körperverletzung/Tötung aus Vertragsverletzung' },
+  { code: 'bereicherung', label: 'Ungerechtfertigte Bereicherung – 3 / 10 Jahre (Art. 67 OR)', hint: 'Rückforderung grundloser Zuwendungen' },
 ];
 
 const U_TYPEN: { code: UnterbrechungsTyp; label: string }[] = [
@@ -80,7 +81,7 @@ export function VerjaehrungForm() {
   const [verzichtJahre, setVerzichtJahre] = useState('');
 
   const R = REGIMES.find((r) => r.code === regime)!;
-  const hatAbsolut = ['delikt', 'delikt_person', 'vertrag_person', 'bereicherung'].includes(regime);
+  const hatAbsolut = REGIME[regime].absolutJahre !== null;
   const beginnLabel = hatAbsolut
     ? regime === 'bereicherung' ? 'Kenntnis des Anspruchs' : 'Kenntnis von Schaden und Person'
     : 'Fälligkeit der Forderung';
@@ -247,14 +248,14 @@ export function VerjaehrungForm() {
           {/* Eckdaten – relative und absolute Frist getrennt; die massgebliche trägt das Badge */}
           <div className={`grid grid-cols-1 sm:grid-cols-2 ${hatAbsolut ? 'lg:grid-cols-4' : 'sm:grid-cols-3'} gap-3`}>
             <FristKarte
-              label={hatAbsolut ? `Relative Frist – ${R.rel} Jahre` : `Frist – ${R.rel} Jahre`}
+              label={hatAbsolut ? `Relative Frist – ${REGIME[regime].relativJahre} Jahre` : `Frist – ${REGIME[regime].relativJahre} Jahre`}
               sub={`ab ${beginnLabel}`}
               wert={ergebnis.relativEndeISO ? fmtISO(ergebnis.relativEndeISO) : 'steht still (Art. 138 Abs. 1)'}
               massgeblich={hatAbsolut && ergebnis.massgeblicheFrist === 'relativ'}
             />
             {hatAbsolut && (
               <FristKarte
-                label={`Absolute Frist – ${R.abs} Jahre`}
+                label={`Absolute Frist – ${REGIME[regime].absolutJahre} Jahre`}
                 sub={`ab ${absolutLabel}`}
                 wert={ergebnis.absolutEndeISO ? fmtISO(ergebnis.absolutEndeISO) : '–'}
                 massgeblich={ergebnis.massgeblicheFrist === 'absolut'}
