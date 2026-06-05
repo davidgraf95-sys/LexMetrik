@@ -9,7 +9,7 @@ Seitenüberlauf (H2), Testament-Quoten, PV-R6-Normalisierung, Mietvertrag-G3,
 sperrfristen-Union bei Nichtigkeit, tsconfig strict, fedlex-Kombi-Anker.
 Offen (UX-Politur, kein Output-Fehler): stabile Keys in 7 Listen-Editoren.
 
-**Stand:** 5. Juni 2026 — deployed bis `9295e24` (… + Katalog-Ausbau
+**Stand:** 5. Juni 2026 — deployed bis `1a69a93` (… + Katalog-Ausbau
 Free/Pro 111 Karten, Vorlagen 5+6 Arbeits-/Mietvertrag, Formatvorlagen-
 Renderer, Tagerechner; Bug-Check: 2 Review-Agents, 1 HOCH-Befund
 Toggle-Kopplung gefixt).
