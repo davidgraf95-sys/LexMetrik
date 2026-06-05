@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 477 Tests in 26 Dateien (475 grün + 2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 507 Tests in 27 Dateien (505 grün + 2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -27,7 +27,16 @@ Fedlex-Caches + Anker-Inventar: `bash scripts/fedlex-cache.sh`.
 **Informationsbibliothek: `bibliothek/INDEX.md`** — Quellen-Register
 (verifizierte Fedlex-Stände inkl. ZPO-Revision 2025), Parameter-
 Verfallsregister, Recherche-Dossiers (Schlichtungsbehörden 26 Kantone),
-ZPO-Normtexte für die geplante Zuständigkeitsengine.
+ZPO-Normtexte für die Zuständigkeitsengine.
+
+**Zuständigkeitsengine (`src/lib/zustaendigkeit.ts`, Phase 1 — entwurf):**
+Bundesrechtsschicht nach ZUSTAENDIGKEIT-AUFTRAG.md (Spezifikation im
+Repo-Root): Verfahrensart (Art. 243 inkl. Abs.-3-Vorbehalt), Schlichtung
+(197–200), Entscheidkompetenz (210/212, Revision 2025: 10'000),
+Gerichtsstände (10/32–35), HG-/Direktklage-Weichen (6/8). 30 Tests mit
+beidseitigen Schwellen-Grenzwerten. OFFEN: Phase 2 Kantonsschicht BS
+(+ SG_SCHWELLEN-Konsolidierung, golden-bewiesen), Phase 3 UI, Phase 4
+Vorlagen-Weiterleitung. Davids fachliche Abnahme steht aus.
 
 ## Verschlankung 5.6.2026 (verhaltensneutral, Review ohne Befunde)
 
