@@ -20,6 +20,7 @@ const VorlageTestament = lazy(() => import('./pages/VorlageTestament').then((m) 
 const VorlagePatientenverfuegung = lazy(() => import('./pages/VorlagePatientenverfuegung').then((m) => ({ default: m.VorlagePatientenverfuegung })));
 const VorlageVorsorgeauftrag = lazy(() => import('./pages/VorlageVorsorgeauftrag').then((m) => ({ default: m.VorlageVorsorgeauftrag })));
 const VorlageSchlichtungsgesuchBs = lazy(() => import('./pages/VorlageSchlichtungsgesuchBs').then((m) => ({ default: m.VorlageSchlichtungsgesuchBs })));
+const VorlageArbeitsvertrag = lazy(() => import('./pages/VorlageArbeitsvertrag').then((m) => ({ default: m.VorlageArbeitsvertrag })));
 const RechnerStub = lazy(() => import('./pages/RechnerStub').then((m) => ({ default: m.RechnerStub })));
 const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
 const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
@@ -67,6 +68,7 @@ export default function App() {
         <Route path="/vorlagen/patientenverfuegung" element={<VorlagePatientenverfuegung />} />
         <Route path="/vorlagen/vorsorgeauftrag" element={<VorlageVorsorgeauftrag />} />
         <Route path="/vorlagen/schlichtungsgesuch-bs" element={<VorlageSchlichtungsgesuchBs />} />
+        <Route path="/vorlagen/arbeitsvertrag" element={<VorlageArbeitsvertrag />} />
         {/* Noch nicht implementierte Rechner (geplant / in Vorbereitung) */}
         <Route path="/rechner/:slug" element={<RechnerStub />} />
         <Route path="/methodik" element={<Methodik />} />

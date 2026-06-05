@@ -59,7 +59,7 @@ describe('Stufen-Zuteilung (tier)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -160,7 +160,7 @@ describe('Katalog-Integrität (Rechtsgebiet-Gliederung)', () => {
   });
 
   it('die von den Wizard-Seiten referenzierten karte()-ids existieren', () => {
-    ['schlichtungsgesuch', 'patientenverfuegung', 'eigenhaendiges-testament', 'vorsorgeauftrag']
+    ['schlichtungsgesuch', 'patientenverfuegung', 'eigenhaendiges-testament', 'vorsorgeauftrag', 'arbeitsvertrag']
       .forEach((id) => expect(karte(id), id).toBeDefined());
   });
 });

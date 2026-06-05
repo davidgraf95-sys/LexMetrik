@@ -10,7 +10,7 @@ Verschlankung Stufe 1+2 + Design-Feinschliff).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 346 Tests in 18 Dateien (2 skipped) ✓ — Workflow:
+Build ✓ · Lint 0/0 ✓ · 362 Tests in 19 Dateien (2 skipped) ✓ — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -158,7 +158,7 @@ Quelle: vorlagenPdf (jsPDF, Banner-API, WinAnsi-Sicherung) + vorlagenDocx
 vorbereitet, nirgends ausgeliefert). Geteilte Wizard-UI:
 components/vorlagen/ui.tsx (Field, NormLink locale-bewusst, Stepper).
 
-**4 gebaute Vorlagen (alle entwurf):**
+**5 gebaute Vorlagen (alle entwurf):**
 1. **Testament** (/vorlagen/testament) — eigenhändig: Abschreib-Mustertext,
    Pflichtteils-Panel, Gates 467/505/481/472. KEIN DOCX (Eigenhändigkeit).
 2. **Patientenverfügung** (/vorlagen/patientenverfuegung) — Schriftform;
@@ -172,6 +172,19 @@ components/vorlagen/ui.tsx (Field, NormLink locale-bewusst, Stepper).
    Art. 198), Mängelliste mit Schritt-Sprung, SG_SCHWELLEN hart codiert,
    Behörden-Stammdaten BS, Form-Gate (Exemplare = 1+Beklagte), PDF+DOCX,
    BEWUSST ohne localStorage (Anweisung); 12 Akzeptanztests.
+5. **Einzelarbeitsvertrag** (/vorlagen/arbeitsvertrag) — ERSTE Vorlage auf
+   dem generischen Wizard-Rahmen. Grundlage: normverifiziertes Gutachten
+   Art. 319 ff. OR (5.6.2026); Validierungskern = Matrix absolut/relativ
+   zwingend (Art. 361/362) + Schriftform-Klauseln (durch beidseitige
+   Unterschrift erfüllt) + Disclosure (BGE 145 III 365, 149 III 202,
+   129 III 276). Harte Gates: Probezeit ≤ 3 Mte, Frist ≥ 1 Mt (bei
+   Befristung neutralisiert), Ferien ≥ 4/5 Wochen, Ferienabgeltung bei
+   Vollzeit gesperrt, KV nur mit Ort/Zeit/Gegenstand + Einblicks-
+   Bestätigung. Kantonale Mindestlöhne als DATIERTE Parameter
+   (AV_MINDESTLOEHNE, jährlich verifikationspflichtig!). ArG in fedlex.ts
+   ergänzt (Anker art_9/12/13/46 empirisch verifiziert). PDF+DOCX;
+   16 Akzeptanztests. Deklarierte Gutachten-Abweichung: einheitliche
+   Frist < Staffel zulässig per Art. 335c Abs. 2 (Hinweis statt Verbot).
 
 Wizards 1–3 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
 array-gesichert); Vorschau als Funktionsaufruf (kein Remount).

@@ -3,13 +3,16 @@
 // Verifizierte Fedlex-Basis-URLs (Systematische Rechtssammlung, konsolidierte,
 // in Kraft stehende Fassung, Sprache de). Kein ?version=-Parameter, damit der
 // Link stets die geltende Fassung auflöst.
-// SR 220 OR · SR 210 ZGB · SR 272 ZPO · SR 281.1 SchKG
+// SR 220 OR · SR 210 ZGB · SR 272 ZPO · SR 281.1 SchKG · SR 822.11 ArG
 
 export const FEDLEX = {
   OR:    'https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de',
   ZGB:   'https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de',
   ZPO:   'https://www.fedlex.admin.ch/eli/cc/2010/262/de',
   SchKG: 'https://www.fedlex.admin.ch/eli/cc/11/529_488_529/de',
+  // ArG: Anker art_9/art_12/art_13/art_46 empirisch gegen das konsolidierte
+  // Filestore-HTML verifiziert (Konsolidierung 20230901; geprüft 5.6.2026).
+  ArG:   'https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
