@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeispielChips, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { BeispielChips, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import type { Kanton } from '../../types/legal';
@@ -253,7 +253,8 @@ export function VerjaehrungForm() {
       </div>
 
       {ergebnis && (
-        <div className="space-y-4">
+        <div id="lc-ergebnis" className="space-y-4">
+          <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />
 
           {/* Eckdaten – relative und absolute Frist getrennt; die massgebliche trägt das Badge */}

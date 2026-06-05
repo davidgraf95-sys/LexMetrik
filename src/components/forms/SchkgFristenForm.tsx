@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, ErgebnisSprung, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
@@ -278,7 +278,8 @@ export function SchkgFristenForm() {
       <FehlerBox fehler={fehler} />
 
       {ausgaben.length > 0 && (
-        <div className="space-y-6">
+        <div id="lc-ergebnis" className="space-y-6">
+          <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />
           {ausgaben.map((a) => {
             const e = a.ergebnis;
@@ -295,10 +296,7 @@ export function SchkgFristenForm() {
                     { label: 'Fristbeginn (dies a quo)', val: e.diesAQuo },
                     { label: 'Fristende (dies ad quem)', val: `${e.diesAdQuem} · 24.00 Uhr` },
                   ].map((c) => (
-                    <div key={c.label} className="lc-tile">
-                      <p className="text-xs text-ink-500 mb-1">{c.label}</p>
-                      <p className="text-body-l font-semibold text-ink-900">{c.val}</p>
-                    </div>
+                    <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
                   ))}
                 </div>
                 <FristenKalender

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { Tabs } from '../ui/Tabs';
 import { Link, useNavigate } from 'react-router-dom';
 import {
@@ -255,10 +255,7 @@ export function AllgemeineFristForm() {
                   { label: 'Fristbeginn (dies a quo)', val: ergebnis.resultat.fristbeginnISO!.split('-').reverse().join('.') },
                   { label: 'Fristende (dies ad quem)', val: `${ergebnis.resultat.endDatum} · 24.00 Uhr` },
                 ].map((c) => (
-                  <div key={c.label} className="lc-tile">
-                    <p className="text-xs text-ink-500 mb-1">{c.label}</p>
-                    <p className="text-body-l font-semibold text-ink-900">{c.val}</p>
-                  </div>
+                  <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
                 ))}
               </div>
               <FristenKalender
@@ -334,10 +331,7 @@ export function AllgemeineFristForm() {
                   { label: 'Spätester Handlungstag', val: `${rueckErgebnis.resultat.endWochentag}, ${rueckErgebnis.resultat.endDatum}` },
                   { label: 'Stichtag / Termin', val: rueckErgebnis.resultat.startISO.split('-').reverse().join('.') },
                 ].map((c) => (
-                  <div key={c.label} className="lc-tile">
-                    <p className="text-xs text-ink-500 mb-1">{c.label}</p>
-                    <p className="text-body-l font-semibold text-ink-900">{c.val}</p>
-                  </div>
+                  <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
                 ))}
               </div>
               {/* Band läuft vom Handlungstag zum Stichtag; Ereignis-Marker =

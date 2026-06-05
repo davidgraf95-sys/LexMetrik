@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -546,7 +546,8 @@ export function ZustaendigkeitForm() {
 
       {/* 4 · Ergebnis */}
       {ergebnis && r && (
-        <div className="lc-reveal space-y-4" aria-live="polite">
+        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
+          <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />
 
           {/* Reihenfolge wie die Prüfung: örtlich → Verfahren → Eingabe */}
@@ -556,10 +557,7 @@ export function ZustaendigkeitForm() {
               { label: 'Verfahrensart', val: r.verfahrensart === 'vereinfacht' ? 'Vereinfacht' : r.verfahrensart === 'scheidungsverfahren' ? 'Scheidungsverfahren' : 'Ordentlich' },
               { label: 'Einleitende Eingabe', val: eingabeText },
             ].map((c) => (
-              <div key={c.label} className="lc-tile">
-                <p className="text-xs text-ink-500 mb-1">{c.label}</p>
-                <p className="text-body-l font-semibold text-ink-900">{c.val}</p>
-              </div>
+              <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
             ))}
           </div>
 

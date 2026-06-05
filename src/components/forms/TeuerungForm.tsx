@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import {
@@ -139,10 +139,7 @@ export function TeuerungForm() {
               { label: 'Veränderung', val: `${ergebnis.prozent > 0 ? '+' : ''}${ergebnis.prozent.toFixed(1)} %` },
               { label: 'Index (Basis ' + monatLabel(ergebnis.basis) + ' = 100)', val: `${ergebnis.indexAlt.toFixed(1)} → ${ergebnis.indexNeu.toFixed(1)}` },
             ].map((c) => (
-              <div key={c.label} className="lc-tile">
-                <p className="text-xs text-ink-500">{c.label}</p>
-                <p className="text-body-l font-semibold text-ink-900 num">{c.val}</p>
-              </div>
+              <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
             ))}
           </div>
           <ErgebnisAnzeige titel={`LIK-Indexierung (Basis ${monatLabel(ergebnis.basis)} = 100)`} ergebnis={ergebnis} />

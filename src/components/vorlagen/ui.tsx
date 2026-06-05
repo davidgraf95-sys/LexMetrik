@@ -93,3 +93,27 @@ export function BeispielChips({ items }: { items: { label: string; laden: () => 
     </div>
   );
 }
+
+/** Eckdaten-Kachel (UX C2) — vorher in 6+ Formularen wortgleich dupliziert.
+ *  Nur die einfache Label/Wert(-Sub)-Form; Spezialkacheln (z. B. Verjährungs-
+ *  FristKarte mit «massgeblich»-Badge) bleiben bewusst eigenständig. */
+export function EckdatenKachel({ label, wert, sub }: { label: string; wert: string; sub?: string }) {
+  return (
+    <div className="lc-tile">
+      <p className="text-xs text-ink-500 mb-1">{label}</p>
+      <p className="text-body-l font-semibold text-ink-900">{wert}</p>
+      {sub && <p className="text-xs text-ink-500 mt-0.5">{sub}</p>}
+    </div>
+  );
+}
+
+/** Mobile Sprungmarke zum Live-Ergebnis (UX A7) — nur sichtbar, wenn ein
+ *  Ergebnis existiert und der Schirm schmal ist; rein navigatorisch. */
+export function ErgebnisSprung({ zielId }: { zielId: string }) {
+  return (
+    <a href={`#${zielId}`} className="sm:hidden fixed bottom-4 right-4 z-40 lc-btn-outline lc-btn-sm shadow-md bg-surface"
+      onClick={(e) => { e.preventDefault(); document.getElementById(zielId)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+      ↓ Ergebnis
+    </a>
+  );
+}
