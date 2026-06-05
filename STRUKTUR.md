@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 405 Tests in 21 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 413 Tests in 21 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
