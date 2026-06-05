@@ -11,7 +11,246 @@ der Zuständigkeitsengine.
 
 ## Teil A — ZH · BE · LU · UR · SZ · OW · NW
 
-_(Bericht ausstehend.)_
+# Recherchebericht: Gerichtsorganisationsgesetze & Zivil-Entscheidgebühren — ZH, BE, LU, UR, SZ, OW, NW
+
+**Abrufdatum aller Quellen: 5.6.2026** · Alle Artikel/Paragraphen empirisch aus den amtlichen Volltext-PDFs verifiziert (pdf-Extraktion), nicht aus dem Gedächtnis. Behörden-Bezugsliste: `bibliothek/gerichtsbehoerden-kantone.md` (nur gelesen).
+
+**Methodischer Hinweis:** Die GOG/Justizgesetze regeln *Organisation + sachliche Zuständigkeit* meist gemeinsam (Einheitserlasse in BE, LU, UR, SZ, OW, NW; in ZH ebenfalls). Ein separates EG ZPO mit der materiellen Zuständigkeit existiert in diesem Sample nur ergänzend in **BE** (Hinweis unten). Die Spalten-Artikel sind die *konstituierenden/zuständigkeitsbegründenden* Normen.
+
+---
+
+## ZH — Zürich
+
+**GOG:** Gesetz über die Gerichts- und Behördenorganisation im Zivil- und Strafprozess (GOG), **LS 211.1**, vom 10. Mai 2010, Stand/Fassung **1.7.2020 (OS-Fassung 109)**. Quelle: zh.ch Gesetzessammlung (zhlex) · Volltext-PDF `notes.zh.ch …/211.1_10.5.10_109.pdf`.
+
+| Behörde | GOG-Artikel | Kurzinhalt |
+|---|---|---|
+| Konstituierung aller Gerichte | **§ 3** | In jedem Bezirk ein Bezirksgericht mit Arbeits-, Miet- und Jugendgericht; das Obergericht mit Handelsgericht |
+| Bezirksgericht (Kollegial-/Einzelgericht) | **§ 8, § 14** (Besetzung), **§ 19** (Zuständigkeit ordentl. Verf.), **§ 24** (Einzelgericht) | Erstinstanzliche Zivilstreitigkeiten ordentliches Verfahren / vereinfachtes Verfahren |
+| Arbeitsgericht | **§ 15** (Besetzung), **§ 20** (Zuständigkeit), § 25 (Einzelgericht bis Fr. 30'000) | Streitigkeiten aus Arbeitsverhältnis |
+| Mietgericht | **§ 16** (Besetzung), **§ 21** (Zuständigkeit), § 26 (Einzelgericht bis Fr. 30'000) | Miet-/Pachtstreitigkeiten Wohn-/Geschäftsräume |
+| Jugendgericht | **§ 22 lit. b / § 23** | Bezirksgericht als Jugendgericht gemäss JStPO |
+| Zwangsmassnahmengericht (Strafe) | **§ 29** (Einzelgericht BG) · **§ 46–47** (am Obergericht) | ZMG gemäss StPO/JStPO |
+| Obergericht | **§ 34, § 38** (Kammern + Handelsgericht), **§ 43** (einzige Instanz), **§ 48–49** (Berufung/Beschwerde Zivil/Straf) | Obere kantonale Instanz |
+| Handelsgericht | **§ 36** (Handelsrichter), **§ 38** (Bildung), **§ 44** (Zuständigkeit einzige Instanz, Art. 6 ZPO), § 45 (Einzelgericht) | Handelsrechtliche Streitigkeiten |
+| Friedensrichter / Schlichtungsbehörden | **§ 52** (Schlichtungsbehörden), **§ 53** (je Gemeinde ein Friedensrichter), **§ 57** (Schlichtungsbehörde gemäss ZPO) | Schlichtung |
+| Paritätische Schlichtungsbehörde Gleichstellung | **§ 58–62** | GlG-Streitigkeiten |
+| Paritätische Schlichtungsbehörde Miete/Pacht | **§ 63–66** | Je Bezirk; Miet-/Pachtstreitigkeiten |
+| Gebühren-Delegationsnorm | **§ 199** | Obergericht erlässt Gebührenverordnungen |
+
+**Gebühren-Erlass:** Gebührenverordnung des Obergerichts (**GebV OG**), **LS 211.11**, vom 8.9.2010, **aktuelle Fassung 087 (in Kraft seit 1.1.2011, Stand 1.1.2015)** — bestätigt als aktuell.
+
+**Zivil-Entscheidgebühr ordentliches Verfahren (§ 4 GebV OG), Streitwert-Staffel (wörtlich, Grundgebühr):**
+- bis 1'000: 25% des Streitwertes, mind. Fr. 150
+- über 1'000 bis 5'000: Fr. 250 zuzügl. 20% des Fr. 1'000 übersteigenden Streitwertes
+- über 5'000 bis 20'000: Fr. 1'050 zuzügl. 14% des Fr. 5'000 übersteigenden Streitwertes
+- über 20'000 bis 80'000: Fr. 3'150 zuzügl. 8% des Fr. 20'000 übersteigenden Streitwertes
+- über 80'000 bis 300'000: Fr. 7'950 zuzügl. 4% des Fr. 80'000 übersteigenden Streitwertes
+- über 300'000 bis 1 Mio.: Fr. 16'750 zuzügl. 2% des Fr. 300'000 übersteigenden Streitwertes
+- über 1 Mio. bis 10 Mio.: Fr. 30'750 zuzügl. 1% des Fr. 1 Mio. übersteigenden Streitwertes
+- über 10 Mio.: Fr. 120'750 zuzügl. 0,5% des Fr. 10 Mio. übersteigenden Streitwertes
+
+Erhöhung bis +⅓ (Ausnahme bis +100%), Ermässigung möglich (§ 4 Abs. 2). **Rechtsmittel: § 12** — Berufungs-/Beschwerdeverfahren grundsätzlich nach den Vorinstanz-Ansätzen, bemessen nach noch streitigem Betrag.
+
+---
+
+## BE — Bern
+
+**GOG:** Gesetz über die Organisation der Gerichtsbehörden und der Staatsanwaltschaft (**GSOG**), **BSG 161.1**, vom 11.6.2009, **aktuelle Fassung Stand 1.5.2026** (Version 3367; Beschluss 2.9.2025). Quelle: belex.sites.be.ch. *(Die Artikelnummern der gerichtskonstituierenden Normen sind gegenüber der Fassung 2013 unverändert; einzelne Marginalien umstrukturiert.)*
+
+| Behörde | GSOG-Artikel | Kurzinhalt |
+|---|---|---|
+| Gliederung Gerichtsbehörden | **Art. 2** | Oberste Gerichte / kantonal zuständige / regionale Gerichtsbehörden |
+| Obergericht | **Art. 35** (Stellung/Sitz/Gliederung), Art. 36–46 | Oberste Instanz Zivil/Straf; gliedert sich in Zivil- und Strafabteilung |
+| Handelsgericht | **Art. 35 Abs. 3** (gehört der Zivilabteilung an), **Art. 43** (Abteilungen), **Art. 45 Abs. 2** (Spruchkörper: 3 Richter, davon 2 Fachrichter) | Handelsgericht als Teil des Obergerichts |
+| Verwaltungsgericht | **Art. 47** (Stellung/Sitz/Gliederung), Art. 48–58 | Oberste Instanz Verwaltungsrecht; eigenständig |
+| Zwangsmassnahmengericht | **Art. 59** (Zusammensetzung/Sitz), Art. 60–62 | Kantonsweit, Sitz Bern-Mittelland |
+| Wirtschaftsstrafgericht | **Art. 63–66** | Kantonsweit |
+| Jugendgericht | **Art. 67–68** | Kantonsweit |
+| Regionalgerichte (erste Instanz Zivil/Straf) | **Art. 80** (Gerichtsregionen), **Art. 81** (je Region ein Regionalgericht), Art. 82–83 | 4 Gerichtsregionen (Berner Jura-Seeland, Emmental-Oberaargau, Bern-Mittelland, Oberland) |
+| Regionale Schlichtungsbehörden | **Art. 84** (je Region eine Schlichtungsbehörde), **Art. 85** (Gleichstellung → SB Bern-Mittelland), **Art. 88** (Besetzung: Miete/Pacht, Arbeit) | Schlichtung inkl. Miet-/Arbeitsstreitigkeiten |
+
+**EG ZPO Bern:** Die *materielle sachliche/funktionelle Zuständigkeit* (z. B. Handelsgericht Art. 6 ZPO, einzige Instanz Art. 5 ZPO) ist ergänzend im **Einführungsgesetz zur Zivilprozessordnung, zur Strafprozessordnung und zur Jugendstrafprozessordnung (EG ZSJ), BSG 271.1** geregelt. *(Im Rahmen dieses Auftrags nicht artikelweise verifiziert → bei Bedarf separat prüfen.)*
+
+**Gebühren-Erlass:** Dekret betreffend die Verfahrenskosten und die Verwaltungsgebühren der Gerichtsbehörden und der Staatsanwaltschaft (**Verfahrenskostendekret, VKD**), **BSG 161.12**, vom 24.3.2010 (in Kraft seit 1.1.2011) — bestätigt. **System: Taxpunkte; 1 Taxpunkt = CHF 1 (Art. 4).**
+
+**Zivil-Entscheidgebühr ordentliches Verfahren, vermögensrechtlich (Art. 36 VKD), Streitwert-Staffel (wörtlich):**
+- 30'000 bis 100'000 Franken: 1'000 bis 20'000 Taxpunkte
+- 100'000 bis 500'000 Franken: 4'000 bis 36'000 Taxpunkte
+- 500'000 bis eine Million Franken: 8'000 bis 60'000 Taxpunkte
+- eine Million bis zwei Millionen Franken: 12'000 bis 120'000 Taxpunkte
+- zwei Millionen Franken und mehr: 0,5 bis 7 Prozent des Streitwerts
+- bei nicht schätzbarem Streitwert: 1'000 bis 40'000 Taxpunkte
+
+Nichtvermögensrechtlich: **Art. 37** = 200 bis 10'000 Taxpunkte. Vereinfachtes Verf. (< 30'000): Art. 38. **Rechtsmittel Berufung (Art. 44):** 10'000–30'000 → 900–7'500; 30'000–100'000 → 1'500–20'000; 100'000–500'000 → 6'000–40'000; 500'000–1 Mio. → 8'000–60'000; 1–2 Mio. → 12'000–120'000; ≥ 2 Mio. → 0,5–7%; nicht schätzbar → 1'000–40'000 Taxpunkte. **Beschwerde (Art. 46):** 300 bis 7'500 Taxpunkte. Handelsgericht: **Art. 42** (eigene Norm).
+
+---
+
+## LU — Luzern
+
+**GOG/Justizgesetz:** Gesetz über die Organisation der Gerichte und Behörden in Zivil-, Straf- und verwaltungsgerichtlichen Verfahren (**Justizgesetz, JusG**), **SRL Nr. 260**, vom 10.5.2010, Stand **1.4.2017**. Quelle: srl.lu.ch. *(Kein Handelsgericht in LU.)*
+
+| Behörde | JusG-§ | Kurzinhalt |
+|---|---|---|
+| Schlichtungsbehörden + Zivilgerichte (Aufzählung) | **§ 3** | Bestimmt Schlichtungsbehörden und Zivilgerichte |
+| Kantonsgericht (obere Instanz) | **§ 14** (Stellung), **§ 14a** (Gliederung 4–6 Abt.), **§ 15** (Zuständigkeit Zivilsachen) | Oberste richterliche Behörde Zivil/Straf/Verwaltung |
+| Erstinstanzliche Gerichte (Aufzählung) | **§ 23**, **§ 24** (Gerichtsbezirke Luzern/Kriens/Hochdorf/Willisau) | Konstituierung 1. Instanz |
+| Bezirksgerichte | **§ 31** | Vollstreckungsgericht Zivil, untere Aufsichtsbehörde SchKG |
+| Arbeitsgericht | **§ 32** | Zuständigkeit Arbeitsstreitigkeiten |
+| Kriminalgericht | **§ 33** | Verbrechen (Strafe) |
+| Jugendgericht | **§ 25** | Dem Bezirksgericht Luzern angegliedert |
+| Friedensrichter / Schlichtung | **§ 38** (Wahl), **§ 45** (Friedensrichterkreise = Gerichtsbezirke), **§ 46** (abweichende Zuständigkeit) | Schlichtung allgemein |
+| Paritätische Schlichtungsbehörden | **§ 43** (Miete/Pacht, Besetzung), **§ 47** (SB Miete/Pacht, Hinterlegungsstelle), **§ 48–49** (SB Arbeit), **§ 50** (SB Gleichstellung) | Spezial-Schlichtung |
+| Gebühren-Delegationsnorm | **§ 94** | Kantonsgericht regelt Kosten durch Verordnung |
+
+**Gebühren-Erlass:** Verordnung über die Kosten in Zivil-, Straf- und verwaltungsgerichtlichen Verfahren (**Justiz-Kostenverordnung, JusKV**), **SRL Nr. 265**, vom 26.3.2013, **Stand 1.1.2026** (aktuell) — bestätigt.
+
+**Zivil-Entscheidgebühr ordentliches Verfahren (§ 5 JusKV), Streitwert-Staffel (wörtlich):**
+- nicht vermögensrechtlich: Fr. 1'000 bis Fr. 12'000
+- bis Fr. 50'000.–: Fr. 1'500.– bis Fr. 5'000.–
+- über Fr. 50'000.– bis Fr. 100'000.–: Fr. 2'500.– bis Fr. 8'000.–
+- über Fr. 100'000.– bis Fr. 200'000.–: Fr. 5'000.– bis Fr. 12'000.–
+- über Fr. 200'000.– bis Fr. 500'000.–: Fr. 7'500.– bis Fr. 25'000.–
+- über Fr. 500'000.– bis Fr. 1'000'000.–: Fr. 10'000.– bis Fr. 40'000.–
+- über Fr. 1'000'000.– bis Fr. 5'000'000.–: Fr. 30'000.– bis Fr. 125'000.–
+- über Fr. 5'000'000.– bis Fr. 10'000'000.–: Fr. 50'000.– bis Fr. 250'000.–
+- über Fr. 10'000'000.–: 1–2,5% des Streitwerts
+
+Streitwert-Bestimmung: **§ 3**. **Rechtsmittel: § 9** (Berufung = gleicher Rahmen wie Vorinstanz), **§ 10** (Beschwerde = gleicher Rahmen wie Vorinstanz), § 11 (Revision: 1'000–5'000).
+
+---
+
+## UR — Uri
+
+**GOG:** Gesetz über die Organisation der richterlichen Behörden (**Gerichtsorganisationsgesetz, GOG**), **RB 2.3221**, vom 17.5.1992, **Stand 1.6.2023**. Quelle: rechtsbuch.ur.ch. *(Zentralisiert: Landgericht = 1. Instanz, Obergericht = obere Instanz inkl. Verwaltungsabteilung.)*
+
+| Behörde | GOG-Artikel | Kurzinhalt |
+|---|---|---|
+| Schlichtungsbehörde (zentral) | **Art. 10** (Wahl durch Obergericht), **Art. 11** (Organisation), **Art. 12** (Aufgaben: sämtliche Schlichtungsverfahren) | Eine zentrale kantonale Schlichtungsbehörde |
+| Landgerichtspräsidium (Einzelgericht 1. Instanz) | **Art. 14** (Wahl), **Art. 18** (Organisation), **Art. 19** (Aufgaben), **Art. 19a** (Zivil: bis Fr. 30'000, summarisch/vereinfacht) | Erstinstanzliches Einzelgericht |
+| Landgericht (Kollegialgericht 1. Instanz) | **Art. 20** (Wahl), **Art. 22** (Organisation), **Art. 25** (Aufgaben), **Art. 25a** (Zivil: erstinstanzlich, soweit nicht Präsidium) | Erstinstanzliches Kollegialgericht Zivil/Straf |
+| Zwangsmassnahmengericht | **Art. 19e** (Landgerichtspräsidium als ZMG) | Strafe |
+| Jugendstrafprozess (ZMG) | **Art. 19f** | Landgerichtspräsidium |
+| Obergericht | **Art. 31** (Wahl/Amtssitz), **Art. 33** (Organisation), **Art. 36/37** (Aufgaben), **Art. 37a** (Zivil-Zuständigkeit), **Art. 37f** (Verwaltungsverfahren) | Obere Instanz inkl. verwaltungsrechtliche Abteilung |
+| Jugendgericht | **Art. 47** (Wahl/Amtssitz), **Art. 51** (Aufgaben: alle Straffälle Jugendlicher), **Art. 54** (Jugendgerichtskommission Obergericht) | Jugendstrafsachen |
+| Gebühren-Delegationsnorm | **Art. 6** | Gebühren/Entschädigungen werden durch Reglement geregelt |
+
+**Gebühren-Erlass:** Reglement über die Gebühren und Entschädigungen vor Gerichtsbehörden (**Gerichtsgebührenreglement, GGebR**), **RB 2.3232**, vom 12.7.2022, **Stand 1.10.2022** — bestätigt (Nummer korrigiert: 2.3232, nicht 2.3221).
+
+**Zivil-Entscheidgebühr ordentliches Verfahren (Art. 5 GGebR), Streitwert-Staffel (wörtlich):**
+- nicht vermögensrechtlich: 200 bis 10'000 Franken
+- über 30'000 bis 100'000 Franken: 2'000 bis 12'000 Franken
+- über 100'000 bis 500'000 Franken: 4'000 bis 30'000 Franken
+- über 500'000 bis 1'000'000 Franken: 10'000 bis 40'000 Franken
+- über 1'000'000 Franken: 1 bis 4% des Streitwerts, mindestens 20'000 Franken
+
+*(Streitwerte ≤ 30'000 fallen ins vereinfachte Verfahren, Art. 6.)* Erstinstanzlich Einzelgericht: **Art. 14** (Landgerichtspräsidium), Kollegialgericht: **Art. 15** (Landgericht). **Rechtsmittel: Art. 9** (Berufung/Beschwerde = gleicher Gebührenrahmen wie Vorinstanz; bei verringertem Streitwert auf Basis des noch strittigen Betrages), § 17 (Berufung vor Obergericht), Art. 10 (Revision: 500–5'000).
+
+---
+
+## SZ — Schwyz
+
+**GOG/Justizgesetz:** **Justizgesetz (JG)**, **SRSZ 231.110**, vom 18.11.2009, **Stand 1.2.2023**. Quelle: sz.ch. *(6 Bezirksgerichte; Kantonsgericht = obere Instanz; Vermittlerämter = Schlichtung.)*
+
+| Behörde | JG-§ | Kurzinhalt |
+|---|---|---|
+| Oberste kantonale Gerichte (Aufzählung) | **§ 4** | Kantonsgericht, Verwaltungsgericht |
+| Weitere Justizbehörden (Schlichtung) | **§ 6** | Schlichtungsbehörden / Vermittlerämter |
+| Kantonsgericht (obere Instanz) | **§ 10** (Bestand), **§ 11** (Besetzung), **§ 12** (Zuständigkeit: Berufungen/Beschwerden), **§ 13** (Aufsicht) | Obere Instanz Zivil/Straf |
+| Verwaltungsgericht | **§ 14** (Bestand), **§ 15** (Besetzung), **§ 16** (Zuständigkeit) | Eigenständig |
+| Kantonales Straf-/Jugendgericht | **§ 18** (Bestand), **§ 20** (Zuständigkeit Strafgericht), **§ 22** (als Jugendgericht) | Schwere Straffälle, Jugend |
+| Zwangsmassnahmengericht | **§ 24** (Bestand), **§ 25** (Besetzung), **§ 26–28a** (Zuständigkeit) | Strafe/Ausländer/Polizei/Abgabe |
+| Bezirksgerichte (1. Instanz) | **§ 29** (Trägerschaft: jeder Bezirk ein BG), **§ 29c** (Bestand), **§ 30** (Besetzung), **§ 31** (Zuständigkeit Zivilsachen), **§ 32** (Strafsachen) | Erstinstanzliche Gerichte |
+| Vermittlerämter (Schlichtungsbehörden) | **§ 69** (Zuständigkeit als Schlichtungsbehörden), **§ 69a** (Trägerschaft: jede Gemeinde ein Vermittleramt), **§ 69c** (Bestand) | Schlichtung |
+
+**Gebühren-Erlass:** Gebührenordnung für die Verwaltung und die Rechtspflege im Kanton Schwyz (**GebO**), **SRSZ 173.111**, **Stand 1.2.2026** (aktuell) — bestätigt.
+
+**Zivil-Entscheidgebühren — Rahmengebühren, KEINE Streitwert-Staffel** (V. Zivilrechtspflege):
+- **§ 31 (Schlichtungsbehörden):** Schlichtungsverhandlung 100.– bis 1'000.–
+- **§ 33 (Einzelrichter und Bezirksgericht, 1. Instanz):** «Behandlung durch den Einzelrichter und Entscheid des Einzelrichters 100.– bis 50'000.–»; «Behandlung durch das Bezirksgericht und Entscheid des Bezirksgerichtes 100.– bis 100'000.–»; nichtstreitige Erbschaftsangelegenheiten 100.– bis 5'000.–
+- **§ 34 (Kantonsgericht):** «Behandlung und Entscheid einer Berufung, einer Beschwerde oder einer Revision 500.– bis 100'000.–»; Verfügungen des Präsidenten 100.– bis 10'000.–; *«Ist das Kantonsgericht erste Instanz, so gelten die Ansätze des Bezirksgerichtes.»*
+- **§ 35:** Gemeinsame Bestimmungen (Erläuterung 100.– bis 900.–; Beweismassnahmen ausserhalb Verfahren 60.– bis 1'500.–).
+
+⚠ Die SZ-Bemessung erfolgt innerhalb des Rahmens nach Aufwand/Streitwert frei (§ 1 ff. JV/GebO), ohne fixe betragsmässige Streitwert-Stufen.
+
+---
+
+## OW — Obwalden
+
+**GOG:** Gesetz über die Gerichtsorganisation (**GOG**), **GDB 134.1**, vom 22.9.1996, **Stand 1.4.2022**. Quelle: gdb.ow.ch. *(Zentralisiert: Kantonsgericht = 1. Instanz, Obergericht = obere Instanz inkl. Verwaltungsgericht.)*
+
+| Behörde | GOG-Artikel | Kurzinhalt |
+|---|---|---|
+| Obergericht (obere Instanz) | **Art. 1** (Grundsatz, oberste Gerichtsbehörde), Art. 1a–1b, **Art. 37** (Zuständigkeit Zivil), **Art. 36** (Obergerichtspräsidium) | Oberste Instanz, Aufsicht |
+| Kantonsgericht (1. Instanz) | **Art. 3** (Bestand), **Art. 35** (Zuständigkeit Zivil als erste Instanz), **Art. 4/Art. 34** (Kantonsgerichtspräsidium = Einzelgericht) | Erstinstanzliches Gericht Zivil/Straf |
+| Schlichtungsbehörde | **Art. 6** | Zusammensetzung; Schlichtung |
+| Zwangsmassnahmengericht | **Art. 48** (Kantonsgericht als ZMG, Strafe), **Art. 57a** (im Jugendstrafprozess) | Strafe/Jugend |
+| Jugendgericht | **Art. 57b** (Jugendgerichtspräsidium), **Art. 58** (Kantonsgericht als Jugendgericht) | Jugendstrafsachen |
+| Verwaltungsgericht(sbarkeit) | (Abt. des Obergerichts; Verfahrensgebühren Art. 24–25 GebOR) | In Obergericht integriert |
+| Steuerrekurskommission | **Art. 10a** | Spezialgericht |
+| Gebühren-Delegationsnorm | **Art. 32** | Kantonsrat regelt Gebühren in Gerichtsverfahren |
+
+**Gebühren-Erlass:** Gebührenordnung für die Rechtspflege (**GebOR**), **GDB 134.15**, vom 28.9.1973, **Stand 1.3.2015** — bestätigt.
+
+**Zivil-Entscheidgebühr erste Instanz — Streitwert-Staffel (wörtlich):**
+
+**Art. 9 (Kantonsgerichtspräsidium, Art. 34/80 GOG):**
+- Streitigkeiten ohne Vermögensinteressen / familienrechtlich: 100.– bis 5'000.–
+- bis 30'000.–: 100.– bis 3'000.–
+- über 30'000.– bis 50'000.–: 200.– bis 3'500.–
+- über 50'000.– bis 100'000.–: 300.– bis 4'000.–
+- 100'000.– bis 300'000.–: 500.– bis 7'500.–
+- über 300'000.–: 1'000.– bis 2,5% des Streitwerts
+
+**Art. 12 (Kantonsgericht, Art. 35 GOG):**
+- über 30'000.– bis 50'000.–: 1'500.– bis 5'000.–
+- über 50'000.– bis 100'000.–: 2'000.– bis 6'000.–
+- über 100'000.– bis 350'000.–: 2'500.– bis 10'500.–
+- über 350'000.–: 3'000.– bis 3% des Streitwerts
+
+**Rechtsmittel — Art. 14 (Obergericht, Art. 37 GOG):** Beschwerdeverfahren: ohne Vermögensinteresse/familienrechtlich 200.– bis 5'000.–; bis 30'000.– → 300.– bis 3'000.–; 30'000–50'000 → 1'000.– bis 4'000.–; 50'000–100'000 → 1'500.– bis 5'000.–; 100'000–300'000 → 2'000.– bis 7'500.–; über 300'000.– → 2'500.– bis 2,5% des Streitwerts. Berufungsverfahren: 70–100% der Kantonsgerichts-/Präsidiumstarife.
+
+---
+
+## NW — Nidwalden
+
+**Gerichtsgesetz:** Gesetz über die Gerichte und die Justizbehörden (**Gerichtsgesetz, GerG**), **NG 261.1**, vom 9.6.2010, **Stand 1.2.2026** (aktuell). Quelle: gesetze.nw.ch. *(Zentralisiert: Kantonsgericht = 1. Instanz, Obergericht = obere Instanz, Verwaltungsgericht eigenständig.)*
+
+| Behörde | GerG-Artikel | Kurzinhalt |
+|---|---|---|
+| Gerichte (Aufzählung) | **Art. 3** | Kantonsgericht, Obergericht, Verwaltungsgericht |
+| Kantonsgericht (1. Instanz) | **Art. 6** (Stellung: erstinstanzliches Gericht), **Art. 8** (Besetzung), **Art. 12** (Einzelgericht Zivil), **Art. 13** (Kollegialgericht Zivil), **Art. 17** (Kollegialgericht) | Erstinstanzliches Gericht Zivil/Straf |
+| Zwangsmassnahmengericht | **Art. 14** (Kantonsgericht als Einzelgericht/ZMG) | Strafe |
+| Jugendgericht | **Art. 16** (Vorsitz Jugendgericht, Jugendstrafrecht) | Jugendstrafsachen |
+| Obergericht (obere Instanz) | **Art. 20** (Stellung, Verfassungs-/oberstes Gericht), **Art. 26** (Zivil einzige Instanz), **Art. 27** (Berufung/Beschwerde Zivil), **Art. 29** (Strafsachen), **Art. 30** (Verfassungsgericht) | Obere Instanz |
+| Verwaltungsgericht | **Art. 31** (Stellung), **Art. 33** (Besetzung), **Art. 39** (Abt. Sozialversicherung = Versicherungsgericht) | Eigenständig, inkl. Versicherungsgericht |
+| Schlichtungsbehörde (zentral) | **Art. 40** (eine kantonale Schlichtungsbehörde), **Art. 41** (Zuständigkeit), **Art. 42** (Besetzung: Einerbesetzung; Miete/Arbeit) | Zentrale Schlichtung |
+
+**Gebühren-Erlass:** Gesetz über die Kosten im Verfahren vor den Gerichten und den Justizbehörden (**Prozesskostengesetz, PKoG**), **NG 261.2**, vom 19.10.2011, **Stand 1.2.2026** (Inhalt der Zivil-Gebührenartikel zuletzt per 1.1.2016 geändert) — bestätigt.
+
+**Zivil-Entscheidgebühr erste Instanz (Art. 7 PKoG, Kantonsgericht), Streitwert-Staffel (wörtlich):**
+- bis Fr. 5'000.–: Fr. 200.– bis Fr. 1'500.–
+- über Fr. 5'000.– bis Fr. 10'000.–: Fr. 600.– bis Fr. 2'400.–
+- über Fr. 10'000.– bis Fr. 30'000.–: Fr. 1'000.– bis Fr. 3'200.–
+- über Fr. 30'000.– bis Fr. 60'000.–: Fr. 1'500.– bis Fr. 4'000.–
+- über Fr. 60'000.– bis Fr. 150'000.–: Fr. 2'500.– bis Fr. 6'000.–
+- über Fr. 150'000.– bis Fr. 300'000.–: Fr. 3'000.– bis Fr. 9'000.–
+- über Fr. 300'000.–: 2 bis 3,5 Prozent des Streitwertes
+
+Ohne bestimmbaren Streitwert / nicht vermögensrechtlich: Fr. 300.– bis Fr. 10'000.– (Art. 7 Abs. 2). Streitwert-Definition: **Art. 5**. Schlichtungsbehörde: **Art. 6**. **Rechtsmittel — Art. 8 (Obergericht):** als einzige Instanz nach Art. 7; als Berufungsinstanz nach erstinstanzlichem Tarif, um ⅓ reduziert, mind. Fr. 500.–; als Beschwerdeinstanz Fr. 300.– bis Fr. 4'000.–.
+
+---
+
+## Unsicherheiten / Hinweise
+
+1. **BE Handelsgericht-Zuständigkeit:** Die *sachliche* Zuständigkeit (Art. 6 ZPO) steht ergänzend im **EG ZSJ (BSG 271.1)**, nicht im GSOG (das nur Organisation regelt). Artikelweise nicht im Auftrag verifiziert.
+2. **BE GSOG-Fassung:** Die aktuelle Fassung (Stand 1.5.2026, Beschluss 2.9.2025) wurde gegen die ältere Fassung geprüft — alle zitierten Artikelnummern (2, 35, 43, 45, 47, 59, 67, 80, 81, 84, 85) sind in der aktuellen Fassung unverändert, einzelne Marginalien neu untergliedert.
+3. **SZ:** Keine betragsmässige Streitwert-Staffel — nur Rahmengebühren (§§ 31–35 GebO). Die konkrete Bemessung nach Streitwert/Aufwand erfolgt frei innerhalb des Rahmens.
+4. **UR/OW «ordentliches Verfahren»:** Beginnt bei Streitwert > 30'000 (darunter vereinfachtes Verfahren mit eigener, niedrigerer Staffel — UR Art. 6, OW Art. 9 Ziff. 2 lit. a).
+5. **Nummern-Korrekturen ggü. Auftrag:** UR-Gebührenerlass ist **RB 2.3232** (nicht 2.3221; 2.3221 = GOG). LU-GOG ist **SRL 260** (Justizgesetz); **SRL 265** = JusKV (Gebühren) — beide im Auftrag korrekt referenziert. Alle übrigen vom Auftrag genannten Gebühren-Nummern (ZH 211.11, BE 161.12, SZ 173.111, OW 134.15, NW 261.2) **bestätigt**.
+6. **OW GebOR Stand 1.3.2015 / NW PKoG-Zivilartikel Stand 1.1.2016:** Ältere, aber laut amtlicher Gesetzessammlung weiterhin geltende (aktuelle) Fassungen.
+
+Alle Volltexte stammen aus den amtlichen kantonalen Gesetzessammlungen (zh.ch/zhlex, belex.sites.be.ch, srl.lu.ch, rechtsbuch.ur.ch, sz.ch, gdb.ow.ch, gesetze.nw.ch).
 
 ## Teil B — GL · ZG · FR · SO · BS · BL · SH
 
