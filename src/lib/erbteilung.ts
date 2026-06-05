@@ -253,7 +253,7 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
   const erben: ErbeAnteil[] = positionen.map((p, i) => {
     const faktor = art472 && p.gruppe === 'ehegatte'
       ? NULL_BRUCH
-      : ptFaktor(p.gruppe, ptBasis[i].istLebenderElternteil ?? p.istLebenderElternteil ?? false, rechtsstand);
+      : ptFaktor(p.gruppe, ptBasis[i].istLebenderElternteil ?? false, rechtsstand);
     const basisErbteil = art472 ? ptBasis[i].erbteil : p.erbteil;
     const { istLebenderElternteil: _drop, ...rest } = p;
     void _drop;

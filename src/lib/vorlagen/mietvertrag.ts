@@ -1,6 +1,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtDatumLang } from './datum';
+import { fmtDatumLang, fmtDatum, fmtCHF, zahl } from './datum';
+export { fmtCHF } from './datum';
 
 // ─── Mietvertrag Wohn- & Geschäftsräume (Art. 253 ff. OR) — sechste Vorlage ──
 //
@@ -132,19 +133,8 @@ export const MV_DEFAULTS: MvAntworten = {
 
 // ── Helfer ──────────────────────────────────────────────────────────────────
 
-export function fmtCHF(roh: string): string {
-  const n = Number(String(roh).replace(/['\s]/g, '').replace(',', '.'));
-  if (!Number.isFinite(n)) return roh;
-  const [ganz, dez] = n.toFixed(2).split('.');
-  return ganz.replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.' + dez;
-}
 
-const fmtDatum = (iso?: string) => (iso?.includes('-') ? iso.split('-').reverse().join('.') : iso || '________');
 
-const zahl = (roh?: string): number | null => {
-  const n = Number(String(roh ?? '').replace(/['\s]/g, '').replace(',', '.'));
-  return Number.isFinite(n) && String(roh ?? '').trim() !== '' ? n : null;
-};
 
 export const mvGesetzlicheFrist = (t: MvObjektTyp) => (t === 'geschaeftsraum' ? 6 : 3);
 

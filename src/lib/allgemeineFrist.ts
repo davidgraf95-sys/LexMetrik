@@ -1,5 +1,6 @@
-import { addDays, differenceInCalendarDays, format, isSaturday, isSunday, parseISO } from 'date-fns';
+import { addMonths, addYears, addDays, differenceInCalendarDays, isSaturday, isSunday, parseISO } from 'date-fns';
 import { fristendeTage, fristendeKalender, OHNE_STILLSTAND, type Einheit } from './fristenEngine';
+import { formatDatum, formatISO } from './datumsUtils';
 import { istFeiertag } from '../data/zpoFeiertage';
 import type { Berechnungsergebnis, Kanton, Normverweis, Rechenschritt } from '../types/legal';
 
@@ -51,8 +52,8 @@ export interface AllgFristResult {
 
 const WOCHENTAGE = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
 const wochentag = (d: Date) => WOCHENTAGE[d.getDay()];
-const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
-const iso = (d: Date) => format(d, 'yyyy-MM-dd');
+const fmt = formatDatum;
+const iso = formatISO;
 
 const EINHEIT_LABEL: Record<Einheit, string> = {
   tage: 'Tagen', wochen: 'Wochen', monate: 'Monaten', jahre: 'Jahren',
@@ -255,15 +256,18 @@ export function berechneRueckwaertsFrist(input: RueckFristInput): AllgFristResul
     datum: fmt(stichtag), wochentag: wochentag(stichtag),
   });
 
-  // Spiegelung: (Stichtag + 1) − Frist über die GETEILTE Kalenderarithmetik − 1
+  // Spiegelung: (Stichtag + 1) − Frist − 1. Direkt gespiegelte Kalender-
+  // arithmetik (Versimplung 5.6.2026 — zuvor unintuitive Umnutzung der
+  // Vorwärts-Engine mit negativer Länge; golden-bewiesen identisch).
+  // Monatsende-Klemmung übernimmt date-fns addMonths/addYears.
   const ref = addDays(stichtag, 1);
-  let roh: Date;
-  if (input.einheit === 'tage') {
-    roh = addDays(addDays(ref, -input.laenge), -1);
-  } else {
-    const r = fristendeKalender(ref, input.einheit, -input.laenge as number, OHNE_STILLSTAND, false);
-    roh = addDays(r.ende, -1);
-  }
+  const zurueck: Record<Einheit, (d: Date, n: number) => Date> = {
+    tage: (d, n) => addDays(d, -n),
+    wochen: (d, n) => addDays(d, -7 * n),
+    monate: (d, n) => addMonths(d, -n),
+    jahre: (d, n) => addYears(d, -n),
+  };
+  const roh = addDays(zurueck[input.einheit](ref, input.laenge), -1);
   const geklemmt = (input.einheit === 'monate' || input.einheit === 'jahre')
     && addDays(roh, 1).getDate() !== ref.getDate();
   schritte.push({

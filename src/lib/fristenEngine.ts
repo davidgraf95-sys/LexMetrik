@@ -1,6 +1,7 @@
-import { addDays, addMonths, addYears, differenceInCalendarDays, isAfter, isBefore } from 'date-fns';
+import { addDays, addMonths, addYears, isAfter, isBefore } from 'date-fns';
 import type { Kanton } from '../types/legal';
-import { istArbeitsfreierTag } from '../data/zpoFeiertage';
+import { dauerTageInklusiv } from './datumsUtils';
+import { istArbeitsfreierTag, naechsterWerktag } from '../data/zpoFeiertage';
 
 // ─── Generische Fristen-Engine ────────────────────────────────────────────
 //
@@ -46,7 +47,7 @@ export const OHNE_STILLSTAND: Stillstand = {
 
 /** Dauer einer Periode in Kalendertagen (inklusiv). */
 export function dauerTage(p: Periode): number {
-  return differenceInCalendarDays(p.bis, p.von) + 1;
+  return dauerTageInklusiv(p);
 }
 
 /**
@@ -158,10 +159,8 @@ export function normalisiereEnde(
   if (st.endregel === 'verlaengerung_3wt') {
     const p = st.periodeFuer(ende);
     if (p) return { tag: nthWerktagNach(p.bis, 3, kanton), verschoben: true };
-    let d = ende;
-    let verschoben = false;
-    while (istArbeitsfreierTag(d, kanton)) { d = addDays(d, 1); verschoben = true; }
-    return { tag: d, verschoben };
+    const d = naechsterWerktag(ende, kanton);
+    return { tag: d, verschoben: +d !== +ende };
   }
 
   // ruhen_weiter (ZPO) und nur_werktag: gemeinsame Schleife. Bei ruhen_weiter

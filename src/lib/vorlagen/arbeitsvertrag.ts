@@ -1,6 +1,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtDatumLang } from './datum';
+import { fmtDatumLang, fmtDatum, fmtCHF } from './datum';
+export { fmtCHF } from './datum';
 
 // ─── Einzelarbeitsvertrag (Art. 319 ff. OR) — fünfte Vorlage ────────────────
 //
@@ -141,15 +142,7 @@ export const AV_DEFAULTS: AvAntworten = {
 
 // ── Helfer ──────────────────────────────────────────────────────────────────
 
-const fmtDatum = (iso?: string) => (iso?.includes('-') ? iso.split('-').reverse().join('.') : iso || '________');
 
-// Gleiche Konvention wie fmtCHF im Schlichtungsgesuch (immer zwei Dezimalen).
-export function fmtCHF(roh: string): string {
-  const n = Number(String(roh).replace(/['\s]/g, '').replace(',', '.'));
-  if (!Number.isFinite(n)) return roh;
-  const [ganz, dez] = n.toFixed(2).split('.');
-  return ganz.replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.' + dez;
-}
 
 const alterAm = (gebIso: string, stichtagIso: string): number | null => {
   const g = new Date(gebIso), s = new Date(stichtagIso);

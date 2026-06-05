@@ -1,4 +1,4 @@
-import {
+import { differenceInCalendarDays,
   parseISO,
   format,
   differenceInYears,
@@ -141,4 +141,12 @@ export function naechstesMonatsende(d: Date): Date {
   const eoM = endOfMonth(d);
   if (isEqual(d, eoM)) return d;
   return eoM;
+}
+
+// ── Geteilte fachneutrale Helfer (Versimplung 5.6.2026, golden-bewiesen) ────
+
+/** Dauer eines inklusiven Datums-Intervalls in Kalendertagen — kanonische
+ *  Stelle (zuvor identisch in fristenEngine UND zpoFeiertage definiert). */
+export function dauerTageInklusiv(p: { von: Date; bis: Date }): number {
+  return differenceInCalendarDays(p.bis, p.von) + 1;
 }

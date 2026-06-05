@@ -1,5 +1,6 @@
-import { parseISO, format, addDays, addYears, isAfter, isBefore } from 'date-fns';
+import { parseISO, addDays, addYears, isAfter, isBefore } from 'date-fns';
 import type { Berechnungsergebnis, Rechenschritt, Normverweis, Kanton } from '../types/legal';
+import { formatDatum, formatISO } from './datumsUtils';
 import { werktagsEnde } from './verjaehrung';
 import { rechtsprechung } from '../data/verifikation';
 
@@ -64,8 +65,8 @@ export type GewaehrleistungErgebnis = Berechnungsergebnis & {
 // ─── Normverweise ───────────────────────────────────────────────────────────
 
 const N = (artikel: string, bemerkung?: string): Normverweis => ({ artikel, bemerkung });
-const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
-const iso = (d: Date) => format(d, 'yyyy-MM-dd');
+const fmt = formatDatum;
+const iso = formatISO;
 
 const REVISION = parseISO('2026-01-01'); // Inkrafttreten Teilrevision Baumängel (AS 2025 270)
 

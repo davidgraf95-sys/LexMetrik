@@ -1,5 +1,6 @@
-import { parseISO, addDays, differenceInCalendarDays, format } from 'date-fns';
+import { parseISO, addDays, differenceInCalendarDays } from 'date-fns';
 import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/legal';
+import { formatDatum } from './datumsUtils';
 import { rechtsprechung } from '../data/verifikation';
 
 // ─── Verzugszins (Art. 104 OR) — praxistaugliche, event-basierte Berechnung ──
@@ -75,7 +76,7 @@ export function formatCHF(x: number): string {
   return `${x < 0 ? '-' : ''}${gruppiert}.${dez}`;
 }
 
-const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
+const fmt = formatDatum;
 
 function tage30E360(von: Date, bis: Date): number {
   const d1 = Math.min(von.getDate(), 30);

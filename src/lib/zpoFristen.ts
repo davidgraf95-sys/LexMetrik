@@ -1,5 +1,6 @@
-import { parseISO, addDays, format } from 'date-fns';
+import { parseISO, addDays } from 'date-fns';
 import type { Normverweis, Rechenschritt } from '../types/legal';
+import { formatDatum, formatISO } from './datumsUtils';
 import type { ZpoInput, ZpoErgebnis, ZpoVerfahren } from '../types/zpo';
 import {
   stillstandsperioden,
@@ -45,8 +46,8 @@ const STILLSTAND_GILT: Record<ZpoVerfahren, boolean> = {
 
 // ─── Datums-Helfer ────────────────────────────────────────────────────────
 
-const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
-const iso = (d: Date) => format(d, 'yyyy-MM-dd');
+const fmt = formatDatum;
+const iso = formatISO;
 
 // ─── Hilfsfunktionen ───────────────────────────────────────────────────────
 

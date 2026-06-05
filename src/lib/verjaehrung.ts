@@ -1,6 +1,7 @@
-import { parseISO, format, addDays, addYears, differenceInCalendarDays, isAfter, isBefore } from 'date-fns';
+import { parseISO, addDays, addYears, differenceInCalendarDays, isAfter, isBefore } from 'date-fns';
 import type { Berechnungsergebnis, Rechenschritt, Normverweis, Kanton } from '../types/legal';
-import { istArbeitsfreierTag } from '../data/zpoFeiertage';
+import { formatDatum, formatISO } from './datumsUtils';
+import { naechsterWerktag } from '../data/zpoFeiertage';
 import { rechtsprechung } from '../data/verifikation';
 
 // ─── Verjährung (Art. 60, 67, 127–142 OR, Stand Revision 1.1.2020) ─────────
@@ -114,8 +115,8 @@ const N_141: Normverweis = { artikel: 'Art. 141 OR', bemerkung: 'Einredeverzicht
 const N_142: Normverweis = { artikel: 'Art. 142 OR', bemerkung: 'Verjährung nur auf Einrede zu beachten' };
 const N_60_2: Normverweis = { artikel: 'Art. 60 Abs. 2 OR', bemerkung: 'strafrechtliche Längerfrist vorbehalten' };
 
-const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
-const iso = (d: Date) => format(d, 'yyyy-MM-dd');
+const fmt = formatDatum;
+const iso = formatISO;
 
 const TYP_LABEL: Record<UnterbrechungsTyp, string> = {
   anerkennung: 'Anerkennung (Art. 135 Ziff. 1 OR)',
@@ -177,9 +178,7 @@ function mitStillstand(start: Date, ende0: Date, intervalle: HemmIntervall[]): {
 // Werktag; der Samstag ist nach dem BG über den Fristenlauf an Samstagen gleichgestellt.
 // Exportiert für Module mit derselben Fristend-Mechanik (z. B. Gewährleistung).
 export function werktagsEnde(d: Date, kanton: Kanton): Date {
-  let e = d;
-  while (istArbeitsfreierTag(e, kanton)) e = addDays(e, 1);
-  return e;
+  return naechsterWerktag(d, kanton);
 }
 
 // ─── Hauptfunktion ──────────────────────────────────────────────────────────

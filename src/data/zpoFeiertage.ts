@@ -1,5 +1,6 @@
-import { addDays, isWeekend, differenceInCalendarDays, isBefore, isAfter } from 'date-fns';
+import { addDays, isWeekend, isBefore, isAfter } from 'date-fns';
 import type { Kanton } from '../types/legal';
+import { dauerTageInklusiv } from '../lib/datumsUtils';
 
 // ─── Ostersonntag (gregorianischer Computus, Meeus/Anonymous) ─────────────
 
@@ -38,7 +39,7 @@ export function stillstandsperioden(jahr: number): Stillstandsperiode[] {
 }
 
 export function dauerTage(p: Stillstandsperiode): number {
-  return differenceInCalendarDays(p.bis, p.von) + 1;
+  return dauerTageInklusiv(p);
 }
 
 const geq = (a: Date, b: Date) => !isBefore(a, b);
@@ -145,4 +146,13 @@ export function istFeiertag(date: Date, kanton: Kanton): boolean {
 /** Arbeitsfreier Tag = Samstag/Sonntag oder anerkannter Feiertag am Gerichtsort. */
 export function istArbeitsfreierTag(date: Date, kanton: Kanton): boolean {
   return isWeekend(date) || istFeiertag(date, kanton);
+}
+
+/** Vorwärtsschiebung auf den nächsten Werktag (Sa/So/anerkannter Feiertag
+ *  am massgebenden Ort) — kanonische Stelle; zuvor als while-Schleife in
+ *  fristenEngine, verjaehrung und mietrecht je eigens ausgeschrieben. */
+export function naechsterWerktag(d: Date, kanton: Kanton): Date {
+  let t = d;
+  while (istArbeitsfreierTag(t, kanton)) t = addDays(t, 1);
+  return t;
 }

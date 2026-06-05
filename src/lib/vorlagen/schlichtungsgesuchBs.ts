@@ -1,6 +1,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
-import { fmtDatumLang } from './datum';
+import { fmtDatumLang, fmtDatum, fmtCHF } from './datum';
+export { fmtCHF } from './datum';
 
 // ─── Schlichtungsgesuch nach Art. 202 ZPO — Kanton Basel-Stadt (Pilot) ──────
 //
@@ -126,13 +127,6 @@ export const SG_DEFAULTS: SgAnswers = {
 };
 
 // ── Helfer: Schweizer Formatierung ──────────────────────────────────────────
-export function fmtCHF(roh: string): string {
-  const n = Number(String(roh).replace(/['\s]/g, '').replace(',', '.'));
-  if (!Number.isFinite(n)) return roh;
-  const [ganz, dez] = n.toFixed(2).split('.');
-  return ganz.replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.' + dez;
-}
-const fmtDatum = (iso: string) => (iso?.includes('-') ? iso.split('-').reverse().join('.') : iso || '________');
 
 export function sgStreitwert(a: SgAnswers): number | null {
   // Geldforderung: Streitwert = Begehren (Art. 91 ZPO); unbeziffert: Mindest-

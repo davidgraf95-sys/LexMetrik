@@ -1,8 +1,9 @@
-import { parseISO, addDays, addMonths, format, lastDayOfMonth, isLastDayOfMonth, isBefore, isAfter } from 'date-fns';
+import { parseISO, addDays, addMonths, lastDayOfMonth, isLastDayOfMonth, isBefore, isAfter } from 'date-fns';
 import type { Normverweis, Rechenschritt } from '../types/legal';
+import { formatDatum, formatISO } from './datumsUtils';
 import type { MietInput, MietErgebnis, Mietobjekt, TerminQuelle } from '../types/mietrecht';
 import { ORTSUEBLICHE_TERMINE } from '../data/mietTermine';
-import { istArbeitsfreierTag } from '../data/zpoFeiertage';
+import { naechsterWerktag } from '../data/zpoFeiertage';
 import { rechtsprechung } from '../data/verifikation';
 
 // ─── Mietrecht: Kündigungstermine und -fristen (Art. 253 ff. OR) ──────────
@@ -39,8 +40,8 @@ const N_272a: Normverweis = { artikel: 'Art. 272a OR', bemerkung: 'Erstreckung a
 const N_77: Normverweis = { artikel: 'Art. 77 OR', bemerkung: 'Fristberechnung (Tage/Wochen/Monate)' };
 const N_78: Normverweis = { artikel: 'Art. 78 OR', bemerkung: 'Letzter Fristtag an Sa/So/Feiertag → nächster Werktag (nur Fristwahrung)' };
 
-const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
-const iso = (d: Date) => format(d, 'yyyy-MM-dd');
+const fmt = formatDatum;
+const iso = formatISO;
 const leq = (a: Date, b: Date) => !isAfter(a, b);
 
 // Gesetzliche Mindestfrist je Objekt (Konzept-Übersichtstabelle).
@@ -65,10 +66,8 @@ const OBJEKT_LABEL: Record<Mietobjekt, string> = {
 // Art. 78 OR: fällt der LETZTE Tag einer Frist auf Sa/So/Feiertag, gilt der
 // nächste Werktag (Samstag gleichgestellt, SR 173.110.3).
 function werktagOderNaechster(d: Date, kanton: MietInput['kanton']): { tag: Date; verschoben: boolean } {
-  let t = d;
-  let verschoben = false;
-  while (istArbeitsfreierTag(t, kanton)) { t = addDays(t, 1); verschoben = true; }
-  return { tag: t, verschoben };
+  const tag = naechsterWerktag(d, kanton);
+  return { tag, verschoben: +tag !== +d };
 }
 
 // Spätester rechtzeitiger Zugang für einen Termin T (roh und nach Art. 78).

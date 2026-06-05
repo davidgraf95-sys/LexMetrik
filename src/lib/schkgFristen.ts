@@ -1,5 +1,6 @@
-import { parseISO, addDays, format, differenceInCalendarDays, isAfter, isBefore } from 'date-fns';
+import { parseISO, addDays, differenceInCalendarDays, isAfter, isBefore } from 'date-fns';
 import type { Normverweis, Rechenschritt } from '../types/legal';
+import { formatDatum, formatISO } from './datumsUtils';
 import type { SchkgInput, SchkgErgebnis, SchkgModus, SchkgFristnatur } from '../types/schkg';
 import { stillstandsperioden, stillstandsperiodeFuer } from '../data/zpoFeiertage';
 import { betreibungsferien, betreibungsperiodeFuer } from '../data/schkgFeiertage';
@@ -28,8 +29,8 @@ const N_33_4:   Normverweis = { artikel: 'Art. 33 Abs. 4 SchKG', bemerkung: 'Wie
 const N_88_2:   Normverweis = { artikel: 'Art. 88 Abs. 2 SchKG', bemerkung: 'Stillstand der Verwirkungsfrist während rechtsvorschlagsbedingtem Verfahren' };
 const N_166_2:  Normverweis = { artikel: 'Art. 166 Abs. 2 SchKG', bemerkung: 'Stillstand der Verwirkungsfrist während rechtsvorschlagsbedingtem Verfahren' };
 
-const fmt = (d: Date) => format(d, 'dd.MM.yyyy');
-const iso = (d: Date) => format(d, 'yyyy-MM-dd');
+const fmt = formatDatum;
+const iso = formatISO;
 
 // ─── Stillstand-Strategie je Modus ────────────────────────────────────────
 
