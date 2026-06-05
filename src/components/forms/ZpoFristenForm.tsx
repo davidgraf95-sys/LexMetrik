@@ -1,5 +1,6 @@
 import { KANTONE } from '../../lib/kantone';
 import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { ZpoInput, ZpoEinheit, ZpoVerfahren, ZpoFristnatur, ZpoZustellart, ZpoModus, ZpoErgebnis } from '../../types/zpo';
@@ -120,17 +121,7 @@ export function ZpoFristenForm() {
       {/* Verfahrensphase */}
       <div className="space-y-2">
         <p className="lc-overline">Verfahrensphase wählen</p>
-        <div className="flex flex-wrap gap-2">
-          {PHASEN.map((p) => (
-            <button key={p.code} type="button"
-              onClick={() => { setPhase(p.code); setPresetKey(''); setPresetHinweis(null); }}
-              className={`px-3 py-2 rounded-md text-body-s font-medium transition-colors ${
-                phase === p.code ? 'bg-ink-900 text-paper' : 'bg-surface border border-line text-ink-700 hover:bg-brass-100'
-              }`}>
-              {p.label}
-            </button>
-          ))}
-        </div>
+        <Tabs items={PHASEN.map((p) => ({ code: p.code, label: p.label }))} value={phase} onChange={(c) => { setPhase(c); setPresetKey(''); setPresetHinweis(null); }} mode="pressed" ariaLabel="Verfahrensphase" />
       </div>
 
       {phase === 'materiell' ? (
