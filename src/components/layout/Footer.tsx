@@ -7,7 +7,6 @@ import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 const NAVIGATION = [
   { to: '/', label: 'Free — Rechner & Vorlagen' },
   { to: '/pro', label: 'Pro — vollständiger Katalog' },
-  { to: '/?modus=vorlagen', label: 'Vorlagen' },
   { to: '/methodik', label: 'Methodik' },
   { to: '/ueber', label: 'Über LexMetrik' },
 ];

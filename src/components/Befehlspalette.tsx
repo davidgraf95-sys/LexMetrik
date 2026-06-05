@@ -20,7 +20,6 @@ type Eintrag = {
 const SEITEN: Eintrag[] = [
   { id: 'p-start', titel: 'Free — Rechner & Vorlagen', meta: 'Startseite', href: '/', gruppe: 'Seiten', icon: 'house' },
   { id: 'p-pro', titel: 'Pro — vollständiger Katalog', meta: 'Pro', href: '/pro', gruppe: 'Seiten', icon: 'scale' },
-  { id: 'p-vorlagen', titel: 'Vorlagen durchsuchen', meta: 'Modus «Vorlagen»', href: '/?modus=vorlagen', gruppe: 'Seiten', icon: 'document' },
   { id: 'p-methodik', titel: 'Methodik — wie LexMetrik rechnet', meta: 'Seite', href: '/methodik', gruppe: 'Seiten', icon: 'clipboard' },
   { id: 'p-ueber', titel: 'Über LexMetrik', meta: 'Seite', href: '/ueber', gruppe: 'Seiten', icon: 'document' },
 ];

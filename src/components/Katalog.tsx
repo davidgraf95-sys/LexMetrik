@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, istVorlageArt, type Sektion, type CalculatorCard, type Rechtsbereich } from '../lib/startseiteConfig';
+import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, type CalculatorCard } from '../lib/startseiteConfig';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 
@@ -31,96 +31,6 @@ function sortiereKarten(karten: CalculatorCard[]): CalculatorCard[] {
   return [...karten].sort((a, b) =>
     gebietsRang(a.rechtsgebiet) - gebietsRang(b.rechtsgebiet) ||
     Number(a.status === 'geplant') - Number(b.status === 'geplant'));
-}
-
-// Relevanz einer Sektion: verfügbare Karten zuerst, dann Gesamtzahl.
-const anzAktiv = (karten: CalculatorCard[]) => karten.filter((k) => k.status !== 'geplant').length;
-
-// ─── Typ-Sektion: Editorial-Öffner + flaches Kartenraster ─────────────────
-
-function TypSektion({ sektion, karten }: { sektion: Sektion; karten: CalculatorCard[] }) {
-  const sortiert = sortiereKarten(karten);
-  if (sortiert.length === 0) return null;
-
-  return (
-    <section id={sektion.id} className="scroll-mt-28">
-      {/* Sektion per Mausklick ein-/ausklappbar (Disclosure); standardmässig offen. */}
-      <details open className="lc-sektion group bg-surface rounded-2xl border border-line">
-        <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
-          {/* Öffner: Mono-Eyebrow ohne Ziffern (konsistent zur Sidebar) +
-              Serif-Titel + Lede */}
-          <span className="block space-y-2">
-            <span className="flex items-center justify-between gap-4">
-              <span className="lc-overline text-brass-700">{sektion.title}</span>
-              <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
-                {/* Zähler-Einheit folgt dem Modus der Sektion (kein fixer String) */}
-                <span className="num">{sortiert.length}</span> {istVorlageArt(sektion.art) ? 'Vorlagen' : 'Rechner'}
-                <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
-              </span>
-            </span>
-            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight text-balance">{sansAmp(sektion.title)}</h2>
-            <span className="block text-body-l text-ink-600 max-w-reading">{sektion.lede}</span>
-            <span className="scale-rule block mt-4" aria-hidden />
-          </span>
-        </summary>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(340px,100%),1fr))] gap-6 px-6 sm:px-10 pb-6 sm:pb-10 pt-2">
-          {sortiert.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
-        </div>
-      </details>
-    </section>
-  );
-}
-
-// ─── Bereich-Sektion: zweistufig Rechtsbereich → Output-Typ ────────────────
-// Gleiche Anatomie wie TypSektion (Disclosure, Eyebrow, Lede); innen die
-// Output-Typen als kompakte Untergruppen — nur nicht-leere.
-
-function BereichSektion({ bereich, karten }: {
-  bereich: { code: Rechtsbereich; id: string; title: string; lede: string };
-  karten: CalculatorCard[];
-}) {
-  const gruppen = SEKTIONEN
-    .map((sx) => ({ sx, karten: sortiereKarten(karten.filter((k) => k.art === sx.art)) }))
-    .filter((g) => g.karten.length > 0)
-    // Relevanteste Untergruppe zuerst (verfügbare Karten, dann Gesamtzahl)
-    .sort((a, b) => anzAktiv(b.karten) - anzAktiv(a.karten) || b.karten.length - a.karten.length);
-  if (gruppen.length === 0) return null;
-
-  return (
-    <section id={bereich.id} className="scroll-mt-28">
-      <details open className="lc-sektion group bg-surface rounded-2xl border border-line">
-        <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
-          <span className="block space-y-2">
-            <span className="flex items-center justify-between gap-4">
-              <span className="lc-overline text-brass-700">{bereich.title}</span>
-              <span className="lc-overline text-ink-500 whitespace-nowrap inline-flex items-center gap-2">
-                <span className="num">{karten.length}</span> Rechner
-                <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
-              </span>
-            </span>
-            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight text-balance">{sansAmp(bereich.title)}</h2>
-            <span className="block text-body-l text-ink-600 max-w-reading">{bereich.lede}</span>
-            <span className="scale-rule block mt-4" aria-hidden />
-          </span>
-        </summary>
-        <div className="px-6 sm:px-10 pb-6 sm:pb-10 pt-2 space-y-8">
-          {gruppen.map((g) => (
-            <div key={g.sx.id}>
-              {/* Untergruppe: Output-Typ als Mono-Overline mit Haarlinie + Zähler */}
-              <div className="flex items-center gap-4 mb-4">
-                <h3 className="lc-overline text-ink-700">{g.sx.title}</h3>
-                <div className="flex-1 h-px bg-line" />
-                <span className="lc-overline num text-ink-500">{g.karten.length}</span>
-              </div>
-              <div className="grid grid-cols-[repeat(auto-fill,minmax(min(340px,100%),1fr))] gap-6">
-                {g.karten.map((c) => <RechnerKarte key={c.id} card={c} headingLevel="h3" />)}
-              </div>
-            </div>
-          ))}
-        </div>
-      </details>
-    </section>
-  );
 }
 
 // ─── Gebiet-Sektion: Rechtsgebiet → Untergruppen «Rechner» und «Vorlagen» ───
@@ -311,13 +221,8 @@ function Uebersicht(props: {
 // `seitenleisteFuss` ist ein Slot für seitenspezifische Elemente (Direkteinstieg);
 // die Modus-Weiche sitzt seitenseitig prominent UNTER dem Hero (IA-Entscheid).
 
-export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'gebiet', filterRechtsgebiet = false, filterBereich = false, filterArt = false, seitenleisteFuss }: {
+export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = false, filterArt = false, seitenleisteFuss }: {
   karten: CalculatorCard[];
-  sektionen?: Sektion[];
-  // 'gebiet' = Rechtsgebiet → Untergruppen Rechner/Vorlagen (Standard seit
-  // Auftrag «Katalog-Ausbau») · 'art' = flache Output-/Dokumenttyp-Sektionen ·
-  // 'bereich' = zweistufig Rechtsbereich → Output-Typ (Alt-Gliederungen)
-  gliederung?: 'gebiet' | 'art' | 'bereich';
   filterRechtsgebiet?: boolean;
   filterBereich?: boolean;
   filterArt?: boolean;
@@ -359,29 +264,13 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'gebiet', 
   const filterAktiv = q !== '' || gebiete.size > 0 || bereiche.size > 0 || arten.size > 0 || nurGeprueft;
   const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setBereiche(new Set()); setArten(new Set()); setNurGeprueft(false); };
 
-  // Sichtbare Sektionen, nach Relevanz sortiert (verfügbare Karten zuerst,
-  // dann Gesamtzahl; Config-Reihenfolge als stabiler Tiebreak). Sprungmarken
-  // und Rendering teilen dieselbe Reihenfolge.
-  const bereichSichtbar = RECHTSBEREICH_SEKTIONEN
-    .map((b) => ({ b, karten: treffer.filter((k) => k.rechtsbereich === b.code) }))
-    .filter((x) => x.karten.length > 0)
-    .sort((x, y) => anzAktiv(y.karten) - anzAktiv(x.karten) || y.karten.length - x.karten.length);
-  const artSichtbar = sektionen
-    .map((sx) => ({ sx, karten: treffer.filter((k) => k.art === sx.art) }))
-    .filter((x) => x.karten.length > 0)
-    .sort((x, y) => anzAktiv(y.karten) - anzAktiv(x.karten) || y.karten.length - x.karten.length);
   // Rechtsgebiete in FESTER Auftrags-Reihenfolge (§4) — bewusst ohne
   // Relevanz-Sortierung, damit die Ordnung stabil und erwartbar bleibt.
   const gebietSichtbar = RECHTSGEBIET_SEKTIONEN
     .map((g) => ({ g, karten: treffer.filter((k) => k.rechtsgebiet === g.name) }))
     .filter((x) => x.karten.length > 0);
 
-  const sprungmarken = (gliederung === 'gebiet'
-    ? gebietSichtbar.map((x) => ({ id: x.g.id, numeral: '', title: x.g.name, anzahl: x.karten.length }))
-    : gliederung === 'bereich'
-    ? bereichSichtbar.map((x) => ({ id: x.b.id, numeral: '', title: x.b.title, anzahl: x.karten.length }))
-    : artSichtbar.map((x) => ({ id: x.sx.id, numeral: x.sx.numeral, title: x.sx.title, anzahl: x.karten.length }))
-  );
+  const sprungmarken = gebietSichtbar.map((x) => ({ id: x.g.id, numeral: '', title: x.g.name, anzahl: x.karten.length }));
 
   // Scrollspy: oberste sichtbare Sektion in der Übersicht markieren.
   const [aktiveSektion, setAktiveSektion] = useState<string | null>(null);
@@ -422,8 +311,7 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'gebiet', 
         .map((b) => ({ code: b.code as string, label: b.title })),
       aktiv: bereiche, toggle: toggleBereich,
     }] : []),
-    ...(filterArt ? (gliederung === 'gebiet'
-      ? [
+    ...(filterArt ? [
           // Gemischter Katalog: Output-Typ (Rechner) und Dokument-Typ (Vorlagen)
           // als getrennte Pill-Gruppen; Auswahl filtert über beide Modi hinweg.
           {
@@ -438,13 +326,7 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'gebiet', 
               .map((sx) => ({ code: sx.art as string, label: sx.title })),
             aktiv: arten, toggle: toggleArt,
           },
-        ].filter((gr) => gr.optionen.length > 0)
-      : [{
-          label: 'Output-Typ',
-          optionen: sektionen.filter((sx) => karten.some((k) => k.art === sx.art))
-            .map((sx) => ({ code: sx.art as string, label: sx.title })),
-          aktiv: arten, toggle: toggleArt,
-        }]) : []),
+        ].filter((gr) => gr.optionen.length > 0) : []),
   ];
   const filterLeiste = (
     <FilterLeiste
@@ -510,20 +392,10 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'gebiet', 
               </button>
             )}
           </section>
-        ) : gliederung === 'gebiet' ? (
+        ) : (
           /* Rechtsgebiet → Untergruppen Rechner/Vorlagen, feste §4-Reihenfolge */
           gebietSichtbar.map((x) => (
             <GebietSektion key={x.g.id} gebiet={x.g} karten={x.karten} />
-          ))
-        ) : gliederung === 'bereich' ? (
-          /* Zweistufig: Rechtsbereich → Output-Typ, relevanteste zuerst */
-          bereichSichtbar.map((x) => (
-            <BereichSektion key={x.b.id} bereich={x.b} karten={x.karten} />
-          ))
-        ) : (
-          /* Sektionen (datengetrieben), relevanteste zuerst */
-          artSichtbar.map((x) => (
-            <TypSektion key={x.sx.id} sektion={x.sx} karten={x.karten} />
           ))
         )}
         </div>

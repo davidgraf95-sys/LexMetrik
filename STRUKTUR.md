@@ -47,18 +47,24 @@ Gates-Anzeige im Prüfen-Schritt und die Rahmen-Props.** Die 4 Seiten sind
 −80 %; alles verhaltensneutral (2 unabhängige Reviews ohne Befunde,
 SSR-Smoke aller Seiten, Tests/Lint unverändert grün).
 
-## Informationsarchitektur (Entscheide bestätigt)
+## Informationsarchitektur (Stand Katalog-Ausbau 5.6.2026)
 
-**Modus = In-Page-Toggle, Stufe = Route.** Die Primärweiche «Rechner |
-Vorlagen» sitzt als Segmented Control prominent **unter dem Hero** (Zustand
-in `?modus=`; Zähler beider Zellen identisch, Verben auf gemeinsamer
-Grundlinie). Die Stufe ist Route: `/` = Default (Laien), `/fachpersonen` =
-gekapselter Expertenbereich. **Der frühere Stufen-Umschalter im Header ist
-aufgelöst** (Iteration 3): rechts aussen ein gerichteter Button «Für
-Fachpersonen →» bzw. auf der Expertenseite «← Allgemein» (trägt `?modus=`
-weiter) — natürlicher Andockpunkt für den späteren Zugriffs-Wrapper
-(Login/Bezahlung, Phase 4 offen). Header = Zwei-Zonen (Logo links,
-Aktionscluster rechts: ⌘K · Sprache · Methodik · Über · Stufen-Button),
+**Free/Pro statt Allgemein/Fachpersonen (Auftrag «Katalog-Ausbau», Quelle
+KATALOG-ROADMAP.md):** `/` = Free (kostenlose Auswahl, `tier: 'free'` —
+10 Einträge gemäss Auftrags-§3), `/pro` = vollständiger Katalog (free+pro);
+`/fachpersonen` → Redirect auf `/pro` (erhält `?modus=`). `PAYWALL_ACTIVE
+= false` in startseiteConfig — das PayPal-Gate an der Pro-Bereichsgrenze
+ist ein späterer, separater Schritt. Header-Button «Pro →» / «← Free».
+
+**Katalog-Gliederung: primär nach RECHTSGEBIET** (17 kanonische Sektionen
+in fester Auftrags-Reihenfolge, `RECHTSGEBIET_SEKTIONEN`), darunter je die
+Untergruppen **Rechner** und **Vorlagen** (nur nicht-leere). Output-Typ
+(Rechner) und Dokument-Typ (Vorlagen) sind FILTER; Rechtsbereich-Filter und
+Suche bleiben. **Der frühere Modus-Umschalter (Primärweiche Rechner |
+Vorlagen) ist damit abgelöst und entfernt**; `?modus=`-Links bleiben
+harmlos. Alt-Gliederungen 'art'/'bereich' existieren im Katalog-Code
+weiter, werden aber nicht mehr gerendert. Header = Zwei-Zonen (Logo links,
+Aktionscluster rechts: ⌘K · Sprache · Methodik · Über · Pro-Button),
 Mitte leer; Utility-Bar nur Pflichthinweis rechts, mobil ausgeblendet.
 
 **Design-Tokens (Feinschliff 5.6.2026, single source tailwind.config +
@@ -104,10 +110,16 @@ Status-Filter heisst «Nur verfügbare» (= nicht geplant).
 
 ## Katalog (Quelle: src/lib/startseiteConfig.ts — Single Source of Truth)
 
-**52 Einträge: 34 Rechner + 18 Vorlagen.** Felder: modus, art, tier,
-rechtsgebiet, **rechtsbereich** (privat/oeffentlich/straf/uebergreifend),
-status, norms (NormRef mit verified), href, schemaId/formvorschrift/output
-(Vorlagen), szenarien (konsolidierte Rechner), related, keywords.
+**111 Einträge: 64 Rechner + 47 Vorlagen** (Katalog-Ausbau 5.6.2026: +59
+geplante Karten gemäss KATALOG-ROADMAP.md; Soll-Inventar dort gepflegt).
+Felder: modus, art, **tier (free/pro)**, rechtsgebiet (kanonisch, 17 Werte),
+**rechtsbereich** (privat/oeffentlich/straf/uebergreifend), status, norms
+(NormRef mit verified), href, schemaId/formvorschrift/output (Vorlagen),
+szenarien (konsolidierte Rechner), related (modusübergreifend; Free-Karten
+zeigen «(Pro)»-Zusatz bei Pro-Zielen), keywords. VorlageArt um
+**korrespondenz** («Schreiben & Erklärungen») erweitert. Neue geplante
+Karten: norms [], kein href, neutrale Beschreibungen (Normentreue);
+Roadmap-«[Gerüst]» als «Strukturiertes Gerüst …» im Text.
 
 **Konsolidierung (43→34):** 9 Einzelkarten absorbiert — Klagebewilligung +
 Fristwiederherstellung → ZPO-Fristen; Rechtsöffnung/Aberkennung/Kollokation

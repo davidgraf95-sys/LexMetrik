@@ -16,7 +16,7 @@ import type { PdfBanner } from '../../lib/vorlagen/banner';
 // Schema, Schritte und Schritt-Inhalte — KEINE Fachlogik hier (§3).
 
 export function VorlagenWizardRahmen({
-  zurueckHref = '/?modus=vorlagen', overline, titel, intro, norms, badge,
+  zurueckHref = '/', overline, titel, intro, norms, badge,
   fussnote, zuruecksetzen, schritte, schritt, setSchritt, fehler,
   weiterDeaktiviert, inhalt, vorschau,
 }: {
@@ -48,7 +48,7 @@ export function VorlagenWizardRahmen({
       <div className="space-y-3">
         <Link to={zurueckHref} className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
           <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
-          Zurück zu den Vorlagen
+          Zurück zum Katalog
         </Link>
         <p className="lc-overline">{overline}</p>
         <h1 className="text-h1 font-display font-semibold text-ink-900">{titel}</h1>

@@ -27,7 +27,7 @@ function ProTeaser() {
           </h2>
           <p className="text-body-s text-ink-500 leading-relaxed">
             Verfahrens- und Rechtsmittelfristen, Verjährung, Betreibung und Konkurs, Zuständigkeit —
-            derselbe nachvollziehbare Rechenweg, zugeschnitten auf Fachpersonen.
+            derselbe nachvollziehbare Rechenweg, zugeschnitten auf die tägliche Praxis.
           </p>
           <div className="flex flex-wrap gap-1.5 pt-1">
             {highlights.map((t) => <span key={t} className="lc-chip">{t}</span>)}

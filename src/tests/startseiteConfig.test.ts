@@ -1,5 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { ALLE_KARTEN } from '../lib/startseiteConfig';
+import {
+  ALLE_KARTEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN,
+  SEKTIONEN, VORLAGE_SEKTIONEN, karte,
+} from '../lib/startseiteConfig';
 import { CALCULATORS } from '../lib/calculators';
 
 // Annahmekriterien «Fedlex-Direktlinks für die Norm-Pills»:
@@ -84,8 +87,8 @@ describe('Routen-Integrität', () => {
 describe('Modus «Vorlagen» (Katalog-Regeln)', () => {
   const vorlagen = ALLE_KARTEN.filter((k) => k.modus === 'vorlage');
 
-  it('alle vier Dokument-Typen sind belegt', () => {
-    (['vorsorge', 'vertrag', 'eingabe', 'gesellschaft'] as const).forEach((art) => {
+  it('alle fünf Dokument-Typen sind belegt (inkl. korrespondenz)', () => {
+    (['vorsorge', 'vertrag', 'eingabe', 'gesellschaft', 'korrespondenz'] as const).forEach((art) => {
       expect(vorlagen.some((v) => v.art === art), art).toBe(true);
     });
   });
@@ -104,5 +107,60 @@ describe('Modus «Vorlagen» (Katalog-Regeln)', () => {
       expect(['rechner', 'vorlage'], k.id).toContain(k.modus);
       (k.related ?? []).forEach((r) => expect(ids.has(r), `${k.id} → ${r}`).toBe(true));
     });
+  });
+});
+
+// ── Katalog-Integrität nach dem Ausbau auf 111 Einträge (Review-Befunde) ────
+
+describe('Katalog-Integrität (Rechtsgebiet-Gliederung)', () => {
+  it('jede Karte hat ein rechtsgebiet aus RECHTSGEBIETE (sonst keine Sektion → unsichtbar)', () => {
+    const set = new Set(RECHTSGEBIETE);
+    ALLE_KARTEN.forEach((k) => expect(set.has(k.rechtsgebiet), `${k.id}: ${k.rechtsgebiet}`).toBe(true));
+  });
+
+  it('jeder rechtsbereich ist einer der vier definierten Codes', () => {
+    const set = new Set(RECHTSBEREICH_SEKTIONEN.map((b) => b.code));
+    ALLE_KARTEN.forEach((k) => expect(set.has(k.rechtsbereich), k.id).toBe(true));
+  });
+
+  it('jede Karten-id ist eindeutig', () => {
+    const ids = ALLE_KARTEN.map((k) => k.id);
+    expect(new Set(ids).size, JSON.stringify(ids.filter((x, i) => ids.indexOf(x) !== i))).toBe(ids.length);
+  });
+
+  it('Rechner-art ∈ Output-Typen, Vorlage-art ∈ Dokument-Typen (sonst leere Filter-Pill)', () => {
+    const rechnerArt = new Set(SEKTIONEN.map((s) => s.art));
+    const vorlageArt = new Set(VORLAGE_SEKTIONEN.map((s) => s.art));
+    ALLE_KARTEN.forEach((k) =>
+      expect((k.modus === 'rechner' ? rechnerArt : vorlageArt).has(k.art), `${k.id}/${k.art}`).toBe(true));
+  });
+
+  it('geplante Rechner: keine Norm-Pills, kein href (Invariante wie bei Vorlagen)', () => {
+    ALLE_KARTEN.filter((k) => k.modus === 'rechner' && k.status === 'geplant').forEach((k) => {
+      expect(k.norms, k.id).toEqual([]);
+      expect(k.href, k.id).toBeUndefined();
+    });
+  });
+
+  it('related verweist nie auf sich selbst und löst auf (modusübergreifend)', () => {
+    const ids = new Set(ALLE_KARTEN.map((k) => k.id));
+    ALLE_KARTEN.forEach((k) => (k.related ?? []).forEach((r) => {
+      expect(r, `${k.id} self-ref`).not.toBe(k.id);
+      expect(ids.has(r), `${k.id} → ${r}`).toBe(true);
+    }));
+  });
+
+  it('Sektions-ids sind innerhalb jeder Gliederung eindeutig', () => {
+    for (const arr of [RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, SEKTIONEN, VORLAGE_SEKTIONEN]) {
+      const ids = arr.map((s: { id: string }) => s.id);
+      expect(new Set(ids).size, ids.join(',')).toBe(ids.length);
+    }
+    // bewusst NICHT arrayübergreifend: gerendert wird nur die
+    // Rechtsgebiet-Gliederung; die übrigen Listen speisen Filter-Pills.
+  });
+
+  it('die von den Wizard-Seiten referenzierten karte()-ids existieren', () => {
+    ['schlichtungsgesuch', 'patientenverfuegung', 'eigenhaendiges-testament', 'vorsorgeauftrag']
+      .forEach((id) => expect(karte(id), id).toBeDefined());
   });
 });
