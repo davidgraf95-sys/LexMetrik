@@ -21,7 +21,7 @@ export type BehoerdenAdresse = {
   quelle: string;      // amtliche Quelle
 };
 
-export type EingabeArt = 'schlichtungsbehoerde_zivil';
+export type EingabeArt = 'schlichtungsbehoerde_zivil' | 'schlichtungsstelle_miete' | 'schlichtungsstelle_diskriminierung';
 
 export const BEHOERDEN: Record<EingabeArt, Partial<Record<Kanton, BehoerdenAdresse>>> = {
   // Schlichtungsbehörde in Zivilsachen (Art. 197 ff. ZPO)
@@ -33,6 +33,25 @@ export const BEHOERDEN: Record<EingabeArt, Partial<Record<Kanton, BehoerdenAdres
       plzOrt: '4001 Basel',
       stand: '5.6.2026',
       quelle: 'staatskalender.bs.ch (Kanzlei Schlichtungsbehörde)',
+    },
+  },
+  // Paritätische Spezialstellen (Art. 200 ZPO)
+  schlichtungsstelle_miete: {
+    BS: {
+      name: 'Staatliche Schlichtungsstelle für Mietstreitigkeiten',
+      strasse: 'Grenzacherstrasse 62',
+      plzOrt: '4005 Basel',
+      stand: '5.6.2026',
+      quelle: 'staatskalender.bs.ch',
+    },
+  },
+  schlichtungsstelle_diskriminierung: {
+    BS: {
+      name: 'Kantonale Schlichtungsstelle für Diskriminierungsfragen',
+      strasse: 'Grenzacherstrasse 62',
+      plzOrt: '4005 Basel',
+      stand: '5.6.2026',
+      quelle: 'staatskalender.bs.ch',
     },
   },
 };

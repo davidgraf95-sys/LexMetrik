@@ -117,9 +117,11 @@ describe('Schlichtungsgesuch BS — Akzeptanztests', () => {
     expect(t).toContain('(beklagte Partei)');
   });
 
-  it('12. Download-Gate: fehlendes Forum / leerer Streitgegenstand sperren mit Mängelliste', () => {
-    const m1 = sgMaengel(basis({ baselForumBestaetigt: false, geld: { betrag: '3000' } }));
-    expect(m1.some((m) => m.text.includes('Gerichtsstand'))).toBe(true);
+  it('12. Download-Gate: fremder Kanton / leerer Streitgegenstand sperren mit Mängelliste', () => {
+    // Deklarierte Änderung 5.6.2026: Das Forum-Häkchen ist entfallen —
+    // die Kantonsauswahl übernimmt (BS hinterlegt, andere blockieren).
+    const m1 = sgMaengel(basis({ gerichtsKanton: 'ZH', geld: { betrag: '3000' } }));
+    expect(m1.some((m) => m.text.includes('noch nicht hinterlegt'))).toBe(true);
     const m2 = sgMaengel(basis({ streitgegenstand: '', geld: { betrag: '3000' } }));
     expect(m2.some((m) => m.schritt === 4)).toBe(true);
     expect(sgMaengel(basis({ geld: { betrag: '3000' } }))).toEqual([]);

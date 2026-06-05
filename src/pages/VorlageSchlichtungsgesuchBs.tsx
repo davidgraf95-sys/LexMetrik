@@ -241,10 +241,6 @@ export function VorlageSchlichtungsgesuchBs() {
                 <input type="checkbox" className="mt-0.5" checked={a.ausnahmeArt198} onChange={(e) => set('ausnahmeArt198', e.target.checked)} />
                 <span>Es liegt eine Ausnahme nach Art. 198 ZPO vor <span className="text-ink-500">(z. B. summarisches Verfahren, Scheidung, bestimmte SchKG-Klagen, Widerklage, einzige kantonale Instanz)</span></span>
               </label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium">
-                <input type="checkbox" className="mt-0.5" checked={a.baselForumBestaetigt} onChange={(e) => set('baselForumBestaetigt', e.target.checked)} />
-                <span>Ein Basler Gerichtsstand ist gegeben / wird vorausgesetzt (Art. 10 ff. ZPO)</span>
-              </label>
               <p className="text-xs text-ink-500">
                 Dieses Werkzeug stellt das Gesuch zusammen; die örtliche und sachliche Zuständigkeit
                 prüfen Sie selbst (massgebliche Gerichtsstände u. a. Art. 10, 31, 33, 34, 35 ZPO;

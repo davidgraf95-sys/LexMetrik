@@ -32,6 +32,7 @@ export const SCHLICHTUNGSBEHOERDEN_BS = {
   },
   miete: {
     name: 'Staatliche Schlichtungsstelle für Mietstreitigkeiten',
+    // Amtlich verifiziert: Staatskalender BS, Stand 5.6.2026
     postadresse: ['Grenzacherstrasse 62', '4005 Basel'],
     tel: '+41 61 267 85 21',
     email: 'ssm@bs.ch',
@@ -40,7 +41,7 @@ export const SCHLICHTUNGSBEHOERDEN_BS = {
   },
   diskriminierung: {
     name: 'Kantonale Schlichtungsstelle für Diskriminierungsfragen',
-    postadresse: ['Grenzacherstrasse 62', '4005 Basel'], // aktuelle bs.ch-Adresse (04.07.2025); Altadresse Utengasse 36 überholt
+    postadresse: ['Grenzacherstrasse 62', '4005 Basel'], // Amtlich verifiziert: Staatskalender BS, Stand 5.6.2026 (Altadresse Utengasse 36 überholt)
     tel: '+41 61 267 85 22',
     email: 'ksd@bs.ch',
     paritaetisch: true, // Art. 200 Abs. 2 ZPO
@@ -95,7 +96,8 @@ export type SgAnswers = {
   // Schritt 0 — Routing & Vorprüfung
   streitgegenstandTyp: SgTyp | '';
   ausnahmeArt198: boolean;
-  baselForumBestaetigt: boolean;
+  /** @deprecated entfällt seit 5.6.2026 — ersetzt durch die Kantonsauswahl (gerichtsKanton); bleibt nur für alte Speicherstände/Tests tolerant. */
+  baselForumBestaetigt?: boolean;
   streitwert?: string;             // manuell (übrige Zivilsache); sonst abgeleitet
   // Schritt 1 — klagende Partei(en) + Vertretung
   klaeger: SgPartei[];
@@ -125,7 +127,6 @@ export const SG_DEFAULTS: SgAnswers = {
   gerichtsKanton: 'BS',
   streitgegenstandTyp: '',
   ausnahmeArt198: false,
-  baselForumBestaetigt: false,
   klaeger: [{ ...SG_PERSON_NATUERLICH }],
   beklagte: [{ ...SG_PERSON_NATUERLICH }],
   freieRechtsbegehren: [],
@@ -184,7 +185,6 @@ export function sgMaengel(a: SgAnswers): SgMangel[] {
   const m: SgMangel[] = [...m0];
   const num = (s?: string) => Number(String(s ?? '').replace(/['\s]/g, '').replace(',', '.')); // wie fmtCHF
   if (!a.streitgegenstandTyp) m.push({ schritt: 0, text: 'Art des Streitgegenstands wählen.' });
-  if (!a.baselForumBestaetigt) m.push({ schritt: 0, text: 'Basler Gerichtsstand bestätigen (Art. 10 ff. ZPO) — Voraussetzung für den Download.' });
   if (a.klaeger.length < 1 || !a.klaeger.every(parteiVollstaendig)) m.push({ schritt: 1, text: 'Klagende Partei(en) vollständig erfassen (Name, Strasse, 4-stellige PLZ, Ort).' });
   if (a.beklagte.length < 1 || !a.beklagte.every(parteiVollstaendig)) m.push({ schritt: 2, text: 'Beklagte Partei(en) vollständig erfassen (Art. 202 Abs. 2 ZPO).' });
   if (a.streitgegenstandTyp === 'geldforderung' || a.streitgegenstandTyp === 'arbeitsrecht') {
