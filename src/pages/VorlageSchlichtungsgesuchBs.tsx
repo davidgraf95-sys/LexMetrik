@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import {
   SG_DEFAULTS, SG_PERSON_NATUERLICH, SG_SCHWELLEN, SG_OFFENE_VERIFIKATIONEN, SG_KANTONALE_ERLASSE,
-  sgZusammenstellen, sgMaengel, sgHinweise, sgRouting, sgStreitwert, fmtCHF,
+  sgZusammenstellen, sgMaengel, sgHinweise, sgRouting, sgStreitwert, sgPrefillLesen, fmtCHF,
   type SgAnswers, type SgPartei, type SgTyp,
 } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
@@ -47,8 +47,13 @@ const BANNER_SG: PdfBanner = {
 export function VorlageSchlichtungsgesuchBs() {
   // KEIN speicherKey: Anweisung «keine Browser-Storage-APIs» – Zustand nur im
   // Speicher; zuruecksetzen leert entsprechend nur den Speicher-Zustand.
+  // Prefill (Phase 4 Zuständigkeitsengine): Query-Vorbelegung beim ersten
+  // Render, voll editierbar; SSR-sicher via try/catch (kein window im Smoke).
+  const prefill = (() => {
+    try { return sgPrefillLesen(window.location.search); } catch { return null; }
+  })();
   const { a, set, schritt, setSchritt, kopiert, kopieren, zuruecksetzen } =
-    useWizardState<SgAnswers>({ defaults: SG_DEFAULTS });
+    useWizardState<SgAnswers>({ defaults: prefill ? { ...SG_DEFAULTS, ...prefill } : SG_DEFAULTS });
 
   const routing = useMemo(() => sgRouting(a), [a]);
   const ergebnis = useMemo(() => sgZusammenstellen(a), [a]);

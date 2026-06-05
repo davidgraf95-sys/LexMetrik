@@ -3,7 +3,7 @@ import {
   ZUSTAENDIGKEIT_KANTONE, kantonErfasst, kantonZustaendigkeit, stelleFuer, gemeindeImKanton,
 } from '../data/zustaendigkeitKantone';
 import { bestimmeZustaendigkeit, ZPO_SCHWELLEN } from '../lib/zustaendigkeit';
-import { SG_SCHWELLEN } from '../lib/vorlagen/schlichtungsgesuchBs';
+import { SG_SCHWELLEN, sgPrefillKodieren, sgPrefillLesen } from '../lib/vorlagen/schlichtungsgesuchBs';
 
 // Phase 2: Kantonsschicht (BS-Pilot) + SSoT-Konsolidierung der Schwellen
 // (ZUSTAENDIGKEIT-AUFTRAG.md §6/§7). Adressen aus behoerden.ts — kein
@@ -81,5 +81,36 @@ describe('SSoT-Konsolidierung (Auftrag §7): SG_SCHWELLEN importiert aus ZPO_SCH
     expect(SG_SCHWELLEN.ENTSCHEIDVORSCHLAG).toBe(10000);
     expect(SG_SCHWELLEN.VERZICHT_GEMEINSAM).toBe(100000);
     expect(SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS).toBe(30000); // bleibt lokal (Art. 113/114, andere Norm)
+  });
+});
+
+describe('Prefill-Weiterleitung Zuständigkeit → Schlichtungsgesuch (Phase 4, Auftrag §8)', () => {
+  it('Roundtrip Geldforderung: Typ, Betrag (→ geld.betrag) und Kanton kommen an', () => {
+    const q = sgPrefillKodieren({ typ: 'geldforderung', betragCHF: 12000, kanton: 'BS' });
+    const aus = sgPrefillLesen('?' + q)!;
+    expect(aus.streitgegenstandTyp).toBe('geldforderung');
+    expect(aus.geld?.betrag).toBe('12000');
+    expect(aus.gerichtsKanton).toBe('BS');
+  });
+
+  it('Arbeitsrecht: Betrag landet im manuellen Streitwert-Feld, nicht in geld', () => {
+    const aus = sgPrefillLesen('?' + sgPrefillKodieren({ typ: 'arbeitsrecht', betragCHF: 8500.5 }))!;
+    expect(aus.streitgegenstandTyp).toBe('arbeitsrecht');
+    expect(aus.streitwert).toBe('8500.5');
+    expect(aus.geld).toBeUndefined();
+  });
+
+  it('verwirft Müll deterministisch: unbekannter Typ → null; unplausibler Betrag/Kanton ignoriert', () => {
+    expect(sgPrefillLesen('?typ=quatsch&betrag=100')).toBeNull();
+    expect(sgPrefillLesen('')).toBeNull();
+    const aus = sgPrefillLesen('?typ=geldforderung&betrag=12%2700&kanton=xx')!; // Apostroph-Betrag, klein-kanton
+    expect(aus.geld).toBeUndefined();        // Betrag mit Apostroph entspricht nicht dem Schema → verworfen
+    expect(aus.gerichtsKanton).toBeUndefined(); // 'xx' ist kein Kanton-Code-Format
+    expect(aus.streitgegenstandTyp).toBe('geldforderung');
+  });
+
+  it('kein Betrag ohne Wert; Kodieren lässt negative/NaN-Beträge weg', () => {
+    expect(sgPrefillKodieren({ typ: 'geldforderung', betragCHF: -5 })).toBe('typ=geldforderung');
+    expect(sgPrefillKodieren({ typ: 'geldforderung', betragCHF: null })).toBe('typ=geldforderung');
   });
 });

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Field, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
@@ -14,6 +15,7 @@ import {
 } from '../../lib/zustaendigkeit';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit } from '../../data/zustaendigkeitKantone';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
+import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
 
 // ─── Zuständigkeitsrechner (ZPO) – UI (Phase 3) ─────────────────────────────
 // Reine Darstellung (§3): Bundesrecht in lib/zustaendigkeit.ts, Kantonsdaten
@@ -112,6 +114,16 @@ export function ZustaendigkeitForm() {
     : null;
   const kantonOffen = f.kanton !== '' && !kantonErfasst(f.kanton);
   const kantonDaten = f.kanton ? kantonZustaendigkeit(f.kanton) : null;
+
+  // CTA «Weiter zum Schlichtungsgesuch» (Auftrag §8): NUR wenn die Ziel-
+  // Vorlage den Fall trägt (BS-Pilot, ordentliche Schlichtungsbehörde —
+  // Miete/GlG laufen dort bewusst in Stopp-Karten) UND die Stelle erfasst ist.
+  const sgTyp = f.streitsache === 'geldforderung' ? 'geldforderung' as const
+    : f.streitsache === 'arbeit' ? 'arbeitsrecht' as const : null;
+  const sgPrefill = r && stelle && f.kanton === 'BS'
+    && r.schlichtung.obligatorisch && r.schlichtung.behoerdeTyp === 'ordentlich' && sgTyp
+    ? sgPrefillKodieren({ typ: sgTyp, betragCHF: f.vermoegensrechtlich ? streitwert : null, kanton: 'BS' })
+    : null;
 
   const pdfConfig: PdfDocConfig = {
     title: 'Zuständigkeit (ZPO)',
@@ -258,10 +270,21 @@ export function ZustaendigkeitForm() {
 
           {/* Konkrete Stelle (Kantonsschicht) */}
           {stelle && (
-            <div className="lc-card p-4">
-              <p className="lc-overline mb-2">Zuständige Schlichtungsstelle ({f.kanton})</p>
-              <p className="text-body-s text-ink-900 whitespace-pre-line">{behoerdeAlsBlock(stelle)}</p>
-              <p className="text-xs text-ink-500 mt-2">Quelle: {stelle.quelle} (Stand {stelle.stand}).</p>
+            <div className="lc-card p-4 space-y-3">
+              <div>
+                <p className="lc-overline mb-2">Zuständige Schlichtungsstelle ({f.kanton})</p>
+                <p className="text-body-s text-ink-900 whitespace-pre-line">{behoerdeAlsBlock(stelle)}</p>
+                <p className="text-xs text-ink-500 mt-2">Quelle: {stelle.quelle} (Stand {stelle.stand}).</p>
+              </div>
+              {sgPrefill && (
+                <div className="pt-3 border-t border-line">
+                  <Link to={{ pathname: '/vorlagen/schlichtungsgesuch-bs', search: sgPrefill }}
+                    className="lc-btn-primary no-underline">
+                    Weiter zum Schlichtungsgesuch (BS) →
+                  </Link>
+                  <p className="text-xs text-ink-500 mt-2">Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.</p>
+                </div>
+              )}
             </div>
           )}
           {kantonOffen && (

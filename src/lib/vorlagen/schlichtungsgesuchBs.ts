@@ -156,6 +156,37 @@ export function sgStreitwert(a: SgAnswers): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
+// ── Prefill-Codec (Phase 4 Zuständigkeitsengine, Auftrag §8) ─────────────────
+// Query-Vorbelegung nach dem Muster fristQueryKodieren (Tagerechner): die
+// Zuständigkeits-Seite übergibt Typ/Streitwert/Kanton, dieser Wizard übernimmt
+// sie als voll editierbare Defaults. Rein & deterministisch; unbekannte oder
+// unplausible Werte werden verworfen (kein Raten).
+
+const SG_TYPEN: readonly SgTyp[] = ['geldforderung', 'uebrige_zivilsache', 'arbeitsrecht', 'miete_pacht', 'gleichstellung_glg'];
+
+export function sgPrefillKodieren(p: { typ: SgTyp; betragCHF?: number | null; kanton?: Kanton }): string {
+  const q = new URLSearchParams();
+  q.set('typ', p.typ);
+  if (p.betragCHF != null && Number.isFinite(p.betragCHF) && p.betragCHF >= 0) q.set('betrag', String(p.betragCHF));
+  if (p.kanton) q.set('kanton', p.kanton);
+  return q.toString();
+}
+
+export function sgPrefillLesen(search: string): Partial<SgAnswers> | null {
+  const q = new URLSearchParams(search);
+  const typ = q.get('typ') as SgTyp | null;
+  if (!typ || !SG_TYPEN.includes(typ)) return null;
+  const aus: Partial<SgAnswers> = { streitgegenstandTyp: typ };
+  const kanton = q.get('kanton');
+  if (kanton && kanton === kanton.toUpperCase() && kanton.length === 2) aus.gerichtsKanton = kanton as Kanton;
+  const betrag = q.get('betrag');
+  if (betrag && /^\d+(\.\d{1,2})?$/.test(betrag)) {
+    if (typ === 'geldforderung') aus.geld = { betrag };
+    else aus.streitwert = betrag;
+  }
+  return aus;
+}
+
 // ── Routing (Art. 200 ZPO: paritätische Behörden → eigene Stellen) ──────────
 export type SgRouting =
   | { dokument: true; behoerde: typeof SCHLICHTUNGSBEHOERDEN_BS.zivilgericht; arbeitsrecht: boolean }
