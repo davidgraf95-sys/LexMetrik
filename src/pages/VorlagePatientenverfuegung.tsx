@@ -7,6 +7,7 @@ import {
 import { BANNER_UNTERSCHREIBEN } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, inputCls } from '../components/vorlagen/ui';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -140,18 +141,12 @@ export function VorlagePatientenverfuegung() {
           <div className="space-y-2">
             <p className="lc-overline">Behandlungsziel</p>
             <p className="text-xs text-ink-500">Die Zielwahl setzt sinnvolle Vorgaben für noch offene Massnahmen (überschreibbar) – Widersprüche werden geprüft, nie still aufgelöst.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {ZIELE.map((z) => (
-                <button key={z.code} type="button" onClick={() => waehleZiel(z.code)}
-                  aria-pressed={a.ziel === z.code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.ziel === z.code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{z.label}</span>
-                  <span className="block text-xs text-ink-500">{z.sub}</span>
-                </button>
-              ))}
-            </div>
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              items={ZIELE.map((z) => ({ code: z.code, label: z.label, sub: z.sub }))}
+              value={a.ziel}
+              onSelect={waehleZiel}
+            />
           </div>
         </div>
       );

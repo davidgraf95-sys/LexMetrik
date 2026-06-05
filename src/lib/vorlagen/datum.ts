@@ -25,6 +25,16 @@ export function fmtCHF(roh: string): string {
   return ganz.replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.' + dez;
 }
 
+/**
+ * CHF-Betrag aus einer ZAHL: de-CH mit genau zwei Dezimalen
+ * (Tausender-Trennung gemäss Locale). Zuvor wortgleich lokal definiert in
+ * lib/teuerung.ts, lib/erbteilung.ts und components/forms/ErbteilungForm.tsx
+ * (Entdoppelung 5.6.2026, golden-bewiesen). NICHT verwechseln mit `fmtCHF`
+ * (oben, für Nutzer-STRINGS) oder verzugszins.formatCHF (spezialisiert).
+ */
+export const chf = (n: number): string =>
+  n.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
 /** Robuste Zahl aus Nutzereingabe (Apostroph/Komma toleriert) – sonst null. */
 export const zahl = (roh?: string): number | null => {
   const n = Number(String(roh ?? '').replace(/['\s]/g, '').replace(',', '.'));

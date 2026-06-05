@@ -1,6 +1,7 @@
 import type { Normverweis, Rechenschritt } from '../types/legal';
 import type { ErbteilungInput, ErbteilungErgebnis, ErbeAnteil, ErbeGruppe } from '../types/erbrecht';
 import { br, addB, subB, mulB, divB, fmtB, istNull, EINS, NULL_BRUCH, type Bruch } from './bruch';
+import { chf as fmtCHF } from './vorlagen/datum';
 
 // ─── Erbteilung & Pflichtteil (Art. 457 ff., 462, 470 ff. ZGB) ────────────
 //
@@ -36,9 +37,6 @@ const DREIVIERTEL = br(3, 4);
 
 // Interner Verteilungs-Eintrag (mit Flag für den Eltern-Pflichtteil im alten Recht).
 type Position = ErbeAnteil & { istLebenderElternteil?: boolean };
-
-const fmtCHF = (x: number) =>
-  x.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 // ─── Schritt: gesetzliche Erbquoten verteilen ─────────────────────────────
 

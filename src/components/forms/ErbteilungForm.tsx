@@ -4,6 +4,7 @@ import { BetragsFeld } from '../BetragsFeld';
 import type { ErbteilungInput, Zivilstand, Gueterstand, ErbteilungErgebnis } from '../../types/erbrecht';
 import { berechneErbteilung } from '../../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../../lib/bruch';
+import { chf as fmtCHF } from '../../lib/vorlagen/datum';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { DatumsFeld } from '../DatumsFeld';
@@ -39,8 +40,6 @@ const ELTERN_OPTIONEN: { code: ElternStatus; label: string }[] = [
   { code: 'vorverstorben_ohne', label: 'vorverstorben, ohne Nachkommen' },
 ];
 
-
-const fmtCHF = (x: number) => x.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 export function ErbteilungForm() {
   const [todesdatum, setTodesdatum] = useState('2025-06-01');

@@ -7,6 +7,7 @@ import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { KANTONE } from '../lib/kantone';
@@ -142,23 +143,18 @@ export function VorlageArbeitsvertrag() {
           {(
             <div className="space-y-3 pt-1">
               <p className="lc-overline">Probezeit (Art. 335b OR)</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                {([
+              <SelectionGrid
+                className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+                items={([
                   // Bei Befristung gibt es keine gesetzliche Vermutung
                   // (Art. 335b Abs. 1 OR) – die Probezeit wird VEREINBART.
                   ['gesetzlich', a.befristet ? '1 Monat (vereinbart)' : 'Gesetzlich', a.befristet ? 'ausdrückliche Abrede' : '1 Monat'],
                   ['verlaengert', a.befristet ? '2–3 Monate (vereinbart)' : 'Verlängert', '2–3 Monate (schriftlich)'],
                   ['wegbedungen', 'Keine', 'Probezeit wegbedungen'],
-                ] as const).map(([code, label, sub]) => (
-                  <button key={code} type="button" onClick={() => set('probezeit', code)} aria-pressed={a.probezeit === code}
-                    className={`text-left p-3 rounded-lg border transition-colors ${
-                      a.probezeit === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                    }`}>
-                    <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                    <span className="block text-xs text-ink-500">{sub}</span>
-                  </button>
-                ))}
-              </div>
+                ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+                value={a.probezeit}
+                onSelect={(code) => set('probezeit', code)}
+              />
               {a.probezeit === 'verlaengert' && (
                 <Field label="Probezeit (Monate)" hint="höchstens drei Monate (Art. 335b Abs. 2 OR)">
                   <input type="number" min={2} max={3} className={inputCls + ' w-28'} value={a.probezeitMonate ?? 3}
@@ -172,20 +168,16 @@ export function VorlageArbeitsvertrag() {
 
       case 'lohn': return (
         <div className="space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {([['monatslohn', 'Monatslohn'], ['stundenlohn', 'Stundenlohn']] as const).map(([code, label]) => (
-              <button key={code} type="button" onClick={() => {
-                set('lohnModell', code);
-                // Ferienzuschlag gibt es nur im Stundenlohn (Review-Befund B1)
-                if (code === 'monatslohn') set('ferienzuschlagSeparat', undefined);
-              }} aria-pressed={a.lohnModell === code}
-                className={`text-left p-3 rounded-lg border transition-colors ${
-                  a.lohnModell === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                }`}>
-                <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-              </button>
-            ))}
-          </div>
+          <SelectionGrid
+            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            items={([['monatslohn', 'Monatslohn'], ['stundenlohn', 'Stundenlohn']] as const).map(([code, label]) => ({ code, label }))}
+            value={a.lohnModell}
+            onSelect={(code) => {
+              set('lohnModell', code);
+              // Ferienzuschlag gibt es nur im Stundenlohn (Review-Befund B1)
+              if (code === 'monatslohn') set('ferienzuschlagSeparat', undefined);
+            }}
+          />
           <Field label={a.lohnModell === 'monatslohn' ? 'Bruttolohn pro Monat (CHF)' : 'Bruttolohn pro Stunde (CHF)'}>
             <BetragsFeld className={inputCls + ' num'} value={a.lohnBetrag} onChange={(v) => set('lohnBetrag', v)} placeholder={a.lohnModell === 'monatslohn' ? "z. B. 6'500" : 'z. B. 32.50'} />
           </Field>
@@ -220,21 +212,16 @@ export function VorlageArbeitsvertrag() {
           </div>
           <div className="space-y-2">
             <p className="lc-overline">Überstunden (Art. 321c OR)</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {([
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              items={([
                 ['gesetzlich', 'Gesetzlich', 'Freizeit oder Lohn + 25 %'],
                 ['kompensation', 'Kompensation', 'grundsätzlich Freizeit'],
                 ['inbegriffen', 'Im Lohn inbegriffen', 'Wegbedingung (schriftlich)'],
-              ] as const).map(([code, label, sub]) => (
-                <button key={code} type="button" onClick={() => set('ueberstunden', code)} aria-pressed={a.ueberstunden === code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.ueberstunden === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                  <span className="block text-xs text-ink-500">{sub}</span>
-                </button>
-              ))}
-            </div>
+              ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+              value={a.ueberstunden}
+              onSelect={(code) => set('ueberstunden', code)}
+            />
             {a.ueberstunden === 'inbegriffen' && (
               <p className="lc-notice-warn text-body-s">
                 Gilt nur für OR-Überstunden. Überzeit über der wöchentlichen Höchstarbeitszeit
@@ -250,20 +237,15 @@ export function VorlageArbeitsvertrag() {
           {!a.befristet && (
             <div className="space-y-2 pt-1">
               <p className="lc-overline">Kündigungsfrist nach der Probezeit (Art. 335c OR)</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {([
+              <SelectionGrid
+                className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                items={([
                   ['gesetzlich', 'Gesetzliche Staffel', '1 / 2 / 3 Monate nach Dienstjahren'],
                   ['abweichend', 'Einheitliche Frist', 'für beide Parteien gleich (schriftlich)'],
-                ] as const).map(([code, label, sub]) => (
-                  <button key={code} type="button" onClick={() => set('kuendigungsfrist', code)} aria-pressed={a.kuendigungsfrist === code}
-                    className={`text-left p-3 rounded-lg border transition-colors ${
-                      a.kuendigungsfrist === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                    }`}>
-                    <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                    <span className="block text-xs text-ink-500">{sub}</span>
-                  </button>
-                ))}
-              </div>
+                ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+                value={a.kuendigungsfrist}
+                onSelect={(code) => set('kuendigungsfrist', code)}
+              />
               {a.kuendigungsfrist === 'abweichend' && (
                 <Field label="Frist (Monate, auf Monatsende)" hint="nie unter einem Monat (Art. 335c Abs. 2 OR); Parität für beide Parteien">
                   <input type="number" min={1} max={12} className={inputCls + ' w-28 num'} value={a.kuendigungsfristMonate ?? 3}
@@ -279,20 +261,15 @@ export function VorlageArbeitsvertrag() {
         <div className="space-y-4">
           <div className="space-y-2">
             <p className="lc-overline">Lohnfortzahlung bei Krankheit (Art. 324a OR)</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {([
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              items={([
                 ['gesetzlich', 'Gesetzliche Regelung', '3 Wochen im 1. Dienstjahr, danach Skala'],
                 ['ktg', 'Krankentaggeld-Versicherung', 'gleichwertige Lösung (Abs. 4)'],
-              ] as const).map(([code, label, sub]) => (
-                <button key={code} type="button" onClick={() => set('lohnfortzahlung', code)} aria-pressed={a.lohnfortzahlung === code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.lohnfortzahlung === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                  <span className="block text-xs text-ink-500">{sub}</span>
-                </button>
-              ))}
-            </div>
+              ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+              value={a.lohnfortzahlung}
+              onSelect={(code) => set('lohnfortzahlung', code)}
+            />
             {a.lohnfortzahlung === 'ktg' && (
               <div className="grid grid-cols-2 gap-3">
                 <Field label="Taggeld (% des Lohnes)"><input type="number" min={50} max={100} className={inputCls + ' num'} value={a.ktgProzent ?? 80} onChange={(e) => set('ktgProzent', Number(e.target.value))} /></Field>
@@ -311,20 +288,15 @@ export function VorlageArbeitsvertrag() {
           </div>
           <div className="space-y-2">
             <p className="lc-overline">Spesen (Art. 327a OR)</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {([
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              items={([
                 ['effektiv', 'Effektiver Ersatz', 'gegen Beleg (gesetzliches Minimum)'],
                 ['pauschal', 'Pauschalspesen', 'pro Monat (schriftlich; muss alles decken)'],
-              ] as const).map(([code, label, sub]) => (
-                <button key={code} type="button" onClick={() => set('spesen', code)} aria-pressed={a.spesen === code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.spesen === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                  <span className="block text-xs text-ink-500">{sub}</span>
-                </button>
-              ))}
-            </div>
+              ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+              value={a.spesen}
+              onSelect={(code) => set('spesen', code)}
+            />
             {a.spesen === 'pauschal' && (
               <Field label="Pauschale (CHF pro Monat)" hint="muss alle notwendigen Auslagen decken – sonst insoweit nichtig (Art. 327a Abs. 3 OR)">
                 <BetragsFeld className={inputCls + ' num w-40'} value={a.spesenPauschaleCHF ?? ''} onChange={(v) => set('spesenPauschaleCHF', v)} placeholder="z. B. 200" />

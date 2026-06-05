@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Field, inputCls } from '../vorlagen/ui';
+import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import {
   berechneTeuerung, monatLabel, basisAuto,
@@ -97,17 +98,12 @@ export function TeuerungForm() {
       <PflichtDisclaimer text={DISCLAIMER} />
 
       {/* Anwendungsfall (Progressive Disclosure) */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-        {MODI.map((m) => (
-          <button key={m.code} type="button" onClick={() => setModus(m.code)} aria-pressed={modus === m.code}
-            className={`text-left p-3 rounded-lg border transition-colors ${
-              modus === m.code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-            }`}>
-            <span className="block text-body-s font-semibold text-ink-900">{m.label}</span>
-            <span className="block text-xs text-ink-500">{m.sub}</span>
-          </button>
-        ))}
-      </div>
+      <SelectionGrid
+        className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+        items={MODI.map((m) => ({ code: m.code, label: m.label, sub: m.sub }))}
+        value={modus}
+        onSelect={setModus}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label={modus === 'indexmiete' ? 'Nettomietzins alt (CHF/Monat)' : modus === 'unterhalt' ? 'Unterhaltsbeitrag gemäss Urteil (CHF)' : 'Betrag alt (CHF)'}>

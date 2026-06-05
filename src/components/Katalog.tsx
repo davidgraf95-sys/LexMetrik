@@ -5,6 +5,7 @@ import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
 import { ladeFavoriten, toggleFavorit, ladeZuletzt, merkeZuletzt } from '../lib/schnellzugriff';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
+import { Tabs } from './ui/Tabs';
 
 // Gemeinsamer Rechner-Katalog (Filterleiste + vier Typ-Sektionen) für die
 // Free-Seite (/) und Pro (/pro). Die übergebene
@@ -133,31 +134,27 @@ export type PillGruppe = {
 };
 
 function FilterLeiste(props: {
-  rechtsgebiete: string[];
-  gebiete: Set<string>; toggleGebiet: (g: string) => void; reset: () => void;
   nurGeprueft: boolean; setNurGeprueft: (v: boolean) => void;
-  zeigeRechtsgebiete: boolean;
   zusatzGruppen?: PillGruppe[];
   /** Pro: Status-Schnitt entfällt – die Katalog-Tabs übernehmen ihn. */
   ohneStatus?: boolean;
 }) {
-  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, zeigeRechtsgebiete, zusatzGruppen, ohneStatus } = props;
+  const { nurGeprueft, setNurGeprueft, zusatzGruppen, ohneStatus } = props;
   return (
     <section aria-label="Filter" className="space-y-4">
       {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur verfügbare */}
       {!ohneStatus && <div role="group" aria-label="Status">
         <p className="lc-overline mb-1.5">Status</p>
-        <div className="flex h-8 items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit">
-          {([['Alle', false], ['Nur verfügbare', true]] as const).map(([label, wert]) => (
-            <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
-              aria-pressed={nurGeprueft === wert}
-              className={`px-2.5 rounded-md text-xs font-medium transition-all ${
-                nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-              }`}>
-              {label}
-            </button>
-          ))}
-        </div>
+        <Tabs
+          groesse="s"
+          mode="pressed"
+          items={[
+            { code: 'alle', label: 'Alle' },
+            { code: 'nur', label: 'Nur verfügbare' },
+          ] as const}
+          value={nurGeprueft ? 'nur' : 'alle'}
+          onChange={(code) => setNurGeprueft(code === 'nur')}
+        />
       </div>}
       {/* Filtergruppen (Rechtsbereich, Output-/Dokument-Typ) – kompakte Pills */}
       {(zusatzGruppen ?? []).map((gr) => (
@@ -178,77 +175,7 @@ function FilterLeiste(props: {
           </div>
         </div>
       ))}
-      {/* Rechtsgebiet-Pills (nur wenn aktiviert), umbrechend */}
-      {zeigeRechtsgebiete && <div role="group" aria-label="Rechtsgebiete">
-        <p className="lc-overline mb-1.5">Rechtsgebiet</p>
-        <div className="flex flex-wrap gap-1.5">
-        {rechtsgebiete.map((g) => {
-          const an = gebiete.has(g);
-          return (
-            <button key={g} type="button" onClick={() => toggleGebiet(g)} aria-pressed={an}
-              className={`inline-flex items-center h-7 text-xs font-medium rounded-full px-2.5 border transition-colors ${
-                an
-                  ? 'bg-ink-900 text-paper border-ink-900'
-                  : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
-              }`}>
-              {g}
-            </button>
-          );
-        })}
-        {gebiete.size > 0 && (
-          <button type="button" onClick={reset}
-            className="inline-flex items-center h-7 text-xs text-brass-700 hover:text-brass-600 px-1">
-            Zurücksetzen
-          </button>
-        )}
-        </div>
-      </div>}
     </section>
-  );
-}
-
-// ─── Übersicht (schlanke Seitenleiste): Sprungmarken mit Scrollspy + Legende ─
-
-function Uebersicht(props: {
-  sprungmarken: { id: string; numeral: string; title: string; anzahl: number }[];
-  aktiveSektion: string | null;
-  /** Sprungmarken-Klick klappt die Ziel-Sektion auf (Sektionen starten zu). */
-  onSprung?: (id: string) => void;
-}) {
-  const { sprungmarken, aktiveSektion, onSprung } = props;
-  return (
-    <div className="space-y-5">
-      {sprungmarken.length > 0 && (
-        <nav aria-label="Sektionen" className="space-y-1">
-          <p className="lc-overline mb-2">Übersicht</p>
-          {sprungmarken.map((s) => {
-            const aktiv = s.id === aktiveSektion;
-            return (
-              <a key={s.id} href={`#${s.id}`} aria-current={aktiv ? 'true' : undefined}
-                onClick={() => onSprung?.(s.id)}
-                className={`relative flex items-baseline justify-between gap-2 px-2 py-1 -mx-2 rounded-md text-body-s no-underline transition-colors ${
-                  aktiv ? 'bg-brass-100/60 text-ink-900 font-medium' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
-                }`}>
-                {aktiv && <span aria-hidden className="absolute left-0 top-1 bottom-1 w-[3px] rounded-full bg-brass-500" />}
-                {/* ohne Nummern – die Config-Numerale sprängen bei leeren Sektionen (I, II, IV) */}
-                <span className="truncate pl-1">{s.title}</span>
-                <span className="num text-xs text-ink-500">{s.anzahl}</span>
-              </a>
-            );
-          })}
-        </nav>
-      )}
-
-      {/* Status-Legende (drei Zustände) */}
-      <p className="text-micro leading-relaxed text-ink-500 pt-2 border-t border-line">
-        <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line border-t-2 border-t-warn-500" />
-        orange = Entwurf (ungeprüft) ·{' '}
-        <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line opacity-50" />
-        gedämpft = in Vorbereitung ·{' '}
-        <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line border-t-2 border-t-brass-500" />
-        Goldrand = geprüft
-      </p>
-    </div>
   );
 }
 
@@ -326,27 +253,22 @@ function Schnellzugriff(props: {
 }
 
 // ─── Katalog: klebende Seitenleiste (Filter/Übersicht) + Sektionen ──────────
-// `sektionen` bestimmt die Gliederung (Rechner-Output-Typen bzw. Dokument-Typen).
-// `seitenleisteFuss` ist ein Slot für seitenspezifische Elemente (Direkteinstieg);
-// die Modus-Weiche sitzt seitenseitig prominent UNTER dem Hero (IA-Entscheid).
+// Pro-only seit 5.6.2026: einziger Konsument ist /pro; die Free-Startseite
+// rendert eine eigene flache Kachelwand (kein Katalog). Damit entfielen die
+// Free-Pfade (ungruppierte Übersicht, Rechtsgebiet-Pills, `gebieteZuerst`,
+// `seitenleisteFuss`) als toter Code – verhaltensneutral entfernt.
+// Tabs Verfügbar/Gesamt, juristische Obergruppen, gruppierte Seitenleiste
+// und Schnellzugriff sind die feste Anatomie.
 
-export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = false, filterArt = false, gebieteZuerst = [], seitenleisteFuss, proAnsicht = false }: {
+export function Katalog({ karten, filterBereich = false, filterArt = false }: {
   karten: CalculatorCard[];
-  filterRechtsgebiet?: boolean;
   filterBereich?: boolean;
   filterArt?: boolean;
-  /** Diese Rechtsgebiete vor die kanonische Reihenfolge ziehen
-      (z. B. Free-Seite: «Übergreifende Werkzeuge» zuerst). */
-  gebieteZuerst?: string[];
-  seitenleisteFuss?: React.ReactNode;
-  /** Pro-Katalog (Auftrag 5.6.2026): Tabs Verfügbar/Gesamt, juristische
-      Obergruppen, gruppierte Seitenleiste, Schnellzugriff. */
-  proAnsicht?: boolean;
 }) {
   // ── Pro: Tab Verfügbar/Gesamter Katalog, in der URL gespiegelt ──
   const [searchParams, setSearchParams] = useSearchParams();
   const ansicht: 'verfuegbar' | 'katalog' =
-    proAnsicht && searchParams.get('ansicht') === 'katalog' ? 'katalog' : 'verfuegbar';
+    searchParams.get('ansicht') === 'katalog' ? 'katalog' : 'verfuegbar';
   const setAnsicht = (a: 'verfuegbar' | 'katalog') => {
     const p = new URLSearchParams(searchParams);
     if (a === 'katalog') p.set('ansicht', 'katalog'); else p.delete('ansicht');
@@ -372,7 +294,6 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
       if (neu.has(g)) neu.delete(g); else neu.add(g);
       return neu;
     });
-  const toggleGebiet = toggleIn(setGebiete);
   const toggleBereich = toggleIn(setBereiche);
   const toggleArt = toggleIn(setArten);
 
@@ -389,24 +310,16 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
       [k.title, k.rechtsgebiet, ...(k.keywords ?? [])].some((t) => t.toLowerCase().includes(q)) ||
       k.norms.some((n) => n.label.toLowerCase().replace(/\s+/g, '').includes(qKompakt)));
 
-  // Nur Filterwerte anbieten, die in dieser Stufe auch vorkommen (Katalog-Reihenfolge).
-  const rechtsgebiete = RECHTSGEBIETE.filter((g) => karten.some((k) => k.rechtsgebiet === g));
-
   // Tab «Verfügbar» blendet Geplantes aus – Daten bleiben unverändert.
-  const basisKarten = proAnsicht && ansicht === 'verfuegbar' ? karten.filter(istVerfuegbar) : karten;
+  const basisKarten = ansicht === 'verfuegbar' ? karten.filter(istVerfuegbar) : karten;
   const treffer = basisKarten.filter(passt);
   const filterAktiv = q !== '' || gebiete.size > 0 || bereiche.size > 0 || arten.size > 0 || nurGeprueft;
   const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setBereiche(new Set()); setArten(new Set()); setNurGeprueft(false); };
 
-  // Rechtsgebiete in FESTER Auftrags-Reihenfolge (§4) – bewusst ohne
-  // Relevanz-Sortierung, damit die Ordnung stabil und erwartbar bleibt.
-  // `gebieteZuerst` zieht benannte Gebiete deterministisch nach vorn.
-  const gebietRang = (name: string) => {
-    const vorne = gebieteZuerst.indexOf(name);
-    return vorne !== -1 ? vorne : gebieteZuerst.length + RECHTSGEBIETE.indexOf(name);
-  };
+  // Rechtsgebiete in FESTER Auftrags-Reihenfolge (§4 – RECHTSGEBIETE-Reihenfolge
+  // pur), bewusst ohne Relevanz-Sortierung; Ordnung stabil und erwartbar.
   const gebietSichtbar = [...RECHTSGEBIET_SEKTIONEN]
-    .sort((a, b) => gebietRang(a.name) - gebietRang(b.name))
+    .sort((a, b) => RECHTSGEBIETE.indexOf(a.name) - RECHTSGEBIETE.indexOf(b.name))
     .map((g) => ({ g, karten: treffer.filter((k) => k.rechtsgebiet === g.name) }))
     .filter((x) => x.karten.length > 0);
 
@@ -417,7 +330,7 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
     .map((gr) => ({ gr, sektionen: gr.gebiete.map((n) => sektionFuer.get(n)).filter((x): x is NonNullable<typeof x> => !!x) }))
     .filter((x) => x.sektionen.length > 0);
 
-  const sprungmarken = (proAnsicht ? gruppenSichtbar.flatMap((x) => x.sektionen) : gebietSichtbar)
+  const sprungmarken = gruppenSichtbar.flatMap((x) => x.sektionen)
     .map((x) => ({ id: x.g.id, numeral: '', title: x.g.name, anzahl: x.karten.length }));
 
   // Scrollspy: oberste sichtbare Sektion in der Übersicht markieren.
@@ -478,12 +391,9 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
   ];
   const filterLeiste = (
     <FilterLeiste
-      rechtsgebiete={rechtsgebiete}
-      gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
       nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
-      zeigeRechtsgebiete={filterRechtsgebiet}
       zusatzGruppen={zusatzGruppen}
-      ohneStatus={proAnsicht /* Tabs Verfügbar/Gesamt übernehmen den Status-Schnitt */}
+      ohneStatus /* Tabs Verfügbar/Gesamt übernehmen den Status-Schnitt */
     />
   );
   // Kompaktes Suchfeld – sitzt in der Seitenleiste (Desktop) bzw. im
@@ -503,20 +413,14 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
   const uebersicht = (
     <>
       {suchFeld}
-      {proAnsicht ? (
-        <UebersichtGruppiert
-          gruppen={gruppenSichtbar.map((x) => ({
-            label: x.gr.label,
-            eintraege: x.sektionen.map((sx) => ({ id: sx.g.id, title: sx.g.name, anzahl: sx.karten.length })),
-          }))}
-          aktiveSektion={aktiveSektion}
-          onSprung={(id) => setSprungOffen(id)} />
-      ) : (
-        <Uebersicht sprungmarken={sprungmarken} aktiveSektion={aktiveSektion}
-          onSprung={(id) => setSprungOffen(id)} />
-      )}
+      <UebersichtGruppiert
+        gruppen={gruppenSichtbar.map((x) => ({
+          label: x.gr.label,
+          eintraege: x.sektionen.map((sx) => ({ id: sx.g.id, title: sx.g.name, anzahl: sx.karten.length })),
+        }))}
+        aktiveSektion={aktiveSektion}
+        onSprung={(id) => setSprungOffen(id)} />
       {filterLeiste}
-      {seitenleisteFuss}
     </>
   );
 
@@ -546,30 +450,20 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
 
         {/* Karten: ab hier beginnt das Produkt */}
         <div className="space-y-8 min-w-0">
-        {proAnsicht && (
-          <>
-            {/* Tabs: steuern NUR die Sichtbarkeit; Default «Verfügbar»; in der URL gespiegelt */}
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div role="tablist" aria-label="Katalog-Ansicht"
-                className="flex h-9 items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit">
-                {([
-                  ['verfuegbar', `Verfügbar (${karten.filter(istVerfuegbar).length})`],
-                  ['katalog', `Gesamter Katalog (${karten.length})`],
-                ] as const).map(([code, label]) => (
-                  <button key={code} type="button" role="tab" aria-selected={ansicht === code}
-                    onClick={() => setAnsicht(code)}
-                    className={`px-3 rounded-md text-body-s font-medium transition-all ${
-                      ansicht === code ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-                    }`}>
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
-            {/* Schnellzugriff: Favoriten + Zuletzt – in beiden Tabs, zeigt nur Verfügbares */}
-            <Schnellzugriff favoriten={favoriten} zuletzt={zuletzt} onOeffnen={onOeffnen} />
-          </>
-        )}
+        {/* Tabs: steuern NUR die Sichtbarkeit; Default «Verfügbar»; in der URL gespiegelt */}
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <Tabs
+            ariaLabel="Katalog-Ansicht"
+            items={[
+              { code: 'verfuegbar', label: `Verfügbar (${karten.filter(istVerfuegbar).length})` },
+              { code: 'katalog', label: `Gesamter Katalog (${karten.length})` },
+            ] as const}
+            value={ansicht}
+            onChange={setAnsicht}
+          />
+        </div>
+        {/* Schnellzugriff: Favoriten + Zuletzt – in beiden Tabs, zeigt nur Verfügbares */}
+        <Schnellzugriff favoriten={favoriten} zuletzt={zuletzt} onOeffnen={onOeffnen} />
         {treffer.length === 0 ? (
           /* Leerer Zustand: kein stilles Verschwinden der Sektionen */
           <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
@@ -588,37 +482,28 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
             )}
           </section>
         ) : (
-          proAnsicht ? (
-            /* Pro: Obergruppen als IMMER OFFENE Super-Trenner (Landkarte),
-               darunter die Gebiets-Sektionen. Verfügbar-Tab: alles offen;
-               Katalog-Tab: Gebiete kollabierbar, offen wenn Verfügbares da.
-               key trägt die ansicht → Tab-Wechsel remountet mit frischem
-               Default (kein Stale-State des details-Elements). */
-            gruppenSichtbar.map((x) => (
-              <section key={x.gr.id} aria-labelledby={`gruppe-${x.gr.id}`} className="space-y-6">
-                <div className="flex items-center gap-4 pt-2">
-                  <h2 id={`gruppe-${x.gr.id}`} className="font-sans font-semibold text-ink-900 text-h3 tracking-tight whitespace-nowrap">
-                    {sansAmp(x.gr.label)}
-                  </h2>
-                  <span aria-hidden className="scale-rule flex-1" />
-                </div>
-                {x.sektionen.map((sx) => (
-                  <GebietSektion key={`${sx.g.id}:${ansicht}`} gebiet={sx.g} karten={sx.karten}
-                    startOffen={ansicht === 'verfuegbar' || sx.karten.some(istVerfuegbar)}
-                    proZaehler
-                    erzwungenOffen={filterAktiv || sprungOffen === sx.g.id}
-                    favoriten={favoriten} onFavorit={onFavorit} onOeffnen={onOeffnen} />
-                ))}
-              </section>
-            ))
-          ) : (
-            /* Free: Rechtsgebiet → Untergruppen, feste §4-Reihenfolge;
-               zu Beginn zugeklappt – Suche/Filter und Sprungmarken klappen auf */
-            gebietSichtbar.map((x) => (
-              <GebietSektion key={x.g.id} gebiet={x.g} karten={x.karten}
-                erzwungenOffen={filterAktiv || sprungOffen === x.g.id} />
-            ))
-          )
+          /* Pro: Obergruppen als IMMER OFFENE Super-Trenner (Landkarte),
+             darunter die Gebiets-Sektionen. Verfügbar-Tab: alles offen;
+             Katalog-Tab: Gebiete kollabierbar, offen wenn Verfügbares da.
+             key trägt die ansicht → Tab-Wechsel remountet mit frischem
+             Default (kein Stale-State des details-Elements). */
+          gruppenSichtbar.map((x) => (
+            <section key={x.gr.id} aria-labelledby={`gruppe-${x.gr.id}`} className="space-y-6">
+              <div className="flex items-center gap-4 pt-2">
+                <h2 id={`gruppe-${x.gr.id}`} className="font-sans font-semibold text-ink-900 text-h3 tracking-tight whitespace-nowrap">
+                  {sansAmp(x.gr.label)}
+                </h2>
+                <span aria-hidden className="scale-rule flex-1" />
+              </div>
+              {x.sektionen.map((sx) => (
+                <GebietSektion key={`${sx.g.id}:${ansicht}`} gebiet={sx.g} karten={sx.karten}
+                  startOffen={ansicht === 'verfuegbar' || sx.karten.some(istVerfuegbar)}
+                  proZaehler
+                  erzwungenOffen={filterAktiv || sprungOffen === sx.g.id}
+                  favoriten={favoriten} onFavorit={onFavorit} onOeffnen={onOeffnen} />
+              ))}
+            </section>
+          ))
         )}
         </div>
       </div>

@@ -10,6 +10,7 @@ import { behoerdeFuer, behoerdeAlsBlock } from '../lib/vorlagen/behoerden';
 import { KANTONE } from '../lib/kantone';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -222,18 +223,12 @@ export function VorlageSchlichtungsgesuchBs() {
 
           <div className="space-y-2">
             <p className="lc-overline">Art des Streitgegenstands</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {TYPEN.map((t) => (
-                <button key={t.code} type="button" onClick={() => set('streitgegenstandTyp', t.code)}
-                  aria-pressed={a.streitgegenstandTyp === t.code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.streitgegenstandTyp === t.code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{t.label}</span>
-                  <span className="block text-xs text-ink-500">{t.sub}</span>
-                </button>
-              ))}
-            </div>
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              items={TYPEN.map((t) => ({ code: t.code, label: t.label, sub: t.sub }))}
+              value={a.streitgegenstandTyp}
+              onSelect={(code) => set('streitgegenstandTyp', code)}
+            />
           </div>
 
           {stopp ? stoppKarte() : (

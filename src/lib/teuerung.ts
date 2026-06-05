@@ -1,5 +1,6 @@
 import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/legal';
 import { LIK_REIHEN, LIK_LETZTER_MONAT, LIK_STAND, LIK_QUELLE } from '../data/likReihe';
+import { chf as fmtCHF } from './vorlagen/datum';
 
 // ─── LIK-Teuerungsrechner (Art. 269b OR / Art. 17 VMWG · Art. 286/128 ZGB) ──
 //
@@ -94,8 +95,6 @@ export function berechneTeuerung(input: TeuerungInput): TeuerungErgebnis {
   const rundung = input.rundung ?? (input.modus === 'generisch' ? '0.01' : '0.05');
   const roh = input.betrag * faktor;
   const betragNeu = runden(roh, rundung);
-
-  const fmtCHF = (n: number) => n.toLocaleString('de-CH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   const N_269B: Normverweis = { artikel: 'Art. 269b OR', bemerkung: 'Indexmiete: nur LIK, Vertrag ≥ 5 Jahre' };
   const N_17: Normverweis = { artikel: 'Art. 17 VMWG', bemerkung: 'Erhöhung max. im Umfang der LIK-Zunahme; Senkungspflicht (Abs. 2)' };

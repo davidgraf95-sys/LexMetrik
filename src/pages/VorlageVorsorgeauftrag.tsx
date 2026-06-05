@@ -6,6 +6,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, inputCls } from '../components/vorlagen/ui';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -112,20 +113,15 @@ export function VorlageVorsorgeauftrag() {
 
           <div className="space-y-2">
             <p className="lc-overline">Form (Art. 361 ZGB)</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {([
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              items={([
                 ['eigenhaendig', 'Eigenhändig', 'Vollständig von Hand schreiben, datieren, unterschreiben – Ausgabe als Abschreib-Mustertext'],
                 ['oeffentlich_beurkundet', 'Öffentlich beurkundet', 'Entwurf für die Urkundsperson (Notariat) – Verfahren nach kantonalem Recht'],
-              ] as [VaFormMode, string, string][]).map(([code, label, sub]) => (
-                <button key={code} type="button" onClick={() => set('formMode', code)} aria-pressed={a.formMode === code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.formMode === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                  <span className="block text-xs text-ink-500">{sub}</span>
-                </button>
-              ))}
-            </div>
+              ] as [VaFormMode, string, string][]).map(([code, label, sub]) => ({ code, label, sub }))}
+              value={a.formMode}
+              onSelect={(code) => set('formMode', code)}
+            />
             {!eigenhaendig && (
               <div className="space-y-1 pt-1">
                 <Field label="Kanton (für Beurkundungs-Hinweise)" optional>

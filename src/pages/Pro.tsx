@@ -47,7 +47,6 @@ export function Pro() {
       <Katalog
         karten={alle}
         filterArt
-        proAnsicht
       />
 
       {/* Rechtlicher Hinweis */}

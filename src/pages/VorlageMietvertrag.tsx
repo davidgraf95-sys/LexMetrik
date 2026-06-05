@@ -9,6 +9,7 @@ import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { KANTONE } from '../lib/kantone';
@@ -90,27 +91,22 @@ export function VorlageMietvertrag() {
     switch (SCHRITTE[schritt].id) {
       case 'objekt': return (
         <div className="space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {([
+          <SelectionGrid
+            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            items={([
               ['wohnung', 'Wohnraum', 'Wohnung, Einfamilienhaus – voller Mieterschutz'],
               ['geschaeftsraum', 'Geschäftsraum', 'Büro, Laden, Gewerbe – freiere Gestaltung'],
-            ] as const).map(([code, label, sub]) => (
-              <button key={code} type="button" onClick={() => {
-                set('objektTyp', code);
-                // abhängige Felder neutralisieren (kein Stale-State)
-                if (code === 'wohnung') { set('mwstOption', undefined); set('konkurrenzschutz', undefined); set('konkurrenzschutzText', undefined); set('konkurrenzschutzStrafeCHF', undefined); set('mietzweck', undefined); }
-                if (code === 'geschaeftsraum') set('familienwohnung', undefined);
-                set('nkPositionen', []);
-                set('kuendigungsfristMonate', undefined);
-              }} aria-pressed={a.objektTyp === code}
-                className={`text-left p-3 rounded-lg border transition-colors ${
-                  a.objektTyp === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                }`}>
-                <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                <span className="block text-xs text-ink-500">{sub}</span>
-              </button>
-            ))}
-          </div>
+            ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+            value={a.objektTyp}
+            onSelect={(code) => {
+              set('objektTyp', code);
+              // abhängige Felder neutralisieren (kein Stale-State)
+              if (code === 'wohnung') { set('mwstOption', undefined); set('konkurrenzschutz', undefined); set('konkurrenzschutzText', undefined); set('konkurrenzschutzStrafeCHF', undefined); set('mietzweck', undefined); }
+              if (code === 'geschaeftsraum') set('familienwohnung', undefined);
+              set('nkPositionen', []);
+              set('kuendigungsfristMonate', undefined);
+            }}
+          />
           <Field label="Mietobjekt (Beschrieb)">
             <input className={inputCls} value={a.objektBeschrieb} onChange={(e) => set('objektBeschrieb', e.target.value)}
               placeholder={wohnung ? 'z. B. 3.5-Zimmer-Wohnung im 2. OG links' : 'z. B. Büroräumlichkeiten im 1. OG, ca. 120 m²'} />
@@ -196,26 +192,21 @@ export function VorlageMietvertrag() {
           </Field>
           <div className="space-y-2">
             <p className="lc-overline">Mietzins-Modell</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {([
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              items={([
                 ['standard', 'Standard', `Referenzzins-Basis ${MV_PARAMETER.referenzzinssatz.wert.toFixed(2)} %`],
                 ['index', 'Indexmiete', 'LIK-gebunden – Vertrag ≥ 5 Jahre'],
                 ['staffel', 'Staffelmiete', 'feste Erhöhungen – Vertrag ≥ 3 Jahre'],
-              ] as const).map(([code, label, sub]) => (
-                <button key={code} type="button" onClick={() => {
-                  set('mietzinsModell', code);
-                  if (code !== 'staffel') set('staffeln', undefined);
-                  if (code !== 'index') { set('indexBasisMonat', undefined); set('indexBasisPunkte', undefined); }
-                  if (code === 'staffel' && !(a.staffeln?.length)) set('staffeln', [{ ab: '', erhoehungCHF: '' }]);
-                }} aria-pressed={a.mietzinsModell === code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.mietzinsModell === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                  <span className="block text-xs text-ink-500">{sub}</span>
-                </button>
-              ))}
-            </div>
+              ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+              value={a.mietzinsModell}
+              onSelect={(code) => {
+                set('mietzinsModell', code);
+                if (code !== 'staffel') set('staffeln', undefined);
+                if (code !== 'index') { set('indexBasisMonat', undefined); set('indexBasisPunkte', undefined); }
+                if (code === 'staffel' && !(a.staffeln?.length)) set('staffeln', [{ ab: '', erhoehungCHF: '' }]);
+              }}
+            />
             {a.mietzinsModell === 'index' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <Field label="LIK-Basisstand (Monat/Jahr)" hint="z. B. «Mai 2026» – definiert die Anpassungsbasis (Art. 17 VMWG)">
@@ -250,21 +241,16 @@ export function VorlageMietvertrag() {
           </div>
           <div className="space-y-2">
             <p className="lc-overline">Nebenkosten (Art. 257a OR)</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {([
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              items={([
                 ['akonto', 'Akonto', 'mit jährlicher Abrechnung'],
                 ['pauschale', 'Pauschale', 'Durchschnitt dreier Jahre'],
                 ['keine', 'Im Mietzins inbegriffen', 'keine separaten Nebenkosten'],
-              ] as const).map(([code, label, sub]) => (
-                <button key={code} type="button" onClick={() => set('nebenkosten', code)} aria-pressed={a.nebenkosten === code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.nebenkosten === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                  <span className="block text-xs text-ink-500">{sub}</span>
-                </button>
-              ))}
-            </div>
+              ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+              value={a.nebenkosten}
+              onSelect={(code) => set('nebenkosten', code)}
+            />
             {a.nebenkosten !== 'keine' && (
               <>
                 <Field label={a.nebenkosten === 'akonto' ? 'Akonto (CHF pro Monat)' : 'Pauschale (CHF pro Monat)'}>
@@ -293,21 +279,16 @@ export function VorlageMietvertrag() {
           </Field>
           <div className="space-y-2">
             <p className="lc-overline">Tierhaltung</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {([
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+              items={([
                 ['kleintiere', 'Kleintiere frei', 'übrige mit Zustimmung'],
                 ['zustimmung', 'Nur mit Zustimmung', 'jede Tierhaltung'],
                 ['erlaubt', 'Erlaubt', 'ohne Einschränkung'],
-              ] as const).map(([code, label, sub]) => (
-                <button key={code} type="button" onClick={() => set('tierhaltung', code)} aria-pressed={a.tierhaltung === code}
-                  className={`text-left p-3 rounded-lg border transition-colors ${
-                    a.tierhaltung === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
-                  }`}>
-                  <span className="block text-body-s font-semibold text-ink-900">{label}</span>
-                  <span className="block text-xs text-ink-500">{sub}</span>
-                </button>
-              ))}
-            </div>
+              ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+              value={a.tierhaltung}
+              onSelect={(code) => set('tierhaltung', code)}
+            />
           </div>
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.versicherungspflicht} onChange={(e) => set('versicherungspflicht', e.target.checked)} />

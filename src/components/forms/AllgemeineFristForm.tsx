@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Field, inputCls } from '../vorlagen/ui';
+import { Tabs } from '../ui/Tabs';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   allgemeineFristErgebnis, tageZwischen, ALLG_FRIST_HINWEIS,
@@ -145,16 +146,15 @@ export function AllgemeineFristForm() {
       <PflichtDisclaimer text={DISCLAIMER} />
 
       {/* Tabs: Hauptmodus + informatives Hilfsmittel */}
-      <div className="flex h-9 items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit" role="tablist">
-        {([['frist', 'Fristende berechnen'], ['rueckwaerts', 'Rückwärts (spätester Tag)'], ['zwischen', 'Tage zwischen zwei Daten']] as const).map(([code, label]) => (
-          <button key={code} type="button" role="tab" aria-selected={tab === code} onClick={() => setTab(code)}
-            className={`px-3 rounded-md text-body-s font-medium transition-all ${
-              tab === code ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-            }`}>
-            {label}
-          </button>
-        ))}
-      </div>
+      <Tabs
+        items={[
+          { code: 'frist', label: 'Fristende berechnen' },
+          { code: 'rueckwaerts', label: 'Rückwärts (spätester Tag)' },
+          { code: 'zwischen', label: 'Tage zwischen zwei Daten' },
+        ] as const}
+        value={tab}
+        onChange={setTab}
+      />
 
       {fehler.length > 0 && (
         <div role="alert" className="lc-notice-danger text-body-s space-y-0.5">
