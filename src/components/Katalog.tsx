@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, istVerfuegbar, karte, type CalculatorCard } from '../lib/startseiteConfig';
 import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
-import { ladeFavoriten, toggleFavorit, ladeZuletzt, merkeZuletzt } from '../lib/schnellzugriff';
+import { ladeZuletzt, merkeZuletzt } from '../lib/schnellzugriff';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 import { Tabs } from './ui/Tabs';
@@ -42,7 +42,7 @@ function sortiereKarten(karten: CalculatorCard[]): CalculatorCard[] {
 // keine Relevanz-Sortierung); gleiche Disclosure-Anatomie wie die übrigen
 // Sektionen. Nur nicht-leere Untergruppen werden angezeigt.
 
-function GebietSektion({ gebiet, karten, erzwungenOffen, startOffen = false, proZaehler = false, favoriten, onFavorit, onOeffnen }: {
+function GebietSektion({ gebiet, karten, erzwungenOffen, startOffen = false, proZaehler = false, onOeffnen }: {
   gebiet: { name: string; id: string; lede: string };
   karten: CalculatorCard[];
   /** Suche/Filter aktiv oder Sprungmarke geklickt → Sektion aufklappen. */
@@ -51,8 +51,6 @@ function GebietSektion({ gebiet, karten, erzwungenOffen, startOffen = false, pro
   startOffen?: boolean;
   /** Pro: Zähler «X verfügbar · Y in Vorbereitung» statt «N Einträge». */
   proZaehler?: boolean;
-  favoriten?: Set<string>;
-  onFavorit?: (id: string) => void;
   onOeffnen?: (id: string) => void;
 }) {
   // Free: initial zugeklappt (Entscheid 5.6.2026); Pro steuert über
@@ -109,8 +107,6 @@ function GebietSektion({ gebiet, karten, erzwungenOffen, startOffen = false, pro
                 {/* innerhalb der Gruppe: verfügbare vor geplanten (sortiereKarten) */}
                 {sortiereKarten(g.karten).map((c) => (
                   <RechnerKarte key={c.id} card={c} headingLevel="h3"
-                    favorit={favoriten?.has(c.id)}
-                    onFavorit={onFavorit && istVerfuegbar(c) ? () => onFavorit(c.id) : undefined}
                     onOeffnen={onOeffnen ? () => onOeffnen(c.id) : undefined} />
                 ))}
               </div>
@@ -212,63 +208,42 @@ function UebersichtGruppiert(props: {
   );
 }
 
-// ─── Schnellzugriff (Pro): Favoriten + Zuletzt verwendet ────────────────────
+// ─── Schnellzugriff (Pro): Zuletzt verwendet ────────────────────────────────
 // Zeigt NUR Verfügbares (defensiv gegen entfernte IDs via karte()-Lookup).
+// Favoriten entfernt (Anweisung David 5.6.2026) — nur noch «Zuletzt».
 
 function Schnellzugriff(props: {
-  favoriten: Set<string>;
   zuletzt: string[];
   onOeffnen: (id: string) => void;
 }) {
-  const { favoriten, zuletzt, onOeffnen } = props;
-  const aufloesen = (ids: string[]) =>
-    ids.map((id) => karte(id)).filter((k): k is NonNullable<ReturnType<typeof karte>> =>
-      !!k && istVerfuegbar(k) && !!k.href);
-  const favKarten = aufloesen([...favoriten]);
-  const zuletztKarten = aufloesen(zuletzt.filter((id) => !favoriten.has(id))).slice(0, 6);
+  const { zuletzt, onOeffnen } = props;
+  const zuletztKarten = zuletzt
+    .map((id) => karte(id))
+    .filter((k): k is NonNullable<ReturnType<typeof karte>> => !!k && istVerfuegbar(k) && !!k.href)
+    .slice(0, 6);
 
-  // Bewusst leise (Befund 5.6.2026): keine Farbflächen — schlanke, neutrale
-  // Chips; Favoriten unterscheidet allein der kleine Messing-Stern.
-  const chip = (k: NonNullable<ReturnType<typeof karte>>, fav: boolean) => (
+  // Bewusst leise (Befund 5.6.2026): keine Farbflächen — schlanke, neutrale Chips.
+  const chip = (k: NonNullable<ReturnType<typeof karte>>) => (
     <Link key={k.id} to={k.href!} onClick={() => onOeffnen(k.id)}
       className="inline-flex items-center gap-1 h-7 px-2.5 rounded-md border border-line text-body-s text-ink-600 no-underline hover:text-brass-700 hover:border-brass-400 transition-colors">
-      {fav && <span aria-hidden className="text-brass-700 text-[0.7rem] leading-none">★</span>}
       {sansAmp(k.title)}
     </Link>
   );
 
-  // Beide leer (z. B. Erstbesuch): EINE dezente Zeile statt leerem Gerüst.
-  if (favKarten.length === 0 && zuletztKarten.length === 0) {
+  // Leer (z. B. Erstbesuch): EINE dezente Zeile statt leerem Gerüst.
+  if (zuletztKarten.length === 0) {
     return (
       <p aria-label="Schnellzugriff" className="text-xs text-ink-500">
-        Schnellzugriff: Mit dem <span aria-hidden className="text-brass-700">★</span> auf einer
-        Karte legen Sie Tools hier ab; zuletzt geöffnete erscheinen automatisch.
+        Schnellzugriff: Zuletzt geöffnete Tools erscheinen hier automatisch.
       </p>
     );
   }
 
-  // Eine Zeile pro Gruppe: feste Label-Spalte (Raster) → Labels und Chips
-  // beider Gruppen stehen exakt bündig; Stern optisch auf die Kapitälchen-
-  // Höhe zentriert (eigene Box statt im Schriftlauf).
-  const zeile = (label: string, stern: boolean, kinder: ReactNode) => (
-    <div className="grid grid-cols-1 sm:grid-cols-[9.5rem_minmax(0,1fr)] gap-x-3 gap-y-1 sm:items-center">
-      <span className="inline-flex items-center gap-1.5 lc-overline text-ink-500">
-        <span aria-hidden className={`w-3.5 text-center text-[0.8rem] leading-none ${stern ? 'text-brass-700' : 'text-transparent'}`}>★</span>
-        {label}
-      </span>
-      <div className="flex flex-wrap gap-1.5">{kinder}</div>
-    </div>
-  );
-
   return (
-    <section aria-label="Schnellzugriff" className="space-y-1.5">
-      {favKarten.length > 0 && zeile('Favoriten', true, favKarten.map((k) => chip(k, true)))}
-      {zuletztKarten.length > 0 && zeile('Zuletzt verwendet', false, zuletztKarten.map((k) => chip(k, false)))}
-      {favKarten.length === 0 && (
-        <p className="text-xs text-ink-500 sm:pl-[10.25rem]">
-          <span aria-hidden className="text-brass-700">★</span> auf einer Karte legt Favoriten fix hier ab.
-        </p>
-      )}
+    <section aria-label="Schnellzugriff"
+      className="grid grid-cols-1 sm:grid-cols-[9.5rem_minmax(0,1fr)] gap-x-3 gap-y-1 sm:items-center">
+      <span className="lc-overline text-ink-500">Zuletzt verwendet</span>
+      <div className="flex flex-wrap gap-1.5">{zuletztKarten.map(chip)}</div>
     </section>
   );
 }
@@ -296,10 +271,8 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
     setSearchParams(p);
   };
 
-  // ── Pro: Schnellzugriff (Favoriten + Zuletzt; localStorage, SSR-sicher) ──
-  const [favoriten, setFavoriten] = useState<Set<string>>(() => new Set(ladeFavoriten()));
+  // ── Pro: Schnellzugriff (Zuletzt verwendet; localStorage, SSR-sicher) ──
   const [zuletzt, setZuletzt] = useState<string[]>(() => ladeZuletzt());
-  const onFavorit = (id: string) => setFavoriten(new Set(toggleFavorit(id)));
   const onOeffnen = (id: string) => { merkeZuletzt(id); setZuletzt(ladeZuletzt()); };
   const [gebiete, setGebiete] = useState<Set<string>>(new Set());
   const [bereiche, setBereiche] = useState<Set<string>>(new Set());
@@ -483,8 +456,8 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
             onChange={setAnsicht}
           />
         </div>
-        {/* Schnellzugriff: Favoriten + Zuletzt – in beiden Tabs, zeigt nur Verfügbares */}
-        <Schnellzugriff favoriten={favoriten} zuletzt={zuletzt} onOeffnen={onOeffnen} />
+        {/* Schnellzugriff: Zuletzt verwendet – in beiden Tabs, zeigt nur Verfügbares */}
+        <Schnellzugriff zuletzt={zuletzt} onOeffnen={onOeffnen} />
         {treffer.length === 0 ? (
           /* Leerer Zustand: kein stilles Verschwinden der Sektionen */
           <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
@@ -524,7 +497,7 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
                   startOffen={false}
                   proZaehler
                   erzwungenOffen={filterAktiv || sprungOffen === sx.g.id}
-                  favoriten={favoriten} onFavorit={onFavorit} onOeffnen={onOeffnen} />
+                  onOeffnen={onOeffnen} />
               ))}
             </section>
           ))

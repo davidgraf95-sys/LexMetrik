@@ -1,13 +1,14 @@
-// ─── Schnellzugriff: Favoriten + Zuletzt verwendet (Pro-Katalog, Phase 4) ───
+// ─── Schnellzugriff: Zuletzt verwendet (Pro-Katalog) ────────────────────────
 //
 // Clientseitig in localStorage, Schlüssel nach bestehender Konvention
-// (Punkt + Version, wie lexmetrik.vorlage.*.v1 / lexmetrik.pro.v1 —
-// deklarierte Abweichung vom Auftrags-Beispiel «lexmetrik:favoriten»).
+// (Punkt + Version, wie lexmetrik.vorlage.*.v1 / lexmetrik.pro.v1).
 // Kein Backend, keine Synchronisation (Berufsgeheimnis-Prinzip). Defensive
 // Filterung gegen unbekannte/entfernte IDs erfolgt beim KONSUM (UI filtert
 // gegen die aktuelle Config), nicht beim Speichern.
+// Favoriten entfernt (Anweisung David 5.6.2026); der alte Schlüssel
+// «lexmetrik.favoriten.v1» bleibt in bestehenden Browsern liegen und wird
+// schlicht nicht mehr gelesen.
 
-const FAV_KEY = 'lexmetrik.favoriten.v1';
 const ZULETZT_KEY = 'lexmetrik.zuletzt.v1';
 const ZULETZT_MAX = 6;
 
@@ -27,18 +28,6 @@ function schreibe(key: string, ids: string[]): void {
   } catch {
     /* Speicher nicht verfügbar – Schnellzugriff bleibt sitzungslokal leer */
   }
-}
-
-export function ladeFavoriten(): string[] {
-  return lese(FAV_KEY);
-}
-
-/** Stern an/aus; gibt die neue Liste zurück (für setState). */
-export function toggleFavorit(id: string): string[] {
-  const alt = lese(FAV_KEY);
-  const neu = alt.includes(id) ? alt.filter((x) => x !== id) : [...alt, id];
-  schreibe(FAV_KEY, neu);
-  return neu;
 }
 
 export function ladeZuletzt(): string[] {

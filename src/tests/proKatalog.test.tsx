@@ -52,34 +52,32 @@ describe('Pro-Katalog: Tabs + Gruppen', () => {
   });
 });
 
-describe('Pro-Katalog: Schnellzugriff', () => {
-  it('Favoriten-/Zuletzt-Roundtrip über localStorage', async () => {
-    const { toggleFavorit, ladeFavoriten, merkeZuletzt, ladeZuletzt } = await import('../lib/schnellzugriff');
-    expect(ladeFavoriten()).toEqual([]);
-    toggleFavorit('verzugszins');
-    toggleFavorit('zpo-fristen');
-    expect(ladeFavoriten()).toEqual(['verzugszins', 'zpo-fristen']);
-    toggleFavorit('verzugszins');
-    expect(ladeFavoriten()).toEqual(['zpo-fristen']);
+describe('Pro-Katalog: Schnellzugriff (nur «Zuletzt» — Favoriten entfernt, Anweisung 5.6.2026)', () => {
+  it('Zuletzt-Roundtrip über localStorage (dedupliziert, max. 6, defensiv)', async () => {
+    const { merkeZuletzt, ladeZuletzt } = await import('../lib/schnellzugriff');
     for (const id of ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'b']) merkeZuletzt(id);
     const z = ladeZuletzt();
     expect(z[0]).toBe('b');           // neueste zuerst, dedupliziert
     expect(z.length).toBeLessThanOrEqual(6);
     // defensiv: kaputter Speicherstand → leere Liste
-    localStorage.setItem('lexmetrik.favoriten.v1', '{kaputt');
-    expect(ladeFavoriten()).toEqual([]);
+    localStorage.setItem('lexmetrik.zuletzt.v1', '{kaputt');
+    expect(ladeZuletzt()).toEqual([]);
   });
 
-  it('Invariante: geplante Karten erhalten NIE einen Stern; verfügbare schon', () => {
+  it('Invariante: Karten tragen KEINEN Favoriten-Stern mehr (weder verfügbar noch geplant)', () => {
     const geplant = ALLE_KARTEN.find((k) => k.status === 'geplant')!;
     const verf = ALLE_KARTEN.find((k) => istVerfuegbar(k) && k.href)!;
     const render = (card: typeof geplant) => renderToString(
       <MemoryRouter><LocaleProvider>
-        <RechnerKarte card={card} favorit={false} onFavorit={istVerfuegbar(card) ? () => {} : undefined} />
+        <RechnerKarte card={card} />
       </LocaleProvider></MemoryRouter>,
     );
-    expect(render(geplant)).not.toContain('aria-pressed');
-    expect(render(verf)).toContain('als Favorit markieren');
+    for (const html of [render(geplant), render(verf)]) {
+      expect(html).not.toContain('Favorit');
+      expect(html).not.toContain('aria-pressed');
+      expect(html).not.toContain('★');
+      expect(html).not.toContain('☆');
+    }
   });
 });
 
