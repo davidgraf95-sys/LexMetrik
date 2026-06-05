@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
+  istVerfuegbar,
   ALLE_KARTEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN,
   SEKTIONEN, VORLAGE_SEKTIONEN, karte,
 } from '../lib/startseiteConfig';
@@ -170,5 +171,14 @@ describe('Katalog-Integrität (Rechtsgebiet-Gliederung)', () => {
   it('die von den Wizard-Seiten referenzierten karte()-ids existieren', () => {
     ['schlichtungsgesuch', 'patientenverfuegung', 'eigenhaendiges-testament', 'vorsorgeauftrag', 'arbeitsvertrag', 'mietvertrag-wohnen']
       .forEach((id) => expect(karte(id), id).toBeDefined());
+  });
+});
+
+describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
+  it('verfügbar = status !== geplant; Regressionszählung 17 (Stand 5.6.2026)', () => {
+    const verf = ALLE_KARTEN.filter(istVerfuegbar);
+    expect(verf.length).toBe(17);
+    expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
+    expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });
 });

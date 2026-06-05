@@ -1402,4 +1402,12 @@ export function karte(id: string): CalculatorCard {
 }
 
 /** Flacher Katalog (beide Modi); Anzeige je Sektion: geprüfte zuerst, danach «In Vorbereitung». */
+// «Verfügbar» als abgeleitetes Konzept (Pro-Katalog-Auftrag 5.6.2026,
+// Phase 1): entwurf ODER geprüft = gebaut/nutzbar. EINZIGES Wahrheits-
+// kriterium für Tabs, Zähler, Sektionsfilter und Schnellzugriff — wird ein
+// Eintrag später auf «geprüft» gehoben, bleibt er automatisch verfügbar.
+export function istVerfuegbar(item: { status: Status }): boolean {
+  return item.status !== 'geplant';
+}
+
 export const ALLE_KARTEN: CatalogItem[] = [...Object.values(KARTEN), ...Object.values(VORLAGEN)];

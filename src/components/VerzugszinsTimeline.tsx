@@ -21,12 +21,13 @@ type Abschnitt = { tage: number; label: string; farbe: string; title: string };
 type Marker = { pos: number; texte: string[] };
 
 export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
-  const { abschnitte, marker, gesamtTage } = useMemo(() => {
+  const { abschnitte, marker, gesamtTage, legende } = useMemo(() => {
     const segmente = e.segmente;
     // Eindeutige, konsistente Farbe pro Satz (Reihenfolge des Auftretens)
     const saetze = Array.from(new Set(segmente.map((s) => s.satz)));
     const farbe = (satz: number) => SATZ_FARBEN[saetze.indexOf(satz) % SATZ_FARBEN.length];
 
+    const legende = saetze.map((satz) => ({ label: `${satz} %`, farbe: farbe(satz) }));
     const abschnitte: Abschnitt[] = segmente.map((s) => ({
       tage: s.tage,
       label: `${s.satz}%`,
@@ -67,7 +68,7 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
       if (texte.length) marker.push({ pos: (kum / gesamtTage) * 100, texte });
     });
 
-    return { abschnitte, marker, gesamtTage };
+    return { abschnitte, marker, gesamtTage, legende };
   }, [e]);
 
   if (e.segmente.length === 0) return null;
@@ -81,12 +82,15 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
 
       {/* (A) Rate-Zeitstrahl */}
       <div>
-        <div className={`relative ${marker.length > 0 ? 'mt-3' : ''}`}>
+        <div role="img" aria-label={`Zinsverlauf ${e.ersterZinstag} bis ${e.stichtag}, ${gesamtTage} Tage in ${abschnitte.length} Abschnitten`} className={`relative ${marker.length > 0 ? 'mt-3' : ''}`}>
           <div className="flex h-11 rounded-md overflow-hidden border border-line">
             {abschnitte.map((a, i) => (
               <div key={i} title={a.title}
                 className="flex items-center justify-center num text-body-s text-ink-700 min-w-0"
-                style={{ flexGrow: a.tage, flexBasis: 0, background: a.farbe }}>
+                /* Mindestbreite 1.2 % (Konsistenz-Check 5.6.2026, analog
+                   KuendigungTimeline): auch ein 1-Tage-Segment in einer
+                   Mehrjahres-Spanne bleibt sichtbar */
+                style={{ flexGrow: a.tage, flexBasis: 0, background: a.farbe, minWidth: '1.2%' }}>
                 <span className="truncate px-1">{a.label}</span>
               </div>
             ))}
@@ -107,6 +111,19 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
           <span>{gesamtTage} Tage</span>
           <span>{e.stichtag}</span>
         </div>
+        {/* Legende (Konsistenz-Check 5.6.2026): Farbe ↔ Zinssatz, deckungs-
+            gleich mit den gerenderten Segmenten — wichtig bei Mini-Segmenten,
+            deren Inline-Label nicht mehr lesbar ist */}
+        {legende.length > 1 && (
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1.5 text-body-s text-ink-600">
+            {legende.map((l) => (
+              <span key={l.label} className="inline-flex items-center gap-1.5">
+                <span aria-hidden className="w-3 h-3 rounded-sm border border-line inline-block" style={{ background: l.farbe }} />
+                {l.label}
+              </span>
+            ))}
+          </div>
+        )}
         {marker.length > 0 && (
           <div className="flex flex-col gap-1 mt-2 text-body-s text-ink-600">
             {marker.map((m, i) => (

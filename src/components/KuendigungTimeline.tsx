@@ -32,7 +32,7 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
   return (
     <div className="lc-card p-5 lc-reveal space-y-3">
       <p className="lc-overline">Zeitstrahl</p>
-      <div className="relative h-24">
+      <div className="relative h-24" role="img" aria-label="Zeitstrahl der Kündigungsfrist mit Sperr-/Hemmungsphasen (Details in der Tabelle und im Rechenweg)">
         {/* Basislinie */}
         <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px" style={{ background: 'var(--line-strong)' }} />
 
