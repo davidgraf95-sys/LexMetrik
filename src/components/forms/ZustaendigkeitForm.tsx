@@ -25,6 +25,7 @@ import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtu
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
 import { SchkgZustaendigkeitTeil } from './SchkgZustaendigkeitTeil';
+import { StrafZustaendigkeitTeil } from './StrafZustaendigkeitTeil';
 import { handelsgerichtFuer } from '../../data/handelsgerichte';
 
 // ─── Zuständigkeitsrechner – UI (Umbau 5.6.2026, Entscheid David) ───────────
@@ -44,7 +45,7 @@ const DISCLAIMER =
 const RECHTSWEGE: { code: Rechtsweg; label: string; sub: string; aktiv: boolean }[] = [
   { code: 'zivil', label: 'Zivil', sub: 'Forderungen, Miete, Arbeit, Familie (ZPO)', aktiv: true },
   { code: 'schkg', label: 'Betreibung (SchKG)', sub: 'Betreibungsort, Rechtsöffnung, Aberkennung u. a.', aktiv: true },
-  { code: 'straf', label: 'Straf', sub: 'Gerichtsstand im Strafverfahren (StPO)', aktiv: false },
+  { code: 'straf', label: 'Straf', sub: 'Anzeige, Gerichtsstand, Strafantrag (StPO)', aktiv: true },
   { code: 'verwaltung', label: 'Verwaltung', sub: 'Beschwerdeinstanzen (VwVG/kantonal)', aktiv: false },
 ];
 
@@ -332,7 +333,7 @@ export function ZustaendigkeitForm() {
         </div>
       </div>
 
-      {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : <>
+      {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : rechtsweg === 'straf' ? <StrafZustaendigkeitTeil /> : <>
 
       {/* 2 · Streitsache */}
       <div className="space-y-2">
