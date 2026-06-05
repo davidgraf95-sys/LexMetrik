@@ -323,3 +323,17 @@ gebunden (Sitz am Wohnsitz, Amtsperiode 1.4.2026–31.3.2030) und damit
 fluktuierend — der Verzeichnis-Fallback in der UI ist die ehrliche Lösung.
 Die Gemeinde→Kreis-Zuordnung oben ist amtlich gesichert (GOG BL § 18;
 Staatskalender SZ) und dient der manuellen Bestimmung.
+
+## SZ-Adress-Nachtrag (6.6.2026, amtliche Gemeinde-/Bezirksseiten)
+- Höfe: **Rebhaldenstrasse 15, 8807 Freienbach** (hoefe.ch) ·
+  Einsiedeln: Eisenbahnstrasse 20a, PF 405, 8840 (einsiedeln.ch) ·
+  Küssnacht: **Seeplatz 2/3, PF 176, 6403** (kuessnacht.ch) ·
+  Gemeinde Schwyz: **Herrengasse 17, 6431** (gemeindeschwyz.ch —
+  Amtsadresse; «Laubstrasse 13» war Privatadresse) ·
+  Arth/Lachen: amtlich nur Postfach (6410 Goldau / PF 626, 8853 Lachen).
+- ⚠ DIVERGENZ Ingenbohl: ingenbohl.ch verweist auf das Vermittleramt
+  EINSIEDELN (Eisenbahnstrasse 20a); der Staatskalender führt Ingenbohl im
+  Vermittlerkreis GERSAU (Rüegg, Brunnen). Vor Übernahme klären — bis dahin
+  bleibt SZ Verzeichnis-Fallback (personengebundene Ämter).
+- Übrige Klein-/Sammelgemeinden: weiterhin offen (vermittler-sz.ch JS-only).
+

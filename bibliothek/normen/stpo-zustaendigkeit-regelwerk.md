@@ -617,3 +617,148 @@ Die **abstrakte Strafdrohung** (Art. 34) ist aus dem jeweiligen StGB-Tatbestand 
 ---
 
 **Belegbarkeits-Caveat:** Die mit Geschäftsnummer-Reihen («BG-Reihe») bezeichneten BStGer-Entscheide sind als Spruchpraxis der Beschwerdekammer gekennzeichnet, nicht als amtlich publizierte BGE. Die explizit genannten BGE (76 IV 262/264, 71 IV 56, 109 IV 56, 121 IV 224, 138 IV 214) stammen teils aus der Zeit vor der StPO (aBStP), gelten aber für die Begriffe Begehungs-/Erfolgsort, abstrakte Strafdrohung und Teilnehmer-Akzessorietät als fortwirkend; vor Übernahme in das Repo-Regelwerk sollten sie gegen die aktuelle Fedlex-/BGer-Datenbank punktuell rückverifiziert werden (kein Online-Abruf im Rahmen dieses Auftrags). Der **Wortlaut der Art. 31–42** ist hingegen verbatim aus der geltenden Konsolidierung (Stand 1.1.2024) verifiziert.
+
+---
+
+# NACHTRAG 6.6.2026 — Vertiefung nach Oberholzer, Grundzüge des Strafprozessrechts, 5. Aufl. 2026, N 239–330
+
+**Quelle:** Swisslex-Auszug (Auftrag David, Desktop-PDF). Regeln PARAPHRASIERT
+(kein Verbatim-Lehrbuchtext); normgestützte Aussagen am Cache verifiziert
+(29/30/33/34/35/36/39/40/42 ✓, 6.6.2026); BGE/TPF-Zitate = **[Sekundär]**,
+vor verified:true an der amtlichen Sammlung gegenzuprüfen. In die Engine
+übernommen am 6.6.2026 (Commit «Art.-5-Schwelle + Oberholzer-Vertiefung»).
+
+## A · Verfahrenseinheit (Art. 29/30) — N 242–253
+- Grundsatz gemeinsame Verfolgung (29 I: Tatmehrheit lit. a, Mittäter/Teilnahme
+  lit. b); Zweck: keine widersprechenden Urteile, Gesamtstrafe (49 StGB).
+- Trennung/Vereinigung nur aus OBJEKTIVEN sachlichen Gründen (30), strenger
+  Massstab (BGer 6B_23/2021): grosse Mittäterzahl, dauernde Unerreichbarkeit,
+  drohende Verjährung (BGE 138 IV 214; BGer 1B_156/2017; 1B_428/2018);
+  unabhängige Tätergruppen (BGE 129 IV 202). KEINE Gründe: Organisation/
+  Spezialisierung (BGE 138 IV 214), Ausstand (6B_1030/2015), Amtsgeheimnis-
+  Risiko (TPF 2017 58), abgekürztes Verfahren allein (1B_92/2020; Verstoss
+  → Nichtigkeit: 1B_11/2016).
+- Trennung beschneidet Teilnahmerechte massiv (BGE 140 IV 172); Zwischen-
+  verfügung beschwerdefähig (393 ff.; BGG-Eintritt: BGE 147 IV 188).
+- GSV nach Art. 38 I bindet das Sachgericht und geht der Vereinigung vor
+  (6B_787/2020; 42 III).
+
+## B · Bund/Kanton (Art. 22–28) — N 254–261
+- 23 zwingend; 24 I Katalog (260ter/260quinquies/305bis/305ter/322ter–septies
+  + Verbrechen aus krimineller Organisation) NUR bei wesentlich-Ausland ODER
+  mehrkantonal ohne Schwerpunkt (qualitative Würdigung; SSK-Empfehlung);
+  hohe Unbestimmtheit (BGE 132 IV 93); Phishing-Praxis TPF 2011 170.
+- 24 II/III fakultative BA-Übernahme (Vermögens-/Urkundenverbrechen; Eröffnung
+  begründet Zuständigkeit). 25 Delegation (ausser Völkerstrafrecht). 26 III
+  perpetuatio. 27 erste Ermittlungen. 28 Konflikte → BStGer; Einrede sachlicher
+  Unzuständigkeit nach Beurteilung VERWIRKT; unverzüglich an Beschwerdekammer
+  (6B_651/2011).
+
+## C · Gerichtsstands-Grundsätze — N 264–268
+- 31 ff. gelten für ALLE Bundesstraftaten inkl. Nebenstrafrecht, auch inner-
+  kantonal (BGE 113 Ia 165); SSK-Gerichtsstandsempfehlungen 14.11.2014.
+- Erst CH-Gerichtsbarkeit (3–8 StGB), dann Gerichtsstand (BGE 119 IV 113);
+  einstweilige Unterstellung nicht bindend/nicht anfechtbar (92 I BGG;
+  1B_615/2021).
+- Massgeblich VERDACHTSLAGE im Entscheidzeitpunkt (BGE 130 IV 68; 113 IV 108;
+  112 IV 63); haltlose Vorwürfe ausser Betracht (97 IV 146); «in dubio pro
+  duriore» (TPF 2021 167).
+
+## D · Tatort/Erfolgsort (Art. 31, 8 StGB) — N 266–274
+- Erfolgsort subsidiär: Handlung im Ausland ODER nicht ermittelbar; nur
+  Erfolgs-/konkrete Gefährdungsdelikte; Erfolgsort muss bekannt+CH sein
+  (TPF 2022 15; BGE 120 IV 146).
+- Distanzdelikte: Abfassungs-/Versandort (BGE 125 IV 177), Telefonort (98 IV
+  60). Internet: Eingabeort; subsidiär Erfolgsort (TPF 2022 162; 2017 170);
+  Kreditkarten-Missbrauch: Verarbeitungszentrum (TPF 2022 140). Vignetten-
+  fälschung im Ausland mit CH-Verwendungsabsicht: CH (BGE 141 IV 336);
+  Grenzposten-Fälle (149 IV 153). Erfolgsort = Beendigungserfolg (Schaden/
+  Bereicherung: 117 Ib 210; 109 IV 1; 124 IV 241); blosse Vertröstungen
+  genügen nicht (133 IV 171). Unterlassung: Ort der Handlungspflicht
+  (125 IV 14; Unterhalt: Wohnort Gläubiger 98 IV 207; 217/220 StGB:
+  141 IV 205).
+- Verfolgungshandlung = JEDE Ermittlungsmassnahme gegen bekannte/unbekannte
+  Täterschaft (polizeiliche Befragung genügt: BGE 114 IV 76; Anzeige-Eingang:
+  114 IV 78; Personenkontrolle NICHT: TPF 2022 146).
+
+## E · Art. 32 — N 275–276
+- Kaskade Wohnsitz/gewöhnlicher Aufenthalt → Heimatort → Ergreifung →
+  Auslieferungskanton; Anwendungsfälle: stellvertretende Verfolgung
+  (85 ff. IRSG), Universalitätsprinzip (6 StGB; BGE 116 IV 244; 118 IV 416);
+  kein Weltrechtsprinzip für 260ter (BGE 137 IV 33); Auslands-Geldwäscherei
+  nach CH-Hehlerei nicht erfasst (6B_880/2018).
+
+## F · Tatmehrheit/Beteiligung (Art. 33/34) — N 277–286
+- 34 I: abstrakte HÖCHSTSTRAFE (qualifizierte/privilegierte zählen, nicht
+  48 f. StGB: BGE 117 IV 87); bei gleicher Höchststrafe Mindeststrafe
+  (92 IV 153); vollendet > Versuch (6B_1015/2016); Jugend-Taten milder
+  (96 IV 23); Antragsdelikt mit Antrag = Offizialdelikt (98 IV 143).
+  Subsidiär: erstes Delikt (BGE 128 IV 216); Zugfahrt/Grenzwacht: Kontrollort/
+  erster Halt (TPF 2015 23).
+- Natürliche Handlungseinheit → 31, nicht 34 (N 281). 34 III: nachträgliche
+  Gesamtstrafe beim Gericht der schwersten Strafe (sui generis, 363 ff.
+  sinngemäss; BGE 147 IV 108).
+- 33: Teilnahme akzessorisch (Haupttäter-Forum; Auslands-Haupttat → keine
+  CH-Hoheit für CH-Teilnahme: BGE 144 IV 265); versuchte Anstiftung =
+  selbständig (148 IV 385); AIG-115 f. als verselbständigte Teilnahme
+  (TPF 2021 177); NACHTATEN (Hehlerei/Begünstigung/Geldwäscherei) =
+  eigenes Forum am Nachtat-Ort (98 IV 147).
+- 33 II unvollständig → Kombination mit 34 I: Ort der schwersten Mittäter-
+  Tat; gleichschwer → praeventionis; subsidiär erstes Delikt
+  (BStGBG.2024.18; TPF 2022 146; BG.2024.7).
+
+## G · Besondere Gerichtsstände (35–37) + JStPO — N 287–293
+- 35: Sitz = Rechtsträger (auch Zweigniederlassung: TPF 2012 150);
+  Antragsdelikt → WAHL des Antragstellers (35 II; BGE 114 IV 181);
+  Verbreitung = In-Verkehr-Setzung (TPF 2021 167). Ehrverletzung =
+  Tätigkeitsdelikt (Auslandszeitschrift nicht CH; adressierte Schreiben
+  schon: BGE 125 IV 177).
+- 36 I: inkl. 171bis; fiktiver Sitz → tatsächlicher (BGE 118 IV 296);
+  Steuerdelikte: betroffener Kanton, 188 I DBG (6B_663/2013).
+- 36 II: Vorfrage 102-Anwendbarkeit (TPF 2012 62); Vereinigung 112 IV.
+- JStPO 10: gewöhnlicher Aufenthalt bei Eröffnung; Übertretungen Begehungs-
+  ort; KEINE Vereinigung mit Erwachsenen.
+
+## H · Verfahren (39–42) — N 294–312
+- 39: Prüfung von Amtes wegen; informeller Austausch (mündliche Info löst
+  Einigungspflicht aus: BG.2021.35); VOSTRA-Eintrag innert 10 Tagen
+  (BG.2024.20). Abschluss erst nach Klärung (TPF 2016 177; Abschluss-
+  verfügung gerichtsstandsrechtlich unbeachtlich).
+- Konkludente ANERKENNUNG durch langes Weiterermitteln/Zuwarten/4 Monate
+  Untätigkeit (BGE 119 IV 102; TPF 2011 178).
+- 34 II nur bei rechtskräftiger Erledigung/Anklage; Sistierung + Einsprache
+  zählen NICHT (1B_499/2020; TPF 2013 128). Nach Anklage wird Beschwerde
+  gegenstandslos (7B_369/2023).
+- 40 I: seit Revision 2022 nicht mehr «endgültig» → Beschwerde + Weiterzug
+  BGer; gilt auch StA↔JugA (BGE 145 IV 228). Innerkantonal via Weisungs-
+  recht selten.
+- 40 II: Gesuch unverzüglich, VOR Anklage (BGE 86 IV 65); Praxis-Frist
+  10 Tage (Analogie 396; TPF 2019 62); hohe Begründungsanforderungen
+  (BG.2024.26); BStGer-Entscheid ABSCHLIESSEND (keine BGer-Beschwerde:
+  1B_396/2011); Kosten nur ausnahmsweise (TPF 2023 132).
+- 41: Partei → Überweisungsantrag, dann 10-Tage-Beschwerde; auch bei
+  Untätigkeit (6B_672/2021).
+- 42 II: Verhaftete erst nach verbindlicher Bestimmung zuführen (SSK
+  Ziff. 13: Sammelverfahren). 42 III: Änderung nur vor Anklage bei
+  erheblichen NEUEN Tatsachen (BGE 133 IV 235).
+- 38: zurückhaltend; Schwergewicht offensichtlich (≥⅔ vergleichbarer
+  Taten: BGE 123 IV 23; nicht wenige Delikte mehr: 129 IV 202; TPF 2012
+  66); Sprache kein Grund (TPF 2023 156); fast abgeschlossene Unter-
+  suchung → kein Wechsel; 38 II innerkantonale Überweisung zur Wahrung
+  der Verfahrensrechte (1B_15/2020). Tätergruppen-Aufteilung BG.2024.40.
+
+## I · Rechtshilfe (43–53) — N 313–330 (Kurzsynthese)
+- 44 umfassende Pflicht (alle Behörden, gewohnheitsrechtlich auch kant.
+  Strafrecht: BGE 85 I 103); vorbehaltlos unter Strafbehörden (129 IV 141).
+- Konflikte: innerkantonal Beschwerdeinstanz endgültig; sonst BStGer (48;
+  inkl. Vollstreckungs-Rechtshilfe: 1E_1/2022; fedpol-DNA: TPF 2015 104).
+- Keine Zwangsmassnahmen GEGEN ersuchte Behörde; kein Siegelungsverfahren
+  im Rechtshilfeweg (149 IV 352; 1B_547/2018); Einwände im ersuchenden
+  Verfahren (1B_268/2019).
+- Zulässigkeit/Angemessenheit → ersuchender Kanton (49 II; BGE 120 Ia 113);
+  Ausführungsrügen → ersuchter (1B_639/2021; Zeugnisverweigerung:
+  121 IV 315). Direkte Durchführung im anderen Kanton zulässig (52 f.;
+  Polizei nur via StA des ersuchten Kantons, 53).
+
+**Engine-Abdeckung:** A–H in lib/strafZustaendigkeit.ts übernommen (Texte/
+Weichen/Fahrplan, «(Praxis)»-Markierung); I nur Bibliothek (kein Engine-Teil).

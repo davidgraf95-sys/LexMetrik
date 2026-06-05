@@ -1,7 +1,7 @@
 # Bibliothek — Informationsgrundlagen für LexMetrik
 
 Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
-das (noch) nicht Code ist. 21 Dossiers in 4 Ordnern (Stand 5.6.2026). Regeln:
+das (noch) nicht Code ist. 22 Dossiers in 4 Ordnern (Stand 6.6.2026). Regeln:
 
 1. **Nur amtliche Quellen als Beleg**, immer mit URL und Abrufdatum (§7);
    kantonale Erlasse stets in der geltenden konsolidierten Fassung via
@@ -58,6 +58,11 @@ bibliothek/
 | Dokument | Inhalt | Befund 2. Durchgang |
 |---|---|---|
 | [strafbehoerden-kantone.md](behoerden/strafbehoerden-kantone.md) | Staatsanwaltschaften/Jugendanwaltschaften/Übertretungsbehörden 26 Kantone + Bund (BA/AB-BA), EG-StPO-Mapping | SZ-Korrektur (Schmiedgasse 21, JugA Bennau); ALLE Lücken geschlossen (AG-Hausnummern 6.6.; VD-Korrektur: Konstituierung in LMPu 173.21 Art. 3/4; VS LACPP Art. 6/7; JU → OJ statt LiCPP) |
+
+### Verwaltung — einfach belegt (Aufbau läuft)
+| Dokument | Inhalt | Offen |
+|---|---|---|
+| [verwaltungsbehoerden-kantone.md](behoerden/verwaltungsbehoerden-kantone.md) | Wichtigste Verwaltungsbehörden je Kanton (VGer/Staatskanzlei/Steuer+Rekurs/StVA/Migration/SozVGer) — Teil A ZH–BL | Teil B SH–JU; Doppelcheck |
 
 ### Erbgang — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Befund 2. Durchgang |

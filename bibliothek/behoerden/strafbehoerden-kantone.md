@@ -627,3 +627,37 @@ Quellen (Abruf 6.6.2026): VS LACPP https://lex.vs.ch/app/fr/texts_of_law/312.0 (
 ---
 
 **Zusammenfassung Status:** SZ GESCHLOSSEN (Restlücke nur Einzeladressen der Gemeinde-Vermittler); BL GESCHLOSSEN inkl. Itingen=Kreis 13; AG GESCHLOSSEN; EG-StPO: VS + VD GESCHLOSSEN (VD korrigiert auf LMPu Art. 3/4), JU TEILWEISE (Konstituierung in OJ statt LiCPP — als nächster Schritt OJ JU prüfen). Keine Repo-Dateien wurden geändert.
+
+---
+
+# NACHTRAG 3 — 6.6.2026 (Adress-Restlücken-Recherche, amtliche Direktabrufe)
+
+## KORREKTUREN
+- **SG UA Altstätten: Bafflesstrasse 18, 9450 Altstätten** — die frühere
+  Angabe «Luchsstrasse 11» war ein Suchmaschinen-Snippet-Fehler (SVG-Büro
+  separat: Rabengasse 4). Quelle: sg.ch Standort-Unterseite.
+- **SG Kantonales UA: Spisergasse 15** bestätigt; St. Leonhard-Strasse 7 =
+  UA St. Gallen (Stadt), nicht das Kantonale UA.
+
+## BESTÄTIGT (amtliche Unterseiten, 6.6.2026)
+- SG UA Uznach Grynaustrasse 3 · UA Gossau Sonnenstrasse 4a.
+- SH Allgemeine Abt. **Beckenstube 7** (Regierungsgebäude; «Beckenstube 5»
+  in Drittverzeichnissen ist falsch). Quelle: SSK-Behördenverzeichnis.
+- TG GSTA **Maurerstrasse 8** (Zürcherstrasse 323 veraltet) · StA Frauenfeld
+  Maurerstrasse 2.
+- VD Arrondissements: Lausanne **Ch. de Couvaloup 6, 1014** · Est vaudois
+  Quai Maria-Belgia 18, 1800 Vevey · La Côte Place Saint-Louis 4, 1110
+  Morges · Nord vaudois Av. des Sports 18, 1400 Yverdon.
+  ⚠ DIVERGENZ: Diese Recherche fand KEIN separates «MP central» mit eigener
+  Hausadresse auf den vd.ch-Unterseiten; der ✓2-Durchgang vom 5.6. hatte
+  «Av. de Longemalle 1, 1020 Renens» (MP central) belegt. Stammdaten
+  belassen auf Renens; vor fachlicher Abnahme an vd.ch/mp klären.
+
+## EG-StPO-Klärung (aus der Lücken-Recherche vom 6.6.)
+- **VS:** LACPP (RS/VS 312.0, 11.2.2009) **Art. 6/7** — Struktur Office
+  central/Offices régionaux amtlich verifiziert. GESCHLOSSEN.
+- **VD:** Konstituierung NICHT in der LVCPP, sondern **LMPu (BLV 173.21)
+  Art. 3/4** (MP central + 4 Arrondissements; Magistrats). GESCHLOSSEN.
+- **JU:** LiCPP (RSJU 321.1) verweist für Organisation auf die **LOJ/OJ**
+  (Art. 1 al. 2) — Artikel der OJ noch offen (einzige Restlücke).
+

@@ -318,3 +318,9 @@ gesperrt, Umzug «cet été». → Parameter-Verfallsregister.
 Durchgang); Einzeleinträge ohne expliziten Vermerk gelten als einfach
 belegt + stichprobenbestätigt. Übernahme in Stammdaten weiterhin erst nach
 Davids Abnahme.
+
+## NACHTRAG 6.6.2026 — TI Pretura di Leventina GESCHLOSSEN
+**Pretura di Leventina: Palazzo del Pretorio, 6760 Faido** (amtlich ohne
+Strassenname/Hausnummer geführt). Quelle: www4.ti.ch …/preture/leventina,
+Abruf 6.6.2026. Damit ist die letzte offene TI-Pretura-Zeile geschlossen.
+
