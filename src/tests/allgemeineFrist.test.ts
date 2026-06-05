@@ -217,3 +217,24 @@ describe('Verbesserungs-Auftrag 5.6.2026 – P1', () => {
     expect(fristQueryLesen('')).toBeNull();
   });
 });
+
+describe('Kombinierter Fristenrechner – Trennungs-Querschnitt (5.6.2026)', () => {
+  it('dieselbe 10-Tage-Frist um Ostern endet je Verfahren VERSCHIEDEN (Engines getrennt)', async () => {
+    const { berechneFrist } = await import('../lib/zpoFristen');
+    const { berechneSchkgFrist } = await import('../lib/schkgFristen');
+    // Zustellung 26.3.2026 (Do), 10 Tage, Kanton ZH — Karfreitag 3.4./Ostermontag 6.4.2026,
+    // ZPO-Oster-Stillstand 29.3.–12.4., SchKG-Betreibungsferien 29.3.–12.4. (je eigene Regeln)
+    const allg = berechneAllgemeineFrist({ start: '2026-03-26', laenge: 10, einheit: 'tage', wochenendeVerschieben: true, feiertageVerschieben: true, kanton: 'ZH' });
+    const zpo = berechneFrist({ ereignis: '2026-03-26', einheit: 'tage', laenge: 10, verfahren: 'ordentlich', kanton: 'ZH', fristnatur: 'gesetzlich' });
+    const schkg = berechneSchkgFrist({ ereignis: '2026-03-26', einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien', fristnatur: 'verwirkung', kanton: 'ZH' });
+    // Allgemein: 5.4. (So) → Ostermontag 6.4. ist ZH-Feiertag → Di 7.4.
+    expect(allg.endDatum).toBe('07.04.2026');
+    // ZPO: Stillstand Art. 145 Abs. 1 lit. a schiebt weit über die Ferien hinaus
+    expect(zpo.diesAdQuemISO > '2026-04-12').toBe(true);
+    // SchKG: Betreibungsferien (Art. 56 Ziff. 2) — Ende ebenfalls nach den Ferien,
+    // aber nach EIGENER Regel (Art. 63), nicht identisch mit der ZPO-Spiegelung erzwungen
+    expect(schkg.diesAdQuemISO > '2026-04-12').toBe(true);
+    // Trennung wirkt: drei verschiedene Rechenwege, allgemein ≠ zpo
+    expect(allg.endDatum).not.toBe(zpo.diesAdQuem);
+  });
+});

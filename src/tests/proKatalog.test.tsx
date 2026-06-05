@@ -117,3 +117,19 @@ describe('Free-Kachelwand (Auftrag 5.6.2026)', () => {
     expect(html).toContain('Zivilrecht (materiell)');
   });
 });
+
+describe('Kombinierter Fristenrechner (Free, Auftrag 5.6.2026)', () => {
+  it('Verfahrens-Schnitt vorhanden; Default Allgemein; Engines getrennt erreichbar', async () => {
+    const { RechnerTagerechner } = await import('../pages/RechnerTagerechner');
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/rechner/tagerechner']}>
+        <LocaleProvider><RechnerTagerechner /></LocaleProvider>
+      </MemoryRouter>,
+    );
+    expect(html).toContain('Allgemein (Vertrag/OR)');
+    expect(html).toContain('Zivilprozess (ZPO)');
+    expect(html).toContain('Betreibung (SchKG)');
+    // Default = Allgemein-Form gerendert (Tabs frist/rueckwaerts/zwischen)
+    expect(html).toContain('Tage zwischen');
+  });
+});

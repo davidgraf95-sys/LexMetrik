@@ -515,14 +515,16 @@ const KARTEN: Record<string, CalculatorCard> = {
   tagerechner: {
     id: 'tagerechner', modus: 'rechner', art: 'werkzeug', tier: 'free', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',
-    title: 'Fristen- & Tagerechner',
-    description: 'Allgemeines Fristende nach festen Regeln: Ereignistag zählt nicht, Monatsfristen enden am gleichbezeichneten Tag (sonst Monatsende), Wochenend- und Feiertagsenden verschieben sich auf den nächsten Werktag – kantonal nach EJPD-Verzeichnis. Dazu ein Tage-Zähler als reines Hilfsmittel.',
+    title: 'Fristenrechner (Tage · ZPO · SchKG)',
+    description: 'EIN Fristenrechner für die meisten Verfahren: allgemeine Vertrags- und Verwirkungsfristen (Ereignistag zählt nicht, Monatsfristen, Werktag-Verschiebung kantonal nach EJPD-Verzeichnis, Rückwärtsrechnung, Zustell-Helfer, Kalenderexport), Zivilprozess mit Stillstand nach Art. 145 ZPO sowie Betreibungsferien und Rechtsstillstand nach SchKG – getrennt gerechnete Engines, ein Einstieg.',
     status: 'entwurf',
     norms: [
       { label: 'Art. 77 OR', url: fedlexUrl('OR', '77'), verified: false },
       { label: 'Art. 78 OR', url: fedlexUrl('OR', '78'), verified: false },
       // BG über den Fristenlauf an Samstagen – ELI via Fedlex-SPARQL verifiziert (5.6.2026)
       { label: 'SR 173.110.3', url: 'https://www.fedlex.admin.ch/eli/cc/1963/819_815_843/de', verified: false },
+      { label: 'Art. 145 ZPO', url: fedlexUrl('ZPO', '145'), verified: false },
+      { label: 'Art. 56 SchKG', url: fedlexUrl('SchKG', '56'), verified: false },
     ],
     href: '/rechner/tagerechner',
     related: ['zpo-fristen', 'schkg-fristen'],

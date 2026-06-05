@@ -48,9 +48,9 @@ export const CALCULATORS: Calculator[] = [
   { slug: 'teuerung', titel: 'Teuerungsrechner (LIK)', kategorie: 'Übergreifend',
     kurzbeschrieb: 'Indexierung von Beträgen nach dem Landesindex der Konsumentenpreise – Indexmiete (100 %-Weitergabe), Unterhaltsbeiträge und generische Wertsicherung, mit amtlicher BFS-Reihe und automatischer Basis-Wahl.',
     normen: ['Art. 269b OR', 'Art. 17 VMWG', 'Art. 286 ZGB', 'Art. 128 ZGB'], status: 'entwurf', icon: 'percent' },
-  { slug: 'tagerechner', titel: 'Fristen- & Tagerechner', kategorie: 'Übergreifend',
-    kurzbeschrieb: 'Allgemeines Fristende nach Art. 77/78 OR – Ereignistag zählt nicht, Monatsfristen mit Monatsende-Klemmung, Verschiebung von Wochenend-/Feiertagsenden auf den nächsten Werktag.',
-    normen: ['Art. 77 OR', 'Art. 78 OR'], status: 'entwurf', icon: 'clock' },
+  { slug: 'tagerechner', titel: 'Fristenrechner (Tage · ZPO · SchKG)', kategorie: 'Übergreifend',
+    kurzbeschrieb: 'Ein Fristenrechner für die meisten Verfahren: Allgemein nach Art. 77/78 OR (Ereignistag zählt nicht, Monatsende-Klemmung, Werktag-Verschiebung), Zivilprozess mit Stillstand (Art. 145 ZPO) und Betreibung mit Betreibungsferien/Rechtsstillstand (Art. 56 ff. SchKG) – drei getrennte Engines, ein Einstieg.',
+    normen: ['Art. 77 OR', 'Art. 78 OR', 'Art. 145 ZPO', 'Art. 56 SchKG'], status: 'entwurf', icon: 'clock' },
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {
