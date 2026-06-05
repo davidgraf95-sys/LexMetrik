@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 417 Tests in 21 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 423 Tests in 21 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -210,6 +210,14 @@ Wizards 1–3 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
 array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
 
 ## PDF-Rechenbericht (src/lib/pdf/)
+
+**Tagerechner-P1 (5.6.2026, Auftrag «Verbesserung Fristenrechner»):**
+Rückwärtsmodus (spätester Handlungstag; Verschiebung defensiv «keine»,
+Vorverlegung nur mit Ungeklärt-Vorbehalt), Zustell-Helfer (rein informativ:
+7-Tage-Fiktion, A-Post Plus Art. 142 Abs. 1bis ZPO), .ics-Export (RFC-5545
+inkl. Folding, deterministisch) + Permalink (validiert), Validierung/A11y;
+BGE 150 III 367 nachgeführt. AV/MV-Schemas: v1.1.0 (Vertiefungs-Gutachten).
+Golden-Output-Protokoll: scripts/golden-outputs.ts (53 Fälle, vergleich-Modus).
 
 **Formatvorlagen-SSoT (5.6.2026, `formatvorlagen.ts` — drei Grundlagen-
 Berichte):** Typografie je Format + AUSGABE_REGELN je AusgabeArt
