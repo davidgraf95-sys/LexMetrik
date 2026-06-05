@@ -1,5 +1,6 @@
 import { Field } from '../vorlagen/ui';
 import { useState } from 'react';
+import { BetragsFeld } from '../BetragsFeld';
 import { berechneVerzugszins, formatCHF } from '../../lib/verzugszins';
 import type {
   VerzugszinsInput, VerzugszinsMethode, SatzGrund, VerzugsbeginnTyp, VerzugszinsErgebnis, VzEreignis,
@@ -114,7 +115,7 @@ export function VerzugszinsForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Geschuldeter Betrag (CHF)" hint="Verzugszins fällt nur auf dem tatsächlich geschuldeten Betrag an">
-          <input type="number" min={0} step={100} value={form.kapital} onChange={(e) => set('kapital', Number(e.target.value))} className={inputNum} />
+          <BetragsFeld value={form.kapital ? String(form.kapital) : ''} onChange={(v) => set('kapital', Number(v) || 0)} className={inputNum} placeholder="z. B. 10'000" />
         </Field>
         <Field label="Zinssatz (%)" hint="Default 5% (Art. 104 Abs. 1 OR); z.B. ATSG 5%, Steuern variabel">
           <input type="number" min={0} step={0.25} value={form.zinssatzProzent ?? 5} onChange={(e) => set('zinssatzProzent', Number(e.target.value))} className={inputNum} />
@@ -179,8 +180,12 @@ export function VerzugszinsForm() {
             </div>
             <div className="space-y-1">
               <label className="text-body-s font-medium text-ink-600">{row.typ === 'teilzahlung' ? 'Betrag (CHF)' : 'neuer Satz (%)'}</label>
-              <input type="number" min={0} step={row.typ === 'teilzahlung' ? 100 : 0.25} value={row.wert}
-                onChange={(e) => updateRow(i, { wert: Number(e.target.value) })} className={inputNum} />
+              {row.typ === 'teilzahlung' ? (
+                <BetragsFeld value={row.wert ? String(row.wert) : ''} onChange={(v) => updateRow(i, { wert: Number(v) || 0 })} className={inputNum} />
+              ) : (
+                <input type="number" min={0} step={0.25} value={row.wert}
+                  onChange={(e) => updateRow(i, { wert: Number(e.target.value) })} className={inputNum} />
+              )}
             </div>
             <button type="button" onClick={() => removeRow(i)} className="text-body-s text-danger-700 self-end pb-2 text-left">Entfernen</button>
           </div>

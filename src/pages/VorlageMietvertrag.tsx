@@ -6,6 +6,7 @@ import {
   type MvAntworten, type MvStaffel,
 } from '../lib/vorlagen/mietvertrag';
 import type { PdfBanner } from '../lib/vorlagen/banner';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -191,8 +192,7 @@ export function VorlageMietvertrag() {
       case 'mietzins': return (
         <div className="space-y-5">
           <Field label="Nettomietzins (CHF pro Monat)">
-            <input className={inputCls + ' num w-44'} inputMode="decimal" value={a.mietzinsNettoCHF}
-              onChange={(e) => set('mietzinsNettoCHF', e.target.value)} placeholder="z. B. 2'150" />
+            <BetragsFeld className={inputCls + ' num w-44'} value={a.mietzinsNettoCHF} onChange={(v) => set('mietzinsNettoCHF', v)} placeholder="z. B. 2'150" />
           </Field>
           <div className="space-y-2">
             <p className="lc-overline">Mietzins-Modell</p>
@@ -222,7 +222,7 @@ export function VorlageMietvertrag() {
                   <input className={inputCls} value={a.indexBasisMonat ?? ''} onChange={(e) => set('indexBasisMonat', e.target.value || undefined)} placeholder="z. B. Mai 2026" />
                 </Field>
                 <Field label="Punktestand" optional>
-                  <input className={inputCls + ' num'} inputMode="decimal" value={a.indexBasisPunkte ?? ''} onChange={(e) => set('indexBasisPunkte', e.target.value || undefined)} placeholder="z. B. 107.1" />
+                  <BetragsFeld className={inputCls + ' num'} value={a.indexBasisPunkte ?? ''} onChange={(v) => set('indexBasisPunkte', v || undefined)} placeholder="z. B. 107.1" />
                 </Field>
               </div>
             )}
@@ -234,8 +234,7 @@ export function VorlageMietvertrag() {
                       <DatumsFeld value={s.ab} onChange={(v) => setStaffel(i, { ab: v })} className={inputCls} />
                     </Field>
                     <Field label={i === 0 ? 'Betrag (CHF/Monat)' : ''}>
-                      <input className={inputCls + ' num'} inputMode="decimal" value={s.erhoehungCHF}
-                        onChange={(e) => setStaffel(i, { erhoehungCHF: e.target.value })} placeholder="z. B. 50" />
+                      <BetragsFeld className={inputCls + ' num'} value={s.erhoehungCHF} onChange={(v) => setStaffel(i, { erhoehungCHF: v } )} placeholder="z. B. 50" />
                     </Field>
                     <button type="button" onClick={() => set('staffeln', (a.staffeln ?? []).filter((_, j) => j !== i))}
                       className="text-body-s text-danger-700 hover:underline pb-2.5">entfernen</button>
@@ -269,8 +268,7 @@ export function VorlageMietvertrag() {
             {a.nebenkosten !== 'keine' && (
               <>
                 <Field label={a.nebenkosten === 'akonto' ? 'Akonto (CHF pro Monat)' : 'Pauschale (CHF pro Monat)'}>
-                  <input className={inputCls + ' num w-40'} inputMode="decimal" value={a.nebenkostenCHF ?? ''}
-                    onChange={(e) => set('nebenkostenCHF', e.target.value || undefined)} placeholder="z. B. 250" />
+                  <BetragsFeld className={inputCls + ' num w-40'} value={a.nebenkostenCHF ?? ''} onChange={(v) => set('nebenkostenCHF', v || undefined)} placeholder="z. B. 250" />
                 </Field>
                 <p className="text-xs text-ink-500">Positionen einzeln wählen — eine Sammelklausel genügt nicht:</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
@@ -291,8 +289,7 @@ export function VorlageMietvertrag() {
         <div className="space-y-5">
           <Field label="Kaution (CHF)" optional
             hint={wohnung ? 'höchstens drei Monatszinse (Art. 257e Abs. 2 OR); Hinterlegung auf Sperrkonto auf den Namen des Mieters' : 'keine gesetzliche Obergrenze — angemessenes Verhältnis zum Risiko'}>
-            <input className={inputCls + ' num w-44'} inputMode="decimal" value={a.kautionCHF ?? ''}
-              onChange={(e) => set('kautionCHF', e.target.value || undefined)} placeholder="z. B. 4'300" />
+            <BetragsFeld className={inputCls + ' num w-44'} value={a.kautionCHF ?? ''} onChange={(v) => set('kautionCHF', v || undefined)} placeholder="z. B. 4'300" />
           </Field>
           <div className="space-y-2">
             <p className="lc-overline">Tierhaltung</p>
@@ -338,7 +335,7 @@ export function VorlageMietvertrag() {
                       placeholder="z. B. Betrieb einer Apotheke" />
                   </Field>
                   <Field label="Konventionalstrafe (CHF)" optional hint="empfohlen — ein blosses Verbot erzwingt keine Auflösung des Konkurrenz-Mietvertrags">
-                    <input className={inputCls + ' num w-44'} inputMode="decimal" value={a.konkurrenzschutzStrafeCHF ?? ''} onChange={(e) => set('konkurrenzschutzStrafeCHF', e.target.value || undefined)} placeholder="z. B. 10'000" />
+                    <BetragsFeld className={inputCls + ' num w-44'} value={a.konkurrenzschutzStrafeCHF ?? ''} onChange={(v) => set('konkurrenzschutzStrafeCHF', v || undefined)} placeholder="z. B. 10'000" />
                   </Field>
                 </>
               )}

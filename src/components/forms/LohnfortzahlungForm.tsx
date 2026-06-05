@@ -1,5 +1,6 @@
 import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
+import { BetragsFeld } from '../BetragsFeld';
 import type { LohnfortzahlungInput, Kanton, Verhinderungsgrund } from '../../types/legal';
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
@@ -167,10 +168,9 @@ export function LohnfortzahlungForm() {
         </Field>
 
         <Field label="Monatslohn brutto (CHF, optional)" hint="Für Betragsangabe; kein Einfluss auf Dauer">
-          <input
-            type="number" min={0} step={100}
-            value={form.monatslohnBrutto ?? ''}
-            onChange={(e) => set('monatslohnBrutto', e.target.value ? Number(e.target.value) : undefined)}
+          <BetragsFeld
+            value={form.monatslohnBrutto != null ? String(form.monatslohnBrutto) : ''}
+            onChange={(v) => set('monatslohnBrutto', v ? Number(v) : undefined)}
             className={inputCls}
             placeholder="Leer = kein Betrag"
           />

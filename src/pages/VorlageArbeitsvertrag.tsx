@@ -4,6 +4,7 @@ import {
   avZusammenstellen, pruefeAvGates, type AvAntworten,
 } from '../lib/vorlagen/arbeitsvertrag';
 import type { PdfBanner } from '../lib/vorlagen/banner';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -186,8 +187,7 @@ export function VorlageArbeitsvertrag() {
             ))}
           </div>
           <Field label={a.lohnModell === 'monatslohn' ? 'Bruttolohn pro Monat (CHF)' : 'Bruttolohn pro Stunde (CHF)'}>
-            <input className={inputCls + ' num'} inputMode="decimal" value={a.lohnBetrag}
-              onChange={(e) => set('lohnBetrag', e.target.value)} placeholder={a.lohnModell === 'monatslohn' ? "z. B. 6'500" : 'z. B. 32.50'} />
+            <BetragsFeld className={inputCls + ' num'} value={a.lohnBetrag} onChange={(v) => set('lohnBetrag', v)} placeholder={a.lohnModell === 'monatslohn' ? "z. B. 6'500" : 'z. B. 32.50'} />
           </Field>
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.dreizehnter} onChange={(e) => set('dreizehnter', e.target.checked)} />
@@ -327,7 +327,7 @@ export function VorlageArbeitsvertrag() {
             </div>
             {a.spesen === 'pauschal' && (
               <Field label="Pauschale (CHF pro Monat)" hint="muss alle notwendigen Auslagen decken — sonst insoweit nichtig (Art. 327a Abs. 3 OR)">
-                <input className={inputCls + ' num w-40'} inputMode="decimal" value={a.spesenPauschaleCHF ?? ''} onChange={(e) => set('spesenPauschaleCHF', e.target.value)} placeholder="z. B. 200" />
+                <BetragsFeld className={inputCls + ' num w-40'} value={a.spesenPauschaleCHF ?? ''} onChange={(v) => set('spesenPauschaleCHF', v)} placeholder="z. B. 200" />
               </Field>
             )}
           </div>
@@ -381,7 +381,7 @@ export function VorlageArbeitsvertrag() {
                 </Field>
               </div>
               <Field label="Konventionalstrafe (CHF je Übertretung)" optional hint="Bezahlung befreit vom Verbot; weiterer Schaden bleibt ersatzpflichtig (Art. 340b OR)">
-                <input className={inputCls + ' num w-40'} inputMode="decimal" value={a.kvKonventionalstrafeCHF ?? ''} onChange={(e) => set('kvKonventionalstrafeCHF', e.target.value)} placeholder="z. B. 20'000" />
+                <BetragsFeld className={inputCls + ' num w-40'} value={a.kvKonventionalstrafeCHF ?? ''} onChange={(v) => set('kvKonventionalstrafeCHF', v)} placeholder="z. B. 20'000" />
               </Field>
               <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.kvRealerfuellung ?? false} onChange={(e) => set('kvRealerfuellung', e.target.checked)} />
@@ -398,7 +398,7 @@ export function VorlageArbeitsvertrag() {
               {a.kvKarenz && (
                 <div className="pl-6 space-y-3">
                   <Field label="Karenzentschädigung (CHF pro Monat)">
-                    <input className={inputCls + ' num w-40'} inputMode="decimal" value={a.kvKarenzCHFProMonat ?? ''} onChange={(e) => set('kvKarenzCHFProMonat', e.target.value || undefined)} placeholder="z. B. 2'000" />
+                    <BetragsFeld className={inputCls + ' num w-40'} value={a.kvKarenzCHFProMonat ?? ''} onChange={(v) => set('kvKarenzCHFProMonat', v || undefined)} placeholder="z. B. 2'000" />
                   </Field>
                   <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                     <input type="checkbox" className="mt-0.5" checked={a.kvKarenzVerzichtsrecht ?? false} onChange={(e) => set('kvKarenzVerzichtsrecht', e.target.checked)} />

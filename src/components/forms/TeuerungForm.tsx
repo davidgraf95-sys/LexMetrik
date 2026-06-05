@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Field, inputCls } from '../vorlagen/ui';
+import { BetragsFeld } from '../BetragsFeld';
 import {
   berechneTeuerung, monatLabel, basisAuto,
   TEUERUNG_ERSTER_MONAT, LIK_LETZTER_MONAT, LIK_QUELLE, LIK_STAND,
@@ -110,9 +111,9 @@ export function TeuerungForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label={modus === 'indexmiete' ? 'Nettomietzins alt (CHF/Monat)' : modus === 'unterhalt' ? 'Unterhaltsbeitrag gemäss Urteil (CHF)' : 'Betrag alt (CHF)'}>
-          <input className={inputCls + ' num w-44'} inputMode="decimal" value={betrag}
+          <BetragsFeld className={inputCls + ' num w-44'} value={betrag}
             aria-invalid={!!fehler && /Betrag/.test(fehler)}
-            onChange={(e) => setBetrag(e.target.value)} />
+            onChange={setBetrag} />
         </Field>
         <Field label="Rundung" hint="vertrags-/urteilsabhängig">
           <select className={inputCls} value={rundung} onChange={(e) => setRundung(e.target.value as TeuerungRundung | '')}>

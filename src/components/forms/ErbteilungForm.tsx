@@ -1,5 +1,6 @@
 import { Field, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
+import { BetragsFeld } from '../BetragsFeld';
 import type { ErbteilungInput, Zivilstand, Gueterstand, ErbteilungErgebnis } from '../../types/erbrecht';
 import { berechneErbteilung } from '../../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../../lib/bruch';
@@ -237,18 +238,18 @@ export function ErbteilungForm() {
             </Field>
             {gueterstand === 'errungenschaftsbeteiligung' && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <Field label="Eigengut Erblasser (CHF)"><input type="number" value={betraege.eigengut} onChange={(e) => setBetraege((b) => ({ ...b, eigengut: e.target.value }))} className={inputCls} /></Field>
-                <Field label="Vorschlag Erblasser (CHF)" hint="negativ = Rückschlag (zählt 0, Art. 210 Abs. 2)"><input type="number" value={betraege.vorschlagE} onChange={(e) => setBetraege((b) => ({ ...b, vorschlagE: e.target.value }))} className={inputCls} /></Field>
-                <Field label="Vorschlag Überlebender (CHF)"><input type="number" value={betraege.vorschlagU} onChange={(e) => setBetraege((b) => ({ ...b, vorschlagU: e.target.value }))} className={inputCls} /></Field>
+                <Field label="Eigengut Erblasser (CHF)"><BetragsFeld erlaubeNegativ value={betraege.eigengut} onChange={(v) => setBetraege((b) => ({ ...b, eigengut: v }))} className={inputCls} /></Field>
+                <Field label="Vorschlag Erblasser (CHF)" hint="negativ = Rückschlag (zählt 0, Art. 210 Abs. 2)"><BetragsFeld erlaubeNegativ value={betraege.vorschlagE} onChange={(v) => setBetraege((b) => ({ ...b, vorschlagE: v }))} className={inputCls} /></Field>
+                <Field label="Vorschlag Überlebender (CHF)"><BetragsFeld erlaubeNegativ value={betraege.vorschlagU} onChange={(v) => setBetraege((b) => ({ ...b, vorschlagU: v }))} className={inputCls} /></Field>
               </div>
             )}
             {gueterstand === 'guetertrennung' && (
-              <Field label="Vermögen des Erblassers (CHF)"><input type="number" value={betraege.vermoegen} onChange={(e) => setBetraege((b) => ({ ...b, vermoegen: e.target.value }))} className={inputCls + ' w-44'} /></Field>
+              <Field label="Vermögen des Erblassers (CHF)"><BetragsFeld erlaubeNegativ value={betraege.vermoegen} onChange={(v) => setBetraege((b) => ({ ...b, vermoegen: v }))} className={inputCls + ' w-44'} /></Field>
             )}
             {gueterstand === 'guetergemeinschaft' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Field label="Eigengut Erblasser (CHF)"><input type="number" value={betraege.eigengut} onChange={(e) => setBetraege((b) => ({ ...b, eigengut: e.target.value }))} className={inputCls} /></Field>
-                <Field label="Gesamtgut (CHF)"><input type="number" value={betraege.gesamtgut} onChange={(e) => setBetraege((b) => ({ ...b, gesamtgut: e.target.value }))} className={inputCls} /></Field>
+                <Field label="Eigengut Erblasser (CHF)"><BetragsFeld erlaubeNegativ value={betraege.eigengut} onChange={(v) => setBetraege((b) => ({ ...b, eigengut: v }))} className={inputCls} /></Field>
+                <Field label="Gesamtgut (CHF)"><BetragsFeld erlaubeNegativ value={betraege.gesamtgut} onChange={(v) => setBetraege((b) => ({ ...b, gesamtgut: v }))} className={inputCls} /></Field>
               </div>
             )}
           </div>

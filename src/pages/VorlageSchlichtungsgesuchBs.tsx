@@ -5,6 +5,7 @@ import {
   type SgAnswers, type SgPartei, type SgTyp,
 } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { behoerdeFuer, behoerdeAlsBlock } from '../lib/vorlagen/behoerden';
 import { KANTONE } from '../lib/kantone';
 import { DatumsFeld } from '../components/DatumsFeld';
@@ -248,7 +249,7 @@ export function VorlageSchlichtungsgesuchBs() {
               </p>
               {a.streitgegenstandTyp === 'uebrige_zivilsache' && (
                 <Field label="Streitwert (CHF)" optional hint="für die Schwellen-Logik (Art. 210/212 ZPO); bei Geldforderungen automatisch">
-                  <input className={inputCls + ' w-40'} inputMode="decimal" value={a.streitwert ?? ''} onChange={(e) => set('streitwert', e.target.value)} />
+                  <BetragsFeld className={inputCls + ' w-40'} value={a.streitwert ?? ''} onChange={(v) => set('streitwert', v)} />
                 </Field>
               )}
             </>
@@ -357,7 +358,7 @@ export function VorlageSchlichtungsgesuchBs() {
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Field label="Mindestbetrag (CHF)" hint="gilt als vorläufiger Streitwert (Art. 85 ZPO)">
-                    <input className={inputCls} inputMode="decimal" value={a.unbeziffert.mindestbetrag} onChange={(e) => set('unbeziffert', { ...a.unbeziffert!, mindestbetrag: e.target.value })} />
+                    <BetragsFeld className={inputCls} value={a.unbeziffert.mindestbetrag} onChange={(v) => set('unbeziffert', { ...a.unbeziffert!, mindestbetrag: v } )} />
                   </Field>
                   <Field label="Warum ist die Bezifferung nicht möglich/zumutbar?">
                     <input className={inputCls} placeholder="z. B. Höhe vom Beweisverfahren abhängig" value={a.unbeziffert.grund} onChange={(e) => set('unbeziffert', { ...a.unbeziffert!, grund: e.target.value })} />
