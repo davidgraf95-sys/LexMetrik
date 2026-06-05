@@ -1,5 +1,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
+import type { Kanton } from '../../types/legal';
+import { behoerdeFuer, behoerdeAlsBlock, behoerdeManuellVollstaendig, type BehoerdeManuell } from './behoerden';
 import { fmtDatumLang, fmtDatum, fmtCHF } from './datum';
 export { fmtCHF } from './datum';
 
@@ -19,8 +21,12 @@ export { fmtCHF } from './datum';
 export const SCHLICHTUNGSBEHOERDEN_BS = {
   zivilgericht: {
     name: 'Schlichtungsbehörde des Zivilgerichts Basel-Stadt',
-    postadresse: ['Zivilgericht Basel-Stadt', 'Schlichtungsbehörde', 'Postfach 964', '4001 Basel'],
-    schalterMuendlich: ['St. Alban-Vorstadt 25', '4052 Basel'], // Ausweichstandort Rheinhof während Sanierung Bäumleingasse
+    // VOLLSTÄNDIGE Anschrift inkl. Hausnummer (Vorgabe 5.6.2026); amtlich
+    // verifiziert am Staatskalender BS (Kanzlei Schlichtungsbehörde,
+    // staatskalender.bs.ch, Stand 5.6.2026) — damit ist der frühere
+    // PLZ-/Postfach-Vorbehalt aufgelöst.
+    postadresse: ['Zivilgericht Basel-Stadt', 'Schlichtungsbehörde', 'Bäumleingasse 5', '4001 Basel'],
+    schalterMuendlich: ['St. Alban-Vorstadt 25', '4052 Basel'], // Ausweichstandort (zu verifizieren)
     tel: '+41 61 267 81 81',
     verified: true,
   },
@@ -58,7 +64,7 @@ export const SG_SCHWELLEN = {
 // Offene Verifikationen (in UI offenlegen, nicht raten) — Abschnitt 18 der Anweisung
 export const SG_OFFENE_VERIFIKATIONEN: string[] = [
   'Kantonale Verweise (GOG BS SG 154.100, EG ZPO SG 221.100, GGR SG 154.810): §-Nummern noch nicht an der amtlichen Fassung bestätigt — verlinkt wird nur die Erlass-Seite.',
-  'PLZ der Schlichtungsbehörde des Zivilgerichts: Postfach 4001 vs. Paketpost 4051 — massgeblich sind die aktuellen bs.ch-Angaben.',
+  'Behördenadressen: amtlich verifiziert am Staatskalender BS (Stand 5.6.2026) — bei Umzug/Sanierung nachführen; andere Kantone sind noch nicht hinterlegt (Registry lib/vorlagen/behoerden.ts).',
   'Randtitel «Art. 135 Ziff. 2 OR» vs. «Abs. 2»: Bezeichnung in amtlichen Formularen uneinheitlich.',
   'Bezifferung bereits im Schlichtungsstadium ist vertretbare Auslegung (streng erst für die Klage); unbezifferte Begehren nur über den Art.-85-Pfad.',
 ];
@@ -81,6 +87,11 @@ export type SgBetreibung = { nummer: string; betreibungsamt: string; rechtsvorsc
 export type SgTyp = 'geldforderung' | 'uebrige_zivilsache' | 'arbeitsrecht' | 'miete_pacht' | 'gleichstellung_glg';
 
 export type SgAnswers = {
+  // Behörden-Grundgerüst (5.6.2026): Kanton zuerst — die Registry löst die
+  // vollständige Adresse auf (Pilot: BS); Handeingabe als Override.
+  gerichtsKanton: Kanton;
+  behoerdeManuellAktiv?: boolean;
+  behoerdeManuell?: BehoerdeManuell;
   // Schritt 0 — Routing & Vorprüfung
   streitgegenstandTyp: SgTyp | '';
   ausnahmeArt198: boolean;
@@ -111,6 +122,7 @@ export type SgAnswers = {
 export const SG_PERSON_NATUERLICH: PersonNatuerlich = { typ: 'natuerlich', vorname: '', name: '', strasse: '', plz: '', ort: '' };
 
 export const SG_DEFAULTS: SgAnswers = {
+  gerichtsKanton: 'BS',
   streitgegenstandTyp: '',
   ausnahmeArt198: false,
   baselForumBestaetigt: false,
@@ -161,7 +173,15 @@ function parteiVollstaendig(p: SgPartei): boolean {
 }
 
 export function sgMaengel(a: SgAnswers): SgMangel[] {
-  const m: SgMangel[] = [];
+  const m0: SgMangel[] = [];
+  // Behörden-Gate (Schritt 0): ausserhalb BS nur mit vollständiger Handadresse
+  if (a.behoerdeManuellAktiv && !behoerdeManuellVollstaendig(a.behoerdeManuell)) {
+    m0.push({ schritt: 0, text: 'Behördenadresse von Hand: Name, Strasse mit Hausnummer und PLZ/Ort vollständig erfassen.' });
+  }
+  if (a.gerichtsKanton !== 'BS' && !(a.behoerdeManuellAktiv && behoerdeManuellVollstaendig(a.behoerdeManuell))) {
+    m0.push({ schritt: 0, text: `Für den Kanton ${a.gerichtsKanton} sind die Behördenadressen noch nicht hinterlegt — Basel-Stadt wählen oder die Adresse der zuständigen Schlichtungsbehörde von Hand erfassen.` });
+  }
+  const m: SgMangel[] = [...m0];
   const num = (s?: string) => Number(String(s ?? '').replace(/['\s]/g, '').replace(',', '.')); // wie fmtCHF
   if (!a.streitgegenstandTyp) m.push({ schritt: 0, text: 'Art des Streitgegenstands wählen.' });
   if (!a.baselForumBestaetigt) m.push({ schritt: 0, text: 'Basler Gerichtsstand bestätigen (Art. 10 ff. ZPO) — Voraussetzung für den Download.' });
@@ -375,13 +395,20 @@ export function sgZusammenstellen(a: SgAnswers) {
       ? `${ersteKlagende.firma}${ersteKlagende.zeichnungsberechtigt ? ` — ${ersteKlagende.zeichnungsberechtigt.name}, ${ersteKlagende.zeichnungsberechtigt.funktion}` : ''}`
       : parteiKurz(ersteKlagende ?? { ...SG_PERSON_NATUERLICH });
 
-  const behoerde = SCHLICHTUNGSBEHOERDEN_BS.zivilgericht;
+  // Adressat: Handeingabe vor Registry; ausserhalb BS ohne Handadresse
+  // bleibt der Block leer-markiert (Mängelliste blockiert den Export).
+  const registryAdresse = behoerdeFuer('schlichtungsbehoerde_zivil', a.gerichtsKanton);
+  const adressatBlock = a.behoerdeManuellAktiv && behoerdeManuellVollstaendig(a.behoerdeManuell)
+    ? behoerdeAlsBlock(a.behoerdeManuell!)
+    : registryAdresse
+      ? behoerdeAlsBlock(registryAdresse)
+      : '________\n________\n________';
   const antworten: Antworten = {
     ...a,
     absenderBlock: a.vertretung?.bezeichnung
       ? [a.vertretung.bezeichnung, a.vertretung.zusatz, a.vertretung.strasse, `${a.vertretung.plz} ${a.vertretung.ort}`].filter(Boolean).join('\n')
       : parteiZeilen(a.klaeger[0] ?? { ...SG_PERSON_NATUERLICH }).join('\n'),
-    adressatBlock: behoerde.postadresse.join('\n'),
+    adressatBlock,
     datumFmt: fmtDatumLang(a.datum),
     rubrumText,
     rbListe,

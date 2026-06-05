@@ -5,6 +5,8 @@ import {
   type SgAnswers, type SgPartei, type SgTyp,
 } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
+import { behoerdeFuer, behoerdeAlsBlock } from '../lib/vorlagen/behoerden';
+import { KANTONE } from '../lib/kantone';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -155,6 +157,68 @@ export function VorlageSchlichtungsgesuchBs() {
     switch (SCHRITTE[schritt].id) {
       case 'vorpruefung': return (
         <div className="space-y-5">
+          {/* Behörden-Grundgerüst (5.6.2026): Kanton zuerst — Registry löst
+              die VOLLSTÄNDIGE Adresse auf (Pilot BS); Handeingabe als Override */}
+          <div className="space-y-3">
+            <p className="lc-overline">Zuständige Schlichtungsbehörde</p>
+            <div className="grid grid-cols-[8rem_1fr] gap-3 items-start">
+              <Field label="Kanton">
+                <select className={inputCls} value={a.gerichtsKanton}
+                  onChange={(e) => set('gerichtsKanton', e.target.value as SgAnswers['gerichtsKanton'])}>
+                  {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+                </select>
+              </Field>
+              {(() => {
+                const manuell = a.behoerdeManuellAktiv;
+                const reg = behoerdeFuer('schlichtungsbehoerde_zivil', a.gerichtsKanton);
+                if (manuell) return null;
+                if (reg) return (
+                  <div className="lc-tile">
+                    <p className="text-body-s text-ink-900 whitespace-pre-line font-medium">{behoerdeAlsBlock(reg)}</p>
+                    <p className="text-micro text-ink-500 mt-1.5">Amtliche Anschrift · {reg.quelle} · Stand {reg.stand}</p>
+                  </div>
+                );
+                return (
+                  <div className="lc-notice-danger text-body-s" role="alert">
+                    Für den Kanton {a.gerichtsKanton} sind die Behördenadressen noch nicht hinterlegt —
+                    Basel-Stadt wählen oder die Adresse der zuständigen Schlichtungsbehörde unten von Hand erfassen.
+                  </div>
+                );
+              })()}
+            </div>
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <input type="checkbox" className="mt-0.5" checked={a.behoerdeManuellAktiv ?? false}
+                onChange={(e) => set('behoerdeManuellAktiv', e.target.checked || undefined)} />
+              <span>Adresse der Behörde/des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
+            </label>
+            {a.behoerdeManuellAktiv && (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-6">
+                <Field label="Behörde/Gericht">
+                  <input className={inputCls} value={a.behoerdeManuell?.name ?? ''}
+                    onChange={(e) => set('behoerdeManuell', { name: e.target.value, strasse: a.behoerdeManuell?.strasse ?? '', plzOrt: a.behoerdeManuell?.plzOrt ?? '' })}
+                    placeholder="z. B. Friedensrichteramt X" />
+                </Field>
+                <Field label="Strasse und Hausnummer">
+                  <input className={inputCls} value={a.behoerdeManuell?.strasse ?? ''}
+                    onChange={(e) => set('behoerdeManuell', { name: a.behoerdeManuell?.name ?? '', strasse: e.target.value, plzOrt: a.behoerdeManuell?.plzOrt ?? '' })}
+                    placeholder="z. B. Gerichtsgasse 1" />
+                </Field>
+                <Field label="PLZ und Ort">
+                  <input className={inputCls} value={a.behoerdeManuell?.plzOrt ?? ''}
+                    onChange={(e) => set('behoerdeManuell', { name: a.behoerdeManuell?.name ?? '', strasse: a.behoerdeManuell?.strasse ?? '', plzOrt: e.target.value })}
+                    placeholder="z. B. 4001 Basel" />
+                </Field>
+              </div>
+            )}
+            {a.gerichtsKanton !== 'BS' && a.behoerdeManuellAktiv && (
+              <p className="lc-notice-warn text-body-s">
+                Hinweis: Das sachliche Routing dieses Wizards (Spezialbehörden, Schwellen) ist auf
+                Basel-Stadt zugeschnitten — die Zuständigkeit im Kanton {a.gerichtsKanton} ist
+                selbständig zu prüfen.
+              </p>
+            )}
+          </div>
+
           <div className="space-y-2">
             <p className="lc-overline">Art des Streitgegenstands</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">

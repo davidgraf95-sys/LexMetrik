@@ -500,3 +500,39 @@ describe('Vorschau ≙ Output (werkgetreuer Renderer, 5.6.2026)', () => {
     expect(html).not.toMatch(/text-center font-bold[^>]*>Schlichtungsgesuch/); // kein Doppeltitel
   });
 });
+
+describe('Behörden-Grundgerüst für Eingaben (5.6.2026)', () => {
+  it('Registry: jede hinterlegte Adresse ist VOLLSTÄNDIG (Strasse mit Hausnummer, PLZ+Ort, Quelle, Stand)', async () => {
+    const { BEHOERDEN } = await import('../lib/vorlagen/behoerden');
+    for (const [art, kantone] of Object.entries(BEHOERDEN)) {
+      for (const [kanton, b] of Object.entries(kantone)) {
+        expect(b!.name, `${art}/${kanton}`).toBeTruthy();
+        expect(b!.strasse, `${art}/${kanton} Strasse`).toMatch(/\d/);      // Hausnummer!
+        expect(b!.plzOrt, `${art}/${kanton} PLZ`).toMatch(/^\d{4} .+/);
+        expect(b!.quelle, `${art}/${kanton} Quelle`).toBeTruthy();
+        expect(b!.stand, `${art}/${kanton} Stand`).toMatch(/\d{4}/);
+      }
+    }
+  });
+
+  it('SG: BS löst die amtliche Volladresse auf (Bäumleingasse 5); anderer Kanton ohne Handadresse blockiert', async () => {
+    const { sgZusammenstellen, sgMaengel, SG_DEFAULTS, SG_PERSON_NATUERLICH } = await import('../lib/vorlagen/schlichtungsgesuchBs');
+    const basis = {
+      ...SG_DEFAULTS, streitgegenstandTyp: 'geldforderung' as const, baselForumBestaetigt: true,
+      klaeger: [{ ...SG_PERSON_NATUERLICH, vorname: 'A', name: 'B', strasse: 'S 1', plz: '4051', ort: 'Basel' }],
+      beklagte: [{ ...SG_PERSON_NATUERLICH, vorname: 'C', name: 'D', strasse: 'S 2', plz: '4052', ort: 'Basel' }],
+      geld: { betrag: '1000' }, streitgegenstand: 'F', datum: '2026-06-15', ort: 'Basel',
+    };
+    const t = sgZusammenstellen(basis).dokument.absaetze.map((x) => x.text).join('\n');
+    expect(t).toContain('Bäumleingasse 5');
+    expect(t).toContain('4001 Basel');
+    expect(t).not.toContain('Postfach 964');
+    // anderer Kanton: Fehlermeldung; mit Handadresse nutzbar
+    expect(sgMaengel({ ...basis, gerichtsKanton: 'ZH' }).map((x) => x.text).join()).toMatch(/noch nicht hinterlegt/);
+    const mitHand = { ...basis, gerichtsKanton: 'ZH' as const, behoerdeManuellAktiv: true, behoerdeManuell: { name: 'Friedensrichteramt Zürich, Kreise 1+2', strasse: 'Wengistrasse 30', plzOrt: '8004 Zürich' } };
+    expect(sgMaengel(mitHand).map((x) => x.text).join()).not.toMatch(/noch nicht hinterlegt/);
+    expect(sgZusammenstellen(mitHand).dokument.absaetze.map((x) => x.text).join('\n')).toContain('Wengistrasse 30');
+    // unvollständige Handadresse blockiert
+    expect(sgMaengel({ ...mitHand, behoerdeManuell: { name: 'X', strasse: '', plzOrt: '' } }).map((x) => x.text).join()).toMatch(/vollständig erfassen/);
+  });
+});

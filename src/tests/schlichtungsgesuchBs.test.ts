@@ -31,7 +31,7 @@ describe('Schlichtungsgesuch BS — Akzeptanztests', () => {
     expect(t).toContain("CHF 3'000.00 nebst Zins zu 5% seit 01.01.2026 zu bezahlen");
     expect(t).toContain('Unter Kostenfolge zu Lasten der beklagten Partei.'); // ohne Entschädigung
     expect(t).toContain('Schlichtungsbehörde'); // Adressat Zivilgericht
-    expect(t).toContain('Postfach 964');
+    expect(t).toContain('Bäumleingasse 5');
     expect(r.exemplare).toBe(2);
   });
 
