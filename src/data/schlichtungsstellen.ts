@@ -163,7 +163,7 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     ordentlich: {
       modus: 'liste', hinweis: 'drei Vermittlerkreise',
       stellen: [
-        A('Vermittleramt Kreis 1', 'Regierungsgebäude, Obstmarkt 3', '9102 Herisau', 'Kreis 1 (Hinterland)'),
+        A('Vermittleramt Kreis 1', 'Regierungsgebäude, Obstmarkt 3', '9100 Herisau', 'Kreis 1 (Hinterland; Postfach-PLZ 9102)'),
         A('Vermittleramt Kreise 2 und 3', 'Rathaus, Landsgemeindeplatz 2', '9043 Trogen', 'Kreise 2/3 (Mittel-/Vorderland)'),
       ],
     },

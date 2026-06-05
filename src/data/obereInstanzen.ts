@@ -20,7 +20,7 @@ export interface ObereInstanz {
 export const OBERE_INSTANZEN: Record<Kanton, ObereInstanz> = {
   ZH: { name: 'Obergericht des Kantons Zürich', strasse: 'Hirschengraben 13/15', plzOrt: '8001 Zürich' },
   BE: { name: 'Obergericht des Kantons Bern', strasse: 'Hochschulstrasse 17', plzOrt: '3012 Bern' },
-  LU: { name: 'Kantonsgericht Luzern', strasse: 'Hirschengraben 16', plzOrt: '6003 Luzern' },
+  LU: { name: 'Kantonsgericht Luzern', strasse: 'Hirschengraben 16, Postfach 3569', plzOrt: '6002 Luzern', hinweis: 'Postadresse (6003 = Paket-/Hauszustellung)' },
   UR: { name: 'Obergericht Uri', strasse: 'Rathausplatz 2', plzOrt: '6460 Altdorf' },
   SZ: { name: 'Kantonsgericht Schwyz', strasse: 'Kollegiumstrasse 28, Postfach 2265', plzOrt: '6431 Schwyz' },
   OW: { name: 'Obergericht Obwalden', strasse: 'Poststrasse 6', plzOrt: '6061 Sarnen' },
@@ -41,7 +41,7 @@ export const OBERE_INSTANZEN: Record<Kanton, ObereInstanz> = {
   TI: { name: "Tribunale d'appello", strasse: 'Via Pretorio 16', plzOrt: '6901 Lugano' },
   VD: { name: 'Tribunal cantonal', strasse: 'Route du Signal 8', plzOrt: '1014 Lausanne' },
   VS: { name: 'Kantonsgericht Wallis / Tribunal cantonal', strasse: 'Rue Mathieu-Schiner 1', plzOrt: '1950 Sitten' },
-  NE: { name: 'Tribunal cantonal', strasse: 'Rue du Pommier 1, CP 3174', plzOrt: '2000 Neuchâtel', hinweis: 'Hausnummer im Dossier als «leicht unsicher» markiert' },
+  NE: { name: 'Tribunal cantonal', strasse: 'Rue du Pommier 1, Case postale 1', plzOrt: '2002 Neuchâtel 2', hinweis: 'Re-Audit 6.6.2026: CP 1/2002 amtlich aktuell (CP 3174/2000 überholt); Hausnummer 1 bestätigt' },
   GE: { name: 'Cour de justice', strasse: 'Place du Bourg-de-Four 1, CP 3108', plzOrt: '1204 Genf' },
   JU: { name: 'Tribunal cantonal', strasse: 'Chemin du Château 9, CP 1693', plzOrt: '2900 Porrentruy' },
 };

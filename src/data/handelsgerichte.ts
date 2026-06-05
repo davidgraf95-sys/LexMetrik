@@ -30,9 +30,9 @@ export const HANDELSGERICHTE: Partial<Record<Kanton, Handelsgericht>> = {
   },
   AG: {
     name: 'Handelsgericht des Kantons Aargau',
-    strasse: 'Obere Vorstadt 38',
-    plzOrt: '5000 Aarau',
-    organisation: 'Abteilung des Obergerichts (am Obergerichts-Standort)',
+    strasse: 'Obere Vorstadt 40, Postfach',
+    plzOrt: '5001 Aarau',
+    organisation: 'Abteilung des Obergerichts — eigener Standort Nr. 40 (Re-Audit 6.6.2026; Nr. 38 = Obergericht); Besucher-PLZ 5000',
   },
   SG: {
     name: 'Handelsgericht des Kantons St. Gallen',

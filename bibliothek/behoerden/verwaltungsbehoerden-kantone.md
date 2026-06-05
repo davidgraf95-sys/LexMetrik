@@ -1,8 +1,6 @@
 # Verwaltungsbehörden — 26 Kantone (Rechtsweg «Verwaltung», Vorbereitung)
 
-**Erstellt:** 6.6.2026 · **Abrufdatum: 6.6.2026** · **Status: einfach belegt
-(amtliche Direktabrufe; SZ/BL via domain-beschränkter Suche wegen 403);
-adversarialer Doppelcheck AUSSTEHEND.** Auftrag David: «wichtigste»
+**Erstellt:** 6.6.2026 · **Abrufdatum: 6.6.2026** · **Status: ZWEIFACH GEPRÜFT** (Re-Audit 6.6.2026: 1 harte Korrektur GR-Umzug Grabenstrasse 30 + 3 Präzisierungen eingearbeitet; AR-Hausnr./TG-Postfach amtlich nicht publiziert). Auftrag David: «wichtigste»
 Verwaltungsbehörden je Kanton (Verwaltungsgericht · Staatskanzlei/RR ·
 Steuerverwaltung + Rekursbehörde · Strassenverkehrsamt · Migrationsamt ·
 Sozialversicherungsgericht). Teil A+B + JU-Nachtrag: ALLE 26 Kantone erfasst.
@@ -19,7 +17,7 @@ Sozialversicherungsgericht). Teil A+B + JU-Nachtrag: ALLE 26 Kantone erfasst.
 
 | Behörde | Strasse + Nr. | PLZ Ort | Amtliche Quelle |
 |---|---|---|---|
-| Verwaltungsgericht des Kantons Zürich | Freischützgasse 1 (Postfach) | 8090 Zürich | zh.ch/de/gerichte-notariate/verwaltungsgericht.html |
+| Verwaltungsgericht des Kantons Zürich | Freischützgasse 1 (Besuch 8004; Postfach) | 8090 Zürich | zh.ch/de/gerichte-notariate/verwaltungsgericht.html |
 | Staatskanzlei / Regierungsrat | Neumühlequai 10 | 8090 Zürich | zh.ch/de/staatskanzlei.html |
 | Kantonales Steueramt | Bändliweg 21 | 8090 Zürich | zh.ch/de/finanzdirektion/steueramt.html |
 | Steuerrekursgericht | Steinstrasse 21 (Postfach) | 8090 Zürich (Besuch: 8003) | strgzh.ch/varia/kontakt |
@@ -48,7 +46,7 @@ Sozialversicherungsgericht). Teil A+B + JU-Nachtrag: ALLE 26 Kantone erfasst.
 
 | Behörde | Strasse + Nr. | PLZ Ort | Amtliche Quelle |
 |---|---|---|---|
-| Kantonsgericht, 4. Abteilung (Verwaltungsrecht — funktional das Verwaltungsgericht) | Obergrundstrasse 46 | 6003 Luzern | gerichte.lu.ch/organisation/kantonsgericht (Abteilungen + Kontakt) |
+| Kantonsgericht, 4. Abteilung (Verwaltungsrecht — funktional das Verwaltungsgericht) | Obergrundstrasse 46 (Postfach 3569) | 6002 Luzern | gerichte.lu.ch/organisation/kantonsgericht (Abteilungen + Kontakt) |
 | Kantonsgericht, 3. Abteilung (Sozialversicherungsrecht) | Hirschengraben 19 | 6003 Luzern | gerichte.lu.ch/organisation/kantonsgericht |
 | Staatskanzlei / Regierungsrat | Bahnhofstrasse 15 (Postfach 3768) | 6002 Luzern | lu.ch/verwaltung/staatskanzlei |
 | Dienststelle Steuern | Buobenmatt 1 (Postfach 3464) | 6002 Luzern | steuern.lu.ch/kontakt/standort |
@@ -296,7 +294,7 @@ Anmerkung: ai.ch blockiert direktes Fetching (HTTP 403); Adressen über offiziel
 
 | Behörde | Strasse + Nr. | PLZ Ort | Quelle |
 |---|---|---|---|
-| Obergericht, Abteilung für Verfassungs- und Verwaltungsrecht (= früheres Verwaltungsgericht; **seit 1.1.2025** Teil des neuen Obergerichts) | Obere Plessurstrasse 1 | 7000 Chur | gr.ch / kantonsamtsblatt.gr.ch; justiz-gr.ch |
+| Obergericht, Abteilung für Verfassungs- und Verwaltungsrecht (= früheres Verwaltungsgericht; **seit 1.1.2025** Teil des neuen Obergerichts) | **Grabenstrasse 30** (Re-Audit 6.6.: Umzug vollzogen; Plessurstrasse 1 historisch) | 7001 Chur | gr.ch / kantonsamtsblatt.gr.ch; justiz-gr.ch |
 | Obergericht, Abteilung Zivil-/Strafrecht | Poststrasse 14 | 7001 Chur | kantonsamtsblatt.gr.ch |
 | Regierung / Standeskanzlei | Reichsgasse 35 | 7001 Chur | gr.ch (Standeskanzlei) |
 | Steuerverwaltung | Steinbruchstrasse 18 | 7001 Chur | gr.ch (Steuerverwaltung Kontakt) |

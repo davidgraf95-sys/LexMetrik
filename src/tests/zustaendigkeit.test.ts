@@ -401,7 +401,7 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
     for (const k of ['SG', 'AI', 'BL', 'LU'] as const) expect(OBERE_INSTANZEN[k].name).toContain('Kantonsgericht');
     expect(OBERE_INSTANZEN.BS.name).toContain('Appellationsgericht');
     expect(OBERE_INSTANZEN.BE.plzOrt).toBe('3012 Bern');   // Audit-Korrektur (nicht 3001)
-    expect(OBERE_INSTANZEN.LU.plzOrt).toBe('6003 Luzern'); // Audit-Korrektur (nicht 6002)
+    expect(OBERE_INSTANZEN.LU.plzOrt).toBe('6002 Luzern'); // Re-Audit 6.6.: Postadresse
     expect(OBERE_INSTANZEN.GE.name).toContain('Cour de justice');
   });
   it('Fristen-Hinweis trägt die verifizierten Normen (311/314/321 ZPO, 100/46 BGG)', async () => {
@@ -425,7 +425,7 @@ describe('Handelsgerichte (Datenschicht, Anordnung 5.6.2026)', () => {
     expect(HG_KANTONE.sort()).toEqual(['AG', 'BE', 'SG', 'ZH']);
     expect(HANDELSGERICHTE.ZH?.strasse).toContain('Hirschengraben 15');
     expect(HANDELSGERICHTE.BE?.plzOrt).toBe('3012 Bern');
-    expect(HANDELSGERICHTE.AG?.strasse).toContain('Obere Vorstadt 38');
+    expect(HANDELSGERICHTE.AG?.strasse).toContain('Obere Vorstadt 40'); // Re-Audit 6.6.: Nr. 38 = Obergericht
     expect(HANDELSGERICHTE.SG?.strasse).toContain('Klosterhof 1');
     expect(handelsgerichtFuer('LU')).toBeNull();
   });

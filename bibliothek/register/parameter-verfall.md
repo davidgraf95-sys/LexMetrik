@@ -59,3 +59,8 @@ publizierte Nachfolgefassung; der ✓2-Befund vom 5.6. («in Vollzug bis
 1.7.2026 aktiv prüfen, welche Aussage zutrifft; bis dahin Hinweis in
 zustaendigkeitKosten.SG unverändert lassen.
 
+## FR Bezirksgericht Saane — PROVISORISCHE Adresse (Re-Audit 6.6.2026)
+Route d'Englisberg 13, 1763 Granges-Paccot ist ein Provisorium (Umzug
+April 2026, Dauer ~2 Jahre; vorher Route des Arsenaux 17). → ca. Anfang
+2028 Rückzug/Definitivum prüfen.
+

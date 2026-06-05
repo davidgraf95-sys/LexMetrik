@@ -333,7 +333,7 @@ Staatskalender SZ) und dient der manuellen Bestimmung.
   Arth/Lachen: amtlich nur Postfach (6410 Goldau / PF 626, 8853 Lachen).
 - ⚠ DIVERGENZ Ingenbohl: ingenbohl.ch verweist auf das Vermittleramt
   EINSIEDELN (Eisenbahnstrasse 20a); der Staatskalender führt Ingenbohl im
-  Vermittlerkreis GERSAU (Rüegg, Brunnen). Vor Übernahme klären — bis dahin
+  Vermittlerkreis GERSAU (Rüegg, Brunnen). Re-Audit 6.6.2026 ENTSCHIEDEN: massgebliche Eingabeadresse = EINSIEDELN (ingenbohl.ch direkt) — bis zur SZ-Gesamtlösung
   bleibt SZ Verzeichnis-Fallback (personengebundene Ämter).
 - Übrige Klein-/Sammelgemeinden: weiterhin offen (vermittler-sz.ch JS-only).
 

@@ -166,3 +166,10 @@ Quelle: [justiz-gr.ch – Vermittlerämter](https://www.justiz-gr.ch/schlichtung
 - **TI Locazione:** 9 physische Mietschlichtungs-Standorte sicher; «Chiasso» als eigenes Mietbüro **nicht bestätigt** (allgemeines Conciliazione-Büro; Mietsachen → Mendrisio). 11er-Zählung der Erstrecherche beruht auf getrennter Zählung Lugano Est/Ovest + Chiasso.
 - **VS:** Kein zentrales Adressregister der 122 juge-de-commune; amtliche Regel «Adresse = Gemeindeverwaltung» belegt, Namensliste auf vs.ch, 3 Beispiele verifiziert.
 - **GR:** Vollständig (11/11); zwei Ämter nur mit Postfach.
+
+## RE-AUDIT-NACHTRAG (6.6.2026)
+- TI Chiasso-Restzweifel WIDERLEGT: eigenes Ufficio di conciliazione,
+  Piazza Bernasconi 1, 6830 Chiasso (chiasso.ch direkt) — produktive
+  Daten waren bereits korrekt. TI Circolo Bellinzona ENTSCHIEDEN:
+  Sitz Piazza Grande 3, 6512 Giubiasco (Nebenbüro Bellinzona).
+

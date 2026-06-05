@@ -243,3 +243,11 @@ Quellen: gerichte-zh.ch (Miete › Schlichtungsbehörden sowie die einzelnen Bez
 - Schlichtungsbehörde nach GlG: https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-zuerich/schlichtungsbehoerde
 
 **Gesamterfassung:** 171 Friedensrichterämter + 12 paritätische Schlichtungsbehörden Miete/Pacht + 1 Schlichtungsbehörde nach GlG. Keine Adressen erfunden; alle Adressen aus den genannten amtsnahen/offiziellen Quellen verifiziert.
+
+## RE-AUDIT-NACHTRAG (6.6.2026, Paket 2/4)
+- vfzh.ch führt neu **Zell** separat: | Zell | Friedensrichteramt Zell | c/o M. Müller, Am Koppenholz 1 | 8483 Kollbrunn | — unten als Tabellenzeile ergänzt (für den Generator).
+- Kilchberg/Rüschlikon werden bei vfzh inzwischen GETRENNT geführt (gleiches Amt) — kombinierte Zuordnung bleibt funktional korrekt.
+- Bestandsangabe «171, vollständig» damit relativiert (Stand heute: 172 Gebietseinträge).
+
+| Zell | Friedensrichteramt Zell | Am Koppenholz 1 | 8483 Kollbrunn |
+

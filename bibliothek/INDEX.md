@@ -59,7 +59,7 @@ bibliothek/
 |---|---|---|
 | [strafbehoerden-kantone.md](behoerden/strafbehoerden-kantone.md) | Staatsanwaltschaften/Jugendanwaltschaften/Übertretungsbehörden 26 Kantone + Bund (BA/AB-BA), EG-StPO-Mapping | SZ-Korrektur (Schmiedgasse 21, JugA Bennau); ALLE Lücken geschlossen (AG-Hausnummern 6.6.; VD-Korrektur: Konstituierung in LMPu 173.21 Art. 3/4; VS LACPP Art. 6/7; JU → OJ statt LiCPP) |
 
-### Verwaltung — einfach belegt (Aufbau läuft)
+### Verwaltung — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Offen |
 |---|---|---|
 | [verwaltungsbehoerden-kantone.md](behoerden/verwaltungsbehoerden-kantone.md) | Wichtigste Verwaltungsbehörden je Kanton (VGer/Staatskanzlei/Steuer+Rekurs/StVA/Migration/SozVGer) — ALLE 26 Kantone (u. a. GR-Obergericht 1.1.2025, VD-Hermitage Juli 2025; JU: Cour des assurances eigenständig) | Doppelcheck ausstehend |

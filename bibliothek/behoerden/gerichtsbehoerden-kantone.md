@@ -324,3 +324,24 @@ Davids Abnahme.
 Strassenname/Hausnummer geführt). Quelle: www4.ti.ch …/preture/leventina,
 Abruf 6.6.2026. Damit ist die letzte offene TI-Pretura-Zeile geschlossen.
 
+## RE-AUDIT-KORREKTUR (6.6.2026, Paket 4/4 Querkonsistenz)
+**BL Steuergericht: Kreuzbodenweg 1, 4410 Liestal IST KORREKT** (amtlich
+baselland.ch); nur das Enteignungsgericht sitzt an der Gitterlistrasse 5.
+Die frühere ✓2-Schlussfolgerung («Kreuzbodenweg 1 = Drittquellen-Artefakt»)
+war ein FEHLER und ist hiermit aufgehoben.
+
+## RE-AUDIT-NACHTRAG GERICHTE (6.6.2026, Paket 1/4)
+- **AG Handelsgericht: Obere Vorstadt 40, Postfach, 5001 Aarau**
+  (Besucher 5000) — eigene HG-Kontaktseite; Nr. 38 ist das Obergericht.
+  KORREKTUR in handelsgerichte.ts vollzogen.
+- **NE Tribunal cantonal: Case postale 1, 2002 Neuchâtel 2** (CP 3174/
+  2000 überholt; Hausnummer Pommier 1 bestätigt).
+- **LU Kantonsgericht:** Brief = PF 3569, 6002 (6003 nur Paket) —
+  Engine auf Postadresse umgestellt.
+- BPatGer-Verhandlungsort im BVGer-Gebäude: jetzt BESTÄTIGT
+  (bundespatentgericht.ch) — «unverifiziert»-Vermerk aufgehoben.
+- FR TA Sarine Route d'Englisberg 13: bestätigt, aber PROVISORISCH
+  (Umzug April 2026, ~2 Jahre) → Verfallsregister.
+- Alle übrigen re-verifizierten Zeilen (Bund 4/4, 24/26 obere
+  Instanzen, ZH/BE/SG-HG, kantonale Stichproben): BESTÄTIGT.
+
