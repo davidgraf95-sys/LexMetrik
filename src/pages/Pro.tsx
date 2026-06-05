@@ -21,24 +21,29 @@ export function Pro() {
 
   return (
     <div className="space-y-6">
-      {/* Schlanker Einzeilen-Hero (analog Free, Entscheid 5.6.2026):
-          Titel + Claim auf EINER Zeile, Kennzahlen kompakt rechts. */}
-      <section className="pt-3 sm:pt-4 pb-3 border-b border-line">
-        <div className="flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-0.5 sm:whitespace-nowrap">
-          <h1 className="font-display font-semibold text-ink-900 text-h3 shrink-0">
-            <span className="lc-overline text-brass-700 mr-2 align-middle">Pro</span>
-            Der vollständige Katalog für die Praxis.
+      {/* Hero (Neubau 5.6.2026, Richtung «nüchtern & juristisch» wie Free):
+          Nutzen-Headline statt Etikett, konkrete Arbeitsfelder im Untertitel,
+          Kennzahlen-Messzeile auf ALLEN Breiten (vorher erst ab lg). Bewusst
+          kompakter als der Free-Hero – Pro ist eine tägliche Arbeitsseite,
+          der Katalog soll ohne Scrollen erreichbar bleiben. */}
+      <section className="pt-6 pb-7 sm:pt-8 border-b border-line">
+        <div className="max-w-3xl space-y-4">
+          <p className="lc-overline text-brass-700">Pro · Schweizer Recht, berechenbar</p>
+          <h1 className="font-display font-semibold text-ink-900 text-h2 leading-tight">
+            Der vollständige Katalog für die anwaltliche Praxis.
           </h1>
-          <p className="text-body-s text-ink-500 sm:truncate sm:min-w-0">
-            Alle Rechner und Vorlagen – mit nachvollziehbarem Rechenweg und exakten Normverweisen.
+          <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
+            Verfahrens- und Rechtsmittelfristen, Verjährung, Betreibung und Konkurs, Arbeits-
+            und Mietrecht – dazu Vertrags- und Eingabe-Vorlagen. Jeder Rechenweg offengelegt,
+            jede Norm exakt verlinkt, exportierbar als PDF-Rechenbericht.
           </p>
-          <span className="hidden lg:inline-flex items-baseline gap-4 ml-auto pl-4 shrink-0 num text-body-s text-ink-500">
-            {/* Primär: sofort Verfügbares; Katalog/Gebiete sekundär (Phase 5).
-                Die Ehrlichkeit «ungeprüft» trägt das orange Badge AUF der Karte. */}
+          {/* Primär: sofort Verfügbares; Katalog/Gebiete sekundär (Phase 5).
+              Die Ehrlichkeit «ungeprüft» trägt das orange Badge AUF der Karte. */}
+          <p className="num text-body-s text-ink-500 flex flex-wrap items-baseline gap-x-5 gap-y-1">
             <span className="text-brass-700 font-medium">{verfuegbar.length} sofort verfügbar</span>
             <span><span className="font-medium text-ink-900">{alle.length}</span> im Katalog</span>
-            <span><span className="font-medium text-ink-900">{gebiete}</span> Gebiete</span>
-          </span>
+            <span><span className="font-medium text-ink-900">{gebiete}</span> Rechtsgebiete</span>
+          </p>
         </div>
       </section>
 
