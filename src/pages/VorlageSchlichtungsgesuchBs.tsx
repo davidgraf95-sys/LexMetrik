@@ -45,8 +45,9 @@ const BANNER_SG: PdfBanner = {
 };
 
 export function VorlageSchlichtungsgesuchBs() {
-  // KEIN speicherKey: Anweisung «keine Browser-Storage-APIs» – Zustand nur im Speicher.
-  const { a, set, schritt, setSchritt, kopiert, kopieren } =
+  // KEIN speicherKey: Anweisung «keine Browser-Storage-APIs» – Zustand nur im
+  // Speicher; zuruecksetzen leert entsprechend nur den Speicher-Zustand.
+  const { a, set, schritt, setSchritt, kopiert, kopieren, zuruecksetzen } =
     useWizardState<SgAnswers>({ defaults: SG_DEFAULTS });
 
   const routing = useMemo(() => sgRouting(a), [a]);
@@ -524,6 +525,7 @@ export function VorlageSchlichtungsgesuchBs() {
       norms={card?.norms ?? []}
       badge="Papierform · eigenhändig unterzeichnen"
       fussnote="Eingaben werden nicht gespeichert – sie bestehen nur, solange diese Seite geöffnet ist."
+      zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       weiterDeaktiviert={stopp}
       inhalt={inhalt()}

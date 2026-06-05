@@ -27,9 +27,9 @@ export function VorlagenWizardRahmen({
   intro: ReactNode;
   norms: { label: string; url: string }[];
   badge: string;
-  /** Eigener Speicher-Hinweis (z. B. «wird nicht gespeichert»); Alternative zu zuruecksetzen. */
+  /** Eigener Speicher-Hinweis (z. B. «wird nicht gespeichert»); ersetzt den Standard-Hinweis. */
   fussnote?: ReactNode;
-  /** Wenn gesetzt: Standard-Hinweis «verlassen den Browser nicht» + Löschen-Button. */
+  /** Wenn gesetzt: sichtbarer «Eingaben zurücksetzen»-Button (mit Rückfrage) + Speicher-Hinweis. */
   zuruecksetzen?: () => void;
   schritte: readonly { id: string; label: string }[];
   schritt: number;
@@ -60,14 +60,20 @@ export function VorlagenWizardRahmen({
           ))}
           <span className="lc-badge lc-badge-warn">{badge}</span>
         </div>
-        {zuruecksetzen ? (
-          <p className="text-xs text-ink-500">
-            Ihre Eingaben verlassen den Browser nicht (lokale Zwischenspeicherung).{' '}
-            <button type="button" onClick={zuruecksetzen} className="text-brass-700 hover:text-brass-600 underline-offset-2 hover:underline">Eingaben löschen</button>
-          </p>
-        ) : fussnote ? (
-          <p className="text-xs text-ink-500">{fussnote}</p>
-        ) : null}
+        {(zuruecksetzen || fussnote) && (
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 pt-1">
+            {zuruecksetzen && (
+              <button type="button"
+                onClick={() => { if (window.confirm('Alle Eingaben dieser Vorlage zurücksetzen?')) zuruecksetzen(); }}
+                className="lc-btn-outline lc-btn-sm">
+                ↺ Eingaben zurücksetzen
+              </button>
+            )}
+            <p className="text-xs text-ink-500">
+              {fussnote ?? 'Ihre Eingaben verlassen den Browser nicht (lokale Zwischenspeicherung).'}
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Stepper */}
