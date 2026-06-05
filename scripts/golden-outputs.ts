@@ -18,6 +18,9 @@ import { berechneVerzugszins } from '../src/lib/verzugszins';
 import { berechneLohnfortzahlung } from '../src/lib/lohnfortzahlung';
 import { berechneErbteilung } from '../src/lib/erbteilung';
 import { berechneAllgemeineFrist, berechneRueckwaertsFrist, tageZwischen, zustellHinweis, icsFuerFrist } from '../src/lib/allgemeineFrist';
+import { bestimmeZustaendigkeit, bestimmeRechtsmittel } from '../src/lib/zustaendigkeit';
+import { bestimmeSchkgZustaendigkeit } from '../src/lib/schkgZustaendigkeit';
+import { bestimmeStrafZustaendigkeit } from '../src/lib/strafZustaendigkeit';
 
 import { testamentZusammenstellen, TESTAMENT_DEFAULTS } from '../src/lib/vorlagen/testament';
 import { pvZusammenstellen, PV_DEFAULTS } from '../src/lib/vorlagen/patientenverfuegung';
@@ -80,6 +83,22 @@ f('allg:rueck', () => berechneRueckwaertsFrist({ stichtag: '2026-06-30', laenge:
 f('allg:zwischen', () => tageZwischen('2026-06-01', '2026-07-01'));
 f('allg:zustell', () => zustellHinweis('einschreiben', '2026-04-01'));
 f('allg:ics', () => icsFuerFrist({ titel: 'Fristende', endISO: '2026-06-30', vorfristTage: 3 }));
+
+// ── Zuständigkeits-Engines (deklarierte Erweiterung 6.6.2026: neue Fälle,
+// bestehende 53 unverändert — Vergleich gegen alte Baseline bleibt gültig,
+// neue IDs werden beim ersten Schreiben Teil der Baseline) ──────────────────
+f('zust:geld:80k', () => bestimmeZustaendigkeit({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 80_000 }));
+f('zust:miete:kuendigungsschutz', () => bestimmeZustaendigkeit({ streitsache: 'miete_wohn_geschaeft', vermoegensrechtlich: true, streitwertCHF: 25_000, mieteUnterfall: 'kuendigungsschutz' }));
+f('zust:gewaltschutz', () => bestimmeZustaendigkeit({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null, persoenlichkeitUnterfall: 'gewaltschutz' }));
+f('zust:ip:gsv', () => bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 12_000, gerichtsstandsvereinbarung: true }));
+f('rm:arbeit:15k', () => bestimmeRechtsmittel({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 15_000 }));
+f('rm:geld:9999', () => bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 9_999 }));
+f('schkg:einleiten:grundpfand', () => bestimmeSchkgZustaendigkeit({ anliegen: 'betreibung_einleiten', schuldnerTyp: 'jur_person_hr', pfand: 'grundpfand', forderungCHF: 250_000 }));
+f('schkg:ro:prov', () => bestimmeSchkgZustaendigkeit({ anliegen: 'rechtsoeffnung', schuldnerTyp: 'natuerlich_wohnsitz', rechtsoeffnungArt: 'provisorisch' }));
+f('schkg:widerspruch:dritter_ch', () => bestimmeSchkgZustaendigkeit({ anliegen: 'widerspruch', schuldnerTyp: 'natuerlich_wohnsitz', widerspruchKonstellation: 'gewahrsam_dritter_ch' }));
+f('straf:anzeige:antragsdelikt', () => bestimmeStrafZustaendigkeit({ anliegen: 'anzeige', tatort: 'bekannt', antragsdelikt: true }));
+f('straf:kaskade:ergreifung', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'ergreifungsort', mehrereTatenVerschOrte: true }));
+f('straf:unternehmen', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'bekannt', spezialforum: 'unternehmen', uebertretung: false }));
 
 // ── Vorlagen: assemble-Ergebnisse (Dokument + Protokoll) ────────────────────
 f('vorl:testament', () => testamentZusammenstellen({
