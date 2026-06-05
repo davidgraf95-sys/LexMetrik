@@ -1,9 +1,47 @@
 # Kantonale Anwaltstarife (Parteientschädigung / unentgeltliche Vertretung)
 
-**Erstellt:** 5.6.2026 · **Abrufdatum: 5.6.2026** · **Status: einfach belegt
-(wörtlich aus amtlichen Erlassen); Zweitprüfung ausstehend.**
+**Erstellt:** 5.6.2026 · **Abrufdatum: 5.6.2026** · **Status: ZWEIFACH GEPRÜFT**
+(adversarialer Durchgang 5.6.2026: ~30 Betrags-Stichproben bestätigt; ZWEI
+Korrekturen unten eingearbeitet [GL-Tarif existiert; UR-Staffel beschafft];
+ZH-Erlasse mangels API-Flag nicht maschinell aktualitätsprüfbar).**
 Regelungsgegenstand: Parteientschädigung (Art. 95/96 ZPO) und Entschädigung
 der unentgeltlichen Vertretung — NICHT das frei vereinbare Honorar.
+
+
+## ✓2-KORREKTUREN aus dem adversarialen Durchgang (5.6.2026)
+
+### GL — Erstbefund «kein Tarif» WIDERLEGT
+Es existiert ein in Kraft stehender Tarif der **Anwaltskommission**:
+**GS III I/5 «Tarif für die Entschädigung der öffentlichen Verteidigung und
+der unentgeltlichen Rechtsvertretung»** (12.3.2004, Stand 1.1.2008,
+abrogated=false; gilt per Art. 1 ausdrücklich auch für die UR-Vertretung
+in ZIVILsachen). **UR-Stundenansatz Art. 6: 180 Fr./h**; **Zivil-Streitwert-
+staffel Art. 8** (bis 1'000 → bis 500 · 1'000–8'000 → 500–1'500 · …
+100'000–500'000 → 5'000–15'000 · …). Differenzierung: Für die inter-partes-
+PARTEIENTSCHÄDIGUNG bleibt es beim Ermessen (Art. 20 Abs. 1 EG ZPO) — aber
+Art. 20 Abs. 2 lautet in der GELTENDEN Fassung (1.7.2022) «Das **Obergericht
+erlässt** einen Tarif» (zwingend; das frühere «Anwaltskommission kann» ist
+veraltet zitiert).
+
+### UR — Erstbefund «Staffel NICHT GEFUNDEN» überholt
+Die neue Fassung Stand **1.1.2026** hat eine Textebene. **Erlass-Korrektur:**
+Die Staffel steht im **GGebR RB 2.3232, Art. 28** (GGebV 2.3231 Art. 18
+delegiert nur): bis 5'000 → **500–2'500** · 5'001–20'000 → **1'000–6'000** ·
+20'001–50'000 → **3'000–10'000** · 50'001–100'000 → **3'500–15'000** ·
+100'001–500'000 → **5'000–30'000** · über 500'000 → **1.5–4 %**; ohne SW
+500–15'000; Familienrecht 1'000–10'000. **Art. 34 Stundenansätze: ordentlich
+i.d.R. 260 Fr.; UR/amtliche Verteidigung i.d.R. 195 Fr.** (Praktikant ½).
+Frühere Summary-Angabe «UR 180/h» war falsch.
+
+### Terminierte Nachfolgefassungen (→ Parameter-Verfallsregister)
+- **SG GKV 941.12: in Vollzug nur bis 30.6.2026** — Nachfolge ab 1.7.2026!
+- **GR HV 310.250 (Anwaltstarif): bis 31.12.2026** — Nachfolge ab 1.1.2027.
+- **BE EAV 168.711: bis 31.12.2026** — Nachfolge ab 1.1.2027.
+- Stand-Updates ohne Betragsänderung: AI GGV geltend 1.1.2024 (nicht 2014);
+  TG VGG geltend 1.1.2022 (nicht 2011); BE VKD neu Stand 1.5.2026
+  (Art. 35 unverändert); GL Kosten-VO 1.1.2026.
+
+---
 
 ## Teil ZH–BL (Kantone 1–13)
 

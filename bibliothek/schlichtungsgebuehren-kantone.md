@@ -1,7 +1,10 @@
 # Schlichtungsgebühren in Zivilsachen — kantonale Tarife
 
 **Erstellt:** 5.6.2026 · **Abrufdatum aller Quellen: 5.6.2026**
-**Status: LISTE, NICHT abgenommen; zweiter Prüfdurchgang ausstehend.**
+**Status: ZWEIFACH GEPRÜFT** (adversarial 5.6.2026: alle Stichproben
+bestätigt, kein Erlass aufgehoben; Stand-Updates: AI geltend 1.1.2024,
+TG geltend 1.1.2022, BE VKD 1.5.2026 — Beträge je unverändert).
+NICHT abgenommen.
 Alle Gebührenrahmen wörtlich aus den amtlichen Erlass-Volltexten (PDF der
 kantonalen Gesetzessammlungen) — keine Sekundärquellen, keine Schätzungen.
 
@@ -81,7 +84,7 @@ Bundesrechtliche Kostenlosigkeit (Art. 113 Abs. 2 ZPO) ist vorausgesetzt und hie
 | | |
 |---|---|
 | **Gebührenrahmen** | Vermittler/Schlichtungsstellen (Art. 7): **Vorstand Fr. 50–300**; Erteilung Klagebewilligung Fr. 20–100; Urteilsvorschlag/Entscheid Fr. 50–500; bei Einigung/Rückzug/Säumnis Fr. 50–200. Mutwillige Prozessführung (Schlichtungsstellen) Fr. 50–500 (Art. 8). |
-| **Rechtsgrundlage** | **Verordnung über die Gebühren der Gerichte (GGV)** vom 1.10.2001 (Stand 1.12.2014), **GS 173.810**, Art. 7. |
+| **Rechtsgrundlage** | **Verordnung über die Gebühren der Gerichte (GGV)** vom 1.10.2001 (✓2: geltend Stand 1.1.2024), **GS 173.810**, Art. 7. |
 | **URL** | https://ai.clex.ch/app/de/texts_of_law/173.810 ; Volltext via https://www.lexfind.ch/tolv/5062/de — Abruf 5.6.2026 |
 | **Bemerkungen** | Tarif gilt ausdrücklich «für die amtlichen Kosten des Verfahrens vor Vermittler, Schlichtungsstellen und Gerichten» (Art. 1). |
 
@@ -117,7 +120,7 @@ Bundesrechtliche Kostenlosigkeit (Art. 113 Abs. 2 ZPO) ist vorausgesetzt und hie
 | | |
 |---|---|
 | **Gebührenrahmen** | Friedensrichter (§ 7): **Vermittlungsvorstand** nach Streitwert: bis 2'000 → **Fr. 100–150**; 2'001–8'000 → 120–200; 8'001–30'000 → 160–300; 30'001–100'000 → 240–400; über 100'000 → **320–500**. Ohne bestimmten Streitwert Fr. 100–500. Klageabschreibung nach Vorladung Fr. 50. Urteil als Einzelrichter Fr. 100–300. |
-| **Rechtsgrundlage** | **Verordnung des Grossen Rates über die Gebühren der Strafverfolgungs- und Gerichtsbehörden (VGG)** vom 13.5.1992, **RB 638.1**, § 7 (Fassung GRV 17.6.2009, in Kraft seit 1.1.2011). |
+| **Rechtsgrundlage** | **Verordnung des Grossen Rates über die Gebühren der Strafverfolgungs- und Gerichtsbehörden (VGG)** vom 13.5.1992, **RB 638.1**, § 7 (✓2: geltend Stand 1.1.2022; Beträge unverändert). |
 | **URL** | https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1 (PDF: https://www.rechtsbuch.tg.ch/api/de/versions/51/pdf_file) — Abruf 5.6.2026 |
 | **Bemerkungen** | Die ältere «Kostenverordnung» vom 6.11.2003 (mit Begriffen wie «Weisungsschein/Amtsgerichtspräsident») ist **vorrevidiert/überholt**; massgebend ist die VGG RB 638.1 in der ab 1.1.2011 geltenden Fassung. Friedensrichter ziehen Gebühren selbst ein; Stundung/Erlass durch das Amt selbst. |
 

@@ -34,3 +34,11 @@ Stand des Registers: 5.6.2026.
   gesperrt; «Umzug im Sommer 2026». NICHT das Tribunal cantonal!
 - **Prüfen:** ab Juli 2026 auf ne.ch, vor jeder Stammdaten-Übernahme NE.
 - **Quelle:** ne.ch/Presse (Doppelcheck-Durchgang 5.6.2026).
+
+## Terminierte Nachfolgefassungen kantonaler Kosten-Erlasse (✓2-Befund 5.6.2026)
+- **SG Gerichtskostenverordnung (GKV, sGS 941.12): in Vollzug BIS 30.6.2026**
+  — ab 1.7.2026 gilt eine Nachfolgefassung → vor jeder Nutzung ab Juli 2026
+  neu ziehen (Staffeln können ändern!).
+- **GR Honorarverordnung (HV, BR 310.250): bis 31.12.2026** (Nachfolge 1.1.2027).
+- **BE EAV (BSG 168.711, amtliche Anwälte): bis 31.12.2026** (Nachfolge 1.1.2027).
+- Quelle: OrdoLex-API `current_version`-Metadaten (Doppelcheck 5.6.2026).
