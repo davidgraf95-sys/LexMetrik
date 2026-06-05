@@ -321,3 +321,45 @@ describe('Zuständigkeit — Ausbau: Vertrag (Art. 31), AVG (Art. 34 II), GSV (A
     expect(bestimmeZustaendigkeit(geld({ streitwertCHF: 150_000 })).weichen.some((w) => w.includes('Art. 63'))).toBe(true);
   });
 });
+
+describe('Zuständigkeit — Praxis-Umbau: Kostenfreiheit (Art. 113 Abs. 2) + Fahrplan + Kosten-Daten', () => {
+  it('Schlichtung kostenlos: Miete ✓, GlG ✓, Arbeit ≤30k ✓; Arbeit >30k ✗; Arbeit ohne SW ✗ (nicht subsumierbar); Geldforderung ✗', () => {
+    const miete = bestimmeZustaendigkeit({ streitsache: 'miete_wohn_geschaeft', vermoegensrechtlich: true, streitwertCHF: 80_000, mieteUnterfall: 'sonstige' });
+    expect(miete.schlichtung.kostenlos).toBe(true);
+    expect(miete.schlichtung.kostenlosGrund).toContain('lit. c');
+    const glg = bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 50_000, glgBetroffen: true });
+    expect(glg.schlichtung.kostenlosGrund).toContain('lit. a');
+    expect(bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 30_000 }).schlichtung.kostenlos).toBe(true);
+    expect(bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 30_001 }).schlichtung.kostenlos).toBe(false);
+    expect(bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: false, streitwertCHF: null }).schlichtung.kostenlos).toBe(false);
+    expect(bestimmeZustaendigkeit(geld()).schlichtung.kostenlos).toBe(false);
+  });
+  it('Fahrplan: Schlichtungsweg hat 4 Schritte inkl. Klagebewilligungs-Frist; Direktklage 3; Scheidung eigener Pfad', async () => {
+    const { fahrplanSchritte } = await import('../lib/zustaendigkeitFahrplan');
+    const sgWeg = fahrplanSchritte(bestimmeZustaendigkeit(geld()), { vorlageVerfuegbar: true, stelleBekannt: true });
+    expect(sgWeg.length).toBe(4);
+    expect(sgWeg[2].text).toContain('3 Monaten');
+    expect(sgWeg[2].text).toContain('30 Tage');
+    const direkt = fahrplanSchritte(bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 100_000 }), { vorlageVerfuegbar: false, stelleBekannt: false });
+    expect(direkt.length).toBe(3);
+    expect(direkt[0].titel).toContain('Klage verfassen');
+    const scheidung = fahrplanSchritte(bestimmeZustaendigkeit({ streitsache: 'scheidung', vermoegensrechtlich: false, streitwertCHF: null }), { vorlageVerfuegbar: false, stelleBekannt: false });
+    expect(scheidung[0].titel).toContain('Scheidungsbegehren');
+  });
+  it('Kosten-Daten: alle 26 Kantone mit Schlichtungs- UND Gerichtsrahmen samt Erlass', async () => {
+    const { ZUSTAENDIGKEIT_KOSTEN } = await import('../data/zustaendigkeitKosten');
+    const { KANTONE } = await import('../lib/kantone');
+    for (const k of KANTONE) {
+      const e = ZUSTAENDIGKEIT_KOSTEN[k];
+      expect(e, k).toBeDefined();
+      expect(e.schlichtung.text.length, k).toBeGreaterThan(3);
+      expect(e.schlichtung.erlass, k).toMatch(/§|Art\./);
+      expect(e.gericht.erlass, k).toMatch(/§|Art\./);
+    }
+    // Stichproben gegen die zweifach geprüften Dossiers
+    expect(ZUSTAENDIGKEIT_KOSTEN.SZ.schlichtung.text).toContain("100–1'000");
+    expect(ZUSTAENDIGKEIT_KOSTEN.AG.schlichtung.erlass).toContain('662.110'); // GebührD, NICHT aufgehobenes VKD
+    expect(ZUSTAENDIGKEIT_KOSTEN.SG.schlichtung.hinweis).toContain('30.6.2026');
+    expect(ZUSTAENDIGKEIT_KOSTEN.JU.schlichtung.text).toContain('Punkte');
+  });
+});

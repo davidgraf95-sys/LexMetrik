@@ -16,6 +16,8 @@ import {
 } from '../../lib/zustaendigkeit';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
+import { kostenFuer } from '../../data/zustaendigkeitKosten';
+import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
 import { plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
@@ -252,6 +254,10 @@ export function ZustaendigkeitForm() {
     && r.schlichtung.behoerdeTyp === 'ordentlich' && sgTyp
     ? sgPrefillKodieren({ typ: sgTyp, betragCHF: vermoegensrechtlich ? streitwert : null, kanton: 'BS' })
     : null;
+
+  // Praxis-Fahrplan + kantonale Kosten (Umbau 5.6.2026)
+  const fahrplan = r ? fahrplanSchritte(r, { vorlageVerfuegbar: false, stelleBekannt: !!(stelle || recherche) }) : null;
+  const kosten = f.kanton ? kostenFuer(f.kanton) : null;
 
   const eingabeText = r === null ? '' : r.eingabeArt === 'scheidungsbegehren_oder_klage'
     ? 'Gemeinsames Scheidungsbegehren (bei Einigung) oder Scheidungsklage'
@@ -509,6 +515,59 @@ export function ZustaendigkeitForm() {
               </div>
             ))}
           </div>
+
+          {/* Praxis-Fahrplan (Umbau «maximal praxistauglich», 5.6.2026) */}
+          {fahrplan && f.instanz === 'einleitung' && (
+            <div className="lc-card p-5 space-y-3">
+              <p className="lc-overline">Ihr Fahrplan</p>
+              <ol className="space-y-2.5">
+                {fahrplan.map((s, i) => (
+                  <li key={s.titel} className="flex gap-3">
+                    <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
+                    <span>
+                      <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
+                      <span className="block text-body-s text-ink-600">{s.text}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {/* Kosten (kantonale Rahmen, zweifach geprüfte Erlass-Daten) */}
+          {f.instanz === 'einleitung' && (r.schlichtung.obligatorisch || r.eingabeArt === 'klage_direkt') && (
+            <div className="lc-card p-5 space-y-2.5">
+              <p className="lc-overline">Voraussichtliche Kosten{f.kanton ? ` (${f.kanton})` : ''}</p>
+              {r.schlichtung.obligatorisch && (
+                r.schlichtung.kostenlos ? (
+                  <p className="text-body-s text-ink-800">
+                    <span className="font-medium text-ink-900">Schlichtungsverfahren: kostenlos.</span>{' '}
+                    {r.schlichtung.kostenlosGrund}. Keine Parteientschädigung im Schlichtungsverfahren (Art. 113 Abs. 1 ZPO).
+                  </p>
+                ) : kosten ? (
+                  <p className="text-body-s text-ink-800">
+                    <span className="font-medium text-ink-900">Schlichtungsgebühr: CHF {kosten.schlichtung.text}.</span>{' '}
+                    <span className="text-ink-500">({kosten.schlichtung.erlass})</span>
+                    {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ {kosten.schlichtung.hinweis}</span>}
+                  </p>
+                ) : (
+                  <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
+                )
+              )}
+              {kosten && (
+                <p className="text-body-s text-ink-800">
+                  <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz: {/^[A-Za-zÜü]/.test(kosten.gericht.text) ? '' : 'CHF '}{kosten.gericht.text}.</span>{' '}
+                  <span className="text-ink-500">({kosten.gericht.erlass})</span>
+                  {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
+                </p>
+              )}
+              <p className="text-xs text-ink-500">
+                Rahmen aus den geltenden kantonalen Erlassen (Stand 5.6.2026) — die konkrete Festsetzung liegt bei der Behörde.
+                Hinzu kommen ggf. eigene Anwaltskosten; die unterliegende Partei trägt im Gerichtsverfahren in der Regel die
+                Kosten und eine Parteientschädigung (Art. 106 ZPO).
+              </p>
+            </div>
+          )}
 
           {/* Konkrete Stelle (Kantonsschicht) + Vorlagen-Sprung */}
           {stelle && (

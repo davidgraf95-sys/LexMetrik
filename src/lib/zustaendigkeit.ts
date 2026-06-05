@@ -114,6 +114,12 @@ export interface ZustaendigkeitErgebnis {
     verzichtGemeinsam: boolean;
     verzichtEinseitig: boolean;
     behoerdeTyp: SchlichtungsbehoerdeTyp;
+    /** Bundesrechtliche Kostenfreiheit des SCHLICHTUNGSverfahrens
+     *  (Art. 113 Abs. 2 ZPO — am Wortlaut verifiziert, 5.6.2026):
+     *  GlG · Miete/Pacht Wohn-/Geschäftsräume · Arbeit bis CHF 30 000.
+     *  (BehiG/MitwG/KVG-Zusatz sind als Streitsachen nicht abgebildet.) */
+    kostenlos: boolean;
+    kostenlosGrund: string | null;
   };
   entscheidkompetenz: { entscheidAufAntrag: boolean; entscheidvorschlag: boolean };
   oertlich: { gerichtsstand: string; bindung: 'dispositiv' | 'teilzwingend' | 'zwingend'; teilzwingend: boolean; normen: Normverweis[] };
@@ -341,6 +347,21 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   const behoerdeTyp: SchlichtungsbehoerdeTyp = istMiete
     ? 'paritaetisch_miete'
     : input.glgBetroffen ? 'paritaetisch_glg' : 'ordentlich';
+
+  // Kostenfreiheit der SCHLICHTUNG (Art. 113 Abs. 2 ZPO; Praxis-Ausbau
+  // 5.6.2026). Nur die hier abgebildeten Katalog-Fälle; lit. abis (Gewalt)
+  // ist gegenstandslos, weil dort die Schlichtung entfällt (198 lit. abis).
+  let kostenlosGrund: string | null = null;
+  if (obligatorisch) {
+    if (input.glgBetroffen) kostenlosGrund = 'Streitigkeit nach dem Gleichstellungsgesetz (Art. 113 Abs. 2 lit. a ZPO)';
+    else if (istMiete) kostenlosGrund = 'Miete/Pacht von Wohn- und Geschäftsräumen (Art. 113 Abs. 2 lit. c ZPO)';
+    else if (input.streitsache === 'arbeit' && sw !== null && sw <= ZPO_SCHWELLEN.VEREINFACHT) {
+      // Ohne bezifferten Streitwert ist «bis 30 000» nicht subsumierbar →
+      // dann KEINE Kostenfreiheits-Behauptung (ehrlich, §8).
+      kostenlosGrund = `Arbeitsverhältnis bis CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} (Art. 113 Abs. 2 lit. d ZPO)`;
+    }
+  }
+  const schlichtungKostenlos = kostenlosGrund !== null;
   if (obligatorisch) {
     rechenweg.push({
       beschreibung: behoerdeTyp === 'paritaetisch_miete'
@@ -465,7 +486,7 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
 
   return {
     verfahrensart,
-    schlichtung: { obligatorisch, entfaelltGrund, verzichtGemeinsam, verzichtEinseitig, behoerdeTyp },
+    schlichtung: { obligatorisch, entfaelltGrund, verzichtGemeinsam, verzichtEinseitig, behoerdeTyp, kostenlos: schlichtungKostenlos, kostenlosGrund },
     entscheidkompetenz: { entscheidAufAntrag, entscheidvorschlag },
     oertlich: { gerichtsstand, bindung, teilzwingend: bindung === 'teilzwingend', normen: oertlichNormen },
     eingabeArt,
