@@ -81,3 +81,30 @@ describe('schlichtungAufloesung — Typ-Routing und GlG-Fallback', () => {
     expect(schlichtungAufloesung('BE', 'ordentlich')).toEqual(schlichtungAufloesung('BE', 'ordentlich'));
   });
 });
+
+describe('PLZ-Auflösung (amtliches Ortschaftenverzeichnis) + ZH-Amt', () => {
+  it('PLZ → Gemeinde/Kanton: eindeutig, mehrgemeindig und unbekannt', async () => {
+    const { plzAufloesen } = await import('../data/plz/plzAufloesung');
+    expect(await plzAufloesen('4051')).toEqual([{ gemeinde: 'Basel', kanton: 'BS' }]);
+    const t8134 = await plzAufloesen('8134');
+    expect(t8134!.map((x) => x.gemeinde)).toContain('Adliswil');
+    expect(await plzAufloesen('0000')).toBeNull();
+    expect(await plzAufloesen('abc')).toBeNull();
+  });
+  it('ZH: Gemeinde → konkretes Friedensrichteramt (inkl. Klammer-Variante); Stadt Zürich → 6 Kreis-Ämter', async () => {
+    const { zhFriedensrichterFuer, zuerichKreisAemter } = await import('../data/schlichtung/zhAmt');
+    expect((await zhFriedensrichterFuer('Adliswil'))?.strasse).toBe('Zürichstrasse 10');
+    expect((await zhFriedensrichterFuer('Wald (ZH)'))?.plzOrt).toContain('8636');
+    expect((await zhFriedensrichterFuer('Wald'))?.plzOrt).toContain('8636'); // Klammer-Fallback
+    expect(await zhFriedensrichterFuer('Bern')).toBeNull();
+    expect((await zuerichKreisAemter()).length).toBe(6);
+  });
+  it('Kette PLZ → Gemeinde → ZH-Amt (8400 Winterthur → Stadthausstrasse 4a)', async () => {
+    const { plzAufloesen } = await import('../data/plz/plzAufloesung');
+    const { zhFriedensrichterFuer } = await import('../data/schlichtung/zhAmt');
+    const treffer = (await plzAufloesen('8400'))!;
+    expect(treffer.map((t) => t.gemeinde)).toContain('Winterthur');
+    const amt = await zhFriedensrichterFuer('Winterthur');
+    expect(amt?.strasse).toBe('Stadthausstrasse 4a');
+  });
+});

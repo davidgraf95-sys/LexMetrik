@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Field, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
@@ -16,6 +16,8 @@ import {
 } from '../../lib/zustaendigkeit';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
+import { plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
+import { zhFriedensrichterFuer, zuerichKreisAemter, type ZhAmt, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
 
@@ -141,6 +143,42 @@ const DEFAULTS: State = {
 export function ZustaendigkeitForm() {
   const [f, setF] = useState<State>(DEFAULTS);
   const set = <K extends keyof State>(k: K, v: State[K]) => setF((alt) => ({ ...alt, [k]: v }));
+
+  // ── PLZ-Auflösung (amtliches Ortschaftenverzeichnis, lazy) ────────────────
+  const [plzTreffer, setPlzTreffer] = useState<PlzTreffer[] | null>(null);
+  useEffect(() => {
+    let aktiv = true;
+    if (!/^\d{4}$/.test(f.plz)) { setPlzTreffer(null); return; }
+    plzAufloesen(f.plz).then((t) => { if (aktiv) setPlzTreffer(t); }).catch(() => { if (aktiv) setPlzTreffer(null); });
+    return () => { aktiv = false; };
+  }, [f.plz]);
+  // Eindeutiger Kanton aus der PLZ → automatisch setzen (amtliches Register,
+  // keine Heuristik); bei Kantonsgrenz-PLZ bleibt die Wahl beim Nutzer.
+  useEffect(() => {
+    if (!plzTreffer || plzTreffer.length === 0) return;
+    const kantone = [...new Set(plzTreffer.map((t) => t.kanton))];
+    if (kantone.length === 1 && f.kanton !== kantone[0]) set('kanton', kantone[0]);
+    const gemeinden = [...new Set(plzTreffer.map((t) => t.gemeinde))];
+    if (gemeinden.length === 1 && f.gemeinde.trim() === '') set('gemeinde', gemeinden[0]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [plzTreffer]);
+
+  // ── ZH: konkretes Friedensrichteramt über Gemeinde (PLZ→Gemeinde→Amt) ─────
+  const [zhAmt, setZhAmt] = useState<ZhAmt | null>(null);
+  const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
+  useEffect(() => {
+    let aktiv = true;
+    setZhAmt(null); setZhKreise(null);
+    if (f.kanton !== 'ZH') return;
+    const gemeinde = f.gemeinde.trim();
+    if (gemeinde === '') return;
+    if (gemeinde.toLowerCase() === 'zürich') {
+      zuerichKreisAemter().then((k) => { if (aktiv) setZhKreise(k); }).catch(() => {});
+      return;
+    }
+    zhFriedensrichterFuer(gemeinde).then((a) => { if (aktiv) setZhAmt(a); }).catch(() => {});
+    return () => { aktiv = false; };
+  }, [f.kanton, f.gemeinde]);
 
   const istMiete = f.streitsache === 'miete_wohn_geschaeft';
   const istArbeit = f.streitsache === 'arbeit';
@@ -294,11 +332,27 @@ export function ZustaendigkeitForm() {
         <p className="lc-overline">3 · Ort, Streitwert, Instanz</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
-            <div className="grid grid-cols-[6.5rem_1fr] gap-2">
-              <input className={inputCls + ' num'} value={f.plz} inputMode="numeric" maxLength={4}
-                onChange={(e) => set('plz', e.target.value.replace(/\D/g, '').slice(0, 4))}
-                placeholder="PLZ" aria-label="Postleitzahl" />
-              <input className={inputCls} value={f.gemeinde} onChange={(e) => set('gemeinde', e.target.value)} placeholder="z. B. Basel" />
+            <div className="space-y-1.5">
+              <div className="grid grid-cols-[6.5rem_1fr] gap-2">
+                <input className={inputCls + ' num'} value={f.plz} inputMode="numeric" maxLength={4}
+                  onChange={(e) => set('plz', e.target.value.replace(/\D/g, '').slice(0, 4))}
+                  placeholder="PLZ" aria-label="Postleitzahl" />
+                <input className={inputCls} value={f.gemeinde} onChange={(e) => set('gemeinde', e.target.value)} placeholder="z. B. Basel" />
+              </div>
+              {f.plz.length === 4 && plzTreffer === null && (
+                <p className="text-xs text-warn-700">PLZ {f.plz}: im amtlichen Ortschaftenverzeichnis nicht gefunden — bitte prüfen.</p>
+              )}
+              {plzTreffer && plzTreffer.length > 0 && (() => {
+                const kantone = [...new Set(plzTreffer.map((t) => t.kanton))];
+                const gemeinden = [...new Set(plzTreffer.map((t) => t.gemeinde))];
+                return (
+                  <p className="text-xs text-ink-500">
+                    PLZ {f.plz}: {gemeinden.slice(0, 4).join(', ')}{gemeinden.length > 4 ? ` +${gemeinden.length - 4}` : ''} ({kantone.join('/')})
+                    {kantone.length > 1 && <span className="text-warn-700"> — PLZ liegt in mehreren Kantonen, Kanton bitte selbst wählen.</span>}
+                    {gemeinden.length > 1 && kantone.length === 1 && <span> — Gemeinde präzisieren.</span>}
+                  </p>
+                );
+              })()}
             </div>
           </Field>
           <Field label="Kanton (Forum)" hint="alle Kantone hinterlegt (zentrale Stelle, Stellen-Liste oder amtliches Verzeichnis)">
@@ -508,12 +562,40 @@ export function ZustaendigkeitForm() {
                 </div>
               )}
               {recherche.aufloesung.modus === 'verzeichnis' && (
-                <p className="text-body-s text-ink-800">
-                  {recherche.aufloesung.beschreibung}.{' '}
-                  <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">
-                    Amtliches Verzeichnis öffnen ↗
-                  </a>
-                </p>
+                <>
+                  {/* PLZ→Gemeinde→Amt-Auflösung (Pilot ZH, ordentliche Behörde) */}
+                  {f.kanton === 'ZH' && r.schlichtung.behoerdeTyp === 'ordentlich' && zhAmt && (
+                    <div>
+                      <p className="text-body-s text-ink-900 whitespace-pre-line">
+                        {zhAmt.name}{'\n'}{zhAmt.strasse}{'\n'}{zhAmt.plzOrt}
+                      </p>
+                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + vfzh.ch-Ämterverzeichnis).</p>
+                    </div>
+                  )}
+                  {f.kanton === 'ZH' && r.schlichtung.behoerdeTyp === 'ordentlich' && zhKreise && (
+                    <div className="space-y-1.5">
+                      <p className="text-xs text-ink-500">Stadt Zürich: massgeblich ist der STADTKREIS der beklagten Partei — sechs Kreis-Ämter:</p>
+                      <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
+                        {zhKreise.map((a) => (
+                          <li key={a.kreise} className="text-body-s text-ink-800">
+                            <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}<br />{a.strasse}, {a.plzOrt}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {!(f.kanton === 'ZH' && r.schlichtung.behoerdeTyp === 'ordentlich' && (zhAmt || zhKreise)) && (
+                    <p className="text-body-s text-ink-800">
+                      {recherche.aufloesung.beschreibung}.{' '}
+                      {f.kanton === 'ZH' && r.schlichtung.behoerdeTyp === 'ordentlich' && (
+                        <span className="text-ink-500">PLZ oder Gemeinde eingeben für die konkrete Amts-Adresse. </span>
+                      )}
+                      <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">
+                        Amtliches Verzeichnis öffnen ↗
+                      </a>
+                    </p>
+                  )}
+                </>
               )}
               <p className="text-xs text-ink-500 pt-2 border-t border-line">
                 Quelle: {recherche.quelle} (Stand {recherche.stand}). Recherche zweifach geprüft — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
