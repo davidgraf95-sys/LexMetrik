@@ -4,8 +4,8 @@ import type { Kanton } from '../types/legal';
 // Anordnung David 6.6.2026 («verlinke kantonale gesetzesnormen»). Quelle:
 // Verlinkungs-Recherche 6.6.2026 — jede URL am amtlichen Portal geprüft
 // (Status 200 + Titel; HTML vor PDF; lexfind nur als Fallback UR/SZ).
-// SH-Gerichtskosten-Erlass trägt amtlich KEINE SHR-Nummer → kein stabiler
-// Link (null; Einstieg rechtsbuch.sh.ch Systematik 173).
+// SH-Gerichtskosten: Tiefenerfassung 6.6.2026 — Justizgesetz SHR 173.200
+// (Art. 81–87, Fassung 1.5.2026); die «Kostenverordnung 2003» war Fehlzuordnung.
 
 export interface ErlassLinks { schlichtung: string; gericht: string | null }
 
@@ -23,7 +23,7 @@ export const ERLASS_LINKS: Record<Kanton, ErlassLinks> = {
   SO: { schlichtung: 'https://bgs.so.ch/app/de/texts_of_law/615.11', gericht: 'https://bgs.so.ch/app/de/texts_of_law/615.11' },
   BS: { schlichtung: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810', gericht: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810' },
   BL: { schlichtung: 'https://bl.clex.ch/app/de/texts_of_law/170.31', gericht: 'https://bl.clex.ch/app/de/texts_of_law/170.31' },
-  SH: { schlichtung: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/273.100', gericht: null },
+  SH: { schlichtung: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/273.100', gericht: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200' },
   AR: { schlichtung: 'https://ar.clex.ch/app/de/texts_of_law/233.3', gericht: 'https://ar.clex.ch/app/de/texts_of_law/233.3' },
   AI: { schlichtung: 'https://ai.clex.ch/app/de/texts_of_law/173.810', gericht: 'https://ai.clex.ch/app/de/texts_of_law/173.810' },
   SG: { schlichtung: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12', gericht: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12' },

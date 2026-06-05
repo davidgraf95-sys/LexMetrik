@@ -50,3 +50,12 @@ Stand des Registers: 5.6.2026.
   deren HTML-Manifestation nicht publiziert ist (nur signiertes PDF, JS-Shell).
   → Beträge VOR fachlicher Abnahme am signierten PDF gegenprüfen; UI weist
   den Vorbehalt aus. Prüfweg: Filestore cc/1996/2937_2937_2937/20260101.
+
+## SG GKV — DIVERGENZ zum Sunset 30.6.2026 (6.6.2026)
+Die Gebühren-Tiefenerfassung fand im aktuell publizierten konsolidierten
+Text (gesetzessammlung.sg.ch 941.12) KEINE Sunset-Klausel und keine
+publizierte Nachfolgefassung; der ✓2-Befund vom 5.6. («in Vollzug bis
+30.6.2026», OrdoLex-Metadaten) bleibt als Vorbehalt stehen. → Am
+1.7.2026 aktiv prüfen, welche Aussage zutrifft; bis dahin Hinweis in
+zustaendigkeitKosten.SG unverändert lassen.
+

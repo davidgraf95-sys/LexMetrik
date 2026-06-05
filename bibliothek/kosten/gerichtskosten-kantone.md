@@ -8,7 +8,7 @@ Streitwert-Staffeln (alle Bänder/Formeln), nicht vermögensrechtlich,
 summarisch (inkl. Rechtsöffnung), Rechtsmittel, Reduktionen/Zuschläge,
 Kostenvorschuss-Abweichungen. Verwendung im Code: src/data/
 zustaendigkeitKosten.ts (Kurzrahmen) + erlassLinks.ts (Links in der UI).
-Teil B (SH–JU) folgt unten.
+Teil A (ZH–BL) + Teil B (SH–JU) = ALLE 26 Kantone erfasst.
 
 ---
 
@@ -407,3 +407,379 @@ Unbestimmter SW (lit. g): 200 – 30'000. Eheschutz/Partnerschaftsschutz (lit. h
 - **Kostenvorschuss:** Nur **BE** weicht praktisch ab (**½ der mutmasslichen Gerichtsgebühren** statt voller Höhe, EG ZSJ). Alle übrigen 12 Kantone haben **keine abweichende Vorschussnorm im Gebührenerlass** → es gilt Art. 98 ZPO (volle mutmassliche Gerichtskosten) i.V.m. dem jeweiligen EG ZPO/Justiz-/GOG. (SO § 5 hat zwar eine allgemeine Vorschussnorm, behält für Zivil aber ausdrücklich die ZPO vor.)
 
 **Offene Punkte (ehrlich):** (1) **FR** — exakte vermögensrechtliche Streitwert-Bandstaffel = vom Kantonsgericht nach Art. 21 JR erstellte interne Abstufung, nicht als BDLF-Erlass abrufbar; im Bericht nur die JR-Rahmen. (2) **UR** — Zuschlags-/Reduktionsprozentsätze stehen in der übergeordneten Gerichtsgebührenverordnung RB 2.3231 (nicht im erfassten GGebR 2.3232). (3) **SZ** — keine SW-Staffel; effektive Höhe hängt an der Bemessung § 3 (max. 180 Fr./Std.) und ist nicht tariflich gebändert.
+
+---
+
+# GERICHTSGEBÜHREN ZIVIL — Teil B (Kantone SH, AR, AI, SG, GR, AG, TG, TI, VD, VS, NE, GE, JU)
+
+Abrufdatum: 6. Juni 2026. Alle Angaben aus den geltenden amtlichen Fassungen (Volltext-Extraktion). Romandie/TI mit Originalbegriff + deutscher Klammer.
+
+**Wichtige Vorbemerkung zur Methodik:** Mehrere Kantone (AR, AI, SG, GR, SH) verwenden **keine** arithmetische Streitwert-Tabelle, sondern **Rahmengebühren je Verfahrenstyp/Instanz** mit einem Streitwert-abhängigen Erhöhungsmechanismus. Wo eine echte Streitwert-Staffel besteht (AG, TG, TI, VD, VS, NE, GE, JU teilweise), ist sie wörtlich wiedergegeben.
+
+---
+
+## SH — Justizgesetz (SHR 173.200) — [rechtsbuch.sh.ch/app/de/texts_of_law/173.200]
+
+**Korrektur zum Auftrag:** Schaffhausen hat **keine** separate „Kostenverordnung OGer 2003". Die zivilrechtlichen Gerichtsgebühren sind **direkt im Justizgesetz (SHR 173.200), Abschnitt 7.4.1**, geregelt. Aktuelle Fassung **in Kraft seit 01.05.2026** (Beschluss 15.12.2025). (Die im Auftrag erwähnte „Kostenverordnung OGer vom 6.11.2003" ist in Wahrheit die **Luzerner** Kostenverordnung — Fehlzuordnung.)
+
+**(1) Streitwert-Staffel erstinstanzlich — Art. 83 Abs. 1** („Pauschale für das gerichtliche Verfahren … in jeder Instanz"):
+
+| Streitwert | Pauschalgebühr |
+|---|---|
+| bis Fr. 2'000 | Fr. 100 – Fr. 1'000 |
+| bis Fr. 30'000 | Fr. 200 – Fr. 10'000 |
+| bis Fr. 100'000 | Fr. 500 – Fr. 25'000 |
+| bis Fr. 500'000 | Fr. 1'000 – Fr. 50'000 |
+| bis Fr. 2'000'000 | Fr. 2'000 – Fr. 100'000 |
+| über Fr. 2'000'000 | Fr. 10'000 bis 5 % des Streitwerts |
+
+Bemessungsgrundlage (Art. 81 Abs. 1): Streitwert, Aufwand, Schwierigkeit.
+
+**(2) Nicht vermögensrechtlich — Art. 81 Abs. 2:** „wird … vom tatsächlichen Streitinteresse ausgegangen. Dieses wird nach Ermessen bestimmt. Die Vorschriften über den Streitwert gelten dabei sinngemäss." (keine eigene Bandbreite; Tarif Art. 83 sinngemäss).
+
+**(3) Summarisch/Rechtsöffnung — Art. 83 Abs. 2:** „beträgt die Gebühr höchstens die Hälfte des Betrags" nach Abs. 1. Schlichtungsverfahren (Art. 82): Fr. 100 – Fr. 1'000.
+
+**(4) Rechtsmittel:** Kein separater Tarif — Art. 83 Abs. 1 gilt **„in jeder Instanz"** (also auch Berufung/Beschwerde nach demselben Streitwertraster).
+
+**(5) Reduktionen — Art. 83:** Abs. 3 (Erledigung ohne Anspruchsprüfung, noch kein wesentlicher Aufwand): Herabsetzung unter den Mindestbetrag möglich. Abs. 4 (Entscheid ohne schriftliche Begründung, keine Nachlieferung): **Ermässigung auf zwei Drittel.** Schutzschrift Art. 84: Fr. 100–1'000, anrechenbar bei späterem Verfahren.
+
+**(6) Kostenvorschuss:** Keine kantonale Sonderregel — es gilt Art. 98 ZPO (Bund). Art. 92: dem Kanton SH werden keine Gerichtskosten auferlegt; Art. 94: Kostenvollzug durch Regierungsrat.
+
+---
+
+## AR — Verordnung über die Rechtskosten und Entschädigungen in der Zivil- und Strafrechtspflege (Gebührenordnung), bGS 233.3 — [ar.clex.ch/app/de/texts_of_law/233.3]
+Vom 15.06.1981, **Stand 01.12.2017.** AR nutzt **Rahmengebühren je Behörde** + Streitwert-Multiplikator.
+
+**(1) Erstinstanzlich (Rahmen, kein Streitwert-Band):**
+- Einzelrichter Kantonsgericht (Art. 14): Entscheid/Verfügung **Fr. 30 – Fr. 1'500**; Scheidung **Fr. 500 – Fr. 6'000**.
+- Kantonsgericht (Kollegial, Art. 17): Beschluss Fr. 100–3'000; Urteil/Vorentscheid **Fr. 100 – Fr. 5'000**; Augenschein/Einvernahme Fr. 20–150/Std.
+- **Streitwert-Erhöhung (Art. 20):** Gebühren nach Art. 14–19 können erhöht werden: über 50'000–100'000 → **aufs Doppelte**; über 100'000–250'000 → **aufs Dreifache**; je weitere 250'000 → +100 % des einfachen Ansatzes; in anderen aufwendigen Fällen **vervierfacht**.
+
+**(2) Nicht vermögensrechtlich:** Kein Streitwert → Bemessung nach Bedeutung/Zeitaufwand/Verhältnissen (Art. 4) innerhalb der Rahmen.
+
+**(3) Summarisch/Rechtsöffnung:** Über Einzelrichter-Rahmen Art. 14 (Fr. 30–1'500). Vermittler/Schlichtung (Art. 13): Fr. 50–200, ab 1 Std. +Fr. 100/Std., bei Streitwert ≥100'000 verdoppelbar.
+
+**(4) Rechtsmittel:** Obergericht Einzelrichter (Art. 16): Fr. 30–2'000; Scheidung Fr. 500–6'000. Obergericht Kollegial (Art. 19): Beschluss Fr. 100–3'000; Urteil/Vorentscheid Fr. 200–5'000; Schiedssachen Fr. 100–5'000. Art. 20-Erhöhung gilt auch hier.
+
+**(5) Reduktionen/Zuschläge:** Keine generelle Vergleichs-/Begründungsreduktion in der Zivilrechtspflege normiert (anders als Strafrecht Art. 25 Abs. 2); Bemessung im Rahmen.
+
+**(6) Kostenvorschuss — Art. 7:** **Einschreibgebühren** bei Anhängigmachung: Einzelrichter KG **Fr. 100**, Kantonsgericht **Fr. 300**, Scheidung **Fr. 300**, Einzelrichter OG Fr. 100, Obergericht Fr. 300, Versicherungsgericht Fr. 200. Art. 8: entfällt bei kostenlosem Verfahren / unentgeltlicher Rechtspflege / Kanton/Gemeinde/Bund als Kläger; Vorschusspflicht im Übrigen nach Art. 79 (kant.) bzw. ZPO.
+
+---
+
+## AI — Verordnung über die Gebühren der Gerichte, GS 173.810 — [ai.clex.ch/app/de/texts_of_law/173.810]
+**Aktuelle Fassung in Kraft seit 01.01.2024** (Beschluss 23.10.2023). Rahmengebühren + Streitwert-Erhöhung.
+
+**(1) Erstinstanzlich:**
+- Bezirksgerichtspräsident/Einzelrichter (Art. 10): a) End-/Zwischenentscheid **Fr. 300 – Fr. 5'000**; b) prozessleitende Verfügung u. Summarentscheid **Fr. 200 – Fr. 3'000**.
+- Bezirksgericht als Kollegialgericht (Art. 11): a) End-/Zwischenentscheid **Fr. 500 – Fr. 6'000**; b) prozessleitende Verfügung Fr. 300–3'000; c) prozessleitende Verfügung/vorsorgliche Massnahmen Fr. 200–2'000.
+- **Streitwert-Erhöhung (Art. 15):** über 50'000–100'000 → bis 200 %; über 100'000–250'000 → bis 300 %; je weitere 250'000 → +100 %. Weitere Erhöhung nach Art. 2 Abs. 2 (bis **Vierfaches** bei aussergewöhnlichem Aufwand) vorbehalten.
+
+**(2) Nicht vermögensrechtlich:** Bemessung im Rahmen nach Bedeutung/Aufwand (Art. 2).
+
+**(3) Summarisch/Rechtsöffnung:** Art. 10 lit. b (Summarentscheid Fr. 200–3'000).
+
+**(4) Rechtsmittel:** Kantonsgericht als Kollegialgericht (Art. 13): a) End-/Zwischenentscheid **Fr. 800 – Fr. 8'000**; b) prozessleitende Verfügung Fr. 400–4'000; c) Fr. 200–2'000. Art. 15-Streitwerterhöhung gilt.
+
+**(5) Reduktionen — Art. 16:** Bei Eröffnung **ohne Begründung** werden die amtlichen Kosten **um einen Drittel ermässigt**.
+
+**(6) Kostenvorschuss — Art. 3:** „Die mutmasslichen amtlichen Kosten sind durch die Partei, welche eine Prozesshandlung anbegehrt, zu bevorschussen." (Vorschuss darf Streitwertgrenze nicht überschreiten.)
+
+---
+
+## SG — Gerichtskostenverordnung, sGS 941.12 — [gesetzessammlung.sg.ch/app/de/texts_of_law/941.12]
+Vom 09.12.2010, Kantons-/Verwaltungsgericht. Rahmengebühren (Art. 10) + Streitwert-Erhöhung (Art. 11).
+
+**(1) Erstinstanzlich — Art. 10 Ziff. 1 (Kreisgericht):**
+- Einzelrichter/Präsident: End-/Zwischenentscheide **Fr. 500 – Fr. 5'000**; prozessleitende Verfügungen u. Summarentscheide **Fr. 200 – Fr. 3'000**.
+- Kollegialgericht: End-/Zwischenentscheide **Fr. 500 – Fr. 6'000**; prozessleitende Verfügungen Fr. 300–3'000; prozessleitende Verfügung/vorsorgliche Massnahmen Fr. 200–2'000.
+- Handelsgericht (Art. 10 Ziff. 3): End-/Zwischenentscheide **Fr. 1'000 – Fr. 15'000**.
+- **Streitwert-Erhöhung (Art. 11):** über 50'000–100'000 → **höchstens 200 %**; über 100'000–250'000 → **höchstens 300 %**; je weitere 250'000 → +100 %. Weitere Erhöhung nach Art. 6 (bis **Vierfaches**) nur noch bei aussergewöhnlichen Umtrieben/Schwierigkeiten.
+
+**(2) Nicht vermögensrechtlich:** Keine eigene Bandbreite; Bemessung im Rahmen Art. 4 (Art des Falls, finanzielle Interessen, Umtriebe, Verhältnisse).
+
+**(3) Summarisch/Rechtsöffnung:** Art. 10 Ziff. 1.11 lit. 112 (Summarentscheide Fr. 200–3'000). Schlichtungsbehörden (Art. 8): Klagebewilligung Fr. 200–1'000; Urteilsvorschlag/Entscheid Fr. 300–1'000; Einigung/Säumnis/Rückzug Fr. 100–600; aufwendige Verfahren bis doppelter Ansatz.
+
+**(4) Rechtsmittel — Art. 10 Ziff. 2 (Kantonsgericht):** Einzelrichter End-/Zwischenentscheide **Fr. 300 – Fr. 5'000**; Kammer End-/Zwischenentscheide **Fr. 800 – Fr. 8'000**. Art. 11-Streitwerterhöhung gilt.
+
+**(5) Reduktionen — Art. 12:** Eröffnung ohne Begründung → Ansatz für unbegründeten Entscheid **ein Drittel tiefer**. Art. 13 (Abschreibung): Gebühr bis zum Ansatz des Sachentscheids. Unterschreitung Art. 5 (Missverhältnis/geringer Aufwand).
+
+**(6) Kostenvorschuss — Art. 2 Abs. 3:** In der Zivilrechtspflege „nach den Bestimmungen der eidgenössischen Prozessgesetze" (Art. 98 ZPO).
+
+**Offener Punkt:** Eine im Auftrag erwähnte **Nachfolgefassung ab 1.7.2026** (mit einem Vollzugsende 30.6.2026) ist im aktuell publizierten konsolidierten Text **nicht** ersichtlich; der geltende Text enthält keine entsprechende Sunset-Klausel. Eine bereits publizierte neue Streitwert-Tabelle ab 1.7.2026 konnte nicht verifiziert werden (am 6.6.2026 nicht auffindbar). Ferner Versionsabgleich offen: aktuelle Sammlung weist „nGS 46-42" aus; die Rahmenbeträge Art. 10/11 sind versionsstabil.
+
+---
+
+## GR — Verordnung über die Gerichtsgebühren in Zivilverfahren (VGZ), BR 320.210 — [gr-lex.gr.ch/app/de/texts_of_law/320.210]
+**NEUE Verordnung vom 2. Januar 2025, Stand 1.1.2025 (Erstfassung)**, vom Obergericht erlassen. Rahmengebühren je Verfahrenstyp; **keine** Streitwert-Tabelle.
+
+**(1) Erstinstanzlich (Regionalgericht):**
+- **Ordentliches Verfahren (Art. 3):** Entscheidgebühr **Fr. 3'000 – Fr. 30'000**; besonders aufwendig bis **Fr. 100'000**.
+- **Vereinfachtes Verfahren (Art. 4):** Einzelrichter **Fr. 1'000 – Fr. 8'000**; Kollegialgericht **Fr. 3'000 – Fr. 8'000**; aufwendig bis zum Zweifachen der Höchstgebühr.
+- Besondere (ehe-/kindesrechtliche) Verfahren (Art. 6): Einzelrichter Fr. 1'000–5'000; Kollegialgericht Fr. 3'000–8'000.
+
+**(2) Nicht vermögensrechtlich:** Keine eigene Norm; Zuordnung über Verfahrenstyp (ordentlich/vereinfacht), Bemessung im Rahmen.
+
+**(3) Summarisch/Rechtsöffnung — Art. 5:** Einzelrichter **Fr. 100 – Fr. 5'000**; aufwendig bis Zweifaches; SchKG-Gebührenverordnung vorbehalten.
+
+**(4) Rechtsmittel (Obergericht):** Einzige kantonale Instanz (Art. 10) Fr. 1'000–30'000 (einzelrichterlich Fr. 1'000–15'000); **Berufung (Art. 11)** Fr. 1'000–30'000 (einzelrichterlich Fr. 1'000–15'000); **Beschwerde (Art. 12)** Fr. 500–8'000 (einzelrichterlich Fr. 500–4'000); aufwendig bis Fr. 100'000 (Art. 13).
+
+**(5) Reduktionen — Art. 7 (erstinst.) / Art. 14 (OG):** Bei **Vergleich, Anerkennung, Rückzug** oder Gegenstandslosigkeit reduzierte Entscheidgebühr; **keine Begründung verlangt → Ermässigung um höchstens die Hälfte.** Schlichtung (Art. 2): Fr. 100–500, bei Entscheid/Vorschlag Fr. 300–3'000.
+
+**(6) Kostenvorschuss:** Nicht in VGZ geregelt → Art. 98 ZPO bzw. Verordnung über die Kosten in Verwaltungsverfahren (BR 370.120) für Nachverfahren (Art. 1 Abs. 4).
+
+---
+
+## AG — Gebührendekret, SAR 662.110 — [gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110]
+**Stand 01.07.2024.** Echte Streitwert-Formel (Grundgebühr).
+
+**(1) Streitwert-Tarif erstinstanzlich — § 7 Abs. 1 (Grundgebühr vermögensrechtlich):**
+
+| Streitwert | Grundgebühr |
+|---|---|
+| bis 6'500 | 900.– + 11,0 % des Strw. |
+| 6'501–13'000 | 1'160.– + 7,0 % |
+| 13'001–52'000 | 1'290.– + 6,0 % |
+| 52'001–100'000 | 770.– + 7,0 % |
+| 100'001–200'000 | 4'270.– + 3,5 % |
+| 200'001–400'000 | 6'870.– + 2,2 % |
+| 400'001–800'000 | 9'670.– + 1,5 % |
+| 800'001–1'600'000 | 13'670.– + 1,0 % |
+| 1'600'001–3'300'000 | 21'670.– + 0,5 % |
+| über 3'300'000 | 28'270.– + 0,3 % |
+
+**(2) Nicht vermögensrechtlich — § 7 Abs. 2:** Fr. 500 – Fr. 10'000.
+
+**(3) Summarisch/Rechtsöffnung — § 8:** Fr. 500 – Fr. 12'000. Schlichtung (§ 6): Klagebewilligung Fr. 50–300; Vergleich/Anerkennung/Rückzug Fr. 50–300; Urteil/Urteilsvorschlag Fr. 100–500.
+
+**(4) Rechtsmittel — § 10:** Beschwerde gegen Schiedsurteil Fr. 200–10'000. (Berufung/Beschwerde im Übrigen nach Grundgebühr § 7 i.V.m. den Bemessungsregeln; das VKD SAR 221.150 regelt die Verfahrenskostenzuordnung.)
+
+**(5) Anpassungen — § 5:** kostenintensive Fälle bis **zum Doppelten** des Höchstbetrags; geringe Kosten → Reduktion/Erlass.
+
+**(6) Kostenvorschuss:** Streitwert nach ZPO; Vorschuss nach Art. 98 ZPO (Verfahrenskostendekret/ZPO).
+
+---
+
+## TG — Verordnung des Grossen Rates über die Gebühren der Strafverfolgungs- und Gerichtsbehörden, RB 638.1 — [rechtsbuch.tg.ch/app/de/texts_of_law/638.1]
+Vom 13.05.1992 (Fassung 1/2011). Echte Streitwert-Staffel.
+
+**(1) Streitwert-Staffel erstinstanzlich — § 11 Ziff. 1 (Bezirksgerichte):**
+
+| Streitwert | Gebühr |
+|---|---|
+| 30'000 – 100'000 | Fr. 1'000 – Fr. 4'000 |
+| über 100'000 – 500'000 | Fr. 2'000 – Fr. 8'000 |
+| über 500'000 – 1'000'000 | Fr. 7'000 – Fr. 15'000 |
+| über 1'000'000 | 1 bis 3 % des Streitwertes |
+
+Einzelrichter Bezirksgericht (§ 8): Urteil Fr. 200–3'000; Verfügung summarisch Fr. 100–2'000; Verfügung Fr. 100–600; Abschreibung Fr. 100–1'000; Mietrecht bis halbe Gebühr § 11 Ziff. 1. Bemessung (§ 3): Bedeutung, Vermögensverhältnisse, **Streitwert.**
+
+**(2) Nicht vermögensrechtlich — § 11 Ziff. 2:** Fr. 300 – Fr. 5'000 (soweit nicht Ziff. 1 nach den streitigen vermögensrechtlichen Ansprüchen anwendbar).
+
+**(3) Summarisch/Rechtsöffnung — § 8 Ziff. 1:** Verfügung im summarischen Verfahren Fr. 100 – Fr. 2'000. Friedensrichter (§ 7): Vermittlungsvorstand nach Streitwert Fr. 100/150 (bis 2'000) … Fr. 320/500 (über 100'000); Klageabschreibung Fr. 50; Urteil als Einzelrichter Fr. 100–300.
+
+**(4) Rechtsmittel — § 13 (Obergericht), Streitwert-Staffel:**
+
+| Streitwert (2. Instanz) | Gebühr |
+|---|---|
+| 2'000 – 8'000 | Fr. 500 – Fr. 1'500 |
+| über 8'000 – 30'000 | Fr. 1'000 – Fr. 3'000 |
+| über 30'000 – 100'000 | Fr. 1'500 – Fr. 4'500 |
+| über 100'000 – 500'000 | Fr. 3'000 – Fr. 12'000 |
+| über 500'000 – 1'000'000 | Fr. 10'000 – Fr. 20'000 |
+| über 1'000'000 | 1,5 bis 4,5 % des Streitwertes |
+
+Ohne best. Streitwert Fr. 500–5'000; anderweitiger Rechtsmittelentscheid/Beschluss Fr. 100–20'000; OG-Präsident/Einzelrichter Entscheid Fr. 200–20'000.
+
+**(5) Zuschläge/Reduktionen — § 3:** Abs. 2 aufwendige Verfahren **bis Doppeltes**; Abs. 3 bei **Abschreibung erheblich fortgeschrittener Prozesse höchstens halbe Urteilsgebühr.** § 2: Härtefall ganz/teilweise Verzicht.
+
+**(6) Kostenvorschuss:** Nicht in RB 638.1 normiert → Art. 98 ZPO.
+
+---
+
+## TI — Legge sulla tariffa giudiziaria (LTG), RL 178.200 (3.1.1.5) — [m3.ti.ch …/legge/num/137]
+Del 30.11.2010, in vigore 1.1.2011. Echte Streitwert-Tabelle. (tassa di giustizia = Gerichtsgebühr; valore litigioso = Streitwert.)
+
+**(1) Streitwert-Tabelle erstinstanzlich — Art. 7 (Pretore, procedura ordinaria / ordentliches Verfahren):**
+
+| Valore litigioso (Streitwert) | Tassa (Gebühr) |
+|---|---|
+| fino a 30'000 | 500 – 4'000 |
+| 30'000 – 50'000 | 1'500 – 5'000 |
+| 50'000 – 100'000 | 2'000 – 8'000 |
+| 100'000 – 200'000 | 3'000 – 12'000 |
+| 200'000 – 500'000 | 5'000 – 20'000 |
+| 500'000 – 1'000'000 | 10'000 – 40'000 |
+| 1'000'000 – 2'000'000 | 15'000 – 60'000 |
+| 2'000'000 – 5'000'000 | 20'000 – 80'000 |
+| 5'000'000 – 10'000'000 | 40'000 – 100'000 |
+| oltre 10'000'000 | 60'000 a 1 % del valore |
+
+Unbestimmter Streitwert / Scheidung: 250 – 20'000 (Art. 7 cpv. 2). Giudice di pace (Art. 6): 50–300.
+
+**(2) Nicht vermögensrechtlich:** = unbestimmter Streitwert, Art. 7 cpv. 2 (250–20'000).
+
+**(3) Summarisch/Rechtsöffnung — Art. 9:** „la tariffa … nella procedura sommaria è **la metà** di quella nella procedura ordinaria" (= **Hälfte** der ordentlichen Gebühr). Unbestimmter Streitwert/Rechtsschutz in klaren Fällen 100–20'000; Miete/Pacht 100–200. Provvedimenti cautelari (Art. 10) 50–20'000.
+
+**(4) Rechtsmittel (Tribunale di appello):** Istanza unica (Art. 12) = **doppio** der Pretore-Gebühr; **Appello (Art. 13) = la metà** (Hälfte) der erstinstanzlichen Gebühr; **Reclamo (Art. 14)** 100–10'000; Ricorso gegen Verwaltungsentscheide (Art. 15) 200–20'000.
+
+**(5) Reduktionen/Zuschläge:** **Procedura semplificata (Art. 8) = la metà** (Hälfte) der ordentlichen Gebühr; Miete/Pacht bis Streitwert 30'000: 100–200. **Art. 21 (Erledigung ohne Entscheid):** bei *transazione, acquiescenza, desistenza* (Vergleich, Anerkennung, Rückzug) wird die Gebühr „**in proporzione agli atti compiuti**" festgesetzt. Foro prorogato (Art. 18): bis **doppio.** Revisione (Art. 19) = Hälfte; Interpretazione (Art. 20) = ein Fünftel.
+
+**(6) Kostenvorschuss:** Nicht in der LTG (Art. 98 CPC). Konkordanz: Schlichtung (Art. 5) eigene Staffel 50–150 (bis 2'000) … 3'000 – 0,5 % (über 1 Mio.).
+
+---
+
+## VD — Tarif des frais judiciaires civils (TFJC), BLV 270.11.5 — [prestations.vd.ch …/consolide/270.11.5]
+Du 28.09.2010, État 01.09.2019. Feste Pauschalen je Streitwertband.
+
+**(1) Streitwert-Staffel erstinstanzlich, procédure ordinaire — Art. 18 (litiges patrimoniaux):**
+
+| Valeur litigieuse | Émolument |
+|---|---|
+| 0 – 30'000 | 3'750.– |
+| 30'001 – 100'000 | 7'000.– |
+| 100'001 – 250'000 | 9'500.– |
+| 250'001 – 500'000 | 11'500.– |
+| 500'001 et plus | 15'500.– + 1,5 % de la part > 500'000, max. 300'000.– |
+
+Procédure simplifiée — Art. 23: 0–2'000 → 360; 2'001–5'000 → 750; 5'001–10'000 → 900; 10'001–30'000 → 2'100; 30'001–100'000 → 5'000; 100'001–250'000 → 7'000; 250'001–500'000 → 8'500; >500'000 → 11'500 + 1,5 % (max. 200'000).
+
+**(2) Nicht vermögensrechtlich (litiges non patrimoniaux):** ordentlich Art. 21: **3'750 – 300'000**; vereinfacht Art. 26: 360 – 200'000; sommaire Art. 28.
+
+**(3) Procédure sommaire — Art. 28:** Juge de paix 150–800; président/tribunal d'arrondissement 300–1'600; Chambre patrimoniale/Cour civile 900–3'000. (Mainlevée/Rechtsöffnung fällt hierunter.)
+
+**(4) Voies de recours:** **Appel (Art. 62, affaires patrimoniales):** 600.– + 1 % VL bis 30'000, darüber 1'000.– + 1 % VL, **max. 50'000** (0,5 % bei Enteignung). Non patrimonial (Art. 64) 800–6'000 (bis 30'000). **Recours (Art. 69):** 0–2'000 → 100; 2'001–5'000 → 200; 5'001–10'000 → 400; ≥10'001 → 300 + 1 % VL, max. 20'000.
+
+**(5) Réductions — Art. 22 (ordinaire):** Erledigung nach Art. 241/242 CPC bis 1. Verhandlung: **−3/4**; danach −1/3; Entscheid Art. 59/61 CPC: −2/3 (vor 1. Verhandlung) bzw. −1/3; ohne Begründung: **−1/5**; Verzicht auf Hauptverhandlung (Art. 233): −1/2; Arbeitsvertrag/VL ≤100'000: **−1/2**. Conciliation (Art. 17): Ende vor Schlichtungsverhandlung −1/3. Majoration Art. 6: bis **Dreifaches** des Maximums; Prorogation de for ohne CH-Bezug → **doublés.**
+
+**(6) Avance de frais — Art. 9:** „avance d'un montant correspondant à la totalité de l'émolument … prévu pour ses conclusions." Art. 10: Reduktion/Verzicht aus Billigkeit; Art. 11: keine Gebühr bei Streichung mangels Vorschuss.
+
+---
+
+## VS — Loi fixant le tarif des frais et dépens (LTar), RS/VS 173.8 — [lex.vs.ch 173.8]
+Du 11.02.2009, **état 01.01.2018.** Echte Streitwert-Tabelle.
+
+**(1) Streitwert-Staffel erstinstanzlich — Art. 16 (contestations civiles de nature pécuniaire, procédure ordinaire ou simplifiée, 1re/unique instance):**
+
+| Valeur litigieuse | Émolument |
+|---|---|
+| jusqu'à 2'000 | 180 – 1'200 |
+| 2'001 – 8'000 | 650 – 1'800 |
+| 8'001 – 20'000 | 900 – 3'600 |
+| 20'001 – 50'000 | 1'800 – 6'000 |
+| 50'001 – 100'000 | 2'700 – 9'600 |
+| 100'001 – 200'000 | 4'500 – 18'000 |
+| 200'001 – 500'000 | 9'000 – 42'000 |
+| 500'001 – 1'000'000 | 18'000 – 60'000 |
+| au-dessus de 1'000'000 | 27'000 – 120'000 |
+
+Abs. 3: derselbe Tarif gilt für **summarische Verfahren mit Endurteilcharakter.** Juge de commune (Art. 15): citation 50; séance de conciliation 60–120; bis VL 2'000 / propositions de jugement 60–500.
+
+**(2) Nicht vermögensrechtlich — Art. 17:** 280 – 9'600 (ordentlich/vereinfacht); gilt auch für Abänderung Scheidung/Trennung/Unterhalt; bei Scheidung mit Güterrecht zusätzlich Art. 16.
+
+**(3) Summarisch/Rechtsöffnung — Art. 18:** „autres procédures … causes soumises à une procédure sommaire … **90 – 4'800.**" (Summarische Verfahren mit Endurteilcharakter aber nach Art. 16, vgl. Abs. 3.)
+
+**(4) Appel ou recours au Tribunal cantonal — Art. 19:** Berechnung „par référence au barème … de première instance" mit möglichem **Reduktionskoeffizienten von 60 %.**
+
+**(5) Réduction/majoration — Art. 13 Abs. 3:** bei besonderen Umständen Erhöhung der Grenzen **bis zum Doppelten** (Straf-/öff. Recht bis Fünffaches). **Art. 14:** Verfahren nicht zu Ende geführt / Vorabentscheid / Säumnis / ohne Begründung → **proportionale Reduktion**; ausnahmsweise ganz/teilweise Verzicht.
+
+**(6) Avance/Kostenvorschuss — Art. 41:** kein Inkasso per Nachnahme; wo Vorschussmodalitäten nicht im Prozessrecht geregelt, kann Vorschuss spätestens am Verhandlungs-/Entscheidtag verlangt werden, ansonsten Unzulässigkeit des Begehrens. (Im Übrigen Art. 98 CPC.)
+
+**Offener Punkt:** Cached state „01.01.2018"; seither keine Tariftabellen-Änderung (Art. 16) verifiziert, aber spätere Teilrevisionen nicht vollständig abgeglichen.
+
+---
+
+## NE — Loi fixant le tarif des frais, des émoluments de chancellerie et des dépens (LTFrais), RSN 164.1 — [rsn.ne.ch …/164.1.htm]
+**Du 6 novembre 2019** (löst das Décret 2012 ab), **état 1er avril 2023.** Echte Streitwert-Staffel.
+
+**(1) Streitwert-Staffel erstinstanzlich, procédure ordinaire/simplifiée — Art. 12 al. 1:**
+
+| Valeur litigieuse | Émolument forfaitaire de décision |
+|---|---|
+| jusqu'à 2'000 | 500.– |
+| 2'001 – 5'000 | 900.– |
+| 5'001 – 8'000 | 1'000.– |
+| 8'001 – 10'000 | 1'200.– |
+| 10'001 – 30'000 | 13 % de la valeur litigieuse |
+| 30'001 – 100'000 | 4'000.– + 3 % de la part > 30'000.– |
+| 100'001 – 1'000'000 | 6'500.– + 3 % de la part > 100'000.– |
+| au-dessus de 1'000'000 | 4 % (jusqu'à 300'000.–) |
+
+(Arrondi à la dizaine inférieure.)
+
+**(2) Non patrimonial — Art. 12 al. 2bis:** 500 – 50'000 francs.
+
+**(3) Procédure sommaire — Art. 13:** allgemein 250 – 12'000; vermögensrechtlich (al. 2): jusqu'à 2'000 → 250; 2'001–5'000 → 450; 5'001–8'000 → 500; 8'001–10'000 → 600; 10'001–30'000 → 6,5 % VL; 30'001–100'000 → 2'000 + 1,5 % (>30'000); >100'000 → 3'500 + 1,5 % (>100'000), jusqu'à 12'000. Conciliation (Art. 11): jusqu'à 2'000 → 300 … >500'000 → 2'500; non patrimonial 300–2'500.
+
+**(4) Voies de recours — Art. 10:** „les voies de droit sont celles qui régissent la procédure au fond" — d.h. **derselbe Tarif (Art. 12/13) gilt** in der Rechtsmittelinstanz (kein eigener Appell-/Recours-Tarif).
+
+**(5) Réductions/majorations:** **Art. 8** (désistement, retrait, transaction, défaut, irrecevabilité, allg. wenn kein Sachurteil): „les frais peuvent être réduits en conséquence"; ausnahmsweise Verzicht. **Art. 6 al. 2:** Berücksichtigung, ob schriftlich zu begründen war. **Art. 7:** difficultés particulières → **jusqu'au double.** Divorce (Art. 16/17): 2,5–4 % du revenu + 2,5–4 ‰ de la fortune, min. 600; requête commune accord complet (Art. 18) 1,3 % / 1,3 ‰, min. 400/max. 2'000.
+
+**(6) Avance de frais:** Vom befassten Gericht festgesetzt (Art. 3); bei Kinderunterhalt führt Nichtzahlung des Vorschusses nicht zwingend zur Abschreibung (Art. 20 al. 2). Im Übrigen Art. 98 CPC.
+
+---
+
+## GE — Règlement fixant le tarif des frais en matière civile (RTFMC), rsGE E 1 05.10 — [silgeneve.ch …/rsg_e1_05p10.htm]
+Du 22 décembre 2010, en vigueur 1.1.2011; **dernières modifications au 1er juillet 2025.** Feste Pauschalen je Streitwertband.
+
+**(1) Streitwert-Staffel erstinstanzlich, procédure ordinaire et simplifiée — Art. 17 (causes pécuniaires):**
+
+| Valeur litigieuse | Émolument forfaitaire de décision |
+|---|---|
+| jusqu'à 10'000 | de 200.– (1) à 2'000.– |
+| 10'001 – 30'000 | 1'000.– à 3'000.– |
+| 30'001 – 100'000 | 2'000.– à 8'000.– |
+| 100'001 – 1'000'000 | 5'000.– à 30'000.– |
+| 1'000'001 – 10'000'000 | 20'000.– à 100'000.– |
+| dès 10'000'001 | 100'000.– à 200'000.– |
+
+**(2) Causes non pécuniaires — Art. 18:** 200 – 50'000 francs.
+
+**(3) Procédure sommaire — Art. 26:** **150 – 10'000** (en général). Mémoire préventif (Art. 27): 100–500. Conciliation (Art. 15): bis 30'000 → 100; über 30'000 → 200; non pécuniaire 100–200.
+
+**(4) Voies de recours:** **Appel décision finale (Art. 35)** und **Recours décision finale (Art. 38)**: „calculé selon les dispositions applicables aux procédures de première instance" (= Tarif Art. 17/18). Appel/recours décision incidente (Art. 36/39): 300–5'000.
+
+**(5) Réductions/majorations:** **Art. 7:** bei Rückzug/Vergleich (transigée)/Unzulässigkeit/Vereinigung/Billigkeit Reduktion des Mindestbetrags **bis 3/4**, i.d.R. nicht unter Restbetrag 1'000; vollständiger Verzicht möglich. **Art. 8:** ohne schriftliche Begründung gesonderter (reduzierter) Émolument. **Art. 6 (majoration): jusqu'au double du maximum.** Pluralité de parties (Art. 13): **+20 %**; Prorogation de for ohne CH-Domizil (Art. 12): **émoluments doublés.**
+
+**(6) Avance de frais — Art. 2:** „La juridiction peut exiger du demandeur une avance de frais" (Art. 19 LaCC); Komplement möglich; bei Nichtzahlung Unzulässigkeit → émolument 100–200 (al. 4). Art. 3: Parteien müssen Streitwert in 1./2. Instanz angeben.
+
+---
+
+## JU — Décret fixant les émoluments judiciaires, RSJU 176.511 — [rsju.jura.ch …idn=20021&id=34172]
+Du 24 mars 2010, en vigueur 1.1.2011; juridiction civile rév. 9.12.2015 (en vigueur 1.3.2016). **Berechnung in „points".** **Point = CHF 1.05** seit 1.1.2025 (Arrêté 176.210.12 vom 29.10.2024; ISPC Sept. 2024 = 105,2; déc. 2010 = 100).
+
+**(1) Streitwert-Staffel erstinstanzlich — Art. 19 al. 1 (juge civil; en points):**
+
+| Valeur litigieuse | Émolument (points) |
+|---|---|
+| jusqu'à 3'000 | 160 – 1'000 |
+| 3'001 – 10'000 | 600 – 5'000 |
+| 10'001 – 30'000 | 1'400 – 14'000 |
+| 30'001 – 50'000 | 3'000 – 20'000 |
+| 50'001 – 100'000 | 4'000 – 30'000 |
+| 100'001 – 500'000 | 5'000 – 50'000 |
+| 500'001 – 1'000'000 | 10'000 – 80'000 |
+| 1'000'001 et plus | 15'000 – 150'000 |
+
+(Tribunal des baux Art. 19 al. 2 und Conseil de prud'hommes al. 3 mit eigenen, tieferen Staffeln; Cour civile instance unique al. 4: **150 %** von al. 1.) Umrechnung in CHF: Punkte × 1.05.
+
+**(2) Sans valeur litigieuse — Art. 20:** juge civil **300 – 6'000** points; Tribunal des baux/prud'hommes 120–2'200; Cour civile 1'500–36'000.
+
+**(3) Cas particuliers / sommaire — Art. 21 al. 1:** procédure sommaire **200 – 4'000** points; conciliation 200–1'000; ordonnances/mesures sur simple requête, permis de défense, **procédure d'exécution 50 – 1'500** points (Rechtsöffnung/Vollstreckung). Cour civile instance unique: **150 %** (al. 2).
+
+**(4) Sur appel ou recours — Art. 22:** „l'autorité perçoit un émolument allant **30 % à 150 %** du barème applicable en première instance."
+
+**(5) Majoration/réduction — Art. 5:** aufwendige Sachen bis **+ Hälfte**, Ausnahmefälle bis **Doppeltes.** **Art. 6:** Reduktion **bis zur Hälfte**, wenn Verfahren ohne Urteil endet (transaction, désistement, acquiescement, Rückzug) oder kurz/einfach war; in Fällen b ausnahmsweise stärker oder Verzicht.
+
+**(6) Avance de frais:** Nicht eigens im Décret (Art. 98 CPC); Mode de calcul Art. 4 (Art. 10–12 LEmol). Débours zusätzlich (Art. 3).
+
+---
+
+### Querschnitt-Hinweise / offene Punkte
+- **Rahmen- vs. Tabellenkantone:** AR, AI, SG, GR, SH = Rahmengebühren je Instanz/Verfahrenstyp (+ Streitwert-Multiplikator bei AR/AI/SG). AG, TG, TI, VD, VS, NE, GE, JU = echte Streitwert-Staffeln.
+- **SH:** Auftrag-Prämisse korrigiert — Gebühren stehen im **Justizgesetz 173.200 (Art. 81–87)**, Fassung **ab 1.5.2026**; keine separate Kostenverordnung. „Kostenverordnung OGer 2003" = Luzern (Fehlzuordnung).
+- **SG:** Eine **Nachfolgefassung ab 1.7.2026** mit neuem Streitwert-Tarif war am 6.6.2026 **nicht publiziert/verifizierbar**; im geltenden Text keine Sunset-Klausel 30.6.2026. Versionsabgleich (nGS 46-42) offen, Rahmenbeträge versionsstabil.
+- **JU:** Punktwert **CHF 1.05** (Stand 1.1.2025) ist für alle JU-Beträge zwingend einzurechnen.
+- **VS:** Tariftabelle aus Fassung „état 01.01.2018"; spätere Teilrevisionen einzelner Nicht-Streitwert-Beträge nicht abschliessend geprüft.
+- **GE:** RTFMC „dernières modifications au 1er juillet 2025" — aktuellster Stand erfasst.
+- Die clex-/Gesetzessammlungs-PDFs sind digital signiert und teils nur über die JSON-/Lexfind-Spiegel maschinell lesbar; alle Zitate stammen aus den so extrahierten Volltexten der geltenden Fassungen.

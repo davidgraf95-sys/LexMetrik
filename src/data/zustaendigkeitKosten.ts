@@ -98,7 +98,7 @@ export const ZUSTAENDIGKEIT_KOSTEN: Record<Kanton, KantonKosten> = {
   SH: {
     stand: '5.6.2026',
     schlichtung: { text: 'Vorstand CHF 50–100 (+ Nebengebühren)', erlass: 'ZPO SH Art. 109, SHR 273.100' },
-    gericht: { text: "Streitwert 30'000–100'000: CHF 1'500–4'000", erlass: 'Kostenverordnung OGer 2003 § 7', hinweis: 'Erlass mit veralteter Terminologie («Amtsgericht») — Beträge formell in Kraft' },
+    gericht: { text: "Streitwert bis 100'000: CHF 500–25'000 (Pauschale in jeder Instanz)", erlass: 'Art. 83 JG, SHR 173.200', hinweis: 'Tiefenerfassung 6.6.2026: Gebühren stehen im Justizgesetz (Fassung 1.5.2026) — die früher zitierte «Kostenverordnung 2003» war eine Fehlzuordnung (Luzern)' },
   },
   AR: {
     stand: '5.6.2026',
