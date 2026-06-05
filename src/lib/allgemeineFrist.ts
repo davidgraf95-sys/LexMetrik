@@ -418,7 +418,22 @@ export function icsFuerFrist(opts: { titel: string; endISO: string; beschreibung
     'END:VEVENT',
     'END:VCALENDAR',
   ];
-  return zeilen.join('\r\n') + '\r\n';
+  // RFC 5545 §3.1: Zeilen über 75 Oktette falten (CRLF + Leerzeichen).
+  const falte = (zeile: string): string => {
+    const enc = new TextEncoder();
+    if (enc.encode(zeile).length <= 75) return zeile;
+    let rest = zeile;
+    const teile: string[] = [];
+    while (enc.encode(rest).length > 75) {
+      let schnitt = 75 - (teile.length ? 1 : 0);
+      while (schnitt > 1 && enc.encode(rest.slice(0, schnitt)).length > 75 - (teile.length ? 1 : 0)) schnitt--;
+      teile.push(rest.slice(0, schnitt));
+      rest = rest.slice(schnitt);
+    }
+    teile.push(rest);
+    return teile.join('\r\n ');
+  };
+  return zeilen.map(falte).join('\r\n') + '\r\n';
 }
 
 // Permalink: Eingaben → URL-Query und zurück (kein Tracking, rein lokal).
@@ -438,11 +453,15 @@ export function fristQueryLesen(query: string): Partial<AllgFristInput> | null {
   const einheit = p.get('e') as Einheit | null;
   if (!Number.isInteger(laenge) || laenge <= 0) return null;
   if (!einheit || !['tage', 'wochen', 'monate', 'jahre'].includes(einheit)) return null;
-  const kanton = p.get('k') ?? undefined;
+  // Kanton nur übernehmen, wenn er ein echter Kanton ist (Review A2:
+  // ungeprüfter Cast liess Fantasie-Werte ins <select> durchsickern)
+  const KANTONE_GUELTIG = new Set(['AG','AI','AR','BE','BL','BS','FR','GE','GL','GR','JU','LU','NE','NW','OW','SG','SH','SO','SZ','TG','TI','UR','VD','VS','ZG','ZH']);
+  const kantonRoh = p.get('k');
+  const kanton = kantonRoh && KANTONE_GUELTIG.has(kantonRoh) ? (kantonRoh as Kanton) : undefined;
   return {
     start: s, laenge, einheit,
     wochenendeVerschieben: p.get('w') === '1' || p.get('f') === '1',
     feiertageVerschieben: p.get('f') === '1',
-    ...(kanton ? { kanton: kanton as Kanton } : {}),
+    ...(kanton ? { kanton } : {}),
   };
 }

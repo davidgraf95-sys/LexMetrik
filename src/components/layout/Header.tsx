@@ -22,8 +22,9 @@ const PRO_BTN_CLS =
 function ProButton() {
   const { pathname, search } = useLocation(); // re-rendert bei Navigation → Login-Status frisch
   const navigate = useNavigate();
-  void pathname;
-  if (istProEingeloggt()) {
+  // Auf /pro gilt die Sitzung als aktiv, auch wenn der Pro-Effekt erst nach
+  // diesem Render einloggt (Review B1: sonst zeigte der Erstbesuch «Pro →»).
+  if (istProEingeloggt() || pathname.startsWith('/pro')) {
     return (
       <button type="button" className={PRO_BTN_CLS}
         onClick={() => { proAusloggen(); navigate('/'); }}>
