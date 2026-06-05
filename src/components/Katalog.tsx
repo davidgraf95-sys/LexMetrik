@@ -228,11 +228,14 @@ function Uebersicht(props: {
 // `seitenleisteFuss` ist ein Slot für seitenspezifische Elemente (Direkteinstieg);
 // die Modus-Weiche sitzt seitenseitig prominent UNTER dem Hero (IA-Entscheid).
 
-export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = false, filterArt = false, seitenleisteFuss }: {
+export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = false, filterArt = false, gebieteZuerst = [], seitenleisteFuss }: {
   karten: CalculatorCard[];
   filterRechtsgebiet?: boolean;
   filterBereich?: boolean;
   filterArt?: boolean;
+  /** Diese Rechtsgebiete vor die kanonische Reihenfolge ziehen
+      (z. B. Free-Seite: «Übergreifende Werkzeuge» zuerst). */
+  gebieteZuerst?: string[];
   seitenleisteFuss?: React.ReactNode;
 }) {
   const [gebiete, setGebiete] = useState<Set<string>>(new Set());
@@ -275,7 +278,13 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
 
   // Rechtsgebiete in FESTER Auftrags-Reihenfolge (§4) — bewusst ohne
   // Relevanz-Sortierung, damit die Ordnung stabil und erwartbar bleibt.
-  const gebietSichtbar = RECHTSGEBIET_SEKTIONEN
+  // `gebieteZuerst` zieht benannte Gebiete deterministisch nach vorn.
+  const gebietRang = (name: string) => {
+    const vorne = gebieteZuerst.indexOf(name);
+    return vorne !== -1 ? vorne : gebieteZuerst.length + RECHTSGEBIETE.indexOf(name);
+  };
+  const gebietSichtbar = [...RECHTSGEBIET_SEKTIONEN]
+    .sort((a, b) => gebietRang(a.name) - gebietRang(b.name))
     .map((g) => ({ g, karten: treffer.filter((k) => k.rechtsgebiet === g.name) }))
     .filter((x) => x.karten.length > 0);
 

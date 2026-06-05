@@ -64,7 +64,8 @@ export function Startseite() {
 
       {/* Katalog als eigene Sektion */}
       <section className="mt-8 sm:mt-10">
-        <Katalog karten={karten} filterArt />
+        {/* Free: Werkzeuge zuerst (Tagerechner & Co. sind der häufigste Einstieg) */}
+        <Katalog karten={karten} filterArt gebieteZuerst={['Übergreifende Werkzeuge']} />
       </section>
 
       <div className="mt-12 space-y-12">
