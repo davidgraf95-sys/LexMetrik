@@ -98,6 +98,11 @@ export type SgAnswers = {
   gerichtsKanton: Kanton;
   behoerdeManuellAktiv?: boolean;
   behoerdeManuell?: BehoerdeManuell;
+  /** Kantonsübergreifender Ausbau 5.6.2026 (Anordnung David): aus den
+   *  zweifach geprüften Datenschichten (schlichtungsstellen/amtAufloesung)
+   *  aufgelöste Behörde — Rang NACH Handeingabe und NACH der abgenommenen
+   *  Registry (BS), VOR dem Platzhalter. */
+  behoerdeAufgeloest?: { zeilen: string[] };
   // Schritt 0 – Routing & Vorprüfung
   streitgegenstandTyp: SgTyp | '';
   ausnahmeArt198: boolean;
@@ -215,8 +220,10 @@ export function sgMaengel(a: SgAnswers): SgMangel[] {
   if (a.behoerdeManuellAktiv && !behoerdeManuellVollstaendig(a.behoerdeManuell)) {
     m0.push({ schritt: 0, text: 'Behördenadresse von Hand: Name, Strasse mit Hausnummer und PLZ/Ort vollständig erfassen.' });
   }
-  if (a.gerichtsKanton !== 'BS' && !(a.behoerdeManuellAktiv && behoerdeManuellVollstaendig(a.behoerdeManuell))) {
-    m0.push({ schritt: 0, text: `Für den Kanton ${a.gerichtsKanton} sind die Behördenadressen noch nicht hinterlegt – Basel-Stadt wählen oder die Adresse der zuständigen Schlichtungsbehörde von Hand erfassen.` });
+  if (a.gerichtsKanton !== 'BS'
+      && !(a.behoerdeManuellAktiv && behoerdeManuellVollstaendig(a.behoerdeManuell))
+      && (a.behoerdeAufgeloest?.zeilen.length ?? 0) < 3) {
+    m0.push({ schritt: 0, text: `Zuständige Schlichtungsbehörde für den Kanton ${a.gerichtsKanton} bestimmen (PLZ/Gemeinde eingeben bzw. Stelle wählen) — oder die Adresse von Hand erfassen.` });
   }
   const m: SgMangel[] = [...m0];
   const num = (s?: string) => Number(String(s ?? '').replace(/['\s]/g, '').replace(',', '.')); // wie fmtCHF
@@ -434,11 +441,14 @@ export function sgZusammenstellen(a: SgAnswers) {
   // Adressat: Handeingabe vor Registry; ausserhalb BS ohne Handadresse
   // bleibt der Block leer-markiert (Mängelliste blockiert den Export).
   const registryAdresse = behoerdeFuer('schlichtungsbehoerde_zivil', a.gerichtsKanton);
+  const aufgeloestOk = (a.behoerdeAufgeloest?.zeilen.length ?? 0) >= 3;
   const adressatBlock = a.behoerdeManuellAktiv && behoerdeManuellVollstaendig(a.behoerdeManuell)
     ? behoerdeAlsBlock(a.behoerdeManuell!)
     : registryAdresse
       ? behoerdeAlsBlock(registryAdresse)
-      : '________\n________\n________';
+      : aufgeloestOk
+        ? a.behoerdeAufgeloest!.zeilen.join('\n')
+        : '________\n________\n________';
   const antworten: Antworten = {
     ...a,
     absenderBlock: a.vertretung?.bezeichnung

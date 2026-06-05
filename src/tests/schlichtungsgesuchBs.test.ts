@@ -117,11 +117,17 @@ describe('Schlichtungsgesuch BS – Akzeptanztests', () => {
     expect(t).toContain('(beklagte Partei)');
   });
 
-  it('12. Download-Gate: fremder Kanton / leerer Streitgegenstand sperren mit Mängelliste', () => {
-    // Deklarierte Änderung 5.6.2026: Das Forum-Häkchen ist entfallen —
-    // die Kantonsauswahl übernimmt (BS hinterlegt, andere blockieren).
+  it('12. Download-Gate: fremder Kanton ohne Auflösung / leerer Streitgegenstand sperren mit Mängelliste', () => {
+    // Deklarierte Änderung 5.6.2026 (kantonsübergreifender Ausbau): fremde
+    // Kantone sperren nur noch, solange KEINE Behörde aufgelöst/erfasst ist;
+    // mit behoerdeAufgeloest (PLZ/Gemeinde→Stelle) ist der Export frei.
     const m1 = sgMaengel(basis({ gerichtsKanton: 'ZH', geld: { betrag: '3000' } }));
-    expect(m1.some((m) => m.text.includes('noch nicht hinterlegt'))).toBe(true);
+    expect(m1.some((m) => m.text.includes('bestimmen'))).toBe(true);
+    const m1b = sgMaengel(basis({
+      gerichtsKanton: 'ZH', geld: { betrag: '3000' },
+      behoerdeAufgeloest: { zeilen: ['Friedensrichteramt Adliswil', 'Zürichstrasse 10', '8134 Adliswil'] },
+    }));
+    expect(m1b).toEqual([]);
     const m2 = sgMaengel(basis({ streitgegenstand: '', geld: { betrag: '3000' } }));
     expect(m2.some((m) => m.schritt === 4)).toBe(true);
     expect(sgMaengel(basis({ geld: { betrag: '3000' } }))).toEqual([]);

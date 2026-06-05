@@ -527,10 +527,14 @@ describe('Behörden-Grundgerüst für Eingaben (5.6.2026)', () => {
     expect(t).toContain('Bäumleingasse 5');
     expect(t).toContain('4001 Basel');
     expect(t).not.toContain('Postfach 964');
-    // anderer Kanton: Fehlermeldung; mit Handadresse nutzbar
-    expect(sgMaengel({ ...basis, gerichtsKanton: 'ZH' }).map((x) => x.text).join()).toMatch(/noch nicht hinterlegt/);
+    // anderer Kanton: Mangel bis zur Auflösung; mit Hand- ODER aufgelöster Adresse nutzbar
+    // (deklarierte Änderung 5.6.2026 — kantonsübergreifender Ausbau)
+    expect(sgMaengel({ ...basis, gerichtsKanton: 'ZH' }).map((x) => x.text).join()).toMatch(/bestimmen/);
+    const mitAufloesung = { ...basis, gerichtsKanton: 'ZH' as const, behoerdeAufgeloest: { zeilen: ['Friedensrichteramt Adliswil', 'Zürichstrasse 10', '8134 Adliswil'] } };
+    expect(sgMaengel(mitAufloesung)).toEqual([]);
+    expect(sgZusammenstellen(mitAufloesung).dokument.absaetze.map((x) => x.text).join('\n')).toContain('Zürichstrasse 10');
     const mitHand = { ...basis, gerichtsKanton: 'ZH' as const, behoerdeManuellAktiv: true, behoerdeManuell: { name: 'Friedensrichteramt Zürich, Kreise 1+2', strasse: 'Wengistrasse 30', plzOrt: '8004 Zürich' } };
-    expect(sgMaengel(mitHand).map((x) => x.text).join()).not.toMatch(/noch nicht hinterlegt/);
+    expect(sgMaengel(mitHand).map((x) => x.text).join()).not.toMatch(/bestimmen/);
     expect(sgZusammenstellen(mitHand).dokument.absaetze.map((x) => x.text).join('\n')).toContain('Wengistrasse 30');
     // unvollständige Handadresse blockiert
     expect(sgMaengel({ ...mitHand, behoerdeManuell: { name: 'X', strasse: '', plzOrt: '' } }).map((x) => x.text).join()).toMatch(/vollständig erfassen/);

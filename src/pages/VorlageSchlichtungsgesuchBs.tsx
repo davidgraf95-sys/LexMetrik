@@ -11,6 +11,7 @@ import { KANTONE } from '../lib/kantone';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
+import { SgBehoerdenWahl } from '../components/vorlagen/SgBehoerdenWahl';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -187,13 +188,17 @@ export function VorlageSchlichtungsgesuchBs() {
                   </div>
                 );
                 return (
-                  <div className="lc-notice-danger text-body-s" role="alert">
-                    Für den Kanton {a.gerichtsKanton} sind die Behördenadressen noch nicht hinterlegt —
-                    Basel-Stadt wählen oder die Adresse der zuständigen Schlichtungsbehörde unten von Hand erfassen.
+                  <div className="lc-notice text-body-s">
+                    Behörde wird unten über die Recherche-Daten des Kantons {a.gerichtsKanton} bestimmt
+                    (zweifach geprüft) — oder von Hand erfassen.
                   </div>
                 );
               })()}
             </div>
+            {a.gerichtsKanton !== 'BS' && !a.behoerdeManuellAktiv && (
+              <SgBehoerdenWahl kanton={a.gerichtsKanton}
+                onAufgeloest={(z) => set('behoerdeAufgeloest', z ? { zeilen: z } : undefined)} />
+            )}
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.behoerdeManuellAktiv ?? false}
                 onChange={(e) => set('behoerdeManuellAktiv', e.target.checked || undefined)} />
