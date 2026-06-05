@@ -176,10 +176,13 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
     }
   }
 
-  // G3 — Kündigungsfrist: Mindestfristen relativ zwingend (Art. 266c/266d OR)
+  // G3 — Kündigungsfrist: Mindestfristen relativ zwingend (Art. 266c/266d OR).
+  // Bei Befristung übersprungen — der Kündigungsbaustein erscheint dann gar
+  // nicht im Dokument (Audit 5.6.2026: Blocker auf unsichtbarem Feld;
+  // konsistent zum Arbeitsvertrag-G2).
   const fristMin = mvGesetzlicheFrist(a.objektTyp);
   const frist = a.kuendigungsfristMonate ?? fristMin;
-  if (frist < fristMin) {
+  if (!a.befristet && frist < fristMin) {
     blocker.push(wohnung
       ? 'Die Kündigungsfrist für Wohnungen beträgt mindestens drei Monate (Art. 266c OR) — kürzere Abreden sind ungültig.'
       : 'Die Kündigungsfrist für Geschäftsräume beträgt mindestens sechs Monate (Art. 266d OR) — kürzere Abreden sind ungültig.');

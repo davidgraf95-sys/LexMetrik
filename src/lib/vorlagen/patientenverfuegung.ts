@@ -107,10 +107,21 @@ export function pruefePvGates(a: PvAntworten): PvGateErgebnis {
   const warnungen: string[] = [];
   const hinweise: string[] = [];
 
-  // R6: Sterbehilfe-Block über alle Freitexte
+  // R6: Sterbehilfe-Block über alle Freitexte. HEURISTIK, keine Garantie —
+  // ein Begriffsfilter kann Umschreibungen nie vollständig erkennen; die
+  // eigentliche Absicherung sind das Anordnungsverbot im Bausteintext und
+  // der Disclaimer. Audit 5.6.2026: Eingaben werden vor dem Abgleich
+  // normalisiert (NFKC, Whitespace/Bindestriche kollabiert, zusätzlich
+  // leerzeichenfreier Abgleich), damit triviale Umgehungen («aktive
+  // sterbehilfe» mit Doppel-Leerzeichen, Bindestrich, Zeilenumbruch oder
+  // «sterbehilfe organisation») nicht durchrutschen.
   const freitexte = [a.einstellungLeben, a.aengste, a.religioesSpirituell, a.vertretungWeisungen, a.sterbeortBegleitung]
-    .filter(Boolean).join(' ').toLowerCase();
-  const treffer = R6_BEGRIFFE.filter((b) => freitexte.includes(b));
+    .filter(Boolean).join(' ')
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/[\s\u00a0\u202f\u2010-\u2015-]+/g, ' ');
+  const kompakt = freitexte.replace(/ /g, '');
+  const treffer = R6_BEGRIFFE.filter((b) => freitexte.includes(b) || kompakt.includes(b.replace(/ /g, '')));
   if (treffer.length > 0) {
     blocker.push(
       `Ihre Eingabe enthält «${treffer[0]}»: Aktive Sterbehilfe (Tötung auf Verlangen, Art. 114 StGB) und Suizidhilfe (Art. 115 StGB) können in einer Patientenverfügung NICHT angeordnet werden. Zulässig sind Behandlungsverzicht/-abbruch und Leidenslinderung, auch wenn diese das Sterben beschleunigen kann. Bitte formulieren Sie die Passage um.`,

@@ -66,8 +66,14 @@ export function pruefeGates(a: TestamentAntworten): GateErgebnis {
   }
 
   // GATE-6: Quoten-Plausibilität (Warnung, kein harter Block — Herabsetzung
-  // nach Art. 522 ff. ZGB ist Anfechtungsfrage)
+  // nach Art. 522 ff. ZGB ist Anfechtungsfrage). Audit 5.6.2026: zusätzlich
+  // je Quote prüfen — eine Summe von 100 kann auch aus unsinnigen Einzel-
+  // quoten (−50 + 150) entstehen und blieb zuvor unbeanstandet.
   if (a.erben.length > 0) {
+    const ungueltig = a.erben.filter((e) => !Number.isFinite(e.quoteProzent) || e.quoteProzent <= 0 || e.quoteProzent > 100);
+    if (ungueltig.length > 0) {
+      warnungen.push(`${ungueltig.length === 1 ? 'Eine Erbquote ist' : `${ungueltig.length} Erbquoten sind`} ungültig (jede Quote muss zwischen 0 und 100 % liegen) — bitte korrigieren.`);
+    }
     const summe = a.erben.reduce((s, e) => s + (Number.isFinite(e.quoteProzent) ? e.quoteProzent : 0), 0);
     if (Math.abs(summe - 100) > 0.01) {
       warnungen.push(`Die Erbquoten ergeben zusammen ${summe} % statt 100 % — der ganze Nachlass sollte abgedeckt sein; der nicht verfügte Teil fällt an die gesetzlichen Erben (Art. 481 Abs. 2 ZGB).`);

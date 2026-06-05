@@ -128,3 +128,11 @@ describe('Mietvertrag — Review-Zusatztests', () => {
     expect(r.dokument.absaetze.at(-1)?.rolle).toBe('unterschrift');
   });
 });
+
+describe('Mietvertrag — Audit-Fix 5.6.2026', () => {
+  it('MT-15 G3-Fristen-Blocker entfällt bei Befristung (Kündigungsbaustein erscheint nicht)', () => {
+    const b = basis({ befristet: true, befristetBis: '2028-09-30', kuendigungsfristMonate: 1 });
+    expect(pruefeMvGates(b).blocker).toEqual([]);
+    expect(ids(b)).not.toContain('M12_kuendigung');
+  });
+});
