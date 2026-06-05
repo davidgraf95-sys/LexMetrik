@@ -158,6 +158,33 @@ describe('Zuständigkeit — Scheidung (Umbau 5.6.2026; Art. 23/198 lit. c/274 Z
   });
 });
 
+describe('Zuständigkeit — Erbrecht (Art. 28 ZPO; Spezialbehörden-Hinweise)', () => {
+  const erb = (): ZustaendigkeitInput => ({
+    streitsache: 'erbrecht', vermoegensrechtlich: true, streitwertCHF: 50_000,
+  });
+  it('örtlich: letzter Wohnsitz des Erblassers, DISPOSITIV (Art. 28 Abs. 1 — nicht als zwingend bezeichnet)', () => {
+    const r = bestimmeZustaendigkeit(erb());
+    expect(r.oertlich.gerichtsstand).toContain('letzten Wohnsitz');
+    expect(r.oertlich.bindung).toBe('dispositiv');
+    expect(r.oertlich.normen.some((n) => n.artikel === 'Art. 28 ZPO')).toBe(true);
+  });
+  it('Klageweg normal: Schlichtung obligatorisch, ordentliche Behörde, Verfahrensart nach Streitwert', () => {
+    const r = bestimmeZustaendigkeit(erb());
+    expect(r.schlichtung.obligatorisch).toBe(true);
+    expect(r.schlichtung.behoerdeTyp).toBe('ordentlich');
+    expect(r.verfahrensart).toBe('ordentlich'); // 50'000 > 30'000
+    expect(r.eingabeArt).toBe('schlichtungsgesuch');
+  });
+  it('Erbgangs-Massnahmen: zwingende Behörde (Art. 28 Abs. 2) als Warnung offengelegt', () => {
+    const r = bestimmeZustaendigkeit(erb());
+    expect(r.warnungen.some((w) => w.includes('Art. 28 Abs. 2'))).toBe(true);
+  });
+  it('Arbeit: Hinweis auf kantonale Arbeitsgerichte/eigene Schlichtungsbehörden', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 5_000 });
+    expect(r.warnungen.some((w) => w.includes('Arbeitsgerichte'))).toBe(true);
+  });
+});
+
 describe('Zuständigkeit — Eingabe-Art & Prüfreihenfolge (Umbau 5.6.2026)', () => {
   it('obligatorische Schlichtung → Schlichtungsgesuch; entfallene → Klage direkt', () => {
     expect(bestimmeZustaendigkeit(geld()).eingabeArt).toBe('schlichtungsgesuch');

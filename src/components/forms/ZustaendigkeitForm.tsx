@@ -43,6 +43,7 @@ const STREITSACHEN: { code: Streitsache; label: string; sub: string }[] = [
   { code: 'miete_wohn_geschaeft', label: 'Miete & Pacht', sub: 'Wohn-/Geschäftsräume inkl. Kündigungsschutz' },
   { code: 'arbeit', label: 'Arbeitsrecht', sub: 'Forderungen aus dem Arbeitsverhältnis' },
   { code: 'scheidung', label: 'Scheidung', sub: 'Gemeinsames Begehren oder Klage (Art. 274 ff. ZPO)' },
+  { code: 'erbrecht', label: 'Erbrecht', sub: 'Erbrechtliche Klagen (Herabsetzung, Ungültigkeit, Teilung)' },
 ];
 
 const MIETE_UNTERFAELLE: { code: MieteUnterfall; label: string }[] = [
@@ -60,6 +61,7 @@ const ORT_LABEL: Record<Streitsache, string> = {
   miete_wohn_geschaeft: 'Ort der Miet-/Pachtsache',
   arbeit: 'Wohnsitz/Sitz der beklagten Partei oder gewöhnlicher Arbeitsort',
   scheidung: 'Wohnsitz einer der Parteien',
+  erbrecht: 'letzter Wohnsitz der Erblasserin/des Erblassers',
 };
 
 type Instanz = 'einleitung' | 'rechtsmittel';
@@ -148,7 +150,8 @@ export function ZustaendigkeitForm() {
 
   // CTA «Weiter zur Vorlage» (Auftrag §8): nur wenn die Ziel-Vorlage den Fall
   // trägt UND die Stelle erfasst ist; sonst ehrlich ausgeblendet.
-  const sgTyp = istGeld ? 'geldforderung' as const : istArbeit ? 'arbeitsrecht' as const : null;
+  const sgTyp = istGeld ? 'geldforderung' as const : istArbeit ? 'arbeitsrecht' as const
+    : f.streitsache === 'erbrecht' ? 'uebrige_zivilsache' as const : null;
   const sgPrefill = r && stelle && f.kanton === 'BS' && r.eingabeArt === 'schlichtungsgesuch'
     && r.schlichtung.behoerdeTyp === 'ordentlich' && sgTyp
     ? sgPrefillKodieren({ typ: sgTyp, betragCHF: vermoegensrechtlich ? streitwert : null, kanton: 'BS' })
@@ -212,7 +215,7 @@ export function ZustaendigkeitForm() {
       <div className="space-y-2">
         <p className="lc-overline">2 · Art des Streits</p>
         <SelectionGrid
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
           items={STREITSACHEN.map((s) => ({ code: s.code, label: s.label, sub: s.sub }))}
           value={f.streitsache}
           onSelect={(code) => set('streitsache', code)}

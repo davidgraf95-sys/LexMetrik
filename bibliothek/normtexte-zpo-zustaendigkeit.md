@@ -316,3 +316,12 @@ Art. 274 Einleitung
  Das Scheidungsverfahren wird durch Einreichung eines gemeinsamen Scheidungsbegehrens oder einer Scheidungsklage eingeleitet.
 ```
 
+## Art. 28 ZPO (Nachtrag 5.6.2026, Streitsache «Erbrecht»)
+
+```
+Art. 28
+(1)  Für erbrechtliche Klagen sowie für Klagen auf güterrechtliche Auseinandersetzung beim Tod eines Ehegatten, einer eingetragenen Partnerin oder eines eingetragenen Partners ist das Gericht am letzten Wohnsitz der Erblasserin oder des Erblassers zuständig.
+(2)  Für Massnahmen im Zusammenhang mit dem Erbgang ist die Behörde am letzten Wohnsitz der Erblasserin oder des Erblassers zwingend zuständig. Ist der Tod nicht am Wohnsitz eingetreten, so macht die Behörde des Sterbeortes derjenigen des Wohnortes Mitteilung und trifft die nötigen Massnahmen, um die Vermögenswerte am Sterbeort zu sichern.
+(3)  Selbstständige Klagen auf erbrechtliche Zuweisung eines landwirtschaftlichen Gewerbes oder Grundstückes können auch am Ort der gelegenen Sache erhoben werden.
+```
+

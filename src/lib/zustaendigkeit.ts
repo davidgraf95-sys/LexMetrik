@@ -44,7 +44,7 @@ export const ZPO_SCHWELLEN = {
 // Engines (§4 — KEINE Fusion in diese ZPO-Engine).
 export type Rechtsweg = 'zivil' | 'schkg' | 'straf' | 'verwaltung';
 
-export type Streitsache = 'geldforderung' | 'miete_wohn_geschaeft' | 'arbeit' | 'scheidung';
+export type Streitsache = 'geldforderung' | 'miete_wohn_geschaeft' | 'arbeit' | 'scheidung' | 'erbrecht';
 export type Verfahrensart = 'vereinfacht' | 'ordentlich' | 'scheidungsverfahren';
 export type SchlichtungsbehoerdeTyp = 'ordentlich' | 'paritaetisch_miete' | 'paritaetisch_glg';
 /** Art der einleitenden Eingabe — steuert den Vorlagen-Verweis (Auftrag §8). */
@@ -108,6 +108,7 @@ const N_34: Normverweis = { artikel: 'Art. 34 ZPO', bemerkung: 'Arbeitsrecht —
 const N_35: Normverweis = { artikel: 'Art. 35 ZPO', bemerkung: 'Teilzwingend: kein Verzicht der geschützten Partei' };
 const N_4: Normverweis = { artikel: 'Art. 4 ZPO', bemerkung: 'Sachliche/funktionelle Zuständigkeit nach kantonalem Recht' };
 const N_23: Normverweis = { artikel: 'Art. 23 ZPO', bemerkung: 'Eherechtliche Gesuche/Klagen — Wohnsitz einer Partei, zwingend' };
+const N_28: Normverweis = { artikel: 'Art. 28 ZPO', bemerkung: 'Erbrechtliche Klagen — letzter Wohnsitz der Erblasserin/des Erblassers' };
 const N_274: Normverweis = { artikel: 'Art. 274 ZPO', bemerkung: 'Einleitung: gemeinsames Scheidungsbegehren oder Scheidungsklage' };
 
 const ungueltig = (sw: number | null) => sw !== null && (!Number.isFinite(sw) || sw < 0);
@@ -143,6 +144,10 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
     gerichtsstand = 'Gericht am Wohnsitz einer der Parteien';
     bindung = 'zwingend'; // Art. 23 Abs. 1 ZPO: «zwingend zuständig»
     oertlichNormen = [N_23];
+  } else if (input.streitsache === 'erbrecht') {
+    // Art. 28 Abs. 1: nicht als zwingend bezeichnet → dispositiv (Art. 9 ZPO)
+    gerichtsstand = 'Gericht am letzten Wohnsitz der Erblasserin/des Erblassers';
+    oertlichNormen = [N_28];
   } else if (istMiete) {
     gerichtsstand = 'Gericht am Ort der gelegenen Sache';
     bindung = 'teilzwingend'; // Art. 35 Abs. 1 lit. b (Wohn-/Geschäftsräume)
@@ -287,6 +292,13 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
 
   // ── Warnungen (Ehrlichkeit, §13) ──────────────────────────────────────────
   warnungen.push('Welches konkrete kantonale Gericht erst- und zweitinstanzlich zuständig ist (Streitwertgrenze Einzelgericht/Kollegium, Bezirks-/Kreiseinteilung), richtet sich nach kantonalem Recht (Art. 4 ZPO) und wird in dieser Phase noch nicht kantonsspezifisch aufgelöst.');
+  // Kantonale SPEZIALBEHÖRDEN ausserhalb der Bundes-Systematik offenlegen:
+  if (input.streitsache === 'arbeit') {
+    warnungen.push('Einige Kantone kennen für arbeitsrechtliche Streitigkeiten besondere Spruchkörper (z. B. Arbeitsgerichte) oder eigene Schlichtungsbehörden — kantonales Recht (Art. 4 ZPO); die konkrete Stelle folgt mit der Kantonsschicht.');
+  }
+  if (input.streitsache === 'erbrecht') {
+    warnungen.push('Für MASSNAHMEN im Zusammenhang mit dem Erbgang (z. B. Testamentseröffnung, Sicherungsmassregeln, Entgegennahme der Ausschlagung) ist die BEHÖRDE am letzten Wohnsitz der Erblasserin/des Erblassers zwingend zuständig (Art. 28 Abs. 2 ZPO) — kantonal organisiert (z. B. Erbschaftsbehörde/Erbschaftsamt), NICHT der Klageweg dieses Rechners.');
+  }
   if (!input.vermoegensrechtlich) {
     warnungen.push('Nicht vermögensrechtliche Streitigkeit: streitwertabhängige Schwellen (vereinfachtes Verfahren, Entscheid/Entscheidvorschlag, Verzicht) sind nicht anwendbar.');
   }
