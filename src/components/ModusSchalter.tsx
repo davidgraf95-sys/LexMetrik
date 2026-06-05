@@ -47,10 +47,10 @@ export function ModusSchalter({ modus, onChange, anzahl, breit = false }: {
                 : 'border border-transparent text-ink-600 hover:text-ink-900'
             }`}>
             <span className="flex items-baseline gap-2">
-              <span className="text-sm font-semibold leading-tight">{m.label}</span>
+              <span className="text-body-s font-semibold leading-tight">{m.label}</span>
               {anzahl && (
                 /* beide Zähler identisch — aktiv/inaktiv vermittelt allein die Zelle */
-                <span className="num text-[0.7rem] font-medium leading-none text-ink-500">
+                <span className="num text-micro font-medium leading-none text-ink-500">
                   {anzahl[m.code]}
                 </span>
               )}

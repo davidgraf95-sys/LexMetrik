@@ -60,6 +60,19 @@ weiter) — natürlicher Andockpunkt für den späteren Zugriffs-Wrapper
 Aktionscluster rechts: ⌘K · Sprache · Methodik · Über · Stufen-Button),
 Mitte leer; Utility-Bar nur Pflichthinweis rechts, mobil ausgeblendet.
 
+**Design-Tokens (Feinschliff 5.6.2026, single source tailwind.config +
+index.css):** Typo-Skala GESCHLOSSEN — micro 11 · overline 11 · xs 12 ·
+body-s 14 · base 16 · body-l 18 · h3 20 · h2 25.6 (auch Ergebnis-Hauptwerte
+mit `leading-none`) · h1 32 · display 36/44 (Heroes). **`text-sm`/`text-lg`
+sind verboten** (Tailwind-lh weicht ab; body-s/body-l verwenden). Radien
+komplett tokenisiert (--radius-sm…2xl). Status-Hintergründe nach EINEM
+Rezept (`color-mix --status-tint 10%` auf Papier; AA geprüft). Motion:
+--dur-fast/base/slow + --ease, Default-Easing global. Komponenten-Anatomie:
+`lc-tile` (Ergebnis-Kachel) · `lc-notice[-warn|-danger]` eigenständig (kein
+Inline-Padding!) · `lc-btn-sm` (36px) · disabled steckt in den
+lc-btn-Klassen (keine disabled:-Utilities) · ein Aktions-Akzent
+(lc-btn-primary; lc-btn-brass entfernt).
+
 **Layout:** Inhaltsspalte einheitlich `max-w-content` = **70rem (~1120px)**
 (Token in tailwind.config); 8-px-Skala `--space-1…24`, `--control-h` 44px,
 `--pill-h` 36px. Hero text-geführt einspaltig (keine Deko-Grafik, bewusst

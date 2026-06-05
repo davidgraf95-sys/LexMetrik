@@ -121,7 +121,7 @@ function Legende({ kreis, band, label, muted }: { kreis?: string; band?: string;
     <span className="inline-flex items-center gap-1.5">
       {kreis && <span className={`inline-block w-3.5 h-3.5 rounded-full ${kreis}`} />}
       {band && <span className={`inline-block w-5 h-3 rounded-full ${band}`} />}
-      {muted && <span className="text-[10px] text-ink-300 leading-none font-medium">Sa</span>}
+      {muted && <span className="text-micro text-ink-300 leading-none font-medium">Sa</span>}
       {label}
     </span>
   );

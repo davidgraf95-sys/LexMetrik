@@ -27,7 +27,7 @@ export function Fachpersonen() {
       {/* Kompakter Hero mit Kennzahlen-Messleiste */}
       <section className="space-y-4">
         <p className="lc-overline text-brass-700">Experten-Panel</p>
-        <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.25rem] sm:text-[2.75rem] max-w-reading">
+        <h1 className="font-display font-semibold text-ink-900 text-display sm:text-display-l max-w-reading">
           Der vollständige Katalog für die Praxis.
         </h1>
         <p className="text-body-l text-ink-600 max-w-reading">
@@ -48,7 +48,7 @@ export function Fachpersonen() {
               { wert: gebiete, label: 'Rechtsgebiete' },
             ].map((s) => (
               <div key={s.label} className="sm:px-8 sm:first:pl-0 sm:py-3">
-                <dd className="num text-[1.4rem] sm:text-[1.6rem] leading-none font-medium text-ink-900">{s.wert}</dd>
+                <dd className="num text-h2 leading-none font-medium text-ink-900">{s.wert}</dd>
                 <dt className="lc-overline mt-1.5">{s.label}</dt>
               </div>
             ))}

@@ -96,15 +96,15 @@ export function VorlageVorsorgeauftrag() {
         <div className="space-y-5">
           <div className="space-y-2">
             <p className="lc-overline">Errichtungsvoraussetzungen (Art. 13 ZGB)</p>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.volljaehrig} onChange={(e) => set('volljaehrig', e.target.checked)} />
               Ich bin volljährig (Art. 14 ZGB)
             </label>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.urteilsfaehigBestaetigt} onChange={(e) => set('urteilsfaehigBestaetigt', e.target.checked)} />
               Ich bin urteilsfähig (Art. 16 ZGB) — bei hohem Alter wird ein ärztliches Zeugnis zur Urteilsfähigkeit empfohlen
             </label>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.keineUmfassendeBeistandschaft} onChange={(e) => set('keineUmfassendeBeistandschaft', e.target.checked)} />
               Ich stehe nicht unter umfassender Beistandschaft (Art. 398 ZGB)
             </label>
@@ -121,7 +121,7 @@ export function VorlageVorsorgeauftrag() {
                   className={`text-left p-3 rounded-lg border transition-colors ${
                     a.formMode === code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
                   }`}>
-                  <span className="block text-sm font-semibold text-ink-900">{label}</span>
+                  <span className="block text-body-s font-semibold text-ink-900">{label}</span>
                   <span className="block text-xs text-ink-500">{sub}</span>
                 </button>
               ))}
@@ -175,7 +175,7 @@ export function VorlageVorsorgeauftrag() {
                 </Field>
                 <div className="flex flex-wrap items-center gap-3">
                   {VA_BEREICHE.map((ber) => (
-                    <label key={ber.id} className="flex items-center gap-1.5 text-sm cursor-pointer text-ink-700">
+                    <label key={ber.id} className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
                       <input type="checkbox" checked={b.bereiche.includes(ber.id)} onChange={() => toggleBereich(i, ber.id)} />
                       {ber.label}
                     </label>
@@ -229,7 +229,7 @@ export function VorlageVorsorgeauftrag() {
                 </button>
               </div>
               {VA_MODULE[ber.id].map((m) => (
-                <label key={m.id} className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+                <label key={m.id} className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                   <input type="checkbox" className="mt-0.5" checked={a.module[ber.id].includes(m.id)} onChange={() => toggleModul(ber.id, m.id)} />
                   {m.label}
                 </label>
@@ -237,7 +237,7 @@ export function VorlageVorsorgeauftrag() {
             </div>
           ))}
           {a.module.vermoegenssorge.includes('liegenschaften') && (
-            <p className="lc-notice rounded-md p-3 text-body-s text-ink-600">
+            <p className="lc-notice text-body-s">
               Liegenschaften gewählt: Die ausdrückliche Grundstück-Sondervollmacht wird automatisch
               aufgenommen (Art. 396 Abs. 3 OR — analoge Anwendung umstritten, Praxis empfiehlt sie).
             </p>
@@ -249,11 +249,11 @@ export function VorlageVorsorgeauftrag() {
         <div className="space-y-5">
           <div className="space-y-2">
             <p className="lc-overline">Sondervollmachten</p>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.schenkungenErlaubt} onChange={(e) => set('schenkungenErlaubt', e.target.checked)} />
               <span>Übliche Gelegenheitsgeschenke erlauben <span className="text-ink-500">(Schranke: Art. 240 Abs. 2 OR)</span></span>
             </label>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.besondereGeschaefte} onChange={(e) => set('besondereGeschaefte', e.target.checked)} />
               <span>Besondere Geschäfte ausdrücklich ermächtigen: Vergleich, Schiedsvereinbarung, Wechsel <span className="text-ink-500">(Art. 396 Abs. 3 OR)</span></span>
             </label>
@@ -274,7 +274,7 @@ export function VorlageVorsorgeauftrag() {
               ] as const).map(([code, label]) => (
                 <button key={code} type="button" aria-pressed={a.entschaedigung === code}
                   onClick={() => set('entschaedigung', code)}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                  className={`px-3 py-1.5 rounded-full text-body-s font-medium border transition-colors ${
                     a.entschaedigung === code ? 'bg-ink-900 border-ink-900 text-paper' : 'bg-surface border-line text-ink-600 hover:border-brass-400'
                   }`}>
                   {label}
@@ -293,7 +293,7 @@ export function VorlageVorsorgeauftrag() {
 
       case 'abschluss': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.pvVorhanden} onChange={(e) => set('pvVorhanden', e.target.checked)} />
             <span>Auf meine separate Patientenverfügung verweisen <span className="text-ink-500">(geht bei medizinischen Massnahmen vor)</span></span>
           </label>
@@ -302,7 +302,7 @@ export function VorlageVorsorgeauftrag() {
               <input className={inputCls} value={a.pvHinterlegung ?? ''} onChange={(e) => set('pvHinterlegung', e.target.value)} placeholder="z. B. Hausarztpraxis Dr. X" />
             </Field>
           )}
-          <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.ersetztFruehere} onChange={(e) => set('ersetztFruehere', e.target.checked)} />
             <span>Frühere Vorsorgeaufträge ersetzen <span className="text-ink-500">(Art. 362 Abs. 3 ZGB)</span></span>
           </label>
@@ -327,10 +327,10 @@ export function VorlageVorsorgeauftrag() {
             </div>
           ))}
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn rounded-md p-3 text-body-s text-warn-700">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
           ))}
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice rounded-md p-3 text-body-s text-ink-600">{h}</div>
+            <div key={i} className="lc-notice text-body-s">{h}</div>
           ))}
 
           {/* Form-Gate: nicht überspringbar, variantenabhängig */}
@@ -351,7 +351,7 @@ export function VorlageVorsorgeauftrag() {
               <li><strong>Auffindbarkeit:</strong> Errichtung und Hinterlegungsort beim Zivilstandsamt eintragen lassen (Art. 361 Abs. 3 ZGB; Gebühr CHF 75, Bestätigung +CHF 30 — Richtwerte). Die KESB anerkennt nur das Original; beauftragte Person informieren und Aufbewahrungsort mitteilen (nicht ins alleinige Bankschliessfach).</li>
               <li><strong>Widerruf:</strong> jederzeit in einer Errichtungsform oder durch Vernichtung der Urkunde (Art. 362 ZGB).</li>
             </ul>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               {eigenhaendig
                 ? 'Ich habe verstanden: Nur die vollständig handschriftliche (oder beurkundete) Fassung ist gültig — dieses Werkzeug liefert einen Mustertext zum Abschreiben.'

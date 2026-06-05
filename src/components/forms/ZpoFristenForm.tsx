@@ -114,7 +114,7 @@ export function ZpoFristenForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer (Ziff. 9) – immer sichtbar, kompakt. Volltext im Ergebnis-Panel. */}
-      <details className="lc-notice-danger rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--danger-500)' }}>
+      <details className="lc-notice-danger">
         <summary className="text-body-s text-danger-700 cursor-pointer">
           <strong>Keine Rechtsberatung</strong> – rechnerische Orientierung (Art. 142–147 ZPO, Praxis BGer 5A_691/2023). Massgeblich ist der Gerichtsort.
         </summary>
@@ -138,7 +138,7 @@ export function ZpoFristenForm() {
       </div>
 
       {phase === 'materiell' ? (
-        <div className="lc-notice-danger rounded-md" style={{ padding: '12px 16px', borderLeft: '3px solid var(--danger-500)' }}>
+        <div className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Materielle Frist – nicht von diesem Rechner erfasst</p>
           <p className="text-body-s text-danger-700">{MATERIELL_WARNUNG}</p>
         </div>
@@ -215,7 +215,7 @@ export function ZpoFristenForm() {
       <div className="border border-line rounded-lg">
         <button type="button" onClick={() => setErweitert(!erweitert)}
           className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${erweitert ? '' : 'rounded-b-lg'}`}>
-          <span className="text-sm font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
+          <span className="text-body-s font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
           <span className="text-ink-500">{erweitert ? '▲' : '▼'}</span>
         </button>
         {erweitert && (
@@ -229,7 +229,7 @@ export function ZpoFristenForm() {
 
             {form.fristnatur === 'gerichtlich' && (
               <div className="space-y-2">
-                <label className="flex items-center gap-2 text-sm cursor-pointer">
+                <label className="flex items-center gap-2 text-body-s cursor-pointer">
                   <input type="checkbox" checked={erstreckungAn} onChange={(e) => setErstreckungAn(e.target.checked)} />
                   Erstreckung berechnen (Art. 144 Abs. 2 ZPO)
                 </label>
@@ -252,7 +252,7 @@ export function ZpoFristenForm() {
                 <DatumsFeld value={fiktionDatum} onChange={(v) => setFiktionDatum(v)} className={inputCls} />
                 <button type="button" disabled={!fiktionDatum}
                   onClick={() => set('ereignis', zustellfiktion(fiktionDatum))}
-                  className="text-sm px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 rounded-lg whitespace-nowrap">
+                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 rounded-lg whitespace-nowrap">
                   → als Ereignis übernehmen
                 </button>
               </div>
@@ -264,7 +264,7 @@ export function ZpoFristenForm() {
       {fehler.length > 0 && (
         <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
           <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-sm text-danger-700">• {f}</p>)}
+          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
         </div>
       )}
 
@@ -278,14 +278,14 @@ export function ZpoFristenForm() {
               { label: 'Fristbeginn (dies a quo)', val: ergebnis.diesAQuo },
               { label: 'Fristende (dies ad quem)', val: `${ergebnis.diesAdQuem} · 24.00 Uhr` },
             ].map((c) => (
-              <div key={c.label} className="rounded-xl border border-line bg-surface-raised p-4">
+              <div key={c.label} className="lc-tile">
                 <p className="text-xs text-ink-500 mb-1">{c.label}</p>
-                <p className="text-lg font-semibold text-ink-900">{c.val}</p>
+                <p className="text-body-l font-semibold text-ink-900">{c.val}</p>
               </div>
             ))}
           </div>
           {ergebnis.erstrecktBis && (
-            <div className="rounded-lg border border-line bg-sage-bg p-3 text-sm text-sage-700">
+            <div className="rounded-lg border border-line bg-sage-bg p-3 text-body-s text-sage-700">
               Nach Erstreckung: <strong>{ergebnis.erstrecktBis}</strong> (24.00 Uhr).
             </div>
           )}

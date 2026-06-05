@@ -64,7 +64,7 @@ export function VorlageSchlichtungsgesuchBs() {
           <div className="flex items-center justify-between gap-2">
             <p className="lc-overline">{rolle} {liste.length > 1 ? i + 1 : ''}</p>
             <div className="flex items-center gap-2">
-              <select className={inputCls + ' !w-auto text-sm'} value={p.typ}
+              <select className={inputCls + ' !w-auto text-body-s'} value={p.typ}
                 onChange={(e) => {
                   const typ = e.target.value as SgPartei['typ'];
                   setListe(liste.map((x, j) => j === i ? (typ === 'natuerlich'
@@ -164,7 +164,7 @@ export function VorlageSchlichtungsgesuchBs() {
                   className={`text-left p-3 rounded-lg border transition-colors ${
                     a.streitgegenstandTyp === t.code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
                   }`}>
-                  <span className="block text-sm font-semibold text-ink-900">{t.label}</span>
+                  <span className="block text-body-s font-semibold text-ink-900">{t.label}</span>
                   <span className="block text-xs text-ink-500">{t.sub}</span>
                 </button>
               ))}
@@ -173,11 +173,11 @@ export function VorlageSchlichtungsgesuchBs() {
 
           {stopp ? stoppKarte() : (
             <>
-              <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.ausnahmeArt198} onChange={(e) => set('ausnahmeArt198', e.target.checked)} />
                 <span>Es liegt eine Ausnahme nach Art. 198 ZPO vor <span className="text-ink-500">(z. B. summarisches Verfahren, Scheidung, bestimmte SchKG-Klagen, Widerklage, einzige kantonale Instanz)</span></span>
               </label>
-              <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-900 font-medium">
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium">
                 <input type="checkbox" className="mt-0.5" checked={a.baselForumBestaetigt} onChange={(e) => set('baselForumBestaetigt', e.target.checked)} />
                 <span>Ein Basler Gerichtsstand ist gegeben / wird vorausgesetzt (Art. 10 ff. ZPO)</span>
               </label>
@@ -200,7 +200,7 @@ export function VorlageSchlichtungsgesuchBs() {
         <div className="space-y-5">
           {parteiEditor(a.klaeger, (p) => set('klaeger', p), 'Klagende Partei')}
           <div className="space-y-3">
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={!!a.vertretung}
                 onChange={(e) => set('vertretung', e.target.checked ? { bezeichnung: '', strasse: '', plz: '', ort: '' } : undefined)} />
               Die klagende Partei ist vertreten (Anwältin/Anwalt, Rechtsdienst)
@@ -217,7 +217,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 <Field label="Vollmacht vom" optional hint="wird automatisch ins Beilagenverzeichnis aufgenommen">
                   <DatumsFeld value={a.vertretung.vollmachtDatum ?? ''} onChange={(v) => set('vertretung', { ...a.vertretung!, vollmachtDatum: v })} className={inputCls} />
                 </Field>
-                <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700 self-end pb-2">
+                <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 self-end pb-2">
                   <input type="checkbox" checked={a.vertretung.mwstPflichtig ?? false} onChange={(e) => set('vertretung', { ...a.vertretung!, mwstPflichtig: e.target.checked })} />
                   mehrwertsteuerpflichtig (Kostenfolge «zzgl. MwSt.»)
                 </label>
@@ -232,7 +232,7 @@ export function VorlageSchlichtungsgesuchBs() {
           {parteiEditor(a.beklagte, (p) => set('beklagte', p), 'Beklagte Partei')}
           {verm && (
             <div className="space-y-3">
-              <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={!!a.betreibung}
                   onChange={(e) => set('betreibung', e.target.checked ? { nummer: '', betreibungsamt: 'Basel-Stadt', rechtsvorschlagErhoben: false } : undefined)} />
                 Es läuft bereits eine Betreibung
@@ -241,7 +241,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 <div className="lc-card p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Field label="Betreibungs-Nr."><input className={inputCls} value={a.betreibung.nummer} onChange={(e) => set('betreibung', { ...a.betreibung!, nummer: e.target.value })} /></Field>
                   <Field label="Betreibungsamt"><input className={inputCls} value={a.betreibung.betreibungsamt} onChange={(e) => set('betreibung', { ...a.betreibung!, betreibungsamt: e.target.value })} /></Field>
-                  <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700 sm:col-span-2">
+                  <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 sm:col-span-2">
                     <input type="checkbox" checked={a.betreibung.rechtsvorschlagErhoben} onChange={(e) => set('betreibung', { ...a.betreibung!, rechtsvorschlagErhoben: e.target.checked })} />
                     Die beklagte Partei hat Rechtsvorschlag erhoben
                   </label>
@@ -263,7 +263,7 @@ export function VorlageSchlichtungsgesuchBs() {
                       if (code === 'unbeziffert') { set('unbeziffert', a.unbeziffert ?? { mindestbetrag: '', grund: '' }); set('geld', undefined); }
                       else { set('unbeziffert', undefined); set('geld', a.geld ?? { betrag: '' }); }
                     }}
-                    className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                    className={`px-3 py-1.5 rounded-full text-body-s font-medium border transition-colors ${
                       ((code === 'unbeziffert') === !!a.unbeziffert) ? 'bg-ink-900 border-ink-900 text-paper' : 'bg-surface border-line text-ink-600 hover:border-brass-400'
                     }`}>
                     {label}
@@ -276,7 +276,7 @@ export function VorlageSchlichtungsgesuchBs() {
                     <input className={inputCls} inputMode="decimal" placeholder="z. B. 3'000.00" value={a.geld?.betrag ?? ''} onChange={(e) => set('geld', { ...(a.geld ?? { betrag: '' }), betrag: e.target.value })} />
                   </Field>
                   <div className="space-y-2">
-                    <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+                    <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                       <input type="checkbox" checked={!!a.geld?.zins}
                         onChange={(e) => set('geld', { ...(a.geld ?? { betrag: '' }), zins: e.target.checked ? { satz: '5', abDatum: '' } : undefined })} />
                       <span>nebst Zins <span className="text-ink-500">(Verzugszins 5 %, Art. 104 OR)</span></span>
@@ -288,7 +288,7 @@ export function VorlageSchlichtungsgesuchBs() {
                       </div>
                     )}
                   </div>
-                  <label className={`flex items-start gap-2 text-sm sm:col-span-2 ${a.betreibung?.rechtsvorschlagErhoben ? 'cursor-pointer text-ink-700' : 'text-ink-400 cursor-not-allowed'}`}>
+                  <label className={`flex items-start gap-2 text-body-s sm:col-span-2 ${a.betreibung?.rechtsvorschlagErhoben ? 'cursor-pointer text-ink-700' : 'text-ink-400 cursor-not-allowed'}`}>
                     <input type="checkbox" disabled={!a.betreibung?.rechtsvorschlagErhoben} checked={!!a.geld?.rechtsoeffnung}
                       onChange={(e) => set('geld', { ...(a.geld ?? { betrag: '' }), rechtsoeffnung: e.target.checked })} />
                     <span>Beseitigung des Rechtsvorschlags beantragen {!a.betreibung?.rechtsvorschlagErhoben && <span>(setzt erhobenen Rechtsvorschlag voraus — Schritt «Beklagte Partei»)</span>}</span>
@@ -358,7 +358,7 @@ export function VorlageSchlichtungsgesuchBs() {
       case 'abschluss': return (
         <div className="space-y-5">
           <div className="space-y-2">
-            <label className={`flex items-start gap-2 text-sm ${verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG ? 'cursor-pointer text-ink-700' : 'text-ink-400 cursor-not-allowed'}`}>
+            <label className={`flex items-start gap-2 text-body-s ${verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG ? 'cursor-pointer text-ink-700' : 'text-ink-400 cursor-not-allowed'}`}>
               <input type="checkbox" className="mt-0.5"
                 disabled={!(verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG)}
                 checked={a.antragEntscheid} onChange={(e) => set('antragEntscheid', e.target.checked)} />
@@ -367,7 +367,7 @@ export function VorlageSchlichtungsgesuchBs() {
                   <span> — nur bei vermögensrechtlichen Streitigkeiten bis CHF {fmtCHF(String(SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG))}</span>}
               </span>
             </label>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.antragMediation} onChange={(e) => set('antragMediation', e.target.checked)} />
               <span>Antrag auf Mediation (Art. 213 ZPO) <span className="text-ink-500">— setzt Zustimmung der Gegenpartei voraus; kann auch erst an der Verhandlung gestellt werden</span></span>
             </label>
@@ -413,7 +413,7 @@ export function VorlageSchlichtungsgesuchBs() {
           )}
 
           {!stopp && hinweise.map((h, i) => (
-            <div key={i} className="lc-notice rounded-md p-3 text-body-s text-ink-600">{h}</div>
+            <div key={i} className="lc-notice text-body-s">{h}</div>
           ))}
 
           {/* Form-Gate (Art. 130/131/204/206/209 ZPO; Kosten GGR BS) */}

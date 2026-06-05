@@ -26,17 +26,28 @@ export default {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
+      // Typo-Skala (vollständig): micro 11 · xs 12 · body-s 14 · base 16 ·
+      // body-l 18 · h3 20 · h2 25.6 · h1 32 · display 36/44.
+      // text-sm/text-lg (Tailwind-Defaults) NICHT verwenden — sie tragen
+      // fremde Zeilenhöhen; body-s/body-l sind die Pendants mit System-lh.
       fontSize: {
+        micro: ['0.6875rem', { lineHeight: '1.2' }],
         overline: ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.12em' }],
+        xs: ['0.75rem', { lineHeight: '1.4' }],
         'body-s': ['0.875rem', { lineHeight: '1.5' }],
         'body-l': ['1.125rem', { lineHeight: '1.6' }],
         h3: ['1.25rem', { lineHeight: '1.25' }],
         h2: ['1.6rem', { lineHeight: '1.15' }],
         h1: ['2rem', { lineHeight: '1.15' }],
-        display: ['2.5rem', { lineHeight: '1.15' }],
-        'num-xl': ['2.75rem', { lineHeight: '1.0' }],
+        display: ['2.25rem', { lineHeight: '1.05' }],
+        'display-l': ['2.75rem', { lineHeight: '1.05' }],
       },
-      borderRadius: { sm: 'var(--radius-sm)', md: 'var(--radius-md)', lg: 'var(--radius-lg)' },
+      borderRadius: {
+        sm: 'var(--radius-sm)', md: 'var(--radius-md)', lg: 'var(--radius-lg)',
+        xl: 'var(--radius-xl)', '2xl': 'var(--radius-2xl)',
+      },
+      transitionDuration: { fast: '120ms', slow: '220ms' },
+      transitionTimingFunction: { DEFAULT: 'var(--ease)' },
       boxShadow: { sm: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)' },
       maxWidth: { content: '70rem', reading: '40rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)
     },

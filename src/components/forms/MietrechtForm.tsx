@@ -126,7 +126,7 @@ export function MietrechtForm() {
 
   return (
     <div className="space-y-6">
-      <details className="lc-notice-danger rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--danger-500)' }}>
+      <details className="lc-notice-danger">
         <summary className="text-body-s text-danger-700 cursor-pointer">
           <strong>Keine Rechtsberatung</strong> – Orientierung (Art. 253 ff. OR). Ortsübliche Termine sind Tatfrage; verbindlich ist die Schlichtungsbehörde.
         </summary>
@@ -181,7 +181,7 @@ export function MietrechtForm() {
         </Field>
       )}
       {terminsucheAktiv && quelle === 'jedes_monatsende' && (
-        <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" checked={ohneDez} onChange={(e) => setOhneDez(e.target.checked)} />
           Ausnahme: nicht auf den 31. Dezember
         </label>
@@ -210,23 +210,23 @@ export function MietrechtForm() {
         <div className="space-y-2">
           <p className="lc-overline">Form (Art. 266l–266o OR)</p>
           {partei === 'vermieter' && (
-            <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" checked={formular} onChange={(e) => setFormular(e.target.checked)} />
               Amtlich genehmigtes Kündigungsformular verwendet (Art. 266l Abs. 2 OR)
             </label>
           )}
-          <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" checked={familienwohnung} onChange={(e) => setFamilienwohnung(e.target.checked)} />
             Familienwohnung (Sonderschutz Art. 266m/266n OR)
           </label>
           {familienwohnung && partei === 'vermieter' && (
-            <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700 pl-6">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
               <input type="checkbox" checked={separat} onChange={(e) => setSeparat(e.target.checked)} />
               Kündigung beiden Ehegatten/Partnern separat zugestellt (Art. 266n OR)
             </label>
           )}
           {familienwohnung && partei === 'mieter' && (
-            <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700 pl-6">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
               <input type="checkbox" checked={zustimmung} onChange={(e) => setZustimmung(e.target.checked)} />
               Ausdrückliche Zustimmung des Ehegatten/Partners liegt vor (Art. 266m OR)
             </label>
@@ -237,7 +237,7 @@ export function MietrechtForm() {
       {fehler.length > 0 && (
         <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
           <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-sm text-danger-700">• {f}</p>)}
+          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
         </div>
       )}
 
@@ -246,17 +246,17 @@ export function MietrechtForm() {
           <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
+            <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">{ergebnis.status === 'nichtig' ? 'Form' : 'Mietverhältnis endet am'}</p>
-              <p className="text-lg font-semibold text-ink-900">{ergebnis.status === 'nichtig' ? 'NICHTIG (Art. 266o OR)' : ergebnis.endtermin ?? '–'}</p>
+              <p className="text-body-l font-semibold text-ink-900">{ergebnis.status === 'nichtig' ? 'NICHTIG (Art. 266o OR)' : ergebnis.endtermin ?? '–'}</p>
             </div>
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
+            <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Spätester Zugang für diesen Termin</p>
-              <p className="text-lg font-semibold text-ink-900">{ergebnis.spaetesterZugang ?? '–'}</p>
+              <p className="text-body-l font-semibold text-ink-900">{ergebnis.spaetesterZugang ?? '–'}</p>
             </div>
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
+            <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">{ergebnis.zahlungsfristEnde ? 'Zahlungsfrist läuft bis' : 'Anfechtung/Erstreckung bis'}</p>
-              <p className="text-lg font-semibold text-ink-900">{ergebnis.zahlungsfristEnde ?? ergebnis.anfechtungBis ?? '–'}</p>
+              <p className="text-body-l font-semibold text-ink-900">{ergebnis.zahlungsfristEnde ?? ergebnis.anfechtungBis ?? '–'}</p>
             </div>
           </div>
 

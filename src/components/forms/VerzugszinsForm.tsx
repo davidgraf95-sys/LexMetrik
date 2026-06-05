@@ -132,7 +132,7 @@ export function VerzugszinsForm() {
         <Field label="Stichtag (Berechnung bis)" hint="Zahlung / Urteilstag / heute">
           <div className="flex gap-2">
             <DatumsFeld value={form.stichtag} onChange={(v) => set('stichtag', v)} className="lc-input" />
-            <button type="button" onClick={() => set('stichtag', heuteISO())} className="lc-btn-ghost whitespace-nowrap" style={{ height: '44px' }}>heute</button>
+            <button type="button" onClick={() => set('stichtag', heuteISO())} className="lc-btn-ghost whitespace-nowrap">heute</button>
           </div>
         </Field>
         <Field label="Grundlage des Zinssatzes">
@@ -159,8 +159,8 @@ export function VerzugszinsForm() {
         <div className="flex items-center justify-between">
           <h4 className="text-body-s font-semibold text-ink-700">Teilzahlungen &amp; Satzänderungen (Art. 85 OR)</h4>
           <div className="flex gap-2">
-            <button onClick={() => addRow('teilzahlung')} className="lc-btn-ghost text-body-s" style={{ height: '36px' }}>+ Teilzahlung</button>
-            <button onClick={() => addRow('satzaenderung')} className="lc-btn-ghost text-body-s" style={{ height: '36px' }}>+ Satzänderung</button>
+            <button onClick={() => addRow('teilzahlung')} className="lc-btn-ghost lc-btn-sm">+ Teilzahlung</button>
+            <button onClick={() => addRow('satzaenderung')} className="lc-btn-ghost lc-btn-sm">+ Satzänderung</button>
           </div>
         </div>
         {rows.length === 0 && <p className="text-body-s text-ink-500 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
@@ -200,7 +200,7 @@ export function VerzugszinsForm() {
                 ].map((c) => (
                   <div key={c.label} className="lc-card p-4">
                     <p className="lc-overline mb-1">{c.label}</p>
-                    <p className={`num text-ink-900 ${c.stark ? 'text-[1.6rem] leading-none font-medium' : 'text-body-l'}`}>{c.val}</p>
+                    <p className={`num text-ink-900 ${c.stark ? 'text-h2 leading-none font-medium' : 'text-body-l'}`}>{c.val}</p>
                   </div>
                 ))}
               </div>

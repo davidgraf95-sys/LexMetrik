@@ -30,7 +30,7 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
     .filter((k) => k && istAktiv(k.status) && k.href);
 
   return (
-    <article className={`relative h-full min-w-0 lc-card p-6 flex flex-col gap-3 transition-all duration-200 motion-reduce:transition-none motion-reduce:transform-none ${
+    <article className={`relative h-full min-w-0 lc-card p-6 flex flex-col gap-3 transition-all motion-reduce:transition-none motion-reduce:transform-none ${
       aktiv
         ? `bg-surface-raised border-t-[3px] ${entwurf ? 'border-t-warn-500' : 'border-t-brass-500'} hover:shadow-lg hover:-translate-y-0.5`
         // «gedämpft» AA-konform: flache Fläche/grauer Akzent statt Opacity

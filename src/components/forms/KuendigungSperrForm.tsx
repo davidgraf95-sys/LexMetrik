@@ -169,12 +169,12 @@ export function KuendigungSperrForm() {
         {form.abweichendeFristMonate != null && (
           <Field label="Abweichende Frist – Gültigkeit (§3.2)">
             <div className="flex flex-col gap-2 pt-1">
-              <label className="flex items-center gap-2 text-sm cursor-pointer">
+              <label className="flex items-center gap-2 text-body-s cursor-pointer">
                 <input type="checkbox" checked={form.abweichendeFristFormGueltig ?? false}
                   onChange={(e) => set('abweichendeFristFormGueltig', e.target.checked)} />
                 Schriftlich / GAV / NAV (Gültigkeitsvoraussetzung)
               </label>
-              <label className="flex items-center gap-2 text-sm cursor-pointer">
+              <label className="flex items-center gap-2 text-body-s cursor-pointer">
                 <input type="checkbox" checked={form.abweichendeFristQuelleGAV ?? false}
                   onChange={(e) => set('abweichendeFristQuelleGAV', e.target.checked)} />
                 Quelle GAV (Verkürzung &lt; 1 Monat nur GAV &amp; 1. DJ)
@@ -197,11 +197,11 @@ export function KuendigungSperrForm() {
 
         <Field label="Kündigungstermin">
           <div className="flex items-center gap-4 pt-2">
-            <label className="flex items-center gap-2 text-sm cursor-pointer">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer">
               <input type="radio" name="kterm" checked={form.kuendigungsterminMonatsende} onChange={() => set('kuendigungsterminMonatsende', true)} />
               Monatsende (Standard)
             </label>
-            <label className="flex items-center gap-2 text-sm cursor-pointer">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer">
               <input type="radio" name="kterm" checked={!form.kuendigungsterminMonatsende} onChange={() => set('kuendigungsterminMonatsende', false)} />
               Freies Datum
             </label>
@@ -212,7 +212,7 @@ export function KuendigungSperrForm() {
       {/* Sperrereignisse */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold text-ink-700">
+          <h4 className="text-body-s font-semibold text-ink-700">
             Sperrereignisse (Art. 336c OR)
             {form.kuendigendePartei === 'arbeitnehmer' && (
               <span className="ml-2 text-xs font-normal text-ink-500">(nur bei Arbeitgeberkündigung relevant)</span>
@@ -220,14 +220,14 @@ export function KuendigungSperrForm() {
           </h4>
           <button
             onClick={addEreignis}
-            className="text-sm px-3 py-1.5 bg-surface hover:bg-brass-100 text-ink-700 rounded-lg transition-colors"
+            className="text-body-s px-3 py-1.5 bg-surface hover:bg-brass-100 text-ink-700 rounded-lg transition-colors"
           >
             + Ereignis
           </button>
         </div>
 
         {(form.sperrereignisse ?? []).length === 0 && (
-          <p className="text-sm text-ink-500 italic">Keine Sperrereignisse erfasst.</p>
+          <p className="text-body-s text-ink-500 italic">Keine Sperrereignisse erfasst.</p>
         )}
 
         {(form.sperrereignisse ?? []).map((e, i) => (
@@ -280,7 +280,7 @@ export function KuendigungSperrForm() {
       {fehler.length > 0 && (
         <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
           <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-sm text-danger-700">• {f}</p>)}
+          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
         </div>
       )}
 
@@ -291,30 +291,30 @@ export function KuendigungSperrForm() {
           {/* Prominente Eckdaten – ein kohärentes Ergebnis */}
           {gesamt.status === 'nichtig' ? (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div className="lc-card p-4 border-t-[3px] border-t-danger-500">
+              <div className="lc-tile border-t-[3px] border-t-danger-500">
                 <p className="lc-overline mb-1">Status</p>
-                <p className="text-[1.5rem] leading-none font-semibold text-danger-700">NICHTIG</p>
+                <p className="text-h2 leading-none font-semibold text-danger-700">NICHTIG</p>
               </div>
-              <div className="lc-card p-4">
+              <div className="lc-tile">
                 <p className="lc-overline mb-1">Beendigungsdatum</p>
                 <p className="num text-body-l text-ink-500">– (keines)</p>
               </div>
-              <div className="lc-card p-4">
+              <div className="lc-tile">
                 <p className="lc-overline mb-1">Frühestens neu kündbar</p>
                 <p className="num text-body-l text-ink-900">{fmtISO(gesamt.fruehesteNeueKuendigungISO)}</p>
               </div>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div className="lc-card p-4">
+              <div className="lc-tile">
                 <p className="lc-overline mb-1">Status</p>
                 <p className="text-body-l font-semibold text-sage-700">Gültig</p>
               </div>
-              <div className="lc-card p-4">
+              <div className="lc-tile">
                 <p className="lc-overline mb-1">Beendigungsdatum</p>
-                <p className="num text-[1.5rem] leading-none font-medium text-ink-900">{fmtISO(gesamt.beendigungISO)}</p>
+                <p className="num text-h2 leading-none font-medium text-ink-900">{fmtISO(gesamt.beendigungISO)}</p>
               </div>
-              <div className="lc-card p-4">
+              <div className="lc-tile">
                 <p className="lc-overline mb-1">Hemmung</p>
                 <p className="num text-body-l text-ink-900">{gesamt.gehemmtTage ? `${gesamt.gehemmtTage} Tage` : 'keine'}</p>
               </div>

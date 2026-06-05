@@ -87,10 +87,10 @@ export function VorlagenWizardRahmen({
 
           <div className="flex items-center justify-between pt-2 border-t border-line">
             <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
-              disabled={schritt === 0} className="lc-btn-ghost disabled:opacity-40">← Zurück</button>
+              disabled={schritt === 0} className="lc-btn-ghost">← Zurück</button>
             {schritt < schritte.length - 1 && (
               <button type="button" onClick={() => setSchritt((s) => s + 1)}
-                disabled={weiterAus} className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
+                disabled={weiterAus} className="lc-btn-primary">
                 Weiter →
               </button>
             )}
@@ -139,7 +139,7 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
             </div>
           ))}
         </div>
-        <p className="text-[0.65rem] text-ink-500 mt-6 pt-3 border-t border-line">{ergebnis.dokument.disclaimer}</p>
+        <p className="text-micro text-ink-500 mt-6 pt-3 border-t border-line">{ergebnis.dokument.disclaimer}</p>
       </section>
 
       {extra}
@@ -192,18 +192,18 @@ export function ExportLeiste({ ergebnis, deaktiviert, kopiert, onKopieren, pdf, 
     <div className="flex flex-wrap gap-3">
       <button type="button" disabled={deaktiviert}
         onClick={async () => (await import('../../lib/vorlagen/vorlagenPdf')).vorlagenPdfErzeugen(ergebnis, { banner: pdf.banner, dateiName: pdf.dateiName })}
-        className="lc-btn-primary disabled:opacity-50 disabled:cursor-not-allowed">
+        className="lc-btn-primary">
         {pdf.label}
       </button>
       {docx && (
         <button type="button" disabled={deaktiviert}
           onClick={async () => (await import('../../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: docx.banner, dateiName: docx.dateiName })}
-          className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
+          className="lc-btn-outline">
           {docx.label}
         </button>
       )}
       <button type="button" disabled={deaktiviert} onClick={() => onKopieren(dokumentAlsText(ergebnis))}
-        className="lc-btn-outline disabled:opacity-50 disabled:cursor-not-allowed">
+        className="lc-btn-outline">
         {kopiert ? 'Kopiert ✓' : 'Text kopieren'}
       </button>
     </div>

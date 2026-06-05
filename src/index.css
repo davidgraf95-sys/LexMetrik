@@ -19,13 +19,17 @@
     --brass-700:#8A6A2F; --brass-500:#B08D4A; --brass-300:#DDC9A0;
     --brass-600:#9D7B3C; --brass-400:#C7AB75;
     --brass-200:#E6D7B8; --brass-100:#F1E8D6;
-    /* Status */
+    /* Status — alle Hintergründe nach EINEM Rezept (gleiche Tönung auf
+       Papier), damit die vier Familien zusammengehören */
+    --status-tint:10%;
     --sage-500:#5F7A58; --sage-700:#48603F;
-    --sage-bg:color-mix(in srgb, var(--sage-500) 12%, var(--paper));
+    --sage-bg:color-mix(in srgb, var(--sage-500) var(--status-tint), var(--paper));
     --slate-500:#5B6B73; --slate-700:#46535A;
-    --slate-bg:color-mix(in srgb, var(--slate-500) 12%, var(--paper));
-    --warn-500:#C07A1A; --warn-700:#8C570F; --warn-bg:#F6E8CE;
-    --danger-500:#9A3F30; --danger-700:#7A2F23; --danger-bg:#F3E2DD;
+    --slate-bg:color-mix(in srgb, var(--slate-500) var(--status-tint), var(--paper));
+    --warn-500:#C07A1A; --warn-700:#8C570F;
+    --warn-bg:color-mix(in srgb, var(--warn-500) var(--status-tint), var(--paper));
+    --danger-500:#9A3F30; --danger-700:#7A2F23;
+    --danger-bg:color-mix(in srgb, var(--danger-500) var(--status-tint), var(--paper));
     /* Semantische Aliase */
     --accent:var(--brass-500);       /* nur Linien/Icons/grosse Flächen */
     --accent-text:var(--brass-700);  /* Brass-Text & Links (kontraststark) */
@@ -36,8 +40,9 @@
     --space-6:24px; --space-8:32px; --space-12:48px; --space-16:64px; --space-24:96px;
     --control-h:44px;  /* Suchfeld, Toggle-Segmente */
     --pill-h:36px;     /* Rechtsgebiet-Pills */
-    /* Radien – zurückhaltend */
+    /* Radien – zurückhaltend; xl/2xl nur für grosse Container (Sektionen, Dialoge) */
     --radius-sm:4px; --radius-md:8px; --radius-lg:12px;
+    --radius-xl:16px; --radius-2xl:24px;
     /* Schatten – sehr weich, niedrig */
     --shadow-sm:0 1px 2px rgba(26,26,23,.04), 0 2px 8px rgba(26,26,23,.05);
     --shadow-md:0 1px 2px rgba(26,26,23,.04), 0 2px 8px rgba(26,26,23,.05);
@@ -122,6 +127,8 @@
   }
 
   .lc-card { @apply bg-surface border border-line rounded-lg shadow-md; }
+  /* Ergebnis-Kachel (Hauptwerte in Ergebnisblöcken) — eine Anatomie überall */
+  .lc-tile { @apply bg-surface-raised border border-line rounded-xl p-4; }
 
   /* Sanftes Auf-/Zuklappen der Katalog-Sektionen (progressive enhancement:
      ::details-content + interpolate-size; ältere Browser klappen hart). */
@@ -148,13 +155,20 @@
   }
   .lc-btn-primary { @apply lc-btn text-paper; background: var(--ink-900); }
   .lc-btn-primary:hover { background: var(--ink-700); }
-  .lc-btn-brass { @apply lc-btn text-ink-900; background: var(--brass-500); }
-  .lc-btn-brass:hover { background: var(--brass-600); }
   .lc-btn-outline { @apply lc-btn bg-surface border text-brass-700; border-color: var(--brass-500); }
   .lc-btn-outline:hover { background: var(--brass-100); }
   .lc-btn-ghost { @apply lc-btn bg-transparent text-ink-700; }
   .lc-btn-ghost:hover { background: var(--brass-100); }
-  .lc-btn:disabled { opacity: .5; cursor: not-allowed; }
+  /* Kleine Variante für Buttons in Zeilen/Toolbars (statt Inline-Höhen) */
+  .lc-btn-sm { height: 36px; padding: 0 12px; font-size: .875rem; }
+  /* Disabled einheitlich (Hover wirkt nicht mehr): @apply kopiert keine
+     Pseudo-Klassen, darum je Variante ausbuchstabiert */
+  .lc-btn:disabled, .lc-btn-primary:disabled, .lc-btn-outline:disabled, .lc-btn-ghost:disabled {
+    opacity: .5; cursor: not-allowed;
+  }
+  .lc-btn-primary:disabled { background: var(--ink-900); }
+  .lc-btn-outline:disabled { background: var(--surface); }
+  .lc-btn-ghost:disabled { background: transparent; }
 
   .lc-chip {
     @apply inline-flex items-center rounded-sm bg-well text-ink-700; /* Tinte: 4.5:1 auf Well; Akzent traegt der Tick */
@@ -172,9 +186,11 @@
   .lc-badge-danger { @apply bg-danger-bg text-danger-700; }
   .lc-badge-soft { background: var(--slate-bg); color: var(--slate-700); border: 1px solid color-mix(in srgb, var(--slate-500) 30%, transparent); }
 
+  /* Notices: Varianten sind eigenständig (Basis-Anatomie immer gleich —
+     kein Inline-Nachbau von Padding/Border mehr nötig) */
   .lc-notice { @apply bg-surface rounded-md text-ink-600; border-left: 3px solid var(--brass-500); padding: 12px 16px; }
-  .lc-notice-warn { @apply bg-warn-bg text-warn-700; border-left-color: var(--warn-500); }
-  .lc-notice-danger { @apply bg-danger-bg text-danger-700; border-left-color: var(--danger-500); }
+  .lc-notice-warn { @apply lc-notice bg-warn-bg text-warn-700; border-left-color: var(--warn-500); }
+  .lc-notice-danger { @apply lc-notice bg-danger-bg text-danger-700; border-left-color: var(--danger-500); }
 
   .lc-seal {
     display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 8px;
@@ -185,7 +201,7 @@
   .lc-word { font-family: var(--font-display), serif; font-weight: 600; font-size: 1.35rem; color: var(--ink-900); letter-spacing: .01em; }
 
   /* Live-Berechnung: dezentes Einblenden des Ergebnisses */
-  .lc-reveal { animation: lc-fade 200ms ease-out; }
+  .lc-reveal { animation: lc-fade var(--dur-slow) var(--ease); }
   @keyframes lc-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
   /* Aufklappbare Hinweise: dezentes Disclosure-Symbol statt Default-Dreieck.
@@ -213,7 +229,7 @@
   details::details-content {
     block-size: 0;
     overflow-y: clip;
-    transition: block-size 0.25s ease, content-visibility 0.25s allow-discrete;
+    transition: block-size var(--dur-slow) var(--ease), content-visibility var(--dur-slow) allow-discrete;
   }
   details[open]::details-content { block-size: auto; }
   @media (prefers-reduced-motion: reduce) {

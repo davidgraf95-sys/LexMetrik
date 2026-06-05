@@ -56,7 +56,7 @@ export function Startseite() {
           Karte; Abstände aus der 8-px-Skala. Der Determinismus-Claim steht
           genau einmal — hier. */}
       <section className="pt-10 sm:pt-16 max-w-[46rem]">
-        <h1 className="font-display font-semibold text-ink-900 leading-[1.05] text-[2.25rem] sm:text-[2.75rem]">
+        <h1 className="font-display font-semibold text-ink-900 text-display sm:text-display-l">
           Schweizer Recht: berechnen und erstellen.
         </h1>
         {/* Untertext: eine Zeile, begrenzte Lesebreite (Variante A) */}

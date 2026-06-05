@@ -124,12 +124,12 @@ export function VorlagePatientenverfuegung() {
           <div className="space-y-2">
             <p className="lc-overline">Anwendungssituationen</p>
             {PV_SITUATIONEN.map((s) => (
-              <label key={s.id} className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+              <label key={s.id} className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.situationen.includes(s.id)} onChange={() => toggleSituation(s.id)} />
                 {s.label}
               </label>
             ))}
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700 pt-1">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 pt-1">
               <input type="checkbox" className="mt-0.5" checked={a.psychischeStoerungKontext ?? false}
                 onChange={(e) => set('psychischeStoerungKontext', e.target.checked)} />
               <span>Behandlung einer psychischen Störung in einer Klinik ist für mich relevant
@@ -147,7 +147,7 @@ export function VorlagePatientenverfuegung() {
                   className={`text-left p-3 rounded-lg border transition-colors ${
                     a.ziel === z.code ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
                   }`}>
-                  <span className="block text-sm font-semibold text-ink-900">{z.label}</span>
+                  <span className="block text-body-s font-semibold text-ink-900">{z.label}</span>
                   <span className="block text-xs text-ink-500">{z.sub}</span>
                 </button>
               ))}
@@ -230,7 +230,7 @@ export function VorlagePatientenverfuegung() {
               {([['keine_angabe', 'keine Angabe'], ['ja', 'Ich stimme zu'], ['nein', 'Ich lehne ab']] as const).map(([code, label]) => (
                 <button key={code} type="button" aria-pressed={a.organspende === code}
                   onClick={() => set('organspende', code)}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                  className={`px-3 py-1.5 rounded-full text-body-s font-medium border transition-colors ${
                     a.organspende === code ? 'bg-ink-900 border-ink-900 text-paper' : 'bg-surface border-line text-ink-600 hover:border-brass-400'
                   }`}>
                   {label}
@@ -238,14 +238,14 @@ export function VorlagePatientenverfuegung() {
               ))}
             </div>
             {a.organspende === 'ja' && (
-              <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.organspendeVorbereitend ?? false}
                   onChange={(e) => set('organspendeVorbereitend', e.target.checked)} />
                 Einschliesslich vorbereitender medizinischer Massnahmen (z. B. Aufrechterhaltung der Organdurchblutung)
               </label>
             )}
           </div>
-          <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.ersetztFruehere} onChange={(e) => set('ersetztFruehere', e.target.checked)} />
             <span>Frühere Patientenverfügungen ersetzen <span className="text-ink-500">(empfohlen, Art. 371 Abs. 3 ZGB)</span></span>
           </label>
@@ -264,10 +264,10 @@ export function VorlagePatientenverfuegung() {
             </div>
           ))}
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn rounded-md p-3 text-body-s text-warn-700">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
           ))}
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice rounded-md p-3 text-body-s text-ink-600">{h}</div>
+            <div key={i} className="lc-notice text-body-s">{h}</div>
           ))}
 
           {/* Form-Gate: nicht überspringbar */}
@@ -280,7 +280,7 @@ export function VorlagePatientenverfuegung() {
               <li><strong>Aktualisierung:</strong> rechtlich unbefristet gültig; Erneuerung der Unterschrift etwa alle zwei Jahre wird empfohlen.</li>
               <li><strong>Widerruf:</strong> jederzeit — durch Vernichtung, neue Verfügung oder schriftlichen Widerruf (Art. 371 Abs. 3 ZGB).</li>
             </ul>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich errichte diese Verfügung im Vollbesitz meiner Urteilsfähigkeit und nach reiflicher
               Überlegung (Art. 16 ZGB) — und habe verstanden, dass Datum und Unterschrift von Hand zu

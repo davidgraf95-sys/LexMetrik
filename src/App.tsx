@@ -41,7 +41,7 @@ export default function App() {
     <LocaleProvider>
     <Shell>
       <ScrollToTop />
-      <Suspense fallback={<div className="py-16 text-center text-sm text-ink-500">Wird geladen …</div>}>
+      <Suspense fallback={<div className="py-16 text-center text-body-s text-ink-500">Wird geladen …</div>}>
       <Routes>
         <Route path="/" element={<Startseite />} />
         <Route path="/fachpersonen" element={<Fachpersonen />} />

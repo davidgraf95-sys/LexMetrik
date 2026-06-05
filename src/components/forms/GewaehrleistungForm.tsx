@@ -116,7 +116,7 @@ export function GewaehrleistungForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
-      <details className="lc-notice-danger rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--danger-500)' }}>
+      <details className="lc-notice-danger">
         <summary className="text-body-s text-danger-700 cursor-pointer">
           <strong>Keine Rechtsberatung</strong> – Rüge- und Verjährungsfristen der Sachgewährleistung; die «sofort»-Frist ist eine Näherung. <span className="opacity-80">Details</span>
         </summary>
@@ -157,7 +157,7 @@ export function GewaehrleistungForm() {
             {([['offen', 'offen erkennbar'], ['versteckt', 'versteckt']] as const).map(([code, label]) => (
               <button key={code} type="button" onClick={() => setMangelTyp(code)}
                 aria-pressed={mangelTyp === code}
-                className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                className={`px-3.5 py-2 rounded-lg text-body-s font-medium transition-all ${
                   mangelTyp === code ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
                 }`}>
                 {label}
@@ -181,18 +181,18 @@ export function GewaehrleistungForm() {
 
       {/* Schalter */}
       <div className="space-y-2">
-        <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" checked={arglist} onChange={(e) => setArglist(e.target.checked)} />
           Absichtliche Täuschung durch Verkäufer/Unternehmer (Art. 203 / 210 Abs. 6 OR)
         </label>
         {typ === 'fahrniskauf' && (
           <>
-            <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" checked={konsument} onChange={(e) => setKonsument(e.target.checked)} />
               Konsumentenkauf (persönlicher/familiärer Gebrauch, gewerblicher Verkäufer — Art. 210 Abs. 4 OR)
             </label>
             {konsument && (
-              <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700 pl-6">
+              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
                 <input type="checkbox" checked={gebraucht} onChange={(e) => setGebraucht(e.target.checked)} />
                 Gebrauchte Sache (Mindestfrist 1 statt 2 Jahre)
               </label>
@@ -200,7 +200,7 @@ export function GewaehrleistungForm() {
           </>
         )}
         {istWerk && (
-          <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" checked={sia} onChange={(e) => setSia(e.target.checked)} />
             SIA-Norm 118 vereinbart (zweijährige Garantiefrist, 5-Jahres-Verjährung — Vertragswerk, zu prüfen)
           </label>
@@ -225,21 +225,21 @@ export function GewaehrleistungForm() {
 
           {/* Eckdaten: Rügefrist (Verwirkung) und Verjährung (Einrede) strikt getrennt */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div className="rounded-xl border border-line bg-surface-raised p-4 space-y-1">
+            <div className="lc-tile space-y-1">
               <div className="flex items-start justify-between gap-2">
                 <p className="text-xs text-ink-500">Mängelrüge — Verwirkungsfrist</p>
                 {ergebnis.ruege.zwingend && <span className="lc-badge lc-badge-warn shrink-0">zwingend</span>}
               </div>
               {ergebnis.ruege.art === 'entfaellt' ? (
-                <p className="text-lg font-semibold text-ink-900">entfällt (Arglist, Art. 203 OR)</p>
+                <p className="text-body-l font-semibold text-ink-900">entfällt (Arglist, Art. 203 OR)</p>
               ) : ergebnis.ruege.art === 'sofort' ? (
                 <>
-                  <p className="text-lg font-semibold text-ink-900 num">«sofort» — Richtwert {fmtISO(ergebnis.ruege.richtwertISO)}</p>
+                  <p className="text-body-l font-semibold text-ink-900 num">«sofort» — Richtwert {fmtISO(ergebnis.ruege.richtwertISO)}</p>
                   <p className="text-xs text-ink-500 num">sicher: {fmtISO(ergebnis.ruege.sicherISO)} · äusserstens: {fmtISO(ergebnis.ruege.maximalISO)} (Einzelfall)</p>
                 </>
               ) : (
                 <>
-                  <p className="text-lg font-semibold text-ink-900 num">bis {fmtISO(ergebnis.ruege.endeISO)}</p>
+                  <p className="text-body-l font-semibold text-ink-900 num">bis {fmtISO(ergebnis.ruege.endeISO)}</p>
                   <p className="text-xs text-ink-500">{ergebnis.ruege.art === 'tage60' ? '60 Tage' : 'SIA-Garantiefrist (2 Jahre)'} ab {fmtISO(ergebnis.ruege.basisISO)}</p>
                 </>
               )}
@@ -247,12 +247,12 @@ export function GewaehrleistungForm() {
               {ergebnis.ruege.beurteilung && <p className="text-body-s font-medium text-brass-700">{ergebnis.ruege.beurteilung}</p>}
             </div>
 
-            <div className="rounded-xl border border-line bg-surface-raised p-4 space-y-1">
+            <div className="lc-tile space-y-1">
               <div className="flex items-start justify-between gap-2">
                 <p className="text-xs text-ink-500">Verjährung — Einrede (Art. 142 OR)</p>
                 {ergebnis.verjaehrung.teilzwingend && <span className="lc-badge lc-badge-ok shrink-0">teilzwingend</span>}
               </div>
-              <p className="text-lg font-semibold text-ink-900 num">
+              <p className="text-body-l font-semibold text-ink-900 num">
                 {ergebnis.verjaehrung.jahre} Jahre → {fmtISO(ergebnis.verjaehrung.endeISO)}
               </p>
               <p className="text-xs text-ink-500 num">ab {fmtISO(ergebnis.verjaehrung.beginnISO)} · am Stichtag:{' '}
@@ -273,7 +273,7 @@ export function GewaehrleistungForm() {
 
       {ergebnis && ergebnis.status !== 'ok' && (
         <div className="rounded-lg border border-line bg-danger-bg p-4">
-          <p className="text-sm text-danger-700">{ergebnis.ergebnis}</p>
+          <p className="text-body-s text-danger-700">{ergebnis.ergebnis}</p>
         </div>
       )}
     </div>

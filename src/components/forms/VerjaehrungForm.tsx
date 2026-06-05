@@ -54,12 +54,12 @@ const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 // Frist erhält Goldrand und Badge.
 function FristKarte({ label, sub, wert, massgeblich }: { label: string; sub: string; wert: string; massgeblich: boolean }) {
   return (
-    <div className={`rounded-xl border bg-surface-raised p-4 ${massgeblich ? 'border-brass-500 border-t-[3px]' : 'border-line'}`}>
+    <div className={`lc-tile ${massgeblich ? 'border-brass-500 border-t-[3px]' : ''}`}>
       <div className="flex items-start justify-between gap-2 mb-1">
         <p className="text-xs text-ink-500">{label}</p>
         {massgeblich && <span className="lc-badge lc-badge-ok shrink-0" style={{ background: 'var(--brass-100)', color: 'var(--brass-700)' }}>massgeblich</span>}
       </div>
-      <p className="text-lg font-semibold text-ink-900 num">{wert}</p>
+      <p className="text-body-l font-semibold text-ink-900 num">{wert}</p>
       <p className="text-xs text-ink-500 mt-0.5">{sub}</p>
     </div>
   );
@@ -129,7 +129,7 @@ export function VerjaehrungForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
-      <details className="lc-notice-danger rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--danger-500)' }}>
+      <details className="lc-notice-danger">
         <summary className="text-body-s text-danger-700 cursor-pointer">
           <strong>Keine Rechtsberatung</strong> – Verjährungs-Orientierung (Art. 60/67/127 ff. OR). Kenntniszeitpunkt und Sonderfristen sind fachlich zu prüfen. <span className="opacity-80">Details</span>
         </summary>
@@ -164,7 +164,7 @@ export function VerjaehrungForm() {
       </div>
 
       {hatAbsolut && regime !== 'bereicherung' && (
-        <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" checked={strafbar} onChange={(e) => setStrafbar(e.target.checked)} />
           Das schädigende Verhalten ist eine strafbare Handlung (Art. 60 Abs. 2 OR — strafrechtliche Längerfrist vorbehalten)
         </label>
@@ -224,7 +224,7 @@ export function VerjaehrungForm() {
 
       {/* Verzicht */}
       <div className="space-y-2">
-        <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" checked={verzichtAn} onChange={(e) => setVerzichtAn(e.target.checked)} />
           Schriftlicher Verzicht auf die Verjährungseinrede (Art. 141 OR)
         </label>
@@ -260,13 +260,13 @@ export function VerjaehrungForm() {
                 massgeblich={ergebnis.massgeblicheFrist === 'absolut'}
               />
             )}
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
+            <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Verjährungseintritt</p>
-              <p className="text-lg font-semibold text-ink-900">{ergebnis.verjaehrungISO ? `${fmtISO(ergebnis.verjaehrungISO)} · 24.00 Uhr` : 'noch offen'}</p>
+              <p className="text-body-l font-semibold text-ink-900">{ergebnis.verjaehrungISO ? `${fmtISO(ergebnis.verjaehrungISO)} · 24.00 Uhr` : 'noch offen'}</p>
             </div>
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
+            <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Am Stichtag ({fmtISO(stichtag)})</p>
-              <p className="text-lg font-semibold">
+              <p className="text-body-l font-semibold">
                 {ergebnis.status !== 'ok'
                   ? <span className="text-ink-500">Eingaben unvollständig</span>
                   : ergebnis.verjaehrtAmStichtag

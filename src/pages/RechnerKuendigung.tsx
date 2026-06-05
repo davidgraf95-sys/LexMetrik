@@ -43,7 +43,7 @@ export function RechnerKuendigung() {
       <div className="flex flex-wrap gap-1 p-1 bg-surface rounded-xl w-fit">
         {TABS.map((t) => (
           <button key={t.id} onClick={() => setTab(t.id)}
-            className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
+            className={`px-4 py-2.5 rounded-lg text-body-s font-medium transition-all ${
               tab === t.id ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
             }`}>
             <span className="block">{t.label}</span>

@@ -120,7 +120,7 @@ export function VorlageTestament() {
               <Field label="Name der Ehegattin / des Ehegatten bzw. Partner/in" optional>
                 <input className={inputCls} value={a.ehegatteName ?? ''} onChange={(e) => set('ehegatteName', e.target.value)} />
               </Field>
-              <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" checked={a.scheidungHaengig ?? false} onChange={(e) => set('scheidungHaengig', e.target.checked)} />
                 Scheidungs-/Auflösungsverfahren ist hängig
               </label>
@@ -135,7 +135,7 @@ export function VorlageTestament() {
               )}
             </>
           )}
-          <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" checked={a.hatNachkommen} onChange={(e) => set('hatNachkommen', e.target.checked)} />
             Ich habe Nachkommen (Kinder bzw. Kindeskinder)
           </label>
@@ -151,7 +151,7 @@ export function VorlageTestament() {
 
       case 'erben': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.widerruf} onChange={(e) => set('widerruf', e.target.checked)} />
             <span>Frühere letztwillige Verfügungen widerrufen <span className="text-ink-500">(empfohlen — schafft klare Verhältnisse, Art. 509/511 ZGB)</span></span>
           </label>
@@ -271,10 +271,10 @@ export function VorlageTestament() {
             </div>
           )}
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn rounded-md p-3 text-body-s text-warn-700">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
           ))}
           {a.erben.length === 0 && a.vermaechtnisse.length === 0 && (
-            <div className="lc-notice rounded-md p-3 text-body-s text-ink-600">
+            <div className="lc-notice text-body-s">
               Es ist weder eine Erbeinsetzung noch ein Vermächtnis erfasst — das Dokument wirkt dann
               nur als Widerruf früherer Verfügungen; die gesetzliche Erbfolge gilt.
             </div>
@@ -291,7 +291,7 @@ export function VorlageTestament() {
               <li><strong>Spätere Änderungen</strong> erneut datieren und unterschreiben; Streichungen sind heikel — im Zweifel ein neues Testament errichten und das alte vernichten (Art. 510 ZGB).</li>
               <li><strong>Aufbewahrung:</strong> Die handschriftliche Fassung kann freiwillig bei der kantonalen Amtsstelle hinterlegt werden (Art. 505 Abs. 2 ZGB; Gebühr je nach Kanton).</li>
             </ul>
-            <label className="flex items-start gap-2 text-sm cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Nur die vollständig handschriftliche, datierte und unterschriebene Fassung ist gültig — dieses Werkzeug liefert einen Mustertext zum Abschreiben.
             </label>

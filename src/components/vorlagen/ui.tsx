@@ -47,7 +47,7 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
               : erledigt ? 'text-ink-700 hover:bg-brass-100/50'
               : 'text-ink-500 cursor-default'
             }`}>
-            <span className={`num inline-flex items-center justify-center w-5 h-5 rounded-full text-[0.65rem] ${
+            <span className={`num inline-flex items-center justify-center w-5 h-5 rounded-full text-micro ${
               erledigt ? 'bg-brass-500 text-ink-900' : istAktiv ? 'border border-brass-500 text-brass-700' : 'border border-line text-ink-500'
             }`}>{erledigt ? '✓' : i + 1}</span>
             {s.label}

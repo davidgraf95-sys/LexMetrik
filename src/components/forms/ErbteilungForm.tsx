@@ -125,7 +125,7 @@ export function ErbteilungForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
-      <details className="lc-notice-danger rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--danger-500)' }}>
+      <details className="lc-notice-danger">
         <summary className="text-body-s text-danger-700 cursor-pointer">
           <strong>Keine Rechtsberatung</strong> – Quoten-Orientierung (Art. 457 ff., 470 ff. ZGB, Revision 2023). Massgebend ist das Todesdatum.
         </summary>
@@ -154,12 +154,12 @@ export function ErbteilungForm() {
 
       {zivilstand !== 'ledig' && (
         <div className="space-y-2">
-          <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" checked={scheidung} onChange={(e) => setScheidung(e.target.checked)} />
             Scheidungs-/Auflösungsverfahren beim Tod hängig
           </label>
           {scheidung && (
-            <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700 pl-6">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
               <input type="checkbox" checked={scheidung472} onChange={(e) => setScheidung472(e.target.checked)} />
               Voraussetzungen von Art. 472 ZGB erfüllt (gemeinsames Begehren oder ≥ 2 Jahre getrennt) → Pflichtteilsverlust
             </label>
@@ -213,7 +213,7 @@ export function ErbteilungForm() {
             </Field>
           </div>
           {vater === 'keine_angabe' && mutter === 'keine_angabe' && zivilstand === 'ledig' && (
-            <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" checked={dritteParentel} onChange={(e) => setDritteParentel(e.target.checked)} />
               3. Parentel vorhanden (Grosseltern oder deren Nachkommen, Art. 459 ZGB)
             </label>
@@ -225,7 +225,7 @@ export function ErbteilungForm() {
       <div className="border border-line rounded-lg">
         <button type="button" onClick={() => setGueterrechtAn(!gueterrechtAn)}
           className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${gueterrechtAn ? '' : 'rounded-b-lg'}`}>
-          <span className="text-sm font-medium text-ink-700">Güterrechtliche Vorstufe — Nachlass herleiten (optional)</span>
+          <span className="text-body-s font-medium text-ink-700">Güterrechtliche Vorstufe — Nachlass herleiten (optional)</span>
           <span className="text-ink-500">{gueterrechtAn ? '▲' : '▼'}</span>
         </button>
         {gueterrechtAn && (
@@ -258,7 +258,7 @@ export function ErbteilungForm() {
       {fehler.length > 0 && (
         <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
           <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-sm text-danger-700">• {f}</p>)}
+          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
         </div>
       )}
 
@@ -268,17 +268,17 @@ export function ErbteilungForm() {
 
           {/* Eckdaten */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
+            <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Rechtsstand</p>
-              <p className="text-lg font-semibold text-ink-900">{ergebnis.rechtsstand === 'neu' ? 'Neues Recht (ab 1.1.2023)' : 'Altes Recht (bis 31.12.2022)'}</p>
+              <p className="text-body-l font-semibold text-ink-900">{ergebnis.rechtsstand === 'neu' ? 'Neues Recht (ab 1.1.2023)' : 'Altes Recht (bis 31.12.2022)'}</p>
             </div>
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
+            <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Verfügbare Quote</p>
-              <p className="text-lg font-semibold text-ink-900">{fmtB(ergebnis.verfuegbareQuote)}{nachlass != null ? ` · CHF ${fmtCHF(zahl(ergebnis.verfuegbareQuote) * nachlass)}` : ''}</p>
+              <p className="text-body-l font-semibold text-ink-900">{fmtB(ergebnis.verfuegbareQuote)}{nachlass != null ? ` · CHF ${fmtCHF(zahl(ergebnis.verfuegbareQuote) * nachlass)}` : ''}</p>
             </div>
-            <div className="rounded-xl border border-line bg-surface-raised p-4">
+            <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Nachlass</p>
-              <p className="text-lg font-semibold text-ink-900">{nachlass != null ? `CHF ${fmtCHF(nachlass)}` : 'nur Quoten (keine Beträge erfasst)'}</p>
+              <p className="text-body-l font-semibold text-ink-900">{nachlass != null ? `CHF ${fmtCHF(nachlass)}` : 'nur Quoten (keine Beträge erfasst)'}</p>
             </div>
           </div>
 
@@ -325,13 +325,13 @@ export function ErbteilungForm() {
                 return (
                   <div key={e.bezeichnung} className="bg-warn-bg border-r border-line flex items-center justify-center"
                     style={{ width: `${breite}%` }} title={`${e.bezeichnung}: Pflichtteil ${fmtB(e.pflichtteil)}${e.anzahl ? ` × ${e.anzahl}` : ''}`}>
-                    <span className="text-[10px] text-warn-700 truncate px-1">{fmtB(e.pflichtteil)}{e.anzahl ? `×${e.anzahl}` : ''}</span>
+                    <span className="text-micro text-warn-700 truncate px-1">{fmtB(e.pflichtteil)}{e.anzahl ? `×${e.anzahl}` : ''}</span>
                   </div>
                 );
               })}
               <div className="flex items-center justify-center flex-1" style={{ background: 'var(--brass-100)' }}
                 title={`Verfügbare Quote: ${fmtB(ergebnis.verfuegbareQuote)}`}>
-                <span className="text-[10px] text-brass-700 font-semibold">verfügbar {fmtB(ergebnis.verfuegbareQuote)}</span>
+                <span className="text-micro text-brass-700 font-semibold">verfügbar {fmtB(ergebnis.verfuegbareQuote)}</span>
               </div>
             </div>
             <p className="text-body-s text-ink-500 mt-2">Gelb: Pflichtteile (gebundene Quote) · Gold: frei verfügbar (Testament/Erbvertrag)</p>

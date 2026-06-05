@@ -109,7 +109,7 @@ export function KombinierteAnsicht() {
   return (
     <div className="space-y-6">
       <div className="rounded-lg border border-line bg-surface p-4">
-        <p className="text-sm text-ink-600">
+        <p className="text-body-s text-ink-600">
           Kombinierte Ansicht: Alle drei Teilberechnungen (A/B/C) mit gemeinsamen Eingaben.
           Stichtage sind je Modul unterschiedlich – details im Rechenweg.
         </p>
@@ -118,21 +118,21 @@ export function KombinierteAnsicht() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-ink-700">Vertragsbeginn</label>
+            <label className="block text-body-s font-medium text-ink-700">Vertragsbeginn</label>
             <DatumsFeld value={form.vertragsbeginn} onChange={(v) => set('vertragsbeginn', v)} className={inputCls} />
           </div>
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-ink-700">Zugang Kündigung <span className="text-ink-500 font-normal">(Stichtag B/C)</span></label>
+            <label className="block text-body-s font-medium text-ink-700">Zugang Kündigung <span className="text-ink-500 font-normal">(Stichtag B/C)</span></label>
             <DatumsFeld value={form.zugangKuendigung} onChange={(v) => set('zugangKuendigung', v)} className={inputCls} />
           </div>
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-ink-700">Beginn Verhinderung <span className="text-ink-500 font-normal">(Stichtag A)</span></label>
+            <label className="block text-body-s font-medium text-ink-700">Beginn Verhinderung <span className="text-ink-500 font-normal">(Stichtag A)</span></label>
             <DatumsFeld value={form.verhinderungBeginn ?? ''} onChange={(v) => set('verhinderungBeginn', v)} className={inputCls} />
           </div>
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm font-medium text-ink-700">Kündigende Partei</label>
+          <label className="block text-body-s font-medium text-ink-700">Kündigende Partei</label>
           <select value={form.kuendigendePartei} onChange={(e) => set('kuendigendePartei', e.target.value as 'arbeitgeber' | 'arbeitnehmer')} className={inputCls}>
             <option value="arbeitgeber">Arbeitgeber</option>
             <option value="arbeitnehmer">Arbeitnehmer</option>
@@ -140,19 +140,19 @@ export function KombinierteAnsicht() {
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm font-medium text-ink-700">Kanton</label>
+          <label className="block text-body-s font-medium text-ink-700">Kanton</label>
           <select value={form.kanton ?? 'BE'} onChange={(e) => set('kanton', e.target.value as Kanton)} className={inputCls}>
             {KANTONE_SELECT.map((k) => <option key={k} value={k}>{k}</option>)}
           </select>
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm font-medium text-ink-700">AUF % (Lohnfortzahlung)</label>
+          <label className="block text-body-s font-medium text-ink-700">AUF % (Lohnfortzahlung)</label>
           <input type="number" min={1} max={100} value={form.arbeitsunfaehigkeitProzent ?? 100} onChange={(e) => set('arbeitsunfaehigkeitProzent', Number(e.target.value))} className={inputCls} />
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm font-medium text-ink-700">Probezeit (Monate)</label>
+          <label className="block text-body-s font-medium text-ink-700">Probezeit (Monate)</label>
           <input type="number" min={0} max={3} value={form.probezeitMonate} onChange={(e) => set('probezeitMonate', Number(e.target.value))} className={inputCls} />
         </div>
       </div>
@@ -160,8 +160,8 @@ export function KombinierteAnsicht() {
       {/* Sperrereignisse */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold text-ink-700">Sperrereignisse (Art. 336c OR)</h4>
-          <button onClick={addEreignis} className="text-sm px-3 py-1.5 bg-surface hover:bg-brass-100 rounded-lg transition-colors">+ Ereignis</button>
+          <h4 className="text-body-s font-semibold text-ink-700">Sperrereignisse (Art. 336c OR)</h4>
+          <button onClick={addEreignis} className="text-body-s px-3 py-1.5 bg-surface hover:bg-brass-100 rounded-lg transition-colors">+ Ereignis</button>
         </div>
         {(form.sperrereignisse ?? []).map((e, i) => (
           <div key={i} className="border border-line rounded-lg p-3 bg-surface grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
@@ -187,7 +187,7 @@ export function KombinierteAnsicht() {
       <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
 
       {ergebnisse.kuendigung?.status === 'nichtig' && (
-        <div className="lc-notice-danger rounded-md" style={{ padding: '12px 16px', borderLeft: '3px solid var(--danger-500)' }}>
+        <div className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Kündigung nichtig</p>
           <p className="text-body-s text-danger-700">
             Der Zugang der Kündigung fällt in eine Sperrfrist – die Kündigung ist nichtig und entfaltet keine Wirkung.

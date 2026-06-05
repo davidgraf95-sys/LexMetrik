@@ -40,7 +40,7 @@ export function SprachUmschalter() {
             return (
               <button key={l.code} type="button" role="menuitemradio" aria-checked={aktiv}
                 onClick={() => { setLocale(l.code); setOffen(false); }}
-                className={`w-full flex items-center justify-between gap-2 px-3 py-2 rounded-md text-left text-sm transition-colors ${
+                className={`w-full flex items-center justify-between gap-2 px-3 py-2 rounded-md text-left text-body-s transition-colors ${
                   aktiv ? 'bg-brass-100/70 text-ink-900 font-medium' : 'text-ink-700 hover:bg-brass-100/40'
                 }`}>
                 <span className={l.inBearbeitung ? 'text-ink-500' : ''}>

@@ -14,14 +14,14 @@ export function RechnerStub() {
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
       <div className="lc-card p-8 text-center space-y-3">
-        <p className="text-sm font-semibold text-warn-700 uppercase tracking-wide">
+        <p className="text-body-s font-semibold text-warn-700 uppercase tracking-wide">
           {calc.status === 'in Vorbereitung' ? 'In Vorbereitung' : 'Geplant'}
         </p>
         <p className="text-ink-600 max-w-md mx-auto">
           Dieser Rechner ist noch nicht verfügbar. Die Berechnungslogik wird separat ergänzt;
           der Seitenrahmen folgt bereits der gemeinsamen Vorlage.
         </p>
-        <Link to="/rechner" className="inline-block text-sm font-medium text-brass-700">← Zurück zur Rechnerübersicht</Link>
+        <Link to="/rechner" className="inline-block text-body-s font-medium text-brass-700">← Zurück zur Rechnerübersicht</Link>
       </div>
     </div>
   );

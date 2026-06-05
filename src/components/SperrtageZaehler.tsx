@@ -18,7 +18,7 @@ const fmtISO = (s: string) => (s ? s.split('-').reverse().join('.') : '–');
 export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<SperrfristenErgebnis['sperrtage']> }) {
   if (sperrtage.length === 0) return null;
   return (
-    <section aria-label="Sperrtage-Zähler" className="lc-card p-4 sm:p-5 space-y-3">
+    <section aria-label="Sperrtage-Zähler" className="lc-card p-5 space-y-3">
       <div className="flex items-center gap-4">
         <h3 className="lc-overline text-ink-700">Sperrtage-Zähler</h3>
         <div className="flex-1 h-px bg-line" />

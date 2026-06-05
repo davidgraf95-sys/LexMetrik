@@ -83,7 +83,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
           <p className="lc-overline">Ergebnis</p>
           <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{sansAmp(titel)}</h3>
         </div>
-        <button onClick={kopieren} className="lc-btn-ghost shrink-0" style={{ height: '36px', padding: '0 12px' }}
+        <button onClick={kopieren} className="lc-btn-ghost lc-btn-sm shrink-0"
           aria-label="Ergebnis in die Zwischenablage kopieren">
           {kopiert ? 'Kopiert ✓' : 'Kopieren'}
         </button>

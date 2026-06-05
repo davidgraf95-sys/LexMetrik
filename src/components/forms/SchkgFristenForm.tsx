@@ -152,7 +152,7 @@ export function SchkgFristenForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
-      <details className="lc-notice-danger rounded-md" style={{ padding: '10px 14px', borderLeft: '3px solid var(--danger-500)' }}>
+      <details className="lc-notice-danger">
         <summary className="text-body-s text-danger-700 cursor-pointer">
           <strong>Keine Rechtsberatung</strong> – rechnerische Orientierung (Art. 31/56/63 SchKG, Schnittstelle Art. 145 ZPO). Betreibungsferien ≠ Gerichtsferien.
         </summary>
@@ -249,7 +249,7 @@ export function SchkgFristenForm() {
       {/* Optionale Sonderlogik */}
       {(aktiv?.hemmungMoeglich || !aktiv) && (
         <div className="space-y-2">
-          <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" checked={hemmung.an} onChange={(e) => setHemmung((s) => ({ ...s, an: e.target.checked }))} />
             Hemmung der Verwirkungsfrist (Art. 88 Abs. 2 / Art. 166 Abs. 2 SchKG)
           </label>
@@ -265,7 +265,7 @@ export function SchkgFristenForm() {
       )}
 
       <div className="space-y-2">
-        <label className="flex items-center gap-2 text-sm cursor-pointer text-ink-700">
+        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" checked={rechtsstillstand.an} onChange={(e) => setRechtsstillstand((s) => ({ ...s, an: e.target.checked }))} />
           Schuldnerbezogener Rechtsstillstand (Art. 57–62 SchKG)
         </label>
@@ -280,7 +280,7 @@ export function SchkgFristenForm() {
       </div>
 
       {istInfo && aktiv && (
-        <div className="lc-notice-danger rounded-md" style={{ padding: '12px 16px', borderLeft: '3px solid var(--danger-500)' }}>
+        <div className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Keine berechenbare Frist – {aktiv.norm}</p>
           <p className="text-body-s text-danger-700">{aktiv.hinweis}</p>
         </div>
@@ -289,7 +289,7 @@ export function SchkgFristenForm() {
       {fehler.length > 0 && (
         <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
           <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-sm text-danger-700">• {f}</p>)}
+          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
         </div>
       )}
 
@@ -311,9 +311,9 @@ export function SchkgFristenForm() {
                     { label: 'Fristbeginn (dies a quo)', val: e.diesAQuo },
                     { label: 'Fristende (dies ad quem)', val: `${e.diesAdQuem} · 24.00 Uhr` },
                   ].map((c) => (
-                    <div key={c.label} className="rounded-xl border border-line bg-surface-raised p-4">
+                    <div key={c.label} className="lc-tile">
                       <p className="text-xs text-ink-500 mb-1">{c.label}</p>
-                      <p className="text-lg font-semibold text-ink-900">{c.val}</p>
+                      <p className="text-body-l font-semibold text-ink-900">{c.val}</p>
                     </div>
                   ))}
                 </div>

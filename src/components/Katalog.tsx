@@ -160,7 +160,7 @@ function FilterLeiste(props: {
           {([['Alle', false], ['Nur verfügbare', true]] as const).map(([label, wert]) => (
             <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
               aria-pressed={nurGeprueft === wert}
-              className={`px-3 rounded-lg text-sm font-medium transition-all ${
+              className={`px-3 rounded-lg text-body-s font-medium transition-all ${
                 nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
               }`}>
               {label}
@@ -241,7 +241,7 @@ function Uebersicht(props: {
       )}
 
       {/* Status-Legende (drei Zustände) */}
-      <p className="text-[11px] leading-relaxed text-ink-500 pt-2 border-t border-line">
+      <p className="text-micro leading-relaxed text-ink-500 pt-2 border-t border-line">
         <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line border-t-2 border-t-warn-500" />
         orange = Entwurf (ungeprüft) ·{' '}
         <span aria-hidden className="inline-block align-[-1px] w-3.5 h-2.5 mr-1 rounded-[2px] bg-surface-raised border border-line opacity-50" />
