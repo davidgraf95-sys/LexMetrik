@@ -395,3 +395,36 @@ describe('Formatvorlagen (DOCX-Absatzmodell)', () => {
     expect(docxAbsaetze(r).some((x) => x.typ === 'titel')).toBe(true);
   });
 });
+
+// ── Audit-Regressionen 5.6.2026 ─────────────────────────────────────────────
+
+describe('Audit-Fixes Vorlagen', () => {
+  it('H1: Vorlagen-PDF-Text verdreht KEINE Datums-Muster im Freitext (Betreibungsnummer bleibt)', async () => {
+    const { vorlagenPdfText } = await import('../lib/vorlagen/vorlagenPdf');
+    expect(vorlagenPdfText('Betreibung Nr. 2025-12-31 des Betreibungsamts')).toContain('2025-12-31');
+    expect(vorlagenPdfText('Forderung Nr. 2024-13-99')).toContain('2024-13-99');
+  });
+
+  it('M2: PV-R6 erkennt normalisierte Umgehungen (Doppel-Leerzeichen, Bindestrich, Zeilenumbruch, getrennt)', () => {
+    const f = (text: string) => pruefePvGates({ ...PV_DEFAULTS, einstellungLeben: text }).blocker.length > 0;
+    expect(f('Ich wünsche aktive  Sterbehilfe')).toBe(true);
+    expect(f('aktive-sterbehilfe')).toBe(true);
+    expect(f('aktive\nSterbehilfe')).toBe(true);
+    expect(f('Kontakt zu einer Sterbehilfe Organisation')).toBe(true);
+    expect(f('Ich wünsche palliative Begleitung')).toBe(false);
+  });
+
+  it('M1: Testament warnt bei Einzelquoten ausserhalb 0–100 % auch wenn die Summe 100 ergibt', async () => {
+    const { pruefeGates, TESTAMENT_DEFAULTS } = await import('../lib/vorlagen/testament');
+    const r = pruefeGates({
+      ...TESTAMENT_DEFAULTS,
+      vorname: 'A', nachname: 'B', geburtsdatum: '1960-01-01', heimatort: 'Basel', adresse: 'X 1',
+      ortErrichtung: 'Basel', datumErrichtung: '2026-06-05',
+      erben: [
+        { name: 'E1', angaben: '', quoteProzent: -50 },
+        { name: 'E2', angaben: '', quoteProzent: 150 },
+      ],
+    });
+    expect(r.warnungen.join()).toMatch(/ungültig/);
+  });
+});

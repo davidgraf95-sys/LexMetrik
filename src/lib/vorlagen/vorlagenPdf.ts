@@ -1,5 +1,13 @@
 import { jsPDF } from 'jspdf';
-import { pdfText } from '../pdf/winansi';
+import { winAnsiSicher, typografie } from '../pdf/winansi';
+
+// Textaufbereitung der VORLAGEN-PDFs: WinAnsi-Sicherung + Typografie, aber
+// OHNE datumNormalisieren — die Schemas formatieren Daten selbst, und eine
+// pauschale ISO-Ersetzung würde Freitext verfälschen (Audit-Befund H1
+// 5.6.2026: Betreibungsnummer «2025-12-31» wurde im PDF zu «31.12.2025»
+// verdreht, während DOCX/Vorschau korrekt blieben — Renderer-Divergenz).
+export const vorlagenPdfText = (text: string): string => winAnsiSicher(typografie(text));
+const pdfText = vorlagenPdfText;
 import type { AssembleErgebnis, DokumentAbsatz, VorlageFormat } from './engine';
 import type { PdfBanner } from './banner';
 
@@ -150,14 +158,28 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
 
   const setzeBrot = (fett = false) => { doc.setFont('helvetica', fett ? 'bold' : 'normal'); doc.setFontSize(P.brot); };
 
+  // Block möglichst ungeteilt halten: passt er auf eine Seite, wird vorab
+  // umgebrochen und ungeteilt geschrieben; ist er LÄNGER als eine Seite,
+  // darf er zeilenweise brechen — sonst liefe der Text über den Seitenrand
+  // hinaus (Audit-Befund H2 5.6.2026: brechen:false ohne Schranke).
+  const MAX_BLOCK = 297 - 20 - RAND;
+  const blockGeschuetzt = (text: string, zeilenHoehe: number, pad: number, opt: { align?: 'right' | 'center'; dicht?: boolean } = {}) => {
+    const h = blockHoehe(text, zeilenHoehe);
+    if (h <= MAX_BLOCK) {
+      seitenumbruch(h + pad);
+      schreibe(text, { ...opt, brechen: false });
+    } else {
+      schreibe(text, opt); // zeilenweise Umbrüche erlaubt
+    }
+  };
+
   // ── Rollen-Renderer (Brief-/Vertrags-Anatomie) ──
   const absatzRendern = (a: DokumentAbsatz) => {
     switch (a.rolle) {
       case 'absender':
       case 'adressat':
         setzeBrot();
-        seitenumbruch(blockHoehe(a.text, P.zeileDicht) + 4);
-        schreibe(a.text, { dicht: true, brechen: false });
+        blockGeschuetzt(a.text, P.zeileDicht, 4, { dicht: true });
         y += a.rolle === 'adressat' ? 10 : 8;
         return;
       case 'datumzeile':
@@ -168,8 +190,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
         return;
       case 'betreff':
         doc.setFont('helvetica', 'bold'); doc.setFontSize(13);
-        seitenumbruch(blockHoehe(a.text, 5.6) + 8);
-        schreibe(a.text, { brechen: false });
+        blockGeschuetzt(a.text, 5.6, 8);
         y += 1.5;
         hairline(RAND, 210 - RAND);
         y += 7;
@@ -199,15 +220,13 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
         return;
       case 'parteien':
         setzeBrot();
-        seitenumbruch(blockHoehe(a.text, P.zeile) + 4);
-        schreibe(a.text, { align: 'center', brechen: false });
+        blockGeschuetzt(a.text, P.zeile, 4, { align: 'center' });
         y += 8;
         return;
       case 'unterschrift':
         setzeBrot();
         y += 5;
-        seitenumbruch(blockHoehe(a.text, P.zeile) + 8);
-        schreibe(a.text, { brechen: false });
+        blockGeschuetzt(a.text, P.zeile, 8);
         y += P.absatzGap;
         return;
       default: {
