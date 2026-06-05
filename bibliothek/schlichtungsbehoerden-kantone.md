@@ -45,12 +45,12 @@ zentralen Stelle. Befund über alle 26 Kantone:
 | OW | kantonale Schlichtungsbehörde | **1** (Enetriederstrasse 1, 6060 Sarnen) | dieselbe |
 | NW | kantonale Schlichtungsbehörde | **1** (Rathausplatz 9, PF 1244, 6371 Stans) | dieselbe |
 | GL | kantonale Schlichtungsbehörde | **1** (Gerichtshausstrasse 22, 8750 Glarus) | dieselbe |
-| ZG | Friedensrichterämter (kommunal) | ~9 | zentral: Baarerstrasse 131, 6301 Zug |
+| ZG | Friedensrichterämter (kommunal) | **11** ✓2 | zentral: Baarerstrasse 131, **6300** Zug ✓2 |
 | FR | Friedensgerichte / Justices de paix | 7 Bezirke | 3 regionale Kommissionen |
 | SO | Friedensrichter ODER Amtsgerichtspräsidium | gemischt | 4 regionale (Oberämter) |
 | BS | Zivilgericht (Schlichtungsbehörde) ✓ Stammdatum | **1** | Staatl. Schlichtungsstelle ✓ Stammdatum |
-| BL | Friedensrichterkreise | 15 | zentral: Bahnhofstrasse 3, 4410 Liestal |
-| SH | Friedensrichterämter (Kreise) | ~4 (zu verifizieren!) | zentral: Vordergasse 54, 8200 Schaffhausen |
+| BL | Friedensrichterkreise | 15 | zentral: **Rheinstrasse 16, 4410 Liestal** ✓2 (Bahnhofstr. 3/5 überholt!) |
+| SH | **EIN kantonales Friedensrichteramt seit 1.1.2018** ✓2 | **1** | zentral: Vordergasse 54, **8201** Schaffhausen ✓2 |
 | AR | Vermittlerämter (Kreise) | 3 | zentral: Fünfeckpalast, 9043 Trogen |
 | AI | Vermittler je Bezirk | ~5 | 2 (innerer/äusserer Landesteil) |
 | SG | Vermittlungsämter (Gerichtskreise) | 10 | 7 regionale Stellen |
@@ -59,8 +59,8 @@ zentralen Stelle. Befund über alle 26 Kantone:
 | TG | Friedensrichterämter (Bezirke) | 5 | **kommunal je Gemeinde** (Sonderfall!) |
 | TI | Giudice di pace (circoli) | 38 | 11 Uffici di conciliazione locazione |
 | VD | Justices de paix (Bezirke) | 9 | Commission préfectorale je Bezirk |
-| VS | Juge de commune (Gemeinderichter) | >100 | zentral: Av. du Midi 7, 1951 Sion (zu verifizieren) |
-| NE | Chambre de conciliation (Regionalgerichte) | 2 Gerichte/3 Standorte | nicht recherchiert |
+| VS | Juge de commune (Gemeinderichter) | >100 | zentral: **Av. du Midi 7, 1950 Sion** ✓2 (PLZ-Korrektur; LACPC Art. 3 am Originaltext bestätigt) |
+| NE | Chambre de conciliation (Regionalgerichte) | 2 Gerichte/3 Standorte | identisch: Chambre paritätisch in Bail-Sachen ✓2 |
 | GE | Tribunal de première instance | **1** (Rue de l'Athénée 6-8, 1205 Genève) | Commission baux et loyers (gleiche Adresse, eigenes PF) |
 | JU | Juge civil am Tribunal de première instance | **1** (Porrentruy) | nicht recherchiert |
 
@@ -92,11 +92,11 @@ zentralen Stelle. Befund über alle 26 Kantone:
 
 ### SZ — Schwyz
 - **Allgemein:** 30 kommunale Vermittlerämter; Verzeichnis sz.ch/behoerden/justiz/vermittleraemter.html (→ vermittler-sz.ch). Beispiel: Vermittleramt Schwyz, Herrengasse 17, 6431 Schwyz.
-- **Miete abweichend:** 6 Bezirks-Stellen (Schwyz PF 547 · Gersau Ausserdorfstrasse 7 · March PF 531 Lachen · Einsiedeln PF 161 · Küssnacht Breitfeld 15 · Höfe PF 43 Pfäffikon) — überwiegend Postfächer (amtlich so).
+- **Miete abweichend:** 6 Bezirks-Stellen (Schwyz PF 547 · Gersau **Bezirkskanzlei, Postfach 59** ✓2 (Dossier-Erstangabe «Ausserdorfstrasse 7» ersetzt) · March PF 531 Lachen · Einsiedeln PF 161 · Küssnacht Breitfeld 15 · Höfe PF 43 Pfäffikon) — überwiegend Postfächer (amtlich so).
 
 ### ZG — Zug
-- **Allgemein:** kommunale Friedensrichterämter («neun» laut amtlicher Seite, Aufzählung umfasst mehr Gemeinden — Zahl VERIFIZIEREN). Beispiel: FR-Amt Stadt Zug, Gubelstrasse 22, PF, 6301 Zug. Verzeichnis: zg.ch/de/gerichte/zivil-und-strafrechtspflege/schlichtungsbehoerden.
-- **Miete zentral:** Schlichtungsbehörde Miet- und Pachtrecht, Baarerstrasse 131, PF, 6301 Zug (Staatskalender ZG massgeblich; Treffer «Industriestrasse 24» verwerfen).
+- **Allgemein:** kommunale Friedensrichterämter — **11** (✓2. Durchgang: Zug, Oberägeri, Unterägeri, Menzingen, Baar, Cham, Hünenberg, Steinhausen, Risch, Walchwil, Neuheim). Beispiel: FR-Amt Stadt Zug, Gubelstrasse 22, PF, 6301 Zug. Verzeichnis: zg.ch/de/gerichte/zivil-und-strafrechtspflege/schlichtungsbehoerden.
+- **Miete zentral:** Schlichtungsbehörde Miet- und Pachtrecht, Baarerstrasse 131, **6300 Zug** (✓2: BWO + Portrait; 6301 nur Postfach-PLZ; Treffer «Industriestrasse 24» verwerfen).
 
 ### FR — Freiburg (zweisprachig)
 - **Allgemein:** 7 Friedensgerichte/Justices de paix (je Bezirk), alle Adressen verifiziert: Saane Rue des Chanoines 1, 1701 Fribourg · Sense Schwarzseestrasse 5, 1712 Tafers · Greyerz Rue de l'Europe 10, 1630 Bulle · See Freiburgstrasse 69, 3280 Murten · Glane Rue des Moines 58, 1680 Romont · Broye Av. de la Gare 111, 1470 Estavayer-le-Lac · Vivisbach Ch. du Château 11, 1618 Châtel-St-Denis.
@@ -110,14 +110,14 @@ zentralen Stelle. Befund über alle 26 Kantone:
 
 ### BL — Basel-Landschaft
 - **Allgemein:** 15 Friedensrichterkreise; Verzeichnis baselland.ch/politik-und-behorden/gerichte/friedensrichter-innen. (Direktabruf lieferte 403 — Inhalte aus amtlichen Treffern.)
-- **Miete zentral:** Schlichtungsstelle für Mietangelegenheiten, Bahnhofstrasse 3, 4410 Liestal (Umzug von Nr. 5 → Nr. 3 beachten; amtliche Angabe massgeblich, kurz bestätigen).
+- **Miete zentral:** Schlichtungsstelle für Mietangelegenheiten, **Rheinstrasse 16, 4410 Liestal** (✓2. Durchgang: BWO 13.02.2026 + amtlicher Online-Schalter oslvb.bl.ch/553 — Erstangaben Bahnhofstrasse 3 UND 5 sind überholt).
 
 ### SH — Schaffhausen (erhöhte Unsicherheit)
-- **Allgemein:** Friedensrichterämter nach Kreisen — Treffer nennen 4 Kreise, es gab aber Zusammenlegungspläne. **Kreiseinteilung vor Übernahme auf sh.ch verifizieren** (JS-Seiten, nicht direkt auslesbar). Beispiel: FR-Amt Kreis Schaffhausen, Vordergasse 54, 8201 Schaffhausen.
-- **Miete zentral:** Schlichtungsstelle für Mietsachen, Vordergasse 54, 8200/8201 Schaffhausen.
+- **Allgemein:** ✓2. Durchgang GEKLÄRT — seit **1.1.2018 EIN kantonales Friedensrichteramt** (Fusion der Kreise Schaffhausen/Stein/Reiat/Klettgau, Volksabstimmung 21.5.2017): Friedensrichteramt des Kantons Schaffhausen, Vordergasse 54, **8201** Schaffhausen. SH zählt damit zu den ZENTRAL-Kantonen.
+- **Miete zentral:** Schlichtungsstelle für Mietsachen, Vordergasse 54, **8201** Schaffhausen (✓2: BWO; Drittverzeichnis-Treffer «Herrenacker 26» verwerfen).
 
 ### AR — Appenzell Ausserrhoden
-- **Allgemein:** 3 Vermittlerämter: Kreis 1 Hinterland, c/o Kantonskanzlei, Obstmarkt 3, PF, 9102 Herisau · Kreis 2 Mittelland und Kreis 3 Vorderland: beide Landsgemeindeplatz 2, Rathaus 3. Stock, 9043 Trogen.
+- **Allgemein:** 3 Vermittlerämter: Kreis 1 Hinterland, Regierungsgebäude, Obstmarkt 3 ✓2, PF, 9102 Herisau · Kreis 2 Mittelland und Kreis 3 Vorderland: beide Landsgemeindeplatz 2, Rathaus 3. Stock, 9043 Trogen.
 - **Miete zentral:** Schlichtungsstelle für Miete und nichtlandw. Pacht, Landsgemeindeplatz 7c / Fünfeckpalast, 9043 Trogen. (Landw. Pacht → Vermittlerämter.)
 - Quellen: ar.ch/gerichte + staatskalender.ar.ch. Solide.
 
@@ -152,8 +152,8 @@ zentralen Stelle. Befund über alle 26 Kantone:
 - **Miete:** Commission préfectorale de conciliation, eine pro Bezirk (bei der Präfektur); Verzeichnis auf vd.ch.
 
 ### VS — Wallis (erhöhte Unsicherheit)
-- **Allgemein:** Juge de commune (Gemeinderichter) je Gemeinde (>100) — **Gesetzesgrundlage (Art. 3 LACPC-VS) am Originaltext verifizieren** (PDF nicht voll auslesbar).
-- **Miete zentral:** Commission cantonale de conciliation en matière de baux à loyer, Av. du Midi 7, 1951 Sion (nur Such-Snippet — auf vs.ch gegenprüfen).
+- **Allgemein:** Juge de commune (Gemeinderichter) je Gemeinde (>100) — ✓2. Durchgang: **Art. 3 LACPC am Originaltext bestätigt** («tenter la conciliation, art. 201 al. 1 CPC»; Abs. 2 reserviert die Miet-Kommission).
+- **Miete zentral:** Commission cantonale de conciliation en matière de baux à loyer, Av. du Midi 7, 1950 Sion ✓2 (nur Such-Snippet — auf vs.ch gegenprüfen).
 
 ### NE — Neuenburg
 - **Allgemein:** Chambre de conciliation der 2 Tribunaux régionaux, 3 Standorte: Neuchâtel Rue de l'Hôtel-de-Ville 2, 2000 · Boudry Rue Louis-Favre 39, CP 36, 2017 · La Chaux-de-Fonds Av. Léopold-Robert 10, CP 2284, 2300. Quelle: ne.ch/PJNE.
@@ -165,7 +165,7 @@ zentralen Stelle. Befund über alle 26 Kantone:
 
 ### JU — Jura
 - **Allgemein zentral:** Juge civil am Tribunal de première instance, Le Château, Chemin du Château 9, 2900 Porrentruy (Hausnummer/Postfach gegenprüfen). Quelle: jura.ch/JUST.
-- **Miete: nicht recherchiert** (offen).
+- **Miete (✓2. Durchgang, Lückenschluss): NICHT zentral — 3 Bezirks-Commissions de conciliation en matière de bail:** Delémont (Hôtel-de-Ville, CP, 2800 Delémont, inkl. Moutier) · Porrentruy (Rue de la Roche-de-Mars 5, 2900, c/o SIDP) · Franches-Montagnes (Au Village 21c, 2360 Le Bémont). Quelle: jura.ch/JUST «Droit du travail et du bail».
 
 ---
 
