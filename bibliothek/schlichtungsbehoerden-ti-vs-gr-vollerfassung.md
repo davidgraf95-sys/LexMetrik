@@ -3,14 +3,18 @@
 **Erstellt:** 5.6.2026 (Enumerations-Agent) · **Abrufdatum: 5.6.2026**
 **Status: einfach belegt; Konflikte für den 3. Durchgang markiert.**
 
-⚠ **OFFENER KONFLIKT VS-Miet-Kommission (Av. du Midi 7, Sion):** Recheck-Agent
-sagt amtlich **1950** (vs.ch/web/sict/bail-a-loyer), dieser Enumerations-Agent
-sagt **1951** (gemäss vs.ch) — im finalen Doppelcheck klären; bis dahin PLZ offen.
-⚠ **TI-Mietbüros:** physisch **9** Standorte; die «11» der Erstrecherche zählt
-Lugano Est/Ovest getrennt + Chiasso (Chiasso als MIET-Büro NICHT bestätigt —
-allgemeines Conciliazione-Büro; Mietsachen → Mendrisio). Beim Kanton bestätigen.
-⚠ **TI Circolo Bellinzona:** Verzeichnis-Adresse liegt in Giubiasco (Piazza
-Grande 3) statt im capoluogo Bellinzona — beim Kanton verifizieren.
+✅ **KONFLIKTE ENTSCHIEDEN (Schiedsrichter-Durchgang 5.6.2026):**
+- **VS-PLZ (Av. du Midi 7, Sion): UNENTSCHIEDEN — beide gültig** (vs.ch nutzt
+  1950 UND 1951 parallel; 1950 = häufigere Default-Angabe, 1951 = Verwaltungs-
+  PLZ am selben Standort). Empfehlung Stammdaten: 1950, Vermerk «1951 ebenfalls
+  amtlich in Gebrauch».
+- **TI-Mietbüros: 11 Standorte — Chiasso hat ein EIGENES Büro** (Piazza
+  Bernasconi 1, 6830; chiasso.ch amtlich; zuständig Chiasso/Balerna/Breggia/
+  Coldrerio/Morbio Inf./Vacallo). Die Zweitrunden-These «9 physisch, Chiasso →
+  Mendrisio» ist WIDERLEGT — hier lag die Erstrecherche richtig.
+- **TI Circolo Bellinzona: faktischer Amtssitz Piazza Grande 3, Giubiasco**
+  (konkordante Verzeichnisse; capoluogo-Prinzip bezeichnet den Kreis, nicht
+  die Liegenschaft). Restvorbehalt: kein ti.ch-Primärtreffer.
 ⚠ **Quellenqualität TI-Einzeladressen:** teils esecuzioni-piu.ch (amtsnaher
 Spiegel, NICHT amtlich) — vor Stammdaten-Übernahme je Circolo gegenprüfen.
 

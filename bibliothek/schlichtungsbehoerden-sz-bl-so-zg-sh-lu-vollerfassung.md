@@ -3,14 +3,15 @@
 **Erstellt:** 5.6.2026 (Enumerations-Agent) · **Abrufdatum: 5.6.2026**
 **Status: einfach belegt; Konflikte für den finalen Doppelcheck markiert.**
 
-⚠ **KONFLIKTE ZWISCHEN AGENTEN (finaler Doppelcheck entscheidet):**
-1. **BL Miet-Schlichtungsstelle:** Recheck-Agent → **Rheinstrasse 16, Liestal**
-   (BWO 13.2.2026 + amtlicher Online-Schalter oslvb.bl.ch) · dieser Agent →
-   «Bahnhofstrasse 3» (aus kantonalem PDF, mutmasslich älter). Gewichtung
-   vorerst: **Rheinstrasse 16** führend.
-2. **SH Zentralisierungs-DATUM:** Recheck → Fusion per 1.1.2018 · dieser Agent →
-   «seit 1.10.2019 ein Standort» (evtl. Fusion 2018, Umzug/letzte Zusammen-
-   legung 2019). EINIG: heute EIN kantonales Amt, Vordergasse 54, 8201.
+✅ **KONFLIKTE ENTSCHIEDEN (Schiedsrichter-Durchgang 5.6.2026):**
+1. **BL Miet-Schlichtungsstelle: Rheinstrasse 16, 4410 Liestal** (baselland.ch
+   VGD-Seite + oslvb.bl.ch/553 + BWO 13.2.2026; «Bahnhofstrasse 3» aus dem
+   kantonalen Sammel-PDF ist überholt). Gilt mutmasslich auch für die dort
+   gleich adressierte Gleichstellungs-Schlichtungsstelle (separat prüfen).
+2. **SH Zentralisierung: per 1.1.2018** (Volksabstimmung 21.5.2017; SRF/SHN/
+   Amtsbericht OGer 2017). «1.10.2019» war falsch (Vermischung mit Umzug).
+   NEUER VORBEHALT: Strassenadresse Vordergasse 54 vs. **Fronwagplatz 24**
+   in Verzeichnissen uneinheitlich — vor Stammdaten-Übernahme auf sh.ch klären.
 3. **SZ:** «30 Vermittlerämter» ist VERALTET — diverse Zusammenlegungen
    (Höfe seit 1.7.2020 u. a.); amtliche Karte (vermittler-sz.ch) ist reines
    JS → kanonische Vollliste nicht extrahierbar; etliche Adressen nur via
@@ -94,7 +95,7 @@ Quelle: Gesetz über die Organisation der Gerichte BL (SGS 170), §18, amtliche 
 | 14 | Gelterkinden | Anwil, Buus, Gelterkinden, Hemmiken, Kilchberg, Maisprach, Oltingen, Ormalingen, Rickenbach, Rothenfluh, Rünenberg, Tecknau, Wenslingen, Zeglingen | Gemeindeverwaltung Gelterkinden (FR Michael Herrmann, Ebnetweg 42, 4460 Gelterkinden) |
 | 15 | Waldenburg | Arboldswil, Bennwil, Bretzwil, Diegten, Eptingen, Hölstein, Lampenberg, Langenbruck, Lauwil, Liedertswil, Niederdorf, Oberdorf, Reigoldswil, Titterten, Waldenburg | Gemeindeverwaltung Waldenburg |
 
-**Übrige BL-Schlichtungsbehörden (amtlich, aus schlichtungsbehoerden.pdf):** Schlichtungsstelle für Mietangelegenheiten – Bahnhofstrasse 3, 4410 Liestal · Schlichtungsstelle für Diskriminierungsstreitigkeiten im Erwerbsleben (Gleichstellung) – Bahnhofstrasse 3, 4410 Liestal.
+**Übrige BL-Schlichtungsbehörden (amtlich, aus schlichtungsbehoerden.pdf):** Schlichtungsstelle für Mietangelegenheiten – **Rheinstrasse 16, 4410 Liestal** (✓3 Schiedsrichter) · Schlichtungsstelle für Diskriminierungsstreitigkeiten im Erwerbsleben (Gleichstellung) – mutmasslich ebenfalls Rheinstrasse 16 (Alt-PDF: Bahnhofstrasse 3 — prüfen).
 
 > **Lücke BL:** Kreiseinteilung vollständig (amtlich, GOG §18). **Exakte Strassenadressen je Sitzgemeinde** für Kreise 1–5, 7, 8, 10–12, 15 konnten wegen Cloudflare-403 auf baselland.ch nicht je einzeln amtlich verifiziert werden (Amt = jeweilige Gemeindeverwaltung; «Telefonbucheintrag Friedensrichter in jeder Gemeinde» gemäss amtl. Merkblatt).
 
@@ -151,7 +152,7 @@ Quelle: sh.ch (Friedensrichteramt des Kreises Schaffhausen); SRF-Bericht zur Zen
 |---|---|---|
 | Friedensrichteramt des Kreises Schaffhausen | Vordergasse 54, 8201 Schaffhausen (Tel. 052 632 67 70; friedensrichteramt-schaffhausen@sh.ch) | gesamter Kanton SH |
 
-> **Klärung SH:** Keine 4 Kreise mehr. Die früheren Kreise Stadt, Stein am Rhein, Reiat, Klettgau wurden zusammengelegt; **seit 1.10.2019** nur noch ein Standort (Umzug von Fronwagplatz an Vordergasse 54). **Anzahl = 1.**
+> **Klärung SH:** Keine 4 Kreise mehr. Die früheren Kreise Stadt, Stein am Rhein, Reiat, Klettgau wurden zusammengelegt; **seit 1.10.2019** nur noch ein Standort (Adresse: Vordergasse 54 belegt, aber Fronwagplatz-24-Variante existiert — UNENTSCHIEDEN, auf sh.ch klären). **Anzahl = 1.**
 
 ---
 

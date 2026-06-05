@@ -110,10 +110,10 @@ zentralen Stelle. Befund über alle 26 Kantone:
 
 ### BL — Basel-Landschaft
 - **Allgemein:** 15 Friedensrichterkreise; Verzeichnis baselland.ch/politik-und-behorden/gerichte/friedensrichter-innen. (Direktabruf lieferte 403 — Inhalte aus amtlichen Treffern.)
-- **Miete zentral:** Schlichtungsstelle für Mietangelegenheiten, **Rheinstrasse 16, 4410 Liestal** (✓2. Durchgang: BWO 13.02.2026 + amtlicher Online-Schalter oslvb.bl.ch/553 — Erstangaben Bahnhofstrasse 3 UND 5 sind überholt).
+- **Miete zentral:** Schlichtungsstelle für Mietangelegenheiten, **Rheinstrasse 16, 4410 Liestal** (✓2+✓3 zweifach entschieden: baselland.ch-VGD + oslvb.bl.ch/553 + BWO 13.02.2026 — Bahnhofstrasse 3 UND 5 überholt). ZWEIFACH VERIFIZIERT.
 
 ### SH — Schaffhausen (erhöhte Unsicherheit)
-- **Allgemein:** ✓2. Durchgang GEKLÄRT — seit **1.1.2018 EIN kantonales Friedensrichteramt** (Fusion der Kreise Schaffhausen/Stein/Reiat/Klettgau, Volksabstimmung 21.5.2017): Friedensrichteramt des Kantons Schaffhausen, Vordergasse 54, **8201** Schaffhausen. SH zählt damit zu den ZENTRAL-Kantonen.
+- **Allgemein:** ✓2. Durchgang GEKLÄRT — seit **1.1.2018 EIN kantonales Friedensrichteramt** (Fusion der Kreise Schaffhausen/Stein/Reiat/Klettgau, Volksabstimmung 21.5.2017): Friedensrichteramt des Kantons Schaffhausen, **8201** Schaffhausen — Strassenadresse mit VORBEHALT: Vordergasse 54 (BWO/sh.ch) vs. Fronwagplatz 24 (neuere Verzeichnistreffer), ✓3 unentschieden, auf sh.ch klären. SH zählt zu den ZENTRAL-Kantonen.
 - **Miete zentral:** Schlichtungsstelle für Mietsachen, Vordergasse 54, **8201** Schaffhausen (✓2: BWO; Drittverzeichnis-Treffer «Herrenacker 26» verwerfen).
 
 ### AR — Appenzell Ausserrhoden
