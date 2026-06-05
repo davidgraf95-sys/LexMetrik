@@ -298,3 +298,21 @@ e. nach dem Mitwirkungsgesetz vom 17. Dezember 1993;
 f. aus Zusatzversicherungen zur sozialen Krankenversicherung nach dem Bundesgesetz vom 18. März 1994 über die Krankenversicherung.
 (3)  Es findet keine Anwendung in Streitigkeiten vor der einzigen kantonalen Instanz nach den Artikeln 5 und 8 und vor dem Handelsgericht nach Artikel 6.
 ```
+
+## Nachtrag 5.6.2026 (Umbau: Streitsache «Scheidung»)
+
+## Art. 23 ZPO
+
+```
+Art. 23 Eherechtliche Gesuche und Klagen
+ (1)  Für eherechtliche Gesuche und Klagen sowie für Gesuche um Anordnung vorsorglicher Massnahmen ist das Gericht am Wohnsitz einer Partei zwingend zuständig.
+(2)  Für Gesuche der Aufsichtsbehörde in Betreibungssachen auf Anordnung der Gütertrennung ist das Gericht am Wohnsitz der Schuldnerin oder des Schuldners zwingend zuständig.
+```
+
+## Art. 274 ZPO
+
+```
+Art. 274 Einleitung
+ Das Scheidungsverfahren wird durch Einreichung eines gemeinsamen Scheidungsbegehrens oder einer Scheidungsklage eingeleitet.
+```
+

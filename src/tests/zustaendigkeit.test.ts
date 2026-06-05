@@ -136,6 +136,48 @@ describe('Zuständigkeit — Weichen (Art. 6/8 ZPO)', () => {
   });
 });
 
+describe('Zuständigkeit — Scheidung (Umbau 5.6.2026; Art. 23/198 lit. c/274 ZPO)', () => {
+  const scheidung = (): ZustaendigkeitInput => ({
+    streitsache: 'scheidung', vermoegensrechtlich: false, streitwertCHF: null,
+  });
+  it('eigenes Scheidungsverfahren; Schlichtung entfällt (Art. 198 lit. c)', () => {
+    const r = bestimmeZustaendigkeit(scheidung());
+    expect(r.verfahrensart).toBe('scheidungsverfahren');
+    expect(r.schlichtung.obligatorisch).toBe(false);
+    expect(r.schlichtung.entfaelltGrund).toContain('Art. 198 lit. c');
+  });
+  it('örtlich: Wohnsitz einer der Parteien, ZWINGEND (Art. 23 Abs. 1)', () => {
+    const r = bestimmeZustaendigkeit(scheidung());
+    expect(r.oertlich.gerichtsstand).toContain('einer der Parteien');
+    expect(r.oertlich.bindung).toBe('zwingend');
+    expect(r.oertlich.teilzwingend).toBe(false);
+    expect(r.oertlich.normen.some((n) => n.artikel === 'Art. 23 ZPO')).toBe(true);
+  });
+  it('Eingabe-Art: gemeinsames Begehren oder Klage (Art. 274)', () => {
+    expect(bestimmeZustaendigkeit(scheidung()).eingabeArt).toBe('scheidungsbegehren_oder_klage');
+  });
+});
+
+describe('Zuständigkeit — Eingabe-Art & Prüfreihenfolge (Umbau 5.6.2026)', () => {
+  it('obligatorische Schlichtung → Schlichtungsgesuch; entfallene → Klage direkt', () => {
+    expect(bestimmeZustaendigkeit(geld()).eingabeArt).toBe('schlichtungsgesuch');
+    expect(bestimmeZustaendigkeit(geld({ widerklageOderGerichtlicheFrist: true })).eingabeArt).toBe('klage_direkt');
+  });
+  it('Kompetenz-Flags nur bei tatsächlicher Schlichtung (Präzisierung)', () => {
+    const r = bestimmeZustaendigkeit(geld({ streitwertCHF: 1_500, widerklageOderGerichtlicheFrist: true }));
+    expect(r.entscheidkompetenz.entscheidAufAntrag).toBe(false);
+    expect(r.entscheidkompetenz.entscheidvorschlag).toBe(false);
+  });
+  it('Rechenweg prüft örtlich → sachlich → funktionell → Verfahrensart → Eingabe', () => {
+    const b = bestimmeZustaendigkeit(geld()).rechenweg.map((s) => s.beschreibung);
+    expect(b[0]).toMatch(/^1 · Örtliche Zuständigkeit/);
+    expect(b[1]).toMatch(/^2 · Sachliche Zuständigkeit/);
+    expect(b[2]).toMatch(/^3 · Funktionell/);
+    expect(b.some((x) => x.startsWith('4 · Verfahrensart'))).toBe(true);
+    expect(b[b.length - 1]).toMatch(/^5 · Einleitende Eingabe/);
+  });
+});
+
 describe('Zuständigkeit — Robustheit & Determinismus', () => {
   it('wirft, wenn vermögensrechtlich ohne Streitwert', () => {
     expect(() => bestimmeZustaendigkeit({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: null })).toThrow();

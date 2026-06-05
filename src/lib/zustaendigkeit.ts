@@ -39,9 +39,16 @@ export const ZPO_SCHWELLEN = {
   DIREKTKLAGE_MIN: 100_000,   // Art. 8 Abs. 1 ZPO
 } as const;
 
-export type Streitsache = 'geldforderung' | 'miete_wohn_geschaeft' | 'arbeit';
-export type Verfahrensart = 'vereinfacht' | 'ordentlich';
+// Rechtsweg-Rubriken (oberste Ebene der UI, Entscheid David 5.6.2026):
+// Zivil ist implementiert; SchKG/Straf/Verwaltung sind eigene künftige
+// Engines (§4 — KEINE Fusion in diese ZPO-Engine).
+export type Rechtsweg = 'zivil' | 'schkg' | 'straf' | 'verwaltung';
+
+export type Streitsache = 'geldforderung' | 'miete_wohn_geschaeft' | 'arbeit' | 'scheidung';
+export type Verfahrensart = 'vereinfacht' | 'ordentlich' | 'scheidungsverfahren';
 export type SchlichtungsbehoerdeTyp = 'ordentlich' | 'paritaetisch_miete' | 'paritaetisch_glg';
+/** Art der einleitenden Eingabe — steuert den Vorlagen-Verweis (Auftrag §8). */
+export type EingabeArt = 'schlichtungsgesuch' | 'klage_direkt' | 'scheidungsbegehren_oder_klage';
 
 // Miete-Unterfall steuert die «Schutzmaterie» (Hinterlegung, Missbrauchs-/
 // Kündigungsschutz, Erstreckung) → vereinfachtes Verfahren & Entscheidvorschlag
@@ -78,7 +85,8 @@ export interface ZustaendigkeitErgebnis {
     behoerdeTyp: SchlichtungsbehoerdeTyp;
   };
   entscheidkompetenz: { entscheidAufAntrag: boolean; entscheidvorschlag: boolean };
-  oertlich: { gerichtsstand: string; teilzwingend: boolean; normen: Normverweis[] };
+  oertlich: { gerichtsstand: string; bindung: 'dispositiv' | 'teilzwingend' | 'zwingend'; teilzwingend: boolean; normen: Normverweis[] };
+  eingabeArt: EingabeArt;
   rechenweg: Rechenschritt[];
   warnungen: string[];
   weichen: string[];
@@ -99,6 +107,8 @@ const N_33: Normverweis = { artikel: 'Art. 33 ZPO', bemerkung: 'Miete/Pacht unbe
 const N_34: Normverweis = { artikel: 'Art. 34 ZPO', bemerkung: 'Arbeitsrecht — Beklagtensitz oder Arbeitsort' };
 const N_35: Normverweis = { artikel: 'Art. 35 ZPO', bemerkung: 'Teilzwingend: kein Verzicht der geschützten Partei' };
 const N_4: Normverweis = { artikel: 'Art. 4 ZPO', bemerkung: 'Sachliche/funktionelle Zuständigkeit nach kantonalem Recht' };
+const N_23: Normverweis = { artikel: 'Art. 23 ZPO', bemerkung: 'Eherechtliche Gesuche/Klagen — Wohnsitz einer Partei, zwingend' };
+const N_274: Normverweis = { artikel: 'Art. 274 ZPO', bemerkung: 'Einleitung: gemeinsames Scheidungsbegehren oder Scheidungsklage' };
 
 const ungueltig = (sw: number | null) => sw !== null && (!Number.isFinite(sw) || sw < 0);
 
@@ -113,6 +123,7 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   // Massgeblicher Streitwert: nur bei vermögensrechtlichen Streitigkeiten.
   const sw = input.vermoegensrechtlich ? input.streitwertCHF : null;
   const istMiete = input.streitsache === 'miete_wohn_geschaeft';
+  const istScheidung = input.streitsache === 'scheidung';
   const mieteSchutz = istMiete && MIETE_SCHUTZ.has(input.mieteUnterfall ?? 'sonstige');
   const streitwertunabhaengigVereinfacht = mieteSchutz || !!input.glgBetroffen;
 
@@ -120,106 +131,48 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   const warnungen: string[] = [];
   const weichen: string[] = [];
 
-  // ── A · Verfahrensart (Art. 243 ZPO) ──────────────────────────────────────
-  let verfahrensart: Verfahrensart;
-  let vGrund: string;
-  if (streitwertunabhaengigVereinfacht) {
-    verfahrensart = 'vereinfacht';
-    vGrund = mieteSchutz
-      ? 'Miete-Schutzmaterie (Hinterlegung/Missbrauch/Kündigungsschutz/Erstreckung) → vereinfacht ohne Rücksicht auf den Streitwert (Art. 243 Abs. 2 lit. c ZPO)'
-      : 'Streitigkeit nach dem Gleichstellungsgesetz → vereinfacht ohne Rücksicht auf den Streitwert (Art. 243 Abs. 2 lit. a ZPO)';
-  } else if (sw !== null && sw <= ZPO_SCHWELLEN.VEREINFACHT) {
-    verfahrensart = 'vereinfacht';
-    vGrund = `Vermögensrechtlich bis CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} → vereinfachtes Verfahren (Art. 243 Abs. 1 ZPO)`;
-  } else {
-    verfahrensart = 'ordentlich';
-    vGrund = sw === null
-      ? 'Nicht vermögensrechtlich und keine Sondermaterie → ordentliches Verfahren'
-      : `Vermögensrechtlich über CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} → ordentliches Verfahren`;
-  }
-  rechenweg.push({ beschreibung: `Verfahrensart: ${vGrund}`, zwischenergebnis: verfahrensart === 'vereinfacht' ? 'vereinfachtes Verfahren' : 'ordentliches Verfahren', normen: [N_243] });
+  // Prüfreihenfolge (Entscheid David 5.6.2026, klassische Methodik):
+  // 1 · ÖRTLICH → 2 · SACHLICH → 3 · FUNKTIONELL (Schlichtung/Behörde/
+  // Kompetenz) → 4 · Verfahrensart → 5 · einleitende Eingabe.
 
-  // ── B · Schlichtungspflicht (Art. 197–199 ZPO) ────────────────────────────
-  let entfaelltGrund: string | null = null;
-  if (input.widerklageOderGerichtlicheFrist) {
-    entfaelltGrund = 'Widerklage/Hauptintervention bzw. gerichtlich gesetzte Klagefrist (Art. 198 lit. g/h ZPO)';
-  }
-  const obligatorisch = entfaelltGrund === null;
-  const verzichtGemeinsam = sw !== null && sw >= ZPO_SCHWELLEN.VERZICHT_GEMEINSAM;
-  const verzichtEinseitig = !!input.beklagteAuslandOderUnbekannt || !!input.glgBetroffen;
-  rechenweg.push({
-    beschreibung: obligatorisch
-      ? 'Schlichtungsversuch geht dem Entscheidverfahren grundsätzlich voraus'
-      : `Schlichtung entfällt: ${entfaelltGrund}`,
-    zwischenergebnis: obligatorisch ? 'Schlichtung obligatorisch' : 'keine Schlichtung',
-    normen: obligatorisch ? [N_197] : [N_198],
-  });
-  if (obligatorisch && verzichtGemeinsam) {
-    weichen.push(`Streitwert ≥ CHF ${ZPO_SCHWELLEN.VERZICHT_GEMEINSAM.toLocaleString('de-CH')}: Die Parteien können gemeinsam auf das Schlichtungsverfahren verzichten (Art. 199 Abs. 1 ZPO).`);
-  }
-  if (obligatorisch && verzichtEinseitig) {
-    weichen.push('Einseitiger Verzicht der klagenden Partei möglich (beklagte Partei im Ausland/unbekannt oder Streit nach Gleichstellungsgesetz, Art. 199 Abs. 2 ZPO).');
-  }
-
-  // ── C · Schlichtungsbehörde-Typ (Art. 200 ZPO) ────────────────────────────
-  const behoerdeTyp: SchlichtungsbehoerdeTyp = istMiete
-    ? 'paritaetisch_miete'
-    : input.glgBetroffen ? 'paritaetisch_glg' : 'ordentlich';
-  if (obligatorisch) {
-    rechenweg.push({
-      beschreibung: behoerdeTyp === 'paritaetisch_miete'
-        ? 'Miete/Pacht von Wohn-/Geschäftsräumen → paritätische Schlichtungsbehörde'
-        : behoerdeTyp === 'paritaetisch_glg'
-          ? 'Streit nach Gleichstellungsgesetz → paritätische Schlichtungsbehörde'
-          : 'Ordentliche Schlichtungsbehörde (Friedensrichteramt/Vermittleramt — kantonale Bezeichnung)',
-      zwischenergebnis: behoerdeTyp === 'ordentlich' ? 'ordentliche Schlichtungsbehörde' : 'paritätische Schlichtungsbehörde',
-      normen: behoerdeTyp === 'ordentlich' ? [N_4] : [N_200],
-    });
-  }
-
-  // ── D · Entscheidkompetenz der Schlichtungsbehörde (Art. 210/212 ZPO) ──────
-  const entscheidAufAntrag = sw !== null && sw <= ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG;
-  const entscheidvorschlag = !!input.glgBetroffen || mieteSchutz || (sw !== null && sw <= ZPO_SCHWELLEN.ENTSCHEIDVORSCHLAG);
-  if (obligatorisch && (entscheidAufAntrag || entscheidvorschlag)) {
-    const teile: string[] = [];
-    if (entscheidAufAntrag) teile.push(`Entscheid auf Antrag der klagenden Partei (bis CHF ${ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG.toLocaleString('de-CH')}, Art. 212 ZPO)`);
-    if (entscheidvorschlag) teile.push(`Entscheidvorschlag der Behörde möglich (Art. 210 ZPO)`);
-    rechenweg.push({
-      beschreibung: `Kompetenz der Schlichtungsbehörde: ${teile.join('; ')}`,
-      zwischenergebnis: entscheidAufAntrag ? 'Entscheid möglich' : 'Entscheidvorschlag möglich',
-      normen: [entscheidAufAntrag ? N_212 : N_210],
-    });
-  }
-
-  // ── E · Örtliche Zuständigkeit (Art. 10/32/33/34/35 ZPO) ──────────────────
+  // ── 1 · Örtliche Zuständigkeit (Art. 10/23/32/33/34/35 ZPO) ───────────────
   let gerichtsstand: string;
-  let teilzwingend = false;
+  let bindung: 'dispositiv' | 'teilzwingend' | 'zwingend' = 'dispositiv';
   let oertlichNormen: Normverweis[];
-  if (istMiete) {
+  if (istScheidung) {
+    gerichtsstand = 'Gericht am Wohnsitz einer der Parteien';
+    bindung = 'zwingend'; // Art. 23 Abs. 1 ZPO: «zwingend zuständig»
+    oertlichNormen = [N_23];
+  } else if (istMiete) {
     gerichtsstand = 'Gericht am Ort der gelegenen Sache';
-    teilzwingend = true; // Art. 35 Abs. 1 lit. b (Wohn-/Geschäftsräume)
+    bindung = 'teilzwingend'; // Art. 35 Abs. 1 lit. b (Wohn-/Geschäftsräume)
     oertlichNormen = [N_33, N_35];
   } else if (input.streitsache === 'arbeit') {
     gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei oder am gewöhnlichen Arbeitsort (Wahl der klagenden Partei)';
-    teilzwingend = true; // Art. 35 Abs. 1 lit. d
+    bindung = 'teilzwingend'; // Art. 35 Abs. 1 lit. d
     oertlichNormen = [N_34, N_35];
   } else if (input.konsumentenvertrag) {
     gerichtsstand = input.klaegeristGeschuetzt
       ? 'Gericht am Wohnsitz/Sitz einer der Parteien (Wahl der klagenden Konsumentin/des Konsumenten)'
       : 'Gericht am Wohnsitz der beklagten Konsumentin/des Konsumenten';
-    teilzwingend = true; // Art. 35 Abs. 1 lit. a
+    bindung = 'teilzwingend'; // Art. 35 Abs. 1 lit. a
     oertlichNormen = [N_32, N_35];
   } else {
-    // dispositiv (teilzwingend bleibt false): Gerichtsstandsvereinbarung möglich
+    // dispositiv: Gerichtsstandsvereinbarung möglich
     gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei';
     oertlichNormen = [N_10];
   }
-  rechenweg.push({ beschreibung: `Örtliche Zuständigkeit: ${gerichtsstand}${teilzwingend ? ' (teilzwingend — Verzicht der geschützten Partei zum Voraus unzulässig)' : ' (dispositiv)'}`, zwischenergebnis: gerichtsstand, normen: oertlichNormen });
-  if (teilzwingend) {
+  const bindungText = bindung === 'zwingend'
+    ? ' (zwingend — weder Vereinbarung noch Einlassung möglich, Art. 9 ZPO)'
+    : bindung === 'teilzwingend'
+      ? ' (teilzwingend — Verzicht der geschützten Partei zum Voraus unzulässig)'
+      : ' (dispositiv)';
+  rechenweg.push({ beschreibung: `1 · Örtliche Zuständigkeit: ${gerichtsstand}${bindungText}`, zwischenergebnis: gerichtsstand, normen: oertlichNormen });
+  if (bindung === 'teilzwingend') {
     weichen.push('Gerichtsstandsvereinbarung nur NACH Entstehung der Streitigkeit gültig — die geschützte Partei kann zum Voraus nicht verzichten (Art. 35 ZPO).');
   }
 
-  // ── F · Sachlich/funktionell (Weichen — Kantonsschicht/ZPO Art. 4/6/8) ─────
+  // ── 2 · Sachliche Zuständigkeit (Art. 4/5/6/8 ZPO — Kantonsschicht) ────────
   // Handelsgericht: nur Geldforderung (Miete & Arbeit sind nach Art. 6 Abs. 2
   // lit. d ausgeschlossen); nur in Kantonen mit Handelsgericht.
   let hgWeiche = false;
@@ -238,10 +191,96 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
     direktklageWeiche = true;
     weichen.push(`Direkte Klage ans obere Gericht möglich (Streitwert ≥ CHF ${ZPO_SCHWELLEN.DIREKTKLAGE_MIN.toLocaleString('de-CH')}, Zustimmung der beklagten Partei, Art. 8 ZPO). Dann Schlichtung entfällt (Art. 199 Abs. 3 ZPO).`);
   }
+  rechenweg.push({
+    beschreibung: `2 · Sachliche Zuständigkeit: ordentliches erstinstanzliches Zivilgericht; Organisation und Streitwertgrenzen regelt das kantonale Recht${hgWeiche ? ' — Handelsgerichts-Weiche offen (Art. 6 ZPO)' : ''}${direktklageWeiche ? ' — Direktklage-Weiche offen (Art. 8 ZPO)' : ''}`,
+    zwischenergebnis: hgWeiche || direktklageWeiche ? 'ordentliches Gericht (Weichen offen)' : 'ordentliches Gericht',
+    normen: [N_4],
+  });
+
+  // ── 3 · Funktionell: Schlichtungspflicht (Art. 197–199 ZPO) ────────────────
+  let entfaelltGrund: string | null = null;
+  if (istScheidung) {
+    entfaelltGrund = 'Scheidungsverfahren (Art. 198 lit. c ZPO)';
+  } else if (input.widerklageOderGerichtlicheFrist) {
+    entfaelltGrund = 'Widerklage/Hauptintervention bzw. gerichtlich gesetzte Klagefrist (Art. 198 lit. g/h ZPO)';
+  }
+  const obligatorisch = entfaelltGrund === null;
+  // Verzichts-Flags nur, wo überhaupt geschlichtet würde (Präzisierung 5.6.2026).
+  const verzichtGemeinsam = obligatorisch && sw !== null && sw >= ZPO_SCHWELLEN.VERZICHT_GEMEINSAM;
+  const verzichtEinseitig = obligatorisch && (!!input.beklagteAuslandOderUnbekannt || !!input.glgBetroffen);
+  rechenweg.push({
+    beschreibung: obligatorisch
+      ? '3 · Funktionell: Schlichtungsversuch geht dem Entscheidverfahren grundsätzlich voraus'
+      : `3 · Funktionell: Schlichtung entfällt — ${entfaelltGrund}`,
+    zwischenergebnis: obligatorisch ? 'Schlichtung obligatorisch' : 'keine Schlichtung',
+    normen: obligatorisch ? [N_197] : [N_198],
+  });
+  if (verzichtGemeinsam) {
+    weichen.push(`Streitwert ≥ CHF ${ZPO_SCHWELLEN.VERZICHT_GEMEINSAM.toLocaleString('de-CH')}: Die Parteien können gemeinsam auf das Schlichtungsverfahren verzichten (Art. 199 Abs. 1 ZPO).`);
+  }
+  if (verzichtEinseitig) {
+    weichen.push('Einseitiger Verzicht der klagenden Partei möglich (beklagte Partei im Ausland/unbekannt oder Streit nach Gleichstellungsgesetz, Art. 199 Abs. 2 ZPO).');
+  }
+
+  // Schlichtungsbehörde-Typ (Art. 200 ZPO)
+  const behoerdeTyp: SchlichtungsbehoerdeTyp = istMiete
+    ? 'paritaetisch_miete'
+    : input.glgBetroffen ? 'paritaetisch_glg' : 'ordentlich';
+  if (obligatorisch) {
+    rechenweg.push({
+      beschreibung: behoerdeTyp === 'paritaetisch_miete'
+        ? 'Miete/Pacht von Wohn-/Geschäftsräumen → paritätische Schlichtungsbehörde'
+        : behoerdeTyp === 'paritaetisch_glg'
+          ? 'Streit nach Gleichstellungsgesetz → paritätische Schlichtungsbehörde'
+          : 'Ordentliche Schlichtungsbehörde (Friedensrichteramt/Vermittleramt — kantonale Bezeichnung)',
+      zwischenergebnis: behoerdeTyp === 'ordentlich' ? 'ordentliche Schlichtungsbehörde' : 'paritätische Schlichtungsbehörde',
+      normen: behoerdeTyp === 'ordentlich' ? [N_4] : [N_200],
+    });
+  }
+
+  // Entscheidkompetenz der Schlichtungsbehörde (Art. 210/212 ZPO) — nur
+  // sinnvoll, wenn überhaupt geschlichtet wird (Präzisierung 5.6.2026).
+  const entscheidAufAntrag = obligatorisch && sw !== null && sw <= ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG;
+  const entscheidvorschlag = obligatorisch && (!!input.glgBetroffen || mieteSchutz || (sw !== null && sw <= ZPO_SCHWELLEN.ENTSCHEIDVORSCHLAG));
+  if (entscheidAufAntrag || entscheidvorschlag) {
+    const teile: string[] = [];
+    if (entscheidAufAntrag) teile.push(`Entscheid auf Antrag der klagenden Partei (bis CHF ${ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG.toLocaleString('de-CH')}, Art. 212 ZPO)`);
+    if (entscheidvorschlag) teile.push(`Entscheidvorschlag der Behörde möglich (Art. 210 ZPO)`);
+    rechenweg.push({
+      beschreibung: `Kompetenz der Schlichtungsbehörde: ${teile.join('; ')}`,
+      zwischenergebnis: entscheidAufAntrag ? 'Entscheid möglich' : 'Entscheidvorschlag möglich',
+      normen: [entscheidAufAntrag ? N_212 : N_210],
+    });
+  }
+
+  // ── 4 · Verfahrensart (Art. 243 ZPO; Scheidung: Art. 274 ff. ZPO) ──────────
+  let verfahrensart: Verfahrensart;
+  let vGrund: string;
+  if (istScheidung) {
+    verfahrensart = 'scheidungsverfahren';
+    vGrund = 'Scheidung → eigenes Scheidungsverfahren (Einleitung durch gemeinsames Begehren oder Klage, Art. 274 ff. ZPO)';
+  } else if (streitwertunabhaengigVereinfacht) {
+    verfahrensart = 'vereinfacht';
+    vGrund = mieteSchutz
+      ? 'Miete-Schutzmaterie (Hinterlegung/Missbrauch/Kündigungsschutz/Erstreckung) → vereinfacht ohne Rücksicht auf den Streitwert (Art. 243 Abs. 2 lit. c ZPO)'
+      : 'Streitigkeit nach dem Gleichstellungsgesetz → vereinfacht ohne Rücksicht auf den Streitwert (Art. 243 Abs. 2 lit. a ZPO)';
+  } else if (sw !== null && sw <= ZPO_SCHWELLEN.VEREINFACHT) {
+    verfahrensart = 'vereinfacht';
+    vGrund = `Vermögensrechtlich bis CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} → vereinfachtes Verfahren (Art. 243 Abs. 1 ZPO)`;
+  } else {
+    verfahrensart = 'ordentlich';
+    vGrund = sw === null
+      ? 'Nicht vermögensrechtlich und keine Sondermaterie → ordentliches Verfahren'
+      : `Vermögensrechtlich über CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} → ordentliches Verfahren`;
+  }
+  rechenweg.push({
+    beschreibung: `4 · Verfahrensart: ${vGrund}`,
+    zwischenergebnis: verfahrensart === 'vereinfacht' ? 'vereinfachtes Verfahren'
+      : verfahrensart === 'scheidungsverfahren' ? 'Scheidungsverfahren (Art. 274 ff. ZPO)' : 'ordentliches Verfahren',
+    normen: istScheidung ? [N_274] : [N_243],
+  });
   // Art. 243 Abs. 3: Das vereinfachte Verfahren findet KEINE Anwendung vor der
   // einzigen kantonalen Instanz (Art. 5/8) und vor dem Handelsgericht (Art. 6).
-  // Trifft eine dieser Weichen mit «vereinfacht» zusammen, gilt bei deren Wahl
-  // das ordentliche Verfahren — offenlegen statt verschweigen (§8).
   if (verfahrensart === 'vereinfacht' && (hgWeiche || direktklageWeiche)) {
     warnungen.push('Wird das Handelsgericht bzw. die direkte Klage an das obere Gericht gewählt, findet das vereinfachte Verfahren dort KEINE Anwendung (Art. 243 Abs. 3 ZPO) — es gilt das ordentliche Verfahren.');
   }
@@ -252,8 +291,23 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
     warnungen.push('Nicht vermögensrechtliche Streitigkeit: streitwertabhängige Schwellen (vereinfachtes Verfahren, Entscheid/Entscheidvorschlag, Verzicht) sind nicht anwendbar.');
   }
 
+  // ── 5 · Art der einleitenden Eingabe (→ Vorlagen-Verweis, Auftrag §8) ──────
+  const eingabeArt: EingabeArt = istScheidung
+    ? 'scheidungsbegehren_oder_klage'
+    : obligatorisch ? 'schlichtungsgesuch' : 'klage_direkt';
+  rechenweg.push({
+    beschreibung: eingabeArt === 'scheidungsbegehren_oder_klage'
+      ? '5 · Einleitende Eingabe: gemeinsames Scheidungsbegehren (bei Einigung) oder Scheidungsklage'
+      : eingabeArt === 'schlichtungsgesuch'
+        ? '5 · Einleitende Eingabe: Schlichtungsgesuch an die Schlichtungsbehörde (Art. 202 ZPO)'
+        : '5 · Einleitende Eingabe: Klage direkt beim Gericht (keine Schlichtung)',
+    zwischenergebnis: eingabeArt === 'scheidungsbegehren_oder_klage' ? 'Scheidungsbegehren / Scheidungsklage'
+      : eingabeArt === 'schlichtungsgesuch' ? 'Schlichtungsgesuch' : 'Klage',
+    normen: eingabeArt === 'scheidungsbegehren_oder_klage' ? [N_274] : eingabeArt === 'schlichtungsgesuch' ? [N_197] : [N_198],
+  });
+
   const normverweise: Normverweis[] = [
-    N_243, obligatorisch ? N_197 : N_198,
+    ...(istScheidung ? [N_274] : [N_243]), obligatorisch ? N_197 : N_198,
     ...(obligatorisch && (verzichtGemeinsam || verzichtEinseitig) ? [N_199] : []),
     ...(obligatorisch && behoerdeTyp !== 'ordentlich' ? [N_200] : []),
     ...oertlichNormen, N_4,
@@ -263,7 +317,8 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
     verfahrensart,
     schlichtung: { obligatorisch, entfaelltGrund, verzichtGemeinsam, verzichtEinseitig, behoerdeTyp },
     entscheidkompetenz: { entscheidAufAntrag, entscheidvorschlag },
-    oertlich: { gerichtsstand, teilzwingend, normen: oertlichNormen },
+    oertlich: { gerichtsstand, bindung, teilzwingend: bindung === 'teilzwingend', normen: oertlichNormen },
+    eingabeArt,
     rechenweg, warnungen, weichen, normverweise,
   };
 }
@@ -273,7 +328,8 @@ export function zustaendigkeitErgebnis(
   input: ZustaendigkeitInput,
 ): Berechnungsergebnis & { resultat: ZustaendigkeitErgebnis } {
   const r = bestimmeZustaendigkeit(input);
-  const verfahren = r.verfahrensart === 'vereinfacht' ? 'Vereinfachtes Verfahren' : 'Ordentliches Verfahren';
+  const verfahren = r.verfahrensart === 'vereinfacht' ? 'Vereinfachtes Verfahren'
+    : r.verfahrensart === 'scheidungsverfahren' ? 'Scheidungsverfahren' : 'Ordentliches Verfahren';
   const schlicht = r.schlichtung.obligatorisch
     ? (r.schlichtung.behoerdeTyp === 'paritaetisch_miete' ? 'Schlichtung: paritätische Behörde (Miete)'
       : r.schlichtung.behoerdeTyp === 'paritaetisch_glg' ? 'Schlichtung: paritätische Behörde (GlG)'
