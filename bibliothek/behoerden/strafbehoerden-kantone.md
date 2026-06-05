@@ -14,7 +14,314 @@ nur GE (LOJ Art. 76–82A/111), AI (EG-StPO Art. 5–8/15), Bund (StBOG 7–9,
 
 ## Teil A — ZH · BE · LU · UR · SZ · OW · NW · GL · ZG · FR · SO · BS · BL
 
-_(Bericht ausstehend.)_
+# Strafverfolgungsbehörden der Kantone ZH, BE, LU, UR, SZ, OW, NW, GL, ZG, FR, SO, BS, BL
+
+**Abrufdatum aller Quellen: 5.6.2026** · Nur amtliche Quellen (kantonale Portale/Staatskalender + Erlasse in geltender Fassung, via LexWork-/belex-API als PDF-Volltext extrahiert; Artikel-/§-Nummern verbatim aus den konsolidierten Texten, nicht aus dem Gedächtnis). Strafgerichte/ZMG/Jugendgericht: **siehe Gerichts-/GOG-Dossier** — hier nur Querverweis. Unsicherheiten ehrlich markiert.
+
+**Methodischer Befund (für die Engine-Logik):** Die Strafverfolgungsbehörden werden je nach Kanton in unterschiedlichen Erlassen konstituiert:
+- **im GOG/Justizgesetz selbst:** ZH (GOG), BE (GSOG), LU (JusG), UR (GOG), SZ (JG), OW (GOG, nur rudimentär), NW (GerG), ZG (GOG), FR (JG/LJ), SO (GO), BS (GOG)
+- **in einem separaten EG StPO:** GL (EG StPO/JStPO), BL (EG StPO; Jugendanwaltschaft separat)
+
+**Übertretungsstrafbehörden (Art. 17 StPO) — die grosse kantonale Differenz:**
+- **Eigenständige Übertretungsbehörden ausserhalb der StA:** ZH (Statthalterämter + Stadtrichterämter), FR (Oberamtspersonen/préfets), ZG (Übertretungsstrafbehörde der Gemeinde = Gemeinderat), SO (Friedensrichter + kant./kommunale Verwaltungsbehörden)
+- **Übertretungen innerhalb der Staatsanwaltschaft** (eigene Abteilung/Funktionäre, kein Statthalter): BE, LU, UR, SZ, OW, NW, GL, BS, BL
+
+---
+
+## ZH — Zürich
+
+**Struktur (Erwachsene):** Oberstaatsanwaltschaft → 5 regionale (Allgemeine) Staatsanwaltschaften + 3 Besondere/Kantonale StA (StA I Gewalt, StA II Schwerkriminalität/Cybercrime, StA III Wirtschaftsdelikte/Rechtshilfe) + Entlastungs-StA (ESTA). Jugend: Oberjugendanwaltschaft → 5 Jugendanwaltschaften.
+
+| Behörde | Adresse |
+|---|---|
+| Oberstaatsanwaltschaft | Güterstrasse 33, 8010 Zürich |
+| StA Zürich-Limmat / Zürich-Sihl | Stauffacherstrasse 55, 8004 Zürich |
+| StA Winterthur/Unterland | Hermann-Götz-Strasse 24, 8400 Winterthur |
+| StA See/Oberland | Weiherallee 15, 8610 Uster |
+| StA Limmattal/Albis | Bahnhofplatz 10, 8953 Dietikon |
+| StA I / II / III (kantonal) | Güterstrasse 33, 8010 Zürich |
+| ESTA | Gartenhofstrasse 17, 8004 Zürich |
+| Oberjugendanwaltschaft | Zürcherstrasse 15, 8400 Winterthur |
+| Jugendanwaltschaften (5: Zürich-Stadt, Winterthur/Unterland, See/Oberland [Uster, Weiherallee 15], Limmattal/Albis, …) | je Region; teils gleiche Standorte wie StA |
+| **Übertretung:** Statthalterämter (je Bezirk, 12) + Stadtrichterämter Zürich & Winterthur (bis Fr. 500) | über zh.ch/statthalteraemter-bezirksratskanzleien |
+
+**EG-StPO/Konstituierung — GOG (LS 211.1), 5. Teil «Strafverfolgungsbehörden»:**
+- **§ 86** Strafverfolgungsbehörden (Aufzählung: Polizei; Erwachsene = Statthalterämter/Gemeinden, Staatsanwaltschaften, Oberstaatsanwaltschaft; Jugendliche = Jugendanwaltschaften, Oberjugendanwaltschaft)
+- **§ 89** Übertretungsstrafbehörden = Statthalterämter (Abs. 2: Übertragung an Gemeinden möglich, Strafbefugnis max. Fr. 500); **§ 90** Überweisung; **§ 91** Rechtsmittel; **§ 92** Verwendung der Bussen
+- **§ 93** Organisation der Staatsanwaltschaften (a. Allgemeine, b. Besondere); **§ 94** ordentliche StA; **§ 95** ausserordentliche/stellvertretende; **§ 96** Leitende StA; **§ 104** Oberstaatsanwaltschaft (Bestand); **§ 106** Aufgaben Oberstaatsanwaltschaft
+- Jugend: **§ 108** Amtskreise Jugendanwaltschaften; **§ 112** Oberjugendanwaltschaft (Bestand); **§ 114** Aufgaben Oberjugendanwaltschaft
+- Quelle GOG-PDF: `betreibungsinspektorat-zh.ch/deu/documents/GOG.pdf` (LS 211.1, Fassung 111)
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (ZH § 29 ZMG am BG, § 46-47 am OGer; § 22 lit. b/§ 23 Jugendgericht).
+
+Quellen: zh.ch (StA-Standorte; Oberjugendanwaltschaft; Statthalterämter), GOG-Volltext. Abruf 5.6.2026.
+
+---
+
+## BE — Bern
+
+**Struktur:** Eine Staatsanwaltschaft mit Generalstaatsanwaltschaft an der Spitze; 2 kantonale StA (Wirtschaftsdelikte; besondere Aufgaben) + Jugendanwaltschaft (kantonal, mit 4 regionalen Dienststellen) + 4 regionale StA. **Übertretungen: durch die Staatsanwaltschaft via Strafbefehl — kein Statthalter** (Regierungsstatthalter haben in BE keine Strafkompetenz).
+
+| Behörde | Adresse |
+|---|---|
+| Generalstaatsanwaltschaft | Maulbeerstrasse 10, 3011 Bern |
+| Kant. StA Wirtschaftsdelikte | Speichergasse 12, 3011 Bern |
+| Kant. StA besondere Aufgaben | Hodlerstrasse 7 (Amthaus), 3011 Bern |
+| Reg. StA Bern-Mittelland | Hodlerstrasse 7, 3011 Bern |
+| Reg. StA Berner Jura-Seeland | Ländtestrasse 20, PF 1180, 2501 Biel/Bienne |
+| Reg. StA Emmental-Oberaargau | Dunantstrasse 11, 3400 Burgdorf |
+| Reg. StA Oberland | Scheibenstrasse 11, 3600 Thun |
+| Jugendanwaltschaft Leitung / DS Bern-Mittelland | Hodlerstrasse 7, 3011 Bern |
+| JugA DS Berner Jura-Seeland | Rüschlistrasse 16, PF 652, 2502 Biel/Bienne (Aussenstelle Berner Jura: Rue de l'Union 13, 2502 Bienne) |
+| JugA DS Emmental-Oberaargau | Dunantstrasse 3, 3400 Burgdorf |
+| JugA DS Oberland | Schlossberg 20, 3600 Thun |
+
+**EG-StPO/Konstituierung — GSOG (BSG 161.1), Teil Staatsanwaltschaft:**
+- **Art. 89** Zusammensetzung; **Art. 90** Generalstaatsanwaltschaft; **Art. 91** Kantonale Staatsanwaltschaften (a. Wirtschaftsdelikte, b. besondere Aufgaben, c. Jugendanwaltschaft mit Dienststellen in den 4 Gerichtsregionen); **Art. 92** Regionale Staatsanwaltschaften (4: Berner Jura-Seeland, Emmental-Oberaargau, Bern-Mittelland, Oberland); **Art. 93-94** Jugendanwaltschaft (Leitung der regionalen Dienststellen)
+- **EG ZSJ (BSG 271.1):** materielle Zuständigkeit; **Art. 59** Strafbefehlsverfahren (Erlass durch StA — auch für Übertretungen). Kein eigener Übertretungsstrafbehörden-Artikel.
+
+⚠ **Moutier-Wechsel zum Kanton Jura** (in Art. 91/92 GSOG bereits berücksichtigt: Aussenstelle Berner Jura ggf. übergangsweise im Verwaltungskreis Biel/Bienne).
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (BE: Art. 59-62 ZMG, Art. 63-66 Wirtschaftsstrafgericht, Art. 67-68 Jugendgericht).
+
+Quellen: staw.justice.be.ch (regionale StA, Jugendanwaltschaft, GenStA-Seiten), belex.sites.be.ch (GSOG v3367, EG ZSJ v3369, Fassung Stand 1.5.2026). Abruf 5.6.2026.
+
+---
+
+## LU — Luzern
+
+**Struktur:** Oberstaatsanwaltschaft + Abteilung Zentrale Dienste (mit Übertretungsstrafrichterinnen/-richtern) + 6 untersuchungsführende Abteilungen (1 Kriens, 2 Emmen, 3 Sursee = regional; 4 Sonderdelikte, 5 Wirtschaftsdelikte, Jugendanwaltschaft = kantonal). **Übertretungen: Übertretungsstrafrichter der StA (Zentrale Dienste) — kein Statthalter.**
+
+| Behörde | Adresse |
+|---|---|
+| Oberstaatsanwaltschaft / Zentrale Dienste + Übertretungsstrafrichter | Zentralstrasse 28, Postfach, 6002 Luzern |
+| StA 1 Luzern | Eichwilstrasse 2, 6010 Kriens |
+| StA 2 Emmen | Rüeggisingerstrasse 29, 6020 Emmenbrücke |
+| StA 3 Sursee | Centralstrasse 35, Postfach, 6210 Sursee |
+| StA 4 Sonder-/Spezialdelikte | Eichwilstrasse 2, 6010 Kriens |
+| StA 5 Wirtschaftsdelikte | Obernauerstrasse 16, Postfach, 6010 Kriens |
+| Jugendanwaltschaft | Hirschengraben 11, 6002/6003 Luzern |
+
+**EG-StPO/Konstituierung — Justizgesetz (JusG, SRL 260):**
+- **§ 63** Stellung; **§ 64** Gliederung (Abteilungen; Jugendanwaltschaft kantonal); **§ 65** Leitung der Staatsanwaltschaft (Oberstaatsanwalt; Abs. 2 lit. d wählt die Übertretungsstrafrichterinnen/-richter); **§ 68** Staatsanwälte; **§ 69** Leitende StA; **§ 71** Jugendanwälte
+- **§ 92** Übertretungsstrafverfahren (Übertretungsstrafrichter der StA verfolgen/beurteilen nach Art. 357 StPO die vom Oberstaatsanwalt bezeichneten Übertretungen)
+- Detail-Organisation: **Verordnung über die Staatsanwaltschaft (SRL 275)**.
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (LU § 33 Kriminalgericht, § 25 Jugendgericht; ZMG am Kantonsgericht).
+
+Quellen: staatsanwaltschaft.lu.ch (Organisation), ssk-cmp.ch (Adressen), srl.lu.ch (JusG v4662). Abruf 5.6.2026.
+
+---
+
+## UR — Uri
+
+**Struktur:** Eine zentrale Staatsanwaltschaft (Oberstaatsanwalt + Stellvertretung + Staatsanwälte + Untersuchungs-Sachbearbeiter/Assistenzstaatsanwälte) und eine Jugendanwaltschaft (Jugendanwalt + Stellvertretung). **Übertretungen: durch die Untersuchungs-Sachbearbeiter der StA (Art. 54d GOG) — kein Statthalter.**
+
+| Behörde | Adresse |
+|---|---|
+| Staatsanwaltschaft | Bahnhofstrasse 1, 6460 Altdorf |
+| Jugendanwaltschaft | Schmiedgasse 18, 6460 Altdorf |
+
+**EG-StPO/Konstituierung — GOG (RB 2.3221), Abschnitt «3a Staatsanwaltschaft und Jugendanwaltschaft»:**
+- **Art. 54a** Wahl; **Art. 54b** Vertretung; **Art. 54c** Organisation (Grundsatz); **Art. 54d** Organisation: Untersuchungs-Sachbearbeiter und Assistenzstaatsanwälte (Abs. 2: eigenverantwortlich zuständig für Verfolgung/Beurteilung von Übertretungen) — Staatsanwaltschaft
+- **Art. 54f ff.** Jugendanwaltschaft (Wahl durch Landrat)
+- ⚠ Hinweis: Eine vorläufige Web-Antwort übertrug fälschlich das ZH-Statthalter-Modell auf UR; **der amtliche UR-GOG-Text bestätigt: keine Statthalter, Übertretungen bei der StA.** UR verfügt zudem über die StPO/JStPO-Direktanwendung (kein separates ausführliches EG StPO mit eigener Behördenkonstituierung).
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (UR: Landgerichtspräsidium als ZMG Art. 19e; Jugendgericht Art. 47-54).
+
+Quellen: ur.ch/aemter/1493 (StA), ur.ch/aemter/1496 (JugA), rechtsbuch.ur.ch (GOG v800). Abruf 5.6.2026.
+
+---
+
+## SZ — Schwyz
+
+**Struktur:** Eine Staatsanwaltschaft (Oberstaatsanwalt + Stv. + leitende StA + leitender Jugendanwalt + StA/Jugendanwälte + Assistenzstaatsanwälte + Untersuchungssekretäre), gegliedert in 5 Abteilungen + Zentraldienst; mind. je eine Abteilung im inneren und äusseren Kantonsteil; **Jugendanwaltschaft in die StA integriert. Übertretungen: durch Assistenzstaatsanwälte der StA (§ 57a JG) — kein Statthalter.**
+
+| Behörde | Adresse |
+|---|---|
+| Staatsanwaltschaft (Oberstaatsanwaltschaft) | Archivgasse 1, 6430 Schwyz |
+| Jugendanwaltschaft (Abt. Jugendstrafverfahren) | Archivgasse 1, 6430 Schwyz |
+| weitere Abteilungs-Standorte | u. a. Schmiedgasse 21 / Bahnhofstrasse 4 (genaue Zuordnung amtlich nicht voll publiziert — **offen**) |
+
+**EG-StPO/Konstituierung — Justizgesetz (JG, SRSZ 231.110):**
+- **§ 5** Strafverfolgungsbehörde = Staatsanwaltschaft; **§ 47** Zusammensetzung und Organisation (inkl. leitender Jugendanwalt; Regierungsrat legt Abteilungen fest); **§ 48** Wahl/Anstellung; **§ 49** Oberstaatsanwalt (Stellung); **§ 50** weitere Verfügungen; **§ 54** Leitende StA und leitender Jugendanwalt (führen je eine Abteilung); **§ 57a** Assistenzstaatsanwälte (Verfahren wegen Übertretungen)
+- Detail-Organisation: **VOSta (SRSZ 231.111)**, gestützt auf §§ 47 und 59 JG.
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (SZ: Straf-, Jugend- und Zwangsmassnahmengericht, § 18/§ 22/§ 24 JG).
+
+Quellen: sz.ch (StA-Seite; Portal teils 403 → über sz.ch/public/upload PDF des JG verifiziert), JG-PDF `sz.ch/public/upload/assets/33069/231_110.pdf`. Abruf 5.6.2026.
+
+---
+
+## OW — Obwalden
+
+**Struktur:** Eine Staatsanwaltschaft mit 3 Bereichen (Allgemeine StA; Jugendanwaltschaft; Wirtschaftsdelikte); Oberstaatsanwalt = zugleich Oberjugendanwalt. **Übertretungen: StA erlässt Strafbefehle für Übertretungen/leichtere Delikte — kein Statthalter.**
+
+| Behörde | Adresse |
+|---|---|
+| Staatsanwaltschaft (inkl. integrierte Jugendanwaltschaft) | Enetriederstrasse 1, 6060 Sarnen |
+
+**EG-StPO/Konstituierung — GOG (GDB 134.1):**
+- **Art. 8** Staatsanwaltschaft (Kantonsrat regelt Wählbarkeit für Oberstaatsanwalt, Staatsanwälte, Jugendanwalt + Stellvertretung); Jugendanwaltschaft als Teil der StA. Detail-Wählbarkeit: **Verordnung GDB 134.13**.
+- ⚠ **Kein separates EG StPO in OW gefunden** (Probe der GDB-Systematik 134.x ergab kein eigenständiges EG StPO; massgeblich sind GOG + StPO/JStPO direkt + Regierungsrats-Verordnung). Die Beurteilung von Übertretungen durch Gerichte ist im GOG Art. 49 (Kantonsgerichtspräsidium) geregelt — **Gerichtsseite, siehe GOG-Dossier.**
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (OW: Kantonsgericht als ZMG Art. 48, Jugendgerichtspräsidium Art. 57b).
+
+Quellen: ow.ch/staatsanwaltschaft, de.wikipedia Justiz OW (Sekundärquelle zur Bestätigung Übertretungsmodell), gdb.ow.ch (GOG v1792). **Unsicherheit:** OW-Portal teilweise schwer maschinell lesbar; Adresse über Portal-Direktabruf bestätigt.
+
+---
+
+## NW — Nidwalden
+
+**Struktur:** Eine Staatsanwaltschaft, gegliedert in 3 Abteilungen: Abt. I Allgemeine Strafsachen, Abt. II Wirtschaftsdelikte (zugleich für OW und UR tätig nach interkant. Vereinbarung), Abt. III Jugendanwaltschaft. Oberstaatsanwalt leitet die StA und ist Oberjugendanwalt. **Übertretungen: durch die StA — kein Statthalter.**
+
+| Behörde | Adresse |
+|---|---|
+| Staatsanwaltschaft (inkl. Abt. III Jugendanwaltschaft) | Kreuzstrasse 2, Postfach 1242, 6371 Stans |
+
+**EG-StPO/Konstituierung — Gerichtsgesetz (GerG, NG 261.1), Abschnitt 4.2:**
+- **Art. 43** Strafverfolgungsbehörden (Kantonspolizei; Spezialbehörden; Staatsanwaltschaft); **Art. 44** Bestand (eine StA, Jugendanwaltschaft eingegliedert; Gliederung in Abteilungen möglich); **Art. 45** Wahl; **Art. 46** Leitung der Staatsanwaltschaft (Oberstaatsanwalt = Oberjugendanwalt); **Art. 47** Anstellung; **Art. 48** Verfahren gegen Erwachsene; **Art. 49** Verfahren gegen Jugendliche (Jugendanwaltschaft); **Art. 51** Aufsicht über Strafuntersuchungen
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (NW: Kantonsgericht als ZMG Art. 14, Jugendgericht Art. 16).
+
+Quellen: nw.ch/staatsanwaltschaft/310 (Struktur/Adresse), gesetze.nw.ch (GerG v1467, Stand 1.2.2026). Abruf 5.6.2026.
+
+---
+
+## GL — Glarus
+
+**Struktur:** Kombinierte **Staats- und Jugendanwaltschaft** (Erster Staatsanwalt führt beide; StA/Jugendanwälte können in beiden Funktionen eingesetzt werden), gegliedert in Abteilungen — u. a. **Abteilung Verkehr und Übertretungen** + Fachstelle Administrativmassnahmen + Kanzlei. **Übertretungen: durch die Staats-/Jugendanwaltschaft (Abt. Verkehr und Übertretungen) — kein Statthalter.**
+
+| Behörde | Adresse |
+|---|---|
+| Staats- und Jugendanwaltschaft (alle Abteilungen) | Postgasse 29, 8750 Glarus |
+
+**EG-StPO/Konstituierung — Einführungsgesetz zur Schweizerischen StPO und JStPO (EG StPO/JStPO, GS III F/1):**
+- **Art. 3** Strafverfolgungsbehörden (a. Kantonspolizei; b. Staats- und Jugendanwaltschaft); **Art. 9** Stellung; **Art. 10** Wahl (durch Landrat; Doppelfunktion StA/Jugendanwalt möglich); **Art. 11** Erster Staatsanwalt (führt die Staats- und Jugendanwaltschaft); **Art. 12** Staatsanwälte
+- Detail: **Verordnung über Geschäftsführung und Organisation der Staats- und Jugendanwaltschaft (GS III F/2).**
+- ⚠ Wichtig: In GL konstituiert **nicht das GOG** die StA (das GOG/GS III A/2 betrifft nur die Gerichte — 0 StA-Nennungen), sondern das EG StPO/JStPO GS III F/1.
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (GL: Kantonsgericht 1. Instanz Straf, Art. 12 f. GOG).
+
+Quellen: gl.ch/.../staats-und-jugendanwaltschaft, gesetze.gl.ch (EG StPO/JStPO v2354). Abruf 5.6.2026.
+
+---
+
+## ZG — Zug
+
+**Struktur:** Eine Staatsanwaltschaft (Leitende Oberstaatsanwältin/-anwalt + Oberstaatsanwälte + Leitende StA + StA + Jugendanwälte + Untersuchungsbeamte), gegliedert in Abteilungen, inkl. **IV. Abteilung Jugendstrafverfahren** (Jugendanwaltschaft integriert). **Übertretungen: zweispurig — (a) StA via Untersuchungsbeamte; (b) Übertretungsstrafbehörde der Gemeinde (Gemeinderat) für gemeindliche Tatbestände/Fahr-/Parkierverbote.**
+
+| Behörde | Adresse |
+|---|---|
+| Staatsanwaltschaft (inkl. IV. Abt. Jugendstrafverfahren) | An der Aa 4, 6300 Zug |
+| Übertretungsstrafbehörde der Gemeinde | jeweiliger Gemeinderat (kein zentraler Standort) |
+
+**EG-StPO/Konstituierung — GOG (BGS 161.1), Abschnitt 2.3 «Strafverfolgungsbehörden»:**
+- 2.3.1 Polizei; 2.3.2 Staatsanwaltschaft: **§ 45** Organisation (StA inkl. Jugendanwälte + Untersuchungsbeamte; in Abteilungen gegliedert); **§ 46** Leitende Oberstaatsanwältin/-anwalt (Stellung/Leitung); 2.3.3 **§ 53** Übertretungsstrafbehörde der Gemeinde (Gemeinderat zuständig für gemeindliche Übertretungstatbestände + Fahr-/Parkierverbote auf privatem Grund)
+- Detail-Organisation: **Verordnung über die Staatsanwaltschaft (VO STA, BGS 161.3).**
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (ZG: Strafgericht § 30-34, ZMG eigenständig § 35a/35b, Jugendgericht § 34).
+
+Quellen: zg.ch/.../staatsanwaltschaft, staka.zug.ch, bgs.zg.ch (GOG v2739, Stand 17.10.2025). Abruf 5.6.2026.
+
+---
+
+## FR — Freiburg (zweisprachig)
+
+**Struktur:** Ministère public / Staatsanwaltschaft mit Generalstaatsanwalt (Procureur général) + Stellvertretung + Staatsanwälte (spezialisiert u. a. sexuelle Integrität, Wirtschaftskriminalität, Gewaltdelikte, BetmG); **Jugendstaatsanwälte bilden das Ministère public des mineurs.** **Übertretungen: durch die Oberamtspersonen (préfets) als Übertretungsstrafbehörden** (insb. Strassenverkehr; zugleich Versöhnungsbehörde bei Antragsdelikten).
+
+| Behörde | Adresse |
+|---|---|
+| Ministère public / Staatsanwaltschaft (Parquet général) | Place Notre-Dame / Liebfrauenplatz 4, Case postale, 1701 Fribourg/Freiburg |
+| Ministère public des mineurs (Jugendstaatsanwälte) | am Ministère public, 1701 Fribourg |
+| Übertretungsstrafbehörden | die 7 Oberamtspersonen/préfets (je Bezirk) |
+
+**EG-StPO/Konstituierung — Justizgesetz (JG / Loi sur la justice, LJ, SGF 130.1):**
+- **Art. 63** Strafverfolgungsbehörden (a. Kantonspolizei; b. Staatsanwaltschaft + Jugendrichter; c. Übertretungsstrafbehörden, insb. Oberamtspersonen; d. weitere); **Art. 65-66** Organisation; **Art. 67** Generalstaatsanwalt; **Art. 68** Stellvertretung; **Art. 69** Staatsanwälte – Aufgaben; **Art. 70** Stellung; **Art. 71** Jugendstaatsanwälte; **Art. 84** Oberamtsperson (Übertretungs-/Versöhnungszuständigkeit)
+- Detail: **Justizreglement (JR, SGF 130.11).**
+
+⚠ **Wichtige Abgrenzung:** Das **Jugendstrafgericht (Tribunal pénal des mineurs)** und die **Untersuchung/Anklage gegen Minderjährige** werden in FR teils durch Jugendrichter wahrgenommen (Art. 64/81-83 LJ = Gerichtsseite); die **Jugendstaatsanwälte** (Art. 71) sind die Anklageseite. Beim ersten Mapping besteht hier eine engine-relevante Doppelrolle — sauber trennen.
+
+**Strafgerichte/ZMG/Jugendstrafgericht:** siehe Gerichts-/GOG-Dossier (FR: Tribunal pénal économique Route d'Englisberg 13, Granges-Paccot; Tribunal des mineurs Sitz Fribourg).
+
+Quellen: fr.ch/dsjs/mp (Organisation), bdlf.fr.ch (LJ v7926, Stand 1.1.2024). Abruf 5.6.2026.
+
+---
+
+## SO — Solothurn
+
+**Struktur:** Staatsanwaltschaft mit Oberstaatsanwalt (Amtsleitung) + Abteilung Solothurn + Abteilung Olten + Abteilung Wirtschafts- und Spezialdelikte (WSD); **Jugendanwaltschaft eigenständig** (Jugendanwalt). **Übertretungen: gestaffelt — Friedensrichter sowie kantonale/kommunale Verwaltungsbehörden als Übertretungsstrafbehörden (Strafbefehlsverfahren nach Art. 357 StPO); Polizei für Ordnungsbussen.**
+
+| Behörde | Adresse |
+|---|---|
+| Staatsanwaltschaft (Amtsleitung + Abt. Solothurn) | Franziskanerhof, Barfüssergasse 28, 4502 Solothurn |
+| Abteilung Olten | Olten (genauer Standort über geo.so.ch — **Strasse nicht aus Portal extrahierbar, offen**) |
+| Abteilung Wirtschafts-/Spezialdelikte (WSD) | Solothurn (Standort über geo.so.ch — **offen**) |
+| Jugendanwaltschaft | Rötistrasse 6, 4500 Solothurn (zusätzl. Standort Amthausquai 23, Olten) |
+
+**EG-StPO/Konstituierung:**
+- **GO (BGS 125.12):** **§ 71** Oberstaatsanwalt; **§ 72 ff.** Staatsanwaltschaft; **§ 82** Jugendanwalt; **§ 83** Jugendanwaltschaft (Kompetenzen)
+- **EG StPO/JStPO (BGS 321.3):** **§ 3** Strafverfolgungsbehörden (lit. c StA + Jugendanwaltschaft; lit. d Friedensrichter + kant./kommunale Verwaltungsbehörden); **§ 23** Strafbefehlsverfahren der Friedensrichter sowie der zur Ahndung von Übertretungen zuständigen Verwaltungsstellen (Art. 357 StPO); **§ 31bis** Zuständigkeit bei Übertretungen des kantonalen/kommunalen Rechts (Behörde am Begehungsort); **§ 32** Polizeiliche Erledigung; **§ 33** Einvernahme durch Jugendanwalt
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (SO: Amtsgerichte § 15 Strafgericht, Jugendgericht § 17-18).
+
+Quellen: so.ch/.../staatsanwaltschaft + /jugendanwaltschaft, bgs.so.ch (GO 125.12; EG StPO v5408). Abruf 5.6.2026.
+
+---
+
+## BS — Basel-Stadt
+
+**Struktur:** Staatsanwaltschaft (Erste Staatsanwältin/Erster Staatsanwalt) mit Allgemeiner Abteilung, Abteilung Wirtschaftsdelikte, **Strafbefehlsabteilung** (Fallführung für Kantonspolizei + Verwaltungsbehörden), Kriminalpolizei u. a.; **Jugendanwaltschaft (Leitende Jugendanwältin/-anwalt) in die StA eingegliedert.** **Übertretungen: durch die Staatsanwaltschaft, v. a. Strafbefehlsabteilung — kein Statthalter.**
+
+| Behörde | Adresse |
+|---|---|
+| Staatsanwaltschaft (inkl. Strafbefehls-, Allgemeine, Wirtschaftsdelikte-Abt.) | Binningerstrasse 21, 4051 Basel |
+| Jugendanwaltschaft | Innere Margarethenstrasse 14, 4001 Basel |
+
+**EG-StPO/Konstituierung — GOG (SG 154.100), 7. Teil «Staatsanwaltschaft / Strafverfolgungsbehörden»:**
+- **§ 94** Aufgaben und Zuständigkeit (StA + Jugendanwaltschaft stellen die Strafverfolgung im Kanton sicher; JugA-Prävention/Vollzug); **§ 95** Leitung und Verantwortung (Erste Staatsanwältin/-anwalt; Leitende Jugendanwältin/-anwalt für den Jugendbereich); anschliessend §§ 96 ff. Aufsicht / Aufsichtskommission Staatsanwaltschaft
+- (Strafgericht/Jugendgericht/ZMG-Konstituierung §§ 75-80 GOG = **Gerichtsseite, im GOG-Dossier**, dort als «ergänzt» vermerkt.)
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (BS: Strafgericht § 75/77, ZMG § 78, Jugendgericht § 76/§ 77 Abs. 2/§ 80).
+
+Quellen: bs.ch/staatsanwaltschaft, staatskalender.bs.ch (Abteilungen), gesetzessammlung.bs.ch (GOG v6659, Stand 15.6.2025). Abruf 5.6.2026.
+
+---
+
+## BL — Basel-Landschaft
+
+**Struktur:** Staatsanwaltschaft (Erste Staatsanwältin/-anwalt) mit 4 Hauptabteilungen + Zentrale Dienste + Leitung: Allgemeine Delikte + Zentrale Dienste (Strafjustizzentrum Muttenz), Wirtschaftskriminalität (Rennbahnturm Muttenz), Spezialdelikte (Gutsmatte Liestal), **Strafbefehle** (UBS-Gebäude/Rheinstrasse Liestal). **Jugendanwaltschaft = eigenständige Dienststelle der Sicherheitsdirektion in Liestal (Fusion mit der StA geplant, Unterstellung unter die Erste Staatsanwältin/-anwalt).** **Übertretungen (auch kant. Strafrecht): durch Kantonspolizei + Staatsanwaltschaft — kein Statthalter.**
+
+| Behörde | Adresse |
+|---|---|
+| StA – Leitung + Hauptabt. Allgemeine Delikte + Zentrale Dienste | Strafjustizzentrum, Muttenz |
+| Hauptabt. Wirtschaftskriminalität | Rennbahnturm, Muttenz |
+| Hauptabt. Spezialdelikte | Gutsmatte, Liestal |
+| Hauptabt. Strafbefehle | Rheinstrasse 12, 4410 Liestal (UBS-Gebäude) |
+| Jugendanwaltschaft (separate Dienststelle SID) | Rheinstrasse 55, 4410 Liestal |
+
+⚠ Die genauen Strassen/Hausnummern der Muttenzer Standorte (Strafjustizzentrum, Rennbahnturm) und Gutsmatte Liestal sind im Portal beschrieben, aber **die präzisen Hausnummern nicht durchgängig extrahierbar — offen** (nur «Strafbefehle Rheinstrasse 12» und «JugA Rheinstrasse 55» hart belegt).
+
+**EG-StPO/Konstituierung — Einführungsgesetz zur Schweizerischen StPO (EG StPO, SGS 250):**
+- **§ 2** Widerhandlungen gegen das kantonale Strafrecht (StPO gilt sinngemäss); **§ 7** Leitung (Erste Staatsanwältin/-anwalt); **§ 8** Grundzüge der Organisation (Gliederung in Hauptabteilungen je Deliktsgruppe, geführt von Leitenden StA); **§ 9** Geschäftsleitung der Staatsanwaltschaft; **§ 10** Zuständigkeit für Wahlen/Anstellungen; **§ 11** Voraussetzungen; **§ 12** Untersuchungsbeauftragte; **§ 16** Straftaten des kantonalen Rechts
+- **Dekret zum EG StPO (SGS 250.1):** **§ 1** Anzahl Staatsanwältinnen/Staatsanwälte (= Sollbestand)
+- ⚠ **Die Jugendanwaltschaft wird im EG StPO BL nicht erwähnt** (0 Treffer «Jugendanwalt»). Sie ist organisatorisch eine eigene Dienststelle der SID; Rechtsgrundlage über JStPO-Direktanwendung + kantonale Organisationsregelung. Der **Jugendgericht-/Jugendstrafbehörden-Teil** ist im GOG (SGS 170, § 20a) = **Gerichtsseite, im GOG-Dossier** geführt.
+
+**Strafgerichte/ZMG:** siehe GOG-Dossier (BL: Strafgericht § 20, Jugendgericht § 20a, ZMG § 21).
+
+Quellen: baselland.ch/.../staatsanwaltschaft + /jugendanwaltschaft, bl.clex.ch (EG StPO v3150; Dekret 250.1). Abruf 5.6.2026.
+
+---
+
+## Gesamt-Unsicherheiten (ehrlich)
+
+1. **Adress-Lücken:** SO Abteilung Olten + WSD (nur über geo.so.ch lokalisierbar, Strasse nicht extrahiert); BL Muttenz-/Gutsmatte-Standorte ohne harte Hausnummer; SZ Standorte der Einzelabteilungen (Schmiedgasse 21 / Bahnhofstrasse 4) nicht eindeutig zugeordnet. → vor Stammdaten-Übernahme amtlich nachschärfen.
+2. **OW:** Kein eigenständiges EG StPO in der GDB gefunden; StA-Konstituierung minimal (GOG Art. 8 + Verordnung GDB 134.13). Übertretungsmodell (StA via Strafbefehl) über Portal + Wikipedia bestätigt, nicht über einen dedizierten Behörden-Artikel.
+3. **UR-Korrektur:** Die zwischenzeitliche Web-Auskunft «Statthalter für Übertretungen» war ein fälschlich übertragenes ZH-Muster; der amtliche GOG-Text (Art. 54d) widerlegt das — UR-Übertretungen liegen bei der StA.
+4. **BL Jugendanwaltschaft:** separate SID-Dienststelle, nicht im EG StPO konstituiert; Fusion mit der StA geplant (Beobachtungspunkt → Parameter-Verfallsregister).
+5. **BE:** Moutier-Wechsel zum Kt. Jura wirkt auf die Reg. StA / JugA Berner Jura-Seeland (in Art. 91/92 GSOG bereits abgebildet).
+6. **FR:** Doppelrolle Jugendrichter (Gericht) vs. Jugendstaatsanwälte (Anklage) sauber trennen; Übertretungen liegen bei den Oberamtspersonen, nicht beim Ministère public.
+7. **Methodik:** Alle Artikel-/§-Nummern wurden verbatim aus den amtlichen konsolidierten Volltexten (PDF via LexWork-/belex-/Kantons-API, geltende Fassung) gezogen; abgerufen 5.6.2026. Keine `verified: true`-Setzung — fachliche Abnahme durch David vorbehalten (CLAUDE.md §7).
 
 ## Teil B — SH · AR · AI · SG · GR · AG · TG · TI · VD · VS · NE · GE · JU + Bund
 
