@@ -935,3 +935,18 @@ Tribunal des baux: **Art. 19 al. 2**; Conseil de prud'hommes: **Art. 19 al. 3**;
 - **VD / GE / JU:** Tribunal des baux (VD) bzw. Tribunal des prud'hommes werden im Organisationsgesetz teils nur im Katalog genannt und durch **lois spéciales** detailliert geregelt (VD Art. 3 LOJV; GE Art. 110 LOJ verweist auf loi spéciale prud'hommes).
 - **GE LOJ-Datum:** silgeneve nennt 26.9.2010; das Grand-Conseil-Gesetz L10462 trägt das Datum 9.10.2009 (Beschluss) — die rsGE-konsolidierte Fassung führt 26.9.2010 / Inkraftsetzung 1.1.2011 als massgeblich.
 - JU-Punktwert 1.05 fr. gilt gemäss Fussnote 1 des Décrets (Verweis auf LEmol RSJU 176.11) auch für die Gerichtsgebühren; das Arrêté 176.210.12 bezeichnet sich formell als Indexierung der «émoluments de l'administration cantonale».
+
+## Nachtrag Teil B — Aktualitäts-Verifikation (amtliche API-Metadaten, 5.6.2026)
+
+Alle 13 Erlasse aus Teil B via `abrogated`/`future_versions` geprüft:
+**keiner aufgehoben, keine angekündigte Nachfolgefassung.** Drei
+Stand-Korrekturen (Artikel/Staffeln unverändert):
+- GL Zivil-/Strafprozesskosten-VO (GS III A/5): in Kraft 1.1.2026,
+  Beschluss 18.2.2026 (rückwirkend konsolidiert).
+- FR Justizgesetz (SGF 130.1): aktuelle Version in Kraft seit 1.1.2024.
+- BS GGR (SG 154.810): aktuelle Version in Kraft seit 3.6.2021
+  (§-5-Staffel unberührt).
+
+**Daueranweisung David (5.6.2026):** Erlasse stets in der geltenden
+konsolidierten Fassung über die amtliche API ziehen und
+`abrogated`/`future_versions` prüfen — nie Archiv-/UZH-Fassungen.
