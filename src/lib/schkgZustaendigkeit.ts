@@ -19,6 +19,7 @@ export type SchkgSchuldnerTyp =
   | 'jur_person_hr'            // Art. 46 Abs. 2 (Sitz)
   | 'jur_person_nicht_hr'      // Art. 46 Abs. 2 (Hauptsitz der Verwaltung)
   | 'erbschaft'                // Art. 49
+  | 'stockwerkeigentuemer'     // Art. 46 Abs. 4 (Gemeinschaft → Ort der Sache)
   | 'ausland_niederlassung';   // Art. 50 Abs. 1
 
 export type SchkgPfand = 'kein' | 'faustpfand' | 'grundpfand';
@@ -96,6 +97,7 @@ const ORT_NORM: Record<SchkgSchuldnerTyp, { text: string; norm: SchkgNorm }> = {
   jur_person_hr: { text: 'am SITZ der im Handelsregister eingetragenen juristischen Person/Gesellschaft', norm: { artikel: 'Art. 46 Abs. 2 SchKG' } },
   jur_person_nicht_hr: { text: 'am HAUPTSITZ DER VERWALTUNG (nicht eingetragene juristische Person)', norm: { artikel: 'Art. 46 Abs. 2 SchKG' } },
   erbschaft: { text: 'am Ort, wo die Erblasserin/der Erblasser zur Zeit des Todes betrieben werden konnte (solange Teilung/Gemeinderschaft/amtliche Liquidation nicht erfolgt ist)', norm: { artikel: 'Art. 49 SchKG' } },
+  stockwerkeigentuemer: { text: 'am ORT DER GELEGENEN SACHE (Stockwerkeigentümergemeinschaft)', norm: { artikel: 'Art. 46 Abs. 4 SchKG' } },
   ausland_niederlassung: { text: 'am SITZ DER SCHWEIZER GESCHÄFTSNIEDERLASSUNG (für auf deren Rechnung eingegangene Verbindlichkeiten); bei gewähltem Spezialdomizil an diesem Ort', norm: { artikel: 'Art. 50 SchKG' } },
 };
 
@@ -135,9 +137,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
     }
   }
   weichen.push('Nach Ankündigung der Pfändung, Zustellung der Konkursandrohung oder des Zahlungsbefehls der Wechselbetreibung wird die Betreibung am BISHERIGEN Ort fortgesetzt, auch wenn der Schuldner den Wohnsitz wechselt (Art. 53 SchKG).');
-  if (input.schuldnerTyp === 'erbschaft') {
-    warnungen.push('Sonderfall Stockwerkeigentümergemeinschaft: Betreibungsort am Ort der gelegenen Sache (Art. 46 Abs. 4 SchKG) — hier nicht abgebildet.');
-  }
+
 
   // ── 2 · Forum + Eingabe + Fristen je Anliegen (Synthese-Tabelle §6) ───────
   let forum: SchkgErgebnis['forum'];
@@ -277,6 +277,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
       fristen.push(
         { label: 'Arresteinsprache der Gegenseite', frist: '10 Tage ab Kenntnis des Arrests', norm: 'Art. 278 Abs. 1 SchKG', kritisch: true },
         { label: 'Arrestprosequierung (Betreibung/Klage)', frist: '10 Tage ab Zustellung der Arresturkunde', norm: 'Art. 279 Abs. 1 SchKG', kritisch: true },
+        { label: 'Prosequierung nach Rechtsvorschlag', frist: '10 Tage ab Zustellung des Gläubigerdoppels des Zahlungsbefehls: Rechtsöffnung verlangen oder Anerkennungsklage; nach Abweisung im Rechtsöffnungsverfahren weitere 10 Tage für die Klage', norm: 'Art. 279 Abs. 2 SchKG', kritisch: true },
         { label: 'Fortsetzungsbegehren nach unbestrittenem Zahlungsbefehl', frist: '20 Tage ab Beseitigung/Ausbleiben des Rechtsvorschlags', norm: 'Art. 279 Abs. 3 SchKG', kritisch: true },
       );
       warnungen.push('Arrestkaution/Schadenersatzrisiko: Bei ungerechtfertigtem Arrest haftet die Arrestgläubigerin (Art. 273 SchKG); das Gericht kann Sicherheitsleistung verlangen.');

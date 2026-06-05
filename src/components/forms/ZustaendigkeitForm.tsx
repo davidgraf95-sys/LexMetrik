@@ -117,6 +117,7 @@ type State = {
   deliktUnterfall: DeliktUnterfall;
   persoenlichkeitUnterfall: PersoenlichkeitUnterfall;
   ipUnterfall: IpUnterfall;
+  bundKlagerecht: boolean;
   avgVerleih: boolean;
   gerichtsstandsvereinbarung: boolean;
   gemeinde: string;
@@ -142,6 +143,7 @@ const DEFAULTS: State = {
   deliktUnterfall: 'allgemein',
   persoenlichkeitUnterfall: 'verletzung',
   ipUnterfall: 'ip_kartell_firma',
+  bundKlagerecht: false,
   avgVerleih: false,
   gerichtsstandsvereinbarung: false,
   gemeinde: '',
@@ -232,6 +234,7 @@ export function ZustaendigkeitForm() {
     deliktUnterfall: f.streitsache === 'delikt' ? f.deliktUnterfall : undefined,
     persoenlichkeitUnterfall: f.streitsache === 'persoenlichkeit' ? f.persoenlichkeitUnterfall : undefined,
     ipUnterfall: f.streitsache === 'ip_wettbewerb' ? f.ipUnterfall : undefined,
+    bundKlagerecht: f.streitsache === 'ip_wettbewerb' && f.ipUnterfall === 'uwg' ? f.bundKlagerecht : undefined,
     avgVerleih: istArbeit ? f.avgVerleih : undefined,
     gerichtsstandsvereinbarung: istScheidung ? undefined : f.gerichtsstandsvereinbarung,
   };
@@ -345,9 +348,24 @@ export function ZustaendigkeitForm() {
 
       {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : rechtsweg === 'straf' ? <StrafZustaendigkeitTeil /> : <>
 
+      {/* 2 · Eingangs-Gabelung (Anordnung David 6.6.2026): Einleitung vs.
+          Rechtsmittel ZUERST — bestimmt, welche Fragen überhaupt nötig sind. */}
+      <div className="space-y-2">
+        <p className="lc-overline">2 · Was suchen Sie?</p>
+        <SelectionGrid
+          className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+          items={[
+            { code: 'einleitung' as Instanz, label: 'Verfahren einleiten', sub: 'Zuständige Schlichtungsbehörde bzw. erstes Gericht finden' },
+            { code: 'rechtsmittel' as Instanz, label: 'Rechtsmittel ergreifen', sub: 'Berufung/Beschwerde — zuständige obere Instanz' },
+          ]}
+          value={f.instanz}
+          onSelect={(code) => set('instanz', code)}
+        />
+      </div>
+
       {/* 2 · Streitsache */}
       <div className="space-y-2">
-        <p className="lc-overline">2 · Art des Streits</p>
+        <p className="lc-overline">3 · Art des Streits</p>
         <SelectionGrid
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
           items={STREITSACHEN.map((s) => ({ code: s.code, label: s.label, sub: s.sub }))}
@@ -380,16 +398,24 @@ export function ZustaendigkeitForm() {
         <Field label="Art.-5-Materie" hint="UWG/Bund-Klagen sind nur über CHF 30 000 einzige Instanz (lit. d/f)">
           <select className={inputCls} value={f.ipUnterfall} onChange={(e) => set('ipUnterfall', e.target.value as IpUnterfall)}>
             <option value="ip_kartell_firma">Immaterialgüter / Kartell / Firma (unbedingt, lit. a–c)</option>
-            <option value="uwg_oder_bund">UWG bzw. Klage gegen den Bund (lit. d/f — 30'000er-Schwelle)</option>
+            <option value="uwg">UWG (lit. d — über 30'000 oder Bund klagt)</option>
+            <option value="klage_gegen_bund">Klage gegen den Bund (lit. f — nur über 30'000)</option>
           </select>
+          {f.ipUnterfall === 'uwg' && (
+            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 mt-2">
+              <input type="checkbox" checked={f.bundKlagerecht} onChange={(e) => set('bundKlagerecht', e.target.checked)} />
+              Der Bund übt sein Klagerecht aus (dann einzige Instanz unabhängig vom Streitwert)
+            </label>
+          )}
         </Field>
       )}
       </div>
 
       {/* 3 · Ort, Streitwert, Instanz */}
       <div className="space-y-3">
-        <p className="lc-overline">3 · Wo — und um wie viel geht es?</p>
+        <p className="lc-overline">4 · Wo — und um wie viel geht es?</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {f.instanz === 'einleitung' && (
           <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
             <div className="space-y-1.5">
               <div className="grid grid-cols-[6.5rem_1fr] gap-2">
@@ -414,6 +440,7 @@ export function ZustaendigkeitForm() {
               })()}
             </div>
           </Field>
+          )}
           <Field label="Kanton (Forum)" hint="alle Kantone hinterlegt (zentrale Stelle, Stellen-Liste oder amtliches Verzeichnis)">
             <select className={inputCls + ' sm:max-w-[9rem]'} value={f.kanton} onChange={(e) => set('kanton', e.target.value as Kanton | '')}>
               <option value="">– wählen –</option>
@@ -445,24 +472,13 @@ export function ZustaendigkeitForm() {
       {/* Sonderfälle eingeklappt (Endkonsumenten-Dramaturgie 6.6.2026):
           Streitsache + Ort + Streitwert tragen das Routing — Spezial-
           konstellationen überladen den Erstkontakt nicht mehr. */}
-      {!istScheidung && (
+      {!istScheidung && f.instanz === 'einleitung' && (
         <details className="lc-card p-4 group">
           <summary className="lc-overline cursor-pointer list-none flex items-center justify-between">
             <span>Weitere Angaben — Sonderfälle (Rechtsmittel, Vereinbarungen, Handelsregister, Ausland)</span>
             <span className="text-ink-500 group-open:rotate-180 transition-transform" aria-hidden>▾</span>
           </summary>
           <div className="space-y-3 mt-3">
-          <Field label="Instanz">
-            <SelectionGrid
-              className="grid grid-cols-2 gap-2"
-              items={[
-                { code: 'einleitung' as Instanz, label: 'Einleitung', sub: 'Schlichtung bzw. erste Instanz' },
-                { code: 'rechtsmittel' as Instanz, label: 'Rechtsmittel', sub: 'Berufung/Beschwerde (obere Instanz)' },
-              ]}
-              value={f.instanz}
-              onSelect={(code) => set('instanz', code)}
-            />
-          </Field>
 
           {istGeld && (
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">

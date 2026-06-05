@@ -35,6 +35,7 @@ const SCHULDNER: { code: SchkgSchuldnerTyp; label: string }[] = [
   { code: 'jur_person_nicht_hr', label: 'Juristische Person ohne HR-Eintrag' },
   { code: 'natuerlich_ohne_wohnsitz', label: 'Ohne festen Wohnsitz (Aufenthaltsort)' },
   { code: 'erbschaft', label: 'Unverteilte Erbschaft' },
+  { code: 'stockwerkeigentuemer', label: 'Stockwerkeigentümergemeinschaft (Ort der Sache, Art. 46 Abs. 4)' },
   { code: 'ausland_niederlassung', label: 'Auslandschuldner mit CH-Geschäftsniederlassung' },
 ];
 

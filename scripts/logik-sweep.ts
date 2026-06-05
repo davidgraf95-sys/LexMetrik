@@ -24,13 +24,16 @@ for (const mieteUnterfall of streitsache === 'miete_wohn_geschaeft' ? (['kuendig
 for (const deliktUnterfall of streitsache === 'delikt' ? (['allgemein','verkehrsunfall','ungerechtfertigte_massnahme'] as const) : ([undefined] as const))
 for (const persU of streitsache === 'persoenlichkeit' ? (['verletzung','gegendarstellung','datenschutz','gewaltschutz'] as const) : ([undefined] as const))
 for (const beklagteImHR of streitsache === 'geldforderung' || streitsache === 'gesellschaft' ? [false, true] : [false])
-for (const klaegerImHR of beklagteImHR ? [false, true] : [false]) {
+for (const klaegerImHR of beklagteImHR ? [false, true] : [false])
+for (const ipUnterfall of streitsache === 'ip_wettbewerb' ? (['ip_kartell_firma','uwg','klage_gegen_bund'] as const) : ([undefined] as const))
+for (const bundKlagerecht of ipUnterfall === 'uwg' ? [false, true] : [false]) {
   const input: ZustaendigkeitInput = {
     streitsache, vermoegensrechtlich, streitwertCHF: sw,
     glgBetroffen: glg, gerichtsstandsvereinbarung: gsv,
     beklagteAuslandOderUnbekannt: auslandUnbekannt,
     mieteUnterfall, deliktUnterfall, persoenlichkeitUnterfall: persU,
     beklagteImHR, klaegerImHR, geschaeftlicheTaetigkeit: beklagteImHR,
+    ipUnterfall, bundKlagerecht,
   };
   zivilN++;
   let r;
@@ -51,8 +54,12 @@ for (const klaegerImHR of beklagteImHR ? [false, true] : [false]) {
   // I5 · Entscheidkompetenzen ↔ Schwellen + Schlichtung
   if (r.entscheidkompetenz.entscheidAufAntrag && !(s.obligatorisch && sw !== null && sw <= ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG)) melde('Z-I5a', input, 'entscheidAufAntrag ausserhalb Art. 212');
   if (r.entscheidkompetenz.entscheidvorschlag && !s.obligatorisch) melde('Z-I5b', input, 'Urteilsvorschlag ohne Schlichtung');
-  // I6/I7 · einzige Instanz (Art. 5)
-  if (streitsache === 'ip_wettbewerb') {
+  // I6/I7 · einzige Instanz (Art. 5) — lit. a–c unbedingt; UWG >30k ODER Bund-Klagerecht; lit. f nur >30k
+  const einzigeErwartet = streitsache === 'ip_wettbewerb'
+    && ((ipUnterfall ?? 'ip_kartell_firma') === 'ip_kartell_firma'
+      || (sw !== null && sw > ZPO_SCHWELLEN.VEREINFACHT)
+      || (ipUnterfall === 'uwg' && bundKlagerecht));
+  if (einzigeErwartet) {
     if (s.obligatorisch) melde('Z-I7a', input, 'Art. 5: Schlichtung müsste entfallen (199 III)');
     if (r.verfahrensart === 'vereinfacht') melde('Z-I7b', input, 'Art. 5: vereinfacht ausgeschlossen (243 III)');
     if (r.eingabeArt !== 'klage_direkt') melde('Z-I7c', input, 'Art. 5: Eingabe muss Klage direkt sein');
@@ -84,21 +91,21 @@ for (const klaegerImHR of beklagteImHR ? [false, true] : [false]) {
   } else if (fp.length !== 3 && r.eingabeArt === 'klage_direkt') melde('Z-I12e', input, `Direktklage mit ${fp.length}≠3 Schritten`);
   // I13 · Rechtsmittel-Kreuzkonsistenz
   const rm = bestimmeRechtsmittel(input);
-  if ((rm.kantonal === 'entfaellt_einzige_instanz') !== (streitsache === 'ip_wettbewerb')) melde('Z-I13a', input, 'einzige Instanz ↮ Rechtsmittel-Entfall');
-  if (vermoegensrechtlich && sw !== null && streitsache !== 'ip_wettbewerb') {
+  if ((rm.kantonal === 'entfaellt_einzige_instanz') !== einzigeErwartet) melde('Z-I13a', input, 'einzige Instanz ↮ Rechtsmittel-Entfall');
+  if (vermoegensrechtlich && sw !== null && !einzigeErwartet) {
     const erwartet = sw >= RECHTSMITTEL_SCHWELLEN.BERUFUNG_MIN ? 'berufung' : 'beschwerde';
     if (rm.kantonal !== erwartet) melde('Z-I13b', input, `kantonal=${rm.kantonal}, erwartet ${erwartet}`);
     const grenze = ['arbeit','miete_wohn_geschaeft'].includes(streitsache) ? RECHTSMITTEL_SCHWELLEN.BGER_MIETE_ARBEIT : RECHTSMITTEL_SCHWELLEN.BGER_UEBRIGE;
     if ((rm.bger === 'zulaessig') !== (sw >= grenze)) melde('Z-I13c', input, `bger=${rm.bger} bei sw=${sw}, Grenze ${grenze}`);
   }
-  if (!vermoegensrechtlich && streitsache !== 'ip_wettbewerb' && rm.kantonal !== 'berufung') melde('Z-I13d', input, 'nicht vermögensrechtlich ≠ Berufung');
+  if (!vermoegensrechtlich && !einzigeErwartet && rm.kantonal !== 'berufung') melde('Z-I13d', input, 'nicht vermögensrechtlich ≠ Berufung');
   // Determinismus
   if (JSON.stringify(r) !== JSON.stringify(bestimmeZustaendigkeit(input))) melde('Z-DET', input, 'nicht deterministisch');
 }
 
 // ═══ 2 · SCHKG — voller Raster ═══
 const ANLIEGEN: SchkgInput['anliegen'][] = ['betreibung_einleiten','rechtsoeffnung','aberkennungsklage','anerkennungsklage','rueckforderung','feststellung','widerspruch','kollokation','arrest','konkursbegehren','beschwerde_amt'];
-const SCHULDNER: SchkgInput['schuldnerTyp'][] = ['natuerlich_wohnsitz','natuerlich_ohne_wohnsitz','jur_person_hr','jur_person_nicht_hr','erbschaft','ausland_niederlassung'];
+const SCHULDNER: SchkgInput['schuldnerTyp'][] = ['natuerlich_wohnsitz','natuerlich_ohne_wohnsitz','jur_person_hr','jur_person_nicht_hr','erbschaft','stockwerkeigentuemer','ausland_niederlassung'];
 let schkgN = 0;
 for (const anliegen of ANLIEGEN)
 for (const schuldnerTyp of SCHULDNER)

@@ -368,11 +368,12 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
   const basis = (sw: number | null, extra: Partial<ZustaendigkeitInput> = {}): ZustaendigkeitInput => ({
     streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: sw, ...extra,
   });
-  it('kantonal: ≥10k Berufung · <10k Beschwerde · ohne SW offen · nicht vermögensrechtlich Berufung · Art. 5 entfällt', async () => {
+  it('kantonal: ≥10k Berufung · <10k Beschwerde · ohne SW wirft (M1) · nicht vermögensrechtlich Berufung · Art. 5 entfällt', async () => {
     const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
     expect(bestimmeRechtsmittel(basis(10_000)).kantonal).toBe('berufung');
     expect(bestimmeRechtsmittel(basis(9_999)).kantonal).toBe('beschwerde');
-    expect(bestimmeRechtsmittel(basis(null)).kantonal).toBe('offen');
+    // M1-Fix 6.6.2026: symmetrische Validierung — fehlender Streitwert wirft
+    expect(() => bestimmeRechtsmittel(basis(null))).toThrow();
     expect(bestimmeRechtsmittel({ streitsache: 'scheidung', vermoegensrechtlich: false, streitwertCHF: null }).kantonal).toBe('berufung');
     const ip = bestimmeRechtsmittel(basis(5_000, { streitsache: 'ip_wettbewerb' }));
     expect(ip.kantonal).toBe('entfaellt_einzige_instanz');
@@ -432,15 +433,22 @@ describe('Handelsgerichte (Datenschicht, Anordnung 5.6.2026)', () => {
 
 describe('Art.-5-Schwelle (H1-Fix, Semantik-Audit 6.6.2026)', () => {
   it('UWG/Bund ≤30k: KEINE einzige Instanz → Schlichtung + kantonales Rechtsmittel; >30k und unbedingte lit. unverändert', () => {
-    const uwgKlein = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 20_000, ipUnterfall: 'uwg_oder_bund' });
+    const uwgKlein = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 20_000, ipUnterfall: 'uwg' });
     expect(uwgKlein.schlichtung.obligatorisch).toBe(true);
     expect(uwgKlein.eingabeArt).toBe('schlichtungsgesuch');
     expect(uwgKlein.warnungen.some((w) => w.includes('KEINE einzige kantonale Instanz'))).toBe(true);
-    const rmKlein = bestimmeRechtsmittel({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 20_000, ipUnterfall: 'uwg_oder_bund' });
+    const rmKlein = bestimmeRechtsmittel({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 20_000, ipUnterfall: 'uwg' });
     expect(rmKlein.kantonal).toBe('berufung');
     expect(rmKlein.bger).toBe('schwelle_verfehlt');
-    const uwgGross = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 30_001, ipUnterfall: 'uwg_oder_bund' });
+    const uwgGross = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 30_001, ipUnterfall: 'uwg' });
     expect(uwgGross.schlichtung.obligatorisch).toBe(false);
+    // lit. d Alt. 2: Bund übt Klagerecht aus → einzige Instanz TROTZ ≤30k
+    const bundKlage = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 5_000, ipUnterfall: 'uwg', bundKlagerecht: true });
+    expect(bundKlage.schlichtung.obligatorisch).toBe(false);
+    expect(bestimmeRechtsmittel({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 5_000, ipUnterfall: 'uwg', bundKlagerecht: true }).kantonal).toBe('entfaellt_einzige_instanz');
+    // lit. f: KEINE Klagerecht-Alternative — bundKlagerecht wirkungslos
+    const litF = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 5_000, ipUnterfall: 'klage_gegen_bund', bundKlagerecht: true });
+    expect(litF.schlichtung.obligatorisch).toBe(true);
     const ip = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 5_000 });
     expect(ip.schlichtung.obligatorisch).toBe(false); // lit. a–c unbedingt (Default)
   });

@@ -20,6 +20,10 @@ describe('Betreibungsort-Kaskade (Art. 46–55)', () => {
     expect(bestimmeSchkgZustaendigkeit(basis({ schuldnerTyp: 'natuerlich_ohne_wohnsitz' })).betreibungsort.text).toContain('AUFENTHALTSORT');
     expect(bestimmeSchkgZustaendigkeit(basis({ schuldnerTyp: 'erbschaft' })).betreibungsort.normen[0].artikel).toBe('Art. 49 SchKG');
     expect(bestimmeSchkgZustaendigkeit(basis({ schuldnerTyp: 'ausland_niederlassung' })).betreibungsort.text).toContain('NIEDERLASSUNG');
+    const stwe = bestimmeSchkgZustaendigkeit(basis({ schuldnerTyp: 'stockwerkeigentuemer' }));
+    expect(stwe.betreibungsort.text).toContain('GELEGENEN SACHE');
+    expect(stwe.betreibungsort.normen[0].artikel).toBe('Art. 46 Abs. 4 SchKG');
+    expect(bestimmeSchkgZustaendigkeit(basis({ schuldnerTyp: 'erbschaft' })).warnungen.some((w) => w.includes('Stockwerk'))).toBe(false);
   });
   it('Grundpfand ZWINGEND am Ort des Grundstücks (kein Wahlrecht); Faustpfand mit Wahl', () => {
     const gp = bestimmeSchkgZustaendigkeit(basis({ pfand: 'grundpfand' }));
@@ -81,7 +85,7 @@ describe('Foren + Fristen je Anliegen (Synthese-Tabelle)', () => {
   it('Arrest: Wahlforum + Einsprache 10 T + Prosequierung; Konkursbegehren: 20 T/15 Mt. mit Stillstand; Beschwerde: AUFSICHTSBEHÖRDE 10 T + Art.-22-Weiche', () => {
     const ar = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'arrest' }));
     expect(ar.forum.stelle).toContain('Wahl');
-    expect(ar.fristen.filter((f) => f.kritisch).length).toBe(3); // 278-Einsprache + 279 Abs. 1 + Abs. 3 (Review-Fix 6.6.2026)
+    expect(ar.fristen.filter((f) => f.kritisch).length).toBe(4); // 278 + 279 Abs. 1/2/3 (Stufe-2-Fix 6.6.2026)
     const kb = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'konkursbegehren' }));
     expect(kb.fristen.find((f) => f.norm.includes('166 Abs. 2'))?.frist).toContain('15 Monate');
     const be = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'beschwerde_amt' }));
