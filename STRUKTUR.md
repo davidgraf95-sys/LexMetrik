@@ -3,8 +3,10 @@
 **Verbindliche Grundprinzipien: `CLAUDE.md`** (§1 Logik vor allem; §6
 Refactoring-Protokoll) — dieses Dokument hier beschreibt den Zustand.
 
-**Stand:** 5. Juni 2026 — deployed bis `0f4d86b` (Grundprinzipien +
-Verschlankung Stufe 1+2 + Design-Feinschliff).
+**Stand:** 5. Juni 2026 — deployed bis `9295e24` (… + Katalog-Ausbau
+Free/Pro 111 Karten, Vorlagen 5+6 Arbeits-/Mietvertrag, Formatvorlagen-
+Renderer, Tagerechner; Bug-Check: 2 Review-Agents, 1 HOCH-Befund
+Toggle-Kopplung gefixt).
 **Produktion:** https://lexmetrik.vercel.app (Vercel-Projekt `lexmetrik`;
 `legal-calc.vercel.app` = 308-Redirect). Marke: **LexMetrik** (grosses M).
 
