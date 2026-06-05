@@ -25,6 +25,7 @@ import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtu
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
 import { SchkgZustaendigkeitTeil } from './SchkgZustaendigkeitTeil';
+import { handelsgerichtFuer } from '../../data/handelsgerichte';
 
 // ─── Zuständigkeitsrechner – UI (Umbau 5.6.2026, Entscheid David) ───────────
 // Vier-Stufen-Führung: 1) RECHTSWEG (Zivil aktiv; SchKG/Straf/Verwaltung als
@@ -268,6 +269,11 @@ export function ZustaendigkeitForm() {
   // Praxis-Fahrplan + kantonale Kosten (Umbau 5.6.2026)
   const fahrplan = r ? fahrplanSchritte(r, { vorlageVerfuegbar: false, stelleBekannt: !!(stelle || recherche) }) : null;
   const kosten = f.kanton ? kostenFuer(f.kanton) : null;
+  // Handelsgericht (Anordnung David 5.6.2026): konkrete Adresse in den
+  // 4 HG-Kantonen, ehrliche Verneinung sonst — nur wenn die Engine die
+  // Art.-6-Weiche stellt.
+  const hgWeicheAktiv = r ? r.weichen.some((w) => w.includes('Handelsgericht')) : false;
+  const handelsgericht = f.kanton !== '' ? handelsgerichtFuer(f.kanton) : null;
 
   const eingabeText = r === null ? '' : r.eingabeArt === 'scheidungsbegehren_oder_klage'
     ? 'Gemeinsames Scheidungsbegehren (bei Einigung) oder Scheidungsklage'
@@ -636,6 +642,25 @@ export function ZustaendigkeitForm() {
                 <span className="font-medium text-ink-900"> PLZ eingeben oder Kanton wählen</span>, damit die
                 konkrete Stelle mit Adresse angezeigt werden kann (örtlich massgeblich: {ORT_LABEL[f.streitsache]}).
               </p>
+            </div>
+          )}
+          {/* Handelsgericht-Auflösung (Art. 6 ZPO; 4 Kantone) */}
+          {hgWeicheAktiv && f.kanton !== '' && (
+            <div className="lc-card p-4 space-y-2">
+              <p className="lc-overline">Handelsgericht ({f.kanton})</p>
+              {handelsgericht ? (
+                <>
+                  <p className="text-body-s text-ink-900 whitespace-pre-line">
+                    {handelsgericht.name}{'\n'}{handelsgericht.strasse}{'\n'}{handelsgericht.plzOrt}
+                  </p>
+                  <p className="text-xs text-ink-500">{handelsgericht.organisation}. Bei handelsgerichtlicher Zuständigkeit: Klage direkt, keine Schlichtung (Art. 199 Abs. 3 ZPO); Rechtsmittel direkt ans Bundesgericht (Art. 75 Abs. 2 lit. b BGG).</p>
+                </>
+              ) : (
+                <p className="text-body-s text-ink-700">
+                  Der Kanton {f.kanton} führt KEIN Handelsgericht (Art. 6 Abs. 1 ZPO ist eine Kann-Vorschrift; Handelsgerichte
+                  bestehen nur in ZH, BE, AG und SG) — die Klage geht an das ordentliche Gericht, die Handelsgericht-Weiche entfällt.
+                </p>
+              )}
             </div>
           )}
           {/* Konkrete Stelle (Kantonsschicht) + Vorlagen-Sprung */}

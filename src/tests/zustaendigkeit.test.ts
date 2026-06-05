@@ -417,3 +417,15 @@ describe('bestimmeRechtsmittel — Eingabe-Validierung (Bug-Check-Fix 5.6.2026)'
     expect(() => bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: Number.NaN })).toThrow();
   });
 });
+
+describe('Handelsgerichte (Datenschicht, Anordnung 5.6.2026)', () => {
+  it('genau 4 Kantone (ZH/BE/AG/SG) mit auditierten Adressen; übrige null', async () => {
+    const { HANDELSGERICHTE, HG_KANTONE, handelsgerichtFuer } = await import('../data/handelsgerichte');
+    expect(HG_KANTONE.sort()).toEqual(['AG', 'BE', 'SG', 'ZH']);
+    expect(HANDELSGERICHTE.ZH?.strasse).toContain('Hirschengraben 15');
+    expect(HANDELSGERICHTE.BE?.plzOrt).toBe('3012 Bern');
+    expect(HANDELSGERICHTE.AG?.strasse).toContain('Obere Vorstadt 38');
+    expect(HANDELSGERICHTE.SG?.strasse).toContain('Klosterhof 1');
+    expect(handelsgerichtFuer('LU')).toBeNull();
+  });
+});
