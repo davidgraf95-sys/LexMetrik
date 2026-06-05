@@ -1,7 +1,11 @@
 # Gerichtsorganisationsgesetze (GOG) — Behörde→Artikel-Mapping + Zivil-Gerichtsgebühren
 
-**Erstellt:** 5.6.2026 · **Abrufdatum: 5.6.2026** · **Status: einfach belegt;
-Zweitprüfung im finalen Doppelcheck.** Artikel-Nummern empirisch aus den
+**Erstellt:** 5.6.2026 · **Abrufdatum: 5.6.2026** · **Status: ZWEIFACH GEPRÜFT**
+(adversarialer Durchgang 5.6.2026: 15/15 Pflicht-Stichproben am geltenden
+Volltext bestätigt, 0 widerlegt; alle Organisationsgesetze aktuell, keine
+Nachfolgefassungen angekündigt. Nebenbefund: lexfind-Kopie der SH-Kosten-
+verordnung [tolv 55496] ist fehlerhaft konsolidiert [Header «Luzern»] —
+Vorsicht dort berechtigt). Artikel-Nummern empirisch aus den
 amtlichen Volltexten extrahiert (Anordnung: «nie aus dem Gedächtnis»).
 
 Zweck (Anordnung David): jede richterliche Behörde dem richtigen Artikel im
