@@ -8,7 +8,7 @@ export function RechnerVerzugszins() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
-      <div className="lc-card p-6 sm:p-8">
+      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
         <VerzugszinsForm />
       </div>
     </div>

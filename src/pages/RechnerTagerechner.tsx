@@ -29,7 +29,7 @@ export function RechnerTagerechner() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8 space-y-6">
+      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
         <div className="space-y-1.5">
           <p className="lc-overline">Verfahren</p>
           <Tabs items={VERFAHREN} value={verfahren} onChange={setVerfahren}

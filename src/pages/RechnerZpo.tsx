@@ -9,7 +9,7 @@ export function RechnerZpo() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
-      <div className="bg-surface-raised rounded-2xl border border-line  p-6 sm:p-8">
+      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
         <ZpoFristenForm />
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { useState } from 'react';
 import type { SperrfristenInput, Sperrereignis, SperrereignisTyp } from '../../types/legal';
 import { berechneSperrfristen, type SperrfristenErgebnis } from '../../lib/sperrfristen';
@@ -130,6 +131,7 @@ export function KuendigungSperrForm() {
 
   return (
     <div className="space-y-6">
+      <PflichtDisclaimer />
       <p className="lc-overline">Eingaben</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Vertragsbeginn">

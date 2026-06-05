@@ -1,4 +1,5 @@
 import { LiveHeader, inputCls } from '../vorlagen/ui';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { useState } from 'react';
 import type { ArbeitsrechtInput, Kanton, SperrereignisTyp, Sperrereignis } from '../../types/legal';
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
@@ -108,6 +109,7 @@ export function KombinierteAnsicht() {
 
   return (
     <div className="space-y-6">
+      <PflichtDisclaimer />
       <div className="rounded-lg border border-line bg-surface p-4">
         <p className="text-body-s text-ink-600">
           Kombinierte Ansicht: Alle drei Teilberechnungen (A/B/C) mit gemeinsamen Eingaben.
@@ -161,7 +163,7 @@ export function KombinierteAnsicht() {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h4 className="text-body-s font-semibold text-ink-700">Sperrereignisse (Art. 336c OR)</h4>
-          <button type="button" onClick={addEreignis} className="text-body-s px-3 py-1.5 bg-surface hover:bg-brass-100 rounded-lg transition-colors">+ Ereignis</button>
+          <button type="button" onClick={addEreignis} className="lc-btn-outline lc-btn-sm">+ Ereignis</button>
         </div>
         {(form.sperrereignisse ?? []).map((e, i) => (
           <div key={i} className="border border-line rounded-lg p-3 bg-surface grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">

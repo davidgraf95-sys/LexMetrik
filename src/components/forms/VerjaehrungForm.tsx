@@ -203,7 +203,7 @@ export function VerjaehrungForm() {
               </>
             )}
             <button type="button" onClick={() => setUnterbrechungen((arr) => arr.filter((_, j) => j !== i))}
-              className="text-body-s text-danger-700 hover:underline">entfernen</button>
+              className="text-body-s text-danger-700">Entfernen</button>
           </div>
         ))}
         <button type="button" onClick={() => setUnterbrechungen((arr) => [...arr, { typ: 'anerkennung', datum: '' }])}
@@ -225,7 +225,7 @@ export function VerjaehrungForm() {
             <span className="text-body-s text-ink-500">bis</span>
             <DatumsFeld value={s.bis} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, bis: v } : x)))} className={inputCls} wrapperClassName="w-full sm:w-44" />
             <button type="button" onClick={() => setStillstaende((arr) => arr.filter((_, j) => j !== i))}
-              className="text-body-s text-danger-700 hover:underline">entfernen</button>
+              className="text-body-s text-danger-700">Entfernen</button>
           </div>
         ))}
         <button type="button" onClick={() => setStillstaende((arr) => [...arr, { von: '', bis: '', grund: STILLSTAND_GRUENDE[0] }])}

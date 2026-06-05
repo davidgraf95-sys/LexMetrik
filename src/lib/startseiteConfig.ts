@@ -1024,8 +1024,8 @@ const VORLAGEN: Record<string, VorlageCard> = {
   schlichtungsgesuch: {
     id: 'schlichtungsgesuch', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
-    title: 'Schlichtungsgesuch (Basel-Stadt)',
-    description: 'Stellt ein Schlichtungsgesuch nach festen Bausteinen für die Basler Schlichtungsbehörden zusammen – Parteien, Zuständigkeits-Routing, Rechtsbegehren, Streitgegenstand, Beilagen.',
+    title: 'Schlichtungsgesuch (alle Kantone)',
+    description: 'Stellt ein Schlichtungsgesuch nach Art. 202 ZPO zusammen – Parteien, Rechtsbegehren, Streitgegenstand, Beilagen. Behördenadresse automatisch für alle 26 Kantone (PLZ/Gemeinde-genau in ZH/AG/SG/TG/FR/ZG/AI); sachliches Spezial-Routing amtlich abgenommen für Basel-Stadt.',
     // Abweichung von der Auftrags-Anweisung (status: 'geplant') offengelegt:
     // Nach dem neueren Status-Modell-Auftrag erhalten GEBAUTE, fachlich noch
     // nicht geprüfte Einträge 'entwurf' (orange, verified: false) – als

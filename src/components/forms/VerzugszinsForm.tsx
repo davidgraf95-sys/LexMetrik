@@ -155,8 +155,8 @@ export function VerzugszinsForm() {
         <div className="flex items-center justify-between">
           <h4 className="text-body-s font-semibold text-ink-700">Teilzahlungen &amp; Satzänderungen (Art. 85 OR)</h4>
           <div className="flex gap-2">
-            <button type="button" onClick={() => addRow('teilzahlung')} className="lc-btn-ghost lc-btn-sm">+ Teilzahlung</button>
-            <button type="button" onClick={() => addRow('satzaenderung')} className="lc-btn-ghost lc-btn-sm">+ Satzänderung</button>
+            <button type="button" onClick={() => addRow('teilzahlung')} className="lc-btn-outline lc-btn-sm">+ Teilzahlung</button>
+            <button type="button" onClick={() => addRow('satzaenderung')} className="lc-btn-outline lc-btn-sm">+ Satzänderung</button>
           </div>
         </div>
         {rows.length === 0 && <p className="text-body-s text-ink-500 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
@@ -198,8 +198,8 @@ export function VerzugszinsForm() {
                   { label: 'Offenes Kapital', val: `CHF ${ergebnis.kapitalOffenCHF}` },
                   { label: 'Total offen', val: `CHF ${ergebnis.totalOffenCHF}`, stark: true },
                 ].map((c) => (
-                  <div key={c.label} className="lc-card p-4">
-                    <p className="lc-overline mb-1">{c.label}</p>
+                  <div key={c.label} className="lc-tile">
+                    <p className="text-xs text-ink-500 mb-1">{c.label}</p>
                     <p className={`num text-ink-900 ${c.stark ? 'text-h2 leading-none font-medium' : 'text-body-l'}`}>{c.val}</p>
                   </div>
                 ))}

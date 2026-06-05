@@ -4,7 +4,6 @@ import { LohnfortzahlungForm } from '../components/forms/LohnfortzahlungForm';
 import { KuendigungSperrForm } from '../components/forms/KuendigungSperrForm';
 import { KombinierteAnsicht } from '../components/forms/KombinierteAnsicht';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
-import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { getCalculator } from '../lib/calculators';
 
 type Tab = 'a' | 'b_c' | 'kombiniert';
@@ -38,7 +37,6 @@ export function RechnerKuendigung() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
-      <PflichtDisclaimer />
 
       <div className="flex flex-wrap gap-1 p-1 bg-surface rounded-xl w-fit">
         {TABS.map((t) => (
@@ -52,7 +50,7 @@ export function RechnerKuendigung() {
         ))}
       </div>
 
-      <div className="bg-surface-raised rounded-2xl border border-line shadow-sm p-6 sm:p-8">
+      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
         {tab === 'a' && <LohnfortzahlungForm />}
         {tab === 'b_c' && <KuendigungSperrForm />}
         {tab === 'kombiniert' && <KombinierteAnsicht />}
