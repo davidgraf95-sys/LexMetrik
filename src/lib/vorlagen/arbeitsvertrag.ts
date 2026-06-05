@@ -22,15 +22,24 @@ import { fmtDatumLang } from './datum';
 // Quelle: Gutachten 5.6.2026 (Stand 2025; 2026-Werte wo bekannt). KEINE
 // Blocker-Grösse (GAV-/Branchenvorbehalte), nur Warnung + Verifikationspflicht.
 export const AV_MINDESTLOEHNE: { kanton: string; chfProStunde: number; stand: string; hinweis?: string }[] = [
-  { kanton: 'GE', chfProStunde: 24.48, stand: '2025', hinweis: '24.59 ab 1.1.2026' },
-  { kanton: 'BS', chfProStunde: 22.00, stand: '2025', hinweis: '22.20 ab 1.1.2026' },
-  { kanton: 'NE', chfProStunde: 21.31, stand: '2025', hinweis: '21.35 ab 1.1.2026' },
-  { kanton: 'JU', chfProStunde: 20.60, stand: '2025', hinweis: 'Quellen streuen (20.60–21.40) — kantonal verifizieren' },
-  { kanton: 'TI', chfProStunde: 19.75, stand: '2025', hinweis: 'branchengestaffelt bis 20.50' },
+  // Stand 1.1.2026 (Gutachten 5.6.2026; Quellen: ge.ch/OCIRT, bs.ch §3 MiLoG,
+  // ne.ch, jura.ch, ti.ch, gav-service.ch) — jährlich indexiert, zu prüfen.
+  { kanton: 'GE', chfProStunde: 24.59, stand: '1.1.2026', hinweis: '22.70 Basis bei Anspruch auf 13. ML' },
+  { kanton: 'BS', chfProStunde: 22.20, stand: '1.1.2026' },
+  { kanton: 'NE', chfProStunde: 21.35, stand: '1.1.2026', hinweis: '19.71 Basis bei 13. ML; Landwirtschaft tiefer' },
+  { kanton: 'JU', chfProStunde: 21.40, stand: '1.1.2026' },
+  { kanton: 'TI', chfProStunde: 20.00, stand: '1.1.2026', hinweis: 'branchengestaffelt bis 20.50 (NOGA)' },
 ];
 
+// Kommunaler Sonderfall (kein kantonaler Mindestlohn): Stadt Luzern 22.75
+// ab 1.1.2026 (Zuständigkeit gerichtlich angefochten; Übergangsfrist bis
+// 30.6.2026). Zürich/Winterthur sind aufgehoben (VGer ZH 29.11.2024).
+export const AV_MINDESTLOHN_STADT_LUZERN = { chfProStunde: 22.75, stand: '1.1.2026' } as const;
+
 export const AV_OFFENE_VERIFIKATIONEN: string[] = [
-  'Kantonale Mindestlöhne sind jährlich indexiert (datierte Werte Stand 2025/2026); vor Verwendung beim Kanton verifizieren. Stadt Luzern führt ab 1.1.2026 einen kommunalen Mindestlohn ein; Zürich/Winterthur sind vor Bundesgericht hängig.',
+  'Kantonale Mindestlöhne Stand 1.1.2026 (Gutachten 5.6.2026; amtliche Quellen) — jährlich indexiert, vor Verwendung beim Kanton verifizieren. Stadt Luzern: kommunal, Zuständigkeit gerichtlich angefochten; Zürich/Winterthur aufgehoben (VGer ZH 29.11.2024).',
+  'AVE-GAV-Vorrang-Gesetz (Vorrang allgemeinverbindlicher GAV-Mindestlöhne vor kantonalen Mindestlöhnen): Schlussabstimmung auf 19.6.2026 angesetzt, Referendum angekündigt — Stand 5.6.2026 NICHT in Kraft; bei Inkrafttreten Mindestlohn-Logik anpassen.',
+  'BGer 4A_5/2025 vom 26.6.2025 (Karenzentschädigung: kein einseitiger Verzicht ohne Abrede; Ersatzeinkommen nur bei Abrede anrechenbar) ist zur amtlichen Publikation vorgesehen — BGE-Fundstelle nachtragen.',
   'Die Kataloge von Art. 361/362 OR wurden gegen Sekundärquellen verifiziert; vor produktivem Einsatz nochmals mit dem amtlichen SR-220-Text abgleichen.',
   'Lohnfortzahlungs-Skalen (Berner/Basler/Zürcher) sind Gerichtspraxis, keine Norm — Zuordnung nach Gerichtsstand im Einzelfall prüfen.',
 ];
@@ -78,7 +87,11 @@ export type AvAntworten = {
   // Lohnfortzahlung (Art. 324a)
   lohnfortzahlung: 'gesetzlich' | 'ktg';
   ktgProzent?: number;               // Default 80
-  ktgTage?: number;                  // Default 730
+  ktgTage?: number;                  // Default 730 (innert 900 Tagen)
+  // KTG-Gleichwertigkeitsparameter (Art. 324a Abs. 4; BGE 135 III 640 — Gutachten 5.6.2026)
+  ktgWartefristTage?: number;        // Default 0 (max. 2–3 für gesicherte Gleichwertigkeit)
+  ktgWartefristLohnProzent?: number; // Lohn während Wartefrist, Default 80
+  ktgPraemieAnProzent?: number;      // Arbeitnehmer-Prämienanteil, Default 50 (max. 50)
   // Spesen (Art. 327a)
   spesen: 'effektiv' | 'pauschal';
   spesenPauschaleCHF?: string;       // pro Monat
@@ -90,8 +103,15 @@ export type AvAntworten = {
   kvDauerMonate?: number;
   kvKonventionalstrafeCHF?: string;
   kvRealerfuellung?: boolean;        // Art. 340b Abs. 3 — besonders schriftlich
-  // GAV
+  kvStrafeBefreitNicht?: boolean;    // Abrede: Zahlung der Strafe befreit NICHT (Art. 340b Abs. 2)
+  // Karenzentschädigung (gesetzlich nicht vorgeschrieben; BGer 4A_5/2025)
+  kvKarenz?: boolean;
+  kvKarenzCHFProMonat?: string;
+  kvKarenzVerzichtsrecht?: boolean;  // einseitiges Verzichts-/Kündigungsrecht des Arbeitgebers vorbehalten
+  kvKarenzErsatzAnrechenbar?: boolean; // Ersatzeinkommen anrechenbar (nur bei Abrede)
+  // GAV (Gutachten 5.6.2026: Nennung ≠ Normwirkung, Art. 356/357 OR)
   gav: 'nein' | 'ja' | 'unbekannt';
+  gavTyp?: 'ave' | 'mitgliedschaft' | 'verweis'; // bei gav='ja'
   gavName?: string;
   // Abschluss
   ort: string;
@@ -213,6 +233,17 @@ export function pruefeAvGates(a: AvAntworten): AvGateErgebnis {
       warnungen.push('Konkurrenzverbot über drei Jahre: nur unter besonderen Umständen zulässig (Art. 340a Abs. 1 OR) — das Gericht kann ein übermässiges Verbot herabsetzen.');
     }
     hinweise.push('Konkurrenzverbot: Die Schriftform (Art. 340 Abs. 1 OR; BGE 145 III 365) erfüllt dieser beidseitig unterzeichnete Vertrag. Eine Karenzentschädigung ist gesetzlich nicht vorgeschrieben; ihr Fehlen wird bei der richterlichen Herabsetzung berücksichtigt (Art. 340a Abs. 2 OR). Das Verbot fällt dahin, wenn der Arbeitgeber ohne begründeten Anlass kündigt (Art. 340c Abs. 2 OR).');
+    if (a.kvKarenz) {
+      if (!a.kvKarenzCHFProMonat?.trim()) {
+        blocker.push('Karenzentschädigung gewählt: Betrag pro Monat angeben.');
+      }
+      if (!a.kvKarenzVerzichtsrecht) {
+        hinweise.push('Entgeltliches Konkurrenzverbot OHNE vorbehaltenes Verzichtsrecht: Der Arbeitgeber kann sich nicht einseitig durch Verzicht auf das Verbot von der Karenzentschädigung befreien (BGer 4A_5/2025 vom 26.6.2025, Festhalten an BGE 78 II 230 — zu verifizieren); Aufhebung nur einvernehmlich.');
+      }
+      if (!a.kvKarenzErsatzAnrechenbar) {
+        hinweise.push('Ohne Anrechnungsabrede sind Ersatzeinkommen und Arbeitslosengelder NICHT an die Karenzentschädigung anrechenbar (BGer 4A_5/2025 E. 5.3 — zu verifizieren).');
+      }
+    }
   }
 
   // G6 — Überstunden-Wegbedingung: nur OR-Bereich; ArG-Überzeit bleibt zwingend.
@@ -227,12 +258,18 @@ export function pruefeAvGates(a: AvAntworten): AvGateErgebnis {
     if (ml && lohn !== null && lohn < ml.chfProStunde) {
       warnungen.push(`Kanton ${ml.kanton}: kantonaler Mindestlohn CHF ${ml.chfProStunde.toFixed(2)}/Std. (Stand ${ml.stand}${ml.hinweis ? `; ${ml.hinweis}` : ''}) — der erfasste Stundenlohn liegt darunter. Branchen-/GAV-Ausnahmen und aktuelle Indexierung verifizieren.`);
     }
+    if (a.arbeitsortKanton === 'LU' && lohn !== null && lohn < AV_MINDESTLOHN_STADT_LUZERN.chfProStunde) {
+      hinweise.push(`Stadt Luzern kennt einen KOMMUNALEN Mindestlohn von CHF ${AV_MINDESTLOHN_STADT_LUZERN.chfProStunde.toFixed(2)}/Std. (Stand ${AV_MINDESTLOHN_STADT_LUZERN.stand}; Zuständigkeit gerichtlich angefochten) — zu prüfen, falls der Arbeitsort in der Stadt Luzern liegt.`);
+    }
   }
 
   // G8 — Befristung
   if (a.befristet) {
     if (!a.befristetBis) blocker.push('Befristetes Verhältnis: Enddatum angeben (Art. 334 Abs. 1 OR).');
-    hinweise.push('Befristete Verhältnisse enden ohne Kündigung; eine ordentliche vorzeitige Kündigung ist ausgeschlossen (Art. 334 OR). Kettenverträge ohne sachlichen Grund werden in ein unbefristetes Verhältnis umgedeutet (BGE 129 III 618 — zu verifizieren). Die vereinbarte Probezeit gilt auch hier.');
+    hinweise.push('Befristete Verhältnisse enden ohne Kündigung; eine ordentliche vorzeitige Kündigung ist ausgeschlossen (Art. 334 OR). Kettenverträge ohne sachlichen Grund werden in ein unbefristetes Verhältnis umgedeutet (BGE 129 III 618 — zu verifizieren).');
+    if (a.probezeit !== 'wegbedungen') {
+      hinweise.push('Befristete Verhältnisse haben von Gesetzes wegen KEINE Probezeit (die Vermutung von Art. 335b Abs. 1 OR gilt nur unbefristet) — die Probezeit wird hier deshalb ausdrücklich VEREINBART (zulässig, max. 3 Monate).');
+    }
   }
 
   // G9 — Gratifikation: Disclosure (Erstarken zum Anspruch)
@@ -240,18 +277,36 @@ export function pruefeAvGates(a: AvAntworten): AvGateErgebnis {
     hinweise.push('Gratifikation: Der Freiwilligkeitsvorbehalt wird automatisch aufgenommen. Eine während mindestens dreier Jahre vorbehaltlos ausgerichtete Gratifikation kann zum Anspruch erstarken (BGE 129 III 276); bei sehr hohen Einkommen entfällt das Akzessorietätskriterium (BGE 139 III 155 — zu verifizieren).');
   }
 
-  // G10 — KTG-Lösung: Gleichwertigkeit (Art. 324a Abs. 4 OR)
+  // G10 — KTG-Lösung: Gleichwertigkeit als Gesamtbetrachtung (Art. 324a
+  // Abs. 4 OR; BGE 135 III 640: gleichwertig jedenfalls bei 80 % während
+  // 720/900 Tagen, hälftiger Prämienteilung und kurzer Wartefrist mit
+  // 80 % Arbeitgeberzahlung — Gutachten 5.6.2026)
   if (a.lohnfortzahlung === 'ktg') {
     const p = a.ktgProzent ?? 80;
     const t = a.ktgTage ?? 730;
-    if (p < 80 || t < 720) {
-      warnungen.push('Die Versicherungslösung muss für die Arbeitnehmerin/den Arbeitnehmer mindestens gleichwertig sein (Art. 324a Abs. 4 OR); üblich sind 80 % des Lohnes während 720–730 Tagen bei hälftiger Prämienteilung — die erfassten Werte liegen darunter.');
+    const wf = a.ktgWartefristTage ?? 0;
+    const wfLohn = a.ktgWartefristLohnProzent ?? 80;
+    const praemieAn = a.ktgPraemieAnProzent ?? 50;
+    const maengel: string[] = [];
+    if (p < 80) maengel.push(`Taggeld ${p} % (< 80 %)`);
+    if (t < 720) maengel.push(`Leistungsdauer ${t} Tage (< 720)`);
+    if (wf > 3 && wfLohn < 80) maengel.push(`Wartefrist ${wf} Tage mit nur ${wfLohn} % Lohn (< 80 %)`);
+    if (praemieAn > 50) maengel.push(`Arbeitnehmer-Prämienanteil ${praemieAn} % (> 50 %)`);
+    if (maengel.length > 0) {
+      warnungen.push(`Gleichwertigkeit nicht gesichert (Art. 324a Abs. 4 OR; BGE 135 III 640 — zu verifizieren): ${maengel.join(' · ')}. Fehlt die Gleichwertigkeit, bleibt die gesetzliche Lohnfortzahlung nach Skala anwendbar.`);
     }
   }
 
-  // GAV-Vorrang — immer relevant, wenn GAV möglich
+  // GAV-Vorrang — Typ-abhängig (Gutachten 5.6.2026: Nennung ≠ Normwirkung)
+  if (a.gav === 'ja' && !a.gavTyp) {
+    blocker.push('GAV gewählt: Art der Geltung angeben — allgemeinverbindlich erklärt, Verbandsmitgliedschaft oder blosse vertragliche Verweisung (Art. 356/357 OR; AVEG).');
+  }
   if (a.gav !== 'nein') {
-    hinweise.push('Anwendbare GAV-/NAV-Mindeststandards gehen abweichenden Abreden zulasten der Arbeitnehmerin/des Arbeitnehmers vor (Art. 357/360a OR; AVE nach AVEG). Einschlägigkeit und zwingende Mindestlöhne prüfen.');
+    if (a.gavTyp === 'verweis') {
+      hinweise.push('Blosse vertragliche Verweisung auf einen GAV erzeugt KEINE Normwirkung — der GAV-Inhalt wird lediglich Vertragsinhalt (Art. 356/357 OR). Für zwingende Wirkung braucht es beidseitige Verbandsmitgliedschaft oder Allgemeinverbindlicherklärung.');
+    } else {
+      hinweise.push('Anwendbare GAV-/NAV-Mindeststandards (Lohn, Arbeitszeit, Ferien, 13. ML, Kündigungsfristen) gehen abweichenden Abreden zulasten der Arbeitnehmerin/des Arbeitnehmers vor; der ungünstigere Vertragsteil wäre nichtig (Art. 357 Abs. 2/360a OR; Günstigkeitsvergleich als Gruppenvergleich, BGE 116 II 153 — zu verifizieren).');
+    }
   }
 
   // Informationspflicht — erfüllt der Vertrag selbst
@@ -265,7 +320,7 @@ export function pruefeAvGates(a: AvAntworten): AvGateErgebnis {
 export const AV_SCHEMA: VorlageSchema = {
   id: 'arbeitsvertrag',
   format: 'vertrag',
-  version: '1.0.0 (Rechtsstand OR Art. 319 ff., Gutachten 5.6.2026)',
+  version: '1.1.0 (Rechtsstand OR Art. 319 ff.; Vertiefungs-Gutachten 5.6.2026: Karenzentschädigung, KTG-Gleichwertigkeit, GAV-Typen, Probezeit bei Befristung)',
   titel: 'Einzelarbeitsvertrag',
   disclaimer:
     'Entwurf — erstellt mit LexMetrik. Keine Rechtsberatung. Der Arbeitsvertrag ist formfrei gültig ' +
@@ -290,19 +345,24 @@ export const AV_SCHEMA: VorlageSchema = {
       norm: 'Art. 9 ArG' },
     { id: 'A04_probezeit_gesetzlich', ueberschrift: 'Probezeit',
       text: 'Es gilt die gesetzliche Probezeit von einem Monat. Während der Probezeit kann das Arbeitsverhältnis beidseits mit einer Frist von sieben Tagen auf jeden Tag gekündigt werden.',
-      includeIf: { feld: 'probezeit', eq: 'gesetzlich' }, nummeriert: true,
+      includeIf: { feld: 'probezeitVariante', eq: 'gesetzlich' }, nummeriert: true,
       begruendung: 'Gesetzliche Probezeit gewählt.',
       norm: 'Art. 335b OR' },
     { id: 'A04_probezeit_verlaengert', ueberschrift: 'Probezeit',
       text: 'Die Probezeit wird auf {{probezeitMonate}} Monate verlängert (schriftliche Abrede). Während der Probezeit kann das Arbeitsverhältnis beidseits mit einer Frist von sieben Tagen auf jeden Tag gekündigt werden. Bei effektiver Verkürzung der Probezeit infolge Krankheit, Unfall oder Erfüllung einer nicht freiwillig übernommenen gesetzlichen Pflicht verlängert sie sich entsprechend.',
-      includeIf: { feld: 'probezeit', eq: 'verlaengert' }, nummeriert: true,
+      includeIf: { feld: 'probezeitVariante', eq: 'verlaengert' }, nummeriert: true,
       begruendung: 'Verlängerte Probezeit (höchstens drei Monate) — Schriftform durch diesen Vertrag erfüllt.',
       norm: 'Art. 335b OR',
       hinweis: 'Nachzuholen sind die effektiv versäumten Arbeitstage (BGE 148 III 126).' },
     { id: 'A04_probezeit_weg', ueberschrift: 'Probezeit',
       text: 'Auf eine Probezeit wird verzichtet.',
-      includeIf: { feld: 'probezeit', eq: 'wegbedungen' }, nummeriert: true,
+      includeIf: { feld: 'probezeitVariante', eq: 'wegbedungen' }, nummeriert: true,
       begruendung: 'Probezeit wegbedungen (zulässig).',
+      norm: 'Art. 335b OR' },
+    { id: 'A04_probezeit_befristet_vereinbart', ueberschrift: 'Probezeit',
+      text: 'Die Parteien VEREINBAREN eine Probezeit von {{probezeitMonateEff}} {{probezeitEinheit}} (bei befristeten Verhältnissen gilt die gesetzliche Probezeit-Vermutung nicht). Während der Probezeit kann das Arbeitsverhältnis beidseits mit einer Frist von sieben Tagen auf jeden Tag gekündigt werden. Bei effektiver Verkürzung der Probezeit infolge Krankheit, Unfall oder Erfüllung einer nicht freiwillig übernommenen gesetzlichen Pflicht verlängert sie sich entsprechend.',
+      includeIf: { feld: 'probezeitVariante', eq: 'befristet_vereinbart' }, nummeriert: true,
+      begruendung: 'Befristetes Verhältnis: Probezeit nur kraft ausdrücklicher Vereinbarung (Art. 335b Abs. 1 OR gilt nur unbefristet — Gutachten 5.6.2026); max. 3 Monate.',
       norm: 'Art. 335b OR' },
     { id: 'A05_lohn_monat', ueberschrift: 'Lohn',
       text: 'Der Bruttolohn beträgt CHF {{lohnFmt}} pro Monat{{dreizehnterSatz}}. Die gesetzlichen und vertraglichen Abzüge (AHV/IV/EO, ALV, NBU, BVG, ggf. Quellensteuer) gehen zulasten des Arbeitnehmers/der Arbeitnehmerin. Der Lohn wird Ende jedes Monats ausgerichtet.',
@@ -347,7 +407,7 @@ export const AV_SCHEMA: VorlageSchema = {
       begruendung: 'Gesetzliche Lohnfortzahlung.',
       norm: 'Art. 324a OR' },
     { id: 'A08_lohnfortzahlung_ktg', ueberschrift: 'Lohnfortzahlung und Krankentaggeld',
-      text: 'Der Arbeitgeber schliesst eine Krankentaggeldversicherung ab, die bei krankheitsbedingter Arbeitsunfähigkeit {{ktgProzent}} % des Lohnes während {{ktgTage}} Tagen deckt; die Prämien tragen die Parteien je zur Hälfte. Diese Lösung tritt im Sinne von Art. 324a Abs. 4 OR an die Stelle der gesetzlichen Lohnfortzahlung; für Wartetage und nicht versicherte Fälle gilt Art. 324a OR.',
+      text: 'Der Arbeitgeber schliesst eine Krankentaggeldversicherung ab, deren Leistungen die Versicherung erbringt: bei krankheitsbedingter Arbeitsunfähigkeit Taggelder von {{ktgProzent}} % des Lohnes während {{ktgTage}} Tagen innert 900 Tagen.{{ktgWartefristSatz}} Vom Prämienaufwand trägt der/die Arbeitnehmer/in {{ktgPraemieAn}} %, der Arbeitgeber den Rest. Diese Lösung tritt im Sinne von Art. 324a Abs. 4 OR AN DIE STELLE der gesetzlichen Lohnfortzahlung; für nicht versicherte Fälle gilt Art. 324a OR.',
       includeIf: { feld: 'lohnfortzahlung', eq: 'ktg' }, nummeriert: true,
       begruendung: 'Versicherungslösung (mindestens gleichwertig) — Schriftform durch diesen Vertrag erfüllt.',
       norm: 'Art. 324a OR' },
@@ -388,16 +448,26 @@ export const AV_SCHEMA: VorlageSchema = {
       begruendung: 'Befristung: Ende ohne Kündigung; stillschweigende Fortsetzung → unbefristet.',
       norm: 'Art. 334 OR' },
     { id: 'A13_konkurrenzverbot', ueberschrift: 'Konkurrenzverbot',
-      text: 'Der/Die Arbeitnehmer/in verpflichtet sich, nach Beendigung des Arbeitsverhältnisses während {{kvDauerText}} im folgenden örtlichen Geltungsbereich: {{kvOrt}}, jede den Arbeitgeber konkurrenzierende Tätigkeit im folgenden Bereich zu unterlassen: {{kvGegenstand}}.{{kvStrafeSatz}}{{kvRealSatz}} Das Verbot fällt dahin, wenn der Arbeitgeber nachweislich kein erhebliches Interesse mehr an seiner Aufrechterhaltung hat, sowie in den Fällen von Art. 340c Abs. 2 OR.',
+      text: 'Der/Die Arbeitnehmer/in verpflichtet sich, nach Beendigung des Arbeitsverhältnisses während {{kvDauerText}} im folgenden örtlichen Geltungsbereich: {{kvOrt}}, jede den Arbeitgeber konkurrenzierende Tätigkeit im folgenden Bereich zu unterlassen: {{kvGegenstand}}.{{kvStrafeSatz}}{{kvRealSatz}}{{kvKarenzSatz}} Das Verbot fällt dahin, wenn der Arbeitgeber nachweislich kein erhebliches Interesse mehr an seiner Aufrechterhaltung hat, sowie in den Fällen von Art. 340c Abs. 2 OR.',
       includeIf: { feld: 'konkurrenzverbot', eq: true }, nummeriert: true,
       begruendung: 'Konkurrenzverbot, nach Ort/Zeit/Gegenstand begrenzt — Schriftform durch diesen Vertrag erfüllt.',
       norm: 'Art. 340 OR',
       hinweis: 'Voraussetzung ist Einblick in Kundenkreis oder Geheimnisse mit Schädigungspotenzial (Art. 340 Abs. 2 OR); übermässige Verbote kann das Gericht herabsetzen (Art. 340a Abs. 2 OR). BGE 145 III 365.' },
-    { id: 'A14_gav', ueberschrift: 'Gesamtarbeitsvertrag',
-      text: 'Auf das Arbeitsverhältnis findet der folgende Gesamtarbeitsvertrag Anwendung: {{gavName}}. Dessen zwingende Mindestbestimmungen gehen abweichenden Abreden zulasten des Arbeitnehmers/der Arbeitnehmerin vor.',
-      includeIf: { feld: 'gavZeigen', eq: true }, nummeriert: true,
-      begruendung: 'GAV-Verweis mit Vorrang der Mindeststandards.',
+    { id: 'A14_gav_ave', ueberschrift: 'Gesamtarbeitsvertrag',
+      text: 'Auf das Arbeitsverhältnis ist der folgende ALLGEMEINVERBINDLICH erklärte Gesamtarbeitsvertrag anwendbar: {{gavName}}. Dessen normative Bestimmungen gelten unmittelbar und zwingend; abweichende Abreden dieses Vertrags zuungunsten des Arbeitnehmers/der Arbeitnehmerin sind nichtig und werden durch die GAV-Bestimmungen ersetzt. Günstigere Abreden bleiben vorbehalten.',
+      includeIf: { feld: 'gavVariante', eq: 'ave' }, nummeriert: true,
+      begruendung: 'AVE-GAV: Normwirkung kraft Allgemeinverbindlicherklärung (AVEG).',
       norm: 'Art. 357 OR' },
+    { id: 'A14_gav_mitglied', ueberschrift: 'Gesamtarbeitsvertrag',
+      text: 'Auf das Arbeitsverhältnis ist kraft beidseitiger Verbandszugehörigkeit der folgende Gesamtarbeitsvertrag anwendbar: {{gavName}}. Dessen normative Bestimmungen gelten unmittelbar und zwingend; abweichende Abreden dieses Vertrags zuungunsten des Arbeitnehmers/der Arbeitnehmerin sind nichtig und werden durch die GAV-Bestimmungen ersetzt. Günstigere Abreden bleiben vorbehalten.',
+      includeIf: { feld: 'gavVariante', eq: 'mitgliedschaft' }, nummeriert: true,
+      begruendung: 'GAV-Normwirkung kraft Verbandsmitgliedschaft (Art. 357 OR).',
+      norm: 'Art. 357 OR' },
+    { id: 'A14_gav_verweis', ueberschrift: 'Gesamtarbeitsvertrag',
+      text: 'Die Parteien vereinbaren, dass die Bestimmungen des folgenden Gesamtarbeitsvertrags als VERTRAGSINHALT gelten: {{gavName}}. (Hinweis: Diese Verweisung erzeugt keine zwingende Normwirkung im Sinne von Art. 357 OR.)',
+      includeIf: { feld: 'gavVariante', eq: 'verweis' }, nummeriert: true,
+      begruendung: 'Blosse vertragliche Verweisung — GAV-Inhalt wird Vertragsinhalt, keine Normwirkung (Gutachten 5.6.2026).',
+      norm: 'Art. 356 OR' },
     { id: 'A15_schluss', ueberschrift: 'Schlussbestimmungen',
       text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen zu ihrer Gültigkeit der Schriftform, soweit das Gesetz nichts anderes zulässt. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 319 ff. OR) sowie die zwingenden Vorschriften des Arbeitsgesetzes.',
       nummeriert: true,
@@ -443,18 +513,39 @@ export function avZusammenstellen(a: AvAntworten) {
     ferienzuschlagSatz: a.lohnModell === 'stundenlohn' && a.ferienzuschlagSeparat && a.pensumProzent < 100
       ? `; der Ferienlohn wird laufend ausgerichtet und beträgt ${a.ferienWochen >= 5 ? '10.64' : '8.33'} % des Grundlohnes (in jeder Lohnabrechnung gesondert ausgewiesen)`
       : '',
+    // Probezeit-Variante: bei Befristung gilt die gesetzliche Vermutung nicht
+    // (Art. 335b Abs. 1 OR nur unbefristet) — «gesetzlich» wird dort zur
+    // ausdrücklich VEREINBARTEN Probezeit (Gutachten 5.6.2026).
+    probezeitVariante: a.befristet && a.probezeit !== 'wegbedungen'
+      ? 'befristet_vereinbart'
+      : a.probezeit,
+    probezeitMonateEff: a.probezeit === 'verlaengert' ? (a.probezeitMonate ?? 3) : 1,
+    probezeitEinheit: a.probezeit === 'verlaengert' && (a.probezeitMonate ?? 3) > 1 ? 'Monaten' : 'Monat',
     ktgProzent: a.ktgProzent ?? 80,
     ktgTage: a.ktgTage ?? 730,
+    ktgWartefristSatz: (a.ktgWartefristTage ?? 0) > 0
+      ? ` Es gilt eine Wartefrist von ${a.ktgWartefristTage} Tagen; während der Wartefrist bezahlt der Arbeitgeber ${a.ktgWartefristLohnProzent ?? 80} % des Lohnes.`
+      : '',
+    ktgPraemieAn: a.ktgPraemieAnProzent ?? 50,
     spesenPauschaleFmt: a.spesenPauschaleCHF ? fmtCHF(a.spesenPauschaleCHF) : '________',
     kuendigungZeigen: a.befristet ? 'befristet' : a.kuendigungsfrist,
     kvDauerText,
     kvStrafeSatz: a.kvKonventionalstrafeCHF?.trim()
-      ? ` Bei Übertretung schuldet der/die Arbeitnehmer/in eine Konventionalstrafe von CHF ${fmtCHF(a.kvKonventionalstrafeCHF)} je Übertretungsfall; deren Bezahlung befreit vom Verbot, der Ersatz weiteren Schadens bleibt vorbehalten.`
+      ? ` Bei Übertretung schuldet der/die Arbeitnehmer/in eine Konventionalstrafe von CHF ${fmtCHF(a.kvKonventionalstrafeCHF)} je Übertretungsfall; ${a.kvStrafeBefreitNicht
+          ? 'deren Bezahlung befreit NICHT von der Einhaltung des Verbots (abweichende Abrede im Sinne von Art. 340b Abs. 2 OR)'
+          : 'deren Bezahlung befreit vom Verbot'}, der Ersatz weiteren Schadens bleibt vorbehalten.`
+      : '',
+    kvKarenzSatz: a.kvKarenz
+      ? ` Der Arbeitgeber bezahlt für die Dauer des Verbots eine Karenzentschädigung von CHF ${a.kvKarenzCHFProMonat ? fmtCHF(a.kvKarenzCHFProMonat) : '________'} pro Monat.${a.kvKarenzVerzichtsrecht
+          ? ' Der Arbeitgeber kann durch schriftliche Erklärung auf das Konkurrenzverbot verzichten; mit dem Verzicht entfällt die Entschädigungspflicht für die Zeit nach Ablauf von drei Monaten seit der Erklärung.'
+          : ''}${a.kvKarenzErsatzAnrechenbar
+          ? ' Anderweitiges Erwerbs- oder Ersatzeinkommen während der Verbotsdauer wird an die Karenzentschädigung angerechnet.'
+          : ''}`
       : '',
     kvRealSatz: a.kvRealerfuellung
       ? ' Der Arbeitgeber kann überdies — besonders schriftlich verabredet im Sinne von Art. 340b Abs. 3 OR — die Beseitigung des vertragswidrigen Zustands verlangen, sofern seine verletzten oder bedrohten Interessen und das Verhalten des Arbeitnehmers/der Arbeitnehmerin dies rechtfertigen.'
       : '',
-    gavZeigen: a.gav === 'ja' && !!a.gavName?.trim(),
+    gavVariante: a.gav === 'ja' && a.gavName?.trim() ? (a.gavTyp ?? '') : '',
     gavName: a.gavName ?? '',
     datumFmt: fmtDatumLang(a.datum),
   };

@@ -143,8 +143,10 @@ export function VorlageArbeitsvertrag() {
               <p className="lc-overline">Probezeit (Art. 335b OR)</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {([
-                  ['gesetzlich', 'Gesetzlich', '1 Monat'],
-                  ['verlaengert', 'Verlängert', '2–3 Monate (schriftlich)'],
+                  // Bei Befristung gibt es keine gesetzliche Vermutung
+                  // (Art. 335b Abs. 1 OR) — die Probezeit wird VEREINBART.
+                  ['gesetzlich', a.befristet ? '1 Monat (vereinbart)' : 'Gesetzlich', a.befristet ? 'ausdrückliche Abrede' : '1 Monat'],
+                  ['verlaengert', a.befristet ? '2–3 Monate (vereinbart)' : 'Verlängert', '2–3 Monate (schriftlich)'],
                   ['wegbedungen', 'Keine', 'Probezeit wegbedungen'],
                 ] as const).map(([code, label, sub]) => (
                   <button key={code} type="button" onClick={() => set('probezeit', code)} aria-pressed={a.probezeit === code}
@@ -294,7 +296,16 @@ export function VorlageArbeitsvertrag() {
             {a.lohnfortzahlung === 'ktg' && (
               <div className="grid grid-cols-2 gap-3">
                 <Field label="Taggeld (% des Lohnes)"><input type="number" min={50} max={100} className={inputCls + ' num'} value={a.ktgProzent ?? 80} onChange={(e) => set('ktgProzent', Number(e.target.value))} /></Field>
-                <Field label="Leistungsdauer (Tage)"><input type="number" min={180} max={1095} className={inputCls + ' num'} value={a.ktgTage ?? 730} onChange={(e) => set('ktgTage', Number(e.target.value))} /></Field>
+                <Field label="Leistungsdauer (Tage)" hint="innert 900 Tagen"><input type="number" min={180} max={1095} className={inputCls + ' num'} value={a.ktgTage ?? 730} onChange={(e) => set('ktgTage', Number(e.target.value))} /></Field>
+                <Field label="Wartefrist (Tage)" hint="über 3 Tage nur gleichwertig, wenn der Arbeitgeber 80 % zahlt">
+                  <select className={inputCls} value={a.ktgWartefristTage ?? 0} onChange={(e) => set('ktgWartefristTage', Number(e.target.value))}>
+                    {[0, 2, 3, 30, 60, 90].map((t) => <option key={t} value={t}>{t}</option>)}
+                  </select>
+                </Field>
+                {(a.ktgWartefristTage ?? 0) > 0 && (
+                  <Field label="Lohn während Wartefrist (%)"><input type="number" min={0} max={100} className={inputCls + ' num'} value={a.ktgWartefristLohnProzent ?? 80} onChange={(e) => set('ktgWartefristLohnProzent', Number(e.target.value))} /></Field>
+                )}
+                <Field label="Prämienanteil Arbeitnehmer/in (%)" hint="über 50 % gefährdet die Gleichwertigkeit"><input type="number" min={0} max={100} className={inputCls + ' num'} value={a.ktgPraemieAnProzent ?? 50} onChange={(e) => set('ktgPraemieAnProzent', Number(e.target.value))} /></Field>
               </div>
             )}
           </div>
@@ -324,12 +335,22 @@ export function VorlageArbeitsvertrag() {
             <p className="lc-overline">Gesamtarbeitsvertrag</p>
             <select className={inputCls} value={a.gav} onChange={(e) => set('gav', e.target.value as AvAntworten['gav'])}>
               <option value="nein">Kein GAV anwendbar</option>
-              <option value="ja">GAV anwendbar (wird im Vertrag genannt)</option>
+              <option value="ja">GAV anwendbar</option>
               <option value="unbekannt">Unklar — noch zu prüfen</option>
             </select>
             {a.gav === 'ja' && (
               <Field label="GAV (Bezeichnung)">
                 <input className={inputCls} value={a.gavName ?? ''} onChange={(e) => set('gavName', e.target.value)} placeholder="z. B. Landes-GAV des Gastgewerbes (L-GAV)" />
+              </Field>
+            )}
+            {a.gav === 'ja' && (
+              <Field label="Art der Geltung" hint="blosse Verweisung erzeugt keine Normwirkung (Art. 356/357 OR)">
+                <select className={inputCls} value={a.gavTyp ?? ''} onChange={(e) => set('gavTyp', (e.target.value || undefined) as AvAntworten['gavTyp'])}>
+                  <option value="">– wählen –</option>
+                  <option value="ave">allgemeinverbindlich erklärt (AVE)</option>
+                  <option value="mitgliedschaft">beidseitige Verbandsmitgliedschaft</option>
+                  <option value="verweis">blosse vertragliche Verweisung</option>
+                </select>
               </Field>
             )}
           </div>
@@ -366,6 +387,29 @@ export function VorlageArbeitsvertrag() {
                 <input type="checkbox" className="mt-0.5" checked={a.kvRealerfuellung ?? false} onChange={(e) => set('kvRealerfuellung', e.target.checked)} />
                 <span>Realerfüllung vorbehalten <span className="text-ink-500">(Beseitigung des vertragswidrigen Zustands, Art. 340b Abs. 3 OR — «besonders schriftlich verabredet»)</span></span>
               </label>
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <input type="checkbox" className="mt-0.5" checked={a.kvStrafeBefreitNicht ?? false} onChange={(e) => set('kvStrafeBefreitNicht', e.target.checked)} />
+                <span>Zahlung der Konventionalstrafe befreit <strong>nicht</strong> vom Verbot <span className="text-ink-500">(abweichende Abrede, Art. 340b Abs. 2 OR)</span></span>
+              </label>
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <input type="checkbox" className="mt-0.5" checked={a.kvKarenz ?? false} onChange={(e) => set('kvKarenz', e.target.checked)} />
+                <span><strong>Karenzentschädigung</strong> vereinbaren <span className="text-ink-500">(gesetzlich nicht vorgeschrieben; erlaubt ein weitergehendes Verbot, Art. 340a Abs. 2 OR)</span></span>
+              </label>
+              {a.kvKarenz && (
+                <div className="pl-6 space-y-3">
+                  <Field label="Karenzentschädigung (CHF pro Monat)">
+                    <input className={inputCls + ' num w-40'} inputMode="decimal" value={a.kvKarenzCHFProMonat ?? ''} onChange={(e) => set('kvKarenzCHFProMonat', e.target.value || undefined)} placeholder="z. B. 2'000" />
+                  </Field>
+                  <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                    <input type="checkbox" className="mt-0.5" checked={a.kvKarenzVerzichtsrecht ?? false} onChange={(e) => set('kvKarenzVerzichtsrecht', e.target.checked)} />
+                    <span>Einseitiges Verzichtsrecht des Arbeitgebers vorbehalten <span className="text-ink-500">(ohne Abrede keine einseitige Befreiung — BGer 4A_5/2025)</span></span>
+                  </label>
+                  <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                    <input type="checkbox" className="mt-0.5" checked={a.kvKarenzErsatzAnrechenbar ?? false} onChange={(e) => set('kvKarenzErsatzAnrechenbar', e.target.checked)} />
+                    <span>Ersatzeinkommen anrechenbar <span className="text-ink-500">(nur bei ausdrücklicher Abrede — BGer 4A_5/2025 E. 5.3)</span></span>
+                  </label>
+                </div>
+              )}
             </div>
           )}
           <p className="text-xs text-ink-500">

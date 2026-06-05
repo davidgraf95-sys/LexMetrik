@@ -132,7 +132,7 @@ describe('Arbeitsvertrag — Review-Befunde (Regression)', () => {
 
   it('AT-14 KTG-Gleichwertigkeit: 70 % warnt, 80 %/730 Tage nicht (Art. 324a Abs. 4 OR)', () => {
     expect(pruefeAvGates(basis({ lohnfortzahlung: 'ktg', ktgProzent: 70, ktgTage: 730 })).warnungen.join())
-      .toMatch(/gleichwertig/);
+      .toMatch(/[Gg]leichwertig/);
     expect(pruefeAvGates(basis({ lohnfortzahlung: 'ktg', ktgProzent: 80, ktgTage: 730 })).warnungen)
       .toEqual([]);
   });
@@ -153,3 +153,72 @@ describe('Arbeitsvertrag — Review-Befunde (Regression)', () => {
     expect(kv(6)).toMatch(/während 6 Monaten /);
   });
 });
+
+describe('Arbeitsvertrag — Vertiefungs-Gutachten 5.6.2026', () => {
+  it('AT-17 Befristung: Probezeit als VEREINBART deklariert, nie als gesetzliche Vermutung (Art. 335b OR)', () => {
+    const r = avZusammenstellen(basis({ befristet: true, befristetBis: '2027-07-31', probezeit: 'gesetzlich' }));
+    const ids = r.dokument.absaetze.map((x) => x.bausteinId);
+    expect(ids).toContain('A04_probezeit_befristet_vereinbart');
+    expect(ids).not.toContain('A04_probezeit_gesetzlich');
+    expect(r.dokument.absaetze.map((x) => x.text).join()).toMatch(/VEREINBAREN eine Probezeit von 1 Monat/);
+    // Hinweis offengelegt
+    expect(pruefeAvGates(basis({ befristet: true, befristetBis: '2027-07-31' })).hinweise.join())
+      .toMatch(/KEINE Probezeit.*ausdrücklich VEREINBART/s);
+    // unbefristet unverändert gesetzlich
+    expect(avZusammenstellen(basis()).dokument.absaetze.map((x) => x.bausteinId)).toContain('A04_probezeit_gesetzlich');
+  });
+
+  it('AT-18 KTG-Vollparametrisierung: Wartefrist/Prämienanteil im Text; Gleichwertigkeits-Mängel einzeln benannt', () => {
+    const a = basis({ lohnfortzahlung: 'ktg', ktgWartefristTage: 30, ktgWartefristLohnProzent: 80, ktgPraemieAnProzent: 50 });
+    const text = avZusammenstellen(a).dokument.absaetze.map((x) => x.text).join('\n');
+    expect(text).toMatch(/Wartefrist von 30 Tagen.*80 % des Lohnes/);
+    expect(text).toMatch(/innert 900 Tagen/);
+    expect(pruefeAvGates(a).warnungen).toEqual([]);
+    const schlecht = pruefeAvGates(basis({ lohnfortzahlung: 'ktg', ktgWartefristTage: 60, ktgWartefristLohnProzent: 0, ktgPraemieAnProzent: 60 }));
+    expect(schlecht.warnungen.join()).toMatch(/Wartefrist 60 Tage.*0 %/);
+    expect(schlecht.warnungen.join()).toMatch(/Prämienanteil 60 %/);
+  });
+
+  it('AT-19 GAV-Typen: AVE/Mitgliedschaft mit Normwirkung, Verweis nur Vertragsinhalt; Typ-Pflicht', () => {
+    expect(pruefeAvGates(basis({ gav: 'ja', gavName: 'L-GAV Gastgewerbe' })).blocker.join()).toMatch(/Art der Geltung/);
+    const ave = avZusammenstellen(basis({ gav: 'ja', gavTyp: 'ave', gavName: 'L-GAV Gastgewerbe' }));
+    expect(ave.dokument.absaetze.map((x) => x.bausteinId)).toContain('A14_gav_ave');
+    const verweis = basis({ gav: 'ja', gavTyp: 'verweis', gavName: 'L-GAV Gastgewerbe' });
+    expect(avZusammenstellen(verweis).dokument.absaetze.map((x) => x.text).join()).toMatch(/keine zwingende Normwirkung/);
+    expect(pruefeAvGates(verweis).hinweise.join()).toMatch(/KEINE Normwirkung/);
+  });
+
+  it('AT-20 Karenzentschädigung: Betrag Pflicht; ohne Verzichtsrecht/Anrechnungsabrede → BGer-4A_5/2025-Hinweise', () => {
+    const kv = (patch: Partial<AvAntworten>) => basis({
+      konkurrenzverbot: true, kvEinblickBestaetigt: true,
+      kvGegenstand: 'Treuhand', kvOrt: 'BS', kvDauerMonate: 12, ...patch,
+    });
+    expect(pruefeAvGates(kv({ kvKarenz: true })).blocker.join()).toMatch(/Betrag pro Monat/);
+    const g = pruefeAvGates(kv({ kvKarenz: true, kvKarenzCHFProMonat: '2000' }));
+    expect(g.hinweise.join()).toMatch(/4A_5\/2025/);
+    expect(g.hinweise.join()).toMatch(/NICHT.*anrechenbar/s);
+    const text = avZusammenstellen(kv({ kvKarenz: true, kvKarenzCHFProMonat: '2000', kvKarenzVerzichtsrecht: true, kvKarenzErsatzAnrechenbar: true, kvStrafeBefreitNicht: true, kvKonventionalstrafeCHF: '20000' }))
+      .dokument.absaetze.map((x) => x.text).join('\n');
+    expect(text).toMatch(/Karenzentschädigung von CHF 2'000\.00 pro Monat/);
+    expect(text).toMatch(/verzichten/);
+    expect(text).toMatch(/angerechnet/);
+    expect(text).toMatch(/befreit NICHT/);
+  });
+
+  it('AT-21 Mindestlöhne 1.1.2026 datiert; Stadt Luzern nur als Hinweis (kein kantonales Flag)', () => {
+    expect(AV_MINDESTLOEHNE.find((m) => m.kanton === 'GE')?.chfProStunde).toBe(24.59);
+    expect(AV_MINDESTLOEHNE.find((m) => m.kanton === 'BS')?.chfProStunde).toBe(22.20);
+    expect(AV_MINDESTLOEHNE.some((m) => m.kanton === 'LU')).toBe(false);
+    const r = pruefeAvGates(basis({ lohnModell: 'stundenlohn', lohnBetrag: '22', arbeitsortKanton: 'LU' }));
+    expect(r.warnungen.join()).not.toMatch(/Mindestlohn/);
+    expect(r.hinweise.join()).toMatch(/Stadt Luzern.*KOMMUNALEN/s);
+  });
+});
+
+  it('AT-22 Review-Regressionen: Max-3-Schranke auch im befristeten Probezeit-Pfad; kein Karenz-Leak ohne KV', () => {
+    expect(pruefeAvGates(basis({ befristet: true, befristetBis: '2027-07-31', probezeit: 'verlaengert', probezeitMonate: 4 })).blocker.join())
+      .toMatch(/drei Monate/i);
+    const r = avZusammenstellen(basis({ konkurrenzverbot: false, kvKarenz: true, kvKarenzCHFProMonat: '2000' }));
+    expect(r.dokument.absaetze.map((x) => x.text).join()).not.toMatch(/Karenzentschädigung/);
+    expect(pruefeAvGates(basis({ konkurrenzverbot: false, kvKarenz: true })).blocker).toEqual([]);
+  });
