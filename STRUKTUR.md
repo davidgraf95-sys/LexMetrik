@@ -22,6 +22,12 @@ Build ✓ · Lint 0/0 ✓ · 477 Tests in 26 Dateien (475 grün + 2 skipped) ✓
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
+Fedlex-Caches + Anker-Inventar: `bash scripts/fedlex-cache.sh`.
+
+**Informationsbibliothek: `bibliothek/INDEX.md`** — Quellen-Register
+(verifizierte Fedlex-Stände inkl. ZPO-Revision 2025), Parameter-
+Verfallsregister, Recherche-Dossiers (Schlichtungsbehörden 26 Kantone),
+ZPO-Normtexte für die geplante Zuständigkeitsengine.
 
 ## Verschlankung 5.6.2026 (verhaltensneutral, Review ohne Befunde)
 

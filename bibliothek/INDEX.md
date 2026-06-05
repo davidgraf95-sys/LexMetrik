@@ -1,0 +1,35 @@
+# Bibliothek — Informationsgrundlagen für LexMetrik
+
+Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
+das (noch) nicht Code ist. Regeln (aus CLAUDE.md abgeleitet):
+
+1. **Nur amtliche Quellen als Beleg**, immer mit URL und Abrufdatum (§7).
+2. **Status ehrlich tragen:** Jedes Dokument sagt im Kopf, ob es abgenommen ist.
+   Recherchen sind ARBEITSGRUNDLAGEN — Übernahme in Engines/Stammdaten erst nach
+   fachlicher Prüfung durch David.
+3. **Unsicherheiten bleiben sichtbar** (§8) — nie weggeglättet.
+4. **Datiertes datiert halten:** veränderliche Werte gehören ins
+   [Parameter-Verfallsregister](parameter-verfall.md).
+
+## Inhalt
+
+| Dokument | Inhalt | Status |
+|---|---|---|
+| [quellen-register.md](quellen-register.md) | Verifizierte Fedlex-Quellen (ELI, Konsolidierung, geprüfte Anker, Filestore-Muster) + externe amtliche Quellen | gepflegt, fortlaufend |
+| [parameter-verfall.md](parameter-verfall.md) | Register aller datierten Parameter im Code mit Prüfrhythmus | gepflegt, fortlaufend |
+| [schlichtungsbehoerden-kantone.md](schlichtungsbehoerden-kantone.md) | Schlichtungsbehörden aller 26 Kantone (Art. 197/200 ZPO): Organisationsform, Adressen, Quellen | Recherche 5.6.2026, **nicht abgenommen** |
+| [normtexte-zpo-zustaendigkeit.md](normtexte-zpo-zustaendigkeit.md) | Wortlaut der 25 Schlüsselartikel für die geplante Zuständigkeitsengine (ZPO, Konsolidierung 1.1.2025 — inkl. Revision 2025) | maschinell extrahiert, **vor Verdrahtung sichtprüfen** |
+
+## Werkzeuge
+
+- `scripts/fedlex-cache.sh` — lädt die konsolidierten Filestore-HTMLs aller
+  verwendeten Gesetze nach /tmp und prüft das Anker-Inventar (reproduzierbare
+  §7-Verifikation; /tmp-Caches überleben Neustarts nicht).
+- `scripts/golden-outputs.ts` — Golden-Protokoll der Engines (53 Fälle).
+
+## Verwandtes im Repo (nicht hier dupliziert)
+
+- `src/lib/fedlex.ts` — verdrahtete, verifizierte Fedlex-Basis-URLs + Anker-Logik
+- `src/data/verifikation.ts` — Rechtsprechungs-Register (BGE/BGer mit Verifikations-Status)
+- `src/lib/vorlagen/behoerden.ts` — abgenommene Behörden-Stammdaten (aktuell: BS)
+- `STRUKTUR.md` — Gesamtstand · `KATALOG-ROADMAP.md` — Soll-Inventar
