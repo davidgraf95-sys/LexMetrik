@@ -13,6 +13,9 @@ export const FEDLEX = {
   // ArG: Anker art_9/art_12/art_13/art_46 empirisch gegen das konsolidierte
   // Filestore-HTML verifiziert (Konsolidierung 20230901; geprüft 5.6.2026).
   ArG:   'https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de',
+  // VMWG SR 221.213.11 — ELI via Fedlex-SPARQL verifiziert; Anker art_16/17/
+  // 19/19a empirisch am Filestore-HTML (Konsolidierung 20251001; 5.6.2026).
+  VMWG:  'https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
