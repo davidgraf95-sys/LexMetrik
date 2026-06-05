@@ -27,3 +27,10 @@ Stand des Registers: 5.6.2026.
    Wert wirkt (Vorbild: Referenzzins-Hinweis im Mietvertrag).
 3. Verfallene Prüfungen sind ein Deploy-Hindernis für die betroffene Vorlage, kein
    stiller Weiterbetrieb (§8).
+
+## NE: Umzug Tribunal régional Montagnes/Val-de-Ruz (Sommer 2026)
+- **Was:** TR La Chaux-de-Fonds zieht von Av. Léopold-Robert 10 auf
+  **Av. Léopold-Robert 63** (Postgebäude); Akteneinsicht 27.4.–27.5.2026
+  gesperrt; «Umzug im Sommer 2026». NICHT das Tribunal cantonal!
+- **Prüfen:** ab Juli 2026 auf ne.ch, vor jeder Stammdaten-Übernahme NE.
+- **Quelle:** ne.ch/Presse (Doppelcheck-Durchgang 5.6.2026).

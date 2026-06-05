@@ -270,8 +270,51 @@ anders; BL Zivilkreisgerichte in Sissach/Arlesheim statt Liestal/Pratteln;
 LU-Bezirksgerichte Kriens/Hochdorf/Willisau andere Strassen; BS Jugendgericht
 = Bäumleingasse 1; BS Mietschlichtung = Grenzacherstrasse 62).
 
-## Zweiter Prüfdurchgang (Anordnung David: «das muss stimmen»)
+## Zweiter Prüfdurchgang — ERGEBNIS (adversarial, 5.6.2026)
 
-_Nach Eintreffen der Gebühren-Berichte: unabhängige Re-Verifikation der
-konsolidierten Liste (Stichproben bestätigter + alle unsicheren Einträge).
-Ergebnis wird hier nachgetragen._
+**Gesamtbefund: KEINE harte Widerlegung; 8/8 Kantons-Stichproben (UR Land-
+gericht, SZ KGer, VD TC Signal 8, TG OGer, SO Olten-Gösgen, JU TC, ZG OGer,
+SG KreisG St. Gallen) amtlich bestätigt.**
+
+### Geschlossene offene Punkte
+- **GR Obergericht:** nur noch **Grabenstrasse 30, 7001 Chur** — Umzug ins
+  sanierte Staatsgebäude vollzogen; «Poststrasse 14» ist HISTORISCH, streichen.
+  (justiz-gr.ch Kontakt/Standort)
+- **TI Preture — alle 10 amtlich belegt** (www4.ti.ch je Distretto):
+  Lugano Via Bossi 3 · Bellinzona Piazza Governo 2 · Locarno Città UND
+  Campagna Piazza Grande 16b (⚠ Drittquelle «Via della Pace 6» ist FALSCH) ·
+  Mendrisio Nord UND Sud Via Beroldingen 11 · Vallemaggia Via Pretorio 2,
+  6675 Cevio · Riviera Via Lucomagno 19, Biasca · Blenio Via Bosco Ciossera
+  10, Acquarossa · Leventina Sede Faido, Palazzo del Pretorio (Strasse/PLZ
+  amtlich nicht publiziert → offen).
+- **FR Wirtschaftsstrafgericht (Tribunal pénal économique): existiert** —
+  Route d'Englisberg 13, 1763 Granges-Paccot (administrativ am TA Sarine).
+- **BL Steuer-/Enteignungsgericht: Gitterlistrasse 5 BESTÄTIGT**
+  («Kreuzbodenweg 1» = Drittquellen-Artefakt, nicht übernehmen).
+- **VS Bezirksgerichte:** alle Dossier-Adressen amtlich deckungsgleich
+  (vs.ch contacts-et-accès).
+- **GE Gebäude geklärt:** Cour de justice = Bourg-de-Four 1 (Bât. A; öff.
+  Recht Saint-Léger 10) · TPI/Tribunal des baux = Komplex Bourg-de-Four/
+  Chaudronniers · Tribunal civil = Athénée 6-8 (Bât. R) · Prud'hommes =
+  Bd Helvétique 27 · TAPI = Ami-Lullin 4.
+- **SH KGer Herrenacker 26 / OGer Frauengasse 17 bestätigt; AI:** «Unteres
+  Ziel 20» und «Zielstrasse 38» = DASSELBE Gebäude (eine Kanzlei).
+
+### Präzisierung NE (engine-relevant)
+Der Sommer-2026-Umzug auf **Av. Léopold-Robert 63** betrifft das **Tribunal
+régional Montagnes/Val-de-Ruz (La Chaux-de-Fonds)** — NICHT das Tribunal
+cantonal (das bleibt Rue du Pommier 1, amtlich bestätigt). Stand 5.6.2026:
+La Chaux-de-Fonds noch Léopold-Robert 10; Akteneinsicht 27.4.–27.5.2026
+gesperrt, Umzug «cet été». → Parameter-Verfallsregister.
+
+### Verbleibend OFFEN (amtlich nicht publiziert)
+- AR Obergericht Trogen: amtlich nur «Fünfeckpalast, 9043 Trogen» OHNE
+  Hausnummer («Landsgemeindeplatz 7» nur Drittquelle — NICHT übernehmen).
+- TI Pretura Leventina (Faido): Strasse/PLZ.
+- Beobachten: SG Kreisgericht St. Gallen (neuer Standort «geplant»;
+  aktuell Bohl 1/Neugasse 3).
+
+**Status der Liste damit: zweifach geprüft** (Erstrecherche + adversarialer
+Durchgang); Einzeleinträge ohne expliziten Vermerk gelten als einfach
+belegt + stichprobenbestätigt. Übernahme in Stammdaten weiterhin erst nach
+Davids Abnahme.
