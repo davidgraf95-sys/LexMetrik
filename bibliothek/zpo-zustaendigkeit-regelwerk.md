@@ -306,4 +306,171 @@ Abs. 4 — Zahlungsverbote aus **Wechsel und Check** und deren Kraftloserklärun
 
 ## TEIL 3 — Sachliche/funktionelle Zuständigkeit (Art. 4–8) + Systematik
 
-_(Bericht ausstehend — wird hier ergänzt.)_
+# Regelwerk: ZPO sachliche und funktionelle Zuständigkeit + Systematik (Fassung seit 1.1.2025)
+
+**Abrufdatum:** 5.6.2026 · **Normquelle:** lokaler Cache `/tmp/zpo.html` (Fedlex-Filestore SR 272, Konsolidierung 20250101, in Kraft; Revision «Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung», BG vom 17.3.2023, AS 2023 491, in Kraft seit 1.1.2025). Wortlaute wörtlich aus dem Cache; BGE/Sekundärquellen als solche markiert.
+
+## Wichtige Vorab-Korrekturen zum Auftrag (§7 «verifizieren, nicht vertrauen»)
+
+Drei Punkte des Auftrags weichen vom verifizierten Normtext ab:
+
+1. **Art. 5 hat KEINE lit. j.** Der Katalog läuft im Cache von **lit. a bis lit. i** (Abs. 1). Der Auftrag spricht von «lit. a–j vollständig» — das ist faktisch falsch. Es gibt nur a–i.
+2. **Art. 6 hat keinen Abs. 7.** Der Artikel endet mit **Abs. 6** (Streitgenossen-Regel). Der Auftrag verweist auf «Abs. 6/7» — Abs. 7 existiert nicht.
+3. **Art. 7 betrifft Zusatzversicherungen zur sozialen Krankenversicherung (KVG)**, nicht ein generisches «KVG-Zusatz-Gericht». Wortlaut präzisiert unten.
+
+---
+
+## 1. Art. 4–8 ZPO wörtlich + Systematik
+
+### Art. 4 — Grundsätze (kantonale Organisationshoheit)
+> **¹** Das kantonale Recht regelt die sachliche und funktionelle Zuständigkeit der Gerichte, soweit das Gesetz nichts anderes bestimmt.
+> **²** Hängt die sachliche Zuständigkeit vom Streitwert ab, so erfolgt dessen Berechnung nach diesem Gesetz.
+
+**Systematik:** Grundsatz = kantonale Hoheit über sachliche (welcher Gerichtstyp) und funktionelle (welche Instanz/welcher Spruchkörper) Zuständigkeit. Der Bund schreibt nur punktuell zwingend vor (Art. 5–8) und vereinheitlicht die Streitwertberechnung (Abs. 2, → Art. 91 ff.).
+
+### Art. 5 — Einzige kantonale Instanz (Katalog lit. a–i vollständig)
+Abs. 1: Das kantonale Recht bezeichnet das Gericht, das als **einzige kantonale Instanz** zuständig ist für:
+- **a.** Streitigkeiten im Zusammenhang mit geistigem Eigentum (inkl. Nichtigkeit, Inhaberschaft, Lizenzierung, Übertragung, Verletzung);
+- **b.** kartellrechtliche Streitigkeiten;
+- **c.** Streitigkeiten über den Gebrauch einer Firma;
+- **d.** Streitigkeiten nach dem UWG vom 19.12.1986, **sofern der Streitwert mehr als 30 000 Franken beträgt** oder sofern der Bund sein Klagerecht ausübt;
+- **e.** Streitigkeiten nach dem Kernenergiehaftpflichtgesetz vom 13.6.2008 (Fassung in Kraft seit 1.1.2022);
+- **f.** **Klagen gegen den Bund, sofern der Streitwert mehr als 30 000 Franken beträgt** — *Fassung gemäss Revision, in Kraft seit 1.1.2025* (AS 2023 491);
+- **g.** Streitigkeiten über Einleitung/Durchführung einer Sonderuntersuchung nach Art. 697c–697h^bis OR (Aktienrecht, seit 1.1.2023);
+- **h.** Streitigkeiten nach Kollektivanlagengesetz / Finanzmarktinfrastrukturgesetz / Finanzinstitutsgesetz;
+- **i.** Streitigkeiten nach Wappenschutzgesetz, Rotkreuz-Schutzgesetz und UNO-Namens-/Zeichenschutzgesetz.
+
+Abs. 2: > Diese Instanz ist auch für die Anordnung vorsorglicher Massnahmen vor Eintritt der Rechtshängigkeit einer Klage zuständig.
+
+**Revisions-Änderung 2025:** Im Art.-5-Katalog ist nur **lit. f** auf den 1.1.2025 neu gefasst worden (Klagen gegen den Bund — Streitwertschwelle 30 000). Die übrigen Änderungen (e, g, h, i) sind älter.
+
+### Art. 6 — Handelsgericht (wörtlich, Abs. 1–6)
+> **¹** Die Kantone können ein Fachgericht bezeichnen, welches als einzige kantonale Instanz für handelsrechtliche Streitigkeiten zuständig ist (Handelsgericht).
+> **² Eine Streitigkeit gilt als handelsrechtlich, wenn:**
+> **a.** die geschäftliche Tätigkeit mindestens einer Partei betroffen ist;
+> **b.** der Streitwert mehr als 30 000 Franken beträgt oder es sich um eine nicht vermögensrechtliche Streitigkeit handelt; *(Fassung seit 1.1.2025)*
+> **c.** die Parteien als Rechtseinheiten im schweizerischen Handelsregister oder in einem vergleichbaren ausländischen Register eingetragen sind; und *(Fassung seit 1.1.2025)*
+> **d.** es sich nicht um eine Streitigkeit aus dem Arbeitsverhältnis, nach dem Arbeitsvermittlungsgesetz, nach dem Gleichstellungsgesetz, aus Miete und Pacht von Wohn- und Geschäftsräumen oder aus landwirtschaftlicher Pacht handelt. *(eingefügt, in Kraft seit 1.1.2025)*
+> **³** Ist nur die beklagte Partei als Rechtseinheit … eingetragen, sind aber die übrigen Voraussetzungen erfüllt, so kann die klagende Partei **zwischen dem Handelsgericht und dem ordentlichen Gericht wählen**. *(Fassung seit 1.1.2025)*
+> **⁴ Die Kantone können das Handelsgericht ausserdem zuständig erklären für:** a. Streitigkeiten nach Art. 5 Abs. 1; b. Streitigkeiten aus dem Recht der Handelsgesellschaften und Genossenschaften; **c.** Streitigkeiten mit den Bedingungen: 1. geschäftliche Tätigkeit mindestens einer Partei betroffen, 2. Streitwert ≥ 100 000 Franken, 3. Parteien stimmen der Zuständigkeit zu, 4. im Zeitpunkt der Zustimmung hat mindestens eine Partei Wohnsitz/Aufenthalt/Sitz im Ausland. *(lit. c eingefügt, seit 1.1.2025 — «internationale Prorogation ans HG»)*
+> **⁵** Das Handelsgericht ist auch für vorsorgliche Massnahmen vor Rechtshängigkeit zuständig.
+> **⁶** Betreffen Klagen Streitgenossen, die nicht alle … eingetragen sind, so ist das Handelsgericht nur zuständig, wenn alle Klagen in seine Zuständigkeit fallen.
+
+**Revisions-Schwerpunkt 2025 in Art. 6:** lit. b (Streitwert-/nichtvermögensrechtlich-Klarstellung), lit. c und das neue lit. d (Negativkatalog der ausgeschlossenen Materien) neu gefasst/eingefügt; Wahlrecht Abs. 3 neu gefasst; Abs. 4 lit. c (Auslandsbezug + Zustimmung ≥ 100k) neu.
+
+### Art. 7 — Gericht bei Streitigkeiten aus Zusatzversicherungen zur sozialen Krankenversicherung
+> Die Kantone können ein Gericht bezeichnen, welches als einzige kantonale Instanz für Streitigkeiten aus Zusatzversicherungen zur sozialen Krankenversicherung nach dem KVG vom 18. März 1994 zuständig ist.
+
+(Folge: Für diese Streitigkeiten **entfällt die Schlichtung**, Art. 198 lit. f.)
+
+### Art. 8 — Direkte Klage beim oberen Gericht (≥ 100k)
+> **¹** In vermögensrechtlichen Streitigkeiten kann die klagende Partei **mit Zustimmung der beklagten Partei direkt an das obere Gericht** gelangen, sofern der Streitwert mindestens 100 000 Franken beträgt.
+> **²** Dieses Gericht entscheidet als einzige kantonale Instanz. **Es ist auch für die Anordnung vorsorglicher Massnahmen vor Eintritt der Rechtshängigkeit zuständig.** *(zweiter Satz eingefügt, in Kraft seit 1.1.2025)*
+
+---
+
+## 2. Verhältnis-Regeln (Rechtsprechung)
+
+### HG vs. vereinfachtes Verfahren — vereinfachtes Verfahren geht vor
+- **BGE 139 III 457** (22.10.2013): Regeste wörtlich — *«die Regelung der Verfahrensart geht jener über die sachliche Zuständigkeit des Handelsgerichts vor.»* Das HG ist für Streitigkeiten, die nach **Art. 243 Abs. 2 lit. c** ZPO dem vereinfachten Verfahren unterliegen, **nicht zuständig** (Mietfall). *(verifiziert via bger.ch / weblaw-Cache)*
+- **BGE 143 III 137** (27.2.2017): Bestätigung und Ausweitung auf **Art. 243 Abs. 1** (streitwertabhängig, ≤ 30 000): Erfüllt eine Sache **zugleich** die HG-Voraussetzungen und die Voraussetzungen des vereinfachten Verfahrens, ist Art. 243 Abs. 3 zu beachten — dort gilt das vereinfachte Verfahren «keine Anwendung» nur vor den Instanzen nach Art. 5, 6, 8. Konsequenz: Die Sache fällt ins vereinfachte Verfahren und damit aus der HG-Zuständigkeit. Konkreter Fall: Klage über CHF 30 000 (= ≤ Schwelle) → vereinfacht → kein HG. *(verifiziert)*
+- **Praxisfolge:** Die HG-Zuständigkeit besteht nur, wo ordentliches Verfahren gilt, d. h. faktisch bei Streitwert **über** 30 000 und ausserhalb der Schutzmaterien (Miete/Arbeit/GlG) — was sich mit dem neuen Negativkatalog Art. 6 Abs. 2 lit. d (seit 2025) jetzt auch direkt aus dem Gesetz ergibt.
+
+### Begriff «geschäftliche Tätigkeit» (Art. 6 Abs. 2 lit. a)
+- **BGE 139 III 457:** erfasst **Grundgeschäfte** (z. B. Verkauf eigener Waren) **und Hilfs-/Nebengeschäfte**, die die Geschäftstätigkeit fördern oder unterstützen (Botschaftsverweis). *(verifiziert)*
+- **BGE 140 III 409** (4.7.2014): Zu lit. c — eine natürliche Person muss als **Unternehmer/in unter ihrer Firma** im HR eingetragen sein; die Eintragung bloss **als Organ** einer Gesellschaft genügt nicht für die passive HG-Zuständigkeit. *(verifiziert via weblaw/servat)*
+- **BGE 140 III 355** (Sekundär-Hinweis aus Suche): Das HG ist nicht zuständig für rein betreibungsrechtliche Streitigkeiten. *(nicht primär verifiziert — Sekundärquelle)*
+
+### Wahlrecht Art. 6 Abs. 3 — Praxis
+Ist **nur die beklagte** Partei im HR eingetragen (übrige Voraussetzungen erfüllt), wählt die **klagende** Partei zwischen HG und ordentlichem Gericht. Die Norm wurde 2025 neu gefasst (vorher str. Auslegung); sie kodifiziert das schon zuvor praktizierte Wahlrecht des nicht eingetragenen Klägers. Das Wahlrecht greift nur in **Kantonen mit Handelsgericht** (real: ZH, BE, AG, SG — Sekundärquelle handelsgericht.ch / law.ch).
+
+### Direktklage Art. 8 und Verhältnis zu Art. 5/6
+- Art. 8 ist **dispositiv** (Zustimmung der Gegenpartei nötig) und nur **vermögensrechtlich ≥ 100 000**; das obere Gericht entscheidet als **einzige kantonale Instanz** (= Verlust einer Instanz, daher Zustimmungserfordernis).
+- Verhältnis: Art. 5 (zwingend, materienbezogen) und Art. 6 (HG, kantonal fakultativ) gehen vor, wo einschlägig — die Direktklage Art. 8 ist die **Auffangoption** für die übrigen ordentlichen vermögensrechtlichen Streitigkeiten ≥ 100k. Für Art. 5/6/8 **entfällt die Schlichtung** (Art. 199 Abs. 3, neu seit 2025) bzw. die Klage kann direkt eingereicht werden.
+
+---
+
+## 3. Funktionelle Zuständigkeit
+
+**Begriff:** Funktionelle Zuständigkeit = Verteilung der gerichtlichen Funktionen auf Instanzenzug (erste/zweite Instanz, Rechtsmittel) und Spruchkörper (Einzelgericht/Kollegium/Präsidium). Sie ist nach **Art. 4 Abs. 1 kantonal geregelt**, soweit der Bund nichts vorschreibt.
+
+**Schnittstelle Schlichtung als funktionelle Stufe (Art. 197–199, 202):**
+- **Art. 197 (Grundsatz):** > Dem Entscheidverfahren geht ein Schlichtungsversuch vor einer Schlichtungsbehörde voraus.
+- **Art. 198 (Ausnahmen):** Schlichtung entfällt u. a. — lit. a summarisches Verfahren; lit. b/b^bis Personenstand/Kindesunterhalt; lit. c Scheidung; lit. e SchKG-Klagen; **lit. f Streitigkeiten, für die nach Art. 7 eine einzige kantonale Instanz zuständig ist**; **lit. g Hauptintervention, Widerklage, Streitverkündungsklage**; **lit. h gerichtlich gesetzte Klagefrist** (+ sachlich zusammenhängende Klagen); lit. i Bundespatentgericht.
+- **Art. 199 (Verzicht):** Abs. 1 gemeinsamer Verzicht ab Streitwert ≥ 100 000; Abs. 2 einseitiger Verzicht der klagenden Partei (a Beklagte im Ausland, b Aufenthalt unbekannt, c GlG); **Abs. 3 NEU (seit 1.1.2025):** > Bei Streitigkeiten, für die nach den Artikeln 5, 6 und 8 eine einzige kantonale Instanz zuständig ist, kann die klagende Partei die Klage direkt beim Gericht einreichen.
+- **Art. 202 (Einleitung):** Schlichtungsgesuch in Formen nach Art. 130 oder mündlich zu Protokoll; Bezeichnung von Gegenpartei, Rechtsbegehren, Streitgegenstand.
+
+**Prüfungsreihenfolge / Prozessvoraussetzungen (von Amtes wegen):**
+- **Art. 59 Abs. 2 lit. b** wörtlich: *«das Gericht ist sachlich und örtlich zuständig»* — Zuständigkeit ist Prozessvoraussetzung (Eintretensfrage). (Abs. 2 nennt zusätzlich schutzwürdiges Interesse, Partei-/Prozessfähigkeit, keine anderweitige Rechtshängigkeit, keine res iudicata, Kostenvorschuss/Sicherheit.)
+- **Art. 60 wörtlich:** > Das Gericht prüft von Amtes wegen, ob die Prozessvoraussetzungen erfüllt sind.
+- **BGE-Beleg zur Prüfung:** Die Gültigkeit der **Klagebewilligung** ist als Prozessvoraussetzung von Amtes wegen zu prüfen (Art. 60). Bei örtlicher Unzuständigkeit der **Schlichtungsbehörde** gilt jedoch ein Vorbehalt, wenn die Parteien über den Gerichtsstand disponieren können (dispositiver/nicht teilzwingender Gerichtsstand → Vereinbarung Art. 17 oder Einlassung Art. 18 möglich) — **BGer 4A_400/2019\*** (Sekundärquelle zpo-cpc.ch / zpo-zivilprozessordnung.ch).
+
+---
+
+## 4. Perpetuatio fori + Rechtshängigkeits-Wirkungen
+
+### Art. 64 Abs. 1 lit. b — perpetuatio fori (wörtlich)
+> **¹** Die Rechtshängigkeit hat insbesondere folgende Wirkungen:
+> **a.** der Streitgegenstand kann zwischen den gleichen Parteien nicht anderweitig rechtshängig gemacht werden;
+> **b.** **die örtliche Zuständigkeit bleibt erhalten.**
+> **²** Für die Wahrung einer gesetzlichen Frist des Privatrechts … ist die Rechtshängigkeit nach diesem Gesetz massgebend.
+
+**Inhalt (BGE-/Sekundär-Beleg):** Einmal mit Rechtshängigkeit begründet, bleibt die örtliche Zuständigkeit für das ganze Verfahren bestehen, auch wenn die zuständigkeitsbegründenden Tatsachen später wegfallen. Die perpetuatio bezieht sich (Wortlaut) ausdrücklich auf die **örtliche** Zuständigkeit; für die **sachliche** Zuständigkeit gilt sie nach h. L. analog (Sekundärquelle).
+
+### Art. 62 — Beginn der Rechtshängigkeit (wörtlich)
+> **¹** Die Einreichung eines Schlichtungsgesuches, einer Klage, eines Gesuches oder eines gemeinsamen Scheidungsbegehrens begründet Rechtshängigkeit.
+> **²** Der Eingang dieser Eingaben wird den Parteien bestätigt.
+
+### Art. 63 — Rechtshängigkeit bei fehlender Zuständigkeit / falscher Verfahrensart (wörtlich, «Rettungsnorm»)
+> **¹** Wird eine Eingabe, die mangels Zuständigkeit zurückgezogen oder auf die nicht eingetreten wurde, **innert eines Monates** seit dem Rückzug oder dem Nichteintretensentscheid bei der zuständigen Schlichtungsbehörde oder beim zuständigen Gericht neu eingereicht **oder wird sie gemäss Artikel 143 Absatz 1^bis weitergeleitet**, so gilt als Zeitpunkt der Rechtshängigkeit **das Datum der ersten Einreichung**. *(Fassung seit 1.1.2025 — neu inkl. amtlicher Weiterleitung nach Art. 143 Abs. 1^bis)*
+> **²** Gleiches gilt, wenn eine Klage **nicht im richtigen Verfahren** eingereicht wurde.
+> **³** Vorbehalten bleiben die besonderen gesetzlichen Klagefristen nach dem SchKG.
+
+**Wirkung:** Rückdatierung der Rechtshängigkeit (Fristenwahrung) bei Rückzug/Nichteintreten wegen Unzuständigkeit oder falscher Verfahrensart, sofern binnen Monatsfrist neu eingereicht — bzw. seit 2025 automatisch bei amtlicher Weiterleitung.
+
+---
+
+## 5. Internationale Abgrenzung (Weiche)
+
+### Art. 2 — Internationale Verhältnisse (wörtlich)
+> Bestimmungen des Staatsvertragsrechts und die Bestimmungen des Bundesgesetzes vom 18. Dezember 1987 über das Internationale Privatrecht (IPRG) bleiben vorbehalten.
+
+**Weiche:** Liegt ein internationaler Sachverhalt vor (Auslandsbezug), gehen Staatsverträge (insb. **LugÜ**) und das **IPRG** den ZPO-Gerichtsständen vor — die örtlichen ZPO-Zuständigkeiten (Art. 9 ff.) gelten dann **nicht**. Die ZPO regelt im internationalen Verhältnis nur das **Verfahren** (lex fori), nicht die internationale Zuständigkeit. (Kein LugÜ-Detail nötig — nur diese Abgrenzungsweiche.)
+
+---
+
+## 6. Engine-Hinweise (`src/lib/zustaendigkeit.ts`)
+
+**Korrekt abgebildet:**
+- Prüfreihenfolge **örtlich → sachlich → funktionell (Schlichtung/Behörde/Kompetenz) → Verfahrensart → einleitende Eingabe** (Zeilen 135–319) — methodisch sauber, mit Rechenweg-Schritten.
+- **HG-Weiche** (Art. 6): geschäftliche Tätigkeit + HR-Eintrag + Streitwert > 30 000 als offene Weiche, inkl. **Wahlrecht Abs. 3** wenn nur Beklagte im HR (Z. 185–194). Korrekt: Miete/Arbeit als HG-ausgeschlossen behandelt (entspricht neuem Art. 6 Abs. 2 lit. d).
+- **Direktklage-Weiche** (Art. 8): Streitwert ≥ 100 000 (Z. 195–198).
+- **Art. 243 Abs. 3** korrekt verknüpft: Warnung, dass bei Wahl HG/Direktklage das vereinfachte Verfahren **nicht** gilt (Z. 287–291) — deckt sich mit BGE 139 III 457 / 143 III 137.
+- **Art. 199 Abs. 3** (Schlichtung entfällt bei Art. 5/6/8) ist in den Weichen-Texten erwähnt (Z. 189, 197).
+- Art. 4 als kantonale Auflösungsschicht offengelegt (Warnung Z. 294).
+
+**Fehlt / unvollständig (gegen den Auftrag):**
+1. **Einlassung Art. 18** — nicht abgebildet. Bei dispositivem Gerichtsstand wird das angerufene Gericht durch vorbehaltlose Einlassung der Beklagten zuständig; relevant für die «örtlich»-Stufe (bei `bindung === 'dispositiv'`). Die Engine kennt nur dispositiv/teilzwingend/zwingend, aber keinen Einlassungs-Hinweis.
+2. **Perpetuatio fori (Art. 64 Abs. 1 lit. b)** — fehlt vollständig. Kein Hinweis, dass die örtliche Zuständigkeit ab Rechtshängigkeit fixiert bleibt.
+3. **Art.-63-Rettung (Rückdatierung / Weiterleitung)** — fehlt. Bei Unzuständigkeit/falscher Verfahrensart sollte die Engine auf die Monatsfrist und die seit 2025 neue amtliche Weiterleitung (Art. 143 Abs. 1^bis) hinweisen — gerade weil die Engine selbst Weichen mit Unzuständigkeitsrisiko (HG, Direktklage) aufwirft.
+4. **Art. 60 / 59 Abs. 2 lit. b (Prüfung von Amtes wegen)** — als methodischer Rahmen nicht explizit benannt; die Engine prüft de facto, deklariert aber den «von Amtes wegen»-Charakter und die Eintretensfolge (Nichteintreten bei Unzuständigkeit) nicht.
+5. **Art. 5 (einzige kantonale Instanz, IP/Kartell/UWG etc.)** — als Streitsache-Typ nicht modelliert (Engine kennt nur geldforderung/miete/arbeit/scheidung/erbrecht). Materien nach Art. 5 würden die HG-/Schlichtungslogik überschreiben — derzeit nicht erfasst.
+6. **Art. 2 (internationale Weiche)** — nur als Annahme im Anzeigeobjekt («Binnenverhältnis Schweiz», Z. 355), nicht als aktive Weiche/Warnung bei erkennbarem Auslandsbezug (die Engine fragt `beklagteAuslandOderUnbekannt` bereits ab — dort liesse sich der IPRG/LugÜ-Vorbehalt andocken).
+7. **Schwellen-Detail Art. 6 Abs. 2 lit. b:** Engine nutzt `sw > 30 000` (strikt grösser, Z. 186) — das ist korrekt («mehr als 30 000»). Gegenprobe bestanden. Hinweis: Art. 5 lit. d/f nutzen ebenfalls «mehr als 30 000» (strikt), Art. 8/199 «mindestens 100 000» (≥) — die Engine verwendet bei Direktklage/Verzicht korrekt `>=` (Z. 195, 214).
+
+**Keine Normfehler im Engine-Kommentar gefunden**, ausser dass der Engine-Header Art. 5 nicht auflistet und Art. 18/63/64 nicht erwähnt — konsistent mit den obigen Lücken.
+
+---
+
+## Quellen
+Primär (Wortlaut, Cache verifiziert): ZPO SR 272, Fedlex-Konsolidierung 20250101, Art. 2, 4, 5, 6, 7, 8, 18, 59, 60, 62, 63, 64, 197, 198, 199, 202.
+Rechtsprechung (verifiziert):
+- [BGE 139 III 457 (bger / weblaw-Cache)](https://entscheide.weblaw.ch/cache.php?link=BGE-139-III-457&q=%22bge+139+iii+457%22&sel_lang=de) · [bger.ch](https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf://139-III-457:de&lang=de&type=show_document) · [servat.unibe.ch](https://www.servat.unibe.ch/dfr/bge/c3139457.html)
+- [BGE 143 III 137 (weblaw-Cache)](https://entscheide.weblaw.ch/cache.php?link=BGE-143-III-137) · [servat.unibe.ch](https://www.servat.unibe.ch/dfr/bge/c3143137.html)
+- [BGE 140 III 409 (weblaw-Cache)](https://entscheide.weblaw.ch/cache.php?link=bge-140-iii-409&sel_lang=en) · [servat.unibe.ch](https://www.servat.unibe.ch/dfr/bge/c3140409.html)
+
+Sekundär (markiert): [BGer 4A_400/2019\* — örtliche Unzuständigkeit der Schlichtungsbehörde, zpo-cpc.ch](https://www.zpo-cpc.ch/de/bger-4a-400-2019/) · [zpo-zivilprozessordnung.ch zu Art. 64/59/209](https://www.zpo-zivilprozessordnung.ch/blog/art-64-abs-1-lit-b-59-209-zpo-durch-ein-schlichtungsgesuch-begruendetete-rechtsaengigkeit) · [onlinekommentar.ch Art. 6 ZPO](https://onlinekommentar.ch/de/kommentare/zpo6) · [law.ch / handelsgericht.ch (HG-Kantone, Praxis)](https://law.ch/lawinfo/handelsgericht-handelsgerichte/sachliche-zustaendigkeit/obligatorische-zustandigkeit/) · BGE 140 III 355 (HG nicht für betreibungsrechtliche Streitigkeiten — nur aus Suchindex, nicht primär geprüft).
+
+---
+
+**Hinweis zum Auftrag:** Wie verlangt wurden keine Repo-Dateien geändert; dies ist reine Recherche. Die drei Faktenkorrekturen (Art. 5 kein lit. j; Art. 6 kein Abs. 7; Art. 7 = KVG-Zusatzversicherungen) sind gemäss CLAUDE.md §7 offengelegt.
