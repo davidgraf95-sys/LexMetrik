@@ -227,26 +227,47 @@ function Schnellzugriff(props: {
   const favKarten = aufloesen([...favoriten]);
   const zuletztKarten = aufloesen(zuletzt.filter((id) => !favoriten.has(id))).slice(0, 6);
 
-  const chip = (k: NonNullable<ReturnType<typeof karte>>) => (
+  const chip = (k: NonNullable<ReturnType<typeof karte>>, fav: boolean) => (
     <Link key={k.id} to={k.href!} onClick={() => onOeffnen(k.id)}
-      className="inline-flex items-center gap-1.5 h-8 px-3 rounded-lg border border-line bg-surface-raised text-body-s text-ink-900 no-underline hover:border-brass-400 hover:bg-brass-100/40 transition-colors">
+      className={`inline-flex items-center gap-1.5 h-8 px-3 rounded-lg border text-body-s no-underline transition-colors ${
+        fav
+          ? 'border-brass-400/70 bg-brass-100/40 text-ink-900 hover:border-brass-500 hover:bg-brass-100'
+          : 'border-line bg-surface text-ink-700 hover:border-brass-400 hover:text-ink-900'
+      }`}>
+      {fav && <span aria-hidden className="text-brass-700 leading-none">★</span>}
       {sansAmp(k.title)}
     </Link>
   );
 
+  // Beide leer (z. B. Erstbesuch): EINE dezente Zeile statt leerem Gerüst.
+  if (favKarten.length === 0 && zuletztKarten.length === 0) {
+    return (
+      <p aria-label="Schnellzugriff" className="text-xs text-ink-500">
+        Schnellzugriff: Mit dem <span aria-hidden className="text-brass-700">★</span> auf einer
+        Karte legen Sie Tools hier ab; zuletzt geöffnete erscheinen automatisch.
+      </p>
+    );
+  }
+
   return (
-    <section aria-label="Schnellzugriff" className="space-y-2.5">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="lc-overline text-ink-500 w-32 shrink-0">★ Favoriten</span>
-        {favKarten.length > 0
-          ? favKarten.map(chip)
-          : <span className="text-body-s text-ink-500">Mit ★ markierte Tools erscheinen hier.</span>}
-      </div>
-      {zuletztKarten.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="lc-overline text-ink-500 w-32 shrink-0">Zuletzt verwendet</span>
-          {zuletztKarten.map(chip)}
+    <section aria-label="Schnellzugriff"
+      className="rounded-xl border border-line bg-surface px-4 py-3 flex flex-col sm:flex-row sm:items-start gap-x-8 gap-y-3">
+      {favKarten.length > 0 && (
+        <div className="space-y-1.5 min-w-0">
+          <p className="lc-overline"><span aria-hidden className="text-brass-700">★</span> Favoriten</p>
+          <div className="flex flex-wrap gap-1.5">{favKarten.map((k) => chip(k, true))}</div>
         </div>
+      )}
+      {zuletztKarten.length > 0 && (
+        <div className="space-y-1.5 min-w-0">
+          <p className="lc-overline text-ink-500">Zuletzt verwendet</p>
+          <div className="flex flex-wrap gap-1.5">{zuletztKarten.map((k) => chip(k, false))}</div>
+        </div>
+      )}
+      {favKarten.length === 0 && (
+        <p className="text-xs text-ink-500 sm:self-end sm:ml-auto sm:pb-1">
+          <span aria-hidden className="text-brass-700">★</span> auf einer Karte legt Favoriten fix hier ab.
+        </p>
       )}
     </section>
   );
