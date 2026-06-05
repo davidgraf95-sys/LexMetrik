@@ -189,7 +189,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
       case 'rubrum':
         setzeBrot();
         for (const zl of a.text.split('\n')) {
-          if (/^—.*—$/.test(zl.trim())) {            // — klagende Partei —
+          if (MUSTER.RUBRUM_ROLLE.test(zl.trim())) {            // — klagende Partei —
             seitenumbruch(P.zeile + 2);
             doc.text(pdfText(zl.trim()), RAND + BREITE / 2, y, { align: 'center' });
             y += P.zeile + 2;

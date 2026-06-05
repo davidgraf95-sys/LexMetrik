@@ -153,7 +153,7 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
         children: [new TextRun({ text, bold: true, size: 26 })],
       });
     case 'rubrum': {
-      if (/^—.*—$/.test(a.text.trim())) {
+      if (MUSTER.RUBRUM_ROLLE.test(a.text.trim())) {
         return new Paragraph({
           alignment: AlignmentType.CENTER,
           spacing: { before: 40, after: 160 },

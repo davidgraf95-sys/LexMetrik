@@ -1,7 +1,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import type { Kanton } from '../../types/legal';
-import { behoerdeFuer, behoerdeAlsBlock, behoerdeManuellVollstaendig, type BehoerdeManuell } from './behoerden';
+import { BEHOERDEN, behoerdeFuer, behoerdeAlsBlock, behoerdeManuellVollstaendig, type BehoerdeManuell } from './behoerden';
 import { fmtDatumLang, fmtDatum, fmtCHF } from './datum';
 export { fmtCHF } from './datum';
 
@@ -32,8 +32,8 @@ export const SCHLICHTUNGSBEHOERDEN_BS = {
   },
   miete: {
     name: 'Staatliche Schlichtungsstelle für Mietstreitigkeiten',
-    // Amtlich verifiziert: Staatskalender BS, Stand 5.6.2026
-    postadresse: ['Grenzacherstrasse 62', '4005 Basel'],
+    // SSoT: Registry lib/vorlagen/behoerden.ts (Staatskalender BS, 5.6.2026)
+    postadresse: [BEHOERDEN.schlichtungsstelle_miete.BS!.strasse, BEHOERDEN.schlichtungsstelle_miete.BS!.plzOrt],
     tel: '+41 61 267 85 21',
     email: 'ssm@bs.ch',
     paritaetisch: true, // Art. 200 Abs. 1 ZPO
@@ -41,7 +41,7 @@ export const SCHLICHTUNGSBEHOERDEN_BS = {
   },
   diskriminierung: {
     name: 'Kantonale Schlichtungsstelle für Diskriminierungsfragen',
-    postadresse: ['Grenzacherstrasse 62', '4005 Basel'], // Amtlich verifiziert: Staatskalender BS, Stand 5.6.2026 (Altadresse Utengasse 36 überholt)
+    postadresse: [BEHOERDEN.schlichtungsstelle_diskriminierung.BS!.strasse, BEHOERDEN.schlichtungsstelle_diskriminierung.BS!.plzOrt], // SSoT-Registry (Altadresse Utengasse 36 überholt)
     tel: '+41 61 267 85 22',
     email: 'ksd@bs.ch',
     paritaetisch: true, // Art. 200 Abs. 2 ZPO
