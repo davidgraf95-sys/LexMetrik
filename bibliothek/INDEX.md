@@ -1,7 +1,7 @@
 # Bibliothek — Informationsgrundlagen für LexMetrik
 
 Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
-das (noch) nicht Code ist. 22 Dossiers in 4 Ordnern (Stand 6.6.2026). Regeln:
+das (noch) nicht Code ist. 23 Dossiers in 4 Ordnern (Stand 6.6.2026). Regeln:
 
 1. **Nur amtliche Quellen als Beleg**, immer mit URL und Abrufdatum (§7);
    kantonale Erlasse stets in der geltenden konsolidierten Fassung via
@@ -74,6 +74,7 @@ bibliothek/
 | Dokument | Inhalt | Befund 2. Durchgang |
 |---|---|---|
 | [schlichtungsgebuehren-kantone.md](kosten/schlichtungsgebuehren-kantone.md) | Schlichtungsgebühren 26 Kantone + Art.-113-Kopf — **Quelle von src/data/zustaendigkeitKosten.ts** | AG auf GebührD 662.110 korrigiert; Stichproben ✓ |
+| [gerichtskosten-kantone.md](kosten/gerichtskosten-kantone.md) | TIEFENERFASSUNG: vollständige Zivil-Staffeln je Kanton (alle Bänder, summarisch, Rechtsmittel, Reduktionen, Vorschuss) — Teil A ZH–BL | einfach belegt; Teil B + Doppelcheck folgen |
 | [gerichtskosten-bund.md](kosten/gerichtskosten-bund.md) | Tarife BGer/BVGer/BStGer/BPatGer wörtlich aus Fedlex | alle Stichproben wörtlich ✓, keine neueren Konsolidierungen |
 | [anwaltstarife-kantone.md](kosten/anwaltstarife-kantone.md) | Anwaltstarife (Parteientschädigung/UR) 26 Kantone | GL-Tarif existiert doch (GS III I/5); UR-Staffel beschafft |
 
