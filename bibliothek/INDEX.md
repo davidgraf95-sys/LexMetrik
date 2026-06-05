@@ -62,7 +62,7 @@ bibliothek/
 ### Verwaltung — einfach belegt (Aufbau läuft)
 | Dokument | Inhalt | Offen |
 |---|---|---|
-| [verwaltungsbehoerden-kantone.md](behoerden/verwaltungsbehoerden-kantone.md) | Wichtigste Verwaltungsbehörden je Kanton (VGer/Staatskanzlei/Steuer+Rekurs/StVA/Migration/SozVGer) — Teil A ZH–BL | Teil B SH–JU; Doppelcheck |
+| [verwaltungsbehoerden-kantone.md](behoerden/verwaltungsbehoerden-kantone.md) | Wichtigste Verwaltungsbehörden je Kanton (VGer/Staatskanzlei/Steuer+Rekurs/StVA/Migration/SozVGer) — Teil A+B (25 Kantone; u. a. GR-Obergericht 1.1.2025, VD-Hermitage Juli 2025) | JU nacherheben; Doppelcheck |
 
 ### Erbgang — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Befund 2. Durchgang |
