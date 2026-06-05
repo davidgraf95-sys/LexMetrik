@@ -206,7 +206,15 @@ class Zeichner {
     let ty = this.y + pad + 0.5;
     this.overline(h.hauptlabel, x, ty, BRASS_TEXT);
     ty += this.zh(24) * 0.82;
-    this.setSchrift({ size: 24, font: 'GeistMono' });
+    // Shrink-to-fit (Visual-Check 5.6.2026): überlange Hauptwerte werden
+    // stufenweise verkleinert statt rechts aus der Hero-Box zu laufen.
+    let heroSize = 24;
+    this.setSchrift({ size: heroSize, font: 'GeistMono' });
+    const maxBreite = PAGE_W - MARGIN - x - 4;
+    while (heroSize > 12 && this.doc.getTextWidth(h.hauptwert) > maxBreite) {
+      heroSize -= 1;
+      this.setSchrift({ size: heroSize, font: 'GeistMono' });
+    }
     this.doc.text(h.hauptwert, x, ty);
 
     if (neben.length) {
