@@ -182,3 +182,22 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });
 });
+
+describe('RECHTSBEREICH_GRUPPEN (Pro-Katalog, Phase 2) — Vollständigkeit beider Modelle', () => {
+  it('jedes Config-Rechtsgebiet liegt in genau EINER Gruppe; keine Gruppe nennt Unbekanntes', async () => {
+    const { ALLE_GRUPPEN_MODELLE } = await import('../lib/rechtsbereichGruppen');
+    for (const [modell, gruppen] of Object.entries(ALLE_GRUPPEN_MODELLE)) {
+      const genannt = gruppen.flatMap((g) => g.gebiete);
+      // keine Doppelnennung
+      expect(new Set(genannt).size, `${modell}: Doppelnennung`).toBe(genannt.length);
+      // vollständig: jedes RECHTSGEBIET genau einmal
+      for (const gebiet of RECHTSGEBIETE) {
+        expect(genannt.filter((x) => x === gebiet).length, `${modell}: ${gebiet}`).toBe(1);
+      }
+      // nichts Unbekanntes
+      for (const g of genannt) {
+        expect(RECHTSGEBIETE.includes(g as (typeof RECHTSGEBIETE)[number]), `${modell}: unbekannt ${g}`).toBe(true);
+      }
+    }
+  });
+});
