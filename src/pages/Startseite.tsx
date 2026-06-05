@@ -51,28 +51,52 @@ export function Startseite() {
   // (Rechner/Vorlagen) in FREE_REIHENFOLGE; Status trägt allein die Karte.
   const sortiert = freeKartenSortiert();
   const bloecke = [
-    { titel: 'Rechner', karten: sortiert.filter((k) => k.modus === 'rechner') },
-    { titel: 'Vorlagen', karten: sortiert.filter((k) => k.modus === 'vorlage') },
+    { id: 'rechner', titel: 'Rechner', karten: sortiert.filter((k) => k.modus === 'rechner') },
+    { id: 'vorlagen', titel: 'Vorlagen', karten: sortiert.filter((k) => k.modus === 'vorlage') },
   ].filter((b) => b.karten.length > 0);
+
+  // Ehrliche Kennzahlen (§8): nur tatsächlich nutzbare Free-Karten zählen,
+  // geplante («In Vorbereitung») nicht – datengetrieben aus der Config (§5).
+  const nutzbar = sortiert.filter((k) => k.status !== 'geplant');
+  const nRechner = nutzbar.filter((k) => k.modus === 'rechner').length;
+  const nVorlagen = nutzbar.filter((k) => k.modus === 'vorlage').length;
 
   return (
     <div>
-      {/* Hero: kurzer Titel + umbruchsfähiger Claim (Neutext 5.6.2026 –
-          der frühere Einzeiler wurde auf mittleren Breiten abgeschnitten). */}
-      <section className="pt-4 pb-4 border-b border-line space-y-1">
-        <h1 className="font-display font-semibold text-ink-900 text-h3">
-          Schweizer Recht, berechenbar.
-        </h1>
-        <p className="text-body-s text-ink-500 max-w-reading">
-          Fristen, Beträge und Rechtsdokumente nach festen Regeln – jeder Schritt offengelegt, jede Norm verlinkt.
-        </p>
+      {/* Hero (Neubau 5.6.2026, Richtung «nüchtern & juristisch»): ein
+          starker Satz benennt den NUTZEN konkret (was kann ich hier tun?),
+          zwei Einstiege in die Kachelwand, drei Methodik-Anker als stille
+          Zeile. Keine Bilder, keine Verläufe – Typografie und Weissraum
+          tragen; Kennzahlen kommen aus der Config, nicht aus Prosa. */}
+      <section className="pt-10 pb-10 sm:pt-14 sm:pb-12 border-b border-line">
+        <div className="max-w-3xl space-y-5">
+          <p className="lc-overline">Schweizer Recht, berechenbar</p>
+          <h1 className="font-display font-semibold text-ink-900 text-h1 leading-tight">
+            Fristen berechnen. Beträge beziffern. Rechtsdokumente aufsetzen.
+          </h1>
+          <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
+            Verzugszins, Teuerung, Kündigungs- und Verjährungsfristen, Testament, Vorsorgeauftrag
+            oder Vollmacht: LexMetrik rechnet nach festen Regeln – ohne Sprachmodell, jeder
+            Rechenschritt offengelegt, jede Norm direkt auf den Gesetzestext verlinkt.
+          </p>
+          <div className="flex flex-wrap items-center gap-3 pt-1">
+            <a href="#rechner" className="lc-btn-primary no-underline">Zu den Rechnern</a>
+            <a href="#vorlagen" className="lc-btn-outline no-underline">Zu den Vorlagen</a>
+            <span className="num text-body-s text-ink-500">{nRechner} Rechner · {nVorlagen} Vorlagen · kostenlos</span>
+          </div>
+          <ul className="flex flex-wrap gap-x-6 gap-y-1 pt-2 text-body-s text-ink-500">
+            <li>Deterministisch – gleiche Eingabe, gleiches Ergebnis</li>
+            <li>Normen auf Fedlex verlinkt</li>
+            <li>Rechenweg vollständig offengelegt</li>
+          </ul>
+        </div>
       </section>
 
       {/* Flache Kachelwand: zwei Blöcke, gleichwertiges Raster; geplante
           Karten stehen gedämpft an ihrer kuratierten Position. */}
       <div className="mt-6 space-y-10">
         {bloecke.map((b) => (
-          <section key={b.titel} className="space-y-5">
+          <section key={b.titel} id={b.id} className="space-y-5 scroll-mt-24">
             <SectionHead>{b.titel}</SectionHead>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(min(340px,100%),1fr))] gap-6">
               {b.karten.map((k) => <RechnerKarte key={k.id} card={k} headingLevel="h3" />)}

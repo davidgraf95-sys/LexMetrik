@@ -91,7 +91,12 @@ describe('Free-Kachelwand (Auftrag 5.6.2026)', () => {
         <LocaleProvider><Startseite /></LocaleProvider>
       </MemoryRouter>,
     );
-    expect(html).toContain('Schweizer Recht, berechenbar.');
+    // Hero-Neubau 5.6.2026 («nüchtern & juristisch»): Claim als Overline,
+    // Nutzen-Headline, Anker-Einstiege in beide Blöcke
+    expect(html).toContain('Schweizer Recht, berechenbar');
+    expect(html).toContain('Fristen berechnen. Beträge beziffern. Rechtsdokumente aufsetzen.');
+    expect(html).toContain('href="#rechner"');
+    expect(html).toContain('href="#vorlagen"');
     expect(html).toContain('>Rechner<');
     expect(html).toContain('>Vorlagen<');
     // entfernt: Suche, Filter, Tabs, Übersicht, Schnellzugriff, Stern
