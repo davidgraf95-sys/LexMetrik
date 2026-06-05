@@ -387,7 +387,7 @@ export function ZustaendigkeitForm() {
 
       {/* 3 · Ort, Streitwert, Instanz */}
       <div className="space-y-3">
-        <p className="lc-overline">3 · Ort, Streitwert, Instanz</p>
+        <p className="lc-overline">3 · Wo — und um wie viel geht es?</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
             <div className="space-y-1.5">
@@ -432,6 +432,25 @@ export function ZustaendigkeitForm() {
               </div>
             </Field>
           )}
+        </div>
+        {gemeindeFremd && (
+          <p className="lc-notice-warn text-body-s">
+            «{f.gemeinde.trim()}» ist keine Gemeinde des Kantons {f.kanton} (erfasst: {kantonDaten?.gemeinden.join(', ')}) —
+            Kanton oder Ort prüfen.
+          </p>
+        )}
+      </div>
+
+      {/* Sonderfälle eingeklappt (Endkonsumenten-Dramaturgie 6.6.2026):
+          Streitsache + Ort + Streitwert tragen das Routing — Spezial-
+          konstellationen überladen den Erstkontakt nicht mehr. */}
+      {!istScheidung && (
+        <details className="lc-card p-4 group">
+          <summary className="lc-overline cursor-pointer list-none flex items-center justify-between">
+            <span>Weitere Angaben — Sonderfälle (Rechtsmittel, Vereinbarungen, Handelsregister, Ausland)</span>
+            <span className="text-ink-500 group-open:rotate-180 transition-transform" aria-hidden>▾</span>
+          </summary>
+          <div className="space-y-3 mt-3">
           <Field label="Instanz">
             <SelectionGrid
               className="grid grid-cols-2 gap-2"
@@ -443,19 +462,7 @@ export function ZustaendigkeitForm() {
               onSelect={(code) => set('instanz', code)}
             />
           </Field>
-        </div>
-        {gemeindeFremd && (
-          <p className="lc-notice-warn text-body-s">
-            «{f.gemeinde.trim()}» ist keine Gemeinde des Kantons {f.kanton} (erfasst: {kantonDaten?.gemeinden.join(', ')}) —
-            Kanton oder Ort prüfen.
-          </p>
-        )}
-      </div>
 
-      {/* Konstellation (nur wo rechtlich relevant) */}
-      {!istScheidung && (
-        <div className="space-y-2">
-          <p className="lc-overline">Konstellation</p>
           {istGeld && (
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={f.konsumentenvertrag} onChange={(e) => set('konsumentenvertrag', e.target.checked)} />
@@ -519,7 +526,8 @@ export function ZustaendigkeitForm() {
               </div>
             </details>
           )}
-        </div>
+          </div>
+        </details>
       )}
 
       {fehler.length > 0 && (
@@ -585,70 +593,6 @@ export function ZustaendigkeitForm() {
         <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
           <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />
-
-          {/* Reihenfolge wie die Prüfung: örtlich → Verfahren → Eingabe */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {[
-              { label: 'Örtlich (Grundsatz)', val: r.oertlich.gerichtsstand },
-              { label: 'Verfahrensart', val: r.verfahrensart === 'vereinfacht' ? 'Vereinfacht' : r.verfahrensart === 'scheidungsverfahren' ? 'Scheidungsverfahren' : 'Ordentlich' },
-              { label: 'Einleitende Eingabe', val: eingabeText },
-            ].map((c) => (
-              <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
-            ))}
-          </div>
-
-          {/* Praxis-Fahrplan (Umbau «maximal praxistauglich», 5.6.2026) */}
-          {fahrplan && f.instanz === 'einleitung' && (
-            <div className="lc-card p-5 space-y-3">
-              <p className="lc-overline">Ihr Fahrplan</p>
-              <ol className="space-y-2.5">
-                {fahrplan.map((s, i) => (
-                  <li key={s.titel} className="flex gap-3">
-                    <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
-                    <span>
-                      <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
-                      <span className="block text-body-s text-ink-600">{s.text}</span>
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          )}
-
-          {/* Kosten (kantonale Rahmen, zweifach geprüfte Erlass-Daten) */}
-          {f.instanz === 'einleitung' && (r.schlichtung.obligatorisch || r.eingabeArt === 'klage_direkt') && (
-            <div className="lc-card p-5 space-y-2.5">
-              <p className="lc-overline">Voraussichtliche Kosten{f.kanton ? ` (${f.kanton})` : ''}</p>
-              {r.schlichtung.obligatorisch && (
-                r.schlichtung.kostenlos ? (
-                  <p className="text-body-s text-ink-800">
-                    <span className="font-medium text-ink-900">Schlichtungsverfahren: kostenlos.</span>{' '}
-                    {r.schlichtung.kostenlosGrund}. Keine Parteientschädigung im Schlichtungsverfahren (Art. 113 Abs. 1 ZPO).
-                  </p>
-                ) : kosten ? (
-                  <p className="text-body-s text-ink-800">
-                    <span className="font-medium text-ink-900">Schlichtungsgebühr: CHF {kosten.schlichtung.text}.</span>{' '}
-                    <span className="text-ink-500">({kosten.schlichtung.erlass})</span>
-                    {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ {kosten.schlichtung.hinweis}</span>}
-                  </p>
-                ) : (
-                  <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
-                )
-              )}
-              {kosten && (
-                <p className="text-body-s text-ink-800">
-                  <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz: {/^[A-Za-zÜü]/.test(kosten.gericht.text) ? '' : 'CHF '}{kosten.gericht.text}.</span>{' '}
-                  <span className="text-ink-500">({kosten.gericht.erlass})</span>
-                  {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
-                </p>
-              )}
-              <p className="text-xs text-ink-500">
-                Rahmen aus den geltenden kantonalen Erlassen (Stand 5.6.2026) — die konkrete Festsetzung liegt bei der Behörde.
-                Hinzu kommen ggf. eigene Anwaltskosten; die unterliegende Partei trägt im Gerichtsverfahren in der Regel die
-                Kosten und eine Parteientschädigung (Art. 106 ZPO).
-              </p>
-            </div>
-          )}
 
           {/* UX-Fix 5.6.2026 (Frage David «wieso bei Arbeitsrecht keine
               Schlichtungsbehörde?»): Ohne Kantonswahl gab es WEDER Stelle noch
@@ -798,6 +742,70 @@ export function ZustaendigkeitForm() {
               Für diese Behörden-Art ist im Kanton {f.kanton} noch keine Adresse hinterlegt.
             </p>
           )}
+
+          {/* Praxis-Fahrplan (Umbau «maximal praxistauglich», 5.6.2026) */}
+          {fahrplan && f.instanz === 'einleitung' && (
+            <div className="lc-card p-5 space-y-3">
+              <p className="lc-overline">Ihr Fahrplan</p>
+              <ol className="space-y-2.5">
+                {fahrplan.map((s, i) => (
+                  <li key={s.titel} className="flex gap-3">
+                    <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
+                    <span>
+                      <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
+                      <span className="block text-body-s text-ink-600">{s.text}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {/* Kosten (kantonale Rahmen, zweifach geprüfte Erlass-Daten) */}
+          {f.instanz === 'einleitung' && (r.schlichtung.obligatorisch || r.eingabeArt === 'klage_direkt') && (
+            <div className="lc-card p-5 space-y-2.5">
+              <p className="lc-overline">Voraussichtliche Kosten{f.kanton ? ` (${f.kanton})` : ''}</p>
+              {r.schlichtung.obligatorisch && (
+                r.schlichtung.kostenlos ? (
+                  <p className="text-body-s text-ink-800">
+                    <span className="font-medium text-ink-900">Schlichtungsverfahren: kostenlos.</span>{' '}
+                    {r.schlichtung.kostenlosGrund}. Keine Parteientschädigung im Schlichtungsverfahren (Art. 113 Abs. 1 ZPO).
+                  </p>
+                ) : kosten ? (
+                  <p className="text-body-s text-ink-800">
+                    <span className="font-medium text-ink-900">Schlichtungsgebühr: CHF {kosten.schlichtung.text}.</span>{' '}
+                    <span className="text-ink-500">({kosten.schlichtung.erlass})</span>
+                    {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ {kosten.schlichtung.hinweis}</span>}
+                  </p>
+                ) : (
+                  <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
+                )
+              )}
+              {kosten && (
+                <p className="text-body-s text-ink-800">
+                  <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz: {/^[A-Za-zÜü]/.test(kosten.gericht.text) ? '' : 'CHF '}{kosten.gericht.text}.</span>{' '}
+                  <span className="text-ink-500">({kosten.gericht.erlass})</span>
+                  {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
+                </p>
+              )}
+              <p className="text-xs text-ink-500">
+                Rahmen aus den geltenden kantonalen Erlassen (Stand 5.6.2026) — die konkrete Festsetzung liegt bei der Behörde.
+                Hinzu kommen ggf. eigene Anwaltskosten; die unterliegende Partei trägt im Gerichtsverfahren in der Regel die
+                Kosten und eine Parteientschädigung (Art. 106 ZPO).
+              </p>
+            </div>
+          )}
+
+          {/* Verfahrens-Eckdaten — bewusst NACH Stelle/Fahrplan/Kosten (Endkonsumenten-Dramaturgie 6.6.2026) */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { label: 'Örtlich (Grundsatz)', val: r.oertlich.gerichtsstand },
+              { label: 'Verfahrensart', val: r.verfahrensart === 'vereinfacht' ? 'Vereinfacht' : r.verfahrensart === 'scheidungsverfahren' ? 'Scheidungsverfahren' : 'Ordentlich' },
+              { label: 'Einleitende Eingabe', val: eingabeText },
+            ].map((c) => (
+              <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
+            ))}
+          </div>
 
           {r.weichen.length > 0 && (
             <div className="space-y-1.5">

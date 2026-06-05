@@ -136,30 +136,6 @@ export function SchkgZustaendigkeitTeil() {
           <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <EckdatenKachel label="Zuständige Stelle" wert={r.forum.stelle.split(' (')[0].split(' ODER')[0]} sub={r.forum.stelle.includes('ODER') ? 'Wahlgerichtsstand — Details unten' : undefined} />
-            <EckdatenKachel label="Eingabe" wert={r.eingabe.art.split(' (')[0]} />
-            <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist} />
-          </div>
-
-          {/* Fahrplan (analog Zivil) */}
-          {r.fahrplan.length > 0 && (
-            <div className="lc-card p-5 space-y-3">
-              <p className="lc-overline">Ihr Fahrplan</p>
-              <ol className="space-y-2.5">
-                {r.fahrplan.map((s, i) => (
-                  <li key={s.titel} className="flex gap-3">
-                    <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
-                    <span>
-                      <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
-                      <span className="block text-body-s text-ink-600">{s.text}</span>
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          )}
-
           {/* Betreibungsort + Forum */}
           <div className="lc-card p-5 space-y-3">
             <p className="lc-overline">Betreibungsort (Wurzelgrösse)</p>
@@ -188,6 +164,24 @@ export function SchkgZustaendigkeitTeil() {
             </div>
           )}
 
+          {/* Fahrplan (analog Zivil) */}
+          {r.fahrplan.length > 0 && (
+            <div className="lc-card p-5 space-y-3">
+              <p className="lc-overline">Ihr Fahrplan</p>
+              <ol className="space-y-2.5">
+                {r.fahrplan.map((s, i) => (
+                  <li key={s.titel} className="flex gap-3">
+                    <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
+                    <span>
+                      <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
+                      <span className="block text-body-s text-ink-600">{s.text}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
           {/* Kosten */}
           {r.kostenZahlungsbefehl && (
             <div className="lc-card p-5 space-y-2">
@@ -203,6 +197,12 @@ export function SchkgZustaendigkeitTeil() {
               </p>
             </div>
           )}
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <EckdatenKachel label="Zuständige Stelle" wert={r.forum.stelle.split(' (')[0].split(' ODER')[0]} sub={r.forum.stelle.includes('ODER') ? 'Wahlgerichtsstand — Details unten' : undefined} />
+            <EckdatenKachel label="Eingabe" wert={r.eingabe.art.split(' (')[0]} />
+            <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist} />
+          </div>
 
           {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s">{w}</div>)}
           {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s">{w}</div>)}

@@ -135,27 +135,6 @@ export function StrafZustaendigkeitTeil() {
         <ErgebnisSprung zielId="lc-ergebnis" />
         <LiveHeader />
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <EckdatenKachel label="Forum" wert={r.forum.normen[0]?.artikel ?? '—'} sub="örtliche Anknüpfung" />
-          <EckdatenKachel label="Behörde" wert={uebertretung ? 'StA / Übertretungsbehörde' : 'Staatsanwaltschaft'} />
-          <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist} />
-        </div>
-
-        <div className="lc-card p-5 space-y-3">
-          <p className="lc-overline">Ihr Fahrplan</p>
-          <ol className="space-y-2.5">
-            {r.fahrplan.map((s, i) => (
-              <li key={s.titel} className="flex gap-3">
-                <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
-                <span>
-                  <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
-                  <span className="block text-body-s text-ink-600">{s.text}</span>
-                </span>
-              </li>
-            ))}
-          </ol>
-        </div>
-
         <div className="lc-card p-5 space-y-3">
           <p className="lc-overline">Örtliches Forum</p>
           <p className="text-body-s text-ink-900">{r.forum.text}.</p>
@@ -189,6 +168,27 @@ export function StrafZustaendigkeitTeil() {
             ))}
           </div>
         )}
+
+        <div className="lc-card p-5 space-y-3">
+          <p className="lc-overline">Ihr Fahrplan</p>
+          <ol className="space-y-2.5">
+            {r.fahrplan.map((s, i) => (
+              <li key={s.titel} className="flex gap-3">
+                <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
+                <span>
+                  <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
+                  <span className="block text-body-s text-ink-600">{s.text}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <EckdatenKachel label="Forum" wert={r.forum.normen[0]?.artikel ?? '—'} sub="örtliche Anknüpfung" />
+          <EckdatenKachel label="Behörde" wert={uebertretung ? 'StA / Übertretungsbehörde' : 'Staatsanwaltschaft'} />
+          <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist} />
+        </div>
 
         {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s">{w}</div>)}
         {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s">{w}</div>)}
