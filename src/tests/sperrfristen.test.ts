@@ -211,3 +211,20 @@ describe('Sperrtage-Zähler (Art. 336c Abs. 1 OR)', () => {
     expect(z.beansprucht).toBe(19 + 56); // 19 Diensttage + je 28 davor/danach
   });
 });
+
+describe('Audit 5.6.2026 — anschliessende Sperrfristen bei Nichtigkeit', () => {
+  it('frühestens neue Kündigung erst nach ALLEN zusammenhängenden Sperrfristen', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      zugangKuendigung: '2025-03-15',
+      sperrereignisse: [
+        { typ: 'militaer_zivil', von: '2025-03-12', bis: '2025-03-20' },
+        { typ: 'militaer_zivil', von: '2025-03-21', bis: '2025-03-30' },
+      ],
+    });
+    expect(r.status).toBe('nichtig');
+    // NICHT 21.03. (mitten in der zweiten Sperrfrist), sondern nach deren Ende
+    expect(r.fruehesteNeueKuendigungISO).toBe('2025-03-31');
+    expect(rechenwegText(r)).toContain('anschliessende weitere Sperrfrist');
+  });
+});

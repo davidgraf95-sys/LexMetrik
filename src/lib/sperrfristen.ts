@@ -315,14 +315,25 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
   const waehrendSperrfrist = intervalle.find((iv) => istInIntervall(zugang, iv.von, iv.bis));
 
   if (waehrendSperrfrist) {
-    const fruehesteNeue = addDays(waehrendSperrfrist.bis, 1); // frühestens nach Ablauf der Sperrfrist
+    // Audit 5.6.2026: Massgeblich für die Wiederholung ist das Ende der
+    // GESAMTEN geschlossenen Sperrzeit — überlappende oder unmittelbar
+    // anschliessende Sperrfristen weiterer Ereignisse werden vereinigt
+    // (gleiche unionIntervalle-Logik wie im Hemmungspfad). Sonst fiele die
+    // «frühestens»-Empfehlung mitten in die nächste Sperrfrist und die
+    // wiederholte Kündigung wäre erneut nichtig.
+    const unionAlle = unionIntervalle(intervalle.map((iv) => ({ von: iv.von, bis: iv.bis })));
+    const geschlossen = unionAlle.find((iv) => istInIntervall(zugang, iv.von, iv.bis)) ?? waehrendSperrfrist;
+    const fruehesteNeue = addDays(geschlossen.bis, 1); // frühestens nach Ablauf der gesamten Sperrzeit
+    const anschlussHinweis = isAfter(geschlossen.bis, waehrendSperrfrist.bis)
+      ? ` Dabei ist die unmittelbar anschliessende weitere Sperrfrist (bis ${formatDatum(geschlossen.bis)}) berücksichtigt.`
+      : '';
     rechenweg.push({
       beschreibung: 'C2 – Kündigung während Sperrfrist → NICHTIG (Art. 336c Abs. 2 OR)',
       zwischenergebnis:
         `Zugang der Kündigung (${formatDatum(zugang)}) fällt in die Sperrfrist ${formatDatum(waehrendSperrfrist.von)} – ${formatDatum(waehrendSperrfrist.bis)}. ` +
         `Die Kündigung ist NICHTIG (sie entfaltet keine Wirkung). Das Arbeitsverhältnis dauert fort. ` +
         `Die Kündigung muss nach Ablauf der Sperrfrist (Ende der geschützten Verhinderung), also frühestens am ${formatDatum(fruehesteNeue)}, ` +
-        `unter Einhaltung der ordentlichen Kündigungsfrist wiederholt werden.`,
+        `unter Einhaltung der ordentlichen Kündigungsfrist wiederholt werden.${anschlussHinweis}`,
       normen: [N_336c_2],
       rechtsprechung: [rechtsprechung('BGE_134_III_354')],
     });
@@ -337,7 +348,7 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
       warnungen,
       normverweise: [N_336c_1, N_336c_2],
       zugangISO: input.zugangKuendigung,
-      sperrfristEndeISO: iso(waehrendSperrfrist.bis),
+      sperrfristEndeISO: iso(geschlossen.bis),
       fruehesteNeueKuendigungISO: iso(fruehesteNeue),
       sperrIntervalle,
       sperrtage,
