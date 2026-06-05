@@ -52,19 +52,20 @@ export function Startseite() {
     <div>
       {/* HERO → KATALOG: bewusst kompakt (Entscheid 5.6.2026 — weniger
           Scrollweg vor der ersten Karte). Determinismus-Claim genau einmal. */}
-      {/* Schlanker Einzeilen-Hero (Entscheid 5.6.2026: deutlich kleiner,
-          auf einer Grundlinie mit dem Claim — der Katalog ist der Star) */}
-      <section className="pt-5 sm:pt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-line pb-4">
-        <h1 className="font-display font-semibold text-ink-900 text-h3 whitespace-nowrap">
+      {/* Schlanker Einzeilen-Hero über die volle Inhaltsbreite (Entscheid
+          5.6.2026): Titel + Claim auf EINER Zeile, minimale Höhe — der
+          Katalog ist der Star. Auf Mobile darf der Claim umbrechen. */}
+      <section className="pt-3 sm:pt-4 pb-3 border-b border-line flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-0.5 sm:whitespace-nowrap">
+        <h1 className="font-display font-semibold text-ink-900 text-h3 shrink-0">
           Schweizer Recht: berechnen und erstellen.
         </h1>
-        <p className="text-body-s text-ink-500">
+        <p className="text-body-s text-ink-500 sm:truncate sm:min-w-0">
           Fristen, Beträge und Rechtsdokumente nach festen Regeln — jeder Schritt offengelegt, jede Norm verlinkt.
         </p>
       </section>
 
       {/* Katalog als eigene Sektion */}
-      <section className="mt-6 sm:mt-7">
+      <section className="mt-5 sm:mt-6">
         {/* Free: Werkzeuge zuerst (Tagerechner & Co. sind der häufigste Einstieg) */}
         <Katalog karten={karten} filterArt gebieteZuerst={['Übergreifende Werkzeuge']} />
       </section>

@@ -22,36 +22,28 @@ export function Pro() {
   const gebiete = RECHTSGEBIETE.filter((g) => alle.some((k) => k.rechtsgebiet === g)).length;
 
   return (
-    <div className="space-y-12">
-      {/* Kompakter Hero mit Kennzahlen-Messleiste */}
-      <section className="space-y-4">
-        <p className="lc-overline text-brass-700">Pro</p>
-        <h1 className="font-display font-semibold text-ink-900 text-display sm:text-display-l max-w-reading">
-          Der vollständige Katalog für die Praxis.
-        </h1>
-        <p className="text-body-l text-ink-600 max-w-reading">
-          Alle Rechner und Vorlagen — von Verfahrens- und Rechtsmittelfristen über Verjährung bis
-          Betreibung und Konkurs, mit nachvollziehbarem Rechenweg und exakten Normverweisen.
-        </p>
-
-        {/* Kennzahlen-Messleiste: Skala als Ablesekante, Haarlinien als Teilung */}
-        <div className="pt-1">
-          <span className="scale-rule block" aria-hidden />
-          {/* Mobil 2×2-Raster ohne Trennlinien (divide-x bricht beim Umbruch),
-              ab sm einzeilig mit Haarlinien-Teilung */}
-          <dl className="grid grid-cols-2 gap-y-3 sm:flex sm:flex-wrap sm:divide-x sm:divide-line border-b border-line py-3 sm:py-0">
+    <div className="space-y-6">
+      {/* Schlanker Einzeilen-Hero (analog Free, Entscheid 5.6.2026):
+          Titel + Claim auf EINER Zeile, Kennzahlen kompakt rechts. */}
+      <section className="pt-3 sm:pt-4 pb-3 border-b border-line">
+        <div className="flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-0.5 sm:whitespace-nowrap">
+          <h1 className="font-display font-semibold text-ink-900 text-h3 shrink-0">
+            <span className="lc-overline text-brass-700 mr-2 align-middle">Pro</span>
+            Der vollständige Katalog für die Praxis.
+          </h1>
+          <p className="text-body-s text-ink-500 sm:truncate sm:min-w-0">
+            Alle Rechner und Vorlagen — mit nachvollziehbarem Rechenweg und exakten Normverweisen.
+          </p>
+          <span className="hidden lg:inline-flex items-baseline gap-4 ml-auto pl-4 shrink-0 num text-body-s text-ink-500">
             {[
               { wert: alle.filter((k) => k.modus === 'rechner').length, label: 'Rechner' },
               { wert: alle.filter((k) => k.modus === 'vorlage').length, label: 'Vorlagen' },
               { wert: entwurf.length, label: 'in Entwurf' },
-              { wert: gebiete, label: 'Rechtsgebiete' },
+              { wert: gebiete, label: 'Gebiete' },
             ].map((s) => (
-              <div key={s.label} className="sm:px-8 sm:first:pl-0 sm:py-3">
-                <dd className="num text-h2 leading-none font-medium text-ink-900">{s.wert}</dd>
-                <dt className="lc-overline mt-1.5">{s.label}</dt>
-              </div>
+              <span key={s.label}><span className="font-medium text-ink-900">{s.wert}</span> {s.label}</span>
             ))}
-          </dl>
+          </span>
         </div>
       </section>
 
