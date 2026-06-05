@@ -153,3 +153,16 @@ describe('Gemeinde-Lookup case-insensitiv (Bug-Check-Fix 5.6.2026)', () => {
     expect(await amtFuer('AG', 'aaraau')).toBeNull();
   });
 });
+
+describe('GR: PLZ → Region → Vermittleramt (Task 12, 6.6.2026)', () => {
+  it('Chur→Plessur · Klosters→Prättigau/Davos · Poschiavo→Bernina · Ilanz→Surselva', async () => {
+    const { amtFuer, AMT_KANTONE } = await import('../data/schlichtung/amtAufloesung');
+    const { plzAufloesen } = await import('../data/plz/plzAufloesung');
+    expect(AMT_KANTONE).toContain('GR');
+    expect((await amtFuer('GR', 'Chur'))?.name).toContain('Plessur');
+    expect((await amtFuer('GR', 'Klosters'))?.name).toContain('Prättigau');
+    expect((await amtFuer('GR', 'Poschiavo'))?.plzOrt).toBe('7742 Poschiavo');
+    const ilanz = (await plzAufloesen('7130'))!.find((t) => t.kanton === 'GR')!;
+    expect((await amtFuer('GR', ilanz.gemeinde))?.name).toContain('Surselva');
+  });
+});

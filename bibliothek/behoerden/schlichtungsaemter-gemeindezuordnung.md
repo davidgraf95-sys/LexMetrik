@@ -337,3 +337,27 @@ Staatskalender SZ) und dient der manuellen Bestimmung.
   bleibt SZ Verzeichnis-Fallback (personengebundene Ämter).
 - Übrige Klein-/Sammelgemeinden: weiterhin offen (vermittler-sz.ch JS-only).
 
+---
+
+# TEIL 3 — GR: Vermittlerämter je Region (6.6.2026, für den Generator)
+
+Quelle: TI-VS-GR-Vollerfassung (zweifach geprüft, justiz-gr.ch 5.6.2026);
+Regionen = amtliche BFS-Ebene (11/11 namensgleich). Gemeinde-Zuordnung
+über das BFS-Gemeindeverzeichnis (Snapshot 1.6.2026) wie bei FR.
+
+## 30. GR — Graubünden: Vermittlerämter (Region = BFS-Region)
+
+| Amt | Strasse | PLZ Ort | Regionen |
+|---|---|---|---|
+| Vermittleramt Region Albula | Stradung 26 | 7450 Tiefencastel | Albula |
+| Vermittleramt Region Bernina | Via da la Pesa 8 | 7742 Poschiavo | Bernina |
+| Vermittleramt Region Engiadina Bassa/Val Müstair | Saglina 22 | 7554 Sent | Engiadina Bassa / Val Müstair |
+| Vermittleramt Region Imboden | Postfach 308 | 7001 Chur | Imboden |
+| Vermittleramt Region Landquart | Bahnhofplatz 2b, Postfach 244 | 7302 Landquart | Landquart |
+| Vermittleramt Region Maloja | Plazza da Scoula 16, Postfach 83 | 7500 St. Moritz | Maloja |
+| Vermittleramt Region Moesa | Al Giardinètt 2 | 6535 Roveredo | Moesa |
+| Vermittleramt Region Plessur | Bärenloch 1, Postfach 290 | 7001 Chur | Plessur |
+| Vermittleramt Region Prättigau/Davos | Postfach 125 | 7250 Klosters | Prättigau / Davos |
+| Vermittleramt Region Surselva | Via Centrala 4 | 7130 Ilanz/Glion | Surselva |
+| Vermittleramt Region Viamala | Untere Gasse 1 | 7430 Thusis | Viamala |
+

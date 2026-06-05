@@ -89,7 +89,7 @@ const kantonsDaten: Record<string, { aemter: Amt[]; gemeinden: Record<string, nu
 let aktuellerKanton: string | null = null;
 for (const z of zuordnungMd.split('\n')) {
   // Teil 1: «## 1. Aargau — …» · Teil 2: «## 1. FR — Freiburg: …»
-  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL)\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
+  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR)\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
   if (kopfTreffer) {
     aktuellerKanton = kopfTreffer[1]
       ?? ({ Aargau: 'AG', 'St. Gallen': 'SG', 'St.Gallen': 'SG', Thurgau: 'TG' }[kopfTreffer[2] ?? ''] ?? null);
@@ -108,6 +108,32 @@ for (const z of zuordnungMd.split('\n')) {
   for (const g of gemeindenRoh.split(',').map((x) => x.trim()).filter(Boolean)) {
     d.gemeinden[g] = idx;
   }
+}
+// GR: «Regionen»-Spalte → Gemeindelisten aus dem BFS-Verzeichnis
+// (Level 2 GR trägt das Präfix «Region », z. B. «Region Prättigau / Davos»).
+if (kantonsDaten.GR) {
+  const bfsG = readFileSync('/tmp/bfs_gemeinden.csv', 'utf-8').replace(/^\uFEFF/, '').split('\n').map((z) => z.split(','));
+  const kopfG = bfsG[0];
+  const ixG = (n: string) => kopfG.indexOf(n);
+  const byHistG = new Map(bfsG.slice(1).map((r) => [r[ixG('HistoricalCode')], r]));
+  const grRegionen = new Map<string, string>(); // HistCode → Regionsname ohne Präfix, normalisiert
+  for (const r of bfsG.slice(1)) {
+    if (r[ixG('Level')] === '2' && byHistG.get(r[ixG('Parent')])?.[ixG('ShortName')] === 'GR') {
+      grRegionen.set(r[ixG('HistoricalCode')], r[ixG('Name')].replace(/^Region /, '').replace(/\s*\/\s*/g, '/'));
+    }
+  }
+  const regionZuIdx = new Map<string, number>();
+  for (const [g, i] of Object.entries(kantonsDaten.GR.gemeinden)) {
+    regionZuIdx.set(g.replace(/\s*\/\s*/g, '/'), i); // Dossier-Spalte «Regionen»
+  }
+  const neuGR: Record<string, number> = {};
+  for (const r of bfsG.slice(1)) {
+    if (r[ixG('Level')] === '3' && grRegionen.has(r[ixG('Parent')])) {
+      const idx = regionZuIdx.get(grRegionen.get(r[ixG('Parent')])!);
+      if (idx !== undefined) neuGR[r[ixG('Name')]] = idx;
+    }
+  }
+  kantonsDaten.GR.gemeinden = neuGR;
 }
 writeFileSync('src/data/schlichtung/aemterKantone.json', JSON.stringify(kantonsDaten));
 for (const [k, d] of Object.entries(kantonsDaten)) {
