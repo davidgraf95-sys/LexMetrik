@@ -203,7 +203,7 @@ export function sgRouting(a: SgAnswers): SgRouting | null {
 // ── Validierung / Mängelliste (deterministisch; Download-Gate) ──────────────
 export type SgMangel = { schritt: number; text: string };
 
-function parteiVollstaendig(p: SgPartei): boolean {
+export function parteiVollstaendig(p: SgPartei): boolean {
   return p.typ === 'natuerlich'
     ? !!(p.vorname.trim() && p.name.trim() && p.strasse.trim() && /^\d{4}$/.test(p.plz) && p.ort.trim())
     : !!(p.firma.trim() && p.sitzStrasse.trim() && /^\d{4}$/.test(p.sitzPlz) && p.sitzOrt.trim());
@@ -274,7 +274,7 @@ export function sgHinweise(a: SgAnswers): string[] {
 // ── Bausteine / Dokumentaufbau ──────────────────────────────────────────────
 // Parteibezeichnung nach ZPO-Terminologie: «klagende Partei» / «beklagte Partei».
 
-function parteiZeilen(p: SgPartei): string[] {
+export function parteiZeilen(p: SgPartei): string[] {
   if (p.typ === 'natuerlich') {
     return [
       `${p.vorname} ${p.name}`.trim(),
@@ -291,7 +291,7 @@ function parteiZeilen(p: SgPartei): string[] {
   ].filter(Boolean);
 }
 
-const parteiKurz = (p: SgPartei) => (p.typ === 'natuerlich' ? `${p.vorname} ${p.name}`.trim() : p.firma);
+export const parteiKurz = (p: SgPartei) => (p.typ === 'natuerlich' ? `${p.vorname} ${p.name}`.trim() : p.firma);
 
 export const SG_SCHEMA: VorlageSchema = {
   id: 'schlichtungsgesuch-bs',

@@ -11,6 +11,7 @@ import { VorlageSchlichtungsgesuchBs } from '../src/pages/VorlageSchlichtungsges
 import { VorlageArbeitsvertrag } from '../src/pages/VorlageArbeitsvertrag';
 import { VorlageMietvertrag } from '../src/pages/VorlageMietvertrag';
 import { VorlageVollmacht } from '../src/pages/VorlageVollmacht';
+import { VorlageKlageVereinfacht } from '../src/pages/VorlageKlageVereinfacht';
 import { Startseite } from '../src/pages/Startseite';
 import { Pro } from '../src/pages/Pro';
 import { Kontakt } from '../src/pages/Kontakt';
@@ -39,6 +40,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['VorlageArbeitsvertrag', VorlageArbeitsvertrag],
   ['VorlageMietvertrag', VorlageMietvertrag],
   ['VorlageVollmacht', VorlageVollmacht],
+  ['VorlageKlageVereinfacht', VorlageKlageVereinfacht],
   ['RechnerVerzugszins', RechnerVerzugszins],
   ['RechnerZpo', RechnerZpo],
   ['RechnerKuendigung', RechnerKuendigung],

@@ -27,6 +27,7 @@ const VorlageSchlichtungsgesuchBs = lazy(() => import('./pages/VorlageSchlichtun
 const VorlageArbeitsvertrag = lazy(() => import('./pages/VorlageArbeitsvertrag').then((m) => ({ default: m.VorlageArbeitsvertrag })));
 const VorlageMietvertrag = lazy(() => import('./pages/VorlageMietvertrag').then((m) => ({ default: m.VorlageMietvertrag })));
 const VorlageVollmacht = lazy(() => import('./pages/VorlageVollmacht').then((m) => ({ default: m.VorlageVollmacht })));
+const VorlageKlageVereinfacht = lazy(() => import('./pages/VorlageKlageVereinfacht').then((m) => ({ default: m.VorlageKlageVereinfacht })));
 const RechnerStub = lazy(() => import('./pages/RechnerStub').then((m) => ({ default: m.RechnerStub })));
 const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
 const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
@@ -88,6 +89,7 @@ export default function App() {
         <Route path="/vorlagen/arbeitsvertrag" element={<VorlageArbeitsvertrag />} />
         <Route path="/vorlagen/mietvertrag" element={<VorlageMietvertrag />} />
         <Route path="/vorlagen/vollmacht" element={<VorlageVollmacht />} />
+        <Route path="/vorlagen/klage-vereinfacht" element={<VorlageKlageVereinfacht />} />
         {/* Noch nicht implementierte Rechner (geplant / in Vorbereitung) */}
         <Route path="/rechner/:slug" element={<RechnerStub />} />
         <Route path="/methodik" element={<Methodik />} />

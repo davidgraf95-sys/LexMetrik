@@ -68,7 +68,7 @@ describe('Stufen-Zuteilung (tier)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -175,9 +175,9 @@ describe('Katalog-Integrität (Rechtsgebiet-Gliederung)', () => {
 });
 
 describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
-  it('verfügbar = status !== geplant; Regressionszählung 19 (Stand 5.6.2026, + Vollmacht + Zuständigkeit)', () => {
+  it('verfügbar = status !== geplant; Regressionszählung 20 (Stand 5.6.2026, + Vollmacht + Zuständigkeit + Klage vereinfacht)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(19);
+    expect(verf.length).toBe(20);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });

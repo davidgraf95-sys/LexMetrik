@@ -1052,9 +1052,27 @@ const VORLAGEN: Record<string, VorlageCard> = {
   'klage-vereinfacht': {
     id: 'klage-vereinfacht', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
-    title: 'Klage (vereinfachtes Verfahren)',
-    description: 'Klagegerüst mit Rechtsbegehren, Sachverhalt und Beweisofferten – offene Punkte werden ausgewiesen.',
-    status: 'geplant', norms: [], related: ['zpo-fristen'],
+    title: 'Klage (vereinfachtes Verfahren) – Basel-Stadt',
+    description: 'Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren (beziffert/unbeziffert), Streitgegenstand, freiwillige strukturierte Begründung mit Beweismitteln, Beilagen mit Klagebewilligung – BS-Routing (Zivil-/Arbeitsgericht), Kostenfreiheits-Prüfung und Klagefrist mit Gerichtsferien.',
+    status: 'entwurf',
+    norms: [
+      // Geltungsbereich vereinfachtes Verfahren
+      { label: 'Art. 243 ZPO', url: fedlexUrl('ZPO', '243'), verified: false },
+      // Form und Inhalt der Klage
+      { label: 'Art. 244 ZPO', url: fedlexUrl('ZPO', '244'), verified: false },
+      // Klagebewilligung und Klagefrist
+      { label: 'Art. 209 ZPO', url: fedlexUrl('ZPO', '209'), verified: false },
+      // Kostenfreiheit im Entscheidverfahren
+      { label: 'Art. 114 ZPO', url: fedlexUrl('ZPO', '114'), verified: false },
+      // Gerichtsferien (Klagefrist-Berechnung)
+      { label: 'Art. 145 ZPO', url: fedlexUrl('ZPO', '145'), verified: false },
+    ],
+    href: '/vorlagen/klage-vereinfacht',
+    schemaId: 'klage-vereinfacht-bs',
+    formvorschrift: 'Unterschreiben und im Doppel einreichen (Art. 131 ZPO)',
+    output: ['pdf', 'docx'],
+    keywords: ['Klage', 'vereinfachtes Verfahren', 'Art. 244 ZPO', 'Klagebewilligung', 'Arbeitsgericht', 'Rechtsbegehren', 'Basel'],
+    related: ['schlichtungsgesuch', 'zustaendigkeit', 'zpo-fristen'],
     icon: 'document',
   },
   einsprache: {

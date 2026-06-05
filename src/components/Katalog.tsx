@@ -265,7 +265,7 @@ function Schnellzugriff(props: {
       {favKarten.length > 0 && zeile('Favoriten', true, favKarten.map((k) => chip(k, true)))}
       {zuletztKarten.length > 0 && zeile('Zuletzt verwendet', false, zuletztKarten.map((k) => chip(k, false)))}
       {favKarten.length === 0 && (
-        <p className="text-xs text-ink-500 sm:pl-[10.4rem]">
+        <p className="text-xs text-ink-500 sm:pl-[10.25rem]">
           <span aria-hidden className="text-brass-700">★</span> auf einer Karte legt Favoriten fix hier ab.
         </p>
       )}
