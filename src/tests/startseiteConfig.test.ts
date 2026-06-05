@@ -47,8 +47,9 @@ describe('Stufen-Zuteilung (tier)', () => {
   it('die Free-Auswahl entspricht der Auftrags-Liste; alle übrigen «pro»', () => {
     const free = ALLE_KARTEN.filter((k) => k.tier === 'free').map((k) => k.id).sort();
     expect(free).toEqual([
-      'eigenhaendiges-testament', 'patientenverfuegung', 'tagerechner',
-      'teuerungsrechner', 'verzugszins', 'vorsorgeauftrag',
+      'bankvollmacht', 'eigenhaendiges-testament', 'generalvollmacht',
+      'kuendigung-arbeitnehmer', 'mahnung', 'patientenverfuegung',
+      'tagerechner', 'teuerungsrechner', 'verzugszins', 'vorsorgeauftrag',
     ]);
     ALLE_KARTEN.forEach((k) => expect(['free', 'pro'], k.id).toContain(k.tier));
   });

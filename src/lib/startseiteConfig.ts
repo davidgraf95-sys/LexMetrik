@@ -19,7 +19,7 @@ export type Rechtsbereich = 'privat' | 'oeffentlich' | 'straf' | 'uebergreifend'
 export const istAktiv = (s: Status) => s !== 'geplant';
 export type Modus = 'rechner' | 'vorlage'; // inhaltliche Hauptweiche (In-Page-Toggle)
 export type Art = 'frist' | 'betrag' | 'zuordnung' | 'werkzeug'; // Rechner-Output-Typ → Sektion
-export type VorlageArt = 'vorsorge' | 'vertrag' | 'eingabe' | 'gesellschaft'; // Dokument-Typ → Sektion
+export type VorlageArt = 'vorsorge' | 'vertrag' | 'eingabe' | 'gesellschaft' | 'korrespondenz'; // Dokument-Typ → Sektion/Filter
 // Stufe (orthogonal zum Status): free = kostenlose Auswahl auf «/»;
 // pro = vollständiger Katalog auf /pro (zeigt free UND pro).
 // Zugangskontrolle (PayPal-Gate an der Pro-Bereichsgrenze) ist ein späterer,
@@ -73,12 +73,12 @@ export type CalculatorCard = CatalogItem;
 
 // Sektions-Art → Modus (für modusabhängige Beschriftungen, keine fixen Strings)
 export const istVorlageArt = (a: Art | VorlageArt): a is VorlageArt =>
-  a === 'vorsorge' || a === 'vertrag' || a === 'eingabe' || a === 'gesellschaft';
+  a === 'vorsorge' || a === 'vertrag' || a === 'eingabe' || a === 'gesellschaft' || a === 'korrespondenz';
 
 export interface Sektion {
   art: Art | VorlageArt;
   id: string;            // Anker für Sprungmarken
-  numeral: 'I' | 'II' | 'III' | 'IV';
+  numeral: 'I' | 'II' | 'III' | 'IV' | 'V';
   title: string;
   lede: string;
 }
@@ -126,6 +126,8 @@ export const VORLAGE_SEKTIONEN: Sektion[] = [
     lede: 'Klagen, Gesuche, Einsprachen und Beschwerden — strukturierte Gerüste mit offenen Optionen.' },
   { art: 'gesellschaft', id: 'gesellschaft', numeral: 'IV', title: 'Gesellschaftsdokumente',
     lede: 'Gründungsunterlagen, Statuten und Beschlüsse — formbewusst zusammengestellt.' },
+  { art: 'korrespondenz', id: 'korrespondenz', numeral: 'V', title: 'Schreiben & Erklärungen',
+    lede: 'Kündigungen, Mahnungen, Begehren und einseitige Erklärungen — kurz und formgerecht.' },
 ];
 
 // ─── Rechtsgebiete: primäre Katalog-Gliederung (Auftrag «Katalog-Ausbau» §4) ─
@@ -538,6 +540,277 @@ const KARTEN: Record<string, CalculatorCard> = {
     description: 'Stillstand und Gerichts-/Betreibungsferien über ZPO, StPO, BGG und Verwaltungsverfahren.',
     status: 'geplant', norms: [],
   },
+
+  // ════ Katalog-Ausbau Phase 3: geplante Rechner gemäss KATALOG-ROADMAP ════
+  // «In Vorbereitung»: bewusst ohne Norm-Pills, ohne Artikel-/Tagesangaben
+  // (Normentreue) — Normen folgen erst mit dem Bau (geplant → entwurf).
+
+  // — Zivilprozess (ZPO) & Bundesgericht —
+  bundesgerichtsgebuehren: {
+    id: 'bundesgerichtsgebuehren', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    rechtsbereich: 'uebergreifend',
+    title: 'Bundesgerichtsgebühren',
+    description: 'Gerichtsgebühren der eidgenössischen Gerichte nach Streitwert und Verfahrensart.',
+    status: 'geplant', norms: [],
+    keywords: ['BGer', 'BVGer', 'BStGer', 'BPatGer', 'Gerichtsgebühren'],
+  },
+  kostenvorschuss: {
+    id: 'kostenvorschuss', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    rechtsbereich: 'privat',
+    title: 'Kostenvorschuss',
+    description: 'Vorschuss auf die Gerichtskosten im Zivilprozess.',
+    status: 'geplant', norms: [],
+    keywords: ['Vorschuss', 'Gerichtskosten'],
+  },
+  'parteientschaedigung-sicherheit': {
+    id: 'parteientschaedigung-sicherheit', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    rechtsbereich: 'privat',
+    title: 'Sicherheit für die Parteientschädigung',
+    description: 'Sicherstellung der Parteientschädigung bei besonderen Risiken auf Klägerseite.',
+    status: 'geplant', norms: [],
+    keywords: ['Kaution', 'Sicherstellung', 'Parteientschädigung'],
+  },
+  rechtsmittelpruefung: {
+    id: 'rechtsmittelpruefung', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    rechtsbereich: 'uebergreifend',
+    title: 'Rechtsmittelprüfung',
+    description: 'Welches Rechtsmittel gegen welchen Entscheid offensteht — Weg, Instanz und Anforderungen.',
+    status: 'geplant', norms: [],
+    keywords: ['Berufung', 'Beschwerde', 'Revision', 'Rechtsmittel'],
+  },
+
+  // — Arbeit —
+  ferienanspruch: {
+    id: 'ferienanspruch', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Ferienanspruch',
+    description: 'Ferienguthaben nach Alter, Pensum und Ein- oder Austritt im Dienstjahr.',
+    status: 'geplant', norms: [],
+    keywords: ['Ferien', 'Ferienguthaben', 'pro rata'],
+  },
+  ferienkuerzung: {
+    id: 'ferienkuerzung', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Ferienkürzung',
+    description: 'Kürzung des Ferienanspruchs bei längeren Absenzen.',
+    status: 'geplant', norms: [],
+    keywords: ['Ferien', 'Kürzung', 'Absenz', 'Krankheit'],
+  },
+  'dreizehnter-monatslohn': {
+    id: 'dreizehnter-monatslohn', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Anteiliger 13. Monatslohn',
+    description: 'Pro-rata-Anteil des 13. Monatslohns bei unterjährigem Ein- oder Austritt.',
+    status: 'geplant', norms: [],
+    keywords: ['13. Monatslohn', 'pro rata', 'Austritt'],
+  },
+  'ueberstunden-zuschlag': {
+    id: 'ueberstunden-zuschlag', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Überstunden- & Überzeitzuschlag',
+    description: 'Vergütung von Überstunden und Überzeit samt Zuschlägen.',
+    status: 'geplant', norms: [],
+    keywords: ['Überstunden', 'Überzeit', 'Zuschlag', 'Kompensation'],
+  },
+
+  // — Vertrag & Forderung (OR) —
+  schadenszins: {
+    id: 'schadenszins', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    rechtsbereich: 'privat',
+    title: 'Schadenszins',
+    description: 'Zins auf Schadenersatzforderungen vom Schadenseintritt bis zur Zahlung.',
+    status: 'geplant', norms: [],
+    keywords: ['Schadenszins', 'Schadenersatz', 'Zins'],
+  },
+  'widerruf-konsum': {
+    id: 'widerruf-konsum', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    rechtsbereich: 'privat',
+    title: 'Widerrufsrechte (Konsum)',
+    description: 'Widerrufsfristen bei Konsumgeschäften — Beginn, Dauer und Form.',
+    status: 'geplant', norms: [],
+    keywords: ['Widerruf', 'Konsumkredit', 'Haustürgeschäft'],
+  },
+
+  // — Familienrecht —
+  'gueterrecht-vorschlag': {
+    id: 'gueterrecht-vorschlag', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Familienrecht',
+    rechtsbereich: 'privat',
+    title: 'Güterrechtliche Auseinandersetzung / Vorschlag',
+    description: 'Aufteilung von Errungenschaft und Vorschlag bei Auflösung des Güterstands.',
+    status: 'geplant', norms: [],
+    keywords: ['Güterrecht', 'Errungenschaft', 'Vorschlag'],
+  },
+
+  // — Gesellschaftsrecht —
+  beteiligungsquoten: {
+    id: 'beteiligungsquoten', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
+    rechtsbereich: 'privat',
+    title: 'Beteiligungs- & Stimmrechtsquoten',
+    description: 'Kapital- und Stimmenanteile sowie Schwellen für Beschlüsse und Rechte.',
+    status: 'geplant', norms: [],
+    keywords: ['Quorum', 'Stimmrecht', 'Beteiligung', 'Schwelle'],
+  },
+  liberierungsgrad: {
+    id: 'liberierungsgrad', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
+    rechtsbereich: 'privat',
+    title: 'Liberierungsgrad',
+    description: 'Einbezahltes Kapital im Verhältnis zum Nennkapital.',
+    status: 'geplant', norms: [],
+    keywords: ['Liberierung', 'Aktienkapital', 'Stammkapital'],
+  },
+  kapitalverlust: {
+    id: 'kapitalverlust', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
+    rechtsbereich: 'privat',
+    title: 'Kapitalverlust',
+    description: 'Feststellung eines Kapitalverlusts und der daran geknüpften Handlungspflichten.',
+    status: 'geplant', norms: [],
+    keywords: ['Kapitalverlust', 'Sanierung', 'Aktienrecht', 'GmbH'],
+  },
+  ueberschuldung: {
+    id: 'ueberschuldung', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
+    rechtsbereich: 'privat',
+    title: 'Überschuldung',
+    description: 'Prüfung der Überschuldung und der Pflichten des Verwaltungsrats.',
+    status: 'geplant', norms: [],
+    keywords: ['Überschuldung', 'Benachrichtigung', 'Bilanz'],
+  },
+  kapitalerhoehung: {
+    id: 'kapitalerhoehung', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
+    rechtsbereich: 'privat',
+    title: 'Kapitalerhöhung',
+    description: 'Arten und Schritte der Kapitalerhöhung mit den massgebenden Quoten.',
+    status: 'geplant', norms: [],
+    keywords: ['Kapitalerhöhung', 'Bezugsrecht'],
+  },
+
+  // — Strafrecht & Strafprozess —
+  haftfristen: {
+    id: 'haftfristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
+    rechtsbereich: 'straf',
+    title: 'Haftfristen',
+    description: 'Fristen rund um Untersuchungs- und Sicherheitshaft.',
+    status: 'geplant', norms: [],
+    keywords: ['Haft', 'Untersuchungshaft', 'Haftverlängerung'],
+  },
+  'straf-zustaendigkeit': {
+    id: 'straf-zustaendigkeit', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
+    rechtsbereich: 'straf',
+    title: 'Örtliche Zuständigkeit im Strafverfahren',
+    description: 'Gerichtsstand im Strafverfahren nach Tatort und Beteiligten.',
+    status: 'geplant', norms: [],
+    keywords: ['Gerichtsstand', 'Tatort', 'Zuständigkeit'],
+  },
+
+  // — Verwaltungsrecht —
+  'baurecht-fristen': {
+    id: 'baurecht-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Verwaltungsrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'Bau- & planungsrechtliche Fristen',
+    description: 'Einsprache- und Beschwerdefristen in Bau- und Planungsverfahren.',
+    status: 'geplant', norms: [],
+    keywords: ['Baubewilligung', 'Einsprache', 'Nutzungsplanung'],
+  },
+  'vergabe-fristen': {
+    id: 'vergabe-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Verwaltungsrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'Vergaberechtliche Beschwerdefristen',
+    description: 'Fristen im öffentlichen Beschaffungswesen.',
+    status: 'geplant', norms: [],
+    keywords: ['Vergabe', 'Submission', 'Beschwerde'],
+  },
+
+  // — Steuerrecht — (Steuerverfahrens-Fristen deckt der bestehende Rechner
+  //   «Verwaltungs- & Steuerverfahren — Fristen» ab; nicht gedoppelt)
+  'steuer-verjaehrung': {
+    id: 'steuer-verjaehrung', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Steuerrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'Steuerrechtliche Verjährung',
+    description: 'Veranlagungs- und Bezugsverjährung im Steuerrecht.',
+    status: 'geplant', norms: [],
+    keywords: ['Verjährung', 'Veranlagung', 'Bezug'],
+  },
+  verrechnungssteuer: {
+    id: 'verrechnungssteuer', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Steuerrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'Verrechnungssteuer',
+    description: 'Abzug und Rückerstattung der Verrechnungssteuer.',
+    status: 'geplant', norms: [],
+    keywords: ['Verrechnungssteuer', 'Rückerstattung'],
+  },
+  grundstueckgewinnsteuer: {
+    id: 'grundstueckgewinnsteuer', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Steuerrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'Grundstückgewinn- & Handänderungssteuer (kantonal)',
+    description: 'Kantonale Steuern bei der Veräusserung von Grundstücken.',
+    status: 'geplant', norms: [],
+    keywords: ['Grundstückgewinn', 'Handänderung', 'kantonal'],
+  },
+
+  // — Sozialversicherungsrecht —
+  'ahv-beitraege': {
+    id: 'ahv-beitraege', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Sozialversicherungsrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'AHV-Beiträge',
+    description: 'Beiträge an AHV/IV/EO für Angestellte, Selbständige und Nichterwerbstätige.',
+    status: 'geplant', norms: [],
+    keywords: ['AHV', 'IV', 'EO', 'Beiträge'],
+  },
+
+  // — Datenschutzrecht —
+  'datenschutz-fristen': {
+    id: 'datenschutz-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Datenschutzrecht',
+    rechtsbereich: 'privat',
+    title: 'Datenschutzrechtliche Fristen',
+    description: 'Fristen rund um Auskunft, Meldung und Aufbewahrung.',
+    status: 'geplant', norms: [],
+    keywords: ['Datenschutz', 'DSG', 'Auskunft'],
+  },
+
+  // — Ausländerrecht —
+  'auslaenderrecht-fristen': {
+    id: 'auslaenderrecht-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Ausländerrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'Ausländer- & asylrechtliche Fristen',
+    description: 'Fristen in ausländer- und asylrechtlichen Verfahren.',
+    status: 'geplant', norms: [],
+    keywords: ['Migrationsrecht', 'Asyl', 'Bewilligung'],
+  },
+
+  // — Weitere Rechtsgebiete —
+  markenwiderspruch: {
+    id: 'markenwiderspruch', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Weitere Rechtsgebiete',
+    rechtsbereich: 'privat',
+    title: 'Markenwiderspruch (Frist)',
+    description: 'Widerspruchsfrist nach Veröffentlichung einer Markeneintragung.',
+    status: 'geplant', norms: [],
+    keywords: ['Marke', 'Widerspruch', 'IGE'],
+  },
+
+  // — Übergreifende Werkzeuge —
+  checklisten: {
+    id: 'checklisten', modus: 'rechner', art: 'werkzeug', tier: 'pro', rechtsgebiet: 'Übergreifende Werkzeuge',
+    rechtsbereich: 'uebergreifend',
+    title: 'Checklisten',
+    description: 'Strukturierte Prüf- und Arbeitslisten für wiederkehrende Abläufe.',
+    status: 'geplant', norms: [],
+    keywords: ['Checkliste', 'Ablauf'],
+  },
+  mandatsaufnahme: {
+    id: 'mandatsaufnahme', modus: 'rechner', art: 'werkzeug', tier: 'pro', rechtsgebiet: 'Übergreifende Werkzeuge',
+    rechtsbereich: 'uebergreifend',
+    title: 'Mandatsaufnahme-Formular',
+    description: 'Strukturierte Erfassung der Eckdaten eines neuen Mandats.',
+    status: 'geplant', norms: [],
+    keywords: ['Mandat', 'Aufnahme', 'Konflikt-Check'],
+  },
+  'kostenblatt-export': {
+    id: 'kostenblatt-export', modus: 'rechner', art: 'werkzeug', tier: 'pro', rechtsgebiet: 'Übergreifende Werkzeuge',
+    rechtsbereich: 'uebergreifend',
+    title: 'Kostenblatt-Export',
+    description: 'Zusammenstellung von Kosten und Auslagen als Exportblatt.',
+    status: 'geplant', norms: [],
+    keywords: ['Kosten', 'Auslagen', 'Export'],
+  },
 };
 
 // ─── Vorlagen-Katalog (Modus «Vorlagen»; Start: alle «In Vorbereitung») ────
@@ -769,6 +1042,262 @@ const VORLAGEN: Record<string, VorlageCard> = {
     description: 'Beschlussprotokoll für Generalversammlung oder Verwaltungsrat.',
     status: 'geplant', norms: [],
     icon: 'scale',
+  },
+
+  // ════ Katalog-Ausbau Phase 3: geplante Vorlagen gemäss KATALOG-ROADMAP ════
+  // «In Vorbereitung»: ohne Norm-Pills, ohne Artikel-/Tagesangaben.
+  // «Strukturiertes Gerüst» = Roadmap-Markierung [Gerüst] (Würdigungsanteil).
+
+  // — Betreibung & Konkurs (SchKG) —
+  rechtsvorschlag: {
+    id: 'rechtsvorschlag', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    rechtsbereich: 'privat',
+    title: 'Rechtsvorschlag',
+    description: 'Erklärung des Rechtsvorschlags gegen den Zahlungsbefehl.',
+    status: 'geplant', norms: [],
+    keywords: ['Rechtsvorschlag', 'Zahlungsbefehl', 'Betreibung'],
+  },
+  aberkennungsklage: {
+    id: 'aberkennungsklage', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    rechtsbereich: 'privat',
+    title: 'Aberkennungsklage',
+    description: 'Strukturiertes Gerüst für die Aberkennungsklage nach provisorischer Rechtsöffnung.',
+    status: 'geplant', norms: [],
+    keywords: ['Aberkennung', 'Rechtsöffnung'],
+  },
+  arrestgesuch: {
+    id: 'arrestgesuch', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    rechtsbereich: 'privat',
+    title: 'Arrestgesuch',
+    description: 'Strukturiertes Gerüst für das Arrestgesuch.',
+    status: 'geplant', norms: [],
+    keywords: ['Arrest', 'Sicherung'],
+  },
+  'schkg-beschwerde': {
+    id: 'schkg-beschwerde', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    rechtsbereich: 'privat',
+    title: 'Beschwerde gegen Betreibungs- & Konkursämter',
+    description: 'Strukturiertes Gerüst für die betreibungsrechtliche Beschwerde an die Aufsichtsbehörde.',
+    status: 'geplant', norms: [],
+    keywords: ['Beschwerde', 'Aufsichtsbehörde', 'Betreibungsamt'],
+  },
+
+  // — Arbeit —
+  'kuendigung-arbeitgeber': {
+    id: 'kuendigung-arbeitgeber', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Kündigung durch den Arbeitgeber',
+    description: 'Kündigungsschreiben des Arbeitgebers mit den üblichen Bestandteilen.',
+    status: 'geplant', norms: [],
+    keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben'],
+  },
+  'kuendigung-arbeitnehmer': {
+    id: 'kuendigung-arbeitnehmer', modus: 'vorlage', art: 'korrespondenz', tier: 'free', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Kündigung durch den Arbeitnehmer',
+    description: 'Kündigungsschreiben der Arbeitnehmerin oder des Arbeitnehmers.',
+    status: 'geplant', norms: [],
+    keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben'],
+  },
+  freistellung: {
+    id: 'freistellung', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Freistellung',
+    description: 'Strukturiertes Gerüst für die Freistellungserklärung.',
+    status: 'geplant', norms: [],
+    keywords: ['Freistellung'],
+  },
+  verwarnung: {
+    id: 'verwarnung', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Verwarnung',
+    description: 'Strukturiertes Gerüst für die arbeitsrechtliche Verwarnung.',
+    status: 'geplant', norms: [],
+    keywords: ['Verwarnung', 'Abmahnung'],
+  },
+  arbeitszeugnis: {
+    id: 'arbeitszeugnis', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Arbeitszeugnis',
+    description: 'Strukturiertes Gerüst für Voll- und Zwischenzeugnisse.',
+    status: 'geplant', norms: [],
+    keywords: ['Zeugnis', 'Zwischenzeugnis'],
+  },
+  aufhebungsvereinbarung: {
+    id: 'aufhebungsvereinbarung', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Arbeit',
+    rechtsbereich: 'privat',
+    title: 'Aufhebungsvereinbarung',
+    description: 'Strukturiertes Gerüst für die einvernehmliche Beendigung des Arbeitsverhältnisses.',
+    status: 'geplant', norms: [],
+    keywords: ['Aufhebungsvertrag', 'Saldoklausel'],
+  },
+
+  // — Vertrag & Forderung (OR) —
+  mahnung: {
+    id: 'mahnung', modus: 'vorlage', art: 'korrespondenz', tier: 'free', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    rechtsbereich: 'privat',
+    title: 'Mahnung',
+    description: 'Zahlungsaufforderung mit Fristansetzung.',
+    status: 'geplant', norms: [],
+    keywords: ['Mahnung', 'Zahlungsverzug', 'Frist'],
+  },
+  inverzugsetzung: {
+    id: 'inverzugsetzung', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    rechtsbereich: 'privat',
+    title: 'Inverzugsetzung',
+    description: 'Erklärung, die die Schuldnerin oder den Schuldner in Verzug setzt.',
+    status: 'geplant', norms: [],
+    keywords: ['Verzug', 'Mahnung'],
+  },
+  schuldanerkennung: {
+    id: 'schuldanerkennung', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    rechtsbereich: 'privat',
+    title: 'Schuldanerkennung',
+    description: 'Schriftliche Anerkennung einer Schuld als Grundlage der späteren Durchsetzung.',
+    status: 'geplant', norms: [],
+    keywords: ['Schuldanerkennung', 'Rechtsöffnung'],
+  },
+  vergleichsvereinbarung: {
+    id: 'vergleichsvereinbarung', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    rechtsbereich: 'privat',
+    title: 'Vergleichsvereinbarung',
+    description: 'Strukturiertes Gerüst für den aussergerichtlichen Vergleich.',
+    status: 'geplant', norms: [],
+    keywords: ['Vergleich', 'Saldoklausel'],
+  },
+
+  // — Erbrecht —
+  erbverzichtsvertrag: {
+    id: 'erbverzichtsvertrag', modus: 'vorlage', art: 'vorsorge', tier: 'pro', rechtsgebiet: 'Erbrecht',
+    rechtsbereich: 'privat',
+    title: 'Erbverzichtsvertrag',
+    description: 'Verzicht auf die Erbenstellung — Entwurf zur öffentlichen Beurkundung.',
+    status: 'geplant', norms: [],
+    formvorschrift: 'Öffentliche Beurkundung',
+    keywords: ['Erbverzicht', 'Beurkundung'],
+  },
+  erbteilungsvereinbarung: {
+    id: 'erbteilungsvereinbarung', modus: 'vorlage', art: 'vorsorge', tier: 'pro', rechtsgebiet: 'Erbrecht',
+    rechtsbereich: 'privat',
+    title: 'Erbteilungsvereinbarung',
+    description: 'Strukturiertes Gerüst für die Teilung des Nachlasses unter den Erbinnen und Erben.',
+    status: 'geplant', norms: [],
+    keywords: ['Erbteilung', 'Teilungsvertrag'],
+  },
+
+  // — Vorsorge & Erwachsenenschutz —
+  generalvollmacht: {
+    id: 'generalvollmacht', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
+    rechtsbereich: 'privat',
+    title: 'Generalvollmacht',
+    description: 'Umfassende Vollmacht zur Vertretung in persönlichen und vermögensrechtlichen Angelegenheiten.',
+    status: 'geplant', norms: [],
+    keywords: ['Vollmacht', 'Vertretung'],
+  },
+  bankvollmacht: {
+    id: 'bankvollmacht', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
+    rechtsbereich: 'privat',
+    title: 'Bankvollmacht',
+    description: 'Vollmacht für die Vertretung gegenüber Finanzinstituten.',
+    status: 'geplant', norms: [],
+    keywords: ['Vollmacht', 'Bank', 'Konto'],
+  },
+
+  // — Familienrecht —
+  trennungsvereinbarung: {
+    id: 'trennungsvereinbarung', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Familienrecht',
+    rechtsbereich: 'privat',
+    title: 'Trennungsvereinbarung',
+    description: 'Strukturiertes Gerüst für die Regelung des Getrenntlebens.',
+    status: 'geplant', norms: [],
+    keywords: ['Trennung', 'Getrenntleben'],
+  },
+  scheidungskonvention: {
+    id: 'scheidungskonvention', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Familienrecht',
+    rechtsbereich: 'privat',
+    title: 'Scheidungskonvention',
+    description: 'Strukturiertes Gerüst für die Vereinbarung der Scheidungsfolgen.',
+    status: 'geplant', norms: [],
+    keywords: ['Scheidung', 'Konvention'],
+  },
+  elternvereinbarung: {
+    id: 'elternvereinbarung', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Familienrecht',
+    rechtsbereich: 'privat',
+    title: 'Elternvereinbarung',
+    description: 'Strukturiertes Gerüst zu Obhut, Betreuung und Unterhalt.',
+    status: 'geplant', norms: [],
+    keywords: ['Eltern', 'Obhut', 'Betreuung'],
+  },
+
+  // — Strafrecht & Strafprozess —
+  strafanzeige: {
+    id: 'strafanzeige', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
+    rechtsbereich: 'straf',
+    title: 'Strafanzeige',
+    description: 'Anzeige eines Sachverhalts an die Strafverfolgungsbehörden.',
+    status: 'geplant', norms: [],
+    keywords: ['Anzeige', 'Staatsanwaltschaft'],
+  },
+  'strafantrag-vorlage': {
+    id: 'strafantrag-vorlage', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
+    rechtsbereich: 'straf',
+    title: 'Strafantrag',
+    description: 'Strafantrag der berechtigten Person bei Antragsdelikten.',
+    status: 'geplant', norms: [],
+    keywords: ['Strafantrag', 'Antragsdelikt'],
+  },
+  akteneinsichtsgesuch: {
+    id: 'akteneinsichtsgesuch', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
+    rechtsbereich: 'straf',
+    title: 'Akteneinsichtsgesuch',
+    description: 'Gesuch um Einsicht in die Verfahrensakten.',
+    status: 'geplant', norms: [],
+    keywords: ['Akteneinsicht', 'Verfahrensakten'],
+  },
+  entschaedigungsbegehren: {
+    id: 'entschaedigungsbegehren', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
+    rechtsbereich: 'straf',
+    title: 'Entschädigungsbegehren',
+    description: 'Strukturiertes Gerüst für Entschädigungs- und Genugtuungsbegehren im Strafverfahren.',
+    status: 'geplant', norms: [],
+    keywords: ['Entschädigung', 'Genugtuung'],
+  },
+  adhaesionsklage: {
+    id: 'adhaesionsklage', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
+    rechtsbereich: 'straf',
+    title: 'Adhäsionsklage',
+    description: 'Strukturiertes Gerüst für Zivilansprüche im Strafverfahren.',
+    status: 'geplant', norms: [],
+    keywords: ['Adhäsion', 'Zivilanspruch'],
+  },
+
+  // — Verwaltungsrecht — (Einsprache deckt die bestehende Vorlage
+  //   «Einsprache (Straf-/Verwaltungsbefehl)» ab; nicht gedoppelt)
+  rekurs: {
+    id: 'rekurs', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Verwaltungsrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'Rekurs',
+    description: 'Strukturiertes Gerüst für den kantonalen Rekurs.',
+    status: 'geplant', norms: [],
+    keywords: ['Rekurs', 'Rechtsmittel'],
+  },
+
+  // — Datenschutzrecht —
+  auskunftsbegehren: {
+    id: 'auskunftsbegehren', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Datenschutzrecht',
+    rechtsbereich: 'privat',
+    title: 'Auskunftsbegehren (Datenschutz)',
+    description: 'Begehren um Auskunft über die Bearbeitung eigener Personendaten.',
+    status: 'geplant', norms: [],
+    keywords: ['Auskunft', 'Datenschutz', 'Personendaten'],
+  },
+  loeschungsbegehren: {
+    id: 'loeschungsbegehren', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Datenschutzrecht',
+    rechtsbereich: 'privat',
+    title: 'Löschungsbegehren (Datenschutz)',
+    description: 'Begehren um Löschung von Personendaten.',
+    status: 'geplant', norms: [],
+    keywords: ['Löschung', 'Datenschutz', 'Personendaten'],
   },
 };
 
