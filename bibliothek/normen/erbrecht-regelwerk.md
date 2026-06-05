@@ -388,4 +388,203 @@ Die bestehende Vorlage `src/lib/vorlagen/testament.ts` (eigenhändiges Testament
 
 ## TEIL 3 — Erbgang + Teilung (Fristen-/Behörden-Synthese)
 
-_(Bericht ausstehend.)_
+# ERBRECHT-REGELWERK Teil 3 — ERBGANG + TEILUNG (ZGB)
+
+**Quelle:** `/tmp/zgb.html` (Fedlex SR 210, Schweizerisches Zivilgesetzbuch, **Stand 1. Januar 2026**). Abrufdatum 5.6.2026. Alle Wortlaut-Kerne verbatim aus dem Cache extrahiert; Fußnoten/Randtitel bereinigt. Revisionshinweise: Erbrechtsrevision BG 18.12.2020 (AS 2021 312, i.K. 1.1.2023) betrifft v.a. Pflichtteile (Teil 1/2 dieses Regelwerks), nicht den hier behandelten Erbgang/Teilungsabschnitt; Art. 537 f. in der Fassung des GestG (i.K. 1.1.2001).
+
+---
+
+## 1. Eröffnung des Erbganges (Art. 537–550)
+
+| Art. | Wortlaut-Kern (verbatim) | Regel / Engine-Hinweis |
+|---|---|---|
+| **537** | «Der Erbgang wird durch den **Tod des Erblassers eröffnet**.» Lebzeitige Zuwendungen/Teilungen werden nach dem Stand der Erbschaft beim Tod berücksichtigt. | **Anknüpfungszeitpunkt = Todesdatum.** Engine: Todesdatum ist Fixpunkt für Rechtsstand, Bewertung, Fristbeginne. |
+| **538** | «Die Eröffnung des Erbganges erfolgt für die Gesamtheit des Vermögens **am letzten Wohnsitze des Erblassers**.» (Abs. 2 aufgehoben, GestG.) | **Universalität am letzten Wohnsitz** → Grundlage für örtliche Behörden-/Gerichtszuständigkeit (Art. 28 ZPO). |
+| **539** | Jedermann erbfähig, sofern nicht erbunfähig. Zuwendung an Personenmehrheit ohne Rechtspersönlichkeit → alle Zugehörigen bzw. Stiftung. | Erbfähigkeit. |
+| **540** | **Erbunwürdig:** Ziff. 1 vorsätzliche/rechtswidrige Tötung o. Versuch; 2. Herbeiführung bleibender Verfügungsunfähigkeit; 3. Arglist/Zwang/Drohung bzgl. Verfügung; 4. vorsätzliche Beseitigung/Ungültigmachung einer Verfügung. **Verzeihung hebt Unwürdigkeit auf.** | Erbunwürdigkeit wirkt von Gesetzes wegen. |
+| **541** | Unfähigkeit nur für den Unwürdigen selbst; **seine Nachkommen beerben, wie wenn er vorverstorben wäre**. | Repräsentation. |
+| **542** | Erbe muss Erbgang in erbfähigem Zustand **erleben**. Stirbt er danach → Recht vererbt sich auf seine Erben (Erbenerben). | Kommorienten/Transmission. |
+| **543** | Vermächtnisnehmer erwirbt Anspruch bei Erleben; Vorversterben → Vermächtnis fällt weg zugunsten des Beschwerten. | |
+| **544** | **Kind ab Empfängnis erbfähig unter Vorbehalt Lebendgeburt.** Kindesschutzbehörde errichtet ggf. Beistandschaft. Totgeburt → fällt ausser Betracht. | Nasciturus. **Behörde: KESB.** |
+| **545** | Nacherbeneinsetzung/Nachvermächtnis zugunsten noch nicht lebender Person; ohne genannten Vorerben → gesetzliche Erben als Vorerben. | |
+| **546** | **Verschollenheit:** Erben/Bedachte leisten vor Auslieferung **Sicherheit**: **5 Jahre** (Verschwinden in hoher Todesgefahr, ab Auslieferung), **15 Jahre** (nachrichtlose Abwesenheit, ab letzter Nachricht), höchstens bis Erblasser 100 Jahre alt wäre. | **FRIST 5/15 J.** Engine-relevant. |
+| **547** | Rückkehr/bessere Berechtigte → Herausgabe nach Besitzesregeln; gutgläubige Eingewiesene haften nur während Frist der Erbschaftsklage. | |
+| **548** | Erbe verschwunden, Leben/Tod im Erbgangszeitpunkt unbeweisbar → Anteil unter amtliche Verwaltung. Antrag auf Verschollenerklärung: **1 Jahr** (hohe Todesgefahr) bzw. **5 Jahre** (letzte Nachricht) **beim Gericht**. | **FRIST 1/5 J., Behörde: Gericht.** |
+| **549** | Wechselseitige Berufung auf bereits erwirkte Einweisung/Verschollenerklärung zwischen Miterben. | |
+| **550** | **Verfahren von Amtes wegen:** nach **10 Jahren** amtl. Verwaltung oder Alter 100 → Verschollenerklärung von Amtes wegen auf Verlangen der zuständigen Behörde; nach Auskündungsfrist ohne Berechtigte → Vermögen an erbberechtigtes Gemeinwesen / Heimatkanton. | **FRIST 10 J. Behörde: zuständige Behörde / Gericht.** |
+| **560** | **Erwerb von Gesetzes wegen:** «Die Erben **erwerben die Erbschaft als Ganzes mit dem Tode des Erblassers kraft Gesetzes**.» Forderungen, Eigentum, beschränkte dingliche Rechte, Besitz gehen ohne weiteres über; **Schulden werden persönliche Schulden der Erben**. Erwerb eingesetzter Erben auf Eröffnungszeitpunkt zurückbezogen. | **Universalsukzession + ipso-iure-Schuldenhaftung** — Kernbegründung für Ausschlagung/öffentl. Inventar/amtl. Liquidation als Haftungsbegrenzung. |
+
+---
+
+## 2. Sicherungsmassregeln (Art. 551–559)
+
+| Art. | Wortlaut-Kern (verbatim) | Regel / Frist / Behörde |
+|---|---|---|
+| **551** | «Die **zuständige Behörde** hat **von Amtes wegen** die zur Sicherung des Erbganges nötigen Massregeln zu treffen.» Insbesondere: **Siegelung, Inventaraufnahme, Erbschaftsverwaltung, Eröffnung letztwilliger Verfügungen**. | **Behörde von Amtes wegen** — kantonal organisierte Erbschaftsbehörde am letzten Wohnsitz. |
+| **552** | Siegelung wird angeordnet, soweit das **kantonale Recht** sie vorsieht. | Kantonal. |
+| **553** | **Sicherungs-Inventar** angeordnet, wenn: 1. minderjähriger Erbe unter Vormundschaft; 2. Erbe dauernd ohne Vertretung abwesend; 3. ein Erbe oder die **Erwachsenenschutzbehörde** es verlangt; 4. volljähriger Erbe unter umfassender Beistandschaft. Nach kant. Recht, **i.d.R. binnen 2 Monaten seit dem Tod**. Kantonal erweiterbar. | **FRIST: 2 Monate (Ordnungsfrist). Behörde: zuständige Behörde / KESB.** |
+| **554** | **Erbschaftsverwaltung** angeordnet: 1. Erbe dauernd ohne Vertretung abwesend (sofern Interessen es erfordern); 2. Erbrecht eines Ansprechers nicht genügend nachweisbar / Vorhandensein eines Erben ungewiss; 3. nicht alle Erben bekannt; 4. gesetzlich vorgesehene Sonderfälle. **Willensvollstrecker** → diesem Verwaltung übergeben. Bei vermögensumfassender Beistandschaft → Beistand. | Behörde ordnet an; ggf. Willensvollstrecker/Beistand. |
+| **555** | Ungewissheit über (alle) Erben → **öffentliche Aufforderung, sich binnen Jahresfrist zu melden**. Keine Anmeldung + keine bekannten Erben → Erbschaft an erbberechtigtes Gemeinwesen (Vorbehalt Erbschaftsklage). | **FRIST: 1 Jahr (Rechnungsruf an Erben).** |
+| **556** | **Einlieferungspflicht:** «Findet sich beim Tode des Erblassers eine letztwillige Verfügung vor, so ist sie der Behörde **unverweilt einzuliefern**, und zwar auch dann, wenn sie als ungültig erachtet wird.» Jeder Verwahrer/Finder bei **persönlicher Verantwortlichkeit** verpflichtet, sobald er vom Tod Kenntnis hat. Danach: einstweilige Überlassung an gesetzl. Erben oder Erbschaftsverwaltung. | **PFLICHT «unverweilt». Behörde: Einlieferungsbehörde (kantonal). Haftung bei Verletzung.** |
+| **557** | **Testamentseröffnung:** «Die Verfügung … muss **binnen Monatsfrist nach der Einlieferung** von der zuständigen Behörde eröffnet werden.» Bekannte Erben werden vorgeladen. Mehrere Verfügungen: alle einliefern und eröffnen. | **FRIST: 1 Monat ab Einlieferung. Behörde: zuständige (Eröffnungs-)Behörde.** |
+| **558** | Alle Beteiligten erhalten **auf Kosten der Erbschaft eine Abschrift**, soweit sie betroffen sind; Bedachte unbekannten Aufenthalts → öffentliche Auskündung. | Mitteilung. |
+| **559** | **Erbenschein (Erbbescheinigung):** «**Nach Ablauf eines Monats seit der Mitteilung** an die Beteiligten wird den eingesetzten Erben, wenn die gesetzlichen Erben oder früher Bedachte deren Berechtigung **nicht ausdrücklich bestritten** haben, **auf ihr Verlangen** von der Behörde eine Bescheinigung darüber ausgestellt, dass sie **unter Vorbehalt der Ungültigkeits- und der Erbschaftsklage als Erben anerkannt** seien.» Zugleich Anweisung an Erbschaftsverwalter zur Auslieferung. | **ZENTRAL für die Praxis.** **FRIST: 1 Monat seit Mitteilung (Art. 558) + kein ausdrücklicher Einspruch.** **Voraussetzungen:** eingesetzte Erben, Fristablauf, keine Bestreitung. **Wirkung:** Legitimationsurkunde (Ausweis der Verfügungsbefugnis), nur provisorisch — Vorbehalt Ungültigkeits-/Erbschaftsklage; kein materieller Erbrechtsentscheid. **Behörde: zuständige (kantonale) Behörde am letzten Wohnsitz.** |
+
+---
+
+## 3. Ausschlagung (Art. 566–579)
+
+| Art. | Wortlaut-Kern (verbatim) | Regel / Frist / Behörde |
+|---|---|---|
+| **566** | «Die gesetzlichen und die eingesetzten Erben haben die **Befugnis, die Erbschaft … auszuschlagen**.» **Abs. 2:** Ist die **Zahlungsunfähigkeit des Erblassers im Todeszeitpunkt amtlich festgestellt oder offenkundig, so wird die Ausschlagung vermutet.** | **Ausschlagungsvermutung bei Überschuldung** (keine aktive Erklärung nötig). |
+| **567** | «Die **Frist zur Ausschlagung beträgt drei Monate**.» Beginn: **gesetzliche Erben** — Kenntnis vom Tod des Erblassers (sofern nicht nachweisbar später Kenntnis vom Erbfall); **eingesetzte Erben** — Zugang der **amtlichen Mitteilung** der Verfügung. | **FRIST: 3 Monate. Beginn je Erbe individuell (Kenntnis).** Kern der Engine. |
+| **568** | Wurde ein **Sicherungs-Inventar** (Art. 553) aufgenommen, beginnt die 3-Monats-Frist **für alle Erben** mit dem Tag der **behördlichen Mitteilung des Inventarabschlusses**. | **Alternativer Fristbeginn (einheitlich für alle).** |
+| **569** | Stirbt Erbe vor Ausschlagung/Annahme → Befugnis geht auf seine Erben über; Frist ab deren Kenntnis vom Anfall, frühestens mit Ablauf der eigenen Frist gegenüber ihrem Erblasser. Bei Ausschlagung mit Anfall an vorher nicht Berechtigte: Frist ab deren Kenntnis von der Ausschlagung. | Transmission der Ausschlagungsbefugnis. |
+| **570** | **Form:** Erklärung **bei der zuständigen Behörde mündlich oder schriftlich**, **unbedingt und vorbehaltlos**. Behörde **führt ein Protokoll** über die Ausschlagungen. | **Behörde: zuständige (kantonale) Behörde — Entgegennahme + Protokoll.** |
+| **571** | **Verwirkung:** Keine Ausschlagungserklärung innert Frist → **Erbschaft vorbehaltlos erworben**. **Einmischung** (Handlungen über blosse Verwaltung/Geschäftsfortgang hinaus) oder **Aneignung/Verheimlichung** von Erbschaftssachen → Erbe **kann nicht mehr ausschlagen**. | **Verwirkung durch Einmischung / Fristablauf.** |
+| **572** | Ausschlagung eines Miterben (ohne Verfügung) → Anteil vererbt sich wie bei Nichterleben; bei Verfügung → an nächste gesetzliche Erben des Ausschlagenden (sofern kein anderer Wille). | Anwachsung/Eintritt. |
+| **573** | **Ausschlagung aller nächsten gesetzlichen Erben → Liquidation durch das Konkursamt.** Überschuss nach Schuldendeckung an die Berechtigten, wie wenn keine Ausschlagung. | **Behörde: Konkursamt.** |
+| **574** | Nachkommen schlagen aus → Behörde benachrichtigt überlebenden Ehegatten; **Annahme binnen Monatsfrist** möglich. | **FRIST: 1 Monat (Ehegatte).** |
+| **575** | Ausschlagung zugunsten nachfolgender Erben: Anfrage an folgende Erben; ohne Annahmeerklärung **binnen Monatsfrist** → auch von ihnen ausgeschlagen. | **FRIST: 1 Monat.** |
+| **576** | **Fristverlängerung:** «Aus wichtigen Gründen kann die **zuständige Behörde** … eine Fristverlängerung gewähren oder eine neue Frist ansetzen.» | Erstreckung der 3-Monats-Frist. |
+| **577** | Ausschlagung eines Vermächtnisses → fällt zugunsten des Beschwerten weg (sofern kein anderer Wille). | |
+| **578** | **Überschuldeter Erbe** schlägt zur Gläubigerbenachteiligung aus → Gläubiger/Konkursverwaltung können **binnen 6 Monaten anfechten**, wenn Forderungen nicht sichergestellt → **amtliche Liquidation**. | **FRIST: 6 Monate (Anfechtung). Behörde: amtl. Liquidation.** |
+| **579** | **Haftungsfolge bei Ausschlagung:** Schlagen Erben eines **zahlungsunfähigen** Erblassers aus, haften sie dessen Gläubigern dennoch, soweit sie **innerhalb der letzten 5 Jahre vor dem Tod** ausgleichungspflichtige Vermögenswerte empfangen haben. Landesübliche Heiratsausstattung + Erziehungs-/Ausbildungskosten ausgenommen. Gutgläubige nur, soweit noch bereichert. | **FRIST/Rückgriffsperiode: 5 Jahre. Verknüpfung zu Ausgleichung (Art. 626 ff.).** |
+
+---
+
+## 4. Öffentliches Inventar (Art. 580–592)
+
+| Art. | Wortlaut-Kern (verbatim) | Regel / Frist / Behörde |
+|---|---|---|
+| **580** | «Jeder Erbe, der die Befugnis hat, die Erbschaft auszuschlagen, ist berechtigt, ein **öffentliches Inventar** zu verlangen. Das Begehren muss **binnen Monatsfrist** in der gleichen Form wie die Ausschlagung bei der zuständigen Behörde angebracht werden.» Begehren eines Erben gilt für alle. | **FRIST: 1 Monat (Antrag). Behörde: zuständige (kantonale) Behörde.** |
+| **581** | Errichtung durch zuständige Behörde nach kant. Recht: **Verzeichnis der Vermögenswerte und Schulden mit Schätzung**. Auskunftspflicht aller Wissensträger bei Verantwortlichkeit; Erben melden bekannte Schulden. | **Behörde: zuständige Behörde, kantonales Verfahren.** |
+| **582** | **Rechnungsruf:** öffentliche Auskündung; Gläubiger und Schuldner (inkl. Bürgschaftsgläubiger) **melden binnen bestimmter Frist** Forderungen/Schulden an; Hinweis auf Folgen der Nichtanmeldung. **Frist ≥ 1 Monat ab erster Auskündung.** | **FRIST: mind. 1 Monat (Rechnungsruf).** |
+| **583** | Forderungen/Schulden aus öffentlichen Büchern/Papieren von Amtes wegen aufgenommen; Anzeige an Schuldner/Gläubiger. | |
+| **584** | Nach Auskündungsfrist: Inventar geschlossen, **mind. 1 Monat zur Einsicht aufgelegt**. Kosten von Erbschaft, sonst von den antragstellenden Erben. | **FRIST: 1 Monat Auflage.** |
+| **585** | Während Inventar nur notwendige Verwaltungshandlungen; Geschäftsfortführung durch Erben → Miterben können Sicherstellung verlangen. | |
+| **586** | **Betreibung für Schulden des Erblassers während des Inventars ausgeschlossen**; Prozesse (ausser dringende) ruhen — weder Fortsetzung noch Anhebung. | Betreibungs-/Prozesssperre. |
+| **587** | **Erklärungsfrist:** «Nach Abschluss des Inventars wird jeder Erbe aufgefordert, sich **binnen Monatsfrist** über den Erwerb … zu erklären.» Behörde kann weitere Frist für Schätzungen/streitige Ansprüche einräumen. | **FRIST: 1 Monat (Erklärung).** |
+| **588** | **Optionen** in der Frist: **ausschlagen / amtliche Liquidation verlangen / unter öffentlichem Inventar annehmen / vorbehaltlos annehmen**. **Keine Erklärung → Annahme unter öffentlichem Inventar** (gesetzliche Fiktion). | **Default bei Schweigen = Annahme u. öffentl. Inventar.** |
+| **589** | **Wirkung:** Im Inventar verzeichnete Schulden + Vermögenswerte gehen über; Erwerb auf Eröffnung zurückbezogen; **für inventarisierte Schulden haftet der Erbe mit Erbschaft UND eigenem Vermögen**. | Haftung nach Inventar. |
+| **590** | **Haftung ausser Inventar:** Für **nicht angemeldete** (versäumte) Forderungen **keine Haftung** (weder persönlich noch mit Erbschaft). Bei unverschuldeter Nichtanmeldung / trotz Anmeldung nicht aufgenommen → Haftung nur soweit aus Erbschaft bereichert. Pfandgesicherte Forderungen bleiben durchsetzbar. | **Haftungsbeschränkung = Kernwirkung.** |
+| **591** | Bürgschaftsschulden gesondert aufgezeichnet; nur bis zum konkursmässigen Anteil geltend zu machen. | |
+| **592** | Erbschaft an Gemeinwesen → von Amtes wegen Rechnungsruf; Haftung nur im Umfang der erworbenen Vermögenswerte. | |
+
+---
+
+## 5. Amtliche Liquidation (Art. 593–597) + Verhältnis zur konkursamtlichen
+
+| Art. | Wortlaut-Kern (verbatim) | Regel / Frist / Behörde |
+|---|---|---|
+| **593** | Jeder Erbe kann **statt Ausschlagung/Annahme u. Inventar die amtliche Liquidation verlangen**. **Solange ein Miterbe die Annahme erklärt, ist dem Begehren keine Folge zu geben.** Bei amtl. Liquidation **keine Erbenhaftung für Erbschaftsschulden**. | **Erbenbegehren; Sperre bei Annahme eines Miterben.** |
+| **594** | **Gläubigerbegehren:** begründete Besorgnis + keine Befriedigung/Sicherstellung → **binnen 3 Monaten ab Tod oder Eröffnung der Verfügung** amtl. Liquidation verlangen. Vermächtnisnehmer: vorsorgliche Sicherungsmassregeln. | **FRIST: 3 Monate (Gläubiger).** |
+| **595** | Durchführung **durch die zuständige Behörde oder beauftragte Erbschaftsverwalter**; beginnt mit Inventar + Rechnungsruf; Verwalter unter Aufsicht der Behörde; **Beschwerde der Erben** an die Behörde. | **Behörde: zuständige Behörde + Aufsicht; Erbschaftsverwalter.** |
+| **596** | **Ordentliche Liquidation:** laufende Geschäfte beenden, Verpflichtungen erfüllen, Forderungen einziehen, Vermächtnisse möglichst ausrichten, Rechte/Pflichten ggf. gerichtlich feststellen, Vermögen versilbern. **Grundstücksveräusserung durch öffentliche Versteigerung**, freihändig nur mit Zustimmung aller Erben. | |
+| **597** | **Konkursamtliche Liquidation:** «Ist die Erbschaft **überschuldet**, so erfolgt die Liquidation **durch das Konkursamt nach den Vorschriften des Konkursrechtes**.» | **Abgrenzung: solvente Erbschaft → ordentliche amtl. Liquidation (Behörde/Verwalter); überschuldet → Konkursamt nach SchKG.** Vgl. Art. 573 (Ausschlagung aller) und Art. 578 II. |
+
+---
+
+## 6. Erbteilung (Art. 602–640) + Ausgleichung — mit Engine-Audit
+
+| Art. | Wortlaut-Kern (verbatim) | Regel / Engine-Hinweis |
+|---|---|---|
+| **602** | **Erbengemeinschaft:** Bei mehreren Erben besteht bis zur Teilung eine **Gemeinschaft aller Rechte und Pflichten**; **Gesamteigentum**, gemeinsame Verfügung. Auf Begehren eines Miterben kann die **zuständige Behörde** eine **Erbenvertretung** bestellen. | Gesamthandsprinzip. **Behörde: Erbenvertreter-Bestellung.** |
+| **604** | **Teilungsanspruch:** «Jeder Miterbe kann **zu beliebiger Zeit die Teilung** verlangen», soweit nicht durch Vertrag/Gesetz gebunden. **Gericht** kann vorübergehende Verschiebung anordnen, wenn sofortige Teilung den Wert erheblich schädigte. Miterben eines zahlungsunfähigen Erben: vorsorgliche Massregeln. | **Behörde: Gericht (Teilungsklage / Verschiebung).** |
+| **607** | Gesetzliche und eingesetzte Erben teilen nach gleichen Grundsätzen; **freie Teilungsvereinbarung** zulässig; Auskunftspflicht der besitzenden/schuldenden Miterben. | Teilungsfreiheit. |
+| **610** | Gleicher Anspruch aller auf die Gegenstände; umfassende **Mitteilungspflicht** über das Verhältnis zum Erblasser; jeder kann **Tilgung/Sicherstellung der Schulden vor der Teilung** verlangen. | |
+| **611** | **Losbildung:** so viele Lose wie Erben/Erbstämme; bei Uneinigkeit bildet **die zuständige Behörde** die Lose; Verteilung nach Vereinbarung oder Losziehung. | **Behörde: Losbildung bei Streit.** |
+| **612** | Wertmindernd teilbare Sache → ungeteilt einem Erben zuweisen; sonst **Verkauf** und Erlösteilung; auf Verlangen **Versteigerung** (öffentlich oder unter Erben — Behörde entscheidet). | |
+| **613** | Zusammengehörige Gegenstände nicht trennen (bei Einspruch); Familienschriften/Erinnerungsstücke nicht veräussern (bei Widerspruch); sonst entscheidet die **zuständige Behörde**. | |
+| **614** | **Forderungen des Erblassers gegen einen Erben** sind diesem bei der Teilung **anzurechnen**. | Anrechnung. |
+| **617** | **Bewertung Grundstücke:** «Grundstücke sind den Erben zum **Verkehrswert** anzurechnen, der ihnen **im Zeitpunkt der Teilung** zukommt.» | **Anrechnungswert = Verkehrswert im Teilungszeitpunkt** (anders als Ausgleichungswert Art. 630). Engine-relevant für Zuweisung. |
+| **626** | **AUSGLEICHUNG (Grundnorm):** «Die **gesetzlichen Erben** sind gegenseitig verpflichtet, **alles zur Ausgleichung zu bringen, was ihnen der Erblasser bei Lebzeiten auf Anrechnung an ihren Erbanteil zugewendet hat**.» **Abs. 2:** Was der Erblasser **Nachkommen** als **Heiratsgut, Ausstattung, Vermögensabtretung, Schulderlass u.dgl.** zugewendet hat, unterliegt der Ausgleichung, **sofern nicht ausdrücklich das Gegenteil verfügt** (Ausgleichungsvermutung für Nachkommen). | **Kern der Ausgleichung.** |
+| **627** | Wegfall eines Erbenpflicht geht auf eintretende Erben über; Nachkommen ausgleichungspflichtig auch ohne Weitergabe der Zuwendung. | |
+| **628** | **Wahlrecht: Einwerfung in Natur ODER Anrechnung dem Werte nach**, auch bei Übersteigen des Erbanteils. Vorbehalt: abweichende Anordnungen + Herabsetzungsansprüche. | |
+| **629** | Überschuss über Erbanteil nur auszugleichen, wenn keine Begünstigungsabsicht; **Begünstigung vermutet bei üblichen Heiratsausstattungen**. | |
+| **630** | **Ausgleichungswert:** «Die Ausgleichung erfolgt nach dem **Werte der Zuwendungen zur Zeit des Erbganges** oder, wenn die Sache vorher veräussert worden ist, nach dem dafür erzielten Erlös.» Verwendungen/Schaden/Früchte nach Besitzesregeln. | **Bewertungszeitpunkt = Erbgang (≠ Art. 617 Teilungszeitpunkt für Grundstückszuweisung).** Engine-kritische Unterscheidung. |
+| **631** | **Erziehungs-/Ausbildungskosten** nur ausgleichungspflichtig, soweit übliches Mass übersteigend; angemessener **Vorausbezug** für noch in Ausbildung stehende / gebrechliche Kinder. | |
+| **632** | **Übliche Gelegenheitsgeschenke** unterliegen **nicht** der Ausgleichung. | |
+| **633** | **Aufgehoben.** | (kein Inhalt) |
+| **634** | **Teilungsvertrag** wird verbindlich mit Aufstellung/Entgegennahme der Lose oder Vertragsschluss; **bedarf der schriftlichen Form**. | Formvorschrift. |
+| **635** | Abtretung von Erbanteilen unter Miterben: **schriftliche Form**; mit Drittem → nur Anspruch auf zugewiesenen Anteil, kein Mitwirkungsrecht. | |
+| **636** | Verträge über noch nicht angefallene Erbschaft ohne Mitwirkung/Zustimmung des Erblassers **nicht verbindlich**; Rückforderung erbrachter Leistungen. | |
+| **637** | **Gewährleistung der Miterben** wie Käufer/Verkäufer; Bestand der Forderungen + Zahlungsfähigkeit des Schuldners (wie einfache Bürgen). **Verjährung: 1 Jahr** nach Teilung bzw. späterer Fälligkeit. | **FRIST: 1 Jahr (Gewährleistung).** |
+| **638** | Anfechtung des Teilungsvertrags nach allgemeinen Vertragsregeln. | |
+| **639** | **Solidarhaftung gegenüber Dritten:** Für Erblasserschulden haften Erben **auch nach der Teilung solidarisch mit ganzem Vermögen**, bis Gläubiger der Teilung/Übernahme zustimmen. **Verjährung: 5 Jahre** nach Teilung bzw. späterer Fälligkeit. | **FRIST: 5 Jahre (Solidarhaftung).** |
+| **640** | **Rückgriff** unter Miterben für überzahlte Schulden; zunächst gegen den Übernehmer, sonst im Verhältnis der Erbanteile. | |
+
+### Engine-Audit: `src/lib/erbteilung.ts` (NUR gelesen)
+
+**Befund: Die bestehende Engine bildet die Ausgleichung NICHT ab — bestätigter offener Ausbaupunkt.**
+
+- `erbteilung.ts` berechnet ausschliesslich: (1) güterrechtliche Vorstufe (`gueterrecht()`: Errungenschaftsbeteiligung/Gütertrennung/Gütergemeinschaft), (2) **gesetzliche Erbquoten** im Parentelsystem (Art. 457/458/459/462), (3) **Pflichtteile** (Art. 470/471, neu/alt via Übergangsrecht), (4) verfügbare Quote, (5) Hinweise (Art. 472, 473). Alle Ergebnisse als exakte Brüche.
+- **Keine Ausgleichungslogik vorhanden.** Die Engine deklariert dies selbst explizit als Lücke — `erbteilung.ts:309`:
+  > «Ausgleichung von Vorempfängen unter Nachkommen (Art. 626 ff. ZGB) kann die effektive Teilung verschieben und ist hier nicht modelliert.»
+- Ebenso ungemodellt (Warnungen Z. 307–310): Realteilung einzelner Gegenstände, Hinzurechnungen (Art. 475/476), Herabsetzungsreihenfolge (Art. 532), internationale Sachverhalte.
+- **Katalog-Bestätigung:** `startseiteConfig.ts:455–461` führt einen Rechner `erb-ausgleichung` («Erbrechtliche Ausgleichung & Güterrecht») mit **`status: 'geplant'`** und **`norms: []`** — d.h. konzeptuell vorgesehen, aber **noch nicht implementiert**. Es existiert **keine** `ausgleichung*.ts` Engine im `src/lib/`.
+- **Fazit für Ausbau:** Eine Ausgleichungs-Engine müsste die in Art. 626–632 kodierten Regeln neu abbilden — insbesondere die **Bewertungszeitpunkt-Differenz** Art. 630 (Erbgang) vs. Art. 617 (Teilung), das Wahlrecht Art. 628, Begünstigungs-/Ausstattungsvermutungen (Art. 626 II, 629), Erziehungskosten (Art. 631), Gelegenheitsgeschenke (Art. 632) sowie die Querverbindung zu Art. 579 (5-Jahres-Rückgriffshaftung). Wegen §1/§4 CLAUDE.md als **eigenständige Engine** (nicht Fusion mit `erbteilung.ts`).
+
+---
+
+## 7. Behörden-Synthese (Aufgabe → Norm → kantonale Organisation)
+
+Bundesrechtlicher Rahmen: **Art. 28 ZPO** regelt den Gerichtsstand für erbrechtliche **Klagen** (letzter Wohnsitz; Abs. 1 dispositiv). **Art. 28 Abs. 2 ZPO** stellt klar, dass für die **Massnahmen im Zusammenhang mit dem Erbgang** die **Behörde am letzten Wohnsitz zwingend zuständig** ist — die behördlichen Sicherungs-/Eröffnungsakte sind also bundesrechtlich am letzten Wohnsitz (Art. 538) verankert, ihre **Organisation überlässt das ZGB durchgehend dem kantonalen Recht** («zuständige Behörde», vgl. Art. 551, 581 «nach Vorschriften des kantonalen Rechtes»). Dies deckt sich mit `zustaendigkeit.ts:439`, das genau diese Abgrenzung (Klageweg ≠ Erbschaftsbehörde) bereits warnt.
+
+| Aufgabe | Zuständige Stelle (Funktion) | Norm | Kantonale Organisation (Beispiele) |
+|---|---|---|---|
+| Sicherungsmassregeln von Amtes wegen (Siegelung, Inventar, Verwaltung, Eröffnung) | «zuständige Behörde» am letzten Wohnsitz | Art. 551, 538; Art. 28 Abs. 2 ZPO | kantonal: Erbschaftsamt / Erbschaftsbehörde / Bezirksgericht / Gemeinde / Notariat |
+| Siegelung | nach kantonalem Recht | Art. 552 | kantonal: Friedensrichter/Gemeinde/Gericht — wo vorgesehen |
+| Sicherungs-Inventar | zuständige Behörde (mit Bezug zur KESB/Erwachsenenschutzbehörde) | Art. 553 | kantonal: Erbschaftsbehörde; Auslöser KESB |
+| Beistandschaft Nasciturus | Kindesschutzbehörde | Art. 544 | KESB |
+| Erbschaftsverwaltung | zuständige Behörde; ggf. Willensvollstrecker/Beistand | Art. 554 | kantonal: Erbschaftsbehörde bestellt Verwalter |
+| Aufforderung an unbekannte Erben (1 Jahr) | zuständige Behörde | Art. 555 | kantonal |
+| **Einlieferung letztwilliger Verfügung** | Einlieferungsbehörde | Art. 556 | kantonal: Erbschaftsamt / Teilungsbehörde / Notariat |
+| **Testamentseröffnung** (1 Mt.) | zuständige (Eröffnungs-)Behörde | Art. 557–558 | kantonal: Erbschaftsbehörde / Bezirksgericht / Notariat |
+| **Erbenschein / Erbbescheinigung** | zuständige Behörde | Art. 559 | kantonal: Erbschaftsamt / Gericht / Notariat (je nach Kanton; «Erbgangsurkunde») |
+| **Entgegennahme der Ausschlagung + Protokoll** | zuständige Behörde | Art. 570, 566; (Fristverlängerung Art. 576) | kantonal: Erbschaftsbehörde / Bezirksgericht / Friedensrichter |
+| Liquidation bei Ausschlagung aller Erben | Konkursamt | Art. 573, 597 | Konkursamt (SchKG) |
+| Öffentliches Inventar (Antrag, Rechnungsruf, Auflage) | zuständige Behörde | Art. 580–584 | kantonal: Erbschaftsamt / Bezirksgericht / Notariat |
+| Amtliche Liquidation (ordentlich) | zuständige Behörde + Erbschaftsverwalter (unter Aufsicht) | Art. 595–596 | kantonal: Erbschaftsbehörde; Verwalter |
+| Amtliche Liquidation bei Überschuldung | Konkursamt nach SchKG | Art. 597 | Konkursamt |
+| Erbenvertretung / Losbildung / Streitentscheid bei Teilung | zuständige Behörde | Art. 602, 611, 612, 613 | kantonal: Erbschaftsbehörde / Teilungsbehörde |
+| **Teilungsklage / Verschiebung** | **Gericht** am letzten Wohnsitz | Art. 604; Art. 28 ZPO | ordentliches Gericht (Klageweg) |
+| Verschollenerklärung | Gericht | Art. 548, 550 | Gericht am letzten Wohnsitz |
+
+---
+
+## 8. Fristen-Synthese-Tabelle (für eine Erbgangs-Fristen-Engine)
+
+| # | Handlung | Frist | Beginn (Anknüpfung) | Norm |
+|---|---|---|---|---|
+| 1 | Sicherungs-Inventar durchführen | **2 Monate** (Ordnungsfrist) | seit Tod des Erblassers | Art. 553 Abs. 2 |
+| 2 | Anmeldung unbekannter Erben (Rechnungsruf an Erben) | **1 Jahr** | ab öffentlicher Aufforderung | Art. 555 |
+| 3 | Testamentseröffnung durch Behörde | **1 Monat** | ab Einlieferung der Verfügung | Art. 557 |
+| 4 | Erbenschein-Ausstellung frühestens (kein Einspruch) | **1 Monat** | seit Mitteilung an Beteiligte (Art. 558) | Art. 559 |
+| 5 | **Ausschlagung** | **3 Monate** | je Erbe: gesetzl. = Kenntnis vom Tod; eingesetzt = amtl. Mitteilung der Verfügung | Art. 567 |
+| 6 | Ausschlagung bei Sicherungs-Inventar | **3 Monate** | für ALLE: Mitteilung des Inventarabschlusses | Art. 568 |
+| 7 | Ausschlagung durch Erbenerben (Transmission) | **3 Monate** | ab Kenntnis vom Anfall an ihren Erblasser; frühestens Ablauf eigener Frist | Art. 569 |
+| 8 | Annahme durch Ehegatten (nach Ausschlagung der Nachkommen) | **1 Monat** | ab behördlicher Mitteilung | Art. 574 |
+| 9 | Annahme durch nachfolgende Erben (Ausschlagung zu deren Gunsten) | **1 Monat** | ab Mitteilung der Ausschlagung | Art. 575 |
+| 10 | Fristverlängerung / neue Frist Ausschlagung | (richterlich) | wichtige Gründe | Art. 576 |
+| 11 | Anfechtung der gläubigerbenachteiligenden Ausschlagung | **6 Monate** | (durch Gläubiger/Konkursverwaltung) | Art. 578 |
+| 12 | Haftung trotz Ausschlagung für Vorempfänge | **5 Jahre** (Rückgriffsperiode) | vor dem Tod empfangene ausgleichungspflichtige Werte | Art. 579 |
+| 13 | Antrag öffentliches Inventar | **1 Monat** | wie Ausschlagungsfristbeginn (Form wie Ausschlagung) | Art. 580 |
+| 14 | Rechnungsruf öffentl. Inventar (Anmeldefrist) | **mind. 1 Monat** | ab erster Auskündung | Art. 582 |
+| 15 | Auflage des geschlossenen Inventars zur Einsicht | **mind. 1 Monat** | nach Inventarabschluss | Art. 584 |
+| 16 | Erklärung des Erben über Erwerb (nach Inventar) | **1 Monat** (+ ggf. Erstreckung) | nach Inventarabschluss; Schweigen = Annahme u. öffentl. Inventar | Art. 587/588 |
+| 17 | Amtliche Liquidation auf Gläubigerbegehren | **3 Monate** | ab Tod oder Eröffnung der Verfügung | Art. 594 |
+| 18 | Verschollenerklärung — Antrag durch Anteilsberechtigte | **1 Jahr** (hohe Todesgefahr) / **5 Jahre** (letzte Nachricht) | ab Verschwinden bzw. letzter Nachricht | Art. 548 |
+| 19 | Verschollenerklärung von Amtes wegen | **10 Jahre** amtl. Verwaltung (od. Alter 100) | ab Beginn amtl. Verwaltung | Art. 550 |
+| 20 | Sicherheitsleistung Verschollenheit | **5 Jahre** / **15 Jahre** (max. bis Alter 100) | 5 J. ab Auslieferung / 15 J. ab letzter Nachricht | Art. 546 |
+| 21 | Gewährleistungsklage unter Miterben (Verjährung) | **1 Jahr** | nach Teilung bzw. späterer Fälligkeit | Art. 637 |
+| 22 | Solidarhaftung der Miterben für Erblasserschulden (Verjährung) | **5 Jahre** | nach Teilung bzw. späterer Fälligkeit | Art. 639 |
+
+---
+
+## Schlussbemerkungen / Verifikationshinweise (§7 CLAUDE.md)
+
+- **Quelle empirisch geprüft:** Alle Artikel über Anker `id="art_X"` (im Cache als `<article id="art_X">`) verbatim extrahiert; Stand **1.1.2026**. Art. 538 Abs. 2 und Art. 633 sind **aufgehoben** (im Cache nur Fussnotenverweis, kein Sachinhalt) — korrekt so dargestellt.
+- **Engine-Audit-Kernaussage:** Ausgleichung (Art. 626 ff.) ist **nicht** in `erbteilung.ts` modelliert (Engine deklariert die Lücke selbst, Z. 309) und im Katalog als `erb-ausgleichung` mit `status: 'geplant'` reserviert → **klarer offener Ausbaupunkt**, keine bestehende Implementierung.
+- **Kantonale Behördenbezeichnungen** (Erbschaftsamt/-behörde, Teilungsbehörde, Notariat, Bezirksgericht, Friedensrichter) variieren je Kanton und sind im obigen Behörden-Raster als «kantonal: …» offengelegt, nicht abschliessend zugeordnet — vor produktiver Nutzung kantonal zu verifizieren (§8).
+- **Relevante Repo-Dateien (nur gelesen):** `/Users/david/Desktop/LegalCalc/src/lib/erbteilung.ts`, `/Users/david/Desktop/LegalCalc/src/lib/zustaendigkeit.ts` (Art. 28 ZPO, Z. 148/199–202/439), `/Users/david/Desktop/LegalCalc/src/lib/startseiteConfig.ts` (Z. 455–461). Keine Dateien geändert.
