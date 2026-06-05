@@ -3,7 +3,7 @@ import {
   ShadingType, HeadingLevel, Footer, PageNumber,
 } from 'docx';
 import type { AssembleErgebnis, AbsatzRolle, VorlageFormat } from './engine';
-import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN } from './formatvorlagen';
+import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
 // ─── DOCX-Renderer der Vorlagen — Referenz-Layout ───────────────────────────
@@ -58,9 +58,7 @@ export function docxAbsaetze(e: AssembleErgebnis, banner?: PdfBanner): DocxAbsat
   return liste;
 }
 
-const NUMMER = /^(\d+)\.\s+/;
-const SUB = /^–\s+/;
-const STRICHE = /^_{6,}\s*$/;
+const { NUMMER, SUB, STRICHE } = MUSTER;
 const HAARLINIE = { bottom: { style: BorderStyle.SINGLE, size: 4, color: 'B9B5A9' } };
 
 // Haarlinie unter Titel/Betreff (eigener leerer Absatz mit Rahmen unten)

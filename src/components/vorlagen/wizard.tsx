@@ -4,7 +4,7 @@ import { NormLink, Stepper } from './ui';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { dokumentAlsText } from '../../lib/vorlagen/vorlagenText';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
-import { AUSGABE_LABEL } from '../../lib/vorlagen/formatvorlagen';
+import { AUSGABE_LABEL, MUSTER } from '../../lib/vorlagen/formatvorlagen';
 import type { PdfBanner } from '../../lib/vorlagen/banner';
 
 // ─── Generischer Vorlagen-Wizard-Rahmen ─────────────────────────────────────
@@ -115,6 +115,96 @@ export function VorlagenWizardRahmen({
   );
 }
 
+// ── Werkgetreuer Absatz-Renderer der Vorschau ───────────────────────────────
+// Interpretiert EXAKT dieselben Strukturen wie PDF und DOCX (MUSTER aus der
+// Formatvorlagen-SSoT): hängende Einzüge für «1.»-Klauseln, doppelt
+// eingezogene «–»-Unterpunkte, gezeichnete Unterschriftslinien, Betreff mit
+// Haarlinie, Rubrum mit zentrierten Parteirollen und fettem «gegen».
+// Reine Darstellung — keine Rechtslogik (§3).
+
+function VorschauZeile({ zeile, dicht }: { zeile: string; dicht?: boolean }) {
+  if (MUSTER.STRICHE.test(zeile)) {
+    return <span className="block w-52 max-w-full border-b border-ink-600 mt-4 mb-1" aria-label="Unterschriftslinie" />;
+  }
+  const num = zeile.match(MUSTER.NUMMER);
+  if (num) {
+    return (
+      <span className="flex gap-0">
+        <span className="w-7 shrink-0">{num[1]}.</span>
+        <span className="flex-1">{zeile.slice(num[0].length)}</span>
+      </span>
+    );
+  }
+  if (MUSTER.SUB.test(zeile)) {
+    return (
+      <span className="flex gap-0 pl-7">
+        <span className="w-5 shrink-0">–</span>
+        <span className="flex-1">{zeile.slice(2)}</span>
+      </span>
+    );
+  }
+  return <span className={`block min-h-[1em] ${dicht ? 'leading-snug' : ''}`}>{zeile || '\u00a0'}</span>;
+}
+
+function VorschauAbsatz({ abs }: { abs: AssembleErgebnis['dokument']['absaetze'][number] }) {
+  const zeilen = abs.text.split('\n');
+
+  switch (abs.rolle) {
+    case 'absender':
+    case 'adressat':
+      return (
+        <div className={abs.rolle === 'adressat' ? 'mb-5' : 'mb-4'}>
+          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} dicht />)}
+        </div>
+      );
+    case 'datumzeile':
+      return <p className="text-right mt-2 mb-5">{abs.text}</p>;
+    case 'betreff':
+      return (
+        <div className="mb-5">
+          <p className="font-bold text-[1.1em] leading-snug">{abs.text}</p>
+          <span className="block mt-1.5 border-t border-line" aria-hidden />
+        </div>
+      );
+    case 'rubrum':
+      return (
+        <div className="mb-5 space-y-0.5">
+          {zeilen.map((z, i) => {
+            const t = z.trim();
+            if (MUSTER.RUBRUM_ROLLE.test(t)) return <p key={i} className="text-center">{t}</p>;
+            if (t === 'gegen') return <p key={i} className="text-center font-bold py-1">gegen</p>;
+            if (z === 'in Sachen') return <p key={i} className="pb-1">{z}</p>;
+            if (z.startsWith('betreffend ')) return <p key={i} className="pt-1">{z}</p>;
+            return <VorschauZeile key={i} zeile={z} dicht={t !== ''} />;
+          })}
+        </div>
+      );
+    case 'parteien':
+      return (
+        <div className="text-center mb-5 space-y-0.5">
+          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} />)}
+        </div>
+      );
+    case 'anrede':
+      return <div className="mt-1 mb-4">{zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} />)}</div>;
+    case 'schlussformel':
+      return <p className="mt-5 mb-1">{abs.text}</p>;
+    case 'unterschrift':
+      return (
+        <div className="mt-4">
+          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} />)}
+        </div>
+      );
+    default:
+      return (
+        <div className="mb-2.5">
+          {abs.ueberschrift && <p className="font-bold mt-4 mb-1.5">{abs.ueberschrift}</p>}
+          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} />)}
+        </div>
+      );
+  }
+}
+
 // ── Vorschau-Spalte: Live-«Papier» + Bausteinprotokoll ──────────────────────
 
 export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
@@ -137,24 +227,17 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
             <span className="ml-2 lc-chip normal-case tracking-normal">{AUSGABE_LABEL[ergebnis.dokument.ausgabeArt]}</span>
           )}
         </p>
-        <div className="font-display text-ink-900 space-y-3" style={kompakt ? { fontSize: '0.92rem', lineHeight: 1.7 } : { fontSize: '0.95rem', lineHeight: 1.75 }}>
-          {/* Eingaben tragen ihren Titel im fetten Betreff — kein Dokumenttitel */}
+        <div className="font-sans text-ink-900" style={kompakt ? { fontSize: '0.88rem', lineHeight: 1.5 } : { fontSize: '0.92rem', lineHeight: 1.55 }}>
+          {/* Eingaben tragen ihren Titel im fetten Betreff — kein Dokumenttitel;
+              Verfügung/Vertrag: zentrierter Titel MIT Haarlinie (wie PDF/DOCX) */}
           {ergebnis.dokument.format !== 'eingabe' && (
-            <p className={`text-center font-semibold ${kompakt ? 'text-[1.1rem]' : 'text-[1.15rem]'} mb-4`}>{ergebnis.dokument.titel}</p>
+            <div className="mb-5">
+              <p className={`text-center font-bold ${kompakt ? 'text-[1.15rem]' : 'text-[1.25rem]'}`}>{ergebnis.dokument.titel}</p>
+              <span className="block mt-2 border-t border-line" aria-hidden />
+            </div>
           )}
           {ergebnis.dokument.absaetze.map((abs) => (
-            <div key={abs.bausteinId + abs.text.slice(0, 12)} className={
-              abs.rolle === 'anrede' ? 'pt-2'
-              : abs.rolle === 'schlussformel' ? 'pt-3'
-              : abs.rolle === 'datumzeile' ? 'text-right pt-2'
-              : abs.rolle === 'adressat' ? 'pb-3'
-              : abs.rolle === 'parteien' ? 'text-center py-2'
-              : abs.rolle === 'unterschrift' ? 'pt-3'
-              : ''
-            }>
-              {abs.ueberschrift && <p className="font-semibold mt-3">{abs.ueberschrift}</p>}
-              <p className={`whitespace-pre-line ${abs.rolle === 'betreff' ? 'font-semibold' : ''}`}>{abs.text}</p>
-            </div>
+            <VorschauAbsatz key={abs.bausteinId + abs.text.slice(0, 12)} abs={abs} />
           ))}
         </div>
         <p className="text-micro text-ink-500 mt-6 pt-3 border-t border-line">{ergebnis.dokument.disclaimer}</p>

@@ -478,3 +478,25 @@ describe('Formatvorlagen (AusgabeArt-Matrix)', () => {
     expect(ids.indexOf('schlussformel')).toBeLessThan(ids.indexOf('unterschrift'));
   });
 });
+
+describe('Vorschau ≙ Output (werkgetreuer Renderer, 5.6.2026)', () => {
+  it('Vorschau interpretiert dieselben MUSTER wie PDF/DOCX (SSoT) — Anatomie-Stichproben', async () => {
+    const { renderToString } = await import('react-dom/server');
+    const React = await import('react');
+    const { VorschauPanel } = await import('../components/vorlagen/wizard');
+    const { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } = await import('../lib/vorlagen/schlichtungsgesuchBs');
+    const sg = sgZusammenstellen({
+      ...SG_DEFAULTS, streitgegenstandTyp: 'geldforderung', baselForumBestaetigt: true,
+      klaeger: [{ ...SG_PERSON_NATUERLICH, vorname: 'A', name: 'B', strasse: 'S 1', plz: '4051', ort: 'Basel' }],
+      beklagte: [{ typ: 'juristisch', firma: 'X GmbH', sitzStrasse: 'S 2', sitzPlz: '4051', sitzOrt: 'Basel' }],
+      geld: { betrag: '1000' }, streitgegenstand: 'F', datum: '2026-06-15', ort: 'Basel',
+    });
+    const html = renderToString(React.createElement(VorschauPanel, { ergebnis: sg }));
+    expect(html).toContain('— klagende Partei —');           // Rubrum zentriert
+    expect(html).toMatch(/text-center font-bold[^>]*>gegen</); // fettes «gegen»
+    expect(html).toContain('w-7 shrink-0');                   // hängender Einzug
+    expect(html).toContain('border-b border-ink-600');        // gezeichnete Unterschriftslinie
+    expect(html).not.toContain('___________');                // kein Roh-Unterstrich
+    expect(html).not.toMatch(/text-center font-bold[^>]*>Schlichtungsgesuch/); // kein Doppeltitel
+  });
+});

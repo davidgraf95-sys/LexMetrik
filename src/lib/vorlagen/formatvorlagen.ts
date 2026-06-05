@@ -89,3 +89,17 @@ export const AUSGABE_LABEL: Record<AusgabeArt, string | null> = {
   entwurf: 'Entwurf für die Beurkundung',
   fertig: null,
 };
+
+// ── Geteilte Absatz-Muster (PDF, DOCX UND Live-Vorschau interpretieren
+//    dieselben Textstrukturen — §5 SSoT; zuvor je Renderer dupliziert) ──────
+
+export const MUSTER = {
+  /** Nummerierte Klausel/Begehren «1. …» → hängender Einzug */
+  NUMMER: /^(\d+)\.\s+/,
+  /** «– »-Unterpunkt → doppelt eingezogen */
+  SUB: /^–\s+/,
+  /** Strichzeile «______» → gezeichnete Unterschriftslinie */
+  STRICHE: /^_{6,}\s*$/,
+  /** Zentrierte Rubrum-Parteirolle «— klagende Partei —» */
+  RUBRUM_ROLLE: /^—.*—$/,
+} as const;

@@ -9,7 +9,7 @@ import { winAnsiSicher, typografie } from '../pdf/winansi';
 export const vorlagenPdfText = (text: string): string => winAnsiSicher(typografie(text));
 const pdfText = vorlagenPdfText;
 import type { AssembleErgebnis, DokumentAbsatz } from './engine';
-import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN } from './formatvorlagen';
+import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
 // ─── PDF-Renderer der Vorlagen — drei Formatvorlagen ────────────────────────
@@ -40,9 +40,7 @@ export { BANNER_ABSCHREIBEN, BANNER_UNTERSCHREIBEN } from './banner';
 const EINZUG = 7;        // hängender Einzug nummerierter Klauseln (mm)
 const SUB_EINZUG = 12;   // «– »-Unterpunkte
 
-const NUMMER = /^(\d+)\.\s+/;
-const SUB = /^–\s+/;
-const STRICHE = /^_{6,}\s*$/;
+const { NUMMER, SUB, STRICHE } = MUSTER;
 
 // Dokument bauen (testbar, gibt das jsPDF-Objekt zurück) — der Download ist
 // in vorlagenPdfErzeugen gekapselt.
