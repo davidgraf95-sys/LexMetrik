@@ -51,13 +51,13 @@ bibliothek/
 | [schlichtungsbehoerden-zh-vollerfassung.md](behoerden/schlichtungsbehoerden-zh-vollerfassung.md) | ZH: 171 FR-Ämter + 12 Miet-Stellen + GlG | Stichproben ✓ — speist die PLZ-Auflösung |
 | [schlichtungsbehoerden-sz-bl-so-zg-sh-lu-vollerfassung.md](behoerden/schlichtungsbehoerden-sz-bl-so-zg-sh-lu-vollerfassung.md) | Vollerfassung SZ/BL/SO/ZG/SH/LU | Konflikte entschieden; SZ teiloffen (JS-Karte) |
 | [schlichtungsbehoerden-ti-vs-gr-vollerfassung.md](behoerden/schlichtungsbehoerden-ti-vs-gr-vollerfassung.md) | TI 38 Giudicature, VS-Systematik, GR 11 Vermittlerämter | TI 11 Mietbüros entschieden |
-| [schlichtungsaemter-gemeindezuordnung.md](behoerden/schlichtungsaemter-gemeindezuordnung.md) | Gemeinde→Amt für AG/SG/TG/FR/ZG/AI (+ SZ/BL teiloffen) — **Quelle der generierten PLZ→Amt-Daten** (scripts/plz-generieren.ts) | einfach belegt; Stand-Flags (Villnachern-Fusion, TG-Sirnach) |
+| [schlichtungsaemter-gemeindezuordnung.md](behoerden/schlichtungsaemter-gemeindezuordnung.md) | Gemeinde→Amt für AG/SG/TG/FR/ZG/AI (+ SZ/BL teiloffen) — **Quelle der generierten PLZ→Amt-Daten** (scripts/plz-generieren.ts) | zweifach belegt; SZ/BL am 6.6.2026 GESCHLOSSEN (Itingen→Kreis 13; personengebundene Adressen → Verzeichnis-Fallback bleibt) |
 | [gerichtsadressen-erstliste.md](behoerden/gerichtsadressen-erstliste.md) | Davids CSV (47) + Audit-Trail (21 ✓ / 26 abweichend) | abgeschlossen |
 
 ### Straf — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Befund 2. Durchgang |
 |---|---|---|
-| [strafbehoerden-kantone.md](behoerden/strafbehoerden-kantone.md) | Staatsanwaltschaften/Jugendanwaltschaften/Übertretungsbehörden 26 Kantone + Bund (BA/AB-BA), EG-StPO-Mapping | SZ-Korrektur (Schmiedgasse 21, JugA Bennau); Lücken geschlossen bis auf AG-Hausnummern + Artikel VS/JU/VD |
+| [strafbehoerden-kantone.md](behoerden/strafbehoerden-kantone.md) | Staatsanwaltschaften/Jugendanwaltschaften/Übertretungsbehörden 26 Kantone + Bund (BA/AB-BA), EG-StPO-Mapping | SZ-Korrektur (Schmiedgasse 21, JugA Bennau); ALLE Lücken geschlossen (AG-Hausnummern 6.6.; VD-Korrektur: Konstituierung in LMPu 173.21 Art. 3/4; VS LACPP Art. 6/7; JU → OJ statt LiCPP) |
 
 ### Erbgang — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Befund 2. Durchgang |

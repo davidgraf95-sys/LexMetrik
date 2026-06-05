@@ -597,3 +597,33 @@ EG-StPO-Artikelnummern VS (LACPP)/JU (LiCPP)/VD (LMPu): Struktur amtlich
 bestätigt, exakte Artikel aus signierten PDFs weiterhin nicht maschinell
 extrahierbar — vor Stammdaten-Übernahme manuell am PDF prüfen. AG-Haus-
 nummern Zofingen/Baden/Muri.
+
+---
+
+# NACHTRAG 6.6.2026 — letzte Lücken geschlossen
+
+## 3. AG — Hausnummern Staatsanwaltschaften — **GESCHLOSSEN**
+
+| Staatsanwaltschaft | Adresse (mit Hausnummer) | Amtliche Quelle (ag.ch) |
+|---|---|---|
+| Zofingen-Kulm | Untere Grabenstrasse **32**, 4800 Zofingen | .../staatsanwaltschaften/sta-zofingen-kulm |
+| Baden | Mellingerstrasse **207** / Täfernhof, 5405 Baden(-Dättwil) | .../staatsanwaltschaften/sta-baden |
+| Muri-Bremgarten | Kloster-Südflügel, Seetalstrasse **8**, 5630 Muri | .../staatsanwaltschaften/sta-muri-bremgarten |
+
+Hinweis: Baden ist amtlich PLZ **5405** (Dättwil), nicht 5400. Abruf 6.6.2026, ag.ch-Unterseiten je Staatsanwaltschaft direkt verifiziert.
+
+## 4. EG-StPO-Artikelnummern Staatsanwaltschafts-Konstituierung — **TEILWEISE / GESCHLOSSEN je Kanton**
+
+| Kt. | Erlass | Konstituierung der StA — Fundstelle | Status |
+|---|---|---|---|
+| **VS** | LACPP — Loi d'application du CPP, **vom 11.2.2009**, RS/VS 312.0 (in Kraft 1.1.2011) | StA-Struktur (office central / offices régionaux) und Kompetenzen: **Art. 6** (procureur général) und **Art. 7** (Compétences des offices du ministère public: «L'office central… / Les offices régionaux…»). Die LACPP nennt die **Funktionsaufteilung** office central vs. offices régionaux; die zahlenmässige Errichtung (1 zentrales + 3 regionale Ämter) ergibt sich aus der Organisations-/Justizgesetzgebung. | **GESCHLOSSEN** (HTML/PDF amtlich, Art. verifiziert) |
+| **JU** | LiCPP — Loi d'introduction du CPP, **du 16 juin 2010**, RSJU 321.1 | Achtung: Die LiCPP **konstituiert die StA nicht selbst**. Art. 1 al. 2 LiCPP verweist ausdrücklich: «L'organisation, l'administration, le statut et la surveillance des tribunaux et du Ministère public sont réglés par la **loi d'organisation judiciaire**.» In der LiCPP nur **Kompetenzen** (Art. 12 ff.; Art. 13 Klassierung gemeinsam durch zuständigen Procureur + Procureur général). → Für die Konstituierung ist die **LOJ/OJ JU** heranzuziehen, nicht die LiCPP. | **TEILWEISE** (LiCPP verifiziert; Konstituierung liegt in der OJ — noch offen) |
+| **VD** | LVCPP — Loi d'introduction du CPP, **du 19 mai 2009**, BLV 312.01 | Achtung: Die LVCPP **konstituiert die StA nicht**. **Art. 6 LVCPP** verweist auf die separate **Loi sur le Ministère public (LMPu) du 19 mai 2009, BLV 173.21**. → Konstituierung in der **LMPu**: **Art. 3** («Le Ministère public est composé du Ministère public central et de **quatre** Ministères publics d'arrondissement…»), **Art. 4** (Magistrats: procureur général, 2 procureurs généraux adjoints …). | **GESCHLOSSEN** (richtige Grundlage = LMPu Art. 3/4, amtlich verifiziert) |
+
+Wichtige Korrektur fürs Dossier: Für VD ist die einschlägige Grundlage für die StA-Konstituierung **nicht** die LVCPP (312.01), sondern die **LMPu (173.21), Art. 3/4**. «173.21» ist eine Gesetzes-, keine Artikelnummer. Analog ist für JU die **OJ** statt der LiCPP einschlägig.
+
+Quellen (Abruf 6.6.2026): VS LACPP https://lex.vs.ch/app/fr/texts_of_law/312.0 (amtl. PDF via lex.vs.ch-API verifiziert); VD LVCPP + LMPu via lexfind https://www.lexfind.ch/tolv/117788/fr bzw. https://www.lexfind.ch/tolv/225432/fr (amtl. PDF-Volltext verifiziert); JU LiCPP https://rsju.jura.ch/fr/viewdocument.html?idn=20054&id=36695 (amtl. PDF-Volltext verifiziert).
+
+---
+
+**Zusammenfassung Status:** SZ GESCHLOSSEN (Restlücke nur Einzeladressen der Gemeinde-Vermittler); BL GESCHLOSSEN inkl. Itingen=Kreis 13; AG GESCHLOSSEN; EG-StPO: VS + VD GESCHLOSSEN (VD korrigiert auf LMPu Art. 3/4), JU TEILWEISE (Konstituierung in OJ statt LiCPP — als nächster Schritt OJ JU prüfen). Keine Repo-Dateien wurden geändert.

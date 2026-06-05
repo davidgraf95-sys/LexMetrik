@@ -258,3 +258,68 @@ Unsicherheiten TG:
 - AG **Stand-Warnung**: ag.ch-Liste noch nicht auf die Fusion **Villnachern → Brugg (1.1.2026)** nachgeführt; AG hat aktuell 196 Gemeinden. Villnachern bleibt Kreis VIII.
 - SG: Ortsteile (Heerbrugg, Krinau, Montlingen u.a.) in der amtlichen Liste teils als eigene Einträge — für PLZ-Mapping den zugehörigen politischen Gemeinden zuordnen.
 - Keine zeichengenaue Gesetzes-Belegstelle für die SG/AG-Kreiseinteilung verfügbar (gesetzessammlung.sg.ch und gesetzessammlungen.ag.ch rendern nur als JS-/Binär-PDF, nicht text-extrahierbar). Die amtlichen Behördenverzeichnisse (ag.ch / sg.ch) sind die massgebliche Zuteilung. «NICHT GEFUNDEN»: konkrete Artikel-/Anhangnummer der SG-Vermittlungskreise.
+
+---
+
+# NACHTRAG 6.6.2026 — SZ und BL GESCHLOSSEN (Restlücken-Recherche)
+
+## 1. SZ — Vermittlerämter mit Gemeinde-Zuordnung — **GESCHLOSSEN**
+
+Wichtigste Erkenntnis (korrigiert die bisherige Annahme): Die sz.ch-Aussage «jede der 30 Gemeinden hat einen Vermittler» ist vereinfacht/teilweise überholt. Tatsächlich gibt es **Bezirks-Vermittlerämter** (Höfe, Einsiedeln, Küssnacht, Gersau) und **gemeindeübergreifende Vermittlerkreise**. Massgebliche amtliche Quelle ist der **Staatskalender SZ 2024–2026** (Staatskanzlei), nicht die JS-Karte auf sz.ch/vermittler.
+
+| Bezirk / Gemeinde | Vermittler:in | Stellvertretung | Adresse (soweit im Kalender) |
+|---|---|---|---|
+| **Bezirk Höfe** (Freienbach, Wollerau, Feusisberg – konsolidiert seit 1.7.2020) | Schönbächler Albert | Veya André; Brändli-Benz Simone | Rebhaldenstrasse 15, 8807 Freienbach |
+| **Bezirk Einsiedeln** | Schönbächler Albert | Schuler Ponte Jeannette | Vermittleramt Bezirk Einsiedeln, Eisenbahnstrasse 20a, 8840 Einsiedeln |
+| **Bezirk Küssnacht** | Hofmann Sonja | Beutler Ruedi | 6403 Küssnacht |
+| **Bezirk Gersau** — *Vermittlerkreis Ingenbohl, Gersau, Morschach, Riemenstalden* | Rüegg Felix | Schönbächler Albert | Brunnen/Gersau |
+| Gemeinde Schwyz | Marty Bruno (Schwyz) | Wilms Henri (Rothenthurm) | Herrengasse 17, 6431 Schwyz |
+| Gemeinde Arth | Beutler Ruedi | Kraft Jürg | — |
+| Gemeinde Ingenbohl | Rüegg Felix | Schönbächler Albert | (s. Vermittlerkreis Gersau) |
+| Gemeinde Muotathal | Ulrich Marlis | Wilms Henri | — |
+| Gemeinde Steinen | Messerli Hans | Wilms Henri | — |
+| Gemeinde Sattel | Wilms-Lüönd Henri | Fach-Stolz Alex | — |
+| Gemeinde Rothenthurm | Wilms-Lüönd Henri | von Rickenbach-Schuler Robert | — |
+| Gemeinde Oberiberg | Schönbächler Albert | Schuler Konrad | — |
+| Gemeinde Unteriberg | Schuler Konrad | Schönbächler Albert | Sonnmattstr. 19, 8842 Unteriberg |
+| Gemeinde Lauerz | Marty Bruno | Wilms Henri | — |
+| Gemeinde Steinerberg | Wilms Henri | von Rickenbach Robert | — |
+| Gemeinde Morschach | Rüegg Felix | Schönbächler Albert | (s. Vermittlerkreis Gersau) |
+| Gemeinde Alpthal | Schönbächler Albert | Schuler Ponte Jeannette | — |
+| Gemeinde Illgau | Wilms Henri (Rothenthurm) | Ulrich Marlis (Muotathal) | — |
+| Gemeinde Riemenstalden | Rüegg Felix | Schönbächler Albert | (s. Vermittlerkreis Gersau) |
+| Gemeinde Lachen | Hofmann Marta | Wildhaber Annamarie | — |
+| Gemeinde Altendorf | Wildhaber Annamarie | Hofmann Marta | Oberdorfstr. 3, Pf. 23, 8852 Altendorf |
+| Gemeinde Vorderthal | Züger Daniela | Schättin Heinz | — |
+| Gemeinde Innerthal | Schättin-Landolt Heinz | Ziltener Peter | — |
+| Gemeinde Schübelbach | Kägi Irene | Schättin Heinz | Sieben-Eichenweg 15, 8854 Siebnen |
+| Gemeinde Tuggen | Schättin Heinz | Weibel Peter | — |
+| Gemeinde Wangen | Schättin-Landolt Heinz (Wangen) | Kägi Irene (Siebnen) | — |
+| Gemeinde Reichenburg | Diethelm-Scherrer Markus | Weibel Peter (Lachen) | 8864 Reichenburg |
+
+Amtliche Quelle: Staatskalender SZ 2024–2026, https://www.sz.ch/public/upload/assets/61726/Staatskalender_aktuell.pdf (Abruf 6.6.2026); ergänzend sz.ch Vermittlerämter https://www.sz.ch/behoerden/justiz/vermittleraemter.html (Abruf 6.6.2026), Einsiedeln-Adresse https://www.einsiedeln.ch (Abruf 6.6.2026).
+Ehrliche Restlücke: Einzeladressen der reinen Gemeinde-Vermittler stehen im Kalender meist ohne Strasse (nur Name/Wohnsitz); für Volladressen ist je Gemeinde-Website nachzuziehen. Bezirks-Vermittlerämter sind vollständig adressiert.
+
+## 2. BL — Friedensrichterkreise K9–K12 + Itingen — **GESCHLOSSEN**
+
+Korrektur zur Dossier-Annahme: Die Kreiseinteilung steht **nicht** in einem separaten Dekret (SGS 170.1) und auch nicht in «§ 2», sondern direkt im **GOG BL § 18** (SGS 170). § 2 GOG regelt nur, *dass* Friedensrichter die Zivilgerichtsbarkeit ausüben.
+
+| Kreis | Sitzort | Gemeinden |
+|---|---|---|
+| 9 | **Liestal** | Lausen, Liestal |
+| 10 | **Bubendorf** | Bubendorf, Lupsingen, Ramlinsburg, Seltisberg, Ziefen |
+| 11 | **Frenkendorf** | Arisdorf, Frenkendorf, Füllinsdorf, Giebenach, Hersberg |
+| 12 | **Pratteln** | Augst, Pratteln |
+| 13 | **Sissach** | Böckten, Buckten, Diepflingen, Häfelfingen, **Itingen**, Känerkinden, Läufelfingen, Nusshof, Rümlingen, Sissach, Tenniken, Thürnen, Wintersingen, Wittinsburg, Zunzgen |
+
+**Itingen-Konflikt aufgelöst:** Itingen gehört eindeutig zu **Kreis 13 (Sissach)** — dreifach bestätigt: GOG BL § 18 Ziff. 13 (Erlasstext), kanton baselland.ch und gemeinde sissach.ch. Es ist **nicht** in K9–K12. Pro Kreis werden 2 Friedensrichter:innen gewählt (§ 19 GOG); Sitz am Wohnsitz. Amtsperiode aktuell 1.4.2026–31.3.2030; für Kreis 13 z. B. Maria Gaetani und Markus Hunziker (Sissach).
+
+Amtliche Quellen (Abruf 6.6.2026): GOG BL § 18, SGS 170 — Erlasstext https://bl.clex.ch/app/de/texts_of_law/170 (PDF-Fassung verifiziert); kanton baselland.ch https://www.baselland.ch/politik-und-behorden/gerichte/friedensrichter-innen; sissach.ch https://www.sissach.ch/themenaz/41240.
+
+
+**Generator-Hinweis:** SZ/BL bleiben BEWUSST ausserhalb der automatischen
+PLZ→Amt-Auflösung: Die Vermittler-/Friedensrichter-Adressen sind PERSONEN-
+gebunden (Sitz am Wohnsitz, Amtsperiode 1.4.2026–31.3.2030) und damit
+fluktuierend — der Verzeichnis-Fallback in der UI ist die ehrliche Lösung.
+Die Gemeinde→Kreis-Zuordnung oben ist amtlich gesichert (GOG BL § 18;
+Staatskalender SZ) und dient der manuellen Bestimmung.
