@@ -10,7 +10,7 @@ Verschlankung Stufe 1+2 + Design-Feinschliff).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 362 Tests in 19 Dateien (2 skipped) ✓ — Workflow:
+Build ✓ · Lint 0/0 ✓ · 378 Tests in 20 Dateien (2 skipped) ✓ — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -158,7 +158,7 @@ Quelle: vorlagenPdf (jsPDF, Banner-API, WinAnsi-Sicherung) + vorlagenDocx
 vorbereitet, nirgends ausgeliefert). Geteilte Wizard-UI:
 components/vorlagen/ui.tsx (Field, NormLink locale-bewusst, Stepper).
 
-**5 gebaute Vorlagen (alle entwurf):**
+**6 gebaute Vorlagen (alle entwurf):**
 1. **Testament** (/vorlagen/testament) — eigenhändig: Abschreib-Mustertext,
    Pflichtteils-Panel, Gates 467/505/481/472. KEIN DOCX (Eigenhändigkeit).
 2. **Patientenverfügung** (/vorlagen/patientenverfuegung) — Schriftform;
@@ -185,11 +185,30 @@ components/vorlagen/ui.tsx (Field, NormLink locale-bewusst, Stepper).
    ergänzt (Anker art_9/12/13/46 empirisch verifiziert). PDF+DOCX;
    16 Akzeptanztests. Deklarierte Gutachten-Abweichung: einheitliche
    Frist < Staffel zulässig per Art. 335c Abs. 2 (Hinweis statt Verbot).
+6. **Mietvertrag Wohn-/Geschäftsräume** (/vorlagen/mietvertrag, Karte
+   mietvertrag-wohnen) — Gutachten Art. 253 ff. OR/VMWG (5.6.2026).
+   Zentrale Weiche objektTyp + Kanton. Gates: Kaution ≤ 3 Monatszinse
+   (nur Wohnraum), Fristen 3/6 Mte, Index ≥ 5 J/LIK + Staffel ≥ 3 J
+   (beide am Fedlex-WORTLAUT verifiziert), NK-Einzelausweis, MWST nur
+   Geschäftsraum. DATIERTE Parameter: Referenzzins 1.25 % (1.6.2026,
+   quartalsweise!), MWST 8.1 %, Formularpflicht-Kantone (BWO 4.2.2026,
+   BE-Diskrepanz offengelegt, dynamisch per 1.11.). PDF+DOCX; 14 Tests.
 
 Wizards 1–3 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
 array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
 
 ## PDF-Rechenbericht (src/lib/pdf/)
+
+**Formatvorlagen der Vorlagen-Renderer (5.6.2026, Referenz-Layouts):**
+Schemas deklarieren `format` (verfuegung·vertrag·eingabe) + Absatz-`rolle`n
+(absender/adressat/datumzeile/betreff/rubrum/parteien/unterschrift); PDF,
+DOCX UND Live-Vorschau interpretieren beide aus EINER Quelle. Arial/
+Helvetica 11, Haarlinien unter Titel/Betreff, hängende Einzüge (1./–),
+gezeichnete Unterschriftslinien, Fusszeile je Seite, Disclaimer 8pt am
+Ende; Eingaben OHNE Dokumenttitel (Betreff trägt ihn), langes Datum.
+Engine-Konvention: Platzhalter auf …Satz/…Zeile verschwinden leer
+ersatzlos (sonst «________»-Vorschau-Strich). Visuell verifiziert via
+`.scratch/pdf-beispiele.ts` + qlmanage-Thumbnails.
 
 pdfModel (reines Block-Modell: kopf/hero/tabelle/schritt/hinweisbox/norm)
 + pdfRender mit **eingebetteten Markenschriften** (Fraunces/Geist/GeistMono

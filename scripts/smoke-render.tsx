@@ -9,6 +9,7 @@ import { VorlagePatientenverfuegung } from '../src/pages/VorlagePatientenverfueg
 import { VorlageVorsorgeauftrag } from '../src/pages/VorlageVorsorgeauftrag';
 import { VorlageSchlichtungsgesuchBs } from '../src/pages/VorlageSchlichtungsgesuchBs';
 import { VorlageArbeitsvertrag } from '../src/pages/VorlageArbeitsvertrag';
+import { VorlageMietvertrag } from '../src/pages/VorlageMietvertrag';
 import { Startseite } from '../src/pages/Startseite';
 import { Pro } from '../src/pages/Pro';
 import { RechnerVerzugszins } from '../src/pages/RechnerVerzugszins';
@@ -28,6 +29,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['VorlageVorsorgeauftrag', VorlageVorsorgeauftrag],
   ['VorlageSchlichtungsgesuchBs', VorlageSchlichtungsgesuchBs],
   ['VorlageArbeitsvertrag', VorlageArbeitsvertrag],
+  ['VorlageMietvertrag', VorlageMietvertrag],
   ['RechnerVerzugszins', RechnerVerzugszins],
   ['RechnerZpo', RechnerZpo],
   ['RechnerKuendigung', RechnerKuendigung],
