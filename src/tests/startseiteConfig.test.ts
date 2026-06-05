@@ -201,3 +201,20 @@ describe('RECHTSBEREICH_GRUPPEN (Pro-Katalog, Phase 2) – Vollständigkeit beid
     }
   });
 });
+
+describe('FREE_REIHENFOLGE (Free-Kachelwand, Phase 1)', () => {
+  it('jede ID existiert mit tier free; kein free-Eintrag geht verloren; deterministisch', async () => {
+    const { FREE_REIHENFOLGE, freeKartenSortiert } = await import('../lib/freeReihenfolge');
+    const free = ALLE_KARTEN.filter((k) => k.tier === 'free');
+    for (const id of FREE_REIHENFOLGE) {
+      const k = ALLE_KARTEN.find((x) => x.id === id);
+      expect(k, id).toBeTruthy();
+      expect(k!.tier, id).toBe('free');
+    }
+    const sortiert = freeKartenSortiert();
+    expect(sortiert.map((k) => k.id).sort()).toEqual(free.map((k) => k.id).sort());
+    expect(sortiert).toEqual(freeKartenSortiert()); // deterministisch
+    // kuratierte Reihenfolge greift
+    expect(sortiert[0].id).toBe('tagerechner');
+  });
+});
