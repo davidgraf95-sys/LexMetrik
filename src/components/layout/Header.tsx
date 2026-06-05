@@ -4,28 +4,28 @@ import { Befehlspalette } from '../Befehlspalette';
 import { SprachUmschalter } from '../SprachUmschalter';
 
 // Header (Iteration 3): ruhiges ZWEI-ZONEN-Layout — Logo links, Aktions-
-// cluster rechts (Suche/⌘K · Sprache · Methodik · Über · Fachpersonen-
-// Button), Mitte bewusst leer. Der frühere Stufen-Umschalter ist aufgelöst:
-// «/» ist der Default; ein einzelner, gerichteter Button führt in den
-// Fachpersonenbereich (gekapselte Route, später Zugriffs-Wrapper) und von
-// dort zurück. Der MODUS-Umschalter (Rechner/Vorlagen) bleibt unberührt.
+// cluster rechts (Suche/⌘K · Sprache · Methodik · Über · Pro-Button),
+// Mitte bewusst leer. Der frühere Stufen-Umschalter ist aufgelöst:
+// «/» (Free) ist der Default; ein gerichteter Button führt in den
+// Pro-Bereich (gekapselte Route, später PayPal-Gate — PAYWALL_ACTIVE) und
+// von dort zurück. Der MODUS-Umschalter (Rechner/Vorlagen) bleibt unberührt.
 const NAV = [
   { to: '/methodik', label: 'Methodik', match: (p: string) => p === '/methodik' },
   { to: '/ueber', label: 'Über', match: (p: string) => p === '/ueber' },
 ];
 
 // Kontextabhängiger Stufen-Button: Hinweg und Rückweg; trägt ?modus= weiter.
-function FachpersonenButton() {
+function ProButton() {
   const { pathname, search } = useLocation();
-  const imFachbereich = pathname.startsWith('/fachpersonen');
+  const imPro = pathname.startsWith('/pro');
   return (
     <Link
-      to={{ pathname: imFachbereich ? '/' : '/fachpersonen', search }}
+      to={{ pathname: imPro ? '/' : '/pro', search }}
       className="inline-flex items-center gap-1 h-9 px-2.5 sm:px-3 rounded-lg border border-brass-400 bg-surface text-body-s font-medium text-brass-700 no-underline hover:bg-brass-100/60 hover:border-brass-500 transition-colors whitespace-nowrap">
-      {imFachbereich ? (
-        <>← <span>Allgemein</span></>
+      {imPro ? (
+        <>← <span>Free</span></>
       ) : (
-        <><span className="hidden sm:inline">Für&nbsp;</span><span>Fachpersonen</span> →</>
+        <><span>Pro</span> →</>
       )}
     </Link>
   );
@@ -71,8 +71,8 @@ export function Header() {
               );
             })}
           </div>
-          {/* Gerichteter Stufen-Zugang: einziges umrandetes Element rechts aussen */}
-          <FachpersonenButton />
+          {/* Gerichteter Pro-Zugang: einziges umrandetes Element rechts aussen */}
+          <ProButton />
         </nav>
       </div>
     </header>

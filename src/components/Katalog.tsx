@@ -4,7 +4,7 @@ import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 
 // Gemeinsamer Rechner-Katalog (Filterleiste + vier Typ-Sektionen) für die
-// Basis-Seite (/) und das Experten-Panel (/fachpersonen). Die übergebene
+// Free-Seite (/) und Pro (/pro). Die übergebene
 // Kartenmenge bestimmt die Stufe; Filterlogik und Anatomie sind identisch.
 
 export function SectionHead({ children }: { children: React.ReactNode }) {
@@ -262,7 +262,7 @@ export function Katalog({ karten, sektionen = SEKTIONEN, gliederung = 'art', fil
   karten: CalculatorCard[];
   sektionen?: Sektion[];
   // 'art' = flache Output-/Dokumenttyp-Sektionen · 'bereich' = zweistufig
-  // Rechtsbereich → Output-Typ (/fachpersonen, Modus Rechner)
+  // Rechtsbereich → Output-Typ (/pro, Modus Rechner)
   gliederung?: 'art' | 'bereich';
   filterRechtsgebiet?: boolean;
   filterBereich?: boolean;

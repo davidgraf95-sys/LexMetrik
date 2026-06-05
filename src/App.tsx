@@ -7,7 +7,7 @@ import { LocaleProvider } from './components/locale';
 // Erstbesuch lädt nur Shell + angefragte Seite, nicht alle Engines/Wizards.
 // Reine Ladezeitpunkt-Änderung (CLAUDE.md §6.4), keine Logik betroffen.
 const Startseite = lazy(() => import('./pages/Startseite').then((m) => ({ default: m.Startseite })));
-const Fachpersonen = lazy(() => import('./pages/Fachpersonen').then((m) => ({ default: m.Fachpersonen })));
+const Pro = lazy(() => import('./pages/Pro').then((m) => ({ default: m.Pro })));
 const RechnerKuendigung = lazy(() => import('./pages/RechnerKuendigung').then((m) => ({ default: m.RechnerKuendigung })));
 const RechnerZpo = lazy(() => import('./pages/RechnerZpo').then((m) => ({ default: m.RechnerZpo })));
 const RechnerVerzugszins = lazy(() => import('./pages/RechnerVerzugszins').then((m) => ({ default: m.RechnerVerzugszins })));
@@ -24,6 +24,12 @@ const RechnerStub = lazy(() => import('./pages/RechnerStub').then((m) => ({ defa
 const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
 const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
+
+// Alt-Route /fachpersonen → /pro: Redirect erhält ?modus= (Suchstring).
+function FachpersonenRedirect() {
+  const { search } = useLocation();
+  return <Navigate to={`/pro${search}`} replace />;
+}
 
 // SPA-Scroll-Reset: Beim Routenwechsel nach oben scrollen (sonst behält die
 // neue Seite die alte Scrollposition und man «landet unten»). Sprungmarken
@@ -44,9 +50,10 @@ export default function App() {
       <Suspense fallback={<div className="py-16 text-center text-body-s text-ink-500">Wird geladen …</div>}>
       <Routes>
         <Route path="/" element={<Startseite />} />
-        <Route path="/fachpersonen" element={<Fachpersonen />} />
-        {/* Alt-Route: Übersicht ist im Vollkatalog (/fachpersonen) aufgegangen */}
-        <Route path="/rechner" element={<Navigate to="/fachpersonen" replace />} />
+        <Route path="/pro" element={<Pro />} />
+        {/* Alt-Routen: /fachpersonen → /pro (erhält ?modus=); /rechner → /pro */}
+        <Route path="/fachpersonen" element={<FachpersonenRedirect />} />
+        <Route path="/rechner" element={<Navigate to="/pro" replace />} />
         <Route path="/rechner/kuendigung" element={<RechnerKuendigung />} />
         <Route path="/rechner/zpo-fristen" element={<RechnerZpo />} />
         <Route path="/rechner/verzugszins" element={<RechnerVerzugszins />} />

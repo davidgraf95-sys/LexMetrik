@@ -16,7 +16,7 @@ export function RechnerKopf({ calc }: { calc: Calculator }) {
         Zurück zur Übersicht
       </Link>
       <nav className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>
-        <Link to="/fachpersonen" className="no-underline text-ink-500 hover:text-ink-600">Katalog</Link>
+        <Link to="/pro" className="no-underline text-ink-500 hover:text-ink-600">Katalog</Link>
         <span className="mx-1.5">/</span>
         <span className="text-ink-500">{calc.titel}</span>
       </nav>

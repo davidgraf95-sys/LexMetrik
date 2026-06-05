@@ -42,13 +42,15 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
 });
 
 describe('Stufen-Zuteilung (tier)', () => {
-  it('genau sechs Rechner sind «frei» (Basis-Seite); alle übrigen Rechner «experte»', () => {
-    const frei = ALLE_KARTEN.filter((k) => k.modus === 'rechner' && k.tier === 'frei').map((k) => k.id).sort();
-    expect(frei).toEqual([
-      'erbteilung', 'kuendigung-sperrfristen', 'lohnfortzahlung',
-      'mietrecht', 'tagerechner', 'verzugszins',
+  // Free/Pro-Zuordnung gemäss Auftrag «Katalog-Ausbau» §3 (5.6.2026):
+  // free = kostenlose Auswahl; alle übrigen pro. Pro zeigt free UND pro.
+  it('die Free-Auswahl entspricht der Auftrags-Liste; alle übrigen «pro»', () => {
+    const free = ALLE_KARTEN.filter((k) => k.tier === 'free').map((k) => k.id).sort();
+    expect(free).toEqual([
+      'eigenhaendiges-testament', 'patientenverfuegung', 'tagerechner',
+      'teuerungsrechner', 'verzugszins', 'vorsorgeauftrag',
     ]);
-    ALLE_KARTEN.forEach((k) => expect(['frei', 'experte'], k.id).toContain(k.tier));
+    ALLE_KARTEN.forEach((k) => expect(['free', 'pro'], k.id).toContain(k.tier));
   });
 });
 

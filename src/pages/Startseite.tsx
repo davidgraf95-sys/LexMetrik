@@ -3,25 +3,26 @@ import { SEKTIONEN, VORLAGE_SEKTIONEN, ALLE_KARTEN } from '../lib/startseiteConf
 import { Katalog, SectionHead } from '../components/Katalog';
 import { ModusSchalter, useModus } from '../components/ModusSchalter';
 
-// Basis-Seite: zeigt nur die allgemeinen Rechner (tier 'frei').
-// Spezialisierte Rechner stehen im Experten-Panel unter /fachpersonen.
+// Free-Seite: zeigt nur die kostenlose Auswahl (tier 'free').
+// Der vollständige Katalog steht in Pro unter /pro.
 
-// Teaser für das Experten-Panel — helle Karte mit Messing-Oberkante (gleiche
-// Sprache wie die aktiven Rechnerkarten), Highlights und Kennzahlen aus der Config.
-function ExpertenTeaser() {
-  const experte = ALLE_KARTEN.filter((k) => k.tier === 'experte');
-  const entwurf = experte.filter((k) => k.status === 'entwurf');
+// Teaser für Pro — helle Karte mit Messing-Oberkante (gleiche Sprache wie
+// die aktiven Rechnerkarten), Highlights und Kennzahlen aus der Config.
+// Bewusst dezent: ein Zugang, keine Werbefläche.
+function ProTeaser() {
+  const pro = ALLE_KARTEN.filter((k) => k.tier === 'pro');
+  const entwurf = pro.filter((k) => k.status === 'entwurf');
   // Highlights datengetrieben: gebaute zuerst, dann geplante Titel auffüllen
   const highlights = [
     ...entwurf.map((k) => k.title),
-    ...experte.filter((k) => k.status === 'geplant').map((k) => k.title),
+    ...pro.filter((k) => k.status === 'geplant').map((k) => k.title),
   ].slice(0, 6);
 
   return (
     <section className="lc-card border-t-[3px] border-t-brass-500 p-8 sm:p-10">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-x-12 gap-y-6 items-center">
         <div className="space-y-3 max-w-reading">
-          <p className="lc-overline text-brass-700">Experten-Panel</p>
+          <p className="lc-overline text-brass-700">Pro</p>
           <h2 className="font-display font-semibold text-h2 leading-tight text-ink-900">
             Werkzeuge für die anwaltliche Praxis.
           </h2>
@@ -34,8 +35,8 @@ function ExpertenTeaser() {
           </div>
         </div>
         <div className="flex flex-col items-start lg:items-end gap-2 shrink-0">
-          <Link to="/fachpersonen" className="lc-btn-primary no-underline">Zum Experten-Panel →</Link>
-          <p className="num text-body-s text-ink-500">{experte.length} Rechner · {entwurf.length} in Entwurf</p>
+          <Link to="/pro" className="lc-btn-primary no-underline">Zu Pro →</Link>
+          <p className="num text-body-s text-ink-500">{pro.length} Einträge · {entwurf.length} in Entwurf</p>
         </div>
       </div>
     </section>
@@ -44,10 +45,10 @@ function ExpertenTeaser() {
 
 export function Startseite() {
   const [modus, setModus] = useModus();
-  const karten = ALLE_KARTEN.filter((k) => k.tier === 'frei' && k.modus === modus);
+  const karten = ALLE_KARTEN.filter((k) => k.tier === 'free' && k.modus === modus);
   const anzahl = {
-    rechner: ALLE_KARTEN.filter((k) => k.tier === 'frei' && k.modus === 'rechner').length,
-    vorlage: ALLE_KARTEN.filter((k) => k.tier === 'frei' && k.modus === 'vorlage').length,
+    rechner: ALLE_KARTEN.filter((k) => k.tier === 'free' && k.modus === 'rechner').length,
+    vorlage: ALLE_KARTEN.filter((k) => k.tier === 'free' && k.modus === 'vorlage').length,
   } as const;
 
   return (
@@ -78,8 +79,8 @@ export function Startseite() {
       </section>
 
       <div className="mt-12 space-y-12">
-      {/* Experten-Panel-Teaser (Rechner-Modus) */}
-      {modus === 'rechner' && <ExpertenTeaser />}
+      {/* Pro-Teaser (Rechner-Modus) */}
+      {modus === 'rechner' && <ProTeaser />}
 
       {/* Methodik / Vertrauens-Kacheln */}
       <section className="space-y-6">

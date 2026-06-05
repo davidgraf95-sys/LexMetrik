@@ -9,7 +9,7 @@ import { VorlagePatientenverfuegung } from '../src/pages/VorlagePatientenverfueg
 import { VorlageVorsorgeauftrag } from '../src/pages/VorlageVorsorgeauftrag';
 import { VorlageSchlichtungsgesuchBs } from '../src/pages/VorlageSchlichtungsgesuchBs';
 import { Startseite } from '../src/pages/Startseite';
-import { Fachpersonen } from '../src/pages/Fachpersonen';
+import { Pro } from '../src/pages/Pro';
 import { RechnerVerzugszins } from '../src/pages/RechnerVerzugszins';
 import { RechnerZpo } from '../src/pages/RechnerZpo';
 import { RechnerKuendigung } from '../src/pages/RechnerKuendigung';
@@ -21,7 +21,7 @@ import { RechnerErbteilung } from '../src/pages/RechnerErbteilung';
 
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
-  ['Fachpersonen', Fachpersonen],
+  ['Pro', Pro],
   ['VorlageTestament', VorlageTestament],
   ['VorlagePatientenverfuegung', VorlagePatientenverfuegung],
   ['VorlageVorsorgeauftrag', VorlageVorsorgeauftrag],

@@ -5,8 +5,8 @@ import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 // Hinweise; darunter Mono-Feinschriftzeile. Paper-Grund, obere Hairline.
 
 const NAVIGATION = [
-  { to: '/', label: 'Allgemeine Rechner & Vorlagen' },
-  { to: '/fachpersonen', label: 'Fachpersonen' },
+  { to: '/', label: 'Free — Rechner & Vorlagen' },
+  { to: '/pro', label: 'Pro — vollständiger Katalog' },
   { to: '/?modus=vorlagen', label: 'Vorlagen' },
   { to: '/methodik', label: 'Methodik' },
   { to: '/ueber', label: 'Über LexMetrik' },

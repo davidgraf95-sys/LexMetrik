@@ -4,14 +4,14 @@ import { Katalog } from '../components/Katalog';
 import { ModusSchalter, useModus } from '../components/ModusSchalter';
 import { sansAmp } from '../components/typografie';
 
-// Experten-Panel: alle Rechner der Stufe 'experte' (anwaltliche Praxis).
+// Pro-Bereich: der vollständige Katalog (free + pro).
 // Helles, redaktionelles Hero: Typo-Hierarchie statt Farbfläche, Kennzahlen
 // als Messleiste auf der Ablesekante, Direkteinstieg zu den gebauten Rechnern.
 
-export function Fachpersonen() {
+export function Pro() {
   const [modus, setModus] = useModus();
-  // Fachpersonen sehen den VOLLSTÄNDIGEN Katalog (beide Stufen);
-  // die Basis-Seite zeigt nur die allgemeinen Karten (tier 'frei').
+  // Pro zeigt den VOLLSTÄNDIGEN Katalog (free + pro);
+  // die Free-Seite zeigt nur die kostenlose Auswahl (tier 'free').
   const alle = ALLE_KARTEN;
   const karten = alle.filter((k) => k.modus === modus);
   const anzahl = {
@@ -26,7 +26,7 @@ export function Fachpersonen() {
     <div className="space-y-12">
       {/* Kompakter Hero mit Kennzahlen-Messleiste */}
       <section className="space-y-4">
-        <p className="lc-overline text-brass-700">Experten-Panel</p>
+        <p className="lc-overline text-brass-700">Pro</p>
         <h1 className="font-display font-semibold text-ink-900 text-display sm:text-display-l max-w-reading">
           Der vollständige Katalog für die Praxis.
         </h1>
