@@ -76,10 +76,14 @@ bibliothek/
 
 | Dossier | speist |
 |---|---|
-| normen/* Regelwerke | `src/lib/zustaendigkeit.ts` (Ausbau 5.6.2026) · künftige Engines SchKG/Straf/Erbrecht |
-| schlichtungsbehoerden-* + gemeindezuordnung | `src/data/schlichtungsstellen.ts` · `src/data/schlichtung/*` (PLZ→Amt) |
-| schlichtungsgebuehren + gog (Zivil-Staffeln) | `src/data/zustaendigkeitKosten.ts` (Fahrplan-Kosten) |
+| zpo-zustaendigkeit-regelwerk | `src/lib/zustaendigkeit.ts` (örtlich/sachlich/Rechtsmittel) |
+| schkg-zustaendigkeit-regelwerk | `src/lib/schkgZustaendigkeit.ts` (Rechtsweg «Betreibung», 6.6.2026) |
+| stpo-zustaendigkeit-regelwerk | `src/lib/strafZustaendigkeit.ts` (Rechtsweg «Straf», 6.6.2026) |
 | erbrecht-regelwerk (Audits) | bestätigt `src/lib/erbteilung.ts` + `vorlagen/testament.ts`; Ausbaupunkt `erb-ausgleichung` |
+| gerichtsbehoerden + erstliste (Audit) | `src/data/obereInstanzen.ts` (Rechtsmittel) · `src/data/handelsgerichte.ts` (Art. 6 ZPO) |
+| strafbehoerden-kantone | `src/data/staatsanwaltschaften.ts` (26 + Bundesanwaltschaft) |
+| schlichtungsbehoerden-* + gemeindezuordnung | `src/data/schlichtungsstellen.ts` · `src/data/schlichtung/*` (PLZ→Amt) · Vorlage Schlichtungsgesuch (SgBehoerdenWahl) |
+| schlichtungsgebuehren + gog (Zivil-Staffeln) | `src/data/zustaendigkeitKosten.ts` (Fahrplan-Kosten) |
 
 ## Werkzeuge
 

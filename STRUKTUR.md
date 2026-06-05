@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 521 Tests in 28 Dateien (519 grün + 2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 611 Tests in 32 Dateien (609 grün + 2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -353,6 +353,35 @@ Visuelle Prüfung: qlmanage-Thumbnails + Swift-PDFKit-Split.
 | Beträge & Quoten (`betrag`) | Geldansprüche, Zinsen, Kosten, Quoten |
 | Zuständigkeit & Einordnung (`zuordnung`) | Gericht, Recht, Verfahrensart |
 | Werkzeuge (`werkzeug`) | Rechtsgebietsübergreifende Hilfsrechner |
+
+## Grossausbau 5./6.6.2026 — Zuständigkeits-Plattform (Kurzkarte)
+
+**Drei Rechtswege live** im Zuständigkeitsrechner (je EIGENE Engine, §4):
+- **Zivil** (`lib/zustaendigkeit.ts`): 9 Streitsachen · Fahrplan + kantonale
+  Kosten-Rahmen (alle 26, `data/zustaendigkeitKosten.ts`) · Art.-113-Kosten-
+  freiheit · konkrete Schlichtungsstelle aller 26 Kantone
+  (`data/schlichtungsstellen.ts`) mit **PLZ→Gemeinde→Amt** gemeindescharf in
+  ZH/AG/SG/TG/FR/ZG/AI (`data/schlichtung/*`, amtliches swisstopo/BFS-Register,
+  Generator `scripts/plz-generieren.ts`) · **Handelsgerichte** ZH/BE/AG/SG ·
+  **Rechtsmittel-Modus**: Berufung/Beschwerde-Weiche (308/319 ZPO) + obere
+  Instanz aller 26 Kantone (`data/obereInstanzen.ts`) + BGer-Schwellen
+  (Art. 74 BGG, BGG-Cache verifiziert).
+- **SchKG** (`lib/schkgZustaendigkeit.ts`): Betreibungsort-Kaskade 46–55,
+  11 Anliegen (Rechtsöffnung/Aberkennung/Widerspruch/Kollokation/Arrest/
+  Konkurs/Aufsichtsbeschwerde) mit Verwirkungsfristen-Badges; Gebühr
+  Zahlungsbefehl nach Art. 16 GebV SchKG (Stand 1.1.2022, 2026-Vorbehalt
+  im Verfallsregister); BJ-Betreibungsämter-Verzeichnis verlinkt.
+- **Straf** (`lib/strafZustaendigkeit.ts`): StPO-Decision-Tree (Spezialforen
+  35–37 → Tatort 31 → Kaskade 32; Weichen 33/34/38/40/41/42); Anzeige-
+  Fahrplan (301; Strafantrag 3 Mt., Art. 31 StGB); zentrale StA aller
+  26 Kantone + Bundesanwaltschaft (`data/staatsanwaltschaften.ts`).
+
+**Vorlage Schlichtungsgesuch kantonsübergreifend:** Behörden-Auflösung für
+alle 26 Kantone (`components/vorlagen/SgBehoerdenWahl.tsx`; Adressat-Kette
+Hand > BS-Registry > Recherche > Platzhalter). **UX-Programm** (9 Etappen-
+Commits) + Design-Konsistenz-Sweep abgeschlossen. **Bibliothek:** 21 Dossiers
+(4 Regelwerke ZPO/SchKG/StPO/Erbrecht; Behörden Zivil/Straf/Erbgang; Kosten)
+— Status je Dossier in bibliothek/INDEX.md (SSoT-Karte dort).
 
 ## Offene Punkte (nächste Session)
 

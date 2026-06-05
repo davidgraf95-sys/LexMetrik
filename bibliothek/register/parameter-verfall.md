@@ -42,3 +42,11 @@ Stand des Registers: 5.6.2026.
 - **GR Honorarverordnung (HV, BR 310.250): bis 31.12.2026** (Nachfolge 1.1.2027).
 - **BE EAV (BSG 168.711, amtliche Anwälte): bis 31.12.2026** (Nachfolge 1.1.2027).
 - Quelle: OrdoLex-API `current_version`-Metadaten (Doppelcheck 5.6.2026).
+
+## GebV SchKG (SR 281.35) — Konsolidierung 1.1.2026 nur signiert (6.6.2026)
+- Die Engine-Staffel «Gebühr Zahlungsbefehl» (src/lib/schkgZustaendigkeit.ts,
+  Art. 16 Abs. 1) ist am Filestore-HTML **Stand 1.1.2022** verifiziert.
+- Es EXISTIERT eine Konsolidierung per **1.1.2026** (Änderung AS 2025/630),
+  deren HTML-Manifestation nicht publiziert ist (nur signiertes PDF, JS-Shell).
+  → Beträge VOR fachlicher Abnahme am signierten PDF gegenprüfen; UI weist
+  den Vorbehalt aus. Prüfweg: Filestore cc/1996/2937_2937_2937/20260101.
