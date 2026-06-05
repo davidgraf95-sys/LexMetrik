@@ -227,14 +227,12 @@ function Schnellzugriff(props: {
   const favKarten = aufloesen([...favoriten]);
   const zuletztKarten = aufloesen(zuletzt.filter((id) => !favoriten.has(id))).slice(0, 6);
 
+  // Bewusst leise (Befund 5.6.2026): keine Farbflächen — schlanke, neutrale
+  // Chips; Favoriten unterscheidet allein der kleine Messing-Stern.
   const chip = (k: NonNullable<ReturnType<typeof karte>>, fav: boolean) => (
     <Link key={k.id} to={k.href!} onClick={() => onOeffnen(k.id)}
-      className={`inline-flex items-center gap-1.5 h-8 px-3 rounded-lg border text-body-s no-underline transition-colors ${
-        fav
-          ? 'border-brass-400/70 bg-brass-100/40 text-ink-900 hover:border-brass-500 hover:bg-brass-100'
-          : 'border-line bg-surface text-ink-700 hover:border-brass-400 hover:text-ink-900'
-      }`}>
-      {fav && <span aria-hidden className="text-brass-700 leading-none">★</span>}
+      className="inline-flex items-center gap-1 h-7 px-2.5 rounded-md border border-line text-body-s text-ink-600 no-underline hover:text-brass-700 hover:border-brass-400 transition-colors">
+      {fav && <span aria-hidden className="text-brass-700 text-[0.7rem] leading-none">★</span>}
       {sansAmp(k.title)}
     </Link>
   );
@@ -263,8 +261,7 @@ function Schnellzugriff(props: {
   );
 
   return (
-    <section aria-label="Schnellzugriff"
-      className="rounded-xl border border-line bg-surface px-4 py-3 space-y-2.5">
+    <section aria-label="Schnellzugriff" className="space-y-1.5">
       {favKarten.length > 0 && zeile('Favoriten', true, favKarten.map((k) => chip(k, true)))}
       {zuletztKarten.length > 0 && zeile('Zuletzt verwendet', false, zuletztKarten.map((k) => chip(k, false)))}
       {favKarten.length === 0 && (
