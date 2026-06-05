@@ -3,6 +3,12 @@
 **Verbindliche Grundprinzipien: `CLAUDE.md`** (§1 Logik vor allem; §6
 Refactoring-Protokoll) — dieses Dokument hier beschreibt den Zustand.
 
+**Voll-Audit 5.6.2026** (4 parallele Agenten: Engines, Vorlagen, UI, Daten/Infra):
+Fixes `21446ac`…`b8c9312` — PDF-Freitext-Datumsverdrehung (H1), Block-
+Seitenüberlauf (H2), Testament-Quoten, PV-R6-Normalisierung, Mietvertrag-G3,
+sperrfristen-Union bei Nichtigkeit, tsconfig strict, fedlex-Kombi-Anker.
+Offen (UX-Politur, kein Output-Fehler): stabile Keys in 7 Listen-Editoren.
+
 **Stand:** 5. Juni 2026 — deployed bis `9295e24` (… + Katalog-Ausbau
 Free/Pro 111 Karten, Vorlagen 5+6 Arbeits-/Mietvertrag, Formatvorlagen-
 Renderer, Tagerechner; Bug-Check: 2 Review-Agents, 1 HOCH-Befund
@@ -12,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 378 Tests in 20 Dateien (2 skipped) ✓ — Workflow:
+Build ✓ · Lint 0/0 ✓ · 401 Tests in 21 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
