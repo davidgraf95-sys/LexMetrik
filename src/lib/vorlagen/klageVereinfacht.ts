@@ -104,6 +104,11 @@ export function kvKlagefrist(kbDatumISO: string, materie: KvMaterie): {
   ablauf: string; ablaufISO: string; stillstandAktiv: boolean; fristLabel: string;
 } | null {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(kbDatumISO)) return null;
+  // Kalender-Gültigkeit zusätzlich zur Syntax (Bug-Check 5.6.2026: «2025-02-30»
+  // passierte den Regex und warf in der Fristen-Engine) — Roundtrip-Probe hält
+  // den |null-Vertrag auch bei unsauberer Aufrufquelle (Defense-in-Depth).
+  const probe = new Date(`${kbDatumISO}T00:00:00Z`);
+  if (Number.isNaN(probe.getTime()) || probe.toISOString().slice(0, 10) !== kbDatumISO) return null;
   const miete = materie === 'miete_kernbereich';
   const r = berechneFrist({
     ereignis: kbDatumISO,

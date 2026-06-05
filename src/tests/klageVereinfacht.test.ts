@@ -157,3 +157,14 @@ describe('Klage vereinfacht — Mängel/Hinweise', () => {
     expect(kvStreitwert(basis({ begehrenTyp: 'unbeziffert', unbeziffertMindest: '5000', streitwert: '' }))).toBe(5000);
   });
 });
+
+describe('kvKlagefrist — Kalender-Gültigkeit (Bug-Check-Fix 5.6.2026)', () => {
+  it('syntaktisch gültige, kalendarisch unmögliche Daten → null statt Wurf', () => {
+    for (const d of ['2025-02-30', '2025-13-01', '2025-00-10', '2025-04-31']) {
+      expect(kvKlagefrist(d, 'vermoegensrechtlich')).toBeNull();
+      expect(kvKlagefrist(d, 'miete_kernbereich')).toBeNull();
+    }
+    // Schalttag bleibt gültig
+    expect(kvKlagefrist('2024-02-29', 'vermoegensrechtlich')).not.toBeNull();
+  });
+});
