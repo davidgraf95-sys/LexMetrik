@@ -28,7 +28,8 @@ const TATORT: { code: StrafTatortLage; label: string }[] = [
 
 const KASKADE: { code: StrafKaskade32; label: string }[] = [
   { code: 'wohnsitz', label: 'Beschuldigte Person hat Wohnsitz in der Schweiz' },
-  { code: 'heimatort', label: 'Kein Wohnsitz, aber Heimatort in der Schweiz' },
+  { code: 'aufenthalt', label: 'Kein Wohnsitz, aber gewöhnlicher Aufenthalt in der Schweiz' },
+  { code: 'heimatort', label: 'Weder Wohnsitz noch gewöhnlicher Aufenthalt — Heimatort in der Schweiz' },
   { code: 'ergreifungsort', label: 'Weder Wohnsitz noch Heimatort — Ort der Ergreifung' },
   { code: 'auslieferung', label: 'Ergreifung im Ausland — Auslieferungskanton' },
 ];

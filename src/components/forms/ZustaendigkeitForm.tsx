@@ -308,7 +308,13 @@ export function ZustaendigkeitForm() {
 
   return (
     <div className="space-y-6">
-      <PflichtDisclaimer text={DISCLAIMER} />
+      <PflichtDisclaimer text={
+        rechtsweg === 'schkg'
+          ? 'Automatisierte Orientierung zu Betreibungsort und SchKG-Foren (SchKG, Stand 1.1.2025; GebV SchKG Stand 1.1.2022) – keine Rechtsberatung. Internationale Sachverhalte und die materielle Begründetheit sind nicht abgebildet; Fristen sind Verwirkungsfristen und im Einzelfall zu prüfen.'
+          : rechtsweg === 'straf'
+            ? 'Automatisierte Orientierung zum Gerichtsstand im Strafverfahren (StPO, Stand 1.1.2024) – keine Rechtsberatung. Die Katalog-Subsumtion der Bundesgerichtsbarkeit (Art. 23/24 StPO) und jugendstrafrechtliche Sonderwege (JStPO) sind nicht abgebildet.'
+            : DISCLAIMER
+      } />
 
       {/* 1 · Rechtsweg */}
       <div className="space-y-2">

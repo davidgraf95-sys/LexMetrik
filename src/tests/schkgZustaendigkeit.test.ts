@@ -81,7 +81,7 @@ describe('Foren + Fristen je Anliegen (Synthese-Tabelle)', () => {
   it('Arrest: Wahlforum + Einsprache 10 T + Prosequierung; Konkursbegehren: 20 T/15 Mt. mit Stillstand; Beschwerde: AUFSICHTSBEHÖRDE 10 T + Art.-22-Weiche', () => {
     const ar = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'arrest' }));
     expect(ar.forum.stelle).toContain('Wahl');
-    expect(ar.fristen.filter((f) => f.kritisch).length).toBe(2);
+    expect(ar.fristen.filter((f) => f.kritisch).length).toBe(3); // 278-Einsprache + 279 Abs. 1 + Abs. 3 (Review-Fix 6.6.2026)
     const kb = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'konkursbegehren' }));
     expect(kb.fristen.find((f) => f.norm.includes('166 Abs. 2'))?.frist).toContain('15 Monate');
     const be = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'beschwerde_amt' }));
@@ -119,5 +119,18 @@ describe('SchKG-Teil — SSR-Integration', () => {
     expect(html).toContain('Ihr Fahrplan');
     expect(html).toContain('Betreibungsort');
     expect(html).toContain('e-service.admin.ch');
+  });
+});
+
+describe('Schlichtungs-Ausnahmen + Verfahren (Abschluss-Review-Fix 6.6.2026)', () => {
+  it('korrekte Ziffern des Art. 198 lit. e (Widerspruch Ziff. 3, Kollokation Ziff. 6); kein «beschleunigtes Verfahren»', () => {
+    const w = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'widerspruch' }));
+    expect(w.eingabe.verfahren).toContain('Ziff. 3');
+    expect(w.eingabe.verfahren).not.toContain('eschleunigt');
+    const k = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'kollokation' }));
+    expect(k.eingabe.verfahren).toContain('Ziff. 6');
+    const a = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'arrest' }));
+    expect(a.fristen.find((f) => f.norm.includes('279 Abs. 1'))?.frist).toBe('10 Tage ab Zustellung der Arresturkunde');
+    expect(a.fristen.some((f) => f.norm.includes('279 Abs. 3'))).toBe(true);
   });
 });

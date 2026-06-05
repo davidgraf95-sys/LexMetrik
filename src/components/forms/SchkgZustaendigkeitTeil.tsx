@@ -62,7 +62,7 @@ export function SchkgZustaendigkeitTeil() {
     forderungCHF: forderungUngueltig ? null : forderung,
     widerspruchKonstellation: widerspruchK, kollokationIn, rechtsoeffnungArt: roArt,
   };
-  let r: ReturnType<typeof bestimmeSchkgZustaendigkeit> | null = null;
+  let r: ReturnType<typeof bestimmeSchkgZustaendigkeit> | null;
   try { r = bestimmeSchkgZustaendigkeit(input); } catch { r = null; }
 
   return (

@@ -241,7 +241,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
         text: `Widerspruchsverfahren (Drittansprache an gepfändeten Vermögenswerten): zuständig ist das ${map[k].stelle} (${map[k].norm}).`,
         normen: [{ artikel: map[k].norm }],
       };
-      eingabe = { art: 'Widerspruchsklage', verfahren: 'Beschleunigtes Verfahren der ZPO-Foren; KEINE Schlichtung (Art. 198 lit. e Ziff. 2 ZPO)' };
+      eingabe = { art: 'Widerspruchsklage', verfahren: 'Ordentliches bzw. vereinfachtes Verfahren (je nach Streitwert); KEINE Schlichtung (Art. 198 lit. e Ziff. 3 ZPO)' };
       fristen.push({ label: 'Klagefrist', frist: '20 Tage ab Fristansetzung durch das Betreibungsamt', norm: 'Art. 107 Abs. 5 / 108 Abs. 2 SchKG', kritisch: true });
       fahrplan.push({ titel: 'Konstellation bestimmt Forum UND Parteirollen', text: 'Gewahrsam beim Schuldner → der DRITTE muss klagen (Art. 107); Gewahrsam beim Dritten → der GLÄUBIGER muss klagen (Art. 108). Die 20-Tage-Frist ist Verwirkung.' });
       break;
@@ -255,7 +255,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
           : 'Kollokationsklage in der PFÄNDUNG: Gericht des Betreibungsortes (Art. 148 Abs. 1 SchKG).',
         normen: [{ artikel: inKonkurs ? 'Art. 250 SchKG' : 'Art. 148 SchKG' }],
       };
-      eingabe = { art: 'Kollokationsklage', verfahren: 'Beschleunigtes Verfahren; KEINE Schlichtung (Art. 198 lit. e Ziff. 5 ZPO)' };
+      eingabe = { art: 'Kollokationsklage', verfahren: 'Ordentliches bzw. vereinfachtes Verfahren (je nach Streitwert); KEINE Schlichtung (Art. 198 lit. e Ziff. 6 ZPO)' };
       fristen.push({ label: 'Klagefrist', frist: inKonkurs ? '20 Tage ab öffentlicher Auflage des Kollokationsplans' : '20 Tage ab Zustellung des Auszugs', norm: inKonkurs ? 'Art. 250 Abs. 1 SchKG' : 'Art. 148 Abs. 1 SchKG', kritisch: true });
       break;
     }
@@ -268,7 +268,8 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
       eingabe = { art: 'Arrestgesuch (einseitig, ohne Anhörung der Gegenseite)', verfahren: 'Summarisches Verfahren (Art. 251 lit. a ZPO)' };
       fristen.push(
         { label: 'Arresteinsprache der Gegenseite', frist: '10 Tage ab Kenntnis des Arrests', norm: 'Art. 278 Abs. 1 SchKG', kritisch: true },
-        { label: 'Arrestprosequierung (Betreibung/Klage)', frist: '10 Tage ab Zustellung der Arresturkunde (bzw. 20 Tage bei Auslandszustellung gemäss Praxis)', norm: 'Art. 279 SchKG', kritisch: true },
+        { label: 'Arrestprosequierung (Betreibung/Klage)', frist: '10 Tage ab Zustellung der Arresturkunde', norm: 'Art. 279 Abs. 1 SchKG', kritisch: true },
+        { label: 'Fortsetzungsbegehren nach unbestrittenem Zahlungsbefehl', frist: '20 Tage ab Beseitigung/Ausbleiben des Rechtsvorschlags', norm: 'Art. 279 Abs. 3 SchKG', kritisch: true },
       );
       warnungen.push('Arrestkaution/Schadenersatzrisiko: Bei ungerechtfertigtem Arrest haftet die Arrestgläubigerin (Art. 273 SchKG); das Gericht kann Sicherheitsleistung verlangen.');
       fahrplan.push(

@@ -21,7 +21,10 @@ export function SgBehoerdenWahl({ kanton, onAufgeloest }: {
 }) {
   const [plz, setPlz] = useState('');
   const [gemeinde, setGemeinde] = useState('');
-  const [wahlIdx, setWahlIdx] = useState(0);
+  // MITTEL-Befund 6.6.2026: KEINE Auto-Vorwahl der ersten Regionalstelle —
+  // massgeblich ist das Gebiet der beklagten Partei; bis zur Wahl wird null
+  // gemeldet (Mängel-Gate hält den Export an).
+  const [wahlIdx, setWahlIdx] = useState(-1);
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   const [kreisIdx, setKreisIdx] = useState(0);
   const [amtZeilen, setAmtZeilen] = useState<string[] | null>(null);
@@ -59,7 +62,7 @@ export function SgBehoerdenWahl({ kanton, onAufgeloest }: {
     if (a.modus === 'zentral') {
       onAufgeloest([a.stelle.name, a.stelle.strasse, a.stelle.plzOrt]);
     } else if (a.modus === 'liste') {
-      const s = a.stellen[Math.min(wahlIdx, a.stellen.length - 1)];
+      const s = wahlIdx >= 0 ? a.stellen[Math.min(wahlIdx, a.stellen.length - 1)] : undefined;
       onAufgeloest(s ? [s.name, s.strasse, s.plzOrt] : null);
     } else if (zhKreise && zhKreise.length > 0) {
       const k = zhKreise[Math.min(kreisIdx, zhKreise.length - 1)];
@@ -84,6 +87,7 @@ export function SgBehoerdenWahl({ kanton, onAufgeloest }: {
       {a.modus === 'liste' && (
         <Field label="Zuständige Stelle wählen" hint={`${a.stellen.length} Stellen im Kanton ${kanton} — massgeblich ist das Gebiet der beklagten Partei bzw. der Sache`}>
           <select className={inputCls} value={wahlIdx} onChange={(e) => setWahlIdx(Number(e.target.value))}>
+            <option value={-1}>– Stelle wählen –</option>
             {a.stellen.map((s, i) => <option key={s.name} value={i}>{s.name} — {s.plzOrt}</option>)}
           </select>
         </Field>

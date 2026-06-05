@@ -71,3 +71,12 @@ describe('Staatsanwaltschaften-Datenschicht', () => {
     expect(BUNDESANWALTSCHAFT.strasse).toBe('Guisanplatz 1');
   });
 });
+
+describe('Art.-32-Kaskade vollständig (Abschluss-Review-Fix 6.6.2026)', () => {
+  it('gewöhnlicher Aufenthalt ist eigene Abs.-1-Stufe vor dem Heimatort', () => {
+    const a = bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'aufenthalt' });
+    expect(a.forum.text).toContain('GEWÖHNLICHEN AUFENTHALTS');
+    const h = bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'heimatort' });
+    expect(h.forum.text).toContain('weder Wohnsitz noch gewöhnlicher Aufenthalt');
+  });
+});

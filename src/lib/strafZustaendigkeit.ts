@@ -10,7 +10,7 @@
 
 export type StrafSpezialforum = 'kein' | 'medien' | 'schkg_delikt' | 'unternehmen' | 'einziehung';
 export type StrafTatortLage = 'bekannt' | 'nur_erfolgsort' | 'mehrere_orte' | 'ausland_oder_ungewiss';
-export type StrafKaskade32 = 'wohnsitz' | 'heimatort' | 'ergreifungsort' | 'auslieferung';
+export type StrafKaskade32 = 'wohnsitz' | 'aufenthalt' | 'heimatort' | 'ergreifungsort' | 'auslieferung';
 export type StrafBeteiligung = 'allein' | 'teilnehmer' | 'mittaeter';
 
 export interface StrafInput {
@@ -41,11 +41,15 @@ export interface StrafErgebnis {
   normverweise: StrafNorm[];
 }
 
+// Kaskade exakt nach Art. 32: Abs. 1 = Wohnsitz ODER gewöhnlicher Aufenthalt
+// (gleichrangig!), Abs. 2 = Heimatort → Ergreifungsort, Abs. 3 = Auslieferungs-
+// kanton. (Abschluss-Review 6.6.2026: der gewöhnliche Aufenthalt fehlte.)
 const KASKADE_TEXT: Record<StrafKaskade32, { text: string; stufe: string }> = {
-  wohnsitz: { text: 'am WOHNSITZ der beschuldigten Person', stufe: '1. Stufe' },
-  heimatort: { text: 'am HEIMATORT der beschuldigten Person (kein Wohnsitz in der Schweiz)', stufe: '2. Stufe' },
-  ergreifungsort: { text: 'am ORT DER ERGREIFUNG (weder Wohnsitz noch Heimatort in der Schweiz)', stufe: '3. Stufe' },
-  auslieferung: { text: 'im AUSLIEFERUNGSKANTON (Ergreifung im Ausland)', stufe: '4. Stufe' },
+  wohnsitz: { text: 'am WOHNSITZ der beschuldigten Person', stufe: 'Abs. 1' },
+  aufenthalt: { text: 'am Ort des GEWÖHNLICHEN AUFENTHALTS der beschuldigten Person (gleichrangig zum Wohnsitz)', stufe: 'Abs. 1' },
+  heimatort: { text: 'am HEIMATORT der beschuldigten Person (weder Wohnsitz noch gewöhnlicher Aufenthalt in der Schweiz)', stufe: 'Abs. 2' },
+  ergreifungsort: { text: 'am ORT DER ERGREIFUNG (auch kein Heimatort in der Schweiz)', stufe: 'Abs. 2' },
+  auslieferung: { text: 'im AUSLIEFERUNGSKANTON (Ergreifung im Ausland)', stufe: 'Abs. 3' },
 };
 
 export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
