@@ -254,7 +254,211 @@ Alle Volltexte stammen aus den amtlichen kantonalen Gesetzessammlungen (zh.ch/zh
 
 ## Teil B — GL · ZG · FR · SO · BS · BL · SH
 
-_(Bericht ausstehend.)_
+# Recherche-Bericht: GOG, Artikel-Mapping und Gerichtsgebühren — GL · ZG · FR · SO · BS · BL · SH
+
+Abrufdatum aller Quellen: 5.6.2026. Alle Gesetzestexte wurden aus den amtlichen Erlass-Sammlungen (LexWork/OrtsLex-API als PDF bzw. JSON) extrahiert und die Paragraphen/Artikel verbatim geprüft. Artikelnummern stammen ausschliesslich aus dem geltenden konsolidierten Text, nie aus dem Gedächtnis.
+
+---
+
+## GL — Glarus
+
+**GOG:** Gerichtsorganisationsgesetz (GOG), **GS III A/2**, vom 5. September 2021, **in Kraft seit 1. Juli 2022** (Stand 1.7.2022). Neue Gerichtsorganisation — ersetzt das alte «Gesetz über die Gerichtsorganisation» von 2006. Link: https://gesetze.gl.ch/app/de/texts_of_law/III%20A/2
+
+| Behörde (Repo-Liste) | GOG-Artikel | Kurzinhalt |
+|---|---|---|
+| Kantonsgericht GL (1. Instanz Zivil/Straf) | **Art. 9–13** | Art. 9 Organisation (2 vollamtl. Präsidien, Vizepräsidium, 12 Mitglieder; Gesamtbehörde/Kollegial-/Einzelgericht); Art. 12 Kollegialgericht: erstinstanzl. Zivil ordentl. Verf. (Art. 219 ff. ZPO) in Fünfer-/Dreierbesetzung, erstinstanzl. Straf (Art. 13 lit. b StPO); Art. 13 Einzelgericht |
+| Obergericht GL (obere Instanz) | **Art. 14–18** | Art. 14 Organisation; Art. 17 Kollegialgericht (Rechtsmittelinstanz); Art. 18 Einzelgericht |
+| Verwaltungsgericht GL | **Art. 19–24** | Art. 19 Organisation; Art. 22 Kollegialgericht; Art. 23 Einzelgericht; Art. 24 verwaltungsunabhängige Kommissionen/Schiedsgerichte |
+| (Schlichtungsbehörde) | **Kap. 5** (Art. 47 ff.) | Schlichtungsbehörde — in Repo-Liste nicht aufgeführt |
+
+Die sachliche Zuständigkeit (erstinstanzlich/obere Instanz) ist im GL-GOG **selbst** definiert (Art. 12 f., 17 f., 22 f.) — kein separater EG-ZPO-Verweis nötig.
+
+**Gerichtsgebühren-Erlass:** Verordnung zu den Kosten im Zivil- und Strafprozess (Zivil- und Strafprozesskostenverordnung), **GS III A/5**, vom 22.12.2010 (Stand 1.1.2026). **Bestätigt.**
+Zivil-Staffel (**Art. 3** — Pauschale Gerichtsverfahren je Instanz):
+- Streitwert bis 30'000 Fr.: **200–5'000** Fr.
+- bis 100'000 Fr.: **500–10'000** Fr.
+- bis 500'000 Fr.: **1'000–25'000** Fr.
+- bis 1'000'000 Fr.: **2'000–40'000** Fr.
+- über 1'000'000 Fr.: **4'000 bis 4 % des Streitwertes**.
+Nicht vermögensrechtlich: höchstens 20'000 Fr. (Abs. 2). Summarisch: höchstens die Hälfte (Abs. 3). Schlichtung (Art. 2): 100–800 Fr.
+
+---
+
+## ZG — Zug
+
+**GOG:** Gesetz über die Organisation der Zivil- und Strafrechtspflege (Gerichtsorganisationsgesetz, GOG), **BGS 161.1**, vom 26. August 2010, **Stand 17. Oktober 2025** (Teilrevision in Kraft 1.1.2025). Link: https://bgs.zg.ch/app/de/texts_of_law/161.1
+
+| Behörde (Repo-Liste) | GOG-§ | Kurzinhalt |
+|---|---|---|
+| Kantonsgericht ZG (1. Instanz Zivil) | **§ 25–28** | § 25 Organisation, § 26 Organe, **§ 27 Zuständigkeit** («unteres Gericht in Zivilsachen»; Vollstreckungs-/Lugano-Gericht), **§ 28 Einzelrichter** (Streitwert bis 30'000 Fr., vereinfachtes/summarisches Verf., Familienrecht) |
+| Strafgericht ZG (1. Instanz Straf) | **§ 30–34** | § 30 Organisation, § 31 Organe (Kollegialgericht zu dritt), **§ 32 Zuständigkeit** («unteres Gericht in Strafsachen», Art. 19 StPO); **§ 34 Jugendgericht** (Funktion des Jugendgerichts, Art. 7 JStPO) |
+| Obergericht ZG (obere Instanz) | **§ 14–22** | § 17 Organisation (Zivil-/Straf-/Beschwerde-/Justizverwaltungsabteilung); **§ 19 Zivilabteilung** (einzige kant. Instanz Art. 5/8 ZPO, Berufung Art. 308 ff.), **§ 20 Strafabteilung** (Berufung), **§ 21 Beschwerdeabteilung** (inkl. SchKG-Aufsicht) |
+| Verwaltungsgericht ZG | **NICHT im GOG** | Im GOG nicht geregelt (GOG erfasst nur Zivil-/Strafrechtspflege). Verfassungsgrundlage separat (Verwaltungsrechtspflegegesetz). |
+
+**Wichtige Aktualisierung ggü. Auftrag:** Das **Zwangsmassnahmengericht** ist seit der Revision (1.1.2025) **eigenständig** in **§ 35a (Organisation) / § 35b (Zuständigkeit)** GOG konstituiert (drei vom Kantonsrat gewählte Mitglieder) — nicht mehr blosse Einzelrichter-Funktion des Strafgerichts (so noch der 2010er-Entwurf). Schlichtungsbehörden: **§§ 36–41** GOG (Friedensrichteramt § 37, Arbeitsrecht/Miet-Pacht 2.2.3/2.2.4).
+
+**Gerichtsgebühren-Erlass:** Verordnung über die Kosten in der Zivil- und Strafrechtspflege (Kostenverordnung Obergericht, **KoV OG**), **BGS 161.7**, vom 15.12.2011 (Stand 1.1.2025). **Bestätigt.**
+Zivil-Staffel (**§ 11** — ordentliches/vereinfachtes Verfahren, Entscheidgebühr):
+
+| Streitwert (Fr.) | Gebühr (Fr.) | max. % |
+|---|---|---|
+| bis 1'000 | 100–200 | – |
+| 1'000–3'000 | 220–540 | 22 |
+| 3'000–5'000 | 540–800 | 18 |
+| 5'000–10'000 | 800–1'400 | 16 |
+| 10'000–20'000 | 1'400–2'400 | 14 |
+| 20'000–50'000 | 2'400–4'000 | 12 |
+| 50'000–100'000 | 4'000–6'000 | 8 |
+| 100'000–200'000 | 6'000–10'000 | 6 |
+| 200'000–500'000 | 10'000–17'500 | 5 |
+| 500'000–1 Mio. | 17'500–25'000 | 3,5 |
+| 1–5 Mio. | 25'000–60'000 | 2,5 |
+| über 5 Mio. | ab 60'000 | 1,2 |
+
+Nicht vermögensrechtlich: 150–12'000 Fr. (§ 11 Abs. 2). Summarisch: ⅓ bis ¾ von § 11 (§ 12).
+
+---
+
+## FR — Freiburg
+
+**GOG:** Justizgesetz (JG / Loi sur la justice LJ), **SGF 130.1**, vom 31. Mai 2010 (in Kraft seit 1.1.2011, fortlaufend revidiert). Link: https://bdlf.fr.ch/app/de/texts_of_law/130.1
+
+| Behörde (Repo-Liste) | JG-Artikel | Kurzinhalt |
+|---|---|---|
+| 7 Bezirksgerichte (Saane, Sense, Greyerz, See, Glane, Broye, Vivisbach) | **Art. 32–35** + **Art. 50–51** | Art. 32 Grundsatz/Gerichtsbezirke (je Sitz ein Bezirks- und Friedensgericht); **Art. 50 Zivilgericht** (Präsidium + 2 Beisitzende; erstinstanzl. alle Zivilsachen ohne andere Zuständigkeit); **Art. 51 Einzelgericht** (vereinfachtes/summarisches Verfahren) |
+| (Arbeitsgericht je Bezirksgericht) | **Art. 54–55** | Art. 54 Zuständigkeit (erstinstanzl. arbeitsrechtl. Streitigkeiten; Präsidium < 8'000 Fr.); Art. 55 Zusammensetzung |
+| (Mietgericht — 3 Mietgerichte) | **Art. 34, 56–57** | Art. 34 drei Mietgerichte; Art. 56 Zuständigkeit (nichtlandwirtschaftl. Miet-/Pachtsachen) |
+| Kantonsgericht / Tribunal cantonal | **Art. 36–49 + 52** | Art. 36 Gerichtsbarkeit/Sitz, Art. 40–43 Gesamtgericht/Abteilungen/Gerichtshöfe; **Art. 52 Kantonsgericht** als Weiterziehungsinstanz (Beschwerde/Berufung) |
+| (Friedensgericht / Schlichtungsbehörde) | **Art. 58 / Art. 60** | in Repo-Liste nicht separat geführt |
+
+**Gerichtsgebühren-Erlass:** Justizreglement (JR / Règlement de la justice), **SGF 130.11**, vom 30.11.2010 (Fassung in Kraft seit 1.12.2025). **Bestätigt.**
+Zivil-Gebühren (Rahmen, **Art. 19–21 JR**):
+- **Art. 19 Kantonsgericht:** je Streitsache **100–200'000** Fr. (auf 1'000'000 Fr. erhöhbar bei einziger kant. Instanz / besonderer Bedeutung).
+- **Art. 20 Zivilgericht (Bezirk):** **100–500'000** Fr. (Höchstbetrag verdoppelbar bei sehr hohem Streitwert).
+- **Art. 22 Arbeitsgericht**, Art. 23 Präsidium, Art. 18 Schlichtung.
+
+**Unsicherheit FR:** Das JR enthält **keine feste numerische Streitwert-Staffel**. **Art. 21 Abs. 1 JR** delegiert die «Gebührenabstufung unter Berücksichtigung des Streitwerts» ausdrücklich an das Kantonsgericht (interne Gebührenabstufung) — die konkrete Staffel ist nicht im amtlich publizierten JR enthalten.
+
+---
+
+## SO — Solothurn
+
+**GOG:** Gesetz über die Gerichtsorganisation (GO), **BGS 125.12**, vom 13. März 1977 (Stand 1.11.2021). Link: https://bgs.so.ch/app/de/texts_of_law/125.12
+(Hinweis: Der Gerichtsgebühren-Erlass ist BGS **615.11**, nicht 125.12 — siehe unten.)
+
+| Behörde (Repo-Liste) | GO-§ | Kurzinhalt |
+|---|---|---|
+| 5 Richterämter / Amtsgerichte (Solothurn-Lebern, Bucheggberg-Wasseramt, Olten-Gösgen, Thal-Gäu, Dorneck-Thierstein) | **§ 8–15** | **§ 8–12 Amtsgerichtspräsident** (§ 10 Einzelrichter Zivil: vereinfachtes/summarisches Verf., Scheidung; § 12 Strafrichter); **§ 13–15 Amtsgericht** (§ 14 Zivilgericht Dreierbesetzung — alle Zivilsachen ohne andere Zuständigkeit; § 15 Strafgericht Dreierbesetzung) |
+| Obergericht SO | **§ 23–29** | § 23 Bestand; § 24 Besetzung/Kammern (Zivil-, Straf-, SchK-, Beschwerdekammer); § 29 Kompetenzen |
+| Versicherungs-/Verwaltungsgericht (Abt. Obergericht) | **§ 47–48** (Verwaltungsg.) · **§ 53–54** (Versicherungsg.) | Richter vom Obergericht zugeteilt; § 48 Verwaltungsgericht-Kompetenzen, § 54 Versicherungsgericht (alle Sozialversicherungssachen) |
+| Kantonales Steuergericht | **§ 55–56** | § 55 Bestand (5 Mitglieder), § 56 Kompetenzen |
+| (Jugendgericht/-präsident) | **§ 17–18** | § 18 erstinstanzliche Jugendstrafsachen |
+| (Schlichtungsbehörde Miete/Pacht) | **§ 34quinquies–sexies** | je Amtei eine Schlichtungsbehörde Miet-/Pachtrecht |
+
+Sachliche Zuständigkeit Zivil ergänzend im EG ZPO (BGS 221.2; vgl. § 7/§ 9 GO-Verweise).
+
+**Gerichtsgebühren-Erlass:** Gebührentarif (GT), **BGS 615.11**, vom 8.3.2016 (Stand 1.3.2026). **Bestätigt.**
+Zivil-Staffel (**§ 145 GT** — Entscheidgebühr Zivilsachen):
+- Streitwert bis 30'000 Fr.: **200–4'000** Fr.
+- 30'001–50'000 Fr.: **600–5'500** Fr.
+- 50'001–100'000 Fr.: **800–8'000** Fr.
+- 100'001–200'000 Fr.: **1'200–13'000** Fr.
+- 200'001–500'000 Fr.: **1'800–25'000** Fr.
+- 500'001–1'000'000 Fr.: **2'500–50'000** Fr.
+- über 1 Mio.: Maximum um bis 1 % des Streitwerts erhöhbar (Abs. 2). Nicht bezifferbar: 200–20'000 Fr. (Abs. 3). Schlichtung (§ 144): 200–1'500 Fr.
+
+---
+
+## BS — Basel-Stadt
+
+**GOG:** Gesetz betreffend die Organisation der Gerichte und der Staatsanwaltschaft (Gerichtsorganisationsgesetz, GOG), **SG 154.100**, vom 3. Juni 2015, in Kraft seit 1.7.2016, **Stand 15. Juni 2025**. Link: https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.100
+
+| Behörde | GOG-§ | Kurzinhalt | Status |
+|---|---|---|---|
+| (Spruchkörper allgemein) | **§ 32** | Gerichte entscheiden in der gesetzl. Besetzung | bestätigt ✓ |
+| Zivilgericht | **§ 69 (Bestand) · § 70 (Zuständigkeit) · § 71 (Spruchkörper)** | § 70 erstinstanzl. alle ZPO-Angelegenheiten; **§ 71** Einzelgericht/Dreiergericht/Kammer | § 71 bestätigt ✓ |
+| Arbeitsgericht | **§ 72 (Bestand) · § 73 (Zuständigkeit) · § 74 (Spruchkörper)** | § 73 arbeitsrechtl. Streitigkeiten, § 74 Dreiergericht | §§ 73 f. bestätigt ✓ |
+| Strafgericht | **§ 75 (Bestand) · § 77 (Zuständigkeit)** | § 77 Abs. 1 erstinstanzl. alle StPO-Angelegenheiten | **ergänzt** |
+| Zwangsmassnahmengericht | **§ 78** | dem Strafgericht zugeordnet; ZMG-Funktion gemäss StPO | **ergänzt** |
+| Jugendgericht | **§ 76 (Bestand) · § 77 Abs. 2 (Zuständigkeit) · § 80 (Spruchkörper)** | § 77 Abs. 2 JStPO/JStVG-Angelegenheiten | **ergänzt** |
+| Sozialversicherungsgericht | **§ 81 (Bestand) · § 82 (Zuständigkeit)** | § 82 einzige kant. Instanz für alle sozialvers.-rechtl. Streitigkeiten + Zusatzversicherungen (Art. 7 ZPO) | **ergänzt** |
+| Appellationsgericht | **§ 87 (Bestand) · § 88 (Zuständigkeit) · § 91 Kammer · § 92 Dreiergericht · § 93 Einzelgericht** | obere Instanz; Rechtsmittel Zivil/Straf | §§ 91 f. bestätigt ✓ |
+| Schlichtungsbehörden | **§ 6** | Schlichtungsbehörden des Zivilgerichts, des Appellationsgerichts, paritätische Schlichtungsstellen (Art. 200/201 ZPO) | **Korrektur** |
+
+**Wichtige Korrektur ggü. Auftrag:** Die Schlichtungsbehörden sind im geltenden GOG (Stand 15.6.2025) in **§ 6** konstituiert, **nicht in § 50** (§ 50 GOG regelt die Aufgaben der Verwaltungschefin/des Verwaltungschefs). Die übrigen vom Auftrag genannten §§ (32, 71, 73 f., 91 f.) sind verbatim **bestätigt**.
+
+**Gerichtsgebühren-Erlass:** Reglement über die Gerichtsgebühren (Gerichtsgebührenreglement, **GGR**), **SG 154.810**, vom 11.9.2017 (Stand 1.1.2018). **Bestätigt.**
+Zivil-Staffel (**§ 5 GGR** — Grundgebühr ordentliche/vereinfachte Verfahren, vermögensrechtlich):
+
+| Streitwert (Fr.) | Grundgebühr (Fr.) |
+|---|---|
+| bis 10'000 | 200–1'000 |
+| 10'000–30'000 | 1'000–3'000 |
+| 30'000–100'000 | 3'000–6'000 |
+| 100'000–500'000 | 6'000–20'000 |
+| 500'000–1'000'000 | 20'000–30'000 |
+| 1'000'000–5'000'000 | 30'000–60'000 |
+| über 5'000'000 | 0,5 %–1,5 %, mind. 60'000 |
+
+Nicht vermögensrechtlich: 200–250'000 Fr. (§ 5 Abs. 3). Mietrechtl. Streitigkeiten: § 6 (Verweis auf § 2a Gesetz über die Gerichtsgebühren SG 154.800).
+
+---
+
+## BL — Basel-Landschaft
+
+**GOG:** Gesetz über die Organisation der Gerichte (Gerichtsorganisationsgesetz, GOG), **SGS 170**, vom 22. Februar 2001 (Stand 1.4.2018). Link: https://bl.clex.ch/app/de/texts_of_law/170
+
+| Behörde (Repo-Liste) | GOG-§ | Kurzinhalt |
+|---|---|---|
+| 2 Zivilkreisgerichte (BL Ost / BL West) | **§ 16–17** | § 16 Zivilgerichtskreise (Ost: Liestal/Sissach/Waldenburg; West: Arlesheim/Laufen); § 17 Organisation (Dreierkammern + Präsidium) |
+| Strafgericht | **§ 20** | Organisation/Zusammensetzung (Fünfer-/Dreierkammern, Präsidien) |
+| Jugendgericht | **§ 20a** | 1 Gerichtskammer (Präsidium + 4 Richter); Präsidium durch Strafgerichts-Präsidien |
+| Zwangsmassnahmengericht | **§ 21** | Präsidien des Strafgerichts üben ZMG-Funktion (Art. 18 StPO) aus |
+| Kantonsgericht (obere Instanz; Abt. Zivil/Straf/Verfassungs-Verwaltungsrecht/Sozialversicherungsrecht) | **§ 8–15** | § 8 «oberste rechtsprechende Behörde»; § 9 Organisation der Spruchkörper (Abteilungen/Kammern) |
+| (Friedensrichterinnen/Friedensrichter) | **§ 18–19** | 15 Friedensrichterkreise |
+
+**Verteilung der Behörden** im GOG: § 1 (Verfassungs-/Verwaltungs-/Sozialvers.-Gerichtsbarkeit: Kantonsgericht, Steuer-/Enteignungsgericht, ZMG), § 2 (Zivil: Kantonsgericht, Zivilkreisgerichte, Friedensrichter), § 3 (Straf: Kantonsgericht, Strafgericht, Jugendgericht, ZMG). Die **sachliche Zuständigkeit** (Streitwertgrenzen Zivilkreisgericht/Kantonsgericht) ist im **EG ZPO, SGS 221** (vom 23.9.2010; § 5 EG ZPO) geregelt — das GOG konstituiert die Behörden, das EG ZPO weist die Zuständigkeiten zu.
+
+**Gerichtsgebühren-Erlass:** Verordnung über die Gebühren der Gerichte (Gebührentarif, **GebT**), **SGS 170.31**, vom 15.11.2010 (Stand 1.1.2021). **Bestätigt.**
+Zivil-Staffel (**§ 8 GebT — Zivilkreisgerichte**, Endentscheide nach Streitwert, Abs. 1 lit. f):
+- bis 10'000 Fr.: **200–1'500** Fr.
+- bis 30'000 Fr.: **500–3'000** Fr.
+- bis 100'000 Fr.: **1'500–10'000** Fr.
+- ab 100'001 Fr.: **2'000–30'000** Fr.
+- unbestimmter Streitwert: 200–30'000 Fr. (lit. g); Eheschutz: 200–3'000 Fr. (lit. h); Ehescheidung: 200–15'000 Fr. (lit. i); Schlichtung: 100–500 Fr. (lit. e). Kantonsgericht Zivilrecht: § 9 GebT. Maximalgebühr-Rahmen: § 52 Abs. 3 GOG.
+
+---
+
+## SH — Schaffhausen
+
+**GOG / Justizgesetz:** Justizgesetz (JG), **SHR 173.200**, vom 9. November 2009, in Kraft seit 1.1.2011, **Stand 1. Mai 2026**. Link: https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200
+(Der Auftrag nannte tentativ «SHR 273.100 Art. 109» — das ist die alte kant. ZPO; massgeblich für die Gerichtsorganisation ist das **JG SHR 173.200**.)
+
+| Behörde (Repo-Liste) | JG-Artikel | Kurzinhalt |
+|---|---|---|
+| Kantonsgericht SH (1. Instanz Zivil/Straf) | **Art. 26–37** | Art. 26–27 Organisation (Kammern zu dritt + Einzelrichter); **Art. 28 Grundsatz** (erste Instanz Zivil, soweit nicht Obergericht einzige Instanz); **Art. 29 Einzelrichter** (Familienrecht, vereinfachtes/summarisches Verf.); Kammer >30'000 Fr.; **Art. 33 Strafsachen** (erstinstanzl. Gericht); **Art. 34 Jugendgericht**; Art. 35 Zwangsmassnahmen; Art. 36 Ausländerrecht |
+| Obergericht SH (obere Instanz; zugleich Verwaltungs-, Versicherungs-, Steuerrekursgericht, SchKG-Aufsicht) | **Art. 38–49** | Art. 38–39 Organisation; **Art. 40 einzige Instanz** Zivil, **Art. 41 Rechtsmittelinstanz** Zivil; **Art. 43 Rechtsmittel** Straf; **Art. 44** Verwaltungsgerichtsbeschwerden + **Abs. 2 kant. Versicherungsgericht** (Sozialvers.) + Abs. 3 Steuerrekursbehörde; **Art. 49 SchKG-Aufsichtsbehörde** |
+| (Friedensrichteramt / Schlichtungsstellen) | **Art. 9–12** | Art. 9 Friedensrichteramt (3–4 Kreise), Art. 10 Schlichtungsstelle Miete, Art. 11 Diskriminierung |
+
+Damit **bestätigt** der amtliche Text die Repo-Annahme: Obergericht SH ist zugleich Verwaltungs- **und** Versicherungsgericht sowie SchKG-Aufsicht.
+
+**Gerichtsgebühren-Erlass:** SH hat einen **eigenen** Erlass: **Verordnung des Obergerichts über die Kosten in Zivil- und Strafverfahren sowie in weiteren Verfahren (Kostenverordnung)**, vom 6. November 2003 (Stand-Fassung publiziert 5.9.2020). Quelle: https://www.lexfind.ch/tolv/55496/de
+Zivil-Staffel (Kostenverordnung):
+- **§ 6 (Amtsgerichtspräsident = Einzelrichter):** einfache Prozesse bis 4'000 Fr.: **400–1'000** Fr.; 4'000–8'000 Fr.: **600–1'300** Fr.; summarisch: 200–2'000 (bis 6'500) Fr.; Ehescheidung: 500–3'000 Fr.
+- **§ 7 (Amtsgericht = Kollegium):** Streitwert 8'000–30'000 Fr.: **900–2'400** Fr.; 30'000–50'000 Fr.: **1'500–3'300** Fr.; 50'000–100'000 Fr.: **2'000–4'000** Fr.; über 100'000 Fr.: **2–4 % des Streitwerts**; Ehescheidung: 800–4'000 Fr.
+- § 5 Friedensrichter: Aussöhnung 100–250 Fr. nach Streitwert.
+
+**Unsicherheiten SH:**
+- Die **exakte SHR-Nummer** der Kostenverordnung konnte über die amtliche API **NICHT GEFUNDEN** werden (rechtsbuch.sh.ch liefert sie nicht unter den geprüften 173.1xx/173.2xx/173.3xx-Nummern; der PDF-Kopf nennt keine SHR-Nummer). Sie liegt in der Systematikgruppe 173 (Justiz). Titel/Datum/Inhalt sind über lexfind verifiziert.
+- Die Kostenverordnung verwendet **veraltete Behördenbezeichnungen** («Amtsgerichtspräsident», «Amtsgericht») aus der Zeit vor der Justizreform 2011; heute entsprechen diese dem **Kantonsgericht** (Einzelrichter bzw. Kammer). Die Verordnung ist formell weiterhin in Kraft, der Wortlaut aber nicht an die neue Terminologie angepasst — vor Stammdaten-Übernahme fachlich zu prüfen.
+
+---
+
+## Methodische Hinweise / Gesamt-Unsicherheiten
+
+- Alle GOG-/JG-Texte und Gebühren-Erlasse wurden aus den **amtlichen Erlass-Sammlungen** als konsolidierte PDF/JSON gezogen (LexWork/OrtsLex-API; baselland.ch/sh.ch-Direktabrufe wurden durch die API-Endpunkte `…/api/de/…/pdf_file` bzw. `…/texts_of_law/<nr>` umgangen — **keine** blossen Such-Snippets nötig). Artikel-/§-Nummern und Staffeln sind verbatim aus diesen Texten.
+- **ZG:** ZMG neu eigenständig (§ 35a/35b) statt Einzelrichter-Funktion. **BS:** Schlichtungsbehörden § 6 statt § 50 (Auftrag-Korrektur). **FR:** keine numerische Streitwert-Staffel im JR (Delegation an Kantonsgericht). **SH:** SHR-Nummer der Kostenverordnung nicht ermittelbar; veraltete Terminologie.
+- Die UZH-PDF-Sammlung (Stand Sept. 2010) ist für GL und BS **überholt** (GL: neue Org 2022; BS: Totalrevision 2015) — es wurden ausschliesslich die geltenden Fassungen verwendet.
 
 ## Teil C — AR · AI · SG · GR · AG · TG
 
