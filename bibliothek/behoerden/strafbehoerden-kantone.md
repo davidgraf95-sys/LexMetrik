@@ -661,3 +661,24 @@ Quellen (Abruf 6.6.2026): VS LACPP https://lex.vs.ch/app/fr/texts_of_law/312.0 (
 - **JU:** LiCPP (RSJU 321.1) verweist für Organisation auf die **LOJ/OJ**
   (Art. 1 al. 2) — Artikel der OJ noch offen (einzige Restlücke).
 
+---
+
+# RE-AUDIT-NACHTRAG (Adress-Gesamtprüfung 6.6.2026, Paket 3/4)
+
+## KORREKTUR
+- **BE Generalstaatsanwaltschaft: Nordring 8, 3013 Bern** (Sitzverlegung;
+  Maulbeerstrasse 10/3011 überholt). Quellen: staw.justice.be.ch,
+  SSK-Behördenverzeichnis. Regionale StA/JugA/kant. StA unverändert ✓.
+
+## DIVERGENZ VD-MP-central ENTSCHIEDEN
+**Av. de Longemalle 1, 1020 Renens BLEIBT** — amtlich direkt bestätigt
+(vd.ch/mp/ministere-public-central; zusätzlich SSK + BGer 6B_655/2022).
+Der Nachtrag-3-Zweifel war ein Extraktionsartefakt.
+
+## Bestätigt (Stichproben-frei nachgeprüft)
+Alle ✓2-Korrekturen halten: SZ Schmiedgasse 21 · AG Frey-Herosé 20 ·
+TG Maurerstrasse 8 · BL Muttenz · SG Bafflesstrasse 18/Spisergasse 15.
+Erbgangs-Dossier: 0 Abweichungen (SO 6 Ämter ✓, UR-Gemeindemodell ✓
+[Gemeinderatskanzlei Tellsgasse 25, Altdorf], BS/BL ✓).
+Hinweis: StA-Agentur Berner Jura amtlich neu Rue du Château 13, Moutier.
+

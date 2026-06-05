@@ -17,7 +17,7 @@ export interface Staatsanwaltschaft {
 
 export const STAATSANWALTSCHAFTEN: Record<Kanton, Staatsanwaltschaft> = {
   ZH: { name: 'Oberstaatsanwaltschaft des Kantons Zürich', strasse: 'Güterstrasse 33, Postfach', plzOrt: '8010 Zürich', hinweis: '5 allgemeine + 4 besondere Staatsanwaltschaften; Anzeige auch bei jeder Polizeiwache' },
-  BE: { name: 'Generalstaatsanwaltschaft des Kantons Bern', strasse: 'Maulbeerstrasse 10', plzOrt: '3011 Bern', hinweis: '4 Regionale Staatsanwaltschaften + besondere Aufgaben' },
+  BE: { name: 'Generalstaatsanwaltschaft des Kantons Bern', strasse: 'Nordring 8', plzOrt: '3013 Bern', hinweis: '4 Regionale Staatsanwaltschaften + besondere Aufgaben (Re-Audit 6.6.2026: Sitzverlegung — Maulbeerstrasse 10 überholt)' },
   LU: { name: 'Oberstaatsanwaltschaft Luzern', strasse: 'Zentralstrasse 28, Postfach', plzOrt: '6002 Luzern' },
   UR: { name: 'Staatsanwaltschaft Uri', strasse: 'Bahnhofstrasse 1', plzOrt: '6460 Altdorf' },
   SZ: { name: 'Staatsanwaltschaft Schwyz (Amtsleitung)', strasse: 'Schmiedgasse 21', plzOrt: '6431 Schwyz', hinweis: 'Abteilungen auch in Wollerau (Bahnhofstrasse 4) und Bennau (Jugendanwaltschaft)' },
