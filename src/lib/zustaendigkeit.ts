@@ -556,6 +556,11 @@ export interface RechtsmittelErgebnis {
 }
 
 export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelErgebnis {
+  // Gleiche Eingabe-Validierung wie bestimmeZustaendigkeit (Bug-Check 5.6.2026):
+  // negative/nicht-finite Streitwerte werfen statt stillschweigend zu raten.
+  if (ungueltig(input.streitwertCHF)) {
+    throw new Error('Streitwert muss eine Zahl ≥ 0 sein.');
+  }
   const sw = input.vermoegensrechtlich ? input.streitwertCHF : null;
   const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'; // Art. 5 ZPO
   const mietArbeit = input.streitsache === 'arbeit' || input.streitsache === 'miete_wohn_geschaeft';

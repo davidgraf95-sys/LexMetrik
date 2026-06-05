@@ -544,8 +544,11 @@ export function ZustaendigkeitForm() {
         </div>
       )}
 
-      {/* 4 · Ergebnis */}
-      {ergebnis && r && (
+      {/* 4 · Ergebnis — EINLEITUNGS-Sicht (Bug-Check 5.6.2026: im
+          Rechtsmittel-Modus tragen die Rechtsmittel-Karten oben die volle
+          Auskunft; die Einleitungs-Blöcke [Verfahrensart/Schlichtung/Stellen-
+          Notices/Weichen] würden dort sachfremd leaken) */}
+      {ergebnis && r && f.instanz === 'einleitung' && (
         <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
           <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />

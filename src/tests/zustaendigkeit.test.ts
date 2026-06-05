@@ -409,3 +409,11 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
     for (const n of ['311', '314', '321', '100', '46']) expect(fh).toContain(n);
   });
 });
+
+describe('bestimmeRechtsmittel — Eingabe-Validierung (Bug-Check-Fix 5.6.2026)', () => {
+  it('negativer/nicht-finiter Streitwert wirft (wie bestimmeZustaendigkeit)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    expect(() => bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: -5 })).toThrow();
+    expect(() => bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: Number.NaN })).toThrow();
+  });
+});
