@@ -64,7 +64,7 @@ Suche bleiben. **Der frühere Modus-Umschalter (Primärweiche Rechner |
 Vorlagen) ist damit abgelöst und entfernt**; `?modus=`-Links bleiben
 harmlos. Alt-Gliederungen 'art'/'bereich' existieren im Katalog-Code
 weiter, werden aber nicht mehr gerendert. Header = Zwei-Zonen (Logo links,
-Aktionscluster rechts: ⌘K · Sprache · Methodik · Über · Pro-Button),
+Aktionscluster rechts: Sprache · Methodik · Über · Pro-Button),
 Mitte leer; Utility-Bar nur Pflichthinweis rechts, mobil ausgeblendet.
 
 **Design-Tokens (Feinschliff 5.6.2026, single source tailwind.config +
@@ -88,8 +88,9 @@ Kartenraster `repeat(auto-fill, minmax(340px, 1fr))`; Titel ohne Silben-
 trennung (`text-balance`); Pills im Inhaltsblock, nur CTA per `mt-auto`
 unten. Keine Ziffern in Sektionsköpfen/Sidebar (konsistent nirgends).
 
-**Sucheinstiege:** Inline-Suche = Filter im aktiven Modus («Katalog
-filtern …»); ⌘K-Palette = globale Navigation. Bewusst getrennt.
+**Suche:** EIN kompaktes Suchfeld in der Katalog-Seitenleiste (Desktop)
+bzw. im Filter-Drawer (mobil) — filtert den Katalog live. Die frühere
+⌘K-Befehlspalette ist entfernt (Entscheid David 5.6.2026).
 
 **Sprachen:** Umschalter sichtbar (Header); EN/FR/IT «in Bearbeitung» mit
 DE-Fallback + persistentem Banner; KEINE maschinelle Übersetzung (fachkundige

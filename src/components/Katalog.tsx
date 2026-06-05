@@ -86,9 +86,9 @@ function GebietSektion({ gebiet, karten }: {
   );
 }
 
-// ─── Filterleiste (horizontal, über dem Katalog): Suche · Status · Gebiete ──
-// Die Inline-Suche FILTERT den aktiven Modus; die ⌘K-Palette navigiert global —
-// bewusst getrennte Einstiege (s. STRUKTUR.md), darum hier «filtern»-Wortlaut.
+// ─── Filterleiste (horizontal, über dem Katalog): Status · Filtergruppen ────
+// Die Suche sitzt kompakt in der Seitenleiste (Entscheid 5.6.2026; die
+// frühere ⌘K-Palette ist entfernt) und FILTERT den Katalog.
 
 export type PillGruppe = {
   label: string;
@@ -101,35 +101,23 @@ function FilterLeiste(props: {
   rechtsgebiete: string[];
   gebiete: Set<string>; toggleGebiet: (g: string) => void; reset: () => void;
   nurGeprueft: boolean; setNurGeprueft: (v: boolean) => void;
-  suche: string; setSuche: (v: string) => void;
   zeigeRechtsgebiete: boolean;
   zusatzGruppen?: PillGruppe[];
 }) {
-  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, suche, setSuche, zeigeRechtsgebiete, zusatzGruppen } = props;
+  const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, zeigeRechtsgebiete, zusatzGruppen } = props;
   return (
     <section aria-label="Filter" className="space-y-3">
-      {/* Zeile 1: Suchfeld (flex-1) + Status-Toggle — beide auf --control-h (44px) */}
-      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-        <input
-          type="search"
-          value={suche}
-          onChange={(e) => setSuche(e.target.value)}
-          placeholder="Katalog filtern (Titel, Stichwort, Art. 336c) …"
-          className="lc-input h-11 py-0 sm:flex-1"
-          aria-label="Katalog filtern"
-        />
-        {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur geprüfte */}
-        <div className="flex h-11 items-stretch gap-1 p-1 bg-surface border border-line rounded-xl w-fit shrink-0" role="group" aria-label="Status">
-          {([['Alle', false], ['Nur verfügbare', true]] as const).map(([label, wert]) => (
-            <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
-              aria-pressed={nurGeprueft === wert}
-              className={`px-3 rounded-lg text-body-s font-medium transition-all ${
-                nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-              }`}>
-              {label}
-            </button>
-          ))}
-        </div>
+      {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur verfügbare */}
+      <div className="flex h-11 items-stretch gap-1 p-1 bg-surface border border-line rounded-xl w-fit shrink-0" role="group" aria-label="Status">
+        {([['Alle', false], ['Nur verfügbare', true]] as const).map(([label, wert]) => (
+          <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
+            aria-pressed={nurGeprueft === wert}
+            className={`px-3 rounded-lg text-body-s font-medium transition-all ${
+              nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
+            }`}>
+            {label}
+          </button>
+        ))}
       </div>
       {/* Zusatz-Filtergruppen (z. B. Rechtsbereich, Output-Typ) — gleiche Pill-Optik */}
       {(zusatzGruppen ?? []).map((gr) => (
@@ -333,13 +321,25 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
       rechtsgebiete={rechtsgebiete}
       gebiete={gebiete} toggleGebiet={toggleGebiet} reset={() => setGebiete(new Set())}
       nurGeprueft={nurGeprueft} setNurGeprueft={setNurGeprueft}
-      suche={suche} setSuche={setSuche}
       zeigeRechtsgebiete={filterRechtsgebiet}
       zusatzGruppen={zusatzGruppen}
     />
   );
+  // Kompaktes Suchfeld — sitzt in der Seitenleiste (Desktop) bzw. im
+  // Filter-Drawer (mobil); filtert den Katalog live.
+  const suchFeld = (
+    <input
+      type="search"
+      value={suche}
+      onChange={(e) => setSuche(e.target.value)}
+      placeholder="Katalog filtern …"
+      className="lc-input h-9 py-0 text-body-s"
+      aria-label="Katalog filtern"
+    />
+  );
   const uebersicht = (
     <>
+      {suchFeld}
       <Uebersicht sprungmarken={sprungmarken} aktiveSektion={aktiveSektion} />
       {seitenleisteFuss}
     </>

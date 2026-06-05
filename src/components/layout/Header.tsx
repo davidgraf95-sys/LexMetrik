@@ -1,10 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
-import { Befehlspalette } from '../Befehlspalette';
 import { SprachUmschalter } from '../SprachUmschalter';
 
 // Header (Iteration 3): ruhiges ZWEI-ZONEN-Layout — Logo links, Aktions-
-// cluster rechts (Suche/⌘K · Sprache · Methodik · Über · Pro-Button),
+// cluster rechts (Sprache · Methodik · Über · Pro-Button),
 // Mitte bewusst leer. Der frühere Stufen-Umschalter ist aufgelöst:
 // «/» (Free) ist der Default; ein gerichteter Button führt in den
 // Pro-Bereich (gekapselte Route, später PayPal-Gate — PAYWALL_ACTIVE) und
@@ -52,8 +51,6 @@ export function Header() {
         </Link>
 
         <nav className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-          {/* Suche / Befehlspalette (⌘K) */}
-          <Befehlspalette />
           {/* Sprache (en/fr/it «in Bearbeitung», DE-Fallback) */}
           <SprachUmschalter />
           <div className="hidden sm:flex items-center gap-1 sm:gap-2">
