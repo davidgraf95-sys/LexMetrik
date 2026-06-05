@@ -108,7 +108,7 @@ export function VerzugszinsForm() {
       <div className="flex flex-wrap items-center gap-2">
         <span className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
         {BEISPIELE.map((b) => (
-          <button key={b.label} onClick={() => ladeBeispiel(b.state)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
+          <button type="button" key={b.label} onClick={() => ladeBeispiel(b.state)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
         ))}
       </div>
 
@@ -159,8 +159,8 @@ export function VerzugszinsForm() {
         <div className="flex items-center justify-between">
           <h4 className="text-body-s font-semibold text-ink-700">Teilzahlungen &amp; Satzänderungen (Art. 85 OR)</h4>
           <div className="flex gap-2">
-            <button onClick={() => addRow('teilzahlung')} className="lc-btn-ghost lc-btn-sm">+ Teilzahlung</button>
-            <button onClick={() => addRow('satzaenderung')} className="lc-btn-ghost lc-btn-sm">+ Satzänderung</button>
+            <button type="button" onClick={() => addRow('teilzahlung')} className="lc-btn-ghost lc-btn-sm">+ Teilzahlung</button>
+            <button type="button" onClick={() => addRow('satzaenderung')} className="lc-btn-ghost lc-btn-sm">+ Satzänderung</button>
           </div>
         </div>
         {rows.length === 0 && <p className="text-body-s text-ink-500 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
@@ -182,7 +182,7 @@ export function VerzugszinsForm() {
               <input type="number" min={0} step={row.typ === 'teilzahlung' ? 100 : 0.25} value={row.wert}
                 onChange={(e) => updateRow(i, { wert: Number(e.target.value) })} className={inputNum} />
             </div>
-            <button onClick={() => removeRow(i)} className="text-body-s text-danger-700 self-end pb-2 text-left">Entfernen</button>
+            <button type="button" onClick={() => removeRow(i)} className="text-body-s text-danger-700 self-end pb-2 text-left">Entfernen</button>
           </div>
         ))}
       </div>

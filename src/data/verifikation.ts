@@ -53,6 +53,7 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
   },
 
   // Sperrfristen (Art. 336c OR)
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_133_III_517: {
     aktenzeichen: 'BGE 133 III 517',
     aussage:
@@ -65,12 +66,14 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Neue Arbeitsunfähigkeit in der Erstreckungsphase (Abs. 3) löst keine neue Sperrfrist aus.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_120_II_124: {
     aktenzeichen: 'BGE 120 II 124',
     aussage:
       'Gleichartiger Grund derselben Ursache (Rückfall) löst nur eine Sperrfrist aus («aucun lien»).',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_143_III_21: {
     aktenzeichen: 'BGE 143 III 21',
     aussage: 'Schwangerschaftsbeginn (Befruchtung) als Anfangstag der Sperrfrist.',
@@ -98,6 +101,7 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
     aussage: 'Tritt Verzug ohne Mahnung ein (Art. 108 Ziff. 1), läuft der Zins umgehend.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGer_4A_117_2014: {
     aktenzeichen: 'BGer 4A_117/2014',
     aussage: 'Verzugszins nur auf geschuldeten Beträgen, nicht auf zu Unrecht verlangten.',
@@ -126,26 +130,31 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Art. 145 Abs. 3 ZPO (Hinweis auf Nichtgeltung des Stillstands) ist Gültigkeitsvorschrift; fehlt der Hinweis, stehen die Fristen still. Die Ausnahme «summarisch» gilt auch für die Berufungsfrist gegen einen Summarentscheid.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_144_III_404: {
     aktenzeichen: 'BGE 144 III 404',
     aussage: 'Bei der Frist zur Ablehnung des Urteilsvorschlags ist der Fristenstillstand zu berücksichtigen (Art. 145 Abs. 2 lit. a findet keine Anwendung).',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_141_III_554: {
     aktenzeichen: 'BGE 141 III 554',
     aussage: 'Gesetzliche Fristen sind nicht erstreckbar (Art. 144 Abs. 1); auch keine «Fristabnahme» (Berufungsantwortfrist).',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_141_II_429: {
     aktenzeichen: 'BGE 141 II 429',
     aussage: 'Zustellfiktion (7. Tag) gilt unabhängig von einer mit der Post vereinbarten längeren Abholfrist.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGer_4A_20_2024: {
     aktenzeichen: 'BGer 4A_20/2024',
     aussage: 'Der Fristenstillstand (Art. 145 Abs. 1) gilt nicht für die gerichtlich angesetzte Prosekutionsfrist (umstritten).',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_140_III_561: {
     aktenzeichen: 'BGE 140 III 561',
     aussage: 'Der frühere Vorbehalt in Art. 209 Abs. 4 betrifft nur prozessuale Prosequierungsfristen, nicht materielle Verwirkungsfristen.',
@@ -159,6 +168,7 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Betreibungsferien hemmen – im Gegensatz zu Gerichtsferien – den Fristenlauf nicht (E. 2.1 i.V.m. BGE 114 III 60 E. 2b).',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_114_III_60: {
     aktenzeichen: 'BGE 114 III 60',
     aussage: 'Betreibungsferien hemmen den Fristenlauf nicht; nur Verlängerung bei Fristende in geschlossener Zeit (Art. 63 SchKG).',
@@ -239,6 +249,7 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
     aussage: 'Die Zahlungsfrist nach Art. 257d OR beginnt nach der relativen Empfangstheorie.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_107_II_189: {
     aktenzeichen: 'BGE 107 II 189',
     aussage: 'Relative Empfangstheorie bei der Mietzinserhöhung (Art. 269d OR).',
@@ -326,6 +337,7 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Rüge 2–3 Kalendertage nach sicherer Kenntnis des Mangels ist sicher rechtzeitig.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_98_II_191: {
     aktenzeichen: 'BGE 98 II 191',
     aussage:
@@ -338,12 +350,14 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Prüf- und Rügeobliegenheit (Art. 201 OR) gilt analog beim Grundstückkauf und für zugesicherte Eigenschaften.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_118_II_142: {
     aktenzeichen: 'BGE 118 II 142',
     aussage:
       'Bei sich fortentwickelnden Mängeln ist die Rügefrist kürzer zu bemessen.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_108_II_194: {
     aktenzeichen: 'BGE 108 II 194',
     aussage:
@@ -352,12 +366,14 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
   },
 
   // Vorsorgeauftrag (Art. 360 ff. ZGB)
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGE_151_III_81: {
     aktenzeichen: 'BGE 151 III 81',
     aussage:
       'Die öffentliche Beurkundung des Vorsorgeauftrags richtet sich nach kantonalem Recht (Art. 55 SchlT ZGB); kein Beizug zweier Zeugen wie beim öffentlichen Testament erforderlich.',
     verifiziert: false,
   },
+  // RESERVE (Audit 5.6.2026): noch unreferenziert.
   BGer_5A_624_2024: {
     aktenzeichen: 'BGer 5A_624/2024',
     aussage:

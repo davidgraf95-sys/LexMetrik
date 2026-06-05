@@ -104,7 +104,7 @@ export function AllgemeineFristForm() {
           <div className="flex flex-wrap items-center gap-2">
             <span className="lc-overline text-ink-500 normal-case">Voreinstellung:</span>
             {PRESETS.map((p) => (
-              <button key={p.label} onClick={() => setForm((f) => ({ ...f, ...p.patch }))}
+              <button type="button" key={p.label} onClick={() => setForm((f) => ({ ...f, ...p.patch }))}
                 title={p.info} className="lc-chip hover:bg-brass-200 transition-colors">{p.label}</button>
             ))}
           </div>

@@ -124,7 +124,7 @@ export function LohnfortzahlungForm() {
       <div className="flex flex-wrap items-center gap-2">
         <span className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
         {BEISPIELE.map((b) => (
-          <button key={b.label} onClick={() => ladeBeispiel(b.form)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
+          <button type="button" key={b.label} onClick={() => ladeBeispiel(b.form)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
         ))}
       </div>
 

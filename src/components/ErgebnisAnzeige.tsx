@@ -83,7 +83,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
           <p className="lc-overline">Ergebnis</p>
           <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{sansAmp(titel)}</h3>
         </div>
-        <button onClick={kopieren} className="lc-btn-ghost lc-btn-sm shrink-0"
+        <button type="button" onClick={kopieren} className="lc-btn-ghost lc-btn-sm shrink-0"
           aria-label="Ergebnis in die Zwischenablage kopieren">
           {kopiert ? 'Kopiert ✓' : 'Kopieren'}
         </button>
@@ -99,7 +99,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
         {/* Warnungen / Vorbehalte – einklappbar, um das Ergebnis übersichtlich zu halten */}
         {ergebnis.warnungen.length > 0 && (
           <div className="rounded-md overflow-hidden" style={{ border: '1px solid var(--warn-500)' }}>
-            <button onClick={() => setWarnungenOffen(!warnungenOffen)}
+            <button type="button" onClick={() => setWarnungenOffen(!warnungenOffen)}
               className="w-full flex items-center justify-between px-4 py-2.5 bg-warn-bg text-left transition-colors">
               <span className="lc-overline text-warn-700">Hinweise / Vorbehalte ({ergebnis.warnungen.length})</span>
               <span className="text-warn-700">{warnungenOffen ? '▲' : '▼'}</span>

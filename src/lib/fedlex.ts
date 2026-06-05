@@ -22,10 +22,13 @@ export type FedlexGesetz = keyof typeof FEDLEX;
 // id="art_…"-Anker des konsolidierten Filestore-HTML, Stand 20250101,
 // verifiziert — Varianten ohne Unterstrich existieren dort NICHT).
 // Spannen-/Folgeverweise (–, f., ff.) verlinken den führenden Artikel.
-const SUFFIX = /^(\d+)(bis|ter|quater|quinquies|[a-z])$/;
+// Audit 5.6.2026: auch Kombi-Anker Buchstabe+lat. Suffix abgedeckt —
+// im OR real: 329gbis/663bbis/697hbis → art_329_g_bis (Form n_b_suffix).
+const SUFFIX = /^(\d+)([a-z])?(bis|ter|quater|quinquies)?$/;
 
 export function fedlexUrl(gesetz: FedlexGesetz, artikel: string | number): string {
-  const token = String(artikel).toLowerCase().replace(/\s+/g, '').replace(SUFFIX, '$1_$2');
+  const token = String(artikel).toLowerCase().replace(/\s+/g, '')
+    .replace(SUFFIX, (_, n, b, suf) => [n, b, suf].filter(Boolean).join('_'));
   return `${FEDLEX[gesetz]}#art_${token}`;
 }
 

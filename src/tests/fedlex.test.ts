@@ -49,3 +49,14 @@ describe('fedlexLinkFuerArtikel', () => {
     expect(fedlexLinkFuerArtikel('§ 12 GebV')).toBeNull();
   });
 });
+
+describe('Audit 5.6.2026 — Kombi-Anker Buchstabe+Suffix', () => {
+  it('329gbis → art_329_g_bis (Form n_b_suffix, empirisch am OR-HTML verifiziert)', () => {
+    expect(fedlexUrl('OR', '329gbis')).toContain('#art_329_g_bis');
+    expect(fedlexUrl('OR', '663bbis')).toContain('#art_663_b_bis');
+    // Bestand bleibt unverändert
+    expect(fedlexUrl('OR', '335c')).toContain('#art_335_c');
+    expect(fedlexUrl('ZGB', '334bis')).toContain('#art_334_bis');
+    expect(fedlexUrl('OR', '77')).toContain('#art_77');
+  });
+});

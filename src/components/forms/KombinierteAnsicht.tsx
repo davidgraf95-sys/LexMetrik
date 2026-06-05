@@ -161,7 +161,7 @@ export function KombinierteAnsicht() {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h4 className="text-body-s font-semibold text-ink-700">Sperrereignisse (Art. 336c OR)</h4>
-          <button onClick={addEreignis} className="text-body-s px-3 py-1.5 bg-surface hover:bg-brass-100 rounded-lg transition-colors">+ Ereignis</button>
+          <button type="button" onClick={addEreignis} className="text-body-s px-3 py-1.5 bg-surface hover:bg-brass-100 rounded-lg transition-colors">+ Ereignis</button>
         </div>
         {(form.sperrereignisse ?? []).map((e, i) => (
           <div key={i} className="border border-line rounded-lg p-3 bg-surface grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
@@ -179,7 +179,7 @@ export function KombinierteAnsicht() {
               <label className="text-xs font-medium text-ink-600">Bis</label>
               <DatumsFeld value={e.bis} onChange={(v) => updateEreignis(i, 'bis', v)} className={inputCls + ' text-xs'} />
             </div>
-            <button onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700 self-end pb-2">Entfernen</button>
+            <button type="button" onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700 self-end pb-2">Entfernen</button>
           </div>
         ))}
       </div>

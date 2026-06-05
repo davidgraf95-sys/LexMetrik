@@ -234,7 +234,7 @@ export function KuendigungSperrForm() {
           <div key={i} className="border border-line rounded-lg p-4 bg-surface space-y-3">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-ink-600">Ereignis {i + 1}</span>
-              <button onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700">Entfernen</button>
+              <button type="button" onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700">Entfernen</button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="space-y-1">
