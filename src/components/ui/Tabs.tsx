@@ -35,7 +35,7 @@ export function Tabs<T extends string>({
     <div
       role={mode === 'tab' ? 'tablist' : undefined}
       aria-label={ariaLabel}
-      className={`flex ${HOEHE[groesse]} items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit`}
+      className={`flex ${HOEHE[groesse]} items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit max-w-full overflow-x-auto`}
     >
       {items.map((it) => {
         const aktiv = value === it.code;
@@ -47,7 +47,7 @@ export function Tabs<T extends string>({
             aria-selected={mode === 'tab' ? aktiv : undefined}
             aria-pressed={mode === 'pressed' ? aktiv : undefined}
             onClick={() => onChange(it.code)}
-            className={`${KNOPF[groesse]} ${aktiv ? AKTIV : INAKTIV}`}
+            className={`shrink-0 whitespace-nowrap ${KNOPF[groesse]} ${aktiv ? AKTIV : INAKTIV}`}
           >
             {it.label}
           </button>

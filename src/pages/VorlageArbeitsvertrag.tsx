@@ -200,7 +200,7 @@ export function VorlageArbeitsvertrag() {
 
       case 'zeit': return (
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Pensum (%)">
               <input type="number" min={1} max={100} className={inputCls + ' num'} value={a.pensumProzent}
                 onChange={(e) => set('pensumProzent', Math.min(100, Math.max(1, Number(e.target.value) || 100)))} />
@@ -271,7 +271,7 @@ export function VorlageArbeitsvertrag() {
               onSelect={(code) => set('lohnfortzahlung', code)}
             />
             {a.lohnfortzahlung === 'ktg' && (
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <Field label="Taggeld (% des Lohnes)"><input type="number" min={50} max={100} className={inputCls + ' num'} value={a.ktgProzent ?? 80} onChange={(e) => set('ktgProzent', Number(e.target.value))} /></Field>
                 <Field label="Leistungsdauer (Tage)" hint="innert 900 Tagen"><input type="number" min={180} max={1095} className={inputCls + ' num'} value={a.ktgTage ?? 730} onChange={(e) => set('ktgTage', Number(e.target.value))} /></Field>
                 <Field label="Wartefrist (Tage)" hint="über 3 Tage nur gleichwertig, wenn der Arbeitgeber 80 % zahlt">

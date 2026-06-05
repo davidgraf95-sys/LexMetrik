@@ -220,7 +220,7 @@ export function VorlageMietvertrag() {
             {a.mietzinsModell === 'staffel' && (
               <div className="space-y-2">
                 {(a.staffeln ?? []).map((s, i) => (
-                  <div key={i} className="grid grid-cols-[1fr_10rem_auto] gap-2 items-end">
+                  <div key={i} className="grid grid-cols-1 sm:grid-cols-[1fr_10rem_auto] gap-2 items-end">
                     <Field label={i === 0 ? 'Erhöhung ab' : ''}>
                       <DatumsFeld value={s.ab} onChange={(v) => setStaffel(i, { ab: v })} className={inputCls} />
                     </Field>
