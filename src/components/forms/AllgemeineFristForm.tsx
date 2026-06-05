@@ -55,11 +55,11 @@ export function AllgemeineFristForm() {
   const set = <K extends keyof State>(k: K, v: State[K]) => setForm((f) => ({ ...f, [k]: v }));
 
   // Live-Berechnung (rein; Fehler → keine Anzeige)
-  let ergebnis: (Berechnungsergebnis & { resultat: { endDatum: string; endWochentag: string } }) | null = null;
-  try { ergebnis = allgemeineFristErgebnis(form); } catch { ergebnis = null; }
+  const ergebnis: (Berechnungsergebnis & { resultat: { endDatum: string; endWochentag: string } }) | null =
+    (() => { try { return allgemeineFristErgebnis(form); } catch { return null; } })();
 
-  let zwischen: { kalendertage: number; werktageMoFr: number } | null = null;
-  try { zwischen = tageZwischen(von, bis); } catch { zwischen = null; }
+  const zwischen: { kalendertage: number; werktageMoFr: number } | null =
+    (() => { try { return tageZwischen(von, bis); } catch { return null; } })();
 
   const pdfConfig: PdfDocConfig = {
     title: 'Allgemeine Frist',

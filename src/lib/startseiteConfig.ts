@@ -193,7 +193,7 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 142–147 ZPO', url: fedlexUrl('ZPO', '142'), verified: false },
     ],
     href: '/rechner/zpo-fristen',
-    related: ['schlichtungsgesuch', 'klage-vereinfacht'],
+    related: ['schlichtungsgesuch', 'klage-vereinfacht', 'tagerechner'],
     keywords: ['Frist', 'Gericht', 'Berufung', 'Beschwerde', 'Klage', 'Gerichtsferien', 'Stillstand', 'Zustellung'],
     icon: 'clock',
   },
@@ -218,7 +218,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     ],
     href: '/rechner/schkg-fristen',
     keywords: ['Betreibung', 'Zahlungsbefehl', 'Rechtsvorschlag', 'Konkurs', 'Pfändung', 'Betreibungsferien'],
-    related: ['verzugszins', 'rechtsoeffnungsbegehren'],
+    related: ['verzugszins', 'rechtsoeffnungsbegehren', 'tagerechner'],
     icon: 'clipboard',
   },
   'kuendigung-sperrfristen': {
@@ -516,8 +516,18 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'tagerechner', modus: 'rechner', art: 'werkzeug', tier: 'free', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',
     title: 'Fristen- & Tagerechner',
-    description: 'Tage und Monate ab einem Datum, mit Wochenend- und Feiertagsverschiebung.',
-    status: 'geplant', norms: [],
+    description: 'Allgemeines Fristende nach festen Regeln: Ereignistag zählt nicht, Monatsfristen enden am gleichbezeichneten Tag (sonst Monatsende), Wochenend- und Feiertagsenden verschieben sich auf den nächsten Werktag — kantonal nach EJPD-Verzeichnis. Dazu ein Tage-Zähler als reines Hilfsmittel.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 77 OR', url: fedlexUrl('OR', '77'), verified: false },
+      { label: 'Art. 78 OR', url: fedlexUrl('OR', '78'), verified: false },
+      // BG über den Fristenlauf an Samstagen — ELI via Fedlex-SPARQL verifiziert (5.6.2026)
+      { label: 'SR 173.110.3', url: 'https://www.fedlex.admin.ch/eli/cc/1963/819_815_843/de', verified: false },
+    ],
+    href: '/rechner/tagerechner',
+    related: ['zpo-fristen', 'schkg-fristen'],
+    keywords: ['Frist', 'Fristende', 'Tagerechner', 'Art. 77', 'Art. 78', 'Feiertag', 'dies a quo'],
+    icon: 'clock',
   },
   'ferien-checker': {
     id: 'ferien-checker', modus: 'rechner', art: 'werkzeug', tier: 'pro', rechtsgebiet: 'Übergreifende Werkzeuge',
