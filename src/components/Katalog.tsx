@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, istVerfuegbar, karte, type CalculatorCard } from '../lib/startseiteConfig';
 import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
@@ -249,23 +249,26 @@ function Schnellzugriff(props: {
     );
   }
 
+  // Eine Zeile pro Gruppe: feste Label-Spalte (Raster) → Labels und Chips
+  // beider Gruppen stehen exakt bündig; Stern optisch auf die Kapitälchen-
+  // Höhe zentriert (eigene Box statt im Schriftlauf).
+  const zeile = (label: string, stern: boolean, kinder: ReactNode) => (
+    <div className="grid grid-cols-1 sm:grid-cols-[9.5rem_minmax(0,1fr)] gap-x-3 gap-y-1 sm:items-center">
+      <span className="inline-flex items-center gap-1.5 lc-overline text-ink-500">
+        <span aria-hidden className={`w-3.5 text-center text-[0.8rem] leading-none ${stern ? 'text-brass-700' : 'text-transparent'}`}>★</span>
+        {label}
+      </span>
+      <div className="flex flex-wrap gap-1.5">{kinder}</div>
+    </div>
+  );
+
   return (
     <section aria-label="Schnellzugriff"
-      className="rounded-xl border border-line bg-surface px-4 py-3 flex flex-col sm:flex-row sm:items-start gap-x-8 gap-y-3">
-      {favKarten.length > 0 && (
-        <div className="space-y-1.5 min-w-0">
-          <p className="lc-overline"><span aria-hidden className="text-brass-700">★</span> Favoriten</p>
-          <div className="flex flex-wrap gap-1.5">{favKarten.map((k) => chip(k, true))}</div>
-        </div>
-      )}
-      {zuletztKarten.length > 0 && (
-        <div className="space-y-1.5 min-w-0">
-          <p className="lc-overline text-ink-500">Zuletzt verwendet</p>
-          <div className="flex flex-wrap gap-1.5">{zuletztKarten.map((k) => chip(k, false))}</div>
-        </div>
-      )}
+      className="rounded-xl border border-line bg-surface px-4 py-3 space-y-2.5">
+      {favKarten.length > 0 && zeile('Favoriten', true, favKarten.map((k) => chip(k, true)))}
+      {zuletztKarten.length > 0 && zeile('Zuletzt verwendet', false, zuletztKarten.map((k) => chip(k, false)))}
       {favKarten.length === 0 && (
-        <p className="text-xs text-ink-500 sm:self-end sm:ml-auto sm:pb-1">
+        <p className="text-xs text-ink-500 sm:pl-[10.4rem]">
           <span aria-hidden className="text-brass-700">★</span> auf einer Karte legt Favoriten fix hier ab.
         </p>
       )}
