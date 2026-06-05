@@ -7,6 +7,10 @@
 // Art. 31 StGB (3-Monats-Antragsfrist) am 6.6.2026 verbatim verifiziert.
 // Rein und deterministisch (§2). Die konkrete Behörde liefert die
 // Datenschicht (src/data/staatsanwaltschaften.ts), hier nur Bundesrecht.
+// Vertieft am 6.6.2026 nach Oberholzer, Grundzüge des Strafprozessrechts,
+// 5. Aufl. 2026, N 239–330 (Auftrag David; Regeln paraphrasiert, norm-
+// gestützte Punkte am Cache verifiziert; Praxis-Aussagen als «(Praxis)»
+// markiert — Belege in bibliothek/normen/stpo-zustaendigkeit-regelwerk.md).
 
 export type StrafSpezialforum = 'kein' | 'medien' | 'schkg_delikt' | 'unternehmen' | 'einziehung';
 export type StrafTatortLage = 'bekannt' | 'nur_erfolgsort' | 'mehrere_orte' | 'ausland_oder_ungewiss';
@@ -25,6 +29,7 @@ export interface StrafInput {
   mehrereTatenVerschOrte?: boolean;
   antragsdelikt?: boolean;
   uebertretung?: boolean;
+  beschuldigteMinderjaehrig?: boolean;
 }
 
 export interface StrafNorm { artikel: string; bemerkung?: string }
@@ -62,7 +67,7 @@ export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
 
   // ── Stufe 0 · Bundesgerichtsbarkeit (Weiche, keine Subsumtion) ─────────────
   if (input.moeglichesBundesdelikt) {
-    warnungen.push('Möglicher Fall von BUNDESGERICHTSBARKEIT (Kataloge Art. 23/24 StPO — u. a. Sprengstoff, organisiertes Verbrechen/Terrorismus, qualifizierte Wirtschaftskriminalität): Dann ermittelt die BUNDESANWALTSCHAFT und die örtlichen Regeln der Art. 31 ff. StPO gelten nicht. Die Katalog-Subsumtion ist fachlich zu prüfen; im Zweifel nimmt jede Strafverfolgungsbehörde die Anzeige entgegen und leitet weiter (Art. 39 StPO).');
+    warnungen.push('Möglicher Fall von BUNDESGERICHTSBARKEIT: Art. 23 StPO (u. a. Sprengstoff, Völkerstrafrecht, Delikte gegen den Bund) gilt ZWINGEND; Art. 24 Abs. 1 (kriminelle Organisation, Terrorismusfinanzierung, Geldwäscherei, Bestechung u. a.) setzt zusätzlich voraus, dass die Taten zu einem WESENTLICHEN Teil im Ausland oder in MEHREREN Kantonen ohne eindeutigen Schwerpunkt begangen wurden. Bei Vermögens-/Urkundenverbrechen kann die Bundesanwaltschaft fakultativ übernehmen (Abs. 2/3). Delegation an die Kantone bleibt möglich (Art. 25 — ausser Völkerstrafrecht); Konflikte entscheidet das Bundesstrafgericht (Art. 28), und die Einrede der fehlenden sachlichen Zuständigkeit ist nach der Beurteilung VERWIRKT (Praxis). Im Zweifel nimmt jede Strafverfolgungsbehörde die Anzeige entgegen und leitet weiter (Art. 39 StPO).');
     normverweise.push({ artikel: 'Art. 23 StPO' }, { artikel: 'Art. 24 StPO' });
   }
 
@@ -70,13 +75,13 @@ export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
   let forumText: string;
   const forumNormen: StrafNorm[] = [];
   if (spezial === 'medien') {
-    forumText = 'Bei Medienstraftaten (Art. 28 StGB): Behörden am SITZ DES MEDIENUNTERNEHMENS; alternativ am Wohnsitz der Autorin/des Autors, subsidiär am Verbreitungsort';
+    forumText = 'Bei Medienstraftaten (Art. 28 StGB): Behörden am SITZ DES MEDIENUNTERNEHMENS; ist die Autorin/der Autor bekannt mit Wohnsitz oder gewöhnlichem Aufenthalt in der Schweiz, KONKURRIEREND auch dort; fehlen beide Anknüpfungen: am Verbreitungsort (bei mehreren: forum praeventionis)';
     forumNormen.push({ artikel: 'Art. 35 StPO' });
   } else if (spezial === 'schkg_delikt') {
-    forumText = 'Bei Konkurs- und Betreibungsdelikten (Art. 163–171 StGB): Behörden am WOHNSITZ, AUFENTHALTSORT oder SITZ DES SCHULDNERS';
+    forumText = 'Bei Konkurs- und Betreibungsdelikten (Art. 163–171 StGB): Behörden am WOHNSITZ, am gewöhnlichen AUFENTHALTSORT oder am SITZ der Schuldnerin/des Schuldners; bei bloss fiktivem Geschäftssitz zählt der tatsächliche Geschäfts- bzw. Wohnsitz (Praxis)';
     forumNormen.push({ artikel: 'Art. 36 Abs. 1 StPO' });
   } else if (spezial === 'unternehmen') {
-    forumText = 'Bei Unternehmensstrafbarkeit (Art. 102 StGB): Behörden am SITZ DES UNTERNEHMENS — das Forum zieht auch das Verfahren gegen natürliche Personen aus demselben Sachverhalt an';
+    forumText = 'Bei Unternehmensstrafbarkeit (Art. 102 StGB): Behörden am SITZ DES UNTERNEHMENS — das Forum gilt auch, wenn sich das Verfahren wegen desselben Sachverhalts zugleich gegen natürliche Personen richtet (dann drängt sich die Vereinigung auf, Art. 112 Abs. 4 StPO). Vorfrage der Praxis: Art. 102 greift nur, wenn die Tat wegen mangelhafter Organisation keiner natürlichen Person zugerechnet werden kann';
     forumNormen.push({ artikel: 'Art. 36 Abs. 2 StPO' });
   } else if (spezial === 'einziehung') {
     forumText = 'Bei selbstständiger Einziehung: Behörden am ORT, WO SICH DIE EINZUZIEHENDEN GEGENSTÄNDE/VERMÖGENSWERTE BEFINDEN; bei mehreren Kantonen entscheidet die zuerst eröffnete Untersuchung';
@@ -85,10 +90,10 @@ export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
     forumText = 'GRUNDSATZ TATORT: zuständig sind die Behörden des Ortes, an dem die Tat VERÜBT worden ist (Begehungsort)';
     forumNormen.push({ artikel: 'Art. 31 Abs. 1 StPO' });
   } else if (input.tatort === 'nur_erfolgsort') {
-    forumText = 'Liegt nur der ERFOLG der Tat in der Schweiz, sind die Behörden des ERFOLGSORTES zuständig';
+    forumText = 'Liegt nur der ERFOLG der Tat in der Schweiz (oder ist der Handlungsort nicht ermittelbar), sind die Behörden des ERFOLGSORTES zuständig — vorausgesetzt, es handelt sich um ein Erfolgs- oder konkretes Gefährdungsdelikt und der Erfolgsort ist bekannt (Praxis)';
     forumNormen.push({ artikel: 'Art. 31 Abs. 1 StPO', bemerkung: 'Satz 2' });
   } else if (input.tatort === 'mehrere_orte') {
-    forumText = 'Tat an MEHREREN Orten verübt (oder Erfolg an mehreren Orten eingetreten): zuständig sind die Behörden des Ortes, an dem die ERSTEN VERFOLGUNGSHANDLUNGEN vorgenommen wurden (Prioritätsprinzip / forum praeventionis)';
+    forumText = 'Tat an MEHREREN Orten verübt (oder Erfolg an mehreren Orten eingetreten): zuständig sind die Behörden des Ortes, an dem die ERSTEN VERFOLGUNGSHANDLUNGEN vorgenommen wurden (Prioritätsprinzip / forum praeventionis). Als Verfolgungshandlung zählt jede Ermittlungsmassnahme gegen bekannte oder unbekannte Täterschaft — schon die polizeiliche Befragung oder der Eingang einer nicht offensichtlich haltlosen Anzeige; blosse Personenkontrollen genügen nicht (Praxis)';
     forumNormen.push({ artikel: 'Art. 31 Abs. 2 StPO' });
   } else {
     const k = KASKADE_TEXT[input.kaskade32 ?? 'wohnsitz'];
@@ -101,14 +106,31 @@ export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
     weichen.push('Teilnehmende (Anstiftung/Gehilfenschaft) werden von DENSELBEN Behörden verfolgt wie die Täterschaft — das Forum der Haupttat zieht (Art. 33 Abs. 1 StPO).');
     normverweise.push({ artikel: 'Art. 33 StPO' });
   } else if (input.beteiligung === 'mittaeter') {
-    weichen.push('Bei Mittäterschaft: zuständig sind die Behörden des Ortes, an dem die ERSTEN Verfolgungshandlungen vorgenommen wurden (Art. 33 Abs. 2 StPO).');
+    if (input.mehrereTatenVerschOrte) {
+      weichen.push('Mittäterschaft UND mehrere Taten an verschiedenen Orten: Art. 33 Abs. 2 und Art. 34 Abs. 1 StPO werden kombiniert — alle Beteiligten werden dort verfolgt, wo ein Mittäter die mit der SCHWERSTEN Strafe bedrohte Tat verübt hat; bei gleicher Strafdrohung gilt das Prioritätsprinzip; hat noch kein Kanton Verfolgungshandlungen vorgenommen und fehlt ein Schwergewicht, zählt der Ort des ERSTEN Delikts (Praxis).');
+    } else {
+      weichen.push('Bei Mittäterschaft: zuständig sind die Behörden des Ortes, an dem die ERSTEN Verfolgungshandlungen vorgenommen wurden (Art. 33 Abs. 2 StPO).');
+    }
     normverweise.push({ artikel: 'Art. 33 StPO' });
   }
 
   // ── Stufe 4 · Mehrere Taten ────────────────────────────────────────────────
   if (input.mehrereTatenVerschOrte) {
-    weichen.push('Mehrere Taten an verschiedenen Orten: zuständig sind die Behörden des Ortes der mit der SCHWERSTEN STRAFE bedrohten Tat (abstrakte Strafdrohung); bei gleicher Strafdrohung gilt das Prioritätsprinzip (Art. 34 Abs. 1 StPO). Ist in einem Kanton bereits Anklage erhoben, werden die Verfahren GETRENNT geführt (Abs. 2).');
+    weichen.push('Mehrere Taten an verschiedenen Orten: zuständig sind die Behörden des Ortes der mit der SCHWERSTEN STRAFE bedrohten Tat — massgeblich ist die abstrakte HÖCHSTSTRAFE (qualifizierte/privilegierte Tatbestände zählen, nicht Strafzumessungsgründe; bei gleicher Höchststrafe die Mindeststrafe; das vollendete Delikt geht dem Versuch vor); bei gleicher Strafdrohung gilt das Prioritätsprinzip (Art. 34 Abs. 1 StPO). Ist in einem Kanton bereits Anklage erhoben oder liegt eine rechtskräftige Erledigung vor, werden die Verfahren GETRENNT geführt (Abs. 2; blosse Sistierung oder Einsprache gegen einen Strafbefehl beendet das Vorverfahren NICHT).');
+    weichen.push('ABGRENZUNG: Bilden die Einzelhandlungen eine natürliche Handlungseinheit (ein einheitlicher Deliktserfolg), liegt KEINE Tatmehrheit vor — dann gilt die Grundregel des Art. 31 StPO (Praxis). Wer entgegen der Vereinigungsregel von verschiedenen Gerichten zu mehreren gleichartigen Strafen verurteilt wurde, kann beim Gericht der schwersten Strafe die nachträgliche GESAMTSTRAFE verlangen (Art. 34 Abs. 3 StPO).');
     normverweise.push({ artikel: 'Art. 34 StPO' });
+  }
+
+  // ── Verfahrenseinheit (Art. 29/30) — bei Beteiligung/Tatmehrheit ──────────
+  if ((input.beteiligung ?? 'allein') !== 'allein' || input.mehrereTatenVerschOrte) {
+    weichen.push('GRUNDSATZ DER VERFAHRENSEINHEIT: Straftaten werden gemeinsam verfolgt und beurteilt (Art. 29 Abs. 1 StPO). Eine Trennung ist nur ausnahmsweise aus objektiven sachlichen Gründen zulässig (Art. 30 StPO) — es gilt ein strenger Massstab; organisatorische Gründe, Ausstand oder das blosse Vorhaben eines abgekürzten Verfahrens genügen NICHT, und die Trennung beschneidet die Teilnahmerechte erheblich (Praxis).');
+    normverweise.push({ artikel: 'Art. 29 StPO' }, { artikel: 'Art. 30 StPO' });
+  }
+
+  // ── Jugendliche (Art. 10 JStPO) — eigener Anknüpfungspunkt ────────────────
+  if (input.beschuldigteMinderjaehrig) {
+    warnungen.push('JUGENDSTRAFVERFAHREN: Für beschuldigte Minderjährige gilt der GEWÖHNLICHE AUFENTHALT bei Verfahrenseröffnung als Anknüpfung (Übertretungen: Begehungsort) — Art. 10 JStPO geht den StPO-Gerichtsständen vor; eine Vereinigung mit Verfahren gegen erwachsene Mitbeteiligte findet nicht statt.');
+    normverweise.push({ artikel: 'Art. 10 JStPO' });
   }
 
   // ── Stufen 5–8 · Verfahrens-Weichen (immer offenlegen) ─────────────────────
@@ -124,6 +146,10 @@ export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
   if (input.uebertretung) normverweise.push({ artikel: 'Art. 17 StPO' }, { artikel: 'Art. 357 StPO' });
 
   // ── Fahrplan + Fristen ─────────────────────────────────────────────────────
+  if (spezial === 'medien' && input.antragsdelikt) {
+    weichen.push('Medien-Antragsdelikt: Die antragstellende Person hat die WAHL zwischen den konkurrierenden Gerichtsständen (Sitz des Medienunternehmens / Wohnsitz bzw. gewöhnlicher Aufenthalt der Autorin/des Autors) — Art. 35 Abs. 2 StPO.');
+  }
+
   if (input.anliegen === 'anzeige') {
     fahrplan.push(
       { titel: 'Strafanzeige erstatten — formfrei', text: 'Jede Person kann Straftaten bei einer STRAFVERFOLGUNGSBEHÖRDE schriftlich oder mündlich anzeigen (Art. 301 Abs. 1 StPO) — bei der Polizei oder direkt bei der Staatsanwaltschaft; für die mündliche Anzeige kann eine Protokoll-Bestätigung verlangt werden (Abs. 1bis).' },
@@ -136,8 +162,9 @@ export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
     fahrplan.push({ titel: 'Parteistellung prüfen', text: 'Wer durch die Tat unmittelbar verletzt ist, kann sich bis zum Abschluss des Vorverfahrens als PRIVATKLÄGERSCHAFT konstituieren (Straf- und/oder Zivilklage, Art. 118 f. StPO) — sonst nur Anzeigeperson ohne Verfahrensrechte (Art. 301 Abs. 3 StPO).' });
   } else {
     fahrplan.push(
-      { titel: 'Forum nach der Kaskade bestimmen', text: 'Spezialforen (Art. 35–37) vor Grundsatz Tatort (Art. 31), dann Kaskade (Art. 32) — Beteiligung (Art. 33) und Tatmehrheit (Art. 34) verschieben das Forum.' },
-      { titel: 'Bei Streit: Einigung → Entscheid', text: 'Die beteiligten Staatsanwaltschaften klären die Zuständigkeit untereinander (Art. 39 Abs. 2); scheitert die Einigung, entscheidet innerkantonal die Ober-/Generalstaatsanwaltschaft, interkantonal die Beschwerdekammer des Bundesstrafgerichts (Art. 40).' },
+      { titel: 'Forum nach der Kaskade bestimmen', text: 'Spezialforen (Art. 35–37) vor Grundsatz Tatort (Art. 31), dann Kaskade (Art. 32) — Beteiligung (Art. 33) und Tatmehrheit (Art. 34) verschieben das Forum. Massgeblich ist die VERDACHTSLAGE im Entscheidzeitpunkt (nicht das später Beweisbare); im Zweifel zählt das schwerere Delikt («in dubio pro duriore», Praxis).' },
+      { titel: 'Bei Streit: Einigung → Entscheid', text: 'Die beteiligten Staatsanwaltschaften prüfen die Zuständigkeit von Amtes wegen und klären sie im (informellen) Meinungsaustausch (Art. 39); scheitert die Einigung, entscheidet innerkantonal die Ober-/Generalstaatsanwaltschaft — ihr Entscheid ist seit der Revision 2022 nicht mehr endgültig, also beschwerdefähig (Art. 40 Abs. 1) —, interkantonal die Beschwerdekammer des Bundesstrafgerichts: Gesuch des zuerst befassten Kantons unverzüglich, jedenfalls VOR der Anklage; Praxis-Frist 10 Tage nach gescheitertem Austausch, hohe Begründungsanforderungen; der BStGer-Entscheid ist ABSCHLIESSEND (keine Beschwerde ans Bundesgericht).' },
+      { titel: 'Festhalten und Grenzen', text: 'Wer trotz Klärungsanlass lange weiterermittelt oder untätig bleibt, anerkennt den Gerichtsstand KONKLUDENT (Praxis). Verhaftete werden anderen Kantonen erst nach verbindlicher Bestimmung zugeführt (Art. 42 Abs. 2); der einmal festgelegte Gerichtsstand kann nur vor der Anklage und nur bei erheblichen NEUEN Tatsachen oder triftigen Gründen geändert werden (Art. 42 Abs. 3).' },
     );
   }
 

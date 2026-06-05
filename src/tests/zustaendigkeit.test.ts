@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  bestimmeZustaendigkeit, zustaendigkeitErgebnis, ZPO_SCHWELLEN,
+  bestimmeZustaendigkeit, bestimmeRechtsmittel, zustaendigkeitErgebnis, ZPO_SCHWELLEN,
   type ZustaendigkeitInput,
 } from '../lib/zustaendigkeit';
 
@@ -427,5 +427,25 @@ describe('Handelsgerichte (Datenschicht, Anordnung 5.6.2026)', () => {
     expect(HANDELSGERICHTE.AG?.strasse).toContain('Obere Vorstadt 38');
     expect(HANDELSGERICHTE.SG?.strasse).toContain('Klosterhof 1');
     expect(handelsgerichtFuer('LU')).toBeNull();
+  });
+});
+
+describe('Art.-5-Schwelle (H1-Fix, Semantik-Audit 6.6.2026)', () => {
+  it('UWG/Bund ≤30k: KEINE einzige Instanz → Schlichtung + kantonales Rechtsmittel; >30k und unbedingte lit. unverändert', () => {
+    const uwgKlein = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 20_000, ipUnterfall: 'uwg_oder_bund' });
+    expect(uwgKlein.schlichtung.obligatorisch).toBe(true);
+    expect(uwgKlein.eingabeArt).toBe('schlichtungsgesuch');
+    expect(uwgKlein.warnungen.some((w) => w.includes('KEINE einzige kantonale Instanz'))).toBe(true);
+    const rmKlein = bestimmeRechtsmittel({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 20_000, ipUnterfall: 'uwg_oder_bund' });
+    expect(rmKlein.kantonal).toBe('berufung');
+    expect(rmKlein.bger).toBe('schwelle_verfehlt');
+    const uwgGross = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 30_001, ipUnterfall: 'uwg_oder_bund' });
+    expect(uwgGross.schlichtung.obligatorisch).toBe(false);
+    const ip = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 5_000 });
+    expect(ip.schlichtung.obligatorisch).toBe(false); // lit. a–c unbedingt (Default)
+  });
+  it('N1: Konsument-Flag wirkt nur bei geldforderung', () => {
+    const d = bestimmeZustaendigkeit({ streitsache: 'delikt', vermoegensrechtlich: true, streitwertCHF: 50_000, konsumentenvertrag: true });
+    expect(d.oertlich.normen.some((n) => n.artikel.includes('36'))).toBe(true);
   });
 });

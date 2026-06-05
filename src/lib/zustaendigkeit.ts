@@ -85,6 +85,11 @@ export type DeliktUnterfall = 'allgemein' | 'verkehrsunfall' | 'ungerechtfertigt
 /** Persönlichkeits-Unterfall (Art. 20 ZPO; Gewaltschutz = Art. 28b/28c ZGB). */
 export type PersoenlichkeitUnterfall = 'verletzung' | 'gegendarstellung' | 'datenschutz' | 'gewaltschutz';
 
+/** Art.-5-Materie: lit. a–c u. a. gelten UNBEDINGT; lit. d (UWG) und lit. f
+ *  (Klagen gegen den Bund) nur bei Streitwert ÜBER 30 000 (Semantik-Audit
+ *  6.6.2026 — vorher wurden alle Fälle als einzige Instanz behandelt). */
+export type IpUnterfall = 'ip_kartell_firma' | 'uwg_oder_bund';
+
 export interface ZustaendigkeitInput {
   streitsache: Streitsache;
   vermoegensrechtlich: boolean;          // false = nicht vermögensrechtlich (Streitwert irrelevant)
@@ -101,7 +106,8 @@ export interface ZustaendigkeitInput {
   // Ausbau 5.6.2026 (alle optional — Default erhält das bisherige Verhalten):
   ausVertrag?: boolean;                  // geldforderung: Forderung aus Vertrag → Art. 31 (charakteristische Leistung)
   deliktUnterfall?: DeliktUnterfall;     // nur bei delikt
-  persoenlichkeitUnterfall?: PersoenlichkeitUnterfall; // nur bei persoenlichkeit
+  persoenlichkeitUnterfall?: PersoenlichkeitUnterfall;
+  ipUnterfall?: IpUnterfall;            // nur bei ip_wettbewerb (Default: unbedingte lit.) // nur bei persoenlichkeit
   avgVerleih?: boolean;                  // arbeit: Personalverleih/-vermittlung → Zusatzforum Art. 34 Abs. 2
   gerichtsstandsvereinbarung?: boolean;  // Parteien haben eine GSV (Art. 17) — Wirksamkeit je Bindungsgrad
 }
@@ -178,7 +184,11 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   const streitwertunabhaengigVereinfacht = mieteSchutz || !!input.glgBetroffen;
 
   const istGewaltschutz = input.streitsache === 'persoenlichkeit' && input.persoenlichkeitUnterfall === 'gewaltschutz';
-  const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'; // Art. 5 ZPO
+  // Art. 5 ZPO: lit. a–c unbedingt; lit. d (UWG)/f (Bund) NUR über 30 000
+  // (H1-Fix 6.6.2026). Bei uwg_oder_bund ≤30k läuft der ordentliche Weg.
+  const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'
+    && ((input.ipUnterfall ?? 'ip_kartell_firma') === 'ip_kartell_firma'
+      || (sw !== null && sw > ZPO_SCHWELLEN.VEREINFACHT));
 
   const rechenweg: Rechenschritt[] = [];
   const warnungen: string[] = [];
@@ -208,7 +218,7 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
     gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei oder am gewöhnlichen Arbeitsort (Wahl der klagenden Partei)';
     bindung = 'teilzwingend'; // Art. 35 Abs. 1 lit. d
     oertlichNormen = [N_34, N_35];
-  } else if (input.konsumentenvertrag) {
+  } else if (input.konsumentenvertrag && input.streitsache === 'geldforderung') {
     gerichtsstand = input.klaegeristGeschuetzt
       ? 'Gericht am Wohnsitz/Sitz einer der Parteien (Wahl der klagenden Konsumentin/des Konsumenten)'
       : 'Gericht am Wohnsitz der beklagten Konsumentin/des Konsumenten';
@@ -261,7 +271,8 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       ? ' (teilzwingend — Verzicht der geschützten Partei zum Voraus unzulässig)'
       : ' (dispositiv)';
   rechenweg.push({ beschreibung: `1 · Örtliche Zuständigkeit: ${gerichtsstand}${bindungText}`, zwischenergebnis: gerichtsstand, normen: oertlichNormen });
-  if (bindung === 'teilzwingend') {
+  if (bindung === 'teilzwingend' && !input.gerichtsstandsvereinbarung) {
+    // Mit GSV folgt unten die spezifische Warnung — keine Doppelmeldung (N2).
     weichen.push('Gerichtsstandsvereinbarung nur NACH Entstehung der Streitigkeit gültig — die geschützte Partei kann zum Voraus nicht verzichten (Art. 35 ZPO).');
   }
   // Prorogation/Einlassung (Art. 17/18) — Wirkung hängt am Bindungsgrad.
@@ -305,8 +316,11 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       zwischenergebnis: 'einzige kantonale Instanz (Art. 5 ZPO)',
       normen: [N_5, N_4],
     });
-    weichen.push('Art.-5-Materie (z. B. UWG nur bei Streitwert über CHF 30 000 — sonst ordentlicher Weg): Einordnung der Materie unter den Katalog von Art. 5 Abs. 1 lit. a–i ZPO prüfen.');
+    weichen.push('Einordnung unter den Katalog von Art. 5 Abs. 1 lit. a–i ZPO prüfen (IP/Kartell/Firma unbedingt; UWG/Bund nur über CHF 30 000).');
   } else {
+    if (input.streitsache === 'ip_wettbewerb') {
+      warnungen.push(`UWG-/Bund-Klage mit Streitwert bis CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')}: KEINE einzige kantonale Instanz (Art. 5 Abs. 1 lit. d/f ZPO) — es gilt der ordentliche Weg inklusive Schlichtung und kantonalem Rechtsmittelzug.`);
+    }
     rechenweg.push({
       beschreibung: `2 · Sachliche Zuständigkeit: ordentliches erstinstanzliches Zivilgericht; Organisation und Streitwertgrenzen regelt das kantonale Recht${hgWeiche ? ' — Handelsgerichts-Weiche offen (Art. 6 ZPO)' : ''}${direktklageWeiche ? ' — Direktklage-Weiche offen (Art. 8 ZPO)' : ''}`,
       zwischenergebnis: hgWeiche || direktklageWeiche ? 'ordentliches Gericht (Weichen offen)' : 'ordentliches Gericht',
@@ -562,7 +576,11 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
     throw new Error('Streitwert muss eine Zahl ≥ 0 sein.');
   }
   const sw = input.vermoegensrechtlich ? input.streitwertCHF : null;
-  const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'; // Art. 5 ZPO
+  // Art. 5 ZPO: lit. a–c unbedingt; lit. d (UWG)/f (Bund) NUR über 30 000
+  // (H1-Fix 6.6.2026). Bei uwg_oder_bund ≤30k läuft der ordentliche Weg.
+  const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'
+    && ((input.ipUnterfall ?? 'ip_kartell_firma') === 'ip_kartell_firma'
+      || (sw !== null && sw > ZPO_SCHWELLEN.VEREINFACHT));
   const mietArbeit = input.streitsache === 'arbeit' || input.streitsache === 'miete_wohn_geschaeft';
   const normverweise: Normverweis[] = [];
 

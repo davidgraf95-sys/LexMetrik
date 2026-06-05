@@ -12,7 +12,7 @@ import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import {
   zustaendigkeitErgebnis, ZPO_SCHWELLEN, bestimmeRechtsmittel,
   type ZustaendigkeitInput, type Streitsache, type MieteUnterfall, type Rechtsweg,
-  type DeliktUnterfall, type PersoenlichkeitUnterfall,
+  type DeliktUnterfall, type PersoenlichkeitUnterfall, type IpUnterfall,
 } from '../../lib/zustaendigkeit';
 import { obereInstanzFuer } from '../../data/obereInstanzen';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
@@ -115,6 +115,7 @@ type State = {
   ausVertrag: boolean;
   deliktUnterfall: DeliktUnterfall;
   persoenlichkeitUnterfall: PersoenlichkeitUnterfall;
+  ipUnterfall: IpUnterfall;
   avgVerleih: boolean;
   gerichtsstandsvereinbarung: boolean;
   gemeinde: string;
@@ -139,6 +140,7 @@ const DEFAULTS: State = {
   ausVertrag: false,
   deliktUnterfall: 'allgemein',
   persoenlichkeitUnterfall: 'verletzung',
+  ipUnterfall: 'ip_kartell_firma',
   avgVerleih: false,
   gerichtsstandsvereinbarung: false,
   gemeinde: '',
@@ -228,6 +230,7 @@ export function ZustaendigkeitForm() {
     ausVertrag: istGeld && !f.konsumentenvertrag ? f.ausVertrag : undefined,
     deliktUnterfall: f.streitsache === 'delikt' ? f.deliktUnterfall : undefined,
     persoenlichkeitUnterfall: f.streitsache === 'persoenlichkeit' ? f.persoenlichkeitUnterfall : undefined,
+    ipUnterfall: f.streitsache === 'ip_wettbewerb' ? f.ipUnterfall : undefined,
     avgVerleih: istArbeit ? f.avgVerleih : undefined,
     gerichtsstandsvereinbarung: istScheidung ? undefined : f.gerichtsstandsvereinbarung,
   };
@@ -371,6 +374,15 @@ export function ZustaendigkeitForm() {
             </select>
           </Field>
         )}
+
+      {f.streitsache === 'ip_wettbewerb' && (
+        <Field label="Art.-5-Materie" hint="UWG/Bund-Klagen sind nur über CHF 30 000 einzige Instanz (lit. d/f)">
+          <select className={inputCls} value={f.ipUnterfall} onChange={(e) => set('ipUnterfall', e.target.value as IpUnterfall)}>
+            <option value="ip_kartell_firma">Immaterialgüter / Kartell / Firma (unbedingt, lit. a–c)</option>
+            <option value="uwg_oder_bund">UWG bzw. Klage gegen den Bund (lit. d/f — 30'000er-Schwelle)</option>
+          </select>
+        </Field>
+      )}
       </div>
 
       {/* 3 · Ort, Streitwert, Instanz */}

@@ -20,7 +20,7 @@ describe('Forum-Kaskade (Art. 31–37)', () => {
   });
   it('Spezialforen gehen vor: Medien 35 · SchKG-Delikt 36 I · Unternehmen 36 II · Einziehung 37', () => {
     expect(bestimmeStrafZustaendigkeit(basis({ spezialforum: 'medien' })).forum.normen[0].artikel).toBe('Art. 35 StPO');
-    expect(bestimmeStrafZustaendigkeit(basis({ spezialforum: 'schkg_delikt' })).forum.text).toContain('SCHULDNERS');
+    expect(bestimmeStrafZustaendigkeit(basis({ spezialforum: 'schkg_delikt' })).forum.text).toMatch(/Schuldner/);
     expect(bestimmeStrafZustaendigkeit(basis({ spezialforum: 'unternehmen' })).forum.text).toContain('SITZ DES UNTERNEHMENS');
     expect(bestimmeStrafZustaendigkeit(basis({ spezialforum: 'einziehung', tatort: 'ausland_oder_ungewiss' })).forum.normen[0].artikel).toBe('Art. 37 StPO');
   });
@@ -52,7 +52,7 @@ describe('Verfahrens-Weichen + Fahrplan + Fristen', () => {
   it('Übertretung → Übertretungsstrafbehörde (17/357); Bund-Weiche → BA-Warnung (23/24)', () => {
     expect(bestimmeStrafZustaendigkeit(basis({ uebertretung: true })).behoerdeTyp).toContain('ÜBERTRETUNGSSTRAFBEHÖRDE');
     const b = bestimmeStrafZustaendigkeit(basis({ moeglichesBundesdelikt: true }));
-    expect(b.warnungen.some((w) => w.includes('BUNDESANWALTSCHAFT'))).toBe(true);
+    expect(b.warnungen.some((w) => w.includes('BUNDESGERICHTSBARKEIT'))).toBe(true);
   });
 });
 
@@ -78,5 +78,24 @@ describe('Art.-32-Kaskade vollständig (Abschluss-Review-Fix 6.6.2026)', () => {
     expect(a.forum.text).toContain('GEWÖHNLICHEN AUFENTHALTS');
     const h = bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'heimatort' });
     expect(h.forum.text).toContain('weder Wohnsitz noch gewöhnlicher Aufenthalt');
+  });
+});
+
+describe('Oberholzer-Vertiefung 6.6.2026 (N 239–330)', () => {
+  it('Mittäter+Tatmehrheit kombiniert 33 II + 34 I; Verfahrenseinheits-Weiche 29/30; JStPO-Warnung', () => {
+    const k = bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'bekannt', beteiligung: 'mittaeter', mehrereTatenVerschOrte: true });
+    expect(k.weichen.some((w) => w.includes('Art. 33 Abs. 2 und Art. 34 Abs. 1'))).toBe(true);
+    expect(k.weichen.some((w) => w.includes('VERFAHRENSEINHEIT'))).toBe(true);
+    const j = bestimmeStrafZustaendigkeit({ anliegen: 'anzeige', tatort: 'bekannt', beschuldigteMinderjaehrig: true });
+    expect(j.warnungen.some((w) => w.includes('Art. 10 JStPO') || w.includes('JUGENDSTRAF'))).toBe(true);
+    expect(j.normverweise.some((n) => n.artikel === 'Art. 10 JStPO')).toBe(true);
+  });
+  it('Medien-Antragsdelikt-Wahlrecht (35 II); Gesamtstrafe 34 III; BStGer abschliessend', () => {
+    const m = bestimmeStrafZustaendigkeit({ anliegen: 'anzeige', tatort: 'bekannt', spezialforum: 'medien', antragsdelikt: true });
+    expect(m.weichen.some((w) => w.includes('WAHL') && w.includes('Art. 35 Abs. 2'))).toBe(true);
+    const g = bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'bekannt', mehrereTatenVerschOrte: true });
+    expect(g.weichen.some((w) => w.includes('GESAMTSTRAFE'))).toBe(true);
+    expect(g.fahrplan.some((s) => s.text.includes('ABSCHLIESSEND'))).toBe(true);
+    expect(g.fahrplan.some((s) => s.text.includes('in dubio pro duriore'))).toBe(true);
   });
 });

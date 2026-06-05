@@ -230,7 +230,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
         text: 'Klagen nach Art. 85 (Aufhebung/Einstellung bei urkundlichem Tilgungs-/Stundungsnachweis, summarisch) und Art. 85a SchKG (Feststellung des Nichtbestands) gehen an das GERICHT DES BETREIBUNGSORTES.',
         normen: [{ artikel: 'Art. 85 SchKG' }, { artikel: 'Art. 85a SchKG' }],
       };
-      eingabe = { art: 'Gesuch (Art. 85: Urkundenbeweis, summarisch) bzw. Klage (Art. 85a)', verfahren: 'Art. 85 summarisch · Art. 85a ordentliches/vereinfachtes Verfahren' };
+      eingabe = { art: 'Gesuch (Art. 85: Urkundenbeweis, summarisch) bzw. Klage (Art. 85a)', verfahren: 'Art. 85 summarisch (keine Schlichtung, Art. 198 lit. a ZPO) · Art. 85a ordentliches/vereinfachtes Verfahren, KEINE Schlichtung (Art. 198 lit. e Ziff. 2 ZPO)' };
       fristen.push({ label: 'Einreichung', frist: 'jederzeit während der Betreibung', norm: 'Art. 85/85a SchKG', kritisch: false });
       weichen.push('Art. 85a: Die Einstellung der Betreibung erfolgt erst auf gerichtliche Anordnung hin (Abs. 2) — die Klage allein stoppt die Betreibung nicht.');
       fahrplan.push({ titel: 'Nachweis wählen', text: 'Mit Urkunde (Quittung, Stundungsvereinbarung): schneller Weg über Art. 85. Ohne Urkunde: Klage nach Art. 85a.' });

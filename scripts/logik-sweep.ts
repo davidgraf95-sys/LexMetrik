@@ -176,7 +176,7 @@ for (const bund of [false, true]) {
   // T3 · Übertretung ⇒ Behörden-Hinweis + Normen
   if (uebertretung !== r.behoerdeTyp.includes('ÜBERTRETUNGSSTRAFBEHÖRDE')) melde('T-I3', input, 'Übertretungs-Flag ↮ Behördentyp');
   // T4 · Bund-Weiche ⇒ Warnung; sonst keine
-  if (bund !== r.warnungen.some((w) => w.includes('BUNDESANWALTSCHAFT'))) melde('T-I4', input, 'Bund-Flag ↮ BA-Warnung');
+  if (bund !== r.warnungen.some((w) => w.includes('BUNDESGERICHTSBARKEIT'))) melde('T-I4', input, 'Bund-Flag ↮ BA-Warnung');
   // T5 · Basis-Weichen 38/41/42 immer; Beteiligungs-/34-Weichen exakt gekoppelt
   const w38 = r.weichen.filter((w) => w.includes('Art. 38 Abs. 1')).length;
   const w42 = r.weichen.filter((w) => w.includes('perpetuatio')).length;
