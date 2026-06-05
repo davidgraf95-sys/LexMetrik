@@ -5,7 +5,7 @@
 adversarialer Doppelcheck AUSSTEHEND.** Auftrag David: «wichtigste»
 Verwaltungsbehörden je Kanton (Verwaltungsgericht · Staatskanzlei/RR ·
 Steuerverwaltung + Rekursbehörde · Strassenverkehrsamt · Migrationsamt ·
-Sozialversicherungsgericht). Teil B (SH–GE) unten; JU separat nachzuerheben.
+Sozialversicherungsgericht). Teil A+B + JU-Nachtrag: ALLE 26 Kantone erfasst.
 
 ---
 
@@ -421,7 +421,7 @@ Anmerkung: Chambre administrative und Chambre des assurances sociales gehören b
 
 ## Unsicherheiten / offen
 
-1. **Kanton Jura (JU): NICHT RECHERCHIERT.** Im Titel genannt, jedoch in diesem Durchgang nicht bearbeitet — Adressen für Tribunal cantonal/Cour administrative, Chancellerie d'État, Service des contributions, Office des véhicules, Service de la population JU sind noch zu erheben. **Empfehlung: separater Recherchelauf jura.ch.**
+1. ~~Kanton Jura (JU): NICHT RECHERCHIERT~~ → **GESCHLOSSEN per JU-Nachtrag unten (6.6.2026).** Im Titel genannt, jedoch in diesem Durchgang nicht bearbeitet — Adressen für Tribunal cantonal/Cour administrative, Chancellerie d'État, Service des contributions, Office des véhicules, Service de la population JU sind noch zu erheben. **Empfehlung: separater Recherchelauf jura.ch.**
 2. **AR Obergericht (Fünfeckpalast, Trogen):** Auf den offiziellen Seiten ist **keine Hausnummer** zum «Fünfeckpalast» am Landsgemeindeplatz publiziert; Gerichtssäle teils im Rathaus (Landsgemeindeplatz 2).
 3. **AG Regierungsrat/Staatskanzlei:** Behördenverzeichnis nennt nur «Regierungsgebäude, 5001 Aarau» ohne Strasse/Hausnummer.
 4. **TG Steuerrekurskommission:** Nur Postfach-Adresse (8510 Frauenfeld) amtlich publiziert; keine Strasse/Hausnummer.
@@ -431,3 +431,28 @@ Anmerkung: Chambre administrative und Chambre des assurances sociales gehören b
 8. **NE Service des contributions:** Hauptsitz Rue du Docteur-Coullery 5, La Chaux-de-Fonds gesichert; ein zusätzlicher Standort in Neuchâtel (rue Pourtalès) konnte nicht abschliessend amtlich bestätigt werden.
 
 Alle bestätigten Adressen stammen ausschliesslich von amtlichen Kantons- bzw. Gerichtsdomains (sh.ch, ar.ch, ai.ch, sg.ch, gr.ch/justiz-gr.ch/kantonsamtsblatt.gr.ch, ag.ch, tg.ch, ti.ch, vd.ch, vs.ch, ne.ch, ge.ch/justice.ge.ch); keine Archive.
+
+---
+
+# JU-NACHTRAG (6.6.2026)
+
+## Kanton Jura — Verwaltungsbehörden (Abruf 6.6.2026, amtliche jura.ch-Quellen)
+
+| Behörde | Strasse + Nr. | PLZ Ort | Quelle-URL |
+|---|---|---|---|
+| Tribunal cantonal — Cour administrative (Verwaltungsgericht) | Chemin du Château 9, Case postale 1693 | 2900 Porrentruy | https://www.jura.ch/fr/Autorites/JUST/Instances-judiciaires/Tribunal-cantonal/Tribunal-cantonal.html |
+| Tribunal cantonal — Cour des assurances (Versicherungsgericht / Sozialversicherungen) | Chemin du Château 9, Case postale 1693 | 2900 Porrentruy | https://www.jura.ch/fr/Autorites/JUST/Instances-judiciaires/Tribunal-cantonal/Tribunal-cantonal.html |
+| Chancellerie d'État (Staatskanzlei) | Rue de l'Hôpital 2 | 2800 Delémont | https://www.jura.ch/cha |
+| Service des contributions (Steuerverwaltung) | Rue de la Justice 2 | 2800 Delémont | https://www.jura.ch/fr/Autorites/Administration/DFI/CTR/Service-des-contributions-CTR.html |
+| Commission cantonale des recours en matière d'impôts (Steuerrekurskommission) | Chemin du Château 9 | 2900 Porrentruy | https://www.jura.ch/DFI/CTR/Personnes-physiques/Reclamation-et-recours/Reclamation-et-recours.html |
+| Office des véhicules (OVJ) (Strassenverkehrsamt; Administrativmassnahmen) | Route de la Communance 45, Case postale | 2800 Delémont 1 | https://www.jura.ch/ovj |
+| Service de la population (SPOP) (Migration / Einwohnerwesen) | Rue du 24-Septembre 1 | 2800 Delémont | https://www.jura.ch/fr/Autorites/Administration/DSJP/SPOP/Service-de-la-population-SPOP.html |
+
+### Hinweise
+
+- Sozialversicherungszuständigkeit: Das Tribunal cantonal gliedert sich in sieben Sektionen (Cour constitutionnelle, Cour civile, Cour pénale, Chambre pénale des recours, Cour administrative, **Cour des assurances**, Cour des poursuites et faillites). Sozialversicherungsstreitigkeiten laufen über die eigenständige **Cour des assurances** — nicht über die Cour administrative. Beide teilen die Adresse des Tribunal cantonal (Château de Porrentruy). Deine Annahme «Sozialversicherungszuständigkeit bei der Cour administrative» trifft für JU also nicht zu; sie liegt bei der separaten Cour des assurances.
+- Die Cour administrative beurteilt u.a. Beschwerden gegen Entscheide des Juge administratif (erstinstanzlich) sowie gegen Entscheide der Commission cantonale des recours en matière d'impôts und der meisten Verwaltungsorgane.
+- Departementszuordnung SPOP: Département de la cohésion sociale, de la justice et de la police (DSJP). OVJ und Service des contributions sind dem DFI (Finanzdepartement) zugeordnet.
+- Steuerrekursinstanz: Reklamation (réclamation) zuerst beim Service des contributions; danach Rekurs (recours) an die **Commission cantonale des recours en matière d'impôts** (Porrentruy), die als spezielle Verwaltungsgerichtsinstanz fungiert. Rechtsgrundlage: Décret RSJU 641.611.
+
+Keine Einträge mussten als «NICHT GEFUNDEN» markiert werden — alle fünf angefragten Behörden (plus die ergänzende Cour des assurances und Steuerrekurskommission) wurden mit amtlichen jura.ch-Adressen bestätigt.
