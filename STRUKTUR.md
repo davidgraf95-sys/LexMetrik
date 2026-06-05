@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 517 Tests in 28 Dateien (515 grün + 2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 521 Tests in 28 Dateien (519 grün + 2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -38,9 +38,14 @@ beidseitigen Schwellen-Grenzwerten. **Phase 2 erledigt:** Kantonsschicht
 `data/zustaendigkeitKantone.ts` (BS-Pilot, Stellen-Auflösung über
 behoerden.ts, GOG-Schwelle bewusst null/offen) + SG_SCHWELLEN beziehen
 die Zuständigkeits-Schwellen aus ZPO_SCHWELLEN (SSoT §5, golden-bewiesen
-byte-gleich). OFFEN: Phase 3 UI (Wizard, Katalogkarte, PDF `zuordnung`),
-Phase 4 Prefill-Weiterleitung Schlichtungsgesuch, weitere Kantone (nach
-Dossier-Abnahme). Davids fachliche Abnahme steht aus.
+byte-gleich). **Phase 3 erledigt:** /rechner/zustaendigkeit (Form §3-rein,
+Eckdaten-Tiles, Stelle mit Adresse/Quelle, Weichen offen, PDF-Bericht);
+Katalogkarte `zustaendigkeit` (pro/entwurf) ersetzt die drei geplanten
+Karten gerichtsstand/verfahrensart/schlichtung. **Phase 4 erledigt:**
+Prefill-CTA → Schlichtungsgesuch BS (sgPrefillKodieren/Lesen; nur bei
+ordentlicher Behörde + erfasster Stelle; Golden byte-gleich) — MVP
+end-to-end. OFFEN: weitere Kantone (nach Dossier-Abnahme), weitere
+Ziel-Vorlagen. Davids fachliche Abnahme steht aus.
 
 ## Verschlankung 5.6.2026 (verhaltensneutral, Review ohne Befunde)
 
