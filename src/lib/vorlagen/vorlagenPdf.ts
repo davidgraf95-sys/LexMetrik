@@ -8,7 +8,8 @@ import { winAnsiSicher, typografie } from '../pdf/winansi';
 // verdreht, während DOCX/Vorschau korrekt blieben — Renderer-Divergenz).
 export const vorlagenPdfText = (text: string): string => winAnsiSicher(typografie(text));
 const pdfText = vorlagenPdfText;
-import type { AssembleErgebnis, DokumentAbsatz, VorlageFormat } from './engine';
+import type { AssembleErgebnis, DokumentAbsatz } from './engine';
+import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
 // ─── PDF-Renderer der Vorlagen — drei Formatvorlagen ────────────────────────
@@ -34,19 +35,8 @@ import type { PdfBanner } from './banner';
 export type { PdfBanner } from './banner';
 export { BANNER_ABSCHREIBEN, BANNER_UNTERSCHREIBEN } from './banner';
 
-type Profil = {
-  brot: number; zeile: number; zeileDicht: number; absatzGap: number;
-  titel?: number; ueberschrift: number; ueberschriftVor: number; ueberschriftNach: number;
-};
-
-const PROFILE: Record<VorlageFormat, Profil> = {
-  verfuegung: { brot: 10.5, zeile: 5.1, zeileDicht: 4.5, absatzGap: 2.6, titel: 16,   ueberschrift: 12,   ueberschriftVor: 5, ueberschriftNach: 6.4 },
-  vertrag:    { brot: 10.5, zeile: 5.0, zeileDicht: 4.5, absatzGap: 2.4, titel: 15.5, ueberschrift: 11.5, ueberschriftVor: 5, ueberschriftNach: 6.2 },
-  eingabe:    { brot: 10.5, zeile: 4.9, zeileDicht: 4.4, absatzGap: 2.4, titel: undefined, ueberschrift: 11.5, ueberschriftVor: 4.5, ueberschriftNach: 6.2 },
-};
-
-const RAND = 25;
-const BREITE = 210 - 2 * RAND;
+// Typografie + Ausgabe-Regeln kommen aus der deklarativen SSoT
+// (formatvorlagen.ts, Grundlagen-Berichte 5.6.2026).
 const EINZUG = 7;        // hängender Einzug nummerierter Klauseln (mm)
 const SUB_EINZUG = 12;   // «– »-Unterpunkte
 
@@ -58,7 +48,10 @@ const STRICHE = /^_{6,}\s*$/;
 // in vorlagenPdfErzeugen gekapselt.
 export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner } = {}): jsPDF {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
-  const P = PROFILE[e.dokument.format];
+  const P = FORMAT_TYPOGRAFIE[e.dokument.format];
+  const REGELN = AUSGABE_REGELN[e.dokument.ausgabeArt];
+  const RAND = P.randLinks;
+  const BREITE = 210 - P.randLinks - P.randRechts;  // Eingaben: Korrekturrand rechts
   let y = RAND;
 
   const hairline = (x1: number, x2: number, staerke = 0.2, grau = 165) => {
@@ -100,9 +93,9 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
   if (P.titel) {
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(P.titel);
-    doc.text(pdfText(e.dokument.titel), 105, y + 4, { align: 'center' });
+    doc.text(pdfText(e.dokument.titel), RAND + BREITE / 2, y + 4, { align: 'center' });
     y += 9;
-    hairline(RAND, 210 - RAND);
+    hairline(RAND, RAND + BREITE);
     y += 7;
   } else {
     y += 2;
@@ -150,7 +143,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
       }
       const zeilen = zeilenVon(zl, BREITE);
       if (opt.brechen !== false) seitenumbruch(zeilen.length * zh + 2);
-      const x = opt.align === 'right' ? 210 - RAND : opt.align === 'center' ? 105 : RAND;
+      const x = opt.align === 'right' ? 210 - P.randRechts : opt.align === 'center' ? RAND + BREITE / 2 : RAND;
       doc.text(zeilen, x, y, opt.align ? { align: opt.align } : undefined);
       y += zeilen.length * zh;
     }
@@ -192,7 +185,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
         doc.setFont('helvetica', 'bold'); doc.setFontSize(13);
         blockGeschuetzt(a.text, 5.6, 8);
         y += 1.5;
-        hairline(RAND, 210 - RAND);
+        hairline(RAND, RAND + BREITE);
         y += 7;
         return;
       case 'rubrum':
@@ -200,12 +193,12 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
         for (const zl of a.text.split('\n')) {
           if (/^—.*—$/.test(zl.trim())) {            // — klagende Partei —
             seitenumbruch(P.zeile + 2);
-            doc.text(pdfText(zl.trim()), 105, y, { align: 'center' });
+            doc.text(pdfText(zl.trim()), RAND + BREITE / 2, y, { align: 'center' });
             y += P.zeile + 2;
           } else if (zl.trim() === 'gegen') {
             seitenumbruch(P.zeile + 2);
             doc.setFont('helvetica', 'bold');
-            doc.text('gegen', 105, y, { align: 'center' });
+            doc.text('gegen', RAND + BREITE / 2, y, { align: 'center' });
             doc.setFont('helvetica', 'normal');
             y += P.zeile + 2;
           } else if (zl.startsWith('betreffend ')) {
@@ -217,6 +210,18 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
           }
         }
         y += 7;
+        return;
+      case 'anrede':
+        setzeBrot();
+        y += 1.5;
+        schreibe(a.text);
+        y += 4;
+        return;
+      case 'schlussformel':
+        setzeBrot();
+        y += 4;
+        schreibe(a.text);
+        y += 2;
         return;
       case 'parteien':
         setzeBrot();
@@ -255,12 +260,25 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
   const disc = doc.splitTextToSize(pdfText(e.dokument.disclaimer), BREITE) as string[];
   seitenumbruch(disc.length * 3.6 + 14);
   y += 8;
-  hairline(RAND, 210 - RAND);
+  hairline(RAND, RAND + BREITE);
   y += 4;
   doc.setTextColor(110);
   doc.text(disc, RAND, y);
   y += disc.length * 3.6 + 1.5;
   doc.text(pdfText(`Bausteine v${e.dokument.version}`), RAND, y);
+
+  // Wasserzeichen (Form-Gate «entwurf»: kein gültiges Enddokument)
+  if (REGELN.wasserzeichen) {
+    const seiten = doc.getNumberOfPages();
+    for (let i = 1; i <= seiten; i++) {
+      doc.setPage(i);
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(96);
+      doc.setTextColor(225);
+      doc.text(REGELN.wasserzeichen, 105, 175, { align: 'center', angle: 45 });
+    }
+    doc.setTextColor(26, 26, 23);
+  }
 
   fusszeilen();
   return doc;

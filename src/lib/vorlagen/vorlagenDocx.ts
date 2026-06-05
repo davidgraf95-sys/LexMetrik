@@ -3,6 +3,7 @@ import {
   ShadingType, HeadingLevel, Footer, PageNumber,
 } from 'docx';
 import type { AssembleErgebnis, AbsatzRolle, VorlageFormat } from './engine';
+import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
 // ─── DOCX-Renderer der Vorlagen — Referenz-Layout ───────────────────────────
@@ -34,6 +35,9 @@ export type DocxAbsatz =
 
 export function docxAbsaetze(e: AssembleErgebnis, banner?: PdfBanner): DocxAbsatz[] {
   const liste: DocxAbsatz[] = [];
+  // Form-Gate «entwurf»: Hinweiszeile statt PDF-Wasserzeichen (SSoT formatvorlagen.ts)
+  const hinweis = AUSGABE_REGELN[e.dokument.ausgabeArt].hinweisZeile;
+  if (hinweis) liste.push({ typ: 'banner-titel', text: hinweis });
   if (banner) {
     liste.push({ typ: 'banner-titel', text: banner.titel });
     liste.push({ typ: 'banner-text', text: banner.text });
@@ -173,6 +177,16 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
       }
       return new Paragraph({ spacing: dicht, children: [new TextRun({ text })] });
     }
+    case 'anrede':
+      return new Paragraph({
+        spacing: { before: 120, after: 240 },
+        children: [new TextRun({ text })],
+      });
+    case 'schlussformel':
+      return new Paragraph({
+        spacing: { before: 280, after: 120 },
+        children: [new TextRun({ text })],
+      });
     case 'parteien':
       return new Paragraph({
         alignment: AlignmentType.CENTER,
@@ -212,6 +226,13 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
 
 /** Baut das Word-Dokument (Referenz-Layout, CH-Typografie) und lädt es herunter. */
 export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
+  // Form-Gate-Matrix hart kodiert: Eigenhändigkeits-Dokumente (abschrift)
+  // erhalten NIE einen Word-Export — es entstünde ein unterschriftsreif
+  // wirkendes Dokument für ein eigenhändigkeitspflichtiges Geschäft.
+  if (!AUSGABE_REGELN[e.dokument.ausgabeArt].docxErlaubt) {
+    throw new Error('Word-Export ist für Abschreibe-Mustertexte gesperrt (Eigenhändigkeitserfordernis).');
+  }
+  const T = FORMAT_TYPOGRAFIE[e.dokument.format].docx;
   const doc = new Document({
     styles: {
       default: {
@@ -222,7 +243,7 @@ export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?:
     },
     sections: [{
       properties: {
-        page: { margin: { top: 1417, bottom: 1417, left: 1417, right: 1417 } }, // 2.5 cm
+        page: { margin: { top: 1417, bottom: 1417, left: T.randLinksTwips, right: T.randRechtsTwips } }, // 2.5 cm; Eingaben: Korrekturrand rechts
       },
       footers: {
         default: new Footer({

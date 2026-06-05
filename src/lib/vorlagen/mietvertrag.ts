@@ -414,7 +414,7 @@ export const MV_SCHEMA: VorlageSchema = {
       begruendung: 'Rückgabe und sofortige Prüf-/Rügeobliegenheit des Vermieters — immer enthalten.',
       norm: 'Art. 267 OR' },
     { id: 'M14_schluss', ueberschrift: 'Schlussbestimmungen',
-      text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform, soweit das Gesetz nichts anderes zulässt. Streitigkeiten aus diesem Vertrag werden zunächst der Schlichtungsbehörde am Ort des Mietobjekts unterbreitet. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 253 ff. OR) und der VMWG.',
+      text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Streitigkeiten aus diesem Vertrag werden zunächst der Schlichtungsbehörde am Ort des Mietobjekts unterbreitet. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 253 ff. OR) und der VMWG.',
       nummeriert: true,
       begruendung: 'Schriftformvorbehalt, Schlichtung am Ort der Sache, Gesetzesverweis — immer enthalten.',
       norm: 'Art. 274 OR' },

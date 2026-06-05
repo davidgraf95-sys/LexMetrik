@@ -447,6 +447,7 @@ export function VorlageArbeitsvertrag() {
             <p className="lc-overline text-brass-700">Form-Gate — damit der Vertrag trägt</p>
             <ul className="space-y-2 text-body-s text-ink-700">
               <li><strong>Beidseitig unterzeichnen</strong> — erst die Unterschriften beider Parteien erfüllen die Schriftform der formbedürftigen Klauseln (Konkurrenzverbot, Wegbedingungen, abweichende Fristen).</li>
+              <li><strong>Elektronisch nur mit QES:</strong> Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) — einfache E-Signatur oder eingescannte Unterschrift genügen nicht.</li>
               <li><strong>GAV/NAV prüfen:</strong> Anwendbare Mindeststandards gehen diesem Vertrag vor (Art. 357/360a OR).</li>
               <li><strong>Mindestlohn prüfen</strong> bei Arbeitsort in GE, BS, NE, JU, TI (jährlich indexiert; ab 2026 auch Stadt Luzern).</li>
               <li><strong>Sozialversicherungen anmelden</strong> (AHV/ALV/BVG/UVG) — nicht Gegenstand dieser Vorlage.</li>

@@ -428,3 +428,52 @@ describe('Audit-Fixes Vorlagen', () => {
     expect(r.warnungen.join()).toMatch(/ungültig/);
   });
 });
+
+// ── Formatvorlagen-SSoT + AusgabeArt (Grundlagen-Berichte 5.6.2026) ─────────
+
+describe('Formatvorlagen (AusgabeArt-Matrix)', () => {
+  it('Matrix hart kodiert: abschrift ohne DOCX; entwurf mit Wasserzeichen; Eingabe mit Korrekturrand', async () => {
+    const { AUSGABE_REGELN, FORMAT_TYPOGRAFIE } = await import('../lib/vorlagen/formatvorlagen');
+    expect(AUSGABE_REGELN.abschrift.docxErlaubt).toBe(false);
+    expect(AUSGABE_REGELN.entwurf.wasserzeichen).toBe('ENTWURF');
+    expect(AUSGABE_REGELN.fertig.docxErlaubt).toBe(true);
+    expect(FORMAT_TYPOGRAFIE.eingabe.randRechts).toBeGreaterThan(FORMAT_TYPOGRAFIE.eingabe.randLinks);
+    expect(FORMAT_TYPOGRAFIE.eingabe.docx.randRechtsTwips).toBeGreaterThan(FORMAT_TYPOGRAFIE.eingabe.docx.randLinksTwips);
+  });
+
+  it('ausgabeArt je Schema: Testament=abschrift; PV=fertig; VA eigenhändig=abschrift / beurkundet=ENTWURF', async () => {
+    const { TESTAMENT_SCHEMA } = await import('../lib/vorlagen/testament');
+    expect(TESTAMENT_SCHEMA.ausgabeArt).toBe('abschrift');
+    expect(pvZusammenstellen(pv({})).dokument.ausgabeArt).toBe('fertig');
+    const { vaZusammenstellen, VA_DEFAULTS } = await import('../lib/vorlagen/vorsorgeauftrag');
+    expect(vaZusammenstellen({ ...VA_DEFAULTS, formMode: 'eigenhaendig' }).dokument.ausgabeArt).toBe('abschrift');
+    expect(vaZusammenstellen({ ...VA_DEFAULTS, formMode: 'oeffentlich_beurkundet' }).dokument.ausgabeArt).toBe('entwurf');
+  });
+
+  it('DOCX-Sperre für Abschreibe-Mustertexte greift hart (Form-Gate-Matrix)', async () => {
+    const { vorlagenDocxErzeugen } = await import('../lib/vorlagen/vorlagenDocx');
+    const { testamentZusammenstellen, TESTAMENT_DEFAULTS } = await import('../lib/vorlagen/testament');
+    const t = testamentZusammenstellen({ ...TESTAMENT_DEFAULTS, vorname: 'A', nachname: 'B' });
+    await expect(vorlagenDocxErzeugen(t, { dateiName: 'x.docx' })).rejects.toThrow(/gesperrt/);
+  });
+
+  it('Eingabe-Anatomie: Anrede, Schlussformel und Doppel-Vermerk im Schlichtungsgesuch (Usanz-Bausteine)', async () => {
+    const { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } = await import('../lib/vorlagen/schlichtungsgesuchBs');
+    const r = sgZusammenstellen({
+      ...SG_DEFAULTS, streitgegenstandTyp: 'geldforderung', baselForumBestaetigt: true,
+      klaeger: [{ ...SG_PERSON_NATUERLICH, vorname: 'A', name: 'B', strasse: 'S 1', plz: '4051', ort: 'Basel' }],
+      beklagte: [{ ...SG_PERSON_NATUERLICH, vorname: 'C', name: 'D', strasse: 'S 2', plz: '4052', ort: 'Basel' }],
+      geld: { betrag: '1000' }, streitgegenstand: 'Forderung', datum: '2026-06-05',
+    });
+    const rollen = r.dokument.absaetze.map((x) => x.rolle);
+    expect(rollen).toContain('anrede');
+    expect(rollen).toContain('schlussformel');
+    const texte = r.dokument.absaetze.map((x) => x.text).join('\n');
+    expect(texte).toMatch(/Sehr geehrte Frau Präsidentin/);
+    expect(texte).toMatch(/im Doppel/);
+    // Reihenfolge: Anrede VOR den Rechtsbegehren, Schlussformel VOR der Unterschrift
+    const ids = r.dokument.absaetze.map((x) => x.bausteinId);
+    expect(ids.indexOf('anrede')).toBeLessThan(ids.findIndex((i) => i === 'rechtsbegehren'));
+    expect(ids.indexOf('schlussformel')).toBeLessThan(ids.indexOf('unterschrift'));
+  });
+});

@@ -26,7 +26,13 @@ export type Bedingung =
 export type VorlageFormat = 'verfuegung' | 'vertrag' | 'eingabe';
 export type AbsatzRolle =
   | 'absender' | 'adressat' | 'datumzeile' | 'betreff' | 'rubrum'
-  | 'parteien' | 'unterschrift';
+  | 'parteien' | 'anrede' | 'schlussformel' | 'unterschrift';
+
+// Ausgabe-Art (Form-Gate-Matrix der Grundlagen-Berichte 5.6.2026, hart im
+// Schema kodiert): abschrift = nur Abschreibe-Mustertext (Eigenhändigkeit),
+// entwurf = Vorbereitungs-Entwurf für die Urkundsperson (Wasserzeichen),
+// fertig = druckfertiges Dokument zum Unterschreiben.
+export type AusgabeArt = 'abschrift' | 'entwurf' | 'fertig';
 
 export interface Baustein {
   id: string;
@@ -46,6 +52,7 @@ export interface VorlageSchema {
   version: string;           // Versionierung der Bausteine (Audit)
   titel: string;
   format?: VorlageFormat;    // Formatvorlage (Default 'verfuegung')
+  ausgabeArt?: AusgabeArt;   // Form-Gate-Folge (Default 'fertig')
   bausteine: Baustein[];
   disclaimer: string;        // Fusszeile im Dokument
 }
@@ -67,7 +74,7 @@ export interface ProtokollEintrag {
 }
 
 export interface AssembleErgebnis {
-  dokument: { titel: string; format: VorlageFormat; absaetze: DokumentAbsatz[]; disclaimer: string; version: string };
+  dokument: { titel: string; format: VorlageFormat; ausgabeArt: AusgabeArt; absaetze: DokumentAbsatz[]; disclaimer: string; version: string };
   aufgenommen: string[];
   protokoll: ProtokollEintrag[];
 }
@@ -148,7 +155,7 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
   }
 
   return {
-    dokument: { titel: schema.titel, format: schema.format ?? 'verfuegung', absaetze, disclaimer: schema.disclaimer, version: schema.version },
+    dokument: { titel: schema.titel, format: schema.format ?? 'verfuegung', ausgabeArt: schema.ausgabeArt ?? 'fertig', absaetze, disclaimer: schema.disclaimer, version: schema.version },
     aufgenommen,
     protokoll,
   };

@@ -94,6 +94,7 @@ export const TESTAMENT_SCHEMA: VorlageSchema = {
   id: 'testament-eigenhaendig',
   version: '1.0.0 (Rechtsstand 1.1.2023, AS 2021 312)',
   titel: 'Letztwillige Verfügung (Testament)',
+  ausgabeArt: 'abschrift',  // Eigenhändigkeit Art. 505 ZGB — nie unterschriftsreif
   disclaimer:
     'Entwurf — erstellt mit LexMetrik. Keine Rechtsberatung. Nur die vollständig ' +
     'eigenhändig (von Hand) geschriebene, datierte und unterschriebene Fassung ist ' +

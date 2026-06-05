@@ -469,7 +469,7 @@ export const AV_SCHEMA: VorlageSchema = {
       begruendung: 'Blosse vertragliche Verweisung — GAV-Inhalt wird Vertragsinhalt, keine Normwirkung (Gutachten 5.6.2026).',
       norm: 'Art. 356 OR' },
     { id: 'A15_schluss', ueberschrift: 'Schlussbestimmungen',
-      text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen zu ihrer Gültigkeit der Schriftform, soweit das Gesetz nichts anderes zulässt. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 319 ff. OR) sowie die zwingenden Vorschriften des Arbeitsgesetzes.',
+      text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen zu ihrer Gültigkeit der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 319 ff. OR) sowie die zwingenden Vorschriften des Arbeitsgesetzes.',
       nummeriert: true,
       begruendung: 'Schriftformvorbehalt und Verweis auf das dispositive Gesetzesrecht — immer enthalten.',
       norm: 'Art. 320 OR' },

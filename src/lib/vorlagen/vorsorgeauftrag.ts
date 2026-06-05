@@ -176,6 +176,7 @@ export const VA_SCHEMA: VorlageSchema = {
   id: 'vorsorgeauftrag',
   version: '1.0.0 (Rechtsstand Art. 360–369 ZGB, in Kraft seit 1.1.2013)',
   titel: 'Vorsorgeauftrag',
+  ausgabeArt: 'abschrift',  // eigenhändig Art. 361 Abs. 2 ZGB; bei Beurkundung → 'entwurf' (zusammenstellen)
   disclaimer:
     'Entwurf — erstellt mit LexMetrik. Keine Rechtsberatung. Gültig ist der Vorsorgeauftrag nur ' +
     'vollständig eigenhändig (von Hand geschrieben, datiert, unterzeichnet, Art. 361 Abs. 2 ZGB) ' +
@@ -400,5 +401,9 @@ export function vaZusammenstellen(a: VaAntworten) {
     pvHinterlegungZeile: a.pvHinterlegung?.trim() ? ` (Hinterlegungsort: ${a.pvHinterlegung.trim()})` : '',
     ortDatumZeile: `${a.ort?.trim() ? a.ort.trim() + ', ' : ''}den ${datum}`,
   };
-  return assemble(VA_SCHEMA, antworten);
+  const erg = assemble(VA_SCHEMA, antworten);
+  // Form-Gate-Matrix: Beurkundungs-Variante ist ein ENTWURF für die
+  // Urkundsperson (Wasserzeichen), eigenhändig bleibt Abschreibe-Muster.
+  erg.dokument.ausgabeArt = a.formMode === 'oeffentlich_beurkundet' ? 'entwurf' : 'abschrift';
+  return erg;
 }

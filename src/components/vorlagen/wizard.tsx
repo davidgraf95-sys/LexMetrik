@@ -4,6 +4,7 @@ import { NormLink, Stepper } from './ui';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { dokumentAlsText } from '../../lib/vorlagen/vorlagenText';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
+import { AUSGABE_LABEL } from '../../lib/vorlagen/formatvorlagen';
 import type { PdfBanner } from '../../lib/vorlagen/banner';
 
 // ─── Generischer Vorlagen-Wizard-Rahmen ─────────────────────────────────────
@@ -130,7 +131,12 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
       {/* Live-Vorschau als «Papier» — interpretiert dieselben Formatvorlagen
           (format + Absatz-Rollen) wie PDF und DOCX */}
       <section aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-5 sm:p-9">
-        <p className="lc-overline mb-4">Vorschau · aktualisiert sich live</p>
+        <p className="lc-overline mb-4">
+          Vorschau · aktualisiert sich live
+          {AUSGABE_LABEL[ergebnis.dokument.ausgabeArt] && (
+            <span className="ml-2 lc-chip normal-case tracking-normal">{AUSGABE_LABEL[ergebnis.dokument.ausgabeArt]}</span>
+          )}
+        </p>
         <div className="font-display text-ink-900 space-y-3" style={kompakt ? { fontSize: '0.92rem', lineHeight: 1.7 } : { fontSize: '0.95rem', lineHeight: 1.75 }}>
           {/* Eingaben tragen ihren Titel im fetten Betreff — kein Dokumenttitel */}
           {ergebnis.dokument.format !== 'eingabe' && (
@@ -138,7 +144,9 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
           )}
           {ergebnis.dokument.absaetze.map((abs) => (
             <div key={abs.bausteinId + abs.text.slice(0, 12)} className={
-              abs.rolle === 'datumzeile' ? 'text-right pt-2'
+              abs.rolle === 'anrede' ? 'pt-2'
+              : abs.rolle === 'schlussformel' ? 'pt-3'
+              : abs.rolle === 'datumzeile' ? 'text-right pt-2'
               : abs.rolle === 'adressat' ? 'pb-3'
               : abs.rolle === 'parteien' ? 'text-center py-2'
               : abs.rolle === 'unterschrift' ? 'pt-3'
