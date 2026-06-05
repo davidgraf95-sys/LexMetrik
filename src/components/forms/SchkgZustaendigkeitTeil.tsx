@@ -7,6 +7,7 @@ import {
   type SchkgAnliegen, type SchkgInput, type SchkgPfand, type SchkgSchuldnerTyp,
   type WiderspruchKonstellation,
 } from '../../lib/schkgZustaendigkeit';
+import { GEBV_SCHKG_URL } from '../../data/erlassLinks';
 
 // ─── Rechtsweg «Betreibung (SchKG)» — UI-Teil des Zuständigkeitsrechners ────
 // Anordnung David 5.6.2026 («schkg analog zivilrecht»). Reine Darstellung
@@ -188,7 +189,7 @@ export function SchkgZustaendigkeitTeil() {
               <p className="lc-overline">Voraussichtliche Kosten</p>
               <p className="text-body-s text-ink-800">
                 <span className="font-medium text-ink-900">Gebühr Zahlungsbefehl: CHF {r.kostenZahlungsbefehl.gebuehrCHF.toFixed(2).replace('.00', '.–')}</span>{' '}
-                (Forderung {r.kostenZahlungsbefehl.band} Franken; Art. 16 Abs. 1 GebV SchKG).
+                (Forderung {r.kostenZahlungsbefehl.band} Franken; <a href={GEBV_SCHKG_URL} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">Art. 16 Abs. 1 GebV SchKG ↗</a>).
               </p>
               <p className="text-xs text-ink-500">
                 Stand der Staffel: 1.1.2022; eine Änderung der GebV per 1.1.2026 (AS 2025 630) ist nur als signiertes PDF

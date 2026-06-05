@@ -18,6 +18,7 @@ import { obereInstanzFuer } from '../../data/obereInstanzen';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { kostenFuer } from '../../data/zustaendigkeitKosten';
+import { ERLASS_LINKS } from '../../data/erlassLinks';
 import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
 import { plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
@@ -774,7 +775,10 @@ export function ZustaendigkeitForm() {
                 ) : kosten ? (
                   <p className="text-body-s text-ink-800">
                     <span className="font-medium text-ink-900">Schlichtungsgebühr: CHF {kosten.schlichtung.text}.</span>{' '}
-                    <span className="text-ink-500">({kosten.schlichtung.erlass})</span>
+                    <span className="text-ink-500">(
+                      {f.kanton !== '' ? (
+                        <a href={ERLASS_LINKS[f.kanton].schlichtung} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.schlichtung.erlass} ↗</a>
+                      ) : kosten.schlichtung.erlass})</span>
                     {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ {kosten.schlichtung.hinweis}</span>}
                   </p>
                 ) : (
@@ -784,7 +788,10 @@ export function ZustaendigkeitForm() {
               {kosten && (
                 <p className="text-body-s text-ink-800">
                   <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz: {/^[A-Za-zÜü]/.test(kosten.gericht.text) ? '' : 'CHF '}{kosten.gericht.text}.</span>{' '}
-                  <span className="text-ink-500">({kosten.gericht.erlass})</span>
+                  <span className="text-ink-500">(
+                    {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
+                      <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.gericht.erlass} ↗</a>
+                    ) : kosten.gericht.erlass})</span>
                   {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
                 </p>
               )}

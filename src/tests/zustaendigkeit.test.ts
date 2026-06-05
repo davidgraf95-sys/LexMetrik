@@ -449,3 +449,16 @@ describe('Art.-5-Schwelle (H1-Fix, Semantik-Audit 6.6.2026)', () => {
     expect(d.oertlich.normen.some((n) => n.artikel.includes('36'))).toBe(true);
   });
 });
+
+describe('Erlass-Links (Anordnung 6.6.2026)', () => {
+  it('26 Kantone mit geprüfter Schlichtungs-URL; SH-Gericht ehrlich null; nur https', async () => {
+    const { ERLASS_LINKS, GEBV_SCHKG_URL } = await import('../data/erlassLinks');
+    const { KANTONE } = await import('../lib/kantone');
+    for (const k of KANTONE) {
+      expect(ERLASS_LINKS[k].schlichtung, k).toMatch(/^https:\/\//);
+      if (k !== 'SH') expect(ERLASS_LINKS[k].gericht, k).toMatch(/^https:\/\//);
+    }
+    expect(ERLASS_LINKS.SH.gericht).toBeNull();
+    expect(GEBV_SCHKG_URL).toContain('fedlex.admin.ch');
+  });
+});
