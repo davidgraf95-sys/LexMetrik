@@ -152,7 +152,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
         { titel: 'Zahlungsbefehl wird zugestellt', text: 'Die Gegenseite kann innert 10 Tagen Rechtsvorschlag erheben (Art. 74 SchKG) — dann braucht es Rechtsöffnung oder Anerkennungsklage.' },
         { titel: 'Ohne Rechtsvorschlag: Fortsetzung verlangen', text: 'Frühestens 20 Tage, spätestens 1 Jahr nach Zustellung des Zahlungsbefehls (Art. 88 SchKG) — sonst erlischt die Betreibung.' },
       );
-      fristen.push({ label: 'Fortsetzungsbegehren', frist: 'frühestens 20 Tage, spätestens 1 Jahr ab Zustellung ZB', norm: 'Art. 88 SchKG', kritisch: true });
+      fristen.push({ label: 'Fortsetzungsbegehren', frist: 'frühestens 20 Tage, spätestens 1 Jahr ab Zustellung ZB (Frist steht bei Rechtsvorschlag während des Gerichtsverfahrens still, Abs. 2)', norm: 'Art. 88 SchKG', kritisch: true });
       break;
     }
     case 'rechtsoeffnung': {
@@ -286,7 +286,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
       eingabe = { art: 'Konkursbegehren (nach Konkursandrohung)', verfahren: 'Summarisches Verfahren; Entscheid durch das Konkursgericht (Art. 171 SchKG)' };
       fristen.push(
         { label: 'Frühester Zeitpunkt', frist: '20 Tage nach Zustellung der Konkursandrohung', norm: 'Art. 166 Abs. 1 SchKG', kritisch: false },
-        { label: 'Erlöschen des Rechts', frist: '15 Monate nach Zustellung des Zahlungsbefehls', norm: 'Art. 166 Abs. 2 SchKG', kritisch: true },
+        { label: 'Erlöschen des Rechts', frist: '15 Monate nach Zustellung des Zahlungsbefehls (Stillstand während des Rechtsvorschlag-Verfahrens, Abs. 2)', norm: 'Art. 166 Abs. 2 SchKG', kritisch: true },
         { label: 'Beschwerde gegen das Konkurserkenntnis', frist: '10 Tage', norm: 'Art. 174 SchKG', kritisch: true },
       );
       break;

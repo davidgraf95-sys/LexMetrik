@@ -24,6 +24,7 @@ import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAm
 import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
+import { SchkgZustaendigkeitTeil } from './SchkgZustaendigkeitTeil';
 
 // ─── Zuständigkeitsrechner – UI (Umbau 5.6.2026, Entscheid David) ───────────
 // Vier-Stufen-Führung: 1) RECHTSWEG (Zivil aktiv; SchKG/Straf/Verwaltung als
@@ -41,7 +42,7 @@ const DISCLAIMER =
 
 const RECHTSWEGE: { code: Rechtsweg; label: string; sub: string; aktiv: boolean }[] = [
   { code: 'zivil', label: 'Zivil', sub: 'Forderungen, Miete, Arbeit, Familie (ZPO)', aktiv: true },
-  { code: 'schkg', label: 'Betreibung (SchKG)', sub: 'Rechtsöffnung, Aberkennung u. a.', aktiv: false },
+  { code: 'schkg', label: 'Betreibung (SchKG)', sub: 'Betreibungsort, Rechtsöffnung, Aberkennung u. a.', aktiv: true },
   { code: 'straf', label: 'Straf', sub: 'Gerichtsstand im Strafverfahren (StPO)', aktiv: false },
   { code: 'verwaltung', label: 'Verwaltung', sub: 'Beschwerdeinstanzen (VwVG/kantonal)', aktiv: false },
 ];
@@ -146,6 +147,8 @@ const DEFAULTS: State = {
 
 export function ZustaendigkeitForm() {
   const [f, setF] = useState<State>(DEFAULTS);
+  // Rechtsweg-Wahl (5.6.2026): Zivil + SchKG aktiv; Straf/Verwaltung folgen.
+  const [rechtsweg, setRechtsweg] = useState<Rechtsweg>('zivil');
   const set = <K extends keyof State>(k: K, v: State[K]) => setF((alt) => ({ ...alt, [k]: v }));
 
   // ── PLZ-Auflösung (amtliches Ortschaftenverzeichnis, lazy) ────────────────
@@ -306,10 +309,13 @@ export function ZustaendigkeitForm() {
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
           {RECHTSWEGE.map((w) => (
             <button key={w.code} type="button" disabled={!w.aktiv}
-              aria-pressed={w.aktiv}
+              aria-pressed={rechtsweg === w.code}
+              onClick={() => w.aktiv && setRechtsweg(w.code)}
               title={w.aktiv ? undefined : 'In Vorbereitung — eigene Engine folgt'}
               className={`text-left p-3 rounded-lg border transition-colors ${
-                w.aktiv ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface opacity-55 cursor-not-allowed'
+                rechtsweg === w.code ? 'border-brass-500 bg-brass-100/60'
+                : w.aktiv ? 'border-line bg-surface hover:border-brass-400'
+                : 'border-line bg-surface opacity-55 cursor-not-allowed'
               }`}>
               <span className="block text-body-s font-medium text-ink-900">
                 {w.label}{!w.aktiv && <span className="lc-badge lc-badge-soft ml-2">in Vorbereitung</span>}
@@ -319,6 +325,8 @@ export function ZustaendigkeitForm() {
           ))}
         </div>
       </div>
+
+      {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : <>
 
       {/* 2 · Streitsache */}
       <div className="space-y-2">
@@ -617,6 +625,19 @@ export function ZustaendigkeitForm() {
             </div>
           )}
 
+          {/* UX-Fix 5.6.2026 (Frage David «wieso bei Arbeitsrecht keine
+              Schlichtungsbehörde?»): Ohne Kantonswahl gab es WEDER Stelle noch
+              Hinweis — die Behörde ist hinterlegt, nur die Ortsangabe fehlte. */}
+          {r.schlichtung.obligatorisch && f.kanton === '' && (
+            <div className="lc-card p-4">
+              <p className="lc-overline mb-1.5">Zuständige Schlichtungsbehörde</p>
+              <p className="text-body-s text-ink-700">
+                Die Schlichtungsbehörde ist für alle 26 Kantone hinterlegt — bitte oben
+                <span className="font-medium text-ink-900"> PLZ eingeben oder Kanton wählen</span>, damit die
+                konkrete Stelle mit Adresse angezeigt werden kann (örtlich massgeblich: {ORT_LABEL[f.streitsache]}).
+              </p>
+            </div>
+          )}
           {/* Konkrete Stelle (Kantonsschicht) + Vorlagen-Sprung */}
           {stelle && (
             <div className="lc-card p-4 space-y-3">
@@ -751,6 +772,7 @@ export function ZustaendigkeitForm() {
           </div>
         </div>
       )}
+      </>}
     </div>
   );
 }
