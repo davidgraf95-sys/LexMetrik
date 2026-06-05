@@ -1,7 +1,9 @@
 // ─── Tabs: generisches Segmented-Control (Darstellungsschicht, §3) ──────────
 // Verhaltensneutrale Entdoppelung (5.6.2026): zuvor wortgleich in Katalog
-// (Pro-Tabs, Filter-Status-Toggle) und AllgemeineFristForm (Modus-Tabs).
-// Markup-Klassen sind EXAKT wie zuvor; die drei Fundstellen unterschieden
+// (Pro-Tabs, Filter-Status-Toggle) und AllgemeineFristForm (Modus-Tabs) —
+// dort Markup EXAKT wie zuvor. Die SchKG/ZPO-Phasenwahl (UX B12) wurde
+// dagegen BEWUSST vom dunklen Button-Stil auf diese Segmented-Control-Optik
+// vereinheitlicht (Funktion identisch). Die ursprünglichen Fundstellen unterschieden
 // sich nur in Höhe/Textgrösse/Padding (→ Grösse `s`/`m`) und der Semantik
 // (`mode`: ARIA-Tabs `role=tab/aria-selected` vs. Toggle-Buttons
 // `aria-pressed`). Keine Logik, kein Zustand — reiner gesteuerter View.

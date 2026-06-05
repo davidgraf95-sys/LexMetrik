@@ -97,11 +97,11 @@ export function BeispielChips({ items }: { items: { label: string; laden: () => 
 /** Eckdaten-Kachel (UX C2) — vorher in 6+ Formularen wortgleich dupliziert.
  *  Nur die einfache Label/Wert(-Sub)-Form; Spezialkacheln (z. B. Verjährungs-
  *  FristKarte mit «massgeblich»-Badge) bleiben bewusst eigenständig. */
-export function EckdatenKachel({ label, wert, sub }: { label: string; wert: string; sub?: string }) {
+export function EckdatenKachel({ label, wert, sub, num }: { label: string; wert: string; sub?: string; num?: boolean }) {
   return (
     <div className="lc-tile">
       <p className="text-xs text-ink-500 mb-1">{label}</p>
-      <p className="text-body-l font-semibold text-ink-900">{wert}</p>
+      <p className={`text-body-l font-semibold text-ink-900${num ? ' num' : ''}`}>{wert}</p>
       {sub && <p className="text-xs text-ink-500 mt-0.5">{sub}</p>}
     </div>
   );

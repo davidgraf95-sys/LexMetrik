@@ -120,9 +120,7 @@ export function LohnfortzahlungForm() {
       <PflichtDisclaimer kurz="Skalen = Gerichtspraxis, nicht gerichtsverbindlich (Art. 324a Abs. 2 OR)." text={SKALEN_HINWEIS} />
 
       {/* Beispiele */}
-      <div className="flex flex-wrap items-center gap-2">
-        <BeispielChips items={BEISPIELE.map((b) => ({ label: b.label, laden: () => ladeBeispiel(b.form) }))} />
-      </div>
+      <BeispielChips items={BEISPIELE.map((b) => ({ label: b.label, laden: () => ladeBeispiel(b.form) }))} />
 
       {/* Eingaben */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

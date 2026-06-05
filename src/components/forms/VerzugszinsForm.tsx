@@ -106,9 +106,7 @@ export function VerzugszinsForm() {
       <PflichtDisclaimer text={VERZUGSZINS_DISCLAIMER} />
 
       {/* Beispiele */}
-      <div className="flex flex-wrap items-center gap-2">
-        <BeispielChips items={BEISPIELE.map((b) => ({ label: b.label, laden: () => ladeBeispiel(b.state) }))} />
-      </div>
+      <BeispielChips items={BEISPIELE.map((b) => ({ label: b.label, laden: () => ladeBeispiel(b.state) }))} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Geschuldeter Betrag (CHF)" hint="Verzugszins fällt nur auf dem tatsächlich geschuldeten Betrag an">

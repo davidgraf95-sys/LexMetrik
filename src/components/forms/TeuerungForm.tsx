@@ -139,7 +139,7 @@ export function TeuerungForm() {
               { label: 'Veränderung', val: `${ergebnis.prozent > 0 ? '+' : ''}${ergebnis.prozent.toFixed(1)} %` },
               { label: 'Index (Basis ' + monatLabel(ergebnis.basis) + ' = 100)', val: `${ergebnis.indexAlt.toFixed(1)} → ${ergebnis.indexNeu.toFixed(1)}` },
             ].map((c) => (
-              <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
+              <EckdatenKachel key={c.label} label={c.label} wert={c.val} num />
             ))}
           </div>
           <ErgebnisAnzeige titel={`LIK-Indexierung (Basis ${monatLabel(ergebnis.basis)} = 100)`} ergebnis={ergebnis} />
