@@ -82,3 +82,38 @@ describe('Pro-Katalog: Schnellzugriff', () => {
     expect(render(verf)).toContain('als Favorit markieren');
   });
 });
+
+describe('Free-Kachelwand (Auftrag 5.6.2026)', () => {
+  it('flache Wand: zwei Blöcke, keine Filter/Suche/Sprungmarken/Sterne; geplant gedämpft an Position', async () => {
+    const { Startseite } = await import('../pages/Startseite');
+    const html = renderToString(
+      <MemoryRouter initialEntries={['/']}>
+        <LocaleProvider><Startseite /></LocaleProvider>
+      </MemoryRouter>,
+    );
+    expect(html).toContain('Schweizer Recht, berechenbar.');
+    expect(html).toContain('>Rechner<');
+    expect(html).toContain('>Vorlagen<');
+    // entfernt: Suche, Filter, Tabs, Übersicht, Schnellzugriff, Stern
+    expect(html).not.toContain('Katalog filtern');
+    expect(html).not.toContain('role="tablist"');
+    expect(html).not.toContain('Übersicht');
+    expect(html).not.toContain('Schnellzugriff');
+    expect(html).not.toContain('als Favorit markieren');
+    // kein Rechtsgebiet-Schnitt (keine Gebiets-Disclosure-Sektionen)
+    expect(html).not.toContain('lc-sektion');
+    // geplant sichtbar gedämpft, ohne href
+    expect(html).toContain('In Vorbereitung');
+    // bleibende Blöcke
+    expect(html).toContain('Werkzeuge für die anwaltliche Praxis');
+    expect(html).toContain('So rechnet LexMetrik');
+    expect(html).toContain('Rechtlicher Hinweis');
+  });
+
+  it('Pro bleibt unverändert (Tabs + Gruppen + Schnellzugriff vorhanden)', () => {
+    const html = proHtml('/pro');
+    expect(html).toContain('role="tablist"');
+    expect(html).toContain('Schnellzugriff');
+    expect(html).toContain('Zivilrecht (materiell)');
+  });
+});

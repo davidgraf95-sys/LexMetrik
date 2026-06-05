@@ -60,7 +60,8 @@ export function ErbteilungForm() {
 
   const elternteil = (s: ElternStatus) =>
     s === 'keine_angabe' ? undefined : { lebt: s === 'lebt', stammNachkommen: s === 'vorverstorben_mit' };
-  const num = (s: string) => (s.trim() === '' ? undefined : Number(s));
+  // Transiente Tipp-Zustände («-», «.») nie als NaN weiterreichen (Bug-Check 5.6.2026)
+  const num = (s: string) => { const n = Number(s); return s.trim() === '' || !Number.isFinite(n) ? undefined : n; };
 
   const hatErste = kinderLebend > 0 || staemme.some((s) => s.enkel > 0);
 

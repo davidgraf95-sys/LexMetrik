@@ -170,7 +170,7 @@ export function LohnfortzahlungForm() {
         <Field label="Monatslohn brutto (CHF, optional)" hint="Für Betragsangabe; kein Einfluss auf Dauer">
           <BetragsFeld
             value={form.monatslohnBrutto != null ? String(form.monatslohnBrutto) : ''}
-            onChange={(v) => set('monatslohnBrutto', v ? Number(v) : undefined)}
+            onChange={(v) => set('monatslohnBrutto', Number.isFinite(Number(v)) && v ? Number(v) : undefined)}
             className={inputCls}
             placeholder="Leer = kein Betrag"
           />

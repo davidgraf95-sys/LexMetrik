@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ALLE_KARTEN } from '../lib/startseiteConfig';
-import { Katalog, SectionHead } from '../components/Katalog';
+import { SectionHead } from '../components/Katalog';
+import { RechnerKarte } from '../components/RechnerKarte';
+import { freeKartenSortiert } from '../lib/freeReihenfolge';
 
 // Free-Seite: zeigt nur die kostenlose Auswahl (tier 'free').
 // Der vollständige Katalog steht in Pro unter /pro.
@@ -43,32 +45,41 @@ function ProTeaser() {
 }
 
 export function Startseite() {
-  // Gliederung nach Rechtsgebiet mit Untergruppen Rechner/Vorlagen – der
-  // frühere Modus-Umschalter als Primärweiche ist damit abgelöst (Auftrag
-  // «Katalog-Ausbau» §4; beide Gruppen stehen unter jedem Gebiet).
-  const karten = ALLE_KARTEN.filter((k) => k.tier === 'free');
+  // Free-Kachelwand (Auftrag 5.6.2026): KEIN verkleinerter Katalog, sondern
+  // eine kuratierte, FLACHE Wand – kein Rechtsgebiet-Schnitt, keine Filter,
+  // keine Seitenleiste, kein Schnellzugriff. Genau zwei Blöcke
+  // (Rechner/Vorlagen) in FREE_REIHENFOLGE; Status trägt allein die Karte.
+  const sortiert = freeKartenSortiert();
+  const bloecke = [
+    { titel: 'Rechner', karten: sortiert.filter((k) => k.modus === 'rechner') },
+    { titel: 'Vorlagen', karten: sortiert.filter((k) => k.modus === 'vorlage') },
+  ].filter((b) => b.karten.length > 0);
 
   return (
     <div>
-      {/* HERO → KATALOG: bewusst kompakt (Entscheid 5.6.2026 – weniger
-          Scrollweg vor der ersten Karte). Determinismus-Claim genau einmal. */}
-      {/* Schlanker Einzeilen-Hero über die volle Inhaltsbreite (Entscheid
-          5.6.2026): Titel + Claim auf EINER Zeile, minimale Höhe – der
-          Katalog ist der Star. Auf Mobile darf der Claim umbrechen. */}
-      <section className="pt-3 sm:pt-4 pb-3 border-b border-line flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-0.5 sm:whitespace-nowrap">
-        <h1 className="font-display font-semibold text-ink-900 text-h3 shrink-0">
-          Schweizer Recht: berechnen und erstellen.
+      {/* Hero: kurzer Titel + umbruchsfähiger Claim (Neutext 5.6.2026 –
+          der frühere Einzeiler wurde auf mittleren Breiten abgeschnitten). */}
+      <section className="pt-4 pb-4 border-b border-line space-y-1">
+        <h1 className="font-display font-semibold text-ink-900 text-h3">
+          Schweizer Recht, berechenbar.
         </h1>
-        <p className="text-body-s text-ink-500 sm:truncate sm:min-w-0">
+        <p className="text-body-s text-ink-500 max-w-reading">
           Fristen, Beträge und Rechtsdokumente nach festen Regeln – jeder Schritt offengelegt, jede Norm verlinkt.
         </p>
       </section>
 
-      {/* Katalog als eigene Sektion */}
-      <section className="mt-5 sm:mt-6">
-        {/* Free: Werkzeuge zuerst (Tagerechner & Co. sind der häufigste Einstieg) */}
-        <Katalog karten={karten} filterArt gebieteZuerst={['Übergreifende Werkzeuge']} />
-      </section>
+      {/* Flache Kachelwand: zwei Blöcke, gleichwertiges Raster; geplante
+          Karten stehen gedämpft an ihrer kuratierten Position. */}
+      <div className="mt-6 space-y-10">
+        {bloecke.map((b) => (
+          <section key={b.titel} className="space-y-5">
+            <SectionHead>{b.titel}</SectionHead>
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(min(340px,100%),1fr))] gap-6">
+              {b.karten.map((k) => <RechnerKarte key={k.id} card={k} headingLevel="h3" />)}
+            </div>
+          </section>
+        ))}
+      </div>
 
       <div className="mt-12 space-y-12">
       <ProTeaser />
