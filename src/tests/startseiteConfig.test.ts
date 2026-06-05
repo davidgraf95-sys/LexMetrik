@@ -17,9 +17,17 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
     aktiv.forEach((k) => expect(k.norms.length, k.id).toBeGreaterThan(0));
   });
 
-  it('jede URL ist ein Fedlex-Direktlink im Format …/de#art_<nummer> (Unterstrich-Format für Buchstaben)', () => {
+  it('jede URL ist ein Fedlex-Direktlink: artikelgenauer Anker ODER Gesetzes-Seite (Normentreue-Fallback)', () => {
+    // Anker-los nur erlaubt, wenn die Pill ein GANZES Gesetz referenziert
+    // (Label ohne «Art.») — z. B. das Fristengesetz SR 173.110.3 beim
+    // Tagerechner (Auftrag 5.6.2026: Link auf die Gesetzes-Seite, bis ein
+    // Anker artikelgenau verifiziert und fachlich abgenommen ist).
     aktiv.flatMap((k) => k.norms).forEach((n) => {
-      expect(n.url, n.label).toMatch(/^https:\/\/www\.fedlex\.admin\.ch\/eli\/cc\/[\w/]+\/de#art_\d+(_[a-z])?$/);
+      if (/^Art\./.test(n.label)) {
+        expect(n.url, n.label).toMatch(/^https:\/\/www\.fedlex\.admin\.ch\/eli\/cc\/[\w/]+\/de#art_\d+(_[a-z])?$/);
+      } else {
+        expect(n.url, n.label).toMatch(/^https:\/\/www\.fedlex\.admin\.ch\/eli\/cc\/[\w/]+\/de$/);
+      }
     });
   });
 
