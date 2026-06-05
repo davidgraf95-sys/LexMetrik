@@ -39,7 +39,7 @@ nachweisbar ist; bis dahin keine 19a-Pille verdrahten.
 «**Entscheidvorschlag**» und gilt bis **CHF 10'000** (vorher Urteilsvorschlag/5'000);
 Art. 6 Abs. 4 lit. c erlaubt internationale Handelsgerichts-Zuständigkeit ab CHF 100'000
 mit Zustimmung. → Keine Schwellenwerte aus dem Gedächtnis verdrahten; Wortlaute in
-[normtexte-zpo-zustaendigkeit.md](normtexte-zpo-zustaendigkeit.md).
+[normtexte-zpo-zustaendigkeit.md](../normen/normtexte-zpo-zustaendigkeit.md).
 
 ## Externe amtliche Quellen (laufende Daten)
 

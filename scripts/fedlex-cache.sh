@@ -4,7 +4,7 @@
 # Reproduzierbare §7-Verifikation: lädt die konsolidierten Fassungen der von
 # LexMetrik verwendeten Gesetze nach /tmp (Caches überleben Neustarts nicht)
 # und prüft das Anker-Inventar. Konsolidierungsdaten = die im Quellen-Register
-# (bibliothek/quellen-register.md) dokumentierten, verifizierten Stände —
+# (bibliothek/register/quellen-register.md) dokumentierten, verifizierten Stände —
 # bei Rechtsänderungen dort UND hier nachführen.
 #
 # Aufruf:  bash scripts/fedlex-cache.sh

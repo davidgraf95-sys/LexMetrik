@@ -12,7 +12,7 @@ import type { SchlichtungsbehoerdeTyp } from '../lib/zustaendigkeit';
 // ein ehrliches «noch nicht erfasst» (§8/§13); nie raten.
 //
 // Pilot: BS (Stammdaten amtlich am Staatskalender BS verifiziert, 5.6.2026;
-// Recherche-Dossier für weitere Kantone: bibliothek/schlichtungsbehoerden-
+// Recherche-Dossier für weitere Kantone: bibliothek/behoerden/schlichtungsbehoerden-
 // kantone.md — Übernahme erst nach fachlicher Abnahme).
 
 export interface KantonZustaendigkeit {
