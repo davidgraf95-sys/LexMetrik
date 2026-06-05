@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 440 Tests in 23 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 451 Tests in 24 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -210,6 +210,19 @@ Wizards 1–3 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
 array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
 
 ## PDF-Rechenbericht (src/lib/pdf/)
+
+**Abend-Paket (5.6.2026):** Formulierungskonventionen (lib/konventionen.ts
+SSoT + Linter-Test über echte Textausgabe; — → – plattformweit, «5 %»,
+SG-Floskeln, Golden-Diff programmatisch als rein konventionell bewiesen).
+Free-KACHELWAND (flach, FREE_REIHENFOLGE, Hero neu «Schweizer Recht,
+berechenbar.»; Katalog.tsx pro-only). Versimplung: ui/Tabs + ui/
+SelectionGrid (14+3 Stellen entdoppelt, SSR-byte-identisch), chf()
+kanonisch, tote Katalog-Props raus (netto −175 Z.). Pro: Sektionen
+starten EINGEKLAPPT, Zivilprozess & Vollstreckung zuerst. KOMBINIERTER
+FRISTENRECHNER free (/rechner/tagerechner: Verfahrens-Tabs Allgemein/
+ZPO/SchKG → bestehende Forms; §4 unangetastet; Trennungs-Querschnitt-
+Test). Mobile-Check: Tabs-Overflow gefixt (overflow-x-auto), Grids
+mobil-Basis. PROJEKTBESCHRIEB.md neu geschrieben.
 
 **Pro-Katalog-Umbau (5.6.2026, Auftrag):** Tabs Verfügbar(17)/Gesamt(111)
 (?ansicht=, Default Verfügbar), juristische Obergruppen als Super-Trenner
