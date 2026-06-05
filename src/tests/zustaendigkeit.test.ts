@@ -228,3 +228,96 @@ describe('Zuständigkeit — Robustheit & Determinismus', () => {
     expect(e.annahmen.some((a) => a.includes('Art. 248'))).toBe(true);
   });
 });
+
+// ─── Ausbau 5.6.2026 (Regelwerk bibliothek/normen/zpo-zustaendigkeit-regelwerk.md) ───
+
+describe('Zuständigkeit — Ausbau: Delikt (Art. 36–38 ZPO)', () => {
+  const delikt = (patch: Partial<ZustaendigkeitInput> = {}): ZustaendigkeitInput => ({
+    streitsache: 'delikt', vermoegensrechtlich: true, streitwertCHF: 20_000, ...patch,
+  });
+  it('allgemein: vier Anknüpfungen inkl. Geschädigtenforum (Art. 36)', () => {
+    const r = bestimmeZustaendigkeit(delikt());
+    expect(r.oertlich.gerichtsstand).toContain('geschädigten');
+    expect(r.oertlich.gerichtsstand).toContain('Erfolgsort');
+    expect(r.oertlich.bindung).toBe('dispositiv');
+  });
+  it('Verkehrsunfall: Beklagtensitz oder Unfallort (Art. 38)', () => {
+    const r = bestimmeZustaendigkeit(delikt({ deliktUnterfall: 'verkehrsunfall' }));
+    expect(r.oertlich.gerichtsstand).toContain('Unfallort');
+  });
+  it('ungerechtfertigte vM: Anordnungsort (Art. 37)', () => {
+    const r = bestimmeZustaendigkeit(delikt({ deliktUnterfall: 'ungerechtfertigte_massnahme' }));
+    expect(r.oertlich.gerichtsstand).toContain('vorsorgliche Massnahme angeordnet');
+  });
+  it('Spezialforen-Warnung nur beim allgemeinen Unterfall', () => {
+    expect(bestimmeZustaendigkeit(delikt()).warnungen.some((w) => w.includes('Art. 38a'))).toBe(true);
+    expect(bestimmeZustaendigkeit(delikt({ deliktUnterfall: 'verkehrsunfall' })).warnungen.some((w) => w.includes('Art. 38a'))).toBe(false);
+  });
+});
+
+describe('Zuständigkeit — Ausbau: Persönlichkeit/Gewaltschutz (Art. 20 ZPO; 198 lit. abis)', () => {
+  it('Persönlichkeitsverletzung: Wahlforum, Schlichtung obligatorisch', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null, persoenlichkeitUnterfall: 'verletzung' });
+    expect(r.oertlich.gerichtsstand).toContain('einer der Parteien');
+    expect(r.schlichtung.obligatorisch).toBe(true);
+  });
+  it('Gewaltschutz: Schlichtung entfällt (lit. abis), vereinfacht streitwertunabhängig, Kostenfreiheits-Hinweis (114 lit. f)', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null, persoenlichkeitUnterfall: 'gewaltschutz' });
+    expect(r.schlichtung.obligatorisch).toBe(false);
+    expect(r.schlichtung.entfaelltGrund).toContain('abis');
+    expect(r.verfahrensart).toBe('vereinfacht');
+    expect(r.eingabeArt).toBe('klage_direkt');
+    expect(r.warnungen.some((w) => w.includes('Art. 114 lit. f'))).toBe(true);
+  });
+});
+
+describe('Zuständigkeit — Ausbau: Gesellschaft (Art. 40) und Art.-5-Materie', () => {
+  it('Verantwortlichkeitsklage: Beklagtensitz oder Sitz der Gesellschaft; HG-Weiche möglich', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'gesellschaft', vermoegensrechtlich: true, streitwertCHF: 200_000, geschaeftlicheTaetigkeit: true, beklagteImHR: true, klaegerImHR: true });
+    expect(r.oertlich.gerichtsstand).toContain('Sitz der Gesellschaft');
+    expect(r.weichen.some((w) => w.includes('Handelsgericht'))).toBe(true);
+  });
+  it('ip_wettbewerb: einzige kantonale Instanz — Schlichtung entfällt (199 III), ordentlich (243 III), Klage direkt, KEINE Direktklage-Weiche', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 500_000 });
+    expect(r.schlichtung.obligatorisch).toBe(false);
+    expect(r.schlichtung.entfaelltGrund).toContain('Art. 5');
+    expect(r.verfahrensart).toBe('ordentlich');
+    expect(r.eingabeArt).toBe('klage_direkt');
+    expect(r.weichen.some((w) => w.includes('obere Gericht'))).toBe(false);
+    expect(r.rechenweg.some((s) => s.beschreibung.includes('EINZIGE kantonale Instanz'))).toBe(true);
+  });
+});
+
+describe('Zuständigkeit — Ausbau: Vertrag (Art. 31), AVG (Art. 34 II), GSV (Art. 9/17/35), IPRG (Art. 2)', () => {
+  it('Forderung aus Vertrag: zusätzlich Ort der charakteristischen Leistung', () => {
+    const r = bestimmeZustaendigkeit(geld({ ausVertrag: true }));
+    expect(r.oertlich.gerichtsstand).toContain('charakteristische Leistung');
+    // ohne Flag: unverändert nur Beklagtensitz (Bestandsschutz)
+    expect(bestimmeZustaendigkeit(geld()).oertlich.gerichtsstand).toBe('Gericht am Wohnsitz/Sitz der beklagten Partei');
+  });
+  it('Personalverleih: Zusatzforum am Ort der Niederlassung des Verleihers', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 8_000, avgVerleih: true });
+    expect(r.oertlich.gerichtsstand).toContain('Art. 34 Abs. 2');
+  });
+  it('GSV bei zwingendem Forum (Scheidung) → Unwirksamkeits-Warnung', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'scheidung', vermoegensrechtlich: false, streitwertCHF: null, gerichtsstandsvereinbarung: true });
+    expect(r.warnungen.some((w) => w.includes('UNWIRKSAM'))).toBe(true);
+  });
+  it('GSV bei teilzwingendem Forum (Miete) → nur-nach-Streitentstehung-Warnung', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'miete_wohn_geschaeft', vermoegensrechtlich: true, streitwertCHF: 5_000, mieteUnterfall: 'sonstige', gerichtsstandsvereinbarung: true });
+    expect(r.warnungen.some((w) => w.includes('NACH Entstehung'))).toBe(true);
+  });
+  it('dispositives Forum ohne GSV → Art.-17/18-Weiche; mit GSV → Ausschliesslichkeits-Hinweis', () => {
+    expect(bestimmeZustaendigkeit(geld()).weichen.some((w) => w.includes('Art. 18'))).toBe(true);
+    expect(bestimmeZustaendigkeit(geld({ gerichtsstandsvereinbarung: true })).weichen.some((w) => w.includes('AUSSCHLIESSLICH'))).toBe(true);
+  });
+  it('Auslandsbezug → IPRG/LugÜ-Warnung (Art. 2)', () => {
+    const r = bestimmeZustaendigkeit(geld({ beklagteAuslandOderUnbekannt: true }));
+    expect(r.warnungen.some((w) => w.includes('LugÜ'))).toBe(true);
+  });
+  it('perpetuatio fori überall; Art.-63-Hinweis nur bei offenen Weichen', () => {
+    expect(bestimmeZustaendigkeit(geld()).weichen.some((w) => w.includes('perpetuatio'))).toBe(true);
+    expect(bestimmeZustaendigkeit(geld()).weichen.some((w) => w.includes('Art. 63'))).toBe(false);
+    expect(bestimmeZustaendigkeit(geld({ streitwertCHF: 150_000 })).weichen.some((w) => w.includes('Art. 63'))).toBe(true);
+  });
+});

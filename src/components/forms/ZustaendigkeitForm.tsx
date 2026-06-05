@@ -12,6 +12,7 @@ import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import {
   zustaendigkeitErgebnis, ZPO_SCHWELLEN,
   type ZustaendigkeitInput, type Streitsache, type MieteUnterfall, type Rechtsweg,
+  type DeliktUnterfall, type PersoenlichkeitUnterfall,
 } from '../../lib/zustaendigkeit';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
@@ -42,8 +43,25 @@ const STREITSACHEN: { code: Streitsache; label: string; sub: string }[] = [
   { code: 'geldforderung', label: 'Vertrag / Geldforderung', sub: 'Rechnung, Darlehen, Kauf u. a.' },
   { code: 'miete_wohn_geschaeft', label: 'Miete & Pacht', sub: 'Wohn-/Geschäftsräume inkl. Kündigungsschutz' },
   { code: 'arbeit', label: 'Arbeitsrecht', sub: 'Forderungen aus dem Arbeitsverhältnis' },
+  { code: 'delikt', label: 'Schadenersatz (Delikt)', sub: 'Unerlaubte Handlung, Verkehrsunfall (Art. 36–38 ZPO)' },
+  { code: 'persoenlichkeit', label: 'Persönlichkeit & Datenschutz', sub: 'Verletzung, Gegendarstellung, DSG, Gewaltschutz (Art. 20 ZPO)' },
   { code: 'scheidung', label: 'Scheidung', sub: 'Gemeinsames Begehren oder Klage (Art. 274 ff. ZPO)' },
   { code: 'erbrecht', label: 'Erbrecht', sub: 'Erbrechtliche Klagen (Herabsetzung, Ungültigkeit, Teilung)' },
+  { code: 'gesellschaft', label: 'Gesellschaftsrecht', sub: 'Verantwortlichkeitsklagen (Art. 40 ZPO)' },
+  { code: 'ip_wettbewerb', label: 'IP & Wettbewerb', sub: 'Immaterialgüter, Kartell, Firma, UWG — einzige Instanz (Art. 5 ZPO)' },
+];
+
+const DELIKT_UNTERFAELLE: { code: DeliktUnterfall; label: string }[] = [
+  { code: 'allgemein', label: 'Allgemeine unerlaubte Handlung (Art. 36 ZPO)' },
+  { code: 'verkehrsunfall', label: 'Motorfahrzeug-/Fahrradunfall (Art. 38 ZPO)' },
+  { code: 'ungerechtfertigte_massnahme', label: 'Schadenersatz wegen ungerechtfertigter vorsorglicher Massnahme (Art. 37 ZPO)' },
+];
+
+const PERSOENLICHKEIT_UNTERFAELLE: { code: PersoenlichkeitUnterfall; label: string }[] = [
+  { code: 'verletzung', label: 'Persönlichkeitsverletzung (Art. 28 ZGB)' },
+  { code: 'gegendarstellung', label: 'Gegendarstellung' },
+  { code: 'datenschutz', label: 'Datenschutz (DSG)' },
+  { code: 'gewaltschutz', label: 'Gewalt, Drohungen, Nachstellungen (Art. 28b/28c ZGB)' },
 ];
 
 const MIETE_UNTERFAELLE: { code: MieteUnterfall; label: string }[] = [
@@ -62,6 +80,10 @@ const ORT_LABEL: Record<Streitsache, string> = {
   arbeit: 'Wohnsitz/Sitz der beklagten Partei oder gewöhnlicher Arbeitsort',
   scheidung: 'Wohnsitz einer der Parteien',
   erbrecht: 'letzter Wohnsitz der Erblasserin/des Erblassers',
+  delikt: 'Wohnsitz/Sitz einer Partei, Handlungs- oder Erfolgsort',
+  persoenlichkeit: 'Wohnsitz/Sitz einer der Parteien',
+  gesellschaft: 'Wohnsitz/Sitz der beklagten Partei oder Sitz der Gesellschaft',
+  ip_wettbewerb: 'Wohnsitz/Sitz der beklagten Partei (bzw. Handlungs-/Erfolgsort)',
 };
 
 type Instanz = 'einleitung' | 'rechtsmittel';
@@ -79,6 +101,12 @@ type State = {
   klaegerImHR: boolean;
   beklagteAuslandOderUnbekannt: boolean;
   widerklageOderGerichtlicheFrist: boolean;
+  // Ausbau 5.6.2026:
+  ausVertrag: boolean;
+  deliktUnterfall: DeliktUnterfall;
+  persoenlichkeitUnterfall: PersoenlichkeitUnterfall;
+  avgVerleih: boolean;
+  gerichtsstandsvereinbarung: boolean;
   gemeinde: string;
   kanton: Kanton | '';
   instanz: Instanz;
@@ -97,6 +125,11 @@ const DEFAULTS: State = {
   klaegerImHR: false,
   beklagteAuslandOderUnbekannt: false,
   widerklageOderGerichtlicheFrist: false,
+  ausVertrag: false,
+  deliktUnterfall: 'allgemein',
+  persoenlichkeitUnterfall: 'verletzung',
+  avgVerleih: false,
+  gerichtsstandsvereinbarung: false,
   gemeinde: '',
   kanton: '',
   instanz: 'einleitung',
@@ -131,6 +164,11 @@ export function ZustaendigkeitForm() {
     klaegerImHR: istGeld ? f.klaegerImHR : undefined,
     beklagteAuslandOderUnbekannt: istScheidung ? undefined : f.beklagteAuslandOderUnbekannt,
     widerklageOderGerichtlicheFrist: istScheidung ? undefined : f.widerklageOderGerichtlicheFrist,
+    ausVertrag: istGeld && !f.konsumentenvertrag ? f.ausVertrag : undefined,
+    deliktUnterfall: f.streitsache === 'delikt' ? f.deliktUnterfall : undefined,
+    persoenlichkeitUnterfall: f.streitsache === 'persoenlichkeit' ? f.persoenlichkeitUnterfall : undefined,
+    avgVerleih: istArbeit ? f.avgVerleih : undefined,
+    gerichtsstandsvereinbarung: istScheidung ? undefined : f.gerichtsstandsvereinbarung,
   };
 
   const ergebnis = (() => {
@@ -227,6 +265,20 @@ export function ZustaendigkeitForm() {
             </select>
           </Field>
         )}
+        {f.streitsache === 'delikt' && (
+          <Field label="Delikts-Unterfall" hint="Spezialforen (Art. 37/38) gehen dem allgemeinen Deliktsforum vor">
+            <select className={inputCls} value={f.deliktUnterfall} onChange={(e) => set('deliktUnterfall', e.target.value as DeliktUnterfall)}>
+              {DELIKT_UNTERFAELLE.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
+            </select>
+          </Field>
+        )}
+        {f.streitsache === 'persoenlichkeit' && (
+          <Field label="Unterfall" hint="Gewaltschutz: Schlichtung entfällt (Art. 198 lit. abis), vereinfacht streitwertunabhängig, gerichtskostenfrei (Art. 114 lit. f)">
+            <select className={inputCls} value={f.persoenlichkeitUnterfall} onChange={(e) => set('persoenlichkeitUnterfall', e.target.value as PersoenlichkeitUnterfall)}>
+              {PERSOENLICHKEIT_UNTERFAELLE.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
+            </select>
+          </Field>
+        )}
       </div>
 
       {/* 3 · Ort, Streitwert, Instanz */}
@@ -285,6 +337,22 @@ export function ZustaendigkeitForm() {
               <span>Konsumentenvertrag <span className="text-ink-500">(Leistung des üblichen Verbrauchs für persönliche/familiäre Bedürfnisse, Art. 32 ZPO)</span></span>
             </label>
           )}
+          {istGeld && !f.konsumentenvertrag && (
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <input type="checkbox" className="mt-0.5" checked={f.ausVertrag} onChange={(e) => set('ausVertrag', e.target.checked)} />
+              <span>Forderung aus Vertrag <span className="text-ink-500">(zusätzliches Forum am Ort der charakteristischen Leistung — der vertragstypprägenden, i. d. R. nicht der Geldleistung, Art. 31 ZPO)</span></span>
+            </label>
+          )}
+          {istArbeit && (
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <input type="checkbox" className="mt-0.5" checked={f.avgVerleih} onChange={(e) => set('avgVerleih', e.target.checked)} />
+              <span>Personalverleih/-vermittlung (AVG) <span className="text-ink-500">(zusätzliches Forum am Ort der Geschäftsniederlassung der verleihenden Person, Art. 34 Abs. 2 ZPO)</span></span>
+            </label>
+          )}
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" className="mt-0.5" checked={f.gerichtsstandsvereinbarung} onChange={(e) => set('gerichtsstandsvereinbarung', e.target.checked)} />
+            <span>Gerichtsstandsvereinbarung vorhanden <span className="text-ink-500">(Wirksamkeit hängt vom Bindungsgrad ab, Art. 9/17/35 ZPO)</span></span>
+          </label>
           {istGeld && f.konsumentenvertrag && (
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
               <input type="checkbox" className="mt-0.5" checked={f.klaegeristGeschuetzt} onChange={(e) => set('klaegeristGeschuetzt', e.target.checked)} />

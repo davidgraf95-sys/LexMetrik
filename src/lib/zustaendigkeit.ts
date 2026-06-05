@@ -29,6 +29,19 @@ import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/l
 // hier wird sie als offene Stelle + Warnung ausgewiesen. Ermessensfragen
 // (Handelsgericht, GSV) sind offengelegte WEICHEN, nie stille Subsumtion (§8).
 // Alle Norm-Pills verified:false bis zur fachlichen Abnahme (§13).
+//
+// AUSBAU (Anordnung David 5.6.2026, «komplett überarbeiten» auf Basis
+// bibliothek/normen/zpo-zustaendigkeit-regelwerk.md — Wortlaute am Cache
+// verifiziert): neue Streitsachen delikt (Art. 36–38) · persoenlichkeit
+// (Art. 20; Gewaltschutz-Unterfall: Art. 28b/28c ZGB → 198 lit. abis,
+// 243 Abs. 2 lit. b, 114 lit. f) · gesellschaft (Art. 40 Abs. 1) ·
+// ip_wettbewerb (Art. 5 — einzige kantonale Instanz, 199 Abs. 3, 243
+// Abs. 3); Vertrags-Forum Art. 31 (charakteristische Leistung ≠ Erfüllungs-
+// ort OR 74); AVG-Verleiher-Forum Art. 34 Abs. 2; Prorogations-/Einlassungs-
+// Weiche (Art. 17/18) je Bindungsgrad; IPRG/LugÜ-Weiche (Art. 2);
+// perpetuatio fori (Art. 64 Abs. 1 lit. b) und Art.-63-Rettung als Hinweise.
+// Alle BESTEHENDEN Eingabe-Kombinationen liefern unverändert dieselben
+// Ergebnisse (Erweiterung über neue Felder/Streitsachen; Tests unberührt).
 
 export const ZPO_SCHWELLEN = {
   VEREINFACHT: 30_000,        // Art. 243 Abs. 1 ZPO (bis und mit)
@@ -44,7 +57,13 @@ export const ZPO_SCHWELLEN = {
 // Engines (§4 — KEINE Fusion in diese ZPO-Engine).
 export type Rechtsweg = 'zivil' | 'schkg' | 'straf' | 'verwaltung';
 
-export type Streitsache = 'geldforderung' | 'miete_wohn_geschaeft' | 'arbeit' | 'scheidung' | 'erbrecht';
+export type Streitsache =
+  | 'geldforderung' | 'miete_wohn_geschaeft' | 'arbeit' | 'scheidung' | 'erbrecht'
+  // Ausbau 5.6.2026 (Regelwerk):
+  | 'delikt'           // unerlaubte Handlung, Art. 36–38 ZPO
+  | 'persoenlichkeit'  // Persönlichkeit/Datenschutz/Gegendarstellung, Art. 20 ZPO
+  | 'gesellschaft'     // gesellschaftsrechtliche Verantwortlichkeit, Art. 40 Abs. 1 ZPO
+  | 'ip_wettbewerb';   // Art. 5 ZPO: IP/Kartell/Firma/UWG — einzige kantonale Instanz
 export type Verfahrensart = 'vereinfacht' | 'ordentlich' | 'scheidungsverfahren';
 export type SchlichtungsbehoerdeTyp = 'ordentlich' | 'paritaetisch_miete' | 'paritaetisch_glg';
 /** Art der einleitenden Eingabe — steuert den Vorlagen-Verweis (Auftrag §8). */
@@ -60,6 +79,12 @@ const MIETE_SCHUTZ: ReadonlySet<MieteUnterfall> = new Set([
   'kuendigungsschutz', 'erstreckung', 'mietzins_anfechtung', 'hinterlegung',
 ]);
 
+/** Delikts-Unterfall (Art. 36–38 ZPO): steuert Spezialforen. */
+export type DeliktUnterfall = 'allgemein' | 'verkehrsunfall' | 'ungerechtfertigte_massnahme';
+
+/** Persönlichkeits-Unterfall (Art. 20 ZPO; Gewaltschutz = Art. 28b/28c ZGB). */
+export type PersoenlichkeitUnterfall = 'verletzung' | 'gegendarstellung' | 'datenschutz' | 'gewaltschutz';
+
 export interface ZustaendigkeitInput {
   streitsache: Streitsache;
   vermoegensrechtlich: boolean;          // false = nicht vermögensrechtlich (Streitwert irrelevant)
@@ -71,8 +96,14 @@ export interface ZustaendigkeitInput {
   geschaeftlicheTaetigkeit?: boolean;    // Art. 6 Abs. 2 lit. a (Handelsgericht-Weiche)
   beklagteImHR?: boolean;                // Art. 6 Abs. 2 lit. c
   klaegerImHR?: boolean;                 // Art. 6 Abs. 2 lit. c
-  beklagteAuslandOderUnbekannt?: boolean;// Art. 199 Abs. 2 lit. a/b
+  beklagteAuslandOderUnbekannt?: boolean;// Art. 199 Abs. 2 lit. a/b; löst zudem die IPRG-Weiche aus (Art. 2)
   widerklageOderGerichtlicheFrist?: boolean; // Art. 198 lit. g/h (Schlichtung entfällt)
+  // Ausbau 5.6.2026 (alle optional — Default erhält das bisherige Verhalten):
+  ausVertrag?: boolean;                  // geldforderung: Forderung aus Vertrag → Art. 31 (charakteristische Leistung)
+  deliktUnterfall?: DeliktUnterfall;     // nur bei delikt
+  persoenlichkeitUnterfall?: PersoenlichkeitUnterfall; // nur bei persoenlichkeit
+  avgVerleih?: boolean;                  // arbeit: Personalverleih/-vermittlung → Zusatzforum Art. 34 Abs. 2
+  gerichtsstandsvereinbarung?: boolean;  // Parteien haben eine GSV (Art. 17) — Wirksamkeit je Bindungsgrad
 }
 
 export interface ZustaendigkeitErgebnis {
@@ -110,6 +141,18 @@ const N_4: Normverweis = { artikel: 'Art. 4 ZPO', bemerkung: 'Sachliche/funktion
 const N_23: Normverweis = { artikel: 'Art. 23 ZPO', bemerkung: 'Eherechtliche Gesuche/Klagen — Wohnsitz einer Partei, zwingend' };
 const N_28: Normverweis = { artikel: 'Art. 28 ZPO', bemerkung: 'Erbrechtliche Klagen — letzter Wohnsitz der Erblasserin/des Erblassers' };
 const N_274: Normverweis = { artikel: 'Art. 274 ZPO', bemerkung: 'Einleitung: gemeinsames Scheidungsbegehren oder Scheidungsklage' };
+// Ausbau 5.6.2026 (Regelwerk):
+const N_31: Normverweis = { artikel: 'Art. 31 ZPO', bemerkung: 'Vertrag — Beklagtensitz oder Ort der charakteristischen Leistung' };
+const N_36: Normverweis = { artikel: 'Art. 36 ZPO', bemerkung: 'Unerlaubte Handlung — Geschädigten-/Beklagtensitz, Handlungs- oder Erfolgsort' };
+const N_37: Normverweis = { artikel: 'Art. 37 ZPO', bemerkung: 'Schadenersatz bei ungerechtfertigten vorsorglichen Massnahmen' };
+const N_38: Normverweis = { artikel: 'Art. 38 ZPO', bemerkung: 'Motorfahrzeug-/Fahrradunfälle — Beklagtensitz oder Unfallort' };
+const N_20: Normverweis = { artikel: 'Art. 20 ZPO', bemerkung: 'Persönlichkeits-/Datenschutz — Wohnsitz/Sitz einer der Parteien' };
+const N_40: Normverweis = { artikel: 'Art. 40 ZPO', bemerkung: 'Gesellschaftsrechtliche Verantwortlichkeit — Beklagtensitz oder Sitz der Gesellschaft' };
+const N_5: Normverweis = { artikel: 'Art. 5 ZPO', bemerkung: 'Einzige kantonale Instanz (IP, Kartell, Firma, UWG > 30 000, …)' };
+const N_17: Normverweis = { artikel: 'Art. 17 ZPO', bemerkung: 'Gerichtsstandsvereinbarung (Schrift-/Textform; im Zweifel ausschliesslich)' };
+const N_18: Normverweis = { artikel: 'Art. 18 ZPO', bemerkung: 'Einlassung begründet die Zuständigkeit des angerufenen Gerichts' };
+const N_2: Normverweis = { artikel: 'Art. 2 ZPO', bemerkung: 'Vorbehalt Staatsverträge (LugÜ) und IPRG bei internationalen Verhältnissen' };
+const N_64: Normverweis = { artikel: 'Art. 64 ZPO', bemerkung: 'Perpetuatio fori — örtliche Zuständigkeit bleibt ab Rechtshängigkeit erhalten' };
 
 const ungueltig = (sw: number | null) => sw !== null && (!Number.isFinite(sw) || sw < 0);
 
@@ -127,6 +170,9 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   const istScheidung = input.streitsache === 'scheidung';
   const mieteSchutz = istMiete && MIETE_SCHUTZ.has(input.mieteUnterfall ?? 'sonstige');
   const streitwertunabhaengigVereinfacht = mieteSchutz || !!input.glgBetroffen;
+
+  const istGewaltschutz = input.streitsache === 'persoenlichkeit' && input.persoenlichkeitUnterfall === 'gewaltschutz';
+  const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'; // Art. 5 ZPO
 
   const rechenweg: Rechenschritt[] = [];
   const warnungen: string[] = [];
@@ -162,10 +208,46 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       : 'Gericht am Wohnsitz der beklagten Konsumentin/des Konsumenten';
     bindung = 'teilzwingend'; // Art. 35 Abs. 1 lit. a
     oertlichNormen = [N_32, N_35];
+  } else if (input.streitsache === 'delikt') {
+    // Art. 36: vier alternative Anknüpfungen (inkl. forum actoris); Spezialforen 37/38.
+    const u = input.deliktUnterfall ?? 'allgemein';
+    if (u === 'verkehrsunfall') {
+      gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei oder am Unfallort (Wahl der klagenden Partei)';
+      oertlichNormen = [N_38];
+    } else if (u === 'ungerechtfertigte_massnahme') {
+      gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei oder am Ort, an dem die vorsorgliche Massnahme angeordnet wurde';
+      oertlichNormen = [N_37];
+    } else {
+      gerichtsstand = 'Gericht am Wohnsitz/Sitz der geschädigten oder der beklagten Partei, am Handlungs- oder am Erfolgsort (Wahl der klagenden Partei)';
+      oertlichNormen = [N_36];
+    }
+  } else if (input.streitsache === 'persoenlichkeit') {
+    // Art. 20: Wahlgerichtsstand am Wohnsitz/Sitz EINER der Parteien.
+    gerichtsstand = 'Gericht am Wohnsitz/Sitz einer der Parteien (Wahl der klagenden Partei)';
+    oertlichNormen = [N_20];
+  } else if (input.streitsache === 'gesellschaft') {
+    // Art. 40 Abs. 1: Verantwortlichkeitsklagen.
+    gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei oder am Sitz der Gesellschaft (Wahl der klagenden Partei)';
+    oertlichNormen = [N_40];
+  } else if (input.streitsache === 'ip_wettbewerb') {
+    // Art. 5: örtlich gelten die allgemeinen Regeln (10/36); SACHLICH einzige
+    // kantonale Instanz — die Weiche folgt in Schritt 2.
+    gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei; bei Verletzungsklagen zusätzlich Handlungs-/Erfolgsort (Art. 36)';
+    oertlichNormen = [N_10, N_36];
+  } else if (input.ausVertrag) {
+    // Art. 31: Beklagtensitz ODER Ort der charakteristischen Leistung. Die
+    // charakteristische Leistung ist die vertragstypprägende (i. d. R. NICHT
+    // die Geld-)Leistung — kein Klägerforum am eigenen Sitz für Geldschulden.
+    gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei oder am Ort, an dem die charakteristische Leistung zu erbringen ist (Wahl der klagenden Partei)';
+    oertlichNormen = [N_31];
   } else {
     // dispositiv: Gerichtsstandsvereinbarung möglich
     gerichtsstand = 'Gericht am Wohnsitz/Sitz der beklagten Partei';
     oertlichNormen = [N_10];
+  }
+  // Arbeit mit Personalverleih/-vermittlung: Zusatzforum Art. 34 Abs. 2.
+  if (input.streitsache === 'arbeit' && input.avgVerleih) {
+    gerichtsstand += '; bei Personalverleih/-vermittlung zusätzlich am Ort der Geschäftsniederlassung der verleihenden/vermittelnden Person (Art. 34 Abs. 2 ZPO)';
   }
   const bindungText = bindung === 'zwingend'
     ? ' (zwingend — weder Vereinbarung noch Einlassung möglich, Art. 9 ZPO)'
@@ -176,13 +258,28 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   if (bindung === 'teilzwingend') {
     weichen.push('Gerichtsstandsvereinbarung nur NACH Entstehung der Streitigkeit gültig — die geschützte Partei kann zum Voraus nicht verzichten (Art. 35 ZPO).');
   }
+  // Prorogation/Einlassung (Art. 17/18) — Wirkung hängt am Bindungsgrad.
+  if (input.gerichtsstandsvereinbarung) {
+    if (bindung === 'zwingend') {
+      warnungen.push('Die Gerichtsstandsvereinbarung ist UNWIRKSAM: Vom zwingenden Gerichtsstand können die Parteien nicht abweichen (Art. 9 Abs. 2 ZPO); auch Einlassung heilt nicht.');
+    } else if (bindung === 'teilzwingend') {
+      warnungen.push('Gerichtsstandsvereinbarung nur wirksam, wenn sie NACH Entstehung der Streitigkeit geschlossen wurde (Art. 35 Abs. 2 ZPO) — ein Vorausverzicht der geschützten Partei ist unwirksam.');
+    } else {
+      weichen.push('Gerichtsstandsvereinbarung (Art. 17 ZPO): schriftlich oder in Textform; im Zweifel AUSSCHLIESSLICH — dann ist nur das vereinbarte Gericht zuständig.');
+    }
+  } else if (bindung === 'dispositiv') {
+    weichen.push('Dispositiver Gerichtsstand: Abweichung durch Gerichtsstandsvereinbarung (Art. 17 ZPO, Schrift-/Textform) oder durch vorbehaltlose Einlassung der beklagten Partei (Art. 18 ZPO) möglich.');
+  }
 
   // ── 2 · Sachliche Zuständigkeit (Art. 4/5/6/8 ZPO — Kantonsschicht) ────────
   // Handelsgericht: nur Geldforderung (Miete & Arbeit sind nach Art. 6 Abs. 2
   // lit. d ausgeschlossen); nur in Kantonen mit Handelsgericht.
   let hgWeiche = false;
   let direktklageWeiche = false;
-  if (input.streitsache === 'geldforderung' && input.geschaeftlicheTaetigkeit && input.beklagteImHR) {
+  // HG-Weiche: Geldforderung wie bisher; gesellschaftsrechtliche Verantwort-
+  // lichkeit zusätzlich (Art. 6 Abs. 4 lit. b — kantonale Erweiterung möglich).
+  const hgFaehig = input.streitsache === 'geldforderung' || input.streitsache === 'gesellschaft';
+  if (hgFaehig && input.geschaeftlicheTaetigkeit && input.beklagteImHR) {
     const swOk = sw === null || sw > ZPO_SCHWELLEN.HANDELSGERICHT_MIN;
     if (swOk && input.klaegerImHR) {
       hgWeiche = true;
@@ -192,20 +289,33 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       weichen.push('Nur die beklagte Partei ist im Handelsregister eingetragen: Die klagende Partei kann zwischen Handelsgericht und ordentlichem Gericht wählen (Art. 6 Abs. 3 ZPO; nur HG-Kantone).');
     }
   }
-  if (sw !== null && sw >= ZPO_SCHWELLEN.DIREKTKLAGE_MIN) {
+  if (!istEinzigeInstanz && sw !== null && sw >= ZPO_SCHWELLEN.DIREKTKLAGE_MIN) {
     direktklageWeiche = true;
     weichen.push(`Direkte Klage ans obere Gericht möglich (Streitwert ≥ CHF ${ZPO_SCHWELLEN.DIREKTKLAGE_MIN.toLocaleString('de-CH')}, Zustimmung der beklagten Partei, Art. 8 ZPO). Dann Schlichtung entfällt (Art. 199 Abs. 3 ZPO).`);
   }
-  rechenweg.push({
-    beschreibung: `2 · Sachliche Zuständigkeit: ordentliches erstinstanzliches Zivilgericht; Organisation und Streitwertgrenzen regelt das kantonale Recht${hgWeiche ? ' — Handelsgerichts-Weiche offen (Art. 6 ZPO)' : ''}${direktklageWeiche ? ' — Direktklage-Weiche offen (Art. 8 ZPO)' : ''}`,
-    zwischenergebnis: hgWeiche || direktklageWeiche ? 'ordentliches Gericht (Weichen offen)' : 'ordentliches Gericht',
-    normen: [N_4],
-  });
+  if (istEinzigeInstanz) {
+    rechenweg.push({
+      beschreibung: '2 · Sachliche Zuständigkeit: EINZIGE kantonale Instanz — das kantonale Recht bezeichnet das zuständige Gericht (in HG-Kantonen oft das Handelsgericht, Art. 6 Abs. 4 lit. a ZPO); kein zweiter kantonaler Instanzenzug',
+      zwischenergebnis: 'einzige kantonale Instanz (Art. 5 ZPO)',
+      normen: [N_5, N_4],
+    });
+    weichen.push('Art.-5-Materie (z. B. UWG nur bei Streitwert über CHF 30 000 — sonst ordentlicher Weg): Einordnung der Materie unter den Katalog von Art. 5 Abs. 1 lit. a–i ZPO prüfen.');
+  } else {
+    rechenweg.push({
+      beschreibung: `2 · Sachliche Zuständigkeit: ordentliches erstinstanzliches Zivilgericht; Organisation und Streitwertgrenzen regelt das kantonale Recht${hgWeiche ? ' — Handelsgerichts-Weiche offen (Art. 6 ZPO)' : ''}${direktklageWeiche ? ' — Direktklage-Weiche offen (Art. 8 ZPO)' : ''}`,
+      zwischenergebnis: hgWeiche || direktklageWeiche ? 'ordentliches Gericht (Weichen offen)' : 'ordentliches Gericht',
+      normen: [N_4],
+    });
+  }
 
   // ── 3 · Funktionell: Schlichtungspflicht (Art. 197–199 ZPO) ────────────────
   let entfaelltGrund: string | null = null;
   if (istScheidung) {
     entfaelltGrund = 'Scheidungsverfahren (Art. 198 lit. c ZPO)';
+  } else if (istGewaltschutz) {
+    entfaelltGrund = 'Klagen wegen Gewalt, Drohungen oder Nachstellungen bzw. elektronischer Überwachung (Art. 198 lit. abis ZPO)';
+  } else if (istEinzigeInstanz) {
+    entfaelltGrund = 'Einzige kantonale Instanz nach Art. 5 ZPO — Klage direkt beim Gericht (Art. 199 Abs. 3 ZPO)';
   } else if (input.widerklageOderGerichtlicheFrist) {
     entfaelltGrund = 'Widerklage/Hauptintervention bzw. gerichtlich gesetzte Klagefrist (Art. 198 lit. g/h ZPO)';
   }
@@ -264,6 +374,14 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   if (istScheidung) {
     verfahrensart = 'scheidungsverfahren';
     vGrund = 'Scheidung → eigenes Scheidungsverfahren (Einleitung durch gemeinsames Begehren oder Klage, Art. 274 ff. ZPO)';
+  } else if (istEinzigeInstanz) {
+    // Art. 243 Abs. 3: vor der einzigen kantonalen Instanz (Art. 5) findet
+    // das vereinfachte Verfahren keine Anwendung.
+    verfahrensart = 'ordentlich';
+    vGrund = 'Einzige kantonale Instanz (Art. 5 ZPO) → ordentliches Verfahren; das vereinfachte Verfahren findet dort keine Anwendung (Art. 243 Abs. 3 ZPO)';
+  } else if (istGewaltschutz) {
+    verfahrensart = 'vereinfacht';
+    vGrund = 'Gewalt/Drohungen/Nachstellungen bzw. elektronische Überwachung (Art. 28b/28c ZGB) → vereinfacht ohne Rücksicht auf den Streitwert (Art. 243 Abs. 2 lit. b ZPO)';
   } else if (streitwertunabhaengigVereinfacht) {
     verfahrensart = 'vereinfacht';
     vGrund = mieteSchutz
@@ -302,6 +420,22 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   if (!input.vermoegensrechtlich) {
     warnungen.push('Nicht vermögensrechtliche Streitigkeit: streitwertabhängige Schwellen (vereinfachtes Verfahren, Entscheid/Entscheidvorschlag, Verzicht) sind nicht anwendbar.');
   }
+  // IPRG/LugÜ-Weiche (Art. 2 ZPO): bei Auslandsbezug gelten die ZPO-Gerichts-
+  // stände NICHT — Staatsverträge (insb. LugÜ) und das IPRG gehen vor.
+  if (input.beklagteAuslandOderUnbekannt) {
+    warnungen.push('AUSLANDSBEZUG: Die örtlichen ZPO-Gerichtsstände gelten nur im Binnenverhältnis — bei internationalen Sachverhalten bestimmen Staatsverträge (insb. LugÜ) und das IPRG die Zuständigkeit (Art. 2 ZPO). Dieses Ergebnis ist dann NICHT massgeblich.');
+  }
+  if (istGewaltschutz) {
+    warnungen.push('Im Entscheidverfahren werden keine Gerichtskosten gesprochen (Art. 114 lit. f ZPO); die Parteientschädigung bleibt vorbehalten.');
+  }
+  if (input.streitsache === 'delikt' && (input.deliktUnterfall ?? 'allgemein') === 'allgemein') {
+    warnungen.push('Spezialforen gehen vor: Motorfahrzeug-/Fahrradunfälle (Art. 38), ungerechtfertigte vorsorgliche Massnahmen (Art. 37), Nuklearschäden (Art. 38a — zwingend am Ereigniskanton); Adhäsionsklagen im Strafverfahren bleiben dem Strafgericht vorbehalten (Art. 39 ZPO).');
+  }
+  // Verfahrensrechtliche Sicherungs-Hinweise (Regelwerk Teil 3):
+  weichen.push('Ab Rechtshängigkeit (Einreichung Schlichtungsgesuch bzw. Klage, Art. 62 ZPO) bleibt die örtliche Zuständigkeit erhalten, auch wenn sich die Anknüpfung später ändert (perpetuatio fori, Art. 64 Abs. 1 lit. b ZPO).');
+  if (hgWeiche || direktklageWeiche || istEinzigeInstanz) {
+    weichen.push('Bei Nichteintreten wegen Unzuständigkeit oder falscher Verfahrensart: Neueinreichung innert eines Monats wahrt das ursprüngliche Rechtshängigkeitsdatum (Art. 63 ZPO; seit 1.1.2025 auch bei amtlicher Weiterleitung nach Art. 143 Abs. 1bis ZPO).');
+  }
 
   // ── 5 · Art der einleitenden Eingabe (→ Vorlagen-Verweis, Auftrag §8) ──────
   const eingabeArt: EingabeArt = istScheidung
@@ -322,7 +456,11 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
     ...(istScheidung ? [N_274] : [N_243]), obligatorisch ? N_197 : N_198,
     ...(obligatorisch && (verzichtGemeinsam || verzichtEinseitig) ? [N_199] : []),
     ...(obligatorisch && behoerdeTyp !== 'ordentlich' ? [N_200] : []),
-    ...oertlichNormen, N_4,
+    ...oertlichNormen,
+    ...(istEinzigeInstanz ? [N_5] : []),
+    ...(input.gerichtsstandsvereinbarung ? [N_17, N_18] : []),
+    ...(input.beklagteAuslandOderUnbekannt ? [N_2] : []),
+    N_64, N_4,
   ];
 
   return {
