@@ -364,7 +364,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     rechtsbereich: 'straf',
     title: 'Strafantragsfrist',
     description: 'Frist zur Stellung des Strafantrags bei Antragsdelikten.',
-    status: 'geplant', norms: [],
+    status: 'geplant', norms: [], related: ['strafanzeige', 'strafantrag-vorlage'],
   },
   'straf-verjaehrung': {
     id: 'straf-verjaehrung', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
@@ -552,6 +552,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Bundesgerichtsgebühren',
     description: 'Gerichtsgebühren der eidgenössischen Gerichte nach Streitwert und Verfahrensart.',
     status: 'geplant', norms: [],
+    related: ['bgg-fristen', 'prozesskosten'],
     keywords: ['BGer', 'BVGer', 'BStGer', 'BPatGer', 'Gerichtsgebühren'],
   },
   kostenvorschuss: {
@@ -560,6 +561,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Kostenvorschuss',
     description: 'Vorschuss auf die Gerichtskosten im Zivilprozess.',
     status: 'geplant', norms: [],
+    related: ['prozesskosten', 'zpo-fristen'],
     keywords: ['Vorschuss', 'Gerichtskosten'],
   },
   'parteientschaedigung-sicherheit': {
@@ -568,6 +570,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Sicherheit für die Parteientschädigung',
     description: 'Sicherstellung der Parteientschädigung bei besonderen Risiken auf Klägerseite.',
     status: 'geplant', norms: [],
+    related: ['prozesskosten'],
     keywords: ['Kaution', 'Sicherstellung', 'Parteientschädigung'],
   },
   rechtsmittelpruefung: {
@@ -576,6 +579,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Rechtsmittelprüfung',
     description: 'Welches Rechtsmittel gegen welchen Entscheid offensteht — Weg, Instanz und Anforderungen.',
     status: 'geplant', norms: [],
+    related: ['zpo-fristen', 'bgg-fristen'],
     keywords: ['Berufung', 'Beschwerde', 'Revision', 'Rechtsmittel'],
   },
 
@@ -586,6 +590,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Ferienanspruch',
     description: 'Ferienguthaben nach Alter, Pensum und Ein- oder Austritt im Dienstjahr.',
     status: 'geplant', norms: [],
+    related: ['ferienkuerzung', 'lohnfortzahlung'],
     keywords: ['Ferien', 'Ferienguthaben', 'pro rata'],
   },
   ferienkuerzung: {
@@ -594,6 +599,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Ferienkürzung',
     description: 'Kürzung des Ferienanspruchs bei längeren Absenzen.',
     status: 'geplant', norms: [],
+    related: ['ferienanspruch', 'lohnfortzahlung'],
     keywords: ['Ferien', 'Kürzung', 'Absenz', 'Krankheit'],
   },
   'dreizehnter-monatslohn': {
@@ -602,6 +608,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Anteiliger 13. Monatslohn',
     description: 'Pro-rata-Anteil des 13. Monatslohns bei unterjährigem Ein- oder Austritt.',
     status: 'geplant', norms: [],
+    related: ['lohnfortzahlung'],
     keywords: ['13. Monatslohn', 'pro rata', 'Austritt'],
   },
   'ueberstunden-zuschlag': {
@@ -610,6 +617,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Überstunden- & Überzeitzuschlag',
     description: 'Vergütung von Überstunden und Überzeit samt Zuschlägen.',
     status: 'geplant', norms: [],
+    related: ['arbeit-entschaedigung'],
     keywords: ['Überstunden', 'Überzeit', 'Zuschlag', 'Kompensation'],
   },
 
@@ -620,6 +628,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Schadenszins',
     description: 'Zins auf Schadenersatzforderungen vom Schadenseintritt bis zur Zahlung.',
     status: 'geplant', norms: [],
+    related: ['verzugszins', 'verjaehrung'],
     keywords: ['Schadenszins', 'Schadenersatz', 'Zins'],
   },
   'widerruf-konsum': {
@@ -628,6 +637,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Widerrufsrechte (Konsum)',
     description: 'Widerrufsfristen bei Konsumgeschäften — Beginn, Dauer und Form.',
     status: 'geplant', norms: [],
+    related: ['verjaehrung'],
     keywords: ['Widerruf', 'Konsumkredit', 'Haustürgeschäft'],
   },
 
@@ -638,6 +648,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Güterrechtliche Auseinandersetzung / Vorschlag',
     description: 'Aufteilung von Errungenschaft und Vorschlag bei Auflösung des Güterstands.',
     status: 'geplant', norms: [],
+    related: ['vorsorgeausgleich', 'erb-ausgleichung'],
     keywords: ['Güterrecht', 'Errungenschaft', 'Vorschlag'],
   },
 
@@ -648,6 +659,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Beteiligungs- & Stimmrechtsquoten',
     description: 'Kapital- und Stimmenanteile sowie Schwellen für Beschlüsse und Rechte.',
     status: 'geplant', norms: [],
+    related: ['gv-vr-beschluss'],
     keywords: ['Quorum', 'Stimmrecht', 'Beteiligung', 'Schwelle'],
   },
   liberierungsgrad: {
@@ -656,6 +668,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Liberierungsgrad',
     description: 'Einbezahltes Kapital im Verhältnis zum Nennkapital.',
     status: 'geplant', norms: [],
+    related: ['kapitalerhoehung'],
     keywords: ['Liberierung', 'Aktienkapital', 'Stammkapital'],
   },
   kapitalverlust: {
@@ -664,6 +677,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Kapitalverlust',
     description: 'Feststellung eines Kapitalverlusts und der daran geknüpften Handlungspflichten.',
     status: 'geplant', norms: [],
+    related: ['ueberschuldung'],
     keywords: ['Kapitalverlust', 'Sanierung', 'Aktienrecht', 'GmbH'],
   },
   ueberschuldung: {
@@ -672,6 +686,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Überschuldung',
     description: 'Prüfung der Überschuldung und der Pflichten des Verwaltungsrats.',
     status: 'geplant', norms: [],
+    related: ['kapitalverlust'],
     keywords: ['Überschuldung', 'Benachrichtigung', 'Bilanz'],
   },
   kapitalerhoehung: {
@@ -680,6 +695,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Kapitalerhöhung',
     description: 'Arten und Schritte der Kapitalerhöhung mit den massgebenden Quoten.',
     status: 'geplant', norms: [],
+    related: ['liberierungsgrad', 'statuten'],
     keywords: ['Kapitalerhöhung', 'Bezugsrecht'],
   },
 
@@ -690,6 +706,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Haftfristen',
     description: 'Fristen rund um Untersuchungs- und Sicherheitshaft.',
     status: 'geplant', norms: [],
+    related: ['strafverfahren'],
     keywords: ['Haft', 'Untersuchungshaft', 'Haftverlängerung'],
   },
   'straf-zustaendigkeit': {
@@ -698,6 +715,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Örtliche Zuständigkeit im Strafverfahren',
     description: 'Gerichtsstand im Strafverfahren nach Tatort und Beteiligten.',
     status: 'geplant', norms: [],
+    related: ['strafverfahren', 'gerichtsstand'],
     keywords: ['Gerichtsstand', 'Tatort', 'Zuständigkeit'],
   },
 
@@ -708,6 +726,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Bau- & planungsrechtliche Fristen',
     description: 'Einsprache- und Beschwerdefristen in Bau- und Planungsverfahren.',
     status: 'geplant', norms: [],
+    related: ['beschwerde-verwaltung'],
     keywords: ['Baubewilligung', 'Einsprache', 'Nutzungsplanung'],
   },
   'vergabe-fristen': {
@@ -716,6 +735,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Vergaberechtliche Beschwerdefristen',
     description: 'Fristen im öffentlichen Beschaffungswesen.',
     status: 'geplant', norms: [],
+    related: ['beschwerde-verwaltung'],
     keywords: ['Vergabe', 'Submission', 'Beschwerde'],
   },
 
@@ -727,6 +747,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Steuerrechtliche Verjährung',
     description: 'Veranlagungs- und Bezugsverjährung im Steuerrecht.',
     status: 'geplant', norms: [],
+    related: ['beschwerde-verwaltung'],
     keywords: ['Verjährung', 'Veranlagung', 'Bezug'],
   },
   verrechnungssteuer: {
@@ -753,6 +774,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'AHV-Beiträge',
     description: 'Beiträge an AHV/IV/EO für Angestellte, Selbständige und Nichterwerbstätige.',
     status: 'geplant', norms: [],
+    related: ['sozialversicherung'],
     keywords: ['AHV', 'IV', 'EO', 'Beiträge'],
   },
 
@@ -763,6 +785,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Datenschutzrechtliche Fristen',
     description: 'Fristen rund um Auskunft, Meldung und Aufbewahrung.',
     status: 'geplant', norms: [],
+    related: ['auskunftsbegehren', 'loeschungsbegehren'],
     keywords: ['Datenschutz', 'DSG', 'Auskunft'],
   },
 
@@ -1006,7 +1029,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     rechtsbereich: 'privat',
     title: 'Rechtsöffnungsbegehren',
     description: 'Begehren um provisorische oder definitive Rechtsöffnung mit Forderungsnachweis.',
-    status: 'geplant', norms: [], related: ['schkg-fristen', 'verzugszins'],
+    status: 'geplant', norms: [], related: ['schkg-fristen', 'verzugszins', 'schuldanerkennung'],
     icon: 'clipboard',
   },
 
@@ -1055,6 +1078,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Rechtsvorschlag',
     description: 'Erklärung des Rechtsvorschlags gegen den Zahlungsbefehl.',
     status: 'geplant', norms: [],
+    related: ['schkg-fristen', 'rechtsoeffnungsbegehren'],
     keywords: ['Rechtsvorschlag', 'Zahlungsbefehl', 'Betreibung'],
   },
   aberkennungsklage: {
@@ -1063,6 +1087,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Aberkennungsklage',
     description: 'Strukturiertes Gerüst für die Aberkennungsklage nach provisorischer Rechtsöffnung.',
     status: 'geplant', norms: [],
+    related: ['schkg-fristen', 'rechtsoeffnungsbegehren'],
     keywords: ['Aberkennung', 'Rechtsöffnung'],
   },
   arrestgesuch: {
@@ -1071,6 +1096,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Arrestgesuch',
     description: 'Strukturiertes Gerüst für das Arrestgesuch.',
     status: 'geplant', norms: [],
+    related: ['schkg-fristen'],
     keywords: ['Arrest', 'Sicherung'],
   },
   'schkg-beschwerde': {
@@ -1079,6 +1105,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Beschwerde gegen Betreibungs- & Konkursämter',
     description: 'Strukturiertes Gerüst für die betreibungsrechtliche Beschwerde an die Aufsichtsbehörde.',
     status: 'geplant', norms: [],
+    related: ['schkg-fristen'],
     keywords: ['Beschwerde', 'Aufsichtsbehörde', 'Betreibungsamt'],
   },
 
@@ -1089,6 +1116,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Kündigung durch den Arbeitgeber',
     description: 'Kündigungsschreiben des Arbeitgebers mit den üblichen Bestandteilen.',
     status: 'geplant', norms: [],
+    related: ['kuendigung-sperrfristen', 'arbeitszeugnis'],
     keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben'],
   },
   'kuendigung-arbeitnehmer': {
@@ -1097,6 +1125,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Kündigung durch den Arbeitnehmer',
     description: 'Kündigungsschreiben der Arbeitnehmerin oder des Arbeitnehmers.',
     status: 'geplant', norms: [],
+    related: ['kuendigung-sperrfristen', 'arbeitszeugnis'],
     keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben'],
   },
   freistellung: {
@@ -1105,6 +1134,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Freistellung',
     description: 'Strukturiertes Gerüst für die Freistellungserklärung.',
     status: 'geplant', norms: [],
+    related: ['kuendigung-arbeitgeber', 'kuendigung-sperrfristen'],
     keywords: ['Freistellung'],
   },
   verwarnung: {
@@ -1113,6 +1143,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Verwarnung',
     description: 'Strukturiertes Gerüst für die arbeitsrechtliche Verwarnung.',
     status: 'geplant', norms: [],
+    related: ['kuendigung-arbeitgeber'],
     keywords: ['Verwarnung', 'Abmahnung'],
   },
   arbeitszeugnis: {
@@ -1121,6 +1152,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Arbeitszeugnis',
     description: 'Strukturiertes Gerüst für Voll- und Zwischenzeugnisse.',
     status: 'geplant', norms: [],
+    related: ['kuendigung-arbeitgeber', 'kuendigung-arbeitnehmer'],
     keywords: ['Zeugnis', 'Zwischenzeugnis'],
   },
   aufhebungsvereinbarung: {
@@ -1129,6 +1161,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Aufhebungsvereinbarung',
     description: 'Strukturiertes Gerüst für die einvernehmliche Beendigung des Arbeitsverhältnisses.',
     status: 'geplant', norms: [],
+    related: ['kuendigung-sperrfristen'],
     keywords: ['Aufhebungsvertrag', 'Saldoklausel'],
   },
 
@@ -1139,6 +1172,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Mahnung',
     description: 'Zahlungsaufforderung mit Fristansetzung.',
     status: 'geplant', norms: [],
+    related: ['verzugszins', 'inverzugsetzung'],
     keywords: ['Mahnung', 'Zahlungsverzug', 'Frist'],
   },
   inverzugsetzung: {
@@ -1147,6 +1181,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Inverzugsetzung',
     description: 'Erklärung, die die Schuldnerin oder den Schuldner in Verzug setzt.',
     status: 'geplant', norms: [],
+    related: ['verzugszins', 'mahnung'],
     keywords: ['Verzug', 'Mahnung'],
   },
   schuldanerkennung: {
@@ -1155,6 +1190,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Schuldanerkennung',
     description: 'Schriftliche Anerkennung einer Schuld als Grundlage der späteren Durchsetzung.',
     status: 'geplant', norms: [],
+    related: ['rechtsoeffnungsbegehren', 'schkg-fristen'],
     keywords: ['Schuldanerkennung', 'Rechtsöffnung'],
   },
   vergleichsvereinbarung: {
@@ -1163,6 +1199,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Vergleichsvereinbarung',
     description: 'Strukturiertes Gerüst für den aussergerichtlichen Vergleich.',
     status: 'geplant', norms: [],
+    related: ['schlichtungsgesuch'],
     keywords: ['Vergleich', 'Saldoklausel'],
   },
 
@@ -1174,6 +1211,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     description: 'Verzicht auf die Erbenstellung — Entwurf zur öffentlichen Beurkundung.',
     status: 'geplant', norms: [],
     formvorschrift: 'Öffentliche Beurkundung',
+    related: ['erbteilung', 'erbvertrag'],
     keywords: ['Erbverzicht', 'Beurkundung'],
   },
   erbteilungsvereinbarung: {
@@ -1182,6 +1220,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Erbteilungsvereinbarung',
     description: 'Strukturiertes Gerüst für die Teilung des Nachlasses unter den Erbinnen und Erben.',
     status: 'geplant', norms: [],
+    related: ['erbteilung', 'erbrecht-fristen'],
     keywords: ['Erbteilung', 'Teilungsvertrag'],
   },
 
@@ -1192,6 +1231,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Generalvollmacht',
     description: 'Umfassende Vollmacht zur Vertretung in persönlichen und vermögensrechtlichen Angelegenheiten.',
     status: 'geplant', norms: [],
+    related: ['vorsorgeauftrag', 'bankvollmacht'],
     keywords: ['Vollmacht', 'Vertretung'],
   },
   bankvollmacht: {
@@ -1200,6 +1240,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Bankvollmacht',
     description: 'Vollmacht für die Vertretung gegenüber Finanzinstituten.',
     status: 'geplant', norms: [],
+    related: ['generalvollmacht', 'vorsorgeauftrag'],
     keywords: ['Vollmacht', 'Bank', 'Konto'],
   },
 
@@ -1210,6 +1251,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Trennungsvereinbarung',
     description: 'Strukturiertes Gerüst für die Regelung des Getrenntlebens.',
     status: 'geplant', norms: [],
+    related: ['gueterrecht-vorschlag', 'scheidungskonvention'],
     keywords: ['Trennung', 'Getrenntleben'],
   },
   scheidungskonvention: {
@@ -1218,6 +1260,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Scheidungskonvention',
     description: 'Strukturiertes Gerüst für die Vereinbarung der Scheidungsfolgen.',
     status: 'geplant', norms: [],
+    related: ['vorsorgeausgleich', 'gueterrecht-vorschlag', 'elternvereinbarung'],
     keywords: ['Scheidung', 'Konvention'],
   },
   elternvereinbarung: {
@@ -1226,6 +1269,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Elternvereinbarung',
     description: 'Strukturiertes Gerüst zu Obhut, Betreuung und Unterhalt.',
     status: 'geplant', norms: [],
+    related: ['scheidungskonvention'],
     keywords: ['Eltern', 'Obhut', 'Betreuung'],
   },
 
@@ -1236,6 +1280,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Strafanzeige',
     description: 'Anzeige eines Sachverhalts an die Strafverfolgungsbehörden.',
     status: 'geplant', norms: [],
+    related: ['strafantrag-vorlage', 'strafantrag'],
     keywords: ['Anzeige', 'Staatsanwaltschaft'],
   },
   'strafantrag-vorlage': {
@@ -1244,6 +1289,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Strafantrag',
     description: 'Strafantrag der berechtigten Person bei Antragsdelikten.',
     status: 'geplant', norms: [],
+    related: ['strafanzeige', 'strafantrag'],
     keywords: ['Strafantrag', 'Antragsdelikt'],
   },
   akteneinsichtsgesuch: {
@@ -1252,6 +1298,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Akteneinsichtsgesuch',
     description: 'Gesuch um Einsicht in die Verfahrensakten.',
     status: 'geplant', norms: [],
+    related: ['strafverfahren'],
     keywords: ['Akteneinsicht', 'Verfahrensakten'],
   },
   entschaedigungsbegehren: {
@@ -1260,6 +1307,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Entschädigungsbegehren',
     description: 'Strukturiertes Gerüst für Entschädigungs- und Genugtuungsbegehren im Strafverfahren.',
     status: 'geplant', norms: [],
+    related: ['strafverfahren', 'adhaesionsklage'],
     keywords: ['Entschädigung', 'Genugtuung'],
   },
   adhaesionsklage: {
@@ -1268,6 +1316,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Adhäsionsklage',
     description: 'Strukturiertes Gerüst für Zivilansprüche im Strafverfahren.',
     status: 'geplant', norms: [],
+    related: ['strafverfahren', 'entschaedigungsbegehren'],
     keywords: ['Adhäsion', 'Zivilanspruch'],
   },
 
@@ -1279,6 +1328,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Rekurs',
     description: 'Strukturiertes Gerüst für den kantonalen Rekurs.',
     status: 'geplant', norms: [],
+    related: ['beschwerde-verwaltung', 'beschwerde'],
     keywords: ['Rekurs', 'Rechtsmittel'],
   },
 
@@ -1289,6 +1339,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Auskunftsbegehren (Datenschutz)',
     description: 'Begehren um Auskunft über die Bearbeitung eigener Personendaten.',
     status: 'geplant', norms: [],
+    related: ['datenschutz-fristen', 'loeschungsbegehren'],
     keywords: ['Auskunft', 'Datenschutz', 'Personendaten'],
   },
   loeschungsbegehren: {
@@ -1297,6 +1348,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Löschungsbegehren (Datenschutz)',
     description: 'Begehren um Löschung von Personendaten.',
     status: 'geplant', norms: [],
+    related: ['auskunftsbegehren', 'datenschutz-fristen'],
     keywords: ['Löschung', 'Datenschutz', 'Personendaten'],
   },
 };

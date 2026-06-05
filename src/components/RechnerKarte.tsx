@@ -79,6 +79,8 @@ export function RechnerKarte({ card, headingLevel = 'h3' }: Props) {
             <span key={k.id}>
               {i > 0 && ' · '}
               <Link to={k.href!} className="relative text-brass-700 hover:text-brass-600 no-underline">{k.title}</Link>
+              {/* Dezenter Hinweis auf der Free-Seite: Ziel liegt in Pro */}
+              {card.tier === 'free' && k.tier === 'pro' && <span className="text-ink-400"> (Pro)</span>}
             </span>
           ))}
         </p>
