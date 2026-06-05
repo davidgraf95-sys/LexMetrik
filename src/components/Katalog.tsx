@@ -68,7 +68,9 @@ function GebietSektion({ gebiet, karten, erzwungenOffen }: {
                 <span aria-hidden className="text-brass-700 transition-transform motion-reduce:transition-none group-open:rotate-90 leading-none">▸</span>
               </span>
             </span>
-            <h2 className="font-display font-semibold text-ink-900 text-h1 leading-tight text-balance">{sansAmp(gebiet.name)}</h2>
+            {/* Gebiets-Titel in der Sans (Geist) statt der Display-Serife —
+                Entscheid 5.6.2026; eine Stufe kompakter (h2) */}
+            <h2 className="font-sans font-semibold text-ink-900 text-h2 leading-tight text-balance tracking-tight">{sansAmp(gebiet.name)}</h2>
             <span className="block text-body-l text-ink-600 max-w-reading">{gebiet.lede}</span>
             <span className="scale-rule block mt-4" aria-hidden />
           </span>

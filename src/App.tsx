@@ -1,5 +1,6 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { istProEingeloggt } from './lib/proSession';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
 
@@ -28,6 +29,12 @@ const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m
 const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
+// «/»: eingeloggte Pro-Nutzer landen direkt im Pro-Bereich (Sitzung
+// überlebt Neuladen); ausgeloggt ist Free der Default.
+function StartOderPro() {
+  return istProEingeloggt() ? <Navigate to="/pro" replace /> : <Startseite />;
+}
+
 // Alt-Route /fachpersonen → /pro: Redirect erhält ?modus= (Suchstring).
 function FachpersonenRedirect() {
   const { search } = useLocation();
@@ -52,7 +59,7 @@ export default function App() {
       <ScrollToTop />
       <Suspense fallback={<div className="py-16 text-center text-body-s text-ink-500">Wird geladen …</div>}>
       <Routes>
-        <Route path="/" element={<Startseite />} />
+        <Route path="/" element={<StartOderPro />} />
         <Route path="/pro" element={<Pro />} />
         {/* Alt-Routen: /fachpersonen → /pro (erhält ?modus=); /rechner → /pro */}
         <Route path="/fachpersonen" element={<FachpersonenRedirect />} />

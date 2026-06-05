@@ -52,18 +52,19 @@ export function Startseite() {
     <div>
       {/* HERO → KATALOG: bewusst kompakt (Entscheid 5.6.2026 — weniger
           Scrollweg vor der ersten Karte). Determinismus-Claim genau einmal. */}
-      <section className="pt-6 sm:pt-8 max-w-[40rem]">
-        <h1 className="font-display font-semibold text-ink-900 text-h1 sm:text-display">
+      {/* Schlanker Einzeilen-Hero (Entscheid 5.6.2026: deutlich kleiner,
+          auf einer Grundlinie mit dem Claim — der Katalog ist der Star) */}
+      <section className="pt-5 sm:pt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-line pb-4">
+        <h1 className="font-display font-semibold text-ink-900 text-h3 whitespace-nowrap">
           Schweizer Recht: berechnen und erstellen.
         </h1>
-        <p className="mt-2 text-body-s text-ink-600 max-w-[58ch]">
-          Fristen, Beträge und Rechtsdokumente nach festen Regeln — jeder Schritt
-          offengelegt, jede Norm verlinkt.
+        <p className="text-body-s text-ink-500">
+          Fristen, Beträge und Rechtsdokumente nach festen Regeln — jeder Schritt offengelegt, jede Norm verlinkt.
         </p>
       </section>
 
       {/* Katalog als eigene Sektion */}
-      <section className="mt-8 sm:mt-10">
+      <section className="mt-6 sm:mt-7">
         {/* Free: Werkzeuge zuerst (Tagerechner & Co. sind der häufigste Einstieg) */}
         <Katalog karten={karten} filterArt gebieteZuerst={['Übergreifende Werkzeuge']} />
       </section>

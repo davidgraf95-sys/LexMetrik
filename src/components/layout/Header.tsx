@@ -1,6 +1,7 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 import { SprachUmschalter } from '../SprachUmschalter';
+import { istProEingeloggt, proAusloggen } from '../../lib/proSession';
 
 // Header (Iteration 3): ruhiges ZWEI-ZONEN-Layout — Logo links, Aktions-
 // cluster rechts (Sprache · Methodik · Über · Pro-Button),
@@ -13,19 +14,26 @@ const NAV = [
   { to: '/ueber', label: 'Über', match: (p: string) => p === '/ueber' },
 ];
 
-// Kontextabhängiger Stufen-Button: Hinweg und Rückweg; trägt ?modus= weiter.
+// Pro-Sitzungs-Button: Wer Pro betreten hat, ist eingeloggt (localStorage,
+// überlebt Neuladen) und sieht «Ausloggen»; sonst den gerichteten Pro-Pfeil.
+const PRO_BTN_CLS =
+  'inline-flex items-center gap-1 h-9 px-2.5 sm:px-3 rounded-lg border border-brass-400 bg-surface text-body-s font-medium text-brass-700 no-underline hover:bg-brass-100/60 hover:border-brass-500 transition-colors whitespace-nowrap';
+
 function ProButton() {
-  const { pathname, search } = useLocation();
-  const imPro = pathname.startsWith('/pro');
+  const { pathname, search } = useLocation(); // re-rendert bei Navigation → Login-Status frisch
+  const navigate = useNavigate();
+  void pathname;
+  if (istProEingeloggt()) {
+    return (
+      <button type="button" className={PRO_BTN_CLS}
+        onClick={() => { proAusloggen(); navigate('/'); }}>
+        Ausloggen
+      </button>
+    );
+  }
   return (
-    <Link
-      to={{ pathname: imPro ? '/' : '/pro', search }}
-      className="inline-flex items-center gap-1 h-9 px-2.5 sm:px-3 rounded-lg border border-brass-400 bg-surface text-body-s font-medium text-brass-700 no-underline hover:bg-brass-100/60 hover:border-brass-500 transition-colors whitespace-nowrap">
-      {imPro ? (
-        <>← <span>Free</span></>
-      ) : (
-        <><span>Pro</span> →</>
-      )}
+    <Link to={{ pathname: '/pro', search }} className={PRO_BTN_CLS}>
+      <span>Pro</span> →
     </Link>
   );
 }

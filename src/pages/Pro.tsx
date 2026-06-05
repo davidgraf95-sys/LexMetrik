@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { proEinloggen } from '../lib/proSession';
 import { ALLE_KARTEN, RECHTSGEBIETE } from '../lib/startseiteConfig';
 import { Katalog } from '../components/Katalog';
 import { sansAmp } from '../components/typografie';
@@ -9,6 +11,9 @@ import { sansAmp } from '../components/typografie';
 // als Messleiste auf der Ablesekante, Direkteinstieg zu den gebauten Rechnern.
 
 export function Pro() {
+  // Pro betreten = eingeloggt (überlebt Neuladen; Header zeigt «Ausloggen»).
+  // Andockpunkt PayPal-Gate: später wird hier stattdessen das Gate geprüft.
+  useEffect(() => { proEinloggen(); }, []);
   // Pro zeigt den VOLLSTÄNDIGEN Katalog (free + pro);
   // die Free-Seite zeigt nur die kostenlose Auswahl (tier 'free').
   const alle = ALLE_KARTEN;
