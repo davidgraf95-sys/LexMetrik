@@ -1,23 +1,17 @@
 import { Link } from 'react-router-dom';
-import { ALLE_KARTEN, RECHTSGEBIETE, SEKTIONEN, VORLAGE_SEKTIONEN } from '../lib/startseiteConfig';
+import { ALLE_KARTEN, RECHTSGEBIETE } from '../lib/startseiteConfig';
 import { Katalog } from '../components/Katalog';
-import { ModusSchalter, useModus } from '../components/ModusSchalter';
 import { sansAmp } from '../components/typografie';
 
-// Pro-Bereich: der vollständige Katalog (free + pro).
+// Pro-Bereich: der vollständige Katalog (free + pro), gegliedert nach
+// Rechtsgebiet mit Untergruppen Rechner/Vorlagen (Auftrag «Katalog-Ausbau»).
 // Helles, redaktionelles Hero: Typo-Hierarchie statt Farbfläche, Kennzahlen
 // als Messleiste auf der Ablesekante, Direkteinstieg zu den gebauten Rechnern.
 
 export function Pro() {
-  const [modus, setModus] = useModus();
   // Pro zeigt den VOLLSTÄNDIGEN Katalog (free + pro);
   // die Free-Seite zeigt nur die kostenlose Auswahl (tier 'free').
   const alle = ALLE_KARTEN;
-  const karten = alle.filter((k) => k.modus === modus);
-  const anzahl = {
-    rechner: alle.filter((k) => k.modus === 'rechner').length,
-    vorlage: alle.filter((k) => k.modus === 'vorlage').length,
-  } as const;
   // Ehrliches Status-Modell: keine «geprüft»-Kennzahl, solange nichts geprüft ist
   const entwurf = alle.filter((k) => k.status === 'entwurf');
   const gebiete = RECHTSGEBIETE.filter((g) => alle.some((k) => k.rechtsgebiet === g)).length;
@@ -56,33 +50,23 @@ export function Pro() {
         </div>
       </section>
 
-      {/* Primärweiche: Modus prominent unter dem Hero (steuert Text + Katalog) */}
-      <div className="space-y-2">
-        <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
-      </div>
-
-      {/* Katalog: Filter/Übersicht und Direkteinstieg in der Seitenleiste */}
+      {/* Katalog: Rechtsgebiet-Sektionen; Filter Suche · Rechtsbereich ·
+          Output-/Dokument-Typ · Status; Direkteinstieg in der Seitenleiste */}
       <Katalog
-        karten={karten}
-        sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN}
-        // Rechner: zweistufig Rechtsbereich → Output-Typ; Filter Suche ·
-        // Rechtsbereich · Output-Typ · Status. Vorlagen: Dokument-Typ-
-        // Gliederung; Rechtsgebiet + Rechtsbereich als Filter.
-        gliederung={modus === 'rechner' ? 'bereich' : 'art'}
-        filterRechtsgebiet={modus !== 'rechner'}
+        karten={alle}
         filterBereich
-        filterArt={modus === 'rechner'}
-        seitenleisteFuss={modus === 'rechner' ? (
+        filterArt
+        seitenleisteFuss={
           <nav aria-label="Direkteinstieg" className="space-y-1 pt-3 border-t border-line">
             <p className="lc-overline mb-2">Direkt öffnen</p>
-            {entwurf.filter((k) => k.modus === 'rechner' && k.href).map((k) => (
+            {entwurf.filter((k) => k.href).map((k) => (
               <Link key={k.id} to={k.href!}
                 className="block px-2 py-1 -mx-2 rounded-md text-body-s text-brass-700 no-underline hover:bg-brass-100/50 transition-colors truncate">
                 {sansAmp(k.title)} <span aria-hidden>→</span>
               </Link>
             ))}
           </nav>
-        ) : undefined}
+        }
       />
 
       {/* Rechtlicher Hinweis */}

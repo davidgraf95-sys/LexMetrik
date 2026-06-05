@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import { SEKTIONEN, VORLAGE_SEKTIONEN, ALLE_KARTEN } from '../lib/startseiteConfig';
+import { ALLE_KARTEN } from '../lib/startseiteConfig';
 import { Katalog, SectionHead } from '../components/Katalog';
-import { ModusSchalter, useModus } from '../components/ModusSchalter';
 
 // Free-Seite: zeigt nur die kostenlose Auswahl (tier 'free').
 // Der vollständige Katalog steht in Pro unter /pro.
@@ -44,12 +43,10 @@ function ProTeaser() {
 }
 
 export function Startseite() {
-  const [modus, setModus] = useModus();
-  const karten = ALLE_KARTEN.filter((k) => k.tier === 'free' && k.modus === modus);
-  const anzahl = {
-    rechner: ALLE_KARTEN.filter((k) => k.tier === 'free' && k.modus === 'rechner').length,
-    vorlage: ALLE_KARTEN.filter((k) => k.tier === 'free' && k.modus === 'vorlage').length,
-  } as const;
+  // Gliederung nach Rechtsgebiet mit Untergruppen Rechner/Vorlagen — der
+  // frühere Modus-Umschalter als Primärweiche ist damit abgelöst (Auftrag
+  // «Katalog-Ausbau» §4; beide Gruppen stehen unter jedem Gebiet).
+  const karten = ALLE_KARTEN.filter((k) => k.tier === 'free');
 
   return (
     <div>
@@ -67,20 +64,14 @@ export function Startseite() {
         </p>
       </section>
 
-      {/* Primärweiche: nur der Umschalter — kein Untertext (war redundant) */}
-      <div className="mt-10 sm:mt-16">
-        <ModusSchalter modus={modus} onChange={setModus} anzahl={anzahl} />
-      </div>
-
       {/* Katalog als eigene Sektion: Weissraum + feine Trennlinie markieren
           «jetzt beginnt der Katalog»; die Toolbar lebt IM Katalog. */}
       <section className="mt-12 sm:mt-16">
-        <Katalog karten={karten} sektionen={modus === 'rechner' ? SEKTIONEN : VORLAGE_SEKTIONEN} />
+        <Katalog karten={karten} filterArt />
       </section>
 
       <div className="mt-12 space-y-12">
-      {/* Pro-Teaser (Rechner-Modus) */}
-      {modus === 'rechner' && <ProTeaser />}
+      <ProTeaser />
 
       {/* Methodik / Vertrauens-Kacheln */}
       <section className="space-y-6">
