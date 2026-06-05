@@ -45,11 +45,20 @@ export function VorlageVollmacht() {
     useWizardState<VollmachtAntworten>({
       defaults: VOLLMACHT_DEFAULTS,
       speicherKey: SPEICHER_KEY,
+      // Hydration-Härtung (Review 5.6.2026): alte/korrupte Speicherstände
+      // dürfen die Seite nicht crashen (Elementform!) und keine ungültigen
+      // Enum-Werte einschleusen (sonst «undefined als PDF»).
       normalisieren: (g) => ({
         ...g,
-        bevollmaechtigte: Array.isArray(g.bevollmaechtigte) ? g.bevollmaechtigte : [],
-        bereiche: Array.isArray(g.bereiche) ? g.bereiche : [],
-        ermaechtigungen: Array.isArray(g.ermaechtigungen) ? g.ermaechtigungen : [],
+        typ: VOLLMACHT_TYPEN.some((t) => t.id === g.typ) ? g.typ : 'general',
+        geberTyp: g.geberTyp === 'juristisch' ? 'juristisch' : 'natuerlich',
+        vertretung: g.vertretung === 'gemeinsam' ? 'gemeinsam' : 'einzeln',
+        substitution: g.substitution === 'erlaubt' ? 'erlaubt' : 'verboten',
+        bevollmaechtigte: (Array.isArray(g.bevollmaechtigte) ? (g.bevollmaechtigte as unknown[]) : [])
+          .filter((b): b is Record<string, unknown> => !!b && typeof b === 'object')
+          .map((b) => ({ name: String(b.name ?? ''), angaben: String(b.angaben ?? '') })),
+        bereiche: (Array.isArray(g.bereiche) ? g.bereiche : []).filter((x) => VM_BEREICHE.some((vb) => vb.id === x)),
+        ermaechtigungen: (Array.isArray(g.ermaechtigungen) ? g.ermaechtigungen : []).filter((x) => VM_ERMAECHTIGUNGEN.some((ve) => ve.id === x)),
       }),
     });
 
