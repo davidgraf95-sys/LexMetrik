@@ -19,7 +19,219 @@ _(Bericht ausstehend.)_
 
 ## Teil C — AR · AI · SG · GR · AG · TG
 
-_(Bericht ausstehend.)_
+# Recherche-Bericht: Gerichtsorganisation & Gerichtsgebühren (Zivil) — AR · AI · SG · GR · AG · TG
+
+**Abrufdatum aller Quellen: 5.6.2026** · Nur amtliche Quellen (kantonale Erlasssammlungen via LexWork-API; PDF-Volltext aus den amtlichen Fassungen extrahiert). ai.ch-Portal blockt (403) — AI-Daten stammen aus der **amtlichen Erlasssammlung ai.clex.ch** (nicht ai.ch), daher voll verifiziert.
+
+**Methodischer Hinweis (wichtig für die Engine-Logik):** Die *Gerichtsorganisationsgesetze* regeln durchwegs **Konstituierung/Zusammensetzung** der Behörden. Die **sachliche Instanz-Zuständigkeit** (erste Instanz vs. Rechtsmittel) ergibt sich teils aus demselben Gesetz (AR, SG-Kantonsgericht, TG-Obergericht), teils aus **EG-ZPO/EG-StPO bzw. ZPO/StPO direkt** (AI, GR, SG-Kreisgericht-Detail). Das ist je Kanton unten vermerkt.
+
+---
+
+## AR — Appenzell Ausserrhoden
+
+**GOG:** Justizgesetz (JG), **bGS 145.31**, vom 13.9.2010, Stand 1.6.2019.
+Quelle: https://ar.clex.ch/app/de/texts_of_law/145.31 (PDF-Volltext verifiziert)
+
+| Behörde | Artikel JG | Kurzinhalt |
+|---|---|---|
+| Vermittler/Vermittlerämter | **Art. 2–4** | Schlichtungsbehörde je Kreis; erfüllen Aufgaben nach Art. 197 ff. ZPO |
+| Schlichtungsstellen (Miete/Pacht, Arbeit, Gleichstellung) | **Art. 5–8** | Zusammensetzung, Aufgaben, Besetzung |
+| **Kantonsgericht** (1. Instanz Zivil/Straf) | **Art. 9–11** (Organisation) · **Art. 13–14** (Zivil, erste Instanz) · **Art. 15** (Straf, „erstinstanzliches Gericht in Strafsachen") · **Art. 16** (Jugendgericht) | Erstinstanzliches Zivil- und Strafgericht; Fünferbesetzung; Einzelrichter |
+| **Obergericht** (obere Instanz) | **Art. 18–22** (Organisation) · **Art. 24** (Zivil: Berufungs-/Beschwerdeinstanz + einzige kant. Instanz + SchKG-Aufsicht) · **Art. 26** (Straf: Berufungs-/Beschwerdeinstanz) · **Art. 28** (Verwaltungsrechtspflege) | Obere Instanz Zivil/Straf |
+| → Versicherungsgericht / Verwaltungsrecht | **Art. 28 lit. a–c** | Obergericht ist „kantonales Versicherungsgericht als einzige Instanz" (Sozialversicherung), einzige Instanz für KVG-Zusatzversicherungen, letzte Instanz Verwaltungs-/Staatsrecht |
+
+**Gerichtsgebühren-Erlass:** Verordnung über die Rechtskosten und Entschädigungen in der Zivil- und Strafrechtspflege (**Gebührenordnung**), **bGS 233.3**, vom 15.6.1981, Stand 1.12.2017. https://ar.clex.ch/app/de/texts_of_law/233.3
+
+**Zivil-Staffel (wörtlich):**
+- Art. 7: Einschreibgebühren (Einzelrichter KG Fr. 100 / Kantonsgericht Fr. 300 / Scheidung Fr. 300).
+- Art. 14: Einzelrichter Kantonsgericht: Entscheid/Verfügung **Fr. 30–1'500**; Scheidung **Fr. 500–6'000**.
+- Art. 16: Einzelrichter Obergericht: **Fr. 30–2'000**; Scheidung **Fr. 500–6'000**.
+- Art. 17: Kantonsgericht: Beschluss **Fr. 100–3'000**; Urteil/Vorentscheid **Fr. 100–5'000**.
+- Art. 19: Obergericht: Beschluss **Fr. 100–3'000**; Urteil/Vorentscheid **Fr. 200–5'000**; Schiedssachen **Fr. 100–5'000**.
+- Art. 13/24: Vermittler **Fr. 50–200** (+ Fr. 100/Std.).
+- **Art. 20 (Streitwert-Erhöhung):** über Fr. 50'000–100'000 → aufs **Doppelte**; über 100'000–250'000 → aufs **Dreifache**; je weitere Fr. 250'000 → **+100 %** des einfachen Ansatzes.
+
+**Unsicherheiten:** keine; Volltext direkt aus amtlicher Fassung.
+
+---
+
+## AI — Appenzell Innerrhoden
+
+**GOG:** **Gerichtsorganisationsgesetz (GOG)**, **GS 173.000**, vom 25.4.2010, Stand 1.1.2024. (Name/Nummer bestätigt — die im Auftrag offene Frage „Gerichtsorganisationsgesetz?" ist mit JA beantwortet.)
+Quelle: https://ai.clex.ch/app/de/texts_of_law/173.000 (PDF-Volltext verifiziert; ai.ch-Portal nicht nötig)
+
+| Behörde | Artikel GOG | Kurzinhalt |
+|---|---|---|
+| Vermittler | **Art. 4** | Im Bezirk amtet der Vermittler |
+| Paritätische Schlichtungsstellen (Miete/Pacht, Arbeit; kant. Gleichstellung) | **Art. 5** | Je Gerichtskreis; Dreierbesetzung |
+| **Bezirksgericht** (1. Instanz Zivil/Straf) | **Art. 7** (Konstituierung) · **Art. 8** (Zusammensetzung/Rechtsprechung) · **Art. 14** | Erstinstanzliches Gericht für beide Gerichtskreise; Gesamtgericht + Einzelrichter + Zwangsmassnahmerichter |
+| **Kantonsgericht** (OBERE Instanz) | **Art. 10** (Konstituierung) · **Art. 11** (Abteilungen) | Spricht Recht durch **Abteilungen: 1. Zivil- und Strafgericht; 2. Verwaltungsgericht**; ständige Kommissionen (SchKG-Aufsicht etc.) |
+| → Verwaltungsgericht | **Art. 11 Abs. 2 Ziff. 2** | Abteilung des Kantonsgerichts |
+| Gebührenrahmen (Grundlage) | **Art. 45** | Gebühren grundsätzlich bis **Fr. 90'000**; ×4 bei Streitwert > Fr. 1 Mio.; indexgebunden |
+
+**Wichtig:** Die GOG-Artikel regeln Organisation/Abteilungen. Dass das **Bezirksgericht erste** und das **Kantonsgericht obere** Instanz ist, ergibt sich aus der kantonalen ZPO/StPO-Einführung; das GOG selbst benennt die Instanzenrolle nur implizit (Bezirksgerichtspräsident-Aufsicht über Vermittler, Kantonsgerichtspräsident-Aufsicht über Bezirksgericht, Art. 20).
+
+**Gerichtsgebühren-Erlass:** Verordnung über die Gebühren der Gerichte (**GGV**), **GS 173.810**, vom 1.10.2001, Stand 1.1.2024. https://ai.clex.ch/app/de/texts_of_law/173.810
+
+**Zivil-Staffel (wörtlich):**
+- Art. 7: Vermittler/Schlichtungsstellen — Klagebewilligung **200–1'000**.
+- Art. 10: Bezirksgerichtspräsident/Einzelrichter: End-/Zwischenentscheid **300–5'000**; prozessleitend/Summar **200–3'000**.
+- Art. 11: Bezirksgericht als Kollegialgericht (Zivil): Endentscheid **500–6'000**; prozessleitend **300–3'000** / **200–2'000**.
+- Art. 12: Kantonsgerichtspräsident/Einzelrichter: **300–5'000**; prozessleitend **200–3'000**.
+- Art. 13: Kantonsgericht als Kollegialgericht (Zivil): Endentscheid **800–8'000**; prozessleitend **400–4'000** / **200–2'000**.
+- **Art. 15 (Streitwert-Erhöhung, innerhalb Rahmen Art. 45 GOG):** über 50'000–100'000 → höchstens **200 %**; über 100'000–250'000 → höchstens **300 %**; je weitere 250'000 → **je +100 %**.
+
+**Unsicherheiten:** keine inhaltlich; ai.ch (Portal) blockt 403, aber die **amtliche Erlasssammlung ai.clex.ch** lieferte Volltext — Daten daher vollwertig amtlich, nicht bloss Snippet.
+
+---
+
+## SG — St. Gallen
+
+**GOG:** **Gerichtsgesetz (GerG)**, **sGS 941.1**, vom 2.4.1987, Stand 1.7.2018. (bestätigt) https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.1
+
+| Behörde | Artikel GerG | Kurzinhalt |
+|---|---|---|
+| Vermittler / Vermittlungskreise | **Art. 4 / Art. 4bis** | Kreiseinteilung; Vermittler je Vermittlungskreis |
+| Schlichtungsstelle Miete/Pacht | **Art. 9** | Zusammensetzung |
+| Schlichtungsstelle Arbeit | **Art. 10** | Zusammensetzung |
+| Schlichtungsstelle Gleichstellung | **Art. 10bis** | Zusammensetzung |
+| **Kreisgerichte** (1. Instanz, 7) | **Art. 5–6** (Präsidium/Kreisgericht) · **Art. 36** (Amtssitz im Gerichtskreis) | Erstinstanzliche Zivil-/Strafgerichte; hauptamtliche + Familienrichter |
+| **Kantonsgericht** (OBERE Instanz) | **Art. 11** (Zusammensetzung) · **Art. 12** (Rechtsprechung durch Kammern von 3; Berufung/Beschwerde gegen Kreisgerichte) | Obere Instanz Zivil/Straf |
+| **Handelsgericht** | **Art. 13** ✅ (bestätigt) | Am Kantonsgericht; 1 hauptamtliches KG-Mitglied (Präsident), 3 hauptamtl. KG-Mitglieder (Vize), Handelsrichter; entscheidet in Besetzung 2 Kantonsrichter + 3 Handelsrichter |
+| Anklagekammer | **Art. 15** | Strafkammer (Kantonsrichter) |
+| Versicherungsgericht | **Art. 17** | Eigenständiges Gericht |
+| Verwaltungsgericht | **Art. 18** | Eigenständiges Gericht |
+
+**Hinweis:** Art. 13 GerG (Handelsgericht) **bestätigt**. Die sachliche Zuständigkeit Kreisgericht (1. Instanz) / Kantonsgericht (Rechtsmittel) folgt aus Art. 5–8 ZPO bzw. der Gerichtsordnung (GO, sGS 941.21); GerG Art. 12/110 nennt die Berufungs-/Beschwerderolle des Kantonsgerichts.
+
+**Gerichtsgebühren-Erlass:** **Gerichtskostenverordnung (GKV)**, **sGS 941.12**, vom 9.12.2010, Stand 1.3.2012. (bestätigt) https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12
+
+**Zivil-Staffel (wörtlich):**
+- **Art. 8** Schlichtungsbehörden: Klagebewilligung **200–1'000**; Urteilsvorschlag/Entscheid **300–1'000**; Einigung/Säumnis/Rückzug **100–600** (×2 bei Aufwand).
+- **Art. 10** Zivilgerichte – Entscheidgebühren:
+  - Kreisgericht Einzelrichter: End-/Zwischenentscheid **500–5'000**; prozessleitend/Summar **200–3'000**.
+  - Kreisgericht Kollegialgericht: End-/Zwischenentscheid **500–6'000**; prozessleitend **300–3'000** / **200–2'000**.
+  - Kantonsgericht Einzelrichter: End-/Zwischenentscheid **300–5'000**.
+- **Art. 11 (Streitwert-Erhöhung):** über 50'000–100'000 → höchstens **200 %**; über 100'000–250'000 → höchstens **300 %**; je weitere 250'000 → **+100 %**.
+
+**Unsicherheiten:** keine.
+
+---
+
+## GR — Graubünden ⚠ NACH Justizreform (Obergericht)
+
+**GOG:** **Gerichtsorganisationsgesetz (GOG)**, **BR 173.000**, vom 14.6.2022, **Stand 1.5.2026** (in Kraft seit 1.1.2025 — Justizreform 3: Fusion Kantonsgericht + Verwaltungsgericht zum **Obergericht**). (bestätigt — NEUES Recht) https://www.gr-lex.gr.ch/app/de/texts_of_law/173.000
+
+Das GOG regelt (Art. 1) „Organisation der Gerichte und der Schlichtungsbehörden". Gliederung: 3.1 Obergericht · 3.2 Zwangsmassnahmengericht · 3.3 Justizgericht · 3.4 Regionalgerichte · 4. Schlichtungsbehörden.
+
+| Behörde | Artikel GOG (neu) | Kurzinhalt |
+|---|---|---|
+| Vermittlerämter | **Art. 85–87** | Schlichtungsbehörde; vom Regionalgericht gewählt/beaufsichtigt |
+| Schlichtungsbehörde Mietsachen | **Art. 88–91** | Angegliedert ans Regionalgericht |
+| Schlichtungsbehörde Gleichstellung | **Art. 92–95** | Sitz Chur; vom Obergericht gewählt |
+| **Regionalgerichte** (1. Instanz, 11) | **Art. 69** (Zivil-/Strafkammer) · **Art. 70** (Besetzung i.d.R. 3 Richter) · **Art. 76–77** (Geschäftsordnung/Bestand) | Erstinstanzliche Zivil-/Strafgerichte |
+| **Obergericht** (OBERE Instanz, inkl. Verwaltung/Versicherung) | **Art. 37** (Abteilungen) · **Art. 38** (Besetzung 3/5/Einzelrichter) · **Art. 44** (Bestand) · **Art. 115** (oberstes justizinternes Leitungsorgan) | Obere Instanz; Verwaltungs-/Versicherungsgerichtsbarkeit **integriert** (Fusion); Sitz Chur (Art. 2) |
+| Kantonales Zwangsmassnahmengericht | **Art. 59–61** | Sitz Chur; mind. 3 Einzelrichter aus Regionalgerichten |
+| Justizgericht | **Art. 62 ff.** | (Justizaufsicht/Disziplinar) |
+
+**Wichtig:** Das GOG ist rein organisatorisch. Die **materielle Instanz-Zuständigkeit** (Regionalgericht = 1. Instanz; Obergericht = Berufung/Beschwerde + einzige kant. Instanz; Verwaltungs-/Sozialversicherungsrecht) ergibt sich aus EG-ZPO, EG-StPO und dem Gesetz über die Verwaltungsrechtspflege (VRG) — die VGZ-Gebühren (siehe unten) bestätigen aber die Obergerichts-Rollen ausdrücklich (Art. 10–12 VGZ).
+
+**Gerichtsgebühren-Erlass:** Verordnung über die Gerichtsgebühren in Zivilverfahren (**VGZ**), **BR 320.210**, vom **2.1.2025, Stand 1.1.2025** (neu, post-Reform; nennt „Obergericht" und GOG 173.000). https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210
+
+**Zivil-Staffel (wörtlich) — Rahmengebühren, KEINE Streitwert-Tabelle:**
+- **Art. 2** Schlichtungsverfahren: **100–500** (Entscheid/Urteilsvorschlag Art. 212 ZPO ggf. höher).
+- **Art. 3** Ordentliches Verfahren: Entscheidgebühr **3'000–30'000** (besonders aufwendig bis **100'000**).
+- **Art. 4** Vereinfachtes Verfahren: Einzelrichter **1'000–8'000**; Kollegialgericht **3'000–8'000**.
+- **Art. 5** Summarisches Verfahren: Einzelrichter **100–5'000** (×2 möglich).
+- **Art. 6** Besondere Verfahren (Ehe-/Kindesbelange/Partnerschaft): **1'000–5'000**.
+- **Art. 9** prozessleitend/vorsorglich: **100–5'000**.
+- **Obergericht:** Art. 10 (einzige kant. Instanz) **1'000–30'000** (Einzelrichter 1'000–15'000); Art. 11 (Berufung) **1'000–30'000** (Einzelrichter 1'000–15'000); Art. 12 (Beschwerde) **500–8'000** (Einzelrichter 500–4'000); Art. 13 (besonders aufwendig) bis **100'000**.
+
+**Unsicherheiten:** keine; sowohl GOG (Stand 1.5.2026) als auch VGZ (Stand 1.1.2025) sind die aktuellen post-Reform-Fassungen.
+
+---
+
+## AG — Aargau ⚠ Gebühren-Erlass GEWECHSELT (VKD aufgehoben!)
+
+**GOG:** **Gerichtsorganisationsgesetz (GOG)**, **SAR 155.200**, vom 6.12.2011, Stand 1.4.2020. (bestätigt) https://gesetzessammlungen.ag.ch/app/de/texts_of_law/155.200
+
+| Behörde | § GOG | Kurzinhalt |
+|---|---|---|
+| **Friedensrichter** (Schlichtung) | **§ 40, § 44–46** | Einzelrichter/Schlichtungsbehörde; mind. 2 je Kreis |
+| Schlichtungsbehörden Miete/Pacht | **§ 47** (§ 36 Bezirksgericht-Aufsicht) | Je Bezirk; den Bezirksgerichten administrativ angegliedert |
+| Schlichtungsstelle Gleichstellung | **§ 57–58** | Dem Spezialverwaltungsgericht angegliedert |
+| **Bezirksgerichte** (1. Instanz) | **§ 50** (Gliederung: Zivil-, Straf-, Arbeits-, Jugend-, Familiengericht) · **§ 52** (Zivil-/Strafgericht) · **§ 53** (Arbeitsgericht) · **§ 54** (Jugendgericht) · **§ 55–56** (Familiengericht = KESB) | Erstinstanzliche Gerichte, in 5 Abteilungen gegliedert |
+| Zwangsmassnahmengericht | **§ 60** | Aus Bezirksgerichtspräsidien (Einzelrichter) |
+| **Obergericht** (OBERE Instanz) | **§ 65** (Gliederung: Zivil-, **Handels-**, Straf-, **Versicherungs-**, **Verwaltungsgericht**) · **§ 66** (Zivil/Straf/Versicherung) · **§ 67** (Verwaltungsgericht) · **§ 68** (Handelsgericht) | Obere Instanz; **Handels-, Versicherungs- und Verwaltungsgericht sind Abteilungen des Obergerichts** |
+| Spezialverwaltungsgericht | (eigener Abschnitt) · § 3 Abs. 7 | Eigenständige Verwaltungsjustiz-Behörde (Steuern etc.) |
+
+**Gerichtsgebühren-Erlass:** ⚠ **Das im Auftrag genannte „VKD SAR 221.150" ist seit 1.7.2024 AUFGEHOBEN** (aufgehoben 19.9.2023 per 1.7.2024). **Aktuell massgeblich: Gebührendekret (GebührD), SAR 662.110, vom 19.9.2023, in Kraft seit 1.7.2024.** https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110
+
+**Zivil-Staffel (wörtlich, GebührD SAR 662.110):**
+- **§ 6** Schlichtung (Friedensrichter): Erledigung Anerkennung/Vergleich/Rückzug **50–300**; Klagebewilligung **50–300**; Urteil/Urteilsvorschlag **100–…**.
+- **§ 7** Ordentliches/vereinfachtes Zivilverfahren — **Grundansatz nach Streitwert (Formel):**
+
+  | Streitwert (Fr.) | Grundansatz |
+  |---|---|
+  | bis 6'500 | 900 + 11,0 % d. Strw. |
+  | 6'501–13'000 | 1'160 + 7,0 % |
+  | 13'001–52'000 | 1'290 + 6,0 % |
+  | 52'001–100'000 | 770 + 7,0 % |
+  | 100'001–200'000 | 4'270 + 3,5 % |
+  | 200'001–400'000 | 6'870 + 2,2 % |
+  | 400'001–800'000 | 9'670 + 1,5 % |
+  | 800'001–1'600'000 | 13'670 + 1,0 % |
+  | 1'600'001–3'300'000 | 21'670 + 0,5 % |
+  | über 3'300'000 | 28'270 + 0,3 % |
+
+  (nicht vermögensrechtlich: **500–…**)
+- **§ 8** Summarisches Verfahren: **500–12'000**.
+- **§ 9** Revision: **200–10'000**.
+- **§ 10** Rechtsmittel Obergericht (Berufung/Beschwerde): nach erstinstanzlichen Vorschriften; Beschwerde gegen Schlichtungs-Urteil **200–…**.
+- **§ 11** Urteilserläuterung/-berichtigung: **200–1'000**.
+- **§ 12** Nichtstreitige Zivilsachen: **300–2'500**.
+
+**Unsicherheiten:** Die Auftrags-Vorarbeit „VKD SAR 221.150" ist überholt — **Korrektur: aktueller Erlass ist das Gebührendekret SAR 662.110**. (Der frühere SAR 221.150 wäre nur für Verfahren vor dem 1.7.2024 relevant.)
+
+---
+
+## TG — Thurgau
+
+**GOG:** **Gesetz über die Zivil- und Strafrechtspflege (ZSRG)**, **RB 271.1**, vom 17.6.2009, Stand 1.10.2025. (bestätigt — der im Auftrag genannte Name/Nummer stimmt) https://www.rechtsbuch.tg.ch/app/de/texts_of_law/271.1
+
+| Behörde | § ZSRG | Kurzinhalt |
+|---|---|---|
+| **Friedensrichter** (Schlichtung) | **§ 15–16** | Je Bezirk ein Friedensrichter; Schlichtungsbehörde nach ZPO |
+| Schlichtungsbehörde Miete/Pacht | **§ 17** | Von den politischen Gemeinden bezeichnet |
+| Schlichtungsbehörde Gleichstellung | **§ 18** | Kantonale Stelle |
+| **Bezirksgerichte** (1. Instanz, 5) | **§ 14** (Sitze: Arbon, Frauenfeld, Kreuzlingen, Münchwilen, Weinfelden) · **§ 19** (Zusammensetzung) · **§ 20** (Einzelrichter) · **§ 21** (Kollegialgericht 5er in best. Strafsachen) | Erstinstanzliche Gerichte; auch Konkurs-/SchKG-Untergericht (§ 59–60) |
+| Zwangsmassnahmengericht | **§ 23** | — |
+| **Obergericht** (OBERE Instanz) | **§ 14** (Sitz Frauenfeld) · **§ 25** (Zusammensetzung, 5–… Mitglieder) · **§ 26** (Berufungs-/Beschwerdeinstanz nach ZPO/StPO; SchKG-Oberaufsicht) | Obere Instanz Zivil/Straf; übt Aufsicht über Zivil-/Strafrechtspflege aus (§ 2) |
+
+**Hinweis:** Das **Verwaltungs-/Versicherungsgericht TG ist NICHT im ZSRG** geregelt (eigenes VRG/Verwaltungsrechtspflegegesetz) — das ZSRG betrifft nur Zivil-/Strafrechtspflege. (Die Gebühren des Verwaltungsgerichts stehen aber in derselben VGG, § 14 — siehe unten.)
+
+**Gerichtsgebühren-Erlass:** Verordnung des Grossen Rates über die Gebühren der Strafverfolgungs- und Gerichtsbehörden (**VGG**), **RB 638.1**, vom 13.5.1992, Stand 1.1.2022. https://www.rechtsbuch.tg.ch/app/de/texts_of_law/638.1
+
+**Zivil-Staffel (wörtlich) — explizite Streitwert-Tabellen:**
+- **§ 7 Friedensrichter** (Schlichtungsverhandlung nach Streitwert): bis 2'000 → **100–150**; >2'000–8'000 → **120–200**; >8'000–30'000 → **160–300**; >30'000–100'000 → **240–400**; >100'000 → **320–500**; ohne best. Streitwert **100–500**; Entscheidvorschlag/Endentscheid **100–500**.
+- **§ 8 Einzelrichter Bezirksgericht:** Summarverfahren **100–5'000**; Endentscheid Zivil **200–3'000**; prozessleitend **100–600**; Scheidung etc. nach § 11.
+- **§ 11 Bezirksgerichte** (Endentscheide Zivil mit Streitwert): 30'000–100'000 → **1'000–4'000**; >100'000–500'000 → **2'000–8'000**; >500'000–1'000'000 → **7'000–15'000**; >1'000'000 → **1–3 % des Streitwerts**; ohne best. Streitwert **300–20'000**.
+- **§ 13 Obergericht** (Zivil mit Streitwert): 2'000–8'000 → **500–1'500**; >8'000–30'000 → **1'000–3'000**; >30'000–100'000 → **1'500–4'500**; (höhere Bänder fortlaufend).
+- **§ 3:** allg. Bemessung nach Aufwand/Bedeutung/Streitwert; ×2 bei besonderem Aufwand.
+
+**Unsicherheiten:** keine.
+
+---
+
+## Gesamt-Unsicherheiten / Korrekturen gegenüber dem Auftrag
+
+1. **AG (wichtigste Korrektur):** Das in der Vorarbeit genannte **VKD SAR 221.150 ist seit 1.7.2024 aufgehoben**. Aktueller Zivil-Gebühren-Erlass = **Gebührendekret (GebührD), SAR 662.110** (in Kraft seit 1.7.2024) mit Streitwert-Formel-Tabelle.
+2. **AI:** „Gerichtsorganisationsgesetz?" → **bestätigt** (GOG, GS 173.000). ai.ch blockt zwar (403), aber die amtliche Erlasssammlung **ai.clex.ch** lieferte Volltext — AI-Daten sind voll amtlich verifiziert, kein blosses Snippet.
+3. **GR:** Post-Reform-Stand bestätigt — **Obergericht** (Art. 37 ff. GOG, Stand 1.5.2026); VGZ-Fassung Stand 1.1.2025 nennt das Obergericht ausdrücklich. GR-VGZ arbeitet mit **Rahmengebühren ohne Streitwert-Tabelle** (anders als AG/TG).
+4. **Instanz-Zuständigkeit:** Die GOGs regeln primär Konstituierung/Abteilungen. Bei **AI** und **GR** folgt die materielle erste/obere-Instanz-Zuordnung aus EG-ZPO/EG-StPO bzw. VRG, nicht aus dem GOG-Artikel selbst — für die Engine-Logik relevant.
+5. **SG Handelsgericht Art. 13 GerG:** bestätigt (Zusammensetzung); sachliche Zuständigkeit über ZPO/Gerichtsordnung sGS 941.21.
+
+Alle Erlasstexte wurden aus den **amtlichen PDF-Fassungen** der kantonalen Erlasssammlungen (LexWork-API) extrahiert und im Volltext geprüft, nicht aus Drittquellen.
 
 ## Teil D — TI · VD · VS · NE · GE · JU
 

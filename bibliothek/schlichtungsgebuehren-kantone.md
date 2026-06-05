@@ -108,8 +108,8 @@ Bundesrechtliche Kostenlosigkeit (Art. 113 Abs. 2 ZPO) ist vorausgesetzt und hie
 | | |
 |---|---|
 | **Gebührenrahmen** | Verfahren vor den Schlichtungsbehörden (§ 6 Abs. 1): **bei Erledigung durch Klageanerkennung, Vergleich oder Klagerückzug bis Fr. 300**; **Ausstellung Weisungsschein (Klagebewilligung) Fr. 50–300**; **Urteil oder Urteilsvorschlag Fr. 100–500**. In ausserordentlich zeitraubenden Fällen oder bei mutwilligem/trölerischem Verhalten bis zum Doppelten des Höchstbetrags (§ 3 Abs. 2). |
-| **Rechtsgrundlage** | **Dekret über die Verfahrenskosten (Verfahrenskostendekret, VKD)** vom 24.11.1987, **SAR 221.150**, §§ 3, 6. |
-| **URL** | https://gesetzessammlungen.ag.ch/app/de/texts_of_law/221.150 ; Volltext https://www.lexfind.ch/tolv/237493/de — Abruf 5.6.2026 |
+| **Rechtsgrundlage** | ⚠ **KORREKTUR (GOG-Recherche 5.6.2026): VKD SAR 221.150 seit 1.7.2024 AUFGEHOBEN.** Aktuell: **Gebührendekret (GebührD), SAR 662.110** (in Kraft 1.7.2024), § 6 — Friedensrichter: Erledigung Anerkennung/Vergleich/Rückzug **50–300** · Klagebewilligung **50–300** · Urteil/Urteilsvorschlag ab 100. Beträge der Erstrecherche (aus VKD) im finalen Doppelcheck gegen GebührD § 6 abgleichen. |
+| **URL** | https://gesetzessammlungen.ag.ch/app/de/texts_of_law/662.110 (GebührD, Abruf 5.6.2026); historisch: …/221.150 (aufgehoben 1.7.2024) |
 | **Bemerkungen** | **Kostenvorschuss** in der Praxis mind. CHF 300 (von Friedensrichterämtern erhoben). Härtefall-Reduktion möglich (§ 3 Abs. 3). |
 
 ## TG — Thurgau
@@ -186,7 +186,7 @@ Bundesrechtliche Kostenlosigkeit (Art. 113 Abs. 2 ZPO) ist vorausgesetzt und hie
 | **AI** | Vorstand 50–300; Urteilsvorschlag/Entscheid 50–500 | GGV, GS 173.810, Art. 7 |
 | **SG** | Klagebewilligung 200–1'000; Entscheid 300–1'000; Einigung 100–600 | GKV, sGS 941.12, Art. 8 |
 | **GR** | 100–500 (Entscheid/Vorschlag 300–3'000) | VGZ, BR 320.210, Art. 2 |
-| **AG** | Erledigung bis 300; Weisungsschein 50–300; Urteil(svorschlag) 100–500 | VKD, SAR 221.150, § 6 |
+| **AG** | Erledigung 50–300; Klagebewilligung 50–300; Urteil(svorschlag) ab 100 | **GebührD, SAR 662.110, § 6** (VKD 221.150 aufgehoben 1.7.2024!) |
 | **TG** | Vorstand 100–500 (Streitwert-Staffel); Klageabschreibung 50 | VGG, RB 638.1, § 7 |
 | **TI** | 50–150 → 3'000+0,5 % (Streitwert-Staffel) | LTG, RL 178.200, Art. 5 |
 | **VD** | 150 → 1'200+0,25 % (max 5'000); non-patr. 150–5'000 | TFJC, BLV 270.11.5, Art. 15–16 |
