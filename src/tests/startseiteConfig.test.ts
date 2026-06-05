@@ -175,9 +175,9 @@ describe('Katalog-Integrität (Rechtsgebiet-Gliederung)', () => {
 });
 
 describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
-  it('verfügbar = status !== geplant; Regressionszählung 18 (Stand 5.6.2026, + Vollmacht)', () => {
+  it('verfügbar = status !== geplant; Regressionszählung 19 (Stand 5.6.2026, + Vollmacht + Zuständigkeit)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(18);
+    expect(verf.length).toBe(19);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });

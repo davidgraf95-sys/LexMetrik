@@ -481,27 +481,30 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geplant', norms: [],
   },
 
-  // ════ III – Zuständigkeit & Einordnung (in Vorbereitung) ════
-  gerichtsstand: {
-    id: 'gerichtsstand', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+  // ════ III – Zuständigkeit & Einordnung ════
+  // EINE Zuständigkeits-Karte statt der drei Einzelkarten gerichtsstand/
+  // verfahrensart/schlichtung (Konsolidierung 5.6.2026): die Engine
+  // beantwortet alle drei Fragen in einem Durchlauf (ZUSTAENDIGKEIT-AUFTRAG.md).
+  zustaendigkeit: {
+    id: 'zustaendigkeit', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
-    title: 'Örtliche Zuständigkeit / Gerichtsstand',
-    description: 'Bestimmung des örtlich zuständigen Gerichts im Zivilprozess.',
-    status: 'geplant', norms: [],
-  },
-  verfahrensart: {
-    id: 'verfahrensart', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
-    rechtsbereich: 'privat',
-    title: 'Sachliche Zuständigkeit & Verfahrensart',
-    description: 'Ordentliches, vereinfachtes oder summarisches Verfahren nach Streitwert und Materie.',
-    status: 'geplant', norms: [],
-  },
-  schlichtung: {
-    id: 'schlichtung', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
-    rechtsbereich: 'privat',
-    title: 'Schlichtungspflicht & Schlichtungsbehörde',
-    description: 'Ob ein Schlichtungsverfahren erforderlich ist und welche Behörde zuständig ist.',
-    status: 'geplant', norms: [],
+    title: 'Zuständigkeit (Gericht · Verfahren · Schlichtung)',
+    description: 'Verfahrensart, Schlichtungspflicht und -behörde sowie örtlicher Gerichtsstand nach ZPO (Fassung 1.1.2025) – mit offenen Weichen für Handelsgericht und direkte Klage; konkrete Stelle mit Adresse für erfasste Kantone.',
+    status: 'entwurf',
+    norms: [
+      // Schlichtung: Grundsatz, Verzicht, paritätische Behörden
+      { label: 'Art. 197 ZPO', url: fedlexUrl('ZPO', '197'), verified: false },
+      { label: 'Art. 199 ZPO', url: fedlexUrl('ZPO', '199'), verified: false },
+      { label: 'Art. 200 ZPO', url: fedlexUrl('ZPO', '200'), verified: false },
+      // Entscheidvorschlag (Revision 2025: bis CHF 10'000)
+      { label: 'Art. 210 ZPO', url: fedlexUrl('ZPO', '210'), verified: false },
+      // Verfahrensart
+      { label: 'Art. 243 ZPO', url: fedlexUrl('ZPO', '243'), verified: false },
+    ],
+    href: '/rechner/zustaendigkeit',
+    keywords: ['Zuständigkeit', 'Gerichtsstand', 'Verfahrensart', 'Schlichtung', 'Schlichtungsbehörde', 'Streitwert', 'Handelsgericht'],
+    related: ['zpo-fristen', 'schlichtungsgesuch'],
+    icon: 'scale',
   },
   iprg: {
     id: 'iprg', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Weitere Rechtsgebiete',
@@ -737,7 +740,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     title: 'Örtliche Zuständigkeit im Strafverfahren',
     description: 'Gerichtsstand im Strafverfahren nach Tatort und Beteiligten.',
     status: 'geplant', norms: [],
-    related: ['strafverfahren', 'gerichtsstand'],
+    related: ['strafverfahren', 'zustaendigkeit'],
     keywords: ['Gerichtsstand', 'Tatort', 'Zuständigkeit'],
   },
 

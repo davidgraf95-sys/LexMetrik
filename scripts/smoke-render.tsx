@@ -25,6 +25,7 @@ import { RechnerSchkg } from '../src/pages/RechnerSchkg';
 import { RechnerErbteilung } from '../src/pages/RechnerErbteilung';
 import { RechnerTagerechner } from '../src/pages/RechnerTagerechner';
 import { RechnerTeuerung } from '../src/pages/RechnerTeuerung';
+import { RechnerZustaendigkeit } from '../src/pages/RechnerZustaendigkeit';
 
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
@@ -48,6 +49,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['RechnerErbteilung', RechnerErbteilung],
   ['RechnerTagerechner', RechnerTagerechner],
   ['RechnerTeuerung', RechnerTeuerung],
+  ['RechnerZustaendigkeit', RechnerZustaendigkeit],
 ];
 
 let fehler = 0;
