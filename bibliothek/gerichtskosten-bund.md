@@ -1,7 +1,9 @@
 # Gerichtskosten des Bundes — Tarife (wörtlich aus Fedlex)
 
-**Erstellt:** 5.6.2026 · **Status: einfach belegt (alle Tabellen wörtlich aus
-amtlichen Filestore-Volltexten); Zweitprüfung ausstehend.**
+**Erstellt:** 5.6.2026 · **Status: ZWEIFACH GEPRÜFT — adversarialer Durchgang 5.6.2026: alle
+Stichproben (210.1 Ziff. 1, VGKE Art. 4, BStKR Art. 6–8 Stand 1.1.2026,
+KR-PatGer Art. 1/5) wörtlich bestätigt; KEINE neueren Konsolidierungen
+(Filestore-Echtheitsprobe via Dateigrösse).**
 Korrektur zur Auftragsannahme: SR 173.110.210.2 = VERWALTUNGSgebühren BGer;
 die Parteientschädigung steht in SR 173.110.210.3.
 

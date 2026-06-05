@@ -2,19 +2,19 @@
 
 **Erstellt:** 5.6.2026 · **Abrufdatum aller Quellen: 5.6.2026** (bger.ch,
 bstger.ch, bvger.ch, bundespatentgericht.ch, fedlex.admin.ch)
-**Status: LISTE, NICHT abgenommen; zweiter Prüfdurchgang ausstehend.**
+**Status: ZWEIFACH GEPRÜFT (adversarialer Durchgang 5.6.2026: 1 Korrektur, 3 Präzisierungen — unten eingearbeitet); nicht abgenommen.**
 
 ## 1 · Bundesgericht (BGer) — Art. 188 BV
 
 | Standort | Adresse | Abteilungen dort |
 |---|---|---|
 | Lausanne (Hauptsitz) | Avenue du Tribunal-Fédéral 29, 1000 Lausanne 14 | 2 zivilrechtliche · öffentlich-rechtliche I+II · 2 strafrechtliche |
-| Luzern | Schweizerhofquai 6, 6004 Luzern | **III. + IV. öffentlich-rechtliche Abteilung** (Sozialversicherungsrecht; vormals «sozialrechtliche Abteilungen», umbenannt Ende 2022; Ursprung EVG) |
+| Luzern | Schweizerhofquai 6, 6004 Luzern | **III. + IV. öffentlich-rechtliche Abteilung** (✓2: GESAMTES Sozialversicherungsrecht in Luzern — die III. führt zusätzlich Steuern/Abgaben [BGerR Art. 31], die IV. übriges SV-Recht [Art. 32]; vormals «sozialrechtliche Abteilungen», umbenannt Ende 2022; Ursprung EVG) |
 
 **Struktur:** 40 Richter/innen, **8 Abteilungen** (2 zivil / 4 öffentlich-rechtlich / 2 straf).
 Quelle: bger.ch (Gerichtsorganisation, FAQ 16, Kontakt).
 
-**Rechtsmittel & Schwellen (BGG SR 173.110, am HTML Stand 1.1.2024 verifiziert):**
+**Rechtsmittel & Schwellen (BGG SR 173.110; ✓2 am Stand 1.4.2026 erneut verifiziert — Schwellen unverändert):**
 - Beschwerde in Zivilsachen (Art. 72); **Streitwertgrenzen Art. 74: CHF 15'000**
   miet-/arbeitsrechtlich, **CHF 30'000** übrige vermögensrechtliche; Ausnahme
   Rechtsfrage von grundsätzlicher Bedeutung.
@@ -35,7 +35,7 @@ Quellen: bstger.ch (in Kürze, Kammern-Seiten).
 
 ## 3 · Bundesverwaltungsgericht (BVGer) — St. Gallen
 
-**Adresse:** Kreuzackerstrasse 12, 9000 St. Gallen · Post: **Postfach, 9023 St. Gallen**.
+**Adresse:** **Kreuzackerstrasse 12, 9023 St. Gallen** (✓2 KORREKTUR: amtliches Impressum nennt auch für die Strassenadresse 9023, nicht 9000) · Post: Postfach, 9023 St. Gallen.
 **6 Abteilungen:** I Infrastruktur/Steuern/Personal/Umwelt · II Wirtschaft/Wettbewerb/
 Beschaffung/IP/FINMA · III Sozialversicherungen/Gesundheit · IV Asyl ·
 V Asyl/Ausländerrecht · VI Ausländer-/Bürgerrecht.
@@ -44,8 +44,8 @@ Quellen: bvger.ch (Abteilungen, Aufgaben, Kontakt, Gerichtsbroschüre 2025).
 
 ## 4 · Bundespatentgericht (BPatGer) — St. Gallen (seit 1.1.2012)
 
-**Adresse:** St. Leonhard-Strasse 49, Postfach, 9023 St. Gallen; Verhandlungen im
-BVGer-Gebäude (Kreuzackerstrasse 12).
+**Adresse:** St. Leonhard-Strasse 49, Postfach, 9023 St. Gallen; Verhandlungsort laut Erstrecherche
+BVGer-Gebäude — ✓2: amtlich NICHT belegt, als unverifiziert führen.
 **Zuständigkeit (PatGG SR 173.41, Art. 26 — an Gerichtsseite verifiziert):**
 Abs. 1 **ausschliesslich**: Bestandes-/Verletzungsklagen, Lizenzerteilungsklagen,
 vorsorgliche Massnahmen, Vollstreckung; Abs. 2 **konkurrierend**: übrige
@@ -53,11 +53,14 @@ patentbezogene Zivilklagen (Berechtigung/Übertragung) — kantonale Gerichte pa
 **Rechtsmittel:** direkt Beschwerde in Zivilsachen ans BGer (Art. 75 Abs. 1 BGG),
 ohne Streitwertgrenze. Quellen: bundespatentgericht.ch (Aufgaben, Kontakt).
 
-## Offene Verifikationen (für den 2. Prüfdurchgang)
+## 2. Prüfdurchgang — ERLEDIGT (5.6.2026)
 
-1. BGer-Geschäftsverteilungsplan (Materien je Abteilung im Detail; liegt das
-   gesamte Sozialversicherungsrecht in Luzern?).
-2. Kosten-Tarife BStGer/BVGer (**VGKE SR 173.320.2**)/BPatGer am Fedlex-Volltext.
-3. PatGG Art. 26 zusätzlich am Fedlex-Volltext (SR 173.41) gegenprüfen.
-4. PLZ-Details («1000 Lausanne 14») und Telefonnummern am Impressum final prüfen.
-5. justitia.swiss-Termin (1.7.2027) als geplant/volatil markieren.
+1. ✓ BGer-Geschäftsverteilung am BGerR (SR 173.110.131, Art. 29–32): SV
+   vollständig in Luzern; III. zusätzlich Steuern/Abgaben (oben präzisiert).
+2. ✓ Kosten-Tarife wörtlich bestätigt (siehe gerichtskosten-bund.md);
+   keine neueren Konsolidierungen (Filestore-Probe; BStKR 1.1.2026 neueste).
+3. ✓ PatGG Art. 26 am Fedlex-Volltext wörtlich bestätigt.
+4. ✓ Adressen: «1000 Lausanne 14» amtlich · Franscini NUR Nr. 7 · BVGer-PLZ
+   korrigiert (9023) · BPatGer-Verhandlungsort als unverifiziert markiert.
+5. ✓ justitia.swiss 1.7.2027 amtlich «geplant» (BEKJ Art. 1–17 seit
+   1.10.2025 in Kraft; Obligatorium frühestens +1 Jahr) — bleibt volatil.
