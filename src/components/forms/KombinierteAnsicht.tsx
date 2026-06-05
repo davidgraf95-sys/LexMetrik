@@ -1,4 +1,4 @@
-import { inputCls } from '../vorlagen/ui';
+import { LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { ArbeitsrechtInput, Kanton, SperrereignisTyp, Sperrereignis } from '../../types/legal';
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
@@ -148,12 +148,12 @@ export function KombinierteAnsicht() {
 
         <div className="space-y-1">
           <label className="block text-body-s font-medium text-ink-700">AUF % (Lohnfortzahlung)</label>
-          <input type="number" min={1} max={100} value={form.arbeitsunfaehigkeitProzent ?? 100} onChange={(e) => set('arbeitsunfaehigkeitProzent', Number(e.target.value))} className={inputCls} />
+          <input type="number" inputMode="decimal" min={1} max={100} value={form.arbeitsunfaehigkeitProzent ?? 100} onChange={(e) => set('arbeitsunfaehigkeitProzent', Number(e.target.value))} className={inputCls} />
         </div>
 
         <div className="space-y-1">
           <label className="block text-body-s font-medium text-ink-700">Probezeit (Monate)</label>
-          <input type="number" min={0} max={3} value={form.probezeitMonate} onChange={(e) => set('probezeitMonate', Number(e.target.value))} className={inputCls} />
+          <input type="number" inputMode="decimal" min={0} max={3} value={form.probezeitMonate} onChange={(e) => set('probezeitMonate', Number(e.target.value))} className={inputCls} />
         </div>
       </div>
 
@@ -184,7 +184,7 @@ export function KombinierteAnsicht() {
         ))}
       </div>
 
-      <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+      <LiveHeader />
 
       {ergebnisse.kuendigung?.status === 'nichtig' && (
         <div className="lc-notice-danger">

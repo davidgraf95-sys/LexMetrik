@@ -1,4 +1,4 @@
-import { Field, inputCls } from '../vorlagen/ui';
+import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
 import type { LohnfortzahlungInput, Kanton, Verhinderungsgrund } from '../../types/legal';
@@ -160,7 +160,7 @@ export function LohnfortzahlungForm() {
 
         <Field label="Arbeitsunfähigkeit (%)" hint="100 = vollständig; z.B. 50 = halb (Budget-Modell)">
           <input
-            type="number" min={1} max={100} step={5}
+            type="number" inputMode="decimal" min={1} max={100} step={5}
             value={form.arbeitsunfaehigkeitProzent}
             onChange={(e) => set('arbeitsunfaehigkeitProzent', Number(e.target.value))}
             className={inputCls}
@@ -178,7 +178,7 @@ export function LohnfortzahlungForm() {
 
         <Field label="Beschäftigungsgrad / Pensum (%)" hint="Teilzeit; getrennt vom AUF-Grad (SHK N 54)">
           <input
-            type="number" min={1} max={100} step={5}
+            type="number" inputMode="decimal" min={1} max={100} step={5}
             value={form.pensumProzent ?? 100}
             onChange={(e) => set('pensumProzent', Number(e.target.value))}
             className={inputCls}
@@ -205,22 +205,22 @@ export function LohnfortzahlungForm() {
           <p className="lc-overline">Gleichwertigkeits-Checkliste (Art. 324a Abs. 4 OR, Orientierung)</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Taggeld (% des Lohnes)" hint="Richtwert ≥ 80 %">
-              <input type="number" min={0} max={100} className={inputCls}
+              <input type="number" inputMode="decimal" min={0} max={100} className={inputCls}
                 value={form.ktgKriterien?.taggeldProzent ?? ''} placeholder="z.B. 80"
                 onChange={(e) => setKtg('taggeldProzent', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
             <Field label="Leistungsdauer (Tage)" hint="Richtwert ≥ 720">
-              <input type="number" min={0} className={inputCls}
+              <input type="number" inputMode="decimal" min={0} className={inputCls}
                 value={form.ktgKriterien?.leistungsdauerTage ?? ''} placeholder="z.B. 720"
                 onChange={(e) => setKtg('leistungsdauerTage', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
             <Field label="Karenzfrist (Tage)" hint="max. 3 Tage zulässig">
-              <input type="number" min={0} className={inputCls}
+              <input type="number" inputMode="decimal" min={0} className={inputCls}
                 value={form.ktgKriterien?.karenzTage ?? ''} placeholder="z.B. 2"
                 onChange={(e) => setKtg('karenzTage', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
             <Field label="Arbeitgeber-Prämienanteil (%)" hint="mind. 50 %">
-              <input type="number" min={0} max={100} className={inputCls}
+              <input type="number" inputMode="decimal" min={0} max={100} className={inputCls}
                 value={form.ktgKriterien?.praemienAnteilArbeitgeberProzent ?? ''} placeholder="z.B. 50"
                 onChange={(e) => setKtg('praemienAnteilArbeitgeberProzent', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
@@ -248,12 +248,12 @@ export function LohnfortzahlungForm() {
                 onChange={(v) => set('verhinderungEnde', v || undefined)} />
             </Field>
             <Field label="Vereinbarte Kündigungsfrist (Monate, optional)" hint="§2.2 > 3 Monate → Anspruch ab Tag 1">
-              <input type="number" min={0} className={inputCls} placeholder="Leer = Standard"
+              <input type="number" inputMode="decimal" min={0} className={inputCls} placeholder="Leer = Standard"
                 value={form.vereinbarteKuendigungsfristMonate ?? ''}
                 onChange={(e) => set('vereinbarteKuendigungsfristMonate', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
             <Field label="Anrechenbare Vordienstzeit (Monate, optional)" hint="§2.2 Lehre/Praktikum/Folge-Befristung (SHK N 44)">
-              <input type="number" min={0} className={inputCls} placeholder="0"
+              <input type="number" inputMode="decimal" min={0} className={inputCls} placeholder="0"
                 value={form.anrechenbareVordienstzeitMonate ?? ''}
                 onChange={(e) => set('anrechenbareVordienstzeitMonate', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
@@ -273,16 +273,11 @@ export function LohnfortzahlungForm() {
         )}
       </div>
 
-      {fehler.length > 0 && (
-        <div className="lc-notice-danger space-y-1">
-          <p className="lc-overline text-danger-700 mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
-        </div>
-      )}
+      <FehlerBox fehler={fehler} />
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
           {ergebnis.status === 'ok' && ergebnis.zeitraumVonISO && ergebnis.letzterTagISO && (
             <FristenKalender
               ereignisISO={ergebnis.zeitraumVonISO}

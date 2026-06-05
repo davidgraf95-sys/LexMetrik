@@ -1,4 +1,4 @@
-import { Field, inputCls } from '../vorlagen/ui';
+import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { SperrfristenInput, Sperrereignis, SperrereignisTyp } from '../../types/legal';
 import { berechneSperrfristen, type SperrfristenErgebnis } from '../../lib/sperrfristen';
@@ -149,7 +149,7 @@ export function KuendigungSperrForm() {
 
         <Field label="Probezeit (Monate)" hint="0 = keine Probezeit, max. 3 Monate">
           <input
-            type="number" min={0} max={3} step={1}
+            type="number" inputMode="decimal" min={0} max={3} step={1}
             value={form.probezeitMonate}
             onChange={(e) => set('probezeitMonate', Number(e.target.value))}
             className={inputCls}
@@ -158,7 +158,7 @@ export function KuendigungSperrForm() {
 
         <Field label="Abweichende Frist (Monate, optional)" hint="§3.2 schriftlich/GAV; ≥ 1 Monat gilt (auch kürzer)">
           <input
-            type="number" min={0} step={0.5}
+            type="number" inputMode="decimal" min={0} step={0.5}
             value={form.abweichendeFristMonate ?? ''}
             onChange={(e) => set('abweichendeFristMonate', e.target.value ? Number(e.target.value) : undefined)}
             className={inputCls}
@@ -186,7 +186,7 @@ export function KuendigungSperrForm() {
         {form.kuendigendePartei === 'arbeitgeber' && (
           <Field label="Vaterschaftsurlaub – nicht bezogene Tage (optional)" hint="§3.4 Art. 335c Abs. 3 OR, verlängert die Frist">
             <input
-              type="number" min={0} step={1}
+              type="number" inputMode="decimal" min={0} step={1}
               value={form.vaterschaftsurlaubResttage ?? ''}
               onChange={(e) => set('vaterschaftsurlaubResttage', e.target.value ? Number(e.target.value) : undefined)}
               className={inputCls}
@@ -277,16 +277,11 @@ export function KuendigungSperrForm() {
         ))}
       </div>
 
-      {fehler.length > 0 && (
-        <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
-          <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
-        </div>
-      )}
+      <FehlerBox fehler={fehler} />
 
       {gesamt && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
 
           {/* Prominente Eckdaten – ein kohärentes Ergebnis */}
           {gesamt.status === 'nichtig' ? (

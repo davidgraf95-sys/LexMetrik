@@ -1,4 +1,4 @@
-import { Field, inputCls } from '../vorlagen/ui';
+import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
 import type { ErbteilungInput, Zivilstand, Gueterstand, ErbteilungErgebnis } from '../../types/erbrecht';
@@ -147,7 +147,7 @@ export function ErbteilungForm() {
           hint={gueterrechtAn
             ? 'Wird unten güterrechtlich hergeleitet – Direkteingabe ist deaktiviert'
             : 'Leer = nur Quoten; mit Betrag werden Erb- und Pflichtteile in CHF ausgewiesen'}>
-          <input type="number" min={0} value={betraege.direkt} disabled={gueterrechtAn}
+          <input type="number" inputMode="decimal" min={0} value={betraege.direkt} disabled={gueterrechtAn}
             onChange={(e) => setBetraege((b) => ({ ...b, direkt: e.target.value }))}
             placeholder="z. B. 500000" className={inputCls + (gueterrechtAn ? ' opacity-50 cursor-not-allowed' : '')} />
         </Field>
@@ -173,14 +173,14 @@ export function ErbteilungForm() {
         <p className="lc-overline">1. Parentel – Nachkommen (Art. 457 ZGB)</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label="Lebende Kinder (Anzahl)">
-            <input type="number" min={0} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls + ' w-28'} />
+            <input type="number" inputMode="decimal" min={0} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls + ' w-28'} />
           </Field>
           <Field label="Vorverstorbene Kinder mit Nachkommen (Stämme)" hint="Deren Nachkommen treten nach Stämmen ein (Art. 457 Abs. 3)">
             <div className="space-y-2">
               {staemme.map((s, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <span className="text-body-s text-ink-500 w-20">Stamm {i + 1}:</span>
-                  <input type="number" min={0} step={1} value={s.enkel}
+                  <input type="number" inputMode="decimal" min={0} step={1} value={s.enkel}
                     onChange={(e) => setStaemme((arr) => arr.map((x, j) => (j === i ? { enkel: Number(e.target.value) } : x)))}
                     className={inputCls + ' w-24'} />
                   <span className="text-body-s text-ink-500">Nachkommen</span>
@@ -256,16 +256,11 @@ export function ErbteilungForm() {
         )}
       </div>
 
-      {fehler.length > 0 && (
-        <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
-          <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
-        </div>
-      )}
+      <FehlerBox fehler={fehler} />
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
 
           {/* Eckdaten */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

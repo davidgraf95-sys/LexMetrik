@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { Field, inputCls } from '../vorlagen/ui';
+import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
@@ -174,7 +174,7 @@ export function GewaehrleistungForm() {
           <DatumsFeld value={ruegeAm} onChange={setRuegeAm} className={inputCls} />
         </Field>
         <Field label="Vereinbarte Verjährungsfrist (Jahre, optional)" hint="wird gegen Mindest- (Art. 210 Abs. 4, 219a Abs. 3, 371 Abs. 3) und Höchstdauern geprüft">
-          <input type="number" min={0} step={0.5} value={vereinbart} onChange={(e) => setVereinbart(e.target.value)}
+          <input type="number" inputMode="decimal" min={0} step={0.5} value={vereinbart} onChange={(e) => setVereinbart(e.target.value)}
             placeholder="leer = gesetzliche Frist" className={inputCls} />
         </Field>
       </div>
@@ -221,7 +221,7 @@ export function GewaehrleistungForm() {
 
       {ergebnis && ergebnis.status === 'ok' && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
 
           {/* Eckdaten: Rügefrist (Verwirkung) und Verjährung (Einrede) strikt getrennt */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

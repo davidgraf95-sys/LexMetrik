@@ -1,4 +1,4 @@
-import { Field } from '../vorlagen/ui';
+import { Field, LiveHeader } from '../vorlagen/ui';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
 import { berechneVerzugszins, formatCHF } from '../../lib/verzugszins';
@@ -118,7 +118,7 @@ export function VerzugszinsForm() {
           <BetragsFeld value={form.kapital ? String(form.kapital) : ''} onChange={(v) => set('kapital', Number(v) || 0)} className={inputNum} placeholder="z. B. 10'000" />
         </Field>
         <Field label="Zinssatz (%)" hint="Default 5% (Art. 104 Abs. 1 OR); z.B. ATSG 5%, Steuern variabel">
-          <input type="number" min={0} step={0.25} value={form.zinssatzProzent ?? 5} onChange={(e) => set('zinssatzProzent', Number(e.target.value))} className={inputNum} />
+          <input type="number" inputMode="decimal" min={0} step={0.25} value={form.zinssatzProzent ?? 5} onChange={(e) => set('zinssatzProzent', Number(e.target.value))} className={inputNum} />
         </Field>
 
         <Field label="Verzugsbeginn">
@@ -183,7 +183,7 @@ export function VerzugszinsForm() {
               {row.typ === 'teilzahlung' ? (
                 <BetragsFeld value={row.wert ? String(row.wert) : ''} onChange={(v) => updateRow(i, { wert: Number(v) || 0 })} className={inputNum} />
               ) : (
-                <input type="number" min={0} step={0.25} value={row.wert}
+                <input type="number" inputMode="decimal" min={0} step={0.25} value={row.wert}
                   onChange={(e) => updateRow(i, { wert: Number(e.target.value) })} className={inputNum} />
               )}
             </div>
@@ -194,7 +194,7 @@ export function VerzugszinsForm() {
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
           {ergebnis.status === 'ok' && (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

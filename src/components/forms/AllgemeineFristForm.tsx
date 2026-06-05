@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Field, inputCls } from '../vorlagen/ui';
+import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { Tabs } from '../ui/Tabs';
 import { Link, useNavigate } from 'react-router-dom';
 import {
@@ -211,7 +211,7 @@ export function AllgemeineFristForm() {
             </Field>
             <div className="grid grid-cols-[7rem_1fr] gap-3">
               <Field label="Länge">
-                <input type="number" min={1} step={1} className={inputCls + ' num'} value={form.laenge}
+                <input type="number" inputMode="decimal" min={1} step={1} className={inputCls + ' num'} value={form.laenge}
                   onChange={(e) => set('laenge', Math.max(1, Math.round(Number(e.target.value) || 1)))} />
               </Field>
               <Field label="Einheit">
@@ -247,7 +247,7 @@ export function AllgemeineFristForm() {
 
           {ergebnis && (
             <div className="lc-reveal space-y-4" aria-live="polite">
-              <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+              <LiveHeader />
               {/* Prominente Eckdaten + Kalender (Angleichung an ZPO/SchKG) */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
@@ -301,7 +301,7 @@ export function AllgemeineFristForm() {
             </Field>
             <div className="grid grid-cols-[7rem_1fr] gap-3">
               <Field label="Länge">
-                <input type="number" min={1} step={1} className={inputCls + ' num'} value={rueck.laenge}
+                <input type="number" inputMode="decimal" min={1} step={1} className={inputCls + ' num'} value={rueck.laenge}
                   aria-invalid={!Number.isInteger(rueck.laenge) || rueck.laenge <= 0}
                   onChange={(e) => setRueck((r) => ({ ...r, laenge: Number(e.target.value) }))} />
               </Field>
@@ -328,7 +328,7 @@ export function AllgemeineFristForm() {
           </div>
           {rueckErgebnis && (
             <div className="lc-reveal space-y-4" aria-live="polite">
-              <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+              <LiveHeader />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { label: 'Spätester Handlungstag', val: `${rueckErgebnis.resultat.endWochentag}, ${rueckErgebnis.resultat.endDatum}` },

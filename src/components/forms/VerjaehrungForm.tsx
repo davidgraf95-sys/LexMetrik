@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { Field, inputCls } from '../vorlagen/ui';
+import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import type { Kanton } from '../../types/legal';
@@ -234,7 +234,7 @@ export function VerjaehrungForm() {
             <span className="text-body-s text-ink-500">erklärt am</span>
             <DatumsFeld value={verzichtDatum} onChange={setVerzichtDatum} className={inputCls} wrapperClassName="w-full sm:w-44" />
             <span className="text-body-s text-ink-500">für</span>
-            <input type="number" min={1} max={10} value={verzichtJahre} placeholder="10"
+            <input type="number" inputMode="decimal" min={1} max={10} value={verzichtJahre} placeholder="10"
               onChange={(e) => setVerzichtJahre(e.target.value)} className={inputCls + ' w-24'} />
             <span className="text-body-s text-ink-500">Jahre (max. 10, ab Verjährungseintritt)</span>
           </div>
@@ -243,7 +243,7 @@ export function VerjaehrungForm() {
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
 
           {/* Eckdaten – relative und absolute Frist getrennt; die massgebliche trägt das Badge */}
           <div className={`grid grid-cols-1 sm:grid-cols-2 ${hatAbsolut ? 'lg:grid-cols-4' : 'sm:grid-cols-3'} gap-3`}>

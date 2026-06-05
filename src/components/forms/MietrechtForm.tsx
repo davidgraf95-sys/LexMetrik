@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { Field, inputCls } from '../vorlagen/ui';
+import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { MietInput, MietErgebnis, Mietobjekt, Kuendigungsart, TerminQuelle, MietPartei } from '../../types/mietrecht';
@@ -195,7 +195,7 @@ export function MietrechtForm() {
         )}
         {art === 'ordentlich' && istRaum && (
           <Field label="Vereinbarte Kündigungsfrist in Monaten (optional)" hint="Länger als das Gesetz zulässig; kürzer wäre nichtig (Art. 266a Abs. 1 OR)">
-            <input type="number" min={1} value={fristMonate} onChange={(e) => setFristMonate(e.target.value)} className={inputCls + ' w-28'} />
+            <input type="number" inputMode="decimal" min={1} value={fristMonate} onChange={(e) => setFristMonate(e.target.value)} className={inputCls + ' w-28'} />
           </Field>
         )}
         {art === 'zahlungsverzug' && (
@@ -234,16 +234,11 @@ export function MietrechtForm() {
         </div>
       )}
 
-      {fehler.length > 0 && (
-        <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
-          <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
-        </div>
-      )}
+      <FehlerBox fehler={fehler} />
 
       {ergebnis && (
         <div className="space-y-4">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="lc-tile">

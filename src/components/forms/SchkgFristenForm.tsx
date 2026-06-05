@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { Field, inputCls } from '../vorlagen/ui';
+import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { SchkgInput, SchkgModus, SchkgFristnatur, SchkgEinheit, SchkgErgebnis } from '../../types/schkg';
@@ -208,7 +208,7 @@ export function SchkgFristenForm() {
         {!istDual && !istInfo && (
           <Field label="Fristtyp & Länge">
             <div className="flex gap-2">
-              <input type="number" min={1} step={1} value={form.laenge} onChange={(e) => set('laenge', Number(e.target.value))} className={inputCls + ' w-24'} />
+              <input type="number" inputMode="decimal" min={1} step={1} value={form.laenge} onChange={(e) => set('laenge', Number(e.target.value))} className={inputCls + ' w-24'} />
               <select value={form.einheit} onChange={(e) => set('einheit', e.target.value as SchkgEinheit)} className={inputCls}>
                 {EINHEITEN.map((u) => <option key={u.code} value={u.code}>{u.label}</option>)}
               </select>
@@ -286,16 +286,11 @@ export function SchkgFristenForm() {
         </div>
       )}
 
-      {fehler.length > 0 && (
-        <div className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
-          <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-          {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
-        </div>
-      )}
+      <FehlerBox fehler={fehler} />
 
       {ausgaben.length > 0 && (
         <div className="space-y-6">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
           {ausgaben.map((a) => {
             const e = a.ergebnis;
             const badge = NATUR_BADGE[a.natur];

@@ -61,7 +61,10 @@ function ergebnisAlsText(titel: string, e: Berechnungsergebnis): string {
 export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
   const [rechenWegOffen, setRechenWegOffen] = useState(false);
   const [annahmenOffen, setAnnahmenOffen] = useState(false);
-  const [warnungenOffen, setWarnungenOffen] = useState(false);
+  // UX-Programm A6: Bei nicht-«ok»-Status sind die Vorbehalte das Wichtigste →
+  // standardmässig offen (Lazy-Init; Live-Neuberechnungen lassen die manuelle
+  // Wahl des Nutzers unangetastet).
+  const [warnungenOffen, setWarnungenOffen] = useState(() => ergebnis.status !== 'ok');
   const [kopiert, setKopiert] = useState(false);
   const cfg = STATUS_CONFIG[ergebnis.status];
 
@@ -73,7 +76,8 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
   };
 
   return (
-    <div className="lc-reveal">
+    // aria-live: Screenreader erfahren von Live-Neuberechnungen (UX C7)
+    <div className="lc-reveal" aria-live="polite">
       {/* Messing-Akzentlinie als Ablesekante über dem Readout */}
       <div className="scale-rule" aria-hidden />
       <div className="bg-surface border border-line rounded-b-lg rounded-t-none shadow-md overflow-hidden">
@@ -114,7 +118,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Rechenweg (5.6.1) */}
         <div className="border border-line rounded-md overflow-hidden">
-          <button
+          <button type="button"
             onClick={() => setRechenWegOffen(!rechenWegOffen)}
             className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
           >
@@ -147,7 +151,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
         {/* Annahmen */}
         {ergebnis.annahmen.length > 0 && (
           <div className="border border-line rounded-md overflow-hidden">
-            <button
+            <button type="button"
               onClick={() => setAnnahmenOffen(!annahmenOffen)}
               className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
             >

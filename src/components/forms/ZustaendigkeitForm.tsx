@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Field, inputCls } from '../vorlagen/ui';
+import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -500,7 +500,7 @@ export function ZustaendigkeitForm() {
       {/* 4 · Ergebnis */}
       {ergebnis && r && (
         <div className="lc-reveal space-y-4" aria-live="polite">
-          <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+          <LiveHeader />
 
           {/* Reihenfolge wie die Prüfung: örtlich → Verfahren → Eingabe */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

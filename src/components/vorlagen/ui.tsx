@@ -57,3 +57,26 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
     </nav>
   );
 }
+
+// ─── Geteilte Engine-UI (UX-Programm Etappe 1, 5.6.2026) ────────────────────
+// Entdoppelung wortgleicher Muster aus den 12 Rechner-Formularen (§10).
+
+/** Live-Hinweis über dem Ergebnisblock — vorher 9× wortgleich dupliziert. */
+export function LiveHeader() {
+  return (
+    <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>
+      Live-Berechnung – aktualisiert sich automatisch
+    </p>
+  );
+}
+
+/** Einheitliche Eingabefehler-Box (vorher 4 Varianten; immer role="alert"). */
+export function FehlerBox({ fehler }: { fehler: string[] }) {
+  if (fehler.length === 0) return null;
+  return (
+    <div role="alert" className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
+      <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
+      {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
+    </div>
+  );
+}
