@@ -45,6 +45,9 @@ export const CALCULATORS: Calculator[] = [
   { slug: 'gewaehrleistung', titel: 'Gewährleistung & Mängelrüge', kategorie: 'Obligationenrecht',
     kurzbeschrieb: 'Rüge- und Verjährungsfristen bei Kauf, Werkvertrag und Grundstückkauf — mit Zwei-Regime-Weiche zur Baumängel-Revision 2026.',
     normen: ['Art. 201 OR', 'Art. 210 OR', 'Art. 219a OR', 'Art. 367 OR', 'Art. 371 OR'], status: 'entwurf', icon: 'house' },
+  { slug: 'tagerechner', titel: 'Fristen- & Tagerechner', kategorie: 'Übergreifend',
+    kurzbeschrieb: 'Allgemeines Fristende nach Art. 77/78 OR — Ereignistag zählt nicht, Monatsfristen mit Monatsende-Klemmung, Verschiebung von Wochenend-/Feiertagsenden auf den nächsten Werktag.',
+    normen: ['Art. 77 OR', 'Art. 78 OR'], status: 'entwurf', icon: 'clock' },
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {

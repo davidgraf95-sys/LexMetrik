@@ -16,6 +16,7 @@ const RechnerErbteilung = lazy(() => import('./pages/RechnerErbteilung').then((m
 const RechnerMietrecht = lazy(() => import('./pages/RechnerMietrecht').then((m) => ({ default: m.RechnerMietrecht })));
 const RechnerVerjaehrung = lazy(() => import('./pages/RechnerVerjaehrung').then((m) => ({ default: m.RechnerVerjaehrung })));
 const RechnerGewaehrleistung = lazy(() => import('./pages/RechnerGewaehrleistung').then((m) => ({ default: m.RechnerGewaehrleistung })));
+const RechnerTagerechner = lazy(() => import('./pages/RechnerTagerechner').then((m) => ({ default: m.RechnerTagerechner })));
 const VorlageTestament = lazy(() => import('./pages/VorlageTestament').then((m) => ({ default: m.VorlageTestament })));
 const VorlagePatientenverfuegung = lazy(() => import('./pages/VorlagePatientenverfuegung').then((m) => ({ default: m.VorlagePatientenverfuegung })));
 const VorlageVorsorgeauftrag = lazy(() => import('./pages/VorlageVorsorgeauftrag').then((m) => ({ default: m.VorlageVorsorgeauftrag })));
@@ -64,6 +65,7 @@ export default function App() {
         <Route path="/rechner/mietrecht" element={<RechnerMietrecht />} />
         <Route path="/rechner/verjaehrung" element={<RechnerVerjaehrung />} />
         <Route path="/rechner/gewaehrleistung" element={<RechnerGewaehrleistung />} />
+        <Route path="/rechner/tagerechner" element={<RechnerTagerechner />} />
         {/* Vorlagen (Modus «Vorlagen») */}
         <Route path="/vorlagen/testament" element={<VorlageTestament />} />
         <Route path="/vorlagen/patientenverfuegung" element={<VorlagePatientenverfuegung />} />

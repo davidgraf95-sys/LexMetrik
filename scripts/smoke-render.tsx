@@ -20,6 +20,7 @@ import { RechnerVerjaehrung } from '../src/pages/RechnerVerjaehrung';
 import { RechnerGewaehrleistung } from '../src/pages/RechnerGewaehrleistung';
 import { RechnerSchkg } from '../src/pages/RechnerSchkg';
 import { RechnerErbteilung } from '../src/pages/RechnerErbteilung';
+import { RechnerTagerechner } from '../src/pages/RechnerTagerechner';
 
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
@@ -38,6 +39,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['RechnerGewaehrleistung', RechnerGewaehrleistung],
   ['RechnerSchkg', RechnerSchkg],
   ['RechnerErbteilung', RechnerErbteilung],
+  ['RechnerTagerechner', RechnerTagerechner],
 ];
 
 let fehler = 0;
