@@ -32,7 +32,7 @@ Geplante **Rechner und Vorlagen**, gegliedert nach Rechtsgebiet (beide Modi geme
 
 ## Vorsorge & Erwachsenenschutz
 **Rechner:** — (Nachlass-/Pflichtteilsplanung über den Erbrechts-Rechner)
-**Vorlagen:** Vorsorgeauftrag `(free)` · Patientenverfügung `(free)` · Generalvollmacht `(free)` · Bankvollmacht `(free)`
+**Vorlagen:** Vorsorgeauftrag `(free)` · Patientenverfügung `(free)` · Vollmacht (Anwalt · General · Spezial, EINE Maske) `[live]` `(free)`
 
 ## Familienrecht
 **Rechner:** güterrechtliche Auseinandersetzung / Vorschlag · Vorsorgeausgleich (BVG) · familienrechtliche Fristen

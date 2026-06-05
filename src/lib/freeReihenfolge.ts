@@ -18,8 +18,7 @@ export const FREE_REIHENFOLGE: string[] = [
   'eigenhaendiges-testament',
   'vorsorgeauftrag',
   'patientenverfuegung',
-  'generalvollmacht',
-  'bankvollmacht',
+  'vollmacht',
   'mahnung',
   'kuendigung-arbeitnehmer',
 ];

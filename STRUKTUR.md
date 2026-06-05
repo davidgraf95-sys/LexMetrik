@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 451 Tests in 24 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 473 Tests in 25 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -170,7 +170,7 @@ Quelle: vorlagenPdf (jsPDF, Banner-API, WinAnsi-Sicherung) + vorlagenDocx
 vorbereitet, nirgends ausgeliefert). Geteilte Wizard-UI:
 components/vorlagen/ui.tsx (Field, NormLink locale-bewusst, Stepper).
 
-**6 gebaute Vorlagen (alle entwurf):**
+**7 gebaute Vorlagen (alle entwurf):**
 1. **Testament** (/vorlagen/testament) — eigenhändig: Abschreib-Mustertext,
    Pflichtteils-Panel, Gates 467/505/481/472. KEIN DOCX (Eigenhändigkeit).
 2. **Patientenverfügung** (/vorlagen/patientenverfuegung) — Schriftform;
@@ -205,8 +205,23 @@ components/vorlagen/ui.tsx (Field, NormLink locale-bewusst, Stepper).
    Geschäftsraum. DATIERTE Parameter: Referenzzins 1.25 % (1.6.2026,
    quartalsweise!), MWST 8.1 %, Formularpflicht-Kantone (BWO 4.2.2026,
    BE-Diskrepanz offengelegt, dynamisch per 1.11.). PDF+DOCX; 14 Tests.
+7. **Vollmacht** (/vorlagen/vollmacht, Karte `vollmacht`) — EINE Maske mit
+   Typ-Schalter Anwalts-/General-/Spezialvollmacht (Entscheid David
+   5.6.2026 statt zweier Vorlagen; Grundlagen-Bericht «Vollmachten»,
+   Downloads). Formfrei (Art. 11 OR) → ausgabeArt `fertig`, PDF+DOCX.
+   Gemeinsamer OR-AT-Kern (Parteien natürlich/juristisch, mehrere
+   Bevollmächtigte einzeln/gemeinsam, Substitution, Widerruf Art. 34,
+   Befristung, transmortale Klausel Art. 35); besondere Ermächtigungen
+   als Katalog wortlautnah zu Art. 396 Abs. 3 OR. Deterministische
+   Form-Gates: Bürgschaft = SPERRE (Art. 493 Abs. 6 OR), Grundstück =
+   Warnung (Art. 216 OR / Art. 86 GBV / Formfrage offen BGE 112 II 330),
+   Bank = bankeigene Formulare, Prozess-Bereich = Art. 68 ZPO-Warnung,
+   Vorsorgefall = Weiche zu Vorsorgeauftrag/PV (Gesundheits-Bereich
+   bewusst NICHT wählbar). Ersetzt die geplanten Karten generalvollmacht/
+   bankvollmacht. StPO/VwVG in fedlex.ts ergänzt (Anker art_129/art_11
+   empirisch verifiziert). 20 Akzeptanztests.
 
-Wizards 1–3 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
+Wizards 1–3 und 7 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
 array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
 
 ## PDF-Rechenbericht (src/lib/pdf/)

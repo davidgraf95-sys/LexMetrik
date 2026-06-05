@@ -930,7 +930,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     // DOCX nur für den Beurkundungs-Entwurf – Gate im Wizard (Form-Vorrang)
     output: ['pdf', 'docx'],
     keywords: ['Vorsorgeauftrag', 'Urteilsunfähigkeit', 'Personensorge', 'Vermögenssorge', 'KESB', 'Validierung', 'Beistandschaft'],
-    related: ['patientenverfuegung', 'eigenhaendiges-testament'],
+    related: ['patientenverfuegung', 'eigenhaendiges-testament', 'vollmacht'],
     icon: 'document',
   },
   patientenverfuegung: {
@@ -1271,23 +1271,36 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
 
   // – Vorsorge & Erwachsenenschutz —
-  generalvollmacht: {
-    id: 'generalvollmacht', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
+  // EINE Vollmacht-Maske mit Typ-Schalter (Anwalt/General/Spezial) statt
+  // Einzelkarten General-/Bankvollmacht (Entscheid 5.6.2026); «Bank» ist ein
+  // Vertretungsbereich mit Warnung (Banken verlangen eigene Formulare).
+  vollmacht: {
+    id: 'vollmacht', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
     rechtsbereich: 'privat',
-    title: 'Generalvollmacht',
-    description: 'Umfassende Vollmacht zur Vertretung in persönlichen und vermögensrechtlichen Angelegenheiten.',
-    status: 'geplant', norms: [],
-    related: ['vorsorgeauftrag', 'bankvollmacht'],
-    keywords: ['Vollmacht', 'Vertretung'],
-  },
-  bankvollmacht: {
-    id: 'bankvollmacht', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
-    rechtsbereich: 'privat',
-    title: 'Bankvollmacht',
-    description: 'Vollmacht für die Vertretung gegenüber Finanzinstituten.',
-    status: 'geplant', norms: [],
-    related: ['generalvollmacht', 'vorsorgeauftrag'],
-    keywords: ['Vollmacht', 'Bank', 'Konto'],
+    title: 'Vollmacht (Anwalt · General · Spezial)',
+    description: 'Anwaltsvollmacht, Generalvollmacht oder Spezialvollmacht in einer Maske – besondere Ermächtigungen (Art. 396 Abs. 3 OR), Substitution, Befristung und deterministische Form-Warnungen (Grundstück, Bank, Bürgschaft).',
+    status: 'entwurf',
+    norms: [
+      // Art. 32 OR – Wirkung der direkten Stellvertretung
+      { label: 'Art. 32 OR', url: fedlexUrl('OR', '32'), verified: false },
+      // Art. 33 OR – Umfang der Ermächtigung (interne/externe Vollmacht)
+      { label: 'Art. 33 OR', url: fedlexUrl('OR', '33'), verified: false },
+      // Art. 34 OR – Beschränkung und Widerruf (Vorausverzicht ungültig)
+      { label: 'Art. 34 OR', url: fedlexUrl('OR', '34'), verified: false },
+      // Art. 35 OR – Erlöschen (dispositiv: Fortgeltung über den Tod hinaus)
+      { label: 'Art. 35 OR', url: fedlexUrl('OR', '35'), verified: false },
+      // Art. 396 OR – besondere Ermächtigung (Vergleich, Grundstücke, Schenkungen)
+      { label: 'Art. 396 OR', url: fedlexUrl('OR', '396'), verified: false },
+      // Art. 68 ZPO – Vertretung im Zivilprozess (Vollmachts-Ausweis Abs. 3)
+      { label: 'Art. 68 ZPO', url: fedlexUrl('ZPO', '68'), verified: false },
+    ],
+    href: '/vorlagen/vollmacht',
+    schemaId: 'vollmacht',
+    formvorschrift: 'Einfache Schriftform – drucken und unterschreiben',
+    output: ['pdf', 'docx'],
+    keywords: ['Vollmacht', 'Anwaltsvollmacht', 'Generalvollmacht', 'Spezialvollmacht', 'Vertretung', 'Substitution', 'Bank', 'Prozessvollmacht'],
+    related: ['vorsorgeauftrag', 'patientenverfuegung'],
+    icon: 'document',
   },
 
   // – Familienrecht —

@@ -3,7 +3,8 @@
 // Verifizierte Fedlex-Basis-URLs (Systematische Rechtssammlung, konsolidierte,
 // in Kraft stehende Fassung, Sprache de). Kein ?version=-Parameter, damit der
 // Link stets die geltende Fassung auflöst.
-// SR 220 OR · SR 210 ZGB · SR 272 ZPO · SR 281.1 SchKG · SR 822.11 ArG
+// SR 220 OR · SR 210 ZGB · SR 272 ZPO · SR 281.1 SchKG · SR 822.11 ArG ·
+// SR 312.0 StPO · SR 172.021 VwVG
 
 export const FEDLEX = {
   OR:    'https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de',
@@ -16,6 +17,12 @@ export const FEDLEX = {
   // VMWG SR 221.213.11 – ELI via Fedlex-SPARQL verifiziert; Anker art_16/17/
   // 19/19a empirisch am Filestore-HTML (Konsolidierung 20251001; 5.6.2026).
   VMWG:  'https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de',
+  // StPO SR 312.0 – Anker art_129 empirisch am Filestore-HTML verifiziert
+  // (Konsolidierung 20240101; geprüft 5.6.2026, Vollmacht-Vorlage).
+  StPO:  'https://www.fedlex.admin.ch/eli/cc/2010/267/de',
+  // VwVG SR 172.021 – Anker art_11 empirisch am Filestore-HTML verifiziert
+  // (Konsolidierung 20210101; geprüft 5.6.2026, Vollmacht-Vorlage).
+  VwVG:  'https://www.fedlex.admin.ch/eli/cc/1969/737_757_755/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

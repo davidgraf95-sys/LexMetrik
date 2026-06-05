@@ -59,16 +59,16 @@ describe('Stufen-Zuteilung (tier)', () => {
   it('die Free-Auswahl entspricht der Auftrags-Liste; alle übrigen «pro»', () => {
     const free = ALLE_KARTEN.filter((k) => k.tier === 'free').map((k) => k.id).sort();
     expect(free).toEqual([
-      'bankvollmacht', 'eigenhaendiges-testament', 'generalvollmacht',
+      'eigenhaendiges-testament',
       'kuendigung-arbeitnehmer', 'mahnung', 'patientenverfuegung',
-      'tagerechner', 'teuerungsrechner', 'verzugszins', 'vorsorgeauftrag',
+      'tagerechner', 'teuerungsrechner', 'verzugszins', 'vollmacht', 'vorsorgeauftrag',
     ]);
     ALLE_KARTEN.forEach((k) => expect(['free', 'pro'], k.id).toContain(k.tier));
   });
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -175,9 +175,9 @@ describe('Katalog-Integrität (Rechtsgebiet-Gliederung)', () => {
 });
 
 describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
-  it('verfügbar = status !== geplant; Regressionszählung 17 (Stand 5.6.2026)', () => {
+  it('verfügbar = status !== geplant; Regressionszählung 18 (Stand 5.6.2026, + Vollmacht)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(17);
+    expect(verf.length).toBe(18);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });
