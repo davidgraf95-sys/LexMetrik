@@ -34,8 +34,8 @@ describe('Mietvertrag — Gates (zwingendes Recht)', () => {
     expect(pruefeMvGates(basis({ kanton: 'ZH' })).warnungen.join()).toMatch(/NICHTIG/);
     expect(pruefeMvGates(basis({ kanton: 'AG' })).warnungen.join()).not.toMatch(/Formular/);
     expect(pruefeMvGates(basis({ objektTyp: 'geschaeftsraum', mietzweck: 'Büro', kanton: 'ZH' })).warnungen.join()).not.toMatch(/Formular/);
-    // Bern: Quellendiskrepanz wird offengelegt
-    expect(pruefeMvGates(basis({ kanton: 'BE' })).warnungen.join()).toMatch(/Quellendiskrepanz|gegenprüfen/);
+    // Bern: Diskrepanz aufgelöst — Miet-Initiative 28.9.2025, Pflicht ab 1.12.2025
+    expect(pruefeMvGates(basis({ kanton: 'BE' })).warnungen.join()).toMatch(/Miet-Initiative|1\.12\.2025/);
   });
 
   it('MT-3 Mindest-Kündigungsfristen: 3 Monate Wohnung / 6 Monate Geschäftsraum (Art. 266c/266d OR)', () => {
@@ -46,8 +46,8 @@ describe('Mietvertrag — Gates (zwingendes Recht)', () => {
 
   it('MT-4 Indexmiete nur bei Vertragsdauer ≥ 5 Jahre (Art. 269b OR, Fedlex-verifiziert)', () => {
     expect(pruefeMvGates(basis({ mietzinsModell: 'index' })).blocker.join()).toMatch(/fünf Jahre/);
-    expect(pruefeMvGates(basis({ mietzinsModell: 'index', mindestdauerJahre: 5 })).blocker).toEqual([]);
-    expect(pruefeMvGates(basis({ mietzinsModell: 'index', befristet: true, befristetBis: '2032-09-30' })).blocker).toEqual([]);
+    expect(pruefeMvGates(basis({ mietzinsModell: 'index', mindestdauerJahre: 5, indexBasisMonat: 'Mai 2026' })).blocker).toEqual([]);
+    expect(pruefeMvGates(basis({ mietzinsModell: 'index', befristet: true, befristetBis: '2032-09-30', indexBasisMonat: 'Mai 2026' })).blocker).toEqual([]);
     expect(pruefeMvGates(basis({ mietzinsModell: 'index', mindestdauerJahre: 5 })).hinweise.join()).toMatch(/Landesindex/);
   });
 
@@ -103,7 +103,7 @@ describe('Mietvertrag — Bausteine', () => {
     const b = basis({ befristet: true, befristetBis: '2028-09-30' });
     expect(ids(b)).toContain('M03_beginn_befristet');
     expect(ids(b)).not.toContain('M12_kuendigung');
-    expect(texte(basis({ kautionCHF: '6000' }))).toMatch(/entspricht 3 Monatszinsen/);
+    expect(texte(basis({ kautionCHF: '6000' }))).toMatch(/entspricht 2\.7 Brutto-Monatszinsen/);
   });
 
   it('MT-12 deterministisch: gleiche Eingaben → identisches Dokument', () => {
@@ -134,5 +134,66 @@ describe('Mietvertrag — Audit-Fix 5.6.2026', () => {
     const b = basis({ befristet: true, befristetBis: '2028-09-30', kuendigungsfristMonate: 1 });
     expect(pruefeMvGates(b).blocker).toEqual([]);
     expect(ids(b)).not.toContain('M12_kuendigung');
+  });
+});
+
+describe('Mietvertrag — Vertiefungs-Gutachten 5.6.2026', () => {
+  it('MT-16 Referenzzins-Basis NUR im Standard-Modell (bei Index/Staffel materiell falsch)', () => {
+    expect(texte(basis())).toContain('Referenzzinssatz von 1.25 %');
+    const index = basis({ mietzinsModell: 'index', mindestdauerJahre: 5, indexBasisMonat: 'Mai 2026' });
+    expect(texte(index)).not.toContain('Referenzzinssatz');
+    expect(texte(index)).toMatch(/Basis ist der Indexstand von Mai 2026/);
+    const staffel = basis({ mietzinsModell: 'staffel', mindestdauerJahre: 3, staffeln: [{ ab: '2027-10-01', erhoehungCHF: '50' }] });
+    expect(texte(staffel)).not.toContain('Referenzzinssatz');
+  });
+
+  it('MT-17 Indexmiete ohne LIK-Basis blockiert; Punktestand optional im Text', () => {
+    expect(pruefeMvGates(basis({ mietzinsModell: 'index', mindestdauerJahre: 5 })).blocker.join()).toMatch(/Basisstand/);
+    const mit = basis({ mietzinsModell: 'index', mindestdauerJahre: 5, indexBasisMonat: 'Mai 2026', indexBasisPunkte: '107.1' });
+    expect(pruefeMvGates(mit).blocker).toEqual([]);
+    expect(texte(mit)).toContain('(107.1 Punkte)');
+  });
+
+  it('MT-18 Kaution gegen BRUTTO-Monatszins (inkl. NK-Akonto, h.L.)', () => {
+    // netto 2000 + akonto 250 → brutto 2250; Kaution 6300 < 3×2250=6750 → KEIN Blocker (gegen netto wäre 6300 > 6000)
+    expect(pruefeMvGates(basis({ kautionCHF: '6300' })).blocker).toEqual([]);
+    expect(pruefeMvGates(basis({ kautionCHF: '6800' })).blocker.join()).toMatch(/Bruttomietzins/);
+    expect(texte(basis({ kautionCHF: '6750' }))).toMatch(/entspricht 3 Brutto-Monatszinsen/);
+  });
+
+  it('MT-19 Erstlaufzeit: Singular «einem Jahr»; Übermass-Hinweis erst > 10 Jahre; 266g-Vorbehalt', () => {
+    const t = texte(basis({ mindestdauerJahre: 1 }));
+    expect(t).toMatch(/nach Ablauf von einem Jahr kündbar/);
+    expect(t).toMatch(/Art\. 266g OR/);
+    expect(pruefeMvGates(basis({ mindestdauerJahre: 5 })).hinweise.join()).not.toMatch(/Art\. 27 Abs\. 2 ZGB/);
+    expect(pruefeMvGates(basis({ mindestdauerJahre: 15 })).hinweise.join()).toMatch(/Art\. 27 Abs\. 2 ZGB/);
+  });
+
+  it('MT-20 Zahlungsverzugs-Baustein (Art. 257d) immer enthalten; 260a vollständig (Wiederherstellung/Mehrwert)', () => {
+    expect(ids(basis())).toContain('M06b_zahlungsverzug');
+    expect(texte(basis())).toMatch(/Zahlungsfrist von mindestens 30 Tagen/);
+    expect(texte(basis())).toMatch(/erheblichen Mehrwert/);
+  });
+
+  it('MT-21 Konkurrenzschutz: Konventionalstrafe im Text; ohne Strafe Empfehlungs-Hinweis; BE-Formularpflicht aktiv', () => {
+    const gr = basis({ objektTyp: 'geschaeftsraum', mietzweck: 'Apotheke', konkurrenzschutz: true, konkurrenzschutzText: 'Apothekenbetrieb' });
+    expect(pruefeMvGates(gr).hinweise.join()).toMatch(/Konventionalstrafe/);
+    expect(texte(basis({ ...gr, konkurrenzschutzStrafeCHF: '10000' }))).toMatch(/Konventionalstrafe von CHF 10'000\.00/);
+    expect(pruefeMvGates(basis({ kanton: 'BE' })).warnungen.join()).toMatch(/1\.12\.2025/);
+  });
+});
+
+describe('Mietvertrag — Review-Regressionen 5.6.2026', () => {
+  it('MT-22 exakte Kalenderjahr-Befristung erfüllt die Index-/Staffel-Mindestdauer (kein 365.25-Artefakt)', () => {
+    const fuenf = basis({ mietzinsModell: 'index', indexBasisMonat: 'Mai 2026', befristet: true, beginn: '2026-10-01', befristetBis: '2031-10-01' });
+    expect(pruefeMvGates(fuenf).blocker).toEqual([]);
+    expect(pruefeMvGates({ ...fuenf, befristetBis: '2031-09-30' }).blocker.join()).toMatch(/fünf Jahre/);
+    const drei = basis({ mietzinsModell: 'staffel', befristet: true, beginn: '2027-03-01', befristetBis: '2030-03-01', staffeln: [{ ab: '2028-03-01', erhoehungCHF: '50' }] });
+    expect(pruefeMvGates(drei).blocker).toEqual([]);
+  });
+
+  it('MT-23 Kautions-Ausweis ohne Nebenkosten ohne «Brutto»-Präfix; Index-Doc ohne Basis zeigt Platzhalter', () => {
+    expect(texte(basis({ nebenkosten: 'keine', nkPositionen: [], kautionCHF: '6000' }))).toMatch(/entspricht 3 Monatszinsen/);
+    expect(texte(basis({ mietzinsModell: 'index', mindestdauerJahre: 5 }))).toMatch(/Indexstand von ________/);
   });
 });

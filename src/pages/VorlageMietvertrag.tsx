@@ -97,7 +97,7 @@ export function VorlageMietvertrag() {
               <button key={code} type="button" onClick={() => {
                 set('objektTyp', code);
                 // abhängige Felder neutralisieren (kein Stale-State)
-                if (code === 'wohnung') { set('mwstOption', undefined); set('konkurrenzschutz', undefined); set('konkurrenzschutzText', undefined); set('mietzweck', undefined); }
+                if (code === 'wohnung') { set('mwstOption', undefined); set('konkurrenzschutz', undefined); set('konkurrenzschutzText', undefined); set('konkurrenzschutzStrafeCHF', undefined); set('mietzweck', undefined); }
                 if (code === 'geschaeftsraum') set('familienwohnung', undefined);
                 set('nkPositionen', []);
                 set('kuendigungsfristMonate', undefined);
@@ -205,6 +205,7 @@ export function VorlageMietvertrag() {
                 <button key={code} type="button" onClick={() => {
                   set('mietzinsModell', code);
                   if (code !== 'staffel') set('staffeln', undefined);
+                  if (code !== 'index') { set('indexBasisMonat', undefined); set('indexBasisPunkte', undefined); }
                   if (code === 'staffel' && !(a.staffeln?.length)) set('staffeln', [{ ab: '', erhoehungCHF: '' }]);
                 }} aria-pressed={a.mietzinsModell === code}
                   className={`text-left p-3 rounded-lg border transition-colors ${
@@ -215,6 +216,16 @@ export function VorlageMietvertrag() {
                 </button>
               ))}
             </div>
+            {a.mietzinsModell === 'index' && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <Field label="LIK-Basisstand (Monat/Jahr)" hint="z. B. «Mai 2026» — definiert die Anpassungsbasis (Art. 17 VMWG)">
+                  <input className={inputCls} value={a.indexBasisMonat ?? ''} onChange={(e) => set('indexBasisMonat', e.target.value || undefined)} placeholder="z. B. Mai 2026" />
+                </Field>
+                <Field label="Punktestand" optional>
+                  <input className={inputCls + ' num'} inputMode="decimal" value={a.indexBasisPunkte ?? ''} onChange={(e) => set('indexBasisPunkte', e.target.value || undefined)} placeholder="z. B. 107.1" />
+                </Field>
+              </div>
+            )}
             {a.mietzinsModell === 'staffel' && (
               <div className="space-y-2">
                 {(a.staffeln ?? []).map((s, i) => (
@@ -321,10 +332,15 @@ export function VorlageMietvertrag() {
                 <span><strong>Konkurrenzschutz</strong> vereinbaren <span className="text-ink-500">(nicht vertragsimmanent — muss ausdrücklich umschrieben werden)</span></span>
               </label>
               {a.konkurrenzschutz && (
-                <Field label="Geschützter Bereich (Branche/Nutzung)">
-                  <input className={inputCls} value={a.konkurrenzschutzText ?? ''} onChange={(e) => set('konkurrenzschutzText', e.target.value || undefined)}
-                    placeholder="z. B. Betrieb einer Apotheke" />
-                </Field>
+                <>
+                  <Field label="Geschützter Bereich (Branche/Nutzung)">
+                    <input className={inputCls} value={a.konkurrenzschutzText ?? ''} onChange={(e) => set('konkurrenzschutzText', e.target.value || undefined)}
+                      placeholder="z. B. Betrieb einer Apotheke" />
+                  </Field>
+                  <Field label="Konventionalstrafe (CHF)" optional hint="empfohlen — ein blosses Verbot erzwingt keine Auflösung des Konkurrenz-Mietvertrags">
+                    <input className={inputCls + ' num w-44'} inputMode="decimal" value={a.konkurrenzschutzStrafeCHF ?? ''} onChange={(e) => set('konkurrenzschutzStrafeCHF', e.target.value || undefined)} placeholder="z. B. 10'000" />
+                  </Field>
+                </>
               )}
             </div>
           )}
