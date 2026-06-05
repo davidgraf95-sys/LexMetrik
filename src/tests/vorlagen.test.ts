@@ -469,7 +469,8 @@ describe('Formatvorlagen (AusgabeArt-Matrix)', () => {
     expect(rollen).toContain('anrede');
     expect(rollen).toContain('schlussformel');
     const texte = r.dokument.absaetze.map((x) => x.text).join('\n');
-    expect(texte).toMatch(/Sehr geehrte Frau Präsidentin/);
+    expect(texte).toMatch(/Sehr geehrte Damen und Herren/);
+    expect(texte).toMatch(/Hiermit stelle ich folgende/);
     expect(texte).toMatch(/im Doppel/);
     // Reihenfolge: Anrede VOR den Rechtsbegehren, Schlussformel VOR der Unterschrift
     const ids = r.dokument.absaetze.map((x) => x.bausteinId);

@@ -269,8 +269,8 @@ export const SG_SCHEMA: VorlageSchema = {
       begruendung: 'Rubrum: Bezeichnung der Parteien (Pflichtinhalt).',
       norm: 'Art. 202 Abs. 2 ZPO' },
     { id: 'anrede', rolle: 'anrede',
-      text: 'Sehr geehrte Frau Präsidentin, sehr geehrter Herr Präsident\nSehr geehrte Damen und Herren\n\nHiermit stelle ich folgende',
-      begruendung: 'Anrede und Einleitungsformel (anwaltliche Usanz, kein Pflichtinhalt).',
+      text: 'Sehr geehrte Damen und Herren\n\n{{einleitungSatz}}',
+      begruendung: 'Anrede und Einleitungsformel (anwaltliche Usanz, kein Pflichtinhalt); Numerus/Vertretung dynamisch.',
       norm: 'Art. 202 ZPO' },
     { id: 'rechtsbegehren', ueberschrift: 'Rechtsbegehren', text: '{{item.text}}',
       wiederholeUeber: 'rbListe', includeIf: { feld: 'rbListe', nichtLeer: true },
@@ -394,6 +394,13 @@ export function sgZusammenstellen(a: SgAnswers) {
     antragEntscheidZulaessig,
     beilagenListe,
     unterschriftZeile,
+    // Einleitungsformel nach Usanz: Vertretung → «namens und im Auftrag»,
+    // mehrere Kläger in eigener Sache → «stellen wir» (Review 5.6.2026)
+    einleitungSatz: a.vertretung?.bezeichnung?.trim()
+      ? 'Namens und im Auftrag der klagenden Partei stelle ich folgende'
+      : a.klaeger.length > 1
+        ? 'Hiermit stellen wir folgende'
+        : 'Hiermit stelle ich folgende',
   };
 
   const ergebnis = assemble(SG_SCHEMA, antworten);
