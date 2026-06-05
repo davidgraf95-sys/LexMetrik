@@ -8,7 +8,227 @@ vor Verwendung rückverifizieren (im Bericht je gekennzeichnet).**
 
 ## TEIL 1 — Sachlich/funktionell (Art. 12–28) + Verfahrensarten
 
-_(Bericht ausstehend — wird hier ergänzt.)_
+# StPO-Zuständigkeiten Teil 1 — Sachlich/Funktionell + Verfahrensarten (Regelwerk)
+
+**Erstellt:** 5.6.2026 · **Wortlaut-Quelle:** Fedlex-Filestore SR 312.0 (Strafprozessordnung), **konsolidierte Fassung «Stand am 1. Januar 2024»** (ELI `cc/2010/267`, Konsolidierung `20240101`; lokaler Cache `/tmp/stpo.html`, reproduzierbar via `scripts/fedlex-cache.sh`, Anker `id="art_X"`). **Abrufdatum: 5.6.2026.**
+**Status: Arbeitsgrundlage für den Engine-Umbau — NICHT abgenommen (§7/§8 CLAUDE.md).** BGE-Angaben nur, wo belegbar; sonst **[Sekundär]**. **Keine Repo-Dateien geändert.**
+
+**Empirische Verifikation (§7):** Alle 29 geforderten Anker (`art_12`–`art_28`, `art_352`–`art_363`, zusätzlich `art_352_a`) sind im Cache vorhanden. Konsolidierungsstand empirisch ermittelt: Filestore-Titel trägt «Stand am 1. Januar 2024» → die **StPO-Revision (BG vom 17. Juni 2022, AS 2023 468, BBl 2019 6697, in Kraft seit 1.1.2024)** ist eingearbeitet. Im Gesamttext finden sich 88 Fundstellen «in Kraft seit 1. Jan. 2024».
+
+> **Revisions-Hinweis (Übersicht für Teil 1):** Von den hier erfassten Artikeln sind durch die Revision 1.1.2024 **textlich geändert**: **Art. 19 Abs. 2** (Einzelgericht-Schwelle neu gefasst), **Art. 352a** (neu eingefügt — Einvernahmepflicht), **Art. 353 Abs. 1 lit. f^bis + Abs. 2** (DNA-Löschfrist; Zivilforderung CHF 30 000), **Art. 354 Abs. 1 lit. a^bis + Abs. 1^bis** (Einsprache-/Anfechtungsrecht der Privatklägerschaft). Die **Strafbehörden-/Gerichts-Kataloge Art. 12–18, 20–28** sowie das **abgekürzte Verfahren Art. 358–362** und **Art. 357/363** sind in dieser Revision **textlich unverändert** (ältere Fassungen bzw. Erstfassung 2011).
+
+---
+
+## TEIL A — Strafbehörden-Katalog (Art. 12–18)
+
+### Art. 12 — Strafverfolgungsbehörden
+**1. Wortlaut-Kern.** «Strafverfolgungsbehörden sind: **a.** die Polizei; **b.** die Staatsanwaltschaft; **c.** die Übertretungsstrafbehörden.»
+**2. Regel.** Abschliessender Katalog der Verfolgungsseite (Vorverfahren). Trias Polizei / StA / Übertretungsstrafbehörde. Definitionsnorm — keine eigene Zuständigkeitszuweisung, sondern Typisierung.
+**3. Engine-Hinweis.** Enum `verfolgungsbehoerde ∈ {polizei, staatsanwaltschaft, uebertretungsstrafbehoerde}`. Diese Trias ist der Gegenpol zum Gerichts-Enum (Art. 13); Engine sollte für jeden Verfahrensschritt genau einer Kategorie zuordnen.
+
+### Art. 13 — Gerichte
+**1. Wortlaut-Kern.** «Gerichtliche Befugnisse im Strafverfahren haben: **a.** das Zwangsmassnahmengericht; **b.** das erstinstanzliche Gericht; **c.** die Beschwerdeinstanz; **d.** das Berufungsgericht.»
+**2. Regel.** Abschliessender Katalog der gerichtlichen Behörden (vier Typen). Definiert die funktionellen Gerichtsebenen, die in Art. 18–21 sachlich/funktionell ausgestaltet werden.
+**3. Engine-Hinweis.** Enum `gericht ∈ {zwangsmassnahmengericht, erstinstanzlich, beschwerdeinstanz, berufungsgericht}`. Bildet die vertikale Instanzenachse; Engine verknüpft jeden Entscheid mit genau einem Typ und prüft Unvereinbarkeiten (Art. 18 II, 21 II/III).
+
+### Art. 14 — Bezeichnung und Organisation der Strafbehörden (kantonale Organisationshoheit)
+**1. Wortlaut-Kern.** Abs. 1: «Bund und Kantone **bestimmen ihre Strafbehörden und deren Bezeichnungen**.» Abs. 2: Sie regeln **Wahl, Zusammensetzung, Organisation und Befugnisse**, soweit dieses Gesetz / andere Bundesgesetze dies **nicht abschliessend** regeln. Abs. 3: Sie **können Ober- oder Generalstaatsanwaltschaften** vorsehen. Abs. 4: Sie können **mehrere gleichartige Strafbehörden** einsetzen und bestimmen dann den jeweiligen **örtlichen und sachlichen Zuständigkeitsbereich**; **ausgenommen** sind **Beschwerdeinstanz und Berufungsgericht**. Abs. 5: Sie regeln die **Aufsicht**.
+**2. Regel.** Tragende **Organisationshoheit-Norm**: Behördenbezeichnungen sind kantonal (z. B. «Zwangsmassnahmengericht» heisst kantonal unterschiedlich) → kantonale Stammdaten unverzichtbar. **Schranke Abs. 4 a. E.:** keine Aufspaltung von Beschwerdeinstanz und Berufungsgericht in mehrere gleichartige Behörden (Einheit der oberen Instanzen pro Kanton).
+**3. Engine-Hinweis.** Behördennamen/-adressen sind **kantonal-variable Stammdaten** (SSoT, §5) — Querverweis auf `bibliothek/behoerden/gog-gerichtsorganisation-kantone.md` und `gerichtsbehoerden-kantone.md`. Engine darf StPO-Funktionstypen (Art. 13/18–21) **nicht** mit fixen Bezeichnungen hartkodieren, sondern über eine Kanton→Bezeichnung-Mapping-Tabelle auflösen. Flag `obere_instanz_unteilbar=true` für Beschwerde-/Berufungsinstanz.
+
+### Art. 15 — Polizei
+**1. Wortlaut-Kern.** Polizeitätigkeit von Bund/Kantonen/Gemeinden richtet sich nach der StPO. Sie **ermittelt aus eigenem Antrieb, auf Anzeige und im Auftrag der StA**; dabei untersteht sie **Aufsicht und Weisungen der StA**. Ist ein Straffall **bei einem Gericht hängig**, kann dieses der Polizei Weisungen/Aufträge erteilen.
+**2. Regel.** Subordinationsverhältnis Polizei → StA im Vorverfahren; im Gerichtsstadium tritt das Gericht als Weisungsgeber hinzu.
+**3. Engine-Hinweis.** Weisungshoheit als Funktion der Verfahrensphase modellieren: `phase=vorverfahren → weisungsgeber=staatsanwaltschaft`; `phase=hauptverfahren → weisungsgeber=gericht`.
+
+### Art. 16 — Staatsanwaltschaft
+**1. Wortlaut-Kern.** Die StA ist für die **gleichmässige Durchsetzung des staatlichen Strafanspruchs** verantwortlich. Sie **leitet das Vorverfahren**, verfolgt Straftaten in der Untersuchung, **erhebt gegebenenfalls Anklage und vertritt die Anklage**.
+**2. Regel.** Zentralstellung der StA (Verfahrensherrin des Vorverfahrens; Anklagebehörde). Grundlage für ihre Entscheidträgerschaft im Strafbefehls- und abgekürzten Verfahren (Teil C/D).
+**3. Engine-Hinweis.** StA als Dreh- und Angelpunkt: Entscheidträger Strafbefehl (Art. 352 ff.), Antrag/Steuerung abgekürztes Verfahren (Art. 358 ff.), Anklageerhebung. Flag `entscheidtraeger=staatsanwaltschaft` für diese Verfahrensarten.
+
+### Art. 17 — Übertretungsstrafbehörden
+**1. Wortlaut-Kern.** Abs. 1: Bund/Kantone **können** Verfolgung und Beurteilung von **Übertretungen Verwaltungsbehörden übertragen**. Abs. 2: Übertretungen **im Zusammenhang mit einem Verbrechen/Vergehen** werden **zusammen mit diesem durch StA und Gerichte** verfolgt und beurteilt.
+**2. Regel.** Kann-Vorschrift (kantonale Option). **Konnexitätsregel Abs. 2:** Bei Zusammentreffen mit Verbrechen/Vergehen zieht die StA-/Gerichtszuständigkeit die Übertretung an sich (Attraktion).
+**3. Engine-Hinweis.** Gate `uebertretung_eigenstaendig?`: wenn `true` und Kanton hat Verwaltungsbehörde delegiert → `behoerde=uebertretungsstrafbehoerde` (Verfahren nach Art. 357). Wenn Übertretung mit Verbrechen/Vergehen konnex → Attraktion zu StA/Gericht (`art17_abs2_attraktion=true`).
+
+### Art. 18 — Zwangsmassnahmengericht (funktionell + Unvereinbarkeit)
+**1. Wortlaut-Kern.** Abs. 1: Das ZMG ist zuständig für die **Anordnung der Untersuchungs- und Sicherheitshaft** und — soweit im Gesetz vorgesehen — für **Anordnung/Genehmigung weiterer Zwangsmassnahmen**. Abs. 2 (**Unvereinbarkeit**): Mitglieder des ZMG **können im gleichen Fall nicht als Sachrichterinnen/Sachrichter** tätig sein.
+**2. Regel.** Funktionelle Sonderzuständigkeit für Haft + bestimmte Zwangsmassnahmen. **Personelle Unvereinbarkeit** (Trennung Haft-/Sachrichter) sichert Unbefangenheit. **Revision 1.1.2024:** Art. 18 trägt **keine** Revisionsfussnote → **unverändert** (ausdrücklich markiert; Erstfassung 2011).
+**3. Engine-Hinweis.** Funktionstyp `zwangsmassnahmengericht` mit Aufgaben-Set {U-Haft, Sicherheitshaft, gesetzlich vorgesehene weitere ZM}. Hard-Flag `unvereinbarkeit_sachrichter=true` → Engine warnt, wenn dieselbe Person später als erstinstanzlicher Sachrichter geführt würde.
+
+---
+
+## TEIL B — Sachliche Zuständigkeit (Art. 19–28)
+
+### Art. 19 — Erstinstanzliches Gericht (Einzelgericht-Option) ⚠️ **Revision 1.1.2024 (Abs. 2)**
+**1. Wortlaut-Kern.** Abs. 1: Das erstinstanzliche Gericht beurteilt **in erster Instanz alle Straftaten, die nicht in die Zuständigkeit anderer Behörden fallen** (Auffangzuständigkeit). Abs. 2: Bund/Kantone **können als erstinstanzliches Gericht ein Einzelgericht** vorsehen für die Beurteilung von:
+- **lit. a** — **Übertretungen**;
+- **lit. b** — **Verbrechen und Vergehen**, **mit Ausnahme** derer, für welche die StA beantragt: eine **Freiheitsstrafe von mehr als zwei Jahren**, eine **Verwahrung (Art. 64 StGB)**, eine **Behandlung (Art. 59 StGB)** oder — bei gleichzeitig zu widerrufenden bedingten Sanktionen — einen **Freiheitsentzug von mehr als zwei Jahren**.
+**2. Regel.** **Auffanggrundsatz Abs. 1.** Abs. 2 = **kantonale Option** für Einzelgericht; Schwelle = Antrag der StA (nicht das Urteil!) > 2 Jahre FS bzw. Verwahrung/stationäre Massnahme → dann **Kollegialgericht** zwingend.
+**3. Revision 1.1.2024.** Abs. 2 **neu gefasst** (Ziff. I des BG vom 17.6.2022, in Kraft seit 1.1.2024, AS 2023 468; BBl 2019 6697). Schwelle und Massnahmenausnahmen (Art. 59/64 StGB) sind die revidierte Fassung — ausdrücklich markiert.
+**4. Engine-Hinweis.** Gate `einzelgericht_zulaessig`: `true`, wenn (`deliktstyp=uebertretung`) ODER (`verbrechen/vergehen` UND `antrag_freiheitsstrafe ≤ 2J` UND `keine_verwahrung_64` UND `keine_behandlung_59` UND `kein_widerruf_freiheitsentzug > 2J`). Anknüpfung an **StA-Antrag**, nicht Urteil → Eingabefeld `beantragte_sanktion`. Kantonale Aktivierung der Einzelgericht-Option als Stammdatum.
+
+### Art. 20 — Beschwerdeinstanz
+**1. Wortlaut-Kern.** Abs. 1: Beurteilt **Beschwerden gegen Verfahrenshandlungen und gegen nicht der Berufung unterliegende Entscheide** der **lit. a** erstinstanzlichen Gerichte; **lit. b** Polizei, StA und Übertretungsstrafbehörden; **lit. c** des Zwangsmassnahmengerichts in den gesetzlich vorgesehenen Fällen. Abs. 2: Bund/Kantone **können die Befugnisse der Beschwerdeinstanz dem Berufungsgericht übertragen**.
+**2. Regel.** Funktionelle Rechtsmittelinstanz für Beschwerden (Abgrenzung zur Berufung: nur **nicht** berufungsfähige Entscheide). Abs. 2 = kantonale Organisationsoption (Personalunion mit Berufungsgericht).
+**3. Engine-Hinweis.** Routing `rechtsmittel`: Beschwerde (Art. 20) vs. Berufung (Art. 21) anhand `entscheidtyp`. Kantonsflag `beschwerde_an_berufungsgericht_delegiert`.
+
+### Art. 21 — Berufungsgericht (+ Unvereinbarkeiten)
+**1. Wortlaut-Kern.** Abs. 1: Entscheidet über **lit. a** Berufungen gegen Urteile der erstinstanzlichen Gerichte; **lit. b** Revisionsgesuche. Abs. 2: Wer als **Mitglied der Beschwerdeinstanz** tätig war, kann **im gleichen Fall nicht** im Berufungsgericht wirken. Abs. 3: Mitglieder des Berufungsgerichts können **im gleichen Fall nicht als Revisionsrichter** tätig sein.
+**2. Regel.** Obere kantonale Sachinstanz (Berufung + Revision). **Zwei Unvereinbarkeiten** (Beschwerde↔Berufung; Berufung↔Revision) sichern Instanzentrennung.
+**3. Engine-Hinweis.** Funktionstyp `berufungsgericht` mit Aufgaben {Berufung, Revision}. Hard-Flags `unvereinbar_beschwerde_berufung`, `unvereinbar_berufung_revision`.
+
+### Art. 22 — Kantonale Gerichtsbarkeit (Grundsatz)
+**1. Wortlaut-Kern.** «Die **kantonalen** Strafbehörden verfolgen und beurteilen die Straftaten des **Bundesrechts**; vorbehalten bleiben die **gesetzlichen Ausnahmen**.»
+**2. Regel.** **Regel-Ausnahme-Verhältnis:** kantonale Gerichtsbarkeit ist die Grundregel, Bundesgerichtsbarkeit (Art. 23/24) die ausdrücklich aufgezählte Ausnahme.
+**3. Engine-Hinweis.** Default `gerichtsbarkeit=kantonal`; nur bei Treffer im Katalog Art. 23/24 → `bund`. Determinismus: Katalog-Match entscheidet.
+
+### Art. 23 — Bundesgerichtsbarkeit im Allgemeinen (Katalog vollständig)
+**1. Wortlaut-Kern.** Abs. 1: Der Bundesgerichtsbarkeit unterstehen folgende Straftaten des **StGB** (SR 311.0):
+- **lit. a** — Straftaten des **1. und 4. Titels** sowie **Art. 140, 156, 189, 190**, sofern gegen **völkerrechtlich geschützte Personen**, **Magistratspersonen des Bundes**, **Mitglieder der Bundesversammlung**, **Bundesanwält:in / Stellvertretende** gerichtet;
+- **lit. b** — **Art. 137–141, 144, 160, 172^ter**, sofern Räumlichkeiten/Archive/Schriftstücke **diplomatischer Missionen und konsularischer Posten** betroffen;
+- **lit. c** — **Geiselnahme (Art. 185)** zur Nötigung von Behörden des Bundes oder des Auslandes;
+- **lit. d** — Verbrechen/Vergehen der **Art. 224–226^ter** (Sprengstoff/Gas);
+- **lit. e** — Verbrechen/Vergehen des **10. Titels** (Metall-/Papiergeld, Banknoten, amtliche Wertzeichen/Zeichen des Bundes, Mass und Gewicht); **ausgenommen** Vignetten für Nationalstrassen 1./2. Klasse;
+- **lit. f** — Verbrechen/Vergehen des **11. Titels**, sofern **Urkunden des Bundes**; ausgenommen Fahrausweise und Belege des Postzahlungsverkehrs;
+- **lit. g** — Straftaten des **12. Titels^bis und 12. Titels^ter** sowie **Art. 264^k** (Völkermord/Verbrechen gegen Menschlichkeit/Kriegsverbrechen);
+- **lit. h** — **Art. 260^bis** sowie **13.–15. und 17. Titel**, sofern gegen Bund/Bundesbehörden, gegen den **Volkswillen** bei eidg. Wahlen/Abstimmungen/Referenden/Initiativen, gegen die **Bundesgewalt** oder **Bundesrechtspflege** gerichtet;
+- **lit. i** — Verbrechen/Vergehen des **16. Titels** (Störung der Beziehungen zum Ausland);
+- **lit. j** — Straftaten des **18. und 19. Titels**, sofern von **Behördenmitglied/Angestellten des Bundes** oder **gegen den Bund** verübt;
+- **lit. k** — **Übertretungen der Art. 329 und 331** (militärische Anlagen/Verbotszonen);
+- **lit. l** — **politische Verbrechen/Vergehen**, die **Ursache oder Folge von Unruhen** sind, durch die eine **bewaffnete eidgenössische Intervention** veranlasst wird.
+Abs. 2: Vorbehalt der **Zuständigkeitsvorschriften des Bundesstrafgerichts in besonderen Bundesgesetzen**.
+**2. Regel.** **Abschliessender, deliktsbezogener Katalog** der originären Bundesgerichtsbarkeit (Anknüpfung an StGB-Titel/-Artikel + teils qualifizierte Schutzobjekte/Täter).
+**3. Revision 1.1.2024.** Art. 23 trägt **keine** Fussnote zur 1.1.2024-Revision. Die vorhandenen Fussnoten betreffen **frühere** Teilrevisionen: lit. a (StBOG, 1.1.2011), lit. e (Ordnungsbussengesetz, 1.1.2018), lit. g (Römer-Statut, 1.1.2011), lit. k (**Harmonisierung der Strafrahmen, AS 2023 259, in Kraft seit 1.7.2023** — nicht Teil der StPO-Revision 1.1.2024). → für Teil 1 **kein** StPO-Revisions-Eintrag.
+**4. Engine-Hinweis.** Katalog als **Lookup-Tabelle StGB-Titel/Artikel → Bundesgerichtsbarkeit**, mit Zusatzbedingungen je lit. (Schutzobjekt bei a/b/h, Täterqualität bei j, Ausnahmen bei e/f). Determinismus: reiner Tatbestands-Match. Engine-Eingaben: `stgb_titel`, `stgb_artikel`, qualifizierende Merkmale. Ausgabe `gerichtsbarkeit=bund` bei Treffer, sonst Default kantonal (Art. 22). **Komplexität:** mehrere lit. erfordern juristische Subsumtion (z. B. «gegen den Bund gerichtet») → als Ja/Nein-Gate an Nutzer, nicht automatisch.
+
+### Art. 24 — Bundesgerichtsbarkeit bei organisiertem Verbrechen, terroristischen Straftaten und Wirtschaftskriminalität
+**1. Wortlaut-Kern.** Abs. 1: Der Bundesgerichtsbarkeit unterstehen **zudem** die Straftaten nach **Art. 260^ter, 260^quinquies, 260^sexies, 305^bis, 305^ter und 322^ter–322^septies StGB** sowie die **Verbrechen, die von einer kriminellen oder terroristischen Organisation (Art. 260^ter StGB) ausgehen**, wenn die Straftaten: **lit. a** **zu einem wesentlichen Teil im Ausland** begangen wurden; **lit. b** **in mehreren Kantonen ohne eindeutigen Schwerpunkt** begangen wurden. Abs. 2: Bei **Verbrechen des 2. und 11. Titels StGB** kann die **StA des Bundes eine Untersuchung eröffnen**, wenn **lit. a** die Voraussetzungen von Abs. 1 erfüllt sind **und lit. b** keine kantonale Behörde befasst ist bzw. die zuständige kantonale Behörde um Übernahme ersucht. Abs. 3: Die **Eröffnung einer Untersuchung nach Abs. 2 begründet Bundesgerichtsbarkeit** (fakultative/begründete Bundesgerichtsbarkeit).
+**2. Regel.** Katalog mit **kumulativen Anknüpfungskriterien** (Auslands-/Mehrkantonsbezug) — anders als Art. 23 keine reine Tatbestandsanknüpfung, sondern **+ örtliche Schwerpunktbedingung**. Abs. 2/3 = **Wahl-/Begründungskompetenz** der BA (Wirtschaftskriminalität).
+**3. Revision.** Fussnoten verweisen auf **AS 2021 360 (Terrorismus-Übereinkommen, in Kraft 1.7.2021)** — **nicht** StPO-Revision 1.1.2024. Für Teil 1 kein 2024-Eintrag.
+**4. Engine-Hinweis.** Lookup StGB-Artikel-Set {260^ter/quinquies/sexies, 305^bis/ter, 322^ter–septies} **plus** Gate `wesentlich_im_ausland OR mehrkantonal_ohne_schwerpunkt`. Abs. 2/3: separater Pfad `bund_kann_eroeffnen` (Wirtschaftsdelikte 2./11. Titel) mit Flag `bundesgerichtsbarkeit_durch_eroeffnung=true`. Determinismus: Tatbestands-Match deterministisch, örtliche Kriterien als Eingabe-Gate.
+
+### Art. 25 — Delegation an die Kantone
+**1. Wortlaut-Kern.** Abs. 1: Die **BA kann eine Strafsache mit Bundesgerichtsbarkeit nach Art. 23** den kantonalen Behörden **zur Untersuchung und Beurteilung**, ausnahmsweise nur zur Beurteilung, **übertragen**; **ausgenommen** Strafsachen nach **Art. 23 Abs. 1 lit. g** (Völkerstrafrecht). Abs. 2: In **einfachen Fällen** kann sie auch eine Sache mit Bundesgerichtsbarkeit **nach Art. 24** den Kantonen übertragen.
+**2. Regel.** Rückdelegationskompetenz der BA (Entlastung). Sperre für Kernvölkerstrafrecht (lit. g).
+**3. Engine-Hinweis.** Flag `delegation_an_kanton_moeglich` (true ausser Art. 23 I lit. g); bei Art. 24 zusätzlich Gate `einfacher_fall`. Ergebnis verschiebt `zustaendige_behoerde` von Bund auf Kanton.
+
+### Art. 26 — Mehrfache Zuständigkeit
+**1. Wortlaut-Kern.** Abs. 1: Bei Begehung **in mehreren Kantonen / im Ausland** oder bei Tätern/Teilnehmern mit Wohnsitz/Aufenthalt in verschiedenen Kantonen entscheidet die **BA, welcher Kanton untersucht und beurteilt**. Abs. 2: Bei **gleichzeitiger Bundes- und kantonaler Gerichtsbarkeit** kann die BA die **Vereinigung** in Bundes- oder Kantonshand anordnen. Abs. 3: Eine nach Abs. 2 begründete Gerichtsbarkeit **bleibt bestehen**, auch wenn der zuständigkeitsbegründende Verfahrensteil **eingestellt** wird (**perpetuatio fori**). Abs. 4/5: gegenseitige Aktenedition; nach Entscheid gehen die Akten an die zuständige Behörde.
+**2. Regel.** Konfliktauflösung bei Mehrfachanknüpfung; **Vereinigungs- und Forumsbestimmungskompetenz der BA**; perpetuatio fori (Abs. 3).
+**3. Engine-Hinweis.** Bei `mehrere_kantone OR ausland OR verteilte_taeter` → Entscheidträger = BA (`forum_bestimmt_durch=bundesanwaltschaft`). Flag `perpetuatio_fori=true`. Engine gibt hier **Hinweis** statt fertigem Forum (Ermessensentscheid der BA), kein deterministisches Einzelforum.
+
+### Art. 27 — Zuständigkeit für erste Ermittlungen
+**1. Wortlaut-Kern.** Abs. 1: Bei **gegebener Bundesgerichtsbarkeit, Dringlichkeit und noch nicht tätigen Bundesbehörden** können **polizeiliche Ermittlungen und Untersuchung auch von den kantonalen Behörden** durchgeführt werden, die nach den Gerichtsstandsregeln örtlich zuständig wären; die **BA ist unverzüglich zu orientieren**, der Fall ihr **so bald als möglich** zu übergeben bzw. nach Art. 25/26 zu unterbreiten. Abs. 2: Bei Mehrkantons-/Auslandstaten mit **noch nicht feststehender Zuständigkeit** können die **Bundesbehörden erste Ermittlungen** durchführen.
+**2. Regel.** Eilkompetenz/Notzuständigkeit zur Sicherung erster Ermittlungen, bevor das endgültige Forum feststeht.
+**3. Engine-Hinweis.** Übergangs-Flag `erste_ermittlungen_provisorisch` mit `phase=vor_forumsentscheid`. Kein Endforum — Hinweis auf nachgelagerten Entscheid nach Art. 25/26.
+
+### Art. 28 — Konflikte
+**1. Wortlaut-Kern.** «**Konflikte** zwischen der **StA des Bundes** und **kantonalen Strafbehörden** entscheidet das **Bundesstrafgericht**.»
+**2. Regel.** Letztentscheid bei Kompetenzkonflikten Bund/Kanton liegt beim **BStGer** (Beschwerdekammer).
+**3. Engine-Hinweis.** Flag `konfliktentscheid_durch=bundesstrafgericht`. Querverweis auf Bund-Dossier (`bibliothek/behoerden/gerichte-bund.md`).
+
+---
+
+## TEIL C — Funktionelle Sonderschnittstellen
+
+### Zwangsmassnahmengericht (Art. 18) — siehe Teil A
+Funktionell-sachlicher Sonderfall mit Unvereinbarkeit; oben erfasst. **Revision 1.1.2024: unverändert.**
+
+### Jugendstrafbehörden (Verweis JStPO)
+**Regel.** Die StPO regelt das ordentliche Erwachsenenstrafverfahren; für Jugendliche gilt die **Jugendstrafprozessordnung (JStPO, SR 312.1)** als lex specialis mit eigenen Behörden (Jugendanwaltschaft/Jugendgericht). Die StPO ist subsidiär anwendbar (Art. 3 JStPO). **Im StPO-Zuständigkeitskatalog Teil 1 nicht eigenständig geregelt — reiner Verweis.**
+**Engine-Hinweis.** Gate `taeter_jugendlich?` → Routing in separaten JStPO-Pfad (eigene Engine/eigenes Dossier; **nicht** mit StPO-Behördenkatalog fusionieren, §4). JStPO-Wortlaute sind **nicht** Teil dieses Caches — bei Ausbau separat am Filestore (SR 312.1) verifizieren.
+
+### StBOG-Schnittstelle Bund (Strafkammer/Berufungskammer BStGer)
+**Regel.** Die bundesseitigen Spruchkörper (erstinstanzliche **Strafkammer** und **Berufungskammer** des Bundesstrafgerichts, **Beschwerdekammer** für Art. 28) ergeben sich aus dem **Strafbehördenorganisationsgesetz (StBOG, SR 173.71)**, nicht aus der StPO selbst. Art. 23 Abs. 2 StPO behält diese Spezialvorschriften ausdrücklich vor.
+**Engine-Hinweis.** **Querverweis auf das bestehende Bund-Dossier** `bibliothek/behoerden/gerichte-bund.md` (und `bibliothek/kosten/gerichtskosten-bund.md`) genügt — dort die konkreten Spruchkörper/Adressen. StPO-Engine liefert nur `gerichtsbarkeit=bund` und delegiert die Spruchkörperauflösung an das Bund-Dossier (SSoT, §5).
+
+---
+
+## TEIL D — Verfahrensarten mit Zuständigkeitsfolgen
+
+### Strafbefehlsverfahren (Art. 352–356)
+
+#### Art. 352 — Voraussetzungen (+ Art. 352a) ⚠️ **Art. 352a neu / Revision 1.1.2024**
+**1. Wortlaut-Kern.** Abs. 1: Bei eingestandenem oder anderweitig **ausreichend geklärtem Sachverhalt** erlässt die **StA einen Strafbefehl**, wenn sie (inkl. allfällig zu widerrufender bedingter Strafe/Entlassung) eine der folgenden Strafen für ausreichend hält: **lit. a Busse**; **lit. b Geldstrafe ≤ 180 Tagessätze**; *(lit. c aufgehoben)*; **lit. d Freiheitsstrafe ≤ 6 Monate**. Abs. 2: Verbindbar mit Massnahmen nach **Art. 66 und 67e–73 StGB**. Abs. 3: Strafen lit. b–d kombinierbar, sofern insgesamt ≤ 6 Monate FS entsprechend; Verbindung mit Busse immer möglich.
+**Art. 352a (neu) — Einvernahme:** «Ist zu erwarten, dass der Strafbefehl eine **zu verbüssende Freiheitsstrafe** zur Folge hat, so führt die StA eine **Einvernahme** der beschuldigten Person durch.»
+**2. Regel.** Summarisches Verfahren der **StA als Entscheidträgerin** (Verzicht auf Gerichtsverfahren) bei klarem Sachverhalt und Strafmass im Bagatell-/Mittelbereich (Obergrenze 6 Monate FS / 180 TS / Busse).
+**3. Revision 1.1.2024.** **Art. 352a neu eingefügt** (Ziff. I des BG vom 17.6.2022, in Kraft seit 1.1.2024, AS 2023 468; BBl 2019 6697) — **Einvernahmepflicht** bei zu verbüssender Freiheitsstrafe. Ausdrücklich markiert.
+**4. Engine-Hinweis.** Gate `strafbefehl_zulaessig`: Sachverhalt geklärt UND Strafmass ∈ {Busse, Geldstrafe ≤180 TS, FS ≤6 Mt, Kombi ≤6 Mt}. Entscheidträger `staatsanwaltschaft`. Zusatz-Flag `einvernahme_pflicht=true`, wenn `zu_verbuessende_freiheitsstrafe` (Art. 352a). Schwellen als datierte Parameter (Revisionsstand 1.1.2024).
+
+#### Art. 353 — Inhalt und Eröffnung ⚠️ **Revision 1.1.2024 (lit. f^bis, Abs. 2)**
+**1. Wortlaut-Kern.** Abs. 1: Inhaltskatalog lit. a–k (u. a. verfügende Behörde, Sachverhalt, Tatbestände, Sanktion, **lit. f^bis DNA-Löschfrist**, **lit. i Hinweis auf Einsprachemöglichkeit und Folgen**). Abs. 2: Die **StA kann über Zivilforderungen entscheiden**, soweit anerkannt oder wenn **lit. a** ohne weitere Beweiserhebung beurteilbar **und lit. b Streitwert ≤ CHF 30 000**. Abs. 3: **unverzügliche schriftliche Eröffnung** an Einsprachebefugte.
+**2. Regel.** Formerfordernisse; **adhäsionsweise Zivilforderung bis CHF 30 000** durch die StA.
+**3. Revision 1.1.2024.** **Abs. 2** neu gefasst (Zivilforderungs-Schwelle CHF 30 000; AS 2023 468, in Kraft 1.1.2024). **lit. f^bis** (DNA-Löschfrist) eingefügt per **1.8.2023** (AS 2023 309) — separate Revision, ausdrücklich markiert.
+**4. Engine-Hinweis.** Pflichtinhalt-Checkliste; Zivilforderungs-Gate `streitwert ≤ 30000 AND ohne_beweiserhebung_beurteilbar` (datierter Parameter, Stand 1.1.2024).
+
+#### Art. 354 — Einsprache (Einsprache-Weg) ⚠️ **Revision 1.1.2024 (lit. a^bis, Abs. 1^bis)**
+**1. Wortlaut-Kern.** Abs. 1: Einsprache **bei der StA innert 10 Tagen schriftlich** durch **lit. a beschuldigte Person; lit. a^bis Privatklägerschaft; lit. b weitere Betroffene; lit. c** Ober-/Generalstaatsanwaltschaft. Abs. 1^bis: Die **Privatklägerschaft kann den Strafbefehl hinsichtlich der Sanktion nicht anfechten**. Abs. 2: Einsprachen sind zu begründen (Ausnahme: beschuldigte Person). Abs. 3: **Ohne gültige Einsprache wird der Strafbefehl zum rechtskräftigen Urteil**.
+**2. Regel.** **Einsprache = Rechtsbehelf eigener Art** (keine Devolution), Frist 10 Tage; ohne Einsprache **Rechtskraftwirkung** (Surrogat des Urteils).
+**3. Revision 1.1.2024.** **lit. a^bis und Abs. 1^bis neu eingefügt** (AS 2023 468, in Kraft 1.1.2024): Einspracherecht der Privatklägerschaft + Sperre der Sanktionsanfechtung. Ausdrücklich markiert.
+**4. Engine-Hinweis.** Einsprachefrist 10 Tage (Anbindung an Fristen-Engine, dies a quo nach Zustellung). Legitimations-Set inkl. Privatklägerschaft; Flag `privatklaegerschaft_keine_sanktionsanfechtung`. Ohne Einsprache → `rechtskraft=true`.
+
+#### Art. 355 — Verfahren bei Einsprache
+**1. Wortlaut-Kern.** Abs. 1: StA nimmt **weitere Beweise** ab. Abs. 2: Bei **unentschuldigtem Fernbleiben** der einsprechenden Person von der Einvernahme gilt die **Einsprache als zurückgezogen**. Abs. 3: Danach entscheidet die StA, ob sie **lit. a am Strafbefehl festhält; lit. b einstellt; lit. c neuen Strafbefehl erlässt; lit. d Anklage beim erstinstanzlichen Gericht erhebt**.
+**2. Regel.** StA bleibt zunächst Herrin des Verfahrens; vier Entscheidoptionen. **Rückzugsfiktion** bei Säumnis (Abs. 2).
+**3. Engine-Hinweis.** Entscheidbaum StA mit 4 Ästen; Flag `saeumnisfiktion_rueckzug`. Übergang zu Gericht nur bei lit. a (Festhalten → Art. 356) oder lit. d (Anklage).
+
+#### Art. 356 — Verfahren vor dem erstinstanzlichen Gericht (Gericht erster Instanz)
+**1. Wortlaut-Kern.** Abs. 1: Hält die StA fest, **überweist sie die Akten unverzüglich dem erstinstanzlichen Gericht**; **der Strafbefehl gilt als Anklageschrift**. Abs. 2: Das Gericht **entscheidet über die Gültigkeit von Strafbefehl und Einsprache**. Abs. 3: Rückzug bis Abschluss der Parteivorträge. Abs. 4: **Säumnisfiktion** (unentschuldigtes Fernbleiben → Rückzug). Abs. 5: Bei Ungültigkeit **Aufhebung und Rückweisung** an die StA. Abs. 6: Bei Einsprache nur gegen Kosten/Nebenfolgen **schriftliches Verfahren** (ausser ausdrücklicher Verhandlungsantrag). Abs. 7: Mehrere Strafbefehle zum gleichen Sachverhalt → **Art. 392 sinngemäss**.
+**2. Regel.** **Zuständigkeitsübergang auf das erstinstanzliche Gericht** (Art. 19) durch Festhalten der StA; Strafbefehl = Anklageschrift. Gericht prüft zuerst Gültigkeit (Prozessvoraussetzung).
+**3. Revision.** Art. 356 trägt **keine** 1.1.2024-Fussnote → **textlich unverändert**.
+**4. Engine-Hinweis.** Forum-Switch `staatsanwaltschaft → erstinstanzliches_gericht` (Art. 19) bei `festhalten=true`. Flags `strafbefehl_als_anklageschrift`, `gueltigkeitspruefung_zuerst`, `saeumnisfiktion`, `nur_kosteneinsprache → schriftlich`.
+
+### Übertretungsstrafverfahren (Art. 357)
+**1. Wortlaut-Kern.** Abs. 1: Die zur Verfolgung/Beurteilung von Übertretungen eingesetzten **Verwaltungsbehörden haben die Befugnisse der StA**. Abs. 2: Verfahren **sinngemäss nach Strafbefehlsverfahren**. Abs. 3: Ist der **Übertretungstatbestand nicht erfüllt**, **Einstellung mit kurz begründeter Verfügung**. Abs. 4: Bei Verbrechen/Vergehen **Überweisung an die StA**.
+**2. Regel.** Übertretungsstrafbehörde (Art. 12 lit. c / 17) als **funktionales StA-Äquivalent**; Verweis auf Strafbefehlsregeln (Art. 352 ff.).
+**3. Revision.** Keine 1.1.2024-Fussnote → **unverändert**.
+**4. Engine-Hinweis.** Wenn `behoerde=uebertretungsstrafbehoerde` → Verfahren = Strafbefehlsverfahren (Wiederverwendung der Art.-352-ff.-Logik per Verweis, **nicht** Duplikat). Übergangs-Flag `bei_verbrechen_vergehen → an_staatsanwaltschaft` (Art. 357 IV, spiegelt Art. 17 II).
+
+### Abgekürztes Verfahren (Art. 358–362)
+**Art. 358 — Grundsätze.** Beschuldigte Person kann **bis zur Anklageerhebung** das abgekürzte Verfahren beantragen, wenn sie den **wesentlichen Sachverhalt eingesteht** und **Zivilansprüche im Grundsatz anerkennt**. **Ausgeschlossen**, wenn die StA **Freiheitsstrafe > 5 Jahre** verlangt.
+**Art. 359 — Einleitung.** StA entscheidet **endgültig und unbegründet** über die Durchführung; Mitteilung an Parteien, **10-Tage-Frist** für Privatklägerschaft zur Anmeldung von Zivil-/Entschädigungsansprüchen.
+**Art. 360 — Anklageschrift.** Inhalt lit. a–h (inkl. Strafmass, Massnahmen, Zivilansprüche, **lit. h Hinweis: Zustimmung = Verzicht auf ordentliches Verfahren und Rechtsmittel**). Eröffnung an Parteien; **10 Tage** für Zustimmung/Ablehnung; **Zustimmung unwiderruflich**; Schweigen der Privatklägerschaft = Zustimmung; bei Zustimmung Übermittlung **ans erstinstanzliche Gericht**; bei Ablehnung **ordentliches Vorverfahren**.
+**Art. 361 — Hauptverhandlung.** Das **erstinstanzliche Gericht** führt eine Hauptverhandlung; Befragung der beschuldigten Person (Sachverhaltsanerkennung + Aktenübereinstimmung); **kein Beweisverfahren**.
+**Art. 362 — Urteil oder ablehnender Entscheid.** Gericht prüft **frei** Rechtmässigkeit/Angemessenheit; bei Erfüllung **Urteil = Anklageschrift** (summarische Begründung); sonst **Rückweisung** an StA (Entscheid **nicht anfechtbar**); im Hinblick auf das abgekürzte Verfahren abgegebene Erklärungen sind danach **nicht verwertbar**; **Berufung nur** wegen fehlender Zustimmung oder Abweichung Urteil/Anklageschrift.
+**Regel/Zuständigkeitsfolge.** StA steuert das Vorverfahren (Antrag/Einleitung/Anklageschrift), das **erstinstanzliche Gericht** urteilt (Art. 361/362). Konsensbasiert; FS-Obergrenze **5 Jahre** (Art. 358 II) als hartes Gate.
+**Revision.** Art. 358–362 tragen **keine** 1.1.2024-Fussnoten → **textlich unverändert**.
+**Engine-Hinweis.** Gate `abgekuerzt_zulaessig`: `gestaendnis AND zivil_anerkannt AND beantragte_FS ≤ 5J`. Phasenmodell: StA (358–360) → erstinstanzliches Gericht (361–362). Flags `zustimmung_unwiderruflich`, `keine_anfechtbarkeit_rueckweisung`, `berufung_eingeschraenkt`. 10-Tage-Fristen an Fristen-Engine.
+
+### Selbstständige nachträgliche Entscheide (Art. 363 ff. — kurz)
+**Art. 363 — Zuständigkeit.** Abs. 1: Das **Gericht, das das erstinstanzliche Urteil fällte**, trifft auch die einer gerichtlichen Behörde übertragenen **selbstständigen nachträglichen Entscheide** (sofern Bund/Kantone nichts anderes bestimmen). Abs. 2: Hat die **StA (Strafbefehl)** oder die **Übertretungsstrafbehörde** entschieden, **treffen diese die nachträglichen Entscheide**. Abs. 3: Für nicht dem Gericht zustehende nachträgliche Entscheide bestimmen Bund/Kantone die Behörde.
+**Regel.** **Perpetuatio fori des Urteilsgerichts** für nachträgliche Entscheide (z. B. Umwandlung, Vollzugsfragen); Spiegelung der ursprünglichen Entscheidträgerschaft bei Strafbefehl/Übertretung.
+**Engine-Hinweis.** Flag `nachtraeglicher_entscheid_durch = ursprueglicher_entscheidtraeger` (Gericht bzw. StA/Übertretungsstrafbehörde), kantonaler Vorbehalt (Abs. 1/3).
+
+---
+
+## Querschnitt — Engine-Designhinweise (Teil 1)
+
+- **Zwei orthogonale Achsen:** (a) **Behördentyp** Verfolgung {Polizei, StA, Übertretungsstrafbehörde} (Art. 12) vs. Gericht {ZMG, erstinstanzlich, Beschwerde, Berufung} (Art. 13); (b) **Gerichtsbarkeit** {kantonal (Art. 22, Default), Bund (Art. 23/24)}.
+- **Default kantonal:** `gerichtsbarkeit=kantonal`, Override nur bei Katalog-Match Art. 23/24. Konfliktentscheid → BStGer (Art. 28).
+- **Kantonale Organisationshoheit (Art. 14):** Funktionstypen sind bundesrechtlich fix, **Bezeichnungen/Adressen kantonal** → Stammdaten-Tabelle (Querverweis `bibliothek/behoerden/`), keine Hartkodierung. Beschwerde-/Berufungsinstanz unteilbar (Art. 14 IV).
+- **Unvereinbarkeiten als Hard-Flags:** ZMG↔Sachrichter (Art. 18 II), Beschwerde↔Berufung & Berufung↔Revision (Art. 21 II/III).
+- **Einzelgericht-Schwelle (Art. 19 II):** Anknüpfung an **StA-Antrag** (>2 J FS / Verwahrung 64 / Behandlung 59), nicht Urteil.
+- **Verfahrensarten = Entscheidträger-Routing:** Strafbefehl (StA, Art. 352 ff.) → bei Einsprache + Festhalten Forum-Switch zum erstinstanzlichen Gericht (Art. 356); Übertretung (Verwaltungsbehörde mit StA-Befugnissen, Art. 357); abgekürzt (StA-Steuerung + erstinstanzliches Urteil, Art. 358–362, Gate FS ≤ 5 J); nachträgliche Entscheide folgen dem ursprünglichen Träger (Art. 363).
+- **§4 (keine Fusion):** JStPO-Pfad und Bund-Spruchkörper (StBOG) **getrennt** halten; nur Querverweise auf JStPO (SR 312.1) bzw. Bund-Dossier.
+
+## Revisions-Markierungen StPO-Revision 1.1.2024 (AS 2023 468, BBl 2019 6697) — zusammengefasst
+- **Art. 19 Abs. 2** — ✅ **textlich geändert** (Einzelgericht-Schwelle/Massnahmenausnahmen 59/64 StGB).
+- **Art. 352a** — ✅ **neu eingefügt** (Einvernahmepflicht bei zu verbüssender Freiheitsstrafe).
+- **Art. 353 Abs. 2** — ✅ **geändert** (Zivilforderung bis CHF 30 000). *(lit. f^bis DNA-Löschfrist = separate Revision per 1.8.2023, AS 2023 309.)*
+- **Art. 354 Abs. 1 lit. a^bis + Abs. 1^bis** — ✅ **neu** (Einspracherecht Privatklägerschaft; keine Sanktionsanfechtung).
+- **Unverändert in dieser Revision** (ausdrücklich markiert): Art. 12–18, 20–28 (deren Fussnoten betreffen frühere Revisionen — z. B. Art. 23 lit. k Strafrahmenharmonisierung 1.7.2023; Art. 24 Terrorismus-Übereinkommen 1.7.2021; Art. 23 lit. a/g StBOG/Römer-Statut 2011), Art. 356, 357, 358–362, 363.
+
+## Belege / Quellen
+- **Wortlaut (primär):** lokaler Fedlex-Cache `/tmp/stpo.html`, **Konsolidierung 20240101 («Stand am 1. Januar 2024»)**, SR 312.0, ELI `cc/2010/267` (Anker `id="art_12"`–`id="art_28"`, `id="art_352"`–`id="art_363"`, `id="art_352_a"`), per Extraktion verifiziert.
+- **Revision 1.1.2024:** AS 2023 468 (BG vom 17. Juni 2022; BBl 2019 6697) — Fussnoten zu Art. 19, 352a, 353 II, 354 im Cache belegt.
+- **Frühere Teilrevisionen (Cache-Fussnoten):** AS 2023 259 (Strafrahmenharmonisierung, 1.7.2023, Art. 23 lit. k); AS 2021 360 (Terrorismus-Übereinkommen, 1.7.2021, Art. 24); AS 2010 3267 / AS 2010 4963 (StBOG / Römer-Statut, 1.1.2011, Art. 23 lit. a/g); AS 2017 6559 (Ordnungsbussengesetz, 1.1.2018, Art. 23 lit. e); AS 2023 309 (DNA, 1.8.2023, Art. 353 I lit. f^bis).
+- **Bund-Spruchkörper / StBOG:** bestehende Dossiers `bibliothek/behoerden/gerichte-bund.md`, `bibliothek/kosten/gerichtskosten-bund.md` (Querverweis genügt; SR 173.71).
+- **BGE:** Es wurden **keine** spezifischen BGE-Fundstellen aus amtlicher Primärquelle gegengeprüft; entsprechend wird auftragsgemäss auf Leitentscheide verzichtet (kein unbelegter Sekundär-BGE eingefügt). Bei Engine-Umsetzung ggf. gezielt nachrecherchieren (z. B. zur Rechtskraftwirkung des Strafbefehls, Art. 354 III, und zur Anklagefunktion Art. 356 I).
+
+---
+
+**Hinweise zur Belastbarkeit (§7/§8):** Alle Wortlaut-Kerne sind **verbatim** aus dem Fedlex-Cache (Stand 20240101) extrahiert; die StGB-Artikel-Subreferenzen in Art. 23/24 (z. B. 172^ter, 226^ter, 260^ter, 322^ter–septies, 264^k) wurden mit erhaltenen Hochzahlen verifiziert. Mehrere Katalogtatbestände (Art. 23: «gegen den Bund gerichtet», Schutzobjekte; Art. 24: örtliche Schwerpunktkriterien) verlangen **juristische Subsumtion** → in der Engine als Ja/Nein-Gate an die fachkundige Person, nicht automatisch. **`verified: true` / Status «geprüft» setzt Davids Abnahme voraus.** **Keine Repo-Dateien wurden geändert** (reiner Recherche-Auftrag).
 
 ---
 
