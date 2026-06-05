@@ -1,85 +1,252 @@
 import { jsPDF } from 'jspdf';
 import { pdfText } from '../pdf/winansi';
-import type { AssembleErgebnis } from './engine';
+import type { AssembleErgebnis, DokumentAbsatz, VorlageFormat } from './engine';
 import type { PdfBanner } from './banner';
 
-// PDF-Ausgabe einer Vorlage als «Mustertext zum eigenhändigen Abschreiben».
-// Clientseitig (jsPDF), deterministisch; Banner + Fusszeile machen den
-// Entwurfs-Charakter unmissverständlich.
+// ─── PDF-Renderer der Vorlagen — drei Formatvorlagen ────────────────────────
 //
-// Banner-Texte/-Typ leben in banner.ts (ohne jsPDF), damit Seiten sie
-// importieren können, ohne jsPDF in ihren Chunk zu ziehen — dieses Modul
-// wird erst beim Export-Klick dynamisch geladen.
-
-const RAND = 22;
-const BREITE = 210 - 2 * RAND;
+// Layout nach den Referenz-Dokumenten «LexMetrik-Referenz-*-Layout» (5.6.2026,
+// State of the Art für Schweizer Rechtsdokumente):
+//   · Grundschrift Helvetica 10.5 (≈ Arial 11 der Referenz), Zeilenabstand 1.15
+//   · Ränder 25 mm; zentrierte Seitenfusszeile «LexMetrik · … · Seite n/N»
+//   · Disclaimer EINMAL am Dokumentende (8 pt, Haarlinie darüber) statt auf
+//     jeder Seite
+//   · Nummerierte Klauseln/Begehren mit HÄNGENDEM Einzug; «– »-Unterpunkte
+//     doppelt eingezogen
+//   · Unterschrifts-Strichzeilen (___) werden als feine LINIEN gezeichnet
+// Formatvorlagen:
+//   verfuegung — zentrierter Titel 16 + Haarlinie, ruhige Absätze
+//   vertrag    — Titel 15.5 + Haarlinie, zentrierter Parteien-Ingress,
+//                geschützter Unterschriftenblock
+//   eingabe    — Briefkopf (Absender/Adressat dicht), Ort/Datum rechts,
+//                Betreff 13 fett + Haarlinie, Rubrum mit zentrierten
+//                Parteirollen; KEIN Dokumenttitel (der Betreff trägt ihn)
+// Banner kennzeichnet den Entwurfs-Charakter. Clientseitig, deterministisch.
 
 export type { PdfBanner } from './banner';
 export { BANNER_ABSCHREIBEN, BANNER_UNTERSCHREIBEN } from './banner';
 
-export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
+type Profil = {
+  brot: number; zeile: number; zeileDicht: number; absatzGap: number;
+  titel?: number; ueberschrift: number; ueberschriftVor: number; ueberschriftNach: number;
+};
+
+const PROFILE: Record<VorlageFormat, Profil> = {
+  verfuegung: { brot: 10.5, zeile: 5.1, zeileDicht: 4.5, absatzGap: 2.6, titel: 16,   ueberschrift: 12,   ueberschriftVor: 5, ueberschriftNach: 6.4 },
+  vertrag:    { brot: 10.5, zeile: 5.0, zeileDicht: 4.5, absatzGap: 2.4, titel: 15.5, ueberschrift: 11.5, ueberschriftVor: 5, ueberschriftNach: 6.2 },
+  eingabe:    { brot: 10.5, zeile: 4.9, zeileDicht: 4.4, absatzGap: 2.4, titel: undefined, ueberschrift: 11.5, ueberschriftVor: 4.5, ueberschriftNach: 6.2 },
+};
+
+const RAND = 25;
+const BREITE = 210 - 2 * RAND;
+const EINZUG = 7;        // hängender Einzug nummerierter Klauseln (mm)
+const SUB_EINZUG = 12;   // «– »-Unterpunkte
+
+const NUMMER = /^(\d+)\.\s+/;
+const SUB = /^–\s+/;
+const STRICHE = /^_{6,}\s*$/;
+
+// Dokument bauen (testbar, gibt das jsPDF-Objekt zurück) — der Download ist
+// in vorlagenPdfErzeugen gekapselt.
+export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner } = {}): jsPDF {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+  const P = PROFILE[e.dokument.format];
   let y = RAND;
 
-  const fusszeile = () => {
+  const hairline = (x1: number, x2: number, staerke = 0.2, grau = 165) => {
+    doc.setDrawColor(grau); doc.setLineWidth(staerke); doc.line(x1, y, x2, y);
+  };
+
+  const fusszeilen = () => {
     const seiten = doc.getNumberOfPages();
     for (let i = 1; i <= seiten; i++) {
       doc.setPage(i);
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(7.5);
-      doc.setTextColor(110);
-      const zeilen = doc.splitTextToSize(pdfText(e.dokument.disclaimer), BREITE) as string[];
-      doc.text(zeilen, RAND, 297 - 14);
-      doc.text(`Bausteine v${e.dokument.version} · Seite ${i}/${seiten}`, 210 - RAND, 297 - 6, { align: 'right' });
+      doc.setTextColor(120);
+      doc.text(`LexMetrik · Orientierungsdokument, keine Rechtsberatung · Seite ${i}/${seiten}`, 105, 297 - 10, { align: 'center' });
     }
   };
 
   const seitenumbruch = (benoetigt: number) => {
-    if (y + benoetigt > 297 - 24) { doc.addPage(); y = RAND; }
+    if (y + benoetigt > 297 - 20) { doc.addPage(); y = RAND; }
   };
 
-  // Formvorschrift-Banner (z. B. Abschreib- oder Unterschrifts-Hinweis)
+  // ── Banner (Entwurfs-Kennzeichnung): Box mit Haarlinien-Rahmen ──
   if (opts.banner) {
-    doc.setFillColor(243, 226, 221);
-    doc.rect(RAND, y, BREITE, 16, 'F');
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(9.5);
-    doc.setTextColor(122, 47, 35);
-    doc.text(pdfText(opts.banner.titel), RAND + 4, y + 6);
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(8);
-    const hinweis = doc.splitTextToSize(pdfText(opts.banner.text), BREITE - 8) as string[];
-    doc.text(hinweis, RAND + 4, y + 10.5);
-    y += 22;
+    const txt = doc.splitTextToSize(pdfText(opts.banner.text), BREITE - 8) as string[];
+    const h = 9 + txt.length * 3.6;
+    doc.setFillColor(246, 238, 230);
+    doc.setDrawColor(176, 141, 74); doc.setLineWidth(0.3);
+    doc.rect(RAND, y, BREITE, h, 'FD');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); doc.setTextColor(122, 47, 35);
+    doc.text(pdfText(opts.banner.titel), RAND + 4, y + 5.4);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8);
+    doc.text(txt, RAND + 4, y + 9.6);
+    y += h + 8;
   }
 
-  // Titel (Serif für den Dokument-Charakter)
   doc.setTextColor(26, 26, 23);
-  doc.setFont('times', 'bold');
-  doc.setFontSize(16);
-  doc.text(pdfText(e.dokument.titel), 105, y + 4, { align: 'center' });
-  y += 14;
 
-  // Absätze
-  for (const a of e.dokument.absaetze) {
-    if (a.ueberschrift) {
-      seitenumbruch(12);
-      doc.setFont('times', 'bold');
-      doc.setFontSize(12);
-      doc.text(pdfText(a.ueberschrift), RAND, y);
-      y += 6;
-    }
-    doc.setFont('times', 'normal');
-    doc.setFontSize(11.5);
-    for (const absatzZeile of a.text.split('\n')) {
-      const zeilen = doc.splitTextToSize(absatzZeile === '' ? ' ' : pdfText(absatzZeile), BREITE) as string[];
-      seitenumbruch(zeilen.length * 5.4 + 3);
-      doc.text(zeilen, RAND, y);
-      y += zeilen.length * 5.4;
-    }
-    y += 3.5;
+  // ── Dokumenttitel + Haarlinie (Verfügung/Vertrag) ──
+  if (P.titel) {
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(P.titel);
+    doc.text(pdfText(e.dokument.titel), 105, y + 4, { align: 'center' });
+    y += 9;
+    hairline(RAND, 210 - RAND);
+    y += 7;
+  } else {
+    y += 2;
   }
 
-  fusszeile();
-  doc.save(opts.dateiName);
+  // ── Text-Helfer ──
+  const zeilenVon = (text: string, breite: number) =>
+    doc.splitTextToSize(text === '' ? ' ' : pdfText(text), breite) as string[];
+
+  const blockHoehe = (text: string, zeilenHoehe: number, breite = BREITE): number =>
+    text.split('\n').reduce((h, zl) => h + zeilenVon(zl, breite).length * zeilenHoehe, 0);
+
+  type ZeilenOpt = { align?: 'right' | 'center'; dicht?: boolean; brechen?: boolean };
+  const schreibe = (text: string, opt: ZeilenOpt = {}) => {
+    const zh = opt.dicht ? P.zeileDicht : P.zeile;
+    for (const zl of text.split('\n')) {
+      // Strichzeile → gezeichnete Unterschriftslinie
+      if (STRICHE.test(zl)) {
+        seitenumbruch(6);
+        y += 2;
+        hairline(RAND, RAND + 62, 0.3, 90);
+        y += zh - 1;
+        continue;
+      }
+      // Nummerierte Klausel: hängender Einzug
+      const num = zl.match(NUMMER);
+      if (num && !opt.align) {
+        const rest = zl.slice(num[0].length);
+        const zeilen = zeilenVon(rest, BREITE - EINZUG);
+        if (opt.brechen !== false) seitenumbruch(zeilen.length * zh + 2);
+        doc.text(pdfText(`${num[1]}.`), RAND, y);
+        doc.text(zeilen, RAND + EINZUG, y);
+        y += zeilen.length * zh;
+        continue;
+      }
+      // «– »-Unterpunkt: doppelt eingezogen
+      if (SUB.test(zl) && !opt.align) {
+        const rest = zl.slice(2);
+        const zeilen = zeilenVon(rest, BREITE - SUB_EINZUG);
+        if (opt.brechen !== false) seitenumbruch(zeilen.length * zh + 2);
+        doc.text('–', RAND + EINZUG, y);
+        doc.text(zeilen, RAND + SUB_EINZUG, y);
+        y += zeilen.length * zh;
+        continue;
+      }
+      const zeilen = zeilenVon(zl, BREITE);
+      if (opt.brechen !== false) seitenumbruch(zeilen.length * zh + 2);
+      const x = opt.align === 'right' ? 210 - RAND : opt.align === 'center' ? 105 : RAND;
+      doc.text(zeilen, x, y, opt.align ? { align: opt.align } : undefined);
+      y += zeilen.length * zh;
+    }
+  };
+
+  const setzeBrot = (fett = false) => { doc.setFont('helvetica', fett ? 'bold' : 'normal'); doc.setFontSize(P.brot); };
+
+  // ── Rollen-Renderer (Brief-/Vertrags-Anatomie) ──
+  const absatzRendern = (a: DokumentAbsatz) => {
+    switch (a.rolle) {
+      case 'absender':
+      case 'adressat':
+        setzeBrot();
+        seitenumbruch(blockHoehe(a.text, P.zeileDicht) + 4);
+        schreibe(a.text, { dicht: true, brechen: false });
+        y += a.rolle === 'adressat' ? 10 : 8;
+        return;
+      case 'datumzeile':
+        setzeBrot();
+        y += 2;
+        schreibe(a.text, { align: 'right' });
+        y += 8;
+        return;
+      case 'betreff':
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(13);
+        seitenumbruch(blockHoehe(a.text, 5.6) + 8);
+        schreibe(a.text, { brechen: false });
+        y += 1.5;
+        hairline(RAND, 210 - RAND);
+        y += 7;
+        return;
+      case 'rubrum':
+        setzeBrot();
+        for (const zl of a.text.split('\n')) {
+          if (/^—.*—$/.test(zl.trim())) {            // — klagende Partei —
+            seitenumbruch(P.zeile + 2);
+            doc.text(pdfText(zl.trim()), 105, y, { align: 'center' });
+            y += P.zeile + 2;
+          } else if (zl.trim() === 'gegen') {
+            seitenumbruch(P.zeile + 2);
+            doc.setFont('helvetica', 'bold');
+            doc.text('gegen', 105, y, { align: 'center' });
+            doc.setFont('helvetica', 'normal');
+            y += P.zeile + 2;
+          } else if (zl.startsWith('betreffend ')) {
+            y += 1.5;
+            schreibe(zl);
+          } else {
+            schreibe(zl, { dicht: zl.trim() !== '' && zl !== 'in Sachen' });
+            if (zl === 'in Sachen') y += 1.5;
+          }
+        }
+        y += 7;
+        return;
+      case 'parteien':
+        setzeBrot();
+        seitenumbruch(blockHoehe(a.text, P.zeile) + 4);
+        schreibe(a.text, { align: 'center', brechen: false });
+        y += 8;
+        return;
+      case 'unterschrift':
+        setzeBrot();
+        y += 5;
+        seitenumbruch(blockHoehe(a.text, P.zeile) + 8);
+        schreibe(a.text, { brechen: false });
+        y += P.absatzGap;
+        return;
+      default: {
+        if (a.ueberschrift) {
+          y += P.ueberschriftVor;
+          setzeBrot();
+          const erste = zeilenVon(a.text.split('\n')[0] || ' ', BREITE).length * P.zeile;
+          seitenumbruch(7 + erste + 2);
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(P.ueberschrift);
+          doc.text(pdfText(a.ueberschrift), RAND, y);
+          y += P.ueberschriftNach;
+        }
+        setzeBrot();
+        schreibe(a.text);
+        y += P.absatzGap;
+      }
+    }
+  };
+
+  e.dokument.absaetze.forEach(absatzRendern);
+
+  // ── Disclaimer einmal am Dokumentende (8 pt, Haarlinie darüber) ──
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(8);
+  const disc = doc.splitTextToSize(pdfText(e.dokument.disclaimer), BREITE) as string[];
+  seitenumbruch(disc.length * 3.6 + 14);
+  y += 8;
+  hairline(RAND, 210 - RAND);
+  y += 4;
+  doc.setTextColor(110);
+  doc.text(disc, RAND, y);
+  y += disc.length * 3.6 + 1.5;
+  doc.text(pdfText(`Bausteine v${e.dokument.version}`), RAND, y);
+
+  fusszeilen();
+  return doc;
+}
+
+export function vorlagenPdfErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
+  vorlagenPdfDokument(e, opts).save(opts.dateiName);
 }

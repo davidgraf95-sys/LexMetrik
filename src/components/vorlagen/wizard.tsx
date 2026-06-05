@@ -127,15 +127,25 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
 }) {
   return (
     <div className="space-y-4">
-      {/* Live-Vorschau als «Papier» */}
+      {/* Live-Vorschau als «Papier» — interpretiert dieselben Formatvorlagen
+          (format + Absatz-Rollen) wie PDF und DOCX */}
       <section aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-5 sm:p-9">
         <p className="lc-overline mb-4">Vorschau · aktualisiert sich live</p>
         <div className="font-display text-ink-900 space-y-3" style={kompakt ? { fontSize: '0.92rem', lineHeight: 1.7 } : { fontSize: '0.95rem', lineHeight: 1.75 }}>
-          <p className={`text-center font-semibold ${kompakt ? 'text-[1.1rem]' : 'text-[1.15rem]'}`}>{ergebnis.dokument.titel}</p>
+          {/* Eingaben tragen ihren Titel im fetten Betreff — kein Dokumenttitel */}
+          {ergebnis.dokument.format !== 'eingabe' && (
+            <p className={`text-center font-semibold ${kompakt ? 'text-[1.1rem]' : 'text-[1.15rem]'} mb-4`}>{ergebnis.dokument.titel}</p>
+          )}
           {ergebnis.dokument.absaetze.map((abs) => (
-            <div key={abs.bausteinId + abs.text.slice(0, 12)}>
-              {abs.ueberschrift && <p className="font-semibold mt-2">{abs.ueberschrift}</p>}
-              <p className="whitespace-pre-line">{abs.text}</p>
+            <div key={abs.bausteinId + abs.text.slice(0, 12)} className={
+              abs.rolle === 'datumzeile' ? 'text-right pt-2'
+              : abs.rolle === 'adressat' ? 'pb-3'
+              : abs.rolle === 'parteien' ? 'text-center py-2'
+              : abs.rolle === 'unterschrift' ? 'pt-3'
+              : ''
+            }>
+              {abs.ueberschrift && <p className="font-semibold mt-3">{abs.ueberschrift}</p>}
+              <p className={`whitespace-pre-line ${abs.rolle === 'betreff' ? 'font-semibold' : ''}`}>{abs.text}</p>
             </div>
           ))}
         </div>

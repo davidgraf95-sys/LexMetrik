@@ -184,7 +184,7 @@ export const TESTAMENT_SCHEMA: VorlageSchema = {
       norm: 'Art. 517 f. ZGB',
     },
     {
-      id: 'C12_schlussformel',
+      id: 'C12_schlussformel', rolle: 'unterschrift',
       text: '{{ortDatumZeile}}\n\n\n_________________________________\n(eigenhändige Unterschrift: {{vorname}} {{nachname}})',
       begruendung: 'Schlussformel mit Datum (Jahr/Monat/Tag) und Unterschriftszeile am Schluss — immer enthalten.',
       norm: 'Art. 505 Abs. 1 ZGB',

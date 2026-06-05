@@ -1,28 +1,35 @@
 import {
   Document, Packer, Paragraph, TextRun, AlignmentType, BorderStyle,
-  ShadingType, HeadingLevel,
+  ShadingType, HeadingLevel, Footer, PageNumber,
 } from 'docx';
-import type { AssembleErgebnis } from './engine';
+import type { AssembleErgebnis, AbsatzRolle, VorlageFormat } from './engine';
 import type { PdfBanner } from './banner';
 
-// ─── DOCX-Renderer der Vorlagen (Teil II «Ausgabe & Export») ────────────────
+// ─── DOCX-Renderer der Vorlagen — Referenz-Layout ───────────────────────────
 //
-// EINE Quelle, mehrere Renderer: PDF und DOCX werden aus demselben
-// AssembleErgebnis erzeugt — identischer Inhalt in jedem Format.
-// Word-Formatvorlagen (Title/Heading2 + Standard-Absatzstil) statt
-// Hartformatierung, damit das Dokument in Word sauber weiterbearbeitbar
-// bleibt. Clientseitig, deterministisch, kein LLM.
+// EINE Quelle, mehrere Renderer: PDF und DOCX entstehen aus demselben
+// AssembleErgebnis. Layout nach den Referenz-Dokumenten
+// «LexMetrik-Referenz-*-Layout» (5.6.2026):
+//   · Arial 11, Zeilenabstand 1.15, Ränder 2.5 cm
+//   · zentrierte Fusszeile «LexMetrik · … · Seite N» auf jeder Seite
+//   · Titel zentriert (17 fett) mit Haarlinie; Eingaben stattdessen mit
+//     fettem Betreff (13) + Haarlinie
+//   · nummerierte Klauseln/Begehren mit hängendem Einzug, «– »-Unterpunkte
+//     doppelt eingezogen; Adress-/Parteiblöcke zeilendicht
+//   · Unterschrifts-Strichzeilen als feine Linie (Rahmen unten)
+//   · Disclaimer 8 pt mit Haarlinie am Dokumentende
+// Word-Formatvorlagen (Title/Heading2) bleiben erhalten, damit das Dokument
+// in Word sauber weiterbearbeitbar ist. Clientseitig, deterministisch.
 //
 // Form-Gate hat Vorrang: Vorlagen mit Eigenhändigkeitserfordernis erhalten
-// KEINEN Word-Download (Entscheid je Vorlage über `output` + Wizard-Gate);
-// wo DOCX zulässig ist, trägt das Dokument den Formhinweis sichtbar im Kopf.
+// KEINEN Word-Download (Entscheid je Vorlage über `output` + Wizard-Gate).
 
-// Reine Abbildung Modell → Absatz-Liste (testbar, ohne Packer)
+// Reine Abbildung Modell → Absatz-Liste (testbar, ohne Packer).
 export type DocxAbsatz =
   | { typ: 'banner-titel' | 'banner-text'; text: string }
   | { typ: 'titel'; text: string }
   | { typ: 'ueberschrift'; text: string }
-  | { typ: 'absatz'; text: string }
+  | { typ: 'absatz'; text: string; rolle?: AbsatzRolle; blockEnde?: boolean }
   | { typ: 'disclaimer'; text: string };
 
 export function docxAbsaetze(e: AssembleErgebnis, banner?: PdfBanner): DocxAbsatz[] {
@@ -31,73 +38,204 @@ export function docxAbsaetze(e: AssembleErgebnis, banner?: PdfBanner): DocxAbsat
     liste.push({ typ: 'banner-titel', text: banner.titel });
     liste.push({ typ: 'banner-text', text: banner.text });
   }
-  liste.push({ typ: 'titel', text: e.dokument.titel });
+  // Eingaben tragen ihren «Titel» im fetten Betreff — kein Dokumenttitel.
+  if (e.dokument.format !== 'eingabe') liste.push({ typ: 'titel', text: e.dokument.titel });
   e.dokument.absaetze.forEach((a) => {
     if (a.ueberschrift) liste.push({ typ: 'ueberschrift', text: a.ueberschrift });
-    // \n innerhalb eines Bausteins (z. B. Listen) → je eigener Absatz
-    a.text.split('\n').forEach((zeile) => liste.push({ typ: 'absatz', text: zeile }));
+    // \n innerhalb eines Bausteins (Listen, Adressblöcke) → je eigener Absatz
+    const zeilen = a.text.split('\n');
+    zeilen.forEach((zeile, i) => liste.push({
+      typ: 'absatz', text: zeile,
+      ...(a.rolle ? { rolle: a.rolle, blockEnde: i === zeilen.length - 1 } : {}),
+    }));
   });
   liste.push({ typ: 'disclaimer', text: e.dokument.disclaimer });
   liste.push({ typ: 'disclaimer', text: `Bausteine v${e.dokument.version}` });
   return liste;
 }
 
-function alsParagraph(a: DocxAbsatz): Paragraph {
+const NUMMER = /^(\d+)\.\s+/;
+const SUB = /^–\s+/;
+const STRICHE = /^_{6,}\s*$/;
+const HAARLINIE = { bottom: { style: BorderStyle.SINGLE, size: 4, color: 'B9B5A9' } };
+
+// Haarlinie unter Titel/Betreff (eigener leerer Absatz mit Rahmen unten)
+const linieAbsatz = (after = 160) => new Paragraph({
+  border: HAARLINIE, spacing: { after }, children: [new TextRun({ text: '' })],
+});
+
+function alsParagraphe(a: DocxAbsatz, format: VorlageFormat): Paragraph[] {
   switch (a.typ) {
     case 'banner-titel':
-      return new Paragraph({
-        shading: { type: ShadingType.CLEAR, fill: 'F3E2DD' },
-        spacing: { before: 0, after: 60 },
-        children: [new TextRun({ text: a.text, bold: true, color: '7A2F23', size: 19 })],
-      });
+      return [new Paragraph({
+        shading: { type: ShadingType.CLEAR, fill: 'F6EEE6' },
+        border: {
+          top: { style: BorderStyle.SINGLE, size: 6, color: 'B08D4A' },
+          left: { style: BorderStyle.SINGLE, size: 6, color: 'B08D4A' },
+          right: { style: BorderStyle.SINGLE, size: 6, color: 'B08D4A' },
+        },
+        spacing: { before: 60, after: 40 },
+        children: [new TextRun({ text: a.text, bold: true, color: '7A2F23', size: 20 })],
+      })];
     case 'banner-text':
-      return new Paragraph({
-        shading: { type: ShadingType.CLEAR, fill: 'F3E2DD' },
-        spacing: { after: 240 },
+      return [new Paragraph({
+        shading: { type: ShadingType.CLEAR, fill: 'F6EEE6' },
+        border: {
+          bottom: { style: BorderStyle.SINGLE, size: 6, color: 'B08D4A' },
+          left: { style: BorderStyle.SINGLE, size: 6, color: 'B08D4A' },
+          right: { style: BorderStyle.SINGLE, size: 6, color: 'B08D4A' },
+        },
+        spacing: { after: 300 },
         children: [new TextRun({ text: a.text, color: '7A2F23', size: 16 })],
-      });
+      })];
     case 'titel':
-      return new Paragraph({
-        heading: HeadingLevel.TITLE,
-        alignment: AlignmentType.CENTER,
-        spacing: { after: 280 },
-        children: [new TextRun({ text: a.text })],
-      });
+      return [
+        new Paragraph({
+          heading: HeadingLevel.TITLE,
+          alignment: AlignmentType.CENTER,
+          spacing: { after: 240 },
+          children: [new TextRun({ text: a.text })],
+        }),
+        linieAbsatz(),
+      ];
     case 'ueberschrift':
-      return new Paragraph({
+      return [new Paragraph({
         heading: HeadingLevel.HEADING_2,
-        spacing: { before: 220, after: 80 },
+        spacing: { before: 240, after: 120 },
+        keepNext: true,
         children: [new TextRun({ text: a.text })],
-      });
+      })];
     case 'absatz':
-      return new Paragraph({
-        spacing: { after: 120 },
-        children: [new TextRun({ text: a.text === '' ? ' ' : a.text })],
-      });
+      return [absatzParagraph(a, format)];
     case 'disclaimer':
-      return new Paragraph({
-        spacing: { before: 120 },
-        border: { top: { style: BorderStyle.SINGLE, size: 4, color: 'C9C5B9' } },
-        children: [new TextRun({ text: a.text, size: 14, color: '6E6E64' })],
-      });
+      return [new Paragraph({
+        spacing: a.text.startsWith('Bausteine v') ? { before: 40, after: 0 } : { before: 360, after: 0 },
+        ...(a.text.startsWith('Bausteine v') ? {} : { border: { top: { style: BorderStyle.SINGLE, size: 4, color: 'C9C5B9' } } }),
+        children: [new TextRun({ text: a.text, size: 16, color: '6E6E64' })],
+      })];
   }
 }
 
-/** Baut das Word-Dokument (Formatvorlagen, CH-Typografie) und lädt es herunter. */
+function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: VorlageFormat): Paragraph {
+  const text = a.text === '' ? ' ' : a.text;
+  const dicht = { after: 0, line: 252, lineRule: 'auto' as const };
+
+  // Unterschrifts-Strichzeile → feine Linie (Rahmen unten, ~5.5 cm)
+  if (STRICHE.test(a.text)) {
+    return new Paragraph({
+      border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '5A5A52' } },
+      indent: { right: 6300 },
+      spacing: { before: 480, after: 0 },
+      keepLines: true,
+      children: [new TextRun({ text: '' })],
+    });
+  }
+
+  switch (a.rolle) {
+    case 'absender':
+    case 'adressat':
+      return new Paragraph({
+        spacing: a.blockEnde ? { after: a.rolle === 'adressat' ? 300 : 240, line: 252, lineRule: 'auto' } : dicht,
+        children: [new TextRun({ text })],
+      });
+    case 'datumzeile':
+      return new Paragraph({
+        alignment: AlignmentType.RIGHT,
+        spacing: { before: 240, after: 240 },
+        children: [new TextRun({ text })],
+      });
+    case 'betreff':
+      return new Paragraph({
+        spacing: { after: 80 },
+        border: HAARLINIE,
+        children: [new TextRun({ text, bold: true, size: 26 })],
+      });
+    case 'rubrum': {
+      if (/^—.*—$/.test(a.text.trim())) {
+        return new Paragraph({
+          alignment: AlignmentType.CENTER,
+          spacing: { before: 40, after: 160 },
+          children: [new TextRun({ text: a.text.trim() })],
+        });
+      }
+      if (a.text.trim() === 'gegen') {
+        return new Paragraph({
+          alignment: AlignmentType.CENTER,
+          spacing: { after: 160 },
+          children: [new TextRun({ text: 'gegen', bold: true })],
+        });
+      }
+      if (a.text === 'in Sachen') {
+        return new Paragraph({ spacing: { after: 120 }, children: [new TextRun({ text })] });
+      }
+      if (a.text.startsWith('betreffend ')) {
+        return new Paragraph({ spacing: { before: 40, after: 200 }, children: [new TextRun({ text })] });
+      }
+      return new Paragraph({ spacing: dicht, children: [new TextRun({ text })] });
+    }
+    case 'parteien':
+      return new Paragraph({
+        alignment: AlignmentType.CENTER,
+        spacing: a.blockEnde ? { after: 280 } : { after: 60 },
+        children: [new TextRun({ text })],
+      });
+    case 'unterschrift':
+      return new Paragraph({
+        spacing: { after: 60, line: 252, lineRule: 'auto' },
+        keepLines: true, keepNext: !a.blockEnde,
+        children: [new TextRun({ text })],
+      });
+    default: {
+      // Nummerierte Klausel → hängender Einzug (wie Referenz num-Listen)
+      if (NUMMER.test(a.text)) {
+        return new Paragraph({
+          indent: { left: 600, hanging: 340 },
+          spacing: { after: 120 },
+          children: [new TextRun({ text: text.replace(NUMMER, (m) => m.trimEnd() + '\t') })],
+        });
+      }
+      // «– »-Unterpunkt → doppelt eingezogen
+      if (SUB.test(a.text)) {
+        return new Paragraph({
+          indent: { left: 1020, hanging: 340 },
+          spacing: { after: 60 },
+          children: [new TextRun({ text: '–\t' + text.slice(2) })],
+        });
+      }
+      return new Paragraph({
+        spacing: { after: format === 'eingabe' ? 120 : 140 },
+        children: [new TextRun({ text })],
+      });
+    }
+  }
+}
+
+/** Baut das Word-Dokument (Referenz-Layout, CH-Typografie) und lädt es herunter. */
 export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
   const doc = new Document({
     styles: {
       default: {
-        document: { run: { font: 'Times New Roman', size: 23 } }, // 11.5pt Brottext
-        title: { run: { font: 'Times New Roman', size: 32, bold: true, color: '1A1A17' } },
-        heading2: { run: { font: 'Times New Roman', size: 24, bold: true, color: '1A1A17' } },
+        document: { run: { font: 'Arial', size: 22 }, paragraph: { spacing: { line: 276, lineRule: 'auto' } } }, // 11 pt, 1.15
+        title: { run: { font: 'Arial', size: 34, bold: true, color: '1A1A17' } },          // 17 pt
+        heading2: { run: { font: 'Arial', size: 24, bold: true, color: '1A1A17' } },       // 12 pt
       },
     },
     sections: [{
       properties: {
-        page: { margin: { top: 1134, bottom: 1134, left: 1134, right: 1134 } }, // 2 cm
+        page: { margin: { top: 1417, bottom: 1417, left: 1417, right: 1417 } }, // 2.5 cm
       },
-      children: docxAbsaetze(e, opts.banner).map(alsParagraph),
+      footers: {
+        default: new Footer({
+          children: [new Paragraph({
+            alignment: AlignmentType.CENTER,
+            children: [
+              new TextRun({ text: 'LexMetrik · Orientierungsdokument, keine Rechtsberatung · Seite ', size: 16, color: '6E6E64' }),
+              new TextRun({ children: [PageNumber.CURRENT], size: 16, color: '6E6E64' }),
+            ],
+          })],
+        }),
+      },
+      children: docxAbsaetze(e, opts.banner).flatMap((a) => alsParagraphe(a, e.dokument.format)),
     }],
   });
 

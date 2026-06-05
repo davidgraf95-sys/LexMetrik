@@ -1,5 +1,6 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
+import { fmtDatumLang } from './datum';
 
 // ─── Einzelarbeitsvertrag (Art. 319 ff. OR) — fünfte Vorlage ────────────────
 //
@@ -263,6 +264,7 @@ export function pruefeAvGates(a: AvAntworten): AvGateErgebnis {
 
 export const AV_SCHEMA: VorlageSchema = {
   id: 'arbeitsvertrag',
+  format: 'vertrag',
   version: '1.0.0 (Rechtsstand OR Art. 319 ff., Gutachten 5.6.2026)',
   titel: 'Einzelarbeitsvertrag',
   disclaimer:
@@ -272,7 +274,7 @@ export const AV_SCHEMA: VorlageSchema = {
     'beidseitige Unterzeichnung dieses Vertrags erfüllt sie. Anwendbare GAV/NAV und kantonale ' +
     'Mindestlöhne gehen vor und sind gesondert zu prüfen.',
   bausteine: [
-    { id: 'A01_parteien',
+    { id: 'A01_parteien', rolle: 'parteien',
       text: 'zwischen\n\n{{arbeitgeberBlock}}\n(nachfolgend «Arbeitgeber»)\n\nund\n\n{{arbeitnehmerBlock}}\n(nachfolgend «Arbeitnehmer/in»)',
       begruendung: 'Bezeichnung der Vertragsparteien — immer enthalten.',
       norm: 'Art. 319 OR' },
@@ -401,7 +403,7 @@ export const AV_SCHEMA: VorlageSchema = {
       nummeriert: true,
       begruendung: 'Schriftformvorbehalt und Verweis auf das dispositive Gesetzesrecht — immer enthalten.',
       norm: 'Art. 320 OR' },
-    { id: 'A16_unterschriften',
+    { id: 'A16_unterschriften', rolle: 'unterschrift',
       text: '{{ort}}, {{datumFmt}}\n\n\nDer Arbeitgeber:\n\n___________________________\n{{arbeitgeberName}}\n\n\nDer/Die Arbeitnehmer/in:\n\n___________________________\n{{arbeitnehmerKurz}}',
       begruendung: 'Ort, Datum und beidseitige Unterschriften — erfüllt die Schriftform der formbedürftigen Klauseln.',
       norm: 'Art. 320 OR' },
@@ -454,7 +456,7 @@ export function avZusammenstellen(a: AvAntworten) {
       : '',
     gavZeigen: a.gav === 'ja' && !!a.gavName?.trim(),
     gavName: a.gavName ?? '',
-    datumFmt: fmtDatum(a.datum),
+    datumFmt: fmtDatumLang(a.datum),
   };
 
   return assemble(AV_SCHEMA, antworten);

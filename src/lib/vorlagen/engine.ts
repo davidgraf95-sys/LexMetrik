@@ -14,6 +14,20 @@ export type Bedingung =
   | { or: Bedingung[] }
   | { not: Bedingung };
 
+// ── Formatvorlagen (Entscheid 5.6.2026): Das Schema deklariert den
+// Dokumenttyp und die Layout-Rolle einzelner Absätze; PDF, DOCX und
+// Live-Vorschau interpretieren BEIDE aus derselben Quelle.
+//  'verfuegung' — feierliche Urkunde (Testament, PV, VA): zentrierter
+//                 Serifen-Titel, ruhige Absätze
+//  'vertrag'    — Vertragslayout: Titel, Parteien-Ingress, nummerierte
+//                 Ziffern mit fetten Überschriften, Unterschriftenblock
+//  'eingabe'    — Rechtsschreiben: Absender/Adressat-Block, Datum rechts,
+//                 fetter Betreff (KEIN zentrierter Dokumenttitel)
+export type VorlageFormat = 'verfuegung' | 'vertrag' | 'eingabe';
+export type AbsatzRolle =
+  | 'absender' | 'adressat' | 'datumzeile' | 'betreff' | 'rubrum'
+  | 'parteien' | 'unterschrift';
+
 export interface Baustein {
   id: string;
   ueberschrift?: string;     // optionale Zwischenüberschrift im Dokument
@@ -21,6 +35,7 @@ export interface Baustein {
   includeIf?: Bedingung;     // deterministische Aufnahmeregel (fehlt = immer)
   wiederholeUeber?: string;  // Feld-ID einer Liste → ein Absatz je Eintrag ({{item.…}})
   nummeriert?: boolean;      // erhält eine fortlaufende Ziffer (1., 2., …)
+  rolle?: AbsatzRolle;       // Layout-Rolle für die Renderer (Brief-Anatomie)
   norm?: string;             // Normbezug, z. B. 'Art. 505 ZGB'
   begruendung: string;       // Protokoll: «aufgenommen, weil …»
   hinweis?: string;          // offengelegte streitige/optionale Auslegung
@@ -30,6 +45,7 @@ export interface VorlageSchema {
   id: string;
   version: string;           // Versionierung der Bausteine (Audit)
   titel: string;
+  format?: VorlageFormat;    // Formatvorlage (Default 'verfuegung')
   bausteine: Baustein[];
   disclaimer: string;        // Fusszeile im Dokument
 }
@@ -40,6 +56,7 @@ export interface DokumentAbsatz {
   bausteinId: string;
   ueberschrift?: string;
   text: string;
+  rolle?: AbsatzRolle;       // durchgereicht für die Renderer
 }
 
 export interface ProtokollEintrag {
@@ -50,7 +67,7 @@ export interface ProtokollEintrag {
 }
 
 export interface AssembleErgebnis {
-  dokument: { titel: string; absaetze: DokumentAbsatz[]; disclaimer: string; version: string };
+  dokument: { titel: string; format: VorlageFormat; absaetze: DokumentAbsatz[]; disclaimer: string; version: string };
   aufgenommen: string[];
   protokoll: ProtokollEintrag[];
 }
@@ -78,16 +95,22 @@ export function erfuellt(b: Bedingung, antworten: Antworten): boolean {
 
 const ISO_DATUM = /^\d{4}-\d{2}-\d{2}$/;
 
-function formatiere(v: unknown): string {
-  if (v == null || v === '') return '________';
+// Platzhalter-Konvention: leere Felder zeigen den Ausfüll-Strich «________»
+// (Live-Vorschau). OPTIONALE SATZ-FRAGMENTE enden per Konvention auf
+// «…Satz» oder «…Zeile» und verschwinden leer ersatzlos — sonst stünde
+// mitten im Satz ein Strich (Befund Format-Review 5.6.2026).
+const FRAGMENT = /(Satz|Zeile)$/;
+
+function formatiere(v: unknown, pfad = ''): string {
+  if (v == null || v === '') return FRAGMENT.test(pfad) ? '' : '________';
   if (typeof v === 'string' && ISO_DATUM.test(v)) return v.split('-').reverse().join('.');
   return String(v);
 }
 
 function interpoliere(text: string, antworten: Antworten, item?: Record<string, unknown>): string {
   return text.replace(/\{\{\s*([\w.]+)\s*\}\}/g, (_, pfad: string) => {
-    if (pfad.startsWith('item.') && item) return formatiere(item[pfad.slice(5)]);
-    return formatiere(antworten[pfad]);
+    if (pfad.startsWith('item.') && item) return formatiere(item[pfad.slice(5)], pfad);
+    return formatiere(antworten[pfad], pfad);
   });
 }
 
@@ -115,9 +138,9 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
 
     if (liste) {
       const texte = liste.map((item) => interpoliere(b.text, antworten, item as Record<string, unknown>));
-      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + texte.join('\n') });
+      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + texte.join('\n'), rolle: b.rolle });
     } else {
-      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + interpoliere(b.text, antworten) });
+      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + interpoliere(b.text, antworten), rolle: b.rolle });
     }
 
     aufgenommen.push(b.id);
@@ -125,7 +148,7 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
   }
 
   return {
-    dokument: { titel: schema.titel, absaetze, disclaimer: schema.disclaimer, version: schema.version },
+    dokument: { titel: schema.titel, format: schema.format ?? 'verfuegung', absaetze, disclaimer: schema.disclaimer, version: schema.version },
     aufgenommen,
     protokoll,
   };

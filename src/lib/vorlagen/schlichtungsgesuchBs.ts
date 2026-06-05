@@ -1,5 +1,6 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
+import { fmtDatumLang } from './datum';
 
 // ─── Schlichtungsgesuch nach Art. 202 ZPO — Kanton Basel-Stadt (Pilot) ──────
 //
@@ -244,6 +245,7 @@ const parteiKurz = (p: SgPartei) => (p.typ === 'natuerlich' ? `${p.vorname} ${p.
 
 export const SG_SCHEMA: VorlageSchema = {
   id: 'schlichtungsgesuch-bs',
+  format: 'eingabe',
   version: '1.0.0 (ZPO-Fassung seit 1.1.2025; Behörden-Stammdaten BS Stand 2025/2026)',
   titel: 'Schlichtungsgesuch nach Art. 202 ZPO',
   disclaimer:
@@ -252,18 +254,18 @@ export const SG_SCHEMA: VorlageSchema = {
     'Richtigkeit ist die nutzende Person verantwortlich. Diese Vorlage setzt einen Basler Gerichtsstand ' +
     'voraus (örtliche/sachliche Zuständigkeit selbst prüfen).',
   bausteine: [
-    { id: 'absender', text: '{{absenderBlock}}',
+    { id: 'absender', rolle: 'absender', text: '{{absenderBlock}}',
       begruendung: 'Absenderblock: Vertretung, sonst erste klagende Partei — immer enthalten.',
       norm: 'Art. 202 ZPO' },
-    { id: 'adressat', text: '{{adressatBlock}}',
+    { id: 'adressat', rolle: 'adressat', text: '{{adressatBlock}}',
       begruendung: 'Zuständige Behörde gemäss sachlichem Routing (Pilot: Zivilgericht BS).',
       norm: 'Art. 200 ZPO' },
-    { id: 'ortDatum', text: '{{ort}}, {{datumFmt}}',
+    { id: 'ortDatum', rolle: 'datumzeile', text: '{{ort}}, {{datumFmt}}',
       begruendung: 'Ort und Datum — immer enthalten.', norm: 'Art. 130 ZPO' },
-    { id: 'betreff', text: 'Schlichtungsgesuch nach Art. 202 ZPO\nin Sachen {{klaegerKurz}} gegen {{beklagteKurz}}\nbetreffend {{stichwort}}',
+    { id: 'betreff', rolle: 'betreff', text: 'Schlichtungsgesuch nach Art. 202 ZPO',
       begruendung: 'Betreff mit Parteien und Streitgegenstand-Stichwort — immer enthalten.',
       norm: 'Art. 202 ZPO' },
-    { id: 'rubrum', text: '{{rubrumText}}',
+    { id: 'rubrum', rolle: 'rubrum', text: '{{rubrumText}}',
       begruendung: 'Rubrum: Bezeichnung der Parteien (Pflichtinhalt).',
       norm: 'Art. 202 Abs. 2 ZPO' },
     { id: 'rechtsbegehren', ueberschrift: 'Rechtsbegehren', text: '{{item.text}}',
@@ -288,7 +290,7 @@ export const SG_SCHEMA: VorlageSchema = {
       includeIf: { feld: 'begruendung', nichtLeer: true },
       begruendung: 'Aufgenommen, weil eine (freiwillige) Begründung erfasst wurde — nicht erforderlich.',
       norm: 'Art. 202 Abs. 2 ZPO' },
-    { id: 'unterschrift', text: '{{ort}}, {{datumFmt}}\n\n\n___________________________\n{{unterschriftZeile}}',
+    { id: 'unterschrift', rolle: 'unterschrift', text: '{{ort}}, {{datumFmt}}\n\n\n___________________________\n{{unterschriftZeile}}',
       begruendung: 'Unterschriftsblock: Papierform mit eigenhändiger Unterschrift.',
       norm: 'Art. 130 ZPO' },
     { id: 'beilagenverzeichnis', ueberschrift: 'Beilagen', text: '{{item.text}}',
@@ -338,6 +340,8 @@ export function sgZusammenstellen(a: SgAnswers) {
   const klaegerBlock = a.klaeger.map((p, i) => `${a.klaeger.length > 1 ? `${i + 1}. ` : ''}${parteiZeilen(p).join(', ')}`).join('\n');
   const beklagteBlock = a.beklagte.map((p, i) => `${a.beklagte.length > 1 ? `${i + 1}. ` : ''}${parteiZeilen(p).join(', ')}`).join('\n');
   const rubrumText = [
+    'in Sachen',
+    '',
     klaegerBlock,
     ...(a.vertretung?.bezeichnung ? [`vertreten durch ${a.vertretung.bezeichnung}${a.vertretung.zusatz ? `, ${a.vertretung.zusatz}` : ''}, ${a.vertretung.strasse}, ${a.vertretung.plz} ${a.vertretung.ort}`] : []),
     '— klagende Partei —',
@@ -372,10 +376,7 @@ export function sgZusammenstellen(a: SgAnswers) {
       ? [a.vertretung.bezeichnung, a.vertretung.zusatz, a.vertretung.strasse, `${a.vertretung.plz} ${a.vertretung.ort}`].filter(Boolean).join('\n')
       : parteiZeilen(a.klaeger[0] ?? { ...SG_PERSON_NATUERLICH }).join('\n'),
     adressatBlock: behoerde.postadresse.join('\n'),
-    datumFmt: fmtDatum(a.datum),
-    klaegerKurz: a.klaeger.map(parteiKurz).filter(Boolean).join(' und ') || '________',
-    beklagteKurz: a.beklagte.map(parteiKurz).filter(Boolean).join(' und ') || '________',
-    stichwort: stichwortVon(a),
+    datumFmt: fmtDatumLang(a.datum),
     rubrumText,
     rbListe,
     antragEntscheidZulaessig,

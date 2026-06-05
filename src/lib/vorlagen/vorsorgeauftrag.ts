@@ -337,14 +337,14 @@ export const VA_SCHEMA: VorlageSchema = {
       norm: 'Art. 362 Abs. 3 ZGB',
     },
     {
-      id: 'V14_schluss_eigenhaendig',
+      id: 'V14_schluss_eigenhaendig', rolle: 'unterschrift',
       text: '{{ortDatumZeile}}\n\n\n_________________________________\n(eigenhändige Unterschrift: {{vorname}} {{nachname}})',
       includeIf: { feld: 'formMode', eq: 'eigenhaendig' },
       begruendung: 'Schlussformel der eigenhändigen Form: Ort/Datum und Unterschrift werden — wie der ganze Text — von Hand geschrieben.',
       norm: 'Art. 361 Abs. 2 ZGB',
     },
     {
-      id: 'V14_schluss_beurkundung',
+      id: 'V14_schluss_beurkundung', rolle: 'unterschrift',
       text:
         'Ort, Datum und Unterschriften erfolgen anlässlich der öffentlichen Beurkundung durch die ' +
         'Urkundsperson nach kantonalem Recht.',

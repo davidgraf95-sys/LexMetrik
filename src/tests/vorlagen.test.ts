@@ -367,3 +367,31 @@ describe('Vorlagen-DOCX (eine Quelle, mehrere Renderer)', () => {
     expect(texte).toContain(`Bausteine v${e.dokument.version}`);
   });
 });
+
+// ── Formatvorlagen-Renderer (Review-Zusatztests 5.6.2026) ───────────────────
+
+describe('Formatvorlagen (DOCX-Absatzmodell)', () => {
+  it('eingabe: kein Dokumenttitel — der fette Betreff trägt ihn; Rollen durchgereicht', async () => {
+    const { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } = await import('../lib/vorlagen/schlichtungsgesuchBs');
+    const r = sgZusammenstellen({
+      ...SG_DEFAULTS,
+      streitgegenstandTyp: 'geldforderung', baselForumBestaetigt: true,
+      klaeger: [{ ...SG_PERSON_NATUERLICH, vorname: 'A', name: 'B', strasse: 'S 1', plz: '4051', ort: 'Basel' }],
+      beklagte: [{ ...SG_PERSON_NATUERLICH, vorname: 'C', name: 'D', strasse: 'S 2', plz: '4052', ort: 'Basel' }],
+      geld: { betrag: '1000' }, streitgegenstand: 'Forderung', datum: '2026-06-05',
+    });
+    expect(r.dokument.format).toBe('eingabe');
+    const liste = docxAbsaetze(r);
+    expect(liste.some((x) => x.typ === 'titel')).toBe(false);
+    expect(liste.some((x) => x.typ === 'absatz' && x.rolle === 'betreff')).toBe(true);
+    expect(liste.some((x) => x.typ === 'absatz' && x.rolle === 'datumzeile')).toBe(true);
+    // langes Datumsformat in der Datumszeile
+    expect(liste.find((x) => x.typ === 'absatz' && x.rolle === 'datumzeile')?.text).toContain('5. Juni 2026');
+  });
+
+  it('verfuegung: Dokumenttitel vorhanden (Gegenprobe)', () => {
+    const r = pvZusammenstellen(pv({}));
+    expect(r.dokument.format).toBe('verfuegung');
+    expect(docxAbsaetze(r).some((x) => x.typ === 'titel')).toBe(true);
+  });
+});

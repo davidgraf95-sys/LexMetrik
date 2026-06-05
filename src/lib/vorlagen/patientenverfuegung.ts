@@ -318,7 +318,7 @@ export const PV_SCHEMA: VorlageSchema = {
       norm: 'Art. 371 Abs. 3 ZGB',
     },
     {
-      id: 'P12_schluss',
+      id: 'P12_schluss', rolle: 'unterschrift',
       text:
         '{{ortZeile}}Datum (von Hand einzusetzen): ____________________\n\n\n' +
         '_________________________________\n' +
