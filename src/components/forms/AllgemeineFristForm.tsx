@@ -5,11 +5,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
   allgemeineFristErgebnis, tageZwischen, ALLG_FRIST_HINWEIS,
   rueckwaertsErgebnis, zustellHinweis, icsFuerFrist, fristQueryKodieren, fristQueryLesen,
-  type AllgFristInput, type Einheit, type RueckVerschiebung, type ZustellArt,
+  type AllgFristInput, type AllgFristResult, type Einheit, type RueckVerschiebung, type ZustellArt,
 } from '../../lib/allgemeineFrist';
 import type { Berechnungsergebnis, Kanton } from '../../types/legal';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { FristenKalender } from '../FristenKalender';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
@@ -85,10 +86,10 @@ export function AllgemeineFristForm() {
   const bisVorVon = tab === 'zwischen' && von && bis && bis < von;
 
   // Live-Berechnung (rein; Fehler → keine Anzeige)
-  const ergebnis: (Berechnungsergebnis & { resultat: { endDatum: string; endDatumISO: string; endWochentag: string } }) | null =
+  const ergebnis: (Berechnungsergebnis & { resultat: AllgFristResult }) | null =
     (() => { try { return allgemeineFristErgebnis(form); } catch { return null; } })();
 
-  const rueckErgebnis: (Berechnungsergebnis & { resultat: { endDatum: string; endDatumISO: string; endWochentag: string } }) | null =
+  const rueckErgebnis: (Berechnungsergebnis & { resultat: AllgFristResult }) | null =
     (() => {
       try {
         return rueckwaertsErgebnis({ ...rueck, feiertageBeruecksichtigen: rueck.verschiebung === 'vorverlegen', kanton: form.kanton });
@@ -246,6 +247,27 @@ export function AllgemeineFristForm() {
 
           {ergebnis && (
             <div className="lc-reveal space-y-4" aria-live="polite">
+              <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+              {/* Prominente Eckdaten + Kalender (Angleichung an ZPO/SchKG) */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {[
+                  { label: 'Ereignistag (zählt nicht)', val: ergebnis.resultat.startISO.split('-').reverse().join('.') },
+                  { label: 'Fristbeginn (dies a quo)', val: ergebnis.resultat.fristbeginnISO!.split('-').reverse().join('.') },
+                  { label: 'Fristende (dies ad quem)', val: `${ergebnis.resultat.endDatum} · 24.00 Uhr` },
+                ].map((c) => (
+                  <div key={c.label} className="lc-tile">
+                    <p className="text-xs text-ink-500 mb-1">{c.label}</p>
+                    <p className="text-body-l font-semibold text-ink-900">{c.val}</p>
+                  </div>
+                ))}
+              </div>
+              <FristenKalender
+                ereignisISO={ergebnis.resultat.startISO}
+                aQuoISO={ergebnis.resultat.fristbeginnISO!}
+                adQuemISO={ergebnis.resultat.endDatumISO}
+                kanton={form.kanton}
+                stillstandAktiv={false}
+              />
               <ErgebnisAnzeige titel="Allgemeine Frist (Art. 77/78 OR)" ergebnis={ergebnis} />
               <div className="flex flex-wrap items-center gap-3">
                 <PdfExportButton config={pdfConfig} />
@@ -306,6 +328,28 @@ export function AllgemeineFristForm() {
           </div>
           {rueckErgebnis && (
             <div className="lc-reveal space-y-4" aria-live="polite">
+              <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  { label: 'Spätester Handlungstag', val: `${rueckErgebnis.resultat.endWochentag}, ${rueckErgebnis.resultat.endDatum}` },
+                  { label: 'Stichtag / Termin', val: rueckErgebnis.resultat.startISO.split('-').reverse().join('.') },
+                ].map((c) => (
+                  <div key={c.label} className="lc-tile">
+                    <p className="text-xs text-ink-500 mb-1">{c.label}</p>
+                    <p className="text-body-l font-semibold text-ink-900">{c.val}</p>
+                  </div>
+                ))}
+              </div>
+              {/* Band läuft vom Handlungstag zum Stichtag; Ereignis-Marker =
+                  Handlungstag (brass), Stichtag als Endmarker (sage). */}
+              <FristenKalender
+                ereignisISO={rueckErgebnis.resultat.endDatumISO}
+                aQuoISO={rueckErgebnis.resultat.endDatumISO}
+                adQuemISO={rueckErgebnis.resultat.startISO}
+                kanton={form.kanton}
+                stillstandAktiv={false}
+                labels={{ ereignis: 'Spätester Handlungstag', aquo: 'Spätester Handlungstag', adquem: 'Stichtag / Termin' }}
+              />
               <ErgebnisAnzeige titel="Rückwärtsfrist – spätester Handlungstag" ergebnis={rueckErgebnis} />
               <div className="flex flex-wrap items-center gap-3">
                 <button type="button" className="lc-btn-outline"

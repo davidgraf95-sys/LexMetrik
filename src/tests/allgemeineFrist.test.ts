@@ -237,4 +237,16 @@ describe('Kombinierter Fristenrechner – Trennungs-Querschnitt (5.6.2026)', () 
     // Trennung wirkt: drei verschiedene Rechenwege, allgemein ≠ zpo
     expect(allg.endDatum).not.toBe(zpo.diesAdQuem);
   });
+
+  // Kalender-Visualisierung (Angleichung an ZPO/SchKG, 5.6.2026): Die Engine
+  // liefert die ISO-Anker; «Ereignistag zählt nicht» bleibt Logikschicht (§3).
+  it('Kalender-Felder: startISO = Eingabe, fristbeginnISO = Folgetag (Art. 77 OR); rückwärts nur Stichtag', async () => {
+    const r = berechneAllgemeineFrist(basis());
+    expect(r.startISO).toBe('2020-10-23');
+    expect(r.fristbeginnISO).toBe('2020-10-24');
+    const { berechneRueckwaertsFrist } = await import('../lib/allgemeineFrist');
+    const rw = berechneRueckwaertsFrist({ stichtag: '2026-06-30', laenge: 20, einheit: 'tage', verschiebung: 'keine' });
+    expect(rw.startISO).toBe('2026-06-30');
+    expect(rw.fristbeginnISO).toBeUndefined();
+  });
 });

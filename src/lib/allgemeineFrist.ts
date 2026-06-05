@@ -48,6 +48,11 @@ export interface AllgFristResult {
   verschiebeGruende: string[];
   schritte: RechenSchritt[];
   hinweise: string[];
+  // Für die Kalender-Visualisierung (FristenKalender, wie ZPO/SchKG):
+  // Ereignis-/Stichtag und – nur vorwärts – erster mitzählender Tag
+  // (dies a quo non computatur, Art. 77 OR; Regel lebt HIER, nicht in der UI).
+  startISO: string;
+  fristbeginnISO?: string;
 }
 
 const WOCHENTAGE = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
@@ -152,6 +157,8 @@ export function berechneAllgemeineFrist(input: AllgFristInput): AllgFristResult 
     verschiebeGruende,
     schritte,
     hinweise: [ALLG_FRIST_HINWEIS],
+    startISO: iso(start),
+    fristbeginnISO: iso(addDays(start, 1)),
   };
 }
 
@@ -318,6 +325,7 @@ export function berechneRueckwaertsFrist(input: RueckFristInput): AllgFristResul
     verschiebeGruende,
     schritte,
     hinweise,
+    startISO: iso(stichtag), // Rückwärts: Stichtag/Termin; kein Fristbeginn-Begriff
   };
 }
 
