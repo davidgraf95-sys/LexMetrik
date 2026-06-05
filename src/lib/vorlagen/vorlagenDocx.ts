@@ -6,7 +6,7 @@ import type { AssembleErgebnis, AbsatzRolle, VorlageFormat } from './engine';
 import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
-// ─── DOCX-Renderer der Vorlagen — Referenz-Layout ───────────────────────────
+// ─── DOCX-Renderer der Vorlagen – Referenz-Layout ───────────────────────────
 //
 // EINE Quelle, mehrere Renderer: PDF und DOCX entstehen aus demselben
 // AssembleErgebnis. Layout nach den Referenz-Dokumenten
@@ -42,7 +42,7 @@ export function docxAbsaetze(e: AssembleErgebnis, banner?: PdfBanner): DocxAbsat
     liste.push({ typ: 'banner-titel', text: banner.titel });
     liste.push({ typ: 'banner-text', text: banner.text });
   }
-  // Eingaben tragen ihren «Titel» im fetten Betreff — kein Dokumenttitel.
+  // Eingaben tragen ihren «Titel» im fetten Betreff – kein Dokumenttitel.
   if (e.dokument.format !== 'eingabe') liste.push({ typ: 'titel', text: e.dokument.titel });
   e.dokument.absaetze.forEach((a) => {
     if (a.ueberschrift) liste.push({ typ: 'ueberschrift', text: a.ueberschrift });
@@ -225,7 +225,7 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
 /** Baut das Word-Dokument (Referenz-Layout, CH-Typografie) und lädt es herunter. */
 export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
   // Form-Gate-Matrix hart kodiert: Eigenhändigkeits-Dokumente (abschrift)
-  // erhalten NIE einen Word-Export — es entstünde ein unterschriftsreif
+  // erhalten NIE einen Word-Export – es entstünde ein unterschriftsreif
   // wirkendes Dokument für ein eigenhändigkeitspflichtiges Geschäft.
   if (!AUSGABE_REGELN[e.dokument.ausgabeArt].docxErlaubt) {
     throw new Error('Word-Export ist für Abschreibe-Mustertexte gesperrt (Eigenhändigkeitserfordernis).');
@@ -263,7 +263,7 @@ export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?:
   const a = document.createElement('a');
   a.href = url;
   a.download = opts.dateiName;
-  // Defensiv: Anchor ins DOM, Revoke verzögert — sonst kann der Download
+  // Defensiv: Anchor ins DOM, Revoke verzögert – sonst kann der Download
   // in einzelnen Browsern abbrechen.
   document.body.appendChild(a);
   a.click();
@@ -272,6 +272,6 @@ export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?:
 }
 
 // XLSX (vorbereitet, NICHT ausgeliefert): Ein künftiger Renderer dockt am
-// selben AssembleErgebnis an — `export async function vorlagenXlsxErzeugen(e, opts)`
+// selben AssembleErgebnis an – `export async function vorlagenXlsxErzeugen(e, opts)`
 // für tabellarische Vorlagen (Aktiensplit, Stimmrechtsmatrizen). Die UI zeigt
 // den Button erst, wenn eine Vorlage 'xlsx' in `output` führt.

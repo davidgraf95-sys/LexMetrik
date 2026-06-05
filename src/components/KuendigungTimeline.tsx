@@ -54,7 +54,7 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
           );
         })}
 
-        {/* Zugang oben beschriftet, Endpunkt unten — Kollisionen ausgeschlossen */}
+        {/* Zugang oben beschriftet, Endpunkt unten – Kollisionen ausgeschlossen */}
         <Marker p={pos(e.zugangISO)} iso={e.zugangISO} color="var(--ink-900)" label="Zugang" oben />
         {endIso && <Marker p={pos(endIso)} iso={endIso} color={endFarbe} label={endLabel} />}
       </div>

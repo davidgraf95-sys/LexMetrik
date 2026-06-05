@@ -17,7 +17,7 @@ export type PdfSectionConfig = {
 };
 
 // Ergebnis-Hero: prominente Hauptkennzahl zuoberst (ersetzt das nackte «OK»).
-// Die Werte stammen aus bereits berechneten Engine-Resultaten — kein neuer Inhalt.
+// Die Werte stammen aus bereits berechneten Engine-Resultaten – kein neuer Inhalt.
 export type PdfHero = {
   hauptlabel: string;                       // «Verzugszins»
   hauptwert: string;                        // «CHF 501.37»
@@ -137,7 +137,7 @@ export function buildPdfModel(cfg: PdfDocConfig, jetzt: Date = new Date()): PdfM
           nr: i + 1,
           titel: t(schritt.beschreibung),
           text: t(schritt.zwischenergebnis),
-          // Norm-Pills je Schritt — klickbar, Status-Logik wie im Web
+          // Norm-Pills je Schritt – klickbar, Status-Logik wie im Web
           // (verifizierter Anker via normLink, sonst Gesetzes-Seite/kein Link)
           normen: schritt.normen.map((n) => ({ label: t(n.artikel), url: normLink(n.artikel)?.url })),
           rechtsprechung: rsp ? t(rsp) : undefined,

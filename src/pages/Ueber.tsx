@@ -1,4 +1,4 @@
-// Seite «Über» — Entstehungsgeschichte mit persönlichem Bezug.
+// Seite «Über» – Entstehungsgeschichte mit persönlichem Bezug.
 export function Ueber() {
   return (
     <div className="space-y-10 max-w-reading">
@@ -14,7 +14,7 @@ export function Ueber() {
           waren sie oft hilfreich. Bei den Fristberechnungen dagegen, die im Grunde nur saubere
           Regelanwendung sind, konnte ich mich nicht auf sie verlassen: Mal wurde der Fristbeginn
           verschoben, mal eine Gerichtsferienperiode übergangen, mal ein Datum genannt, das schlicht
-          nicht stimmte — jedes Mal mit grosser Selbstsicherheit.
+          nicht stimmte – jedes Mal mit grosser Selbstsicherheit.
         </p>
         <p>
           Das hat mich überrascht, denn eine Frist kennt kein Ermessen. Sie ergibt sich aus dem
@@ -33,7 +33,7 @@ export function Ueber() {
           und die regelbasierte Zusammenstellung von Rechtsdokumenten aus festen, strukturierten Textbausteinen.
           Beide Modi teilen dieselbe DNA: überprüfbar, normtreu, ohne Black Box.
         </p>
-        {/* Signatur — externe Verlinkung wie übrige externe Links (neues Tab) */}
+        {/* Signatur – externe Verlinkung wie übrige externe Links (neues Tab) */}
         <p className="pt-2">
           <a
             href="https://www.linkedin.com/in/david-graf-a5667624b/"

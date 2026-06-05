@@ -1,8 +1,8 @@
-// ─── LIK-Monatsreihen (amtlich, generiert — NICHT von Hand editieren) ──────
+// ─── LIK-Monatsreihen (amtlich, generiert – NICHT von Hand editieren) ──────
 //
 // Quelle: Bundesamt für Statistik (BFS), Landesindex der Konsumentenpreise,
 // Indexierungstabelle cc-d-05.02.08 (Originalbasen, gerundet auf eine
-// Dezimalstelle — BFS-Empfehlung für Indexierungszwecke). Lizenz OPEN-BY,
+// Dezimalstelle – BFS-Empfehlung für Indexierungszwecke). Lizenz OPEN-BY,
 // Quellenangabe Pflicht. Regeneration: scripts/lik-reihe-generieren.py
 //
 export const LIK_LETZTER_MONAT = '2026-05';

@@ -50,7 +50,7 @@ describe('fedlexLinkFuerArtikel', () => {
   });
 });
 
-describe('Audit 5.6.2026 — Kombi-Anker Buchstabe+Suffix', () => {
+describe('Audit 5.6.2026 – Kombi-Anker Buchstabe+Suffix', () => {
   it('329gbis → art_329_g_bis (Form n_b_suffix, empirisch am OR-HTML verifiziert)', () => {
     expect(fedlexUrl('OR', '329gbis')).toContain('#art_329_g_bis');
     expect(fedlexUrl('OR', '663bbis')).toContain('#art_663_b_bis');

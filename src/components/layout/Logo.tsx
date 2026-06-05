@@ -1,5 +1,5 @@
 // LexMetrik-Bildmarke (Designsystem §6): gestempeltes §-Siegel mit feiner
-// Messing-Schnittkante und graduiertem Bogen — das Siegel trifft die Messskala.
+// Messing-Schnittkante und graduiertem Bogen – das Siegel trifft die Messskala.
 // Wortmarke zweiton: «Lex» Tinte, «metrik» Messing-700 (kontraststark).
 
 export function LexMetrikSiegel({ size = 32 }: { size?: number }) {

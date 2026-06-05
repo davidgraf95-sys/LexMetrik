@@ -18,7 +18,7 @@ import { karte } from '../lib/startseiteConfig';
 // Routing mit Stopp-Karten (Miete/GlG → eigene Stellen, Art. 200 ZPO;
 // Art.-198-Ausnahmen → direkt ans Gericht), Mängelliste mit Sprung zum
 // Schritt, Form-Gate (Papierform, Exemplare, Erscheinen, Kosten, Fristen).
-// Gemäss Anweisung: KEINE Browser-Storage-APIs — State nur im Speicher.
+// Gemäss Anweisung: KEINE Browser-Storage-APIs – State nur im Speicher.
 
 const SCHRITTE = [
   { id: 'vorpruefung', label: 'Streitgegenstand & Vorprüfung' },
@@ -32,9 +32,9 @@ const SCHRITTE = [
 
 const TYPEN: { code: SgTyp; label: string; sub: string }[] = [
   { code: 'geldforderung', label: 'Geldforderung', sub: 'bezifferte Forderung (Art. 84 ZPO)' },
-  { code: 'arbeitsrecht', label: 'Arbeitsrecht', sub: 'Forderung aus Arbeitsverhältnis — bis CHF 30\'000 kostenlos' },
+  { code: 'arbeitsrecht', label: 'Arbeitsrecht', sub: 'Forderung aus Arbeitsverhältnis – bis CHF 30\'000 kostenlos' },
   { code: 'uebrige_zivilsache', label: 'Übrige Zivilsache', sub: 'frei formulierte Rechtsbegehren' },
-  { code: 'miete_pacht', label: 'Miete / Pacht', sub: 'Wohn-/Geschäftsräume — eigene Stelle' },
+  { code: 'miete_pacht', label: 'Miete / Pacht', sub: 'Wohn-/Geschäftsräume – eigene Stelle' },
   { code: 'gleichstellung_glg', label: 'Gleichstellung (GlG)', sub: 'eigene Stelle, kostenlos' },
 ];
 
@@ -44,7 +44,7 @@ const BANNER_SG: PdfBanner = {
 };
 
 export function VorlageSchlichtungsgesuchBs() {
-  // KEIN speicherKey: Anweisung «keine Browser-Storage-APIs» — Zustand nur im Speicher.
+  // KEIN speicherKey: Anweisung «keine Browser-Storage-APIs» – Zustand nur im Speicher.
   const { a, set, schritt, setSchritt, kopiert, kopieren } =
     useWizardState<SgAnswers>({ defaults: SG_DEFAULTS });
 
@@ -138,7 +138,7 @@ export function VorlageSchlichtungsgesuchBs() {
         <p className="lc-overline text-warn-700">Eigene Schlichtungsstelle zuständig</p>
         <p className="text-body-s text-ink-700">
           Für {routing.stopp === 'miete' ? 'Miete und Pacht von Wohn- und Geschäftsräumen' : 'Streitigkeiten nach Gleichstellungsgesetz'} besteht
-          eine paritätische Stelle (Art. 200 ZPO) — dieses Gesuch ist dort einzureichen:
+          eine paritätische Stelle (Art. 200 ZPO) – dieses Gesuch ist dort einzureichen:
         </p>
         <p className="text-body-s text-ink-900 whitespace-pre-line font-medium">
           {b.name}{'\n'}{b.postadresse.join('\n')}{'\n'}Tel. {b.tel}{'email' in b && b.email ? `\n${b.email}` : ''}
@@ -158,7 +158,7 @@ export function VorlageSchlichtungsgesuchBs() {
     switch (SCHRITTE[schritt].id) {
       case 'vorpruefung': return (
         <div className="space-y-5">
-          {/* Behörden-Grundgerüst (5.6.2026): Kanton zuerst — Registry löst
+          {/* Behörden-Grundgerüst (5.6.2026): Kanton zuerst – Registry löst
               die VOLLSTÄNDIGE Adresse auf (Pilot BS); Handeingabe als Override */}
           <div className="space-y-3">
             <p className="lc-overline">Zuständige Schlichtungsbehörde</p>
@@ -214,7 +214,7 @@ export function VorlageSchlichtungsgesuchBs() {
             {a.gerichtsKanton !== 'BS' && a.behoerdeManuellAktiv && (
               <p className="lc-notice-warn text-body-s">
                 Hinweis: Das sachliche Routing dieses Wizards (Spezialbehörden, Schwellen) ist auf
-                Basel-Stadt zugeschnitten — die Zuständigkeit im Kanton {a.gerichtsKanton} ist
+                Basel-Stadt zugeschnitten – die Zuständigkeit im Kanton {a.gerichtsKanton} ist
                 selbständig zu prüfen.
               </p>
             )}
@@ -245,7 +245,7 @@ export function VorlageSchlichtungsgesuchBs() {
               <p className="text-xs text-ink-500">
                 Dieses Werkzeug stellt das Gesuch zusammen; die örtliche und sachliche Zuständigkeit
                 prüfen Sie selbst (massgebliche Gerichtsstände u. a. Art. 10, 31, 33, 34, 35 ZPO;
-                BGE 146 III 265 — zu verifizieren).
+                BGE 146 III 265 – zu verifizieren).
               </p>
               {a.streitgegenstandTyp === 'uebrige_zivilsache' && (
                 <Field label="Streitwert (CHF)" optional hint="für die Schwellen-Logik (Art. 210/212 ZPO); bei Geldforderungen automatisch">
@@ -333,7 +333,7 @@ export function VorlageSchlichtungsgesuchBs() {
               </div>
               {!a.unbeziffert ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <Field label="Forderungsbetrag (CHF)" hint="zu beziffern (Art. 84 Abs. 2 ZPO) — z. B. 3000">
+                  <Field label="Forderungsbetrag (CHF)" hint="zu beziffern (Art. 84 Abs. 2 ZPO) – z. B. 3000">
                     <input className={inputCls} inputMode="decimal" placeholder="z. B. 3'000.00" value={a.geld?.betrag ?? ''} onChange={(e) => set('geld', { ...(a.geld ?? { betrag: '' }), betrag: e.target.value })} />
                   </Field>
                   <div className="space-y-2">
@@ -352,7 +352,7 @@ export function VorlageSchlichtungsgesuchBs() {
                   <label className={`flex items-start gap-2 text-body-s sm:col-span-2 ${a.betreibung?.rechtsvorschlagErhoben ? 'cursor-pointer text-ink-700' : 'text-ink-400 cursor-not-allowed'}`}>
                     <input type="checkbox" disabled={!a.betreibung?.rechtsvorschlagErhoben} checked={!!a.geld?.rechtsoeffnung}
                       onChange={(e) => set('geld', { ...(a.geld ?? { betrag: '' }), rechtsoeffnung: e.target.checked })} />
-                    <span>Beseitigung des Rechtsvorschlags beantragen {!a.betreibung?.rechtsvorschlagErhoben && <span>(setzt erhobenen Rechtsvorschlag voraus — Schritt «Beklagte Partei»)</span>}</span>
+                    <span>Beseitigung des Rechtsvorschlags beantragen {!a.betreibung?.rechtsvorschlagErhoben && <span>(setzt erhobenen Rechtsvorschlag voraus – Schritt «Beklagte Partei»)</span>}</span>
                   </label>
                 </div>
               ) : (
@@ -410,7 +410,7 @@ export function VorlageSchlichtungsgesuchBs() {
               placeholder="z. B. Forderung aus Werkvertrag vom 01.02.2025 (Rechnung Nr. 1234)"
               onChange={(e) => set('streitgegenstand', e.target.value)} />
           </Field>
-          <Field label="Begründung" optional hint="nicht erforderlich — eine kurze Begründung ist möglich">
+          <Field label="Begründung" optional hint="nicht erforderlich – eine kurze Begründung ist möglich">
             <textarea className={inputCls} rows={4} value={a.begruendung ?? ''} onChange={(e) => set('begruendung', e.target.value)} />
           </Field>
         </div>
@@ -425,7 +425,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 checked={a.antragEntscheid} onChange={(e) => set('antragEntscheid', e.target.checked)} />
               <span>Antrag auf Entscheid der Schlichtungsbehörde (Art. 212 ZPO)
                 {!(verm && sw !== null && sw <= SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG) &&
-                  <span> — nur bei vermögensrechtlichen Streitigkeiten bis CHF {fmtCHF(String(SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG))}</span>}
+                  <span> – nur bei vermögensrechtlichen Streitigkeiten bis CHF {fmtCHF(String(SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG))}</span>}
               </span>
             </label>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
@@ -461,7 +461,7 @@ export function VorlageSchlichtungsgesuchBs() {
 
           {!stopp && maengel.length > 0 && (
             <div className="rounded-lg border bg-danger-bg p-4 space-y-1.5" role="alert" aria-live="polite">
-              <p className="lc-overline text-danger-700">Mängelliste — vor dem Download zu beheben</p>
+              <p className="lc-overline text-danger-700">Mängelliste – vor dem Download zu beheben</p>
               {maengel.map((m, i) => (
                 <p key={i} className="text-body-s text-danger-700">
                   • {m.text}{' '}
@@ -480,15 +480,15 @@ export function VorlageSchlichtungsgesuchBs() {
           {/* Form-Gate (Art. 130/131/204/206/209 ZPO; Kosten GGR BS) */}
           {!stopp && (
             <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
-              <p className="lc-overline text-brass-700">Form-Gate — Einreichung & Verfahren</p>
+              <p className="lc-overline text-brass-700">Form-Gate – Einreichung & Verfahren</p>
               <ul className="space-y-2 text-body-s text-ink-700">
-                <li><strong>Form:</strong> schriftlich in Papierform, eigenhändig unterzeichnet (Art. 130 ZPO) — von der klagenden Partei, der Vertretung bzw. der zeichnungsberechtigten Person. Elektronisch nur mit anerkannter qualifizierter Signatur; gewöhnliche E-Mail genügt nicht.</li>
-                <li><strong>Exemplare:</strong> Gesuch, Beilagenverzeichnis und Beilagen in je einem Exemplar für die Behörde und jede Gegenpartei (Art. 131 ZPO) — hier: <span className="num font-semibold">{ergebnis.exemplare}</span> Exemplare.</li>
+                <li><strong>Form:</strong> schriftlich in Papierform, eigenhändig unterzeichnet (Art. 130 ZPO) – von der klagenden Partei, der Vertretung bzw. der zeichnungsberechtigten Person. Elektronisch nur mit anerkannter qualifizierter Signatur; gewöhnliche E-Mail genügt nicht.</li>
+                <li><strong>Exemplare:</strong> Gesuch, Beilagenverzeichnis und Beilagen in je einem Exemplar für die Behörde und jede Gegenpartei (Art. 131 ZPO) – hier: <span className="num font-semibold">{ergebnis.exemplare}</span> Exemplare.</li>
                 {a.vertretung?.bezeichnung && <li><strong>Vollmacht</strong> beilegen.</li>}
                 <li><strong>Persönliches Erscheinen</strong> an der Verhandlung (Art. 204 ZPO); Dispens u. a. bei ausserkantonalem/ausländischem Wohnsitz oder Streitwert bis CHF {fmtCHF(String(SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS))} (Abs. 3). Säumnis der klagenden Partei: Gesuch gilt als zurückgezogen; Ordnungsbusse bis CHF {fmtCHF(String(SG_SCHWELLEN.ORDNUNGSBUSSE_MAX))} möglich (Art. 206 Abs. 4 ZPO).</li>
                 <li><strong>Klagebewilligung:</strong> bei Nichteinigung {SG_SCHWELLEN.KLAGEBEWILLIGUNG_MONATE} Monate gültig (Art. 209 Abs. 3 ZPO).</li>
-                <li><strong>Kosten:</strong> Gebühr ab CHF 100 bis max. 30 % der Gerichtsgebühr (GGR BS, SG 154.810 — §-Nummer zu verifizieren); grundsätzlich keine Parteientschädigung.{a.streitgegenstandTyp === 'arbeitsrecht' && sw !== null && sw <= SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS && <> <strong>Hier: kostenlos</strong> (arbeitsrechtlich bis CHF 30'000, Art. 113 f. ZPO).</>}</li>
-                <li><strong>Fristen:</strong> Im Schlichtungsverfahren gelten keine Gerichtsferien (Art. 145 Abs. 2 lit. a ZPO); die anschliessende Klagefrist gehört zum Entscheidverfahren — dort gelten sie (BGE 138 III 615 — zu verifizieren).</li>
+                <li><strong>Kosten:</strong> Gebühr ab CHF 100 bis max. 30 % der Gerichtsgebühr (GGR BS, SG 154.810 – §-Nummer zu verifizieren); grundsätzlich keine Parteientschädigung.{a.streitgegenstandTyp === 'arbeitsrecht' && sw !== null && sw <= SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS && <> <strong>Hier: kostenlos</strong> (arbeitsrechtlich bis CHF 30'000, Art. 113 f. ZPO).</>}</li>
+                <li><strong>Fristen:</strong> Im Schlichtungsverfahren gelten keine Gerichtsferien (Art. 145 Abs. 2 lit. a ZPO); die anschliessende Klagefrist gehört zum Entscheidverfahren – dort gelten sie (BGE 138 III 615 – zu verifizieren).</li>
               </ul>
             </section>
           )}
@@ -525,15 +525,15 @@ export function VorlageSchlichtungsgesuchBs() {
       zurueckHref="/pro"
       overline={`${card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · Basel-Stadt`}
       titel="Schlichtungsgesuch (Basel-Stadt)"
-      intro="Stellt ein Schlichtungsgesuch nach Art. 202 ZPO für die Basler Schlichtungsbehörde zusammen — Parteien, Rechtsbegehren, Streitgegenstand, Anträge und Beilagen, aus festen Bausteinen ohne Sprachmodell."
+      intro="Stellt ein Schlichtungsgesuch nach Art. 202 ZPO für die Basler Schlichtungsbehörde zusammen – Parteien, Rechtsbegehren, Streitgegenstand, Anträge und Beilagen, aus festen Bausteinen ohne Sprachmodell."
       norms={card?.norms ?? []}
       badge="Papierform · eigenhändig unterzeichnen"
-      fussnote="Eingaben werden nicht gespeichert — sie bestehen nur, solange diese Seite geöffnet ist."
+      fussnote="Eingaben werden nicht gespeichert – sie bestehen nur, solange diese Seite geöffnet ist."
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       weiterDeaktiviert={stopp}
       inhalt={inhalt()}
       vorschau={stopp
-        ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument — siehe Stopp-Hinweis: Dieses Gesuch gehört an eine andere Stelle bzw. direkt ans Gericht.</div>
+        ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument – siehe Stopp-Hinweis: Dieses Gesuch gehört an eine andere Stelle bzw. direkt ans Gericht.</div>
         : <VorschauPanel ergebnis={ergebnis} kompakt nichtAufgenommen={ergebnis.nichtAufgenommen} />}
     />
   );

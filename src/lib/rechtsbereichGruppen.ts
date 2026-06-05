@@ -3,7 +3,7 @@
 // EINE umstellbare Konstante (Auftrag 5.6.2026): Die oberste Navigations-
 // ebene bleibt das Rechtsgebiet; diese Gruppen sind die sichtbare Landkarte
 // darüber (Seitenleiste + Super-Trenner im Strom). Die `gebiete`-Strings
-// entsprechen EXAKT den `rechtsgebiet`-Werten der Katalog-Config — der
+// entsprechen EXAKT den `rechtsgebiet`-Werten der Katalog-Config – der
 // Vollständigkeitstest sichert beide Modelle gegen verwaiste Gebiete ab.
 
 // Schalter: 'fuenf' (juristisch sauber, empfohlen) | 'vier' (Fallback,
@@ -16,7 +16,7 @@ export interface RechtsbereichGruppe {
   gebiete: string[];
 }
 
-// 5er-Modell — EMPFOHLEN: löst die ZPO/SchKG-Zuordnung ehrlich (eigene
+// 5er-Modell – EMPFOHLEN: löst die ZPO/SchKG-Zuordnung ehrlich (eigene
 // Verfahrens-/Vollstreckungsgruppe) und bildet die anwaltliche Trennung
 // materiell/prozessual ab.
 const GRUPPEN_FUENF: RechtsbereichGruppe[] = [
@@ -34,7 +34,7 @@ const GRUPPEN_FUENF: RechtsbereichGruppe[] = [
     gebiete: ['Weitere Rechtsgebiete', 'Übergreifende Werkzeuge'] },
 ];
 
-// 4er-Modell — Fallback
+// 4er-Modell – Fallback
 const GRUPPEN_VIER: RechtsbereichGruppe[] = [
   { id: 'privat', label: 'Privatrecht',
     gebiete: ['Zivilprozess (ZPO) & Bundesgericht', 'Betreibung & Konkurs (SchKG)',

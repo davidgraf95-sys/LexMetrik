@@ -6,7 +6,7 @@
 // Normentreue: Geprüfte Karten tragen ihre verifizierten Norm-Pills
 // (Fedlex-Anker gegen den konsolidierten Volltext nachgewiesen, s. fedlex()).
 // Geplante Karten («In Vorbereitung») tragen KEINE Artikel-Pills und keine
-// Artikel-/Tagesangaben in der Beschreibung — nur Titel + neutrale
+// Artikel-/Tagesangaben in der Beschreibung – nur Titel + neutrale
 // Kurzbeschreibung. Keine Normen erfinden.
 
 // Ehrliches Status-Modell: kein Eintrag trägt «geprüft», bis fachlich geprüft.
@@ -23,7 +23,7 @@ export type VorlageArt = 'vorsorge' | 'vertrag' | 'eingabe' | 'gesellschaft' | '
 // Stufe (orthogonal zum Status): free = kostenlose Auswahl auf «/»;
 // pro = vollständiger Katalog auf /pro (zeigt free UND pro).
 // Zugangskontrolle (PayPal-Gate an der Pro-Bereichsgrenze) ist ein späterer,
-// separater Schritt — solange PAYWALL_ACTIVE false ist, bleibt Pro offen.
+// separater Schritt – solange PAYWALL_ACTIVE false ist, bleibt Pro offen.
 export type Tier = 'free' | 'pro';
 export const PAYWALL_ACTIVE = false;
 
@@ -94,11 +94,11 @@ import { fedlexUrl } from './fedlex';
 
 export const SEKTIONEN: Sektion[] = [
   { art: 'frist', id: 'fristen', numeral: 'I', title: 'Fristen',
-    lede: 'Prozessuale und materielle Fristen — vom auslösenden Ereignis bis zum letzten Tag.' },
+    lede: 'Prozessuale und materielle Fristen – vom auslösenden Ereignis bis zum letzten Tag.' },
   { art: 'betrag', id: 'betraege', numeral: 'II', title: 'Beträge & Quoten',
-    lede: 'Geldansprüche, Zinsen, Kosten und Quoten — Franken für Franken hergeleitet.' },
+    lede: 'Geldansprüche, Zinsen, Kosten und Quoten – Franken für Franken hergeleitet.' },
   { art: 'zuordnung', id: 'zustaendigkeit', numeral: 'III', title: 'Zuständigkeit & Einordnung',
-    lede: 'Welches Gericht, welches Recht, welche Verfahrensart — rechtsbasiert bestimmt.' },
+    lede: 'Welches Gericht, welches Recht, welche Verfahrensart – rechtsbasiert bestimmt.' },
   { art: 'werkzeug', id: 'werkzeuge', numeral: 'IV', title: 'Werkzeuge',
     lede: 'Rechtsgebietsübergreifende Hilfsrechner.' },
 ];
@@ -107,11 +107,11 @@ export const SEKTIONEN: Sektion[] = [
 // (zweistufig: Rechtsbereich → Output-Typ als Untergruppe)
 export const RECHTSBEREICH_SEKTIONEN: { code: Rechtsbereich; id: string; title: string; lede: string }[] = [
   { code: 'privat', id: 'privatrecht', title: 'Privatrecht',
-    lede: 'OR, ZGB, ZPO und SchKG — Fristen, Beträge und Zuständigkeit im Zivilrecht.' },
+    lede: 'OR, ZGB, ZPO und SchKG – Fristen, Beträge und Zuständigkeit im Zivilrecht.' },
   { code: 'oeffentlich', id: 'oeffentliches-recht', title: 'Öffentliches Recht',
     lede: 'Verwaltungs-, Steuer- und Sozialversicherungsverfahren.' },
   { code: 'straf', id: 'strafrecht', title: 'Strafrecht',
-    lede: 'Prozessuale und materielle Fristen im Strafrecht — eigene Fristmechanik.' },
+    lede: 'Prozessuale und materielle Fristen im Strafrecht – eigene Fristmechanik.' },
   { code: 'uebergreifend', id: 'uebergreifend', title: 'Übergreifend',
     lede: 'Rechtsmittel ans Bundesgericht, Einordnung und Werkzeuge über alle Verfahren.' },
 ];
@@ -119,15 +119,15 @@ export const RECHTSBEREICH_SEKTIONEN: { code: Rechtsbereich; id: string; title: 
 // Vorlagen-Sektionen: vier Dokument-Typen (Modus «Vorlagen»)
 export const VORLAGE_SEKTIONEN: Sektion[] = [
   { art: 'vorsorge', id: 'vorsorge', numeral: 'I', title: 'Vorsorge & Nachlass',
-    lede: 'Testament, Erbvertrag, Vorsorgeauftrag, Patientenverfügung — aus festen Bausteinen.' },
+    lede: 'Testament, Erbvertrag, Vorsorgeauftrag, Patientenverfügung – aus festen Bausteinen.' },
   { art: 'vertrag', id: 'vertraege', numeral: 'II', title: 'Verträge',
-    lede: 'Arbeits-, Miet-, Darlehens- und Kaufverträge — Klausel für Klausel nachvollziehbar.' },
+    lede: 'Arbeits-, Miet-, Darlehens- und Kaufverträge – Klausel für Klausel nachvollziehbar.' },
   { art: 'eingabe', id: 'eingaben', numeral: 'III', title: 'Eingaben',
-    lede: 'Klagen, Gesuche, Einsprachen und Beschwerden — strukturierte Gerüste mit offenen Optionen.' },
+    lede: 'Klagen, Gesuche, Einsprachen und Beschwerden – strukturierte Gerüste mit offenen Optionen.' },
   { art: 'gesellschaft', id: 'gesellschaft', numeral: 'IV', title: 'Gesellschaftsdokumente',
-    lede: 'Gründungsunterlagen, Statuten und Beschlüsse — formbewusst zusammengestellt.' },
+    lede: 'Gründungsunterlagen, Statuten und Beschlüsse – formbewusst zusammengestellt.' },
   { art: 'korrespondenz', id: 'korrespondenz', numeral: 'V', title: 'Schreiben & Erklärungen',
-    lede: 'Kündigungen, Mahnungen, Begehren und einseitige Erklärungen — kurz und formgerecht.' },
+    lede: 'Kündigungen, Mahnungen, Begehren und einseitige Erklärungen – kurz und formgerecht.' },
 ];
 
 // ─── Rechtsgebiete: primäre Katalog-Gliederung (Auftrag «Katalog-Ausbau» §4) ─
@@ -135,35 +135,35 @@ export const VORLAGE_SEKTIONEN: Sektion[] = [
 // Untergruppen «Rechner» und «Vorlagen». Output-Typ ist seither nur Filter.
 export const RECHTSGEBIET_SEKTIONEN: { name: string; id: string; lede: string }[] = [
   { name: 'Zivilprozess (ZPO) & Bundesgericht', id: 'zpo-bundesgericht',
-    lede: 'Verfahren vor Schlichtungsbehörde, Gericht und Bundesgericht — Fristen, Kosten, Zuständigkeit, Eingaben.' },
+    lede: 'Verfahren vor Schlichtungsbehörde, Gericht und Bundesgericht – Fristen, Kosten, Zuständigkeit, Eingaben.' },
   { name: 'Betreibung & Konkurs (SchKG)', id: 'schkg',
-    lede: 'Vom Zahlungsbefehl bis zur Verwertung — Fristen, Existenzminimum und die zugehörigen Eingaben.' },
+    lede: 'Vom Zahlungsbefehl bis zur Verwertung – Fristen, Existenzminimum und die zugehörigen Eingaben.' },
   { name: 'Arbeit', id: 'arbeit',
-    lede: 'Arbeitsverhältnis von Beginn bis Beendigung — Fristen, Lohnansprüche, Verträge und Schreiben.' },
+    lede: 'Arbeitsverhältnis von Beginn bis Beendigung – Fristen, Lohnansprüche, Verträge und Schreiben.' },
   { name: 'Miete', id: 'miete',
-    lede: 'Wohn- und Geschäftsräume — Kündigung, Anfechtung, Mietzins und Vertrag.' },
+    lede: 'Wohn- und Geschäftsräume – Kündigung, Anfechtung, Mietzins und Vertrag.' },
   { name: 'Vertrag & Forderung (OR)', id: 'vertrag-or',
-    lede: 'Forderungen durchsetzen und Verträge schliessen — Zins, Verjährung, Gewährleistung, Korrespondenz.' },
+    lede: 'Forderungen durchsetzen und Verträge schliessen – Zins, Verjährung, Gewährleistung, Korrespondenz.' },
   { name: 'Erbrecht', id: 'erbrecht',
-    lede: 'Nachlass planen und teilen — Pflichtteile, Fristen, Testament und Erbvertrag.' },
+    lede: 'Nachlass planen und teilen – Pflichtteile, Fristen, Testament und Erbvertrag.' },
   { name: 'Vorsorge & Erwachsenenschutz', id: 'vorsorge-erwachsenenschutz',
-    lede: 'Selbstbestimmt vorsorgen — Vorsorgeauftrag, Patientenverfügung und Vollmachten.' },
+    lede: 'Selbstbestimmt vorsorgen – Vorsorgeauftrag, Patientenverfügung und Vollmachten.' },
   { name: 'Familienrecht', id: 'familienrecht',
-    lede: 'Trennung, Scheidung und Eltern-Vereinbarungen — Güterrecht, Vorsorgeausgleich, Fristen.' },
+    lede: 'Trennung, Scheidung und Eltern-Vereinbarungen – Güterrecht, Vorsorgeausgleich, Fristen.' },
   { name: 'Gesellschaftsrecht', id: 'gesellschaftsrecht',
-    lede: 'Gründung, Kapital und Beschlüsse — Quoten, Schwellen und Gesellschaftsdokumente.' },
+    lede: 'Gründung, Kapital und Beschlüsse – Quoten, Schwellen und Gesellschaftsdokumente.' },
   { name: 'Strafrecht & Strafprozess', id: 'strafrecht',
-    lede: 'Strafverfahren und materielles Strafrecht — Fristen, Verjährung und Eingaben.' },
+    lede: 'Strafverfahren und materielles Strafrecht – Fristen, Verjährung und Eingaben.' },
   { name: 'Verwaltungsrecht', id: 'verwaltungsrecht',
-    lede: 'Verfügungen und Rechtsmittel im Verwaltungsverfahren — Fristen, Einsprache, Beschwerde.' },
+    lede: 'Verfügungen und Rechtsmittel im Verwaltungsverfahren – Fristen, Einsprache, Beschwerde.' },
   { name: 'Steuerrecht', id: 'steuerrecht',
-    lede: 'Steuerverfahren und Spezialsteuern — Fristen und Berechnungen.' },
+    lede: 'Steuerverfahren und Spezialsteuern – Fristen und Berechnungen.' },
   { name: 'Sozialversicherungsrecht', id: 'sozialversicherungsrecht',
-    lede: 'AHV, IV, UVG und ATSG-Verfahren — Fristen, Verwirkung und Beiträge.' },
+    lede: 'AHV, IV, UVG und ATSG-Verfahren – Fristen, Verwirkung und Beiträge.' },
   { name: 'Datenschutzrecht', id: 'datenschutzrecht',
     lede: 'Auskunft, Löschung und Fristen nach Datenschutzrecht.' },
   { name: 'Ausländerrecht', id: 'auslaenderrecht',
-    lede: 'Ausländer- und asylrechtliche Verfahren — Fristen.' },
+    lede: 'Ausländer- und asylrechtliche Verfahren – Fristen.' },
   { name: 'Weitere Rechtsgebiete', id: 'weitere-rechtsgebiete',
     lede: 'Immaterialgüterrecht, Sachenrecht und übergreifende Einordnung.' },
   { name: 'Übergreifende Werkzeuge', id: 'werkzeuge',
@@ -176,14 +176,14 @@ export const RECHTSGEBIETE: string[] = RECHTSGEBIET_SEKTIONEN.map((g) => g.name)
 // ─── Karten-Katalog (geprüft + geplant) ───────────────────────────────────
 
 const KARTEN: Record<string, CalculatorCard> = {
-  // ════ I — Fristen (geprüft) ════
+  // ════ I – Fristen (geprüft) ════
   'zpo-fristen': {
     id: 'zpo-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
     title: 'Verfahrens- & Rechtsmittelfristen',
     szenarien: [
       { label: 'Rechtsmittel, Schlichtung, Erstinstanz (Phasen-Auswahl)', status: 'entwurf' },
-      { label: 'Klagebewilligung — Geltungsdauer (Schlichtungs-Preset)', status: 'entwurf' },
+      { label: 'Klagebewilligung – Geltungsdauer (Schlichtungs-Preset)', status: 'entwurf' },
       { label: 'Fristwiederherstellung (Art. 148 ZPO)', status: 'geplant' },
     ],
     description: 'Verfahrens- und Rechtsmittelfristen mit Gerichtsferien und Stillstand.',
@@ -204,7 +204,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     szenarien: [
       { label: 'Einleitung bis Konkurs (Verfahrensphasen)', status: 'entwurf' },
       { label: 'Rechtsöffnung, Aberkennung, Kollokation', status: 'entwurf' },
-      { label: 'Arrest — Prosequierung', status: 'entwurf' },
+      { label: 'Arrest – Prosequierung', status: 'entwurf' },
     ],
     description: 'Fristen im Betreibungs- und Konkursverfahren mit Betreibungsferien (Art. 63 SchKG) und ZPO-Stillstand für gerichtliche Klagen.',
     status: 'entwurf',
@@ -224,11 +224,11 @@ const KARTEN: Record<string, CalculatorCard> = {
   'kuendigung-sperrfristen': {
     id: 'kuendigung-sperrfristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
-    title: 'Arbeitsrecht — Fristen',
+    title: 'Arbeitsrecht – Fristen',
     szenarien: [
       { label: 'Kündigungs- & Sperrfristen (Art. 335c/336c OR)', status: 'entwurf' },
       { label: 'Anfechtung missbräuchlicher Kündigung', status: 'geplant' },
-      { label: 'Massenentlassung — Konsultationsfristen', status: 'geplant' },
+      { label: 'Massenentlassung – Konsultationsfristen', status: 'geplant' },
     ],
     description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis.',
     status: 'entwurf',
@@ -246,12 +246,12 @@ const KARTEN: Record<string, CalculatorCard> = {
   mietrecht: {
     id: 'mietrecht', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Miete',
     rechtsbereich: 'privat',
-    title: 'Mietrecht — Fristen',
+    title: 'Mietrecht – Fristen',
     szenarien: [
       { label: 'Kündigung, Termine & Zahlungsverzug', status: 'entwurf' },
       { label: 'Anfechtung & Erstreckung', status: 'geplant' },
     ],
-    description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume — mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
+    description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume – mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
     status: 'entwurf',
     norms: [
       // Art. 266a–o OR – Kündigungstermine/-fristen (Spanne: Anker auf führenden Artikel)
@@ -267,33 +267,33 @@ const KARTEN: Record<string, CalculatorCard> = {
     icon: 'house',
   },
 
-  // ════ I — Fristen (in Vorbereitung) ════
+  // ════ I – Fristen (in Vorbereitung) ════
   'beschwerde-verwaltung': {
     id: 'beschwerde-verwaltung', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Verwaltungsrecht',
     rechtsbereich: 'oeffentlich',
-    title: 'Verwaltungs- & Steuerverfahren — Fristen',
-    description: 'Einsprache- und Beschwerdefristen im Verwaltungs- und Steuerverfahren — nicht eidgenössisch vereinheitlicht; kantonale Vielfalt wird gekennzeichnet.',
+    title: 'Verwaltungs- & Steuerverfahren – Fristen',
+    description: 'Einsprache- und Beschwerdefristen im Verwaltungs- und Steuerverfahren – nicht eidgenössisch vereinheitlicht; kantonale Vielfalt wird gekennzeichnet.',
     status: 'geplant', norms: [],
   },
   strafverfahren: {
     id: 'strafverfahren', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
     title: 'StPO-Fristen',
-    description: 'Einsprache gegen Strafbefehl und Rechtsmittelfristen — eigene Fristmechanik ohne Gerichtsferien-Stillstand.',
+    description: 'Einsprache gegen Strafbefehl und Rechtsmittelfristen – eigene Fristmechanik ohne Gerichtsferien-Stillstand.',
     status: 'geplant', norms: [],
   },
   sozialversicherung: {
     id: 'sozialversicherung', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Sozialversicherungsrecht',
     rechtsbereich: 'oeffentlich',
-    title: 'Sozialversicherung (ATSG) — Fristen',
-    description: 'Einsprache- und Beschwerdefristen sowie Leistungsverwirkung und Nachzahlung — IV, AHV, Unfall- und Krankenversicherung.',
+    title: 'Sozialversicherung (ATSG) – Fristen',
+    description: 'Einsprache- und Beschwerdefristen sowie Leistungsverwirkung und Nachzahlung – IV, AHV, Unfall- und Krankenversicherung.',
     status: 'geplant', norms: [],
   },
   verjaehrung: {
     id: 'verjaehrung', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
     title: 'Verjährung',
-    description: 'Ordentliche und kurze Verjährung sowie deliktische und bereicherungsrechtliche Ansprüche — mit Stillstand, Unterbrechung und Einredeverzicht.',
+    description: 'Ordentliche und kurze Verjährung sowie deliktische und bereicherungsrechtliche Ansprüche – mit Stillstand, Unterbrechung und Einredeverzicht.',
     status: 'entwurf',
     norms: [
       // Art. 60 OR – unerlaubte Handlung (3/10 bzw. 3/20 Jahre)
@@ -312,7 +312,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'gewaehrleistung', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
     title: 'Gewährleistung & Mängelrüge',
-    description: 'Rüge- und Verjährungsfristen bei Kauf, Werkvertrag und Grundstückkauf — mit Zwei-Regime-Weiche zur Baumängel-Revision 2026.',
+    description: 'Rüge- und Verjährungsfristen bei Kauf, Werkvertrag und Grundstückkauf – mit Zwei-Regime-Weiche zur Baumängel-Revision 2026.',
     status: 'entwurf',
     norms: [
       // Art. 201 OR – Prüf-/Rügeobliegenheit (inkl. Abs. 4 neu)
@@ -334,7 +334,7 @@ const KARTEN: Record<string, CalculatorCard> = {
   'erbrecht-fristen': {
     id: 'erbrecht-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Erbrecht',
     rechtsbereich: 'privat',
-    title: 'Erbrecht — Fristen',
+    title: 'Erbrecht – Fristen',
     description: 'Fristen für Ausschlagung der Erbschaft, Herabsetzungs- und Ungültigkeitsklage.',
     status: 'geplant', norms: [],
   },
@@ -376,17 +376,17 @@ const KARTEN: Record<string, CalculatorCard> = {
   bauhandwerkerpfandrecht: {
     id: 'bauhandwerkerpfandrecht', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Weitere Rechtsgebiete',
     rechtsbereich: 'privat',
-    title: 'Bauhandwerkerpfandrecht — Eintragungsfrist',
+    title: 'Bauhandwerkerpfandrecht – Eintragungsfrist',
     description: 'Frist zur Eintragung des gesetzlichen Bauhandwerkerpfandrechts.',
     status: 'geplant', norms: [],
   },
 
-  // ════ II — Beträge & Quoten (geprüft) ════
+  // ════ II – Beträge & Quoten (geprüft) ════
   verzugszins: {
     id: 'verzugszins', modus: 'rechner', art: 'betrag', tier: 'free', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
     title: 'Verzugszins',
-    description: 'Verzugszins bei Schuldnerverzug — Zeitraum, Satz und Betrag.',
+    description: 'Verzugszins bei Schuldnerverzug – Zeitraum, Satz und Betrag.',
     status: 'entwurf',
     norms: [
       // Art. 104 OR – Verzugszins
@@ -416,7 +416,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'erbteilung', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Erbrecht',
     rechtsbereich: 'privat',
     title: 'Pflichtteil & verfügbare Quote',
-    description: 'Gesetzliche Erbteile, Pflichtteile und verfügbare Quote — mit Todesdatum-Weiche für die Revision 2023 und güterrechtlicher Vorstufe.',
+    description: 'Gesetzliche Erbteile, Pflichtteile und verfügbare Quote – mit Todesdatum-Weiche für die Revision 2023 und güterrechtlicher Vorstufe.',
     status: 'entwurf',
     norms: [
       // Art. 457 ff. ZGB – gesetzliche Erben (Folgeverweis: Anker auf führenden Artikel)
@@ -430,7 +430,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     icon: 'scale',
   },
 
-  // ════ II — Beträge & Quoten (in Vorbereitung) ════
+  // ════ II – Beträge & Quoten (in Vorbereitung) ════
   prozesskosten: {
     id: 'prozesskosten', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
@@ -481,7 +481,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geplant', norms: [],
   },
 
-  // ════ III — Zuständigkeit & Einordnung (in Vorbereitung) ════
+  // ════ III – Zuständigkeit & Einordnung (in Vorbereitung) ════
   gerichtsstand: {
     id: 'gerichtsstand', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
@@ -511,17 +511,17 @@ const KARTEN: Record<string, CalculatorCard> = {
     status: 'geplant', norms: [],
   },
 
-  // ════ IV — Werkzeuge (in Vorbereitung) ════
+  // ════ IV – Werkzeuge (in Vorbereitung) ════
   tagerechner: {
     id: 'tagerechner', modus: 'rechner', art: 'werkzeug', tier: 'free', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',
     title: 'Fristen- & Tagerechner',
-    description: 'Allgemeines Fristende nach festen Regeln: Ereignistag zählt nicht, Monatsfristen enden am gleichbezeichneten Tag (sonst Monatsende), Wochenend- und Feiertagsenden verschieben sich auf den nächsten Werktag — kantonal nach EJPD-Verzeichnis. Dazu ein Tage-Zähler als reines Hilfsmittel.',
+    description: 'Allgemeines Fristende nach festen Regeln: Ereignistag zählt nicht, Monatsfristen enden am gleichbezeichneten Tag (sonst Monatsende), Wochenend- und Feiertagsenden verschieben sich auf den nächsten Werktag – kantonal nach EJPD-Verzeichnis. Dazu ein Tage-Zähler als reines Hilfsmittel.',
     status: 'entwurf',
     norms: [
       { label: 'Art. 77 OR', url: fedlexUrl('OR', '77'), verified: false },
       { label: 'Art. 78 OR', url: fedlexUrl('OR', '78'), verified: false },
-      // BG über den Fristenlauf an Samstagen — ELI via Fedlex-SPARQL verifiziert (5.6.2026)
+      // BG über den Fristenlauf an Samstagen – ELI via Fedlex-SPARQL verifiziert (5.6.2026)
       { label: 'SR 173.110.3', url: 'https://www.fedlex.admin.ch/eli/cc/1963/819_815_843/de', verified: false },
     ],
     href: '/rechner/tagerechner',
@@ -540,7 +540,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'teuerungsrechner', modus: 'rechner', art: 'werkzeug', tier: 'free', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',
     title: 'Teuerungsrechner (LIK-Indexierung)',
-    description: 'Indexierung nach dem Landesindex der Konsumentenpreise mit amtlicher BFS-Reihe (Originalbasen, automatische Basis-Wahl): Indexmiete mit 100-%-Weitergabe und Senkungspflicht, Unterhaltsbeiträge nach Urteilsklausel, generische Wertsicherung — Rechenweg und Quelle vollständig offengelegt.',
+    description: 'Indexierung nach dem Landesindex der Konsumentenpreise mit amtlicher BFS-Reihe (Originalbasen, automatische Basis-Wahl): Indexmiete mit 100-%-Weitergabe und Senkungspflicht, Unterhaltsbeiträge nach Urteilsklausel, generische Wertsicherung – Rechenweg und Quelle vollständig offengelegt.',
     status: 'entwurf',
     norms: [
       { label: 'Art. 269b OR', url: fedlexUrl('OR', '269b'), verified: false },
@@ -563,9 +563,9 @@ const KARTEN: Record<string, CalculatorCard> = {
 
   // ════ Katalog-Ausbau Phase 3: geplante Rechner gemäss KATALOG-ROADMAP ════
   // «In Vorbereitung»: bewusst ohne Norm-Pills, ohne Artikel-/Tagesangaben
-  // (Normentreue) — Normen folgen erst mit dem Bau (geplant → entwurf).
+  // (Normentreue) – Normen folgen erst mit dem Bau (geplant → entwurf).
 
-  // — Zivilprozess (ZPO) & Bundesgericht —
+  // – Zivilprozess (ZPO) & Bundesgericht —
   bundesgerichtsgebuehren: {
     id: 'bundesgerichtsgebuehren', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'uebergreifend',
@@ -597,13 +597,13 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'rechtsmittelpruefung', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'uebergreifend',
     title: 'Rechtsmittelprüfung',
-    description: 'Welches Rechtsmittel gegen welchen Entscheid offensteht — Weg, Instanz und Anforderungen.',
+    description: 'Welches Rechtsmittel gegen welchen Entscheid offensteht – Weg, Instanz und Anforderungen.',
     status: 'geplant', norms: [],
     related: ['zpo-fristen', 'bgg-fristen'],
     keywords: ['Berufung', 'Beschwerde', 'Revision', 'Rechtsmittel'],
   },
 
-  // — Arbeit —
+  // – Arbeit —
   ferienanspruch: {
     id: 'ferienanspruch', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
@@ -641,7 +641,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Überstunden', 'Überzeit', 'Zuschlag', 'Kompensation'],
   },
 
-  // — Vertrag & Forderung (OR) —
+  // – Vertrag & Forderung (OR) —
   schadenszins: {
     id: 'schadenszins', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
@@ -655,13 +655,13 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'widerruf-konsum', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
     title: 'Widerrufsrechte (Konsum)',
-    description: 'Widerrufsfristen bei Konsumgeschäften — Beginn, Dauer und Form.',
+    description: 'Widerrufsfristen bei Konsumgeschäften – Beginn, Dauer und Form.',
     status: 'geplant', norms: [],
     related: ['verjaehrung'],
     keywords: ['Widerruf', 'Konsumkredit', 'Haustürgeschäft'],
   },
 
-  // — Familienrecht —
+  // – Familienrecht —
   'gueterrecht-vorschlag': {
     id: 'gueterrecht-vorschlag', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Familienrecht',
     rechtsbereich: 'privat',
@@ -672,7 +672,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Güterrecht', 'Errungenschaft', 'Vorschlag'],
   },
 
-  // — Gesellschaftsrecht —
+  // – Gesellschaftsrecht —
   beteiligungsquoten: {
     id: 'beteiligungsquoten', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
     rechtsbereich: 'privat',
@@ -719,7 +719,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Kapitalerhöhung', 'Bezugsrecht'],
   },
 
-  // — Strafrecht & Strafprozess —
+  // – Strafrecht & Strafprozess —
   haftfristen: {
     id: 'haftfristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
@@ -739,7 +739,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Gerichtsstand', 'Tatort', 'Zuständigkeit'],
   },
 
-  // — Verwaltungsrecht —
+  // – Verwaltungsrecht —
   'baurecht-fristen': {
     id: 'baurecht-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Verwaltungsrecht',
     rechtsbereich: 'oeffentlich',
@@ -759,8 +759,8 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Vergabe', 'Submission', 'Beschwerde'],
   },
 
-  // — Steuerrecht — (Steuerverfahrens-Fristen deckt der bestehende Rechner
-  //   «Verwaltungs- & Steuerverfahren — Fristen» ab; nicht gedoppelt)
+  // – Steuerrecht – (Steuerverfahrens-Fristen deckt der bestehende Rechner
+  //   «Verwaltungs- & Steuerverfahren – Fristen» ab; nicht gedoppelt)
   'steuer-verjaehrung': {
     id: 'steuer-verjaehrung', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Steuerrecht',
     rechtsbereich: 'oeffentlich',
@@ -787,7 +787,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Grundstückgewinn', 'Handänderung', 'kantonal'],
   },
 
-  // — Sozialversicherungsrecht —
+  // – Sozialversicherungsrecht —
   'ahv-beitraege': {
     id: 'ahv-beitraege', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Sozialversicherungsrecht',
     rechtsbereich: 'oeffentlich',
@@ -798,7 +798,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['AHV', 'IV', 'EO', 'Beiträge'],
   },
 
-  // — Datenschutzrecht —
+  // – Datenschutzrecht —
   'datenschutz-fristen': {
     id: 'datenschutz-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Datenschutzrecht',
     rechtsbereich: 'privat',
@@ -809,7 +809,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Datenschutz', 'DSG', 'Auskunft'],
   },
 
-  // — Ausländerrecht —
+  // – Ausländerrecht —
   'auslaenderrecht-fristen': {
     id: 'auslaenderrecht-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Ausländerrecht',
     rechtsbereich: 'oeffentlich',
@@ -819,7 +819,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Migrationsrecht', 'Asyl', 'Bewilligung'],
   },
 
-  // — Weitere Rechtsgebiete —
+  // – Weitere Rechtsgebiete —
   markenwiderspruch: {
     id: 'markenwiderspruch', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Weitere Rechtsgebiete',
     rechtsbereich: 'privat',
@@ -829,7 +829,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Marke', 'Widerspruch', 'IGE'],
   },
 
-  // — Übergreifende Werkzeuge —
+  // – Übergreifende Werkzeuge —
   checklisten: {
     id: 'checklisten', modus: 'rechner', art: 'werkzeug', tier: 'pro', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',
@@ -863,12 +863,12 @@ const KARTEN: Record<string, CalculatorCard> = {
 // modusübergreifend (Vorlage ↔ Rechner).
 
 const VORLAGEN: Record<string, VorlageCard> = {
-  // ════ I — Vorsorge & Nachlass ════
+  // ════ I – Vorsorge & Nachlass ════
   'eigenhaendiges-testament': {
     id: 'eigenhaendiges-testament', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Erbrecht',
     rechtsbereich: 'privat',
     title: 'Eigenhändiges Testament',
-    description: 'Letztwillige Verfügung aus festen Bausteinen — mit Pflichtteils-Kontrolle, Bausteinprotokoll und Form-Gate; Ausgabe als Mustertext zum eigenhändigen Abschreiben.',
+    description: 'Letztwillige Verfügung aus festen Bausteinen – mit Pflichtteils-Kontrolle, Bausteinprotokoll und Form-Gate; Ausgabe als Mustertext zum eigenhändigen Abschreiben.',
     status: 'entwurf',
     norms: [
       // Art. 505 ZGB – Form der eigenhändigen Verfügung (Handschrift, Datum, Unterschrift)
@@ -884,7 +884,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     ],
     href: '/vorlagen/testament',
     schemaId: 'testament-eigenhaendig',
-    formvorschrift: 'Eigenhändig abzuschreiben — von Hand, datiert, unterschrieben',
+    formvorschrift: 'Eigenhändig abzuschreiben – von Hand, datiert, unterschrieben',
     output: ['pdf'],
     keywords: ['Testament', 'letztwillige Verfügung', 'Erbe', 'Pflichtteil', 'Vermächtnis', 'Willensvollstrecker', 'handschriftlich'],
     related: ['erbteilung'],
@@ -902,7 +902,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'erbvertrag', modus: 'vorlage', art: 'vorsorge', tier: 'pro', rechtsgebiet: 'Erbrecht',
     rechtsbereich: 'privat',
     title: 'Erbvertrag',
-    description: 'Entwurf für die vertragliche Nachlassregelung — zur Vorbereitung der Beurkundung.',
+    description: 'Entwurf für die vertragliche Nachlassregelung – zur Vorbereitung der Beurkundung.',
     status: 'geplant', norms: [], related: ['erbteilung'],
     icon: 'document',
   },
@@ -910,7 +910,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'vorsorgeauftrag', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
     rechtsbereich: 'privat',
     title: 'Vorsorgeauftrag',
-    description: 'Personensorge, Vermögenssorge und Vertretung im Rechtsverkehr bei Urteilsunfähigkeit — mit Form-Weiche (eigenhändig oder beurkundet), Sondervollmachten und KESB-Hinweisen.',
+    description: 'Personensorge, Vermögenssorge und Vertretung im Rechtsverkehr bei Urteilsunfähigkeit – mit Form-Weiche (eigenhändig oder beurkundet), Sondervollmachten und KESB-Hinweisen.',
     status: 'entwurf',
     norms: [
       // Art. 360 ZGB – Grundsatz (Aufgabenbereiche, Weisungen, Ersatzverfügung)
@@ -925,7 +925,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     href: '/vorlagen/vorsorgeauftrag',
     schemaId: 'vorsorgeauftrag',
     formvorschrift: 'Eigenhändig abzuschreiben ODER öffentlich zu beurkunden',
-    // DOCX nur für den Beurkundungs-Entwurf — Gate im Wizard (Form-Vorrang)
+    // DOCX nur für den Beurkundungs-Entwurf – Gate im Wizard (Form-Vorrang)
     output: ['pdf', 'docx'],
     keywords: ['Vorsorgeauftrag', 'Urteilsunfähigkeit', 'Personensorge', 'Vermögenssorge', 'KESB', 'Validierung', 'Beistandschaft'],
     related: ['patientenverfuegung', 'eigenhaendiges-testament'],
@@ -935,7 +935,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'patientenverfuegung', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
     rechtsbereich: 'privat',
     title: 'Patientenverfügung',
-    description: 'Medizinische Massnahmen, Behandlungsziel und Vertretungsperson — mit Konsistenz-Prüfung und Form-Gate; am Computer erstellbar, handschriftlich zu unterschreiben.',
+    description: 'Medizinische Massnahmen, Behandlungsziel und Vertretungsperson – mit Konsistenz-Prüfung und Form-Gate; am Computer erstellbar, handschriftlich zu unterschreiben.',
     status: 'entwurf',
     norms: [
       // Art. 370 ZGB – Grundsatz (Massnahmen, Vertretungsperson, Ersatzverfügung)
@@ -949,7 +949,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     ],
     href: '/vorlagen/patientenverfuegung',
     schemaId: 'patientenverfuegung',
-    formvorschrift: 'Schriftlich — ausdrucken, handschriftlich datieren und unterschreiben',
+    formvorschrift: 'Schriftlich – ausdrucken, handschriftlich datieren und unterschreiben',
     // Schriftform mit Unterschrift → DOCX unproblematisch (Pilot Teil II)
     output: ['pdf', 'docx'],
     keywords: ['Patientenverfügung', 'medizinische Massnahmen', 'Urteilsunfähigkeit', 'Reanimation', 'Vertretungsperson', 'Organspende', 'Behandlungsziel'],
@@ -957,12 +957,12 @@ const VORLAGEN: Record<string, VorlageCard> = {
     icon: 'document',
   },
 
-  // ════ II — Verträge ════
+  // ════ II – Verträge ════
   arbeitsvertrag: {
     id: 'arbeitsvertrag', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
     title: 'Arbeitsvertrag',
-    description: 'Befristeter oder unbefristeter Einzelarbeitsvertrag aus festen Bausteinen — mit harten Schranken für zwingendes Recht (Probezeit, Kündigungsfristen, Ferien, Ferienlohn) und Hinweisen zu Konkurrenzverbot, Überstunden-Wegbedingung und kantonalen Mindestlöhnen.',
+    description: 'Befristeter oder unbefristeter Einzelarbeitsvertrag aus festen Bausteinen – mit harten Schranken für zwingendes Recht (Probezeit, Kündigungsfristen, Ferien, Ferienlohn) und Hinweisen zu Konkurrenzverbot, Überstunden-Wegbedingung und kantonalen Mindestlöhnen.',
     status: 'entwurf',
     norms: [
       { label: 'Art. 319 OR', url: fedlexUrl('OR', '319'), verified: false },
@@ -982,7 +982,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'mietvertrag-wohnen', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Miete',
     rechtsbereich: 'privat',
     title: 'Mietvertrag (Wohn- & Geschäftsräume)',
-    description: 'Mietvertrag mit Objekt-Weiche Wohn-/Geschäftsraum aus festen Bausteinen — Kautionsmaximum, Mindestfristen und Index-/Staffel-Voraussetzungen als harte Schranken; kantonale Formularpflicht für den Anfangsmietzins als offengelegtes Form-Gate.',
+    description: 'Mietvertrag mit Objekt-Weiche Wohn-/Geschäftsraum aus festen Bausteinen – Kautionsmaximum, Mindestfristen und Index-/Staffel-Voraussetzungen als harte Schranken; kantonale Formularpflicht für den Anfangsmietzins als offengelegtes Form-Gate.',
     status: 'entwurf',
     norms: [
       { label: 'Art. 253 OR', url: fedlexUrl('OR', '253'), verified: false },
@@ -1015,19 +1015,19 @@ const VORLAGEN: Record<string, VorlageCard> = {
     icon: 'clipboard',
   },
 
-  // ════ III — Eingaben ════
+  // ════ III – Eingaben ════
   schlichtungsgesuch: {
     id: 'schlichtungsgesuch', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
     title: 'Schlichtungsgesuch (Basel-Stadt)',
-    description: 'Stellt ein Schlichtungsgesuch nach festen Bausteinen für die Basler Schlichtungsbehörden zusammen — Parteien, Zuständigkeits-Routing, Rechtsbegehren, Streitgegenstand, Beilagen.',
+    description: 'Stellt ein Schlichtungsgesuch nach festen Bausteinen für die Basler Schlichtungsbehörden zusammen – Parteien, Zuständigkeits-Routing, Rechtsbegehren, Streitgegenstand, Beilagen.',
     // Abweichung von der Auftrags-Anweisung (status: 'geplant') offengelegt:
     // Nach dem neueren Status-Modell-Auftrag erhalten GEBAUTE, fachlich noch
-    // nicht geprüfte Einträge 'entwurf' (orange, verified: false) — als
+    // nicht geprüfte Einträge 'entwurf' (orange, verified: false) – als
     // 'geplant' wäre die Vorlage im Katalog nicht erreichbar.
     status: 'entwurf',
     norms: [
-      // Art. 202 ZPO – Schlichtungsgesuch (Pflichtinhalt) — Anker build-verifiziert, fachlich offen
+      // Art. 202 ZPO – Schlichtungsgesuch (Pflichtinhalt) – Anker build-verifiziert, fachlich offen
       { label: 'Art. 202 ZPO', url: fedlexUrl('ZPO', '202'), verified: false },
       // Art. 130 ZPO – Form (Papier/Signatur)
       { label: 'Art. 130 ZPO', url: fedlexUrl('ZPO', '130'), verified: false },
@@ -1048,7 +1048,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'klage-vereinfacht', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
     title: 'Klage (vereinfachtes Verfahren)',
-    description: 'Klagegerüst mit Rechtsbegehren, Sachverhalt und Beweisofferten — offene Punkte werden ausgewiesen.',
+    description: 'Klagegerüst mit Rechtsbegehren, Sachverhalt und Beweisofferten – offene Punkte werden ausgewiesen.',
     status: 'geplant', norms: [], related: ['zpo-fristen'],
     icon: 'document',
   },
@@ -1077,12 +1077,12 @@ const VORLAGEN: Record<string, VorlageCard> = {
     icon: 'clipboard',
   },
 
-  // ════ IV — Gesellschaftsdokumente ════
+  // ════ IV – Gesellschaftsdokumente ════
   'gmbh-gruendung': {
     id: 'gmbh-gruendung', modus: 'vorlage', art: 'gesellschaft', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
     rechtsbereich: 'privat',
     title: 'GmbH-Gründungsunterlagen',
-    description: 'Errichtungsakt, Statuten und Anmeldung — zur Vorbereitung der Beurkundung.',
+    description: 'Errichtungsakt, Statuten und Anmeldung – zur Vorbereitung der Beurkundung.',
     status: 'geplant', norms: [], related: ['gesellschaftsrecht-fristen'],
     icon: 'scale',
   },
@@ -1090,7 +1090,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'ag-gruendung', modus: 'vorlage', art: 'gesellschaft', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
     rechtsbereich: 'privat',
     title: 'AG-Gründungsunterlagen',
-    description: 'Errichtungsakt, Statuten und Anmeldung — zur Vorbereitung der Beurkundung.',
+    description: 'Errichtungsakt, Statuten und Anmeldung – zur Vorbereitung der Beurkundung.',
     status: 'geplant', norms: [], related: ['gesellschaftsrecht-fristen'],
     icon: 'scale',
   },
@@ -1115,7 +1115,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // «In Vorbereitung»: ohne Norm-Pills, ohne Artikel-/Tagesangaben.
   // «Strukturiertes Gerüst» = Roadmap-Markierung [Gerüst] (Würdigungsanteil).
 
-  // — Betreibung & Konkurs (SchKG) —
+  // – Betreibung & Konkurs (SchKG) —
   rechtsvorschlag: {
     id: 'rechtsvorschlag', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',
@@ -1153,7 +1153,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Beschwerde', 'Aufsichtsbehörde', 'Betreibungsamt'],
   },
 
-  // — Arbeit —
+  // – Arbeit —
   'kuendigung-arbeitgeber': {
     id: 'kuendigung-arbeitgeber', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
@@ -1209,7 +1209,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Aufhebungsvertrag', 'Saldoklausel'],
   },
 
-  // — Vertrag & Forderung (OR) —
+  // – Vertrag & Forderung (OR) —
   mahnung: {
     id: 'mahnung', modus: 'vorlage', art: 'korrespondenz', tier: 'free', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
@@ -1247,12 +1247,12 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Vergleich', 'Saldoklausel'],
   },
 
-  // — Erbrecht —
+  // – Erbrecht —
   erbverzichtsvertrag: {
     id: 'erbverzichtsvertrag', modus: 'vorlage', art: 'vorsorge', tier: 'pro', rechtsgebiet: 'Erbrecht',
     rechtsbereich: 'privat',
     title: 'Erbverzichtsvertrag',
-    description: 'Verzicht auf die Erbenstellung — Entwurf zur öffentlichen Beurkundung.',
+    description: 'Verzicht auf die Erbenstellung – Entwurf zur öffentlichen Beurkundung.',
     status: 'geplant', norms: [],
     formvorschrift: 'Öffentliche Beurkundung',
     related: ['erbteilung', 'erbvertrag'],
@@ -1268,7 +1268,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Erbteilung', 'Teilungsvertrag'],
   },
 
-  // — Vorsorge & Erwachsenenschutz —
+  // – Vorsorge & Erwachsenenschutz —
   generalvollmacht: {
     id: 'generalvollmacht', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
     rechtsbereich: 'privat',
@@ -1288,7 +1288,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Vollmacht', 'Bank', 'Konto'],
   },
 
-  // — Familienrecht —
+  // – Familienrecht —
   trennungsvereinbarung: {
     id: 'trennungsvereinbarung', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Familienrecht',
     rechtsbereich: 'privat',
@@ -1317,7 +1317,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Eltern', 'Obhut', 'Betreuung'],
   },
 
-  // — Strafrecht & Strafprozess —
+  // – Strafrecht & Strafprozess —
   strafanzeige: {
     id: 'strafanzeige', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
@@ -1364,7 +1364,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Adhäsion', 'Zivilanspruch'],
   },
 
-  // — Verwaltungsrecht — (Einsprache deckt die bestehende Vorlage
+  // – Verwaltungsrecht – (Einsprache deckt die bestehende Vorlage
   //   «Einsprache (Straf-/Verwaltungsbefehl)» ab; nicht gedoppelt)
   rekurs: {
     id: 'rekurs', modus: 'vorlage', art: 'eingabe', tier: 'pro', rechtsgebiet: 'Verwaltungsrecht',
@@ -1376,7 +1376,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Rekurs', 'Rechtsmittel'],
   },
 
-  // — Datenschutzrecht —
+  // – Datenschutzrecht —
   auskunftsbegehren: {
     id: 'auskunftsbegehren', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Datenschutzrecht',
     rechtsbereich: 'privat',
@@ -1404,7 +1404,7 @@ export function karte(id: string): CalculatorCard {
 /** Flacher Katalog (beide Modi); Anzeige je Sektion: geprüfte zuerst, danach «In Vorbereitung». */
 // «Verfügbar» als abgeleitetes Konzept (Pro-Katalog-Auftrag 5.6.2026,
 // Phase 1): entwurf ODER geprüft = gebaut/nutzbar. EINZIGES Wahrheits-
-// kriterium für Tabs, Zähler, Sektionsfilter und Schnellzugriff — wird ein
+// kriterium für Tabs, Zähler, Sektionsfilter und Schnellzugriff – wird ein
 // Eintrag später auf «geprüft» gehoben, bleibt er automatisch verfügbar.
 export function istVerfuegbar(item: { status: Status }): boolean {
   return item.status !== 'geplant';

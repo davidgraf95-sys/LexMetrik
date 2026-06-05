@@ -3,7 +3,7 @@ import { assemble } from './engine';
 import { fmtDatumLang, fmtDatum, fmtCHF, zahl } from './datum';
 export { fmtCHF } from './datum';
 
-// ─── Mietvertrag Wohn- & Geschäftsräume (Art. 253 ff. OR) — sechste Vorlage ──
+// ─── Mietvertrag Wohn- & Geschäftsräume (Art. 253 ff. OR) – sechste Vorlage ──
 //
 // Grundlage: normverifiziertes Rechtsgutachten «Schweizer Mietvertrag»
 // (5.6.2026). Zentrale Verzweigung gemäss Gutachten: objektTyp (Wohnraum |
@@ -28,7 +28,7 @@ export const MV_PARAMETER = {
 } as const;
 
 // Kantone mit Formularpflicht für den Anfangsmietzins (Art. 270 Abs. 2 OR).
-// Quelle: BWO-Verzeichnis vom 4.2.2026 — DYNAMISCH (Anordnung/Aufhebung
+// Quelle: BWO-Verzeichnis vom 4.2.2026 – DYNAMISCH (Anordnung/Aufhebung
 // jährlich per 1. November), jährlich nachzuführen.
 export const MV_FORMULARPFLICHT: { kanton: string; umfang: 'ganz' | 'teilweise'; hinweis?: string }[] = [
   { kanton: 'BS', umfang: 'ganz' },
@@ -44,8 +44,8 @@ export const MV_FORMULARPFLICHT: { kanton: string; umfang: 'ganz' | 'teilweise';
 
 export const MV_OFFENE_VERIFIKATIONEN: string[] = [
   'Formularpflicht-Kantone (Art. 270 Abs. 2 OR) sind dynamisch (jährlich per 1. November); Stand BWO-Verzeichnis 4.2.2026. Bern-Diskrepanz aufgelöst (Vertiefungs-Gutachten 5.6.2026): Miet-Initiative am 28.9.2025 angenommen, Formularpflicht ab 1.12.2025.',
-  'Referenzzinssatz 1.25 % (gültig seit 2.9.2025, unverändert ab 2.6.2026; nächste Anpassung erst bei Durchschnittszinssatz < 1.13 % oder > 1.37 %) — quartalsweise auf referenzzinssatz.admin.ch prüfen.',
-  'MWST-Normalsatz 8.1 % (seit 1.1.2024) — bei Satzänderung Parameter nachführen.',
+  'Referenzzinssatz 1.25 % (gültig seit 2.9.2025, unverändert ab 2.6.2026; nächste Anpassung erst bei Durchschnittszinssatz < 1.13 % oder > 1.37 %) – quartalsweise auf referenzzinssatz.admin.ch prüfen.',
+  'MWST-Normalsatz 8.1 % (seit 1.1.2024) – bei Satzänderung Parameter nachführen.',
   'Geschäftsraum: Umsatzmiete und Konkurrenzschutz sind gesetzlich nicht spezifisch geregelt; Klauselpraxis vor Verwendung anwaltlich prüfen.',
 ];
 
@@ -108,7 +108,7 @@ export type MvAntworten = {
   // Kündigung
   kuendigungsfristMonate?: number;   // Default 3 (Wohnung) / 6 (Geschäftsraum)
   // Geschäftsraum-Spezifika
-  mwstOption?: boolean;              // Art. 22 MWSTG — nur Geschäftsraum
+  mwstOption?: boolean;              // Art. 22 MWSTG – nur Geschäftsraum
   konkurrenzschutz?: boolean;
   konkurrenzschutzText?: string;
   konkurrenzschutzStrafeCHF?: string; // empfohlen: blosses Verbot erzwingt keine Vertragsauflösung beim Konkurrenten
@@ -140,7 +140,7 @@ export const mvGesetzlicheFrist = (t: MvObjektTyp) => (t === 'geschaeftsraum' ? 
 
 // Kalenderjahr-genau: erreicht die Spanne beginn→bis mindestens n Jahre?
 // (Review-Befund 5.6.2026: ein /365.25-Mittel blockierte exakte
-// 5-Kalenderjahre-Verträge fälschlich — Art. 269b verlangt «mindestens
+// 5-Kalenderjahre-Verträge fälschlich – Art. 269b verlangt «mindestens
 // fünf Jahre», die ein Festvertrag 1.10.2026–1.10.2031 erfüllt.)
 const jahreErreicht = (beginnISO: string, bisISO: string, n: number): boolean => {
   const [by, bm, bd] = beginnISO.split('-').map(Number);
@@ -159,60 +159,60 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
   const hinweise: string[] = [];
   const wohnung = a.objektTyp === 'wohnung';
 
-  // G1 — Kaution: Wohnraum max. drei Monatszinse (Art. 257e Abs. 2 OR,
+  // G1 – Kaution: Wohnraum max. drei Monatszinse (Art. 257e Abs. 2 OR,
   // absolut zwingend). Geschäftsraum: keine Obergrenze, aber Augenmass.
   const netto = zahl(a.mietzinsNettoCHF);
   // Massgeblich ist nach h.L. der BRUTTO-Monatszins inkl. Nebenkosten-
-  // Akonto/-Pauschale (Vertiefungs-Gutachten 5.6.2026 — zu verifizieren).
+  // Akonto/-Pauschale (Vertiefungs-Gutachten 5.6.2026 – zu verifizieren).
   const nk = a.nebenkosten !== 'keine' ? (zahl(a.nebenkostenCHF) ?? 0) : 0;
   const brutto = netto !== null ? netto + nk : null;
   const kaution = zahl(a.kautionCHF);
   if (kaution !== null && brutto !== null && netto !== null) {
     if (wohnung && kaution > 3 * brutto) {
-      blocker.push(`Die Kaution für Wohnräume darf drei Monatszinse nicht übersteigen (Art. 257e Abs. 2 OR; massgeblich ist nach h.L. der Bruttomietzins inkl. Nebenkosten — zu verifizieren) — höchstens CHF ${fmtCHF(String(3 * brutto))}.`);
+      blocker.push(`Die Kaution für Wohnräume darf drei Monatszinse nicht übersteigen (Art. 257e Abs. 2 OR; massgeblich ist nach h.L. der Bruttomietzins inkl. Nebenkosten – zu verifizieren) – höchstens CHF ${fmtCHF(String(3 * brutto))}.`);
     }
     if (!wohnung && kaution > 6 * brutto) {
-      warnungen.push('Geschäftsraum: Die Kaution unterliegt keiner gesetzlichen Obergrenze, sollte aber in einem angemessenen Verhältnis zum Risiko stehen — mehr als sechs Monatszinse sind begründungsbedürftig.');
+      warnungen.push('Geschäftsraum: Die Kaution unterliegt keiner gesetzlichen Obergrenze, sollte aber in einem angemessenen Verhältnis zum Risiko stehen – mehr als sechs Monatszinse sind begründungsbedürftig.');
     }
   }
 
-  // G2 — Formularpflicht Anfangsmietzins (Art. 270 Abs. 2 OR; kantonal)
+  // G2 – Formularpflicht Anfangsmietzins (Art. 270 Abs. 2 OR; kantonal)
   if (wohnung && a.kanton) {
     const fp = MV_FORMULARPFLICHT.find((k) => k.kanton === a.kanton);
     if (fp) {
-      warnungen.push(`Kanton ${fp.kanton}: ${fp.umfang === 'ganz' ? 'Formularpflicht' : 'TEILWEISE Formularpflicht'} für den Anfangsmietzins (Art. 270 Abs. 2 OR)${fp.hinweis ? ` — ${fp.hinweis}` : ''}. Der Anfangsmietzins ist dem Mieter mit dem amtlichen Formular mitzuteilen (Inhalt: Art. 19 VMWG; seit 1.10.2025 inkl. Referenzzins und Teuerung); ohne Formular ist die Mietzinsabrede NICHTIG. Stand BWO-Verzeichnis 4.2.2026 — dynamisch, jährlich prüfen.`);
+      warnungen.push(`Kanton ${fp.kanton}: ${fp.umfang === 'ganz' ? 'Formularpflicht' : 'TEILWEISE Formularpflicht'} für den Anfangsmietzins (Art. 270 Abs. 2 OR)${fp.hinweis ? ` – ${fp.hinweis}` : ''}. Der Anfangsmietzins ist dem Mieter mit dem amtlichen Formular mitzuteilen (Inhalt: Art. 19 VMWG; seit 1.10.2025 inkl. Referenzzins und Teuerung); ohne Formular ist die Mietzinsabrede NICHTIG. Stand BWO-Verzeichnis 4.2.2026 – dynamisch, jährlich prüfen.`);
     }
   }
 
-  // G3 — Kündigungsfrist: Mindestfristen relativ zwingend (Art. 266c/266d OR).
-  // Bei Befristung übersprungen — der Kündigungsbaustein erscheint dann gar
+  // G3 – Kündigungsfrist: Mindestfristen relativ zwingend (Art. 266c/266d OR).
+  // Bei Befristung übersprungen – der Kündigungsbaustein erscheint dann gar
   // nicht im Dokument (Audit 5.6.2026: Blocker auf unsichtbarem Feld;
   // konsistent zum Arbeitsvertrag-G2).
   const fristMin = mvGesetzlicheFrist(a.objektTyp);
   const frist = a.kuendigungsfristMonate ?? fristMin;
   if (!a.befristet && frist < fristMin) {
     blocker.push(wohnung
-      ? 'Die Kündigungsfrist für Wohnungen beträgt mindestens drei Monate (Art. 266c OR) — kürzere Abreden sind ungültig.'
-      : 'Die Kündigungsfrist für Geschäftsräume beträgt mindestens sechs Monate (Art. 266d OR) — kürzere Abreden sind ungültig.');
+      ? 'Die Kündigungsfrist für Wohnungen beträgt mindestens drei Monate (Art. 266c OR) – kürzere Abreden sind ungültig.'
+      : 'Die Kündigungsfrist für Geschäftsräume beträgt mindestens sechs Monate (Art. 266d OR) – kürzere Abreden sind ungültig.');
   }
 
-  // G4 — Indexmiete: nur gültig bei Vertragsdauer ≥ 5 Jahre und LIK
-  // (Art. 269b OR — Wortlaut am Fedlex-Text verifiziert)
+  // G4 – Indexmiete: nur gültig bei Vertragsdauer ≥ 5 Jahre und LIK
+  // (Art. 269b OR – Wortlaut am Fedlex-Text verifiziert)
   if (a.mietzinsModell === 'index') {
     const erfuellt = a.befristet && a.befristetBis && a.beginn
       ? jahreErreicht(a.beginn, a.befristetBis, 5)
       : (a.mindestdauerJahre ?? 0) >= 5;
     if (!erfuellt) {
-      blocker.push('Indexmiete ist nur gültig, wenn der Vertrag für mindestens fünf Jahre abgeschlossen wird (Art. 269b OR) — feste Dauer bzw. Mindestlaufzeit von 5 Jahren erfassen.');
+      blocker.push('Indexmiete ist nur gültig, wenn der Vertrag für mindestens fünf Jahre abgeschlossen wird (Art. 269b OR) – feste Dauer bzw. Mindestlaufzeit von 5 Jahren erfassen.');
     }
     if (!a.indexBasisMonat?.trim()) {
-      blocker.push('Indexmiete: Basisstand des Landesindexes angeben (Monat/Jahr, z. B. «Mai 2026») — ohne definierte Basis ist die Anpassung nicht bestimmbar (Art. 269b OR; Art. 17 VMWG).');
+      blocker.push('Indexmiete: Basisstand des Landesindexes angeben (Monat/Jahr, z. B. «Mai 2026») – ohne definierte Basis ist die Anpassung nicht bestimmbar (Art. 269b OR; Art. 17 VMWG).');
     }
-    hinweise.push('Indexmiete: zulässig ist ausschliesslich die Bindung an den Landesindex der Konsumentenpreise; Mischklauseln (teils Index, teils Referenzzins) sind unzulässig (Kombination Index/Staffel: BGE 124 III 57 — zu verifizieren). Während der Indexbindung sind andere Anpassungsgründe ausgeschlossen (Anfechtung über Art. 270c OR); die Anpassung ist mit 30 Tagen Frist auf einen Monatsanfang anzukündigen (Art. 17 VMWG — zu verifizieren).');
+    hinweise.push('Indexmiete: zulässig ist ausschliesslich die Bindung an den Landesindex der Konsumentenpreise; Mischklauseln (teils Index, teils Referenzzins) sind unzulässig (Kombination Index/Staffel: BGE 124 III 57 – zu verifizieren). Während der Indexbindung sind andere Anpassungsgründe ausgeschlossen (Anfechtung über Art. 270c OR); die Anpassung ist mit 30 Tagen Frist auf einen Monatsanfang anzukündigen (Art. 17 VMWG – zu verifizieren).');
   }
 
-  // G5 — Staffelmiete: Vertrag ≥ 3 Jahre, höchstens eine Erhöhung pro Jahr,
-  // Betrag in Franken (Art. 269c OR — Wortlaut am Fedlex-Text verifiziert)
+  // G5 – Staffelmiete: Vertrag ≥ 3 Jahre, höchstens eine Erhöhung pro Jahr,
+  // Betrag in Franken (Art. 269c OR – Wortlaut am Fedlex-Text verifiziert)
   if (a.mietzinsModell === 'staffel') {
     const erfuellt = a.befristet && a.befristetBis && a.beginn
       ? jahreErreicht(a.beginn, a.befristetBis, 3)
@@ -237,16 +237,16 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
         break;
       }
     }
-    hinweise.push('Während der Staffelung sind andere Mietzinsanpassungen ausgeschlossen (BGE 121 III 397 — zu verifizieren); die Anfechtung richtet sich nach Art. 270d OR. Seit 1.10.2025 genügt für die Mitteilung der Staffelerhöhung eine formlose SCHRIFTLICHE Mitteilung (kein amtliches Formular), frühestens vier Monate vor dem Erhöhungszeitpunkt (Art. 269d Abs. 5 OR i.V.m. Art. 19a VMWG — zu verifizieren).');
+    hinweise.push('Während der Staffelung sind andere Mietzinsanpassungen ausgeschlossen (BGE 121 III 397 – zu verifizieren); die Anfechtung richtet sich nach Art. 270d OR. Seit 1.10.2025 genügt für die Mitteilung der Staffelerhöhung eine formlose SCHRIFTLICHE Mitteilung (kein amtliches Formular), frühestens vier Monate vor dem Erhöhungszeitpunkt (Art. 269d Abs. 5 OR i.V.m. Art. 19a VMWG – zu verifizieren).');
   }
 
-  // G6 — Nebenkosten: nur geschuldet, wenn besonders vereinbart und EINZELN
-  // aufgeführt (Art. 257a Abs. 2 OR; BGer 4C.250/2006 — zu verifizieren)
+  // G6 – Nebenkosten: nur geschuldet, wenn besonders vereinbart und EINZELN
+  // aufgeführt (Art. 257a Abs. 2 OR; BGer 4C.250/2006 – zu verifizieren)
   if (a.nebenkosten !== 'keine' && a.nkPositionen.length === 0) {
-    blocker.push('Nebenkosten sind nur geschuldet, wenn sie besonders vereinbart und die Positionen einzeln aufgeführt sind (Art. 257a Abs. 2 OR) — mindestens eine Position wählen oder «im Mietzins inbegriffen» wählen.');
+    blocker.push('Nebenkosten sind nur geschuldet, wenn sie besonders vereinbart und die Positionen einzeln aufgeführt sind (Art. 257a Abs. 2 OR) – mindestens eine Position wählen oder «im Mietzins inbegriffen» wählen.');
   }
   if (a.nebenkosten !== 'keine' && a.nkPositionen.length > 0) {
-    hinweise.push('Nur Nebenkosten-Positionen aufnehmen, die beim Objekt TATSÄCHLICH anfallen — werden nicht anfallende Positionen aufgeführt, riskiert die ganze Nebenkostenabrede die Nichtigkeit (BGE 121 III 460 — zu verifizieren); nicht rechtsgenügend vereinbarte Nebenkosten gelten als im Nettomietzins inbegriffen.');
+    hinweise.push('Nur Nebenkosten-Positionen aufnehmen, die beim Objekt TATSÄCHLICH anfallen – werden nicht anfallende Positionen aufgeführt, riskiert die ganze Nebenkostenabrede die Nichtigkeit (BGE 121 III 460 – zu verifizieren); nicht rechtsgenügend vereinbarte Nebenkosten gelten als im Nettomietzins inbegriffen.');
   }
   if (a.nebenkosten === 'pauschale') {
     hinweise.push('Pauschale Nebenkosten: massgeblich sind die Durchschnittswerte dreier Jahre (Art. 4 Abs. 2 VMWG); eine Abrechnungspflicht besteht nicht.');
@@ -255,25 +255,25 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
     hinweise.push('Akonto-Nebenkosten: Der Vermieter rechnet mindestens einmal jährlich ab (Art. 4 Abs. 1 VMWG); der Mieter hat Anspruch auf Belegeinsicht (Art. 257b Abs. 2 OR).');
   }
 
-  // G7 — MWST-Option nur bei Geschäftsraum (Art. 22 Abs. 2 lit. b MWSTG)
+  // G7 – MWST-Option nur bei Geschäftsraum (Art. 22 Abs. 2 lit. b MWSTG)
   if (wohnung && a.mwstOption) {
     blocker.push('Die MWST-Option ist ausgeschlossen, wenn das Objekt ausschliesslich für Wohnzwecke genutzt wird (Art. 22 Abs. 2 lit. b MWSTG).');
   }
 
-  // G8 — Geschäftsraum: Mietzweck ist Pflicht (Nutzungsumfang/Optionsfähigkeit)
+  // G8 – Geschäftsraum: Mietzweck ist Pflicht (Nutzungsumfang/Optionsfähigkeit)
   if (!wohnung && !a.mietzweck?.trim()) {
     blocker.push('Geschäftsraum: Den Mietzweck genau umschreiben (massgeblich für Gebrauchsumfang, Untermiete und MWST-Option).');
   }
 
-  // G9 — Konkurrenzschutz: nicht vertragsimmanent — nur mit Umschreibung
+  // G9 – Konkurrenzschutz: nicht vertragsimmanent – nur mit Umschreibung
   if (a.konkurrenzschutz && !a.konkurrenzschutzText?.trim()) {
     blocker.push('Konkurrenzschutz ist nicht vertragsimmanent und muss ausdrücklich umschrieben werden (geschützte Branche/Nutzung angeben).');
   }
   if (a.konkurrenzschutz && !zahl(a.konkurrenzschutzStrafeCHF)) {
-    hinweise.push('Konkurrenzschutz ohne Konventionalstrafe: Ein blosses vertragliches Verbot erzwingt die Auflösung eines mit dem Konkurrenten geschlossenen Mietvertrags nicht — der geschützte Mieter wird auf Schadenersatz verwiesen. Eine Konventionalstrafe wird empfohlen (Vertiefungs-Gutachten 5.6.2026).');
+    hinweise.push('Konkurrenzschutz ohne Konventionalstrafe: Ein blosses vertragliches Verbot erzwingt die Auflösung eines mit dem Konkurrenten geschlossenen Mietvertrags nicht – der geschützte Mieter wird auf Schadenersatz verwiesen. Eine Konventionalstrafe wird empfohlen (Vertiefungs-Gutachten 5.6.2026).');
   }
 
-  // Familienwohnung (nur Hinweis — Schutz gilt von Gesetzes wegen)
+  // Familienwohnung (nur Hinweis – Schutz gilt von Gesetzes wegen)
   if (wohnung && a.familienwohnung) {
     hinweise.push('Familienwohnung: Kündigung durch die Mieterseite nur mit ausdrücklicher Zustimmung des Ehegatten/eingetragenen Partners (Art. 266m OR); der Vermieter muss Kündigungen und Zahlungsfristen beiden Ehegatten SEPARAT zustellen (Art. 266n OR), sonst Nichtigkeit (Art. 266o OR).');
   }
@@ -283,13 +283,13 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
     hinweise.push('Geschäftsraum von Gesetzes wegen: Retentionsrecht des Vermieters an beweglichen Einrichtungsgegenständen (Art. 268 OR), Erstreckung bis höchstens sechs Jahre (Art. 272b OR), Übertragung des Mietverhältnisses auf einen Dritten mit schriftlicher Zustimmung (Art. 263 OR; Solidarhaftung des bisherigen Mieters max. zwei Jahre).');
   }
   if (!a.befristet && (a.mindestdauerJahre ?? 0) > 10) {
-    hinweise.push('Sehr lange feste Erstlaufzeit: Eine übermässig lange beidseitige Bindung kann nach Art. 27 Abs. 2 ZGB teilnichtig sein — feste zahlenmässige Obergrenze besteht im Schweizer Recht nicht, massgeblich ist die Einzelfallabwägung (zu verifizieren).');
+    hinweise.push('Sehr lange feste Erstlaufzeit: Eine übermässig lange beidseitige Bindung kann nach Art. 27 Abs. 2 ZGB teilnichtig sein – feste zahlenmässige Obergrenze besteht im Schweizer Recht nicht, massgeblich ist die Einzelfallabwägung (zu verifizieren).');
   }
 
   // Standard-Disclosures
-  hinweise.push(`Mietzins-Basis: hypothekarischer Referenzzinssatz ${MV_PARAMETER.referenzzinssatz.wert.toFixed(2)} % (Stand ${MV_PARAMETER.referenzzinssatz.stand}) — Basis künftiger Anpassungen (Art. 269a lit. b OR, Art. 13 VMWG); quartalsweise publiziert, vor Verwendung prüfen.`);
+  hinweise.push(`Mietzins-Basis: hypothekarischer Referenzzinssatz ${MV_PARAMETER.referenzzinssatz.wert.toFixed(2)} % (Stand ${MV_PARAMETER.referenzzinssatz.stand}) – Basis künftiger Anpassungen (Art. 269a lit. b OR, Art. 13 VMWG); quartalsweise publiziert, vor Verwendung prüfen.`);
   if (wohnung) {
-    hinweise.push('Der Mieter kann den Anfangsmietzins innert 30 Tagen nach Übernahme anfechten (Art. 270 OR); ein vertraglicher Ausschluss der Herabsetzung wäre nichtig (BGE 125 III 358 — zu verifizieren).');
+    hinweise.push('Der Mieter kann den Anfangsmietzins innert 30 Tagen nach Übernahme anfechten (Art. 270 OR); ein vertraglicher Ausschluss der Herabsetzung wäre nichtig (BGE 125 III 358 – zu verifizieren).');
   }
   hinweise.push('Streitigkeiten: obligatorische, kostenlose Schlichtung am Ort der gelegenen Sache (Art. 33/197/200 ZPO); auf diesen Gerichtsstand kann der Mieter nicht im Voraus verzichten (Art. 35 ZPO).');
 
@@ -304,19 +304,19 @@ export const MV_SCHEMA: VorlageSchema = {
   titel: 'Mietvertrag',
   format: 'vertrag',
   disclaimer:
-    'Entwurf — erstellt mit LexMetrik. Keine Rechtsberatung. Der Mietvertrag ist formfrei gültig; ' +
-    'Index- und Staffelmiete bedürfen der Schriftform — die beidseitige Unterzeichnung erfüllt sie. ' +
+    'Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Mietvertrag ist formfrei gültig; ' +
+    'Index- und Staffelmiete bedürfen der Schriftform – die beidseitige Unterzeichnung erfüllt sie. ' +
     'Kantonale Formularpflichten für den Anfangsmietzins (Art. 270 Abs. 2 OR) sind zusätzlich zu ' +
     'beachten; massgeblich sind Gesetz (OR/VMWG) und der konkrete Einzelfall.',
   bausteine: [
     { id: 'M01_parteien', rolle: 'parteien',
       text: 'zwischen\n\n{{vermieterBlock}}\n(Vermieter)\n\nund\n\n{{mieterBlock}}\n(Mieter)',
-      begruendung: 'Bezeichnung der Vertragsparteien — immer enthalten.',
+      begruendung: 'Bezeichnung der Vertragsparteien – immer enthalten.',
       norm: 'Art. 253 OR' },
     { id: 'M02_objekt', ueberschrift: 'Mietobjekt',
       text: 'Vermietet wird: {{objektBeschrieb}}, {{objektAdresse}}.{{nebenraeumeSatz}}{{zweckSatz}} Der Zustand des Mietobjekts wird bei der Übergabe in einem gemeinsamen Protokoll festgehalten.',
       nummeriert: true,
-      begruendung: 'Mietobjekt mit Beschrieb, Nebenräumen und Zweck — immer enthalten.',
+      begruendung: 'Mietobjekt mit Beschrieb, Nebenräumen und Zweck – immer enthalten.',
       norm: 'Art. 253 OR' },
     { id: 'M03_beginn_unbefristet', ueberschrift: 'Mietbeginn und Dauer',
       text: 'Das Mietverhältnis beginnt am {{beginnFmt}} und läuft auf unbestimmte Zeit.{{mindestdauerSatz}}',
@@ -331,7 +331,7 @@ export const MV_SCHEMA: VorlageSchema = {
     { id: 'M04_mietzins', ueberschrift: 'Mietzins und Nebenkosten',
       text: 'Der monatliche Nettomietzins beträgt CHF {{nettoFmt}}.{{nkSatz}} Mietzins und Nebenkosten sind monatlich im Voraus, jeweils auf den Ersten des Monats, zu bezahlen.{{refZinsSatz}}',
       nummeriert: true,
-      begruendung: 'Nettomietzins, Nebenkosten-Modus und Referenzzins-Basis (Grundlage künftiger Anpassungen) — immer enthalten.',
+      begruendung: 'Nettomietzins, Nebenkosten-Modus und Referenzzins-Basis (Grundlage künftiger Anpassungen) – immer enthalten.',
       norm: 'Art. 257 OR' },
     { id: 'M04b_nkliste',
       text: '– {{item.label}}',
@@ -365,17 +365,17 @@ export const MV_SCHEMA: VorlageSchema = {
     { id: 'M06b_zahlungsverzug', ueberschrift: 'Zahlungsverzug',
       text: 'Ist der Mieter mit der Zahlung von Mietzins oder Nebenkosten im Rückstand, kann ihm der Vermieter schriftlich eine Zahlungsfrist von mindestens 30 Tagen setzen und ihm für den Fall der Nichtzahlung die Kündigung androhen; bezahlt der Mieter innert Frist nicht, kann der Vermieter mit einer Frist von mindestens 30 Tagen auf das Ende eines Monats kündigen. Bei einer Familienwohnung sind Fristansetzung und Androhung dem Ehegatten bzw. der eingetragenen Partnerin/dem eingetragenen Partner separat zuzustellen.',
       nummeriert: true,
-      begruendung: 'Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) — immer enthalten.',
+      begruendung: 'Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) – immer enthalten.',
       norm: 'Art. 257d OR' },
     { id: 'M07_unterhalt', ueberschrift: 'Unterhalt und Mängel',
       text: 'Der Vermieter erhält das Mietobjekt in einem zum vorausgesetzten Gebrauch tauglichen Zustand. Der Mieter trägt den kleinen Unterhalt, d. h. Reinigungen und Ausbesserungen, die für den gewöhnlichen Gebrauch erforderlich sind und die er ohne besonderen Aufwand selbst vornehmen kann. Mängel sind dem Vermieter unverzüglich zu melden; die gesetzlichen Mängelrechte des Mieters bleiben vorbehalten.',
       nummeriert: true,
-      begruendung: 'Erhaltungspflicht (relativ zwingend) und kleiner Unterhalt in den gesetzlichen Schranken — immer enthalten.',
+      begruendung: 'Erhaltungspflicht (relativ zwingend) und kleiner Unterhalt in den gesetzlichen Schranken – immer enthalten.',
       norm: 'Art. 256 OR' },
     { id: 'M08_gebrauch', ueberschrift: 'Gebrauch, Untermiete und bauliche Änderungen',
       text: 'Der Mieter gebraucht das Mietobjekt sorgfältig und nimmt Rücksicht auf Hausbewohner und Nachbarn. Untervermietung bedarf der Zustimmung des Vermieters; dieser kann sie nur aus den gesetzlichen Gründen verweigern. Erneuerungen und Änderungen am Mietobjekt durch den Mieter bedürfen der schriftlichen Zustimmung des Vermieters; hat der Vermieter zugestimmt, kann er die Wiederherstellung des früheren Zustands nur verlangen, wenn dies schriftlich vereinbart wurde. Weist das Mietobjekt bei Mietende dank solcher Arbeiten einen erheblichen Mehrwert auf, kann der Mieter dafür eine entsprechende Entschädigung verlangen (Art. 260a Abs. 3 OR).{{tierhaltungSatz}}{{hausordnungSatz}}',
       nummeriert: true,
-      begruendung: 'Sorgfaltspflicht, Untermiete (gesetzliche Verweigerungsgründe) und Art. 260a — immer enthalten.',
+      begruendung: 'Sorgfaltspflicht, Untermiete (gesetzliche Verweigerungsgründe) und Art. 260a – immer enthalten.',
       norm: 'Art. 262 OR' },
     { id: 'M09_versicherung', ueberschrift: 'Versicherung',
       text: '{{versicherungText}}',
@@ -390,7 +390,7 @@ export const MV_SCHEMA: VorlageSchema = {
     { id: 'M11_konkurrenzschutz', ueberschrift: 'Konkurrenzschutz',
       text: 'Der Vermieter verpflichtet sich, in der gleichen Liegenschaft keine Räume an direkte Konkurrenten des Mieters im folgenden Bereich zu vermieten: {{konkurrenzschutzText}}.{{ksStrafeSatz}}',
       includeIf: { feld: 'konkurrenzschutzZeigen', eq: true }, nummeriert: true,
-      begruendung: 'Konkurrenzschutz ist nicht vertragsimmanent — ausdrücklich vereinbart und umschrieben.',
+      begruendung: 'Konkurrenzschutz ist nicht vertragsimmanent – ausdrücklich vereinbart und umschrieben.',
       norm: 'Art. 253 OR',
       hinweis: 'Gesetzlich nicht spezifisch geregelt; Reichweite vor Verwendung anwaltlich prüfen.' },
     { id: 'M12_kuendigung', ueberschrift: 'Kündigung',
@@ -401,16 +401,16 @@ export const MV_SCHEMA: VorlageSchema = {
     { id: 'M13_rueckgabe', ueberschrift: 'Rückgabe',
       text: 'Bei Beendigung des Mietverhältnisses gibt der Mieter das Mietobjekt in dem Zustand zurück, der sich aus vertragsgemässem Gebrauch ergibt. Über die Rückgabe wird ein gemeinsames Protokoll erstellt; der Vermieter prüft den Zustand sofort und meldet Mängel, für die der Mieter einzustehen hat, umgehend.',
       nummeriert: true,
-      begruendung: 'Rückgabe und sofortige Prüf-/Rügeobliegenheit des Vermieters — immer enthalten.',
+      begruendung: 'Rückgabe und sofortige Prüf-/Rügeobliegenheit des Vermieters – immer enthalten.',
       norm: 'Art. 267 OR' },
     { id: 'M14_schluss', ueberschrift: 'Schlussbestimmungen',
       text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Streitigkeiten aus diesem Vertrag werden zunächst der Schlichtungsbehörde am Ort des Mietobjekts unterbreitet. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 253 ff. OR) und der VMWG.',
       nummeriert: true,
-      begruendung: 'Schriftformvorbehalt, Schlichtung am Ort der Sache, Gesetzesverweis — immer enthalten.',
+      begruendung: 'Schriftformvorbehalt, Schlichtung am Ort der Sache, Gesetzesverweis – immer enthalten.',
       norm: 'Art. 274 OR' },
     { id: 'M15_unterschriften', rolle: 'unterschrift',
       text: '{{ort}}, {{datumFmt}}\n\n\nDer Vermieter:\n\n___________________________\n{{vermieterName}}\n\n\nDer Mieter / Die Mieter:\n\n___________________________\n{{mieterUnterschrift}}{{zweiteUnterschriftSatz}}',
-      begruendung: 'Ort, Datum und Unterschriften — erfüllt die Schriftform der formbedürftigen Klauseln.',
+      begruendung: 'Ort, Datum und Unterschriften – erfüllt die Schriftform der formbedürftigen Klauseln.',
       norm: 'Art. 255 OR' },
   ],
 };
@@ -463,7 +463,7 @@ export function mvZusammenstellen(a: MvAntworten) {
     nettoFmt: a.mietzinsNettoCHF ? fmtCHF(a.mietzinsNettoCHF) : '________',
     nkSatz,
     nkListe: a.nebenkosten === 'keine' ? [] : a.nkPositionen.map((label) => ({ label })),
-    // Referenzzins-Basis NUR im Standard-Modell — bei Index-/Staffelmiete
+    // Referenzzins-Basis NUR im Standard-Modell – bei Index-/Staffelmiete
     // sind andere Anpassungsgründe ausgeschlossen (Vertiefungs-Gutachten
     // 5.6.2026: der Satz wäre dort materiell falsch).
     refZinsSatz: a.mietzinsModell === 'standard'

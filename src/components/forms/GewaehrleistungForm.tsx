@@ -18,7 +18,7 @@ const GW_DISCLAIMER =
   'Automatisierte Orientierungsberechnung zu Gewährleistung und Mängelrüge (Art. 197 ff., 219/219a, 367 ff. OR; ' +
   'Teilrevision «Baumängel» in Kraft seit 1.1.2026) – keine Rechtsberatung. Die «sofort»-Rügefrist ist einzelfallabhängig; ' +
   'alle Tagesangaben sind Näherungen der Rechtsprechung. Nicht abgebildet: Viehkauf, Kulturgüter, Rechtsgewährleistung ' +
-  '(Eviktion), SIA-118-Detailregelungen sowie die AT-Verjährungsmechanik (Stillstand/Unterbrechung/Verzicht — dafür der ' +
+  '(Eviktion), SIA-118-Detailregelungen sowie die AT-Verjährungsmechanik (Stillstand/Unterbrechung/Verzicht – dafür der ' +
   'Verjährungsrechner). Umstritten bzw. offen: Beginn bei sukzessiver Ablieferung, Abgrenzung Werkvertrag/Kauf, Reichweite ' +
   'der «Integration» in ein Bauwerk. Der konkrete Fall ist fachlich zu prüfen.';
 
@@ -189,7 +189,7 @@ export function GewaehrleistungForm() {
           <>
             <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" checked={konsument} onChange={(e) => setKonsument(e.target.checked)} />
-              Konsumentenkauf (persönlicher/familiärer Gebrauch, gewerblicher Verkäufer — Art. 210 Abs. 4 OR)
+              Konsumentenkauf (persönlicher/familiärer Gebrauch, gewerblicher Verkäufer – Art. 210 Abs. 4 OR)
             </label>
             {konsument && (
               <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
@@ -202,7 +202,7 @@ export function GewaehrleistungForm() {
         {istWerk && (
           <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" checked={sia} onChange={(e) => setSia(e.target.checked)} />
-            SIA-Norm 118 vereinbart (zweijährige Garantiefrist, 5-Jahres-Verjährung — Vertragswerk, zu prüfen)
+            SIA-Norm 118 vereinbart (zweijährige Garantiefrist, 5-Jahres-Verjährung – Vertragswerk, zu prüfen)
           </label>
         )}
       </div>
@@ -227,14 +227,14 @@ export function GewaehrleistungForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="lc-tile space-y-1">
               <div className="flex items-start justify-between gap-2">
-                <p className="text-xs text-ink-500">Mängelrüge — Verwirkungsfrist</p>
+                <p className="text-xs text-ink-500">Mängelrüge – Verwirkungsfrist</p>
                 {ergebnis.ruege.zwingend && <span className="lc-badge lc-badge-warn shrink-0">zwingend</span>}
               </div>
               {ergebnis.ruege.art === 'entfaellt' ? (
                 <p className="text-body-l font-semibold text-ink-900">entfällt (Arglist, Art. 203 OR)</p>
               ) : ergebnis.ruege.art === 'sofort' ? (
                 <>
-                  <p className="text-body-l font-semibold text-ink-900 num">«sofort» — Richtwert {fmtISO(ergebnis.ruege.richtwertISO)}</p>
+                  <p className="text-body-l font-semibold text-ink-900 num">«sofort» – Richtwert {fmtISO(ergebnis.ruege.richtwertISO)}</p>
                   <p className="text-xs text-ink-500 num">sicher: {fmtISO(ergebnis.ruege.sicherISO)} · äusserstens: {fmtISO(ergebnis.ruege.maximalISO)} (Einzelfall)</p>
                 </>
               ) : (
@@ -249,7 +249,7 @@ export function GewaehrleistungForm() {
 
             <div className="lc-tile space-y-1">
               <div className="flex items-start justify-between gap-2">
-                <p className="text-xs text-ink-500">Verjährung — Einrede (Art. 142 OR)</p>
+                <p className="text-xs text-ink-500">Verjährung – Einrede (Art. 142 OR)</p>
                 {ergebnis.verjaehrung.teilzwingend && <span className="lc-badge lc-badge-ok shrink-0">teilzwingend</span>}
               </div>
               <p className="text-body-l font-semibold text-ink-900 num">

@@ -21,7 +21,7 @@ export function proEinloggen(): void {
   try {
     localStorage.setItem(KEY, '1');
   } catch {
-    /* Speicher nicht verfügbar — Sitzung gilt nur für die laufende Ansicht */
+    /* Speicher nicht verfügbar – Sitzung gilt nur für die laufende Ansicht */
   }
 }
 

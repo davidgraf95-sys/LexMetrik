@@ -1,5 +1,5 @@
 // Langes Schweizer Datumsformat für Briefkopf/Unterschriften der Vorlagen
-// («5. Juni 2026») — deterministisch aus ISO, kein Locale-API.
+// («5. Juni 2026») – deterministisch aus ISO, kein Locale-API.
 const MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
   'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
@@ -25,7 +25,7 @@ export function fmtCHF(roh: string): string {
   return ganz.replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.' + dez;
 }
 
-/** Robuste Zahl aus Nutzereingabe (Apostroph/Komma toleriert) — sonst null. */
+/** Robuste Zahl aus Nutzereingabe (Apostroph/Komma toleriert) – sonst null. */
 export const zahl = (roh?: string): number | null => {
   const n = Number(String(roh ?? '').replace(/['\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) && String(roh ?? '').trim() !== '' ? n : null;

@@ -11,10 +11,10 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 
-// ─── LIK-Teuerungsrechner — UI ──────────────────────────────────────────────
+// ─── LIK-Teuerungsrechner – UI ──────────────────────────────────────────────
 // Reine Darstellung; Formel, Basis-AUTO-Wahl und alle Rechtsregeln liegen in
 // lib/teuerung.ts (Daten: amtliche BFS-Reihe, data/likReihe.ts). Der Nutzer
-// wählt MONAT/JAHR — den Indexstand schlägt der Rechner selbst nach
+// wählt MONAT/JAHR – den Indexstand schlägt der Rechner selbst nach
 // (Kern-UX-Entscheid des Konzept-Berichts 5.6.2026).
 
 const DISCLAIMER =
@@ -23,9 +23,9 @@ const DISCLAIMER =
   '(Indexklausel, Basis, Rundung) und die amtlichen BFS-Werte.';
 
 const MODI: { code: TeuerungModus; label: string; sub: string }[] = [
-  { code: 'generisch', label: 'Wertsicherung (generisch)', sub: 'Renten, Pacht, Lizenzen — BFS-Dreisatz' },
+  { code: 'generisch', label: 'Wertsicherung (generisch)', sub: 'Renten, Pacht, Lizenzen – BFS-Dreisatz' },
   { code: 'indexmiete', label: 'Indexmiete', sub: '100 %-Weitergabe (Art. 269b OR / Art. 17 VMWG)' },
-  { code: 'unterhalt', label: 'Unterhaltsbeitrag', sub: 'Art. 286 / 128 ZGB — Index gemäss Urteil' },
+  { code: 'unterhalt', label: 'Unterhaltsbeitrag', sub: 'Art. 286 / 128 ZGB – Index gemäss Urteil' },
 ];
 
 const JAHRE: number[] = [];
@@ -37,10 +37,10 @@ function MonatJahr({ wert, onChange, label, hint }: { wert: string; onChange: (v
   return (
     <Field label={label} hint={hint}>
       <div className="flex gap-2">
-        <select className={inputCls} value={m} onChange={(e) => onChange(`${j}-${e.target.value}`)} aria-label={`${label} — Monat`}>
+        <select className={inputCls} value={m} onChange={(e) => onChange(`${j}-${e.target.value}`)} aria-label={`${label} – Monat`}>
           {MONATE.map((mm) => <option key={mm} value={mm}>{monatLabel(`2000-${mm}`).split(' ')[0]}</option>)}
         </select>
-        <select className={inputCls + ' w-28'} value={j} onChange={(e) => onChange(`${e.target.value}-${m}`)} aria-label={`${label} — Jahr`}>
+        <select className={inputCls + ' w-28'} value={j} onChange={(e) => onChange(`${e.target.value}-${m}`)} aria-label={`${label} – Jahr`}>
           {JAHRE.map((jj) => <option key={jj} value={jj}>{jj}</option>)}
         </select>
       </div>
@@ -126,7 +126,7 @@ export function TeuerungForm() {
         <MonatJahr label={modus === 'unterhalt' ? 'Indexstand bei Urteil/Vereinbarung' : modus === 'indexmiete' ? 'Indexstand bei Vertrag/letzter Anpassung' : 'Ausgangsmonat (Index alt)'}
           wert={von} onChange={setVon} />
         <MonatJahr label="Zielmonat (Index neu)" wert={bis} onChange={setBis}
-          hint={`letzter publizierter Monat: ${monatLabel(LIK_LETZTER_MONAT)} — der LIK erscheint erst im Folgemonat${modus === 'unterhalt' ? '; Praxis: November des Vorjahres' : ''}`} />
+          hint={`letzter publizierter Monat: ${monatLabel(LIK_LETZTER_MONAT)} – der LIK erscheint erst im Folgemonat${modus === 'unterhalt' ? '; Praxis: November des Vorjahres' : ''}`} />
       </div>
 
       {fehler && (

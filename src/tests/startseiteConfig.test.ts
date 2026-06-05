@@ -20,7 +20,7 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
 
   it('jede URL ist ein Fedlex-Direktlink: artikelgenauer Anker ODER Gesetzes-Seite (Normentreue-Fallback)', () => {
     // Anker-los nur erlaubt, wenn die Pill ein GANZES Gesetz referenziert
-    // (Label ohne «Art.») — z. B. das Fristengesetz SR 173.110.3 beim
+    // (Label ohne «Art.») – z. B. das Fristengesetz SR 173.110.3 beim
     // Tagerechner (Auftrag 5.6.2026: Link auf die Gesetzes-Seite, bis ein
     // Anker artikelgenau verifiziert und fachlich abgenommen ist).
     aktiv.flatMap((k) => k.norms).forEach((n) => {
@@ -183,7 +183,7 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   });
 });
 
-describe('RECHTSBEREICH_GRUPPEN (Pro-Katalog, Phase 2) — Vollständigkeit beider Modelle', () => {
+describe('RECHTSBEREICH_GRUPPEN (Pro-Katalog, Phase 2) – Vollständigkeit beider Modelle', () => {
   it('jedes Config-Rechtsgebiet liegt in genau EINER Gruppe; keine Gruppe nennt Unbekanntes', async () => {
     const { ALLE_GRUPPEN_MODELLE } = await import('../lib/rechtsbereichGruppen');
     for (const [modell, gruppen] of Object.entries(ALLE_GRUPPEN_MODELLE)) {

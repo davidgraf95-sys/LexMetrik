@@ -7,7 +7,7 @@ import { registriereBerichtFonts } from './fonts';
 //
 // State-of-the-art-Bericht mit eingebetteten Markenschriften:
 // Fraunces (Display-Serife: Titel, Sektionsköpfe) · Geist (Sans: Lauftext)
-// · Geist Mono (Kennzahlen, Overlines, Pills, Formeln) — exakt die Web-
+// · Geist Mono (Kennzahlen, Overlines, Pills, Formeln) – exakt die Web-
 // Typografie. Layout: A4, 20-mm-Raster, LexMetrik-Kopf mit Goldlinie,
 // Ergebnis-Hero, Eingaben-Tabelle, unzerreissbare Rechenweg-Schritte mit
 // klickbaren Norm-Pills, sichtbare Fedlex-URLs, Fusszeile «Seite X von Y».
@@ -103,7 +103,7 @@ class Zeichner {
     this.y += 5.5;
   }
 
-  /** Mono-Overline (Versalien, gesperrt) — die Web-«lc-overline». */
+  /** Mono-Overline (Versalien, gesperrt) – die Web-«lc-overline». */
   private overline(text: string, x: number, y: number, color: [number, number, number]) {
     this.doc.setFont('GeistMono', 'normal');
     this.doc.setFontSize(7);
@@ -279,7 +279,7 @@ class Zeichner {
     this.y += 3.5;
   }
 
-  /** 4. Rechenweg-Schritt — als Ganzes unzerreissbar. */
+  /** 4. Rechenweg-Schritt – als Ganzes unzerreissbar. */
   schritt(nr: number, titel: string, formel: string, normen: { label: string; url?: string }[], rechtsprechung?: string) {
     const einzug = 8;
     const breite = USABLE - einzug;
@@ -367,7 +367,7 @@ class Zeichner {
     this.y += 2.4;
   }
 
-  /** Ergebnisbox je Abschnitt (voller Ergebnissatz — Inhalt unverändert). */
+  /** Ergebnisbox je Abschnitt (voller Ergebnissatz – Inhalt unverändert). */
   ergebnisbox(text: string, status: BerechnungsStatus) {
     const pad = 4.5;
     const sText: Schrift = { size: 10, bold: true, color: INK };
@@ -466,7 +466,7 @@ class Zeichner {
     this.doc.roundedRect(MARGIN, this.y, USABLE, hBox, 1.8, 1.8, 'D');
 
     let ty = this.y + pad + 1;
-    this.overline('Rechtlicher Hinweis — keine Rechtsberatung', MARGIN + pad, ty, DEZENT);
+    this.overline('Rechtlicher Hinweis – keine Rechtsberatung', MARGIN + pad, ty, DEZENT);
     ty += 5.5;
     this.setSchrift(s);
     zeilen.forEach((zeile) => {

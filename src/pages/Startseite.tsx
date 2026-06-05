@@ -5,7 +5,7 @@ import { Katalog, SectionHead } from '../components/Katalog';
 // Free-Seite: zeigt nur die kostenlose Auswahl (tier 'free').
 // Der vollständige Katalog steht in Pro unter /pro.
 
-// Teaser für Pro — helle Karte mit Messing-Oberkante (gleiche Sprache wie
+// Teaser für Pro – helle Karte mit Messing-Oberkante (gleiche Sprache wie
 // die aktiven Rechnerkarten), Highlights und Kennzahlen aus der Config.
 // Bewusst dezent: ein Zugang, keine Werbefläche.
 function ProTeaser() {
@@ -43,24 +43,24 @@ function ProTeaser() {
 }
 
 export function Startseite() {
-  // Gliederung nach Rechtsgebiet mit Untergruppen Rechner/Vorlagen — der
+  // Gliederung nach Rechtsgebiet mit Untergruppen Rechner/Vorlagen – der
   // frühere Modus-Umschalter als Primärweiche ist damit abgelöst (Auftrag
   // «Katalog-Ausbau» §4; beide Gruppen stehen unter jedem Gebiet).
   const karten = ALLE_KARTEN.filter((k) => k.tier === 'free');
 
   return (
     <div>
-      {/* HERO → KATALOG: bewusst kompakt (Entscheid 5.6.2026 — weniger
+      {/* HERO → KATALOG: bewusst kompakt (Entscheid 5.6.2026 – weniger
           Scrollweg vor der ersten Karte). Determinismus-Claim genau einmal. */}
       {/* Schlanker Einzeilen-Hero über die volle Inhaltsbreite (Entscheid
-          5.6.2026): Titel + Claim auf EINER Zeile, minimale Höhe — der
+          5.6.2026): Titel + Claim auf EINER Zeile, minimale Höhe – der
           Katalog ist der Star. Auf Mobile darf der Claim umbrechen. */}
       <section className="pt-3 sm:pt-4 pb-3 border-b border-line flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-0.5 sm:whitespace-nowrap">
         <h1 className="font-display font-semibold text-ink-900 text-h3 shrink-0">
           Schweizer Recht: berechnen und erstellen.
         </h1>
         <p className="text-body-s text-ink-500 sm:truncate sm:min-w-0">
-          Fristen, Beträge und Rechtsdokumente nach festen Regeln — jeder Schritt offengelegt, jede Norm verlinkt.
+          Fristen, Beträge und Rechtsdokumente nach festen Regeln – jeder Schritt offengelegt, jede Norm verlinkt.
         </p>
       </section>
 
@@ -78,9 +78,9 @@ export function Startseite() {
         <SectionHead>So rechnet LexMetrik</SectionHead>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { t: 'Berechnung statt KI', b: 'LexMetrik nutzt kein Sprachmodell und keine Wahrscheinlichkeiten, sondern festgelegte Rechenregeln. Gleiche Eingaben ergeben immer dasselbe Ergebnis. Jeder Schritt wird offengelegt und jede angewandte Norm direkt mit dem Gesetzestext verlinkt — so ist jedes Ergebnis überprüfbar statt geschätzt.' },
+            { t: 'Berechnung statt KI', b: 'LexMetrik nutzt kein Sprachmodell und keine Wahrscheinlichkeiten, sondern festgelegte Rechenregeln. Gleiche Eingaben ergeben immer dasselbe Ergebnis. Jeder Schritt wird offengelegt und jede angewandte Norm direkt mit dem Gesetzestext verlinkt – so ist jedes Ergebnis überprüfbar statt geschätzt.' },
             { t: 'Verifizierte Normverweise', b: 'Nur explizit genannte, geprüfte Gesetzesartikel werden fest verdrahtet. Rechtsprechung trägt einen Verifikations-Vorbehalt.' },
-            { t: 'Nachvollziehbarer Rechenweg', b: 'Jeder Schritt zeigt Eingangsgrössen, angewandte Norm und Zwischenergebnis — vollständig im PDF-Bericht.' },
+            { t: 'Nachvollziehbarer Rechenweg', b: 'Jeder Schritt zeigt Eingangsgrössen, angewandte Norm und Zwischenergebnis – vollständig im PDF-Bericht.' },
             { t: 'Praxis statt Schublade', b: 'Kantonale Skalen und Gerichtspraxis werden als solche gekennzeichnet und sind vor Produktiveinsatz zu prüfen.' },
           ].map((c) => (
             <div key={c.t} className="lc-card p-5">

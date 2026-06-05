@@ -212,7 +212,7 @@ describe('Sperrtage-Zähler (Art. 336c Abs. 1 OR)', () => {
   });
 });
 
-describe('Audit 5.6.2026 — anschliessende Sperrfristen bei Nichtigkeit', () => {
+describe('Audit 5.6.2026 – anschliessende Sperrfristen bei Nichtigkeit', () => {
   it('frühestens neue Kündigung erst nach ALLEN zusammenhängenden Sperrfristen', () => {
     const r = berechneSperrfristen({
       ...BASE,

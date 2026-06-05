@@ -3,7 +3,7 @@ import type { VerzugszinsErgebnis } from '../lib/verzugszins';
 import { formatCHF } from '../lib/verzugszins';
 
 // Grafische Antwort für den Verzugszins. Single Source of Truth: BEIDE Balken
-// rendern ausschliesslich aus e.segmente und den Engine-Summen — keine eigene
+// rendern ausschliesslich aus e.segmente und den Engine-Summen – keine eigene
 // Rechenlogik in der Komponente.
 //
 // (A) Rate-Zeitstrahl: ein Abschnitt pro Segment, Breite strikt proportional
@@ -46,7 +46,7 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
         tage: fillerTage,
         label: 'getilgt',
         farbe: GETILGT_FARBE,
-        title: `${segmente[segmente.length - 1].bis} – ${e.stichtag}: Kapital getilgt — kein weiterer Zinslauf`,
+        title: `${segmente[segmente.length - 1].bis} – ${e.stichtag}: Kapital getilgt – kein weiterer Zinslauf`,
       });
     }
     const gesamtTage = abschnitte.reduce((sum, a) => sum + a.tage, 0) || 1;
@@ -112,7 +112,7 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
           <span>{e.stichtag}</span>
         </div>
         {/* Legende (Konsistenz-Check 5.6.2026): Farbe ↔ Zinssatz, deckungs-
-            gleich mit den gerenderten Segmenten — wichtig bei Mini-Segmenten,
+            gleich mit den gerenderten Segmenten – wichtig bei Mini-Segmenten,
             deren Inline-Label nicht mehr lesbar ist */}
         {legende.length > 1 && (
           <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1.5 text-body-s text-ink-600">

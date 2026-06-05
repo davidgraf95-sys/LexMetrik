@@ -13,7 +13,7 @@ const basis = (patch: Partial<AllgFristInput> = {}): AllgFristInput => ({
   ...patch,
 });
 
-describe('Allgemeiner Fristenrechner — Goldwerte', () => {
+describe('Allgemeiner Fristenrechner – Goldwerte', () => {
   it('AF-1 Tagesfrist: 23.10.2020 + 30 Tage = So 22.11.2020 (dies a quo zählt nicht)', () => {
     const r = berechneAllgemeineFrist(basis());
     expect(r.endDatum).toBe('22.11.2020');
@@ -73,7 +73,7 @@ describe('Allgemeiner Fristenrechner — Goldwerte', () => {
     expect(r.rohEndDatum).toBe('01.08.2026');
     expect(r.endDatum).toBe('03.08.2026');
     expect(r.endWochentag).toBe('Montag');
-    expect(r.verschiebeGruende).toHaveLength(2); // Sa(Feiertag) + So — je genau einmal
+    expect(r.verschiebeGruende).toHaveLength(2); // Sa(Feiertag) + So – je genau einmal
   });
 
   it('AF-10 Weihnacht auf Samstag (ZH): Roh-Ende Sa 25.12.2027 → Mo 27.12.2027 (26.12. So übersprungen)', () => {
@@ -104,7 +104,7 @@ describe('Allgemeiner Fristenrechner — Goldwerte', () => {
   });
 
   it('AF-14 Systemtest: identisch mit zpoFristen für Tagesfrist ausserhalb der Gerichtsferien', () => {
-    // 10 Tage ab Di 3.6.2025: Lauf 4.6.–13.6.2025 — vollständig ausserhalb
+    // 10 Tage ab Di 3.6.2025: Lauf 4.6.–13.6.2025 – vollständig ausserhalb
     // aller ZPO-Stillstandsperioden (Ostern/Sommer/Weihnachten, Art. 145 ZPO).
     const allg = berechneAllgemeineFrist(basis({
       start: '2025-06-03', laenge: 10, einheit: 'tage',
@@ -134,7 +134,7 @@ describe('Allgemeiner Fristenrechner — Goldwerte', () => {
   });
 });
 
-describe('Allgemeiner Fristenrechner — Review-Befund (Toggle-Kopplung)', () => {
+describe('Allgemeiner Fristenrechner – Review-Befund (Toggle-Kopplung)', () => {
   it('AF-16 Feiertags-Option impliziert Wochenend-Verschiebung: Sa 1.8.2026 → Mo 3.8.2026 (nie Sonntags-Ende)', () => {
     const r = berechneAllgemeineFrist(basis({
       start: '2026-07-31', laenge: 1, einheit: 'tage',
@@ -149,12 +149,12 @@ describe('Allgemeiner Fristenrechner — Review-Befund (Toggle-Kopplung)', () =>
       start: '2025-04-17', laenge: 1, einheit: 'tage',
       wochenendeVerschieben: true, feiertageVerschieben: false,
     }));
-    expect(r.endDatum).toBe('18.04.2025'); // Karfreitag — Feiertage bewusst ignoriert
+    expect(r.endDatum).toBe('18.04.2025'); // Karfreitag – Feiertage bewusst ignoriert
     expect(r.verschoben).toBe(false);
   });
 });
 
-describe('Verbesserungs-Auftrag 5.6.2026 — P1', () => {
+describe('Verbesserungs-Auftrag 5.6.2026 – P1', () => {
   it('AF-18 Rückwärts: Termin 20.4.2026 − 10 Tage = spätester Ladungstag 10.4.2026 (volle Tage 11.–20.4.)', async () => {
     const { berechneRueckwaertsFrist } = await import('../lib/allgemeineFrist');
     const r = berechneRueckwaertsFrist({ stichtag: '2026-04-20', laenge: 10, einheit: 'tage', verschiebung: 'keine' });

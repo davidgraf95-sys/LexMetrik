@@ -1,7 +1,7 @@
 // ─── Vorlagen-Engine (generisch, deterministisch) ──────────────────────────
 //
 // Dokumente entstehen durch regelbasierte Zusammenstellung fester, juristisch
-// vorformulierter Textbausteine — KEIN Sprachmodell, keine Wahrscheinlichkeit.
+// vorformulierter Textbausteine – KEIN Sprachmodell, keine Wahrscheinlichkeit.
 // assemble() ist eine reine Funktion: identische Antworten ⇒ identisches
 // Dokument. Jeder aufgenommene Baustein wird im Protokoll mit Auslöser und
 // Normbezug offengelegt (Bausteinprotokoll).
@@ -17,11 +17,11 @@ export type Bedingung =
 // ── Formatvorlagen (Entscheid 5.6.2026): Das Schema deklariert den
 // Dokumenttyp und die Layout-Rolle einzelner Absätze; PDF, DOCX und
 // Live-Vorschau interpretieren BEIDE aus derselben Quelle.
-//  'verfuegung' — feierliche Urkunde (Testament, PV, VA): zentrierter
+//  'verfuegung' – feierliche Urkunde (Testament, PV, VA): zentrierter
 //                 Serifen-Titel, ruhige Absätze
-//  'vertrag'    — Vertragslayout: Titel, Parteien-Ingress, nummerierte
+//  'vertrag'    – Vertragslayout: Titel, Parteien-Ingress, nummerierte
 //                 Ziffern mit fetten Überschriften, Unterschriftenblock
-//  'eingabe'    — Rechtsschreiben: Absender/Adressat-Block, Datum rechts,
+//  'eingabe'    – Rechtsschreiben: Absender/Adressat-Block, Datum rechts,
 //                 fetter Betreff (KEIN zentrierter Dokumenttitel)
 export type VorlageFormat = 'verfuegung' | 'vertrag' | 'eingabe';
 export type AbsatzRolle =
@@ -104,7 +104,7 @@ const ISO_DATUM = /^\d{4}-\d{2}-\d{2}$/;
 
 // Platzhalter-Konvention: leere Felder zeigen den Ausfüll-Strich «________»
 // (Live-Vorschau). OPTIONALE SATZ-FRAGMENTE enden per Konvention auf
-// «…Satz» oder «…Zeile» und verschwinden leer ersatzlos — sonst stünde
+// «…Satz» oder «…Zeile» und verschwinden leer ersatzlos – sonst stünde
 // mitten im Satz ein Strich (Befund Format-Review 5.6.2026).
 const FRAGMENT = /(Satz|Zeile)$/;
 
@@ -132,7 +132,7 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
   for (const b of schema.bausteine) {
     if (b.includeIf && !erfuellt(b.includeIf, antworten)) continue;
 
-    // Leere Wiederholungsliste ZUERST prüfen — sonst entstünde eine
+    // Leere Wiederholungsliste ZUERST prüfen – sonst entstünde eine
     // Nummerierungs-Lücke (Zähler erhöht, Baustein aber übersprungen).
     let liste: unknown[] | null = null;
     if (b.wiederholeUeber) {

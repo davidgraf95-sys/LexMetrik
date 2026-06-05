@@ -15,7 +15,7 @@ import { KANTONE } from '../lib/kantone';
 import { karte } from '../lib/startseiteConfig';
 
 // ─── Vorlagen-Wizard: Mietvertrag Wohn-/Geschäftsräume (Art. 253 ff. OR) ────
-// Zentrale Weiche: objektTyp (Wohnraum | Geschäftsraum) + Kanton — gemäss
+// Zentrale Weiche: objektTyp (Wohnraum | Geschäftsraum) + Kanton – gemäss
 // Gutachten 5.6.2026. Gates: Kautionsmaximum, Mindestfristen, Index-/Staffel-
 // Voraussetzungen, Nebenkosten-Einzelausweis, MWST nur Geschäftsraum; die
 // kantonale Formularpflicht für den Anfangsmietzins wird als Warnung
@@ -33,8 +33,8 @@ const SCHRITTE = [
 ] as const;
 
 const BANNER_MV: PdfBanner = {
-  titel: 'VERTRAGSENTWURF — VON BEIDEN PARTEIEN ZU UNTERZEICHNEN',
-  text: 'Der Mietvertrag ist formfrei gültig; Index- und Staffelmiete bedürfen der Schriftform — die beidseitige Unterzeichnung erfüllt sie. Kantonale Formularpflichten für den Anfangsmietzins bleiben vorbehalten (Art. 270 Abs. 2 OR).',
+  titel: 'VERTRAGSENTWURF – VON BEIDEN PARTEIEN ZU UNTERZEICHNEN',
+  text: 'Der Mietvertrag ist formfrei gültig; Index- und Staffelmiete bedürfen der Schriftform – die beidseitige Unterzeichnung erfüllt sie. Kantonale Formularpflichten für den Anfangsmietzins bleiben vorbehalten (Art. 270 Abs. 2 OR).',
 };
 
 const FORMULARPFLICHT_KANTONE = new Set(MV_FORMULARPFLICHT.map((k) => k.kanton));
@@ -92,8 +92,8 @@ export function VorlageMietvertrag() {
         <div className="space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {([
-              ['wohnung', 'Wohnraum', 'Wohnung, Einfamilienhaus — voller Mieterschutz'],
-              ['geschaeftsraum', 'Geschäftsraum', 'Büro, Laden, Gewerbe — freiere Gestaltung'],
+              ['wohnung', 'Wohnraum', 'Wohnung, Einfamilienhaus – voller Mieterschutz'],
+              ['geschaeftsraum', 'Geschäftsraum', 'Büro, Laden, Gewerbe – freiere Gestaltung'],
             ] as const).map(([code, label, sub]) => (
               <button key={code} type="button" onClick={() => {
                 set('objektTyp', code);
@@ -130,7 +130,7 @@ export function VorlageMietvertrag() {
             </Field>
           </div>
           {!wohnung && (
-            <Field label="Mietzweck" hint="genau umschreiben — massgeblich für Gebrauchsumfang und MWST-Option">
+            <Field label="Mietzweck" hint="genau umschreiben – massgeblich für Gebrauchsumfang und MWST-Option">
               <input className={inputCls} value={a.mietzweck ?? ''} onChange={(e) => set('mietzweck', e.target.value || undefined)} placeholder="z. B. Betrieb eines Architekturbüros" />
             </Field>
           )}
@@ -180,7 +180,7 @@ export function VorlageMietvertrag() {
                 <input type="number" min={0} max={20} className={inputCls + ' w-28 num'} value={a.mindestdauerJahre ?? ''}
                   onChange={(e) => set('mindestdauerJahre', e.target.value === '' ? undefined : Number(e.target.value))} />
               </Field>
-              <Field label="Kündigungsfrist (Monate)" hint={`gesetzliches Minimum: ${fristMin} Monate (${wohnung ? 'Art. 266c' : 'Art. 266d'} OR) — auf ortsübliche Termine`}>
+              <Field label="Kündigungsfrist (Monate)" hint={`gesetzliches Minimum: ${fristMin} Monate (${wohnung ? 'Art. 266c' : 'Art. 266d'} OR) – auf ortsübliche Termine`}>
                 <input type="number" min={fristMin} max={12} className={inputCls + ' w-28 num'} value={a.kuendigungsfristMonate ?? fristMin}
                   onChange={(e) => set('kuendigungsfristMonate', Number(e.target.value))} />
               </Field>
@@ -199,8 +199,8 @@ export function VorlageMietvertrag() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
               {([
                 ['standard', 'Standard', `Referenzzins-Basis ${MV_PARAMETER.referenzzinssatz.wert.toFixed(2)} %`],
-                ['index', 'Indexmiete', 'LIK-gebunden — Vertrag ≥ 5 Jahre'],
-                ['staffel', 'Staffelmiete', 'feste Erhöhungen — Vertrag ≥ 3 Jahre'],
+                ['index', 'Indexmiete', 'LIK-gebunden – Vertrag ≥ 5 Jahre'],
+                ['staffel', 'Staffelmiete', 'feste Erhöhungen – Vertrag ≥ 3 Jahre'],
               ] as const).map(([code, label, sub]) => (
                 <button key={code} type="button" onClick={() => {
                   set('mietzinsModell', code);
@@ -218,7 +218,7 @@ export function VorlageMietvertrag() {
             </div>
             {a.mietzinsModell === 'index' && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <Field label="LIK-Basisstand (Monat/Jahr)" hint="z. B. «Mai 2026» — definiert die Anpassungsbasis (Art. 17 VMWG)">
+                <Field label="LIK-Basisstand (Monat/Jahr)" hint="z. B. «Mai 2026» – definiert die Anpassungsbasis (Art. 17 VMWG)">
                   <input className={inputCls} value={a.indexBasisMonat ?? ''} onChange={(e) => set('indexBasisMonat', e.target.value || undefined)} placeholder="z. B. Mai 2026" />
                 </Field>
                 <Field label="Punktestand" optional>
@@ -270,7 +270,7 @@ export function VorlageMietvertrag() {
                 <Field label={a.nebenkosten === 'akonto' ? 'Akonto (CHF pro Monat)' : 'Pauschale (CHF pro Monat)'}>
                   <BetragsFeld className={inputCls + ' num w-40'} value={a.nebenkostenCHF ?? ''} onChange={(v) => set('nebenkostenCHF', v || undefined)} placeholder="z. B. 250" />
                 </Field>
-                <p className="text-xs text-ink-500">Positionen einzeln wählen — eine Sammelklausel genügt nicht:</p>
+                <p className="text-xs text-ink-500">Positionen einzeln wählen – eine Sammelklausel genügt nicht:</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {nkKatalog.map((p) => (
                     <label key={p} className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
@@ -288,7 +288,7 @@ export function VorlageMietvertrag() {
       case 'klauseln': return (
         <div className="space-y-5">
           <Field label="Kaution (CHF)" optional
-            hint={wohnung ? 'höchstens drei Monatszinse (Art. 257e Abs. 2 OR); Hinterlegung auf Sperrkonto auf den Namen des Mieters' : 'keine gesetzliche Obergrenze — angemessenes Verhältnis zum Risiko'}>
+            hint={wohnung ? 'höchstens drei Monatszinse (Art. 257e Abs. 2 OR); Hinterlegung auf Sperrkonto auf den Namen des Mieters' : 'keine gesetzliche Obergrenze – angemessenes Verhältnis zum Risiko'}>
             <BetragsFeld className={inputCls + ' num w-44'} value={a.kautionCHF ?? ''} onChange={(v) => set('kautionCHF', v || undefined)} placeholder="z. B. 4'300" />
           </Field>
           <div className="space-y-2">
@@ -326,7 +326,7 @@ export function VorlageMietvertrag() {
               </label>
               <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.konkurrenzschutz ?? false} onChange={(e) => set('konkurrenzschutz', e.target.checked || undefined)} />
-                <span><strong>Konkurrenzschutz</strong> vereinbaren <span className="text-ink-500">(nicht vertragsimmanent — muss ausdrücklich umschrieben werden)</span></span>
+                <span><strong>Konkurrenzschutz</strong> vereinbaren <span className="text-ink-500">(nicht vertragsimmanent – muss ausdrücklich umschrieben werden)</span></span>
               </label>
               {a.konkurrenzschutz && (
                 <>
@@ -334,7 +334,7 @@ export function VorlageMietvertrag() {
                     <input className={inputCls} value={a.konkurrenzschutzText ?? ''} onChange={(e) => set('konkurrenzschutzText', e.target.value || undefined)}
                       placeholder="z. B. Betrieb einer Apotheke" />
                   </Field>
-                  <Field label="Konventionalstrafe (CHF)" optional hint="empfohlen — ein blosses Verbot erzwingt keine Auflösung des Konkurrenz-Mietvertrags">
+                  <Field label="Konventionalstrafe (CHF)" optional hint="empfohlen – ein blosses Verbot erzwingt keine Auflösung des Konkurrenz-Mietvertrags">
                     <BetragsFeld className={inputCls + ' num w-44'} value={a.konkurrenzschutzStrafeCHF ?? ''} onChange={(v) => set('konkurrenzschutzStrafeCHF', v || undefined)} placeholder="z. B. 10'000" />
                   </Field>
                 </>
@@ -368,18 +368,18 @@ export function VorlageMietvertrag() {
 
           {/* Form-Gate */}
           <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
-            <p className="lc-overline text-brass-700">Form-Gate — damit der Vertrag trägt</p>
+            <p className="lc-overline text-brass-700">Form-Gate – damit der Vertrag trägt</p>
             <ul className="space-y-2 text-body-s text-ink-700">
-              <li><strong>Beidseitig unterzeichnen</strong> — erfüllt die Schriftform von Index-/Staffelmiete.</li>
-              <li><strong>Elektronisch nur mit QES:</strong> Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) — einfache E-Signatur oder eingescannte Unterschrift genügen nicht.</li>
-              {wohnung && <li><strong>Formularpflicht prüfen:</strong> In BS, BE, FR, GE, LU, NE*, VD*, ZG und ZH ist der Anfangsmietzins mit dem amtlichen Formular mitzuteilen — sonst ist die Mietzinsabrede nichtig (Art. 270 Abs. 2 OR; Stand 4.2.2026, dynamisch).</li>}
+              <li><strong>Beidseitig unterzeichnen</strong> – erfüllt die Schriftform von Index-/Staffelmiete.</li>
+              <li><strong>Elektronisch nur mit QES:</strong> Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) – einfache E-Signatur oder eingescannte Unterschrift genügen nicht.</li>
+              {wohnung && <li><strong>Formularpflicht prüfen:</strong> In BS, BE, FR, GE, LU, NE*, VD*, ZG und ZH ist der Anfangsmietzins mit dem amtlichen Formular mitzuteilen – sonst ist die Mietzinsabrede nichtig (Art. 270 Abs. 2 OR; Stand 4.2.2026, dynamisch).</li>}
               <li><strong>Übergabeprotokoll</strong> bei Einzug gemeinsam erstellen (Beweissicherung).</li>
               <li><strong>Kaution</strong> auf ein Sperrkonto auf den Namen des Mieters einzahlen (Art. 257e OR).</li>
               {!wohnung && <li><strong>MWST-Option:</strong> Rechnungsanforderungen (Art. 26 MWSTG) für den Vorsteuerabzug beachten.</li>}
             </ul>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
-              Ich habe verstanden: Dies ist ein Entwurf nach festen Bausteinen — kantonale Formularpflichten, Referenzzins-Stand und der Einzelfall sind gesondert zu prüfen.
+              Ich habe verstanden: Dies ist ein Entwurf nach festen Bausteinen – kantonale Formularpflichten, Referenzzins-Stand und der Einzelfall sind gesondert zu prüfen.
             </label>
           </section>
 
@@ -405,7 +405,7 @@ export function VorlageMietvertrag() {
     <VorlagenWizardRahmen
       overline={`${card?.rechtsgebiet ?? 'Miete'} · Vorlage`}
       titel="Mietvertrag"
-      intro="Stellt einen Mietvertrag für Wohn- oder Geschäftsräume aus festen, juristisch vorformulierten Bausteinen zusammen — mit harten Schranken für zwingendes Recht (Kautionsmaximum, Mindestfristen, Index-/Staffel-Voraussetzungen) und offengelegten kantonalen Form-Gates. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument."
+      intro="Stellt einen Mietvertrag für Wohn- oder Geschäftsräume aus festen, juristisch vorformulierten Bausteinen zusammen – mit harten Schranken für zwingendes Recht (Kautionsmaximum, Mindestfristen, Index-/Staffel-Voraussetzungen) und offengelegten kantonalen Form-Gates. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument."
       norms={card?.norms ?? []}
       badge="Beidseitig zu unterzeichnen"
       zuruecksetzen={zuruecksetzen}

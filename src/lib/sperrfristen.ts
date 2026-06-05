@@ -289,7 +289,7 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
     intervalle.push(iv);
     sperrIntervalle.push({ von: iso(iv.von), bis: iso(iv.bis), typ: e.typ });
     // Zähler: Krankheit nach Art.-77-Zählung (Anfangstag zählt nicht, daher
-    // ohne +1 — deckungsgleich mit dem Kontingent); übrige Typen Kalendertage.
+    // ohne +1 – deckungsgleich mit dem Kontingent); übrige Typen Kalendertage.
     const beansprucht = e.typ === 'krankheit_unfall'
       ? differenceInDays(iv.bis, iv.von)
       : differenceInDays(iv.bis, iv.von) + 1;
@@ -316,7 +316,7 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
 
   if (waehrendSperrfrist) {
     // Audit 5.6.2026: Massgeblich für die Wiederholung ist das Ende der
-    // GESAMTEN geschlossenen Sperrzeit — überlappende oder unmittelbar
+    // GESAMTEN geschlossenen Sperrzeit – überlappende oder unmittelbar
     // anschliessende Sperrfristen weiterer Ereignisse werden vereinigt
     // (gleiche unionIntervalle-Logik wie im Hemmungspfad). Sonst fiele die
     // «frühestens»-Empfehlung mitten in die nächste Sperrfrist und die

@@ -4,7 +4,7 @@ import {
   type AvAntworten,
 } from '../lib/vorlagen/arbeitsvertrag';
 
-// Akzeptanztests Einzelarbeitsvertrag — prüfen die Gutachtens-Matrix
+// Akzeptanztests Einzelarbeitsvertrag – prüfen die Gutachtens-Matrix
 // (zwingendes Recht, Schriftform-Klauseln, Disclosure) deterministisch.
 
 const basis = (patch: Partial<AvAntworten> = {}): AvAntworten => ({
@@ -21,7 +21,7 @@ const basis = (patch: Partial<AvAntworten> = {}): AvAntworten => ({
 const texte = (a: AvAntworten) => avZusammenstellen(a).dokument.absaetze.map((x) => x.text).join('\n');
 const ids = (a: AvAntworten) => avZusammenstellen(a).dokument.absaetze.map((x) => x.bausteinId);
 
-describe('Arbeitsvertrag — Gates (zwingendes Recht)', () => {
+describe('Arbeitsvertrag – Gates (zwingendes Recht)', () => {
   it('AT-1 Probezeit über drei Monaten blockiert (Art. 335b Abs. 2 OR)', () => {
     expect(pruefeAvGates(basis({ probezeit: 'verlaengert', probezeitMonate: 4 })).blocker.join()).toMatch(/drei Monate/);
     expect(pruefeAvGates(basis({ probezeit: 'verlaengert', probezeitMonate: 3 })).blocker).toEqual([]);
@@ -81,7 +81,7 @@ describe('Arbeitsvertrag — Gates (zwingendes Recht)', () => {
   });
 });
 
-describe('Arbeitsvertrag — Bausteine (Schriftform & Disclosure)', () => {
+describe('Arbeitsvertrag – Bausteine (Schriftform & Disclosure)', () => {
   it('AT-8 Standardvertrag enthält Pflicht-Bausteine in fester Reihenfolge', () => {
     const liste = ids(basis());
     for (const id of ['A01_parteien', 'A02_funktion', 'A03_arbeitsort', 'A04_probezeit_gesetzlich',
@@ -124,7 +124,7 @@ describe('Arbeitsvertrag — Bausteine (Schriftform & Disclosure)', () => {
   });
 });
 
-describe('Arbeitsvertrag — Review-Befunde (Regression)', () => {
+describe('Arbeitsvertrag – Review-Befunde (Regression)', () => {
   it('AT-13 Ferienzuschlag im Monatslohn blockiert (Abwehr-Gate; UI setzt das Feld zurück)', () => {
     expect(pruefeAvGates(basis({ lohnModell: 'monatslohn', ferienzuschlagSeparat: true })).blocker.join())
       .toMatch(/Monatslohn/);
@@ -154,7 +154,7 @@ describe('Arbeitsvertrag — Review-Befunde (Regression)', () => {
   });
 });
 
-describe('Arbeitsvertrag — Vertiefungs-Gutachten 5.6.2026', () => {
+describe('Arbeitsvertrag – Vertiefungs-Gutachten 5.6.2026', () => {
   it('AT-17 Befristung: Probezeit als VEREINBART deklariert, nie als gesetzliche Vermutung (Art. 335b OR)', () => {
     const r = avZusammenstellen(basis({ befristet: true, befristetBis: '2027-07-31', probezeit: 'gesetzlich' }));
     const ids = r.dokument.absaetze.map((x) => x.bausteinId);

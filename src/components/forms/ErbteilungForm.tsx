@@ -145,7 +145,7 @@ export function ErbteilungForm() {
         </Field>
         <Field label="Nachlass (CHF, optional)"
           hint={gueterrechtAn
-            ? 'Wird unten güterrechtlich hergeleitet — Direkteingabe ist deaktiviert'
+            ? 'Wird unten güterrechtlich hergeleitet – Direkteingabe ist deaktiviert'
             : 'Leer = nur Quoten; mit Betrag werden Erb- und Pflichtteile in CHF ausgewiesen'}>
           <input type="number" min={0} value={betraege.direkt} disabled={gueterrechtAn}
             onChange={(e) => setBetraege((b) => ({ ...b, direkt: e.target.value }))}
@@ -222,11 +222,11 @@ export function ErbteilungForm() {
         </div>
       )}
 
-      {/* Güterrechtliche Herleitung (optional) — übersteuert das Direktfeld oben */}
+      {/* Güterrechtliche Herleitung (optional) – übersteuert das Direktfeld oben */}
       <div className="border border-line rounded-lg">
         <button type="button" onClick={() => setGueterrechtAn(!gueterrechtAn)}
           className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${gueterrechtAn ? '' : 'rounded-b-lg'}`}>
-          <span className="text-body-s font-medium text-ink-700">Güterrechtliche Vorstufe — Nachlass herleiten (optional)</span>
+          <span className="text-body-s font-medium text-ink-700">Güterrechtliche Vorstufe – Nachlass herleiten (optional)</span>
           <span className="text-ink-500">{gueterrechtAn ? '▲' : '▼'}</span>
         </button>
         {gueterrechtAn && (
@@ -299,7 +299,7 @@ export function ErbteilungForm() {
               <tbody>
                 {ergebnis.erben.map((e) => (
                   <tr key={e.bezeichnung} className="border-b border-line last:border-0">
-                    <td className="py-1.5 pr-3 text-ink-900">{e.bezeichnung}{e.anzahl ? ` — ${e.anzahl} Personen, je:` : ''}</td>
+                    <td className="py-1.5 pr-3 text-ink-900">{e.bezeichnung}{e.anzahl ? ` – ${e.anzahl} Personen, je:` : ''}</td>
                     <td className="py-1.5 pr-3 num text-ink-900">{fmtB(e.erbteil)}</td>
                     <td className="py-1.5 pr-3 num">{istNull(e.pflichtteil) ? <span className="text-ink-500">– kein PT</span> : <span className="text-ink-900">{fmtB(e.pflichtteil)}</span>}</td>
                     {nachlass != null && <td className="py-1.5 pr-3 num text-ink-700">{fmtCHF(zahl(e.erbteil) * nachlass)}</td>}

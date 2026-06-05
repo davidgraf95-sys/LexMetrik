@@ -32,7 +32,7 @@ describe('LIK-Datenreihe (amtliche Spotchecks)', () => {
   });
 });
 
-describe('Teuerungsrechner — Berechnung', () => {
+describe('Teuerungsrechner – Berechnung', () => {
   it('Basis-AUTO wählt die jüngste gemeinsame Originalbasis (wie der BFS-Rechner)', () => {
     expect(basisAuto('2022-12', '2026-04')).toBe('2020-12');
     expect(basisAuto('2007-10', '2012-03')).toBe('2005-12');

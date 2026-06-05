@@ -3,7 +3,7 @@ import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/l
 import { formatDatum } from './datumsUtils';
 import { rechtsprechung } from '../data/verifikation';
 
-// ─── Verzugszins (Art. 104 OR) — praxistaugliche, event-basierte Berechnung ──
+// ─── Verzugszins (Art. 104 OR) – praxistaugliche, event-basierte Berechnung ──
 //
 // Art. 104 fixiert den ZINSSATZ (Abs. 1: 5%/Jahr dispositiv; Abs. 2: höher vertraglich;
 // Abs. 3: kaufmännischer Diskonto), NICHT die Tageszählung. Eingebaut sind ferner:
@@ -55,7 +55,7 @@ export type VerzugszinsErgebnis = Berechnungsergebnis & {
 
 // ─── Normverweise ─────────────────────────────────────────────────────────
 
-const N_104_1: Normverweis = { artikel: 'Art. 104 Abs. 1 OR', bemerkung: '5% pro Jahr (dispositiv)' };
+const N_104_1: Normverweis = { artikel: 'Art. 104 Abs. 1 OR', bemerkung: '5 % pro Jahr (dispositiv)' };
 const N_104_2: Normverweis = { artikel: 'Art. 104 Abs. 2 OR', bemerkung: 'höherer vertraglicher Zins' };
 const N_104_3: Normverweis = { artikel: 'Art. 104 Abs. 3 OR', bemerkung: 'kaufmännischer Bankdiskonto' };
 const N_102:   Normverweis = { artikel: 'Art. 102 OR', bemerkung: 'Verzug: Mahnung / Verfalltag' };
@@ -172,10 +172,10 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
   const satzNormen = grund === 'vertraglich' ? [N_104_2] : grund === 'kaufmaennisch' ? [N_104_3] : [N_104_1];
   const satzText =
     grund === 'vertraglich'
-      ? `Vertraglich vereinbarter Verzugszins von ${startSatz}% (Art. 104 Abs. 2 OR); Beweislast für die Vereinbarung beim Gläubiger.`
+      ? `Vertraglich vereinbarter Verzugszins von ${startSatz} % (Art. 104 Abs. 2 OR); Beweislast für die Vereinbarung beim Gläubiger.`
       : grund === 'kaufmaennisch'
-        ? `Kaufmännischer Verzugszins von ${startSatz}% (Art. 104 Abs. 3 OR): nur im objektiv kaufmännischen Verkehr, soweit der übliche Bankdiskonto (Privatdiskontsatz) 5% übersteigt.`
-        : `Gesetzlicher Verzugszins von ${startSatz}% pro Jahr (Art. 104 Abs. 1 OR).`;
+        ? `Kaufmännischer Verzugszins von ${startSatz} % (Art. 104 Abs. 3 OR): nur im objektiv kaufmännischen Verkehr, soweit der übliche Bankdiskonto (Privatdiskontsatz) 5 % übersteigt.`
+        : `Gesetzlicher Verzugszins von ${startSatz} % pro Jahr (Art. 104 Abs. 1 OR).`;
   rechenweg.push({
     beschreibung: 'Schritt 3 – Massgebender Zinssatz',
     zwischenergebnis: satzText,
@@ -224,7 +224,7 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
       zinsTotal = round2(zinsTotal + zins);
       rechenweg.push({
         beschreibung: `Periode ${fmt(cursor)} – ${fmt(g)} (${tage} Tage)`,
-        zwischenergebnis: `CHF ${formatCHF(kapital)} × ${satz}% × ${tage}/${basis} = CHF ${formatCHF(zins)} (${METHODE_LABEL[methode]}).`,
+        zwischenergebnis: `CHF ${formatCHF(kapital)} × ${satz} % × ${tage}/${basis} = CHF ${formatCHF(zins)} (${METHODE_LABEL[methode]}).`,
         normen: [N_104_1],
       });
     }
@@ -251,7 +251,7 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
       satz = e.satz;
       rechenweg.push({
         beschreibung: `Zinssatz-Änderung ab ${fmt(g)}`,
-        zwischenergebnis: `Neuer Verzugszinssatz: ${satz}%.`,
+        zwischenergebnis: `Neuer Verzugszinssatz: ${satz} %.`,
         normen: [N_104_1],
       });
     }
@@ -293,7 +293,7 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
 
   const ergebnisText = zinsGetilgt > 0 || (input.ereignisse ?? []).length > 0
     ? `Offener Verzugszins: CHF ${formatCHF(zinsOffen)}; offenes Kapital: CHF ${formatCHF(kapitalOffen)}; Total offen: CHF ${formatCHF(totalOffen)}. Aufgelaufener Verzugszins gesamt: CHF ${formatCHF(zinsTotal)}.`
-    : `Verzugszins: CHF ${formatCHF(zinsTotal)} (${startSatz}% auf CHF ${formatCHF(input.kapital)} für ${tageTotal} Tage). Total inkl. Kapital: CHF ${formatCHF(totalOffen)}.`;
+    : `Verzugszins: CHF ${formatCHF(zinsTotal)} (${startSatz} % auf CHF ${formatCHF(input.kapital)} für ${tageTotal} Tage). Total inkl. Kapital: CHF ${formatCHF(totalOffen)}.`;
 
   const normverweise = [N_104_1, N_104_2, N_104_3, N_102, N_85, N_105_3, N_106];
   if (input.rueckstaendigeZinsforderung) normverweise.push(N_105_1);

@@ -1,7 +1,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 
-// ─── Vorsorgeauftrag (Art. 360–369 ZGB) — dritte Vorlage ────────────────────
+// ─── Vorsorgeauftrag (Art. 360–369 ZGB) – dritte Vorlage ────────────────────
 //
 // Gemäss normverifizierter Implementierungs-Anweisung (in Kraft seit 1.1.2013,
 // seither nicht revidiert). Zentrale Determinismus-Weiche: formMode —
@@ -53,7 +53,7 @@ export type VaBeauftragte = {
 };
 
 export type VaAntworten = {
-  // Step 0 — Eligibility (Art. 13/14/16/398 ZGB)
+  // Step 0 – Eligibility (Art. 13/14/16/398 ZGB)
   volljaehrig: boolean;
   urteilsfaehigBestaetigt: boolean;
   keineUmfassendeBeistandschaft: boolean;
@@ -104,13 +104,13 @@ export const VA_DEFAULTS: VaAntworten = {
 // keine erfundene Vollabdeckung; sonst generischer Hinweis).
 export function beurkundungsHinweis(kanton?: string): string {
   const k = (kanton ?? '').toUpperCase();
-  if (k === 'ZH') return 'Zürich: Amtsnotariat — ausschliessliche Zuständigkeit der Notariate.';
+  if (k === 'ZH') return 'Zürich: Amtsnotariat – ausschliessliche Zuständigkeit der Notariate.';
   if (k === 'BE') return 'Bern: freies Notariat (Richtwert gemäss Praxis ab ca. CHF 500).';
   if (k === 'TI') return 'Tessin: freies (lateinisches) Notariat.';
-  if (k === 'SG') return 'St. Gallen: gemischtes System — auch Anwältinnen/Anwälte beurkundungsbefugt (Amtsnotariat Richtwert ca. CHF 400 zzgl. MwSt).';
-  if (k === 'TG' || k === 'AR' || k === 'AI') return `${k}: gemischtes System — auch Anwältinnen/Anwälte beurkundungsbefugt.`;
+  if (k === 'SG') return 'St. Gallen: gemischtes System – auch Anwältinnen/Anwälte beurkundungsbefugt (Amtsnotariat Richtwert ca. CHF 400 zzgl. MwSt).';
+  if (k === 'TG' || k === 'AR' || k === 'AI') return `${k}: gemischtes System – auch Anwältinnen/Anwälte beurkundungsbefugt.`;
   if (k === 'SZ') return 'Schwyz: auch Gemeinde-/Landschreiber beurkundungsbefugt.';
-  return 'Das Beurkundungsverfahren richtet sich nach kantonalem Recht (Art. 55 SchlT ZGB; BGE 151 III 81) — zuständige Urkundsperson am Wohnsitz erfragen.';
+  return 'Das Beurkundungsverfahren richtet sich nach kantonalem Recht (Art. 55 SchlT ZGB; BGE 151 III 81) – zuständige Urkundsperson am Wohnsitz erfragen.';
 }
 
 // ── Gates ───────────────────────────────────────────────────────────────────
@@ -122,10 +122,10 @@ export function pruefeVaGates(a: VaAntworten): VaGateErgebnis {
   const warnungen: string[] = [];
   const hinweise: string[] = [];
 
-  // Eligibility-Gate (Art. 13/14/16/398 ZGB) — hart
+  // Eligibility-Gate (Art. 13/14/16/398 ZGB) – hart
   if (!a.volljaehrig || !a.urteilsfaehigBestaetigt || !a.keineUmfassendeBeistandschaft) {
     blocker.push(
-      'Errichtungsvoraussetzungen nicht bestätigt: Der Vorsorgeauftrag verlangt Handlungsfähigkeit — Volljährigkeit (Art. 14 ZGB), Urteilsfähigkeit (Art. 16 ZGB) und keine umfassende Beistandschaft (Art. 398 ZGB).',
+      'Errichtungsvoraussetzungen nicht bestätigt: Der Vorsorgeauftrag verlangt Handlungsfähigkeit – Volljährigkeit (Art. 14 ZGB), Urteilsfähigkeit (Art. 16 ZGB) und keine umfassende Beistandschaft (Art. 398 ZGB).',
     );
   }
 
@@ -140,17 +140,17 @@ export function pruefeVaGates(a: VaAntworten): VaGateErgebnis {
     (b) => b.typ === 'juristisch' && b.bereiche.includes('personensorge') && a.module.personensorge.includes('medizin'),
   );
   if (medizinJuristisch) {
-    blocker.push('Die Vertretung bei medizinischen Massnahmen kann nur einer NATÜRLICHEN Person übertragen werden (Art. 378 Abs. 1 Ziff. 1 ZGB) — bitte Person oder Modulauswahl anpassen.');
+    blocker.push('Die Vertretung bei medizinischen Massnahmen kann nur einer NATÜRLICHEN Person übertragen werden (Art. 378 Abs. 1 Ziff. 1 ZGB) – bitte Person oder Modulauswahl anpassen.');
   }
 
   // Liegenschaften → ausdrückliche Sondervollmacht (wird automatisch aufgenommen)
   if (a.module.vermoegenssorge.includes('liegenschaften')) {
-    hinweise.push('Liegenschaften gewählt: Die ausdrückliche Sondervollmacht für Erwerb, Belastung und Veräusserung von Grundstücken wird automatisch aufgenommen (Art. 396 Abs. 3 OR — analoge Anwendung in der Lehre umstritten, von der Praxis aber empfohlen).');
+    hinweise.push('Liegenschaften gewählt: Die ausdrückliche Sondervollmacht für Erwerb, Belastung und Veräusserung von Grundstücken wird automatisch aufgenommen (Art. 396 Abs. 3 OR – analoge Anwendung in der Lehre umstritten, von der Praxis aber empfohlen).');
   }
 
   // Ersatzperson empfohlen
   if (aktiveBereiche.size > 0 && a.ersatzpersonen.filter((e) => e.name.trim()).length === 0) {
-    hinweise.push('Eine Ersatzverfügung ist empfohlen, falls die beauftragte Person ungeeignet ist, ablehnt oder kündigt (Art. 360 Abs. 3 ZGB) — idealerweise eine Person ausserhalb möglicher Interessenkonflikte.');
+    hinweise.push('Eine Ersatzverfügung ist empfohlen, falls die beauftragte Person ungeeignet ist, ablehnt oder kündigt (Art. 360 Abs. 3 ZGB) – idealerweise eine Person ausserhalb möglicher Interessenkonflikte.');
   }
 
   // Entschädigung offen → KESB legt fest
@@ -158,7 +158,7 @@ export function pruefeVaGates(a: VaAntworten): VaGateErgebnis {
     hinweise.push('Ohne Entschädigungsregelung legt die KESB bei der Validierung eine angemessene Entschädigung fest (Art. 366 ZGB), zulasten der auftraggebenden Person.');
   }
 
-  // Wirksamkeit erst nach KESB-Validierung — immer
+  // Wirksamkeit erst nach KESB-Validierung – immer
   hinweise.push('Wirksam wird der Vorsorgeauftrag erst, wenn die KESB am Wohnsitz (Art. 442 ZGB) bei eingetretener Urteilsunfähigkeit Gültigkeit, Voraussetzungen und Eignung geprüft hat (Validierung, Art. 363 ZGB).');
 
   return { blocker, warnungen, hinweise };
@@ -178,7 +178,7 @@ export const VA_SCHEMA: VorlageSchema = {
   titel: 'Vorsorgeauftrag',
   ausgabeArt: 'abschrift',  // eigenhändig Art. 361 Abs. 2 ZGB; bei Beurkundung → 'entwurf' (zusammenstellen)
   disclaimer:
-    'Entwurf — erstellt mit LexMetrik. Keine Rechtsberatung. Gültig ist der Vorsorgeauftrag nur ' +
+    'Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Gültig ist der Vorsorgeauftrag nur ' +
     'vollständig eigenhändig (von Hand geschrieben, datiert, unterzeichnet, Art. 361 Abs. 2 ZGB) ' +
     'oder öffentlich beurkundet (Art. 361 Abs. 1 ZGB); wirksam erst nach Validierung durch die ' +
     'KESB (Art. 363 ZGB). Bei komplexen Vermögensverhältnissen oder Unternehmen: Notariat bzw. ' +
@@ -188,9 +188,9 @@ export const VA_SCHEMA: VorlageSchema = {
       id: 'V01_identifikation',
       text:
         'Ich, {{vorname}} {{nachname}}, geboren am {{geburtsdatum}}, von {{heimatort}}, wohnhaft ' +
-        '{{adresse}}, errichte hiermit — handlungsfähig im Sinne von Art. 13 ZGB — für den Fall ' +
+        '{{adresse}}, errichte hiermit – handlungsfähig im Sinne von Art. 13 ZGB – für den Fall ' +
         'meiner Urteilsunfähigkeit den folgenden Vorsorgeauftrag:',
-      begruendung: 'Identifikation und Handlungsfähigkeits-Präambel — immer enthalten.',
+      begruendung: 'Identifikation und Handlungsfähigkeits-Präambel – immer enthalten.',
       norm: 'Art. 360 Abs. 1 ZGB',
     },
     {
@@ -278,7 +278,7 @@ export const VA_SCHEMA: VorlageSchema = {
         'und zu veräussern sowie die entsprechenden Grundbucheinschreibungen zu veranlassen.',
       includeIf: { feld: 'liegenschaftenGewaehlt', eq: true },
       nummeriert: true,
-      begruendung: 'Automatisch aufgenommen, weil das Modul «Liegenschaften» gewählt wurde — ausdrückliche Sondervollmacht.',
+      begruendung: 'Automatisch aufgenommen, weil das Modul «Liegenschaften» gewählt wurde – ausdrückliche Sondervollmacht.',
       norm: 'Art. 396 Abs. 3 OR',
       hinweis: 'Ob Art. 396 Abs. 3 OR auf den Vorsorgeauftrag analog anwendbar ist, ist in der Lehre umstritten; die Praxis empfiehlt die ausdrückliche Sondervollmacht dennoch.',
     },
@@ -291,7 +291,7 @@ export const VA_SCHEMA: VorlageSchema = {
       nummeriert: true,
       begruendung: 'Aufgenommen, weil Gelegenheitsgeschenke erlaubt werden sollen.',
       norm: 'Art. 240 Abs. 2 OR',
-      hinweis: 'Aus dem Vermögen einer handlungsunfähigen Person dürfen nur übliche Gelegenheitsgeschenke ausgerichtet werden — weitergehende Schenkungen sind problematisch.',
+      hinweis: 'Aus dem Vermögen einer handlungsunfähigen Person dürfen nur übliche Gelegenheitsgeschenke ausgerichtet werden – weitergehende Schenkungen sind problematisch.',
     },
     {
       id: 'V09_besondere',
@@ -341,7 +341,7 @@ export const VA_SCHEMA: VorlageSchema = {
       id: 'V14_schluss_eigenhaendig', rolle: 'unterschrift',
       text: '{{ortDatumZeile}}\n\n\n_________________________________\n(eigenhändige Unterschrift: {{vorname}} {{nachname}})',
       includeIf: { feld: 'formMode', eq: 'eigenhaendig' },
-      begruendung: 'Schlussformel der eigenhändigen Form: Ort/Datum und Unterschrift werden — wie der ganze Text — von Hand geschrieben.',
+      begruendung: 'Schlussformel der eigenhändigen Form: Ort/Datum und Unterschrift werden – wie der ganze Text – von Hand geschrieben.',
       norm: 'Art. 361 Abs. 2 ZGB',
     },
     {

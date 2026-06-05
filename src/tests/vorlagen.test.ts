@@ -151,7 +151,7 @@ describe('Vorlage Eigenhändiges Testament', () => {
   });
 });
 
-describe('Vorlagen-Engine — Nummerierung (Bug-Check)', () => {
+describe('Vorlagen-Engine – Nummerierung (Bug-Check)', () => {
   it('leere Wiederholungsliste erzeugt keine Nummerierungs-Lücke', () => {
     const schema: VorlageSchema = {
       id: 's', version: '1', titel: 'T', disclaimer: 'D',
@@ -371,7 +371,7 @@ describe('Vorlagen-DOCX (eine Quelle, mehrere Renderer)', () => {
 // ── Formatvorlagen-Renderer (Review-Zusatztests 5.6.2026) ───────────────────
 
 describe('Formatvorlagen (DOCX-Absatzmodell)', () => {
-  it('eingabe: kein Dokumenttitel — der fette Betreff trägt ihn; Rollen durchgereicht', async () => {
+  it('eingabe: kein Dokumenttitel – der fette Betreff trägt ihn; Rollen durchgereicht', async () => {
     const { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } = await import('../lib/vorlagen/schlichtungsgesuchBs');
     const r = sgZusammenstellen({
       ...SG_DEFAULTS,
@@ -480,7 +480,7 @@ describe('Formatvorlagen (AusgabeArt-Matrix)', () => {
 });
 
 describe('Vorschau ≙ Output (werkgetreuer Renderer, 5.6.2026)', () => {
-  it('Vorschau interpretiert dieselben MUSTER wie PDF/DOCX (SSoT) — Anatomie-Stichproben', async () => {
+  it('Vorschau interpretiert dieselben MUSTER wie PDF/DOCX (SSoT) – Anatomie-Stichproben', async () => {
     const { renderToString } = await import('react-dom/server');
     const React = await import('react');
     const { VorschauPanel } = await import('../components/vorlagen/wizard');

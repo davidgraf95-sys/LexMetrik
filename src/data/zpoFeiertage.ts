@@ -149,7 +149,7 @@ export function istArbeitsfreierTag(date: Date, kanton: Kanton): boolean {
 }
 
 /** Vorwärtsschiebung auf den nächsten Werktag (Sa/So/anerkannter Feiertag
- *  am massgebenden Ort) — kanonische Stelle; zuvor als while-Schleife in
+ *  am massgebenden Ort) – kanonische Stelle; zuvor als while-Schleife in
  *  fristenEngine, verjaehrung und mietrecht je eigens ausgeschrieben. */
 export function naechsterWerktag(d: Date, kanton: Kanton): Date {
   let t = d;

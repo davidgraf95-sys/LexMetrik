@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 
-// Footer (ausgebaut): dreispaltig — Marke + Kurzbeschrieb, Navigation,
+// Footer (ausgebaut): dreispaltig – Marke + Kurzbeschrieb, Navigation,
 // Hinweise; darunter Mono-Feinschriftzeile. Paper-Grund, obere Hairline.
 
 const NAVIGATION = [
-  { to: '/', label: 'Free — Rechner & Vorlagen' },
-  { to: '/pro', label: 'Pro — vollständiger Katalog' },
+  { to: '/', label: 'Free – Rechner & Vorlagen' },
+  { to: '/pro', label: 'Pro – vollständiger Katalog' },
   { to: '/methodik', label: 'Methodik' },
   { to: '/ueber', label: 'Über LexMetrik' },
 ];
@@ -17,12 +17,12 @@ export function Footer() {
       <div className="max-w-content mx-auto px-5 sm:px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr] gap-x-12 gap-y-8">
         {/* Marke */}
         <div className="space-y-3">
-          <Link to="/" className="inline-flex items-center gap-2 no-underline" aria-label="LexMetrik — Startseite">
+          <Link to="/" className="inline-flex items-center gap-2 no-underline" aria-label="LexMetrik – Startseite">
             <LexMetrikSiegel size={26} />
             <LexMetrikWortmarke />
           </Link>
           <p className="text-body-s text-ink-500 leading-relaxed max-w-[34ch]">
-            Schweizer Recht: berechnen und erstellen — nach festen Regeln,
+            Schweizer Recht: berechnen und erstellen – nach festen Regeln,
             Schritt für Schritt nachvollziehbar, jede Norm direkt verlinkt.
           </p>
         </div>

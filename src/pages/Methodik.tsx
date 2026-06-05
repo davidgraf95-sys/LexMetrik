@@ -1,4 +1,4 @@
-// Seite «Methodik» — vertiefte Fassung; die Kurzfassung («So rechnet LexMetrik»)
+// Seite «Methodik» – vertiefte Fassung; die Kurzfassung («So rechnet LexMetrik»)
 // auf der Startseite bleibt davon unberührt.
 
 const ABSCHNITTE: { titel: string; text: string }[] = [
@@ -7,7 +7,7 @@ const ABSCHNITTE: { titel: string; text: string }[] = [
     text:
       'LexMetrik ist kein Chatbot und kein Sprachmodell. Hinter jedem Rechner stehen fest ' +
       'programmierte Regeln, die direkt aus Gesetz und Rechtsprechung abgeleitet sind. Daraus folgt ' +
-      'unmittelbar: Gleiche Eingaben ergeben immer dasselbe Ergebnis — heute, morgen und bei der ' +
+      'unmittelbar: Gleiche Eingaben ergeben immer dasselbe Ergebnis – heute, morgen und bei der ' +
       'nächsten Person. Keine Wahrscheinlichkeiten, keine Tagesform, keine «wahrscheinlichste Antwort».',
   },
   {
@@ -31,7 +31,7 @@ const ABSCHNITTE: { titel: string; text: string }[] = [
   {
     titel: 'Geprüft oder In Vorbereitung',
     text:
-      'Ein Rechner erscheint erst dann als «geprüft» — mit Normverweisen und Direktlinks —, wenn die ' +
+      'Ein Rechner erscheint erst dann als «geprüft» – mit Normverweisen und Direktlinks —, wenn die ' +
       'zugrunde liegenden Regeln vollständig verifiziert sind. Rechner in Arbeit werden als ' +
       '«In Vorbereitung» gekennzeichnet und ohne Normangaben gezeigt. Kantonale Skalen und ' +
       'Gerichtspraxis sind als solche markiert und vor dem Produktiveinsatz zu prüfen ' +
@@ -41,19 +41,19 @@ const ABSCHNITTE: { titel: string; text: string }[] = [
     titel: 'Wie Vorlagen entstehen',
     text:
       'Vorlagen entstehen nicht durch generierten Text, sondern durch regelbasierte Zusammenstellung ' +
-      'fester, juristisch vorformulierter Textbausteine — ohne Sprachmodell, ohne Wahrscheinlichkeiten. ' +
+      'fester, juristisch vorformulierter Textbausteine – ohne Sprachmodell, ohne Wahrscheinlichkeiten. ' +
       'Gleiche Eingaben ergeben dasselbe Dokument. Jeder aufgenommene Baustein wird im Bausteinprotokoll ' +
       'mit seinem Auslöser und, sofern einschlägig, seiner Norm offengelegt; streitige oder optionale ' +
       'Auslegungen werden angezeigt statt still aufgelöst. Vor jedem Download erklärt ein nicht ' +
-      'überspringbares Form-Gate die massgeblichen Formvorschriften — etwa Eigenhändigkeit oder ' +
-      'öffentliche Beurkundung — und was zu tun ist, damit das Dokument gültig wird. Das Ergebnis ' +
+      'überspringbares Form-Gate die massgeblichen Formvorschriften – etwa Eigenhändigkeit oder ' +
+      'öffentliche Beurkundung – und was zu tun ist, damit das Dokument gültig wird. Das Ergebnis ' +
       'ist ein Entwurf zur Orientierung, kein verbindliches Dokument.',
   },
   {
     titel: 'Ihre Daten bleiben bei Ihnen',
     text:
       'Alle Berechnungen und Zusammenstellungen laufen vollständig im Browser. Eingaben werden weder ' +
-      'an einen Server gesendet noch gespeichert — relevant insbesondere mit Blick auf das Berufsgeheimnis.',
+      'an einen Server gesendet noch gespeichert – relevant insbesondere mit Blick auf das Berufsgeheimnis.',
   },
 ];
 

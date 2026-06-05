@@ -68,35 +68,35 @@ const REGIME: Record<VerjaehrungRegime, {
   beginnLabel: string; absolutLabel?: string; normen: Normverweis[];
 }> = {
   ordentlich: {
-    label: 'Ordentliche Frist — 10 Jahre (Art. 127 OR)', relativJahre: 10, absolutJahre: null,
+    label: 'Ordentliche Frist – 10 Jahre (Art. 127 OR)', relativJahre: 10, absolutJahre: null,
     beginnLabel: 'Fälligkeit der Forderung',
     normen: [{ artikel: 'Art. 127 OR', bemerkung: 'Auffangnorm: 10 Jahre' }, { artikel: 'Art. 130 Abs. 1 OR', bemerkung: 'Beginn mit Fälligkeit' }],
   },
   kurz: {
-    label: 'Kurze Frist — 5 Jahre (Art. 128 OR)', relativJahre: 5, absolutJahre: null,
+    label: 'Kurze Frist – 5 Jahre (Art. 128 OR)', relativJahre: 5, absolutJahre: null,
     beginnLabel: 'Fälligkeit der Forderung',
     normen: [{ artikel: 'Art. 128 OR', bemerkung: 'Katalogforderungen: 5 Jahre' }, { artikel: 'Art. 130 Abs. 1 OR', bemerkung: 'Beginn mit Fälligkeit' }],
   },
   delikt: {
-    label: 'Unerlaubte Handlung — 3 / 10 Jahre (Art. 60 Abs. 1 OR)', relativJahre: 3, absolutJahre: 10,
+    label: 'Unerlaubte Handlung – 3 / 10 Jahre (Art. 60 Abs. 1 OR)', relativJahre: 3, absolutJahre: 10,
     beginnLabel: 'Kenntnis von Schaden und Person des Ersatzpflichtigen',
     absolutLabel: 'schädigendes Verhalten (bzw. dessen Ende)',
     normen: [{ artikel: 'Art. 60 Abs. 1 OR', bemerkung: 'relativ 3 Jahre / absolut 10 Jahre' }],
   },
   delikt_person: {
-    label: 'Unerlaubte Handlung, Personenschaden — 3 / 20 Jahre (Art. 60 Abs. 1bis OR)', relativJahre: 3, absolutJahre: 20,
+    label: 'Unerlaubte Handlung, Personenschaden – 3 / 20 Jahre (Art. 60 Abs. 1bis OR)', relativJahre: 3, absolutJahre: 20,
     beginnLabel: 'Kenntnis von Schaden und Person des Ersatzpflichtigen',
     absolutLabel: 'schädigendes Verhalten (bzw. dessen Ende)',
     normen: [{ artikel: 'Art. 60 Abs. 1bis OR', bemerkung: 'Tötung/Körperverletzung: absolut 20 Jahre' }],
   },
   vertrag_person: {
-    label: 'Vertraglicher Personenschaden — 3 / 20 Jahre (Art. 128a OR)', relativJahre: 3, absolutJahre: 20,
+    label: 'Vertraglicher Personenschaden – 3 / 20 Jahre (Art. 128a OR)', relativJahre: 3, absolutJahre: 20,
     beginnLabel: 'Kenntnis des Schadens',
     absolutLabel: 'Pflichtverletzung (bzw. deren Ende)',
     normen: [{ artikel: 'Art. 128a OR', bemerkung: 'Körperverletzung/Tötung aus Vertrag: 3 / 20 Jahre' }],
   },
   bereicherung: {
-    label: 'Ungerechtfertigte Bereicherung — 3 / 10 Jahre (Art. 67 Abs. 1 OR)', relativJahre: 3, absolutJahre: 10,
+    label: 'Ungerechtfertigte Bereicherung – 3 / 10 Jahre (Art. 67 Abs. 1 OR)', relativJahre: 3, absolutJahre: 10,
     beginnLabel: 'Kenntnis des Bereicherungsanspruchs',
     absolutLabel: 'Entstehung des Anspruchs',
     normen: [{ artikel: 'Art. 67 Abs. 1 OR', bemerkung: 'relativ 3 Jahre / absolut 10 Jahre' }],
@@ -128,13 +128,13 @@ const TYP_LABEL: Record<UnterbrechungsTyp, string> = {
 // ─── Berechnungskern ────────────────────────────────────────────────────────
 
 // Art. 132: Beginntag nicht mitrechnen; Jahresfrist endet am zahlengleichen Tag
-// (fehlt der Tag, am Monatsletzten — addYears bildet 29.02. → 28.02. ab).
+// (fehlt der Tag, am Monatsletzten – addYears bildet 29.02. → 28.02. ab).
 function rohesEnde(start: Date, jahre: number): Date {
   return addYears(start, jahre);
 }
 
 // Stillstandsperioden normalisieren: ungültige/invertierte Einträge verwerfen,
-// überlappende oder anstossende Perioden zur Union verschmelzen — sonst würden
+// überlappende oder anstossende Perioden zur Union verschmelzen – sonst würden
 // sich überschneidende Eingaben doppelt gezählt und die Frist zu lang.
 type HemmIntervall = { von: Date; bis: Date };
 function normalisiereStillstaende(stillstaende: Stillstand[]): { intervalle: HemmIntervall[]; verworfen: number } {
@@ -213,7 +213,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     };
   }
 
-  // Schritt 1 — Regime & Fristen
+  // Schritt 1 – Regime & Fristen
   rechenweg.push({
     beschreibung: 'Schritt 1 – Anspruchstyp und Fristdauer',
     zwischenergebnis: `${R.label}. ${R.absolutJahre != null
@@ -222,7 +222,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     normen: R.normen,
   });
 
-  // Schritt 2 — Fristbeginn
+  // Schritt 2 – Fristbeginn
   const kenntnisRegime = ['delikt', 'delikt_person', 'vertrag_person', 'bereicherung'].includes(input.regime);
   rechenweg.push({
     beschreibung: 'Schritt 2 – Fristbeginn (dies a quo)',
@@ -239,7 +239,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
   });
   if (kenntnisRegime) {
     annahmen.push(
-      'Der Kenntniszeitpunkt (tatsächliche Kenntnis, kein Kennenmüssen) ist eine Tatfrage und wird als Eingabe übernommen — das Ergebnis ist insoweit annahmegestützt.',
+      'Der Kenntniszeitpunkt (tatsächliche Kenntnis, kein Kennenmüssen) ist eine Tatfrage und wird als Eingabe übernommen – das Ergebnis ist insoweit annahmegestützt.',
     );
   }
 
@@ -257,7 +257,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     const aktuellesEnde = mitStillstand(segStart, rohesEnde(segStart, segJahre), hemmungen).ende;
     if (isAfter(d, aktuellesEnde)) {
       warnungen.push(
-        `${TYP_LABEL[u.typ]} vom ${fmt(d)} liegt nach dem Verjährungseintritt (${fmt(aktuellesEnde)}) und bleibt wirkungslos — eine verjährte Forderung wird nicht wiederbelebt.`,
+        `${TYP_LABEL[u.typ]} vom ${fmt(d)} liegt nach dem Verjährungseintritt (${fmt(aktuellesEnde)}) und bleibt wirkungslos – eine verjährte Forderung wird nicht wiederbelebt.`,
       );
       continue;
     }
@@ -267,7 +267,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
         const pe = parseISO(u.prozessEnde);
         if (isNaN(pe.getTime()) || isBefore(pe, d)) {
           warnungen.push(
-            `Abschlussdatum ${isNaN(pe.getTime()) ? '(ungültig)' : fmt(pe)} der Unterbrechung vom ${fmt(d)} liegt vor der Unterbrechung oder ist ungültig — der Eintrag bleibt unberücksichtigt.`,
+            `Abschlussdatum ${isNaN(pe.getTime()) ? '(ungültig)' : fmt(pe)} der Unterbrechung vom ${fmt(d)} liegt vor der Unterbrechung oder ist ungültig – der Eintrag bleibt unberücksichtigt.`,
           );
           continue;
         }
@@ -276,7 +276,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
         offeneHemmungSeit = d;
         rechenweg.push({
           beschreibung: `Unterbrechung – ${TYP_LABEL.klage_schlichtung}`,
-          zwischenergebnis: `Am ${fmt(d)} unterbrochen; der Rechtsstreit ist noch nicht abgeschlossen — die Verjährung beginnt erst mit dem Abschluss vor der befassten Instanz neu zu laufen (Ausschöpfung des Instanzenzugs).`,
+          zwischenergebnis: `Am ${fmt(d)} unterbrochen; der Rechtsstreit ist noch nicht abgeschlossen – die Verjährung beginnt erst mit dem Abschluss vor der befassten Instanz neu zu laufen (Ausschöpfung des Instanzenzugs).`,
           normen: [N_135, N_138_1],
           rechtsprechung: [rechtsprechung('BGE_147_III_419')],
         });
@@ -335,7 +335,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     });
     if (unterbrechungen.length > 0 && relativEnde && isAfter(relativEnde, absolutEnde)) {
       annahmen.push(
-        'Konservative Regel: Die durch Unterbrechung neu angesetzte Frist wird durch die absolute Frist begrenzt (für Art. 67 OR gesichert; nach gerichtlicher Feststellung ist die selbständige 10-Jahres-Frist nach Art. 137 Abs. 2 OR h.M. — das frühere Datum wird ausgewiesen).',
+        'Konservative Regel: Die durch Unterbrechung neu angesetzte Frist wird durch die absolute Frist begrenzt (für Art. 67 OR gesichert; nach gerichtlicher Feststellung ist die selbständige 10-Jahres-Frist nach Art. 137 Abs. 2 OR h.M. – das frühere Datum wird ausgewiesen).',
       );
     }
   }
@@ -361,7 +361,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     rechenweg.push({
       beschreibung: 'Massgebliches Fristende – relative vs. absolute Frist',
       zwischenergebnis: `Relative Frist endet am ${fmt(relativEnde)}, absolute Frist am ${fmt(absolutEnde)}. ` +
-        `Massgeblich ist das frühere Ende — hier die ${massgeblicheFrist === 'absolut' ? 'absolute' : 'relative'} Frist (${fmt(verjaehrung!)}). ` +
+        `Massgeblich ist das frühere Ende – hier die ${massgeblicheFrist === 'absolut' ? 'absolute' : 'relative'} Frist (${fmt(verjaehrung!)}). ` +
         'Die relative Frist kann nie über die absolute hinauslaufen.',
       normen: R.normen,
     });
@@ -369,7 +369,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     rechenweg.push({
       beschreibung: 'Massgebliches Fristende – nur absolute Frist bestimmbar',
       zwischenergebnis: `Die relative Frist steht prozessbedingt still (Art. 138 Abs. 1 OR); ` +
-        `unabhängig davon läuft die absolute Frist und endet am ${fmt(absolutEnde)} — sie bleibt einstweilen massgeblich.`,
+        `unabhängig davon läuft die absolute Frist und endet am ${fmt(absolutEnde)} – sie bleibt einstweilen massgeblich.`,
       normen: [...R.normen, N_138_1],
     });
   }
@@ -380,7 +380,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
     if (verschoben.getTime() !== verjaehrung.getTime()) {
       rechenweg.push({
         beschreibung: 'Werktagsregel (Art. 78 OR i.V.m. Art. 132 Abs. 2 OR)',
-        zwischenergebnis: `Der letzte Tag (${fmt(verjaehrung)}) fällt auf einen Samstag, Sonntag oder anerkannten Feiertag (${input.kanton}) — die Frist läuft erst am nächsten Werktag ab: ${fmt(verschoben)}.`,
+        zwischenergebnis: `Der letzte Tag (${fmt(verjaehrung)}) fällt auf einen Samstag, Sonntag oder anerkannten Feiertag (${input.kanton}) – die Frist läuft erst am nächsten Werktag ab: ${fmt(verschoben)}.`,
         normen: [N_78],
       });
     }
@@ -410,7 +410,7 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
       warnungen.push('Ein Einredeverzicht von mehr als 10 Jahren wird auf die Höchstdauer von 10 Jahren gekürzt (Art. 141 Abs. 1 OR).');
     }
     if (isBefore(vd, beginn)) {
-      warnungen.push(`Verzicht vom ${fmt(vd)} liegt vor Beginn der Verjährung — ein Vorausverzicht ist nicht zulässig (Art. 141 Abs. 1 OR); der Verzicht bleibt unberücksichtigt.`);
+      warnungen.push(`Verzicht vom ${fmt(vd)} liegt vor Beginn der Verjährung – ein Vorausverzicht ist nicht zulässig (Art. 141 Abs. 1 OR); der Verzicht bleibt unberücksichtigt.`);
     } else {
       verzichtBis = addYears(verschoben, jahre);
       rechenweg.push({
@@ -425,12 +425,12 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
 
   if (input.strafbareHandlung) {
     warnungen.push(
-      'Strafbare Handlung (Art. 60 Abs. 2 OR): Der Anspruch verjährt frühestens mit Eintritt der strafrechtlichen Verfolgungsverjährung (Art. 97 StGB) — diese Längerfrist ist StGB-abhängig und hier nicht berechnet; das ausgewiesene Datum kann sich nach hinten verschieben.',
+      'Strafbare Handlung (Art. 60 Abs. 2 OR): Der Anspruch verjährt frühestens mit Eintritt der strafrechtlichen Verfolgungsverjährung (Art. 97 StGB) – diese Längerfrist ist StGB-abhängig und hier nicht berechnet; das ausgewiesene Datum kann sich nach hinten verschieben.',
     );
   }
   if (isBefore(beginn, parseISO('2020-01-01'))) {
     warnungen.push(
-      'Fristbeginn vor dem 1.1.2020: Für Altfälle gilt das Übergangsrecht (Art. 49 SchlT ZGB) — die Revision 2020 (u.a. relative Fristen 1 → 3 Jahre) ist hier nicht übergangsrechtlich abgebildet; Ergebnis prüfen.',
+      'Fristbeginn vor dem 1.1.2020: Für Altfälle gilt das Übergangsrecht (Art. 49 SchlT ZGB) – die Revision 2020 (u.a. relative Fristen 1 → 3 Jahre) ist hier nicht übergangsrechtlich abgebildet; Ergebnis prüfen.',
     );
   }
 

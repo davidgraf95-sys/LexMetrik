@@ -2,17 +2,17 @@ import { jsPDF } from 'jspdf';
 import { winAnsiSicher, typografie } from '../pdf/winansi';
 
 // Textaufbereitung der VORLAGEN-PDFs: WinAnsi-Sicherung + Typografie, aber
-// OHNE datumNormalisieren — die Schemas formatieren Daten selbst, und eine
+// OHNE datumNormalisieren – die Schemas formatieren Daten selbst, und eine
 // pauschale ISO-Ersetzung würde Freitext verfälschen (Audit-Befund H1
 // 5.6.2026: Betreibungsnummer «2025-12-31» wurde im PDF zu «31.12.2025»
-// verdreht, während DOCX/Vorschau korrekt blieben — Renderer-Divergenz).
+// verdreht, während DOCX/Vorschau korrekt blieben – Renderer-Divergenz).
 export const vorlagenPdfText = (text: string): string => winAnsiSicher(typografie(text));
 const pdfText = vorlagenPdfText;
 import type { AssembleErgebnis, DokumentAbsatz } from './engine';
 import { FORMAT_TYPOGRAFIE, AUSGABE_REGELN , MUSTER } from './formatvorlagen';
 import type { PdfBanner } from './banner';
 
-// ─── PDF-Renderer der Vorlagen — drei Formatvorlagen ────────────────────────
+// ─── PDF-Renderer der Vorlagen – drei Formatvorlagen ────────────────────────
 //
 // Layout nach den Referenz-Dokumenten «LexMetrik-Referenz-*-Layout» (5.6.2026,
 // State of the Art für Schweizer Rechtsdokumente):
@@ -24,10 +24,10 @@ import type { PdfBanner } from './banner';
 //     doppelt eingezogen
 //   · Unterschrifts-Strichzeilen (___) werden als feine LINIEN gezeichnet
 // Formatvorlagen:
-//   verfuegung — zentrierter Titel 16 + Haarlinie, ruhige Absätze
-//   vertrag    — Titel 15.5 + Haarlinie, zentrierter Parteien-Ingress,
+//   verfuegung – zentrierter Titel 16 + Haarlinie, ruhige Absätze
+//   vertrag    – Titel 15.5 + Haarlinie, zentrierter Parteien-Ingress,
 //                geschützter Unterschriftenblock
-//   eingabe    — Briefkopf (Absender/Adressat dicht), Ort/Datum rechts,
+//   eingabe    – Briefkopf (Absender/Adressat dicht), Ort/Datum rechts,
 //                Betreff 13 fett + Haarlinie, Rubrum mit zentrierten
 //                Parteirollen; KEIN Dokumenttitel (der Betreff trägt ihn)
 // Banner kennzeichnet den Entwurfs-Charakter. Clientseitig, deterministisch.
@@ -42,7 +42,7 @@ const SUB_EINZUG = 12;   // «– »-Unterpunkte
 
 const { NUMMER, SUB, STRICHE } = MUSTER;
 
-// Dokument bauen (testbar, gibt das jsPDF-Objekt zurück) — der Download ist
+// Dokument bauen (testbar, gibt das jsPDF-Objekt zurück) – der Download ist
 // in vorlagenPdfErzeugen gekapselt.
 export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner } = {}): jsPDF {
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
@@ -151,7 +151,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
 
   // Block möglichst ungeteilt halten: passt er auf eine Seite, wird vorab
   // umgebrochen und ungeteilt geschrieben; ist er LÄNGER als eine Seite,
-  // darf er zeilenweise brechen — sonst liefe der Text über den Seitenrand
+  // darf er zeilenweise brechen – sonst liefe der Text über den Seitenrand
   // hinaus (Audit-Befund H2 5.6.2026: brechen:false ohne Schranke).
   const MAX_BLOCK = 297 - 20 - RAND;
   const blockGeschuetzt = (text: string, zeilenHoehe: number, pad: number, opt: { align?: 'right' | 'center'; dicht?: boolean } = {}) => {
@@ -189,7 +189,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
       case 'rubrum':
         setzeBrot();
         for (const zl of a.text.split('\n')) {
-          if (MUSTER.RUBRUM_ROLLE.test(zl.trim())) {            // — klagende Partei —
+          if (MUSTER.RUBRUM_ROLLE.test(zl.trim())) {            // – klagende Partei —
             seitenumbruch(P.zeile + 2);
             doc.text(pdfText(zl.trim()), RAND + BREITE / 2, y, { align: 'center' });
             y += P.zeile + 2;

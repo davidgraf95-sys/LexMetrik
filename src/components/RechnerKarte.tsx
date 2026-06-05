@@ -15,7 +15,7 @@ import { useLocale, fedlexLokalisiert } from './locale';
 type Props = {
   card: CalculatorCard;
   headingLevel?: 'h3' | 'h5' | 'h6'; // direkt unter der Typ-Sektion (h2) → h3
-  /** Schnellzugriff (Pro): Stern-Zustand + Toggle — nur auf verfügbaren Karten gerendert. */
+  /** Schnellzugriff (Pro): Stern-Zustand + Toggle – nur auf verfügbaren Karten gerendert. */
   favorit?: boolean;
   onFavorit?: () => void;
   /** Beim Öffnen des Tools (für «Zuletzt verwendet»). */
@@ -56,7 +56,7 @@ export function RechnerKarte({ card, headingLevel = 'h3', favorit, onFavorit, on
         {/* Statussignal: Goldrand allein = geprüft; Entwurf trägt zusätzlich
             das orange Badge (Unterscheidbarkeit der drei Zustände). */}
         <span className="inline-flex items-center gap-1.5">
-          {/* Stern nur auf VERFÜGBAREN Karten (istVerfuegbar) — Geplantes
+          {/* Stern nur auf VERFÜGBAREN Karten (istVerfuegbar) – Geplantes
               kann man nicht «nutzen» (Auftrag Phase 4) */}
           {aktiv && onFavorit && (
             <button type="button" onClick={(e) => { e.preventDefault(); onFavorit(); }}
@@ -113,7 +113,7 @@ export function RechnerKarte({ card, headingLevel = 'h3', favorit, onFavorit, on
             n.url ? (
               <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer"
                 className="relative lc-chip no-underline hover:text-brass-700"
-                title={`${n.label} auf Fedlex öffnen${n.verified ? '' : ' — Verweis noch nicht fachlich geprüft'}`}>
+                title={`${n.label} auf Fedlex öffnen${n.verified ? '' : ' – Verweis noch nicht fachlich geprüft'}`}>
                 {n.label}
               </a>
             ) : (
@@ -124,7 +124,7 @@ export function RechnerKarte({ card, headingLevel = 'h3', favorit, onFavorit, on
       )}
       {/* Footer: CTA nur bei «geprüft»; der Status steht bereits im Badge oben
           (kein doppeltes «In Vorbereitung»). Eigene Hinweise (note) bleiben. */}
-      {/* Nur der CTA ist am Kartenboden verankert — der Höhenausgleich liegt
+      {/* Nur der CTA ist am Kartenboden verankert – der Höhenausgleich liegt
           als ruhiger Abstand UNTER den Pills, nicht als Loch in der Karte. */}
       {aktiv ? (
         <p className="mt-auto pt-1 text-body-s font-medium text-brass-700">

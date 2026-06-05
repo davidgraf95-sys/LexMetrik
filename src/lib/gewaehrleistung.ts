@@ -8,12 +8,12 @@ import { rechtsprechung } from '../data/verifikation';
 //
 // Zwei Regime parallel (Teilrevision «Baumängel», AS 2025 270, in Kraft
 // 1.1.2026): Verzweigung nach Vertragsabschlussdatum. Strikt getrennt werden
-// Rügefrist (Obliegenheit/Verwirkung — keine Unterbrechung/Hemmung) und
-// Verjährungsfrist (Einrede — AT-Mechanik Art. 132/134/135 ff. anwendbar;
+// Rügefrist (Obliegenheit/Verwirkung – keine Unterbrechung/Hemmung) und
+// Verjährungsfrist (Einrede – AT-Mechanik Art. 132/134/135 ff. anwendbar;
 // dafür der Verjährungsrechner). Eine Mängelrüge unterbricht die Verjährung NICHT.
 //
 // Bewusst nicht abgebildet: Viehkauf (Art. 198/202), Kulturgüter (Art. 210
-// Abs. 3), Rechtsgewährleistung/Eviktion (Art. 127 OR — 10 Jahre, separat).
+// Abs. 3), Rechtsgewährleistung/Eviktion (Art. 127 OR – 10 Jahre, separat).
 
 export type GwVertragstyp = 'fahrniskauf' | 'werkvertrag' | 'grundstueckkauf';
 export type GwObjekt =
@@ -113,13 +113,13 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
   }
   const sia = istWerk && (input.sia118 ?? false);
 
-  // Schritt 1 — Regime
+  // Schritt 1 – Regime
   rechenweg.push({
     beschreibung: 'Schritt 1 – Vertragstyp und anwendbares Recht',
     zwischenergebnis: `${TYP_LABEL[input.vertragstyp]}; Objekt: ${OBJEKT_LABEL[objekt]}. Vertragsschluss ${fmt(vertrag)} → ${
       neu
         ? 'NEUES Recht (Teilrevision «Baumängel», in Kraft seit 1.1.2026).'
-        : 'ALTES Recht (Vertrag vor dem 1.1.2026; Art. 1 SchlT ZGB) — auch die Rügefrist richtet sich nach altem Recht.'
+        : 'ALTES Recht (Vertrag vor dem 1.1.2026; Art. 1 SchlT ZGB) – auch die Rügefrist richtet sich nach altem Recht.'
     }${sia ? ' SIA-Norm 118 vereinbart (Vertragswerk; Fristen gemäss Art. 172/179/180 SIA 118).' : ''}`,
     normen: neu ? [N('Art. 1 SchlT ZGB', 'Übergangsrecht')] : [N('Art. 1 SchlT ZGB', 'Übergangsrecht')],
   });
@@ -145,7 +145,7 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
     ruege.art = 'entfaellt';
     rechenweg.push({
       beschreibung: 'Schritt 2 – Mängelrüge bei absichtlicher Täuschung',
-      zwischenergebnis: 'Bei arglistiger Täuschung ist die Mängelhaftung nicht durch unterlassene oder verspätete Rüge beschränkt — die Rügeobliegenheit entfällt.',
+      zwischenergebnis: 'Bei arglistiger Täuschung ist die Mängelhaftung nicht durch unterlassene oder verspätete Rüge beschränkt – die Rügeobliegenheit entfällt.',
       normen: [N('Art. 203 OR', 'Arglist: Rügeversäumnis unschädlich')],
     });
   } else if (sechzig) {
@@ -170,10 +170,10 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
     ruege.endeISO = iso(ende);
     rechenweg.push({
       beschreibung: 'Schritt 2 – Mängelrüge nach SIA-Norm 118 (Garantiefrist)',
-      zwischenergebnis: `Während der zweijährigen Garantiefrist ab Abnahme (${fmt(uebergabe)} – ${fmt(ende)}) können Mängel jederzeit gerügt werden (Art. 172 SIA 118). Die SIA-Norm 118 ist ein Vertragswerk — Anwendbarkeit und Fassung sind zu prüfen.`,
+      zwischenergebnis: `Während der zweijährigen Garantiefrist ab Abnahme (${fmt(uebergabe)} – ${fmt(ende)}) können Mängel jederzeit gerügt werden (Art. 172 SIA 118). Die SIA-Norm 118 ist ein Vertragswerk – Anwendbarkeit und Fassung sind zu prüfen.`,
       normen: [N('Art. 367 Abs. 1 OR', 'dispositiv; SIA 118 als Vertragsabrede')],
     });
-    warnungen.push('SIA-Norm 118 (Ausgabe 2013) ist noch nicht an das revidierte OR angepasst — Fristen im Vertrag prüfen (Verifikations-Vorbehalt).');
+    warnungen.push('SIA-Norm 118 (Ausgabe 2013) ist noch nicht an das revidierte OR angepasst – Fristen im Vertrag prüfen (Verifikations-Vorbehalt).');
   } else {
     ruege.art = 'sofort';
     ruege.basisISO = iso(ruegeBasis);
@@ -182,7 +182,7 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
     ruege.maximalISO = iso(addDays(ruegeBasis, 11));
     rechenweg.push({
       beschreibung: 'Schritt 2 – Mängelrüge: «sofort» (Richtwerte der Praxis)',
-      zwischenergebnis: `${versteckt ? 'Versteckter Mangel: «sofort nach der Entdeckung»' : 'Nach Prüfung «sobald nach üblichem Geschäftsgang tunlich», dann «sofort»'} (ab ${fmt(ruegeBasis)}). Keine starre Frist — Richtwerte: 2–3 Tage sicher rechtzeitig (${fmt(addDays(ruegeBasis, 3))}), längstens ~7 Tage (${fmt(addDays(ruegeBasis, 7))}), ausnahmsweise 11 Tage (${fmt(addDays(ruegeBasis, 11))}). Versäumnis führt zur Genehmigungsfiktion.`,
+      zwischenergebnis: `${versteckt ? 'Versteckter Mangel: «sofort nach der Entdeckung»' : 'Nach Prüfung «sobald nach üblichem Geschäftsgang tunlich», dann «sofort»'} (ab ${fmt(ruegeBasis)}). Keine starre Frist – Richtwerte: 2–3 Tage sicher rechtzeitig (${fmt(addDays(ruegeBasis, 3))}), längstens ~7 Tage (${fmt(addDays(ruegeBasis, 7))}), ausnahmsweise 11 Tage (${fmt(addDays(ruegeBasis, 11))}). Versäumnis führt zur Genehmigungsfiktion.`,
       normen: istWerk
         ? [N(versteckt ? 'Art. 370 Abs. 3 OR' : 'Art. 367 Abs. 1 OR', 'Prüf-/Rügeobliegenheit')]
         : [N(versteckt ? 'Art. 201 Abs. 3 OR' : 'Art. 201 Abs. 1 OR', 'Prüf-/Rügeobliegenheit')],
@@ -193,7 +193,7 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
         ...(istGrundstueck ? [rechtsprechung('BGE_81_II_56')] : []),
       ],
     });
-    annahmen.push('Die «sofort»-Rüge ist einzelfallabhängig (Art des Mangels, Verschlimmerungsgefahr — bei sich fortentwickelnden Mängeln kürzer); die Tagesangaben sind Näherungen der Rechtsprechung.');
+    annahmen.push('Die «sofort»-Rüge ist einzelfallabhängig (Art des Mangels, Verschlimmerungsgefahr – bei sich fortentwickelnden Mängeln kürzer); die Tagesangaben sind Näherungen der Rechtsprechung.');
   }
 
   // Beurteilung einer erhobenen Rüge
@@ -205,10 +205,10 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
         text = !isAfter(r, addDays(ruegeBasis, 3)) ? 'sicher rechtzeitig (2–3 Tage)'
           : !isAfter(r, addDays(ruegeBasis, 7)) ? 'nach dem Richtwert (≤ 7 Tage) rechtzeitig'
           : !isAfter(r, addDays(ruegeBasis, 11)) ? 'nur ausnahmsweise noch rechtzeitig (8–11 Tage; Einzelfall)'
-          : 'voraussichtlich verspätet — Genehmigungsfiktion droht';
+          : 'voraussichtlich verspätet – Genehmigungsfiktion droht';
       } else {
         const ende = parseISO(ruege.endeISO!);
-        text = !isAfter(r, ende) ? `rechtzeitig (Frist bis ${fmt(ende)})` : `verspätet (Frist bis ${fmt(ende)}) — Genehmigungsfiktion droht`;
+        text = !isAfter(r, ende) ? `rechtzeitig (Frist bis ${fmt(ende)})` : `verspätet (Frist bis ${fmt(ende)}) – Genehmigungsfiktion droht`;
       }
       ruege.beurteilung = `Rüge vom ${fmt(r)}: ${text}.`;
       rechenweg.push({
@@ -224,7 +224,7 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
     ? (input.eigentumserwerb ? parseISO(input.eigentumserwerb) : null)
     : uebergabe;
   if (!verjBeginn || isNaN(verjBeginn.getTime())) {
-    return { ...leer, ergebnis: 'Beim Grundstückkauf ist das Datum des Eigentumserwerbs (Grundbucheintrag) anzugeben — dies a quo der Verjährung.', status: 'unzulaessig' };
+    return { ...leer, ergebnis: 'Beim Grundstückkauf ist das Datum des Eigentumserwerbs (Grundbucheintrag) anzugeben – dies a quo der Verjährung.', status: 'unzulaessig' };
   }
 
   // Gesetzliche Dauer
@@ -281,13 +281,13 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
 
     if (v < mindest) {
       vereinbartUnwirksam = true;
-      warnungen.push(`Die vereinbarte Verjährungsfrist von ${v} Jahr${v > 1 ? 'en' : ''} ist unwirksam (${mindestGrund}) — es gilt die gesetzliche Frist von ${jahre} Jahren.`);
+      warnungen.push(`Die vereinbarte Verjährungsfrist von ${v} Jahr${v > 1 ? 'en' : ''} ist unwirksam (${mindestGrund}) – es gilt die gesetzliche Frist von ${jahre} Jahren.`);
     } else if (v < jahre) {
       jahre = v;
-      warnungen.push('Zulässige vertragliche Verkürzung — sie darf die Rechtsverfolgung aber nicht in unbilliger Weise erschweren (BGE 108 II 194).');
+      warnungen.push('Zulässige vertragliche Verkürzung – sie darf die Rechtsverfolgung aber nicht in unbilliger Weise erschweren (BGE 108 II 194).');
     } else if (v > jahre) {
       jahre = Math.min(v, 10);
-      if (v > 10) warnungen.push('Vertragliche Verlängerung über 10 Jahre hinaus ist unzulässig — auf die Höchstdauer von 10 Jahren gekürzt (Art. 127 OR; BGE 132 III 226).');
+      if (v > 10) warnungen.push('Vertragliche Verlängerung über 10 Jahre hinaus ist unzulässig – auf die Höchstdauer von 10 Jahren gekürzt (Art. 127 OR; BGE 132 III 226).');
     }
   }
 
@@ -297,20 +297,20 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
   rechenweg.push({
     beschreibung: 'Schritt 3 – Verjährung der Mängelrechte',
     zwischenergebnis: `${jahre} Jahre ab ${istGrundstueck ? 'Eigentumserwerb (Grundbucheintrag)' : istWerk ? 'Abnahme des Werks' : 'Ablieferung'} (${fmt(verjBeginn)}) → ${fmt(verjEnde)}${
-      input.arglist ? ' — bei nachgewiesener absichtlicher Täuschung kann sich der Verkäufer/Unternehmer nicht auf die kurze Verjährung berufen' : ''}${
+      input.arglist ? ' – bei nachgewiesener absichtlicher Täuschung kann sich der Verkäufer/Unternehmer nicht auf die kurze Verjährung berufen' : ''}${
       !istGrundstueck && objekt !== 'unbeweglich' && !input.arglist ? '; massgeblich ist die Ablieferung/Abnahme, selbst wenn der Mangel erst später entdeckt wird' : ''}.`,
     normen: [dauerNorm, N('Art. 132 OR', 'Beginntag zählt nicht; Ende am zahlengleichen Tag'), N('Art. 78 OR', 'Werktagsregel')],
   });
 
   rechenweg.push({
     beschreibung: 'Schritt 4 – Rechtsnatur und AT-Mechanik',
-    zwischenergebnis: 'Die Rügefrist ist eine Verwirkungsfrist (keine Unterbrechung/Hemmung; Versäumnis = Genehmigungsfiktion). Die Verjährung ist Einrede (Art. 142 OR) und unterliegt der AT-Mechanik (Stillstand, Unterbrechung, Verzicht — siehe Verjährungsrechner). Eine Mängelrüge unterbricht die Verjährung NICHT; nötig sind Klage, Schlichtungsgesuch, Betreibung oder Anerkennung (Art. 135 OR) bzw. Verzicht (Art. 141 OR). Rechtzeitige Anzeige innerhalb der Verjährungsfrist erhält die Einreden des Käufers (Art. 210 Abs. 5 OR).',
+    zwischenergebnis: 'Die Rügefrist ist eine Verwirkungsfrist (keine Unterbrechung/Hemmung; Versäumnis = Genehmigungsfiktion). Die Verjährung ist Einrede (Art. 142 OR) und unterliegt der AT-Mechanik (Stillstand, Unterbrechung, Verzicht – siehe Verjährungsrechner). Eine Mängelrüge unterbricht die Verjährung NICHT; nötig sind Klage, Schlichtungsgesuch, Betreibung oder Anerkennung (Art. 135 OR) bzw. Verzicht (Art. 141 OR). Rechtzeitige Anzeige innerhalb der Verjährungsfrist erhält die Einreden des Käufers (Art. 210 Abs. 5 OR).',
     normen: [N('Art. 135 OR'), N('Art. 141 OR'), N('Art. 142 OR'), N('Art. 210 Abs. 5 OR', 'Einredeerhalt')],
   });
 
   // Hinweis: Entdeckung nach Verjährungseintritt
   if (entdeckung && isAfter(entdeckung, verjEnde) && !input.arglist) {
-    warnungen.push(`Der Mangel wurde erst nach Eintritt der Verjährung entdeckt (${fmt(entdeckung)} > ${fmt(verjEnde)}) — die Mängelrechte sind verjährt, «selbst wenn der Käufer die Mängel erst später entdeckt» (Art. 210 Abs. 1 OR).`);
+    warnungen.push(`Der Mangel wurde erst nach Eintritt der Verjährung entdeckt (${fmt(entdeckung)} > ${fmt(verjEnde)}) – die Mängelrechte sind verjährt, «selbst wenn der Käufer die Mängel erst später entdeckt» (Art. 210 Abs. 1 OR).`);
   }
   if (input.konsumentenkauf) {
     annahmen.push('Konsumentenkauf: Es wird unterstellt, dass alle drei Merkmale von Art. 210 Abs. 4 OR kumulativ erfüllt sind (persönlicher/familiärer Gebrauch, gewerblicher Verkäufer, Verkürzungsabrede).');
@@ -333,10 +333,10 @@ export function berechneGewaehrleistung(input: GewaehrleistungInput): Gewaehrlei
       ? `Mängelrüge bis ${fmt(parseISO(ruege.endeISO!))} (60 Tage, zwingend).`
       : ruege.art === 'sia'
         ? `Mängelrüge während der SIA-Garantiefrist bis ${fmt(parseISO(ruege.endeISO!))}.`
-        : `Mängelrüge «sofort» — Richtwert bis ${fmt(parseISO(ruege.richtwertISO!))} (sicher: ${fmt(parseISO(ruege.sicherISO!))}, äusserstens: ${fmt(parseISO(ruege.maximalISO!))}).`;
+        : `Mängelrüge «sofort» – Richtwert bis ${fmt(parseISO(ruege.richtwertISO!))} (sicher: ${fmt(parseISO(ruege.sicherISO!))}, äusserstens: ${fmt(parseISO(ruege.maximalISO!))}).`;
 
   return {
-    ergebnis: `${ruegeText} Verjährung der Mängelrechte: ${jahre} Jahre, bis ${fmt(verjEnde)}${verjaehrt ? ` — am Stichtag ${fmt(stichtag)} VERJÄHRT (Einrede, Art. 142 OR)` : ''}.`,
+    ergebnis: `${ruegeText} Verjährung der Mängelrechte: ${jahre} Jahre, bis ${fmt(verjEnde)}${verjaehrt ? ` – am Stichtag ${fmt(stichtag)} VERJÄHRT (Einrede, Art. 142 OR)` : ''}.`,
     status: 'ok',
     rechenweg, annahmen, warnungen, normverweise,
     rechtsstand,

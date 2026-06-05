@@ -4,7 +4,7 @@ import {
   type MvAntworten,
 } from '../lib/vorlagen/mietvertrag';
 
-// Akzeptanztests Mietvertrag — prüfen die Gutachtens-Matrix (absolut/relativ
+// Akzeptanztests Mietvertrag – prüfen die Gutachtens-Matrix (absolut/relativ
 // zwingend, Schriftform-Mindestdauern, kantonale Form-Gates) deterministisch.
 
 const basis = (patch: Partial<MvAntworten> = {}): MvAntworten => ({
@@ -21,7 +21,7 @@ const basis = (patch: Partial<MvAntworten> = {}): MvAntworten => ({
 const texte = (a: MvAntworten) => mvZusammenstellen(a).dokument.absaetze.map((x) => x.text).join('\n');
 const ids = (a: MvAntworten) => mvZusammenstellen(a).dokument.absaetze.map((x) => x.bausteinId);
 
-describe('Mietvertrag — Gates (zwingendes Recht)', () => {
+describe('Mietvertrag – Gates (zwingendes Recht)', () => {
   it('MT-1 Wohnraum-Kaution über drei Monatszinsen blockiert (Art. 257e Abs. 2 OR); Geschäftsraum nur Warnung', () => {
     expect(pruefeMvGates(basis({ kautionCHF: '7000' })).blocker.join()).toMatch(/drei Monatszinse/);
     expect(pruefeMvGates(basis({ kautionCHF: '6000' })).blocker).toEqual([]);
@@ -34,7 +34,7 @@ describe('Mietvertrag — Gates (zwingendes Recht)', () => {
     expect(pruefeMvGates(basis({ kanton: 'ZH' })).warnungen.join()).toMatch(/NICHTIG/);
     expect(pruefeMvGates(basis({ kanton: 'AG' })).warnungen.join()).not.toMatch(/Formular/);
     expect(pruefeMvGates(basis({ objektTyp: 'geschaeftsraum', mietzweck: 'Büro', kanton: 'ZH' })).warnungen.join()).not.toMatch(/Formular/);
-    // Bern: Diskrepanz aufgelöst — Miet-Initiative 28.9.2025, Pflicht ab 1.12.2025
+    // Bern: Diskrepanz aufgelöst – Miet-Initiative 28.9.2025, Pflicht ab 1.12.2025
     expect(pruefeMvGates(basis({ kanton: 'BE' })).warnungen.join()).toMatch(/Miet-Initiative|1\.12\.2025/);
   });
 
@@ -72,7 +72,7 @@ describe('Mietvertrag — Gates (zwingendes Recht)', () => {
   });
 });
 
-describe('Mietvertrag — Bausteine', () => {
+describe('Mietvertrag – Bausteine', () => {
   it('MT-8 Standardvertrag (Wohnung): Pflicht-Bausteine inkl. Referenzzins-Basis', () => {
     const liste = ids(basis());
     for (const id of ['M01_parteien', 'M02_objekt', 'M03_beginn_unbefristet', 'M04_mietzins',
@@ -112,7 +112,7 @@ describe('Mietvertrag — Bausteine', () => {
   });
 });
 
-describe('Mietvertrag — Review-Zusatztests', () => {
+describe('Mietvertrag – Review-Zusatztests', () => {
   it('MT-13 Staffel-Jahresgrenze: exakt jährliche Staffeln passieren auch über Schaltjahre', () => {
     const ok = basis({
       mietzinsModell: 'staffel', mindestdauerJahre: 4, beginn: '2027-03-01',
@@ -129,7 +129,7 @@ describe('Mietvertrag — Review-Zusatztests', () => {
   });
 });
 
-describe('Mietvertrag — Audit-Fix 5.6.2026', () => {
+describe('Mietvertrag – Audit-Fix 5.6.2026', () => {
   it('MT-15 G3-Fristen-Blocker entfällt bei Befristung (Kündigungsbaustein erscheint nicht)', () => {
     const b = basis({ befristet: true, befristetBis: '2028-09-30', kuendigungsfristMonate: 1 });
     expect(pruefeMvGates(b).blocker).toEqual([]);
@@ -137,7 +137,7 @@ describe('Mietvertrag — Audit-Fix 5.6.2026', () => {
   });
 });
 
-describe('Mietvertrag — Vertiefungs-Gutachten 5.6.2026', () => {
+describe('Mietvertrag – Vertiefungs-Gutachten 5.6.2026', () => {
   it('MT-16 Referenzzins-Basis NUR im Standard-Modell (bei Index/Staffel materiell falsch)', () => {
     expect(texte(basis())).toContain('Referenzzinssatz von 1.25 %');
     const index = basis({ mietzinsModell: 'index', mindestdauerJahre: 5, indexBasisMonat: 'Mai 2026' });
@@ -183,7 +183,7 @@ describe('Mietvertrag — Vertiefungs-Gutachten 5.6.2026', () => {
   });
 });
 
-describe('Mietvertrag — Review-Regressionen 5.6.2026', () => {
+describe('Mietvertrag – Review-Regressionen 5.6.2026', () => {
   it('MT-22 exakte Kalenderjahr-Befristung erfüllt die Index-/Staffel-Mindestdauer (kein 365.25-Artefakt)', () => {
     const fuenf = basis({ mietzinsModell: 'index', indexBasisMonat: 'Mai 2026', befristet: true, beginn: '2026-10-01', befristetBis: '2031-10-01' });
     expect(pruefeMvGates(fuenf).blocker).toEqual([]);

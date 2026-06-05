@@ -84,7 +84,7 @@ export function VorlagePatientenverfuegung() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label="Vorname"><input className={inputCls} value={a.vorname} onChange={(e) => set('vorname', e.target.value)} /></Field>
           <Field label="Nachname"><input className={inputCls} value={a.name} onChange={(e) => set('name', e.target.value)} /></Field>
-          <Field label="Geburtsdatum" hint="Kein Mindestalter — massgebend ist die Urteilsfähigkeit (Art. 16 ZGB)">
+          <Field label="Geburtsdatum" hint="Kein Mindestalter – massgebend ist die Urteilsfähigkeit (Art. 16 ZGB)">
             <DatumsFeld value={a.geburtsdatum} onChange={(v) => set('geburtsdatum', v)} className={inputCls} />
           </Field>
           <Field label="Wohnort">
@@ -139,7 +139,7 @@ export function VorlagePatientenverfuegung() {
 
           <div className="space-y-2">
             <p className="lc-overline">Behandlungsziel</p>
-            <p className="text-xs text-ink-500">Die Zielwahl setzt sinnvolle Vorgaben für noch offene Massnahmen (überschreibbar) — Widersprüche werden geprüft, nie still aufgelöst.</p>
+            <p className="text-xs text-ink-500">Die Zielwahl setzt sinnvolle Vorgaben für noch offene Massnahmen (überschreibbar) – Widersprüche werden geprüft, nie still aufgelöst.</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
               {ZIELE.map((z) => (
                 <button key={z.code} type="button" onClick={() => waehleZiel(z.code)}
@@ -159,7 +159,7 @@ export function VorlagePatientenverfuegung() {
       case 'massnahmen': return (
         <div className="space-y-3">
           <p className="text-body-s text-ink-600">
-            Entscheiden Sie je Massnahme — «keine Angabe» überlässt den Entscheid Vertretungsperson
+            Entscheiden Sie je Massnahme – «keine Angabe» überlässt den Entscheid Vertretungsperson
             und Ärzteschaft (mutmasslicher Wille, Art. 378 Abs. 3 ZGB). Schmerz- und Symptomlinderung
             ist immer eingeschlossen.
           </p>
@@ -259,7 +259,7 @@ export function VorlagePatientenverfuegung() {
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
             <div key={i} className="rounded-lg border bg-danger-bg p-4" style={{ borderColor: 'var(--danger-500)' }}>
-              <p className="lc-overline text-danger-700 mb-1">Nicht zulässig — vor der Ausgabe zu beheben</p>
+              <p className="lc-overline text-danger-700 mb-1">Nicht zulässig – vor der Ausgabe zu beheben</p>
               <p className="text-body-s text-danger-700">{b}</p>
             </div>
           ))}
@@ -272,18 +272,18 @@ export function VorlagePatientenverfuegung() {
 
           {/* Form-Gate: nicht überspringbar */}
           <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
-            <p className="lc-overline text-brass-700">Form-Gate — damit Ihre Patientenverfügung gültig wird</p>
+            <p className="lc-overline text-brass-700">Form-Gate – damit Ihre Patientenverfügung gültig wird</p>
             <ul className="space-y-2 text-body-s text-ink-700">
-              <li><strong>Ausdrucken genügt:</strong> Die Erstellung am Computer ist zulässig — anders als beim Testament ist keine Eigenhändigkeit des Textes nötig (Art. 371 Abs. 1 ZGB). Keine Beglaubigung erforderlich.</li>
+              <li><strong>Ausdrucken genügt:</strong> Die Erstellung am Computer ist zulässig – anders als beim Testament ist keine Eigenhändigkeit des Textes nötig (Art. 371 Abs. 1 ZGB). Keine Beglaubigung erforderlich.</li>
               <li><strong>Handschriftlich datieren und unterschreiben:</strong> Erst mit von Hand eingesetztem Datum und eigenhändiger Unterschrift ist das Dokument errichtet.</li>
               <li><strong>Auffindbarkeit:</strong> Kopien an Vertretungsperson und Hausarztpraxis; Hinterlegungsort auf der Versichertenkarte eintragen lassen (Art. 371 Abs. 2 ZGB; in der Praxis noch nicht überall zuverlässig); Hinweiskarte im Portemonnaie.</li>
               <li><strong>Aktualisierung:</strong> rechtlich unbefristet gültig; Erneuerung der Unterschrift etwa alle zwei Jahre wird empfohlen.</li>
-              <li><strong>Widerruf:</strong> jederzeit — durch Vernichtung, neue Verfügung oder schriftlichen Widerruf (Art. 371 Abs. 3 ZGB).</li>
+              <li><strong>Widerruf:</strong> jederzeit – durch Vernichtung, neue Verfügung oder schriftlichen Widerruf (Art. 371 Abs. 3 ZGB).</li>
             </ul>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich errichte diese Verfügung im Vollbesitz meiner Urteilsfähigkeit und nach reiflicher
-              Überlegung (Art. 16 ZGB) — und habe verstanden, dass Datum und Unterschrift von Hand zu
+              Überlegung (Art. 16 ZGB) – und habe verstanden, dass Datum und Unterschrift von Hand zu
               leisten sind.
             </label>
           </section>
@@ -310,7 +310,7 @@ export function VorlagePatientenverfuegung() {
     <VorlagenWizardRahmen
       overline={`${card?.rechtsgebiet ?? 'Familie'} · Vorlage`}
       titel="Patientenverfügung"
-      intro="Legen Sie fest, welchen medizinischen Massnahmen Sie im Fall Ihrer Urteilsunfähigkeit zustimmen — aus festen, strukturierten Bausteinen, ohne Sprachmodell. Widersprüche zwischen Therapieziel und Massnahmen werden geprüft, nie still aufgelöst."
+      intro="Legen Sie fest, welchen medizinischen Massnahmen Sie im Fall Ihrer Urteilsunfähigkeit zustimmen – aus festen, strukturierten Bausteinen, ohne Sprachmodell. Widersprüche zwischen Therapieziel und Massnahmen werden geprüft, nie still aufgelöst."
       norms={card?.norms ?? []}
       badge="Handschriftlich datieren & unterschreiben"
       zuruecksetzen={zuruecksetzen}

@@ -1,11 +1,11 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 
-// ─── Patientenverfügung (Art. 370–373 ZGB) — zweite Vorlage ────────────────
+// ─── Patientenverfügung (Art. 370–373 ZGB) – zweite Vorlage ────────────────
 //
 // Gemäss normverifizierter Implementierungs-Anweisung (bundesrechtlich
 // abschliessend, in Kraft seit 1.1.2013). Form: NUR schriftlich, datiert,
-// eigenhändig unterschrieben (Art. 371 Abs. 1 ZGB) — PC-Erstellung zulässig;
+// eigenhändig unterschrieben (Art. 371 Abs. 1 ZGB) – PC-Erstellung zulässig;
 // Datum und Unterschrift werden im Ausdruck VON HAND geleistet (Form-Gate).
 // Kein Mindestalter (Urteilsfähigkeit genügt, Art. 16 ZGB); inhaltliche
 // Module an FMH-/SAMW-Struktur angelehnt (Kurzversion: ein Behandlungsziel).
@@ -82,7 +82,7 @@ export const PV_DEFAULTS: PvAntworten = {
 };
 
 // RULE R1: Zielwahl setzt deterministische Defaults für noch offene Massnahmen
-// (nur 'keine_angabe' wird überschrieben — getroffene Entscheide bleiben).
+// (nur 'keine_angabe' wird überschrieben – getroffene Entscheide bleiben).
 export function zielDefaults(ziel: PvZiel, m: Record<PvMassnahmeId, PvEntscheid>): Record<PvMassnahmeId, PvEntscheid> {
   if (ziel !== 'palliativ') return m;
   const neu = { ...m };
@@ -96,7 +96,7 @@ export function zielDefaults(ziel: PvZiel, m: Record<PvMassnahmeId, PvEntscheid>
 
 export type PvGateErgebnis = { blocker: string[]; warnungen: string[]; hinweise: string[] };
 
-// RULE R6 — harte Sperre: deterministische Schlüsselbegriffe (Art. 114/115 StGB)
+// RULE R6 – harte Sperre: deterministische Schlüsselbegriffe (Art. 114/115 StGB)
 const R6_BEGRIFFE = [
   'aktive sterbehilfe', 'tötung auf verlangen', 'suizidhilfe',
   'beihilfe zum suizid', 'assistierter suizid', 'sterbehilfeorganisation',
@@ -131,7 +131,7 @@ export function pruefePvGates(a: PvAntworten): PvGateErgebnis {
   // R2: Widerspruch Therapieziel ↔ Massnahme (harte Warnung, kein stilles Auflösen)
   if (a.ziel === 'maximal' && (a.massnahmen.cpr === 'ablehnen' || a.massnahmen.beatmung === 'ablehnen')) {
     warnungen.push(
-      'Widerspruch zwischen Therapieziel und Massnahme: Sie wünschen maximale Lebenserhaltung, lehnen aber Wiederbelebung bzw. Beatmung ab. Bitte klären — widersprüchliche Verfügungen erschweren der Ärzteschaft die Umsetzung (Designziel der FMH-Vorlagen 2022).',
+      'Widerspruch zwischen Therapieziel und Massnahme: Sie wünschen maximale Lebenserhaltung, lehnen aber Wiederbelebung bzw. Beatmung ab. Bitte klären – widersprüchliche Verfügungen erschweren der Ärzteschaft die Umsetzung (Designziel der FMH-Vorlagen 2022).',
     );
   }
 
@@ -185,7 +185,7 @@ export const PV_SCHEMA: VorlageSchema = {
   version: '1.0.0 (Rechtsstand Art. 370–373 ZGB, in Kraft seit 1.1.2013)',
   titel: 'Patientenverfügung',
   disclaimer:
-    'Entwurf — erstellt mit LexMetrik. Keine Rechts- oder medizinische Beratung. Gültig wird die ' +
+    'Entwurf – erstellt mit LexMetrik. Keine Rechts- oder medizinische Beratung. Gültig wird die ' +
     'Patientenverfügung erst mit handschriftlichem Datum und eigenhändiger Unterschrift ' +
     '(Art. 371 Abs. 1 ZGB). Empfohlen: Kopien an Vertretungsperson und Hausarztpraxis; ' +
     'Erneuerung der Unterschrift etwa alle zwei Jahre (Empfehlung, keine Pflicht).',
@@ -196,7 +196,7 @@ export const PV_SCHEMA: VorlageSchema = {
         'Ich, {{vorname}} {{name}}, geboren am {{geburtsdatum}}, wohnhaft {{wohnort}}' +
         '{{versichertenZeile}}, verfüge im Vollbesitz meiner Urteilsfähigkeit und nach ' +
         'reiflicher Überlegung für den Fall, dass ich urteilsunfähig werde, was folgt:',
-      begruendung: 'Identifikation und Urteilsfähigkeits-Präambel — immer enthalten.',
+      begruendung: 'Identifikation und Urteilsfähigkeits-Präambel – immer enthalten.',
       norm: 'Art. 370 Abs. 1 ZGB',
     },
     {
@@ -254,13 +254,13 @@ export const PV_SCHEMA: VorlageSchema = {
       id: 'P06_palliativ',
       text:
         'Schmerz- und Symptombehandlung: Ich wünsche in jedem Fall eine fachgerechte Linderung von ' +
-        'Schmerzen, Atemnot und Angst — auch wenn dadurch als nicht beabsichtigte Nebenwirkung mein ' +
+        'Schmerzen, Atemnot und Angst – auch wenn dadurch als nicht beabsichtigte Nebenwirkung mein ' +
         'Sterben beschleunigt werden könnte. Reichen andere Mittel nicht aus, ist eine palliative ' +
         'Sedierung zulässig.',
       nummeriert: true,
       begruendung: 'Immer enthalten: Leidenslinderung inkl. zulässiger indirekter Sterbehilfe; Sedierung gekoppelt.',
       norm: 'Art. 370 Abs. 1 ZGB',
-      hinweis: 'Indirekte Sterbehilfe (Leidenslinderung mit möglicher Lebensverkürzung) ist zulässig — im Unterschied zu aktiver Sterbehilfe und Suizidhilfe (Art. 114/115 StGB), die nicht anordenbar sind.',
+      hinweis: 'Indirekte Sterbehilfe (Leidenslinderung mit möglicher Lebensverkürzung) ist zulässig – im Unterschied zu aktiver Sterbehilfe und Suizidhilfe (Art. 114/115 StGB), die nicht anordenbar sind.',
     },
     {
       id: 'P07_vertretung',
@@ -334,7 +334,7 @@ export const PV_SCHEMA: VorlageSchema = {
         '{{ortZeile}}Datum (von Hand einzusetzen): ____________________\n\n\n' +
         '_________________________________\n' +
         '(eigenhändige Unterschrift: {{vorname}} {{name}})',
-      begruendung: 'Schlussformel: Datum und Unterschrift werden HANDSCHRIFTLICH geleistet — immer enthalten.',
+      begruendung: 'Schlussformel: Datum und Unterschrift werden HANDSCHRIFTLICH geleistet – immer enthalten.',
       norm: 'Art. 371 Abs. 1 ZGB',
     },
   ],

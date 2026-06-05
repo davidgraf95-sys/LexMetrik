@@ -21,12 +21,12 @@ const VERJ_DISCLAIMER =
   '(Art. 136 OR). Die Verjährung ist Einrede (Art. 142 OR); der konkrete Fall ist fachlich zu prüfen.';
 
 const REGIMES: { code: VerjaehrungRegime; label: string; hint: string; rel: number; abs: number | null }[] = [
-  { code: 'ordentlich', label: 'Ordentliche Forderung — 10 Jahre (Art. 127 OR)', hint: 'Auffangregel für vertragliche Forderungen ohne Sonderfrist', rel: 10, abs: null },
-  { code: 'kurz', label: 'Katalogforderung — 5 Jahre (Art. 128 OR)', hint: 'Miet-/Pacht-/Kapitalzinse, periodische Leistungen, Handwerk, Arzt, Anwalt, Arbeitsverhältnis', rel: 5, abs: null },
-  { code: 'delikt', label: 'Unerlaubte Handlung — 3 / 10 Jahre (Art. 60 Abs. 1 OR)', hint: 'Sach- und Vermögensschaden', rel: 3, abs: 10 },
-  { code: 'delikt_person', label: 'Unerlaubte Handlung, Personenschaden — 3 / 20 Jahre (Art. 60 Abs. 1bis OR)', hint: 'Tötung oder Körperverletzung', rel: 3, abs: 20 },
-  { code: 'vertrag_person', label: 'Vertraglicher Personenschaden — 3 / 20 Jahre (Art. 128a OR)', hint: 'Körperverletzung/Tötung aus Vertragsverletzung', rel: 3, abs: 20 },
-  { code: 'bereicherung', label: 'Ungerechtfertigte Bereicherung — 3 / 10 Jahre (Art. 67 OR)', hint: 'Rückforderung grundloser Zuwendungen', rel: 3, abs: 10 },
+  { code: 'ordentlich', label: 'Ordentliche Forderung – 10 Jahre (Art. 127 OR)', hint: 'Auffangregel für vertragliche Forderungen ohne Sonderfrist', rel: 10, abs: null },
+  { code: 'kurz', label: 'Katalogforderung – 5 Jahre (Art. 128 OR)', hint: 'Miet-/Pacht-/Kapitalzinse, periodische Leistungen, Handwerk, Arzt, Anwalt, Arbeitsverhältnis', rel: 5, abs: null },
+  { code: 'delikt', label: 'Unerlaubte Handlung – 3 / 10 Jahre (Art. 60 Abs. 1 OR)', hint: 'Sach- und Vermögensschaden', rel: 3, abs: 10 },
+  { code: 'delikt_person', label: 'Unerlaubte Handlung, Personenschaden – 3 / 20 Jahre (Art. 60 Abs. 1bis OR)', hint: 'Tötung oder Körperverletzung', rel: 3, abs: 20 },
+  { code: 'vertrag_person', label: 'Vertraglicher Personenschaden – 3 / 20 Jahre (Art. 128a OR)', hint: 'Körperverletzung/Tötung aus Vertragsverletzung', rel: 3, abs: 20 },
+  { code: 'bereicherung', label: 'Ungerechtfertigte Bereicherung – 3 / 10 Jahre (Art. 67 OR)', hint: 'Rückforderung grundloser Zuwendungen', rel: 3, abs: 10 },
 ];
 
 const U_TYPEN: { code: UnterbrechungsTyp; label: string }[] = [
@@ -145,11 +145,11 @@ export function VerjaehrungForm() {
 
       {/* Daten */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label={beginnLabel} hint="Beginn der (relativen) Frist — der Beginntag zählt nicht (Art. 132 OR)">
+        <Field label={beginnLabel} hint="Beginn der (relativen) Frist – der Beginntag zählt nicht (Art. 132 OR)">
           <DatumsFeld value={beginnRelativ} onChange={setBeginnRelativ} className={inputCls} />
         </Field>
         {hatAbsolut && (
-          <Field label={absolutLabel} hint="Beginn der absoluten Frist — läuft unabhängig von Kenntnis">
+          <Field label={absolutLabel} hint="Beginn der absoluten Frist – läuft unabhängig von Kenntnis">
             <DatumsFeld value={beginnAbsolut} onChange={setBeginnAbsolut} className={inputCls} />
           </Field>
         )}
@@ -166,13 +166,13 @@ export function VerjaehrungForm() {
       {hatAbsolut && regime !== 'bereicherung' && (
         <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" checked={strafbar} onChange={(e) => setStrafbar(e.target.checked)} />
-          Das schädigende Verhalten ist eine strafbare Handlung (Art. 60 Abs. 2 OR — strafrechtliche Längerfrist vorbehalten)
+          Das schädigende Verhalten ist eine strafbare Handlung (Art. 60 Abs. 2 OR – strafrechtliche Längerfrist vorbehalten)
         </label>
       )}
 
       {/* Unterbrechungen */}
       <div className="space-y-2">
-        <p className="lc-overline">Unterbrechungen (Art. 135 OR) — Frist beginnt neu</p>
+        <p className="lc-overline">Unterbrechungen (Art. 135 OR) – Frist beginnt neu</p>
         {unterbrechungen.map((u, i) => (
           <div key={i} className="flex flex-wrap items-center gap-2 pl-1">
             <select value={u.typ} onChange={(e) => setU(i, { typ: e.target.value as UnterbrechungsTyp })} className={inputCls + ' sm:max-w-xs'}>
@@ -202,7 +202,7 @@ export function VerjaehrungForm() {
 
       {/* Stillstand */}
       <div className="space-y-2">
-        <p className="lc-overline">Stillstand / Hemmung (Art. 134 OR) — Uhr pausiert</p>
+        <p className="lc-overline">Stillstand / Hemmung (Art. 134 OR) – Uhr pausiert</p>
         {stillstaende.map((s, i) => (
           <div key={i} className="flex flex-wrap items-center gap-2 pl-1">
             <select value={s.grund ?? STILLSTAND_GRUENDE[0]} onChange={(e) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, grund: e.target.value } : x)))} className={inputCls + ' sm:max-w-xs'}>
@@ -244,17 +244,17 @@ export function VerjaehrungForm() {
         <div className="space-y-4">
           <p className="lc-live lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Live-Berechnung – aktualisiert sich automatisch</p>
 
-          {/* Eckdaten — relative und absolute Frist getrennt; die massgebliche trägt das Badge */}
+          {/* Eckdaten – relative und absolute Frist getrennt; die massgebliche trägt das Badge */}
           <div className={`grid grid-cols-1 sm:grid-cols-2 ${hatAbsolut ? 'lg:grid-cols-4' : 'sm:grid-cols-3'} gap-3`}>
             <FristKarte
-              label={hatAbsolut ? `Relative Frist — ${R.rel} Jahre` : `Frist — ${R.rel} Jahre`}
+              label={hatAbsolut ? `Relative Frist – ${R.rel} Jahre` : `Frist – ${R.rel} Jahre`}
               sub={`ab ${beginnLabel}`}
               wert={ergebnis.relativEndeISO ? fmtISO(ergebnis.relativEndeISO) : 'steht still (Art. 138 Abs. 1)'}
               massgeblich={hatAbsolut && ergebnis.massgeblicheFrist === 'relativ'}
             />
             {hatAbsolut && (
               <FristKarte
-                label={`Absolute Frist — ${R.abs} Jahre`}
+                label={`Absolute Frist – ${R.abs} Jahre`}
                 sub={`ab ${absolutLabel}`}
                 wert={ergebnis.absolutEndeISO ? fmtISO(ergebnis.absolutEndeISO) : '–'}
                 massgeblich={ergebnis.massgeblicheFrist === 'absolut'}

@@ -1,16 +1,16 @@
 import type { Kanton } from '../../types/legal';
 
-// ─── Behörden-Stammdaten für Eingaben — Grundgerüst (5.6.2026) ──────────────
+// ─── Behörden-Stammdaten für Eingaben – Grundgerüst (5.6.2026) ──────────────
 //
 // JEDE automatisch eingesetzte Behörden-/Gerichtsadresse muss VOLLSTÄNDIG
 // sein (Name, Zusatz, Strasse MIT Hausnummer, PLZ, Ort) und eine datierte
 // amtliche Quelle tragen. Eingaben-Wizards wählen zu Beginn den KANTON;
 // die Registry löst die zuständige Adresse auf. Ist ein Kanton (noch)
-// nicht hinterlegt, zeigt der Wizard eine klare Fehlermeldung — mit der
+// nicht hinterlegt, zeigt der Wizard eine klare Fehlermeldung – mit der
 // Möglichkeit, die Adresse von Hand zu erfassen (Override gilt immer).
 //
 // Pilot-Abdeckung: Basel-Stadt. Weitere Kantone werden hier ergänzt
-// (eine Adresse pro Eingabe-Art × Kanton; nie raten — nur amtliche Quellen).
+// (eine Adresse pro Eingabe-Art × Kanton; nie raten – nur amtliche Quellen).
 
 export type BehoerdenAdresse = {
   name: string;        // z. B. «Zivilgericht Basel-Stadt»
@@ -65,7 +65,7 @@ export function behoerdeAlsBlock(b: { name: string; zusatz?: string; strasse: st
   return [b.name, b.zusatz, b.strasse, b.plzOrt].filter(Boolean).join('\n');
 }
 
-/** Manuell erfasste Behördenadresse (Override — gilt vor der Registry). */
+/** Manuell erfasste Behördenadresse (Override – gilt vor der Registry). */
 export type BehoerdeManuell = { name: string; strasse: string; plzOrt: string };
 
 export function behoerdeManuellVollstaendig(m?: BehoerdeManuell): boolean {

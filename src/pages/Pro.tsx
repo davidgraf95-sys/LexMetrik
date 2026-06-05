@@ -30,7 +30,7 @@ export function Pro() {
             Der vollständige Katalog für die Praxis.
           </h1>
           <p className="text-body-s text-ink-500 sm:truncate sm:min-w-0">
-            Alle Rechner und Vorlagen — mit nachvollziehbarem Rechenweg und exakten Normverweisen.
+            Alle Rechner und Vorlagen – mit nachvollziehbarem Rechenweg und exakten Normverweisen.
           </p>
           <span className="hidden lg:inline-flex items-baseline gap-4 ml-auto pl-4 shrink-0 num text-body-s text-ink-500">
             {/* Primär: sofort Verfügbares; Katalog/Gebiete sekundär (Phase 5).

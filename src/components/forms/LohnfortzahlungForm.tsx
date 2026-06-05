@@ -233,7 +233,7 @@ export function LohnfortzahlungForm() {
         </div>
       )}
 
-      {/* Erweiterte Eingaben — kein overflow-hidden, sonst wird das
+      {/* Erweiterte Eingaben – kein overflow-hidden, sonst wird das
           DatumsFeld-Popover abgeschnitten; Rundung trägt der Button selbst. */}
       <div className="border border-line rounded-md">
         <button type="button" onClick={() => setErweitert(!erweitert)}

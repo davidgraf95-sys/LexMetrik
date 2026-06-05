@@ -3,11 +3,11 @@ import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 import { SprachUmschalter } from '../SprachUmschalter';
 import { istProEingeloggt, proAusloggen } from '../../lib/proSession';
 
-// Header (Iteration 3): ruhiges ZWEI-ZONEN-Layout — Logo links, Aktions-
+// Header (Iteration 3): ruhiges ZWEI-ZONEN-Layout – Logo links, Aktions-
 // cluster rechts (Sprache · Methodik · Über · Pro-Button),
 // Mitte bewusst leer. Der frühere Stufen-Umschalter ist aufgelöst:
 // «/» (Free) ist der Default; ein gerichteter Button führt in den
-// Pro-Bereich (gekapselte Route, später PayPal-Gate — PAYWALL_ACTIVE) und
+// Pro-Bereich (gekapselte Route, später PayPal-Gate – PAYWALL_ACTIVE) und
 // von dort zurück. Der MODUS-Umschalter (Rechner/Vorlagen) bleibt unberührt.
 const NAV = [
   { to: '/methodik', label: 'Methodik', match: (p: string) => p === '/methodik' },
@@ -44,17 +44,17 @@ export function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-line"
       style={{ background: 'color-mix(in srgb, var(--paper) 92%, transparent)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }}>
-      {/* Utility-Bar (schlank): nur der Pflichthinweis rechts — der Claim
+      {/* Utility-Bar (schlank): nur der Pflichthinweis rechts – der Claim
           steht genau einmal im Hero. Auf Mobile ausgeblendet. */}
       <div className="hidden sm:block border-b border-line" style={{ background: 'color-mix(in srgb, var(--paper-sunken) 55%, transparent)' }}>
         <div className="max-w-content mx-auto px-5 sm:px-6 h-7 flex items-center justify-end">
-          <p className="lc-overline text-ink-500 truncate">Orientierung — keine Rechtsberatung</p>
+          <p className="lc-overline text-ink-500 truncate">Orientierung – keine Rechtsberatung</p>
         </div>
       </div>
 
       {/* Hauptzeile: Logo links · Aktionscluster rechts · Mitte leer */}
       <div className="max-w-content mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-        <Link to="/" className="inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik — Startseite">
+        <Link to="/" className="inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik – Startseite">
           <LexMetrikSiegel size={30} />
           <LexMetrikWortmarke className="text-[1.35rem] hidden md:block" />
         </Link>

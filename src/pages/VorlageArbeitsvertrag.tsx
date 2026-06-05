@@ -15,7 +15,7 @@ import { karte } from '../lib/startseiteConfig';
 // ─── Vorlagen-Wizard: Einzelarbeitsvertrag (Art. 319 ff. OR) ────────────────
 // Erste Vorlage auf dem generischen Wizard-Rahmen. Validierungskern ist die
 // Matrix des Gutachtens 5.6.2026 (absolut/relativ zwingend, Schriftform,
-// Disclosure) — siehe lib/vorlagen/arbeitsvertrag.ts. Eingaben bleiben im
+// Disclosure) – siehe lib/vorlagen/arbeitsvertrag.ts. Eingaben bleiben im
 // Browser (localStorage).
 
 const SPEICHER_KEY = 'lexmetrik.vorlage.arbeitsvertrag.v1';
@@ -31,8 +31,8 @@ const SCHRITTE = [
 ] as const;
 
 const BANNER_AV: PdfBanner = {
-  titel: 'VERTRAGSENTWURF — VON BEIDEN PARTEIEN ZU UNTERZEICHNEN',
-  text: 'Der Arbeitsvertrag ist formfrei gültig (Art. 320 OR); einzelne Klauseln (Konkurrenzverbot, Überstunden-Wegbedingung, abweichende Fristen, Pauschalspesen) bedürfen der Schriftform — die beidseitige Unterzeichnung dieses Vertrags erfüllt sie.',
+  titel: 'VERTRAGSENTWURF – VON BEIDEN PARTEIEN ZU UNTERZEICHNEN',
+  text: 'Der Arbeitsvertrag ist formfrei gültig (Art. 320 OR); einzelne Klauseln (Konkurrenzverbot, Überstunden-Wegbedingung, abweichende Fristen, Pauschalspesen) bedürfen der Schriftform – die beidseitige Unterzeichnung dieses Vertrags erfüllt sie.',
 };
 
 const MINDESTLOHN_KANTONE = new Set(AV_MINDESTLOEHNE.map((m) => m.kanton));
@@ -128,7 +128,7 @@ export function VorlageArbeitsvertrag() {
             <input type="checkbox" className="mt-0.5" checked={a.befristet} onChange={(e) => {
               set('befristet', e.target.checked);
               // Stale-State vermeiden: bei Befristung gibt es keine ordentliche
-              // Kündigung — abweichende Frist zurücksetzen (Review-Befund B1).
+              // Kündigung – abweichende Frist zurücksetzen (Review-Befund B1).
               if (e.target.checked) { set('kuendigungsfrist', 'gesetzlich'); set('kuendigungsfristMonate', undefined); }
             }} />
             <span>Befristetes Arbeitsverhältnis <span className="text-ink-500">(endet ohne Kündigung, Art. 334 OR)</span></span>
@@ -145,7 +145,7 @@ export function VorlageArbeitsvertrag() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {([
                   // Bei Befristung gibt es keine gesetzliche Vermutung
-                  // (Art. 335b Abs. 1 OR) — die Probezeit wird VEREINBART.
+                  // (Art. 335b Abs. 1 OR) – die Probezeit wird VEREINBART.
                   ['gesetzlich', a.befristet ? '1 Monat (vereinbart)' : 'Gesetzlich', a.befristet ? 'ausdrückliche Abrede' : '1 Monat'],
                   ['verlaengert', a.befristet ? '2–3 Monate (vereinbart)' : 'Verlängert', '2–3 Monate (schriftlich)'],
                   ['wegbedungen', 'Keine', 'Probezeit wegbedungen'],
@@ -191,7 +191,7 @@ export function VorlageArbeitsvertrag() {
           </Field>
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.dreizehnter} onChange={(e) => set('dreizehnter', e.target.checked)} />
-            <span>13. Monatslohn <span className="text-ink-500">(Lohnbestandteil — bei unterjährigem Ein-/Austritt pro rata geschuldet)</span></span>
+            <span>13. Monatslohn <span className="text-ink-500">(Lohnbestandteil – bei unterjährigem Ein-/Austritt pro rata geschuldet)</span></span>
           </label>
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.gratifikation} onChange={(e) => set('gratifikation', e.target.checked)} />
@@ -326,7 +326,7 @@ export function VorlageArbeitsvertrag() {
               ))}
             </div>
             {a.spesen === 'pauschal' && (
-              <Field label="Pauschale (CHF pro Monat)" hint="muss alle notwendigen Auslagen decken — sonst insoweit nichtig (Art. 327a Abs. 3 OR)">
+              <Field label="Pauschale (CHF pro Monat)" hint="muss alle notwendigen Auslagen decken – sonst insoweit nichtig (Art. 327a Abs. 3 OR)">
                 <BetragsFeld className={inputCls + ' num w-40'} value={a.spesenPauschaleCHF ?? ''} onChange={(v) => set('spesenPauschaleCHF', v)} placeholder="z. B. 200" />
               </Field>
             )}
@@ -336,7 +336,7 @@ export function VorlageArbeitsvertrag() {
             <select className={inputCls} value={a.gav} onChange={(e) => set('gav', e.target.value as AvAntworten['gav'])}>
               <option value="nein">Kein GAV anwendbar</option>
               <option value="ja">GAV anwendbar</option>
-              <option value="unbekannt">Unklar — noch zu prüfen</option>
+              <option value="unbekannt">Unklar – noch zu prüfen</option>
             </select>
             {a.gav === 'ja' && (
               <Field label="GAV (Bezeichnung)">
@@ -361,7 +361,7 @@ export function VorlageArbeitsvertrag() {
         <div className="space-y-4">
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.konkurrenzverbot} onChange={(e) => set('konkurrenzverbot', e.target.checked)} />
-            <span><strong>Konkurrenzverbot</strong> vereinbaren <span className="text-ink-500">(Art. 340 ff. OR — nach Ort, Zeit und Gegenstand zu begrenzen)</span></span>
+            <span><strong>Konkurrenzverbot</strong> vereinbaren <span className="text-ink-500">(Art. 340 ff. OR – nach Ort, Zeit und Gegenstand zu begrenzen)</span></span>
           </label>
           {a.konkurrenzverbot && (
             <div className="lc-card p-4 space-y-3">
@@ -385,7 +385,7 @@ export function VorlageArbeitsvertrag() {
               </Field>
               <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.kvRealerfuellung ?? false} onChange={(e) => set('kvRealerfuellung', e.target.checked)} />
-                <span>Realerfüllung vorbehalten <span className="text-ink-500">(Beseitigung des vertragswidrigen Zustands, Art. 340b Abs. 3 OR — «besonders schriftlich verabredet»)</span></span>
+                <span>Realerfüllung vorbehalten <span className="text-ink-500">(Beseitigung des vertragswidrigen Zustands, Art. 340b Abs. 3 OR – «besonders schriftlich verabredet»)</span></span>
               </label>
               <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.kvStrafeBefreitNicht ?? false} onChange={(e) => set('kvStrafeBefreitNicht', e.target.checked)} />
@@ -402,11 +402,11 @@ export function VorlageArbeitsvertrag() {
                   </Field>
                   <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                     <input type="checkbox" className="mt-0.5" checked={a.kvKarenzVerzichtsrecht ?? false} onChange={(e) => set('kvKarenzVerzichtsrecht', e.target.checked)} />
-                    <span>Einseitiges Verzichtsrecht des Arbeitgebers vorbehalten <span className="text-ink-500">(ohne Abrede keine einseitige Befreiung — BGer 4A_5/2025)</span></span>
+                    <span>Einseitiges Verzichtsrecht des Arbeitgebers vorbehalten <span className="text-ink-500">(ohne Abrede keine einseitige Befreiung – BGer 4A_5/2025)</span></span>
                   </label>
                   <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
                     <input type="checkbox" className="mt-0.5" checked={a.kvKarenzErsatzAnrechenbar ?? false} onChange={(e) => set('kvKarenzErsatzAnrechenbar', e.target.checked)} />
-                    <span>Ersatzeinkommen anrechenbar <span className="text-ink-500">(nur bei ausdrücklicher Abrede — BGer 4A_5/2025 E. 5.3)</span></span>
+                    <span>Ersatzeinkommen anrechenbar <span className="text-ink-500">(nur bei ausdrücklicher Abrede – BGer 4A_5/2025 E. 5.3)</span></span>
                   </label>
                 </div>
               )}
@@ -444,17 +444,17 @@ export function VorlageArbeitsvertrag() {
 
           {/* Form-Gate */}
           <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
-            <p className="lc-overline text-brass-700">Form-Gate — damit der Vertrag trägt</p>
+            <p className="lc-overline text-brass-700">Form-Gate – damit der Vertrag trägt</p>
             <ul className="space-y-2 text-body-s text-ink-700">
-              <li><strong>Beidseitig unterzeichnen</strong> — erst die Unterschriften beider Parteien erfüllen die Schriftform der formbedürftigen Klauseln (Konkurrenzverbot, Wegbedingungen, abweichende Fristen).</li>
-              <li><strong>Elektronisch nur mit QES:</strong> Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) — einfache E-Signatur oder eingescannte Unterschrift genügen nicht.</li>
+              <li><strong>Beidseitig unterzeichnen</strong> – erst die Unterschriften beider Parteien erfüllen die Schriftform der formbedürftigen Klauseln (Konkurrenzverbot, Wegbedingungen, abweichende Fristen).</li>
+              <li><strong>Elektronisch nur mit QES:</strong> Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) – einfache E-Signatur oder eingescannte Unterschrift genügen nicht.</li>
               <li><strong>GAV/NAV prüfen:</strong> Anwendbare Mindeststandards gehen diesem Vertrag vor (Art. 357/360a OR).</li>
               <li><strong>Mindestlohn prüfen</strong> bei Arbeitsort in GE, BS, NE, JU, TI (jährlich indexiert; ab 2026 auch Stadt Luzern).</li>
-              <li><strong>Sozialversicherungen anmelden</strong> (AHV/ALV/BVG/UVG) — nicht Gegenstand dieser Vorlage.</li>
+              <li><strong>Sozialversicherungen anmelden</strong> (AHV/ALV/BVG/UVG) – nicht Gegenstand dieser Vorlage.</li>
             </ul>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
-              Ich habe verstanden: Dies ist ein Entwurf nach festen Bausteinen — GAV/NAV, kantonale Mindestlöhne und der Einzelfall sind gesondert zu prüfen.
+              Ich habe verstanden: Dies ist ein Entwurf nach festen Bausteinen – GAV/NAV, kantonale Mindestlöhne und der Einzelfall sind gesondert zu prüfen.
             </label>
           </section>
 
@@ -481,7 +481,7 @@ export function VorlageArbeitsvertrag() {
     <VorlagenWizardRahmen
       overline={`${card?.rechtsgebiet ?? 'Arbeit'} · Vorlage`}
       titel="Einzelarbeitsvertrag"
-      intro="Stellt einen Arbeitsvertrag nach Art. 319 ff. OR aus festen, juristisch vorformulierten Bausteinen zusammen — mit harten Schranken für zwingendes Recht (Probezeit, Fristen, Ferien, Ferienlohn) und offengelegten Hinweisen zu heiklen Klauseln. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument."
+      intro="Stellt einen Arbeitsvertrag nach Art. 319 ff. OR aus festen, juristisch vorformulierten Bausteinen zusammen – mit harten Schranken für zwingendes Recht (Probezeit, Fristen, Ferien, Ferienlohn) und offengelegten Hinweisen zu heiklen Klauseln. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument."
       norms={card?.norms ?? []}
       badge="Beidseitig zu unterzeichnen"
       zuruecksetzen={zuruecksetzen}

@@ -153,7 +153,7 @@ export function VorlageTestament() {
         <div className="space-y-4">
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.widerruf} onChange={(e) => set('widerruf', e.target.checked)} />
-            <span>Frühere letztwillige Verfügungen widerrufen <span className="text-ink-500">(empfohlen — schafft klare Verhältnisse, Art. 509/511 ZGB)</span></span>
+            <span>Frühere letztwillige Verfügungen widerrufen <span className="text-ink-500">(empfohlen – schafft klare Verhältnisse, Art. 509/511 ZGB)</span></span>
           </label>
 
           <div className="space-y-3">
@@ -171,7 +171,7 @@ export function VorlageTestament() {
                   <Field label="Name"><input className={inputCls} value={e.name}
                     onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, name: ev.target.value } : x))}
                     placeholder="Vorname Nachname" /></Field>
-                  <Field label="Geburtsdatum / Adresse" hint="genaue Personalien — keine Kosenamen">
+                  <Field label="Geburtsdatum / Adresse" hint="genaue Personalien – keine Kosenamen">
                     <input className={inputCls} value={e.angaben}
                       onChange={(ev) => set('erben', a.erben.map((x, j) => j === i ? { ...x, angaben: ev.target.value } : x))}
                       placeholder="geb. 01.01.1990, Musterweg 1, 4051 Basel" /></Field>
@@ -193,7 +193,7 @@ export function VorlageTestament() {
             <button type="button"
               onClick={() => set('erben', [...a.erben, { name: '', angaben: '', quoteProzent: a.erben.length === 0 ? 100 : 0 } as TestamentErbe])}
               className="lc-btn-outline">+ Erbin/Erben hinzufügen</button>
-            <p className="text-xs text-ink-500">Tipp: Decken Sie den ganzen Nachlass ab (100 %) — der nicht verfügte Teil fällt an die gesetzlichen Erben (Art. 481 ZGB).</p>
+            <p className="text-xs text-ink-500">Tipp: Decken Sie den ganzen Nachlass ab (100 %) – der nicht verfügte Teil fällt an die gesetzlichen Erben (Art. 481 ZGB).</p>
           </div>
         </div>
       );
@@ -253,10 +253,10 @@ export function VorlageTestament() {
 
       case 'abschluss': return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Field label="Ort der Errichtung" optional hint="seit 1996 kein Gültigkeitserfordernis mehr — aber empfohlen">
+          <Field label="Ort der Errichtung" optional hint="seit 1996 kein Gültigkeitserfordernis mehr – aber empfohlen">
             <input className={inputCls} value={a.ortErrichtung ?? ''} onChange={(e) => set('ortErrichtung', e.target.value)} placeholder="z. B. Basel" />
           </Field>
-          <Field label="Datum der Errichtung" hint="Jahr, Monat und Tag — zwingend (Art. 505 Abs. 1 ZGB)">
+          <Field label="Datum der Errichtung" hint="Jahr, Monat und Tag – zwingend (Art. 505 Abs. 1 ZGB)">
             <DatumsFeld value={a.datumErrichtung} onChange={(v) => set('datumErrichtung', v)} className={inputCls} />
           </Field>
         </div>
@@ -275,25 +275,25 @@ export function VorlageTestament() {
           ))}
           {a.erben.length === 0 && a.vermaechtnisse.length === 0 && (
             <div className="lc-notice text-body-s">
-              Es ist weder eine Erbeinsetzung noch ein Vermächtnis erfasst — das Dokument wirkt dann
+              Es ist weder eine Erbeinsetzung noch ein Vermächtnis erfasst – das Dokument wirkt dann
               nur als Widerruf früherer Verfügungen; die gesetzliche Erbfolge gilt.
             </div>
           )}
 
           {/* Form-Gate: nicht überspringbar */}
           <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
-            <p className="lc-overline text-brass-700">Form-Gate — damit Ihr Testament gültig wird</p>
+            <p className="lc-overline text-brass-700">Form-Gate – damit Ihr Testament gültig wird</p>
             <ul className="space-y-2 text-body-s text-ink-700">
-              <li><strong>Vollständig von Hand abschreiben.</strong> Der ganze Text — einschliesslich Datum — muss eigenhändig geschrieben sein (Art. 505 Abs. 1 ZGB). Ein Ausdruck, auch unterschrieben, ist anfechtbar/ungültig.</li>
+              <li><strong>Vollständig von Hand abschreiben.</strong> Der ganze Text – einschliesslich Datum – muss eigenhändig geschrieben sein (Art. 505 Abs. 1 ZGB). Ein Ausdruck, auch unterschrieben, ist anfechtbar/ungültig.</li>
               <li><strong>Mit Jahr, Monat und Tag datieren.</strong></li>
               <li><strong>Am Schluss eigenhändig unterschreiben</strong> (BGE 135 III 206).</li>
-              <li><strong>Allein verfassen.</strong> Gemeinschaftliche Testamente von Ehegatten in einem Dokument sind unzulässig — jede Person errichtet ihr eigenes Testament; für gegenseitige Bindung dient der Erbvertrag (Art. 512 ff. ZGB).</li>
-              <li><strong>Spätere Änderungen</strong> erneut datieren und unterschreiben; Streichungen sind heikel — im Zweifel ein neues Testament errichten und das alte vernichten (Art. 510 ZGB).</li>
+              <li><strong>Allein verfassen.</strong> Gemeinschaftliche Testamente von Ehegatten in einem Dokument sind unzulässig – jede Person errichtet ihr eigenes Testament; für gegenseitige Bindung dient der Erbvertrag (Art. 512 ff. ZGB).</li>
+              <li><strong>Spätere Änderungen</strong> erneut datieren und unterschreiben; Streichungen sind heikel – im Zweifel ein neues Testament errichten und das alte vernichten (Art. 510 ZGB).</li>
               <li><strong>Aufbewahrung:</strong> Die handschriftliche Fassung kann freiwillig bei der kantonalen Amtsstelle hinterlegt werden (Art. 505 Abs. 2 ZGB; Gebühr je nach Kanton).</li>
             </ul>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
-              Ich habe verstanden: Nur die vollständig handschriftliche, datierte und unterschriebene Fassung ist gültig — dieses Werkzeug liefert einen Mustertext zum Abschreiben.
+              Ich habe verstanden: Nur die vollständig handschriftliche, datierte und unterschriebene Fassung ist gültig – dieses Werkzeug liefert einen Mustertext zum Abschreiben.
             </label>
           </section>
 
@@ -311,10 +311,10 @@ export function VorlageTestament() {
     }
   };
 
-  // Pflichtteils-Panel (Live, aus der Erbteilungs-Engine) — vorlagenspezifisch
+  // Pflichtteils-Panel (Live, aus der Erbteilungs-Engine) – vorlagenspezifisch
   const pflichtteilePanel = pflichtteile && (a.hatNachkommen || verheiratet) ? (
     <section className="lc-card p-4 space-y-2">
-      <p className="lc-overline">Pflichtteile (Art. 471 ZGB) — zur Kontrolle</p>
+      <p className="lc-overline">Pflichtteile (Art. 471 ZGB) – zur Kontrolle</p>
       <ul className="text-body-s text-ink-700 space-y-0.5">
         {pflichtteile.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => (
           <li key={e.bezeichnung} className="flex justify-between gap-3">
@@ -338,7 +338,7 @@ export function VorlageTestament() {
     <VorlagenWizardRahmen
       overline={`${card?.rechtsgebiet ?? 'Erbrecht'} · Vorlage`}
       titel="Eigenhändiges Testament"
-      intro="Beantworten Sie die Schritte — LexMetrik stellt den Mustertext aus festen, juristisch vorformulierten Bausteinen zusammen. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument."
+      intro="Beantworten Sie die Schritte – LexMetrik stellt den Mustertext aus festen, juristisch vorformulierten Bausteinen zusammen. Ohne Sprachmodell: gleiche Eingaben, gleiches Dokument."
       norms={card?.norms ?? []}
       badge="Eigenhändig abzuschreiben"
       zuruecksetzen={zuruecksetzen}

@@ -11,7 +11,7 @@ import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components
 import { karte } from '../lib/startseiteConfig';
 
 // ─── Vorlagen-Wizard: Vorsorgeauftrag (Art. 360–369 ZGB) ────────────────────
-// Zentrale Weiche: formMode — eigenhändig (Abschreib-Mustertext) oder
+// Zentrale Weiche: formMode – eigenhändig (Abschreib-Mustertext) oder
 // öffentlich beurkundet (Entwurf für die Urkundsperson). Eligibility-Gate
 // (Handlungsfähigkeit) blockiert hart. Eingaben bleiben im Browser.
 
@@ -30,8 +30,8 @@ const SCHRITTE = [
 const KANTONE = ['', 'AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH'];
 
 const BANNER_VA_ABSCHREIBEN: PdfBanner = {
-  titel: 'MUSTERTEXT — VOLLSTÄNDIG VON HAND ABZUSCHREIBEN',
-  text: 'Dieses Blatt ist nicht der Vorsorgeauftrag. Gültig ist nur die von Anfang bis Ende eigenhändig geschriebene, datierte und unterschriebene Fassung — oder die öffentliche Beurkundung (Art. 361 ZGB).',
+  titel: 'MUSTERTEXT – VOLLSTÄNDIG VON HAND ABZUSCHREIBEN',
+  text: 'Dieses Blatt ist nicht der Vorsorgeauftrag. Gültig ist nur die von Anfang bis Ende eigenhändig geschriebene, datierte und unterschriebene Fassung – oder die öffentliche Beurkundung (Art. 361 ZGB).',
 };
 const BANNER_VA_BEURKUNDUNG: PdfBanner = {
   titel: 'ENTWURF FÜR DIE ÖFFENTLICHE BEURKUNDUNG',
@@ -64,7 +64,7 @@ export function VorlageVorsorgeauftrag() {
   const fehlerImSchritt = (i: number): string[] => {
     const f: string[] = [];
     if (i === 0 && (!a.volljaehrig || !a.urteilsfaehigBestaetigt || !a.keineUmfassendeBeistandschaft)) {
-      f.push('Alle drei Errichtungsvoraussetzungen bestätigen (Handlungsfähigkeit, Art. 13 ZGB) — sonst ist ein Vorsorgeauftrag nicht gültig errichtbar.');
+      f.push('Alle drei Errichtungsvoraussetzungen bestätigen (Handlungsfähigkeit, Art. 13 ZGB) – sonst ist ein Vorsorgeauftrag nicht gültig errichtbar.');
     }
     if (i === 1) {
       if (!a.vorname.trim() || !a.nachname.trim()) f.push('Vor- und Nachname angeben.');
@@ -73,7 +73,7 @@ export function VorlageVorsorgeauftrag() {
       if (!a.adresse.trim()) f.push('Adresse angeben.');
     }
     if (i === 5 && eigenhaendig && !a.datum) {
-      f.push('Datum angeben — es wird beim eigenhändigen Vorsorgeauftrag mit abgeschrieben (Art. 361 Abs. 2 ZGB).');
+      f.push('Datum angeben – es wird beim eigenhändigen Vorsorgeauftrag mit abgeschrieben (Art. 361 Abs. 2 ZGB).');
     }
     return f;
   };
@@ -102,7 +102,7 @@ export function VorlageVorsorgeauftrag() {
             </label>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.urteilsfaehigBestaetigt} onChange={(e) => set('urteilsfaehigBestaetigt', e.target.checked)} />
-              Ich bin urteilsfähig (Art. 16 ZGB) — bei hohem Alter wird ein ärztliches Zeugnis zur Urteilsfähigkeit empfohlen
+              Ich bin urteilsfähig (Art. 16 ZGB) – bei hohem Alter wird ein ärztliches Zeugnis zur Urteilsfähigkeit empfohlen
             </label>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.keineUmfassendeBeistandschaft} onChange={(e) => set('keineUmfassendeBeistandschaft', e.target.checked)} />
@@ -114,8 +114,8 @@ export function VorlageVorsorgeauftrag() {
             <p className="lc-overline">Form (Art. 361 ZGB)</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {([
-                ['eigenhaendig', 'Eigenhändig', 'Vollständig von Hand schreiben, datieren, unterschreiben — Ausgabe als Abschreib-Mustertext'],
-                ['oeffentlich_beurkundet', 'Öffentlich beurkundet', 'Entwurf für die Urkundsperson (Notariat) — Verfahren nach kantonalem Recht'],
+                ['eigenhaendig', 'Eigenhändig', 'Vollständig von Hand schreiben, datieren, unterschreiben – Ausgabe als Abschreib-Mustertext'],
+                ['oeffentlich_beurkundet', 'Öffentlich beurkundet', 'Entwurf für die Urkundsperson (Notariat) – Verfahren nach kantonalem Recht'],
               ] as [VaFormMode, string, string][]).map(([code, label, sub]) => (
                 <button key={code} type="button" onClick={() => set('formMode', code)} aria-pressed={a.formMode === code}
                   className={`text-left p-3 rounded-lg border transition-colors ${
@@ -239,7 +239,7 @@ export function VorlageVorsorgeauftrag() {
           {a.module.vermoegenssorge.includes('liegenschaften') && (
             <p className="lc-notice text-body-s">
               Liegenschaften gewählt: Die ausdrückliche Grundstück-Sondervollmacht wird automatisch
-              aufgenommen (Art. 396 Abs. 3 OR — analoge Anwendung umstritten, Praxis empfiehlt sie).
+              aufgenommen (Art. 396 Abs. 3 OR – analoge Anwendung umstritten, Praxis empfiehlt sie).
             </p>
           )}
         </div>
@@ -259,7 +259,7 @@ export function VorlageVorsorgeauftrag() {
             </label>
           </div>
 
-          <Field label="Weisungen für die Erfüllung der Aufgaben" optional hint="Art. 360 Abs. 2 ZGB — z. B. Anlagegrundsätze, Wohnwünsche">
+          <Field label="Weisungen für die Erfüllung der Aufgaben" optional hint="Art. 360 Abs. 2 ZGB – z. B. Anlagegrundsätze, Wohnwünsche">
             <textarea className={inputCls} rows={3} value={a.weisungen ?? ''} onChange={(e) => set('weisungen', e.target.value)} />
           </Field>
 
@@ -335,27 +335,27 @@ export function VorlageVorsorgeauftrag() {
 
           {/* Form-Gate: nicht überspringbar, variantenabhängig */}
           <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
-            <p className="lc-overline text-brass-700">Form-Gate — damit Ihr Vorsorgeauftrag gültig wird</p>
+            <p className="lc-overline text-brass-700">Form-Gate – damit Ihr Vorsorgeauftrag gültig wird</p>
             {eigenhaendig ? (
               <ul className="space-y-2 text-body-s text-ink-700">
-                <li><strong>Vollständig von Hand abschreiben:</strong> Der ganze Text — einschliesslich Ort, Datum und Unterschrift — muss eigenhändig geschrieben sein (Art. 361 Abs. 2 ZGB). Ein am Computer erstellter und nur unterschriebener Text ist UNGÜLTIG; auch eine bloss beglaubigte Unterschrift genügt nicht.</li>
+                <li><strong>Vollständig von Hand abschreiben:</strong> Der ganze Text – einschliesslich Ort, Datum und Unterschrift – muss eigenhändig geschrieben sein (Art. 361 Abs. 2 ZGB). Ein am Computer erstellter und nur unterschriebener Text ist UNGÜLTIG; auch eine bloss beglaubigte Unterschrift genügt nicht.</li>
                 <li><strong>Alternative:</strong> öffentliche Beurkundung bei der Urkundsperson (Art. 361 Abs. 1 ZGB).</li>
               </ul>
             ) : (
               <ul className="space-y-2 text-body-s text-ink-700">
-                <li><strong>Beurkundung:</strong> Diesen Entwurf mit der Urkundsperson besprechen; das Verfahren richtet sich nach kantonalem Recht (BGE 151 III 81 — keine Zeugen erforderlich). {beurkundungsHinweis(a.kanton)}</li>
+                <li><strong>Beurkundung:</strong> Diesen Entwurf mit der Urkundsperson besprechen; das Verfahren richtet sich nach kantonalem Recht (BGE 151 III 81 – keine Zeugen erforderlich). {beurkundungsHinweis(a.kanton)}</li>
               </ul>
             )}
             <ul className="space-y-2 text-body-s text-ink-700">
               <li><strong>Wirksamkeit:</strong> Der Vorsorgeauftrag wird erst wirksam, wenn die KESB ihn bei eingetretener Urteilsunfähigkeit validiert (Art. 363 ZGB).</li>
-              <li><strong>Auffindbarkeit:</strong> Errichtung und Hinterlegungsort beim Zivilstandsamt eintragen lassen (Art. 361 Abs. 3 ZGB; Gebühr CHF 75, Bestätigung +CHF 30 — Richtwerte). Die KESB anerkennt nur das Original; beauftragte Person informieren und Aufbewahrungsort mitteilen (nicht ins alleinige Bankschliessfach).</li>
+              <li><strong>Auffindbarkeit:</strong> Errichtung und Hinterlegungsort beim Zivilstandsamt eintragen lassen (Art. 361 Abs. 3 ZGB; Gebühr CHF 75, Bestätigung +CHF 30 – Richtwerte). Die KESB anerkennt nur das Original; beauftragte Person informieren und Aufbewahrungsort mitteilen (nicht ins alleinige Bankschliessfach).</li>
               <li><strong>Widerruf:</strong> jederzeit in einer Errichtungsform oder durch Vernichtung der Urkunde (Art. 362 ZGB).</li>
             </ul>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               {eigenhaendig
-                ? 'Ich habe verstanden: Nur die vollständig handschriftliche (oder beurkundete) Fassung ist gültig — dieses Werkzeug liefert einen Mustertext zum Abschreiben.'
-                : 'Ich habe verstanden: Dieses Werkzeug liefert einen Entwurf — rechtsgültig wird der Vorsorgeauftrag erst mit der öffentlichen Beurkundung.'}
+                ? 'Ich habe verstanden: Nur die vollständig handschriftliche (oder beurkundete) Fassung ist gültig – dieses Werkzeug liefert einen Mustertext zum Abschreiben.'
+                : 'Ich habe verstanden: Dieses Werkzeug liefert einen Entwurf – rechtsgültig wird der Vorsorgeauftrag erst mit der öffentlichen Beurkundung.'}
             </label>
           </section>
 
@@ -383,7 +383,7 @@ export function VorlageVorsorgeauftrag() {
     <VorlagenWizardRahmen
       overline={`${card?.rechtsgebiet ?? 'Familie'} · Vorlage`}
       titel="Vorsorgeauftrag"
-      intro="Bestimmen Sie, wer im Fall Ihrer Urteilsunfähigkeit Personensorge, Vermögenssorge und Vertretung im Rechtsverkehr übernimmt — aus festen, strukturierten Bausteinen, ohne Sprachmodell. Mit der Form-Weiche eigenhändig ↔ öffentlich beurkundet."
+      intro="Bestimmen Sie, wer im Fall Ihrer Urteilsunfähigkeit Personensorge, Vermögenssorge und Vertretung im Rechtsverkehr übernimmt – aus festen, strukturierten Bausteinen, ohne Sprachmodell. Mit der Form-Weiche eigenhändig ↔ öffentlich beurkundet."
       norms={card?.norms ?? []}
       badge="Eigenhändig ODER beurkundet (Art. 361 ZGB)"
       zuruecksetzen={zuruecksetzen}

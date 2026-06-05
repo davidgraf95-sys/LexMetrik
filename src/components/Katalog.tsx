@@ -138,7 +138,7 @@ function FilterLeiste(props: {
   nurGeprueft: boolean; setNurGeprueft: (v: boolean) => void;
   zeigeRechtsgebiete: boolean;
   zusatzGruppen?: PillGruppe[];
-  /** Pro: Status-Schnitt entfällt — die Katalog-Tabs übernehmen ihn. */
+  /** Pro: Status-Schnitt entfällt – die Katalog-Tabs übernehmen ihn. */
   ohneStatus?: boolean;
 }) {
   const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, zeigeRechtsgebiete, zusatzGruppen, ohneStatus } = props;
@@ -159,7 +159,7 @@ function FilterLeiste(props: {
           ))}
         </div>
       </div>}
-      {/* Filtergruppen (Rechtsbereich, Output-/Dokument-Typ) — kompakte Pills */}
+      {/* Filtergruppen (Rechtsbereich, Output-/Dokument-Typ) – kompakte Pills */}
       {(zusatzGruppen ?? []).map((gr) => (
         <div key={gr.label} role="group" aria-label={gr.label}>
           <p className="lc-overline mb-1.5">{gr.label}</p>
@@ -230,7 +230,7 @@ function Uebersicht(props: {
                   aktiv ? 'bg-brass-100/60 text-ink-900 font-medium' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
                 }`}>
                 {aktiv && <span aria-hidden className="absolute left-0 top-1 bottom-1 w-[3px] rounded-full bg-brass-500" />}
-                {/* ohne Nummern — die Config-Numerale sprängen bei leeren Sektionen (I, II, IV) */}
+                {/* ohne Nummern – die Config-Numerale sprängen bei leeren Sektionen (I, II, IV) */}
                 <span className="truncate pl-1">{s.title}</span>
                 <span className="num text-xs text-ink-500">{s.anzahl}</span>
               </a>
@@ -392,13 +392,13 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
   // Nur Filterwerte anbieten, die in dieser Stufe auch vorkommen (Katalog-Reihenfolge).
   const rechtsgebiete = RECHTSGEBIETE.filter((g) => karten.some((k) => k.rechtsgebiet === g));
 
-  // Tab «Verfügbar» blendet Geplantes aus — Daten bleiben unverändert.
+  // Tab «Verfügbar» blendet Geplantes aus – Daten bleiben unverändert.
   const basisKarten = proAnsicht && ansicht === 'verfuegbar' ? karten.filter(istVerfuegbar) : karten;
   const treffer = basisKarten.filter(passt);
   const filterAktiv = q !== '' || gebiete.size > 0 || bereiche.size > 0 || arten.size > 0 || nurGeprueft;
   const allesZuruecksetzen = () => { setSuche(''); setGebiete(new Set()); setBereiche(new Set()); setArten(new Set()); setNurGeprueft(false); };
 
-  // Rechtsgebiete in FESTER Auftrags-Reihenfolge (§4) — bewusst ohne
+  // Rechtsgebiete in FESTER Auftrags-Reihenfolge (§4) – bewusst ohne
   // Relevanz-Sortierung, damit die Ordnung stabil und erwartbar bleibt.
   // `gebieteZuerst` zieht benannte Gebiete deterministisch nach vorn.
   const gebietRang = (name: string) => {
@@ -441,7 +441,7 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
         const erste = ids.find((id) => sichtbar.current.get(id));
         if (erste) setAktiveSektion(erste);
       },
-      // oben Headerhöhe ausblenden, unten 55 % — «aktiv» ist, was oben im Viewport liegt
+      // oben Headerhöhe ausblenden, unten 55 % – «aktiv» ist, was oben im Viewport liegt
       { rootMargin: '-120px 0px -55% 0px' },
     );
     ids.forEach((id) => {
@@ -486,7 +486,7 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
       ohneStatus={proAnsicht /* Tabs Verfügbar/Gesamt übernehmen den Status-Schnitt */}
     />
   );
-  // Kompaktes Suchfeld — sitzt in der Seitenleiste (Desktop) bzw. im
+  // Kompaktes Suchfeld – sitzt in der Seitenleiste (Desktop) bzw. im
   // Filter-Drawer (mobil); filtert den Katalog live.
   const suchFeld = (
     <input
@@ -499,7 +499,7 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
     />
   );
   // Seitenleiste = EIN Ort für alles Steuernde: Suche, Übersicht, Filter
-  // (Entscheid 5.6.2026 — keine horizontale Filterleiste mehr über den Karten).
+  // (Entscheid 5.6.2026 – keine horizontale Filterleiste mehr über den Karten).
   const uebersicht = (
     <>
       {suchFeld}
@@ -522,7 +522,7 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
 
   return (
     <div className="space-y-6">
-      {/* Mobil: Suche, Übersicht & Filter in einem Drawer — Karten sofort da */}
+      {/* Mobil: Suche, Übersicht & Filter in einem Drawer – Karten sofort da */}
       <details className="lg:hidden bg-surface border border-line rounded-xl">
         <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between gap-2 text-body-s font-medium text-ink-700">
           <span>Suche, Filter & Übersicht</span>
@@ -566,7 +566,7 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
                 ))}
               </div>
             </div>
-            {/* Schnellzugriff: Favoriten + Zuletzt — in beiden Tabs, zeigt nur Verfügbares */}
+            {/* Schnellzugriff: Favoriten + Zuletzt – in beiden Tabs, zeigt nur Verfügbares */}
             <Schnellzugriff favoriten={favoriten} zuletzt={zuletzt} onOeffnen={onOeffnen} />
           </>
         )}
@@ -613,7 +613,7 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
             ))
           ) : (
             /* Free: Rechtsgebiet → Untergruppen, feste §4-Reihenfolge;
-               zu Beginn zugeklappt — Suche/Filter und Sprungmarken klappen auf */
+               zu Beginn zugeklappt – Suche/Filter und Sprungmarken klappen auf */
             gebietSichtbar.map((x) => (
               <GebietSektion key={x.g.id} gebiet={x.g} karten={x.karten}
                 erzwungenOffen={filterAktiv || sprungOffen === x.g.id} />

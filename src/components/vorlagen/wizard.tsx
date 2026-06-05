@@ -14,7 +14,7 @@ import type { PdfBanner } from '../../lib/vorlagen/banner';
 // Fehlerbox und Zurück/Weiter, Vorschau mobil einklappbar / Desktop klebend),
 // dazu VorschauPanel («Papier» + Bausteinprotokoll) und ExportLeiste
 // (PDF lazy, DOCX lazy, Text kopieren). Eine neue Vorlage liefert nur noch
-// Schema, Schritte und Schritt-Inhalte — KEINE Fachlogik hier (§3).
+// Schema, Schritte und Schritt-Inhalte – KEINE Fachlogik hier (§3).
 
 export function VorlagenWizardRahmen({
   zurueckHref = '/', overline, titel, intro, norms, badge,
@@ -98,7 +98,7 @@ export function VorlagenWizardRahmen({
           </div>
         </div>
 
-        {/* Vorschau — mobil einklappbar, Desktop klebend; identischer Inhalt
+        {/* Vorschau – mobil einklappbar, Desktop klebend; identischer Inhalt
             zweimal platziert (kein Remount, wie bisheriger Funktionsaufruf) */}
         <details className="lg:hidden bg-surface border border-line rounded-xl" open={schritt === schritte.length - 1}>
           <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between text-body-s font-medium text-ink-700">
@@ -120,7 +120,7 @@ export function VorlagenWizardRahmen({
 // Formatvorlagen-SSoT): hängende Einzüge für «1.»-Klauseln, doppelt
 // eingezogene «–»-Unterpunkte, gezeichnete Unterschriftslinien, Betreff mit
 // Haarlinie, Rubrum mit zentrierten Parteirollen und fettem «gegen».
-// Reine Darstellung — keine Rechtslogik (§3).
+// Reine Darstellung – keine Rechtslogik (§3).
 
 function VorschauZeile({ zeile, dicht }: { zeile: string; dicht?: boolean }) {
   if (MUSTER.STRICHE.test(zeile)) {
@@ -218,7 +218,7 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
 }) {
   return (
     <div className="space-y-4">
-      {/* Live-Vorschau als «Papier» — interpretiert dieselben Formatvorlagen
+      {/* Live-Vorschau als «Papier» – interpretiert dieselben Formatvorlagen
           (format + Absatz-Rollen) wie PDF und DOCX */}
       <section aria-label="Vorschau" className="bg-paper-raised border border-line rounded-lg shadow-md p-5 sm:p-9">
         <p className="lc-overline mb-4">
@@ -228,7 +228,7 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
           )}
         </p>
         <div className="font-sans text-ink-900" style={kompakt ? { fontSize: '0.88rem', lineHeight: 1.5 } : { fontSize: '0.92rem', lineHeight: 1.55 }}>
-          {/* Eingaben tragen ihren Titel im fetten Betreff — kein Dokumenttitel;
+          {/* Eingaben tragen ihren Titel im fetten Betreff – kein Dokumenttitel;
               Verfügung/Vertrag: zentrierter Titel MIT Haarlinie (wie PDF/DOCX) */}
           {ergebnis.dokument.format !== 'eingabe' && (
             <div className="mb-5">
@@ -255,7 +255,7 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
         <ul className="mt-3 space-y-2.5">
           {ergebnis.protokoll.map((p) => (
             <li key={p.bausteinId} className="text-body-s text-ink-600 space-y-1">
-              <p><span className="num text-ink-500">{p.bausteinId}</span> — {p.begruendung}</p>
+              <p><span className="num text-ink-500">{p.bausteinId}</span> – {p.begruendung}</p>
               {p.hinweis && <p className="text-xs text-warn-700">⚠ {p.hinweis}</p>}
               {p.norm && <p><NormLink artikel={p.norm} /></p>}
             </li>

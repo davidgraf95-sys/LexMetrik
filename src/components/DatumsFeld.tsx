@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { format, isValid, parse, parseISO } from 'date-fns';
 
 // Eigenes Datumsfeld im LexMetrik-Look: Texteingabe (TT.MM.JJJJ) plus
-// aufklappbarer Kalender — ersetzt den nativen Browser-Datepicker.
+// aufklappbarer Kalender – ersetzt den nativen Browser-Datepicker.
 // Wert bleibt ISO (yyyy-MM-dd), kompatibel zu <input type="date">.
 
 const MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 // ─── Geteilter Zustands-Rahmen der Vorlagen-Wizards ─────────────────────────
 //
 // Antworten (optional mit localStorage-Sicherung + Hydration-Normalisierung),
-// Schritt-Navigation, Bestätigungs-Gate und Kopier-Feedback — der in allen
+// Schritt-Navigation, Bestätigungs-Gate und Kopier-Feedback – der in allen
 // Wizards identische Unterbau. Enthält BEWUSST keine Fachlogik (CLAUDE.md §3).
 // Ohne `speicherKey` bleibt der Zustand nur im Speicher (Schlichtungsgesuch:
 // Anweisung «keine Browser-Storage-APIs»).

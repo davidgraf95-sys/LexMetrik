@@ -210,7 +210,7 @@ export function ZpoFristenForm() {
         </Field>
       </div>
 
-      {/* Optionale / erweiterte Funktionen — kein overflow-hidden, sonst wird
+      {/* Optionale / erweiterte Funktionen – kein overflow-hidden, sonst wird
           das DatumsFeld-Popover (Zustellfiktion) abgeschnitten. */}
       <div className="border border-line rounded-lg">
         <button type="button" onClick={() => setErweitert(!erweitert)}

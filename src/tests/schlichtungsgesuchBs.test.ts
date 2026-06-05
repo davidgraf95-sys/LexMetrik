@@ -24,12 +24,12 @@ const basis = (over: Partial<SgAnswers>): SgAnswers => ({
 const texte = (r: ReturnType<typeof sgZusammenstellen>) =>
   r.dokument.absaetze.map((x) => `${x.ueberschrift ?? ''}\n${x.text}`).join('\n');
 
-describe('Schlichtungsgesuch BS — Akzeptanztests', () => {
+describe('Schlichtungsgesuch BS – Akzeptanztests', () => {
   it('1. Geldforderung mit Zins, unvertreten', () => {
     const r = sgZusammenstellen(basis({ geld: { betrag: '3000', zins: { satz: '5', abDatum: '2026-01-01' } } }));
     const t = texte(r);
-    expect(t).toContain("CHF 3'000.00 nebst Zins zu 5% seit 01.01.2026 zu bezahlen");
-    expect(t).toContain('Unter Kostenfolge zu Lasten der beklagten Partei.'); // ohne Entschädigung
+    expect(t).toContain("CHF 3'000.00 nebst Zins zu 5 % seit 1. Januar 2026 zu bezahlen");
+    expect(t).toContain('Unter Kosten- und Entschädigungsfolgen zulasten der beklagten Partei.'); // ohne Entschädigung
     expect(t).toContain('Schlichtungsbehörde'); // Adressat Zivilgericht
     expect(t).toContain('Bäumleingasse 5');
     expect(r.exemplare).toBe(2);
@@ -43,7 +43,7 @@ describe('Schlichtungsgesuch BS — Akzeptanztests', () => {
     }));
     const t = texte(r);
     expect(t).toContain('Betreibung Nr. 12345 des Betreibungsamtes Basel-Stadt sei der Rechtsvorschlag zu beseitigen');
-    expect(t).toContain('Unter Kosten- und Entschädigungsfolgen (zzgl. MwSt.) zu Lasten der beklagten Partei.');
+    expect(t).toContain('Unter Kosten- und Entschädigungsfolgen (zzgl. MwSt.) zulasten der beklagten Partei.');
     expect(t).toContain('Vollmacht vom 01.05.2026');
     expect(t.startsWith('\nAdv. X')).toBe(true); // Absender = Vertretung
   });
@@ -133,7 +133,7 @@ describe('Bug-Check-Regressionen', () => {
     const a = basis({ geld: { betrag: '2,500' } });
     expect(sgMaengel(a)).toEqual([]); // kein «beziffern»-Mangel
     const r = sgZusammenstellen(a);
-    expect(texte(r)).toContain('CHF 2.50'); // 2,500 = 2.5 — konsistent zu fmtCHF
+    expect(texte(r)).toContain('CHF 2.50'); // 2,500 = 2.5 – konsistent zu fmtCHF
   });
   it('Antrag auf Entscheid: Mangel auch bei nicht-vermögensrechtlichem Typ (stale state)', () => {
     const m = sgMaengel(basis({ streitgegenstandTyp: 'uebrige_zivilsache', streitwert: '1500', antragEntscheid: true, freieRechtsbegehren: ['x'] }));

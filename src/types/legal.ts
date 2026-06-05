@@ -48,7 +48,7 @@ export type Kanton =
   | 'GR' | 'JU' | 'LU' | 'NE' | 'NW' | 'OW' | 'SG' | 'SH' | 'SO'
   | 'SZ' | 'TG' | 'TI' | 'UR' | 'VD' | 'VS' | 'ZG' | 'ZH';
 
-// KTG-Gleichwertigkeits-Kriterien (Art. 324a Abs. 4 OR, SHK N 61–62) — §2.6
+// KTG-Gleichwertigkeits-Kriterien (Art. 324a Abs. 4 OR, SHK N 61–62) – §2.6
 export type KtgKriterien = {
   taggeldProzent?: number;                    // z.B. 80 (% des Lohnes)
   leistungsdauerTage?: number;                // z.B. 720/730
@@ -72,7 +72,7 @@ export type LohnfortzahlungInput = {
   vertragsbeginn: string;           // yyyy-MM-dd (= tatsächliche Arbeitsaufnahme)
   verhinderungBeginn: string;       // yyyy-MM-dd (Stichtag A)
   verhinderungsgrund?: Verhinderungsgrund; // default 'krankheit'
-  verhinderungEnde?: string;        // yyyy-MM-dd, optional — für DJ-übergreifende Verhinderung (§2.1)
+  verhinderungEnde?: string;        // yyyy-MM-dd, optional – für DJ-übergreifende Verhinderung (§2.1)
   arbeitsunfaehigkeitProzent: number; // 1–100, bezogen auf die geschuldete Arbeitsleistung
   pensumProzent?: number;           // Beschäftigungsgrad 1–100 (§2.3), default 100
   kanton: Kanton;

@@ -95,12 +95,12 @@ export function letzterTagLohnfortzahlung(start: Date, dauer: SkalaDauer): Date 
 
 /** Sperrfrist-Ende nach Art. 77 OR: Anfangstag zählt nicht mit, Kalendertage. */
 export function sperrfristEnde(beginn: Date, tage: number): Date {
-  return addDays(beginn, tage); // Art. 77 OR — bewusst KEIN −1 (vgl. §1.2)
+  return addDays(beginn, tage); // Art. 77 OR – bewusst KEIN −1 (vgl. §1.2)
 }
 
 // ─── Skalierung bei Teilarbeitsunfähigkeit (Budget-Modell) ───────────────
 //
-// Kalendarische Dauer = Skala-Dauer / AUF-Quote (z.B. 50% → ×2).
+// Kalendarische Dauer = Skala-Dauer / AUF-Quote (z.B. 50 % → ×2).
 // Budget-Modell: vertretbare Praxis-Auslegung, im Einzelfall zu prüfen.
 
 export function skaliereSkalaDauer(dauer: SkalaDauer, aufProzent: number): SkalaDauer {
@@ -145,7 +145,7 @@ export function naechstesMonatsende(d: Date): Date {
 
 // ── Geteilte fachneutrale Helfer (Versimplung 5.6.2026, golden-bewiesen) ────
 
-/** Dauer eines inklusiven Datums-Intervalls in Kalendertagen — kanonische
+/** Dauer eines inklusiven Datums-Intervalls in Kalendertagen – kanonische
  *  Stelle (zuvor identisch in fristenEngine UND zpoFeiertage definiert). */
 export function dauerTageInklusiv(p: { von: Date; bis: Date }): number {
   return differenceInCalendarDays(p.bis, p.von) + 1;

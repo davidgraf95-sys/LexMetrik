@@ -13,7 +13,7 @@ export const FEDLEX = {
   // ArG: Anker art_9/art_12/art_13/art_46 empirisch gegen das konsolidierte
   // Filestore-HTML verifiziert (Konsolidierung 20230901; geprüft 5.6.2026).
   ArG:   'https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de',
-  // VMWG SR 221.213.11 — ELI via Fedlex-SPARQL verifiziert; Anker art_16/17/
+  // VMWG SR 221.213.11 – ELI via Fedlex-SPARQL verifiziert; Anker art_16/17/
   // 19/19a empirisch am Filestore-HTML (Konsolidierung 20251001; 5.6.2026).
   VMWG:  'https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de',
 } as const;
@@ -23,7 +23,7 @@ export type FedlexGesetz = keyof typeof FEDLEX;
 // Anker '#art_<nummer>'. Buchstaben-Artikel nutzen das Fedlex-Unterstrich-
 // Format: 335c → #art_335_c, 334bis → #art_334_bis (empirisch gegen die
 // id="art_…"-Anker des konsolidierten Filestore-HTML, Stand 20250101,
-// verifiziert — Varianten ohne Unterstrich existieren dort NICHT).
+// verifiziert – Varianten ohne Unterstrich existieren dort NICHT).
 // Spannen-/Folgeverweise (–, f., ff.) verlinken den führenden Artikel.
 // Audit 5.6.2026: auch Kombi-Anker Buchstabe+lat. Suffix abgedeckt —
 // im OR real: 329gbis/663bbis/697hbis → art_329_g_bis (Form n_b_suffix).

@@ -14,7 +14,7 @@ import { PdfExportButton } from '../PdfExport';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 
-// ─── Allgemeiner Fristenrechner (Free) — UI ─────────────────────────────────
+// ─── Allgemeiner Fristenrechner (Free) – UI ─────────────────────────────────
 // Reine Darstellung; sämtliche Rechtsregeln liegen in lib/allgemeineFrist.ts.
 // Zwei Tabs: «Fristende berechnen» (Hauptmodus) und das rein informative
 // Hilfsmittel «Tage zwischen zwei Daten» (ohne Rechtsbezug, Auftrag §4).
@@ -39,7 +39,7 @@ const DEFAULTS: State = {
   wochenendeVerschieben: true, feiertageVerschieben: true, kanton: 'ZH',
 };
 
-// Presets setzen nur Einheit/Toggles — keine vorgetäuschte Subsumtion.
+// Presets setzen nur Einheit/Toggles – keine vorgetäuschte Subsumtion.
 const PRESETS: { label: string; patch: Partial<State>; info?: string }[] = [
   { label: 'Tagesfrist (Kalendertage)', patch: { einheit: 'tage', wochenendeVerschieben: true, feiertageVerschieben: true } },
   { label: 'Monatsfrist nach OR', patch: { einheit: 'monate', laenge: 1, wochenendeVerschieben: true, feiertageVerschieben: true },
@@ -104,7 +104,7 @@ export function AllgemeineFristForm() {
 
   // P1.4 Exporte (clientseitig, deterministisch)
   const icsLaden = (endISO: string, titel: string) => {
-    const blob = new Blob([icsFuerFrist({ titel, endISO, beschreibung: 'Berechnet mit LexMetrik (Art. 77/78 OR) — Orientierung, keine Rechtsberatung.', vorfristTage: 3 })], { type: 'text/calendar' });
+    const blob = new Blob([icsFuerFrist({ titel, endISO, beschreibung: 'Berechnet mit LexMetrik (Art. 77/78 OR) – Orientierung, keine Rechtsberatung.', vorfristTage: 3 })], { type: 'text/calendar' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url; a.download = 'Fristende.ics'; a.click();
@@ -164,17 +164,17 @@ export function AllgemeineFristForm() {
 
       {tab === 'frist' ? (
         <>
-          {/* P1.2 Zustell-/Zugangs-Helfer — REIN INFORMATIV, keine Subsumtion */}
+          {/* P1.2 Zustell-/Zugangs-Helfer – REIN INFORMATIV, keine Subsumtion */}
           <details className="lc-card p-4">
             <summary className="cursor-pointer text-body-s font-medium text-ink-700">
-              Wie wurde die Frist ausgelöst? <span className="text-ink-500 font-normal">(optionaler Hinweis-Helfer — keine verbindliche Zustellberechnung)</span>
+              Wie wurde die Frist ausgelöst? <span className="text-ink-500 font-normal">(optionaler Hinweis-Helfer – keine verbindliche Zustellberechnung)</span>
             </summary>
             <div className="mt-3 grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-3 items-end">
               <Field label="Zustellart">
                 <select className={inputCls} value={zustellArt} onChange={(e) => setZustellArt(e.target.value as ZustellArt | '')}>
                   <option value="">– wählen –</option>
                   <option value="uebergabe">Persönliche Übergabe / Empfang</option>
-                  <option value="einschreiben">Einschreiben — erfolgloser Zustellversuch</option>
+                  <option value="einschreiben">Einschreiben – erfolgloser Zustellversuch</option>
                   <option value="apostplus">Gewöhnliche Post / A-Post Plus</option>
                 </select>
               </Field>
@@ -205,7 +205,7 @@ export function AllgemeineFristForm() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Field label="Startdatum (auslösendes Ereignis)" hint="zählt nicht mit — dies a quo non computatur (Art. 77 OR)">
+            <Field label="Startdatum (auslösendes Ereignis)" hint="zählt nicht mit – dies a quo non computatur (Art. 77 OR)">
               <DatumsFeld value={form.start} onChange={(v) => set('start', v)} className={inputCls} />
             </Field>
             <div className="grid grid-cols-[7rem_1fr] gap-3">
@@ -270,7 +270,7 @@ export function AllgemeineFristForm() {
           <p className="lc-notice text-body-s">
             Rückwärtsfrist: ermittelt den SPÄTESTEN Handlungstag, damit zwischen Handlung und Stichtag
             die volle Frist liegt (z. B. «Einberufung mindestens 20 Tage vor der Generalversammlung»,
-            Art. 700 Abs. 1 OR). Keine automatische Verschiebung — die Verschiebungsrichtung bei
+            Art. 700 Abs. 1 OR). Keine automatische Verschiebung – die Verschiebungsrichtung bei
             Wochenend-/Feiertagskollision ist höchstrichterlich ungeklärt.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -289,10 +289,10 @@ export function AllgemeineFristForm() {
                 </select>
               </Field>
             </div>
-            <Field label="Bei Wochenende/Feiertag" hint="Vorverlegung ist in der Schweiz höchstrichterlich ungeklärt — zu verifizieren">
+            <Field label="Bei Wochenende/Feiertag" hint="Vorverlegung ist in der Schweiz höchstrichterlich ungeklärt – zu verifizieren">
               <select className={inputCls} value={rueck.verschiebung}
                 onChange={(e) => setRueck((r) => ({ ...r, verschiebung: e.target.value as RueckVerschiebung }))}>
-                <option value="keine">Keine Verschiebung (Standard — im Zweifel früher handeln)</option>
+                <option value="keine">Keine Verschiebung (Standard – im Zweifel früher handeln)</option>
                 <option value="vorverlegen">Vorverlegen auf den vorangehenden Werktag (Option, mit Vorbehalt)</option>
               </select>
             </Field>
@@ -306,7 +306,7 @@ export function AllgemeineFristForm() {
           </div>
           {rueckErgebnis && (
             <div className="lc-reveal space-y-4" aria-live="polite">
-              <ErgebnisAnzeige titel="Rückwärtsfrist — spätester Handlungstag" ergebnis={rueckErgebnis} />
+              <ErgebnisAnzeige titel="Rückwärtsfrist – spätester Handlungstag" ergebnis={rueckErgebnis} />
               <div className="flex flex-wrap items-center gap-3">
                 <button type="button" className="lc-btn-outline"
                   onClick={() => icsLaden(rueckErgebnis.resultat.endDatumISO, 'Spätester Handlungstag')}>
@@ -319,11 +319,11 @@ export function AllgemeineFristForm() {
       ) : (
         <div className="space-y-4">
           <p className="lc-notice text-body-s">
-            Reines Zählwerkzeug ohne Rechtsbezug — für Fristen den Tab «Fristende berechnen» verwenden.
+            Reines Zählwerkzeug ohne Rechtsbezug – für Fristen den Tab «Fristende berechnen» verwenden.
           </p>
           {bisVorVon && (
             <p className="lc-notice-warn text-body-s" role="alert">
-              «Bis» liegt vor «Von» — angezeigt wird der Abstand als Betrag.
+              «Bis» liegt vor «Von» – angezeigt wird der Abstand als Betrag.
             </p>
           )}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -339,7 +339,7 @@ export function AllgemeineFristForm() {
               <div className="lc-tile">
                 <p className="lc-overline mb-1">Werktage (Mo–Fr, informativ)</p>
                 <p className="num text-h2 leading-none font-medium text-ink-900">{zwischen.werktageMoFr}</p>
-                <p className="text-xs text-ink-500 mt-1">ohne Feiertagsbezug — kein rechtlicher Fristbegriff</p>
+                <p className="text-xs text-ink-500 mt-1">ohne Feiertagsbezug – kein rechtlicher Fristbegriff</p>
               </div>
             </div>
           )}

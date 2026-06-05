@@ -38,7 +38,7 @@ export function SperrtageZaehler({ sperrtage }: { sperrtage: NonNullable<Sperrfr
                   <span className="text-ink-500"> · {fmtISO(z.vonISO)} – {fmtISO(z.bisISO)}</span>
                 </p>
                 {z.rueckfall ? (
-                  <p className="text-body-s text-ink-500">Rückfall — kein neues Kontingent</p>
+                  <p className="text-body-s text-ink-500">Rückfall – kein neues Kontingent</p>
                 ) : z.kontingent != null ? (
                   <p className="num text-body-s text-ink-900">
                     {z.beansprucht} / {z.kontingent} Tage

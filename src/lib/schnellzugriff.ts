@@ -25,7 +25,7 @@ function schreibe(key: string, ids: string[]): void {
   try {
     localStorage.setItem(key, JSON.stringify(ids));
   } catch {
-    /* Speicher nicht verfügbar — Schnellzugriff bleibt sitzungslokal leer */
+    /* Speicher nicht verfügbar – Schnellzugriff bleibt sitzungslokal leer */
   }
 }
 

@@ -4,7 +4,7 @@ import { istProEingeloggt } from './lib/proSession';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
 
-// Code-Splitting auf Routenebene: Jede Seite ist ein eigener Chunk — der
+// Code-Splitting auf Routenebene: Jede Seite ist ein eigener Chunk – der
 // Erstbesuch lädt nur Shell + angefragte Seite, nicht alle Engines/Wizards.
 // Reine Ladezeitpunkt-Änderung (CLAUDE.md §6.4), keine Logik betroffen.
 const Startseite = lazy(() => import('./pages/Startseite').then((m) => ({ default: m.Startseite })));

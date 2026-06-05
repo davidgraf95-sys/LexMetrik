@@ -103,7 +103,7 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
     rechtsprechung: [rechtsprechung('BGE_134_III_354')],
   });
 
-  // ─── Abweichende Frist prüfen (§3.2 — max() entfernt) ─────────────────
+  // ─── Abweichende Frist prüfen (§3.2 – max() entfernt) ─────────────────
   //
   // Art. 335c Abs. 2 OR: Abänderung durch schriftliche Abrede / NAV / GAV; Minimalfrist
   // 1 Monat (beidseitig zwingend); Verkürzung < 1 Monat nur durch GAV und nur im 1. DJ.
@@ -130,7 +130,7 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
         normen: [N_335c_2, N_335a],
       });
     } else if (abweichendeFristMonate >= 1) {
-      // Gültig vereinbarte Frist ≥ 1 Monat gilt — auch wenn KÜRZER als gesetzlich.
+      // Gültig vereinbarte Frist ≥ 1 Monat gilt – auch wenn KÜRZER als gesetzlich.
       fristMonate = abweichendeFristMonate;
       rechenweg.push({
         beschreibung: 'Schritt 3 – Abweichende Kündigungsfrist gültig vereinbart (Art. 335a/c OR)',

@@ -1,6 +1,6 @@
 import { useRef, type ChangeEvent } from 'react';
 
-// ─── BetragsFeld — CHF-Eingabe mit Tausender-Apostroph (5.6.2026) ───────────
+// ─── BetragsFeld – CHF-Eingabe mit Tausender-Apostroph (5.6.2026) ───────────
 //
 // Formatiert LIVE beim Tippen im Schweizer Format (12'500.50) und hält den
 // Cursor stabil (Ziffern links vom Cursor bleiben konstant). Nach aussen
@@ -40,7 +40,7 @@ export function BetragsFeld({ value, onChange, className, placeholder, erlaubeNe
   const handle = (e: ChangeEvent<HTMLInputElement>) => {
     const el = e.target;
     const caret = el.selectionStart ?? el.value.length;
-    // Ziffern links vom Cursor zählen — daran wird der Cursor nach dem
+    // Ziffern links vom Cursor zählen – daran wird der Cursor nach dem
     // Neuformatieren wieder ausgerichtet (Apostrophe zählen nicht).
     const ziffernLinks = el.value.slice(0, caret).replace(/[^\d.]/g, '').length;
     let roh = betragBereinigen(el.value);
