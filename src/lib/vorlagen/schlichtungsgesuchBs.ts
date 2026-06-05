@@ -3,6 +3,7 @@ import { assemble } from './engine';
 import type { Kanton } from '../../types/legal';
 import { BEHOERDEN, behoerdeFuer, behoerdeAlsBlock, behoerdeManuellVollstaendig, type BehoerdeManuell } from './behoerden';
 import { fmtDatumLang, fmtDatum, fmtCHF } from './datum';
+import { ZPO_SCHWELLEN } from '../zustaendigkeit';
 export { fmtCHF } from './datum';
 
 // ─── Schlichtungsgesuch nach Art. 202 ZPO – Kanton Basel-Stadt (Pilot) ──────
@@ -50,12 +51,16 @@ export const SCHLICHTUNGSBEHOERDEN_BS = {
   },
 } as const;
 
-// ── Schwellen (hart codiert, je mit Norm) ───────────────────────────────────
+// ── Schwellen (je mit Norm) ─────────────────────────────────────────────────
+// Die ZUSTÄNDIGKEITS-Schwellen kommen aus der Engine (ZPO_SCHWELLEN, §5 SSoT —
+// Konsolidierung gemäss ZUSTAENDIGKEIT-AUFTRAG.md §7; Werte unverändert,
+// golden-bewiesen). SG-spezifische Schwellen (Kosten/Verfahrensablauf, andere
+// Normen!) bleiben bewusst lokal — keine Fusion rechtlich verschiedener Regeln (§1).
 export const SG_SCHWELLEN = {
-  ENTSCHEID_AUF_ANTRAG: 2000,        // Art. 212 ZPO – Entscheid der Behörde (vermögensrechtlich)
-  ENTSCHEIDVORSCHLAG: 10000,         // Art. 210 Abs. 1 lit. c ZPO (Revision 2025: vorher 5'000)
-  ARBEITSRECHT_KOSTENLOS: 30000,     // Art. 113 Abs. 2 lit. d / 114 lit. c ZPO; Dispens Art. 204 Abs. 3
-  VERZICHT_GEMEINSAM: 100000,        // Art. 199 Abs. 1 ZPO
+  ENTSCHEID_AUF_ANTRAG: ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG,   // Art. 212 ZPO – Entscheid der Behörde (vermögensrechtlich)
+  ENTSCHEIDVORSCHLAG: ZPO_SCHWELLEN.ENTSCHEIDVORSCHLAG,       // Art. 210 Abs. 1 lit. c ZPO (Revision 2025: vorher 5'000)
+  VERZICHT_GEMEINSAM: ZPO_SCHWELLEN.VERZICHT_GEMEINSAM,       // Art. 199 Abs. 1 ZPO
+  ARBEITSRECHT_KOSTENLOS: 30000,     // Art. 113 Abs. 2 lit. d / 114 lit. c ZPO; Dispens Art. 204 Abs. 3 — NICHT Art. 243 (zufällig gleicher Wert)
   ORDNUNGSBUSSE_MAX: 1000,           // Art. 206 Abs. 4 ZPO (neu; Androhung nötig)
   KLAGEBEWILLIGUNG_MONATE: 3,        // Art. 209 Abs. 3 ZPO
   KLAGEBEWILLIGUNG_MIETE_TAGE: 30,   // Art. 209 Abs. 4 ZPO (Miete/Pacht Wohn-/Geschäftsräume)
