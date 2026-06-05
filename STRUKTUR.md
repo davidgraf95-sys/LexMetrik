@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 611 Tests in 32 Dateien (609 grün + 2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 620 Tests (618 grün + 2 skipped) ✓ · tsc STRICT · Logik-Sweep 11'184 Kombinationen ✓ · Norm-Zitate 233/233 ✓ — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -382,6 +382,19 @@ Hand > BS-Registry > Recherche > Platzhalter). **UX-Programm** (9 Etappen-
 Commits) + Design-Konsistenz-Sweep abgeschlossen. **Bibliothek:** 21 Dossiers
 (4 Regelwerke ZPO/SchKG/StPO/Erbrecht; Behörden Zivil/Straf/Erbgang; Kosten)
 — Status je Dossier in bibliothek/INDEX.md (SSoT-Karte dort).
+
+## Session-Abschluss 6.6.2026 (deployed bis e97f63b)
+
+PLZ→Stelle: 8 Kantone gemeindescharf + BE/NE/JU zentral; SO/VS/TI/AR
+ehrlich Verzeichnis (Gemeinde-/Circolo-Organe). Eingangs-Gabelung
+Einleitung/Rechtsmittel. Gerichtsgebühren-Tiefenerfassung 26/26
+(bibliothek/kosten/gerichtskosten-kantone.md; SH→JG 173.200 korrigiert).
+Erlass-Links 52/52 in der UI. Verwaltungsbehörden-Dossier 26/26
+zweifach geprüft. Adress-Gesamtprüfung (4 Pakete, ~450 Adressen):
+7 Korrekturen eingearbeitet (u. a. AG-HG Vorstadt 40, BE-GenStA
+Nordring 8, GR-VGer Grabenstrasse 30). Norm-Doppelcheck Stufe 1+2
+abgeschlossen (Art.-5-lit.-d-Alternative, 112 IV Kann). Werkzeuge neu:
+scripts/logik-sweep.ts · scripts/norm-zitate-pruefen.ts.
 
 ## Offene Punkte (nächste Session)
 
