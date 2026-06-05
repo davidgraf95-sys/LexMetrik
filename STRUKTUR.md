@@ -10,7 +10,7 @@ Verschlankung Stufe 1+2 + Design-Feinschliff).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 338 Tests in 18 Dateien (2 skipped) ✓ — Workflow:
+Build ✓ · Lint 0/0 ✓ · 346 Tests in 18 Dateien (2 skipped) ✓ — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -62,8 +62,8 @@ Untergruppen **Rechner** und **Vorlagen** (nur nicht-leere). Output-Typ
 (Rechner) und Dokument-Typ (Vorlagen) sind FILTER; Rechtsbereich-Filter und
 Suche bleiben. **Der frühere Modus-Umschalter (Primärweiche Rechner |
 Vorlagen) ist damit abgelöst und entfernt**; `?modus=`-Links bleiben
-harmlos. Alt-Gliederungen 'art'/'bereich' existieren im Katalog-Code
-weiter, werden aber nicht mehr gerendert. Header = Zwei-Zonen (Logo links,
+harmlos; die Alt-Gliederungen ('art'/'bereich') sind aus dem Code
+entfernt. Header = Zwei-Zonen (Logo links,
 Aktionscluster rechts: Sprache · Methodik · Über · Pro-Button),
 Mitte leer; Utility-Bar nur Pflichthinweis rechts, mobil ausgeblendet.
 
@@ -129,17 +129,13 @@ Fristwiederherstellung → ZPO-Fristen; Rechtsöffnung/Aberkennung/Kollokation
 Verzugszins-vertieft → Verzugszins; SV-Leistungsverwirkung → ATSG-Karte.
 `RechnerCard.szenarien` zeigt abgedeckte/geplante Szenarien auf der Karte.
 
-**Gliederung:** `/` = Output-Typ-Sektionen (frei: 6 Rechner + alle
-Vorlagen-frei). `/fachpersonen` Rechner-Modus = **zweistufig Rechtsbereich →
-Output-Typ** (BereichSektion); Vorlagen-Modus = Dokument-Typ, rechtsbereich
-nur Filter. Filterleisten je Modus: Rechner = Suche·Rechtsbereich·Output-
-Typ·Status; Vorlagen = Suche·Rechtsgebiet·Rechtsbereich·Status; `/` = nur
-Rechtsgebiet. **Sortierung:** Sektionen/Untergruppen nach Relevanz
-(verfügbare desc → total desc → Config-Reihenfolge; Sprungmarken folgen);
-Karten innerhalb der Gruppen nach **Rechtsgebiet geclustert** (Gebiete mit
-verfügbaren zuerst in RECHTSGEBIETE-Reihenfolge, im Cluster verfügbare vor
-geplanten) — «alle Erbrecht zusammen». Grenzfall Vorlage «Einsprache»:
-straf (Strafbefehl häufiger), Verwaltungsbefehl via Keywords.
+**Gliederung (seit Katalog-Ausbau):** beide Seiten = Rechtsgebiet-Sektionen
+(GebietSektion, feste §4-Reihenfolge OHNE Relevanz-Sortierung) mit
+Untergruppen Rechner/Vorlagen; innerhalb der Gruppen verfügbare vor
+geplanten (sortiereKarten). Filter: Status («Nur verfügbare») · auf /pro
+zusätzlich Rechtsbereich · Output-Typ (Rechner) · Dokument-Typ (Vorlagen);
+Suche in der Seitenleiste. Grenzfall Vorlage «Einsprache»: straf
+(Strafbefehl häufiger), Verwaltungsbefehl via Keywords.
 
 ## Rechner (Engines in src/lib/, alle rein/deterministisch, kein LLM)
 
