@@ -211,6 +211,15 @@ array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
 
 ## PDF-Rechenbericht (src/lib/pdf/)
 
+**Logik-Nachrechnung + Versimplung (5.6.2026):** 4 Cluster unabhängig vom
+Code aus dem Gesetz nachgerechnet (100+ Handfälle, 6912er-Erbrecht-Gitter,
+576er-ZPO≡Allgemein-Gitter): KEINE Berechnungsfehler. Offen für Davids
+Entscheid: Sperrtage-ANZEIGE-Konvention (beansprucht Art.-77 vs.
+Kalendertage; Endtermine identisch). Versimplung golden-bewiesen
+(scripts/golden-outputs.ts, 53 Fälle byte-gleich): naechsterWerktag/
+dauerTageInklusiv kanonisch, fmt/iso ×7 dedupliziert, Vorlagen-Helfer
+zentral, Rückwärts-Spiegelung direkt.
+
 **Tagerechner-P1 (5.6.2026, Auftrag «Verbesserung Fristenrechner»):**
 Rückwärtsmodus (spätester Handlungstag; Verschiebung defensiv «keine»,
 Vorverlegung nur mit Ungeklärt-Vorbehalt), Zustell-Helfer (rein informativ:
