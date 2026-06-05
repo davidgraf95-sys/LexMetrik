@@ -7,7 +7,220 @@ der unentgeltlichen Vertretung — NICHT das frei vereinbare Honorar.
 
 ## Teil ZH–BL (Kantone 1–13)
 
-_(Bericht des ersten Anwaltstarif-Agents ausstehend — wird hier ergänzt.)_
+⚠ **Schlüssel-Befunde Teil 1:** ZH/ZG-Formeltarife praktisch identisch (Sockel + %-Anteil) · GL hat KEINEN Tarif (Ermessen, Art. 20 EG ZPO; Kann-Tarif der Anwaltskommission nicht existent) · LU bemisst als Prozentsatz der GERICHTSgebühr (75–150 %) · SO reines Zeitsystem (230–330/h, UR 180/h) · UR-Staffelzahlen NICHT verifizierbar (bildbasiertes PDF/SPA — offen) · ZG-Fassung neu seit 1.1.2026.
+
+---
+
+# Kantonale Anwaltstarife (Parteientschädigung / Honorarbemessung Zivilverfahren)
+
+**Recherche-Auftrag, Abrufdatum durchgehend 5. Juni 2026. Alle Belege aus den amtlichen kantonalen Gesetzessammlungen (Volltext-PDF der Originalerlasse). Wo die offizielle SPA-Oberfläche keinen Text auslieferte, wurde das amtliche PDF direkt aus der jeweiligen Erlass-API/Notes-Datenbank bezogen und der Volltext extrahiert.**
+
+Methodischer Hinweis: Die meisten Kantone (außer ZH, BE) publizieren über die OrdoLex-Plattform; die maßgeblichen PDF wurden über `…/api/de/versions/{id}/pdf_file` heruntergeladen. Zahlen sind wörtlich zitiert.
+
+---
+
+## ZH — Zürich
+
+**Erlass:** Verordnung über die Anwaltsgebühren (AnwGebV), **LS 215.3**, vom 8. September 2010 (Fassung 1.1.15-87; in Kraft seit 1.1.2011), erlassen vom Obergericht gestützt auf § 48 AnwG, Art. 96 ZPO, Art. 424 StPO.
+
+**Bemessungssystem:**
+- **§ 2 Bemessungsgrundlagen:** im Zivilprozess «Streitwert bzw. Interessewert», Verantwortung, notwendiger Zeitaufwand, Schwierigkeit. Bei offensichtlichem Missverhältnis Erhöhung/Herabsetzung (Abs. 2).
+- **§ 3 Stundenansatz:** «in der Regel Fr. 150 bis Fr. 350 pro Stunde, für unentgeltliche oder amtliche Rechtsvertretungen in der Regel **Fr. 220 pro Stunde**».
+- **§ 4 Grundgebühr (Streitwert-Staffel, Formel):** bis 5 000: «25% des Streitwertes, mind. aber Fr. 100»; über 5 000–10 000: «1 250 zuzügl. 23% des Fr. 5 000 übersteigenden Streitwertes»; 10 000–20 000: 2 400 + 15%; 20 000–40 000: 3 900 + 11%; 40 000–80 000: 6 100 + 9%; 80 000–160 000: 9 700 + 6%; 160 000–300 000: 14 500 + 3,5%; 300 000–600 000: 19 400 + 2%; 600 000–1 Mio.: 25 400 + 1,5%; 1–4 Mio.: 31 400 + 1%; 4–10 Mio.: 61 400 + 0,75%; über 10 Mio.: «106 400 zuzügl. 0,5%». Abweichung nach oben/unten bis 1/3 (Abs. 2).
+- **§ 5** nicht vermögensrechtlich: Fr. 1 400–16 000. **§ 9** summarisch: 2/3 bis 1/5. **§ 11** Zuschläge (Einzelzuschlag je höchstens ½ der Gebühr).
+
+**URL:** offizielles PDF: https://www.notes.zh.ch/appl/zhlex_r.nsf/WebView/B43729FFE159A1E3C1257D9500280016/$File/215.3_8.9.10_87.pdf — Erlass-Seite: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html — Abruf 5.6.2026.
+
+**Bemerkungen:** Die zh.ch-Weboberfläche ist eine SPA ohne statischen Text; Zahlen verifiziert direkt aus dem amtlichen Notes-PDF.
+
+---
+
+## BE — Bern
+
+**Erlass:** Verordnung über die Bemessung des Parteikostenersatzes (Parteikostenverordnung, **PKV**), **BSG 168.811**, vom 17. Mai 2006 (Stand 1.1.2012), gestützt auf Art. 41 KAG. — Ergänzend für amtliche Mandate: Verordnung über die Entschädigung der amtlichen Anwältinnen und Anwälte (**EAV**), **BSG 168.711**, vom 20.10.2010.
+
+**Bemessungssystem (PKV):**
+- **Art. 5 Abs. 1 (Streitwert-Staffel, Bandbreiten Honorar):** unter 8 000: «100 – 3 000»; 8 000–20 000: «1 500 – 7 900»; über 20 000–50 000: «3 200 – 15 700»; 50 000–100 000: «3 900 – 23 700»; 100 000–300 000: «7 900 – 35 400»; 300 000–600 000: «11 800 – 49 200»; 600 000–1 Mio.: «19 700 – 59 000»; 1–2 Mio.: «38 500 – 78 700»; über 2 Mio.: «bis zu 3,8%».
+- Nicht bestimmbarer Streitwert: 400–11 800 Franken; Zuschlag bis 200% bei bedeutenden vermögensrechtlichen Interessen (Art. 5 Abs. 2).
+- **Art. 9 Zuschlag** bis 75% bei besonders zeit-/arbeitsintensiven Verfahren; **Art. 10** Reisezuschlag Fr. 300/Tag; summarisch 30–60% (Art. 5 Abs. 3 / Art. 7).
+- **Stundenansatz amtliche Anwälte:** EAV Art. 1: «**200 Franken**».
+
+**URL:** PKV: https://www.belex.sites.be.ch/app/de/texts_of_law/168.811 (PDF: https://www.belex.sites.be.ch/api/de/versions/151/pdf_file) — EAV: https://www.belex.sites.be.ch/app/de/texts_of_law/168.711 — Abruf 5.6.2026.
+
+**Bemerkungen:** Aktuelle konsolidierte Fassung (Stand 1.1.2012) bestätigt unveränderte Frankenbeträge; Art. 4 PKV sieht periodische Teuerungsanpassung vor — keine spätere Anpassung im konsolidierten Text ersichtlich. Der PKV-Tarif nennt keinen Stundenansatz für die ordentliche Parteientschädigung (reine Streitwert-Bandbreite); der Stundenansatz CHF 200 gilt nur für die staatliche Entschädigung amtlicher Mandate (EAV).
+
+---
+
+## LU — Luzern
+
+**Erlass:** Verordnung über die Kosten in Zivil-, Straf- und verwaltungsgerichtlichen Verfahren (Justiz-Kostenverordnung, **JusKV**), **SRL Nr. 265**, vom 26. März 2013 (Stand 1.1.2026).
+
+**Bemessungssystem:** Die Kosten der berufsmässigen Vertretung (= Parteientschädigung) werden **als Prozentsatz der Gerichtsgebühr** bemessen.
+- **§ 31 Abs. 1:** erstinstanzlich/einzige Instanz «75 bis 150 Prozent der Gebühr nach den §§ 4–8 und 12–13»; Rechtsmittel «50 bis 120 Prozent» (Abs. 2).
+- Die zugrundeliegende Gerichtsgebühr ist streitwertabhängig, **§ 5 (ordentliches Verfahren):** bis 50 000: «Fr. 1500.– bis Fr. 5000.–»; 50 000–100 000: 2 500–8 000; 100 000–200 000: 5 000–12 000; 200 000–500 000: 7 500–25 000; 500 000–1 Mio.: 10 000–40 000; 1–5 Mio.: 30 000–125 000; 5–10 Mio.: 50 000–250 000; über 10 Mio.: «1–2,5% des Streitwerts». (§ 6 vereinfacht, § 7 summarisch tiefer.)
+- **Stundenansatz:** kein expliziter Stundenansatz für die Parteientschädigung; Bemessung erfolgt über den Gebühren-Prozentsatz. Auslagen pauschal 3% des Honorars (§ 33).
+
+**URL:** https://srl.lu.ch/app/de/texts_of_law/265 (PDF: https://srl.lu.ch/api/de/versions/4604/pdf_file) — Abruf 5.6.2026.
+
+**Bemerkungen:** UNSICHERHEIT — die JusKV definiert für die UR/amtliche Verteidigung **keinen** fixen Stundenansatz im Verordnungstext; massgeblich ist der nach Aufwand geschätzte/aus dem Gebührenrahmen abgeleitete Betrag. Ein separater fixer Stundenansatz (wie in anderen Kantonen) ist im Erlass NICHT GEFUNDEN.
+
+---
+
+## UR — Uri
+
+**Erlass:** Verordnung über die Gebühren und Entschädigungen vor Gerichtsbehörden (Gerichtsgebührenverordnung), **RB 2.3231**.
+
+**Bemessungssystem:** Streitwertabhängige, nach oben/unten gestaffelte Anwaltsentschädigung in vermögensrechtlichen Streitigkeiten; Zuschlag 10–30% bei Zivilforderung im Strafurteil; Auslagenersatz. Bei UR/amtlicher Vertretung vergütet der Kanton **75% der gerichtlich bestimmten Entschädigung** und die Barauslagen.
+
+**URL:** https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3231 — Abruf 5.6.2026.
+
+**Bemerkungen:** UNSICHERHEIT/teilweise **NICHT GEFUNDEN** — Die exakte Streitwert-Staffel (konkrete Frankenbeträge) konnte nicht aus einem konsolidierten, textbasierten amtlichen PDF verifiziert werden: Das öffentlich auffindbare ur.ch-PDF (Schlussfassung) war ein bildbasierter Entwurf/Änderungserlass ohne Textebene, und die RB-Oberfläche ist eine SPA. Erlassname/Nummer und das 75%-Prinzip für amtliche Mandate sind belegt; die einzelnen Tarifzahlen sind hier ausdrücklich als nicht abschliessend amtlich verifiziert zu kennzeichnen. Empfehlung: Volltext am rechtsbuch.ur.ch direkt prüfen.
+
+---
+
+## SZ — Schwyz
+
+**Erlass:** Gebührentarif für Rechtsanwälte, **SRSZ 280.411**, vom 27. Januar 1975 (Stand 1.1.2015; letzte Änderungen 11.3.2008 / 7.12.2010).
+
+**Bemessungssystem:**
+- **§ 8 Abs. 2 (Grundhonorar Zivil, Streitwert-Staffel):** 2 000–4 000: «Fr. 440.– bis Fr. 1 650.–»; 4 001–10 000: 500–2 000; 10 001–20 000: 1 100–3 300; 20 001–50 000: 1 650–6 600; 50 001–100 000: 3 300–9 250; 100 001–1 000 000: 5 500–39 600; über 1 Mio.: «1 - 3.5 % des Streitwertes». Bei Streitwert < Fr. 2 000 nach Zeitaufwand, Gesamthonorar höchstens Fr. 1 500.
+- **§ 9** Ehe-/Vaterschaftssachen Fr. 1 000–10 000; **§ 10** summarisch Fr. 300–4 800; **§ 11** Berufung/Revision 20–60%. **§ 16** Über-/Unterschreitung bis 100%.
+- **Stundenansatz UR/amtliche Verteidigung (§ 5 Abs. 1):** «**Fr. 180.- bis Fr. 220.-**». Gleicher Ansatz Fr. 180–220 als Honorar bei Streitwert < 2 000 (§ 8 Abs. 1).
+
+**URL:** https://www.sz.ch/public/upload/assets/5862/280_411.pdf — Abruf 5.6.2026.
+
+**Bemerkungen:** Frankenbeträge wörtlich aus dem amtlichen PDF (Stand 1.1.2015) extrahiert. Kein Hinweis auf neuere Fassung gefunden.
+
+---
+
+## OW — Obwalden
+
+**Erlass:** Gebührenordnung für die Rechtspflege (**GebOR**), **GDB 134.15**, vom 28. September 1973 (Stand 1.3.2015). Die Anwaltsentschädigung ist in Teil 3 («Entschädigung der Anwälte», Art. 31 ff.) geregelt.
+
+**Bemessungssystem:**
+- **Art. 35 Abs. 1 (ordentliche Anwaltsgebühr Zivil, 1. Instanz, Streitwert-Staffel):** bis 30 000: «500.– bis 7 000.–»; über 30 000–50 000: 1 000–9 000; 50 000–100 000: 3 000–11 000; 100 000–200 000: 5 000–13 500; 200 000–500 000: 6 000–17 500; über 500 000: «10 000.– bis 3,5 % des Streitwerts». Ehe-/Vaterschaftssachen Fr. 1 200–10 000 (Abs. 2).
+- **Art. 35a** summarisch Fr. 400–5 000 (bis 15 000); **Art. 36** Rechtsmittel 20–100%; **Art. 41** Zuschläge bis 30%/40%, gesamthaft max. 60%.
+- **Stundenansatz:** **NICHT GEFUNDEN** — die GebOR enthält keinen fixen Stundenansatz für UR/amtliche Verteidigung; in besonders aufwendigen Fällen erfolgt die Entschädigung «gemäss dem erforderlichen Aufwand» (Art. 38 Abs. 2) mit Genehmigung des Obergerichtspräsidiums. Art. 30a: Parteientschädigung nach richterlichem Ermessen, Anwaltsbestimmungen vorbehalten.
+
+**URL:** https://gdb.ow.ch/app/de/texts_of_law/134.15 (PDF: https://gdb.ow.ch/api/de/versions/1793/pdf_file) — Abruf 5.6.2026.
+
+---
+
+## NW — Nidwalden
+
+**Erlass:** Gesetz über die Kosten im Verfahren vor den Gerichten und den Justizbehörden (Prozesskostengesetz, **PKoG**), **NG 261.2**, vom 19. Oktober 2011 (Stand 1.1.2016). Anwaltsentschädigung in Teil 3.2 (Art. 31 ff.).
+
+**Bemessungssystem:**
+- **Art. 42 Abs. 1 (ordentliches Honorar Zivil, 1./einzige Instanz, Streitwert-Staffel):** bis 2 000: «Fr. 200.– bis Fr. 1'300.–»; 2 000–5 000: 800–2 600; 5 000–10 000: 1 300–4 000; 10 000–40 000: 2 000–8 000; 40 000–100 000: 4 000–13 000; 100 000–200 000: 6 500–21 000; 200 000–500 000: 10 000–40 000; 500 000–1,5 Mio.: 15 000–60 000; über 1,5 Mio.: «2 bis 4 Prozent des Streitwertes». Nicht vermögensrechtlich Fr. 300–10 000 (Abs. 2).
+- **Art. 34** Honorar nach Zeitaufwand bei Missverhältnis: «zwischen **Fr. 220.– und Fr. 250.–**».
+- **Art. 38 (UR), Art. 39 (amtliche Verteidigung), Art. 40 (Anwalt der ersten Stunde):** je «**Fr. 220.–** pro Stunde».
+- **Art. 50** Zuschläge (10–30% je Tatbestand).
+
+**URL:** https://gesetze.nw.ch/app/de/texts_of_law/261.2 (PDF: https://gesetze.nw.ch/api/de/versions/1288/pdf_file) — Abruf 5.6.2026.
+
+---
+
+## GL — Glarus
+
+**Erlass:** Einführungsgesetz zur Schweizerischen Zivilprozessordnung (**EG ZPO**), **GS III C/1**, vom 2. Mai 2010 (Art. 20 «Parteientschädigung»). Verweis aus der Verordnung zu den Kosten im Zivil- und Strafprozess (**GS III A/5**, Art. 10).
+
+**Bemessungssystem:**
+- **Kein streitwertabhängiger Tarif mit Staffel.** Art. 20 Abs. 1 EG ZPO: «Die Parteientschädigung bemisst sich nach dem notwendigen Zeitaufwand, dem Streit- oder Interessenwert und der Schwierigkeit des Falles.» (richterliches Ermessen, keine Frankenbeträge/Stundenansätze im Gesetz).
+- Art. 20 Abs. 2: «Die Anwaltskommission **kann** einen Tarif … erlassen» (mit Genehmigung des Landrates). Art. 20 Abs. 3: bei arbeitsrechtlichen Streitigkeiten bis Streitwert 30 000 tragen die Parteien ihre Kosten selbst.
+
+**URL:** EG ZPO: https://gesetze.gl.ch/app/de/texts_of_law/III%20C/1 (PDF: https://gesetze.gl.ch/api/de/versions/739/pdf_file) — Kostenverordnung GS III A/5: https://gesetze.gl.ch/app/de/texts_of_law/III%20A/5 — Abruf 5.6.2026.
+
+**Bemerkungen:** Glarus hat als einer der wenigen Kantone **keinen** festen Streitwert-Tarif/Stundenansatz für die Parteientschädigung — Bemessung nach Ermessen (Art. 20 EG ZPO). Ein von der Anwaltskommission erlassener Tarif gemäss Art. 20 Abs. 2 EG ZPO wurde in der Glarner Gesetzessammlung **NICHT GEFUNDEN** (kann-Bestimmung; offenbar nicht ausgeschöpft). Falls die Auswertung einen solchen Tarif voraussetzt: ausdrücklich als nicht existent/nicht auffindbar zu führen.
+
+---
+
+## ZG — Zug
+
+**Erlass:** Verordnung über den Anwaltstarif (**AnwT**), **BGS 163.4**, vom 3. Dezember 1996, **aktuelle Version in Kraft seit 1.1.2026 (Beschluss 26.11.2025)**, erlassen vom Obergericht gestützt auf Art. 96 ZPO / Art. 424 StPO.
+
+**Bemessungssystem:**
+- **§ 3 Abs. 1 (Grundhonorar vermögensrechtlich, Formel):** bis 5 000: «25 % des Streitwerts, mindestens 200»; ab 5 000: «1250 zzgl. 23 % des 5000 übersteigenden Streitwerts»; ab 10 000: 2 400 + 15%; ab 20 000: 3 900 + 11%; ab 40 000: 6 100 + 9%; ab 80 000: 9 700 + 6%; ab 160 000: 14 500 + 3,5%; ab 300 000: 19 400 + 2%; ab 600 000: 25 400 + 1,5%; ab 1 Mio.: 31 400 + 1%; ab 4 Mio.: 61 400 + 0,75%; ab 10 Mio.: «106 400 zzgl. 0,5%». Über-/Unterschreitung bis 1/3 (§ 3 Abs. 3).
+- **§ 4** nicht vermögensrechtlich/Familienrecht: i.d.R. Fr. 1 000–18 000. **§ 5** Zuschläge bis 50% je Grund. **§ 6** summarisch ½ bis 1/5.
+- **Stundenansatz UR (§ 14 Abs. 2):** «**Franken 240**» (Substituten Fr. 150); **§ 13 Abs. 2** ausserordentliche Bemühungen Fr. 240/Std.; **Strafsachen § 15:** Fr. 240/Std.
+
+**URL:** https://bgs.zg.ch/app/de/texts_of_law/163.4 (PDF: https://bgs.zg.ch/api/de/versions/2964/pdf_file) — Abruf 5.6.2026.
+
+**Bemerkungen:** Die Zuger Staffel ist mit der Zürcher §4-Formel praktisch identisch (Formel-Tarif). Aktuellste Fassung 1.1.2026 verifiziert.
+
+---
+
+## FR — Fribourg / Freiburg
+
+**Erlass:** Justizreglement (JR) / Règlement sur la justice, **RSF 130.11**, vom 30.11.2010 (Fassung in Kraft seit 1.12.2025). Parteientschädigung Zivil: Art. 62 ff. (gestützt auf Art. 124 JG / Art. 96 ZPO). UR/amtliche Verteidigung: Art. 57 JR.
+
+**Bemessungssystem:**
+- **Globale Festsetzung (Art. 64):** Höchstbeträge je Verfahrenstyp, z. B. Einzelgericht Fr. 6 000; vereinfachtes Verfahren bis Streitwert 30 000: Fr. 6 000; KESB Fr. 3 000; Zivilpartei im Strafprozess erstinstanzlich Fr. 15 000.
+- **Detaillierte Festsetzung (Art. 65):** Stundentarif **«250 Franken»**. **Art. 66 Abs. 2 (streitwertabhängiger Zuschlag, gestaffelt, max. 350%):** +15% ab Streitwert 42 000 (steigend je 1 000 bis 140 000); +50% ab 140 000 (je 5 000 bis 700 000); +150% ab 700 000 (je 100 000 bis 3 Mio.); +250% ab 3 Mio. (je 500 000 bis 17 Mio.); +350% ab 17 Mio. (Detailabstufung in Anhang 2).
+- **Stundenansatz UR/amtliche Verteidigung (Art. 57 Abs. 2):** «**180 Franken**»; Praktikanten «120 Franken».
+
+**URL:** https://bdlf.fr.ch/app/de/texts_of_law/130.11 (PDF: https://bdlf.fr.ch/api/de/versions/8306/pdf_file) — Abruf 5.6.2026.
+
+**Bemerkungen:** RSF 150.12 (Tarif VJ) betrifft nur die Verwaltungsjustiz und enthält die zivilrechtliche Parteientschädigung NICHT — massgeblich ist das JR (RSF 130.11). Anhang 2 (Detailprozentsätze pro Streitwertstufe) hier nicht ausgewertet; die Eckwerte sind vollständig wiedergegeben.
+
+---
+
+## SO — Solothurn
+
+**Erlass:** Gebührentarif (**GT**), **BGS 615.11**, vom 8. März 2016 (Stand 1.3.2026). Anwaltsentschädigung: §§ 158–161 (Verteidiger-/Parteientschädigungen Straf bzw. §§ 160 f. Zivil/Verwaltungsgericht).
+
+**Bemessungssystem:**
+- **Reines Aufwand-/Zeitsystem, keine Streitwert-Staffel.** § 160 Abs. 1: Festsetzung «nach dem Aufwand, welcher für eine sorgfältige und pflichtgemässe Vertretung erforderlich ist», Honorarnote.
+- **Stundenansatz berufsmässige Vertretung (Parteientschädigung Zivil, § 160 Abs. 2):** «**230-330 Franken zuzüglich Mehrwertsteuer**».
+- **Stundenansatz UR/Ausfallhaftung (§ 160 Abs. 3):** «**180 Franken** zuzüglich Mehrwertsteuer». Gleiche Ansätze im Strafverfahren (§ 158 Abs. 2 privat 230–330; Abs. 3 amtlich 180). § 161: Verwaltungsgericht sinngemäss.
+- Teuerungsstand 30.9.2006, Anpassung durch Weisung der Gerichtsverwaltungskommission bei ≥5% Teuerung (§ 160 Abs. 4).
+
+**URL:** https://bgs.so.ch/app/de/texts_of_law/615.11 (PDF: https://bgs.so.ch/api/de/versions/5606/pdf_file) — Abruf 5.6.2026.
+
+**Bemerkungen:** SO kennt keinen streitwertabhängigen Honorartarif für die anwaltliche Parteientschädigung; Bemessung ausschliesslich nach Zeitaufwand × Stundenansatz.
+
+---
+
+## BS — Basel-Stadt
+
+**Erlass:** Reglement über das Honorar und die Entschädigung der berufsmässigen Vertretung im Gerichtsverfahren (Honorarreglement, **HoR**), **SG 291.400**.
+
+**Bemessungssystem:**
+- **§ 5 (Grundhonorar ordentliches/vereinfachtes Verfahren, vermögensrechtlich, Streitwert-Staffel):** bis 1 000: «100 bis 500»; 1 000–5 000: 500–1 000; 5 000–10 000: 1 000–2 000; 10 000–30 000: 2 000–3 000; 30 000–100 000: 4 500–10 000; 100 000–500 000: 10 000–30 000; 500 000–1 Mio.: 30 000–50 000; 1–5 Mio.: 50 000–100 000; über 5 Mio.: «1 % bis 3 % des Streitwerts». (Vereinfachtes Verfahren > 30 000: -1/3.)
+- **§ 10/§ 11** Familienrecht und nicht vermögensrechtlich: nach Zeitaufwand. **§ 6** betreibungsrechtliche Summarverfahren eigene Staffel.
+- **Stundenansatz allgemein (Zeitaufwand-Fälle, § 19):** «Fr. 200 bis Fr. 400» (erhöhbar bis Fr. 800). **UR/amtliche Verteidigung:** «**Fr. 200**».
+
+**URL:** https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/291.400 (PDF: https://www.gesetzessammlung.bs.ch/api/de/versions/6267/pdf_file) — Abruf 5.6.2026.
+
+---
+
+## BL — Basel-Landschaft
+
+**Erlass:** Tarifordnung für die Anwältinnen und Anwälte, **SGS 178.112**, vom 17. November 2003 (Stand 1.1.2014), erlassen von der Geschäftsleitung des Kantonsgerichts.
+
+**Bemessungssystem:** Zweispurig (§ 2): unbestimmter Streitwert/Familienrecht/Sozialversicherung/UR → Zeitaufwand; bestimmter Streitwert → Streitwert-Honorar.
+- **Stundenansatz (§ 3 Abs. 1):** «**CHF 200–350.– pro Stunde**»; **UR/amtliche Verteidigung (§ 3 Abs. 2): CHF 200.– pro Stunde**; Substituten 1/3–2/3 (Abs. 3).
+- **§ 7 Grundhonorar (Streitwert-Staffel, 1. Instanz):** bis 2 000: «min. 350 / max. 750»; 2 000–5 000: 675/1 500; 5 000–10 000: 1 500/2 400; 10 000–20 000: 2 250/3 600; 20 000–50 000: 3 300/6 450; 50 000–100 000: 6 000/10 500; 100 000–200 000: 9 750/17 250; 200 000–500 000: 16 500/34 500; 500 000–1 Mio.: 33 000/55 500; 1–2 Mio.: 52 500/82 500; über 2 Mio.: «CHF 75'000.– zuzüglich … max. 2 % des Streitwerts». **§ 8** Zuschläge.
+
+**URL:** https://bl.clex.ch/app/de/texts_of_law/178.112 (PDF: https://bl.clex.ch/api/de/versions/3732/pdf_file) — Abruf 5.6.2026.
+
+---
+
+## Zusammenfassende Bemerkungen
+
+- **Formel-Staffel (Grundgebühr = Sockel + % des übersteigenden Streitwerts):** ZH (§4), ZG (§3) — nahezu identisch.
+- **Bandbreiten-Staffel (min.–max. pro Streitwertstufe):** BE, SZ, OW, NW, BS, BL.
+- **Prozentsatz der Gerichtsgebühr:** LU (75–150%).
+- **Reines Zeitsystem (kein Streitwert-Tarif):** SO (230–330/180), GL (Ermessen, kein Tarif).
+- **Stundentarif + streitwertabhängiger Zuschlag:** FR (250 + bis 350%).
+- **Stundenansätze UR/amtliche Vertretung:** ZH 220, BE 200, SZ 180–220, NW 220, ZG 240, FR 180 (Praktikant 120), SO 180, BS 200, BL 200. LU, OW, UR: kein fixer Verordnungs-Stundenansatz (NICHT GEFUNDEN bzw. aufwandbasiert).
+
+**Wesentliche Unsicherheiten / NICHT GEFUNDEN:**
+1. **UR** — exakte Streitwert-Staffel-Zahlen nicht aus textbasiertem amtlichem PDF verifizierbar (nur bildbasierter Entwurf/SPA). Erlass + 75%-Prinzip belegt.
+2. **GL** — kein Streitwert-Tarif/Stundenansatz (Ermessen, Art. 20 EG ZPO); kann-Tarif der Anwaltskommission nicht existent/nicht auffindbar.
+3. **LU** und **OW** — kein fixer Stundenansatz für UR im Verordnungstext.
+4. **BE** — die PKV-Frankenbeträge unterliegen der Teuerungsanpassung (Art. 4 PKV); im konsolidierten Text Stand 1.1.2012 keine spätere Anpassung ersichtlich.
+
+Alle Frankenbeträge wörtlich aus den amtlichen Volltext-PDF extrahiert; keine Anwaltskanzlei-Quellen verwendet.
 
 ---
 
