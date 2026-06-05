@@ -1,4 +1,4 @@
-import { parseISO, addMonths, isBefore, isAfter } from 'date-fns';
+import { parseISO, addMonths, addYears, isBefore, isAfter } from 'date-fns';
 import type { LohnfortzahlungInput, Berechnungsergebnis, Normverweis, SkalaDauer, KtgKriterien } from '../types/legal';
 import {
   berechneDienstjahr,
@@ -273,7 +273,9 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
 
   if (verhinderungEnde) {
     const ve = parseISO(verhinderungEnde);
-    jahrestag = new Date(vb.getFullYear() + dienstjahr, vb.getMonth(), vb.getDate());
+    // addYears statt Date-Konstruktor: bei Vertragsbeginn 29.2. fällt der Jahrestag
+    // auf den 28.2. (wie differenceInYears in berechneDienstjahr) – kein Monatsüberlauf zum 1.3.
+    jahrestag = addYears(vb, dienstjahr);
 
     if (!isBefore(ve, jahrestag)) {
       // Verhinderung reicht über den Dienstjahres-Stichtag → zweiter (frischer) Kredit.

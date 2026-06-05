@@ -1,4 +1,4 @@
-import { parseISO, addDays, addMonths, differenceInDays, isAfter, isBefore, isEqual, endOfMonth, subMonths, format } from 'date-fns';
+import { parseISO, addDays, addMonths, addYears, differenceInDays, isAfter, isBefore, isEqual, endOfMonth, subMonths, format } from 'date-fns';
 import type { SperrfristenInput, Sperrereignis, Berechnungsergebnis, Normverweis } from '../types/legal';
 
 // Reicheres Ergebnis: strukturierte Beendigung bzw. – bei Nichtigkeit – das Datum,
@@ -75,11 +75,9 @@ function berechneSperrfristIntervall(
       // Tage werden dadurch automatisch angerechnet. Nur wenn die (kürzere) Sperrfrist beim
       // Jahrestag NOCH LÄUFT.
       if (dj === 1 || dj === 5) {
-        const jahrestag = new Date(
-          vertragsbeginn.getFullYear() + dj,
-          vertragsbeginn.getMonth(),
-          vertragsbeginn.getDate(),
-        );
+        // addYears statt Date-Konstruktor: bei Vertragsbeginn 29.2. fällt der Jahrestag
+        // auf den 28.2. (wie differenceInYears in berechneDienstjahr) – kein Monatsüberlauf zum 1.3.
+        const jahrestag = addYears(vertragsbeginn, dj);
         const laeuftNoch =
           (isAfter(jahrestag, von) || isEqual(jahrestag, von)) &&
           (isBefore(jahrestag, kurzeEnde) || isEqual(jahrestag, kurzeEnde));

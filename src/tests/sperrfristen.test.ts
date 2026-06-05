@@ -88,6 +88,23 @@ describe('Sperrfristen P1/P2 (Art. 336c OR)', () => {
     expect(txt).toContain('15.03.2026'); // 15.12.2025 + 90 Tage
   });
 
+  // Schaltjahr-Regression: Vertragsbeginn 29.2. → DJ-Wechsel-Jahrestag 28.2. (addYears,
+  // konsistent mit differenceInYears in berechneDienstjahr), NICHT 1.3. (Date-Überlauf).
+  it('Schaltjahr: Vertragsbeginn 29.02.2020, DJ-Wechsel 1→2 am 28.02.2021, nicht 01.03.2021', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      vertragsbeginn: '2020-02-29',
+      zugangKuendigung: '2021-01-15',
+      sperrereignisse: [
+        { typ: 'krankheit_unfall', von: '2021-02-01', bis: '2021-06-01' }, // 30-Tage-Frist läuft am Jahrestag noch
+      ],
+    });
+    const txt = rechenwegText(r);
+    expect(txt).toContain('Dienstjahreswechsel');
+    expect(txt).toContain('am 28.02.2021 während laufender Sperrfrist');
+    expect(txt).toContain('02.05.2021'); // 01.02.2021 + 90 Tage (Art. 77 OR, ab erstem AUF-Tag)
+  });
+
   // §7.6 – Sperrfrist endete im alten DJ → keine Verlängerung
   it('§7.6: Sperrfrist endet vor Jahrestag → keine C5-Verlängerung', () => {
     const r = berechneSperrfristen({

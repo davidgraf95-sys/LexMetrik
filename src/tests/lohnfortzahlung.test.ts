@@ -113,6 +113,24 @@ describe('Lohnfortzahlung P1/P2 (Art. 324a OR)', () => {
     expect(r.ergebnis).toContain('28.02.2026'); // 2. Kredit (dj3, 2 Monate) ab 01.01.2026
   });
 
+  // Schaltjahr-Regression: Vertragsbeginn 29.2. → Jahrestag 28.2. (addYears, konsistent
+  // mit differenceInYears in berechneDienstjahr), NICHT 1.3. (Date-Konstruktor-Überlauf).
+  it('Schaltjahr: Vertragsbeginn 29.02.2020 → 2.-Kredit-Grenze 28.02.2021, nicht 01.03.2021', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2020-02-29',
+      verhinderungBeginn: '2021-02-01',  // 1. DJ (Basler: 3 Wochen, endet 21.02.2021)
+      verhinderungEnde: '2021-06-01',    // reicht über den Jahrestag hinaus
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+    });
+    expect(r.status).toBe('ok');
+    expect(r.ergebnis).toContain('2. Kredit');
+    const txt = r.ergebnis + '\n' + r.rechenweg.map((s) => s.zwischenergebnis).join('\n');
+    expect(txt).toContain('Jahrestag 28.02.2021');
+    expect(txt).not.toContain('01.03.2021');
+  });
+
   // §7.11 – Kredit im Vorjahr verbraucht → Anspruch lebt im neuen DJ wieder auf
   it('§7.11: Kredit verbraucht, neues DJ → Anspruch lebt auf', () => {
     const r = berechneLohnfortzahlung({
