@@ -3,8 +3,11 @@
 **Erstellt:** 5.6.2026 · **Wortlaut-Quelle:** Fedlex SR 210 (ZGB), Cache
 /tmp/zgb.html — Konsolidierungsstand empirisch «1.1.2026», also POST-
 Erbrechtsrevision (in Kraft 1.1.2023) · **Abrufdatum: 5.6.2026**
-**Status: Arbeitsgrundlage — NICHT abgenommen; adversarialer Doppelcheck
-folgt nach Eintreffen aller Teile.**
+**Status: ZWEIFACH GEPRÜFT** (16/16 eigene Wortlaut-Proben 5.6.2026 +
+adversarialer Durchgang 6.6.2026: 10/10 scharfe Punkte bestätigt, beide
+Quoten-Synthese-Tabellen von Hand nachgerechnet, Engine-Fälle A/B
+nachgerechnet, Art.-472-Hypothetik adversarial geprüft — KEINE Widerlegung).
+Fachliche Abnahme durch David ausstehend (§7); BGE-Hinweise [Sekundär].
 
 Gliederung: Teil 1 (gesetzliche Erbfolge + Pflichtteile, inkl. Engine-
 Audit) · Teil 2 (Verfügungen + Klagen mit Fristen) · Teil 3 (Erbgang +

@@ -1,7 +1,7 @@
 # Erbgangs-Behörden — 26 Kantone (Testamentseröffnung, Erbenschein, Ausschlagung …)
 
-**Erstellt:** 5.6.2026 · **Abrufdatum: 5.6.2026** · **Status: einfach belegt;
-adversarialer Doppelcheck folgt.** Bundesrahmen: Behörde am letzten Wohnsitz
+**Erstellt:** 5.6.2026 · **Abrufdatum: 5./6.6.2026** · **Status: ZWEIFACH GEPRÜFT**
+(adversarialer Durchgang 6.6.2026 — Befunde unten eingearbeitet). Bundesrahmen: Behörde am letzten Wohnsitz
 zwingend (Art. 28 Abs. 2 ZPO); Organisation kantonal (EG ZGB).
 Normative Grundlage: [../normen/erbrecht-regelwerk.md](../normen/erbrecht-regelwerk.md)
 (Teil 3, Behörden-Synthese). Gerichtsadressen: Querverweis Gerichts-Dossier.
@@ -337,3 +337,39 @@ sekundär belegt → Doppelcheck-Aufträge.
 6. **Honest gaps:** UR vollständig **NICHT GEFUNDEN**; exakte EG-ZGB-§§ nur für **NW (Art. 10)** und **SG (Art. 76 Abs. 1)** amtlich belegt, sonst «§ NICHT VERIFIZIERT» — Grund: mehrere kantonale Erlass-APIs lieferten 403/JS-Wall/komprimierte PDFs. OW (Abgrenzung Gemeinde/Gericht), GR (Notariat/Gericht je Region) und JU/VS-Artikel sind nur über Sekundär-/Praxisquellen belegt und vor Stammdaten-Übernahme amtlich zu bestätigen.
 
 Es wurden **keine Repo-Dateien verändert**; `gerichtsbehoerden-kantone.md` und `gog-gerichtsorganisation-kantone.md` nur gelesen (Querverweise auf Gerichtsadressen statt Doppelung).
+
+---
+
+## ✓2-ERGEBNIS des adversarialen Durchgangs (6.6.2026)
+
+### KORREKTUR SO
+**6 (nicht 5) Erbschaftsämter** — es fehlte **Breitenbach, Passwangstrasse 29,
+4226 Breitenbach** (amtlich so.ch/…/erbschaftsaemter). Die 5 erfassten
+Adressen sind bestätigt.
+
+### Lücke UR GESCHLOSSEN (Behördenträger)
+UR folgt dem **Gemeindemodell**: **Erbenbescheinigung/Testaments-Belange bei
+der Gemeinderatskanzlei am letzten Wohnsitz** (Beleg altdorf.ch, «Erben-
+bescheinigung»); Gerichtsinstanz: **Landgericht Uri / Landgerichtspräsidium,
+Rathausplatz 2, 6460 Altdorf** (ur.ch/gerichte/61). EG ZGB UR = RB 9.2111
+(JS-App — exakte Artikel-Nr. weiterhin NICHT verifiziert).
+
+### Rechtsgrundlagen amtlich bestätigt/präzisiert
+- **ZH:** GOG LS 211.1 **§§ 137 lit. b–139** (Einzelgericht entscheidet,
+  Notariat vollzieht) — Dossier-Angabe korrekt.
+- **BE:** **Art. 6 EG ZGB (BSG 211.1)** + Art. 56–58 NotV bestätigt.
+- **LU:** **§ 9 Abs. 2 lit. e EG ZGB (SRL 200)** — Teilungsbehörde eröffnet
+  Testamente und stellt die Erbbescheinigung aus.
+- **GE:** **LaCC rsGE E 1 05** bestätigt; Répudiation Art. 3 al. 1 lit. g LaCC.
+- **SG:** Art. 76 Abs. 1 EG ZGB; Amtsnotariats-Standorte St. Gallen, Buchs,
+  Rapperswil-Jona, Wil.
+
+### Adress-Stichproben (5/5 im Kern bestätigt)
+BS Rittergasse 10 ✓ · GL Asylstrasse 30 ✓ · BL Domplatz 9, 4144 Arlesheim ✓
+(der frühere 403-Vorbehalt aufgelöst) · SG-Verzeichnis ✓ · SO siehe Korrektur.
+
+### Weiterhin offen
+EG-ZGB-Artikel-Nrn. UR (RB 9.2111) sowie SZ/OW/ZG/FR/AR/AI/GR/AG/TG/TI/VS/
+NE/JU («§ NICHT VERIFIZIERT», JS-Wall/403/signierte PDFs) — Behördenträger
+und Adressen sind davon unabhängig belegt.
+

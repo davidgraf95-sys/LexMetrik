@@ -59,10 +59,10 @@ bibliothek/
 |---|---|---|
 | [strafbehoerden-kantone.md](behoerden/strafbehoerden-kantone.md) | Staatsanwaltschaften/Jugendanwaltschaften/Übertretungsbehörden 26 Kantone + Bund (BA/AB-BA), EG-StPO-Mapping | SZ-Korrektur (Schmiedgasse 21, JugA Bennau); Lücken geschlossen bis auf AG-Hausnummern + Artikel VS/JU/VD |
 
-### Erbgang — einfach belegt (Doppelcheck ausstehend)
-| Dokument | Inhalt | Offen |
+### Erbgang — ZWEIFACH GEPRÜFT
+| Dokument | Inhalt | Befund 2. Durchgang |
 |---|---|---|
-| [erbgangsbehoerden-kantone.md](behoerden/erbgangsbehoerden-kantone.md) | Testamentseröffnung/Erbenschein/Ausschlagung je Kanton — 4 Grundmodelle + Aufgaben-Splits | UR NICHT GEFUNDEN; meiste EG-ZGB-§§ unverifiziert |
+| [erbgangsbehoerden-kantone.md](behoerden/erbgangsbehoerden-kantone.md) | Testamentseröffnung/Erbenschein/Ausschlagung je Kanton — 4 Grundmodelle + Aufgaben-Splits | 1 Korrektur (SO 6 Ämter, Breitenbach ergänzt); UR geschlossen (Gemeindemodell); ZH/BE/LU/GE/SG-§§ bestätigt |
 
 ## kosten/ — Tarife — ZWEIFACH GEPRÜFT
 
