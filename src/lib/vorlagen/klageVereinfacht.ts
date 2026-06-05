@@ -197,7 +197,10 @@ export function kvMaengel(a: KvAnswers): KvMangel[] {
   if (routing && !routing.anwendbar) {
     if (routing.stopp === 'ordentlich') m.push({ schritt: 0, text: `Streitwert über CHF ${fmtCHF(String(ZPO_SCHWELLEN.VEREINFACHT))} ohne Materie nach Art. 243 Abs. 2 ZPO → ordentliches Verfahren (Art. 219 ff. ZPO); diese Vorlage ist nicht anwendbar.` });
     if (routing.stopp === 'arbeit_ueber_30k') m.push({ schritt: 0, text: `Arbeitsrechtliche Streitigkeit über CHF ${fmtCHF(String(ZPO_SCHWELLEN.VEREINFACHT))}: ordentliches Verfahren vor dem Zivilgericht; das Arbeitsgericht ist nur mit Vereinbarung beider Parteien zuständig (§ 73 Abs. 2 GOG BS).` });
-    if (routing.stopp === 'kvg_sozialversicherungsgericht') m.push({ schritt: 0, text: 'Zusatzversicherungen zur sozialen Krankenversicherung: In Basel-Stadt ist das Sozialversicherungsgericht zuständig (§ 50 GOG BS nennt dessen Schlichtungsbehörde) — diese Vorlage deckt den Weg nicht ab.' });
+    // § 82 GOG BS: Sozialversicherungsgericht als einzige kantonale Instanz
+    // inkl. Zusatzversicherungen (Art. 7 ZPO) — GOG-Recherche 5.6.2026; die
+    // Auftrags-Angabe «§ 50 GOG» war falsch (§ 50 = Verwaltungschef).
+    if (routing.stopp === 'kvg_sozialversicherungsgericht') m.push({ schritt: 0, text: 'Zusatzversicherungen zur sozialen Krankenversicherung: In Basel-Stadt entscheidet das Sozialversicherungsgericht als einzige kantonale Instanz (§ 82 GOG BS; Art. 7 ZPO) — diese Vorlage deckt den Weg nicht ab.' });
   }
   if (a.materie === 'vermoegensrechtlich' && sw === null) {
     m.push({ schritt: 0, text: 'Streitwert angeben (Art. 244 Abs. 1 lit. d ZPO; Berechnung nach Art. 91 ZPO – ohne Zinsen und Kosten).' });
