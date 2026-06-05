@@ -133,3 +133,23 @@ describe('Allgemeiner Fristenrechner — Goldwerte', () => {
     expect(() => berechneAllgemeineFrist(basis({ laenge: 1.5 }))).toThrow(/ganze Zahl/);
   });
 });
+
+describe('Allgemeiner Fristenrechner — Review-Befund (Toggle-Kopplung)', () => {
+  it('AF-16 Feiertags-Option impliziert Wochenend-Verschiebung: Sa 1.8.2026 → Mo 3.8.2026 (nie Sonntags-Ende)', () => {
+    const r = berechneAllgemeineFrist(basis({
+      start: '2026-07-31', laenge: 1, einheit: 'tage',
+      wochenendeVerschieben: false, feiertageVerschieben: true, kanton: 'ZH',
+    }));
+    expect(r.endDatum).toBe('03.08.2026');
+    expect(r.endWochentag).toBe('Montag');
+  });
+
+  it('AF-17 nur Wochenend-Modus: Werktags-Feiertag (Karfreitag) bleibt bewusst stehen (Goldwert)', () => {
+    const r = berechneAllgemeineFrist(basis({
+      start: '2025-04-17', laenge: 1, einheit: 'tage',
+      wochenendeVerschieben: true, feiertageVerschieben: false,
+    }));
+    expect(r.endDatum).toBe('18.04.2025'); // Karfreitag — Feiertage bewusst ignoriert
+    expect(r.verschoben).toBe(false);
+  });
+});

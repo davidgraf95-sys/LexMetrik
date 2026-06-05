@@ -126,13 +126,17 @@ export function AllgemeineFristForm() {
             </div>
             <Field label="Fristende verschieben">
               <div className="space-y-1.5 pt-1">
+                {/* Rechtlich EINE Operation «nächster Werktag»: Feiertage
+                    implizieren die Wochenend-Verschiebung (gekoppelt) */}
                 <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={form.wochenendeVerschieben} onChange={(e) => set('wochenendeVerschieben', e.target.checked)} />
+                  <input type="checkbox" checked={form.wochenendeVerschieben || form.feiertageVerschieben}
+                    onChange={(e) => setForm((f) => ({ ...f, wochenendeVerschieben: e.target.checked, feiertageVerschieben: e.target.checked && f.feiertageVerschieben }))} />
                   Samstag/Sonntag → nächster Werktag (Art. 78 OR; SR 173.110.3)
                 </label>
                 <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={form.feiertageVerschieben} onChange={(e) => set('feiertageVerschieben', e.target.checked)} />
-                  Gesetzliche Feiertage → nächster Werktag
+                  <input type="checkbox" checked={form.feiertageVerschieben}
+                    onChange={(e) => setForm((f) => ({ ...f, feiertageVerschieben: e.target.checked, wochenendeVerschieben: f.wochenendeVerschieben || e.target.checked }))} />
+                  zusätzlich gesetzliche Feiertage (kantonal)
                 </label>
               </div>
             </Field>

@@ -107,13 +107,19 @@ export function berechneAllgemeineFrist(input: AllgFristInput): AllgFristResult 
         : 'Gleichbezeichneter Tag des Zielmonats (Art. 77 Abs. 1 Ziff. 3 OR; BGer 5A_691/2023)',
   });
 
-  // 2)+3) Verschiebung mit GETRENNTEN Toggles (Art. 78 OR; SR 173.110.3)
+  // 2)+3) Verschiebung (Art. 78 OR; SR 173.110.3). Rechtlich ist das EINE
+  // Operation «bis zum nächsten Werktag»: Die Feiertags-Option impliziert
+  // deshalb die Wochenend-Verschiebung — sonst könnte ein Feiertags-Sprung
+  // auf einem Sa/So landen (Review-Befund 5.6.2026; ein Fristende am
+  // Sonntag wäre rechtlich unhaltbar). Nur der reine Wochenend-Modus ohne
+  // Feiertage bleibt wählbar (Feiertage bewusst ignoriert, kantonsfrei).
+  const wochenende = input.wochenendeVerschieben || input.feiertageVerschieben;
   const grundFuer = (d: Date): string | null => {
     if (input.feiertageVerschieben && input.kanton && istFeiertag(d, input.kanton)) {
       return `gesetzlicher Feiertag (${input.kanton})`;
     }
-    if (input.wochenendeVerschieben && isSunday(d)) return 'Sonntag (Art. 78 Abs. 1 OR)';
-    if (input.wochenendeVerschieben && isSaturday(d)) return 'Samstag (SR 173.110.3)';
+    if (wochenende && isSunday(d)) return 'Sonntag (Art. 78 Abs. 1 OR)';
+    if (wochenende && isSaturday(d)) return 'Samstag (SR 173.110.3)';
     return null;
   };
 
