@@ -1,4 +1,4 @@
-import { Field, LiveHeader } from '../vorlagen/ui';
+import { BeispielChips, Field, LiveHeader } from '../vorlagen/ui';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
 import { berechneVerzugszins, formatCHF } from '../../lib/verzugszins';
@@ -107,10 +107,7 @@ export function VerzugszinsForm() {
 
       {/* Beispiele */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
-        {BEISPIELE.map((b) => (
-          <button type="button" key={b.label} onClick={() => ladeBeispiel(b.state)} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
-        ))}
+        <BeispielChips items={BEISPIELE.map((b) => ({ label: b.label, laden: () => ladeBeispiel(b.state) }))} />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

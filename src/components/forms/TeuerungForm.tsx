@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Field, inputCls } from '../vorlagen/ui';
+import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import {
@@ -131,6 +131,20 @@ export function TeuerungForm() {
 
       {ergebnis && (
         <div className="lc-reveal space-y-4" aria-live="polite">
+          <LiveHeader />
+          {/* Eckdaten (UX B17): Wichtigstes zuerst, wie bei den übrigen Rechnern */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { label: 'Indexierter Betrag', val: `CHF ${ergebnis.betragNeu.toLocaleString('de-CH', { minimumFractionDigits: 2 })}` },
+              { label: 'Veränderung', val: `${ergebnis.prozent > 0 ? '+' : ''}${ergebnis.prozent.toFixed(1)} %` },
+              { label: 'Index (Basis ' + monatLabel(ergebnis.basis) + ' = 100)', val: `${ergebnis.indexAlt.toFixed(1)} → ${ergebnis.indexNeu.toFixed(1)}` },
+            ].map((c) => (
+              <div key={c.label} className="lc-tile">
+                <p className="text-xs text-ink-500">{c.label}</p>
+                <p className="text-body-l font-semibold text-ink-900 num">{c.val}</p>
+              </div>
+            ))}
+          </div>
           <ErgebnisAnzeige titel={`LIK-Indexierung (Basis ${monatLabel(ergebnis.basis)} = 100)`} ergebnis={ergebnis} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />

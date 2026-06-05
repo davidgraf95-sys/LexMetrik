@@ -80,3 +80,16 @@ export function FehlerBox({ fehler }: { fehler: string[] }) {
     </div>
   );
 }
+
+/** Beispiel-Chips über den Eingaben (UX A5) — vorher 2× wortgleich dupliziert;
+ *  die Beispiel-INHALTE bleiben fachlich beim jeweiligen Formular. */
+export function BeispielChips({ items }: { items: { label: string; laden: () => void }[] }) {
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <span className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>Beispiel laden:</span>
+      {items.map((b) => (
+        <button type="button" key={b.label} onClick={b.laden} className="lc-chip hover:bg-brass-200 transition-colors">{b.label}</button>
+      ))}
+    </div>
+  );
+}

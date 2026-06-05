@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { BeispielChips, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import type { Kanton } from '../../types/legal';
@@ -80,6 +80,19 @@ export function VerjaehrungForm() {
   const [verzichtDatum, setVerzichtDatum] = useState('');
   const [verzichtJahre, setVerzichtJahre] = useState('');
 
+  // UX-Programm B7 (5.6.2026): Presets für den schnellen Einstieg — reine
+  // UI-Zustände, keine Engine-Logik. Daten bewusst fix (nachvollziehbar).
+  const ladePreset = (regime_: VerjaehrungRegime, relativ: string, absolut: string) => {
+    setRegime(regime_); setBeginnRelativ(relativ); setBeginnAbsolut(absolut);
+    setStrafbar(false); setStillstaende([]); setUnterbrechungen([]);
+    setVerzichtAn(false); setVerzichtDatum(''); setVerzichtJahre('');
+  };
+  const PRESETS = [
+    { label: 'Offene Rechnung (10 J.)', laden: () => ladePreset('ordentlich', '2019-09-15', '') },
+    { label: 'Mietzins (5 J.)', laden: () => ladePreset('kurz', '2022-01-01', '') },
+    { label: 'Delikt (3/10 J.)', laden: () => ladePreset('delikt', '2024-03-01', '2023-11-20') },
+  ];
+
   const R = REGIMES.find((r) => r.code === regime)!;
   const hatAbsolut = REGIME[regime].absolutJahre !== null;
   const beginnLabel = hatAbsolut
@@ -136,6 +149,8 @@ export function VerjaehrungForm() {
         </summary>
         <p className="text-body-s text-danger-700 mt-2">{VERJ_DISCLAIMER}</p>
       </details>
+
+      <BeispielChips items={PRESETS} />
 
       {/* Anspruchstyp */}
       <Field label="Anspruchstyp / Rechtsgrund" hint={R.hint}>
@@ -196,7 +211,7 @@ export function VerjaehrungForm() {
           </div>
         ))}
         <button type="button" onClick={() => setUnterbrechungen((arr) => [...arr, { typ: 'anerkennung', datum: '' }])}
-          className="text-body-s px-3 py-1.5 bg-surface border border-line rounded-md text-ink-700 hover:bg-brass-100">
+          className="lc-btn-outline lc-btn-sm">
           + Unterbrechung hinzufügen
         </button>
       </div>
@@ -218,7 +233,7 @@ export function VerjaehrungForm() {
           </div>
         ))}
         <button type="button" onClick={() => setStillstaende((arr) => [...arr, { von: '', bis: '', grund: STILLSTAND_GRUENDE[0] }])}
-          className="text-body-s px-3 py-1.5 bg-surface border border-line rounded-md text-ink-700 hover:bg-brass-100">
+          className="lc-btn-outline lc-btn-sm">
           + Stillstandsperiode hinzufügen
         </button>
       </div>

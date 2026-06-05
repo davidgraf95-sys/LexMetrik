@@ -189,7 +189,7 @@ export function ErbteilungForm() {
                 </div>
               ))}
               <button type="button" onClick={() => setStaemme((arr) => [...arr, { enkel: 1 }])}
-                className="text-body-s px-3 py-1.5 bg-surface border border-line rounded-md text-ink-700 hover:bg-brass-100">
+                className="lc-btn-outline lc-btn-sm">
                 + Stamm hinzufügen
               </button>
             </div>
