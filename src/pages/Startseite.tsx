@@ -50,23 +50,20 @@ export function Startseite() {
 
   return (
     <div>
-      {/* HERO → Weiche → KATALOG: so wenige Bänder wie möglich vor der ersten
-          Karte; Abstände aus der 8-px-Skala. Der Determinismus-Claim steht
-          genau einmal — hier. */}
-      <section className="pt-10 sm:pt-16 max-w-[46rem]">
-        <h1 className="font-display font-semibold text-ink-900 text-display sm:text-display-l">
+      {/* HERO → KATALOG: bewusst kompakt (Entscheid 5.6.2026 — weniger
+          Scrollweg vor der ersten Karte). Determinismus-Claim genau einmal. */}
+      <section className="pt-6 sm:pt-8 max-w-[40rem]">
+        <h1 className="font-display font-semibold text-ink-900 text-h1 sm:text-display">
           Schweizer Recht: berechnen und erstellen.
         </h1>
-        {/* Untertext: eine Zeile, begrenzte Lesebreite (Variante A) */}
-        <p className="mt-4 text-body-l text-ink-600 max-w-[58ch]">
+        <p className="mt-2 text-body-s text-ink-600 max-w-[58ch]">
           Fristen, Beträge und Rechtsdokumente nach festen Regeln — jeder Schritt
           offengelegt, jede Norm verlinkt.
         </p>
       </section>
 
-      {/* Katalog als eigene Sektion: Weissraum + feine Trennlinie markieren
-          «jetzt beginnt der Katalog»; die Toolbar lebt IM Katalog. */}
-      <section className="mt-12 sm:mt-16">
+      {/* Katalog als eigene Sektion */}
+      <section className="mt-8 sm:mt-10">
         <Katalog karten={karten} filterArt />
       </section>
 

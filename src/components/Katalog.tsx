@@ -38,10 +38,17 @@ function sortiereKarten(karten: CalculatorCard[]): CalculatorCard[] {
 // keine Relevanz-Sortierung); gleiche Disclosure-Anatomie wie die übrigen
 // Sektionen. Nur nicht-leere Untergruppen werden angezeigt.
 
-function GebietSektion({ gebiet, karten }: {
+function GebietSektion({ gebiet, karten, erzwungenOffen }: {
   gebiet: { name: string; id: string; lede: string };
   karten: CalculatorCard[];
+  /** Suche/Filter aktiv oder Sprungmarke geklickt → Sektion aufklappen. */
+  erzwungenOffen?: boolean;
 }) {
+  // Initial ZUGEKLAPPT (Entscheid 5.6.2026 — weniger Scrollweg); einmal vom
+  // Nutzer geöffnet bleibt offen.
+  const [offen, setOffen] = useState(false);
+  const istOffen = offen || !!erzwungenOffen;
+
   const gruppen = ([
     { id: 'rechner', titel: 'Rechner', karten: karten.filter((k) => k.modus === 'rechner') },
     { id: 'vorlagen', titel: 'Vorlagen', karten: karten.filter((k) => k.modus === 'vorlage') },
@@ -50,7 +57,8 @@ function GebietSektion({ gebiet, karten }: {
 
   return (
     <section id={gebiet.id} className="scroll-mt-28">
-      <details open className="lc-sektion group bg-surface rounded-2xl border border-line">
+      <details open={istOffen} onToggle={(e) => setOffen(e.currentTarget.open)}
+        className="lc-sektion group bg-surface rounded-2xl border border-line">
         <summary className="lc-disclosure block cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden p-6 sm:p-10 sm:pb-6 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none rounded-2xl">
           <span className="block space-y-2">
             <span className="flex items-center justify-between gap-4">
@@ -106,43 +114,50 @@ function FilterLeiste(props: {
 }) {
   const { rechtsgebiete, gebiete, toggleGebiet, reset, nurGeprueft, setNurGeprueft, zeigeRechtsgebiete, zusatzGruppen } = props;
   return (
-    <section aria-label="Filter" className="space-y-3">
+    <section aria-label="Filter" className="space-y-4">
       {/* Status: Alle (Standard, zeigt den Fahrplan) / Nur verfügbare */}
-      <div className="flex h-11 items-stretch gap-1 p-1 bg-surface border border-line rounded-xl w-fit shrink-0" role="group" aria-label="Status">
-        {([['Alle', false], ['Nur verfügbare', true]] as const).map(([label, wert]) => (
-          <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
-            aria-pressed={nurGeprueft === wert}
-            className={`px-3 rounded-lg text-body-s font-medium transition-all ${
-              nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
-            }`}>
-            {label}
-          </button>
-        ))}
+      <div role="group" aria-label="Status">
+        <p className="lc-overline mb-1.5">Status</p>
+        <div className="flex h-8 items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit">
+          {([['Alle', false], ['Nur verfügbare', true]] as const).map(([label, wert]) => (
+            <button key={label} type="button" onClick={() => setNurGeprueft(wert)}
+              aria-pressed={nurGeprueft === wert}
+              className={`px-2.5 rounded-md text-xs font-medium transition-all ${
+                nurGeprueft === wert ? 'bg-surface-raised text-brass-700 shadow-sm border border-line' : 'text-ink-600 hover:text-ink-900'
+              }`}>
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
-      {/* Zusatz-Filtergruppen (z. B. Rechtsbereich, Output-Typ) — gleiche Pill-Optik */}
+      {/* Filtergruppen (Rechtsbereich, Output-/Dokument-Typ) — kompakte Pills */}
       {(zusatzGruppen ?? []).map((gr) => (
-        <div key={gr.label} className="flex flex-wrap items-center gap-2" role="group" aria-label={gr.label}>
-          <span className="lc-overline text-ink-500 mr-1">{gr.label}</span>
-          {gr.optionen.map((o) => {
-            const an = gr.aktiv.has(o.code);
-            return (
-              <button key={o.code} type="button" onClick={() => gr.toggle(o.code)} aria-pressed={an}
-                className={`inline-flex items-center h-9 text-xs font-medium rounded-full px-3 border transition-colors ${
-                  an ? 'bg-ink-900 text-paper border-ink-900' : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
-                }`}>
-                {o.label}
-              </button>
-            );
-          })}
+        <div key={gr.label} role="group" aria-label={gr.label}>
+          <p className="lc-overline mb-1.5">{gr.label}</p>
+          <div className="flex flex-wrap gap-1.5">
+            {gr.optionen.map((o) => {
+              const an = gr.aktiv.has(o.code);
+              return (
+                <button key={o.code} type="button" onClick={() => gr.toggle(o.code)} aria-pressed={an}
+                  className={`inline-flex items-center h-7 text-xs font-medium rounded-full px-2.5 border transition-colors ${
+                    an ? 'bg-ink-900 text-paper border-ink-900' : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
+                  }`}>
+                  {o.label}
+                </button>
+              );
+            })}
+          </div>
         </div>
       ))}
-      {/* Zeile 2: Rechtsgebiet-Pills auf --pill-h (36px), umbrechend */}
-      {zeigeRechtsgebiete && <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Rechtsgebiete">
+      {/* Rechtsgebiet-Pills (nur wenn aktiviert), umbrechend */}
+      {zeigeRechtsgebiete && <div role="group" aria-label="Rechtsgebiete">
+        <p className="lc-overline mb-1.5">Rechtsgebiet</p>
+        <div className="flex flex-wrap gap-1.5">
         {rechtsgebiete.map((g) => {
           const an = gebiete.has(g);
           return (
             <button key={g} type="button" onClick={() => toggleGebiet(g)} aria-pressed={an}
-              className={`inline-flex items-center h-9 text-xs font-medium rounded-full px-3 border transition-colors ${
+              className={`inline-flex items-center h-7 text-xs font-medium rounded-full px-2.5 border transition-colors ${
                 an
                   ? 'bg-ink-900 text-paper border-ink-900'
                   : 'bg-surface text-ink-700 border-line hover:border-brass-400 hover:bg-brass-100/50'
@@ -153,10 +168,11 @@ function FilterLeiste(props: {
         })}
         {gebiete.size > 0 && (
           <button type="button" onClick={reset}
-            className="inline-flex items-center h-9 text-xs text-brass-700 hover:text-brass-600 px-1">
+            className="inline-flex items-center h-7 text-xs text-brass-700 hover:text-brass-600 px-1">
             Zurücksetzen
           </button>
         )}
+        </div>
       </div>}
     </section>
   );
@@ -167,8 +183,10 @@ function FilterLeiste(props: {
 function Uebersicht(props: {
   sprungmarken: { id: string; numeral: string; title: string; anzahl: number }[];
   aktiveSektion: string | null;
+  /** Sprungmarken-Klick klappt die Ziel-Sektion auf (Sektionen starten zu). */
+  onSprung?: (id: string) => void;
 }) {
-  const { sprungmarken, aktiveSektion } = props;
+  const { sprungmarken, aktiveSektion, onSprung } = props;
   return (
     <div className="space-y-5">
       {sprungmarken.length > 0 && (
@@ -178,6 +196,7 @@ function Uebersicht(props: {
             const aktiv = s.id === aktiveSektion;
             return (
               <a key={s.id} href={`#${s.id}`} aria-current={aktiv ? 'true' : undefined}
+                onClick={() => onSprung?.(s.id)}
                 className={`relative flex items-baseline justify-between gap-2 px-2 py-1 -mx-2 rounded-md text-body-s no-underline transition-colors ${
                   aktiv ? 'bg-brass-100/60 text-ink-900 font-medium' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
                 }`}>
@@ -221,6 +240,8 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
   const [arten, setArten] = useState<Set<string>>(new Set());
   const [nurGeprueft, setNurGeprueft] = useState(false);
   const [suche, setSuche] = useState('');
+  // Per Sprungmarke angeklickte Sektion: wird aufgeklappt (Sektionen starten zu)
+  const [sprungOffen, setSprungOffen] = useState<string | null>(null);
 
   const toggleIn = (set: (f: (alt: Set<string>) => Set<string>) => void) => (g: string) =>
     set((alt) => {
@@ -337,23 +358,24 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
       aria-label="Katalog filtern"
     />
   );
+  // Seitenleiste = EIN Ort für alles Steuernde: Suche, Übersicht, Filter
+  // (Entscheid 5.6.2026 — keine horizontale Filterleiste mehr über den Karten).
   const uebersicht = (
     <>
       {suchFeld}
-      <Uebersicht sprungmarken={sprungmarken} aktiveSektion={aktiveSektion} />
+      <Uebersicht sprungmarken={sprungmarken} aktiveSektion={aktiveSektion}
+        onSprung={(id) => setSprungOffen(id)} />
+      {filterLeiste}
       {seitenleisteFuss}
     </>
   );
 
   return (
     <div className="space-y-6">
-      {/* Horizontale Filterleiste über dem Katalog (Desktop) */}
-      <div className="hidden lg:block">{filterLeiste}</div>
-
-      {/* Mobil: Filter & Übersicht in einem Drawer — die Karten stehen sofort da */}
+      {/* Mobil: Suche, Übersicht & Filter in einem Drawer — Karten sofort da */}
       <details className="lg:hidden bg-surface border border-line rounded-xl">
         <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between gap-2 text-body-s font-medium text-ink-700">
-          <span>Filter & Übersicht</span>
+          <span>Suche, Filter & Übersicht</span>
           <span className="flex items-center gap-2">
             {filterAnzahl > 0 && (
               <span className="num text-xs rounded-full px-2 py-0.5 bg-brass-100 text-brass-700">{filterAnzahl} aktiv</span>
@@ -362,7 +384,6 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
           </span>
         </summary>
         <div className="px-4 pb-4 space-y-5">
-          {filterLeiste}
           {uebersicht}
         </div>
       </details>
@@ -393,9 +414,11 @@ export function Katalog({ karten, filterRechtsgebiet = false, filterBereich = fa
             )}
           </section>
         ) : (
-          /* Rechtsgebiet → Untergruppen Rechner/Vorlagen, feste §4-Reihenfolge */
+          /* Rechtsgebiet → Untergruppen Rechner/Vorlagen, feste §4-Reihenfolge;
+             zu Beginn zugeklappt — Suche/Filter und Sprungmarken klappen auf */
           gebietSichtbar.map((x) => (
-            <GebietSektion key={x.g.id} gebiet={x.g} karten={x.karten} />
+            <GebietSektion key={x.g.id} gebiet={x.g} karten={x.karten}
+              erzwungenOffen={filterAktiv || sprungOffen === x.g.id} />
           ))
         )}
         </div>
