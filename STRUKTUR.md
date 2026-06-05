@@ -3,7 +3,8 @@
 **Verbindliche Grundprinzipien: `CLAUDE.md`** (§1 Logik vor allem; §6
 Refactoring-Protokoll) — dieses Dokument hier beschreibt den Zustand.
 
-**Stand:** 5. Juni 2026 (Verschlankungs-Session, uncommittet).
+**Stand:** 5. Juni 2026 — deployed bis `0f4d86b` (Grundprinzipien +
+Verschlankung Stufe 1+2 + Design-Feinschliff).
 **Produktion:** https://lexmetrik.vercel.app (Vercel-Projekt `lexmetrik`;
 `legal-calc.vercel.app` = 308-Redirect). Marke: **LexMetrik** (grosses M).
 
