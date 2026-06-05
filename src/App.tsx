@@ -29,6 +29,8 @@ const VorlageVollmacht = lazy(() => import('./pages/VorlageVollmacht').then((m) 
 const RechnerStub = lazy(() => import('./pages/RechnerStub').then((m) => ({ default: m.RechnerStub })));
 const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
 const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
+const Kontakt = lazy(() => import('./pages/Kontakt').then((m) => ({ default: m.Kontakt })));
+const Datenschutz = lazy(() => import('./pages/Datenschutz').then((m) => ({ default: m.Datenschutz })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 // «/»: eingeloggte Pro-Nutzer landen direkt im Pro-Bereich (Sitzung
@@ -88,6 +90,8 @@ export default function App() {
         <Route path="/rechner/:slug" element={<RechnerStub />} />
         <Route path="/methodik" element={<Methodik />} />
         <Route path="/ueber" element={<Ueber />} />
+        <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       </Suspense>

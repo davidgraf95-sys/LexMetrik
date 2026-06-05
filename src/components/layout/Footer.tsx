@@ -9,6 +9,8 @@ const NAVIGATION = [
   { to: '/pro', label: 'Pro – vollständiger Katalog' },
   { to: '/methodik', label: 'Methodik' },
   { to: '/ueber', label: 'Über LexMetrik' },
+  { to: '/kontakt', label: 'Kontakt' },
+  { to: '/datenschutz', label: 'Datenschutzerklärung' },
 ];
 
 export function Footer() {

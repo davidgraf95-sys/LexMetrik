@@ -13,6 +13,8 @@ import { VorlageMietvertrag } from '../src/pages/VorlageMietvertrag';
 import { VorlageVollmacht } from '../src/pages/VorlageVollmacht';
 import { Startseite } from '../src/pages/Startseite';
 import { Pro } from '../src/pages/Pro';
+import { Kontakt } from '../src/pages/Kontakt';
+import { Datenschutz } from '../src/pages/Datenschutz';
 import { RechnerVerzugszins } from '../src/pages/RechnerVerzugszins';
 import { RechnerZpo } from '../src/pages/RechnerZpo';
 import { RechnerKuendigung } from '../src/pages/RechnerKuendigung';
@@ -27,6 +29,8 @@ import { RechnerTeuerung } from '../src/pages/RechnerTeuerung';
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
   ['Pro', Pro],
+  ['Kontakt', Kontakt],
+  ['Datenschutz', Datenschutz],
   ['VorlageTestament', VorlageTestament],
   ['VorlagePatientenverfuegung', VorlagePatientenverfuegung],
   ['VorlageVorsorgeauftrag', VorlageVorsorgeauftrag],

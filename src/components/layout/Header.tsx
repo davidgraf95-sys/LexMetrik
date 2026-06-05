@@ -3,15 +3,15 @@ import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 import { SprachUmschalter } from '../SprachUmschalter';
 import { istProEingeloggt, proAusloggen } from '../../lib/proSession';
 
-// Header (Iteration 3): ruhiges ZWEI-ZONEN-Layout – Logo links, Aktions-
-// cluster rechts (Sprache · Methodik · Über · Pro-Button),
-// Mitte bewusst leer. Der frühere Stufen-Umschalter ist aufgelöst:
-// «/» (Free) ist der Default; ein gerichteter Button führt in den
-// Pro-Bereich (gekapselte Route, später PayPal-Gate – PAYWALL_ACTIVE) und
-// von dort zurück. Der MODUS-Umschalter (Rechner/Vorlagen) bleibt unberührt.
+// Header (Iteration 4): ruhiges ZWEI-ZONEN-Layout – Logo links, Aktions-
+// cluster rechts (Sprache · Methodik · Pro-Button), Mitte bewusst leer.
+// «Über» wandert ans Seitenende (Footer-Navigation, Entscheid 5.6.2026) –
+// der Header trägt nur noch, was beim Arbeiten gebraucht wird.
+// Der frühere Stufen-Umschalter ist aufgelöst: «/» (Free) ist der Default;
+// ein gerichteter Button führt in den Pro-Bereich (gekapselte Route, später
+// PayPal-Gate – PAYWALL_ACTIVE) und von dort zurück.
 const NAV = [
   { to: '/methodik', label: 'Methodik', match: (p: string) => p === '/methodik' },
-  { to: '/ueber', label: 'Über', match: (p: string) => p === '/ueber' },
 ];
 
 // Pro-Sitzungs-Button: Wer Pro betreten hat, ist eingeloggt (localStorage,
