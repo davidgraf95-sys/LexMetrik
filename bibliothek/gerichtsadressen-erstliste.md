@@ -67,5 +67,74 @@ Zürich,Bezirksgericht Meilen,Untere Bruech 139/140,8706,Meilen
 
 ## Verifikationsstand
 
-_(wird nach Abschluss der Agents nachgetragen: je Eintrag bestätigt /
-abweichend / nicht auffindbar, mit amtlicher Quelle + Abrufdatum)_
+### BE / LU / ZH — verifiziert 5.6.2026 (Agent-Bericht, amtliche Gerichtsseiten)
+
+**BESTÄTIGT (11):** BE Verwaltungsgericht (Speichergasse 12, 3011) · BE RG Berner
+Jura-Seeland (Spitalstrasse 14, 2502 Biel; Aussenstelle Unionsgasse 13 ab 1.1.2026) ·
+ZH Obergericht (Hirschengraben 13/15, 8001; PF 8021) · ZH Handelsgericht (amtlich
+«Hirschengraben 15», gleicher Komplex; PF 8021) · ZH Verwaltungsgericht
+(Freischützgasse 1, 8004; PF 8090) · ZH Sozialversicherungsgericht (Lagerhausstrasse 19,
+8400 Winterthur; PF 8401) · ZH Steuerrekursgericht (Steinstrasse 21, 8003; PF 8090) ·
+ZH Baurekursgericht (Sihlstrasse 38, 8001; PF 8090) · ZH BG Zürich (Badenerstrasse 90,
+8004; PF 8036) · ZH BG Meilen (Untere Bruech 139/140, 8706) · BE RG Bern-Mittelland
+(Hodlerstrasse 7 = NUR Strafabteilung — **Zivilabteilung: Effingerstrasse 34, 3008
+Bern!**).
+
+**ABWEICHEND (8) — Listenwert ersetzen:**
+| Behörde | Liste | Amtlich korrekt | Quelle |
+|---|---|---|---|
+| BE Obergericht | 3001 Bern | Hochschulstrasse 17, **3012** Bern | zsg.justice.be.ch (Obergericht/Standort) |
+| BE RG Emmental-Oberaargau | Dunantstrasse 1 | **Dunantstrasse 3**, 3400 Burgdorf | zsg.justice.be.ch (Regionalgerichte) |
+| BE RG Oberland | Scheibenstrasse 11 | **Scheibenstrasse 11 B**, 3600 Thun (Selve) | zsg.justice.be.ch |
+| LU Kantonsgericht | 6002 Luzern | Hirschengraben 16, **6003** Luzern (PF 3569, 6002) | gerichte.lu.ch/kantonsgericht/kontakt |
+| LU BG Luzern | 6004 | Grabenstrasse 2, PF 2266, **6002** Luzern | gerichte.lu.ch (BG Luzern/Kontakt) |
+| LU BG Kriens | Schachenstrasse 12, 6011 | **Villastrasse 1, 6010 Kriens** | gerichte.lu.ch (BG Kriens/Kontakt) |
+| LU BG Hochdorf | Schmiedgasse 1 | **Bellevuestrasse 6**, 6280 Hochdorf (Abt. III: Hohenrainstrasse 8) | gerichte.lu.ch (BG Hochdorf/Kontakt) |
+| LU BG Willisau | Am Viehmarkt 1 | **Menzbergstrasse 16**, PF, 6130 Willisau | gerichte.lu.ch (BG Willisau/Kontakt) |
+
+Geklärte Rückfragen: Burgdorf amtlich Nr. **3** (deckt sich mit der
+Schlichtungsbehörden-Recherche) · BG Luzern: Gerichtsseite nennt **6002**
+(6004 nur Paket-/Drittquellen). Vollständige Tabelle mit allen URLs im
+Agent-Bericht (Transkript 5.6.2026).
+
+### AG / BS / BL — verifiziert 5.6.2026 (Agent-Bericht; baselland.ch via amtliche Such-Snippets, Direktabruf 403)
+
+**BESTÄTIGT (6):** AG Obergericht (Obere Vorstadt 38, 5000; PF 5001) · AG
+Spezialverwaltungsgericht (Obere Vorstadt 40) · AG BG Bremgarten (Rathausplatz 1) ·
+BS Appellationsgericht (Bäumleingasse 1, 4051) · BS Zivilgericht (Bäumleingasse 5,
+**4051 = Besucher/Paket korrekt; 4001 = Postfach** — PLZ-Frage geklärt!) ·
+BL Kantonsgericht (Bahnhofplatz 16, 4410 Liestal).
+
+**ABWEICHEND (18) — Listenwert ersetzen:**
+| Behörde | Liste | Amtlich korrekt (Quelle: ag.ch / staatskalender.bs.ch / baselland.ch) |
+|---|---|---|
+| AG Zwangsmassnahmengericht | Bahnhofstrasse 18, Aarau | **Mellingerstrasse 2a, 5400 Baden** (Sitz beim BG Baden!) |
+| AG BG Aarau | Laurenzenvorstadt 9 | **Obere Vorstadt 37, 5000 Aarau** (PF 5001) |
+| AG BG Baden | Mellingerstrasse 2b | **Mellingerstrasse 2a**, 5400 Baden |
+| AG BG Brugg | Hauptstrasse 1 | **Untere Hofstatt 4**, 5200 Brugg |
+| AG BG Kulm | Bahnhofstrasse 2, Reinach | **Zentrumsplatz 1, 5726 Unterkulm** |
+| AG BG Laufenburg | Bahnhofstrasse 4 | **Gerichtsgasse 85**, 5080 Laufenburg |
+| AG BG Lenzburg | Bahnhofstrasse 7 | **Malagarain 2**, 5600 Lenzburg (Neubau, Umzug Juli 2025) |
+| AG BG Muri | Marktstrasse 4 | **Seetalstrasse 8**, 5630 Muri |
+| AG BG Rheinfelden | Kapuzinerweg 5 | **Hermann Keller-Strasse 6**, 4310 Rheinfelden |
+| AG BG Zofingen | Untere Grabenstrasse 7 | **Untere Grabenstrasse 30**, 4800 Zofingen |
+| AG BG Zurzach | Hauptstrasse 60 | **Hauptstrasse 50**, 5330 Bad Zurzach |
+| BS Strafgericht | 4003 | Schützenmattstrasse 20, **4051** (Besuch) / **4009** (Post) |
+| BS Sozialversicherungsgericht | Grenzacherstrasse 8, 4058 | **Bäumleingasse 3, 4002 Basel** |
+| BS Jugendgericht | Innere Margarethenstr. 18 | **Bäumleingasse 1, 4051** (Liste = Jugend*anwaltschaft*!) |
+| BS Schlichtungsstelle Miete | Utengasse 36 | **Grenzacherstrasse 62, 4005 Basel** (Vermutung bestätigt) |
+| BL Zivilkreisgericht Ost | Liestal | **Hauptstrasse 108, 4450 Sissach** |
+| BL Zivilkreisgericht West | Pratteln | **Domplatz 5/7, 4144 Arlesheim** |
+| BL Straf-/ZM-/Jugendgericht | Grenzacherstrasse 17 | **Grenzacherstrasse 8**, 4132 Muttenz (Strafjustizzentrum) |
+
+Restzweifel: **BL Steuer- und Enteignungsgericht** — Gitterlistrasse 5, 4410 Liestal
+(dominierend) vs. Kreuzbodenweg 1 (noch auf einer Lageplan-Unterseite) → telefonisch
+gegenprüfen.
+
+## Gesamtbilanz der Verifikation (alle 6 Kantone)
+
+**47 Einträge geprüft: 21 bestätigt · 26 abweichend · 0 nicht gefunden.**
+Die Erstliste war v. a. bei AG-Bezirksgerichten, LU-Bezirksgerichten und BL
+grossflächig veraltet/falsch. Massgeblich sind die korrigierten amtlichen
+Fassungen (vollständige Tabellen mit allen URLs: Agent-Berichte 5.6.2026;
+konsolidierte Master-Liste: `gerichtsbehoerden-kantone.md`).
