@@ -18,7 +18,7 @@ Toggle-Kopplung gefixt).
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 413 Tests in 21 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
+Build ✓ · Lint 0/0 ✓ · 417 Tests in 21 Dateien (2 skipped) ✓ · tsc STRICT — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
@@ -210,6 +210,16 @@ Wizards 1–3 mit localStorage (`lexmetrik.vorlage.*.v1`, Hydration
 array-gesichert); Vorschau als Funktionsaufruf (kein Remount).
 
 ## PDF-Rechenbericht (src/lib/pdf/)
+
+**Formatvorlagen-SSoT (5.6.2026, `formatvorlagen.ts` — drei Grundlagen-
+Berichte):** Typografie je Format + AUSGABE_REGELN je AusgabeArt
+(abschrift = DOCX hart gesperrt · entwurf = PDF-Wasserzeichen «ENTWURF»
+[VA beurkundet] · fertig). Eingaben mit Korrekturrand 3.5 cm rechts,
+Anrede/Schlussformel/«im Doppel» (Rollen anrede/schlussformel);
+Verträge mit Ausfertigungs-Vermerk + QES-Hinweis (Art. 14 Abs. 2bis OR).
+Pro-SITZUNG (lib/proSession.ts): Pro betreten = eingeloggt (localStorage,
+Reload-fest, «/»→/pro), Header «Ausloggen»; Andockpunkt PayPal-Gate.
+Einzeilen-Heros Free+Pro; Gebiets-Titel in Sans.
 
 **Formatvorlagen der Vorlagen-Renderer (5.6.2026, Referenz-Layouts):**
 Schemas deklarieren `format` (verfuegung·vertrag·eingabe) + Absatz-`rolle`n
