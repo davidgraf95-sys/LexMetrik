@@ -11,6 +11,7 @@ import {
 } from '../../lib/gewaehrleistung';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 
@@ -116,12 +117,7 @@ export function GewaehrleistungForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
-      <details className="lc-notice-danger">
-        <summary className="text-body-s text-danger-700 cursor-pointer">
-          <strong>Keine Rechtsberatung</strong> – Rüge- und Verjährungsfristen der Sachgewährleistung; die «sofort»-Frist ist eine Näherung. <span className="opacity-80">Details</span>
-        </summary>
-        <p className="text-body-s text-danger-700 mt-2">{GW_DISCLAIMER}</p>
-      </details>
+      <PflichtDisclaimer kurz="Rüge- und Verjährungsfristen der Sachgewährleistung; die «sofort»-Frist ist eine Näherung." text={GW_DISCLAIMER} />
 
       {/* Vertrag */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

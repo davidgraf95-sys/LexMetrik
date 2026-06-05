@@ -5,6 +5,7 @@ import type { LohnfortzahlungInput, Kanton, Verhinderungsgrund } from '../../typ
 import { berechneLohnfortzahlung } from '../../lib/lohnfortzahlung';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
@@ -116,10 +117,7 @@ export function LohnfortzahlungForm() {
   return (
     <div className="space-y-6">
       {/* Skalen-Hinweis – kompakt, aufklappbar */}
-      <details className="lc-notice-warn">
-        <summary className="text-body-s text-warn-700 cursor-pointer">Skalen = Gerichtspraxis, nicht gerichtsverbindlich (Art. 324a Abs. 2 OR). <span className="opacity-80">Details</span></summary>
-        <p className="text-body-s text-warn-700 mt-2">{SKALEN_HINWEIS}</p>
-      </details>
+      <PflichtDisclaimer kurz="Skalen = Gerichtspraxis, nicht gerichtsverbindlich (Art. 324a Abs. 2 OR)." text={SKALEN_HINWEIS} />
 
       {/* Beispiele */}
       <div className="flex flex-wrap items-center gap-2">

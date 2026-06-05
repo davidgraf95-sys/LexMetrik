@@ -7,6 +7,7 @@ import { berechneMietkuendigung } from '../../lib/mietrecht';
 import { ORTSUEBLICHE_TERMINE } from '../../data/mietTermine';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
@@ -126,12 +127,7 @@ export function MietrechtForm() {
 
   return (
     <div className="space-y-6">
-      <details className="lc-notice-danger">
-        <summary className="text-body-s text-danger-700 cursor-pointer">
-          <strong>Keine Rechtsberatung</strong> – Orientierung (Art. 253 ff. OR). Ortsübliche Termine sind Tatfrage; verbindlich ist die Schlichtungsbehörde.
-        </summary>
-        <p className="text-body-s text-danger-700 mt-2">{MIET_DISCLAIMER}</p>
-      </details>
+      <PflichtDisclaimer kurz="Orientierung (Art. 253 ff. OR). Ortsübliche Termine sind Tatfrage; verbindlich ist die Schlichtungsbehörde." text={MIET_DISCLAIMER} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Kündigungsart">

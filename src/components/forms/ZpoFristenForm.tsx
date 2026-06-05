@@ -7,6 +7,7 @@ import { berechneFrist, zustellfiktion } from '../../lib/zpoFristen';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { zpoPdfCitations, zpoPdfErgebnis } from '../../lib/pdf/zpoPdf';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { FristenKalender } from '../FristenKalender';
@@ -114,12 +115,7 @@ export function ZpoFristenForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer (Ziff. 9) – immer sichtbar, kompakt. Volltext im Ergebnis-Panel. */}
-      <details className="lc-notice-danger">
-        <summary className="text-body-s text-danger-700 cursor-pointer">
-          <strong>Keine Rechtsberatung</strong> – rechnerische Orientierung (Art. 142–147 ZPO, Praxis BGer 5A_691/2023). Massgeblich ist der Gerichtsort.
-        </summary>
-        <p className="text-body-s text-danger-700 mt-2">{DISCLAIMER}</p>
-      </details>
+      <PflichtDisclaimer kurz="Rechnerische Orientierung (Art. 142–147 ZPO, Praxis BGer 5A_691/2023). Massgeblich ist der Gerichtsort." text={DISCLAIMER} />
 
       {/* Verfahrensphase */}
       <div className="space-y-2">

@@ -7,6 +7,7 @@ import { fmtB, zahl, istNull } from '../../lib/bruch';
 import { chf as fmtCHF } from '../../lib/vorlagen/datum';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 
@@ -126,12 +127,7 @@ export function ErbteilungForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
-      <details className="lc-notice-danger">
-        <summary className="text-body-s text-danger-700 cursor-pointer">
-          <strong>Keine Rechtsberatung</strong> – Quoten-Orientierung (Art. 457 ff., 470 ff. ZGB, Revision 2023). Massgebend ist das Todesdatum.
-        </summary>
-        <p className="text-body-s text-danger-700 mt-2">{ERB_DISCLAIMER}</p>
-      </details>
+      <PflichtDisclaimer kurz="Quoten-Orientierung (Art. 457 ff., 470 ff. ZGB, Revision 2023). Massgebend ist das Todesdatum." text={ERB_DISCLAIMER} />
 
       {/* Grundangaben */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

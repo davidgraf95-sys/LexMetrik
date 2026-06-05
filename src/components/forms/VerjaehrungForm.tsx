@@ -10,6 +10,7 @@ import {
 } from '../../lib/verjaehrung';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 
@@ -143,12 +144,7 @@ export function VerjaehrungForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
-      <details className="lc-notice-danger">
-        <summary className="text-body-s text-danger-700 cursor-pointer">
-          <strong>Keine Rechtsberatung</strong> – Verjährungs-Orientierung (Art. 60/67/127 ff. OR). Kenntniszeitpunkt und Sonderfristen sind fachlich zu prüfen. <span className="opacity-80">Details</span>
-        </summary>
-        <p className="text-body-s text-danger-700 mt-2">{VERJ_DISCLAIMER}</p>
-      </details>
+      <PflichtDisclaimer kurz="Verjährungs-Orientierung (Art. 60/67/127 ff. OR). Kenntniszeitpunkt und Sonderfristen sind fachlich zu prüfen." text={VERJ_DISCLAIMER} />
 
       <BeispielChips items={PRESETS} />
 

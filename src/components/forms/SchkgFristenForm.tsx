@@ -8,6 +8,7 @@ import { PHASEN_SCHKG, PRESETS_SCHKG, SCHKG_DISCLAIMER, type SchkgPhase, type Sc
 import { rechtsprechung, VERIFIKATION } from '../../data/verifikation';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { sansAmp } from '../typografie';
 import { PdfExportButton } from '../PdfExport';
@@ -152,12 +153,7 @@ export function SchkgFristenForm() {
   return (
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
-      <details className="lc-notice-danger">
-        <summary className="text-body-s text-danger-700 cursor-pointer">
-          <strong>Keine Rechtsberatung</strong> – rechnerische Orientierung (Art. 31/56/63 SchKG, Schnittstelle Art. 145 ZPO). Betreibungsferien ≠ Gerichtsferien.
-        </summary>
-        <p className="text-body-s text-danger-700 mt-2">{SCHKG_DISCLAIMER}</p>
-      </details>
+      <PflichtDisclaimer kurz="Rechnerische Orientierung (Art. 31/56/63 SchKG, Schnittstelle Art. 145 ZPO). Betreibungsferien ≠ Gerichtsferien." text={SCHKG_DISCLAIMER} />
 
       {/* Verfahrensphase */}
       <div className="space-y-2">
