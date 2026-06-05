@@ -167,11 +167,11 @@ export function MietrechtForm() {
         <Field label="Vereinbarte Kündigungstermine (Monatsenden)">
           <div className="flex flex-wrap gap-2">
             {MONATE.map((m, i) => (
-              <label key={m} className={`px-2.5 py-1.5 rounded-md text-body-s cursor-pointer border ${monate.includes(i + 1) ? 'bg-ink-900 text-paper border-ink-900' : 'bg-surface border-line text-ink-700'}`}>
-                <input type="checkbox" className="hidden" checked={monate.includes(i + 1)}
-                  onChange={() => setMonate((arr) => (arr.includes(i + 1) ? arr.filter((x) => x !== i + 1) : [...arr, i + 1].sort((a, b) => a - b)))} />
+              <button key={m} type="button" aria-pressed={monate.includes(i + 1)}
+                onClick={() => setMonate((arr) => (arr.includes(i + 1) ? arr.filter((x) => x !== i + 1) : [...arr, i + 1].sort((a, b) => a - b)))}
+                className={`px-2.5 py-1.5 rounded-md text-body-s border transition-colors ${monate.includes(i + 1) ? 'border-brass-500 bg-brass-100/60 text-ink-900 font-medium' : 'border-line bg-surface text-ink-700 hover:border-brass-400'}`}>
                 {m}
-              </label>
+              </button>
             ))}
           </div>
         </Field>

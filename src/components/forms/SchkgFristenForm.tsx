@@ -162,9 +162,10 @@ export function SchkgFristenForm() {
         <Tabs items={PHASEN_SCHKG.map((p) => ({ code: p.code, label: p.label }))} value={phase} onChange={wechslePhase} mode="pressed" ariaLabel="Verfahrensphase" />
       </div>
 
-      {/* Frist-Preset */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
-        <Field label="Frist-Vorlage" hint="Setzt Stillstand-Regime, Rechtsnatur, Länge und Auslöser automatisch">
+      {/* Frist-Preset — PRIMÄRWEG (UX B11): die Vorlage setzt alle Parameter;
+          die manuellen Felder darunter sind der Kontroll-/Sonderfall-Weg. */}
+      <div className="rounded-lg border p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
+        <Field label="Frist-Vorlage (empfohlener Einstieg)" hint="Setzt Stillstand-Regime, Rechtsnatur, Länge und Auslöser automatisch — manuelle Felder unten nur für Sonderfälle">
           <select value={aktiv?.key ?? ''} onChange={(e) => { const p = presetsDerPhase.find((x) => x.key === e.target.value); if (p) ladePreset(p); else setAktiv(null); }} className={inputCls}>
             <option value="">– Vorlage wählen (oder manuell unten) –</option>
             {presetsDerPhase.map((p) => <option key={p.key} value={p.key}>{p.label} · {p.norm}</option>)}
