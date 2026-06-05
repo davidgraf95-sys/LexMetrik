@@ -189,8 +189,11 @@ Visuelle Prüfung: qlmanage-Thumbnails + Swift-PDFKit-Split.
 ## Offene Punkte (nächste Session)
 
 1. **Fachliche Abnahme durch David** (er ist die «fachkundige Person»):
-   Baustein-Texte aller 4 Vorlagen; danach NormRefs auf verified:true und
-   Einträge einzeln auf «geprüft» heben (Goldrand).
+   **Erste Sichtung aller 4 Vorlagen am 5.6.2026 erfolgt** (Bausteine,
+   Gates, Schwellen vorläufig für gut befunden). SEIN ENTSCHEID: **alles
+   bleibt `entwurf` / `verified: false`** bis zur Wort-für-Wort-
+   Detailüberarbeitung («wir überarbeiten alles später»). Erst danach
+   NormRefs auf verified:true und Einträge einzeln auf «geprüft» (Goldrand).
 2. **Seine Antworten ausstehend:** redundante Tageszählungs-Hinweise im
    Verzugszins-Bericht kürzen? · DOCX-Standardannahmen ok (Testament ohne,
    VA nur beurkundet)? · Bausteinprotokoll in PDF/DOCX-Exporte aufnehmen?
