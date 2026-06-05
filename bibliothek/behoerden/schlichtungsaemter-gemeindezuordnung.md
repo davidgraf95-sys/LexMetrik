@@ -10,7 +10,157 @@ enthält Ortsteile (Heerbrugg u. a.) — Zuordnung über politische Gemeinde.
 
 ## Teil 2 — FR · ZG · AI · SZ · BL
 
-_(Bericht ausstehend.)_
+# Recherche-Bericht: Ordentliche Schlichtungsbehörden mit Gemeindezuordnung — FR, ZG, AI, SZ, BL
+
+**Abrufdatum: 5.6.2026 · Nur amtliche / amtsnahe Quellen · «NICHT GEFUNDEN» statt Spekulation**
+
+Wichtiger Methodenhinweis: Die kantonalen Portale `ai.ch`, `baselland.ch` und teils `sz.ch` lieferten HTTP 403 bzw. nur JS-gerenderte Karten. Wo nötig wurde auf amtliche Gemeindeseiten, das Behördenverzeichnis betreibungsschalter-plus.ch und das GOG zurückgegriffen. Die „abgedeckte Gemeinden"-Felder von betreibungsschalter-plus.ch sind PLZ-basiert und vermischen teilweise Nachbarkantone (AR/SG/ZG) — sie wurden NICHT als Zuständigkeitsquelle übernommen; massgeblich sind die amtlichen Bezirks-/Kreisstrukturen.
+
+---
+
+## 1. FR — Freiburg: 7 Friedensgerichte (justices de paix) — VOLLSTÄNDIG
+
+Die FR-Gerichtsbezirke sind BFS-kongruent (7 Verwaltungsbezirke = 7 Gerichtsbezirke). Bestätigt über fr.ch.
+
+| Amt | Strasse | PLZ Ort | Gemeinden (Bezirk) |
+|-----|---------|---------|--------------------|
+| Friedensgericht Saanebezirk / JP Sarine | Rue des Chanoines 1, PF 614 | 1701 Freiburg | alle Gemeinden Bezirk Saane/Sarine |
+| Friedensgericht Sensebezirk | Schwarzseestrasse 5, PF 37 | 1712 Tafers | alle Gemeinden Bezirk Sense |
+| Friedensgericht Greyerzbezirk / JP Gruyère | Rue de l'Europe 10, PF 1630 | 1630 Bulle | alle Gemeinden Bezirk Greyerz/Gruyère |
+| Friedensgericht Seebezirk | Freiburgstrasse 69, PF 76 | 3280 Murten | alle Gemeinden Bezirk See/Lac |
+| Friedensgericht Glanebezirk / JP Glâne | Rue des Moines 58 | 1680 Romont | alle Gemeinden Bezirk Glane/Glâne |
+| Friedensgericht Broyebezirk / JP Broye | Av. de la Gare 111 | 1470 Estavayer-le-Lac | alle Gemeinden Bezirk Broye |
+| Friedensgericht Vivisbachbezirk / JP Veveyse | Ch. du Château 11 | 1618 Châtel-St-Denis | alle Gemeinden Bezirk Vivisbach/Veveyse |
+
+**Unsicherheiten FR:** keine wesentlichen. Adressen direkt von fr.ch. Bestätigung der BFS-Kongruenz: ja (7 Bezirke). Romont-Strasse korrekt „Rue des Moines" (nicht „Rue de Moines" wie in einem Snippet).
+**Quellen:** https://www.fr.ch/de/staat-und-recht/justiz/gerichtsbehoerden-friedensgerichte · https://www.fr.ch/de/staat-und-recht/justiz/oertliche-zustaendigkeiten
+
+---
+
+## 2. ZG — Zug: 11 Friedensrichterämter — Gemeinde→Amt = 1:1 (bestätigt) — nahezu VOLLSTÄNDIG
+
+Bestätigt über zg.ch: jede der 11 Gemeinden hat ihr eigenes Friedensrichteramt, 1:1.
+
+| Amt | Strasse | PLZ Ort | Gemeinde |
+|-----|---------|---------|----------|
+| Friedensrichteramt Zug | Gubelstrasse 22, PF | 6301 Zug | Zug |
+| Friedensrichteramt Baar | Leihgasse 9 | 6341 Baar | Baar |
+| Friedensrichteramt Cham | Mandelhof (ohne Hausnr.) | 6330 Cham | Cham |
+| Friedensrichteramt Hünenberg | Chamerstrasse 11 | 6331 Hünenberg | Hünenberg |
+| Friedensrichteramt Risch | Rathaus, Zentrum Dorfmatt | 6343 Rotkreuz | Risch |
+| Friedensrichteramt Steinhausen | Bahnhofstrasse 3, PF | 6312 Steinhausen | Steinhausen |
+| Friedensrichteramt Walchwil | Dorfstrasse 23, PF (Gemeindeverwaltung) | 6318 Walchwil | Walchwil |
+| Friedensrichteramt Unterägeri | Seestrasse 2 | 6314 Unterägeri | Unterägeri |
+| Friedensrichteramt Oberägeri | PF 128 | 6315 Oberägeri | Oberägeri |
+| Friedensrichteramt Neuheim | PF 134 | 6345 Neuheim | Neuheim |
+| Friedensrichteramt Menzingen | Alte Landstrasse 2a, PF (Gemeindeverwaltung) | 6313 Menzingen | Menzingen |
+
+**Hausnummern Cham/Menzingen geklärt:**
+- **Menzingen: GEKLÄRT** → Alte Landstrasse 2a (offizielle Gemeindeverwaltungs-Anschrift menzingen-Seite).
+- **Cham: NICHT GEFUNDEN (Hausnummer).** Amtlich wird durchgängig nur „Mandelhof, 6330 Cham" (Gemeindehaus Mandelhof) ohne Hausnummer geführt — sowohl cham.ch als auch Behördenverzeichnis. Tel. 041 723 87 14. Eine Hausnummer wird amtlich offenbar nicht verwendet.
+
+**Weitere Unsicherheiten ZG:**
+- Oberägeri/Neuheim/Risch werden amtlich primär mit Postfach bzw. „Rathaus/Zentrum Dorfmatt" geführt; physische Strassenadresse mit Hausnummer für Oberägeri/Neuheim NICHT separat publiziert (Postfach ist die offizielle Korrespondenzadresse).
+- Ignorieren Sie die „abgedeckte Gemeinden"-Listen aus betreibungsschalter-plus.ch (z. B. Oberägeri „Sattel/Rothenthurm/Morgarten") — das sind fehlerhafte PLZ-Treffer aus SZ; ZG ist strikt 1:1.
+
+**Quellen:** https://zg.ch/de/recht-justiz/zivilverfahren/schlichtung/friedensrichteraemter · https://www.cham.ch/bereiche/2569 · https://www.zg.ch/behoerden/gemeinden/menzingen/de/verwaltung/verwaltung/aemter-und-stellen/friedensrichter · https://www.walchwil.ch/verwaltung/friedensrichteramt.html/175 · https://www.unteraegeri.ch/behoerden/671 · https://www.neuheim.ch/friedensrichteramt
+
+---
+
+## 3. AI — Appenzell Innerrhoden: 5 Bezirks-Vermittlerämter — VOLLSTÄNDIG (mit Vorbehalt Hausnummern)
+
+AI-Bezirke = BFS-Bezirke. Seit 2022 fusionierten die früheren Bezirke Schwende und Rüte zu **Schwende-Rüte** — das ergibt aktuell 5 Bezirke/5 Vermittlerämter (Appenzell, Schwende-Rüte, Schlatt-Haslen, Gonten, Oberegg). Hinweis: ai.ch blockt (403); Daten aus amtlichen Bezirksseiten.
+
+| Amt | Strasse | PLZ Ort | Bezirk/Gemeinde |
+|-----|---------|---------|------------------|
+| Vermittleramt Appenzell | Landsgemeindeplatz 5 | 9050 Appenzell | Bezirk Appenzell |
+| Vermittleramt Schwende-Rüte | Zidler 19 (Vermittler T. Mainberger) | 9057 Weissbad | Bezirk Schwende-Rüte |
+| Vermittleramt Schlatt-Haslen | Hinterhaslen 41 (Vermittler P. Sutter) | 9054 Haslen | Bezirk Schlatt-Haslen |
+| Vermittleramt Gonten | Lorettohalde 1 (Vermittlerin L. Zürcher-Baumgartner; Privat: Oberschwarzstrasse 7) | 9108 Gonten | Bezirk Gonten |
+| Vermittleramt Oberegg | Sonnenstrasse 6 (Vermittlerin S. Blatter-Ulmann) | 9413 Oberegg | Bezirk Oberegg |
+
+**Unsicherheiten AI:**
+- **WARNUNG Quellenvermischung:** betreibungsschalter-plus.ch führt veraltete getrennte „Vermittleramt Schwende" (Küchenrain 6, 9057 Schwende) und „Vermittleramt Rüte" sowie ein AR-„Vermittleramt Haslen, Oberbühl 9054" (deckt Gais/Bühler/Teufen AR — das ist **Appenzell Ausserrhoden**, NICHT AI). Diese wurden ausgeschlossen.
+- Schwende-Rüte: Aktuelle Vermittler-Korrespondenzadresse ist die Privat-/Funktionsadresse des Vermittlers (Zidler 19, 9057 Weissbad). Eine separate „Amts"-Anschrift in der Bezirksverwaltung (Pöppelstrasse 14, 9050 Appenzell Steinegg) ist möglich, aber für das Vermittleramt nicht eindeutig amtlich bestätigt → **leichte Unsicherheit**.
+- Da ai.ch (403) nicht direkt verifizierbar war, sind die 5 Ämter strukturell sicher, die exakten Hausnummern teils über Vermittler-Personenadressen abgeleitet.
+
+**Quellen:** https://www.ai.ch/gerichte/vermittler (403, nicht abrufbar) · https://schwende-ruete.ch/ · https://schlatt-haslen.ch/ · https://www.appenzell.ch/de/dorf-appenzell/bezirke-in-appenzell-innerrhoden/
+
+---
+
+## 4. SZ — Schwyz: Vermittlerämter — TEILWEISE OFFEN (per-Gemeinde-System, amtliche Karte JS-only)
+
+**Struktur:** Das SZ-System ist NICHT in wenige Kreise gegliedert, sondern grundsätzlich **per Gemeinde**: Jede der 30 Gemeinden hat (amtlich) einen Vermittler + Stellvertreter, gewählt auf 4 Jahre. Einzelne Bezirke/Gemeinden teilen sich ein Amt (Konsolidierungen). Gemeinde→Amt ist daher überwiegend 1:1 mit einigen Ausnahmen.
+
+**Datenquellen-Befund:** Die amtliche Übersicht `vermittler-sz.ch` ist eine reine JS-Leaflet-Karte („Die Karte wird geladen"); ein dahinterliegendes JSON/REST-Endpoint (WP-REST `/wp-json/wp/v2/...`) liefert 404 — **keine offene maschinenlesbare Datenquelle gefunden**. sz.ch selbst verlinkt nur auf vermittler-sz.ch. Es existiert ein RRB Nr. 585/2024 (PDF, sz.ch) mit Statistik, aber als gescanntes/komprimiertes PDF ohne extrahierbaren Volltext (lokal kein pdftotext verfügbar).
+
+**Verifizierte Einzelämter (Adresse + abgedeckte Gemeinden):**
+
+| Amt | Strasse | PLZ Ort | Gemeinden |
+|-----|---------|---------|-----------|
+| Vermittleramt Höfe | Rebhaldenstrasse 15 | 8807 Freienbach | Feusisberg, Freienbach, Wollerau (Bezirk Höfe, konsolidiert) |
+| Vermittleramt March | Gallerstrasse 56 (Vermittler M. Diethelm) | 8853 Lachen | Bezirk March: Lachen, Altendorf, Galgenen, Vorderthal, Innerthal, Schübelbach, Tuggen, Wangen, Reichenburg — ABER: einzelne Marchgemeinden führen eigene Vermittler (s. u.) → **unsicher, ob March-weit konsolidiert** |
+| Vermittleramt Gemeinde Schwyz | Laubstrasse 13 (Gemeindehaus; ältere Angabe Herrengasse 17) | 6430 Schwyz | Gemeinde Schwyz (Kerngebiet) |
+| Vermittleramt Bezirk Brunnen/Ingenbohl | c/o Eisenbahnstrasse 20a, PF 405 (Vermittler F. Rüegg) | 8840 Einsiedeln (Korrespondenz); Verhandlungen in Ingenbohl | Gersau, Ingenbohl, Morschach, Riemenstalden (Kreis Brunnen, seit 2020 konsolidiert) |
+| Vermittleramt Bezirk Einsiedeln | (Schlichtungsbehörde Bezirk Einsiedeln) | 8840 Einsiedeln | Bezirk Einsiedeln |
+
+**Was OFFEN bleibt (ehrlich markiert):**
+- **NICHT GEFUNDEN:** vollständige, verifizierte Liste aller ~20-30 SZ-Vermittlerämter mit Adressen + exakter Gemeindezuordnung. Einzelne Gemeinden (Galgenen, Tuggen, Wangen, Reichenburg, Vorderthal, Innerthal, Küssnacht, Arth, Gersau, Unter-/Oberiberg, Rothenthurm, Sattel, Steinen, Lauerz, Muotathal, Alpthal, Riemenstalden) haben eigene Vermittler-Einträge auf ihren Gemeindeseiten — diese müssten gemeindeweise einzeln abgefragt werden.
+- **Widerspruch March:** Es existiert sowohl ein „Vermittleramt March" (Lachen) als auch separate Gemeinde-Vermittlerämter (Galgenen/Reichenburg: Merikenstrasse 8, 8864 Reichenburg; Wangen; Tuggen). Ob March als Einheitskreis oder gemeindeweise organisiert ist, **konnte amtlich nicht abschliessend geklärt werden**.
+- Empfehlung: Für SZ die Karte vermittler-sz.ch manuell (Browser) auslesen oder den Verband (VVS) bzw. das RRB 585/2024 als OCR-Quelle heranziehen.
+
+**Quellen:** https://www.sz.ch/behoerden/justiz/vermittleraemter.html · https://vermittler-sz.ch/ (JS-only) · https://www.hoefe.ch/de/judikative/vermittleramt/ · https://www.gemeindeschwyz.ch/kommissionen/31483 · https://www.ingenbohl.ch/vermittler/47618 · https://www.einsiedeln.ch/verwaltung/weitere-stellen/vermittler · RRB 585/2024: https://www.sz.ch/public/upload/assets/77626/I_Vermittler%C3%A4mter.pdf
+
+---
+
+## 5. BL — Basel-Landschaft: 15 Friedensrichterkreise — Kreisstruktur VOLLSTÄNDIG, Korrespondenzadressen TEILWEISE
+
+baselland.ch blockt durchgängig (403). Kreisstruktur aus GOG §18 (SGS 170) + amtsnahen Quellen rekonstruiert; je 2 Friedensrichter/Kreis. Die Korrespondenzadresse ist i. d. R. die Sitzgemeinde-Verwaltung (Termine nur nach Vereinbarung; Friedensrichter amtieren nebenamtlich, oft ohne separates Büro).
+
+| Kreis (Nr.) | Sitz / Korrespondenzadresse | PLZ Ort | Gemeinden |
+|-------------|------------------------------|---------|-----------|
+| K1 Allschwil | Gemeindeverwaltung Allschwil | 4123 Allschwil | Allschwil, Schönenbuch |
+| K2 Binningen-Bottmingen | Gemeindeverwaltung Binningen | 4102 Binningen | Binningen, Bottmingen |
+| K3 Oberwil-Therwil | Gemeindeverwaltung Oberwil | 4104 Oberwil | Oberwil, Therwil, Biel-Benken, Ettingen (Leimental) — **Gemeindeliste teils unsicher** |
+| K4 Reinach | Gemeindeverwaltung Reinach | 4153 Reinach | Reinach |
+| K5 Aesch | Gemeindeverwaltung Aesch | 4147 Aesch | Aesch, Pfeffingen |
+| K6 Muttenz-Birsfelden | Gemeinde Muttenz, Kirchplatz 3 (auch Birsfelden, Hardstrasse 21) | 4132 Muttenz / 4127 Birsfelden | Muttenz, Birsfelden |
+| K7 Arlesheim-Münchenstein | Gemeindeverwaltung Arlesheim | 4144 Arlesheim | Arlesheim, Münchenstein |
+| K8 Laufen | Gemeindeverwaltung/Bezirk Laufen | 4242 Laufen | Blauen, Brislach, Burg i.L., Dittingen, Duggingen, Grellingen, Laufen, Liesberg, Nenzlingen, Roggenburg, Röschenz, Wahlen, Zwingen |
+| K9 Liestal | Friedensrichteramt Liestal, PF 454 | 4410 Liestal | Liestal, Lausen, Arisdorf, Itingen — **(Itingen evtl. Sissach, s. u.)** |
+| K10 Bubendorf | Gemeindeverwaltung Bubendorf | 4416 Bubendorf | Bubendorf u. Umlandgemeinden — **Gemeindeliste NICHT vollständig verifiziert** |
+| K11 Frenkendorf | Gemeindeverwaltung Frenkendorf | 4402 Frenkendorf | Frenkendorf, Füllinsdorf u. a. — **NICHT vollständig verifiziert** |
+| K12 Pratteln | Gemeindeverwaltung Pratteln | 4133 Pratteln | Pratteln, Augst u. a. — **NICHT vollständig verifiziert** |
+| K13 Sissach | Gemeindeverwaltung Sissach | 4450 Sissach | Böckten, Buckten, Diepflingen, Häfelfingen, Itingen, Känerkinden, Läufelfingen, Nusshof, Rümlingen, Sissach, Tenniken, Thürnen, Wintersingen, Wittinsburg, Zunzgen |
+| K14 Gelterkinden | Gemeindeverwaltung Gelterkinden | 4460 Gelterkinden | Anwil, Buus, Gelterkinden, Hemmiken, Kilchberg, Maisprach, Oltingen, Ormalingen, Rickenbach, Rothenfluh, Rünenberg, Tecknau, Wenslingen, Zeglingen |
+| K15 Waldenburg | Gemeindeverwaltung Waldenburg | 4437 Waldenburg | Arboldswil, Bennwil, Bretzwil, Diegten, Eptingen, Hölstein, Lampenberg, Langenbruck, Lauwil, Liedertswil, Niederdorf, Oberdorf, Reigoldswil, Titterten, Waldenburg |
+
+**Verifizierte Adressen (amtlich/amtsnah):**
+- K6 Muttenz: Kirchplatz 3, 4132 Muttenz · Birsfelden: Hardstrasse 21, 4127 Birsfelden ✓
+- K9 Liestal: Friedensrichteramt Liestal, PF 454, 4410 Liestal ✓ (deckt Liestal, Lausen, Arisdorf, Itingen)
+- K1 Allschwil: Friedensrichter in Allschwil ✓ (Personenadressen Parkallee 61 bzw. Strengigartenweg 5A, 4123 Allschwil)
+
+**Unsicherheiten BL (erheblich):**
+- **Itingen-Konflikt:** erscheint sowohl bei K9 Liestal (Behördenverzeichnis) als auch bei K13 Sissach (GOG-Liste). Eine Gemeinde gehört nur zu einem Kreis → **muss am GOG §18-Volltext final geklärt werden** (Quelle deutet auf Sissach hin als gesetzliche Zuordnung; Liestal-Eintrag evtl. veraltet/praktisch).
+- Kreise K9-K12 (Liestal/Bubendorf/Frenkendorf/Pratteln, Bezirk Liestal): die genaue gemeindeweise Aufteilung des Bezirks Liestal auf diese 4 Kreise ist aus den abrufbaren Quellen **NICHT vollständig** rekonstruierbar (baselland.ch 403, GOG-PDF nicht text-extrahierbar). Die Sitzgemeinden sind sicher, die jeweiligen Zuteilungsgemeinden teilweise NICHT GEFUNDEN.
+- Kreisnummerierung K1-K15: Reihenfolge plausibel (nach Bezirken Arlesheim→Laufen→Liestal→Sissach→Waldenburg), aber die exakte amtliche Nummer je Kreis ist nur für K6 (=„06 Muttenz-Birsfelden", amtlich bestätigt) gesichert; übrige Nummern sind abgeleitet.
+- Korrespondenzadressen: durchwegs als Sitzgemeinde-Verwaltung angegeben; verifizierte Strasse/Hausnummer liegt nur für K6 und K9 vor. Für die übrigen Kreise = **Strasse/Hausnummer NICHT einzeln verifiziert** (Friedensrichter nebenamtlich, Korrespondenz über Gemeindeverwaltung).
+
+**Quellen:** GOG SGS 170 §18: https://bl.clex.ch/app/de/texts_of_law/170 (Volltext JS-gerendert) · https://www.baselland.ch/politik-und-behorden/gerichte/friedensrichter-innen (403) · https://www.muttenz.ch/behoerden/2582 · https://www.liestal.ch/dienstleistungen/26418 · https://www.allschwil.ch/de/verwaltung/dienstleistungen/detail/detail.php?i=473 · Landratsvorlage 2002/338 (Kreiskonsolidierung 23→15)
+
+---
+
+## Gesamtfazit für den PLZ-Zuständigkeitsrechner
+
+| Kanton | Status maschinenlesbare Gemeinde→Amt-Zuordnung |
+|--------|-----------------------------------------------|
+| **FR** | ✅ Vollständig & sicher (7 Gerichte = 7 BFS-Bezirke; Bezirks-Gemeindelisten via BFS) |
+| **ZG** | ✅ Vollständig (11 Ämter, strikt 1:1); offen nur: Hausnummer Cham (amtlich gar nicht geführt → „Mandelhof" verwenden) |
+| **AI** | ✅ Strukturell vollständig (5 Bezirks-Vermittlerämter = BFS-Bezirke nach Fusion Schwende-Rüte 2022); Adressen verifiziert, AR-Vermischung ausgeschlossen |
+| **SZ** | ⚠️ Teilweise offen: per-Gemeinde-System, keine offene Datenquelle (Karte JS-only), vollständige Amts-/Gemeindeliste NICHT gefunden. 5 Ämter verifiziert. Manuelle Erfassung von vermittler-sz.ch nötig |
+| **BL** | ⚠️ Kreisstruktur (15) vollständig, GOG §18-Gemeindelisten für K8/K13/K14/K15 sicher; K9-K12 (Bezirk Liestal) Gemeindezuteilung unvollständig; Itingen-Zuordnung K9 vs. K13 zu klären; Korrespondenzadressen nur K6/K9 verifiziert |
+
+Hauptlücken, die ein zweiter Durchgang (mit Browser-Rendering für ai.ch/baselland.ch/vermittler-sz.ch und OCR der GOG-PDF) schliessen sollte: **SZ Vollständigkeit** und **BL Bezirk-Liestal-Kreisaufteilung + Itingen + restliche Korrespondenzadressen**.
 
 ---
 

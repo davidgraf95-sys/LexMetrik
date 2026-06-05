@@ -108,3 +108,35 @@ describe('PLZ-Auflösung (amtliches Ortschaftenverzeichnis) + ZH-Amt', () => {
     expect(amt?.strasse).toBe('Stadthausstrasse 4a');
   });
 });
+
+describe('Gemeinde→Amt-Auflösung AG/SG/TG/FR/ZG/AI (amtAufloesung)', () => {
+  it('Stichproben über alle sechs generierten Kantone', async () => {
+    const { amtFuer, AMT_KANTONE } = await import('../data/schlichtung/amtAufloesung');
+    expect(AMT_KANTONE).toContain('FR');
+    expect((await amtFuer('AG', 'Wettingen'))?.strasse).toContain('Zwyssigstrasse 76');
+    expect((await amtFuer('SG', 'Flawil'))?.name).toBe('Vermittlungsamt Wil');
+    expect((await amtFuer('TG', 'Roggwil (TG)'))?.name).toContain('Arbon');
+    expect((await amtFuer('TG', 'Roggwil'))?.name).toContain('Arbon'); // Suffix-Fallback
+    expect((await amtFuer('FR', 'Murten'))?.name).toContain('Seebezirk');
+    expect((await amtFuer('ZG', 'Cham'))?.plzOrt).toBe('6330 Cham');
+    expect((await amtFuer('AI', 'Gonten'))?.name).toBe('Vermittleramt Gonten');
+    // SZ/BL bewusst nicht auflösbar (Verzeichnis-Fallback)
+    expect(await amtFuer('SZ', 'Lachen')).toBeNull();
+    expect(await amtFuer('BL', 'Sissach')).toBeNull();
+  });
+  it('Kette PLZ → Gemeinde → Amt (3280 Murten → Seebezirk; 9500 dokumentiert die Mehr-Gemeinden-Ambiguität)', async () => {
+    const { plzAufloesen } = await import('../data/plz/plzAufloesung');
+    const { amtFuer } = await import('../data/schlichtung/amtAufloesung');
+    const murten = (await plzAufloesen('3280'))!.find((t) => t.gemeinde === 'Murten')!;
+    expect((await amtFuer('FR', murten.gemeinde))?.name).toContain('Seebezirk');
+    // PLZ 9500 umfasst amtlich VIER Gemeinden in ZWEI Kantonen (Kirchberg SG,
+    // Wil SG, Zuzwil SG, Münchwilen TG) — die UI verlangt deshalb bei
+    // Mehrdeutigkeit die Gemeinde-Präzisierung; die Auflösung pro Gemeinde
+    // bleibt deterministisch:
+    const t9500 = (await plzAufloesen('9500'))!;
+    expect(t9500.length).toBeGreaterThan(1);
+    expect(new Set(t9500.map((t) => t.kanton)).size).toBe(2);
+    expect((await amtFuer('SG', 'Wil (SG)'))?.name).toBe('Vermittlungsamt Wil');
+    expect((await amtFuer('SG', 'Kirchberg (SG)'))?.name).toBe('Vermittlungsamt Toggenburg');
+  });
+});

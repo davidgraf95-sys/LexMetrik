@@ -18,7 +18,7 @@ const CSV = '/tmp/plz_csv/AMTOVZ_CSV_LV95/AMTOVZ_CSV_LV95.csv';
 const DOSSIER = 'bibliothek/behoerden/schlichtungsbehoerden-zh-vollerfassung.md';
 
 // ── 1 · PLZ-Verzeichnis ─────────────────────────────────────────────────────
-const roh = readFileSync(CSV, 'utf-8').replace(/^﻿/, '');
+const roh = readFileSync(CSV, 'utf-8').replace(/^\uFEFF/, '');
 const zeilen = roh.split('\n').slice(1).filter((z) => z.trim() !== '');
 // PLZ → eindeutige (Gemeinde, Kanton)-Paare
 const proPlz = new Map<string, Map<string, [string, string]>>();
@@ -78,3 +78,85 @@ mkdirSync('src/data/schlichtung', { recursive: true });
 writeFileSync('src/data/schlichtung/zhFriedensrichter.json',
   JSON.stringify({ gemeinden: zh, zuerichKreise: zuerich }));
 console.log(`ZH-Zuordnung: ${Object.keys(zh).length} Gemeinde-Einträge + ${zuerich.length} Stadt-Kreis-Ämter.`);
+
+// ── 3 · AG/SG/TG (+ später FR/ZG/AI/SZ/BL): Gemeinde → Amt ──────────────────
+// Quelle: bibliothek/behoerden/schlichtungsaemter-gemeindezuordnung.md
+// (amtliche Behördenverzeichnisse, 5.6.2026). Tabellenformat:
+// | Amt | Strasse | PLZ Ort | Gemeinden (kommagetrennt) |
+const zuordnungMd = readFileSync('bibliothek/behoerden/schlichtungsaemter-gemeindezuordnung.md', 'utf-8');
+type Amt = { name: string; strasse: string; plzOrt: string };
+const kantonsDaten: Record<string, { aemter: Amt[]; gemeinden: Record<string, number> }> = {};
+let aktuellerKanton: string | null = null;
+for (const z of zuordnungMd.split('\n')) {
+  // Teil 1: «## 1. Aargau — …» · Teil 2: «## 1. FR — Freiburg: …»
+  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL)\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
+  if (kopfTreffer) {
+    aktuellerKanton = kopfTreffer[1]
+      ?? ({ Aargau: 'AG', 'St. Gallen': 'SG', 'St.Gallen': 'SG', Thurgau: 'TG' }[kopfTreffer[2] ?? ''] ?? null);
+    if (aktuellerKanton && !kantonsDaten[aktuellerKanton]) kantonsDaten[aktuellerKanton] = { aemter: [], gemeinden: {} };
+    continue;
+  }
+  if (!aktuellerKanton || !z.startsWith('|')) continue;
+  const t = z.split('|').map((x) => x.trim());
+  // Datenzeile: 4 Spalten, keine Kopf-/Trennzeile
+  if (t.length < 6 || t[1] === 'Amt' || /^[-: ]+$/.test(t[1])) continue;
+  const [, name, strasse, plzOrt, gemeindenRoh] = t;
+  if (!/\d{4} /.test(plzOrt)) continue;
+  const d = kantonsDaten[aktuellerKanton];
+  const idx = d.aemter.length;
+  d.aemter.push({ name, strasse, plzOrt });
+  for (const g of gemeindenRoh.split(',').map((x) => x.trim()).filter(Boolean)) {
+    d.gemeinden[g] = idx;
+  }
+}
+writeFileSync('src/data/schlichtung/aemterKantone.json', JSON.stringify(kantonsDaten));
+for (const [k, d] of Object.entries(kantonsDaten)) {
+  console.log(`${k}: ${d.aemter.length} Ämter, ${Object.keys(d.gemeinden).length} Gemeinde-Einträge.`);
+}
+
+// ── 4 · Nachbearbeitung ─────────────────────────────────────────────────────
+// SZ/BL: im Dossier ausdrücklich als TEILWEISE OFFEN markiert (SZ JS-Karte
+// ohne Datenquelle; BL Kreise K9–K12 + Itingen-Konflikt ungeklärt) →
+// BEWUSST nicht generieren; UI behält den ehrlichen Verzeichnis-Fallback.
+delete kantonsDaten.SZ;
+delete kantonsDaten.BL;
+// AI-Präfix + FR über BFS-Bezirke:
+// AI: Tabellen-Spalte trägt «Bezirk X» — amtlicher Gemeindename ist X.
+if (kantonsDaten.AI) {
+  const neu: Record<string, number> = {};
+  for (const [g, i] of Object.entries(kantonsDaten.AI.gemeinden)) neu[g.replace(/^Bezirk\s+/, '')] = i;
+  kantonsDaten.AI.gemeinden = neu;
+}
+// FR: «alle Gemeinden Bezirk …» → Gemeindeliste aus dem amtlichen
+// BFS-Gemeindeverzeichnis (Snapshot-API agvchapp.bfs.admin.ch, Stand 1.6.2026;
+// CSV in /tmp/bfs_gemeinden.csv). Bezirks-Schlüsselwörter fest verdrahtet.
+if (kantonsDaten.FR) {
+  const bfs = readFileSync('/tmp/bfs_gemeinden.csv', 'utf-8').replace(/^\uFEFF/, '').split('\n').map((z) => z.split(','));
+  const kopfZeile = bfs[0];
+  const idx = (n: string) => kopfZeile.indexOf(n);
+  const byHist = new Map(bfs.slice(1).map((r) => [r[idx('HistoricalCode')], r]));
+  const frBezirke = new Map<string, string>();
+  for (const r of bfs.slice(1)) {
+    if (r[idx('Level')] === '2' && byHist.get(r[idx('Parent')])?.[idx('ShortName')] === 'FR') frBezirke.set(r[idx('HistoricalCode')], r[idx('Name')]);
+  }
+  const schluessel: [RegExp, string][] = [
+    [/Sarine/, 'Saane'], [/Sense/, 'Sense'], [/Gruyère/, 'Greyerz'], [/Lac/, 'See'],
+    [/Glâne/, 'Glane'], [/Broye/, 'Broye'], [/Veveyse/, 'Vivisbach'],
+  ];
+  const amtJeBezirk = new Map<string, number>();
+  kantonsDaten.FR.aemter.forEach((a, i) => {
+    for (const [, kw] of schluessel) if (a.name.includes(kw)) amtJeBezirk.set(kw, i);
+  });
+  const gemeinden: Record<string, number> = {};
+  for (const r of bfs.slice(1)) {
+    if (r[idx('Level')] !== '3') continue;
+    const bezirk = frBezirke.get(r[idx('Parent')]);
+    if (!bezirk) continue;
+    const kw = schluessel.find(([re]) => re.test(bezirk))?.[1];
+    const amtIdx = kw !== undefined ? amtJeBezirk.get(kw) : undefined;
+    if (amtIdx !== undefined) gemeinden[r[idx('Name')]] = amtIdx;
+  }
+  kantonsDaten.FR.gemeinden = gemeinden;
+}
+writeFileSync('src/data/schlichtung/aemterKantone.json', JSON.stringify(kantonsDaten));
+console.log('Nachbearbeitung:', Object.entries(kantonsDaten).map(([k, d]) => `${k}=${d.aemter.length}Ä/${Object.keys(d.gemeinden).length}G`).join(' · '));

@@ -17,7 +17,8 @@ import {
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
-import { zhFriedensrichterFuer, zuerichKreisAemter, type ZhAmt, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
+import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
+import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
 
@@ -145,38 +146,49 @@ export function ZustaendigkeitForm() {
   const set = <K extends keyof State>(k: K, v: State[K]) => setF((alt) => ({ ...alt, [k]: v }));
 
   // ── PLZ-Auflösung (amtliches Ortschaftenverzeichnis, lazy) ────────────────
+  // Sämtliche setState-Aufrufe asynchron in der Promise-Kette (Lint-Regel
+  // «kein synchrones setState im Effect»). Eindeutiger Kanton/Gemeinde aus
+  // der PLZ wird automatisch gesetzt (amtliches Register, keine Heuristik);
+  // bei Kantonsgrenz-PLZ bleibt die Wahl beim Nutzer.
   const [plzTreffer, setPlzTreffer] = useState<PlzTreffer[] | null>(null);
   useEffect(() => {
     let aktiv = true;
-    if (!/^\d{4}$/.test(f.plz)) { setPlzTreffer(null); return; }
-    plzAufloesen(f.plz).then((t) => { if (aktiv) setPlzTreffer(t); }).catch(() => { if (aktiv) setPlzTreffer(null); });
+    plzAufloesen(f.plz)
+      .then((treffer) => {
+        if (!aktiv) return;
+        setPlzTreffer(treffer);
+        if (!treffer || treffer.length === 0) return;
+        const kantone = [...new Set(treffer.map((t) => t.kanton))];
+        const gemeinden = [...new Set(treffer.map((t) => t.gemeinde))];
+        setF((alt) => ({
+          ...alt,
+          ...(kantone.length === 1 && alt.kanton !== kantone[0] ? { kanton: kantone[0] } : {}),
+          ...(gemeinden.length === 1 && alt.gemeinde.trim() === '' ? { gemeinde: gemeinden[0] } : {}),
+        }));
+      })
+      .catch(() => { if (aktiv) setPlzTreffer(null); });
     return () => { aktiv = false; };
   }, [f.plz]);
-  // Eindeutiger Kanton aus der PLZ → automatisch setzen (amtliches Register,
-  // keine Heuristik); bei Kantonsgrenz-PLZ bleibt die Wahl beim Nutzer.
-  useEffect(() => {
-    if (!plzTreffer || plzTreffer.length === 0) return;
-    const kantone = [...new Set(plzTreffer.map((t) => t.kanton))];
-    if (kantone.length === 1 && f.kanton !== kantone[0]) set('kanton', kantone[0]);
-    const gemeinden = [...new Set(plzTreffer.map((t) => t.gemeinde))];
-    if (gemeinden.length === 1 && f.gemeinde.trim() === '') set('gemeinde', gemeinden[0]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [plzTreffer]);
 
-  // ── ZH: konkretes Friedensrichteramt über Gemeinde (PLZ→Gemeinde→Amt) ─────
-  const [zhAmt, setZhAmt] = useState<ZhAmt | null>(null);
+  // ── Konkretes Schlichtungsamt über Gemeinde (PLZ→Gemeinde→Amt) ────────────
+  // Aufgelöste Kantone: AMT_KANTONE (ZH/AG/SG/TG; Ausbau folgt mit den
+  // weiteren Gemeinde-Zuordnungen). Stadt Zürich: sechs Kreis-Ämter.
+  const [amt, setAmt] = useState<SchlichtungsAmt | null>(null);
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   useEffect(() => {
     let aktiv = true;
-    setZhAmt(null); setZhKreise(null);
-    if (f.kanton !== 'ZH') return;
-    const gemeinde = f.gemeinde.trim();
-    if (gemeinde === '') return;
-    if (gemeinde.toLowerCase() === 'zürich') {
-      zuerichKreisAemter().then((k) => { if (aktiv) setZhKreise(k); }).catch(() => {});
-      return;
-    }
-    zhFriedensrichterFuer(gemeinde).then((a) => { if (aktiv) setZhAmt(a); }).catch(() => {});
+    const lade = async (): Promise<{ amt: SchlichtungsAmt | null; kreise: ZhKreisAmt[] | null }> => {
+      const kanton = f.kanton;
+      const gemeinde = f.gemeinde.trim();
+      if (kanton === '' || !AMT_KANTONE.includes(kanton) || gemeinde === '') return { amt: null, kreise: null };
+      if (kanton === 'ZH' && gemeinde.toLowerCase() === 'zürich') {
+        return { amt: null, kreise: await zuerichKreisAemter() };
+      }
+      return { amt: await amtFuer(kanton, gemeinde), kreise: null };
+    };
+    lade()
+      .then((r) => { if (aktiv) { setAmt(r.amt); setZhKreise(r.kreise); } })
+      .catch(() => { if (aktiv) { setAmt(null); setZhKreise(null); } });
     return () => { aktiv = false; };
   }, [f.kanton, f.gemeinde]);
 
@@ -561,18 +573,19 @@ export function ZustaendigkeitForm() {
                   </ul>
                 </div>
               )}
-              {recherche.aufloesung.modus === 'verzeichnis' && (
-                <>
-                  {/* PLZ→Gemeinde→Amt-Auflösung (Pilot ZH, ordentliche Behörde) */}
-                  {f.kanton === 'ZH' && r.schlichtung.behoerdeTyp === 'ordentlich' && zhAmt && (
+              {recherche.aufloesung.modus === 'verzeichnis' && (() => {
+                const amtAufloesbar = f.kanton !== '' && AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'ordentlich';
+                return <>
+                  {/* PLZ→Gemeinde→Amt-Auflösung (ZH/AG/SG/TG/FR/ZG/AI, ordentliche Behörde) */}
+                  {amtAufloesbar && amt && (
                     <div>
                       <p className="text-body-s text-ink-900 whitespace-pre-line">
-                        {zhAmt.name}{'\n'}{zhAmt.strasse}{'\n'}{zhAmt.plzOrt}
+                        {amt.name}{'\n'}{amt.strasse}{'\n'}{amt.plzOrt}
                       </p>
-                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + vfzh.ch-Ämterverzeichnis).</p>
+                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + amtliches Ämterverzeichnis).</p>
                     </div>
                   )}
-                  {f.kanton === 'ZH' && r.schlichtung.behoerdeTyp === 'ordentlich' && zhKreise && (
+                  {amtAufloesbar && zhKreise && (
                     <div className="space-y-1.5">
                       <p className="text-xs text-ink-500">Stadt Zürich: massgeblich ist der STADTKREIS der beklagten Partei — sechs Kreis-Ämter:</p>
                       <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
@@ -584,10 +597,10 @@ export function ZustaendigkeitForm() {
                       </ul>
                     </div>
                   )}
-                  {!(f.kanton === 'ZH' && r.schlichtung.behoerdeTyp === 'ordentlich' && (zhAmt || zhKreise)) && (
+                  {!(amtAufloesbar && (amt || zhKreise)) && (
                     <p className="text-body-s text-ink-800">
                       {recherche.aufloesung.beschreibung}.{' '}
-                      {f.kanton === 'ZH' && r.schlichtung.behoerdeTyp === 'ordentlich' && (
+                      {amtAufloesbar && (
                         <span className="text-ink-500">PLZ oder Gemeinde eingeben für die konkrete Amts-Adresse. </span>
                       )}
                       <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">
@@ -595,8 +608,8 @@ export function ZustaendigkeitForm() {
                       </a>
                     </p>
                   )}
-                </>
-              )}
+                </>;
+              })()}
               <p className="text-xs text-ink-500 pt-2 border-t border-line">
                 Quelle: {recherche.quelle} (Stand {recherche.stand}). Recherche zweifach geprüft — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
               </p>
