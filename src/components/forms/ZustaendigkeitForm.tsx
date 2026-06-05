@@ -15,6 +15,7 @@ import {
   type DeliktUnterfall, type PersoenlichkeitUnterfall,
 } from '../../lib/zustaendigkeit';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
+import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
 
@@ -108,6 +109,7 @@ type State = {
   avgVerleih: boolean;
   gerichtsstandsvereinbarung: boolean;
   gemeinde: string;
+  plz: string;
   kanton: Kanton | '';
   instanz: Instanz;
 };
@@ -131,6 +133,7 @@ const DEFAULTS: State = {
   avgVerleih: false,
   gerichtsstandsvereinbarung: false,
   gemeinde: '',
+  plz: '',
   kanton: '',
   instanz: 'einleitung',
 };
@@ -181,7 +184,12 @@ export function ZustaendigkeitForm() {
   const stelle = r && f.kanton && f.instanz === 'einleitung' && r.schlichtung.obligatorisch
     ? stelleFuer(f.kanton, r.schlichtung.behoerdeTyp)
     : null;
-  const kantonOffen = f.kanton !== '' && !kantonErfasst(f.kanton);
+  // Recherche-Schicht (Anordnung David 5.6.2026): konkrete Stelle für ALLE
+  // Kantone — abgenommene Stammdaten (behoerden.ts) haben Vorrang.
+  const recherche = r && f.kanton && !stelle && f.instanz === 'einleitung' && r.schlichtung.obligatorisch
+    ? schlichtungAufloesung(f.kanton, r.schlichtung.behoerdeTyp)
+    : null;
+  const kantonOffen = f.kanton !== '' && !kantonErfasst(f.kanton) && !recherche;
   const kantonDaten = f.kanton ? kantonZustaendigkeit(f.kanton) : null;
   const gemeindeFremd = f.kanton !== '' && kantonErfasst(f.kanton)
     && f.gemeinde.trim() !== '' && !gemeindeImKanton(f.kanton, f.gemeinde);
@@ -209,7 +217,7 @@ export function ZustaendigkeitForm() {
       'Streitsache': STREITSACHEN.find((s) => s.code === f.streitsache)?.label ?? f.streitsache,
       ...(istScheidung ? {} : { 'Streitwert': vermoegensrechtlich && streitwert !== null ? `CHF ${streitwert.toLocaleString('de-CH')}` : 'nicht vermögensrechtlich' }),
       ...(istMiete ? { 'Miet-Unterfall': MIETE_UNTERFAELLE.find((m) => m.code === f.mieteUnterfall)?.label ?? '' } : {}),
-      ...(f.gemeinde.trim() ? { 'Massgeblicher Ort': f.gemeinde.trim() } : {}),
+      ...(f.gemeinde.trim() || f.plz ? { 'Massgeblicher Ort': [f.plz, f.gemeinde.trim()].filter(Boolean).join(' ') } : {}),
       ...(f.kanton ? { 'Kanton (Forum)': f.kanton } : {}),
     },
     hero: r ? {
@@ -286,9 +294,14 @@ export function ZustaendigkeitForm() {
         <p className="lc-overline">3 · Ort, Streitwert, Instanz</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
-            <input className={inputCls} value={f.gemeinde} onChange={(e) => set('gemeinde', e.target.value)} placeholder="z. B. Basel" />
+            <div className="grid grid-cols-[6.5rem_1fr] gap-2">
+              <input className={inputCls + ' num'} value={f.plz} inputMode="numeric" maxLength={4}
+                onChange={(e) => set('plz', e.target.value.replace(/\D/g, '').slice(0, 4))}
+                placeholder="PLZ" aria-label="Postleitzahl" />
+              <input className={inputCls} value={f.gemeinde} onChange={(e) => set('gemeinde', e.target.value)} placeholder="z. B. Basel" />
+            </div>
           </Field>
-          <Field label="Kanton (Forum)" hint="erfasst ist derzeit BS; übrige Kantone: bundesrechtliche Einordnung ohne Adresse">
+          <Field label="Kanton (Forum)" hint="alle Kantone hinterlegt (zentrale Stelle, Stellen-Liste oder amtliches Verzeichnis)">
             <select className={inputCls + ' sm:max-w-[9rem]'} value={f.kanton} onChange={(e) => set('kanton', e.target.value as Kanton | '')}>
               <option value="">– wählen –</option>
               {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
@@ -462,6 +475,50 @@ export function ZustaendigkeitForm() {
               Die Klage geht direkt an das erstinstanzliche Gericht{kantonDaten?.erstinstanzName ? ` (${f.kanton}: ${kantonDaten.erstinstanzName})` : ''} —
               eine Klage-Vorlage ist in Vorbereitung.
             </p>
+          )}
+          {recherche && (
+            <div className="lc-card p-4 space-y-3">
+              <p className="lc-overline">Zuständige Schlichtungsstelle ({f.kanton})</p>
+              {recherche.glgFallback && (
+                <p className="text-xs text-ink-500">Keine eigene paritätische Stelle hinterlegt — angezeigt wird die ordentliche Schlichtungsbehörde; die paritätische Besetzung (Art. 200 ZPO) stellt der Kanton sicher.</p>
+              )}
+              {recherche.aufloesung.modus === 'zentral' && (
+                <div>
+                  <p className="text-body-s text-ink-900 whitespace-pre-line">
+                    {recherche.aufloesung.stelle.name}{'\n'}{recherche.aufloesung.stelle.strasse}{'\n'}{recherche.aufloesung.stelle.plzOrt}
+                  </p>
+                  {recherche.aufloesung.stelle.hinweis && (
+                    <p className="text-xs text-warn-700 mt-1">⚠ {recherche.aufloesung.stelle.hinweis}</p>
+                  )}
+                </div>
+              )}
+              {recherche.aufloesung.modus === 'liste' && (
+                <div className="space-y-2">
+                  {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500">{recherche.aufloesung.hinweis} — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
+                  <ul className="space-y-1.5 max-h-64 overflow-y-auto pr-1">
+                    {recherche.aufloesung.stellen.map((s) => (
+                      <li key={s.name + s.plzOrt} className="text-body-s text-ink-800">
+                        <span className="font-medium text-ink-900">{s.name}</span>
+                        {s.zustaendigFuer && <span className="text-ink-500"> — {s.zustaendigFuer}</span>}
+                        <br />{s.strasse}, {s.plzOrt}
+                        {s.hinweis && <span className="block text-xs text-warn-700">⚠ {s.hinweis}</span>}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {recherche.aufloesung.modus === 'verzeichnis' && (
+                <p className="text-body-s text-ink-800">
+                  {recherche.aufloesung.beschreibung}.{' '}
+                  <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">
+                    Amtliches Verzeichnis öffnen ↗
+                  </a>
+                </p>
+              )}
+              <p className="text-xs text-ink-500 pt-2 border-t border-line">
+                Quelle: {recherche.quelle} (Stand {recherche.stand}). Recherche zweifach geprüft — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
+              </p>
+            </div>
           )}
           {kantonOffen && (
             <p className="lc-notice text-body-s">
