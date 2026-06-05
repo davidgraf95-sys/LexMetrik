@@ -20,11 +20,13 @@ export interface RechtsbereichGruppe {
 // Verfahrens-/Vollstreckungsgruppe) und bildet die anwaltliche Trennung
 // materiell/prozessual ab.
 const GRUPPEN_FUENF: RechtsbereichGruppe[] = [
+  // Reihenfolge: Zivilprozess zuerst (Wunsch David 5.6.2026 — die
+  // Fristen-/Vollstreckungswerkzeuge sind der häufigste Pro-Einstieg)
+  { id: 'zivil-prozess', label: 'Zivilprozess & Vollstreckung',
+    gebiete: ['Zivilprozess (ZPO) & Bundesgericht', 'Betreibung & Konkurs (SchKG)'] },
   { id: 'zivil-materiell', label: 'Zivilrecht (materiell)',
     gebiete: ['Arbeit', 'Miete', 'Vertrag & Forderung (OR)', 'Erbrecht',
               'Familienrecht', 'Vorsorge & Erwachsenenschutz', 'Gesellschaftsrecht'] },
-  { id: 'zivil-prozess', label: 'Zivilprozess & Vollstreckung',
-    gebiete: ['Zivilprozess (ZPO) & Bundesgericht', 'Betreibung & Konkurs (SchKG)'] },
   { id: 'straf', label: 'Strafrecht & Strafprozess',
     gebiete: ['Strafrecht & Strafprozess'] },
   { id: 'oeffentlich', label: 'Öffentliches Recht',

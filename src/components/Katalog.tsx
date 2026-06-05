@@ -496,8 +496,11 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
                 <span aria-hidden className="scale-rule flex-1" />
               </div>
               {x.sektionen.map((sx) => (
+                /* Start EINGEKLAPPT (Wunsch David 5.6.2026) — die Zähler
+                   «X verfügbar · Y in Vorbereitung» tragen die Übersicht;
+                   Suche/Filter und Sprungmarken klappen weiterhin auf. */
                 <GebietSektion key={`${sx.g.id}:${ansicht}`} gebiet={sx.g} karten={sx.karten}
-                  startOffen={ansicht === 'verfuegbar' || sx.karten.some(istVerfuegbar)}
+                  startOffen={false}
                   proZaehler
                   erzwungenOffen={filterAktiv || sprungOffen === sx.g.id}
                   favoriten={favoriten} onFavorit={onFavorit} onOeffnen={onOeffnen} />
