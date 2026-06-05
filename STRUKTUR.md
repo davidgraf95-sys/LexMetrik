@@ -145,8 +145,12 @@ Art.-77-Zählung, verbleibend, Rückfall-Zeilen — Komponente
 SperrtageZaehler, auch in der kombinierten Ansicht), mietrecht,
 verjaehrung (Zwei-Fristen, Stillstand-Union), gewaehrleistung (Zwei-Regime
 1.1.2026), verzugszins (Segmente, Art. 85-Anrechnung), lohnfortzahlung
-(Skalen; Engine-Guard AUF 1–100 %), erbteilung. Feiertage algorithmisch
-(Computus) — keine Jahres-Klippe.
+(Skalen; Engine-Guard AUF 1–100 %), erbteilung, **allgemeineFrist**
+(Free-Tagerechner, Auftrag 5.6.2026: dünne Engine auf fristenEngine/
+zpoFeiertage — dies a quo IDENTISCH zu zpoFristen, Systemtest AF-14;
+getrennte Wochenend-/Feiertags-Toggles, Tage-zwischen-Hilfsmittel;
+SR 173.110.3 als Gesetzes-Seiten-Pill, ELI SPARQL-verifiziert).
+Feiertage algorithmisch (Computus) — keine Jahres-Klippe.
 
 ## Vorlagen-Plattform (src/lib/vorlagen/)
 
