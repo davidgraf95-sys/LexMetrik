@@ -104,7 +104,7 @@ export function berechneAllgemeineFrist(input: AllgFristInput): AllgFristResult 
       ? 'Kalendertage gezählt ab Folgetag (Art. 77 Abs. 1 Ziff. 1/2 OR)'
       : geklemmt
         ? 'Kein gleichbezeichneter Tag im Zielmonat → letzter Tag des Monats (Art. 77 Abs. 1 Ziff. 3 OR)'
-        : 'Gleichbezeichneter Tag des Zielmonats (Art. 77 Abs. 1 Ziff. 3 OR; BGer 5A_691/2023)',
+        : 'Gleichbezeichneter Tag des Zielmonats (Art. 77 Abs. 1 Ziff. 3 OR; BGE 150 III 367)',
   });
 
   // 2)+3) Verschiebung (Art. 78 OR; SR 173.110.3). Rechtlich ist das EINE
@@ -191,7 +191,7 @@ export function allgemeineFristErgebnis(input: AllgFristInput): Berechnungsergeb
   const annahmen = [
     'Der Ereignistag wird nicht mitgezählt; Monats-/Jahresfristen enden am gleichbezeichneten Tag, sonst am Monatsende (Art. 77 OR).',
     ...(input.feiertageVerschieben
-      ? [`Feiertage nach dem EJPD-Verzeichnis (Stand 2011), Kanton ${input.kanton}; regionale Besonderheiten im Einzelfall prüfen.`]
+      ? [`Feiertage nach dem EJPD-Verzeichnis (Stand 2011 — veraltbar, kantonales Recht massgeblich), Kanton ${input.kanton}. Lokale Feste ohne kantonale Anerkennung (z. B. Sechseläuten, Knabenschiessen) verschieben Fristen NICHT.`]
       : []),
     'Der Rechner ermittelt das Fristende ab dem eingegebenen Startdatum; den Fristbeginn (z. B. Zustellfiktionen) bestimmt er nicht.',
   ];
@@ -209,5 +209,240 @@ export function allgemeineFristErgebnis(input: AllgFristInput): Berechnungsergeb
     warnungen: r.hinweise,
     normverweise,
     resultat: r,
+  };
+}
+
+// ─── P1.1 Rückwärtsrechnung («spätester Handlungstag») ──────────────────────
+//
+// Rückrechnung ist anerkannt (BGE 134 III 354 — zu verifizieren; Art. 700
+// Abs. 1 OR: Einberufung «mindestens 20 Tage vor dem Versammlungstag»,
+// Wortlaut am Fedlex-Text verifiziert 5.6.2026). Arithmetik als exakte
+// Spiegelung der Vorwärtsregel: spätester Tag = (Stichtag + 1) − Frist − 1,
+// womit zwischen Handlung und Stichtag die vollen Tage/Monate liegen
+// (Termin 20.4. − 10 Tage → 10.4.; Quartalsende 30.6. − 3 Monate → 31.3.).
+//
+// VERSCHIEBUNG: Art. 78 OR ist auf Vorwärtsfristen zugeschnitten («…endet
+// am nächstfolgenden Werktag»). Ob bei Rückwärtsfristen eine Wochenend-/
+// Feiertagskollision VORVERLEGT wird, ist höchstrichterlich UNGEKLÄRT
+// (Diskussion v. a. deutsche Lehre) — Default deshalb KEINE automatische
+// Verschiebung (Hinausschieben würde die Frist verkürzen!); Vorverlegung
+// nur als Option mit ausdrücklichem Vorbehalt.
+
+export type RueckVerschiebung = 'keine' | 'vorverlegen';
+
+export interface RueckFristInput {
+  stichtag: string;              // 'YYYY-MM-DD' — Termin/Endtermin
+  laenge: number;
+  einheit: Einheit;
+  verschiebung: RueckVerschiebung;
+  feiertageBeruecksichtigen?: boolean; // nur bei 'vorverlegen'
+  kanton?: Kanton;
+}
+
+export function berechneRueckwaertsFrist(input: RueckFristInput): AllgFristResult {
+  if (!Number.isInteger(input.laenge) || input.laenge <= 0) {
+    throw new Error('Fristlänge muss eine ganze Zahl > 0 sein.');
+  }
+  if (input.verschiebung === 'vorverlegen' && input.feiertageBeruecksichtigen && !input.kanton) {
+    throw new Error('Für die Feiertags-Berücksichtigung ist der Kanton erforderlich.');
+  }
+  const stichtag = parseISO(input.stichtag);
+  if (isNaN(stichtag.getTime())) throw new Error('Ungültiger Stichtag.');
+
+  const schritte: RechenSchritt[] = [];
+  schritte.push({
+    label: 'Stichtag/Termin (bis zu dem die Frist gewahrt sein muss)',
+    datum: fmt(stichtag), wochentag: wochentag(stichtag),
+  });
+
+  // Spiegelung: (Stichtag + 1) − Frist über die GETEILTE Kalenderarithmetik − 1
+  const ref = addDays(stichtag, 1);
+  let roh: Date;
+  if (input.einheit === 'tage') {
+    roh = addDays(addDays(ref, -input.laenge), -1);
+  } else {
+    const r = fristendeKalender(ref, input.einheit, -input.laenge as number, OHNE_STILLSTAND, false);
+    roh = addDays(r.ende, -1);
+  }
+  const geklemmt = (input.einheit === 'monate' || input.einheit === 'jahre')
+    && addDays(roh, 1).getDate() !== ref.getDate();
+  schritte.push({
+    label: `Spätester Handlungstag: ${input.laenge} ${EINHEIT_LABEL[input.einheit]} vor dem Stichtag`,
+    datum: fmt(roh), wochentag: wochentag(roh),
+    grund: geklemmt
+      ? 'Kein gleichbezeichneter Tag im Zielmonat → Monatsende-Klemmung (Art. 77 Abs. 1 Ziff. 3 OR sinngemäss)'
+      : 'Spiegelung der Fristberechnung nach Art. 77 OR (volle Frist zwischen Handlung und Stichtag)',
+  });
+
+  let ende = roh;
+  const verschiebeGruende: string[] = [];
+  if (input.verschiebung === 'vorverlegen') {
+    const frei = (d: Date): string | null => {
+      if (input.feiertageBeruecksichtigen && input.kanton && istFeiertag(d, input.kanton)) {
+        return `gesetzlicher Feiertag (${input.kanton})`;
+      }
+      if (isSunday(d)) return 'Sonntag';
+      if (isSaturday(d)) return 'Samstag';
+      return null;
+    };
+    for (let guard = 0; guard < 30; guard++) {
+      const grund = frei(ende);
+      if (!grund) break;
+      schritte.push({ label: 'Vorverlegt (Option)', datum: fmt(ende), wochentag: wochentag(ende), grund });
+      verschiebeGruende.push(`${fmt(ende)} (${wochentag(ende)}): ${grund}`);
+      ende = addDays(ende, -1);
+    }
+  }
+
+  schritte.push({
+    label: 'Spätester Handlungstag',
+    datum: fmt(ende), wochentag: wochentag(ende),
+    grund: verschiebeGruende.length > 0 ? 'auf den vorangehenden Werktag VORVERLEGT (Option — höchstrichterlich ungeklärt)' : undefined,
+  });
+
+  const hinweise = [
+    'Rückwärtsfrist: Ob sich der späteste Handlungstag bei Wochenende/Feiertag auf den VORANGEHENDEN Werktag vorverlegt, ist in der Schweiz höchstrichterlich ungeklärt (Art. 78 OR betrifft Vorwärtsfristen) — zu verifizieren. Ein Hinausschieben verbietet sich, weil es die Frist verkürzen würde. Im Zweifel früher handeln.',
+    ALLG_FRIST_HINWEIS,
+  ];
+
+  return {
+    endDatum: fmt(ende),
+    endDatumISO: iso(ende),
+    endWochentag: wochentag(ende),
+    rohEndDatum: fmt(roh),
+    verschoben: verschiebeGruende.length > 0,
+    verschiebeGruende,
+    schritte,
+    hinweise,
+  };
+}
+
+export function rueckwaertsErgebnis(input: RueckFristInput): Berechnungsergebnis & { resultat: AllgFristResult } {
+  const r = berechneRueckwaertsFrist(input);
+  const rechenweg: Rechenschritt[] = r.schritte.map((s) => ({
+    beschreibung: s.label + (s.grund ? ` — ${s.grund}` : ''),
+    zwischenergebnis: `${s.wochentag}, ${s.datum}`,
+    normen: s.label.startsWith('Spätester Handlungstag:') ? [N_77] : [],
+  }));
+  return {
+    ergebnis: `${r.endWochentag}, ${r.endDatum}`,
+    status: 'ok',
+    rechenweg,
+    annahmen: [
+      'Spiegelung der Fristberechnung nach Art. 77 OR: zwischen Handlung und Stichtag liegt die volle Frist (z. B. «mindestens 20 Tage vor dem Versammlungstag», Art. 700 Abs. 1 OR).',
+      input.verschiebung === 'keine'
+        ? 'Keine automatische Verschiebung bei Wochenende/Feiertag (Verschiebungsrichtung bei Rückwärtsfristen ungeklärt — im Zweifel früher handeln).'
+        : 'OPTION Vorverlegung aktiv: Kollisionen werden auf den vorangehenden Werktag vorverlegt — höchstrichterlich ungeklärt (zu verifizieren).',
+    ],
+    warnungen: r.hinweise,
+    normverweise: [N_77, { artikel: 'Art. 700 OR', bemerkung: 'Beispiel Rückwärtsfrist: Einberufung mind. 20 Tage vor der GV' }],
+    resultat: r,
+  };
+}
+
+// ─── P1.2 Zustell-/Zugangs-Helfer (REIN INFORMATIV, keine Subsumtion) ───────
+//
+// Liefert einen DATUMSVORSCHLAG für das Startfeld samt Hinweisen — keine
+// verbindliche Zustellberechnung, kein Stillstand (Pro-Engines). Normen
+// als Hinweis-Texte; Pills erst nach fachlicher Abnahme.
+
+export type ZustellArt = 'uebergabe' | 'einschreiben' | 'apostplus';
+
+export function zustellHinweis(art: ZustellArt, datumISO: string, kanton?: Kanton): {
+  vorschlagISO: string; vorschlagFmt: string; hinweise: string[];
+} {
+  const d = parseISO(datumISO);
+  if (isNaN(d.getTime())) throw new Error('Ungültiges Datum.');
+  if (art === 'einschreiben') {
+    const v = addDays(d, 7);
+    return {
+      vorschlagISO: iso(v), vorschlagFmt: `${wochentag(v)}, ${fmt(v)}`,
+      hinweise: [
+        `Zustellfiktion: Eine nicht abgeholte eingeschriebene Sendung gilt am 7. Tag nach dem erfolglosen Zustellversuch als zugestellt (${fmt(v)}) — Parallelnormen Art. 138 Abs. 3 lit. a ZPO, Art. 85 Abs. 4 lit. a StPO, Art. 44 Abs. 2 BGG, Art. 20 Abs. 2bis VwVG, Art. 38 Abs. 2bis ATSG.`,
+        'Voraussetzung ist, dass mit der Zustellung gerechnet werden musste (Prozessrechtsverhältnis; BGE 138 III 225 — zu verifizieren). Der 7. Tag gilt auch bei SPÄTERER Abholung (BGE 141 II 429 — zu verifizieren); bei früherer Abholung gilt der tatsächliche Abholtag.',
+        'Hinweis, keine verbindliche Zustellberechnung — massgeblich ist der Einzelfall.',
+      ],
+    };
+  }
+  if (art === 'apostplus') {
+    let v = d;
+    const gruende: string[] = [];
+    for (let g = 0; g < 10; g++) {
+      const frei = (kanton && istFeiertag(v, kanton)) ? 'Feiertag' : isSunday(v) ? 'Sonntag' : isSaturday(v) ? 'Samstag' : null;
+      if (!frei) break;
+      gruende.push(frei);
+      v = addDays(v, 1);
+    }
+    return {
+      vorschlagISO: iso(v), vorschlagFmt: `${wochentag(v)}, ${fmt(v)}`,
+      hinweise: [
+        gruende.length > 0
+          ? `Zustellung durch gewöhnliche Post (A-Post Plus) an einem ${gruende[0]}: Die Mitteilung gilt erst am nächsten Werktag (${fmt(v)}) als erfolgt (Art. 142 Abs. 1bis ZPO, in Kraft seit 1.1.2025; Feiertage am GERICHTSORT).`
+          : 'Zustellung durch gewöhnliche Post an einem Werktag: Es gilt das Zustelldatum (Art. 142 Abs. 1bis ZPO betrifft nur Sa/So/Feiertag).',
+        'Hinweis, keine verbindliche Zustellberechnung — massgeblich ist der Einzelfall.',
+      ],
+    };
+  }
+  return {
+    vorschlagISO: iso(d), vorschlagFmt: `${wochentag(d)}, ${fmt(d)}`,
+    hinweise: [
+      'Persönliche Übergabe/Empfang: Massgeblich ist der Zugang in den Machtbereich (Empfangstheorie). Für eigene Eingaben an Gerichte gilt umgekehrt das Postaufgabeprinzip (Art. 143 Abs. 1 ZPO: Übergabe an die Schweizerische Post am letzten Tag genügt).',
+      'Hinweis, keine verbindliche Zustellberechnung.',
+    ],
+  };
+}
+
+// ─── P1.4 .ics-Export + Permalink (clientseitig, deterministisch) ───────────
+
+// RFC-5545-Minimal-VCALENDAR (ganztägig). DETERMINISTISCH: UID und DTSTAMP
+// werden aus den Eingaben abgeleitet (kein Date.now, §2).
+export function icsFuerFrist(opts: { titel: string; endISO: string; beschreibung?: string; vorfristTage?: number }): string {
+  const kompakt = opts.endISO.replace(/-/g, '');
+  const folgetag = iso(addDays(parseISO(opts.endISO), 1)).replace(/-/g, '');
+  const esc = (t: string) => t.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+  const zeilen = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//LexMetrik//Fristenrechner//DE',
+    'CALSCALE:GREGORIAN',
+    'BEGIN:VEVENT',
+    `UID:frist-${kompakt}-${opts.titel.replace(/\W+/g, '').slice(0, 24)}@lexmetrik`,
+    `DTSTAMP:${kompakt}T000000Z`,
+    `DTSTART;VALUE=DATE:${kompakt}`,
+    `DTEND;VALUE=DATE:${folgetag}`,
+    `SUMMARY:${esc(opts.titel)}`,
+    ...(opts.beschreibung ? [`DESCRIPTION:${esc(opts.beschreibung)}`] : []),
+    ...(opts.vorfristTage && opts.vorfristTage > 0
+      ? ['BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${esc(`Vorfrist: ${opts.titel}`)}`, `TRIGGER:-P${opts.vorfristTage}D`, 'END:VALARM']
+      : []),
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ];
+  return zeilen.join('\r\n') + '\r\n';
+}
+
+// Permalink: Eingaben → URL-Query und zurück (kein Tracking, rein lokal).
+export function fristQueryKodieren(f: AllgFristInput): string {
+  const p = new URLSearchParams();
+  p.set('s', f.start); p.set('l', String(f.laenge)); p.set('e', f.einheit);
+  if (f.wochenendeVerschieben) p.set('w', '1');
+  if (f.feiertageVerschieben) { p.set('f', '1'); if (f.kanton) p.set('k', f.kanton); }
+  return p.toString();
+}
+
+export function fristQueryLesen(query: string): Partial<AllgFristInput> | null {
+  const p = new URLSearchParams(query);
+  const s = p.get('s');
+  if (!s || !/^\d{4}-\d{2}-\d{2}$/.test(s)) return null;
+  const laenge = Number(p.get('l'));
+  const einheit = p.get('e') as Einheit | null;
+  if (!Number.isInteger(laenge) || laenge <= 0) return null;
+  if (!einheit || !['tage', 'wochen', 'monate', 'jahre'].includes(einheit)) return null;
+  const kanton = p.get('k') ?? undefined;
+  return {
+    start: s, laenge, einheit,
+    wochenendeVerschieben: p.get('w') === '1' || p.get('f') === '1',
+    feiertageVerschieben: p.get('f') === '1',
+    ...(kanton ? { kanton: kanton as Kanton } : {}),
   };
 }

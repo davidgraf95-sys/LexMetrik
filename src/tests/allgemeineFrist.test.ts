@@ -153,3 +153,67 @@ describe('Allgemeiner Fristenrechner — Review-Befund (Toggle-Kopplung)', () =>
     expect(r.verschoben).toBe(false);
   });
 });
+
+describe('Verbesserungs-Auftrag 5.6.2026 — P1', () => {
+  it('AF-18 Rückwärts: Termin 20.4.2026 − 10 Tage = spätester Ladungstag 10.4.2026 (volle Tage 11.–20.4.)', async () => {
+    const { berechneRueckwaertsFrist } = await import('../lib/allgemeineFrist');
+    const r = berechneRueckwaertsFrist({ stichtag: '2026-04-20', laenge: 10, einheit: 'tage', verschiebung: 'keine' });
+    expect(r.endDatum).toBe('10.04.2026');
+    expect(r.verschoben).toBe(false);
+  });
+
+  it('AF-19 Rückwärts: Kündigungs-Edge 30.6.2026 − 3 Monate = 31.3.2026; Klemmung 31.5. − 3 M = 28.2.', async () => {
+    const { berechneRueckwaertsFrist } = await import('../lib/allgemeineFrist');
+    expect(berechneRueckwaertsFrist({ stichtag: '2026-06-30', laenge: 3, einheit: 'monate', verschiebung: 'keine' }).endDatum).toBe('31.03.2026');
+    expect(berechneRueckwaertsFrist({ stichtag: '2026-05-31', laenge: 3, einheit: 'monate', verschiebung: 'keine' }).endDatum).toBe('28.02.2026');
+  });
+
+  it('AF-20 Rückwärts: KEINE automatische Verschiebung am Wochenende; Vorverlegung nur als Option mit Vorbehalt', async () => {
+    const { berechneRueckwaertsFrist } = await import('../lib/allgemeineFrist');
+    // spätester Tag Sa 25.4.2026 (Stichtag 5.5. − 10 Tage)
+    const ohne = berechneRueckwaertsFrist({ stichtag: '2026-05-05', laenge: 10, einheit: 'tage', verschiebung: 'keine' });
+    expect(ohne.endDatum).toBe('25.04.2026');
+    expect(ohne.endWochentag).toBe('Samstag');
+    expect(ohne.hinweise.join()).toMatch(/höchstrichterlich ungeklärt/);
+    const mit = berechneRueckwaertsFrist({ stichtag: '2026-05-05', laenge: 10, einheit: 'tage', verschiebung: 'vorverlegen' });
+    expect(mit.endDatum).toBe('24.04.2026'); // Freitag
+    expect(mit.verschoben).toBe(true);
+  });
+
+  it('AF-21 Zustell-Helfer: Einschreiben Mi 1.4.2026 → 7. Tag = 8.4.2026; A-Post Plus Sa 4.4.2026 → Mo 6.4.2026', async () => {
+    const { zustellHinweis } = await import('../lib/allgemeineFrist');
+    const e = zustellHinweis('einschreiben', '2026-04-01');
+    expect(e.vorschlagISO).toBe('2026-04-08');
+    expect(e.hinweise.join()).toMatch(/138 Abs\. 3 lit\. a ZPO/);
+    expect(e.hinweise.join()).toMatch(/keine verbindliche Zustellberechnung/);
+    // Auftrags-Beispiel ohne Kantons-Feiertage: Sa 4.4. → Mo 6.4.
+    const a = zustellHinweis('apostplus', '2026-04-04');
+    expect(a.vorschlagISO).toBe('2026-04-06');
+    // MIT Kanton ZH ist Mo 6.4.2026 Ostermontag → Di 7.4.
+    expect(zustellHinweis('apostplus', '2026-04-04', 'ZH').vorschlagISO).toBe('2026-04-07');
+    expect(a.hinweise.join()).toMatch(/142 Abs\. 1bis ZPO/);
+    // Karfreitag (ZH): Fr 3.4.2026 → über Sa/So UND Ostermontag (6.4.) auf Di 7.4.2026
+    expect(zustellHinweis('apostplus', '2026-04-03', 'ZH').vorschlagISO).toBe('2026-04-07');
+  });
+
+  it('AF-22 .ics deterministisch (RFC 5545, ganztägig, VALARM-Vorfrist, kein Date.now)', async () => {
+    const { icsFuerFrist } = await import('../lib/allgemeineFrist');
+    const a = icsFuerFrist({ titel: 'Fristende', endISO: '2026-06-30', vorfristTage: 3 });
+    const b = icsFuerFrist({ titel: 'Fristende', endISO: '2026-06-30', vorfristTage: 3 });
+    expect(a).toBe(b);
+    expect(a).toContain('DTSTART;VALUE=DATE:20260630');
+    expect(a).toContain('DTEND;VALUE=DATE:20260701');
+    expect(a).toContain('TRIGGER:-P3D');
+    expect(a).toContain('BEGIN:VEVENT');
+    expect(a.endsWith('END:VCALENDAR\r\n')).toBe(true);
+  });
+
+  it('AF-23 Permalink-Roundtrip: kodieren → lesen ergibt dieselben Eingaben; kaputte Query → null', async () => {
+    const { fristQueryKodieren, fristQueryLesen } = await import('../lib/allgemeineFrist');
+    const input = { start: '2026-06-05', laenge: 30, einheit: 'tage' as const, wochenendeVerschieben: true, feiertageVerschieben: true, kanton: 'BS' as const };
+    const q = fristQueryKodieren(input);
+    expect(fristQueryLesen(q)).toMatchObject(input);
+    expect(fristQueryLesen('s=böse&l=-3')).toBeNull();
+    expect(fristQueryLesen('')).toBeNull();
+  });
+});
