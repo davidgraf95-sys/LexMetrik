@@ -140,3 +140,16 @@ describe('Gemeinde→Amt-Auflösung AG/SG/TG/FR/ZG/AI (amtAufloesung)', () => {
     expect((await amtFuer('SG', 'Kirchberg (SG)'))?.name).toBe('Vermittlungsamt Toggenburg');
   });
 });
+
+describe('Gemeinde-Lookup case-insensitiv (Bug-Check-Fix 5.6.2026)', () => {
+  it('handgetippte Kleinschreibung löst auf — exakte Schreibweise behält Vorrang', async () => {
+    const { amtFuer } = await import('../data/schlichtung/amtAufloesung');
+    const { zhFriedensrichterFuer } = await import('../data/schlichtung/zhAmt');
+    expect((await amtFuer('AG', 'aarau'))?.name).toContain('Kreis I');
+    expect((await amtFuer('TG', 'roggwil'))?.name).toContain('Arbon');
+    expect((await zhFriedensrichterFuer('adliswil'))?.strasse).toBe('Zürichstrasse 10');
+    expect((await zhFriedensrichterFuer('wald'))?.plzOrt).toContain('8636');
+    // weiterhin kein Fuzzy: Tippfehler bleibt unaufgelöst
+    expect(await amtFuer('AG', 'aaraau')).toBeNull();
+  });
+});

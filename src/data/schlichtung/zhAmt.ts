@@ -17,11 +17,16 @@ async function lade(): Promise<ZhDaten> {
 }
 
 /** Friedensrichteramt für eine ZH-Gemeinde (amtliche Schreibweise, z. B.
- *  «Wald (ZH)»); null bei Stadt Zürich (Kreis massgeblich) und Unbekanntem. */
+ *  «Wald (ZH)»); null bei Stadt Zürich (Kreis massgeblich) und Unbekanntem.
+ *  Case-insensitiver Fallback (Bug-Check 5.6.2026) — kein Fuzzy-Matching. */
+let zhKlein: Map<string, ZhAmt> | null = null;
 export async function zhFriedensrichterFuer(gemeinde: string): Promise<ZhAmt | null> {
   const d = await lade();
   const k = gemeinde.trim();
-  return d.gemeinden[k] ?? d.gemeinden[`${k} (ZH)`] ?? null;
+  const exakt = d.gemeinden[k] ?? d.gemeinden[`${k} (ZH)`];
+  if (exakt) return exakt;
+  if (!zhKlein) zhKlein = new Map(Object.entries(d.gemeinden).map(([g, a]) => [g.toLowerCase(), a]));
+  return zhKlein.get(k.toLowerCase()) ?? zhKlein.get(`${k.toLowerCase()} (zh)`) ?? null;
 }
 
 export async function zuerichKreisAemter(): Promise<ZhKreisAmt[]> {
