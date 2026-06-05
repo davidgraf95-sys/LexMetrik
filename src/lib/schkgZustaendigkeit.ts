@@ -122,9 +122,17 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
     ortNormen.push(basis.norm);
   }
   if (input.arrestGelegt && pfand !== 'grundpfand') {
-    ortText += '; zusätzlich WAHLWEISE am Ort des Arrestgegenstands';
-    ortNormen.push({ artikel: 'Art. 52 SchKG' });
-    warnungen.push('Arrest-Betreibungsort (Art. 52 SchKG): Konkursandrohung und Konkurseröffnung sind NUR am ordentlichen Betreibungsort möglich (Art. 52 Satz 2 SchKG).');
+    if (input.anliegen === 'konkursbegehren') {
+      // Logik-Sweep 6.6.2026: Für das KONKURSBEGEHREN darf der Arrest-
+      // Wahlort gar nicht erst angeboten werden — Art. 52 Satz 2 schliesst
+      // ihn für Konkursandrohung/-eröffnung aus.
+      warnungen.push('Trotz Arrest: Für das Konkursbegehren zählt AUSSCHLIESSLICH der ordentliche Betreibungsort — der Arrest-Wahlort des Art. 52 Satz 1 gilt für Konkursandrohung und Konkurseröffnung NICHT (Art. 52 Satz 2 SchKG).');
+      ortNormen.push({ artikel: 'Art. 52 SchKG', bemerkung: 'Satz 2' });
+    } else {
+      ortText += '; zusätzlich WAHLWEISE am Ort des Arrestgegenstands';
+      ortNormen.push({ artikel: 'Art. 52 SchKG' });
+      warnungen.push('Arrest-Betreibungsort (Art. 52 SchKG): Konkursandrohung und Konkurseröffnung sind NUR am ordentlichen Betreibungsort möglich (Art. 52 Satz 2 SchKG).');
+    }
   }
   weichen.push('Nach Ankündigung der Pfändung, Zustellung der Konkursandrohung oder des Zahlungsbefehls der Wechselbetreibung wird die Betreibung am BISHERIGEN Ort fortgesetzt, auch wenn der Schuldner den Wohnsitz wechselt (Art. 53 SchKG).');
   if (input.schuldnerTyp === 'erbschaft') {

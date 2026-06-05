@@ -134,3 +134,14 @@ describe('Schlichtungs-Ausnahmen + Verfahren (Abschluss-Review-Fix 6.6.2026)', (
     expect(a.fristen.some((f) => f.norm.includes('279 Abs. 3'))).toBe(true);
   });
 });
+
+describe('Logik-Sweep-Fix 6.6.2026: Konkursbegehren ⊥ Arrest-Wahlort', () => {
+  it('Konkursbegehren bietet den Arrest-Wahlort NICHT an (Art. 52 Satz 2), klärt aber auf', () => {
+    const r = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'konkursbegehren', arrestGelegt: true }));
+    expect(r.betreibungsort.text).not.toContain('WAHLWEISE');
+    expect(r.warnungen.some((w) => w.includes('AUSSCHLIESSLICH der ordentliche Betreibungsort'))).toBe(true);
+    // andere Anliegen behalten den Wahlort
+    const e = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'betreibung_einleiten', arrestGelegt: true }));
+    expect(e.betreibungsort.text).toContain('WAHLWEISE');
+  });
+});
