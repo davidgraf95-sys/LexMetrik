@@ -499,6 +499,14 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
     expect(r.kantonalFrist!.tage).toBe(10);
     expect(r.weichen.some((w) => w.includes('319'))).toBe(true);
   });
+  it('prozessleitende Verfügung am BGer: Art.-93-Vorbehalt statt unbedingter Zulässigkeit (M-1-Fix Bug-Check 6.6.2026)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(50_000, { rmObjekt: 'prozessleitende_verfuegung' }));
+    expect(r.weichen.some((w) => w.includes('Art. 93 Abs. 1 BGG'))).toBe(true);
+    // Unter der BGer-Schwelle bleibt die Weiche weg (wie beim Zwischenentscheid).
+    const unterSchwelle = bestimmeRechtsmittel(basis(5_000, { rmObjekt: 'prozessleitende_verfuegung' }));
+    expect(unterSchwelle.weichen.some((w) => w.includes('Art. 93'))).toBe(false);
+  });
   it('Zwischenentscheid: kantonal wie Endentscheid (Art. 308 Abs. 1 lit. a); BGer-Weiche Art. 92/93 ausgewiesen', async () => {
     const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
     const r = bestimmeRechtsmittel(basis(50_000, { rmObjekt: 'zwischenentscheid' }));

@@ -798,6 +798,15 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
     weichen.push('Weiterzug eines ZWISCHENENTSCHEIDS ans Bundesgericht: Betrifft er Zuständigkeit oder Ausstand, ist die Beschwerde SOFORT zu erheben (Art. 92 BGG — spätere Anfechtung ausgeschlossen). Andere Zwischenentscheide nur, wenn ein nicht wieder gutzumachender Nachteil droht oder die Gutheissung sofort einen Endentscheid herbeiführt (Art. 93 Abs. 1 BGG) — sonst erst mit dem Endentscheid.');
     normverweise.push({ artikel: 'Art. 93 BGG' });
   }
+  // M-1-Fix Bug-Check 6.6.2026: Auch die prozessleitende Verfügung ist vor
+  // Bundesgericht kein Endentscheid, sondern ein «anderer Vor- und Zwischen-
+  // entscheid» (Art. 93 BGG) — vorher behauptete die Engine die BGer-
+  // Zulässigkeit unbedingt, während der Zwischenentscheid-Pfad den Vorbehalt
+  // bereits trug (§8).
+  if (objekt === 'prozessleitende_verfuegung' && bger !== 'schwelle_verfehlt') {
+    weichen.push('Weiterzug einer PROZESSLEITENDEN VERFÜGUNG ans Bundesgericht: Sie ist kein Endentscheid, sondern ein «anderer Zwischenentscheid» — die Beschwerde ist nur zulässig, wenn ein nicht wieder gutzumachender Nachteil droht oder die Gutheissung sofort einen Endentscheid herbeiführt (Art. 93 Abs. 1 BGG); sonst erst zusammen mit dem Endentscheid anfechten.');
+    normverweise.push({ artikel: 'Art. 93 BGG' });
+  }
 
   // ── BGer-Frist (Art. 100 Abs. 1 BGG) + Stillstand (Art. 46) ───────────────
   // Art. 46 Abs. 2 lit. a (Wortlaut-verifiziert): KEIN Stillstand in Verfahren
