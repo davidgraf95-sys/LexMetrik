@@ -42,28 +42,24 @@ function sortiereKarten(karten: CalculatorCard[]): CalculatorCard[] {
 // ─── Gebiet-Kachel: kleines Viereck mit Inhaltsangabe ───────────────────────
 // «Was ist drin?» konkret: die verfügbaren Werkzeug-Titel (geklemmt), sonst
 // die Gebiets-Lede; der Zähler trägt das ehrliche Mengenbild (§8).
+// Klick → Fokus-Ansicht: das Raster weicht dem Gebiet-Panel (Wunsch David
+// 6.6.2026: «wenn es aufgeht, sollen die Oberkacheln verschwinden»).
 
-function GebietKachel({ gebiet, karten, offen, onToggle }: {
+function GebietKachel({ gebiet, karten, onOeffnen }: {
   gebiet: { name: string; id: string; lede: string };
   karten: CalculatorCard[];
-  offen: boolean;
-  onToggle: () => void;
+  onOeffnen: () => void;
 }) {
   const verf = karten.filter(istVerfuegbar);
   const geplant = karten.length - verf.length;
   const inhalt = verf.length > 0 ? verf.map((k) => k.title).join(' · ') : gebiet.lede;
 
   return (
-    <button type="button" onClick={onToggle} aria-expanded={offen} aria-controls={`panel-${gebiet.id}`}
-      id={`kachel-${gebiet.id}`}
-      className={`lc-card text-left p-5 flex flex-col gap-2 min-w-0 scroll-mt-28 transition-all motion-reduce:transition-none cursor-pointer ${
-        offen
-          ? 'bg-surface-raised border-t-[3px] border-t-brass-500 shadow-lg'
-          : 'bg-surface hover:shadow-lg hover:-translate-y-0.5 motion-reduce:transform-none'
-      }`}>
+    <button type="button" onClick={onOeffnen} id={`kachel-${gebiet.id}`}
+      className="lc-card text-left p-5 flex flex-col gap-2 min-w-0 scroll-mt-28 bg-surface transition-all motion-reduce:transition-none motion-reduce:transform-none cursor-pointer hover:shadow-lg hover:-translate-y-0.5">
       <span className="flex items-start justify-between gap-2">
         <span className="font-sans font-semibold text-ink-900 text-body-l leading-snug text-balance">{sansAmp(gebiet.name)}</span>
-        <span aria-hidden className={`text-brass-700 leading-none mt-1 transition-transform motion-reduce:transition-none ${offen ? 'rotate-90' : ''}`}>▸</span>
+        <span aria-hidden className="text-brass-700 leading-none mt-1">▸</span>
       </span>
       <span className="lc-overline text-ink-500">
         {verf.length > 0 && <><span className="num text-brass-700">{verf.length}</span> verfügbar</>}
@@ -75,12 +71,14 @@ function GebietKachel({ gebiet, karten, offen, onToggle }: {
   );
 }
 
-// ─── Gebiet-Panel: volle Breite unter der Kachel-Zeile ──────────────────────
-// Untergruppen «Rechner» und «Vorlagen» wie bisher (feste Auftrags-Ordnung).
+// ─── Gebiet-Panel: Fokus-Ansicht anstelle des Kachel-Rasters ────────────────
+// Untergruppen «Rechner» und «Vorlagen» wie bisher (feste Auftrags-Ordnung);
+// «← Alle Rechtsgebiete» führt zurück (zusätzlich zur Zurück-Taste, ?gebiet=).
 
-function GebietPanel({ gebiet, karten, onOeffnen }: {
+function GebietPanel({ gebiet, karten, onSchliessen, onOeffnen }: {
   gebiet: { name: string; id: string; lede: string };
   karten: CalculatorCard[];
+  onSchliessen: () => void;
   onOeffnen?: (id: string) => void;
 }) {
   const gruppen = ([
@@ -91,7 +89,11 @@ function GebietPanel({ gebiet, karten, onOeffnen }: {
 
   return (
     <section id={`panel-${gebiet.id}`} aria-label={gebiet.name}
-      className="col-span-full bg-surface rounded-2xl border border-line p-6 sm:p-8 space-y-6">
+      className="lc-reveal bg-surface rounded-2xl border border-line p-6 sm:p-8 space-y-6">
+      <button type="button" onClick={onSchliessen}
+        className="text-body-s font-medium text-ink-500 hover:text-brass-700 transition-colors">
+        ← Alle Rechtsgebiete
+      </button>
       <div className="space-y-1">
         <h3 className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{sansAmp(gebiet.name)}</h3>
         <p className="text-body-s text-ink-500 max-w-reading">{gebiet.lede}</p>
@@ -290,17 +292,20 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
   const ansicht: 'verfuegbar' | 'katalog' =
     searchParams.get('ansicht') === 'katalog' ? 'katalog' : 'verfuegbar';
   const offenGebiet = searchParams.get('gebiet');
-  const patchParams = (patch: Record<string, string | null>) => {
+  const patchParams = (patch: Record<string, string | null>, viewTransition = false) => {
     const p = new URLSearchParams(searchParams);
     for (const [key, wert] of Object.entries(patch)) {
       if (wert === null) p.delete(key); else p.set(key, wert);
     }
-    setSearchParams(p);
+    // viewTransition: Raster ⇄ Fokus-Panel weich überblenden (View
+    // Transitions API via Router; Browser ohne Support wechseln hart,
+    // prefers-reduced-motion wird von der globalen Regel abgedeckt).
+    setSearchParams(p, viewTransition ? { viewTransition: true } : undefined);
   };
   const setAnsicht = (a: 'verfuegbar' | 'katalog') =>
     patchParams({ ansicht: a === 'katalog' ? 'katalog' : null });
   const toggleGebiet = (id: string) =>
-    patchParams({ gebiet: offenGebiet === id ? null : id });
+    patchParams({ gebiet: offenGebiet === id ? null : id }, true);
 
   // ── Schnellzugriff (Zuletzt verwendet; localStorage, SSR-sicher) ──
   const [zuletzt, setZuletzt] = useState<string[]>(() => ladeZuletzt());
@@ -369,6 +374,11 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
   const gruppenSichtbar = RECHTSBEREICH_GRUPPEN
     .map((gr) => ({ gr, sektionen: gr.gebiete.map((n) => sektionFuer.get(n)).filter((x): x is NonNullable<typeof x> => !!x) }))
     .filter((x) => x.sektionen.length > 0);
+  // Fokus-Ansicht: das per ?gebiet= geöffnete Gebiet — nur wenn es in der
+  // aktuellen Ansicht überhaupt Karten hat (sonst zeigt das Raster).
+  const fokusGebiet = offenGebiet
+    ? gebietSichtbar.find((x) => x.g.id === offenGebiet) ?? null
+    : null;
 
   const filterAnzahl = bereiche.size + arten.size + (q !== '' ? 1 : 0);
   const zusatzGruppen: PillGruppe[] = [
@@ -423,7 +433,7 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
           })),
         }))}
         aktiveSektion={offenGebiet}
-        onSprung={(id) => patchParams({ gebiet: id })} />
+        onSprung={(id) => patchParams({ gebiet: id }, true)} />
       <FilterLeiste zusatzGruppen={zusatzGruppen} />
     </>
   );
@@ -502,11 +512,15 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
               </div>
             </section>
           )
+        ) : fokusGebiet ? (
+          /* Fokus-Ansicht (Wunsch David 6.6.2026): Das geöffnete Gebiet
+             ERSETZT das Kachel-Raster; «← Alle Rechtsgebiete», Zurück-Taste
+             oder die Seitenleiste führen zurück bzw. wechseln das Gebiet. */
+          <GebietPanel key={fokusGebiet.g.id} gebiet={fokusGebiet.g} karten={fokusGebiet.karten}
+            onSchliessen={() => toggleGebiet(fokusGebiet.g.id)} onOeffnen={onOeffnen} />
         ) : (
           /* Kachel-Katalog (Auftrag David 6.6.2026): Obergruppen als ruhige
-             Trenner, darunter die Gebiets-Kacheln; das angewählte Gebiet
-             öffnet sich als Panel in voller Breite unter seiner Kachel-Zeile
-             (col-span-full — nachfolgende Kacheln rutschen nach unten). */
+             Trenner, darunter die Gebiets-Kacheln als kompakte Vierecke. */
           gruppenSichtbar.map((x) => (
             <section key={x.gr.id} aria-labelledby={`gruppe-${x.gr.id}`} className="space-y-5">
               <div className="flex items-center gap-4 pt-2">
@@ -517,14 +531,8 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
               </div>
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(240px,100%),1fr))] gap-4">
                 {x.sektionen.map((sx) => (
-                  <span key={sx.g.id} className="contents">
-                    <GebietKachel gebiet={sx.g} karten={sx.karten}
-                      offen={offenGebiet === sx.g.id}
-                      onToggle={() => toggleGebiet(sx.g.id)} />
-                    {offenGebiet === sx.g.id && (
-                      <GebietPanel gebiet={sx.g} karten={sx.karten} onOeffnen={onOeffnen} />
-                    )}
-                  </span>
+                  <GebietKachel key={sx.g.id} gebiet={sx.g} karten={sx.karten}
+                    onOeffnen={() => toggleGebiet(sx.g.id)} />
                 ))}
               </div>
             </section>

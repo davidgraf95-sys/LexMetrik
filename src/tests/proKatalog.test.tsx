@@ -37,9 +37,8 @@ describe('Pro-Katalog: Tabs + Kachel-Raster (Umbau 6.6.2026, Auftrag David)', ()
     // 5er-Gruppen sichtbar (mit Verfügbarem): materiell + prozess + übergreifend
     expect(html).toContain('Zivilrecht (materiell)');
     expect(html).toContain('Zivilprozess &amp; Vollstreckung');
-    // Kacheln sind zu, kein Panel offen: keine Karten, keine Badges sichtbar
-    expect(html).toContain('aria-expanded="false"');
-    expect(html).not.toContain('aria-expanded="true"');
+    // Raster-Ansicht: kein Panel offen — keine Karten, keine Badges sichtbar
+    expect(html).not.toContain('id="panel-');
     expect(html).not.toContain('In Vorbereitung</span>');
     // Kachel trägt die Inhaltsangabe (verfügbare Werkzeug-Titel) + Zähler
     expect(html).toContain('id="kachel-arbeit"');
@@ -57,10 +56,12 @@ describe('Pro-Katalog: Tabs + Kachel-Raster (Umbau 6.6.2026, Auftrag David)', ()
     expect(html).not.toContain('In Vorbereitung</span>');
   });
 
-  it('?gebiet=arbeit öffnet das Panel unter der Kachel: Karten + Untergruppen sichtbar, URL teilbar', () => {
+  it('?gebiet=arbeit = Fokus-Ansicht: Panel ERSETZT das Kachel-Raster (Wunsch David), Rückweg sichtbar', () => {
     const html = proHtml('/pro?ansicht=katalog&gebiet=arbeit');
-    expect(html).toContain('aria-expanded="true"');
     expect(html).toContain('id="panel-arbeit"');
+    expect(html).not.toContain('id="kachel-');         // Oberkacheln verschwinden
+    expect(html).toContain('← Alle Rechtsgebiete');    // expliziter Rückweg
+    expect(html).toContain('lc-reveal');               // Einblend-Animation (motion-reduce global)
     expect(html).toContain('In Vorbereitung</span>'); // geplante Karten im Panel sichtbar
     expect(html).toContain('Entwurf</span>');          // gebaute, ungeprüfte ebenso (§8)
     // Untergruppen-Anatomie bleibt
