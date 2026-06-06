@@ -1361,9 +1361,11 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // EINE Vollmacht-Maske mit Typ-Schalter (Anwalt/General/Spezial) statt
   // Einzelkarten General-/Bankvollmacht (Entscheid 5.6.2026); «Bank» ist ein
   // Vertretungsbereich mit Warnung (Banken verlangen eigene Formulare).
+  // Verschoben nach «Übergreifende Werkzeuge» (Wunsch David 6.6.2026):
+  // rechtsgebietsübergreifend einsetzbar; tier war und bleibt free.
   vollmacht: {
-    id: 'vollmacht', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
-    rechtsbereich: 'privat',
+    id: 'vollmacht', modus: 'vorlage', art: 'vorsorge', tier: 'free', rechtsgebiet: 'Übergreifende Werkzeuge',
+    rechtsbereich: 'uebergreifend',
     title: 'Vollmacht (Anwalt · General · Spezial)',
     description: 'Anwaltsvollmacht, Generalvollmacht oder Spezialvollmacht in einer Maske – besondere Ermächtigungen (Art. 396 Abs. 3 OR), Substitution, Befristung und deterministische Form-Warnungen (Grundstück, Bank, Bürgschaft).',
     status: 'entwurf',

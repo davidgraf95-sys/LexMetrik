@@ -20,8 +20,10 @@ export interface RechtsbereichGruppe {
 // Verfahrens-/Vollstreckungsgruppe) und bildet die anwaltliche Trennung
 // materiell/prozessual ab.
 const GRUPPEN_FUENF: RechtsbereichGruppe[] = [
-  // Reihenfolge: Zivilprozess zuerst (Wunsch David 5.6.2026 — die
-  // Fristen-/Vollstreckungswerkzeuge sind der häufigste Pro-Einstieg)
+  // Reihenfolge: Übergreifende Werkzeuge ZUOBERST (Wunsch David 6.6.2026 —
+  // ersetzt den Wunsch vom 5.6. «Zivilprozess zuerst»); danach Zivilprozess.
+  { id: 'uebergreifend', label: 'Übergreifend',
+    gebiete: ['Übergreifende Werkzeuge', 'Weitere Rechtsgebiete'] },
   { id: 'zivil-prozess', label: 'Zivilprozess & Vollstreckung',
     gebiete: ['Zivilprozess (ZPO) & Bundesgericht', 'Betreibung & Konkurs (SchKG)'] },
   { id: 'zivil-materiell', label: 'Zivilrecht (materiell)',
@@ -32,12 +34,12 @@ const GRUPPEN_FUENF: RechtsbereichGruppe[] = [
   { id: 'oeffentlich', label: 'Öffentliches Recht',
     gebiete: ['Verwaltungsrecht', 'Steuerrecht', 'Sozialversicherungsrecht',
               'Datenschutzrecht', 'Ausländerrecht'] },
-  { id: 'uebergreifend', label: 'Übergreifend',
-    gebiete: ['Weitere Rechtsgebiete', 'Übergreifende Werkzeuge'] },
 ];
 
-// 4er-Modell – Fallback
+// 4er-Modell – Fallback (Übergreifend ebenfalls zuoberst, Wunsch 6.6.2026)
 const GRUPPEN_VIER: RechtsbereichGruppe[] = [
+  { id: 'uebergreifend', label: 'Übergreifend',
+    gebiete: ['Übergreifende Werkzeuge', 'Weitere Rechtsgebiete'] },
   { id: 'privat', label: 'Privatrecht',
     gebiete: ['Zivilprozess (ZPO) & Bundesgericht', 'Betreibung & Konkurs (SchKG)',
               'Arbeit', 'Miete', 'Vertrag & Forderung (OR)', 'Erbrecht',
@@ -47,8 +49,6 @@ const GRUPPEN_VIER: RechtsbereichGruppe[] = [
               'Datenschutzrecht', 'Ausländerrecht'] },
   { id: 'straf', label: 'Strafrecht & Strafprozess',
     gebiete: ['Strafrecht & Strafprozess'] },
-  { id: 'uebergreifend', label: 'Übergreifend',
-    gebiete: ['Weitere Rechtsgebiete', 'Übergreifende Werkzeuge'] },
 ];
 
 export const ALLE_GRUPPEN_MODELLE = { fuenf: GRUPPEN_FUENF, vier: GRUPPEN_VIER } as const;
