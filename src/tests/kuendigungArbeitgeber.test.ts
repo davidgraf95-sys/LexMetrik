@@ -103,4 +103,10 @@ describe('Vorlage Kündigung Arbeitgeber:in (Maske 1b)', () => {
     expect(kagEngine(basis({ zugangKuendigung: '' }))).toBeNull();
     expect(kagEngine(basis({ sperrereignisse: [{ typ: 'krankheit_unfall', von: '2025-05-10', bis: '2025-05-01' }] }))).toBeNull();
   });
+
+  it('Regression (Bug-Check A): fremder Speicherstand mit sperrereignisse=null crasht nicht', () => {
+    const kaputt = basis({ sperrereignisse: null as unknown as KagAntworten['sperrereignisse'] });
+    expect(kagEngine(kaputt)).not.toBeNull(); // wie leeres Array behandelt
+    expect(kagEngine(kaputt)!.status).toBe('ok');
+  });
 });

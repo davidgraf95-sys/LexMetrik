@@ -33,6 +33,10 @@ export type KagAntworten = KdgBasisAntworten & {
   kuendigungsterminMonatsende: boolean;
   vaterschaftsurlaubResttage: number;    // Art. 335c Abs. 3 OR
   sperrereignisse: Sperrereignis[];      // Art. 336c OR (geteilter Editor)
+  // Offengelegte Spez.-Abweichung (Bug-Check B, 6.6.2026): Der Feldkatalog 1b
+  // der Spezifikation listet freistellung/freistellungAb nicht, ihre Baustein-
+  // liste nennt K2_freistellung mit {{freistellungAbFmt}} aber ausdrücklich —
+  // die Felder schliessen diese Spez.-interne Lücke (Art. 324 Abs. 2 OR).
   freistellung: boolean;
   freistellungAb: string;                // ISO (nur bei freistellung)
   begruendungAufnehmen: boolean;         // bewusst Default false (Spez. 1b)
@@ -73,8 +77,10 @@ function kagEngineInput(a: KagAntworten) {
 
 export function kagEngine(a: KagAntworten): SperrfristenErgebnis | null {
   if (!ISO.test(a.vertragsbeginn) || !ISO.test(a.zugangKuendigung)) return null;
-  if (a.sperrereignisse.some((e) => e.bis < e.von)) return null;
-  return berechneSperrfristen({ ...kagEngineInput(a), sperrereignisse: a.sperrereignisse });
+  // Defensiv gegen fremde Speicherstände (Bug-Check A 6.6.2026): kein Array → leer.
+  const ereignisse = Array.isArray(a.sperrereignisse) ? a.sperrereignisse : [];
+  if (ereignisse.some((e) => e.bis < e.von)) return null;
+  return berechneSperrfristen({ ...kagEngineInput(a), sperrereignisse: ereignisse });
 }
 
 /** Probezeit-Flag aus derselben reinen Engine (identische Eingaben → identisch

@@ -38,7 +38,16 @@ const ISO = /^\d{4}-\d{2}-\d{2}$/;
 export function VorlageKuendigungArbeitgeber() {
   const card = karte('kuendigung-arbeitgeber');
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
-    useWizardState<KagAntworten>({ defaults: KAG_DEFAULTS, speicherKey: SPEICHER_KEY });
+    useWizardState<KagAntworten>({
+      defaults: KAG_DEFAULTS,
+      speicherKey: SPEICHER_KEY,
+      // Array-Hydration absichern (Konvention der übrigen Wizards; Bug-Check
+      // A 6.6.2026: hand-/fremdeditiertes sperrereignisse:null crashte sonst).
+      normalisieren: (g) => ({
+        ...g,
+        sperrereignisse: Array.isArray(g.sperrereignisse) ? g.sperrereignisse : [],
+      }),
+    });
 
   const { ergebnis, engine } = useMemo(() => kagZusammenstellen(a), [a]);
   const gates = useMemo(() => pruefeKagGates(a, engine), [a, engine]);
@@ -62,6 +71,10 @@ export function VorlageKuendigungArbeitgeber() {
     }
     if (i === 3) {
       if (!ISO.test(a.zugangKuendigung)) f.push('Erwarteten Zugang der Kündigung angeben (Stichtag für Frist UND Sperrfrist-Prüfung).');
+    }
+    if (i === 4) {
+      // Bug-Check A (NIEDRIG): Freistellung ohne Datum erzeugte «ab ________».
+      if (a.freistellung && !ISO.test(a.freistellungAb)) f.push('Freistellungs-Beginn angeben (oder Freistellung abwählen).');
     }
     if (i === 5) {
       if (!a.ort.trim()) f.push('Ort angeben.');

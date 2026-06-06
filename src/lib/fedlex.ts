@@ -23,6 +23,11 @@ export const FEDLEX = {
   // VwVG SR 172.021 – Anker art_11 empirisch am Filestore-HTML verifiziert
   // (Konsolidierung 20210101; geprüft 5.6.2026, Vollmacht-Vorlage).
   VwVG:  'https://www.fedlex.admin.ch/eli/cc/1969/737_757_755/de',
+  // VVG SR 221.229.1 – Anker art_35_a/35_b/35_c sowie art_97/98 empirisch am
+  // Filestore-HTML verifiziert (Konsolidierung 20240101 = neuste abrufbare;
+  // geprüft 6.6.2026, Kündigungs-Maske 3: 35a halbzwingend [98], 35b/35c
+  // absolut zwingend [97], Lebensversicherung ausgenommen [35a Abs. 3]).
+  VVG:   'https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

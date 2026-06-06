@@ -26,6 +26,7 @@ Anker-Format: `art_335_c` (Buchstaben-/bis-Artikel mit Unterstrich, sprachunabh�
 | StPO | 312.0 | cc/2010/267 | 20240101 (5.6.2026) | art_31, 129, 301, 379 (6.6.2026) |
 | VwVG | 172.021 | cc/1969/737_757_755 | 20210101 (5.6.2026) | art_11 |
 | BGG | 173.110 | cc/2006/218 | 20250101 (6.6.2026, html-1 bestätigt) | art_1–133 durchgehend; verdrahtet: 45, 46, 74, 75, 93, 98, 100, 113 |
+| VVG | 221.229.1 | cc/24/719_735_717 | 20240101 (6.6.2026, html-2; 2025/26 liefern nur SPA-Shell) | art_35_a/b/c, 97, 98 — 35a halbzwingend (98), 35b/c zwingend (97), Lebensvers. ausgenommen (35a Abs. 3), Krankenzusatz: Kündigungsrecht nur VN (35a Abs. 4) |
 | Fristengesetz | 173.110.3 | cc/1963/819_815_843 | (Link ohne Anker) | — |
 
 **Offene Diskrepanz VMWG Art. 19a** (Befund 5.6.2026 abends): Der Kommentar in

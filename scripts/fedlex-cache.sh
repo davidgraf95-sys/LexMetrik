@@ -32,6 +32,9 @@ EINTRAEGE=(
   # empirisch bestätigt, 196 kB; Grundlage bestimmeRechtsmittel + Dossier
   # bibliothek/recherche/bgg-beschwerde-engine.md).
   "bgg|cc/2006/218|20250101|1|art_45,art_46,art_74,art_75,art_93,art_98,art_100,art_113"
+  # VVG: gepinnt 6.6.2026 (html-2!, 200 kB; Kündigungs-Maske 3 — 35a/b/c
+  # + Zwingend-Kataloge 97/98 am Wortlaut verifiziert).
+  "vvg|cc/24/719_735_717|20240101|2|art_35_a,art_35_b,art_35_c,art_97,art_98"
 )
 
 fehler=0
