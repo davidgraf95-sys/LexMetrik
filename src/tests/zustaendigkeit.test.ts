@@ -425,6 +425,67 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
     expect(ip.kantonal).toBe('entfaellt_einzige_instanz');
     expect(ip.bger).toBe('zulaessig'); // Art. 74 Abs. 2 lit. b BGG — streitwertunabhängig
   });
+  // ── Rechtsmittel-Umbau 6.6.2026 (Auftrag David; Normen am Cache verifiziert) ──
+  it('Defaults erhalten das bisherige Verhalten: Endentscheid/ordentlich/Erstinstanz, 30 Tage MIT Stillstand', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(20_000));
+    expect(r.kantonal).toBe('berufung');
+    expect(r.kantonalFrist!.tage).toBe(30);
+    expect(r.kantonalFrist!.stillstand).toBe(true);
+    expect(r.bgerFrist.tage).toBe(30);
+    expect(r.bgerFrist.stillstand).toBe(true);
+    expect(r.weichen).toEqual([]);
+    expect(r.kognitionHinweis).toBeNull();
+  });
+  it('summarisches Verfahren: 10 Tage OHNE Stillstand (Art. 314 Abs. 1/321 Abs. 2/145 Abs. 2 lit. b ZPO)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(20_000, { rmVerfahren: 'summarisch' }));
+    expect(r.kantonalFrist!.tage).toBe(10);
+    expect(r.kantonalFrist!.stillstand).toBe(false);
+  });
+  it('familienrechtliche Summarsache (Art. 314 Abs. 2 ZPO, Rev. 2025): 30 Tage, aber weiterhin OHNE Stillstand', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel({
+      streitsache: 'scheidung', vermoegensrechtlich: false, streitwertCHF: null,
+      rmVerfahren: 'summarisch', rmFamilienSummarsache: true,
+    });
+    expect(r.kantonalFrist!.tage).toBe(30);
+    expect(r.kantonalFrist!.stillstand).toBe(false);
+    expect(r.kantonalFrist!.text).toContain('Art. 314 Abs. 2');
+  });
+  it('Handelsgericht als Vorinstanz: kein kantonales Rechtsmittel, BGer streitwertUNabhängig (Art. 75 Abs. 2 lit. b/74 Abs. 2 lit. b BGG)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(5_000, { rmVorinstanz: 'handelsgericht' }));
+    expect(r.kantonal).toBe('entfaellt_einzige_instanz');
+    expect(r.kantonalFrist).toBeNull();
+    expect(r.bger).toBe('zulaessig');
+  });
+  it('Direktklage (Art. 8 ZPO): kein kantonales Rechtsmittel; BGer nach Streitwert (≥100k ohnehin über der Grenze)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(150_000, { rmVorinstanz: 'direktklage_oberes_gericht' }));
+    expect(r.kantonal).toBe('entfaellt_einzige_instanz');
+    expect(r.bger).toBe('zulaessig');
+  });
+  it('vorsorgliche Massnahme: kantonal berufungsfähig (Art. 308 Abs. 1 lit. b); BGer OHNE Stillstand (Art. 46 Abs. 2 lit. a) + Art.-98-Kognition', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(20_000, { rmObjekt: 'vorsorgliche_massnahme' }));
+    expect(r.kantonal).toBe('berufung');
+    expect(r.bgerFrist.stillstand).toBe(false);
+    expect(r.kognitionHinweis).toContain('Art. 98');
+  });
+  it('prozessleitende Verfügung: nie Berufung, 10 Tage, Art.-319-lit.-b-Weiche offen ausgewiesen', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(50_000, { rmObjekt: 'prozessleitende_verfuegung' }));
+    expect(r.kantonal).toBe('beschwerde');
+    expect(r.kantonalFrist!.tage).toBe(10);
+    expect(r.weichen.some((w) => w.includes('319'))).toBe(true);
+  });
+  it('Zwischenentscheid: kantonal wie Endentscheid (Art. 308 Abs. 1 lit. a); BGer-Weiche Art. 92/93 ausgewiesen', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(50_000, { rmObjekt: 'zwischenentscheid' }));
+    expect(r.kantonal).toBe('berufung');
+    expect(r.weichen.some((w) => w.includes('Art. 92'))).toBe(true);
+  });
   it('BGer-Schwellen: Miete/Arbeit 15k, übrige 30k (Grenzwerte beidseitig)', async () => {
     const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
     expect(bestimmeRechtsmittel(basis(15_000, { streitsache: 'arbeit' })).bger).toBe('zulaessig');
@@ -450,10 +511,18 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
     expect(OBERE_INSTANZEN.LU.plzOrt).toBe('6002 Luzern'); // Re-Audit 6.6.: Postadresse
     expect(OBERE_INSTANZEN.GE.name).toContain('Cour de justice');
   });
-  it('Fristen-Hinweis trägt die verifizierten Normen (311/314/321 ZPO, 100/46 BGG)', async () => {
+  // Deklarierte Anpassung 6.6.2026 (Rechtsmittel-Umbau): Die Normen leben jetzt
+  // in den STRUKTURIERTEN Frist-Feldern statt in einer Pauschal-Textwand — der
+  // Test prüft die je nach Eingabe einschlägige Norm an ihrer neuen Stelle.
+  it('Frist-Normen an der richtigen Stelle: 311 (Berufung), 321 (Beschwerde), 314 (summarisch), 100/46 BGG', async () => {
     const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
-    const fh = bestimmeRechtsmittel(basis(50_000)).fristHinweis;
-    for (const n of ['311', '314', '321', '100', '46']) expect(fh).toContain(n);
+    expect(bestimmeRechtsmittel(basis(50_000)).kantonalFrist!.text).toContain('311');
+    expect(bestimmeRechtsmittel(basis(5_000)).kantonalFrist!.text).toContain('321');
+    expect(bestimmeRechtsmittel(basis(50_000, { rmVerfahren: 'summarisch' })).kantonalFrist!.text).toContain('314');
+    const r = bestimmeRechtsmittel(basis(50_000));
+    expect(r.bgerFrist.text).toContain('Art. 100 Abs. 1 BGG');
+    expect(r.bgerFrist.stillstandText).toContain('Art. 46');
+    expect(r.fristHinweis).toContain('Art. 45 Abs. 1 BGG');
   });
 });
 

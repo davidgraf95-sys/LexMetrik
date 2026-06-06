@@ -13,6 +13,7 @@ import {
   zustaendigkeitErgebnis, ZPO_SCHWELLEN, bestimmeRechtsmittel,
   type ZustaendigkeitInput, type Streitsache, type MieteUnterfall, type Rechtsweg,
   type DeliktUnterfall, type PersoenlichkeitUnterfall, type IpUnterfall,
+  type RmObjekt, type RmVerfahren, type RmVorinstanz,
 } from '../../lib/zustaendigkeit';
 import { obereInstanzFuer } from '../../data/obereInstanzen';
 import { stelleFuer, kantonErfasst, kantonZustaendigkeit, gemeindeImKanton } from '../../data/zustaendigkeitKantone';
@@ -124,6 +125,11 @@ type State = {
   plz: string;
   kanton: Kanton | '';
   instanz: Instanz;
+  // Rechtsmittel-Umbau 6.6.2026 (Auftrag David):
+  rmObjekt: RmObjekt;
+  rmVerfahren: RmVerfahren;
+  rmVorinstanz: RmVorinstanz;
+  rmFamilienSummarsache: boolean;
 };
 
 const DEFAULTS: State = {
@@ -150,6 +156,10 @@ const DEFAULTS: State = {
   plz: '',
   kanton: '',
   instanz: 'einleitung',
+  rmObjekt: 'endentscheid',
+  rmVerfahren: 'ordentlich_vereinfacht',
+  rmVorinstanz: 'erstinstanz',
+  rmFamilienSummarsache: false,
 };
 
 export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
@@ -261,6 +271,11 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
     bundKlagerecht: f.streitsache === 'ip_wettbewerb' && f.ipUnterfall === 'uwg' ? f.bundKlagerecht : undefined,
     avgVerleih: istArbeit ? f.avgVerleih : undefined,
     gerichtsstandsvereinbarung: istScheidung ? undefined : f.gerichtsstandsvereinbarung,
+    // Rechtsmittel-Weichen nur im Rechtsmittel-Modus mitgeben (§3: reine Durchreiche).
+    rmObjekt: f.instanz === 'rechtsmittel' ? f.rmObjekt : undefined,
+    rmVerfahren: f.instanz === 'rechtsmittel' ? f.rmVerfahren : undefined,
+    rmVorinstanz: f.instanz === 'rechtsmittel' ? f.rmVorinstanz : undefined,
+    rmFamilienSummarsache: f.instanz === 'rechtsmittel' ? f.rmFamilienSummarsache : undefined,
   };
 
   const ergebnis = (() => {
@@ -386,6 +401,52 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           onSelect={(code) => set('instanz', code)}
         />
       </div>
+
+      {/* 2b · Angefochtener Entscheid (Rechtsmittel-Umbau 6.6.2026): die
+          rechtlich entscheidenden Weichen — Objekt (Art. 308/319 ZPO),
+          Verfahrensart der Vorinstanz (Fristlänge + Stillstand!) und
+          Vorinstanz-Typ (Art. 75 Abs. 2 BGG). */}
+      {f.instanz === 'rechtsmittel' && (
+        <div className="space-y-3">
+          <p className="lc-overline">2a · Was wird angefochten?</p>
+          <SelectionGrid
+            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            items={[
+              { code: 'endentscheid' as RmObjekt, label: 'Endentscheid', sub: 'Das Verfahren wird ganz oder teilweise abgeschlossen' },
+              { code: 'zwischenentscheid' as RmObjekt, label: 'Zwischenentscheid', sub: 'z. B. über Zuständigkeit oder Ausstand (selbständig eröffnet)' },
+              { code: 'vorsorgliche_massnahme' as RmObjekt, label: 'Vorsorgliche Massnahme', sub: 'Auch Eheschutz nach der BGer-Praxis (Art. 98 BGG)' },
+              { code: 'prozessleitende_verfuegung' as RmObjekt, label: 'Prozessleitende Verfügung', sub: 'Nicht berufungsfähig — nur Art. 319 lit. b ZPO' },
+            ]}
+            value={f.rmObjekt}
+            onSelect={(code) => set('rmObjekt', code)}
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Field label="Verfahrensart der Vorinstanz" hint="entscheidet über Fristlänge (30/10 Tage) und Gerichtsferien-Stillstand">
+              <select className={inputCls} value={f.rmVerfahren} onChange={(e) => set('rmVerfahren', e.target.value as RmVerfahren)}>
+                <option value="ordentlich_vereinfacht">Ordentliches oder vereinfachtes Verfahren</option>
+                <option value="summarisch">Summarisches Verfahren (z. B. Rechtsschutz in klaren Fällen, Eheschutz)</option>
+              </select>
+            </Field>
+            <Field label="Wer hat entschieden?" hint="Handelsgericht/Direktklage: kein kantonales Rechtsmittel (Art. 75 Abs. 2 BGG)">
+              <select className={inputCls} value={f.rmVorinstanz} onChange={(e) => set('rmVorinstanz', e.target.value as RmVorinstanz)}>
+                <option value="erstinstanz">Erstinstanzliches Gericht (Bezirks-/Regional-/Zivilgericht)</option>
+                <option value="handelsgericht">Handelsgericht (ZH/BE/AG/SG, Art. 6 ZPO)</option>
+                <option value="direktklage_oberes_gericht">Oberes Gericht nach Direktklage (Art. 8 ZPO)</option>
+              </select>
+            </Field>
+          </div>
+          {f.rmVerfahren === 'summarisch' && (
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <input type="checkbox" className="mt-0.5" checked={f.rmFamilienSummarsache} onChange={(e) => set('rmFamilienSummarsache', e.target.checked)} />
+              <span>
+                Familienrechtliche Streitigkeit nach Art. 271/276/302/305 ZPO (Eheschutz, vorsorgliche
+                Massnahmen im Scheidungsverfahren, Unterhalts-/Vaterschaftsmassnahmen) —
+                Berufungsfrist dann 30 statt 10 Tage (Art. 314 Abs. 2 ZPO, seit 1.1.2025)
+              </span>
+            </label>
+          )}
+        </div>
+      )}
 
       {/* 2 · Streitsache */}
       <div className="space-y-2">
@@ -586,23 +647,32 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
       <FehlerBox fehler={fehler} />
 
-      {/* Rechtsmittel: Berufung/Beschwerde + obere Instanz (Ausbau 5.6.2026) */}
+      {/* Rechtsmittel-Fahrplan (Umbau 6.6.2026, Auftrag David): vier Schritte
+          statt zweier Textkarten — 1. statthaftes Rechtsmittel · 2. Instanz mit
+          Adresse · 3. FRIST konkret aufgelöst (30/10 Tage, Stillstand ja/nein)
+          · 4. Weiterzug BGer inkl. eigener Frist, Kognition und Weichen. */}
       {f.instanz === 'rechtsmittel' && rechtsmittel && (
         <div className="lc-reveal space-y-4" aria-live="polite">
           <LiveHeader />
-          <div className="lc-card p-5 space-y-3">
-            <p className="lc-overline">Kantonales Rechtsmittel</p>
-            <p className="text-body-s text-ink-900 font-medium">
+
+          {/* Schritt 1 · Statthaftes Rechtsmittel */}
+          <div className="lc-card p-5 space-y-2">
+            <p className="lc-overline">1 · Statthaftes Rechtsmittel (kantonal)</p>
+            <p className="text-h3 font-medium text-ink-900 leading-none">
               {rechtsmittel.kantonal === 'berufung' ? 'Berufung'
                 : rechtsmittel.kantonal === 'beschwerde' ? 'Beschwerde'
-                : rechtsmittel.kantonal === 'entfaellt_einzige_instanz' ? 'Entfällt (einzige kantonale Instanz)'
+                : rechtsmittel.kantonal === 'entfaellt_einzige_instanz' ? 'Kein kantonales Rechtsmittel'
                 : 'Berufung oder Beschwerde — vom Streitwert abhängig'}
             </p>
             <p className="text-body-s text-ink-700">{rechtsmittel.kantonalText}</p>
-            {rechtsmittel.kantonal !== 'entfaellt_einzige_instanz' && (
+          </div>
+
+          {/* Schritt 2 · Zuständige Instanz */}
+          <div className="lc-card p-5 space-y-3">
+            <p className="lc-overline">2 · Wohin?</p>
+            {rechtsmittel.kantonal !== 'entfaellt_einzige_instanz' ? (
               f.kanton !== '' ? (
-                <div className="border-t border-line pt-3">
-                  <p className="lc-overline mb-1.5">Zuständige obere Instanz ({f.kanton})</p>
+                <div>
                   <p className="text-body-s text-ink-900 whitespace-pre-line">
                     {obereInstanz!.name}{'\n'}{obereInstanz!.strasse}{'\n'}{obereInstanz!.plzOrt}
                   </p>
@@ -614,20 +684,62 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               ) : (
                 <p className="text-body-s text-ink-500">Kanton wählen, um die zuständige obere Instanz mit Adresse anzuzeigen.</p>
               )
+            ) : (
+              <p className="text-body-s text-ink-700">
+                Die kantonale Rechtsmittelinstanz entfällt — nächste (und einzige) Station ist das Bundesgericht, siehe Schritt 4.
+              </p>
             )}
           </div>
+
+          {/* Schritt 3 · Frist (kantonal) — konkret aufgelöst */}
+          {rechtsmittel.kantonalFrist && (
+            <div className="lc-card p-5 space-y-2">
+              <p className="lc-overline">3 · Frist (kantonal)</p>
+              <p className="text-h3 font-medium text-ink-900 leading-none">
+                {rechtsmittel.kantonalFrist.tage !== null ? `${rechtsmittel.kantonalFrist.tage} Tage` : 'Von offener Weiche abhängig'}
+              </p>
+              <p className="text-body-s text-ink-700">{rechtsmittel.kantonalFrist.text}</p>
+              <p className={`text-body-s ${rechtsmittel.kantonalFrist.stillstand ? 'text-ink-700' : 'text-warn-700 font-medium'}`}>
+                {rechtsmittel.kantonalFrist.stillstandText}
+              </p>
+              <p className="text-xs text-ink-500">
+                Konkretes Fristende berechnen: <Link to="/rechner/zpo-fristen" className="text-brass-700 underline">ZPO-Fristenrechner</Link>
+                {' '}(Gerichtsferien werden dort automatisch berücksichtigt).
+              </p>
+            </div>
+          )}
+
+          {/* Schritt 4 · Weiterzug ans Bundesgericht */}
           <div className="lc-card p-5 space-y-3">
-            <p className="lc-overline">Weiterzug ans Bundesgericht</p>
-            <p className="text-body-s text-ink-900 font-medium">
+            <p className="lc-overline">{rechtsmittel.kantonalFrist ? '4' : '3'} · Weiterzug ans Bundesgericht</p>
+            <p className="text-h3 font-medium text-ink-900 leading-none">
               {rechtsmittel.bger === 'zulaessig' ? 'Beschwerde in Zivilsachen: zulässig'
                 : rechtsmittel.bger === 'schwelle_verfehlt' ? 'Streitwertgrenze nicht erreicht'
                 : 'Vom Streitwert abhängig'}
             </p>
             <p className="text-body-s text-ink-700">{rechtsmittel.bgerText}</p>
+            <div className="border-t border-line pt-3 space-y-1.5">
+              <p className="text-body-s text-ink-900 font-medium">
+                Frist: {rechtsmittel.bgerFrist.tage} Tage
+              </p>
+              <p className="text-body-s text-ink-700">{rechtsmittel.bgerFrist.text}</p>
+              <p className={`text-body-s ${rechtsmittel.bgerFrist.stillstand ? 'text-ink-700' : 'text-warn-700 font-medium'}`}>
+                {rechtsmittel.bgerFrist.stillstandText}
+              </p>
+            </div>
+            {rechtsmittel.kognitionHinweis && (
+              <div className="lc-notice-warn text-body-s">{rechtsmittel.kognitionHinweis}</div>
+            )}
             <p className="text-body-s text-ink-900 whitespace-pre-line border-t border-line pt-3">
               Schweizerisches Bundesgericht{'\n'}Av. du Tribunal-fédéral 29{'\n'}1005 Lausanne
             </p>
           </div>
+
+          {/* Offene Rechtsfragen-Weichen (§8: ehrlich ausweisen) */}
+          {rechtsmittel.weichen.map((w, i) => (
+            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+          ))}
+
           <div className="lc-notice text-body-s">{rechtsmittel.fristHinweis}</div>
           <div className="flex flex-wrap gap-1.5">
             {rechtsmittel.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
