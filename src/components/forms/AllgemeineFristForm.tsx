@@ -14,6 +14,8 @@ import { FristenKalender } from '../FristenKalender';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { BegruendungAbsatz } from '../BegruendungAbsatz';
+import { begruendungsAbsatz } from '../../lib/begruendung';
 import { IcsExportButton } from '../IcsExportButton';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
@@ -261,7 +263,8 @@ export function AllgemeineFristForm() {
               />
               <ErgebnisAnzeige titel="Allgemeine Frist (Art. 77/78 OR)" ergebnis={ergebnis} />
               <div className="flex flex-wrap items-center gap-3">
-                <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+                {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
                 <PdfExportButton config={pdfConfig} />
                 <IcsExportButton endISO={ergebnis.resultat.endDatumISO}
                   titel={`Fristende (${form.laenge} ${EINHEITEN.find((e) => e.code === form.einheit)?.label})`}

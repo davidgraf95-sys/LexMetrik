@@ -12,6 +12,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { BegruendungAbsatz } from '../BegruendungAbsatz';
+import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { ZPO_LINK_SPEC, type ZpoLink } from '../../lib/rechnerPermalinks';
@@ -302,6 +304,7 @@ export function ZpoFristenForm() {
             stillstandAktiv={ergebnis.stillstandAktiv}
           />
           <ErgebnisAnzeige titel="ZPO-Fristberechnung (Art. 142 ff. ZPO)" ergebnis={ergebnis} />
+          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, `Der Fristenlauf begann am ${ergebnis.diesAQuoISO.split('-').reverse().join('.')} (Art. 142 Abs. 1 ZPO).`)} />}
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />

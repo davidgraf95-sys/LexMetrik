@@ -11,6 +11,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { BegruendungAbsatz } from '../BegruendungAbsatz';
+import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, einerVon, type PermalinkSpec } from '../../lib/permalink';
 
@@ -363,6 +365,7 @@ export function ErbteilungForm() {
           </div>
 
           <ErgebnisAnzeige titel="Erbteilung & Pflichtteil (Art. 457 ff., 462, 470 ff. ZGB)" ergebnis={ergebnis} />
+          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />

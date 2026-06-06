@@ -11,6 +11,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { BegruendungAbsatz } from '../BegruendungAbsatz';
+import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
@@ -298,6 +300,7 @@ export function MietrechtForm() {
           )}
 
           <ErgebnisAnzeige titel="Kündigungstermine und -fristen (Art. 253 ff. OR)" ergebnis={ergebnis} />
+          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
