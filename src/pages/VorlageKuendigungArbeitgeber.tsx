@@ -11,6 +11,8 @@ import { SperrtageZaehler } from '../components/SperrtageZaehler';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
+import { Link } from 'react-router-dom';
+import { sperrfristenLink } from '../lib/rechnerPermalinks';
 
 // ─── Vorlagen-Wizard: Kündigung durch Arbeitgeber:in (Maske 1b, Flaggschiff) ─
 // Bauspezifikation: bibliothek/recherche/kuendigungs-masken.md (6.6.2026).
@@ -183,6 +185,27 @@ export function VorlageKuendigungArbeitgeber() {
           </p>
           <SperrereignisseEditor wert={a.sperrereignisse} onChange={(liste) => set('sperrereignisse', liste)} />
           {statusKachel}
+          {/* Prefill-Brücke 2.1c: derselbe Fall im Rechner (Zeitstrahl,
+              Sperrtage-Kontingente, PDF-Rechenbericht) — Eingaben reisen mit. */}
+          <p className="text-xs text-ink-500">
+            Vertiefte Analyse (Zeitstrahl, Kontingente):{' '}
+            <Link
+              to={sperrfristenLink({
+                vertragsbeginn: a.vertragsbeginn || undefined,
+                zugangKuendigung: a.zugangKuendigung || undefined,
+                kuendigendePartei: 'arbeitgeber',
+                probezeitMonate: a.probezeit === 'keine' ? 0 : a.probezeit === 'gesetzlich' ? 1 : a.probezeitMonate,
+                abweichendeFristMonate: a.fristQuelle === 'abweichend' ? a.abweichendeFristMonate : undefined,
+                abweichendeFristFormGueltig: a.fristQuelle === 'abweichend' ? a.abweichendeFristFormGueltig : undefined,
+                abweichendeFristQuelleGAV: a.fristQuelle === 'abweichend' ? a.abweichendeFristQuelleGAV : undefined,
+                kuendigungsterminMonatsende: a.kuendigungsterminMonatsende,
+                vaterschaftsurlaubResttage: a.vaterschaftsurlaubResttage > 0 ? a.vaterschaftsurlaubResttage : undefined,
+                sperrereignisse: a.sperrereignisse,
+              })}
+              className="text-brass-700 underline">
+              Sperrfristen-Rechner (vorbefüllt) öffnen
+            </Link>
+          </p>
           {engine?.sperrtage && engine.sperrtage.length > 0 && <SperrtageZaehler sperrtage={engine.sperrtage} />}
         </div>
       );

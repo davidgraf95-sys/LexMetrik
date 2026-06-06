@@ -13,7 +13,8 @@ import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { LinkTeilenButton } from '../LinkTeilenButton';
-import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
+import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
+import { ZPO_LINK_SPEC, type ZpoLink } from '../../lib/rechnerPermalinks';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
@@ -62,28 +63,6 @@ const DEFAULTS: ZpoInput = {
   modus: 'bundesgericht',
 };
 
-
-// Permalink (FAHRPLAN-PRAXIS 1.3): flacher Verbund aus ZpoInput + Erstreckung.
-type ZpoLink = {
-  ereignis: string; einheit: string; laenge: number; verfahren: string;
-  kanton: string; fristnatur: string; zustellart?: string; modus?: string;
-  gerichtshinweisStillstand?: boolean;
-  erstreckungAn?: boolean; erstreckungLaenge?: number; erstreckungEinheit?: string;
-};
-const ZPO_LINK_SPEC: PermalinkSpec<ZpoLink> = {
-  ereignis: { p: 'e', typ: 'str', gueltig: istISO },
-  einheit: { p: 'u', typ: 'str', gueltig: einerVon('tage', 'wochen', 'monate', 'jahre') },
-  laenge: { p: 'l', typ: 'num', gueltig: (n) => Number.isInteger(n) && n > 0 },
-  verfahren: { p: 'v', typ: 'str', gueltig: einerVon('ordentlich', 'vereinfacht', 'familienrecht', 'klagefrist_klagebewilligung', 'schlichtung', 'summarisch', 'rechtsmittel_summarisch') },
-  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
-  fristnatur: { p: 'n', typ: 'str', gueltig: einerVon('gesetzlich', 'gerichtlich') },
-  zustellart: { p: 'z', typ: 'str', gueltig: einerVon('empfangsbestaetigung', 'gewoehnliche_post') },
-  modus: { p: 'm', typ: 'str', gueltig: einerVon('bundesgericht', 'mindermeinung') },
-  gerichtshinweisStillstand: { p: 'gh', typ: 'bool' },
-  erstreckungAn: { p: 'ea', typ: 'bool' },
-  erstreckungLaenge: { p: 'el', typ: 'num', gueltig: (n) => Number.isInteger(n) && n > 0 },
-  erstreckungEinheit: { p: 'eu', typ: 'str', gueltig: einerVon('tage', 'wochen') },
-};
 
 export function ZpoFristenForm() {
   // Permalink einmalig lesen (lazy, validiert) — speist die Initialwerte.

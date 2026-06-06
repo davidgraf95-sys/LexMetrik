@@ -8,6 +8,7 @@ import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
+import { zpoFristenLink } from '../../lib/rechnerPermalinks';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
@@ -864,8 +865,21 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                 {rechtsmittel.kantonalFrist.stillstandText}
               </p>
               <p className="text-xs text-ink-500">
-                Konkretes Fristende berechnen: <Link to="/rechner/zpo-fristen" className="text-brass-700 underline">ZPO-Fristenrechner</Link>
-                {' '}(Gerichtsferien werden dort automatisch berücksichtigt).
+                {/* Prefill-Brücke 2.1a: Fristlänge/Verfahren/Kanton reisen mit —
+                    nur noch das Zustellungsdatum eintragen. */}
+                Konkretes Fristende berechnen:{' '}
+                <Link
+                  to={zpoFristenLink({
+                    ...(rechtsmittel.kantonalFrist.tage != null ? { laenge: rechtsmittel.kantonalFrist.tage } : {}),
+                    einheit: 'tage',
+                    verfahren: f.rmVerfahren === 'summarisch' ? 'summarisch' : 'ordentlich',
+                    fristnatur: 'gesetzlich',
+                    ...(f.kanton !== '' ? { kanton: f.kanton } : {}),
+                  })}
+                  className="text-brass-700 underline">
+                  ZPO-Fristenrechner (vorbefüllt)
+                </Link>
+                {' '}— Frist und Verfahren reisen mit; nur noch die Zustellung eintragen.
               </p>
             </div>
           )}

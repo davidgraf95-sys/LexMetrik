@@ -134,6 +134,9 @@ taxonomisch nach Rechtsgebiet, kein situativer Zugang.
 - [x] **Kachel-Katalog (Live-Auftrag David, ersetzt Sektionen-Strom):** Gebiets-Kacheln
       mit Inhaltsangabe unter den 5 Obergruppen; Klick öffnet Panel in voller Breite
       unter der Kachel-Zeile (`?gebiet=` in URL); nur ein Panel zugleich — `4d927ee`
+      · **Nachschärfung (Wunsch David):** FOKUS-Ansicht — beim Öffnen verschwinden die
+      Oberkacheln, das Panel übernimmt; «← Alle Rechtsgebiete»/Zurück-Taste zurück;
+      animiert (View Transition + lc-reveal, reduced-motion-fest) — `75fdfdf`
 - [x] 1.1 Keyword-Ausbau, am Engine-/Preset-Code verifiziert (zpoPresets 311/314/321/…,
       schkgPresets 88/116/166, Wizard-Rechtsmittel/Scheidung); Keywords kompakt
       verglichen wie Normen («Art.311» = «311 ZPO») — `5186802`
