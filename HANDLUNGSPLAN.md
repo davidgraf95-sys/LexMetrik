@@ -78,6 +78,22 @@ löschen, Stand in STRUKTUR.md spiegeln.
    Schiedsgericht Art. 77, Anschluss an den SchKG-Rechtsweg.
 9. **Quick-Wins** (recherche/INDEX-Priorisierung): Streitwert-Rechner ·
    GebV-SchKG-Kostenrechner · 336b-Fristen · Vorlage «Mahnung» (free).
+9a. ~~Gründungs-Masken GmbH/AG~~ → **GEBAUT** (6./7.6.2026, Auftrag David;
+   `fb0b2f1`): Checklisten nach 2b-Muster (§8: Beurkundungszwang → kein
+   Export) auf 3 neuen Recherche-Dossiers (gesellschaftsgruendung ·
+   gmbh-gruendung · ag-gruendung; 3 Deep-Research-Workflows + Notariats-
+   Sweep, Kernzahlen am Cache verbatim — inkl. neu gepinnter Caches
+   HRegV/GebV-HReg/StG). Bug-Check §9 durch 2 unabhängige Agents
+   bestanden (0 HOCH; eingearbeitet: M-1 «abschliessend» nur
+   registerrechtlich, M-2 lit. f als Weiche, U+2019-Apostroph,
+   Halbgeviert + Konventions-Test-Lücke). Katalog **33 verfügbar**.
+9b. **AUSBAUSTUFE Gründung (Anweisung David 7.6.2026):** GmbH-Engine soll
+   alle Gründungsunterlagen **direkt erzeugen** (Volldokumente statt
+   Checkliste). Davor zwingend eigene Recherche zu **Statuten-Bausteinen,
+   Zeichnungsscheinen (777a), Erklärungs-Wortlauten** — Plan und
+   Dokumentliste: `recherche/gmbh-gruendung.md` Teil 3a; Errichtungsakt
+   nur als ENTWURF-Export für die Urkundsperson (§8-Gate wie
+   formatvorlagen `entwurf`). Danach gleiches Muster für die AG.
 
 ## C · Pflege & Termine (Verfallsregister: `bibliothek/register/parameter-verfall.md`)
 

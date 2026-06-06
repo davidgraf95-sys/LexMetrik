@@ -110,6 +110,33 @@ verankert (1.2). ZH-Merkblatt ergänzt praktisch: «Höhe **und Währung**»
    Ziff. 1–5) — der Errichtungsakt einer GmbH mit solchen Klauseln ist
    dadurch inhaltlich reicher als bei der AG.
 
+# TEIL 3a — AUSBAUSTUFE (Anweisung David 7.6.2026): Volldokumente statt Checkliste
+
+**Ziel:** Die Engine soll so ausgebaut werden, dass man **direkt alle
+Gründungsunterlagen erhält** (erzeugte Dokumente, nicht nur die Liste).
+**Voraussetzung: eigene Recherche-Runde je Dokumenttyp**, bevor gebaut wird:
+
+1. **Statuten** — Baustein-Katalog (Mindestinhalt 776 + alle bedingt
+   notwendigen Klauseln aus Teil 1.2 als parametrisierte Textbausteine);
+   Abgleich mit den amtlichen Mustern (EHRA 2017 [Anker veraltet!],
+   ZH kurz/lang, SG, GL) — Wortlaut-Ebene, nicht nur Struktur.
+2. **Zeichnungsscheine** — Inhalt nach 777a OR (Anzahl/Nennwert/
+   Ausgabebetrag/Kategorie + Hinweispflichten Abs. 2 Ziff. 1–5);
+   Muster-Wortlaute recherchieren.
+3. Wahlannahme-/Domizilannahme-Erklärungen, Vorsitz-/Ernennungs-
+   Beschlüsse (lit. e/f), Opting-out-Erklärung, HR-Anmeldung —
+   ZH-Mustertexte als Referenz, eigene neutrale Formulierungen.
+4. **§8-Grenze beachten:** Der Errichtungsakt selbst bleibt beurkundungs-
+   pflichtig → als ENTWURF für die Urkundsperson kennzeichnen (analog
+   Formatvorlagen-Gate `entwurf`); die übrigen Erklärungen sind
+   beurkundungsfrei und exportierbar.
+5. Formvorschriften-Matrix je Dokument (Original/handschriftlich/
+   beglaubigt — Teil 2) in die Export-Gates übernehmen.
+
+→ Einstieg über die bestehende Vorlagen-Engine (`vorlagen/engine.ts`,
+Wizard-Rahmen, formatvorlagen.ts) — erst Recherche-Dossier «GmbH-
+Gründungsdokumente Wortlaute», dann Bau (§10). Gleiches Muster danach AG.
+
 # TEIL 4 — Offene Punkte (openQuestions des Workflows + eigene)
 
 - [ ] Kantonale Notariatsgebühren (BE BSG 169.81 Anhang 4, ZH NotGebV) —
