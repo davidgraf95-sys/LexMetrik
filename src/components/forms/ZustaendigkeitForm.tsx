@@ -26,6 +26,7 @@ import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAm
 import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
+import { karte } from '../../lib/startseiteConfig';
 import { SchkgZustaendigkeitTeil } from './SchkgZustaendigkeitTeil';
 import { StrafZustaendigkeitTeil } from './StrafZustaendigkeitTeil';
 import { handelsgerichtFuer } from '../../data/handelsgerichte';
@@ -875,30 +876,61 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                 )}
                 <p className="text-xs text-ink-500 mt-2">Quelle: {stelle.quelle} (Stand {stelle.stand}).</p>
               </div>
-              {sgPrefill && (
-                <div className="pt-3 border-t border-line">
-                  <Link to={{ pathname: '/vorlagen/schlichtungsgesuch-bs', search: sgPrefill }}
-                    className="lc-btn-primary no-underline">
-                    Weiter zum Schlichtungsgesuch (BS) →
-                  </Link>
-                  <p className="text-xs text-ink-500 mt-2">Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.</p>
-                </div>
-              )}
+              {/* Der Vorlagen-Sprung lebt seit 6.6.2026 im einheitlichen Block
+                  «Passende Vorlage für Ihre Eingabe» am Fahrplan-Ende (Auftrag
+                  David) — hier keine Doppelung mehr. */}
             </div>
           )}
-          {r.eingabeArt === 'scheidungsbegehren_oder_klage' && f.instanz === 'einleitung' && (
-            <p className="lc-notice text-body-s">
-              Vorlage für das gemeinsame Scheidungsbegehren bzw. die Scheidungsklage ist in Vorbereitung —
-              örtlich zuständig ist das Gericht am Wohnsitz einer der Parteien (zwingend, Art. 23 ZPO);
-              das konkrete Gericht richtet sich nach kantonalem Recht (Art. 4 ZPO).
-            </p>
-          )}
-          {r.eingabeArt === 'klage_direkt' && f.instanz === 'einleitung' && (
-            <p className="lc-notice text-body-s">
-              Die Klage geht direkt an das erstinstanzliche Gericht{kantonDaten?.erstinstanzName ? ` (${f.kanton}: ${kantonDaten.erstinstanzName})` : ''} —
-              eine Klage-Vorlage ist in Vorbereitung.
-            </p>
-          )}
+          {/* Passende Eingabe-Vorlage (Auftrag David 6.6.2026): IMMER verweisen —
+              gebaut → Link (mit Prefill, wo die Brücke existiert), noch nicht
+              gebaut → ehrlich «in Vorbereitung» (§8). Reines Mapping, keine
+              Rechtslogik (§3): die EingabeArt kommt aus der Engine. */}
+          {f.instanz === 'einleitung' && (() => {
+            const ziel = r.eingabeArt === 'schlichtungsgesuch'
+              ? { karte: karte('schlichtungsgesuch'), zusatz: null as string | null }
+              : r.eingabeArt === 'klage_direkt'
+                ? (r.verfahrensart === 'vereinfacht'
+                    ? { karte: karte('klage-vereinfacht'),
+                        zusatz: kantonDaten?.erstinstanzName ? `Die Klage geht direkt an das erstinstanzliche Gericht (${f.kanton}: ${kantonDaten.erstinstanzName}).` : 'Die Klage geht direkt an das erstinstanzliche Gericht.' }
+                    : { karte: undefined,
+                        titel: 'Klage (ordentliches Verfahren)',
+                        zusatz: kantonDaten?.erstinstanzName ? `Die Klage geht direkt an das erstinstanzliche Gericht (${f.kanton}: ${kantonDaten.erstinstanzName}).` : 'Die Klage geht direkt an das erstinstanzliche Gericht.' })
+                : { karte: undefined,
+                    titel: 'Scheidungsbegehren / Scheidungsklage',
+                    zusatz: 'Örtlich zuständig ist das Gericht am Wohnsitz einer der Parteien (zwingend, Art. 23 ZPO); das konkrete Gericht richtet sich nach kantonalem Recht (Art. 4 ZPO).' };
+            const k = 'karte' in ziel ? ziel.karte : undefined;
+            const gebaut = k && k.status !== 'geplant' && k.href;
+            // BS-Prefill hat Vorrang (vorbefüllter Sprung, bestehende Brücke).
+            const linkZiel = gebaut
+              ? (k.id === 'schlichtungsgesuch' && sgPrefill
+                  ? { pathname: '/vorlagen/schlichtungsgesuch-bs', search: sgPrefill }
+                  : { pathname: k.href! })
+              : null;
+            return (
+              <div className="lc-card p-4 space-y-2">
+                <p className="lc-overline">Passende Vorlage für Ihre Eingabe</p>
+                <p className="text-body-s text-ink-900 font-medium">
+                  {k ? k.title : (ziel as { titel: string }).titel}
+                  {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">In Vorbereitung</span>}
+                </p>
+                {ziel.zusatz && <p className="text-body-s text-ink-700">{ziel.zusatz}</p>}
+                {linkZiel ? (
+                  <div className="pt-1">
+                    <Link to={linkZiel} className="lc-btn-primary no-underline">
+                      Weiter zur Vorlage →
+                    </Link>
+                    {k!.id === 'schlichtungsgesuch' && sgPrefill && (
+                      <p className="text-xs text-ink-500 mt-2">Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.</p>
+                    )}
+                  </div>
+                ) : (
+                  <p className="text-xs text-ink-500">
+                    Diese Vorlage ist noch nicht verfügbar — die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.
+                  </p>
+                )}
+              </div>
+            );
+          })()}
           {recherche && (
             <div className="lc-card p-4 space-y-3">
               <p className="lc-overline">Zuständige Schlichtungsstelle ({f.kanton})</p>
