@@ -4,6 +4,7 @@ import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RE
 import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
 import { ladeZuletzt, merkeZuletzt } from '../lib/schnellzugriff';
 import { kartePasst, sucheRang } from '../lib/katalogSuche';
+import { ANLIEGEN } from '../lib/anliegen';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 import { Tabs } from './ui/Tabs';
@@ -207,6 +208,33 @@ function UebersichtGruppiert(props: {
         </div>
       ))}
     </nav>
+  );
+}
+
+// ─── Anliegen-Einstiege: situativer Zugang quer zur Taxonomie (Etappe 2.1) ──
+// Dieselbe leise Chip-Anatomie wie der Schnellzugriff; nur verfügbare Ziele.
+
+function AnliegenZeile({ onOeffnen }: { onOeffnen: (id: string) => void }) {
+  const eintraege = ANLIEGEN
+    .map((a) => ({ a, k: karte(a.zielId) }))
+    .filter((x): x is { a: typeof x.a; k: NonNullable<typeof x.k> } =>
+      !!x.k && istVerfuegbar(x.k) && !!x.k.href);
+  if (eintraege.length === 0) return null;
+
+  return (
+    <section aria-label="Einstieg nach Anliegen"
+      className="grid grid-cols-1 sm:grid-cols-[9.5rem_minmax(0,1fr)] gap-x-3 gap-y-1 sm:items-start">
+      <span className="lc-overline text-ink-500 sm:mt-1">Einstieg nach Anliegen</span>
+      <div className="flex flex-wrap gap-1.5">
+        {eintraege.map(({ a, k }) => (
+          <Link key={a.label} to={k.href!} onClick={() => onOeffnen(k.id)}
+            title={k.title}
+            className="inline-flex items-center gap-1 h-7 px-2.5 rounded-md border border-line text-body-s text-ink-600 no-underline hover:text-brass-700 hover:border-brass-400 transition-colors">
+            {a.label}
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -438,8 +466,11 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
             onChange={setAnsicht}
           />
         </div>
-        {/* Schnellzugriff: Zuletzt verwendet – in beiden Tabs, zeigt nur Verfügbares */}
-        <Schnellzugriff zuletzt={zuletzt} onOeffnen={onOeffnen} />
+        {/* Situativer Einstieg + Schnellzugriff – in beiden Tabs, nur Verfügbares */}
+        <div className="space-y-2">
+          <AnliegenZeile onOeffnen={onOeffnen} />
+          <Schnellzugriff zuletzt={zuletzt} onOeffnen={onOeffnen} />
+        </div>
         {filterAktiv ? (
           trefferSortiert.length === 0 ? (
             /* Leerer Zustand: kein stilles Verschwinden */

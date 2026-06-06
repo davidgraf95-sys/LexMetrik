@@ -91,6 +91,27 @@ describe('Pro-Katalog: Tabs + Kachel-Raster (Umbau 6.6.2026, Auftrag David)', ()
   });
 });
 
+describe('Anliegen-Einstiege (Etappe 2.1 — Entwurf, Abnahme David offen)', () => {
+  it('jede Anliegen-ID zeigt auf eine VERFÜGBARE Karte mit href (§8); Labels eindeutig', async () => {
+    const { ANLIEGEN } = await import('../lib/anliegen');
+    const { karte } = await import('../lib/startseiteConfig');
+    ANLIEGEN.forEach((a) => {
+      const k = karte(a.zielId);
+      expect(k, `${a.label} → ${a.zielId}`).toBeTruthy();
+      expect(istVerfuegbar(k!), `${a.zielId} muss verfügbar sein`).toBe(true);
+      expect(k!.href, `${a.zielId} braucht href`).toBeTruthy();
+    });
+    expect(new Set(ANLIEGEN.map((a) => a.label)).size).toBe(ANLIEGEN.length);
+  });
+
+  it('die Zeile erscheint im Pro-Katalog mit allen Anliegen-Chips', async () => {
+    const { ANLIEGEN } = await import('../lib/anliegen');
+    const html = proHtml('/pro');
+    expect(html).toContain('Einstieg nach Anliegen');
+    ANLIEGEN.forEach((a) => expect(html).toContain(a.label.replace(/&/g, '&amp;')));
+  });
+});
+
 describe('Pro-Katalog: Schnellzugriff (nur «Zuletzt» — Favoriten entfernt, Anweisung 5.6.2026)', () => {
   it('Zuletzt-Roundtrip über localStorage (dedupliziert, max. 6, defensiv)', async () => {
     const { merkeZuletzt, ladeZuletzt } = await import('../lib/schnellzugriff');
