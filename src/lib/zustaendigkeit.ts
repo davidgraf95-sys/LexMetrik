@@ -329,6 +329,19 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       weichen.push('Nur die beklagte Partei ist im Handelsregister eingetragen: Die klagende Partei kann zwischen Handelsgericht und ordentlichem Gericht wählen (Art. 6 Abs. 3 ZPO; nur HG-Kantone).');
     }
   }
+  // M-2-Fix Bug-Check 6.6.2026: Art. 6 Abs. 4 lit. b ZPO ist eine EIGEN-
+  // STÄNDIGE kantonale Kann-Erweiterung («Die Kantone können das Handels-
+  // gericht ausserdem zuständig erklären für: … b. Streitigkeiten aus dem
+  // Recht der Handelsgesellschaften und Genossenschaften» — Wortlaut am
+  // Fedlex-Cache verifiziert, Stand 20250101) und setzt die Abs.-2-Merkmale
+  // (HR-Eintrag, Schwelle >30 000) gerade NICHT voraus. Vorher lief
+  // 'gesellschaft' über den Abs.-2-Pfad und die Weiche fehlte genau im
+  // Praxisfall Verantwortlichkeitsklage gegen Organe (natürliche Personen
+  // ohne HR-Eintrag).
+  if (input.streitsache === 'gesellschaft' && !hgWeiche) {
+    hgWeiche = true;
+    weichen.push('Handelsgericht prüfen: Für Streitigkeiten aus dem Recht der Handelsgesellschaften und Genossenschaften KÖNNEN die Kantone das Handelsgericht zuständig erklären (Art. 6 Abs. 4 lit. b ZPO) — anders als nach Abs. 2 ohne Handelsregister- und Streitwert-Voraussetzung; ob der Kanton davon Gebrauch gemacht hat, regelt das kantonale Recht (nur HG-Kantone, real ZH/BE/AG/SG).');
+  }
   // Naht-Fix 6.6.2026 (Tiefencheck David): Bei der SCHEIDUNG feuerte die
   // Art.-8-Weiche, wenn (atypisch) vermögensrechtlich+Streitwert gesetzt waren —
   // das Scheidungsverfahren (Art. 274 ff. ZPO, zwingender Gerichtsstand Art. 23)

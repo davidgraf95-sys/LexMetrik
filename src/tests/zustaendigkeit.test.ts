@@ -113,6 +113,19 @@ describe('Zuständigkeit — Weichen (Art. 6/8 ZPO)', () => {
     const r = bestimmeZustaendigkeit({ streitsache: 'miete_wohn_geschaeft', vermoegensrechtlich: true, streitwertCHF: 60_000, geschaeftlicheTaetigkeit: true, beklagteImHR: true, klaegerImHR: true });
     expect(r.weichen.some((w) => w.includes('Handelsgericht'))).toBe(false);
   });
+  it('gesellschaft ohne HR-Eintrag der Beklagten (Verantwortlichkeitsklage gegen Organe): Art.-6-Abs.-4-lit.-b-Weiche (M-2-Fix Bug-Check 6.6.2026)', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'gesellschaft', vermoegensrechtlich: true, streitwertCHF: 500_000, geschaeftlicheTaetigkeit: true, beklagteImHR: false, klaegerImHR: true });
+    expect(r.weichen.some((w) => w.includes('Art. 6 Abs. 4 lit. b'))).toBe(true);
+  });
+  it('gesellschaft mit erfüllten Abs.-2-Merkmalen: Abs.-2-Weiche, KEINE doppelte Abs.-4-Weiche', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'gesellschaft', vermoegensrechtlich: true, streitwertCHF: 60_000, geschaeftlicheTaetigkeit: true, beklagteImHR: true, klaegerImHR: true });
+    expect(r.weichen.some((w) => w.includes('handelsrechtliche Streitigkeit nach Art. 6 ZPO'))).toBe(true);
+    expect(r.weichen.some((w) => w.includes('Art. 6 Abs. 4 lit. b'))).toBe(false);
+  });
+  it('geldforderung ohne HR-Eintrag der Beklagten: weiterhin KEINE HG-Weiche (Abs. 4 lit. b gilt nur für gesellschaft)', () => {
+    const r = bestimmeZustaendigkeit(geld({ streitwertCHF: 500_000, geschaeftlicheTaetigkeit: true, beklagteImHR: false, klaegerImHR: true }));
+    expect(r.weichen.some((w) => w.includes('Handelsgericht'))).toBe(false);
+  });
   it('direkte Klage ans obere Gericht ab 100 000', () => {
     const r = bestimmeZustaendigkeit(geld({ streitwertCHF: 100_000 }));
     expect(r.weichen.some((w) => w.includes('obere Gericht'))).toBe(true);
