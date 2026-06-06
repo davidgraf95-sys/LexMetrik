@@ -74,6 +74,21 @@ describe('Pro-Katalog: Tabs + Kachel-Raster (Umbau 6.6.2026, Auftrag David)', ()
     expect(html).toContain('id="panel-arbeit"');
     expect(html).not.toContain('In Vorbereitung</span>');
   });
+
+  it('?q= ersetzt die Kacheln durch die flache Trefferliste (teilbare Suche, Etappe 1.3)', () => {
+    const html = proHtml('/pro?q=Rechtsvorschlag');
+    expect(html).toContain('Treffer');
+    expect(html).toContain('href="/rechner/schkg-fristen"'); // schkg-fristen via Keyword
+    expect(html).not.toContain('id="kachel-'); // Kachel-Raster ausgeblendet
+    // Suchfeld trägt den URL-Wert (beide Instanzen: Desktop + Drawer)
+    expect(html).toContain('value="Rechtsvorschlag"');
+  });
+
+  it('?q= ohne Treffer: ehrlicher Leerzustand statt stillen Verschwindens', () => {
+    const html = proHtml('/pro?q=Patentgericht');
+    expect(html).toContain('Keine Treffer');
+    expect(html).toContain('Filter zurücksetzen');
+  });
 });
 
 describe('Pro-Katalog: Schnellzugriff (nur «Zuletzt» — Favoriten entfernt, Anweisung 5.6.2026)', () => {

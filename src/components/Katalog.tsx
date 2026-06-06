@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, istVerfuegbar, istAktiv, karte, type CalculatorCard } from '../lib/startseiteConfig';
 import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
@@ -279,7 +279,31 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
   const onOeffnen = (id: string) => { merkeZuletzt(id); setZuletzt(ladeZuletzt()); };
   const [bereiche, setBereiche] = useState<Set<string>>(new Set());
   const [arten, setArten] = useState<Set<string>>(new Set());
-  const [suche, setSuche] = useState('');
+  // Suche in der URL (?q=, Etappe 1.3): teil-/lesezeichenfähig, Zurück-Taste
+  // stellt sie wieder her; replace statt push — Tippen füllt keine History.
+  const suche = searchParams.get('q') ?? '';
+  const setSuche = (wert: string) => {
+    const p = new URLSearchParams(searchParams);
+    if (wert) p.set('q', wert); else p.delete('q');
+    setSearchParams(p, { replace: true });
+  };
+
+  // «/» fokussiert das Suchfeld (Etappe 1.4) — kein neues UI-Muster, nur das
+  // bestehende Feld bedienbarer; Eingabefelder bleiben unberührt.
+  const suchFeldDesktop = useRef<HTMLInputElement>(null);
+  const suchFeldMobil = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+      const ziel = e.target as HTMLElement | null;
+      if (ziel && (/^(INPUT|TEXTAREA|SELECT)$/.test(ziel.tagName) || ziel.isContentEditable)) return;
+      const feld = [suchFeldDesktop.current, suchFeldMobil.current]
+        .find((el) => el && el.offsetParent !== null);
+      if (feld) { e.preventDefault(); feld.focus(); }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
 
   const toggleIn = (set: (f: (alt: Set<string>) => Set<string>) => void) => (g: string) =>
     set((alt) => {
@@ -345,21 +369,23 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
   ];
   // Kompaktes Suchfeld – sitzt in der Seitenleiste (Desktop) bzw. im
   // Filter-Drawer (mobil); filtert den Katalog live (flache Trefferliste).
-  const suchFeld = (
+  const suchFeld = (ref: React.RefObject<HTMLInputElement | null>) => (
     <input
+      ref={ref}
       type="search"
       value={suche}
       onChange={(e) => setSuche(e.target.value)}
-      placeholder="Katalog filtern …"
+      placeholder="Katalog filtern …  ( / )"
       className="lc-input h-9 py-0 text-body-s"
       aria-label="Katalog filtern"
+      aria-keyshortcuts="/"
     />
   );
   // Seitenleiste = EIN Ort für alles Steuernde: Suche, Übersicht, Filter
   // (Entscheid 5.6.2026 – keine horizontale Filterleiste mehr über den Karten).
-  const uebersicht = (
+  const uebersicht = (variante: 'desktop' | 'mobil') => (
     <>
-      {suchFeld}
+      {suchFeld(variante === 'desktop' ? suchFeldDesktop : suchFeldMobil)}
       <UebersichtGruppiert
         gruppen={gruppenSichtbar.map((x) => ({
           label: x.gr.label,
@@ -388,14 +414,14 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
           </span>
         </summary>
         <div className="px-4 pb-4 space-y-5">
-          {uebersicht}
+          {uebersicht('mobil')}
         </div>
       </details>
 
       <div className="lg:grid lg:grid-cols-[230px_minmax(0,1fr)] lg:gap-10 lg:items-start">
         {/* Schlanke Übersicht: klebt auf Desktop unter dem Header */}
         <aside className="hidden lg:block lg:sticky lg:top-28 space-y-6">
-          {uebersicht}
+          {uebersicht('desktop')}
         </aside>
 
         {/* Kacheln/Treffer: ab hier beginnt das Produkt */}

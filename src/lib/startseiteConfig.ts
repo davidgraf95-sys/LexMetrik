@@ -191,7 +191,12 @@ const KARTEN: Record<string, CalculatorCard> = {
     ],
     href: '/rechner/zpo-fristen',
     related: ['schlichtungsgesuch', 'klage-vereinfacht', 'tagerechner'],
-    keywords: ['Frist', 'Gericht', 'Berufung', 'Beschwerde', 'Klage', 'Gerichtsferien', 'Stillstand', 'Zustellung'],
+    // Norm-Keywords nur für Fristen, die als Preset implementiert sind
+    // (zpoPresets.ts: Art. 311/314/321/312/313/329/209/239/63; Art. 148 als
+    // Wiederherstellungs-Warnung) — verifiziert 6.6.2026 (Katalog-UI 1.1).
+    keywords: ['Frist', 'Gericht', 'Berufung', 'Beschwerde', 'Klage', 'Gerichtsferien', 'Stillstand', 'Zustellung',
+      'Berufungsfrist', 'Beschwerdefrist', 'Rechtsmittelfrist', 'Klagebewilligung',
+      'Art. 311 ZPO', 'Art. 314 ZPO', 'Art. 321 ZPO', 'Art. 209 ZPO', 'Art. 145 ZPO', 'Art. 148 ZPO'],
     icon: 'clock',
   },
   'schkg-fristen': {
@@ -214,7 +219,11 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 145 ZPO', url: fedlexUrl('ZPO', '145'), verified: false },
     ],
     href: '/rechner/schkg-fristen',
-    keywords: ['Betreibung', 'Zahlungsbefehl', 'Rechtsvorschlag', 'Konkurs', 'Pfändung', 'Betreibungsferien'],
+    // Norm-/Phasen-Keywords gemäss schkgPresets.ts (Art. 88/116/166:
+    // Fortsetzung, Verwertung, Konkursandrohung) — verifiziert 6.6.2026.
+    keywords: ['Betreibung', 'Zahlungsbefehl', 'Rechtsvorschlag', 'Konkurs', 'Pfändung', 'Betreibungsferien',
+      'betreiben', 'Schulden', 'Fortsetzungsbegehren', 'Verwertungsbegehren', 'Konkursandrohung', 'Rechtsstillstand',
+      'Art. 88 SchKG', 'Art. 116 SchKG', 'Art. 166 SchKG'],
     related: ['verzugszins', 'rechtsoeffnungsbegehren', 'tagerechner'],
     icon: 'clipboard',
   },
@@ -239,7 +248,8 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 272 SchKG', url: fedlexUrl('SchKG', '272'), verified: false },
     ],
     href: '/rechner/zustaendigkeit#schkg',
-    keywords: ['Betreibungsort', 'Betreibungsamt', 'Rechtsöffnung', 'Arrest', 'Aufsichtsbeschwerde', 'Konkursgericht', 'Zuständigkeit'],
+    keywords: ['Betreibungsort', 'Betreibungsamt', 'Rechtsöffnung', 'Arrest', 'Aufsichtsbeschwerde', 'Konkursgericht', 'Zuständigkeit',
+      'betreiben', 'Betreibung einleiten', 'Schuldner', 'Wohnsitz'],
     related: ['zustaendigkeit', 'schkg-fristen'],
     icon: 'scale',
   },
@@ -261,7 +271,8 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 336c OR', url: fedlexUrl('OR', '336c'), verified: false },
     ],
     href: '/rechner/kuendigung#kuendigung',
-    keywords: ['gekündigt', 'Kündigung', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär'],
+    keywords: ['gekündigt', 'Kündigung', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär',
+      'Kündigung erhalten', 'Kündigungsfrist'],
     related: ['lohnfortzahlung', 'arbeitsvertrag'],
     icon: 'document',
   },
@@ -284,7 +295,9 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 257f OR', url: fedlexUrl('OR', '257f'), verified: false },
     ],
     href: '/rechner/mietrecht',
-    keywords: ['Mietwohnung', 'Wohnung kündigen', 'Kündigungstermin', 'Vermieter', 'Mieter', 'Geschäftsraum'],
+    // 'Zahlungsrückstand' = Art. 257d OR (Norm-Pill der Karte) — Laien-Synonym
+    keywords: ['Mietwohnung', 'Wohnung kündigen', 'Kündigungstermin', 'Vermieter', 'Mieter', 'Geschäftsraum',
+      'Zahlungsrückstand', 'Kündigung erhalten'],
     related: ['mietvertrag-wohnen'],
     icon: 'house',
   },
@@ -326,7 +339,8 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 127–142 OR', url: fedlexUrl('OR', '127'), verified: false },
     ],
     href: '/rechner/verjaehrung',
-    keywords: ['Verjährung', 'verjährt', 'Frist', 'Forderung', 'unerlaubte Handlung', 'Bereicherung', 'Unterbrechung', 'Verzicht', 'Einrede'],
+    keywords: ['Verjährung', 'verjährt', 'Frist', 'Forderung', 'unerlaubte Handlung', 'Bereicherung', 'Unterbrechung', 'Verzicht', 'Einrede',
+      'Art. 127 OR', 'Art. 128 OR'],
     related: ['verzugszins', 'rechtsoeffnungsbegehren'],
     icon: 'clock',
   },
@@ -537,7 +551,12 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 243 ZPO', url: fedlexUrl('ZPO', '243'), verified: false },
     ],
     href: '/rechner/zustaendigkeit',
-    keywords: ['Zuständigkeit', 'Gerichtsstand', 'Verfahrensart', 'Schlichtung', 'Schlichtungsbehörde', 'Streitwert', 'Handelsgericht'],
+    // Rechtsmittel-Strecke (bestimmeRechtsmittel: Berufung/Beschwerde samt
+    // Fristen) und Streitsache «Scheidung» sind Teil des Wizards; Kosten je
+    // Kanton verdrahtet — Keywords entsprechend (verifiziert 6.6.2026).
+    keywords: ['Zuständigkeit', 'Gerichtsstand', 'Verfahrensart', 'Schlichtung', 'Schlichtungsbehörde', 'Streitwert', 'Handelsgericht',
+      'Urteil erhalten', 'Entscheid', 'Rechtsmittel', 'Berufung', 'Beschwerde', 'Scheidung',
+      'Gerichtskosten', 'örtliche Zuständigkeit', 'sachliche Zuständigkeit'],
     // Katalog-Split 6.6.2026: SchKG- und Straf-Rechtsweg derselben Seite
     // haben eigene Gebiets-Einstiege (Hash-Vorauswahl) — hier verlinkt.
     related: ['zpo-fristen', 'schlichtungsgesuch', 'schkg-zustaendigkeit', 'straf-zustaendigkeit'],
@@ -1080,7 +1099,8 @@ const VORLAGEN: Record<string, VorlageCard> = {
     formvorschrift: 'Schriftform bei Wohn-/Geschäftsräumen (Art. 266l Abs. 1 OR) — unterschreiben; Familienwohnung: beide unterschreiben.',
     output: ['pdf', 'docx'],
     related: ['mietrecht', 'mietvertrag-wohnen', 'mietzinsanpassung'],
-    keywords: ['Kündigung', 'Mietvertrag', 'Wohnung kündigen', 'Kündigungstermin', 'Familienwohnung', 'Nachmieter', 'Art. 264', 'Art. 266m'],
+    keywords: ['Kündigung', 'Mietvertrag', 'Wohnung kündigen', 'Kündigungstermin', 'Familienwohnung', 'Nachmieter', 'Art. 264', 'Art. 266m',
+      'ausziehen', 'Auszug'],
   },
   // Eigener Katalog-Einstieg für die gestern gebaute Untermiete-Weiche der
   // Mietvertrags-Vorlage (Plan B.6, 6.6.2026): Hash-Deep-Link #untermiete
@@ -1123,7 +1143,8 @@ const VORLAGEN: Record<string, VorlageCard> = {
     formvorschrift: 'Beidseitig zu unterzeichnen',
     output: ['pdf', 'docx'],
     related: ['mietrecht', 'mietzinsanpassung', 'schlichtungsgesuch'],
-    keywords: ['Mietvertrag', 'Kaution', 'Nebenkosten', 'Indexmiete', 'Staffelmiete', 'Formularpflicht', 'Art. 257e', 'Art. 269b'],
+    keywords: ['Mietvertrag', 'Kaution', 'Nebenkosten', 'Indexmiete', 'Staffelmiete', 'Formularpflicht', 'Art. 257e', 'Art. 269b',
+      'Mietzins'],
     icon: 'house',
   },
   darlehensvertrag: {

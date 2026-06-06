@@ -34,14 +34,17 @@ export const LEERER_FILTER: KatalogFilter = {
 export function sucheRang(k: CalculatorCard, suche: string): number | null {
   const q = suche.trim().toLowerCase();
   if (q === '') return null;
+  // Kompakt (ohne Leerzeichen) abgleichen, damit «Art. 335c», «Art.335c»
+  // und «335c» gleichermassen treffen. Kompakt-Vergleich beider Seiten ist
+  // eine Obermenge des Wort-Vergleichs (zusammenhängende Teile bleiben
+  // zusammenhängend) — Keywords seit 6.6.2026 ebenso tolerant wie Normen.
+  const kompakt = (t: string) => t.replace(/\s+/g, '');
+  const qKompakt = kompakt(q);
   if (k.title.toLowerCase().includes(q)) return 0;
   const kw = (k.keywords ?? []).map((t) => t.toLowerCase());
   if (kw.some((t) => t === q)) return 1;
-  if (kw.some((t) => t.includes(q))) return 2;
-  // Normverweise kompakt (ohne Leerzeichen) abgleichen, damit «Art. 335c»,
-  // «Art.335c» und «335c» gleichermassen treffen.
-  const qKompakt = q.replace(/\s+/g, '');
-  if (k.norms.some((n) => n.label.toLowerCase().replace(/\s+/g, '').includes(qKompakt))) return 3;
+  if (kw.some((t) => kompakt(t).includes(qKompakt))) return 2;
+  if (k.norms.some((n) => kompakt(n.label.toLowerCase()).includes(qKompakt))) return 3;
   if (k.rechtsgebiet.toLowerCase().includes(q)) return 4;
   return null;
 }

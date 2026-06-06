@@ -25,6 +25,14 @@ const LAIE: Goldpaar[] = [
   ['Probezeit', 'arbeitsvertrag'],
   ['Kaution', 'mietvertrag-wohnen'],
   ['Wohnung kündigen', 'mietrecht'],
+  // Etappe 1.1 (6.6.2026): Laienphrasen, am Tool-Umfang verifiziert
+  ['Kündigung erhalten', 'kuendigung-sperrfristen'],
+  ['Urteil erhalten', 'zustaendigkeit'],
+  ['Scheidung', 'zustaendigkeit'],
+  ['betreiben', 'schkg-zustaendigkeit'],
+  ['Schulden', 'schkg-fristen'],
+  ['ausziehen', 'kuendigung-mieter'],
+  ['Mietzins', 'mietvertrag-wohnen'],
 ];
 
 const FACH: Goldpaar[] = [
@@ -39,6 +47,11 @@ const FACH: Goldpaar[] = [
   ['Ausschlagung', 'erbrecht-fristen'],
   ['Arrest', 'schkg-zustaendigkeit'],
   ['Gerichtsstand', 'zustaendigkeit'],
+  // Etappe 1.1 (6.6.2026): Fachbegriffe gemäss schkgPresets/Engine-Umfang
+  ['Fortsetzungsbegehren', 'schkg-fristen'],
+  ['Konkursandrohung', 'schkg-fristen'],
+  ['Berufungsfrist', 'zpo-fristen'],
+  ['Rechtsmittel', 'zustaendigkeit'],
 ];
 
 const NORM: Goldpaar[] = [
@@ -51,6 +64,14 @@ const NORM: Goldpaar[] = [
   ['Art. 367', 'gewaehrleistung'],
   ['Art. 104', 'verzugszins'],
   ['Art. 202', 'schlichtungsgesuch'],
+  // Etappe 1.1 (6.6.2026): Norm-Keywords für implementierte Presets;
+  // Keywords werden seit 1.1 kompakt verglichen («Art.311» = «311 ZPO»)
+  ['Art. 311', 'zpo-fristen'],
+  ['311 ZPO', 'zpo-fristen'],
+  ['Art.311', 'zpo-fristen'],
+  ['Art. 148 ZPO', 'zpo-fristen'],
+  ['Art. 88 SchKG', 'schkg-fristen'],
+  ['Art. 127 OR', 'verjaehrung'],
 ];
 
 const verfuegbar = ALLE_KARTEN.filter(istVerfuegbar);
