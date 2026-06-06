@@ -7,6 +7,10 @@ import {
   bestimmeStrafZustaendigkeit,
   type StrafInput, type StrafKaskade32, type StrafSpezialforum, type StrafTatortLage, type StrafBeteiligung,
 } from '../../lib/strafZustaendigkeit';
+import {
+  bestimmeStrafRechtsmittel,
+  type StrafEntscheidTyp, type StrafAnfechtende, type StrafAnfechtungsziel, type RevisionsGrund,
+} from '../../lib/strafRechtsmittel';
 import { staatsanwaltschaftFuer, BUNDESANWALTSCHAFT } from '../../data/staatsanwaltschaften';
 
 // ─── Rechtsweg «Straf» — UI-Teil des Zuständigkeitsrechners ─────────────────
@@ -14,9 +18,12 @@ import { staatsanwaltschaftFuer, BUNDESANWALTSCHAFT } from '../../data/staatsanw
 // lib/strafZustaendigkeit.ts, Behörden in data/staatsanwaltschaften.ts.
 // Gleiche Bausteine wie Zivil/SchKG (einheitliches Design).
 
+// Eingangs-Gabelung analog Zivil (Einleitung/Rechtsmittel) — Ausbau 6.6.2026.
+type TeilAnliegen = StrafInput['anliegen'] | 'rechtsmittel';
 const ANLIEGEN = [
-  { code: 'anzeige' as const, label: 'Strafanzeige erstatten', sub: 'Wo und wie anzeigen? (Art. 301 StPO)' },
-  { code: 'gerichtsstand' as const, label: 'Gerichtsstand prüfen', sub: 'Welcher Kanton verfolgt? (Art. 31–42 StPO)' },
+  { code: 'anzeige' as TeilAnliegen, label: 'Strafanzeige erstatten', sub: 'Wo und wie anzeigen? (Art. 301 StPO)' },
+  { code: 'gerichtsstand' as TeilAnliegen, label: 'Gerichtsstand prüfen', sub: 'Welcher Kanton verfolgt? (Art. 31–42 StPO)' },
+  { code: 'rechtsmittel' as TeilAnliegen, label: 'Rechtsmittel ergreifen', sub: 'Berufung/Beschwerde/Einsprache/Revision (Art. 379 ff. StPO)' },
 ];
 
 const TATORT: { code: StrafTatortLage; label: string }[] = [
@@ -49,7 +56,7 @@ const BETEILIGUNG: { code: StrafBeteiligung; label: string }[] = [
 ];
 
 export function StrafZustaendigkeitTeil() {
-  const [anliegen, setAnliegen] = useState<StrafInput['anliegen']>('anzeige');
+  const [anliegen, setAnliegen] = useState<TeilAnliegen>('anzeige');
   const [tatort, setTatort] = useState<StrafTatortLage>('bekannt');
   const [kaskade, setKaskade] = useState<StrafKaskade32>('wohnsitz');
   const [spezial, setSpezial] = useState<StrafSpezialforum>('kein');
@@ -62,19 +69,37 @@ export function StrafZustaendigkeitTeil() {
   const [kanton, setKanton] = useState<Kanton | ''>('');
 
   const r = bestimmeStrafZustaendigkeit({
-    anliegen, tatort, kaskade32: kaskade, spezialforum: spezial,
+    anliegen: anliegen === 'rechtsmittel' ? 'gerichtsstand' : anliegen,
+    tatort, kaskade32: kaskade, spezialforum: spezial,
     beteiligung, mehrereTatenVerschOrte: mehrereTaten,
     antragsdelikt, uebertretung, moeglichesBundesdelikt: bund,
     beschuldigteMinderjaehrig: minderjaehrig,
   });
   const sta = kanton !== '' ? staatsanwaltschaftFuer(kanton) : null;
 
+  if (anliegen === 'rechtsmittel') {
+    return (
+      <div className="space-y-6">
+        <div className="space-y-2">
+          <p className="lc-overline">2 · Worum geht es?</p>
+          <SelectionGrid
+            className="grid grid-cols-1 sm:grid-cols-3 gap-2"
+            items={ANLIEGEN}
+            value={anliegen}
+            onSelect={setAnliegen}
+          />
+        </div>
+        <StrafRechtsmittelTeil />
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       <div className="space-y-2">
         <p className="lc-overline">2 · Worum geht es?</p>
         <SelectionGrid
-          className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-2"
           items={ANLIEGEN}
           value={anliegen}
           onSelect={setAnliegen}
@@ -205,6 +230,167 @@ export function StrafZustaendigkeitTeil() {
 
         <p className="text-xs text-ink-500 pt-2 border-t border-line">
           Regelwerk verbatim am StPO-Wortlaut verifiziert (Stand 1.1.2024; Art. 301 StPO/Art. 31 StGB am 6.6.2026) — fachliche Abnahme ausstehend.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// ─── Stufe Rechtsmittel (Eingangs-Gabelung, Ausbau 6.6.2026) ────────────────
+// Reine Darstellung über lib/strafRechtsmittel.ts (§3/§4) — Decision Tree aus
+// bibliothek/recherche/stpo-rechtsmittel.md, Wortlaute am Cache verifiziert.
+
+const ENTSCHEIDTYPEN: { code: StrafEntscheidTyp; label: string }[] = [
+  { code: 'urteil_erstinstanz', label: 'Urteil eines erstinstanzlichen Gerichts (inkl. nachträgliche/Einziehungs-Entscheide)' },
+  { code: 'strafbefehl', label: 'Strafbefehl der Staatsanwaltschaft / Übertretungsstrafbehörde' },
+  { code: 'verfuegung_sta_polizei', label: 'Verfügung/Verfahrenshandlung von StA oder Polizei (inkl. Einstellung, Nichtanhandnahme)' },
+  { code: 'anderer_entscheid_gericht', label: 'Beschluss/Verfügung des erstinstanzlichen Gerichts (nicht verfahrensleitend)' },
+  { code: 'verfahrensleitend_gericht', label: 'Verfahrensleitende Anordnung des Gerichts' },
+  { code: 'zmg_haftentscheid', label: 'Haftentscheid des Zwangsmassnahmengerichts (U-/Sicherheitshaft)' },
+  { code: 'zmg_andere_zwangsmassnahme', label: 'Anderer Entscheid des Zwangsmassnahmengerichts' },
+  { code: 'haftentscheid_berufungsverfahren', label: 'Haftentscheid der Verfahrensleitung im Berufungsverfahren (Art. 233)' },
+  { code: 'rechtskraeftiges_urteil', label: 'Rechtskräftiges Urteil / rechtskräftiger Strafbefehl (Revision)' },
+  { code: 'rechtsverweigerung', label: 'Rechtsverweigerung oder Rechtsverzögerung' },
+];
+
+const ANFECHTENDE: { code: StrafAnfechtende; label: string }[] = [
+  { code: 'beschuldigte_person', label: 'Beschuldigte / verurteilte Person' },
+  { code: 'privatklaegerschaft', label: 'Privatklägerschaft' },
+  { code: 'staatsanwaltschaft', label: 'Staatsanwaltschaft' },
+  { code: 'weitere_partei', label: 'Weitere Verfahrensbeteiligte (z. B. Dritteinziehung)' },
+  { code: 'angehoerige', label: 'Angehörige (nach dem Tod der Partei, Art. 382 Abs. 3)' },
+];
+
+const ZIELE: { code: StrafAnfechtungsziel; label: string }[] = [
+  { code: 'umfassend', label: 'Entscheid umfassend (Schuld- und Strafpunkt)' },
+  { code: 'nur_sanktion', label: 'Nur die ausgesprochene Sanktion' },
+  { code: 'nur_zivilpunkt', label: 'Nur der Zivilpunkt' },
+  { code: 'nur_kosten', label: 'Nur Kosten-/Entschädigungsfolgen' },
+];
+
+const REV_GRUENDE: { code: RevisionsGrund; label: string }[] = [
+  { code: 'noven', label: 'Neue Tatsachen oder Beweismittel (Art. 410 Abs. 1 lit. a)' },
+  { code: 'widerspruch', label: 'Unverträglicher Widerspruch zu späterem Strafentscheid (lit. b)' },
+  { code: 'straftat', label: 'Einwirkung einer Straftat auf den Entscheid (lit. c)' },
+  { code: 'emrk', label: 'EGMR-Urteil (Verletzung der EMRK, Art. 410 Abs. 2)' },
+];
+
+const RM_LABEL: Record<string, string> = {
+  berufung: 'Berufung', beschwerde: 'Beschwerde', einsprache: 'Einsprache',
+  revision: 'Revision', keines: 'Kein Rechtsmittel',
+};
+
+function StrafRechtsmittelTeil() {
+  const [entscheidTyp, setEntscheidTyp] = useState<StrafEntscheidTyp>('urteil_erstinstanz');
+  const [werFichtAn, setWerFichtAn] = useState<StrafAnfechtende>('beschuldigte_person');
+  const [ziel, setZiel] = useState<StrafAnfechtungsziel>('umfassend');
+  const [uebertretung, setUebertretung] = useState(false);
+  const [nurZugunsten, setNurZugunsten] = useState(false);
+  const [revGrund, setRevGrund] = useState<RevisionsGrund>('noven');
+  const [bund, setBund] = useState(false);
+
+  const r = bestimmeStrafRechtsmittel({
+    entscheidTyp, werFichtAn, anfechtungsziel: ziel,
+    uebertretung: entscheidTyp === 'urteil_erstinstanz' ? uebertretung : undefined,
+    nurZugunstenBeschuldigte: nurZugunsten,
+    revisionsgrund: entscheidTyp === 'rechtskraeftiges_urteil' ? revGrund : undefined,
+    bundesgerichtsbarkeit: bund,
+  });
+
+  return (
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <p className="lc-overline">3 · Angefochtener Entscheid</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Field label="Entscheidtyp" hint="bestimmt das statthafte Rechtsmittel (Art. 393/398/410 StPO)">
+            <select className={inputCls} value={entscheidTyp} onChange={(e) => setEntscheidTyp(e.target.value as StrafEntscheidTyp)}>
+              {ENTSCHEIDTYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
+            </select>
+          </Field>
+          <Field label="Wer ficht an?" hint="Legitimation (Art. 381/382 StPO)">
+            <select className={inputCls} value={werFichtAn} onChange={(e) => setWerFichtAn(e.target.value as StrafAnfechtende)}>
+              {ANFECHTENDE.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
+            </select>
+          </Field>
+          <Field label="Anfechtungsziel" hint="Privatklägerschaft: Sanktion nicht anfechtbar (Art. 382 Abs. 2)">
+            <select className={inputCls} value={ziel} onChange={(e) => setZiel(e.target.value as StrafAnfechtungsziel)}>
+              {ZIELE.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
+            </select>
+          </Field>
+          {entscheidTyp === 'rechtskraeftiges_urteil' && (
+            <Field label="Revisionsgrund" hint="bestimmt die Frist (90 Tage oder unbefristet, Art. 411 Abs. 2)">
+              <select className={inputCls} value={revGrund} onChange={(e) => setRevGrund(e.target.value as RevisionsGrund)}>
+                {REV_GRUENDE.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
+              </select>
+            </Field>
+          )}
+        </div>
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          {entscheidTyp === 'urteil_erstinstanz' && (
+            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+              <input type="checkbox" checked={uebertretung} onChange={(e) => setUebertretung(e.target.checked)} />
+              Gegenstand waren ausschliesslich Übertretungen (Art. 398 Abs. 4)
+            </label>
+          )}
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" checked={nurZugunsten} onChange={(e) => setNurZugunsten(e.target.checked)} />
+            Rechtsmittel nur ZUGUNSTEN der beschuldigten Person (Art. 391 Abs. 2)
+          </label>
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" checked={bund} onChange={(e) => setBund(e.target.checked)} />
+            Bundesgerichtsbarkeit (Verfahren der Bundesanwaltschaft)
+          </label>
+        </div>
+      </div>
+
+      <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
+        <ErgebnisSprung zielId="lc-ergebnis" />
+        <LiveHeader />
+
+        <div className={`lc-card p-5 space-y-3 ${r.statthaft === 'keines' ? 'border-t-[3px] border-t-danger-500' : ''}`}>
+          <p className="lc-overline">Statthaftes Rechtsmittel</p>
+          <p className="text-body-s text-ink-900">{r.text}</p>
+          {r.statthaft !== 'keines' && (
+            <>
+              <p className="text-body-s text-ink-700"><span className="font-medium text-ink-900">Instanz:</span> {r.instanz}</p>
+              <p className="text-body-s text-ink-700"><span className="font-medium text-ink-900">Form:</span> {r.form}</p>
+              {r.kognition && <p className="text-body-s text-ink-700"><span className="font-medium text-ink-900">Kognition:</span> {r.kognition}</p>}
+            </>
+          )}
+        </div>
+
+        {r.fristen.length > 0 && (
+          <div className="lc-card p-5 space-y-2.5">
+            <p className="lc-overline">Fristen — kein Stillstand (Art. 89 Abs. 2 StPO)</p>
+            {r.fristen.map((f) => (
+              <p key={f.label} className="text-body-s text-ink-800">
+                {f.kritisch && <span className="lc-badge lc-badge-danger mr-1.5">Verwirkung</span>}
+                <span className="font-medium text-ink-900">{f.label}:</span> {f.frist} <span className="text-ink-500">({f.norm})</span>
+              </p>
+            ))}
+          </div>
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <EckdatenKachel label="Rechtsmittel" wert={RM_LABEL[r.statthaft]} sub={r.statthaft !== 'keines' ? r.normverweise[r.normverweise.length - 1]?.artikel : undefined} />
+          <EckdatenKachel label="Instanz" wert={r.statthaft === 'keines' ? '—' : r.instanz.split(' (')[0]} />
+          <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist.split(' — ')[0]} />
+        </div>
+
+        {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s">{w}</div>)}
+        {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s">{w}</div>)}
+
+        <div className="lc-card p-5 space-y-2">
+          <p className="lc-overline">Weiterzug ans Bundesgericht</p>
+          <p className="text-body-s text-ink-700">{r.bger.text}</p>
+        </div>
+
+        <div className="flex flex-wrap gap-1.5">
+          {r.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}{n.bemerkung ? ` · ${n.bemerkung}` : ''}</span>)}
+        </div>
+
+        <p className="text-xs text-ink-500 pt-2 border-t border-line">
+          Decision Tree aus dem StPO-Rechtsmittel-Dossier (6.6.2026), Wortlaute am StPO-Cache (Stand 1.1.2024) verifiziert — fachliche Abnahme ausstehend. Die Qualifikation des Entscheidtyps und das rechtlich geschützte Interesse (Art. 382 Abs. 1) sind Rechtsfragen.
         </p>
       </div>
     </div>
