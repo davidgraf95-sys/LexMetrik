@@ -83,6 +83,105 @@ describe('Fristenspiegel A.4: Spiegel-Datum == direktes Engine-Resultat (keine z
   });
 });
 
+describe('Fristenspiegel A.1: Zivilentscheid — Weiche aus bestimmeRechtsmittel, Datum aus berechneFrist (§5)', async () => {
+  const { berechneZivilentscheidsSpiegel } = await import('../lib/fristenspiegel/zivilentscheid');
+  const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+  const { berechneFrist } = await import('../lib/zpoFristen');
+  const { PRESETS } = await import('../lib/zpoPresets');
+
+  const rmZeile = (e: ReturnType<typeof berechneZivilentscheidsSpiegel>) =>
+    e.zeilen.find((z) => z.key === 'rechtsmittel')!;
+
+  it('Berufung ordentlich (SW ≥ 10k): 30 Tage MIT Stillstand — Datum == direkte Engine', () => {
+    const spiegel = berechneZivilentscheidsSpiegel({
+      zustellung: '2026-07-01', kanton: 'ZH', vermoegensrechtlich: true,
+      streitwertCHF: 50_000, verfahren: 'ordentlich_vereinfacht',
+    });
+    const direkt = berechneFrist({ ereignis: '2026-07-01', einheit: 'tage', laenge: 30, verfahren: 'ordentlich', kanton: 'ZH', fristnatur: 'gesetzlich', gerichtshinweisStillstand: true });
+    const z = rmZeile(spiegel);
+    expect(z.normRef).toBe('Art. 311 Abs. 1 ZPO');
+    expect(z.endeText).toBe(direkt.diesAdQuem);
+    expect(direkt.stillstandAktiv).toBe(true); // Zustellung 1.7. → Stillstand 15.7.–15.8. greift
+  });
+
+  it('Beschwerde (SW < 10k) und summarisch (10 T OHNE Stillstand): konsistent mit der Weiche', () => {
+    const beschwerde = berechneZivilentscheidsSpiegel({
+      zustellung: '2026-07-01', kanton: 'ZH', vermoegensrechtlich: true,
+      streitwertCHF: 5_000, verfahren: 'ordentlich_vereinfacht',
+    });
+    expect(rmZeile(beschwerde).normRef).toBe('Art. 321 Abs. 1 ZPO');
+    expect(rmZeile(beschwerde).label).toContain('Beschwerde');
+
+    const summar = berechneZivilentscheidsSpiegel({
+      zustellung: '2026-07-01', kanton: 'ZH', vermoegensrechtlich: true,
+      streitwertCHF: 50_000, verfahren: 'summarisch',
+    });
+    const direkt10 = berechneFrist({ ereignis: '2026-07-01', einheit: 'tage', laenge: 10, verfahren: 'summarisch', kanton: 'ZH', fristnatur: 'gesetzlich', gerichtshinweisStillstand: true });
+    expect(rmZeile(summar).normRef).toBe('Art. 314 Abs. 1 ZPO');
+    expect(rmZeile(summar).endeText).toBe(direkt10.diesAdQuem);
+    expect(direkt10.stillstandAktiv).toBe(false); // Art. 145 Abs. 2 lit. b
+    // Anschlussberufung im Summarverfahren unzulässig (Art. 314 Abs. 1)
+    expect(summar.zeilen.find((z) => z.key === 'anschlussberufung')!.status).toBe('ausgeschlossen');
+  });
+
+  it('familienrechtliche Summarsache (Art. 314 Abs. 2): 30 Tage, trotzdem KEIN Stillstand; Anschluss zulässig (Hinweis)', () => {
+    const e = berechneZivilentscheidsSpiegel({
+      zustellung: '2026-07-01', kanton: 'ZH', vermoegensrechtlich: false,
+      streitwertCHF: null, verfahren: 'summarisch', familienSummarsache: true,
+    });
+    const rm = bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: false, streitwertCHF: null, rmVerfahren: 'summarisch', rmFamilienSummarsache: true });
+    expect(rm.kantonalFrist!.tage).toBe(30);
+    expect(rm.kantonalFrist!.stillstand).toBe(false);
+    const direkt = berechneFrist({ ereignis: '2026-07-01', einheit: 'tage', laenge: 30, verfahren: 'summarisch', kanton: 'ZH', fristnatur: 'gesetzlich', gerichtshinweisStillstand: true });
+    expect(rmZeile(e).normRef).toBe('Art. 314 Abs. 2 ZPO');
+    expect(rmZeile(e).endeText).toBe(direkt.diesAdQuem);
+    expect(e.zeilen.find((z) => z.key === 'anschlussberufung')!.status).toBe('hinweis');
+  });
+
+  it('Spiegel-Norm steht im Weiche-Text (Schutz gegen Divergenz der Norm-Pille)', () => {
+    const faelle = [
+      { vr: true, sw: 50_000, vf: 'ordentlich_vereinfacht' as const, fam: false },
+      { vr: true, sw: 5_000, vf: 'ordentlich_vereinfacht' as const, fam: false },
+      { vr: true, sw: 50_000, vf: 'summarisch' as const, fam: false },
+      { vr: false, sw: null, vf: 'summarisch' as const, fam: true },
+    ];
+    for (const f of faelle) {
+      const e = berechneZivilentscheidsSpiegel({ zustellung: '2026-03-02', kanton: 'BE', vermoegensrechtlich: f.vr, streitwertCHF: f.sw, verfahren: f.vf, familienSummarsache: f.fam });
+      const rm = bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: f.vr, streitwertCHF: f.sw, rmVerfahren: f.vf, rmFamilienSummarsache: f.fam });
+      const artNummer = rmZeile(e).normRef.replace(' ZPO', '').replace('Art. ', '');
+      expect(rm.kantonalFrist!.text, JSON.stringify(f)).toContain(artNummer);
+    }
+  });
+
+  it('nur Dispositiv (Art. 239 ZPO): Begründungs-Frist == zpoPresets-Parameter; KEIN Rechtsmittel-Datum (§1)', () => {
+    const e = berechneZivilentscheidsSpiegel({
+      zustellung: '2026-07-01', kanton: 'ZH', vermoegensrechtlich: true,
+      streitwertCHF: 50_000, verfahren: 'ordentlich_vereinfacht', nurDispositiv: true,
+    });
+    const beg = e.zeilen.find((z) => z.key === 'begruendung')!;
+    // Parameter-Identität mit dem bestehenden Preset (§5)
+    const preset = PRESETS.find((p) => p.key === 'begruendung')!;
+    expect(preset).toMatchObject({ einheit: 'tage', laenge: 10, verfahren: 'ordentlich', fristnatur: 'gesetzlich', norm: 'Art. 239 Abs. 2 ZPO' });
+    const direkt = berechneFrist({ ereignis: '2026-07-01', einheit: preset.einheit, laenge: preset.laenge!, verfahren: preset.verfahren, kanton: 'ZH', fristnatur: preset.fristnatur });
+    expect(beg.endeText).toBe(direkt.diesAdQuem);
+    // Rechtsmittel: Hinweis ohne Datum — die Frist läuft erst ab Begründung
+    const rm = rmZeile(e);
+    expect(rm.status).toBe('hinweis');
+    expect(rm.endeISO).toBeUndefined();
+  });
+
+  it('BGer immer als abgesetzte Folgestufe ohne Datum; Determinismus (zweiter Lauf identisch)', () => {
+    const input = { zustellung: '2026-07-01', kanton: 'ZH' as const, vermoegensrechtlich: true, streitwertCHF: 20_000, verfahren: 'ordentlich_vereinfacht' as const, mietOderArbeit: true };
+    const e = berechneZivilentscheidsSpiegel(input);
+    const bger = e.zeilen.find((z) => z.key === 'bger')!;
+    expect(bger.status).toBe('hinweis');
+    expect(bger.endeISO).toBeUndefined();
+    // BGer-Schwelle 15k (Art. 74 I lit. a) via mietOderArbeit in den Warnungen
+    expect(e.warnungen.join(' ')).toContain('15');
+    expect(berechneZivilentscheidsSpiegel(input)).toEqual(e);
+  });
+});
+
 describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
   it('icsFuerFrist ist nach der Helfer-Hebung BYTE-IDENTISCH (Anker vor dem Umbau erfasst)', () => {
     const out = icsFuerFrist({

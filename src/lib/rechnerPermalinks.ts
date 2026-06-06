@@ -67,19 +67,34 @@ export function sperrfristenLink(teil: Partial<SperrfristenInput>): string {
   return '/rechner/kuendigung' + q + '#kuendigung';
 }
 
-// ── Fristenspiegel (FAHRPLAN-PRAXIS 3.1b) ──────────────────────────────────
+// ── Fristenspiegel (FAHRPLAN-PRAXIS 3.1b/3.1c) ─────────────────────────────
 
 import type { VermieterkuendigungSpiegelInput } from './fristenspiegel/vermieterkuendigung';
+import type { ZivilentscheidSpiegelInput } from './fristenspiegel/zivilentscheid';
 
-export const FSP_LINK_SPEC: PermalinkSpec<VermieterkuendigungSpiegelInput & { ereignis: string } & Record<string, unknown>> = {
-  ereignis: { p: 'ev', typ: 'str', gueltig: einerVon('vermieterkuendigung') },
+export const FSP_LINK_SPEC: PermalinkSpec<{ ereignis: string } & Partial<VermieterkuendigungSpiegelInput> & Partial<ZivilentscheidSpiegelInput> & Record<string, unknown>> = {
+  ereignis: { p: 'ev', typ: 'str', gueltig: einerVon('vermieterkuendigung', 'zivilentscheid') },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  // A.4 Vermieter-Kündigung
   zugang: { p: 'z', typ: 'str', gueltig: istISO },
   objekt: { p: 'o', typ: 'str', gueltig: einerVon('wohnung', 'geschaeftsraum') },
-  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
   kuendigungsart: { p: 'a', typ: 'str', gueltig: einerVon('ordentlich', 'zahlungsverzug', 'pflichtverletzung', 'wichtige_gruende') },
+  // A.1 Zivilentscheid (3.1c)
+  zustellung: { p: 'zu', typ: 'str', gueltig: istISO },
+  vermoegensrechtlich: { p: 'vr', typ: 'bool' },
+  streitwertCHF: { p: 'sw', typ: 'num', gueltig: (n) => Number.isFinite(n) && n >= 0 },
+  verfahren: { p: 'vf', typ: 'str', gueltig: einerVon('ordentlich_vereinfacht', 'summarisch') },
+  familienSummarsache: { p: 'fs', typ: 'bool' },
+  mietOderArbeit: { p: 'ma', typ: 'bool' },
+  nurDispositiv: { p: 'nd', typ: 'bool' },
 };
 
+/** Vereinigte Link-Felder beider Spiegel-Ereignisse; `ereignis` wählt den Zweig. */
+export type FspLink = { ereignis: string }
+  & Partial<VermieterkuendigungSpiegelInput>
+  & Partial<ZivilentscheidSpiegelInput>;
+
 /** Vorbefüllter Link in den Fristenspiegel (Brücken-Ziel, z. B. aus dem Mietrechner). */
-export function fristenspiegelLink(teil: Partial<VermieterkuendigungSpiegelInput & { ereignis: string }>): string {
-  return '/rechner/fristenspiegel' + permalinkKodieren(FSP_LINK_SPEC, teil as VermieterkuendigungSpiegelInput & { ereignis: string } & Record<string, unknown>);
+export function fristenspiegelLink(teil: Partial<FspLink>): string {
+  return '/rechner/fristenspiegel' + permalinkKodieren(FSP_LINK_SPEC, teil as FspLink & Record<string, unknown>);
 }

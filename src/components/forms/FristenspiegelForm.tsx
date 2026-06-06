@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Field, inputCls } from '../vorlagen/ui';
 import { DatumsFeld } from '../DatumsFeld';
+import { BetragsFeld } from '../BetragsFeld';
 import { IcsExportButton } from '../IcsExportButton';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { KANTONE } from '../../lib/kantone';
@@ -12,19 +13,22 @@ import {
   berechneVermieterkuendigungsSpiegel, VK_KUENDIGUNGSARTEN,
   type VermieterkuendigungSpiegelInput,
 } from '../../lib/fristenspiegel/vermieterkuendigung';
-import type { Fristnatur, SpiegelZeile } from '../../lib/fristenspiegel/typen';
+import { berechneZivilentscheidsSpiegel } from '../../lib/fristenspiegel/zivilentscheid';
+import type { Fristnatur, FristenspiegelErgebnis, SpiegelZeile } from '../../lib/fristenspiegel/typen';
 import type { Kanton } from '../../types/legal';
 
-// ─── Fristenspiegel-Form (FAHRPLAN-PRAXIS 3.1b, Pilot A.4) ──────────────────
+// ─── Fristenspiegel-Form (FAHRPLAN-PRAXIS 3.1b/3.1c) ────────────────────────
 // EIN Ereignis → ALLE parallelen Fristen als Tabelle. Reine Darstellung (§3):
 // jede Zeile kommt aus lib/fristenspiegel/* (Orchestrierer über bestehende
-// Engines); hier wird nichts gerechnet. Ereignis-Auswahl ist vorbereitet —
-// Pilot kennt die Vermieter-Kündigung (A.4), weitere Ereignisse folgen dem
-// Konzept-Dossier (A.1 Zivilentscheid, A.2 Zahlungsbefehl, …).
+// Engines); hier wird nichts gerechnet. Ereignisse gemäss Konzept-Dossier:
+// A.4 Vermieter-Kündigung (Pilot) · A.1 Zivilentscheid; weitere folgen.
 
-const EREIGNISSE = [
+type Ereignis = 'vermieterkuendigung' | 'zivilentscheid';
+
+const EREIGNISSE: { code: Ereignis; label: string }[] = [
   { code: 'vermieterkuendigung', label: 'Zugang einer Vermieter-Kündigung (Wohn-/Geschäftsräume)' },
-] as const;
+  { code: 'zivilentscheid', label: 'Zustellung eines erstinstanzlichen Zivilentscheids' },
+];
 
 const NATUR_LABEL: Record<Fristnatur, string> = {
   gesetzlich: 'gesetzliche Frist', gerichtlich: 'gerichtliche Frist',
@@ -77,16 +81,42 @@ export function FristenspiegelForm() {
     catch { return {}; }
   }, []);
 
+  const [ereignis, setEreignis] = useState<Ereignis>(start.ereignis === 'zivilentscheid' ? 'zivilentscheid' : 'vermieterkuendigung');
+  const [kanton, setKanton] = useState<Kanton>((start.kanton as Kanton) ?? 'ZH');
+
+  // ── A.4 Vermieter-Kündigung ──
   const [zugang, setZugang] = useState<string>(start.zugang ?? '');
   const [objekt, setObjekt] = useState<VermieterkuendigungSpiegelInput['objekt']>(start.objekt ?? 'wohnung');
-  const [kanton, setKanton] = useState<Kanton>((start.kanton as Kanton) ?? 'ZH');
   const [kuendigungsart, setKuendigungsart] = useState<VermieterkuendigungSpiegelInput['kuendigungsart']>(start.kuendigungsart ?? 'ordentlich');
 
-  const ergebnis = useMemo(() => {
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(zugang)) return null;
-    try { return berechneVermieterkuendigungsSpiegel({ zugang, objekt, kanton, kuendigungsart }); }
-    catch { return null; }
-  }, [zugang, objekt, kanton, kuendigungsart]);
+  // ── A.1 Zivilentscheid ──
+  const [zustellung, setZustellung] = useState<string>(start.zustellung ?? '');
+  const [vermoegensrechtlich, setVermoegensrechtlich] = useState<boolean>(start.vermoegensrechtlich ?? true);
+  const [streitwertRoh, setStreitwertRoh] = useState<string>(start.streitwertCHF != null ? String(start.streitwertCHF) : '');
+  const [verfahren, setVerfahren] = useState<'ordentlich_vereinfacht' | 'summarisch'>(start.verfahren ?? 'ordentlich_vereinfacht');
+  const [familienSummarsache, setFamilienSummarsache] = useState<boolean>(start.familienSummarsache ?? false);
+  const [mietOderArbeit, setMietOderArbeit] = useState<boolean>(start.mietOderArbeit ?? false);
+  const [nurDispositiv, setNurDispositiv] = useState<boolean>(start.nurDispositiv ?? false);
+  const streitwert = streitwertRoh.trim() === '' ? null : Number(streitwertRoh);
+
+  const istISO = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
+
+  const ergebnis: FristenspiegelErgebnis | null = useMemo(() => {
+    try {
+      if (ereignis === 'vermieterkuendigung') {
+        if (!istISO(zugang)) return null;
+        return berechneVermieterkuendigungsSpiegel({ zugang, objekt, kanton, kuendigungsart });
+      }
+      if (!istISO(zustellung)) return null;
+      if (vermoegensrechtlich && (streitwert === null || !Number.isFinite(streitwert))) return null;
+      return berechneZivilentscheidsSpiegel({
+        zustellung, kanton, vermoegensrechtlich,
+        streitwertCHF: vermoegensrechtlich ? streitwert : null,
+        verfahren, familienSummarsache: verfahren === 'summarisch' ? familienSummarsache : false,
+        mietOderArbeit, nurDispositiv,
+      });
+    } catch { return null; }
+  }, [ereignis, zugang, objekt, kanton, kuendigungsart, zustellung, vermoegensrechtlich, streitwert, verfahren, familienSummarsache, mietOderArbeit, nurDispositiv]);
 
   const sammelIcs = () => {
     if (!ergebnis) return;
@@ -100,34 +130,88 @@ export function FristenspiegelForm() {
     URL.revokeObjectURL(url);
   };
 
+  const linkWerte = () => ereignis === 'vermieterkuendigung'
+    ? { ereignis, kanton, zugang, objekt, kuendigungsart }
+    : { ereignis, kanton, zustellung, vermoegensrechtlich, streitwertCHF: vermoegensrechtlich ? streitwert ?? undefined : undefined, verfahren, familienSummarsache, mietOderArbeit, nurDispositiv };
+
   return (
     <div className="space-y-6">
-      {/* Ereignis-Auswahl (Pilot: ein Ereignis; Liste wächst mit dem Konzept) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Ereignis" hint="Was wurde zugestellt / ist eingetreten?">
-          <select value="vermieterkuendigung" onChange={() => {}} className={inputCls} aria-label="Ereignis">
+          <select value={ereignis} onChange={(e) => setEreignis(e.target.value as Ereignis)} className={inputCls} aria-label="Ereignis">
             {EREIGNISSE.map((e) => <option key={e.code} value={e.code}>{e.label}</option>)}
           </select>
         </Field>
-        <Field label="Ereignisdatum" hint="Empfang der Kündigung (absolute Empfangstheorie)">
-          <DatumsFeld value={zugang} onChange={setZugang} aria-label="Empfang der Kündigung" />
-        </Field>
-        <Field label="Mietobjekt">
-          <select value={objekt} onChange={(e) => setObjekt(e.target.value as VermieterkuendigungSpiegelInput['objekt'])} className={inputCls}>
-            <option value="wohnung">Wohnräume</option>
-            <option value="geschaeftsraum">Geschäftsräume</option>
-          </select>
-        </Field>
-        <Field label="Kündigungsart" hint="Art. 257d/257f schliessen die Erstreckung aus (Art. 272a OR)">
-          <select value={kuendigungsart} onChange={(e) => setKuendigungsart(e.target.value as VermieterkuendigungSpiegelInput['kuendigungsart'])} className={inputCls}>
-            {VK_KUENDIGUNGSARTEN.map((a) => <option key={a.code} value={a.code}>{a.label}</option>)}
-          </select>
-        </Field>
-        <Field label="Kanton" hint="Feiertage für Art. 78 OR (Werktagsverschiebung)">
-          <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)} className={inputCls}>
-            {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
-          </select>
-        </Field>
+
+        {ereignis === 'vermieterkuendigung' ? (
+          <>
+            <Field label="Ereignisdatum" hint="Empfang der Kündigung (absolute Empfangstheorie)">
+              <DatumsFeld value={zugang} onChange={setZugang} aria-label="Empfang der Kündigung" />
+            </Field>
+            <Field label="Mietobjekt">
+              <select value={objekt} onChange={(e) => setObjekt(e.target.value as VermieterkuendigungSpiegelInput['objekt'])} className={inputCls}>
+                <option value="wohnung">Wohnräume</option>
+                <option value="geschaeftsraum">Geschäftsräume</option>
+              </select>
+            </Field>
+            <Field label="Kündigungsart" hint="Art. 257d/257f schliessen die Erstreckung aus (Art. 272a OR)">
+              <select value={kuendigungsart} onChange={(e) => setKuendigungsart(e.target.value as VermieterkuendigungSpiegelInput['kuendigungsart'])} className={inputCls}>
+                {VK_KUENDIGUNGSARTEN.map((a) => <option key={a.code} value={a.code}>{a.label}</option>)}
+              </select>
+            </Field>
+            <Field label="Kanton" hint="Feiertage für Art. 78 OR (Werktagsverschiebung)">
+              <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)} className={inputCls}>
+                {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+              </select>
+            </Field>
+          </>
+        ) : (
+          <>
+            <Field label="Ereignisdatum" hint={nurDispositiv ? 'Eröffnung des Dispositivs' : 'Zustellung des begründeten Entscheids'}>
+              <DatumsFeld value={zustellung} onChange={setZustellung} aria-label="Zustellung des Entscheids" />
+            </Field>
+            <Field label="Verfahren" hint="summarisch: 10 Tage, kein Stillstand (Art. 145 Abs. 2 lit. b ZPO)">
+              <select value={verfahren} onChange={(e) => setVerfahren(e.target.value as 'ordentlich_vereinfacht' | 'summarisch')} className={inputCls}>
+                <option value="ordentlich_vereinfacht">ordentlich / vereinfacht</option>
+                <option value="summarisch">summarisch</option>
+              </select>
+            </Field>
+            <Field label="Streitwert (CHF)" hint="massgeblich: zuletzt aufrechterhaltene Rechtsbegehren (Art. 308 Abs. 2 ZPO)">
+              <div className="space-y-2">
+                <BetragsFeld value={streitwertRoh} onChange={setStreitwertRoh} className={inputCls}
+                  placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
+                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+                  <input type="checkbox" checked={!vermoegensrechtlich}
+                    onChange={(e) => setVermoegensrechtlich(!e.target.checked)} />
+                  nicht vermögensrechtliche Streitigkeit
+                </label>
+              </div>
+            </Field>
+            <Field label="Kanton" hint="Gerichtsort — Feiertage für die Endnormalisierung (Art. 142 Abs. 3 ZPO)">
+              <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)} className={inputCls}>
+                {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+              </select>
+            </Field>
+            <Field label="Weichen">
+              <div className="space-y-2">
+                {verfahren === 'summarisch' && (
+                  <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+                    <input type="checkbox" checked={familienSummarsache} onChange={(e) => setFamilienSummarsache(e.target.checked)} />
+                    familienrechtliche Summarsache (Art. 271/276/302/305 ZPO — 30 Tage, Art. 314 Abs. 2)
+                  </label>
+                )}
+                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+                  <input type="checkbox" checked={mietOderArbeit} onChange={(e) => setMietOderArbeit(e.target.checked)} />
+                  arbeits- oder mietrechtlicher Fall (BGer-Grenze CHF 15&#8239;000, Art. 74 Abs. 1 lit. a BGG)
+                </label>
+                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+                  <input type="checkbox" checked={nurDispositiv} onChange={(e) => setNurDispositiv(e.target.checked)} />
+                  nur das Dispositiv wurde eröffnet (Art. 239 ZPO — zuerst Begründung verlangen)
+                </label>
+              </div>
+            </Field>
+          </>
+        )}
       </div>
 
       {ergebnis && (
@@ -136,9 +220,9 @@ export function FristenspiegelForm() {
           <div className="border border-line rounded-md overflow-hidden">
             <div className="px-4 py-3 bg-surface border-b border-line flex flex-wrap items-baseline justify-between gap-2">
               <p className="text-body-s font-medium text-ink-700">
-                Parallele Fristen ab {ergebnis.ereignisDatumISO.split('-').reverse().join('.')}
+                Fristen ab {ergebnis.ereignisDatumISO.split('-').reverse().join('.')}
               </p>
-              <p className="lc-overline text-ink-500"><span className="num">{ergebnis.zeilen.length}</span> Fristen</p>
+              <p className="lc-overline text-ink-500"><span className="num">{ergebnis.zeilen.length}</span> Zeilen</p>
             </div>
             <div className="divide-y divide-line">
               {ergebnis.zeilen.map((z) => <ZeileAnzeige key={z.key} z={z} />)}
@@ -150,9 +234,7 @@ export function FristenspiegelForm() {
               disabled={!ergebnis.zeilen.some((z) => z.endeISO)}>
               Alle Fristen als Kalender (.ics)
             </button>
-            <LinkTeilenButton query={() => permalinkKodieren(FSP_LINK_SPEC, {
-              ereignis: 'vermieterkuendigung', zugang, objekt, kanton, kuendigungsart,
-            })} />
+            <LinkTeilenButton query={() => permalinkKodieren(FSP_LINK_SPEC, linkWerte())} />
           </div>
 
           {ergebnis.warnungen.length > 0 && (
