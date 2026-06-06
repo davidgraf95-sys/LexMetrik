@@ -1033,6 +1033,30 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Arbeitsvertrag', 'Probezeit', 'Konkurrenzverbot', 'Überstunden', '13. Monatslohn', 'Art. 319', 'Art. 335c'],
     icon: 'document',
   },
+  // Maske 2b der Kündigungs-Familie (Spez. §8-Grenze, gebaut 6.6.2026):
+  // bewusst KEINE Vollvorlage — amtliches Formular zwingend (266l Abs. 2);
+  // Checkliste + Engine-Auskunft, darum ohne schemaId/output (kein Export).
+  'kuendigung-vermieter': {
+    id: 'kuendigung-vermieter', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Miete',
+    rechtsbereich: 'privat',
+    title: 'Kündigung durch Vermieter:in (Checkliste)',
+    description: 'Bewusst keine ausfüllbare Vorlage: Die Vermieter-Kündigung von Wohn- und Geschäftsräumen braucht das amtliche kantonale Formular (Art. 266l Abs. 2 OR) – diese Checkliste führt durch die Gültigkeitsvoraussetzungen (separate Zustellung Art. 266n!) und liefert Termin, Anfechtungs- und Erstreckungsfristen als Auskunft.',
+    status: 'entwurf',
+    norms: [
+      // Art. 266l OR – amtliches Formular (Abs. 2)
+      { label: 'Art. 266l OR', url: fedlexUrl('OR', '266l'), verified: false },
+      // Art. 266n OR – separate Zustellung (Familienwohnung)
+      { label: 'Art. 266n OR', url: fedlexUrl('OR', '266n'), verified: false },
+      // Art. 266o OR – Nichtigkeit bei Formverstoss
+      { label: 'Art. 266o OR', url: fedlexUrl('OR', '266o'), verified: false },
+      // Art. 271 OR – Anfechtbarkeit (Treu und Glauben)
+      { label: 'Art. 271 OR', url: fedlexUrl('OR', '271'), verified: false },
+    ],
+    href: '/vorlagen/kuendigung-vermieter',
+    formvorschrift: 'Nur mit dem vom Kanton genehmigten amtlichen Formular gültig (Art. 266l Abs. 2 OR) – darum kein Export.',
+    related: ['kuendigung-mieter', 'mietrecht', 'zustaendigkeit'],
+    keywords: ['Kündigung', 'Vermieter', 'amtliches Formular', 'Familienwohnung', 'Art. 266l', 'Art. 266n', 'Anfechtung', 'Erstreckung'],
+  },
   // Maske 2a der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
   // gebaut 6.6.2026): Mietengine LIVE; Familienwohnung-Nichtigkeit = Blocker.
   'kuendigung-mieter': {
