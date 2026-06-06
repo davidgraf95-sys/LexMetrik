@@ -409,7 +409,7 @@ export function ZustaendigkeitForm({ onRechtswegChange }: { onRechtswegChange?: 
       {f.streitsache === 'ip_wettbewerb' && (
         <Field label="Art.-5-Materie" hint="UWG/Bund-Klagen sind nur über CHF 30 000 einzige Instanz (lit. d/f)">
           <select className={inputCls} value={f.ipUnterfall} onChange={(e) => set('ipUnterfall', e.target.value as IpUnterfall)}>
-            <option value="ip_kartell_firma">Immaterialgüter / Kartell / Firma (unbedingt, lit. a–c)</option>
+            <option value="ip_kartell_firma">IP / Kartell / Firma / übrige unbedingte Katalog-Materien (lit. a–c, e, g–i)</option>
             <option value="uwg">UWG (lit. d — über 30'000 oder Bund klagt)</option>
             <option value="klage_gegen_bund">Klage gegen den Bund (lit. f — nur über 30'000)</option>
           </select>

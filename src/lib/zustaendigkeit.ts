@@ -86,7 +86,7 @@ export type DeliktUnterfall = 'allgemein' | 'verkehrsunfall' | 'ungerechtfertigt
 export type PersoenlichkeitUnterfall = 'verletzung' | 'gegendarstellung' | 'datenschutz' | 'gewaltschutz';
 
 /** Art.-5-Materie (Wortlaut-genau, Stufe-2-Doppelcheck 6.6.2026):
- *  lit. a–c u. a. UNBEDINGT einzige Instanz; lit. d (UWG) über 30 000 ODER
+ *  lit. a–c, e, g–i UNBEDINGT einzige Instanz; lit. d (UWG) über 30 000 ODER
  *  wenn der BUND sein Klagerecht ausübt (streitwertunabhängig!); lit. f
  *  (Klagen gegen den Bund) NUR über 30 000 — keine Klagerecht-Alternative. */
 export type IpUnterfall = 'ip_kartell_firma' | 'uwg' | 'klage_gegen_bund';
@@ -164,7 +164,7 @@ const N_37: Normverweis = { artikel: 'Art. 37 ZPO', bemerkung: 'Schadenersatz be
 const N_38: Normverweis = { artikel: 'Art. 38 ZPO', bemerkung: 'Motorfahrzeug-/Fahrradunfälle — Beklagtensitz oder Unfallort' };
 const N_20: Normverweis = { artikel: 'Art. 20 ZPO', bemerkung: 'Persönlichkeits-/Datenschutz — Wohnsitz/Sitz einer der Parteien' };
 const N_40: Normverweis = { artikel: 'Art. 40 ZPO', bemerkung: 'Gesellschaftsrechtliche Verantwortlichkeit — Beklagtensitz oder Sitz der Gesellschaft' };
-const N_5: Normverweis = { artikel: 'Art. 5 ZPO', bemerkung: 'Einzige kantonale Instanz (IP, Kartell, Firma, UWG > 30 000, …)' };
+const N_5: Normverweis = { artikel: 'Art. 5 ZPO', bemerkung: 'Einzige kantonale Instanz (lit. a–c, e, g–i unbedingt; UWG/Bund-Klagen bedingt)' };
 const N_17: Normverweis = { artikel: 'Art. 17 ZPO', bemerkung: 'Gerichtsstandsvereinbarung (Schrift-/Textform; im Zweifel ausschliesslich)' };
 const N_18: Normverweis = { artikel: 'Art. 18 ZPO', bemerkung: 'Einlassung begründet die Zuständigkeit des angerufenen Gerichts' };
 const N_2: Normverweis = { artikel: 'Art. 2 ZPO', bemerkung: 'Vorbehalt Staatsverträge (LugÜ) und IPRG bei internationalen Verhältnissen' };
@@ -188,7 +188,7 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   const streitwertunabhaengigVereinfacht = mieteSchutz || !!input.glgBetroffen;
 
   const istGewaltschutz = input.streitsache === 'persoenlichkeit' && input.persoenlichkeitUnterfall === 'gewaltschutz';
-  // Art. 5 ZPO: lit. a–c unbedingt; lit. d (UWG)/f (Bund) NUR über 30 000
+  // Art. 5 ZPO: lit. a–c, e, g–i unbedingt; lit. d (UWG)/f (Bund) NUR über 30 000
   // (H1-Fix 6.6.2026). Bei uwg_oder_bund ≤30k läuft der ordentliche Weg.
   const ipU = input.ipUnterfall ?? 'ip_kartell_firma';
   const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'
@@ -322,7 +322,11 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       zwischenergebnis: 'einzige kantonale Instanz (Art. 5 ZPO)',
       normen: [N_5, N_4],
     });
-    weichen.push('Einordnung unter den Katalog von Art. 5 Abs. 1 lit. a–i ZPO prüfen (IP/Kartell/Firma unbedingt; UWG über CHF 30 000 ODER bei Klagerecht des Bundes; Klagen gegen den Bund nur über CHF 30 000).');
+    weichen.push('Einordnung unter den Katalog von Art. 5 Abs. 1 lit. a–i ZPO prüfen — UNBEDINGT einzige Instanz: lit. a–c (IP/Kartell/Firma) sowie lit. e (Kernenergiehaftpflicht), g (Sonderuntersuchung Art. 697c–697hbis OR), h (KAG/FinfraG/FINIG) und i (Wappen-/Rotkreuz-/UNO-Zeichenschutz); BEDINGT: lit. d (UWG über CHF 30 000 ODER bei Klagerecht des Bundes) und lit. f (Klagen gegen den Bund nur über CHF 30 000).');
+    // Art.-5-Nachuntersuchung 6.6.2026 (Auftrag David): Abs. 2 war bisher
+    // nirgends ausgewiesen — die einzige Instanz ist AUCH für vorsorgliche
+    // Massnahmen VOR Rechtshängigkeit zuständig (Wortlaut am Cache verifiziert).
+    weichen.push('Vorsorgliche Massnahmen VOR Eintritt der Rechtshängigkeit sind ebenfalls bei der einzigen kantonalen Instanz zu beantragen (Art. 5 Abs. 2 ZPO) — nicht beim ordentlichen Massnahmegericht.');
   } else {
     if (input.streitsache === 'ip_wettbewerb') {
       if (sw !== null) {
@@ -589,7 +593,7 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
     throw new Error('Streitwert muss eine Zahl ≥ 0 sein.');
   }
   const sw = input.vermoegensrechtlich ? input.streitwertCHF : null;
-  // Art. 5 ZPO: lit. a–c unbedingt; lit. d (UWG)/f (Bund) NUR über 30 000
+  // Art. 5 ZPO: lit. a–c, e, g–i unbedingt; lit. d (UWG)/f (Bund) NUR über 30 000
   // (H1-Fix 6.6.2026). Bei uwg_oder_bund ≤30k läuft der ordentliche Weg.
   const ipU = input.ipUnterfall ?? 'ip_kartell_firma';
   const istEinzigeInstanz = input.streitsache === 'ip_wettbewerb'

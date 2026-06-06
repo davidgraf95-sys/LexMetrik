@@ -27,6 +27,13 @@ export type BehoerdenAdresse = {
   plzOrt: string;
   stand: string;       // Verifikationsdatum
   quelle: string;      // amtliche Quelle
+  // Direkte amtliche Detailseite der Stelle (additiv, optional; nur https,
+  // wörtlich aus Quelle/Dossier). Wird nur befüllt, wenn die BS-Quelle eine
+  // Detail-URL WÖRTLICH ausweist (§7/§8: keine konstruierten Pfade). Die
+  // BS-Dossiers nennen die Quelle nur als Domain «staatskalender.bs.ch» ohne
+  // belegte Detail-URL → Feld bleibt für die 3 BS-Stellen leer; die UI fällt
+  // auf die Quelle-Ebene zurück.
+  url?: string;        // amtliche Detailseite (sofern wörtlich belegt)
 };
 
 export type EingabeArt = 'schlichtungsbehoerde_zivil' | 'schlichtungsstelle_miete' | 'schlichtungsstelle_diskriminierung';

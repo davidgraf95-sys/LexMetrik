@@ -26,6 +26,10 @@ export interface SchlichtungsAdresse {
   /** Bei 'liste': wofür diese Stelle zuständig ist (Region/Bezirk). */
   zustaendigFuer?: string;
   hinweis?: string;
+  /** Direkte amtliche Detailseite DIESER Stelle (additiv, optional). Nur
+   *  https; wörtlich aus den bibliothek-Dossiers. Fehlt das Feld, fällt die
+   *  UI auf die Kantons-url bzw. die Quelle-Ebene zurück. */
+  url?: string;
 }
 
 export type SchlichtungsAufloesung =
@@ -36,13 +40,17 @@ export type SchlichtungsAufloesung =
 export interface KantonSchlichtung {
   stand: string;
   quelle: string;
+  /** Kantonale Übersichts-/Verzeichnisseite als Fallback-Link, wenn einzelne
+   *  Stellen (modus 'liste'/'zentral') keine eigene Detail-url tragen. Nur
+   *  https; wörtlich aus den bibliothek-Dossiers (additiv, optional). */
+  url?: string;
   ordentlich: SchlichtungsAufloesung;
   miete?: SchlichtungsAufloesung;   // paritätische Stelle Miete/Pacht (Art. 200 Abs. 1)
   glg?: SchlichtungsAufloesung;     // paritätische Stelle GlG (Art. 200 Abs. 2)
 }
 
-const A = (name: string, strasse: string, plzOrt: string, zustaendigFuer?: string, hinweis?: string): SchlichtungsAdresse =>
-  ({ name, strasse, plzOrt, ...(zustaendigFuer ? { zustaendigFuer } : {}), ...(hinweis ? { hinweis } : {}) });
+const A = (name: string, strasse: string, plzOrt: string, zustaendigFuer?: string, hinweis?: string, url?: string): SchlichtungsAdresse =>
+  ({ name, strasse, plzOrt, ...(zustaendigFuer ? { zustaendigFuer } : {}), ...(hinweis ? { hinweis } : {}), ...(url ? { url } : {}) });
 
 // ─── Kanonische BS-Schlichtungsadressen (Single Source of Truth, §5) ─────────
 // Strasse + PLZ/Ort der drei Basler Schlichtungsstellen existieren nur HIER.
@@ -64,7 +72,8 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: {
       modus: 'liste', hinweis: 'je Bezirk eine paritätische Stelle (beim Bezirksgericht)',
       stellen: [
-        A('SB Miete Bezirk Zürich', 'Wengistrasse 30', '8004 Zürich', 'Bezirk Zürich', 'seit 9.3.2026 (Rückumzug)'),
+        // url aus schlichtungsbehoerden-zh-vollerfassung.md (Stand 5.6.2026)
+        A('SB Miete Bezirk Zürich', 'Wengistrasse 30', '8004 Zürich', 'Bezirk Zürich', 'seit 9.3.2026 (Rückumzug)', 'https://www.gerichte-zh.ch/organisation/bezirksgerichte/bezirksgericht-zuerich/kontakt/adressen-telefonnummern/mietgericht-und-schlichtungsbehoerde'),
         A('SB Miete (BezGer Winterthur)', 'Lindstrasse 10', '8400 Winterthur', 'Bezirk Winterthur'),
         A('SB Miete (BezGer Bülach)', 'Spitalstrasse 13', '8180 Bülach', 'Bezirk Bülach'),
         A('SB Miete (BezGer Dietikon)', 'Bahnhofplatz 10', '8953 Dietikon', 'Bezirk Dietikon'),
@@ -78,7 +87,8 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
         A('SB Miete (BezGer Uster)', 'Gerichtsstrasse 17', '8610 Uster', 'Bezirk Uster'),
       ],
     },
-    glg: { modus: 'zentral', stelle: A('Schlichtungsbehörde nach Gleichstellungsgesetz', 'Wengistrasse 30', '8004 Zürich', 'ganzer Kanton') },
+    // url aus schlichtungsbehoerden-zh-vollerfassung.md (Stand 5.6.2026)
+    glg: { modus: 'zentral', stelle: A('Schlichtungsbehörde nach Gleichstellungsgesetz', 'Wengistrasse 30', '8004 Zürich', 'ganzer Kanton', undefined, 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-zuerich/schlichtungsbehoerde') },
   },
   BE: {
     stand: '5.6.2026', quelle: 'zsg.justice.be.ch (4 Detailseiten)',
@@ -198,6 +208,9 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   },
   GR: {
     stand: '5.6.2026', quelle: 'justiz-gr.ch (Vermittlerämter/Mietsachen) — 11/11 bestätigt',
+    // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026):
+    // kantonale Verzeichnisseite der Vermittlerämter (keine Stellen-Detailseiten belegt)
+    url: 'https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/',
     ordentlich: {
       modus: 'liste', hinweis: 'ein Vermittleramt je Region (GOG GR Art. 85 ff.)',
       stellen: [
@@ -233,11 +246,14 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
       modus: 'liste', hinweis: '11 Uffici di conciliazione in materia di locazione',
       stellen: [
         A('Ufficio di conciliazione Chiasso', 'Piazza Bernasconi 1', '6830 Chiasso', 'Chiasso/Balerna/Breggia/Coldrerio/Morbio Inf./Vacallo'),
-        A('Ufficio di conciliazione Mendrisio', 'Via Municipio 13', '6850 Mendrisio', 'Mendrisiotto (übrige)'),
-        A('Ufficio di conciliazione Lugano (Est/Ovest)', 'Via Sala 13', '6963 Pregassona', 'Lugano'),
+        // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
+        A('Ufficio di conciliazione Mendrisio', 'Via Municipio 13', '6850 Mendrisio', 'Mendrisiotto (übrige)', undefined, 'https://mendrisio.ch/en/home/a-proposito-di-mendrisio/chi-siamo/dicasteri-e-uffici/dicastero-istituzioni-e-risorse/ufficio-conciliazione.html'),
+        // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
+        A('Ufficio di conciliazione Lugano (Est/Ovest)', 'Via Sala 13', '6963 Pregassona', 'Lugano', undefined, 'https://www.lugano.ch/la-mia-citta/sportelli-in-citta/ufficio-conciliazione/'),
         A('Ufficio di conciliazione Agno', 'Piazza Colonnello Vicari 1', '6982 Agno', 'Malcantone'),
         A('Ufficio di conciliazione Massagno', 'Via Motta 53', '6900 Massagno', 'Massagno/Umgebung'),
-        A('Ufficio di conciliazione Locarno', 'Via Trevani 1a', '6600 Locarno', 'Locarnese'),
+        // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
+        A('Ufficio di conciliazione Locarno', 'Via Trevani 1a', '6600 Locarno', 'Locarnese', undefined, 'https://www.locarno.ch/it/ufficio-conciliazione-in-materia-di-locazione'),
         A('Ufficio di conciliazione Minusio', 'Via San Gottardo 60, CP 1670', '6648 Minusio', 'Minusio/Umgebung'),
         A('Ufficio di conciliazione Bellinzona', 'Via Lugano 1, CP 2694', '6501 Bellinzona', 'Bellinzona'),
         A('Ufficio di conciliazione Giubiasco', 'Piazza Grande 3', '6512 Giubiasco', 'Giubiasco/Umgebung'),
@@ -266,7 +282,8 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   VS: {
     stand: '5.6.2026', quelle: 'vs.ch (Liste juges de commune; SICT bail à loyer)',
     ordentlich: { modus: 'verzeichnis', beschreibung: 'Juge de commune je Gemeinde (122 Gemeinden; Anlaufstelle = Gemeindeverwaltung)', url: 'https://www.vs.ch/web/tribunaux/liste-de-juges-et-vice-juges-de-commune' },
-    miete: { modus: 'zentral', stelle: A('Commission cantonale de conciliation en matière de bail à loyer', 'Av. du Midi 7', '1950 Sion', 'ganzer Kanton', 'PLZ 1951 ebenfalls amtlich in Gebrauch') },
+    // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
+    miete: { modus: 'zentral', stelle: A('Commission cantonale de conciliation en matière de bail à loyer', 'Av. du Midi 7', '1950 Sion', 'ganzer Kanton', 'PLZ 1951 ebenfalls amtlich in Gebrauch', 'https://www.vs.ch/en-GB/web/sict/bail-a-loyer') },
   },
   NE: {
     stand: '5.6.2026', quelle: 'ne.ch/PJNE (Chambre de conciliation, 3 Standorte; in Bail-Sachen paritätisch besetzt)',

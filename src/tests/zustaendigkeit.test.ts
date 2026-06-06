@@ -362,6 +362,52 @@ describe('Zuständigkeit — Praxis-Umbau: Kostenfreiheit (Art. 113 Abs. 2) + Fa
     expect(ZUSTAENDIGKEIT_KOSTEN.SG.schlichtung.hinweis).toContain('30.6.2026');
     expect(ZUSTAENDIGKEIT_KOSTEN.JU.schlichtung.text).toContain('Punkte');
   });
+  it('Nicht vermögensrechtlich: alle 26 Kantone haben Rahmen ODER Auffang-Klausel samt Erlass-§ (Dossier 6.6.2026)', async () => {
+    const { ZUSTAENDIGKEIT_KOSTEN } = await import('../data/zustaendigkeitKosten');
+    const { KANTONE } = await import('../lib/kantone');
+    // 26/26 tragen das Feld; die 7 Auffang-Kantone mit Klausel-Text statt erfundenem Rahmen
+    const auffang = ['SZ', 'FR', 'SH', 'AR', 'AI', 'SG', 'GR'] as const;
+    for (const k of KANTONE) {
+      const e = ZUSTAENDIGKEIT_KOSTEN[k].nichtVermoegensrechtlich;
+      expect(e, k).toBeDefined();
+      expect(e!.text.length, k).toBeGreaterThan(3);
+      expect(e!.erlass, k).toMatch(/§|Art\./);
+      if ((auffang as readonly string[]).includes(k)) {
+        // §8: kein erfundener Zahlenrahmen, sondern Bemessungs-/Auffang-Klausel
+        expect(e!.text, k).toContain('kein');
+      }
+    }
+    // Stichproben wörtlich gegen das Dossier
+    expect(ZUSTAENDIGKEIT_KOSTEN.ZH.nichtVermoegensrechtlich!.text).toContain("300–13'000");
+    expect(ZUSTAENDIGKEIT_KOSTEN.BE.nichtVermoegensrechtlich!.text).toContain("200–10'000");
+    expect(ZUSTAENDIGKEIT_KOSTEN.AG.nichtVermoegensrechtlich!.text).toContain("500–10'000");
+    expect(ZUSTAENDIGKEIT_KOSTEN.BS.nichtVermoegensrechtlich!.text).toContain("200–250'000");
+    expect(ZUSTAENDIGKEIT_KOSTEN.GL.nichtVermoegensrechtlich!.text).toContain("20'000");
+    expect(ZUSTAENDIGKEIT_KOSTEN.NE.nichtVermoegensrechtlich!.text).toContain("500–50'000");
+    // Auffang-Kantone: Klausel, kein Zahlenrahmen suggeriert
+    expect(ZUSTAENDIGKEIT_KOSTEN.SZ.nichtVermoegensrechtlich!.text).toContain('kein eigener Rahmen');
+    expect(ZUSTAENDIGKEIT_KOSTEN.SG.nichtVermoegensrechtlich!.hinweis).toContain('30.6.2026');
+  });
+  it('Familie/Scheidung: eigener Rahmen nur wo das Dossier ihn ausweist; NE als Formel-Text mit %', async () => {
+    const { ZUSTAENDIGKEIT_KOSTEN } = await import('../data/zustaendigkeitKosten');
+    const { KANTONE } = await import('../lib/kantone');
+    // genau die Kantone mit eigenem Familien-/Scheidungsrahmen laut Dossier
+    const mitFamilie = ['ZH', 'BE', 'LU', 'UR', 'OW', 'NW', 'ZG', 'BS', 'BL', 'AR', 'GR', 'TI', 'VS', 'NE'] as const;
+    for (const k of KANTONE) {
+      const hat = ZUSTAENDIGKEIT_KOSTEN[k].familie !== undefined;
+      expect(hat, k).toBe((mitFamilie as readonly string[]).includes(k));
+      if (hat) expect(ZUSTAENDIGKEIT_KOSTEN[k].familie!.erlass, k).toMatch(/§|Art\./);
+    }
+    // Stichproben wörtlich
+    expect(ZUSTAENDIGKEIT_KOSTEN.BL.familie!.text).toContain("200–15'000"); // Scheidung lit. i
+    expect(ZUSTAENDIGKEIT_KOSTEN.NW.familie!.text).toContain("800–4'000"); // Scheidung Art. 7 Abs. 3
+    expect(ZUSTAENDIGKEIT_KOSTEN.BE.familie!.text).toContain("600–12'000"); // Art. 41
+    expect(ZUSTAENDIGKEIT_KOSTEN.ZG.familie!.text).toContain("1'600–12'000"); // § 13
+    expect(ZUSTAENDIGKEIT_KOSTEN.AR.familie!.text).toContain("500–6'000"); // Scheidung Art. 14/16
+    // NE: Formel-Text (kein Rahmen — enthält Prozent)
+    expect(ZUSTAENDIGKEIT_KOSTEN.NE.familie!.text).toContain('%');
+    expect(ZUSTAENDIGKEIT_KOSTEN.NE.familie!.hinweis).toContain('Formel');
+  });
 });
 
 describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + Art. 74 BGG verbatim)', () => {
@@ -467,5 +513,22 @@ describe('Erlass-Links (Anordnung 6.6.2026)', () => {
       expect(ERLASS_LINKS[k].gericht, k).toMatch(/^https:\/\//);
     }
     expect(GEBV_SCHKG_URL).toContain('fedlex.admin.ch');
+  });
+});
+
+describe('Art.-5-Nachuntersuchung 6.6.2026 (Auftrag David)', () => {
+  it('Abs. 2: vorsorgliche Massnahmen vor Rechtshängigkeit → Weiche bei einziger Instanz', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 50_000 });
+    expect(r.weichen.some((w) => w.includes('Art. 5 Abs. 2') && w.includes('Rechtshängigkeit'))).toBe(true);
+    // und NICHT im ordentlichen Weg (UWG ≤ 30k):
+    const o = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 10_000, ipUnterfall: 'uwg' });
+    expect(o.weichen.some((w) => w.includes('Art. 5 Abs. 2'))).toBe(false);
+  });
+  it('Weiche zählt die unbedingten lit. e/g–i auf (Katalog-Vollständigkeit)', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 50_000 });
+    const w = r.weichen.join('\n');
+    expect(w).toContain('Kernenergiehaftpflicht');
+    expect(w).toContain('697c');
+    expect(w).toContain('FinfraG');
   });
 });
