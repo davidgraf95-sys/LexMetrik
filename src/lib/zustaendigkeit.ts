@@ -366,7 +366,16 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       if (sw !== null) {
         warnungen.push(`${ipU === 'uwg' ? 'UWG-Klage' : 'Klage gegen den Bund'} mit Streitwert bis CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')}${ipU === 'uwg' ? ' (und ohne Klagerecht des Bundes)' : ''}: KEINE einzige kantonale Instanz (Art. 5 Abs. 1 lit. ${ipU === 'uwg' ? 'd' : 'f'} ZPO) — es gilt der ordentliche Weg inklusive Schlichtung und kantonalem Rechtsmittelzug.`);
       } else {
-        weichen.push('Art.-5-Schwelle offen: Ohne bezifferten Streitwert ist nicht bestimmbar, ob die einzige kantonale Instanz greift (über CHF 30 000) — Streitwert beziffern.');
+        // M-3-Fix Bug-Check 6.6.2026: sw === null heisst hier NICHT vermögens-
+        // rechtlich (fehlender Streitwert bei vermögensrechtlichen Fällen wirft
+        // in der Eingabe-Validierung) — die frühere Aufforderung «Streitwert
+        // beziffern» war irreführend: Bei einer echten nicht vermögensrecht-
+        // lichen Klage (Unterlassung/Beseitigung als Regelfall) GIBT es keinen
+        // Streitwert, die Schwellen-Alternative von Art. 5 Abs. 1 lit. d/f
+        // («sofern der Streitwert mehr als 30 000 Franken beträgt», Wortlaut am
+        // Fedlex-Cache 20250101 verifiziert) kann nie erfüllt sein. Ehrlich
+        // offenlegen statt Eingabe einfordern (§8).
+        weichen.push(`Nicht vermögensrechtliche ${ipU === 'uwg' ? 'UWG-Klage' : 'Klage gegen den Bund'}: Die Streitwert-Alternative von Art. 5 Abs. 1 lit. ${ipU === 'uwg' ? 'd' : 'f'} ZPO (über CHF 30 000) kann ohne Streitwert nicht erfüllt sein${ipU === 'uwg' ? ' — als zweite Alternative bliebe nur das Klagerecht des Bundes' : ''}. Ob die einzige kantonale Instanz auf nicht vermögensrechtliche Klagen dieser Art anwendbar ist, ist nicht abschliessend geklärt — Zuordnung gesondert prüfen; berechnet wird der ordentliche Weg.`);
       }
     }
     rechenweg.push({

@@ -607,6 +607,17 @@ describe('Art.-5-Schwelle (H1-Fix, Semantik-Audit 6.6.2026)', () => {
     const ip = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 5_000 });
     expect(ip.schlichtung.obligatorisch).toBe(false); // lit. a–c unbedingt (Default)
   });
+  it('UWG/Bund NICHT vermögensrechtlich: ehrliche Offenlegung statt «Streitwert beziffern» (M-3-Fix Bug-Check 6.6.2026)', () => {
+    // Echte nicht vermögensrechtliche Klage (Unterlassung/Beseitigung) hat
+    // keinen Streitwert — die Schwellen-Alternative von lit. d/f kann nie
+    // erfüllt sein; eine Beziffern-Aufforderung wäre irreführend (§8).
+    const uwg = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: false, streitwertCHF: null, ipUnterfall: 'uwg' });
+    expect(uwg.weichen.some((w) => w.includes('beziffern'))).toBe(false);
+    expect(uwg.weichen.some((w) => w.includes('Art. 5 Abs. 1 lit. d') && w.includes('gesondert prüfen'))).toBe(true);
+    const bund = bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: false, streitwertCHF: null, ipUnterfall: 'klage_gegen_bund' });
+    expect(bund.weichen.some((w) => w.includes('Art. 5 Abs. 1 lit. f'))).toBe(true);
+    expect(bund.weichen.some((w) => w.includes('Klagerecht des Bundes'))).toBe(false); // lit. f kennt keine Bund-Alternative
+  });
   it('N1: Konsument-Flag wirkt nur bei geldforderung', () => {
     const d = bestimmeZustaendigkeit({ streitsache: 'delikt', vermoegensrechtlich: true, streitwertCHF: 50_000, konsumentenvertrag: true });
     expect(d.oertlich.normen.some((n) => n.artikel.includes('36'))).toBe(true);
