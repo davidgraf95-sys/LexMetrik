@@ -7,6 +7,12 @@ import { berechneSperrfristen } from '../lib/sperrfristen';
 import { berechneVerzugszins } from '../lib/verzugszins';
 import { berechneErbteilung } from '../lib/erbteilung';
 import { berechneMietkuendigung } from '../lib/mietrecht';
+// Coverage-Audit 6.6.2026: bislang fehlende PDF-Domains
+import { berechneTeuerung } from '../lib/teuerung';
+import { berechneVerjaehrung } from '../lib/verjaehrung';
+import { berechneGewaehrleistung } from '../lib/gewaehrleistung';
+import { zustaendigkeitErgebnis } from '../lib/zustaendigkeit';
+import { allgemeineFristErgebnis } from '../lib/allgemeineFrist';
 import { buildPdfModel, modelText, type PdfDocConfig, type PdfModel } from '../lib/pdf/pdfModel';
 import { winAnsiSicher, istWinAnsiSicher, typografie, datumNormalisieren } from '../lib/pdf/winansi';
 import { zpoPdfCitations, zpoPdfErgebnis } from '../lib/pdf/zpoPdf';
@@ -130,6 +136,78 @@ const mietrechtConfig = (): PdfDocConfig => ({
     'Rechtsberatung. Ortsübliche Termine sind Tatfrage; verbindlich ist die Schlichtungsbehörde.',
 });
 
+// ── Coverage-Audit 6.6.2026: die 5 bislang ungetesteten Export-Domains ──────
+
+const teuerungConfig = (): PdfDocConfig => ({
+  title: 'LIK-Teuerungsrechner',
+  domain: 'teuerung',
+  fileBase: 'Teuerung',
+  inputs: { 'Modus': 'Indexmiete', 'Betrag (CHF)': '2500', 'Zeitraum': '2007-10 – 2012-03' },
+  sections: [{
+    titel: 'Indexmiete (Art. 269b OR / Art. 17 VMWG)',
+    ergebnis: berechneTeuerung({ modus: 'indexmiete', betrag: 2500, vonMonat: '2007-10', bisMonat: '2012-03' }),
+  }],
+  disclaimer:
+    'Automatisierte Orientierungsberechnung der LIK-Teuerung – keine Rechtsberatung. ' +
+    'Indexmiete setzt einen mindestens fünfjährigen Mietvertrag voraus (Art. 269b OR).',
+});
+
+const verjaehrungConfig = (): PdfDocConfig => ({
+  title: 'Verjährungs-Berechnung',
+  domain: 'verjaehrung',
+  fileBase: 'Verjaehrung',
+  inputs: { 'Regime': 'Ordentlich (Art. 127 OR)', 'Beginn': '2020-01-15', 'Stichtag': '2026-06-04' },
+  sections: [{
+    titel: 'Verjährung (Art. 127 ff. OR)',
+    ergebnis: berechneVerjaehrung({ regime: 'ordentlich', beginnRelativ: '2020-01-15', stichtag: '2026-06-04', kanton: 'ZH' }),
+  }],
+  disclaimer:
+    'Automatisierte Orientierungsberechnung der Verjährung (Art. 127 ff. OR) – keine Rechtsberatung. ' +
+    'Unterbrechungs- und Stillstandsgründe sind im Einzelfall zu prüfen (Art. 134/135 OR).',
+});
+
+const gewaehrleistungConfig = (): PdfDocConfig => ({
+  title: 'Gewährleistung & Mängelrüge',
+  domain: 'gewaehrleistung',
+  fileBase: 'Gewaehrleistung',
+  inputs: { 'Objekt': 'Bewegliche Sache', 'Übergabe': '2025-06-02', 'Mangel': 'offen' },
+  sections: [{
+    titel: 'Gewährleistung (Art. 197 ff. OR)',
+    ergebnis: berechneGewaehrleistung({ vertragstyp: 'fahrniskauf', vertragsdatum: '2025-05-01', objekt: 'beweglich', uebergabe: '2025-06-02', mangelTyp: 'offen', kanton: 'ZH', stichtag: '2026-06-04' }),
+  }],
+  disclaimer:
+    'Automatisierte Orientierungsberechnung zu Rüge- und Verjährungsfristen der Gewährleistung ' +
+    '(Art. 197 ff. OR) – keine Rechtsberatung. Vertragliche Abweichungen gehen vor (Art. 199 OR).',
+});
+
+const zustaendigkeitConfig = (): PdfDocConfig => ({
+  title: 'Zuständigkeit & Verfahren (ZPO)',
+  domain: 'zustaendigkeit',
+  fileBase: 'Zustaendigkeit',
+  inputs: { 'Streitsache': 'Geldforderung', 'Streitwert (CHF)': '15000' },
+  sections: [{
+    titel: 'Zuständigkeit & Verfahrensart (ZPO)',
+    ergebnis: zustaendigkeitErgebnis({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 15_000 }),
+  }],
+  disclaimer:
+    'Automatisierte Orientierung zu Verfahrensart, Schlichtung und Gerichtsstand (ZPO) – keine ' +
+    'Rechtsberatung. Das konkrete kantonale Gericht richtet sich nach kantonalem Recht (Art. 4 ZPO).',
+});
+
+const allgemeineFristConfig = (): PdfDocConfig => ({
+  title: 'Allgemeine Frist',
+  domain: 'allgemeine-frist',
+  fileBase: 'Fristenrechner',
+  inputs: { 'Startdatum (Ereignis)': '26.03.2026', 'Fristlänge': '10 Tage', 'Feiertage verschieben': 'ja (ZH)' },
+  sections: [{
+    titel: 'Allgemeine Frist (Art. 77/78 OR)',
+    ergebnis: allgemeineFristErgebnis({ start: '2026-03-26', laenge: 10, einheit: 'tage', wochenendeVerschieben: true, feiertageVerschieben: true, kanton: 'ZH' }),
+  }],
+  disclaimer:
+    'Rechnerische Orientierungshilfe nach Art. 77/78 OR – keine Rechtsberatung. ' +
+    'Massgeblich sind die am Erfüllungsort anerkannten Feiertage.',
+});
+
 const alleConfigs: [string, PdfDocConfig][] = [
   ['zpo-tagesfrist', zpoConfig({})],
   ['zpo-monatsfrist-sommer', zpoConfig({ ereignis: '2025-07-01', einheit: 'monate', laenge: 1 })],
@@ -138,6 +216,11 @@ const alleConfigs: [string, PdfDocConfig][] = [
   ['schkg-rechtsvorschlag', schkgConfig()],
   ['erbteilung', erbrechtConfig()],
   ['mietrecht', mietrechtConfig()],
+  ['teuerung', teuerungConfig()],
+  ['verjaehrung', verjaehrungConfig()],
+  ['gewaehrleistung', gewaehrleistungConfig()],
+  ['zustaendigkeit', zustaendigkeitConfig()],
+  ['allgemeine-frist', allgemeineFristConfig()],
 ];
 
 const modelle: [string, PdfDocConfig, PdfModel][] = alleConfigs.map(([name, cfg]) => [name, cfg, buildPdfModel(cfg, FIX)]);
