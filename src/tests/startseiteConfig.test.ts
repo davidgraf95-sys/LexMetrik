@@ -68,7 +68,7 @@ describe('Stufen-Zuteilung (tier)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -180,10 +180,11 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // gebauten Rechtswege SchKG/Straf des Zuständigkeitsrechners erhalten eigene
   // Gebiets-Einstiegskarten (schkg-/straf-zustaendigkeit, entwurf) → 23.
   // Deklarierte Erweiterung Kündigungs-Masken 6.6.2026: Vorlage 9
-  // «Kündigung durch Arbeitnehmer:in» (Maske 1a, free) → 24.
-  it('verfügbar = status !== geplant; Regressionszählung 24 (Stand 6.6.2026, Kündigungs-Maske 1a)', () => {
+  // «Kündigung durch Arbeitnehmer:in» (Maske 1a, free) → 24; Vorlage 10
+  // «Kündigung durch Arbeitgeber:in» (Maske 1b, pro) → 25.
+  it('verfügbar = status !== geplant; Regressionszählung 25 (Stand 6.6.2026, Kündigungs-Masken 1a+1b)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(24);
+    expect(verf.length).toBe(25);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });

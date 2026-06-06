@@ -1227,14 +1227,30 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
 
   // – Arbeit —
+  // Maske 1b der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
+  // gebaut 6.6.2026): Sperrfristen-Engine LIVE; 'nichtig' = harter Blocker.
   'kuendigung-arbeitgeber': {
     id: 'kuendigung-arbeitgeber', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
-    title: 'Kündigung durch den Arbeitgeber',
-    description: 'Kündigungsschreiben des Arbeitgebers mit den üblichen Bestandteilen.',
-    status: 'geplant', norms: [],
-    related: ['kuendigung-sperrfristen', 'arbeitszeugnis'],
-    keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben'],
+    title: 'Kündigung durch Arbeitgeber:in',
+    description: 'Kündigungsschreiben mit Live-Prüfung der Sperrfristen (Art. 336c OR): nichtige Kündigungen werden blockiert, Hemmung und Erstreckung fliessen ins Beendigungsdatum ein; Begründung und Freistellung optional.',
+    status: 'entwurf',
+    norms: [
+      // Art. 335 OR – ordentliche Kündigung / Begründung auf Verlangen
+      { label: 'Art. 335 OR', url: fedlexUrl('OR', '335'), verified: false },
+      // Art. 335c OR – Fristen und Termine (inkl. Abs. 3 Vaterschaftsurlaub)
+      { label: 'Art. 335c OR', url: fedlexUrl('OR', '335c'), verified: false },
+      // Art. 336c OR – Sperrfristen (Kündigung zur Unzeit)
+      { label: 'Art. 336c OR', url: fedlexUrl('OR', '336c'), verified: false },
+      // Art. 324 OR – Lohn bei Freistellung (Annahmeverzug, Anrechnung)
+      { label: 'Art. 324 OR', url: fedlexUrl('OR', '324'), verified: false },
+    ],
+    href: '/vorlagen/kuendigung-arbeitgeber',
+    schemaId: 'kuendigung-arbeitgeber',
+    formvorschrift: 'Formfrei (vorbehältlich vertraglicher Schriftform) — unterschreiben und an die Wohnadresse zustellen.',
+    output: ['pdf', 'docx'],
+    related: ['kuendigung-sperrfristen', 'kuendigung-arbeitnehmer', 'arbeitszeugnis'],
+    keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben', 'Sperrfrist', 'Art. 336c', 'Freistellung', 'Beendigungsdatum'],
   },
   // Maske 1a der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
   // gebaut 6.6.2026): Beendigungsdatum LIVE aus lib/kuendigungsfrist.ts.
