@@ -190,9 +190,9 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // Pilot A.4 Vermieter-Kündigung) → 30; + Streitwert (Quick-Win B.9) → 31;
   // + Gründungs-Checklisten GmbH/AG (Auftrag David 6.6.2026, Spez.
   // recherche/gmbh-gruendung.md Teil 5 + ag-gruendung.md; §8 ohne Export) → 33.
-  it('verfügbar = status !== geplant; Regressionszählung 33 (Stand 6.6.2026, + Gründungs-Checklisten)', () => {
+  it('verfügbar = status !== geplant; Regressionszählung 34 (Stand 7.6.2026, + Betreibungskosten GebV)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(33);
+    expect(verf.length).toBe(34);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });

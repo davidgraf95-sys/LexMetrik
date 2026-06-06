@@ -168,17 +168,18 @@ Verfahrensschritt + Forderungs-/Erlöshöhe → Ausgaben: amtliche Gebühr je Sc
 (+ Auslagen-Hinweis).
 
 ## 2. Normbasis — GebV SchKG SR 281.35
-- **WICHTIG / AS 2025 630 — Vorbehalt aufgelöst:** Die im Verfallsregister
-  notierte Sorge, AS 2025 630 ändere die GebV-Beträge per 1.1.2026, **bestätigt
-  sich NICHT.** AS 2025 630 betrifft die **SchKG-Änderung Art. 8a Abs. 3 lit. d
-  (Auskunftssperre)** — Frist auf 5 Jahre, reduziertes Beweismass — und **keine
-  Gebührenbeträge** (Medienmitteilung Bundesrat 20.8.2025; BBl 2025 1096;
-  swissblawg 8/2025). Die letzte betragsmässige GebV-Revision war die Reform
-  **in Kraft seit 1.1.2022** (BR-Beschluss 28.4.2021): neu CHF 8 für persönliche
-  Abholung, kostenlose Rückzugs-Protokollierung, höhere Maximal-Summarkosten.
-  → Die Cache-Staffeln (Stand 1.1.2022) sind die **aktuell geltenden Beträge**;
-  die 1.1.2026-Konsolidierung übernimmt sie unverändert. (Gegenprüfung am
-  signierten 1.1.2026-PDF vor «geprüft» empfohlen — kein HTML publiziert.)
+- **KORRIGIERT 7.6.2026 (Tiefenrecherche vor Rechner-Bau; Vollbeleg:
+  `gebv-schkg-kostenrechner.md` §A):** Die frühere Auflösung dieses
+  Vorbehalts war im ERGEBNIS richtig, in der BEGRÜNDUNG falsch:
+  `eli/oc/2025/630` ist NICHT die SchKG-Art.-8a-Änderung, sondern die
+  **Änderung der GebV SchKG selbst vom 15.10.2025** (in Kraft 1.1.2026) —
+  sie ändert aber ausschliesslich **Art. 15a/15b** (eSchKG-Verbund-interne
+  Gebühren: 60 Rp./Begehren; Beitritt 400; jährlich 140/380). Alle
+  rechner-relevanten Staffeln sind am Filestore-HTML der Konsolidierung
+  **1.1.2026** (existiert entgegen früherer Annahme!) Wert für Wert mit
+  dem Stand 1.1.2022 identisch verifiziert (Voll-Diff aller 66 Artikel).
+  Letzte betragsändernde Revision der Rechner-Tatbestände: V vom 28.4.2021
+  (AS 2021 259, in Kraft 1.1.2022).
 
 ### Gebührenstaffeln (wörtlich aus Cache, Stand 1.1.2022)
 

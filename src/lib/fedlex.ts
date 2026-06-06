@@ -33,6 +33,11 @@ export const FEDLEX = {
   // 1.7.2025/1.1.2026 existieren nicht; geprüft 6.6.2026, Gründungs-Masken;
   // Dossiers bibliothek/recherche/gesellschaftsgruendung.md + gmbh-/ag-…).
   HRegV: 'https://www.fedlex.admin.ch/eli/cc/2007/686/de',
+  // GebV SchKG SR 281.35 — ELI via Fedlex-SPARQL verifiziert; Anker art_16/
+  // 20/30/48 etc. empirisch am Filestore-HTML (Konsolidierung 20260101 =
+  // neuste, keine künftige Fassung; geprüft 7.6.2026, Betreibungskosten-
+  // Rechner; Dossier bibliothek/recherche/gebv-schkg-kostenrechner.md).
+  GebVSchKG: 'https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

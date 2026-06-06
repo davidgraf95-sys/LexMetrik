@@ -31,6 +31,7 @@ import { RechnerTeuerung } from '../src/pages/RechnerTeuerung';
 import { RechnerZustaendigkeit } from '../src/pages/RechnerZustaendigkeit';
 import { RechnerFristenspiegel } from '../src/pages/RechnerFristenspiegel';
 import { RechnerStreitwert } from '../src/pages/RechnerStreitwert';
+import { RechnerGebvKosten } from '../src/pages/RechnerGebvKosten';
 
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
@@ -60,6 +61,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['RechnerZustaendigkeit', RechnerZustaendigkeit],
   ['RechnerFristenspiegel', RechnerFristenspiegel],
   ['RechnerStreitwert', RechnerStreitwert],
+  ['RechnerGebvKosten', RechnerGebvKosten],
 ];
 
 let fehler = 0;
