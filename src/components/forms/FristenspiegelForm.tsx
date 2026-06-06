@@ -17,6 +17,7 @@ import { berechneZivilentscheidsSpiegel } from '../../lib/fristenspiegel/zivilen
 import { berechneZahlungsbefehlsSpiegel } from '../../lib/fristenspiegel/zahlungsbefehl';
 import { berechneKlagebewilligungsSpiegel } from '../../lib/fristenspiegel/klagebewilligung';
 import { berechneErbgangsSpiegel } from '../../lib/fristenspiegel/erbgang';
+import { berechneAgKuendigungsSpiegel } from '../../lib/fristenspiegel/agKuendigung';
 import type { Fristnatur, FristenspiegelErgebnis, SpiegelZeile } from '../../lib/fristenspiegel/typen';
 import type { Kanton } from '../../types/legal';
 
@@ -26,13 +27,14 @@ import type { Kanton } from '../../types/legal';
 // Engines); hier wird nichts gerechnet. Ereignisse gemäss Konzept-Dossier:
 // A.4 Vermieter-Kündigung (Pilot) · A.1 Zivilentscheid; weitere folgen.
 
-type Ereignis = 'vermieterkuendigung' | 'zivilentscheid' | 'zahlungsbefehl' | 'klagebewilligung' | 'erbgang';
+type Ereignis = 'vermieterkuendigung' | 'zivilentscheid' | 'zahlungsbefehl' | 'klagebewilligung' | 'erbgang' | 'agkuendigung';
 
 const EREIGNISSE: { code: Ereignis; label: string }[] = [
   { code: 'zivilentscheid', label: 'Zustellung eines erstinstanzlichen Zivilentscheids' },
   { code: 'zahlungsbefehl', label: 'Zustellung des Zahlungsbefehls' },
   { code: 'klagebewilligung', label: 'Zustellung der Klagebewilligung' },
   { code: 'vermieterkuendigung', label: 'Zugang einer Vermieter-Kündigung (Wohn-/Geschäftsräume)' },
+  { code: 'agkuendigung', label: 'Arbeitgeber-Kündigung: Ende der Kündigungsfrist (Art. 336b OR)' },
   { code: 'erbgang', label: 'Kenntnis des Erbgangs / Todesfall' },
 ];
 const EREIGNIS_CODES = EREIGNISSE.map((e) => e.code);
@@ -123,6 +125,7 @@ export function FristenspiegelForm() {
       if (ereignis === 'zahlungsbefehl') return berechneZahlungsbefehlsSpiegel({ zustellung, kanton });
       if (ereignis === 'klagebewilligung') return berechneKlagebewilligungsSpiegel({ zustellung, kanton, mietOderPacht });
       if (ereignis === 'erbgang') return berechneErbgangsSpiegel({ datum: zustellung, kanton, erbenstellung });
+      if (ereignis === 'agkuendigung') return berechneAgKuendigungsSpiegel({ beendigung: zustellung });
       if (vermoegensrechtlich && (streitwert === null || !Number.isFinite(streitwert))) return null;
       return berechneZivilentscheidsSpiegel({
         zustellung, kanton, vermoegensrechtlich,
@@ -151,6 +154,7 @@ export function FristenspiegelForm() {
       case 'zahlungsbefehl': return { ereignis, kanton, zustellung };
       case 'klagebewilligung': return { ereignis, kanton, zustellung, mietOderPacht };
       case 'erbgang': return { ereignis, kanton, zustellung, erbenstellung };
+      case 'agkuendigung': return { ereignis, zustellung };
       default: return { ereignis, kanton, zustellung, vermoegensrechtlich, streitwertCHF: vermoegensrechtlich ? streitwert ?? undefined : undefined, verfahren, familienSummarsache, mietOderArbeit, nurDispositiv };
     }
   };
@@ -234,9 +238,10 @@ export function FristenspiegelForm() {
           </>
         ) : (
           <>
-            <Field label="Ereignisdatum"
+            <Field label={ereignis === 'agkuendigung' ? 'Ende der Kündigungsfrist' : 'Ereignisdatum'}
               hint={ereignis === 'zahlungsbefehl' ? 'Zustellung des Zahlungsbefehls'
                 : ereignis === 'klagebewilligung' ? 'Eröffnung/Zustellung der Klagebewilligung'
+                : ereignis === 'agkuendigung' ? 'Beendigung des Arbeitsverhältnisses — im Sperrfristen-Rechner berechnen'
                 : erbenstellung === 'gesetzlich' ? 'Kenntnis vom Tod des Erblassers (Art. 567 Abs. 2 ZGB)'
                 : 'Zugang der amtlichen Mitteilung von der Verfügung (Art. 567 Abs. 2 ZGB)'}>
               <DatumsFeld value={zustellung} onChange={setZustellung} aria-label="Ereignisdatum" />
@@ -257,12 +262,14 @@ export function FristenspiegelForm() {
                 </select>
               </Field>
             )}
-            <Field label="Kanton"
-              hint={ereignis === 'zahlungsbefehl' ? 'staatlich anerkannte Feiertage (Endregel)' : 'Feiertage für die Werktags-/Endregel'}>
-              <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)} className={inputCls}>
-                {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
-              </select>
-            </Field>
+            {ereignis !== 'agkuendigung' && (
+              <Field label="Kanton"
+                hint={ereignis === 'zahlungsbefehl' ? 'staatlich anerkannte Feiertage (Endregel)' : 'Feiertage für die Werktags-/Endregel'}>
+                <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)} className={inputCls}>
+                  {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+                </select>
+              </Field>
+            )}
           </>
         )}
       </div>

@@ -81,7 +81,7 @@ type FspFelder = { ereignis: string }
   & Partial<ErbgangSpiegelInput>;
 
 export const FSP_LINK_SPEC: PermalinkSpec<FspFelder & Record<string, unknown>> = {
-  ereignis: { p: 'ev', typ: 'str', gueltig: einerVon('vermieterkuendigung', 'zivilentscheid', 'zahlungsbefehl', 'klagebewilligung', 'erbgang') },
+  ereignis: { p: 'ev', typ: 'str', gueltig: einerVon('vermieterkuendigung', 'zivilentscheid', 'zahlungsbefehl', 'klagebewilligung', 'erbgang', 'agkuendigung') },
   kanton: { p: 'k', typ: 'str', gueltig: istKanton },
   // A.4 Vermieter-Kündigung
   zugang: { p: 'z', typ: 'str', gueltig: istISO },

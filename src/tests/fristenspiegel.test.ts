@@ -255,6 +255,32 @@ describe('Fristenspiegel A.2/A.7/A.6: Preset-Parameter-Identität (§5) + Multi-
   });
 });
 
+describe('Fristenspiegel A.3: AG-Kündigung (Art. 336b OR) — Anker-Datum + 180 Tage, §2-Gate', async () => {
+  const { berechneAgKuendigungsSpiegel } = await import('../lib/fristenspiegel/agKuendigung');
+  const { berechneAllgemeineFrist } = await import('../lib/allgemeineFrist');
+
+  it('Einsprache = Anker-Datum selbst (keine Arithmetik); Klage = 180 Tage via allgemeineFrist (roh)', () => {
+    const e = berechneAgKuendigungsSpiegel({ beendigung: '2026-08-31' });
+    const einsprache = e.zeilen.find((z) => z.key === 'einsprache')!;
+    expect(einsprache.endeISO).toBe('2026-08-31');
+    expect(einsprache.endeText).toBe('31.08.2026');
+    const direkt = berechneAllgemeineFrist({ start: '2026-08-31', laenge: 180, einheit: 'tage', wochenendeVerschieben: false, feiertageVerschieben: false });
+    const klage = e.zeilen.find((z) => z.key === 'klage')!;
+    expect(klage.endeText).toBe(direkt.endDatum);
+    expect(klage.endeISO).toBe(direkt.endDatumISO);
+  });
+
+  it('§2-Gate: Klagefrist nur BEDINGT (gültige Einsprache); Verschiebungs-Vorbehalt offengelegt', () => {
+    const e = berechneAgKuendigungsSpiegel({ beendigung: '2026-08-31' });
+    const klage = e.zeilen.find((z) => z.key === 'klage')!;
+    expect(klage.status).toBe('bedingt');
+    expect(klage.bedingung).toContain('Einsprache');
+    expect(e.warnungen.join(' ')).toContain('VORHER');
+    expect(e.annahmen.join(' ')).toContain('Sperrfristen');
+    expect(berechneAgKuendigungsSpiegel({ beendigung: '2026-08-31' })).toEqual(e);
+  });
+});
+
 describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
   it('icsFuerFrist ist nach der Helfer-Hebung BYTE-IDENTISCH (Anker vor dem Umbau erfasst)', () => {
     const out = icsFuerFrist({
