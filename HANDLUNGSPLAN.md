@@ -8,13 +8,11 @@ löschen, Stand in STRUKTUR.md spiegeln.
 
 ## A · Entscheide, die nur David treffen kann (blockieren anderes)
 
-1. **Push (freigegeben) + DEPLOY-Ja:** Stand `dfab948` ist gepusht; seither
-   9 NEUE ungepushte Commits (Wizard-Dialog, Vorlagen-Verweis, Design,
-   Masken 1a+1b, Katalog-Umzüge, 2 Logik-Check-Fixes). Suite 772 grün,
-   Logik-Check des Wizard-Umbaus bestanden (1 HOCH-Lint-Befund gefixt).
-   **Prod-Deploy steht weiter aus** (Berechtigungs-Gate hat «ja» nur als
-   Push-Freigabe gewertet — Deploy separat bestätigen oder
-   `! npx vercel --prod` tippen).
+1. **Push (freigegeben, erneut fällig) + DEPLOY-Ja:** 15 ungepushte
+   Commits seit `dfab948` (Wizard-Dialog · Vorlagen-Verweis · Design ·
+   Kündigungs-Familie komplett · Spruchkörper · Bug-Check-Fixes).
+   Suite 787 grün, 2 Bug-Check-Agents bestanden. **Prod-Deploy steht
+   weiter aus** — Deploy separat bestätigen oder `! npx vercel --prod`.
 2. **Hosting & Zahlungsmittel (vor Login-/Pro-Phase):** Migration zu CH-Host
    (Empfehlung Infomaniak), Domain **lexmetrik.ch früh registrieren**;
    Zahlungssystem offen (PayPal raus) — Payrexx/Datatrans/TWINT prüfen.
@@ -36,12 +34,16 @@ löschen, Stand in STRUKTUR.md spiegeln.
    («Streitwert ergänzen»); Prefill-Brücke für klage-vereinfacht (neue
    Kodier-Funktion in lib) — s. D.
 
-5. **Kündigungs-Masken** (Spez. `recherche/kuendigungs-masken.md`):
-   ✅ M1–M9 geteilte Module · ✅ 1a Arbeitnehmer:in (free, `9165094`) ·
-   ✅ 1b Arbeitgeber:in (Sperrfristen-Blocker, `1714319`) ·
-   🔨 2a Mieter:in (Schema fertig im Working Tree — Seite/Karte/Tests offen) ·
-   ⬜ 3 Allgemein+Presets (VVG-Verifikations-TODOs offen!) ·
-   ⬜ 2b Vermieter-Checkliste (§8-Grenze).
+5. ~~Kündigungs-Masken~~ → **FAMILIE KOMPLETT** (6.6.2026 nachts, je mit
+   Bug-Check): 1a AN free `9165094` · 1b AG Sperrfristen-Blocker `1714319`
+   · 2a Mieter Familienwohnung-Blocker `c5a1bc7` · 3 Vertrag/Presets mit
+   verifizierten VVG-Wortlauten `9a33c65` · 2b Vermieter-CHECKLISTE
+   (§8-Grenze, kein Export) `0af1215`. Katalog 28 verfügbare Einträge.
+5a. **Rechtsmittel-Spruchkörper** ✅ verdrahtet `e749583` (nur belegte:
+   VD nach Rechtsmittel-Typ; GE/TI/NE/JU ein Spruchkörper; Rest ehrlich
+   offen). OFFEN daraus: ZG-Beschwerde-Schnitt bestätigen · BGer-
+   Abteilungsregel (Art. 33/34 BGerR) am Fedlex-Wortlaut verifizieren,
+   dann in bestimmeRechtsmittel (Dossier §3, Rechtsöffnungs-Falle!).
 6. **Untermietvertrag** — Spezifikation `recherche/untermietvertrag.md`
    (baufertig; Weiche in mietvertrag.ts existiert schon).
 7. **Eheschutz + GlG in der Zuständigkeits-Engine** — Dossier
