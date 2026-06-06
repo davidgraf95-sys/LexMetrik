@@ -76,8 +76,15 @@ löschen, Stand in STRUKTUR.md spiegeln.
    nicht verdrahtet: Sonderfristen Art. 100 Abs. 2/3 (SchKG-Aufsicht 10 T.,
    Wechsel 5 T.), Streitwertberechnung Art. 51 (Kapitalisierung 20×),
    Schiedsgericht Art. 77, Anschluss an den SchKG-Rechtsweg.
-9. **Quick-Wins** (recherche/INDEX-Priorisierung): Streitwert-Rechner ·
-   GebV-SchKG-Kostenrechner · 336b-Fristen · Vorlage «Mahnung» (free).
+9. **Quick-Wins** (recherche/INDEX-Priorisierung) — 3 von 4 GEBAUT 7.6.2026:
+   ~~Streitwert-Rechner~~ → `/rechner/streitwert` (`80c78e4`, Art. 91–94a
+   inkl. Teilklage Rev. 2025; Ermessen nie geschätzt) ·
+   ~~GebV-SchKG-Kostenrechner~~ → `/rechner/betreibungskosten` (`b86c8b9`,
+   nach Tiefenrecherche: Dossier gebv-schkg-kostenrechner.md, Tarif Wert
+   für Wert am 1.1.2026-Stand verifiziert; AS-2025-630/522-Aufklärung) ·
+   ~~336b-Fristen~~ → im Fristenspiegel A.3 (Anker beendigungISO,
+   §2-Gate; `54c585b`) — eigener Rechner nur noch bei Bedarf ·
+   OFFEN: Vorlage «Mahnung» (free; or-vertragsvorlagen.md baufertig).
 9a. ~~Gründungs-Masken GmbH/AG~~ → **GEBAUT** (6./7.6.2026, Auftrag David;
    `fb0b2f1`): Checklisten nach 2b-Muster (§8: Beurkundungszwang → kein
    Export) auf 3 neuen Recherche-Dossiers (gesellschaftsgruendung ·
