@@ -77,9 +77,22 @@ sind QUERSCHNITTE — also §10-Rahmenarbeit, kein Einzelbau.
       Lücke 336b (2 Preset-Zeilen, Aufwand S). Empfehlung: eigener Rechner
       /rechner/fristenspiegel; Datenmodell FristenspiegelDef; Sammel-.ics
       additiv (icsSammel neben icsFuerFrist).
-- [ ] 3.1b Rahmen bauen (§10) → PILOT A.4 Vermieter-Kündigung (mietrecht
-      liefert anfechtungBis/erstreckungBis fertig — null Rechtslogik) →
-      A.1 Zivilentscheid → A.2 Zahlungsbefehl → Rest; A.3 zuletzt (nach
-      336b-Preset). §2-Gate beachten: 336b-II-Klagefrist nur als BEDINGTE
-      Zeile (setzt gültige Einsprache voraus); BGer/Aberkennung als
-      abgesetzte Folgestufen.
+- [x] 3.1b RAHMEN + PILOT A.4 — erledigt 6.6.2026 nachts:
+      `lib/fristenspiegel/` (typen.ts + vermieterkuendigung.ts als reiner
+      mietrecht-Konsument, EIN Engine-Aufruf) · `icsSammel()` (n VEVENTs in
+      EINEM VCALENDAR; Einzel-Export per Anker-Test BYTE-identisch) ·
+      eigener Rechner `/rechner/fristenspiegel` (Katalog-Karte «Übergreifende
+      Werkzeuge», Szenarien-Roadmap auf der Karte) · FSP_LINK_SPEC
+      (Permalink/Brücken-Ziel) · 12 Tests inkl. Konzept-Golden-Beweis
+      «Spiegel-Datum == direktes Engine-Resultat» über 6 Fälle + 26 Kantone ×
+      4 Kündigungsarten; Pilot-Annahme bewiesen (Art.-273-Daten unabhängig
+      von der Termin-Quelle). Erstreckungs-Ausschluss 257d/257f als
+      «ausgeschlossen»-Zeile (Art. 272a); Formgültigkeit/befristetes
+      Verhältnis offengelegt (§8).
+- [ ] 3.1c Andocken weiterer Ereignisse: A.1 Zivilentscheid (zpoPresets,
+      Streitwert/summarisch-Weichen, Folgestufe BGer abgesetzt) →
+      A.2 Zahlungsbefehl (Dual Wartefrist/Verwirkung) → A.6 Erbgang
+      (Multi-Trigger) / A.7 Klagebewilligung → A.3 AG-Kündigung zuletzt
+      (erst 336b-Presets als Quick-Win; §2-Gate: 336b-II-Klagefrist nur als
+      BEDINGTE Zeile). Brücke «In den Fristenspiegel» aus dem Mietrechner
+      (fristenspiegelLink existiert).

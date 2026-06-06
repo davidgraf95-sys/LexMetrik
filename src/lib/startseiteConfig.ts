@@ -593,6 +593,26 @@ const KARTEN: Record<string, CalculatorCard> = {
     keywords: ['Frist', 'Fristende', 'Tagerechner', 'Art. 77', 'Art. 78', 'Feiertag', 'dies a quo'],
     icon: 'clock',
   },
+  fristenspiegel: {
+    id: 'fristenspiegel', modus: 'rechner', art: 'werkzeug', tier: 'pro', rechtsgebiet: 'Übergreifende Werkzeuge',
+    rechtsbereich: 'uebergreifend',
+    title: 'Fristenspiegel (ein Ereignis · alle Fristen)',
+    description: 'Ein auslösendes Ereignis startet mehrere Fristen zugleich – der Spiegel zeigt sie als Tabelle mit Fristnatur, Norm und Kalender-Export, gerechnet von den bestehenden Fach-Engines (er rechnet nichts selbst). Pilot: Zugang einer Vermieter-Kündigung mit Anfechtungs- und Erstreckungsfrist; weitere Ereignisse (Zivilentscheid, Zahlungsbefehl, Erbgang) folgen.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 273 OR', url: fedlexUrl('OR', '273'), verified: false },
+    ],
+    href: '/rechner/fristenspiegel',
+    related: ['mietrecht', 'tagerechner', 'kuendigung-vermieter'],
+    keywords: ['Fristenspiegel', 'parallele Fristen', 'Kündigung erhalten', 'Anfechtung', 'Erstreckung', 'Art. 273', 'Fristenkontrolle'],
+    szenarien: [
+      { label: 'Vermieter-Kündigung: Anfechtung & Erstreckung (Art. 273 OR)', status: 'entwurf' },
+      { label: 'Zivilentscheid: Berufung, Beschwerde, Begründung', status: 'geplant' },
+      { label: 'Zahlungsbefehl: Rechtsvorschlag & Fortsetzung', status: 'geplant' },
+      { label: 'Erbgang: Ausschlagung, Inventar, Klagen', status: 'geplant' },
+    ],
+    icon: 'clock',
+  },
   'ferien-checker': {
     id: 'ferien-checker', modus: 'rechner', art: 'werkzeug', tier: 'pro', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',

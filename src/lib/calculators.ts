@@ -57,6 +57,9 @@ export const CALCULATORS: Calculator[] = [
   { slug: 'tagerechner', titel: 'Fristenrechner (Tage · ZPO · SchKG)', kategorie: 'Übergreifend',
     kurzbeschrieb: 'Ein Fristenrechner für die meisten Verfahren: Allgemein nach Art. 77/78 OR (Ereignistag zählt nicht, Monatsende-Klemmung, Werktag-Verschiebung), Zivilprozess mit Stillstand (Art. 145 ZPO) und Betreibung mit Betreibungsferien/Rechtsstillstand (Art. 56 ff. SchKG) – drei getrennte Engines, ein Einstieg.',
     normen: ['Art. 77 OR', 'Art. 78 OR', 'Art. 145 ZPO', 'Art. 56 SchKG'], status: 'entwurf', icon: 'clock' },
+  { slug: 'fristenspiegel', titel: 'Fristenspiegel (ein Ereignis · alle Fristen)', kategorie: 'Übergreifend',
+    kurzbeschrieb: 'Ein auslösendes Ereignis startet mehrere Fristen zugleich – der Spiegel zeigt sie als Tabelle, gerechnet von den bestehenden Fach-Engines (er rechnet nichts selbst). Pilot: Zugang einer Vermieter-Kündigung (Anfechtung und Erstreckung, Art. 273 OR); weitere Ereignisse folgen.',
+    normen: ['Art. 273 OR'], status: 'entwurf', icon: 'clock' },
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {

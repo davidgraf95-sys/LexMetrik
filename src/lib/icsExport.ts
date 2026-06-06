@@ -8,16 +8,36 @@ import { formatISO } from './datumsUtils';
 // denselben Export nutzen. Deterministisch: DTSTAMP/UID leiten sich aus dem
 // Fristdatum ab, kein Date.now() (§2). Ganztages-Event am Fristende mit
 // optionalem Vorfrist-Alarm.
+//
+// Etappe 3.1b (Fristenspiegel): esc/falte/VEVENT-Bau aus der Closure auf
+// Modulebene gehoben (§6, byte-identischer Einzel-Export — Anker-Test) und
+// icsSammel() ergänzt: MEHRERE VEVENTs in EINEM VCALENDAR (Sammel-Export).
 
-export function icsFuerFrist(opts: { titel: string; endISO: string; beschreibung?: string; vorfristTage?: number }): string {
+export type IcsFrist = { titel: string; endISO: string; beschreibung?: string; vorfristTage?: number };
+
+const esc = (t: string) => t.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+
+// RFC 5545 §3.1: Zeilen über 75 Oktette falten (CRLF + Leerzeichen).
+const falte = (zeile: string): string => {
+  const enc = new TextEncoder();
+  if (enc.encode(zeile).length <= 75) return zeile;
+  let rest = zeile;
+  const teile: string[] = [];
+  while (enc.encode(rest).length > 75) {
+    let schnitt = 75 - (teile.length ? 1 : 0);
+    while (schnitt > 1 && enc.encode(rest.slice(0, schnitt)).length > 75 - (teile.length ? 1 : 0)) schnitt--;
+    teile.push(rest.slice(0, schnitt));
+    rest = rest.slice(schnitt);
+  }
+  teile.push(rest);
+  return teile.join('\r\n ');
+};
+
+// Ein VEVENT-Block (ohne Kalender-Rahmen) — von Einzel- und Sammel-Export geteilt.
+function veventZeilen(opts: IcsFrist): string[] {
   const kompakt = opts.endISO.replace(/-/g, '');
   const folgetag = formatISO(addDays(parseISO(opts.endISO), 1)).replace(/-/g, '');
-  const esc = (t: string) => t.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
-  const zeilen = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//LexMetrik//Fristenrechner//DE',
-    'CALSCALE:GREGORIAN',
+  return [
     'BEGIN:VEVENT',
     // Titel-Token kann bei rein nicht-lateinischen Titeln leer werden →
     // deterministischer Fallback 'frist' (Review-Befund 6.6.2026, kosmetisch)
@@ -31,22 +51,23 @@ export function icsFuerFrist(opts: { titel: string; endISO: string; beschreibung
       ? ['BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${esc(`Vorfrist: ${opts.titel}`)}`, `TRIGGER:-P${opts.vorfristTage}D`, 'END:VALARM']
       : []),
     'END:VEVENT',
-    'END:VCALENDAR',
   ];
-  // RFC 5545 §3.1: Zeilen über 75 Oktette falten (CRLF + Leerzeichen).
-  const falte = (zeile: string): string => {
-    const enc = new TextEncoder();
-    if (enc.encode(zeile).length <= 75) return zeile;
-    let rest = zeile;
-    const teile: string[] = [];
-    while (enc.encode(rest).length > 75) {
-      let schnitt = 75 - (teile.length ? 1 : 0);
-      while (schnitt > 1 && enc.encode(rest.slice(0, schnitt)).length > 75 - (teile.length ? 1 : 0)) schnitt--;
-      teile.push(rest.slice(0, schnitt));
-      rest = rest.slice(schnitt);
-    }
-    teile.push(rest);
-    return teile.join('\r\n ');
-  };
+}
+
+const KALENDER_KOPF = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//LexMetrik//Fristenrechner//DE', 'CALSCALE:GREGORIAN'];
+
+export function icsFuerFrist(opts: IcsFrist): string {
+  const zeilen = [...KALENDER_KOPF, ...veventZeilen(opts), 'END:VCALENDAR'];
+  return zeilen.map(falte).join('\r\n') + '\r\n';
+}
+
+/**
+ * Sammel-Export: alle Fristen eines Fristenspiegels als EIN Kalender mit
+ * n Events (Fahrplan-Praxis 3.1b). UIDs bleiben deterministisch je Frist;
+ * Einträge ohne gültiges ISO-Ende werden übersprungen (defensiv).
+ */
+export function icsSammel(eintraege: IcsFrist[]): string {
+  const gueltig = eintraege.filter((e) => /^\d{4}-\d{2}-\d{2}$/.test(e.endISO));
+  const zeilen = [...KALENDER_KOPF, ...gueltig.flatMap(veventZeilen), 'END:VCALENDAR'];
   return zeilen.map(falte).join('\r\n') + '\r\n';
 }

@@ -66,3 +66,20 @@ export function sperrfristenLink(teil: Partial<SperrfristenInput>): string {
   const q = permalinkKodieren(KSP_LINK_SPEC, teil as SperrfristenInput & Record<string, unknown>);
   return '/rechner/kuendigung' + q + '#kuendigung';
 }
+
+// ── Fristenspiegel (FAHRPLAN-PRAXIS 3.1b) ──────────────────────────────────
+
+import type { VermieterkuendigungSpiegelInput } from './fristenspiegel/vermieterkuendigung';
+
+export const FSP_LINK_SPEC: PermalinkSpec<VermieterkuendigungSpiegelInput & { ereignis: string } & Record<string, unknown>> = {
+  ereignis: { p: 'ev', typ: 'str', gueltig: einerVon('vermieterkuendigung') },
+  zugang: { p: 'z', typ: 'str', gueltig: istISO },
+  objekt: { p: 'o', typ: 'str', gueltig: einerVon('wohnung', 'geschaeftsraum') },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  kuendigungsart: { p: 'a', typ: 'str', gueltig: einerVon('ordentlich', 'zahlungsverzug', 'pflichtverletzung', 'wichtige_gruende') },
+};
+
+/** Vorbefüllter Link in den Fristenspiegel (Brücken-Ziel, z. B. aus dem Mietrechner). */
+export function fristenspiegelLink(teil: Partial<VermieterkuendigungSpiegelInput & { ereignis: string }>): string {
+  return '/rechner/fristenspiegel' + permalinkKodieren(FSP_LINK_SPEC, teil as VermieterkuendigungSpiegelInput & { ereignis: string } & Record<string, unknown>);
+}

@@ -186,10 +186,11 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // (1a AN free · 1b AG · 2a Mieter · 3 Vertrag/Presets · 2b Vermieter-
   // Checkliste [§8-Grenze, ohne Export]) → 28. Familie KOMPLETT.
   // + Untermietvertrag-Einstieg (Plan B.6: Deep-Link in die Mietvertrags-
-  // Weiche, gleiches Schema) → 29.
-  it('verfügbar = status !== geplant; Regressionszählung 29 (Stand 6.6.2026, + Untermietvertrag)', () => {
+  // Weiche, gleiches Schema) → 29; + Fristenspiegel (FAHRPLAN-PRAXIS 3.1b,
+  // Pilot A.4 Vermieter-Kündigung) → 30.
+  it('verfügbar = status !== geplant; Regressionszählung 30 (Stand 6.6.2026, + Fristenspiegel)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(29);
+    expect(verf.length).toBe(30);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });
