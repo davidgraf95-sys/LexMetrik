@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { ZustaendigkeitForm } from '../components/forms/ZustaendigkeitForm';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { getCalculator } from '../lib/calculators';
@@ -30,9 +31,26 @@ const HERO_JE_RECHTSWEG: Record<Exclude<Rechtsweg, 'zivil' | 'verwaltung'>, {
   },
 };
 
+// Hash-Anker der Katalog-Split-Karten (schkg-/straf-zustaendigkeit, 6.6.2026)
+// → Rechtsweg-Vorauswahl, Muster wie RechnerKuendigung (#lohnfortzahlung).
+const HASH_WEG: Record<string, Rechtsweg> = {
+  '#schkg': 'schkg',
+  '#straf': 'straf',
+};
+
 export function RechnerZustaendigkeit() {
   const calc = getCalculator('zustaendigkeit')!;
-  const [rechtsweg, setRechtsweg] = useState<Rechtsweg>('zivil');
+  const { hash } = useLocation();
+  const [rechtsweg, setRechtsweg] = useState<Rechtsweg>(HASH_WEG[hash] ?? 'zivil');
+
+  // Hash-Navigation bei bereits gemounteter Seite (z. B. «Verwandte Rechner») —
+  // Sync während des Renderns statt im Effect (React-Pattern «adjusting state»).
+  const [letzterHash, setLetzterHash] = useState(hash);
+  if (hash !== letzterHash) {
+    setLetzterHash(hash);
+    if (HASH_WEG[hash]) setRechtsweg(HASH_WEG[hash]);
+  }
+
   const hero = rechtsweg === 'schkg' || rechtsweg === 'straf' ? HERO_JE_RECHTSWEG[rechtsweg] : null;
   return (
     <div className="space-y-6">
@@ -43,7 +61,7 @@ export function RechnerZustaendigkeit() {
         normenOverride={hero?.normen}
       />
       <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
-        <ZustaendigkeitForm onRechtswegChange={setRechtsweg} />
+        <ZustaendigkeitForm onRechtswegChange={setRechtsweg} rechtswegVorwahl={HASH_WEG[hash]} />
       </div>
     </div>
   );

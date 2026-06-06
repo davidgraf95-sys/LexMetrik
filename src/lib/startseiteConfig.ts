@@ -218,6 +218,31 @@ const KARTEN: Record<string, CalculatorCard> = {
     related: ['verzugszins', 'rechtsoeffnungsbegehren', 'tagerechner'],
     icon: 'clipboard',
   },
+  // Katalog-Split 6.6.2026 (Auftrag David): Der Zuständigkeitsrechner deckt
+  // drei Rechtswege ab (Zivil/SchKG/Straf, je eigene Engine). Statt EINER
+  // unterdeklarierten Karte erhält jeder Rechtsweg seinen Gebiets-Einstieg
+  // (Muster kuendigung-sperrfristen/lohnfortzahlung: Hash-Anker → Vorauswahl).
+  'schkg-zustaendigkeit': {
+    id: 'schkg-zustaendigkeit', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    rechtsbereich: 'privat',
+    title: 'Zuständigkeit in der Betreibung (Ort · Stelle · Anliegen)',
+    description: 'Betreibungsort nach Art. 46–55 SchKG und zuständige Stelle (Betreibungsamt, Gericht oder Aufsichtsbehörde) für elf Anliegen – von der Einleitung über Rechtsöffnung und Arrest bis zur Beschwerde, mit Verwirkungsfristen-Hinweisen.',
+    status: 'entwurf',
+    norms: [
+      // Art. 46 SchKG – ordentlicher Betreibungsort (Wohnsitz/Sitz)
+      { label: 'Art. 46 SchKG', url: fedlexUrl('SchKG', '46'), verified: false },
+      // Art. 17 SchKG – Beschwerde an die Aufsichtsbehörde
+      { label: 'Art. 17 SchKG', url: fedlexUrl('SchKG', '17'), verified: false },
+      // Art. 84 SchKG – Rechtsöffnungsgericht
+      { label: 'Art. 84 SchKG', url: fedlexUrl('SchKG', '84'), verified: false },
+      // Art. 272 SchKG – Arrestgericht
+      { label: 'Art. 272 SchKG', url: fedlexUrl('SchKG', '272'), verified: false },
+    ],
+    href: '/rechner/zustaendigkeit#schkg',
+    keywords: ['Betreibungsort', 'Betreibungsamt', 'Rechtsöffnung', 'Arrest', 'Aufsichtsbeschwerde', 'Konkursgericht', 'Zuständigkeit'],
+    related: ['zustaendigkeit', 'schkg-fristen'],
+    icon: 'scale',
+  },
   'kuendigung-sperrfristen': {
     id: 'kuendigung-sperrfristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
@@ -513,7 +538,9 @@ const KARTEN: Record<string, CalculatorCard> = {
     ],
     href: '/rechner/zustaendigkeit',
     keywords: ['Zuständigkeit', 'Gerichtsstand', 'Verfahrensart', 'Schlichtung', 'Schlichtungsbehörde', 'Streitwert', 'Handelsgericht'],
-    related: ['zpo-fristen', 'schlichtungsgesuch'],
+    // Katalog-Split 6.6.2026: SchKG- und Straf-Rechtsweg derselben Seite
+    // haben eigene Gebiets-Einstiege (Hash-Vorauswahl) — hier verlinkt.
+    related: ['zpo-fristen', 'schlichtungsgesuch', 'schkg-zustaendigkeit', 'straf-zustaendigkeit'],
     icon: 'scale',
   },
   iprg: {
@@ -744,14 +771,27 @@ const KARTEN: Record<string, CalculatorCard> = {
     related: ['strafverfahren'],
     keywords: ['Haft', 'Untersuchungshaft', 'Haftverlängerung'],
   },
+  // Katalog-Split 6.6.2026: war «geplant», obwohl der Straf-Rechtsweg im
+  // Zuständigkeitsrechner längst live ist (§8: ehrliches Status-Modell) —
+  // jetzt Gebiets-Einstieg mit Rechtsweg-Vorauswahl per Hash-Anker.
   'straf-zustaendigkeit': {
     id: 'straf-zustaendigkeit', modus: 'rechner', art: 'zuordnung', tier: 'pro', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
-    title: 'Örtliche Zuständigkeit im Strafverfahren',
-    description: 'Gerichtsstand im Strafverfahren nach Tatort und Beteiligten.',
-    status: 'geplant', norms: [],
-    related: ['strafverfahren', 'zustaendigkeit'],
-    keywords: ['Gerichtsstand', 'Tatort', 'Zuständigkeit'],
+    title: 'Zuständigkeit im Strafverfahren (Gerichtsstand · Behörde · Rechtsmittel)',
+    description: 'Örtlicher Gerichtsstand und zuständige Strafbehörde nach StPO (Tatort-Grundsatz, Spezialforen), Anzeige-Fahrplan mit Strafantragsfrist sowie das statthafte Rechtsmittel mit Fristen.',
+    status: 'entwurf',
+    norms: [
+      // Art. 31 StPO – Gerichtsstand des Tatortes (Grundsatz)
+      { label: 'Art. 31 StPO', url: fedlexUrl('StPO', '31'), verified: false },
+      // Art. 301 StPO – Anzeigerecht
+      { label: 'Art. 301 StPO', url: fedlexUrl('StPO', '301'), verified: false },
+      // Art. 379 StPO – Rechtsmittel: Geltungsbereich (führender Artikel)
+      { label: 'Art. 379 StPO', url: fedlexUrl('StPO', '379'), verified: false },
+    ],
+    href: '/rechner/zustaendigkeit#straf',
+    related: ['strafverfahren', 'zustaendigkeit', 'strafantrag'],
+    keywords: ['Gerichtsstand', 'Tatort', 'Zuständigkeit', 'Staatsanwaltschaft', 'Strafanzeige', 'Strafantrag', 'Berufung', 'Beschwerde', 'Einsprache'],
+    icon: 'scale',
   },
 
   // – Verwaltungsrecht —

@@ -152,13 +152,25 @@ const DEFAULTS: State = {
   instanz: 'einleitung',
 };
 
-export function ZustaendigkeitForm({ onRechtswegChange }: { onRechtswegChange?: (w: Rechtsweg) => void } = {}) {
+export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
+  onRechtswegChange?: (w: Rechtsweg) => void;
+  /** Vorauswahl aus dem URL-Hash der Katalog-Split-Karten (#schkg/#straf). */
+  rechtswegVorwahl?: Rechtsweg;
+} = {}) {
   const [f, setF] = useState<State>(DEFAULTS);
   // Rechtsweg-Wahl (5.6.2026): Zivil + SchKG aktiv; Straf/Verwaltung folgen.
-  const [rechtsweg, setRechtswegState] = useState<Rechtsweg>('zivil');
+  const [rechtsweg, setRechtswegState] = useState<Rechtsweg>(rechtswegVorwahl ?? 'zivil');
   // Hero-Synchronisation (Fix 6.6.2026): Der Seitenkopf zeigt die Normen des
   // gewählten Rechtswegs — reine Anzeige-Meldung nach oben (§3).
   const setRechtsweg = (w: Rechtsweg) => { setRechtswegState(w); onRechtswegChange?.(w); };
+  // Hash-Wechsel bei gemounteter Seite (Katalog-Split 6.6.2026): nur den
+  // EIGENEN State anpassen (adjusting state); der Seitenkopf liest denselben
+  // Hash selbst — kein setState fremder Komponenten während des Renderns.
+  const [letzteVorwahl, setLetzteVorwahl] = useState(rechtswegVorwahl);
+  if (rechtswegVorwahl !== letzteVorwahl) {
+    setLetzteVorwahl(rechtswegVorwahl);
+    if (rechtswegVorwahl) setRechtswegState(rechtswegVorwahl);
+  }
   const set = <K extends keyof State>(k: K, v: State[K]) => setF((alt) => ({ ...alt, [k]: v }));
 
   // ── PLZ-Auflösung (amtliches Ortschaftenverzeichnis, lazy) ────────────────

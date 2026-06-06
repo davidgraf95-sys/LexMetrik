@@ -176,9 +176,12 @@ describe('Katalog-Integrität (Rechtsgebiet-Gliederung)', () => {
 
 describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // Deklarierte Erweiterung 6.6.2026: + Erb-Fristen-Rechner (Quick-Win 1) → 21.
-  it('verfügbar = status !== geplant; Regressionszählung 21 (Stand 6.6.2026, + Erb-Fristen)', () => {
+  // Deklarierte Erweiterung Katalog-Split 6.6.2026 (Auftrag David): die längst
+  // gebauten Rechtswege SchKG/Straf des Zuständigkeitsrechners erhalten eigene
+  // Gebiets-Einstiegskarten (schkg-/straf-zustaendigkeit, entwurf) → 23.
+  it('verfügbar = status !== geplant; Regressionszählung 23 (Stand 6.6.2026, Katalog-Split)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(21);
+    expect(verf.length).toBe(23);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });
