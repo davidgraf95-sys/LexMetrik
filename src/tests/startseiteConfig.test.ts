@@ -68,7 +68,7 @@ describe('Stufen-Zuteilung (tier)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -187,10 +187,12 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // Checkliste [§8-Grenze, ohne Export]) → 28. Familie KOMPLETT.
   // + Untermietvertrag-Einstieg (Plan B.6: Deep-Link in die Mietvertrags-
   // Weiche, gleiches Schema) → 29; + Fristenspiegel (FAHRPLAN-PRAXIS 3.1b,
-  // Pilot A.4 Vermieter-Kündigung) → 30; + Streitwert (Quick-Win B.9) → 31.
-  it('verfügbar = status !== geplant; Regressionszählung 31 (Stand 6.6.2026, + Streitwert)', () => {
+  // Pilot A.4 Vermieter-Kündigung) → 30; + Streitwert (Quick-Win B.9) → 31;
+  // + Gründungs-Checklisten GmbH/AG (Auftrag David 6.6.2026, Spez.
+  // recherche/gmbh-gruendung.md Teil 5 + ag-gruendung.md; §8 ohne Export) → 33.
+  it('verfügbar = status !== geplant; Regressionszählung 33 (Stand 6.6.2026, + Gründungs-Checklisten)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(31);
+    expect(verf.length).toBe(33);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });

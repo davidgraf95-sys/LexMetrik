@@ -65,6 +65,7 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     const { berechneMietkuendigung } = await import('../lib/mietrecht');
     const { berechneVerjaehrung } = await import('../lib/verjaehrung');
     const { berechneLohnfortzahlung } = await import('../lib/lohnfortzahlung');
+    const { gmbhGruendungsunterlagen, agGruendungsunterlagen } = await import('../lib/gruendungsunterlagen');
 
     const faelle: [string, unknown][] = [
       ['zpo', berechneFrist({ ereignis: '2025-12-10', einheit: 'tage', laenge: 30, verfahren: 'ordentlich', kanton: 'ZH', fristnatur: 'gesetzlich' })],
@@ -79,6 +80,12 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       ['miet', berechneMietkuendigung({ kuendigungsart: 'zahlungsverzug', objekt: 'wohnung', zugang: '2026-02-10', kanton: 'ZH', partei: 'vermieter' })],
       ['verj', berechneVerjaehrung({ regime: 'delikt', beginnRelativ: '2024-02-29', beginnAbsolut: '2024-02-29', stichtag: '2026-06-05', kanton: 'ZH' })],
       ['lohn', berechneLohnfortzahlung({ vertragsbeginn: '2020-01-01', verhinderungBeginn: '2026-02-01', verhinderungEnde: '2026-04-15', arbeitsunfaehigkeitProzent: 50, kanton: 'BS', ktgGleichwertigVorhanden: false })],
+      // Gründungs-Masken: Maximal-Kombinationen, damit ALLE Hinweis-Texte
+      // durch den Linter laufen (Review-Befund 6.6.2026: Engine fehlte hier).
+      ['gmbh-gruendung', gmbhGruendungsunterlagen({ einlageArt: 'gemischt', besondereVorteile: true, gfGewaehlt: true, mehrereGeschaeftsfuehrer: true, weitereVertretungsberechtigte: true, optingOut: true, eigeneBueros: false, immobilienHauptzweck: true, auslJurPersonGesellschafter: true, fremdwaehrung: true, bankInUrkundeGenannt: false, chWohnsitzVertretung: false, statutKlauseln: ['nachschuss', 'nebenleistung', 'konkurrenzverbot', 'vorkaufsrecht', 'stimmrechtNachAnteilen', 'vetorecht'], leistungenChf: 2_000_000 })],
+      ['gmbh-gruendung-rs', gmbhGruendungsunterlagen({ einlageArt: 'bar', besondereVorteile: false, gfGewaehlt: false, mehrereGeschaeftsfuehrer: false, weitereVertretungsberechtigte: false, optingOut: false, eigeneBueros: true, immobilienHauptzweck: false, auslJurPersonGesellschafter: false, fremdwaehrung: false, bankInUrkundeGenannt: true, chWohnsitzVertretung: true, statutKlauseln: [] })],
+      ['ag-gruendung', agGruendungsunterlagen({ einlageArt: 'gemischt', besondereVorteile: true, optingOut: true, eigeneBueros: false, immobilienHauptzweck: true, inhaberaktien: true, fremdwaehrung: true, bankInUrkundeGenannt: false, chWohnsitzVertretung: false, leistungenChf: 2_000_000 })],
+      ['ag-gruendung-rs', agGruendungsunterlagen({ einlageArt: 'bar', besondereVorteile: false, optingOut: false, eigeneBueros: true, immobilienHauptzweck: false, inhaberaktien: false, fremdwaehrung: false, bankInUrkundeGenannt: true, chWohnsitzVertretung: true })],
     ];
     const verstoesse = faelle.flatMap(([name, wert]) => pruefeAlles(wert, name));
     expect(verstoesse, verstoesse.join('\n')).toEqual([]);

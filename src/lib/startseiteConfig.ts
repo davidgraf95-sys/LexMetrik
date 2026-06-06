@@ -1286,21 +1286,52 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
 
   // ════ IV – Gesellschaftsdokumente ════
+  // Gründungs-Masken (Spez. recherche/gmbh-gruendung.md Teil 5 bzw.
+  // ag-gruendung.md, gebaut 6.6.2026): CHECKLISTEN nach dem 2b-Muster —
+  // der Errichtungsakt ist öffentlich zu beurkunden (Art. 777/629 OR),
+  // darum bewusst ohne schemaId/output (kein Export, §8). Unterlagenliste
+  // deterministisch aus lib/gruendungsunterlagen.ts (HRegV abschliessend).
   'gmbh-gruendung': {
     id: 'gmbh-gruendung', modus: 'vorlage', art: 'gesellschaft', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
     rechtsbereich: 'privat',
-    title: 'GmbH-Gründungsunterlagen',
-    description: 'Errichtungsakt, Statuten und Anmeldung – zur Vorbereitung der Beurkundung.',
-    status: 'geplant', norms: [], related: ['gesellschaftsrecht-fristen'],
-    icon: 'scale',
+    title: 'GmbH-Gründungsunterlagen (Checkliste)',
+    description: 'Vollständige Unterlagenliste für die GmbH-Gründung nach Konstellation (Bar-/Sacheinlage, Opting-out, c/o-Domizil, Lex Koller): was die Gründer beschaffen, was beim Notariat entsteht, was das Handelsregisteramt verlangt (Art. 71/72 HRegV) – inkl. Statuten-Pflichtklauseln und Emissionsabgabe-Hinweis. Kein Export: Der Errichtungsakt bedarf der öffentlichen Beurkundung.',
+    status: 'entwurf',
+    norms: [
+      // Art. 777 OR – Errichtung durch öffentliche Urkunde
+      { label: 'Art. 777 OR', url: fedlexUrl('OR', '777'), verified: false },
+      // Art. 776 OR – Statuten-Mindestinhalt (rev. 2023, 4 Ziffern)
+      { label: 'Art. 776 OR', url: fedlexUrl('OR', '776'), verified: false },
+      // Art. 777c OR – Volliberierung + Einlagen-Regeln
+      { label: 'Art. 777c OR', url: fedlexUrl('OR', '777c'), verified: false },
+      // Art. 71 HRegV – abschliessende Belegliste der Anmeldung
+      { label: 'Art. 71 HRegV', url: fedlexUrl('HRegV', '71'), verified: false },
+    ],
+    href: '/vorlagen/gmbh-gruendung',
+    formvorschrift: 'Errichtungsakt nur als öffentliche Urkunde (Art. 777 Abs. 1 OR) – darum kein Export, Checkliste mit Verweis auf die amtlichen Vorlagen.',
+    related: ['ag-gruendung', 'statuten', 'gesellschaftsrecht-fristen'],
+    keywords: ['GmbH', 'Gründung', 'Errichtungsakt', 'Statuten', 'Handelsregister', 'Stammkapital', 'Beurkundung', 'Opting-out', 'Lex Koller', 'Art. 777', 'HRegV'],
   },
   'ag-gruendung': {
     id: 'ag-gruendung', modus: 'vorlage', art: 'gesellschaft', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
     rechtsbereich: 'privat',
-    title: 'AG-Gründungsunterlagen',
-    description: 'Errichtungsakt, Statuten und Anmeldung – zur Vorbereitung der Beurkundung.',
-    status: 'geplant', norms: [], related: ['gesellschaftsrecht-fristen'],
-    icon: 'scale',
+    title: 'AG-Gründungsunterlagen (Checkliste)',
+    description: 'Vollständige Unterlagenliste für die AG-Gründung nach Konstellation (Bar-/Sacheinlage, Opting-out, Inhaberaktien, c/o-Domizil, Lex Koller): VR-Konstituierungsprotokoll, Wahlannahmen, Bankbescheinigung und die weiteren Belege nach Art. 43/44 HRegV – inkl. Emissionsabgabe-Hinweis ab CHF 1 Mio. Kein Export: Der Errichtungsakt bedarf der öffentlichen Beurkundung.',
+    status: 'entwurf',
+    norms: [
+      // Art. 629 OR – Errichtung durch öffentliche Urkunde
+      { label: 'Art. 629 OR', url: fedlexUrl('OR', '629'), verified: false },
+      // Art. 626 OR – Statuten-Mindestinhalt (rev. 2023)
+      { label: 'Art. 626 OR', url: fedlexUrl('OR', '626'), verified: false },
+      // Art. 632 OR – Mindesteinlage (20 % je Aktie, mind. CHF 50 000)
+      { label: 'Art. 632 OR', url: fedlexUrl('OR', '632'), verified: false },
+      // Art. 43 HRegV – abschliessende Belegliste der Anmeldung
+      { label: 'Art. 43 HRegV', url: fedlexUrl('HRegV', '43'), verified: false },
+    ],
+    href: '/vorlagen/ag-gruendung',
+    formvorschrift: 'Errichtungsakt nur als öffentliche Urkunde (Art. 629 Abs. 1 OR) – darum kein Export, Checkliste mit Verweis auf die amtlichen Vorlagen.',
+    related: ['gmbh-gruendung', 'statuten', 'gesellschaftsrecht-fristen'],
+    keywords: ['AG', 'Aktiengesellschaft', 'Gründung', 'Errichtungsakt', 'Statuten', 'Handelsregister', 'Aktienkapital', 'Beurkundung', 'Verwaltungsrat', 'Inhaberaktien', 'Emissionsabgabe', 'Art. 629', 'HRegV'],
   },
   statuten: {
     id: 'statuten', modus: 'vorlage', art: 'gesellschaft', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',

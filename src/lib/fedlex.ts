@@ -28,6 +28,11 @@ export const FEDLEX = {
   // geprüft 6.6.2026, Kündigungs-Maske 3: 35a halbzwingend [98], 35b/35c
   // absolut zwingend [97], Lebensversicherung ausgenommen [35a Abs. 3]).
   VVG:   'https://www.fedlex.admin.ch/eli/cc/24/719_735_717/de',
+  // HRegV SR 221.411 – Anker art_20/24_a/43/44/45/71/72/117 empirisch am
+  // Filestore-HTML verifiziert (Konsolidierung 20250101 = neuste abrufbare,
+  // 1.7.2025/1.1.2026 existieren nicht; geprüft 6.6.2026, Gründungs-Masken;
+  // Dossiers bibliothek/recherche/gesellschaftsgruendung.md + gmbh-/ag-…).
+  HRegV: 'https://www.fedlex.admin.ch/eli/cc/2007/686/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
