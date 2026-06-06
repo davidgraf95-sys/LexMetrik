@@ -104,6 +104,17 @@ describe('Foren + Fristen je Anliegen (Synthese-Tabelle)', () => {
     expect(be.forum.stelle).toContain('AUFSICHTSBEHÖRDE');
     expect(be.weichen.some((w) => w.includes('Art. 22'))).toBe(true);
   });
+  it('Konkursbegehren gegen Nicht-HR-Schuldnertypen: Art.-39-Warnung (Pfändung statt Konkurs, Art. 42) — M-5-Fix Bug-Check 6.6.2026', () => {
+    // Natürliche Person, Erbschaft, Stockwerkeigentümer etc.: Konkursbetreibung
+    // nur bei HR-Eintrag (Art. 39 Abs. 1), sonst Pfändung (Art. 42 Abs. 1).
+    for (const typ of ['natuerlich_wohnsitz', 'natuerlich_ohne_wohnsitz', 'jur_person_nicht_hr', 'erbschaft', 'stockwerkeigentuemer', 'ausland_niederlassung'] as const) {
+      const r = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'konkursbegehren', schuldnerTyp: typ }));
+      expect(r.warnungen.some((w) => w.includes('Art. 39 Abs. 1 SchKG') && w.includes('PFÄNDUNG'))).toBe(true);
+    }
+    // Im HR eingetragene juristische Person: keine Warnung nötig.
+    const hr = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'konkursbegehren', schuldnerTyp: 'jur_person_hr' }));
+    expect(hr.warnungen.some((w) => w.includes('Art. 39'))).toBe(false);
+  });
 });
 
 describe('Gebühr Zahlungsbefehl (Art. 16 GebV SchKG, Stand 1.1.2022)', () => {

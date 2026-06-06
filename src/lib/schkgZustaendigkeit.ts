@@ -307,6 +307,18 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
         { label: 'Erlöschen des Rechts', frist: '15 Monate nach Zustellung des Zahlungsbefehls (Stillstand während des Rechtsvorschlag-Verfahrens, Abs. 2)', norm: 'Art. 166 Abs. 2 SchKG', kritisch: true },
         { label: 'Beschwerde gegen das Konkurserkenntnis', frist: '10 Tage', norm: 'Art. 174 SchKG', kritisch: true },
       );
+      // M-5-Fix Bug-Check 6.6.2026: Die Konkursbetreibung setzt einen HR-
+      // Eintrag des Schuldners in einer der Eigenschaften von Art. 39 Abs. 1
+      // SchKG voraus; «in allen andern Fällen» wird auf PFÄNDUNG fortgesetzt
+      // (Art. 42 Abs. 1; beide am Fedlex-Cache Wortlaut-verifiziert). Die
+      // Schuldnertyp-Auswahl erfragt den HR-Status bei natürlichen Personen
+      // nicht (Einzelfirma-Inhaber sind eingetragen!) — deshalb Warnung statt
+      // Hard-Stop (§8). Vorbehalt: Konkurseröffnung OHNE vorgängige Betreibung
+      // (Art. 190 Abs. 1 Ziff. 1: gegen JEDEN Schuldner bei Flucht/unbekanntem
+      // Aufenthalt/betrügerischen Handlungen) bleibt ein eigener Weg.
+      if (input.schuldnerTyp !== 'jur_person_hr') {
+        warnungen.push('Voraussetzung prüfen: Die Konkursbetreibung setzt voraus, dass die Schuldnerin/der Schuldner im Handelsregister eingetragen ist — z.B. als Inhaber/in einer Einzelfirma, Kollektiv-/Kommanditgesellschaft(er), AG, GmbH, Genossenschaft, Verein oder Stiftung (Art. 39 Abs. 1 SchKG). Ohne HR-Eintrag wird die Betreibung auf PFÄNDUNG fortgesetzt (Art. 42 Abs. 1 SchKG) und es ergeht keine Konkursandrohung. Davon zu unterscheiden ist die Konkurseröffnung OHNE vorgängige Betreibung in den Sonderfällen von Art. 190 SchKG (u.a. unbekannter Aufenthalt, Flucht, betrügerische Handlungen).');
+      }
       break;
     }
     case 'beschwerde_amt': {
