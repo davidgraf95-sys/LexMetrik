@@ -32,9 +32,29 @@ löschen, Stand in STRUKTUR.md spiegeln.
 
 4a. ~~Zuständigkeits-Wizard~~ → **LIVE** (`a64c5ab`, Logik-Check bestanden)
    inkl. Vorlagen-Verweis am Fahrplan-Ende (`518f996`, auch für geplante
-   Vorlagen). Offen daraus (NIEDRIG): UX-Hinweis im leeren Ergebnis-Schritt
-   («Streitwert ergänzen»); Prefill-Brücke für klage-vereinfacht (neue
-   Kodier-Funktion in lib) — s. D.
+   Vorlagen). ~~Offen daraus (NIEDRIG): UX-Hinweis im leeren Ergebnis-Schritt~~
+   (bestätigt behoben, Bug-Check 6.6.2026); Prefill-Brücke klage-vereinfacht
+   existiert, ist aber seit K-2 auf BS begrenzt (korrekt).
+
+4b. **Bug-Check Zuständigkeitsrechner über ALLE Funktionsvarianten**
+   (6.6.2026 spätabends, Auftrag David; 5 unabhängige Review-Agents, ~71'000
+   empirische Kombinationen, Normen am Fedlex-Cache verifiziert) → **8 Fixes
+   committet**: K-1 Familien-Summarsache verlängerte fälschlich die
+   BESCHWERDE-Frist auf 30 T. (`febbed6`) · K-2 klage-vereinfacht-Verweis
+   BS-begrenzt (`b535553`) · M-1 Art.-93-Vorbehalt prozessleitende Verfügung
+   (`9e12ef1`) · M-2 HG-Weiche gesellschaft Art. 6 IV lit. b (`c5b05ba`) ·
+   M-3 IP nicht-vermögensrechtlich ehrlich (`7718bc6`) · M-4 Widerspruch-
+   Frist-Norm differenziert (`280365f`) · M-5 Art.-39-Warnung Konkursbegehren
+   (`0256d13`) · M-6 StPO-Beschwerdefrist als Frist-Objekt (`6e1acb6`).
+   **Offen daraus (nicht beauftragt):** M-7 Permalink plausibilisiert
+   Sub-Felder nicht gegen Streitsache (latent, Input-Gates fangen es heute) ·
+   M-8 PDF/Aktenzeichen/Teilen fehlen im Rechtsmittel-/SchKG-/Straf-Zweig ·
+   NIEDRIG-Befunde (Art.-40-Zitatschärfe Straf, Erbschaft+Pfand-Text,
+   Widerspruch-Fahrplantext grundstueck, toter Engine-Aufruf
+   StrafZustaendigkeitTeil, rmFamilienSummarsache ohne Streitsachen-Check) ·
+   Testlücken: rueckforderung/feststellung (SchKG) ohne Akzeptanztest,
+   Straf-Kaskade wohnsitz/auslieferung/Default ungetestet.
+   Repro-Skripte in `.scratch/review-*`.
 
 5. ~~Kündigungs-Masken~~ → **FAMILIE KOMPLETT** (6.6.2026 nachts, je mit
    Bug-Check): 1a AN free `9165094` · 1b AG Sperrfristen-Blocker `1714319`
@@ -65,6 +85,10 @@ löschen, Stand in STRUKTUR.md spiegeln.
 11. **Anfang Sept. 2026** — Referenzzins (quartalsweise).
 12. **1.11.2026** — BE-Formularpflicht (dynamisch).
 13. **Vor Mietvertrags-Abnahme** — VMWG-Art.-19a-Diskrepanz am Original klären.
+13a. **Vor SchKG-Abnahme** — GebV-SchKG-Revision AS 2025 630 (in Kraft
+    1.1.2026, nur signiertes PDF verfügbar) gegen die verdrahtete Staffel
+    Stand 1.1.2022 prüfen (Befund Bug-Check 6.6.2026; Vorbehalt steht im
+    Code-Kommentar und als UI-Hinweis).
 14. **Feiertage:** je Kanton gegen geltendes kantonales Recht, bevor ein
     Fristen-Eintrag auf «geprüft» geht (BJ-Liste = Stand 2011; Matrix-Dossier
     ist die Arbeitsgrundlage).
