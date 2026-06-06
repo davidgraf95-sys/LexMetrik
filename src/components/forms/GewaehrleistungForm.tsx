@@ -14,6 +14,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { IcsExportButton } from '../IcsExportButton';
 
 const GW_DISCLAIMER =
   'Automatisierte Orientierungsberechnung zu Gewährleistung und Mängelrüge (Art. 197 ff., 219/219a, 367 ff. OR; ' +
@@ -263,7 +264,13 @@ export function GewaehrleistungForm() {
           </div>
 
           <ErgebnisAnzeige titel="Gewährleistung & Mängelrüge (Art. 197 ff., 367 ff. OR)" ergebnis={ergebnis} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <IcsExportButton endISO={ergebnis.ruege.endeISO} titel="Rügefrist-Ende (Mängelrüge)"
+              beschreibung={ergebnis.ergebnis} dateiName="Ruegefrist.ics" />
+            <IcsExportButton endISO={ergebnis.verjaehrung.endeISO} titel="Verjährung Mängelrechte"
+              beschreibung={ergebnis.ergebnis} dateiName="Verjaehrung-Maengelrechte.ics" />
+          </div>
         </div>
       )}
 

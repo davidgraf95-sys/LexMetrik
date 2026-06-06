@@ -13,6 +13,7 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { sansAmp } from '../typografie';
 import { PdfExportButton } from '../PdfExport';
+import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 
 
@@ -308,6 +309,8 @@ export function SchkgFristenForm() {
                   labels={{ ereignis: 'Auslösendes Ereignis', aquo: 'Fristbeginn', adquem: 'Fristende' }}
                 />
                 <ErgebnisAnzeige titel={a.titel} ergebnis={e} />
+                <IcsExportButton endISO={e.diesAdQuemISO} titel={`Fristende – ${a.titel}`}
+                  beschreibung={e.ergebnis} dateiName="SchKG-Frist.ics" />
               </div>
             );
           })}

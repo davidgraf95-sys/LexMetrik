@@ -11,6 +11,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
 
@@ -276,7 +277,11 @@ export function ZpoFristenForm() {
             stillstandAktiv={ergebnis.stillstandAktiv}
           />
           <ErgebnisAnzeige titel="ZPO-Fristberechnung (Art. 142 ff. ZPO)" ergebnis={ergebnis} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <IcsExportButton endISO={ergebnis.diesAdQuemISO} titel="Fristende (ZPO)"
+              beschreibung={ergebnis.ergebnis} dateiName="ZPO-Frist.ics" />
+          </div>
         </div>
       )}
       </>

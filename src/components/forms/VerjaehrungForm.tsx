@@ -13,6 +13,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { IcsExportButton } from '../IcsExportButton';
 
 const VERJ_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der Verjährung (Art. 60, 67, 127 ff. OR, Stand Revision 1.1.2020) – ' +
@@ -293,7 +294,11 @@ export function VerjaehrungForm() {
           )}
 
           <ErgebnisAnzeige titel="Verjährung (Art. 60, 67, 127 ff. OR)" ergebnis={ergebnis} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <IcsExportButton endISO={ergebnis.verjaehrungISO} titel="Verjährungseintritt"
+              beschreibung={ergebnis.ergebnis} dateiName="Verjaehrung.ics" />
+          </div>
         </div>
       )}
     </div>

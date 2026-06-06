@@ -4,7 +4,7 @@ import { Tabs } from '../ui/Tabs';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   allgemeineFristErgebnis, tageZwischen, ALLG_FRIST_HINWEIS,
-  rueckwaertsErgebnis, zustellHinweis, icsFuerFrist, fristQueryKodieren, fristQueryLesen,
+  rueckwaertsErgebnis, zustellHinweis, fristQueryKodieren, fristQueryLesen,
   type AllgFristInput, type AllgFristResult, type Einheit, type RueckVerschiebung, type ZustellArt,
 } from '../../lib/allgemeineFrist';
 import type { Berechnungsergebnis, Kanton } from '../../types/legal';
@@ -13,6 +13,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { FristenKalender } from '../FristenKalender';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { IcsExportButton } from '../IcsExportButton';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 
@@ -104,14 +105,7 @@ export function AllgemeineFristForm() {
   const zwischen: { kalendertage: number; werktageMoFr: number } | null =
     (() => { try { return tageZwischen(von, bis); } catch { return null; } })();
 
-  // P1.4 Exporte (clientseitig, deterministisch)
-  const icsLaden = (endISO: string, titel: string) => {
-    const blob = new Blob([icsFuerFrist({ titel, endISO, beschreibung: 'Berechnet mit LexMetrik (Art. 77/78 OR) – Orientierung, keine Rechtsberatung.', vorfristTage: 3 })], { type: 'text/calendar' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url; a.download = 'Fristende.ics'; a.click();
-    URL.revokeObjectURL(url);
-  };
+  // P1.4 Exporte: .ics über den geteilten IcsExportButton (FAHRPLAN-PRAXIS 1.1).
   const linkKopieren = () => {
     const q = fristQueryKodieren(form);
     navigate({ search: q }, { replace: true });
@@ -264,10 +258,9 @@ export function AllgemeineFristForm() {
               <ErgebnisAnzeige titel="Allgemeine Frist (Art. 77/78 OR)" ergebnis={ergebnis} />
               <div className="flex flex-wrap items-center gap-3">
                 <PdfExportButton config={pdfConfig} />
-                <button type="button" className="lc-btn-outline"
-                  onClick={() => icsLaden(ergebnis.resultat.endDatumISO, `Fristende (${form.laenge} ${EINHEITEN.find((e) => e.code === form.einheit)?.label})`)}>
-                  In Kalender (.ics)
-                </button>
+                <IcsExportButton endISO={ergebnis.resultat.endDatumISO}
+                  titel={`Fristende (${form.laenge} ${EINHEITEN.find((e) => e.code === form.einheit)?.label})`}
+                  beschreibung="Berechnet mit LexMetrik (Art. 77/78 OR) – Orientierung, keine Rechtsberatung." />
                 <button type="button" className="lc-btn-ghost lc-btn-sm" onClick={linkKopieren}>
                   {kopiertLink ? 'Link kopiert ✓' : 'Link teilen'}
                 </button>
@@ -342,10 +335,8 @@ export function AllgemeineFristForm() {
               />
               <ErgebnisAnzeige titel="Rückwärtsfrist – spätester Handlungstag" ergebnis={rueckErgebnis} />
               <div className="flex flex-wrap items-center gap-3">
-                <button type="button" className="lc-btn-outline"
-                  onClick={() => icsLaden(rueckErgebnis.resultat.endDatumISO, 'Spätester Handlungstag')}>
-                  In Kalender (.ics)
-                </button>
+                <IcsExportButton endISO={rueckErgebnis.resultat.endDatumISO} titel="Spätester Handlungstag"
+                  beschreibung="Berechnet mit LexMetrik (Art. 77/78 OR) – Orientierung, keine Rechtsberatung." />
               </div>
             </div>
           )}

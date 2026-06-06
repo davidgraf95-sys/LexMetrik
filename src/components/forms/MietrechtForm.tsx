@@ -10,6 +10,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 
 const MIET_DISCLAIMER =
@@ -263,7 +264,11 @@ export function MietrechtForm() {
           )}
 
           <ErgebnisAnzeige titel="Kündigungstermine und -fristen (Art. 253 ff. OR)" ergebnis={ergebnis} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <IcsExportButton endISO={ergebnis.endterminISO} titel="Mietende (Kündigungstermin)"
+              beschreibung={ergebnis.ergebnis} dateiName="Mietende.ics" />
+          </div>
         </div>
       )}
     </div>

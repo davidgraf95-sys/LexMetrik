@@ -8,6 +8,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { IcsExportButton } from '../IcsExportButton';
 
 // ─── Erb-Fristen-Rechner (Darstellung) ───────────────────────────────────────
 // Reine Darstellung über src/lib/erbFristen.ts (§3): Tatbestand wählen,
@@ -116,7 +117,11 @@ export function ErbFristenForm() {
             </div>
           </div>
           <ErgebnisAnzeige titel={`Erb-Frist: ${preset.label}`} ergebnis={ergebnis} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <IcsExportButton endISO={ergebnis.resultat.endDatumISO} titel={`Fristende – ${preset.label}`}
+              beschreibung={ergebnis.ergebnis} dateiName="Erb-Frist.ics" />
+          </div>
         </div>
       )}
     </div>
