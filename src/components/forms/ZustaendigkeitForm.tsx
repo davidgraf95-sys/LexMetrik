@@ -5,6 +5,7 @@ import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
@@ -334,7 +335,10 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
     ? 'Gemeinsames Scheidungsbegehren (bei Einigung) oder Scheidungsklage'
     : r.eingabeArt === 'schlichtungsgesuch' ? 'Schlichtungsgesuch (Art. 202 ZPO)' : 'Klage direkt beim Gericht';
 
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Zuständigkeit (ZPO)',
     rechtsgrundlage: 'Bestimmung nach Art. 4 ff., 197 ff., 243 ZPO (Fassung 1.1.2025)',
     domain: 'zustaendigkeit',
@@ -1175,6 +1179,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           )}
 
           <ErgebnisAnzeige titel="Zuständigkeit nach ZPO" ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <p className="text-body-s text-ink-500">

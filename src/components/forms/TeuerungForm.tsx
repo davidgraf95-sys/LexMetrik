@@ -10,6 +10,7 @@ import {
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 
 // ─── LIK-Teuerungsrechner – UI ──────────────────────────────────────────────
@@ -68,7 +69,10 @@ export function TeuerungForm() {
     fehler = e instanceof Error ? e.message : String(e);
   }
 
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'LIK-Teuerung',
     rechtsgrundlage: modus === 'indexmiete' ? 'Art. 269b OR · Art. 17 VMWG' : modus === 'unterhalt' ? 'Art. 286 / Art. 128 ZGB' : 'BFS-Indexierung (LIK)',
     domain: 'teuerung',
@@ -143,6 +147,7 @@ export function TeuerungForm() {
             ))}
           </div>
           <ErgebnisAnzeige titel={`LIK-Indexierung (Basis ${monatLabel(ergebnis.basis)} = 100)`} ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <p className="text-micro text-ink-500">

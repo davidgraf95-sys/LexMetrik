@@ -10,6 +10,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 
 const ERB_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der gesetzlichen Erbteile, Pflichtteile und der verfügbaren Quote ' +
@@ -113,7 +114,10 @@ export function ErbteilungForm() {
     ...(ergebnis?.nachlassChf != null ? { 'Nachlass (CHF)': fmtCHF(ergebnis.nachlassChf) } : {}),
   };
 
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Erbteilung & Pflichtteil (ZGB)',
     domain: 'erbrecht',
     fileBase: 'Erbteilung-Pflichtteil',
@@ -330,6 +334,7 @@ export function ErbteilungForm() {
           </div>
 
           <ErgebnisAnzeige titel="Erbteilung & Pflichtteil (Art. 457 ff., 462, 470 ff. ZGB)" ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <PdfExportButton config={pdfConfig} />
         </div>
       )}

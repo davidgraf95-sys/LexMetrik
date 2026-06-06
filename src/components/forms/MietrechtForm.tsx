@@ -10,6 +10,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 
@@ -115,7 +116,10 @@ export function MietrechtForm() {
     ...(art === 'zahlungsverzug' && zaZugang ? { 'Zugang Zahlungsaufforderung': zaZugang } : {}),
   };
 
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Mietrecht – Kündigungstermin-Berechnung',
     domain: 'mietrecht',
     fileBase: 'Mietrecht-Kuendigung',
@@ -264,6 +268,7 @@ export function MietrechtForm() {
           )}
 
           <ErgebnisAnzeige titel="Kündigungstermine und -fristen (Art. 253 ff. OR)" ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <IcsExportButton endISO={ergebnis.endterminISO} titel="Mietende (Kündigungstermin)"

@@ -13,6 +13,7 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { sansAmp } from '../typografie';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 
@@ -142,7 +143,10 @@ export function SchkgFristenForm() {
     ...(istDual ? {} : { 'Frist': `${form.laenge} ${form.einheit}`, 'Rechtsnatur': form.fristnatur }),
   };
 
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'SchKG-Fristberechnung',
     domain: 'schkg-fristen',
     fileBase: 'SchKG-Fristen',
@@ -314,6 +318,7 @@ export function SchkgFristenForm() {
               </div>
             );
           })}
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <PdfExportButton config={pdfConfig} />
         </div>
       )}

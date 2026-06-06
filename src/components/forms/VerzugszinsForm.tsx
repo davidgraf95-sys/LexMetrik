@@ -9,6 +9,7 @@ import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { VerzugszinsTimeline } from '../VerzugszinsTimeline';
 
@@ -84,7 +85,10 @@ export function VerzugszinsForm() {
   const inputNum = 'lc-input num';
 
   const fmtISO = (s: string) => (s ? s.split('-').reverse().join('.') : '–');
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Verzugszins',
     rechtsgrundlage: 'Berechnung nach Art. 104 OR',
     domain: 'verzugszins',
@@ -213,6 +217,7 @@ export function VerzugszinsForm() {
             </>
           )}
           <ErgebnisAnzeige titel="Verzugszins (Art. 104 OR)" ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <PdfExportButton config={pdfConfig} />
         </div>
       )}

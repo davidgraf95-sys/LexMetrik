@@ -8,6 +8,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { IcsExportButton } from '../IcsExportButton';
 
 // ─── Erb-Fristen-Rechner (Darstellung) ───────────────────────────────────────
@@ -46,7 +47,10 @@ export function ErbFristenForm() {
     'Auslösendes Ereignis': trigger.split('-').reverse().join('.'),
     'Werktags-Verschiebung': verschieben ? `ja (${kanton})` : 'nein',
   };
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Erbrechtliche Fristen (ZGB)',
     domain: 'erb-fristen',
     fileBase: 'Erb-Fristen',
@@ -117,6 +121,7 @@ export function ErbFristenForm() {
             </div>
           </div>
           <ErgebnisAnzeige titel={`Erb-Frist: ${preset.label}`} ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <IcsExportButton endISO={ergebnis.resultat.endDatumISO} titel={`Fristende – ${preset.label}`}

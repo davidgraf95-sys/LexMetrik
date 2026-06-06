@@ -123,13 +123,19 @@ class Zeichner {
   }
 
   /** 1. Kopf: Wortmarke · Meta · Fraunces-Titel · Rechtsgrundlage · Goldlinie */
-  kopf(titel: string, rechtsgrundlage: string | undefined, erstellt: string) {
+  kopf(titel: string, rechtsgrundlage: string | undefined, erstellt: string, aktenzeichen?: string) {
     this.overline('LexMetrik', MARGIN, this.y, BRASS_TEXT);
     this.doc.setFont('GeistMono', 'normal');
     this.doc.setFontSize(7);
     this.doc.setTextColor(...DEZENT);
     const meta = `Erstellt: ${erstellt}`;
     this.doc.text(meta, PAGE_W - MARGIN - this.doc.getTextWidth(meta), this.y);
+    // Mandats-/Aktenzeichen des Nutzers (FAHRPLAN-PRAXIS 1.2): zweite
+    // Meta-Zeile rechts — macht den Bericht in der Akte zuordenbar.
+    if (aktenzeichen) {
+      const az = `Aktenzeichen: ${aktenzeichen}`;
+      this.doc.text(az, PAGE_W - MARGIN - this.doc.getTextWidth(az), this.y + 9);
+    }
     this.y += 10;
 
     this.setSchrift({ size: 23, font: 'Fraunces' });
@@ -509,7 +515,7 @@ export function renderPdf(model: PdfModel): jsPDF {
     switch (b.art) {
       case 'kopf':
         titel = b.titel;
-        z.kopf(b.titel, b.rechtsgrundlage, b.erstellt);
+        z.kopf(b.titel, b.rechtsgrundlage, b.erstellt, b.aktenzeichen);
         break;
       case 'hero':
         z.hero(b.hero, b.status);

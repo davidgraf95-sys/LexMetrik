@@ -8,6 +8,7 @@ import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { FristenKalender } from '../FristenKalender';
 import { KuendigungTimeline } from '../KuendigungTimeline';
 import { SperrtageZaehler } from '../SperrtageZaehler';
@@ -98,7 +99,10 @@ export function KombinierteAnsicht() {
   };
 
   // PDF: Skalen-Hinweis nur, wenn die Lohnfortzahlung Teil des Berichts ist.
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Arbeitsrechtliche Orientierungsberechnung (kombiniert)',
     domain: 'arbeitsrecht',
     fileBase: 'Arbeitsrecht-Kombiniert',
@@ -243,6 +247,7 @@ export function KombinierteAnsicht() {
         {ergebnisse.kuendigung?.sperrtage && ergebnisse.kuendigung.sperrtage.length > 0 && (
           <SperrtageZaehler sperrtage={ergebnisse.kuendigung.sperrtage} />
         )}
+        <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
         <PdfExportButton config={pdfConfig} />
       </div>
     </div>

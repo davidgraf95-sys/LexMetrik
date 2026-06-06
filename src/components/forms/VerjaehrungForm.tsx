@@ -13,6 +13,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { IcsExportButton } from '../IcsExportButton';
 
 const VERJ_DISCLAIMER =
@@ -130,7 +131,10 @@ export function VerjaehrungForm() {
     ...(verzichtAn && verzichtDatum ? { 'Einredeverzicht (Art. 141 OR)': `vom ${fmtISO(verzichtDatum)}` } : {}),
   };
 
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Verjährung (Art. 127 ff. OR)',
     domain: 'verjaehrung',
     fileBase: 'Verjaehrung',
@@ -294,6 +298,7 @@ export function VerjaehrungForm() {
           )}
 
           <ErgebnisAnzeige titel="Verjährung (Art. 60, 67, 127 ff. OR)" ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <IcsExportButton endISO={ergebnis.verjaehrungISO} titel="Verjährungseintritt"

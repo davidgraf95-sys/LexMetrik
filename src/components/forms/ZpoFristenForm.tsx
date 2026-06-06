@@ -11,6 +11,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
@@ -102,7 +103,10 @@ export function ZpoFristenForm() {
 
   // ── PDF-Konfiguration (zentrale Vorlage, nur einschlägige Bausteine) ──
   const istTagesfrist = form.einheit === 'tage';
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'ZPO-Fristberechnung',
     domain: 'zpo-fristen',
     fileBase: 'ZPO-Fristen',
@@ -277,6 +281,7 @@ export function ZpoFristenForm() {
             stillstandAktiv={ergebnis.stillstandAktiv}
           />
           <ErgebnisAnzeige titel="ZPO-Fristberechnung (Art. 142 ff. ZPO)" ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <IcsExportButton endISO={ergebnis.diesAdQuemISO} titel="Fristende (ZPO)"

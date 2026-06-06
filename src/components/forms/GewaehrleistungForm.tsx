@@ -14,6 +14,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { IcsExportButton } from '../IcsExportButton';
 
 const GW_DISCLAIMER =
@@ -106,7 +107,10 @@ export function GewaehrleistungForm() {
     'Kanton (Feiertage)': kanton,
   };
 
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Gewährleistung & Mängelrüge (OR)',
     domain: 'gewaehrleistung',
     fileBase: 'Gewaehrleistung-Maengelruege',
@@ -264,6 +268,7 @@ export function GewaehrleistungForm() {
           </div>
 
           <ErgebnisAnzeige titel="Gewährleistung & Mängelrüge (Art. 197 ff., 367 ff. OR)" ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <IcsExportButton endISO={ergebnis.ruege.endeISO} titel="Rügefrist-Ende (Mängelrüge)"

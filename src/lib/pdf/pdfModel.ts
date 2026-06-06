@@ -30,6 +30,9 @@ export type PdfDocConfig = {
   rechtsgrundlage?: string;           // Untertitel im Kopf, z. B. «Berechnung nach Art. 104 OR»
   domain: string;                     // Rechtsgebiet, z. B. 'zpo-fristen'
   fileBase: string;                   // Dateiname-Basis, z. B. 'ZPO-Fristen'
+  /** Optionales Mandats-/Aktenzeichen des Nutzers — erscheint im PDF-Kopf
+   *  (FAHRPLAN-PRAXIS 1.2; NICHT das BGE-aktenzeichen der Rechtsprechung). */
+  aktenzeichen?: string;
   inputs: Record<string, string>;     // angezeigte Eingaben
   hero?: PdfHero;                     // optionale Ergebnis-Hauptkennzahl
   sections: PdfSectionConfig[];       // Ergebnis(se) inkl. Status & Rechenweg
@@ -40,7 +43,7 @@ export type PdfDocConfig = {
 };
 
 export type PdfBlock =
-  | { art: 'kopf'; titel: string; rechtsgrundlage?: string; erstellt: string }
+  | { art: 'kopf'; titel: string; rechtsgrundlage?: string; erstellt: string; aktenzeichen?: string }
   | { art: 'h2'; text: string }
   | { art: 'h3'; text: string }
   | { art: 'hero'; hero: PdfHero; status: BerechnungsStatus }
@@ -89,6 +92,7 @@ export function buildPdfModel(cfg: PdfDocConfig, jetzt: Date = new Date()): PdfM
     titel: t(cfg.title),
     rechtsgrundlage: cfg.rechtsgrundlage ? t(cfg.rechtsgrundlage) : undefined,
     erstellt: format(jetzt, 'dd.MM.yyyy, HH:mm') + ' Uhr',
+    aktenzeichen: cfg.aktenzeichen?.trim() ? t(cfg.aktenzeichen.trim()) : undefined,
   });
 
   // 2. Ergebnis-Hero (falls der Rechner eine Hauptkennzahl liefert)
@@ -197,7 +201,7 @@ export function modelText(model: PdfModel): string {
   return model.blocks
     .map((b) => {
       switch (b.art) {
-        case 'kopf': return `${b.titel} ${b.rechtsgrundlage ?? ''} ${b.erstellt}`;
+        case 'kopf': return `${b.titel} ${b.rechtsgrundlage ?? ''} ${b.erstellt} ${b.aktenzeichen ?? ''}`;
         case 'hero': return [
           b.hero.hauptlabel, b.hero.hauptwert,
           ...(b.hero.nebenwerte ?? []).map((n) => `${n.label}: ${n.wert}`),

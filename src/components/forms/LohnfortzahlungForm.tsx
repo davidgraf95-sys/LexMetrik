@@ -8,6 +8,7 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { FristenKalender } from '../FristenKalender';
 
 const KANTONE: { code: Kanton; name: string }[] = [
@@ -101,7 +102,10 @@ export function LohnfortzahlungForm() {
   };
 
   // PDF: domänenspezifischer Disclaimer (GAV-/Skalen-Hinweis ist HIER einschlägig).
+  // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
+  const [aktenzeichen, setAktenzeichen] = useState('');
   const pdfConfig: PdfDocConfig = {
+    aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Lohnfortzahlung bei Verhinderung (Art. 324a OR)',
     domain: 'arbeitsrecht',
     fileBase: 'Lohnfortzahlung',
@@ -290,6 +294,7 @@ export function LohnfortzahlungForm() {
             />
           )}
           <ErgebnisAnzeige titel="Lohnfortzahlung (Art. 324a OR)" ergebnis={ergebnis} />
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <PdfExportButton config={pdfConfig} />
         </div>
       )}
