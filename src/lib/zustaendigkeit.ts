@@ -312,7 +312,11 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       weichen.push('Nur die beklagte Partei ist im Handelsregister eingetragen: Die klagende Partei kann zwischen Handelsgericht und ordentlichem Gericht wählen (Art. 6 Abs. 3 ZPO; nur HG-Kantone).');
     }
   }
-  if (!istEinzigeInstanz && sw !== null && sw >= ZPO_SCHWELLEN.DIREKTKLAGE_MIN) {
+  // Naht-Fix 6.6.2026 (Tiefencheck David): Bei der SCHEIDUNG feuerte die
+  // Art.-8-Weiche, wenn (atypisch) vermögensrechtlich+Streitwert gesetzt waren —
+  // das Scheidungsverfahren (Art. 274 ff. ZPO, zwingender Gerichtsstand Art. 23)
+  // kennt keine Direktklage ans obere Gericht.
+  if (!istEinzigeInstanz && !istScheidung && sw !== null && sw >= ZPO_SCHWELLEN.DIREKTKLAGE_MIN) {
     direktklageWeiche = true;
     weichen.push(`Direkte Klage ans obere Gericht möglich (Streitwert ≥ CHF ${ZPO_SCHWELLEN.DIREKTKLAGE_MIN.toLocaleString('de-CH')}, Zustimmung der beklagten Partei, Art. 8 ZPO). Dann Schlichtung entfällt (Art. 199 Abs. 3 ZPO).`);
   }

@@ -532,3 +532,14 @@ describe('Art.-5-Nachuntersuchung 6.6.2026 (Auftrag David)', () => {
     expect(w).toContain('FinfraG');
   });
 });
+
+describe('Naht-Fix 6.6.2026 — Scheidung × (atypisch) vermögensrechtlich', () => {
+  it('keine Art.-8-Direktklage-Weiche im Scheidungsverfahren (Art. 274 ff./23 ZPO)', () => {
+    const r = bestimmeZustaendigkeit({ streitsache: 'scheidung', vermoegensrechtlich: true, streitwertCHF: 150_000 });
+    expect(r.weichen.some((w) => w.includes('Art. 8 ZPO'))).toBe(false);
+    expect(r.verfahrensart).toBe('scheidungsverfahren');
+    // Regressionsschutz: bei der Geldforderung feuert sie weiterhin.
+    const g = bestimmeZustaendigkeit({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 150_000 });
+    expect(g.weichen.some((w) => w.includes('Art. 8 ZPO'))).toBe(true);
+  });
+});
