@@ -1,7 +1,7 @@
 # Bibliothek — Informationsgrundlagen für LexMetrik
 
 Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
-das (noch) nicht Code ist. 46 Dossiers in 6 Ordnern (Stand 6.6.2026 nachts).
+das (noch) nicht Code ist. 50 Dossiers in 6 Ordnern (Stand 6.6.2026 nachts).
 Verbindlich seit 6.6.2026: **CLAUDE.md §11** — jede Recherche mündet hier in eine
 geordnete, engine-orientierte Übersichtsliste mit INDEX-Eintrag. Regeln:
 
@@ -26,7 +26,12 @@ bibliothek/
   rechtsprechung/  Register aller zitierten Bundesgerichtsentscheide (Links + Fundorte)
 ```
 
-**Recherche-Dossiers (19, Bau-Priorisierung):** [recherche/INDEX.md](recherche/INDEX.md)
+**Recherche-Dossiers (22, Bau-Priorisierung):** [recherche/INDEX.md](recherche/INDEX.md) —
+neu 6.6.2026: [gesellschaftsgruendung](recherche/gesellschaftsgruendung.md)
+(Deep-Research, Dokumente je Rechtsform verbatim aus HRegV/OR + Notariats-Praxis)
++ Vertiefungen [gmbh-gruendung](recherche/gmbh-gruendung.md) (inkl. Bauspez.
+Maske Gründungsunterlagen) und [ag-gruendung](recherche/ag-gruendung.md)
+(inkl. Emissionsabgabe am neu gepinnten StG-Cache)
 
 **Rechtsprechungs-Register:** [rechtsprechung/bge-register.md](rechtsprechung/bge-register.md) —
 alle 90 im Code zitierten BGE/BGer-Urteile mit amtlichem Link (URL-Schema §7-verifiziert
@@ -46,6 +51,7 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 | Dokument | Inhalt | Verifikation |
 |---|---|---|
 | [zpo-zustaendigkeit-regelwerk.md](normen/zpo-zustaendigkeit-regelwerk.md) | Art. 4–46 + Systematik (Bindungsgrade, HG-Revision 2025, perpetuatio fori, Art.-63-Rettung, IPRG-Weiche) mit Engine-Hinweisen | 17/17 Wortlaut-Proben am Cache ✓ |
+| [zustaendigkeit-engine-verifikation.md](normen/zustaendigkeit-engine-verifikation.md) | Deep-Research-Vollverifikation von `zustaendigkeit.ts` (37 Behauptungs-Cluster, ZPO 20250101 + BGG 20250101 + BGE 133 III 393): **0 fristen-/ergebnisverfälschende Fehler**; Befunde B-1 Art. 113 II lit. g (DSG-Schlichtung kostenlos) und B-2 Art. 6 IV lit. c (internat. HG-Weiche) am 6.6.2026 umgesetzt | Kern zweifach (25 Claims à 3-0 adversarial) · Rest einfach belegt (6.6.2026) |
 | [schkg-zustaendigkeit-regelwerk.md](normen/schkg-zustaendigkeit-regelwerk.md) | Betreibungsorte 46–55, Klage-Foren + Fristen (Aberkennung 20 T., Arrest-Kaskade), Gericht vs. Aufsicht; Synthese-Tabelle | Wortlaute verbatim Stand 1.1.2025 ✓ |
 | [stpo-zustaendigkeit-regelwerk.md](normen/stpo-zustaendigkeit-regelwerk.md) | Behörden 12–18, Bund-Kataloge 23/24, Gerichtsstand 31–42 (Tatort/Prioritätsprinzip), Strafbefehl/abgekürzt (Rev. 2024); Decision-Tree | 13/13 substanzielle Proben ✓ |
 | [erbrecht-regelwerk.md](normen/erbrecht-regelwerk.md) | 3 Teile: Erbfolge+Pflichtteile (Rev. 2023, Quoten-Synthesen beide Rechtsstände) · Verfügungen+Klagen (Fristen 521/533) · Erbgang+Teilung (22 Fristen, Ausgleichung 626 ff.); **Engine-Audits: erbteilung.ts + testament.ts bestanden** | 16/16 Wortlaut-Proben ✓ |

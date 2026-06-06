@@ -1,10 +1,11 @@
-# Recherche-Dossiers — geplante Engines & Vorlagen (Stand 6.6.2026 abends)
+# Recherche-Dossiers — geplante Engines & Vorlagen (Stand 6.6.2026 nachts)
 
-**19 Dossiers:** zwölf Cluster zu allen `geplant`-Einträgen des Katalogs (92 Karten/
-Szenarien, gruppiert nach Rechtsgebiet) plus sieben Einzel-/Vertiefungsdossiers
+**22 Dossiers:** zwölf Cluster zu allen `geplant`-Einträgen des Katalogs (92 Karten/
+Szenarien, gruppiert nach Rechtsgebiet) plus zehn Einzel-/Vertiefungsdossiers
 (StPO-Rechtsmittel · Strafbefehlsverfahren · Gebühren nicht-vermögensrechtlich ·
 Kündigungs-Masken · Untermietvertrag · Eheschutz/GlG-Zuständigkeit · BGG-Beschwerde
-[seit 6.6.2026 in `bestimmeRechtsmittel` teilverdrahtet]). Jedes Dossier liefert pro Item: Nutzerfrage · Normbasis (Stand 2026,
+[seit 6.6.2026 in `bestimmeRechtsmittel` teilverdrahtet] · Gesellschaftsgründung ·
+GmbH-Gründung · AG-Gründung). Jedes Dossier liefert pro Item: Nutzerfrage · Normbasis (Stand 2026,
 Wortlaut am Fedlex-Cache wo verfügbar) · Regelwerk-Skizze · **§2-Beurteilung**
 (deterministisch / parametrisiert / Gerüst / Backlog) · Datenbedarf inkl. Verfallsregister ·
 Fallstricke · Aufwand S/M/L · Wiederverwendung bestehender Engines.
@@ -23,6 +24,9 @@ Verifikations-TODOs stehen aus. Nichts davon ist umgesetzt.
 | [erbrecht-ausbau](erbrecht-ausbau.md) | Ausgleichung (626 ff.) · Erb-Fristen (567/533/521) · öff. Testament/Erbvertrag/Erbverzicht [Beurkundung] · Erbteilungsvereinbarung | Erb-Fristen-Rechner = Quick-Win (Preset-Bauform) |
 | [familienrecht](familienrecht.md) | Güterrecht-Vorschlag · Vorsorgeausgleich (122 ff. + FZG 22a) · Familienfristen · Vereinbarungen [Gerüst] | Vorsorgeausgleich-Grundfall deterministisch; Rentenfälle 124a = Weiche |
 | [gesellschaftsrecht](gesellschaftsrecht.md) | Quoten/Schwellen · Liberierung · **Kapitalverlust 725a / Überschuldung 725b** · Kapitalerhöhung · 706a-Fristen · Verantwortlichkeit | Kapitalverlust/Überschuldung (Bilanzmaske + exakte Formel) |
+| [gesellschaftsgruendung](gesellschaftsgruendung.md) | **Gründung aller Rechtsformen** (Deep-Research 6.6.2026, Schwerpunkt Dokumente): notwendige Belege je Rechtsform verbatim aus HRegV 43/71/84/90/94 + OR 629–635a/777–777c/830 · Notariats-Praxis-Schicht (12 Quellen, 4 amtliche Merkblätter PDF-geparst) · Rechtsformwahl-Matrix · Ablauf-Schrittfolgen · HReg-Gebühren GebV-HReg verbatim · **Stampa = Zombie-Dokument seit 1.1.2021** · Verein-Revisionsschwellen 69b ZGB ≠ 727 OR | «Gründungs-Checkliste»-Rechner (alle Weichen hart, §2); Errichtungsakt-Export §8-gesperrt |
+| [gmbh-gruendung](gmbh-gruendung.md) | **GmbH-Vertiefung** (108 Agents, 24/25 bestätigt): Statuten-Mindestinhalt 776 (4 Ziff.) + bedingt notwendige Klauseln einzeln verankert (776a aufgehoben!) · EHRA-/ZH-/SG-/GL-Musterstatuten · Errichtungsakt-Detail (777b, 22 IV HRegV; Bankbescheinigung nur wenn Bank nicht in Urkunde) · **Abtretung = Schriftform (785, seit 2008)** · Selbstorganschaft 809 · 814-III-CH-Vertretung · **Teil 5 = Bauspez. Maske «GmbH-Gründungsunterlagen»** | Maske bauen (Checkliste ohne Export, §8); Weichen-Tabelle liegt baufertig vor |
+| [ag-gruendung](ag-gruendung.md) | **AG-Vertiefung** (105 Agents, 25/25 bestätigt): Statuten 3 Umfangsstufen + bedingt notwendiger Inhalt mit Mustertexten (Vinkulierung 685a-d, virtuelle GV 701d + EHRA PM 1/23, Schiedsklausel 697n) · amtliche Vorlagen-Suite ZH (Statuten/VR-Protokoll/Wahlannahme/Domizil/Unterschriftenblatt) · VR-Konstituierung (4 Einreichungsformen, Beglaubigung 20/23 HRegV) · AG/GmbH-Kontrasttabelle (686/697j/697l vs. 791) · **Emissionsabgabe 1 % ab CHF 1 Mio. am StG-Cache verbatim** (neu gepinnt cc/1974/11_11_11@20240101) | AG-Maske als zweiter Aufsatz auf den GmbH-Masken-Rahmen |
 | [strafrecht-cluster](strafrecht-cluster.md) | StGB-Verjährung (Strafrahmen-Wahl statt Deliktskatalog!) · StPO-Fristen (keine Gerichtsferien, Art. 89 II) · Haftfristen · Vorlagen Anzeige/Antrag/Einsprache | StPO-Fristen + Einsprache Strafbefehl (10 Tage) zuerst |
 | [verwaltung-steuer-sozial](verwaltung-steuer-sozial.md) | VwVG-/ATSG-Fristen · Vergabe (BöB 56: 20 T. OHNE Stillstand) · Steuer-Verjährung · VSt · AHV · DSG · Ausländerrecht | VwVG/ATSG als Preset-Kataloge (Stillstand 22a = ZPO-Gerichtsferien → Reuse) |
 | [querschnitt-spezialrechner](querschnitt-spezialrechner.md) | Bauhandwerkerpfandrecht (4 Mt.) · Markenwiderspruch (3 Mt.) · Schadenszins · Widerruf/KKG · Ferien-Checker | **Klagebewilligung Art. 209 ist bereits in zpoPresets implementiert — nur UI fehlt**; Ferien-Checker = reine UI |
