@@ -1,4 +1,4 @@
-# Handlungsplan (erstellt 6.6.2026 abends, auf Auftrag David)
+# Handlungsplan (Stand 6.6.2026 spätabends — 2. Fassung, auf Auftrag David)
 
 Priorisiertes weiteres Vorgehen nach der Abend-Session (Art.-63-Fixes ·
 Feiertage-Doppelcheck · Katalog-Split · Rechtsmittel-Fahrplan · Bibliothek
@@ -8,9 +8,13 @@ löschen, Stand in STRUKTUR.md spiegeln.
 
 ## A · Entscheide, die nur David treffen kann (blockieren anderes)
 
-1. **Push/Deploy-Ja:** 10 ungepushte Commits (`79eb4a9..4781ca7` — Nachmittag
-   4 + Abend 6). Suite 757 grün, Sweep 11'184, Zitate 261/261, zwei
-   unabhängige Reviews ohne offene Befunde. §9: wartet auf explizites Ja.
+1. **Push (freigegeben) + DEPLOY-Ja:** Stand `dfab948` ist gepusht; seither
+   9 NEUE ungepushte Commits (Wizard-Dialog, Vorlagen-Verweis, Design,
+   Masken 1a+1b, Katalog-Umzüge, 2 Logik-Check-Fixes). Suite 772 grün,
+   Logik-Check des Wizard-Umbaus bestanden (1 HOCH-Lint-Befund gefixt).
+   **Prod-Deploy steht weiter aus** (Berechtigungs-Gate hat «ja» nur als
+   Push-Freigabe gewertet — Deploy separat bestätigen oder
+   `! npx vercel --prod` tippen).
 2. **Hosting & Zahlungsmittel (vor Login-/Pro-Phase):** Migration zu CH-Host
    (Empfehlung Infomaniak), Domain **lexmetrik.ch früh registrieren**;
    Zahlungssystem offen (PayPal raus) — Payrexx/Datatrans/TWINT prüfen.
@@ -26,8 +30,18 @@ löschen, Stand in STRUKTUR.md spiegeln.
 
 ## B · Baufertig spezifiziert (Reihenfolge = Empfehlung)
 
-5. **Kündigungs-Masken** — 5 Wizard-Masken, Spezifikation
-   `recherche/kuendigungs-masken.md` (baufertig, 6.6.2026).
+4a. ~~Zuständigkeits-Wizard~~ → **LIVE** (`a64c5ab`, Logik-Check bestanden)
+   inkl. Vorlagen-Verweis am Fahrplan-Ende (`518f996`, auch für geplante
+   Vorlagen). Offen daraus (NIEDRIG): UX-Hinweis im leeren Ergebnis-Schritt
+   («Streitwert ergänzen»); Prefill-Brücke für klage-vereinfacht (neue
+   Kodier-Funktion in lib) — s. D.
+
+5. **Kündigungs-Masken** (Spez. `recherche/kuendigungs-masken.md`):
+   ✅ M1–M9 geteilte Module · ✅ 1a Arbeitnehmer:in (free, `9165094`) ·
+   ✅ 1b Arbeitgeber:in (Sperrfristen-Blocker, `1714319`) ·
+   🔨 2a Mieter:in (Schema fertig im Working Tree — Seite/Karte/Tests offen) ·
+   ⬜ 3 Allgemein+Presets (VVG-Verifikations-TODOs offen!) ·
+   ⬜ 2b Vermieter-Checkliste (§8-Grenze).
 6. **Untermietvertrag** — Spezifikation `recherche/untermietvertrag.md`
    (baufertig; Weiche in mietvertrag.ts existiert schon).
 7. **Eheschutz + GlG in der Zuständigkeits-Engine** — Dossier
@@ -55,6 +69,10 @@ löschen, Stand in STRUKTUR.md spiegeln.
 
 15. Review-Befund N-1: Direktklage-Eingabe (Art. 8 ZPO) unter CHF 100'000
     plausibilisieren (Hinweis statt stiller Akzeptanz).
+15a. Logik-Check 6.6. spätabends: leerer Ergebnis-Schritt im Wizard ohne
+    Hinweis (Streitwert nachträglich geleert) · klage-vereinfacht-Verweis
+    ist BS-betitelt unabhängig vom Kanton (vorbestehend) · ungenutzte
+    @fontsource/fraunces-Dependency entfernen.
 16. Stabile Keys in 7 Listen-Editoren (Voll-Audit 5.6.) · Datepicker-
     Pfeiltasten (A11y) · Markenschriften in Vorlagen-PDFs ·
     Detailseiten-Titel an Katalog-Titel angleichen.
