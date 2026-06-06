@@ -161,6 +161,15 @@ export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
     }
     fahrplan.push({ titel: 'Parteistellung prüfen', text: 'Wer durch die Tat unmittelbar verletzt ist, kann sich bis zum Abschluss des Vorverfahrens als PRIVATKLÄGERSCHAFT konstituieren (Straf- und/oder Zivilklage, Art. 118 f. StPO) — sonst nur Anzeigeperson ohne Verfahrensrechte (Art. 301 Abs. 3 StPO).' });
   } else {
+    // M-6-Fix Bug-Check 6.6.2026: Die verwirkende 10-Tage-Beschwerdefrist
+    // stand nur als Prosa in der Weiche — anders als die Strafantragsfrist
+    // (Art. 31 StGB) fehlte sie im fristen[]-Array und damit in der UI-
+    // Fristenliste. Wortlaut am Fedlex-Cache verifiziert: «…können sich die
+    // Parteien innert 10 Tagen bei der nach Artikel 40 zum Entscheid über
+    // den Gerichtsstand zuständigen Behörde beschweren» (Art. 41 Abs. 2 StPO).
+    // Verortet im Gerichtsstands-Strang: die Frist läuft erst ab einer
+    // Gerichtsstands-Entscheidung der Staatsanwaltschaften (Art. 39 Abs. 2).
+    fristen.push({ label: 'Beschwerde gegen die Gerichtsstands-Entscheidung der Staatsanwaltschaften (Art. 39 Abs. 2)', frist: '10 Tage an die Behörde nach Art. 40 StPO', norm: 'Art. 41 Abs. 2 StPO', kritisch: true });
     fahrplan.push(
       { titel: 'Forum nach der Kaskade bestimmen', text: 'Spezialforen (Art. 35–37) vor Grundsatz Tatort (Art. 31), dann Kaskade (Art. 32) — Beteiligung (Art. 33) und Tatmehrheit (Art. 34) verschieben das Forum. Massgeblich ist die VERDACHTSLAGE im Entscheidzeitpunkt (nicht das später Beweisbare); im Zweifel zählt das schwerere Delikt («in dubio pro duriore», Praxis).' },
       { titel: 'Bei Streit: Einigung → Entscheid', text: 'Die beteiligten Staatsanwaltschaften prüfen die Zuständigkeit von Amtes wegen und klären sie im (informellen) Meinungsaustausch (Art. 39); scheitert die Einigung, entscheidet innerkantonal die Ober-/Generalstaatsanwaltschaft — ihr Entscheid ist seit der Revision 2022 nicht mehr als endgültig bezeichnet — nach der Lehre damit beschwerdefähig (Art. 40 Abs. 1; Praxis) —, interkantonal die Beschwerdekammer des Bundesstrafgerichts: Gesuch des zuerst befassten Kantons unverzüglich, jedenfalls VOR der Anklage; Praxis-Frist 10 Tage nach gescheitertem Austausch, hohe Begründungsanforderungen; der BStGer-Entscheid ist ABSCHLIESSEND (keine Beschwerde ans Bundesgericht).' },

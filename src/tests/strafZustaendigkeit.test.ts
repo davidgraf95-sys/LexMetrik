@@ -49,6 +49,15 @@ describe('Verfahrens-Weichen + Fahrplan + Fristen', () => {
     expect(r.fristen[0].frist).toContain('3 Monate');
     expect(bestimmeStrafZustaendigkeit(basis()).fristen.length).toBe(0);
   });
+  it('Gerichtsstand: 10-Tage-Beschwerdefrist als kritisches Frist-Objekt, nicht nur Prosa (M-6-Fix Bug-Check 6.6.2026)', () => {
+    const g = bestimmeStrafZustaendigkeit(basis({ anliegen: 'gerichtsstand' }));
+    const f = g.fristen.find((x) => x.norm === 'Art. 41 Abs. 2 StPO');
+    expect(f).toBeDefined();
+    expect(f!.kritisch).toBe(true);
+    expect(f!.frist).toContain('10 Tage');
+    // Anzeige-Pfad bleibt fokussiert: dort weiterhin nur die Strafantragsfrist.
+    expect(bestimmeStrafZustaendigkeit(basis({ antragsdelikt: true })).fristen.every((x) => x.norm === 'Art. 31 StGB')).toBe(true);
+  });
   it('Übertretung → Übertretungsstrafbehörde (17/357); Bund-Weiche → BA-Warnung (23/24)', () => {
     expect(bestimmeStrafZustaendigkeit(basis({ uebertretung: true })).behoerdeTyp).toContain('ÜBERTRETUNGSSTRAFBEHÖRDE');
     const b = bestimmeStrafZustaendigkeit(basis({ moeglichesBundesdelikt: true }));
