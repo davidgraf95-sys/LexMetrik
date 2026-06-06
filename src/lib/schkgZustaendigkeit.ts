@@ -238,11 +238,19 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
     }
     case 'widerspruch': {
       const k = input.widerspruchKonstellation ?? 'gewahrsam_schuldner';
-      const map: Record<WiderspruchKonstellation, { stelle: string; norm: string }> = {
-        gewahrsam_schuldner: { stelle: 'Gericht des Betreibungsortes (Dritter klagt)', norm: 'Art. 107 Abs. 5 / 109 Abs. 1 Ziff. 1 SchKG' },
-        gewahrsam_dritter_ch: { stelle: 'Gericht am Wohnsitz der beklagten Partei', norm: 'Art. 108 / 109 Abs. 2 SchKG' },
-        gewahrsam_dritter_ausland: { stelle: 'Gericht des Betreibungsortes', norm: 'Art. 108 / 109 Abs. 1 Ziff. 2 SchKG' },
-        grundstueck: { stelle: 'Gericht am Ort der gelegenen Sache (Grundstück)', norm: 'Art. 109 Abs. 3 SchKG' },
+      // M-4-Fix Bug-Check 6.6.2026: Die 20-Tage-Frist hat je Konstellation
+      // GENAU EINE Grundlage (Wortlaut am Fedlex-Cache verifiziert):
+      // Art. 107 Abs. 5 setzt die Frist dem DRITTEN (Gewahrsam Schuldner;
+      // Grundstück NICHT aus dem Grundbuch ersichtlich, Abs. 1 Ziff. 3),
+      // Art. 108 Abs. 2 setzt sie GLÄUBIGER UND SCHULDNER (Gewahrsam Dritter;
+      // Grundstück aus dem Grundbuch ersichtlich, Abs. 1 Ziff. 3). Die
+      // frühere Pauschal-Zitierung «107 Abs. 5 / 108 Abs. 2» mischte die
+      // Parteirollen; beim Grundstück entscheidet der Grundbuch-Eintrag.
+      const map: Record<WiderspruchKonstellation, { stelle: string; norm: string; fristNorm: string }> = {
+        gewahrsam_schuldner: { stelle: 'Gericht des Betreibungsortes (Dritter klagt)', norm: 'Art. 107 Abs. 5 / 109 Abs. 1 Ziff. 1 SchKG', fristNorm: 'Art. 107 Abs. 5 SchKG' },
+        gewahrsam_dritter_ch: { stelle: 'Gericht am Wohnsitz der beklagten Partei', norm: 'Art. 108 / 109 Abs. 2 SchKG', fristNorm: 'Art. 108 Abs. 2 SchKG' },
+        gewahrsam_dritter_ausland: { stelle: 'Gericht des Betreibungsortes', norm: 'Art. 108 / 109 Abs. 1 Ziff. 2 SchKG', fristNorm: 'Art. 108 Abs. 2 SchKG' },
+        grundstueck: { stelle: 'Gericht am Ort der gelegenen Sache (Grundstück)', norm: 'Art. 109 Abs. 3 SchKG', fristNorm: 'Art. 107 Abs. 5 bzw. 108 Abs. 2 SchKG (je nach Grundbuch-Eintrag des Anspruchs)' },
       };
       forum = {
         stelle: map[k].stelle,
@@ -250,7 +258,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
         normen: [{ artikel: map[k].norm }],
       };
       eingabe = { art: 'Widerspruchsklage', verfahren: 'Ordentliches bzw. vereinfachtes Verfahren (je nach Streitwert); KEINE Schlichtung (Art. 198 lit. e Ziff. 3 ZPO)' };
-      fristen.push({ label: 'Klagefrist', frist: '20 Tage ab Fristansetzung durch das Betreibungsamt', norm: 'Art. 107 Abs. 5 / 108 Abs. 2 SchKG', kritisch: true });
+      fristen.push({ label: 'Klagefrist', frist: '20 Tage ab Fristansetzung durch das Betreibungsamt', norm: map[k].fristNorm, kritisch: true });
       fahrplan.push({ titel: 'Konstellation bestimmt Forum UND Parteirollen', text: 'Gewahrsam beim Schuldner → der DRITTE muss klagen (Art. 107); Gewahrsam beim Dritten → der GLÄUBIGER muss klagen (Art. 108). Die 20-Tage-Frist ist Verwirkung.' });
       break;
     }

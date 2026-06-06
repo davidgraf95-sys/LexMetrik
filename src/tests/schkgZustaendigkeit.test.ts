@@ -75,6 +75,18 @@ describe('Foren + Fristen je Anliegen (Synthese-Tabelle)', () => {
     expect(f('gewahrsam_dritter_ausland')).toContain('Betreibungsortes');
     expect(f('grundstueck')).toContain('Grundstück');
   });
+  it('Widerspruch: Frist-Norm je Konstellation differenziert — 107 V (Dritter) vs. 108 II (Gläubiger/Schuldner) vs. Grundbuch-Weiche (M-4-Fix Bug-Check 6.6.2026)', () => {
+    const fristNorm = (k: SchkgInput['widerspruchKonstellation']) =>
+      bestimmeSchkgZustaendigkeit(basis({ anliegen: 'widerspruch', widerspruchKonstellation: k })).fristen[0].norm;
+    expect(fristNorm('gewahrsam_schuldner')).toBe('Art. 107 Abs. 5 SchKG');
+    expect(fristNorm('gewahrsam_dritter_ch')).toBe('Art. 108 Abs. 2 SchKG');
+    expect(fristNorm('gewahrsam_dritter_ausland')).toBe('Art. 108 Abs. 2 SchKG');
+    expect(fristNorm('grundstueck')).toContain('je nach Grundbuch-Eintrag');
+    // Frist bleibt überall 20 Tage und kritisch (nur die Norm war unpräzis).
+    const w = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'widerspruch', widerspruchKonstellation: 'gewahrsam_dritter_ch' }));
+    expect(w.fristen[0].frist).toContain('20 Tage');
+    expect(w.fristen[0].kritisch).toBe(true);
+  });
   it('Kollokation: Pfändung→Betreibungsort (148) / Konkurs→Konkursort (250), je 20 T', () => {
     const pf = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'kollokation', kollokationIn: 'pfaendung' }));
     expect(pf.forum.normen[0].artikel).toBe('Art. 148 SchKG');
