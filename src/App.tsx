@@ -15,6 +15,7 @@ const RechnerZpo = lazy(() => import('./pages/RechnerZpo').then((m) => ({ defaul
 const RechnerVerzugszins = lazy(() => import('./pages/RechnerVerzugszins').then((m) => ({ default: m.RechnerVerzugszins })));
 const RechnerSchkg = lazy(() => import('./pages/RechnerSchkg').then((m) => ({ default: m.RechnerSchkg })));
 const RechnerErbteilung = lazy(() => import('./pages/RechnerErbteilung').then((m) => ({ default: m.RechnerErbteilung })));
+const RechnerErbFristen = lazy(() => import('./pages/RechnerErbFristen').then((m) => ({ default: m.RechnerErbFristen })));
 const RechnerMietrecht = lazy(() => import('./pages/RechnerMietrecht').then((m) => ({ default: m.RechnerMietrecht })));
 const RechnerVerjaehrung = lazy(() => import('./pages/RechnerVerjaehrung').then((m) => ({ default: m.RechnerVerjaehrung })));
 const RechnerGewaehrleistung = lazy(() => import('./pages/RechnerGewaehrleistung').then((m) => ({ default: m.RechnerGewaehrleistung })));
@@ -77,6 +78,7 @@ export default function App() {
         <Route path="/rechner/verzugszins" element={<RechnerVerzugszins />} />
         <Route path="/rechner/schkg-fristen" element={<RechnerSchkg />} />
         <Route path="/rechner/erbteilung" element={<RechnerErbteilung />} />
+        <Route path="/rechner/erb-fristen" element={<RechnerErbFristen />} />
         <Route path="/rechner/mietrecht" element={<RechnerMietrecht />} />
         <Route path="/rechner/verjaehrung" element={<RechnerVerjaehrung />} />
         <Route path="/rechner/gewaehrleistung" element={<RechnerGewaehrleistung />} />

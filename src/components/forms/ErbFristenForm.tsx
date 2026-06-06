@@ -1,0 +1,124 @@
+import { useState } from 'react';
+import { KANTONE } from '../../lib/kantone';
+import { ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import type { Kanton } from '../../types/legal';
+import { berechneErbFrist, ERB_FRISTEN, type ErbFristKey } from '../../lib/erbFristen';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
+import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
+import { DatumsFeld } from '../DatumsFeld';
+import { PdfExportButton } from '../PdfExport';
+
+// ─── Erb-Fristen-Rechner (Darstellung) ───────────────────────────────────────
+// Reine Darstellung über src/lib/erbFristen.ts (§3): Tatbestand wählen,
+// Trigger-Datum eingeben — Fristzahlen/Trigger-Texte kommen aus dem Katalog
+// der Engine (§5: eine Quelle).
+
+const ERB_DISCLAIMER =
+  'Automatisierte Orientierungsberechnung erbrechtlicher Fristen (Art. 521, 533, 567 ff. ZGB) – keine ' +
+  'Rechtsberatung. Der massgebliche Fristbeginn («Kenntnis», amtliche Mitteilung, Eröffnung) ist Tatfrage ' +
+  'und wird als Eingabe übernommen. Für die Klagefristen ist die Berechnungskonvention (Art. 77 OR analog) ' +
+  'höchstrichterlich nicht fixiert; im Grenzfall anwaltlich prüfen. Zuständige Behörde und kantonales ' +
+  'Verfahren (Ausschlagung/Inventar) sind kantonal geregelt.';
+
+export function ErbFristenForm() {
+  const [key, setKey] = useState<ErbFristKey>('ausschlagung_gesetzlich');
+  const [trigger, setTrigger] = useState('2026-03-10');
+  const [verschieben, setVerschieben] = useState(true);
+  const [kanton, setKanton] = useState<Kanton>('ZH');
+
+  const preset = ERB_FRISTEN.find((p) => p.key === key)!;
+  const erbgang = ERB_FRISTEN.filter((p) => p.gruppe === 'erbgang');
+  const klagen = ERB_FRISTEN.filter((p) => p.gruppe === 'klage');
+
+  let ergebnis: ReturnType<typeof berechneErbFrist> | null;
+  try {
+    ergebnis = trigger
+      ? berechneErbFrist({ key, trigger, werktagsVerschiebung: verschieben, kanton: verschieben ? kanton : undefined })
+      : null;
+  } catch {
+    ergebnis = null;
+  }
+
+  const eingaben = {
+    'Tatbestand': preset.label,
+    'Auslösendes Ereignis': trigger.split('-').reverse().join('.'),
+    'Werktags-Verschiebung': verschieben ? `ja (${kanton})` : 'nein',
+  };
+  const pdfConfig: PdfDocConfig = {
+    title: 'Erbrechtliche Fristen (ZGB)',
+    domain: 'erb-fristen',
+    fileBase: 'Erb-Fristen',
+    inputs: eingaben,
+    sections: ergebnis ? [{ titel: `Erb-Frist: ${preset.label}`, ergebnis }] : [],
+    disclaimer: ERB_DISCLAIMER,
+  };
+
+  return (
+    <div className="space-y-6">
+      <PflichtDisclaimer
+        kurz="Erbrechtliche Fristen-Orientierung (Art. 521/533/567 ff. ZGB). Fristbeginn und Behördenzuständigkeit sind fachlich zu prüfen."
+        text={ERB_DISCLAIMER}
+      />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Field label="Tatbestand" hint={preset.norm}>
+          <select className={inputCls} value={key} onChange={(e) => setKey(e.target.value as ErbFristKey)}>
+            <optgroup label="Erbgang: Ausschlagung & Inventar">
+              {erbgang.map((p) => <option key={p.key} value={p.key}>{p.label}</option>)}
+            </optgroup>
+            <optgroup label="Klagefristen (1/10/30-Muster)">
+              {klagen.map((p) => <option key={p.key} value={p.key}>{p.label}</option>)}
+            </optgroup>
+          </select>
+        </Field>
+        <Field label="Auslösendes Ereignis (Datum)" hint={preset.trigger}>
+          <DatumsFeld value={trigger} onChange={setTrigger} className={inputCls} />
+        </Field>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+          <input type="checkbox" checked={verschieben} onChange={(e) => setVerschieben(e.target.checked)} />
+          Fristende auf Sa/So/Feiertag → nächster Werktag (Art. 78 OR analog)
+        </label>
+        {verschieben && (
+          <label className="flex items-center gap-2 text-body-s text-ink-700">
+            Kanton (Behördensitz)
+            <select className={inputCls + ' w-auto'} value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)}>
+              {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+            </select>
+          </label>
+        )}
+      </div>
+
+      {ergebnis && (
+        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
+          <ErgebnisSprung zielId="lc-ergebnis" />
+          <LiveHeader />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="lc-tile border-brass-500 border-t-[3px]">
+              <p className="lc-overline mb-1">Fristende</p>
+              <p className="text-body-l font-semibold text-ink-900 num">{ergebnis.resultat.endDatum}</p>
+              <p className="text-xs text-ink-500 mt-0.5">{ergebnis.resultat.endWochentag}</p>
+            </div>
+            <div className="lc-tile">
+              <p className="lc-overline mb-1">Frist</p>
+              <p className="text-body-l font-semibold text-ink-900 num">
+                {preset.laenge} {preset.einheit === 'monate' ? 'Monat(e)' : 'Jahr(e)'}
+              </p>
+              <p className="text-xs text-ink-500 mt-0.5">{preset.norm}</p>
+            </div>
+            <div className="lc-tile">
+              <p className="lc-overline mb-1">Verschoben</p>
+              <p className="text-body-l font-semibold text-ink-900">{ergebnis.resultat.verschoben ? 'ja' : 'nein'}</p>
+              <p className="text-xs text-ink-500 mt-0.5">{ergebnis.resultat.verschoben ? ergebnis.resultat.verschiebeGruende.join(' · ') : 'Fristende ist Werktag bzw. Verschiebung aus'}</p>
+            </div>
+          </div>
+          <ErgebnisAnzeige titel={`Erb-Frist: ${preset.label}`} ergebnis={ergebnis} />
+          <PdfExportButton config={pdfConfig} />
+        </div>
+      )}
+    </div>
+  );
+}

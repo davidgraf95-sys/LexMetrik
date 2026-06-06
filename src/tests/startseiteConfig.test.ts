@@ -175,9 +175,10 @@ describe('Katalog-Integrität (Rechtsgebiet-Gliederung)', () => {
 });
 
 describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
-  it('verfügbar = status !== geplant; Regressionszählung 20 (Stand 5.6.2026, + Vollmacht + Zuständigkeit + Klage vereinfacht)', () => {
+  // Deklarierte Erweiterung 6.6.2026: + Erb-Fristen-Rechner (Quick-Win 1) → 21.
+  it('verfügbar = status !== geplant; Regressionszählung 21 (Stand 6.6.2026, + Erb-Fristen)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(20);
+    expect(verf.length).toBe(21);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });

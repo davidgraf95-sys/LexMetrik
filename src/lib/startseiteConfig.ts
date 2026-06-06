@@ -331,8 +331,21 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'erbrecht-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Erbrecht',
     rechtsbereich: 'privat',
     title: 'Erbrecht – Fristen',
-    description: 'Fristen für Ausschlagung der Erbschaft, Herabsetzungs- und Ungültigkeitsklage.',
-    status: 'geplant', norms: [],
+    description: 'Ausschlagung, öffentliches Inventar sowie Ungültigkeits-, Herabsetzungs- und Erbschaftsklage – 15 Tatbestände mit exaktem Fristbeginn (Art. 521/533/567 ff. ZGB).',
+    // Quick-Win 1 (bibliothek/recherche/erbrecht-ausbau.md), gebaut 6.6.2026;
+    // Engine src/lib/erbFristen.ts, Normen am ZGB-Cache verifiziert.
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 567 ZGB', url: fedlexUrl('ZGB', '567'), verified: false },
+      { label: 'Art. 580 ZGB', url: fedlexUrl('ZGB', '580'), verified: false },
+      { label: 'Art. 521 ZGB', url: fedlexUrl('ZGB', '521'), verified: false },
+      { label: 'Art. 533 ZGB', url: fedlexUrl('ZGB', '533'), verified: false },
+      { label: 'Art. 600 ZGB', url: fedlexUrl('ZGB', '600'), verified: false },
+    ],
+    href: '/rechner/erb-fristen',
+    keywords: ['Ausschlagung', 'Erbschaft ausschlagen', 'öffentliches Inventar', 'Herabsetzung', 'Ungültigkeitsklage', 'Erbschaftsklage', 'Vermächtnis', 'Pflichtteil', 'Frist'],
+    related: ['erbteilung', 'eigenhaendiges-testament'],
+    icon: 'clock',
   },
   'familie-fristen': {
     id: 'familie-fristen', modus: 'rechner', art: 'frist', tier: 'pro', rechtsgebiet: 'Familienrecht',
