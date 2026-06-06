@@ -98,10 +98,13 @@ describe('Verifikation: kantonale Feiertage (Art. 142 Abs. 3)', () => {
     expect(istFeiertag(d('2025-04-21'), 'ZH')).toBe(true);
     expect(istFeiertag(d('2025-04-21'), 'NE')).toBe(false);
   });
-  it('Pfingstmontag 2025 (9.6.): ZH ja, NE/JU nein', () => {
+  // Deklarierte Korrektur 6.6.2026 (BJ-Doppelcheck): JU führt den Lundi de
+  // Pentecôte als gesetzlich anerkannten Feiertag (BJ Ziff. 26 lit. a) —
+  // der frühere Erwartungswert «JU nein» war ein Matrix-Fehler.
+  it('Pfingstmontag 2025 (9.6.): ZH/JU ja, NE nein', () => {
     expect(istFeiertag(d('2025-06-09'), 'ZH')).toBe(true);
+    expect(istFeiertag(d('2025-06-09'), 'JU')).toBe(true);
     expect(istFeiertag(d('2025-06-09'), 'NE')).toBe(false);
-    expect(istFeiertag(d('2025-06-09'), 'JU')).toBe(false);
   });
   it('Fronleichnam 2025 (19.6.): LU/TI ja, ZH/GR nein', () => {
     expect(istFeiertag(d('2025-06-19'), 'LU')).toBe(true);
@@ -114,10 +117,51 @@ describe('Verifikation: kantonale Feiertage (Art. 142 Abs. 3)', () => {
     expect(istFeiertag(d('2025-11-01'), 'ZH')).toBe(false);
     expect(istFeiertag(d('2025-11-01'), 'GR')).toBe(false);
   });
-  it('Mariä Empfängnis 8.12.2025: LU ja, FR/ZH nein', () => {
+  // Deklarierte Korrektur 6.6.2026 (BJ-Doppelcheck): FR führt die Immaculée
+  // Conception als anerkannten Feiertag (BJ Ziff. 10 lit. a, Seebezirk-
+  // Vorbehalt Fn. 2) — der frühere Erwartungswert «FR nein» war ein Fehler.
+  it('Mariä Empfängnis 8.12.2025: LU/FR ja, ZH nein', () => {
     expect(istFeiertag(d('2025-12-08'), 'LU')).toBe(true);
-    expect(istFeiertag(d('2025-12-08'), 'FR')).toBe(false);
+    expect(istFeiertag(d('2025-12-08'), 'FR')).toBe(true);
     expect(istFeiertag(d('2025-12-08'), 'ZH')).toBe(false);
+  });
+  // ── BJ-Doppelcheck 6.6.2026 (Auftrag David): Korrekturen + Fussnotenregeln ──
+  it('Berchtoldstag 2.1.2025: LU ja (BJ Ziff. 3 lit. a — fehlte), SZ nein', () => {
+    expect(istFeiertag(d('2025-01-02'), 'LU')).toBe(true);
+    expect(istFeiertag(d('2025-01-02'), 'SZ')).toBe(false);
+  });
+  it('NE-Bedingung (Fn. 10): 2.1. nur, wenn der 1.1. ein Sonntag ist', () => {
+    expect(istFeiertag(d('2023-01-02'), 'NE')).toBe(true);  // 1.1.2023 = So
+    expect(istFeiertag(d('2025-01-02'), 'NE')).toBe(false); // 1.1.2025 = Mi
+  });
+  it('Allerheiligen 1.11.2025: GL ja (BJ Ziff. 8 lit. a — fehlte)', () => {
+    expect(istFeiertag(d('2025-11-01'), 'GL')).toBe(true);
+  });
+  it('Stephanstag 26.12.2025: GL (lit. a) und VS (lit. b) ja — fehlten; VD/GE/JU nein', () => {
+    expect(istFeiertag(d('2025-12-26'), 'GL')).toBe(true);
+    expect(istFeiertag(d('2025-12-26'), 'VS')).toBe(true);
+    expect(istFeiertag(d('2025-12-26'), 'VD')).toBe(false);
+    expect(istFeiertag(d('2025-12-26'), 'GE')).toBe(false);
+    expect(istFeiertag(d('2025-12-26'), 'JU')).toBe(false);
+  });
+  it('UR/AR/AI-Bedingung (Fn. 1/7/9): kein Stephanstag, wenn Weihnachten Mo/Fr', () => {
+    // 25.12.2023 = Mo und 25.12.2026 = Fr → entfällt; 25.12.2025 = Do → gilt.
+    expect(istFeiertag(d('2023-12-26'), 'UR')).toBe(false);
+    expect(istFeiertag(d('2026-12-26'), 'AR')).toBe(false);
+    expect(istFeiertag(d('2025-12-26'), 'AI')).toBe(true);
+    expect(istFeiertag(d('2023-12-26'), 'ZH')).toBe(true); // unbedingte Kantone unberührt
+  });
+  it('NE-Bedingung (Fn. 10): 26.12. nur, wenn der 25.12. ein Sonntag ist', () => {
+    expect(istFeiertag(d('2022-12-26'), 'NE')).toBe(true);  // 25.12.2022 = So
+    expect(istFeiertag(d('2024-12-26'), 'NE')).toBe(false); // 25.12.2024 = Mi
+  });
+  it('Mauritiustag 22.9.2025: AI ja (BJ Fn. 8, Gerichtsort Appenzell), SG nein', () => {
+    expect(istFeiertag(d('2025-09-22'), 'AI')).toBe(true);
+    expect(istFeiertag(d('2025-09-22'), 'SG')).toBe(false);
+  });
+  it('Näfelser Fahrt: Karwoche-Verschiebung 2026 (9.4. statt 2.4., amtlich gl.ch)', () => {
+    expect(istFeiertag(d('2026-04-09'), 'GL')).toBe(true);
+    expect(istFeiertag(d('2026-04-02'), 'GL')).toBe(false); // Gründonnerstag, verschoben
   });
   it('Spezialfeiertage: Näfelser Fahrt GL (3.4.2025), Jeûne genevois GE (11.9.2025), Lundi du Jeûne VD (22.9.2025)', () => {
     expect(istFeiertag(d('2025-04-03'), 'GL')).toBe(true);

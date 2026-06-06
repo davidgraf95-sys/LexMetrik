@@ -38,6 +38,7 @@ bibliothek/
 | [stpo-zustaendigkeit-regelwerk.md](normen/stpo-zustaendigkeit-regelwerk.md) | Behörden 12–18, Bund-Kataloge 23/24, Gerichtsstand 31–42 (Tatort/Prioritätsprinzip), Strafbefehl/abgekürzt (Rev. 2024); Decision-Tree | 13/13 substanzielle Proben ✓ |
 | [erbrecht-regelwerk.md](normen/erbrecht-regelwerk.md) | 3 Teile: Erbfolge+Pflichtteile (Rev. 2023, Quoten-Synthesen beide Rechtsstände) · Verfügungen+Klagen (Fristen 521/533) · Erbgang+Teilung (22 Fristen, Ausgleichung 626 ff.); **Engine-Audits: erbteilung.ts + testament.ts bestanden** | 16/16 Wortlaut-Proben ✓ |
 | [normtexte-zpo-zustaendigkeit.md](normen/normtexte-zpo-zustaendigkeit.md) | Wortlaut der 25 Schlüsselartikel (Erstbestand der Engine) | maschinell extrahiert |
+| [feiertage-kantone-bj.md](normen/feiertage-kantone-bj.md) | Feiertags-Matrix 26 Kantone (BJ-Verzeichnis SR 0.221.122.3, lit. a = lit. b) inkl. bedingter Tage (NE/UR/AR/AI-Fussnoten), Näfelser-Fahrt-Karwoche-Regel, offengelegte Annahmen | 26/26 Sektionen zweifach geprüft (Agent + Vollabgleich am PDF) ✓ |
 
 ## behoerden/ — Behördenlisten
 
@@ -86,6 +87,7 @@ bibliothek/
 | schkg-zustaendigkeit-regelwerk | `src/lib/schkgZustaendigkeit.ts` (Rechtsweg «Betreibung», 6.6.2026) |
 | stpo-zustaendigkeit-regelwerk | `src/lib/strafZustaendigkeit.ts` (Rechtsweg «Straf», 6.6.2026) |
 | erbrecht-regelwerk (Audits) | bestätigt `src/lib/erbteilung.ts` + `vorlagen/testament.ts`; Ausbaupunkt `erb-ausgleichung` |
+| feiertage-kantone-bj | `src/data/zpoFeiertage.ts` (istFeiertag/naechsterWerktag – alle Fristen-Engines) |
 | gerichtsbehoerden + erstliste (Audit) | `src/data/obereInstanzen.ts` (Rechtsmittel) · `src/data/handelsgerichte.ts` (Art. 6 ZPO) |
 | strafbehoerden-kantone | `src/data/staatsanwaltschaften.ts` (26 + Bundesanwaltschaft) |
 | schlichtungsbehoerden-* + gemeindezuordnung | `src/data/schlichtungsstellen.ts` · `src/data/schlichtung/*` (PLZ→Amt) · Vorlage Schlichtungsgesuch (SgBehoerdenWahl) |

@@ -91,3 +91,23 @@ Neue Vorlagen/Rechner nutzen die bestehenden geteilten Bausteine (Engine-
 Muster, Wizard-Rahmen, `ui.tsx`, Renderer) statt Kopien anzulegen. Wenn ein
 Rahmen fehlt, wird **erst der Rahmen** gebaut (als verhaltensneutraler
 Schritt nach §6), dann das neue Feature darauf.
+
+## §11 Erforschtes Wissen wird geordnet abgelegt (Anweisung David 6.6.2026)
+
+Jede Recherche (Normen, kantonale Erlasse, Behördendaten, Parameter,
+Rechtsprechung) mündet in eine **geordnete Übersichtsliste** in der
+`bibliothek/` mit Eintrag in deren `INDEX.md` — nie nur in Chat-Antworten
+oder Commit-Messages. Struktur engine-orientiert, damit beim Bau direkt
+daraus gearbeitet werden kann:
+
+1. **Quelle + Stand** (amtliche URL, Konsolidierungs-/Abrufdatum),
+2. **Regel deterministisch formuliert** (decision-tree-fähig: Eingabe →
+   Ausgabe, keine Prosa-Reste),
+3. **Geltungsbereich und Ausnahmen** (Kantone, Fussnoten, Bedingungen,
+   Teilgebiete),
+4. **Pflegebedarf** (datierte Parameter → Verfallsregister-Kandidat),
+5. **Abnahme-Status** (Erstrecherche / zweifach geprüft / durch David
+   abgenommen).
+
+Erkenntnisse, die bestehenden Code korrigieren, werden zusätzlich am
+Fundort als Kommentar mit Quellenverweis verankert (§7).

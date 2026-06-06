@@ -62,24 +62,45 @@ export function stillstandsperiodeFuer(date: Date): Stillstandsperiode | null {
 // Datenbasis: Liste des Bundesamts für Justiz (BJ/EJPD) gestützt auf Art. 11 des
 // Europäischen Übereinkommens vom 16.5.1972 über die Berechnung von Fristen
 // (SR 0.221.122.3) – exakt der für Art. 142 Abs. 3 ZPO massgebende Katalog.
+// «Wie gesetzliche Feiertage behandelte» Tage (lit. b der BJ-Liste) zählen
+// gleich wie anerkannte (lit. a) – beide fallen unter das Übereinkommen.
+//
+// Doppelcheck 6.6.2026 (Auftrag David): alle 26 BJ-Sektionen Zeile für Zeile
+// gegen diese Matrix abgeglichen. Korrigiert: LU-Berchtoldstag, GL-Allerheiligen,
+// GL/VS-Stephanstag, JU-Pfingstmontag, FR-Mariä-Empfängnis, AI-Mauritiustag;
+// BEDINGTE Tage der BJ-Fussnoten 1/7/9/10 jetzt regelhaft (giltImJahr):
+// NE 2.1./26.12. nur, wenn 1.1./25.12. Sonntage sind; UR/AR/AI-Stephanstag
+// entfällt, wenn Weihnachten auf Montag oder Freitag fällt.
 //
 // VERIFIKATIONSVORBEHALT (Ziff. 6.7): Stand der BJ-Liste ist 1.1.2011; rechtlich
 // entscheidend bleibt das aktuelle kantonale Feiertagsrecht. Einzige bundesweite
 // Feiertage: Neujahr, Auffahrt, 1. August, Weihnachten. Regionale/konfessionelle
-// Feiertage (FR-Seebezirk, SO-Bezirke, AG/GR kath. Gemeinden, AI innerer Landesteil)
-// gelten nur am konkreten Gerichtsort – als Annahme kantonsweit geführt, zu prüfen.
+// Feiertage (FR-Seebezirk, SO-Bezirke, AG/GR kath. Gemeinden, AI innerer Landesteil
+// [Mauritiustag: Gerichtsort Appenzell liegt darin]) gelten nur am konkreten
+// Gerichtsort – als Annahme kantonsweit geführt, zu prüfen. BEWUSST WEGGELASSEN
+// (offengelegt): SO-1.-Mai (Feiertag erst ab 12.00 Uhr – halber Tag macht den
+// Tag nicht arbeitsfrei), SO-Josephstag/-Patrozinien (nur einzelne Gemeinden),
+// NE-Fronleichnam (nur Le Landeron).
 
 const ALLE_KANTONE: Kanton[] = ['ZH', 'BE', 'LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'BS', 'BL', 'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU'];
 const ausser = (...ex: Kanton[]): Kanton[] => ALLE_KANTONE.filter((k) => !ex.includes(k));
 
 type FeiertagDef =
-  | { art: 'fix'; monat: number; tag: number; kantone: 'alle' | Kanton[]; name: string }
+  | { art: 'fix'; monat: number; tag: number; kantone: 'alle' | Kanton[]; name: string;
+      /** Bedingte Feiertage (BJ-Fussnoten 1/7/9/10) – deterministisch je Jahr. */
+      giltImJahr?: (jahr: number) => boolean }
   | { art: 'ostern'; offset: number; kantone: 'alle' | Kanton[]; name: string };
+
+/** Wochentag (0 = Sonntag) eines fixen Datums – für die BJ-Fussnotenregeln. */
+const wochentag = (jahr: number, monat: number, tag: number) => new Date(jahr, monat - 1, tag).getDay();
 
 const FEIERTAGE: FeiertagDef[] = [
   // Fixe Feiertage
   { art: 'fix', monat: 1, tag: 1, kantone: 'alle', name: 'Neujahr' },
-  { art: 'fix', monat: 1, tag: 2, kantone: ['ZH', 'BE', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'SH', 'SG', 'AG', 'TG', 'VD', 'VS', 'JU'], name: 'Berchtoldstag' },
+  // LU ergänzt (BJ Ziff. 3 lit. a – Doppelcheck 6.6.2026).
+  { art: 'fix', monat: 1, tag: 2, kantone: ['ZH', 'BE', 'LU', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'SH', 'SG', 'AG', 'TG', 'VD', 'VS', 'JU'], name: 'Berchtoldstag' },
+  // NE: 2.1. nur, wenn der 1.1. ein Sonntag ist (BJ Ziff. 24 Fn. 10).
+  { art: 'fix', monat: 1, tag: 2, kantone: ['NE'], name: 'Berchtoldstag', giltImJahr: (j) => wochentag(j, 1, 1) === 0 },
   { art: 'fix', monat: 1, tag: 6, kantone: ['UR', 'SZ', 'TI'], name: 'Heilige Drei Könige' },
   { art: 'fix', monat: 3, tag: 1, kantone: ['NE'], name: 'Instauration de la République' },
   { art: 'fix', monat: 3, tag: 19, kantone: ['UR', 'SZ', 'NW', 'TI', 'VS'], name: 'Josephstag' },
@@ -88,24 +109,38 @@ const FEIERTAGE: FeiertagDef[] = [
   { art: 'fix', monat: 6, tag: 29, kantone: ['TI'], name: 'Peter und Paul' },
   { art: 'fix', monat: 8, tag: 1, kantone: 'alle', name: 'Bundesfeier' },
   { art: 'fix', monat: 8, tag: 15, kantone: ['LU', 'UR', 'SZ', 'OW', 'NW', 'ZG', 'FR', 'SO', 'AI', 'TI', 'VS', 'JU', 'AG'], name: 'Mariä Himmelfahrt' },
+  // AI: nur innerer Landesteil (BJ Fn. 8) – Gerichtsort Appenzell liegt darin.
+  { art: 'fix', monat: 9, tag: 22, kantone: ['AI'], name: 'Mauritiustag' },
   { art: 'fix', monat: 9, tag: 25, kantone: ['OW'], name: 'Bruder-Klausen-Fest' },
-  { art: 'fix', monat: 11, tag: 1, kantone: ['LU', 'UR', 'SZ', 'OW', 'NW', 'ZG', 'FR', 'SO', 'AI', 'SG', 'TI', 'VS', 'JU', 'AG'], name: 'Allerheiligen' },
-  { art: 'fix', monat: 12, tag: 8, kantone: ['LU', 'UR', 'SZ', 'OW', 'NW', 'ZG', 'AI', 'TI', 'VS', 'AG'], name: 'Mariä Empfängnis' },
+  // GL ergänzt (BJ Ziff. 8 lit. a – Doppelcheck 6.6.2026).
+  { art: 'fix', monat: 11, tag: 1, kantone: ['LU', 'UR', 'SZ', 'OW', 'NW', 'GL', 'ZG', 'FR', 'SO', 'AI', 'SG', 'TI', 'VS', 'JU', 'AG'], name: 'Allerheiligen' },
+  // FR ergänzt (BJ Ziff. 10 lit. a, Seebezirk-Vorbehalt Fn. 2 – s. Kopfkommentar).
+  { art: 'fix', monat: 12, tag: 8, kantone: ['LU', 'UR', 'SZ', 'OW', 'NW', 'ZG', 'FR', 'AI', 'TI', 'VS', 'AG'], name: 'Mariä Empfängnis' },
   { art: 'fix', monat: 12, tag: 25, kantone: 'alle', name: 'Weihnachten' },
-  { art: 'fix', monat: 12, tag: 26, kantone: ausser('VS', 'VD', 'GE', 'JU', 'GL'), name: 'Stephanstag' },
+  // GL (lit. a) und VS (lit. b) ergänzt; UR/AR/AI/NE bedingt (eigene Einträge).
+  { art: 'fix', monat: 12, tag: 26, kantone: ausser('VD', 'GE', 'JU', 'NE', 'UR', 'AR', 'AI'), name: 'Stephanstag' },
+  // UR/AR/AI: Stephanstag entfällt, wenn Weihnachten auf Mo/Fr fällt (BJ Fn. 1/7/9).
+  { art: 'fix', monat: 12, tag: 26, kantone: ['UR', 'AR', 'AI'], name: 'Stephanstag', giltImJahr: (j) => ![1, 5].includes(wochentag(j, 12, 25)) },
+  // NE: 26.12. nur, wenn der 25.12. ein Sonntag ist (BJ Ziff. 24 Fn. 10).
+  { art: 'fix', monat: 12, tag: 26, kantone: ['NE'], name: 'Stephanstag', giltImJahr: (j) => wochentag(j, 12, 25) === 0 },
   { art: 'fix', monat: 12, tag: 31, kantone: ['GE'], name: 'Restauration de la République' },
   // Osterabhängige Feiertage
   { art: 'ostern', offset: -2, kantone: ausser('TI', 'VS'), name: 'Karfreitag' },
   { art: 'ostern', offset: 1, kantone: ausser('NE'), name: 'Ostermontag' },
   { art: 'ostern', offset: 39, kantone: 'alle', name: 'Auffahrt' },
-  { art: 'ostern', offset: 50, kantone: ausser('NE', 'JU'), name: 'Pfingstmontag' },
+  // JU ergänzt (BJ Ziff. 26 lit. a «Lundi de Pentecôte» – Doppelcheck 6.6.2026).
+  { art: 'ostern', offset: 50, kantone: ausser('NE'), name: 'Pfingstmontag' },
   { art: 'ostern', offset: 60, kantone: ['LU', 'UR', 'SZ', 'OW', 'NW', 'ZG', 'FR', 'SO', 'AI', 'TI', 'VS', 'JU', 'AG'], name: 'Fronleichnam' },
 ];
 
 // Kantonale Spezialfeiertage mit eigener Datumsregel (nicht oster-/datumsfix).
-function naefelserFahrt(jahr: number): Date {       // GL: 1. Donnerstag im April
+// GL: 1. Donnerstag im April; fällt er in die Karwoche (= Gründonnerstag,
+// Ostern −3), wird die Fahrt um eine Woche verschoben (Doppelcheck 6.6.2026,
+// amtlich gl.ch: Fahrt 2026 am 9. statt 2. April).
+function naefelserFahrt(jahr: number): Date {
   let d = new Date(jahr, 3, 1);
   while (d.getDay() !== 4) d = addDays(d, 1);
+  if (sameDay(d, addDays(ostersonntag(jahr), -3))) d = addDays(d, 7);
   return d;
 }
 function jeuneGenevois(jahr: number): Date {        // GE: Donnerstag nach 1. Sonntag im September
@@ -132,6 +167,7 @@ export function istFeiertag(date: Date, kanton: Kanton): boolean {
   const o = ostersonntag(jahr);
   const treffer = FEIERTAGE.some((def) => {
     if (!giltImKanton(def.kantone, kanton)) return false;
+    if (def.art === 'fix' && def.giltImJahr && !def.giltImJahr(jahr)) return false;
     const tag = def.art === 'fix' ? new Date(jahr, def.monat - 1, def.tag) : addDays(o, def.offset);
     return sameDay(tag, date);
   });
