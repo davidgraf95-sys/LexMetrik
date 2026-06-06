@@ -22,7 +22,7 @@ export default {
         danger: { 500: 'var(--danger-500)', 700: 'var(--danger-700)', bg: 'var(--danger-bg)' },
       },
       fontFamily: {
-        display: ['var(--font-display)', 'Georgia', 'serif'],
+        display: ['var(--font-display)', 'system-ui', 'sans-serif'],
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },

@@ -52,7 +52,9 @@
     --ease:cubic-bezier(.2,.6,.2,1);
     /* Typografie */
     --tracking-overline:.12em;
-    --font-display:'Fraunces';
+    /* Display = Geist (Wunsch David 6.6.2026): die Serife Fraunces ist aus
+       der UI entfernt; PDF-Berichte behalten ihre eingebetteten Schriften. */
+    --font-display:'Geist Variable','Hanken Grotesk';
     --font-sans:'Geist Variable','Hanken Grotesk';
     --font-mono:'Geist Mono Variable','IBM Plex Mono';
   }
@@ -67,7 +69,7 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 { font-family: var(--font-display), Georgia, serif; font-weight: 600; color: var(--ink-900); }
+  h1, h2, h3 { font-family: var(--font-display), system-ui, sans-serif; font-weight: 600; letter-spacing: -0.015em; color: var(--ink-900); }
   a { color: var(--brass-700); text-underline-offset: 2px; }
   a:hover { color: var(--brass-600); }
   :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--radius-sm); }

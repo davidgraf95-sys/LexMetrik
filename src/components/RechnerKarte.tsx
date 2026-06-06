@@ -2,12 +2,11 @@ import { Link } from 'react-router-dom';
 import type { CalculatorCard } from '../lib/startseiteConfig';
 import { karte, istAktiv } from '../lib/startseiteConfig';
 import { Icon } from './Icon';
-import { sansAmp } from './typografie';
-import { useLocale, fedlexLokalisiert } from './locale';
 
-// Startseiten-Karte (Zwei-Säulen-Struktur). Kartenanatomie wie bisher:
-// Icon-Bubble, Status-Badge, Mikro-Label, Serif-Titel, Beschrieb, Norm-Pills,
-// Goldrand (border-t brass) als Semantik für «geprüft».
+// Startseiten-Karte (Redesign 6.6.2026, Auftrag David): Icon-Bubble,
+// Status-Badge, Mikro-Label, Sans-Titel (Geist), geklemmter Beschrieb —
+// OHNE Norm-Pills (die Artikel leben auf der Detailseite, nicht im Katalog).
+// Goldrand (border-t brass) bleibt die Semantik für «geprüft» (§8).
 //
 // Verlinkung als «stretched link» (absolute Fläche) statt umschliessendem
 // <a>, damit die «Verwandte Rechner»-Links keine verschachtelten Anker bilden.
@@ -26,7 +25,6 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
   const aktiv = istAktiv(card.status);
   const entwurf = card.status === 'entwurf';
   const H = headingLevel;
-  const { locale } = useLocale();
   const verwandte = (card.related ?? [])
     .map((id) => karte(id))
     .filter((k) => k && istAktiv(k.status) && k.href);
@@ -61,9 +59,11 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
       </div>
       <div>
         <p className="lc-overline">{card.rechtsgebiet}</p>
-        <H className="text-h3 font-display font-semibold text-ink-900 mt-1 text-balance">{sansAmp(card.title)}</H>
+        <H className="text-h3 font-display font-semibold text-ink-900 mt-1 text-balance tracking-tight">{card.title}</H>
       </div>
-      <p className="text-body-s text-ink-500 leading-relaxed">{card.description}</p>
+      {/* Beschrieb auf 3 Zeilen geklemmt — ruhiger Kartenrhythmus; der volle
+          Text steht auf der Detailseite. */}
+      <p className="text-body-s text-ink-500 leading-relaxed line-clamp-3">{card.description}</p>
       {/* Konsolidierte Karten: abgedeckte Szenarien; geplante Optionen gedämpft */}
       {card.modus === 'rechner' && card.szenarien && card.szenarien.length > 0 && (
         <ul className="space-y-0.5">
@@ -90,23 +90,9 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
           ))}
         </p>
       )}
-      {aktiv && card.norms.length > 0 && (
-        <div className="flex flex-wrap gap-1.5">
-          {/* Norm-Pills: Anzeigetext unverändert; Link auf die amtliche
-              konsolidierte Fassung (Fedlex), neues Tab. */}
-          {card.norms.map((n) =>
-            n.url ? (
-              <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer"
-                className="relative lc-chip no-underline hover:text-brass-700"
-                title={`${n.label} auf Fedlex öffnen${n.verified ? '' : ' – Verweis noch nicht fachlich geprüft'}`}>
-                {n.label}
-              </a>
-            ) : (
-              <span key={n.label} className="lc-chip">{n.label}</span>
-            ),
-          )}
-        </div>
-      )}
+      {/* Norm-Pills auf den Kacheln ENTFERNT (Auftrag David 6.6.2026):
+          die Artikel-Verweise leben auf der Detailseite (RechnerKopf bzw.
+          Vorlagen-Kopf) — der Katalog bleibt aufgeräumt. */}
       {/* Footer: CTA nur bei «geprüft»; der Status steht bereits im Badge oben
           (kein doppeltes «In Vorbereitung»). Eigene Hinweise (note) bleiben. */}
       {/* Nur der CTA ist am Kartenboden verankert – der Höhenausgleich liegt

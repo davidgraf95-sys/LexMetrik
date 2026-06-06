@@ -8,8 +8,9 @@ export function LexMetrikSiegel({ size = 32 }: { size?: number }) {
       <rect x="3" y="3" width="42" height="42" rx="9" fill="var(--ink-900)" />
       <path d="M12 3 H36 A9 9 0 0 1 45 12" fill="none"
         stroke="var(--brass-500)" strokeWidth="1.5" strokeLinecap="round" />
+      {/* §-Glyphe in Geist (Fraunces aus der UI entfernt, Wunsch David 6.6.2026) */}
       <text x="24" y="29" textAnchor="middle"
-        fontFamily="Fraunces, Georgia, serif" fontSize="22" fontWeight="600"
+        fontFamily="'Geist Variable', system-ui, sans-serif" fontSize="22" fontWeight="600"
         fill="var(--paper)">§</text>
       <g stroke="var(--brass-300)" strokeWidth="1">
         <line x1="16" y1="38" x2="16" y2="40" /><line x1="20" y1="38.5" x2="20" y2="40" />
