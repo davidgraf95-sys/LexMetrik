@@ -12,7 +12,8 @@ import { BegruendungAbsatz } from '../BegruendungAbsatz';
 import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
-import { KSP_LINK_SPEC } from '../../lib/rechnerPermalinks';
+import { KSP_LINK_SPEC, fristenspiegelLink } from '../../lib/rechnerPermalinks';
+import { Link } from 'react-router-dom';
 import { IcsExportButton } from '../IcsExportButton';
 import { KuendigungTimeline } from '../KuendigungTimeline';
 import { SperrtageZaehler } from '../SperrtageZaehler';
@@ -251,6 +252,14 @@ export function KuendigungSperrForm() {
                   beschreibung={gesamt.ergebnis} dateiName="Neue-Kuendigung-fruehestens.ics" />
               : <IcsExportButton endISO={gesamt.beendigungISO} titel="Beendigung Arbeitsverhältnis"
                   beschreibung={gesamt.ergebnis} dateiName="Beendigung-Arbeitsverhaeltnis.ics" />}
+            {/* Brücke 3.1d: Beendigungsdatum (inkl. Sperrfristen-Verschiebung!)
+                als Anker in den Fristenspiegel — 336b-Einsprache/Klagefrist */}
+            {gesamt.status !== 'nichtig' && gesamt.beendigungISO && form.kuendigendePartei === 'arbeitgeber' && (
+              <Link className="lc-btn-outline no-underline"
+                to={fristenspiegelLink({ ereignis: 'agkuendigung', zustellung: gesamt.beendigungISO })}>
+                336b-Fristen im Fristenspiegel →
+              </Link>
+            )}
           </div>
         </div>
       )}

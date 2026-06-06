@@ -96,9 +96,26 @@ sind QUERSCHNITTE — also §10-Rahmenarbeit, kein Einzelbau.
       Frist mit exakt den zpoPresets-Parametern, Rechtsmittel dann bewusst
       OHNE Datum, §1); Anschlussberufung 314 I ausgeschlossen / 313 Hinweis
       «anderer Auslöser»; BGer abgesetzte Folgestufe. 18 Spiegel-Tests.
-- [ ] 3.1d Andocken Rest: A.2 Zahlungsbefehl (Dual Wartefrist/Verwirkung
-      aus EINEM schkgPreset) → A.6 Erbgang (Multi-Trigger) / A.7 Klage-
-      bewilligung → A.3 AG-Kündigung zuletzt (erst 336b-Presets als
-      Quick-Win; §2-Gate: 336b-II-Klagefrist nur als BEDINGTE Zeile).
-      Brücke «In den Fristenspiegel» aus Miet-/Zuständigkeits-Rechner
-      (fristenspiegelLink existiert).
+- [x] 3.1d KOMPLETT — erledigt 6.6.2026 spätnachts (`866bf43`, `54c585b`,
+      Brücken-Commit):
+      · A.2 Zahlungsbefehl: RV + Art.-88-DUAL aus EINEM schkgPreset (zwei
+        Zeilen; Wartefrist «frühestens ab», Verwirkung mit offengelegter,
+        bewusst NICHT gerechneter Abs.-2-Hemmung); Rechtsöffnung/Aberkennung
+        Folgestufe; Wechselbetreibung abgegrenzt (Art. 56 Ziff. 2)
+      · A.7 Klagebewilligung: Miete/Pacht-Weiche wählt das Preset (209 III/IV);
+        Prosekutions-Stillstand-Vorbehalt durchgereicht
+      · A.6 Erbgang: Ausschlagung (gesetzlich/eingesetzt) + öff. Inventar am
+        gleichen Trigger; Ungültigkeit/Herabsetzung NUR Hinweis (Multi-Trigger)
+      · A.3 AG-Kündigung: Anker = Beendigungsdatum (Eingabe/Brücke);
+        Einsprache = Anker selbst, 336b-II-Klage 180 T als BEDINGTE Zeile
+        (§2-Gate); Werktags-Verschiebung konservativ NICHT unterstellt
+        (Dossier-TODO D.2/3), Warnung «vorher wahren»
+      · BRÜCKEN: Mietrechner (Vermieter+Raum) «Im Fristenspiegel öffnen →»
+        vorbefüllt · Sperrfristen-Rechner (AG, beendigungISO) «336b-Fristen
+        im Fristenspiegel →»
+      · A.5 Strafbefehl bewusst ausgeklammert (Dossier: Single-Frist →
+        Direktlink statt Spiegel). 23 Spiegel-Tests, alle Preset-Parameter-
+        Identitäten erzwungen; Suite 898, Golden 65/65.
+
+**ETAPPEN 1–3 DAMIT VOLLSTÄNDIG.** Pflege: neue Ereignisse folgen dem
+Konzept-Dossier (§11) und dem Quelle-Muster in lib/fristenspiegel/.
