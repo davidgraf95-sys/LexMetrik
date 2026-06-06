@@ -142,9 +142,12 @@ export interface ZustaendigkeitErgebnis {
     verzichtEinseitig: boolean;
     behoerdeTyp: SchlichtungsbehoerdeTyp;
     /** Bundesrechtliche Kostenfreiheit des SCHLICHTUNGSverfahrens
-     *  (Art. 113 Abs. 2 ZPO — am Wortlaut verifiziert, 5.6.2026):
-     *  GlG · Miete/Pacht Wohn-/Geschäftsräume · Arbeit bis CHF 30 000.
-     *  (BehiG/MitwG/KVG-Zusatz sind als Streitsachen nicht abgebildet.) */
+     *  (Art. 113 Abs. 2 ZPO, lit. a–g — am Wortlaut verifiziert 5.6.2026;
+     *  Vollabgleich 6.6.2026, bibliothek/normen/zustaendigkeit-engine-
+     *  verifikation.md): lit. a GlG · lit. c Miete/Pacht Wohn-/Geschäfts-
+     *  räume · lit. d Arbeit bis CHF 30 000 · lit. g DSG (Befund B-1,
+     *  abgenommen David 6.6.2026). (lit. b/e/f — BehiG, MitwG, KVG-Zusatz —
+     *  und die landwirtschaftliche Pacht in lit. c sind nicht abgebildet.) */
     kostenlos: boolean;
     kostenlosGrund: string | null;
   };
@@ -435,6 +438,13 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
       // Ohne bezifferten Streitwert ist «bis 30 000» nicht subsumierbar →
       // dann KEINE Kostenfreiheits-Behauptung (ehrlich, §8).
       kostenlosGrund = `Arbeitsverhältnis bis CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} (Art. 113 Abs. 2 lit. d ZPO)`;
+    } else if (input.streitsache === 'persoenlichkeit' && input.persoenlichkeitUnterfall === 'datenschutz') {
+      // Befund B-1 (Deep-Research-Verifikation 6.6.2026, abgenommen David;
+      // bibliothek/normen/zustaendigkeit-engine-verifikation.md): Art. 113
+      // Abs. 2 zählt lit. a–g — lit. g (DSG, eingefügt mit dem DSG vom
+      // 25.9.2020) fehlte hier, während die Engine die DSG-Kostenfreiheit
+      // des ENTSCHEIDverfahrens (Art. 114 lit. g) bereits auswies.
+      kostenlosGrund = 'Streitigkeit nach dem Datenschutzgesetz (Art. 113 Abs. 2 lit. g ZPO)';
     }
   }
   const schlichtungKostenlos = kostenlosGrund !== null;

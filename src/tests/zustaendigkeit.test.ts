@@ -347,6 +347,22 @@ describe('Zuständigkeit — Praxis-Umbau: Kostenfreiheit (Art. 113 Abs. 2) + Fa
     expect(bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: false, streitwertCHF: null }).schlichtung.kostenlos).toBe(false);
     expect(bestimmeZustaendigkeit(geld()).schlichtung.kostenlos).toBe(false);
   });
+  it('Schlichtung kostenlos: Datenschutz ✓ (Art. 113 Abs. 2 lit. g — Befund B-1, 6.6.2026); übrige Persönlichkeits-Unterfälle ✗; Gewaltschutz ohne Schlichtung', () => {
+    const dsg = bestimmeZustaendigkeit({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null, persoenlichkeitUnterfall: 'datenschutz' });
+    expect(dsg.schlichtung.obligatorisch).toBe(true);
+    expect(dsg.schlichtung.kostenlos).toBe(true);
+    expect(dsg.schlichtung.kostenlosGrund).toContain('lit. g');
+    // Spiegelbild Art. 114 lit. g (Entscheidverfahren) bleibt unverändert ausgewiesen:
+    expect(dsg.warnungen.some((w) => w.includes('Art. 114 lit. g'))).toBe(true);
+    const verletzung = bestimmeZustaendigkeit({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null, persoenlichkeitUnterfall: 'verletzung' });
+    expect(verletzung.schlichtung.kostenlos).toBe(false);
+    const gegendarstellung = bestimmeZustaendigkeit({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null, persoenlichkeitUnterfall: 'gegendarstellung' });
+    expect(gegendarstellung.schlichtung.kostenlos).toBe(false);
+    // Gewaltschutz: Schlichtung entfällt (198 lit. abis) → lit.-g-Frage stellt sich nicht.
+    const gewalt = bestimmeZustaendigkeit({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null, persoenlichkeitUnterfall: 'gewaltschutz' });
+    expect(gewalt.schlichtung.obligatorisch).toBe(false);
+    expect(gewalt.schlichtung.kostenlos).toBe(false);
+  });
   it('Fahrplan: Schlichtungsweg hat 4 Schritte inkl. Klagebewilligungs-Frist; Direktklage 3; Scheidung eigener Pfad', async () => {
     const { fahrplanSchritte } = await import('../lib/zustaendigkeitFahrplan');
     const sgWeg = fahrplanSchritte(bestimmeZustaendigkeit(geld()), { vorlageVerfuegbar: true, stelleBekannt: true });
