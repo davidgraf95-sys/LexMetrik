@@ -64,7 +64,7 @@ sind QUERSCHNITTE — also §10-Rahmenarbeit, kein Einzelbau.
 
 ## Status
 
-- [ ] 1.1 .ics überall (7 Rechner)
+- [x] 1.1 .ics überall (7 Rechner) — erledigt 6.6.2026
 - [ ] 1.2 Aktenzeichen → PDF (13 Formen)
 - [ ] 1.3 Permalink (12 Rechner)
 - [ ] 2.1 Prefill-Brücken a/b/c
