@@ -109,8 +109,9 @@ describe('Such-Semantik (Verhaltens-Anker der Extraktion)', () => {
     expect(sucheRang(byId('verzugszins'), 'Verzugszins')).toBe(0);
     // Keyword exakt: «Mahnung» ist Keyword des Verzugszins-Rechners
     expect(sucheRang(byId('verzugszins'), 'Mahnung')).toBe(1);
-    // Norm-Treffer (leerzeichen-tolerant): 336c steht nur in den Norm-Pills
-    expect(sucheRang(byId('kuendigung-sperrfristen'), '336c')).toBe(3);
+    // Norm-Treffer (leerzeichen-tolerant): Art. 104 steht beim Verzugszins
+    // nur in den Norm-Pills, nicht in den Keywords
+    expect(sucheRang(byId('verzugszins'), 'Art.104')).toBe(3);
     // Gebiets-Treffer als letzte Stufe
     expect(sucheRang(byId('verzugszins'), 'Vertrag & Forderung')).toBe(4);
     // kein Treffer → null; leere Suche → null (Rang nur bei aktiver Suche)
@@ -120,6 +121,21 @@ describe('Such-Semantik (Verhaltens-Anker der Extraktion)', () => {
     ALLE_KARTEN.forEach((k) => {
       expect(sucheTrifft(k, 'Frist'), k.id).toBe(sucheRang(k, 'Frist') !== null);
     });
+  });
+
+  it('Rang-Ordnung der Praxisfälle: bester VERFÜGBARER Treffer ist das richtige Werkzeug (Logik-Check 6.6.2026)', () => {
+    const ersterTreffer = (q: string) => {
+      const hits = verfuegbar
+        .map((k) => ({ k, rang: sucheRang(k, q) }))
+        .filter((x): x is { k: (typeof verfuegbar)[number]; rang: number } => x.rang !== null);
+      // stabile Sortierung: Rang, dann Katalogposition (wie die UI)
+      return hits.sort((a, b) => a.rang - b.rang)[0]?.k.id;
+    };
+    // 336c: der RECHNER schlägt die Vorlage (Keyword-Parität + Katalogposition)
+    expect(ersterTreffer('Art. 336c')).toBe('kuendigung-sperrfristen');
+    expect(ersterTreffer('336c')).toBe('kuendigung-sperrfristen');
+    // «Urteil»: Rechtsmittelprüfung vor «Urteilsunfähigkeits»-Vorlagen
+    expect(ersterTreffer('Urteil')).toBe('zustaendigkeit');
   });
 
   it('nurVerfuegbar blendet Geplantes aus, ändert Verfügbares nicht', () => {

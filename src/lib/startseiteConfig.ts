@@ -271,8 +271,11 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 336c OR', url: fedlexUrl('OR', '336c'), verified: false },
     ],
     href: '/rechner/kuendigung#kuendigung',
+    // 'Art. 336c' auch als KEYWORD (nicht nur Norm-Pill): Rang-Parität mit
+    // der Vorlage kuendigung-arbeitgeber — bei Gleichstand steht der RECHNER
+    // zuoberst (Katalogposition; Logik-Check-Befund 6.6.2026).
     keywords: ['gekündigt', 'Kündigung', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär',
-      'Kündigung erhalten', 'Kündigungsfrist'],
+      'Kündigung erhalten', 'Kündigungsfrist', 'Art. 336c', 'Art. 335c'],
     related: ['lohnfortzahlung', 'arbeitsvertrag'],
     icon: 'document',
   },
@@ -555,7 +558,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     // Fristen) und Streitsache «Scheidung» sind Teil des Wizards; Kosten je
     // Kanton verdrahtet — Keywords entsprechend (verifiziert 6.6.2026).
     keywords: ['Zuständigkeit', 'Gerichtsstand', 'Verfahrensart', 'Schlichtung', 'Schlichtungsbehörde', 'Streitwert', 'Handelsgericht',
-      'Urteil erhalten', 'Entscheid', 'Rechtsmittel', 'Berufung', 'Beschwerde', 'Scheidung',
+      'Urteil', 'Urteil erhalten', 'Entscheid', 'Rechtsmittel', 'Berufung', 'Beschwerde', 'Scheidung',
       'Gerichtskosten', 'örtliche Zuständigkeit', 'sachliche Zuständigkeit'],
     // Katalog-Split 6.6.2026: SchKG- und Straf-Rechtsweg derselben Seite
     // haben eigene Gebiets-Einstiege (Hash-Vorauswahl) — hier verlinkt.
