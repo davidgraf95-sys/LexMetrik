@@ -8,11 +8,13 @@ löschen, Stand in STRUKTUR.md spiegeln.
 
 ## A · Entscheide, die nur David treffen kann (blockieren anderes)
 
-1. **Push (freigegeben, erneut fällig) + DEPLOY-Ja:** 15 ungepushte
-   Commits seit `dfab948` (Wizard-Dialog · Vorlagen-Verweis · Design ·
-   Kündigungs-Familie komplett · Spruchkörper · Bug-Check-Fixes).
-   Suite 787 grün, 2 Bug-Check-Agents bestanden. **Prod-Deploy steht
-   weiter aus** — Deploy separat bestätigen oder `! npx vercel --prod`.
+1. **Push + DEPLOY-Ja (grosser Schub):** Seit dem letzten Deploy
+   (`c24c761`-Stand) liegen die komplette PRAXIS-Etappe 1+2 (.ics ·
+   Aktenzeichen · Permalinks · 3 Prefill-Brücken · Begründungs-Absatz),
+   Untermietvertrag-Einstieg, Hero-Texte, Rechtsmittel-Strecke-Fix,
+   Spruchkörper, N-1-Fix SOWIE die Katalog-UI-Session (Gebiets-Kacheln,
+   Suche, BGE-Verlinkung) ungepusht. VOR Deploy: Bug-Check §9 über beide
+   Stränge (Empfehlung), dann «push und deploy».
 2. **Hosting & Zahlungsmittel (vor Login-/Pro-Phase):** Migration zu CH-Host
    (Empfehlung Infomaniak), Domain **lexmetrik.ch früh registrieren**;
    Zahlungssystem offen (PayPal raus) — Payrexx/Datatrans/TWINT prüfen.

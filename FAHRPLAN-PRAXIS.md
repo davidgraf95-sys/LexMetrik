@@ -69,4 +69,17 @@ sind QUERSCHNITTE — also §10-Rahmenarbeit, kein Einzelbau.
 - [x] 1.3 Permalink (alle 13 Rechner) — erledigt 6.6.2026
 - [x] 2.1 Prefill-Brücken a/b/c — erledigt 6.6.2026
 - [x] 2.2 Begründungs-Absatz (geteilte Komponente, 13 Rechner) — erledigt 6.6.2026
-- [ ] 3.1 Fristenspiegel (Konzept-Dossier → Rahmen → Andocken)
+- [x] 3.1a Fristenspiegel-KONZEPT — Dossier `bibliothek/recherche/
+      fristenspiegel-konzept.md` (6.6.2026, normverifiziert: 311/312/313/
+      314/321/145/209/239 ZPO · 74/88 SchKG · 273/336b OR · 354 StPO ·
+      100/46 BGG · 567/580/521/533 ZGB). Kernbefund: Orchestrierer über
+      BESTEHENDE Engines/Presets (§5) — 6/7 Ereignisse abgedeckt, einzige
+      Lücke 336b (2 Preset-Zeilen, Aufwand S). Empfehlung: eigener Rechner
+      /rechner/fristenspiegel; Datenmodell FristenspiegelDef; Sammel-.ics
+      additiv (icsSammel neben icsFuerFrist).
+- [ ] 3.1b Rahmen bauen (§10) → PILOT A.4 Vermieter-Kündigung (mietrecht
+      liefert anfechtungBis/erstreckungBis fertig — null Rechtslogik) →
+      A.1 Zivilentscheid → A.2 Zahlungsbefehl → Rest; A.3 zuletzt (nach
+      336b-Preset). §2-Gate beachten: 336b-II-Klagefrist nur als BEDINGTE
+      Zeile (setzt gültige Einsprache voraus); BGer/Aberkennung als
+      abgesetzte Folgestufen.
