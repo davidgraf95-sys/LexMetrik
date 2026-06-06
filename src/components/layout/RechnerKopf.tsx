@@ -6,8 +6,20 @@ import { useLocale, fedlexLokalisiert } from '../locale';
 
 // Gemeinsamer Rechner-Kopf (Vorlage Abschnitt 4): Zurück-Pfeil, Breadcrumb,
 // Overline, H1, Einleitung, Chips.
-export function RechnerKopf({ calc }: { calc: Calculator }) {
+// Overrides (Fix 6.6.2026, Befund David): Rechner mit Binnen-Navigation
+// (Zuständigkeit: Rechtswege Zivil/SchKG/Straf) zeigen sonst immer die
+// ZPO-Chips der Registry — Kategorie/Beschrieb/Normen sind deshalb pro
+// gewähltem Rechtsweg überschreibbar (reine Anzeige, §3).
+export function RechnerKopf({ calc, kategorieOverride, kurzbeschriebOverride, normenOverride }: {
+  calc: Calculator;
+  kategorieOverride?: string;
+  kurzbeschriebOverride?: string;
+  normenOverride?: string[];
+}) {
   const { locale } = useLocale();
+  const kategorie = kategorieOverride ?? calc.kategorie;
+  const kurzbeschrieb = kurzbeschriebOverride ?? calc.kurzbeschrieb;
+  const normen = normenOverride ?? calc.normen;
   return (
     <div className="space-y-3 mb-8">
       {/* Sichtbarer Rückweg zur Rechner-Übersicht (Startseite) */}
@@ -20,12 +32,12 @@ export function RechnerKopf({ calc }: { calc: Calculator }) {
         <span className="mx-1.5">/</span>
         <span className="text-ink-500">{calc.titel}</span>
       </nav>
-      <p className="lc-overline">{calc.kategorie}</p>
+      <p className="lc-overline">{kategorie}</p>
       <h1 className="text-h1 font-display font-semibold text-ink-900">{sansAmp(calc.titel)}</h1>
-      <p className="text-body-l text-ink-600 max-w-reading">{calc.kurzbeschrieb}</p>
+      <p className="text-body-l text-ink-600 max-w-reading">{kurzbeschrieb}</p>
       <div className="flex flex-wrap gap-1.5">
         {/* Norm-Chips mit Fedlex-Direktlink (Spannen/ff. → führender Artikel) */}
-        {calc.normen.map((n) => {
+        {normen.map((n) => {
           const roh = fedlexLinkFuerArtikel(n);
           const url = roh ? fedlexLokalisiert(roh, locale) : null;
           return url ? (

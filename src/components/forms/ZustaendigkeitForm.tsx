@@ -152,10 +152,13 @@ const DEFAULTS: State = {
   instanz: 'einleitung',
 };
 
-export function ZustaendigkeitForm() {
+export function ZustaendigkeitForm({ onRechtswegChange }: { onRechtswegChange?: (w: Rechtsweg) => void } = {}) {
   const [f, setF] = useState<State>(DEFAULTS);
   // Rechtsweg-Wahl (5.6.2026): Zivil + SchKG aktiv; Straf/Verwaltung folgen.
-  const [rechtsweg, setRechtsweg] = useState<Rechtsweg>('zivil');
+  const [rechtsweg, setRechtswegState] = useState<Rechtsweg>('zivil');
+  // Hero-Synchronisation (Fix 6.6.2026): Der Seitenkopf zeigt die Normen des
+  // gewählten Rechtswegs — reine Anzeige-Meldung nach oben (§3).
+  const setRechtsweg = (w: Rechtsweg) => { setRechtswegState(w); onRechtswegChange?.(w); };
   const set = <K extends keyof State>(k: K, v: State[K]) => setF((alt) => ({ ...alt, [k]: v }));
 
   // ── PLZ-Auflösung (amtliches Ortschaftenverzeichnis, lazy) ────────────────
