@@ -1,5 +1,5 @@
 import type { Kanton } from '../../types/legal';
-import { zhFriedensrichterFuer, type ZhAmt } from './zhAmt';
+import { namensKandidaten, zhFriedensrichterFuer, type ZhAmt } from './zhAmt';
 
 // ─── Generisch: Gemeinde → ordentliches Schlichtungsamt (konkrete Adresse) ──
 // Quellen: zweifach geprüfte ZH-Vollerfassung (zhAmt.ts) + amtliche
@@ -38,7 +38,9 @@ export async function amtFuer(kanton: Kanton, gemeinde: string): Promise<Schlich
   }
   const d = cache[kanton];
   if (!d) return null;
-  const kandidaten = [g, `${g} (${kanton})`, g.replace(/ \([A-Z]{2}\)$/, '')];
+  // PLZ-Audit-Fix 6.6.2026: erweiterte deterministische Kandidatenliste
+  // («St. »↔«St.», Langname→Kurzname, Suffix beidseitig) — siehe zhAmt.ts.
+  const kandidaten = namensKandidaten(g, kanton);
   for (const k of kandidaten) {
     const idx = d.gemeinden[k];
     if (idx !== undefined) return d.aemter[idx];

@@ -8,6 +8,26 @@
 export interface ZhAmt { name: string; strasse: string; plzOrt: string }
 export interface ZhKreisAmt extends ZhAmt { kreise: string }
 
+/** Deterministische Namens-Kandidaten für den Gemeinde-Lookup (KEIN Fuzzy-
+ *  Matching, §2): exakt · ohne/mit «(KT)»-Suffix · «St. »↔«St.»-Schreibweise
+ *  (swisstopo vs. Dossier) · amtlicher Langname → Dossier-Kurzname («Thalheim
+ *  an der Thur» → «Thalheim»). PLZ-Audit-Fix 6.6.2026: 21 PLZ (u. a. 9000
+ *  St. Gallen, 8700 Küsnacht ZH) liefen wegen dieser Schreibweisen-Differenzen
+ *  ins Leere, obwohl die Ämter erfasst sind. */
+export function namensKandidaten(gemeinde: string, kanton: string): string[] {
+  const out = new Set<string>();
+  const basis = gemeinde.trim();
+  for (const v of [basis, basis.replace(/ \([A-Z]{2}\)$/, '')]) {
+    for (const w of [v, v.replace(/\bSt\.\s+/g, 'St.'), v.replace(/\bSt\.(?=\S)/g, 'St. ')]) {
+      out.add(w);
+      out.add(`${w} (${kanton})`);
+      const kurz = w.replace(/ (?:an der|an dem|am|bei|im) .+$/, '');
+      if (kurz !== w) out.add(kurz);
+    }
+  }
+  return [...out];
+}
+
 interface ZhDaten { gemeinden: Record<string, ZhAmt>; zuerichKreise: ZhKreisAmt[] }
 let cache: ZhDaten | null = null;
 
@@ -22,11 +42,19 @@ async function lade(): Promise<ZhDaten> {
 let zhKlein: Map<string, ZhAmt> | null = null;
 export async function zhFriedensrichterFuer(gemeinde: string): Promise<ZhAmt | null> {
   const d = await lade();
-  const k = gemeinde.trim();
-  const exakt = d.gemeinden[k] ?? d.gemeinden[`${k} (ZH)`];
-  if (exakt) return exakt;
+  // PLZ-Audit-Fix 6.6.2026: gleiche Kandidaten-Normalisierung wie amtFuer —
+  // vorher fehlte u. a. das ABSTREIFEN eines vorhandenen «(ZH)»-Suffixes.
+  const kandidaten = namensKandidaten(gemeinde, 'ZH');
+  for (const k of kandidaten) {
+    const t = d.gemeinden[k];
+    if (t) return t;
+  }
   if (!zhKlein) zhKlein = new Map(Object.entries(d.gemeinden).map(([g, a]) => [g.toLowerCase(), a]));
-  return zhKlein.get(k.toLowerCase()) ?? zhKlein.get(`${k.toLowerCase()} (zh)`) ?? null;
+  for (const k of kandidaten) {
+    const t = zhKlein.get(k.toLowerCase());
+    if (t) return t;
+  }
+  return null;
 }
 
 export async function zuerichKreisAemter(): Promise<ZhKreisAmt[]> {
