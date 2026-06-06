@@ -14,6 +14,8 @@ import { DatumsFeld } from '../DatumsFeld';
 import { sansAmp } from '../typografie';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 
@@ -66,13 +68,54 @@ const DEFAULTS: FormState = {
 };
 
 
+// Permalink (FAHRPLAN-PRAXIS 1.3): Form + Phase/Preset + Hemmung/Rechtsstillstand.
+type SchkgLink = {
+  ereignis: string; einheit: string; laenge: number; modus: string; fristnatur: string;
+  kanton: string; ausloeser?: string; phase?: string; presetKey?: string; override?: string;
+  hemmungAn?: boolean; hemmungVon?: string; hemmungBis?: string;
+  rsAn?: boolean; rsVon?: string; rsBis?: string;
+};
+const SCHKG_LINK_SPEC: PermalinkSpec<SchkgLink> = {
+  ereignis: { p: 'e', typ: 'str', gueltig: istISO },
+  einheit: { p: 'u', typ: 'str', gueltig: einerVon('tage', 'monate', 'jahre') },
+  laenge: { p: 'l', typ: 'num', gueltig: (n) => Number.isInteger(n) && n > 0 },
+  modus: { p: 'm', typ: 'str', gueltig: einerVon('schkg_betreibungsferien', 'zpo_stillstand', 'kein') },
+  fristnatur: { p: 'n', typ: 'str', gueltig: einerVon('verwirkung', 'wartefrist', 'frist') },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  ausloeser: { p: 'a', typ: 'str' },
+  phase: { p: 'ph', typ: 'str', gueltig: einerVon(...PHASEN_SCHKG.map((x) => x.code)) },
+  presetKey: { p: 'p', typ: 'str', gueltig: einerVon(...PRESETS_SCHKG.map((x) => x.key)) },
+  override: { p: 'o', typ: 'str', gueltig: einerVon('schkg_betreibungsferien', 'zpo_stillstand', 'kein') },
+  hemmungAn: { p: 'ha', typ: 'bool' },
+  hemmungVon: { p: 'hv', typ: 'str', gueltig: istISO },
+  hemmungBis: { p: 'hb', typ: 'str', gueltig: istISO },
+  rsAn: { p: 'ra', typ: 'bool' },
+  rsVon: { p: 'rv', typ: 'str', gueltig: istISO },
+  rsBis: { p: 'rb', typ: 'str', gueltig: istISO },
+};
+
 export function SchkgFristenForm() {
-  const [form, setForm] = useState<FormState>(DEFAULTS);
-  const [phase, setPhase] = useState<SchkgPhase>('einleitung');
-  const [aktiv, setAktiv] = useState<SchkgPreset | null>(null);
-  const [override, setOverride] = useState<SchkgModus | ''>('');
-  const [hemmung, setHemmung] = useState<{ an: boolean; von: string; bis: string }>({ an: false, von: '', bis: '' });
-  const [rechtsstillstand, setRechtsstillstand] = useState<{ an: boolean; von: string; bis: string }>({ an: false, von: '', bis: '' });
+  const [ausLink] = useState<Partial<SchkgLink>>(() => {
+    try { return permalinkLesen(SCHKG_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
+  const [form, setForm] = useState<FormState>(() => ({
+    ...DEFAULTS,
+    ...(ausLink.ereignis ? { ereignis: ausLink.ereignis } : {}),
+    ...(ausLink.einheit ? { einheit: ausLink.einheit as FormState['einheit'] } : {}),
+    ...(ausLink.laenge != null ? { laenge: ausLink.laenge } : {}),
+    ...(ausLink.modus ? { modus: ausLink.modus as FormState['modus'] } : {}),
+    ...(ausLink.fristnatur ? { fristnatur: ausLink.fristnatur as FormState['fristnatur'] } : {}),
+    ...(ausLink.kanton ? { kanton: ausLink.kanton as FormState['kanton'] } : {}),
+    ...(ausLink.ausloeser != null ? { ausloeser: ausLink.ausloeser } : {}),
+  }));
+  const [phase, setPhase] = useState<SchkgPhase>(() =>
+    (ausLink.phase as SchkgPhase | undefined)
+      ?? PRESETS_SCHKG.find((x) => x.key === ausLink.presetKey)?.phase
+      ?? 'einleitung');
+  const [aktiv, setAktiv] = useState<SchkgPreset | null>(() => PRESETS_SCHKG.find((x) => x.key === ausLink.presetKey) ?? null);
+  const [override, setOverride] = useState<SchkgModus | ''>((ausLink.override as SchkgModus | undefined) ?? '');
+  const [hemmung, setHemmung] = useState<{ an: boolean; von: string; bis: string }>({ an: ausLink.hemmungAn ?? false, von: ausLink.hemmungVon ?? '', bis: ausLink.hemmungBis ?? '' });
+  const [rechtsstillstand, setRechtsstillstand] = useState<{ an: boolean; von: string; bis: string }>({ an: ausLink.rsAn ?? false, von: ausLink.rsVon ?? '', bis: ausLink.rsBis ?? '' });
 
   const set = <K extends keyof FormState>(k: K, v: FormState[K]) => setForm((f) => ({ ...f, [k]: v }));
   const presetsDerPhase = PRESETS_SCHKG.filter((p) => p.phase === phase);
@@ -319,7 +362,14 @@ export function SchkgFristenForm() {
             );
           })}
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(SCHKG_LINK_SPEC, {
+              ...form, phase, presetKey: aktiv?.key, override: override || undefined,
+              hemmungAn: hemmung.an, hemmungVon: hemmung.von || undefined, hemmungBis: hemmung.bis || undefined,
+              rsAn: rechtsstillstand.an, rsVon: rechtsstillstand.von || undefined, rsBis: rechtsstillstand.bis || undefined,
+            })} />
+          </div>
         </div>
       )}
     </div>

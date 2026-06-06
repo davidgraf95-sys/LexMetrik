@@ -12,6 +12,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
@@ -61,15 +63,55 @@ const DEFAULTS: ZpoInput = {
 };
 
 
+// Permalink (FAHRPLAN-PRAXIS 1.3): flacher Verbund aus ZpoInput + Erstreckung.
+type ZpoLink = {
+  ereignis: string; einheit: string; laenge: number; verfahren: string;
+  kanton: string; fristnatur: string; zustellart?: string; modus?: string;
+  gerichtshinweisStillstand?: boolean;
+  erstreckungAn?: boolean; erstreckungLaenge?: number; erstreckungEinheit?: string;
+};
+const ZPO_LINK_SPEC: PermalinkSpec<ZpoLink> = {
+  ereignis: { p: 'e', typ: 'str', gueltig: istISO },
+  einheit: { p: 'u', typ: 'str', gueltig: einerVon('tage', 'wochen', 'monate', 'jahre') },
+  laenge: { p: 'l', typ: 'num', gueltig: (n) => Number.isInteger(n) && n > 0 },
+  verfahren: { p: 'v', typ: 'str', gueltig: einerVon('ordentlich', 'vereinfacht', 'familienrecht', 'klagefrist_klagebewilligung', 'schlichtung', 'summarisch', 'rechtsmittel_summarisch') },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  fristnatur: { p: 'n', typ: 'str', gueltig: einerVon('gesetzlich', 'gerichtlich') },
+  zustellart: { p: 'z', typ: 'str', gueltig: einerVon('empfangsbestaetigung', 'gewoehnliche_post') },
+  modus: { p: 'm', typ: 'str', gueltig: einerVon('bundesgericht', 'mindermeinung') },
+  gerichtshinweisStillstand: { p: 'gh', typ: 'bool' },
+  erstreckungAn: { p: 'ea', typ: 'bool' },
+  erstreckungLaenge: { p: 'el', typ: 'num', gueltig: (n) => Number.isInteger(n) && n > 0 },
+  erstreckungEinheit: { p: 'eu', typ: 'str', gueltig: einerVon('tage', 'wochen') },
+};
+
 export function ZpoFristenForm() {
-  const [form, setForm] = useState<ZpoInput>(DEFAULTS);
+  // Permalink einmalig lesen (lazy, validiert) — speist die Initialwerte.
+  const [ausLink] = useState<Partial<ZpoLink>>(() => {
+    try { return permalinkLesen(ZPO_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
+  const [form, setForm] = useState<ZpoInput>(() => ({
+    ...DEFAULTS,
+    ...(ausLink.ereignis ? { ereignis: ausLink.ereignis } : {}),
+    ...(ausLink.einheit ? { einheit: ausLink.einheit as ZpoInput['einheit'] } : {}),
+    ...(ausLink.laenge != null ? { laenge: ausLink.laenge } : {}),
+    ...(ausLink.verfahren ? { verfahren: ausLink.verfahren as ZpoInput['verfahren'] } : {}),
+    ...(ausLink.kanton ? { kanton: ausLink.kanton as ZpoInput['kanton'] } : {}),
+    ...(ausLink.fristnatur ? { fristnatur: ausLink.fristnatur as ZpoInput['fristnatur'] } : {}),
+    ...(ausLink.zustellart ? { zustellart: ausLink.zustellart as ZpoInput['zustellart'] } : {}),
+    ...(ausLink.modus ? { modus: ausLink.modus as ZpoInput['modus'] } : {}),
+    ...(ausLink.gerichtshinweisStillstand != null ? { gerichtshinweisStillstand: ausLink.gerichtshinweisStillstand } : {}),
+  }));
   const [phase, setPhase] = useState<ZpoPhase>('rechtsmittel');
   const [presetKey, setPresetKey] = useState('');
   const [presetHinweis, setPresetHinweis] = useState<string | null>(null);
   const [erweitert, setErweitert] = useState(false);
   const [fiktionDatum, setFiktionDatum] = useState('');
-  const [erstreckungAn, setErstreckungAn] = useState(false);
-  const [erstreckung, setErstreckung] = useState<{ einheit: 'tage' | 'wochen'; laenge: number }>({ einheit: 'tage', laenge: 10 });
+  const [erstreckungAn, setErstreckungAn] = useState(ausLink.erstreckungAn ?? false);
+  const [erstreckung, setErstreckung] = useState<{ einheit: 'tage' | 'wochen'; laenge: number }>({
+    einheit: (ausLink.erstreckungEinheit as 'tage' | 'wochen' | undefined) ?? 'tage',
+    laenge: ausLink.erstreckungLaenge ?? 10,
+  });
 
   const set = <K extends keyof ZpoInput>(k: K, v: ZpoInput[K]) => setForm((f) => ({ ...f, [k]: v }));
   const presetsDerPhase = PRESETS.filter((p) => p.phase === phase);
@@ -286,6 +328,10 @@ export function ZpoFristenForm() {
             <PdfExportButton config={pdfConfig} />
             <IcsExportButton endISO={ergebnis.diesAdQuemISO} titel="Fristende (ZPO)"
               beschreibung={ergebnis.ergebnis} dateiName="ZPO-Frist.ics" />
+            <LinkTeilenButton query={() => permalinkKodieren(ZPO_LINK_SPEC, {
+              ...form, erstreckungAn,
+              erstreckungLaenge: erstreckung.laenge, erstreckungEinheit: erstreckung.einheit,
+            })} />
           </div>
         </div>
       )}

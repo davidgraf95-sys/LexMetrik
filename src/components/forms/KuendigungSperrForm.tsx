@@ -8,6 +8,8 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 import { KuendigungTimeline } from '../KuendigungTimeline';
 import { SperrtageZaehler } from '../SperrtageZaehler';
@@ -35,12 +37,36 @@ function validiere(f: SperrfristenInput): string[] {
   return fehler;
 }
 
+// Permalink (FAHRPLAN-PRAXIS 1.3): SperrfristenInput inkl. Ereignis-Liste (json).
+const SPERR_TYPEN_GUELTIG = new Set(['krankheit_unfall', 'schwangerschaft', 'mutterschaftsurlaub_verlaengert', 'zusatzurlaub_tod_elternteil', 'urlaub_tod_mutter', 'militaer_zivil', 'hilfsaktion', 'betreuungsurlaub']);
+const KSP_LINK_SPEC: PermalinkSpec<SperrfristenInput & Record<string, unknown>> = {
+  vertragsbeginn: { p: 'vb', typ: 'str', gueltig: istISO },
+  zugangKuendigung: { p: 'z', typ: 'str', gueltig: istISO },
+  kuendigendePartei: { p: 'kp', typ: 'str', gueltig: einerVon('arbeitgeber', 'arbeitnehmer') },
+  probezeitMonate: { p: 'pm', typ: 'num', gueltig: (n) => n >= 0 && n <= 3 },
+  abweichendeFristMonate: { p: 'af', typ: 'num', gueltig: (n) => n >= 0 },
+  abweichendeFristFormGueltig: { p: 'ag', typ: 'bool' },
+  abweichendeFristQuelleGAV: { p: 'aq', typ: 'bool' },
+  kuendigungsterminMonatsende: { p: 'me', typ: 'bool' },
+  vaterschaftsurlaubResttage: { p: 'vu', typ: 'num', gueltig: (n) => Number.isInteger(n) && n >= 0 },
+  sperrereignisse: {
+    p: 'se', typ: 'json',
+    gueltig: (v): boolean => Array.isArray(v) && v.length <= 20 && v.every((e) =>
+      e && typeof e === 'object'
+      && SPERR_TYPEN_GUELTIG.has((e as { typ?: string }).typ ?? '')
+      && istISO((e as { von?: string }).von ?? '') && istISO((e as { bis?: string }).bis ?? '')),
+  },
+};
+
 // Typen-Katalog + Editor-Markup leben seit 6.6.2026 im geteilten
 // SperrereignisseEditor (§10) — genutzt auch von der Vorlagen-Maske
 // «Kündigung durch Arbeitgeber:in».
 
 export function KuendigungSperrForm() {
-  const [form, setForm] = useState<SperrfristenInput>(DEFAULTS);
+  const [form, setForm] = useState<SperrfristenInput>(() => {
+    try { return { ...DEFAULTS, ...permalinkLesen(KSP_LINK_SPEC, window.location.search) }; }
+    catch { return DEFAULTS; }
+  });
 
   const set = <K extends keyof SperrfristenInput>(k: K, v: SperrfristenInput[K]) =>
     setForm((f) => ({ ...f, [k]: v }));
@@ -236,6 +262,7 @@ export function KuendigungSperrForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(KSP_LINK_SPEC, form as SperrfristenInput & Record<string, unknown>)} />
             {gesamt.status === 'nichtig'
               ? <IcsExportButton endISO={gesamt.fruehesteNeueKuendigungISO} titel="Frühestens neu kündbar (Art. 336c OR)"
                   beschreibung={gesamt.ergebnis} dateiName="Neue-Kuendigung-fruehestens.ics" />
