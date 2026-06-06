@@ -197,3 +197,79 @@ describe('Mietvertrag – Review-Regressionen 5.6.2026', () => {
     expect(texte(basis({ mietzinsModell: 'index', mindestdauerJahre: 5 }))).toMatch(/Indexstand von ________/);
   });
 });
+
+// ─── Untermiete-Ausbau 6.6.2026 (bibliothek/recherche/untermietvertrag.md) ───
+// Art. 262 OR GELTENDE Fassung (Revision in der Volksabstimmung 24.11.2024
+// abgelehnt). Default 'hauptmiete' bleibt byte-identisch (golden-bewiesen,
+// einziger Diff = deklarierter Versions-String).
+
+describe('Untermietvertrag (Art. 262 OR)', () => {
+  const um = (over: Partial<MvAntworten> = {}): MvAntworten => ({
+    ...MV_DEFAULTS,
+    vermieterName: 'Hans Muster', vermieterAdresse: 'Weg 1, 4051 Basel',
+    mieterName: 'Anna Beispiel', mieterAdresse: 'Gasse 2, 4052 Basel',
+    objektAdresse: 'Strasse 3, 4053 Basel', objektBeschrieb: '3.5-Zimmer-Wohnung',
+    beginn: '2026-08-01', mietzinsNettoCHF: '1800', ort: 'Basel', datum: '2026-06-15',
+    mietverhaeltnis: 'untermiete', hmVermieterName: 'Immo AG', hmMietzinsCHF: '1500',
+    zustimmungStatus: 'schriftlich', untermieteUmfang: 'ganz',
+    ...over,
+  });
+  const text = (a: MvAntworten) => {
+    const e = mvZusammenstellen(a);
+    return e.dokument.absaetze.map((x) => `${x.ueberschrift ?? ''} ${x.text ?? ''}`).join('\n');
+  };
+
+  it('Titel «Untermietvertrag», U01–U04 enthalten, Rollen parametrisiert', () => {
+    const e = mvZusammenstellen(um());
+    expect(e.dokument.titel).toBe('Untermietvertrag');
+    const t = text(um());
+    expect(t).toContain('Hauptmieter der Mietsache gemäss Hauptmietvertrag mit Immo AG');
+    expect(t).toContain('Der Hauptvermieter hat der Untervermietung zugestimmt');
+    expect(t).toContain('Art. 262 Abs. 3 OR'); // U03 Haftungskette
+    expect(t).toContain('endet dadurch jedoch nicht automatisch'); // U04 Warn-Baustein
+    expect(t).toContain('Der Untervermieter:'); // Unterschriften-Label parametrisiert
+    expect(t).not.toContain('Der Vermieter:');
+    expect(t).not.toContain('UnterUnter'); // keine Doppel-Ersetzung
+  });
+
+  it('M08 enthält den Hauptmiete-Untermietsatz NICHT mehr (U03 übernimmt)', () => {
+    expect(text(um())).not.toContain('Untervermietung bedarf der Zustimmung des Untervermieters; dieser kann sie nur aus den gesetzlichen Gründen');
+    // Hauptmiete unverändert:
+    const h = mvZusammenstellen({ ...um(), mietverhaeltnis: 'hauptmiete' });
+    const ht = h.dokument.absaetze.map((x) => x.text ?? '').join('\n');
+    expect(ht).toContain('Untervermietung bedarf der Zustimmung des Vermieters; dieser kann sie nur aus den gesetzlichen Gründen verweigern.');
+    expect(h.dokument.titel).toBe('Mietvertrag');
+  });
+
+  it('U02 erscheint NUR bei erteilter Zustimmung; sonst Gate-G-Z-Warnung (kein Blocker)', () => {
+    expect(text(um({ zustimmungStatus: 'nicht_angefragt' }))).not.toContain('hat der Untervermietung zugestimmt');
+    const g = pruefeMvGates(um({ zustimmungStatus: 'nicht_angefragt' }));
+    expect(g.blocker.join()).not.toContain('Zustimmung'); // bewusst KEIN Blocker (Vertrag gültig)
+    expect(g.warnungen.some((w) => w.includes('Art. 257f Abs. 3'))).toBe(true);
+    expect(pruefeMvGates(um()).warnungen.some((w) => w.includes('257f'))).toBe(false);
+  });
+
+  it('Gate G-M: Untermietzins über Hauptmietzins ohne Mehrleistung → Missbrauchs-Warnung (262 II b)', () => {
+    const g = pruefeMvGates(um({ mietzinsNettoCHF: '1800', hmMietzinsCHF: '1500' }));
+    expect(g.warnungen.some((w) => w.includes('Art. 262 Abs. 2 lit. b'))).toBe(true);
+    const ok = pruefeMvGates(um({ mietzinsNettoCHF: '1800', hmMietzinsCHF: '1500', mehrleistungBegruendung: 'vollständige Möblierung' }));
+    expect(ok.warnungen.some((w) => w.includes('Art. 262 Abs. 2 lit. b'))).toBe(false);
+    const gleich = pruefeMvGates(um({ mietzinsNettoCHF: '1500', hmMietzinsCHF: '1500' }));
+    expect(gleich.warnungen.some((w) => w.includes('262 Abs. 2 lit. b'))).toBe(false);
+  });
+
+  it('teilweise Untermiete: Zimmer-Beschrieb in M02; möbliert → 266e-Hinweis; Endigungs-Hinweis immer', () => {
+    const t = text(um({ untermieteUmfang: 'teilweise', untermieteZimmerBeschrieb: 'Zimmer Süd, Mitbenutzung Küche/Bad' }));
+    expect(t).toContain('Die Untermiete umfasst: Zimmer Süd');
+    const g = pruefeMvGates(um({ moebliert: true }));
+    expect(g.hinweise.some((h) => h.includes('Art. 266e'))).toBe(true);
+    expect(g.hinweise.some((h) => h.includes('keinen Anspruch auf Eintritt'))).toBe(true);
+    expect(g.hinweise.some((h) => h.includes('Art. 291'))).toBe(true); // Pacht-Abgrenzung
+  });
+
+  it('Hauptmiete-Default unverändert: keine U-Bausteine, keine Untermiete-Warnungen', () => {
+    const g = pruefeMvGates({ ...um(), mietverhaeltnis: 'hauptmiete' });
+    expect(g.warnungen.join()).not.toContain('HAUPTVERMIETER');
+    expect(text({ ...um(), mietverhaeltnis: 'hauptmiete' })).not.toContain('Hauptmietvertrag mit');
+  });
+});

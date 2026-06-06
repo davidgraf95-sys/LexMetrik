@@ -91,6 +91,74 @@ export function VorlageMietvertrag() {
     switch (SCHRITTE[schritt].id) {
       case 'objekt': return (
         <div className="space-y-4">
+          {/* Untermiete-Weiche (Ausbau 6.6.2026, Art. 262 OR geltende Fassung) */}
+          <SelectionGrid
+            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            items={([
+              ['hauptmiete', 'Mietvertrag (Hauptmiete)', 'Vermieter:in vermietet die eigene Sache'],
+              ['untermiete', 'Untermietvertrag', 'Hauptmieter:in vermietet ganz oder teilweise weiter (Art. 262 OR)'],
+            ] as const).map(([code, label, sub]) => ({ code, label, sub }))}
+            value={a.mietverhaeltnis ?? 'hauptmiete'}
+            onSelect={(code) => {
+              set('mietverhaeltnis', code);
+              // abhängige Felder neutralisieren (kein Stale-State)
+              if (code === 'hauptmiete') {
+                set('hmVermieterName', undefined); set('hmDatum', undefined); set('hmMietzinsCHF', undefined);
+                set('zustimmungStatus', undefined); set('zustimmungDatum', undefined);
+                set('untermieteUmfang', undefined); set('untermieteZimmerBeschrieb', undefined);
+                set('mehrleistungBegruendung', undefined); set('moebliert', undefined);
+              } else {
+                set('zustimmungStatus', 'nicht_angefragt'); set('untermieteUmfang', 'ganz');
+              }
+            }}
+          />
+          {a.mietverhaeltnis === 'untermiete' && (
+            <div className="lc-card p-4 space-y-3">
+              <p className="lc-overline">Hauptmietvertrag & Zustimmung (Art. 262 OR)</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <Field label="Hauptvermieter:in (Name)">
+                  <input className={inputCls} value={a.hmVermieterName ?? ''} onChange={(e) => set('hmVermieterName', e.target.value || undefined)} placeholder="z. B. Immo AG" />
+                </Field>
+                <Field label="Hauptmietvertrag vom" optional>
+                  <DatumsFeld value={a.hmDatum ?? ''} onChange={(v) => set('hmDatum', v || undefined)} className={inputCls} />
+                </Field>
+                <Field label="Hauptmietzins netto (CHF/Monat)" hint="Vergleichsgrösse für den Missbrauchs-Check (Art. 262 Abs. 2 lit. b)">
+                  <input className={inputCls + ' num'} inputMode="decimal" value={a.hmMietzinsCHF ?? ''} onChange={(e) => set('hmMietzinsCHF', e.target.value || undefined)} placeholder="z. B. 1500" />
+                </Field>
+                <Field label="Zustimmung des Hauptvermieters" hint="formfrei gültig — beweishalber schriftlich festhalten">
+                  <select className={inputCls} value={a.zustimmungStatus ?? 'nicht_angefragt'} onChange={(e) => set('zustimmungStatus', e.target.value as MvAntworten['zustimmungStatus'])}>
+                    <option value="schriftlich">liegt schriftlich vor</option>
+                    <option value="muendlich">mündlich erteilt</option>
+                    <option value="angefragt">angefragt — Antwort ausstehend</option>
+                    <option value="nicht_angefragt">noch nicht angefragt</option>
+                  </select>
+                </Field>
+                {(a.zustimmungStatus === 'schriftlich' || a.zustimmungStatus === 'muendlich') && (
+                  <Field label="Zustimmung erteilt am" optional>
+                    <DatumsFeld value={a.zustimmungDatum ?? ''} onChange={(v) => set('zustimmungDatum', v || undefined)} className={inputCls} />
+                  </Field>
+                )}
+                <Field label="Umfang der Untermiete">
+                  <select className={inputCls} value={a.untermieteUmfang ?? 'ganz'} onChange={(e) => set('untermieteUmfang', e.target.value as 'ganz' | 'teilweise')}>
+                    <option value="ganz">ganze Mietsache</option>
+                    <option value="teilweise">teilweise (einzelne Zimmer)</option>
+                  </select>
+                </Field>
+              </div>
+              {a.untermieteUmfang === 'teilweise' && (
+                <Field label="Überlassene Räume & Mitbenutzung" hint="z. B. «Zimmer Süd; Mitbenutzung von Küche und Bad»">
+                  <input className={inputCls} value={a.untermieteZimmerBeschrieb ?? ''} onChange={(e) => set('untermieteZimmerBeschrieb', e.target.value || undefined)} />
+                </Field>
+              )}
+              <Field label="Mehrleistungen (rechtfertigen einen Aufschlag)" optional hint="Möblierung, Reinigung, Nebenleistungen — ohne Begründung ist ein Untermietzins über dem Hauptmietzins missbräuchlich (Art. 262 Abs. 2 lit. b)">
+                <input className={inputCls} value={a.mehrleistungBegruendung ?? ''} onChange={(e) => set('mehrleistungBegruendung', e.target.value || undefined)} placeholder="z. B. vollständige Möblierung, Bettwäsche, Endreinigung" />
+              </Field>
+              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+                <input type="checkbox" checked={!!a.moebliert} onChange={(e) => set('moebliert', e.target.checked || undefined)} />
+                Möbliertes Zimmer (verkürzte Kündigungsfrist, Art. 266e OR)
+              </label>
+            </div>
+          )}
           <SelectionGrid
             className="grid grid-cols-1 sm:grid-cols-2 gap-2"
             items={([

@@ -47,9 +47,10 @@ export const MV_OFFENE_VERIFIKATIONEN: string[] = [
   'Referenzzinssatz 1.25 % (gültig seit 2.9.2025, unverändert ab 2.6.2026; nächste Anpassung erst bei Durchschnittszinssatz < 1.13 % oder > 1.37 %) – quartalsweise auf referenzzinssatz.admin.ch prüfen.',
   'MWST-Normalsatz 8.1 % (seit 1.1.2024) – bei Satzänderung Parameter nachführen.',
   'Geschäftsraum: Umsatzmiete und Konkurrenzschutz sind gesetzlich nicht spezifisch geregelt; Klauselpraxis vor Verwendung anwaltlich prüfen.',
+  'Untermiete: BGE 119 II 353 (Gewinnverbot), BGE 134 III 446 (Kündigung 257f Abs. 3 nach Abmahnung) und der Praxis-Richtwert «~50 % Aufschlag ohne Mehrleistungen missbräuchlich» sind zu verifizieren; die abgelehnte Untermiete-Revision (Abstimmung 24.11.2024) darf NICHT als geltendes Recht übernommen werden.',
 ];
 
-// Übliche Nebenkosten-Positionen (müssen EINZELN im Vertrag stehen —
+// Übliche Nebenkosten-Positionen (müssen EINZELN im Vertrag stehen –
 // Auflistung nur in AGB genügt nicht, BGer 4C.250/2006).
 export const MV_NEBENKOSTEN_WOHNEN = [
   'Heizung', 'Warmwasser', 'Wasser/Abwasser', 'Kehrichtgrundgebühr',
@@ -66,11 +67,33 @@ export const MV_NEBENKOSTEN_GESCHAEFT = [
 
 export type MvObjektTyp = 'wohnung' | 'geschaeftsraum';
 export type MvMietzinsModell = 'standard' | 'index' | 'staffel';
+/** Untermiete-Ausbau 6.6.2026 (bibliothek/recherche/untermietvertrag.md):
+ *  Art. 262 OR GELTENDE Fassung (die Revision «Untermiete» wurde in der
+ *  Volksabstimmung vom 24.11.2024 ABGELEHNT – Zustimmung bleibt formfrei,
+ *  Verweigerungsgründe Abs. 2 lit. a–c abschliessend). Default 'hauptmiete'
+ *  lässt das bisherige Verhalten byte-identisch (§6, golden-bewiesen). */
+export type MvMietverhaeltnis = 'hauptmiete' | 'untermiete';
+export type MvZustimmungStatus = 'schriftlich' | 'muendlich' | 'angefragt' | 'nicht_angefragt';
 
 export type MvStaffel = { ab: string; erhoehungCHF: string };
 
 export type MvAntworten = {
   objektTyp: MvObjektTyp;
+  /** Untermiete-Weiche: bei 'untermiete' sind vermieter*-Felder der UNTER-
+   *  vermieter (= Hauptmieter) und mieter*-Felder der Untermieter. */
+  mietverhaeltnis?: MvMietverhaeltnis;     // Default 'hauptmiete'
+  // Hauptmietvertrag-Referenz (nur untermiete)
+  hmVermieterName?: string;
+  hmDatum?: string;                        // ISO, optional
+  hmMietzinsCHF?: string;                  // Vergleichsgrösse Missbrauchs-Gate
+  // Zustimmung des Hauptvermieters (Art. 262 Abs. 1 OR – formfrei)
+  zustimmungStatus?: MvZustimmungStatus;
+  zustimmungDatum?: string;
+  // Umfang & Mietzins-Rechtfertigung
+  untermieteUmfang?: 'ganz' | 'teilweise';
+  untermieteZimmerBeschrieb?: string;      // bei 'teilweise': Räume/Mitbenutzung
+  mehrleistungBegruendung?: string;        // rechtfertigt Aufschlag (262 II lit. b)
+  moebliert?: boolean;                     // 266e-Hinweis (2-Wochen-Frist)
   // Parteien
   vermieterName: string;
   vermieterAdresse: string;
@@ -237,7 +260,7 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
         break;
       }
     }
-    // Audit-Fix 6.6.2026: «Art. 19a VMWG» existiert nicht — die Vier-Monats-Regel
+    // Audit-Fix 6.6.2026: «Art. 19a VMWG» existiert nicht – die Vier-Monats-Regel
     // steht in Art. 19 Abs. 2 VMWG («Bei gestaffelten Mietzinsen darf die Mitteilung
     // frühestens vier Monate vor Eintritt jeder Mietzinserhöhung erfolgen»), am
     // Cache (Stand 20250101) wörtlich verifiziert; Vorbehalt damit aufgelöst.
@@ -290,6 +313,34 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
     hinweise.push('Sehr lange feste Erstlaufzeit: Eine übermässig lange beidseitige Bindung kann nach Art. 27 Abs. 2 ZGB teilnichtig sein – feste zahlenmässige Obergrenze besteht im Schweizer Recht nicht, massgeblich ist die Einzelfallabwägung (zu verifizieren).');
   }
 
+  // ── Untermiete-Gates (Ausbau 6.6.2026, Dossier untermietvertrag.md §3c) ──
+  if (a.mietverhaeltnis === 'untermiete') {
+    // G-Z – Zustimmung des Hauptvermieters: WARNUNG, kein Blocker. Der
+    // Untermietvertrag ist auch ohne (noch) erteilte Zustimmung zivilrechtlich
+    // gültig; das reale Risiko ist die ausserordentliche Kündigung des
+    // HAUPTmietvertrags nach schriftlicher Abmahnung (Art. 257f Abs. 3 OR).
+    if (a.zustimmungStatus === 'angefragt' || a.zustimmungStatus === 'nicht_angefragt' || !a.zustimmungStatus) {
+      warnungen.push('ZUSTIMMUNG DES HAUPTVERMIETERS fehlt bzw. steht aus (Art. 262 Abs. 1 OR): Der Untermietvertrag ist zwar gültig, aber ohne Zustimmung riskiert der Untervermieter nach schriftlicher Abmahnung die ausserordentliche Kündigung des HAUPTMIETVERTRAGS (Art. 257f Abs. 3 OR; BGE 134 III 446 – zu verifizieren). Zustimmung vor Bezug einholen – sie ist formfrei, beweishalber schriftlich festhalten; verweigern darf der Hauptvermieter nur aus den Gründen von Art. 262 Abs. 2 OR.');
+    }
+    // G-M – Missbräuchlicher Untermietzins (Art. 262 Abs. 2 lit. b OR): nur
+    // Vergleich + Begründungspflicht, KEIN gerechneter Höchstzins (§2 – die
+    // zulässige Aufschlagshöhe ist Würdigung).
+    const um = zahl(a.mietzinsNettoCHF);
+    const hm = zahl(a.hmMietzinsCHF);
+    if (um !== null && hm !== null && um > hm && !a.mehrleistungBegruendung?.trim()) {
+      warnungen.push(`Der Untermietzins (CHF ${fmtCHF(a.mietzinsNettoCHF)}) liegt über dem ${a.untermieteUmfang === 'teilweise' ? 'anteilig zu bestimmenden ' : ''}Hauptmietzins (CHF ${fmtCHF(a.hmMietzinsCHF!)}): Ein Aufschlag ist nur zulässig, soweit ihn MEHRLEISTUNGEN (Möblierung, Nebenleistungen) rechtfertigen (Art. 262 Abs. 2 lit. b OR; Gewinnverbot, BGE 119 II 353 – zu verifizieren) – sonst kann der Hauptvermieter die Zustimmung verweigern. Begründung im Feld «Mehrleistungen» erfassen; Praxis-Richtwert: Aufschläge über rund 50 % gelten ohne Mehrleistungen als missbräuchlich (kein gesetzlicher Satz, zu verifizieren).`);
+    }
+    if (a.untermieteUmfang === 'teilweise' && !a.untermieteZimmerBeschrieb?.trim()) {
+      warnungen.push('Teilweise Untermiete: Die überlassenen Räume und die Mitbenutzung (Küche/Bad/Nebenräume) genau umschreiben – massgeblich für Gebrauchsumfang und Mietzinsvergleich.');
+    }
+    if (a.moebliert) {
+      hinweise.push('Möbliertes Zimmer: Für die Kündigung gilt die verkürzte Frist von zwei Wochen auf Ende einer einmonatigen Mietdauer (Art. 266e OR).');
+    }
+    hinweise.push('Endet der HAUPTMIETVERTRAG, hat der Untermieter keinen Anspruch auf Eintritt und keinen Erstreckungsanspruch gegen den Hauptvermieter; der Untermietvertrag endet dadurch nicht automatisch und ist eigenständig zu kündigen – der Untervermieter kann schadenersatzpflichtig werden.');
+    hinweise.push('Die Formularpflicht für den Anfangsmietzins (Art. 270 Abs. 2 OR) gilt in den Formularpflicht-Kantonen AUCH für den Untermietzins; die Vermieterkündigung des Untervermieters braucht das amtliche Formular (Art. 266l Abs. 2 OR).');
+    hinweise.push('Nicht geeignet für Pacht/Unterpacht (Art. 291 OR) und nicht zu verwechseln mit der ÜBERTRAGUNG der Geschäftsmiete auf einen Dritten (Art. 263 OR – schriftliche Zustimmung, Parteiwechsel).');
+  }
+
   // Standard-Disclosures
   hinweise.push(`Mietzins-Basis: hypothekarischer Referenzzinssatz ${MV_PARAMETER.referenzzinssatz.wert.toFixed(2)} % (Stand ${MV_PARAMETER.referenzzinssatz.stand}) – Basis künftiger Anpassungen (Art. 269a lit. b OR, Art. 13 VMWG); quartalsweise publiziert, vor Verwendung prüfen.`);
   if (wohnung) {
@@ -304,7 +355,7 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
 
 export const MV_SCHEMA: VorlageSchema = {
   id: 'mietvertrag',
-  version: '1.1.0 (Rechtsstand OR Art. 253 ff./VMWG; Vertiefungs-Gutachten 5.6.2026: Index-Basis, Brutto-Kaution, Zahlungsverzug, 260a vollständig, BE-Formularpflicht)',
+  version: '1.2.0 (Rechtsstand OR Art. 253 ff./VMWG; + Untermiete 6.6.2026: Art. 262 GELTENDE Fassung – Revision in der Volksabstimmung 24.11.2024 abgelehnt)',
   titel: 'Mietvertrag',
   format: 'vertrag',
   disclaimer:
@@ -317,8 +368,19 @@ export const MV_SCHEMA: VorlageSchema = {
       text: 'zwischen\n\n{{vermieterBlock}}\n(Vermieter)\n\nund\n\n{{mieterBlock}}\n(Mieter)',
       begruendung: 'Bezeichnung der Vertragsparteien – immer enthalten.',
       norm: 'Art. 253 OR' },
+    // ── Untermiete-Bausteine (Ausbau 6.6.2026, Art. 262 OR geltende Fassung) ──
+    { id: 'U01_praeambel', ueberschrift: 'Untermietverhältnis',
+      text: 'Der Untervermieter ist Hauptmieter der Mietsache gemäss Hauptmietvertrag mit {{hmVermieterName}} (Hauptvermieter){{hmDatumSatz}}{{hmMietzinsSatz}}. Mit diesem Vertrag vermietet er die Mietsache {{untermieteUmfangWort}} unter (Art. 262 OR).{{mehrleistungSatz}}',
+      includeIf: { feld: 'istUntermiete', eq: true }, nummeriert: true,
+      begruendung: 'Präambel mit Hauptmietvertrag-Referenz – verankert das Untermietverhältnis und die Vergleichsgrösse für Art. 262 Abs. 2 lit. b.',
+      norm: 'Art. 262 OR' },
+    { id: 'U02_zustimmung', ueberschrift: 'Zustimmung des Hauptvermieters',
+      text: 'Der Hauptvermieter hat der Untervermietung zugestimmt{{zustimmungDatumSatz}} (Art. 262 Abs. 1 OR). Die Zustimmung ist formfrei gültig; ihre schriftliche Festhaltung dient dem Beweis.',
+      includeIf: { feld: 'zustimmungVorhanden', eq: true }, nummeriert: true,
+      begruendung: 'Zustimmungs-Klausel – nur wenn die Zustimmung erteilt ist (sonst greift die Gate-Warnung G-Z).',
+      norm: 'Art. 262 Abs. 1 OR' },
     { id: 'M02_objekt', ueberschrift: 'Mietobjekt',
-      text: 'Vermietet wird: {{objektBeschrieb}}, {{objektAdresse}}.{{nebenraeumeSatz}}{{zweckSatz}} Der Zustand des Mietobjekts wird bei der Übergabe in einem gemeinsamen Protokoll festgehalten.',
+      text: 'Vermietet wird: {{objektBeschrieb}}, {{objektAdresse}}.{{untermieteTeilSatz}}{{nebenraeumeSatz}}{{zweckSatz}} Der Zustand des Mietobjekts wird bei der Übergabe in einem gemeinsamen Protokoll festgehalten.',
       nummeriert: true,
       begruendung: 'Mietobjekt mit Beschrieb, Nebenräumen und Zweck – immer enthalten.',
       norm: 'Art. 253 OR' },
@@ -377,9 +439,19 @@ export const MV_SCHEMA: VorlageSchema = {
       begruendung: 'Erhaltungspflicht (relativ zwingend) und kleiner Unterhalt in den gesetzlichen Schranken – immer enthalten.',
       norm: 'Art. 256 OR' },
     { id: 'M08_gebrauch', ueberschrift: 'Gebrauch, Untermiete und bauliche Änderungen',
-      text: 'Der Mieter gebraucht das Mietobjekt sorgfältig und nimmt Rücksicht auf Hausbewohner und Nachbarn. Untervermietung bedarf der Zustimmung des Vermieters; dieser kann sie nur aus den gesetzlichen Gründen verweigern. Erneuerungen und Änderungen am Mietobjekt durch den Mieter bedürfen der schriftlichen Zustimmung des Vermieters; hat der Vermieter zugestimmt, kann er die Wiederherstellung des früheren Zustands nur verlangen, wenn dies schriftlich vereinbart wurde. Weist das Mietobjekt bei Mietende dank solcher Arbeiten einen erheblichen Mehrwert auf, kann der Mieter dafür eine entsprechende Entschädigung verlangen (Art. 260a Abs. 3 OR).{{tierhaltungSatz}}{{hausordnungSatz}}',
+      text: 'Der Mieter gebraucht das Mietobjekt sorgfältig und nimmt Rücksicht auf Hausbewohner und Nachbarn.{{untermieteSatz}} Erneuerungen und Änderungen am Mietobjekt durch den Mieter bedürfen der schriftlichen Zustimmung des Vermieters; hat der Vermieter zugestimmt, kann er die Wiederherstellung des früheren Zustands nur verlangen, wenn dies schriftlich vereinbart wurde. Weist das Mietobjekt bei Mietende dank solcher Arbeiten einen erheblichen Mehrwert auf, kann der Mieter dafür eine entsprechende Entschädigung verlangen (Art. 260a Abs. 3 OR).{{tierhaltungSatz}}{{hausordnungSatz}}',
       nummeriert: true,
       begruendung: 'Sorgfaltspflicht, Untermiete (gesetzliche Verweigerungsgründe) und Art. 260a – immer enthalten.',
+      norm: 'Art. 262 OR' },
+    { id: 'U03_gebrauch_haftung', ueberschrift: 'Gebrauchsumfang und Haftung gegenüber dem Hauptvermieter',
+      text: 'Der Untermieter darf die Mietsache nur in dem Umfang gebrauchen, der dem Untervermieter nach dem Hauptmietvertrag gestattet ist. Der Untervermieter haftet dem Hauptvermieter dafür, dass der Untermieter die Sache nicht anders gebraucht, als es ihm selbst gestattet ist; der Hauptvermieter kann den Untermieter unmittelbar dazu anhalten (Art. 262 Abs. 3 OR). Eine Weitervermietung durch den Untermieter bedarf der Zustimmung des Untervermieters.',
+      includeIf: { feld: 'istUntermiete', eq: true }, nummeriert: true,
+      begruendung: 'Gebrauchskopplung an den Hauptmietvertrag und Haftungskette nach Art. 262 Abs. 3 – bei Untermiete immer enthalten.',
+      norm: 'Art. 262 Abs. 3 OR' },
+    { id: 'U04_endigung_hauptmiete', ueberschrift: 'Hinweis: Ende des Hauptmietvertrags',
+      text: 'Die Parteien nehmen zur Kenntnis: Endet der Hauptmietvertrag, kann der Untervermieter dem Untermieter den weiteren Gebrauch nicht mehr verschaffen. Der Untermieter hat keinen Anspruch, in den Hauptmietvertrag einzutreten, und keinen Erstreckungsanspruch gegen den Hauptvermieter. Dieser Untermietvertrag endet dadurch jedoch nicht automatisch; er ist eigenständig form- und fristgerecht zu kündigen (Art. 266a ff. OR). Der Untervermieter kann gegenüber dem Untermieter schadenersatzpflichtig werden.',
+      includeIf: { feld: 'istUntermiete', eq: true }, nummeriert: true,
+      begruendung: 'Endigungs-Kopplung als WARN-Baustein – rechtlich keine automatische Auflösung (bewusst keine auflösende Bedingung, Dossier §1.4).',
       norm: 'Art. 262 OR' },
     { id: 'M09_versicherung', ueberschrift: 'Versicherung',
       text: '{{versicherungText}}',
@@ -423,6 +495,11 @@ export const MV_SCHEMA: VorlageSchema = {
 
 export function mvZusammenstellen(a: MvAntworten) {
   const wohnung = a.objektTyp === 'wohnung';
+  // Untermiete-Ausbau 6.6.2026 (Dossier untermietvertrag.md): Default
+  // 'hauptmiete' hält das bisherige Verhalten byte-identisch (§6, golden).
+  const untermiete = a.mietverhaeltnis === 'untermiete';
+  const zustimmungVorhanden = untermiete
+    && (a.zustimmungStatus === 'schriftlich' || a.zustimmungStatus === 'muendlich');
   const netto = zahl(a.mietzinsNettoCHF);
   const kaution = zahl(a.kautionCHF);
   const fristMin = mvGesetzlicheFrist(a.objektTyp);
@@ -506,7 +583,48 @@ export function mvZusammenstellen(a: MvAntworten) {
       ? `\n\n\n___________________________\n${a.zweiterMieterName}`
       : '',
     datumFmt: fmtDatumLang(a.datum),
+    // ── Untermiete-Platzhalter (alle leer/false bei Hauptmiete) ──
+    istUntermiete: untermiete,
+    zustimmungVorhanden,
+    hmVermieterName: a.hmVermieterName?.trim() || '________',
+    hmDatumSatz: untermiete && a.hmDatum ? ` vom ${fmtDatum(a.hmDatum)}` : '',
+    hmMietzinsSatz: untermiete && zahl(a.hmMietzinsCHF) !== null
+      ? ` (Hauptmietzins netto CHF ${fmtCHF(a.hmMietzinsCHF!)} pro Monat)` : '',
+    untermieteUmfangWort: a.untermieteUmfang === 'teilweise' ? 'teilweise' : 'ganz',
+    mehrleistungSatz: untermiete && a.mehrleistungBegruendung?.trim()
+      ? ` Der Untermietzins berücksichtigt folgende Mehrleistungen des Untervermieters (Art. 262 Abs. 2 lit. b OR): ${a.mehrleistungBegruendung.trim()}.`
+      : '',
+    zustimmungDatumSatz: zustimmungVorhanden && a.zustimmungDatum ? ` am ${fmtDatum(a.zustimmungDatum)}` : '',
+    untermieteTeilSatz: untermiete && a.untermieteUmfang === 'teilweise'
+      ? ` Die Untermiete umfasst: ${a.untermieteZimmerBeschrieb?.trim() || '________'}.`
+      : '',
+    // M08-Untermiete-Satz: bei Hauptmiete der bisherige Wortlaut (byte-
+    // identisch); im Untermietvertrag übernimmt U03 (262 Abs. 3).
+    untermieteSatz: untermiete
+      ? ''
+      : ' Untervermietung bedarf der Zustimmung des Vermieters; dieser kann sie nur aus den gesetzlichen Gründen verweigern.',
   };
 
-  return assemble(MV_SCHEMA, antworten);
+  const ergebnis = assemble(MV_SCHEMA, antworten);
+  if (!untermiete) return ergebnis;
+
+  // ── Rollen-Parametrisierung Untermiete (Darstellungsebene, §3) ──
+  // Zentral statt 26 Baustein-Duplikate: «Vermieter»→«Untervermieter»,
+  // «Mieter»→«Untermieter» (Wortanfang gross; «Hauptvermieter»/«Untermieter»
+  // in den U-Bausteinen bleiben unberührt, da dort klein eingebettet).
+  const rollen = (t: string) => t.replace(/Vermieter/g, 'Untervermieter').replace(/Mieter/g, 'Untermieter');
+  return {
+    ...ergebnis,
+    dokument: {
+      ...ergebnis.dokument,
+      titel: 'Untermietvertrag',
+      absaetze: ergebnis.dokument.absaetze.map((abs) => ({
+        ...abs,
+        ...(abs.text ? { text: rollen(abs.text) } : {}),
+        ...(abs.ueberschrift ? { ueberschrift: rollen(abs.ueberschrift) } : {}),
+      })),
+      disclaimer: rollen(ergebnis.dokument.disclaimer) +
+        ' Untermietverhältnis: Die Zustimmung des Hauptvermieters (Art. 262 OR) und das Schicksal bei Ende des Hauptmietvertrags sind besonders zu beachten.',
+    },
+  };
 }
