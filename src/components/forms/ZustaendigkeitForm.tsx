@@ -30,6 +30,7 @@ import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAm
 import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
+import { kvPrefillKodieren, type KvMaterie } from '../../lib/vorlagen/klageVereinfacht';
 import { karte } from '../../lib/startseiteConfig';
 import { SchkgZustaendigkeitTeil } from './SchkgZustaendigkeitTeil';
 import { StrafZustaendigkeitTeil } from './StrafZustaendigkeitTeil';
@@ -1011,11 +1012,22 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                     zusatz: 'Örtlich zuständig ist das Gericht am Wohnsitz einer der Parteien (zwingend, Art. 23 ZPO); das konkrete Gericht richtet sich nach kantonalem Recht (Art. 4 ZPO).' };
             const k = 'karte' in ziel ? ziel.karte : undefined;
             const gebaut = k && k.status !== 'geplant' && k.href;
-            // BS-Prefill hat Vorrang (vorbefüllter Sprung, bestehende Brücke).
+            // Prefill-Brücken: BS-Schlichtungsgesuch (bestehend) und
+            // klage-vereinfacht (2.1b — Materie + Streitwert reisen mit).
+            const kvMaterie: KvMaterie | null = k?.id === 'klage-vereinfacht'
+              ? (istArbeit && f.glgBetroffen ? 'glg' // GlG VOR arbeit (streitwertunabhängig, lit. a)
+                : istArbeit ? 'arbeit'
+                : istMiete && ['kuendigungsschutz', 'erstreckung', 'mietzins_anfechtung', 'hinterlegung'].includes(f.mieteUnterfall)
+                  ? 'miete_kernbereich' // Schutzmaterien lit. c — streitwertunabhängig
+                : f.streitsache === 'persoenlichkeit' && f.persoenlichkeitUnterfall === 'gewaltschutz' ? 'gewaltschutz'
+                : vermoegensrechtlich ? 'vermoegensrechtlich' : null)
+              : null;
             const linkZiel = gebaut
               ? (k.id === 'schlichtungsgesuch' && sgPrefill
                   ? { pathname: '/vorlagen/schlichtungsgesuch-bs', search: sgPrefill }
-                  : { pathname: k.href! })
+                  : k.id === 'klage-vereinfacht' && kvMaterie
+                    ? { pathname: k.href!, search: kvPrefillKodieren({ materie: kvMaterie, streitwertCHF: vermoegensrechtlich ? streitwert : null }) }
+                    : { pathname: k.href! })
               : null;
             return (
               <div className="lc-card p-4 space-y-2">
@@ -1030,7 +1042,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                     <Link to={linkZiel} className="lc-btn-primary no-underline">
                       Weiter zur Vorlage →
                     </Link>
-                    {k!.id === 'schlichtungsgesuch' && sgPrefill && (
+                    {((k!.id === 'schlichtungsgesuch' && sgPrefill) || (k!.id === 'klage-vereinfacht' && kvMaterie)) && (
                       <p className="text-xs text-ink-500 mt-2">Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.</p>
                     )}
                   </div>

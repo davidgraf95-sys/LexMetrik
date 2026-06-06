@@ -10,6 +10,7 @@ import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
+import { kvPrefillLesen } from '../lib/vorlagen/klageVereinfacht';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
 
@@ -76,7 +77,14 @@ function ParteiEditor({ p, onChange }: { p: SgPartei; onChange: (p: SgPartei) =>
 export function VorlageKlageVereinfacht() {
   // KEIN speicherKey (Parteidaten — wie Schlichtungsgesuch BS).
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
-    useWizardState<KvAnswers>({ defaults: KV_DEFAULTS });
+    useWizardState<KvAnswers>({
+      defaults: {
+        ...KV_DEFAULTS,
+        // Prefill-Brücke 2.1b (Zuständigkeits-Wizard): Materie + Streitwert
+        // vorbefüllt, voll editierbar; SSR-sicher via try/catch.
+        ...((() => { try { return kvPrefillLesen(window.location.search) ?? {}; } catch { return {}; } })()),
+      },
+    });
 
   const ergebnis = useMemo(() => kvZusammenstellen(a), [a]);
   const maengel = useMemo(() => kvMaengel(a), [a]);

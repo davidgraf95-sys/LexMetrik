@@ -161,6 +161,28 @@ export type KvAnswers = {
   datum: string;                  // ISO
 };
 
+// ── Prefill-Brücke (FAHRPLAN-PRAXIS 2.1b): Zuständigkeits-Wizard → Klage ────
+// Muster sgPrefill (§5: Kodieren/Lesen am selben Ort); nur validierte Werte.
+
+export function kvPrefillKodieren(p: { materie: KvMaterie; streitwertCHF?: number | null }): string {
+  const q = new URLSearchParams();
+  q.set('materie', p.materie);
+  if (p.streitwertCHF != null && Number.isFinite(p.streitwertCHF) && p.streitwertCHF >= 0) {
+    q.set('streitwert', String(p.streitwertCHF));
+  }
+  return q.toString();
+}
+
+export function kvPrefillLesen(search: string): Partial<KvAnswers> | null {
+  const q = new URLSearchParams(search);
+  const materie = q.get('materie') as KvMaterie | null;
+  if (!materie || !KV_MATERIEN.some((m) => m.id === materie)) return null;
+  const aus: Partial<KvAnswers> = { materie };
+  const sw = q.get('streitwert');
+  if (sw && /^\d+(\.\d{1,2})?$/.test(sw)) aus.streitwert = sw;
+  return aus;
+}
+
 export const KV_DEFAULTS: KvAnswers = {
   materie: '',
   streitwert: '',
