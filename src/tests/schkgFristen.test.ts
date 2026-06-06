@@ -100,6 +100,35 @@ describe('SchKG-Fristenrechner', () => {
     expect(r.diesAdQuem).toBe('13.08.2025');
   });
 
+  // Regression (Fix 6.6.2026): Fristende auf Sa/So unmittelbar VOR Ferienbeginn.
+  // Die Werktagsverschiebung (Art. 31 SchKG i.V.m. Art. 142 Abs. 3 ZPO) führte
+  // das Ende IN die Betreibungsferien hinein (15.7. bzw. 19.12.), statt dass
+  // Art. 63 SchKG am verschobenen Ende erneut griff.
+  it('Ende Sa 13.7.2024 vor Sommerferien → 3. Werktag nach 31.7. = 6.8.2024', () => {
+    // 20 Tage ab 23.6.2024: dies a quo 24.6., Ende Sa 13.7. → Mo 15.7. wäre
+    // 1. Ferientag → Art. 63: 1.8. Feiertag, 2.8./5.8./6.8.
+    const r = berechneSchkgFrist(base({ ereignis: '2024-06-23', laenge: 20 }));
+    expect(r.diesAdQuem).toBe('06.08.2024');
+  });
+
+  it('Ende Sa 17.12.2022 vor Weihnachtsferien → 3. Werktag nach 1.1. (ZH: 5.1.2023)', () => {
+    // 10 Tage ab 7.12.2022: Ende Sa 17.12. → Mo 19.12. wäre in den Ferien
+    // (18.12.–1.1.) → Art. 63 nach 1.1.2023: 2.1. Berchtoldstag (ZH arbeitsfrei),
+    // 3.1./4.1./5.1.
+    const r = berechneSchkgFrist(base({ ereignis: '2022-12-07', laenge: 10 }));
+    expect(r.diesAdQuem).toBe('05.01.2023');
+  });
+
+  it('Kantonsabhängiger Art.-63-Anker: BS (2.1. kein Feiertag) → 4.1.2023', () => {
+    const r = berechneSchkgFrist(base({ ereignis: '2022-12-07', laenge: 10, kanton: 'BS' }));
+    expect(r.diesAdQuem).toBe('04.01.2023');
+  });
+
+  it('Gegenprobe: Ende werktags VOR den Ferien bleibt unverschoben (Fr 12.7.2024)', () => {
+    const r = berechneSchkgFrist(base({ ereignis: '2024-06-22', laenge: 20 }));
+    expect(r.diesAdQuem).toBe('12.07.2024');
+  });
+
   it('Rechtsstillstand-Eingabe ausserhalb des Betreibungsferien-Regimes erzeugt eine Warnung', () => {
     const r = berechneSchkgFrist(base({
       modus: 'zpo_stillstand', rechtsstillstandVon: '2025-07-20', rechtsstillstandBis: '2025-08-10',

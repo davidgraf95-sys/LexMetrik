@@ -160,6 +160,12 @@ export function normalisiereEnde(
     const p = st.periodeFuer(ende);
     if (p) return { tag: nthWerktagNach(p.bis, 3, kanton), verschoben: true };
     const d = naechsterWerktag(ende, kanton);
+    // Sa/So/Feiertag unmittelbar VOR Ferienbeginn: die Werktagsverschiebung
+    // darf nicht in die geschlossene Zeit hineinführen. Das verschobene Ende
+    // ist das massgebliche Fristende – fällt es in die Ferien, greift wieder
+    // Art. 63 SchKG (3. Werktag nach deren Ende).
+    const p2 = st.periodeFuer(d);
+    if (p2) return { tag: nthWerktagNach(p2.bis, 3, kanton), verschoben: true };
     return { tag: d, verschoben: +d !== +ende };
   }
 
