@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EckdatenKachel, ErgebnisSprung, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, ErgebnisSprung, FehlerBox, Field, LiveHeader, Stepper, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -183,6 +183,13 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   }
   const set = <K extends keyof State>(k: K, v: State[K]) => setF((alt) => ({ ...alt, [k]: v }));
 
+  // ── Geführter Schritt-Dialog (Auftrag David 6.6.2026) ─────────────────────
+  // Reine Dramaturgie (§3): die bestehenden Eingabe- und Ergebnis-Blöcke
+  // werden unverändert in nacheinander sichtbare Schritte gehängt; die Engine-
+  // Aufrufe und ihre Eingaben bleiben semantisch identisch. Das Schritt-Gerüst
+  // nutzt denselben Stepper wie die Vorlagen-Wizards (geteilter Baustein, §10).
+  const [schritt, setSchritt] = useState(0);
+
   // ── PLZ-Auflösung (amtliches Ortschaftenverzeichnis, lazy) ────────────────
   // Sämtliche setState-Aufrufe asynchron in der Promise-Kette (Lint-Regel
   // «kein synchrones setState im Effect»). Eindeutiger Kanton/Gemeinde aus
@@ -352,6 +359,42 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
     disclaimer: DISCLAIMER,
   };
 
+  // ── Schritt-Definition der ZIVIL-Strecke ──────────────────────────────────
+  // Die Schritt-Liste ergibt sich aus der Streitsache (Streitwert entfällt bei
+  // Scheidung) und der Instanz (Rechtsmittel hat eine eigene, kürzere Strecke).
+  // SchKG/Straf laufen nicht über diesen Stepper, sondern über ihre eigenen
+  // eingebetteten Komponenten (eigene Engines, §4) – dort gibt es nur den
+  // Einstiegsschritt «Was möchten Sie tun?».
+  type SchrittId = 'was' | 'sache' | 'ort' | 'streitwert' | 'sonderfaelle' | 'ergebnis';
+  const zivil = rechtsweg === 'zivil';
+  const schritte: { id: SchrittId; label: string }[] = !zivil
+    ? [{ id: 'was', label: 'Was möchten Sie tun?' }]
+    : f.instanz === 'rechtsmittel'
+      ? [
+          { id: 'was', label: 'Was möchten Sie tun?' },
+          { id: 'ort', label: 'Kanton' },
+          { id: 'ergebnis', label: 'Fahrplan' },
+        ]
+      : [
+          { id: 'was', label: 'Was möchten Sie tun?' },
+          { id: 'sache', label: 'Worum geht es?' },
+          { id: 'ort', label: 'Örtliche Anknüpfung' },
+          ...(istScheidung ? [] : [{ id: 'streitwert' as SchrittId, label: 'Streitwert' }]),
+          { id: 'sonderfaelle', label: 'Sonderfälle' },
+          { id: 'ergebnis', label: 'Fahrplan' },
+        ];
+  // Index defensiv im gültigen Bereich halten, falls sich die Liste durch eine
+  // Streitsachen-/Instanz-Wahl verkürzt (adjusting state, kein Effect).
+  const maxIndex = schritte.length - 1;
+  if (schritt > maxIndex) setSchritt(maxIndex);
+  const aktiverSchritt = Math.min(schritt, maxIndex);
+  const aktuelleId = schritte[aktiverSchritt].id;
+  const zeige = (id: SchrittId) => aktuelleId === id;
+  // «Weiter» erst zulassen, wenn der jeweilige Schritt schlüssig ist (Streitwert
+  // muss vor dem Verlassen seines Schritts gültig sein – reine UI-Führung, die
+  // Engine validiert ohnehin erneut).
+  const weiterAus = aktuelleId === 'streitwert' && fehler.length > 0;
+
   return (
     <div className="space-y-6">
       <PflichtDisclaimer text={
@@ -362,9 +405,17 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             : DISCLAIMER
       } />
 
-      {/* 1 · Rechtsweg */}
+      {/* Geführter Schritt-Dialog (Auftrag David 6.6.2026): klickbarer Stepper
+          wie bei den Vorlagen-Wizards; je nach Rechtsweg/Instanz andere Strecke. */}
+      <Stepper schritte={schritte} aktiv={aktiverSchritt} onWechsel={setSchritt} />
+
+      {/* SCHRITT «Was möchten Sie tun?» – Rechtsweg + (Zivil) Einleitung/
+          Rechtsmittel-Gabelung. SchKG/Straf binden hier ihre eigene Engine ein. */}
+      {zeige('was') && (
+      <div className="space-y-6">
+      {/* Rechtsweg */}
       <div className="space-y-2">
-        <p className="lc-overline">1 · Rechtsweg</p>
+        <p className="lc-overline">Rechtsweg</p>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
           {RECHTSWEGE.map((w) => (
             <button key={w.code} type="button" disabled={!w.aktiv}
@@ -384,13 +435,17 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           ))}
         </div>
       </div>
+      {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : rechtsweg === 'straf' ? <StrafZustaendigkeitTeil /> : null}
+      </div>
+      )}
 
-      {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : rechtsweg === 'straf' ? <StrafZustaendigkeitTeil /> : <>
+      {rechtsweg === 'schkg' || rechtsweg === 'straf' ? null : <>
 
-      {/* 2 · Eingangs-Gabelung (Anordnung David 6.6.2026): Einleitung vs.
-          Rechtsmittel ZUERST — bestimmt, welche Fragen überhaupt nötig sind. */}
+      {/* «Was möchten Sie tun?», Forts. (Zivil): Eingangs-Gabelung Einleitung
+          vs. Rechtsmittel – bestimmt, welche Fragen überhaupt nötig sind. */}
+      {zeige('was') && (
       <div className="space-y-2">
-        <p className="lc-overline">2 · Was suchen Sie?</p>
+        <p className="lc-overline">Was suchen Sie?</p>
         <SelectionGrid
           className="grid grid-cols-1 sm:grid-cols-2 gap-2"
           items={[
@@ -401,14 +456,15 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           onSelect={(code) => set('instanz', code)}
         />
       </div>
+      )}
 
-      {/* 2b · Angefochtener Entscheid (Rechtsmittel-Umbau 6.6.2026): die
-          rechtlich entscheidenden Weichen — Objekt (Art. 308/319 ZPO),
-          Verfahrensart der Vorinstanz (Fristlänge + Stillstand!) und
-          Vorinstanz-Typ (Art. 75 Abs. 2 BGG). */}
-      {f.instanz === 'rechtsmittel' && (
+      {/* Angefochtener Entscheid (Rechtsmittel-Umbau 6.6.2026): die rechtlich
+          entscheidenden Weichen – Objekt (Art. 308/319 ZPO), Verfahrensart der
+          Vorinstanz (Fristlänge + Stillstand!) und Vorinstanz-Typ (Art. 75
+          Abs. 2 BGG). Bleibt INHALTLICH unverändert, nur im «Was»-Schritt. */}
+      {zeige('was') && f.instanz === 'rechtsmittel' && (
         <div className="space-y-3">
-          <p className="lc-overline">2a · Was wird angefochten?</p>
+          <p className="lc-overline">Was wird angefochten?</p>
           <SelectionGrid
             className="grid grid-cols-1 sm:grid-cols-2 gap-2"
             items={[
@@ -448,9 +504,10 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
         </div>
       )}
 
-      {/* 2 · Streitsache */}
+      {/* SCHRITT «Worum geht es?» – Streitsache + bedingte Unterfälle */}
+      {zeige('sache') && (
       <div className="space-y-2">
-        <p className="lc-overline">3 · Art des Streits</p>
+        <p className="lc-overline">Art des Streits</p>
         <SelectionGrid
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
           items={STREITSACHEN.map((s) => ({ code: s.code, label: s.label, sub: s.sub }))}
@@ -495,10 +552,17 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
         </Field>
       )}
       </div>
+      )}
 
-      {/* 3 · Ort, Streitwert, Instanz */}
+      {/* SCHRITT «Örtliche Anknüpfung» – nur die für die Streitsache relevante
+          Frage (Einleitung: Ort + Kanton; Rechtsmittel: nur Kanton für die
+          obere Instanz). Reine Beschriftung aus ORT_LABEL; die Engine-Regel
+          bleibt unberührt (Art. 10/23/32–34 ZPO). */}
+      {zeige('ort') && (
       <div className="space-y-3">
-        <p className="lc-overline">4 · Wo — und um wie viel geht es?</p>
+        <p className="lc-overline">
+          {f.instanz === 'einleitung' ? 'Wo ist die Sache örtlich anzuknüpfen?' : 'In welchem Kanton wurde entschieden?'}
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {f.instanz === 'einleitung' && (
           <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
@@ -545,19 +609,6 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
             </select>
           </Field>
-          {!istScheidung && (
-            <Field label="Streitwert (CHF)" hint="massgeblich ist das Rechtsbegehren; die Engine berechnet den Streitwert nicht">
-              <div className="space-y-1.5">
-                <BetragsFeld value={f.streitwertRoh} onChange={(v) => set('streitwertRoh', v)} className={inputCls}
-                  placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
-                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={!f.vermoegensrechtlich}
-                    onChange={(e) => set('vermoegensrechtlich', !e.target.checked)} />
-                  nicht vermögensrechtliche Streitigkeit
-                </label>
-              </div>
-            </Field>
-          )}
         </div>
         {gemeindeFremd && (
           <p className="lc-notice-warn text-body-s">
@@ -566,16 +617,39 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           </p>
         )}
       </div>
+      )}
 
-      {/* Sonderfälle eingeklappt (Endkonsumenten-Dramaturgie 6.6.2026):
-          Streitsache + Ort + Streitwert tragen das Routing — Spezial-
-          konstellationen überladen den Erstkontakt nicht mehr. */}
-      {!istScheidung && f.instanz === 'einleitung' && (
-        <details className="lc-card p-4 group">
-          <summary className="lc-overline cursor-pointer list-none flex items-center justify-between">
-            <span>Weitere Angaben — Sonderfälle (Rechtsmittel, Vereinbarungen, Handelsregister, Ausland)</span>
-            <span className="text-ink-500 group-open:rotate-180 transition-transform" aria-hidden>▾</span>
-          </summary>
+      {/* SCHRITT «Streitwert» – nur vermögensrechtlich relevant; bei Scheidung
+          entfällt der Schritt ganz (nicht vermögensrechtlich). */}
+      {zeige('streitwert') && (
+      <div className="space-y-3">
+        <p className="lc-overline">Um wie viel geht es?</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Field label="Streitwert (CHF)" hint="massgeblich ist das Rechtsbegehren; die Engine berechnet den Streitwert nicht">
+            <div className="space-y-1.5">
+              <BetragsFeld value={f.streitwertRoh} onChange={(v) => set('streitwertRoh', v)} className={inputCls}
+                placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
+              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+                <input type="checkbox" checked={!f.vermoegensrechtlich}
+                  onChange={(e) => set('vermoegensrechtlich', !e.target.checked)} />
+                nicht vermögensrechtliche Streitigkeit
+              </label>
+            </div>
+          </Field>
+        </div>
+        <FehlerBox fehler={fehler} />
+      </div>
+      )}
+
+      {/* SCHRITT «Sonderfälle» – die bisher eingeklappte Sektion als optionaler
+          eigener Schritt; Inhalt unverändert (Rechtsmittel-Strecke kennt ihn
+          nicht). */}
+      {zeige('sonderfaelle') && !istScheidung && f.instanz === 'einleitung' && (
+        <div className="lc-card p-4">
+          <p className="lc-overline mb-1">Weitere Angaben – Sonderfälle</p>
+          <p className="text-body-s text-ink-600 mb-3">
+            Optional. Vereinbarungen, Handelsregister-Eintrag, Auslandbezug u. a. – nur ausfüllen, wenn einschlägig.
+          </p>
           <div className="space-y-3 mt-3">
 
           {istGeld && (
@@ -642,16 +716,14 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             </details>
           )}
           </div>
-        </details>
+        </div>
       )}
-
-      <FehlerBox fehler={fehler} />
 
       {/* Rechtsmittel-Fahrplan (Umbau 6.6.2026, Auftrag David): vier Schritte
           statt zweier Textkarten — 1. statthaftes Rechtsmittel · 2. Instanz mit
           Adresse · 3. FRIST konkret aufgelöst (30/10 Tage, Stillstand ja/nein)
           · 4. Weiterzug BGer inkl. eigener Frist, Kognition und Weichen. */}
-      {f.instanz === 'rechtsmittel' && rechtsmittel && (
+      {zeige('ergebnis') && f.instanz === 'rechtsmittel' && rechtsmittel && (
         <div className="lc-reveal space-y-4" aria-live="polite">
           <LiveHeader />
 
@@ -751,7 +823,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           Rechtsmittel-Modus tragen die Rechtsmittel-Karten oben die volle
           Auskunft; die Einleitungs-Blöcke [Verfahrensart/Schlichtung/Stellen-
           Notices/Weichen] würden dort sachfremd leaken) */}
-      {ergebnis && r && f.instanz === 'einleitung' && (
+      {zeige('ergebnis') && ergebnis && r && f.instanz === 'einleitung' && (
         <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
           <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />
@@ -1031,6 +1103,17 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           </div>
         </div>
       )}
+
+      {/* Schritt-Navigation (Muster wie VorlagenWizardRahmen): Zurück immer,
+          Weiter bis zum Fahrplan; «Weiter» bei ungültigem Streitwert gesperrt. */}
+      <div className="flex items-center justify-between pt-2 border-t border-line">
+        <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
+          disabled={aktiverSchritt === 0} className="lc-btn-ghost">← Zurück</button>
+        {aktiverSchritt < maxIndex && (
+          <button type="button" onClick={() => setSchritt((s) => Math.min(maxIndex, s + 1))}
+            disabled={weiterAus} className="lc-btn-primary">Weiter →</button>
+        )}
+      </div>
       </>}
     </div>
   );
