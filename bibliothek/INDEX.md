@@ -53,6 +53,7 @@ bibliothek/
 | [gerichtsbehoerden-kantone.md](behoerden/gerichtsbehoerden-kantone.md) | Master-Liste Gerichte 26 Kantone | 0 Widerlegungen, 8/8 Stichproben; offen nur AR-Hausnr. + TI-Leventina |
 | [gerichte-bund.md](behoerden/gerichte-bund.md) | BGer/BStGer/BVGer/BPatGer | 1 Korrektur (BVGer-PLZ 9023) eingearbeitet |
 | [gog-gerichtsorganisation-kantone.md](behoerden/gog-gerichtsorganisation-kantone.md) | Behörde→GOG-Artikel + kantonale Zivil-Gebührenstaffeln | 15/15 Stichproben bestätigt |
+| [rechtsmittel-spruchkoerper-kantone.md](behoerden/rechtsmittel-spruchkoerper-kantone.md) | Spruchkörper Berufung (Art. 308 ZPO) / Beschwerde (Art. 319 ZPO) je Kanton + BGerR Art. 33/34 (I./II. zivilrechtl. Abt.) — Verdrahtungs-Empfehlung obereInstanzen.ts | **Erstrecherche** (6.6.2026); deterministisch nach Rechtsmittel nur VD (+ ZG-Teil); Rest (B)/(A) ehrlich offen |
 | [schlichtungsbehoerden-kantone.md](behoerden/schlichtungsbehoerden-kantone.md) | Schlichtungsbehörden 26 Kantone | 2 Re-Checks + Schiedsrichter (BL/SH/TI entschieden) |
 | [schlichtungsbehoerden-zh-vollerfassung.md](behoerden/schlichtungsbehoerden-zh-vollerfassung.md) | ZH: 171 FR-Ämter + 12 Miet-Stellen + GlG | Stichproben ✓ — speist die PLZ-Auflösung |
 | [schlichtungsbehoerden-sz-bl-so-zg-sh-lu-vollerfassung.md](behoerden/schlichtungsbehoerden-sz-bl-so-zg-sh-lu-vollerfassung.md) | Vollerfassung SZ/BL/SO/ZG/SH/LU | Konflikte entschieden; SZ teiloffen (JS-Karte) |

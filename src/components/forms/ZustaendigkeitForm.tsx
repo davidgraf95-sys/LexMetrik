@@ -746,10 +746,32 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             {rechtsmittel.kantonal !== 'entfaellt_einzige_instanz' ? (
               f.kanton !== '' ? (
                 <div>
+                  {/* Genauer Spruchkörper (Auftrag David 6.6.2026): nur wo
+                      deterministisch + amtlich belegt (Dossier rechtsmittel-
+                      spruchkoerper-kantone.md) — Rest ehrlich offen (§8). */}
+                  {(() => {
+                    const kammer = rechtsmittel.kantonal === 'beschwerde'
+                      ? (obereInstanz!.kammerBeschwerde ?? obereInstanz!.kammerBerufung)
+                      : rechtsmittel.kantonal === 'berufung'
+                        ? obereInstanz!.kammerBerufung
+                        : undefined; // 'offen' (streitwertabhängig): keine Kammer-Festlegung
+                    return kammer ? (
+                      <p className="text-body-s text-ink-900 font-medium">{kammer}</p>
+                    ) : null;
+                  })()}
                   <p className="text-body-s text-ink-900 whitespace-pre-line">
                     {obereInstanz!.name}{'\n'}{obereInstanz!.strasse}{'\n'}{obereInstanz!.plzOrt}
                   </p>
                   {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1">{obereInstanz!.hinweis}.</p>}
+                  {obereInstanz!.quelleSpruchkoerper && (
+                    <p className="text-xs text-ink-500 mt-1">Spruchkörper: {obereInstanz!.quelleSpruchkoerper} — Erstrecherche, fachliche Abnahme ausstehend.</p>
+                  )}
+                  {!obereInstanz!.kammerBerufung && (
+                    <p className="text-xs text-ink-500 mt-1">
+                      Der konkrete Spruchkörper (Kammer/Abteilung) richtet sich in diesem Kanton nach der
+                      Geschäftsverteilung des Gerichts — die Eingabe an die Gerichtsadresse genügt.
+                    </p>
+                  )}
                   <p className="text-xs text-ink-500 mt-1.5">
                     Quelle: zweifach geprüftes Gerichts-Dossier (Stand 5.6.2026) — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
                   </p>
