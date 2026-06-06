@@ -11,6 +11,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 
@@ -51,22 +53,50 @@ const QUELLEN: { code: TerminQuelle; label: string }[] = [
 const MONATE = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
 
 
+// Permalink (FAHRPLAN-PRAXIS 1.3)
+type MrLink = {
+  art: string; objekt: string; partei: string; zugang: string; kanton: string;
+  quelle: string; monate?: number[]; ohneDez?: boolean; mietbeginn?: string;
+  fristMonate?: string; formular?: boolean; familienwohnung?: boolean;
+  separat?: boolean; zustimmung?: boolean; zaZugang?: string;
+};
+const MR_LINK_SPEC: PermalinkSpec<MrLink & Record<string, unknown>> = {
+  art: { p: 'a', typ: 'str', gueltig: einerVon('ordentlich', 'zahlungsverzug', 'pflichtverletzung', 'wichtige_gruende', 'tod_mieter', 'eigenbedarf', 'konsumgueter') },
+  objekt: { p: 'o', typ: 'str', gueltig: einerVon('wohnung', 'geschaeftsraum', 'unbewegliche_sache', 'moebliertes_zimmer', 'bewegliche_sache') },
+  partei: { p: 'pa', typ: 'str', gueltig: einerVon('vermieter', 'mieter') },
+  zugang: { p: 'z', typ: 'str', gueltig: istISO },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  quelle: { p: 'q', typ: 'str', gueltig: einerVon('vertraglich_monate', 'jedes_monatsende', 'ortsueblich', 'gesetzlich') },
+  monate: { p: 'mo', typ: 'json', gueltig: (v): boolean => Array.isArray(v) && v.length <= 12 && v.every((m) => Number.isInteger(m) && m >= 1 && m <= 12) },
+  ohneDez: { p: 'od', typ: 'bool' },
+  mietbeginn: { p: 'mb', typ: 'str', gueltig: istISO },
+  fristMonate: { p: 'fm', typ: 'str', gueltig: (v) => v.length <= 4 },
+  formular: { p: 'fo', typ: 'bool' },
+  familienwohnung: { p: 'fw', typ: 'bool' },
+  separat: { p: 'se', typ: 'bool' },
+  zustimmung: { p: 'zu', typ: 'bool' },
+  zaZugang: { p: 'zz', typ: 'str', gueltig: istISO },
+};
+
 export function MietrechtForm() {
-  const [art, setArt] = useState<Kuendigungsart>('ordentlich');
-  const [objekt, setObjekt] = useState<Mietobjekt>('wohnung');
-  const [partei, setPartei] = useState<MietPartei>('mieter');
-  const [zugang, setZugang] = useState('2025-06-23');
-  const [kanton, setKanton] = useState<Kanton>('ZH');
-  const [quelle, setQuelle] = useState<TerminQuelle>('ortsueblich');
-  const [monate, setMonate] = useState<number[]>([3, 9]);
-  const [ohneDez, setOhneDez] = useState(true);
-  const [mietbeginn, setMietbeginn] = useState('');
-  const [fristMonate, setFristMonate] = useState('');
-  const [formular, setFormular] = useState(true);
-  const [familienwohnung, setFamilienwohnung] = useState(false);
-  const [separat, setSeparat] = useState(true);
-  const [zustimmung, setZustimmung] = useState(true);
-  const [zaZugang, setZaZugang] = useState('');
+  const [ausLink] = useState<Partial<MrLink>>(() => {
+    try { return permalinkLesen(MR_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
+  const [art, setArt] = useState<Kuendigungsart>((ausLink.art as Kuendigungsart | undefined) ?? 'ordentlich');
+  const [objekt, setObjekt] = useState<Mietobjekt>((ausLink.objekt as Mietobjekt | undefined) ?? 'wohnung');
+  const [partei, setPartei] = useState<MietPartei>((ausLink.partei as MietPartei | undefined) ?? 'mieter');
+  const [zugang, setZugang] = useState(ausLink.zugang ?? '2025-06-23');
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? 'ZH');
+  const [quelle, setQuelle] = useState<TerminQuelle>((ausLink.quelle as TerminQuelle | undefined) ?? 'ortsueblich');
+  const [monate, setMonate] = useState<number[]>(ausLink.monate ?? [3, 9]);
+  const [ohneDez, setOhneDez] = useState(ausLink.ohneDez ?? true);
+  const [mietbeginn, setMietbeginn] = useState(ausLink.mietbeginn ?? '');
+  const [fristMonate, setFristMonate] = useState(ausLink.fristMonate ?? '');
+  const [formular, setFormular] = useState(ausLink.formular ?? true);
+  const [familienwohnung, setFamilienwohnung] = useState(ausLink.familienwohnung ?? false);
+  const [separat, setSeparat] = useState(ausLink.separat ?? true);
+  const [zustimmung, setZustimmung] = useState(ausLink.zustimmung ?? true);
+  const [zaZugang, setZaZugang] = useState(ausLink.zaZugang ?? '');
 
   const istRaum = objekt === 'wohnung' || objekt === 'geschaeftsraum';
   const terminsucheAktiv = art === 'ordentlich' && objekt !== 'bewegliche_sache';
@@ -271,6 +301,11 @@ export function MietrechtForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(MR_LINK_SPEC, {
+              art, objekt, partei, zugang, kanton, quelle, monate, ohneDez,
+              mietbeginn: mietbeginn || undefined, fristMonate: fristMonate || undefined,
+              formular, familienwohnung, separat, zustimmung, zaZugang: zaZugang || undefined,
+            })} />
             <IcsExportButton endISO={ergebnis.endterminISO} titel="Mietende (Kündigungstermin)"
               beschreibung={ergebnis.ergebnis} dateiName="Mietende.ics" />
           </div>

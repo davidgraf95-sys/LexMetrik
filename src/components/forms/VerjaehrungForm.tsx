@@ -14,6 +14,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 
 const VERJ_DISCLAIMER =
@@ -69,19 +71,42 @@ function FristKarte({ label, sub, wert, massgeblich }: { label: string; sub: str
   );
 }
 
+// Permalink (FAHRPLAN-PRAXIS 1.3)
+type VjLink = {
+  regime: string; beginnRelativ: string; beginnAbsolut?: string; stichtag: string;
+  kanton: string; strafbar?: boolean; stillstaende?: Stillstand[];
+  unterbrechungen?: Unterbrechung[]; verzichtAn?: boolean; verzichtDatum?: string; verzichtJahre?: string;
+};
+const VJ_LINK_SPEC: PermalinkSpec<VjLink & Record<string, unknown>> = {
+  regime: { p: 're', typ: 'str', gueltig: einerVon('ordentlich', 'kurz', 'delikt', 'delikt_person', 'vertrag_person', 'bereicherung') },
+  beginnRelativ: { p: 'br', typ: 'str', gueltig: istISO },
+  beginnAbsolut: { p: 'ba', typ: 'str', gueltig: istISO },
+  stichtag: { p: 's', typ: 'str', gueltig: istISO },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  strafbar: { p: 'st', typ: 'bool' },
+  stillstaende: { p: 'si', typ: 'json', gueltig: (v): boolean => Array.isArray(v) && v.length <= 20 && v.every((e) => e && typeof e === 'object' && istISO((e as Stillstand).von ?? '') && istISO((e as Stillstand).bis ?? '')) },
+  unterbrechungen: { p: 'un', typ: 'json', gueltig: (v): boolean => Array.isArray(v) && v.length <= 20 && v.every((e) => e && typeof e === 'object' && ['anerkennung', 'urkunde_urteil', 'betreibungsakt', 'klage_schlichtung'].includes((e as Unterbrechung).typ ?? '') && istISO((e as Unterbrechung).datum ?? '')) },
+  verzichtAn: { p: 'va', typ: 'bool' },
+  verzichtDatum: { p: 'vd', typ: 'str', gueltig: istISO },
+  verzichtJahre: { p: 'vj', typ: 'str', gueltig: (v) => /^\d{1,2}$/.test(v) },
+};
+
 export function VerjaehrungForm() {
+  const [ausLink] = useState<Partial<VjLink>>(() => {
+    try { return permalinkLesen(VJ_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
   const heute = format(new Date(), 'yyyy-MM-dd');
-  const [regime, setRegime] = useState<VerjaehrungRegime>('ordentlich');
-  const [beginnRelativ, setBeginnRelativ] = useState('2024-03-01');
-  const [beginnAbsolut, setBeginnAbsolut] = useState('');
-  const [stichtag, setStichtag] = useState(heute);
-  const [kanton, setKanton] = useState<Kanton>('ZH');
-  const [strafbar, setStrafbar] = useState(false);
-  const [stillstaende, setStillstaende] = useState<Stillstand[]>([]);
-  const [unterbrechungen, setUnterbrechungen] = useState<Unterbrechung[]>([]);
-  const [verzichtAn, setVerzichtAn] = useState(false);
-  const [verzichtDatum, setVerzichtDatum] = useState('');
-  const [verzichtJahre, setVerzichtJahre] = useState('');
+  const [regime, setRegime] = useState<VerjaehrungRegime>((ausLink.regime as VerjaehrungRegime | undefined) ?? 'ordentlich');
+  const [beginnRelativ, setBeginnRelativ] = useState(ausLink.beginnRelativ ?? '2024-03-01');
+  const [beginnAbsolut, setBeginnAbsolut] = useState(ausLink.beginnAbsolut ?? '');
+  const [stichtag, setStichtag] = useState(ausLink.stichtag ?? heute);
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? 'ZH');
+  const [strafbar, setStrafbar] = useState(ausLink.strafbar ?? false);
+  const [stillstaende, setStillstaende] = useState<Stillstand[]>(ausLink.stillstaende ?? []);
+  const [unterbrechungen, setUnterbrechungen] = useState<Unterbrechung[]>(ausLink.unterbrechungen ?? []);
+  const [verzichtAn, setVerzichtAn] = useState(ausLink.verzichtAn ?? false);
+  const [verzichtDatum, setVerzichtDatum] = useState(ausLink.verzichtDatum ?? '');
+  const [verzichtJahre, setVerzichtJahre] = useState(ausLink.verzichtJahre ?? '');
 
   // UX-Programm B7 (5.6.2026): Presets für den schnellen Einstieg — reine
   // UI-Zustände, keine Engine-Logik. Daten bewusst fix (nachvollziehbar).
@@ -301,6 +326,11 @@ export function VerjaehrungForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(VJ_LINK_SPEC, {
+              regime, beginnRelativ, beginnAbsolut: beginnAbsolut || undefined, stichtag, kanton,
+              strafbar, stillstaende, unterbrechungen, verzichtAn,
+              verzichtDatum: verzichtDatum || undefined, verzichtJahre: verzichtJahre || undefined,
+            })} />
             <IcsExportButton endISO={ergebnis.verjaehrungISO} titel="Verjährungseintritt"
               beschreibung={ergebnis.ergebnis} dateiName="Verjaehrung.ics" />
           </div>

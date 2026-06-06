@@ -10,6 +10,8 @@ import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { VerzugszinsTimeline } from '../VerzugszinsTimeline';
 
@@ -57,10 +59,38 @@ function heuteISO(): string {
 }
 
 
+// Permalink (FAHRPLAN-PRAXIS 1.3): Input + Ereignis-Zeilen + Zinsforderung.
+type VzLink = VerzugszinsInput & { rows?: EreignisRow[]; zinsforderung?: boolean } & Record<string, unknown>;
+const VZ_LINK_SPEC: PermalinkSpec<VzLink> = {
+  kapital: { p: 'c', typ: 'num', gueltig: (n) => n > 0 },
+  verzugsbeginn: { p: 'vb', typ: 'str', gueltig: istISO },
+  beginnTyp: { p: 'bt', typ: 'str', gueltig: einerVon('mahnung', 'verfalltag', 'klage') },
+  stichtag: { p: 's', typ: 'str', gueltig: istISO },
+  zinssatzProzent: { p: 'z', typ: 'num', gueltig: (n) => n >= 0 && n <= 100 },
+  satzGrund: { p: 'sg', typ: 'str', gueltig: einerVon('gesetzlich', 'vertraglich', 'kaufmaennisch') },
+  methode: { p: 'm', typ: 'str', gueltig: einerVon('act365', 'act360', '30E360') },
+  rows: {
+    p: 'r', typ: 'json',
+    gueltig: (v): boolean => Array.isArray(v) && v.length <= 50 && v.every((e) =>
+      e && typeof e === 'object'
+      && ['teilzahlung', 'satzaenderung'].includes((e as { typ?: string }).typ ?? '')
+      && istISO((e as { datum?: string }).datum ?? '')
+      && Number.isFinite((e as { wert?: number }).wert)),
+  },
+  zinsforderung: { p: 'zf', typ: 'bool' },
+};
+
 export function VerzugszinsForm() {
-  const [form, setForm] = useState<VerzugszinsInput>(DEFAULTS);
-  const [rows, setRows] = useState<EreignisRow[]>([]);
-  const [zinsforderung, setZinsforderung] = useState(false);
+  const [ausLink] = useState<Partial<VzLink>>(() => {
+    try { return permalinkLesen(VZ_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
+  const [form, setForm] = useState<VerzugszinsInput>(() => {
+    const rest = { ...ausLink };
+    delete rest.rows; delete rest.zinsforderung;
+    return { ...DEFAULTS, ...rest };
+  });
+  const [rows, setRows] = useState<EreignisRow[]>(ausLink.rows ?? []);
+  const [zinsforderung, setZinsforderung] = useState(ausLink.zinsforderung ?? false);
 
   const set = <K extends keyof VerzugszinsInput>(k: K, v: VerzugszinsInput[K]) => setForm((f) => ({ ...f, [k]: v }));
   const addRow = (typ: EreignisRow['typ']) => setRows((r) => [...r, { typ, datum: form.verzugsbeginn, wert: typ === 'teilzahlung' ? 1000 : 5 }]);
@@ -218,7 +248,10 @@ export function VerzugszinsForm() {
           )}
           <ErgebnisAnzeige titel="Verzugszins (Art. 104 OR)" ergebnis={ergebnis} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(VZ_LINK_SPEC, { ...form, rows, zinsforderung } as VzLink)} />
+          </div>
         </div>
       )}
     </div>

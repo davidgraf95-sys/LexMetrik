@@ -11,6 +11,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, einerVon, type PermalinkSpec } from '../../lib/permalink';
 
 const ERB_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der gesetzlichen Erbteile, Pflichtteile und der verfügbaren Quote ' +
@@ -43,21 +45,48 @@ const ELTERN_OPTIONEN: { code: ElternStatus; label: string }[] = [
 ];
 
 
+// Permalink (FAHRPLAN-PRAXIS 1.3)
+type BetraegeLink = { eigengut: string; vorschlagE: string; vorschlagU: string; gesamtgut: string; vermoegen: string; direkt: string };
+type EtLink = {
+  todesdatum: string; zivilstand: string; scheidung?: boolean; scheidung472?: boolean;
+  kinderLebend?: number; staemme?: { enkel: number }[]; vater?: string; mutter?: string;
+  dritteParentel?: boolean; gueterrechtAn?: boolean; gueterstand?: string; betraege?: BetraegeLink;
+};
+const BETRAG_FELDER = ['eigengut', 'vorschlagE', 'vorschlagU', 'gesamtgut', 'vermoegen', 'direkt'] as const;
+const ET_LINK_SPEC: PermalinkSpec<EtLink & Record<string, unknown>> = {
+  todesdatum: { p: 'td', typ: 'str', gueltig: istISO },
+  zivilstand: { p: 'zs', typ: 'str', gueltig: einerVon('verheiratet', 'eingetragene_partnerschaft', 'ledig') },
+  scheidung: { p: 'sc', typ: 'bool' },
+  scheidung472: { p: 's4', typ: 'bool' },
+  kinderLebend: { p: 'kl', typ: 'num', gueltig: (n) => Number.isInteger(n) && n >= 0 && n <= 30 },
+  staemme: { p: 'st', typ: 'json', gueltig: (v): boolean => Array.isArray(v) && v.length <= 30 && v.every((e) => e && Number.isInteger((e as { enkel?: number }).enkel) && ((e as { enkel: number }).enkel) >= 0) },
+  vater: { p: 'va', typ: 'str', gueltig: einerVon('lebt', 'vorverstorben_mit', 'vorverstorben_ohne', 'keine_angabe') },
+  mutter: { p: 'mu', typ: 'str', gueltig: einerVon('lebt', 'vorverstorben_mit', 'vorverstorben_ohne', 'keine_angabe') },
+  dritteParentel: { p: 'dp', typ: 'bool' },
+  gueterrechtAn: { p: 'ga', typ: 'bool' },
+  gueterstand: { p: 'gs', typ: 'str', gueltig: einerVon('errungenschaftsbeteiligung', 'guetertrennung', 'guetergemeinschaft') },
+  betraege: { p: 'be', typ: 'json', gueltig: (v): boolean => !!v && typeof v === 'object' && !Array.isArray(v) && Object.keys(v).every((k) => (BETRAG_FELDER as readonly string[]).includes(k)) && Object.values(v).every((x) => typeof x === 'string' && x.length <= 16) },
+};
+
 export function ErbteilungForm() {
-  const [todesdatum, setTodesdatum] = useState('2025-06-01');
-  const [zivilstand, setZivilstand] = useState<Zivilstand>('verheiratet');
-  const [scheidung, setScheidung] = useState(false);
-  const [scheidung472, setScheidung472] = useState(false);
-  const [kinderLebend, setKinderLebend] = useState(2);
-  const [staemme, setStaemme] = useState<{ enkel: number }[]>([]);
-  const [vater, setVater] = useState<ElternStatus>('keine_angabe');
-  const [mutter, setMutter] = useState<ElternStatus>('keine_angabe');
-  const [dritteParentel, setDritteParentel] = useState(false);
-  const [gueterrechtAn, setGueterrechtAn] = useState(false);
-  const [gueterstand, setGueterstand] = useState<Gueterstand>('errungenschaftsbeteiligung');
-  const [betraege, setBetraege] = useState<{ eigengut: string; vorschlagE: string; vorschlagU: string; gesamtgut: string; vermoegen: string; direkt: string }>(
-    { eigengut: '', vorschlagE: '', vorschlagU: '', gesamtgut: '', vermoegen: '', direkt: '' },
-  );
+  const [ausLink] = useState<Partial<EtLink>>(() => {
+    try { return permalinkLesen(ET_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
+  const [todesdatum, setTodesdatum] = useState(ausLink.todesdatum ?? '2025-06-01');
+  const [zivilstand, setZivilstand] = useState<Zivilstand>((ausLink.zivilstand as Zivilstand | undefined) ?? 'verheiratet');
+  const [scheidung, setScheidung] = useState(ausLink.scheidung ?? false);
+  const [scheidung472, setScheidung472] = useState(ausLink.scheidung472 ?? false);
+  const [kinderLebend, setKinderLebend] = useState(ausLink.kinderLebend ?? 2);
+  const [staemme, setStaemme] = useState<{ enkel: number }[]>(ausLink.staemme ?? []);
+  const [vater, setVater] = useState<ElternStatus>((ausLink.vater as ElternStatus | undefined) ?? 'keine_angabe');
+  const [mutter, setMutter] = useState<ElternStatus>((ausLink.mutter as ElternStatus | undefined) ?? 'keine_angabe');
+  const [dritteParentel, setDritteParentel] = useState(ausLink.dritteParentel ?? false);
+  const [gueterrechtAn, setGueterrechtAn] = useState(ausLink.gueterrechtAn ?? false);
+  const [gueterstand, setGueterstand] = useState<Gueterstand>((ausLink.gueterstand as Gueterstand | undefined) ?? 'errungenschaftsbeteiligung');
+  const [betraege, setBetraege] = useState<{ eigengut: string; vorschlagE: string; vorschlagU: string; gesamtgut: string; vermoegen: string; direkt: string }>(() => ({
+    eigengut: '', vorschlagE: '', vorschlagU: '', gesamtgut: '', vermoegen: '', direkt: '',
+    ...(ausLink.betraege ?? {}),
+  }));
 
   const elternteil = (s: ElternStatus) =>
     s === 'keine_angabe' ? undefined : { lebt: s === 'lebt', stammNachkommen: s === 'vorverstorben_mit' };
@@ -335,7 +364,13 @@ export function ErbteilungForm() {
 
           <ErgebnisAnzeige titel="Erbteilung & Pflichtteil (Art. 457 ff., 462, 470 ff. ZGB)" ergebnis={ergebnis} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(ET_LINK_SPEC, {
+              todesdatum, zivilstand, scheidung, scheidung472, kinderLebend, staemme,
+              vater, mutter, dritteParentel, gueterrechtAn, gueterstand, betraege,
+            })} />
+          </div>
         </div>
       )}
     </div>

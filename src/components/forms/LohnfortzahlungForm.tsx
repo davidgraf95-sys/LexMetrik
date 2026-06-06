@@ -9,6 +9,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { FristenKalender } from '../FristenKalender';
 
 const KANTONE: { code: Kanton; name: string }[] = [
@@ -73,8 +75,24 @@ const BEISPIELE: { label: string; form: Partial<LohnfortzahlungInput> }[] = [
   { label: 'KTG vorhanden', form: { ktgGleichwertigVorhanden: true, kanton: 'ZH' } },
 ];
 
+// Permalink (FAHRPLAN-PRAXIS 1.3)
+const LF_LINK_SPEC: PermalinkSpec<LohnfortzahlungInput & Record<string, unknown>> = {
+  vertragsbeginn: { p: 'vb', typ: 'str', gueltig: istISO },
+  verhinderungBeginn: { p: 'a', typ: 'str', gueltig: istISO },
+  verhinderungsgrund: { p: 'g', typ: 'str', gueltig: einerVon('krankheit', 'unfall', 'schwangerschaft', 'dienst', 'amt', 'uebrige') },
+  verhinderungEnde: { p: 've', typ: 'str', gueltig: istISO },
+  arbeitsunfaehigkeitProzent: { p: 'au', typ: 'num', gueltig: (n) => n >= 1 && n <= 100 },
+  pensumProzent: { p: 'pp', typ: 'num', gueltig: (n) => n >= 1 && n <= 100 },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  ktgGleichwertigVorhanden: { p: 'kt', typ: 'bool' },
+  monatslohnBrutto: { p: 'ml', typ: 'num', gueltig: (n) => n >= 0 },
+};
+
 export function LohnfortzahlungForm() {
-  const [form, setForm] = useState<LohnfortzahlungInput>(DEFAULTS);
+  const [form, setForm] = useState<LohnfortzahlungInput>(() => {
+    try { return { ...DEFAULTS, ...permalinkLesen(LF_LINK_SPEC, window.location.search) }; }
+    catch { return DEFAULTS; }
+  });
   const [erweitert, setErweitert] = useState(false);
 
   const set = <K extends keyof LohnfortzahlungInput>(k: K, v: LohnfortzahlungInput[K]) =>
@@ -295,7 +313,10 @@ export function LohnfortzahlungForm() {
           )}
           <ErgebnisAnzeige titel="Lohnfortzahlung (Art. 324a OR)" ergebnis={ergebnis} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
-          <PdfExportButton config={pdfConfig} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(LF_LINK_SPEC, form as LohnfortzahlungInput & Record<string, unknown>)} />
+          </div>
         </div>
       )}
     </div>

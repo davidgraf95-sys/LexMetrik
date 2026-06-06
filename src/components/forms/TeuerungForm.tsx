@@ -11,6 +11,8 @@ import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 
 // ─── LIK-Teuerungsrechner – UI ──────────────────────────────────────────────
@@ -50,12 +52,26 @@ function MonatJahr({ wert, onChange, label, hint }: { wert: string; onChange: (v
   );
 }
 
+// Permalink (FAHRPLAN-PRAXIS 1.3)
+const MONAT_RX = /^\d{4}-\d{2}$/;
+type TeuLink = { modus: string; betrag?: string; von?: string; bis?: string; rundung?: string };
+const TEU_LINK_SPEC: PermalinkSpec<TeuLink & Record<string, unknown>> = {
+  modus: { p: 'm', typ: 'str', gueltig: einerVon('generisch', 'indexmiete', 'unterhalt') },
+  betrag: { p: 'b', typ: 'str', gueltig: (v) => v.length <= 16 },
+  von: { p: 'v', typ: 'str', gueltig: (v) => MONAT_RX.test(v) },
+  bis: { p: 'bi', typ: 'str', gueltig: (v) => MONAT_RX.test(v) },
+  rundung: { p: 'r', typ: 'str', gueltig: einerVon('0.01', '0.05', '1') },
+};
+
 export function TeuerungForm() {
-  const [modus, setModus] = useState<TeuerungModus>('generisch');
-  const [betrag, setBetrag] = useState('1000');
-  const [von, setVon] = useState('2022-12');
-  const [bis, setBis] = useState(LIK_LETZTER_MONAT); // Default: letzter publizierter Monat
-  const [rundung, setRundung] = useState<TeuerungRundung | ''>('');
+  const [ausLink] = useState<Partial<TeuLink>>(() => {
+    try { return permalinkLesen(TEU_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
+  const [modus, setModus] = useState<TeuerungModus>((ausLink.modus as TeuerungModus | undefined) ?? 'generisch');
+  const [betrag, setBetrag] = useState(ausLink.betrag ?? '1000');
+  const [von, setVon] = useState(ausLink.von ?? '2022-12');
+  const [bis, setBis] = useState(ausLink.bis ?? LIK_LETZTER_MONAT); // Default: letzter publizierter Monat
+  const [rundung, setRundung] = useState<TeuerungRundung | ''>((ausLink.rundung as TeuerungRundung | undefined) ?? '');
 
   let ergebnis: TeuerungErgebnis | null = null;
   let fehler: string | null = null;
@@ -149,7 +165,10 @@ export function TeuerungForm() {
           <ErgebnisAnzeige titel={`LIK-Indexierung (Basis ${monatLabel(ergebnis.basis)} = 100)`} ergebnis={ergebnis} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(TEU_LINK_SPEC, { modus, betrag, von, bis, rundung: rundung || undefined })} />
+          </div>
             <p className="text-micro text-ink-500">
               Quelle: {LIK_QUELLE} · {LIK_STAND} · freie Nutzung, Quellenangabe Pflicht (OPEN-BY)
               {basisAuto(von, bis) && ` · Basis automatisch gewählt`}

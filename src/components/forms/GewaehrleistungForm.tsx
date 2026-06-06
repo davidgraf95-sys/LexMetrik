@@ -15,6 +15,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 
 const GW_DISCLAIMER =
@@ -47,23 +49,51 @@ const OBJEKTE: Record<GwVertragstyp, { code: GwObjekt; label: string }[]> = {
 
 const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 
+// Permalink (FAHRPLAN-PRAXIS 1.3)
+type GwLink = {
+  typ: string; vertragsdatum: string; objekt: string; uebergabe: string;
+  eigentumserwerb?: string; mangelTyp: string; entdeckung?: string; ruegeAm?: string;
+  arglist?: boolean; konsument?: boolean; gebraucht?: boolean; sia?: boolean;
+  vereinbart?: string; kanton: string; stichtag: string;
+};
+const GW_LINK_SPEC: PermalinkSpec<GwLink & Record<string, unknown>> = {
+  typ: { p: 'ty', typ: 'str', gueltig: einerVon('fahrniskauf', 'werkvertrag', 'grundstueckkauf') },
+  vertragsdatum: { p: 'vd', typ: 'str', gueltig: istISO },
+  objekt: { p: 'ob', typ: 'str', gueltig: einerVon('beweglich', 'integriert', 'unbeweglich') },
+  uebergabe: { p: 'ue', typ: 'str', gueltig: istISO },
+  eigentumserwerb: { p: 'ee', typ: 'str', gueltig: istISO },
+  mangelTyp: { p: 'mt', typ: 'str', gueltig: einerVon('offen', 'versteckt') },
+  entdeckung: { p: 'en', typ: 'str', gueltig: istISO },
+  ruegeAm: { p: 'ra', typ: 'str', gueltig: istISO },
+  arglist: { p: 'ar', typ: 'bool' },
+  konsument: { p: 'ko', typ: 'bool' },
+  gebraucht: { p: 'ge', typ: 'bool' },
+  sia: { p: 'sa', typ: 'bool' },
+  vereinbart: { p: 've', typ: 'str', gueltig: (v) => v.length <= 6 },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  stichtag: { p: 's', typ: 'str', gueltig: istISO },
+};
+
 export function GewaehrleistungForm() {
+  const [ausLink] = useState<Partial<GwLink>>(() => {
+    try { return permalinkLesen(GW_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
   const heute = format(new Date(), 'yyyy-MM-dd');
-  const [typ, setTyp] = useState<GwVertragstyp>('fahrniskauf');
-  const [vertragsdatum, setVertragsdatum] = useState('2026-02-01');
-  const [objekt, setObjekt] = useState<GwObjekt>('beweglich');
-  const [uebergabe, setUebergabe] = useState('2026-03-02');
-  const [eigentumserwerb, setEigentumserwerb] = useState('');
-  const [mangelTyp, setMangelTyp] = useState<GwMangelTyp>('offen');
-  const [entdeckung, setEntdeckung] = useState('');
-  const [ruegeAm, setRuegeAm] = useState('');
-  const [arglist, setArglist] = useState(false);
-  const [konsument, setKonsument] = useState(false);
-  const [gebraucht, setGebraucht] = useState(false);
-  const [sia, setSia] = useState(false);
-  const [vereinbart, setVereinbart] = useState('');
-  const [kanton, setKanton] = useState<Kanton>('ZH');
-  const [stichtag, setStichtag] = useState(heute);
+  const [typ, setTyp] = useState<GwVertragstyp>((ausLink.typ as GwVertragstyp | undefined) ?? 'fahrniskauf');
+  const [vertragsdatum, setVertragsdatum] = useState(ausLink.vertragsdatum ?? '2026-02-01');
+  const [objekt, setObjekt] = useState<GwObjekt>((ausLink.objekt as GwObjekt | undefined) ?? 'beweglich');
+  const [uebergabe, setUebergabe] = useState(ausLink.uebergabe ?? '2026-03-02');
+  const [eigentumserwerb, setEigentumserwerb] = useState(ausLink.eigentumserwerb ?? '');
+  const [mangelTyp, setMangelTyp] = useState<GwMangelTyp>((ausLink.mangelTyp as GwMangelTyp | undefined) ?? 'offen');
+  const [entdeckung, setEntdeckung] = useState(ausLink.entdeckung ?? '');
+  const [ruegeAm, setRuegeAm] = useState(ausLink.ruegeAm ?? '');
+  const [arglist, setArglist] = useState(ausLink.arglist ?? false);
+  const [konsument, setKonsument] = useState(ausLink.konsument ?? false);
+  const [gebraucht, setGebraucht] = useState(ausLink.gebraucht ?? false);
+  const [sia, setSia] = useState(ausLink.sia ?? false);
+  const [vereinbart, setVereinbart] = useState(ausLink.vereinbart ?? '');
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? 'ZH');
+  const [stichtag, setStichtag] = useState(ausLink.stichtag ?? heute);
 
   const istGrundstueck = typ === 'grundstueckkauf';
   const istWerk = typ === 'werkvertrag';
@@ -271,6 +301,11 @@ export function GewaehrleistungForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(GW_LINK_SPEC, {
+              typ, vertragsdatum, objekt, uebergabe, eigentumserwerb: eigentumserwerb || undefined,
+              mangelTyp, entdeckung: entdeckung || undefined, ruegeAm: ruegeAm || undefined,
+              arglist, konsument, gebraucht, sia, vereinbart: vereinbart || undefined, kanton, stichtag,
+            })} />
             <IcsExportButton endISO={ergebnis.ruege.endeISO} titel="Rügefrist-Ende (Mängelrüge)"
               beschreibung={ergebnis.ergebnis} dateiName="Ruegefrist.ics" />
             <IcsExportButton endISO={ergebnis.verjaehrung.endeISO} titel="Verjährung Mängelrechte"

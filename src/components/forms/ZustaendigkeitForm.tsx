@@ -6,6 +6,8 @@ import { BetragsFeld } from '../BetragsFeld';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
@@ -164,12 +166,53 @@ const DEFAULTS: State = {
   rmFamilienSummarsache: false,
 };
 
+// Permalink (FAHRPLAN-PRAXIS 1.3): kompletter Zivil-Fall inkl. Rechtsmittel-
+// Weichen; der Rechtsweg (zivil/schkg/straf) läuft über den bestehenden Hash.
+const ZUST_LINK_SPEC: PermalinkSpec<State & { schritt?: number } & Record<string, unknown>> = {
+  streitsache: { p: 'ss', typ: 'str', gueltig: einerVon('geldforderung', 'miete_wohn_geschaeft', 'arbeit', 'scheidung', 'erbrecht', 'delikt', 'persoenlichkeit', 'gesellschaft', 'ip_wettbewerb') },
+  vermoegensrechtlich: { p: 'vr', typ: 'bool' },
+  streitwertRoh: { p: 'sw', typ: 'str', gueltig: (v) => v.length <= 16 },
+  mieteUnterfall: { p: 'mu', typ: 'str', gueltig: einerVon('kuendigungsschutz', 'erstreckung', 'mietzins_anfechtung', 'hinterlegung', 'sonstige') },
+  glgBetroffen: { p: 'gl', typ: 'bool' },
+  konsumentenvertrag: { p: 'kv', typ: 'bool' },
+  klaegeristGeschuetzt: { p: 'kg', typ: 'bool' },
+  geschaeftlicheTaetigkeit: { p: 'gt', typ: 'bool' },
+  beklagteImHR: { p: 'bh', typ: 'bool' },
+  klaegerImHR: { p: 'kh', typ: 'bool' },
+  beklagteAuslandOderUnbekannt: { p: 'ba', typ: 'bool' },
+  widerklageOderGerichtlicheFrist: { p: 'wf', typ: 'bool' },
+  ausVertrag: { p: 'av', typ: 'bool' },
+  deliktUnterfall: { p: 'du', typ: 'str', gueltig: einerVon('allgemein', 'verkehrsunfall', 'ungerechtfertigte_massnahme') },
+  persoenlichkeitUnterfall: { p: 'pu', typ: 'str', gueltig: einerVon('verletzung', 'gegendarstellung', 'datenschutz', 'gewaltschutz') },
+  ipUnterfall: { p: 'iu', typ: 'str', gueltig: einerVon('ip_kartell_firma', 'uwg', 'klage_gegen_bund') },
+  bundKlagerecht: { p: 'bk', typ: 'bool' },
+  avgVerleih: { p: 'al', typ: 'bool' },
+  gerichtsstandsvereinbarung: { p: 'gv', typ: 'bool' },
+  gemeinde: { p: 'g', typ: 'str', gueltig: (v) => v.length <= 60 },
+  plz: { p: 'pl', typ: 'str', gueltig: (v) => /^\d{4}$/.test(v) },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  instanz: { p: 'in', typ: 'str', gueltig: einerVon('einleitung', 'rechtsmittel') },
+  rmObjekt: { p: 'ro', typ: 'str', gueltig: einerVon('endentscheid', 'zwischenentscheid', 'vorsorgliche_massnahme', 'prozessleitende_verfuegung') },
+  rmVerfahren: { p: 'rv', typ: 'str', gueltig: einerVon('ordentlich_vereinfacht', 'summarisch') },
+  rmVorinstanz: { p: 'ri', typ: 'str', gueltig: einerVon('erstinstanz', 'handelsgericht', 'direktklage_oberes_gericht') },
+  rmFamilienSummarsache: { p: 'rf', typ: 'bool' },
+  schritt: { p: 'sch', typ: 'num', gueltig: (n) => Number.isInteger(n) && n >= 0 && n <= 8 },
+};
+
 export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   onRechtswegChange?: (w: Rechtsweg) => void;
   /** Vorauswahl aus dem URL-Hash der Katalog-Split-Karten (#schkg/#straf). */
   rechtswegVorwahl?: Rechtsweg;
 } = {}) {
-  const [f, setF] = useState<State>(DEFAULTS);
+  const [ausLink] = useState<Partial<State> & { schritt?: number }>(() => {
+    try { return permalinkLesen(ZUST_LINK_SPEC, window.location.search) as Partial<State> & { schritt?: number }; }
+    catch { return {}; }
+  });
+  const [f, setF] = useState<State>(() => {
+    const rest = { ...ausLink };
+    delete rest.schritt;
+    return { ...DEFAULTS, ...rest };
+  });
   // Rechtsweg-Wahl (5.6.2026): Zivil + SchKG aktiv; Straf/Verwaltung folgen.
   const [rechtsweg, setRechtswegState] = useState<Rechtsweg>(rechtswegVorwahl ?? 'zivil');
   // Hero-Synchronisation (Fix 6.6.2026): Der Seitenkopf zeigt die Normen des
@@ -190,7 +233,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   // werden unverändert in nacheinander sichtbare Schritte gehängt; die Engine-
   // Aufrufe und ihre Eingaben bleiben semantisch identisch. Das Schritt-Gerüst
   // nutzt denselben Stepper wie die Vorlagen-Wizards (geteilter Baustein, §10).
-  const [schritt, setSchritt] = useState(0);
+  const [schritt, setSchritt] = useState(ausLink.schritt ?? 0);
 
   // ── PLZ-Auflösung (amtliches Ortschaftenverzeichnis, lazy) ────────────────
   // Sämtliche setState-Aufrufe asynchron in der Promise-Kette (Lint-Regel
@@ -1182,6 +1225,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(ZUST_LINK_SPEC, { ...f, schritt })} />
             <p className="text-body-s text-ink-500">
               Schwellen: vereinfacht ≤ CHF {ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} ·
               Entscheidvorschlag ≤ {ZPO_SCHWELLEN.ENTSCHEIDVORSCHLAG.toLocaleString('de-CH')} ·

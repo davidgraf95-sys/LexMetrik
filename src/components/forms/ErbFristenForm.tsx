@@ -9,6 +9,8 @@ import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen, istISO, istKanton, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 
 // ─── Erb-Fristen-Rechner (Darstellung) ───────────────────────────────────────
@@ -23,11 +25,23 @@ const ERB_DISCLAIMER =
   'höchstrichterlich nicht fixiert; im Grenzfall anwaltlich prüfen. Zuständige Behörde und kantonales ' +
   'Verfahren (Ausschlagung/Inventar) sind kantonal geregelt.';
 
+// Permalink (FAHRPLAN-PRAXIS 1.3)
+type EfLink = { key: string; trigger: string; verschieben?: boolean; kanton?: string };
+const EF_LINK_SPEC: PermalinkSpec<EfLink & Record<string, unknown>> = {
+  key: { p: 'p', typ: 'str', gueltig: (v) => ERB_FRISTEN.some((x) => x.key === v) },
+  trigger: { p: 't', typ: 'str', gueltig: istISO },
+  verschieben: { p: 'w', typ: 'bool' },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+};
+
 export function ErbFristenForm() {
-  const [key, setKey] = useState<ErbFristKey>('ausschlagung_gesetzlich');
-  const [trigger, setTrigger] = useState('2026-03-10');
-  const [verschieben, setVerschieben] = useState(true);
-  const [kanton, setKanton] = useState<Kanton>('ZH');
+  const [ausLink] = useState<Partial<EfLink>>(() => {
+    try { return permalinkLesen(EF_LINK_SPEC, window.location.search); } catch { return {}; }
+  });
+  const [key, setKey] = useState<ErbFristKey>((ausLink.key as ErbFristKey | undefined) ?? 'ausschlagung_gesetzlich');
+  const [trigger, setTrigger] = useState(ausLink.trigger ?? '2026-03-10');
+  const [verschieben, setVerschieben] = useState(ausLink.verschieben ?? true);
+  const [kanton, setKanton] = useState<Kanton>((ausLink.kanton as Kanton | undefined) ?? 'ZH');
 
   const preset = ERB_FRISTEN.find((p) => p.key === key)!;
   const erbgang = ERB_FRISTEN.filter((p) => p.gruppe === 'erbgang');
@@ -124,6 +138,7 @@ export function ErbFristenForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
+            <LinkTeilenButton query={() => permalinkKodieren(EF_LINK_SPEC, { key, trigger, verschieben, kanton })} />
             <IcsExportButton endISO={ergebnis.resultat.endDatumISO} titel={`Fristende – ${preset.label}`}
               beschreibung={ergebnis.ergebnis} dateiName="Erb-Frist.ics" />
           </div>
