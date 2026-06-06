@@ -72,9 +72,13 @@ Wortlaut stand — einschliesslich der heiklen Punkte:
 - **Wirkung:** Engine erwähnt Abs. 4 lit. a (Z. 342) und lit. b (Z. 319–320),
   lit. c nirgends. Keine falsche Aussage, aber eine seit 1.1.2025 bestehende
   HG-Option wird bei Auslandsbezug nicht als Weiche offengelegt (§8).
-- **Empfehlung:** optionale Weiche bei `beklagteAuslandOderUnbekannt` + HG-Fähigkeit;
-  Entscheid David (Scope: Engine klammert internationale Sachverhalte via Art.-2-
-  Warnung ohnehin aus — lit.-c-Weiche wäre genau dort sinnvoll).
+- **Status: UMGESETZT 6.6.2026 (Freigabe David, Engine-Prüfauftrag):** Weiche
+  bei HG-fähiger Streitsache + geschäftlicher Tätigkeit + Auslandsbezug +
+  SW ≥ 100'000 (`ZPO_SCHWELLEN.HG_INTERNATIONAL_MIN`, eigene Konstante neben
+  `DIREKTKLAGE_MIN` — gleicher Betrag, verschiedene Rechtsregeln, §1).
+  Zustimmung/Auslands-Detail als nicht subsumierbar offengelegt (§8); ob
+  Abs. 4 lit. c die Abs.-2-lit.-d-Schutzmaterien erfasst, wird bewusst NICHT
+  behauptet (Weiche nur geldforderung/gesellschaft). 8 Testproben.
 
 ### B-3 · KOSMETISCH (keine Code-Änderung nötig)
 - Art. 9 II: Engine-Paraphrase mit anderer Satzstellung («Die Parteien können …»
@@ -104,6 +108,9 @@ Wortlaut stand — einschliesslich der heiklen Punkte:
   6 II, 145): **zweifach geprüft** (Erstrecherche + adversarialer 3-0-Durchgang).
 - Blöcke örtliche Gerichtsstände / Art.-5-Katalog / BGG / BGE 133 III 393:
   **einfach belegt** (je ein Verifikations-Agent am amtlichen Filestore-HTML).
-- Befund B-1: **durch David freigegeben und umgesetzt** (6.6.2026, s. oben).
-- Befund B-2 (Art. 6 Abs. 4 lit. c): **offen** — eigener, deklarierter Schritt;
-  keine Code-Änderung. `verified`-Flags der Engine bleiben unverändert (§7/§13).
+- Befunde B-1 und B-2: **durch David freigegeben und umgesetzt** (6.6.2026,
+  s. oben). `verified`-Flags der Engine bleiben unverändert (§7/§13).
+- Engine-Nachprüfung 6.6.2026 (nach Parallel-Fixes M-1/M-2/M-3): alle drei
+  konsistent mit dem Verifikationsbestand (M-2 zitiert Abs. 4 lit. b verbatim
+  wie hier bestätigt); kosmetische B-3-Punkte bewusst ohne Code-Änderung
+  (Paraphrasen, keine Zitat-Behauptungen).

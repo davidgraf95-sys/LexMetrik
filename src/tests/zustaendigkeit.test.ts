@@ -363,6 +363,25 @@ describe('Zuständigkeit — Praxis-Umbau: Kostenfreiheit (Art. 113 Abs. 2) + Fa
     expect(gewalt.schlichtung.obligatorisch).toBe(false);
     expect(gewalt.schlichtung.kostenlos).toBe(false);
   });
+  it('Art. 6 Abs. 4 lit. c (internationale Handelsstreitigkeit, Befund B-2): Weiche bei geschäftl. Tätigkeit + Auslandsbezug + SW ≥ 100k — auch OHNE HR-Eintrag; Gegenproben SW/Ausland/Tätigkeit/Streitsache', () => {
+    const litC = (over: Record<string, unknown> = {}) => bestimmeZustaendigkeit({
+      streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 150_000,
+      geschaeftlicheTaetigkeit: true, beklagteAuslandOderUnbekannt: true, ...over,
+    }).weichen.some((w) => w.includes('Art. 6 Abs. 4 lit. c'));
+    expect(litC()).toBe(true);                                          // Kernfall — kein HR-Eintrag nötig
+    expect(litC({ streitwertCHF: 100_000 })).toBe(true);                // Schwelle «mindestens» einschliesslich
+    expect(litC({ streitwertCHF: 99_999 })).toBe(false);                // unter der Ziff.-2-Schwelle
+    expect(litC({ beklagteAuslandOderUnbekannt: false })).toBe(false);  // kein Auslandsbezug
+    expect(litC({ geschaeftlicheTaetigkeit: false })).toBe(false);      // Ziff. 1 fehlt
+    expect(litC({ streitsache: 'arbeit' })).toBe(false);                // Schutzmaterie: bewusst keine Behauptung (§1)
+    // Abs.-2-Weiche bleibt unabhängig bestehen (beide nebeneinander möglich):
+    const beide = bestimmeZustaendigkeit({
+      streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 150_000,
+      geschaeftlicheTaetigkeit: true, beklagteAuslandOderUnbekannt: true, beklagteImHR: true, klaegerImHR: true,
+    });
+    expect(beide.weichen.some((w) => w.includes('Art. 6 ZPO') && w.includes('handelsrechtliche Streitigkeit'))).toBe(true);
+    expect(beide.weichen.some((w) => w.includes('Art. 6 Abs. 4 lit. c'))).toBe(true);
+  });
   it('Fahrplan: Schlichtungsweg hat 4 Schritte inkl. Klagebewilligungs-Frist; Direktklage 3; Scheidung eigener Pfad', async () => {
     const { fahrplanSchritte } = await import('../lib/zustaendigkeitFahrplan');
     const sgWeg = fahrplanSchritte(bestimmeZustaendigkeit(geld()), { vorlageVerfuegbar: true, stelleBekannt: true });

@@ -50,6 +50,10 @@ export const ZPO_SCHWELLEN = {
   VERZICHT_GEMEINSAM: 100_000,// Art. 199 Abs. 1 ZPO
   HANDELSGERICHT_MIN: 30_000, // Art. 6 Abs. 2 lit. b ZPO
   DIREKTKLAGE_MIN: 100_000,   // Art. 8 Abs. 1 ZPO
+  // Art. 6 Abs. 4 lit. c Ziff. 2 ZPO (eingefügt per 1.1.2025) — bewusst
+  // eigene Konstante neben DIREKTKLAGE_MIN: gleicher Betrag, aber rechtlich
+  // verschiedene Schwellen (§1 — keine Fusion zweier Rechtsregeln).
+  HG_INTERNATIONAL_MIN: 100_000,
 } as const;
 
 // Rechtsweg-Rubriken (oberste Ebene der UI, Entscheid David 5.6.2026):
@@ -344,6 +348,25 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
   if (input.streitsache === 'gesellschaft' && !hgWeiche) {
     hgWeiche = true;
     weichen.push('Handelsgericht prüfen: Für Streitigkeiten aus dem Recht der Handelsgesellschaften und Genossenschaften KÖNNEN die Kantone das Handelsgericht zuständig erklären (Art. 6 Abs. 4 lit. b ZPO) — anders als nach Abs. 2 ohne Handelsregister- und Streitwert-Voraussetzung; ob der Kanton davon Gebrauch gemacht hat, regelt das kantonale Recht (nur HG-Kantone, real ZH/BE/AG/SG).');
+  }
+  // B-2-Fix (Verifikations-Dossier 6.6.2026, bibliothek/normen/
+  // zustaendigkeit-engine-verifikation.md; Freigabe David): Art. 6 Abs. 4
+  // lit. c ZPO (eingefügt per 1.1.2025, Wortlaut am Cache verifiziert) —
+  // internationale Handelsstreitigkeit. Kantone können das HG zuständig
+  // erklären, wenn kumulativ: Ziff. 1 geschäftliche Tätigkeit mind. einer
+  // Partei · Ziff. 2 Streitwert ≥ 100 000 · Ziff. 3 Zustimmung der Parteien ·
+  // Ziff. 4 mind. eine Partei mit Wohnsitz/gewöhnlichem Aufenthalt/Sitz im
+  // Ausland. Zustimmung (künftige Vereinbarung) und die Auslands-Eigenschaft
+  // (das Eingabefeld erfasst «Ausland ODER unbekannt»; der Auslandsbezug der
+  // KLAGENDEN Partei wird gar nicht abgefragt) sind nicht subsumierbar →
+  // offengelegte WEICHE, keine stille Subsumtion (§8). Bewusst nur für die
+  // HG-fähigen Streitsachen: ob Abs. 4 lit. c auch die nach Abs. 2 lit. d
+  // ausgeschlossenen Schutzmaterien (Arbeit/Miete) erfasst, ist ungeklärt
+  // und wird nicht behauptet (§1).
+  if (hgFaehig && input.geschaeftlicheTaetigkeit && input.beklagteAuslandOderUnbekannt
+    && sw !== null && sw >= ZPO_SCHWELLEN.HG_INTERNATIONAL_MIN) {
+    hgWeiche = true;
+    weichen.push(`Internationale Handelsstreitigkeit: Die Kantone können das Handelsgericht AUCH hierfür zuständig erklären (Art. 6 Abs. 4 lit. c ZPO, seit 1.1.2025), wenn kumulativ die geschäftliche Tätigkeit mindestens einer Partei betroffen ist, der Streitwert mindestens CHF ${ZPO_SCHWELLEN.HG_INTERNATIONAL_MIN.toLocaleString('de-CH')} beträgt, die Parteien ZUSTIMMEN und mindestens eine Partei ihren Wohnsitz, gewöhnlichen Aufenthalt oder Sitz im AUSLAND hat (blosse Unbekanntheit des Aufenthalts genügt nicht). Ein Handelsregister-Eintrag ist — anders als nach Abs. 2 — nicht vorausgesetzt; ob der Kanton davon Gebrauch gemacht hat, regelt das kantonale Recht (nur HG-Kantone, real ZH/BE/AG/SG).`);
   }
   // Naht-Fix 6.6.2026 (Tiefencheck David): Bei der SCHEIDUNG feuerte die
   // Art.-8-Weiche, wenn (atypisch) vermögensrechtlich+Streitwert gesetzt waren —
