@@ -65,7 +65,7 @@ sind QUERSCHNITTE — also §10-Rahmenarbeit, kein Einzelbau.
 ## Status
 
 - [x] 1.1 .ics überall (7 Rechner) — erledigt 6.6.2026
-- [ ] 1.2 Aktenzeichen → PDF (13 Formen)
+- [x] 1.2 Aktenzeichen → PDF (14 Formen) — erledigt 6.6.2026
 - [ ] 1.3 Permalink (12 Rechner)
 - [ ] 2.1 Prefill-Brücken a/b/c
 - [ ] 2.2 Begründungs-Absatz (geteilte Komponente + 13 Texte)

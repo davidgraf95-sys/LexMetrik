@@ -35,9 +35,7 @@ export function Pro() {
           <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
             Zuständigkeit und Rechtsmittel über drei Rechtswege klären – Zivilprozess,
             Betreibung, Strafverfahren; Verfahrens-, Verjährungs-, Arbeits- und Mietfristen
-            berechnen; Verträge, Kündigungen und Eingaben aufsetzen. Jeder Rechenweg
-            offengelegt, jede Norm exakt verlinkt, jedes Ergebnis als PDF-Rechenbericht
-            exportierbar.
+            berechnen; Verträge, Kündigungen und Eingaben aufsetzen.
           </p>
           {/* Primär: sofort Verfügbares; Katalog/Gebiete sekundär (Phase 5).
               Die Ehrlichkeit «ungeprüft» trägt das orange Badge AUF der Karte. */}
