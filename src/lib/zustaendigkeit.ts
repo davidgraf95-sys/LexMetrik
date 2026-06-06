@@ -722,12 +722,21 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
     if (objekt === 'prozessleitende_verfuegung') {
       tage = 10;
       text = 'Beschwerdefrist 10 Tage (Art. 321 Abs. 2 ZPO: prozessleitende Verfügungen), sofern das Gesetz nichts anderes bestimmt — ab Zustellung.';
-    } else if (verfahren === 'summarisch' && familienSummarsache) {
+    } else if (verfahren === 'summarisch' && familienSummarsache && kantonal !== 'beschwerde') {
+      // K-1-Fix Bug-Check 6.6.2026: Art. 314 Abs. 2 ZPO steht im BERUFUNGS-
+      // Abschnitt («…beträgt die Frist zur Einreichung der Berufung…», Wortlaut
+      // am Fedlex-Cache verifiziert) und verlängert NUR die Berufungsfrist.
+      // Die Beschwerdefrist im summarischen Verfahren bleibt bei 10 Tagen
+      // (Art. 321 Abs. 2 ZPO, keine Familien-Ausnahme) — vorher behauptete die
+      // Engine hier fälschlich 30 Tage (Fristverpassungs-Risiko).
       tage = 30;
-      text = 'Frist 30 Tage TROTZ summarischen Verfahrens: familienrechtliche Streitigkeit nach Art. 271/276/302/305 ZPO (Art. 314 Abs. 2, in Kraft seit 1.1.2025; Anschlussberufung zulässig) — ab Zustellung des begründeten Entscheids.';
+      text = 'Berufungsfrist 30 Tage TROTZ summarischen Verfahrens: familienrechtliche Streitigkeit nach Art. 271/276/302/305 ZPO (Art. 314 Abs. 2, in Kraft seit 1.1.2025; Anschlussberufung zulässig) — ab Zustellung des begründeten Entscheids.';
     } else if (verfahren === 'summarisch') {
       tage = 10;
       text = `Frist 10 Tage: Entscheid aus dem summarischen Verfahren (${kantonal === 'beschwerde' ? 'Art. 321 Abs. 2' : 'Art. 314 Abs. 1'} ZPO; Anschlussberufung unzulässig) — ab Zustellung des begründeten Entscheids.`;
+      if (familienSummarsache && kantonal === 'beschwerde') {
+        text += ' Die 30-Tage-Ausnahme für familienrechtliche Streitigkeiten (Art. 314 Abs. 2 ZPO) gilt NUR für die Berufung — für die Beschwerde bleibt es bei 10 Tagen.';
+      }
     } else if (kantonal === 'offen') {
       tage = 30;
       text = 'Frist 30 Tage ab Zustellung des begründeten Entscheids — für Berufung wie Beschwerde gleich (Art. 311 Abs. 1 / Art. 321 Abs. 1 ZPO).';

@@ -453,6 +453,18 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
     expect(r.kantonalFrist!.stillstand).toBe(false);
     expect(r.kantonalFrist!.text).toContain('Art. 314 Abs. 2');
   });
+  it('familienrechtliche Summarsache mit Streitwert unter 10\'000 (BESCHWERDE): 10 Tage, Art. 314 Abs. 2 verlängert NICHT (K-1-Fix Bug-Check 6.6.2026)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    // Erreichbar z.B. bei vermögensrechtlicher Unterhalts-Abänderung < CHF 10'000:
+    // Art. 314 Abs. 2 ZPO steht im Berufungs-Abschnitt; die Beschwerdefrist
+    // richtet sich nach Art. 321 Abs. 2 ZPO (10 Tage, keine Familien-Ausnahme).
+    const r = bestimmeRechtsmittel(basis(5_000, { rmVerfahren: 'summarisch', rmFamilienSummarsache: true }));
+    expect(r.kantonal).toBe('beschwerde');
+    expect(r.kantonalFrist!.tage).toBe(10);
+    expect(r.kantonalFrist!.text).toContain('Art. 321 Abs. 2');
+    expect(r.kantonalFrist!.text).toContain('NUR für die Berufung');
+    expect(r.kantonalFrist!.stillstand).toBe(false);
+  });
   it('Handelsgericht als Vorinstanz: kein kantonales Rechtsmittel, BGer streitwertUNabhängig (Art. 75 Abs. 2 lit. b/74 Abs. 2 lit. b BGG)', async () => {
     const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
     const r = bestimmeRechtsmittel(basis(5_000, { rmVorinstanz: 'handelsgericht' }));
