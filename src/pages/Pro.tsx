@@ -33,9 +33,11 @@ export function Pro() {
             Der vollständige Katalog für die anwaltliche Praxis.
           </h1>
           <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
-            Verfahrens- und Rechtsmittelfristen, Verjährung, Betreibung und Konkurs, Arbeits-
-            und Mietrecht – dazu Vertrags- und Eingabe-Vorlagen. Jeder Rechenweg offengelegt,
-            jede Norm exakt verlinkt, exportierbar als PDF-Rechenbericht.
+            Zuständigkeit und Rechtsmittel über drei Rechtswege klären – Zivilprozess,
+            Betreibung, Strafverfahren; Verfahrens-, Verjährungs-, Arbeits- und Mietfristen
+            berechnen; Verträge, Kündigungen und Eingaben aufsetzen. Jeder Rechenweg
+            offengelegt, jede Norm exakt verlinkt, jedes Ergebnis als PDF-Rechenbericht
+            exportierbar.
           </p>
           {/* Primär: sofort Verfügbares; Katalog/Gebiete sekundär (Phase 5).
               Die Ehrlichkeit «ungeprüft» trägt das orange Badge AUF der Karte. */}
