@@ -62,3 +62,27 @@ describe('PLZ-Kette: Regressionsschutz bestehender Pfade', () => {
     expect(namensKandidaten('Küsnacht (ZH)', 'ZH')).toContain('Küsnacht');
   });
 });
+
+describe('PLZ-Audit-Fix 6.6.2026 — Adressenanteil & Hauptgemeinde (Befund 4052)', () => {
+  it('4052: Basel (BS) ist Hauptgemeinde (97.7 %), Münchenstein (BL) Randgebiet (2.3 %)', async () => {
+    const { plzAufloesen, hauptTreffer } = await import('../data/plz/plzAufloesung');
+    const t = (await plzAufloesen('4052'))!;
+    expect(t[0]).toEqual({ gemeinde: 'Basel', kanton: 'BS', anteilProzent: 97.7 });
+    expect(t.some((x) => x.gemeinde === 'Münchenstein' && x.kanton === 'BL')).toBe(true);
+    const haupt = hauptTreffer(t);
+    expect(haupt?.gemeinde).toBe('Basel');
+    expect(haupt?.kanton).toBe('BS');
+  });
+  it('echt mehrdeutige PLZ ohne 50-%-Dominanz bleibt ohne Hauptgemeinde (z. B. 1410)', async () => {
+    const { plzAufloesen, hauptTreffer } = await import('../data/plz/plzAufloesung');
+    const t = (await plzAufloesen('1410'))!; // Montanaire VD 100 % + Prévondavaux FR 100 % (zwei Ortschaften)
+    expect(hauptTreffer(t)).toBeNull();
+  });
+  it('eindeutige PLZ: ein Treffer mit 100 % (8001 Zürich)', async () => {
+    const { plzAufloesen, hauptTreffer } = await import('../data/plz/plzAufloesung');
+    const t = (await plzAufloesen('8001'))!;
+    expect(t).toHaveLength(1);
+    expect(t[0].anteilProzent).toBe(100);
+    expect(hauptTreffer(t)?.kanton).toBe('ZH');
+  });
+});

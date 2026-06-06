@@ -20,7 +20,7 @@ import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { kostenFuer } from '../../data/zustaendigkeitKosten';
 import { ERLASS_LINKS } from '../../data/erlassLinks';
 import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
-import { plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
+import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
@@ -173,10 +173,19 @@ export function ZustaendigkeitForm() {
         if (!treffer || treffer.length === 0) return;
         const kantone = [...new Set(treffer.map((t) => t.kanton))];
         const gemeinden = [...new Set(treffer.map((t) => t.gemeinde))];
+        // PLZ-Audit-Fix 6.6.2026 (Beispiel 4052 Basel 97.7 % / Münchenstein
+        // 2.3 %): Bei Randgebiets-Überlappungen wird die amtliche HAUPT-
+        // Gemeinde (einziger Treffer ≥ 50 % Adressenanteil) vorausgefüllt;
+        // die Randgemeinde bleibt im Hinweis wählbar (keine Heuristik).
+        const haupt = hauptTreffer(treffer);
         setF((alt) => ({
           ...alt,
-          ...(kantone.length === 1 && alt.kanton !== kantone[0] ? { kanton: kantone[0] } : {}),
-          ...(gemeinden.length === 1 && alt.gemeinde.trim() === '' ? { gemeinde: gemeinden[0] } : {}),
+          ...(kantone.length === 1 && alt.kanton !== kantone[0]
+            ? { kanton: kantone[0] }
+            : haupt && alt.kanton === '' ? { kanton: haupt.kanton } : {}),
+          ...(gemeinden.length === 1 && alt.gemeinde.trim() === ''
+            ? { gemeinde: gemeinden[0] }
+            : haupt && alt.gemeinde.trim() === '' ? { gemeinde: haupt.gemeinde } : {}),
         }));
       })
       .catch(() => { if (aktiv) setPlzTreffer(null); });
@@ -430,6 +439,19 @@ export function ZustaendigkeitForm() {
               {plzTreffer && plzTreffer.length > 0 && (() => {
                 const kantone = [...new Set(plzTreffer.map((t) => t.kanton))];
                 const gemeinden = [...new Set(plzTreffer.map((t) => t.gemeinde))];
+                const haupt = hauptTreffer(plzTreffer);
+                // Randgebiets-Fall (z. B. 4052): Hauptgemeinde anzeigen, die
+                // Splitter-Gemeinden mit ihrem amtlichen Adressenanteil nur als
+                // Ausnahme-Hinweis — statt einer pauschalen Mehrkantons-Rückfrage.
+                if (haupt && (kantone.length > 1 || gemeinden.length > 1)) {
+                  const rand = plzTreffer.filter((t) => t !== haupt);
+                  return (
+                    <p className="text-xs text-ink-500">
+                      PLZ {f.plz}: {haupt.gemeinde} ({haupt.kanton}, {haupt.anteilProzent} % der Adressen)
+                      <span> — Randgebiete: {rand.slice(0, 3).map((t) => `${t.gemeinde} (${t.kanton}, ${t.anteilProzent} %)`).join(', ')}{rand.length > 3 ? ` +${rand.length - 3}` : ''}; nur wählen, falls die Adresse dort liegt.</span>
+                    </p>
+                  );
+                }
                 return (
                   <p className="text-xs text-ink-500">
                     PLZ {f.plz}: {gemeinden.slice(0, 4).join(', ')}{gemeinden.length > 4 ? ` +${gemeinden.length - 4}` : ''} ({kantone.join('/')})

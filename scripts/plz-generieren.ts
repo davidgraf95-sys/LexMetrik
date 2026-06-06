@@ -20,20 +20,33 @@ const DOSSIER = 'bibliothek/behoerden/schlichtungsbehoerden-zh-vollerfassung.md'
 // ── 1 · PLZ-Verzeichnis ─────────────────────────────────────────────────────
 const roh = readFileSync(CSV, 'utf-8').replace(/^\uFEFF/, '');
 const zeilen = roh.split('\n').slice(1).filter((z) => z.trim() !== '');
-// PLZ → eindeutige (Gemeinde, Kanton)-Paare
-const proPlz = new Map<string, Map<string, [string, string]>>();
+// PLZ-Audit-Fix 6.6.2026 (Befund David, Beispiel 4052): Das CSV führt je
+// Zeile den amtlichen ADRESSENANTEIL (Spalte 7 — «Basel 97.713 %» vs.
+// «Münchenstein 2.287 %»). Wir übernehmen ihn (gerundet, 1 Dezimale) als
+// drittes Tupel-Element, damit die UI Randgebiets-Überlappungen von der
+// Hauptgemeinde unterscheiden kann — amtliche Quelle, KEINE Heuristik.
+// Bei mehreren Zusatzziffer-Zeilen derselben (PLZ, Gemeinde) zählt der
+// höchste Anteil.
+// PLZ → eindeutige (Gemeinde, Kanton, AnteilProzent)-Tripel
+const proPlz = new Map<string, Map<string, [string, string, number]>>();
 for (const z of zeilen) {
   const t = z.split(';');
   const plz = t[1]?.trim();
   const gemeinde = t[4]?.trim();
   const kanton = t[6]?.trim();
+  const anteilRoh = Number.parseFloat((t[7] ?? '').replace('%', '').trim());
   if (!/^\d{4}$/.test(plz) || !gemeinde || !/^[A-Z]{2}$/.test(kanton)) continue;
   if (!proPlz.has(plz)) proPlz.set(plz, new Map());
-  proPlz.get(plz)!.set(`${gemeinde}|${kanton}`, [gemeinde, kanton]);
+  const key = `${gemeinde}|${kanton}`;
+  const anteil = Number.isFinite(anteilRoh) ? Math.round(anteilRoh * 10) / 10 : 0;
+  const bisher = proPlz.get(plz)!.get(key);
+  if (!bisher || anteil > bisher[2]) proPlz.get(plz)!.set(key, [gemeinde, kanton, anteil]);
 }
-const plzObj: Record<string, [string, string][]> = {};
+const plzObj: Record<string, [string, string, number][]> = {};
 for (const plz of [...proPlz.keys()].sort()) {
-  plzObj[plz] = [...proPlz.get(plz)!.values()].sort((a, b) => a[0].localeCompare(b[0], 'de'));
+  // Sortierung: höchster Adressenanteil zuerst, dann alphabetisch (stabil).
+  plzObj[plz] = [...proPlz.get(plz)!.values()]
+    .sort((a, b) => b[2] - a[2] || a[0].localeCompare(b[0], 'de'));
 }
 mkdirSync('src/data/plz', { recursive: true });
 writeFileSync('src/data/plz/plzVerzeichnis.json', JSON.stringify(plzObj));

@@ -85,7 +85,8 @@ describe('schlichtungAufloesung — Typ-Routing und GlG-Fallback', () => {
 describe('PLZ-Auflösung (amtliches Ortschaftenverzeichnis) + ZH-Amt', () => {
   it('PLZ → Gemeinde/Kanton: eindeutig, mehrgemeindig und unbekannt', async () => {
     const { plzAufloesen } = await import('../data/plz/plzAufloesung');
-    expect(await plzAufloesen('4051')).toEqual([{ gemeinde: 'Basel', kanton: 'BS' }]);
+    // Format-Erweiterung 6.6.2026 (PLZ-Audit): + amtlicher Adressenanteil.
+    expect(await plzAufloesen('4051')).toEqual([{ gemeinde: 'Basel', kanton: 'BS', anteilProzent: 100 }]);
     const t8134 = await plzAufloesen('8134');
     expect(t8134!.map((x) => x.gemeinde)).toContain('Adliswil');
     expect(await plzAufloesen('0000')).toBeNull();
