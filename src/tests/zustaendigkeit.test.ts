@@ -543,3 +543,31 @@ describe('Naht-Fix 6.6.2026 — Scheidung × (atypisch) vermögensrechtlich', ()
     expect(g.weichen.some((w) => w.includes('Art. 8 ZPO'))).toBe(true);
   });
 });
+
+describe('Tiefencheck-Fix 6.6.2026 — behoerdeTyp nur bei obligatorischer Schlichtung', () => {
+  it('GlG × Scheidung / Miete × Widerklage → behoerdeTyp ordentlich (keine Behörde ohne Schlichtung)', () => {
+    const s = bestimmeZustaendigkeit({ streitsache: 'scheidung', vermoegensrechtlich: false, streitwertCHF: null, glgBetroffen: true });
+    expect(s.schlichtung.obligatorisch).toBe(false);
+    expect(s.schlichtung.behoerdeTyp).toBe('ordentlich');
+    const m = bestimmeZustaendigkeit({ streitsache: 'miete_wohn_geschaeft', vermoegensrechtlich: true, streitwertCHF: 5_000, mieteUnterfall: 'kuendigungsschutz', widerklageOderGerichtlicheFrist: true });
+    expect(m.schlichtung.behoerdeTyp).toBe('ordentlich');
+    // Regressionsschutz: mit obligatorischer Schlichtung bleibt es paritätisch.
+    const p = bestimmeZustaendigkeit({ streitsache: 'miete_wohn_geschaeft', vermoegensrechtlich: true, streitwertCHF: 5_000, mieteUnterfall: 'kuendigungsschutz' });
+    expect(p.schlichtung.behoerdeTyp).toBe('paritaetisch_miete');
+  });
+});
+
+describe('Art.-114-Spiegelung 6.6.2026 — Kostenfreiheit Entscheidverfahren (lit. a/c/g)', () => {
+  it('GlG → lit. a; Arbeit beidseits der 30k-Schwelle → lit. c; DSG → lit. g; Geldforderung → keine', () => {
+    const glg = bestimmeZustaendigkeit({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 5_000, glgBetroffen: true });
+    expect(glg.warnungen.some((w) => w.includes('Art. 114 lit. a'))).toBe(true);
+    const a1 = bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 30_000 });
+    expect(a1.warnungen.some((w) => w.includes('Art. 114 lit. c'))).toBe(true);
+    const a2 = bestimmeZustaendigkeit({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 30_001 });
+    expect(a2.warnungen.some((w) => w.includes('Art. 114 lit. c'))).toBe(false);
+    const dsg = bestimmeZustaendigkeit({ streitsache: 'persoenlichkeit', vermoegensrechtlich: false, streitwertCHF: null, persoenlichkeitUnterfall: 'datenschutz' });
+    expect(dsg.warnungen.some((w) => w.includes('Art. 114 lit. g'))).toBe(true);
+    const g = bestimmeZustaendigkeit({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 5_000 });
+    expect(g.warnungen.some((w) => w.includes('Art. 114'))).toBe(false);
+  });
+});

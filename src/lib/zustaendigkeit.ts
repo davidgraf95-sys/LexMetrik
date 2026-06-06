@@ -375,10 +375,15 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
     weichen.push('Einseitiger Verzicht der klagenden Partei möglich (beklagte Partei im Ausland/unbekannt oder Streit nach Gleichstellungsgesetz, Art. 199 Abs. 2 ZPO).');
   }
 
-  // Schlichtungsbehörde-Typ (Art. 200 ZPO)
-  const behoerdeTyp: SchlichtungsbehoerdeTyp = istMiete
-    ? 'paritaetisch_miete'
-    : input.glgBetroffen ? 'paritaetisch_glg' : 'ordentlich';
+  // Schlichtungsbehörde-Typ (Art. 200 ZPO) — Tiefencheck-Fix 6.6.2026:
+  // ohne obligatorische Schlichtung gibt es keine Schlichtungsbehörde; vorher
+  // trug das Ergebnisobjekt in 686 Raster-Fällen einen paritätischen Typ trotz
+  // entfallender Schlichtung (nicht nutzersichtbar, aber in sich widersprüchlich).
+  const behoerdeTyp: SchlichtungsbehoerdeTyp = !obligatorisch
+    ? 'ordentlich'
+    : istMiete
+      ? 'paritaetisch_miete'
+      : input.glgBetroffen ? 'paritaetisch_glg' : 'ordentlich';
 
   // Kostenfreiheit der SCHLICHTUNG (Art. 113 Abs. 2 ZPO; Praxis-Ausbau
   // 5.6.2026). Nur die hier abgebildeten Katalog-Fälle; lit. abis (Gewalt)
@@ -479,7 +484,23 @@ export function bestimmeZustaendigkeit(input: ZustaendigkeitInput): Zustaendigke
     warnungen.push('AUSLANDSBEZUG: Die örtlichen ZPO-Gerichtsstände gelten nur im Binnenverhältnis — bei internationalen Sachverhalten bestimmen Staatsverträge (insb. LugÜ) und das IPRG die Zuständigkeit (Art. 2 ZPO). Dieses Ergebnis ist dann NICHT massgeblich.');
   }
   if (istGewaltschutz) {
-    warnungen.push('Im Entscheidverfahren werden keine Gerichtskosten gesprochen (Art. 114 lit. f ZPO); die Parteientschädigung bleibt vorbehalten.');
+    warnungen.push('Im Entscheidverfahren werden keine Gerichtskosten gesprochen (Art. 114 lit. f ZPO); die Parteientschädigung bleibt vorbehalten. Der unterliegenden Partei können die Kosten auferlegt werden, wenn gegen sie ein Verbot nach Art. 28b ZGB oder eine elektronische Überwachung nach Art. 28c ZGB angeordnet wird (Art. 115 Abs. 2 ZPO).');
+  }
+  // Art.-114-Spiegelung (Auftrag David 6.6.2026, Wortlaut am Cache verifiziert):
+  // Die Kostenfreiheit des ENTSCHEIDverfahrens galt bisher nur für den
+  // Gewaltschutz (lit. f) — lit. a (GlG), lit. c (Arbeit/AVG bis 30 000) und
+  // lit. g (DSG) werden jetzt ebenfalls ausgewiesen. (lit. b/d/e — BehiG,
+  // MitwG, KVG-Zusatz — sind als Streitsachen nicht abgebildet.)
+  {
+    const istDatenschutz = input.streitsache === 'persoenlichkeit' && input.persoenlichkeitUnterfall === 'datenschutz';
+    const e114 = input.glgBetroffen
+      ? 'Streitigkeit nach dem Gleichstellungsgesetz (Art. 114 lit. a ZPO)'
+      : input.streitsache === 'arbeit' && sw !== null && sw <= ZPO_SCHWELLEN.VEREINFACHT
+        ? `arbeitsrechtliche Streitigkeit bis CHF ${ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} (Art. 114 lit. c ZPO)`
+        : istDatenschutz ? 'Streitigkeit nach dem Datenschutzgesetz (Art. 114 lit. g ZPO)' : null;
+    if (e114) {
+      warnungen.push(`Im ENTSCHEIDVERFAHREN werden keine Gerichtskosten gesprochen: ${e114}. Vorbehalten bleibt die Kostenauflage bei bös- oder mutwilliger Prozessführung (Art. 115 Abs. 1 ZPO); die Parteientschädigung richtet sich nach Art. 106 ZPO.`);
+    }
   }
   if (input.streitsache === 'delikt' && (input.deliktUnterfall ?? 'allgemein') === 'allgemein') {
     warnungen.push('Spezialforen gehen vor: Motorfahrzeug-/Fahrradunfälle (Art. 38), ungerechtfertigte vorsorgliche Massnahmen (Art. 37), Nuklearschäden (Art. 38a — zwingend am Ereigniskanton); Adhäsionsklagen im Strafverfahren bleiben dem Strafgericht vorbehalten (Art. 39 ZPO).');
