@@ -18,7 +18,19 @@ Leck-Suche stand, 0 npm-audit-Schwachstellen, 0× `any`, Initial-Load 87 kB gzip
 schweren Chunks lazy, Status-Modell ehrlich (0× «geprüft» vergeben), §2-Determinismus
 repo-weit bestätigt. Die Befunde unten sind klar lokalisiert und fixbar.
 
-## OFFENER BEFUNDE-BACKLOG (priorisiert)
+> **NACHTRAG 6.6.2026 vormittags — Backlog abgearbeitet** (Commits `4d49d22`,
+> `ba4a69f`, `3f8e531`, `9f2922a`; 633 Tests grün, Sweep/Zitate-Prüfer sauber):
+> **Gefixt:** B1–B10 vollständig · alle NIEDRIG-Norm-Anker (Art. 241 ZGB,
+> Art. 19 Abs. 2 VMWG — am Cache verifiziert, nicht Abs. 3!, Art. 102 Abs. 2
+> statt 108, Etiketten, Kommentare) · tote Exporte · FehlerBox ·
+> verified→adresseVerifiziert · html2canvas-Stub · Coverage-Top-Lücken
+> (amt/zustellfiktion/Jahresfrist×Stillstand/Warnpfade/Tilgungs-Randfall).
+> **Bewusst offen:** noUncheckedIndexedAccess (eigener deklarierter Schritt) ·
+> Vorlagen-Render-Golden-Tests + 5 PDF-Domains (B11-Rest) · Prefetch-on-intent ·
+> Arbeitsvertrag-normalisieren · Prozess-Punkte (JStPO-Cache, StPO-Aktualstand,
+> Dienstjahr-Stichtag = fachliche Entscheidung David, SG-GKV 30.6.).
+
+## BEFUNDE-BACKLOG (Stand Audit-Nacht; Fix-Status siehe Nachtrag oben)
 
 ### 🔴 HOCH
 
