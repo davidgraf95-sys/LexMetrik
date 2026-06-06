@@ -493,9 +493,18 @@ const KARTEN: Record<string, CalculatorCard> = {
   streitwert: {
     id: 'streitwert', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
-    title: 'Streitwertberechnung',
-    description: 'Ermittlung des Streitwerts als Grundlage für Kosten und Verfahrensart.',
-    status: 'geplant', norms: [],
+    title: 'Streitwert (ZPO)',
+    description: 'Streitwert aus den Rechtsbegehren nach Art. 91–94a ZPO: Kapitalisierung wiederkehrender Leistungen (× 20, Leibrenten-Barwert als Weiche), Klagenhäufung mit Ausschliesslichkeits-Schalter, Widerklage mit getrennter Kosten-Bemessungsgrundlage und Teilklage-Sonderregel (Revision 2025). Ermessens-Konstellationen (nicht beziffert, Verbandsklage) werden offengelegt, nie geschätzt.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 91 ZPO', url: fedlexUrl('ZPO', '91'), verified: false },
+      { label: 'Art. 92 ZPO', url: fedlexUrl('ZPO', '92'), verified: false },
+      { label: 'Art. 93 ZPO', url: fedlexUrl('ZPO', '93'), verified: false },
+      { label: 'Art. 94 ZPO', url: fedlexUrl('ZPO', '94'), verified: false },
+    ],
+    href: '/rechner/streitwert',
+    related: ['zustaendigkeit', 'zpo-fristen', 'kostenvorschuss'],
+    keywords: ['Streitwert', 'Rechtsbegehren', 'Kapitalisierung', 'Widerklage', 'Teilklage', 'Klagenhäufung', 'wiederkehrende Leistung', 'Art. 92', 'Verbandsklage'],
   },
   'arbeit-entschaedigung': {
     id: 'arbeit-entschaedigung', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Arbeit',

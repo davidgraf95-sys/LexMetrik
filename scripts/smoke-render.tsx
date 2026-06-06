@@ -28,6 +28,7 @@ import { RechnerTagerechner } from '../src/pages/RechnerTagerechner';
 import { RechnerTeuerung } from '../src/pages/RechnerTeuerung';
 import { RechnerZustaendigkeit } from '../src/pages/RechnerZustaendigkeit';
 import { RechnerFristenspiegel } from '../src/pages/RechnerFristenspiegel';
+import { RechnerStreitwert } from '../src/pages/RechnerStreitwert';
 
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
@@ -54,6 +55,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['RechnerTeuerung', RechnerTeuerung],
   ['RechnerZustaendigkeit', RechnerZustaendigkeit],
   ['RechnerFristenspiegel', RechnerFristenspiegel],
+  ['RechnerStreitwert', RechnerStreitwert],
 ];
 
 let fehler = 0;
