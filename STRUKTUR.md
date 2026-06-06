@@ -180,9 +180,24 @@ Kartenraster `repeat(auto-fill, minmax(340px, 1fr))`; Titel ohne Silben-
 trennung (`text-balance`); Pills im Inhaltsblock, nur CTA per `mt-auto`
 unten. Keine Ziffern in Sektionsköpfen/Sidebar (konsistent nirgends).
 
+**Pro-Katalog = KACHEL-KATALOG (Umbau 6.6.2026 nachts, Live-Auftrag David;
+Roadmap + Entscheide: FAHRPLAN-KATALOG-UI.md):** Die 17 Rechtsgebiete sind
+kompakte Kacheln unter den 5 Obergruppen (Name · Zähler «X verfügbar · Y in
+Vorbereitung» · verfügbare Werkzeug-Titel, geklemmt). Klick öffnet das
+Gebiet als Panel in voller Breite unter der Kachel-Zeile (`?gebiet=` in der
+URL, teilbar; nur ein Panel zugleich); die Disclosure-Sektionen samt
+Scrollspy sind entfernt. Darüber: Anliegen-Zeile (lib/anliegen.ts, 8
+situative Einstiege — ENTWURF, Abnahme David offen) + «Zuletzt verwendet».
+
 **Suche:** EIN kompaktes Suchfeld in der Katalog-Seitenleiste (Desktop)
 bzw. im Filter-Drawer (mobil) — filtert den Katalog live. Die frühere
-⌘K-Befehlspalette ist entfernt (Entscheid David 5.6.2026).
+⌘K-Befehlspalette ist entfernt (Entscheid David 5.6.2026). Seit 6.6.2026:
+Suche/Filter aktiv → flache, gerankte Trefferliste statt Kacheln (Rang:
+Titel > Keyword exakt > Keyword > Norm > Gebiet; lib/katalogSuche.ts —
+dieselbe Logik testet die Suchbegriff-Goldliste katalogSuche.test.ts,
+48 Paare Laie/Fach/Norm); `?q=` in der URL; «/» fokussiert das Feld;
+Keywords kompakt verglichen wie Normen («Art.311» = «311 ZPO»).
+Metadaten-Inventur: `npx vite-node scripts/katalog-inventur.ts`.
 
 **Sprachen:** Umschalter sichtbar (Header); EN/FR/IT «in Bearbeitung» mit
 DE-Fallback + persistentem Banner; KEINE maschinelle Übersetzung (fachkundige

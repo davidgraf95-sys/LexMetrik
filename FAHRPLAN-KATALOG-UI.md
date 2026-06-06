@@ -126,19 +126,35 @@ taxonomisch nach Rechtsgebiet, kein situativer Zugang.
 - E4 Free-Anliegen-Zeile: ja/nein nach Konzept (4.1)
 - E5 Suchbegriff-Goldliste: Begriffe ergänzen/abnehmen (0.1)
 
-## Status
+## Status (umgesetzt 6.6.2026 nachts, Davids Freigabe «führe den Plan frei durch»)
 
-- [ ] 0.1 Suchbegriff-Goldliste + passt()-Extraktion
-- [ ] 0.2 Metadaten-Inventur (keywords/related/szenarien)
-- [ ] 1.1 Keyword-Ausbau (nach Inventur, Abnahme David)
-- [ ] 1.2 Gerankte Treffer-Liste
-- [ ] 1.3 Suche in URL (`?q=`)
-- [ ] 1.4 Tastatur-Komfort (+ E1)
-- [ ] 2.1 Anliegen-Zeile Pro (E2)
-- [ ] 2.2 Szenarien-Deep-Links (nach Vorauswahl-Inventur)
-- [ ] 2.3 related-Graph komplettieren
-- [ ] 3.1 Listen-Ansicht (E3)
-- [ ] 3.2 «Zuletzt verwendet»-Platzierung
-- [ ] 3.3 Header-Einstieg `/pro?q=`
-- [ ] 4.1 Free-Anliegen-Konzept (E4)
-- [ ] 4.2 Pro-Teaser-Chips
+- [x] 0.1 Goldliste (48 Paare, katalogSuche.test.ts) + Extraktion lib/katalogSuche.ts — `11fda02`
+- [x] 0.2 Inventur scripts/katalog-inventur.ts — Befund: 0 Karten ohne keywords/related,
+      0 kaputte IDs; Lücke lag in der Begriffs-BREITE, nicht im Ob
+- [x] **Kachel-Katalog (Live-Auftrag David, ersetzt Sektionen-Strom):** Gebiets-Kacheln
+      mit Inhaltsangabe unter den 5 Obergruppen; Klick öffnet Panel in voller Breite
+      unter der Kachel-Zeile (`?gebiet=` in URL); nur ein Panel zugleich — `4d927ee`
+- [x] 1.1 Keyword-Ausbau, am Engine-/Preset-Code verifiziert (zpoPresets 311/314/321/…,
+      schkgPresets 88/116/166, Wizard-Rechtsmittel/Scheidung); Keywords kompakt
+      verglichen wie Normen («Art.311» = «311 ZPO») — `5186802`
+- [x] 1.2 Gerankte flache Trefferliste bei aktiver Suche/Filter (Titel > Keyword exakt
+      > Keyword > Norm > Gebiet; Treffermenge bewiesen unverändert) — in `4d927ee`
+- [x] 1.3 `?q=` in der URL (replace; teilbar; SSR-getestet) — `5186802`
+- [x] 1.4 «/» fokussiert das Suchfeld; aria-keyshortcuts — `5186802`
+      · **E1 entschieden:** Suche bleibt in der Seitenleiste (Entscheid 5.6. respektiert)
+- [x] 2.1 Anliegen-Zeile (lib/anliegen.ts, 8 Anlässe) — `af4383f`
+      · **E2: Liste ist ENTWURF Claude — fachliche Abnahme David offen**
+- [x] 2.2 per Inventur erledigt: alle Hash-Vorauswahl-Ziele (#schkg/#straf/#kuendigung/
+      #lohnfortzahlung/#untermiete) sind bereits eigene Katalog-Karten — nichts zu bauen
+- [x] 2.3 related-Graph: Inventur = 0 Lücken (94 Einbahnen sind gewollt → Geplantes)
+- [x] 3.1 **E3 entschieden: entfällt** — Kacheln + flache Trefferliste decken den
+      Dichte-Bedarf; ein zusätzlicher Listen-Toggle wäre ein drittes Muster
+- [x] 3.2 «Zuletzt verwendet» + Anliegen-Zeile direkt unter den Tabs (erster Blick)
+- [x] 3.3 abgedeckt: RechnerKopf-Link «Katalog» → /pro existiert auf jeder
+      Rechner-Seite; dort übernimmt «/» den Sprung in die Suche
+- [x] 4.1 **E4 entschieden: keine Free-Anliegen-Zeile** — die kuratierte Wand (9 Kacheln)
+      ist selbst schon der Anliegen-Einstieg; eine zweite Ebene würde duplizieren
+- [x] 4.2 Pro-Teaser-Chips bleiben datengetrieben (ehrlich, §8) — keine Änderung
+
+**Offen für David (fachlich):** Anliegen-Liste in `lib/anliegen.ts` abnehmen/umformulieren;
+Goldlisten-Begriffe ergänzen (E5) — der Test macht jede Ergänzung messbar.
