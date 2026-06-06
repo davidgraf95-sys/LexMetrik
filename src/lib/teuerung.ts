@@ -11,7 +11,7 @@ import { chf as fmtCHF } from './vorlagen/datum';
 // offizielle BFS-Rechner («AUTO»): die JÜNGSTE Originalbasis, die beide
 // Monate abdeckt – so entfallen Verkettungs-Rundungsfehler; das Verhältnis
 // ist basisinvariant. Wortlaut-Verifikation: Art. 17 VMWG am Filestore-HTML
-// (Konsolidierung 20251001) byte-genau geprüft; Art. 269b OR, Art. 286/128
+// (Konsolidierung 20250101 — der 20251001-Filestore ist nicht abrufbar, vgl. scripts/fedlex-cache.sh) byte-genau geprüft; Art. 269b OR, Art. 286/128
 // ZGB Anker empirisch verifiziert (5.6.2026).
 // Rein, deterministisch, clientseitig – kein Date.now (Default-Endmonat =
 // letzter publizierter Wert der hinterlegten Reihe).

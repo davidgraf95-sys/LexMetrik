@@ -107,3 +107,28 @@ describe('SchKG-Fristenrechner', () => {
     expect(r.warnungen.some((w) => w.includes('unberücksichtigt'))).toBe(true);
   });
 });
+
+// ─── B2-Fix 6.6.2026 (deklarierte fachliche Änderung) ────────────────────────
+// Art. 56 Ziff. 2 SchKG: «in der Wechselbetreibung gibt es keine Betreibungs-
+// ferien» — die drei Wechsel-Presets liefen vorher fälschlich mit Ferien-Modus.
+import { PRESETS_SCHKG } from '../lib/schkgPresets';
+
+describe('Audit-Fix B2 – Wechselbetreibung ohne Betreibungsferien', () => {
+  it('alle drei Wechsel-Presets stehen auf modus \'kein\'', () => {
+    const wechsel = PRESETS_SCHKG.filter((p) => p.key.includes('wechsel'));
+    expect(wechsel.map((p) => p.key).sort()).toEqual(
+      ['beschwerde_wechsel', 'konkursbegehren_wechsel', 'rechtsvorschlag_wechsel'],
+    );
+    for (const p of wechsel) expect(p.modus, p.key).toBe('kein');
+    for (const p of wechsel) expect(p.hinweis).toContain('Art. 56 Ziff. 2');
+  });
+
+  it('Repro des Audit-Befunds: 5 Tage ab 25.07.2025 enden am 30.07. (nicht 06.08.)', () => {
+    // Mit Betreibungsferien-Modus verschob die Sommerferien-Logik (15.–31.7.)
+    // das Ende via Art. 63 auf den 06.08.2025 — für die Wechselbetreibung falsch.
+    const r = berechneSchkgFrist(base({ ereignis: '2025-07-25', laenge: 5, modus: 'kein' }));
+    expect(r.diesAdQuem).toBe('30.07.2025');
+    const falsch = berechneSchkgFrist(base({ ereignis: '2025-07-25', laenge: 5, modus: 'schkg_betreibungsferien' }));
+    expect(falsch.diesAdQuem).not.toBe('30.07.2025'); // belegt die Differenz
+  });
+});

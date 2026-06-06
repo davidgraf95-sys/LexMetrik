@@ -98,7 +98,7 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
   },
   BGer_4A_58_2019: {
     aktenzeichen: 'BGer 4A_58/2019',
-    aussage: 'Tritt Verzug ohne Mahnung ein (Art. 108 Ziff. 1), läuft der Zins umgehend.',
+    aussage: 'Tritt Verzug ohne Mahnung ein (bestimmter Verfalltag, Art. 102 Abs. 2 OR), läuft der Zins umgehend.',
     verifiziert: false,
   },
   // RESERVE (Audit 5.6.2026): noch unreferenziert.

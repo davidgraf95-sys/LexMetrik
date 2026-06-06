@@ -63,9 +63,13 @@ export const PRESETS_SCHKG: SchkgPreset[] = [
     hinweis: 'Keine Begründung nötig (Art. 75 SchKG); Wiederherstellung nach Art. 33 Abs. 4 SchKG.' },
   { key: 'rechtsvorschlag_nachtraeglich', phase: 'einleitung', label: 'Nachträglicher Rechtsvorschlag – 10 Tage', norm: 'Art. 77 SchKG',
     einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien', fristnatur: 'frist', ausloeser: 'Kenntnis des Gläubigerwechsels' },
+  // B2-Fix 6.6.2026: «in der Wechselbetreibung gibt es keine Betreibungsferien»
+  // (Art. 56 Ziff. 2 SchKG, Wortlaut am Cache verifiziert) → modus 'kein' für
+  // alle drei Wechsel-Presets; vorher verschob die Ferien-Logik das Fristende
+  // fälschlich um bis zu ~1 Woche nach hinten.
   { key: 'rechtsvorschlag_wechsel', phase: 'einleitung', label: 'Rechtsvorschlag Wechselbetreibung – 5 Tage', norm: 'Art. 179 Abs. 1 SchKG',
-    einheit: 'tage', laenge: 5, modus: 'schkg_betreibungsferien', fristnatur: 'frist', ausloeser: 'Zustellung Zahlungsbefehl',
-    hinweis: 'Muss begründet werden; gerichtliche Bewilligung (Art. 181 f. SchKG).' },
+    einheit: 'tage', laenge: 5, modus: 'kein', fristnatur: 'frist', ausloeser: 'Zustellung Zahlungsbefehl',
+    hinweis: 'Muss begründet werden; gerichtliche Bewilligung (Art. 181 f. SchKG). In der Wechselbetreibung gibt es KEINE Betreibungsferien (Art. 56 Ziff. 2 SchKG).' },
 
   // ── Rechtsöffnung & materiellrechtliche Klagen ──
   { key: 'aberkennungsklage', phase: 'rechtsoeffnung', label: 'Aberkennungsklage – 20 Tage', norm: 'Art. 83 Abs. 2 SchKG',
@@ -138,7 +142,9 @@ export const PRESETS_SCHKG: SchkgPreset[] = [
     einheit: 'monate', laenge: 15, modus: 'schkg_betreibungsferien', fristnatur: 'verwirkung', ausloeser: 'Zustellung Zahlungsbefehl', hemmungMoeglich: true,
     hinweis: 'Stillstand während rechtsvorschlagsbedingtem Gerichtsverfahren.', verweise: ['BGer_5A_190_2023'] },
   { key: 'konkursbegehren_wechsel', phase: 'konkurs', label: 'Konkursbegehren Wechselbetreibung – 1 Monat', norm: 'Art. 188 SchKG',
-    einheit: 'monate', laenge: 1, modus: 'schkg_betreibungsferien', fristnatur: 'verwirkung', ausloeser: 'Zustellung Zahlungsbefehl' },
+    // B2-Fix 6.6.2026: keine Betreibungsferien in der Wechselbetreibung (Art. 56 Ziff. 2 SchKG).
+    einheit: 'monate', laenge: 1, modus: 'kein', fristnatur: 'verwirkung', ausloeser: 'Zustellung Zahlungsbefehl',
+    hinweis: 'In der Wechselbetreibung gibt es KEINE Betreibungsferien (Art. 56 Ziff. 2 SchKG).' },
   { key: 'durchfuehrung_mangels_aktiven', phase: 'konkurs', label: 'Durchführungsbegehren mangels Aktiven – 20 Tage', norm: 'Art. 230 SchKG',
     einheit: 'tage', laenge: 20, modus: 'kein', fristnatur: 'frist', ausloeser: 'Publikation',
     hinweis: 'Kostenvorschuss sicherzustellen.' },
@@ -188,8 +194,9 @@ export const PRESETS_SCHKG: SchkgPreset[] = [
     einheit: 'tage', laenge: 10, modus: 'kein', fristnatur: 'beschwerdefrist', ausloeser: 'Eröffnung des Endentscheids',
     hinweis: 'BGG-Fristen folgen dem Stillstand nach Art. 46 BGG (eigener Kalender) – dieser Rechner bildet ihn NICHT ab; im Einzelfall prüfen.' },
   { key: 'beschwerde_wechsel', phase: 'rechtsmittel', label: 'Beschwerde Wechselbetreibung – 5 Tage', norm: 'Art. 20 SchKG',
-    einheit: 'tage', laenge: 5, modus: 'schkg_betreibungsferien', fristnatur: 'beschwerdefrist', ausloeser: 'Kenntnis der Verfügung',
-    hinweis: 'Verkürzte Fristen; keine Wiederherstellung.' },
+    // B2-Fix 6.6.2026: keine Betreibungsferien in der Wechselbetreibung (Art. 56 Ziff. 2 SchKG).
+    einheit: 'tage', laenge: 5, modus: 'kein', fristnatur: 'beschwerdefrist', ausloeser: 'Kenntnis der Verfügung',
+    hinweis: 'Verkürzte Fristen; keine Wiederherstellung. In der Wechselbetreibung gibt es KEINE Betreibungsferien (Art. 56 Ziff. 2 SchKG).' },
 ];
 
 export const SCHKG_DISCLAIMER =

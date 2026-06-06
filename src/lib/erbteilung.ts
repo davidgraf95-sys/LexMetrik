@@ -29,7 +29,11 @@ const N_473: Normverweis = { artikel: 'Art. 473 ZGB', bemerkung: 'Nutzniessungsl
 const N_215: Normverweis = { artikel: 'Art. 215 ZGB', bemerkung: 'Hälftige Vorschlagsbeteiligung (Errungenschaftsbeteiligung)' };
 const N_210_2: Normverweis = { artikel: 'Art. 210 Abs. 2 ZGB', bemerkung: 'Rückschlag wird nicht geteilt' };
 const N_247: Normverweis = { artikel: 'Art. 247 ZGB', bemerkung: 'Gütertrennung: keine Vorschlagsteilung' };
-const N_221: Normverweis = { artikel: 'Art. 221 ZGB', bemerkung: 'Gütergemeinschaft' };
+const N_221: Normverweis = { artikel: 'Art. 221 ZGB', bemerkung: 'Gütergemeinschaft: Umfang des Gesamtguts' };
+// Audit-Fix 6.6.2026: Die HÄLFTIGE Teilung des Gesamtguts trägt Art. 241 Abs. 1
+// ZGB («steht jedem Ehegatten oder seinen Erben die Hälfte des Gesamtgutes zu»),
+// nicht Art. 221 (definiert nur den Umfang des Güterstands).
+const N_241: Normverweis = { artikel: 'Art. 241 Abs. 1 ZGB', bemerkung: 'Gütergemeinschaft: hälftige Teilung des Gesamtguts' };
 const N_SCHLT: Normverweis = { artikel: 'Art. 15 SchlT ZGB', bemerkung: 'Übergangsrecht: massgebend ist das Todesdatum' };
 
 const HALB = br(1, 2);
@@ -168,8 +172,8 @@ function gueterrecht(input: ErbteilungInput): { nachlass?: number; schritt?: Rec
     nachlass,
     schritt: {
       beschreibung: 'Schritt 1 – Güterrecht (Gütergemeinschaft)',
-      zwischenergebnis: `Nachlass = Eigengut (CHF ${fmtCHF(eigengut)}) + hälftiges Gesamtgut (CHF ${fmtCHF(gesamtgut / 2)}) = CHF ${fmtCHF(nachlass)} (mangels abweichender ehevertraglicher Regelung).`,
-      normen: [N_221],
+      zwischenergebnis: `Nachlass = Eigengut (CHF ${fmtCHF(eigengut)}) + hälftiges Gesamtgut (CHF ${fmtCHF(gesamtgut / 2)}) = CHF ${fmtCHF(nachlass)} (hälftige Teilung mangels abweichender ehevertraglicher Regelung, Art. 241 Abs. 1/2 ZGB).`,
+      normen: [N_241, N_221],
     },
   };
 }

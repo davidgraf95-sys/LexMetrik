@@ -20,7 +20,7 @@ import { rechtsprechung } from '../data/verifikation';
 
 const N_142_1:    Normverweis = { artikel: 'Art. 142 Abs. 1 ZPO', bemerkung: 'Tagesfrist: Beginn am Folgetag' };
 const N_142_1bis: Normverweis = { artikel: 'Art. 142 Abs. 1bis ZPO', bemerkung: 'Zustellung an arbeitsfreiem Tag' };
-const N_142_2:    Normverweis = { artikel: 'Art. 142 Abs. 2 ZPO', bemerkung: 'Wochen-/Monats-/Jahresfrist: gleichbezeichneter Tag' };
+const N_142_2:    Normverweis = { artikel: 'Art. 142 Abs. 2 ZPO', bemerkung: 'Monatsfrist: gleichbezeichneter Tag (Wochen-/Jahresfristen analog, st. Praxis)' };
 const N_142_3:    Normverweis = { artikel: 'Art. 142 Abs. 3 ZPO', bemerkung: 'Ende am Sa/So/Feiertag → nächster Werktag' };
 const N_143:      Normverweis = { artikel: 'Art. 143 ZPO', bemerkung: 'Fristwahrung (Expeditionsprinzip)' };
 const N_144_1:    Normverweis = { artikel: 'Art. 144 Abs. 1 ZPO', bemerkung: 'Gesetzliche Frist nicht erstreckbar' };

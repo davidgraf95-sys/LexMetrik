@@ -96,10 +96,30 @@ describe('Verzugszins – Verzugsbeginn & Validierung', () => {
     expect(r.ersterZinstag).toBe('01.01.2024');
   });
 
-  it('Verfalltag-Hinweis nennt Art. 108 Ziff. 1 OR', () => {
+  // Deklarierte fachliche Änderung 6.6.2026 (Audit): Verfalltag-Verzug folgt aus
+  // Art. 102 Abs. 2 OR; Art. 108 OR betrifft die Nachfrist beim Rücktritt und war
+  // hier dogmatisch unzutreffend zitiert.
+  it('Verfalltag-Hinweis nennt Art. 102 Abs. 2 OR (nicht mehr Art. 108)', () => {
     const r = berechneVerzugszins(base({ beginnTyp: 'verfalltag' }));
     const txt = r.rechenweg.flatMap((s) => s.normen.map((n) => n.artikel)).join(',');
-    expect(txt).toContain('Art. 108 Ziff. 1 OR');
+    expect(txt).toContain('Art. 102 OR');
+    expect(txt).not.toContain('Art. 108');
+    const schritt = r.rechenweg.find((s) => s.beschreibung.includes('Beginn des Zinsenlaufs'));
+    expect(schritt?.zwischenergebnis).toContain('Art. 102 Abs. 2 OR');
+    expect(schritt?.zwischenergebnis).not.toContain('Art. 108');
+  });
+
+  // B8-Fix 6.6.2026: tageTotal = Summe der verzinsten Segment-Tage, nicht die
+  // volle Spanne — bei vollständiger Tilgung mid-period endet die Zählung dort.
+  it('tageTotal endet bei vollständiger Tilgung mid-period (B8)', () => {
+    const r = berechneVerzugszins(base({
+      methode: 'act365',
+      ereignisse: [{ typ: 'teilzahlung', datum: '2023-07-01', betrag: 50_000 }],
+    }));
+    expect(r.status).toBe('ok');
+    // 01.01.–01.07.2023 = 181 Tage verzinst; danach Kapital 0 → keine weiteren Zinstage.
+    expect(r.tageTotal).toBe(181);
+    expect(r.warnungen.some((w) => w.includes('übersteigt die Restschuld'))).toBe(true);
   });
 
   it('rückständige Zinsforderung (Art. 105 Abs. 1) → Hinweis', () => {
@@ -166,5 +186,18 @@ describe('Verzugszins – Akzeptanzkriterien Zeitstrahl (Segment-Engine)', () =>
     expect(r.segmente[0]).toMatchObject({ tage: 182, satz: 5, zins: 249.32 });
     expect(r.segmente[1]).toMatchObject({ tage: 184, satz: 8, zins: 403.29 });
     expect(r.zinsTotal).toBe(652.61);
+  });
+});
+
+// ─── Coverage-Audit 6.6.2026: Warnpfade Art. 104 Abs. 2/3 OR ─────────────────
+
+describe('Coverage-Fix – Warnungen vertraglich/kaufmännisch', () => {
+  it('satzGrund vertraglich → Beweislast-Warnung (Art. 104 Abs. 2 OR)', () => {
+    const r = berechneVerzugszins(base({ satzGrund: 'vertraglich', zinssatzProzent: 8 }));
+    expect(r.warnungen.some((w) => w.includes('Art. 104 Abs. 2') && w.includes('Beweislast'))).toBe(true);
+  });
+  it('satzGrund kaufmännisch → Privatdiskontsatz-Warnung (Art. 104 Abs. 3 OR)', () => {
+    const r = berechneVerzugszins(base({ satzGrund: 'kaufmaennisch', zinssatzProzent: 6 }));
+    expect(r.warnungen.some((w) => w.includes('Art. 104 Abs. 3') && w.includes('Privatdiskontsatz'))).toBe(true);
   });
 });

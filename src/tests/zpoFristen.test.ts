@@ -131,3 +131,22 @@ describe('ZPO-Fristenrechner (Art. 142–147 ZPO)', () => {
     expect(ohneHinweis.rechenweg.some((s) => s.beschreibung.includes('Art. 145 Abs. 3'))).toBe(true);
   });
 });
+
+// ─── Coverage-Audit 6.6.2026: bislang ungetestete Rechtshelfer ───────────────
+
+describe('Coverage-Fix – zustellfiktion (Art. 138 Abs. 3 lit. a ZPO)', () => {
+  it('Zustellung gilt am 7. Tag nach erfolglosem Versuch, wochentagsunabhängig', async () => {
+    const { zustellfiktion } = await import('../lib/zpoFristen');
+    expect(zustellfiktion('2025-07-10')).toBe('2025-07-17');
+    expect(zustellfiktion('2025-12-26')).toBe('2026-01-02'); // über Jahresgrenze
+  });
+});
+
+describe('Coverage-Fix – Jahresfrist × Gerichtsferien → [UNGEKLÄRT]-Warnung', () => {
+  it('ordentliches Verfahren, 1 Jahr über den Sommerstillstand → Warnung erscheint', () => {
+    const r = berechneFrist(base({
+      ereignis: '2025-01-15', einheit: 'jahre', laenge: 1, verfahren: 'ordentlich',
+    }));
+    expect(r.warnungen.some((w) => w.includes('[UNGEKLÄRT]'))).toBe(true);
+  });
+});

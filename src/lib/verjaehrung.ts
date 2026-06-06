@@ -337,6 +337,20 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
       annahmen.push(
         'Konservative Regel: Die durch Unterbrechung neu angesetzte Frist wird durch die absolute Frist begrenzt (für Art. 67 OR gesichert; nach gerichtlicher Feststellung ist die selbständige 10-Jahres-Frist nach Art. 137 Abs. 2 OR h.M. – das frühere Datum wird ausgewiesen).',
       );
+      // B9-Fix 6.6.2026: Die nach h.M. SELBSTÄNDIGE 10-Jahres-Frist (Art. 137
+      // Abs. 2 OR) wird als Variante mit konkretem Datum offengelegt statt nur
+      // stillschweigend gekappt — das primäre Ergebnis bleibt konservativ (§8).
+      const ist137II = unterbrechungen.some(
+        (u) => u.typ === 'urkunde_urteil' || (u.typ === 'klage_schlichtung' && u.mitUrteil),
+      );
+      if (ist137II) {
+        warnungen.push(
+          `VARIANTE Art. 137 Abs. 2 OR: Nach herrschender Lehre begründet die Anerkennung durch Urkunde bzw. die gerichtliche ` +
+          `Feststellung eine SELBSTÄNDIGE 10-Jahres-Frist, die über die ursprüngliche absolute Frist hinauslaufen kann — danach ` +
+          `träte die Verjährung erst am ${fmt(relativEnde)} ein. Ausgewiesen wird konservativ das frühere Datum ` +
+          `(${fmt(absolutEnde)}); für die Geltendmachung der späteren Variante fachliche Prüfung im Einzelfall.`,
+        );
+      }
     }
   }
 

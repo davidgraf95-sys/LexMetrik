@@ -59,7 +59,6 @@ const N_104_1: Normverweis = { artikel: 'Art. 104 Abs. 1 OR', bemerkung: '5 % pr
 const N_104_2: Normverweis = { artikel: 'Art. 104 Abs. 2 OR', bemerkung: 'höherer vertraglicher Zins' };
 const N_104_3: Normverweis = { artikel: 'Art. 104 Abs. 3 OR', bemerkung: 'kaufmännischer Bankdiskonto' };
 const N_102:   Normverweis = { artikel: 'Art. 102 OR', bemerkung: 'Verzug: Mahnung / Verfalltag' };
-const N_108_1: Normverweis = { artikel: 'Art. 108 Ziff. 1 OR', bemerkung: 'Verzug ohne Mahnung' };
 const N_85:    Normverweis = { artikel: 'Art. 85 OR', bemerkung: 'Anrechnung: Zinsen/Kosten vor Kapital' };
 const N_105_1: Normverweis = { artikel: 'Art. 105 Abs. 1 OR', bemerkung: 'rückständige Zinsen/Renten: ab Betreibung/Klage' };
 const N_105_3: Normverweis = { artikel: 'Art. 105 Abs. 3 OR', bemerkung: 'Zinseszinsverbot' };
@@ -155,14 +154,18 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
   // ── Schritt 2: Verzugsbeginn ──
   const beginnText =
     beginnTyp === 'verfalltag'
-      ? `Bestimmter Verfalltag am ${fmt(eingabeBeginn)} (Art. 102 Abs. 2 / Art. 108 Ziff. 1 OR): Verzug ohne Mahnung; der Zins läuft ab dem Folgetag ${fmt(ersterZinstag)}.`
+      ? `Bestimmter Verfalltag am ${fmt(eingabeBeginn)} (Art. 102 Abs. 2 OR): Verzug ohne Mahnung; der Zins läuft ab dem Folgetag ${fmt(ersterZinstag)}.`
       : beginnTyp === 'klage'
         ? `Klageeinleitung: der Verzugszins läuft ab Zustellung der Klage/Widerklage (${fmt(ersterZinstag)}).`
         : `Mahnung (Art. 102 Abs. 1 OR): der Zins läuft ab Erhalt der Mahnung (${fmt(ersterZinstag)}).`;
   rechenweg.push({
     beschreibung: 'Schritt 2 – Beginn des Zinsenlaufs',
     zwischenergebnis: beginnText,
-    normen: beginnTyp === 'verfalltag' ? [N_102, N_108_1] : [N_102, N_104_1],
+    // Audit-Fix 6.6.2026 (deklarierte fachliche Änderung): Der Verfalltag-Verzug
+    // folgt aus Art. 102 Abs. 2 OR; Art. 108 OR betrifft die Entbehrlichkeit der
+    // NACHFRIST beim Rücktritt (Ziff. 3: Verfalltag-Geschäft), nicht den Verzugseintritt —
+    // der frühere Verweis auf «Art. 108 Ziff. 1» war dogmatisch unzutreffend.
+    normen: beginnTyp === 'verfalltag' ? [N_102] : [N_102, N_104_1],
     rechtsprechung: beginnTyp === 'verfalltag'
       ? [rechtsprechung('BGer_4A_58_2019')]
       : beginnTyp === 'klage' ? [rechtsprechung('BGer_4A_282_2017')] : undefined,
@@ -262,7 +265,10 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
   const zinsOffen = aufgelaufeneZinsen;
   const kapitalOffen = kapital;
   const totalOffen = round2(kapitalOffen + zinsOffen);
-  const tageTotal = segmentTageBasis(methode, ersterZinstag, stichtag).tage;
+  // B8-Fix 6.6.2026: tageTotal = Summe der tatsächlich verzinsten Segment-Tage.
+  // Vorher wurde die volle Spanne ersterZinstag–Stichtag gemeldet, auch wenn das
+  // Kapital durch Teilzahlungen vorher vollständig getilgt war (Kennzahl ≠ Rechnung).
+  const tageTotal = segmente.reduce((s, x) => s + x.tage, 0);
 
   // ── Schritt: Gesamtaufstellung ──
   rechenweg.push({

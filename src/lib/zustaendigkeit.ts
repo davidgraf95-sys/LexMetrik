@@ -107,11 +107,11 @@ export interface ZustaendigkeitInput {
   // Ausbau 5.6.2026 (alle optional — Default erhält das bisherige Verhalten):
   ausVertrag?: boolean;                  // geldforderung: Forderung aus Vertrag → Art. 31 (charakteristische Leistung)
   deliktUnterfall?: DeliktUnterfall;     // nur bei delikt
-  persoenlichkeitUnterfall?: PersoenlichkeitUnterfall;
+  persoenlichkeitUnterfall?: PersoenlichkeitUnterfall; // nur bei persoenlichkeit
   ipUnterfall?: IpUnterfall;            // nur bei ip_wettbewerb (Default: unbedingte lit.)
   /** Art. 5 Abs. 1 lit. d Alt. 2: der Bund übt sein UWG-Klagerecht aus —
    *  dann einzige Instanz UNABHÄNGIG vom Streitwert (nur bei 'uwg'). */
-  bundKlagerecht?: boolean; // nur bei persoenlichkeit
+  bundKlagerecht?: boolean;
   avgVerleih?: boolean;                  // arbeit: Personalverleih/-vermittlung → Zusatzforum Art. 34 Abs. 2
   gerichtsstandsvereinbarung?: boolean;  // Parteien haben eine GSV (Art. 17) — Wirksamkeit je Bindungsgrad
 }
