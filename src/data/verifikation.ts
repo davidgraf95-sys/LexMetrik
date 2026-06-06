@@ -380,6 +380,197 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
       'Das Selbstbestimmungsrecht der auftraggebenden Person ist möglichst weitgehend zu respektieren; die Eignung der beauftragten Person ist nur zurückhaltend zu verneinen.',
     verifiziert: false,
   },
+
+  // ── Nachregistrierung 6.6.2026 (Auftrag David «BGE verlinken + Bibliothek») ──
+  // Lückenbefund des Register-Generators (scripts/bge-register-generieren.ts):
+  // 30 im Code zitierte Entscheide ohne Register-Eintrag. Aussagen WORTGETREU
+  // aus dem Code-Kontext übernommen (nichts neu behauptet); verifiziert: false
+  // bis zur fachlichen Abnahme (§7/§8).
+
+  // Teuerung / Unterhalt / Indexmiete
+  BGE_100_II_245: {
+    aktenzeichen: 'BGE 100 II 245',
+    aussage:
+      'Nachehelicher Unterhalt: Ohne Indexklausel im Urteil besteht grundsätzlich kein Anpassungsanspruch (Art. 128 ZGB fakultativ).',
+    verifiziert: false,
+  },
+  BGer_4A_252_2023: {
+    aktenzeichen: 'BGer 4A_252/2023',
+    aussage:
+      'Wird ein indexierter Mietvertrag stillschweigend unbefristet fortgesetzt, kann sich der Vermieter nicht mehr auf die Indexklausel berufen.',
+    verifiziert: false,
+  },
+
+  // Vollmacht
+  BGE_112_II_330: {
+    aktenzeichen: 'BGE 112 II 330',
+    aussage:
+      'Formbedürftigkeit der Vollmacht zu beurkundungspflichtigen Grundstücksgeschäften: ältere Linie bejahend; Formfrage nicht eindeutig konsolidiert (vs. Formfreiheits-Praxis).',
+    verifiziert: false,
+  },
+  BGE_140_III_555: {
+    aktenzeichen: 'BGE 140 III 555',
+    aussage:
+      'Die berufsmässige Vertretung im Zivilprozess ist Anwältinnen und Anwälten vorbehalten (Art. 68 Abs. 2 ZPO).',
+    verifiziert: false,
+  },
+
+  // Arbeitsvertrag
+  BGE_116_II_153: {
+    aktenzeichen: 'BGE 116 II 153',
+    aussage: 'Günstigkeitsvergleich gegenüber GAV-Mindeststandards als Gruppenvergleich (Art. 357 Abs. 2 OR).',
+    verifiziert: false,
+  },
+  BGE_129_III_276: {
+    aktenzeichen: 'BGE 129 III 276',
+    aussage:
+      'Gratifikation: Eine während mindestens dreier Jahre vorbehaltlos ausgerichtete Gratifikation kann trotz Freiwilligkeitsvorbehalt zum Anspruch erstarken (Art. 322d OR).',
+    verifiziert: false,
+  },
+  BGE_139_III_155: {
+    aktenzeichen: 'BGE 139 III 155',
+    aussage: 'Gratifikation: Bei sehr hohen Einkommen entfällt das Akzessorietätskriterium.',
+    verifiziert: false,
+  },
+  BGE_129_III_618: {
+    aktenzeichen: 'BGE 129 III 618',
+    aussage:
+      'Kettenverträge ohne sachlichen Grund werden in ein unbefristetes Arbeitsverhältnis umgedeutet (Art. 334 OR).',
+    verifiziert: false,
+  },
+  BGE_131_III_439: {
+    aktenzeichen: 'BGE 131 III 439',
+    aussage:
+      'Eine Auslagenpauschale, die die notwendigen Auslagen nicht deckt, ist insoweit nichtig (Art. 327a Abs. 3 OR).',
+    verifiziert: false,
+  },
+  BGE_148_III_126: {
+    aktenzeichen: 'BGE 148 III 126',
+    aussage: 'Verlängerte Probezeit: Nachzuholen sind die effektiv versäumten Arbeitstage (Art. 335b OR).',
+    verifiziert: false,
+  },
+  BGE_149_III_202: {
+    aktenzeichen: 'BGE 149 III 202',
+    aussage:
+      'Laufende Ferienlohn-Abgeltung im Stundenlohn ist bei Vollzeitbeschäftigung unzulässig – auch bei schwankenden Löhnen (Art. 329d Abs. 2 OR).',
+    verifiziert: false,
+  },
+  BGE_145_III_365: {
+    aktenzeichen: 'BGE 145 III 365',
+    aussage: 'Konkurrenzverbot: Schriftformerfordernis (Art. 340 Abs. 1 OR).',
+    verifiziert: false,
+  },
+  BGE_78_II_230: {
+    aktenzeichen: 'BGE 78 II 230',
+    aussage:
+      'Entgeltliches Konkurrenzverbot ohne vorbehaltenes Verzichtsrecht: Der Arbeitgeber kann sich nicht einseitig durch Verzicht von der Karenzentschädigung befreien.',
+    verifiziert: false,
+  },
+  BGer_4A_5_2025: {
+    aktenzeichen: 'BGer 4A_5/2025',
+    aussage:
+      'Festhalten an BGE 78 II 230: kein einseitiger Verzicht des Arbeitgebers zur Befreiung von der Karenzentschädigung (Urteil vom 26.6.2025).',
+    verifiziert: false,
+  },
+
+  // Mietvertrag / Untermiete
+  BGE_119_II_353: {
+    aktenzeichen: 'BGE 119 II 353',
+    aussage:
+      'Untermiete: Gewinnverbot – ein Aufschlag ist nur zulässig, soweit ihn Mehrleistungen rechtfertigen (Art. 262 Abs. 2 lit. b OR).',
+    verifiziert: false,
+  },
+  BGE_134_III_446: {
+    aktenzeichen: 'BGE 134 III 446',
+    aussage:
+      'Untermiete ohne Zustimmung des Hauptvermieters: nach schriftlicher Abmahnung ausserordentliche Kündigung des Hauptmietvertrags möglich (Art. 257f Abs. 3 OR).',
+    verifiziert: false,
+  },
+  BGE_121_III_397: {
+    aktenzeichen: 'BGE 121 III 397',
+    aussage: 'Staffelmiete: Während der Staffelung sind andere Mietzinsanpassungen ausgeschlossen.',
+    verifiziert: false,
+  },
+  BGE_121_III_460: {
+    aktenzeichen: 'BGE 121 III 460',
+    aussage:
+      'Nebenkosten: Werden nicht anfallende Positionen aufgeführt, riskiert die ganze Nebenkostenabrede die Nichtigkeit.',
+    verifiziert: false,
+  },
+  BGE_124_III_57: {
+    aktenzeichen: 'BGE 124 III 57',
+    aussage: 'Indexmiete: Mischklauseln (Kombination Index/Staffel) sind unzulässig.',
+    verifiziert: false,
+  },
+  BGE_125_III_358: {
+    aktenzeichen: 'BGE 125 III 358',
+    aussage:
+      'Anfangsmietzins: Ein vertraglicher Ausschluss der Herabsetzung (Art. 270 OR) wäre nichtig.',
+    verifiziert: false,
+  },
+  BGer_4C_250_2006: {
+    aktenzeichen: 'BGer 4C.250/2006',
+    aussage:
+      'Nebenkosten müssen im Mietvertrag selbst besonders aufgeführt sein (Art. 257a Abs. 2 OR); eine Auflistung nur in AGB genügt nicht.',
+    verifiziert: false,
+  },
+
+  // Erbrecht / Vorsorge
+  BGE_135_III_206: {
+    aktenzeichen: 'BGE 135 III 206',
+    aussage: 'Eigenhändige letztwillige Verfügung: Die Unterschrift steht am Schluss der Urkunde (Art. 505 ZGB).',
+    verifiziert: false,
+  },
+
+  // ZPO / Fristen / Schlichtung
+  BGE_138_III_225: {
+    aktenzeichen: 'BGE 138 III 225',
+    aussage:
+      'Zustellfiktion: Voraussetzung ist, dass mit der Zustellung gerechnet werden musste (Prozessrechtsverhältnis).',
+    verifiziert: false,
+  },
+  BGE_138_III_615: {
+    aktenzeichen: 'BGE 138 III 615',
+    aussage:
+      'Die Klagefrist nach Klagebewilligung untersteht den Gerichtsferien (Art. 145 Abs. 1 ZPO; E. 2.4).',
+    verifiziert: false,
+  },
+  BGE_140_III_227: {
+    aktenzeichen: 'BGE 140 III 227',
+    aussage: 'Massgeblich für die Klagefrist ist die Eröffnung/Zustellung der Klagebewilligung.',
+    verifiziert: false,
+  },
+  BGE_146_III_265: {
+    aktenzeichen: 'BGE 146 III 265',
+    aussage: 'Örtliche Zuständigkeit der Schlichtungsbehörde (Gerichtsstände, u. a. Art. 10 ff. ZPO).',
+    verifiziert: false,
+  },
+  BGer_4A_413_2012: {
+    aktenzeichen: 'BGer 4A_413/2012',
+    aussage:
+      'Rechtsbegehren und Streitgegenstand des Schlichtungsgesuchs fixieren den Streitgegenstand und rahmen die spätere Klage.',
+    verifiziert: false,
+  },
+  BGE_133_III_393: {
+    aktenzeichen: 'BGE 133 III 393',
+    aussage:
+      'Eheschutzentscheide gelten als vorsorgliche Massnahmen i. S. v. Art. 98 BGG (Beschränkung auf Verfassungsrügen).',
+    verifiziert: false,
+  },
+  BGE_150_III_367: {
+    aktenzeichen: 'BGE 150 III 367',
+    aussage:
+      'Monatsfrist nach Art. 77 Abs. 1 Ziff. 3 OR endet am gleichbezeichneten Tag des Zielmonats.',
+    verifiziert: false,
+  },
+
+  // Zitier-Konvention (kein materieller Verweis)
+  BGE_140_III_409: {
+    aktenzeichen: 'BGE 140 III 409',
+    aussage:
+      'NUR Beispiel-Zitat der Zitier-Konvention (lib/konventionen.ts) – kein materieller Rechtsprechungsverweis.',
+    verifiziert: false,
+  },
 };
 
 /** Liefert einen Rechtsprechungshinweis aus dem zentralen Register. */

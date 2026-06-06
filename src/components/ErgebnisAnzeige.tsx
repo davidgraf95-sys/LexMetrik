@@ -3,6 +3,7 @@ import type { Berechnungsergebnis, BerechnungsStatus } from '../types/legal';
 import { fedlexLinkFuerArtikel } from '../lib/fedlex';
 import { sansAmp } from './typografie';
 import { useLocale, fedlexLokalisiert } from './locale';
+import { RechtsprechungAnker, RechtsprechungText } from './RechtsprechungLink';
 
 // Norm-Chip mit Fedlex-Direktlink (artikelgenauer Anker); ohne verifizierbares
 // Ziel bleibt der Chip unverlinkt (Normentreue: nie auf geratene Anker).
@@ -110,7 +111,8 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             </button>
             {warnungenOffen && (
               <div className="bg-warn-bg px-4 pb-3 space-y-1">
-                {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700">{w}</p>)}
+                {/* Entscheid-Zitate in Warnungen verlinkt (Web-Anzeige; Text unverändert) */}
+                {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700"><RechtsprechungText text={w} /></p>)}
               </div>
             )}
           </div>
@@ -136,8 +138,11 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
                       <NormChip key={j} artikel={n.artikel} bemerkung={n.bemerkung} />
                     ))}
                     {schritt.rechtsprechung?.map((r, j) => (
+                      /* Aktenzeichen → amtlicher bger.ch-Link (Auftrag David 6.6.2026);
+                         der Verifikations-Vorbehalt (§8) bleibt unverändert sichtbar */
                       <span key={j} className="lc-badge lc-badge-danger gap-1 font-mono">
-                        {r.aktenzeichen}
+                        <RechtsprechungAnker aktenzeichen={r.aktenzeichen}
+                          className="no-underline hover:underline" />
                         {!r.verifiziert && <span className="font-sans" style={{ fontSize: '10px' }}>· zu verifizieren</span>}
                       </span>
                     ))}
@@ -161,7 +166,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             {annahmenOffen && (
               <ul className="px-4 py-3 space-y-1">
                 {ergebnis.annahmen.map((a, i) => (
-                  <li key={i} className="text-body-s text-ink-600">• {a}</li>
+                  <li key={i} className="text-body-s text-ink-600">• <RechtsprechungText text={a} /></li>
                 ))}
               </ul>
             )}

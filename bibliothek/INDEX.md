@@ -1,7 +1,7 @@
 # Bibliothek — Informationsgrundlagen für LexMetrik
 
 Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
-das (noch) nicht Code ist. 45 Dossiers in 5 Ordnern (Stand 6.6.2026 abends).
+das (noch) nicht Code ist. 46 Dossiers in 6 Ordnern (Stand 6.6.2026 nachts).
 Verbindlich seit 6.6.2026: **CLAUDE.md §11** — jede Recherche mündet hier in eine
 geordnete, engine-orientierte Übersichtsliste mit INDEX-Eintrag. Regeln:
 
@@ -23,9 +23,16 @@ bibliothek/
   behoerden/   Gerichte · Schlichtung · Strafverfolgung · Erbgang (je 26 Kantone)
   kosten/      Schlichtungsgebühren · Gerichtskosten Bund · Anwaltstarife
   recherche/   Dossiers zu geplanten Engines/Vorlagen → eigener INDEX.md dort
+  rechtsprechung/  Register aller zitierten Bundesgerichtsentscheide (Links + Fundorte)
 ```
 
 **Recherche-Dossiers (19, Bau-Priorisierung):** [recherche/INDEX.md](recherche/INDEX.md)
+
+**Rechtsprechungs-Register:** [rechtsprechung/bge-register.md](rechtsprechung/bge-register.md) —
+alle 90 im Code zitierten BGE/BGer-Urteile mit amtlichem Link (URL-Schema §7-verifiziert
+6.6.2026: ATF-Permalink bzw. AZA-Suche), Aussage, Code-Fundorten und Status; generiert
+aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-generieren.ts`
+(meldet Lücken — Stand: 0). Inhaltliche Abnahme der einzelnen Entscheide: David, offen.
 
 ## register/ — fortlaufend gepflegt
 
