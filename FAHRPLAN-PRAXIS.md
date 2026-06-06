@@ -89,10 +89,16 @@ sind QUERSCHNITTE — also §10-Rahmenarbeit, kein Einzelbau.
       von der Termin-Quelle). Erstreckungs-Ausschluss 257d/257f als
       «ausgeschlossen»-Zeile (Art. 272a); Formgültigkeit/befristetes
       Verhältnis offengelegt (§8).
-- [ ] 3.1c Andocken weiterer Ereignisse: A.1 Zivilentscheid (zpoPresets,
-      Streitwert/summarisch-Weichen, Folgestufe BGer abgesetzt) →
-      A.2 Zahlungsbefehl (Dual Wartefrist/Verwirkung) → A.6 Erbgang
-      (Multi-Trigger) / A.7 Klagebewilligung → A.3 AG-Kündigung zuletzt
-      (erst 336b-Presets als Quick-Win; §2-Gate: 336b-II-Klagefrist nur als
-      BEDINGTE Zeile). Brücke «In den Fristenspiegel» aus dem Mietrechner
+- [x] 3.1c **A.1 Zivilentscheid** — erledigt 6.6.2026 nachts (`d60ee0a`):
+      Weiche aus `bestimmeRechtsmittel` (KEINE Schwelle dupliziert; Divergenz-
+      Schutz-Test Norm-Pille ⊂ Weiche-Text), Datum aus `berechneFrist` mit den
+      Brücken-2.1a-Parametern; Dispositiv-Vorstufe (Art. 239: Begründungs-
+      Frist mit exakt den zpoPresets-Parametern, Rechtsmittel dann bewusst
+      OHNE Datum, §1); Anschlussberufung 314 I ausgeschlossen / 313 Hinweis
+      «anderer Auslöser»; BGer abgesetzte Folgestufe. 18 Spiegel-Tests.
+- [ ] 3.1d Andocken Rest: A.2 Zahlungsbefehl (Dual Wartefrist/Verwirkung
+      aus EINEM schkgPreset) → A.6 Erbgang (Multi-Trigger) / A.7 Klage-
+      bewilligung → A.3 AG-Kündigung zuletzt (erst 336b-Presets als
+      Quick-Win; §2-Gate: 336b-II-Klagefrist nur als BEDINGTE Zeile).
+      Brücke «In den Fristenspiegel» aus Miet-/Zuständigkeits-Rechner
       (fristenspiegelLink existiert).
