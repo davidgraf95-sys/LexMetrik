@@ -8,10 +8,14 @@ export function BegruendungAbsatz({ text }: { text: string }) {
   const [kopiert, setKopiert] = useState(false);
   if (!text.trim()) return null;
   const kopieren = () => {
+    // «Kopiert ✓» erst NACH erfolgreichem Schreiben — eine abgewiesene
+    // Clipboard-Berechtigung darf keinen Erfolg vortäuschen (Review-Befund
+    // 6.6.2026: Promise-Rejection wurde vom try/catch nicht erfasst).
     try {
-      void navigator.clipboard.writeText(text);
-      setKopiert(true); setTimeout(() => setKopiert(false), 1600);
-    } catch { /* Clipboard nicht verfügbar */ }
+      navigator.clipboard.writeText(text).then(() => {
+        setKopiert(true); setTimeout(() => setKopiert(false), 1600);
+      }).catch(() => { /* Berechtigung verweigert/unsicherer Kontext */ });
+    } catch { /* Clipboard-API nicht vorhanden */ }
   };
   return (
     <details className="lc-card p-4">

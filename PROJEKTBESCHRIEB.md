@@ -1,12 +1,16 @@
 # LexMetrik — Projektbeschrieb
 
-**Stand:** 5. Juni 2026 (abends) · **Produktion:** https://lexmetrik.vercel.app ·
+**Stand:** 6. Juni 2026 (nachts) · **Produktion:** https://lexmetrik.vercel.app ·
 **Repo:** github.com/davidgraf95-sys/LegalCalc · Marke: **LexMetrik** (grosses M)
 
 Dieses Dokument beschreibt das Projekt als Ganzes: Idee, Prinzipien,
 Architektur, Inventar, Qualitätssicherung und Pflege. Es ergänzt
 `CLAUDE.md` (verbindliche Arbeitsprinzipien), `STRUKTUR.md` (laufend
-gepflegter technischer Stand) und `KATALOG-ROADMAP.md` (Soll-Inventar).
+gepflegter technischer Stand), `KATALOG-ROADMAP.md` (Soll-Inventar),
+`HANDLUNGSPLAN.md` (priorisiertes Vorgehen), die Fahrpläne
+`FAHRPLAN-PRAXIS.md`/`FAHRPLAN-KATALOG-UI.md` (Praxistauglichkeit der
+Engines bzw. der Auswahl-Schicht) und die `bibliothek/` (recherchierte
+Grundlagen mit Quellen-Registern, 46 Dossiers).
 
 ---
 
@@ -46,13 +50,21 @@ angeboten.
   ein Einstieg), Verzugszins, LIK-Teuerung sowie die Vorsorge-Vorlagen
   (Testament, Vorsorgeauftrag, Patientenverfügung).
 - **Pro (`/pro`)** — vollständiger Katalog für die anwaltliche Praxis:
-  111 Einträge (17 sofort verfügbar) in 17 Rechtsgebieten, gruppiert nach
-  juristischen Obergruppen (Zivilprozess & Vollstreckung zuerst; Sektionen
-  starten eingeklappt mit «X verfügbar · Y in Vorbereitung»-Zählern), Tabs
-  «Verfügbar/Gesamter Katalog» (URL-synchron), gruppierte Scrollspy-
-  Navigation, Volltext-/Norm-Suche, Filter und Schnellzugriff (★ Favoriten
-  + Zuletzt verwendet, rein lokal). Pro-Sitzung überlebt das Neuladen;
-  Zahlungs-Gate vorbereitet (`PAYWALL_ACTIVE = false`), bewusst inaktiv; das Zahlungssystem ist noch nicht definiert (Entscheid 6.6.2026 — PayPal aus der Planung genommen).
+  113 Einträge (29 sofort verfügbar) in 17 Rechtsgebieten als
+  **Kachel-Katalog** (Umbau 6.6.2026): kompakte Gebiets-Kacheln mit
+  Inhaltsangabe unter 5 juristischen Obergruppen (Übergreifend zuerst);
+  Klick ersetzt die Kachel an Ort und Stelle durch das Gebiets-Panel, die
+  übrigen rutschen animiert nach (`?gebiet=` in der URL, teilbar). Suche
+  als Hauptzugang: «/» fokussiert, `?q=` teilbar, aktive Suche/Filter
+  zeigen eine flache, deterministisch **gerankte Trefferliste** (Titel >
+  Keyword > Norm > Gebiet; Goldlisten-getestet); dazu **Anliegen-Zeile**
+  (situative Einstiege «Urteil erhalten», «Betreibung einleiten» …,
+  Liste in fachlicher Abnahme) und «Zuletzt verwendet» (rein lokal —
+  Favoriten auf Davids Anweisung entfernt). Tabs «Verfügbar/Gesamter
+  Katalog» URL-synchron. Pro-Sitzung überlebt das Neuladen; Zahlungs-Gate
+  vorbereitet (`PAYWALL_ACTIVE = false`), bewusst inaktiv; das
+  Zahlungssystem ist noch nicht definiert (Entscheid 6.6.2026 — PayPal
+  aus der Planung genommen).
 
 **Zielgrösse:** über 50 Rechner und über 50 Vorlagen (Soll in
 `KATALOG-ROADMAP.md`).
@@ -90,37 +102,49 @@ angeboten.
 ## 3. Architektur
 
 **Stack:** React 19 + TypeScript (strict) + Vite 8 + Tailwind 3 ·
-Vitest (451 Tests in 24 Dateien) · jsPDF (PDF), docx (DOCX) ·
+Vitest (862 Tests in 45 Dateien) · jsPDF (PDF), docx (DOCX) ·
 Vercel (statisches SPA-Hosting) — **vollständig clientseitig**, kein
 Backend, keine Datenübertragung (Berufsgeheimnis-Prinzip: alle Eingaben
-bleiben im Browser; Favoriten/Sitzungen nur in localStorage).
+bleiben im Browser; «Zuletzt verwendet»/Sitzungen nur in localStorage).
 
 ```
 src/
 ├── lib/                  Rechtslogik (Engines, rein & deterministisch)
 │   ├── zpoFristen · schkgFristen · allgemeineFrist (Tagerechner)
 │   ├── verzugszins · verjaehrung · gewaehrleistung · teuerung (LIK)
-│   ├── sperrfristen (Art. 336c OR) · lohnfortzahlung · mietrecht
-│   ├── erbteilung · zustaendigkeit
-│   ├── fedlex.ts         Norm-Anker-Registry (OR/ZGB/ZPO/SchKG/ArG/VMWG)
+│   ├── sperrfristen (336c) · kuendigungsfrist · lohnfortzahlung · mietrecht
+│   ├── erbteilung · erbFristen · strafRechtsmittel
+│   ├── zustaendigkeit · schkgZustaendigkeit · strafZustaendigkeit
+│   │                     (3 Rechtswege inkl. Rechtsmittel-Fahrplan/Kosten)
+│   ├── fedlex.ts         Norm-Anker-Registry (OR/ZGB/ZPO/SchKG/ArG/VMWG/VVG…)
+│   ├── bge.ts            Rechtsprechungs-Links (BGE→ATF-Permalink, Urteile→AZA)
 │   ├── konventionen.ts   Zitier-/Formulierungsstandard (SSoT + Linter)
-│   ├── startseiteConfig.ts  Katalog-SSoT (111 Karten, istVerfuegbar)
+│   ├── startseiteConfig.ts  Katalog-SSoT (113 Karten, istVerfuegbar)
+│   ├── katalogSuche.ts   Such-/Filter-/Rang-Logik (Goldlisten-getestet)
+│   ├── anliegen.ts       situative Einstiege Pro (Daten-SSoT)
 │   ├── rechtsbereichGruppen.ts  juristische Obergruppen (5er/4er-Modell)
 │   ├── freeReihenfolge.ts   kuratierte Free-Reihenfolge
-│   ├── schnellzugriff.ts    Favoriten/Zuletzt (localStorage)
-│   ├── pdf/              PDF-Rechenbericht (Modell + Renderer)
+│   ├── schnellzugriff.ts    Zuletzt verwendet (localStorage)
+│   ├── rechnerPermalinks · icsExport   Praxis-Querschnitte (teilen/Kalender)
+│   ├── pdf/              PDF-Rechenbericht (Modell + Renderer, Aktenzeichen)
 │   └── vorlagen/         Vorlagen-System
 │       ├── engine.ts     assemble(): Schema + Antworten → Dokument
 │       ├── formatvorlagen.ts  Typografie-SSoT (PDF-mm/DOCX-Twips/MUSTER)
 │       ├── behoerden.ts  Behörden-Registry (vollständige Adressen)
-│       ├── testament · patientenverfuegung · vorsorgeauftrag
-│       ├── schlichtungsgesuchBs · arbeitsvertrag · mietvertrag
+│       ├── testament · patientenverfuegung · vorsorgeauftrag · vollmacht
+│       ├── schlichtungsgesuchBs · klageVereinfacht · arbeitsvertrag
+│       ├── mietvertrag (inkl. Untermiete-Weiche) · kuendigungs-Familie
+│       │   (AN/AG/Mieter/Vertrag; Vermieter als Checkliste ohne Export)
 │       └── vorlagenPdf · vorlagenDocx (rendern dasselbe Ergebnis)
-├── data/                 Stammdaten (Feiertage/Computus, LIK-Reihe BFS)
+├── data/                 Stammdaten (Feiertage/Computus 26 Kt., LIK-Reihe BFS,
+│                         Schlichtungsstellen/Gerichte/StA je 26 Kt.,
+│                         verifikation.ts = Rechtsprechungs-Register, 90 AZ)
 ├── components/           Darstellung (Forms, Visuals, Wizard, ui/)
-└── pages/                Routen (Free-Wand, Pro-Katalog, Rechner, Wizards)
-scripts/                  golden-outputs (53 Fälle) · smoke-render (18 S.)
-                          · lik-reihe-generieren.py (BFS-Pflege)
+└── pages/                Routen (Free-Wand, Pro-Kachel-Katalog, Rechner, Wizards)
+scripts/                  golden-outputs (65 Fälle) · smoke-render (23 S.)
+                          · logik-sweep (11'184 Komb.) · norm-zitate-pruefen
+                          · katalog-inventur · bge-register-generieren
+                          · fedlex-cache.sh · lik-reihe-generieren.py
 ```
 
 **Visualisierungen** (reine Ableitungen der Engine-Ergebnisse; Geometrie
@@ -143,46 +167,72 @@ Gedankenstrich, «zulasten».
 
 ---
 
-## 4. Inventar (Stand 5.6.2026)
+## 4. Inventar (Stand 6.6.2026)
 
-**17 verfügbare Einträge** (Status entwurf, orange = fachliche Prüfung
-durch David ausstehend), 94 geplant:
+**29 verfügbare Einträge** (Status entwurf, orange = fachliche Prüfung
+durch David ausstehend), 84 geplant:
 
 | Bereich | Verfügbar |
 |---|---|
-| Fristen | Kombinierter Fristenrechner free (Allgemein/ZPO/SchKG, inkl. Rückwärtsrechnung, Zustell-Helfer, .ics, Permalink) · ZPO-Fristen · SchKG-Fristen (je auch Pro-Direkteinstieg) |
+| Fristen | Kombinierter Fristenrechner free (Allgemein/ZPO/SchKG, inkl. Rückwärtsrechnung, Zustell-Helfer) · ZPO-Fristen (Presets Rechtsmittel/Schlichtung/Erstinstanz, Art. 311–329) · SchKG-Fristen (Einleitung bis Konkurs, Art. 88/116/166) · Erbrechts-Fristen (Ausschlagung, Inventar, Herabsetzung) |
 | Geld | Verzugszins (Teilzahlungen, Satzwechsel) · LIK-Teuerung (Indexmiete Art. 17 VMWG, Unterhalt Art. 286/128 ZGB, Wertsicherung; amtliche BFS-Reihe ab 1966, AUTO-Basis wie der BFS-Rechner) |
-| Arbeit | Sperrfristen Art. 336c OR · Lohnfortzahlung (Skalen BE/ZH/BS) · Einzelarbeitsvertrag (Vorlage v1.1, KV-/KTG-Gates) |
-| Miete | Mietkündigungs-Termine · Mietvertrag (Vorlage v1.1, Indexmiete-/Staffel-/Kautions-Gates) |
-| Verjährung/Kauf | Verjährungsrechner · Gewährleistungsfristen |
+| Zuständigkeit | **Drei Rechtswege** (je eigene Engine + amtliche Datenschichten 26 Kantone): Zivil (Gericht·Verfahren·Schlichtung, Eingangs-Gabelung Einleitung/**Rechtsmittel-Fahrplan** inkl. Spruchkörper, Kosten je Kanton mit 52 verlinkten Erlassen) · Betreibung (Ort·Stelle·Anliegen, PLZ→Amt) · Strafverfahren (Gerichtsstand·Behörde·Rechtsmittel inkl. Straf-Rechtsmittel-Rechner) |
+| Arbeit | Sperrfristen/Kündigungsfristen Art. 335c/336c OR · Lohnfortzahlung (kantonale Skalen) · Einzelarbeitsvertrag (Vorlage, KV-/KTG-Gates) · **Kündigungs-Familie**: Kündigung Arbeitnehmer:in (free) · Arbeitgeber:in (harter Sperrfristen-Blocker) |
+| Miete | Mietrecht-Fristen (Kündigung, Termine, Zahlungsverzug 257d) · Mietvertrag Wohn-/Geschäftsräume (Indexmiete-/Staffel-/Kautions-Gates) · **Untermietvertrag** (Art. 262, Gewinnverbot-Warnung) · Kündigung Mieter:in (Familienwohnung-Blocker 266m) · Kündigung Vermieter:in (Checkliste ohne Export — amtliches Formular, §8-Grenze) |
+| Verträge | Vertrag kündigen (Versicherung 35a VVG · Darlehen · Auftrag · Abo) · Vollmacht (Anwalt/General/Spezial, Form-Warnstufen) |
+| Verjährung/Kauf | Verjährungsrechner · Gewährleistungsfristen (Kauf/Werk, SIA-Hinweise) |
 | Erbrecht | Erbteilung/Pflichtteile (inkl. Güterrecht) · eigenhändiges Testament (Vorlage) |
 | Vorsorge | Vorsorgeauftrag · Patientenverfügung (Vorlagen) |
-| Prozess | Schlichtungsgesuch (Kantonswahl + Handadressen-Override, Behörden-Registry amtlich verifiziert; BS produktiv) · Zuständigkeitsrechner |
+| Prozess | Schlichtungsgesuch (alle Kantone, Behörden-Registry amtlich verifiziert) · Klage im vereinfachten Verfahren (BS) |
+
+**Praxis-Querschnitte auf allen Rechnern** (FAHRPLAN-PRAXIS, 6.6.2026):
+.ics-Kalender-Export mit Vorfrist-Alarm · Aktenzeichen-/Referenzfeld in
+den PDF-Rechenbericht · Permalink/Teilen (Fall als URL) · kopierfertiger
+**Begründungs-Absatz «Für die Rechtsschrift»** aus dem Rechenweg ·
+Prefill-Brücken (Rechtsmittel-Fahrplan → ZPO-Rechner vorbefüllt,
+Kündigungs-Maske ↔ Sperrfristen-Rechner, Wizard → Klage).
 
 **Datenquellen** (statisch gebündelt, je mit Stand/Quelle/Pflegehinweis):
-Fedlex-Filestore (Norm-Anker), EJPD-Feiertagsverzeichnis + Computus,
+Fedlex-Filestore (Norm-Anker; Caches gepinnt), Feiertage 26 Kantone
+(BJ-Liste + kantonale Verifikation, Computus, bedingte Feiertage),
 BFS-Indexierungstabelle cc-d-05.02.08 (LIK, Lizenz OPEN-BY, monatliche
-Regeneration per Skript), Staatskalender BS (Behördenadressen).
+Regeneration per Skript), Behörden-Registries 26 Kantone (Schlichtung,
+Gerichte, Staatsanwaltschaften, Betreibungsämter via EasyGov; amtlich
+verifiziert), Rechtsprechungs-Register (90 BGE/BGer mit amtlichen
+bger.ch-Links — Schema empirisch verifiziert; Web-Anzeige verlinkt
+Zitate in Rechenweg/Warnungen/Annahmen).
 
 ---
 
 ## 5. Qualitätssicherung
 
-- **451 Vitest-Tests**: Akzeptanztests je Engine/Vorlage, Registry-
-  Invarianten (Hausnummern-Pflicht, Gruppen-Vollständigkeit beider
-  Modelle, FREE_REIHENFOLGE), Konventions-Linter über die echte
-  Textausgabe, SSR-Akzeptanz der Seiten (Free-Flachheit, Pro-Schutz),
-  Trennungs-Querschnitt der drei Fristen-Engines.
-- **Golden-Output-Protokoll**: 53 eingefrorene Fälle über alle Engines,
+- **863 Vitest-Tests in 45 Dateien**: Akzeptanztests je Engine/Vorlage,
+  Registry-Invarianten, Konventions-Linter über die echte Textausgabe,
+  SSR-Akzeptanz der Seiten (Free-Flachheit, Pro-Kachel-Anatomie),
+  Trennungs-Querschnitt der Fristen-Engines, **Suchbegriff-Goldliste**
+  (Laie/Fach/Normzitat → erwartete Karte, inkl. Rang-Ordnung) und
+  Rechtsprechungs-Link-Schema.
+- **Golden-Output-Protokoll**: 65 eingefrorene Fälle über alle Engines,
   Vorlagen und Gates; `vergleich`-Modus beweist Verhaltensneutralität vor
   jedem Refactoring (CLAUDE.md §6 — Pflicht).
-- **Smoke-Render**: alle 18 Seiten SSR-fehlerfrei.
+- **Dauerwerkzeuge** (bei Engine-Änderungen mitlaufen lassen):
+  `logik-sweep` (Invarianten über 11'184 Eingabe-Kombinationen der drei
+  Zuständigkeits-Engines) · `norm-zitate-pruefen` (261 Art.-Zitate gegen
+  die gepinnten Fedlex-Caches) · `katalog-inventur` (Metadaten-Lücken) ·
+  `bge-register-generieren` (Rechtsprechungs-Register + Lückenmeldung).
+- **Smoke-Render**: alle 23 Seiten SSR-fehlerfrei.
 - **Review-Agenten vor jedem Deploy**: unabhängige Bug-Checks mit
   empirischen Repros (Logik-Nachrechnung aller Engines, Visual-Geometrie
   <0.001 % Toleranz, Quer-Konsistenz, Mobile-Forensik, PDF-Sichtprüfung).
 - **Empirische Norm-Verifikation**: Anker gegen das konsolidierte
   Filestore-HTML (auch Wortlaut, z. B. Art. 17 VMWG byte-genau);
-  Rechtsprechung trägt «zu verifizieren»-Vorbehalte.
+  Rechtsprechung trägt «zu verifizieren»-Vorbehalte und verlinkt auf die
+  amtliche Entscheiddatenbank (bger.ch; Schema WebFetch-verifiziert).
+- **Bibliothek** (`bibliothek/`, 46 Dossiers in 6 Ordnern, CLAUDE.md §11):
+  jede Recherche mündet in eine geordnete, engine-orientierte
+  Übersichtsliste mit amtlichen Quellen, Abrufdatum und ehrlichem
+  Abnahme-Status; dazu Quellen-/Parameter-Verfalls- und
+  Rechtsprechungs-Register.
 
 **Bewusst offene Punkte** (Davids Entscheid): Sperrtage-
 Anzeigekonvention (Art.-77-Zählung vs. Kalendertage — Endtermine

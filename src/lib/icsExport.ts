@@ -19,7 +19,9 @@ export function icsFuerFrist(opts: { titel: string; endISO: string; beschreibung
     'PRODID:-//LexMetrik//Fristenrechner//DE',
     'CALSCALE:GREGORIAN',
     'BEGIN:VEVENT',
-    `UID:frist-${kompakt}-${opts.titel.replace(/\W+/g, '').slice(0, 24)}@lexmetrik`,
+    // Titel-Token kann bei rein nicht-lateinischen Titeln leer werden →
+    // deterministischer Fallback 'frist' (Review-Befund 6.6.2026, kosmetisch)
+    `UID:frist-${kompakt}-${opts.titel.replace(/\W+/g, '').slice(0, 24) || 'frist'}@lexmetrik`,
     `DTSTAMP:${kompakt}T000000Z`,
     `DTSTART;VALUE=DATE:${kompakt}`,
     `DTEND;VALUE=DATE:${folgetag}`,
