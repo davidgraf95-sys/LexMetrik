@@ -68,7 +68,7 @@ describe('Stufen-Zuteilung (tier)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -179,11 +179,11 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // Deklarierte Erweiterung Katalog-Split 6.6.2026 (Auftrag David): die längst
   // gebauten Rechtswege SchKG/Straf des Zuständigkeitsrechners erhalten eigene
   // Gebiets-Einstiegskarten (schkg-/straf-zustaendigkeit, entwurf) → 23.
-  // Deklarierte Erweiterung Kündigungs-Masken 6.6.2026: Vorlagen 9–11
-  // (1a Arbeitnehmer free · 1b Arbeitgeber pro · 2a Mieter pro) → 26.
-  it('verfügbar = status !== geplant; Regressionszählung 26 (Stand 6.6.2026, Kündigungs-Masken 1a+1b+2a)', () => {
+  // Deklarierte Erweiterung Kündigungs-Masken 6.6.2026: Vorlagen 9–12
+  // (1a Arbeitnehmer free · 1b Arbeitgeber · 2a Mieter · 3 Vertrag/Presets) → 27.
+  it('verfügbar = status !== geplant; Regressionszählung 27 (Stand 6.6.2026, Kündigungs-Masken 1a–3)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(26);
+    expect(verf.length).toBe(27);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });
