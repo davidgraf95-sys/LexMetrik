@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { EckdatenKachel, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { Tabs } from '../ui/Tabs';
 import { Link, useNavigate } from 'react-router-dom';
 import {
@@ -157,11 +157,7 @@ export function AllgemeineFristForm() {
         onChange={setTab}
       />
 
-      {fehler.length > 0 && (
-        <div role="alert" className="lc-notice-danger text-body-s space-y-0.5">
-          {fehler.map((f, i) => <p key={i}>{f}</p>)}
-        </div>
-      )}
+      <FehlerBox fehler={fehler} />
 
       {tab === 'frist' ? (
         <>

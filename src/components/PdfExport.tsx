@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import type { PdfDocConfig } from '../lib/pdf/pdfModel';
+import { FehlerBox } from './vorlagen/ui';
 
 // Schlanker Export-Button. Jeder Rechner liefert seine PdfDocConfig (Titel,
 // Domäne, Eingaben, Ergebnisse, einschlägige Normen, Disclaimer); gerendert
@@ -6,18 +8,30 @@ import type { PdfDocConfig } from '../lib/pdf/pdfModel';
 // Klick dynamisch geladen – hält das Haupt-Bundle klein.
 
 export function PdfExportButton({ config }: { config: PdfDocConfig }) {
+  const [fehler, setFehler] = useState<string | null>(null);
   if (config.sections.length === 0) return null;
+  // Async-Klick mit try/catch: scheitert das Nachladen des Renderers oder die
+  // PDF-Erzeugung, erscheint eine sichtbare Meldung statt einer stillen
+  // Unhandled Rejection.
   const onClick = async () => {
-    const { exportPdf } = await import('../lib/pdf/pdfRender');
-    exportPdf(config);
+    setFehler(null);
+    try {
+      const { exportPdf } = await import('../lib/pdf/pdfRender');
+      exportPdf(config);
+    } catch (e) {
+      setFehler(e instanceof Error ? e.message : 'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.');
+    }
   };
   return (
-    <button type="button" onClick={onClick} className="lc-btn-primary gap-2">
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-      </svg>
-      PDF-Rechenbericht
-    </button>
+    <div className="space-y-3">
+      <button type="button" onClick={onClick} className="lc-btn-primary gap-2">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+        </svg>
+        PDF-Rechenbericht
+      </button>
+      {fehler && <FehlerBox fehler={[fehler]} />}
+    </div>
   );
 }

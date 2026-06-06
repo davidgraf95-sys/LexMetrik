@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { istProEingeloggt } from './lib/proSession';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Code-Splitting auf Routenebene: Jede Seite ist ein eigener Chunk – der
 // Erstbesuch lädt nur Shell + angefragte Seite, nicht alle Engines/Wizards.
@@ -63,6 +64,7 @@ export default function App() {
     <LocaleProvider>
     <Shell>
       <ScrollToTop />
+      <ErrorBoundary>
       <Suspense fallback={<div className="py-16 text-center text-body-s text-ink-500">Wird geladen …</div>}>
       <Routes>
         <Route path="/" element={<StartOderPro />} />
@@ -99,6 +101,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       </Suspense>
+      </ErrorBoundary>
     </Shell>
     </LocaleProvider>
   );

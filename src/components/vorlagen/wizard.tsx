@@ -1,6 +1,6 @@
-import type { Dispatch, ReactNode, SetStateAction } from 'react';
+import { useState, type Dispatch, type ReactNode, type SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
-import { NormLink, Stepper } from './ui';
+import { FehlerBox, NormLink, Stepper } from './ui';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { dokumentAlsText } from '../../lib/vorlagen/vorlagenText';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
@@ -295,24 +295,46 @@ export function ExportLeiste({ ergebnis, deaktiviert, kopiert, onKopieren, pdf, 
   /** Nur übergeben, wo die Formvorschrift DOCX zulässt (Form-Gate hat Vorrang). */
   docx?: ExportZiel;
 }) {
+  // Async-Export mit try/catch: scheitert das Nachladen der Renderer oder die
+  // Dokument-Erzeugung – etwa der bewusste Sperr-Wurf des Word-Exports bei
+  // eigenhändigkeitspflichtigen Geschäften (vorlagenDocx.ts) –, erscheint die
+  // Meldung sichtbar statt als stille Unhandled Rejection.
+  const [fehler, setFehler] = useState<string | null>(null);
+  const exportieren = async (aktion: () => Promise<void>, standardMeldung: string) => {
+    setFehler(null);
+    try {
+      await aktion();
+    } catch (e) {
+      setFehler(e instanceof Error ? e.message : standardMeldung);
+    }
+  };
   return (
-    <div className="flex flex-wrap gap-3">
-      <button type="button" disabled={deaktiviert}
-        onClick={async () => (await import('../../lib/vorlagen/vorlagenPdf')).vorlagenPdfErzeugen(ergebnis, { banner: pdf.banner, dateiName: pdf.dateiName })}
-        className="lc-btn-primary">
-        {pdf.label}
-      </button>
-      {docx && (
+    <div className="space-y-3">
+      <div className="flex flex-wrap gap-3">
         <button type="button" disabled={deaktiviert}
-          onClick={async () => (await import('../../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: docx.banner, dateiName: docx.dateiName })}
-          className="lc-btn-outline">
-          {docx.label}
+          onClick={() => exportieren(
+            async () => (await import('../../lib/vorlagen/vorlagenPdf')).vorlagenPdfErzeugen(ergebnis, { banner: pdf.banner, dateiName: pdf.dateiName }),
+            'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.',
+          )}
+          className="lc-btn-primary">
+          {pdf.label}
         </button>
-      )}
-      <button type="button" disabled={deaktiviert} onClick={() => onKopieren(dokumentAlsText(ergebnis))}
-        className="lc-btn-outline">
-        {kopiert ? 'Kopiert ✓' : 'Text kopieren'}
-      </button>
+        {docx && (
+          <button type="button" disabled={deaktiviert}
+            onClick={() => exportieren(
+              async () => (await import('../../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: docx.banner, dateiName: docx.dateiName }),
+              'Der Word-Export ist fehlgeschlagen. Bitte erneut versuchen.',
+            )}
+            className="lc-btn-outline">
+            {docx.label}
+          </button>
+        )}
+        <button type="button" disabled={deaktiviert} onClick={() => onKopieren(dokumentAlsText(ergebnis))}
+          className="lc-btn-outline">
+          {kopiert ? 'Kopiert ✓' : 'Text kopieren'}
+        </button>
+      </div>
+      {fehler && <FehlerBox fehler={[fehler]} />}
     </div>
   );
 }

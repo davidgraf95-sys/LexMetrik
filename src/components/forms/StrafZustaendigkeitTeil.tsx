@@ -58,12 +58,14 @@ export function StrafZustaendigkeitTeil() {
   const [antragsdelikt, setAntragsdelikt] = useState(false);
   const [uebertretung, setUebertretung] = useState(false);
   const [bund, setBund] = useState(false);
+  const [minderjaehrig, setMinderjaehrig] = useState(false); // B3-Fix 6.6.2026: Art. 10 JStPO war im UI nicht erreichbar
   const [kanton, setKanton] = useState<Kanton | ''>('');
 
   const r = bestimmeStrafZustaendigkeit({
     anliegen, tatort, kaskade32: kaskade, spezialforum: spezial,
     beteiligung, mehrereTatenVerschOrte: mehrereTaten,
     antragsdelikt, uebertretung, moeglichesBundesdelikt: bund,
+    beschuldigteMinderjaehrig: minderjaehrig,
   });
   const sta = kanton !== '' ? staatsanwaltschaftFuer(kanton) : null;
 
@@ -127,6 +129,10 @@ export function StrafZustaendigkeitTeil() {
           <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" checked={bund} onChange={(e) => setBund(e.target.checked)} />
             Möglicher Bund-Katalogfall (Art. 23/24)
+          </label>
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" checked={minderjaehrig} onChange={(e) => setMinderjaehrig(e.target.checked)} />
+            Beschuldigte Person ist minderjährig (Art. 10 JStPO)
           </label>
         </div>
       </div>

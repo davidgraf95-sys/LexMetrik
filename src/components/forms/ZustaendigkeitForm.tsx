@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EckdatenKachel, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, ErgebnisSprung, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -547,11 +547,7 @@ export function ZustaendigkeitForm() {
         </details>
       )}
 
-      {fehler.length > 0 && (
-        <div role="alert" className="lc-notice-warn text-body-s space-y-0.5">
-          {fehler.map((x, i) => <p key={i}>{x}</p>)}
-        </div>
-      )}
+      <FehlerBox fehler={fehler} />
 
       {/* Rechtsmittel: Berufung/Beschwerde + obere Instanz (Ausbau 5.6.2026) */}
       {f.instanz === 'rechtsmittel' && rechtsmittel && (
