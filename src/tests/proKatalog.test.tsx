@@ -56,12 +56,14 @@ describe('Pro-Katalog: Tabs + Kachel-Raster (Umbau 6.6.2026, Auftrag David)', ()
     expect(html).not.toContain('In Vorbereitung</span>');
   });
 
-  it('?gebiet=arbeit = Fokus-Ansicht: Panel ERSETZT das Kachel-Raster (Wunsch David), Rückweg sichtbar', () => {
+  it('?gebiet=arbeit: Panel ersetzt die ANGEKLICKTE Kachel an Ort und Stelle, übrige Kacheln bleiben (Wunsch David)', () => {
     const html = proHtml('/pro?ansicht=katalog&gebiet=arbeit');
     expect(html).toContain('id="panel-arbeit"');
-    expect(html).not.toContain('id="kachel-');         // Oberkacheln verschwinden
-    expect(html).toContain('← Alle Rechtsgebiete');    // expliziter Rückweg
-    expect(html).toContain('lc-reveal');               // Einblend-Animation (motion-reduce global)
+    expect(html).not.toContain('id="kachel-arbeit"');  // die geöffnete Kachel weicht ihrem Panel
+    expect(html).toContain('id="kachel-miete"');       // … die übrigen bleiben sichtbar
+    expect(html).toContain('Schliessen ✕');            // expliziter Rückweg im Panel
+    expect(html).toContain('lc-reveal-panel');         // gemächliche Einblendung (motion-reduce global)
+    expect(html).toContain('view-transition-name:kachel-miete'); // Nachrutschen animierbar
     expect(html).toContain('In Vorbereitung</span>'); // geplante Karten im Panel sichtbar
     expect(html).toContain('Entwurf</span>');          // gebaute, ungeprüfte ebenso (§8)
     // Untergruppen-Anatomie bleibt

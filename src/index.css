@@ -48,7 +48,7 @@
     --shadow-md:0 1px 2px rgba(26,26,23,.04), 0 2px 8px rgba(26,26,23,.05);
     --shadow-lg:0 2px 4px rgba(26,26,23,.05), 0 8px 24px rgba(26,26,23,.06);
     /* Motion – mechanisch-präzise, kein Overshoot */
-    --dur-fast:120ms; --dur-base:160ms; --dur-slow:220ms;
+    --dur-fast:120ms; --dur-base:160ms; --dur-slow:220ms; --dur-stage:420ms;
     --ease:cubic-bezier(.2,.6,.2,1);
     /* Typografie */
     --tracking-overline:.12em;
@@ -206,6 +206,10 @@
   .lc-reveal { animation: lc-fade var(--dur-slow) var(--ease); }
   @keyframes lc-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
+  /* Kachel-Katalog (Pro): Panel-Einblendung bewusst gemächlicher als die
+     Standard-Reveals (Wunsch David 6.6.2026 «etwas langsamer»). */
+  .lc-reveal-panel { animation: lc-fade var(--dur-stage) var(--ease); }
+
   /* Aufklappbare Hinweise: dezentes Disclosure-Symbol statt Default-Dreieck.
      Ausnahme .lc-disclosure: bringt einen eigenen Chevron mit (Rubrik-Zeilen). */
   details > summary { list-style: none; }
@@ -221,7 +225,21 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lc-reveal { animation: none; }
+  .lc-reveal, .lc-reveal-panel { animation: none; }
+}
+
+/* View Transitions (Kachel ⇄ Panel im Pro-Katalog): jede Kachel trägt einen
+   eigenen view-transition-name — der Browser animiert das Nachrutschen der
+   übrigen Kacheln einzeln. Tempo gedrosselt (Wunsch David); Browser ohne
+   View-Transition-Support wechseln hart, reduced-motion schaltet ab. */
+::view-transition-group(*) {
+  animation-duration: var(--dur-stage);
+  animation-timing-function: var(--ease);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
 }
 
 /* Sanfte Auf-/Zuklapp-Animation für Disclosure-Rubriken (progressive
