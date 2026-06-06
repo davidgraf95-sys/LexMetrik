@@ -1,5 +1,4 @@
 import { differenceInCalendarDays,
-  parseISO,
   format,
   differenceInYears,
   differenceInMonths,
@@ -15,10 +14,6 @@ import { differenceInCalendarDays,
 import type { SkalaDauer } from '../types/legal';
 
 // ─── Parsing / Formatting ─────────────────────────────────────────────────
-
-export function parseDatum(s: string): Date {
-  return parseISO(s);
-}
 
 export function formatDatum(d: Date): string {
   return format(d, 'dd.MM.yyyy');
@@ -42,20 +37,6 @@ export function berechneDienstjahr(vertragsbeginn: Date, stichtag: Date): number
 export function dauerUeberDreiMonate(von: Date, bis: Date): boolean {
   return differenceInMonths(bis, von) > 3 ||
     (differenceInMonths(bis, von) === 3 && differenceInDays(bis, addMonths(von, 3)) > 0);
-}
-
-// ─── Kalendermonate und Wochen addieren ───────────────────────────────────
-
-export function addiereWochen(d: Date, n: number): Date {
-  return addWeeks(d, n);
-}
-
-export function addiereMonate(d: Date, n: number): Date {
-  return addMonths(d, n);
-}
-
-export function addiereTage(d: Date, n: number): Date {
-  return addDays(d, n);
 }
 
 export function letzerTagDesMonats(d: Date): Date {
@@ -134,13 +115,6 @@ export function intervallSchnittTage(a: DatumsIntervall, b: DatumsIntervall): nu
 
 export function istInIntervall(d: Date, von: Date, bis: Date): boolean {
   return (isEqual(d, von) || isAfter(d, von)) && (isEqual(d, bis) || isBefore(d, bis));
-}
-
-/** Nächster Monatsende-Tag >= d (falls d selbst Monatsende ist, gibt d zurück). */
-export function naechstesMonatsende(d: Date): Date {
-  const eoM = endOfMonth(d);
-  if (isEqual(d, eoM)) return d;
-  return eoM;
 }
 
 // ── Geteilte fachneutrale Helfer (Versimplung 5.6.2026, golden-bewiesen) ────

@@ -28,7 +28,6 @@ export const addB = (a: Bruch, b: Bruch): Bruch => br(a.z * b.n + b.z * a.n, a.n
 export const subB = (a: Bruch, b: Bruch): Bruch => br(a.z * b.n - b.z * a.n, a.n * b.n);
 export const mulB = (a: Bruch, b: Bruch): Bruch => br(a.z * b.z, a.n * b.n);
 export const divB = (a: Bruch, b: Bruch): Bruch => br(a.z * b.n, a.n * b.z);
-export const eqB = (a: Bruch, b: Bruch): boolean => a.z === b.z && a.n === b.n;
 export const istNull = (a: Bruch): boolean => a.z === 0;
 export const zahl = (a: Bruch): number => a.z / a.n;
 

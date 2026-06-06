@@ -71,10 +71,6 @@ export type CatalogItem = RechnerCard | VorlageCard;
 // Rückwärtskompatibler Alias (bestehende Importe)
 export type CalculatorCard = CatalogItem;
 
-// Sektions-Art → Modus (für modusabhängige Beschriftungen, keine fixen Strings)
-export const istVorlageArt = (a: Art | VorlageArt): a is VorlageArt =>
-  a === 'vorsorge' || a === 'vertrag' || a === 'eingabe' || a === 'gesellschaft' || a === 'korrespondenz';
-
 export interface Sektion {
   art: Art | VorlageArt;
   id: string;            // Anker für Sprungmarken

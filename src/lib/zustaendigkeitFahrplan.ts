@@ -11,16 +11,6 @@ export interface FahrplanSchritt {
   text: string;
 }
 
-export interface FahrplanKosten {
-  /** Kantonaler Schlichtungsgebühren-Rahmen (null = Kanton nicht gewählt). */
-  schlichtungText: string | null;
-  schlichtungErlass: string | null;
-  schlichtungHinweis: string | null;
-  gerichtText: string | null;
-  gerichtErlass: string | null;
-  gerichtHinweis: string | null;
-}
-
 export function fahrplanSchritte(
   r: ZustaendigkeitErgebnis,
   opts: { vorlageVerfuegbar: boolean; stelleBekannt: boolean },

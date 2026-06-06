@@ -59,5 +59,3 @@ export const CALCULATORS: Calculator[] = [
 export function getCalculator(slug: string): Calculator | undefined {
   return CALCULATORS.find((c) => c.slug === slug);
 }
-
-export const calcPath = (slug: string) => `/rechner/${slug}`;

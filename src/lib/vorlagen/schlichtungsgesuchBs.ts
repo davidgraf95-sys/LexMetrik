@@ -29,7 +29,7 @@ export const SCHLICHTUNGSBEHOERDEN_BS = {
     postadresse: ['Zivilgericht Basel-Stadt', 'Schlichtungsbehörde', 'Bäumleingasse 5', '4001 Basel'],
     schalterMuendlich: ['St. Alban-Vorstadt 25', '4052 Basel'], // Ausweichstandort (zu verifizieren)
     tel: '+41 61 267 81 81',
-    verified: true,
+    adresseVerifiziert: true, // Staatskalender BS (≠ NormRef.verified — fachliche Norm-Abnahme)
   },
   miete: {
     name: 'Staatliche Schlichtungsstelle für Mietstreitigkeiten',
@@ -38,7 +38,7 @@ export const SCHLICHTUNGSBEHOERDEN_BS = {
     tel: '+41 61 267 85 21',
     email: 'ssm@bs.ch',
     paritaetisch: true, // Art. 200 Abs. 1 ZPO
-    verified: true,
+    adresseVerifiziert: true, // Staatskalender BS (≠ NormRef.verified — fachliche Norm-Abnahme)
   },
   diskriminierung: {
     name: 'Kantonale Schlichtungsstelle für Diskriminierungsfragen',
@@ -47,7 +47,7 @@ export const SCHLICHTUNGSBEHOERDEN_BS = {
     email: 'ksd@bs.ch',
     paritaetisch: true, // Art. 200 Abs. 2 ZPO
     kostenlos: true,
-    verified: true,
+    adresseVerifiziert: true, // Staatskalender BS (≠ NormRef.verified — fachliche Norm-Abnahme)
   },
 } as const;
 

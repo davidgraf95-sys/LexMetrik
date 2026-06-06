@@ -1,4 +1,5 @@
 import type { Kanton } from '../../types/legal';
+import { BS_ADRESSEN } from '../../data/schlichtungsstellen';
 
 // ─── Behörden-Stammdaten für Eingaben – Grundgerüst (5.6.2026) ──────────────
 //
@@ -11,6 +12,13 @@ import type { Kanton } from '../../types/legal';
 //
 // Pilot-Abdeckung: Basel-Stadt. Weitere Kantone werden hier ergänzt
 // (eine Adresse pro Eingabe-Art × Kanton; nie raten – nur amtliche Quellen).
+//
+// SSoT (B7, §5): Strasse + PLZ/Ort der BS-Stellen stammen aus der kanonischen
+// Stammdaten-Registry data/schlichtungsstellen.ts (BS_ADRESSEN). Diese Datei
+// projiziert daraus und ergänzt nur die vorlagen-spezifischen Felder
+// (Name-Aufteilung name/zusatz, stand, quelle). Import data ← lib ist im
+// Projekt üblich (Engines importieren data/). Adressen existieren danach genau
+// einmal — Adress-Gesamtprüfung 6.6.2026.
 
 export type BehoerdenAdresse = {
   name: string;        // z. B. «Zivilgericht Basel-Stadt»
@@ -29,8 +37,8 @@ export const BEHOERDEN: Record<EingabeArt, Partial<Record<Kanton, BehoerdenAdres
     BS: {
       name: 'Zivilgericht Basel-Stadt',
       zusatz: 'Schlichtungsbehörde',
-      strasse: 'Bäumleingasse 5',
-      plzOrt: '4001 Basel',
+      strasse: BS_ADRESSEN.zivil.strasse,   // SSoT: data/schlichtungsstellen.ts
+      plzOrt: BS_ADRESSEN.zivil.plzOrt,
       stand: '5.6.2026',
       quelle: 'staatskalender.bs.ch (Kanzlei Schlichtungsbehörde)',
     },
@@ -39,8 +47,8 @@ export const BEHOERDEN: Record<EingabeArt, Partial<Record<Kanton, BehoerdenAdres
   schlichtungsstelle_miete: {
     BS: {
       name: 'Staatliche Schlichtungsstelle für Mietstreitigkeiten',
-      strasse: 'Grenzacherstrasse 62',
-      plzOrt: '4005 Basel',
+      strasse: BS_ADRESSEN.miete.strasse,   // SSoT: data/schlichtungsstellen.ts
+      plzOrt: BS_ADRESSEN.miete.plzOrt,
       stand: '5.6.2026',
       quelle: 'staatskalender.bs.ch',
     },
@@ -48,8 +56,8 @@ export const BEHOERDEN: Record<EingabeArt, Partial<Record<Kanton, BehoerdenAdres
   schlichtungsstelle_diskriminierung: {
     BS: {
       name: 'Kantonale Schlichtungsstelle für Diskriminierungsfragen',
-      strasse: 'Grenzacherstrasse 62',
-      plzOrt: '4005 Basel',
+      strasse: BS_ADRESSEN.diskriminierung.strasse,   // SSoT: data/schlichtungsstellen.ts
+      plzOrt: BS_ADRESSEN.diskriminierung.plzOrt,
       stand: '5.6.2026',
       quelle: 'staatskalender.bs.ch',
     },

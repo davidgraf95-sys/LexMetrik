@@ -44,6 +44,19 @@ export interface KantonSchlichtung {
 const A = (name: string, strasse: string, plzOrt: string, zustaendigFuer?: string, hinweis?: string): SchlichtungsAdresse =>
   ({ name, strasse, plzOrt, ...(zustaendigFuer ? { zustaendigFuer } : {}), ...(hinweis ? { hinweis } : {}) });
 
+// ─── Kanonische BS-Schlichtungsadressen (Single Source of Truth, §5) ─────────
+// Strasse + PLZ/Ort der drei Basler Schlichtungsstellen existieren nur HIER.
+// Sowohl der BS-Eintrag in SCHLICHTUNGSSTELLEN als auch die Vorlagen-Registry
+// lib/vorlagen/behoerden.ts beziehen diese Werte (behoerden.ts importiert
+// BS_ADRESSEN und ergänzt nur Name-Aufteilung/zusatz/stand/quelle).
+// Adress-Gesamtprüfung 6.6.2026 (zuletzt geprüfter Stand) — amtliche Quelle:
+// staatskalender.bs.ch.
+export const BS_ADRESSEN = {
+  zivil: { strasse: 'Bäumleingasse 5', plzOrt: '4001 Basel' },
+  miete: { strasse: 'Grenzacherstrasse 62', plzOrt: '4005 Basel' },
+  diskriminierung: { strasse: 'Grenzacherstrasse 62', plzOrt: '4005 Basel' },
+} as const;
+
 export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   ZH: {
     stand: '5.6.2026', quelle: 'vfzh.ch-Ämterverzeichnis · gerichte-zh.ch · BWO 13.2.2026',
@@ -141,12 +154,16 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     },
   },
   BS: {
-    // Adress-Stammdaten kommen aus behoerden.ts (abgenommen) — dieser Eintrag
-    // dient nur der Vollständigkeit der Schicht (gleiches Verhalten wie heute).
+    // SSoT (B7, Adress-Gesamtprüfung 6.6.2026): Die BS-Schlichtungsadressen
+    // (Strasse/PLZ/Ort) leben AUSSCHLIESSLICH hier. lib/vorlagen/behoerden.ts
+    // projiziert daraus (importiert BS_ADRESSEN) und ergänzt nur die
+    // vorlagen-spezifischen Zusatzfelder (Name-Aufteilung, zusatz, stand,
+    // quelle). Keine Divergenz festgestellt: Strasse/PLZ waren in beiden
+    // Quellen bereits identisch (Stand 5.6.2026); 6.6.2026 unverändert bestätigt.
     stand: '5.6.2026', quelle: 'staatskalender.bs.ch (abgenommene Stammdaten in behoerden.ts)',
-    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde des Zivilgerichts', 'Bäumleingasse 5', '4001 Basel', 'ganzer Kanton') },
-    miete: { modus: 'zentral', stelle: A('Staatliche Schlichtungsstelle für Mietstreitigkeiten', 'Grenzacherstrasse 62', '4005 Basel', 'ganzer Kanton') },
-    glg: { modus: 'zentral', stelle: A('Kantonale Schlichtungsstelle für Diskriminierungsfragen', 'Grenzacherstrasse 62', '4005 Basel', 'ganzer Kanton') },
+    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde des Zivilgerichts', BS_ADRESSEN.zivil.strasse, BS_ADRESSEN.zivil.plzOrt, 'ganzer Kanton') },
+    miete: { modus: 'zentral', stelle: A('Staatliche Schlichtungsstelle für Mietstreitigkeiten', BS_ADRESSEN.miete.strasse, BS_ADRESSEN.miete.plzOrt, 'ganzer Kanton') },
+    glg: { modus: 'zentral', stelle: A('Kantonale Schlichtungsstelle für Diskriminierungsfragen', BS_ADRESSEN.diskriminierung.strasse, BS_ADRESSEN.diskriminierung.plzOrt, 'ganzer Kanton') },
   },
   BL: {
     stand: '5.6.2026', quelle: 'baselland.ch (Friedensrichter) · VGD/oslvb.bl.ch + BWO (Miete, Schiedsrichter-Entscheid)',
