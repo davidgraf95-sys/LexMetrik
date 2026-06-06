@@ -111,12 +111,101 @@ function berechneSperrfristIntervall(
     }
 
     case 'schwangerschaft': {
+      // lit. c: «während der Schwangerschaft und in den 16 Wochen nach der Niederkunft».
+      // B10-Fix 6.6.2026: Mit Niederkunftsdatum rechnet die Engine das Ende selbst
+      // (Niederkunft + 112 Tage); ohne Datum wird die Nutzereingabe «bis» übernommen
+      // und das ehrlich ausgewiesen (vorher suggerierte der Text eine Berechnung).
+      if (ereignis.niederkunft) {
+        const niederkunft = parseISO(ereignis.niederkunft);
+        const ende = addDays(niederkunft, 112);
+        return {
+          von,
+          bis: ende,
+          beschreibung:
+            `Schwangerschaft: Sperrfrist gesamte Schwangerschaft + 16 Wochen (112 Tage) nach Niederkunft. ` +
+            `Niederkunft ${formatDatum(niederkunft)} → berechnetes Ende ${formatDatum(ende)}; Sperrfrist ${formatDatum(von)} – ${formatDatum(ende)}. ` +
+            `(Schwangerschaftsbeginn als Anfangstag: BGE 143 III 21, zu verifizieren.)`,
+          normen: [N_336c_1],
+        };
+      }
       return {
         von,
         bis, // Nutzereingabe: Beginn Schwangerschaft bis 16 Wochen (112 Tage) nach Niederkunft
         beschreibung:
           `Schwangerschaft: Sperrfrist gesamte Schwangerschaft + 16 Wochen (112 Tage) nach Niederkunft. ` +
-          `${formatDatum(von)} – ${formatDatum(bis)}. (Schwangerschaftsbeginn als Anfangstag: BGE 143 III 21, zu verifizieren.)`,
+          `Ende gemäss Eingabe (ohne Niederkunftsdatum nicht nachgerechnet): ${formatDatum(von)} – ${formatDatum(bis)}. ` +
+          `(Schwangerschaftsbeginn als Anfangstag: BGE 143 III 21, zu verifizieren.)`,
+        normen: [N_336c_1],
+      };
+    }
+
+    case 'mutterschaftsurlaub_verlaengert': {
+      // lit. cbis (BG 18.12.2020, in Kraft 1.7.2021): «vor dem Ende des verlängerten
+      // Mutterschaftsurlaubs nach Artikel 329f Absatz 2» — Hospitalisierung des
+      // Neugeborenen verlängert den Urlaub um die verlängerte Dauer der
+      // Mutterschaftsentschädigung. Eingabe: Urlaubsbeginn bis (verlängertes) Ende.
+      return {
+        von,
+        bis,
+        beschreibung:
+          `Verlängerter Mutterschaftsurlaub (lit. cbis, Art. 329f Abs. 2 OR — Hospitalisierung des ` +
+          `Neugeborenen): Kündigungsschutz bis zum Ende des verlängerten Urlaubs. ` +
+          `${formatDatum(von)} – ${formatDatum(bis)} (Urlaubsende gemäss Eingabe; die Verlängerungsdauer ` +
+          `richtet sich nach der Mutterschaftsentschädigung, Art. 16c EOG).`,
+        normen: [N_336c_1],
+      };
+    }
+
+    case 'zusatzurlaub_tod_elternteil': {
+      // lit. cter (BG 17.3.2023, in Kraft 1.1.2024): Urlaub der Mutter nach Art. 329f
+      // Abs. 3 (Tod des anderen Elternteils; 2 Wochen, wochen-/tageweise innert
+      // Rahmenfrist 6 Monate). Sperrfrist «zwischen dem Beginn des Urlaubs … und dem
+      // letzten bezogenen Urlaubstag, längstens aber während drei Monaten ab dem Ende
+      // der Sperrfrist nach Buchstabe c» (= Niederkunft + 112 Tage).
+      if (ereignis.niederkunft) {
+        const litCEnde = addDays(parseISO(ereignis.niederkunft), 112);
+        const kappe = addMonths(litCEnde, 3);
+        const ende = isBefore(bis, kappe) ? bis : kappe;
+        const gekappt = isAfter(bis, kappe);
+        return {
+          von,
+          bis: ende,
+          beschreibung:
+            `Zusatzurlaub nach Tod des anderen Elternteils (lit. cter, Art. 329f Abs. 3 OR): Sperrfrist ` +
+            `vom Urlaubsbeginn bis zum letzten bezogenen Urlaubstag, längstens drei Monate ab dem Ende der ` +
+            `lit.-c-Sperrfrist (${formatDatum(litCEnde)} + 3 Monate = ${formatDatum(kappe)}). ` +
+            (gekappt
+              ? `Eingegebenes Urlaubsende ${formatDatum(bis)} überschreitet die Kappung → Sperrfrist ${formatDatum(von)} – ${formatDatum(ende)}.`
+              : `Sperrfrist ${formatDatum(von)} – ${formatDatum(ende)}.`),
+          normen: [N_336c_1],
+        };
+      }
+      return {
+        von,
+        bis,
+        beschreibung:
+          `Zusatzurlaub nach Tod des anderen Elternteils (lit. cter, Art. 329f Abs. 3 OR): Sperrfrist ` +
+          `${formatDatum(von)} – ${formatDatum(bis)} (letzter bezogener Urlaubstag gemäss Eingabe). ` +
+          `ACHTUNG: Die gesetzliche Kappung «längstens drei Monate ab dem Ende der Sperrfrist nach lit. c» ` +
+          `wurde mangels Niederkunftsdatum NICHT geprüft — Niederkunftsdatum erfassen.`,
+        normen: [N_336c_1],
+      };
+    }
+
+    case 'urlaub_tod_mutter': {
+      // lit. cquinquies (BG 17.3.2023, in Kraft 1.1.2024): «während des Urlaubs nach
+      // Artikel 329gbis» — stirbt die Mutter am Tag der Niederkunft oder in den
+      // 14 Wochen danach, hat der andere Elternteil 14 Wochen Urlaub (ab dem Tag nach
+      // dem Tod, an aufeinanderfolgenden Tagen; Verlängerung bei Hospitalisierung
+      // max. 8 Wochen, Abs. 3). Eingabe: Urlaubszeitraum.
+      return {
+        von,
+        bis,
+        beschreibung:
+          `Urlaub des anderen Elternteils nach Tod der Mutter (lit. cquinquies, Art. 329gbis OR): ` +
+          `Kündigungsschutz während des Urlaubs. ${formatDatum(von)} – ${formatDatum(bis)} ` +
+          `(14 Wochen ab dem Tag nach dem Tod, an aufeinanderfolgenden Tagen; bei Hospitalisierung ` +
+          `des Neugeborenen Verlängerung um höchstens 8 Wochen, Abs. 3).`,
         normen: [N_336c_1],
       };
     }

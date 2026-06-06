@@ -35,10 +35,17 @@ function validiere(f: SperrfristenInput): string[] {
 const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'krankheit_unfall',  label: 'Krankheit / Unfall (Art. 336c Abs. 1 lit. b)' },
   { code: 'schwangerschaft',   label: 'Schwangerschaft / Niederkunft (lit. c)' },
+  { code: 'mutterschaftsurlaub_verlaengert', label: 'Verlängerter Mutterschaftsurlaub — Hospitalisierung Neugeborenes (lit. cbis)' },
+  { code: 'zusatzurlaub_tod_elternteil',     label: 'Zusatzurlaub der Mutter nach Tod des anderen Elternteils (lit. cter)' },
+  { code: 'urlaub_tod_mutter',               label: 'Urlaub des anderen Elternteils nach Tod der Mutter (lit. cquinquies)' },
   { code: 'militaer_zivil',    label: 'Militär / Zivildienst (lit. a)' },
   { code: 'hilfsaktion',       label: 'Hilfsaktion im Ausland (lit. d)' },
-  { code: 'betreuungsurlaub',  label: 'Betreuungsurlaub (Art. 329i OR, max. 6 Monate)' },
+  { code: 'betreuungsurlaub',  label: 'Betreuungsurlaub (lit. cquater, Art. 329i OR, max. 6 Monate)' },
 ];
+
+// Typen mit optionalem Niederkunftsdatum (deterministische Endberechnung lit. c
+// bzw. Kappung lit. cter — siehe sperrfristen.ts).
+const MIT_NIEDERKUNFT: SperrereignisTyp[] = ['schwangerschaft', 'zusatzurlaub_tod_elternteil'];
 
 
 export function KuendigungSperrForm() {
@@ -254,8 +261,30 @@ export function KuendigungSperrForm() {
                 <DatumsFeld value={e.bis} onChange={(v) => updateEreignis(i, 'bis', v)} className={inputCls + ' text-xs'} />
               </div>
             </div>
+            {MIT_NIEDERKUNFT.includes(e.typ) && (
+              <div className="space-y-1">
+                <label className="text-xs font-medium text-ink-600">Niederkunft (optional)</label>
+                <DatumsFeld value={e.niederkunft ?? ''} onChange={(v) => updateEreignis(i, 'niederkunft', v)} className={inputCls + ' text-xs'} />
+              </div>
+            )}
             {e.typ === 'schwangerschaft' && (
-              <p className="text-xs text-brass-700">«Von»: Beginn der Schwangerschaft. «Bis»: 16 Wochen (112 Tage) nach Niederkunft (Art. 336c Abs. 1 lit. c OR).</p>
+              <p className="text-xs text-brass-700">
+                «Von»: Beginn der Schwangerschaft. Mit Niederkunftsdatum berechnet der Rechner das Sperrfristende
+                selbst (Niederkunft + 112 Tage, Art. 336c Abs. 1 lit. c OR); ohne Datum gilt «Bis» gemäss Eingabe.
+              </p>
+            )}
+            {e.typ === 'mutterschaftsurlaub_verlaengert' && (
+              <p className="text-xs text-brass-700">Hospitalisierung des Neugeborenen: Kündigungsschutz bis zum Ende des verlängerten Mutterschaftsurlaubs (Art. 336c Abs. 1 lit. cbis i.V.m. Art. 329f Abs. 2 OR). «Bis» = Ende des verlängerten Urlaubs.</p>
+            )}
+            {e.typ === 'zusatzurlaub_tod_elternteil' && (
+              <p className="text-xs text-brass-700">
+                «Von»/«Bis»: Beginn des Urlaubs bis letzter bezogener Urlaubstag (Art. 336c Abs. 1 lit. cter i.V.m.
+                Art. 329f Abs. 3 OR). Mit Niederkunftsdatum prüft der Rechner die gesetzliche Kappung
+                (längstens 3 Monate ab Ende der lit.-c-Sperrfrist); ohne Datum wird sie nicht geprüft.
+              </p>
+            )}
+            {e.typ === 'urlaub_tod_mutter' && (
+              <p className="text-xs text-brass-700">Urlaub des anderen Elternteils nach Tod der Mutter: 14 Wochen ab dem Tag nach dem Tod, an aufeinanderfolgenden Tagen (Art. 336c Abs. 1 lit. cquinquies i.V.m. Art. 329gbis OR).</p>
             )}
             {e.typ === 'militaer_zivil' && (
               <p className="text-xs text-brass-700">Bei Dauer &gt; 11 Tage wird die Sperrfrist automatisch je 4 Wochen davor und danach erweitert (Art. 336c Abs. 1 lit. a OR).</p>

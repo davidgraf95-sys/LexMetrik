@@ -17,10 +17,16 @@ const KANTONE_SELECT: Kanton[] = ['BS','BL','ZH','SH','TG','ZG','GR','BE','AG','
 const TYPEN: { code: SperrereignisTyp; label: string }[] = [
   { code: 'krankheit_unfall',  label: 'Krankheit / Unfall (lit. b)' },
   { code: 'schwangerschaft',   label: 'Schwangerschaft (lit. c)' },
+  { code: 'mutterschaftsurlaub_verlaengert', label: 'Verlängerter Mutterschaftsurlaub (lit. cbis)' },
+  { code: 'zusatzurlaub_tod_elternteil',     label: 'Zusatzurlaub Tod des anderen Elternteils (lit. cter)' },
+  { code: 'urlaub_tod_mutter',               label: 'Urlaub nach Tod der Mutter (lit. cquinquies)' },
   { code: 'militaer_zivil',    label: 'Militär / Zivildienst (lit. a)' },
   { code: 'hilfsaktion',       label: 'Hilfsaktion (lit. d)' },
-  { code: 'betreuungsurlaub',  label: 'Betreuungsurlaub (Art. 329i)' },
+  { code: 'betreuungsurlaub',  label: 'Betreuungsurlaub (lit. cquater, Art. 329i)' },
 ];
+
+// Typen mit optionalem Niederkunftsdatum (Endberechnung lit. c / Kappung lit. cter).
+const MIT_NIEDERKUNFT: SperrereignisTyp[] = ['schwangerschaft', 'zusatzurlaub_tod_elternteil'];
 
 
 const DEFAULTS: ArbeitsrechtInput = {
@@ -181,6 +187,12 @@ export function KombinierteAnsicht() {
               <label className="text-xs font-medium text-ink-600">Bis</label>
               <DatumsFeld value={e.bis} onChange={(v) => updateEreignis(i, 'bis', v)} className={inputCls + ' text-xs'} />
             </div>
+            {MIT_NIEDERKUNFT.includes(e.typ) && (
+              <div className="space-y-1">
+                <label className="text-xs font-medium text-ink-600">Niederkunft (optional)</label>
+                <DatumsFeld value={e.niederkunft ?? ''} onChange={(v) => updateEreignis(i, 'niederkunft', v)} className={inputCls + ' text-xs'} />
+              </div>
+            )}
             <button type="button" onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700 self-end pb-2">Entfernen</button>
           </div>
         ))}

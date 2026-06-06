@@ -256,3 +256,34 @@ describe('Engine-Guard (Bug-Check)', () => {
     expect(berechneLohnfortzahlung({ ...basis, arbeitsunfaehigkeitProzent: 150 }).status).toBe('unzulaessig');
   });
 });
+
+// ─── Coverage-Audit 6.6.2026 ─────────────────────────────────────────────────
+
+describe('Coverage-Fix – verhinderungsgrund \'amt\' (Art. 324a Abs. 1 OR)', () => {
+  it('öffentliches Amt: Skala läuft, Amtsentschädigung wird zur Anrechnung ausgewiesen', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2024-01-01', verhinderungBeginn: '2026-01-15',
+      arbeitsunfaehigkeitProzent: 100, kanton: 'BS',
+      ktgGleichwertigVorhanden: false, verhinderungsgrund: 'amt',
+    });
+    expect(r.status).toBe('ok');
+    expect(r.ergebnis).toContain('14.03.2026'); // BS 3. DJ → 2 Monate
+    const txt = r.rechenweg.map((s) => s.beschreibung + ' ' + s.zwischenergebnis).join('\n');
+    expect(txt).toContain('Öffentliches Amt');
+    expect(txt).toContain('anzurechnen');
+  });
+});
+
+describe('Audit-Fix B5 – KTG-Kriterium «alle Risiken abgedeckt» wirkt', () => {
+  it('alleRisikenAbgedeckt:false → Checkliste meldet Gleichwertigkeit fraglich', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2024-01-01', verhinderungBeginn: '2026-01-15',
+      arbeitsunfaehigkeitProzent: 100, kanton: 'BS',
+      ktgGleichwertigVorhanden: true,
+      ktgKriterien: { alleRisikenAbgedeckt: false },
+    });
+    const alle = [r.ergebnis, ...r.warnungen, ...r.rechenweg.map((s) => s.zwischenergebnis)].join('\n');
+    expect(alle).toContain('Gleichwertigkeit fraglich');
+    expect(alle).toContain('Nicht alle relevanten Risiken abgedeckt');
+  });
+});

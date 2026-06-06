@@ -108,7 +108,12 @@ export type SperrereignisTyp =
   | 'schwangerschaft'
   | 'militaer_zivil'
   | 'hilfsaktion'
-  | 'betreuungsurlaub';
+  | 'betreuungsurlaub'
+  // Ergänzung 6.6.2026 (Audit-Befund B1) — eingefügte Tatbestände der BG vom
+  // 18.12.2020 bzw. 17.3.2023, Wortlaute am OR-Cache (Stand 20260101) verifiziert:
+  | 'mutterschaftsurlaub_verlaengert' // lit. cbis: Hospitalisierung Neugeborenes, Art. 329f Abs. 2 OR
+  | 'zusatzurlaub_tod_elternteil'     // lit. cter: Urlaub der Mutter nach Tod des anderen Elternteils, Art. 329f Abs. 3 OR
+  | 'urlaub_tod_mutter';              // lit. cquinquies: Urlaub des anderen Elternteils nach Tod der Mutter, Art. 329gbis OR
 
 export type Sperrereignis = {
   typ: SperrereignisTyp;
@@ -117,6 +122,11 @@ export type Sperrereignis = {
   // §1.3 Rückfall: Index (0-basiert) eines früheren krankheit_unfall-Ereignisses mit
   // DERSELBEN Ursache. Gesetzt → keine eigene Sperrfrist (BGE 120 II 124 «aucun lien»).
   gleicheUrsacheWieEreignis?: number | null;
+  // Niederkunftsdatum (optional, Audit-Befund B10): bei 'schwangerschaft' rechnet
+  // die Engine das Sperrfristende deterministisch (Niederkunft + 112 Tage, lit. c)
+  // statt die Nutzereingabe «bis» zu übernehmen; bei 'zusatzurlaub_tod_elternteil'
+  // steuert es die Kappung «längstens drei Monate ab Ende der Sperrfrist nach lit. c».
+  niederkunft?: string; // yyyy-MM-dd
 };
 
 export type SperrfristenInput = KuendigungsfristInput & {
@@ -133,12 +143,6 @@ export type ArbeitsrechtInput = SperrfristenInput & {
   monatslohnBrutto?: number;
 };
 
-export type ArbeitsrechtErgebnis = {
-  lohnfortzahlung?: Berechnungsergebnis;
-  kuendigungsfrist?: Berechnungsergebnis;
-  sperrfristen?: Berechnungsergebnis;
-  querverbindungen: string[];
-};
 
 // ─── Scale table types ────────────────────────────────────────────────────
 

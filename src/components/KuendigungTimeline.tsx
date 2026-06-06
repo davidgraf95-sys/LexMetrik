@@ -9,6 +9,8 @@ import type { SperrfristenErgebnis } from '../lib/sperrfristen';
 const TYP_LABEL: Record<string, string> = {
   krankheit_unfall: 'Krankheit/Unfall', schwangerschaft: 'Schwangerschaft',
   militaer_zivil: 'Militär/Zivil', hilfsaktion: 'Hilfsaktion', betreuungsurlaub: 'Betreuungsurlaub',
+  mutterschaftsurlaub_verlaengert: 'Verläng. Mutterschaftsurlaub',
+  zusatzurlaub_tod_elternteil: 'Zusatzurlaub (Tod Elternteil)', urlaub_tod_mutter: 'Urlaub (Tod Mutter)',
 };
 
 const fmt = (iso?: string) => (iso ? iso.split('-').reverse().join('.') : '–');

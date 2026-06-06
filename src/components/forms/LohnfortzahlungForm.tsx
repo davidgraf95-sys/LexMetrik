@@ -223,6 +223,13 @@ export function LohnfortzahlungForm() {
               onChange={(e) => setKtg('schriftlichVereinbart', e.target.checked)} />
             Schriftlich / in GAV-NAV vereinbart (Gültigkeitsvoraussetzung)
           </label>
+          {/* B5-Fix 6.6.2026: Kriterium war in der Engine vorhanden (lohnfortzahlung.ts),
+              aber im UI nie erreichbar — die Checkliste war unvollständig (§8). */}
+          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" checked={form.ktgKriterien?.alleRisikenAbgedeckt ?? true}
+              onChange={(e) => setKtg('alleRisikenAbgedeckt', e.target.checked)} />
+            Alle relevanten Risiken abgedeckt (Krankheit UND Unfall bzw. UVG-Deckung)
+          </label>
         </div>
       )}
 

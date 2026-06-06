@@ -11,6 +11,9 @@ const TYP_LABEL: Record<string, string> = {
   militaer_zivil: 'Militär- / Zivildienst',
   hilfsaktion: 'Hilfsaktion im Ausland',
   betreuungsurlaub: 'Betreuungsurlaub (Art. 329i OR)',
+  mutterschaftsurlaub_verlaengert: 'Verlängerter Mutterschaftsurlaub (lit. cbis)',
+  zusatzurlaub_tod_elternteil: 'Zusatzurlaub nach Tod des anderen Elternteils (lit. cter)',
+  urlaub_tod_mutter: 'Urlaub nach Tod der Mutter (lit. cquinquies)',
 };
 
 const fmtISO = (s: string) => (s ? s.split('-').reverse().join('.') : '–');

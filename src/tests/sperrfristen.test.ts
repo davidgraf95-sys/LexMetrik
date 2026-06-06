@@ -245,3 +245,88 @@ describe('Audit 5.6.2026 – anschliessende Sperrfristen bei Nichtigkeit', () =>
     expect(rechenwegText(r)).toContain('anschliessende weitere Sperrfrist');
   });
 });
+
+// ─── B1/B10-Fixes 6.6.2026 (deklarierte fachliche Erweiterung) ──────────────
+// Art. 336c Abs. 1 lit. cbis/cter/cquinquies (am OR-Cache 20260101 verifiziert)
+// + deterministische Niederkunfts-Berechnung für lit. c.
+
+describe('Audit-Fix B1 – neue Sperrfrist-Tatbestände lit. cbis/cter/cquinquies', () => {
+  it('lit. cbis: Kündigung im verlängerten Mutterschaftsurlaub → nichtig', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      zugangKuendigung: '2025-04-20',
+      sperrereignisse: [
+        { typ: 'mutterschaftsurlaub_verlaengert', von: '2025-03-01', bis: '2025-07-15' },
+      ],
+    });
+    expect(r.status).toBe('nichtig');
+    expect(r.fruehesteNeueKuendigungISO).toBe('2025-07-16');
+    expect(rechenwegText(r)).toContain('Art. 329f Abs. 2');
+  });
+
+  it('lit. cter: Kappung «3 Monate ab Ende der lit.-c-Sperrfrist» greift mit Niederkunftsdatum', () => {
+    // Niederkunft 01.01.2025 → lit.-c-Ende 23.04.2025 → Kappe 23.07.2025.
+    const r = berechneSperrfristen({
+      ...BASE,
+      zugangKuendigung: '2025-02-10', // im Urlaubszeitraum → nichtig; Intervall prüfen
+      sperrereignisse: [
+        { typ: 'zusatzurlaub_tod_elternteil', von: '2025-02-01', bis: '2025-08-31', niederkunft: '2025-01-01' },
+      ],
+    });
+    expect(r.status).toBe('nichtig');
+    expect(r.sperrIntervalle?.[0].bis).toBe('2025-07-23'); // gekappt, nicht 31.08.
+    expect(rechenwegText(r)).toContain('überschreitet die Kappung');
+  });
+
+  it('lit. cter ohne Niederkunftsdatum: Kappung offen, ehrlicher Hinweis', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      zugangKuendigung: '2025-02-10',
+      sperrereignisse: [
+        { typ: 'zusatzurlaub_tod_elternteil', von: '2025-02-01', bis: '2025-08-31' },
+      ],
+    });
+    expect(r.sperrIntervalle?.[0].bis).toBe('2025-08-31');
+    expect(rechenwegText(r)).toContain('NICHT geprüft');
+  });
+
+  it('lit. cquinquies: Kündigung während des Urlaubs nach Tod der Mutter → nichtig', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      zugangKuendigung: '2025-05-01',
+      sperrereignisse: [
+        { typ: 'urlaub_tod_mutter', von: '2025-04-10', bis: '2025-07-17' }, // 14 Wochen ab Tag nach Tod
+      ],
+    });
+    expect(r.status).toBe('nichtig');
+    expect(rechenwegText(r)).toContain('Art. 329gbis');
+  });
+});
+
+describe('Audit-Fix B10 – Schwangerschaft: deterministisches Ende aus Niederkunftsdatum', () => {
+  it('mit Niederkunft: Ende = Niederkunft + 112 Tage (Nutzereingabe «bis» wird ersetzt)', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      zugangKuendigung: '2025-09-01', // innerhalb der berechneten Frist → nichtig
+      sperrereignisse: [
+        // bewusst falsches «bis» (zu früh) — die Engine muss 21.09.2025 rechnen
+        { typ: 'schwangerschaft', von: '2024-10-01', bis: '2025-07-01', niederkunft: '2025-06-01' },
+      ],
+    });
+    expect(r.status).toBe('nichtig');
+    expect(r.sperrIntervalle?.[0].bis).toBe('2025-09-21');
+    expect(rechenwegText(r)).toContain('berechnetes Ende 21.09.2025');
+  });
+
+  it('ohne Niederkunft: Verhalten unverändert («bis» gemäss Eingabe), ehrlich deklariert', () => {
+    const r = berechneSperrfristen({
+      ...BASE,
+      zugangKuendigung: '2025-05-01',
+      sperrereignisse: [
+        { typ: 'schwangerschaft', von: '2024-10-01', bis: '2025-07-01' },
+      ],
+    });
+    expect(r.sperrIntervalle?.[0].bis).toBe('2025-07-01');
+    expect(rechenwegText(r)).toContain('Ende gemäss Eingabe');
+  });
+});
