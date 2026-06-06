@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
-import { sucheTrifft, kartePasst, LEERER_FILTER } from '../lib/katalogSuche';
+import { sucheTrifft, sucheRang, kartePasst, LEERER_FILTER } from '../lib/katalogSuche';
 
 // ─── Suchbegriff-Goldliste (Fahrplan Katalog-UI, Etappe 0.1) ────────────────
 //
@@ -80,6 +80,25 @@ describe('Such-Semantik (Verhaltens-Anker der Extraktion)', () => {
 
   it('Gross-/Kleinschreibung ist egal', () => {
     expect(treffer('RECHTSVORSCHLAG')).toEqual(treffer('rechtsvorschlag'));
+  });
+
+  it('sucheRang ordnet deterministisch: Titel (0) vor Keyword (1/2) vor Norm (3) vor Gebiet (4)', () => {
+    const byId = (id: string) => ALLE_KARTEN.find((k) => k.id === id)!;
+    // Titel-Treffer: «Verzugszins» ist der Kartentitel
+    expect(sucheRang(byId('verzugszins'), 'Verzugszins')).toBe(0);
+    // Keyword exakt: «Mahnung» ist Keyword des Verzugszins-Rechners
+    expect(sucheRang(byId('verzugszins'), 'Mahnung')).toBe(1);
+    // Norm-Treffer (leerzeichen-tolerant): 336c steht nur in den Norm-Pills
+    expect(sucheRang(byId('kuendigung-sperrfristen'), '336c')).toBe(3);
+    // Gebiets-Treffer als letzte Stufe
+    expect(sucheRang(byId('verzugszins'), 'Vertrag & Forderung')).toBe(4);
+    // kein Treffer → null; leere Suche → null (Rang nur bei aktiver Suche)
+    expect(sucheRang(byId('verzugszins'), 'Patentrecht')).toBeNull();
+    expect(sucheRang(byId('verzugszins'), '')).toBeNull();
+    // Konsistenz: Rang ≠ null ⟺ sucheTrifft (gleiche Treffermenge wie vor der Rang-Einführung)
+    ALLE_KARTEN.forEach((k) => {
+      expect(sucheTrifft(k, 'Frist'), k.id).toBe(sucheRang(k, 'Frist') !== null);
+    });
   });
 
   it('nurVerfuegbar blendet Geplantes aus, ändert Verfügbares nicht', () => {

@@ -28,8 +28,8 @@ const proHtml = (url: string) =>
     </MemoryRouter>,
   );
 
-describe('Pro-Katalog: Tabs + Gruppen', () => {
-  it('Default «Verfügbar»: Zähler korrekt, nur verfügbare Karten, Obergruppen als Landkarte', () => {
+describe('Pro-Katalog: Tabs + Kachel-Raster (Umbau 6.6.2026, Auftrag David)', () => {
+  it('Default «Verfügbar»: Zähler korrekt, Gebiets-KACHELN statt Karten-Strom, Obergruppen als Landkarte', () => {
     const html = proHtml('/pro');
     const verf = ALLE_KARTEN.filter((k) => k.tier === 'pro' || k.tier === 'free').filter(istVerfuegbar).length;
     expect(html).toContain(`Verfügbar (${verf})`);
@@ -37,18 +37,42 @@ describe('Pro-Katalog: Tabs + Gruppen', () => {
     // 5er-Gruppen sichtbar (mit Verfügbarem): materiell + prozess + übergreifend
     expect(html).toContain('Zivilrecht (materiell)');
     expect(html).toContain('Zivilprozess &amp; Vollstreckung');
-    // Im Verfügbar-Tab keine geplante Karte (kein «In Vorbereitung»-Badge)
+    // Kacheln sind zu, kein Panel offen: keine Karten, keine Badges sichtbar
+    expect(html).toContain('aria-expanded="false"');
+    expect(html).not.toContain('aria-expanded="true"');
     expect(html).not.toContain('In Vorbereitung</span>');
+    // Kachel trägt die Inhaltsangabe (verfügbare Werkzeug-Titel) + Zähler
+    expect(html).toContain('id="kachel-arbeit"');
+    expect(html).toContain('verfügbar');
     // Hero betont Verfügbares
     expect(html).toContain('sofort verfügbar');
   });
 
-  it('Tab «Gesamter Katalog» (?ansicht=katalog): Fahrplan mit «in Vorbereitung»-Zählern, alle 5 Gruppen', () => {
+  it('Tab «Gesamter Katalog» (?ansicht=katalog): Kacheln mit «in Vorbereitung»-Zählern, alle 5 Gruppen', () => {
     const html = proHtml('/pro?ansicht=katalog');
     expect(html).toContain('in Vorbereitung');
     expect(html).toContain('Öffentliches Recht');
     expect(html).toContain('Strafrecht &amp; Strafprozess');
-    expect(html).toContain('In Vorbereitung</span>'); // geplante Karten sichtbar
+    // auch im Katalog-Tab: Karten erst im geöffneten Panel
+    expect(html).not.toContain('In Vorbereitung</span>');
+  });
+
+  it('?gebiet=arbeit öffnet das Panel unter der Kachel: Karten + Untergruppen sichtbar, URL teilbar', () => {
+    const html = proHtml('/pro?ansicht=katalog&gebiet=arbeit');
+    expect(html).toContain('aria-expanded="true"');
+    expect(html).toContain('id="panel-arbeit"');
+    expect(html).toContain('In Vorbereitung</span>'); // geplante Karten im Panel sichtbar
+    expect(html).toContain('Entwurf</span>');          // gebaute, ungeprüfte ebenso (§8)
+    // Untergruppen-Anatomie bleibt
+    expect(html).toContain('>Rechner<');
+    // nur EIN Panel offen (das angewählte Gebiet)
+    expect(html.match(/id="panel-/g)?.length).toBe(1);
+  });
+
+  it('Verfügbar-Tab + ?gebiet: Panel zeigt nur Verfügbares (kein «In Vorbereitung»-Badge)', () => {
+    const html = proHtml('/pro?gebiet=arbeit');
+    expect(html).toContain('id="panel-arbeit"');
+    expect(html).not.toContain('In Vorbereitung</span>');
   });
 });
 

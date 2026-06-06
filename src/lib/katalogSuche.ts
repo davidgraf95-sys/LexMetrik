@@ -25,17 +25,30 @@ export const LEERER_FILTER: KatalogFilter = {
   nurVerfuegbar: false, suche: '',
 };
 
-/** Trifft die Freitext-Suche diese Karte? (leere Suche trifft immer) */
-export function sucheTrifft(k: CalculatorCard, suche: string): boolean {
+/**
+ * Rang eines Suchtreffers (kleiner = besser), `null` = kein Treffer.
+ * Stufen: 0 Titel · 1 Keyword exakt · 2 Keyword-Teil · 3 Norm · 4 Gebiet.
+ * Die TREFFERMENGE ist identisch mit der bisherigen sucheTrifft-Semantik
+ * (gleiche Felder, gleiche includes-Regeln) — der Rang ordnet sie nur.
+ */
+export function sucheRang(k: CalculatorCard, suche: string): number | null {
   const q = suche.trim().toLowerCase();
-  if (q === '') return true;
+  if (q === '') return null;
+  if (k.title.toLowerCase().includes(q)) return 0;
+  const kw = (k.keywords ?? []).map((t) => t.toLowerCase());
+  if (kw.some((t) => t === q)) return 1;
+  if (kw.some((t) => t.includes(q))) return 2;
   // Normverweise kompakt (ohne Leerzeichen) abgleichen, damit «Art. 335c»,
   // «Art.335c» und «335c» gleichermassen treffen.
   const qKompakt = q.replace(/\s+/g, '');
-  return (
-    [k.title, k.rechtsgebiet, ...(k.keywords ?? [])].some((t) => t.toLowerCase().includes(q)) ||
-    k.norms.some((n) => n.label.toLowerCase().replace(/\s+/g, '').includes(qKompakt))
-  );
+  if (k.norms.some((n) => n.label.toLowerCase().replace(/\s+/g, '').includes(qKompakt))) return 3;
+  if (k.rechtsgebiet.toLowerCase().includes(q)) return 4;
+  return null;
+}
+
+/** Trifft die Freitext-Suche diese Karte? (leere Suche trifft immer) */
+export function sucheTrifft(k: CalculatorCard, suche: string): boolean {
+  return suche.trim() === '' || sucheRang(k, suche) !== null;
 }
 
 /** Gesamtprädikat des Katalogs: Pill-Filter UND Freitext-Suche. */
