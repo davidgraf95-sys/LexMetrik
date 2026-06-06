@@ -1,7 +1,10 @@
-# Recherche-Dossiers — geplante Engines & Vorlagen (Stand 6.6.2026)
+# Recherche-Dossiers — geplante Engines & Vorlagen (Stand 6.6.2026 abends)
 
-Zwölf Dossiers zu allen `geplant`-Einträgen des Katalogs (92 Karten/Szenarien, gruppiert
-nach Rechtsgebiet). Jedes Dossier liefert pro Item: Nutzerfrage · Normbasis (Stand 2026,
+**19 Dossiers:** zwölf Cluster zu allen `geplant`-Einträgen des Katalogs (92 Karten/
+Szenarien, gruppiert nach Rechtsgebiet) plus sieben Einzel-/Vertiefungsdossiers
+(StPO-Rechtsmittel · Strafbefehlsverfahren · Gebühren nicht-vermögensrechtlich ·
+Kündigungs-Masken · Untermietvertrag · Eheschutz/GlG-Zuständigkeit · BGG-Beschwerde
+[seit 6.6.2026 in `bestimmeRechtsmittel` teilverdrahtet]). Jedes Dossier liefert pro Item: Nutzerfrage · Normbasis (Stand 2026,
 Wortlaut am Fedlex-Cache wo verfügbar) · Regelwerk-Skizze · **§2-Beurteilung**
 (deterministisch / parametrisiert / Gerüst / Backlog) · Datenbedarf inkl. Verfallsregister ·
 Fallstricke · Aufwand S/M/L · Wiederverwendung bestehender Engines.

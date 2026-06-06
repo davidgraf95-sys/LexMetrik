@@ -1,7 +1,9 @@
 # Bibliothek — Informationsgrundlagen für LexMetrik
 
 Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
-das (noch) nicht Code ist. 23 Dossiers in 4 Ordnern (Stand 6.6.2026). Regeln:
+das (noch) nicht Code ist. 45 Dossiers in 5 Ordnern (Stand 6.6.2026 abends).
+Verbindlich seit 6.6.2026: **CLAUDE.md §11** — jede Recherche mündet hier in eine
+geordnete, engine-orientierte Übersichtsliste mit INDEX-Eintrag. Regeln:
 
 1. **Nur amtliche Quellen als Beleg**, immer mit URL und Abrufdatum (§7);
    kantonale Erlasse stets in der geltenden konsolidierten Fassung via
@@ -17,10 +19,13 @@ das (noch) nicht Code ist. 23 Dossiers in 4 Ordnern (Stand 6.6.2026). Regeln:
 ```
 bibliothek/
   register/    Quellen-Register (Fedlex-Stände) · Parameter-Verfallsregister
-  normen/      Regelwerke ZPO·SchKG·StPO·Erbrecht — die Engine-Grundlagen
+  normen/      Regelwerke ZPO·SchKG·StPO·Erbrecht·Feiertage — die Engine-Grundlagen
   behoerden/   Gerichte · Schlichtung · Strafverfolgung · Erbgang (je 26 Kantone)
   kosten/      Schlichtungsgebühren · Gerichtskosten Bund · Anwaltstarife
+  recherche/   Dossiers zu geplanten Engines/Vorlagen → eigener INDEX.md dort
 ```
+
+**Recherche-Dossiers (19, Bau-Priorisierung):** [recherche/INDEX.md](recherche/INDEX.md)
 
 ## register/ — fortlaufend gepflegt
 
@@ -54,11 +59,13 @@ bibliothek/
 | [schlichtungsbehoerden-ti-vs-gr-vollerfassung.md](behoerden/schlichtungsbehoerden-ti-vs-gr-vollerfassung.md) | TI 38 Giudicature, VS-Systematik, GR 11 Vermittlerämter | TI 11 Mietbüros entschieden |
 | [schlichtungsaemter-gemeindezuordnung.md](behoerden/schlichtungsaemter-gemeindezuordnung.md) | Gemeinde→Amt für AG/SG/TG/FR/ZG/AI (+ SZ/BL teiloffen) — **Quelle der generierten PLZ→Amt-Daten** (scripts/plz-generieren.ts) | zweifach belegt; SZ/BL am 6.6.2026 GESCHLOSSEN (Itingen→Kreis 13; personengebundene Adressen → Verzeichnis-Fallback bleibt) |
 | [gerichtsadressen-erstliste.md](behoerden/gerichtsadressen-erstliste.md) | Davids CSV (47) + Audit-Trail (21 ✓ / 26 abweichend) | abgeschlossen |
+| [schlichtungsstellen-urls.md](behoerden/schlichtungsstellen-urls.md) | Direktlinks zu Schlichtungsstellen (48/85 WebFetch-verifiziert, 6.6.2026) | einfach belegt |
 
 ### Straf — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Befund 2. Durchgang |
 |---|---|---|
 | [strafbehoerden-kantone.md](behoerden/strafbehoerden-kantone.md) | Staatsanwaltschaften/Jugendanwaltschaften/Übertretungsbehörden 26 Kantone + Bund (BA/AB-BA), EG-StPO-Mapping | SZ-Korrektur (Schmiedgasse 21, JugA Bennau); ALLE Lücken geschlossen (AG-Hausnummern 6.6.; VD-Korrektur: Konstituierung in LMPu 173.21 Art. 3/4; VS LACPP Art. 6/7; JU → OJ statt LiCPP) |
+| [strafgerichte-kantone.md](behoerden/strafgerichte-kantone.md) | Erstinstanzliche Strafgerichte 26 Kantone (Berufungsinstanzen aus obereInstanzen projiziert; BL amtlich Muttenz) | einfach belegt (6.6.2026) |
 
 ### Verwaltung — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Offen |
@@ -92,6 +99,9 @@ bibliothek/
 | strafbehoerden-kantone | `src/data/staatsanwaltschaften.ts` (26 + Bundesanwaltschaft) |
 | schlichtungsbehoerden-* + gemeindezuordnung | `src/data/schlichtungsstellen.ts` · `src/data/schlichtung/*` (PLZ→Amt) · Vorlage Schlichtungsgesuch (SgBehoerdenWahl) |
 | schlichtungsgebuehren + gog (Zivil-Staffeln) | `src/data/zustaendigkeitKosten.ts` (Fahrplan-Kosten) |
+| strafgerichte-kantone | `src/data/strafgerichte.ts` (Straf-Rechtsweg, 6.6.2026) |
+| schlichtungsstellen-urls | `src/data/schlichtungsstellen.ts` (Direktlinks in der UI) |
+| recherche/bgg-beschwerde-engine | `bestimmeRechtsmittel` in `src/lib/zustaendigkeit.ts` (Rechtsmittel-Umbau 6.6.2026: Objekt-/Verfahrens-/Vorinstanz-Weichen, Fristen Art. 100/46 BGG) |
 
 ## Werkzeuge
 

@@ -4,7 +4,7 @@ Alle **datierten Parameter** im Code: Werte, die sich ausserhalb des Repos ände
 und darum regelmässig geprüft werden müssen. Wer einen neuen datierten Wert
 verdrahtet, trägt ihn HIER ein (mit Fundstelle, Stand, Prüfrhythmus).
 
-Stand des Registers: 5.6.2026.
+Stand des Registers: 6.6.2026.
 
 | Parameter | Fundstelle | Wert / Stand | Prüfrhythmus | Nächste Prüfung |
 |---|---|---|---|---|
@@ -13,7 +13,7 @@ Stand des Registers: 5.6.2026.
 | Kantonale Mindestlöhne | `src/lib/vorlagen/arbeitsvertrag.ts` (`AV_MINDESTLOEHNE`) | je Eintrag datiert | **jährlich** (Indexierung per 1.1.) | Jan. 2027 |
 | Formularpflicht-Kantone (Mietzins) | `src/lib/vorlagen/mietvertrag.ts` (`MV_FORMULARPFLICHT`) | BWO 4.2.2026 | jährlich; **BE ändert dynamisch per 1.11.2026** | **1.11.2026 (BE!)** |
 | LIK-Indexreihen | `src/data/likReihe.ts` (`LIK_REIHEN`, bis `LIK_LETZTER_MONAT`) | bis 2026-05 (BFS, abgerufen 5.6.2026) | monatlich/bei Bedarf — `scripts/lik-reihe-generieren.py` | bei Nutzerbedarf |
-| Feiertagsverzeichnis (EJPD) | `src/data/zpoFeiertage.ts` | Stand 2011 (veraltbar, kantonales Recht massgeblich) | bei Gelegenheit / je Kanton vor «geprüft» | offen |
+| Feiertagsverzeichnis (EJPD) | `src/data/zpoFeiertage.ts` | BJ-Liste Stand 2011; **Doppelcheck 26/26 am 6.6.2026** (7 Korrekturen + Fussnotenregeln → `normen/feiertage-kantone-bj.md`) | je Kanton gegen geltendes kantonales Recht vor «geprüft»; bei neuer BJ-Publikation Matrix neu abgleichen | offen (kantonale Erlasse) |
 | BWO-Verzeichnis Miet-Schlichtungsbehörden | noch nicht verdrahtet (Bibliothek: `schlichtungsbehoerden-kantone.md`) | PDF-Stand 13.02.2026 | **jährlich** | Feb. 2027 |
 | Behörden-Stammdaten | `src/lib/vorlagen/behoerden.ts` | je Adresse `stand`-Feld (BS: 5.6.2026) | vor jeder «geprüft»-Hebung; sonst jährlich | — |
 | Fedlex-Konsolidierungsstände | `bibliothek/register/quellen-register.md` | je Gesetz dokumentiert | bei Rechtsänderungen (AS-Publikationen) | bei neuen Aufträgen |
