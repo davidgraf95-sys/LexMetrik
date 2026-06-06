@@ -157,16 +157,23 @@ export function normalisiereEnde(
   // Dreitagesregel, sondern Art. 31 SchKG i.V.m. Art. 142 Abs. 3 ZPO
   // (Verschiebung auf den nächsten Werktag) – BSK-Schmid/Bauer, Art. 63 N. 5.
   if (st.endregel === 'verlaengerung_3wt') {
-    const p = st.periodeFuer(ende);
-    if (p) return { tag: nthWerktagNach(p.bis, 3, kanton), verschoben: true };
-    const d = naechsterWerktag(ende, kanton);
-    // Sa/So/Feiertag unmittelbar VOR Ferienbeginn: die Werktagsverschiebung
-    // darf nicht in die geschlossene Zeit hineinführen. Das verschobene Ende
-    // ist das massgebliche Fristende – fällt es in die Ferien, greift wieder
-    // Art. 63 SchKG (3. Werktag nach deren Ende).
-    const p2 = st.periodeFuer(d);
-    if (p2) return { tag: nthWerktagNach(p2.bis, 3, kanton), verschoben: true };
-    return { tag: d, verschoben: +d !== +ende };
+    // Schleife bis zum stabilen Ergebnis (Review-Befund M-1, 6.6.2026): JEDES
+    // Zwischenergebnis ist das massgebliche Fristende und wird erneut geprüft —
+    // (a) die Werktagsverschiebung (Art. 31 SchKG i.V.m. Art. 142 Abs. 3 ZPO)
+    //     darf nicht in geschlossene Zeit hineinführen (Sa/So vor Ferienbeginn),
+    // (b) der 3. Werktag nach Periodenende (Art. 63 SchKG) kann in einen NICHT
+    //     angrenzenden Rechtsstillstand fallen (die Verbund-Hülle merged nur
+    //     angrenzende Perioden) — dann greift Art. 63 erneut.
+    let d = ende;
+    let verschoben = false;
+    for (let guard = 0; guard < 12; guard++) {
+      const p = st.periodeFuer(d);
+      if (p) { d = nthWerktagNach(p.bis, 3, kanton); verschoben = true; continue; }
+      const w = naechsterWerktag(d, kanton);
+      if (+w !== +d) { d = w; verschoben = true; continue; }
+      break;
+    }
+    return { tag: d, verschoben };
   }
 
   // ruhen_weiter (ZPO) und nur_werktag: gemeinsame Schleife. Bei ruhen_weiter

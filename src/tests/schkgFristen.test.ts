@@ -129,6 +129,20 @@ describe('SchKG-Fristenrechner', () => {
     expect(r.diesAdQuem).toBe('12.07.2024');
   });
 
+  // Regression (Review-Befund M-1, 6.6.2026): Der 3. Werktag nach Ferienende
+  // fällt in einen NICHT angrenzenden Rechtsstillstand — Art. 63 greift erneut.
+  it('3. Werktag nach Weihnachtsferien fällt in separaten Rechtsstillstand → erneut Art. 63', () => {
+    // 5 Tage ab 15.12.2024: Ende in Weihnachtsferien (18.12.–1.1.) → 3. Werktag
+    // nach 1.1.2025 wäre Di 7.1. (2.1. Berchtoldstag ZH, 3.1. Fr = 1, 6.1. Mo = 2,
+    // 7.1. = 3) — liegt aber im Rechtsstillstand 6.–10.1. → 3. Werktag nach
+    // Fr 10.1.: Mo 13.1. (1), Di 14.1. (2), Mi 15.1.2025 (3).
+    const r = berechneSchkgFrist(base({
+      ereignis: '2024-12-15', laenge: 5,
+      rechtsstillstandVon: '2025-01-06', rechtsstillstandBis: '2025-01-10',
+    }));
+    expect(r.diesAdQuem).toBe('15.01.2025');
+  });
+
   it('Rechtsstillstand-Eingabe ausserhalb des Betreibungsferien-Regimes erzeugt eine Warnung', () => {
     const r = berechneSchkgFrist(base({
       modus: 'zpo_stillstand', rechtsstillstandVon: '2025-07-20', rechtsstillstandBis: '2025-08-10',
