@@ -68,5 +68,5 @@ sind QUERSCHNITTE — also §10-Rahmenarbeit, kein Einzelbau.
 - [x] 1.2 Aktenzeichen → PDF (14 Formen) — erledigt 6.6.2026
 - [x] 1.3 Permalink (alle 13 Rechner) — erledigt 6.6.2026
 - [x] 2.1 Prefill-Brücken a/b/c — erledigt 6.6.2026
-- [ ] 2.2 Begründungs-Absatz (geteilte Komponente + 13 Texte)
+- [x] 2.2 Begründungs-Absatz (geteilte Komponente, 13 Rechner) — erledigt 6.6.2026
 - [ ] 3.1 Fristenspiegel (Konzept-Dossier → Rahmen → Andocken)
