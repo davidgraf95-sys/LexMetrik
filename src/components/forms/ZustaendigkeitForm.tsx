@@ -1013,7 +1013,12 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                     titel: 'Scheidungsbegehren / Scheidungsklage',
                     zusatz: 'Örtlich zuständig ist das Gericht am Wohnsitz einer der Parteien (zwingend, Art. 23 ZPO); das konkrete Gericht richtet sich nach kantonalem Recht (Art. 4 ZPO).' };
             const k = 'karte' in ziel ? ziel.karte : undefined;
-            const gebaut = k && k.status !== 'geplant' && k.href;
+            // K-2-Fix Bug-Check 6.6.2026: Die klage-vereinfacht-Vorlage ist
+            // BS-spezifisch (Schema klage-vereinfacht-bs, BS-Gerichtsrouting) —
+            // für andere Kantone wäre Titel + Prefill-Link irreführend (§8).
+            // Nicht-BS → ehrlich «in Vorbereitung», kein Link.
+            const kantonsfremd = k?.id === 'klage-vereinfacht' && f.kanton !== 'BS';
+            const gebaut = k && k.status !== 'geplant' && k.href && !kantonsfremd;
             // Prefill-Brücken: BS-Schlichtungsgesuch (bestehend) und
             // klage-vereinfacht (2.1b — Materie + Streitwert reisen mit).
             const kvMaterie: KvMaterie | null = k?.id === 'klage-vereinfacht'
@@ -1036,7 +1041,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                 <p className="lc-overline">Passende Vorlage für Ihre Eingabe</p>
                 <p className="text-body-s text-ink-900 font-medium">
                   {k ? k.title : (ziel as { titel: string }).titel}
-                  {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">In Vorbereitung</span>}
+                  {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">{kantonsfremd ? `Für ${f.kanton} in Vorbereitung` : 'In Vorbereitung'}</span>}
                 </p>
                 {ziel.zusatz && <p className="text-body-s text-ink-700">{ziel.zusatz}</p>}
                 {linkZiel ? (
@@ -1050,7 +1055,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                   </div>
                 ) : (
                   <p className="text-xs text-ink-500">
-                    Diese Vorlage ist noch nicht verfügbar — die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.
+                    {kantonsfremd
+                      ? `Die gebaute Vorlage deckt zurzeit Basel-Stadt ab (BS-Gerichtsrouting) — für ${f.kanton} ist sie in Vorbereitung. Die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.`
+                      : 'Diese Vorlage ist noch nicht verfügbar — die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.'}
                   </p>
                 )}
               </div>
