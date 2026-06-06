@@ -26,6 +26,8 @@ export type SpiegelZeile = {
   status: 'berechnet' | 'ausgeschlossen' | 'bedingt' | 'hinweis';
   endeISO?: string;    // yyyy-MM-dd (für .ics/Sortierung)
   endeText?: string;   // dd.MM.yyyy (Anzeige, exakt der Engine-Output)
+  /** Anzeige-Präfix vor dem Datum — Default 'bis'; Wartefristen: 'frühestens ab'. */
+  endePraefix?: string;
   /** Weiche/Gate als Klartext (§8) */
   bedingung?: string;
 };

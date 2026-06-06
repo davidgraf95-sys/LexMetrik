@@ -71,9 +71,17 @@ export function sperrfristenLink(teil: Partial<SperrfristenInput>): string {
 
 import type { VermieterkuendigungSpiegelInput } from './fristenspiegel/vermieterkuendigung';
 import type { ZivilentscheidSpiegelInput } from './fristenspiegel/zivilentscheid';
+import type { KlagebewilligungSpiegelInput } from './fristenspiegel/klagebewilligung';
+import type { ErbgangSpiegelInput } from './fristenspiegel/erbgang';
 
-export const FSP_LINK_SPEC: PermalinkSpec<{ ereignis: string } & Partial<VermieterkuendigungSpiegelInput> & Partial<ZivilentscheidSpiegelInput> & Record<string, unknown>> = {
-  ereignis: { p: 'ev', typ: 'str', gueltig: einerVon('vermieterkuendigung', 'zivilentscheid') },
+type FspFelder = { ereignis: string }
+  & Partial<VermieterkuendigungSpiegelInput>
+  & Partial<ZivilentscheidSpiegelInput>
+  & Partial<KlagebewilligungSpiegelInput>
+  & Partial<ErbgangSpiegelInput>;
+
+export const FSP_LINK_SPEC: PermalinkSpec<FspFelder & Record<string, unknown>> = {
+  ereignis: { p: 'ev', typ: 'str', gueltig: einerVon('vermieterkuendigung', 'zivilentscheid', 'zahlungsbefehl', 'klagebewilligung', 'erbgang') },
   kanton: { p: 'k', typ: 'str', gueltig: istKanton },
   // A.4 Vermieter-Kündigung
   zugang: { p: 'z', typ: 'str', gueltig: istISO },
@@ -87,12 +95,13 @@ export const FSP_LINK_SPEC: PermalinkSpec<{ ereignis: string } & Partial<Vermiet
   familienSummarsache: { p: 'fs', typ: 'bool' },
   mietOderArbeit: { p: 'ma', typ: 'bool' },
   nurDispositiv: { p: 'nd', typ: 'bool' },
+  // A.7 Klagebewilligung · A.6 Erbgang (3.1d)
+  mietOderPacht: { p: 'mp', typ: 'bool' },
+  erbenstellung: { p: 'es', typ: 'str', gueltig: einerVon('gesetzlich', 'eingesetzt') },
 };
 
-/** Vereinigte Link-Felder beider Spiegel-Ereignisse; `ereignis` wählt den Zweig. */
-export type FspLink = { ereignis: string }
-  & Partial<VermieterkuendigungSpiegelInput>
-  & Partial<ZivilentscheidSpiegelInput>;
+/** Vereinigte Link-Felder aller Spiegel-Ereignisse; `ereignis` wählt den Zweig. */
+export type FspLink = FspFelder;
 
 /** Vorbefüllter Link in den Fristenspiegel (Brücken-Ziel, z. B. aus dem Mietrechner). */
 export function fristenspiegelLink(teil: Partial<FspLink>): string {

@@ -182,6 +182,79 @@ describe('Fristenspiegel A.1: Zivilentscheid — Weiche aus bestimmeRechtsmittel
   });
 });
 
+describe('Fristenspiegel A.2/A.7/A.6: Preset-Parameter-Identität (§5) + Multi-Trigger-Ehrlichkeit (§1)', async () => {
+  const { berechneZahlungsbefehlsSpiegel } = await import('../lib/fristenspiegel/zahlungsbefehl');
+  const { berechneKlagebewilligungsSpiegel } = await import('../lib/fristenspiegel/klagebewilligung');
+  const { berechneErbgangsSpiegel } = await import('../lib/fristenspiegel/erbgang');
+  const { berechneSchkgFrist } = await import('../lib/schkgFristen');
+  const { PRESETS_SCHKG } = await import('../lib/schkgPresets');
+  const { berechneFrist } = await import('../lib/zpoFristen');
+  const { PRESETS } = await import('../lib/zpoPresets');
+  const { berechneErbFrist } = await import('../lib/erbFristen');
+
+  it('A.2 Zahlungsbefehl: RV + Art.-88-Dual == direkte Engine mit den Preset-Parametern', () => {
+    // Zustellung 5.7. → Betreibungsferien (15.7.–31.7.) greifen in die Fristen
+    const e = berechneZahlungsbefehlsSpiegel({ zustellung: '2026-07-05', kanton: 'ZH' });
+    const rv = PRESETS_SCHKG.find((p) => p.key === 'rechtsvorschlag')!;
+    const fb = PRESETS_SCHKG.find((p) => p.key === 'fortsetzungsbegehren')!;
+    expect(rv).toMatchObject({ einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien' });
+    expect(fb.wartefrist).toEqual({ einheit: 'tage', laenge: 20 });
+    expect(fb.verwirkung).toEqual({ einheit: 'jahre', laenge: 1 });
+
+    const rvDirekt = berechneSchkgFrist({ ereignis: '2026-07-05', einheit: rv.einheit!, laenge: rv.laenge!, modus: rv.modus, fristnatur: rv.fristnatur, kanton: 'ZH', ausloeser: rv.ausloeser });
+    const warteDirekt = berechneSchkgFrist({ ereignis: '2026-07-05', einheit: 'tage', laenge: 20, modus: fb.modus, fristnatur: 'wartefrist', kanton: 'ZH', ausloeser: fb.ausloeser });
+    const verwDirekt = berechneSchkgFrist({ ereignis: '2026-07-05', einheit: 'jahre', laenge: 1, modus: fb.modus, fristnatur: 'verwirkung', kanton: 'ZH', ausloeser: fb.ausloeser });
+
+    expect(e.zeilen.find((z) => z.key === 'rechtsvorschlag')!.endeText).toBe(rvDirekt.diesAdQuem);
+    const warte = e.zeilen.find((z) => z.key === 'fortsetzung_warte')!;
+    expect(warte.endeText).toBe(warteDirekt.diesAdQuem);
+    expect(warte.endePraefix).toBe('frühestens ab');   // Wartefrist ≠ «bis»
+    expect(warte.status).toBe('bedingt');               // nur ohne RV
+    const verw = e.zeilen.find((z) => z.key === 'fortsetzung_verwirkung')!;
+    expect(verw.endeText).toBe(verwDirekt.diesAdQuem);
+    expect(verw.bedingung).toContain('Art. 88 Abs. 2'); // Hemmung offengelegt
+    // Rechtsöffnung/Aberkennung nur als Folgestufe ohne Datum
+    expect(e.zeilen.find((z) => z.key === 'rechtsoeffnung')!.endeISO).toBeUndefined();
+    // Wechselbetreibung als Annahme offengelegt (Art. 56 Ziff. 2)
+    expect(e.annahmen.join(' ')).toContain('WECHSELbetreibung');
+    expect(berechneZahlungsbefehlsSpiegel({ zustellung: '2026-07-05', kanton: 'ZH' })).toEqual(e);
+  });
+
+  it('A.7 Klagebewilligung: Miete/Pacht-Weiche wählt das Preset (3 Monate vs. 30 Tage)', () => {
+    const normal = berechneKlagebewilligungsSpiegel({ zustellung: '2026-07-01', kanton: 'BE', mietOderPacht: false });
+    const miete = berechneKlagebewilligungsSpiegel({ zustellung: '2026-07-01', kanton: 'BE', mietOderPacht: true });
+    const p3m = PRESETS.find((p) => p.key === 'klagebewilligung')!;
+    const p30 = PRESETS.find((p) => p.key === 'klagefrist_miete')!;
+    const direkt3m = berechneFrist({ ereignis: '2026-07-01', einheit: p3m.einheit, laenge: p3m.laenge!, verfahren: p3m.verfahren, kanton: 'BE', fristnatur: p3m.fristnatur });
+    const direkt30 = berechneFrist({ ereignis: '2026-07-01', einheit: p30.einheit, laenge: p30.laenge!, verfahren: p30.verfahren, kanton: 'BE', fristnatur: p30.fristnatur });
+    expect(normal.zeilen[0].endeText).toBe(direkt3m.diesAdQuem);
+    expect(normal.zeilen[0].normRef).toBe('Art. 209 Abs. 3 ZPO');
+    expect(miete.zeilen[0].endeText).toBe(direkt30.diesAdQuem);
+    expect(miete.zeilen[0].normRef).toBe('Art. 209 Abs. 4 ZPO');
+    // Preset-Vorbehalt (Prosekutions-Stillstand offen) wird durchgereicht (§8)
+    expect(normal.warnungen.join(' ')).toContain('nicht abschliessend geklärt');
+  });
+
+  it('A.6 Erbgang: Ausschlagung+Inventar parallel (gleicher Trigger); Klagen NUR als Hinweis (anderer Trigger, §1)', () => {
+    const e = berechneErbgangsSpiegel({ datum: '2026-06-06', kanton: 'ZH', erbenstellung: 'gesetzlich' });
+    const ausDirekt = berechneErbFrist({ key: 'ausschlagung_gesetzlich', trigger: '2026-06-06', werktagsVerschiebung: true, kanton: 'ZH' });
+    const invDirekt = berechneErbFrist({ key: 'oeff_inventar_begehren', trigger: '2026-06-06', werktagsVerschiebung: true, kanton: 'ZH' });
+    expect(e.zeilen.find((z) => z.key === 'ausschlagung')!.endeText).toBe(ausDirekt.resultat.endDatum);
+    expect(e.zeilen.find((z) => z.key === 'inventar')!.endeText).toBe(invDirekt.resultat.endDatum);
+    // Multi-Trigger-Ehrlichkeit: Ungültigkeit/Herabsetzung OHNE gerechnetes Datum
+    for (const key of ['ungueltigkeit', 'herabsetzung']) {
+      const z = e.zeilen.find((x) => x.key === key)!;
+      expect(z.status).toBe('hinweis');
+      expect(z.endeISO).toBeUndefined();
+      expect(z.bedingung).toContain('Anderer Auslöser');
+    }
+    // eingesetzte Erbin: anderes Preset (amtliche Mitteilung)
+    const eing = berechneErbgangsSpiegel({ datum: '2026-06-06', kanton: 'ZH', erbenstellung: 'eingesetzt' });
+    expect(eing.zeilen.find((z) => z.key === 'ausschlagung')!.label).toContain('eingesetzte');
+    expect(eing.annahmen.join(' ')).toContain('amtlichen Mitteilung');
+  });
+});
+
 describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
   it('icsFuerFrist ist nach der Helfer-Hebung BYTE-IDENTISCH (Anker vor dem Umbau erfasst)', () => {
     const out = icsFuerFrist({

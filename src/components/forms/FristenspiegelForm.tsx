@@ -14,6 +14,9 @@ import {
   type VermieterkuendigungSpiegelInput,
 } from '../../lib/fristenspiegel/vermieterkuendigung';
 import { berechneZivilentscheidsSpiegel } from '../../lib/fristenspiegel/zivilentscheid';
+import { berechneZahlungsbefehlsSpiegel } from '../../lib/fristenspiegel/zahlungsbefehl';
+import { berechneKlagebewilligungsSpiegel } from '../../lib/fristenspiegel/klagebewilligung';
+import { berechneErbgangsSpiegel } from '../../lib/fristenspiegel/erbgang';
 import type { Fristnatur, FristenspiegelErgebnis, SpiegelZeile } from '../../lib/fristenspiegel/typen';
 import type { Kanton } from '../../types/legal';
 
@@ -23,12 +26,16 @@ import type { Kanton } from '../../types/legal';
 // Engines); hier wird nichts gerechnet. Ereignisse gemäss Konzept-Dossier:
 // A.4 Vermieter-Kündigung (Pilot) · A.1 Zivilentscheid; weitere folgen.
 
-type Ereignis = 'vermieterkuendigung' | 'zivilentscheid';
+type Ereignis = 'vermieterkuendigung' | 'zivilentscheid' | 'zahlungsbefehl' | 'klagebewilligung' | 'erbgang';
 
 const EREIGNISSE: { code: Ereignis; label: string }[] = [
-  { code: 'vermieterkuendigung', label: 'Zugang einer Vermieter-Kündigung (Wohn-/Geschäftsräume)' },
   { code: 'zivilentscheid', label: 'Zustellung eines erstinstanzlichen Zivilentscheids' },
+  { code: 'zahlungsbefehl', label: 'Zustellung des Zahlungsbefehls' },
+  { code: 'klagebewilligung', label: 'Zustellung der Klagebewilligung' },
+  { code: 'vermieterkuendigung', label: 'Zugang einer Vermieter-Kündigung (Wohn-/Geschäftsräume)' },
+  { code: 'erbgang', label: 'Kenntnis des Erbgangs / Todesfall' },
 ];
+const EREIGNIS_CODES = EREIGNISSE.map((e) => e.code);
 
 const NATUR_LABEL: Record<Fristnatur, string> = {
   gesetzlich: 'gesetzliche Frist', gerichtlich: 'gerichtliche Frist',
@@ -60,7 +67,7 @@ function ZeileAnzeige({ z }: { z: SpiegelZeile }) {
       <div className="flex items-center gap-3 sm:justify-end">
         {z.status === 'berechnet' || (z.status === 'bedingt' && z.endeText) ? (
           <>
-            <span className="num text-body-l font-semibold text-ink-900 whitespace-nowrap">bis {z.endeText}</span>
+            <span className="num text-body-l font-semibold text-ink-900 whitespace-nowrap">{z.endePraefix ?? 'bis'} {z.endeText}</span>
             <IcsExportButton endISO={z.endeISO} titel={z.label} className="lc-btn-outline lc-btn-sm"
               dateiName={`${z.key}.ics`} beschreibung={`${z.normRef} — LexMetrik Fristenspiegel`} />
           </>
@@ -81,7 +88,8 @@ export function FristenspiegelForm() {
     catch { return {}; }
   }, []);
 
-  const [ereignis, setEreignis] = useState<Ereignis>(start.ereignis === 'zivilentscheid' ? 'zivilentscheid' : 'vermieterkuendigung');
+  const [ereignis, setEreignis] = useState<Ereignis>(
+    EREIGNIS_CODES.includes(start.ereignis as Ereignis) ? (start.ereignis as Ereignis) : 'zivilentscheid');
   const [kanton, setKanton] = useState<Kanton>((start.kanton as Kanton) ?? 'ZH');
 
   // ── A.4 Vermieter-Kündigung ──
@@ -99,6 +107,10 @@ export function FristenspiegelForm() {
   const [nurDispositiv, setNurDispositiv] = useState<boolean>(start.nurDispositiv ?? false);
   const streitwert = streitwertRoh.trim() === '' ? null : Number(streitwertRoh);
 
+  // ── A.7 Klagebewilligung · A.6 Erbgang ──
+  const [mietOderPacht, setMietOderPacht] = useState<boolean>(start.mietOderPacht ?? false);
+  const [erbenstellung, setErbenstellung] = useState<'gesetzlich' | 'eingesetzt'>(start.erbenstellung ?? 'gesetzlich');
+
   const istISO = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
   const ergebnis: FristenspiegelErgebnis | null = useMemo(() => {
@@ -108,6 +120,9 @@ export function FristenspiegelForm() {
         return berechneVermieterkuendigungsSpiegel({ zugang, objekt, kanton, kuendigungsart });
       }
       if (!istISO(zustellung)) return null;
+      if (ereignis === 'zahlungsbefehl') return berechneZahlungsbefehlsSpiegel({ zustellung, kanton });
+      if (ereignis === 'klagebewilligung') return berechneKlagebewilligungsSpiegel({ zustellung, kanton, mietOderPacht });
+      if (ereignis === 'erbgang') return berechneErbgangsSpiegel({ datum: zustellung, kanton, erbenstellung });
       if (vermoegensrechtlich && (streitwert === null || !Number.isFinite(streitwert))) return null;
       return berechneZivilentscheidsSpiegel({
         zustellung, kanton, vermoegensrechtlich,
@@ -116,7 +131,7 @@ export function FristenspiegelForm() {
         mietOderArbeit, nurDispositiv,
       });
     } catch { return null; }
-  }, [ereignis, zugang, objekt, kanton, kuendigungsart, zustellung, vermoegensrechtlich, streitwert, verfahren, familienSummarsache, mietOderArbeit, nurDispositiv]);
+  }, [ereignis, zugang, objekt, kanton, kuendigungsart, zustellung, vermoegensrechtlich, streitwert, verfahren, familienSummarsache, mietOderArbeit, nurDispositiv, mietOderPacht, erbenstellung]);
 
   const sammelIcs = () => {
     if (!ergebnis) return;
@@ -130,9 +145,15 @@ export function FristenspiegelForm() {
     URL.revokeObjectURL(url);
   };
 
-  const linkWerte = () => ereignis === 'vermieterkuendigung'
-    ? { ereignis, kanton, zugang, objekt, kuendigungsart }
-    : { ereignis, kanton, zustellung, vermoegensrechtlich, streitwertCHF: vermoegensrechtlich ? streitwert ?? undefined : undefined, verfahren, familienSummarsache, mietOderArbeit, nurDispositiv };
+  const linkWerte = () => {
+    switch (ereignis) {
+      case 'vermieterkuendigung': return { ereignis, kanton, zugang, objekt, kuendigungsart };
+      case 'zahlungsbefehl': return { ereignis, kanton, zustellung };
+      case 'klagebewilligung': return { ereignis, kanton, zustellung, mietOderPacht };
+      case 'erbgang': return { ereignis, kanton, zustellung, erbenstellung };
+      default: return { ereignis, kanton, zustellung, vermoegensrechtlich, streitwertCHF: vermoegensrechtlich ? streitwert ?? undefined : undefined, verfahren, familienSummarsache, mietOderArbeit, nurDispositiv };
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -165,7 +186,7 @@ export function FristenspiegelForm() {
               </select>
             </Field>
           </>
-        ) : (
+        ) : ereignis === 'zivilentscheid' ? (
           <>
             <Field label="Ereignisdatum" hint={nurDispositiv ? 'Eröffnung des Dispositivs' : 'Zustellung des begründeten Entscheids'}>
               <DatumsFeld value={zustellung} onChange={setZustellung} aria-label="Zustellung des Entscheids" />
@@ -209,6 +230,38 @@ export function FristenspiegelForm() {
                   nur das Dispositiv wurde eröffnet (Art. 239 ZPO — zuerst Begründung verlangen)
                 </label>
               </div>
+            </Field>
+          </>
+        ) : (
+          <>
+            <Field label="Ereignisdatum"
+              hint={ereignis === 'zahlungsbefehl' ? 'Zustellung des Zahlungsbefehls'
+                : ereignis === 'klagebewilligung' ? 'Eröffnung/Zustellung der Klagebewilligung'
+                : erbenstellung === 'gesetzlich' ? 'Kenntnis vom Tod des Erblassers (Art. 567 Abs. 2 ZGB)'
+                : 'Zugang der amtlichen Mitteilung von der Verfügung (Art. 567 Abs. 2 ZGB)'}>
+              <DatumsFeld value={zustellung} onChange={setZustellung} aria-label="Ereignisdatum" />
+            </Field>
+            {ereignis === 'klagebewilligung' && (
+              <Field label="Streitsache">
+                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 mt-2">
+                  <input type="checkbox" checked={mietOderPacht} onChange={(e) => setMietOderPacht(e.target.checked)} />
+                  Miete/Pacht von Wohn- und Geschäftsräumen bzw. landw. Pacht (30 Tage, Art. 209 Abs. 4 ZPO)
+                </label>
+              </Field>
+            )}
+            {ereignis === 'erbgang' && (
+              <Field label="Erbenstellung" hint="bestimmt den Fristbeginn (Art. 567 Abs. 2 ZGB)">
+                <select value={erbenstellung} onChange={(e) => setErbenstellung(e.target.value as 'gesetzlich' | 'eingesetzt')} className={inputCls}>
+                  <option value="gesetzlich">gesetzliche Erbin / gesetzlicher Erbe</option>
+                  <option value="eingesetzt">eingesetzte Erbin / eingesetzter Erbe</option>
+                </select>
+              </Field>
+            )}
+            <Field label="Kanton"
+              hint={ereignis === 'zahlungsbefehl' ? 'staatlich anerkannte Feiertage (Endregel)' : 'Feiertage für die Werktags-/Endregel'}>
+              <select value={kanton} onChange={(e) => setKanton(e.target.value as Kanton)} className={inputCls}>
+                {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+              </select>
             </Field>
           </>
         )}
