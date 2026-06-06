@@ -774,6 +774,14 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
     normverweise.push({ artikel: 'Art. 74 BGG' }, { artikel: 'Art. 113 BGG' });
   }
 
+  // Plausibilisierung Direktklage (Review-Befund N-1, 6.6.2026): Art. 8 Abs. 1
+  // ZPO setzt einen Streitwert von mindestens 100 000 Franken voraus — eine
+  // Eingabe darunter ist faktisch unmöglich und wird offengelegt statt still
+  // akzeptiert (§8).
+  if (vorinstanz === 'direktklage_oberes_gericht' && sw !== null && sw < 100_000) {
+    weichen.push(`Eingabe prüfen: Die Direktklage beim oberen Gericht setzt einen Streitwert von mindestens CHF 100'000 voraus (Art. 8 Abs. 1 ZPO) — angegeben sind CHF ${sw.toLocaleString('de-CH')}. Lag der Streitwert vor der Vorinstanz tatsächlich darunter, war Art. 8 nicht der richtige Weg.`);
+  }
+
   // Zwischenentscheid-Weiche ans BGer (Art. 92/93 BGG — Wortlaut-verifiziert):
   // Zuständigkeit/Ausstand sofort UND zwingend (Art. 92); andere nur bei nicht
   // wieder gutzumachendem Nachteil oder sofortigem Endentscheid (Art. 93).

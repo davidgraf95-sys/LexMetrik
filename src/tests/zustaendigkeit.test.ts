@@ -466,6 +466,13 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
     expect(r.kantonal).toBe('entfaellt_einzige_instanz');
     expect(r.bger).toBe('zulaessig');
   });
+  it('Direktklage unter CHF 100\'000: Plausibilitäts-Weiche statt stiller Akzeptanz (N-1-Fix)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel(basis(5_000, { rmVorinstanz: 'direktklage_oberes_gericht' }));
+    expect(r.weichen.some((w) => w.includes("Art. 8 Abs. 1 ZPO"))).toBe(true);
+    const ok = bestimmeRechtsmittel(basis(150_000, { rmVorinstanz: 'direktklage_oberes_gericht' }));
+    expect(ok.weichen.some((w) => w.includes('Art. 8'))).toBe(false);
+  });
   it('vorsorgliche Massnahme: kantonal berufungsfähig (Art. 308 Abs. 1 lit. b); BGer OHNE Stillstand (Art. 46 Abs. 2 lit. a) + Art.-98-Kognition', async () => {
     const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
     const r = bestimmeRechtsmittel(basis(20_000, { rmObjekt: 'vorsorgliche_massnahme' }));
