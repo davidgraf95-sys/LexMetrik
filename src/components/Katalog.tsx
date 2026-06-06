@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN, istVerfuegbar, karte, type CalculatorCard } from '../lib/startseiteConfig';
 import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
 import { ladeZuletzt, merkeZuletzt } from '../lib/schnellzugriff';
+import { kartePasst } from '../lib/katalogSuche';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 import { Tabs } from './ui/Tabs';
@@ -292,17 +293,10 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
   const toggleArt = toggleIn(setArten);
 
   const q = suche.trim().toLowerCase();
-  // Normverweise kompakt (ohne Leerzeichen) abgleichen, damit «Art. 335c»,
-  // «Art.335c» und «335c» gleichermassen treffen.
-  const qKompakt = q.replace(/\s+/g, '');
+  // Treffer-Semantik lebt in lib/katalogSuche.ts (Etappe 0.1) — dieselbe
+  // Logik, gegen die auch die Suchbegriff-Goldliste testet.
   const passt = (k: CalculatorCard) =>
-    (gebiete.size === 0 || gebiete.has(k.rechtsgebiet)) &&
-    (bereiche.size === 0 || bereiche.has(k.rechtsbereich)) &&
-    (arten.size === 0 || arten.has(k.art)) &&
-    (!nurGeprueft || k.status !== 'geplant') &&
-    (q === '' ||
-      [k.title, k.rechtsgebiet, ...(k.keywords ?? [])].some((t) => t.toLowerCase().includes(q)) ||
-      k.norms.some((n) => n.label.toLowerCase().replace(/\s+/g, '').includes(qKompakt)));
+    kartePasst(k, { gebiete, bereiche, arten, nurVerfuegbar: nurGeprueft, suche });
 
   // Tab «Verfügbar» blendet Geplantes aus – Daten bleiben unverändert.
   const basisKarten = ansicht === 'verfuegbar' ? karten.filter(istVerfuegbar) : karten;
