@@ -1033,6 +1033,31 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Arbeitsvertrag', 'Probezeit', 'Konkurrenzverbot', 'Überstunden', '13. Monatslohn', 'Art. 319', 'Art. 335c'],
     icon: 'document',
   },
+  // Maske 2a der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
+  // gebaut 6.6.2026): Mietengine LIVE; Familienwohnung-Nichtigkeit = Blocker.
+  'kuendigung-mieter': {
+    id: 'kuendigung-mieter', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Miete',
+    rechtsbereich: 'privat',
+    title: 'Kündigung durch Mieter:in',
+    description: 'Kündigungsschreiben für das Mietverhältnis mit live berechnetem Endtermin (Vertrag → Ortsgebrauch → Gesetz), Familienwohnung-Schutz (Art. 266m OR, zweite Unterschrift) und ausserterminlicher Rückgabe mit Nachmieter-Vorschlag (Art. 264 OR).',
+    status: 'entwurf',
+    norms: [
+      // Art. 266a OR – Termine und Fristen (verfehlter Termin Abs. 2)
+      { label: 'Art. 266a OR', url: fedlexUrl('OR', '266a'), verified: false },
+      // Art. 266l OR – Schriftform (Wohn-/Geschäftsräume)
+      { label: 'Art. 266l OR', url: fedlexUrl('OR', '266l'), verified: false },
+      // Art. 266m OR – Wohnung der Familie (Zustimmung)
+      { label: 'Art. 266m OR', url: fedlexUrl('OR', '266m'), verified: false },
+      // Art. 264 OR – vorzeitige Rückgabe (Nachmieter)
+      { label: 'Art. 264 OR', url: fedlexUrl('OR', '264'), verified: false },
+    ],
+    href: '/vorlagen/kuendigung-mieter',
+    schemaId: 'kuendigung-mieter',
+    formvorschrift: 'Schriftform bei Wohn-/Geschäftsräumen (Art. 266l Abs. 1 OR) — unterschreiben; Familienwohnung: beide unterschreiben.',
+    output: ['pdf', 'docx'],
+    related: ['mietrecht', 'mietvertrag-wohnen', 'mietzinsanpassung'],
+    keywords: ['Kündigung', 'Mietvertrag', 'Wohnung kündigen', 'Kündigungstermin', 'Familienwohnung', 'Nachmieter', 'Art. 264', 'Art. 266m'],
+  },
   'mietvertrag-wohnen': {
     id: 'mietvertrag-wohnen', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Miete',
     rechtsbereich: 'privat',

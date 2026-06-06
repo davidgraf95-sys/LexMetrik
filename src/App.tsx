@@ -32,6 +32,7 @@ const VorlageVollmacht = lazy(() => import('./pages/VorlageVollmacht').then((m) 
 const VorlageKlageVereinfacht = lazy(() => import('./pages/VorlageKlageVereinfacht').then((m) => ({ default: m.VorlageKlageVereinfacht })));
 const VorlageKuendigungArbeitnehmer = lazy(() => import('./pages/VorlageKuendigungArbeitnehmer').then((m) => ({ default: m.VorlageKuendigungArbeitnehmer })));
 const VorlageKuendigungArbeitgeber = lazy(() => import('./pages/VorlageKuendigungArbeitgeber').then((m) => ({ default: m.VorlageKuendigungArbeitgeber })));
+const VorlageKuendigungMieter = lazy(() => import('./pages/VorlageKuendigungMieter').then((m) => ({ default: m.VorlageKuendigungMieter })));
 const RechnerStub = lazy(() => import('./pages/RechnerStub').then((m) => ({ default: m.RechnerStub })));
 const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
 const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
@@ -98,6 +99,7 @@ export default function App() {
         <Route path="/vorlagen/klage-vereinfacht" element={<VorlageKlageVereinfacht />} />
         <Route path="/vorlagen/kuendigung-arbeitnehmer" element={<VorlageKuendigungArbeitnehmer />} />
         <Route path="/vorlagen/kuendigung-arbeitgeber" element={<VorlageKuendigungArbeitgeber />} />
+        <Route path="/vorlagen/kuendigung-mieter" element={<VorlageKuendigungMieter />} />
         {/* Noch nicht implementierte Rechner (geplant / in Vorbereitung) */}
         <Route path="/rechner/:slug" element={<RechnerStub />} />
         <Route path="/methodik" element={<Methodik />} />
