@@ -12,6 +12,7 @@ import {
   type StrafEntscheidTyp, type StrafAnfechtende, type StrafAnfechtungsziel, type RevisionsGrund,
 } from '../../lib/strafRechtsmittel';
 import { staatsanwaltschaftFuer, BUNDESANWALTSCHAFT } from '../../data/staatsanwaltschaften';
+import { strafgerichteFuer, type StrafGerichtAdresse } from '../../data/strafgerichte';
 
 // ─── Rechtsweg «Straf» — UI-Teil des Zuständigkeitsrechners ─────────────────
 // Task 7b (6.6.2026). Reine Darstellung (§3): Bundesrecht in
@@ -76,6 +77,9 @@ export function StrafZustaendigkeitTeil() {
     beschuldigteMinderjaehrig: minderjaehrig,
   });
   const sta = kanton !== '' ? staatsanwaltschaftFuer(kanton) : null;
+  // Sachlich zuständige Gerichte (Ausbau 6.6.2026, Auftrag David):
+  // Erstrecherche-Datenschicht data/strafgerichte.ts — 1. Instanz + ZMG.
+  const gerichte = kanton !== '' ? strafgerichteFuer(kanton) : null;
 
   if (anliegen === 'rechtsmittel') {
     return (
@@ -188,6 +192,22 @@ export function StrafZustaendigkeitTeil() {
           )}
         </div>
 
+        {/* Sachlich zuständige Gerichte (Ausbau 6.6.2026): 1. Instanz + ZMG */}
+        {gerichte && !bund && (
+          <div className="lc-card p-5 space-y-3">
+            <p className="lc-overline">Sachlich zuständige Gerichte ({kanton})</p>
+            <GerichtBlock titel="Erstinstanzliches Strafgericht (Hauptverfahren nach Anklage)" g={gerichte.ersteInstanz} system={gerichte.ersteInstanz.system} />
+            {gerichte.zmg && (
+              <div className="border-t border-line pt-3">
+                <GerichtBlock titel="Zwangsmassnahmengericht (Haft & Zwangsmassnahmen, Art. 18 StPO)" g={gerichte.zmg} />
+              </div>
+            )}
+            <p className="text-xs text-ink-500 pt-2 border-t border-line">
+              Quelle: Strafgerichts-Dossier (Erstrecherche {gerichte.stand}) — Doppelcheck und fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
+            </p>
+          </div>
+        )}
+
         {r.fristen.length > 0 && (
           <div className="lc-card p-5 space-y-2.5">
             <p className="lc-overline">Fristen</p>
@@ -232,6 +252,21 @@ export function StrafZustaendigkeitTeil() {
           Regelwerk verbatim am StPO-Wortlaut verifiziert (Stand 1.1.2024; Art. 301 StPO/Art. 31 StGB am 6.6.2026) — fachliche Abnahme ausstehend.
         </p>
       </div>
+    </div>
+  );
+}
+
+// Adress-Block für eine Strafgerichts-Adresse (Erstrecherche-Schicht):
+// volle Adresse wo belegt; offene Hausnummern erscheinen NUR als Hinweis (§8).
+function GerichtBlock({ titel, g, system }: { titel: string; g: StrafGerichtAdresse; system?: string }) {
+  return (
+    <div>
+      <p className="text-xs font-medium text-ink-600 mb-1">{titel}</p>
+      {system && <p className="text-xs text-ink-500 mb-1">{system}</p>}
+      <p className="text-body-s text-ink-900 whitespace-pre-line">
+        {g.name}{g.strasse ? `\n${g.strasse}` : ''}{g.plzOrt ? `\n${g.plzOrt}` : ''}
+      </p>
+      {g.hinweis && <p className="text-xs text-warn-700 mt-1">⚠ {g.hinweis}</p>}
     </div>
   );
 }
@@ -288,6 +323,7 @@ function StrafRechtsmittelTeil() {
   const [nurZugunsten, setNurZugunsten] = useState(false);
   const [revGrund, setRevGrund] = useState<RevisionsGrund>('noven');
   const [bund, setBund] = useState(false);
+  const [kanton, setKanton] = useState<Kanton | ''>('');
 
   const r = bestimmeStrafRechtsmittel({
     entscheidTyp, werFichtAn, anfechtungsziel: ziel,
@@ -296,6 +332,25 @@ function StrafRechtsmittelTeil() {
     revisionsgrund: entscheidTyp === 'rechtskraeftiges_urteil' ? revGrund : undefined,
     bundesgerichtsbarkeit: bund,
   });
+
+  // Konkrete Instanz-Adresse (Auftrag David 6.6.2026): Berufung/Revision →
+  // Berufungsgericht; Beschwerde → Beschwerdeinstanz (organisatorisch i. d. R.
+  // dieselbe obere Instanz, Kammer je kantonaler Organisation — Hinweis);
+  // Einsprache → Staatsanwaltschaft. Erstrecherche-Schicht, kein Raten (§8).
+  const gerichte = kanton !== '' && !bund ? strafgerichteFuer(kanton) : null;
+  const sta = kanton !== '' && !bund ? staatsanwaltschaftFuer(kanton) : null;
+  const adresse: { titel: string; g: StrafGerichtAdresse; hinweis?: string } | null =
+    !gerichte || r.statthaft === 'keines' ? null
+      : r.statthaft === 'berufung' || r.statthaft === 'revision'
+        ? { titel: `Berufungsgericht (${kanton})`, g: gerichte.berufung }
+        : r.statthaft === 'beschwerde'
+          ? {
+              titel: `Beschwerdeinstanz (${kanton})`, g: gerichte.berufung,
+              hinweis: 'Die Beschwerdeinstanz ist organisatorisch in der Regel beim selben oberen Gericht angesiedelt (Beschwerdekammer/-abteilung) — massgebliche Kammer gemäss kantonaler Gerichtsorganisation.',
+            }
+          : sta
+            ? { titel: `Staatsanwaltschaft (${kanton}) — Adressatin der Einsprache`, g: sta }
+            : null;
 
   return (
     <div className="space-y-6">
@@ -341,6 +396,16 @@ function StrafRechtsmittelTeil() {
             Bundesgerichtsbarkeit (Verfahren der Bundesanwaltschaft)
           </label>
         </div>
+        {!bund && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Field label="Kanton (für die konkrete Instanz-Adresse)" optional>
+              <select className={inputCls} value={kanton} onChange={(e) => setKanton(e.target.value as Kanton | '')}>
+                <option value="">– wählen –</option>
+                {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+              </select>
+            </Field>
+          </div>
+        )}
       </div>
 
       <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
@@ -358,6 +423,17 @@ function StrafRechtsmittelTeil() {
             </>
           )}
         </div>
+
+        {adresse && (
+          <div className="lc-card p-5 space-y-2">
+            <p className="lc-overline">Konkrete Instanz</p>
+            <GerichtBlock titel={adresse.titel} g={adresse.g} />
+            {adresse.hinweis && <p className="text-xs text-ink-500">{adresse.hinweis}</p>}
+            <p className="text-xs text-ink-500 pt-2 border-t border-line">
+              Quelle: Strafgerichts-Dossier bzw. Strafbehörden-Dossier (Erstrecherche) — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
+            </p>
+          </div>
+        )}
 
         {r.fristen.length > 0 && (
           <div className="lc-card p-5 space-y-2.5">
