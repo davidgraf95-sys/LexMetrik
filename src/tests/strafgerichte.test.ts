@@ -70,9 +70,12 @@ describe('Strafgerichte — Schlüssel-Stichproben aus dem Dossier', () => {
     expect(STRAFGERICHTE.GE.ersteInstanz.strasse).toContain('Chaudronniers');
   });
 
-  it('BL und AR ersteInstanz ohne Hausnummer (plzOrt offen) aber MIT hinweis', () => {
-    expect(STRAFGERICHTE.BL.ersteInstanz.plzOrt).toBeUndefined();
-    expect(STRAFGERICHTE.BL.ersteInstanz.hinweis).toContain('Muttenz');
+  // Deklarierte Änderung 6.6.2026 (Behörden-Audit): BL-Lücke amtlich geschlossen
+  // (baselland.ch — Strafjustizzentrum, Grenzacherstrasse 8, 4132 Muttenz).
+  it('BL amtlich geschlossen; AR-Berufung behält den Hausnummer-Vorbehalt', () => {
+    expect(STRAFGERICHTE.BL.ersteInstanz.plzOrt).toBe('4132 Muttenz');
+    expect(STRAFGERICHTE.BL.ersteInstanz.strasse).toContain('Grenzacherstrasse 8');
+    expect(STRAFGERICHTE.BL.zmg?.plzOrt).toBe('4132 Muttenz');
     // AR: Berufungsinstanz (Fünfeckpalast) trägt den Hausnummer-Vorbehalt.
     expect(STRAFGERICHTE.AR.berufung.strasse).toContain('Fünfeckpalast');
     expect(STRAFGERICHTE.AR.berufung.hinweis).toContain('Hausnummer');

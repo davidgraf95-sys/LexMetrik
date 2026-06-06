@@ -61,9 +61,12 @@ describe('Schlichtungsstellen — Stichproben (zweifach geprüfte Werte)', () =>
       expect(gr.stellen.find((s) => s.name.includes('Imboden'))?.strasse).toContain('Postfach 308');
     }
   });
-  it('SH trägt den Adress-Vorbehalt (Vordergasse vs. Fronwagplatz)', () => {
+  it('SH: Adresse amtlich bestätigt (Behörden-Audit 6.6.2026, Vorbehalt aufgelöst)', () => {
     const sh = SCHLICHTUNGSSTELLEN.SH.ordentlich;
-    if (sh.modus === 'zentral') expect(sh.stelle.hinweis).toContain('Fronwagplatz');
+    if (sh.modus === 'zentral') {
+      expect(sh.stelle.strasse).toBe('Vordergasse 54');
+      expect(sh.stelle.hinweis).toContain('Amtlich bestätigt');
+    }
   });
 });
 

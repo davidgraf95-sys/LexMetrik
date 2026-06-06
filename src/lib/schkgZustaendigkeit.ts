@@ -148,7 +148,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
     case 'betreibung_einleiten': {
       forum = {
         stelle: 'Betreibungsamt am Betreibungsort',
-        text: 'Das Betreibungsbegehren geht an das BETREIBUNGSAMT des Betreibungsortes (kein Gericht). Das zuständige Amt je PLZ weist das amtliche Verzeichnis des Bundesamts für Justiz aus.',
+        text: 'Das Betreibungsbegehren geht an das BETREIBUNGSAMT des Betreibungsortes (kein Gericht). Das zuständige Amt ermittelt die amtliche EasyGov-Betreibungsauskunft (SECO) nach dem Wohnort der Schuldnerin/des Schuldners.',
         normen: [{ artikel: 'Art. 67 SchKG', bemerkung: 'Betreibungsbegehren' }],
       };
       eingabe = { art: 'Betreibungsbegehren (Formular oder eSchKG)', verfahren: 'Vollstreckungsverfahren (kein Prozess); der Zahlungsbefehl ergeht ohne materielle Prüfung' };
@@ -328,6 +328,9 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
   };
 }
 
-/** Amtliches Verzeichnis der Betreibungs- und Konkursämter (Bundesamt für
- *  Justiz, eSchKG) — deterministischer Einstieg zur konkreten Amtsadresse. */
-export const BETREIBUNGSAEMTER_VERZEICHNIS = 'https://www.e-service.admin.ch/eschkg/app/verzeichnis';
+/** Amtliche Abfrage des zuständigen Betreibungs-/Konkursamts — deterministischer
+ *  Einstieg zur konkreten Amtsadresse. Behörden-Audit 6.6.2026: die frühere
+ *  BJ-eSchKG-URL (e-service.admin.ch/eschkg/app/verzeichnis) liefert 404;
+ *  amtlicher Nachfolger ist die EasyGov-Betreibungsauskunft des SECO
+ *  (vom BJ verlinkt, HTTP 200 verifiziert). */
+export const BETREIBUNGSAEMTER_VERZEICHNIS = 'https://www.easygov.swiss/easygov/#/de/betreibungen';

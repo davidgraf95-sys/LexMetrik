@@ -148,7 +148,7 @@ export function SchkgZustaendigkeitTeil() {
               <p className="text-body-s text-ink-700 mt-1">{r.forum.text}</p>
               <p className="text-body-s text-ink-700 mt-1">{r.eingabe.verfahren}.</p>
               <a href={BETREIBUNGSAEMTER_VERZEICHNIS} target="_blank" rel="noreferrer" className="text-brass-700 underline text-body-s mt-1.5 inline-block">
-                Amtliches Verzeichnis der Betreibungs- und Konkursämter (BJ, PLZ-Suche) ↗
+                Zuständiges Betreibungs-/Konkursamt ermitteln (EasyGov, amtlich) ↗
               </a>
             </div>
           </div>

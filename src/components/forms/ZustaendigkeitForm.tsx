@@ -670,6 +670,13 @@ export function ZustaendigkeitForm({ onRechtswegChange }: { onRechtswegChange?: 
               <div>
                 <p className="lc-overline mb-2">Zuständige Schlichtungsstelle ({f.kanton})</p>
                 <p className="text-body-s text-ink-900 whitespace-pre-line">{behoerdeAlsBlock(stelle)}</p>
+                {stelle.url && (
+                  <p className="text-xs mt-1.5">
+                    <a href={stelle.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 underline">
+                      Amtliche Behördenseite öffnen ↗
+                    </a>
+                  </p>
+                )}
                 <p className="text-xs text-ink-500 mt-2">Quelle: {stelle.quelle} (Stand {stelle.stand}).</p>
               </div>
               {sgPrefill && (
@@ -705,7 +712,15 @@ export function ZustaendigkeitForm({ onRechtswegChange }: { onRechtswegChange?: 
               {recherche.aufloesung.modus === 'zentral' && (
                 <div>
                   <p className="text-body-s text-ink-900 whitespace-pre-line">
-                    {recherche.aufloesung.stelle.name}{'\n'}{recherche.aufloesung.stelle.strasse}{'\n'}{recherche.aufloesung.stelle.plzOrt}
+                    {/* Direktlink (Auftrag David 6.6.2026): Stellen-Name verlinkt
+                        auf die amtliche Detailseite, sofern in den Dossiers belegt. */}
+                    {recherche.aufloesung.stelle.url ? (
+                      <a href={recherche.aufloesung.stelle.url} target="_blank" rel="noopener noreferrer"
+                        className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">
+                        {recherche.aufloesung.stelle.name} ↗
+                      </a>
+                    ) : recherche.aufloesung.stelle.name}
+                    {'\n'}{recherche.aufloesung.stelle.strasse}{'\n'}{recherche.aufloesung.stelle.plzOrt}
                   </p>
                   {recherche.aufloesung.stelle.hinweis && (
                     <p className="text-xs text-warn-700 mt-1">⚠ {recherche.aufloesung.stelle.hinweis}</p>
@@ -718,7 +733,12 @@ export function ZustaendigkeitForm({ onRechtswegChange }: { onRechtswegChange?: 
                   <ul className="space-y-1.5 max-h-64 overflow-y-auto pr-1">
                     {recherche.aufloesung.stellen.map((s) => (
                       <li key={s.name + s.plzOrt} className="text-body-s text-ink-800">
-                        <span className="font-medium text-ink-900">{s.name}</span>
+                        {s.url ? (
+                          <a href={s.url} target="_blank" rel="noopener noreferrer"
+                            className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">{s.name} ↗</a>
+                        ) : (
+                          <span className="font-medium text-ink-900">{s.name}</span>
+                        )}
                         {s.zustaendigFuer && <span className="text-ink-500"> — {s.zustaendigFuer}</span>}
                         <br />{s.strasse}, {s.plzOrt}
                         {s.hinweis && <span className="block text-xs text-warn-700">⚠ {s.hinweis}</span>}
@@ -822,7 +842,19 @@ export function ZustaendigkeitForm({ onRechtswegChange }: { onRechtswegChange?: 
                   <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
                 )
               )}
-              {kosten && (
+              {/* Nicht vermögensrechtlich (Auftrag David 6.6.2026): eigener
+                  kantonaler Rahmen statt der Streitwert-Staffel; bei Scheidung
+                  zusätzlich der Familien-Sonderrahmen, wo der Erlass einen kennt. */}
+              {kosten && !f.vermoegensrechtlich && kosten.nichtVermoegensrechtlich ? (
+                <p className="text-body-s text-ink-800">
+                  <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz (nicht vermögensrechtlich): {/^[A-Za-zÜü(]/.test(kosten.nichtVermoegensrechtlich.text) ? '' : 'CHF '}{kosten.nichtVermoegensrechtlich.text}.</span>{' '}
+                  <span className="text-ink-500">(
+                    {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
+                      <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.nichtVermoegensrechtlich.erlass} ↗</a>
+                    ) : kosten.nichtVermoegensrechtlich.erlass})</span>
+                  {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500">{kosten.nichtVermoegensrechtlich.hinweis}</span>}
+                </p>
+              ) : kosten && (
                 <p className="text-body-s text-ink-800">
                   <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz: {/^[A-Za-zÜü]/.test(kosten.gericht.text) ? '' : 'CHF '}{kosten.gericht.text}.</span>{' '}
                   <span className="text-ink-500">(
@@ -830,6 +862,13 @@ export function ZustaendigkeitForm({ onRechtswegChange }: { onRechtswegChange?: 
                       <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.gericht.erlass} ↗</a>
                     ) : kosten.gericht.erlass})</span>
                   {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
+                </p>
+              )}
+              {kosten && f.streitsache === 'scheidung' && kosten.familie && (
+                <p className="text-body-s text-ink-800">
+                  <span className="font-medium text-ink-900">Familien-/Scheidungsrahmen: {/^[A-Za-zÜü(0-9]/.test(kosten.familie.text) && !/^\d/.test(kosten.familie.text) ? '' : 'CHF '}{kosten.familie.text}.</span>{' '}
+                  <span className="text-ink-500">({kosten.familie.erlass})</span>
+                  {kosten.familie.hinweis && <span className="block text-xs text-ink-500">{kosten.familie.hinweis}</span>}
                 </p>
               )}
               <p className="text-xs text-ink-500">

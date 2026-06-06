@@ -28,11 +28,10 @@ export type BehoerdenAdresse = {
   stand: string;       // Verifikationsdatum
   quelle: string;      // amtliche Quelle
   // Direkte amtliche Detailseite der Stelle (additiv, optional; nur https,
-  // wörtlich aus Quelle/Dossier). Wird nur befüllt, wenn die BS-Quelle eine
-  // Detail-URL WÖRTLICH ausweist (§7/§8: keine konstruierten Pfade). Die
-  // BS-Dossiers nennen die Quelle nur als Domain «staatskalender.bs.ch» ohne
-  // belegte Detail-URL → Feld bleibt für die 3 BS-Stellen leer; die UI fällt
-  // auf die Quelle-Ebene zurück.
+  // wörtlich aus Quelle/Dossier). Erstrecherche 6.6.2026: Für die 3 BS-Stellen
+  // wurden die staatskalender.bs.ch-Detailseiten per WebFetch verifiziert
+  // (HTTP 200 + Seite nennt Stelle/Adresse) und hier eingetragen. Fehlt das
+  // Feld, fällt die UI auf die Quelle-Ebene zurück.
   url?: string;        // amtliche Detailseite (sofern wörtlich belegt)
 };
 
@@ -48,6 +47,8 @@ export const BEHOERDEN: Record<EingabeArt, Partial<Record<Kanton, BehoerdenAdres
       plzOrt: BS_ADRESSEN.zivil.plzOrt,
       stand: '5.6.2026',
       quelle: 'staatskalender.bs.ch (Kanzlei Schlichtungsbehörde)',
+      // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+      url: 'https://staatskalender.bs.ch/organization/richterliche-behoerden/gerichte/zivilgericht/kanzlei-schlichtungsbehoerde',
     },
   },
   // Paritätische Spezialstellen (Art. 200 ZPO)
@@ -58,6 +59,8 @@ export const BEHOERDEN: Record<EingabeArt, Partial<Record<Kanton, BehoerdenAdres
       plzOrt: BS_ADRESSEN.miete.plzOrt,
       stand: '5.6.2026',
       quelle: 'staatskalender.bs.ch',
+      // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+      url: 'https://staatskalender.bs.ch/organization/regierung-und-verwaltung/praesidialdepartement/staatskanzlei/mietstreitigkeiten-staatliche-schlichtungsstelle-fuer',
     },
   },
   schlichtungsstelle_diskriminierung: {
@@ -67,6 +70,8 @@ export const BEHOERDEN: Record<EingabeArt, Partial<Record<Kanton, BehoerdenAdres
       plzOrt: BS_ADRESSEN.diskriminierung.plzOrt,
       stand: '5.6.2026',
       quelle: 'staatskalender.bs.ch',
+      // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+      url: 'https://staatskalender.bs.ch/organization/regierung-und-verwaltung/praesidialdepartement/staatskanzlei/schlichtungsstelle-fuer-diskriminierungsfragen-kantonale',
     },
   },
 };

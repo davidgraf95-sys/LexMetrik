@@ -122,7 +122,8 @@ describe('SchKG-Teil — SSR-Integration', () => {
     expect(html).toContain('Betreibung einleiten');
     expect(html).toContain('Ihr Fahrplan');
     expect(html).toContain('Betreibungsort');
-    expect(html).toContain('e-service.admin.ch');
+    // Behörden-Audit 6.6.2026: BJ-eSchKG-Verzeichnis liefert 404 → EasyGov (SECO).
+    expect(html).toContain('easygov.swiss');
   });
 });
 

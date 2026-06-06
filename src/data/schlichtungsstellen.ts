@@ -95,10 +95,14 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     ordentlich: {
       modus: 'liste', hinweis: 'eine regionale Schlichtungsbehörde je Gerichtsregion (Art. 84 GSOG)',
       stellen: [
-        A('Schlichtungsbehörde Bern-Mittelland', 'Effingerstrasse 34', '3008 Bern', 'Region Bern-Mittelland'),
-        A('Schlichtungsbehörde Berner Jura-Seeland', 'Neuengasse 8', '2502 Biel/Bienne', 'Region Berner Jura-Seeland', 'Antenne Jura bernois: Unionsgasse 13, 2502 Biel (ab 1.1.2026)'),
-        A('Schlichtungsbehörde Emmental-Oberaargau', 'Dunantstrasse 3', '3400 Burgdorf', 'Region Emmental-Oberaargau'),
-        A('Schlichtungsbehörde Oberland', 'Scheibenstrasse 11B', '3600 Thun', 'Region Oberland'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+        A('Schlichtungsbehörde Bern-Mittelland', 'Effingerstrasse 34', '3008 Bern', 'Region Bern-Mittelland', undefined, 'https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/bern-mittelland.html'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+        A('Schlichtungsbehörde Berner Jura-Seeland', 'Neuengasse 8', '2502 Biel/Bienne', 'Region Berner Jura-Seeland', 'Antenne Jura bernois: Unionsgasse 13, 2502 Biel (ab 1.1.2026)', 'https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/berner-jura-seeland.html'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+        A('Schlichtungsbehörde Emmental-Oberaargau', 'Dunantstrasse 3', '3400 Burgdorf', 'Region Emmental-Oberaargau', undefined, 'https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/emmental-oberaargau.html'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+        A('Schlichtungsbehörde Oberland', 'Scheibenstrasse 11B', '3600 Thun', 'Region Oberland', undefined, 'https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/oberland.html'),
       ],
     },
   },
@@ -107,56 +111,74 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     ordentlich: {
       modus: 'liste', hinweis: 'vier Friedensrichterämter (Kreise = Gerichtsbezirke)',
       stellen: [
-        A('Friedensrichteramt Luzern', 'Grabenstrasse 2, Postfach 2266', '6002 Luzern', 'Bezirk Luzern'),
-        A('Friedensrichteramt Kriens', 'Villastrasse 1', '6010 Kriens', 'Bezirk Kriens'),
-        A('Friedensrichteramt Hochdorf', 'Hohenrainstrasse 8', '6280 Hochdorf', 'Bezirk Hochdorf'),
-        A('Friedensrichteramt Willisau', 'Menzbergstrasse 16, Postfach', '6130 Willisau', 'Bezirk Willisau'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+        A('Friedensrichteramt Luzern', 'Grabenstrasse 2, Postfach 2266', '6002 Luzern', 'Bezirk Luzern', undefined, 'https://staatskalender.lu.ch/organization/gerichte/schlichtungsbehoerden/friedensrichteraemter/luzern'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+        A('Friedensrichteramt Kriens', 'Villastrasse 1', '6010 Kriens', 'Bezirk Kriens', undefined, 'https://staatskalender.lu.ch/organization/gerichte/schlichtungsbehoerden/friedensrichteraemter/kriens'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+        A('Friedensrichteramt Hochdorf', 'Hohenrainstrasse 8', '6280 Hochdorf', 'Bezirk Hochdorf', undefined, 'https://staatskalender.lu.ch/organization/gerichte/schlichtungsbehoerden/friedensrichteraemter/hochdorf'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+        A('Friedensrichteramt Willisau', 'Menzbergstrasse 16, Postfach', '6130 Willisau', 'Bezirk Willisau', undefined, 'https://staatskalender.lu.ch/organization/gerichte/schlichtungsbehoerden/friedensrichteraemter/willisau'),
       ],
     },
-    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Miete und Pacht', 'Bahnhofstrasse 22', '6002 Luzern', 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Miete und Pacht', 'Bahnhofstrasse 22', '6002 Luzern', 'ganzer Kanton', undefined, 'https://gerichte.lu.ch/organisation/schlichtungsbehoerden/miete_pacht') },
   },
   UR: {
     stand: '5.6.2026', quelle: 'ur.ch/gerichte · BWO 13.2.2026',
-    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde Uri', 'Bahnhofstrasse 43', '6460 Altdorf', 'ganzer Kanton') },
-    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Uri (Miete/Pacht)', 'Bahnhofstrasse 43', '6460 Altdorf', 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — eine Stelle, paritetisch auch für Miete/GlG
+    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde Uri', 'Bahnhofstrasse 43', '6460 Altdorf', 'ganzer Kanton', undefined, 'https://www.ur.ch/aemter/1586') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Uri (Miete/Pacht)', 'Bahnhofstrasse 43', '6460 Altdorf', 'ganzer Kanton', undefined, 'https://www.ur.ch/aemter/1586') },
   },
   SZ: {
     stand: '5.6.2026', quelle: 'sz.ch/vermittleraemter (amtliche Karte) — Zusammenlegungen laufend',
-    ordentlich: { modus: 'verzeichnis', beschreibung: 'Vermittlerämter der Gemeinden/Bezirke (mehrere Zusammenlegungen, z. B. Höfe seit 2020; Vollliste amtlich nur als Karte)', url: 'https://www.sz.ch/behoerden/justiz/vermittleraemter.html' },
-    miete: { modus: 'verzeichnis', beschreibung: 'sechs Bezirks-Schlichtungsstellen für Miete/Pacht (überwiegend Postfach-Adressen)', url: 'https://www.sz.ch/behoerden/justiz/schlichtungsbehoerden.html' },
+    ordentlich: { modus: 'verzeichnis', beschreibung: 'Vermittlerämter der Gemeinden/Bezirke (mehrere Zusammenlegungen, z. B. Höfe seit 2020; Vollliste amtlich nur als Karte)', url: 'https://www.sz.ch/behoerden/justiz/vermittleraemter.html/8756-8758-8801-12287' },
+    miete: { modus: 'verzeichnis', beschreibung: 'sechs Bezirks-Schlichtungsstellen für Miete/Pacht (überwiegend Postfach-Adressen)', url: 'https://www.sz.ch/verwaltung/volkswirtschaftsdepartement/departementssekretariat/miete-und-pacht/schlichtungsbehoerden.html/8756-8758-8802-10373-10393-10887-10888' },
   },
   OW: {
     stand: '5.6.2026', quelle: 'ow.ch/gerichte · BWO 13.2.2026 (2. Durchgang: Enetriederstrasse bestätigt)',
-    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde Obwalden', 'Enetriederstrasse 1', '6060 Sarnen', 'ganzer Kanton') },
-    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Obwalden (Miete/Pacht)', 'Enetriederstrasse 1', '6060 Sarnen', 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — eine Stelle
+    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde Obwalden', 'Enetriederstrasse 1', '6060 Sarnen', 'ganzer Kanton', undefined, 'https://www.ow.ch/fachbereiche/2131') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Obwalden (Miete/Pacht)', 'Enetriederstrasse 1', '6060 Sarnen', 'ganzer Kanton', undefined, 'https://www.ow.ch/fachbereiche/2131') },
   },
   NW: {
     stand: '5.6.2026', quelle: 'nw.ch · BWO 13.2.2026',
-    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde Nidwalden', 'Rathausplatz 9, Postfach 1244', '6371 Stans', 'ganzer Kanton') },
-    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Nidwalden (Miete/Pacht)', 'Rathausplatz 9, Postfach 1244', '6371 Stans', 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — eine Stelle
+    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde Nidwalden', 'Rathausplatz 9, Postfach 1244', '6371 Stans', 'ganzer Kanton', undefined, 'https://www.nw.ch/judikative/326') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Nidwalden (Miete/Pacht)', 'Rathausplatz 9, Postfach 1244', '6371 Stans', 'ganzer Kanton', undefined, 'https://www.nw.ch/judikative/326') },
   },
   GL: {
     stand: '5.6.2026', quelle: 'gl.ch/rechtspflege · BWO 13.2.2026',
-    ordentlich: { modus: 'zentral', stelle: A('Kantonale Schlichtungsbehörde Glarus', 'Gerichtshausstrasse 22', '8750 Glarus', 'ganzer Kanton (seit 1.7.2018)') },
-    miete: { modus: 'zentral', stelle: A('Kantonale Schlichtungsbehörde Glarus (Miete/Pacht)', 'Gerichtshausstrasse 22, Postfach', '8750 Glarus', 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — eine Stelle
+    ordentlich: { modus: 'zentral', stelle: A('Kantonale Schlichtungsbehörde Glarus', 'Gerichtshausstrasse 22', '8750 Glarus', 'ganzer Kanton (seit 1.7.2018)', undefined, 'https://www.gl.ch/rechtspflege/kantonale-schlichtungsbehoerde.html/316') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Kantonale Schlichtungsbehörde Glarus (Miete/Pacht)', 'Gerichtshausstrasse 22, Postfach', '8750 Glarus', 'ganzer Kanton', undefined, 'https://www.gl.ch/rechtspflege/kantonale-schlichtungsbehoerde.html/316') },
   },
   ZG: {
     stand: '5.6.2026', quelle: 'zg.ch/schlichtungsbehoerden (11 Ämter) · BWO 13.2.2026',
     ordentlich: { modus: 'verzeichnis', beschreibung: '11 kommunale Friedensrichterämter (je Einwohnergemeinde)', url: 'https://zg.ch/de/recht-justiz/zivilverfahren/schlichtung' },
-    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Miet- und Pachtrecht', 'Baarerstrasse 131', '6300 Zug', 'ganzer Kanton', 'PLZ amtlich 6300 (Postfach-Zeile 6301)') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Miet- und Pachtrecht', 'Baarerstrasse 131', '6300 Zug', 'ganzer Kanton', 'PLZ amtlich 6300 (Postfach-Zeile 6301)', 'https://zg.ch/de/recht-justiz/zivilverfahren/schlichtung/mietschlichtungsverfahren') },
   },
   FR: {
     stand: '5.6.2026', quelle: 'fr.ch (Friedensgerichte/Mietkommissionen)',
-    ordentlich: { modus: 'verzeichnis', beschreibung: 'sieben Friedensgerichte (justices de paix) als Schlichtungsbehörde — je Bezirk', url: 'https://www.fr.ch/de/sjd/institutionen-und-politische-rechte/gerichtsbehoerden/die-friedensgerichte' },
-    miete: { modus: 'verzeichnis', beschreibung: 'Schlichtungskommissionen für Miete/Pacht (je Bezirk)', url: 'https://www.fr.ch/de/wohnungswesen/mietrecht' },
+    ordentlich: { modus: 'verzeichnis', beschreibung: 'sieben Friedensgerichte (justices de paix) als Schlichtungsbehörde — je Bezirk', url: 'https://www.fr.ch/de/staat-und-recht/justiz/gerichtsbehoerden-friedensgerichte' },
+    miete: { modus: 'verzeichnis', beschreibung: 'Schlichtungskommissionen für Miete/Pacht (je Bezirk)', url: 'https://www.fr.ch/de/staat-und-recht/justiz/gerichtsbehoerden-friedensgerichte' },
   },
   SO: {
     stand: '5.6.2026', quelle: 'so.ch (Friedensrichter/Oberämter)',
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — kantonale Mietschlichtungs-Sammelseite
+    // listet alle vier Oberämter (Miete) mit Adressen; keine Stellen-Detailseiten je Oberamt.
+    url: 'https://so.ch/verwaltung/departement-des-innern/oberaemter/schlichtung-und-vermittlung/mietschlichtung/',
     ordentlich: { modus: 'verzeichnis', beschreibung: 'Friedensrichter der Gemeinden (teils zusammengelegte Kreise; zentrale Liste nur für 10 Kreise)', url: 'https://so.ch/gerichte/weitere-gerichte/friedensrichter/' },
     miete: {
       modus: 'liste', hinweis: 'Mietschlichtung bei den vier Oberämtern',
       stellen: [
-        A('Oberamt Region Solothurn', 'Rötistrasse 4', '4500 Solothurn', 'Region Solothurn'),
+        // PLZ amtlich 4502 (Behörden-Audit 6.6.2026)
+        A('Oberamt Region Solothurn', 'Rötistrasse 4', '4502 Solothurn', 'Region Solothurn'),
         A('Oberamt Region Olten', 'Amthausquai 23', '4600 Olten', 'Region Olten'),
         A('Oberamt Thal-Gäu', 'Wengimattstrasse 2', '4710 Balsthal', 'Thal-Gäu'),
         A('Oberamt Dorneck-Thierstein', 'Passwangstrasse 29', '4226 Breitenbach', 'Dorneck-Thierstein'),
@@ -171,9 +193,12 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     // quelle). Keine Divergenz festgestellt: Strasse/PLZ waren in beiden
     // Quellen bereits identisch (Stand 5.6.2026); 6.6.2026 unverändert bestätigt.
     stand: '5.6.2026', quelle: 'staatskalender.bs.ch (abgenommene Stammdaten in behoerden.ts)',
-    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde des Zivilgerichts', BS_ADRESSEN.zivil.strasse, BS_ADRESSEN.zivil.plzOrt, 'ganzer Kanton') },
-    miete: { modus: 'zentral', stelle: A('Staatliche Schlichtungsstelle für Mietstreitigkeiten', BS_ADRESSEN.miete.strasse, BS_ADRESSEN.miete.plzOrt, 'ganzer Kanton') },
-    glg: { modus: 'zentral', stelle: A('Kantonale Schlichtungsstelle für Diskriminierungsfragen', BS_ADRESSEN.diskriminierung.strasse, BS_ADRESSEN.diskriminierung.plzOrt, 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — staatskalender.bs.ch-Detailseiten
+    ordentlich: { modus: 'zentral', stelle: A('Schlichtungsbehörde des Zivilgerichts', BS_ADRESSEN.zivil.strasse, BS_ADRESSEN.zivil.plzOrt, 'ganzer Kanton', undefined, 'https://staatskalender.bs.ch/organization/richterliche-behoerden/gerichte/zivilgericht/kanzlei-schlichtungsbehoerde') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Staatliche Schlichtungsstelle für Mietstreitigkeiten', BS_ADRESSEN.miete.strasse, BS_ADRESSEN.miete.plzOrt, 'ganzer Kanton', undefined, 'https://staatskalender.bs.ch/organization/regierung-und-verwaltung/praesidialdepartement/staatskanzlei/mietstreitigkeiten-staatliche-schlichtungsstelle-fuer') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    glg: { modus: 'zentral', stelle: A('Kantonale Schlichtungsstelle für Diskriminierungsfragen', BS_ADRESSEN.diskriminierung.strasse, BS_ADRESSEN.diskriminierung.plzOrt, 'ganzer Kanton', undefined, 'https://staatskalender.bs.ch/organization/regierung-und-verwaltung/praesidialdepartement/staatskanzlei/schlichtungsstelle-fuer-diskriminierungsfragen-kantonale') },
   },
   BL: {
     stand: '5.6.2026', quelle: 'baselland.ch (Friedensrichter) · VGD/oslvb.bl.ch + BWO (Miete, Schiedsrichter-Entscheid)',
@@ -182,7 +207,7 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   },
   SH: {
     stand: '5.6.2026', quelle: 'sh.ch · BWO 13.2.2026 (Zentralisierung per 1.1.2018)',
-    ordentlich: { modus: 'zentral', stelle: A('Friedensrichteramt des Kantons Schaffhausen', 'Vordergasse 54', '8201 Schaffhausen', 'ganzer Kanton', 'Adress-Vorbehalt: neuere Treffer nennen Fronwagplatz 24 — vor Einreichung auf sh.ch prüfen') },
+    ordentlich: { modus: 'zentral', stelle: A('Friedensrichteramt des Kantons Schaffhausen', 'Vordergasse 54', '8201 Schaffhausen', 'ganzer Kanton', 'Amtlich bestätigt: Vordergasse 54 (sh.ch, 6.6.2026)') },
     miete: { modus: 'zentral', stelle: A('Schlichtungsstelle für Mietsachen', 'Vordergasse 54', '8201 Schaffhausen', 'ganzer Kanton') },
   },
   AR: {
@@ -190,11 +215,14 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     ordentlich: {
       modus: 'liste', hinweis: 'drei Vermittlerkreise',
       stellen: [
-        A('Vermittleramt Kreis 1', 'Regierungsgebäude, Obstmarkt 3', '9100 Herisau', 'Kreis 1 (Hinterland; Postfach-PLZ 9102)'),
-        A('Vermittleramt Kreise 2 und 3', 'Rathaus, Landsgemeindeplatz 2', '9043 Trogen', 'Kreise 2/3 (Mittel-/Vorderland)'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — staatskalender.ar.ch
+        A('Vermittleramt Kreis 1', 'Regierungsgebäude, Obstmarkt 3', '9100 Herisau', 'Kreis 1 (Hinterland; Postfach-PLZ 9102)', undefined, 'https://staatskalender.ar.ch/organization/kantonale-behoerden/gerichtsbehoerden/schlichtungsbehoerden/vermittleramt-kreis-1-appenzeller-hinterland'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — Sitz Trogen = staatskalender-Detailseite Kreis 2 (Mittelland)
+        A('Vermittleramt Kreise 2 und 3', 'Rathaus, Landsgemeindeplatz 2', '9043 Trogen', 'Kreise 2/3 (Mittel-/Vorderland)', undefined, 'https://staatskalender.ar.ch/organization/kantonale-behoerden/gerichtsbehoerden/schlichtungsbehoerden/vermittleramt-kreis-2-appenzeller-mitteland'),
       ],
     },
-    miete: { modus: 'zentral', stelle: A('Schlichtungsstelle für Miete und nichtlandwirtschaftliche Pacht', 'Landsgemeindeplatz 7c', '9043 Trogen', 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Schlichtungsstelle für Miete und nichtlandwirtschaftliche Pacht', 'Landsgemeindeplatz 7c', '9043 Trogen', 'ganzer Kanton', undefined, 'https://ar.ch/gerichte/vermittler-und-schlichtungsstellen/schlichtungsstelle-fuer-miete-und-nichtlandwirtschaftliche-pacht/') },
   },
   AI: {
     stand: '5.6.2026', quelle: 'ai.ch (via amtliche Erlasssammlung/Staatskalender; Portal blockt Direktabruf)',
@@ -203,8 +231,8 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   },
   SG: {
     stand: '5.6.2026', quelle: 'sg.ch (Vermittlungsämter/Mietschlichtung) — 2. Durchgang: alle Adressen bestätigt',
-    ordentlich: { modus: 'verzeichnis', beschreibung: 'zehn Vermittlungsämter (je Vermittlungskreis)', url: 'https://www.sg.ch/recht/zivilrecht-strafrecht-zivilprozess-strafprozess/schlichtungsverfahren/vermittlungsaemter.html' },
-    miete: { modus: 'verzeichnis', beschreibung: 'sieben Schlichtungsstellen für Miet- und Pachtverhältnisse', url: 'https://www.sg.ch/recht/zivilrecht-strafrecht-zivilprozess-strafprozess/schlichtungsverfahren/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html' },
+    ordentlich: { modus: 'verzeichnis', beschreibung: 'zehn Vermittlungsämter (je Vermittlungskreis)', url: 'https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/vermittlungsaemter.html' },
+    miete: { modus: 'verzeichnis', beschreibung: 'sieben Schlichtungsstellen für Miet- und Pachtverhältnisse', url: 'https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html' },
   },
   GR: {
     stand: '5.6.2026', quelle: 'justiz-gr.ch (Vermittlerämter/Mietsachen) — 11/11 bestätigt',
@@ -231,13 +259,13 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   },
   AG: {
     stand: '5.6.2026', quelle: 'ag.ch (Friedensrichterkreise/Mietschlichtung nach Bezirken)',
-    ordentlich: { modus: 'verzeichnis', beschreibung: '17 Friedensrichterkreise (Auflösung nach Gemeinde)', url: 'https://www.ag.ch/de/verwaltung/dvi/gerichte/friedensrichter' },
-    miete: { modus: 'verzeichnis', beschreibung: '11 Schlichtungsbehörden für Miete und Pacht (je Bezirk)', url: 'https://www.ag.ch/de/verwaltung/dvi/gerichte/schlichtungsbehoerden-fuer-miete-und-pacht' },
+    ordentlich: { modus: 'verzeichnis', beschreibung: '17 Friedensrichterkreise (Auflösung nach Gemeinde)', url: 'https://www.ag.ch/de/gerichte/schlichtungsbehoerden/friedensrichterinnen-und-friedensrichter/friedensrichterkreise' },
+    miete: { modus: 'verzeichnis', beschreibung: '11 Schlichtungsbehörden für Miete und Pacht (je Bezirk)', url: 'https://www.ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/schlichtungsbehoerden/schlichtungsbehoerden-fuer-miete-und-pacht' },
   },
   TG: {
     stand: '5.6.2026', quelle: 'friedensrichteraemter.tg.ch · erechtsverkehr.tg.ch (Miete kommunal)',
     ordentlich: { modus: 'verzeichnis', beschreibung: 'fünf Friedensrichterämter (je Bezirk: Arbon, Frauenfeld, Kreuzlingen, Münchwilen, Weinfelden)', url: 'https://friedensrichteraemter.tg.ch' },
-    miete: { modus: 'verzeichnis', beschreibung: 'kommunale Schlichtungsbehörden in Mietsachen (je politische Gemeinde — TG-Sonderfall)', url: 'https://erechtsverkehr.tg.ch/schlichtungsbehoerden-in-mietsachen.html' },
+    miete: { modus: 'verzeichnis', beschreibung: 'kommunale Schlichtungsbehörden in Mietsachen (je politische Gemeinde — TG-Sonderfall)', url: 'https://erechtsverkehr.tg.ch/schlichtungsbehoerden-in-mietsachen.html/7980' },
   },
   TI: {
     stand: '5.6.2026', quelle: 'ti.ch (giudici di pace; locazione — 11 Uffici, Schiedsrichter-Entscheid inkl. Chiasso)',
@@ -250,14 +278,20 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
         A('Ufficio di conciliazione Mendrisio', 'Via Municipio 13', '6850 Mendrisio', 'Mendrisiotto (übrige)', undefined, 'https://mendrisio.ch/en/home/a-proposito-di-mendrisio/chi-siamo/dicasteri-e-uffici/dicastero-istituzioni-e-risorse/ufficio-conciliazione.html'),
         // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
         A('Ufficio di conciliazione Lugano (Est/Ovest)', 'Via Sala 13', '6963 Pregassona', 'Lugano', undefined, 'https://www.lugano.ch/la-mia-citta/sportelli-in-citta/ufficio-conciliazione/'),
-        A('Ufficio di conciliazione Agno', 'Piazza Colonnello Vicari 1', '6982 Agno', 'Malcantone'),
-        A('Ufficio di conciliazione Massagno', 'Via Motta 53', '6900 Massagno', 'Massagno/Umgebung'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — amtliche Comune-Seite (nennt Stelle; dort Adresse Contrada Nuova 3)
+        A('Ufficio di conciliazione Agno', 'Piazza Colonnello Vicari 1', '6982 Agno', 'Malcantone', undefined, 'https://www.agno.ch/index.php?node=395&lng=1&vis=1&rif=2392173537'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — amtliche Comune-Seite
+        A('Ufficio di conciliazione Massagno', 'Via Motta 53', '6900 Massagno', 'Massagno/Umgebung', undefined, 'https://www.massagno.ch/Ufficio-conciliazione-in-materia-di-locazione'),
         // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
         A('Ufficio di conciliazione Locarno', 'Via Trevani 1a', '6600 Locarno', 'Locarnese', undefined, 'https://www.locarno.ch/it/ufficio-conciliazione-in-materia-di-locazione'),
-        A('Ufficio di conciliazione Minusio', 'Via San Gottardo 60, CP 1670', '6648 Minusio', 'Minusio/Umgebung'),
-        A('Ufficio di conciliazione Bellinzona', 'Via Lugano 1, CP 2694', '6501 Bellinzona', 'Bellinzona'),
-        A('Ufficio di conciliazione Giubiasco', 'Piazza Grande 3', '6512 Giubiasco', 'Giubiasco/Umgebung'),
-        A('Ufficio di conciliazione Biasca', 'Via Lucomagno 14', '6710 Biasca', 'Tre Valli'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — amtliche Comune-Seite
+        A('Ufficio di conciliazione Minusio', 'Via San Gottardo 60, CP 1670', '6648 Minusio', 'Minusio/Umgebung', undefined, 'https://www.minusio.ch/uc'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — amtliche Comune-Seite Bellinzona (führt Uffici Nr. 9/10/11)
+        A('Ufficio di conciliazione Bellinzona', 'Via Lugano 1, CP 2694', '6501 Bellinzona', 'Bellinzona', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — dieselbe Bellinzona-Seite führt Ufficio Nr. 10 Giubiasco
+        A('Ufficio di conciliazione Giubiasco', 'Piazza Grande 3', '6512 Giubiasco', 'Giubiasco/Umgebung', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
+        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — dieselbe Bellinzona-Seite führt Ufficio Nr. 11 Biasca
+        A('Ufficio di conciliazione Biasca', 'Via Lucomagno 14', '6710 Biasca', 'Tre Valli', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
       ],
     },
   },
@@ -266,18 +300,19 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     ordentlich: {
       modus: 'liste', hinweis: 'neun Justices de paix (Friedensgerichte) als Schlichtungsbehörde',
       stellen: [
-        A('Justice de paix Lausanne', 'Côtes-de-Montbenon 8', '1014 Lausanne', 'District Lausanne'),
-        A('Justice de paix Ouest lausannois', 'Av. de Longemalle 1', '1020 Renens', 'Ouest lausannois'),
-        A('Justice de paix Morges', 'Rue Saint-Louis 2', '1110 Morges', 'District Morges'),
-        A('Justice de paix Nyon', 'Rue Jules-Gachet 5', '1260 Nyon', 'District Nyon'),
-        A('Justice de paix Aigle', 'Hôtel de Ville, Place du Marché 1', '1860 Aigle', 'District Aigle', 'Umzug 2025'),
-        A('Justice de paix Riviera', 'Rue du Musée 6', '1800 Vevey', 'Riviera–Pays-d’Enhaut'),
-        A('Justice de paix Lavaux-Oron', 'Rue Davel 9', '1096 Cully', 'Lavaux-Oron'),
-        A('Justice de paix Broye-Vully', 'Rue de la Gare 45', '1530 Payerne', 'Broye-Vully'),
-        A('Justice de paix Jura-Nord vaudois/Gros-de-Vaud', 'Rue des Moulins 10', '1400 Yverdon-les-Bains', 'JNV + Gros-de-Vaud'),
+        // url je Justice de paix: Erstrecherche 6.6.2026 (WebFetch verifiziert) — vd.ch/ojv
+        A('Justice de paix Lausanne', 'Côtes-de-Montbenon 8', '1014 Lausanne', 'District Lausanne', undefined, 'https://www.vd.ch/ojv/justices-de-paix/lausanne'),
+        A('Justice de paix Ouest lausannois', 'Av. de Longemalle 1', '1020 Renens', 'Ouest lausannois', undefined, 'https://www.vd.ch/ojv/justices-de-paix/ouest-lausannois'),
+        A('Justice de paix Morges', 'Rue Saint-Louis 2', '1110 Morges', 'District Morges', undefined, 'https://www.vd.ch/ojv/justices-de-paix/morges'),
+        A('Justice de paix Nyon', 'Rue Jules-Gachet 5', '1260 Nyon', 'District Nyon', undefined, 'https://www.vd.ch/ojv/justices-de-paix/nyon'),
+        A('Justice de paix Aigle', 'Hôtel de Ville, Place du Marché 1', '1860 Aigle', 'District Aigle', 'Umzug 2025', 'https://www.vd.ch/ojv/justices-de-paix/aigle'),
+        A('Justice de paix Riviera', 'Rue du Musée 6', '1800 Vevey', 'Riviera–Pays-d’Enhaut', undefined, 'https://www.vd.ch/ojv/justices-de-paix/riviera-pays-denhaut'),
+        A('Justice de paix Lavaux-Oron', 'Rue Davel 9', '1096 Cully', 'Lavaux-Oron', undefined, 'https://www.vd.ch/ojv/justices-de-paix/lavaux-oron'),
+        A('Justice de paix Broye-Vully', 'Rue de la Gare 45', '1530 Payerne', 'Broye-Vully', undefined, 'https://www.vd.ch/ojv/justices-de-paix/broye-vully'),
+        A('Justice de paix Jura-Nord vaudois/Gros-de-Vaud', 'Rue des Moulins 10', '1400 Yverdon-les-Bains', 'JNV + Gros-de-Vaud', undefined, 'https://www.vd.ch/ojv/justices-de-paix/jura-nord-vaudois-et-gros-de-vaud'),
       ],
     },
-    miete: { modus: 'verzeichnis', beschreibung: '10 Commissions préfectorales de conciliation (eine je District)', url: 'https://www.vd.ch/etat-droit-finances/communes-et-districts/prefectures/commissions-prefectorales-de-conciliation' },
+    miete: { modus: 'verzeichnis', beschreibung: '10 Commissions préfectorales de conciliation (eine je District)', url: 'https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/prestations-des-prefectures/commissions-prefectorales-de-conciliation' },
   },
   VS: {
     stand: '5.6.2026', quelle: 'vs.ch (Liste juges de commune; SICT bail à loyer)',
@@ -287,6 +322,10 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   },
   NE: {
     stand: '5.6.2026', quelle: 'ne.ch/PJNE (Chambre de conciliation, 3 Standorte; in Bail-Sachen paritätisch besetzt)',
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — PJNE-Übersicht der Tribunaux régionaux
+    // nennt alle drei Standorte (Neuchâtel, Boudry, La Chaux-de-Fonds) mit Adressen; keine
+    // Stellen-Detailseiten je Tribunal → Kantons-Fallback.
+    url: 'https://www.ne.ch/autorites/PJNE/tribunaux-regionaux/Pages/accueil.aspx',
     ordentlich: {
       modus: 'liste', hinweis: 'Chambre de conciliation der zwei Regionalgerichte (drei Standorte)',
       stellen: [
@@ -298,12 +337,18 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   },
   GE: {
     stand: '5.6.2026', quelle: 'justice.ge.ch (TPI/Commission baux — Rue de l’Athénée bestätigt)',
-    ordentlich: { modus: 'zentral', stelle: A('Tribunal de première instance (conciliation)', 'Rue de l’Athénée 6-8', '1205 Genève', 'ganzer Kanton') },
-    miete: { modus: 'zentral', stelle: A('Commission de conciliation en matière de baux et loyers', 'Rue de l’Athénée 6-8', '1205 Genève', 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — justice.ge.ch (FR)
+    ordentlich: { modus: 'zentral', stelle: A('Tribunal de première instance (conciliation)', 'Rue de l’Athénée 6-8', '1205 Genève', 'ganzer Kanton', undefined, 'https://justice.ge.ch/fr/contenu/tribunal-de-premiere-instance') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert)
+    miete: { modus: 'zentral', stelle: A('Commission de conciliation en matière de baux et loyers', 'Rue de l’Athénée 6-8', '1205 Genève', 'ganzer Kanton', undefined, 'https://justice.ge.ch/fr/contenu/commission-de-conciliation-en-matiere-de-baux-et-loyers') },
   },
   JU: {
     stand: '5.6.2026', quelle: 'jura.ch/JUST (TPI; Droit du bail — 3 Bezirkskommissionen)',
-    ordentlich: { modus: 'zentral', stelle: A('Juge civil, Tribunal de première instance', 'Le Château, Chemin du Château 9', '2900 Porrentruy', 'ganzer Kanton') },
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — jura.ch Sammelseite «Droit du travail et du bail»
+    // nennt alle drei Commissions de conciliation en matière de bail mit Adressen → Kantons-Fallback für miete.
+    url: 'https://www.jura.ch/JUST/Renseignements-juridiques/Droit-du-travail-et-du-bail/Droit-du-travail-et-du-bail.html',
+    // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — jura.ch TPI/juge civil
+    ordentlich: { modus: 'zentral', stelle: A('Juge civil, Tribunal de première instance', 'Le Château, Chemin du Château 9', '2900 Porrentruy', 'ganzer Kanton', undefined, 'https://www.jura.ch/fr/Autorites/JUST/Instances-judiciaires/Tribunal-de-premiere-instance/Tribunal-de-premiere-instance.html') },
     miete: {
       modus: 'liste', hinweis: 'drei Bezirks-Commissions de conciliation en matière de bail',
       stellen: [

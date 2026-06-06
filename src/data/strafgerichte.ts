@@ -284,14 +284,19 @@ export const STRAFGERICHTE: Record<Kanton, KantonStrafgerichte> = {
     quelle: QUELLE,
     ersteInstanz: {
       name: 'Strafgericht Basel-Landschaft',
-      plzOrt: undefined,
-      hinweis: 'Kantonal (§ 20 GOG, Fünfer-/Dreierkammern), Sitz im Strafjustizzentrum Muttenz (gleicher Standort wie StA BL). ⚠ Strasse/Hausnummer nicht zeichengenau extrahierbar — offen; vor Übernahme amtlich nachschärfen (StA BL im Komplex Grenzacherstrasse 8, 4132 Muttenz)',
+      // Behörden-Audit 6.6.2026: Lücke amtlich geschlossen — baselland.ch
+      // Behördenverzeichnis «Strafgericht» + amtliche Verhandlungstermine-PDF
+      // («Strafjustizzentrum, Grenzacherstr. 8, 4132 Muttenz»).
+      strasse: 'Grenzacherstrasse 8 (Strafjustizzentrum)',
+      plzOrt: '4132 Muttenz',
+      hinweis: 'Kantonal (§ 20 GOG, Fünfer-/Dreierkammern); gleicher Komplex wie die StA BL',
     },
     berufung: berufungVon('BL', 'Kantonsgericht Basel-Landschaft, Abteilung Strafrecht'),
     zmg: {
       name: 'Präsidien des Strafgerichts (ZMG-Funktion)',
-      plzOrt: undefined,
-      hinweis: '§ 21 GOG; Strafjustizzentrum Muttenz — Adresse wie 1. Instanz, Hausnummer offen',
+      strasse: 'Grenzacherstrasse 8 (Strafjustizzentrum)',
+      plzOrt: '4132 Muttenz',
+      hinweis: '§ 21 GOG; Adresse wie 1. Instanz (Behörden-Audit 6.6.2026)',
     },
   },
   SH: {
