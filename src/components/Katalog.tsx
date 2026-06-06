@@ -202,8 +202,11 @@ function UebersichtGruppiert(props: {
           {gr.eintraege.map((s) => {
             const aktiv = s.id === aktiveSektion;
             return (
-              <a key={s.id} href={`#kachel-${s.id}`} aria-current={aktiv ? 'true' : undefined}
-                onClick={() => onSprung?.(s.id)}
+              /* Ziel ist das PANEL (die Kachel weicht ihm beim Öffnen) —
+                 preventDefault: kein toter Hash; gescrollt wird nach dem
+                 Render im Katalog-Effekt (Review-Befund 6.6.2026). */
+              <a key={s.id} href={`#panel-${s.id}`} aria-current={aktiv ? 'true' : undefined}
+                onClick={(e) => { e.preventDefault(); onSprung?.(s.id); }}
                 className={`relative flex items-baseline justify-between gap-2 px-2 py-1 -mx-2 rounded-md text-body-s no-underline transition-colors ${
                   aktiv ? 'bg-brass-100/60 text-ink-900 font-medium' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
                 }`}>
@@ -327,6 +330,19 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
     setSearchParams(p, { replace: true });
   };
 
+  // Seitenleisten-Sprung: erst nach dem Render existiert das Panel —
+  // dorthin scrollen (scroll-margin trägt den Header-Versatz); sanft nur,
+  // wenn Motion erlaubt ist (Review-Befund 6.6.2026: Anker zeigte auf die
+  // soeben ersetzte Kachel und lief ins Leere).
+  const sprungZiel = useRef<string | null>(null);
+  useEffect(() => {
+    if (!sprungZiel.current || sprungZiel.current !== offenGebiet) return;
+    sprungZiel.current = null;
+    const ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.getElementById(`panel-${offenGebiet}`)
+      ?.scrollIntoView({ block: 'start', behavior: ruhig ? 'auto' : 'smooth' });
+  }, [offenGebiet]);
+
   // «/» fokussiert das Suchfeld (Etappe 1.4) — kein neues UI-Muster, nur das
   // bestehende Feld bedienbarer; Eingabefelder bleiben unberührt.
   const suchFeldDesktop = useRef<HTMLInputElement>(null);
@@ -434,7 +450,7 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
           })),
         }))}
         aktiveSektion={offenGebiet}
-        onSprung={(id) => patchParams({ gebiet: id }, true)} />
+        onSprung={(id) => { sprungZiel.current = id; patchParams({ gebiet: id }, true); }} />
       <FilterLeiste zusatzGruppen={zusatzGruppen} />
     </>
   );
