@@ -6,7 +6,9 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  // .claude: Agent-Worktrees (isolierte Arbeitskopien) nicht mitlinten —
+  // sonst kippen Läufe durch halbfertige Stände fremder Sessions (6.6.2026).
+  globalIgnores(['dist', '.claude']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [

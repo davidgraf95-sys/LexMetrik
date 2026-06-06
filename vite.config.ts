@@ -15,5 +15,8 @@ export default defineConfig({
   test: {
     environment: 'node',
     globals: true,
+    // Agent-Worktrees unter .claude/ nicht mittesten (sonst doppelte Suite
+    // bzw. Fehlschläge aus halbfertigen Ständen fremder Sessions, 6.6.2026).
+    exclude: ['**/node_modules/**', '**/dist/**', '**/.claude/**'],
   },
 });

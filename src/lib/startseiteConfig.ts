@@ -1236,14 +1236,30 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['kuendigung-sperrfristen', 'arbeitszeugnis'],
     keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben'],
   },
+  // Maske 1a der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
+  // gebaut 6.6.2026): Beendigungsdatum LIVE aus lib/kuendigungsfrist.ts.
   'kuendigung-arbeitnehmer': {
     id: 'kuendigung-arbeitnehmer', modus: 'vorlage', art: 'korrespondenz', tier: 'free', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
-    title: 'Kündigung durch den Arbeitnehmer',
-    description: 'Kündigungsschreiben der Arbeitnehmerin oder des Arbeitnehmers.',
-    status: 'geplant', norms: [],
+    title: 'Kündigung durch Arbeitnehmer:in',
+    description: 'Kündigungsschreiben der Arbeitnehmerin oder des Arbeitnehmers – mit live berechnetem Beendigungsdatum (Dienstjahr, Probezeit, abweichende Fristen) und Zeugnis-/Abrechnungsbitte.',
+    status: 'entwurf',
+    norms: [
+      // Art. 335 OR – Grundsatz der ordentlichen Kündigung
+      { label: 'Art. 335 OR', url: fedlexUrl('OR', '335'), verified: false },
+      // Art. 335b OR – Probezeit (7-Tage-Frist)
+      { label: 'Art. 335b OR', url: fedlexUrl('OR', '335b'), verified: false },
+      // Art. 335c OR – Fristen und Termine
+      { label: 'Art. 335c OR', url: fedlexUrl('OR', '335c'), verified: false },
+      // Art. 330a OR – Arbeitszeugnis
+      { label: 'Art. 330a OR', url: fedlexUrl('OR', '330a'), verified: false },
+    ],
+    href: '/vorlagen/kuendigung-arbeitnehmer',
+    schemaId: 'kuendigung-arbeitnehmer',
+    formvorschrift: 'Formfrei (vorbehältlich vertraglicher Schriftform) – unterschreiben und nachweisbar zustellen.',
+    output: ['pdf', 'docx'],
     related: ['kuendigung-sperrfristen', 'arbeitszeugnis'],
-    keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben'],
+    keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben', 'Beendigungsdatum', 'Probezeit', 'Arbeitszeugnis'],
   },
   freistellung: {
     id: 'freistellung', modus: 'vorlage', art: 'korrespondenz', tier: 'pro', rechtsgebiet: 'Arbeit',
