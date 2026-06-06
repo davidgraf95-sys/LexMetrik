@@ -42,8 +42,11 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
       )}
       <div className="flex items-start justify-between">
         {card.icon ? (
+          /* Icon-Bubble einheitlich Messing für alle aktiven Karten — das
+             Entwurf-Signal tragen Oberkante + Badge, nicht noch das Icon
+             (Design-Review 6.6.2026: ein Flächensignal pro Karte). */
           <span className={`inline-flex items-center justify-center w-10 h-10 rounded-md ${
-            entwurf ? 'bg-warn-bg text-warn-700' : aktiv ? 'bg-brass-100 text-brass-700' : 'bg-paper-sunken text-ink-500'
+            aktiv ? 'bg-brass-100 text-brass-700' : 'bg-paper-sunken text-ink-500'
           }`}>
             <Icon name={card.icon} />
           </span>
@@ -52,7 +55,7 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
             das orange Badge (Unterscheidbarkeit der drei Zustände). */}
         <span className="inline-flex items-center gap-1.5">
           {entwurf && (
-            <span className="lc-badge lc-badge-warn" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
+            <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
           )}
         </span>
         {!aktiv && <span className="lc-badge lc-badge-soft">In Vorbereitung</span>}

@@ -60,6 +60,9 @@ export function Startseite() {
   const nutzbar = sortiert.filter((k) => k.status !== 'geplant');
   const nRechner = nutzbar.filter((k) => k.modus === 'rechner').length;
   const nVorlagen = nutzbar.filter((k) => k.modus === 'vorlage').length;
+  // Status-Legende statt 9 lauter Einzel-Badges: EINE Zeile erklärt den
+  // Entwurfs-Stand (§8 bleibt erfüllt; Design-Review 6.6.2026, Freigabe David).
+  const nEntwurf = nutzbar.filter((k) => k.status === 'entwurf').length;
 
   return (
     <div>
@@ -71,6 +74,9 @@ export function Startseite() {
       <section className="pt-10 pb-10 sm:pt-14 sm:pb-12 border-b border-line">
         <div className="max-w-3xl space-y-5">
           <p className="lc-overline">Schweizer Recht, berechenbar</p>
+          {/* Signature-Element (Designsystem §4) auch im Hero: Haarlinie mit
+              auslaufendem Messing-Akzent unter der Overline. */}
+          <div className="scale-rule max-w-[280px] !mt-2.5" aria-hidden />
           <h1 className="font-display font-semibold text-ink-900 text-h1 leading-tight">
             Fristen berechnen. Beträge beziffern. Rechtsdokumente aufsetzen.
           </h1>
@@ -85,13 +91,33 @@ export function Startseite() {
             <a href="#vorlagen" className="lc-btn-outline no-underline">Zu den Vorlagen</a>
             <span className="num text-body-s text-ink-500">{nRechner} Rechner · {nVorlagen} Vorlagen · kostenlos</span>
           </div>
-          <ul className="flex flex-wrap gap-x-6 gap-y-1 pt-2 text-body-s text-ink-500">
-            <li>Deterministisch – gleiche Eingabe, gleiches Ergebnis</li>
-            <li>Normen auf Fedlex verlinkt</li>
-            <li>Rechenweg vollständig offengelegt</li>
+          {/* Methodik-Anker mit Messing-Tick (gleiche Anatomie wie lc-chip):
+              scanbarer als die frühere stille Grauzeile (Design-Review 6.6.2026). */}
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 pt-2 text-body-s text-ink-600">
+            {[
+              'Deterministisch – gleiche Eingabe, gleiches Ergebnis',
+              'Normen auf Fedlex verlinkt',
+              'Rechenweg vollständig offengelegt',
+            ].map((c) => (
+              <li key={c} className="pl-2.5 leading-snug" style={{ borderLeft: '2px solid var(--brass-500)' }}>{c}</li>
+            ))}
           </ul>
         </div>
       </section>
+
+      {/* Status-Legende (einmal, datengetrieben §5): erklärt das Entwurfs-
+          Badge der Karten, statt dass jedes einzelne Badge schreien muss. */}
+      {nEntwurf > 0 && (
+        <p className="mt-6 flex flex-wrap items-center gap-2 text-body-s text-ink-500">
+          <span className="lc-badge-entwurf">Entwurf</span>
+          <span>
+            erstellt, fachlich noch nicht geprüft —{' '}
+            {nEntwurf === nutzbar.length
+              ? 'gilt derzeit für alle Einträge'
+              : <>gilt für <span className="num">{nEntwurf}</span> von <span className="num">{nutzbar.length}</span> Einträgen</>}
+          </span>
+        </p>
+      )}
 
       {/* Flache Kachelwand: zwei Blöcke, gleichwertiges Raster; geplante
           Karten stehen gedämpft an ihrer kuratierten Position. */}

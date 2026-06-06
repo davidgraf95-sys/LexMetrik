@@ -43,7 +43,7 @@ export function Header() {
   const { pathname } = useLocation();
   return (
     <header className="sticky top-0 z-20 border-b border-line"
-      style={{ background: 'color-mix(in srgb, var(--paper) 92%, transparent)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }}>
+      style={{ background: 'color-mix(in srgb, var(--paper) 96%, transparent)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
       {/* Utility-Bar (schlank): nur der Pflichthinweis rechts – der Claim
           steht genau einmal im Hero. Auf Mobile ausgeblendet. */}
       <div className="hidden sm:block border-b border-line" style={{ background: 'color-mix(in srgb, var(--paper-sunken) 55%, transparent)' }}>
@@ -56,7 +56,10 @@ export function Header() {
       <div className="max-w-content mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
         <Link to="/" className="inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik – Startseite">
           <LexMetrikSiegel size={30} />
-          <LexMetrikWortmarke className="text-[1.35rem] hidden md:block" />
+          {/* Wortmarke auch mobil: Erstbesucher sollen den Namen im Header
+              sehen (Design-Review 6.6.2026); bei 390px bleibt neben DE/Pro
+              genug Platz. */}
+          <LexMetrikWortmarke className="text-[1.35rem]" />
         </Link>
 
         <nav className="flex items-center gap-1.5 sm:gap-2 shrink-0">

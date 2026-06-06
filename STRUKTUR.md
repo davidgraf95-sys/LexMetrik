@@ -206,8 +206,10 @@ Person später). `<html lang>` folgt der Locale; Fedlex-Links ebenfalls
 
 ## Status-Modell (ehrlich, drei Zustände)
 
-`entwurf` (oranger Top-Rand `--warn-500` + Badge «Entwurf», Tooltip
-«erstellt, fachlich noch nicht geprüft») = gebaut, ungeprüft ·
+`entwurf` (oranger Top-Rand `--warn-500` + Outline-Badge «Entwurf»
+(`.lc-badge-entwurf`), Tooltip «erstellt, fachlich noch nicht geprüft»;
+dazu EINE Status-Legende über der Startseiten-Kachelwand statt lauter
+Einzel-Badges — Design-Review 6.6.2026, Freigabe David) = gebaut, ungeprüft ·
 `geprüft` (Goldrand, KEIN Wort-Badge) = fachlich geprüft — **aktuell
 nirgends vergeben** · `geplant` (gedämpft, AA-konform ohne Opacity) =
 «In Vorbereitung», ohne Norm-Pills/Artikel-/Tagesangaben.

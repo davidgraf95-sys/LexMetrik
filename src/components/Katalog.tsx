@@ -134,7 +134,7 @@ function TrefferZeile({ k, onOeffnen }: { k: CalculatorCard; onOeffnen?: (id: st
         <span className="block text-body-s text-ink-500 truncate">{k.rechtsgebiet} · {k.modus === 'vorlage' ? 'Vorlage' : 'Rechner'}</span>
       </span>
       <span className="flex items-center gap-3 shrink-0">
-        {k.status === 'entwurf' && <span className="lc-badge lc-badge-warn" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>}
+        {k.status === 'entwurf' && <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>}
         {k.status === 'geplant' && <span className="lc-badge lc-badge-soft">In Vorbereitung</span>}
         {aktiv && <span className="text-body-s font-medium text-brass-700 whitespace-nowrap">{k.modus === 'vorlage' ? 'Erstellen →' : 'Öffnen →'}</span>}
       </span>

@@ -22,15 +22,20 @@ export function RechnerKopf({ calc, kategorieOverride, kurzbeschriebOverride, no
   const normen = normenOverride ?? calc.normen;
   return (
     <div className="space-y-3 mb-8">
-      {/* Sichtbarer Rückweg zur Rechner-Übersicht (Startseite) */}
-      <Link to="/" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
-        <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
-        Zurück zur Übersicht
-      </Link>
-      <nav className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>
-        <Link to="/pro" className="no-underline text-ink-500 hover:text-ink-600">Katalog</Link>
-        <span className="mx-1.5">/</span>
-        <span className="text-ink-500">{calc.titel}</span>
+      {/* EINE Navigationszeile statt zwei (Design-Review 6.6.2026): der
+          sichtbare Rückweg (Pfeil → Startseite) und die Breadcrumb
+          (Katalog / Titel) teilen sich eine Zeile — gleiche Ziele, halber Platz. */}
+      <nav className="flex items-center gap-3 min-w-0">
+        <Link to="/" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600 shrink-0">
+          <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
+          Übersicht
+        </Link>
+        <span aria-hidden className="h-4 w-px bg-line-strong shrink-0" />
+        <span className="lc-overline text-ink-500 normal-case truncate" style={{ letterSpacing: '0.04em' }}>
+          <Link to="/pro" className="no-underline text-ink-500 hover:text-ink-600">Katalog</Link>
+          <span className="mx-1.5">/</span>
+          <span className="text-ink-500">{calc.titel}</span>
+        </span>
       </nav>
       <p className="lc-overline">{kategorie}</p>
       <h1 className="text-h1 font-display font-semibold text-ink-900">{sansAmp(calc.titel)}</h1>

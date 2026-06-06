@@ -29,12 +29,16 @@ function NormChip({ artikel, bemerkung }: { artikel: string; bemerkung?: string 
 }
 
 // Status-Badges (Design-Doc 5.8): gesichert→sage · umstritten/kein Anspruch→warn · nichtig/unzulässig→danger.
-const STATUS_CONFIG: Record<BerechnungsStatus, { label: string; cls: string }> = {
-  ok:            { label: 'Gültig',        cls: 'lc-badge-ok' },
-  nichtig:       { label: 'NICHTIG',       cls: 'lc-badge-danger' },
-  kein_anspruch: { label: 'Kein Anspruch', cls: 'lc-badge-warn' },
-  unzulaessig:   { label: 'Unzulässig',    cls: 'lc-badge-danger' },
-  ktg_regime:    { label: 'KTG-Regime',    cls: 'lc-chip' },
+// «verdikt» färbt den Hauptsatz (Design-Review 6.6.2026): ok bleibt neutrale
+// Tinte (das positive Signal trägt das sage-Badge), Problem-Status färben.
+// «hint» präzisiert das knappe Badge-Wort per Tooltip (nur wo mehrdeutig).
+const STATUS_CONFIG: Record<BerechnungsStatus, { label: string; cls: string; verdikt: string; hint?: string }> = {
+  ok:            { label: 'Gültig',        cls: 'lc-badge lc-badge-ok',     verdikt: 'text-ink-900',
+                   hint: 'Die Berechnung ergibt keinen Gültigkeits-Vorbehalt – Hinweise und Annahmen unten beachten.' },
+  nichtig:       { label: 'NICHTIG',       cls: 'lc-badge lc-badge-danger', verdikt: 'text-danger-700' },
+  kein_anspruch: { label: 'Kein Anspruch', cls: 'lc-badge lc-badge-warn',   verdikt: 'text-warn-700' },
+  unzulaessig:   { label: 'Unzulässig',    cls: 'lc-badge lc-badge-danger', verdikt: 'text-danger-700' },
+  ktg_regime:    { label: 'KTG-Regime',    cls: 'lc-chip',                  verdikt: 'text-ink-900' },
 };
 
 // Domänenneutral – der rechtsgebietsspezifische Disclaimer steht im jeweiligen
@@ -95,10 +99,15 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
       </div>
 
       <div className="p-6 space-y-5">
-        {/* Status + Hauptergebnis */}
+        {/* Status + Hauptergebnis — das Verdikt ist der typografische Peak
+            des Blocks (Display-Schnitt statt Mono-Zeile, Design-Review
+            6.6.2026); Tabellenziffern bleiben für Daten im Satz erhalten. */}
         <div className="space-y-3">
-          <span className={cfg.cls}>{cfg.label}</span>
-          <p className="text-ink-900 font-medium text-body-l leading-relaxed num">{ergebnis.ergebnis}</p>
+          <span className={cfg.cls} title={cfg.hint}>{cfg.label}</span>
+          <p className={`font-display font-semibold text-h3 leading-snug ${cfg.verdikt}`}
+            style={{ fontVariantNumeric: 'lining-nums tabular-nums' }}>
+            {ergebnis.ergebnis}
+          </p>
         </div>
 
         {/* Warnungen / Vorbehalte – einklappbar, um das Ergebnis übersichtlich zu halten */}

@@ -23,7 +23,7 @@ export function Datenschutz() {
         <p className="lc-overline">Rechtliches</p>
         <h1 className="text-h1 font-display font-semibold text-ink-900">Datenschutzerklärung</h1>
         <div className="flex flex-wrap items-center gap-2">
-          <span className="lc-badge lc-badge-warn" title="Entwurf – fachliche Prüfung steht aus">Entwurf</span>
+          <span className="lc-badge-entwurf" title="Entwurf – fachliche Prüfung steht aus">Entwurf</span>
           <span className="text-body-s text-ink-500">Stand: 5. Juni 2026 · nach Schweizer Datenschutzgesetz (DSG)</span>
         </div>
       </div>
