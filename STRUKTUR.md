@@ -16,6 +16,36 @@ Toggle-Kopplung gefixt).
 **Produktion:** https://lexmetrik.vercel.app (Vercel-Projekt `lexmetrik`;
 `legal-calc.vercel.app` = 308-Redirect). Marke: **LexMetrik** (grosses M).
 
+## Session 6.6.2026 abends (`8652e6b`…`4781ca7`, Aufträge David — ungepusht)
+
+**Art.-63-SchKG-Doppelfix** (fristenEngine.ts): (1) Fristende Sa/So unmittelbar
+vor Betreibungsferien — Werktagsverschiebung führte IN die Ferien (Repro
+13.7.2024 → 15.7. statt 6.8.); (2) Review-Befund M-1: 3. Werktag nach
+Ferienende kann in separaten Rechtsstillstand fallen → Normalisierung jetzt
+Schleife bis stabil. 5 Regressionstests, Wortlaut am Cache. ·
+**Feiertage-Doppelcheck 26/26** gegen die BJ-Liste (eigenständig am PDF):
+7 Korrekturen (LU-Berchtold, GL-Allerheiligen, GL/VS-Stephanstag,
+JU-Pfingstmontag, FR-Empfängnis, AI-Mauritius), **bedingte Feiertage** als
+`giltImJahr` (NE-Fn.-10, UR/AR/AI-Fn.-1/7/9), **Näfelser-Fahrt-Karwoche-
+Regel** (2026: 9.4.!); 2 Alttests trugen die falsche Matrix (deklariert
+korrigiert); Regelwerk `bibliothek/normen/feiertage-kantone-bj.md`. ·
+**Katalog-Split Zuständigkeit:** eigene Gebiets-Einstiege schkg-/straf-
+zustaendigkeit (Hash-Vorauswahl #schkg/#straf, Muster Kuendigung;
+istVerfuegbar 21→23). · **Rechtsmittel-Fahrplan (Zivil):** bestimmeRechtsmittel
+mit Objekt-/Verfahrens-/Vorinstanz-Weichen (308/319/314 Abs. 2 Rev. 2025!/
+321/145 Abs. 2 lit. b ZPO · 74/75 Abs. 2/46 Abs. 2 lit. a/92 f./98/100 BGG),
+strukturierte Fristen je Ebene (Tage + Stillstand), Weichen/Kognition
+offengelegt; UI als 4-Schritte-Fahrplan; Grundlage Dossier
+bgg-beschwerde-engine.md. · **CLAUDE.md §11** (Wissens-Ablage, Anweisung
+David) + Bibliothek komplettiert (45 Dossiers/5 Ordner, BGG-Cache in
+fedlex-cache.sh reproduzierbar gepinnt, Register nachgeführt). ·
+**Neue Dossiers:** eheschutz-glg-zustaendigkeit (Art. 198 lit. a! 314 Abs. 2
+30 T.!), bgg-beschwerde-engine (Decision-Tree A–F), feiertage-kantone-bj. ·
+**Gesamt-Check:** 2 unabhängige Review-Agents (Code + juristische Hand-
+rechnung am Wortlaut) — alle Punkte bestätigt, M-1 gefixt, N-1 im Backlog. ·
+**HANDLUNGSPLAN.md** neu (priorisiertes Vorgehen A–D). Offen: Davids
+Push-Ja (10 Commits), Abnahmen, Hosting/Zahlung.
+
 ## Session 6.6.2026 nachmittags (Audit-Fixes + Ausbau, `021c05a`…`3e08ef1`)
 
 Auf Davids laufende Aufträge: **Backlog B1–B10 komplett gefixt** (336c-
@@ -48,7 +78,7 @@ David: Dienstjahr-Stichtag-Grundsatzfrage · TI-Agno-Adresse · Abnahmen.
 
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 736 Tests (734 grün + 2 skipped) ✓ · tsc STRICT · Logik-Sweep 11'184 Kombinationen ✓ · Norm-Zitate 233/233 ✓ — Workflow:
+Build ✓ · Lint 0/0 ✓ · 757 Tests (755 grün + 2 skipped) ✓ · tsc STRICT · Logik-Sweep 11'184 Kombinationen ✓ · Norm-Zitate 261/261 ✓ · Fedlex-Caches 9 Gesetze/56 Pflicht-Anker ✓ — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
