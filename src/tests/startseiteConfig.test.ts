@@ -68,7 +68,7 @@ describe('Stufen-Zuteilung (tier)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -185,9 +185,11 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // Deklarierte Erweiterung Kündigungs-Masken 6.6.2026: Vorlagen 9–13
   // (1a AN free · 1b AG · 2a Mieter · 3 Vertrag/Presets · 2b Vermieter-
   // Checkliste [§8-Grenze, ohne Export]) → 28. Familie KOMPLETT.
-  it('verfügbar = status !== geplant; Regressionszählung 28 (Stand 6.6.2026, Kündigungs-Familie komplett)', () => {
+  // + Untermietvertrag-Einstieg (Plan B.6: Deep-Link in die Mietvertrags-
+  // Weiche, gleiches Schema) → 29.
+  it('verfügbar = status !== geplant; Regressionszählung 29 (Stand 6.6.2026, + Untermietvertrag)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(28);
+    expect(verf.length).toBe(29);
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });

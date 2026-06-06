@@ -1,4 +1,5 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   MV_DEFAULTS, MV_FORMULARPFLICHT, MV_OFFENE_VERIFIKATIONEN, MV_PARAMETER,
   MV_NEBENKOSTEN_WOHNEN, MV_NEBENKOSTEN_GESCHAEFT,
@@ -51,6 +52,21 @@ export function VorlageMietvertrag() {
         staffeln: Array.isArray(g.staffeln) ? g.staffeln : undefined,
       }),
     });
+
+  // Hash-Vorauswahl der Katalog-Karte «untermietvertrag» (#untermiete) —
+  // Muster RechnerKuendigung (adjusting state, kein Effect). Setzt die Weiche
+  // samt denselben Untermiete-Defaults wie der UI-Schalter; überschreibt auch
+  // einen gespeicherten Hauptmiete-Stand (bewusst: der Link sagt Untermiete).
+  const { hash } = useLocation();
+  const [hashStand, setHashStand] = useState<string | null>(null);
+  if (hashStand !== hash) {
+    setHashStand(hash);
+    if (hash === '#untermiete' && a.mietverhaeltnis !== 'untermiete') {
+      set('mietverhaeltnis', 'untermiete');
+      set('zustimmungStatus', 'nicht_angefragt');
+      set('untermieteUmfang', 'ganz');
+    }
+  }
 
   const ergebnis = useMemo(() => mvZusammenstellen(a), [a]);
   const gates = useMemo(() => pruefeMvGates(a), [a]);

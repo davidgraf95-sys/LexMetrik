@@ -1082,6 +1082,30 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['mietrecht', 'mietvertrag-wohnen', 'mietzinsanpassung'],
     keywords: ['Kündigung', 'Mietvertrag', 'Wohnung kündigen', 'Kündigungstermin', 'Familienwohnung', 'Nachmieter', 'Art. 264', 'Art. 266m'],
   },
+  // Eigener Katalog-Einstieg für die gestern gebaute Untermiete-Weiche der
+  // Mietvertrags-Vorlage (Plan B.6, 6.6.2026): Hash-Deep-Link #untermiete
+  // wählt die Weiche vor (Muster Katalog-Split). Gleiches Schema (§5).
+  untermietvertrag: {
+    id: 'untermietvertrag', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Miete',
+    rechtsbereich: 'privat',
+    title: 'Untermietvertrag',
+    description: 'Untermietvertrag nach Art. 262 OR (geltende Fassung – die Revision wurde am 24.11.2024 abgelehnt): Hauptmietvertrag-Referenz, Zustimmungs-Klausel, Haftung gegenüber dem Hauptvermieter, Missbrauchs-Check des Untermietzinses und Warnhinweis zum Ende der Hauptmiete.',
+    status: 'entwurf',
+    norms: [
+      // Art. 262 OR – Untermiete (Zustimmung, Verweigerungsgründe, Haftung)
+      { label: 'Art. 262 OR', url: fedlexUrl('OR', '262'), verified: false },
+      // Art. 257e OR – Kaution (Untervermieter ist insoweit «Vermieter»)
+      { label: 'Art. 257e OR', url: fedlexUrl('OR', '257e'), verified: false },
+      // Art. 270 OR – Anfangsmietzins-Formular gilt auch für den Untermietzins
+      { label: 'Art. 270 OR', url: fedlexUrl('OR', '270'), verified: false },
+    ],
+    href: '/vorlagen/mietvertrag#untermiete',
+    schemaId: 'mietvertrag',
+    formvorschrift: 'Beidseitig zu unterzeichnen; Zustimmung des Hauptvermieters formfrei, aber beweishalber schriftlich.',
+    output: ['pdf', 'docx'],
+    related: ['mietvertrag-wohnen', 'kuendigung-mieter', 'mietrecht'],
+    keywords: ['Untermiete', 'Untermietvertrag', 'Untervermietung', 'Zustimmung Vermieter', 'Art. 262', 'WG-Zimmer', 'möbliertes Zimmer'],
+  },
   'mietvertrag-wohnen': {
     id: 'mietvertrag-wohnen', modus: 'vorlage', art: 'vertrag', tier: 'pro', rechtsgebiet: 'Miete',
     rechtsbereich: 'privat',
