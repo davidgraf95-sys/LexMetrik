@@ -52,7 +52,7 @@ angeboten.
   «Verfügbar/Gesamter Katalog» (URL-synchron), gruppierte Scrollspy-
   Navigation, Volltext-/Norm-Suche, Filter und Schnellzugriff (★ Favoriten
   + Zuletzt verwendet, rein lokal). Pro-Sitzung überlebt das Neuladen;
-  PayPal-Gate vorbereitet (`PAYWALL_ACTIVE = false`), bewusst inaktiv.
+  Zahlungs-Gate vorbereitet (`PAYWALL_ACTIVE = false`), bewusst inaktiv; das Zahlungssystem ist noch nicht definiert (Entscheid 6.6.2026 — PayPal aus der Planung genommen).
 
 **Zielgrösse:** über 50 Rechner und über 50 Vorlagen (Soll in
 `KATALOG-ROADMAP.md`).

@@ -85,7 +85,7 @@ SSR-Smoke aller Seiten, Tests/Lint unverändert grün).
 KATALOG-ROADMAP.md):** `/` = Free (kostenlose Auswahl, `tier: 'free'` —
 10 Einträge gemäss Auftrags-§3), `/pro` = vollständiger Katalog (free+pro);
 `/fachpersonen` → Redirect auf `/pro` (erhält `?modus=`). `PAYWALL_ACTIVE
-= false` in startseiteConfig — das PayPal-Gate an der Pro-Bereichsgrenze
+= false` in startseiteConfig — das Zahlungs-Gate an der Pro-Bereichsgrenze (Zahlungssystem noch nicht definiert, Entscheid 6.6.2026)
 ist ein späterer, separater Schritt. Header-Button «Pro →» / «← Free».
 
 **Katalog-Gliederung: primär nach RECHTSGEBIET** (17 kanonische Sektionen
@@ -323,7 +323,7 @@ Berichte):** Typografie je Format + AUSGABE_REGELN je AusgabeArt
 Anrede/Schlussformel/«im Doppel» (Rollen anrede/schlussformel);
 Verträge mit Ausfertigungs-Vermerk + QES-Hinweis (Art. 14 Abs. 2bis OR).
 Pro-SITZUNG (lib/proSession.ts): Pro betreten = eingeloggt (localStorage,
-Reload-fest, «/»→/pro), Header «Ausloggen»; Andockpunkt PayPal-Gate.
+Reload-fest, «/»→/pro), Header «Ausloggen»; Andockpunkt Zahlungs-Gate (System offen).
 Einzeilen-Heros Free+Pro; Gebiets-Titel in Sans.
 
 **Formatvorlagen der Vorlagen-Renderer (5.6.2026, Referenz-Layouts):**

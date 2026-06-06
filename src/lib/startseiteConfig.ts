@@ -22,7 +22,8 @@ export type Art = 'frist' | 'betrag' | 'zuordnung' | 'werkzeug'; // Rechner-Outp
 export type VorlageArt = 'vorsorge' | 'vertrag' | 'eingabe' | 'gesellschaft' | 'korrespondenz'; // Dokument-Typ → Sektion/Filter
 // Stufe (orthogonal zum Status): free = kostenlose Auswahl auf «/»;
 // pro = vollständiger Katalog auf /pro (zeigt free UND pro).
-// Zugangskontrolle (PayPal-Gate an der Pro-Bereichsgrenze) ist ein späterer,
+// Zugangskontrolle (Zahlungs-Gate an der Pro-Bereichsgrenze; Zahlungssystem
+// noch nicht definiert) ist ein späterer,
 // separater Schritt – solange PAYWALL_ACTIVE false ist, bleibt Pro offen.
 export type Tier = 'free' | 'pro';
 export const PAYWALL_ACTIVE = false;

@@ -10,7 +10,7 @@ import { Katalog } from '../components/Katalog';
 
 export function Pro() {
   // Pro betreten = eingeloggt (überlebt Neuladen; Header zeigt «Ausloggen»).
-  // Andockpunkt PayPal-Gate: später wird hier stattdessen das Gate geprüft.
+  // Andockpunkt Zahlungs-Gate (System noch offen): später wird hier das Gate geprüft.
   useEffect(() => { proEinloggen(); }, []);
   // Pro zeigt den VOLLSTÄNDIGEN Katalog (free + pro);
   // die Free-Seite zeigt nur die kostenlose Auswahl (tier 'free').

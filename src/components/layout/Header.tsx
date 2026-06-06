@@ -9,7 +9,7 @@ import { istProEingeloggt, proAusloggen } from '../../lib/proSession';
 // der Header trägt nur noch, was beim Arbeiten gebraucht wird.
 // Der frühere Stufen-Umschalter ist aufgelöst: «/» (Free) ist der Default;
 // ein gerichteter Button führt in den Pro-Bereich (gekapselte Route, später
-// PayPal-Gate – PAYWALL_ACTIVE) und von dort zurück.
+// Zahlungs-Gate – PAYWALL_ACTIVE; Zahlungssystem noch nicht definiert) und von dort zurück.
 const NAV = [
   { to: '/methodik', label: 'Methodik', match: (p: string) => p === '/methodik' },
 ];
