@@ -330,3 +330,21 @@ describe('Audit-Fix B10 – Schwangerschaft: deterministisches Ende aus Niederku
     expect(rechenwegText(r)).toContain('Ende gemäss Eingabe');
   });
 });
+
+describe('Randfall-Fix 6.6.2026 — cter-Urlaub nach Ablauf der Kappung', () => {
+  it('Urlaubsbeginn nach der Kappe → KEIN Schutz, kein invertiertes Intervall, 0 Sperrtage', () => {
+    // Niederkunft 01.01.2026 → lit.-c-Ende 23.04. → Kappe 23.07.2026;
+    // Urlaub erst 01.–10.08.2026 (Rahmenfrist 6 Monate ab Tod erlaubt das).
+    const r = berechneSperrfristen({
+      ...BASE,
+      zugangKuendigung: '2026-08-05', // läge IM Urlaub — darf NICHT nichtig machen
+      sperrereignisse: [
+        { typ: 'zusatzurlaub_tod_elternteil', von: '2026-08-01', bis: '2026-08-10', niederkunft: '2026-01-01' },
+      ],
+    });
+    expect(r.status).toBe('ok'); // kein Schutz → Kündigung gültig
+    expect(r.sperrIntervalle ?? []).toHaveLength(0);
+    expect(r.sperrtage?.[0].beansprucht).toBe(0);
+    expect(rechenwegText(r)).toContain('KEIN zeitlicher');
+  });
+});

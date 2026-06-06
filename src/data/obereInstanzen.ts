@@ -5,7 +5,8 @@ import type { Kanton } from '../types/legal';
 // Ausbau «obere Instanzen» (Anordnung David 5.6.2026). Quelle: ZWEIFACH
 // GEPRÜFTE Dossiers bibliothek/behoerden/gerichtsbehoerden-kantone.md +
 // gerichtsadressen-erstliste.md (Audit-Trail; dort korrigiert u. a.
-// BE 3012 statt 3001, LU 6003 statt 6002). Abruf 5.6.2026.
+// BE 3012 statt 3001). Abruf 5.6.2026; LU per Adress-Re-Audit 6.6.2026 auf
+// 6002 (Postfach-PLZ Hirschengraben 16) gestellt — siehe hinweis am Eintrag.
 // NAMENSLOGIK-FALLE (Dossier-Befund): «Kantonsgericht» ist in GL/SH/AR/OW/NW
 // die ERSTE Instanz — die obere heisst dort Obergericht; in SG/AI/VS/FR/BL/LU
 // ist «Kantonsgericht» die OBERE Instanz. Deshalb hier explizit je Kanton.

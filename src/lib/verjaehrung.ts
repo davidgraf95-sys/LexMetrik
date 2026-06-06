@@ -344,11 +344,14 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
         (u) => u.typ === 'urkunde_urteil' || (u.typ === 'klage_schlichtung' && u.mitUrteil),
       );
       if (ist137II) {
+        // Empirie-v2-Fix 6.6.2026: werktagsverschobene Daten ausweisen — sonst
+        // widerspricht die Warnung dem publizierten Verjährungsdatum, wenn ein
+        // Fristende auf Sa/So/Feiertag fällt.
         warnungen.push(
           `VARIANTE Art. 137 Abs. 2 OR: Nach herrschender Lehre begründet die Anerkennung durch Urkunde bzw. die gerichtliche ` +
           `Feststellung eine SELBSTÄNDIGE 10-Jahres-Frist, die über die ursprüngliche absolute Frist hinauslaufen kann — danach ` +
-          `träte die Verjährung erst am ${fmt(relativEnde)} ein. Ausgewiesen wird konservativ das frühere Datum ` +
-          `(${fmt(absolutEnde)}); für die Geltendmachung der späteren Variante fachliche Prüfung im Einzelfall.`,
+          `träte die Verjährung erst am ${fmt(werktagsEnde(relativEnde, input.kanton))} ein. Ausgewiesen wird konservativ das frühere Datum ` +
+          `(${fmt(werktagsEnde(absolutEnde, input.kanton))}); für die Geltendmachung der späteren Variante fachliche Prüfung im Einzelfall.`,
         );
       }
     }

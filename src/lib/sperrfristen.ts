@@ -50,6 +50,9 @@ type SperrfristIntervall = {
   beschreibung: string;
   normen: Normverweis[];
   kontingent?: number; // nur Krankheit/Unfall: 30/90/180 Tage je Dienstjahr (Art. 336c Abs. 1 lit. b OR)
+  /** Randfall-Fix 6.6.2026: Tatbestand greift NICHT (z. B. cter-Urlaub beginnt
+   *  erst nach Ablauf der Kappung) — kein Intervall, nur erklärender Schritt. */
+  keinSchutz?: boolean;
 };
 
 function berechneSperrfristIntervall(
@@ -165,6 +168,23 @@ function berechneSperrfristIntervall(
       if (ereignis.niederkunft) {
         const litCEnde = addDays(parseISO(ereignis.niederkunft), 112);
         const kappe = addMonths(litCEnde, 3);
+        // Randfall-Fix 6.6.2026 (adversarialer Review): Beginnt der Urlaub erst
+        // NACH der Kappung (möglich, weil die Rahmenfrist des Art. 329f Abs. 3
+        // sechs Monate ab Tod läuft), besteht KEIN cter-Schutz — vorher entstand
+        // ein invertiertes Intervall (von > bis, «−8 Sperrtage» in der Anzeige).
+        if (isAfter(von, kappe)) {
+          return {
+            von,
+            bis: von,
+            keinSchutz: true,
+            beschreibung:
+              `Zusatzurlaub nach Tod des anderen Elternteils (lit. cter, Art. 329f Abs. 3 OR): Der Urlaubsbeginn ` +
+              `${formatDatum(von)} liegt NACH der gesetzlichen Kappung («längstens drei Monate ab dem Ende der ` +
+              `lit.-c-Sperrfrist» = ${formatDatum(kappe)}) — für diesen Urlaubsbezug besteht KEIN zeitlicher ` +
+              `Kündigungsschutz nach lit. cter mehr.`,
+            normen: [N_336c_1],
+          };
+        }
         const ende = isBefore(bis, kappe) ? bis : kappe;
         const gekappt = isAfter(bis, kappe);
         return {
@@ -373,6 +393,17 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
       return;
     }
     const iv = berechneSperrfristIntervall(e, vb);
+    if (iv.keinSchutz) {
+      // Tatbestand greift nicht (Randfall-Fix 6.6.2026): kein Intervall, kein
+      // Zähler-Eintrag mit negativen Tagen — nur der erklärende Schritt.
+      sperrtage.push({ ereignis: i + 1, typ: e.typ, vonISO: e.von, bisISO: e.bis, beansprucht: 0 });
+      rechenweg.push({
+        beschreibung: `Sperrereignis ${i + 1} – ${e.typ} (Art. 336c Abs. 1 OR)`,
+        zwischenergebnis: iv.beschreibung,
+        normen: iv.normen,
+      });
+      return;
+    }
     intervalle.push(iv);
     sperrIntervalle.push({ von: iso(iv.von), bis: iso(iv.bis), typ: e.typ });
     // Zähler: Krankheit nach Art.-77-Zählung (Anfangstag zählt nicht, daher

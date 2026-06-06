@@ -39,8 +39,15 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
     // damit die Achse (Verzugsbeginn → Stichtag) wahr bleibt. Nur wenn das
     // Kapital tatsächlich getilgt ist (nicht bei 30E/360-Rundungsdifferenzen);
     // danach läuft kein Zins mehr (kein Zinseszins, Art. 105 Abs. 3 OR).
+    // B8-Folgefix 6.6.2026: tageTotal ist seit dem B8-Fix die SEGMENT-Summe —
+    // die volle Achsenspanne rechnet die Timeline deshalb selbst aus den
+    // formatieren Engine-Daten (dd.MM.yyyy), reine Anzeige-Geometrie (§3).
+    const tagISO = (s: string) => s.split('.').reverse().join('-');
+    const spanneTage = e.ersterZinstag && e.stichtag
+      ? Math.round((Date.parse(tagISO(e.stichtag)) - Date.parse(tagISO(e.ersterZinstag))) / 86_400_000)
+      : 0;
     const segmentTage = segmente.reduce((sum, s) => sum + s.tage, 0);
-    const fillerTage = e.kapitalOffen <= 0 ? e.tageTotal - segmentTage : 0;
+    const fillerTage = e.kapitalOffen <= 0 ? Math.max(0, spanneTage - segmentTage) : 0;
     if (fillerTage > 0 && segmente.length > 0) {
       abschnitte.push({
         tage: fillerTage,
