@@ -16,9 +16,39 @@ Toggle-Kopplung gefixt).
 **Produktion:** https://lexmetrik.vercel.app (Vercel-Projekt `lexmetrik`;
 `legal-calc.vercel.app` = 308-Redirect). Marke: **LexMetrik** (grosses M).
 
+## Session 6.6.2026 nachmittags (Audit-Fixes + Ausbau, `021c05a`…`3e08ef1`)
+
+Auf Davids laufende Aufträge: **Backlog B1–B10 komplett gefixt** (336c-
+Tatbestände cbis/cter/cquinquies + Niederkunfts-Berechnung; Wechselbetreibung
+`modus:'kein'` Art. 56 Ziff. 2; JStPO-Checkbox; ErrorBoundary+Export-Catches;
+KTG-Risiken; Fraunces self-host+CSP+Cache-Header; Adress-SSoT BS golden-
+bewiesen; tageTotal; 137-II-Variante) · **PLZ-Fixes** (21 tote Lookup-Pfade
+via namensKandidaten(); Hauptgemeinde per amtlichem Adressenanteil — 4052
+zeigt Basel 97.7 %) · **NEU Erb-Fristen-Rechner** (/rechner/erb-fristen, 15
+Tatbestände 521/533/567 ff., Karte entwurf, Zählung 21) · **NEU Straf-
+Rechtsmittel** (lib/strafRechtsmittel.ts, dritte Eingangs-Gabelung im Straf-
+Rechtsweg; 222 rev. 2024!) · **Strafgerichts-Adressen** (data/strafgerichte.ts
+26/26, Berufung §5-projiziert aus obereInstanzen; BL amtlich Grenzacher-
+strasse 8 Muttenz) · **Hero je Rechtsweg** · **Schlichtungsstellen-Direktlinks**
+(48/85 WebFetch-verifiziert + UI) · **Behörden-Voll-Audit: 0 Adressfehler**,
+7 tote URLs ersetzt, Betreibungsämter-Verzeichnis → EasyGov (alte BJ-URL 404) ·
+**Tiefencheck Engine** (8'442 Fälle: Scheidung×Art.-8-Naht + behoerdeTyp-Gate
+gefixt, alles übrige entwarnt) · **Art. 5 Abs. 2 ergänzt**, lit. e/g–i
+vollständig · **Art.-114-Spiegelung** Entscheidverfahren (lit. a/c/g) ·
+**Kosten nicht-vermögensrechtlich** 26/26 + Familie (14 Kantone) in Daten+UI ·
+**NEU Untermietvertrag-Weiche** (Art. 262 GELTENDE Fassung — Revision in der
+Volksabstimmung 24.11.2024 abgelehnt!; Hauptmiete golden byte-identisch) ·
+**Zahlungssystem-Entscheid:** PayPal aus der Planung entfernt (System offen).
+**Recherche:** 17 Dossiers in `bibliothek/recherche/` (12 Engine-Cluster +
+StPO-Rechtsmittel, Strafbefehlsverfahren, Gebühren-nv, Kündigungs-Masken,
+Untermietvertrag) + `strafgerichte-kantone.md`/`schlichtungsstellen-urls.md` —
+alle Erstrecherche/einfach belegt, fachliche Abnahme ausstehend.
+Konsolidierter Befund-Stand: `fundamentalanalyse-2026-06-06.md`. Offen für
+David: Dienstjahr-Stichtag-Grundsatzfrage · TI-Agno-Adresse · Abnahmen.
+
 ## Verifikationsstand (eine Zeile)
 
-Build ✓ · Lint 0/0 ✓ · 620 Tests (618 grün + 2 skipped) ✓ · tsc STRICT · Logik-Sweep 11'184 Kombinationen ✓ · Norm-Zitate 233/233 ✓ — Workflow:
+Build ✓ · Lint 0/0 ✓ · 736 Tests (734 grün + 2 skipped) ✓ · tsc STRICT · Logik-Sweep 11'184 Kombinationen ✓ · Norm-Zitate 233/233 ✓ — Workflow:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe lesen, nicht
 `tail -1`!) · `npm run build`; vor Deploys unabhängige Review-Agents.
 SSR-Smoke-Test aller Seiten: `npx vite-node scripts/smoke-render.tsx`.
