@@ -13,10 +13,14 @@ const QUELLEN = [
   'src/lib/zustaendigkeitFahrplan.ts',
   'src/lib/vorlagen/klageVereinfacht.ts',
   'src/data/zustaendigkeitKosten.ts',
+  // Gründungs-Masken GmbH/AG (6.6.2026) — HRegV-/StG-Zitate
+  'src/lib/gruendungsunterlagen.ts',
 ];
 const CACHES: Record<string, string> = {
   ZPO: '/tmp/zpo.html', SchKG: '/tmp/schkg.html', StPO: '/tmp/stpo.html',
   BGG: '/tmp/bgg.html', StGB: '/tmp/stgb.html', ZGB: '/tmp/zgb.html', OR: '/tmp/or.html',
+  // via scripts/fedlex-cache.sh gepinnt (6.6.2026)
+  HRegV: '/tmp/hregv.html', StG: '/tmp/stg.html',
 };
 const html: Record<string, string> = {};
 for (const [g, p] of Object.entries(CACHES)) {
@@ -32,7 +36,7 @@ const artText = (gesetz: string, nr: string): string | null => {
 };
 
 // Zitate einsammeln: «Art. 74 Abs. 2 lit. b BGG», «Art. 198 lit. e Ziff. 3 ZPO» …
-const RX = /Art\.\s*(\d+[a-z]*)\s*(?:Abs\.\s*(\d+)\s*)?(?:lit\.\s*([a-z]+(?:bis|ter)?)\s*)?(?:Ziff\.\s*(\d+)\s*)?(ZPO|SchKG|StPO|BGG|StGB|ZGB|OR)\b/g;
+const RX = /Art\.\s*(\d+[a-z]*)\s*(?:Abs\.\s*(\d+)\s*)?(?:lit\.\s*([a-z]+(?:bis|ter)?)\s*)?(?:Ziff\.\s*(\d+)\s*)?(ZPO|SchKG|StPO|BGG|StGB|ZGB|OR|HRegV|StG)\b/g;
 let total = 0, fehler = 0;
 const gesehen = new Set<string>();
 for (const q of QUELLEN) {

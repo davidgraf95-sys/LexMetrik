@@ -35,6 +35,17 @@ EINTRAEGE=(
   # VVG: gepinnt 6.6.2026 (html-2!, 200 kB; Kündigungs-Maske 3 — 35a/b/c
   # + Zwingend-Kataloge 97/98 am Wortlaut verifiziert).
   "vvg|cc/24/719_735_717|20240101|2|art_35_a,art_35_b,art_35_c,art_97,art_98"
+  # HRegV: gepinnt 6.6.2026 (Gründungs-Masken GmbH/AG; 20250101 = neuste
+  # greifbare Konsolidierung, 1.7.2025/1.1.2026 liefern nur die SPA-Shell).
+  # Beleg-Artikel 43/44/71/72 + Form (18/20/21/22/23/24a) + Domizil 117.
+  "hregv|cc/2007/686|20250101|1|art_18,art_20,art_21,art_22,art_23,art_24_a,art_43,art_44,art_45,art_71,art_72,art_117"
+  # GebV-HReg: gepinnt 6.6.2026 (HReg-Gebühren, Anhang Ziff. 1.3 = CHF 420;
+  # ELI via SPARQL aufgelöst, 20210101 = einzige Konsolidierung; nur ~30 kB!).
+  "gebv_hreg|cc/2020/180|20210101|1|art_3,art_4,art_8"
+  # StG: gepinnt 6.6.2026 (Emissionsabgabe in den Gründungs-Masken:
+  # Art. 8 Abs. 1 = 1 %, Art. 6 Abs. 1 lit. h = Freibetrag 1 Mio.;
+  # 20240101 = neuste Konsolidierung).
+  "stg|cc/1974/11_11_11|20240101|1|art_5,art_6,art_8"
 )
 
 fehler=0
@@ -45,14 +56,17 @@ for e in "${EINTRAEGE[@]}"; do
   url="${BASIS}/${eli}/${kons}/de/html/fedlex-data-admin-ch-eli-${pfad}-${kons}-de-html-${n}.html"
   code=$(curl -s -o "$datei" -w "%{http_code}" "$url")
   groesse=$(wc -c < "$datei" | tr -d ' ')
-  if [ "$code" != "200" ] || [ "$groesse" -lt 40000 ]; then
+  # Schwelle 20 kB: SPA-Shell/Fehlerseiten sind ~9 kB bzw. ~77 kB OHNE Anker —
+  # die Anker-Prüfung unten fängt grosse Blindgänger; kleinster echter Cache
+  # ist die GebV-HReg mit ~30 kB (darum nicht mehr 40 kB).
+  if [ "$code" != "200" ] || [ "$groesse" -lt 20000 ]; then
     # Fallback: andere html-N-Varianten probieren
     ok=""
     for alt in 1 2 3 4 5; do
       url="${BASIS}/${eli}/${kons}/de/html/fedlex-data-admin-ch-eli-${pfad}-${kons}-de-html-${alt}.html"
       code=$(curl -s -o "$datei" -w "%{http_code}" "$url")
       groesse=$(wc -c < "$datei" | tr -d ' ')
-      if [ "$code" = "200" ] && [ "$groesse" -gt 40000 ]; then ok="ja"; break; fi
+      if [ "$code" = "200" ] && [ "$groesse" -gt 20000 ]; then ok="ja"; break; fi
     done
     if [ -z "$ok" ]; then
       echo "FEHLER  ${name}: kein Filestore-HTML gefunden (Konsolidierung ${kons} prüfen!)"
