@@ -75,9 +75,10 @@ export function Startseite() {
             Fristen berechnen. Beträge beziffern. Rechtsdokumente aufsetzen.
           </h1>
           <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
-            Verzugszins, Teuerung, Kündigungs- und Verjährungsfristen, Testament, Vorsorgeauftrag
-            oder Vollmacht: LexMetrik rechnet nach festen Regeln – ohne Sprachmodell, jeder
-            Rechenschritt offengelegt, jede Norm direkt auf den Gesetzestext verlinkt.
+            Verzugszins, Teuerung, Verjährungs- und Kündigungsfristen berechnen; Testament,
+            Vorsorgeauftrag, Vollmacht oder Kündigungsschreiben aufsetzen. LexMetrik arbeitet
+            nach festen Regeln, ohne Sprachmodell – jeder Rechenschritt offengelegt, jede Norm
+            direkt mit dem Gesetzestext verlinkt.
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-1">
             <a href="#rechner" className="lc-btn-primary no-underline">Zu den Rechnern</a>

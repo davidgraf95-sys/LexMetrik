@@ -372,7 +372,13 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
     ? [{ id: 'was', label: 'Was möchten Sie tun?' }]
     : f.instanz === 'rechtsmittel'
       ? [
+          // Befund David 6.6.2026 (Fahrplan blieb leer): Die Engine braucht
+          // auch im Rechtsmittel-Modus Streitsache (BGer-Schwelle Miete/
+          // Arbeit, Art.-5-Weiche) und Streitwert (308 Abs. 2 / 74 BGG) —
+          // beide Schritte gehören in die Strecke.
           { id: 'was', label: 'Was möchten Sie tun?' },
+          { id: 'sache', label: 'Worum geht es?' },
+          ...(istScheidung ? [] : [{ id: 'streitwert' as SchrittId, label: 'Streitwert' }]),
           { id: 'ort', label: 'Kanton' },
           { id: 'ergebnis', label: 'Fahrplan' },
         ]
@@ -724,6 +730,19 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           statt zweier Textkarten — 1. statthaftes Rechtsmittel · 2. Instanz mit
           Adresse · 3. FRIST konkret aufgelöst (30/10 Tage, Stillstand ja/nein)
           · 4. Weiterzug BGer inkl. eigener Frist, Kognition und Weichen. */}
+      {/* Ehrlicher Leerzustand (Befund Logik-Check NIEDRIG + David): fehlen
+          Pflichtangaben, sagt der Fahrplan WAS fehlt, statt leer zu bleiben. */}
+      {zeige('ergebnis') && f.instanz === 'rechtsmittel' && !rechtsmittel && (
+        <div className="lc-card p-5 space-y-2">
+          <p className="lc-overline">Fahrplan</p>
+          <p className="text-body-s text-ink-700">
+            Für den Rechtsmittel-Fahrplan fehlen noch Angaben:
+          </p>
+          {fehler.length > 0
+            ? fehler.map((x, i) => <p key={i} className="text-body-s text-warn-700">• {x}</p>)
+            : <p className="text-body-s text-warn-700">• Bitte die vorherigen Schritte vervollständigen.</p>}
+        </div>
+      )}
       {zeige('ergebnis') && f.instanz === 'rechtsmittel' && rechtsmittel && (
         <div className="lc-reveal space-y-4" aria-live="polite">
           <LiveHeader />
@@ -846,6 +865,15 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           Rechtsmittel-Modus tragen die Rechtsmittel-Karten oben die volle
           Auskunft; die Einleitungs-Blöcke [Verfahrensart/Schlichtung/Stellen-
           Notices/Weichen] würden dort sachfremd leaken) */}
+      {zeige('ergebnis') && f.instanz === 'einleitung' && !(ergebnis && r) && (
+        <div className="lc-card p-5 space-y-2">
+          <p className="lc-overline">Fahrplan</p>
+          <p className="text-body-s text-ink-700">Für den Fahrplan fehlen noch Angaben:</p>
+          {fehler.length > 0
+            ? fehler.map((x, i) => <p key={i} className="text-body-s text-warn-700">• {x}</p>)
+            : <p className="text-body-s text-warn-700">• Bitte die vorherigen Schritte vervollständigen.</p>}
+        </div>
+      )}
       {zeige('ergebnis') && ergebnis && r && f.instanz === 'einleitung' && (
         <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
           <ErgebnisSprung zielId="lc-ergebnis" />
