@@ -121,6 +121,7 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 | [gerichtskosten-kantone.md](kosten/gerichtskosten-kantone.md) | TIEFENERFASSUNG: vollständige Zivil-Staffeln je Kanton (alle Bänder, summarisch, Rechtsmittel, Reduktionen, Vorschuss) — Teil A ZH–BL | einfach belegt; Teil B + Doppelcheck folgen |
 | [gerichtskosten-bund.md](kosten/gerichtskosten-bund.md) | Tarife BGer/BVGer/BStGer/BPatGer wörtlich aus Fedlex | alle Stichproben wörtlich ✓, keine neueren Konsolidierungen |
 | [anwaltstarife-kantone.md](kosten/anwaltstarife-kantone.md) | Anwaltstarife (Parteientschädigung/UR) 26 Kantone | GL-Tarif existiert doch (GS III I/5); UR-Staffel beschafft |
+| [notariatstarife-gruendung-kantone.md](kosten/notariatstarife-gruendung-kantone.md) | **Notariatstarife für die Beurkundung der AG-Gründung** (Errichtungsakt), ZH/BE/AG/LU/SG/BS — Erlass+Stand je Kt (abrogated/future_versions API-geprüft), deterministische Gebührenregel (Promille/Staffel verbatim, Beispiel AK 100k), AG-Gründung in **AG nicht tarifiert → Aufwand** (ehrlich als Rahmen) | **ERSTRECHERCHE 7.6.2026** (Auftrag David §11/Punkt 11); ZH-Nachtrag-123 + SG-MWST + Agio offen; Engine NICHT geändert |
 
 ## muster/ — amtliche Vorlagen, verbatim archiviert (NEU 7.6.2026)
 

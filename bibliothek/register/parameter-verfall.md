@@ -31,6 +31,7 @@ Kandidat» markiert waren).
 | HG-Bestand & internationale Spruchkörper (Art. 6 IV lit. c ZPO) | `zustaendigkeit.ts` (HG-Weichen) ← dito | ZH/BE/AG/SG, Stand 6.6.2026 | bei kantonaler Errichtung nachführen | — |
 | AHV/IV/EO Selbständige (Satz, sinkende Skala) + Bundes-Verzugszinsen | nur Dossiers (`gesellschaftsgruendung.md` Teil 5; `recherche/INDEX.md`-Nachträge) — nicht verdrahtet | 10,0 % / Skala < CHF 60'500 (Merkblatt 2.02, 2026); EFD 4,0 % | **jährlich** + vor Verdrahtung | Jan. 2027 |
 | Amtliche Muster-Suiten (Statuten/Urkunden/Erklärungen/KE) | `bibliothek/muster/` (MANIFEST.md) ← Bausteine der 3 Dokumentmappen | ZH 26.7.2024 · SG «…2023» · GL undatiert · EHRA 1.4.2017 (ÜBERHOLT, nur Referenz) | bei OR-/HRegV-Rechtsänderung neu abrufen + Baustein-Abgleich | mit nächstem OR-Pin |
+| Notariatstarife AG-Gründung (Beurkundung Errichtungsakt) je Kanton | nur Dossier (`kosten/notariatstarife-gruendung-kantone.md`) — NICHT verdrahtet | ZH NotGebV LS 243 (Nachtrag-123-Beleg offen) · BE GebVN 169.81 @ 1.3.2022 (Anhang 4) · LU BeurkGebV 258 @ 1.1.2022 (§ 37) · SG GebT 821.5 @ **1.1.2026** (Nr. 60.13) · BS Notariatstarif 292.400 @ 1.7.2016 (Ziff. 33) · AG Dekret 295.250 @ 1.1.2025 (**Gründung NICHT tarifiert → Aufwand**); alle netto, + MWST 8,1 % | jährlich + vor Verdrahtung; **AG nicht deterministisch (Aufwand)**; ZH-123-Verifikation zwingend vor «geprüft» | **ZH-123 + SG-MWST: vor Abnahme** |
 
 ## Konventionen
 
