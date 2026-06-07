@@ -16,6 +16,29 @@ Toggle-Kopplung gefixt).
 **Produktion:** https://lexmetrik.vercel.app (Vercel-Projekt `lexmetrik`;
 `legal-calc.vercel.app` = 308-Redirect). Marke: **LexMetrik** (grosses M).
 
+## Session 7.6.2026 nachts — Plan 9b VOLLDOKUMENTE Gründung (Aufträge David, ungepusht)
+
+**Wortlaut-Dossier** `recherche/gruendungsdokumente-wortlaute.md` (4 Muster-
+Sweeps: EHRA/ZH/SG/GL + Zeichnungs-/Erklärungs-/Anmeldemuster, alles lokal
+geparst; Norm-Kerne am OR-Cache 1.1.2026 — Anweisung David: NEUSTES Recht;
+§7-Korrektur: Art. 806b OR gilt weiter, gmbh-gruendung.md berichtigt). ·
+**GmbH-Dokumentmappe** (`lib/vorlagen/gruendungGmbhDokumente.ts` + Komponente):
+Statuten + Errichtungsakt als ENTWURF-Gate (§8), Wahlannahme/Domizil/
+Beschlüsse/HR-Anmeldung druckfertig; Dokument-Auslöser aus
+gruendungsunterlagen.ts (§5); Gates 773/774/777 II/795 II; Erstausbau nur
+Bargründung CHF (ehrlich gesperrt sonst). · **AG-Dokumentmappe** analog
+(`gruendungAgDokumente.ts`): VR-Protokoll als Pflichtbeleg, Teilliberierung
+632 (≥ 20 %/≥ 50k-Gates), Vinkulierungs-/701d-Klauseln; Inhaberaktien
+gesperrt. · **Notariate je Kanton** (Auftrag David): Dossier
+`behoerden/notariate-kantone.md` + Stammdaten `lib/notariate.ts` + Link-Box
+in beiden Masken (SH-Sonderregel: HRegA beurkundet; UR/AI/BL «ohne Gewähr»).
+· **Bug-Check §9 bestanden:** Code-Agent (2304 Kombinationen empirisch,
+0 HOCH) + Jurist-Agent (1 HOCH: 805-V-Ziff.-2bis-Anker → 701d, gefixt;
+M-Befunde eingearbeitet: Wahlannahme-Index-IDs, 626-Ziff.-3-Einlagebetrag,
+Begründungs-Klarstellungen, CHF-Placeholder). Tests 975 grün (+22 neu),
+tsc/Lint/Build sauber. Katalog: beide Gründungs-Karten neu mit
+output pdf+docx. **Offen: Kapitalerhöhung (Auftrag David, eigener Zyklus).**
+
 ## Session 6.6.2026 abends (`8652e6b`…`4781ca7`, Aufträge David — ungepusht)
 
 **Art.-63-SchKG-Doppelfix** (fristenEngine.ts): (1) Fristende Sa/So unmittelbar

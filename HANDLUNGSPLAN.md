@@ -102,13 +102,27 @@ löschen, Stand in STRUKTUR.md spiegeln.
    bestanden (0 HOCH; eingearbeitet: M-1 «abschliessend» nur
    registerrechtlich, M-2 lit. f als Weiche, U+2019-Apostroph,
    Halbgeviert + Konventions-Test-Lücke). Katalog **33 verfügbar**.
-9b. **AUSBAUSTUFE Gründung (Anweisung David 7.6.2026):** GmbH-Engine soll
-   alle Gründungsunterlagen **direkt erzeugen** (Volldokumente statt
-   Checkliste). Davor zwingend eigene Recherche zu **Statuten-Bausteinen,
-   Zeichnungsscheinen (777a), Erklärungs-Wortlauten** — Plan und
-   Dokumentliste: `recherche/gmbh-gruendung.md` Teil 3a; Errichtungsakt
-   nur als ENTWURF-Export für die Urkundsperson (§8-Gate wie
-   formatvorlagen `entwurf`). Danach gleiches Muster für die AG.
+9b. ~~AUSBAUSTUFE Gründung~~ → **GEBAUT GmbH + AG** (7.6.2026 nachts,
+   Aufträge David inkl. «neustes Recht» + Notariats-Links): Wortlaut-Dossier
+   `recherche/gruendungsdokumente-wortlaute.md` (Rechtsstand-Verifikation
+   OR 1.1.2026; §7-Korrektur: Art. 806b OR gilt weiter) · Dokumentmappen
+   GmbH/AG (`lib/vorlagen/gruendungGmbh|AgDokumente.ts`): Statuten +
+   Errichtungsakt als ENTWURF (§8), Erklärungen/Beschlüsse/VR-Protokoll/
+   HR-Anmeldung druckfertig; Erstausbau Bargründung CHF (AG: Namenaktien,
+   Teilliberierung 632 mit 20-%-/50k-Gates) · Notariate 26 Kantone
+   (`behoerden/notariate-kantone.md` + `lib/notariate.ts` + Link-Box in
+   beiden Masken; SH: HRegA beurkundet selbst) · Bug-Check §9: 2 Agents
+   (2304 Kombinationen empirisch / juristischer Wortlaut-Abgleich),
+   1 HOCH (805-V-Anker → 701d) + 5 M/N-Befunde gefixt; 975 Tests grün.
+   OFFEN daraus: qualifizierte Gründung/Fremdwährung/Agio = Stufe 2 ·
+   UR/AI/BL-Notariats-Links verifizieren · Notariats-Listen-PDFs datiert
+   → Verfallsregister.
+9c. **Kapitalerhöhung AG/GmbH (Anweisung David 7.6.2026, in Arbeit):**
+   eigener Zyklus Recherche (ordentlich 650 ff. · Kapitalband 653s ff. ·
+   bedingt 653 ff. · GmbH 781; Zeichnungsschein 652 — SG/ZH-Muster liegen
+   in /tmp/muster/; 652 Abs. 3 aufgehoben, 3-Monats-Klausel = Usanz!) →
+   Dossier → Bau (Zeichnungsschein `fertig`; GV-/VR-Beschlüsse +
+   Statutenänderung beurkundungspflichtig → entwurf/Checkliste, §8).
 
 ## C · Pflege & Termine (Verfallsregister: `bibliothek/register/parameter-verfall.md`)
 
