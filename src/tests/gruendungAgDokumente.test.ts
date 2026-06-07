@@ -484,7 +484,7 @@ describe('AG — Fremdwährungs-Gründung (Etappe 3.1/D2)', () => {
     expect(text(m, 'statuten')).toContain("Das Aktienkapital beträgt EUR 120'000.00 und ist eingeteilt in 120 Namenaktien zu EUR 1'000.00.");
     const ea = text(m, 'errichtungsakt');
     expect(ea).toContain("Sämtliche Einlagen von gesamthaft EUR 120'000.00 wurden in Geld geleistet");
-    expect(ea).toContain("aufgrund des Umrechnungskurses EUR 1.00 = CHF 0.93, dem Betrag von CHF 111'600.00");
+    expect(ea).toContain("aufgrund des Umrechnungskurses per EUR 1.00 = CHF 0.93, dem Betrag von CHF 111'600.00");
     expect(ea).toContain('Dieser Umrechnungskurs entspricht dem Devisenmittelkurs der Zürcher Kantonalbank.');
   });
 

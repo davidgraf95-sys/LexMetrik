@@ -273,7 +273,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     if (a.fremdwaehrung && kurs !== null && kurs > 0 && kapital * kurs < 100_000) {
       blocker.push(
         `Das Aktienkapital in ${a.waehrung} muss im Zeitpunkt der Errichtung einem Gegenwert von mindestens ` +
-        `CHF 100'000 entsprechen (Art. 621 Abs. 2 OR) – ${a.waehrung} ${fmtCHF(a.aktienkapitalChf)} × ${a.kursChf.trim()} ` +
+        `CHF 100'000 entsprechen (Art. 621 Abs. 2 OR) – ${a.waehrung} ${fmtCHF(a.aktienkapitalChf)} × ${a.kursChf.trim().replace(',', '.')} ` +
         `= CHF ${fmtCHF(String(kapital * kurs))}.`,
       );
     }
@@ -303,7 +303,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       // mindestens CHF 50'000 entsprechen.
       blocker.push(
         `Die geleisteten Einlagen müssen einem Gegenwert von mindestens CHF 50'000 entsprechen (Art. 632 Abs. 2 OR) – ` +
-        `bei ${a.liberierungProzent} % von ${a.waehrung} ${fmtCHF(a.aktienkapitalChf)} × ${a.kursChf.trim()} sind es nur ` +
+        `bei ${a.liberierungProzent} % von ${a.waehrung} ${fmtCHF(a.aktienkapitalChf)} × ${a.kursChf.trim().replace(',', '.')} sind es nur ` +
         `CHF ${fmtCHF(String(kapital * (prozent / 100) * kurs))}.`,
       );
     }
@@ -469,7 +469,9 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     // ist oder keine zulässige Währung gewählt wurde — Gates erzwingen das).
     waehrungCode: a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF',
     fremdwaehrungAktiv: a.fremdwaehrung,
-    kursTxt: a.kursChf.trim() || '________',
+    // Bug-Check 3.1 Befund 2: Komma-Eingaben normalisieren (Urkunde zeigt
+    // den Kurs in Punkt-Notation wie die ZH-Vorlage «CHF 1.xxxx»).
+    kursTxt: a.kursChf.trim().replace(',', '.') || '________',
     kursQuelleTxt: a.kursQuelle.trim() || '________',
     einbezahltChfFmt: fmtCHF(String(kapital * (prozent / 100) * (zahl(a.kursChf) ?? 0))),
     hatBarEinlage: a.einlageArt === 'bar' || (a.einlageArt === 'gemischt' && barAktien > 0),
@@ -1118,12 +1120,12 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     {
       id: 'AE07w_kurs',
       text:
-        'Die geleisteten Einlagen entsprechen, aufgrund des Umrechnungskurses {{waehrungCode}} 1.00 = ' +
+        'Die geleisteten Einlagen entsprechen, aufgrund des Umrechnungskurses per {{waehrungCode}} 1.00 = ' +
         'CHF {{kursTxt}}, dem Betrag von CHF {{einbezahltChfFmt}}. Dieser Umrechnungskurs entspricht dem ' +
         'Devisenmittelkurs der {{kursQuelleTxt}}.',
       includeIf: { feld: 'fremdwaehrungAktiv', eq: true },
       norm: 'Art. 629 Abs. 3 OR',
-      begruendung: 'Pflicht-Kurs-Satz der Fremdwährungs-Gründung nach ZH-Urkundenvorlage 3.2 verbatim-nah (Art. 629 Abs. 3 OR: angewandte Umrechnungskurse sind in der Urkunde anzugeben). Erstausbau: Einlagewährung = Kapitalwährung (Einlagen in anderer Währung als das Kapital = Stufe 2).',
+      begruendung: 'Pflicht-Kurs-Satz der Fremdwährungs-Gründung nach ZH-Urkundenvorlage 3.2 verbatim — inkl. «per» (Bug-Check 3.1 Befund 1; Art. 629 Abs. 3 OR: angewandte Umrechnungskurse sind in der Urkunde anzugeben). Erstausbau: Einlagewährung = Kapitalwährung (Einlagen in anderer Währung als das Kapital = Stufe 2).',
     },
     // ── Etappe 2: Einlagen bei gemischter und qualifizierter Gründung ───────
     {
