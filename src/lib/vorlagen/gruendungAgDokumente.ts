@@ -438,7 +438,7 @@ function basisAntworten(a: AgDokAntworten): Antworten {
       gutschriftSatz: s.gutschriftChf.trim()
         ? ` Ferner werden ${s.einlegerName.trim() || '________'} CHF ${fmtCHF(s.gutschriftChf)} in den Büchern der Gesellschaft gutgeschrieben.`
         : '',
-      gutschriftKlauselZusatz: s.gutschriftChf.trim()
+      gutschriftKlauselSatz: s.gutschriftChf.trim()
         ? `; als weitere Gegenleistung wird eine Gutschrift von CHF ${fmtCHF(s.gutschriftChf)} gewährt`
         : '',
       // Art. 634 Abs. 1 Ziff. 3 OR / ZH-Urkunde 3.3: Grundstücks-Weiche.
@@ -447,7 +447,7 @@ function basisAntworten(a: AgDokAntworten): Antworten {
         : 'sofort als Eigentümerin über die Sacheinlage verfügen kann',
       grundstueck: s.grundstueck,
       hrZusatz: s.typ === 'geschaeft' ? (s.imHrEingetragen ? 'des im Handelsregister eingetragenen' : 'des im Handelsregister nicht eingetragenen') : '',
-      cheZusatz: s.typ === 'geschaeft' && s.cheNr.trim() ? ` (${s.cheNr.trim()})` : '',
+      cheSatz: s.typ === 'geschaeft' && s.cheNr.trim() ? ` (${s.cheNr.trim()})` : '',
       aktivenFmt: fmtCHF(s.aktivenChf),
       passivenFmt: fmtCHF(s.passivenChf),
       rueckwirkungFmt: s.rueckwirkungDatum ? fmtDatum(s.rueckwirkungDatum) : '',
@@ -575,7 +575,7 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       text:
         'Die Gesellschaft übernimmt bei der Gründung von {{item.einleger}} als Sacheinlage: ' +
         '{{item.objektLabel}} ({{item.belegSatz}}), bewertet mit CHF {{item.wertFmt}}. Dafür werden ' +
-        '{{item.aktien}} Namenaktien zu CHF {{nennwertFmt}} ausgegeben{{item.gutschriftKlauselZusatz}}.',
+        '{{item.aktien}} Namenaktien zu CHF {{nennwertFmt}} ausgegeben{{item.gutschriftKlauselSatz}}.',
       wiederholeUeber: 'sachListe',
       includeIf: { feld: 'hatSacheinlagen', eq: true },
       norm: 'Art. 634 Abs. 4 OR',
@@ -1098,7 +1098,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07q_sachliste',
       text:
         '– Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.einleger}} über {{item.objektLabel}} ' +
-        '({{item.belegSatz}}; Bewertung CHF {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselZusatz}}), ' +
+        '({{item.belegSatz}}; Bewertung CHF {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselSatz}}), ' +
         'welcher genehmigt wird, mit der Bestätigung, dass die Gesellschaft nach ihrer Eintragung in das ' +
         'Handelsregister {{item.verfuegungsSatz}}.',
       wiederholeUeber: 'sachListe',
@@ -1594,7 +1594,7 @@ const SACHEINLAGEVERTRAG_BAUSTEINE: VorlageSchema['bausteine'] = [
     ueberschrift: 'Gegenstand der Sacheinlage',
     text:
       'Die {{firma}} übernimmt alle Aktiven und Passiven {{hrZusatz}} Einzelunternehmens ' +
-      '{{bezeichnung}}{{cheZusatz}} gemäss Übernahmebilanz per {{belegDatumFmt}}. Danach betragen die ' +
+      '{{bezeichnung}}{{cheSatz}} gemäss Übernahmebilanz per {{belegDatumFmt}}. Danach betragen die ' +
       'Aktiven CHF {{aktivenFmt}} und die Passiven CHF {{passivenFmt}}. Der Kaufpreis beträgt ' +
       'CHF {{wertFmt}}. Die Bilanz bildet einen Bestandteil dieses Vertrages und wird von den ' +
       'Vertragsparteien anerkannt.',

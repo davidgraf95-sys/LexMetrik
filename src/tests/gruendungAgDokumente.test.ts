@@ -361,6 +361,21 @@ describe('AG — Qualifizierte Gründung (Etappe 2/D3–D5)', () => {
     expect(gb).toContain("Bewertung der Sacheinlage mit CHF 100'000.00 als angemessen");
   });
 
+  it('Leere Optional-Fragmente verschwinden ersatzlos (Bug-Check E2 Befund 1: Satz/Zeile-Konvention)', () => {
+    // Sacheinlage OHNE Gutschrift: kein «________» nach «ausgegeben».
+    const ohneGutschrift = agDokumentmappe(SACH_BASIS);
+    expect(text(ohneGutschrift, 'statuten')).toContain('Namenaktien zu CHF 1\'000.00 ausgegeben.');
+    expect(text(ohneGutschrift, 'statuten')).not.toContain('ausgegeben________');
+    // Geschäft OHNE UID: kein «________» hinter der Firma.
+    const ohneChe = agDokumentmappe({
+      ...SACH_BASIS,
+      sacheinlagen: [{ ...SACH_BASIS.sacheinlagen[0], typ: 'geschaeft', imHrEingetragen: false, aktivenChf: "180'000", passivenChf: "80'000" }],
+    });
+    const sv = text(ohneChe, 'sacheinlagevertrag-0');
+    expect(sv).toContain('Einzelunternehmens eine Werkstatteinrichtung gemäss Übernahmebilanz');
+    expect(sv).not.toContain('________ gemäss Übernahmebilanz');
+  });
+
   it('Grundstück → Sacheinlagevertrag nur als ENTWURF (§8; Art. 634 Abs. 2 OR/657 ZGB) + Grundbuch-Weiche', () => {
     const m = agDokumentmappe({
       ...SACH_BASIS,
