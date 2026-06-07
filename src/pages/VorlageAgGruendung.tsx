@@ -153,7 +153,7 @@ export function VorlageAgGruendung() {
 
       <section className="lc-card p-5 sm:p-6 space-y-3">
         <p className="lc-overline">Kosten (Bund) und Hinweise</p>
-        <ul className="space-y-2 text-body-s text-ink-700">
+        <ul className="lc-list space-y-2 text-body-s text-ink-700">
           <li>
             <span className="font-medium text-ink-900">Handelsregister-Gebühr: CHF 420</span> (GebV-HReg, SR 221.411.1, Anhang Ziff. 1.3 «Kapitalgesellschaften», Stand 1.1.2021) — zuzüglich allfälliger Zuschläge bis 50 % und Auslagen (Art. 3/4 GebV-HReg).
           </li>

@@ -4,6 +4,7 @@ export function Ueber() {
     <div className="space-y-10 max-w-reading">
       <div className="space-y-2">
         <p className="lc-overline">Über</p>
+        <div className="scale-rule max-w-[280px]" aria-hidden />
         <h1 className="text-h1 font-display font-semibold text-ink-900">Über LexMetrik</h1>
       </div>
 

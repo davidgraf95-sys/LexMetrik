@@ -206,6 +206,13 @@
      Padding bewusst beim Verwender (p-3 dichte Zeilen, p-4 Gruppen). */
   .lc-panel { @apply bg-surface border border-line rounded-lg; }
 
+  /* Referenzwerk-Liste: Messing-Gedankenstrich als Marker (FAHRPLAN-DESIGN
+     5.5) — für Hinweis-Listen der Vorlagen (Preflight nimmt Browser-Bullets
+     weg; diese Klasse gibt der Liste ihr Zeichen zurück, im Haus-Akzent). */
+  .lc-list { list-style: none; padding-left: 0; }
+  .lc-list > li { position: relative; padding-left: 1.25rem; }
+  .lc-list > li::before { content: '–'; position: absolute; left: 0; color: var(--brass-600); }
+
   .lc-seal {
     display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 8px;
     background: var(--ink-900); color: var(--paper);

@@ -105,8 +105,9 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
           </div>
         )}
 
-        {/* Rechenweg (5.6.1) */}
-        <div className="border border-line rounded-md overflow-hidden">
+        {/* Rechenweg (5.6.1) — geöffnet trägt der Block einen Messing-Tick
+            (FAHRPLAN-DESIGN 5.7: Marken-Element am täglichsten Interaktionspunkt) */}
+        <div className={`border border-line rounded-md overflow-hidden ${rechenWegOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
           <button type="button"
             onClick={() => setRechenWegOffen(!rechenWegOffen)}
             className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
@@ -142,7 +143,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Annahmen */}
         {ergebnis.annahmen.length > 0 && (
-          <div className="border border-line rounded-md overflow-hidden">
+          <div className={`border border-line rounded-md overflow-hidden ${annahmenOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
             <button type="button"
               onClick={() => setAnnahmenOffen(!annahmenOffen)}
               className="w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"

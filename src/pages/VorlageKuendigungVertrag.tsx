@@ -189,7 +189,7 @@ export function VorlageKuendigungVertrag() {
 
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Damit die Kündigung trägt</p>
-            <ul className="space-y-2 text-body-s text-ink-700">
+            <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Unterschreiben und nachweisbar zustellen</strong> — eingeschrieben empfohlen; massgebend ist der Zugang.</li>
               <li><strong>Vertrag/AGB prüfen:</strong> Mindestlaufzeiten und Termine gehen diesem Schreiben vor{a.preset === 'versicherung' ? ' (Art. 35a VVG: Abweichungen nur zu Ihren Gunsten, Art. 98 VVG)' : ''}.</li>
             </ul>

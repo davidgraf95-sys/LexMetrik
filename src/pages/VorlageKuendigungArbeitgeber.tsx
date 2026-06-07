@@ -280,7 +280,7 @@ export function VorlageKuendigungArbeitgeber() {
 
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Damit die Kündigung trägt</p>
-            <ul className="space-y-2 text-body-s text-ink-700">
+            <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>An die Wohnadresse zustellen</strong> — eingeschrieben und zusätzlich per A-Post; der Zugang dort entscheidet über Frist UND Sperrfristen.</li>
               <li><strong>Sperrfristen erneut bedenken:</strong> Erkrankt die Person VOR dem Zugang, kann die Kündigung trotz heutiger Prüfung nichtig werden — im Zweifel Zugang dokumentieren.</li>
               <li><strong>Begründung nur auf Verlangen</strong> schriftlich nachliefern (Art. 335 Abs. 2 OR).</li>

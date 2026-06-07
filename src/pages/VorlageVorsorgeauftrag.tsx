@@ -333,16 +333,16 @@ export function VorlageVorsorgeauftrag() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate – damit Ihr Vorsorgeauftrag gültig wird</p>
             {eigenhaendig ? (
-              <ul className="space-y-2 text-body-s text-ink-700">
+              <ul className="lc-list space-y-2 text-body-s text-ink-700">
                 <li><strong>Vollständig von Hand abschreiben:</strong> Der ganze Text – einschliesslich Ort, Datum und Unterschrift – muss eigenhändig geschrieben sein (Art. 361 Abs. 2 ZGB). Ein am Computer erstellter und nur unterschriebener Text ist UNGÜLTIG; auch eine bloss beglaubigte Unterschrift genügt nicht.</li>
                 <li><strong>Alternative:</strong> öffentliche Beurkundung bei der Urkundsperson (Art. 361 Abs. 1 ZGB).</li>
               </ul>
             ) : (
-              <ul className="space-y-2 text-body-s text-ink-700">
+              <ul className="lc-list space-y-2 text-body-s text-ink-700">
                 <li><strong>Beurkundung:</strong> Diesen Entwurf mit der Urkundsperson besprechen; das Verfahren richtet sich nach kantonalem Recht (BGE 151 III 81 – keine Zeugen erforderlich). {beurkundungsHinweis(a.kanton)}</li>
               </ul>
             )}
-            <ul className="space-y-2 text-body-s text-ink-700">
+            <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Wirksamkeit:</strong> Der Vorsorgeauftrag wird erst wirksam, wenn die KESB ihn bei eingetretener Urteilsunfähigkeit validiert (Art. 363 ZGB).</li>
               <li><strong>Auffindbarkeit:</strong> Errichtung und Hinterlegungsort beim Zivilstandsamt eintragen lassen (Art. 361 Abs. 3 ZGB; Gebühr CHF 75, Bestätigung +CHF 30 – Richtwerte). Die KESB anerkennt nur das Original; beauftragte Person informieren und Aufbewahrungsort mitteilen (nicht ins alleinige Bankschliessfach).</li>
               <li><strong>Widerruf:</strong> jederzeit in einer Errichtungsform oder durch Vernichtung der Urkunde (Art. 362 ZGB).</li>

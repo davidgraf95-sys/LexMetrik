@@ -29,6 +29,10 @@ export function Pro() {
       <section className="pt-6 pb-7 sm:pt-8 border-b border-line">
         <div className="max-w-3xl space-y-4">
           <p className="lc-overline text-brass-700">Pro · Schweizer Recht, berechenbar</p>
+          {/* Signature-Element wie im Free-Hero (FAHRPLAN-DESIGN 5.1) —
+              die kompakte h2-Grösse bleibt (Entscheid 5.6.2026: Katalog
+              ohne Scrollen erreichbar). */}
+          <div className="scale-rule max-w-[280px] !mt-2.5" aria-hidden />
           <h1 className="font-display font-semibold text-ink-900 text-h2 leading-tight">
             Der vollständige Katalog für die anwaltliche Praxis.
           </h1>

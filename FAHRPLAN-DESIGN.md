@@ -15,6 +15,24 @@ Typo-Skala) ist solide und wird weitgehend eingehalten — **keine** Fremdpalett
 Der Anpassungsbedarf liegt in vier Schichten: totes CSS, Baustein-Nachbauten
 statt Bausteinen, A11y-Lücken in Eigenbau-Controls, und Identitäts-Feinschliff.
 
+**Umsetzungs-Stand (7.6.2026, «mach einfach»-Freigabe David):** Etappen 1–5
+GEBAUT (Commits f96b28c · ed1f7c5 · 542a909 · 3ee2c32 · Etappe 5).
+Abweichungen/Präzisierungen bei der Umsetzung:
+- 2.5/2.7 kein Handlungsbedarf (Verzugszins-Kacheln = dokumentierte
+  Spezialform; Wizard-Top-Level ist bereits space-y-6).
+- 3.3: Katalog-Schliessen hatte sichtbaren Text (Audit übertrieb) — nur ✕
+  aria-hidden gestellt; Test-Assertion deklariert angepasst.
+- 4.1/4.3/4.4: am Code widerlegt (min()-Breiten fangen 360 px; Header
+  ≈305 px belegt; Wortmarke mobil = Entscheid David 6.6.) — keine Eingriffe.
+- 5.1: Pro war BEREITS h1 (kompakte text-h2-Grösse = Entscheid 5.6.2026,
+  bleibt); nur scale-rule ergänzt.
+- 5.6 als Konvention (kein Sweep): Zahlen mit Einheit/Betrag/Datum in
+  UI-Texten tragen `.num`; bei Neubauten beachten.
+- 3.5 FristenKalender: arbeitsfrei ink-300→ink-400 als Kompromiss
+  (Abschwächung ist Gestaltungsabsicht; Info zusätzlich in title+Legende).
+Offen: Abschluss-Bug-Check §9 (2 Agents) + axe-Stichprobe (3.7) +
+Screenshot-Serien (4.6/5.8) als Abnahmegrundlage.
+
 **Grundsätze:** Reine Darstellungsschicht (§3) — `src/lib/` bleibt unberührt;
 Golden-Outputs müssen nach JEDER Etappe byte-identisch sein. Tore je Etappe:
 `npx tsc -b` · `npm test` · `npm run lint` (volle Ausgabe) · `npm run build` ·

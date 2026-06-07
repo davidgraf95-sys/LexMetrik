@@ -77,7 +77,12 @@ export default function App() {
     <Shell>
       <ScrollToTop />
       <ErrorBoundary>
-      <Suspense fallback={<div className="py-16 text-center text-body-s text-ink-500">Wird geladen …</div>}>
+      <Suspense fallback={
+        /* Laden ist Aktivität, kein Fehler: Ablesekante + ruhige Zeile (FAHRPLAN-DESIGN 5.3) */
+        <div className="py-16 text-center space-y-3">
+          <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
+          <p className="text-body-s text-ink-500">Wird geladen …</p>
+        </div>}>
       <Routes>
         <Route path="/" element={<StartOderPro />} />
         <Route path="/pro" element={<Pro />} />

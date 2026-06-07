@@ -99,7 +99,7 @@ export function Startseite() {
               'Normen auf Fedlex verlinkt',
               'Rechenweg vollständig offengelegt',
             ].map((c) => (
-              <li key={c} className="pl-2.5 leading-snug" style={{ borderLeft: '2px solid var(--brass-500)' }}>{c}</li>
+              <li key={c} className="pl-2.5 leading-snug border-l-2 border-brass-500">{c}</li>
             ))}
           </ul>
         </div>

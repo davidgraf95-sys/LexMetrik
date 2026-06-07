@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function Abschnitt({ titel, children }: { titel: string; children: React.ReactNode }) {
   return (
-    <section className="space-y-2">
+    <section className="space-y-2 border-t border-line pt-6">
       <h2 className="text-h3 font-display font-semibold text-ink-900">{titel}</h2>
       <div className="space-y-2 text-body-s text-ink-600 leading-relaxed">{children}</div>
     </section>
@@ -21,6 +21,7 @@ export function Datenschutz() {
     <div className="space-y-8 max-w-reading">
       <div className="space-y-2">
         <p className="lc-overline">Rechtliches</p>
+        <div className="scale-rule max-w-[280px]" aria-hidden />
         <h1 className="text-h1 font-display font-semibold text-ink-900">Datenschutzerklärung</h1>
         <div className="flex flex-wrap items-center gap-2">
           <span className="lc-badge-entwurf" title="Entwurf – fachliche Prüfung steht aus">Entwurf</span>

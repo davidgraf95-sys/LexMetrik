@@ -311,7 +311,7 @@ export function VorlageKlageVereinfacht() {
 
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form & Einreichung</p>
-            <ul className="space-y-2 text-body-s text-ink-700">
+            <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Unterschreiben und im Doppel einreichen:</strong> ein Exemplar für das Gericht, je eines pro Gegenpartei (Art. 131 ZPO); Papierform oder elektronisch mit qualifizierter Signatur (Art. 130 ZPO).</li>
               <li><strong>Klagebewilligung beilegen</strong> (bzw. Ausnahme-Nachweis) — fehlt sie, setzt das Gericht Nachfrist (Art. 132 ZPO); die Klagefrist (Art. 209 Abs. 3/4 ZPO) läuft unabhängig davon.</li>
               <li><strong>Identität wahren:</strong> Parteien, Rechtsbegehren und Streitgegenstand müssen der Klagebewilligung entsprechen; Änderungen nur nach Art. 227/230 ZPO.</li>

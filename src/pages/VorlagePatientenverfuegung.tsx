@@ -268,7 +268,7 @@ export function VorlagePatientenverfuegung() {
           {/* Form-Gate: nicht überspringbar */}
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate – damit Ihre Patientenverfügung gültig wird</p>
-            <ul className="space-y-2 text-body-s text-ink-700">
+            <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Ausdrucken genügt:</strong> Die Erstellung am Computer ist zulässig – anders als beim Testament ist keine Eigenhändigkeit des Textes nötig (Art. 371 Abs. 1 ZGB). Keine Beglaubigung erforderlich.</li>
               <li><strong>Handschriftlich datieren und unterschreiben:</strong> Erst mit von Hand eingesetztem Datum und eigenhändiger Unterschrift ist das Dokument errichtet.</li>
               <li><strong>Auffindbarkeit:</strong> Kopien an Vertretungsperson und Hausarztpraxis; Hinterlegungsort auf der Versichertenkarte eintragen lassen (Art. 371 Abs. 2 ZGB; in der Praxis noch nicht überall zuverlässig); Hinweiskarte im Portemonnaie.</li>

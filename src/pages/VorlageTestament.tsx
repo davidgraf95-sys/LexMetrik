@@ -283,7 +283,7 @@ export function VorlageTestament() {
           {/* Form-Gate: nicht überspringbar */}
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate – damit Ihr Testament gültig wird</p>
-            <ul className="space-y-2 text-body-s text-ink-700">
+            <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Vollständig von Hand abschreiben.</strong> Der ganze Text – einschliesslich Datum – muss eigenhändig geschrieben sein (Art. 505 Abs. 1 ZGB). Ein Ausdruck, auch unterschrieben, ist anfechtbar/ungültig.</li>
               <li><strong>Mit Jahr, Monat und Tag datieren.</strong></li>
               <li><strong>Am Schluss eigenhändig unterschreiben</strong> (BGE 135 III 206).</li>
