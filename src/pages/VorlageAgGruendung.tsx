@@ -358,25 +358,37 @@ export function VorlageAgGruendung() {
   // Mappe via vorlagenPdfDokument (jsPDF-Doc, NICHT …Erzeugen) zu
   // ArrayBuffers, mit fflate gepackt; Banner je ausgabeArt wie beim
   // Einzel-Export. Einzel-Downloads (MappenAnsicht) bleiben bestehen.
+  // Auftrag David 7.6.2026: neben PDF auch Word — je Dokument liegt
+  // zusätzlich ein DOCX im ZIP (Form-Gate §8 prüft vorlagenDocxDokument).
+  const docxErlaubt = card?.modus === 'vorlage' && (card.output?.includes('docx') ?? false);
   const [batchLaeuft, setBatchLaeuft] = useState(false);
   const [batchMeldung, setBatchMeldung] = useState<string | null>(null);
   const alleHerunterladen = async () => {
     setBatchLaeuft(true);
     setBatchMeldung(null);
     try {
-      const [{ vorlagenPdfDokument }, { zipSync }] = await Promise.all([
+      const [{ vorlagenPdfDokument }, { vorlagenDocxDokument }, { zipSync }] = await Promise.all([
         import('../lib/vorlagen/vorlagenPdf'),
+        import('../lib/vorlagen/vorlagenDocx'),
         import('fflate'),
       ]);
       const eintraege: Record<string, Uint8Array> = {};
+      // Mehrere gleichnamige Dokumente (z. B. zwei Sacheinlageverträge)
+      // dürfen sich im ZIP nicht überschreiben → Suffix -2, -3, …
+      const frei = (basis: string, endung: string) => {
+        let name = `${basis}.${endung}`;
+        for (let n = 2; name in eintraege; n++) name = `${basis}-${n}.${endung}`;
+        return name;
+      };
       for (const d of mappe.dokumente) {
         const entwurf = d.ergebnis.dokument.ausgabeArt === 'entwurf';
-        const doc = vorlagenPdfDokument(d.ergebnis, { banner: entwurf ? BANNER_ENTWURF : BANNER_MAPPE_FERTIG });
-        // Mehrere gleichnamige Dokumente (z. B. zwei Sacheinlageverträge)
-        // dürfen sich im ZIP nicht überschreiben → Suffix -2, -3, …
-        let name = `${d.dateiName}.pdf`;
-        for (let n = 2; name in eintraege; n++) name = `${d.dateiName}-${n}.pdf`;
-        eintraege[name] = new Uint8Array(doc.output('arraybuffer'));
+        const banner = entwurf ? BANNER_ENTWURF : BANNER_MAPPE_FERTIG;
+        const doc = vorlagenPdfDokument(d.ergebnis, { banner });
+        eintraege[frei(d.dateiName, 'pdf')] = new Uint8Array(doc.output('arraybuffer'));
+        if (docxErlaubt) {
+          const blob = await vorlagenDocxDokument(d.ergebnis, { banner });
+          eintraege[frei(d.dateiName, 'docx')] = new Uint8Array(await blob.arrayBuffer());
+        }
       }
       const slug = (firma.trim().toLowerCase()
         .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')
@@ -389,7 +401,7 @@ export function VorlageAgGruendung() {
       a.download = `gruendung-${slug}.zip`;
       a.click();
       URL.revokeObjectURL(url);
-      setBatchMeldung(`${mappe.dokumente.length} Dokumente als ZIP heruntergeladen (gruendung-${slug}.zip).`);
+      setBatchMeldung(`${mappe.dokumente.length} Dokumente als ZIP heruntergeladen (gruendung-${slug}.zip${docxErlaubt ? ', je als PDF und Word' : ''}).`);
     } catch (e) {
       setBatchMeldung(e instanceof Error ? e.message : 'Der Sammel-Download ist fehlgeschlagen. Bitte erneut versuchen.');
     } finally {
@@ -994,9 +1006,9 @@ export function VorlageAgGruendung() {
               {batchLaeuft ? 'Erzeuge ZIP …' : `Alle ${mappe.dokumente.length} Dokumente herunterladen (ZIP)`}
             </button>
             <p className="text-xs text-ink-500 max-w-reading">
-              Lädt alle notwendigen Dokumente Ihrer Konstellation als eine ZIP-Datei herunter — Statuten
-              und Errichtungsakt (sowie Sacheinlageverträge mit Grundstück) als ENTWURF mit Wasserzeichen,
-              die übrigen druckfertig.
+              Lädt alle notwendigen Dokumente Ihrer Konstellation als eine ZIP-Datei herunter, je als PDF
+              und Word (DOCX) — Statuten und Errichtungsakt (sowie Sacheinlageverträge mit Grundstück) als
+              ENTWURF mit Wasserzeichen, die übrigen druckfertig.
             </p>
           </div>
           {batchMeldung && <p className="text-body-s text-ink-700">{batchMeldung}</p>}

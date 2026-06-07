@@ -224,8 +224,10 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
   }
 }
 
-/** Baut das Word-Dokument (Referenz-Layout, CH-Typografie) und lädt es herunter. */
-export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
+/** Baut das Word-Dokument (Referenz-Layout, CH-Typografie) und gibt es als
+ *  Blob zurück — Gegenstück zu vorlagenPdfDokument (Sammel-Downloads packen
+ *  den Blob selbst, z. B. ins Gründungs-ZIP; Auftrag David 7.6.2026). */
+export async function vorlagenDocxDokument(e: AssembleErgebnis, opts: { banner?: PdfBanner } = {}): Promise<Blob> {
   // Form-Gate-Matrix hart kodiert: Eigenhändigkeits-Dokumente (abschrift)
   // erhalten NIE einen Word-Export – es entstünde ein unterschriftsreif
   // wirkendes Dokument für ein eigenhändigkeitspflichtiges Geschäft.
@@ -260,7 +262,12 @@ export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?:
     }],
   });
 
-  const blob = await Packer.toBlob(doc);
+  return Packer.toBlob(doc);
+}
+
+/** Baut das Word-Dokument und lädt es herunter (Einzel-Export der Wizards). */
+export async function vorlagenDocxErzeugen(e: AssembleErgebnis, opts: { banner?: PdfBanner; dateiName: string }) {
+  const blob = await vorlagenDocxDokument(e, { banner: opts.banner });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
