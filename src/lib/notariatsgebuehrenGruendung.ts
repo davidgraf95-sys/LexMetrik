@@ -61,16 +61,19 @@ export function notariatsGebuehrGruendung(kanton: string, kapitalChf: number): N
     case 'ZH':
       return {
         kanton,
-        // Ziff. 4.4.3.1 NotGebV: 1‰ vom Kapital, Rahmen 500–5'000 für die
-        // «übrigen Gesellschaften» (Normalfall der Neugründung ohne
-        // ordentliche Revisionspflicht); Publikums-/grössere Gesellschaften
-        // (Art. 727 Abs. 1 OR) bis 15'000/10'000 — als Hinweis offengelegt.
-        ergebnis: { typ: 'betrag', chf: clamp(k * 0.001, 500, 5_000) },
+        // Ziff. 4.4.3.1 NotGebV: 1‰ vom Kapital, Rahmen 500–4'000 für die
+        // «übrigen Gesellschaften» (Normalfall ohne ordentliche Revisions-
+        // pflicht); Publikums-/grössere Gesellschaften (Art. 727 Abs. 1 OR)
+        // bis 12'000/8'000. Nachverifikation 7.6.2026 am amtlichen PDF
+        // (Nachtrag 123, Stand 1.1.2024): die früher verdrahteten Rahmen
+        // 5'000/10'000/15'000 stammten aus den alten Nachträgen 066/095
+        // und waren ÜBERHOLT.
+        ergebnis: { typ: 'betrag', chf: clamp(k * 0.001, 500, 4_000) },
         erlassLabel: 'NotGebV ZH (LS 243), Ziff. 4.4.3.1',
         erlassUrl: 'https://www.zhlex.zh.ch/Erlass.html?Open&Ordnr=243',
-        stand: 'Nachtrag-Verifikation 123 offen (Dossier)',
+        stand: '1.1.2024 (Nachtrag 123, amtliches PDF verifiziert)',
         hinweise: [
-          '1‰ vom Kapital im Rahmen CHF 500–5’000 (übrige Gesellschaften); bei ordentlicher Revisionspflicht nach Art. 727 Abs. 1 OR gelten Rahmen bis CHF 10’000 bzw. 15’000.',
+          '1‰ vom Kapital im Rahmen CHF 500–4’000 (übrige Gesellschaften); bei ordentlicher Revisionspflicht nach Art. 727 Abs. 1 OR gelten Rahmen bis CHF 8’000 bzw. 12’000.',
         ],
       };
     case 'BE': {
@@ -111,15 +114,22 @@ export function notariatsGebuehrGruendung(kanton: string, kapitalChf: number): N
       };
     }
     case 'SG': {
-      const stufen = Math.max(1, Math.ceil(k / 100_000));
+      // Deklarierte fachliche Änderung 7.6.2026: Nr. 60.13 zählt «je weitere
+      // VOLLE Fr. 100'000» — nur abgeschlossene Tranchen (floor). Beleg:
+      // derselbe GebT schreibt, wo angebrochene Einheiten voll zählen sollen,
+      // ausdrücklich «ganze oder angebrochene» (Nr. 52.03); eine allgemeine
+      // Anbruchsregel existiert weder im GebT noch in sGS 821.1. Die frühere
+      // ceil-Lesart überzeichnete jede nicht-glatte Summe (250'000: 545
+      // statt 465). Amtliches Rechenbeispiel fehlt — Abnahme David.
+      const weitereVolle = Math.max(0, Math.floor((k - 100_000) / 100_000));
       return {
         kanton,
-        ergebnis: { typ: 'betrag', chf: Math.min(385 + (stufen - 1) * 80, 15_000) },
+        ergebnis: { typ: 'betrag', chf: Math.min(385 + weitereVolle * 80, 15_000) },
         erlassLabel: 'GebT SG (sGS 821.5), Nr. 60.13',
         erlassUrl: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/821.5',
         stand: '1.1.2026',
         hinweise: [
-          'CHF 385 für die ersten CHF 100’000, je weitere CHF 100’000 zusätzlich CHF 80, höchstens CHF 15’000 (Taxe der Amtsnotariate; Lesart «volle» weitere Stufen als angebrochene gezählt — Verifikation offen).',
+          'CHF 385 für die ersten CHF 100’000, je weitere VOLLE CHF 100’000 zusätzlich CHF 80, höchstens CHF 15’000 (Taxe der Amtsnotariate; angebrochene Tranchen zählen nach dem Erlasswortlaut nicht — systematisch belegt, amtliches Rechenbeispiel offen).',
         ],
       };
     }

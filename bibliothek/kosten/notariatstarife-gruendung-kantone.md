@@ -27,7 +27,7 @@ nach Aufwand auszuweisen, NIE schätzen).
 
 | Kt | Erlass (Nr.) | Stand | abrog. | Regel-Typ Gründung | Gebühr AK 100'000 (netto, ohne MWST/Auslagen) |
 |----|--------------|-------|--------|--------------------|-----------------------------------------------|
-| **ZH** | NotGebV, LS 243 | siehe §3 (Nachtrag-Verifikation offen) | nein | **Promille mit Rahmen**: 1‰ vom Kapital, Rahmen 500–15'000 / 500–10'000 / 500–5'000 nach Revisionspflicht | 1‰ × 100'000 = **100** → Rahmen-Minimum **CHF 500** |
+| **ZH** | NotGebV, LS 243 | **1.1.2024 (Nachtrag 123, PDF verifiziert 7.6.2026)** | nein | **Promille mit Rahmen**: 1‰ vom Kapital, Rahmen 500–12'000 / 500–8'000 / 500–4'000 nach Revisionspflicht | 1‰ × 100'000 = **100** → Rahmen-Minimum **CHF 500** |
 | **BE** | GebVN, BSG 169.81 | 1.3.2022 | nein | **Staffel-Rahmentarif** (Anhang 4): Min/Mittel/Max je Kapitalstufe | **Min 1'000 / Mittel 1'300 / Max 1'600** (bar-only: Min −50 % → 500) |
 | **LU** | BeurkGebV, SRL 258 | 1.1.2022 | nein | **Progressive Promille-Staffel** (§ 37): 3‰ bis 500k …, min 1'000 / max 11'750 | 3‰ × 100'000 = 300 → Minimum **CHF 1'000** |
 | **SG** | GebT, sGS 821.5 | 1.1.2026 | nein | **Lineare Staffel** (Nr. 60.13): 385 für erste 100k + 80 je weitere 100k, max 15'000 | **CHF 385** (netto; + 8,1 % MWST) |
@@ -113,16 +113,24 @@ nach Aufwand auszuweisen, NIE schätzen).
 ### ZH — NotGebV Ziff. 4.4.3.1 (verbatim)
 > «**Gründung oder Kapitalerhöhung einer AG oder GmbH** — vom Kapital oder vom
 > Erhöhungsbetrag … **1‰** — für Publikumsgesellschaften gemäss Art. 727 Abs. 1
-> Ziff. 1 OR im Rahmen von **500–15'000** — für grössere Unternehmen gemäss
-> Art. 727 Abs. 1 Ziff. 2 und 3 OR im Rahmen von **500–10'000** — für die übrigen
-> Gesellschaften im Rahmen von **500–5'000**.»
+> Ziff. 1 OR im Rahmen von **500–12'000** — für grössere Unternehmen gemäss
+> Art. 727 Abs. 1 Ziff. 2 und 3 OR im Rahmen von **500–8'000** — für die übrigen
+> Gesellschaften im Rahmen von **500–4'000**.»
+>
+> **Nachverifikation 7.6.2026 am amtlichen PDF** (notes.zh.ch …
+> `243_9.3.09_123.pdf`, 22 S., Stand 1.1.2024): Die früher hier zitierten
+> Rahmen 15'000/10'000/5'000 stammten aus den ALTEN Nachträgen 066/095 und
+> waren überholt — Engine + Tests nachgezogen. «123» ist die Nachtrags-Nr.
+> der Konsolidierung, KEIN Paragraph; eine eigene «Nachtrag zur Urkunde»-
+> Position existiert nicht (übrige gesellschaftsrechtliche Urkunden =
+> Ziff. 4.4.3.2: 0,2–0,5‰, übrige Ges. 250–2'000; Auffang Ziff. 4.7).
 
 ```
 ZH_gruendung(kapital, revisionspflicht):
   basis = kapital * 0.001                  # 1‰
-  if revision == "ordentlich_727_1_z1":  rahmen = (500, 15000)
-  elif revision == "727_1_z2_oder_z3":   rahmen = (500, 10000)
-  else:                                  rahmen = (500, 5000)   # eingeschränkt/keine Revision
+  if revision == "ordentlich_727_1_z1":  rahmen = (500, 12000)   # Nachtrag 123
+  elif revision == "727_1_z2_oder_z3":   rahmen = (500, 8000)
+  else:                                  rahmen = (500, 4000)   # eingeschränkt/keine Revision
   return clamp(basis, rahmen.min, rahmen.max)
 ```
 Beispiel AK 100'000, keine ordentl. Revision (Normalfall KMU-Gründung):
@@ -307,3 +315,18 @@ Nachtrag-Liste der zhlex-Seite). Tarifzahlen verbatim aus den amtlichen PDF.
 (2) SG Brutto/Netto-MWST-Logik; (3) Agio-Behandlung ZH/LU/SG/BS; (4) adversarialer
 Zweitdurchgang der Staffeln; (5) fachliche Abnahme durch David (§7). Keine
 Engine-/UI-Änderung in diesem Auftrag.
+
+
+## Nachverifikation 7.6.2026 (AG-4, amtliche PDFs/IDs: SG 3849 · BS 3875 · LU 3870 · ZH Nachtrag 123)
+
+- **SG «volle» Stufen = FLOOR** (deklarierte fachliche Änderung in der
+  Engine): Nr. 60.13 «je weitere VOLLE Fr. 100'000»; derselbe GebT schreibt
+  «ganze oder angebrochene» (Nr. 52.03), wo aufgerundet werden soll; keine
+  allgemeine Anbruchsregel in sGS 821.5/821.1. Frühere ceil-Lesart
+  überzeichnete jede nicht-glatte Summe (250'000: 545 statt 465).
+  Amtliches Rechenbeispiel fehlt — Abnahme David.
+- **Agio-Basis BELEGT:** ZH «vom Kapital» · LU «Grundkapital» (§ 37) ·
+  SG «Stammkapital» (60.13) · BS «Kapital» (Ziff. 33) — Agio NIRGENDS
+  Bemessungsbasis; einzig BE Art. 21 Abs. 1 GebVN ausdrücklich MIT Agio
+  (Engine bildet das bereits ab). Status von «offen» auf «belegt
+  (Erstrecherche)» gehoben.

@@ -38,7 +38,8 @@ export const NOTARIATE: Record<Kanton, NotariatsEintrag> = {
   ZH: { system: 'amtsnotariat', stelle: 'Notariate Kanton Zürich', url: 'https://www.notariate-zh.ch/de/notariat/gesellschaftsrecht/gmbh/gruendung-einer-gmbh', urlBelegt: true },
   BE: { system: 'frei', stelle: 'Notariatsregister Kanton Bern', url: 'https://www.gba.dij.be.ch/de/start/notariat/notariatsregister.html', urlBelegt: true },
   LU: { system: 'frei', stelle: 'Notarenregister Kanton Luzern', url: 'https://gerichte.lu.ch/anwaelte_notare_sachwalter/notare/notarenregister_kanton_luzern', urlBelegt: true },
-  UR: { system: 'frei', stelle: 'Justizdirektion Uri', url: 'https://www.ur.ch/dienstleistungen/3039', hinweis: 'Kein öffentliches Online-Verzeichnis — Anlaufstelle kontaktieren.', urlBelegt: false },
+  // AG-7-Verifikation 7.6.2026: alter Link /dienstleistungen/3039 war die Apostillen-Seite.
+  UR: { system: 'frei', stelle: 'Abteilung Justiz und Handelsregister Uri', url: 'https://www.ur.ch/unterinstanzen/879', hinweis: 'Freiberufliches Notariat (ausschliessliche Beurkundungsbefugnis); Personensuche über den Urner Anwalts- und Notarenverband (urilaw.ch).', urlBelegt: true },
   SZ: { system: 'gemischt', stelle: 'Urkundspersonen-Liste des Kantonsgerichts Schwyz', url: 'https://www.sz.ch/public/upload/assets/69540/Urkundspersonen_des_Kantons_Schwyz.pdf', urlBelegt: true },
   OW: { system: 'gemischt', stelle: 'Urkundspersonen-Liste Obwalden', url: 'https://www.ow.ch/publikationen/15380', urlBelegt: true },
   NW: { system: 'amtsnotariat', stelle: 'Abteilung Notariat Nidwalden', url: 'https://www.nw.ch/notariat/2497', urlBelegt: true },
@@ -47,10 +48,12 @@ export const NOTARIATE: Record<Kanton, NotariatsEintrag> = {
   FR: { system: 'frei', stelle: 'Registre du notariat (Service de la justice)', url: 'https://www.fr.ch/etat-et-droit/gouvernement-et-administration/registre-du-notariat', urlBelegt: true },
   SO: { system: 'gemischt', stelle: 'Notarenliste der Staatskanzlei Solothurn', url: 'https://so.ch/staatskanzlei/legistik-und-justiz/notare/', urlBelegt: true },
   BS: { system: 'frei', stelle: 'Notariatskammer Basel-Stadt', url: 'https://www.notariatskammerbasel.ch/', urlBelegt: true },
-  BL: { system: 'frei', stelle: 'Basellandschaftliches Notariat', url: 'https://www.baselland.ch/politik-und-behorden/direktionen/sicherheitsdirektion/zivilrechtsverwaltung/basellandschaftliches-notariat', hinweis: 'Automatischer Abruf blockiert — Link im Browser prüfen.', urlBelegt: false },
+  // AG-7 7.6.2026: amtliche Seite bestätigt (Browser; WAF blockt Bots) — Verband als erreichbare Personensuche ergänzt.
+  BL: { system: 'frei', stelle: 'Basellandschaftliches Notariat', url: 'https://www.baselland.ch/politik-und-behorden/direktionen/sicherheitsdirektion/zivilrechtsverwaltung/basellandschaftliches-notariat', hinweis: 'Freie Notare seit 2012 (Amtsnotariat abgeschafft); Notarliste auch beim Notariatsverband notariat-baselland.ch.', urlBelegt: true },
   SH: { system: 'hregamt', stelle: 'Handelsregisteramt Kanton Schaffhausen', url: 'https://sh.ch/CMS/Webseite/Kanton-Schaffhausen/Beh-rde/Verwaltung/Volkswirtschaftsdepartement/Handelsregisteramt-3872-DE.html', hinweis: 'Sonderregel SH: Das Handelsregisteramt beurkundet Gründungen selbst.', urlBelegt: true },
   AR: { system: 'gemischt', stelle: 'Verzeichnis öffentliche Urkundspersonen (Obergericht AR)', url: 'https://ar.ch/gerichte/obergericht/anwaltsregister-oeffentliche-urkundspersonen/', urlBelegt: true },
-  AI: { system: 'gemischt', stelle: 'Grundbuch/Notariat Appenzell Innerrhoden', url: 'https://ai.ch/themen/planen-und-bauen/grundbuch-notariat', hinweis: 'Keine öffentliche Personenliste — Amtsstelle kontaktieren.', urlBelegt: false },
+  // AG-7 7.6.2026: alte Seite deckte nur den Grundbuchbereich; für Gründungen beurkundet der Handelsregisterführer bzw. zugelassene Urkundspersonen.
+  AI: { system: 'gemischt', stelle: 'Beglaubigungen/Notariat Appenzell Innerrhoden', url: 'https://www.ai.ch/themen/persoenliches/beglaubigungen-notariat', hinweis: 'Im Handelsregisterbereich beurkundet der Handelsregisterführer; keine öffentliche Personenliste — Anlaufstelle kontaktieren.', urlBelegt: true },
   SG: { system: 'gemischt', stelle: 'Amtsnotariate St. Gallen (Beurkundungen)', url: 'https://www.sg.ch/recht/handelsregister-notariate/amtsnotariate/beurkundungen/', urlBelegt: true },
   GR: { system: 'frei', stelle: 'Notariats-Register Justiz Graubünden', url: 'https://www.justiz-gr.ch/advokatur-und-notariat/register/', urlBelegt: true },
   AG: { system: 'frei', stelle: 'Register der Urkundspersonen (Notariatskommission AG)', url: 'https://www.ag.ch/de/themen/planen-bauen/grundbuch-vermessung/notariat/notariatskommission/register', urlBelegt: true },
