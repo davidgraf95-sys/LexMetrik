@@ -49,7 +49,10 @@ export function Tabs<T extends string>({
             aria-selected={mode === 'tab' ? aktiv : undefined}
             aria-pressed={mode === 'pressed' ? aktiv : undefined}
             onClick={() => onChange(it.code)}
-            className={`shrink-0 whitespace-nowrap ${KNOPF[groesse]} ${aktiv ? AKTIV : INAKTIV}`}
+            // Unsichtbare Hit-Area-Erweiterung auf ≥44px Höhe (FAHRPLAN-DESIGN
+            // 3.2): Optik der Segmented-Control bleibt (h-8/h-9), das
+            // Pseudo-Element vergrössert nur die Klickfläche vertikal.
+            className={`shrink-0 whitespace-nowrap relative before:content-[''] before:absolute before:-inset-y-1.5 before:inset-x-0 ${KNOPF[groesse]} ${aktiv ? AKTIV : INAKTIV}`}
           >
             {it.label}
           </button>

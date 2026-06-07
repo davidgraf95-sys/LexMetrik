@@ -1,3 +1,4 @@
+import { cloneElement, isValidElement, useId } from 'react';
 import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { useLocale, fedlexLokalisiert } from '../locale';
 
@@ -8,12 +9,20 @@ export const inputCls = 'lc-input';
 export function Field({ label, children, hint, optional }: {
   label: string; children: React.ReactNode; hint?: string; optional?: boolean;
 }) {
+  // Label↔Control-Verknüpfung (FAHRPLAN-DESIGN 3.6): native Einzel-Controls
+  // (input/select/textarea) bekommen automatisch id + htmlFor; zusammengesetzte
+  // Komponenten (DatumsFeld, BetragsFeld) behalten ihr aria-label — ein
+  // Label-Wrap wäre dort riskant (Klick-Redispatch ins Kalender-Popover).
+  const id = useId();
+  const nativ = isValidElement(children) && typeof children.type === 'string'
+    && !(children.props as { id?: string }).id;
+  const control = nativ ? cloneElement(children as React.ReactElement<{ id?: string }>, { id }) : children;
   return (
     <div className="space-y-1">
-      <label className="block text-body-s font-medium text-ink-700">
+      <label htmlFor={nativ ? id : undefined} className="block text-body-s font-medium text-ink-700">
         {label}{optional && <span className="text-ink-500 font-normal"> · optional</span>}
       </label>
-      {children}
+      {control}
       {hint && <p className="text-xs text-ink-500">{hint}</p>}
     </div>
   );

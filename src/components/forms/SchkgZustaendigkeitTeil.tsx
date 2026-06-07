@@ -134,7 +134,7 @@ export function SchkgZustaendigkeitTeil() {
 
       {/* 4 · Ergebnis */}
       {r && (
-        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
+        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite" aria-atomic="true">
           <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />
 

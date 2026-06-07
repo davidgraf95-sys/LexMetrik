@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { format, isValid, parse, parseISO } from 'date-fns';
+import { addDays, format, isValid, parse, parseISO } from 'date-fns';
 
 // Eigenes Datumsfeld im LexMetrik-Look: Texteingabe (TT.MM.JJJJ) plus
 // aufklappbarer Kalender – ersetzt den nativen Browser-Datepicker.
@@ -33,6 +33,10 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
     return isValid(d) ? new Date(d.getFullYear(), d.getMonth(), 1) : new Date();
   });
   const wrapRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  // Tastatur-Fokus im Kalender (roving tabindex, FAHRPLAN-DESIGN 3.1):
+  // genau EIN Tag ist tabbbar; Pfeiltasten verschieben ihn.
+  const [fokusIso, setFokusIso] = useState<string | null>(null);
 
   // Externer Wert hat Vorrang (auch nach Auswahl im Kalender) —
   // Sync während des Renderns statt im Effect (React-Pattern «adjusting state»).
@@ -48,7 +52,12 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
     const klick = (e: PointerEvent) => {
       if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) setOffen(false);
     };
-    const taste = (e: KeyboardEvent) => { if (e.key === 'Escape') setOffen(false); };
+    const taste = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setOffen(false);
+        toggleRef.current?.focus(); // Fokus zurück zum Auslöser (Dialog-Muster)
+      }
+    };
     document.addEventListener('pointerdown', klick);
     document.addEventListener('keydown', taste);
     return () => {
@@ -61,12 +70,33 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
 
   const oeffnen = () => {
     const d = value ? parseISO(value) : new Date();
-    setMonat(isValid(d) ? new Date(d.getFullYear(), d.getMonth(), 1) : new Date());
+    const gueltig = isValid(d) ? d : new Date();
+    setMonat(new Date(gueltig.getFullYear(), gueltig.getMonth(), 1));
+    setFokusIso(format(gueltig, 'yyyy-MM-dd'));
     // Popover nach links klappen, wenn rechts kein Platz mehr ist (Viewport-Rand)
     const rect = wrapRef.current?.getBoundingClientRect();
     setRechtsbuendig(!!rect && rect.left + 280 > window.innerWidth - 12);
     setOffen(true);
   };
+
+  // Pfeiltasten-Navigation im Tagesraster (APG-Grid-Muster); Monatswechsel
+  // folgt dem Fokus. Enter/Space wählen nativ (Tage sind Buttons).
+  const SCHRITTE: Record<string, number> = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 };
+  const rasterTaste = (e: React.KeyboardEvent) => {
+    if (!fokusIso) return;
+    const schritt = SCHRITTE[e.key];
+    if (schritt === undefined) return;
+    e.preventDefault();
+    const ziel = addDays(parseISO(fokusIso), schritt);
+    setMonat(new Date(ziel.getFullYear(), ziel.getMonth(), 1));
+    setFokusIso(format(ziel, 'yyyy-MM-dd'));
+  };
+
+  // Fokus dem roving tabindex nachführen (auch beim Öffnen: Fokus in den Dialog)
+  useEffect(() => {
+    if (!offen || !fokusIso) return;
+    wrapRef.current?.querySelector<HTMLButtonElement>(`button[data-iso="${fokusIso}"]`)?.focus();
+  }, [offen, fokusIso]);
 
   // Tippen: erst bei vollständigem, gültigem Datum emittieren
   const tippen = (s: string) => {
@@ -108,8 +138,9 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
         className={`${className} pr-11`} aria-label={ariaLabel}
       />
       <button
+        ref={toggleRef}
         type="button" onClick={() => (offen ? setOffen(false) : oeffnen())}
-        aria-label="Kalender öffnen" aria-expanded={offen}
+        aria-label="Kalender öffnen" aria-expanded={offen} aria-haspopup="dialog"
         className="absolute right-1.5 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-8 h-8 rounded-md text-brass-700 hover:bg-brass-100 transition-colors"
       >
         <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -119,7 +150,8 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
       </button>
 
       {offen && (
-        <div className={`absolute z-50 top-full ${rechtsbuendig ? 'right-0' : 'left-0'} mt-1.5 w-[min(17.5rem,calc(100vw-2rem))] bg-surface-raised border border-line rounded-lg shadow-lg p-3 lc-reveal`}>
+        <div role="dialog" aria-label="Kalender"
+          className={`absolute z-50 top-full ${rechtsbuendig ? 'right-0' : 'left-0'} mt-1.5 w-[min(17.5rem,calc(100vw-2rem))] bg-surface-raised border border-line rounded-lg shadow-lg p-3 lc-reveal`}>
           {/* Kopf: Jahr-/Monatsblättern, Monat als Ablese-Anzeige */}
           <div className="flex items-center justify-between mb-2">
             <div className="flex">
@@ -135,29 +167,40 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
             </div>
           </div>
 
-          <div className="grid grid-cols-7 gap-0.5 text-center">
-            {WTAGE.map((w) => (
-              <div key={w} className="lc-overline text-ink-500 py-1" style={{ fontSize: '0.6rem' }}>{w}</div>
+          {/* Tagesraster als ARIA-Grid (FAHRPLAN-DESIGN 3.1): Wochen-Zeilen,
+              roving tabindex, Pfeiltasten via rasterTaste. Wochentags-Zeile
+              auf das micro-Token statt Inline-0.6rem (Token-Treue). */}
+          <div role="grid" aria-label={`${MONATE[m]} ${jahr}`} onKeyDown={rasterTaste} className="text-center">
+            <div role="row" className="grid grid-cols-7 gap-0.5">
+              {WTAGE.map((w) => (
+                <div key={w} role="columnheader" className="lc-overline text-ink-500 py-1">{w}</div>
+              ))}
+            </div>
+            {Array.from({ length: Math.ceil(zellen.length / 7) }, (_, w) => zellen.slice(w * 7, w * 7 + 7)).map((woche, w) => (
+              <div key={w} role="row" className="grid grid-cols-7 gap-0.5">
+                {woche.map((d, i) => {
+                  if (!d) return <div key={i} role="gridcell" />;
+                  const iso = format(d, 'yyyy-MM-dd');
+                  const istGewaehlt = gleicherTag(d, gewaehlt);
+                  const istHeute = gleicherTag(d, heute);
+                  return (
+                    <button
+                      key={i} type="button" role="gridcell" onClick={() => waehlen(d)}
+                      data-iso={iso} tabIndex={iso === fokusIso ? 0 : -1}
+                      aria-label={format(d, 'dd.MM.yyyy')} aria-selected={istGewaehlt}
+                      className={`num h-8 flex items-center justify-center rounded-md text-body-s transition-colors ${
+                        istGewaehlt
+                          ? 'bg-brass-500 text-ink-900 font-semibold'
+                          : 'text-ink-700 hover:bg-brass-100'
+                      }`}
+                      style={!istGewaehlt && istHeute ? { boxShadow: 'inset 0 0 0 1px var(--brass-500)' } : undefined}
+                    >
+                      {d.getDate()}
+                    </button>
+                  );
+                })}
+              </div>
             ))}
-            {zellen.map((d, i) => {
-              if (!d) return <div key={i} />;
-              const istGewaehlt = gleicherTag(d, gewaehlt);
-              const istHeute = gleicherTag(d, heute);
-              return (
-                <button
-                  key={i} type="button" onClick={() => waehlen(d)}
-                  aria-label={format(d, 'dd.MM.yyyy')} aria-pressed={istGewaehlt}
-                  className={`num h-8 flex items-center justify-center rounded-md text-body-s transition-colors ${
-                    istGewaehlt
-                      ? 'bg-brass-500 text-ink-900 font-semibold'
-                      : 'text-ink-700 hover:bg-brass-100'
-                  }`}
-                  style={!istGewaehlt && istHeute ? { boxShadow: 'inset 0 0 0 1px var(--brass-500)' } : undefined}
-                >
-                  {d.getDate()}
-                </button>
-              );
-            })}
           </div>
 
           <div className="flex justify-end mt-2 pt-2 border-t border-line">

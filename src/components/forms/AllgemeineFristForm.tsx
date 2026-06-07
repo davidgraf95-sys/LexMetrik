@@ -242,7 +242,7 @@ export function AllgemeineFristForm() {
           </div>
 
           {ergebnis && (
-            <div className="lc-reveal space-y-4" aria-live="polite">
+            <div className="lc-reveal space-y-4" aria-live="polite" aria-atomic="true">
               <LiveHeader />
               {/* Prominente Eckdaten + Kalender (Angleichung an ZPO/SchKG) */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -324,7 +324,7 @@ export function AllgemeineFristForm() {
             )}
           </div>
           {rueckErgebnis && (
-            <div className="lc-reveal space-y-4" aria-live="polite">
+            <div className="lc-reveal space-y-4" aria-live="polite" aria-atomic="true">
               <LiveHeader />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[

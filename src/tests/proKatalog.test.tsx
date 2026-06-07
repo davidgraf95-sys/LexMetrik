@@ -61,7 +61,7 @@ describe('Pro-Katalog: Tabs + Kachel-Raster (Umbau 6.6.2026, Auftrag David)', ()
     expect(html).toContain('id="panel-arbeit"');
     expect(html).not.toContain('id="kachel-arbeit"');  // die geöffnete Kachel weicht ihrem Panel
     expect(html).toContain('id="kachel-miete"');       // … die übrigen bleiben sichtbar
-    expect(html).toContain('Schliessen ✕');            // expliziter Rückweg im Panel
+    expect(html).toContain('Schliessen');              // expliziter Rückweg im Panel (✕ seit FAHRPLAN-DESIGN 3.3 aria-hidden)
     expect(html).toContain('lc-reveal-panel');         // gemächliche Einblendung (motion-reduce global)
     expect(html).toContain('view-transition-name:kachel-miete'); // Nachrutschen animierbar
     expect(html).toContain('In Vorbereitung</span>'); // geplante Karten im Panel sichtbar

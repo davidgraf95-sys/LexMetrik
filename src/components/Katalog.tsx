@@ -101,7 +101,7 @@ function GebietPanel({ gebiet, karten, onSchliessen, onOeffnen }: {
         </div>
         <button type="button" onClick={onSchliessen}
           className="shrink-0 text-body-s font-medium text-ink-500 hover:text-brass-700 transition-colors">
-          Schliessen ✕
+          Schliessen <span aria-hidden>✕</span>
         </button>
       </div>
       {gruppen.map((g) => (

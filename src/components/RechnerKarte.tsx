@@ -71,9 +71,9 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
       {card.modus === 'rechner' && card.szenarien && card.szenarien.length > 0 && (
         <ul className="space-y-0.5">
           {card.szenarien.map((sz) => (
-            <li key={sz.label} className={`text-xs leading-relaxed ${sz.status === 'geplant' ? 'text-ink-400' : 'text-ink-600'}`}>
+            <li key={sz.label} className={`text-xs leading-relaxed ${sz.status === 'geplant' ? 'text-ink-500' : 'text-ink-600'}`}>
               <span aria-hidden className={`mr-1 ${sz.status === 'geplant' ? 'text-ink-300' : 'text-warn-500'}`}>–</span>
-              {sz.label}{sz.status === 'geplant' && <span className="text-ink-400"> · in Vorbereitung</span>}
+              {sz.label}{sz.status === 'geplant' && <span className="text-ink-500"> · in Vorbereitung</span>}
             </li>
           ))}
         </ul>
@@ -88,7 +88,7 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
               {i > 0 && ' · '}
               <Link to={k.href!} className="relative text-brass-700 hover:text-brass-600 no-underline">{k.title}</Link>
               {/* Dezenter Hinweis auf der Free-Seite: Ziel liegt in Pro */}
-              {card.tier === 'free' && k.tier === 'pro' && <span className="text-ink-400"> (Pro)</span>}
+              {card.tier === 'free' && k.tier === 'pro' && <span className="text-ink-500"> (Pro)</span>}
             </span>
           ))}
         </p>

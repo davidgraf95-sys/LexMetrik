@@ -34,7 +34,7 @@ export function SelectionGrid<T extends string>({
             type="button"
             onClick={() => onSelect(it.code)}
             aria-pressed={aktiv}
-            className={`text-left p-3 rounded-lg border transition-colors ${
+            className={`text-left p-3 min-h-11 rounded-lg border transition-colors ${
               aktiv ? 'border-brass-500 bg-brass-100/60' : 'border-line bg-surface hover:border-brass-400'
             }`}
           >

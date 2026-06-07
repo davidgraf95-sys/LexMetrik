@@ -60,7 +60,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
   return (
     // aria-live: Screenreader erfahren von Live-Neuberechnungen (UX C7)
-    <div className="lc-reveal" aria-live="polite">
+    <div className="lc-reveal" aria-live="polite" aria-atomic="true">
       {/* Messing-Akzentlinie als Ablesekante über dem Readout */}
       <div className="scale-rule" aria-hidden />
       <div className="bg-surface border border-line rounded-b-lg rounded-t-none shadow-md overflow-hidden">
