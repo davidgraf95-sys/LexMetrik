@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { EckdatenKachel, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
@@ -8,6 +8,10 @@ import {
   type WiderspruchKonstellation,
 } from '../../lib/schkgZustaendigkeit';
 import { GEBV_SCHKG_URL } from '../../data/erlassLinks';
+import { BETREIBUNGSAEMTER, type BetreibungsamtAdresse } from '../../data/betreibungsaemter';
+import { hauptTreffer, plzAufloesen } from '../../data/plz/plzAufloesung';
+import { KANTONE } from '../../lib/kantone';
+import type { Kanton } from '../../types/legal';
 
 // ─── Rechtsweg «Betreibung (SchKG)» — UI-Teil des Zuständigkeitsrechners ────
 // Anordnung David 5.6.2026 («schkg analog zivilrecht»). Reine Darstellung
@@ -46,6 +50,23 @@ const WIDERSPRUCH: { code: WiderspruchKonstellation; label: string }[] = [
   { code: 'grundstueck', label: 'Anspruch betrifft ein Grundstück' },
 ];
 
+// ─── Anzeige eines konkreten Betreibungsamts (Adresse aus der Datenschicht) ─
+function AmtAdresse({ amt }: { amt: BetreibungsamtAdresse }) {
+  return (
+    <div className="lc-tile">
+      <p className="text-body-s font-medium text-ink-900">{amt.name}</p>
+      <p className="text-body-s text-ink-700">{amt.strasse}, {amt.plzOrt}</p>
+      {amt.zustaendigFuer && <p className="text-xs text-ink-500 mt-0.5">zuständig für: {amt.zustaendigFuer}</p>}
+      {amt.hinweis && <p className="text-xs text-ink-500 mt-0.5">{amt.hinweis}</p>}
+      {amt.url && (
+        <a href={amt.url} target="_blank" rel="noreferrer" className="text-brass-700 underline text-xs mt-1 inline-block">
+          Amtliche Seite ↗
+        </a>
+      )}
+    </div>
+  );
+}
+
 export function SchkgZustaendigkeitTeil() {
   const [anliegen, setAnliegen] = useState<SchkgAnliegen>('betreibung_einleiten');
   const [schuldnerTyp, setSchuldnerTyp] = useState<SchkgSchuldnerTyp>('natuerlich_wohnsitz');
@@ -55,6 +76,34 @@ export function SchkgZustaendigkeitTeil() {
   const [widerspruchK, setWiderspruchK] = useState<WiderspruchKonstellation>('gewahrsam_schuldner');
   const [kollokationIn, setKollokationIn] = useState<'pfaendung' | 'konkurs'>('pfaendung');
   const [roArt, setRoArt] = useState<'provisorisch' | 'definitiv'>('provisorisch');
+
+  // ── Betreibungsort lokalisieren (optional): PLZ → Kanton (amtliches
+  // Ortschaftenverzeichnis, lazy; Muster ZustaendigkeitForm). Auflösung des
+  // konkreten Amts über die Datenschicht data/betreibungsaemter.ts (§3/§5).
+  const [ortPlz, setOrtPlz] = useState('');
+  const [ortKanton, setOrtKanton] = useState<Kanton | ''>('');
+  // Render-Abgleich statt synchronem setState im Effect (Haus-Lint-Regel):
+  // gemerkt wird die PLZ, die im Verzeichnis fehlte; die Warnung gilt nur,
+  // solange das Feld genau diese PLZ trägt.
+  const [plzUnbekanntFuer, setPlzUnbekanntFuer] = useState<string | null>(null);
+  useEffect(() => {
+    let aktiv = true;
+    if (!/^\d{4}$/.test(ortPlz)) return;
+    plzAufloesen(ortPlz)
+      .then((treffer) => {
+        if (!aktiv) return;
+        setPlzUnbekanntFuer(treffer === null || treffer.length === 0 ? ortPlz : null);
+        if (!treffer || treffer.length === 0) return;
+        const kantone = [...new Set(treffer.map((t) => t.kanton))];
+        const haupt = hauptTreffer(treffer);
+        if (kantone.length === 1) setOrtKanton(kantone[0]);
+        else if (haupt) setOrtKanton(haupt.kanton);
+      })
+      .catch(() => { if (aktiv) setPlzUnbekanntFuer(null); });
+    return () => { aktiv = false; };
+  }, [ortPlz]);
+  const plzUnbekannt = plzUnbekanntFuer !== null && plzUnbekanntFuer === ortPlz;
+  const kantonsAemter = ortKanton === '' ? null : BETREIBUNGSAEMTER[ortKanton];
 
   const forderung = forderungRoh.trim() === '' ? null : Number(forderungRoh.replace(/['\s]/g, '').replace(',', '.'));
   const forderungUngueltig = forderung !== null && (!Number.isFinite(forderung) || forderung < 0);
@@ -132,6 +181,33 @@ export function SchkgZustaendigkeitTeil() {
         )}
       </div>
 
+      {/* 3b · Betreibungsort lokalisieren (optional) — konkretes Amt */}
+      <div className="space-y-2">
+        <p className="lc-overline">3b · Betreibungsort lokalisieren (optional)</p>
+        <p className="text-body-s text-ink-600">
+          PLZ oder Kanton des Betreibungsortes (oben hergeleitet: z. B. Wohnsitz/Sitz der Schuldnerseite) —
+          zeigt das zuständige Betreibungsamt bzw. das amtliche kantonale Verzeichnis.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Field label="PLZ" hint="amtliches Ortschaftenverzeichnis — setzt den Kanton automatisch">
+            <input
+              type="text" inputMode="numeric" maxLength={4} value={ortPlz}
+              onChange={(e) => setOrtPlz(e.target.value.replace(/\D/g, ''))}
+              className={inputCls + ' num w-28'} placeholder="PLZ" aria-label="Postleitzahl des Betreibungsortes"
+            />
+          </Field>
+          <Field label="Kanton">
+            <select value={ortKanton} onChange={(e) => setOrtKanton(e.target.value as Kanton | '')} className={inputCls}>
+              <option value="">– wählen –</option>
+              {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+            </select>
+          </Field>
+        </div>
+        {plzUnbekannt && (
+          <p className="text-xs text-warn-700">PLZ {ortPlz}: im amtlichen Ortschaftenverzeichnis nicht gefunden — bitte prüfen.</p>
+        )}
+      </div>
+
       {/* 4 · Ergebnis */}
       {r && (
         <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
@@ -147,8 +223,41 @@ export function SchkgZustaendigkeitTeil() {
               <p className="text-body-s text-ink-900 font-medium">{r.forum.stelle}</p>
               <p className="text-body-s text-ink-700 mt-1">{r.forum.text}</p>
               <p className="text-body-s text-ink-700 mt-1">{r.eingabe.verfahren}.</p>
-              <a href={BETREIBUNGSAEMTER_VERZEICHNIS} target="_blank" rel="noreferrer" className="text-brass-700 underline text-body-s mt-1.5 inline-block">
-                Zuständiges Betreibungs-/Konkursamt ermitteln (EasyGov, amtlich) ↗
+            </div>
+
+            {/* Konkretes Betreibungsamt am gewählten Betreibungsort (3b) */}
+            <div className="border-t border-line pt-3 space-y-2">
+              <p className="lc-overline mb-1.5">Betreibungsamt am Betreibungsort{ortKanton !== '' ? ` (${ortKanton})` : ''}</p>
+              {kantonsAemter === null ? (
+                <p className="text-body-s text-ink-600">PLZ oder Kanton unter 3b wählen, um das zuständige Betreibungsamt zu sehen.</p>
+              ) : kantonsAemter.aufloesung.modus === 'einheitsamt' ? (
+                <AmtAdresse amt={kantonsAemter.aufloesung.amt} />
+              ) : kantonsAemter.aufloesung.modus === 'kreise' ? (
+                <div className="space-y-2">
+                  {kantonsAemter.aufloesung.hinweis && <p className="text-body-s text-ink-600">{kantonsAemter.aufloesung.hinweis}</p>}
+                  {kantonsAemter.aufloesung.aemter.map((a) => <AmtAdresse key={a.name} amt={a} />)}
+                </div>
+              ) : (
+                <p className="text-body-s text-ink-700">
+                  {kantonsAemter.aufloesung.beschreibung} —{' '}
+                  <a href={kantonsAemter.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">
+                    amtliches Verzeichnis ({ortKanton}) ↗
+                  </a>
+                </p>
+              )}
+              {kantonsAemter !== null && (
+                <p className="text-xs text-ink-500">
+                  Stand {kantonsAemter.stand} · Quelle: {kantonsAemter.quelle} — zweifach geprüfte Recherche, fachliche Abnahme ausstehend.
+                </p>
+              )}
+              {anliegen !== 'betreibung_einleiten' && (
+                <p className="text-xs text-ink-500">
+                  Hinweis: Für dieses Anliegen ist das Forum oben massgeblich (Gericht/Aufsichtsbehörde) — das
+                  Betreibungsamt dient der Orientierung am Betreibungsort.
+                </p>
+              )}
+              <a href={BETREIBUNGSAEMTER_VERZEICHNIS} target="_blank" rel="noreferrer" className="text-brass-700 underline text-body-s inline-block">
+                Amtliche Suche nach Adresse (EasyGov, SECO) ↗
               </a>
             </div>
           </div>
