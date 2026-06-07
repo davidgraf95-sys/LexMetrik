@@ -23,9 +23,10 @@ function kleinFuer(kanton: string, d: KantonsKarte): Map<string, number> {
   return m;
 }
 
-/** Kantone mit Gemeinde→Amt-Auflösung (BE/VS: amtlich keine gemeindescharfe
- *  Zuordnung publiziert → Dienststellen-/Ämterliste in der UI). */
-export const BETREIBUNGSAMT_KANTONE: readonly Kanton[] = ['ZH', 'FR', 'SO', 'AR', 'GR', 'TG', 'TI', 'VD'] as const;
+/** Kantone mit Gemeinde→Amt-Auflösung. Nicht aufgelöst: BE/VS (amtlich keine
+ *  gemeindescharfe Zuordnung publiziert → Dienststellen-Liste); LU/AG/SG
+ *  (Etappe-3-Befund: keine belastbare Gesamtliste → Verzeichnis-Link, §8). */
+export const BETREIBUNGSAMT_KANTONE: readonly Kanton[] = ['ZH', 'FR', 'SO', 'AR', 'GR', 'TG', 'TI', 'VD', 'ZG', 'UR', 'SZ'] as const;
 
 export type BetreibungsamtTreffer =
   | { art: 'amt'; amt: BetreibungsamtAdresse }

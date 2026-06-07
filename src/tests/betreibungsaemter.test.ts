@@ -70,8 +70,8 @@ describe('Betreibungsämter — Stichproben (dossier-verifizierte Werte)', () =>
   });
 });
 
-describe('Betreibungsämter — Kreis-Kantone (Etappe 2, Extraktion 7.6.2026)', () => {
-  const ERWARTET: Partial<Record<Kanton, number>> = { ZH: 55, BE: 8, FR: 7, SO: 5, AR: 3, GR: 11, TG: 5, TI: 8, VD: 10, VS: 5 };
+describe('Betreibungsämter — Kreis-Kantone (Etappen 2+3, Extraktion 7.6.2026)', () => {
+  const ERWARTET: Partial<Record<Kanton, number>> = { ZH: 55, BE: 8, FR: 7, SO: 5, AR: 3, GR: 11, TG: 5, TI: 8, VD: 10, VS: 5, ZG: 7, UR: 2, SZ: 11 };
   it('Ämterzahlen entsprechen den amtlich verifizierten Strukturen', () => {
     for (const [k, n] of Object.entries(ERWARTET)) {
       const a = BETREIBUNGSAEMTER[k as Kanton].aufloesung;
@@ -98,7 +98,7 @@ describe('Betreibungsämter — Kreis-Kantone (Etappe 2, Extraktion 7.6.2026)', 
       }
     }
   });
-  it('Abdeckung: ZH 158 (+2 Städte) · SO 104 · AR 20 · GR 100 · TG 80 · VD 300', () => {
+  it('Abdeckung: ZH 158 (+2 Städte) · SO 104 · AR 20 · GR 100 · TG 80 · VD 300 · ZG 11 · UR 19 · SZ 30', () => {
     const K = karten as Record<string, { gemeinden: Record<string, number> }>;
     expect(Object.keys(K.ZH.gemeinden).length).toBe(158);
     expect(Object.keys(K.SO.gemeinden).length).toBe(104);
@@ -106,6 +106,15 @@ describe('Betreibungsämter — Kreis-Kantone (Etappe 2, Extraktion 7.6.2026)', 
     expect(Object.keys(K.GR.gemeinden).length).toBe(100);
     expect(Object.keys(K.TG.gemeinden).length).toBe(80);
     expect(Object.keys(K.VD.gemeinden).length).toBe(300);
+    expect(Object.keys(K.ZG.gemeinden).length).toBe(11);
+    expect(Object.keys(K.UR.gemeinden).length).toBe(19);
+    expect(Object.keys(K.SZ.gemeinden).length).toBe(30);
+  });
+  it('LU/AG/SG bleiben Verzeichnis-Link (Etappe-3-Befund: keine belastbare Gesamtliste, §8)', () => {
+    for (const k of ['LU', 'AG', 'SG'] as const) {
+      expect(BETREIBUNGSAEMTER[k].aufloesung.modus, k).toBe('verzeichnis');
+      expect(BETREIBUNGSAMT_KANTONE).not.toContain(k);
+    }
   });
 });
 
@@ -150,6 +159,25 @@ describe('Betreibungsämter — Gemeinde-Auflösung (Goldwerte aus den Prüf-Sti
     expect(BETREIBUNGSAMT_KANTONE).not.toContain('BE');
     expect(await betreibungsamtFuer('BE', 'Bern')).toBeNull();
     expect(await betreibungsamtFuer('VS', 'Sion')).toBeNull();
+  });
+  it('Etappe 3: ZG/UR/SZ lösen gemeindescharf auf (amtlich/gegengeprüft)', async () => {
+    const baar = await betreibungsamtFuer('ZG', 'Baar');
+    expect(baar?.art).toBe('amt');
+    if (baar?.art === 'amt') expect(baar.amt.name).toContain('Baar');
+    // ZG-Zusammenlegung: Walchwil → Betreibungsamt Zug (seit 1.1.2023)
+    const walchwil = await betreibungsamtFuer('ZG', 'Walchwil');
+    expect(walchwil?.art).toBe('amt');
+    if (walchwil?.art === 'amt') expect(walchwil.amt.name).toContain('Zug');
+    // ZG Menzingen UND Neuheim → ein gemeinsames Amt
+    const neuheim = await betreibungsamtFuer('ZG', 'Neuheim');
+    expect(neuheim?.art).toBe('amt');
+    if (neuheim?.art === 'amt') expect(neuheim.amt.name).toContain('Menzingen / Neuheim');
+    // SZ Schreibvariante mit Kantonszusatz
+    const wangen = await betreibungsamtFuer('SZ', 'Wangen (SZ)');
+    expect(wangen?.art).toBe('amt');
+    // UR: beide Kreise erreichbar
+    const altdorf = await betreibungsamtFuer('UR', 'Altdorf (UR)');
+    expect(altdorf?.art).toBe('amt');
   });
   it('Einheitsamt-Kantone: Auflösung nicht nötig (null) — Adresse kommt direkt aus der Stammschicht', async () => {
     expect(await betreibungsamtFuer('BS', 'Basel')).toBeNull();

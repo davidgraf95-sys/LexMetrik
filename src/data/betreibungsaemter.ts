@@ -291,30 +291,58 @@ export const BETREIBUNGSAEMTER: Record<Kanton, KantonBetreibungsaemter> = {
     ] },
   },
 
-  // ── Gemeinde-/Mischkantone (Etappe 3 — amtliches bzw. deklariertes
-  //    Verzeichnis; SZ/AG sind VERBANDS-Verzeichnisse, offengelegt §8) ───────
-  LU: {
-    stand: '7.6.2026', quelle: 'gerichte.lu.ch (Verzeichnis der Betreibungsämter)',
-    aufloesung: { modus: 'verzeichnis', beschreibung: 'Gemeinde-Betreibungskreise mit laufenden Zusammenschlüssen (§ 1 EGSchKG LU); amtliche Liste der Gerichte', url: 'https://gerichte.lu.ch/organisation/betreibungsaemter' },
+  // ── Gemeinde-/Mischkantone ──────────────────────────────────────────────
+  // Etappe 3 (7.6.2026): ZG/UR/SZ gemeindescharf erfasst (kreise); LU/AG/SG
+  // bleiben bewusst beim Verzeichnis-Link (§8) — Begründung je Eintrag.
+  ZG: {
+    stand: '7.6.2026', quelle: 'zg.ch (Adressliste Betreibungsämter, amtlich/kommunal; Stand 2/2023, Einzelangaben 2026 an Gemeindeseiten gegengeprüft)',
+    url: 'https://zg.ch/dam/jcr:87cb3853-5a22-4f9b-928e-40d220e2f906/Adressen%20Betreibungs%C3%A4mter%20Stand%20Februar%202023.pdf',
+    aufloesung: { modus: 'kreise', hinweis: '7 kommunale Betreibungsämter (Steinhausen→Zug seit 2017, Walchwil→Zug seit 2023; Menzingen/Neuheim gemeinsam geführt).', aemter: [
+      { name: 'Betreibungsamt Zug', strasse: 'Gubelstrasse 22', plzOrt: '6301 Zug', zustaendigFuer: 'Zug, Steinhausen, Walchwil (Steinhausen seit 01.04.2017 und Walchwil seit 01.01.2023 mit Betreibungsamt Zug zusammengelegt)', url: 'https://www.stadtzug.ch/betreibung/11536' },
+      { name: 'Betreibungsamt Ägerital', strasse: 'Zugerstrasse 46 (Postfach 55)', plzOrt: '6314 Unterägeri', zustaendigFuer: 'Oberägeri, Unterägeri' },
+      { name: 'Betreibungsamt Menzingen / Neuheim', strasse: 'Rathaus, Postfach', plzOrt: '6313 Menzingen', zustaendigFuer: 'Menzingen, Neuheim', url: 'https://www.zg.ch/behoerden/gemeinden/menzingen/de/verwaltung/verwaltung/aemter-und-stellen/betreibungsamt' },
+      { name: 'Betreibungsamt Baar', strasse: 'Rigistrasse 5 (Postfach 1254)', plzOrt: '6341 Baar', zustaendigFuer: 'Baar' },
+      { name: 'Betreibungsamt Cham', strasse: 'Mandelhof (Postfach 161)', plzOrt: '6330 Cham', zustaendigFuer: 'Cham' },
+      { name: 'Betreibungsamt Hünenberg', strasse: 'Chamerstrasse 42a', plzOrt: '6331 Hünenberg', zustaendigFuer: 'Hünenberg' },
+      { name: 'Betreibungsamt Risch', strasse: 'Neuhofweg 1', plzOrt: '6343 Buonas', zustaendigFuer: 'Risch' },
+    ] },
   },
   UR: {
     stand: '7.6.2026', quelle: 'ur.ch (Betreibungswesen)',
-    aufloesung: { modus: 'verzeichnis', beschreibung: '2 Betreibungskreise', url: 'https://www.ur.ch/rechtsgebiete/3912' },
+    url: 'https://www.ur.ch/rechtsgebiete/3912',
+    aufloesung: { modus: 'kreise', hinweis: '2 Betreibungskreise.', aemter: [
+      { name: 'Betreibungsamt Altdorf', strasse: 'Tellsgasse 25', plzOrt: '6460 Altdorf (UR)', zustaendigFuer: 'Gemeinde Altdorf (Betreibungskreis Altdorf)', url: 'https://www.altdorf.ch/aemter/2594' },
+      { name: 'Regionales Betreibungsamt Erstfeld', strasse: 'Gotthardstrasse 99', plzOrt: '6472 Erstfeld', zustaendigFuer: 'Betreibungskreis Erstfeld: 18 Gemeinden des Kantons Uri (Andermatt, Attinghausen, Bürglen, Erstfeld, Flüelen, Göschenen, Gurtnellen, Hospental, Isenthal, Realp, Schattdorf, Seedorf, Seelisberg, Silenen, Sisikon, Spiringen, Unterschächen, Wassen) — Postfach 51', url: 'https://betreibungsamt-erstfeld.ch/' },
+    ] },
   },
   SZ: {
-    stand: '7.6.2026', quelle: 'ba-sz.ch (Ämterverzeichnis der Schwyzer Betreibungsämter — Verbandsseite)',
-    aufloesung: { modus: 'verzeichnis', beschreibung: '11 Betreibungsämter (Bezirks-/Gemeindekreise, § 1 EGzSchKG SZ); Verzeichnis verbandsgeführt', url: 'https://ba-sz.ch/home/aemterverzeichnis/' },
+    stand: '7.6.2026', quelle: 'ba-sz.ch (Ämterverzeichnis — VERBANDSseite; Adressen an Gemeinde-/Bezirksquellen gegengeprüft)',
+    url: 'https://ba-sz.ch/home/aemterverzeichnis/',
+    aufloesung: { modus: 'kreise', hinweis: '11 Betreibungsämter (Bezirks-/Gemeindekreise, § 1 EGzSchKG SZ); Verzeichnis verbandsgeführt.', aemter: [
+      { name: 'Betreibungsamt Altendorf Lachen', strasse: 'Seeplatz 1, Postfach 43', plzOrt: '8853 Lachen', zustaendigFuer: 'Altendorf, Lachen' },
+      { name: 'Betreibungsamt Arth', strasse: 'Parkstrasse 4', plzOrt: '6410 Goldau', zustaendigFuer: 'Arth (inkl. Goldau, Oberarth, Rigi), Lauerz, Steinerberg', url: 'https://www.arth.ch/betreibungsamt' },
+      { name: 'Betreibungsamt Einsiedeln', strasse: 'Mühlestrasse 1, Postfach 34', plzOrt: '8840 Einsiedeln', zustaendigFuer: 'Einsiedeln, Alpthal (Verbandsliste nennt Ortschaften: Egg, Bennau, Euthal, Gross, Trachslau, Willerzell sowie Biberbrugg/Etzel teilweise)' },
+      { name: 'Betreibungsamt Höfe', strasse: 'Rebhaldenstrasse 15', plzOrt: '8807 Freienbach', zustaendigFuer: 'Feusisberg, Freienbach, Wollerau (Bezirk Höfe)', url: 'https://www.hoefe.ch/de/verwaltung-und-aemter/betreibungsamt/' },
+      { name: 'Betreibungsamt Ingenbohl', strasse: 'Parkstrasse 1, Postfach 516', plzOrt: '6440 Brunnen', zustaendigFuer: 'Ingenbohl (Brunnen), Morschach (inkl. Stoos), Riemenstalden, Gersau' },
+      { name: 'Betreibungsamt Küssnacht', strasse: 'Seeplatz 2/3, Postfach 57', plzOrt: '6403 Küssnacht', zustaendigFuer: 'Küssnacht (SZ) (inkl. Merlischachen, Immensee)' },
+      { name: 'Betreibungsamt Muotathal', strasse: 'Lustnau 2, Postfach 16', plzOrt: '6436 Muotathal', zustaendigFuer: 'Muotathal, Illgau' },
+      { name: 'Betreibungsamt Schübelbach', strasse: 'Eisenburgstrasse 4, Postfach 50', plzOrt: '8862 Schübelbach', zustaendigFuer: 'Schübelbach (inkl. Siebnen-Schübelbach, Buttikon), Reichenburg' },
+      { name: 'Betreibungsamt Schwyz', strasse: 'Herrengasse 23, Postfach 23', plzOrt: '6431 Schwyz', zustaendigFuer: 'Schwyz, Steinen, Sattel, Rothenthurm', url: 'https://www.gemeindeschwyz.ch/aemter/21914' },
+      { name: 'Betreibungsamt Ybrig', strasse: 'Oberibergerstrasse 32', plzOrt: '8842 Unteriberg', zustaendigFuer: 'Unteriberg (inkl. Studen), Oberiberg (inkl. Hoch-Ybrig)' },
+      { name: 'Betreibungsamt Wangen', strasse: 'Allmeindstrasse 30', plzOrt: '8855 Wangen', zustaendigFuer: 'Wangen (inkl. Nuolen), Galgenen, Tuggen, Vorderthal, Innerthal', url: 'https://www.ba-wangensz.ch/' },
+    ] },
   },
-  ZG: {
-    stand: '7.6.2026', quelle: 'zg.ch (Adressliste Betreibungsämter, PDF Stand 2/2023)',
-    aufloesung: { modus: 'verzeichnis', beschreibung: '8 Betreibungsämter der Einwohnergemeinden (Zusammenschlüsse möglich)', url: 'https://zg.ch/dam/jcr:87cb3853-5a22-4f9b-928e-40d220e2f906/Adressen%20Betreibungs%C3%A4mter%20Stand%20Februar%202023.pdf' },
+  // LU/AG/SG: keine belastbare gemeindescharfe Datengrundlage (Etappe-3-Befund).
+  LU: {
+    stand: '7.6.2026', quelle: 'gerichte.lu.ch (amtlich, ohne eigene Adressliste) → betreibungsaemter-zentralschweiz.ch (regionale Plattform)',
+    aufloesung: { modus: 'verzeichnis', beschreibung: 'Gemeinde-/Regionalkreise mit laufenden Fusionen (§ 1 EGSchKG LU); rund 34 Amtsstellen, keine amtliche gemeindescharfe Gesamtliste — Auskunft über das Verzeichnis', url: 'https://gerichte.lu.ch/organisation/betreibungsaemter' },
   },
   SG: {
-    stand: '7.6.2026', quelle: 'sGS 971.1 Art. 1 (jede politische Gemeinde = Betreibungskreis); kein zentrales kantonales Adressverzeichnis (Negativbefund)',
+    stand: '7.6.2026', quelle: 'sGS 971.1 Art. 1 (jede politische Gemeinde = Betreibungskreis); kein zentrales kantonales Adressverzeichnis (Negativbefund, an sg.ch/regress.admin.ch bestätigt)',
     aufloesung: { modus: 'verzeichnis', beschreibung: 'Jede politische Gemeinde bildet einen Betreibungskreis — Adresse bei der Gemeindeverwaltung; amtliche Suche über EasyGov (SECO)', url: 'https://www.easygov.swiss/easygov/#/de/public/betreibungen/betreibungsamt-finden' },
   },
   AG: {
-    stand: '7.6.2026', quelle: 'ag.ch (Betreibungsinspektorat); Verbands-Amtsverzeichnis betreibungsamt-ag.ch am 7.6.2026 nicht erreichbar',
+    stand: '7.6.2026', quelle: 'ag.ch (Betreibungsinspektorat); Verbands-Amtsverzeichnis betreibungsamt-ag.ch am 7.6.2026 nicht erreichbar — nur ~14 von rund 19 Kreisen amtlich belegbar, daher Verzeichnis-Link statt Teilliste (§8)',
     aufloesung: { modus: 'verzeichnis', beschreibung: 'Gemeinde- und Regional-Betreibungskreise (§ 1 EG SchKG AG); Auskunft über das Betreibungsinspektorat', url: 'https://www.ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/betreibungs-und-konkurswesen/betreibungsinspektorat' },
   },
 };
