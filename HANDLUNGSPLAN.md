@@ -146,6 +146,22 @@ löschen, Stand in STRUKTUR.md spiegeln.
    qualifizierte Erhöhung (Sach/Verrechnung/652d) · Bezugsrechts-Entzug ·
    Kapitalband/bedingtes Kapital (653t/653b-Kataloge liegen verbatim) ·
    Kapitalherabsetzung (SHAB-Gläubigerruf) als eigenes Vorhaben.
+9d. **ULTRA-REVIEW kompletter Code → ALLE 16 Befunde gefixt** (`4b8e0e5`,
+   Auftrag David 7.6.2026 morgens; Cloud-Ultra scheiterte am Session-cwd):
+   lokaler Multi-Agent-Workflow — 12 Finder (jur.+tech. Linsen über alle
+   Subsysteme) + 3 Skeptiker je Befund, 63 Agents; 17 Roh → 16 bestätigt,
+   1 adversarial verworfen. 2 HOCH: LinkTeilen verlor den URL-Hash
+   (Tab-/Rechtsweg-Weiche) · engine.ts nummerierte bei wiederholeUeber
+   nur das erste Element (Rechtsbegehren!). 4 MITTEL: Direktklage →
+   74 II lit. b BGG streitwertUNabhängig · Nutzer-Unterstriche wurden in
+   PDF/DOCX zur Unterschriftslinie (schemaStriche-Lizenz, §5) ·
+   GmbH-Vorsitz-Beilage trotz 71 II HRegV · Katalogsuche blind für
+   ue/ae/oe. 4 NIEDRIG: BGer-10-T.-Frist SchKG-Aufsicht (100 II lit. a) ·
+   istISO-Kalenderprüfung · SchKG-Regime-Anzeige=Engine-Input ·
+   Erbteilungs-CHF in die Engine (§3). 6 Testlücken geschlossen (11 neue
+   gesetzeshergeleitete Tests; Golden 65→79). Schlussstand 1005 Tests ·
+   Golden byte-gleich · Lint/Build sauber. (Separater /code-review der
+   Parallel-Session: `7a72e91` #1–#8 — kein Überschnitt.)
 
 ## C · Pflege & Termine (Verfallsregister: `bibliothek/register/parameter-verfall.md`)
 
