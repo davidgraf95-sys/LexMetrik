@@ -1,5 +1,9 @@
 # AG-Gründung — Kantons-Quervergleich der Haus-Bausteine gegen SG und GL
 
+**Erstellt:** 7.6.2026 (Perfektions-Programm Punkt 5, Auftrag David
+«mach alles» — UEBERGABE-AG-PERFEKTION.md; Agent-Recherche).
+**Status:** ERSTRECHERCHE
+
 Quervergleich der ZH-basierten Haus-Fassung (Statuten, Errichtungsakt,
 Wahlannahme, Domizilannahme) gegen die amtlichen Vergleichsmuster der
 Handelsregisterämter St. Gallen und Glarus. Zweck: Prüfen, ob die Haus-Bausteine
@@ -8,7 +12,7 @@ festhalten. **Engine nicht geändert** — dies ist eine Erstrecherche.
 
 ## 1 Quelle + Stand
 
-| Kürzel | Dokument (Dateiname in /tmp/muster bzw. bibliothek/muster) | Herkunft |
+| Kürzel | Dokument (Text-Extrakt in `bibliothek/muster/`, MANIFEST mit URL+Stand; S4) | Herkunft |
 |---|---|---|
 | GL-kurz | `gl-ag-statuten-kurz.txt` | HR-Amt Glarus, Musterstatuten AG Kurzfassung |
 | GL-lang | `gl-ag-statuten-lang.txt` | HR-Amt Glarus, Musterstatuten AG Langfassung |
