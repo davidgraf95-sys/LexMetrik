@@ -200,7 +200,116 @@ for (const bund of [false, true]) {
   if (JSON.stringify(r) !== JSON.stringify(bestimmeStrafZustaendigkeit(input))) melde('T-DET', input, 'nicht deterministisch');
 }
 
-console.log(`Geprüft: Zivil ${zivilN} · SchKG ${schkgN} · Straf ${strafN} Kombinationen`);
+// ── AG-Gründungsmappe (Perfektions-Runde 13, 7.6.2026): Invarianten über
+// den vollen Weichen-Raum — verstetigt den 4608er-Sweep des Sammel-Bug-
+// Checks als Dauerwerkzeug. Invarianten: keine Exception · Dokument-IDs
+// eindeutig · blocker == blockerDetails.map(text) · ohne Blocker: römische
+// Urkunden-Ziffern lückenlos, Statuten-Artikel fortlaufend, ENTWURF nur
+// für Statuten/Errichtungsakt/Nachtrag/Grundstücks-Sacheinlagevertrag.
+import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
+
+const ROEMISCH_OK = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
+let agN = 0;
+const agBasis = (): AgDokAntworten => ({
+  einlageArt: 'bar', besondereVorteile: false, optingOut: true,
+  eigeneBueros: true, immobilienHauptzweck: false, inhaberaktien: false,
+  fremdwaehrung: false, bankInUrkundeGenannt: true, chWohnsitzVertretung: true,
+  leistungenChf: undefined,
+  ...AG_DOK_DEFAULTS,
+  firma: 'Sweep AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Beteiligungen',
+  gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '100', liberierung: '' }],
+  verwaltungsraete: [{ name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' }],
+  bankName: 'ZKB', bankOrt: 'Zürich', rechtsdomizilAdresse: 'W 1',
+  domizilhalterName: 'D AG', domizilhalterAdresse: 'X 1, 8000 Zürich',
+  revisionsstelleName: 'R AG', revisionsstelleSitz: 'Zürich', revisorName: 'R AG',
+  ort: 'Zürich', datum: '2026-06-15',
+});
+
+for (const einlageArt of ['bar', 'sacheinlage', 'verrechnung', 'gemischt'] as const)
+for (const optingOut of [true, false])
+for (const eigeneBueros of [true, false])
+for (const konstituierungInUrkunde of [false, true])
+for (const domizilNurAnmeldung of [false, true])
+for (const annahmeInUrkunde of [false, true])
+for (const fremdwaehrung of [false, true])
+for (const agio of [false, true])
+for (const liberierung of ['100', '50', 'individuell'] as const)
+for (const zweiGruender of [false, true]) {
+  agN++;
+  const a = agBasis();
+  a.einlageArt = einlageArt; a.optingOut = optingOut; a.eigeneBueros = eigeneBueros;
+  a.konstituierungInUrkunde = konstituierungInUrkunde; a.domizilNurAnmeldung = domizilNurAnmeldung;
+  a.fremdwaehrung = fremdwaehrung;
+  if (fremdwaehrung) { a.waehrung = 'EUR'; a.kursChf = '0.93'; a.kursQuelle = 'ZKB'; a.aktienkapitalChf = "120'000"; a.anzahlAktien = '120'; a.gruender[0].anzahl = '120'; }
+  if (agio) a.ausgabebetragChf = "1'200";
+  a.liberierungProzent = liberierung === 'individuell' ? '100' : liberierung;
+  if (zweiGruender) {
+    a.aktienkapitalChf = fremdwaehrung ? "240'000" : "200'000";
+    a.anzahlAktien = fremdwaehrung ? '240' : '200';
+    a.gruender = [
+      { name: 'A', angaben: 'von Basel, in Zürich', anzahl: fremdwaehrung ? '140' : '120', liberierung: liberierung === 'individuell' ? '50' : '' },
+      { name: 'B', angaben: 'von Bern, in Bern', anzahl: '100', liberierung: '' },
+    ];
+    a.verwaltungsraete = [
+      { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift', annahmeInUrkunde },
+      { name: 'B', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'kollektivzuzweien' },
+    ];
+  } else {
+    a.verwaltungsraete[0].annahmeInUrkunde = annahmeInUrkunde;
+    if (liberierung === 'individuell') a.gruender[0].liberierung = '60';
+  }
+  if (einlageArt === 'sacheinlage' || einlageArt === 'gemischt') {
+    a.sacheinlagen = [{
+      typ: 'sachgesamtheit', bezeichnung: 'eine Anlage', belegDatum: '2026-06-01',
+      wertChf: agio ? "60'000" : "50'000", grundstueck: false, einlegerName: 'A', aktienAnzahl: '50',
+      gutschriftChf: '', zustand: 'gut', imHrEingetragen: false, cheNr: '',
+      aktivenChf: '', passivenChf: '', rueckwirkungDatum: '',
+    }];
+    if (einlageArt === 'sacheinlage') {
+      // reine Sacheinlage: alle Aktien decken
+      a.sacheinlagen[0].aktienAnzahl = a.anzahlAktien;
+      a.sacheinlagen[0].wertChf = String(Number(a.anzahlAktien) * 1000);
+    }
+  }
+  if (einlageArt === 'verrechnung' || einlageArt === 'gemischt') {
+    const n = einlageArt === 'verrechnung' ? Number(a.anzahlAktien) : 30;
+    a.verrechnungen = [{ glaeubigerName: 'A', forderungChf: String(n * 1000), aktienAnzahl: String(n), begruendungTxt: 'Darlehen, fällig.' }];
+  }
+  try {
+    const m = agDokumentmappe(a);
+    if (m.gates.blocker.join('|') !== m.gates.blockerDetails.map((d) => d.text).join('|')) {
+      melde('AG-I1', a, 'blocker != blockerDetails');
+    }
+    if (m.gates.blocker.length === 0) {
+      const ids = m.dokumente.map((d) => d.id);
+      if (new Set(ids).size !== ids.length) melde('AG-I2', a, `Dokument-IDs doppelt: ${ids.join(',')}`);
+      const ea = m.dokumente.find((d) => d.id === 'errichtungsakt');
+      if (!ea) melde('AG-I3', a, 'Errichtungsakt fehlt');
+      else {
+        const roem = ea.ergebnis.dokument.absaetze
+          .map((x) => x.ueberschrift).filter((u): u is string => !!u && u !== 'Bestätigung der Urkundsperson')
+          .map((u) => u.split('.')[0]);
+        const erwartet = ROEMISCH_OK.slice(0, roem.length);
+        if (roem.join(',') !== erwartet.join(',')) melde('AG-I4', a, `Urkunden-Ziffern lückenhaft: ${roem.join(',')}`);
+      }
+      const st = m.dokumente.find((d) => d.id === 'statuten');
+      if (st) {
+        const nums = st.ergebnis.dokument.absaetze
+          .map((x) => x.ueberschrift).filter((u): u is string => !!u)
+          .map((u) => Number(u.match(/^Art\. (\d+)/)?.[1] ?? NaN));
+        if (nums.some((x, i) => x !== i + 1)) melde('AG-I5', a, `Statuten-Artikel nicht fortlaufend: ${nums.join(',')}`);
+      }
+      for (const d of m.dokumente) {
+        const entwurfErlaubt = d.id === 'statuten' || d.id === 'errichtungsakt' || d.id === 'nachtrag' || d.id.startsWith('sacheinlagevertrag');
+        if (d.ergebnis.dokument.ausgabeArt === 'entwurf' && !entwurfErlaubt) melde('AG-I6', a, `unerwarteter ENTWURF: ${d.id}`);
+      }
+    }
+  } catch (e) {
+    melde('AG-EX', a, `Exception: ${String(e)}`);
+  }
+}
+
+console.log(`Geprüft: Zivil ${zivilN} · SchKG ${schkgN} · Straf ${strafN} · AG-Mappe ${agN} Kombinationen`);
 if (fehler.length === 0) console.log('KEINE WIDERSPRÜCHE');
 else {
   const gruppen = new Map<string, { n: number; beispiel: string }>();

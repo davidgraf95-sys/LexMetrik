@@ -27,6 +27,7 @@ import { pvZusammenstellen, PV_DEFAULTS } from '../src/lib/vorlagen/patientenver
 import { vaZusammenstellen, VA_DEFAULTS } from '../src/lib/vorlagen/vorsorgeauftrag';
 import { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } from '../src/lib/vorlagen/schlichtungsgesuchBs';
 import { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } from '../src/lib/vorlagen/arbeitsvertrag';
+import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 
 const faelle: Record<string, unknown> = {};
@@ -154,6 +155,91 @@ const mvBasis = {
 f('vorl:mv', () => mvZusammenstellen({ ...mvBasis }));
 f('vorl:mv-gates', () => pruefeMvGates({ ...mvBasis, kautionCHF: '6800' }));
 f('vorl:mv-staffel', () => mvZusammenstellen({ ...mvBasis, mietzinsModell: 'staffel', mindestdauerJahre: 3, staffeln: [{ ab: '2027-10-01', erhoehungCHF: '50' }] }));
+
+// ── AG-Gründungsmappe (Perfektions-Runde 12, 7.6.2026): repräsentative
+// Konstellationen über ALLE Schemas/Weichen — schützt jedes künftige
+// Refactoring byte-genau (§6). Erfasst werden Gates + alle Dokumente
+// (Titel, ausgabeArt, Absätze).
+const agGolden = (id: string, antworten: AgDokAntworten) => f(`ag:${id}`, () => {
+  const m = agDokumentmappe(antworten);
+  return {
+    blocker: m.gates.blocker,
+    warnungen: m.gates.warnungen,
+    dokumente: m.dokumente.map((d) => ({
+      id: d.id, titel: d.titel, ausgabeArt: d.ergebnis.dokument.ausgabeArt,
+      absaetze: d.ergebnis.dokument.absaetze,
+    })),
+  };
+});
+
+const AG_BASIS: AgDokAntworten = {
+  einlageArt: 'bar', besondereVorteile: false, optingOut: true,
+  eigeneBueros: true, immobilienHauptzweck: false, inhaberaktien: false,
+  fremdwaehrung: false, bankInUrkundeGenannt: true, chWohnsitzVertretung: true,
+  leistungenChf: undefined,
+  ...AG_DOK_DEFAULTS,
+  firma: 'Golden Muster AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Beteiligungen',
+  gruender: [{ name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '100', liberierung: '' }],
+  verwaltungsraete: [{ name: 'Anna Muster', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'Weg 1, 8000 Zürich', praesident: true, zeichnungsArt: 'einzelunterschrift' }],
+  bankName: 'Zürcher Kantonalbank', bankOrt: 'Zürich',
+  rechtsdomizilAdresse: 'Weg 1, 8000 Zürich',
+  ort: 'Zürich', datum: '2026-06-15',
+};
+
+agGolden('bar-voll-singular', AG_BASIS);
+agGolden('bar-teil-individuell-lang', {
+  ...AG_BASIS,
+  statutenUmfang: 'lang', vinkulierung: true, virtuelleGv: true,
+  aktienkapitalChf: "200'000", anzahlAktien: '200',
+  gruender: [
+    { name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '120', liberierung: '50' },
+    { name: 'Beat Beispiel', angaben: 'von Bern, in Bern', anzahl: '80', liberierung: '' },
+  ],
+  verwaltungsraete: [
+    { name: 'Anna Muster', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+    { name: 'Beat Beispiel', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'ohne' },
+  ],
+  sitzungBeginn: '11.00', sitzungEnde: '11.30',
+});
+agGolden('gemischt-qualifiziert', {
+  ...AG_BASIS,
+  einlageArt: 'gemischt', besondereVorteile: true, optingOut: false, eigeneBueros: false,
+  immobilienHauptzweck: true, lexKollerGrundstueckErwerb: true,
+  aktienkapitalChf: "400'000", anzahlAktien: '400',
+  gruender: [
+    { name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '300', liberierung: '' },
+    { name: 'Beat Beispiel', angaben: 'von Bern, in Bern', anzahl: '100', liberierung: '' },
+  ],
+  verwaltungsraete: [
+    { name: 'Anna Muster', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+    { name: 'Beat Beispiel', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'kollektivzuzweien' },
+  ],
+  domizilhalterName: 'Treuhand Muster AG', domizilhalterAdresse: 'Bahnhofstrasse 10, 8001 Zürich',
+  revisionsstelleName: 'Revisia AG', revisionsstelleSitz: 'Zürich', revisorName: 'Revisia AG',
+  sacheinlagen: [{
+    typ: 'geschaeft', bezeichnung: 'Werkbau Muster', belegDatum: '2025-12-31', wertChf: "110'000",
+    grundstueck: true, einlegerName: 'Anna Muster', aktienAnzahl: '100', gutschriftChf: "10'000",
+    zustand: 'Liegenschaft zum Fortführungswert; Maschinenpark gemäss Anlagespiegel.',
+    imHrEingetragen: true, cheNr: 'CHE-111.222.333', aktivenChf: "260'000", passivenChf: "150'000",
+    rueckwirkungDatum: '2026-01-01',
+  }],
+  verrechnungen: [{ glaeubigerName: 'Beat Beispiel', forderungChf: "50'000", aktienAnzahl: '50', begruendungTxt: 'Darlehen vom 01.02.2025, valutiert und fällig.' }],
+  vorteile: [{ beguenstigter: 'Anna Muster', inhalt: 'Vorkaufsrecht an der Werkhalle zum Verkehrswert', wertChf: "5'000", begruendungTxt: 'Abgeltung der Aufbauarbeit.' }],
+});
+agGolden('fw-agio', {
+  ...AG_BASIS,
+  fremdwaehrung: true, waehrung: 'EUR', kursChf: '0.93', kursQuelle: 'Zürcher Kantonalbank',
+  aktienkapitalChf: "120'000", anzahlAktien: '120', ausgabebetragChf: "1'200",
+  gruender: [{ name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '120', liberierung: '' }],
+});
+agGolden('urkunden-optionen-nachtrag', {
+  ...AG_BASIS,
+  konstituierungInUrkunde: true, domizilNurAnmeldung: true,
+  verwaltungsraete: [{ ...AG_BASIS.verwaltungsraete[0], annahmeInUrkunde: true }],
+  nachtragsbevollmaechtigter: 'Max Muster, 01.01.1990, von Chur, Weg 1, 7000 Chur',
+  nachtragAktiv: true, nachtragGruendungsdatum: '2026-06-01',
+  nachtragStatutenArtikel: '3', nachtragStatutenAbsatz: '1', nachtragStatutenText: 'Neuer Wortlaut.',
+});
 
 // ── Schreiben oder Vergleichen ──────────────────────────────────────────────
 const PFAD = '/tmp/lexmetrik-golden.json';
