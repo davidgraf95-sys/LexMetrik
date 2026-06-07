@@ -881,8 +881,10 @@ export function VorlageAgGruendung() {
         <ul className="lc-list space-y-2 text-body-s text-ink-700">
           <li>
             <span className="font-medium text-ink-900">Buchführung ist persönliche Pflicht</span> jedes
-            VR-Mitglieds (Art. 716a Abs. 1 Ziff. 3 OR; Art. 957 ff. OR) — sie gilt auch bei einer
-            Firmenübernahme ohne erhaltene Buchhaltung; Unterlassung kann strafbar sein (Art. 166 StGB).
+            VR-Mitglieds: Die Buchführungspflicht folgt aus Art. 957 ff. OR, die Ausgestaltung des
+            Rechnungswesens ist unübertragbare VR-Aufgabe (Art. 716a Abs. 1 Ziff. 3 OR) — sie gilt auch
+            bei einer Firmenübernahme ohne erhaltene Buchhaltung; Unterlassung kann strafbar sein
+            (Art. 166 StGB).
           </li>
           <li>
             <span className="font-medium text-ink-900">Kapitalverlust und Überschuldung:</span> Sind die

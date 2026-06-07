@@ -525,6 +525,22 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       'Eintrag durch den Verwaltungsrat ernennen lassen (Art. 716a Abs. 1 Ziff. 4 OR).',
     );
   }
+  // Sammel-Bug-Check Befund 1 (7.6.2026): Die Konstituierungs-Erklärung in
+  // der GRÜNDERURKUNDE können nur erschienene/unterzeichnende Personen
+  // abgeben — die ZH-Vorlage setzt VR = Gründer voraus («die soeben als
+  // Verwaltungsräte ernannten Gründer»). Nicht-Gründer-VR → VR-Protokoll.
+  if (a.konstituierungInUrkunde) {
+    const gruenderNamen = new Set(a.gruender.filter((g) => g.name.trim()).map((g) => g.name.trim()));
+    const fremde = a.verwaltungsraete.filter((v) => v.name.trim() && !gruenderNamen.has(v.name.trim()));
+    if (fremde.length > 0) {
+      blocker.push(
+        `Konstituierung in der Urkunde nur möglich, wenn alle VR-Mitglieder zugleich Gründerinnen/Gründer ` +
+        `(erschienene und unterzeichnende Personen) sind – ${fremde.map((v) => v.name.trim()).join(', ')} ` +
+        'steht nicht in der Gründerliste. Option ausschalten (separates VR-Protokoll) oder die Person als ' +
+        'Gründer:in erfassen (ZH-Urkundenvorlage Ziff. VII: «die soeben als Verwaltungsräte ernannten Gründer»).',
+      );
+    }
+  }
   if (a.bankInUrkundeGenannt && (a.einlageArt === 'bar' || a.einlageArt === 'gemischt') && (!a.bankName.trim() || !a.bankOrt.trim())) {
     blocker.push('Bank in der Urkunde nennen: Name und Ort des Instituts angeben (sonst separate Bankbescheinigung, Art. 43 Abs. 1 lit. f HRegV).');
   }

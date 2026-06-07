@@ -523,6 +523,19 @@ describe('AG — Urkunden-Optionen (Etappen 4.1/4.2) + Agio/Liberierung (3.2/3.3
       weitereVertretungen: [{ name: 'C', funktion: 'Direktor', zeichnungsArt: 'einzelunterschrift' }],
     });
     expect(blockiert.blocker.join(' ')).toContain('VR-Protokoll');
+
+    // Sammel-Bug-Check Befund 1: Nicht-Gründer-VR kann die Konstituierungs-
+    // Erklärung in der Gründerurkunde nicht abgeben → Blocker.
+    const fremderVr = pruefeAgDokGates({
+      ...ZWEI,
+      konstituierungInUrkunde: true,
+      verwaltungsraete: [
+        ZWEI.verwaltungsraete[0],
+        { name: 'Carla Extern', herkunft: 'Chur', wohnort: 'Chur', adresse: 'W 3', praesident: false, zeichnungsArt: 'kollektivzuzweien' },
+      ],
+    });
+    expect(fremderVr.blocker.join(' ')).toContain('Carla Extern');
+    expect(fremderVr.blocker.join(' ')).toContain('nicht in der Gründerliste');
   });
 
   it('4.2: Domizil nur in der Anmeldung → keine Domizil-Ziffer in der Urkunde', () => {
