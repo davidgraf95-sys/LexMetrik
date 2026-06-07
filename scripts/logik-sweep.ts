@@ -207,6 +207,7 @@ for (const bund of [false, true]) {
 // Urkunden-Ziffern lückenlos, Statuten-Artikel fortlaufend, ENTWURF nur
 // für Statuten/Errichtungsakt/Nachtrag/Grundstücks-Sacheinlagevertrag.
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
+import { fmtCHF } from '../src/lib/vorlagen/datum';
 
 const ROEMISCH_OK = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
 let agN = 0;
@@ -278,6 +279,40 @@ for (const zweiGruender of [false, true]) {
   pruefeAgInvarianten(a);
 }
 
+// ── AG-G: arithmetische GELD-Invariante (offene Härtung aus dem Sammel-
+// Bug-Check 7.6.2026, Agent-1-Empfehlung): die Struktur-Invarianten fangen
+// Zahlen-Mutationen nicht. Erwartungswerte hier als EIGENSTÄNDIGE Hand-
+// rechnung aus den Eingaben (bewusst OHNE effektiveLiberierung — sonst
+// zirkulär); geprüft wird, dass der Errichtungsakt-Text exakt die korrekt
+// formatierten Beträge trägt. ──
+function agGeldErwartung(a: AgDokAntworten) {
+  const num = (s: string | undefined) => Number(String(s ?? '').replace(/['\u2019\s]/g, '')) || 0;
+  const nennwert = num(a.nennwertChf);
+  const anzahl = num(a.anzahlAktien);
+  const kapital = num(a.aktienkapitalChf);
+  const global = (a.liberierungProzent ?? '').trim() === '' ? 100 : num(a.liberierungProzent);
+  const ausgabe = (a.ausgabebetragChf ?? '').trim() === '' ? nennwert : num(a.ausgabebetragChf);
+  const agioJe = Math.max(0, ausgabe - nennwert);
+  const mitSach = a.einlageArt === 'sacheinlage' || a.einlageArt === 'gemischt';
+  const mitVerr = a.einlageArt === 'verrechnung' || a.einlageArt === 'gemischt';
+  const q = (mitSach ? a.sacheinlagen : []).reduce((sum, x) => sum + num(x.aktienAnzahl), 0)
+    + (mitVerr ? a.verrechnungen : []).reduce((sum, x) => sum + num(x.aktienAnzahl), 0);
+  const bar = Math.max(0, anzahl - q);
+  const individuell = a.gruender.some((g) => (g.liberierung ?? '').trim() !== '');
+  // Sach-/Verrechnungsaktien gelten als voll liberiert (634/634a); der
+  // globale Grad wirkt nur auf den Bar-Anteil. Individuelle Grade sind bei
+  // qualifizierter Gründung per Gate gesperrt (blockerfreie Fälle: q=0).
+  let einbezahlt: number;
+  if (q > 0) einbezahlt = q * nennwert + bar * nennwert * (Math.min(global, 100) / 100);
+  else if (individuell) einbezahlt = a.gruender
+    .filter((g) => g.name.trim())
+    .reduce((sum, g) => sum + num(g.anzahl) * nennwert
+      * (((g.liberierung ?? '').trim() === '' ? global : num(g.liberierung)) / 100), 0);
+  else einbezahlt = kapital * (global / 100);
+  const barEinbezahlt = q > 0 ? bar * nennwert * (Math.min(global, 100) / 100) : einbezahlt;
+  return { einbezahlt, barEinbezahlt, gesamt: einbezahlt + anzahl * agioJe, q, bar };
+}
+
 // Geteilte AG-Invarianten (P-Abschluss 7.6.2026: zweiter Sweep-Strang für
 // die Stufe-2-Weichen nutzt dieselben Checks).
 function pruefeAgInvarianten(a: AgDokAntworten) {
@@ -297,6 +332,29 @@ function pruefeAgInvarianten(a: AgDokAntworten) {
           .map((u) => u.split('.')[0]);
         const erwartet = ROEMISCH_OK.slice(0, roem.length);
         if (roem.join(',') !== erwartet.join(',')) melde('AG-I4', a, `Urkunden-Ziffern lückenhaft: ${roem.join(',')}`);
+
+        // AG-G1/G2/G3: Geld-Beträge im Errichtungsakt = Handrechnung.
+        const eaText = ea.ergebnis.dokument.absaetze.map((x) => x.text).join(' ');
+        const geld = agGeldErwartung(a);
+        const code = a.fremdwaehrung ? a.waehrung : 'CHF';
+        if (geld.q === 0) {
+          // Bar-/Voll-Fall: «Einlagen von gesamthaft {code} {einbezahlt}»
+          if (!eaText.includes(`${code} ${fmtCHF(String(geld.einbezahlt))}`)) {
+            melde('AG-G1', a, `Einlagen-Betrag fehlt/falsch: erwartet ${code} ${fmtCHF(String(geld.einbezahlt))}`);
+          }
+        } else if (geld.bar > 0) {
+          // Qualifiziert gemischt: Bar-Satz trägt den Bar-Anteil.
+          if (!eaText.includes(`${code} ${fmtCHF(String(geld.barEinbezahlt))}`)) {
+            melde('AG-G2', a, `Bar-Anteil fehlt/falsch: erwartet ${code} ${fmtCHF(String(geld.barEinbezahlt))}`);
+          }
+        }
+        if (a.fremdwaehrung) {
+          // FW-Gegenwert: geleistete Einlagen GESAMT × Kurs (Art. 621 Abs. 2).
+          const kurs = Number(String(a.kursChf ?? '').replace(/['\s]/g, '')) || 0;
+          if (!eaText.includes(`CHF ${fmtCHF(String(geld.gesamt * kurs))}`)) {
+            melde('AG-G3', a, `FW-Gegenwert fehlt/falsch: erwartet CHF ${fmtCHF(String(geld.gesamt * kurs))}`);
+          }
+        }
       }
       const st = m.dokumente.find((d) => d.id === 'statuten');
       if (st) {
