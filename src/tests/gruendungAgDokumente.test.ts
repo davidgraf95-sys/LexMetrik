@@ -672,6 +672,33 @@ describe('AG — Fremdwährungs-Gründung (Etappe 3.1/D2)', () => {
     expect(text(m, 'statuten')).toContain("Das Aktienkapital beträgt CHF 100'000.00");
     expect(text(m, 'errichtungsakt')).not.toContain('Umrechnungskurs');
   });
+
+  it('Sammel-Bug-Check HOCH-1/MITTEL-1/HOCH-2: keine Stray-Striche; Agio-Gegenwert auf geleisteten Einlagen', () => {
+    // HOCH-1: Default-VR-Zeile ohne Annahme-in-Urkunde endet OHNE «________».
+    const basisM = agDokumentmappe(BASIS);
+    expect(text(basisM, 'errichtungsakt')).toContain('– Anna Muster, von Basel, in Zürich\n');
+    expect(text(basisM, 'errichtungsakt')).not.toContain('Zürich________');
+
+    // MITTEL-1: Nachtrag ohne Absatz → «Art. 3 der Statuten», kein Strich.
+    const nt = agDokumentmappe({
+      ...BASIS, nachtragAktiv: true, nachtragStatutenArtikel: '3', nachtragStatutenText: 'Neu.',
+    });
+    expect(text(nt, 'nachtrag')).toContain('Art. 3 der Statuten');
+    expect(text(nt, 'nachtrag')).not.toContain('3________');
+
+    // HOCH-2: EUR + Agio (100 × Ausgabe 1'200, Kurs 1.05) → Kurs-Satz nennt
+    // den Gegenwert der GELEISTETEN Einlagen: 120'000 × 1.05 = 126'000.
+    const agioFw = agDokumentmappe({
+      ...FW_BASIS,
+      aktienkapitalChf: "120'000", anzahlAktien: '120', nennwertChf: "1'000",
+      ausgabebetragChf: "1'200", kursChf: '1.05',
+      gruender: [{ name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '120' }],
+    });
+    expect(agioFw.gates.blocker).toEqual([]);
+    const ea = text(agioFw, 'errichtungsakt');
+    expect(ea).toContain("Sämtliche Einlagen von gesamthaft EUR 144'000.00");
+    expect(ea).toContain("dem Betrag von CHF 151'200.00");
+  });
 });
 
 describe('AG-Gates — Erstausbau-Grenzen + 632-Arithmetik', () => {

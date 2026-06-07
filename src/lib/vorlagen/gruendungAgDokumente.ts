@@ -612,7 +612,11 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     // den Kurs in Punkt-Notation wie die ZH-Vorlage «CHF 1.xxxx»).
     kursTxt: a.kursChf.trim().replace(',', '.') || '________',
     kursQuelleTxt: a.kursQuelle.trim() || '________',
-    einbezahltChfFmt: fmtCHF(String(eff.einbezahlt * (zahl(a.kursChf) ?? 0))),
+    // Sammel-Bug-Check HOCH-2 (7.6.2026): Basis des CHF-Gegenwerts sind die
+    // GELEISTETEN Einlagen — bei Volliberierung mit Agio Anzahl × Ausgabe-
+    // betrag (das Agio wird voll geleistet, Gates erzwingen das), sonst die
+    // effektive Nennwert-Summe.
+    einbezahltChfFmt: fmtCHF(String((eff.vollLiberiert ? anzahl * ausgabe : eff.einbezahlt) * (zahl(a.kursChf) ?? 0))),
     hatBarEinlage: a.einlageArt === 'bar' || (a.einlageArt === 'gemischt' && barAktien > 0),
     barEinlageFmt: fmtCHF(String(barAktien * nennwert)),
     barAktienTxt: String(barAktien),
@@ -627,7 +631,7 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     nachtragGruendungsdatumFmt: a.nachtragGruendungsdatum ? fmtDatum(a.nachtragGruendungsdatum) : '________',
     hatNachtragUrkunde: a.nachtragUrkundeZiffer.trim() !== '' && a.nachtragUrkundeText.trim() !== '',
     hatNachtragStatuten: a.nachtragStatutenArtikel.trim() !== '' && a.nachtragStatutenText.trim() !== '',
-    nachtragAbsatzZusatz: a.nachtragStatutenAbsatz.trim() ? ` Abs. ${a.nachtragStatutenAbsatz.trim()}` : '',
+    nachtragAbsatzSatz: a.nachtragStatutenAbsatz.trim() ? ` Abs. ${a.nachtragStatutenAbsatz.trim()}` : '',
     // Etappe 4.3: Lex-Koller-Antworten als Ja/Nein-Text (Frage 4 ist bei
     // der Gründung nicht anwendbar — keine Kapitalherabsetzung).
     lkFrage1: a.lexKollerAuslandBeteiligt ? 'Ja' : 'Nein',
@@ -737,7 +741,7 @@ function basisAntworten(a: AgDokAntworten): Antworten {
         praesidentZeile: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? ', als Präsident/in' : '',
         zeichnung: VR_ZEICHNUNGS_LABEL[v.zeichnungsArt],
         // Etappe 4.1/D8: Wahl-Zusatz der ZH-Erläuterung zu Ziff. VI.
-        wahlannahmeZusatz: (v.annahmeInUrkunde ?? false) ? ', welche bzw. welcher hiermit die Annahme erklärt' : '',
+        wahlannahmeSatz: (v.annahmeInUrkunde ?? false) ? ', welche bzw. welcher hiermit die Annahme erklärt' : '',
         // Etappe 4.2/D9: Konstituierungs-Zeile (ZH Ziff. VII lit. a) —
         // «ohne Zeichnungsberechtigung» ohne das «mit» der Zeichnungs-Arten.
         konstituierungZeile: v.zeichnungsArt === 'ohne'
@@ -1485,7 +1489,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     },
     {
       id: 'AE09b_vrliste',
-      text: '– {{item.name}}, von {{item.herkunft}}, in {{item.wohnort}}{{item.praesidentZeile}}{{item.wahlannahmeZusatz}}',
+      text: '– {{item.name}}, von {{item.herkunft}}, in {{item.wohnort}}{{item.praesidentZeile}}{{item.wahlannahmeSatz}}',
       wiederholeUeber: 'vrListe',
       begruendung: 'Je VR-Mitglied eine Zeile; Wahl-Zusatz «welche bzw. welcher hiermit die Annahme erklärt» nach der ZH-Erläuterung zu Ziff. VI, wenn die Annahme in der Urkunde erfolgt (Etappe 4.1/D8 — die separate Wahlannahmeerklärung ist dann entbehrlich, Art. 43 Abs. 1 lit. c HRegV).',
       norm: 'Art. 44 lit. e HRegV',
@@ -2125,7 +2129,7 @@ const NACHTRAG_SCHEMA: VorlageSchema = {
     },
     {
       id: 'NT04_statuten',
-      text: 'Art. {{nachtragStatutenArtikel}}{{nachtragAbsatzZusatz}} der Statuten der Gesellschaft lautet neu wie folgt:\n«{{nachtragStatutenText}}»',
+      text: 'Art. {{nachtragStatutenArtikel}}{{nachtragAbsatzSatz}} der Statuten der Gesellschaft lautet neu wie folgt:\n«{{nachtragStatutenText}}»',
       includeIf: { feld: 'hatNachtragStatuten', eq: true },
       begruendung: 'Statuten-Änderung nach ZH 3.4.',
     },
