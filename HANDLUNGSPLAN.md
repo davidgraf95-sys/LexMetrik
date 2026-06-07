@@ -114,9 +114,19 @@ löschen, Stand in STRUKTUR.md spiegeln.
    beiden Masken; SH: HRegA beurkundet selbst) · Bug-Check §9: 2 Agents
    (2304 Kombinationen empirisch / juristischer Wortlaut-Abgleich),
    1 HOCH (805-V-Anker → 701d) + 5 M/N-Befunde gefixt; 975 Tests grün.
-   OFFEN daraus: qualifizierte Gründung/Fremdwährung/Agio = Stufe 2 ·
-   UR/AI/BL-Notariats-Links verifizieren · Notariats-Listen-PDFs datiert
-   → Verfallsregister.
+   OFFEN daraus: ~~qualifizierte Gründung/Fremdwährung/Agio = Stufe 2~~ →
+   **9b-AG NEU (Auftrag David 7.6.2026): Komplett-Überarbeitung der
+   AG-Maske** auf Basis der Original-Suite HRegA/Notariate ZH
+   (`~/Desktop/Legal Calc Knowledge/Gründung AG`; Dossier
+   `bibliothek/recherche/ag-gruendung-amtliche-vorlagen.md`, Deltas
+   D1–D24). Etappenplan: **FAHRPLAN-AG-GRUENDUNG.md** (Repo-Root) —
+   0 Korrektheits-Abgleich (Singular-Urkunde! Protokoll-Formalia,
+   Wahlannahme RS) · 1 Statuten kurz/lang · 2 qualifizierte Gründung
+   (Sacheinlagevertrag + Gründungsbericht druckfertig) · 3 Fremdwährung/
+   Agio/Liberierung je Gründer · 4 Urkunden-Optionen + Lex-Koller +
+   Nachtrag · 5 Info-Schicht; danach GmbH-Spiegelung. 4 Zuschnitt-Fragen
+   an David im Fahrplan. Weiter offen: UR/AI/BL-Notariats-Links
+   verifizieren · Notariats-Listen-PDFs datiert → Verfallsregister.
 9c. ~~Kapitalerhöhung AG/GmbH~~ → **GEBAUT** (7.6.2026 nachts, Anweisung
    David «mit research und allem»): Dossier
    `recherche/kapitalerhoehung-wortlaute.md` (OR 650–653v/781 verbatim;
