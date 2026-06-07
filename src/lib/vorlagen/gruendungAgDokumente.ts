@@ -2490,3 +2490,25 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
 
   return { dokumente, gates };
 }
+
+// ── Abnahme-Registry (Perfektion Punkt 15) ──────────────────────────────────
+
+/** ALLE AG-Schemas in Mappen-Reihenfolge — Quelle für Davids Wort-für-Wort-
+ *  Abnahme: `scripts/abnahme-ag.ts` generiert daraus ABNAHME-AG-BAUSTEINE.md
+ *  (je Baustein id · Wortlaut · Norm · Begründung · Hinweis · Bedingung).
+ *  Abgenommene Bausteine erhalten später `verified: true` (§7: nie
+ *  automatisch setzen). */
+export const AG_ALLE_SCHEMAS: VorlageSchema[] = [
+  STATUTEN_SCHEMA,
+  ERRICHTUNGSAKT_SCHEMA,
+  SACHEINLAGEVERTRAG_SCHEMA,
+  SACHEINLAGEVERTRAG_ENTWURF_SCHEMA,
+  GRUENDUNGSBERICHT_SCHEMA,
+  NACHTRAG_SCHEMA,
+  LEXKOLLER_SCHEMA,
+  WAHLANNAHME_SCHEMA,
+  WAHLANNAHME_RS_SCHEMA,
+  VR_PROTOKOLL_SCHEMA,
+  DOMIZILANNAHME_SCHEMA,
+  ANMELDUNG_SCHEMA,
+];
