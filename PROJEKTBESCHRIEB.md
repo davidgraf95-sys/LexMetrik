@@ -41,30 +41,27 @@ konsolidierten Gesetzestext (Fedlex) verlinkt. Was sich nicht regelbasiert
 abbilden lässt (Ermessen, Würdigung, Schätzung), wird bewusst **nicht**
 angeboten.
 
-**Zielgruppen und Arbeitsteilung der Seiten:**
-- **Free (`/`)** — kuratierte, **flache Kachel-Startseite** für
-  Privatpersonen: zwei Blöcke (Rechner/Vorlagen) in Alltagsnutzen-
-  Reihenfolge (`freeReihenfolge.ts`), ohne Filter-/Katalog-Apparat. Kern:
-  der kombinierte **Fristenrechner für die meisten Verfahren** (Allgemein
-  OR/ZGB · Zivilprozess ZPO · Betreibung SchKG — drei getrennte Engines,
-  ein Einstieg), Verzugszins, LIK-Teuerung sowie die Vorsorge-Vorlagen
-  (Testament, Vorsorgeauftrag, Patientenverfügung).
-- **Pro (`/pro`)** — vollständiger Katalog für die anwaltliche Praxis:
-  113 Einträge (29 sofort verfügbar) in 17 Rechtsgebieten als
-  **Kachel-Katalog** (Umbau 6.6.2026): kompakte Gebiets-Kacheln mit
-  Inhaltsangabe unter 5 juristischen Obergruppen (Übergreifend zuerst);
-  Klick ersetzt die Kachel an Ort und Stelle durch das Gebiets-Panel, die
-  übrigen rutschen animiert nach (`?gebiet=` in der URL, teilbar). Suche
-  als Hauptzugang: «/» fokussiert, `?q=` teilbar, aktive Suche/Filter
-  zeigen eine flache, deterministisch **gerankte Trefferliste** (Titel >
-  Keyword > Norm > Gebiet; Goldlisten-getestet); dazu **Anliegen-Zeile**
-  (situative Einstiege «Urteil erhalten», «Betreibung einleiten» …,
-  Liste in fachlicher Abnahme) und «Zuletzt verwendet» (rein lokal —
-  Favoriten auf Davids Anweisung entfernt). Tabs «Verfügbar/Gesamter
-  Katalog» URL-synchron. Pro-Sitzung überlebt das Neuladen; Zahlungs-Gate
-  vorbereitet (`PAYWALL_ACTIVE = false`), bewusst inaktiv; das
-  Zahlungssystem ist noch nicht definiert (Entscheid 6.6.2026 — PayPal
-  aus der Planung genommen).
+**EINE Hauptseite (`/`) für alle Zielgruppen** (Aufhebung der Free/Pro-
+Zweiteilung, Auftrag David 7.6.2026, FAHRPLAN-EINE-HAUPTSEITE.md):
+der vollständige Katalog in 17 Rechtsgebieten als **Kachel-Katalog**
+(Umbau 6.6.2026): kompakte Gebiets-Kacheln mit Inhaltsangabe unter
+5 juristischen Obergruppen (Übergreifend zuerst); Klick ersetzt die
+Kachel an Ort und Stelle durch das Gebiets-Panel, die übrigen rutschen
+animiert nach (`?gebiet=` in der URL, teilbar). Suche als Hauptzugang:
+«/» fokussiert, `?q=` teilbar, aktive Suche/Filter zeigen eine flache,
+deterministisch **gerankte Trefferliste** (Titel > Keyword > Norm >
+Gebiet; Goldlisten-getestet); dazu **Anliegen-Zeile** (situative
+Einstiege «Urteil erhalten», «Betreibung einleiten» …, Liste in
+fachlicher Abnahme) und «Zuletzt verwendet» (rein lokal — Favoriten auf
+Davids Anweisung entfernt). Tabs «Verfügbar/Gesamter Katalog»
+URL-synchron. Über dem Katalog eine kuratierte Chip-Zeile **«Häufig
+gebraucht»** (`haeufigGebraucht.ts`, Alltagsnutzen-Reihenfolge der
+früheren Free-Wand — Kern: kombinierter Fristenrechner, Verzugszins,
+LIK-Teuerung, Vorsorge-Vorlagen). Pseudo-Login und Zahlungs-Gate-
+Andockpunkt sind ENTFERNT; eine spätere Monetarisierung bekäme einen
+neuen, funktionsbezogenen Zuschnitt (STRATEGIE-PLATTFORM, Gate G1;
+Zahlungssystem unverändert undefiniert, PayPal verworfen). `/pro` und
+`/fachpersonen` sind dauerhafte Redirects auf `/` (Link-Erbe).
 
 **Zielgrösse:** über 50 Rechner und über 50 Vorlagen (Soll in
 `KATALOG-ROADMAP.md`).
@@ -121,9 +118,9 @@ src/
 │   ├── konventionen.ts   Zitier-/Formulierungsstandard (SSoT + Linter)
 │   ├── startseiteConfig.ts  Katalog-SSoT (113 Karten, istVerfuegbar)
 │   ├── katalogSuche.ts   Such-/Filter-/Rang-Logik (Goldlisten-getestet)
-│   ├── anliegen.ts       situative Einstiege Pro (Daten-SSoT)
+│   ├── anliegen.ts       situative Einstiege (Daten-SSoT)
 │   ├── rechtsbereichGruppen.ts  juristische Obergruppen (5er/4er-Modell)
-│   ├── freeReihenfolge.ts   kuratierte Free-Reihenfolge
+│   ├── haeufigGebraucht.ts  kuratierte «Häufig gebraucht»-Zeile
 │   ├── schnellzugriff.ts    Zuletzt verwendet (localStorage)
 │   ├── rechnerPermalinks · icsExport   Praxis-Querschnitte (teilen/Kalender)
 │   ├── pdf/              PDF-Rechenbericht (Modell + Renderer, Aktenzeichen)
@@ -140,7 +137,7 @@ src/
 │                         Schlichtungsstellen/Gerichte/StA je 26 Kt.,
 │                         verifikation.ts = Rechtsprechungs-Register, 90 AZ)
 ├── components/           Darstellung (Forms, Visuals, Wizard, ui/)
-└── pages/                Routen (Free-Wand, Pro-Kachel-Katalog, Rechner, Wizards)
+└── pages/                Routen (Hauptseite mit Kachel-Katalog, Rechner, Wizards)
 scripts/                  golden-outputs (65 Fälle) · smoke-render (23 S.)
                           · logik-sweep (11'184 Komb.) · norm-zitate-pruefen
                           · katalog-inventur · bge-register-generieren
@@ -208,7 +205,7 @@ Zitate in Rechenweg/Warnungen/Annahmen).
 
 - **863 Vitest-Tests in 45 Dateien**: Akzeptanztests je Engine/Vorlage,
   Registry-Invarianten, Konventions-Linter über die echte Textausgabe,
-  SSR-Akzeptanz der Seiten (Free-Flachheit, Pro-Kachel-Anatomie),
+  SSR-Akzeptanz der Seiten (Hauptseiten-/Kachel-Anatomie),
   Trennungs-Querschnitt der Fristen-Engines, **Suchbegriff-Goldliste**
   (Laie/Fach/Normzitat → erwartete Karte, inkl. Rang-Ordnung) und
   Rechtsprechungs-Link-Schema.

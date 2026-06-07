@@ -1,5 +1,21 @@
 # FAHRPLAN — Aufhebung der Free/Pro-Zweiteilung (eine Hauptseite)
 
+> **UMGESETZT 7.6.2026** auf Davids «bau» mit allen Defaults (D-1–D-4):
+> Commits `2e80daf` (E1+E2: Hauptseite, Routen/Redirects, Header,
+> /pro-Links, Tests, Smoke) und `ca163b4` (E3: proSession/freeReihenfolge
+> gelöscht, (Pro)-Suffix, Test-Nachzug). Die tier-Feld-Entfernung aus
+> startseiteConfig.ts wurde vom Parallel-Session-Commit `0b4d5e7` über
+> den geteilten Index mit eingesammelt (Inhalt korrekt, dort nicht
+> erwähnt); umgekehrt enthält `2e80daf` deren Stufe-2-Zeilen in
+> VorlageAgGruendung.tsx. Tore grün (tsc · 1051 Tests · Lint 0 · Smoke ·
+> Build · Golden 84/84 byte-gleich). Empirisch geprüft (Headless-Chrome):
+> Hauptseite Desktop, /pro- und /fachpersonen-Redirects MIT Query,
+> Mobil 390px (erbt den vorbestehenden Katalog-Overflow,
+> FAHRPLAN-DESIGN E4). lib/freeReihenfolge.ts heisst neu
+> lib/haeufigGebraucht.ts (Namenskollision: schnellzugriff.ts war durch
+> «Zuletzt verwendet» belegt). Doku gespiegelt: STRUKTUR.md (IA-Kapitel,
+> offener Punkt 3 gestrichen), PROJEKTBESCHRIEB.md.
+
 **Auftrag David (7.6.2026, wörtlich):** «ich möchte die zweiteilung der
 webseite in pro und free wieder aufheben. ich möchte dass wieder nur eine
 hauptseite gibt.»

@@ -167,14 +167,22 @@ Gates-Anzeige im Prüfen-Schritt und die Rahmen-Props.** Die 4 Seiten sind
 −80 %; alles verhaltensneutral (2 unabhängige Reviews ohne Befunde,
 SSR-Smoke aller Seiten, Tests/Lint unverändert grün).
 
-## Informationsarchitektur (Stand Katalog-Ausbau 5.6.2026)
+## Informationsarchitektur (Stand EINE Hauptseite 7.6.2026)
 
-**Free/Pro statt Allgemein/Fachpersonen (Auftrag «Katalog-Ausbau», Quelle
-KATALOG-ROADMAP.md):** `/` = Free (kostenlose Auswahl, `tier: 'free'` —
-10 Einträge gemäss Auftrags-§3), `/pro` = vollständiger Katalog (free+pro);
-`/fachpersonen` → Redirect auf `/pro` (erhält `?modus=`). `PAYWALL_ACTIVE
-= false` in startseiteConfig — das Zahlungs-Gate an der Pro-Bereichsgrenze (Zahlungssystem noch nicht definiert, Entscheid 6.6.2026)
-ist ein späterer, separater Schritt. Header-Button «Pro →» / «← Free».
+**EINE Hauptseite (FAHRPLAN-EINE-HAUPTSEITE.md, Auftrag David 7.6.2026 —
+hebt die Free/Pro-Zweiteilung vom 5.6. wieder auf):** `/` trägt den
+VOLLSTÄNDIGEN Katalog (Gebiets-Kacheln, Suche `?q=`, Panel `?gebiet=`,
+Anliegen-Zeile, «Zuletzt verwendet») hinter einem kompakten Hero
+(Free-Nutzen-Headline in h2-Höhe; Kennzahlen OHNE Preisaussage bis
+Monetarisierungs-Entscheid G1). Davor eine kuratierte Chip-Zeile
+**«Häufig gebraucht»** (`lib/haeufigGebraucht.ts`, Nachfolger der
+Free-Kachelwand-Kuratierung; nur Verfügbare erscheinen). `tier`-Feld,
+`PAYWALL_ACTIVE`, `lib/proSession.ts` (Pseudo-Login) und der
+Header-Pro-Button sind ENTFERNT (D-3; Stand vor dem Rückbau: Git-Historie
+bis `2e80daf`). `/pro`, `/fachpersonen`, `/rechner` → DAUERHAFTE Redirects
+auf `/` mit erhaltenem Suchstring (Permalink-/.ics-Link-Erbe). Mobil erbt
+die Hauptseite den vorbestehenden 390px-Overflow des Katalogs
+(FAHRPLAN-DESIGN Etappe 4, offener Strang).
 
 **Katalog-Gliederung: primär nach RECHTSGEBIET** (17 kanonische Sektionen
 in fester Auftrags-Reihenfolge, `RECHTSGEBIET_SEKTIONEN`), darunter je die
@@ -183,9 +191,10 @@ Untergruppen **Rechner** und **Vorlagen** (nur nicht-leere). Output-Typ
 Suche bleiben. **Der frühere Modus-Umschalter (Primärweiche Rechner |
 Vorlagen) ist damit abgelöst und entfernt**; `?modus=`-Links bleiben
 harmlos; die Alt-Gliederungen ('art'/'bereich') sind aus dem Code
-entfernt. Header = Zwei-Zonen (Logo links,
-Aktionscluster rechts: Sprache · Methodik · Über · Pro-Button),
-Mitte leer; Utility-Bar nur Pflichthinweis rechts, mobil ausgeblendet.
+entfernt. Header = Zwei-Zonen (Logo links, Aktionscluster rechts:
+Sprache · Methodik — Pro-Button entfernt 7.6.2026, Methodik seither auch
+mobil), Mitte leer; Utility-Bar nur Pflichthinweis rechts, mobil
+ausgeblendet.
 
 **Design-Tokens (Feinschliff 5.6.2026, single source tailwind.config +
 index.css):** Typo-Skala GESCHLOSSEN — micro 11 · overline 11 · xs 12 ·
@@ -250,11 +259,11 @@ Status-Filter heisst «Nur verfügbare» (= nicht geplant).
 
 **111 Einträge: 64 Rechner + 47 Vorlagen** (Katalog-Ausbau 5.6.2026: +59
 geplante Karten gemäss KATALOG-ROADMAP.md; Soll-Inventar dort gepflegt).
-Felder: modus, art, **tier (free/pro)**, rechtsgebiet (kanonisch, 17 Werte),
+Felder: modus, art, rechtsgebiet (kanonisch, 17 Werte),
 **rechtsbereich** (privat/oeffentlich/straf/uebergreifend), status, norms
 (NormRef mit verified), href, schemaId/formvorschrift/output (Vorlagen),
-szenarien (konsolidierte Rechner), related (modusübergreifend; Free-Karten
-zeigen «(Pro)»-Zusatz bei Pro-Zielen), keywords. VorlageArt um
+szenarien (konsolidierte Rechner), related (modusübergreifend), keywords
+(**tier entfernt 7.6.2026**, FAHRPLAN-EINE-HAUPTSEITE). VorlageArt um
 **korrespondenz** («Schreiben & Erklärungen») erweitert. Neue geplante
 Karten: norms [], kein href, neutrale Beschreibungen (Normentreue);
 Roadmap-«[Gerüst]» als «Strukturiertes Gerüst …» im Text.
@@ -512,8 +521,10 @@ scripts/logik-sweep.ts · scripts/norm-zitate-pruefen.ts.
 2. **Seine Antworten ausstehend:** redundante Tageszählungs-Hinweise im
    Verzugszins-Bericht kürzen? · DOCX-Standardannahmen ok (Testament ohne,
    VA nur beurkundet)? · Bausteinprotokoll in PDF/DOCX-Exporte aufnehmen?
-3. **Phase 4:** Experten-Gating als Wrapper um /fachpersonen (Login/
-   Bezahlung) — der Header-Button ist der Einstiegspunkt.
+3. ~~Phase 4: Experten-Gating als Wrapper um /fachpersonen~~ → **entfällt
+   ersatzlos** (Aufhebung der Free/Pro-Zweiteilung, Auftrag David
+   7.6.2026); eine spätere Monetarisierung bekäme einen neuen,
+   funktionsbezogenen Zuschnitt (STRATEGIE-PLATTFORM, Gate G1).
 4. **Schlichtungsgesuch:** offene Verifikationen (kantonale §§ GOG/EG ZPO/
    GGR, PLZ 4001/4051, Art.-135-Randtitel) — in der UI offengelegt.
 5. Kleineres: Detailseiten-Titel (calculators.ts) an neue Katalog-Titel
