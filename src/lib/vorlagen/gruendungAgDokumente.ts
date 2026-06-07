@@ -19,7 +19,15 @@ import { ZEICHNUNGS_LABEL, type GmbhZeichnungsArt } from './gruendungGmbhDokumen
 // oder Teilliberierung (Art. 632 OR). Qualifizierte Gründung, Fremdwährung
 // und Inhaberaktien sperren mit ehrlichem Hinweis (Checkliste deckt sie).
 
-export type AgGruenderZeile = { name: string; angaben: string; anzahl: string };
+export type AgGruenderZeile = {
+  name: string;
+  angaben: string;
+  anzahl: string;
+  /** Etappe 3.3/D6: individueller Liberierungsgrad in Prozent (ZH-Urkunde
+   *  3.1 Teilliberierung: «a) … Aktien des Gründers … zu … %»); leer/fehlend
+   *  = globaler Liberierungsgrad gilt. */
+  liberierung?: string;
+};
 
 /** Zulässige Fremdwährungen des Aktienkapitals (Anhang 3 i. V. m. Art. 45a
  *  HRegV; ZH-Urkundenvorlage 3.2 — Etappe 3.1/D2). */
@@ -41,6 +49,11 @@ export type AgVrZeile = {
   adresse: string;       // für die Wahlannahmeerklärung
   praesident: boolean;
   zeichnungsArt: AgVrZeichnungsArt;
+  /** Etappe 4.1/D8: Annahme der Wahl direkt in der Urkunde erklärt
+   *  (anwesende Person; ZH-Erläuterung zu Ziff. VI: «welcher hiermit die
+   *  Annahme erklärt») — die separate Wahlannahmeerklärung entfällt dann;
+   *  fehlend = separat. */
+  annahmeInUrkunde?: boolean;
 };
 
 export type AgVertretungsZeile = { name: string; funktion: string; zeichnungsArt: AgVertretungsZeichnungsArt };
@@ -109,8 +122,13 @@ export type AgDokAntworten = AgGruendungEingaben & {
   anzahlAktien: string;
   nennwertChf: string;
   /** Liberierungsgrad in Prozent (100 = vollständig; Art. 632 OR: ≥ 20 %,
-   *  geleistete Einlagen gesamthaft ≥ CHF 50'000). */
+   *  geleistete Einlagen gesamthaft ≥ CHF 50'000). Gilt als Default für
+   *  alle Gründer; individuelle Werte je Zeile (Etappe 3.3). */
   liberierungProzent: string;
+  /** Etappe 3.2/D7: Ausgabebetrag je Aktie (leer = Nennwert; Art. 624 OR:
+   *  nie unter pari). Erstausbau: Agio nur bei Volliberierung und reiner
+   *  Bargründung. */
+  ausgabebetragChf: string;
   gruender: AgGruenderZeile[];
   verwaltungsraete: AgVrZeile[];
   weitereVertretungen: AgVertretungsZeile[];
@@ -149,6 +167,25 @@ export type AgDokAntworten = AgGruendungEingaben & {
   /** Quelle des Devisenmittelkurses (ZH 3.2: «Dieser Umrechnungskurs
    *  entspricht dem Devisenmittelkurs der {{Bank}}.»). */
   kursQuelle: string;
+  /** Etappe 4.4/D11: Gründungs-Nachtrag (ZH-Vorlage 3.4) — Korrektur nach
+   *  Beanstandung durch die Handelsregisterbehörde; öffentliche Beurkundung
+   *  → ENTWURF (§8). Aktiv nur auf ausdrücklichen Wunsch. */
+  nachtragAktiv: boolean;
+  /** Datum der ursprünglichen Gründungsurkunde (ISO; leer = Blanko). */
+  nachtragGruendungsdatum: string;
+  nachtragUrkundeZiffer: string;     // leer = kein Urkunden-Punkt
+  nachtragUrkundeText: string;
+  nachtragStatutenArtikel: string;   // leer = kein Statuten-Punkt
+  nachtragStatutenAbsatz: string;
+  nachtragStatutenText: string;
+  /** Etappe 4.2/D9: Konstituierung, Zeichnungsberechtigung und Domizil
+   *  direkt in der Urkunde erklären (ZH Ziff. VII, «unter der Bedingung,
+   *  dass der Verwaltungsrat vollzählig anwesend ist») — das separate
+   *  VR-Protokoll entfällt dann. */
+  konstituierungInUrkunde: boolean;
+  /** Etappe 4.2/D9: Domizil in der Urkunde weglassen (ZH-Erläuterung zu
+   *  Ziff. VII — das Domizil steht dann nur in der HR-Anmeldung). */
+  domizilNurAnmeldung: boolean;
   /** Lex-Koller-Erklärung (Etappe 4.3/D16; ZH-Formular 1.1.2025) — wirksam
    *  nur mit der Checklisten-Weiche `immobilienHauptzweck`. Frage 4
    *  (Kapitalherabsetzung) ist bei der Gründung nicht anwendbar. */
@@ -170,7 +207,7 @@ export type AgDokAntworten = AgGruendungEingaben & {
 export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = {
   firma: '', sitz: '', kanton: '', zweck: '', zweckErweiterung: true,
   aktienkapitalChf: "100'000", anzahlAktien: '100', nennwertChf: "1'000",
-  liberierungProzent: '100',
+  liberierungProzent: '100', ausgabebetragChf: '',
   gruender: [], verwaltungsraete: [], weitereVertretungen: [],
   protokollfuehrerName: '',
   bankName: '', bankOrt: '', rechtsdomizilAdresse: '',
@@ -182,6 +219,10 @@ export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = 
   sitzungBeginn: '', sitzungEnde: '',
   nachtragsbevollmaechtigter: '',
   waehrung: 'CHF', kursChf: '', kursQuelle: '',
+  konstituierungInUrkunde: false, domizilNurAnmeldung: false,
+  nachtragAktiv: false, nachtragGruendungsdatum: '',
+  nachtragUrkundeZiffer: '', nachtragUrkundeText: '',
+  nachtragStatutenArtikel: '', nachtragStatutenAbsatz: '', nachtragStatutenText: '',
   lexKollerAuslandBeteiligt: false, lexKollerNeuerwerb: false, lexKollerGrundstueckErwerb: false,
   sacheinlagen: [], verrechnungen: [], vorteile: [], revisorName: '',
   ort: '', datum: '',
@@ -198,6 +239,35 @@ const VERTRETUNGS_ZEICHNUNGS_LABEL: Record<AgVertretungsZeichnungsArt, string> =
   ...ZEICHNUNGS_LABEL,
   kollektivprokura: 'Kollektivprokura zu zweien',
 };
+
+// ── Liberierung (Etappe 3.3/D6): globaler Default + individuelle Grade ──────
+// EINE Quelle für Gates und Texte (§5). Im Gleich-Fall rechnet sie wie der
+// bisherige globale Pfad (Kapital × Prozent — byte-identische Ausgabe).
+
+function effektiveLiberierung(a: AgDokAntworten): {
+  individuell: boolean;
+  vollLiberiert: boolean;
+  einbezahlt: number;
+  zeilen: { name: string; anzahl: string; prozentTxt: string }[];
+} {
+  const nennwert = zahl(a.nennwertChf) ?? 0;
+  const global = zahl(a.liberierungProzent) ?? 100;
+  const gr = a.gruender.filter((g) => g.name.trim());
+  const individuell = gr.some((g) => (g.liberierung ?? '').trim() !== '');
+  let einbezahlt = 0;
+  let voll = true;
+  const zeilen = gr.map((g) => {
+    const p = (g.liberierung ?? '').trim() === '' ? global : (zahl(g.liberierung) ?? global);
+    if (p < 100) voll = false;
+    einbezahlt += (ganzePositive(g.anzahl) ?? 0) * nennwert * (p / 100);
+    return { name: g.name.trim(), anzahl: g.anzahl, prozentTxt: (g.liberierung ?? '').trim() || a.liberierungProzent };
+  });
+  if (!individuell) {
+    einbezahlt = (zahl(a.aktienkapitalChf) ?? 0) * (global / 100);
+    voll = global >= 100;
+  }
+  return { individuell, vollLiberiert: voll, einbezahlt, zeilen };
+}
 
 // ── Gates ───────────────────────────────────────────────────────────────────
 
@@ -228,7 +298,8 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   if (a.besondereVorteile && vorteile.length === 0) {
     blocker.push('Besondere Vorteile mit Begünstigten, Inhalt und Wert erfassen (Art. 636 OR) – oder die Weiche ausschalten.');
   }
-  if (qualifiziert && (zahl(a.liberierungProzent) ?? 100) < 100) {
+  const eff = effektiveLiberierung(a);
+  if (qualifiziert && !eff.vollLiberiert) {
     blocker.push(
       'Erstausbau: Teilliberierung nur bei der reinen Bargründung – Aktien aus Sacheinlage/Verrechnung ' +
       'gelten als voll liberiert (ZH-Vertragsvorlage: «als voll liberiert geltende Aktien»); ' +
@@ -300,19 +371,44 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     }
     if (prozent === null || prozent < 20 || prozent > 100) {
       blocker.push('Liberierungsgrad zwischen 20 % und 100 % angeben (Art. 632 Abs. 1 OR: mindestens 20 % des Nennwerts jeder Aktie).');
-    } else if (prozent < 100 && !a.fremdwaehrung && kapital * (prozent / 100) < 50_000) {
+    }
+    // Etappe 3.3/D6: individuelle Liberierungsgrade je Gründer (ZH 3.1
+    // Teilliberierung «a) … Aktien des Gründers … zu … %»).
+    for (const g of a.gruender.filter((x) => x.name.trim() && (x.liberierung ?? '').trim() !== '')) {
+      const p = zahl(g.liberierung);
+      if (p === null || p < 20 || p > 100) {
+        blocker.push(`Liberierungsgrad von ${g.name.trim()} zwischen 20 % und 100 % angeben (Art. 632 Abs. 1 OR).`);
+      }
+    }
+    // Gesamt-Untergrenze auf der EFFEKTIVEN Einlagesumme (global oder
+    // individuell — eine Quelle, effektiveLiberierung()).
+    if (!eff.vollLiberiert && !a.fremdwaehrung && eff.einbezahlt > 0 && eff.einbezahlt < 50_000) {
       blocker.push(
-        `Die geleisteten Einlagen müssen gesamthaft mindestens CHF 50'000 betragen (Art. 632 Abs. 2 OR) – bei ${a.liberierungProzent} % von CHF ${fmtCHF(a.aktienkapitalChf)} sind es nur CHF ${fmtCHF(String(kapital * (prozent / 100)))}.`,
+        `Die geleisteten Einlagen müssen gesamthaft mindestens CHF 50'000 betragen (Art. 632 Abs. 2 OR) – die Liberierungsgrade ergeben nur CHF ${fmtCHF(String(eff.einbezahlt))}.`,
       );
-    } else if (prozent < 100 && a.fremdwaehrung && kurs !== null && kurs > 0 && kapital * (prozent / 100) * kurs < 50_000) {
+    } else if (!eff.vollLiberiert && a.fremdwaehrung && kurs !== null && kurs > 0 && eff.einbezahlt * kurs < 50_000) {
       // Art. 632 Abs. 2 Satz 2 OR (am Cache verifiziert): Fremdwährungs-
       // Einlagen müssen im Errichtungszeitpunkt einem Gegenwert von
       // mindestens CHF 50'000 entsprechen.
       blocker.push(
         `Die geleisteten Einlagen müssen einem Gegenwert von mindestens CHF 50'000 entsprechen (Art. 632 Abs. 2 OR) – ` +
-        `bei ${a.liberierungProzent} % von ${a.waehrung} ${fmtCHF(a.aktienkapitalChf)} × ${a.kursChf.trim().replace(',', '.')} sind es nur ` +
-        `CHF ${fmtCHF(String(kapital * (prozent / 100) * kurs))}.`,
+        `die Liberierungsgrade ergeben nur CHF ${fmtCHF(String(eff.einbezahlt * kurs))}.`,
       );
+    }
+    // Etappe 3.2/D7: Agio (Ausgabebetrag über pari; Art. 624 Abs. 1 OR:
+    // nie UNTER dem Nennwert).
+    const ausgabe = a.ausgabebetragChf.trim() === '' ? nennwert : zahl(a.ausgabebetragChf);
+    if (ausgabe === null) {
+      blocker.push('Ausgabebetrag je Aktie beziffern – oder leer lassen (Ausgabe zum Nennwert).');
+    } else if (ausgabe < nennwert - 0.005) {
+      blocker.push('Der Ausgabebetrag darf den Nennwert nicht unterschreiten (Ausgabe unter pari unzulässig, Art. 624 Abs. 1 OR).');
+    } else if (ausgabe > nennwert + 0.005) {
+      if (qualifiziert) {
+        blocker.push('Erstausbau: Agio nur bei der reinen Bargründung – qualifizierte Gründung mit Agio (Bewertung über pari) als Stufe 2.');
+      }
+      if (!eff.vollLiberiert) {
+        blocker.push('Erstausbau: Agio nur bei Volliberierung – das Agio ist bei der Ausgabe voll zu leisten; Teilliberierung mit Agio als Stufe 2.');
+      }
     }
     const gezeichnet = a.gruender.reduce((s, g) => s + (zahl(g.anzahl) ?? 0), 0);
     if (a.gruender.length > 0 && anzahl > 0 && gezeichnet !== anzahl) {
@@ -420,6 +516,15 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   if (vr.length > 0 && vr.every((v) => v.zeichnungsArt === 'ohne')) {
     blocker.push('Mindestens ein Mitglied des Verwaltungsrates muss zur Vertretung befugt sein (Art. 718 Abs. 3 OR).');
   }
+  // Etappe 4.2/D9: Die Urkunde ersetzt nur die VR-Konstituierung — weitere
+  // Zeichnungsberechtigte (Direktion/Prokura) brauchen das VR-Protokoll.
+  if (a.konstituierungInUrkunde && a.weitereVertretungen.filter((v) => v.name.trim()).length > 0) {
+    blocker.push(
+      'Konstituierung in der Urkunde: weitere Zeichnungsberechtigte (Direktion/Prokura) können nicht in der ' +
+      'Gründungsurkunde ernannt werden – Option ausschalten (VR-Protokoll) oder die Personen nach dem ' +
+      'Eintrag durch den Verwaltungsrat ernennen lassen (Art. 716a Abs. 1 Ziff. 4 OR).',
+    );
+  }
   if (a.bankInUrkundeGenannt && (a.einlageArt === 'bar' || a.einlageArt === 'gemischt') && (!a.bankName.trim() || !a.bankOrt.trim())) {
     blocker.push('Bank in der Urkunde nennen: Name und Ort des Instituts angeben (sonst separate Bankbescheinigung, Art. 43 Abs. 1 lit. f HRegV).');
   }
@@ -431,6 +536,15 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   // wie bankOrt/domizilhalterAdresse hart verlangen.
   if (!a.optingOut && (!a.revisionsstelleName.trim() || !a.revisionsstelleSitz.trim())) {
     blocker.push('Revisionsstelle mit Name und Sitz benennen oder Opting-out wählen (Art. 727a Abs. 2 OR; Art. 44 lit. f HRegV).');
+  }
+
+  // Etappe 4.4/D11: Nachtrag nur mit mindestens einer erfassten Änderung.
+  if (a.nachtragAktiv) {
+    const hatU = a.nachtragUrkundeZiffer.trim() !== '' && a.nachtragUrkundeText.trim() !== '';
+    const hatS = a.nachtragStatutenArtikel.trim() !== '' && a.nachtragStatutenText.trim() !== '';
+    if (!hatU && !hatS) {
+      blocker.push('Gründungs-Nachtrag: mindestens eine Änderung erfassen (Urkunden-Ziffer ODER Statuten-Artikel, je mit neuem Wortlaut — ZH-Vorlage 3.4).');
+    }
   }
 
   if (!a.firma.trim()) blocker.push('Firma angeben – mit Rechtsformzusatz «AG» (Art. 950 OR).');
@@ -447,10 +561,12 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
 
 function basisAntworten(a: AgDokAntworten): Antworten {
   const datum = a.datum ? fmtDatum(a.datum) : '________';
-  const prozent = zahl(a.liberierungProzent) ?? 100;
-  const kapital = zahl(a.aktienkapitalChf) ?? 0;
   const nennwert = zahl(a.nennwertChf) ?? 0;
   const anzahl = zahl(a.anzahlAktien) ?? 0;
+  // Etappe 3.2/3.3: effektive Liberierung (eine Quelle mit den Gates) und
+  // Ausgabebetrag (leer = Nennwert).
+  const eff = effektiveLiberierung(a);
+  const ausgabe = a.ausgabebetragChf.trim() === '' ? nennwert : (zahl(a.ausgabebetragChf) ?? nennwert);
   const praesident = a.verwaltungsraete.find((v) => v.praesident)?.name.trim()
     ?? a.verwaltungsraete.find((v) => v.name.trim())?.name.trim() ?? '________';
   const gruenderAnzahl = a.gruender.filter((g) => g.name.trim()).length;
@@ -480,7 +596,7 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     // den Kurs in Punkt-Notation wie die ZH-Vorlage «CHF 1.xxxx»).
     kursTxt: a.kursChf.trim().replace(',', '.') || '________',
     kursQuelleTxt: a.kursQuelle.trim() || '________',
-    einbezahltChfFmt: fmtCHF(String(kapital * (prozent / 100) * (zahl(a.kursChf) ?? 0))),
+    einbezahltChfFmt: fmtCHF(String(eff.einbezahlt * (zahl(a.kursChf) ?? 0))),
     hatBarEinlage: a.einlageArt === 'bar' || (a.einlageArt === 'gemischt' && barAktien > 0),
     barEinlageFmt: fmtCHF(String(barAktien * nennwert)),
     barAktienTxt: String(barAktien),
@@ -491,6 +607,11 @@ function basisAntworten(a: AgDokAntworten): Antworten {
           ? 'Die in den Statuten angegebenen Sacheinlagen gemäss folgenden, vorliegenden Unterlagen:'
           : 'Die in den Statuten angegebene Verrechnungsliberierung gemäss folgenden, vorliegenden Unterlagen:',
     revisorZeile: a.revisorName.trim() || '________',
+    // Etappe 4.4/D11: Gründungs-Nachtrag (ZH 3.4).
+    nachtragGruendungsdatumFmt: a.nachtragGruendungsdatum ? fmtDatum(a.nachtragGruendungsdatum) : '________',
+    hatNachtragUrkunde: a.nachtragUrkundeZiffer.trim() !== '' && a.nachtragUrkundeText.trim() !== '',
+    hatNachtragStatuten: a.nachtragStatutenArtikel.trim() !== '' && a.nachtragStatutenText.trim() !== '',
+    nachtragAbsatzZusatz: a.nachtragStatutenAbsatz.trim() ? ` Abs. ${a.nachtragStatutenAbsatz.trim()}` : '',
     // Etappe 4.3: Lex-Koller-Antworten als Ja/Nein-Text (Frage 4 ist bei
     // der Gründung nicht anwendbar — keine Kapitalherabsetzung).
     lkFrage1: a.lexKollerAuslandBeteiligt ? 'Ja' : 'Nein',
@@ -552,6 +673,10 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     // handschriftlichen Ergänzen, wie beim Datum).
     sitzungBeginnZeile: a.sitzungBeginn.trim() ? `${a.sitzungBeginn.trim()} Uhr` : '________ Uhr',
     sitzungEndeZeile: a.sitzungEnde.trim() ? `${a.sitzungEnde.trim()} Uhr` : '________ Uhr',
+    // Etappe 4.2/D9: Domizil-Ziffer der Urkunde nur, wenn weder die
+    // Konstituierungs-Ziffer das Domizil trägt noch es weggelassen wird.
+    domizilImDomizilArtikel: !a.konstituierungInUrkunde && !a.domizilNurAnmeldung,
+    domizilInKonstituierung: a.konstituierungInUrkunde && !a.domizilNurAnmeldung,
     // D10: Nachtragsvollmacht nur, wenn eine Person benannt ist.
     hatNachtragsvollmacht: a.nachtragsbevollmaechtigter.trim().length > 0,
     nachtragsbevollmaechtigter: a.nachtragsbevollmaechtigter.trim(),
@@ -559,28 +684,51 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     gjEndeTxt: a.gjEnde.trim() || '________',
     akFmt: fmtCHF(a.aktienkapitalChf),
     nennwertFmt: fmtCHF(a.nennwertChf),
-    einbezahltFmt: fmtCHF(String(kapital * (prozent / 100))),
-    vollLiberiert: prozent >= 100,
+    // Etappe 3.2/D7: Ausgabebetrag (= Nennwert ohne Agio) und Einlagen-Total
+    // der Volliberierung (Anzahl × Ausgabebetrag — mit Agio über dem Kapital).
+    ausgabeFmt: fmtCHF(a.ausgabebetragChf.trim() === '' ? a.nennwertChf : a.ausgabebetragChf),
+    einlagenTotalFmt: ausgabe > nennwert + 0.005 ? fmtCHF(String(anzahl * ausgabe)) : fmtCHF(a.aktienkapitalChf),
+    hatAgio: ausgabe > nennwert + 0.005,
+    einbezahltFmt: fmtCHF(String(eff.einbezahlt)),
+    vollLiberiert: eff.vollLiberiert,
+    teilGleich: !eff.vollLiberiert && !eff.individuell,
+    teilIndividuell: !eff.vollLiberiert && eff.individuell,
+    gruenderTeilListe: eff.zeilen,
     // Review-Befund M-2 (7.6.2026): Art. 626 Abs. 1 Ziff. 3 OR verlangt den
     // BETRAG der geleisteten Einlagen — bei Teilliberierung den Frankenbetrag
     // zusätzlich zum Prozentsatz ausweisen.
-    liberierungSatz: prozent >= 100
+    liberierungSatz: eff.vollLiberiert
       ? 'vollständig liberiert'
-      : `zu ${a.liberierungProzent} % liberiert (geleistete Einlagen: ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(String(kapital * (prozent / 100)))})`,
+      : eff.individuell
+        // Etappe 3.3: Bei individuellen Graden gibt es keinen einheitlichen
+        // Prozentsatz — Art. 626 Abs. 1 Ziff. 3 OR verlangt den BETRAG der
+        // geleisteten Einlagen (Haus-Fassung, offengelegt).
+        ? `im Umfang der geleisteten Einlagen von ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(String(eff.einbezahlt))} liberiert (je Aktie mindestens 20 %)`
+        : `zu ${a.liberierungProzent} % liberiert (geleistete Einlagen: ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(String(eff.einbezahlt))})`,
     ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}den ${datum}`,
     gruenderListe: a.gruender.filter((g) => g.name.trim()).map((g) => ({
       name: g.name.trim(),
       angabenZeile: g.angaben.trim() ? `, ${g.angaben.trim()}` : '',
       anzahl: g.anzahl,
     })),
-    vrListe: a.verwaltungsraete.filter((v) => v.name.trim()).map((v) => ({
-      name: v.name.trim(),
-      herkunft: v.herkunft.trim() || '________',
-      wohnort: v.wohnort.trim() || '________',
-      funktion: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? 'Präsident/in' : 'Mitglied',
-      praesidentZeile: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? ', als Präsident/in' : '',
-      zeichnung: VR_ZEICHNUNGS_LABEL[v.zeichnungsArt],
-    })),
+    vrListe: a.verwaltungsraete.filter((v) => v.name.trim()).map((v) => {
+      const funktion = a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? 'Präsident/in' : 'Mitglied';
+      return {
+        name: v.name.trim(),
+        herkunft: v.herkunft.trim() || '________',
+        wohnort: v.wohnort.trim() || '________',
+        funktion,
+        praesidentZeile: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? ', als Präsident/in' : '',
+        zeichnung: VR_ZEICHNUNGS_LABEL[v.zeichnungsArt],
+        // Etappe 4.1/D8: Wahl-Zusatz der ZH-Erläuterung zu Ziff. VI.
+        wahlannahmeZusatz: (v.annahmeInUrkunde ?? false) ? ', welche bzw. welcher hiermit die Annahme erklärt' : '',
+        // Etappe 4.2/D9: Konstituierungs-Zeile (ZH Ziff. VII lit. a) —
+        // «ohne Zeichnungsberechtigung» ohne das «mit» der Zeichnungs-Arten.
+        konstituierungZeile: v.zeichnungsArt === 'ohne'
+          ? `${v.name.trim()} ist ${funktion} ohne Zeichnungsberechtigung.`
+          : `${v.name.trim()} ist ${funktion} mit ${VR_ZEICHNUNGS_LABEL[v.zeichnungsArt]}.`,
+      };
+    }),
     vertretungsListe: a.weitereVertretungen.filter((v) => v.name.trim()).map((v) => ({
       name: v.name.trim(),
       funktion: v.funktion.trim() || '________',
@@ -1057,10 +1205,10 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       ueberschrift: 'Aktienkapital und Zeichnung',
       text:
         'Das Aktienkapital der Gesellschaft beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} ' +
-        'Namenaktien zu je {{waehrungCode}} {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von {{waehrungCode}} {{nennwertFmt}} ' +
+        'Namenaktien zu je {{waehrungCode}} {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von {{waehrungCode}} {{ausgabeFmt}} ' +
         'je Aktie wie folgt gezeichnet werden:',
       norm: 'Art. 630 Ziff. 1 OR',
-      begruendung: 'Zeichnung mit Anzahl, Nennwert, Art und Ausgabebetrag – bei der Gründung in der Urkunde selbst (Art. 44 lit. d HRegV); Ausgabe zum Nennwert (Erstausbau ohne Agio).',
+      begruendung: 'Zeichnung mit Anzahl, Nennwert, Art und Ausgabebetrag – bei der Gründung in der Urkunde selbst (Art. 44 lit. d HRegV); Ausgabebetrag = Nennwert plus allfälliges Agio (Etappe 3.2/D7; Checkliste Errichtungsakt zu Art. 630 OR).',
     },
     {
       id: 'AE05_zeichnungsliste',
@@ -1087,7 +1235,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07_einlagen_voll_bank',
       ueberschrift: 'Einlagen',
       text:
-        'Sämtliche Einlagen von gesamthaft {{waehrungCode}} {{akFmt}} wurden in Geld geleistet und sind bei der ' +
+        'Sämtliche Einlagen von gesamthaft {{waehrungCode}} {{einlagenTotalFmt}} wurden in Geld geleistet und sind bei der ' +
         '{{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und ' +
         'Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'nurBar', eq: true }, { feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
@@ -1098,7 +1246,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07_einlagen_voll_bescheinigung',
       ueberschrift: 'Einlagen',
       text:
-        'Sämtliche Einlagen von gesamthaft {{waehrungCode}} {{akFmt}} wurden in Geld geleistet und gemäss separater ' +
+        'Sämtliche Einlagen von gesamthaft {{waehrungCode}} {{einlagenTotalFmt}} wurden in Geld geleistet und gemäss separater ' +
         'Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ' +
         'ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'nurBar', eq: true }, { feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
@@ -1113,9 +1261,9 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'des Nennwerts jeder Aktie) in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach ' +
         'Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der ' +
         'Gesellschaft hinterlegt.',
-      includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'bankInUrkundeGenannt', eq: true }] },
+      includeIf: { and: [{ feld: 'teilGleich', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
       norm: 'Art. 632 OR',
-      begruendung: 'Teilliberierung (mind. 20 % je Aktie, gesamthaft mind. CHF 50\'000).',
+      begruendung: 'Teilliberierung mit EINHEITLICHEM Grad (mind. 20 % je Aktie, gesamthaft mind. CHF 50\'000); individuelle Grade je Gründer in der eigenen Variante (Etappe 3.3).',
     },
     {
       id: 'AE07_einlagen_teil_bescheinigung',
@@ -1125,9 +1273,42 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'des Nennwerts jeder Aktie) in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach ' +
         'Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der ' +
         'Gesellschaft hinterlegt.',
-      includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'bankInUrkundeGenannt', eq: false }] },
+      includeIf: { and: [{ feld: 'teilGleich', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
       norm: 'Art. 632 OR',
-      begruendung: 'Teilliberierung mit separater Bankbescheinigung.',
+      begruendung: 'Teilliberierung (einheitlich) mit separater Bankbescheinigung.',
+    },
+    // ── Etappe 3.3/D6: Teilliberierung mit INDIVIDUELLEN Graden je Gründer ──
+    {
+      id: 'AE07i_einlagen_individuell_bank',
+      ueberschrift: 'Einlagen',
+      text:
+        'Auf dem Aktienkapital wurden Einlagen von gesamthaft {{waehrungCode}} {{einbezahltFmt}} in Geld ' +
+        'geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über ' +
+        'die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. ' +
+        'Dadurch ist das Aktienkapital teilweise liberiert worden, nämlich:',
+      includeIf: { and: [{ feld: 'teilIndividuell', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
+      norm: 'Art. 632 OR',
+      begruendung: 'Teilliberierung mit individuellen Graden nach ZH-Urkunde 3.1 («Dadurch ist das Aktienkapital teilweise liberiert worden, nämlich a) … Aktien des Gründers … zu … %»).',
+    },
+    {
+      id: 'AE07i_einlagen_individuell_bescheinigung',
+      ueberschrift: 'Einlagen',
+      text:
+        'Auf dem Aktienkapital wurden Einlagen von gesamthaft {{waehrungCode}} {{einbezahltFmt}} in Geld ' +
+        'geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über ' +
+        'die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. ' +
+        'Dadurch ist das Aktienkapital teilweise liberiert worden, nämlich:',
+      includeIf: { and: [{ feld: 'teilIndividuell', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
+      norm: 'Art. 632 OR',
+      begruendung: 'Individuelle Teilliberierung mit separater Bankbescheinigung.',
+    },
+    {
+      id: 'AE07i_liste',
+      text: '– {{item.anzahl}} Aktien von {{item.name}} zu {{item.prozentTxt}} %',
+      wiederholeUeber: 'gruenderTeilListe',
+      includeIf: { feld: 'teilIndividuell', eq: true },
+      norm: 'Art. 632 Abs. 1 OR',
+      begruendung: 'Je Gründerin/Gründer eine Liberierungs-Zeile (ZH-Urkunde 3.1 Teilliberierungs-Variante; Haus-Fassung geschlechtsneutral «Aktien von» statt «Aktien des Gründers»).',
     },
     {
       id: 'AE07w_kurs',
@@ -1288,9 +1469,9 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     },
     {
       id: 'AE09b_vrliste',
-      text: '– {{item.name}}, von {{item.herkunft}}, in {{item.wohnort}}{{item.praesidentZeile}}',
+      text: '– {{item.name}}, von {{item.herkunft}}, in {{item.wohnort}}{{item.praesidentZeile}}{{item.wahlannahmeZusatz}}',
       wiederholeUeber: 'vrListe',
-      begruendung: 'Je VR-Mitglied eine Zeile (Konstituierung und Zeichnungsberechtigungen folgen im VR-Protokoll, Art. 43 Abs. 1 lit. e HRegV).',
+      begruendung: 'Je VR-Mitglied eine Zeile; Wahl-Zusatz «welche bzw. welcher hiermit die Annahme erklärt» nach der ZH-Erläuterung zu Ziff. VI, wenn die Annahme in der Urkunde erfolgt (Etappe 4.1/D8 — die separate Wahlannahmeerklärung ist dann entbehrlich, Art. 43 Abs. 1 lit. c HRegV).',
       norm: 'Art. 44 lit. e HRegV',
     },
     {
@@ -1326,9 +1507,9 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE12_domizil_eigen',
       ueberschrift: 'Rechtsdomizil',
       text: 'Das Rechtsdomizil der Gesellschaft befindet sich an folgender Adresse: {{rechtsdomizilAdresse}}.',
-      includeIf: { feld: 'eigeneBueros', eq: true },
+      includeIf: { and: [{ feld: 'domizilImDomizilArtikel', eq: true }, { feld: 'eigeneBueros', eq: true }] },
       norm: 'Art. 117 Abs. 2 HRegV',
-      begruendung: 'Eigene Adresse am Sitz.',
+      begruendung: 'Eigene Adresse am Sitz; die Ziffer entfällt, wenn das Domizil in der Konstituierungs-Ziffer steht oder weggelassen wird (ZH-Erläuterung zu Ziff. VII: Domizil kann in der Urkunde weggelassen werden, muss aber in der Anmeldung stehen — Etappe 4.2/D9).',
     },
     {
       id: 'AE12_domizil_co',
@@ -1336,9 +1517,52 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       text:
         'Die Gesellschaft hat ihr Rechtsdomizil als c/o-Adresse bei {{domizilhalterName}}, ' +
         '{{domizilhalterAdresse}}. Die Erklärung der Domizilhalterin bzw. des Domizilhalters liegt vor.',
-      includeIf: { feld: 'eigeneBueros', eq: false },
+      includeIf: { and: [{ feld: 'domizilImDomizilArtikel', eq: true }, { feld: 'eigeneBueros', eq: false }] },
       norm: 'Art. 117 Abs. 3 HRegV',
-      begruendung: 'c/o-Domizil mit Domizilannahmeerklärung als Beleg (Art. 43 Abs. 1 lit. g HRegV).',
+      begruendung: 'c/o-Domizil mit Domizilannahmeerklärung als Beleg (Art. 43 Abs. 1 lit. g HRegV); Ziffer entfällt analog AE12_domizil_eigen (Etappe 4.2/D9).',
+    },
+    // ── Etappe 4.2/D9: Konstituierung + Domizil in der Urkunde (ZH Ziff. VII) ──
+    {
+      id: 'AE12k_konstituierung',
+      ueberschrift: 'Konstituierung und Zeichnungsberechtigung',
+      text:
+        'Unter der Bedingung, dass der Verwaltungsrat vollzählig anwesend ist, erklären die soeben ' +
+        'ernannten Mitglieder des Verwaltungsrates:',
+      includeIf: { and: [{ feld: 'konstituierungInUrkunde', eq: true }, { feld: 'einVr', eq: false }] },
+      norm: 'Art. 712 OR',
+      begruendung: 'ZH-Urkunde Ziff. VII mit der Vollzähligkeits-Bedingung («[Variante: Unter der Bedingung, dass der Verwaltungsrat vollzählig anwesend ist]»). Haus-Abweichung (offengelegt): «die soeben ernannten Mitglieder des Verwaltungsrates» statt ZH «die soeben als Verwaltungsräte ernannten Gründer» — die Maske erlaubt VR-Mitglieder, die nicht Gründer sind. Das separate VR-Protokoll ist damit entbehrlich (Art. 43 Abs. 1 lit. e HRegV — die Konstituierung ist aus der Urkunde ersichtlich).',
+    },
+    {
+      id: 'AE12k_konstituierung_singular',
+      ueberschrift: 'Konstituierung und Zeichnungsberechtigung',
+      text: 'Das soeben ernannte einzige Mitglied des Verwaltungsrates erklärt:',
+      includeIf: { and: [{ feld: 'konstituierungInUrkunde', eq: true }, { feld: 'einVr', eq: true }] },
+      norm: 'Art. 712 OR',
+      begruendung: 'Konstituierungs-Ziffer im Singular (eingliedriger VR — die Vollzähligkeits-Bedingung ist trivial erfüllt; D1-Numerus).',
+    },
+    {
+      id: 'AE12k_liste',
+      text: '– {{item.konstituierungZeile}}',
+      wiederholeUeber: 'vrListe',
+      includeIf: { feld: 'konstituierungInUrkunde', eq: true },
+      norm: 'Art. 718 OR',
+      begruendung: 'Je VR-Mitglied eine Zeile nach ZH Ziff. VII lit. a («… ist … mit … [Art der Zeichnungsberechtigung]»).',
+    },
+    {
+      id: 'AE12k_domizil_eigen',
+      text: 'Das Rechtsdomizil befindet sich an folgender Adresse: {{rechtsdomizilAdresse}} (eigene Geschäftsräume).',
+      includeIf: { and: [{ feld: 'domizilInKonstituierung', eq: true }, { feld: 'eigeneBueros', eq: true }] },
+      norm: 'Art. 117 Abs. 2 HRegV',
+      begruendung: 'ZH Ziff. VII lit. b («Das Domizil befindet sich … mit Hinweis auf eigene Geschäftsräume oder auf die Erklärung des Domizilhalters»).',
+    },
+    {
+      id: 'AE12k_domizil_co',
+      text:
+        'Das Rechtsdomizil befindet sich als c/o-Adresse bei {{domizilhalterName}}, {{domizilhalterAdresse}}. ' +
+        'Die Erklärung der Domizilhalterin bzw. des Domizilhalters liegt vor.',
+      includeIf: { and: [{ feld: 'domizilInKonstituierung', eq: true }, { feld: 'eigeneBueros', eq: false }] },
+      norm: 'Art. 117 Abs. 3 HRegV',
+      begruendung: 'ZH Ziff. VII lit. b, c/o-Fall («Eine allenfalls vorliegende Domizilhaltererklärung ist in der Urkunde zu nennen»).',
     },
     {
       id: 'AE13_nachtragsvollmacht',
@@ -1844,6 +2068,80 @@ const LEXKOLLER_SCHEMA: VorlageSchema = {
   ],
 };
 
+// ── 7c · GRÜNDUNGS-NACHTRAG (Etappe 4.4/D11; ENTWURF §8) ────────────────────
+// Nach ZH-Vorlage 3.4: Korrektur von Urkunde/Statuten nach Beanstandung
+// durch die Handelsregisterbehörde — öffentliche Beurkundung nötig.
+
+const NACHTRAG_SCHEMA: VorlageSchema = {
+  id: 'ag-gruendungs-nachtrag',
+  version: '1.0.0 (ZH-Vorlage 3.4 «AG Gründungs-Nachtrag»)',
+  titel: 'Nachtrag zur Gründungsurkunde',
+  format: 'verfuegung',
+  ausgabeArt: 'entwurf',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. ENTWURF für die Urkundsperson: Der Nachtrag zur ' +
+    'Gründungsurkunde bedarf der öffentlichen Beurkundung (ZH-Vorlage 3.4; Art. 629 Abs. 1 OR). ' +
+    'Wer den Nachtrag namens aller Gründerinnen und Gründer vornimmt, ergibt sich aus der ' +
+    'Nachtragsvollmacht der Gründungsurkunde oder dem persönlichen Erscheinen.',
+  bausteine: [
+    {
+      id: 'NT01_ingress',
+      text: 'Nachtrag zur Gründungsurkunde vom {{nachtragGruendungsdatumFmt}} der {{firma}} mit Sitz in {{sitz}}',
+      begruendung: 'Ingress nach ZH 3.4 («Nachtrag zur Gründungsurkunde vom … der … mit Sitz in …»).',
+    },
+    {
+      id: 'NT02_erklaerung',
+      text: 'Die Gründerinnen und Gründer erklären infolge einer Beanstandung durch die Handelsregisterbehörde folgenden Nachtrag:',
+      includeIf: { feld: 'einGruender', eq: false },
+      begruendung: 'ZH 3.4 verbatim-nah («Die Gründer erklären infolge einer Beanstandung durch die Handelsregisterbehörde folgenden Nachtrag»).',
+    },
+    {
+      id: 'NT02_erklaerung_singular',
+      text: 'Die Gründerin bzw. der Gründer erklärt infolge einer Beanstandung durch die Handelsregisterbehörde folgenden Nachtrag:',
+      includeIf: { feld: 'einGruender', eq: true },
+      begruendung: 'Nachtrags-Erklärung im Singular (D1; ZH 3.4 führt beide Numeri).',
+    },
+    {
+      id: 'NT03_urkunde',
+      text: 'Ziff. {{nachtragUrkundeZiffer}} der Gründungsurkunde lautet neu wie folgt:\n«{{nachtragUrkundeText}}»',
+      includeIf: { feld: 'hatNachtragUrkunde', eq: true },
+      begruendung: 'Urkunden-Änderung nach ZH 3.4 («Ziff. … der Gründungsurkunde lautet neu wie folgt: „…“» — Haus-Anführung mit Guillemets statt deutscher Anführungszeichen, Konventions-Standard).',
+    },
+    {
+      id: 'NT04_statuten',
+      text: 'Art. {{nachtragStatutenArtikel}}{{nachtragAbsatzZusatz}} der Statuten der Gesellschaft lautet neu wie folgt:\n«{{nachtragStatutenText}}»',
+      includeIf: { feld: 'hatNachtragStatuten', eq: true },
+      begruendung: 'Statuten-Änderung nach ZH 3.4.',
+    },
+    {
+      id: 'NT05_statuten_feststellung',
+      text:
+        'Es liegt ein Exemplar der Gesellschaftsstatuten vor; es handelt sich um die vollständigen, unter ' +
+        'Berücksichtigung der vorstehenden Änderungen gültigen Statuten. Diese Statuten sind Bestandteil ' +
+        'dieser Urkunde.',
+      begruendung: 'Vollständigkeits-Feststellung nach ZH 3.4 (Haus-Fassung in der dritten Person; ZH: «Der bzw. Die Gründer legt bzw. legen ein Exemplar … vor und erklärt bzw. erklären …»).',
+    },
+    {
+      id: 'NT06_fortgeltung',
+      text: 'Im Übrigen gilt der ursprüngliche Errichtungsakt (mit Statuten) unverändert weiter.',
+      begruendung: 'ZH 3.4 verbatim.',
+    },
+    {
+      id: 'NT07_unterschriften',
+      rolle: 'unterschrift',
+      text: '{{ortDatumZeile}}\n\nDie Gründerinnen und Gründer (bzw. die bevollmächtigte Person):',
+      begruendung: 'Unterschriften; die Urkundsperson ergänzt Bestätigung und Beurkundungsvermerk (ZH 3.4: Belegbestätigung Art. 631 Abs. 1 OR).',
+    },
+    {
+      id: 'NT07b_gruenderliste',
+      rolle: 'unterschrift',
+      text: '_________________________________\n{{item.name}}',
+      wiederholeUeber: 'gruenderListe',
+      begruendung: 'Je Gründerin/Gründer eine Unterschriftslinie.',
+    },
+  ],
+};
+
 // ── 8 · GRÜNDUNGSBERICHT (Etappe 2; fertig — Art. 635 OR) ───────────────────
 
 const GRUENDUNGSBERICHT_SCHEMA: VorlageSchema = {
@@ -1984,6 +2282,13 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
   }
 
   const KEINE_BEILAGE = new Set(['statutenentwurf', 'kapitaleinlagekonto', 'hr-anmeldung', 'freigabe-einlagen', 'aktienbuch', 'wb-verzeichnis']);
+  // Etappe 4.1/4.2: Belege, die durch die Urkunden-Optionen entbehrlich
+  // werden, ehrlich aus der Anmeldungs-Beilagenliste nehmen (Art. 43 Abs. 1
+  // lit. c/e HRegV: «sofern nicht aus der Urkunde ersichtlich»).
+  const alleAnnahmenInUrkunde = a.verwaltungsraete.filter((v) => v.name.trim()).length > 0
+    && a.verwaltungsraete.filter((v) => v.name.trim()).every((v) => v.annahmeInUrkunde ?? false);
+  if (alleAnnahmenInUrkunde) KEINE_BEILAGE.add('wahlannahme-vr');
+  if (a.konstituierungInUrkunde) KEINE_BEILAGE.add('vr-konstituierung');
   const belegeAnmeldung = unterlagen
     .filter((u) => !KEINE_BEILAGE.has(u.id))
     .map((u) => ({ titel: u.titel, norm: u.norm }));
@@ -2046,6 +2351,17 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
     ? (a.rechtsdomizilAdresse.trim() || '________')
     : `c/o ${a.domizilhalterName.trim() || '________'}, ${a.domizilhalterAdresse.trim() || '________'}`;
 
+  // Etappe 4.4/D11: Gründungs-Nachtrag auf ausdrücklichen Wunsch.
+  if (a.nachtragAktiv) {
+    dokumente.push({
+      id: 'nachtrag',
+      titel: 'Nachtrag zur Gründungsurkunde (Entwurf)',
+      dateiName: 'ag-gruendungs-nachtrag-entwurf',
+      ausgeloestDurch: 'Beanstandung durch die Handelsregisterbehörde (ZH-Vorlage 3.4)',
+      ergebnis: assemble(NACHTRAG_SCHEMA, basis),
+    });
+  }
+
   // Etappe 4.3/D16: Lex-Koller-Erklärung (nur bei Immobilien-Haupttätigkeit).
   if (hat('lex-koller')) {
     dokumente.push({
@@ -2060,7 +2376,9 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
   if (hat('wahlannahme-vr')) {
     // Review-Befund M-1 (7.6.2026): Index-ID gegen Namens-Kollisionen;
     // zudem NIEDRIG-1: Auslöser-Etikett wie bei der GmbH führen.
-    a.verwaltungsraete.filter((x) => x.name.trim()).forEach((v, i) => {
+    // Etappe 4.1/D8: keine separate Erklärung, wenn die Annahme in der
+    // Urkunde erklärt wird.
+    a.verwaltungsraete.filter((x) => x.name.trim() && !(x.annahmeInUrkunde ?? false)).forEach((v, i) => {
       dokumente.push({
         id: `wahlannahme-${i}`,
         titel: `Wahlannahmeerklärung – ${v.name.trim()}`,
@@ -2085,7 +2403,8 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
     });
   }
 
-  if (hat('vr-konstituierung')) {
+  // Etappe 4.2/D9: entfällt, wenn die Konstituierung in der Urkunde erfolgt.
+  if (hat('vr-konstituierung') && !a.konstituierungInUrkunde) {
     dokumente.push({
       id: 'vr-protokoll',
       titel: 'VR-Protokoll (Konstituierung)',

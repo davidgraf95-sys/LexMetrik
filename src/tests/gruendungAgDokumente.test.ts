@@ -466,6 +466,132 @@ describe('AG — Qualifizierte Gründung (Etappe 2/D3–D5)', () => {
   });
 });
 
+describe('AG — Urkunden-Optionen (Etappen 4.1/4.2) + Agio/Liberierung (3.2/3.3) + Nachtrag (4.4)', () => {
+  const ZWEI: AgDokAntworten = {
+    ...BASIS,
+    aktienkapitalChf: "200'000", anzahlAktien: '200',
+    gruender: [
+      { name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '120' },
+      { name: 'Beat Beispiel', angaben: 'von Bern, in Bern', anzahl: '80' },
+    ],
+    verwaltungsraete: [
+      { name: 'Anna Muster', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+      { name: 'Beat Beispiel', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'kollektivzuzweien' },
+    ],
+  };
+
+  it('4.1: Annahme in der Urkunde → ZH-Zusatz, keine separate Erklärung; gemischt nur für Übrige', () => {
+    const m = agDokumentmappe({
+      ...ZWEI,
+      verwaltungsraete: [
+        { ...ZWEI.verwaltungsraete[0], annahmeInUrkunde: true },
+        ZWEI.verwaltungsraete[1],
+      ],
+    });
+    expect(m.gates.blocker).toEqual([]);
+    const ea = text(m, 'errichtungsakt');
+    expect(ea).toContain('Anna Muster, von Basel, in Zürich, als Präsident/in, welche bzw. welcher hiermit die Annahme erklärt');
+    const wahlannahmen = m.dokumente.filter((d) => d.id.startsWith('wahlannahme-') && d.id !== 'wahlannahme-rs');
+    expect(wahlannahmen).toHaveLength(1);
+    expect(wahlannahmen[0].titel).toContain('Beat Beispiel');
+
+    // ALLE in der Urkunde → Beleg fällt aus der Anmeldungs-Beilagenliste.
+    const alle = agDokumentmappe({
+      ...ZWEI,
+      verwaltungsraete: ZWEI.verwaltungsraete.map((v) => ({ ...v, annahmeInUrkunde: true })),
+    });
+    expect(alle.dokumente.filter((d) => d.id.startsWith('wahlannahme-') && d.id !== 'wahlannahme-rs')).toHaveLength(0);
+    expect(text(alle, 'hr-anmeldung')).not.toContain('Wahlannahmeerklärungen');
+  });
+
+  it('4.2: Konstituierung in der Urkunde → Ziffer mit Bedingung + Zeilen + Domizil; VR-Protokoll entfällt', () => {
+    const m = agDokumentmappe({ ...ZWEI, konstituierungInUrkunde: true });
+    expect(m.gates.blocker).toEqual([]);
+    const ea = text(m, 'errichtungsakt');
+    expect(ea).toContain('Unter der Bedingung, dass der Verwaltungsrat vollzählig anwesend ist');
+    expect(ea).toContain('Anna Muster ist Präsident/in mit Einzelunterschrift.');
+    expect(ea).toContain('Beat Beispiel ist Mitglied mit Kollektivunterschrift zu zweien.');
+    expect(ea).toContain('Das Rechtsdomizil befindet sich an folgender Adresse: Musterweg 1, 8000 Zürich (eigene Geschäftsräume).');
+    expect(ea.match(/Rechtsdomizil/g)!.length).toBeLessThanOrEqual(2); // keine doppelte Domizil-Ziffer
+    expect(m.dokumente.map((d) => d.id)).not.toContain('vr-protokoll');
+    expect(text(m, 'hr-anmeldung')).not.toContain('Protokoll des Verwaltungsrats');
+
+    // Weitere Zeichnungsberechtigte → ehrlicher Blocker.
+    const blockiert = pruefeAgDokGates({
+      ...ZWEI,
+      konstituierungInUrkunde: true,
+      weitereVertretungen: [{ name: 'C', funktion: 'Direktor', zeichnungsArt: 'einzelunterschrift' }],
+    });
+    expect(blockiert.blocker.join(' ')).toContain('VR-Protokoll');
+  });
+
+  it('4.2: Domizil nur in der Anmeldung → keine Domizil-Ziffer in der Urkunde', () => {
+    const m = agDokumentmappe({ ...ZWEI, domizilNurAnmeldung: true });
+    expect(m.gates.blocker).toEqual([]);
+    expect(text(m, 'errichtungsakt')).not.toContain('Rechtsdomizil');
+    expect(text(m, 'hr-anmeldung')).toContain('Musterweg 1, 8000 Zürich');
+  });
+
+  it('3.2: Agio — Zeichnung zum Ausgabebetrag, Einlagen-Total über Kapital; unter pari blockt; teil+Agio blockt', () => {
+    const m = agDokumentmappe({ ...ZWEI, ausgabebetragChf: "1'200" });
+    expect(m.gates.blocker).toEqual([]);
+    const ea = text(m, 'errichtungsakt');
+    expect(ea).toContain("zum Ausgabebetrag von CHF 1'200.00");
+    expect(ea).toContain("Sämtliche Einlagen von gesamthaft CHF 240'000.00");
+
+    expect(pruefeAgDokGates({ ...ZWEI, ausgabebetragChf: '900' }).blocker.join(' ')).toContain('unter pari');
+    expect(pruefeAgDokGates({ ...ZWEI, ausgabebetragChf: "1'200", liberierungProzent: '50' }).blocker.join(' ')).toContain('Agio nur bei Volliberierung');
+  });
+
+  it('3.3: individuelle Liberierungsgrade — ZH-Zeilen je Gründer + effektive Summe; <20 % blockt', () => {
+    const m = agDokumentmappe({
+      ...ZWEI,
+      liberierungProzent: '100',
+      gruender: [
+        { ...ZWEI.gruender[0], liberierung: '50' },
+        ZWEI.gruender[1],   // leer = global 100 %
+      ],
+    });
+    expect(m.gates.blocker).toEqual([]);
+    const ea = text(m, 'errichtungsakt');
+    // 120 × 1'000 × 50 % + 80 × 1'000 × 100 % = 140'000
+    expect(ea).toContain("Einlagen von gesamthaft CHF 140'000.00 in Geld");
+    expect(ea).toContain('Dadurch ist das Aktienkapital teilweise liberiert worden, nämlich:');
+    expect(ea).toContain('– 120 Aktien von Anna Muster zu 50 %');
+    expect(ea).toContain('– 80 Aktien von Beat Beispiel zu 100 %');
+    expect(ea).toContain('im Sinne von Art. 634b OR sofort zu erbringen');
+    expect(text(m, 'statuten')).toContain("im Umfang der geleisteten Einlagen von CHF 140'000.00 liberiert");
+
+    expect(pruefeAgDokGates({
+      ...ZWEI,
+      gruender: [{ ...ZWEI.gruender[0], liberierung: '10' }, ZWEI.gruender[1]],
+    }).blocker.join(' ')).toContain('Liberierungsgrad von Anna Muster');
+  });
+
+  it('4.4: Nachtrag nur auf Wunsch; ZH-3.4-Struktur; ENTWURF; ohne Änderung blockt', () => {
+    expect(agDokumentmappe(BASIS).dokumente.map((d) => d.id)).not.toContain('nachtrag');
+
+    const m = agDokumentmappe({
+      ...BASIS,
+      nachtragAktiv: true,
+      nachtragGruendungsdatum: '2026-06-01',
+      nachtragStatutenArtikel: '3',
+      nachtragStatutenAbsatz: '1',
+      nachtragStatutenText: 'Das Aktienkapital beträgt CHF 150\'000.00 und ist eingeteilt in 150 Namenaktien zu CHF 1\'000.00.',
+    });
+    expect(m.gates.blocker).toEqual([]);
+    const nt = m.dokumente.find((d) => d.id === 'nachtrag')!;
+    expect(nt.ergebnis.dokument.ausgabeArt).toBe('entwurf');
+    const t = text(m, 'nachtrag');
+    expect(t).toContain('Nachtrag zur Gründungsurkunde vom 01.06.2026');
+    expect(t).toContain('infolge einer Beanstandung durch die Handelsregisterbehörde folgenden Nachtrag');
+    expect(t).toContain('Art. 3 Abs. 1 der Statuten der Gesellschaft lautet neu wie folgt:');
+    expect(t).toContain('Im Übrigen gilt der ursprüngliche Errichtungsakt (mit Statuten) unverändert weiter.');
+
+    expect(pruefeAgDokGates({ ...BASIS, nachtragAktiv: true }).blocker.join(' ')).toContain('mindestens eine Änderung');
+  });
+});
+
 describe('AG — Lex-Koller-Erklärung (Etappe 4.3/D16)', () => {
   it('Nur bei Immobilien-Haupttätigkeit; Ja/Nein-Antworten; Frage 4 nicht anwendbar; VR-Unterschrift', () => {
     expect(agDokumentmappe(BASIS).dokumente.map((d) => d.id)).not.toContain('lex-koller');

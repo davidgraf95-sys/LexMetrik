@@ -100,9 +100,12 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       ],
       verwaltungsraete: [
         { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
-        { name: 'B', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'ohne' },
+        { name: 'B', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'ohne', annahmeInUrkunde: true },
       ],
       weitereVertretungen: [{ name: 'C', funktion: 'Direktor', zeichnungsArt: 'kollektivprokura' }],
+      nachtragAktiv: true, nachtragGruendungsdatum: '2026-06-01',
+      nachtragUrkundeZiffer: 'III', nachtragUrkundeText: 'Neuer Wortlaut der Kapitalziffer.',
+      nachtragStatutenArtikel: '3', nachtragStatutenAbsatz: '1', nachtragStatutenText: 'Neuer Statuten-Wortlaut.',
       domizilhalterName: 'D AG', domizilhalterAdresse: 'X 1, 8000 Zürich',
       revisionsstelleName: 'R AG', revisionsstelleSitz: 'Zürich',
       vinkulierung: true, virtuelleGv: true, statutenUmfang: 'lang',
@@ -168,7 +171,8 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       leistungenChf: undefined,
       ...AG_DOK_DEFAULTS,
       firma: 'Solo AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Beratung',
-      gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '100' }],
+      konstituierungInUrkunde: true,
+      gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '100', liberierung: '60' }],
       verwaltungsraete: [
         { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
       ],

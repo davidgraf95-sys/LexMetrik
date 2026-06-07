@@ -87,6 +87,17 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
   const [lkAusland, setLkAusland] = useState(false);
   const [lkNeuerwerb, setLkNeuerwerb] = useState(false);
   const [lkGrundstueck, setLkGrundstueck] = useState(false);
+  // Etappe 3.2 + 4.2 + 4.4
+  const [ausgabebetrag, setAusgabebetrag] = useState('');
+  const [konstituierungInUrkunde, setKonstituierungInUrkunde] = useState(false);
+  const [domizilNurAnmeldung, setDomizilNurAnmeldung] = useState(false);
+  const [nachtragAktiv, setNachtragAktiv] = useState(false);
+  const [ntGruendungsdatum, setNtGruendungsdatum] = useState('');
+  const [ntUrkundeZiffer, setNtUrkundeZiffer] = useState('');
+  const [ntUrkundeText, setNtUrkundeText] = useState('');
+  const [ntStatutenArtikel, setNtStatutenArtikel] = useState('');
+  const [ntStatutenAbsatz, setNtStatutenAbsatz] = useState('');
+  const [ntStatutenText, setNtStatutenText] = useState('');
   const [ort, setOrt] = useState('');
   const [datum, setDatum] = useState('');
 
@@ -98,7 +109,7 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
     ...AG_DOK_DEFAULTS,
     firma, sitz, kanton, zweck, zweckErweiterung,
     aktienkapitalChf: ak, anzahlAktien: anzahl, nennwertChf: nennwert,
-    liberierungProzent: liberierung,
+    liberierungProzent: liberierung, ausgabebetragChf: ausgabebetrag,
     gruender, verwaltungsraete: vr, weitereVertretungen: vertretungen,
     protokollfuehrerName: protokollfuehrer,
     bankName, bankOrt, rechtsdomizilAdresse: rechtsdomizil,
@@ -108,12 +119,19 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
     sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
     waehrung, kursChf, kursQuelle,
     lexKollerAuslandBeteiligt: lkAusland, lexKollerNeuerwerb: lkNeuerwerb, lexKollerGrundstueckErwerb: lkGrundstueck,
+    konstituierungInUrkunde, domizilNurAnmeldung,
+    nachtragAktiv, nachtragGruendungsdatum: ntGruendungsdatum,
+    nachtragUrkundeZiffer: ntUrkundeZiffer, nachtragUrkundeText: ntUrkundeText,
+    nachtragStatutenArtikel: ntStatutenArtikel, nachtragStatutenAbsatz: ntStatutenAbsatz, nachtragStatutenText: ntStatutenText,
     sacheinlagen, verrechnungen, vorteile, revisorName, ort, datum,
   }), [weichen, firma, sitz, kanton, zweck, zweckErweiterung, ak, anzahl, nennwert, liberierung,
     gruender, vr, vertretungen, protokollfuehrer, bankName, bankOrt, rechtsdomizil,
     domizilhalterName, domizilhalterAdresse, rsName, rsSitz, vinkulierung, virtuelleGv,
     statutenUmfang, gjBeginn, gjEnde, sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
     waehrung, kursChf, kursQuelle, lkAusland, lkNeuerwerb, lkGrundstueck,
+    ausgabebetrag, konstituierungInUrkunde, domizilNurAnmeldung,
+    nachtragAktiv, ntGruendungsdatum, ntUrkundeZiffer, ntUrkundeText,
+    ntStatutenArtikel, ntStatutenAbsatz, ntStatutenText,
     sacheinlagen, verrechnungen, vorteile, revisorName, ort, datum]);
 
   const mappe = useMemo(() => agDokumentmappe(antworten), [antworten]);
@@ -169,13 +187,16 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
         <Field label="Liberierung (%, 20–100; einbezahlt mind. CHF 50'000)">
           <input className={inputCls} inputMode="numeric" value={liberierung} onChange={(e) => setLiberierung(e.target.value)} />
         </Field>
+        <Field label="Ausgabebetrag je Aktie (leer = Nennwert; Agio nur bei Volliberierung)">
+          <input className={inputCls} inputMode="numeric" value={ausgabebetrag} onChange={(e) => setAusgabebetrag(e.target.value)} placeholder="z. B. 1'200" />
+        </Field>
       </div>
 
       {/* Gründer */}
       <div className="space-y-2">
         <p className="text-body-s font-medium text-ink-900">Gründer:innen und Zeichnung (Art. 629/630 OR)</p>
         {gruender.map((g) => (
-          <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_auto] gap-2 items-end">
+          <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_1fr_auto] gap-2 items-end">
             <Field label="Name">
               <input className={inputCls} value={g.name}
                 onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, name: e.target.value } : x))} />
@@ -187,6 +208,10 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
             <Field label="Aktien">
               <input className={inputCls} inputMode="numeric" value={g.anzahl}
                 onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, anzahl: e.target.value } : x))} />
+            </Field>
+            <Field label="Lib. % (leer = global)">
+              <input className={inputCls} inputMode="numeric" value={g.liberierung ?? ''}
+                onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, liberierung: e.target.value } : x))} />
             </Field>
             <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
               onClick={() => setGruender((alt) => alt.filter((x) => x.key !== g.key))}>✕</button>
@@ -388,6 +413,38 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
         </div>
       )}
 
+      {/* Etappe 4.4: Gründungs-Nachtrag (ZH-Vorlage 3.4; ENTWURF) */}
+      <div className="space-y-2">
+        <label className="flex items-center gap-2 text-body-s text-ink-700">
+          <input type="checkbox" checked={nachtragAktiv} onChange={(e) => setNachtragAktiv(e.target.checked)} />
+          Nachtrag zur Gründungsurkunde vorbereiten (nach Beanstandung durch die Handelsregisterbehörde)
+        </label>
+        {nachtragAktiv && (
+          <div className="rounded-md border border-line p-3 space-y-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <Field label="Datum der Gründungsurkunde">
+                <input type="date" className={inputCls} value={ntGruendungsdatum} onChange={(e) => setNtGruendungsdatum(e.target.value)} />
+              </Field>
+              <Field label="Geänderte Urkunden-Ziffer (z. B. III)">
+                <input className={inputCls} value={ntUrkundeZiffer} onChange={(e) => setNtUrkundeZiffer(e.target.value)} />
+              </Field>
+              <Field label="Neuer Wortlaut der Urkunden-Ziffer">
+                <input className={inputCls} value={ntUrkundeText} onChange={(e) => setNtUrkundeText(e.target.value)} />
+              </Field>
+              <Field label="Geänderter Statuten-Artikel (Nr.)">
+                <input className={inputCls} inputMode="numeric" value={ntStatutenArtikel} onChange={(e) => setNtStatutenArtikel(e.target.value)} />
+              </Field>
+              <Field label="Absatz (optional)">
+                <input className={inputCls} inputMode="numeric" value={ntStatutenAbsatz} onChange={(e) => setNtStatutenAbsatz(e.target.value)} />
+              </Field>
+              <Field label="Neuer Wortlaut des Statuten-Artikels">
+                <input className={inputCls} value={ntStatutenText} onChange={(e) => setNtStatutenText(e.target.value)} />
+              </Field>
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* Etappe 3.1: Fremdwährung (Art. 621 Abs. 2 OR; Anhang 3 HRegV) */}
       {weichen.fremdwaehrung && (
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -436,6 +493,12 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
               <input type="checkbox" checked={v.praesident}
                 onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, praesident: e.target.checked } : x))} />
               Präsident:in
+            </label>
+            <label className="flex items-center gap-1.5 text-body-s text-ink-700 pb-2"
+              title="Die Person ist beim Beurkundungstermin anwesend und erklärt die Annahme in der Urkunde – die separate Wahlannahmeerklärung entfällt (Art. 43 Abs. 1 lit. c HRegV).">
+              <input type="checkbox" checked={v.annahmeInUrkunde ?? false}
+                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, annahmeInUrkunde: e.target.checked } : x))} />
+              Annahme in der Urkunde
             </label>
             <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
               onClick={() => setVr((alt) => alt.filter((x) => x.key !== v.key))}>✕</button>
@@ -549,6 +612,16 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
         <label className="flex items-center gap-2">
           <input type="checkbox" checked={virtuelleGv} onChange={(e) => setVirtuelleGv(e.target.checked)} />
           Virtuelle/hybride Generalversammlung (Art. 701d OR)
+        </label>
+        <label className="flex items-center gap-2"
+          title="Konstituierung, Zeichnungsberechtigung und Domizil werden in der Gründungsurkunde erklärt (ZH Ziff. VII, Bedingung: VR vollzählig anwesend) – das separate VR-Protokoll entfällt.">
+          <input type="checkbox" checked={konstituierungInUrkunde} onChange={(e) => setKonstituierungInUrkunde(e.target.checked)} />
+          Konstituierung in der Urkunde
+        </label>
+        <label className="flex items-center gap-2"
+          title="Das Domizil wird in der Urkunde weggelassen und steht nur in der HR-Anmeldung (ZH-Erläuterung zu Ziff. VII).">
+          <input type="checkbox" checked={domizilNurAnmeldung} onChange={(e) => setDomizilNurAnmeldung(e.target.checked)} />
+          Domizil nur in der Anmeldung
         </label>
         <label className="flex items-center gap-2">
           Statuten-Umfang:
