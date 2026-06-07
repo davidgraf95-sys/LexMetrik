@@ -25,6 +25,12 @@ Katalog S1–S20 liegt dort bereits engine-fertig vor.
 - 777a Abs. 2: Hinweispflichten im Errichtungsakt bei statutarischen
   Pflichten (bereits gebaut, 9b).
 
+**STAND 7.6.2026 abends: BAU PAUSIERT (Anweisung David «warte noch mit dem
+bau der gmbh. mach nur recherche»). Recherche-Stand: G0-Deltas =
+`bibliothek/recherche/gmbh-gruendung-deltas-g0.md` (GD1–GD8) · G2-Verifikation =
+`gmbh-qualifizierte-gruendung.md` (777c-Ketten, 71 III→43 III, Bauspez-Skizze).
+G1/G3-Quellen lagen schon (Klausel-Katalog S1–S20; 773 II). Bau erst auf Go.**
+
 ## Etappen (je mit Tests + Bug-Check §9, Tore wie AG-Fahrplan)
 
 - [ ] G0 Korrektheits-Abgleich am Original: Singular-Urkunde
@@ -39,7 +45,8 @@ Katalog S1–S20 liegt dort bereits engine-fertig vor.
   Weichen).
 - [ ] G2 Qualifizierte Gründung via 777c II: Sacheinlage-Zeilen
   (Sachgesamtheit/Geschäft, Grundstück→Vertrag ENTWURF 634 II/657 ZGB) ·
-  Verrechnung (777c II Ziff. 1; BE-Merkblatt: 777c II Ziff. 1 für GmbH) ·
+  Verrechnung (777c II Ziff. 1 — am Cache verifiziert; frühere BE-Merkblatt-
+  Zuschreibung UNBELEGT, §7-Korrektur im G2-Dossier) ·
   besondere Vorteile · Statuten-Pflichtklauseln + 10-Jahres-Hinweis
   (sinngemäss 634 IV/634a III Satz 2 — am Cache verifizieren!) ·
   Sacheinlagevertrag + Gründungsbericht als Dokumente (ZH-AG-Vorlagen
