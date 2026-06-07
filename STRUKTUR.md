@@ -28,8 +28,26 @@ Beschlüsse/HR-Anmeldung druckfertig; Dokument-Auslöser aus
 gruendungsunterlagen.ts (§5); Gates 773/774/777 II/795 II; Erstausbau nur
 Bargründung CHF (ehrlich gesperrt sonst). · **AG-Dokumentmappe** analog
 (`gruendungAgDokumente.ts`): VR-Protokoll als Pflichtbeleg, Teilliberierung
-632 (≥ 20 %/≥ 50k-Gates), Vinkulierungs-/701d-Klauseln; Inhaberaktien
-gesperrt. · **Notariate je Kanton** (Auftrag David): Dossier
+632 (≥ 20 %/≥ 50k-Gates), Vinkulierungs-/701d-Klauseln. **PERFEKTIONS-
+PROGRAMM 7.6.2026 ABGESCHLOSSEN** (Auftrag David; Detail
+FAHRPLAN-AG-GRUENDUNG.md, alle Normen am OR-/HRegV-Cache): Stufe-2-
+Kombinationen frei (qualifiziert+FW in Kapitalwährung · Agio voll bei
+Teilliberierung · Wert-Gates auf Ausgabebetrag · gemischte
+Teilliberierung) · Inhaberaktien-Weiche (622 1bis/2bis, Gates 683/685a) ·
+Statuten-Zusatzklauseln (Schiedsklausel 697n, Kapitalband 653s ff.,
+bedingtes Kapital 653 ff., Stichentscheid-Abwahl, erstes GJ) ·
+Unterschriftenblatt (Art. 21 HRegV) in jeder Mappe · ZIP-Sammeldownload
+(PDF+DOCX, fflate) · localStorage-Persistenz mit Hydration-Guards ·
+Vorschau-Wahl/Musterdaten/Schritt-Feldmarkierung · Notariatsgebühren
+kantonsabhängig (lib/notariatsgebuehrenGruendung.ts, ZH/BE/LU/SG/BS
+deterministisch, AG nach Aufwand; Dossier kosten/) · Abnahme-Dossier
+ABNAHME-AG-BAUSTEINE.md (scripts/abnahme-ag.ts, 194 Bausteine, 13
+Schemas — Davids Wort-für-Wort-Abnahme) · Kantonsvergleich SG/GL
+(kantonsneutral bestätigt) · HR-Ämter-Adressdossier 26 Kt. Sweep-Stufe-
+2-Strang (3264 AG-Komb., Exit-Fix) + Golden 87. Sammel-Bug-Check §9:
+2 MITTEL gefixt, 0 HOCH. OFFEN: Stimmrechts-/Vorzugsaktien/PS
+(Zwei-Kategorien-Kapitalmodell, Davids Entscheid) · arithmetische
+Sweep-Geld-Invariante · Erstrecherche-Verifikationen Notariatstarife. · **Notariate je Kanton** (Auftrag David): Dossier
 `behoerden/notariate-kantone.md` + Stammdaten `lib/notariate.ts` + Link-Box
 in beiden Masken (SH-Sonderregel: HRegA beurkundet; UR/AI/BL «ohne Gewähr»).
 · **Bug-Check §9 bestanden:** Code-Agent (2304 Kombinationen empirisch,

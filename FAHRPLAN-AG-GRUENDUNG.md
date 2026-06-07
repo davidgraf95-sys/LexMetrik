@@ -239,8 +239,27 @@ PERFEKTION.md, Auftrag David «mach alles») ABGEARBEITET:**
 - **QS** (`ea1e8c3`): logik-sweep Stufe-2-Strang (AG-S1–S10, 3264
   AG-Komb.) + Sweep-Exit-Fix (Verletzungen brachen das Tor bisher NICHT)
   + 3 neue Golden-Fälle (87).
-- **P11 Notariatstarife** + **Sammel-Bug-Check §9 (2 Agents)**: laufen —
-  Befunde werden hier nachgetragen.
+- **P11 Notariatstarife** (`ca9d482` Dossier + `47230ca` Verdrahtung):
+  bibliothek/kosten/notariatstarife-gruendung-kantone.md (ZH/BE/LU/SG/BS
+  deterministisch, AG ehrlich «nach Aufwand»; amtliche Erlass-APIs,
+  abrogated geprüft) + lib/notariatsgebuehrenGruendung.ts + Kosten-
+  Sektion kantonsabhängig mit Erlass-Link, MWST-Vorbehalt und
+  Erstrecherche-Status (§8). Offen: ZH-Nachtrag 123, SG-Lesart «volle»
+  Stufen, Agio-Basis ausser BE (Dossier/Verfallsregister).
+- **Sammel-Bug-Check §9** (`0764bd9`): Agent 1 Empirie (30+
+  Handrechnungen) 0 HOCH / 2 MITTEL — beide gefixt (Kapitalband-
+  Grenzen-Vielfach-Gate · Schalttags-Rollover der 5-Jahres-Grenze);
+  Agent 2 Wortlaut (alle Zitate verbatim am OR-/HRegV-Cache) 0 HOCH /
+  0 MITTEL / 1 NIEDRIG (Nur-Erhöhungs-Untergrenze über-constrained,
+  bewusst + offengelegt). OFFENE HÄRTUNG (Agent-1-Empfehlung):
+  arithmetische Geld-Invariante im Sweep (Errichtungsakt-Beträge gegen
+  effektiveLiberierung neu gerechnet) — die Struktur-Invarianten fangen
+  Zahlen-Mutationen nicht.
+
+**Programm ABGESCHLOSSEN; UEBERGABE-AG-PERFEKTION.md gelöscht (Inhalt
+hier gespiegelt). Davids Wort-für-Wort-Abnahme: ABNAHME-AG-BAUSTEINE.md
+(194 Bausteine, 13 Schemas). DANACH GmbH analog
+(FAHRPLAN-GMBH-GRUENDUNG.md).**
 
 **Empfohlene Reihenfolge = Etappen-Nummern.** Etappe 0 ist
 Korrektheits-Pflicht vor jedem Ausbau (§1); Etappe 2 bringt den grössten
