@@ -115,6 +115,26 @@ export interface GmbhGruendungEingaben {
  *  Leistungs-Eingabe, keine Steuerberatung. */
 export const EMISSIONSABGABE_FREIBETRAG_CHF = 1_000_000;
 
+// FINMA-Bewilligungs-Bezeichnungen (Merkblatt HRegA ZH «Belege für die
+// Neueintragung», 11.12.2024) — deterministische Wortprüfung über
+// Firma + Zweck. Rechtsformneutral (gilt AG wie GmbH); aus der AG-Seite
+// hierher gezogen (Bug-Check 7.6.2026 N-4, §3: Rechtsregel in die
+// Engine-Schicht — die GmbH-Maske bekommt den Check mit dem G-Programm).
+const FINMA_BEGRIFFE: { begriff: string; muster: RegExp }[] = [
+  { begriff: 'Bank', muster: /\bbank\b/i },
+  { begriff: 'Vermögensverwalter', muster: /vermögensverwalter/i },
+  { begriff: 'Trustee', muster: /trustee/i },
+  { begriff: 'Verwalter von Kollektivvermögen', muster: /verwalter von kollektivvermögen/i },
+  { begriff: 'Fondsleitung', muster: /fondsleitung/i },
+  { begriff: 'Wertpapierhaus', muster: /wertpapierhaus/i },
+];
+
+/** Bewilligungspflichtige FINMA-Bezeichnungen in Firma/Zweck (Treffer-Labels). */
+export function finmaBegriffsTreffer(firma: string, zweck: string): string[] {
+  const text = `${firma} ${zweck}`;
+  return FINMA_BEGRIFFE.filter((b) => b.muster.test(text)).map((b) => b.begriff);
+}
+
 export function emissionsabgabe(leistungenChf: number | undefined): number | null {
   if (leistungenChf === undefined || !Number.isFinite(leistungenChf)) return null;
   if (leistungenChf <= EMISSIONSABGABE_FREIBETRAG_CHF) return null;

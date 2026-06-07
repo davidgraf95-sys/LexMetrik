@@ -181,13 +181,25 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
       // stand die Nummer nur vor dem ersten Element, und die Rechtsbegehren
       // jeder Klage (K06) verloren ihre Zählung samt hängendem Einzug.
       const texte = liste.map((item) => interpoliere(b.text, antworten, item as Record<string, unknown>));
+      // Bug-Check 7.6.2026 N-3: Unterschrifts-/Strichzeilen bekommen KEINE
+      // Ziffer — das «N. »-Präfix zerstörte sonst die SCHEMA_STRICHE-
+      // Erkennung der Renderer (rohe Unterstriche statt gezeichneter
+      // Linie). Mehrzeilige Elemente: nur Nicht-Strich-Zeilen zählen.
+      const nummeriere = (t: string) => t.split('\n')
+        .map((z) => (SCHEMA_STRICHE.test(z) ? z : null))
+        .every((x) => x !== null)
+        ? t
+        : `${++ziffer}. ${t}`;
       const nummeriert = b.nummeriert
-        ? texte.map((t) => `${++ziffer}. ${t}`)
+        ? texte.map(nummeriere)
         : texte;
       absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummeriert.join('\n'), rolle: b.rolle, stricheErlaubt });
     } else {
-      const nummer = b.nummeriert ? `${++ziffer}. ` : '';
-      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + interpoliere(b.text, antworten), rolle: b.rolle, stricheErlaubt });
+      const text = interpoliere(b.text, antworten);
+      // N-3 (s. oben): reine Strich-Bausteine bleiben unnummeriert.
+      const reineStriche = text.split('\n').every((z) => SCHEMA_STRICHE.test(z));
+      const nummer = b.nummeriert && !reineStriche ? `${++ziffer}. ` : '';
+      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + text, rolle: b.rolle, stricheErlaubt });
     }
 
     aufgenommen.push(b.id);

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { agGruendungsunterlagen, type EinlageArt, type Phase } from '../lib/gruendungsunterlagen';
+import { agGruendungsunterlagen, type EinlageArt, type Phase , finmaBegriffsTreffer } from '../lib/gruendungsunterlagen';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { VorlagenWizardRahmen, VorschauPanel } from '../components/vorlagen/wizard';
 import { MappenAnsicht, MappenGates, NotariatsHinweis } from '../components/vorlagen/Dokumentmappe';
@@ -79,17 +79,6 @@ const VERTRETUNGS_ZEICHNUNGS_OPTIONEN: { id: AgVertretungsZeichnungsArt; label: 
   { id: 'einzelunterschrift', label: 'Einzelunterschrift' },
   { id: 'kollektivzuzweien', label: 'Kollektivunterschrift zu zweien' },
   { id: 'kollektivprokura', label: 'Kollektivprokura zu zweien' },
-];
-
-// Etappe 5/D23: FINMA-Bewilligungs-Bezeichnungen (Merkblatt HRegA ZH,
-// «Belege für die Neueintragung», 11.12.2024) — deterministische Wortprüfung.
-const FINMA_BEGRIFFE: { begriff: string; muster: RegExp }[] = [
-  { begriff: 'Bank', muster: /\bbank\b/i },
-  { begriff: 'Vermögensverwalter', muster: /vermögensverwalter/i },
-  { begriff: 'Trustee', muster: /trustee/i },
-  { begriff: 'Verwalter von Kollektivvermögen', muster: /verwalter von kollektivvermögen/i },
-  { begriff: 'Fondsleitung', muster: /fondsleitung/i },
-  { begriff: 'Wertpapierhaus', muster: /wertpapierhaus/i },
 ];
 
 // ─── Punkt 7 (Perfektion): lokale Zwischenspeicherung ────────────────────────
@@ -334,11 +323,9 @@ export function VorlageAgGruendung() {
   // KAPITALWÄHRUNG — die Feld-Labels führen den wirksamen Währungscode.
   const wc = fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(waehrung) ? waehrung : 'CHF';
 
-  // Etappe 5/D23: FINMA-Wortprüfung über Firma + Zweck.
-  const finmaTreffer = useMemo(
-    () => FINMA_BEGRIFFE.filter((b) => b.muster.test(`${firma} ${zweck}`)).map((b) => b.begriff),
-    [firma, zweck],
-  );
+  // Etappe 5/D23: FINMA-Wortprüfung über Firma + Zweck — Regel lebt in der
+  // Engine-Schicht (gruendungsunterlagen.finmaBegriffsTreffer, §3).
+  const finmaTreffer = useMemo(() => finmaBegriffsTreffer(firma, zweck), [firma, zweck]);
 
   // Praxis-Runde (Auftrag David): Blocker klickbar — Klick springt zum
   // Schritt, in dem die Eingabe liegt (Bereichs-Tag aus den Engine-Gates).
@@ -412,14 +399,24 @@ export function VorlageAgGruendung() {
         for (let n = 2; name in eintraege; n++) name = `${basis}-${n}.${endung}`;
         return name;
       };
+      const docxUebersprungen: string[] = [];
       for (const d of mappe.dokumente) {
         const entwurf = d.ergebnis.dokument.ausgabeArt === 'entwurf';
         const banner = entwurf ? BANNER_ENTWURF : BANNER_MAPPE_FERTIG;
         const doc = vorlagenPdfDokument(d.ergebnis, { banner });
         eintraege[frei(d.dateiName, 'pdf')] = new Uint8Array(doc.output('arraybuffer'));
         if (docxErlaubt) {
-          const blob = await vorlagenDocxDokument(d.ergebnis, { banner });
-          eintraege[frei(d.dateiName, 'docx')] = new Uint8Array(await blob.arrayBuffer());
+          // Per-Dokument-Guard (Bug-Check 7.6.2026 N-1): ein einzelnes
+          // Word-gesperrtes Dokument (z. B. künftige abschrift-Ausgabe-
+          // art, §8-Gate in vorlagenDocx) darf nicht den GESAMTEN ZIP
+          // abbrechen — das PDF ist dann schon drin, Word wird ehrlich
+          // als übersprungen gemeldet.
+          try {
+            const blob = await vorlagenDocxDokument(d.ergebnis, { banner });
+            eintraege[frei(d.dateiName, 'docx')] = new Uint8Array(await blob.arrayBuffer());
+          } catch {
+            docxUebersprungen.push(d.dateiName);
+          }
         }
       }
       const slug = (firma.trim().toLowerCase()
@@ -433,7 +430,10 @@ export function VorlageAgGruendung() {
       a.download = `gruendung-${slug}.zip`;
       a.click();
       URL.revokeObjectURL(url);
-      setBatchMeldung(`${mappe.dokumente.length} Dokumente als ZIP heruntergeladen (gruendung-${slug}.zip${docxErlaubt ? ', je als PDF und Word' : ''}).`);
+      const docxHinweis = docxUebersprungen.length > 0
+        ? `, Word übersprungen für: ${docxUebersprungen.join(', ')}`
+        : (docxErlaubt ? ', je als PDF und Word' : '');
+      setBatchMeldung(`${mappe.dokumente.length} Dokumente als ZIP heruntergeladen (gruendung-${slug}.zip${docxHinweis}).`);
     } catch (e) {
       setBatchMeldung(e instanceof Error ? e.message : 'Der Sammel-Download ist fehlgeschlagen. Bitte erneut versuchen.');
     } finally {
