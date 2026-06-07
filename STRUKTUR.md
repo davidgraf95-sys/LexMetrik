@@ -293,6 +293,15 @@ Fristwiederherstellung → ZPO-Fristen; Rechtsöffnung/Aberkennung/Kollokation
 Verzugszins-vertieft → Verzugszins; SV-Leistungsverwirkung → ATSG-Karte.
 `RechnerCard.szenarien` zeigt abgedeckte/geplante Szenarien auf der Karte.
 
+**Spät-Session 7.6.2026 (Kurzspiegel; Details HANDLUNGSPLAN.md A.0):**
+Daueranweisungen §0 Mehrwert-Test + §0a Perfektion-vor-Neubau · Roadmap
+−7 geplante Karten (verifiziert) · AG-Programm fertig inkl. Notariats-
+tarif-Korrekturen (ZH-Rahmen 123! SG floor!) · Startseite: leere Gebiete
+als «In Vorbereitung»-Zeile, Rubrik einzeilig · Vereinheitlichung Runde 1
+(Tagerechner-Hash/geteilter Teilen-Button, 7 Titel-Paare + Invariante) ·
+Dossiers neu: gmbh-deltas-g0, gmbh-qualifizierte-gruendung,
+ag-kapitalkategorien (Bau gesperrt), BGerR-Verifikation (35/35a-Split).
+
 **Konsolidierung Runde 2 (7.6.2026, FAHRPLAN-KATALOG-KONSOLIDIERUNG,
 Auftrag David «simplifizieren — ein Einstieg pro Rechtsfrage»):** Katalog
 gesamt 115→112, verfügbar 35→32 gebaut, davon **28 sichtbar**. (a) GELÖSCHT

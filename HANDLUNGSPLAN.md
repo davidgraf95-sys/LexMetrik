@@ -43,7 +43,20 @@ Begründung in KATALOG-ROADMAP.md festhalten.
    Auftrag David: 35→28 sichtbare Karten, imKatalog:false-Mechanik,
    FAHRPLAN-KATALOG-KONSOLIDIERUNG.md §6) · GmbH-Programm GESTARTET
    (FAHRPLAN-GMBH-GRUENDUNG.md G0–G7, war ausdrücklich eingereiht).
-   4 Commits ungepusht; Deploy des Stands nach G-Programm + Davids Ja.
+   **Session-Abschluss 7.6.2026 spätabends:** AG-Programm FERTIG
+   (Geld-Invariante AG-G1–G3 · FINMA→Engine · ZIP-Guard/Strich-Nummerierung ·
+   B4-Vinkulierung 685b I+V · P11-Nachverifikation: **ZH-Rahmen war veraltet
+   [Nachtrag 123: max 4'000!], SG floor verdrahtet [deklariert, Abnahme],
+   Agio-Basis 4 Kantone belegt** · UR/AI/BL-Links · Abnahme-Dossier
+   regeneriert). §0-Triage: −7 Karten verifiziert (inkl. MSchG 31:
+   monatsbestimmt, KEIN 22a-Stillstand); steuer-verjaehrung bleibt (DBG
+   120/121 Eigen-Regime); BGerR verifiziert (cc/2006/834 @1.2.2026,
+   **Straf-Split 35/35a neu**, Rechtsöffnung→I. Abt. bestätigt) → B.5a
+   bau-bereit nach Abnahme. §0a-GESPERRT (Dossiers liegen): Zwei-Kategorien-
+   Kapitalmodell · GmbH G1–G7. V-Runde 1: Tagerechner (geteilter Teilen-
+   Button + Tab im Hash) · 7 Titel-Paare + Drift-Invariante. V OFFEN:
+   Fristenspiegel-PDF · Kombi-Tab · CHF-Formatter (nur mit Golden).
+   ~19 Commits ungepusht; Push/Deploy auf Davids Ja.
 1. ~~Push + DEPLOY-Ja~~ → **DEPLOYED 7.6.2026** (Davids Ja «bug check und
    dann deploy»): gesamter Stand `c24c761..2a3a6b2` (62 Commits — Praxis-
    Etappen 1–3 inkl. Fristenspiegel · Katalog-UI/Kacheln/Suche/BGE ·
