@@ -15,3 +15,11 @@ export const BANNER_UNTERSCHREIBEN: PdfBanner = {
   titel: 'NACH DEM AUSDRUCK HANDSCHRIFTLICH DATIEREN UND UNTERSCHREIBEN',
   text: 'Die Erstellung am Computer ist zulässig (Art. 371 Abs. 1 ZGB) – gültig wird das Dokument erst mit handschriftlichem Datum und eigenhändiger Unterschrift.',
 };
+
+/** Fertig-Banner der Dokumentmappen (GmbH/AG wortgleich; KE übergibt einen
+ *  eigenen Text). Heimat hier statt in der Mappen-UI-Komponente
+ *  (react-refresh: Komponenten-Dateien exportieren nur Komponenten). */
+export const BANNER_MAPPE_FERTIG: PdfBanner = {
+  titel: 'NACH DEM AUSDRUCK DATIEREN UND UNTERSCHREIBEN',
+  text: 'Im Original beim Handelsregisteramt einzureichen (Art. 20 HRegV); per E-Mail eingereichte Unterlagen gelten als Kopien.',
+};

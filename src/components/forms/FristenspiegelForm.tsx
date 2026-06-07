@@ -7,7 +7,7 @@ import { ladeIcs } from '../icsDownload';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { KANTONE } from '../../lib/kantone';
 import { icsSammel } from '../../lib/icsExport';
-import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
+import { permalinkKodieren, permalinkLesen, istISO } from '../../lib/permalink';
 import { FSP_LINK_SPEC } from '../../lib/rechnerPermalinks';
 import {
   berechneVermieterkuendigungsSpiegel, VK_KUENDIGUNGSARTEN,
@@ -108,8 +108,6 @@ export function FristenspiegelForm() {
   // ── A.7 Klagebewilligung · A.6 Erbgang ──
   const [mietOderPacht, setMietOderPacht] = useState<boolean>(start.mietOderPacht ?? false);
   const [erbenstellung, setErbenstellung] = useState<'gesetzlich' | 'eingesetzt'>(start.erbenstellung ?? 'gesetzlich');
-
-  const istISO = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
   const ergebnis: FristenspiegelErgebnis | null = useMemo(() => {
     try {

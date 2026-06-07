@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   keDokumentmappe,
+  keVerfallDatum,
   pruefeKeGates,
   KE_DEFAULTS,
   type KeAntworten,
@@ -137,6 +138,21 @@ describe('Kapitalerhöhung GmbH — 781-Kette + 777a-Hinweis', () => {
     const g = pruefeKeGates({ ...GMBH, statutKlauseln: [] });
     expect(g.blocker).toEqual([]);
     expect(g.warnungen.join(' ')).toContain('Art. 777a Abs. 2');
+  });
+});
+
+describe('keVerfallDatum — 6-Monats-Frist (Monatsfrist-Konvention Art. 77 I Ziff. 3 OR)', () => {
+  it('entsprechender Tag im 6. Folgemonat; fehlt er, der Monatsletzte; ungültig → null', () => {
+    expect(keVerfallDatum('2026-06-01')).toBe('2026-12-01');
+    expect(keVerfallDatum('2026-08-31')).toBe('2027-02-28'); // 31.2. existiert nicht → Monatsletzter
+    expect(keVerfallDatum('2027-08-31')).toBe('2028-02-29'); // Schaltjahr
+    expect(keVerfallDatum('2026-02-30')).toBeNull();         // kein reales Datum
+    expect(keVerfallDatum('')).toBeNull();
+  });
+  it('GV-Beschluss-ENTWURF nennt das berechnete «spätestens»-Datum', () => {
+    const t = keDokumentmappe(AG).dokumente.find((d) => d.id === 'gv-beschluss')!
+      .ergebnis.dokument.absaetze.map((a) => a.text).join('\n');
+    expect(t).toContain('(d. h. spätestens am 1. Dezember 2026)'); // GV 1.6.2026 + 6 Monate
   });
 });
 

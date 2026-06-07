@@ -51,7 +51,7 @@ Kanton. → Engine-Hinweis-Zeile: «Beurkundung auch ausserkantonal zulässig.»
    Ausschliesslichkeit wie bei Grundstücken)».
 2. SH zusätzlich hervorheben: Beurkundung direkt beim Handelsregisteramt.
 3. Als `unsicher` markierte Einträge (UR, AI, BL) tragen in den Stammdaten
-   `verifiziert: false` und in der UI den Zusatz «Angabe ohne Gewähr —
+   `urlBelegt: false` (Feldname bewusst ≠ §7-`verified`) und in der UI den Zusatz «Angabe ohne Gewähr —
    Anlaufstelle kontaktieren».
 
 ## Pflegebedarf

@@ -43,6 +43,17 @@ export function letzerTagDesMonats(d: Date): Date {
   return endOfMonth(d);
 }
 
+/** ISO-String (yyyy-mm-dd) ist ein REAL existierendes Kalenderdatum?
+ *  (Format UND Monat/Tag-Plausibilität inkl. Schaltjahr via UTC-Rückvergleich.)
+ *  Heimat der Datums-Validierung (/simplify Reuse#3, 7.6.2026) — permalink.ts
+ *  re-exportiert sie als istISO für die Permalink-Specs. */
+export function istGueltigesISO(v: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) return false;
+  const [j, m, t] = v.split('-').map(Number);
+  const d = new Date(Date.UTC(j, m - 1, t));
+  return d.getUTCFullYear() === j && d.getUTCMonth() === m - 1 && d.getUTCDate() === t;
+}
+
 // ─── SkalaDauer → Enddatum (Starttag inklusive) ──────────────────────────
 //
 // letzterBezahlterTag = verhinderungBeginn + Skala-Dauer − 1 Tag

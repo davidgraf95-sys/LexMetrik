@@ -1,10 +1,11 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Field, inputCls } from '../components/vorlagen/ui';
-import { VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
+import { MappenAnsicht, MappenGates, NotariatsHinweis } from '../components/vorlagen/Dokumentmappe';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import {
   keDokumentmappe,
+  keVerfallDatum,
   KE_DEFAULTS,
   type KeAntworten,
   type KeRechtsform,
@@ -13,8 +14,6 @@ import {
   type KeKlausel,
 } from '../lib/vorlagen/kapitalerhoehung';
 import { KANTONE } from '../lib/kantone';
-import { NOTARIATE, NOTARIAT_SYSTEM_LABEL, NOTARIAT_FREIZUEGIGKEIT } from '../lib/notariate';
-import type { Kanton } from '../types/legal';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
@@ -71,8 +70,6 @@ export function VorlageKapitalerhoehung() {
   const [klauseln, setKlauseln] = useState<KeKlausel[]>([]);
   const [ort, setOrt] = useState('');
   const [datum, setDatum] = useState('');
-  const [aktivesDok, setAktivesDok] = useState('gv-beschluss');
-  const [kopiert, setKopiert] = useState(false);
 
   const naechsterKey = useRef(1);
   const neuerKey = () => naechsterKey.current++;
@@ -91,20 +88,12 @@ export function VorlageKapitalerhoehung() {
     bankName, bankOrt, befristung, berichtUnterzeichner, vorsitz, klauseln, ort, datum]);
 
   const mappe = useMemo(() => keDokumentmappe(antworten), [antworten]);
-  const dok = mappe.dokumente.find((d) => d.id === aktivesDok) ?? mappe.dokumente[0];
-
-  const kopieren = async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    setKopiert(true);
-    window.setTimeout(() => setKopiert(false), 1500);
-  };
 
   const toggleKlausel = (k: KeKlausel) =>
     setKlauseln((alt) => (alt.includes(k) ? alt.filter((x) => x !== k) : [...alt, k]));
 
   const ag = rechtsform === 'ag';
   const docxErlaubt = card?.modus === 'vorlage' && (card.output?.includes('docx') ?? false);
-  const notariat = NOTARIATE[kanton as Kanton];
 
   return (
     <div className="space-y-6">
@@ -154,18 +143,7 @@ export function VorlageKapitalerhoehung() {
           </Field>
         </div>
 
-        {notariat && (
-          <div className="lc-panel p-3 space-y-1">
-            <p className="text-body-s text-ink-700">
-              <span className="font-medium text-ink-900">Beurkundung im Kanton {kanton}:</span>{' '}
-              {NOTARIAT_SYSTEM_LABEL[notariat.system]} —{' '}
-              <a href={notariat.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:text-brass-600">{notariat.stelle}</a>
-              {!notariat.urlBelegt && <span className="text-warn-700"> (Angabe ohne Gewähr)</span>}
-            </p>
-            {notariat.hinweis && <p className="text-xs text-warn-700">{notariat.hinweis}</p>}
-            <p className="text-xs text-ink-500">{NOTARIAT_FREIZUEGIGKEIT}</p>
-          </div>
-        )}
+        <NotariatsHinweis kanton={kanton} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label={`Firma (mit Zusatz «${ag ? 'AG' : 'GmbH'}»)`}>
@@ -196,7 +174,10 @@ export function VorlageKapitalerhoehung() {
           </Field>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <Field label={`Datum ${ag ? 'GV' : 'GsV'}-Beschluss (6-Monats-Verfall!)`}>
+          <Field label={`Datum ${ag ? 'GV' : 'GsV'}-Beschluss (6-Monats-Verfall!)`}
+            hint={(() => { const v = keVerfallDatum(gvDatum); return v
+              ? `Anmeldung spätestens am ${v.split('-').reverse().join('.')} — sonst fällt der Beschluss dahin (früher anmelden; eine Wochenend-/Feiertagsverlängerung ist nicht gesichert).`
+              : undefined; })()}>
             <input type="date" className={inputCls} value={gvDatum} onChange={(e) => setGvDatum(e.target.value)} />
           </Field>
           <Field label="Kapitalerhöhungsbericht: unterzeichnet durch">
@@ -290,47 +271,11 @@ export function VorlageKapitalerhoehung() {
           </Field>
         </div>
 
-        {/* Gates */}
-        {mappe.gates.blocker.length > 0 && (
-          <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
-            {mappe.gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
-          </div>
-        )}
-        {mappe.gates.warnungen.map((w, i) => (
-          <div key={i} className="lc-notice-warn"><p className="text-body-s">{w}</p></div>
-        ))}
+        <MappenGates gates={mappe.gates} />
 
-        {/* Dokument-Auswahl + Vorschau + Export */}
-        {dok && (
-          <>
-            <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Dokumente der Mappe">
-              {mappe.dokumente.map((d) => (
-                <button key={d.id} type="button" role="tab" aria-selected={d.id === dok.id}
-                  onClick={() => setAktivesDok(d.id)}
-                  className={`lc-chip ${d.id === dok.id ? 'bg-brass-700 text-white border-brass-700' : 'hover:text-brass-700'}`}>
-                  {d.titel}
-                </button>
-              ))}
-            </div>
-            <ExportLeiste
-              ergebnis={dok.ergebnis}
-              deaktiviert={false}
-              kopiert={kopiert}
-              onKopieren={kopieren}
-              pdf={{
-                label: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? 'Entwurf als PDF' : 'Als PDF',
-                banner: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? BANNER_ENTWURF : BANNER_FERTIG,
-                dateiName: `${dok.dateiName}.pdf`,
-              }}
-              docx={docxErlaubt ? {
-                label: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? 'Entwurf als Word (DOCX)' : 'Als Word (DOCX)',
-                banner: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? BANNER_ENTWURF : BANNER_FERTIG,
-                dateiName: `${dok.dateiName}.docx`,
-              } : undefined}
-            />
-            <VorschauPanel ergebnis={dok.ergebnis} />
-          </>
-        )}
+        <MappenAnsicht dokumente={mappe.dokumente} docxErlaubt={docxErlaubt}
+          startDokId="gv-beschluss" bannerEntwurf={BANNER_ENTWURF}
+          bannerFertig={BANNER_FERTIG} />
       </section>
     </div>
   );

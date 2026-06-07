@@ -1,5 +1,5 @@
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
-import { assemble } from './engine';
+import { assemble, nummeriereUeberschriftenAlsArtikel } from './engine';
 import { fmtCHF, fmtDatum, ganzePositive, zahl } from './datum';
 import {
   gmbhGruendungsunterlagen,
@@ -102,7 +102,8 @@ export const GMBH_DOK_DEFAULTS: Omit<GmbhDokAntworten, keyof GmbhGruendungEingab
   virtuelleGv: false, ort: '', datum: '',
 };
 
-const ZEICHNUNGS_LABEL: Record<GmbhZeichnungsArt, string> = {
+/** Geteilte Basis-Labels (AG erweitert sie per Spread — /simplify Reuse#2). */
+export const ZEICHNUNGS_LABEL: Record<GmbhZeichnungsArt, string> = {
   einzelunterschrift: 'Einzelunterschrift',
   kollektivzuzweien: 'Kollektivunterschrift zu zweien',
 };
@@ -856,21 +857,6 @@ const ANMELDUNG_SCHEMA: VorlageSchema = {
   ],
 };
 
-// ── Statuten-Artikelnummerierung (Darstellungs-Konvention der Muster) ───────
-// Die Engine nummeriert «1.»; Statuten führen «Art. N – Titel». Reine
-// Überschrift-Transformation NACH assemble() – Inhalt und Reihenfolge der
-// Bausteine bleiben unberührt (§6-neutral gegenüber der Engine).
-
-function nummeriereStatutenArtikel(erg: AssembleErgebnis): AssembleErgebnis {
-  let n = 0;
-  for (const abs of erg.dokument.absaetze) {
-    if (abs.ueberschrift) {
-      n += 1;
-      abs.ueberschrift = `Art. ${n} – ${abs.ueberschrift}`;
-    }
-  }
-  return erg;
-}
 
 // ── Dokumentmappe ───────────────────────────────────────────────────────────
 
@@ -922,7 +908,7 @@ export function gmbhDokumentmappe(a: GmbhDokAntworten): { dokumente: GmbhDokumen
     id: 'statuten',
     titel: 'Statuten (Entwurf)',
     dateiName: 'gmbh-statuten-entwurf',
-    ergebnis: nummeriereStatutenArtikel(assemble(STATUTEN_SCHEMA, basis)),
+    ergebnis: nummeriereUeberschriftenAlsArtikel(assemble(STATUTEN_SCHEMA, basis)),
   });
 
   dokumente.push({

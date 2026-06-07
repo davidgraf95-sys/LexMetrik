@@ -137,6 +137,21 @@ function interpoliere(text: string, antworten: Antworten, item?: Record<string, 
 // Zyklus; der Konventions-Test sichert die Gleichheit der Muster).
 export const SCHEMA_STRICHE = /^_{6,}\s*$/;
 
+/** Statuten-Darstellungs-Konvention: Absätze MIT Überschrift fortlaufend als
+ *  «Art. N – Titel» nummerieren (nach assemble(); Inhalt/Reihenfolge bleiben
+ *  unberührt). /simplify B2 (7.6.2026): zuvor byte-identisch in der GmbH- und
+ *  der AG-Gründungs-Mappe dupliziert — fachneutrale Infrastruktur (§4). */
+export function nummeriereUeberschriftenAlsArtikel(erg: AssembleErgebnis): AssembleErgebnis {
+  let n = 0;
+  for (const abs of erg.dokument.absaetze) {
+    if (abs.ueberschrift) {
+      n += 1;
+      abs.ueberschrift = `Art. ${n} – ${abs.ueberschrift}`;
+    }
+  }
+  return erg;
+}
+
 export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleErgebnis {
   const absaetze: DokumentAbsatz[] = [];
   const aufgenommen: string[] = [];

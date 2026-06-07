@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { Field, inputCls } from './ui';
-import { VorschauPanel, ExportLeiste } from './wizard';
+import { MappenAnsicht, MappenGates, NotariatsHinweis } from './Dokumentmappe';
 import type { PdfBanner } from '../../lib/vorlagen/banner';
 import type { GmbhGruendungEingaben } from '../../lib/gruendungsunterlagen';
 import {
@@ -13,8 +13,6 @@ import {
   type GmbhZeichnungsArt,
 } from '../../lib/vorlagen/gruendungGmbhDokumente';
 import { KANTONE } from '../../lib/kantone';
-import { NOTARIATE, NOTARIAT_SYSTEM_LABEL, NOTARIAT_FREIZUEGIGKEIT } from '../../lib/notariate';
-import type { Kanton } from '../../types/legal';
 
 // ─── Dokumentmappe der GmbH-Gründung (Plan 9b Ausbaustufe, 7.6.2026) ─────────
 // Darstellung + Eingabesammlung; sämtliche Rechtslogik (Gates, Schemas,
@@ -26,11 +24,6 @@ const BANNER_ENTWURF: PdfBanner = {
   titel: 'ENTWURF – KEIN GÜLTIGES DOKUMENT',
   text: 'Vorbereitung für die Urkundsperson: Die Statuten werden notariell beglaubigt (Art. 22 Abs. 4 HRegV), der Errichtungsakt öffentlich beurkundet (Art. 777 Abs. 1 OR).',
 };
-const BANNER_FERTIG: PdfBanner = {
-  titel: 'NACH DEM AUSDRUCK DATIEREN UND UNTERSCHREIBEN',
-  text: 'Im Original beim Handelsregisteramt einzureichen (Art. 20 HRegV); per E-Mail eingereichte Unterlagen gelten als Kopien.',
-};
-
 const ZEICHNUNGS_OPTIONEN: { id: GmbhZeichnungsArt; label: string }[] = [
   { id: 'einzelunterschrift', label: 'Einzelunterschrift' },
   { id: 'kollektivzuzweien', label: 'Kollektivunterschrift zu zweien' },
@@ -66,8 +59,6 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
   const [virtuelleGv, setVirtuelleGv] = useState(false);
   const [ort, setOrt] = useState('');
   const [datum, setDatum] = useState('');
-  const [aktivesDok, setAktivesDok] = useState<string>('statuten');
-  const [kopiert, setKopiert] = useState(false);
 
   // Stabile Listen-Keys (Voll-Audit 5.6.: keine Index-Keys in Editoren)
   const naechsterKey = useRef(1);
@@ -93,13 +84,6 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
     konkurrenzBefreiung, vetoBeschluesse, virtuelleGv, ort, datum]);
 
   const mappe = useMemo(() => gmbhDokumentmappe(antworten), [antworten]);
-  const dok = mappe.dokumente.find((d) => d.id === aktivesDok) ?? mappe.dokumente[0];
-
-  const kopieren = async (text: string) => {
-    await navigator.clipboard.writeText(text);
-    setKopiert(true);
-    window.setTimeout(() => setKopiert(false), 1500);
-  };
 
   const k = antworten.statutKlauseln;
 
@@ -129,23 +113,7 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
           </select>
         </Field>
       </div>
-      {/* Wo beurkunden? — Stammdaten lib/notariate.ts (Dossier behoerden/notariate-kantone.md) */}
-      {(() => {
-        const n = NOTARIATE[kanton as Kanton];
-        if (!n) return null;
-        return (
-          <div className="rounded-md bg-surface border border-line p-3 space-y-1">
-            <p className="text-body-s text-ink-700">
-              <span className="font-medium text-ink-900">Beurkundung im Kanton {kanton}:</span>{' '}
-              {NOTARIAT_SYSTEM_LABEL[n.system]} —{' '}
-              <a href={n.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:text-brass-600">{n.stelle}</a>
-              {!n.verifiziert && <span className="text-warn-700"> (Angabe ohne Gewähr)</span>}
-            </p>
-            {n.hinweis && <p className="text-xs text-warn-700">{n.hinweis}</p>}
-            <p className="text-xs text-ink-500">{NOTARIAT_FREIZUEGIGKEIT}</p>
-          </div>
-        );
-      })()}
+      <NotariatsHinweis kanton={kanton} />
 
       <Field label="Zweck">
         <textarea className={inputCls} rows={2} value={zweck} onChange={(e) => setZweck(e.target.value)}
@@ -344,47 +312,10 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
         Statutarische Grundlage für virtuelle/hybride Gesellschafterversammlungen (Art. 805 Abs. 5 Ziff. 2bis OR)
       </label>
 
-      {/* Gates */}
-      {mappe.gates.blocker.length > 0 && (
-        <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
-          {mappe.gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
-        </div>
-      )}
-      {mappe.gates.warnungen.map((w, i) => (
-        <div key={i} className="lc-notice-warn"><p className="text-body-s">{w}</p></div>
-      ))}
+      <MappenGates gates={mappe.gates} />
 
-      {/* Dokument-Auswahl + Vorschau + Export */}
-      {dok && (
-        <>
-          <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Dokumente der Mappe">
-            {mappe.dokumente.map((d) => (
-              <button key={d.id} type="button" role="tab" aria-selected={d.id === dok.id}
-                onClick={() => setAktivesDok(d.id)}
-                className={`lc-chip ${d.id === dok.id ? 'bg-brass-700 text-white border-brass-700' : 'hover:text-brass-700'}`}>
-                {d.titel}
-              </button>
-            ))}
-          </div>
-          <ExportLeiste
-            ergebnis={dok.ergebnis}
-            deaktiviert={false}
-            kopiert={kopiert}
-            onKopieren={kopieren}
-            pdf={{
-              label: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? 'Entwurf als PDF' : 'Als PDF',
-              banner: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? BANNER_ENTWURF : BANNER_FERTIG,
-              dateiName: `${dok.dateiName}.pdf`,
-            }}
-            docx={docxErlaubt ? {
-              label: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? 'Entwurf als Word (DOCX)' : 'Als Word (DOCX)',
-              banner: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? BANNER_ENTWURF : BANNER_FERTIG,
-              dateiName: `${dok.dateiName}.docx`,
-            } : undefined}
-          />
-          <VorschauPanel ergebnis={dok.ergebnis} />
-        </>
-      )}
+      <MappenAnsicht dokumente={mappe.dokumente} docxErlaubt={docxErlaubt}
+        startDokId="statuten" bannerEntwurf={BANNER_ENTWURF} />
     </section>
   );
 }

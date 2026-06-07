@@ -1,6 +1,8 @@
+import { addMonths } from 'date-fns';
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
 import { assemble } from './engine';
 import { fmtCHF, fmtDatumLang, ganzePositive, zahl } from './datum';
+import { istGueltigesISO } from '../datumsUtils';
 import type { GmbhStatutKlausel } from '../gruendungsunterlagen';
 
 // ─── Kapitalerhöhung AG + GmbH (Plan 9c, Auftrag David 7.6.2026) ─────────────
@@ -87,6 +89,20 @@ export const KE_DEFAULTS: KeAntworten = {
   statutKlauseln: [],
   ort: '', datum: '',
 };
+
+/** Letzter Tag der 6-Monats-Anmeldefrist (Art. 650 Abs. 3 / 781 Abs. 4 OR):
+ *  der dem Beschlusstag entsprechende Tag des sechsten Folgemonats; fehlt er,
+ *  der Monatsletzte (Monatsfrist-Konvention, Art. 77 Abs. 1 Ziff. 3 OR —
+ *  date-fns addMonths klemmt exakt so). Quercheck-Befund N-2 (7.6.2026):
+ *  zuvor nur Regel-Hinweis ohne Datum. KEINE Wochenend-/Feiertagsverlängerung
+ *  unterstellt (für die HReg-Anmeldung nicht gesichert) — UI sagt darum
+ *  «spätestens» und rät zur früheren Anmeldung. */
+export function keVerfallDatum(gvDatumIso: string): string | null {
+  if (!istGueltigesISO(gvDatumIso)) return null;
+  const [j, m, t] = gvDatumIso.split('-').map(Number);
+  const ende = addMonths(new Date(Date.UTC(j, m - 1, t)), 6);
+  return ende.toISOString().slice(0, 10);
+}
 
 // ── Gates (geteilte Arithmetik, §2) ─────────────────────────────────────────
 
@@ -214,6 +230,10 @@ function basisAntworten(a: KeAntworten): Antworten {
     einzahlungFmt: fmtCHF(String(neue * ab)),
     neueGesamtAnzahl: String(bisherAnzahl + neue),
     gvDatumLang: a.gvDatum ? fmtDatumLang(a.gvDatum) : '________',
+    verfallDatumSatz: (() => {
+      const v = keVerfallDatum(a.gvDatum);
+      return v ? ` (d. h. spätestens am ${fmtDatumLang(v)})` : '';
+    })(),
     ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}den ${datum}`,
     klauselHinweisListe: a.statutKlauseln
       .map((k) => KLAUSEL_HINWEIS_777A[k])
@@ -317,7 +337,7 @@ function gvSchema(r: KeRechtsform): VorlageSchema {
         text:
           `Diese Erhöhung des ${t.kapital}s ist ${r === 'ag' ? 'vom Verwaltungsrat' : 'von der Geschäftsführung'} ` +
           'innerhalb von sechs Monaten durchzuführen. Wird die Kapitalerhöhung nicht innerhalb dieser ' +
-          'Frist beim Handelsregisteramt zur Eintragung angemeldet, so fällt der heutige Beschluss dahin.',
+          'Frist{{verfallDatumSatz}} beim Handelsregisteramt zur Eintragung angemeldet, so fällt der heutige Beschluss dahin.',
         norm: t.normVerfall,
         begruendung: 'Sechs-Monats-Verfall nach der ZH-Vorlage (Haus-Fassung: rechtsform-neutral gekürzt, Norm-Anker im Normfeld statt im Fliesstext).',
       },

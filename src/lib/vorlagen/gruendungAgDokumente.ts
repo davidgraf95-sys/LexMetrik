@@ -1,8 +1,8 @@
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
-import { assemble } from './engine';
-import { fmtCHF, fmtDatum, zahl } from './datum';
+import { assemble, nummeriereUeberschriftenAlsArtikel } from './engine';
+import { fmtCHF, fmtDatum, ganzePositive, zahl } from './datum';
 import { agGruendungsunterlagen, type AgGruendungEingaben } from '../gruendungsunterlagen';
-import type { GmbhZeichnungsArt } from './gruendungGmbhDokumente';
+import { ZEICHNUNGS_LABEL, type GmbhZeichnungsArt } from './gruendungGmbhDokumente';
 
 // ─── AG-Gründungs-VOLLDOKUMENTE (Plan 9b, «danach gleiches Muster für die AG»)
 //
@@ -101,16 +101,16 @@ export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = 
   ort: '', datum: '',
 };
 
+// Basis-Labels aus der GmbH-Mappe (eine Quelle, /simplify Reuse#2);
+// AG ergänzt nur die ZH-Protokoll-Spezialfälle (D14).
 const VR_ZEICHNUNGS_LABEL: Record<AgVrZeichnungsArt, string> = {
-  einzelunterschrift: 'Einzelunterschrift',
-  kollektivzuzweien: 'Kollektivunterschrift zu zweien',
-  ohne: 'ohne Zeichnungsberechtigung',          // ZH-Muster-Protokoll (D14)
+  ...ZEICHNUNGS_LABEL,
+  ohne: 'ohne Zeichnungsberechtigung',
 };
 
 const VERTRETUNGS_ZEICHNUNGS_LABEL: Record<AgVertretungsZeichnungsArt, string> = {
-  einzelunterschrift: 'Einzelunterschrift',
-  kollektivzuzweien: 'Kollektivunterschrift zu zweien',
-  kollektivprokura: 'Kollektivprokura zu zweien', // ZH-Muster-Protokoll (D14)
+  ...ZEICHNUNGS_LABEL,
+  kollektivprokura: 'Kollektivprokura zu zweien',
 };
 
 // ── Gates ───────────────────────────────────────────────────────────────────
@@ -151,7 +151,14 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   } else {
     if (nennwert <= 0) blocker.push('Der Nennwert muss grösser als null sein (Art. 622 Abs. 4 OR).');
     if (kapital < 100_000) blocker.push('Das Aktienkapital beträgt mindestens CHF 100\'000 (Art. 621 Abs. 1 OR).');
-    if (anzahl <= 0 || !Number.isInteger(anzahl)) blocker.push('Anzahl Aktien als ganze Zahl angeben.');
+    if (ganzePositive(a.anzahlAktien) === null) blocker.push('Anzahl Aktien als positive ganze Zahl angeben.');
+    // Gleiche Befundklasse wie KE-M-1 (/simplify-Nachzug): keine «3.5 Aktien»
+    // in der Zeichnungszeile des Errichtungsakts.
+    for (const g of a.gruender) {
+      if (g.name.trim() && ganzePositive(g.anzahl) === null) {
+        blocker.push(`Gezeichnete Aktienzahl von ${g.name.trim()} als positive ganze Zahl angeben.`);
+      }
+    }
     if (nennwert > 0 && anzahl > 0 && Math.abs(anzahl * nennwert - kapital) > 0.005) {
       blocker.push(
         `Rechnerische Unstimmigkeit: ${a.anzahlAktien} Aktien × CHF ${fmtCHF(a.nennwertChf)} ergeben nicht das Aktienkapital von CHF ${fmtCHF(a.aktienkapitalChf)}.`,
@@ -1189,18 +1196,6 @@ const ANMELDUNG_SCHEMA: VorlageSchema = {
   ],
 };
 
-// ── Statuten-Artikelnummerierung (wie GmbH – Darstellungs-Konvention) ───────
-
-function nummeriereStatutenArtikel(erg: AssembleErgebnis): AssembleErgebnis {
-  let n = 0;
-  for (const abs of erg.dokument.absaetze) {
-    if (abs.ueberschrift) {
-      n += 1;
-      abs.ueberschrift = `Art. ${n} – ${abs.ueberschrift}`;
-    }
-  }
-  return erg;
-}
 
 // Errichtungsakt: römische Ziffern werden NACH der Weichen-Auswertung vergeben
 // (lückenlos auch ohne optionale Abschnitte wie die Nachtragsvollmacht, D10);
@@ -1256,7 +1251,7 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
     id: 'statuten',
     titel: 'Statuten (Entwurf)',
     dateiName: 'ag-statuten-entwurf',
-    ergebnis: nummeriereStatutenArtikel(assemble(STATUTEN_SCHEMA, basis)),
+    ergebnis: nummeriereUeberschriftenAlsArtikel(assemble(STATUTEN_SCHEMA, basis)),
   });
 
   dokumente.push({
