@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { agGruendungsunterlagen, type EinlageArt, type Phase } from '../lib/gruendungsunterlagen';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
@@ -91,83 +91,168 @@ const FINMA_BEGRIFFE: { begriff: string; muster: RegExp }[] = [
   { begriff: 'Wertpapierhaus', muster: /wertpapierhaus/i },
 ];
 
+// ─── Punkt 7 (Perfektion): lokale Zwischenspeicherung ────────────────────────
+// Versioniertes JSON unter EINEM Schlüssel; Hydration mit Normalisieren-
+// Guards je Feld (Wizard-PFLICHT-Konvention: je Zeile fehlende Felder mit
+// Defaults auffüllen, falsche Typen verwerfen — nie ungeprüft in den State).
+const STORAGE_KEY = 'lexmetrik:ag-gruendung:v1';
+
+function ladeStand(): Record<string, unknown> | null {
+  // Nackter localStorage-Zugriff wie useWizardState: im SSR-Smoke wirft er
+  // (ReferenceError) und wird gefangen; der Test-Stub liegt auf globalThis.
+  try {
+    const roh = localStorage.getItem(STORAGE_KEY);
+    if (!roh) return null;
+    const json: unknown = JSON.parse(roh);
+    if (!json || typeof json !== 'object') return null;
+    const o = json as { v?: unknown; stand?: unknown };
+    if (o.v !== 1 || !o.stand || typeof o.stand !== 'object' || Array.isArray(o.stand)) return null;
+    return o.stand as Record<string, unknown>;
+  } catch {
+    return null; // defekter/blockierter Speicher = wie «nichts gespeichert»
+  }
+}
+
+const txt = (v: unknown, def: string) => (typeof v === 'string' ? v : def);
+const bool = (v: unknown, def: boolean) => (typeof v === 'boolean' ? v : def);
+const wahl = <T extends string>(v: unknown, erlaubt: readonly T[], def: T): T =>
+  typeof v === 'string' && (erlaubt as readonly string[]).includes(v) ? (v as T) : def;
+
+/** Array-Hydration: nur Objekt-Zeilen übernehmen, je Feld der Vorlage den
+ *  gespeicherten Wert nur bei passendem Typ (Wahl-Felder nur bei erlaubtem
+ *  Wert) — sonst Default; keys werden NEU vergeben (1…n je Liste). */
+function zeilenGuard<T extends Record<string, string | boolean | undefined>>(
+  roh: unknown,
+  vorlage: Required<T>,
+  wahlFelder: Partial<Record<keyof T, readonly string[]>> = {},
+): (T & { key: number })[] {
+  if (!Array.isArray(roh)) return [];
+  return roh
+    .filter((z): z is Record<string, unknown> => z !== null && typeof z === 'object' && !Array.isArray(z))
+    .map((z, i) => {
+      const zeile: Record<string, string | boolean | number | undefined> = { ...vorlage, key: i + 1 };
+      for (const feld of Object.keys(vorlage)) {
+        const wert = z[feld];
+        const erlaubt = wahlFelder[feld];
+        if (erlaubt) {
+          if (typeof wert === 'string' && (erlaubt as readonly string[]).includes(wert)) zeile[feld] = wert;
+        } else if ((typeof wert === 'string' || typeof wert === 'boolean') && typeof wert === typeof vorlage[feld]) {
+          zeile[feld] = wert;
+        }
+      }
+      return zeile as unknown as T & { key: number };
+    });
+}
+
+const GRUENDER_LEER: Required<AgGruenderZeile> = { name: '', angaben: '', anzahl: '', liberierung: '' };
+const VR_LEER: Required<AgVrZeile> = {
+  name: '', herkunft: '', wohnort: '', adresse: '', praesident: false,
+  zeichnungsArt: 'einzelunterschrift', annahmeInUrkunde: false,
+};
+const VERTRETUNG_LEER: Required<AgVertretungsZeile> = { name: '', funktion: '', zeichnungsArt: 'kollektivzuzweien' };
+const SACHEINLAGE_LEER: Required<AgSacheinlageZeile> = {
+  typ: 'sachgesamtheit', bezeichnung: '', belegDatum: '', wertChf: '', grundstueck: false,
+  einlegerName: '', aktienAnzahl: '', gutschriftChf: '', zustand: '',
+  imHrEingetragen: false, cheNr: '', aktivenChf: '', passivenChf: '', rueckwirkungDatum: '',
+};
+const VERRECHNUNG_LEER: Required<AgVerrechnungZeile> = { glaeubigerName: '', forderungChf: '', aktienAnzahl: '', begruendungTxt: '' };
+const VORTEIL_LEER: Required<AgVorteilZeile> = { beguenstigter: '', inhalt: '', wertChf: '', begruendungTxt: '' };
+
 export function VorlageAgGruendung() {
   const card = karte('ag-gruendung');
+
+  // Punkt 7: gespeicherter Stand wird GENAU EINMAL gelesen (Lazy-Init);
+  // alle Eingabe-States hydratisieren daraus mit Typ-Guards.
+  const [stand] = useState(ladeStand);
 
   // ── Schritt-Navigation ──
   const [schritt, setSchritt] = useState(0);
 
   // ── Konstellation (Checklisten-Weichen, §5) ──
-  const [einlageArt, setEinlageArt] = useState<EinlageArt>('bar');
-  const [besondereVorteile, setBesondereVorteile] = useState(false);
-  const [optingOut, setOptingOut] = useState(true);
-  const [eigeneBueros, setEigeneBueros] = useState(true);
-  const [immobilienHauptzweck, setImmobilienHauptzweck] = useState(false);
-  const [inhaberaktien, setInhaberaktien] = useState(false);
-  const [fremdwaehrung, setFremdwaehrung] = useState(false);
-  const [bankInUrkunde, setBankInUrkunde] = useState(true);
-  const [chVertretung, setChVertretung] = useState(true);
-  const [leistungen, setLeistungen] = useState('');
+  const [einlageArt, setEinlageArt] = useState<EinlageArt>(() => wahl(stand?.einlageArt, ['bar', 'sacheinlage', 'verrechnung', 'gemischt'], 'bar'));
+  const [besondereVorteile, setBesondereVorteile] = useState(() => bool(stand?.besondereVorteile, false));
+  const [optingOut, setOptingOut] = useState(() => bool(stand?.optingOut, true));
+  const [eigeneBueros, setEigeneBueros] = useState(() => bool(stand?.eigeneBueros, true));
+  const [immobilienHauptzweck, setImmobilienHauptzweck] = useState(() => bool(stand?.immobilienHauptzweck, false));
+  const [inhaberaktien, setInhaberaktien] = useState(() => bool(stand?.inhaberaktien, false));
+  const [fremdwaehrung, setFremdwaehrung] = useState(() => bool(stand?.fremdwaehrung, false));
+  const [bankInUrkunde, setBankInUrkunde] = useState(() => bool(stand?.bankInUrkunde, true));
+  const [chVertretung, setChVertretung] = useState(() => bool(stand?.chVertretung, true));
+  const [leistungen, setLeistungen] = useState(() => txt(stand?.leistungen, ''));
 
   // ── Gesellschaft & Statuten ──
-  const [firma, setFirma] = useState('');
-  const [sitz, setSitz] = useState('');
-  const [kanton, setKanton] = useState('ZH');
-  const [zweck, setZweck] = useState('');
-  const [zweckErweiterung, setZweckErweiterung] = useState(true);
-  const [statutenUmfang, setStatutenUmfang] = useState<AgDokAntworten['statutenUmfang']>('kurz');
-  const [vinkulierung, setVinkulierung] = useState(false);
-  const [virtuelleGv, setVirtuelleGv] = useState(false);
-  const [gjBeginn, setGjBeginn] = useState(AG_DOK_DEFAULTS.gjBeginn);
-  const [gjEnde, setGjEnde] = useState(AG_DOK_DEFAULTS.gjEnde);
+  const [firma, setFirma] = useState(() => txt(stand?.firma, ''));
+  const [sitz, setSitz] = useState(() => txt(stand?.sitz, ''));
+  const [kanton, setKanton] = useState<string>(() => wahl(stand?.kanton, KANTONE, 'ZH'));
+  const [zweck, setZweck] = useState(() => txt(stand?.zweck, ''));
+  const [zweckErweiterung, setZweckErweiterung] = useState(() => bool(stand?.zweckErweiterung, true));
+  const [statutenUmfang, setStatutenUmfang] = useState<AgDokAntworten['statutenUmfang']>(() => wahl(stand?.statutenUmfang, ['kurz', 'lang'], 'kurz'));
+  const [vinkulierung, setVinkulierung] = useState(() => bool(stand?.vinkulierung, false));
+  const [virtuelleGv, setVirtuelleGv] = useState(() => bool(stand?.virtuelleGv, false));
+  const [gjBeginn, setGjBeginn] = useState(() => txt(stand?.gjBeginn, AG_DOK_DEFAULTS.gjBeginn));
+  const [gjEnde, setGjEnde] = useState(() => txt(stand?.gjEnde, AG_DOK_DEFAULTS.gjEnde));
 
   // ── Kapital & Einlagen ──
-  const [ak, setAk] = useState(AG_DOK_DEFAULTS.aktienkapitalChf);
-  const [anzahl, setAnzahl] = useState(AG_DOK_DEFAULTS.anzahlAktien);
-  const [nennwert, setNennwert] = useState(AG_DOK_DEFAULTS.nennwertChf);
-  const [liberierung, setLiberierung] = useState(AG_DOK_DEFAULTS.liberierungProzent);
-  const [ausgabebetrag, setAusgabebetrag] = useState('');
-  const [waehrung, setWaehrung] = useState<AgWaehrung>('EUR');
-  const [kursChf, setKursChf] = useState('');
-  const [kursQuelle, setKursQuelle] = useState('');
-  const [bankName, setBankName] = useState('');
-  const [bankOrt, setBankOrt] = useState('');
-  const [sacheinlagen, setSacheinlagen] = useState<(AgSacheinlageZeile & { key: number })[]>([]);
-  const [verrechnungen, setVerrechnungen] = useState<(AgVerrechnungZeile & { key: number })[]>([]);
-  const [vorteile, setVorteile] = useState<(AgVorteilZeile & { key: number })[]>([]);
-  const [revisorName, setRevisorName] = useState('');
+  const [ak, setAk] = useState(() => txt(stand?.ak, AG_DOK_DEFAULTS.aktienkapitalChf));
+  const [anzahl, setAnzahl] = useState(() => txt(stand?.anzahl, AG_DOK_DEFAULTS.anzahlAktien));
+  const [nennwert, setNennwert] = useState(() => txt(stand?.nennwert, AG_DOK_DEFAULTS.nennwertChf));
+  const [liberierung, setLiberierung] = useState(() => txt(stand?.liberierung, AG_DOK_DEFAULTS.liberierungProzent));
+  const [ausgabebetrag, setAusgabebetrag] = useState(() => txt(stand?.ausgabebetrag, ''));
+  const [waehrung, setWaehrung] = useState<AgWaehrung>(() => wahl(stand?.waehrung, AG_FREMDWAEHRUNGEN, 'EUR'));
+  const [kursChf, setKursChf] = useState(() => txt(stand?.kursChf, ''));
+  const [kursQuelle, setKursQuelle] = useState(() => txt(stand?.kursQuelle, ''));
+  const [bankName, setBankName] = useState(() => txt(stand?.bankName, ''));
+  const [bankOrt, setBankOrt] = useState(() => txt(stand?.bankOrt, ''));
+  const [sacheinlagen, setSacheinlagen] = useState<(AgSacheinlageZeile & { key: number })[]>(
+    () => zeilenGuard<AgSacheinlageZeile>(stand?.sacheinlagen, SACHEINLAGE_LEER, { typ: ['sachgesamtheit', 'geschaeft'] }));
+  const [verrechnungen, setVerrechnungen] = useState<(AgVerrechnungZeile & { key: number })[]>(
+    () => zeilenGuard<AgVerrechnungZeile>(stand?.verrechnungen, VERRECHNUNG_LEER));
+  const [vorteile, setVorteile] = useState<(AgVorteilZeile & { key: number })[]>(
+    () => zeilenGuard<AgVorteilZeile>(stand?.vorteile, VORTEIL_LEER));
+  const [revisorName, setRevisorName] = useState(() => txt(stand?.revisorName, ''));
 
   // ── Personen & Organe ──
-  const [gruender, setGruender] = useState<(AgGruenderZeile & { key: number })[]>([]);
-  const [vr, setVr] = useState<(AgVrZeile & { key: number })[]>([]);
-  const [vertretungen, setVertretungen] = useState<(AgVertretungsZeile & { key: number })[]>([]);
-  const [protokollfuehrer, setProtokollfuehrer] = useState('');
-  const [sitzungBeginn, setSitzungBeginn] = useState('');
-  const [sitzungEnde, setSitzungEnde] = useState('');
-  const [rsName, setRsName] = useState('');
-  const [rsSitz, setRsSitz] = useState('');
+  const [gruender, setGruender] = useState<(AgGruenderZeile & { key: number })[]>(
+    () => zeilenGuard<AgGruenderZeile>(stand?.gruender, GRUENDER_LEER));
+  const [vr, setVr] = useState<(AgVrZeile & { key: number })[]>(
+    () => zeilenGuard<AgVrZeile>(stand?.vr, VR_LEER, { zeichnungsArt: VR_ZEICHNUNGS_OPTIONEN.map((o) => o.id) }));
+  const [vertretungen, setVertretungen] = useState<(AgVertretungsZeile & { key: number })[]>(
+    () => zeilenGuard<AgVertretungsZeile>(stand?.vertretungen, VERTRETUNG_LEER, { zeichnungsArt: VERTRETUNGS_ZEICHNUNGS_OPTIONEN.map((o) => o.id) }));
+  const [protokollfuehrer, setProtokollfuehrer] = useState(() => txt(stand?.protokollfuehrer, ''));
+  const [sitzungBeginn, setSitzungBeginn] = useState(() => txt(stand?.sitzungBeginn, ''));
+  const [sitzungEnde, setSitzungEnde] = useState(() => txt(stand?.sitzungEnde, ''));
+  const [rsName, setRsName] = useState(() => txt(stand?.rsName, ''));
+  const [rsSitz, setRsSitz] = useState(() => txt(stand?.rsSitz, ''));
 
   // ── Domizil & Optionen ──
-  const [rechtsdomizil, setRechtsdomizil] = useState('');
-  const [domizilhalterName, setDomizilhalterName] = useState('');
-  const [domizilhalterAdresse, setDomizilhalterAdresse] = useState('');
-  const [konstituierungInUrkunde, setKonstituierungInUrkunde] = useState(false);
-  const [domizilNurAnmeldung, setDomizilNurAnmeldung] = useState(false);
-  const [nachtragsbevollmaechtigter, setNachtragsbevollmaechtigter] = useState('');
-  const [lkAusland, setLkAusland] = useState(false);
-  const [lkNeuerwerb, setLkNeuerwerb] = useState(false);
-  const [lkGrundstueck, setLkGrundstueck] = useState(false);
-  const [nachtragAktiv, setNachtragAktiv] = useState(false);
-  const [ntGruendungsdatum, setNtGruendungsdatum] = useState('');
-  const [ntUrkundeZiffer, setNtUrkundeZiffer] = useState('');
-  const [ntUrkundeText, setNtUrkundeText] = useState('');
-  const [ntStatutenArtikel, setNtStatutenArtikel] = useState('');
-  const [ntStatutenAbsatz, setNtStatutenAbsatz] = useState('');
-  const [ntStatutenText, setNtStatutenText] = useState('');
-  const [ort, setOrt] = useState('');
-  const [datum, setDatum] = useState(() => new Date().toISOString().slice(0, 10));
+  const [rechtsdomizil, setRechtsdomizil] = useState(() => txt(stand?.rechtsdomizil, ''));
+  const [domizilhalterName, setDomizilhalterName] = useState(() => txt(stand?.domizilhalterName, ''));
+  const [domizilhalterAdresse, setDomizilhalterAdresse] = useState(() => txt(stand?.domizilhalterAdresse, ''));
+  const [konstituierungInUrkunde, setKonstituierungInUrkunde] = useState(() => bool(stand?.konstituierungInUrkunde, false));
+  const [domizilNurAnmeldung, setDomizilNurAnmeldung] = useState(() => bool(stand?.domizilNurAnmeldung, false));
+  const [nachtragsbevollmaechtigter, setNachtragsbevollmaechtigter] = useState(() => txt(stand?.nachtragsbevollmaechtigter, ''));
+  const [lkAusland, setLkAusland] = useState(() => bool(stand?.lkAusland, false));
+  const [lkNeuerwerb, setLkNeuerwerb] = useState(() => bool(stand?.lkNeuerwerb, false));
+  const [lkGrundstueck, setLkGrundstueck] = useState(() => bool(stand?.lkGrundstueck, false));
+  const [nachtragAktiv, setNachtragAktiv] = useState(() => bool(stand?.nachtragAktiv, false));
+  const [ntGruendungsdatum, setNtGruendungsdatum] = useState(() => txt(stand?.ntGruendungsdatum, ''));
+  const [ntUrkundeZiffer, setNtUrkundeZiffer] = useState(() => txt(stand?.ntUrkundeZiffer, ''));
+  const [ntUrkundeText, setNtUrkundeText] = useState(() => txt(stand?.ntUrkundeText, ''));
+  const [ntStatutenArtikel, setNtStatutenArtikel] = useState(() => txt(stand?.ntStatutenArtikel, ''));
+  const [ntStatutenAbsatz, setNtStatutenAbsatz] = useState(() => txt(stand?.ntStatutenAbsatz, ''));
+  const [ntStatutenText, setNtStatutenText] = useState(() => txt(stand?.ntStatutenText, ''));
+  const [ort, setOrt] = useState(() => txt(stand?.ort, ''));
+  // Punkt 7: Datum-Default «heute» NUR, wenn kein gespeicherter Wert vorliegt.
+  const [datum, setDatum] = useState(() => txt(stand?.datum, '') || new Date().toISOString().slice(0, 10));
 
-  const naechsterKey = useRef(1);
+  // Zähler über den gespeicherten Stand heben: Hydration vergibt je Liste die
+  // Keys 1…n neu, der Zähler startet darum oberhalb der längsten Liste (und
+  // mindestens beim gespeicherten Zählerstand).
+  const naechsterKey = useRef(Math.max(
+    typeof stand?.naechsterKey === 'number' && Number.isInteger(stand.naechsterKey) ? stand.naechsterKey : 1,
+    1 + Math.max(0, ...[stand?.gruender, stand?.vr, stand?.vertretungen, stand?.sacheinlagen, stand?.verrechnungen, stand?.vorteile]
+      .map((a) => (Array.isArray(a) ? a.length : 0))),
+  ));
   const neuerKey = () => naechsterKey.current++;
 
   const weichen = useMemo(() => {
@@ -241,26 +326,70 @@ export function VorlageAgGruendung() {
     </div>
   );
 
-  // Sammel-Download (Auftrag David): alle notwendigen Dokumente nacheinander
-  // als PDF — Banner je nach ausgabeArt wie beim Einzel-Export.
+  // Punkt 7: ALLE Eingabe-States (inkl. Weichen, Arrays und Key-Zähler) als
+  // versioniertes JSON zwischenspeichern. Läuft nach jedem Render — jeder
+  // Tastendruck rendert ohnehin, das Schreiben ist günstig und idempotent.
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        v: 1,
+        stand: {
+          einlageArt, besondereVorteile, optingOut, eigeneBueros, immobilienHauptzweck,
+          inhaberaktien, fremdwaehrung, bankInUrkunde, chVertretung, leistungen,
+          firma, sitz, kanton, zweck, zweckErweiterung, statutenUmfang, vinkulierung,
+          virtuelleGv, gjBeginn, gjEnde,
+          ak, anzahl, nennwert, liberierung, ausgabebetrag, waehrung, kursChf, kursQuelle,
+          bankName, bankOrt, sacheinlagen, verrechnungen, vorteile, revisorName,
+          gruender, vr, vertretungen, protokollfuehrer, sitzungBeginn, sitzungEnde, rsName, rsSitz,
+          rechtsdomizil, domizilhalterName, domizilhalterAdresse, konstituierungInUrkunde,
+          domizilNurAnmeldung, nachtragsbevollmaechtigter, lkAusland, lkNeuerwerb, lkGrundstueck,
+          nachtragAktiv, ntGruendungsdatum, ntUrkundeZiffer, ntUrkundeText,
+          ntStatutenArtikel, ntStatutenAbsatz, ntStatutenText, ort, datum,
+          naechsterKey: naechsterKey.current,
+        },
+      }));
+    } catch {
+      // Speicher blockiert/voll → Zwischenspeicherung still aus; die Maske
+      // funktioniert unverändert (nichts verlässt den Browser, §8).
+    }
+  });
+
+  // Punkt 6 (Perfektion): Sammel-Download als EIN ZIP — alle Dokumente der
+  // Mappe via vorlagenPdfDokument (jsPDF-Doc, NICHT …Erzeugen) zu
+  // ArrayBuffers, mit fflate gepackt; Banner je ausgabeArt wie beim
+  // Einzel-Export. Einzel-Downloads (MappenAnsicht) bleiben bestehen.
   const [batchLaeuft, setBatchLaeuft] = useState(false);
   const [batchMeldung, setBatchMeldung] = useState<string | null>(null);
   const alleHerunterladen = async () => {
     setBatchLaeuft(true);
     setBatchMeldung(null);
     try {
-      const { vorlagenPdfErzeugen } = await import('../lib/vorlagen/vorlagenPdf');
+      const [{ vorlagenPdfDokument }, { zipSync }] = await Promise.all([
+        import('../lib/vorlagen/vorlagenPdf'),
+        import('fflate'),
+      ]);
+      const eintraege: Record<string, Uint8Array> = {};
       for (const d of mappe.dokumente) {
         const entwurf = d.ergebnis.dokument.ausgabeArt === 'entwurf';
-        // Sequenziell (await) — Browser bündeln Mehrfach-Downloads nur bei
-        // einer Nutzer-Geste zuverlässig, parallele Erzeugung verzahnt die
-        // PDF-Worker.
-        await vorlagenPdfErzeugen(d.ergebnis, {
-          banner: entwurf ? BANNER_ENTWURF : BANNER_MAPPE_FERTIG,
-          dateiName: `${d.dateiName}.pdf`,
-        });
+        const doc = vorlagenPdfDokument(d.ergebnis, { banner: entwurf ? BANNER_ENTWURF : BANNER_MAPPE_FERTIG });
+        // Mehrere gleichnamige Dokumente (z. B. zwei Sacheinlageverträge)
+        // dürfen sich im ZIP nicht überschreiben → Suffix -2, -3, …
+        let name = `${d.dateiName}.pdf`;
+        for (let n = 2; name in eintraege; n++) name = `${d.dateiName}-${n}.pdf`;
+        eintraege[name] = new Uint8Array(doc.output('arraybuffer'));
       }
-      setBatchMeldung(`${mappe.dokumente.length} Dokumente heruntergeladen.`);
+      const slug = (firma.trim().toLowerCase()
+        .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')) || 'ag';
+      const blob = new Blob([zipSync(eintraege)], { type: 'application/zip' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `gruendung-${slug}.zip`;
+      a.click();
+      URL.revokeObjectURL(url);
+      setBatchMeldung(`${mappe.dokumente.length} Dokumente als ZIP heruntergeladen (gruendung-${slug}.zip).`);
     } catch (e) {
       setBatchMeldung(e instanceof Error ? e.message : 'Der Sammel-Download ist fehlgeschlagen. Bitte erneut versuchen.');
     } finally {
@@ -268,7 +397,16 @@ export function VorlageAgGruendung() {
     }
   };
 
-  const zuruecksetzen = () => window.location.reload();
+  // Punkt 7: Zurücksetzen löscht auch die lokale Zwischenspeicherung —
+  // sonst hydratisiert der Reload den alten Stand sofort wieder.
+  const zuruecksetzen = () => {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Speicher blockiert — Reload setzt dann nur die Sitzung zurück.
+    }
+    window.location.reload();
+  };
 
   // ── Schritt-Inhalte ──
   const schrittKonstellation = (
@@ -853,11 +991,11 @@ export function VorlageAgGruendung() {
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-3">
             <button type="button" className="lc-btn-primary" disabled={batchLaeuft} onClick={alleHerunterladen}>
-              {batchLaeuft ? 'Erzeuge PDFs …' : `Alle ${mappe.dokumente.length} Dokumente herunterladen (PDF)`}
+              {batchLaeuft ? 'Erzeuge ZIP …' : `Alle ${mappe.dokumente.length} Dokumente herunterladen (ZIP)`}
             </button>
             <p className="text-xs text-ink-500 max-w-reading">
-              Lädt alle notwendigen Dokumente Ihrer Konstellation nacheinander herunter — Statuten und
-              Errichtungsakt (sowie Sacheinlageverträge mit Grundstück) als ENTWURF mit Wasserzeichen,
+              Lädt alle notwendigen Dokumente Ihrer Konstellation als eine ZIP-Datei herunter — Statuten
+              und Errichtungsakt (sowie Sacheinlageverträge mit Grundstück) als ENTWURF mit Wasserzeichen,
               die übrigen druckfertig.
             </p>
           </div>
@@ -1015,7 +1153,7 @@ export function VorlageAgGruendung() {
       }
       norms={card?.norms ?? []}
       badge="Dokumentmappe (Urkunde als Entwurf)"
-      fussnote="Eingaben verlassen den Browser nicht; keine Speicherung."
+      fussnote="Eingaben verlassen den Browser nicht; lokale Zwischenspeicherung auf diesem Gerät — «Zurücksetzen» löscht sie."
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE}
       schritt={schritt}
