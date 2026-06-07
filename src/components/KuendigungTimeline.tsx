@@ -48,7 +48,7 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
               style={{ left: `${l}%`, width: `${breite}%`, boxShadow: 'inset 0 0 0 1px var(--warn-500)' }}
               title={`Sperrfrist ${TYP_LABEL[iv.typ] ?? iv.typ}: ${fmt(iv.von)} – ${fmt(iv.bis)}`}>
               {breite > 22 && (
-                <span className="text-warn-700 truncate px-2" style={{ fontSize: '0.6rem' }}>
+                <span className="text-warn-700 truncate px-2 text-micro">
                   {TYP_LABEL[iv.typ] ?? iv.typ}
                 </span>
               )}
@@ -93,8 +93,8 @@ function Marker({ p, iso, color, label, oben = false }: { p: number; iso?: strin
       {/* Beschriftung */}
       <div className="absolute flex flex-col pointer-events-none"
         style={{ ...(oben ? { top: 0 } : { bottom: 0 }), ...anker }}>
-        <span className="num text-ink-700 whitespace-nowrap leading-tight" style={{ fontSize: '0.65rem' }}>{fmt(iso)}</span>
-        <span className="whitespace-nowrap font-medium leading-tight" style={{ fontSize: '0.65rem', color, order: oben ? -1 : 1 }}>{label}</span>
+        <span className="num text-ink-700 whitespace-nowrap leading-tight text-micro">{fmt(iso)}</span>
+        <span className="whitespace-nowrap font-medium leading-tight text-micro" style={{ color, order: oben ? -1 : 1 }}>{label}</span>
       </div>
     </>
   );

@@ -58,7 +58,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
               {/* Monat als gravierte Anzeige: Overline + Mono-Jahr */}
               <p className="lc-overline text-ink-600 mb-2">{MONATE[m]} <span className="num text-brass-700">{jahr}</span></p>
               <div className="grid grid-cols-7 gap-x-0 gap-y-0.5 text-center">
-                {WTAGE.map((w) => <div key={w} className="lc-overline text-ink-500 py-1" style={{ fontSize: '0.6rem' }}>{w}</div>)}
+                {WTAGE.map((w) => <div key={w} className="lc-overline text-ink-500 py-1">{w}</div>)}
                 {zellen.map((d, i) => {
                   if (!d) return <div key={i} />;
                   const isEreignis = isSameDay(d, ereignis);
@@ -75,7 +75,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                   const rundR = col === 6 || d.getDate() === anzahl || bandStatus(folgetag) !== band;
 
                   // Marker-Ebene: runde Schlüsseltage über dem Band
-                  let marker = frei ? 'text-ink-300' : 'text-ink-700';
+                  let marker = frei ? 'text-ink-400' : 'text-ink-700'; // ink-400 statt 300: Kontrast-Kompromiss (FAHRPLAN-DESIGN 3.5)
                   let title = frei ? 'arbeitsfrei (Sa/So/Feiertag)' : '';
                   if (isAdQuem) { marker = 'bg-sage-500 text-paper font-semibold rounded-full'; title = L.adquem; }
                   else if (isAQuo) { marker = 'bg-brass-500 text-ink-900 font-semibold rounded-full'; title = L.aquo; }
@@ -121,7 +121,7 @@ function Legende({ kreis, band, label, muted }: { kreis?: string; band?: string;
     <span className="inline-flex items-center gap-1.5">
       {kreis && <span className={`inline-block w-3.5 h-3.5 rounded-full ${kreis}`} />}
       {band && <span className={`inline-block w-5 h-3 rounded-full ${band}`} />}
-      {muted && <span className="text-micro text-ink-300 leading-none font-medium">Sa</span>}
+      {muted && <span className="text-micro text-ink-400 leading-none font-medium">Sa</span>}
       {label}
     </span>
   );

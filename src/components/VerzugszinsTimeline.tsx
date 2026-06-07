@@ -105,8 +105,8 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
           {marker.map((m, i) => (
             <div key={i} title={m.texte.join(' · ')}>
               <span aria-hidden className="absolute inset-y-0 w-px bg-ink-900 -translate-x-1/2" style={{ left: `${m.pos}%` }} />
-              <span className="absolute -top-2.5 -translate-x-1/2 w-5 h-5 rounded-full bg-ink-900 text-paper num flex items-center justify-center"
-                style={{ left: `${m.pos}%`, fontSize: '0.6rem', boxShadow: '0 0 0 2px var(--surface)' }}>
+              <span className="absolute -top-2.5 -translate-x-1/2 w-5 h-5 rounded-full bg-ink-900 text-paper num text-micro flex items-center justify-center"
+                style={{ left: `${m.pos}%`, boxShadow: '0 0 0 2px var(--surface)' }}>
                 {i + 1}
               </span>
             </div>
@@ -135,7 +135,7 @@ export function VerzugszinsTimeline({ e }: { e: VerzugszinsErgebnis }) {
           <div className="flex flex-col gap-1 mt-2 text-body-s text-ink-600">
             {marker.map((m, i) => (
               <span key={i} className="inline-flex items-center gap-2">
-                <span className="w-4 h-4 rounded-full bg-ink-900 text-paper num inline-flex items-center justify-center shrink-0" style={{ fontSize: '0.55rem' }}>{i + 1}</span>
+                <span className="w-4 h-4 rounded-full bg-ink-900 text-paper num text-micro inline-flex items-center justify-center shrink-0" >{i + 1}</span>
                 {m.texte.join(' · ')}
               </span>
             ))}
