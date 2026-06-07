@@ -187,8 +187,11 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   if (!a.eigeneBueros && (!a.domizilhalterName.trim() || !a.domizilhalterAdresse.trim())) {
     blocker.push('c/o-Domizil: Domizilhalter/in mit Adresse angeben (Art. 117 Abs. 3 HRegV).');
   }
-  if (!a.optingOut && !a.revisionsstelleName.trim()) {
-    blocker.push('Revisionsstelle benennen oder Opting-out wählen (Art. 727a Abs. 2 OR).');
+  // Bug-Check-Befund Agent 1 (7.6.2026): Sitz ist Beleg-Inhalt (Art. 44
+  // lit. f HRegV) und erscheint im druckfertigen RS-Wahlannahme-Absender —
+  // wie bankOrt/domizilhalterAdresse hart verlangen.
+  if (!a.optingOut && (!a.revisionsstelleName.trim() || !a.revisionsstelleSitz.trim())) {
+    blocker.push('Revisionsstelle mit Name und Sitz benennen oder Opting-out wählen (Art. 727a Abs. 2 OR; Art. 44 lit. f HRegV).');
   }
 
   if (!a.firma.trim()) blocker.push('Firma angeben – mit Rechtsformzusatz «AG» (Art. 950 OR).');
@@ -351,7 +354,7 @@ const STATUTEN_SCHEMA: VorlageSchema = {
         'Das Geschäftsjahr beginnt am {{gjBeginnTxt}} und endet am {{gjEndeTxt}}.\n' +
         'Die Jahresrechnung, bestehend aus Erfolgsrechnung, Bilanz und Anhang, ist gemäss den Vorschriften des Schweizerischen Obligationenrechts, insbesondere der Art. 957 ff., zu erstellen.',
       norm: 'Art. 958 Abs. 2 OR',
-      begruendung: 'Geschäftsjahr-Artikel der amtlichen ZH-Kurzvorlage (verbatim; kein Pflichtinhalt nach Art. 626 OR, aber Standard aller amtlichen Muster — der Abschlussstichtag folgt aus Art. 958 Abs. 2 OR).',
+      begruendung: 'Geschäftsjahr-Artikel der amtlichen ZH-Kurzvorlage (verbatim; kein Pflichtinhalt nach Art. 626 OR, aber Standard aller amtlichen Muster). Der Norm-Anker deckt die Jahresrechnungs-Bestandteile des zweiten Satzes (Bilanz, Erfolgsrechnung, Anhang — Art. 958 Abs. 2 OR); das Geschäftsjahr selbst ist gesetzlich nicht fixiert (Bug-Check-Befund 5, 7.6.2026).',
     },
     {
       id: 'AS04_mitteilungen',
@@ -503,7 +506,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'die restliche und vollständige Leistung der eigenen Einlage im Sinne von Art. 634b OR sofort zu erbringen.',
       includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'einGruender', eq: false }] },
       norm: 'Art. 634b OR',
-      begruendung: 'Resteinlage-Verpflichtungssatz der ZH-Urkunde (D6/0.3: «im Sinne von Art. 634b OR sofort» — ersetzt die frühere Haus-Formulierung «sobald er es für nötig erachtet»).',
+      begruendung: 'Resteinlage-Verpflichtungssatz der ZH-Urkunde verbatim (D6/0.3 — ersetzt die frühere Haus-Formulierung «sobald er es für nötig erachtet»). Norm-Gehalt: Art. 634b Abs. 1 OR lässt den VR die NACHTRÄGLICHE LEISTUNG BESCHLIESSEN; das «erste Verlangen» ist die vertragliche Verpflichtungsseite des Musters (Bug-Check-Befund 2, 7.6.2026).',
     },
     {
       id: 'AE07c_resteinlage_singular',
@@ -587,10 +590,10 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'Auf eine Revision wird verzichtet. Die Gründerin bzw. der Gründer stellt fest, dass:\n' +
         '– die Gesellschaft die Voraussetzungen für die Pflicht zur ordentlichen Revision nicht erfüllt;\n' +
         '– die Gesellschaft nicht mehr als zehn Vollzeitstellen im Jahresdurchschnitt hat;\n' +
-        '– auf eine eingeschränkte Revision verzichtet wird.',
+        '– die Gründerin bzw. der Gründer als einzige Aktionärin bzw. einziger Aktionär auf eine eingeschränkte Revision verzichtet.',
       includeIf: { and: [{ feld: 'optingOut', eq: true }, { feld: 'einGruender', eq: true }] },
       norm: 'Art. 727a Abs. 2 OR',
-      begruendung: 'Opting-out im Singular (D1; ZH-Vorlage 3.5: «Der Gründer erklärt, auf die eingeschränkte Revision … zu verzichten»).',
+      begruendung: 'Opting-out im Singular (D1; ZH-Vorlage 3.5). Bug-Check-Befund 1 (7.6.2026): Art. 62 Abs. 1 lit. c HRegV verlangt die Erklärung, dass SÄMTLICHE Aktionärinnen und Aktionäre verzichtet haben — der Verzichtsträger bleibt darum auch im Singular ausdrücklich benannt («als einzige Aktionärin bzw. einziger Aktionär»), kein subjektloses Passiv.',
     },
     {
       id: 'AE12_domizil_eigen',
@@ -812,8 +815,8 @@ const VR_PROTOKOLL_SCHEMA: VorlageSchema = {
   bausteine: [
     {
       id: 'VP01_ingress',
-      text: 'der {{firma}}, mit Sitz in {{sitz}}\n\nOrt: {{ort}}\nDatum: {{datumZeile}}\nBeginn der Sitzung: {{sitzungBeginnZeile}}\nAnwesend: sämtliche Mitglieder des Verwaltungsrates\nAbwesend: keine\nVorsitz: {{praesidentName}}\nProtokoll: {{protokollName}}',
-      begruendung: 'Protokoll-Kopf nach der amtlichen ZH-Vorlage (ag_vorlage_protokoll_vr); Mindestelemente der Praxis zu Art. 23 HRegV ergänzt (Beginn der Sitzung, Anwesenheits-/Abwesenheits-Feststellung — Merkblatt «Formelle Anforderungen an Handelsregisterbelege», 7.1.2025; D13).',
+      text: 'der {{firma}}, mit Sitz in {{sitz}}\n\nDatum: {{datumZeile}}\nBeginn der Sitzung: {{sitzungBeginnZeile}}\nOrt: {{ort}}\nAnwesend: sämtliche Mitglieder des Verwaltungsrates\nAbwesend: keine\nVorsitz: {{praesidentName}}\nProtokoll: {{protokollName}}',
+      begruendung: 'Protokoll-Kopf nach der amtlichen ZH-Vorlage (ag_vorlage_protokoll_vr; Zeilen-Reihenfolge Datum→Beginn→Ort wie das Original — Bug-Check-Befund 3); Mindestelemente der Praxis zu Art. 23 HRegV (Beginn der Sitzung, Anwesenheits-/Abwesenheits-Feststellung — Merkblatt «Formelle Anforderungen an Handelsregisterbelege», 7.1.2025; D13).',
       norm: 'Art. 43 Abs. 1 lit. e HRegV',
     },
     {
@@ -824,7 +827,7 @@ const VR_PROTOKOLL_SCHEMA: VorlageSchema = {
         'Protokollführer/in. Der Vorsitzende stellt fest, dass der Verwaltungsrat in beschlussfähiger ' +
         'Anzahl anwesend ist. Gegen diese Feststellungen wird kein Widerspruch erhoben. Der ' +
         'Verwaltungsrat beschliesst:',
-      begruendung: 'Eröffnungs-Passus nach der amtlichen ZH-Vorlage. Haus-Abweichung (offengelegt): Der ZH-Einladungs-Feststellungssatz («Einladung gemäss den statutarischen Vorschriften fristgerecht») entfällt — bei der Konstituierungs-Sitzung unmittelbar nach der Gründung sind sämtliche Mitglieder anwesend (Kopf-Feststellung), womit Einladungsförmlichkeiten geheilt sind.',
+      begruendung: 'Eröffnungs-Passus nach der amtlichen ZH-Vorlage. Haus-Abweichung (offengelegt): Der ZH-Einladungs-Feststellungssatz («Einladung gemäss den statutarischen Vorschriften fristgerecht») entfällt — bei der Konstituierungs-Sitzung unmittelbar nach der Gründung sind sämtliche Mitglieder anwesend (Kopf-Feststellung), womit Einberufungsmängel nach herrschender Auffassung unbeachtlich sind.',
       norm: 'Art. 713 OR',
     },
     {

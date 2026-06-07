@@ -148,7 +148,11 @@ describe('AG-Errichtungsakt — Numerus (D1) + Ziffern-Nummerierung (D10)', () =
     const t = text(agDokumentmappe(BASIS), 'errichtungsakt');
     expect(t).toContain('Vor der unterzeichnenden Urkundsperson ist heute erschienen:');
     expect(t).toContain('Die erschienene Person erklärt,');
+    expect(t).toContain('Die Gründerin bzw. der Gründer verpflichtet sich hiermit bedingungslos');
     expect(t).toContain('Die Gründerin bzw. der Gründer stellt fest, dass:');
+    // Bug-Check-Befund 1 (7.6.2026): Verzichtsträger bleibt benannt
+    // (Art. 62 Abs. 1 lit. c HRegV — «sämtliche Aktionärinnen und Aktionäre»).
+    expect(t).toContain('als einzige Aktionärin bzw. einziger Aktionär auf eine eingeschränkte Revision verzichtet');
     expect(t).toContain('Abschliessend erklärt die erschienene Person');
     expect(t).toContain('der Gründerin bzw. dem Gründer vorgelegen haben');
     expect(t).not.toContain('Die erschienenen Personen erklären');
@@ -241,6 +245,11 @@ describe('AG-VR-Protokoll — Formalia (D13/D14) + Wahlannahme RS (0.6)', () => 
     });
     expect(m.dokumente.map((d) => d.id)).toContain('wahlannahme-rs');
     expect(text(m, 'wahlannahme-rs')).toContain('Gerne bestätigen wir Ihnen, dass wir die Wahl als Revisionsstelle der Muster Immobilien AG, in Zürich, annehmen.');
+  });
+
+  it('Revisionsstelle ohne Sitz → Blocker (Bug-Check Agent 1: Beleg-Inhalt Art. 44 lit. f HRegV)', () => {
+    const g = pruefeAgDokGates({ ...BASIS, optingOut: false, revisionsstelleName: 'Revisia AG', revisionsstelleSitz: '' });
+    expect(g.blocker.join(' ')).toContain('Name und Sitz');
   });
 });
 
