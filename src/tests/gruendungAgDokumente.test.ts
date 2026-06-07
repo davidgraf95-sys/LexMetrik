@@ -934,6 +934,15 @@ describe('AG — Stufe 2 P3 (Perfektion 7.6.2026): Statuten-Zusatzklauseln', () 
     expect(pruefeAgDokGates({ ...KB, kbRichtung: 'beide' }).blocker.join(' ')).toContain('Art. 653s Abs. 4 OR');
     // nur Erhöhung: Untergrenze muss dem Kapital entsprechen
     expect(pruefeAgDokGates({ ...KB, kbUntergrenze: "80'000" }).blocker.join(' ')).toContain('untere Grenze entspricht dem Aktienkapital');
+
+    // Bug-Check §9 MITTEL-1 (7.6.2026): Grenzen-Abstand muss ein Vielfaches
+    // des Nennwerts sein — sonst widerspricht die Höchstzahl-Klausel der
+    // Bandgrenze im selben Artikel.
+    expect(pruefeAgDokGates({ ...KB, kbObergrenze: "150'500" }).blocker.join(' ')).toContain('Vielfachen des Nennwerts');
+    // Bug-Check §9 MITTEL-2: Schalttags-Gründung — setFullYear-Rollover
+    // (29.2.2028 + 5 J. = 28.2.2033, NICHT 1.3.2033).
+    expect(pruefeAgDokGates({ ...KB, datum: '2028-02-29', kbEndeDatum: '2033-03-01' }).blocker.join(' ')).toContain('längstens FÜNF Jahre');
+    expect(pruefeAgDokGates({ ...KB, datum: '2028-02-29', kbEndeDatum: '2033-02-28' }).blocker).toEqual([]);
   });
 
   it('Kapitalband beide Richtungen (mit Revisionsstelle): Klausel + Untergrenze-Gate', () => {

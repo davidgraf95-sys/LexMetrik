@@ -517,13 +517,32 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       if (unter > kapitalKb + 0.005 || ober < kapitalKb - 0.005) {
         blocker.push('Kapitalband: Das Aktienkapital muss innerhalb der Bandbreite liegen.');
       }
+      // Bug-Check §9 MITTEL-1 (7.6.2026): Die Klausel nennt die Höchstzahl
+      // neuer/zu vernichtender Aktien — Grenzen, die kein Vielfaches des
+      // Nennwerts sind, wären in ganzen Aktien nie erreichbar (innerer
+      // Textwiderspruch im selben Artikel).
+      const nwKb = zahl(a.nennwertChf);
+      if (nwKb !== null && nwKb > 0) {
+        const istVielfaches = (x: number) => Math.abs(x / nwKb - Math.round(x / nwKb)) < 0.0001;
+        if (!istVielfaches(ober - kapitalKb)) {
+          blocker.push('Kapitalband: Der Abstand der oberen Grenze zum Aktienkapital muss einem Vielfachen des Nennwerts entsprechen (ganze Anzahl neuer Aktien — die Statuten nennen Anzahl, Nennwert und Art, Art. 653t Abs. 1 Ziff. 4 OR).');
+        }
+        if (a.kbRichtung === 'beide' && !istVielfaches(kapitalKb - unter)) {
+          blocker.push('Kapitalband: Der Abstand der unteren Grenze zum Aktienkapital muss einem Vielfachen des Nennwerts entsprechen (ganze Anzahl zu vernichtender Aktien).');
+        }
+      }
     }
     if (!a.kbEndeDatum) {
       blocker.push('Kapitalband: Ende der Ermächtigung datieren (Art. 653t Abs. 1 Ziff. 2 OR) – längstens fünf Jahre (Art. 653s Abs. 1 OR).');
     } else if (a.datum) {
       const ende = new Date(a.kbEndeDatum);
       const max = new Date(a.datum);
+      const tagVorher = max.getDate();
       max.setFullYear(max.getFullYear() + 5);
+      // Bug-Check §9 MITTEL-2 (7.6.2026): setFullYear rollt den 29.2. eines
+      // Schaltjahrs auf den 1.3. — auf den letzten Tag des Vormonats
+      // (28.2.) klemmen, sonst ist die 5-Jahres-Grenze einen Tag zu lang.
+      if (max.getDate() !== tagVorher) max.setDate(0);
       if (ende.getTime() > max.getTime()) {
         blocker.push('Kapitalband: Die Ermächtigung gilt für längstens FÜNF Jahre ab Beschluss (Art. 653s Abs. 1 OR) – Ende-Datum kürzen.');
       }
