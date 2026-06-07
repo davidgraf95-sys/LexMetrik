@@ -278,8 +278,10 @@ Entscheid-/Konkursgebühren «Rahmen, Gericht/Behörde bestimmt im Ermessen».
 ## 7. Aufwand & Wiederverwendung
 **Aufwand: S–M.** Hohe Wiederverwendung: `gebuehrZahlungsbefehl` ist die
 Blaupause; neue Staffeln als gleichartige Lookup-Tabellen in die SchKG-Engine
-bzw. eigene `src/lib/betreibungskosten.ts`. Reuse `schkgZustaendigkeit`
-(Schritt-Kontext), Quellen-/Verfallsregister.
+bzw. eine eigene Engine. **→ GEBAUT 7.6.2026 als `src/lib/gebvKosten.ts`**
+(Rechner `/rechner/betreibungskosten`; Vertiefung:
+[gebv-schkg-kostenrechner.md](gebv-schkg-kostenrechner.md)). Reuse
+`schkgZustaendigkeit` (Schritt-Kontext), Quellen-/Verfallsregister.
 
 ---
 
