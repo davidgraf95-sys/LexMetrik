@@ -205,20 +205,6 @@ describe('RECHTSBEREICH_GRUPPEN (Pro-Katalog, Phase 2) – Vollständigkeit beid
   });
 });
 
-describe('HAEUFIG_GEBRAUCHT (kuratierter Schnelleinstieg, eine Hauptseite — FAHRPLAN-EINE-HAUPTSEITE D-2)', () => {
-  it('jede ID existiert; nur Verfügbare mit href erscheinen; deterministisch; Reihenfolge greift', async () => {
-    const { HAEUFIG_GEBRAUCHT, haeufigGebrauchtKarten } = await import('../lib/haeufigGebraucht');
-    for (const id of HAEUFIG_GEBRAUCHT) {
-      expect(ALLE_KARTEN.find((x) => x.id === id), id).toBeTruthy();
-    }
-    const karten = haeufigGebrauchtKarten();
-    expect(karten.length).toBeGreaterThan(0);
-    karten.forEach((k) => {
-      expect(k.status !== 'geplant', k.id).toBe(true);
-      expect(k.href, k.id).toBeTruthy();
-    });
-    expect(karten).toEqual(haeufigGebrauchtKarten()); // deterministisch
-    // kuratierte Reihenfolge greift
-    expect(karten[0].id).toBe('tagerechner');
-  });
-});
+// Der kuratierte Schnelleinstieg (haeufigGebraucht.ts) und die Anliegen-
+// Chips sind mit der Radikal-Verschlankung 7.6.2026 entfernt (Auftrag David
+// «mache das alles weg») — die zugehörigen Invarianten entfallen.

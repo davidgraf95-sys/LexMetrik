@@ -1,17 +1,72 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
 import { SprachUmschalter } from '../SprachUmschalter';
 
-// Header (Iteration 5, FAHRPLAN-EINE-HAUPTSEITE E2): ruhiges ZWEI-ZONEN-
-// Layout – Logo links, Aktionscluster rechts (Sprache · Methodik), Mitte
-// bewusst leer. «Über» wandert ans Seitenende (Footer-Navigation, Entscheid
-// 5.6.2026) – der Header trägt nur noch, was beim Arbeiten gebraucht wird.
-// Der Pro-Button samt Pseudo-Login ist mit der Aufhebung der Free/Pro-
-// Zweiteilung entfallen (Auftrag David 7.6.2026); Methodik ist seither auch
-// mobil sichtbar (vorher trug der Pro-Button die mobile Navigation allein).
+// Header (Iteration 6, Auftrag David 7.6.2026): DREI-ZONEN-Layout — Logo
+// links, SUCHE in der Mitte (vorher im Katalog; David: «die suchfunktion in
+// den header»), Aktionscluster rechts (Sprache · Methodik). «Über» bleibt
+// im Footer (Entscheid 5.6.2026).
 const NAV = [
   { to: '/methodik', label: 'Methodik', match: (p: string) => p === '/methodik' },
 ];
+
+// Katalog-Suche im Header: Auf der Hauptseite ist die URL führend (?q=,
+// teil-/lesezeichenfähig, Zurück-Taste; replace statt push — Tippen füllt
+// keine History) und filtert das Register live. Auf allen anderen Seiten
+// sammelt das Feld lokal und Enter führt zur Trefferliste auf «/».
+// «/» fokussiert das Feld (Etappe 1.4 — Verhalten unverändert, neuer Ort).
+function HeaderSuche() {
+  const { pathname } = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const aufKatalog = pathname === '/';
+  const q = aufKatalog ? (searchParams.get('q') ?? '') : '';
+  const [wert, setWert] = useState(q);
+  // URL führt: ändert sich ?q= (Zurück-Taste, Permalink, Zurücksetzen im
+  // Register), folgt das Feld — als Render-Phase-Abgleich statt Effect
+  // (React-Muster «adjusting state when props change», Lint-Befund).
+  const [letztesQ, setLetztesQ] = useState(q);
+  if (q !== letztesQ) { setLetztesQ(q); setWert(q); }
+
+  const feld = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+      const ziel = e.target as HTMLElement | null;
+      if (ziel && (/^(INPUT|TEXTAREA|SELECT)$/.test(ziel.tagName) || ziel.isContentEditable)) return;
+      if (feld.current) { e.preventDefault(); feld.current.focus(); }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
+
+  const setze = (v: string) => {
+    setWert(v);
+    if (!aufKatalog) return;
+    const p = new URLSearchParams(searchParams);
+    if (v) p.set('q', v); else p.delete('q');
+    setSearchParams(p, { replace: true });
+  };
+  const abschicken = () => {
+    const s = wert.trim();
+    if (!aufKatalog && s) navigate(`/?q=${encodeURIComponent(s)}`);
+  };
+
+  return (
+    <input
+      ref={feld}
+      type="search"
+      value={wert}
+      onChange={(e) => setze(e.target.value)}
+      onKeyDown={(e) => { if (e.key === 'Enter') abschicken(); }}
+      placeholder="Suchen …  ( / )"
+      className="lc-input h-9 py-0 text-body-s w-full"
+      aria-label="Katalog durchsuchen"
+      aria-keyshortcuts="/"
+    />
+  );
+}
 
 export function Header() {
   const { pathname } = useLocation();
@@ -26,14 +81,17 @@ export function Header() {
         </div>
       </div>
 
-      {/* Hauptzeile: Logo links · Aktionscluster rechts · Mitte leer */}
-      <div className="max-w-content mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+      {/* Hauptzeile: Logo links · Suche Mitte · Aktionscluster rechts */}
+      <div className="max-w-content mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3 sm:gap-6">
         <Link to="/" className="inline-flex items-center gap-2 no-underline shrink-0" aria-label="LexMetrik – Startseite">
           <LexMetrikSiegel size={30} />
-          {/* Wortmarke auch mobil: Erstbesucher sollen den Namen im Header
-              sehen (Design-Review 6.6.2026). */}
-          <LexMetrikWortmarke className="text-[1.35rem]" />
+          {/* Wortmarke nur ab sm — auf 390px trägt die Suche die Mitte. */}
+          <LexMetrikWortmarke className="hidden sm:block text-[1.35rem]" />
         </Link>
+
+        <div className="flex-1 min-w-0 max-w-xl">
+          <HeaderSuche />
+        </div>
 
         <nav className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* Sprache (en/fr/it «in Bearbeitung», DE-Fallback) */}
