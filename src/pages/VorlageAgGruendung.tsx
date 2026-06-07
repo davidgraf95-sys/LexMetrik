@@ -24,6 +24,7 @@ import {
   type AgBereich,
 } from '../lib/vorlagen/gruendungAgDokumente';
 import { KANTONE } from '../lib/kantone';
+import { notariatsGebuehrGruendung } from '../lib/notariatsgebuehrenGruendung';
 
 // ─── Maske: AG-Gründung als WIZARD (Auftrag David 7.6.2026) ──────────────────
 // Durchklickbar analog der anderen Vorlagen-Masken (VorlagenWizardRahmen):
@@ -1225,9 +1226,38 @@ export function VorlageAgGruendung() {
               <span className="font-medium text-ink-900">Emissionsabgabe: {CHF.format(checkliste.emissionsabgabeChf)}</span> — 1 % des CHF 1 Mio. übersteigenden Teils der Leistungen (Art. 8 Abs. 1 und Art. 6 Abs. 1 lit. h StG); Bemessung mindestens zum Nennwert, Sachen zum Verkehrswert.
             </li>
           )}
-          <li>
-            Notariatsgebühren sind kantonal geregelt (z. B. BE: Gebührenverordnung BSG 169.81) und hier bewusst nicht beziffert; Bank-Sperrkonto je nach Institut (Praxisbeispiel ZKB: 0,5 ‰, mind. CHF 250).
-          </li>
+          {/* P11 (Perfektion): Notariatsgebühr kantonsabhängig aus der
+              Tarif-Datenschicht (lib/notariatsgebuehrenGruendung.ts, §5);
+              ehrliche Lücken für nicht erhobene Kantone (§8). */}
+          {(() => {
+            const kapital = Number(ak.replace(/['’\s]/g, ''));
+            const tarif = !fremdwaehrung && Number.isFinite(kapital) && kapital > 0
+              ? notariatsGebuehrGruendung(kanton, kapital) : null;
+            if (!tarif) {
+              return (
+                <li>
+                  Notariatsgebühren sind kantonal geregelt und für {fremdwaehrung ? 'Fremdwährungs-Kapital' : `den Kanton ${kanton}`} hier
+                  noch nicht amtlich erhoben — Auskunft beim Notariat; Bank-Sperrkonto je nach Institut
+                  (Praxisbeispiel ZKB: 0,5 ‰, mind. CHF 250).
+                </li>
+              );
+            }
+            const e = tarif.ergebnis;
+            return (
+              <li>
+                <span className="font-medium text-ink-900">
+                  Notariatsgebühr ({tarif.kanton}):{' '}
+                  {e.typ === 'betrag' && `${CHF.format(e.chf)}`}
+                  {e.typ === 'rahmen' && `${CHF.format(e.vonChf)} bis ${CHF.format(e.bisChf)}${e.mittelChf ? ` (Mittel ${CHF.format(e.mittelChf)})` : ''}`}
+                  {e.typ === 'aufwand' && 'nach Aufwand — amtlich nicht beziffert'}
+                  {e.typ === 'offen' && 'nicht amtlich erhebbar'}
+                </span>{' '}
+                — <a href={tarif.erlassUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 underline">{tarif.erlassLabel}</a> (Stand {tarif.stand}); Tarifwert ohne MWST (8,1 %) und Auslagen.
+                {tarif.hinweise.map((h) => ` ${h}`).join('')} Erstrecherche — fachliche Abnahme ausstehend.
+                {' '}Bank-Sperrkonto je nach Institut (Praxisbeispiel ZKB: 0,5 ‰, mind. CHF 250).
+              </li>
+            );
+          })()}
           <li>
             Fremdsprachige Belege: wichtige Belege (Statuten, Urkunden, Sacheinlageverträge, Berichte) nur
             mit beglaubigter deutscher Übersetzung einreichen (Merkblatt «Formelle Anforderungen», HRegA ZH, 7.1.2025).
