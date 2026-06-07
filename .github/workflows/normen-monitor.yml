@@ -1,0 +1,34 @@
+# ─── Normen-Monitor: wöchentliche Wache über die gepinnten Rechtsstände ─────
+# (STRATEGIE-PLATTFORM.md F2.4) Drei Netz-Prüfungen gegen amtliche Quellen:
+#   1. fedlex-cache.sh        — gepinnte Filestore-HTMLs abrufbar + Anker da
+#   2. norm-zitate-pruefen    — alle Art.-Zitate der Engines gegen die Caches
+#   3. fedlex-versionen       — SPARQL: neuere/angekündigte Konsolidierungen
+# Schlägt der Lauf fehl, ist ein gepinnter Stand überholt oder ein Anker weg →
+# §7-Verifikation fällig (Pins nachziehen, Wortlaute prüfen, Register führen).
+name: Normen-Monitor
+
+on:
+  schedule:
+    - cron: '17 5 * * 1' # montags 05:17 UTC (wöchentlich)
+  workflow_dispatch:
+
+jobs:
+  normen:
+    name: Fedlex-Caches · Zitate · Versions-Monitoring
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Fedlex-Caches laden + Anker-Inventar
+        run: npm run check:caches
+      - name: Norm-Zitate gegen die Caches
+        run: npm run check:zitate
+      - name: Konsolidierungs-Versionen (SPARQL)
+        run: npm run check:fedlex-versionen
+      - name: Verfallsregister (Termine)
+        if: always()
+        run: npm run check:verfall

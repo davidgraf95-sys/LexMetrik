@@ -1,0 +1,42 @@
+# ─── CI: erzwingt die §6/§9-Tore maschinell bei jedem Push ──────────────────
+# Bisher liefen tsc/Tests/Lint/Sweeps nur, wenn eine Session sie manuell
+# startete (STRATEGIE-PLATTFORM.md F2.2). Golden-Outputs bleiben bewusst
+# draussen: Das Protokoll vergleicht gegen einen lokalen Vorher-Stand in /tmp
+# (Refactoring-Werkzeug, kein CI-Gate) — bis F3.2 (Golden-Archiv je
+# Engine-Version) eine committete Basis schafft.
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tore:
+    name: Tore (tsc · Tests · Lint · Build · Checks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: TypeScript (tsc -b)
+        run: npx tsc -b
+      - name: Tests (volle Ausgabe)
+        run: npm test
+      - name: Lint (volle Ausgabe, nie tail!)
+        run: npm run lint
+      - name: Build
+        run: npm run build
+      - name: Katalog-Inventur
+        run: npm run check:inventur
+      - name: Bibliotheks-Standards (S1–S10)
+        run: npm run check:bibliothek
+      - name: Verfallsregister (Termine)
+        run: npm run check:verfall
+      - name: Logik-Sweep (Invarianten)
+        run: npm run check:sweep
+      - name: SSR-Smoke (alle Seiten)
+        run: npm run check:smoke

@@ -9,7 +9,19 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check": "npm run check:inventur && npm run check:bibliothek && npm run check:verfall && npm run check:sweep && npm run check:smoke",
+    "check:netz": "npm run check:caches && npm run check:zitate && npm run check:fedlex-versionen",
+    "check:inventur": "vite-node scripts/katalog-inventur.ts",
+    "check:bibliothek": "bash scripts/bibliothek-check.sh",
+    "check:verfall": "vite-node scripts/verfall-pruefen.ts",
+    "check:sweep": "vite-node scripts/logik-sweep.ts",
+    "check:smoke": "vite-node scripts/smoke-render.tsx",
+    "check:caches": "bash scripts/fedlex-cache.sh",
+    "check:zitate": "vite-node scripts/norm-zitate-pruefen.ts",
+    "check:fedlex-versionen": "vite-node scripts/fedlex-versionen-pruefen.ts",
+    "golden": "vite-node scripts/golden-outputs.ts",
+    "golden:vergleich": "vite-node scripts/golden-outputs.ts vergleich"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.9",
@@ -38,6 +50,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.12",
+    "vite-node": "^6.0.0",
     "vitest": "^4.1.8"
   }
 }
