@@ -205,6 +205,22 @@ describe('RECHTSBEREICH_GRUPPEN (Pro-Katalog, Phase 2) – Vollständigkeit beid
   });
 });
 
-// Der kuratierte Schnelleinstieg (haeufigGebraucht.ts) und die Anliegen-
-// Chips sind mit der Radikal-Verschlankung 7.6.2026 entfernt (Auftrag David
-// «mache das alles weg») — die zugehörigen Invarianten entfallen.
+describe('HAEUFIG_GEBRAUCHT (Rubrik an der Register-Spitze, Auftrag David 7.6.2026)', () => {
+  // Die Chip-Einstiege/Anliegen sind mit der Radikal-Verschlankung entfernt;
+  // diese Rubrik ist die EINZIGE Kuratierung (fachliche Auswahl Claude,
+  // Davids Anpassung jederzeit).
+  it('jede ID existiert und ist VERFÜGBAR mit href (kuratierte Spitze zeigt nie ins Leere); deterministisch', async () => {
+    const { HAEUFIG_GEBRAUCHT, haeufigGebrauchtKarten } = await import('../lib/haeufigGebraucht');
+    for (const id of HAEUFIG_GEBRAUCHT) {
+      const k = ALLE_KARTEN.find((x) => x.id === id);
+      expect(k, id).toBeTruthy();
+      // bewusst hart: die fachlich wichtigsten müssen GEBAUT sein — bricht
+      // eine ID weg oder fällt sie auf «geplant» zurück, soll die Suite warnen
+      expect(k!.status !== 'geplant', id).toBe(true);
+      expect(k!.href, id).toBeTruthy();
+    }
+    const karten = haeufigGebrauchtKarten();
+    expect(karten.map((k) => k.id)).toEqual(HAEUFIG_GEBRAUCHT);
+    expect(karten).toEqual(haeufigGebrauchtKarten()); // deterministisch
+  });
+});

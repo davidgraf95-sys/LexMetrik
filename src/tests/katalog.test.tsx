@@ -62,12 +62,26 @@ describe('Register auf der Hauptseite: Kachel-Raster ohne Steuer-Apparat (Radika
     expect(html).not.toContain('Output-Typ');
     expect(html).not.toContain('Direkter Einstieg');
     expect(html).not.toContain('Einstieg nach Anliegen');
-    expect(html).not.toContain('Häufig gebraucht');
     expect(html).not.toContain('Zuletzt verwendet');
     expect(html).not.toContain('erscheinen hier automatisch');
     expect(html).not.toContain('fachlich noch nicht geprüft —');
     // Suche NICHT auf der Seite (lebt im Header)
     expect(html).not.toContain('type="search"');
+  });
+
+  it('Rubrik «Häufig gebraucht» führt das Register als Direktlinks; «Übergreifend» steht am ENDE (Auftrag 7.6.2026)', async () => {
+    const html = seiteHtml('/');
+    const { haeufigGebrauchtKarten } = await import('../lib/haeufigGebraucht');
+    // Rubrik zuoberst mit allen kuratierten, verfügbaren Werkzeugen als Links
+    expect(html).toContain('Häufig gebraucht');
+    const karten = haeufigGebrauchtKarten();
+    expect(karten.length).toBeGreaterThan(0);
+    karten.forEach((k) => expect(html).toContain(`id="werkzeug-${k.id}"`));
+    expect(html.indexOf('gruppe-haeufig')).toBeLessThan(html.indexOf('gruppe-zivil-prozess'));
+    // Übergreifend als LETZTE Obergruppe (nach Öffentliches Recht)
+    expect(html.indexOf('id="gruppe-uebergreifend"')).toBeGreaterThan(html.indexOf('id="gruppe-oeffentlich"'));
+    // Rubrik verschwindet bei aktiver Suche (Trefferliste ersetzt das Register)
+    expect(seiteHtml('/?q=Verzugszins')).not.toContain('gruppe-haeufig');
   });
 
   it('?gebiet=arbeit: Panel ersetzt die ANGEKLICKTE Kachel an Ort und Stelle, übrige Kacheln bleiben (Wunsch David)', () => {

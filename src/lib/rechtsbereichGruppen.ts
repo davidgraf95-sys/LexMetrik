@@ -20,10 +20,9 @@ export interface RechtsbereichGruppe {
 // Verfahrens-/Vollstreckungsgruppe) und bildet die anwaltliche Trennung
 // materiell/prozessual ab.
 const GRUPPEN_FUENF: RechtsbereichGruppe[] = [
-  // Reihenfolge: Übergreifende Werkzeuge ZUOBERST (Wunsch David 6.6.2026 —
-  // ersetzt den Wunsch vom 5.6. «Zivilprozess zuerst»); danach Zivilprozess.
-  { id: 'uebergreifend', label: 'Übergreifend',
-    gebiete: ['Übergreifende Werkzeuge', 'Weitere Rechtsgebiete'] },
+  // Reihenfolge: Übergreifend ANS ENDE (Auftrag David 7.6.2026 — ersetzt
+  // «Übergreifend zuoberst» vom 6.6.; den Spitzenplatz trägt seither die
+  // Rubrik «Häufig gebraucht» im Register); Zivilprozess führt.
   { id: 'zivil-prozess', label: 'Zivilprozess & Vollstreckung',
     gebiete: ['Zivilprozess (ZPO) & Bundesgericht', 'Betreibung & Konkurs (SchKG)'] },
   { id: 'zivil-materiell', label: 'Zivilrecht (materiell)',
@@ -34,12 +33,12 @@ const GRUPPEN_FUENF: RechtsbereichGruppe[] = [
   { id: 'oeffentlich', label: 'Öffentliches Recht',
     gebiete: ['Verwaltungsrecht', 'Steuerrecht', 'Sozialversicherungsrecht',
               'Datenschutzrecht', 'Ausländerrecht'] },
-];
-
-// 4er-Modell – Fallback (Übergreifend ebenfalls zuoberst, Wunsch 6.6.2026)
-const GRUPPEN_VIER: RechtsbereichGruppe[] = [
   { id: 'uebergreifend', label: 'Übergreifend',
     gebiete: ['Übergreifende Werkzeuge', 'Weitere Rechtsgebiete'] },
+];
+
+// 4er-Modell – Fallback (Übergreifend ebenfalls am Ende, Auftrag 7.6.2026)
+const GRUPPEN_VIER: RechtsbereichGruppe[] = [
   { id: 'privat', label: 'Privatrecht',
     gebiete: ['Zivilprozess (ZPO) & Bundesgericht', 'Betreibung & Konkurs (SchKG)',
               'Arbeit', 'Miete', 'Vertrag & Forderung (OR)', 'Erbrecht',
@@ -49,6 +48,8 @@ const GRUPPEN_VIER: RechtsbereichGruppe[] = [
               'Datenschutzrecht', 'Ausländerrecht'] },
   { id: 'straf', label: 'Strafrecht & Strafprozess',
     gebiete: ['Strafrecht & Strafprozess'] },
+  { id: 'uebergreifend', label: 'Übergreifend',
+    gebiete: ['Übergreifende Werkzeuge', 'Weitere Rechtsgebiete'] },
 ];
 
 export const ALLE_GRUPPEN_MODELLE = { fuenf: GRUPPEN_FUENF, vier: GRUPPEN_VIER } as const;

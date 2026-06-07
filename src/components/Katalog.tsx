@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, istVerfuegbar, istAktiv, type CalculatorCard } from '../lib/startseiteConfig';
 import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
+import { haeufigGebrauchtKarten } from '../lib/haeufigGebraucht';
 import { kartePasst, sucheRang } from '../lib/katalogSuche';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
@@ -70,6 +71,28 @@ function GebietKachel({ gebiet, karten, onOeffnen }: {
           höhe, scanbare Spalten; der Volltext steht im Panel. */}
       <span className="text-body-s text-ink-500 leading-relaxed line-clamp-1">{inhalt}</span>
     </button>
+  );
+}
+
+// ─── Werkzeug-Kachel: Direktlink der Rubrik «Häufig gebraucht» ──────────────
+// Gleiche Kachel-Anatomie wie die Gebiete (ruhiges Register), aber der Klick
+// ÖFFNET das Werkzeug direkt (kein Panel); Status ehrlich als Badge (§8).
+
+function WerkzeugKachel({ k }: { k: CalculatorCard }) {
+  return (
+    <Link to={k.href!} id={`werkzeug-${k.id}`}
+      className="lc-card text-left p-5 flex flex-col gap-2 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
+      <span className="flex items-start justify-between gap-2">
+        <span className="font-sans font-semibold text-ink-900 text-body-l leading-snug text-balance">{sansAmp(k.title)}</span>
+        {k.status === 'entwurf' && (
+          <span className="lc-badge-entwurf shrink-0" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
+        )}
+      </span>
+      <span className="text-body-s text-ink-500 leading-relaxed line-clamp-1">{k.description}</span>
+      <span className="text-body-s font-medium text-brass-700">
+        {k.modus === 'vorlage' ? 'Erstellen →' : 'Öffnen →'}
+      </span>
+    </Link>
   );
 }
 
@@ -255,7 +278,22 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
            Kachel weicht ihrem Panel an Ort und Stelle (col-span-full);
            die ÜBRIGEN Kacheln bleiben sichtbar und rutschen nach unten —
            animiert über je einen eigenen view-transition-name. */
-        gruppenSichtbar.map((x) => (
+        <>
+        {/* Rubrik «Häufig gebraucht» an der Register-Spitze (Auftrag David
+            7.6.2026): die fachlich wichtigsten Werkzeuge als Direktlinks —
+            Übergreifend wanderte dafür ans Gruppen-Ende. */}
+        {haeufigGebrauchtKarten().length > 0 && (
+          <section aria-labelledby="gruppe-haeufig" className="space-y-4">
+            <div className="flex items-center gap-4 pt-1">
+              <h2 id="gruppe-haeufig" className="lc-overline text-ink-700 whitespace-nowrap">Häufig gebraucht</h2>
+              <span aria-hidden className="flex-1 h-px bg-line" />
+            </div>
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(min(240px,100%),1fr))] gap-4">
+              {haeufigGebrauchtKarten().map((k) => <WerkzeugKachel key={k.id} k={k} />)}
+            </div>
+          </section>
+        )}
+        {gruppenSichtbar.map((x) => (
           <section key={x.gr.id} aria-labelledby={`gruppe-${x.gr.id}`} className="space-y-4">
             {/* Obergruppe als STILLE Overline (U4): das Register trägt die
                 Hierarchie typografisch, nicht mit fünf Linealen. */}
@@ -277,7 +315,8 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
               ))}
             </div>
           </section>
-        ))
+        ))}
+        </>
       )}
     </div>
   );
