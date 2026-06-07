@@ -105,6 +105,27 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     });
     expect(agMappe.gates.blocker).toEqual([]);
     for (const d of agMappe.dokumente) faelle.push([`ag-dok-${d.id}`, d.ergebnis.dokument]);
+
+    // Kapitalerhöhungs-Mappe (9c): GmbH mit neuer Zeichnerin (777a-Hinweis),
+    // Agio und separater Bankbescheinigung → alle Schemas + bedingte Bausteine.
+    const { keDokumentmappe, KE_DEFAULTS } = await import('../lib/vorlagen/kapitalerhoehung');
+    const keMappe = keDokumentmappe({
+      ...KE_DEFAULTS,
+      rechtsform: 'gmbh', firma: 'Muster GmbH', sitz: 'Zürich', kanton: 'ZH',
+      bisherigesKapitalChf: "20'000", bisherigeAnzahl: '20',
+      nennwertChf: "1'000", anzahlNeue: '10', ausgabebetragChf: "1'500",
+      statutenArtikelNr: '3', gvDatum: '2026-06-01',
+      zeichner: [
+        { name: 'A', angaben: 'von Basel, in Zürich', anzahl: '5', bereitsBeteiligt: true },
+        { name: 'B', angaben: 'von Chur, in Chur', anzahl: '5', bereitsBeteiligt: false },
+      ],
+      bankInUrkundeGenannt: false,
+      berichtUnterzeichner: 'A', vorsitzName: 'A',
+      statutKlauseln: ['vorkaufsrecht', 'nachschuss'],
+      ort: 'Zürich', datum: '2026-06-15',
+    });
+    expect(keMappe.gates.blocker).toEqual([]);
+    for (const d of keMappe.dokumente) faelle.push([`ke-dok-${d.id}`, d.ergebnis.dokument]);
     const verstoesse = faelle.flatMap(([name, wert]) => pruefeAlles(wert, name));
     expect(verstoesse, verstoesse.join('\n')).toEqual([]);
   });

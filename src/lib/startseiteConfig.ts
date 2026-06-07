@@ -829,14 +829,30 @@ const KARTEN: Record<string, CalculatorCard> = {
     related: ['kapitalverlust'],
     keywords: ['Überschuldung', 'Benachrichtigung', 'Bilanz'],
   },
+  // Plan 9c (7.6.2026, Auftrag David): von der geplanten Rechner-Karte zur
+  // Dokumentmappe umgebaut — Spez. recherche/kapitalerhoehung-wortlaute.md.
   kapitalerhoehung: {
-    id: 'kapitalerhoehung', modus: 'rechner', art: 'betrag', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
+    id: 'kapitalerhoehung', modus: 'vorlage', art: 'gesellschaft', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
     rechtsbereich: 'privat',
-    title: 'Kapitalerhöhung',
-    description: 'Arten und Schritte der Kapitalerhöhung mit den massgebenden Quoten.',
-    status: 'geplant', norms: [],
-    related: ['liberierungsgrad', 'statuten'],
-    keywords: ['Kapitalerhöhung', 'Bezugsrecht'],
+    title: 'Kapitalerhöhung (AG / GmbH)',
+    description: 'Ordentliche Kapitalerhöhung gegen Bareinlage als Dokumentmappe: Erhöhungsbeschluss und Feststellungs-Urkunde mit Statutenänderung als Entwurf für die Urkundsperson (öffentliche Beurkundung bleibt zwingend, Art. 650/652g OR), Zeichnungsscheine je Person, Kapitalerhöhungsbericht und Handelsregister-Anmeldung druckfertig – mit 6-Monats-Verfalls-Warnung (Art. 650 Abs. 3 / 781 Abs. 4 OR) und Notariats-Anlaufstelle je Kanton.',
+    status: 'entwurf',
+    output: ['pdf', 'docx'],
+    schemaId: 'kapitalerhoehungsmappe',
+    norms: [
+      // Art. 650 OR – Beschluss-Inhalt + 6-Monats-Verfall (rev. 2023)
+      { label: 'Art. 650 OR', url: fedlexUrl('OR', '650'), verified: false },
+      // Art. 652 OR – Zeichnungsschein (Abs. 3 aufgehoben!)
+      { label: 'Art. 652 OR', url: fedlexUrl('OR', '652'), verified: false },
+      // Art. 652g OR – Statutenänderung + Feststellungen (Beurkundung)
+      { label: 'Art. 652g OR', url: fedlexUrl('OR', '652g'), verified: false },
+      // Art. 781 OR – GmbH-Verweiskette
+      { label: 'Art. 781 OR', url: fedlexUrl('OR', '781'), verified: false },
+    ],
+    href: '/vorlagen/kapitalerhoehung',
+    formvorschrift: 'Erhöhungsbeschluss (Art. 650 Abs. 2 OR) und Feststellungs-Urkunde (Art. 652g Abs. 2 OR) nur als öffentliche Urkunde – beide darum ausschliesslich als ENTWURF mit Wasserzeichen. Zeichnungsscheine, Bericht und Anmeldung sind druckfertig.',
+    related: ['liberierungsgrad', 'statuten', 'gmbh-gruendung', 'ag-gruendung'],
+    keywords: ['Kapitalerhöhung', 'Bezugsrecht', 'Zeichnungsschein', 'Kapitalerhöhungsbericht', 'Statutenänderung', 'Art. 650', 'Art. 652g', 'Art. 781', 'Agio'],
   },
 
   // – Strafrecht & Strafprozess —

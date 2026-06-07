@@ -40,6 +40,7 @@ const VorlageKuendigungVertrag = lazy(() => import('./pages/VorlageKuendigungVer
 const VorlageKuendigungVermieter = lazy(() => import('./pages/VorlageKuendigungVermieter').then((m) => ({ default: m.VorlageKuendigungVermieter })));
 const VorlageGmbhGruendung = lazy(() => import('./pages/VorlageGmbhGruendung').then((m) => ({ default: m.VorlageGmbhGruendung })));
 const VorlageAgGruendung = lazy(() => import('./pages/VorlageAgGruendung').then((m) => ({ default: m.VorlageAgGruendung })));
+const VorlageKapitalerhoehung = lazy(() => import('./pages/VorlageKapitalerhoehung').then((m) => ({ default: m.VorlageKapitalerhoehung })));
 const RechnerStub = lazy(() => import('./pages/RechnerStub').then((m) => ({ default: m.RechnerStub })));
 const Methodik = lazy(() => import('./pages/Methodik').then((m) => ({ default: m.Methodik })));
 const Ueber = lazy(() => import('./pages/Ueber').then((m) => ({ default: m.Ueber })));
@@ -114,6 +115,7 @@ export default function App() {
         <Route path="/vorlagen/kuendigung-vermieter" element={<VorlageKuendigungVermieter />} />
         <Route path="/vorlagen/gmbh-gruendung" element={<VorlageGmbhGruendung />} />
         <Route path="/vorlagen/ag-gruendung" element={<VorlageAgGruendung />} />
+        <Route path="/vorlagen/kapitalerhoehung" element={<VorlageKapitalerhoehung />} />
         {/* Noch nicht implementierte Rechner (geplant / in Vorbereitung) */}
         <Route path="/rechner/:slug" element={<RechnerStub />} />
         <Route path="/methodik" element={<Methodik />} />
