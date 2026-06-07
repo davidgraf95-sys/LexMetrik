@@ -451,10 +451,57 @@ export function VorlageAgGruendung() {
     window.location.reload();
   };
 
+  // P9 (Perfektion): «Mit Musterdaten füllen» — kompletter Demo-Datensatz,
+  // Werte aus dem Golden-Fall ag:gemischt-qualifiziert (scripts/golden-
+  // outputs.ts): gemischte qualifizierte Gründung mit Sacheinlage
+  // (Geschäft, Grundstück), Verrechnung, besonderen Vorteilen, c/o-Domizil,
+  // Revisionsstelle und Lex Koller.
+  const musterdatenFuellen = () => {
+    setEinlageArt('gemischt'); setBesondereVorteile(true); setOptingOut(false);
+    setEigeneBueros(false); setImmobilienHauptzweck(true); setInhaberaktien(false);
+    setFremdwaehrung(false); setBankInUrkunde(true); setChVertretung(true); setLeistungen('');
+    setFirma('Golden Muster AG'); setSitz('Zürich'); setKanton('ZH'); setZweck('Beteiligungen');
+    setZweckErweiterung(true); setStatutenUmfang('kurz'); setVinkulierung(false); setVirtuelleGv(false);
+    setInhaberKotiert(false); setVerwahrungsstelle('');
+    setSchiedsklausel(false); setSchiedsOrt(''); setKapitalband(false); setBedingtesKapital(false);
+    setGjBeginn(AG_DOK_DEFAULTS.gjBeginn); setGjEnde(AG_DOK_DEFAULTS.gjEnde); setGjErstesEnde('');
+    setAk("400'000"); setAnzahl('400'); setNennwert("1'000"); setLiberierung('100'); setAusgabebetrag('');
+    setBankName('Zürcher Kantonalbank'); setBankOrt('Zürich');
+    setGruender([
+      { key: neuerKey(), name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '300', liberierung: '' },
+      { key: neuerKey(), name: 'Beat Beispiel', angaben: 'von Bern, in Bern', anzahl: '100', liberierung: '' },
+    ]);
+    setVr([
+      { key: neuerKey(), name: 'Anna Muster', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+      { key: neuerKey(), name: 'Beat Beispiel', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'kollektivzuzweien' },
+    ]);
+    setVertretungen([]);
+    setSacheinlagen([{
+      key: neuerKey(), typ: 'geschaeft', bezeichnung: 'Werkbau Muster', belegDatum: '2025-12-31',
+      wertChf: "110'000", grundstueck: true, einlegerName: 'Anna Muster', aktienAnzahl: '100',
+      gutschriftChf: "10'000", zustand: 'Liegenschaft zum Fortführungswert; Maschinenpark gemäss Anlagespiegel.',
+      imHrEingetragen: true, cheNr: 'CHE-111.222.333', aktivenChf: "260'000", passivenChf: "150'000",
+      rueckwirkungDatum: '2026-01-01',
+    }]);
+    setVerrechnungen([{ key: neuerKey(), glaeubigerName: 'Beat Beispiel', forderungChf: "50'000", aktienAnzahl: '50', begruendungTxt: 'Darlehen vom 01.02.2025, valutiert und fällig.' }]);
+    setVorteile([{ key: neuerKey(), beguenstigter: 'Anna Muster', inhalt: 'Vorkaufsrecht an der Werkhalle zum Verkehrswert', wertChf: "5'000", begruendungTxt: 'Abgeltung der Aufbauarbeit.' }]);
+    setRevisorName('Revisia AG'); setRsName('Revisia AG'); setRsSitz('Zürich');
+    setProtokollfuehrer(''); setSitzungBeginn('11.00'); setSitzungEnde('11.30');
+    setRechtsdomizil(''); setDomizilhalterName('Treuhand Muster AG'); setDomizilhalterAdresse('Bahnhofstrasse 10, 8001 Zürich');
+    setKonstituierungInUrkunde(false); setDomizilNurAnmeldung(false); setNachtragsbevollmaechtigter('');
+    setLkAusland(false); setLkNeuerwerb(false); setLkGrundstueck(true);
+    setNachtragAktiv(false);
+    setOrt('Zürich'); setDatum('2026-06-15');
+  };
+
   // ── Schritt-Inhalte ──
   const schrittKonstellation = (
     <div className="space-y-4">
       <PflichtDisclaimer />
+      <button type="button" className="lc-btn-outline lc-btn-sm" onClick={musterdatenFuellen}
+        title="Füllt alle Schritte mit einem vollständigen Demo-Datensatz (gemischte qualifizierte Gründung) — zum Ausprobieren; eigene Eingaben werden überschrieben.">
+        Mit Musterdaten füllen (Demo)
+      </button>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Liberierung">
           <select className={inputCls} value={einlageArt} onChange={(e) => setEinlageArt(e.target.value as EinlageArt)}>
@@ -1233,6 +1280,17 @@ export function VorlageAgGruendung() {
   // (Engine-Reihenfolge; Praxis-Check NIEDRIG-2: Kommentar präzisiert).
   const inhalte = inhalteRoh.map((inhalt, i) => i === inhalteRoh.length - 1 ? inhalt : (
     <div className="space-y-4">
+      {/* P10 (Perfektion): Feldmarkierung — der Schritt, in dem Eingaben
+          fehlen, trägt oben eine rote Sektion mit SEINEN Blockern
+          (Zuordnung aus den Engine-Bereichs-Tags, §3). */}
+      {mappe.gates.blockerDetails.some((b) => BEREICH_SCHRITT[b.bereich] === i) && (
+        <div className="rounded-md border border-danger-700/40 bg-danger-bg p-3 space-y-1" role="alert">
+          <p className="text-body-s font-medium text-danger-700">In diesem Schritt noch offen:</p>
+          {mappe.gates.blockerDetails.filter((b) => BEREICH_SCHRITT[b.bereich] === i).map((b) => (
+            <p key={b.text} className="text-body-s text-danger-700">• {b.text}</p>
+          ))}
+        </div>
+      )}
       {inhalt}
       {mappe.gates.blockerDetails.length > 0 && (
         <details className="rounded-md border border-line bg-surface p-3">
@@ -1253,8 +1311,24 @@ export function VorlageAgGruendung() {
     </div>
   ));
 
+  // P8 (Perfektion): Vorschau-Wahl — Dropdown über die Mappen-Dokumente
+  // (Default Statuten); fällt auf das erste Dokument zurück, wenn die
+  // gewählte Weiche wegfällt. Navigations-State, bewusst NICHT persistiert.
+  const [aktivesVorschauDok, setAktivesVorschauDok] = useState('statuten');
+  const vorschauDok = mappe.dokumente.find((d) => d.id === aktivesVorschauDok) ?? mappe.dokumente[0];
   const vorschau = mappe.dokumente.length > 0
-    ? <VorschauPanel ergebnis={mappe.dokumente[0].ergebnis} />
+    ? (
+      <div className="space-y-3">
+        <div className="px-4 pt-4">
+          <Field label="Dokument der Vorschau">
+            <select className={inputCls} value={vorschauDok.id} onChange={(e) => setAktivesVorschauDok(e.target.value)}>
+              {mappe.dokumente.map((d) => <option key={d.id} value={d.id}>{d.titel}</option>)}
+            </select>
+          </Field>
+        </div>
+        <VorschauPanel ergebnis={vorschauDok.ergebnis} />
+      </div>
+    )
     : (
       <div className="p-4 space-y-2">
         <p className="text-body-s font-medium text-ink-900">Noch keine Dokumente</p>
