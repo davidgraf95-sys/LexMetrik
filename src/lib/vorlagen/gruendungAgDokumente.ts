@@ -378,12 +378,15 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     }
     if (ganzePositive(a.anzahlAktien) === null) blocker.push('Anzahl Aktien als positive ganze Zahl angeben.');
     // Gleiche Befundklasse wie KE-M-1 (/simplify-Nachzug): keine «3.5 Aktien»
-    // in der Zeichnungszeile des Errichtungsakts.
+    // in der Zeichnungszeile des Errichtungsakts. Bereich personen: das
+    // Eingabefeld liegt in der Gründer-Karte (Praxis-Check NIEDRIG-1).
+    bereich('personen');
     for (const g of a.gruender) {
       if (g.name.trim() && ganzePositive(g.anzahl) === null) {
         blocker.push(`Gezeichnete Aktienzahl von ${g.name.trim()} als positive ganze Zahl angeben.`);
       }
     }
+    bereich('kapital');
     if (nennwert > 0 && anzahl > 0 && Math.abs(anzahl * nennwert - kapital) > 0.005) {
       const wc = a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF';
       blocker.push(
@@ -394,13 +397,16 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       blocker.push('Liberierungsgrad zwischen 20 % und 100 % angeben (Art. 632 Abs. 1 OR: mindestens 20 % des Nennwerts jeder Aktie).');
     }
     // Etappe 3.3/D6: individuelle Liberierungsgrade je Gründer (ZH 3.1
-    // Teilliberierung «a) … Aktien des Gründers … zu … %»).
+    // Teilliberierung «a) … Aktien des Gründers … zu … %»); Bereich
+    // personen — Feld in der Gründer-Karte (Praxis-Check NIEDRIG-1).
+    bereich('personen');
     for (const g of a.gruender.filter((x) => x.name.trim() && (x.liberierung ?? '').trim() !== '')) {
       const p = zahl(g.liberierung);
       if (p === null || p < 20 || p > 100) {
         blocker.push(`Liberierungsgrad von ${g.name.trim()} zwischen 20 % und 100 % angeben (Art. 632 Abs. 1 OR).`);
       }
     }
+    bereich('kapital');
     // Gesamt-Untergrenze auf der EFFEKTIVEN Einlagesumme (global oder
     // individuell — eine Quelle, effektiveLiberierung()).
     if (!eff.vollLiberiert && !a.fremdwaehrung && eff.einbezahlt > 0 && eff.einbezahlt < 50_000) {

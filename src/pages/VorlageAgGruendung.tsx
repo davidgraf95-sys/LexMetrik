@@ -962,7 +962,7 @@ export function VorlageAgGruendung() {
 
   const inhalteRoh = [schrittKonstellation, schrittGesellschaft, schrittKapital, schrittPersonen, schrittWeiteres, schrittDokumente];
   // In den Eingabe-Schritten unten eine kompakte, klickbare Offen-Liste
-  // (nur die Punkte des AKTUELLEN Schritts zuerst, dann die übrigen).
+  // (Engine-Reihenfolge; Praxis-Check NIEDRIG-2: Kommentar präzisiert).
   const inhalte = inhalteRoh.map((inhalt, i) => i === inhalteRoh.length - 1 ? inhalt : (
     <div className="space-y-4">
       {inhalt}
