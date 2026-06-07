@@ -7,16 +7,18 @@ import {
   type Phase,
 } from '../lib/gruendungsunterlagen';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { GmbhDokumentmappe } from '../components/vorlagen/GmbhDokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
 
-// ─── Maske: GmbH-Gründungsunterlagen — CHECKLISTE, bewusst KEINE Vollvorlage ─
-// Bauspezifikation: bibliothek/recherche/gmbh-gruendung.md Teil 5 (§8-Grenze):
-// Der Errichtungsakt bedarf der öffentlichen Beurkundung (Art. 777 OR) —
-// LexMetrik erzeugt darum KEIN Dokument, sondern die deterministische
-// Unterlagenliste aus der Engine (lib/gruendungsunterlagen.ts) mit Norm-
-// Ankern und Verweisen auf die amtlichen Vorlagen. Keine Rechtslogik hier (§3).
+// ─── Maske: GmbH-Gründung — Checkliste + Dokumentmappe (Plan 9b, 7.6.2026) ───
+// Checkliste: deterministische Unterlagenliste (lib/gruendungsunterlagen.ts).
+// Dokumentmappe (Ausbaustufe 9b, Auftrag David): Volldokumente aus denselben
+// Weichen — Statuten/Errichtungsakt als ENTWURF (Beurkundungszwang Art. 777
+// OR bleibt, §8-Gate), Erklärungen/Beschlüsse/HR-Anmeldung druckfertig.
+// Wortlaut-Grundlage: bibliothek/recherche/gruendungsdokumente-wortlaute.md.
+// Keine Rechtslogik hier (§3) — alles in lib/vorlagen/gruendungGmbhDokumente.ts.
 
 const PHASEN: { id: Phase; titel: string; lead: string }[] = [
   { id: 'vorbereitung', titel: '1 · Vor dem Notariatstermin', lead: 'Beschaffen bzw. erstellen — die Urkundsperson muss diese Belege beim Termin vorliegen haben (Art. 777b OR).' },
@@ -57,9 +59,9 @@ export function VorlageGmbhGruendung() {
   const [klauseln, setKlauseln] = useState<GmbhStatutKlausel[]>([]);
   const [leistungen, setLeistungen] = useState('');
 
-  const ergebnis = useMemo(() => {
+  const eingaben = useMemo(() => {
     const betrag = Number(leistungen.replace(/['’\s]/g, ''));
-    return gmbhGruendungsunterlagen({
+    return {
       einlageArt,
       besondereVorteile,
       gfGewaehlt,
@@ -74,8 +76,10 @@ export function VorlageGmbhGruendung() {
       chWohnsitzVertretung: chVertretung,
       statutKlauseln: klauseln,
       leistungenChf: leistungen.trim() === '' || Number.isNaN(betrag) ? undefined : betrag,
-    });
+    };
   }, [einlageArt, besondereVorteile, gfGewaehlt, mehrereGf, weitereVertretung, optingOut, eigeneBueros, immobilienHauptzweck, auslJurPerson, fremdwaehrung, bankInUrkunde, chVertretung, klauseln, leistungen]);
+
+  const ergebnis = useMemo(() => gmbhGruendungsunterlagen(eingaben), [eingaben]);
 
   const toggleKlausel = (k: GmbhStatutKlausel) =>
     setKlauseln((alt) => (alt.includes(k) ? alt.filter((x) => x !== k) : [...alt, k]));
@@ -90,17 +94,18 @@ export function VorlageGmbhGruendung() {
         <p className="lc-overline">Gesellschaftsrecht · Checkliste</p>
         <h1 className="text-h1 font-display font-semibold text-ink-900">GmbH-Gründungsunterlagen</h1>
         <p className="text-body-l text-ink-600 max-w-reading">
-          Bewusst KEINE ausfüllbare Vorlage: Der Errichtungsakt bedarf der öffentlichen Beurkundung —
-          das Dokument entsteht beim Notariat. Diese Checkliste leitet die registerrechtlich verlangten
-          Belege (abschliessend in Art. 71/72 HRegV, Art. 776–777c OR) samt den spezialgesetzlichen
-          Zusatzbelegen (Identifikation, Lex Koller; bewilligungspflichtige Zwecke vorbehalten) aus
-          Ihrer Gründungs-Konstellation ab.
+          Checkliste UND Dokumentmappe: Die Checkliste leitet die registerrechtlich verlangten
+          Belege (abschliessend in Art. 71/72 HRegV, Art. 776–777c OR) aus Ihrer
+          Gründungs-Konstellation ab. Die Dokumentmappe erzeugt daraus bei der Bargründung die
+          Dokumente direkt — Statuten und Errichtungsakt als ENTWURF für die Urkundsperson
+          (die öffentliche Beurkundung bleibt zwingend), Wahlannahme-/Domizilerklärungen,
+          Beschlüsse und die Handelsregister-Anmeldung druckfertig.
         </p>
         <div className="flex flex-wrap items-center gap-1.5">
           {(card?.norms ?? []).map((n) => (
             <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
           ))}
-          <span className="lc-badge lc-badge-warn">Checkliste — kein Export</span>
+          <span className="lc-badge lc-badge-warn">Checkliste + Dokumentmappe (Urkunde als Entwurf)</span>
         </div>
       </div>
 
@@ -130,7 +135,7 @@ export function VorlageGmbhGruendung() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-body-s text-ink-700">
           <label className="flex items-center gap-2"><input type="checkbox" checked={besondereVorteile} onChange={(e) => setBesondereVorteile(e.target.checked)} /> Besondere Vorteile für Gründer/Dritte</label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={gfGewaehlt} onChange={(e) => setGfGewaehlt(e.target.checked)} /> Geschäftsführung beruht auf Wahl</label>
-          <label className="flex items-center gap-2"><input type="checkbox" checked={mehrereGf} onChange={(e) => setMehrereGf(e.target.checked)} /> Mehrere Geschäftsführer:innen</label>
+          <label className="flex items-center gap-2"><input type="checkbox" checked={mehrereGf} onChange={(e) => setMehrereGf(e.target.checked)} /> Mehrere Geschäftsführer:innen <span className="text-xs text-ink-500">(Dokumentmappe: aus der erfassten GF-Liste abgeleitet)</span></label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={weitereVertretung} onChange={(e) => setWeitereVertretung(e.target.checked)} /> Weitere Vertretungsberechtigte (Direktor:innen/Prokura)</label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={!eigeneBueros} onChange={(e) => setEigeneBueros(!e.target.checked)} /> c/o-Adresse (kein eigenes Büro)</label>
           <label className="flex items-center gap-2"><input type="checkbox" checked={immobilienHauptzweck} onChange={(e) => setImmobilienHauptzweck(e.target.checked)} /> Immobilien-Haupttätigkeit</label>
@@ -221,6 +226,10 @@ export function VorlageGmbhGruendung() {
           elektronischer Weg über EasyGov (die Beurkundung bleibt beim Notariat).
         </p>
       </section>
+
+      {/* Ausbaustufe 9b (7.6.2026): Volldokumente aus denselben Weichen */}
+      <GmbhDokumentmappe weichen={eingaben}
+        docxErlaubt={card?.modus === 'vorlage' && (card.output?.includes('docx') ?? false)} />
     </div>
   );
 }

@@ -1,0 +1,801 @@
+import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
+import { assemble } from './engine';
+import { fmtCHF, fmtDatum, zahl } from './datum';
+import { agGruendungsunterlagen, type AgGruendungEingaben } from '../gruendungsunterlagen';
+import type { GmbhZeichnungsArt } from './gruendungGmbhDokumente';
+
+// ─── AG-Gründungs-VOLLDOKUMENTE (Plan 9b, «danach gleiches Muster für die AG»)
+//
+// Bauspezifikation + Wortlaut-Belege:
+//   bibliothek/recherche/gruendungsdokumente-wortlaute.md Teil 2 (Statuten
+//   A1–A15), Teil 3 (Zeichnung IM Errichtungsakt, 630-Verpflichtungssatz),
+//   Teil 4 (Erklärungen + VR-Konstituierungsprotokoll ZH verbatim), Teil 5/6.
+//
+// RECHTSSTAND wie GmbH: OR-Cache 1.1.2026 massgeblich (Anweisung David).
+// §4: eigene Schemas — KEINE Fusion mit der GmbH; geteilt ist nur die
+// fachneutrale Struktur (Zeichnungsarten-Label, Engine, Format-Gates).
+//
+// ERSTAUSBAU (Dossier Teil 9): Bargründung in CHF mit NAMENAKTIEN; Voll-
+// oder Teilliberierung (Art. 632 OR). Qualifizierte Gründung, Fremdwährung
+// und Inhaberaktien sperren mit ehrlichem Hinweis (Checkliste deckt sie).
+
+export type AgGruenderZeile = { name: string; angaben: string; anzahl: string };
+
+export type AgVrZeile = {
+  name: string;
+  herkunft: string;
+  wohnort: string;
+  adresse: string;       // für die Wahlannahmeerklärung
+  praesident: boolean;
+  zeichnungsArt: GmbhZeichnungsArt;   // fachneutrales Label (geteilt, §4)
+};
+
+export type AgVertretungsZeile = { name: string; funktion: string; zeichnungsArt: GmbhZeichnungsArt };
+
+export type AgDokAntworten = AgGruendungEingaben & {
+  firma: string;             // inkl. Rechtsformzusatz «… AG» (Art. 950 OR)
+  sitz: string;
+  kanton: string;
+  zweck: string;
+  zweckErweiterung: boolean;
+  aktienkapitalChf: string;
+  anzahlAktien: string;
+  nennwertChf: string;
+  /** Liberierungsgrad in Prozent (100 = vollständig; Art. 632 OR: ≥ 20 %,
+   *  geleistete Einlagen gesamthaft ≥ CHF 50'000). */
+  liberierungProzent: string;
+  gruender: AgGruenderZeile[];
+  verwaltungsraete: AgVrZeile[];
+  weitereVertretungen: AgVertretungsZeile[];
+  protokollfuehrerName: string;   // leer → Präsident/in führt das Protokoll
+  bankName: string;
+  bankOrt: string;
+  rechtsdomizilAdresse: string;
+  domizilhalterName: string;
+  domizilhalterAdresse: string;
+  revisionsstelleName: string;
+  revisionsstelleSitz: string;
+  vinkulierung: boolean;          // Art. 685a/685b OR (Statutenklausel)
+  virtuelleGv: boolean;           // Art. 701d OR (Statutenklausel)
+  ort: string;
+  datum: string;
+};
+
+export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = {
+  firma: '', sitz: '', kanton: '', zweck: '', zweckErweiterung: true,
+  aktienkapitalChf: "100'000", anzahlAktien: '100', nennwertChf: "1'000",
+  liberierungProzent: '100',
+  gruender: [], verwaltungsraete: [], weitereVertretungen: [],
+  protokollfuehrerName: '',
+  bankName: '', bankOrt: '', rechtsdomizilAdresse: '',
+  domizilhalterName: '', domizilhalterAdresse: '',
+  revisionsstelleName: '', revisionsstelleSitz: '',
+  vinkulierung: false, virtuelleGv: false, ort: '', datum: '',
+};
+
+const ZEICHNUNGS_LABEL: Record<GmbhZeichnungsArt, string> = {
+  einzelunterschrift: 'Einzelunterschrift',
+  kollektivzuzweien: 'Kollektivunterschrift zu zweien',
+};
+
+// ── Gates ───────────────────────────────────────────────────────────────────
+
+export type AgDokGates = { blocker: string[]; warnungen: string[] };
+
+export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
+  const blocker: string[] = [];
+  const warnungen: string[] = [];
+
+  if (a.einlageArt !== 'bar' || a.besondereVorteile) {
+    blocker.push(
+      'Volldokumente sind zurzeit nur für die reine BARGRÜNDUNG verfügbar. Qualifizierte Gründungen ' +
+      '(Sacheinlage, Verrechnung, besondere Vorteile) verlangen zusätzliche Statuten-Angaben (Art. 634 ' +
+      'Abs. 4 / Art. 634a Abs. 3 OR) und eigene Urkunden-Bausteine – bitte die Checkliste verwenden.',
+    );
+  }
+  if (a.fremdwaehrung) {
+    blocker.push(
+      'Volldokumente sind zurzeit nur für Aktienkapital in CHF verfügbar (Fremdwährung verlangt ' +
+      'Umrechnungskurs-Angaben in der Urkunde, Art. 629 Abs. 3 OR; Art. 44 lit. j HRegV) – bitte die Checkliste verwenden.',
+    );
+  }
+  if (a.inhaberaktien) {
+    blocker.push(
+      'Volldokumente sind zurzeit nur für NAMENAKTIEN verfügbar: Inhaberaktien sind nur bei ' +
+      'Börsenkotierung oder als Bucheffekten zulässig (Art. 622 Abs. 1bis OR) und brauchen den ' +
+      'Zusatznachweis nach Art. 43 Abs. 1 lit. i HRegV – bitte die Checkliste verwenden.',
+    );
+  }
+
+  const kapital = zahl(a.aktienkapitalChf);
+  const anzahl = zahl(a.anzahlAktien);
+  const nennwert = zahl(a.nennwertChf);
+  const prozent = zahl(a.liberierungProzent);
+  if (kapital === null || anzahl === null || nennwert === null) {
+    blocker.push('Aktienkapital, Anzahl und Nennwert der Aktien beziffern (Art. 626 Abs. 1 Ziff. 3 und 4 OR).');
+  } else {
+    if (nennwert <= 0) blocker.push('Der Nennwert muss grösser als null sein (Art. 622 Abs. 4 OR).');
+    if (kapital < 100_000) blocker.push('Das Aktienkapital beträgt mindestens CHF 100\'000 (Art. 621 Abs. 1 OR).');
+    if (anzahl <= 0 || !Number.isInteger(anzahl)) blocker.push('Anzahl Aktien als ganze Zahl angeben.');
+    if (nennwert > 0 && anzahl > 0 && Math.abs(anzahl * nennwert - kapital) > 0.005) {
+      blocker.push(
+        `Rechnerische Unstimmigkeit: ${a.anzahlAktien} Aktien × CHF ${fmtCHF(a.nennwertChf)} ergeben nicht das Aktienkapital von CHF ${fmtCHF(a.aktienkapitalChf)}.`,
+      );
+    }
+    if (prozent === null || prozent < 20 || prozent > 100) {
+      blocker.push('Liberierungsgrad zwischen 20 % und 100 % angeben (Art. 632 Abs. 1 OR: mindestens 20 % des Nennwerts jeder Aktie).');
+    } else if (prozent < 100 && kapital * (prozent / 100) < 50_000) {
+      blocker.push(
+        `Die geleisteten Einlagen müssen gesamthaft mindestens CHF 50'000 betragen (Art. 632 Abs. 2 OR) – bei ${a.liberierungProzent} % von CHF ${fmtCHF(a.aktienkapitalChf)} sind es nur CHF ${fmtCHF(String(kapital * (prozent / 100)))}.`,
+      );
+    }
+    const gezeichnet = a.gruender.reduce((s, g) => s + (zahl(g.anzahl) ?? 0), 0);
+    if (a.gruender.length > 0 && anzahl > 0 && gezeichnet !== anzahl) {
+      blocker.push(
+        `Die Zeichnungen der Gründer (${gezeichnet} Aktien) müssen sämtliche ${a.anzahlAktien} Aktien abdecken (Art. 629 Abs. 2 Ziff. 1 OR).`,
+      );
+    }
+  }
+
+  if (a.gruender.filter((g) => g.name.trim()).length === 0) {
+    blocker.push('Mindestens eine Gründerin / einen Gründer erfassen (Einpersonengründung zulässig – Art. 625 OR aufgehoben).');
+  }
+  const vr = a.verwaltungsraete.filter((v) => v.name.trim());
+  if (vr.length === 0) {
+    blocker.push('Mindestens ein Mitglied des Verwaltungsrates erfassen (Art. 707 Abs. 1 OR).');
+  }
+  if (vr.length > 1 && vr.filter((v) => v.praesident).length !== 1) {
+    blocker.push('Bei mehrgliedrigem Verwaltungsrat genau EINE Person als Präsidentin/Präsidenten bezeichnen (Art. 712 Abs. 2 OR).');
+  }
+  if (a.bankInUrkundeGenannt && a.einlageArt === 'bar' && (!a.bankName.trim() || !a.bankOrt.trim())) {
+    blocker.push('Bank in der Urkunde nennen: Name und Ort des Instituts angeben (sonst separate Bankbescheinigung, Art. 43 Abs. 1 lit. f HRegV).');
+  }
+  if (!a.eigeneBueros && (!a.domizilhalterName.trim() || !a.domizilhalterAdresse.trim())) {
+    blocker.push('c/o-Domizil: Domizilhalter/in mit Adresse angeben (Art. 117 Abs. 3 HRegV).');
+  }
+  if (!a.optingOut && !a.revisionsstelleName.trim()) {
+    blocker.push('Revisionsstelle benennen oder Opting-out wählen (Art. 727a Abs. 2 OR).');
+  }
+
+  if (!a.firma.trim()) blocker.push('Firma angeben – mit Rechtsformzusatz «AG» (Art. 950 OR).');
+  else if (!/\bag\b|aktiengesellschaft/i.test(a.firma)) {
+    warnungen.push('Die Firma muss die Rechtsform angeben (Art. 950 Abs. 1 OR) – Zusatz «AG» ergänzen.');
+  }
+  if (!a.sitz.trim()) blocker.push('Sitz (politische Gemeinde) angeben (Art. 626 Abs. 1 Ziff. 1 OR).');
+  if (!a.zweck.trim()) blocker.push('Zweck angeben (Art. 626 Abs. 1 Ziff. 2 OR).');
+
+  return { blocker, warnungen };
+}
+
+// ── Antworten-Aufbereitung ──────────────────────────────────────────────────
+
+function basisAntworten(a: AgDokAntworten): Antworten {
+  const datum = a.datum ? fmtDatum(a.datum) : '________';
+  const prozent = zahl(a.liberierungProzent) ?? 100;
+  const kapital = zahl(a.aktienkapitalChf) ?? 0;
+  const praesident = a.verwaltungsraete.find((v) => v.praesident)?.name.trim()
+    ?? a.verwaltungsraete.find((v) => v.name.trim())?.name.trim() ?? '________';
+  return {
+    ...a,
+    akFmt: fmtCHF(a.aktienkapitalChf),
+    nennwertFmt: fmtCHF(a.nennwertChf),
+    einbezahltFmt: fmtCHF(String(kapital * (prozent / 100))),
+    vollLiberiert: prozent >= 100,
+    // Review-Befund M-2 (7.6.2026): Art. 626 Abs. 1 Ziff. 3 OR verlangt den
+    // BETRAG der geleisteten Einlagen — bei Teilliberierung den Frankenbetrag
+    // zusätzlich zum Prozentsatz ausweisen.
+    liberierungSatz: prozent >= 100
+      ? 'vollständig liberiert'
+      : `zu ${a.liberierungProzent} % liberiert (geleistete Einlagen: CHF ${fmtCHF(String(kapital * (prozent / 100)))})`,
+    ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}den ${datum}`,
+    gruenderListe: a.gruender.filter((g) => g.name.trim()).map((g) => ({
+      name: g.name.trim(),
+      angabenZeile: g.angaben.trim() ? `, ${g.angaben.trim()}` : '',
+      anzahl: g.anzahl,
+    })),
+    vrListe: a.verwaltungsraete.filter((v) => v.name.trim()).map((v) => ({
+      name: v.name.trim(),
+      herkunft: v.herkunft.trim() || '________',
+      wohnort: v.wohnort.trim() || '________',
+      funktion: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? 'Präsident/in' : 'Mitglied',
+      praesidentZeile: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? ', als Präsident/in' : '',
+      zeichnung: ZEICHNUNGS_LABEL[v.zeichnungsArt],
+    })),
+    vertretungsListe: a.weitereVertretungen.filter((v) => v.name.trim()).map((v) => ({
+      name: v.name.trim(),
+      funktion: v.funktion.trim() || '________',
+      zeichnung: ZEICHNUNGS_LABEL[v.zeichnungsArt],
+    })),
+    hatWeitereVertretungen: a.weitereVertretungen.filter((v) => v.name.trim()).length > 0,
+    praesidentName: praesident,
+    protokollName: a.protokollfuehrerName.trim() || praesident,
+  };
+}
+
+// ── 1 · STATUTEN (ENTWURF) ──────────────────────────────────────────────────
+
+const STATUTEN_SCHEMA: VorlageSchema = {
+  id: 'ag-statuten',
+  version: '1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier 7.6.2026)',
+  titel: 'Statuten',
+  format: 'vertrag',
+  ausgabeArt: 'entwurf',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. ENTWURF zur Vorbereitung der Gründung: ' +
+    'Die Statuten der AG werden von der Urkundsperson geprüft und beglaubigt (Art. 22 Abs. 4 HRegV); ' +
+    'massgeblich ist die beurkundete Fassung. Wortlaute nach den amtlichen Mustern ZH/SG/GL, ' +
+    'verifiziert am OR-Stand 1.1.2026.',
+  bausteine: [
+    {
+      id: 'AS00_ingress',
+      text: 'der {{firma}} mit Sitz in {{sitz}}',
+      begruendung: 'Identifikations-Ingress unter dem Dokumenttitel (Usanz aller amtlichen Muster).',
+    },
+    {
+      id: 'AS01_firma_sitz',
+      ueberschrift: 'Firma und Sitz',
+      text: 'Unter der Firma {{firma}} besteht mit Sitz in {{sitz}} auf unbestimmte Dauer eine Aktiengesellschaft gemäss Art. 620 ff. OR.',
+      norm: 'Art. 626 Abs. 1 Ziff. 1 OR',
+      begruendung: 'Pflichtinhalt Firma/Sitz (Wortlaut ZH/SG/GL wortgleich).',
+    },
+    {
+      id: 'AS02_zweck',
+      ueberschrift: 'Zweck',
+      text: 'Die Gesellschaft bezweckt {{zweck}}.',
+      norm: 'Art. 626 Abs. 1 Ziff. 2 OR',
+      begruendung: 'Pflichtinhalt Zweck.',
+    },
+    {
+      id: 'AS02b_zweck_erweiterung',
+      text: 'Die Gesellschaft kann Zweigniederlassungen errichten, sich an anderen Unternehmen beteiligen, Grundstücke erwerben, halten und veräussern, Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Sicherheiten für Verbindlichkeiten verbundener Gesellschaften leisten.',
+      includeIf: { feld: 'zweckErweiterung', eq: true },
+      norm: 'Art. 626 Abs. 1 Ziff. 2 OR',
+      begruendung: 'Aufgenommen, weil die übliche Zweck-Erweiterungsklausel gewählt wurde (ZH-/GL-Muster-Wortlaut).',
+    },
+    {
+      id: 'AS03_kapital',
+      ueberschrift: 'Aktienkapital und Aktien',
+      text:
+        'Das Aktienkapital beträgt CHF {{akFmt}} und ist eingeteilt in {{anzahlAktien}} Namenaktien ' +
+        'zu CHF {{nennwertFmt}}. Die Aktien sind {{liberierungSatz}}.',
+      norm: 'Art. 626 Abs. 1 Ziff. 3 und 4 OR',
+      begruendung: 'Pflichtinhalt: Höhe des Kapitals, geleistete Einlagen (Liberierungsgrad) sowie Anzahl, Nennwert und Art der Aktien (rev. 2023; Wortlaut ZH/SG/GL).',
+    },
+    {
+      id: 'AS10_vinkulierung',
+      ueberschrift: 'Übertragung der Aktien',
+      text:
+        'Die Übertragung der Namenaktien oder die Begründung einer Nutzniessung an Namenaktien bedarf der Genehmigung durch den Verwaltungsrat.\n' +
+        'Der Verwaltungsrat kann das Gesuch um Zustimmung ablehnen, wenn er im Namen der Gesellschaft dem Veräusserer anbietet, die Aktien zum wirklichen Wert im Zeitpunkt des Gesuches zu übernehmen, oder wenn der Erwerber nicht ausdrücklich erklärt, dass er die Aktien im eigenen Namen und auf eigene Rechnung erworben hat.\n' +
+        'Werden Aktien durch Erbgang, Erbteilung, eheliches Güterrecht oder Zwangsvollstreckung erworben, so kann die Gesellschaft das Gesuch um Zustimmung nur ablehnen, wenn sie dem Erwerber die Übernahme der Aktien zum wirklichen Wert anbietet.',
+      includeIf: { feld: 'vinkulierung', eq: true },
+      norm: 'Art. 685a und 685b OR',
+      begruendung: 'Aufgenommen, weil die Vinkulierung gewählt wurde – Wortlaut der wortgleichen amtlichen Muster ZH/SG/GL (Escape-Klausel und Sonderregel besondere Erwerbsarten).',
+    },
+    {
+      id: 'AS13_virtuelle_gv',
+      ueberschrift: 'Generalversammlung',
+      text:
+        'Die Generalversammlung kann vor Ort, hybrid oder mit elektronischen Mitteln ohne Tagungsort (virtuell) durchgeführt werden. ' +
+        'Bei einer virtuellen Generalversammlung kann der Verwaltungsrat im Einzelfall auf die Bezeichnung einer unabhängigen Stimmrechtsvertretung verzichten.',
+      includeIf: { feld: 'virtuelleGv', eq: true },
+      norm: 'Art. 701d OR',
+      begruendung: 'Aufgenommen, weil die virtuelle Generalversammlung ermöglicht werden soll (statutarische Grundlage nötig).',
+      hinweis: 'Ein genereller statutarischer Verzicht auf die unabhängige Stimmrechtsvertretung ist unzulässig – zulässig ist nur die Einzelfall-Ermächtigung (EHRA-Praxismitteilung 1/23).',
+    },
+    {
+      id: 'AS04_mitteilungen',
+      ueberschrift: 'Mitteilungen',
+      text: 'Mitteilungen der Gesellschaft an die Aktionärinnen und Aktionäre erfolgen per Brief oder E-Mail an die im Aktienbuch verzeichneten Adressen.',
+      norm: 'Art. 626 Abs. 1 Ziff. 7 OR',
+      begruendung: 'Pflichtinhalt Form der Mitteilungen (rev. 2023; Wortlaut ZH/SG).',
+    },
+  ],
+};
+
+// ── 2 · ERRICHTUNGSAKT (ENTWURF – Art. 629 OR) ──────────────────────────────
+
+const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
+  id: 'ag-errichtungsakt',
+  version: '1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier 7.6.2026)',
+  titel: 'Öffentliche Urkunde über den Errichtungsakt',
+  format: 'verfuegung',
+  ausgabeArt: 'entwurf',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. ENTWURF zur Vorbereitung des Beurkundungstermins: ' +
+    'Der Errichtungsakt der AG bedarf der öffentlichen Beurkundung (Art. 629 Abs. 1 OR); die Urkunde ' +
+    'entsteht bei der Urkundsperson. Gliederung und Wortlaute nach den amtlichen Vorlagen ZH/SG (2023/2024).',
+  bausteine: [
+    {
+      id: 'AE01_ingress',
+      text: 'Gründung der {{firma}} mit Sitz in {{sitz}}\n\nVor der unterzeichnenden Urkundsperson sind heute erschienen:',
+      begruendung: 'Urkunden-Ingress mit Personalien-Block (Art. 44 lit. a HRegV).',
+      norm: 'Art. 44 lit. a HRegV',
+    },
+    {
+      id: 'AE02_gruenderliste',
+      text: '– {{item.name}}{{item.angabenZeile}}',
+      wiederholeUeber: 'gruenderListe',
+      begruendung: 'Personenangaben zu allen Gründerinnen und Gründern.',
+      norm: 'Art. 44 lit. a HRegV',
+    },
+    {
+      id: 'AE03_erklaerung',
+      ueberschrift: 'I. Gründungserklärung und Statuten',
+      text:
+        'Die erschienenen Personen erklären, eine Aktiengesellschaft unter der Firma {{firma}} mit ' +
+        'Sitz in {{sitz}} zu gründen, und legen hiermit die beiliegenden Statuten fest, die Bestandteil ' +
+        'dieser Urkunde bilden.',
+      norm: 'Art. 629 Abs. 1 OR',
+      begruendung: 'Gründungserklärung und Statutenfestlegung in der öffentlichen Urkunde (Art. 44 lit. b und c HRegV).',
+    },
+    {
+      id: 'AE04_zeichnung',
+      ueberschrift: 'II. Aktienkapital und Zeichnung',
+      text:
+        'Das Aktienkapital der Gesellschaft beträgt CHF {{akFmt}} und ist eingeteilt in {{anzahlAktien}} ' +
+        'Namenaktien zu je CHF {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von CHF {{nennwertFmt}} ' +
+        'je Aktie wie folgt gezeichnet werden:',
+      norm: 'Art. 630 Ziff. 1 OR',
+      begruendung: 'Zeichnung mit Anzahl, Nennwert, Art und Ausgabebetrag – bei der Gründung in der Urkunde selbst (Art. 44 lit. d HRegV); Ausgabe zum Nennwert (Erstausbau ohne Agio).',
+    },
+    {
+      id: 'AE05_zeichnungsliste',
+      text: '– {{item.name}}: {{item.anzahl}} Namenaktien',
+      wiederholeUeber: 'gruenderListe',
+      begruendung: 'Zeichnungserklärung jeder Gründerin / jedes Gründers.',
+      norm: 'Art. 44 lit. d HRegV',
+    },
+    {
+      id: 'AE05b_verpflichtung',
+      text: 'Jede Gründerin und jeder Gründer verpflichtet sich hiermit bedingungslos, die dem Ausgabebetrag der gezeichneten Aktien entsprechende Einlage zu leisten.',
+      norm: 'Art. 630 Ziff. 2 OR',
+      begruendung: 'Bedingungslose Einlage-Verpflichtung als Gültigkeitserfordernis der Zeichnung (ZH-Urkunde wortgleich).',
+    },
+    {
+      id: 'AE07_einlagen_voll_bank',
+      ueberschrift: 'III. Einlagen',
+      text:
+        'Sämtliche Einlagen von gesamthaft CHF {{akFmt}} wurden in Geld geleistet und sind bei der ' +
+        '{{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und ' +
+        'Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
+      includeIf: { and: [{ feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
+      norm: 'Art. 633 OR',
+      begruendung: 'Volliberierung in Geld mit Banknennung in der Urkunde (separate Bescheinigung entfällt, Art. 43 Abs. 1 lit. f HRegV).',
+    },
+    {
+      id: 'AE07_einlagen_voll_bescheinigung',
+      ueberschrift: 'III. Einlagen',
+      text:
+        'Sämtliche Einlagen von gesamthaft CHF {{akFmt}} wurden in Geld geleistet und gemäss separater ' +
+        'Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ' +
+        'ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
+      includeIf: { and: [{ feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
+      norm: 'Art. 633 OR',
+      begruendung: 'Volliberierung in Geld mit separater Bankbescheinigung als Beleg.',
+    },
+    {
+      id: 'AE07_einlagen_teil_bank',
+      ueberschrift: 'III. Einlagen',
+      text:
+        'Auf dem Aktienkapital wurden Einlagen von gesamthaft CHF {{einbezahltFmt}} ({{liberierungProzent}} % ' +
+        'des Nennwerts jeder Aktie) in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach ' +
+        'Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der ' +
+        'Gesellschaft hinterlegt. Der Verwaltungsrat fordert die ausstehenden Einlagen ein, sobald er es ' +
+        'für nötig erachtet.',
+      includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'bankInUrkundeGenannt', eq: true }] },
+      norm: 'Art. 632 OR',
+      begruendung: 'Teilliberierung (mind. 20 % je Aktie, gesamthaft mind. CHF 50\'000); Einforderung der Resteinlagen durch den VR (Art. 634b Abs. 1 OR).',
+    },
+    {
+      id: 'AE07_einlagen_teil_bescheinigung',
+      ueberschrift: 'III. Einlagen',
+      text:
+        'Auf dem Aktienkapital wurden Einlagen von gesamthaft CHF {{einbezahltFmt}} ({{liberierungProzent}} % ' +
+        'des Nennwerts jeder Aktie) in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach ' +
+        'Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der ' +
+        'Gesellschaft hinterlegt. Der Verwaltungsrat fordert die ausstehenden Einlagen ein, sobald er es ' +
+        'für nötig erachtet.',
+      includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'bankInUrkundeGenannt', eq: false }] },
+      norm: 'Art. 632 OR',
+      begruendung: 'Teilliberierung mit separater Bankbescheinigung.',
+    },
+    {
+      id: 'AE08_feststellungen',
+      ueberschrift: 'IV. Feststellungen',
+      text:
+        'Die Gründerinnen und Gründer stellen fest, dass:\n' +
+        '– sämtliche Aktien gültig gezeichnet sind;\n' +
+        '– die versprochenen Einlagen dem gesamten Ausgabebetrag entsprechen;\n' +
+        '– die gesetzlichen und statutarischen Anforderungen an die geleisteten Einlagen im Zeitpunkt der Unterzeichnung des Errichtungsakts erfüllt sind;\n' +
+        '– keine anderen Sacheinlagen, Verrechnungstatbestände oder besonderen Vorteile bestehen, als die in den Belegen genannten.',
+      norm: 'Art. 629 Abs. 2 OR',
+      begruendung: 'Gesetzliche Feststellungen Ziff. 1–4 – Wortlaut der Norm folgend (ZH-Urkunde identisch).',
+    },
+    {
+      id: 'AE09_organbestellung',
+      ueberschrift: 'V. Organe',
+      text: 'Als Mitglieder des Verwaltungsrates werden gewählt:',
+      norm: 'Art. 629 Abs. 1 OR',
+      begruendung: 'Organbestellung in der Urkunde; Personenangaben nach Art. 44 lit. e HRegV.',
+    },
+    {
+      id: 'AE09b_vrliste',
+      text: '– {{item.name}}, von {{item.herkunft}}, in {{item.wohnort}}{{item.praesidentZeile}}',
+      wiederholeUeber: 'vrListe',
+      begruendung: 'Je VR-Mitglied eine Zeile (Konstituierung und Zeichnungsberechtigungen folgen im VR-Protokoll, Art. 43 Abs. 1 lit. e HRegV).',
+      norm: 'Art. 44 lit. e HRegV',
+    },
+    {
+      id: 'AE10_revisionsstelle',
+      text: 'Als Revisionsstelle wird gewählt: {{revisionsstelleName}}, {{revisionsstelleSitz}}.',
+      includeIf: { feld: 'optingOut', eq: false },
+      norm: 'Art. 44 lit. f HRegV',
+      begruendung: 'Aufgenommen, weil eine Revisionsstelle bestellt wird.',
+    },
+    {
+      id: 'AE11_opting_out',
+      text:
+        'Auf eine Revision wird verzichtet. Die Gründerinnen und Gründer stellen fest, dass:\n' +
+        '– die Gesellschaft die Voraussetzungen für die Pflicht zur ordentlichen Revision nicht erfüllt;\n' +
+        '– die Gesellschaft nicht mehr als zehn Vollzeitstellen im Jahresdurchschnitt hat;\n' +
+        '– sämtliche Gründerinnen und Gründer auf eine eingeschränkte Revision verzichten.',
+      includeIf: { feld: 'optingOut', eq: true },
+      norm: 'Art. 727a Abs. 2 OR',
+      begruendung: 'Opting-out bei der Gründung: dreigliedrige Feststellung direkt in der Urkunde (Art. 44 lit. f HRegV; ZH-KMU-Merkblatt und SG-Formular wortgleich).',
+    },
+    {
+      id: 'AE12_domizil_eigen',
+      ueberschrift: 'VI. Rechtsdomizil',
+      text: 'Das Rechtsdomizil der Gesellschaft befindet sich an folgender Adresse: {{rechtsdomizilAdresse}}.',
+      includeIf: { feld: 'eigeneBueros', eq: true },
+      norm: 'Art. 117 Abs. 2 HRegV',
+      begruendung: 'Eigene Adresse am Sitz.',
+    },
+    {
+      id: 'AE12_domizil_co',
+      ueberschrift: 'VI. Rechtsdomizil',
+      text:
+        'Die Gesellschaft hat ihr Rechtsdomizil als c/o-Adresse bei {{domizilhalterName}}, ' +
+        '{{domizilhalterAdresse}}. Die Erklärung der Domizilhalterin bzw. des Domizilhalters liegt vor.',
+      includeIf: { feld: 'eigeneBueros', eq: false },
+      norm: 'Art. 117 Abs. 3 HRegV',
+      begruendung: 'c/o-Domizil mit Domizilannahmeerklärung als Beleg (Art. 43 Abs. 1 lit. g HRegV).',
+    },
+    {
+      id: 'AE13_nachtragsvollmacht',
+      ueberschrift: 'VII. Vollmacht',
+      text:
+        'Die Gründerinnen und Gründer bevollmächtigen jede Gründerin und jeden Gründer sowie jedes ' +
+        'Mitglied des Verwaltungsrates einzeln, allfällige von der Handelsregisterbehörde beanstandete ' +
+        'Punkte dieser Urkunde oder der Statuten durch einen öffentlich zu beurkundenden Nachtrag ' +
+        'namens aller Gründerinnen und Gründer zu bereinigen.',
+      norm: 'Art. 44 HRegV',
+      begruendung: 'Vorsorgliche Nachtragsvollmacht für Beanstandungen (ZH-Vorlagen-Klausel).',
+    },
+    {
+      id: 'AE14_gruendungserklaerung',
+      ueberschrift: 'VIII. Gründungserklärung',
+      text: 'Abschliessend erklären die erschienenen Personen die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet.',
+      norm: 'Art. 629 Abs. 1 OR',
+      begruendung: 'Abschliessende Gründungserklärung (ZH-Vorlage wortgleich).',
+    },
+    {
+      id: 'AE15_belege',
+      ueberschrift: 'Bestätigung der Urkundsperson',
+      text:
+        'Die Urkundsperson nennt die Belege über die Gründung einzeln und bestätigt, dass diese ihr und ' +
+        'den Gründerinnen und Gründern vorgelegen haben (Art. 631 Abs. 1 OR):',
+      norm: 'Art. 631 OR',
+      begruendung: 'Beleg-Nennung und Vorlage-Bestätigung durch die Urkundsperson.',
+    },
+    {
+      id: 'AE15b_belegliste',
+      text: '– {{item.titel}}',
+      wiederholeUeber: 'belegeListe',
+      begruendung: 'Je Beleg eine Zeile (Art. 631 Abs. 2 OR; bei der Bargründung: Statuten und – sofern die Bank nicht in der Urkunde genannt ist – die Hinterlegungs-Bestätigung).',
+      norm: 'Art. 631 Abs. 2 OR',
+    },
+    {
+      id: 'AE16_unterschriften',
+      rolle: 'unterschrift',
+      text: '{{ortDatumZeile}}\n\nDie Gründerinnen und Gründer:',
+      begruendung: 'Unterschriften der Gründerinnen und Gründer (Art. 44 lit. i HRegV).',
+      norm: 'Art. 44 lit. i HRegV',
+    },
+    {
+      id: 'AE16b_unterschriftenliste',
+      rolle: 'unterschrift',
+      text: '_________________________________\n{{item.name}}',
+      wiederholeUeber: 'gruenderListe',
+      begruendung: 'Je Gründerin/Gründer eine Unterschriftslinie.',
+      norm: 'Art. 44 lit. i HRegV',
+    },
+    {
+      id: 'AE17_urkundsperson',
+      rolle: 'unterschrift',
+      text: 'Die Urkundsperson:\n\n_________________________________',
+      begruendung: 'Beurkundungsvermerk – wird von der Urkundsperson nach kantonalem Beurkundungsrecht ergänzt.',
+    },
+  ],
+};
+
+// ── 3 · WAHLANNAHME VR (fertig; ZH verbatim) ────────────────────────────────
+
+const WAHLANNAHME_SCHEMA: VorlageSchema = {
+  id: 'ag-wahlannahme',
+  version: '1.0.0 (ZH-Vorlage 26.7.2024; Wortlaut-Dossier 7.6.2026)',
+  titel: 'Wahlannahmeerklärung',
+  format: 'eingabe',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Im Original einzureichen (Art. 20 HRegV); ' +
+    'entbehrlich, wenn die Annahme in der öffentlichen Urkunde erklärt wird oder die gewählte Person ' +
+    'die Handelsregister-Anmeldung selbst unterzeichnet (Praxis ZH/LU/BE).',
+  bausteine: [
+    { id: 'AW01_absender', rolle: 'absender', text: '{{personName}}\n{{personAdresse}}', begruendung: 'Absenderin/Absender ist die gewählte Person.' },
+    { id: 'AW02_adressat', rolle: 'adressat', text: '{{firma}}\nz. H. der Gründerinnen und Gründer\n{{sitz}}', begruendung: 'Adressatin ist die Gesellschaft (in Gründung).' },
+    { id: 'AW03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}', begruendung: 'Ort und Datum.' },
+    { id: 'AW04_betreff', rolle: 'betreff', text: 'Wahlannahmeerklärung', begruendung: 'Betreff nach amtlicher ZH-Vorlage.' },
+    { id: 'AW05_anrede', rolle: 'anrede', text: 'Sehr geehrte Damen und Herren', begruendung: 'Anrede nach amtlicher ZH-Vorlage.' },
+    {
+      id: 'AW06_text',
+      text: 'Gerne bestätige ich Ihnen, dass ich die Wahl als Mitglied des Verwaltungsrates der {{firma}}, in {{sitz}}, annehme.',
+      norm: 'Art. 43 Abs. 1 lit. c HRegV',
+      begruendung: 'Annahme-Kernsatz – verbatim nach der amtlichen ZH-Vorlage (ag_vorlage_wahlannahme_vr).',
+    },
+    { id: 'AW07_gruss', rolle: 'schlussformel', text: 'Mit freundlichen Grüssen', begruendung: 'Schlussformel nach ZH-Vorlage.' },
+    { id: 'AW08_unterschrift', rolle: 'unterschrift', text: '_________________________________\n{{personName}}', begruendung: 'Original-Unterschrift der gewählten Person.' },
+  ],
+};
+
+// ── 4 · DOMIZILANNAHME (fertig) ─────────────────────────────────────────────
+
+const DOMIZILANNAHME_SCHEMA: VorlageSchema = {
+  id: 'ag-domizilannahme',
+  version: '1.0.0 (ZH-Vorlage 26.7.2024; Wortlaut-Dossier 7.6.2026)',
+  titel: 'Domizilannahmeerklärung',
+  format: 'eingabe',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Erklärung der Domizilhalterin / des Domizilhalters ' +
+    'nach Art. 117 Abs. 3 HRegV; im Original mit der Anmeldung einzureichen (Art. 43 Abs. 1 lit. g HRegV).',
+  bausteine: [
+    { id: 'AD01_absender', rolle: 'absender', text: '{{domizilhalterName}}\n{{domizilhalterAdresse}}', begruendung: 'Absender ist die Domizilhalterin / der Domizilhalter.' },
+    { id: 'AD02_adressat', rolle: 'adressat', text: '{{firma}}\nc/o {{domizilhalterName}}\n{{domizilhalterAdresse}}', begruendung: 'Adressatin ist die Gesellschaft an der c/o-Adresse.' },
+    { id: 'AD03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}', begruendung: 'Ort und Datum.' },
+    { id: 'AD04_betreff', rolle: 'betreff', text: 'Domizilannahmeerklärung', begruendung: 'Betreff nach amtlicher ZH-Vorlage.' },
+    { id: 'AD05_anrede', rolle: 'anrede', text: 'Sehr geehrte Damen und Herren', begruendung: 'Anrede nach amtlicher ZH-Vorlage.' },
+    {
+      id: 'AD06_text',
+      text: 'Gerne bestätigen wir Ihnen, dass wir der {{firma}}, mit Sitz in {{sitz}}, an unserer Adresse ({{domizilhalterAdresse}}) Domizil gewähren.',
+      norm: 'Art. 117 Abs. 3 HRegV',
+      begruendung: 'Kernsatz nach den amtlichen ZH-Vorlagen (AG-Fassung sagt «Sitz gewähren» – Haus-Fassung einheitlich «Domizil», deckt Art. 117 Abs. 3 HRegV; Abweichung offengelegt).',
+    },
+    { id: 'AD07_gruss', rolle: 'schlussformel', text: 'Mit freundlichen Grüssen', begruendung: 'Schlussformel nach ZH-Vorlage.' },
+    { id: 'AD08_unterschrift', rolle: 'unterschrift', text: '_________________________________\n{{domizilhalterName}}', begruendung: 'Unterschrift der Domizilhalterin / des Domizilhalters.' },
+  ],
+};
+
+// ── 5 · VR-KONSTITUIERUNGSPROTOKOLL (fertig; Pflichtbeleg lit. e) ───────────
+
+const VR_PROTOKOLL_SCHEMA: VorlageSchema = {
+  id: 'ag-vr-protokoll',
+  version: '1.0.0 (ZH-Vorlage 26.7.2024; Wortlaut-Dossier 7.6.2026)',
+  titel: 'Protokoll des Verwaltungsrates (Konstituierung)',
+  format: 'vertrag',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Pflichtbeleg der AG-Gründung (Art. 43 Abs. 1 ' +
+    'lit. e HRegV): Konstituierung, Vorsitz und Zeichnungsbefugnisse. Unterschriften von Vorsitz und ' +
+    'Protokollführung (Art. 23 Abs. 2 HRegV); entbehrlich, wenn sämtliche VR-Mitglieder die Anmeldung ' +
+    'unterzeichnen (Art. 23 Abs. 3 HRegV).',
+  bausteine: [
+    {
+      id: 'VP01_ingress',
+      text: 'der {{firma}}, mit Sitz in {{sitz}}\n\nOrt: {{ort}}\nDatum: {{datumZeile}}\nAnwesend: sämtliche Mitglieder des Verwaltungsrates\nVorsitz: {{praesidentName}}\nProtokoll: {{protokollName}}',
+      begruendung: 'Protokoll-Kopf nach der amtlichen ZH-Vorlage (ag_vorlage_protokoll_vr).',
+      norm: 'Art. 43 Abs. 1 lit. e HRegV',
+    },
+    {
+      id: 'VP02_eroeffnung',
+      ueberschrift: 'Eröffnung der Sitzung und Feststellung der Beschlussfähigkeit',
+      text:
+        '{{praesidentName}} eröffnet die Sitzung und übernimmt den Vorsitz. {{protokollName}} amtet als ' +
+        'Protokollführer/in. Der Vorsitzende stellt fest, dass der Verwaltungsrat in beschlussfähiger ' +
+        'Anzahl anwesend ist. Gegen diese Feststellungen wird kein Widerspruch erhoben. Der ' +
+        'Verwaltungsrat beschliesst:',
+      begruendung: 'Eröffnungs-Passus nach der amtlichen ZH-Vorlage.',
+      norm: 'Art. 713 OR',
+    },
+    {
+      id: 'VP03_konstituierung',
+      ueberschrift: 'Konstituierung und Zeichnungsberechtigung',
+      text: 'Der Verwaltungsrat konstituiert sich und erteilt seinen Mitgliedern Zeichnungsberechtigungen wie folgt:',
+      nummeriert: true,
+      norm: 'Art. 712 OR',
+      begruendung: 'Selbstkonstituierung des VR (Präsidentenwahl bei mehrgliedrigem VR zwingend, Art. 712 Abs. 2 OR); Zeichnungsbefugnisse als Eintragungsinhalt.',
+    },
+    {
+      id: 'VP03b_vrliste',
+      text: '– {{item.name}}, von {{item.herkunft}}, in {{item.wohnort}}: {{item.funktion}}, {{item.zeichnung}}',
+      wiederholeUeber: 'vrListe',
+      begruendung: 'Je VR-Mitglied eine Zeile (Funktion + Zeichnungsart, ZH-Vorlagen-Struktur).',
+      norm: 'Art. 718 OR',
+    },
+    {
+      id: 'VP04_weitere',
+      ueberschrift: 'Erteilung von weiteren Zeichnungsberechtigungen',
+      text: 'Weitere Zeichnungsberechtigungen werden erteilt:',
+      includeIf: { feld: 'hatWeitereVertretungen', eq: true },
+      nummeriert: true,
+      norm: 'Art. 716a Abs. 1 Ziff. 4 OR',
+      begruendung: 'Aufgenommen, weil weitere Vertretungsberechtigte (Direktion/Prokura) ernannt werden.',
+    },
+    {
+      id: 'VP04b_liste',
+      text: '– {{item.name}}, als {{item.funktion}}, mit {{item.zeichnung}}',
+      includeIf: { feld: 'hatWeitereVertretungen', eq: true },
+      wiederholeUeber: 'vertretungsListe',
+      begruendung: 'Je ernannte Person eine Zeile.',
+      norm: 'Art. 718 Abs. 2 OR',
+    },
+    {
+      id: 'VP05_unterschriften', rolle: 'unterschrift',
+      text: '{{ortDatumZeile}}\n\n_________________________________\n{{praesidentName}} (Vorsitz)\n\n_________________________________\n{{protokollName}} (Protokoll)',
+      begruendung: 'Unterschriften von Vorsitz und Protokollführung (Art. 23 Abs. 2 HRegV); für die HR-Einreichung Unterschriften der Vertretungsberechtigten amtlich beglaubigt (Praxis ZH).',
+      norm: 'Art. 23 Abs. 2 HRegV',
+    },
+  ],
+};
+
+// ── 6 · HR-ANMELDUNG (fertig) ───────────────────────────────────────────────
+
+const ANMELDUNG_SCHEMA: VorlageSchema = {
+  id: 'ag-hr-anmeldung',
+  version: '1.0.0 (ZH-Formular-Struktur; Wortlaut-Dossier 7.6.2026)',
+  titel: 'Anmeldung an das Handelsregisteramt',
+  format: 'eingabe',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Unterschriften beim Handelsregisteramt zeichnen ' +
+    'oder beglaubigt einreichen (Art. 18 Abs. 2, Art. 21 HRegV); Gebühr CHF 420 (GebV-HReg, Anhang ' +
+    'Ziff. 1.3). Belege im Original oder in beglaubigter Kopie (Art. 20 HRegV).',
+  bausteine: [
+    { id: 'AA01_absender', rolle: 'absender', text: '{{firma}} (in Gründung)\n{{anmeldeAdresseZeile}}', begruendung: 'Absenderin ist die Gesellschaft in Gründung.' },
+    { id: 'AA02_adressat', rolle: 'adressat', text: 'Handelsregisteramt des Kantons {{kanton}}', begruendung: 'Zuständig ist das Handelsregisteramt am Sitz (Art. 16 HRegV).', norm: 'Art. 16 HRegV' },
+    { id: 'AA03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}', begruendung: 'Ort und Datum.' },
+    { id: 'AA04_betreff', rolle: 'betreff', text: 'Anmeldung zur Eintragung der Gründung der {{firma}}', begruendung: 'Betreff mit Identifikation der Rechtseinheit (Art. 16 Abs. 1 HRegV).', norm: 'Art. 16 Abs. 1 HRegV' },
+    {
+      id: 'AA05_text',
+      text:
+        'Zur Eintragung in das Handelsregister wird angemeldet: die Gründung der {{firma}} mit Sitz in ' +
+        '{{sitz}}. Die einzutragenden Tatsachen ergeben sich aus den beigelegten Belegen.',
+      norm: 'Art. 16 Abs. 1 HRegV',
+      begruendung: 'Anmeldungs-Kern: Identifikation und Beleg-Verweis (ZH-Formular-Struktur).',
+    },
+    {
+      id: 'AA06_beilagen',
+      ueberschrift: 'Beilagen',
+      text: '– {{item.titel}} ({{item.norm}})',
+      wiederholeUeber: 'belegeAnmeldung',
+      begruendung: 'Beilagen-Liste aus der Gründungs-Konstellation – identisch mit der Checklisten-Engine (eine Quelle, §5).',
+      norm: 'Art. 43 HRegV',
+    },
+    { id: 'AA07_unterschriften', rolle: 'unterschrift', text: 'Die Mitglieder des Verwaltungsrates:', begruendung: 'Anmeldende Personen (Art. 17 HRegV); Unterschriften nach Art. 18 Abs. 2 HRegV.', norm: 'Art. 18 HRegV' },
+    { id: 'AA07b_liste', rolle: 'unterschrift', text: '_________________________________\n{{item.name}}', wiederholeUeber: 'vrListe', begruendung: 'Je anmeldende Person eine Unterschriftslinie.' },
+  ],
+};
+
+// ── Statuten-Artikelnummerierung (wie GmbH – Darstellungs-Konvention) ───────
+
+function nummeriereStatutenArtikel(erg: AssembleErgebnis): AssembleErgebnis {
+  let n = 0;
+  for (const abs of erg.dokument.absaetze) {
+    if (abs.ueberschrift) {
+      n += 1;
+      abs.ueberschrift = `Art. ${n} – ${abs.ueberschrift}`;
+    }
+  }
+  return erg;
+}
+
+// ── Dokumentmappe ───────────────────────────────────────────────────────────
+
+export type AgDokument = {
+  id: string;
+  titel: string;
+  dateiName: string;
+  ausgeloestDurch?: string;
+  ergebnis: AssembleErgebnis;
+};
+
+export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; gates: AgDokGates } {
+  const gates = pruefeAgDokGates(a);
+  if (gates.blocker.length > 0) return { dokumente: [], gates };
+
+  // §5: Dokument-Auslöser aus der Checklisten-Engine (AG: Wahlannahme VR und
+  // Konstituierungsprotokoll sind PFLICHT-Belege, Art. 43 Abs. 1 lit. c/e).
+  const unterlagen = agGruendungsunterlagen(a).unterlagen;
+  const hat = (id: string) => unterlagen.some((u) => u.id === id);
+
+  const basis = basisAntworten(a);
+
+  const belegeListe: { titel: string }[] = [{ titel: 'die Statuten' }];
+  if (hat('bankbescheinigung')) {
+    belegeListe.push({ titel: 'die Bestätigung über die Hinterlegung der Einlagen in Geld' });
+  }
+
+  const KEINE_BEILAGE = new Set(['statutenentwurf', 'kapitaleinlagekonto', 'hr-anmeldung', 'freigabe-einlagen', 'aktienbuch', 'wb-verzeichnis']);
+  const belegeAnmeldung = unterlagen
+    .filter((u) => !KEINE_BEILAGE.has(u.id))
+    .map((u) => ({ titel: u.titel, norm: u.norm }));
+
+  const dokumente: AgDokument[] = [];
+
+  dokumente.push({
+    id: 'statuten',
+    titel: 'Statuten (Entwurf)',
+    dateiName: 'ag-statuten-entwurf',
+    ergebnis: nummeriereStatutenArtikel(assemble(STATUTEN_SCHEMA, basis)),
+  });
+
+  dokumente.push({
+    id: 'errichtungsakt',
+    titel: 'Errichtungsakt (Entwurf für die Urkundsperson)',
+    dateiName: 'ag-errichtungsakt-entwurf',
+    ergebnis: assemble(ERRICHTUNGSAKT_SCHEMA, { ...basis, belegeListe }),
+  });
+
+  if (hat('wahlannahme-vr')) {
+    // Review-Befund M-1 (7.6.2026): Index-ID gegen Namens-Kollisionen;
+    // zudem NIEDRIG-1: Auslöser-Etikett wie bei der GmbH führen.
+    a.verwaltungsraete.filter((x) => x.name.trim()).forEach((v, i) => {
+      dokumente.push({
+        id: `wahlannahme-${i}`,
+        titel: `Wahlannahmeerklärung – ${v.name.trim()}`,
+        dateiName: 'ag-wahlannahme',
+        ausgeloestDurch: 'Pflichtbeleg (Art. 43 Abs. 1 lit. c HRegV)',
+        ergebnis: assemble(WAHLANNAHME_SCHEMA, {
+          ...basis,
+          personName: v.name.trim(),
+          personAdresse: v.adresse.trim() || '________',
+        }),
+      });
+    });
+  }
+
+  if (hat('vr-konstituierung')) {
+    dokumente.push({
+      id: 'vr-protokoll',
+      titel: 'VR-Protokoll (Konstituierung)',
+      dateiName: 'ag-vr-protokoll',
+      ergebnis: assemble(VR_PROTOKOLL_SCHEMA, { ...basis, datumZeile: a.datum ? fmtDatum(a.datum) : '________' }),
+    });
+  }
+
+  if (hat('domizilannahme')) {
+    dokumente.push({
+      id: 'domizilannahme',
+      titel: 'Domizilannahmeerklärung',
+      dateiName: 'ag-domizilannahme',
+      ausgeloestDurch: 'c/o-Adresse (kein eigenes Büro)',
+      ergebnis: assemble(DOMIZILANNAHME_SCHEMA, basis),
+    });
+  }
+
+  dokumente.push({
+    id: 'hr-anmeldung',
+    titel: 'Handelsregister-Anmeldung',
+    dateiName: 'ag-hr-anmeldung',
+    ergebnis: assemble(ANMELDUNG_SCHEMA, {
+      ...basis,
+      belegeAnmeldung,
+      anmeldeAdresseZeile: a.eigeneBueros
+        ? (a.rechtsdomizilAdresse.trim() || '________')
+        : `c/o ${a.domizilhalterName.trim() || '________'}, ${a.domizilhalterAdresse.trim() || '________'}`,
+    }),
+  });
+
+  return { dokumente, gates };
+}

@@ -2,15 +2,18 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { agGruendungsunterlagen, type EinlageArt, type Phase } from '../lib/gruendungsunterlagen';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { AgDokumentmappe } from '../components/vorlagen/AgDokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
 import { karte } from '../lib/startseiteConfig';
 
-// ─── Maske: AG-Gründungsunterlagen — CHECKLISTE, bewusst KEINE Vollvorlage ──
-// Bauspezifikation: bibliothek/recherche/ag-gruendung.md (§8-Grenze):
-// Errichtungsakt öffentlich zu beurkunden (Art. 629 OR) → kein Export.
-// Unterlagenliste deterministisch aus lib/gruendungsunterlagen.ts (Art. 43/44
-// HRegV, Art. 620 ff. OR). Keine Rechtslogik hier (§3).
+// ─── Maske: AG-Gründung — Checkliste + Dokumentmappe (Plan 9b, 7.6.2026) ─────
+// Checkliste: deterministische Unterlagenliste (lib/gruendungsunterlagen.ts,
+// Art. 43/44 HRegV). Dokumentmappe: Volldokumente aus denselben Weichen —
+// Statuten/Errichtungsakt als ENTWURF (Beurkundungszwang Art. 629 OR, §8),
+// Wahlannahmen/VR-Protokoll/HR-Anmeldung druckfertig. Wortlaut-Grundlage:
+// bibliothek/recherche/gruendungsdokumente-wortlaute.md. Keine Rechtslogik
+// hier (§3) — alles in lib/vorlagen/gruendungAgDokumente.ts.
 
 const PHASEN: { id: Phase; titel: string; lead: string }[] = [
   { id: 'vorbereitung', titel: '1 · Vor dem Notariatstermin', lead: 'Beschaffen bzw. erstellen — die Urkundsperson muss diese Belege beim Termin vorliegen haben (Art. 631 OR).' },
@@ -38,9 +41,9 @@ export function VorlageAgGruendung() {
   const [chVertretung, setChVertretung] = useState(true);
   const [leistungen, setLeistungen] = useState('');
 
-  const ergebnis = useMemo(() => {
+  const eingaben = useMemo(() => {
     const betrag = Number(leistungen.replace(/['’\s]/g, ''));
-    return agGruendungsunterlagen({
+    return {
       einlageArt,
       besondereVorteile,
       optingOut,
@@ -51,8 +54,10 @@ export function VorlageAgGruendung() {
       bankInUrkundeGenannt: bankInUrkunde,
       chWohnsitzVertretung: chVertretung,
       leistungenChf: leistungen.trim() === '' || Number.isNaN(betrag) ? undefined : betrag,
-    });
+    };
   }, [einlageArt, besondereVorteile, optingOut, eigeneBueros, immobilienHauptzweck, inhaberaktien, fremdwaehrung, bankInUrkunde, chVertretung, leistungen]);
+
+  const ergebnis = useMemo(() => agGruendungsunterlagen(eingaben), [eingaben]);
 
   return (
     <div className="space-y-6">
@@ -64,17 +69,18 @@ export function VorlageAgGruendung() {
         <p className="lc-overline">Gesellschaftsrecht · Checkliste</p>
         <h1 className="text-h1 font-display font-semibold text-ink-900">AG-Gründungsunterlagen</h1>
         <p className="text-body-l text-ink-600 max-w-reading">
-          Bewusst KEINE ausfüllbare Vorlage: Der Errichtungsakt bedarf der öffentlichen Beurkundung —
-          das Dokument entsteht beim Notariat. Diese Checkliste leitet die registerrechtlich verlangten
-          Belege (abschliessend in Art. 43/44 HRegV, Art. 620 ff. OR) samt den spezialgesetzlichen
-          Zusatzbelegen (Identifikation, Lex Koller; bewilligungspflichtige Zwecke vorbehalten) aus
-          Ihrer Gründungs-Konstellation ab.
+          Checkliste UND Dokumentmappe: Die Checkliste leitet die registerrechtlich verlangten
+          Belege (abschliessend in Art. 43/44 HRegV, Art. 620 ff. OR) aus Ihrer
+          Gründungs-Konstellation ab. Die Dokumentmappe erzeugt daraus bei der Bargründung mit
+          Namenaktien die Dokumente direkt — Statuten und Errichtungsakt als ENTWURF für die
+          Urkundsperson (die öffentliche Beurkundung bleibt zwingend), Wahlannahmen,
+          VR-Konstituierungsprotokoll und Handelsregister-Anmeldung druckfertig.
         </p>
         <div className="flex flex-wrap items-center gap-1.5">
           {(card?.norms ?? []).map((n) => (
             <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
           ))}
-          <span className="lc-badge lc-badge-warn">Checkliste — kein Export</span>
+          <span className="lc-badge lc-badge-warn">Checkliste + Dokumentmappe (Urkunde als Entwurf)</span>
         </div>
       </div>
 
@@ -171,6 +177,10 @@ export function VorlageAgGruendung() {
           <Link to="/vorlagen/gmbh-gruendung" className="text-brass-700 underline">GmbH-Gründungsunterlagen</Link>.
         </p>
       </section>
+
+      {/* Ausbaustufe 9b (7.6.2026): Volldokumente aus denselben Weichen */}
+      <AgDokumentmappe weichen={eingaben}
+        docxErlaubt={card?.modus === 'vorlage' && (card.output?.includes('docx') ?? false)} />
     </div>
   );
 }

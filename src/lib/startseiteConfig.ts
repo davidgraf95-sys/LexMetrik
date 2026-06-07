@@ -1305,16 +1305,22 @@ const VORLAGEN: Record<string, VorlageCard> = {
 
   // ════ IV – Gesellschaftsdokumente ════
   // Gründungs-Masken (Spez. recherche/gmbh-gruendung.md Teil 5 bzw.
-  // ag-gruendung.md, gebaut 6.6.2026): CHECKLISTEN nach dem 2b-Muster —
-  // der Errichtungsakt ist öffentlich zu beurkunden (Art. 777/629 OR),
-  // darum bewusst ohne schemaId/output (kein Export, §8). Unterlagenliste
+  // ag-gruendung.md, gebaut 6.6.2026; GmbH-AUSBAUSTUFE 9b 7.6.2026:
+  // Volldokumente aus recherche/gruendungsdokumente-wortlaute.md).
+  // Der Errichtungsakt ist öffentlich zu beurkunden (Art. 777/629 OR) —
+  // Urkunde/Statuten darum nur als ENTWURF-Export (§8-Gate), Erklärungen/
+  // Beschlüsse/Anmeldung druckfertig. Unterlagenliste + Dokument-Auslöser
   // deterministisch aus lib/gruendungsunterlagen.ts (HRegV abschliessend).
   'gmbh-gruendung': {
     id: 'gmbh-gruendung', modus: 'vorlage', art: 'gesellschaft', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
     rechtsbereich: 'privat',
-    title: 'GmbH-Gründungsunterlagen (Checkliste)',
-    description: 'Vollständige Unterlagenliste für die GmbH-Gründung nach Konstellation (Bar-/Sacheinlage, Opting-out, c/o-Domizil, Lex Koller): was die Gründer beschaffen, was beim Notariat entsteht, was das Handelsregisteramt verlangt (Art. 71/72 HRegV) – inkl. Statuten-Pflichtklauseln und Emissionsabgabe-Hinweis. Kein Export: Der Errichtungsakt bedarf der öffentlichen Beurkundung.',
+    title: 'GmbH-Gründung (Checkliste + Dokumentmappe)',
+    description: 'Unterlagenliste UND Volldokumente für die GmbH-Gründung nach Konstellation (Opting-out, c/o-Domizil, Lex Koller, Statuten-Klauseln): Bei der Bargründung entstehen Statuten und Errichtungsakt als Entwurf für die Urkundsperson (die öffentliche Beurkundung bleibt zwingend) sowie Wahlannahme- und Domizilerklärungen, Beschlüsse und die Handelsregister-Anmeldung druckfertig – mit Notariats-Anlaufstelle je Kanton und Emissionsabgabe-Hinweis.',
     status: 'entwurf',
+    output: ['pdf', 'docx'],
+    // Mappe aus mehreren Schemas (gmbh-statuten · gmbh-errichtungsakt · …) —
+    // schemaId nennt die Mappe (lib/vorlagen/gruendungGmbhDokumente.ts).
+    schemaId: 'gmbh-gruendungsmappe',
     norms: [
       // Art. 777 OR – Errichtung durch öffentliche Urkunde
       { label: 'Art. 777 OR', url: fedlexUrl('OR', '777'), verified: false },
@@ -1326,16 +1332,19 @@ const VORLAGEN: Record<string, VorlageCard> = {
       { label: 'Art. 71 HRegV', url: fedlexUrl('HRegV', '71'), verified: false },
     ],
     href: '/vorlagen/gmbh-gruendung',
-    formvorschrift: 'Errichtungsakt nur als öffentliche Urkunde (Art. 777 Abs. 1 OR) – darum kein Export, Checkliste mit Verweis auf die amtlichen Vorlagen.',
+    formvorschrift: 'Errichtungsakt nur als öffentliche Urkunde (Art. 777 Abs. 1 OR) – Statuten und Urkunde darum ausschliesslich als ENTWURF mit Wasserzeichen; gültig wird nur die beurkundete Fassung. Beurkundungsfreie Erklärungen und die HR-Anmeldung sind druckfertig.',
     related: ['ag-gruendung', 'statuten', 'gesellschaftsrecht-fristen'],
     keywords: ['GmbH', 'Gründung', 'Errichtungsakt', 'Statuten', 'Handelsregister', 'Stammkapital', 'Beurkundung', 'Opting-out', 'Lex Koller', 'Art. 777', 'HRegV'],
   },
   'ag-gruendung': {
     id: 'ag-gruendung', modus: 'vorlage', art: 'gesellschaft', tier: 'pro', rechtsgebiet: 'Gesellschaftsrecht',
     rechtsbereich: 'privat',
-    title: 'AG-Gründungsunterlagen (Checkliste)',
-    description: 'Vollständige Unterlagenliste für die AG-Gründung nach Konstellation (Bar-/Sacheinlage, Opting-out, Inhaberaktien, c/o-Domizil, Lex Koller): VR-Konstituierungsprotokoll, Wahlannahmen, Bankbescheinigung und die weiteren Belege nach Art. 43/44 HRegV – inkl. Emissionsabgabe-Hinweis ab CHF 1 Mio. Kein Export: Der Errichtungsakt bedarf der öffentlichen Beurkundung.',
+    title: 'AG-Gründung (Checkliste + Dokumentmappe)',
+    description: 'Unterlagenliste UND Volldokumente für die AG-Gründung nach Konstellation (Opting-out, Inhaberaktien, c/o-Domizil, Lex Koller): Bei der Bargründung mit Namenaktien entstehen Statuten und Errichtungsakt als Entwurf für die Urkundsperson (die öffentliche Beurkundung bleibt zwingend) sowie Wahlannahmen, VR-Konstituierungsprotokoll und die Handelsregister-Anmeldung druckfertig – mit Notariats-Anlaufstelle je Kanton, Teilliberierungs-Prüfung (Art. 632 OR) und Emissionsabgabe-Hinweis.',
     status: 'entwurf',
+    output: ['pdf', 'docx'],
+    // Mappe aus mehreren Schemas (lib/vorlagen/gruendungAgDokumente.ts).
+    schemaId: 'ag-gruendungsmappe',
     norms: [
       // Art. 629 OR – Errichtung durch öffentliche Urkunde
       { label: 'Art. 629 OR', url: fedlexUrl('OR', '629'), verified: false },
@@ -1347,7 +1356,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
       { label: 'Art. 43 HRegV', url: fedlexUrl('HRegV', '43'), verified: false },
     ],
     href: '/vorlagen/ag-gruendung',
-    formvorschrift: 'Errichtungsakt nur als öffentliche Urkunde (Art. 629 Abs. 1 OR) – darum kein Export, Checkliste mit Verweis auf die amtlichen Vorlagen.',
+    formvorschrift: 'Errichtungsakt nur als öffentliche Urkunde (Art. 629 Abs. 1 OR) – Statuten und Urkunde darum ausschliesslich als ENTWURF mit Wasserzeichen; gültig wird nur die beurkundete Fassung. Beurkundungsfreie Erklärungen, VR-Protokoll und HR-Anmeldung sind druckfertig.',
     related: ['gmbh-gruendung', 'statuten', 'gesellschaftsrecht-fristen'],
     keywords: ['AG', 'Aktiengesellschaft', 'Gründung', 'Errichtungsakt', 'Statuten', 'Handelsregister', 'Aktienkapital', 'Beurkundung', 'Verwaltungsrat', 'Inhaberaktien', 'Emissionsabgabe', 'Art. 629', 'HRegV'],
   },

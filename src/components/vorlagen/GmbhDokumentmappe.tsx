@@ -1,0 +1,390 @@
+import { useMemo, useRef, useState } from 'react';
+import { Field, inputCls } from './ui';
+import { VorschauPanel, ExportLeiste } from './wizard';
+import type { PdfBanner } from '../../lib/vorlagen/banner';
+import type { GmbhGruendungEingaben } from '../../lib/gruendungsunterlagen';
+import {
+  gmbhDokumentmappe,
+  GMBH_DOK_DEFAULTS,
+  type GmbhDokAntworten,
+  type GmbhGruenderZeile,
+  type GmbhGfZeile,
+  type GmbhVertretungsZeile,
+  type GmbhZeichnungsArt,
+} from '../../lib/vorlagen/gruendungGmbhDokumente';
+import { KANTONE } from '../../lib/kantone';
+import { NOTARIATE, NOTARIAT_SYSTEM_LABEL, NOTARIAT_FREIZUEGIGKEIT } from '../../lib/notariate';
+import type { Kanton } from '../../types/legal';
+
+// ─── Dokumentmappe der GmbH-Gründung (Plan 9b Ausbaustufe, 7.6.2026) ─────────
+// Darstellung + Eingabesammlung; sämtliche Rechtslogik (Gates, Schemas,
+// Dokument-Auswahl) lebt in lib/vorlagen/gruendungGmbhDokumente.ts (§3).
+// Die Weichen (Opting-out, c/o, Bank …) kommen vom Checklisten-Teil der
+// Seite – EINE Quelle für Checkliste und Dokumente (§5).
+
+const BANNER_ENTWURF: PdfBanner = {
+  titel: 'ENTWURF – KEIN GÜLTIGES DOKUMENT',
+  text: 'Vorbereitung für die Urkundsperson: Die Statuten werden notariell beglaubigt (Art. 22 Abs. 4 HRegV), der Errichtungsakt öffentlich beurkundet (Art. 777 Abs. 1 OR).',
+};
+const BANNER_FERTIG: PdfBanner = {
+  titel: 'NACH DEM AUSDRUCK DATIEREN UND UNTERSCHREIBEN',
+  text: 'Im Original beim Handelsregisteramt einzureichen (Art. 20 HRegV); per E-Mail eingereichte Unterlagen gelten als Kopien.',
+};
+
+const ZEICHNUNGS_OPTIONEN: { id: GmbhZeichnungsArt; label: string }[] = [
+  { id: 'einzelunterschrift', label: 'Einzelunterschrift' },
+  { id: 'kollektivzuzweien', label: 'Kollektivunterschrift zu zweien' },
+];
+
+export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
+  weichen: GmbhGruendungEingaben;
+  docxErlaubt: boolean;
+}) {
+  // Identität & Parameter (Weichen kommen als Props von der Checkliste)
+  const [firma, setFirma] = useState('');
+  const [sitz, setSitz] = useState('');
+  const [kanton, setKanton] = useState('ZH');
+  const [zweck, setZweck] = useState('');
+  const [zweckErweiterung, setZweckErweiterung] = useState(true);
+  const [stammkapital, setStammkapital] = useState(GMBH_DOK_DEFAULTS.stammkapitalChf);
+  const [anzahl, setAnzahl] = useState(GMBH_DOK_DEFAULTS.anzahlAnteile);
+  const [nennwert, setNennwert] = useState(GMBH_DOK_DEFAULTS.nennwertChf);
+  const [gruender, setGruender] = useState<(GmbhGruenderZeile & { key: number })[]>([]);
+  const [gfs, setGfs] = useState<(GmbhGfZeile & { key: number })[]>([]);
+  const [vertretungen, setVertretungen] = useState<(GmbhVertretungsZeile & { key: number })[]>([]);
+  const [bankName, setBankName] = useState('');
+  const [bankOrt, setBankOrt] = useState('');
+  const [rechtsdomizil, setRechtsdomizil] = useState('');
+  const [domizilhalterName, setDomizilhalterName] = useState('');
+  const [domizilhalterAdresse, setDomizilhalterAdresse] = useState('');
+  const [rsName, setRsName] = useState('');
+  const [rsSitz, setRsSitz] = useState('');
+  const [nachschussBetrag, setNachschussBetrag] = useState('');
+  const [nebenleistung, setNebenleistung] = useState('');
+  const [konkurrenzBefreiung, setKonkurrenzBefreiung] = useState<'alleGesellschafter' | 'gv'>('alleGesellschafter');
+  const [vetoBeschluesse, setVetoBeschluesse] = useState('');
+  const [virtuelleGv, setVirtuelleGv] = useState(false);
+  const [ort, setOrt] = useState('');
+  const [datum, setDatum] = useState('');
+  const [aktivesDok, setAktivesDok] = useState<string>('statuten');
+  const [kopiert, setKopiert] = useState(false);
+
+  // Stabile Listen-Keys (Voll-Audit 5.6.: keine Index-Keys in Editoren)
+  const naechsterKey = useRef(1);
+  const neuerKey = () => naechsterKey.current++;
+
+  const antworten: GmbhDokAntworten = useMemo(() => ({
+    ...weichen,
+    ...GMBH_DOK_DEFAULTS,
+    firma, sitz, kanton, zweck, zweckErweiterung,
+    stammkapitalChf: stammkapital, anzahlAnteile: anzahl, nennwertChf: nennwert,
+    gruender, geschaeftsfuehrer: gfs, weitereVertretungen: vertretungen,
+    bankName, bankOrt, rechtsdomizilAdresse: rechtsdomizil,
+    domizilhalterName, domizilhalterAdresse,
+    revisionsstelleName: rsName, revisionsstelleSitz: rsSitz,
+    nachschussBetragChf: nachschussBetrag, nebenleistungText: nebenleistung,
+    konkurrenzBefreiung, vetoBeschluesse, virtuelleGv, ort, datum,
+    // Konsistenz zur Checkliste: «mehrere GF» folgt aus der Liste
+    mehrereGeschaeftsfuehrer: gfs.filter((g) => g.name.trim()).length > 1,
+    weitereVertretungsberechtigte: weichen.weitereVertretungsberechtigte,
+  }), [weichen, firma, sitz, kanton, zweck, zweckErweiterung, stammkapital, anzahl, nennwert,
+    gruender, gfs, vertretungen, bankName, bankOrt, rechtsdomizil, domizilhalterName,
+    domizilhalterAdresse, rsName, rsSitz, nachschussBetrag, nebenleistung,
+    konkurrenzBefreiung, vetoBeschluesse, virtuelleGv, ort, datum]);
+
+  const mappe = useMemo(() => gmbhDokumentmappe(antworten), [antworten]);
+  const dok = mappe.dokumente.find((d) => d.id === aktivesDok) ?? mappe.dokumente[0];
+
+  const kopieren = async (text: string) => {
+    await navigator.clipboard.writeText(text);
+    setKopiert(true);
+    window.setTimeout(() => setKopiert(false), 1500);
+  };
+
+  const k = antworten.statutKlauseln;
+
+  return (
+    <section className="lc-card p-5 sm:p-6 space-y-5">
+      <div>
+        <p className="lc-overline">Dokumentmappe – Volldokumente (Bargründung)</p>
+        <p className="text-body-s text-ink-500 max-w-reading">
+          Erzeugt aus denselben Weichen wie die Checkliste: Statuten und Errichtungsakt als
+          ENTWURF für die Urkundsperson (öffentliche Beurkundung bleibt zwingend, Art. 777 OR),
+          die beurkundungsfreien Erklärungen und die Handelsregister-Anmeldung druckfertig.
+          Eingaben verlassen den Browser nicht; keine Speicherung.
+        </p>
+      </div>
+
+      {/* Gesellschaft */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <Field label="Firma (mit Zusatz «GmbH», Art. 950 OR)">
+          <input className={inputCls} value={firma} onChange={(e) => setFirma(e.target.value)} placeholder="z. B. Muster Treuhand GmbH" />
+        </Field>
+        <Field label="Sitz (politische Gemeinde)">
+          <input className={inputCls} value={sitz} onChange={(e) => setSitz(e.target.value)} placeholder="z. B. Zürich" />
+        </Field>
+        <Field label="Kanton (Handelsregisteramt)">
+          <select className={inputCls} value={kanton} onChange={(e) => setKanton(e.target.value)}>
+            {KANTONE.map((kt) => <option key={kt} value={kt}>{kt}</option>)}
+          </select>
+        </Field>
+      </div>
+      {/* Wo beurkunden? — Stammdaten lib/notariate.ts (Dossier behoerden/notariate-kantone.md) */}
+      {(() => {
+        const n = NOTARIATE[kanton as Kanton];
+        if (!n) return null;
+        return (
+          <div className="rounded-md bg-surface border border-line p-3 space-y-1">
+            <p className="text-body-s text-ink-700">
+              <span className="font-medium text-ink-900">Beurkundung im Kanton {kanton}:</span>{' '}
+              {NOTARIAT_SYSTEM_LABEL[n.system]} —{' '}
+              <a href={n.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:text-brass-600">{n.stelle}</a>
+              {!n.verifiziert && <span className="text-warn-700"> (Angabe ohne Gewähr)</span>}
+            </p>
+            {n.hinweis && <p className="text-xs text-warn-700">{n.hinweis}</p>}
+            <p className="text-xs text-ink-500">{NOTARIAT_FREIZUEGIGKEIT}</p>
+          </div>
+        );
+      })()}
+
+      <Field label="Zweck">
+        <textarea className={inputCls} rows={2} value={zweck} onChange={(e) => setZweck(e.target.value)}
+          placeholder="z. B. die Erbringung von Treuhand- und Beratungsdienstleistungen" />
+      </Field>
+      <label className="flex items-center gap-2 text-body-s text-ink-700">
+        <input type="checkbox" checked={zweckErweiterung} onChange={(e) => setZweckErweiterung(e.target.checked)} />
+        Übliche Zweck-Erweiterungsklausel (Zweigniederlassungen, Beteiligungen, Grundstücke, Finanzierungen)
+      </label>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <Field label="Stammkapital (CHF, mind. 20'000)">
+          <input className={inputCls} inputMode="numeric" placeholder="Tausender mit Apostroph, z. B. 20'000" value={stammkapital} onChange={(e) => setStammkapital(e.target.value)} />
+        </Field>
+        <Field label="Anzahl Stammanteile">
+          <input className={inputCls} inputMode="numeric" value={anzahl} onChange={(e) => setAnzahl(e.target.value)} />
+        </Field>
+        <Field label="Nennwert je Anteil (CHF, über null)">
+          <input className={inputCls} inputMode="numeric" placeholder="z. B. 1'000" value={nennwert} onChange={(e) => setNennwert(e.target.value)} />
+        </Field>
+      </div>
+
+      {/* Gründer */}
+      <div className="space-y-2">
+        <p className="text-body-s font-medium text-ink-900">Gründer:innen und Zeichnung (Art. 777a OR)</p>
+        {gruender.map((g) => (
+          <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_auto] gap-2 items-end">
+            <Field label="Name">
+              <input className={inputCls} value={g.name}
+                onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, name: e.target.value } : x))} />
+            </Field>
+            <Field label="Angaben (z. B. «von Basel, in Zürich, Musterweg 1»)">
+              <input className={inputCls} value={g.angaben}
+                onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, angaben: e.target.value } : x))} />
+            </Field>
+            <Field label="Anteile">
+              <input className={inputCls} inputMode="numeric" value={g.anzahl}
+                onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, anzahl: e.target.value } : x))} />
+            </Field>
+            <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
+              onClick={() => setGruender((alt) => alt.filter((x) => x.key !== g.key))}>✕</button>
+          </div>
+        ))}
+        <button type="button" className="lc-btn-outline lc-btn-sm"
+          onClick={() => setGruender((alt) => [...alt, { key: neuerKey(), name: '', angaben: '', anzahl: '' }])}>
+          + Gründer:in hinzufügen
+        </button>
+      </div>
+
+      {/* Geschäftsführung */}
+      <div className="space-y-2">
+        <p className="text-body-s font-medium text-ink-900">Geschäftsführung (Art. 809 OR; nur natürliche Personen)</p>
+        {gfs.map((g) => (
+          <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_2fr_1fr_auto_auto] gap-2 items-end">
+            <Field label="Name">
+              <input className={inputCls} value={g.name}
+                onChange={(e) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, name: e.target.value } : x))} />
+            </Field>
+            <Field label="Heimatort / Staat">
+              <input className={inputCls} value={g.herkunft}
+                onChange={(e) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, herkunft: e.target.value } : x))} />
+            </Field>
+            <Field label="Wohnort">
+              <input className={inputCls} value={g.wohnort}
+                onChange={(e) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, wohnort: e.target.value } : x))} />
+            </Field>
+            <Field label="Adresse (für die Wahlannahme)">
+              <input className={inputCls} value={g.adresse}
+                onChange={(e) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, adresse: e.target.value } : x))} />
+            </Field>
+            <Field label="Zeichnung">
+              <select className={inputCls} value={g.zeichnungsArt}
+                onChange={(e) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, zeichnungsArt: e.target.value as GmbhZeichnungsArt } : x))}>
+                {ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
+              </select>
+            </Field>
+            <label className="flex items-center gap-1.5 text-body-s text-ink-700 pb-2">
+              <input type="checkbox" checked={g.vorsitz}
+                onChange={(e) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, vorsitz: e.target.checked } : x))} />
+              Vorsitz
+            </label>
+            <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
+              onClick={() => setGfs((alt) => alt.filter((x) => x.key !== g.key))}>✕</button>
+          </div>
+        ))}
+        <button type="button" className="lc-btn-outline lc-btn-sm"
+          onClick={() => setGfs((alt) => [...alt, { key: neuerKey(), name: '', herkunft: '', wohnort: '', adresse: '', vorsitz: alt.length === 0, zeichnungsArt: 'einzelunterschrift' }])}>
+          + Geschäftsführer:in hinzufügen
+        </button>
+      </div>
+
+      {/* Weitere Vertretungsberechtigte (nur bei lit.-f-Weiche) */}
+      {weichen.weitereVertretungsberechtigte && (
+        <div className="space-y-2">
+          <p className="text-body-s font-medium text-ink-900">Weitere Vertretungsberechtigte (Art. 71 Abs. 1 lit. f HRegV)</p>
+          {vertretungen.map((v) => (
+            <div key={v.key} className="grid grid-cols-1 sm:grid-cols-[2fr_2fr_2fr_auto] gap-2 items-end">
+              <Field label="Name">
+                <input className={inputCls} value={v.name}
+                  onChange={(e) => setVertretungen((alt) => alt.map((x) => x.key === v.key ? { ...x, name: e.target.value } : x))} />
+              </Field>
+              <Field label="Funktion (z. B. Direktorin, Prokurist)">
+                <input className={inputCls} value={v.funktion}
+                  onChange={(e) => setVertretungen((alt) => alt.map((x) => x.key === v.key ? { ...x, funktion: e.target.value } : x))} />
+              </Field>
+              <Field label="Zeichnung">
+                <select className={inputCls} value={v.zeichnungsArt}
+                  onChange={(e) => setVertretungen((alt) => alt.map((x) => x.key === v.key ? { ...x, zeichnungsArt: e.target.value as GmbhZeichnungsArt } : x))}>
+                  {ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
+                </select>
+              </Field>
+              <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
+                onClick={() => setVertretungen((alt) => alt.filter((x) => x.key !== v.key))}>✕</button>
+            </div>
+          ))}
+          <button type="button" className="lc-btn-outline lc-btn-sm"
+            onClick={() => setVertretungen((alt) => [...alt, { key: neuerKey(), name: '', funktion: '', zeichnungsArt: 'einzelunterschrift' }])}>
+            + Person hinzufügen
+          </button>
+        </div>
+      )}
+
+      {/* Kontext-Angaben aus den Weichen */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {weichen.bankInUrkundeGenannt && weichen.einlageArt === 'bar' && (
+          <>
+            <Field label="Bank (in der Urkunde genannt)">
+              <input className={inputCls} value={bankName} onChange={(e) => setBankName(e.target.value)} placeholder="z. B. Zürcher Kantonalbank" />
+            </Field>
+            <Field label="Bank-Ort">
+              <input className={inputCls} value={bankOrt} onChange={(e) => setBankOrt(e.target.value)} placeholder="z. B. Zürich" />
+            </Field>
+          </>
+        )}
+        {weichen.eigeneBueros ? (
+          <Field label="Rechtsdomizil (Adresse am Sitz)">
+            <input className={inputCls} value={rechtsdomizil} onChange={(e) => setRechtsdomizil(e.target.value)} placeholder="Strasse, PLZ Ort" />
+          </Field>
+        ) : (
+          <>
+            <Field label="Domizilhalter:in (c/o)">
+              <input className={inputCls} value={domizilhalterName} onChange={(e) => setDomizilhalterName(e.target.value)} />
+            </Field>
+            <Field label="Adresse Domizilhalter:in">
+              <input className={inputCls} value={domizilhalterAdresse} onChange={(e) => setDomizilhalterAdresse(e.target.value)} />
+            </Field>
+          </>
+        )}
+        {!weichen.optingOut && (
+          <>
+            <Field label="Revisionsstelle (Name)">
+              <input className={inputCls} value={rsName} onChange={(e) => setRsName(e.target.value)} />
+            </Field>
+            <Field label="Revisionsstelle (Sitz)">
+              <input className={inputCls} value={rsSitz} onChange={(e) => setRsSitz(e.target.value)} />
+            </Field>
+          </>
+        )}
+        <Field label="Ort (Unterschriften)">
+          <input className={inputCls} value={ort} onChange={(e) => setOrt(e.target.value)} />
+        </Field>
+        <Field label="Datum">
+          <input type="date" className={inputCls} value={datum} onChange={(e) => setDatum(e.target.value)} />
+        </Field>
+      </div>
+
+      {/* Parameter der gewählten Statutenklauseln */}
+      {(k.includes('nachschuss') || k.includes('nebenleistung') || k.includes('konkurrenzverbot') || k.includes('vetorecht')) && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {k.includes('nachschuss') && (
+            <Field label="Nachschuss je Stammanteil (CHF, max. 2 × Nennwert)">
+              <input className={inputCls} inputMode="numeric" value={nachschussBetrag} onChange={(e) => setNachschussBetrag(e.target.value)} />
+            </Field>
+          )}
+          {k.includes('konkurrenzverbot') && (
+            <Field label="Befreiung vom Konkurrenzverbot durch">
+              <select className={inputCls} value={konkurrenzBefreiung} onChange={(e) => setKonkurrenzBefreiung(e.target.value as 'alleGesellschafter' | 'gv')}>
+                <option value="alleGesellschafter">schriftliche Zustimmung aller übrigen Gesellschafter</option>
+                <option value="gv">Zustimmung der Gesellschafterversammlung</option>
+              </select>
+            </Field>
+          )}
+          {k.includes('nebenleistung') && (
+            <Field label="Nebenleistungspflicht (Gegenstand und Umfang, Art. 796 Abs. 3 OR)">
+              <textarea className={inputCls} rows={2} value={nebenleistung} onChange={(e) => setNebenleistung(e.target.value)} />
+            </Field>
+          )}
+          {k.includes('vetorecht') && (
+            <Field label="Vetorecht: erfasste Beschlüsse (Art. 807 Abs. 1 OR)">
+              <textarea className={inputCls} rows={2} value={vetoBeschluesse} onChange={(e) => setVetoBeschluesse(e.target.value)} />
+            </Field>
+          )}
+        </div>
+      )}
+      <label className="flex items-center gap-2 text-body-s text-ink-700">
+        <input type="checkbox" checked={virtuelleGv} onChange={(e) => setVirtuelleGv(e.target.checked)} />
+        Statutarische Grundlage für virtuelle/hybride Gesellschafterversammlungen (Art. 805 Abs. 5 Ziff. 2bis OR)
+      </label>
+
+      {/* Gates */}
+      {mappe.gates.blocker.length > 0 && (
+        <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
+          {mappe.gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
+        </div>
+      )}
+      {mappe.gates.warnungen.map((w, i) => (
+        <div key={i} className="lc-notice-warn"><p className="text-body-s">{w}</p></div>
+      ))}
+
+      {/* Dokument-Auswahl + Vorschau + Export */}
+      {dok && (
+        <>
+          <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Dokumente der Mappe">
+            {mappe.dokumente.map((d) => (
+              <button key={d.id} type="button" role="tab" aria-selected={d.id === dok.id}
+                onClick={() => setAktivesDok(d.id)}
+                className={`lc-chip ${d.id === dok.id ? 'bg-brass-700 text-white border-brass-700' : 'hover:text-brass-700'}`}>
+                {d.titel}
+              </button>
+            ))}
+          </div>
+          <ExportLeiste
+            ergebnis={dok.ergebnis}
+            deaktiviert={false}
+            kopiert={kopiert}
+            onKopieren={kopieren}
+            pdf={{
+              label: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? 'Entwurf als PDF' : 'Als PDF',
+              banner: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? BANNER_ENTWURF : BANNER_FERTIG,
+              dateiName: `${dok.dateiName}.pdf`,
+            }}
+            docx={docxErlaubt ? {
+              label: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? 'Entwurf als Word (DOCX)' : 'Als Word (DOCX)',
+              banner: dok.ergebnis.dokument.ausgabeArt === 'entwurf' ? BANNER_ENTWURF : BANNER_FERTIG,
+              dateiName: `${dok.dateiName}.docx`,
+            } : undefined}
+          />
+          <VorschauPanel ergebnis={dok.ergebnis} />
+        </>
+      )}
+    </section>
+  );
+}

@@ -50,6 +50,61 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       ['av-gates', pruefeAvGates({ ...AV_DEFAULTS, arbeitgeberName: 'AG', arbeitgeberAdresse: 'X', arbeitnehmerVorname: 'A', arbeitnehmerName: 'B', arbeitnehmerAdresse: 'Y', funktion: 'F', arbeitsort: 'Basel', arbeitsortKanton: 'BS', beginn: '2026-08-01', lohnBetrag: '6500', lohnfortzahlung: 'ktg', ktgWartefristTage: 60, ktgWartefristLohnProzent: 0, ort: 'Basel', datum: '2026-06-15' })],
       ['mv-gates', pruefeMvGates({ ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X', mieterName: 'M', mieterAdresse: 'Y', objektBeschrieb: 'Z', objektAdresse: 'A', kanton: 'BE', beginn: '2026-10-01', mietzinsNettoCHF: '2000', nkPositionen: ['Heizung'], kautionCHF: '9000', ort: 'Basel', datum: '2026-06-15' })],
     ];
+
+    // GmbH-Dokumentmappe (9b, 7.6.2026): Maximal-Konfiguration → alle Schemas
+    // und alle bedingten Bausteine laufen durch den Linter.
+    const { gmbhDokumentmappe, GMBH_DOK_DEFAULTS } = await import('../lib/vorlagen/gruendungGmbhDokumente');
+    const gmbhMappe = gmbhDokumentmappe({
+      einlageArt: 'bar', besondereVorteile: false, gfGewaehlt: true,
+      mehrereGeschaeftsfuehrer: true, weitereVertretungsberechtigte: true,
+      optingOut: false, eigeneBueros: false, immobilienHauptzweck: false,
+      auslJurPersonGesellschafter: false, fremdwaehrung: false,
+      bankInUrkundeGenannt: false, chWohnsitzVertretung: true,
+      statutKlauseln: ['nachschuss', 'nebenleistung', 'konkurrenzverbot', 'vorkaufsrecht', 'stimmrechtNachAnteilen', 'vetorecht'],
+      leistungenChf: undefined,
+      ...GMBH_DOK_DEFAULTS,
+      firma: 'Muster GmbH', sitz: 'Zürich', kanton: 'ZH', zweck: 'Treuhand',
+      stammkapitalChf: "20'000", anzahlAnteile: '20', nennwertChf: "1'000",
+      gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '20' }],
+      geschaeftsfuehrer: [
+        { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', vorsitz: true, zeichnungsArt: 'einzelunterschrift' },
+        { name: 'B', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', vorsitz: false, zeichnungsArt: 'kollektivzuzweien' },
+      ],
+      weitereVertretungen: [{ name: 'C', funktion: 'Direktorin', zeichnungsArt: 'kollektivzuzweien' }],
+      domizilhalterName: 'D AG', domizilhalterAdresse: 'X 1, 8000 Zürich',
+      revisionsstelleName: 'R AG', revisionsstelleSitz: 'Zürich',
+      nachschussBetragChf: "1'000", nebenleistungText: 'Lieferpflicht gemäss Reglement',
+      vetoBeschluesse: 'Statutenänderungen', virtuelleGv: true,
+      ort: 'Zürich', datum: '2026-06-15',
+    });
+    expect(gmbhMappe.gates.blocker).toEqual([]);
+    for (const d of gmbhMappe.dokumente) faelle.push([`gmbh-dok-${d.id}`, d.ergebnis.dokument]);
+
+    // AG-Dokumentmappe (9b): Teilliberierung + Vinkulierung + c/o + RS + weitere
+    // Zeichnungsberechtigte → alle Schemas und bedingten Bausteine.
+    const { agDokumentmappe, AG_DOK_DEFAULTS } = await import('../lib/vorlagen/gruendungAgDokumente');
+    const agMappe = agDokumentmappe({
+      einlageArt: 'bar', besondereVorteile: false, optingOut: false,
+      eigeneBueros: false, immobilienHauptzweck: false, inhaberaktien: false,
+      fremdwaehrung: false, bankInUrkundeGenannt: false, chWohnsitzVertretung: true,
+      leistungenChf: undefined,
+      ...AG_DOK_DEFAULTS,
+      firma: 'Muster AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Beteiligungen',
+      aktienkapitalChf: "200'000", anzahlAktien: '200', nennwertChf: "1'000",
+      liberierungProzent: '25',
+      gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '200' }],
+      verwaltungsraete: [
+        { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+        { name: 'B', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'kollektivzuzweien' },
+      ],
+      weitereVertretungen: [{ name: 'C', funktion: 'Direktor', zeichnungsArt: 'kollektivzuzweien' }],
+      domizilhalterName: 'D AG', domizilhalterAdresse: 'X 1, 8000 Zürich',
+      revisionsstelleName: 'R AG', revisionsstelleSitz: 'Zürich',
+      vinkulierung: true, virtuelleGv: true,
+      ort: 'Zürich', datum: '2026-06-15',
+    });
+    expect(agMappe.gates.blocker).toEqual([]);
+    for (const d of agMappe.dokumente) faelle.push([`ag-dok-${d.id}`, d.ergebnis.dokument]);
     const verstoesse = faelle.flatMap(([name, wert]) => pruefeAlles(wert, name));
     expect(verstoesse, verstoesse.join('\n')).toEqual([]);
   });
