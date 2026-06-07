@@ -15,6 +15,8 @@ import {
   type AgSacheinlageZeile,
   type AgVerrechnungZeile,
   type AgVorteilZeile,
+  type AgWaehrung,
+  AG_FREMDWAEHRUNGEN,
 } from '../../lib/vorlagen/gruendungAgDokumente';
 import { KANTONE } from '../../lib/kantone';
 
@@ -77,6 +79,10 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
   const [verrechnungen, setVerrechnungen] = useState<(AgVerrechnungZeile & { key: number })[]>([]);
   const [vorteile, setVorteile] = useState<(AgVorteilZeile & { key: number })[]>([]);
   const [revisorName, setRevisorName] = useState('');
+  // Etappe 3.1: Fremdwährung (wirksam nur mit der Checklisten-Weiche)
+  const [waehrung, setWaehrung] = useState<AgWaehrung>('EUR');
+  const [kursChf, setKursChf] = useState('');
+  const [kursQuelle, setKursQuelle] = useState('');
   const [ort, setOrt] = useState('');
   const [datum, setDatum] = useState('');
 
@@ -96,11 +102,13 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
     revisionsstelleName: rsName, revisionsstelleSitz: rsSitz,
     vinkulierung, virtuelleGv, statutenUmfang, gjBeginn, gjEnde,
     sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
+    waehrung, kursChf, kursQuelle,
     sacheinlagen, verrechnungen, vorteile, revisorName, ort, datum,
   }), [weichen, firma, sitz, kanton, zweck, zweckErweiterung, ak, anzahl, nennwert, liberierung,
     gruender, vr, vertretungen, protokollfuehrer, bankName, bankOrt, rechtsdomizil,
     domizilhalterName, domizilhalterAdresse, rsName, rsSitz, vinkulierung, virtuelleGv,
     statutenUmfang, gjBeginn, gjEnde, sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
+    waehrung, kursChf, kursQuelle,
     sacheinlagen, verrechnungen, vorteile, revisorName, ort, datum]);
 
   const mappe = useMemo(() => agDokumentmappe(antworten), [antworten]);
@@ -352,6 +360,23 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
         <Field label="Zugelassene:r Revisor:in der Prüfungsbestätigung (Art. 635a OR; leer = Blanko)">
           <input className={inputCls} value={revisorName} onChange={(e) => setRevisorName(e.target.value)} />
         </Field>
+      )}
+
+      {/* Etappe 3.1: Fremdwährung (Art. 621 Abs. 2 OR; Anhang 3 HRegV) */}
+      {weichen.fremdwaehrung && (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Field label="Währung des Aktienkapitals (Anhang 3 HRegV)">
+            <select className={inputCls} value={waehrung} onChange={(e) => setWaehrung(e.target.value as AgWaehrung)}>
+              {AG_FREMDWAEHRUNGEN.map((w) => <option key={w} value={w}>{w}</option>)}
+            </select>
+          </Field>
+          <Field label="Umrechnungskurs (1 Einheit = X CHF; Art. 629 Abs. 3 OR)">
+            <input className={inputCls} inputMode="decimal" value={kursChf} onChange={(e) => setKursChf(e.target.value)} placeholder="z. B. 0.93" />
+          </Field>
+          <Field label="Quelle des Devisenmittelkurses (Bank)">
+            <input className={inputCls} value={kursQuelle} onChange={(e) => setKursQuelle(e.target.value)} placeholder="z. B. Zürcher Kantonalbank" />
+          </Field>
+        </div>
       )}
 
       {/* Verwaltungsrat */}

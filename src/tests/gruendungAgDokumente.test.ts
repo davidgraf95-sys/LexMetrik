@@ -466,6 +466,52 @@ describe('AG — Qualifizierte Gründung (Etappe 2/D3–D5)', () => {
   });
 });
 
+describe('AG — Fremdwährungs-Gründung (Etappe 3.1/D2)', () => {
+  const FW_BASIS: AgDokAntworten = {
+    ...BASIS,
+    fremdwaehrung: true,
+    waehrung: 'EUR',
+    aktienkapitalChf: "120'000",
+    anzahlAktien: '120',
+    kursChf: '0.93',
+    kursQuelle: 'Zürcher Kantonalbank',
+    gruender: [{ name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '120' }],
+  };
+
+  it('EUR-Gründung: Statuten/Urkunde in Währung + Pflicht-Kurs-Satz (ZH 3.2)', () => {
+    const m = agDokumentmappe(FW_BASIS);
+    expect(m.gates.blocker).toEqual([]);
+    expect(text(m, 'statuten')).toContain("Das Aktienkapital beträgt EUR 120'000.00 und ist eingeteilt in 120 Namenaktien zu EUR 1'000.00.");
+    const ea = text(m, 'errichtungsakt');
+    expect(ea).toContain("Sämtliche Einlagen von gesamthaft EUR 120'000.00 wurden in Geld geleistet");
+    expect(ea).toContain("aufgrund des Umrechnungskurses EUR 1.00 = CHF 0.93, dem Betrag von CHF 111'600.00");
+    expect(ea).toContain('Dieser Umrechnungskurs entspricht dem Devisenmittelkurs der Zürcher Kantonalbank.');
+  });
+
+  it('Gegenwert-Gates 621 II/632 II + Pflichtfelder + Erstausbau-Sperre qualifiziert', () => {
+    // 100'000 EUR × 0.93 = 93'000 < 100'000 → Gegenwert-Blocker (Art. 621 Abs. 2 OR).
+    expect(pruefeAgDokGates({ ...FW_BASIS, aktienkapitalChf: "100'000", anzahlAktien: '100', gruender: [{ name: 'A', angaben: '', anzahl: '100' }] })
+      .blocker.join(' ')).toContain('Art. 621 Abs. 2');
+    // Teilliberierung: 50 % von 120'000 EUR × 0.93 = 55'800 ≥ 50'000 ✓;
+    // 20 % × 0.93 = 22'320 < 50'000 → Gegenwert-Blocker (Art. 632 Abs. 2
+    // Satz 2 OR). Mathematisch kann der 632-Gegenwert nur unter 50'000
+    // fallen, wenn der Liberierungsgrad unter 50 % liegt (621 II garantiert
+    // Gegenwert ≥ 100'000).
+    expect(pruefeAgDokGates({ ...FW_BASIS, liberierungProzent: '50' }).blocker).toEqual([]);
+    expect(pruefeAgDokGates({ ...FW_BASIS, liberierungProzent: '20' })
+      .blocker.join(' ')).toContain('Gegenwert von mindestens CHF 50\'000');
+    expect(pruefeAgDokGates({ ...FW_BASIS, kursChf: '' }).blocker.join(' ')).toContain('Umrechnungskurs');
+    expect(pruefeAgDokGates({ ...FW_BASIS, kursQuelle: '' }).blocker.join(' ')).toContain('Devisenmittelkurs');
+    expect(pruefeAgDokGates({ ...FW_BASIS, einlageArt: 'sacheinlage' }).blocker.join(' ')).toContain('Fremdwährung nur bei der reinen Bargründung');
+  });
+
+  it('CHF-Regression: ohne Weiche bleibt alles in CHF (kein Kurs-Satz)', () => {
+    const m = agDokumentmappe(BASIS);
+    expect(text(m, 'statuten')).toContain("Das Aktienkapital beträgt CHF 100'000.00");
+    expect(text(m, 'errichtungsakt')).not.toContain('Umrechnungskurs');
+  });
+});
+
 describe('AG-Gates — Erstausbau-Grenzen + 632-Arithmetik', () => {
   it('Inhaberaktien/Sacheinlage/Fremdwährung sperren ehrlich', () => {
     expect(pruefeAgDokGates({ ...BASIS, inhaberaktien: true }).blocker.join(' ')).toContain('NAMENAKTIEN');
@@ -473,7 +519,9 @@ describe('AG-Gates — Erstausbau-Grenzen + 632-Arithmetik', () => {
     // ist nicht mehr pauschal gesperrt (alter BARGRÜNDUNG-Blocker), das Gate
     // bleibt aber ehrlich — ohne erfasste Verrechnungszeile blockt es.
     expect(pruefeAgDokGates({ ...BASIS, einlageArt: 'verrechnung' }).blocker.join(' ')).toContain('Verrechnungsliberierung erfassen');
-    expect(pruefeAgDokGates({ ...BASIS, fremdwaehrung: true }).blocker.join(' ')).toContain('CHF');
+    // Etappe 3.1: Fremdwährung nicht mehr pauschal gesperrt — ohne gewählte
+    // Währung/Kurs/Quelle bleiben die Pflicht-Gates ehrlich.
+    expect(pruefeAgDokGates({ ...BASIS, fremdwaehrung: true }).blocker.join(' ')).toContain('GBP, EUR, USD und JPY');
   });
 
   it('Art. 632: unter 20 % gesperrt; 20 % von 100k = 20k < 50k gesperrt; bei 200k zulässig', () => {

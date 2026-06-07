@@ -180,6 +180,28 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     expect(agSingular.gates.blocker).toEqual([]);
     for (const d of agSingular.dokumente) faelle.push([`ag-dok-singular-${d.id}`, d.ergebnis.dokument]);
 
+    // AG FREMDWÄHRUNG (Etappe 3.1): EUR-Bargründung → Kurs-Satz-Baustein
+    // (AE07w) + Währungs-Texte.
+    const agFw = agDokumentmappe({
+      einlageArt: 'bar', besondereVorteile: false, optingOut: true,
+      eigeneBueros: true, immobilienHauptzweck: false, inhaberaktien: false,
+      fremdwaehrung: true, bankInUrkundeGenannt: true, chWohnsitzVertretung: true,
+      leistungenChf: undefined,
+      ...AG_DOK_DEFAULTS,
+      firma: 'Euro AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Handel',
+      aktienkapitalChf: "120'000", anzahlAktien: '120',
+      waehrung: 'EUR', kursChf: '0.93', kursQuelle: 'Zürcher Kantonalbank',
+      gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '120' }],
+      verwaltungsraete: [
+        { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+      ],
+      bankName: 'Zürcher Kantonalbank', bankOrt: 'Zürich',
+      rechtsdomizilAdresse: 'Weg 1, 8000 Zürich',
+      ort: 'Zürich', datum: '2026-06-15',
+    });
+    expect(agFw.gates.blocker).toEqual([]);
+    for (const d of agFw.dokumente) faelle.push([`ag-dok-fw-${d.id}`, d.ergebnis.dokument]);
+
     // Kapitalerhöhungs-Mappe (9c): GmbH mit neuer Zeichnerin (777a-Hinweis),
     // Agio und separater Bankbescheinigung → alle Schemas + bedingte Bausteine.
     const { keDokumentmappe, KE_DEFAULTS } = await import('../lib/vorlagen/kapitalerhoehung');

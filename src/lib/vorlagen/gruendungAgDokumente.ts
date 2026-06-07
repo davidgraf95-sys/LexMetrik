@@ -21,6 +21,11 @@ import { ZEICHNUNGS_LABEL, type GmbhZeichnungsArt } from './gruendungGmbhDokumen
 
 export type AgGruenderZeile = { name: string; angaben: string; anzahl: string };
 
+/** Zulässige Fremdwährungen des Aktienkapitals (Anhang 3 i. V. m. Art. 45a
+ *  HRegV; ZH-Urkundenvorlage 3.2 — Etappe 3.1/D2). */
+export const AG_FREMDWAEHRUNGEN = ['GBP', 'EUR', 'USD', 'JPY'] as const;
+export type AgWaehrung = 'CHF' | (typeof AG_FREMDWAEHRUNGEN)[number];
+
 /** VR-Zeichnungsarten: ZH-Muster-Protokoll führt auch VR-Mitglieder
  *  «ohne Zeichnungsberechtigung» (D14; Gate: mind. eines vertretungsbefugt,
  *  Art. 718 Abs. 3 OR). */
@@ -134,6 +139,16 @@ export type AgDokAntworten = AgGruendungEingaben & {
   /** Nachtrags-Bevollmächtigte:r mit vollen Personalien (D10: ZH-Klausel «Auf
    *  Verlangen der Gründer» — leer = Klausel entfällt). */
   nachtragsbevollmaechtigter: string;
+  /** Fremdwährungs-Gründung (Etappe 3.1/D2) — wirksam nur mit der
+   *  Checklisten-Weiche `fremdwaehrung`; Erstausbau: nur reine Bargründung,
+   *  Einlagewährung = Kapitalwährung. */
+  waehrung: AgWaehrung;
+  /** Umrechnungskurs: 1 Einheit der Währung = X CHF (Art. 629 Abs. 3 OR —
+   *  in der Urkunde anzugeben; Freitext-Zahl wie «0.93»). */
+  kursChf: string;
+  /** Quelle des Devisenmittelkurses (ZH 3.2: «Dieser Umrechnungskurs
+   *  entspricht dem Devisenmittelkurs der {{Bank}}.»). */
+  kursQuelle: string;
   /** Qualifizierte Gründung (Etappe 2) — wirksam nur mit den Checklisten-
    *  Weichen `einlageArt`/`besondereVorteile` (§5). */
   sacheinlagen: AgSacheinlageZeile[];
@@ -160,6 +175,7 @@ export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = 
   gjBeginn: '1. Januar', gjEnde: '31. Dezember',
   sitzungBeginn: '', sitzungEnde: '',
   nachtragsbevollmaechtigter: '',
+  waehrung: 'CHF', kursChf: '', kursQuelle: '',
   sacheinlagen: [], verrechnungen: [], vorteile: [], revisorName: '',
   ort: '', datum: '',
 };
@@ -212,11 +228,25 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       'gemischte Teilliberierung als Stufe 2.',
     );
   }
+  // ── Fremdwährung (Etappe 3.1/D2): GBP/EUR/USD/JPY, Kurs in der Urkunde ──
+  let kurs: number | null = null;
   if (a.fremdwaehrung) {
-    blocker.push(
-      'Volldokumente sind zurzeit nur für Aktienkapital in CHF verfügbar (Fremdwährung verlangt ' +
-      'Umrechnungskurs-Angaben in der Urkunde, Art. 629 Abs. 3 OR; Art. 44 lit. j HRegV) – bitte die Checkliste verwenden.',
-    );
+    if (qualifiziert) {
+      blocker.push(
+        'Erstausbau: Fremdwährung nur bei der reinen Bargründung – qualifizierte Gründung in ' +
+        'Fremdwährung (Bewertungs- und Verrechnungsbeträge in der Kapitalwährung) als Stufe 2.',
+      );
+    }
+    if (!(AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung)) {
+      blocker.push('Währung des Aktienkapitals wählen – zulässig sind GBP, EUR, USD und JPY (Anhang 3 i. V. m. Art. 45a HRegV).');
+    }
+    kurs = zahl(a.kursChf);
+    if (kurs === null || kurs <= 0) {
+      blocker.push('Umrechnungskurs zum Schweizerfranken angeben (Art. 629 Abs. 3 OR – der angewandte Kurs ist in der Urkunde zu nennen).');
+    }
+    if (!a.kursQuelle.trim()) {
+      blocker.push('Quelle des Devisenmittelkurses angeben (ZH-Urkundenvorlage 3.2: «Dieser Umrechnungskurs entspricht dem Devisenmittelkurs der …»).');
+    }
   }
   if (a.inhaberaktien) {
     blocker.push(
@@ -234,7 +264,19 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     blocker.push('Aktienkapital, Anzahl und Nennwert der Aktien beziffern (Art. 626 Abs. 1 Ziff. 3 und 4 OR).');
   } else {
     if (nennwert <= 0) blocker.push('Der Nennwert muss grösser als null sein (Art. 622 Abs. 4 OR).');
-    if (kapital < 100_000) blocker.push('Das Aktienkapital beträgt mindestens CHF 100\'000 (Art. 621 Abs. 1 OR).');
+    if (!a.fremdwaehrung && kapital < 100_000) {
+      blocker.push('Das Aktienkapital beträgt mindestens CHF 100\'000 (Art. 621 Abs. 1 OR).');
+    }
+    // Art. 621 Abs. 2 OR (am Cache verifiziert 7.6.2026): «Zum Zeitpunkt der
+    // Errichtung muss dieses einem Gegenwert von mindestens 100 000 Franken
+    // entsprechen.»
+    if (a.fremdwaehrung && kurs !== null && kurs > 0 && kapital * kurs < 100_000) {
+      blocker.push(
+        `Das Aktienkapital in ${a.waehrung} muss im Zeitpunkt der Errichtung einem Gegenwert von mindestens ` +
+        `CHF 100'000 entsprechen (Art. 621 Abs. 2 OR) – ${a.waehrung} ${fmtCHF(a.aktienkapitalChf)} × ${a.kursChf.trim()} ` +
+        `= CHF ${fmtCHF(String(kapital * kurs))}.`,
+      );
+    }
     if (ganzePositive(a.anzahlAktien) === null) blocker.push('Anzahl Aktien als positive ganze Zahl angeben.');
     // Gleiche Befundklasse wie KE-M-1 (/simplify-Nachzug): keine «3.5 Aktien»
     // in der Zeichnungszeile des Errichtungsakts.
@@ -244,15 +286,25 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       }
     }
     if (nennwert > 0 && anzahl > 0 && Math.abs(anzahl * nennwert - kapital) > 0.005) {
+      const wc = a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF';
       blocker.push(
-        `Rechnerische Unstimmigkeit: ${a.anzahlAktien} Aktien × CHF ${fmtCHF(a.nennwertChf)} ergeben nicht das Aktienkapital von CHF ${fmtCHF(a.aktienkapitalChf)}.`,
+        `Rechnerische Unstimmigkeit: ${a.anzahlAktien} Aktien × ${wc} ${fmtCHF(a.nennwertChf)} ergeben nicht das Aktienkapital von ${wc} ${fmtCHF(a.aktienkapitalChf)}.`,
       );
     }
     if (prozent === null || prozent < 20 || prozent > 100) {
       blocker.push('Liberierungsgrad zwischen 20 % und 100 % angeben (Art. 632 Abs. 1 OR: mindestens 20 % des Nennwerts jeder Aktie).');
-    } else if (prozent < 100 && kapital * (prozent / 100) < 50_000) {
+    } else if (prozent < 100 && !a.fremdwaehrung && kapital * (prozent / 100) < 50_000) {
       blocker.push(
         `Die geleisteten Einlagen müssen gesamthaft mindestens CHF 50'000 betragen (Art. 632 Abs. 2 OR) – bei ${a.liberierungProzent} % von CHF ${fmtCHF(a.aktienkapitalChf)} sind es nur CHF ${fmtCHF(String(kapital * (prozent / 100)))}.`,
+      );
+    } else if (prozent < 100 && a.fremdwaehrung && kurs !== null && kurs > 0 && kapital * (prozent / 100) * kurs < 50_000) {
+      // Art. 632 Abs. 2 Satz 2 OR (am Cache verifiziert): Fremdwährungs-
+      // Einlagen müssen im Errichtungszeitpunkt einem Gegenwert von
+      // mindestens CHF 50'000 entsprechen.
+      blocker.push(
+        `Die geleisteten Einlagen müssen einem Gegenwert von mindestens CHF 50'000 entsprechen (Art. 632 Abs. 2 OR) – ` +
+        `bei ${a.liberierungProzent} % von ${a.waehrung} ${fmtCHF(a.aktienkapitalChf)} × ${a.kursChf.trim()} sind es nur ` +
+        `CHF ${fmtCHF(String(kapital * (prozent / 100) * kurs))}.`,
       );
     }
     const gezeichnet = a.gruender.reduce((s, g) => s + (zahl(g.anzahl) ?? 0), 0);
@@ -413,6 +465,13 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     hatVorteile: vorteile.length > 0,
     nurBar: a.einlageArt === 'bar',
     istGemischt: a.einlageArt === 'gemischt',
+    // Etappe 3.1/D2: wirksame Kapitalwährung (CHF, solange die Weiche aus
+    // ist oder keine zulässige Währung gewählt wurde — Gates erzwingen das).
+    waehrungCode: a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF',
+    fremdwaehrungAktiv: a.fremdwaehrung,
+    kursTxt: a.kursChf.trim() || '________',
+    kursQuelleTxt: a.kursQuelle.trim() || '________',
+    einbezahltChfFmt: fmtCHF(String(kapital * (prozent / 100) * (zahl(a.kursChf) ?? 0))),
     hatBarEinlage: a.einlageArt === 'bar' || (a.einlageArt === 'gemischt' && barAktien > 0),
     barEinlageFmt: fmtCHF(String(barAktien * nennwert)),
     barAktienTxt: String(barAktien),
@@ -493,7 +552,7 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     // zusätzlich zum Prozentsatz ausweisen.
     liberierungSatz: prozent >= 100
       ? 'vollständig liberiert'
-      : `zu ${a.liberierungProzent} % liberiert (geleistete Einlagen: CHF ${fmtCHF(String(kapital * (prozent / 100)))})`,
+      : `zu ${a.liberierungProzent} % liberiert (geleistete Einlagen: ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(String(kapital * (prozent / 100)))})`,
     ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}den ${datum}`,
     gruenderListe: a.gruender.filter((g) => g.name.trim()).map((g) => ({
       name: g.name.trim(),
@@ -563,8 +622,8 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       id: 'AS03_kapital',
       ueberschrift: 'Aktienkapital und Aktien',
       text:
-        'Das Aktienkapital beträgt CHF {{akFmt}} und ist eingeteilt in {{anzahlAktien}} Namenaktien ' +
-        'zu CHF {{nennwertFmt}}. Die Aktien sind {{liberierungSatz}}.',
+        'Das Aktienkapital beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} Namenaktien ' +
+        'zu {{waehrungCode}} {{nennwertFmt}}. Die Aktien sind {{liberierungSatz}}.',
       norm: 'Art. 626 Abs. 1 Ziff. 3 und 4 OR',
       begruendung: 'Pflichtinhalt: Höhe des Kapitals, geleistete Einlagen (Liberierungsgrad) sowie Anzahl, Nennwert und Art der Aktien (rev. 2023; Wortlaut ZH/SG/GL).',
     },
@@ -983,8 +1042,8 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE04_zeichnung',
       ueberschrift: 'Aktienkapital und Zeichnung',
       text:
-        'Das Aktienkapital der Gesellschaft beträgt CHF {{akFmt}} und ist eingeteilt in {{anzahlAktien}} ' +
-        'Namenaktien zu je CHF {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von CHF {{nennwertFmt}} ' +
+        'Das Aktienkapital der Gesellschaft beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} ' +
+        'Namenaktien zu je {{waehrungCode}} {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von {{waehrungCode}} {{nennwertFmt}} ' +
         'je Aktie wie folgt gezeichnet werden:',
       norm: 'Art. 630 Ziff. 1 OR',
       begruendung: 'Zeichnung mit Anzahl, Nennwert, Art und Ausgabebetrag – bei der Gründung in der Urkunde selbst (Art. 44 lit. d HRegV); Ausgabe zum Nennwert (Erstausbau ohne Agio).',
@@ -1014,7 +1073,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07_einlagen_voll_bank',
       ueberschrift: 'Einlagen',
       text:
-        'Sämtliche Einlagen von gesamthaft CHF {{akFmt}} wurden in Geld geleistet und sind bei der ' +
+        'Sämtliche Einlagen von gesamthaft {{waehrungCode}} {{akFmt}} wurden in Geld geleistet und sind bei der ' +
         '{{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und ' +
         'Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'nurBar', eq: true }, { feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
@@ -1025,7 +1084,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07_einlagen_voll_bescheinigung',
       ueberschrift: 'Einlagen',
       text:
-        'Sämtliche Einlagen von gesamthaft CHF {{akFmt}} wurden in Geld geleistet und gemäss separater ' +
+        'Sämtliche Einlagen von gesamthaft {{waehrungCode}} {{akFmt}} wurden in Geld geleistet und gemäss separater ' +
         'Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ' +
         'ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'nurBar', eq: true }, { feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
@@ -1036,7 +1095,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07_einlagen_teil_bank',
       ueberschrift: 'Einlagen',
       text:
-        'Auf dem Aktienkapital wurden Einlagen von gesamthaft CHF {{einbezahltFmt}} ({{liberierungProzent}} % ' +
+        'Auf dem Aktienkapital wurden Einlagen von gesamthaft {{waehrungCode}} {{einbezahltFmt}} ({{liberierungProzent}} % ' +
         'des Nennwerts jeder Aktie) in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach ' +
         'Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der ' +
         'Gesellschaft hinterlegt.',
@@ -1048,13 +1107,23 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07_einlagen_teil_bescheinigung',
       ueberschrift: 'Einlagen',
       text:
-        'Auf dem Aktienkapital wurden Einlagen von gesamthaft CHF {{einbezahltFmt}} ({{liberierungProzent}} % ' +
+        'Auf dem Aktienkapital wurden Einlagen von gesamthaft {{waehrungCode}} {{einbezahltFmt}} ({{liberierungProzent}} % ' +
         'des Nennwerts jeder Aktie) in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach ' +
         'Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der ' +
         'Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'bankInUrkundeGenannt', eq: false }] },
       norm: 'Art. 632 OR',
       begruendung: 'Teilliberierung mit separater Bankbescheinigung.',
+    },
+    {
+      id: 'AE07w_kurs',
+      text:
+        'Die geleisteten Einlagen entsprechen, aufgrund des Umrechnungskurses {{waehrungCode}} 1.00 = ' +
+        'CHF {{kursTxt}}, dem Betrag von CHF {{einbezahltChfFmt}}. Dieser Umrechnungskurs entspricht dem ' +
+        'Devisenmittelkurs der {{kursQuelleTxt}}.',
+      includeIf: { feld: 'fremdwaehrungAktiv', eq: true },
+      norm: 'Art. 629 Abs. 3 OR',
+      begruendung: 'Pflicht-Kurs-Satz der Fremdwährungs-Gründung nach ZH-Urkundenvorlage 3.2 verbatim-nah (Art. 629 Abs. 3 OR: angewandte Umrechnungskurse sind in der Urkunde anzugeben). Erstausbau: Einlagewährung = Kapitalwährung (Einlagen in anderer Währung als das Kapital = Stufe 2).',
     },
     // ── Etappe 2: Einlagen bei gemischter und qualifizierter Gründung ───────
     {
