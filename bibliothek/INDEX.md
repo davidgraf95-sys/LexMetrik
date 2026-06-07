@@ -1,7 +1,7 @@
 # Bibliothek — Informationsgrundlagen für LexMetrik
 
 Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
-das (noch) nicht Code ist. **61 Dokumente in 7 Ordnern** (Stand 7.6.2026,
+das (noch) nicht Code ist. **62 Dokumente in 7 Ordnern** (Stand 7.6.2026,
 Bibliotheks-Audit: Zählung korrigiert, recherche-INDEX vervollständigt,
 Verfallsregister um 6 Gründungs-Kandidaten ergänzt, Muster-Quellsammlung
 aus /tmp dauerhaft archiviert, Engine-Map neu).
@@ -92,6 +92,11 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 |---|---|---|
 | [strafbehoerden-kantone.md](behoerden/strafbehoerden-kantone.md) | Staatsanwaltschaften/Jugendanwaltschaften/Übertretungsbehörden 26 Kantone + Bund (BA/AB-BA), EG-StPO-Mapping | SZ-Korrektur (Schmiedgasse 21, JugA Bennau); ALLE Lücken geschlossen (AG-Hausnummern 6.6.; VD-Korrektur: Konstituierung in LMPu 173.21 Art. 3/4; VS LACPP Art. 6/7; JU → OJ statt LiCPP) |
 | [strafgerichte-kantone.md](behoerden/strafgerichte-kantone.md) | Erstinstanzliche Strafgerichte 26 Kantone (Berufungsinstanzen aus obereInstanzen projiziert; BL amtlich Muttenz) | einfach belegt (6.6.2026) |
+
+### SchKG (Betreibung) — ZWEIFACH GEPRÜFT
+| Dokument | Inhalt | Befund 2. Durchgang |
+|---|---|---|
+| [betreibungskreise-kantone.md](behoerden/betreibungskreise-kantone.md) | Betreibungskreis-Systeme aller 26 Kantone (10 Einheitsamt · 10 Bezirks-/Regional · 2 Gemeinde · 4 gemischt) + Rechtsgrundlage, amtliches Verzeichnis, geprüfte Beispieladressen je Kanton; EasyGov-Finder-Analyse (kein offenes API, Negativbefund Bundes-Verzeichnis); Bau-Etappierung für `src/data/betreibungsaemter.ts` (Plan) | 52 Agents 7.6.2026 (je Kanton adversarial); TG-Zitate an geltender Fassung korrigiert; ZH-Reorganisation 56→34/18 in Vernehmlassung → Verfallsregister; Wortlaut-Lücken OW/FR (LexWork-Portale) markiert |
 
 ### Verwaltung — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Offen |
