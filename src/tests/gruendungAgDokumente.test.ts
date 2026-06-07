@@ -49,7 +49,8 @@ describe('AG-Dokumentmappe — Zusammensetzung', () => {
     const m = agDokumentmappe(BASIS);
     expect(m.gates.blocker).toEqual([]);
     expect(m.dokumente.map((d) => d.id)).toEqual([
-      'statuten', 'errichtungsakt', 'wahlannahme-0', 'vr-protokoll', 'hr-anmeldung',
+      // P4 (7.6.2026): + Unterschriftenblatt (Art. 21 HRegV) in jeder Mappe.
+      'statuten', 'errichtungsakt', 'wahlannahme-0', 'vr-protokoll', 'unterschriftenbogen', 'hr-anmeldung',
     ]);
   });
 
@@ -975,5 +976,27 @@ describe('AG — Stufe 2 P3 (Perfektion 7.6.2026): Statuten-Zusatzklauseln', () 
     const gj = text(agDokumentmappe({ ...BASIS, gjErstesEnde: '31. Dezember 2026' }), 'statuten');
     expect(gj).toContain('Das Geschäftsjahr beginnt am 1. Januar und endet am 31. Dezember. Das erste Geschäftsjahr endet am 31. Dezember 2026.');
     expect(text(agDokumentmappe(BASIS), 'statuten')).not.toContain('Das erste Geschäftsjahr');
+  });
+});
+
+describe('AG — Stufe 2 P4 (Perfektion 7.6.2026): Unterschriftenblatt', () => {
+  it('je zeichnungsberechtigte Person eine Zeile; «ohne Zeichnungsberechtigung» fehlt; Art.-21-Hinweis', () => {
+    const m = agDokumentmappe({
+      ...BASIS,
+      verwaltungsraete: [
+        { name: 'Anna Muster', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+        { name: 'Otto Ohne', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'ohne' },
+      ],
+      weitereVertretungen: [{ name: 'Carla Chef', funktion: 'Direktorin', zeichnungsArt: 'kollektivprokura' }],
+    });
+    expect(m.gates.blocker).toEqual([]);
+    const ub = text(m, 'unterschriftenbogen');
+    expect(ub).toContain('Anna Muster');
+    expect(ub).toContain('Präsident/in des Verwaltungsrates · Einzelunterschrift');
+    expect(ub).toContain('Carla Chef');
+    expect(ub).toContain('Direktorin · Kollektivprokura zu zweien');
+    expect(ub).not.toContain('Otto Ohne');
+    expect(ub).toContain('beim Handelsregisteramt zu zeichnen');
+    expect(ub).toContain('von einer Urkundsperson beglaubigt');
   });
 });

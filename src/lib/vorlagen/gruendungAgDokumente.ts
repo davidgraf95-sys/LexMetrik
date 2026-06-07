@@ -1070,6 +1070,22 @@ function basisAntworten(a: AgDokAntworten): Antworten {
       zeichnung: VERTRETUNGS_ZEICHNUNGS_LABEL[v.zeichnungsArt],
     })),
     hatWeitereVertretungen: a.weitereVertretungen.filter((v) => v.name.trim()).length > 0,
+    // Stufe 2 P4: Unterschriftenbogen — alle zeichnungsberechtigten
+    // Personen (VR ohne «ohne Zeichnungsberechtigung» + weitere
+    // Zeichnungsberechtigte), je mit Funktion und Zeichnungsart.
+    unterschriftenListe: [
+      ...a.verwaltungsraete.filter((v) => v.name.trim() && v.zeichnungsArt !== 'ohne').map((v) => ({
+        name: v.name.trim(),
+        funktion: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident
+          ? 'Präsident/in des Verwaltungsrates' : 'Mitglied des Verwaltungsrates',
+        zeichnung: VR_ZEICHNUNGS_LABEL[v.zeichnungsArt],
+      })),
+      ...a.weitereVertretungen.filter((v) => v.name.trim()).map((v) => ({
+        name: v.name.trim(),
+        funktion: v.funktion.trim() || '________',
+        zeichnung: VERTRETUNGS_ZEICHNUNGS_LABEL[v.zeichnungsArt],
+      })),
+    ],
     praesidentName: praesident,
     protokollName: a.protokollfuehrerName.trim() || praesident,
   };
@@ -2383,6 +2399,61 @@ const ANMELDUNG_SCHEMA: VorlageSchema = {
 };
 
 
+// ── 6b · UNTERSCHRIFTENBOGEN (Stufe 2 P4; fertig) ───────────────────────────
+// ZH führt ein amtliches «Unterschriftenblatt» (DOCX) — das Original liegt
+// nicht in den Extrakten vor, darum HAUS-FASSUNG (offengelegt): je
+// zeichnungsberechtigte Person Name · Funktion · Zeichnungsart ·
+// Unterschriftslinie, mit den Hinterlegungs-Modalitäten nach Art. 21 HRegV
+// (am Cache verifiziert: beim HRegA zeichnen ODER beglaubigt auf Papier /
+// elektronisch beglaubigt / elektronisch selbst bestätigt einreichen).
+
+const UNTERSCHRIFTENBOGEN_SCHEMA: VorlageSchema = {
+  id: 'ag-unterschriftenbogen',
+  version: '1.0.0 (Haus-Fassung am Rechtsstand HRegV 1.1.2025; P4 7.6.2026)',
+  titel: 'Unterschriftenblatt',
+  format: 'verfuegung',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Haus-Fassung nach dem Vorbild des amtlichen ' +
+    'ZH-Unterschriftenblatts: Die Unterschriften sind beim Handelsregisteramt zu zeichnen oder ' +
+    'beglaubigt einzureichen (Art. 21 HRegV); massgeblich sind die Vorgaben des zuständigen ' +
+    'Handelsregisteramts.',
+  bausteine: [
+    {
+      id: 'UB01_ingress',
+      text: 'der {{firma}} mit Sitz in {{sitz}}',
+      begruendung: 'Identifikations-Ingress unter dem Dokumenttitel (Usanz der amtlichen Muster).',
+    },
+    {
+      id: 'UB02_hinweis',
+      text:
+        'Die nachfolgend aufgeführten Personen hinterlegen ihre eigenhändige Unterschrift zur Eintragung ' +
+        'in das Handelsregister. Die Unterschrift ist beim Handelsregisteramt zu zeichnen (mit gültigem ' +
+        'Pass, gültiger Identitätskarte oder gültigem schweizerischem Ausländerausweis) oder dem ' +
+        'Handelsregisteramt als Beleg einzureichen: auf Papier von einer Urkundsperson beglaubigt, ' +
+        'elektronisch eingelesen und von einer Urkundsperson beglaubigt oder elektronisch eingelesen ' +
+        'und von der Person selbst bestätigt.',
+      norm: 'Art. 21 HRegV',
+      begruendung: 'Hinterlegungs-Modalitäten nach Art. 21 Abs. 1–3 HRegV (am Cache verifiziert) — Haus-Fassung, das amtliche ZH-Blatt liegt nicht im Wortlaut vor (offengelegt).',
+    },
+    {
+      id: 'UB03_personen',
+      rolle: 'unterschrift',
+      text:
+        '_________________________________\n' +
+        '{{item.name}}\n{{item.funktion}} · {{item.zeichnung}}',
+      wiederholeUeber: 'unterschriftenListe',
+      norm: 'Art. 21 Abs. 1 HRegV',
+      begruendung: 'Je zeichnungsberechtigte Person (VR-Mitglieder mit Zeichnungsberechtigung und weitere Zeichnungsberechtigte) eine Unterschriftszeile mit Funktion und Zeichnungsart.',
+    },
+    {
+      id: 'UB04_ortdatum',
+      text: '{{ortDatumZeile}}',
+      begruendung: 'Ort und Datum.',
+    },
+  ],
+};
+
 // ── 7 · SACHEINLAGEVERTRAG (Etappe 2; fertig — mit Grundstück ENTWURF, §8) ──
 // EIN Bausteinsatz (§5); zwei Schema-Hüllen, weil ausgabeArt formgebunden
 // ist: Schriftform (Art. 634 Abs. 2 Satz 1 OR) → druckfertig; Grundstück →
@@ -2937,6 +3008,16 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
     });
   }
 
+  // Stufe 2 P4: Unterschriftenbogen — jede Gründung hat mindestens eine
+  // zeichnungsberechtigte Person (Gate Art. 718 Abs. 3 OR).
+  dokumente.push({
+    id: 'unterschriftenbogen',
+    titel: 'Unterschriftenblatt',
+    dateiName: 'ag-unterschriftenblatt',
+    ausgeloestDurch: 'Unterschriftshinterlegung (Art. 21 HRegV)',
+    ergebnis: assemble(UNTERSCHRIFTENBOGEN_SCHEMA, basis),
+  });
+
   dokumente.push({
     id: 'hr-anmeldung',
     titel: 'Handelsregister-Anmeldung',
@@ -2970,5 +3051,6 @@ export const AG_ALLE_SCHEMAS: VorlageSchema[] = [
   WAHLANNAHME_RS_SCHEMA,
   VR_PROTOKOLL_SCHEMA,
   DOMIZILANNAHME_SCHEMA,
+  UNTERSCHRIFTENBOGEN_SCHEMA,
   ANMELDUNG_SCHEMA,
 ];

@@ -2274,6 +2274,61 @@ Schema `ag-domizilannahme` · Version 1.0.0 (ZH-Vorlage 26.7.2024; Wortlaut-Doss
 
 ---
 
+## Unterschriftenblatt
+
+Schema `ag-unterschriftenbogen` · Version 1.0.0 (Haus-Fassung am Rechtsstand HRegV 1.1.2025; P4 7.6.2026) · Format verfuegung · Ausgabe fertig
+
+> **Disclaimer (Fusszeile):** Erstellt mit LexMetrik – keine Rechtsberatung. Haus-Fassung nach dem Vorbild des amtlichen ZH-Unterschriftenblatts: Die Unterschriften sind beim Handelsregisteramt zu zeichnen oder beglaubigt einzureichen (Art. 21 HRegV); massgeblich sind die Vorgaben des zuständigen Handelsregisteramts.
+
+
+### 1. `UB01_ingress`
+
+- [ ] **abgenommen** (David)
+- **Aufnahme:** immer
+- **Begründung (Protokoll):** Identifikations-Ingress unter dem Dokumenttitel (Usanz der amtlichen Muster).
+
+**Wortlaut:**
+
+> der {{firma}} mit Sitz in {{sitz}}
+
+### 2. `UB02_hinweis`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 21 HRegV
+- **Aufnahme:** immer
+- **Begründung (Protokoll):** Hinterlegungs-Modalitäten nach Art. 21 Abs. 1–3 HRegV (am Cache verifiziert) — Haus-Fassung, das amtliche ZH-Blatt liegt nicht im Wortlaut vor (offengelegt).
+
+**Wortlaut:**
+
+> Die nachfolgend aufgeführten Personen hinterlegen ihre eigenhändige Unterschrift zur Eintragung in das Handelsregister. Die Unterschrift ist beim Handelsregisteramt zu zeichnen (mit gültigem Pass, gültiger Identitätskarte oder gültigem schweizerischem Ausländerausweis) oder dem Handelsregisteramt als Beleg einzureichen: auf Papier von einer Urkundsperson beglaubigt, elektronisch eingelesen und von einer Urkundsperson beglaubigt oder elektronisch eingelesen und von der Person selbst bestätigt.
+
+### 3. `UB03_personen`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 21 Abs. 1 HRegV
+- **Aufnahme:** immer
+- **Wiederholt über:** `unterschriftenListe` (ein Absatz je Eintrag)
+- **Layout-Rolle:** unterschrift
+- **Begründung (Protokoll):** Je zeichnungsberechtigte Person (VR-Mitglieder mit Zeichnungsberechtigung und weitere Zeichnungsberechtigte) eine Unterschriftszeile mit Funktion und Zeichnungsart.
+
+**Wortlaut:**
+
+> _________________________________
+> {{item.name}}
+> {{item.funktion}} · {{item.zeichnung}}
+
+### 4. `UB04_ortdatum`
+
+- [ ] **abgenommen** (David)
+- **Aufnahme:** immer
+- **Begründung (Protokoll):** Ort und Datum.
+
+**Wortlaut:**
+
+> {{ortDatumZeile}}
+
+---
+
 ## Anmeldung an das Handelsregisteramt
 
 Schema `ag-hr-anmeldung` · Version 1.0.0 (ZH-Formular-Struktur; Wortlaut-Dossier 7.6.2026) · Format eingabe · Ausgabe fertig
@@ -2411,4 +2466,4 @@ Schema `ag-hr-anmeldung` · Version 1.0.0 (ZH-Formular-Struktur; Wortlaut-Dossie
 
 ---
 
-**Summe:** 190 Bausteine in 12 Schemas.
+**Summe:** 194 Bausteine in 13 Schemas.
