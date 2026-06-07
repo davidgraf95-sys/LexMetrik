@@ -91,6 +91,11 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 |---|---|---|
 | [erbgangsbehoerden-kantone.md](behoerden/erbgangsbehoerden-kantone.md) | Testamentseröffnung/Erbenschein/Ausschlagung je Kanton — 4 Grundmodelle + Aufgaben-Splits | 1 Korrektur (SO 6 Ämter, Breitenbach ergänzt); UR geschlossen (Gemeindemodell); ZH/BE/LU/GE/SG-§§ bestätigt |
 
+### Notariat — ERSTRECHERCHE
+| Dokument | Inhalt | Status |
+|---|---|---|
+| [notariate-kantone.md](behoerden/notariate-kantone.md) | Notariats-System + Anlaufstelle/Verzeichnis-Link je Kanton (wer beurkundet GmbH-/AG-Gründungen; Sonderregel SH: HRegA beurkundet selbst; keine örtliche Ausschliesslichkeit bei Gründungen) — Stammdaten-Quelle für `src/lib/notariate.ts` | Erstrecherche 7.6.2026 (Auftrag David); 23/26 URL-geprüft; UR/AI/BL unsicher markiert; Listen-PDFs datiert → Verfallsregister |
+
 ## kosten/ — Tarife — ZWEIFACH GEPRÜFT
 
 | Dokument | Inhalt | Befund 2. Durchgang |

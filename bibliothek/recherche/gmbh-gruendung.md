@@ -49,7 +49,11 @@ verankert (1.2). ZH-Merkblatt ergänzt praktisch: «Höhe **und Währung**»
 ## 1.3 Amtliche Musterstatuten (Abruf 6.6.2026)
 
 - **EHRA-Musterstatuten GmbH** (Eidg. Amt für das Handelsregister,
-  Fassung **1.4.2017** — ZEITSENSITIV: zitiert noch 776a/806b a. F.;
+  Fassung **1.4.2017** — ZEITSENSITIV: zitiert noch das aufgehobene
+  Art. 776a OR; ~~«806b a. F.»~~ **Korrektur 7.6.2026
+  ([gruendungsdokumente-wortlaute.md](gruendungsdokumente-wortlaute.md)
+  Teil 0.2): Art. 806b OR ist GELTENDES Recht (Nutzniessungs-Stimmrecht),
+  am Cache 1.1.2026 verifiziert**;
   Klausel-Inhalte brauchbar, Anker prüfen): Mindestinhalt Art. 1–4/37;
   bedingt notwendig: Abtretung Art. 6 (Schriftform + GV-Zustimmung),
   besondere Erwerbsarten Art. 7, Treuepflicht/Konkurrenzverbot Art. 10
