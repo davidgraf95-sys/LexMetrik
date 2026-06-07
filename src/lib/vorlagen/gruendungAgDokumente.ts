@@ -21,16 +21,24 @@ import type { GmbhZeichnungsArt } from './gruendungGmbhDokumente';
 
 export type AgGruenderZeile = { name: string; angaben: string; anzahl: string };
 
+/** VR-Zeichnungsarten: ZH-Muster-Protokoll führt auch VR-Mitglieder
+ *  «ohne Zeichnungsberechtigung» (D14; Gate: mind. eines vertretungsbefugt,
+ *  Art. 718 Abs. 3 OR). */
+export type AgVrZeichnungsArt = GmbhZeichnungsArt | 'ohne';
+/** Weitere Zeichnungsberechtigte: zusätzlich Kollektivprokura zu zweien
+ *  (ZH-Muster-Protokoll, D14). */
+export type AgVertretungsZeichnungsArt = GmbhZeichnungsArt | 'kollektivprokura';
+
 export type AgVrZeile = {
   name: string;
   herkunft: string;
   wohnort: string;
   adresse: string;       // für die Wahlannahmeerklärung
   praesident: boolean;
-  zeichnungsArt: GmbhZeichnungsArt;   // fachneutrales Label (geteilt, §4)
+  zeichnungsArt: AgVrZeichnungsArt;
 };
 
-export type AgVertretungsZeile = { name: string; funktion: string; zeichnungsArt: GmbhZeichnungsArt };
+export type AgVertretungsZeile = { name: string; funktion: string; zeichnungsArt: AgVertretungsZeichnungsArt };
 
 export type AgDokAntworten = AgGruendungEingaben & {
   firma: string;             // inkl. Rechtsformzusatz «… AG» (Art. 950 OR)
@@ -57,6 +65,18 @@ export type AgDokAntworten = AgGruendungEingaben & {
   revisionsstelleSitz: string;
   vinkulierung: boolean;          // Art. 685a/685b OR (Statutenklausel)
   virtuelleGv: boolean;           // Art. 701d OR (Statutenklausel)
+  /** Geschäftsjahr-Grenzen für den Statuten-Artikel (amtliche ZH-Kurzvorlage;
+   *  Freitext wie «1. Januar» / «31. Dezember»). */
+  gjBeginn: string;
+  gjEnde: string;
+  /** Sitzungs-Uhrzeiten des VR-Konstituierungsprotokolls (D13: Mindestelemente
+   *  «Datum, Beginn und Ende der Sitzung», Merkblatt Formelle Anforderungen
+   *  7.1.2025; Freitext wie «11.00»). */
+  sitzungBeginn: string;
+  sitzungEnde: string;
+  /** Nachtrags-Bevollmächtigte:r mit vollen Personalien (D10: ZH-Klausel «Auf
+   *  Verlangen der Gründer» — leer = Klausel entfällt). */
+  nachtragsbevollmaechtigter: string;
   ort: string;
   datum: string;
 };
@@ -70,12 +90,23 @@ export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = 
   bankName: '', bankOrt: '', rechtsdomizilAdresse: '',
   domizilhalterName: '', domizilhalterAdresse: '',
   revisionsstelleName: '', revisionsstelleSitz: '',
-  vinkulierung: false, virtuelleGv: false, ort: '', datum: '',
+  vinkulierung: false, virtuelleGv: false,
+  gjBeginn: '1. Januar', gjEnde: '31. Dezember',
+  sitzungBeginn: '', sitzungEnde: '',
+  nachtragsbevollmaechtigter: '',
+  ort: '', datum: '',
 };
 
-const ZEICHNUNGS_LABEL: Record<GmbhZeichnungsArt, string> = {
+const VR_ZEICHNUNGS_LABEL: Record<AgVrZeichnungsArt, string> = {
   einzelunterschrift: 'Einzelunterschrift',
   kollektivzuzweien: 'Kollektivunterschrift zu zweien',
+  ohne: 'ohne Zeichnungsberechtigung',          // ZH-Muster-Protokoll (D14)
+};
+
+const VERTRETUNGS_ZEICHNUNGS_LABEL: Record<AgVertretungsZeichnungsArt, string> = {
+  einzelunterschrift: 'Einzelunterschrift',
+  kollektivzuzweien: 'Kollektivunterschrift zu zweien',
+  kollektivprokura: 'Kollektivprokura zu zweien', // ZH-Muster-Protokoll (D14)
 };
 
 // ── Gates ───────────────────────────────────────────────────────────────────
@@ -147,6 +178,9 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   if (vr.length > 1 && vr.filter((v) => v.praesident).length !== 1) {
     blocker.push('Bei mehrgliedrigem Verwaltungsrat genau EINE Person als Präsidentin/Präsidenten bezeichnen (Art. 712 Abs. 2 OR).');
   }
+  if (vr.length > 0 && vr.every((v) => v.zeichnungsArt === 'ohne')) {
+    blocker.push('Mindestens ein Mitglied des Verwaltungsrates muss zur Vertretung befugt sein (Art. 718 Abs. 3 OR).');
+  }
   if (a.bankInUrkundeGenannt && a.einlageArt === 'bar' && (!a.bankName.trim() || !a.bankOrt.trim())) {
     blocker.push('Bank in der Urkunde nennen: Name und Ort des Instituts angeben (sonst separate Bankbescheinigung, Art. 43 Abs. 1 lit. f HRegV).');
   }
@@ -175,8 +209,25 @@ function basisAntworten(a: AgDokAntworten): Antworten {
   const kapital = zahl(a.aktienkapitalChf) ?? 0;
   const praesident = a.verwaltungsraete.find((v) => v.praesident)?.name.trim()
     ?? a.verwaltungsraete.find((v) => v.name.trim())?.name.trim() ?? '________';
+  const gruenderAnzahl = a.gruender.filter((g) => g.name.trim()).length;
+  const vrAnzahl = a.verwaltungsraete.filter((v) => v.name.trim()).length;
   return {
     ...a,
+    // D1: Einpersonen-Gründung → Urkunde im Singular (Erläuterung ZH-Vorlage
+    // 3.1/3.5: «Falls nur eine einzige natürliche Person gründet …, ist die
+    // Gründungsurkunde in der Einzahl abzufassen»).
+    einGruender: gruenderAnzahl === 1,
+    einVr: vrAnzahl === 1,
+    zuHandenZeile: gruenderAnzahl === 1 ? 'z. H. der Gründerin bzw. des Gründers' : 'z. H. der Gründerinnen und Gründer',
+    // D13: Sitzungs-Uhrzeiten (Mindestelemente; leer → Blanko-Linie zum
+    // handschriftlichen Ergänzen, wie beim Datum).
+    sitzungBeginnZeile: a.sitzungBeginn.trim() ? `${a.sitzungBeginn.trim()} Uhr` : '________ Uhr',
+    sitzungEndeZeile: a.sitzungEnde.trim() ? `${a.sitzungEnde.trim()} Uhr` : '________ Uhr',
+    // D10: Nachtragsvollmacht nur, wenn eine Person benannt ist.
+    hatNachtragsvollmacht: a.nachtragsbevollmaechtigter.trim().length > 0,
+    nachtragsbevollmaechtigter: a.nachtragsbevollmaechtigter.trim(),
+    gjBeginnTxt: a.gjBeginn.trim() || '________',
+    gjEndeTxt: a.gjEnde.trim() || '________',
     akFmt: fmtCHF(a.aktienkapitalChf),
     nennwertFmt: fmtCHF(a.nennwertChf),
     einbezahltFmt: fmtCHF(String(kapital * (prozent / 100))),
@@ -199,12 +250,12 @@ function basisAntworten(a: AgDokAntworten): Antworten {
       wohnort: v.wohnort.trim() || '________',
       funktion: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? 'Präsident/in' : 'Mitglied',
       praesidentZeile: a.verwaltungsraete.filter((x) => x.name.trim()).length > 1 && v.praesident ? ', als Präsident/in' : '',
-      zeichnung: ZEICHNUNGS_LABEL[v.zeichnungsArt],
+      zeichnung: VR_ZEICHNUNGS_LABEL[v.zeichnungsArt],
     })),
     vertretungsListe: a.weitereVertretungen.filter((v) => v.name.trim()).map((v) => ({
       name: v.name.trim(),
       funktion: v.funktion.trim() || '________',
-      zeichnung: ZEICHNUNGS_LABEL[v.zeichnungsArt],
+      zeichnung: VERTRETUNGS_ZEICHNUNGS_LABEL[v.zeichnungsArt],
     })),
     hatWeitereVertretungen: a.weitereVertretungen.filter((v) => v.name.trim()).length > 0,
     praesidentName: praesident,
@@ -273,15 +324,34 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       begruendung: 'Aufgenommen, weil die Vinkulierung gewählt wurde – Wortlaut der wortgleichen amtlichen Muster ZH/SG/GL (Escape-Klausel und Sonderregel besondere Erwerbsarten).',
     },
     {
-      id: 'AS13_virtuelle_gv',
-      ueberschrift: 'Generalversammlung',
+      id: 'AS13_beschlussfassung_virtuell',
+      ueberschrift: 'Beschlussfassungsarten der Aktionäre',
       text:
-        'Die Generalversammlung kann vor Ort, hybrid oder mit elektronischen Mitteln ohne Tagungsort (virtuell) durchgeführt werden. ' +
-        'Bei einer virtuellen Generalversammlung kann der Verwaltungsrat im Einzelfall auf die Bezeichnung einer unabhängigen Stimmrechtsvertretung verzichten.',
+        'Aktionäre können unter Beachtung der Einberufungs- und Traktandierungsvorschriften die Generalversammlungen vor Ort oder hybrid (vor Ort und virtuell) oder virtuell abhalten. ' +
+        'Bei einer virtuellen Generalversammlung kann der Verwaltungsrat im Einzelfall auf die Bezeichnung einer unabhängigen Stimmrechtsvertretung verzichten.\n' +
+        'Sofern kein Aktionär oder dessen Vertretung eine mündliche Beratung an einer Generalversammlung verlangt, können die Aktionäre ihre Beschlüsse gemäss Art. 701 Abs. 3 OR auch auf schriftlichem Weg fassen.',
       includeIf: { feld: 'virtuelleGv', eq: true },
       norm: 'Art. 701d OR',
-      begruendung: 'Aufgenommen, weil die virtuelle Generalversammlung ermöglicht werden soll (statutarische Grundlage nötig).',
+      begruendung: 'Beschlussfassungsarten-Artikel der amtlichen ZH-Kurzvorlage (Satz 1 verbatim); virtuelle GV braucht die statutarische Grundlage (Art. 701d OR), der Schriftweg-Satz gibt Art. 701 Abs. 3 OR wieder.',
       hinweis: 'Ein genereller statutarischer Verzicht auf die unabhängige Stimmrechtsvertretung ist unzulässig – zulässig ist nur die Einzelfall-Ermächtigung (EHRA-Praxismitteilung 1/23).',
+    },
+    {
+      id: 'AS13_beschlussfassung',
+      ueberschrift: 'Beschlussfassungsarten der Aktionäre',
+      text:
+        'Sofern kein Aktionär oder dessen Vertretung eine mündliche Beratung an einer Generalversammlung verlangt, können die Aktionäre ihre Beschlüsse gemäss Art. 701 Abs. 3 OR auch auf schriftlichem Weg fassen.',
+      includeIf: { feld: 'virtuelleGv', eq: false },
+      norm: 'Art. 701 Abs. 3 OR',
+      begruendung: 'Beschlussfassungsarten-Artikel der amtlichen ZH-Kurzvorlage ohne den Virtuell-Satz (keine 701d-Grundlage gewählt); der Schriftweg-Satz gibt geltendes Recht deklaratorisch wieder.',
+    },
+    {
+      id: 'AS15_geschaeftsjahr',
+      ueberschrift: 'Geschäftsjahr und Buchführung',
+      text:
+        'Das Geschäftsjahr beginnt am {{gjBeginnTxt}} und endet am {{gjEndeTxt}}.\n' +
+        'Die Jahresrechnung, bestehend aus Erfolgsrechnung, Bilanz und Anhang, ist gemäss den Vorschriften des Schweizerischen Obligationenrechts, insbesondere der Art. 957 ff., zu erstellen.',
+      norm: 'Art. 958 Abs. 2 OR',
+      begruendung: 'Geschäftsjahr-Artikel der amtlichen ZH-Kurzvorlage (verbatim; kein Pflichtinhalt nach Art. 626 OR, aber Standard aller amtlichen Muster — der Abschlussstichtag folgt aus Art. 958 Abs. 2 OR).',
     },
     {
       id: 'AS04_mitteilungen',
@@ -309,7 +379,15 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     {
       id: 'AE01_ingress',
       text: 'Gründung der {{firma}} mit Sitz in {{sitz}}\n\nVor der unterzeichnenden Urkundsperson sind heute erschienen:',
+      includeIf: { feld: 'einGruender', eq: false },
       begruendung: 'Urkunden-Ingress mit Personalien-Block (Art. 44 lit. a HRegV).',
+      norm: 'Art. 44 lit. a HRegV',
+    },
+    {
+      id: 'AE01_ingress_singular',
+      text: 'Gründung der {{firma}} mit Sitz in {{sitz}}\n\nVor der unterzeichnenden Urkundsperson ist heute erschienen:',
+      includeIf: { feld: 'einGruender', eq: true },
+      begruendung: 'Urkunden-Ingress im Singular (D1: Einpersonen-Gründung ist in der Einzahl abzufassen — Erläuterung der ZH-Vorlagen; eigenständige Singular-Vorlage 3.5).',
       norm: 'Art. 44 lit. a HRegV',
     },
     {
@@ -321,17 +399,29 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     },
     {
       id: 'AE03_erklaerung',
-      ueberschrift: 'I. Gründungserklärung und Statuten',
+      ueberschrift: 'Gründungserklärung und Statuten',
       text:
         'Die erschienenen Personen erklären, eine Aktiengesellschaft unter der Firma {{firma}} mit ' +
         'Sitz in {{sitz}} zu gründen, und legen hiermit die beiliegenden Statuten fest, die Bestandteil ' +
         'dieser Urkunde bilden.',
+      includeIf: { feld: 'einGruender', eq: false },
       norm: 'Art. 629 Abs. 1 OR',
       begruendung: 'Gründungserklärung und Statutenfestlegung in der öffentlichen Urkunde (Art. 44 lit. b und c HRegV).',
     },
     {
+      id: 'AE03_erklaerung_singular',
+      ueberschrift: 'Gründungserklärung und Statuten',
+      text:
+        'Die erschienene Person erklärt, eine Aktiengesellschaft unter der Firma {{firma}} mit ' +
+        'Sitz in {{sitz}} zu gründen, und legt hiermit die beiliegenden Statuten fest, die Bestandteil ' +
+        'dieser Urkunde bilden.',
+      includeIf: { feld: 'einGruender', eq: true },
+      norm: 'Art. 629 Abs. 1 OR',
+      begruendung: 'Gründungserklärung im Singular (D1; ZH-Vorlage 3.5: «gründe ich» — Haus-Fassung in der dritten Person wie die Plural-Fassung).',
+    },
+    {
       id: 'AE04_zeichnung',
-      ueberschrift: 'II. Aktienkapital und Zeichnung',
+      ueberschrift: 'Aktienkapital und Zeichnung',
       text:
         'Das Aktienkapital der Gesellschaft beträgt CHF {{akFmt}} und ist eingeteilt in {{anzahlAktien}} ' +
         'Namenaktien zu je CHF {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von CHF {{nennwertFmt}} ' +
@@ -349,12 +439,20 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     {
       id: 'AE05b_verpflichtung',
       text: 'Jede Gründerin und jeder Gründer verpflichtet sich hiermit bedingungslos, die dem Ausgabebetrag der gezeichneten Aktien entsprechende Einlage zu leisten.',
+      includeIf: { feld: 'einGruender', eq: false },
       norm: 'Art. 630 Ziff. 2 OR',
       begruendung: 'Bedingungslose Einlage-Verpflichtung als Gültigkeitserfordernis der Zeichnung (ZH-Urkunde wortgleich).',
     },
     {
+      id: 'AE05b_verpflichtung_singular',
+      text: 'Die Gründerin bzw. der Gründer verpflichtet sich hiermit bedingungslos, die dem Ausgabebetrag der gezeichneten Aktien entsprechende Einlage zu leisten.',
+      includeIf: { feld: 'einGruender', eq: true },
+      norm: 'Art. 630 Ziff. 2 OR',
+      begruendung: 'Einlage-Verpflichtung im Singular (D1; ZH-Vorlage 3.5: «Der Gründer verpflichtet sich hiermit bedingungslos …»).',
+    },
+    {
       id: 'AE07_einlagen_voll_bank',
-      ueberschrift: 'III. Einlagen',
+      ueberschrift: 'Einlagen',
       text:
         'Sämtliche Einlagen von gesamthaft CHF {{akFmt}} wurden in Geld geleistet und sind bei der ' +
         '{{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und ' +
@@ -365,7 +463,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     },
     {
       id: 'AE07_einlagen_voll_bescheinigung',
-      ueberschrift: 'III. Einlagen',
+      ueberschrift: 'Einlagen',
       text:
         'Sämtliche Einlagen von gesamthaft CHF {{akFmt}} wurden in Geld geleistet und gemäss separater ' +
         'Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ' +
@@ -376,48 +474,87 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     },
     {
       id: 'AE07_einlagen_teil_bank',
-      ueberschrift: 'III. Einlagen',
+      ueberschrift: 'Einlagen',
       text:
         'Auf dem Aktienkapital wurden Einlagen von gesamthaft CHF {{einbezahltFmt}} ({{liberierungProzent}} % ' +
         'des Nennwerts jeder Aktie) in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach ' +
         'Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der ' +
-        'Gesellschaft hinterlegt. Der Verwaltungsrat fordert die ausstehenden Einlagen ein, sobald er es ' +
-        'für nötig erachtet.',
+        'Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'bankInUrkundeGenannt', eq: true }] },
       norm: 'Art. 632 OR',
-      begruendung: 'Teilliberierung (mind. 20 % je Aktie, gesamthaft mind. CHF 50\'000); Einforderung der Resteinlagen durch den VR (Art. 634b Abs. 1 OR).',
+      begruendung: 'Teilliberierung (mind. 20 % je Aktie, gesamthaft mind. CHF 50\'000).',
     },
     {
       id: 'AE07_einlagen_teil_bescheinigung',
-      ueberschrift: 'III. Einlagen',
+      ueberschrift: 'Einlagen',
       text:
         'Auf dem Aktienkapital wurden Einlagen von gesamthaft CHF {{einbezahltFmt}} ({{liberierungProzent}} % ' +
         'des Nennwerts jeder Aktie) in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach ' +
         'Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der ' +
-        'Gesellschaft hinterlegt. Der Verwaltungsrat fordert die ausstehenden Einlagen ein, sobald er es ' +
-        'für nötig erachtet.',
+        'Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'bankInUrkundeGenannt', eq: false }] },
       norm: 'Art. 632 OR',
       begruendung: 'Teilliberierung mit separater Bankbescheinigung.',
     },
     {
+      id: 'AE07c_resteinlage',
+      text:
+        'Jede Gründerin und jeder Gründer verpflichtet sich, auf erstes Verlangen des Verwaltungsrates ' +
+        'die restliche und vollständige Leistung der eigenen Einlage im Sinne von Art. 634b OR sofort zu erbringen.',
+      includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'einGruender', eq: false }] },
+      norm: 'Art. 634b OR',
+      begruendung: 'Resteinlage-Verpflichtungssatz der ZH-Urkunde (D6/0.3: «im Sinne von Art. 634b OR sofort» — ersetzt die frühere Haus-Formulierung «sobald er es für nötig erachtet»).',
+    },
+    {
+      id: 'AE07c_resteinlage_singular',
+      text:
+        'Die Gründerin bzw. der Gründer verpflichtet sich, auf erstes Verlangen des Verwaltungsrates ' +
+        'die restliche und vollständige Leistung der Einlage im Sinne von Art. 634b OR sofort zu erbringen.',
+      includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'einGruender', eq: true }] },
+      norm: 'Art. 634b OR',
+      begruendung: 'Resteinlage-Verpflichtungssatz im Singular (D1/D6; ZH-Vorlage 3.5).',
+    },
+    {
       id: 'AE08_feststellungen',
-      ueberschrift: 'IV. Feststellungen',
+      ueberschrift: 'Feststellungen',
       text:
         'Die Gründerinnen und Gründer stellen fest, dass:\n' +
         '– sämtliche Aktien gültig gezeichnet sind;\n' +
         '– die versprochenen Einlagen dem gesamten Ausgabebetrag entsprechen;\n' +
         '– die gesetzlichen und statutarischen Anforderungen an die geleisteten Einlagen im Zeitpunkt der Unterzeichnung des Errichtungsakts erfüllt sind;\n' +
         '– keine anderen Sacheinlagen, Verrechnungstatbestände oder besonderen Vorteile bestehen, als die in den Belegen genannten.',
+      includeIf: { feld: 'einGruender', eq: false },
       norm: 'Art. 629 Abs. 2 OR',
       begruendung: 'Gesetzliche Feststellungen Ziff. 1–4 – Wortlaut der Norm folgend (ZH-Urkunde identisch).',
     },
     {
+      id: 'AE08_feststellungen_singular',
+      ueberschrift: 'Feststellungen',
+      text:
+        'Die Gründerin bzw. der Gründer stellt fest, dass:\n' +
+        '– sämtliche Aktien gültig gezeichnet sind;\n' +
+        '– die versprochenen Einlagen dem gesamten Ausgabebetrag entsprechen;\n' +
+        '– die gesetzlichen und statutarischen Anforderungen an die geleisteten Einlagen im Zeitpunkt der Unterzeichnung des Errichtungsakts erfüllt sind;\n' +
+        '– keine anderen Sacheinlagen, Verrechnungstatbestände oder besonderen Vorteile bestehen, als die in den Belegen genannten.',
+      includeIf: { feld: 'einGruender', eq: true },
+      norm: 'Art. 629 Abs. 2 OR',
+      begruendung: 'Feststellungen im Singular (D1; ZH-Vorlage 3.5: «Ich stelle fest, dass …» — Haus-Fassung in der dritten Person).',
+    },
+    {
       id: 'AE09_organbestellung',
-      ueberschrift: 'V. Organe',
+      ueberschrift: 'Organe',
       text: 'Als Mitglieder des Verwaltungsrates werden gewählt:',
+      includeIf: { feld: 'einVr', eq: false },
       norm: 'Art. 629 Abs. 1 OR',
       begruendung: 'Organbestellung in der Urkunde; Personenangaben nach Art. 44 lit. e HRegV.',
+    },
+    {
+      id: 'AE09_organbestellung_singular',
+      ueberschrift: 'Organe',
+      text: 'Als Mitglied des Verwaltungsrates wird gewählt:',
+      includeIf: { feld: 'einVr', eq: true },
+      norm: 'Art. 629 Abs. 1 OR',
+      begruendung: 'Organbestellung im Singular bei eingliedrigem Verwaltungsrat (Numerus-Korrektur analog D1).',
     },
     {
       id: 'AE09b_vrliste',
@@ -440,13 +577,24 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         '– die Gesellschaft die Voraussetzungen für die Pflicht zur ordentlichen Revision nicht erfüllt;\n' +
         '– die Gesellschaft nicht mehr als zehn Vollzeitstellen im Jahresdurchschnitt hat;\n' +
         '– sämtliche Gründerinnen und Gründer auf eine eingeschränkte Revision verzichten.',
-      includeIf: { feld: 'optingOut', eq: true },
+      includeIf: { and: [{ feld: 'optingOut', eq: true }, { feld: 'einGruender', eq: false }] },
       norm: 'Art. 727a Abs. 2 OR',
       begruendung: 'Opting-out bei der Gründung: dreigliedrige Feststellung direkt in der Urkunde (Art. 44 lit. f HRegV; ZH-KMU-Merkblatt und SG-Formular wortgleich).',
     },
     {
+      id: 'AE11_opting_out_singular',
+      text:
+        'Auf eine Revision wird verzichtet. Die Gründerin bzw. der Gründer stellt fest, dass:\n' +
+        '– die Gesellschaft die Voraussetzungen für die Pflicht zur ordentlichen Revision nicht erfüllt;\n' +
+        '– die Gesellschaft nicht mehr als zehn Vollzeitstellen im Jahresdurchschnitt hat;\n' +
+        '– auf eine eingeschränkte Revision verzichtet wird.',
+      includeIf: { and: [{ feld: 'optingOut', eq: true }, { feld: 'einGruender', eq: true }] },
+      norm: 'Art. 727a Abs. 2 OR',
+      begruendung: 'Opting-out im Singular (D1; ZH-Vorlage 3.5: «Der Gründer erklärt, auf die eingeschränkte Revision … zu verzichten»).',
+    },
+    {
       id: 'AE12_domizil_eigen',
-      ueberschrift: 'VI. Rechtsdomizil',
+      ueberschrift: 'Rechtsdomizil',
       text: 'Das Rechtsdomizil der Gesellschaft befindet sich an folgender Adresse: {{rechtsdomizilAdresse}}.',
       includeIf: { feld: 'eigeneBueros', eq: true },
       norm: 'Art. 117 Abs. 2 HRegV',
@@ -454,7 +602,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     },
     {
       id: 'AE12_domizil_co',
-      ueberschrift: 'VI. Rechtsdomizil',
+      ueberschrift: 'Rechtsdomizil',
       text:
         'Die Gesellschaft hat ihr Rechtsdomizil als c/o-Adresse bei {{domizilhalterName}}, ' +
         '{{domizilhalterAdresse}}. Die Erklärung der Domizilhalterin bzw. des Domizilhalters liegt vor.',
@@ -464,21 +612,43 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     },
     {
       id: 'AE13_nachtragsvollmacht',
-      ueberschrift: 'VII. Vollmacht',
+      ueberschrift: 'Vollmacht',
       text:
-        'Die Gründerinnen und Gründer bevollmächtigen jede Gründerin und jeden Gründer sowie jedes ' +
-        'Mitglied des Verwaltungsrates einzeln, allfällige von der Handelsregisterbehörde beanstandete ' +
-        'Punkte dieser Urkunde oder der Statuten durch einen öffentlich zu beurkundenden Nachtrag ' +
-        'namens aller Gründerinnen und Gründer zu bereinigen.',
+        'Die Gründerinnen und Gründer bevollmächtigen {{nachtragsbevollmaechtigter}}, allfällige wegen ' +
+        'Beanstandung durch die Handelsregisterbehörde erforderliche Änderungen an den Statuten oder am ' +
+        'Errichtungsakt durch einen öffentlich zu beurkundenden Nachtrag namens aller Gründerinnen und ' +
+        'Gründer vorzunehmen.',
+      includeIf: { and: [{ feld: 'hatNachtragsvollmacht', eq: true }, { feld: 'einGruender', eq: false }] },
       norm: 'Art. 44 HRegV',
-      begruendung: 'Vorsorgliche Nachtragsvollmacht für Beanstandungen (ZH-Vorlagen-Klausel).',
+      begruendung: 'Aufgenommen, weil eine Nachtrags-Bevollmächtigung gewünscht ist (D10: ZH-Klausel «Auf Verlangen der Gründer» — eine benannte Person mit vollen Personalien: Vorname, Name, Geburtsdatum, Bürgerort bzw. Staatsangehörigkeit, Wohnadresse).',
+    },
+    {
+      id: 'AE13_nachtragsvollmacht_singular',
+      ueberschrift: 'Vollmacht',
+      text:
+        'Die Gründerin bzw. der Gründer bevollmächtigt {{nachtragsbevollmaechtigter}}, allfällige wegen ' +
+        'Beanstandung durch die Handelsregisterbehörde erforderliche Änderungen an den Statuten oder am ' +
+        'Errichtungsakt durch einen öffentlich zu beurkundenden Nachtrag in ihrem bzw. seinem Namen ' +
+        'vorzunehmen.',
+      includeIf: { and: [{ feld: 'hatNachtragsvollmacht', eq: true }, { feld: 'einGruender', eq: true }] },
+      norm: 'Art. 44 HRegV',
+      begruendung: 'Nachtragsvollmacht im Singular (D1/D10).',
     },
     {
       id: 'AE14_gruendungserklaerung',
-      ueberschrift: 'VIII. Gründungserklärung',
+      ueberschrift: 'Gründungserklärung',
       text: 'Abschliessend erklären die erschienenen Personen die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet.',
+      includeIf: { feld: 'einGruender', eq: false },
       norm: 'Art. 629 Abs. 1 OR',
       begruendung: 'Abschliessende Gründungserklärung (ZH-Vorlage wortgleich).',
+    },
+    {
+      id: 'AE14_gruendungserklaerung_singular',
+      ueberschrift: 'Gründungserklärung',
+      text: 'Abschliessend erklärt die erschienene Person die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet.',
+      includeIf: { feld: 'einGruender', eq: true },
+      norm: 'Art. 629 Abs. 1 OR',
+      begruendung: 'Abschliessende Gründungserklärung im Singular (D1; ZH-Vorlage 3.5: «erkläre ich» — Haus-Fassung dritte Person).',
     },
     {
       id: 'AE15_belege',
@@ -486,8 +656,19 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       text:
         'Die Urkundsperson nennt die Belege über die Gründung einzeln und bestätigt, dass diese ihr und ' +
         'den Gründerinnen und Gründern vorgelegen haben (Art. 631 Abs. 1 OR):',
+      includeIf: { feld: 'einGruender', eq: false },
       norm: 'Art. 631 OR',
       begruendung: 'Beleg-Nennung und Vorlage-Bestätigung durch die Urkundsperson.',
+    },
+    {
+      id: 'AE15_belege_singular',
+      ueberschrift: 'Bestätigung der Urkundsperson',
+      text:
+        'Die Urkundsperson nennt die Belege über die Gründung einzeln und bestätigt, dass diese ihr und ' +
+        'der Gründerin bzw. dem Gründer vorgelegen haben (Art. 631 Abs. 1 OR):',
+      includeIf: { feld: 'einGruender', eq: true },
+      norm: 'Art. 631 OR',
+      begruendung: 'Vorlage-Bestätigung im Singular (D1; ZH-Vorlage 3.5: «… dass ihr und dem Gründer bzw. dessen Vertreter … vorgelegen haben»).',
     },
     {
       id: 'AE15b_belegliste',
@@ -500,7 +681,16 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE16_unterschriften',
       rolle: 'unterschrift',
       text: '{{ortDatumZeile}}\n\nDie Gründerinnen und Gründer:',
+      includeIf: { feld: 'einGruender', eq: false },
       begruendung: 'Unterschriften der Gründerinnen und Gründer (Art. 44 lit. i HRegV).',
+      norm: 'Art. 44 lit. i HRegV',
+    },
+    {
+      id: 'AE16_unterschriften_singular',
+      rolle: 'unterschrift',
+      text: '{{ortDatumZeile}}\n\nDie Gründerin bzw. der Gründer:',
+      includeIf: { feld: 'einGruender', eq: true },
+      begruendung: 'Unterschrift im Singular (D1).',
       norm: 'Art. 44 lit. i HRegV',
     },
     {
@@ -534,7 +724,7 @@ const WAHLANNAHME_SCHEMA: VorlageSchema = {
     'die Handelsregister-Anmeldung selbst unterzeichnet (Praxis ZH/LU/BE).',
   bausteine: [
     { id: 'AW01_absender', rolle: 'absender', text: '{{personName}}\n{{personAdresse}}', begruendung: 'Absenderin/Absender ist die gewählte Person.' },
-    { id: 'AW02_adressat', rolle: 'adressat', text: '{{firma}}\nz. H. der Gründerinnen und Gründer\n{{sitz}}', begruendung: 'Adressatin ist die Gesellschaft (in Gründung).' },
+    { id: 'AW02_adressat', rolle: 'adressat', text: '{{firma}}\n{{zuHandenZeile}}\n{{sitz}}', begruendung: 'Adressatin ist die Gesellschaft (in Gründung); z.-H.-Zeile im passenden Numerus (D1).' },
     { id: 'AW03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}', begruendung: 'Ort und Datum.' },
     { id: 'AW04_betreff', rolle: 'betreff', text: 'Wahlannahmeerklärung', begruendung: 'Betreff nach amtlicher ZH-Vorlage.' },
     { id: 'AW05_anrede', rolle: 'anrede', text: 'Sehr geehrte Damen und Herren', begruendung: 'Anrede nach amtlicher ZH-Vorlage.' },
@@ -546,6 +736,35 @@ const WAHLANNAHME_SCHEMA: VorlageSchema = {
     },
     { id: 'AW07_gruss', rolle: 'schlussformel', text: 'Mit freundlichen Grüssen', begruendung: 'Schlussformel nach ZH-Vorlage.' },
     { id: 'AW08_unterschrift', rolle: 'unterschrift', text: '_________________________________\n{{personName}}', begruendung: 'Original-Unterschrift der gewählten Person.' },
+  ],
+};
+
+// ── 3b · WAHLANNAHME REVISIONSSTELLE (fertig; Beleg lit. d) ─────────────────
+
+const WAHLANNAHME_RS_SCHEMA: VorlageSchema = {
+  id: 'ag-wahlannahme-rs',
+  version: '1.0.0 (Haus-Fassung analog ZH-VR-Vorlage; Original-Suite 7.6.2026)',
+  titel: 'Wahlannahmeerklärung der Revisionsstelle',
+  format: 'eingabe',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Im Original einzureichen (Art. 20 HRegV); ' +
+    'entbehrlich, wenn die Annahme in der öffentlichen Urkunde erklärt wird oder die Revisionsstelle ' +
+    'die Handelsregister-Anmeldung mitunterzeichnet (Merkblatt HRegA ZH).',
+  bausteine: [
+    { id: 'AR01_absender', rolle: 'absender', text: '{{revisionsstelleName}}\n{{revisionsstelleSitz}}', begruendung: 'Absenderin ist die gewählte Revisionsstelle.' },
+    { id: 'AR02_adressat', rolle: 'adressat', text: '{{firma}}\n{{zuHandenZeile}}\n{{sitz}}', begruendung: 'Adressatin ist die Gesellschaft (in Gründung).' },
+    { id: 'AR03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}', begruendung: 'Ort und Datum.' },
+    { id: 'AR04_betreff', rolle: 'betreff', text: 'Wahlannahmeerklärung', begruendung: 'Betreff analog der amtlichen ZH-Vorlage für VR-Mitglieder.' },
+    { id: 'AR05_anrede', rolle: 'anrede', text: 'Sehr geehrte Damen und Herren', begruendung: 'Anrede nach ZH-Vorlagen-Anatomie.' },
+    {
+      id: 'AR06_text',
+      text: 'Gerne bestätigen wir Ihnen, dass wir die Wahl als Revisionsstelle der {{firma}}, in {{sitz}}, annehmen.',
+      norm: 'Art. 43 Abs. 1 lit. d HRegV',
+      begruendung: 'Annahme-Kernsatz analog der amtlichen ZH-VR-Vorlage (0.6/D15); wir-Form, da die Revisionsstelle regelmässig eine juristische Person ist (Haus-Fassung, offengelegt).',
+    },
+    { id: 'AR07_gruss', rolle: 'schlussformel', text: 'Mit freundlichen Grüssen', begruendung: 'Schlussformel nach ZH-Vorlagen-Anatomie.' },
+    { id: 'AR08_unterschrift', rolle: 'unterschrift', text: '_________________________________\n{{revisionsstelleName}}', begruendung: 'Unterschrift der Revisionsstelle (zeichnungsberechtigte Person).' },
   ],
 };
 
@@ -593,8 +812,8 @@ const VR_PROTOKOLL_SCHEMA: VorlageSchema = {
   bausteine: [
     {
       id: 'VP01_ingress',
-      text: 'der {{firma}}, mit Sitz in {{sitz}}\n\nOrt: {{ort}}\nDatum: {{datumZeile}}\nAnwesend: sämtliche Mitglieder des Verwaltungsrates\nVorsitz: {{praesidentName}}\nProtokoll: {{protokollName}}',
-      begruendung: 'Protokoll-Kopf nach der amtlichen ZH-Vorlage (ag_vorlage_protokoll_vr).',
+      text: 'der {{firma}}, mit Sitz in {{sitz}}\n\nOrt: {{ort}}\nDatum: {{datumZeile}}\nBeginn der Sitzung: {{sitzungBeginnZeile}}\nAnwesend: sämtliche Mitglieder des Verwaltungsrates\nAbwesend: keine\nVorsitz: {{praesidentName}}\nProtokoll: {{protokollName}}',
+      begruendung: 'Protokoll-Kopf nach der amtlichen ZH-Vorlage (ag_vorlage_protokoll_vr); Mindestelemente der Praxis zu Art. 23 HRegV ergänzt (Beginn der Sitzung, Anwesenheits-/Abwesenheits-Feststellung — Merkblatt «Formelle Anforderungen an Handelsregisterbelege», 7.1.2025; D13).',
       norm: 'Art. 43 Abs. 1 lit. e HRegV',
     },
     {
@@ -605,7 +824,7 @@ const VR_PROTOKOLL_SCHEMA: VorlageSchema = {
         'Protokollführer/in. Der Vorsitzende stellt fest, dass der Verwaltungsrat in beschlussfähiger ' +
         'Anzahl anwesend ist. Gegen diese Feststellungen wird kein Widerspruch erhoben. Der ' +
         'Verwaltungsrat beschliesst:',
-      begruendung: 'Eröffnungs-Passus nach der amtlichen ZH-Vorlage (Haus-Fassung: statt des Einladungs-Satzes die für die Konstituierungs-Sitzung passende Beschlussfähigkeits-Feststellung).',
+      begruendung: 'Eröffnungs-Passus nach der amtlichen ZH-Vorlage. Haus-Abweichung (offengelegt): Der ZH-Einladungs-Feststellungssatz («Einladung gemäss den statutarischen Vorschriften fristgerecht») entfällt — bei der Konstituierungs-Sitzung unmittelbar nach der Gründung sind sämtliche Mitglieder anwesend (Kopf-Feststellung), womit Einladungsförmlichkeiten geheilt sind.',
       norm: 'Art. 713 OR',
     },
     {
@@ -641,6 +860,11 @@ const VR_PROTOKOLL_SCHEMA: VorlageSchema = {
       norm: 'Art. 718 Abs. 2 OR',
     },
     {
+      id: 'VP04c_ende',
+      text: 'Ende der Sitzung: {{sitzungEndeZeile}}',
+      begruendung: 'Schluss-Zeile nach der amtlichen ZH-Vorlage; Mindestelement «Datum, Beginn und Ende der Sitzung» (Merkblatt 7.1.2025; D13).',
+    },
+    {
       id: 'VP05_unterschriften', rolle: 'unterschrift',
       text: '{{ortDatumZeile}}\n\n_________________________________\n{{praesidentName}} (Vorsitz)\n\n_________________________________\n{{protokollName}} (Protokoll)',
       begruendung: 'Unterschriften von Vorsitz und Protokollführung (Art. 23 Abs. 2 HRegV); für die HR-Einreichung Unterschriften der Vertretungsberechtigten amtlich beglaubigt (Praxis ZH).',
@@ -660,7 +884,10 @@ const ANMELDUNG_SCHEMA: VorlageSchema = {
   disclaimer:
     'Erstellt mit LexMetrik – keine Rechtsberatung. Unterschriften beim Handelsregisteramt zeichnen ' +
     'oder beglaubigt einreichen (Art. 18 Abs. 2, Art. 21 HRegV); Gebühr CHF 420 (GebV-HReg, Anhang ' +
-    'Ziff. 1.3). Belege im Original oder in beglaubigter Kopie (Art. 20 HRegV).',
+    'Ziff. 1.3). Belege im Original oder in beglaubigter Kopie (Art. 20 HRegV); per E-Mail eingereichte ' +
+    'Unterlagen gelten als Kopien. Die Anmeldung ist auf Deutsch abzufassen (Praxis HRegA ZH); ' +
+    'Ausweiskopien der einzutragenden Personen als separate, lose Beilage (Art. 24a HRegV – nicht ' +
+    'öffentlich). Unterzeichnet eine bevollmächtigte Drittperson, Vollmachts-Kopie beilegen (Art. 17 HRegV).',
   bausteine: [
     { id: 'AA01_absender', rolle: 'absender', text: '{{firma}} (in Gründung)\n{{anmeldeAdresseZeile}}', begruendung: 'Absenderin ist die Gesellschaft in Gründung.' },
     { id: 'AA02_adressat', rolle: 'adressat', text: 'Handelsregisteramt des Kantons {{kanton}}', begruendung: 'Zuständig ist das Handelsregisteramt am Sitz (Art. 16 HRegV).', norm: 'Art. 16 HRegV' },
@@ -695,6 +922,23 @@ function nummeriereStatutenArtikel(erg: AssembleErgebnis): AssembleErgebnis {
     if (abs.ueberschrift) {
       n += 1;
       abs.ueberschrift = `Art. ${n} – ${abs.ueberschrift}`;
+    }
+  }
+  return erg;
+}
+
+// Errichtungsakt: römische Ziffern werden NACH der Weichen-Auswertung vergeben
+// (lückenlos auch ohne optionale Abschnitte wie die Nachtragsvollmacht, D10);
+// die Urkundsperson-Bestätigung bleibt unnummeriert (ZH-Vorlagen-Anatomie).
+const ROEMISCH = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'] as const;
+const UNNUMMERIERT = new Set(['Bestätigung der Urkundsperson']);
+
+function nummeriereUrkundenZiffern(erg: AssembleErgebnis): AssembleErgebnis {
+  let n = 0;
+  for (const abs of erg.dokument.absaetze) {
+    if (abs.ueberschrift && !UNNUMMERIERT.has(abs.ueberschrift)) {
+      abs.ueberschrift = `${ROEMISCH[n] ?? String(n + 1)}. ${abs.ueberschrift}`;
+      n += 1;
     }
   }
   return erg;
@@ -744,7 +988,7 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
     id: 'errichtungsakt',
     titel: 'Errichtungsakt (Entwurf für die Urkundsperson)',
     dateiName: 'ag-errichtungsakt-entwurf',
-    ergebnis: assemble(ERRICHTUNGSAKT_SCHEMA, { ...basis, belegeListe }),
+    ergebnis: nummeriereUrkundenZiffern(assemble(ERRICHTUNGSAKT_SCHEMA, { ...basis, belegeListe })),
   });
 
   if (hat('wahlannahme-vr')) {
@@ -762,6 +1006,16 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
           personAdresse: v.adresse.trim() || '________',
         }),
       });
+    });
+  }
+
+  if (hat('wahlannahme-rs')) {
+    dokumente.push({
+      id: 'wahlannahme-rs',
+      titel: 'Wahlannahmeerklärung – Revisionsstelle',
+      dateiName: 'ag-wahlannahme-rs',
+      ausgeloestDurch: 'Revisionsstelle bestellt (Art. 43 Abs. 1 lit. d HRegV)',
+      ergebnis: assemble(WAHLANNAHME_RS_SCHEMA, basis),
     });
   }
 

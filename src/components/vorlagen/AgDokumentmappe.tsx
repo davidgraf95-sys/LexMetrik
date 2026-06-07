@@ -10,8 +10,9 @@ import {
   type AgGruenderZeile,
   type AgVrZeile,
   type AgVertretungsZeile,
+  type AgVrZeichnungsArt,
+  type AgVertretungsZeichnungsArt,
 } from '../../lib/vorlagen/gruendungAgDokumente';
-import type { GmbhZeichnungsArt } from '../../lib/vorlagen/gruendungGmbhDokumente';
 import { KANTONE } from '../../lib/kantone';
 import { NOTARIATE, NOTARIAT_SYSTEM_LABEL, NOTARIAT_FREIZUEGIGKEIT } from '../../lib/notariate';
 import type { Kanton } from '../../types/legal';
@@ -29,9 +30,18 @@ const BANNER_FERTIG: PdfBanner = {
   text: 'Im Original beim Handelsregisteramt einzureichen (Art. 20 HRegV); per E-Mail eingereichte Unterlagen gelten als Kopien.',
 };
 
-const ZEICHNUNGS_OPTIONEN: { id: GmbhZeichnungsArt; label: string }[] = [
+// D14: VR-Mitglieder können «ohne Zeichnungsberechtigung» sein (Gate: mind.
+// eines vertretungsbefugt, Art. 718 Abs. 3 OR); weitere Zeichnungsberechtigte
+// zusätzlich mit Kollektivprokura (ZH-Muster-Protokoll).
+const VR_ZEICHNUNGS_OPTIONEN: { id: AgVrZeichnungsArt; label: string }[] = [
   { id: 'einzelunterschrift', label: 'Einzelunterschrift' },
   { id: 'kollektivzuzweien', label: 'Kollektivunterschrift zu zweien' },
+  { id: 'ohne', label: 'ohne Zeichnungsberechtigung' },
+];
+const VERTRETUNGS_ZEICHNUNGS_OPTIONEN: { id: AgVertretungsZeichnungsArt; label: string }[] = [
+  { id: 'einzelunterschrift', label: 'Einzelunterschrift' },
+  { id: 'kollektivzuzweien', label: 'Kollektivunterschrift zu zweien' },
+  { id: 'kollektivprokura', label: 'Kollektivprokura zu zweien' },
 ];
 
 export function AgDokumentmappe({ weichen, docxErlaubt }: {
@@ -60,6 +70,11 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
   const [rsSitz, setRsSitz] = useState('');
   const [vinkulierung, setVinkulierung] = useState(false);
   const [virtuelleGv, setVirtuelleGv] = useState(false);
+  const [gjBeginn, setGjBeginn] = useState(AG_DOK_DEFAULTS.gjBeginn);
+  const [gjEnde, setGjEnde] = useState(AG_DOK_DEFAULTS.gjEnde);
+  const [sitzungBeginn, setSitzungBeginn] = useState('');
+  const [sitzungEnde, setSitzungEnde] = useState('');
+  const [nachtragsbevollmaechtigter, setNachtragsbevollmaechtigter] = useState('');
   const [ort, setOrt] = useState('');
   const [datum, setDatum] = useState('');
   const [aktivesDok, setAktivesDok] = useState<string>('statuten');
@@ -79,10 +94,12 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
     bankName, bankOrt, rechtsdomizilAdresse: rechtsdomizil,
     domizilhalterName, domizilhalterAdresse,
     revisionsstelleName: rsName, revisionsstelleSitz: rsSitz,
-    vinkulierung, virtuelleGv, ort, datum,
+    vinkulierung, virtuelleGv, gjBeginn, gjEnde,
+    sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter, ort, datum,
   }), [weichen, firma, sitz, kanton, zweck, zweckErweiterung, ak, anzahl, nennwert, liberierung,
     gruender, vr, vertretungen, protokollfuehrer, bankName, bankOrt, rechtsdomizil,
-    domizilhalterName, domizilhalterAdresse, rsName, rsSitz, vinkulierung, virtuelleGv, ort, datum]);
+    domizilhalterName, domizilhalterAdresse, rsName, rsSitz, vinkulierung, virtuelleGv,
+    gjBeginn, gjEnde, sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter, ort, datum]);
 
   const mappe = useMemo(() => agDokumentmappe(antworten), [antworten]);
   const dok = mappe.dokumente.find((d) => d.id === aktivesDok) ?? mappe.dokumente[0];
@@ -210,8 +227,8 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
             </Field>
             <Field label="Zeichnung">
               <select className={inputCls} value={v.zeichnungsArt}
-                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, zeichnungsArt: e.target.value as GmbhZeichnungsArt } : x))}>
-                {ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
+                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, zeichnungsArt: e.target.value as AgVrZeichnungsArt } : x))}>
+                {VR_ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
               </select>
             </Field>
             <label className="flex items-center gap-1.5 text-body-s text-ink-700 pb-2">
@@ -227,9 +244,17 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
           onClick={() => setVr((alt) => [...alt, { key: neuerKey(), name: '', herkunft: '', wohnort: '', adresse: '', praesident: alt.length === 0, zeichnungsArt: 'einzelunterschrift' }])}>
           + VR-Mitglied hinzufügen
         </button>
-        <Field label="Protokollführung (leer = Präsident:in)">
-          <input className={inputCls} value={protokollfuehrer} onChange={(e) => setProtokollfuehrer(e.target.value)} />
-        </Field>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Field label="Protokollführung (leer = Präsident:in)">
+            <input className={inputCls} value={protokollfuehrer} onChange={(e) => setProtokollfuehrer(e.target.value)} />
+          </Field>
+          <Field label="Sitzungsbeginn (Uhrzeit, fürs Protokoll)">
+            <input className={inputCls} value={sitzungBeginn} onChange={(e) => setSitzungBeginn(e.target.value)} placeholder="z. B. 11.00" />
+          </Field>
+          <Field label="Sitzungsende (Uhrzeit)">
+            <input className={inputCls} value={sitzungEnde} onChange={(e) => setSitzungEnde(e.target.value)} placeholder="z. B. 11.15" />
+          </Field>
+        </div>
       </div>
 
       {/* Weitere Zeichnungsberechtigte */}
@@ -247,8 +272,8 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
             </Field>
             <Field label="Zeichnung">
               <select className={inputCls} value={v.zeichnungsArt}
-                onChange={(e) => setVertretungen((alt) => alt.map((x) => x.key === v.key ? { ...x, zeichnungsArt: e.target.value as GmbhZeichnungsArt } : x))}>
-                {ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
+                onChange={(e) => setVertretungen((alt) => alt.map((x) => x.key === v.key ? { ...x, zeichnungsArt: e.target.value as AgVertretungsZeichnungsArt } : x))}>
+                {VERTRETUNGS_ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
               </select>
             </Field>
             <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
@@ -297,11 +322,21 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
             </Field>
           </>
         )}
+        <Field label="Geschäftsjahr-Beginn (Statuten)">
+          <input className={inputCls} value={gjBeginn} onChange={(e) => setGjBeginn(e.target.value)} placeholder="z. B. 1. Januar" />
+        </Field>
+        <Field label="Geschäftsjahr-Ende (Statuten)">
+          <input className={inputCls} value={gjEnde} onChange={(e) => setGjEnde(e.target.value)} placeholder="z. B. 31. Dezember" />
+        </Field>
         <Field label="Ort (Unterschriften)">
           <input className={inputCls} value={ort} onChange={(e) => setOrt(e.target.value)} />
         </Field>
         <Field label="Datum">
           <input type="date" className={inputCls} value={datum} onChange={(e) => setDatum(e.target.value)} />
+        </Field>
+        <Field label="Nachtrags-Bevollmächtigte:r (optional; volle Personalien)">
+          <input className={inputCls} value={nachtragsbevollmaechtigter} onChange={(e) => setNachtragsbevollmaechtigter(e.target.value)}
+            placeholder="Vorname Name, Geburtsdatum, Bürgerort, Wohnadresse" />
         </Field>
       </div>
 

@@ -80,8 +80,10 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     expect(gmbhMappe.gates.blocker).toEqual([]);
     for (const d of gmbhMappe.dokumente) faelle.push([`gmbh-dok-${d.id}`, d.ergebnis.dokument]);
 
-    // AG-Dokumentmappe (9b): Teilliberierung + Vinkulierung + c/o + RS + weitere
-    // Zeichnungsberechtigte → alle Schemas und bedingten Bausteine.
+    // AG-Dokumentmappe (9b + Etappe 0): Teilliberierung + Vinkulierung + c/o +
+    // RS (inkl. RS-Wahlannahme) + weitere Zeichnungsberechtigte (Kollektiv-
+    // prokura) + VR ohne Zeichnungsberechtigung + Nachtragsvollmacht +
+    // Sitzungszeiten → alle Schemas und bedingten PLURAL-Bausteine.
     const { agDokumentmappe, AG_DOK_DEFAULTS } = await import('../lib/vorlagen/gruendungAgDokumente');
     const agMappe = agDokumentmappe({
       einlageArt: 'bar', besondereVorteile: false, optingOut: false,
@@ -92,19 +94,46 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       firma: 'Muster AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Beteiligungen',
       aktienkapitalChf: "200'000", anzahlAktien: '200', nennwertChf: "1'000",
       liberierungProzent: '25',
-      gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '200' }],
+      gruender: [
+        { name: 'A', angaben: 'von Basel, in Zürich', anzahl: '150' },
+        { name: 'B', angaben: 'von Bern, in Bern', anzahl: '50' },
+      ],
       verwaltungsraete: [
         { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
-        { name: 'B', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'kollektivzuzweien' },
+        { name: 'B', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'ohne' },
       ],
-      weitereVertretungen: [{ name: 'C', funktion: 'Direktor', zeichnungsArt: 'kollektivzuzweien' }],
+      weitereVertretungen: [{ name: 'C', funktion: 'Direktor', zeichnungsArt: 'kollektivprokura' }],
       domizilhalterName: 'D AG', domizilhalterAdresse: 'X 1, 8000 Zürich',
       revisionsstelleName: 'R AG', revisionsstelleSitz: 'Zürich',
       vinkulierung: true, virtuelleGv: true,
+      sitzungBeginn: '11.00', sitzungEnde: '11.30',
+      nachtragsbevollmaechtigter: 'N. Muster, 1.1.1990, von Chur, Weg 1, 7000 Chur',
       ort: 'Zürich', datum: '2026-06-15',
     });
     expect(agMappe.gates.blocker).toEqual([]);
     for (const d of agMappe.dokumente) faelle.push([`ag-dok-${d.id}`, d.ergebnis.dokument]);
+
+    // AG SINGULAR-Fassung (D1, Etappe 0.1): Einpersonen-Gründung mit
+    // Volliberierung, Bank in der Urkunde, Opting-out, eigenem Büro und
+    // Nachtragsvollmacht → alle Singular-Varianten-Bausteine.
+    const agSingular = agDokumentmappe({
+      einlageArt: 'bar', besondereVorteile: false, optingOut: true,
+      eigeneBueros: true, immobilienHauptzweck: false, inhaberaktien: false,
+      fremdwaehrung: false, bankInUrkundeGenannt: true, chWohnsitzVertretung: true,
+      leistungenChf: undefined,
+      ...AG_DOK_DEFAULTS,
+      firma: 'Solo AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Beratung',
+      gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '100' }],
+      verwaltungsraete: [
+        { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+      ],
+      bankName: 'Zürcher Kantonalbank', bankOrt: 'Zürich',
+      rechtsdomizilAdresse: 'Weg 1, 8000 Zürich',
+      nachtragsbevollmaechtigter: 'N. Muster, 1.1.1990, von Chur, Weg 1, 7000 Chur',
+      ort: 'Zürich', datum: '2026-06-15',
+    });
+    expect(agSingular.gates.blocker).toEqual([]);
+    for (const d of agSingular.dokumente) faelle.push([`ag-dok-singular-${d.id}`, d.ergebnis.dokument]);
 
     // Kapitalerhöhungs-Mappe (9c): GmbH mit neuer Zeichnerin (777a-Hinweis),
     // Agio und separater Bankbescheinigung → alle Schemas + bedingte Bausteine.
