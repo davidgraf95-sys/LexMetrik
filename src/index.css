@@ -133,6 +133,25 @@
   /* Ergebnis-Kachel (Hauptwerte in Ergebnisblöcken) — eine Anatomie überall */
   .lc-tile { @apply bg-surface-raised border border-line rounded-xl p-4; }
 
+  /* FristenKalender (Überarbeitung 7.6.2026, Auftrag David) — zwei Rezepte:
+
+     Stillstands-Schraffur: ausgesetzte Tage als feine technische Schraffur
+     (Planzeichnungs-Konvention für «ausgenommen») statt Vollband — ein
+     gehemmter Lauf darf nicht wie ein zweites «läuft» aussehen. Harte
+     Streifen-Stops, kein Verlauf. */
+  .lc-hatch-warn {
+    background-color: var(--warn-bg);
+    background-image: repeating-linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--warn-500) 26%, transparent) 0 1px,
+      transparent 1px 5px
+    );
+  }
+  /* «Eingekreister» Termin: Doppelring wie der von Hand eingekreiste
+     Fristablauf im Fristenkontrollbuch — Papier-Spalt + Haarlinien-Ring
+     in der Farbe des Markers (currentColor der Kreisfläche via CSS-Var). */
+  .lc-termin-ring { box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px var(--ring-farbe, var(--sage-500)); }
+
   /* Sanftes Auf-/Zuklappen aller <details> (auch .lc-sektion): EIN
      @supports-Block am Dateiende — die frühere lc-sektion-Sonderregel war
      ein Duplikat (Design-Review 6.6.2026, verhaltensneutral entfernt). */

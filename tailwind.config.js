@@ -9,7 +9,10 @@ export default {
           500: 'var(--ink-500)', 400: 'var(--ink-400)', 300: 'var(--ink-300)',
         },
         line: { DEFAULT: 'var(--line)', strong: 'var(--line-strong)' },
-        paper: 'var(--paper)',
+        // raised/sunken ergänzt 7.6.2026: bg-paper-raised wurde in
+        // FristenKalender/wizard bereits verwendet, war aber nie generiert
+        // (stiller No-op — die Kreise/Flächen blieben transparent).
+        paper: { DEFAULT: 'var(--paper)', raised: 'var(--paper-raised)', sunken: 'var(--paper-sunken)' },
         surface: { DEFAULT: 'var(--surface)', raised: 'var(--surface-raised)' },
         brass: {
           100: 'var(--brass-100)', 200: 'var(--brass-200)', 400: 'var(--brass-400)',
