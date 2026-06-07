@@ -15,7 +15,7 @@ import { DatumsFeld } from '../DatumsFeld';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz } from '../../lib/begruendung';
+import { begruendungsAbsatz, fristbeginnZusatz } from '../../lib/begruendung';
 import { IcsExportButton } from '../IcsExportButton';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
@@ -263,7 +263,10 @@ export function AllgemeineFristForm() {
               />
               <ErgebnisAnzeige titel="Allgemeine Frist (Art. 77/78 OR)" ergebnis={ergebnis} />
               <div className="flex flex-wrap items-center gap-3">
-                {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+                {/* Fristbeginn-Baustein wie ZPO/SchKG (Code-Review #5, 7.6.2026):
+                    Norm aus der Engine (Art. 77 OR), bei Rückwärtsfrist ohne
+                    Beginn entfällt der Satz ersatzlos. */}
+                {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.resultat.fristbeginnISO, ergebnis.normverweise[0]?.artikel))} />}
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
                 <PdfExportButton config={pdfConfig} />
                 <IcsExportButton endISO={ergebnis.resultat.endDatumISO}

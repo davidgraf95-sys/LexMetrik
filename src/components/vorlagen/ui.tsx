@@ -19,13 +19,16 @@ export function Field({ label, children, hint, optional }: {
   );
 }
 
-export function NormLink({ artikel }: { artikel: string }) {
+// Geteilter Fedlex-Norm-Chip (Code-Review #6, 7.6.2026: Kopien dieses
+// Musters haben den Locale-Bug im Fristenspiegel erzeugt — neue Rechner
+// nutzen DIESE Komponente, keine lokalen NormPill-Varianten).
+export function NormLink({ artikel, title }: { artikel: string; title?: string }) {
   const { locale } = useLocale();
   const roh = fedlexLinkFuerArtikel(artikel);
   const url = roh ? fedlexLokalisiert(roh, locale) : null;
   return url
-    ? <a href={url} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{artikel}</a>
-    : <span className="lc-chip">{artikel}</span>;
+    ? <a href={url} target="_blank" rel="noopener noreferrer" title={title} className="lc-chip no-underline hover:text-brass-700">{artikel}</a>
+    : <span className="lc-chip" title={title}>{artikel}</span>;
 }
 
 // Stepper-Leiste (klickbar bis zum erreichten Schritt)

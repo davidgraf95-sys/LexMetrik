@@ -1,8 +1,9 @@
 import { icsFuerFrist } from '../lib/icsExport';
+import { ladeIcs } from './icsDownload';
 
 // ─── «In Kalender (.ics)»-Button — geteilter Baustein (FAHRPLAN-PRAXIS 1.1) ─
-// Kapselt den clientseitigen Download (Blob, kein Netzwerk); der Inhalt kommt
-// deterministisch aus lib/icsExport.ts. Reine Darstellung (§3).
+// Kapselt den clientseitigen Download (geteilt: components/icsDownload.ts);
+// der Inhalt kommt deterministisch aus lib/icsExport.ts. Reine Darstellung (§3).
 
 export function IcsExportButton({ titel, endISO, beschreibung, vorfristTage = 3, dateiName = 'Fristende.ics', className = 'lc-btn-outline' }: {
   titel: string;
@@ -15,13 +16,7 @@ export function IcsExportButton({ titel, endISO, beschreibung, vorfristTage = 3,
   className?: string;
 }) {
   if (!endISO || !/^\d{4}-\d{2}-\d{2}$/.test(endISO)) return null;
-  const laden = () => {
-    const blob = new Blob([icsFuerFrist({ titel, endISO, beschreibung, vorfristTage })], { type: 'text/calendar' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url; a.download = dateiName; a.click();
-    URL.revokeObjectURL(url);
-  };
+  const laden = () => ladeIcs(dateiName, icsFuerFrist({ titel, endISO, beschreibung, vorfristTage }));
   return (
     <button type="button" className={className} onClick={laden}>
       In Kalender (.ics)

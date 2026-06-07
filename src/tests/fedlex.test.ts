@@ -48,6 +48,17 @@ describe('fedlexLinkFuerArtikel', () => {
     expect(fedlexLinkFuerArtikel('Art. 8 ATSG')).toBeNull();
     expect(fedlexLinkFuerArtikel('§ 12 GebV')).toBeNull();
   });
+
+  // Code-Review-Befund #1 (7.6.2026): Mehrwort-Name «GebV SchKG» endete auf
+  // das Token «SchKG» und verlinkte Art. 16 der HAUPT-SchKG (SR 281.1) statt
+  // der Gebührenverordnung (SR 281.35) — Alias-Tabelle greift jetzt VOR dem
+  // generischen Token-Match.
+  it('Mehrwort-Gesetz «GebV SchKG» → Gebührenverordnung, nicht Haupt-SchKG', () => {
+    expect(fedlexLinkFuerArtikel('Art. 16 Abs. 1 GebV SchKG')).toBe(`${FEDLEX.GebVSchKG}#art_16`);
+    expect(fedlexLinkFuerArtikel('Art. 48 GebV SchKG')).toBe(`${FEDLEX.GebVSchKG}#art_48`);
+    // Haupt-SchKG bleibt unberührt
+    expect(fedlexLinkFuerArtikel('Art. 16 SchKG')).toBe(`${FEDLEX.SchKG}#art_16`);
+  });
 });
 
 describe('Audit 5.6.2026 – Kombi-Anker Buchstabe+Suffix', () => {

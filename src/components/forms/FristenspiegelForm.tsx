@@ -1,12 +1,11 @@
 import { useMemo, useState } from 'react';
-import { Field, inputCls } from '../vorlagen/ui';
+import { Field, NormLink, inputCls } from '../vorlagen/ui';
 import { DatumsFeld } from '../DatumsFeld';
 import { BetragsFeld } from '../BetragsFeld';
 import { IcsExportButton } from '../IcsExportButton';
+import { ladeIcs } from '../icsDownload';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { KANTONE } from '../../lib/kantone';
-import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
-import { useLocale, fedlexLokalisiert } from '../locale';
 import { icsSammel } from '../../lib/icsExport';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { FSP_LINK_SPEC } from '../../lib/rechnerPermalinks';
@@ -46,27 +45,15 @@ const NATUR_LABEL: Record<Fristnatur, string> = {
   wartefrist: 'Wartefrist', klagefrist: 'Klagefrist', ordnungsfrist: 'Ordnungsfrist',
 };
 
-function NormPill({ normRef }: { normRef: string }) {
-  // Locale-Lokalisierung wie NormLink/RechnerKopf (Deploy-Bug-Check
-  // 7.6.2026, MITTEL: war der einzige Rechner ohne fedlexLokalisiert).
-  const { locale } = useLocale();
-  const roh = fedlexLinkFuerArtikel(normRef);
-  const url = roh ? fedlexLokalisiert(roh, locale) : null;
-  return url ? (
-    <a href={url} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700"
-      title={`${normRef} auf Fedlex öffnen`}>{normRef}</a>
-  ) : (
-    <span className="lc-chip">{normRef}</span>
-  );
-}
-
+// Norm-Chips über den GETEILTEN NormLink (Code-Review #6, 7.6.2026: die
+// frühere lokale NormPill-Kopie war der einzige Chip ohne Locale-Logik).
 function ZeileAnzeige({ z }: { z: SpiegelZeile }) {
   return (
     <div className="px-4 py-3 grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-x-6 gap-y-2 sm:items-center">
       <div className="min-w-0 space-y-1">
         <p className="text-body-s font-medium text-ink-900">{z.label}</p>
         <p className="flex flex-wrap items-center gap-1.5">
-          <NormPill normRef={z.normRef} />
+          <NormLink artikel={z.normRef} title={`${z.normRef} auf Fedlex öffnen`} />
           <span className="lc-badge lc-badge-soft">{NATUR_LABEL[z.fristnatur]}</span>
         </p>
         {z.bedingung && <p className="text-xs text-ink-500">{z.bedingung}</p>}
@@ -135,7 +122,10 @@ export function FristenspiegelForm() {
       if (ereignis === 'klagebewilligung') return berechneKlagebewilligungsSpiegel({ zustellung, kanton, mietOderPacht });
       if (ereignis === 'erbgang') return berechneErbgangsSpiegel({ datum: zustellung, kanton, erbenstellung });
       if (ereignis === 'agkuendigung') return berechneAgKuendigungsSpiegel({ beendigung: zustellung });
-      if (vermoegensrechtlich && (streitwert === null || !Number.isFinite(streitwert))) return null;
+      // Streitwert 0 ist bei einer VERMÖGENSrechtlichen Streitigkeit
+      // widersprüchlich (nicht vermögensrechtlich = eigene Checkbox) —
+      // wie eine fehlende Eingabe behandeln (Code-Review #4, 7.6.2026).
+      if (vermoegensrechtlich && (streitwert === null || !Number.isFinite(streitwert) || streitwert <= 0)) return null;
       return berechneZivilentscheidsSpiegel({
         zustellung, kanton, vermoegensrechtlich,
         streitwertCHF: vermoegensrechtlich ? streitwert : null,
@@ -145,16 +135,14 @@ export function FristenspiegelForm() {
     } catch { return null; }
   }, [ereignis, zugang, objekt, kanton, kuendigungsart, zustellung, vermoegensrechtlich, streitwert, verfahren, familienSummarsache, mietOderArbeit, nurDispositiv, mietOderPacht, erbenstellung]);
 
+  // Download über den geteilten Helfer (Code-Review #8); Wartefristen ohne
+  // Vorfrist-Alarm — wie beim Einzel-Export (richtungsverkehrte Mahnung).
   const sammelIcs = () => {
     if (!ergebnis) return;
     const eintraege = ergebnis.zeilen
       .filter((z) => z.endeISO)
-      .map((z) => ({ titel: z.label, endISO: z.endeISO!, beschreibung: `${z.normRef} — LexMetrik Fristenspiegel`, vorfristTage: 3 }));
-    const blob = new Blob([icsSammel(eintraege)], { type: 'text/calendar' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url; a.download = 'Fristenspiegel.ics'; a.click();
-    URL.revokeObjectURL(url);
+      .map((z) => ({ titel: z.label, endISO: z.endeISO!, beschreibung: `${z.normRef} — LexMetrik Fristenspiegel`, vorfristTage: z.fristnatur === 'wartefrist' ? 0 : 3 }));
+    ladeIcs('Fristenspiegel.ics', icsSammel(eintraege));
   };
 
   const linkWerte = () => {

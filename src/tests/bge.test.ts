@@ -33,6 +33,18 @@ describe('rechtsprechungUrl', () => {
     expect(rechtsprechungUrl('5A_691/2023')?.url).toContain(encodeURIComponent('5A_691/2023'));
   });
 
+  // Code-Review-Befund #3 (7.6.2026): Die frühere Teil-Alternation
+  // akzeptierte auch nicht existierende Sammlungsteile (IIa/IIIb/Va/VI)
+  // und erzeugte dafür geratene ATF-Links. a/b gibt es nur bei Teil I.
+  it('erfundene Sammlungsteile → null; echte Teile (inkl. Ia/Ib) verlinken', () => {
+    for (const az of ['BGE 116 IIa 5', 'BGE 120 Va 1', 'BGE 99 VI 2', 'BGE 101 IIIb 7']) {
+      expect(rechtsprechungUrl(az), az).toBeNull();
+    }
+    for (const az of ['BGE 116 Ia 85', 'BGE 110 Ib 332', 'BGE 131 III 623', 'BGE 145 IV 17', 'BGE 140 V 521']) {
+      expect(rechtsprechungUrl(az)?.direkt, az).toBe(true);
+    }
+  });
+
   it('Unbekanntes Format → null (kein geratener Link, §7)', () => {
     expect(rechtsprechungUrl('HGer ZH HG200015')).toBeNull();
     expect(rechtsprechungUrl('BGE III 78')).toBeNull();

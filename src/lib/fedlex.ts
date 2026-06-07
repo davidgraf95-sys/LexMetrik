@@ -57,6 +57,15 @@ export function fedlexUrl(gesetz: FedlexGesetz, artikel: string | number): strin
   return `${FEDLEX[gesetz]}#art_${token}`;
 }
 
+// Mehrwort-Gesetzesnamen → Registry-Key. Nötig, weil der generische Matcher
+// nur das LETZTE Token vergleicht: «Art. 16 GebV SchKG» endete sonst auf
+// «SchKG» und verlinkte Art. 16 der HAUPT-SchKG (SR 281.1) statt der
+// Gebührenverordnung (SR 281.35) — Code-Review-Befund #1, 7.6.2026.
+// Aliase werden VOR dem Token-Match geprüft.
+const MEHRWORT_ALIAS: ReadonlyArray<[string, FedlexGesetz]> = [
+  ['GebV SchKG', 'GebVSchKG'],
+];
+
 // Direktlink aus einem Normverweis-Text, z. B. 'Art. 335c Abs. 1 OR' →
 // OR-Basis + #art_335_c. Absatz-/Ziffer-Angaben ändern den Anker nicht;
 // massgeblich ist der führende Artikel.
@@ -66,7 +75,10 @@ export function fedlexUrl(gesetz: FedlexGesetz, artikel: string | number): strin
 //   Gesetzes-Seite ohne Anker.
 // - Unbekanntes Gesetz → null (kein Link).
 export function fedlexLinkFuerArtikel(text: string): string | null {
-  const gesetz = (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(text.trim()));
+  const bereinigt = text.trim();
+  const alias = MEHRWORT_ALIAS.find(([name]) => bereinigt.endsWith(name));
+  const gesetz = alias?.[1]
+    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(bereinigt));
   if (!gesetz) return null;
   if (/\bSchlT\b/.test(text)) return FEDLEX[gesetz];
   const m = text.match(/^Art\.\s*(\d+(?:bis|ter|quater|quinquies|[a-z])?)\b/);

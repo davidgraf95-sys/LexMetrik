@@ -23,8 +23,12 @@ export interface RechtsprechungsLink {
 }
 
 // BGE-Zitat: Band (1–3-stellig) · Teil (I, Ia, Ib, II, III, IV, V) · Seite.
+// Teil-Liste abschliessend = real existierende Sammlungsteile; a/b-Suffixe
+// gibt es nur bei Teil I (Ia/Ib, historisch). Die frühere Alternation
+// akzeptierte auch IIa/IIIb/Va/VI und hätte dafür geratene ATF-Links
+// erzeugt (Code-Review-Befund #3, 7.6.2026) — jetzt: lieber kein Link.
 // Erwägungs-Zusätze («E. 3.2», «S. 81») gehören nicht in die Docid.
-const BGE_MUSTER = /^BGE\s+(\d{1,3})\s+(I{1,3}a?b?|IV|Va?|VI)\s+(\d+)/;
+const BGE_MUSTER = /^BGE\s+(\d{1,3})\s+(III|II|I(?:a|b)?|IV|V)\s+(\d+)/;
 // BGer-Urteilsnummer: Abteilungscode (z. B. 4A, 5A, 1C, 9C) _ Nummer / Jahr;
 // alte Nummerierung vor 2007 mit Punkt (z. B. 4C.375/2000 — AZA-Suche
 // findet sie als 1. Treffer, WebFetch-verifiziert 6.6.2026).
@@ -60,4 +64,4 @@ export function rechtsprechungUrl(aktenzeichen: string): RechtsprechungsLink | n
  * Liefert [Vorher-Text, Zitat, Vorher-Text, Zitat, …, Rest].
  */
 export const RECHTSPRECHUNG_IM_TEXT =
-  /BGE\s+\d{1,3}\s+(?:I{1,3}a?b?|IV|Va?|VI)\s+\d+|(?:BGer\s+)?\d[A-Z][._]\d+\/\d{4}/g;
+  /BGE\s+\d{1,3}\s+(?:III|II|I(?:a|b)?|IV|V)\s+\d+|(?:BGer\s+)?\d[A-Z][._]\d+\/\d{4}/g;

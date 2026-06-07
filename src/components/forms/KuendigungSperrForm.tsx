@@ -248,8 +248,11 @@ export function KuendigungSperrForm() {
             <PdfExportButton config={pdfConfig} />
             <LinkTeilenButton query={() => permalinkKodieren(KSP_LINK_SPEC, form as SperrfristenInput & Record<string, unknown>)} />
             {gesamt.status === 'nichtig'
+              /* «Frühestens neu kündbar» = FRÜHESTMÖGLICHER Termin: keine
+                 3-Tage-VORfrist-Erinnerung (richtungsverkehrt, Nichtigkeits-
+                 risiko 336c — Code-Review #2, 7.6.2026) → vorfristTage 0. */
               ? <IcsExportButton endISO={gesamt.fruehesteNeueKuendigungISO} titel="Frühestens neu kündbar (Art. 336c OR)"
-                  beschreibung={gesamt.ergebnis} dateiName="Neue-Kuendigung-fruehestens.ics" />
+                  vorfristTage={0} beschreibung={gesamt.ergebnis} dateiName="Neue-Kuendigung-fruehestens.ics" />
               : <IcsExportButton endISO={gesamt.beendigungISO} titel="Beendigung Arbeitsverhältnis"
                   beschreibung={gesamt.ergebnis} dateiName="Beendigung-Arbeitsverhaeltnis.ics" />}
             {/* Brücke 3.1d: Beendigungsdatum (inkl. Sperrfristen-Verschiebung!)

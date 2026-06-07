@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { begruendungsAbsatz } from '../lib/begruendung';
+import { begruendungsAbsatz, fristbeginnZusatz } from '../lib/begruendung';
 import { berechneFrist } from '../lib/zpoFristen';
 import { berechneSchkgFrist } from '../lib/schkgFristen';
 import type { ZpoInput } from '../types/zpo';
@@ -82,5 +82,16 @@ describe('Begründungs-Absatz (lib/begruendung.ts)', () => {
       modus: 'schkg_betreibungsferien', fristnatur: 'frist', kanton: 'ZH',
     });
     expect(schkgMonat.normverweise[1].artikel).toBe('Art. 142 Abs. 2 ZPO');
+  });
+});
+
+// Code-Review #5 (7.6.2026): Fristbeginn-Satz zentral statt je Form gebaut.
+describe('fristbeginnZusatz', () => {
+  it('formatiert ISO-Datum mit Norm; ohne Datum entfällt der Satz ersatzlos', () => {
+    expect(fristbeginnZusatz('2025-04-15', 'Art. 142 Abs. 2 ZPO'))
+      .toBe('Der Fristenlauf begann am 15.04.2025 (Art. 142 Abs. 2 ZPO).');
+    expect(fristbeginnZusatz('2026-01-02')).toBe('Der Fristenlauf begann am 02.01.2026.');
+    expect(fristbeginnZusatz(undefined, 'Art. 77 OR')).toBeUndefined();
+    expect(fristbeginnZusatz(null)).toBeUndefined();
   });
 });

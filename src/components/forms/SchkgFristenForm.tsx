@@ -15,7 +15,7 @@ import { sansAmp } from '../typografie';
 import { PdfExportButton } from '../PdfExport';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BegruendungAbsatz } from '../BegruendungAbsatz';
-import { begruendungsAbsatz } from '../../lib/begruendung';
+import { begruendungsAbsatz, fristbeginnZusatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
@@ -363,7 +363,7 @@ export function SchkgFristenForm() {
                 {/* Fristbeginn-Norm aus der Engine (§5): normverweise[1] ist
                     Art. 142 Abs. 1 (Tagesfrist) bzw. Abs. 2 (Monats-/Jahres-
                     frist). Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert. */}
-                <BegruendungAbsatz text={begruendungsAbsatz(e, `Der Fristenlauf begann am ${e.diesAQuo} (Art. 31 SchKG i.V.m. ${e.normverweise[1].artikel}).`)} />
+                <BegruendungAbsatz text={begruendungsAbsatz(e, fristbeginnZusatz(e.diesAQuoISO, `Art. 31 SchKG i.V.m. ${e.normverweise[1].artikel}`))} />
               </div>
             );
           })}

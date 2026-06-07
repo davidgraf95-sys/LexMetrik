@@ -162,4 +162,11 @@ löschen, Stand in STRUKTUR.md spiegeln.
 16. Stabile Keys in 7 Listen-Editoren (Voll-Audit 5.6.) · Datepicker-
     Pfeiltasten (A11y) · Markenschriften in Vorlagen-PDFs ·
     Detailseiten-Titel an Katalog-Titel angleichen.
+16a. /code-review 7.6.2026, zurückgestellte Cleanup-Findings: restliche
+    Norm-Chip-Kopien auf den geteilten NormLink konsolidieren
+    (ErgebnisAnzeige.NormChip, RechnerKopf-Inline — Fristenspiegel ist
+    umgestellt) · CHF-Formatter parametrisieren (chf(n, dezimalen) als
+    SSoT; streitwert.ts/gebvKosten.ts/vorlagen-datum.ts — NUR mit
+    Golden-Protokoll, Engine-Textausgaben!) · Gründungs-Seiten-Rahmen
+    (GmbH/AG) teilen, sobald der Dokumentmappen-Ausbau stabil ist.
 17. Phase 4 Experten-Gating (Header-Button als Andockpunkt) — hängt an A.2.
