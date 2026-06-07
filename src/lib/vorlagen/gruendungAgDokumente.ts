@@ -240,18 +240,60 @@ const VERTRETUNGS_ZEICHNUNGS_LABEL: Record<AgVertretungsZeichnungsArt, string> =
   kollektivprokura: 'Kollektivprokura zu zweien',
 };
 
-// ── Liberierung (Etappe 3.3/D6): globaler Default + individuelle Grade ──────
-// EINE Quelle für Gates und Texte (§5). Im Gleich-Fall rechnet sie wie der
-// bisherige globale Pfad (Kapital × Prozent — byte-identische Ausgabe).
+// ── Liberierung (Etappe 3.3/D6 · Stufe 2 Perfektion P1): globaler Default +
+// individuelle Grade + Agio + qualifizierte Aktien. EINE Quelle für Gates
+// und Texte (§5). Im Gleich-Fall rechnet sie wie der bisherige globale Pfad
+// (Kapital × Prozent — byte-identische Ausgabe). Stufe-2-Regeln (am OR-Cache
+// 1.1.2026 verifiziert):
+//  · Agio (Ausgabebetrag über Nennwert, Art. 624 Abs. 1 OR) ist bei der
+//    Ausgabe VOLL zu leisten — teilliberierbar ist nur der Nennwert-Teil
+//    (Art. 632 Abs. 1 OR bezieht die 20 % auf den Nennwert jeder Aktie).
+//  · Aktien aus Sacheinlage/Verrechnung GELTEN als voll liberiert (ZH-
+//    Vertragsvorlage «als voll liberiert geltende Aktien»); teilliberierbar
+//    ist nur der Bar-Anteil — mit GLOBALEM Grad (individuelle Grade bei
+//    gemischter Gründung bleiben gesperrt, Zuordnung Bar-/Sach-Aktien je
+//    Gründer wäre nicht eindeutig).
+//  · Geleistete Einlagen gesamthaft (Art. 632 Abs. 2 OR, FW-Gegenwert) =
+//    geleisteter Nennwert-Teil + volles Agio (Beträge in Kapitalwährung).
 
 function effektiveLiberierung(a: AgDokAntworten): {
   individuell: boolean;
   vollLiberiert: boolean;
+  /** Geleisteter NENNWERT-Teil (Kapitalwährung) — Basis der «(… % des
+   *  Nennwerts)»-Texte; das Agio wird separat ausgewiesen. */
   einbezahlt: number;
+  /** Geleistete Einlagen GESAMT = Nennwert-Teil + volles Agio (Basis der
+   *  Gates Art. 632 Abs. 2 OR und des FW-Kurs-Satzes). */
+  einbezahltGesamt: number;
+  agioJeAktie: number;
+  agioTotal: number;
+  hatAgio: boolean;
+  /** Aktien aus Sacheinlage/Verrechnung (gelten als voll liberiert). */
+  qAktien: number;
+  barAktien: number;
+  /** Geleisteter Nennwert-Teil NUR der Bar-Aktien (gemischte Gründung). */
+  barEinbezahlt: number;
+  /** Individuelle Grade mit mindestens einem Teilgrad (< 100 %) — bei
+   *  qualifizierter Gründung gesperrt (Gate), da die Zuordnung Bar-/Sach-
+   *  Aktien je Gründer nicht eindeutig wäre. */
+  individuellTeilweise: boolean;
   zeilen: { name: string; anzahl: string; prozentTxt: string }[];
 } {
   const nennwert = zahl(a.nennwertChf) ?? 0;
+  const anzahl = ganzePositive(a.anzahlAktien) ?? 0;
   const global = zahl(a.liberierungProzent) ?? 100;
+  const ausgabe = a.ausgabebetragChf.trim() === '' ? nennwert : (zahl(a.ausgabebetragChf) ?? nennwert);
+  const agioJeAktie = Math.max(0, ausgabe - nennwert);
+  const hatAgio = agioJeAktie > 0.005;
+  // Qualifizierte Aktien wie in den Gates gefiltert (§5).
+  const mitSach = a.einlageArt === 'sacheinlage' || a.einlageArt === 'gemischt';
+  const mitVerr = a.einlageArt === 'verrechnung' || a.einlageArt === 'gemischt';
+  const qAktien = (mitSach ? a.sacheinlagen.filter((s) => s.einlegerName.trim() || s.bezeichnung.trim()) : [])
+    .reduce((s, x) => s + (ganzePositive(x.aktienAnzahl) ?? 0), 0)
+    + (mitVerr ? a.verrechnungen.filter((v) => v.glaeubigerName.trim()) : [])
+      .reduce((s, x) => s + (ganzePositive(x.aktienAnzahl) ?? 0), 0);
+  const barAktien = Math.max(0, anzahl - qAktien);
+
   const gr = a.gruender.filter((g) => g.name.trim());
   const individuell = gr.some((g) => (g.liberierung ?? '').trim() !== '');
   let einbezahlt = 0;
@@ -266,7 +308,22 @@ function effektiveLiberierung(a: AgDokAntworten): {
     einbezahlt = (zahl(a.aktienkapitalChf) ?? 0) * (global / 100);
     voll = global >= 100;
   }
-  return { individuell, vollLiberiert: voll, einbezahlt, zeilen };
+  const individuellTeilweise = individuell && !voll;
+  let barEinbezahlt = einbezahlt;
+  if (qAktien > 0) {
+    // Qualifizierte Gründung: Sach-/Verrechnungsaktien voll; der globale
+    // Grad gilt nur für den Bar-Anteil (individuelle Grade: Gate sperrt).
+    barEinbezahlt = barAktien * nennwert * (Math.min(global, 100) / 100);
+    einbezahlt = qAktien * nennwert + barEinbezahlt;
+    voll = barAktien === 0 || global >= 100;
+  }
+  const agioTotal = anzahl * agioJeAktie;
+  return {
+    individuell, vollLiberiert: voll, einbezahlt,
+    einbezahltGesamt: einbezahlt + agioTotal,
+    agioJeAktie, agioTotal, hatAgio, qAktien, barAktien, barEinbezahlt,
+    individuellTeilweise, zeilen,
+  };
 }
 
 // ── Gates ───────────────────────────────────────────────────────────────────
@@ -302,8 +359,6 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   const sachen = mitSach ? a.sacheinlagen.filter((s) => s.einlegerName.trim() || s.bezeichnung.trim()) : [];
   const verr = mitVerr ? a.verrechnungen.filter((v) => v.glaeubigerName.trim()) : [];
   const vorteile = a.besondereVorteile ? a.vorteile.filter((v) => v.beguenstigter.trim()) : [];
-  const qualifiziert = sachen.length > 0 || verr.length > 0 || vorteile.length > 0
-    || mitSach || mitVerr || a.besondereVorteile;
 
   if (a.einlageArt === 'sacheinlage' && sachen.length === 0) {
     blocker.push('Mindestens eine Sacheinlage erfassen (Art. 634 OR) – oder die Einlage-Art auf «bar» stellen.');
@@ -318,22 +373,24 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     blocker.push('Besondere Vorteile mit Begünstigten, Inhalt und Wert erfassen (Art. 636 OR) – oder die Weiche ausschalten.');
   }
   const eff = effektiveLiberierung(a);
-  if (qualifiziert && !eff.vollLiberiert) {
+  // Stufe 2 (Perfektion P1d): gemischte Teilliberierung ist offen — der
+  // globale Grad gilt für die Bar-Aktien, Sach-/Verrechnungsaktien gelten
+  // als voll liberiert. INDIVIDUELLE Grade bleiben bei qualifizierter
+  // Gründung gesperrt (Zuordnung Bar-/Sach-Aktien je Gründer nicht eindeutig).
+  if ((mitSach || mitVerr) && eff.individuellTeilweise) {
     blocker.push(
-      'Erstausbau: Teilliberierung nur bei der reinen Bargründung – Aktien aus Sacheinlage/Verrechnung ' +
-      'gelten als voll liberiert (ZH-Vertragsvorlage: «als voll liberiert geltende Aktien»); ' +
-      'gemischte Teilliberierung als Stufe 2.',
+      'Individuelle Liberierungsgrade je Gründer:in nur bei der reinen Bargründung – bei Sacheinlage/' +
+      'Verrechnung gilt der globale Liberierungsgrad für die Bareinlage-Aktien (Aktien aus Sacheinlage ' +
+      'und Verrechnung gelten als voll liberiert; ZH-Vertragsvorlage).',
     );
   }
-  // ── Fremdwährung (Etappe 3.1/D2): GBP/EUR/USD/JPY, Kurs in der Urkunde ──
+  // ── Fremdwährung (Etappe 3.1/D2 · Stufe 2 P1a): GBP/EUR/USD/JPY, Kurs in
+  // der Urkunde; auch qualifiziert — Bewertungs-/Verrechnungs-/Vorteils-
+  // Beträge sind dann Beträge in der KAPITALWÄHRUNG (Texte führen den
+  // Währungscode), die Gegenwert-Gates (Art. 621 Abs. 2, 632 Abs. 2 OR)
+  // rechnen auf Kapital bzw. geleisteten Einlagen gesamt. ──
   let kurs: number | null = null;
   if (a.fremdwaehrung) {
-    if (qualifiziert) {
-      blocker.push(
-        'Erstausbau: Fremdwährung nur bei der reinen Bargründung – qualifizierte Gründung in ' +
-        'Fremdwährung (Bewertungs- und Verrechnungsbeträge in der Kapitalwährung) als Stufe 2.',
-      );
-    }
     if (!(AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung)) {
       blocker.push('Währung des Aktienkapitals wählen – zulässig sind GBP, EUR, USD und JPY (Anhang 3 i. V. m. Art. 45a HRegV).');
     }
@@ -407,35 +464,35 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       }
     }
     bereich('kapital');
-    // Gesamt-Untergrenze auf der EFFEKTIVEN Einlagesumme (global oder
-    // individuell — eine Quelle, effektiveLiberierung()).
-    if (!eff.vollLiberiert && !a.fremdwaehrung && eff.einbezahlt > 0 && eff.einbezahlt < 50_000) {
+    // Gesamt-Untergrenze auf den geleisteten Einlagen GESAMT (Nennwert-Teil
+    // + voll geleistetes Agio — eine Quelle, effektiveLiberierung(); Art. 632
+    // Abs. 2 OR: «In allen Fällen müssen die geleisteten Einlagen …»).
+    const agioZusatz = eff.hatAgio ? ' (einschliesslich des voll geleisteten Agios)' : '';
+    if (!eff.vollLiberiert && !a.fremdwaehrung && eff.einbezahltGesamt > 0 && eff.einbezahltGesamt < 50_000) {
       blocker.push(
-        `Die geleisteten Einlagen müssen gesamthaft mindestens CHF 50'000 betragen (Art. 632 Abs. 2 OR) – die Liberierungsgrade ergeben nur CHF ${fmtCHF(String(eff.einbezahlt))}.`,
+        `Die geleisteten Einlagen müssen gesamthaft mindestens CHF 50'000 betragen (Art. 632 Abs. 2 OR) – die Liberierungsgrade ergeben nur CHF ${fmtCHF(String(eff.einbezahltGesamt))}${agioZusatz}.`,
       );
-    } else if (!eff.vollLiberiert && a.fremdwaehrung && kurs !== null && kurs > 0 && eff.einbezahlt * kurs < 50_000) {
+    } else if (!eff.vollLiberiert && a.fremdwaehrung && kurs !== null && kurs > 0 && eff.einbezahltGesamt * kurs < 50_000) {
       // Art. 632 Abs. 2 Satz 2 OR (am Cache verifiziert): Fremdwährungs-
       // Einlagen müssen im Errichtungszeitpunkt einem Gegenwert von
       // mindestens CHF 50'000 entsprechen.
       blocker.push(
         `Die geleisteten Einlagen müssen einem Gegenwert von mindestens CHF 50'000 entsprechen (Art. 632 Abs. 2 OR) – ` +
-        `die Liberierungsgrade ergeben nur CHF ${fmtCHF(String(eff.einbezahlt * kurs))}.`,
+        `die Liberierungsgrade ergeben nur CHF ${fmtCHF(String(eff.einbezahltGesamt * kurs))}${agioZusatz}.`,
       );
     }
-    // Etappe 3.2/D7: Agio (Ausgabebetrag über pari; Art. 624 Abs. 1 OR:
-    // nie UNTER dem Nennwert).
+    // Etappe 3.2/D7 · Stufe 2 P1b/P1c: Agio (Ausgabebetrag über pari; Art.
+    // 624 Abs. 1 OR: nie UNTER dem Nennwert). Das Agio ist bei der Ausgabe
+    // VOLL zu leisten — teilliberierbar ist nur der Nennwert-Teil (Art. 632
+    // Abs. 1 OR); die Einlagen-Rechnung deckt das (effektiveLiberierung).
+    // Agio ist auch qualifiziert offen: Wert-Gates rechnen je Position auf
+    // dem AUSGABEBETRAG (Art. 629 Abs. 2 Ziff. 2 OR: «die versprochenen
+    // Einlagen entsprechen dem gesamten Ausgabebetrag»).
     const ausgabe = a.ausgabebetragChf.trim() === '' ? nennwert : zahl(a.ausgabebetragChf);
     if (ausgabe === null) {
       blocker.push('Ausgabebetrag je Aktie beziffern – oder leer lassen (Ausgabe zum Nennwert).');
     } else if (ausgabe < nennwert - 0.005) {
       blocker.push('Der Ausgabebetrag darf den Nennwert nicht unterschreiten (Ausgabe unter pari unzulässig, Art. 624 Abs. 1 OR).');
-    } else if (ausgabe > nennwert + 0.005) {
-      if (qualifiziert) {
-        blocker.push('Erstausbau: Agio nur bei der reinen Bargründung – qualifizierte Gründung mit Agio (Bewertung über pari) als Stufe 2.');
-      }
-      if (!eff.vollLiberiert) {
-        blocker.push('Erstausbau: Agio nur bei Volliberierung – das Agio ist bei der Ausgabe voll zu leisten; Teilliberierung mit Agio als Stufe 2.');
-      }
     }
     const gezeichnet = a.gruender.reduce((s, g) => s + (zahl(g.anzahl) ?? 0), 0);
     if (a.gruender.length > 0 && anzahl > 0 && gezeichnet !== anzahl) {
@@ -444,10 +501,16 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       );
     }
 
-    // ── Etappe 2: Wert-Deckung je qualifizierter Position (Erstausbau ohne
-    // Agio: Ausgabebetrag = Nennwert; «die versprochenen Einlagen entsprechen
-    // dem gesamten Ausgabebetrag», Art. 629 Abs. 2 Ziff. 2 OR). ──
+    // ── Etappe 2 · Stufe 2 P1c: Wert-Deckung je qualifizierter Position auf
+    // dem AUSGABEBETRAG («die versprochenen Einlagen entsprechen dem gesamten
+    // Ausgabebetrag», Art. 629 Abs. 2 Ziff. 2 OR — ohne Agio ist der
+    // Ausgabebetrag der Nennwert, die Rechnung bleibt dieselbe). Beträge in
+    // der Kapitalwährung (Stufe 2 P1a; wc unten). ──
     if (nennwert > 0) {
+      const wc = a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF';
+      const ausgabeWert = ausgabe !== null && ausgabe >= nennwert - 0.005 ? ausgabe : nennwert;
+      const ausgabeFmtTxt = fmtCHF(a.ausgabebetragChf.trim() === '' ? a.nennwertChf : a.ausgabebetragChf);
+      const basisLabel = eff.hatAgio ? 'Ausgabebetrag' : 'Nennwert';
       for (const s of sachen) {
         const wer = s.einlegerName.trim() || s.bezeichnung.trim() || 'Sacheinlage';
         const akt = ganzePositive(s.aktienAnzahl);
@@ -456,13 +519,13 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
         if (!s.bezeichnung.trim()) blocker.push(`Sacheinlage von ${wer}: Gegenstand bezeichnen (Statuten-Pflichtinhalt, Art. 634 Abs. 4 OR).`);
         if (!s.einlegerName.trim()) blocker.push('Sacheinlage: Name der Einlegerin / des Einlegers angeben (Art. 634 Abs. 4 OR).');
         if (akt === null) blocker.push(`Sacheinlage von ${wer}: Anzahl der dafür ausgegebenen Aktien als positive ganze Zahl angeben (Art. 634 Abs. 4 OR).`);
-        if (wert === null || wert <= 0) blocker.push(`Sacheinlage von ${wer}: Bewertung in CHF beziffern (Art. 634 Abs. 4 OR).`);
+        if (wert === null || wert <= 0) blocker.push(`Sacheinlage von ${wer}: Bewertung in ${wc} (Kapitalwährung) beziffern (Art. 634 Abs. 4 OR).`);
         if (gut === null || gut < 0) blocker.push(`Sacheinlage von ${wer}: Gutschrift als Betrag ab 0 angeben.`);
-        if (akt !== null && wert !== null && gut !== null && gut >= 0 && Math.abs(wert - (akt * nennwert + gut)) > 0.005) {
+        if (akt !== null && wert !== null && gut !== null && gut >= 0 && Math.abs(wert - (akt * ausgabeWert + gut)) > 0.005) {
           blocker.push(
-            `Sacheinlage von ${wer}: Bewertung CHF ${fmtCHF(s.wertChf)} muss ${s.aktienAnzahl} Aktien × CHF ${fmtCHF(a.nennwertChf)}` +
-            (gut > 0 ? ` + Gutschrift CHF ${fmtCHF(s.gutschriftChf)}` : '') +
-            ' entsprechen (Erstausbau ohne Agio; Art. 629 Abs. 2 Ziff. 2 OR).',
+            `Sacheinlage von ${wer}: Bewertung ${wc} ${fmtCHF(s.wertChf)} muss ${s.aktienAnzahl} Aktien × ${wc} ${ausgabeFmtTxt} (${basisLabel})` +
+            (gut > 0 ? ` + Gutschrift ${wc} ${fmtCHF(s.gutschriftChf)}` : '') +
+            ' entsprechen (Art. 629 Abs. 2 Ziff. 2 OR: versprochene Einlagen = gesamter Ausgabebetrag).',
           );
         }
         if (s.typ === 'geschaeft') {
@@ -497,11 +560,11 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
         const akt = ganzePositive(v.aktienAnzahl);
         const ford = zahl(v.forderungChf);
         if (akt === null) blocker.push(`Verrechnung von ${v.glaeubigerName.trim()}: Anzahl der zukommenden Aktien als positive ganze Zahl angeben (Art. 634a Abs. 3 OR).`);
-        if (ford === null || ford <= 0) blocker.push(`Verrechnung von ${v.glaeubigerName.trim()}: Betrag der Forderung beziffern (Art. 634a Abs. 3 OR).`);
-        if (akt !== null && ford !== null && Math.abs(ford - akt * nennwert) > 0.005) {
+        if (ford === null || ford <= 0) blocker.push(`Verrechnung von ${v.glaeubigerName.trim()}: Betrag der Forderung in ${wc} (Kapitalwährung) beziffern (Art. 634a Abs. 3 OR).`);
+        if (akt !== null && ford !== null && Math.abs(ford - akt * ausgabeWert) > 0.005) {
           blocker.push(
-            `Verrechnung von ${v.glaeubigerName.trim()}: Verrechneter Betrag CHF ${fmtCHF(v.forderungChf)} muss ` +
-            `${v.aktienAnzahl} Aktien × CHF ${fmtCHF(a.nennwertChf)} entsprechen (Erstausbau ohne Agio).`,
+            `Verrechnung von ${v.glaeubigerName.trim()}: Verrechneter Betrag ${wc} ${fmtCHF(v.forderungChf)} muss ` +
+            `${v.aktienAnzahl} Aktien × ${wc} ${ausgabeFmtTxt} (${basisLabel}) entsprechen (Art. 629 Abs. 2 Ziff. 2 OR).`,
           );
         }
       }
@@ -646,14 +709,30 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     // den Kurs in Punkt-Notation wie die ZH-Vorlage «CHF 1.xxxx»).
     kursTxt: a.kursChf.trim().replace(',', '.') || '________',
     kursQuelleTxt: a.kursQuelle.trim() || '________',
-    // Sammel-Bug-Check HOCH-2 (7.6.2026): Basis des CHF-Gegenwerts sind die
-    // GELEISTETEN Einlagen — bei Volliberierung mit Agio Anzahl × Ausgabe-
-    // betrag (das Agio wird voll geleistet, Gates erzwingen das), sonst die
-    // effektive Nennwert-Summe.
-    einbezahltChfFmt: fmtCHF(String((eff.vollLiberiert ? anzahl * ausgabe : eff.einbezahlt) * (zahl(a.kursChf) ?? 0))),
+    // Sammel-Bug-Check HOCH-2 (7.6.2026) · Stufe 2 P1: Basis des CHF-
+    // Gegenwerts sind die GELEISTETEN Einlagen GESAMT — geleisteter
+    // Nennwert-Teil + voll geleistetes Agio (eine Quelle: effektive-
+    // Liberierung; bei Volliberierung mit Agio = Anzahl × Ausgabebetrag,
+    // byte-identisch zur bisherigen Sonderrechnung).
+    einbezahltChfFmt: fmtCHF(String(eff.einbezahltGesamt * (zahl(a.kursChf) ?? 0))),
     hatBarEinlage: a.einlageArt === 'bar' || (a.einlageArt === 'gemischt' && barAktien > 0),
-    barEinlageFmt: fmtCHF(String(barAktien * nennwert)),
+    // Stufe 2 P1d: geleisteter NENNWERT-Teil der Bar-Aktien (bei
+    // Volliberierung = barAktien × Nennwert, byte-identisch); das Agio
+    // weisen eigene Bausteine aus.
+    barEinlageFmt: fmtCHF(String(eff.barEinbezahlt)),
     barAktienTxt: String(barAktien),
+    // Stufe 2 P1b: Agio-Kennzahlen (Agio ist VOLL zu leisten).
+    agioJeAktieFmt: fmtCHF(String(eff.agioJeAktie)),
+    agioTotalFmt: fmtCHF(String(eff.agioTotal)),
+    barAgioFmt: fmtCHF(String(barAktien * eff.agioJeAktie)),
+    hatAgioTeilBar: eff.hatAgio && !eff.vollLiberiert && a.einlageArt === 'bar',
+    hatAgioGemischt: eff.hatAgio && a.einlageArt === 'gemischt',
+    hatAgioQualifiziertRein: eff.hatAgio && (a.einlageArt === 'sacheinlage' || a.einlageArt === 'verrechnung'),
+    // Statuten-Klauseln der qualifizierten Gründung: bei Agio den
+    // Ausgabebetrag offenlegen (Fragment, leer ersatzlos).
+    ausgabeKlammerSatz: eff.hatAgio
+      ? ` (Ausgabebetrag ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(a.ausgabebetragChf.trim() === '' ? a.nennwertChf : a.ausgabebetragChf)} je Aktie)`
+      : '',
     qualifiziertIntro:
       sachen.length > 0 && verr.length > 0
         ? 'Die in den Statuten angegebenen Sacheinlagen und Verrechnungstatbestände gemäss folgenden, vorliegenden Unterlagen:'
@@ -684,10 +763,10 @@ function basisAntworten(a: AgDokAntworten): Antworten {
       einleger: s.einlegerName.trim() || '________',
       aktien: s.aktienAnzahl,
       gutschriftSatz: s.gutschriftChf.trim()
-        ? ` Ferner werden ${s.einlegerName.trim() || '________'} CHF ${fmtCHF(s.gutschriftChf)} in den Büchern der Gesellschaft gutgeschrieben.`
+        ? ` Ferner werden ${s.einlegerName.trim() || '________'} ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(s.gutschriftChf)} in den Büchern der Gesellschaft gutgeschrieben.`
         : '',
       gutschriftKlauselSatz: s.gutschriftChf.trim()
-        ? `; als weitere Gegenleistung wird eine Gutschrift von CHF ${fmtCHF(s.gutschriftChf)} gewährt`
+        ? `; als weitere Gegenleistung wird eine Gutschrift von ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(s.gutschriftChf)} gewährt`
         : '',
       // Art. 634 Abs. 1 Ziff. 3 OR / ZH-Urkunde 3.3: Grundstücks-Weiche.
       verfuegungsSatz: s.grundstueck
@@ -745,20 +824,40 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     hatAgio: ausgabe > nennwert + 0.005,
     einbezahltFmt: fmtCHF(String(eff.einbezahlt)),
     vollLiberiert: eff.vollLiberiert,
-    teilGleich: !eff.vollLiberiert && !eff.individuell,
-    teilIndividuell: !eff.vollLiberiert && eff.individuell,
+    // Stufe 2 P1d: Die «Auf dem Aktienkapital …»-Teilliberierungs-Bausteine
+    // gelten der REINEN Bargründung; die gemischte Teilliberierung hat
+    // eigene Bausteine (Bar-Teil teilliberiert, Sach-/Verrechnungsaktien
+    // gelten als voll liberiert).
+    teilGleich: !eff.vollLiberiert && !eff.individuell && a.einlageArt === 'bar',
+    teilIndividuell: !eff.vollLiberiert && eff.individuell && a.einlageArt === 'bar',
+    gemischtTeilBar: a.einlageArt === 'gemischt' && !eff.vollLiberiert,
     gruenderTeilListe: eff.zeilen,
     // Review-Befund M-2 (7.6.2026): Art. 626 Abs. 1 Ziff. 3 OR verlangt den
     // BETRAG der geleisteten Einlagen — bei Teilliberierung den Frankenbetrag
-    // zusätzlich zum Prozentsatz ausweisen.
-    liberierungSatz: eff.vollLiberiert
-      ? 'vollständig liberiert'
-      : eff.individuell
+    // zusätzlich zum Prozentsatz ausweisen. Stufe 2 P1: Agio-Zusatz (das
+    // Agio ist voll zu leisten) und gemischte Teilliberierung (Haus-
+    // Fassungen, offengelegt).
+    liberierungSatz: (() => {
+      const wc = a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF';
+      const agioZusatz = eff.hatAgio
+        ? (a.einlageArt === 'gemischt'
+          ? `; das Ausgabeagio ist vollständig geleistet (Bareinlage-Aktien in Geld, übrige durch die Sacheinlagen bzw. Verrechnungsforderungen gedeckt)`
+          : `; das Ausgabeagio von ${wc} ${fmtCHF(String(eff.agioTotal))} ist vollständig geleistet`)
+        : '';
+      if (eff.vollLiberiert) return 'vollständig liberiert';
+      if (a.einlageArt === 'gemischt') {
+        return `im Umfang der geleisteten Einlagen von ${wc} ${fmtCHF(String(eff.einbezahlt))} liberiert ` +
+          `(Bareinlage-Aktien zu ${a.liberierungProzent} % des Nennwerts; die Aktien aus Sacheinlage und ` +
+          `Verrechnung gelten als voll liberiert)${agioZusatz}`;
+      }
+      if (eff.individuell) {
         // Etappe 3.3: Bei individuellen Graden gibt es keinen einheitlichen
         // Prozentsatz — Art. 626 Abs. 1 Ziff. 3 OR verlangt den BETRAG der
         // geleisteten Einlagen (Haus-Fassung, offengelegt).
-        ? `im Umfang der geleisteten Einlagen von ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(String(eff.einbezahlt))} liberiert (je Aktie mindestens 20 %)`
-        : `zu ${a.liberierungProzent} % liberiert (geleistete Einlagen: ${a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF'} ${fmtCHF(String(eff.einbezahlt))})`,
+        return `im Umfang der geleisteten Einlagen von ${wc} ${fmtCHF(String(eff.einbezahlt))} liberiert (je Aktie mindestens 20 %)${agioZusatz}`;
+      }
+      return `zu ${a.liberierungProzent} % liberiert (geleistete Einlagen: ${wc} ${fmtCHF(String(eff.einbezahlt))})${agioZusatz}`;
+    })(),
     ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}den ${datum}`,
     gruenderListe: a.gruender.filter((g) => g.name.trim()).map((g) => ({
       name: g.name.trim(),
@@ -849,24 +948,24 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       ueberschrift: 'Sacheinlagen',
       text:
         'Die Gesellschaft übernimmt bei der Gründung von {{item.einleger}} als Sacheinlage: ' +
-        '{{item.objektLabel}} ({{item.belegSatz}}), bewertet mit CHF {{item.wertFmt}}. Dafür werden ' +
-        '{{item.aktien}} Namenaktien zu CHF {{nennwertFmt}} ausgegeben{{item.gutschriftKlauselSatz}}.',
+        '{{item.objektLabel}} ({{item.belegSatz}}), bewertet mit {{waehrungCode}} {{item.wertFmt}}. Dafür werden ' +
+        '{{item.aktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} ausgegeben{{item.gutschriftKlauselSatz}}.',
       wiederholeUeber: 'sachListe',
       includeIf: { feld: 'hatSacheinlagen', eq: true },
       norm: 'Art. 634 Abs. 4 OR',
-      begruendung: 'Pflichtinhalt bei Sacheinlage: Gegenstand, Bewertung, Name des Einlegers, ausgegebene Aktien und allfällige weitere Gegenleistungen (Art. 634 Abs. 4 OR; Elemente-Katalog am Cache verifiziert, Dossier ag-qualifizierte-gruendung.md Teil 1). Haus-Formulierung — die amtlichen Muster enthalten keinen Standard-Klauseltext.',
+      begruendung: 'Pflichtinhalt bei Sacheinlage: Gegenstand, Bewertung, Name des Einlegers, ausgegebene Aktien und allfällige weitere Gegenleistungen (Art. 634 Abs. 4 OR; Elemente-Katalog am Cache verifiziert, Dossier ag-qualifizierte-gruendung.md Teil 1). Haus-Formulierung — die amtlichen Muster enthalten keinen Standard-Klauseltext. Stufe 2: Beträge in der Kapitalwährung (Art. 621 Abs. 2 OR); bei Agio wird der Ausgabebetrag offengelegt (Bewertung deckt Aktien × Ausgabebetrag + Gutschrift, Art. 629 Abs. 2 Ziff. 2 OR).',
       hinweis: 'Die Generalversammlung kann diese Statutenbestimmung erst nach zehn Jahren aufheben (Art. 634 Abs. 4 Satz 2 OR — Nachfolgeregel des aufgehobenen Art. 628 aOR).',
     },
     {
       id: 'AS07_verrechnung',
       ueberschrift: 'Verrechnungsliberierung',
       text:
-        'Bei der Gründung werden {{item.aktien}} Namenaktien zu CHF {{nennwertFmt}} durch Verrechnung ' +
-        'mit einer Forderung von {{item.glaeubiger}} im Betrag von CHF {{item.forderungFmt}} liberiert.',
+        'Bei der Gründung werden {{item.aktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} durch Verrechnung ' +
+        'mit einer Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert.',
       wiederholeUeber: 'verrListe',
       includeIf: { feld: 'hatVerrechnungen', eq: true },
       norm: 'Art. 634a Abs. 3 OR',
-      begruendung: 'Pflichtinhalt bei Verrechnungsliberierung: Betrag der Forderung, Name des Aktionärs, zukommende Aktien (Art. 634a Abs. 3 OR am Cache verifiziert). Eigenständige qualifizierte Liberierungsart — KEINE Sacheinlage; Werthaltigkeit der Forderung ist keine Voraussetzung (Art. 634a Abs. 2 OR).',
+      begruendung: 'Pflichtinhalt bei Verrechnungsliberierung: Betrag der Forderung, Name des Aktionärs, zukommende Aktien (Art. 634a Abs. 3 OR am Cache verifiziert). Eigenständige qualifizierte Liberierungsart — KEINE Sacheinlage; Werthaltigkeit der Forderung ist keine Voraussetzung (Art. 634a Abs. 2 OR). Stufe 2: Forderungsbetrag in der Kapitalwährung; bei Agio deckt die Forderung Aktien × Ausgabebetrag (Art. 629 Abs. 2 Ziff. 2 OR).',
       hinweis: 'Die Generalversammlung kann diese Statutenbestimmung erst nach zehn Jahren aufheben (Art. 634a Abs. 3 Satz 2 OR).',
     },
     {
@@ -874,7 +973,7 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       ueberschrift: 'Besondere Vorteile',
       text:
         'Bei der Gründung wird {{item.beguenstigter}} folgender besonderer Vorteil gewährt: ' +
-        '{{item.inhalt}} (Wert: CHF {{item.wertFmt}}).',
+        '{{item.inhalt}} (Wert: {{waehrungCode}} {{item.wertFmt}}).',
       wiederholeUeber: 'vorteilListe',
       includeIf: { feld: 'hatVorteile', eq: true },
       norm: 'Art. 636 OR',
@@ -1364,6 +1463,18 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       norm: 'Art. 632 Abs. 1 OR',
       begruendung: 'Je Gründerin/Gründer eine Liberierungs-Zeile (ZH-Urkunde 3.1 Teilliberierungs-Variante; Haus-Fassung geschlechtsneutral «Aktien von» statt «Aktien des Gründers»).',
     },
+    // ── Stufe 2 P1b: Agio bei Teilliberierung (reine Bargründung) ───────────
+    {
+      id: 'AE07x_agio_teilbar',
+      text:
+        'Zusätzlich wurde das Ausgabeagio von gesamthaft {{waehrungCode}} {{agioTotalFmt}} ' +
+        '({{waehrungCode}} {{agioJeAktieFmt}} je Aktie) vollständig in Geld geleistet und gleichermassen ' +
+        'zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
+      includeIf: { feld: 'hatAgioTeilBar', eq: true },
+      norm: 'Art. 632 Abs. 1 OR',
+      begruendung: 'Haus-Fassung (offengelegt): Die ZH-Muster decken Agio mit Teilliberierung nicht. Das Agio ist bei der Ausgabe VOLL zu leisten — teilliberierbar ist nur der Nennwert-Teil (Art. 632 Abs. 1 OR bezieht die 20 % auf den Nennwert jeder Aktie); die vorstehende Einlagen-Ziffer nennt darum nur den Nennwert-Teil, dieser Absatz weist das voll geleistete Agio aus.',
+      hinweis: 'Der über Nennwert und Ausgabekosten hinaus erzielte Erlös (Agio) ist der gesetzlichen Kapitalreserve zuzuweisen (Art. 671 Abs. 1 Ziff. 1 OR, am Cache verifiziert).',
+    },
     {
       id: 'AE07w_kurs',
       text:
@@ -1372,30 +1483,82 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'Devisenmittelkurs der {{kursQuelleTxt}}.',
       includeIf: { feld: 'fremdwaehrungAktiv', eq: true },
       norm: 'Art. 629 Abs. 3 OR',
-      begruendung: 'Pflicht-Kurs-Satz der Fremdwährungs-Gründung nach ZH-Urkundenvorlage 3.2 verbatim — inkl. «per» (Bug-Check 3.1 Befund 1; Art. 629 Abs. 3 OR: angewandte Umrechnungskurse sind in der Urkunde anzugeben). Erstausbau: Einlagewährung = Kapitalwährung (Einlagen in anderer Währung als das Kapital = Stufe 2).',
+      begruendung: 'Pflicht-Kurs-Satz der Fremdwährungs-Gründung nach ZH-Urkundenvorlage 3.2 verbatim — inkl. «per» (Bug-Check 3.1 Befund 1; Art. 629 Abs. 3 OR: angewandte Umrechnungskurse sind in der Urkunde anzugeben). Basis des CHF-Gegenwerts: geleistete Einlagen GESAMT (Nennwert-Teil + voll geleistetes Agio). Einlage-/Bewertungswährung = Kapitalwährung — gilt auch für Sacheinlagen, Verrechnungen und Vorteile (Stufe 2 P1a); Einlagen in einer DRITTEN Währung bleiben ausgeklammert.',
     },
     // ── Etappe 2: Einlagen bei gemischter und qualifizierter Gründung ───────
     {
       id: 'AE07g_geld_bank',
       ueberschrift: 'Einlagen',
       text:
-        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft CHF {{barEinlageFmt}} in Geld ' +
+        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld ' +
         'geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über ' +
         'die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
-      includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
+      includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'gemischtTeilBar', eq: false }, { feld: 'bankInUrkundeGenannt', eq: true }] },
       norm: 'Art. 633 OR',
-      begruendung: 'Bar-Anteil der gemischten Gründung (ZH-Bemerkung 3.3: Varianten «mit Ziff. IV der Textvorlage 3.1 kombinierbar»); Banknennung in der Urkunde.',
+      begruendung: 'Bar-Anteil der gemischten Gründung, voll liberiert (ZH-Bemerkung 3.3: Varianten «mit Ziff. IV der Textvorlage 3.1 kombinierbar»); Banknennung in der Urkunde. Stufe 2: Währungscode = Kapitalwährung.',
     },
     {
       id: 'AE07g_geld_bescheinigung',
       ueberschrift: 'Einlagen',
       text:
-        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft CHF {{barEinlageFmt}} in Geld ' +
+        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld ' +
         'geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über ' +
         'die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
-      includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
+      includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'gemischtTeilBar', eq: false }, { feld: 'bankInUrkundeGenannt', eq: false }] },
       norm: 'Art. 633 OR',
-      begruendung: 'Bar-Anteil der gemischten Gründung mit separater Bankbescheinigung.',
+      begruendung: 'Bar-Anteil der gemischten Gründung (voll liberiert) mit separater Bankbescheinigung.',
+    },
+    // ── Stufe 2 P1d: gemischte TEILLIBERIERUNG — Bar-Teil zum globalen Grad,
+    // Sach-/Verrechnungsaktien gelten als voll liberiert ──
+    {
+      id: 'AE07g_geld_teil_bank',
+      ueberschrift: 'Einlagen',
+      text:
+        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ' +
+        '({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und bei der ' +
+        '{{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und ' +
+        'Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus ' +
+        'Sacheinlage und Verrechnung gelten als voll liberiert.',
+      includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'gemischtTeilBar', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
+      norm: 'Art. 632 OR',
+      begruendung: 'Haus-Fassung (offengelegt): Die ZH-Muster kombinieren Teilliberierung und qualifizierte Einlagen nicht in einem Text. Teilliberierbar ist nur der Bar-Anteil (globaler Grad, mind. 20 % je Aktie, Art. 632 Abs. 1 OR); Aktien aus Sacheinlage/Verrechnung gelten als voll liberiert (ZH-Vertragsvorlage «als voll liberiert geltende Aktien») — der Urkunden-Text trennt beides ausdrücklich.',
+    },
+    {
+      id: 'AE07g_geld_teil_bescheinigung',
+      ueberschrift: 'Einlagen',
+      text:
+        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ' +
+        '({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und gemäss separater ' +
+        'Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ' +
+        'ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus Sacheinlage und ' +
+        'Verrechnung gelten als voll liberiert.',
+      includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'gemischtTeilBar', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
+      norm: 'Art. 632 OR',
+      begruendung: 'Gemischte Teilliberierung mit separater Bankbescheinigung (Haus-Fassung wie die Bank-Variante).',
+    },
+    // ── Stufe 2 P1b/P1c: Agio bei gemischter/qualifizierter Gründung ────────
+    {
+      id: 'AE07gx_agio_gemischt',
+      text:
+        'Zusätzlich wurde auf den in Geld liberierten Aktien das Ausgabeagio von gesamthaft ' +
+        '{{waehrungCode}} {{barAgioFmt}} ({{waehrungCode}} {{agioJeAktieFmt}} je Aktie) vollständig in Geld ' +
+        'geleistet und gleichermassen hinterlegt; das Ausgabeagio der übrigen Aktien ist durch die ' +
+        'angerechneten Sacheinlagen bzw. Verrechnungsforderungen gedeckt.',
+      includeIf: { feld: 'hatAgioGemischt', eq: true },
+      norm: 'Art. 629 Abs. 2 Ziff. 2 OR',
+      begruendung: 'Haus-Fassung (offengelegt): Bei gemischter Gründung mit Agio wird das Agio der Bar-Aktien voll in Geld geleistet; bei den Sach-/Verrechnungsaktien deckt die Bewertung bzw. Forderung den GESAMTEN Ausgabebetrag (Wert-Gates rechnen Aktien × Ausgabebetrag, Art. 629 Abs. 2 Ziff. 2 OR).',
+      hinweis: 'Der über Nennwert und Ausgabekosten hinaus erzielte Erlös (Agio) ist der gesetzlichen Kapitalreserve zuzuweisen (Art. 671 Abs. 1 Ziff. 1 OR, am Cache verifiziert).',
+    },
+    {
+      id: 'AE07qx_agio_qualifiziert',
+      text:
+        'Das Ausgabeagio ist durch die angerechneten Sacheinlagen bzw. Verrechnungsforderungen gedeckt: ' +
+        'Die Bewertung bzw. die zur Verrechnung gebrachte Forderung deckt den gesamten Ausgabebetrag der ' +
+        'dafür ausgegebenen Aktien.',
+      includeIf: { feld: 'hatAgioQualifiziertRein', eq: true },
+      norm: 'Art. 629 Abs. 2 Ziff. 2 OR',
+      begruendung: 'Haus-Fassung (offengelegt): Bei reiner Sach-/Verrechnungsgründung mit Agio fliesst kein Geld — die versprochenen Einlagen entsprechen dem gesamten Ausgabebetrag, weil die Wert-Gates je Position Aktien × Ausgabebetrag (+ Gutschrift) verlangen (Art. 629 Abs. 2 Ziff. 2 OR).',
+      hinweis: 'Der über Nennwert und Ausgabekosten hinaus erzielte Erlös (Agio) ist der gesetzlichen Kapitalreserve zuzuweisen (Art. 671 Abs. 1 Ziff. 1 OR, am Cache verifiziert).',
     },
     {
       id: 'AE07q_intro_mit_titel',
@@ -1416,7 +1579,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07q_sachliste',
       text:
         '– Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.einleger}} über {{item.objektLabel}} ' +
-        '({{item.belegSatz}}; Bewertung CHF {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselSatz}}), ' +
+        '({{item.belegSatz}}; Bewertung {{waehrungCode}} {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselSatz}}), ' +
         'welcher genehmigt wird, mit der Bestätigung, dass die Gesellschaft nach ihrer Eintragung in das ' +
         'Handelsregister {{item.verfuegungsSatz}}.',
       wiederholeUeber: 'sachListe',
@@ -1428,7 +1591,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07q_verrliste',
       text:
         '– Verrechnungsliberierung: {{item.aktien}} Namenaktien werden durch Verrechnung mit einer ' +
-        'Forderung von {{item.glaeubiger}} im Betrag von CHF {{item.forderungFmt}} liberiert (Art. 634a OR).',
+        'Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert (Art. 634a OR).',
       wiederholeUeber: 'verrListe',
       includeIf: { feld: 'hatVerrechnungen', eq: true },
       norm: 'Art. 634a OR',
@@ -1943,7 +2106,7 @@ const SACHEINLAGEVERTRAG_BAUSTEINE: VorlageSchema['bausteine'] = [
     ueberschrift: 'Sacheinlage',
     text:
       'Der/die Sacheinleger/in bringt in die zu gründende {{firma}} ein: {{bezeichnung}} gemäss ' +
-      'beiliegender Inventarliste vom {{belegDatumFmt}} im Wert und zum Preis von CHF {{wertFmt}}.\n' +
+      'beiliegender Inventarliste vom {{belegDatumFmt}} im Wert und zum Preis von {{waehrungCode}} {{wertFmt}}.\n' +
       'Die beiliegende Inventarliste bildet einen integrierenden Bestandteil des vorliegenden Vertrages ' +
       'und wird demselben, von den Vertragsparteien unterzeichnet, beigeheftet.',
     includeIf: { feld: 'typGeschaeft', eq: false },
@@ -1956,8 +2119,8 @@ const SACHEINLAGEVERTRAG_BAUSTEINE: VorlageSchema['bausteine'] = [
     text:
       'Die {{firma}} übernimmt alle Aktiven und Passiven {{hrZusatz}} Einzelunternehmens ' +
       '{{bezeichnung}}{{cheSatz}} gemäss Übernahmebilanz per {{belegDatumFmt}}. Danach betragen die ' +
-      'Aktiven CHF {{aktivenFmt}} und die Passiven CHF {{passivenFmt}}. Der Kaufpreis beträgt ' +
-      'CHF {{wertFmt}}. Die Bilanz bildet einen Bestandteil dieses Vertrages und wird von den ' +
+      'Aktiven {{waehrungCode}} {{aktivenFmt}} und die Passiven {{waehrungCode}} {{passivenFmt}}. Der Kaufpreis beträgt ' +
+      '{{waehrungCode}} {{wertFmt}}. Die Bilanz bildet einen Bestandteil dieses Vertrages und wird von den ' +
       'Vertragsparteien anerkannt.',
     includeIf: { feld: 'typGeschaeft', eq: true },
     norm: 'Art. 634 OR',
@@ -1968,9 +2131,9 @@ const SACHEINLAGEVERTRAG_BAUSTEINE: VorlageSchema['bausteine'] = [
     ueberschrift: 'Gegenleistung',
     text:
       'Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien ' +
-      'der Gesellschaft zu nominal CHF {{nennwertFmt}}.{{gutschriftSatz}}',
+      'der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}',
     norm: 'Art. 634 Abs. 4 OR',
-    begruendung: 'Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst.',
+    begruendung: 'Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst. Stufe 2: Währungscode = Kapitalwährung; bei Agio wird der Ausgabebetrag offengelegt (die Bewertung deckt Aktien × Ausgabebetrag, Art. 629 Abs. 2 Ziff. 2 OR).',
   },
   {
     id: 'SV04_zeitpunkt',
@@ -2230,7 +2393,7 @@ const GRUENDUNGSBERICHT_SCHEMA: VorlageSchema = {
         'Die Sacheinlage von {{item.einleger}} umfasst {{item.objektLabel}}. Der entsprechende ' +
         'Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.belegSatz}} liegt diesem Bericht als ' +
         'integrierender Bestandteil bei. Zum Zustand der Sacheinlage wird Folgendes erklärt: {{item.zustandTxt}}\n' +
-        'Auf Grund obiger Feststellungen kann die Bewertung der Sacheinlage mit CHF {{item.wertFmt}} als angemessen bezeichnet werden.',
+        'Auf Grund obiger Feststellungen kann die Bewertung der Sacheinlage mit {{waehrungCode}} {{item.wertFmt}} als angemessen bezeichnet werden.',
       wiederholeUeber: 'sachListe',
       includeIf: { feld: 'hatSacheinlagen', eq: true },
       norm: 'Art. 635 Ziff. 1 OR',
@@ -2241,7 +2404,7 @@ const GRUENDUNGSBERICHT_SCHEMA: VorlageSchema = {
       ueberschrift: 'Bestand und Verrechenbarkeit',
       text:
         'Die zur Verrechnung gebrachte Forderung von {{item.glaeubiger}} im Betrag von ' +
-        'CHF {{item.forderungFmt}} besteht und ist verrechenbar. Begründung: {{item.begruendungTxt}}',
+        '{{waehrungCode}} {{item.forderungFmt}} besteht und ist verrechenbar. Begründung: {{item.begruendungTxt}}',
       wiederholeUeber: 'verrListe',
       includeIf: { feld: 'hatVerrechnungen', eq: true },
       norm: 'Art. 635 Ziff. 2 OR',
@@ -2252,7 +2415,7 @@ const GRUENDUNGSBERICHT_SCHEMA: VorlageSchema = {
       ueberschrift: 'Besondere Vorteile',
       text:
         '{{item.beguenstigter}} wird folgender besonderer Vorteil gewährt: {{item.inhalt}} ' +
-        '(Wert: CHF {{item.wertFmt}}). Begründung und Angemessenheit: {{item.begruendungTxt}}',
+        '(Wert: {{waehrungCode}} {{item.wertFmt}}). Begründung und Angemessenheit: {{item.begruendungTxt}}',
       wiederholeUeber: 'vorteilListe',
       includeIf: { feld: 'hatVorteile', eq: true },
       norm: 'Art. 635 Ziff. 3 OR',

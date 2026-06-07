@@ -85,12 +85,12 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 - **Norm:** Art. 634 Abs. 4 OR
 - **Aufnahme:** hatSacheinlagen = true
 - **Wiederholt über:** `sachListe` (ein Absatz je Eintrag)
-- **Begründung (Protokoll):** Pflichtinhalt bei Sacheinlage: Gegenstand, Bewertung, Name des Einlegers, ausgegebene Aktien und allfällige weitere Gegenleistungen (Art. 634 Abs. 4 OR; Elemente-Katalog am Cache verifiziert, Dossier ag-qualifizierte-gruendung.md Teil 1). Haus-Formulierung — die amtlichen Muster enthalten keinen Standard-Klauseltext.
+- **Begründung (Protokoll):** Pflichtinhalt bei Sacheinlage: Gegenstand, Bewertung, Name des Einlegers, ausgegebene Aktien und allfällige weitere Gegenleistungen (Art. 634 Abs. 4 OR; Elemente-Katalog am Cache verifiziert, Dossier ag-qualifizierte-gruendung.md Teil 1). Haus-Formulierung — die amtlichen Muster enthalten keinen Standard-Klauseltext. Stufe 2: Beträge in der Kapitalwährung (Art. 621 Abs. 2 OR); bei Agio wird der Ausgabebetrag offengelegt (Bewertung deckt Aktien × Ausgabebetrag + Gutschrift, Art. 629 Abs. 2 Ziff. 2 OR).
 - **Hinweis (offengelegt):** Die Generalversammlung kann diese Statutenbestimmung erst nach zehn Jahren aufheben (Art. 634 Abs. 4 Satz 2 OR — Nachfolgeregel des aufgehobenen Art. 628 aOR).
 
 **Wortlaut:**
 
-> Die Gesellschaft übernimmt bei der Gründung von {{item.einleger}} als Sacheinlage: {{item.objektLabel}} ({{item.belegSatz}}), bewertet mit CHF {{item.wertFmt}}. Dafür werden {{item.aktien}} Namenaktien zu CHF {{nennwertFmt}} ausgegeben{{item.gutschriftKlauselSatz}}.
+> Die Gesellschaft übernimmt bei der Gründung von {{item.einleger}} als Sacheinlage: {{item.objektLabel}} ({{item.belegSatz}}), bewertet mit {{waehrungCode}} {{item.wertFmt}}. Dafür werden {{item.aktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} ausgegeben{{item.gutschriftKlauselSatz}}.
 
 ### 7. `AS07_verrechnung` — «Verrechnungsliberierung»
 
@@ -98,12 +98,12 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 - **Norm:** Art. 634a Abs. 3 OR
 - **Aufnahme:** hatVerrechnungen = true
 - **Wiederholt über:** `verrListe` (ein Absatz je Eintrag)
-- **Begründung (Protokoll):** Pflichtinhalt bei Verrechnungsliberierung: Betrag der Forderung, Name des Aktionärs, zukommende Aktien (Art. 634a Abs. 3 OR am Cache verifiziert). Eigenständige qualifizierte Liberierungsart — KEINE Sacheinlage; Werthaltigkeit der Forderung ist keine Voraussetzung (Art. 634a Abs. 2 OR).
+- **Begründung (Protokoll):** Pflichtinhalt bei Verrechnungsliberierung: Betrag der Forderung, Name des Aktionärs, zukommende Aktien (Art. 634a Abs. 3 OR am Cache verifiziert). Eigenständige qualifizierte Liberierungsart — KEINE Sacheinlage; Werthaltigkeit der Forderung ist keine Voraussetzung (Art. 634a Abs. 2 OR). Stufe 2: Forderungsbetrag in der Kapitalwährung; bei Agio deckt die Forderung Aktien × Ausgabebetrag (Art. 629 Abs. 2 Ziff. 2 OR).
 - **Hinweis (offengelegt):** Die Generalversammlung kann diese Statutenbestimmung erst nach zehn Jahren aufheben (Art. 634a Abs. 3 Satz 2 OR).
 
 **Wortlaut:**
 
-> Bei der Gründung werden {{item.aktien}} Namenaktien zu CHF {{nennwertFmt}} durch Verrechnung mit einer Forderung von {{item.glaeubiger}} im Betrag von CHF {{item.forderungFmt}} liberiert.
+> Bei der Gründung werden {{item.aktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} durch Verrechnung mit einer Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert.
 
 ### 8. `AS08_vorteile` — «Besondere Vorteile»
 
@@ -115,7 +115,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 **Wortlaut:**
 
-> Bei der Gründung wird {{item.beguenstigter}} folgender besonderer Vorteil gewährt: {{item.inhalt}} (Wert: CHF {{item.wertFmt}}).
+> Bei der Gründung wird {{item.beguenstigter}} folgender besonderer Vorteil gewährt: {{item.inhalt}} (Wert: {{waehrungCode}} {{item.wertFmt}}).
 
 ### 9. `ASL20_zertifikate` — «Aktienzertifikate»
 
@@ -675,40 +675,98 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > – {{item.anzahl}} Aktien von {{item.name}} zu {{item.prozentTxt}} %
 
-### 17. `AE07w_kurs`
+### 17. `AE07x_agio_teilbar`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 632 Abs. 1 OR
+- **Aufnahme:** hatAgioTeilBar = true
+- **Begründung (Protokoll):** Haus-Fassung (offengelegt): Die ZH-Muster decken Agio mit Teilliberierung nicht. Das Agio ist bei der Ausgabe VOLL zu leisten — teilliberierbar ist nur der Nennwert-Teil (Art. 632 Abs. 1 OR bezieht die 20 % auf den Nennwert jeder Aktie); die vorstehende Einlagen-Ziffer nennt darum nur den Nennwert-Teil, dieser Absatz weist das voll geleistete Agio aus.
+- **Hinweis (offengelegt):** Der über Nennwert und Ausgabekosten hinaus erzielte Erlös (Agio) ist der gesetzlichen Kapitalreserve zuzuweisen (Art. 671 Abs. 1 Ziff. 1 OR, am Cache verifiziert).
+
+**Wortlaut:**
+
+> Zusätzlich wurde das Ausgabeagio von gesamthaft {{waehrungCode}} {{agioTotalFmt}} ({{waehrungCode}} {{agioJeAktieFmt}} je Aktie) vollständig in Geld geleistet und gleichermassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
+
+### 18. `AE07w_kurs`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 3 OR
 - **Aufnahme:** fremdwaehrungAktiv = true
-- **Begründung (Protokoll):** Pflicht-Kurs-Satz der Fremdwährungs-Gründung nach ZH-Urkundenvorlage 3.2 verbatim — inkl. «per» (Bug-Check 3.1 Befund 1; Art. 629 Abs. 3 OR: angewandte Umrechnungskurse sind in der Urkunde anzugeben). Erstausbau: Einlagewährung = Kapitalwährung (Einlagen in anderer Währung als das Kapital = Stufe 2).
+- **Begründung (Protokoll):** Pflicht-Kurs-Satz der Fremdwährungs-Gründung nach ZH-Urkundenvorlage 3.2 verbatim — inkl. «per» (Bug-Check 3.1 Befund 1; Art. 629 Abs. 3 OR: angewandte Umrechnungskurse sind in der Urkunde anzugeben). Basis des CHF-Gegenwerts: geleistete Einlagen GESAMT (Nennwert-Teil + voll geleistetes Agio). Einlage-/Bewertungswährung = Kapitalwährung — gilt auch für Sacheinlagen, Verrechnungen und Vorteile (Stufe 2 P1a); Einlagen in einer DRITTEN Währung bleiben ausgeklammert.
 
 **Wortlaut:**
 
 > Die geleisteten Einlagen entsprechen, aufgrund des Umrechnungskurses per {{waehrungCode}} 1.00 = CHF {{kursTxt}}, dem Betrag von CHF {{einbezahltChfFmt}}. Dieser Umrechnungskurs entspricht dem Devisenmittelkurs der {{kursQuelleTxt}}.
 
-### 18. `AE07g_geld_bank` — «Einlagen»
+### 19. `AE07g_geld_bank` — «Einlagen»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 633 OR
-- **Aufnahme:** istGemischt = true UND hatBarEinlage = true UND bankInUrkundeGenannt = true
-- **Begründung (Protokoll):** Bar-Anteil der gemischten Gründung (ZH-Bemerkung 3.3: Varianten «mit Ziff. IV der Textvorlage 3.1 kombinierbar»); Banknennung in der Urkunde.
+- **Aufnahme:** istGemischt = true UND hatBarEinlage = true UND gemischtTeilBar = false UND bankInUrkundeGenannt = true
+- **Begründung (Protokoll):** Bar-Anteil der gemischten Gründung, voll liberiert (ZH-Bemerkung 3.3: Varianten «mit Ziff. IV der Textvorlage 3.1 kombinierbar»); Banknennung in der Urkunde. Stufe 2: Währungscode = Kapitalwährung.
 
 **Wortlaut:**
 
-> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft CHF {{barEinlageFmt}} in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
+> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
 
-### 19. `AE07g_geld_bescheinigung` — «Einlagen»
+### 20. `AE07g_geld_bescheinigung` — «Einlagen»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 633 OR
-- **Aufnahme:** istGemischt = true UND hatBarEinlage = true UND bankInUrkundeGenannt = false
-- **Begründung (Protokoll):** Bar-Anteil der gemischten Gründung mit separater Bankbescheinigung.
+- **Aufnahme:** istGemischt = true UND hatBarEinlage = true UND gemischtTeilBar = false UND bankInUrkundeGenannt = false
+- **Begründung (Protokoll):** Bar-Anteil der gemischten Gründung (voll liberiert) mit separater Bankbescheinigung.
 
 **Wortlaut:**
 
-> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft CHF {{barEinlageFmt}} in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
+> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
 
-### 20. `AE07q_intro_mit_titel` — «Einlagen»
+### 21. `AE07g_geld_teil_bank` — «Einlagen»
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 632 OR
+- **Aufnahme:** istGemischt = true UND hatBarEinlage = true UND gemischtTeilBar = true UND bankInUrkundeGenannt = true
+- **Begründung (Protokoll):** Haus-Fassung (offengelegt): Die ZH-Muster kombinieren Teilliberierung und qualifizierte Einlagen nicht in einem Text. Teilliberierbar ist nur der Bar-Anteil (globaler Grad, mind. 20 % je Aktie, Art. 632 Abs. 1 OR); Aktien aus Sacheinlage/Verrechnung gelten als voll liberiert (ZH-Vertragsvorlage «als voll liberiert geltende Aktien») — der Urkunden-Text trennt beides ausdrücklich.
+
+**Wortlaut:**
+
+> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus Sacheinlage und Verrechnung gelten als voll liberiert.
+
+### 22. `AE07g_geld_teil_bescheinigung` — «Einlagen»
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 632 OR
+- **Aufnahme:** istGemischt = true UND hatBarEinlage = true UND gemischtTeilBar = true UND bankInUrkundeGenannt = false
+- **Begründung (Protokoll):** Gemischte Teilliberierung mit separater Bankbescheinigung (Haus-Fassung wie die Bank-Variante).
+
+**Wortlaut:**
+
+> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus Sacheinlage und Verrechnung gelten als voll liberiert.
+
+### 23. `AE07gx_agio_gemischt`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 629 Abs. 2 Ziff. 2 OR
+- **Aufnahme:** hatAgioGemischt = true
+- **Begründung (Protokoll):** Haus-Fassung (offengelegt): Bei gemischter Gründung mit Agio wird das Agio der Bar-Aktien voll in Geld geleistet; bei den Sach-/Verrechnungsaktien deckt die Bewertung bzw. Forderung den GESAMTEN Ausgabebetrag (Wert-Gates rechnen Aktien × Ausgabebetrag, Art. 629 Abs. 2 Ziff. 2 OR).
+- **Hinweis (offengelegt):** Der über Nennwert und Ausgabekosten hinaus erzielte Erlös (Agio) ist der gesetzlichen Kapitalreserve zuzuweisen (Art. 671 Abs. 1 Ziff. 1 OR, am Cache verifiziert).
+
+**Wortlaut:**
+
+> Zusätzlich wurde auf den in Geld liberierten Aktien das Ausgabeagio von gesamthaft {{waehrungCode}} {{barAgioFmt}} ({{waehrungCode}} {{agioJeAktieFmt}} je Aktie) vollständig in Geld geleistet und gleichermassen hinterlegt; das Ausgabeagio der übrigen Aktien ist durch die angerechneten Sacheinlagen bzw. Verrechnungsforderungen gedeckt.
+
+### 24. `AE07qx_agio_qualifiziert`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 629 Abs. 2 Ziff. 2 OR
+- **Aufnahme:** hatAgioQualifiziertRein = true
+- **Begründung (Protokoll):** Haus-Fassung (offengelegt): Bei reiner Sach-/Verrechnungsgründung mit Agio fliesst kein Geld — die versprochenen Einlagen entsprechen dem gesamten Ausgabebetrag, weil die Wert-Gates je Position Aktien × Ausgabebetrag (+ Gutschrift) verlangen (Art. 629 Abs. 2 Ziff. 2 OR).
+- **Hinweis (offengelegt):** Der über Nennwert und Ausgabekosten hinaus erzielte Erlös (Agio) ist der gesetzlichen Kapitalreserve zuzuweisen (Art. 671 Abs. 1 Ziff. 1 OR, am Cache verifiziert).
+
+**Wortlaut:**
+
+> Das Ausgabeagio ist durch die angerechneten Sacheinlagen bzw. Verrechnungsforderungen gedeckt: Die Bewertung bzw. die zur Verrechnung gebrachte Forderung deckt den gesamten Ausgabebetrag der dafür ausgegebenen Aktien.
+
+### 25. `AE07q_intro_mit_titel` — «Einlagen»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 2 Ziff. 4 OR
@@ -719,7 +777,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > {{qualifiziertIntro}}
 
-### 21. `AE07q_intro`
+### 26. `AE07q_intro`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 2 Ziff. 4 OR
@@ -730,7 +788,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > {{qualifiziertIntro}}
 
-### 22. `AE07q_sachliste`
+### 27. `AE07q_sachliste`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 634 OR
@@ -740,9 +798,9 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> – Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.einleger}} über {{item.objektLabel}} ({{item.belegSatz}}; Bewertung CHF {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselSatz}}), welcher genehmigt wird, mit der Bestätigung, dass die Gesellschaft nach ihrer Eintragung in das Handelsregister {{item.verfuegungsSatz}}.
+> – Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.einleger}} über {{item.objektLabel}} ({{item.belegSatz}}; Bewertung {{waehrungCode}} {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselSatz}}), welcher genehmigt wird, mit der Bestätigung, dass die Gesellschaft nach ihrer Eintragung in das Handelsregister {{item.verfuegungsSatz}}.
 
-### 23. `AE07q_verrliste`
+### 28. `AE07q_verrliste`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 634a OR
@@ -752,9 +810,9 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> – Verrechnungsliberierung: {{item.aktien}} Namenaktien werden durch Verrechnung mit einer Forderung von {{item.glaeubiger}} im Betrag von CHF {{item.forderungFmt}} liberiert (Art. 634a OR).
+> – Verrechnungsliberierung: {{item.aktien}} Namenaktien werden durch Verrechnung mit einer Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert (Art. 634a OR).
 
-### 24. `AE07q_vorteile`
+### 29. `AE07q_vorteile`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 636 OR
@@ -765,7 +823,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Ferner werden bei der Gründung die in den Statuten umschriebenen besonderen Vorteile gewährt.
 
-### 25. `AE07q_bericht`
+### 30. `AE07q_bericht`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 635a OR
@@ -777,7 +835,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 > – Gründungsbericht gemäss Art. 635 OR vom ________, von allen Gründerinnen und Gründern unterzeichnet.
 > – Prüfungsbestätigung gemäss Art. 635a OR vom ________ der zugelassenen Revisorin bzw. des zugelassenen Revisors {{revisorZeile}}, wonach der Gründungsbericht vollständig und richtig ist.
 
-### 26. `AE07q_bericht_singular`
+### 31. `AE07q_bericht_singular`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 635a OR
@@ -789,7 +847,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 > – Gründungsbericht gemäss Art. 635 OR vom ________, von der Gründerin bzw. dem Gründer unterzeichnet.
 > – Prüfungsbestätigung gemäss Art. 635a OR vom ________ der zugelassenen Revisorin bzw. des zugelassenen Revisors {{revisorZeile}}, wonach der Gründungsbericht vollständig und richtig ist.
 
-### 27. `AE07c_resteinlage`
+### 32. `AE07c_resteinlage`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 634b OR
@@ -800,7 +858,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Jede Gründerin und jeder Gründer verpflichtet sich, auf erstes Verlangen des Verwaltungsrates die restliche und vollständige Leistung der eigenen Einlage im Sinne von Art. 634b OR sofort zu erbringen.
 
-### 28. `AE07c_resteinlage_singular`
+### 33. `AE07c_resteinlage_singular`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 634b OR
@@ -811,7 +869,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Die Gründerin bzw. der Gründer verpflichtet sich, auf erstes Verlangen des Verwaltungsrates die restliche und vollständige Leistung der Einlage im Sinne von Art. 634b OR sofort zu erbringen.
 
-### 29. `AE08_feststellungen` — «Feststellungen»
+### 34. `AE08_feststellungen` — «Feststellungen»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 2 OR
@@ -826,7 +884,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 > – die gesetzlichen und statutarischen Anforderungen an die geleisteten Einlagen im Zeitpunkt der Unterzeichnung des Errichtungsakts erfüllt sind;
 > – keine anderen Sacheinlagen, Verrechnungstatbestände oder besonderen Vorteile bestehen, als die in den Belegen genannten.
 
-### 30. `AE08_feststellungen_singular` — «Feststellungen»
+### 35. `AE08_feststellungen_singular` — «Feststellungen»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 2 OR
@@ -841,7 +899,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 > – die gesetzlichen und statutarischen Anforderungen an die geleisteten Einlagen im Zeitpunkt der Unterzeichnung des Errichtungsakts erfüllt sind;
 > – keine anderen Sacheinlagen, Verrechnungstatbestände oder besonderen Vorteile bestehen, als die in den Belegen genannten.
 
-### 31. `AE09_organbestellung` — «Organe»
+### 36. `AE09_organbestellung` — «Organe»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 1 OR
@@ -852,7 +910,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Als Mitglieder des Verwaltungsrates werden gewählt:
 
-### 32. `AE09_organbestellung_singular` — «Organe»
+### 37. `AE09_organbestellung_singular` — «Organe»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 1 OR
@@ -863,7 +921,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Als Mitglied des Verwaltungsrates wird gewählt:
 
-### 33. `AE09b_vrliste`
+### 38. `AE09b_vrliste`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 44 lit. e HRegV
@@ -875,7 +933,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > – {{item.name}}, von {{item.herkunft}}, in {{item.wohnort}}{{item.praesidentZeile}}{{item.wahlannahmeSatz}}
 
-### 34. `AE10_revisionsstelle`
+### 39. `AE10_revisionsstelle`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 44 lit. f HRegV
@@ -886,7 +944,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Als Revisionsstelle wird gewählt: {{revisionsstelleName}}, {{revisionsstelleSitz}}.
 
-### 35. `AE11_opting_out`
+### 40. `AE11_opting_out`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 727a Abs. 2 OR
@@ -900,7 +958,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 > – die Gesellschaft nicht mehr als zehn Vollzeitstellen im Jahresdurchschnitt hat;
 > – sämtliche Gründerinnen und Gründer auf eine eingeschränkte Revision verzichten.
 
-### 36. `AE11_opting_out_singular`
+### 41. `AE11_opting_out_singular`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 727a Abs. 2 OR
@@ -914,7 +972,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 > – die Gesellschaft nicht mehr als zehn Vollzeitstellen im Jahresdurchschnitt hat;
 > – die Gründerin bzw. der Gründer als einzige Aktionärin bzw. einziger Aktionär auf eine eingeschränkte Revision verzichtet.
 
-### 37. `AE12_domizil_eigen` — «Rechtsdomizil»
+### 42. `AE12_domizil_eigen` — «Rechtsdomizil»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 117 Abs. 2 HRegV
@@ -925,7 +983,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Das Rechtsdomizil der Gesellschaft befindet sich an folgender Adresse: {{rechtsdomizilAdresse}}.
 
-### 38. `AE12_domizil_co` — «Rechtsdomizil»
+### 43. `AE12_domizil_co` — «Rechtsdomizil»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 117 Abs. 3 HRegV
@@ -936,7 +994,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Die Gesellschaft hat ihr Rechtsdomizil als c/o-Adresse bei {{domizilhalterName}}, {{domizilhalterAdresse}}. Die Erklärung der Domizilhalterin bzw. des Domizilhalters liegt vor.
 
-### 39. `AE12k_konstituierung` — «Konstituierung und Zeichnungsberechtigung»
+### 44. `AE12k_konstituierung` — «Konstituierung und Zeichnungsberechtigung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 712 OR
@@ -947,7 +1005,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Unter der Bedingung, dass der Verwaltungsrat vollzählig anwesend ist, erklären die soeben ernannten Mitglieder des Verwaltungsrates:
 
-### 40. `AE12k_konstituierung_singular` — «Konstituierung und Zeichnungsberechtigung»
+### 45. `AE12k_konstituierung_singular` — «Konstituierung und Zeichnungsberechtigung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 712 OR
@@ -958,7 +1016,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Das soeben ernannte einzige Mitglied des Verwaltungsrates erklärt:
 
-### 41. `AE12k_liste`
+### 46. `AE12k_liste`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 718 OR
@@ -970,7 +1028,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > – {{item.konstituierungZeile}}
 
-### 42. `AE12k_domizil_eigen`
+### 47. `AE12k_domizil_eigen`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 117 Abs. 2 HRegV
@@ -981,7 +1039,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Das Rechtsdomizil befindet sich an folgender Adresse: {{rechtsdomizilAdresse}} (eigene Geschäftsräume).
 
-### 43. `AE12k_domizil_co`
+### 48. `AE12k_domizil_co`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 117 Abs. 3 HRegV
@@ -992,7 +1050,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Das Rechtsdomizil befindet sich als c/o-Adresse bei {{domizilhalterName}}, {{domizilhalterAdresse}}. Die Erklärung der Domizilhalterin bzw. des Domizilhalters liegt vor.
 
-### 44. `AE13_nachtragsvollmacht` — «Vollmacht»
+### 49. `AE13_nachtragsvollmacht` — «Vollmacht»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 44 HRegV
@@ -1003,7 +1061,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Die Gründerinnen und Gründer bevollmächtigen {{nachtragsbevollmaechtigter}}, allfällige wegen Beanstandung durch die Handelsregisterbehörde erforderliche Änderungen an den Statuten oder am Errichtungsakt durch einen öffentlich zu beurkundenden Nachtrag namens aller Gründerinnen und Gründer vorzunehmen.
 
-### 45. `AE13_nachtragsvollmacht_singular` — «Vollmacht»
+### 50. `AE13_nachtragsvollmacht_singular` — «Vollmacht»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 44 HRegV
@@ -1014,7 +1072,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Die Gründerin bzw. der Gründer bevollmächtigt {{nachtragsbevollmaechtigter}}, allfällige wegen Beanstandung durch die Handelsregisterbehörde erforderliche Änderungen an den Statuten oder am Errichtungsakt durch einen öffentlich zu beurkundenden Nachtrag in ihrem bzw. seinem Namen vorzunehmen.
 
-### 46. `AE14_gruendungserklaerung` — «Gründungserklärung»
+### 51. `AE14_gruendungserklaerung` — «Gründungserklärung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 1 OR
@@ -1025,7 +1083,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Abschliessend erklären die erschienenen Personen die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet.
 
-### 47. `AE14_gruendungserklaerung_singular` — «Gründungserklärung»
+### 52. `AE14_gruendungserklaerung_singular` — «Gründungserklärung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 629 Abs. 1 OR
@@ -1036,7 +1094,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Abschliessend erklärt die erschienene Person die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet.
 
-### 48. `AE15_belege` — «Bestätigung der Urkundsperson»
+### 53. `AE15_belege` — «Bestätigung der Urkundsperson»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 631 OR
@@ -1047,7 +1105,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Die Urkundsperson nennt die Belege über die Gründung einzeln und bestätigt, dass diese ihr und den Gründerinnen und Gründern vorgelegen haben (Art. 631 Abs. 1 OR):
 
-### 49. `AE15_belege_singular` — «Bestätigung der Urkundsperson»
+### 54. `AE15_belege_singular` — «Bestätigung der Urkundsperson»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 631 OR
@@ -1058,7 +1116,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > Die Urkundsperson nennt die Belege über die Gründung einzeln und bestätigt, dass diese ihr und der Gründerin bzw. dem Gründer vorgelegen haben (Art. 631 Abs. 1 OR):
 
-### 50. `AE15b_belegliste`
+### 55. `AE15b_belegliste`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 631 Abs. 2 OR
@@ -1070,7 +1128,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 > – {{item.titel}}
 
-### 51. `AE16_unterschriften`
+### 56. `AE16_unterschriften`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 44 lit. i HRegV
@@ -1084,7 +1142,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 >
 > Die Gründerinnen und Gründer:
 
-### 52. `AE16_unterschriften_singular`
+### 57. `AE16_unterschriften_singular`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 44 lit. i HRegV
@@ -1098,7 +1156,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 >
 > Die Gründerin bzw. der Gründer:
 
-### 53. `AE16b_unterschriftenliste`
+### 58. `AE16b_unterschriftenliste`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 44 lit. i HRegV
@@ -1112,7 +1170,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 > _________________________________
 > {{item.name}}
 
-### 54. `AE17_urkundsperson`
+### 59. `AE17_urkundsperson`
 
 - [ ] **abgenommen** (David)
 - **Aufnahme:** immer
@@ -1158,7 +1216,7 @@ Schema `ag-sacheinlagevertrag` · Version 1.0.0 (ZH-Vorlagen vertrag_se_einfach/
 
 **Wortlaut:**
 
-> Der/die Sacheinleger/in bringt in die zu gründende {{firma}} ein: {{bezeichnung}} gemäss beiliegender Inventarliste vom {{belegDatumFmt}} im Wert und zum Preis von CHF {{wertFmt}}.
+> Der/die Sacheinleger/in bringt in die zu gründende {{firma}} ein: {{bezeichnung}} gemäss beiliegender Inventarliste vom {{belegDatumFmt}} im Wert und zum Preis von {{waehrungCode}} {{wertFmt}}.
 > Die beiliegende Inventarliste bildet einen integrierenden Bestandteil des vorliegenden Vertrages und wird demselben, von den Vertragsparteien unterzeichnet, beigeheftet.
 
 ### 3. `SV02_gegenstand_geschaeft` — «Gegenstand der Sacheinlage»
@@ -1170,18 +1228,18 @@ Schema `ag-sacheinlagevertrag` · Version 1.0.0 (ZH-Vorlagen vertrag_se_einfach/
 
 **Wortlaut:**
 
-> Die {{firma}} übernimmt alle Aktiven und Passiven {{hrZusatz}} Einzelunternehmens {{bezeichnung}}{{cheSatz}} gemäss Übernahmebilanz per {{belegDatumFmt}}. Danach betragen die Aktiven CHF {{aktivenFmt}} und die Passiven CHF {{passivenFmt}}. Der Kaufpreis beträgt CHF {{wertFmt}}. Die Bilanz bildet einen Bestandteil dieses Vertrages und wird von den Vertragsparteien anerkannt.
+> Die {{firma}} übernimmt alle Aktiven und Passiven {{hrZusatz}} Einzelunternehmens {{bezeichnung}}{{cheSatz}} gemäss Übernahmebilanz per {{belegDatumFmt}}. Danach betragen die Aktiven {{waehrungCode}} {{aktivenFmt}} und die Passiven {{waehrungCode}} {{passivenFmt}}. Der Kaufpreis beträgt {{waehrungCode}} {{wertFmt}}. Die Bilanz bildet einen Bestandteil dieses Vertrages und wird von den Vertragsparteien anerkannt.
 
 ### 4. `SV03_gegenleistung` — «Gegenleistung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 634 Abs. 4 OR
 - **Aufnahme:** immer
-- **Begründung (Protokoll):** Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst.
+- **Begründung (Protokoll):** Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst. Stufe 2: Währungscode = Kapitalwährung; bei Agio wird der Ausgabebetrag offengelegt (die Bewertung deckt Aktien × Ausgabebetrag, Art. 629 Abs. 2 Ziff. 2 OR).
 
 **Wortlaut:**
 
-> Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien der Gesellschaft zu nominal CHF {{nennwertFmt}}.{{gutschriftSatz}}
+> Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}
 
 ### 5. `SV04_zeitpunkt` — «Zeitpunkt»
 
@@ -1296,7 +1354,7 @@ Schema `ag-sacheinlagevertrag-grundstueck` · Version 1.0.0 (ZH-Vorlagen vertrag
 
 **Wortlaut:**
 
-> Der/die Sacheinleger/in bringt in die zu gründende {{firma}} ein: {{bezeichnung}} gemäss beiliegender Inventarliste vom {{belegDatumFmt}} im Wert und zum Preis von CHF {{wertFmt}}.
+> Der/die Sacheinleger/in bringt in die zu gründende {{firma}} ein: {{bezeichnung}} gemäss beiliegender Inventarliste vom {{belegDatumFmt}} im Wert und zum Preis von {{waehrungCode}} {{wertFmt}}.
 > Die beiliegende Inventarliste bildet einen integrierenden Bestandteil des vorliegenden Vertrages und wird demselben, von den Vertragsparteien unterzeichnet, beigeheftet.
 
 ### 3. `SV02_gegenstand_geschaeft` — «Gegenstand der Sacheinlage»
@@ -1308,18 +1366,18 @@ Schema `ag-sacheinlagevertrag-grundstueck` · Version 1.0.0 (ZH-Vorlagen vertrag
 
 **Wortlaut:**
 
-> Die {{firma}} übernimmt alle Aktiven und Passiven {{hrZusatz}} Einzelunternehmens {{bezeichnung}}{{cheSatz}} gemäss Übernahmebilanz per {{belegDatumFmt}}. Danach betragen die Aktiven CHF {{aktivenFmt}} und die Passiven CHF {{passivenFmt}}. Der Kaufpreis beträgt CHF {{wertFmt}}. Die Bilanz bildet einen Bestandteil dieses Vertrages und wird von den Vertragsparteien anerkannt.
+> Die {{firma}} übernimmt alle Aktiven und Passiven {{hrZusatz}} Einzelunternehmens {{bezeichnung}}{{cheSatz}} gemäss Übernahmebilanz per {{belegDatumFmt}}. Danach betragen die Aktiven {{waehrungCode}} {{aktivenFmt}} und die Passiven {{waehrungCode}} {{passivenFmt}}. Der Kaufpreis beträgt {{waehrungCode}} {{wertFmt}}. Die Bilanz bildet einen Bestandteil dieses Vertrages und wird von den Vertragsparteien anerkannt.
 
 ### 4. `SV03_gegenleistung` — «Gegenleistung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 634 Abs. 4 OR
 - **Aufnahme:** immer
-- **Begründung (Protokoll):** Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst.
+- **Begründung (Protokoll):** Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst. Stufe 2: Währungscode = Kapitalwährung; bei Agio wird der Ausgabebetrag offengelegt (die Bewertung deckt Aktien × Ausgabebetrag, Art. 629 Abs. 2 Ziff. 2 OR).
 
 **Wortlaut:**
 
-> Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien der Gesellschaft zu nominal CHF {{nennwertFmt}}.{{gutschriftSatz}}
+> Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}
 
 ### 5. `SV04_zeitpunkt` — «Zeitpunkt»
 
@@ -1443,7 +1501,7 @@ Schema `ag-gruendungsbericht` · Version 1.0.0 (ZH-Vorlagen gruendungsbericht_se
 **Wortlaut:**
 
 > Die Sacheinlage von {{item.einleger}} umfasst {{item.objektLabel}}. Der entsprechende Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.belegSatz}} liegt diesem Bericht als integrierender Bestandteil bei. Zum Zustand der Sacheinlage wird Folgendes erklärt: {{item.zustandTxt}}
-> Auf Grund obiger Feststellungen kann die Bewertung der Sacheinlage mit CHF {{item.wertFmt}} als angemessen bezeichnet werden.
+> Auf Grund obiger Feststellungen kann die Bewertung der Sacheinlage mit {{waehrungCode}} {{item.wertFmt}} als angemessen bezeichnet werden.
 
 ### 4. `GB03_verrechnung` — «Bestand und Verrechenbarkeit»
 
@@ -1455,7 +1513,7 @@ Schema `ag-gruendungsbericht` · Version 1.0.0 (ZH-Vorlagen gruendungsbericht_se
 
 **Wortlaut:**
 
-> Die zur Verrechnung gebrachte Forderung von {{item.glaeubiger}} im Betrag von CHF {{item.forderungFmt}} besteht und ist verrechenbar. Begründung: {{item.begruendungTxt}}
+> Die zur Verrechnung gebrachte Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} besteht und ist verrechenbar. Begründung: {{item.begruendungTxt}}
 
 ### 5. `GB04_vorteile` — «Besondere Vorteile»
 
@@ -1467,7 +1525,7 @@ Schema `ag-gruendungsbericht` · Version 1.0.0 (ZH-Vorlagen gruendungsbericht_se
 
 **Wortlaut:**
 
-> {{item.beguenstigter}} wird folgender besonderer Vorteil gewährt: {{item.inhalt}} (Wert: CHF {{item.wertFmt}}). Begründung und Angemessenheit: {{item.begruendungTxt}}
+> {{item.beguenstigter}} wird folgender besonderer Vorteil gewährt: {{item.inhalt}} (Wert: {{waehrungCode}} {{item.wertFmt}}). Begründung und Angemessenheit: {{item.begruendungTxt}}
 
 ### 6. `GB05_unterschriften`
 
@@ -2250,4 +2308,4 @@ Schema `ag-hr-anmeldung` · Version 1.0.0 (ZH-Formular-Struktur; Wortlaut-Dossie
 
 ---
 
-**Summe:** 176 Bausteine in 12 Schemas.
+**Summe:** 181 Bausteine in 12 Schemas.

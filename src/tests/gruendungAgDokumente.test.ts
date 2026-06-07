@@ -462,7 +462,19 @@ describe('AG — Qualifizierte Gründung (Etappe 2/D3–D5)', () => {
     expect(text(m, 'gruendungsbericht')).toContain('Begründung und Angemessenheit: Abgeltung der Aufbauarbeit');
     expect(text(m, 'errichtungsakt')).toContain('die in den Statuten umschriebenen besonderen Vorteile gewährt');
 
-    expect(pruefeAgDokGates({ ...SACH_BASIS, liberierungProzent: '50' }).blocker.join(' ')).toContain('Teilliberierung nur bei der reinen Bargründung');
+    // Stufe 2 P1d (deklarierte fachliche Änderung 7.6.2026): Teilliberierung
+    // bei REINER Sacheinlage ist gegenstandslos — alle Aktien gelten als voll
+    // liberiert (ZH-Vertragsvorlage), der globale Grad läuft leer.
+    const teilQ = agDokumentmappe({ ...SACH_BASIS, liberierungProzent: '50' });
+    expect(teilQ.gates.blocker).toEqual([]);
+    expect(text(teilQ, 'statuten')).toContain('Die Aktien sind vollständig liberiert.');
+    // Individuelle Grade bleiben qualifiziert gesperrt (Zuordnung Bar-/Sach-
+    // Aktien je Gründer:in nicht eindeutig).
+    expect(pruefeAgDokGates({
+      ...SACH_BASIS,
+      einlageArt: 'gemischt',
+      gruender: [{ name: 'Anna Muster', angaben: '', anzahl: '100', liberierung: '50' }],
+    }).blocker.join(' ')).toContain('Individuelle Liberierungsgrade');
   });
 });
 
@@ -553,7 +565,20 @@ describe('AG — Urkunden-Optionen (Etappen 4.1/4.2) + Agio/Liberierung (3.2/3.3
     expect(ea).toContain("Sämtliche Einlagen von gesamthaft CHF 240'000.00");
 
     expect(pruefeAgDokGates({ ...ZWEI, ausgabebetragChf: '900' }).blocker.join(' ')).toContain('unter pari');
-    expect(pruefeAgDokGates({ ...ZWEI, ausgabebetragChf: "1'200", liberierungProzent: '50' }).blocker.join(' ')).toContain('Agio nur bei Volliberierung');
+
+    // Stufe 2 P1b (deklarierte fachliche Änderung 7.6.2026): Agio +
+    // Teilliberierung — das Agio ist VOLL zu leisten, teilliberierbar ist
+    // nur der Nennwert-Teil (Art. 632 Abs. 1 OR).
+    const teilAgio = agDokumentmappe({ ...ZWEI, ausgabebetragChf: "1'200", liberierungProzent: '50' });
+    expect(teilAgio.gates.blocker).toEqual([]);
+    const eaT = text(teilAgio, 'errichtungsakt');
+    // Nennwert-Teil: 200 × 1'000 × 50 % = 100'000; Agio: 200 × 200 = 40'000.
+    expect(eaT).toContain("Einlagen von gesamthaft CHF 100'000.00 (50 % des Nennwerts jeder Aktie) in Geld");
+    expect(eaT).toContain("Ausgabeagio von gesamthaft CHF 40'000.00 (CHF 200.00 je Aktie) vollständig in Geld geleistet");
+    expect(eaT).toContain('im Sinne von Art. 634b OR sofort zu erbringen');
+    expect(text(teilAgio, 'statuten')).toContain(
+      "zu 50 % liberiert (geleistete Einlagen: CHF 100'000.00); das Ausgabeagio von CHF 40'000.00 ist vollständig geleistet",
+    );
   });
 
   it('3.3: individuelle Liberierungsgrade — ZH-Zeilen je Gründer + effektive Summe; <20 % blockt', () => {
@@ -664,7 +689,36 @@ describe('AG — Fremdwährungs-Gründung (Etappe 3.1/D2)', () => {
       .blocker.join(' ')).toContain('Gegenwert von mindestens CHF 50\'000');
     expect(pruefeAgDokGates({ ...FW_BASIS, kursChf: '' }).blocker.join(' ')).toContain('Umrechnungskurs');
     expect(pruefeAgDokGates({ ...FW_BASIS, kursQuelle: '' }).blocker.join(' ')).toContain('Devisenmittelkurs');
-    expect(pruefeAgDokGates({ ...FW_BASIS, einlageArt: 'sacheinlage' }).blocker.join(' ')).toContain('Fremdwährung nur bei der reinen Bargründung');
+  });
+
+  it('Stufe 2 P1a: qualifizierte Gründung in Fremdwährung — Beträge in Kapitalwährung, Kurs-Basis geleistete Einlagen', () => {
+    // Deklarierte fachliche Änderung 7.6.2026: Erstausbau-Sperre aufgehoben.
+    const FW_SACH: AgDokAntworten = {
+      ...FW_BASIS,
+      einlageArt: 'sacheinlage',
+      sacheinlagen: [{
+        typ: 'sachgesamtheit', bezeichnung: 'eine Werkstatteinrichtung', belegDatum: '2026-06-01',
+        wertChf: "120'000", grundstueck: false, einlegerName: 'Anna Muster', aktienAnzahl: '120',
+        gutschriftChf: '', zustand: 'gebraucht, betriebsbereit, regelmässig gewartet',
+        imHrEingetragen: false, cheNr: '', aktivenChf: '', passivenChf: '', rueckwirkungDatum: '',
+      }],
+      revisorName: 'Revisia AG',
+    };
+    const m = agDokumentmappe(FW_SACH);
+    expect(m.gates.blocker).toEqual([]);
+    // Statuten-Klausel 634 IV in der Kapitalwährung
+    expect(text(m, 'statuten')).toContain("bewertet mit EUR 120'000.00");
+    expect(text(m, 'statuten')).toContain("120 Namenaktien zu EUR 1'000.00 ausgegeben");
+    const ea = text(m, 'errichtungsakt');
+    expect(ea).toContain("Bewertung EUR 120'000.00 für 120 Namenaktien");
+    // Kurs-Satz-Basis = geleistete Einlagen (120'000 EUR × 0.93)
+    expect(ea).toContain("dem Betrag von CHF 111'600.00");
+    expect(text(m, 'gruendungsbericht')).toContain("Bewertung der Sacheinlage mit EUR 120'000.00");
+    // Wert-Gate rechnet in der Kapitalwährung (Bewertung ≠ Aktien × Nennwert)
+    expect(pruefeAgDokGates({
+      ...FW_SACH,
+      sacheinlagen: [{ ...FW_SACH.sacheinlagen[0], wertChf: "100'000" }],
+    }).blocker.join(' ')).toContain("Bewertung EUR 100'000.00 muss 120 Aktien × EUR 1'000.00 (Nennwert) entsprechen");
   });
 
   it('CHF-Regression: ohne Weiche bleibt alles in CHF (kein Kurs-Satz)', () => {
@@ -743,5 +797,56 @@ describe('AG-Gates — Erstausbau-Grenzen + 632-Arithmetik', () => {
     expect(art['errichtungsakt']).toBe('entwurf');
     expect(art['vr-protokoll']).toBe('fertig');
     expect(art['hr-anmeldung']).toBe('fertig');
+  });
+});
+
+describe('AG — Stufe 2 P1 (Perfektion 7.6.2026): gemischte Teilliberierung + Agio qualifiziert', () => {
+  const SACHZEILE = {
+    typ: 'sachgesamtheit' as const, bezeichnung: 'eine Werkstatteinrichtung', belegDatum: '2026-06-01',
+    wertChf: "100'000", grundstueck: false, einlegerName: 'Anna Muster', aktienAnzahl: '100',
+    gutschriftChf: '', zustand: 'gebraucht, betriebsbereit, regelmässig gewartet',
+    imHrEingetragen: false, cheNr: '', aktivenChf: '', passivenChf: '', rueckwirkungDatum: '',
+  };
+
+  it('P1d: gemischte Teilliberierung — Bar-Teil 50 %, Sach-Aktien gelten voll; Urkunden-Text trennt', () => {
+    const m = agDokumentmappe({
+      ...BASIS,
+      einlageArt: 'gemischt',
+      aktienkapitalChf: "200'000", anzahlAktien: '200', liberierungProzent: '50',
+      gruender: [{ name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '200' }],
+      sacheinlagen: [SACHZEILE],
+      revisorName: 'Revisia AG',
+    });
+    expect(m.gates.blocker).toEqual([]);
+    const ea = text(m, 'errichtungsakt');
+    // Bar-Teil: 100 Aktien × 1'000 × 50 % = 50'000; Sach: 100 Aktien voll.
+    expect(ea).toContain("Auf 100 Namenaktien wurden Einlagen von gesamthaft CHF 50'000.00 (50 % des Nennwerts jeder dieser Aktien) in Geld");
+    expect(ea).toContain('Die Aktien aus Sacheinlage und Verrechnung gelten als voll liberiert.');
+    expect(ea).toContain('im Sinne von Art. 634b OR sofort zu erbringen');
+    // Statuten 626 I Ziff. 3: Betrag der geleisteten Einlagen gesamt (150'000).
+    expect(text(m, 'statuten')).toContain(
+      "im Umfang der geleisteten Einlagen von CHF 150'000.00 liberiert (Bareinlage-Aktien zu 50 % des Nennwerts; die Aktien aus Sacheinlage und Verrechnung gelten als voll liberiert)",
+    );
+  });
+
+  it('P1c: Agio + Sacheinlage — Wert-Gate rechnet auf dem Ausgabebetrag; Statuten legen den Ausgabebetrag offen', () => {
+    const SACH_AGIO: AgDokAntworten = {
+      ...BASIS,
+      einlageArt: 'sacheinlage',
+      ausgabebetragChf: "1'200",
+      sacheinlagen: [{ ...SACHZEILE, wertChf: "120'000" }],
+      revisorName: 'Revisia AG',
+    };
+    const m = agDokumentmappe(SACH_AGIO);
+    expect(m.gates.blocker).toEqual([]);
+    // Statuten-Klausel 634 IV legt bei Agio den Ausgabebetrag offen.
+    expect(text(m, 'statuten')).toContain("100 Namenaktien zu CHF 1'000.00 (Ausgabebetrag CHF 1'200.00 je Aktie) ausgegeben");
+    // Urkunde erklärt die Agio-Deckung durch die Sacheinlage.
+    expect(text(m, 'errichtungsakt')).toContain('Das Ausgabeagio ist durch die angerechneten Sacheinlagen bzw. Verrechnungsforderungen gedeckt');
+    // Wert-Gate: Bewertung = Aktien × AUSGABEBETRAG (nicht Nennwert).
+    expect(pruefeAgDokGates({
+      ...SACH_AGIO,
+      sacheinlagen: [{ ...SACHZEILE, wertChf: "100'000" }],
+    }).blocker.join(' ')).toContain("Bewertung CHF 100'000.00 muss 100 Aktien × CHF 1'200.00 (Ausgabebetrag) entsprechen");
   });
 });
