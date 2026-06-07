@@ -19,19 +19,38 @@ EINTRAEGE=(
   # ZPO-Anker um die Rechtsmittel-Artikel erweitert (Umbau 6.6.2026).
   "zpo|cc/2010/262|20250101|1|art_4,art_6,art_68,art_145,art_197,art_198,art_199,art_210,art_212,art_243,art_308,art_314,art_319,art_321"
   # SchKG-Anker um die Zuständigkeits-Karten-Pillen erweitert (Katalog-Split 6.6.2026).
-  "schkg|cc/11/529_488_529|20250101|1|art_17,art_46,art_56,art_63,art_84,art_272"
+  # Re-Pin 20250101→20260101 (§7-Nachverifikation 7.6.2026): alle engine-
+  # tragenden Artikel (46–53, 56, 63, 83–88, 166, 174, 250, 271–280) body-
+  # identisch; einzige Normänderung Art. 230 (10→20 T., nicht verdrahtet),
+  # neu art_222a (nicht verdrahtet). Anker +88/+166 (Verwirkungsfristen-Drift).
+  "schkg|cc/11/529_488_529|20260101|1|art_17,art_46,art_56,art_63,art_84,art_88,art_166,art_272"
   "arg|cc/1966/57_57_57|20230901|1|art_9,art_12,art_13,art_46"
-  # VMWG: 20251001-Filestore nicht abrufbar (nur SPA-Shell); 20250101 ist der
-  # letzte greifbare Stand. art_19_a existiert dort NICHT (nur art_19) —
-  # Diskrepanz zur fedlex.ts-Notiz, siehe quellen-register.md.
-  "vmwg|cc/1990/835_835_835|20250101|1|art_16,art_17,art_19"
+  # VMWG: Re-Pin 20250101→20251001 (§7-Nachverifikation 7.6.2026). Die alte
+  # «nur SPA-Shell»-Annahme war FALSCH — die Datei liegt OHNE «-N»-Suffix
+  # (n=0, Muster GebV SchKG). art_19_a existiert seit 1.10.2025 (V 21.3.2025,
+  # AS 2025 191): Staffel-Mitteilung neu in 19a, Index-Teil bleibt in 19 II;
+  # Art. 16/17 byte-identisch zu 20250101 (Teuerungs-Engine unberührt).
+  "vmwg|cc/1990/835_835_835|20251001|0|art_16,art_17,art_19,art_19_a"
   # StPO-Anker um die Straf-Zuständigkeits-Pillen erweitert (6.6.2026).
-  "stpo|cc/2010/267|20240101|1|art_31,art_129,art_301,art_379"
-  "vwvg|cc/1969/737_757_755|20210101|1|art_11"
+  # Re-Pin 20240101→20250401 (§7-Nachverifikation 7.6.2026, Auslöser AS 2025
+  # 178 [USG, nur Art. 269]): Gerichtsstands-Kaskade 31–42, Fristen/Wege
+  # 301/354–357/381–402/410 f. wortidentisch; einzig Art. 393 I lit. c neu
+  # gefasst (Sexualstrafrecht-Rev., AS 2024 27) — nur Fundstellen-Zitat.
+  "stpo|cc/2010/267|20250401|1|art_31,art_129,art_301,art_379"
+  # Re-Pin 20210101→20220701 (§7-Nachverifikation 7.6.2026): Art. 11/20
+  # byte-identisch; einzige Änderung Art. 66 II lit. d (EGMR, AS 2022 289).
+  # Künftige Konsolidierung 20270101 existiert, HTML noch leer — NICHT pinnen.
+  "vwvg|cc/1969/737_757_755|20220701|1|art_11"
   # BGG: bisher Ad-hoc-Cache — seit 6.6.2026 reproduzierbar gepinnt (html-1
-  # empirisch bestätigt, 196 kB; Grundlage bestimmeRechtsmittel + Dossier
+  # empirisch bestätigt; Grundlage bestimmeRechtsmittel + Dossier
   # bibliothek/recherche/bgg-beschwerde-engine.md).
-  "bgg|cc/2006/218|20250101|1|art_45,art_46,art_74,art_75,art_93,art_98,art_100,art_113"
+  # Re-Pin 20250101→20260401 (§7-Nachverifikation 7.6.2026, Auslöser AS 2026
+  # 99 = energierechtl. Beschleunigungserlass): nur Art. 83 z-bis/z-ter,
+  # 117 II, 132b (Wasserkraft — nicht verdrahtet); ALLE engine-tragenden
+  # Artikel (45–47, 51, 74, 75, 92 f., 98, 100, 113 ff.) wortidentisch.
+  # ACHTUNG: Das ist NICHT die «kleine BGG-Revision» (Botschaft 5.12.2025) —
+  # deren Monitoring im Verfallsregister bleibt offen!
+  "bgg|cc/2006/218|20260401|1|art_45,art_46,art_74,art_75,art_93,art_98,art_100,art_113"
   # VVG: gepinnt 6.6.2026 (html-2!, 200 kB; Kündigungs-Maske 3 — 35a/b/c
   # + Zwingend-Kataloge 97/98 am Wortlaut verifiziert).
   "vvg|cc/24/719_735_717|20240101|2|art_35_a,art_35_b,art_35_c,art_97,art_98"
