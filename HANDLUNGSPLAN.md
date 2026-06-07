@@ -1,13 +1,38 @@
-# Handlungsplan (Stand 6.6.2026 spätabends — 2. Fassung, auf Auftrag David)
+# Handlungsplan (Stand 7.6.2026 abends — 3. Fassung)
 
-Priorisiertes weiteres Vorgehen nach der Abend-Session (Art.-63-Fixes ·
-Feiertage-Doppelcheck · Katalog-Split · Rechtsmittel-Fahrplan · Bibliothek
-komplett · Gesamt-Check durch 2 unabhängige Review-Agents bestanden).
-Gepflegt wird dieser Plan NUR hier; erledigte Punkte durchstreichen oder
-löschen, Stand in STRUKTUR.md spiegeln.
+Priorisiertes weiteres Vorgehen. Gepflegt wird dieser Plan NUR hier;
+erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
+
+## §0 · LEITPRINZIP MEHRWERT-TEST (Daueranweisung David 7.6.2026 abends)
+
+Gebaut/behalten wird nur, was **echten Mehrwert über die bestehenden
+generischen Werkzeuge** liefert. Konkret für Fristen-Rechner: Hat ein
+Rechtsgebiet KEIN eigenes Berechnungs-Regime (kein Stillstand, keine
+Sonderunterbrechung, keine abweichende Berechnungs-/Zustellregel, keine
+Spezial-Gates), deckt der allgemeine Tagerechner es bereits ab — die
+geplante Karte wird GESTRICHEN oder als Preset/Hinweis in ein bestehendes
+Werkzeug gefaltet (Beispiel David: StPO-Fristen ohne spezielle
+Unterbrechung → Tagerechner genügt; Art. 89 Abs. 2 StPO kennt ja gerade
+KEINE Gerichtsferien). Analog für Beträge/Vorlagen: kein eigener Einstieg
+für etwas, das ein bestehendes Werkzeug mit einem Preset kann. Der Test
+gilt VOR jedem Neubau und rückwirkend für die ~80 geplanten Karten
+(→ Punkt B.18 Roadmap-Triage). Streichungen sind fachliche Entscheidungen:
+Regime-Freiheit erst am Gesetz verifizieren, dann streichen und die
+Begründung in KATALOG-ROADMAP.md festhalten.
 
 ## A · Entscheide, die nur David treffen kann (blockieren anderes)
 
+0. **Stand 7.6.2026 abends:** gepusht bis `4b5b9c3` (71 Commits, Token-Frage
+   gelöst — neues PAT im Keychain); danach lokal: Deploy-Bug-Check über das
+   Delta (35 Kandidaten → 14 Verifizierer) mit **2 HOCH-Fixes `0096c8d`
+   (BEIDE Zeitzonen-Datums-Bugs, feuerten auch in Europe/Zurich:
+   keVerfallDatum einen Tag falsch IM DOKUMENT; Kapitalband-5-J-Gate)** +
+   ICS-UID-Kollision + Footer-Free/Pro-Leichen + Redirect-Tests ·
+   **Katalog-Konsolidierung `357527b`** («ein Einstieg pro Rechtsfrage»,
+   Auftrag David: 35→28 sichtbare Karten, imKatalog:false-Mechanik,
+   FAHRPLAN-KATALOG-KONSOLIDIERUNG.md §6) · GmbH-Programm GESTARTET
+   (FAHRPLAN-GMBH-GRUENDUNG.md G0–G7, war ausdrücklich eingereiht).
+   4 Commits ungepusht; Deploy des Stands nach G-Programm + Davids Ja.
 1. ~~Push + DEPLOY-Ja~~ → **DEPLOYED 7.6.2026** (Davids Ja «bug check und
    dann deploy»): gesamter Stand `c24c761..2a3a6b2` (62 Commits — Praxis-
    Etappen 1–3 inkl. Fristenspiegel · Katalog-UI/Kacheln/Suche/BGE ·
@@ -74,8 +99,8 @@ löschen, Stand in STRUKTUR.md spiegeln.
    offen). OFFEN daraus: ZG-Beschwerde-Schnitt bestätigen · BGer-
    Abteilungsregel (Art. 33/34 BGerR) am Fedlex-Wortlaut verifizieren,
    dann in bestimmeRechtsmittel (Dossier §3, Rechtsöffnungs-Falle!).
-6. **Untermietvertrag** — Spezifikation `recherche/untermietvertrag.md`
-   (baufertig; Weiche in mietvertrag.ts existiert schon).
+6. ~~Untermietvertrag~~ → **GEBAUT** (6.6.2026, Weiche in mietvertrag.ts +
+   Katalog-Einstieg; 7.6. abends in die Mietvertrags-Karte KONSOLIDIERT).
 7. **Eheschutz + GlG in der Zuständigkeits-Engine** — Dossier
    `recherche/eheschutz-glg-zustaendigkeit.md`: 4. Verfahrensart
    `summarisch`, Streitsache Eheschutz (Art. 23/198 lit. a/271/314 Abs. 2),
@@ -192,6 +217,16 @@ löschen, Stand in STRUKTUR.md spiegeln.
    S8-Korrektur «nur signiert»-Irrtum). Verknüpfungs-Check beidseitig:
    Code↔Bibliothek 34+70 Pfade, 0 kaputt.
 
+18. **Roadmap-Triage nach §0-Mehrwert-Test** (NEU, Daueranweisung David
+   7.6.2026): alle ~80 geplanten Karten dreiteilen — (a) KEIN eigenes
+   Regime → streichen/falten (Erstkandidaten zu verifizieren: Straf-
+   Fristen [Art. 89 II StPO: keine Gerichtsferien — was bleibt, sind
+   Strafantrag 31 StGB + Verjährung als EIGENE Regime], Verwaltungs-/
+   Steuer-Fristen je nach VwVG-Stillstand Art. 22a, Datenschutz-/
+   Ausländerrecht-Fristen, Marken-Widerspruch) · (b) echter Mehrwert →
+   bleibt · (c) unklar → Regime-Recherche vor Bau. Ergebnis in
+   KATALOG-ROADMAP.md mit Begründung je Streichung.
+
 ## C · Pflege & Termine (Verfallsregister: `bibliothek/register/parameter-verfall.md`)
 
 10. **30.6.2026** — SG-GKV-Divergenz prüfen (Erinnerung existiert bereits).
@@ -212,8 +247,15 @@ löschen, Stand in STRUKTUR.md spiegeln.
     plausibilisieren (Hinweis statt stiller Akzeptanz).
 15a. Logik-Check 6.6. spätabends: leerer Ergebnis-Schritt im Wizard ohne
     Hinweis (Streitwert nachträglich geleert) · klage-vereinfacht-Verweis
-    ist BS-betitelt unabhängig vom Kanton (vorbestehend) · ungenutzte
-    @fontsource/fraunces-Dependency entfernen.
+    ist BS-betitelt unabhängig vom Kanton (vorbestehend) ·
+    ~~Fraunces-Dependency~~ (entfernt 7.6.).
+15b. Bug-Check 7.6. abends, begründet zurückgestellt: ZIP-Loop ohne
+    per-Dokument-Guard (abschrift latent) · engine.ts nummeriert VOR
+    Strich-Erkennung (kein Schema betroffen, latent) · FINMA-Begriffsliste
+    UI→Engine-Schicht (wird mit GmbH-G5 erledigt) · 4× MONATE-Array →
+    eine lib-Konstante · tote SEKTIONEN-Exports/onOeffnen-Prop ·
+    ISO-Handrollen in 2 Monitoring-Skripten. Für Abnahme notiert:
+    SG-Notariatstarif sagt «volle» weitere 100k, Code zählt ceil.
 16. Stabile Keys in 7 Listen-Editoren (Voll-Audit 5.6.) · Datepicker-
     Pfeiltasten (A11y) · Markenschriften in Vorlagen-PDFs ·
     Detailseiten-Titel an Katalog-Titel angleichen.
