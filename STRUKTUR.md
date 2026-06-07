@@ -37,7 +37,12 @@ in beiden Masken (SH-Sonderregel: HRegA beurkundet; UR/AI/BL «ohne Gewähr»).
 M-Befunde eingearbeitet: Wahlannahme-Index-IDs, 626-Ziff.-3-Einlagebetrag,
 Begründungs-Klarstellungen, CHF-Placeholder). Tests 975 grün (+22 neu),
 tsc/Lint/Build sauber. Katalog: beide Gründungs-Karten neu mit
-output pdf+docx. **Offen: Kapitalerhöhung (Auftrag David, eigener Zyklus).**
+output pdf+docx. · **Kapitalerhöhung 9c GEBAUT** (gleiche Nacht): Dossier
+`recherche/kapitalerhoehung-wortlaute.md` + Maske
+`/vorlagen/kapitalerhoehung` (AG/GmbH-Schalter; Beschluss-/Feststellungs-
+Urkunden ENTWURF, Zeichnungsscheine/Bericht/Anmeldung fertig;
+6-Monats-Verfalls-Gates; 781-Verweisketten; Katalog 35). Bug-Check §9:
+2 Agents, 0 HOCH, M/N-Befunde eingearbeitet; 985 Tests grün.
 
 ## Session 6.6.2026 abends (`8652e6b`…`4781ca7`, Aufträge David — ungepusht)
 

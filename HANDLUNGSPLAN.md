@@ -117,12 +117,25 @@ löschen, Stand in STRUKTUR.md spiegeln.
    OFFEN daraus: qualifizierte Gründung/Fremdwährung/Agio = Stufe 2 ·
    UR/AI/BL-Notariats-Links verifizieren · Notariats-Listen-PDFs datiert
    → Verfallsregister.
-9c. **Kapitalerhöhung AG/GmbH (Anweisung David 7.6.2026, in Arbeit):**
-   eigener Zyklus Recherche (ordentlich 650 ff. · Kapitalband 653s ff. ·
-   bedingt 653 ff. · GmbH 781; Zeichnungsschein 652 — SG/ZH-Muster liegen
-   in /tmp/muster/; 652 Abs. 3 aufgehoben, 3-Monats-Klausel = Usanz!) →
-   Dossier → Bau (Zeichnungsschein `fertig`; GV-/VR-Beschlüsse +
-   Statutenänderung beurkundungspflichtig → entwurf/Checkliste, §8).
+9c. ~~Kapitalerhöhung AG/GmbH~~ → **GEBAUT** (7.6.2026 nachts, Anweisung
+   David «mit research und allem»): Dossier
+   `recherche/kapitalerhoehung-wortlaute.md` (OR 650–653v/781 verbatim;
+   ZH/SG-Mustersuiten 16 Dok.; 651/652 III/652a/653h aufgehoben;
+   Negativbefund: kein amtl. KE-Anmeldeformular) · EINE Maske
+   `/vorlagen/kapitalerhoehung` mit Rechtsform-Schalter
+   (`lib/vorlagen/kapitalerhoehung.ts`): GV-/GsV-Beschluss +
+   VR-/GF-Feststellungen/Statutenänderung als ENTWURF (650 II/652g II,
+   §8), Zeichnungsscheine je Person (777a-II-Hinweis nur für
+   Neu-Gesellschafter, 781 III; Befristungs-Klausel als Usanz
+   offengelegt), Kapitalerhöhungsbericht, HR-Anmeldung mit
+   46/74-II-Beilagen · 6-Monats-Verfalls-Gates · Katalog 34→35 ·
+   Bug-Check §9: 2 Agents (4'608 Kombinationen / Wortlaut-Abgleich),
+   0 HOCH; eingearbeitet: M-Befunde (Einzel-Zeichnungs-Ganzzahl-Gate,
+   ZH/SG-Quellen-Präzisierung, 805-Abs.-3-Anker, Konventionalstrafen-
+   Kategorie, 777a-Header-Kopplung); 985 Tests grün. OFFEN (Stufe 2):
+   qualifizierte Erhöhung (Sach/Verrechnung/652d) · Bezugsrechts-Entzug ·
+   Kapitalband/bedingtes Kapital (653t/653b-Kataloge liegen verbatim) ·
+   Kapitalherabsetzung (SHAB-Gläubigerruf) als eigenes Vorhaben.
 
 ## C · Pflege & Termine (Verfallsregister: `bibliothek/register/parameter-verfall.md`)
 
