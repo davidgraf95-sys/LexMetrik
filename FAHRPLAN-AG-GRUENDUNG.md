@@ -60,7 +60,7 @@ Originale vor. Kein Funktionsausbau, nur Präzisierung:
 
 ## Etappe 1 — Statuten-Stufen kurz/lang (D18)
 
-- [ ] 1.1 Schalter `statutenUmfang: 'kurz' | 'lang'`; lang = amtlicher
+- [x] 1.1 Schalter `statutenUmfang: 'kurz' | 'lang'`; lang = amtlicher
   Volltext als Baustein-Katalog (GV-Befugnisse rev. inkl.
   Zwischendividende/Kapitalreserve-Rückzahlung · Einberufung/
   Traktandierung 20 T./10 %/5 % · Tagungsort/Ausland · virtuelle GV ·
@@ -71,12 +71,15 @@ Originale vor. Kein Funktionsausbau, nur Präzisierung:
   718 IV) · Revisions-Artikel · Aktienzertifikate · Zerlegung/
   Zusammenlegung · Aktienbuch · Reserven · Auflösung/Liquidation).
   Jeder Baustein einzeln am OR-Cache verifiziert (Norm-Anker!).
-- [ ] 1.2 Konsistenz: Kurz-Bausteine = Teilmenge (ein Katalog, Stufen-Flag
+- [x] 1.2 Konsistenz: Kurz-Bausteine = Teilmenge (ein Katalog, Stufen-Flag
   je Baustein — §5, keine Doppeltexte).
-- [ ] 1.3 Statuten-Klauseln aus Tabelle 1.2 (ag-gruendung.md), die der
-  Lang-Text braucht: GV-Präsidentenwahl-Variante (712 II → schaltet
-  Urkunden-/Protokoll-Logik!), Stichentscheid GV.
-- [ ] 1.4 Tests: Goldwerte je Stufe/Klausel-Kombination; Bug-Check §9.
+- [~] 1.3 ZURÜCKGESTELLT (Befund beim Bau 7.6.2026): Die ZH-Langvorlage
+  kennt KEINE GV-Präsidentenwahl-Variante (Selbstkonstituierung verbatim,
+  712 II) — Variante erst nötig, wenn eine Nicht-ZH-Vorlage sie verlangt.
+  Stichentscheid GV ist im Lang-Katalog enthalten (ZH verbatim, ASL37);
+  Abwahl-Option = Davids Abnahme-Entscheid. «Geschäftsjahr erstmals am»
+  (Lang-Vorlage) ebenfalls zurückgestellt (geteilter AS15-Baustein).
+- [x] 1.4 Tests: Goldwerte je Stufe/Klausel-Kombination; Bug-Check §9.
 
 ## Etappe 2 — Qualifizierte Gründung (D3, D4, D5) — grösster Nutzen
 
