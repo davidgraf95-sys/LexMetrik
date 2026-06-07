@@ -8,13 +8,18 @@ löschen, Stand in STRUKTUR.md spiegeln.
 
 ## A · Entscheide, die nur David treffen kann (blockieren anderes)
 
-1. **Push + DEPLOY-Ja (grosser Schub):** Seit dem letzten Deploy
-   (`c24c761`-Stand) liegen die komplette PRAXIS-Etappe 1+2 (.ics ·
-   Aktenzeichen · Permalinks · 3 Prefill-Brücken · Begründungs-Absatz),
-   Untermietvertrag-Einstieg, Hero-Texte, Rechtsmittel-Strecke-Fix,
-   Spruchkörper, N-1-Fix SOWIE die Katalog-UI-Session (Gebiets-Kacheln,
-   Suche, BGE-Verlinkung) ungepusht. VOR Deploy: Bug-Check §9 über beide
-   Stränge (Empfehlung), dann «push und deploy».
+1. ~~Push + DEPLOY-Ja~~ → **DEPLOYED 7.6.2026** (Davids Ja «bug check und
+   dann deploy»): gesamter Stand `c24c761..2a3a6b2` (62 Commits — Praxis-
+   Etappen 1–3 inkl. Fristenspiegel · Katalog-UI/Kacheln/Suche/BGE ·
+   8 Zuständigkeits-Fixes + B-1/B-2 · Streitwert · Betreibungskosten ·
+   Gründungs-Masken GmbH/AG · Design-Review) gepusht und auf
+   lexmetrik.vercel.app produktiv (Build Ready, Routen-Stichproben 200).
+   **Deploy-Bug-Check §9 davor:** Workflow mit 6 Strang-Reviewern (jeder
+   Befund 2× adversarial verifiziert) + Einzel-Review Betreibungskosten →
+   7 bestätigte Befunde gefixt (`2a3a6b2`, 1 HOCH: hartcodierte
+   Art.-142-Abs.-1-Zitierung im Begründungs-Absatz), 3 Roh-Befunde
+   adversarial verworfen; Tore: 953 Tests · Sweep 11'184 · Golden 65×
+   byte-gleich · 341 Zitate · Smoke.
 2. **Hosting & Zahlungsmittel (vor Login-/Pro-Phase):** Migration zu CH-Host
    (Empfehlung Infomaniak), Domain **lexmetrik.ch früh registrieren**;
    Zahlungssystem offen (PayPal raus) — Payrexx/Datatrans/TWINT prüfen.
