@@ -1300,11 +1300,11 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       ueberschrift: 'Übertragung der Aktien',
       text:
         'Die Übertragung der Namenaktien oder die Begründung einer Nutzniessung an Namenaktien bedarf der Genehmigung durch den Verwaltungsrat.\n' +
-        'Der Verwaltungsrat kann das Gesuch um Zustimmung ablehnen, wenn er im Namen der Gesellschaft dem Veräusserer anbietet, die Aktien zum wirklichen Wert im Zeitpunkt des Gesuches zu übernehmen, oder wenn der Erwerber nicht ausdrücklich erklärt, dass er die Aktien im eigenen Namen und auf eigene Rechnung erworben hat.\n' +
-        'Werden Aktien durch Erbgang, Erbteilung, eheliches Güterrecht oder Zwangsvollstreckung erworben, so kann die Gesellschaft das Gesuch um Zustimmung nur ablehnen, wenn sie dem Erwerber die Übernahme der Aktien zum wirklichen Wert anbietet.',
+        'Der Verwaltungsrat kann das Gesuch um Zustimmung ablehnen, wenn er im Namen der Gesellschaft dem Veräusserer anbietet, die Aktien für deren Rechnung, für Rechnung anderer Aktionäre oder für Rechnung Dritter zum wirklichen Wert im Zeitpunkt des Gesuches zu übernehmen, oder wenn der Erwerber nicht ausdrücklich erklärt, dass er die Aktien im eigenen Namen und auf eigene Rechnung erworben hat.\n' +
+        'Werden Aktien durch Erbgang, Erbteilung, eheliches Güterrecht oder Zwangsvollstreckung erworben, so kann die Gesellschaft das Gesuch um Zustimmung nur ablehnen, wenn sie dem Erwerber die Übernahme der Aktien zum wirklichen Wert anbietet. Der Erwerber kann verlangen, dass das Gericht am Sitz der Gesellschaft den wirklichen Wert bestimmt; die Kosten der Bewertung trägt die Gesellschaft.',
       includeIf: { feld: 'vinkulierung', eq: true },
       norm: 'Art. 685a und 685b OR',
-      begruendung: 'Aufgenommen, weil die Vinkulierung gewählt wurde – Wortlaut der wortgleichen amtlichen Muster ZH/SG/GL (Escape-Klausel und Sonderregel besondere Erwerbsarten).',
+      begruendung: 'Aufgenommen, weil die Vinkulierung gewählt wurde – Muster ZH/SG/GL; P5-Schärfung B4 (7.6.2026): Drei-Rechnungs-Formel nach Art. 685b Abs. 1 OR («für deren Rechnung, für Rechnung anderer Aktionäre oder für Rechnung Dritter» — SG/GL ausführlicher als die frühere Haus-Kürzung) und Bewertungs-/Kostensatz nach Art. 685b Abs. 5 OR (Gesetzeswortlaut «das Gericht», am Cache verifiziert; SG-Muster sagt «Richter»).',
     },
     // ── LANG-Stufe: Block «Generalversammlung» (ZH-Langvorlage) ─────────────
     {
