@@ -304,7 +304,11 @@ export function ZpoFristenForm() {
             stillstandAktiv={ergebnis.stillstandAktiv}
           />
           <ErgebnisAnzeige titel="ZPO-Fristberechnung (Art. 142 ff. ZPO)" ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, `Der Fristenlauf begann am ${ergebnis.diesAQuoISO.split('-').reverse().join('.')} (Art. 142 Abs. 1 ZPO).`)} />}
+          {/* Fristbeginn-Norm aus der Engine (§5): Tagesfrist → Art. 142
+              Abs. 1, Wochen-/Monats-/Jahresfrist → Abs. 2 (normverweise[0]).
+              Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert «Abs. 1» und
+              widersprach bei Monatsfristen dem eigenen Normen-Satz. */}
+          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, `Der Fristenlauf begann am ${ergebnis.diesAQuoISO.split('-').reverse().join('.')} (${ergebnis.normverweise[0].artikel}).`)} />}
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />

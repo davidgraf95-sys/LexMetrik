@@ -360,7 +360,10 @@ export function SchkgFristenForm() {
                 <ErgebnisAnzeige titel={a.titel} ergebnis={e} />
                 <IcsExportButton endISO={e.diesAdQuemISO} titel={`Fristende – ${a.titel}`}
                   beschreibung={e.ergebnis} dateiName="SchKG-Frist.ics" />
-                <BegruendungAbsatz text={begruendungsAbsatz(e, `Der Fristenlauf begann am ${e.diesAQuo} (Art. 31 SchKG i.V.m. Art. 142 Abs. 1 ZPO).`)} />
+                {/* Fristbeginn-Norm aus der Engine (§5): normverweise[1] ist
+                    Art. 142 Abs. 1 (Tagesfrist) bzw. Abs. 2 (Monats-/Jahres-
+                    frist). Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert. */}
+                <BegruendungAbsatz text={begruendungsAbsatz(e, `Der Fristenlauf begann am ${e.diesAQuo} (Art. 31 SchKG i.V.m. ${e.normverweise[1].artikel}).`)} />
               </div>
             );
           })}

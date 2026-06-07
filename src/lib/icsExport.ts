@@ -26,6 +26,12 @@ const falte = (zeile: string): string => {
   while (enc.encode(rest).length > 75) {
     let schnitt = 75 - (teile.length ? 1 : 0);
     while (schnitt > 1 && enc.encode(rest.slice(0, schnitt)).length > 75 - (teile.length ? 1 : 0)) schnitt--;
+    // Nie mitten im Surrogate-Paar schneiden (Deploy-Bug-Check 7.6.2026,
+    // NIEDRIG): slice() arbeitet in UTF-16-Code-Units — endet der Schnitt
+    // auf einem High-Surrogate (z. B. Emoji), entstünden zwei einzelne
+    // Lone-Surrogates und damit ungültiges UTF-8 im VCALENDAR.
+    const code = rest.charCodeAt(schnitt - 1);
+    if (schnitt > 1 && code >= 0xd800 && code <= 0xdbff) schnitt--;
     teile.push(rest.slice(0, schnitt));
     rest = rest.slice(schnitt);
   }

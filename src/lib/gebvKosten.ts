@@ -31,7 +31,12 @@ export type GebvErgebnis = Berechnungsergebnis & {
 };
 
 const N = (artikel: string, bemerkung?: string): Normverweis => ({ artikel, bemerkung });
-const chf = (n: number) => `CHF ${n.toLocaleString('de-CH', { minimumFractionDigits: n % 1 ? 2 : 0 })}`;
+// Rappen-Rundung der Promille-Bänder (Deploy-Bug-Check 7.6.2026, MITTEL):
+// 2 ‰/5 ‰ erzeugten >2 Dezimalstellen. Hauskonvention round2 (wie
+// verzugszins.ts); ob amtlich auf 0.05 zu runden wäre, ist als
+// Grundsatzfrage für David offengelegt (HANDLUNGSPLAN A.4).
+const round2 = (n: number) => Math.round(n * 100) / 100;
+const chf = (n: number) => `CHF ${n.toLocaleString('de-CH', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 })}`;
 const pruefe = (n: number, was: string) => {
   if (!Number.isFinite(n) || n < 0) throw new Error(`${was}: Zahl ≥ 0 erforderlich.`);
 };
@@ -49,14 +54,14 @@ export function gebuehrPfaendung(forderungCHF: number): number {
 /** Art. 30 Abs. 2 – Verwertung (vor Kappung Abs. 3 / Minderung Abs. 4). */
 export function gebuehrVerwertungRoh(betragCHF: number): number {
   pruefe(betragCHF, 'Erlös/Schätzwert');
-  if (betragCHF > 100_000) return betragCHF * 0.002; // 2 ‰
+  if (betragCHF > 100_000) return round2(betragCHF * 0.002); // 2 ‰
   return staffel([[500, 10], [1_000, 50], [10_000, 100], [100_000, 200]], betragCHF);
 }
 
 /** Art. 19 Abs. 1 – Entgegennahme/Überweisung einer Zahlung. */
 export function gebuehrEinzahlung(summeCHF: number): number {
   pruefe(summeCHF, 'Summe');
-  return summeCHF <= 1_000 ? 5 : Math.min(summeCHF * 0.005, 500);
+  return summeCHF <= 1_000 ? 5 : Math.min(round2(summeCHF * 0.005), 500);
 }
 
 /** Art. 48 Abs. 1 – Entscheidgebühr Summarsachen: RAHMEN (nie Punktwert, §2). */
@@ -128,7 +133,7 @@ export function berechneBetreibungskosten(input: GebvEingabe): GebvErgebnis {
     pruefe(v.betragCHF, 'Erlös/Schätzwert');
     let g: number; let text: string;
     if (v.keinErwerber) {
-      g = Math.min(gebuehrVerwertungRoh(v.betragCHF) / 2, 1_000);
+      g = Math.min(round2(gebuehrVerwertungRoh(v.betragCHF) / 2), 1_000);
       text = `Kein Erwerber: Bemessung nach dem Schätzungswert ${chf(v.betragCHF)}, vermindert um die Hälfte, höchstens CHF 1 000 → ${chf(g)} (Art. 30 Abs. 4).`;
     } else {
       const roh = gebuehrVerwertungRoh(v.betragCHF);

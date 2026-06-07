@@ -91,9 +91,9 @@ function GebietPanel({ gebiet, karten, onSchliessen, onOeffnen }: {
   if (gruppen.length === 0) return null;
 
   return (
-    <section id={`panel-${gebiet.id}`} aria-label={gebiet.name}
+    <section id={`panel-${gebiet.id}`} aria-label={gebiet.name} tabIndex={-1}
       style={{ viewTransitionName: 'gebiet-panel' }}
-      className="lc-reveal-panel col-span-full scroll-mt-28 bg-surface rounded-2xl border border-line p-6 sm:p-8 space-y-6">
+      className="lc-reveal-panel col-span-full scroll-mt-28 bg-surface rounded-2xl border border-line p-6 sm:p-8 space-y-6 focus:outline-none">
       <div className="flex items-start justify-between gap-4">
         <div className="space-y-1">
           <h3 className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{sansAmp(gebiet.name)}</h3>
@@ -343,6 +343,21 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
       ?.scrollIntoView({ block: 'start', behavior: ruhig ? 'auto' : 'smooth' });
   }, [offenGebiet]);
 
+  // Fokus-Verwaltung des Kachel↔Panel-Tauschs (Deploy-Bug-Check 7.6.2026,
+  // MITTEL/a11y): das fokussierte Element verschwindet beim Öffnen wie beim
+  // Schliessen aus dem DOM, der Fokus fiel auf <body>. Beim Öffnen erhält
+  // das Panel den Fokus (tabIndex -1), beim Schliessen wieder die Kachel.
+  const vorherOffen = useRef<string | null>(null);
+  useEffect(() => {
+    const vorher = vorherOffen.current;
+    vorherOffen.current = offenGebiet;
+    if (offenGebiet) {
+      document.getElementById(`panel-${offenGebiet}`)?.focus({ preventScroll: true });
+    } else if (vorher) {
+      document.getElementById(`kachel-${vorher}`)?.focus({ preventScroll: true });
+    }
+  }, [offenGebiet]);
+
   // «/» fokussiert das Suchfeld (Etappe 1.4) — kein neues UI-Muster, nur das
   // bestehende Feld bedienbarer; Eingabefelder bleiben unberührt.
   const suchFeldDesktop = useRef<HTMLInputElement>(null);
@@ -446,7 +461,10 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
           label: x.gr.label,
           eintraege: x.sektionen.map((sx) => ({
             id: sx.g.id, title: sx.g.name,
-            anzahl: ansicht === 'verfuegbar' ? sx.karten.length : sx.karten.filter(istVerfuegbar).length || sx.karten.length,
+            // Zähler = Panel-Inhalt (Deploy-Bug-Check 7.6.2026, MITTEL):
+            // im Tab «Gesamter Katalog» zählte die Seitenleiste nur die
+            // Verfügbaren und widersprach Kachel + Panel (§8).
+            anzahl: sx.karten.length,
           })),
         }))}
         aktiveSektion={offenGebiet}

@@ -6,6 +6,7 @@ import { IcsExportButton } from '../IcsExportButton';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { KANTONE } from '../../lib/kantone';
 import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
+import { useLocale, fedlexLokalisiert } from '../locale';
 import { icsSammel } from '../../lib/icsExport';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { FSP_LINK_SPEC } from '../../lib/rechnerPermalinks';
@@ -46,7 +47,11 @@ const NATUR_LABEL: Record<Fristnatur, string> = {
 };
 
 function NormPill({ normRef }: { normRef: string }) {
-  const url = fedlexLinkFuerArtikel(normRef);
+  // Locale-Lokalisierung wie NormLink/RechnerKopf (Deploy-Bug-Check
+  // 7.6.2026, MITTEL: war der einzige Rechner ohne fedlexLokalisiert).
+  const { locale } = useLocale();
+  const roh = fedlexLinkFuerArtikel(normRef);
+  const url = roh ? fedlexLokalisiert(roh, locale) : null;
   return url ? (
     <a href={url} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700"
       title={`${normRef} auf Fedlex öffnen`}>{normRef}</a>
@@ -70,7 +75,11 @@ function ZeileAnzeige({ z }: { z: SpiegelZeile }) {
         {z.status === 'berechnet' || (z.status === 'bedingt' && z.endeText) ? (
           <>
             <span className="num text-body-l font-semibold text-ink-900 whitespace-nowrap">{z.endePraefix ?? 'bis'} {z.endeText}</span>
+            {/* Wartefrist («frühestens ab»): keine 3-Tage-VORfrist-Erinnerung —
+                Mahnung vor dem frühestmöglichen Termin wäre richtungsverkehrt
+                (Deploy-Bug-Check 7.6.2026, NIEDRIG). */}
             <IcsExportButton endISO={z.endeISO} titel={z.label} className="lc-btn-outline lc-btn-sm"
+              vorfristTage={z.fristnatur === 'wartefrist' ? 0 : 3}
               dateiName={`${z.key}.ics`} beschreibung={`${z.normRef} — LexMetrik Fristenspiegel`} />
           </>
         ) : (

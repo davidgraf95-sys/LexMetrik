@@ -26,7 +26,10 @@ löschen, Stand in STRUKTUR.md spiegeln.
    (Zugang [Ist] vs. Beendigung) · Sperrtage-ANZEIGE-Konvention ·
    3 Export-Antworten (Verzugszins-Hinweis kürzen? DOCX-Standardannahmen?
    Bausteinprotokoll in Exporte?) · BGG-Dossier «Offene Fragen» 1–7 (V-1
-   Eheschutz-Warnung ist seit 6.6.2026 als WARNUNG verdrahtet — Abnahme).
+   Eheschutz-Warnung ist seit 6.6.2026 als WARNUNG verdrahtet — Abnahme) ·
+   **GebV-SchKG-Promille-Rundung** (Deploy-Bug-Check 7.6.2026: 2 ‰/5 ‰
+   jetzt nach Hauskonvention auf 0.01 gerundet [round2]; ob amtlich 0.05
+   gälte, ist Fachfrage — GebV nennt keine Regel).
 
 ## B · Baufertig spezifiziert (Reihenfolge = Empfehlung)
 

@@ -48,8 +48,39 @@ describe('Begründungs-Absatz (lib/begruendung.ts)', () => {
       ereignis: '2025-07-10', einheit: 'tage', laenge: 10,
       modus: 'schkg_betreibungsferien', fristnatur: 'frist', kanton: 'ZH',
     });
-    const a2 = begruendungsAbsatz(schkg, `Der Fristenlauf begann am ${schkg.diesAQuo} (Art. 31 SchKG i.V.m. Art. 142 Abs. 1 ZPO).`);
+    const a2 = begruendungsAbsatz(schkg, `Der Fristenlauf begann am ${schkg.diesAQuo} (Art. 31 SchKG i.V.m. ${schkg.normverweise[1].artikel}).`);
     expect(a2).toContain('11.07.2025');
     expect(a2).toContain('Art. 63 SchKG');
+    expect(a2).toContain('Art. 142 Abs. 1 ZPO'); // Tagesfrist → Abs. 1
+  });
+
+  // Deploy-Bug-Check 7.6.2026 (HOCH): Der Fristbeginn-Zusatz der Formulare
+  // war auf «Art. 142 Abs. 1 ZPO» hartcodiert — bei Wochen-/Monats-/Jahres-
+  // fristen führt die Engine aber Abs. 2 (gleichbezeichneter Tag, BGer-
+  // Praxis) und der dies a quo IST der Ereignistag. Die Formulare beziehen
+  // die Norm jetzt aus normverweise; diese Tests sichern die Engine-Quelle.
+  it('Fristbeginn-Norm folgt der Fristeinheit: Monats-/Jahresfrist → Art. 142 Abs. 2 (nicht Abs. 1)', () => {
+    const monat = berechneFrist({
+      ereignis: '2025-04-15', einheit: 'monate', laenge: 1, verfahren: 'summarisch',
+      kanton: 'ZH', fristnatur: 'gesetzlich',
+    } as ZpoInput);
+    expect(monat.normverweise[0].artikel).toBe('Art. 142 Abs. 2 ZPO');
+    // BGer-Praxis: dies a quo = Ereignistag selbst (nicht Folgetag)
+    expect(monat.diesAQuoISO).toBe('2025-04-15');
+    const absatz = begruendungsAbsatz(monat, `Der Fristenlauf begann am 15.04.2025 (${monat.normverweise[0].artikel}).`);
+    expect(absatz).toContain('(Art. 142 Abs. 2 ZPO)');
+    expect(absatz).not.toContain('(Art. 142 Abs. 1 ZPO)');
+
+    const tage = berechneFrist({
+      ereignis: '2025-04-15', einheit: 'tage', laenge: 30, verfahren: 'ordentlich',
+      kanton: 'ZH', fristnatur: 'gesetzlich',
+    } as ZpoInput);
+    expect(tage.normverweise[0].artikel).toBe('Art. 142 Abs. 1 ZPO');
+
+    const schkgMonat = berechneSchkgFrist({
+      ereignis: '2025-01-31', einheit: 'monate', laenge: 1,
+      modus: 'schkg_betreibungsferien', fristnatur: 'frist', kanton: 'ZH',
+    });
+    expect(schkgMonat.normverweise[1].artikel).toBe('Art. 142 Abs. 2 ZPO');
   });
 });

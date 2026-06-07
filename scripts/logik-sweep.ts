@@ -179,7 +179,12 @@ for (const bund of [false, true]) {
   // T2 · Antragsfrist exakt gekoppelt
   const fk = r.fristen.filter((f) => f.kritisch).length;
   if (anliegen === 'anzeige' && antragsdelikt && fk !== 1) melde('T-I2a', input, 'Antragsdelikt ohne genau 1 kritische Frist');
-  if (!(anliegen === 'anzeige' && antragsdelikt) && r.fristen.length !== 0) melde('T-I2b', input, 'Fristen ohne Antragsdelikt/Anzeige');
+  // T-I2b nachgeführt 7.6.2026: M-6 (`6e1acb6`, deklarierte fachliche
+  // Änderung §6.3) gibt dem Gerichtsstands-Strang IMMER genau die
+  // 10-Tage-Beschwerdefrist Art. 41 Abs. 2 StPO als Frist-Objekt mit.
+  if (anliegen === 'gerichtsstand') {
+    if (!(r.fristen.length === 1 && r.fristen[0].norm === 'Art. 41 Abs. 2 StPO')) melde('T-I2b', input, 'Gerichtsstand ohne (genau) die Art.-41-II-Frist');
+  } else if (!(anliegen === 'anzeige' && antragsdelikt) && r.fristen.length !== 0) melde('T-I2b', input, 'Fristen ohne Antragsdelikt/Anzeige');
   // T3 · Übertretung ⇒ Behörden-Hinweis + Normen
   if (uebertretung !== r.behoerdeTyp.includes('ÜBERTRETUNGSSTRAFBEHÖRDE')) melde('T-I3', input, 'Übertretungs-Flag ↮ Behördentyp');
   // T4 · Bund-Weiche ⇒ Warnung; sonst keine

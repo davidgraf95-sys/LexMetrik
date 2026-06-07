@@ -84,4 +84,19 @@ describe('berechneBetreibungskosten: Posten-Summen + §2-Schnitt', () => {
     expect(() => berechneBetreibungskosten({ forderungCHF: 5_000 })).toThrow();
     expect(() => berechneBetreibungskosten({ forderungCHF: -1, zahlungsbefehl: {} })).toThrow();
   });
+
+  // Deploy-Bug-Check 7.6.2026 (MITTEL): Promille-Bänder erzeugten >2
+  // Dezimalstellen (z. B. 123 456.78 × 2 ‰ = 246.91356). Hauskonvention
+  // round2; ob amtlich 0.05 gälte, liegt als Grundsatzfrage bei David
+  // (HANDLUNGSPLAN A.4).
+  it('Promille-Bänder rappengenau gerundet (round2), auch nach Abs.-4-Halbierung', () => {
+    expect(gebuehrVerwertungRoh(123_456.78)).toBe(246.91);
+    expect(gebuehrEinzahlung(1_234.56)).toBe(6.17);
+    const e = berechneBetreibungskosten({
+      forderungCHF: 200_000,
+      verwertung: { betragCHF: 123_456.78, keinErwerber: true },
+    });
+    expect(Math.round(e.totalPunktwerteCHF * 100) / 100).toBe(e.totalPunktwerteCHF); // max. 2 Dezimalstellen
+    expect(e.totalPunktwerteCHF).toBe(123.46); // 246.91 ÷ 2 = 123.455 → round2
+  });
 });
