@@ -3,6 +3,17 @@
 Priorisiertes weiteres Vorgehen. Gepflegt wird dieser Plan NUR hier;
 erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 
+## §0a · LEITPRINZIP PERFEKTION VOR NEUBAU (Daueranweisung David 7.6.2026 abends)
+
+«Wir perfektionieren jetzt zuerst die bestehenden Engines und bauen
+gerade nichts Neues.» Konkret: KEINE neuen Engines/Rechner/Vorlagen/
+Features (auch nicht Zwei-Kategorien-Kapitalmodell AG-6, Mahnung,
+Eheschutz/GlG, BGG-Stufe 2, GmbH-G-Programm) — bis David den Neubau
+wieder öffnet. ERLAUBT bleibt alles, was Bestehendes besser macht:
+Bug-Fixes, Härtungen/Invarianten, Verifikationen am Gesetz,
+Vereinheitlichung der Rechner-Ausstattung, Dossier-/Recherche-Arbeit
+(Bau-Vorwissen), Abnahme-Vorbereitung.
+
 ## §0 · LEITPRINZIP MEHRWERT-TEST (Daueranweisung David 7.6.2026 abends)
 
 Gebaut/behalten wird nur, was **echten Mehrwert über die bestehenden
