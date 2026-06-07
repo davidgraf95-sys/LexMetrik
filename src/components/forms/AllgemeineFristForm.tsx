@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { EckdatenKachel, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { Tabs } from '../ui/Tabs';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   allgemeineFristErgebnis, tageZwischen, ALLG_FRIST_HINWEIS,
   rueckwaertsErgebnis, zustellHinweis, fristQueryKodieren, fristQueryLesen,
@@ -17,6 +17,7 @@ import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BegruendungAbsatz } from '../BegruendungAbsatz';
 import { begruendungsAbsatz, fristbeginnZusatz } from '../../lib/begruendung';
 import { IcsExportButton } from '../IcsExportButton';
+import { LinkTeilenButton } from '../LinkTeilenButton';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 
@@ -72,8 +73,6 @@ export function AllgemeineFristForm() {
   // P1.2 Zustell-Helfer (rein informativ)
   const [zustellArt, setZustellArt] = useState<ZustellArt | ''>('');
   const [zustellDatum, setZustellDatum] = useState('');
-  const [kopiertLink, setKopiertLink] = useState(false);
-  const navigate = useNavigate();
 
   const set = <K extends keyof State>(k: K, v: State[K]) => setForm((f) => ({ ...f, [k]: v }));
 
@@ -107,16 +106,6 @@ export function AllgemeineFristForm() {
 
   const zwischen: { kalendertage: number; werktageMoFr: number } | null =
     (() => { try { return tageZwischen(von, bis); } catch { return null; } })();
-
-  // P1.4 Exporte: .ics über den geteilten IcsExportButton (FAHRPLAN-PRAXIS 1.1).
-  const linkKopieren = () => {
-    const q = fristQueryKodieren(form);
-    navigate({ search: q }, { replace: true });
-    try {
-      void navigator.clipboard.writeText(`${location.origin}/rechner/tagerechner?${q}`);
-      setKopiertLink(true); setTimeout(() => setKopiertLink(false), 1600);
-    } catch { /* Clipboard nicht verfügbar */ }
-  };
 
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
   const [aktenzeichen, setAktenzeichen] = useState('');
@@ -274,9 +263,10 @@ export function AllgemeineFristForm() {
                   aktenzeichen={aktenzeichen}
                   query={() => `?${fristQueryKodieren(form)}`}
                   beschreibung={`Fristende: ${ergebnis.ergebnis} (Art. 77/78 OR).`} />
-                <button type="button" className="lc-btn-ghost lc-btn-sm" onClick={linkKopieren}>
-                  {kopiertLink ? 'Link kopiert ✓' : 'Link teilen'}
-                </button>
+                {/* Vereinheitlichung 7.6.2026 (Auftrag David): geteilter
+                    LinkTeilenButton statt Eigenbau — führt im Gegensatz zum
+                    alten Knopf auch den Hash mit (Verfahrens-Tab!). */}
+                <LinkTeilenButton query={() => `?${fristQueryKodieren(form)}`} />
                 <p className="text-body-s text-ink-500">
                   {ALLG_FRIST_HINWEIS.replace(' den ZPO-Fristenrechner, für betreibungsrechtliche den SchKG-Fristenrechner verwenden.', ':')}{' '}
                   <Link to="/rechner/zpo-fristen" className="text-brass-700 no-underline hover:text-brass-600">ZPO-Fristen →</Link>{' · '}
