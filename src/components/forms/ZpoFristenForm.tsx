@@ -139,6 +139,12 @@ export function ZpoFristenForm() {
   const istTagesfrist = form.einheit === 'tage';
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
   const [aktenzeichen, setAktenzeichen] = useState('');
+  // EINE Quelle für Teilen-Link UND .ics-Rücklink (§5; Bug-Check 7.6.2026 N-2).
+  const zpoQuery = () => permalinkKodieren(ZPO_LINK_SPEC, {
+    ...form, erstreckungAn,
+    erstreckungLaenge: erstreckung.laenge, erstreckungEinheit: erstreckung.einheit,
+  });
+
   const pdfConfig: PdfDocConfig = {
     aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'ZPO-Fristberechnung',
@@ -325,15 +331,9 @@ export function ZpoFristenForm() {
             <PdfExportButton config={pdfConfig} />
             <IcsExportButton endISO={ergebnis.diesAdQuemISO} titel={icsTitel}
               aktenzeichen={aktenzeichen}
-              query={() => permalinkKodieren(ZPO_LINK_SPEC, {
-                ...form, erstreckungAn,
-                erstreckungLaenge: erstreckung.laenge, erstreckungEinheit: erstreckung.einheit,
-              })}
+              query={zpoQuery}
               beschreibung={ergebnis.ergebnis} dateiName="ZPO-Frist.ics" />
-            <LinkTeilenButton query={() => permalinkKodieren(ZPO_LINK_SPEC, {
-              ...form, erstreckungAn,
-              erstreckungLaenge: erstreckung.laenge, erstreckungEinheit: erstreckung.einheit,
-            })} />
+            <LinkTeilenButton query={zpoQuery} />
           </div>
         </div>
       )}

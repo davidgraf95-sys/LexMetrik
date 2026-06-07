@@ -1,6 +1,8 @@
+import { addYears, parseISO } from 'date-fns';
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
 import { assemble, nummeriereUeberschriftenAlsArtikel } from './engine';
 import { fmtCHF, fmtDatum, ganzePositive, zahl } from './datum';
+import { formatISO } from '../datumsUtils';
 import { agGruendungsunterlagen, type AgGruendungEingaben } from '../gruendungsunterlagen';
 import { ZEICHNUNGS_LABEL, type GmbhZeichnungsArt } from './gruendungGmbhDokumente';
 
@@ -535,15 +537,14 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     if (!a.kbEndeDatum) {
       blocker.push('Kapitalband: Ende der Ermächtigung datieren (Art. 653t Abs. 1 Ziff. 2 OR) – längstens fünf Jahre (Art. 653s Abs. 1 OR).');
     } else if (a.datum) {
-      const ende = new Date(a.kbEndeDatum);
-      const max = new Date(a.datum);
-      const tagVorher = max.getDate();
-      max.setFullYear(max.getFullYear() + 5);
-      // Bug-Check §9 MITTEL-2 (7.6.2026): setFullYear rollt den 29.2. eines
-      // Schaltjahrs auf den 1.3. — auf den letzten Tag des Vormonats
-      // (28.2.) klemmen, sonst ist die 5-Jahres-Grenze einen Tag zu lang.
-      if (max.getDate() !== tagVorher) max.setDate(0);
-      if (ende.getTime() > max.getTime()) {
+      // §2 Determinismus: reine Kalender-Arithmetik. Der frühere Mix aus
+      // new Date(iso) (parst UTC) und getDate()/setFullYear() (lokal) machte
+      // das Gate zeitzonenabhängig (Bug-Check 7.6.2026 HOCH-2: westlich von
+      // UTC passierten 5 Jahre + 1 Tag, in Europe/Zurich blockierte die
+      // DST-Grenze gültige Enddaten). addYears klemmt den 29.2. auf den
+      // 28.2. (Monatsfrist-Konvention); ISO-Strings vergleichen lexikografisch.
+      const max = formatISO(addYears(parseISO(a.datum), 5));
+      if (a.kbEndeDatum > max) {
         blocker.push('Kapitalband: Die Ermächtigung gilt für längstens FÜNF Jahre ab Beschluss (Art. 653s Abs. 1 OR) – Ende-Datum kürzen.');
       }
     }

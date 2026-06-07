@@ -149,6 +149,13 @@ describe('keVerfallDatum — 6-Monats-Frist (Monatsfrist-Konvention Art. 77 I Zi
     expect(keVerfallDatum('2026-02-30')).toBeNull();         // kein reales Datum
     expect(keVerfallDatum('')).toBeNull();
   });
+  it('zeitzonenfest: rein lokale Arithmetik (Bug-Check 7.6.2026 HOCH-1)', () => {
+    // Der frühere Date.UTC→addMonths(lokal)→toISOString(UTC)-Mix ergab in
+    // Europe/Zurich für den 15.1. den 14.7. und westlich von UTC für den
+    // 31.3. den 1.10. — die Erwartungswerte hier gelten in JEDER Zeitzone.
+    expect(keVerfallDatum('2026-01-15')).toBe('2026-07-15');
+    expect(keVerfallDatum('2026-03-31')).toBe('2026-09-30'); // 31.9. existiert nicht → Monatsletzter
+  });
   it('GV-Beschluss-ENTWURF nennt das berechnete «spätestens»-Datum', () => {
     const t = keDokumentmappe(AG).dokumente.find((d) => d.id === 'gv-beschluss')!
       .ergebnis.dokument.absaetze.map((a) => a.text).join('\n');

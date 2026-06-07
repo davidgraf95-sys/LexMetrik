@@ -37,6 +37,21 @@ const FUSSZEILE = 'Berechnet mit LexMetrik – automatisierte Orientierung, kein
 
 const esc = (t: string) => t.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
 
+// Deterministischer Kurz-Hash (djb2/xor, base36) für UID-Tokens, die über
+// 24 Zeichen gekappt werden — die Kappung allein verlor das Aktenzeichen-
+// Suffix und liess verschiedene Mandate auf DIESELBE UID kollidieren
+// (Bug-Check 7.6.2026 M-1; Kalender deduplizieren dann stumm).
+const kurzHash = (t: string): string => {
+  let h = 5381;
+  for (let i = 0; i < t.length; i++) h = ((h * 33) ^ t.charCodeAt(i)) >>> 0;
+  return h.toString(36);
+};
+
+const uidToken = (summary: string): string => {
+  const voll = summary.replace(/\W+/g, '') || 'frist';
+  return voll.length <= 24 ? voll : `${voll.slice(0, 24)}-${kurzHash(voll)}`;
+};
+
 // RFC 5545 §3.1: Zeilen über 75 Oktette falten (CRLF + Leerzeichen).
 const falte = (zeile: string): string => {
   const enc = new TextEncoder();
@@ -76,9 +91,11 @@ function veventZeilen(opts: IcsFrist): string[] {
     'BEGIN:VEVENT',
     // Titel-Token kann bei rein nicht-lateinischen Titeln leer werden →
     // deterministischer Fallback 'frist' (Review-Befund 6.6.2026, kosmetisch).
-    // UID aus dem VOLLEN Summary (inkl. Aktenzeichen): ohne Az byte-identisch
-    // zu vorher, mit Az kollisionsfrei je Mandat.
-    `UID:frist-${kompakt}-${summary.replace(/\W+/g, '').slice(0, 24) || 'frist'}@lexmetrik`,
+    // UID aus dem VOLLEN Summary (inkl. Aktenzeichen). Tokens ≤ 24 Zeichen
+    // bleiben byte-identisch zu vorher (Re-Importe/Anker stabil); längere
+    // erhalten einen Kurz-Hash des VOLLEN Tokens, sonst kollidieren Mandate,
+    // deren Az erst nach Zeichen 24 divergiert (Bug-Check 7.6.2026 M-1).
+    `UID:frist-${kompakt}-${uidToken(summary)}@lexmetrik`,
     `DTSTAMP:${kompakt}T000000Z`,
     `DTSTART;VALUE=DATE:${kompakt}`,
     `DTEND;VALUE=DATE:${folgetag}`,

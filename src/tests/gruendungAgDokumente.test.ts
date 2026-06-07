@@ -943,6 +943,13 @@ describe('AG — Stufe 2 P3 (Perfektion 7.6.2026): Statuten-Zusatzklauseln', () 
     // (29.2.2028 + 5 J. = 28.2.2033, NICHT 1.3.2033).
     expect(pruefeAgDokGates({ ...KB, datum: '2028-02-29', kbEndeDatum: '2033-03-01' }).blocker.join(' ')).toContain('längstens FÜNF Jahre');
     expect(pruefeAgDokGates({ ...KB, datum: '2028-02-29', kbEndeDatum: '2033-02-28' }).blocker).toEqual([]);
+
+    // Bug-Check 7.6.2026 HOCH-2: UTC-Parse + lokale Mutation war zeitzonen-
+    // abhängig — in Europe/Zurich blockierte die DST-Grenze das exakt
+    // 5-jährige Ende (31.3.2024 → 31.3.2029 GÜLTIG), westlich von UTC
+    // passierten 5 Jahre + 1 Tag. Erwartungswerte gelten in JEDER Zeitzone.
+    expect(pruefeAgDokGates({ ...KB, datum: '2024-03-31', kbEndeDatum: '2029-03-31' }).blocker).toEqual([]);
+    expect(pruefeAgDokGates({ ...KB, datum: '2024-03-31', kbEndeDatum: '2029-04-01' }).blocker.join(' ')).toContain('längstens FÜNF Jahre');
   });
 
   it('Kapitalband beide Richtungen (mit Revisionsstelle): Klausel + Untergrenze-Gate', () => {

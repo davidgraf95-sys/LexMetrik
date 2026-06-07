@@ -152,6 +152,14 @@ export function MietrechtForm() {
 
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
   const [aktenzeichen, setAktenzeichen] = useState('');
+  // EINE Quelle für Teilen-Link UND .ics-Rücklink (§5; Muster FristenspiegelForm
+  // spiegelQuery — Bug-Check 7.6.2026 N-2: zwei Literale driften bei Spec-Erweiterung).
+  const mietQuery = () => permalinkKodieren(MR_LINK_SPEC, {
+    art, objekt, partei, zugang, kanton, quelle, monate, ohneDez,
+    mietbeginn: mietbeginn || undefined, fristMonate: fristMonate || undefined,
+    formular, familienwohnung, separat, zustimmung, zaZugang: zaZugang || undefined,
+  });
+
   const pdfConfig: PdfDocConfig = {
     aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Mietrecht – Kündigungstermin-Berechnung',
@@ -306,18 +314,10 @@ export function MietrechtForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={() => permalinkKodieren(MR_LINK_SPEC, {
-              art, objekt, partei, zugang, kanton, quelle, monate, ohneDez,
-              mietbeginn: mietbeginn || undefined, fristMonate: fristMonate || undefined,
-              formular, familienwohnung, separat, zustimmung, zaZugang: zaZugang || undefined,
-            })} />
+            <LinkTeilenButton query={mietQuery} />
             <IcsExportButton endISO={ergebnis.endterminISO} titel="Mietende (Kündigungstermin)"
               aktenzeichen={aktenzeichen}
-              query={() => permalinkKodieren(MR_LINK_SPEC, {
-                art, objekt, partei, zugang, kanton, quelle, monate, ohneDez,
-                mietbeginn: mietbeginn || undefined, fristMonate: fristMonate || undefined,
-                formular, familienwohnung, separat, zustimmung, zaZugang: zaZugang || undefined,
-              })}
+              query={mietQuery}
               beschreibung={ergebnis.ergebnis} dateiName="Mietende.ics" />
             {/* Brücke 3.1d: Vermieter-Kündigung an Wohn-/Geschäftsräumen →
                 Fristenspiegel (Anfechtung/Erstreckung parallel, vorbefüllt) */}

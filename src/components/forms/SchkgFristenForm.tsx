@@ -198,6 +198,13 @@ export function SchkgFristenForm() {
 
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
   const [aktenzeichen, setAktenzeichen] = useState('');
+  // EINE Quelle für Teilen-Link UND .ics-Rücklinks (§5; Bug-Check 7.6.2026 N-2).
+  const schkgQuery = () => permalinkKodieren(SCHKG_LINK_SPEC, {
+    ...form, phase, presetKey: aktiv?.key, override: override || undefined,
+    hemmungAn: hemmung.an, hemmungVon: hemmung.von || undefined, hemmungBis: hemmung.bis || undefined,
+    rsAn: rechtsstillstand.an, rsVon: rechtsstillstand.von || undefined, rsBis: rechtsstillstand.bis || undefined,
+  });
+
   const pdfConfig: PdfDocConfig = {
     aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'SchKG-Fristberechnung',
@@ -368,11 +375,7 @@ export function SchkgFristenForm() {
                 <ErgebnisAnzeige titel={a.titel} ergebnis={e} />
                 <IcsExportButton endISO={e.diesAdQuemISO} titel={`Fristende – ${a.titel}`}
                   aktenzeichen={aktenzeichen}
-                  query={() => permalinkKodieren(SCHKG_LINK_SPEC, {
-                    ...form, phase, presetKey: aktiv?.key, override: override || undefined,
-                    hemmungAn: hemmung.an, hemmungVon: hemmung.von || undefined, hemmungBis: hemmung.bis || undefined,
-                    rsAn: rechtsstillstand.an, rsVon: rechtsstillstand.von || undefined, rsBis: rechtsstillstand.bis || undefined,
-                  })}
+                  query={schkgQuery}
                   beschreibung={e.ergebnis} dateiName="SchKG-Frist.ics" />
                 {/* Fristbeginn-Norm aus der Engine (§5): normverweise[1] ist
                     Art. 142 Abs. 1 (Tagesfrist) bzw. Abs. 2 (Monats-/Jahres-
@@ -384,11 +387,7 @@ export function SchkgFristenForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={() => permalinkKodieren(SCHKG_LINK_SPEC, {
-              ...form, phase, presetKey: aktiv?.key, override: override || undefined,
-              hemmungAn: hemmung.an, hemmungVon: hemmung.von || undefined, hemmungBis: hemmung.bis || undefined,
-              rsAn: rechtsstillstand.an, rsVon: rechtsstillstand.von || undefined, rsBis: rechtsstillstand.bis || undefined,
-            })} />
+            <LinkTeilenButton query={schkgQuery} />
           </div>
         </div>
       )}

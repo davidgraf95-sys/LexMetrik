@@ -2,7 +2,7 @@ import { addMonths } from 'date-fns';
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
 import { assemble } from './engine';
 import { fmtCHF, fmtDatumLang, ganzePositive, zahl } from './datum';
-import { istGueltigesISO } from '../datumsUtils';
+import { formatISO, istGueltigesISO } from '../datumsUtils';
 import type { GmbhStatutKlausel } from '../gruendungsunterlagen';
 
 // ─── Kapitalerhöhung AG + GmbH (Plan 9c, Auftrag David 7.6.2026) ─────────────
@@ -100,8 +100,12 @@ export const KE_DEFAULTS: KeAntworten = {
 export function keVerfallDatum(gvDatumIso: string): string | null {
   if (!istGueltigesISO(gvDatumIso)) return null;
   const [j, m, t] = gvDatumIso.split('-').map(Number);
-  const ende = addMonths(new Date(Date.UTC(j, m - 1, t)), 6);
-  return ende.toISOString().slice(0, 10);
+  // §2 Determinismus: durchgehend LOKALE Komponenten (Konstruktion, addMonths,
+  // Formatierung). Der frühere Mix Date.UTC → addMonths (lokal) → toISOString
+  // (UTC) verschob das Fristende zeitzonenabhängig um einen Tag (Bug-Check
+  // 7.6.2026 HOCH-1: in Europe/Zurich ergab der 15.1. den 14.7. statt 15.7.).
+  const ende = addMonths(new Date(j, m - 1, t), 6);
+  return formatISO(ende);
 }
 
 // ── Gates (geteilte Arithmetik, §2) ─────────────────────────────────────────

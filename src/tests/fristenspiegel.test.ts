@@ -314,6 +314,20 @@ describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
       .toBe('UID:frist-20260707-FristendeBerufung@lexmetrik');
   });
 
+  it('UID hinter der 24-Zeichen-Kappung: Az-Suffix bleibt unterscheidend (Bug-Check 7.6.2026 M-1)', () => {
+    // Mandate, deren Token erst NACH Zeichen 24 divergiert: die blosse
+    // Kappung ergab byte-identische UIDs, der Kalender deduplizierte stumm
+    // (empirisches Repro des Bug-Checks) — der Kurz-Hash unterscheidet sie.
+    const basis = { titel: 'Berufungsfrist', endISO: '2026-09-15' };
+    const uid = (ics: string) => ics.match(/UID:[^\r]+/)![0];
+    const a = uid(icsFuerFrist({ ...basis, aktenzeichen: 'HG2026-000123-A' }));
+    const b = uid(icsFuerFrist({ ...basis, aktenzeichen: 'HG2026-000123-B' }));
+    expect(a).not.toBe(b);
+    // Kurz-Tokens (≤ 24 Zeichen) tragen KEINEN Hash — Bestands-UIDs stabil.
+    expect(uid(icsFuerFrist({ titel: 'Kurz', endISO: '2026-09-15', aktenzeichen: 'AB-1' })))
+      .toBe('UID:frist-20260915-KurzAB1@lexmetrik');
+  });
+
   it('Beschriftung: Permalink als URL-Property (URI, unescaped) + Zeile in der Beschreibung; Fusszeile immer', () => {
     const url = 'https://lexmetrik.vercel.app/rechner/zpo-fristen?e=2026-06-05&l=30';
     const out = icsFuerFrist({ titel: 'Fristende', endISO: '2026-07-07', url });
