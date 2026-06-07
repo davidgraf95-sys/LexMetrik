@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   istVerfuegbar,
-  ALLE_KARTEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN,
+  ALLE_KARTEN, KATALOG_KARTEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RECHTSBEREICH_SEKTIONEN,
   SEKTIONEN, VORLAGE_SEKTIONEN, karte,
 } from '../lib/startseiteConfig';
 import { CALCULATORS } from '../lib/calculators';
@@ -178,9 +178,21 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // recherche/gmbh-gruendung.md Teil 5 + ag-gruendung.md; §8 ohne Export) → 33.
   // + Kapitalerhöhung AG/GmbH als Dokumentmappe (Plan 9c, Auftrag David
   // 7.6.2026, Spez. recherche/kapitalerhoehung-wortlaute.md) → 35.
-  it('verfügbar = status !== geplant; Regressionszählung 35 (Stand 7.6.2026, + Kapitalerhöhung)', () => {
+  // Deklarierte Anpassung Konsolidierung 7.6.2026 (FAHRPLAN-KATALOG-
+  // KONSOLIDIERUNG): −3 Deep-Link-Karten GELÖSCHT (untermietvertrag,
+  // schkg-/straf-zustaendigkeit — reine Hash-Einstiege derselben Seiten),
+  // 4 Masken-Karten via imKatalog:false VERSTECKT (bleiben SSoT ihrer
+  // Seiten; Auffindbarkeit tragen die Themen-Einstiege) → 32 gebaut,
+  // davon 28 im sichtbaren Katalog.
+  it('verfügbar = status !== geplant; Regressionszählung 32 gebaut / 28 sichtbar (Stand 7.6.2026, Konsolidierung)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(35);
+    expect(verf.length).toBe(32);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(28);
+    // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
+    ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
+      expect(istVerfuegbar(k), k.id).toBe(true);
+      expect(k.href, k.id).toBeTruthy();
+    });
     expect(verf.every((k) => k.status !== 'geplant')).toBe(true);
     expect(ALLE_KARTEN.filter((k) => !istVerfuegbar(k)).every((k) => k.status === 'geplant')).toBe(true);
   });

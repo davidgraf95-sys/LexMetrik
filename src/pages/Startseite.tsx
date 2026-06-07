@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ALLE_KARTEN, RECHTSGEBIETE, istVerfuegbar } from '../lib/startseiteConfig';
+import { KATALOG_KARTEN, RECHTSGEBIETE, istVerfuegbar } from '../lib/startseiteConfig';
 import { Katalog } from '../components/Katalog';
 
 // EINE Hauptseite (FAHRPLAN-EINE-HAUPTSEITE, 7.6.2026) — Radikal-
@@ -11,9 +11,11 @@ import { Katalog } from '../components/Katalog';
 // Kennzahlen ohne Preisaussage (D-4, bis Monetarisierungs-Entscheid G1).
 
 export function Startseite() {
-  // Ehrliche Kennzahlen (§8), datengetrieben aus der Config (§5).
-  const verfuegbar = ALLE_KARTEN.filter(istVerfuegbar);
-  const gebiete = RECHTSGEBIETE.filter((g) => ALLE_KARTEN.some((k) => k.rechtsgebiet === g)).length;
+  // Ehrliche Kennzahlen (§8), datengetrieben aus der Config (§5) — gezählt
+  // wird der SICHTBARE Katalog (Konsolidierung 7.6.2026: Masken ohne eigene
+  // Karte stecken in ihren Themen-Einstiegen, nicht in der Zahl).
+  const verfuegbar = KATALOG_KARTEN.filter(istVerfuegbar);
+  const gebiete = RECHTSGEBIETE.filter((g) => KATALOG_KARTEN.some((k) => k.rechtsgebiet === g)).length;
 
   return (
     <div className="space-y-6">
@@ -33,7 +35,7 @@ export function Startseite() {
           </p>
           <p className="num text-body-s text-ink-500 flex flex-wrap items-baseline gap-x-5 gap-y-1">
             <span className="text-brass-700 font-medium">{verfuegbar.length} sofort verfügbar</span>
-            <span><span className="font-medium text-ink-900">{ALLE_KARTEN.length}</span> im Katalog</span>
+            <span><span className="font-medium text-ink-900">{KATALOG_KARTEN.length}</span> im Katalog</span>
             <span><span className="font-medium text-ink-900">{gebiete}</span> Rechtsgebiete</span>
           </p>
         </div>
@@ -41,7 +43,7 @@ export function Startseite() {
 
       {/* Register: der vollständige Katalog — Suche im Header (?q=),
           Gebiets-Panels (?gebiet=). */}
-      <Katalog karten={ALLE_KARTEN} />
+      <Katalog karten={KATALOG_KARTEN} />
 
       {/* Fuss: Methodik als EINE Zeile mit Link — die Langtexte leben
           auf /methodik (SSoT). */}

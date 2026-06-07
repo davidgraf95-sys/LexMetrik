@@ -121,5 +121,33 @@ erreichbar (Karten-Merges sind reine `startseiteConfig`-Pflege + Redirects).
 - **E3 Themen-Einstiege Kündigung** — bauen oder bei E1+E2 belassen?
 - Titel-Konvention E1.1: Wortlaute sind fachliche Aussagen → Abnahme-Welle.
 
-*Erstellt 7.6.2026 (Analyse: 3 Erkundungs-Agents; Belege in den
-Agent-Berichten der Session). Umsetzungsstand: NICHTS umgesetzt — reine Analyse.*
+## 6. Umsetzungsstand (7.6.2026 abends, Davids Delegation «mach was du für richtig hälst»)
+
+**UMGESETZT** (alle Tore grün: 1070 Tests · Lint 0 · tsc 0 · Golden 87/87
+byte-gleich · Sweep · Inventur related-0 · SSR-Sichtcheck aller Panels):
+
+- **E1.2** Funktions-Kennzeichen auf jeder Kachel: Overline `Gebiet · Rechner/Vorlage`.
+- **E1.3** entfiel — Fristenspiegel-Beschreibung legte die Orchestrierung schon offen.
+- **E2.4** Zuständigkeit 3→1 als ECHTER Karten-Merge (szenarien-Feld zeigt die
+  drei Rechtswege; Keywords/Kern-Normen der Split-Karten übernommen).
+- **E2.5** Mietvertrag 2→1 («Wohnen · Geschäft · Untermiete»).
+- **E2.6** Gründung 2→1 VERWORFEN (Abweichung): GmbH/AG sind zwei Werkzeuge,
+  die Rechtsform-Wahl ist eine echte juristische Entscheidung — eine
+  Vorschalt-Seite wäre ein Extra-Klick ohne Gewinn.
+- **E3.7/8** OHNE neue Weichen-Seiten umgesetzt (Abweichung, Subtraktion):
+  Themen-Karten «Kündigung & Fristen im Arbeitsverhältnis/Mietverhältnis»
+  (IDs kuendigung-sperrfristen/mietrecht bleiben — HäufigGebraucht/Brücken
+  stabil) + Masken-Direktlinks auf den Rechner-Seiten. Die 4 Masken-Karten
+  sind via NEU `imKatalog:false` + `KATALOG_KARTEN` versteckt, NICHT
+  gelöscht — sie bleiben SSoT ihrer Seiten (`karte(id)` im Seitenkopf).
+- Mechanik: gelöscht wurden nur die 3 reinen Hash-Deep-Link-Karten;
+  Goldliste misst deklariert den SICHTBAREN Katalog (7 Paare retargetet);
+  Zählung 32 gebaut / 28 sichtbar im Test gepinnt.
+
+**OFFEN für David:** Abnahme der neuen Titel-Wortlaute (fachliche Aussagen,
+Erstformulierung Claude) · E1.1 Verb-Titel-Konvention für die ÜBRIGEN Karten
+(bewusst zurückgestellt: Titeländerungen sind Such-/Goldliste-relevant,
+erst nach Davids Richtungs-Ja in einer Welle).
+
+*Erstellt + umgesetzt 7.6.2026 (Analyse: 3 Erkundungs-Agents; Belege in den
+Agent-Berichten der Session).*

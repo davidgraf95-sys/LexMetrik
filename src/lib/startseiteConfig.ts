@@ -47,6 +47,10 @@ interface BaseItem {
   related?: string[];     // verwandte Rechner UND Vorlagen (modusübergreifend)
   note?: string;          // Anzeige-Hinweis, Default «In Vorbereitung»
   icon?: string;          // bestehende Icon-Komponente (Kartenanatomie)
+  /** false = kein eigener Katalog-/Such-Eintrag (ein Themen-Einstieg über-
+      nimmt die Auffindbarkeit, FAHRPLAN-KATALOG-KONSOLIDIERUNG E3). Die
+      Karte bleibt SSoT für ihre Seite (Kopf, Normen, Formvorschrift). */
+  imKatalog?: false;
 }
 
 export interface RechnerCard extends BaseItem {
@@ -225,32 +229,6 @@ const KARTEN: Record<string, CalculatorCard> = {
     related: ['verzugszins', 'rechtsoeffnungsbegehren', 'tagerechner'],
     icon: 'clipboard',
   },
-  // Katalog-Split 6.6.2026 (Auftrag David): Der Zuständigkeitsrechner deckt
-  // drei Rechtswege ab (Zivil/SchKG/Straf, je eigene Engine). Statt EINER
-  // unterdeklarierten Karte erhält jeder Rechtsweg seinen Gebiets-Einstieg
-  // (Muster kuendigung-sperrfristen/lohnfortzahlung: Hash-Anker → Vorauswahl).
-  'schkg-zustaendigkeit': {
-    id: 'schkg-zustaendigkeit', modus: 'rechner', art: 'zuordnung', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
-    rechtsbereich: 'privat',
-    title: 'Zuständigkeit in der Betreibung (Ort · Stelle · Anliegen)',
-    description: 'Betreibungsort nach Art. 46–55 SchKG und zuständige Stelle (Betreibungsamt, Gericht oder Aufsichtsbehörde) für elf Anliegen – von der Einleitung über Rechtsöffnung und Arrest bis zur Beschwerde, mit Verwirkungsfristen-Hinweisen.',
-    status: 'entwurf',
-    norms: [
-      // Art. 46 SchKG – ordentlicher Betreibungsort (Wohnsitz/Sitz)
-      { label: 'Art. 46 SchKG', url: fedlexUrl('SchKG', '46'), verified: false },
-      // Art. 17 SchKG – Beschwerde an die Aufsichtsbehörde
-      { label: 'Art. 17 SchKG', url: fedlexUrl('SchKG', '17'), verified: false },
-      // Art. 84 SchKG – Rechtsöffnungsgericht
-      { label: 'Art. 84 SchKG', url: fedlexUrl('SchKG', '84'), verified: false },
-      // Art. 272 SchKG – Arrestgericht
-      { label: 'Art. 272 SchKG', url: fedlexUrl('SchKG', '272'), verified: false },
-    ],
-    href: '/rechner/zustaendigkeit#schkg',
-    keywords: ['Betreibungsort', 'Betreibungsamt', 'Rechtsöffnung', 'Arrest', 'Aufsichtsbeschwerde', 'Konkursgericht', 'Zuständigkeit',
-      'betreiben', 'Betreibung einleiten', 'Schuldner', 'Wohnsitz'],
-    related: ['zustaendigkeit', 'schkg-fristen'],
-    icon: 'scale',
-  },
   betreibungskosten: {
     id: 'betreibungskosten', modus: 'rechner', art: 'betrag', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',
@@ -265,20 +243,25 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 68 SchKG', url: fedlexUrl('SchKG', '68'), verified: false },
     ],
     href: '/rechner/betreibungskosten',
-    related: ['schkg-fristen', 'schkg-zustaendigkeit', 'verzugszins'],
+    related: ['schkg-fristen', 'zustaendigkeit', 'verzugszins'],
     keywords: ['Betreibungskosten', 'Gebühren', 'GebV', 'Zahlungsbefehl', 'Kosten Betreibung', 'Pfändungskosten', 'Rechtsöffnungsgebühr', 'Was kostet eine Betreibung', 'Art. 16', 'Art. 68'],
     icon: 'percent',
   },
   'kuendigung-sperrfristen': {
     id: 'kuendigung-sperrfristen', modus: 'rechner', art: 'frist', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
-    title: 'Arbeitsrecht – Fristen',
+    title: 'Kündigung & Fristen im Arbeitsverhältnis',
+    // Themen-Einstieg (Konsolidierung 7.6.2026, E3): die beiden Schreiben-
+    // Masken (AN/AG) haben keine eigenen Katalog-Karten mehr (imKatalog:false)
+    // — diese Karte trägt ihre Auffindbarkeit, die Rechner-Seite verlinkt sie.
     szenarien: [
       { label: 'Kündigungs- & Sperrfristen (Art. 335c/336c OR)', status: 'entwurf' },
+      { label: 'Kündigungsschreiben Arbeitnehmer:in (Vorlage)', status: 'entwurf' },
+      { label: 'Kündigungsschreiben Arbeitgeber:in mit Sperrfristen-Gate (Vorlage)', status: 'entwurf' },
       { label: 'Anfechtung missbräuchlicher Kündigung', status: 'geplant' },
       { label: 'Massenentlassung – Konsultationsfristen', status: 'geplant' },
     ],
-    description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis.',
+    description: 'Ordentliche Kündigungsfristen und Sperrfristen (Kündigung zur Unzeit) im Arbeitsverhältnis – mit Direkteinstieg zu den Kündigungsschreiben (Arbeitnehmer:in/Arbeitgeber:in).',
     status: 'entwurf',
     norms: [
       // Art. 335c OR – ordentliche Kündigungsfristen
@@ -291,19 +274,26 @@ const KARTEN: Record<string, CalculatorCard> = {
     // der Vorlage kuendigung-arbeitgeber — bei Gleichstand steht der RECHNER
     // zuoberst (Katalogposition; Logik-Check-Befund 6.6.2026).
     keywords: ['gekündigt', 'Kündigung', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär',
-      'Kündigung erhalten', 'Kündigungsfrist', 'Art. 336c', 'Art. 335c'],
+      'Kündigung erhalten', 'Kündigungsfrist', 'Art. 336c', 'Art. 335c',
+      // Schreiben-Masken (übernommen, E3)
+      'Kündigungsschreiben', 'Beendigungsdatum', 'Freistellung', 'kündigen'],
     related: ['lohnfortzahlung', 'arbeitsvertrag'],
     icon: 'document',
   },
   mietrecht: {
     id: 'mietrecht', modus: 'rechner', art: 'frist', rechtsgebiet: 'Miete',
     rechtsbereich: 'privat',
-    title: 'Mietrecht – Fristen',
+    title: 'Kündigung & Fristen im Mietverhältnis',
+    // Themen-Einstieg (Konsolidierung 7.6.2026, E3): Mieter-Schreiben und
+    // Vermieter-Checkliste ohne eigene Katalog-Karten (imKatalog:false) —
+    // diese Karte trägt ihre Auffindbarkeit, die Rechner-Seite verlinkt sie.
     szenarien: [
       { label: 'Kündigung, Termine & Zahlungsverzug', status: 'entwurf' },
+      { label: 'Kündigungsschreiben Mieter:in (Vorlage)', status: 'entwurf' },
+      { label: 'Vermieter-Kündigung: Checkliste amtliches Formular', status: 'entwurf' },
       { label: 'Anfechtung & Erstreckung', status: 'geplant' },
     ],
-    description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume – mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen.',
+    description: 'Kündigungstermine und -fristen für Wohn- und Geschäftsräume – mit Termin-Hierarchie, Formprüfung und ausserordentlichen Kündigungen; Direkteinstieg zum Kündigungsschreiben (Mieter:in) und zur Vermieter-Checkliste (amtliches Formular).',
     status: 'entwurf',
     norms: [
       // Art. 266a–o OR – Kündigungstermine/-fristen (Spanne: Anker auf führenden Artikel)
@@ -316,7 +306,10 @@ const KARTEN: Record<string, CalculatorCard> = {
     href: '/rechner/mietrecht',
     // 'Zahlungsrückstand' = Art. 257d OR (Norm-Pill der Karte) — Laien-Synonym
     keywords: ['Mietwohnung', 'Wohnung kündigen', 'Kündigungstermin', 'Vermieter', 'Mieter', 'Geschäftsraum',
-      'Zahlungsrückstand', 'Kündigung erhalten'],
+      'Zahlungsrückstand', 'Kündigung erhalten',
+      // Schreiben-Maske + Vermieter-Checkliste (übernommen, E3)
+      'Kündigungsschreiben', 'Familienwohnung', 'Nachmieter', 'ausziehen', 'Auszug',
+      'amtliches Formular', 'Anfechtung', 'Erstreckung', 'Art. 266l', 'Art. 271'],
     related: ['mietvertrag-wohnen'],
     icon: 'house',
   },
@@ -565,8 +558,17 @@ const KARTEN: Record<string, CalculatorCard> = {
   zustaendigkeit: {
     id: 'zustaendigkeit', modus: 'rechner', art: 'zuordnung', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
-    title: 'Zuständigkeit (Gericht · Verfahren · Schlichtung)',
-    description: 'Verfahrensart, Schlichtungspflicht und -behörde sowie örtlicher Gerichtsstand nach ZPO (Fassung 1.1.2025) – mit offenen Weichen für Handelsgericht und direkte Klage; konkrete Stelle mit Adresse für erfasste Kantone.',
+    title: 'Zuständigkeit (Zivilprozess · Betreibung · Strafverfahren)',
+    // Konsolidierung 7.6.2026 (FAHRPLAN-KATALOG-KONSOLIDIERUNG E2, Auftrag
+    // David «simplifizieren»): die drei Rechtsweg-Karten des Katalog-Splits
+    // vom 6.6. sind wieder EINE Karte — die Seite trägt die Rechtsweg-Weiche
+    // (#zivil/#schkg/#straf), die Szenarien-Zeilen machen die Abdeckung sichtbar.
+    szenarien: [
+      { label: 'Zivilprozess: Verfahrensart · Schlichtung · Gerichtsstand', status: 'entwurf' },
+      { label: 'Betreibung: Betreibungsort · zuständige Stelle (Art. 46 ff. SchKG)', status: 'entwurf' },
+      { label: 'Strafverfahren: Gerichtsstand · Behörde · Rechtsmittel', status: 'entwurf' },
+    ],
+    description: 'Welches Gericht, welche Behörde, welches Verfahren – für alle drei Rechtswege: Zivilprozess (Verfahrensart, Schlichtungspflicht und -behörde, örtlicher Gerichtsstand nach ZPO), Betreibung (Betreibungsort Art. 46–55 SchKG, zuständige Stelle, Rechtsmittelweg) und Strafverfahren (Tatort-Grundsatz, Strafbehörde, Anzeige-Fahrplan); konkrete Stelle mit Adresse für erfasste Kantone.',
     status: 'entwurf',
     norms: [
       // Schlichtung: Grundsatz, Verzicht, paritätische Behörden
@@ -577,6 +579,10 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 210 ZPO', url: fedlexUrl('ZPO', '210'), verified: false },
       // Verfahrensart
       { label: 'Art. 243 ZPO', url: fedlexUrl('ZPO', '243'), verified: false },
+      // Betreibungs-Rechtsweg: ordentlicher Betreibungsort
+      { label: 'Art. 46 SchKG', url: fedlexUrl('SchKG', '46'), verified: false },
+      // Straf-Rechtsweg: Gerichtsstand des Tatortes
+      { label: 'Art. 31 StPO', url: fedlexUrl('StPO', '31'), verified: false },
     ],
     href: '/rechner/zustaendigkeit',
     // Rechtsmittel-Strecke (bestimmeRechtsmittel: Berufung/Beschwerde samt
@@ -584,10 +590,13 @@ const KARTEN: Record<string, CalculatorCard> = {
     // Kanton verdrahtet — Keywords entsprechend (verifiziert 6.6.2026).
     keywords: ['Zuständigkeit', 'Gerichtsstand', 'Verfahrensart', 'Schlichtung', 'Schlichtungsbehörde', 'Streitwert', 'Handelsgericht',
       'Urteil', 'Urteil erhalten', 'Entscheid', 'Rechtsmittel', 'Berufung', 'Beschwerde', 'Scheidung',
-      'Gerichtskosten', 'örtliche Zuständigkeit', 'sachliche Zuständigkeit'],
-    // Katalog-Split 6.6.2026: SchKG- und Straf-Rechtsweg derselben Seite
-    // haben eigene Gebiets-Einstiege (Hash-Vorauswahl) — hier verlinkt.
-    related: ['zpo-fristen', 'schlichtungsgesuch', 'schkg-zustaendigkeit', 'straf-zustaendigkeit'],
+      'Gerichtskosten', 'örtliche Zuständigkeit', 'sachliche Zuständigkeit',
+      // Betreibungs-Rechtsweg (übernommen aus der aufgelösten Split-Karte)
+      'Betreibungsort', 'Betreibungsamt', 'Rechtsöffnung', 'Arrest', 'Aufsichtsbeschwerde', 'Konkursgericht',
+      'betreiben', 'Betreibung einleiten', 'Schuldner', 'Wohnsitz',
+      // Straf-Rechtsweg (übernommen aus der aufgelösten Split-Karte)
+      'Tatort', 'Staatsanwaltschaft', 'Strafanzeige', 'Strafantrag', 'Einsprache'],
+    related: ['zpo-fristen', 'schlichtungsgesuch', 'schkg-fristen'],
     icon: 'scale',
   },
   iprg: {
@@ -863,28 +872,6 @@ const KARTEN: Record<string, CalculatorCard> = {
     related: ['strafverfahren'],
     keywords: ['Haft', 'Untersuchungshaft', 'Haftverlängerung'],
   },
-  // Katalog-Split 6.6.2026: war «geplant», obwohl der Straf-Rechtsweg im
-  // Zuständigkeitsrechner längst live ist (§8: ehrliches Status-Modell) —
-  // jetzt Gebiets-Einstieg mit Rechtsweg-Vorauswahl per Hash-Anker.
-  'straf-zustaendigkeit': {
-    id: 'straf-zustaendigkeit', modus: 'rechner', art: 'zuordnung', rechtsgebiet: 'Strafrecht & Strafprozess',
-    rechtsbereich: 'straf',
-    title: 'Zuständigkeit im Strafverfahren (Gerichtsstand · Behörde · Rechtsmittel)',
-    description: 'Örtlicher Gerichtsstand und zuständige Strafbehörde nach StPO (Tatort-Grundsatz, Spezialforen), Anzeige-Fahrplan mit Strafantragsfrist sowie das statthafte Rechtsmittel mit Fristen.',
-    status: 'entwurf',
-    norms: [
-      // Art. 31 StPO – Gerichtsstand des Tatortes (Grundsatz)
-      { label: 'Art. 31 StPO', url: fedlexUrl('StPO', '31'), verified: false },
-      // Art. 301 StPO – Anzeigerecht
-      { label: 'Art. 301 StPO', url: fedlexUrl('StPO', '301'), verified: false },
-      // Art. 379 StPO – Rechtsmittel: Geltungsbereich (führender Artikel)
-      { label: 'Art. 379 StPO', url: fedlexUrl('StPO', '379'), verified: false },
-    ],
-    href: '/rechner/zustaendigkeit#straf',
-    related: ['strafverfahren', 'zustaendigkeit', 'strafantrag'],
-    keywords: ['Gerichtsstand', 'Tatort', 'Zuständigkeit', 'Staatsanwaltschaft', 'Strafanzeige', 'Strafantrag', 'Berufung', 'Beschwerde', 'Einsprache'],
-    icon: 'scale',
-  },
 
   // – Verwaltungsrecht —
   'baurecht-fristen': {
@@ -1121,7 +1108,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     schemaId: 'arbeitsvertrag',
     formvorschrift: 'Beidseitig zu unterzeichnen',
     output: ['pdf', 'docx'],
-    related: ['lohnfortzahlung', 'kuendigung-sperrfristen', 'kuendigung-arbeitgeber', 'arbeitszeugnis'],
+    related: ['lohnfortzahlung', 'kuendigung-sperrfristen', 'arbeitszeugnis'], // Konsolidierung E3: Masken-Ref über den Themen-Einstieg
     keywords: ['Arbeitsvertrag', 'Probezeit', 'Konkurrenzverbot', 'Überstunden', '13. Monatslohn', 'Art. 319', 'Art. 335c'],
     icon: 'document',
   },
@@ -1145,6 +1132,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
       { label: 'Art. 271 OR', url: fedlexUrl('OR', '271'), verified: false },
     ],
     href: '/vorlagen/kuendigung-vermieter',
+    imKatalog: false, // E3 — Einstieg über den Miet-Themen-Einstieg
     formvorschrift: 'Nur mit dem vom Kanton genehmigten amtlichen Formular gültig (Art. 266l Abs. 2 OR) – darum kein Export.',
     related: ['kuendigung-mieter', 'mietrecht', 'zustaendigkeit'],
     keywords: ['Kündigung', 'Vermieter', 'amtliches Formular', 'Familienwohnung', 'Art. 266l', 'Art. 266n', 'Anfechtung', 'Erstreckung'],
@@ -1168,6 +1156,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
       { label: 'Art. 264 OR', url: fedlexUrl('OR', '264'), verified: false },
     ],
     href: '/vorlagen/kuendigung-mieter',
+    imKatalog: false, // E3 — Einstieg über den Miet-Themen-Einstieg
     schemaId: 'kuendigung-mieter',
     formvorschrift: 'Schriftform bei Wohn-/Geschäftsräumen (Art. 266l Abs. 1 OR) — unterschreiben; Familienwohnung: beide unterschreiben.',
     output: ['pdf', 'docx'],
@@ -1175,35 +1164,13 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Kündigung', 'Mietvertrag', 'Wohnung kündigen', 'Kündigungstermin', 'Familienwohnung', 'Nachmieter', 'Art. 264', 'Art. 266m',
       'ausziehen', 'Auszug'],
   },
-  // Eigener Katalog-Einstieg für die gestern gebaute Untermiete-Weiche der
-  // Mietvertrags-Vorlage (Plan B.6, 6.6.2026): Hash-Deep-Link #untermiete
-  // wählt die Weiche vor (Muster Katalog-Split). Gleiches Schema (§5).
-  untermietvertrag: {
-    id: 'untermietvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Miete',
-    rechtsbereich: 'privat',
-    title: 'Untermietvertrag',
-    description: 'Untermietvertrag nach Art. 262 OR (geltende Fassung – die Revision wurde am 24.11.2024 abgelehnt): Hauptmietvertrag-Referenz, Zustimmungs-Klausel, Haftung gegenüber dem Hauptvermieter, Missbrauchs-Check des Untermietzinses und Warnhinweis zum Ende der Hauptmiete.',
-    status: 'entwurf',
-    norms: [
-      // Art. 262 OR – Untermiete (Zustimmung, Verweigerungsgründe, Haftung)
-      { label: 'Art. 262 OR', url: fedlexUrl('OR', '262'), verified: false },
-      // Art. 257e OR – Kaution (Untervermieter ist insoweit «Vermieter»)
-      { label: 'Art. 257e OR', url: fedlexUrl('OR', '257e'), verified: false },
-      // Art. 270 OR – Anfangsmietzins-Formular gilt auch für den Untermietzins
-      { label: 'Art. 270 OR', url: fedlexUrl('OR', '270'), verified: false },
-    ],
-    href: '/vorlagen/mietvertrag#untermiete',
-    schemaId: 'mietvertrag',
-    formvorschrift: 'Beidseitig zu unterzeichnen; Zustimmung des Hauptvermieters formfrei, aber beweishalber schriftlich.',
-    output: ['pdf', 'docx'],
-    related: ['mietvertrag-wohnen', 'kuendigung-mieter', 'mietrecht'],
-    keywords: ['Untermiete', 'Untermietvertrag', 'Untervermietung', 'Zustimmung Vermieter', 'Art. 262', 'WG-Zimmer', 'möbliertes Zimmer'],
-  },
   'mietvertrag-wohnen': {
     id: 'mietvertrag-wohnen', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Miete',
     rechtsbereich: 'privat',
-    title: 'Mietvertrag (Wohn- & Geschäftsräume)',
-    description: 'Mietvertrag mit Objekt-Weiche Wohn-/Geschäftsraum aus festen Bausteinen – Kautionsmaximum, Mindestfristen und Index-/Staffel-Voraussetzungen als harte Schranken; kantonale Formularpflicht für den Anfangsmietzins als offengelegtes Form-Gate.',
+    title: 'Mietvertrag (Wohnen · Geschäft · Untermiete)',
+    // Konsolidierung 7.6.2026 (E2): der Untermiete-Deep-Link-Einstieg (#untermiete,
+    // gleiches Schema) ist in diese Karte eingeschmolzen — die Weiche liegt im Wizard.
+    description: 'Mietvertrag mit Objekt-Weiche Wohn-/Geschäftsraum und Untermiete-Variante (Art. 262 OR) aus festen Bausteinen – Kautionsmaximum, Mindestfristen und Index-/Staffel-Voraussetzungen als harte Schranken; kantonale Formularpflicht für den Anfangsmietzins als offengelegtes Form-Gate.',
     status: 'entwurf',
     norms: [
       { label: 'Art. 253 OR', url: fedlexUrl('OR', '253'), verified: false },
@@ -1217,7 +1184,9 @@ const VORLAGEN: Record<string, VorlageCard> = {
     output: ['pdf', 'docx'],
     related: ['mietrecht', 'mietzinsanpassung', 'schlichtungsgesuch'],
     keywords: ['Mietvertrag', 'Kaution', 'Nebenkosten', 'Indexmiete', 'Staffelmiete', 'Formularpflicht', 'Art. 257e', 'Art. 269b',
-      'Mietzins'],
+      'Mietzins',
+      // Untermiete (übernommen aus der eingeschmolzenen Deep-Link-Karte)
+      'Untermiete', 'Untermietvertrag', 'Untervermietung', 'Zustimmung Vermieter', 'Art. 262', 'WG-Zimmer', 'möbliertes Zimmer'],
     icon: 'house',
   },
   darlehensvertrag: {
@@ -1453,6 +1422,9 @@ const VORLAGEN: Record<string, VorlageCard> = {
       { label: 'Art. 324 OR', url: fedlexUrl('OR', '324'), verified: false },
     ],
     href: '/vorlagen/kuendigung-arbeitgeber',
+    // E3: kein eigener Katalog-Eintrag — Einstieg über «Kündigung & Fristen
+    // im Arbeitsverhältnis»; Karte bleibt SSoT der Masken-Seite.
+    imKatalog: false,
     schemaId: 'kuendigung-arbeitgeber',
     formvorschrift: 'Formfrei (vorbehältlich vertraglicher Schriftform) — unterschreiben und an die Wohnadresse zustellen.',
     output: ['pdf', 'docx'],
@@ -1478,6 +1450,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
       { label: 'Art. 330a OR', url: fedlexUrl('OR', '330a'), verified: false },
     ],
     href: '/vorlagen/kuendigung-arbeitnehmer',
+    imKatalog: false, // E3 — Einstieg über den Arbeits-Themen-Einstieg
     schemaId: 'kuendigung-arbeitnehmer',
     formvorschrift: 'Formfrei (vorbehältlich vertraglicher Schriftform) – unterschreiben und nachweisbar zustellen.',
     output: ['pdf', 'docx'],
@@ -1542,7 +1515,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     schemaId: 'kuendigung-vertrag',
     formvorschrift: 'Formfrei (Versicherung: schriftlich oder textnachweisbar, Art. 35a VVG) — unterschreiben und nachweisbar zustellen.',
     output: ['pdf', 'docx'],
-    related: ['mahnung', 'verzugszins', 'kuendigung-arbeitnehmer', 'kuendigung-mieter'],
+    related: ['mahnung', 'verzugszins', 'kuendigung-sperrfristen', 'mietrecht'], // Konsolidierung E3: Masken-Refs → Themen-Einstiege
     keywords: ['Kündigung', 'Vertrag kündigen', 'Versicherung kündigen', 'Abo kündigen', 'Darlehen', 'Auftrag', 'Art. 35a VVG', 'Art. 404'],
   },
   mahnung: {
@@ -1761,3 +1734,8 @@ export function istVerfuegbar(item: { status: Status }): boolean {
 }
 
 export const ALLE_KARTEN: CatalogItem[] = [...Object.values(KARTEN), ...Object.values(VORLAGEN)];
+
+/** Karten mit eigenem Katalog-/Such-Eintrag (Konsolidierung 7.6.2026):
+ *  imKatalog:false-Karten bleiben SSoT ihrer Seiten und über die Themen-
+ *  Einstiege + Seiten-Links erreichbar, erscheinen aber nicht im Register. */
+export const KATALOG_KARTEN: CatalogItem[] = ALLE_KARTEN.filter((k) => k.imKatalog !== false);

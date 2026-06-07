@@ -61,7 +61,11 @@ export function RechnerKarte({ card, headingLevel = 'h3', onOeffnen }: Props) {
         {!aktiv && <span className="lc-badge lc-badge-soft">In Vorbereitung</span>}
       </div>
       <div>
-        <p className="lc-overline">{card.rechtsgebiet}</p>
+        {/* Funktions-Kennzeichen (Konsolidierung 7.6.2026, E1): Rechner
+            rechnet, Vorlage erzeugt ein Dokument — der Unterschied stand
+            bisher nur im CTA-Boden («Öffnen»/«Erstellen»). EIN Template-
+            Literal (SSR-Kommentar-Marker zerteilen sonst den Text). */}
+        <p className="lc-overline">{`${card.rechtsgebiet} · ${card.modus === 'vorlage' ? 'Vorlage' : 'Rechner'}`}</p>
         <H className="text-h3 font-display font-semibold text-ink-900 mt-1 text-balance tracking-tight">{card.title}</H>
       </div>
       {/* Beschrieb auf 3 Zeilen geklemmt — ruhiger Kartenrhythmus; der volle

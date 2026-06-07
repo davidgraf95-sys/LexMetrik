@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
+import { ALLE_KARTEN, KATALOG_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 import { sucheTrifft, sucheRang, kartePasst, LEERER_FILTER } from '../lib/katalogSuche';
 
 // ─── Suchbegriff-Goldliste (Fahrplan Katalog-UI, Etappe 0.1) ────────────────
@@ -20,7 +20,7 @@ const LAIE: Goldpaar[] = [
   ['Mahnung', 'verzugszins'],
   ['Testament', 'eigenhaendiges-testament'],
   ['Zahlungsbefehl', 'schkg-fristen'],
-  ['Untermiete', 'untermietvertrag'],
+  ['Untermiete', 'mietvertrag-wohnen'], // Konsolidierung E2: Deep-Link-Karte eingeschmolzen
   ['Pflichtteil', 'erbteilung'],
   ['Probezeit', 'arbeitsvertrag'],
   ['Kaution', 'mietvertrag-wohnen'],
@@ -29,15 +29,15 @@ const LAIE: Goldpaar[] = [
   ['Kündigung erhalten', 'kuendigung-sperrfristen'],
   ['Urteil erhalten', 'zustaendigkeit'],
   ['Scheidung', 'zustaendigkeit'],
-  ['betreiben', 'schkg-zustaendigkeit'],
+  ['betreiben', 'zustaendigkeit'], // Konsolidierung E2: Rechtsweg-Karten vereint
   ['Schulden', 'schkg-fristen'],
-  ['ausziehen', 'kuendigung-mieter'],
+  ['ausziehen', 'mietrecht'], // Konsolidierung E3: Maske über den Themen-Einstieg
   ['Mietzins', 'mietvertrag-wohnen'],
 ];
 
 const FACH: Goldpaar[] = [
   ['Rechtsvorschlag', 'schkg-fristen'],
-  ['Rechtsöffnung', 'schkg-zustaendigkeit'],
+  ['Rechtsöffnung', 'zustaendigkeit'], // Konsolidierung E2
   ['Sperrfrist', 'kuendigung-sperrfristen'],
   ['Gerichtsferien', 'zpo-fristen'],
   ['Stillstand', 'zpo-fristen'],
@@ -45,7 +45,7 @@ const FACH: Goldpaar[] = [
   ['Klagebewilligung', 'schlichtungsgesuch'],
   ['Mängelrüge', 'gewaehrleistung'],
   ['Ausschlagung', 'erbrecht-fristen'],
-  ['Arrest', 'schkg-zustaendigkeit'],
+  ['Arrest', 'zustaendigkeit'], // Konsolidierung E2
   ['Gerichtsstand', 'zustaendigkeit'],
   // Etappe 1.1 (6.6.2026): Fachbegriffe gemäss schkgPresets/Engine-Umfang
   ['Fortsetzungsbegehren', 'schkg-fristen'],
@@ -58,8 +58,8 @@ const NORM: Goldpaar[] = [
   ['Art. 336c', 'kuendigung-sperrfristen'],
   ['336c', 'kuendigung-sperrfristen'],
   ['Art. 257d', 'mietrecht'],
-  ['Art. 266l', 'kuendigung-vermieter'],
-  ['Art. 271', 'kuendigung-vermieter'],
+  ['Art. 266l', 'mietrecht'], // Konsolidierung E3
+  ['Art. 271', 'mietrecht'], // Konsolidierung E3
   ['Art. 335c', 'arbeitsvertrag'],
   ['Art. 367', 'gewaehrleistung'],
   ['Art. 104', 'verzugszins'],
@@ -74,7 +74,11 @@ const NORM: Goldpaar[] = [
   ['Art. 127 OR', 'verjaehrung'],
 ];
 
-const verfuegbar = ALLE_KARTEN.filter(istVerfuegbar);
+// Deklarierte Anpassung Konsolidierung 7.6.2026 (FAHRPLAN-KATALOG-
+// KONSOLIDIERUNG E2/E3): Die Goldliste misst die Auffindbarkeit im
+// SICHTBAREN Katalog — imKatalog:false-Karten erscheinen in der Suche
+// nicht, ihre Begriffe müssen die Themen-Einstiege treffen.
+const verfuegbar = KATALOG_KARTEN.filter(istVerfuegbar);
 const treffer = (q: string) => verfuegbar.filter((k) => sucheTrifft(k, q)).map((k) => k.id);
 
 describe.each([

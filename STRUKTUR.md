@@ -293,6 +293,27 @@ Fristwiederherstellung → ZPO-Fristen; Rechtsöffnung/Aberkennung/Kollokation
 Verzugszins-vertieft → Verzugszins; SV-Leistungsverwirkung → ATSG-Karte.
 `RechnerCard.szenarien` zeigt abgedeckte/geplante Szenarien auf der Karte.
 
+**Konsolidierung Runde 2 (7.6.2026, FAHRPLAN-KATALOG-KONSOLIDIERUNG,
+Auftrag David «simplifizieren — ein Einstieg pro Rechtsfrage»):** Katalog
+gesamt 115→112, verfügbar 35→32 gebaut, davon **28 sichtbar**. (a) GELÖSCHT
+die 3 reinen Hash-Deep-Link-Karten: untermietvertrag → Karte «Mietvertrag
+(Wohnen · Geschäft · Untermiete)»; schkg-/straf-zustaendigkeit → EINE Karte
+«Zuständigkeit (Zivilprozess · Betreibung · Strafverfahren)» mit szenarien
+(kehrt den Katalog-Split vom 6.6. um — Davids Delegation 7.6.). (b) NEU
+`imKatalog:false` (BaseItem) + `KATALOG_KARTEN`: die 4 Kündigungs-Masken
+(AN/AG/Mieter/Vermieter-Checkliste) behalten ihre Karten als SSoT der
+Masken-Seiten (`karte(id)`!), erscheinen aber nicht mehr im Register/Suche —
+ihre Auffindbarkeit tragen die Themen-Einstiege «Kündigung & Fristen im
+Arbeitsverhältnis» (ex «Arbeitsrecht – Fristen») und «… im Mietverhältnis»
+(ex «Mietrecht – Fristen»), deren Rechner-Seiten die Masken direkt verlinken.
+(c) Kachel-Overline zeigt jetzt `Gebiet · Rechner/Vorlage` (Funktions-
+Kennzeichen, EIN Template-Literal wegen SSR-Marker). Ausdrücklich NICHT
+gemergt: GmbH-/AG-Gründung (zwei Werkzeuge, echte Rechtsform-Entscheidung),
+Tagerechner↔ZPO/SchKG (gewollter Laien-/Fach-Doppeleinstieg), Rechner↔
+Vorlage-Paare (§5: eine Engine, zwei Ausgabeformen). Goldliste deklariert
+nachgezogen (misst jetzt KATALOG_KARTEN); Davids Abnahme der neuen
+Titel-Wortlaute offen.
+
 **Gliederung (seit Katalog-Ausbau):** beide Seiten = Rechtsgebiet-Sektionen
 (GebietSektion, feste §4-Reihenfolge OHNE Relevanz-Sortierung) mit
 Untergruppen Rechner/Vorlagen; innerhalb der Gruppen verfügbare vor
