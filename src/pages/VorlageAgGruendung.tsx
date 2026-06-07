@@ -189,6 +189,9 @@ export function VorlageAgGruendung() {
   const [statutenUmfang, setStatutenUmfang] = useState<AgDokAntworten['statutenUmfang']>(() => wahl(stand?.statutenUmfang, ['kurz', 'lang'], 'kurz'));
   const [vinkulierung, setVinkulierung] = useState(() => bool(stand?.vinkulierung, false));
   const [virtuelleGv, setVirtuelleGv] = useState(() => bool(stand?.virtuelleGv, false));
+  // Stufe 2 P2: Inhaberaktien-Voraussetzung (Art. 622 Abs. 1bis OR).
+  const [inhaberKotiert, setInhaberKotiert] = useState(() => bool(stand?.inhaberKotiert, false));
+  const [verwahrungsstelle, setVerwahrungsstelle] = useState(() => txt(stand?.verwahrungsstelle, ''));
   const [gjBeginn, setGjBeginn] = useState(() => txt(stand?.gjBeginn, AG_DOK_DEFAULTS.gjBeginn));
   const [gjEnde, setGjEnde] = useState(() => txt(stand?.gjEnde, AG_DOK_DEFAULTS.gjEnde));
 
@@ -285,6 +288,7 @@ export function VorlageAgGruendung() {
     domizilhalterName, domizilhalterAdresse,
     revisionsstelleName: rsName, revisionsstelleSitz: rsSitz,
     vinkulierung, virtuelleGv, statutenUmfang, gjBeginn, gjEnde,
+    inhaberKotiert, verwahrungsstelle,
     sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
     waehrung, kursChf, kursQuelle,
     lexKollerAuslandBeteiligt: lkAusland, lexKollerNeuerwerb: lkNeuerwerb, lexKollerGrundstueckErwerb: lkGrundstueck,
@@ -296,6 +300,7 @@ export function VorlageAgGruendung() {
   }), [weichen, firma, sitz, kanton, zweck, zweckErweiterung, ak, anzahl, nennwert, liberierung,
     gruender, vr, vertretungen, protokollfuehrer, bankName, bankOrt, rechtsdomizil,
     domizilhalterName, domizilhalterAdresse, rsName, rsSitz, vinkulierung, virtuelleGv,
+    inhaberKotiert, verwahrungsstelle,
     statutenUmfang, gjBeginn, gjEnde, sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
     waehrung, kursChf, kursQuelle, lkAusland, lkNeuerwerb, lkGrundstueck,
     ausgabebetrag, konstituierungInUrkunde, domizilNurAnmeldung,
@@ -341,7 +346,7 @@ export function VorlageAgGruendung() {
           einlageArt, besondereVorteile, optingOut, eigeneBueros, immobilienHauptzweck,
           inhaberaktien, fremdwaehrung, bankInUrkunde, chVertretung, leistungen,
           firma, sitz, kanton, zweck, zweckErweiterung, statutenUmfang, vinkulierung,
-          virtuelleGv, gjBeginn, gjEnde,
+          virtuelleGv, gjBeginn, gjEnde, inhaberKotiert, verwahrungsstelle,
           ak, anzahl, nennwert, liberierung, ausgabebetrag, waehrung, kursChf, kursQuelle,
           bankName, bankOrt, sacheinlagen, verrechnungen, vorteile, revisorName,
           gruender, vr, vertretungen, protokollfuehrer, sitzungBeginn, sitzungEnde, rsName, rsSitz,
@@ -516,6 +521,31 @@ export function VorlageAgGruendung() {
           </select>
         </label>
       </div>
+      {/* Stufe 2 P2: Inhaberaktien-Voraussetzung (Art. 622 Abs. 1bis OR) */}
+      {inhaberaktien && (
+        <div className="rounded-md border border-line p-3 space-y-3">
+          <p className="text-body-s font-medium text-ink-900">Inhaberaktien — Zulässigkeits-Voraussetzung (Art. 622 Abs. 1bis OR)</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Field label="Voraussetzung">
+              <select className={inputCls} value={inhaberKotiert ? 'kotiert' : 'bucheffekten'}
+                onChange={(e) => setInhaberKotiert(e.target.value === 'kotiert')}>
+                <option value="bucheffekten">Bucheffekten (BEG) + Verwahrungsstelle in der Schweiz</option>
+                <option value="kotiert">Beteiligungspapiere an einer Börse kotiert</option>
+              </select>
+            </Field>
+            {!inhaberKotiert && (
+              <Field label="Verwahrungsstelle (Name und Ort)">
+                <input className={inputCls} value={verwahrungsstelle}
+                  onChange={(e) => setVerwahrungsstelle(e.target.value)} placeholder="z. B. SIX SIS AG, Olten" />
+              </Field>
+            )}
+          </div>
+          <p className="text-xs text-ink-500 max-w-reading">
+            Inhaberaktien setzen Volliberierung voraus (Art. 683 OR) und schliessen Vinkulierung und die
+            Statuten-Langfassung aus; der Nachweis ist der Anmeldung beizulegen (Art. 43 Abs. 1 lit. i HRegV).
+          </p>
+        </div>
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Geschäftsjahr-Beginn (Statuten)">
           <input className={inputCls} value={gjBeginn} onChange={(e) => setGjBeginn(e.target.value)} placeholder="z. B. 1. Januar" />

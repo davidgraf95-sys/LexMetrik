@@ -200,6 +200,15 @@ export type AgDokAntworten = AgGruendungEingaben & {
   /** Zugelassene:r Revisor:in der Prüfungsbestätigung (Art. 635a OR);
    *  leer = Blanko-Linie. */
   revisorName: string;
+  /** Inhaberaktien (Stufe 2 P2; wirksam nur mit der Checklisten-Weiche
+   *  `inhaberaktien`): Zulässigkeits-Voraussetzung nach Art. 622 Abs. 1bis
+   *  OR (am Cache verifiziert) — Börsenkotierung ODER Ausgestaltung als
+   *  Bucheffekten mit Hinterlegung bei einer von der Gesellschaft
+   *  bezeichneten Verwahrungsstelle in der Schweiz. true = kotiert. */
+  inhaberKotiert: boolean;
+  /** Verwahrungsstelle in der Schweiz (Pflicht bei Bucheffekten-Variante;
+   *  Name und Ort, z. B. «SIX SIS AG, Olten»). */
+  verwahrungsstelle: string;
   ort: string;
   datum: string;
 };
@@ -225,6 +234,7 @@ export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = 
   nachtragStatutenArtikel: '', nachtragStatutenAbsatz: '', nachtragStatutenText: '',
   lexKollerAuslandBeteiligt: false, lexKollerNeuerwerb: false, lexKollerGrundstueckErwerb: false,
   sacheinlagen: [], verrechnungen: [], vorteile: [], revisorName: '',
+  inhaberKotiert: false, verwahrungsstelle: '',
   ort: '', datum: '',
 };
 
@@ -402,13 +412,36 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       blocker.push('Quelle des Devisenmittelkurses angeben (ZH-Urkundenvorlage 3.2: «Dieser Umrechnungskurs entspricht dem Devisenmittelkurs der …»).');
     }
   }
-  bereich('konstellation');
+  // ── Stufe 2 P2: Inhaberaktien-Weiche (Erstausbau-Sperre aufgehoben;
+  // Art. 622/683/685a am OR-Cache 1.1.2026 verifiziert) ──
+  bereich('gesellschaft');
   if (a.inhaberaktien) {
-    blocker.push(
-      'Volldokumente sind zurzeit nur für NAMENAKTIEN verfügbar: Inhaberaktien sind nur bei ' +
-      'Börsenkotierung oder als Bucheffekten zulässig (Art. 622 Abs. 1bis OR) und brauchen den ' +
-      'Zusatznachweis nach Art. 43 Abs. 1 lit. i HRegV – bitte die Checkliste verwenden.',
-    );
+    if (!a.inhaberKotiert && !a.verwahrungsstelle.trim()) {
+      blocker.push(
+        'Inhaberaktien (Bucheffekten-Variante): Verwahrungsstelle in der Schweiz bezeichnen ' +
+        '(Art. 622 Abs. 1bis OR – «bei einer von der Gesellschaft bezeichneten Verwahrungsstelle ' +
+        'in der Schweiz hinterlegt») – oder die Kotierungs-Variante wählen.',
+      );
+    }
+    if (a.vinkulierung) {
+      blocker.push(
+        'Vinkulierung gibt es nur für Namenaktien (Art. 685a Abs. 1 OR: «dass NAMENAKTIEN nur mit ' +
+        'Zustimmung der Gesellschaft übertragen werden dürfen») – Vinkulierung ausschalten oder ' +
+        'Namenaktien wählen.',
+      );
+    }
+    if (!eff.vollLiberiert) {
+      blocker.push(
+        'Inhaberaktien dürfen erst nach Einzahlung des VOLLEN Nennwerts ausgegeben werden – vorher ' +
+        'ausgegebene Aktien sind nichtig (Art. 683 Abs. 1 und 2 OR). Volliberierung wählen oder Namenaktien.',
+      );
+    }
+    if (a.statutenUmfang === 'lang') {
+      blocker.push(
+        'Erstausbau: Inhaberaktien nur mit der Statuten-KURZFASSUNG – die amtliche ZH-Langvorlage ist ' +
+        'Namenaktien-spezifisch (Aktienbuch-, Übertragungs- und Stimmrechts-Artikel müssten angepasst werden).',
+      );
+    }
   }
 
   bereich('kapital');
@@ -705,6 +738,13 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     // ist oder keine zulässige Währung gewählt wurde — Gates erzwingen das).
     waehrungCode: a.fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(a.waehrung) ? a.waehrung : 'CHF',
     fremdwaehrungAktiv: a.fremdwaehrung,
+    // Stufe 2 P2: Aktien-Art (Art. 622 Abs. 1 OR) — EIN Wort an allen
+    // Text-Stellen; für Namenaktien byte-identisch zur bisherigen Fassung.
+    aktienArt: a.inhaberaktien ? 'Inhaberaktien' : 'Namenaktien',
+    istInhaber: a.inhaberaktien,
+    inhaberBucheffekten: a.inhaberaktien && !a.inhaberKotiert,
+    inhaberKotiertAktiv: a.inhaberaktien && a.inhaberKotiert,
+    verwahrungsstelleZeile: a.verwahrungsstelle.trim() || '________',
     // Bug-Check 3.1 Befund 2: Komma-Eingaben normalisieren (Urkunde zeigt
     // den Kurs in Punkt-Notation wie die ZH-Vorlage «CHF 1.xxxx»).
     kursTxt: a.kursChf.trim().replace(',', '.') || '________',
@@ -937,10 +977,29 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       id: 'AS03_kapital',
       ueberschrift: 'Aktienkapital und Aktien',
       text:
-        'Das Aktienkapital beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} Namenaktien ' +
+        'Das Aktienkapital beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} {{aktienArt}} ' +
         'zu {{waehrungCode}} {{nennwertFmt}}. Die Aktien sind {{liberierungSatz}}.',
       norm: 'Art. 626 Abs. 1 Ziff. 3 und 4 OR',
       begruendung: 'Pflichtinhalt: Höhe des Kapitals, geleistete Einlagen (Liberierungsgrad) sowie Anzahl, Nennwert und Art der Aktien (rev. 2023; Wortlaut ZH/SG/GL).',
+    },
+    {
+      id: 'AS03b_inhaber_bucheffekten',
+      text:
+        'Die Aktien lauten auf den Inhaber. Sie sind als Bucheffekten im Sinne des Bucheffektengesetzes ' +
+        'vom 3. Oktober 2008 (BEG) ausgestaltet und bei {{verwahrungsstelleZeile}}, einer von der ' +
+        'Gesellschaft bezeichneten Verwahrungsstelle in der Schweiz, hinterlegt.',
+      includeIf: { feld: 'inhaberBucheffekten', eq: true },
+      norm: 'Art. 622 Abs. 1bis OR',
+      begruendung: 'Stufe 2 P2 (Haus-Fassung am Normtext, offengelegt): Inhaberaktien sind nur zulässig, wenn Beteiligungspapiere kotiert sind ODER die Inhaberaktien als Bucheffekten ausgestaltet und bei einer bezeichneten Verwahrungsstelle in der Schweiz hinterlegt bzw. im Hauptregister eingetragen sind (Art. 622 Abs. 1bis OR am Cache verifiziert) — die Statuten erklären die gewählte Voraussetzung.',
+      hinweis: 'Der Nachweis ist der Handelsregister-Anmeldung beizulegen (Art. 43 Abs. 1 lit. i HRegV; Checklisten-Eintrag «inhaberaktien-nachweis»). Die Variante «im Hauptregister eingetragen» deckt dieser Text nicht ab — bei Bedarf anpassen.',
+    },
+    {
+      id: 'AS03b_inhaber_kotiert',
+      text:
+        'Die Aktien lauten auf den Inhaber. Die Gesellschaft hat Beteiligungspapiere an einer Börse kotiert.',
+      includeIf: { feld: 'inhaberKotiertAktiv', eq: true },
+      norm: 'Art. 622 Abs. 1bis OR',
+      begruendung: 'Stufe 2 P2: Kotierungs-Variante der Zulässigkeits-Erklärung (Art. 622 Abs. 1bis OR); bei einer Neugründung praxisfern, aber gesetzlich vorgesehen.',
     },
     // ── Etappe 2: Pflichtklauseln der qualifizierten Gründung ───────────────
     {
@@ -949,7 +1008,7 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       text:
         'Die Gesellschaft übernimmt bei der Gründung von {{item.einleger}} als Sacheinlage: ' +
         '{{item.objektLabel}} ({{item.belegSatz}}), bewertet mit {{waehrungCode}} {{item.wertFmt}}. Dafür werden ' +
-        '{{item.aktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} ausgegeben{{item.gutschriftKlauselSatz}}.',
+        '{{item.aktien}} {{aktienArt}} zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} ausgegeben{{item.gutschriftKlauselSatz}}.',
       wiederholeUeber: 'sachListe',
       includeIf: { feld: 'hatSacheinlagen', eq: true },
       norm: 'Art. 634 Abs. 4 OR',
@@ -960,7 +1019,7 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       id: 'AS07_verrechnung',
       ueberschrift: 'Verrechnungsliberierung',
       text:
-        'Bei der Gründung werden {{item.aktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} durch Verrechnung ' +
+        'Bei der Gründung werden {{item.aktien}} {{aktienArt}} zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} durch Verrechnung ' +
         'mit einer Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert.',
       wiederholeUeber: 'verrListe',
       includeIf: { feld: 'hatVerrechnungen', eq: true },
@@ -1358,14 +1417,14 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       ueberschrift: 'Aktienkapital und Zeichnung',
       text:
         'Das Aktienkapital der Gesellschaft beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} ' +
-        'Namenaktien zu je {{waehrungCode}} {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von {{waehrungCode}} {{ausgabeFmt}} ' +
+        '{{aktienArt}} zu je {{waehrungCode}} {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von {{waehrungCode}} {{ausgabeFmt}} ' +
         'je Aktie wie folgt gezeichnet werden:',
       norm: 'Art. 630 Ziff. 1 OR',
       begruendung: 'Zeichnung mit Anzahl, Nennwert, Art und Ausgabebetrag – bei der Gründung in der Urkunde selbst (Art. 44 lit. d HRegV); Ausgabebetrag = Nennwert plus allfälliges Agio (Etappe 3.2/D7; Checkliste Errichtungsakt zu Art. 630 OR).',
     },
     {
       id: 'AE05_zeichnungsliste',
-      text: '– {{item.name}}: {{item.anzahl}} Namenaktien',
+      text: '– {{item.name}}: {{item.anzahl}} {{aktienArt}}',
       wiederholeUeber: 'gruenderListe',
       begruendung: 'Zeichnungserklärung jeder Gründerin / jedes Gründers.',
       norm: 'Art. 44 lit. d HRegV',
@@ -1490,7 +1549,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07g_geld_bank',
       ueberschrift: 'Einlagen',
       text:
-        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld ' +
+        'Auf {{barAktienTxt}} {{aktienArt}} wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld ' +
         'geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über ' +
         'die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'gemischtTeilBar', eq: false }, { feld: 'bankInUrkundeGenannt', eq: true }] },
@@ -1501,7 +1560,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07g_geld_bescheinigung',
       ueberschrift: 'Einlagen',
       text:
-        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld ' +
+        'Auf {{barAktienTxt}} {{aktienArt}} wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld ' +
         'geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über ' +
         'die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'gemischtTeilBar', eq: false }, { feld: 'bankInUrkundeGenannt', eq: false }] },
@@ -1514,7 +1573,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07g_geld_teil_bank',
       ueberschrift: 'Einlagen',
       text:
-        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ' +
+        'Auf {{barAktienTxt}} {{aktienArt}} wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ' +
         '({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und bei der ' +
         '{{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und ' +
         'Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus ' +
@@ -1527,7 +1586,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07g_geld_teil_bescheinigung',
       ueberschrift: 'Einlagen',
       text:
-        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ' +
+        'Auf {{barAktienTxt}} {{aktienArt}} wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ' +
         '({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und gemäss separater ' +
         'Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ' +
         'ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus Sacheinlage und ' +
@@ -1579,7 +1638,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       id: 'AE07q_sachliste',
       text:
         '– Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.einleger}} über {{item.objektLabel}} ' +
-        '({{item.belegSatz}}; Bewertung {{waehrungCode}} {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselSatz}}), ' +
+        '({{item.belegSatz}}; Bewertung {{waehrungCode}} {{item.wertFmt}} für {{item.aktien}} {{aktienArt}}{{item.gutschriftKlauselSatz}}), ' +
         'welcher genehmigt wird, mit der Bestätigung, dass die Gesellschaft nach ihrer Eintragung in das ' +
         'Handelsregister {{item.verfuegungsSatz}}.',
       wiederholeUeber: 'sachListe',
@@ -1590,7 +1649,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     {
       id: 'AE07q_verrliste',
       text:
-        '– Verrechnungsliberierung: {{item.aktien}} Namenaktien werden durch Verrechnung mit einer ' +
+        '– Verrechnungsliberierung: {{item.aktien}} {{aktienArt}} werden durch Verrechnung mit einer ' +
         'Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert (Art. 634a OR).',
       wiederholeUeber: 'verrListe',
       includeIf: { feld: 'hatVerrechnungen', eq: true },
@@ -2073,6 +2132,25 @@ const ANMELDUNG_SCHEMA: VorlageSchema = {
       begruendung: 'Anmeldungs-Kern: Identifikation und Beleg-Verweis (ZH-Formular-Struktur).',
     },
     {
+      id: 'AA05b_inhaber_bucheffekten',
+      text:
+        'Die Gesellschaft hat Inhaberaktien; diese sind als Bucheffekten im Sinne des ' +
+        'Bucheffektengesetzes vom 3. Oktober 2008 (BEG) ausgestaltet. Wir beantragen die ' +
+        'entsprechende Eintragung.',
+      includeIf: { feld: 'inhaberBucheffekten', eq: true },
+      norm: 'Art. 622 Abs. 2bis OR',
+      begruendung: 'Stufe 2 P2: Eine Gesellschaft mit Inhaberaktien muss im Handelsregister eintragen lassen, ob sie Beteiligungspapiere kotiert hat oder ihre Inhaberaktien als Bucheffekten ausgestaltet sind (Art. 622 Abs. 2bis OR am Cache verifiziert) — Bucheffekten-Variante.',
+    },
+    {
+      id: 'AA05b_inhaber_kotiert',
+      text:
+        'Die Gesellschaft hat Inhaberaktien und Beteiligungspapiere an einer Börse kotiert. ' +
+        'Wir beantragen die entsprechende Eintragung.',
+      includeIf: { feld: 'inhaberKotiertAktiv', eq: true },
+      norm: 'Art. 622 Abs. 2bis OR',
+      begruendung: 'Stufe 2 P2: Eintragungs-Erklärung nach Art. 622 Abs. 2bis OR — Kotierungs-Variante.',
+    },
+    {
       id: 'AA06_beilagen',
       ueberschrift: 'Beilagen',
       text: '– {{item.titel}} ({{item.norm}})',
@@ -2130,7 +2208,7 @@ const SACHEINLAGEVERTRAG_BAUSTEINE: VorlageSchema['bausteine'] = [
     id: 'SV03_gegenleistung',
     ueberschrift: 'Gegenleistung',
     text:
-      'Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien ' +
+      'Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende {{aktienArt}} ' +
       'der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}',
     norm: 'Art. 634 Abs. 4 OR',
     begruendung: 'Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst. Stufe 2: Währungscode = Kapitalwährung; bei Agio wird der Ausgabebetrag offengelegt (die Bewertung deckt Aktien × Ausgabebetrag, Art. 629 Abs. 2 Ziff. 2 OR).',

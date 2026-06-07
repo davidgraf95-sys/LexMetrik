@@ -757,7 +757,10 @@ describe('AG — Fremdwährungs-Gründung (Etappe 3.1/D2)', () => {
 
 describe('AG-Gates — Erstausbau-Grenzen + 632-Arithmetik', () => {
   it('Inhaberaktien/Sacheinlage/Fremdwährung sperren ehrlich', () => {
-    expect(pruefeAgDokGates({ ...BASIS, inhaberaktien: true }).blocker.join(' ')).toContain('NAMENAKTIEN');
+    // Stufe 2 P2 (deklarierte fachliche Änderung 7.6.2026): Inhaberaktien
+    // nicht mehr pauschal gesperrt — ohne Verwahrungsstelle bleibt das
+    // 622-Abs.-1bis-Gate ehrlich.
+    expect(pruefeAgDokGates({ ...BASIS, inhaberaktien: true }).blocker.join(' ')).toContain('Verwahrungsstelle in der Schweiz bezeichnen');
     // Qualifizierte Gründung (FAHRPLAN-AG-GRUENDUNG Etappe 2): Verrechnung
     // ist nicht mehr pauschal gesperrt (alter BARGRÜNDUNG-Blocker), das Gate
     // bleibt aber ehrlich — ohne erfasste Verrechnungszeile blockt es.
@@ -848,5 +851,49 @@ describe('AG — Stufe 2 P1 (Perfektion 7.6.2026): gemischte Teilliberierung + A
       ...SACH_AGIO,
       sacheinlagen: [{ ...SACHZEILE, wertChf: "100'000" }],
     }).blocker.join(' ')).toContain("Bewertung CHF 100'000.00 muss 100 Aktien × CHF 1'200.00 (Ausgabebetrag) entsprechen");
+  });
+});
+
+describe('AG — Stufe 2 P2 (Perfektion 7.6.2026): Inhaberaktien-Weiche', () => {
+  const INHABER: AgDokAntworten = {
+    ...BASIS,
+    inhaberaktien: true,
+    verwahrungsstelle: 'SIX SIS AG, Olten',
+  };
+
+  it('Bucheffekten-Variante: Texte führen «Inhaberaktien», Statuten-Erklärung 622 1bis, Anmeldung 622 2bis', () => {
+    const m = agDokumentmappe(INHABER);
+    expect(m.gates.blocker).toEqual([]);
+    const st = text(m, 'statuten');
+    expect(st).toContain('eingeteilt in 100 Inhaberaktien');
+    expect(st).toContain('als Bucheffekten im Sinne des Bucheffektengesetzes vom 3. Oktober 2008 (BEG) ausgestaltet');
+    expect(st).toContain('bei SIX SIS AG, Olten, einer von der Gesellschaft bezeichneten Verwahrungsstelle in der Schweiz, hinterlegt');
+    const ea = text(m, 'errichtungsakt');
+    expect(ea).toContain('Inhaberaktien zu je CHF');
+    expect(ea).toContain('– Anna Muster: 100 Inhaberaktien');
+    expect(text(m, 'hr-anmeldung')).toContain('Die Gesellschaft hat Inhaberaktien; diese sind als Bucheffekten');
+    // Checkliste verlangt den Zusatznachweis (Art. 43 Abs. 1 lit. i HRegV)
+  });
+
+  it('Kotierungs-Variante: keine Verwahrungsstelle nötig, eigene Erklärung', () => {
+    const m = agDokumentmappe({ ...INHABER, inhaberKotiert: true, verwahrungsstelle: '' });
+    expect(m.gates.blocker).toEqual([]);
+    expect(text(m, 'statuten')).toContain('Die Gesellschaft hat Beteiligungspapiere an einer Börse kotiert.');
+    expect(text(m, 'hr-anmeldung')).toContain('Beteiligungspapiere an einer Börse kotiert');
+  });
+
+  it('Gates: Verwahrungsstelle fehlt / Vinkulierung 685a / Teilliberierung 683 / Langfassung blocken', () => {
+    expect(pruefeAgDokGates({ ...INHABER, verwahrungsstelle: '' }).blocker.join(' ')).toContain('Verwahrungsstelle in der Schweiz bezeichnen');
+    expect(pruefeAgDokGates({ ...INHABER, vinkulierung: true }).blocker.join(' ')).toContain('Vinkulierung gibt es nur für Namenaktien');
+    expect(pruefeAgDokGates({ ...INHABER, liberierungProzent: '50' }).blocker.join(' ')).toContain('Art. 683 Abs. 1 und 2 OR');
+    expect(pruefeAgDokGates({ ...INHABER, statutenUmfang: 'lang' }).blocker.join(' ')).toContain('Statuten-KURZFASSUNG');
+  });
+
+  it('Namenaktien-Regression: ohne Weiche keine Inhaber-Bausteine, Wortlaut unverändert', () => {
+    const m = agDokumentmappe(BASIS);
+    const st = text(m, 'statuten');
+    expect(st).toContain('eingeteilt in 100 Namenaktien');
+    expect(st).not.toContain('Inhaber');
+    expect(text(m, 'hr-anmeldung')).not.toContain('Inhaberaktien');
   });
 });

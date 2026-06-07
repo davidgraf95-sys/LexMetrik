@@ -77,9 +77,32 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 **Wortlaut:**
 
-> Das Aktienkapital beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}. Die Aktien sind {{liberierungSatz}}.
+> Das Aktienkapital beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} {{aktienArt}} zu {{waehrungCode}} {{nennwertFmt}}. Die Aktien sind {{liberierungSatz}}.
 
-### 6. `AS06_sacheinlagen` — «Sacheinlagen»
+### 6. `AS03b_inhaber_bucheffekten`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 622 Abs. 1bis OR
+- **Aufnahme:** inhaberBucheffekten = true
+- **Begründung (Protokoll):** Stufe 2 P2 (Haus-Fassung am Normtext, offengelegt): Inhaberaktien sind nur zulässig, wenn Beteiligungspapiere kotiert sind ODER die Inhaberaktien als Bucheffekten ausgestaltet und bei einer bezeichneten Verwahrungsstelle in der Schweiz hinterlegt bzw. im Hauptregister eingetragen sind (Art. 622 Abs. 1bis OR am Cache verifiziert) — die Statuten erklären die gewählte Voraussetzung.
+- **Hinweis (offengelegt):** Der Nachweis ist der Handelsregister-Anmeldung beizulegen (Art. 43 Abs. 1 lit. i HRegV; Checklisten-Eintrag «inhaberaktien-nachweis»). Die Variante «im Hauptregister eingetragen» deckt dieser Text nicht ab — bei Bedarf anpassen.
+
+**Wortlaut:**
+
+> Die Aktien lauten auf den Inhaber. Sie sind als Bucheffekten im Sinne des Bucheffektengesetzes vom 3. Oktober 2008 (BEG) ausgestaltet und bei {{verwahrungsstelleZeile}}, einer von der Gesellschaft bezeichneten Verwahrungsstelle in der Schweiz, hinterlegt.
+
+### 7. `AS03b_inhaber_kotiert`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 622 Abs. 1bis OR
+- **Aufnahme:** inhaberKotiertAktiv = true
+- **Begründung (Protokoll):** Stufe 2 P2: Kotierungs-Variante der Zulässigkeits-Erklärung (Art. 622 Abs. 1bis OR); bei einer Neugründung praxisfern, aber gesetzlich vorgesehen.
+
+**Wortlaut:**
+
+> Die Aktien lauten auf den Inhaber. Die Gesellschaft hat Beteiligungspapiere an einer Börse kotiert.
+
+### 8. `AS06_sacheinlagen` — «Sacheinlagen»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 634 Abs. 4 OR
@@ -90,9 +113,9 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 **Wortlaut:**
 
-> Die Gesellschaft übernimmt bei der Gründung von {{item.einleger}} als Sacheinlage: {{item.objektLabel}} ({{item.belegSatz}}), bewertet mit {{waehrungCode}} {{item.wertFmt}}. Dafür werden {{item.aktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} ausgegeben{{item.gutschriftKlauselSatz}}.
+> Die Gesellschaft übernimmt bei der Gründung von {{item.einleger}} als Sacheinlage: {{item.objektLabel}} ({{item.belegSatz}}), bewertet mit {{waehrungCode}} {{item.wertFmt}}. Dafür werden {{item.aktien}} {{aktienArt}} zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} ausgegeben{{item.gutschriftKlauselSatz}}.
 
-### 7. `AS07_verrechnung` — «Verrechnungsliberierung»
+### 9. `AS07_verrechnung` — «Verrechnungsliberierung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 634a Abs. 3 OR
@@ -103,9 +126,9 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 **Wortlaut:**
 
-> Bei der Gründung werden {{item.aktien}} Namenaktien zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} durch Verrechnung mit einer Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert.
+> Bei der Gründung werden {{item.aktien}} {{aktienArt}} zu {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}} durch Verrechnung mit einer Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert.
 
-### 8. `AS08_vorteile` — «Besondere Vorteile»
+### 10. `AS08_vorteile` — «Besondere Vorteile»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 636 OR
@@ -117,7 +140,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 > Bei der Gründung wird {{item.beguenstigter}} folgender besonderer Vorteil gewährt: {{item.inhalt}} (Wert: {{waehrungCode}} {{item.wertFmt}}).
 
-### 9. `ASL20_zertifikate` — «Aktienzertifikate»
+### 11. `ASL20_zertifikate` — «Aktienzertifikate»
 
 - [ ] **abgenommen** (David)
 - **Aufnahme:** istLang = true
@@ -127,7 +150,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 > Anstelle von einzelnen Aktien kann die Gesellschaft Zertifikate über mehrere Aktien ausstellen.
 
-### 10. `ASL21_zerlegung` — «Zerlegung und Zusammenlegung von Aktien»
+### 12. `ASL21_zerlegung` — «Zerlegung und Zusammenlegung von Aktien»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 623 OR
@@ -138,7 +161,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 > Die Generalversammlung kann bei unverändert bleibendem Aktienkapital durch Statutenänderung Aktien in solche von kleinerem Nennwert zerlegen oder zu solchen von grösserem Nennwert zusammenlegen; die Zusammenlegung bedarf der Zustimmung aller betroffenen Aktionäre.
 
-### 11. `ASL22_aktienbuch` — «Aktienbuch»
+### 13. `ASL22_aktienbuch` — «Aktienbuch»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 686 OR
@@ -150,7 +173,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Der Verwaltungsrat führt über alle Namenaktien ein Aktienbuch, in welches die Eigentümer und Nutzniesser mit Namen und Adresse eingetragen werden.
 > Im Verhältnis zur Gesellschaft gilt als Aktionär oder als Nutzniesser, wer im Aktienbuch eingetragen ist.
 
-### 12. `AS10_vinkulierung` — «Übertragung der Aktien»
+### 14. `AS10_vinkulierung` — «Übertragung der Aktien»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 685a und 685b OR
@@ -163,7 +186,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Der Verwaltungsrat kann das Gesuch um Zustimmung ablehnen, wenn er im Namen der Gesellschaft dem Veräusserer anbietet, die Aktien zum wirklichen Wert im Zeitpunkt des Gesuches zu übernehmen, oder wenn der Erwerber nicht ausdrücklich erklärt, dass er die Aktien im eigenen Namen und auf eigene Rechnung erworben hat.
 > Werden Aktien durch Erbgang, Erbteilung, eheliches Güterrecht oder Zwangsvollstreckung erworben, so kann die Gesellschaft das Gesuch um Zustimmung nur ablehnen, wenn sie dem Erwerber die Übernahme der Aktien zum wirklichen Wert anbietet.
 
-### 13. `ASL30_gv_befugnisse` — «Befugnisse der Generalversammlung»
+### 15. `ASL30_gv_befugnisse` — «Befugnisse der Generalversammlung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 698 OR
@@ -182,7 +205,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > – die Entlastung der Mitglieder des Verwaltungsrates;
 > – die Beschlussfassung über die Gegenstände, die der Generalversammlung durch das Gesetz oder die Statuten vorbehalten sind.
 
-### 14. `ASL31_einberufung` — «Einberufung und Traktandierung»
+### 16. `ASL31_einberufung` — «Einberufung und Traktandierung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 700 OR
@@ -199,7 +222,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Aktionäre, die zusammen über mindestens 5 Prozent des Aktienkapitals oder der Stimmen verfügen, können die Traktandierung von Verhandlungsgegenständen oder die Aufnahme eines Antrages zu einem Verhandlungsgegenstand in die Einberufung der Generalversammlung verlangen.
 > Über Anträge zu nicht gehörig angekündigten Verhandlungsgegenständen können keine Beschlüsse gefasst werden; ausgenommen sind Anträge auf Einberufung einer ausserordentlichen Generalversammlung, auf Durchführung einer Sonderuntersuchung und auf Wahl einer Revisionsstelle.
 
-### 15. `AS13_beschlussfassung_virtuell` — «Beschlussfassungsarten der Aktionäre»
+### 17. `AS13_beschlussfassung_virtuell` — «Beschlussfassungsarten der Aktionäre»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 701d OR
@@ -212,7 +235,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Aktionäre können unter Beachtung der Einberufungs- und Traktandierungsvorschriften die Generalversammlungen vor Ort oder hybrid (vor Ort und virtuell) oder virtuell abhalten. Bei einer virtuellen Generalversammlung kann der Verwaltungsrat im Einzelfall auf die Bezeichnung einer unabhängigen Stimmrechtsvertretung verzichten.
 > Sofern kein Aktionär oder dessen Vertretung eine mündliche Beratung an einer Generalversammlung verlangt, können die Aktionäre ihre Beschlüsse gemäss Art. 701 Abs. 3 OR auch auf schriftlichem Weg fassen.
 
-### 16. `AS13_beschlussfassung` — «Beschlussfassungsarten der Aktionäre»
+### 18. `AS13_beschlussfassung` — «Beschlussfassungsarten der Aktionäre»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 701 Abs. 3 OR
@@ -223,7 +246,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 > Sofern kein Aktionär oder dessen Vertretung eine mündliche Beratung an einer Generalversammlung verlangt, können die Aktionäre ihre Beschlüsse gemäss Art. 701 Abs. 3 OR auch auf schriftlichem Weg fassen.
 
-### 17. `ASL32_tagungsort` — «Generalversammlung mit Tagungsort»
+### 19. `ASL32_tagungsort` — «Generalversammlung mit Tagungsort»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 701a OR
@@ -237,7 +260,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Die Generalversammlung kann im Ausland durchgeführt werden, wenn der Verwaltungsrat in der Einberufung einen unabhängigen Stimmrechtsvertreter bezeichnet. Der Verwaltungsrat kann auf die Bezeichnung eines unabhängigen Stimmrechtsvertreters verzichten, sofern alle Aktionäre damit einverstanden sind.
 > Der Verwaltungsrat kann vorsehen, dass Aktionäre, die nicht am Ort der Generalversammlung anwesend sind, ihre Rechte auf elektronischem Weg ausüben können.
 
-### 18. `ASL33_virtuell` — «Generalversammlung ohne Tagungsort (virtuell)»
+### 20. `ASL33_virtuell` — «Generalversammlung ohne Tagungsort (virtuell)»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 701d OR
@@ -251,7 +274,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Der Verwaltungsrat regelt die Verwendung elektronischer Mittel. Er stellt sicher, dass die Identität der Teilnehmer feststeht, die Voten in der Generalversammlung unmittelbar übertragen werden, jeder Teilnehmer Anträge stellen und sich an der Diskussion beteiligen kann und das Abstimmungsergebnis nicht verfälscht werden kann.
 > Treten während der Generalversammlung technische Probleme auf, sodass die Generalversammlung nicht ordnungsgemäss durchgeführt werden kann, so muss sie wiederholt werden. Beschlüsse, welche die Generalversammlung vor dem Auftreten der technischen Probleme gefasst hat, bleiben gültig.
 
-### 19. `ASL34_vorsitz` — «Vorsitz und Protokoll»
+### 21. `ASL34_vorsitz` — «Vorsitz und Protokoll»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 702 OR
@@ -263,7 +286,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Den Vorsitz in der Generalversammlung führt der Präsident, in dessen Verhinderungsfalle ein anderes vom Verwaltungsrat bestimmtes Mitglied desselben. Nimmt kein Mitglied des Verwaltungsrates teil, wählt die Generalversammlung einen Tagesvorsitzenden.
 > Der Vorsitzende bezeichnet den Protokollführer und die Stimmenzähler, die nicht Aktionäre zu sein brauchen. Das Protokoll ist vom Vorsitzenden und vom Protokollführer zu unterzeichnen. Jeder Aktionär kann verlangen, dass ihm das Protokoll innerhalb von 30 Tagen nach der Generalversammlung zugänglich gemacht wird.
 
-### 20. `ASL35_zirkular` — «Protokollierung von schriftlichen Beschlüssen der Aktionäre»
+### 22. `ASL35_zirkular` — «Protokollierung von schriftlichen Beschlüssen der Aktionäre»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 701 Abs. 3 OR
@@ -276,7 +299,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Ein Zirkularbeschluss ist von sämtlichen Aktionären zu unterzeichnen und mit der ausdrücklichen Feststellung eines Mitglieds des Verwaltungsrates zu ergänzen, dass die Beschlussfassung damit gültig zustande gekommen ist. Das Mitglied des Verwaltungsrates muss den Zirkularbeschluss mitunterzeichnen.
 > Sofern die Aktionäre mittels schriftlicher Abstimmung einen Beschluss fassen, muss in einem Erwahrungsprotokoll des Verwaltungsrates der Ablauf der schriftlichen Beschlussfassung sowie das Abstimmungsergebnis festgehalten werden. Das Erwahrungsprotokoll ist vom Vorsitzenden und Protokollführer zu unterzeichnen.
 
-### 21. `ASL36_stimmrecht` — «Stimmrecht und Vertretung»
+### 23. `ASL36_stimmrecht` — «Stimmrecht und Vertretung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 692 OR
@@ -288,7 +311,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Die Aktionäre üben ihr Stimmrecht in der Generalversammlung nach Verhältnis des gesamten Nennwerts der ihnen gehörenden Aktien aus.
 > Die Mitgliedschaftsrechte aus Namenaktien kann ausüben, wer durch den Eintrag im Aktienbuch ausgewiesen oder vom Aktionär dazu schriftlich bevollmächtigt ist.
 
-### 22. `ASL37_beschlussfassung` — «Beschlussfassung»
+### 24. `ASL37_beschlussfassung` — «Beschlussfassung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 703 und 704 OR
@@ -316,7 +339,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > – die Auflösung der Gesellschaft.
 > Statutenbestimmungen, die für die Fassung bestimmter Beschlüsse grössere Mehrheiten als die vom Gesetz vorgeschriebenen festlegen, können nur mit dem vorgesehenen Mehr eingeführt, geändert oder aufgehoben werden.
 
-### 23. `ASL40_vr_wahl` — «Wahl und Zusammensetzung des Verwaltungsrates»
+### 25. `ASL40_vr_wahl` — «Wahl und Zusammensetzung des Verwaltungsrates»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 710 OR
@@ -329,7 +352,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Die Mitglieder des Verwaltungsrates werden auf drei Jahre gewählt. Neugewählte treten in die Amtsdauer derjenigen Mitglieder ein, die sie ersetzen.
 > Der Verwaltungsrat konstituiert sich selbst. Er bezeichnet seinen Präsidenten und den Sekretär. Dieser muss dem Verwaltungsrat nicht angehören.
 
-### 24. `ASL41_vr_sitzungen` — «Sitzungen und Beschlussfassung des Verwaltungsrates»
+### 26. `ASL41_vr_sitzungen` — «Sitzungen und Beschlussfassung des Verwaltungsrates»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 713 OR
@@ -342,7 +365,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Bei der Beschlussfassung in Sitzungen des Verwaltungsrates hat der Vorsitzende den Stichentscheid. Beschlüsse können auch auf dem Wege der schriftlichen Zustimmung oder in elektronischer Form zu einem gestellten Antrag gefasst werden, sofern nicht ein Mitglied die mündliche Beratung verlangt.
 > Über die Verhandlungen und Beschlüsse ist ein Protokoll zu führen, das vom Vorsitzenden und vom Sekretär unterzeichnet wird.
 
-### 25. `ASL42_vr_zirkular` — «Protokollierung von Beschlüssen des Verwaltungsrates»
+### 27. `ASL42_vr_zirkular` — «Protokollierung von Beschlüssen des Verwaltungsrates»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 713 Abs. 2 OR
@@ -355,7 +378,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Ein Zirkularbeschluss ist von sämtlichen Mitgliedern des Verwaltungsrates zu unterzeichnen.
 > Sofern die Mitglieder des Verwaltungsrates mittels schriftlicher Abstimmung einen Beschluss fassen, muss in einem Erwahrungsprotokoll des Verwaltungsrates der Ablauf der schriftlichen Beschlussfassung sowie das Abstimmungsergebnis festgehalten werden. Das Erwahrungsprotokoll ist vom Vorsitzenden und Protokollführer zu unterzeichnen.
 
-### 26. `ASL43_vr_auskunft` — «Recht auf Auskunft und Einsicht»
+### 28. `ASL43_vr_auskunft` — «Recht auf Auskunft und Einsicht»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 715a OR
@@ -371,7 +394,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Weist der Präsident ein Gesuch auf Auskunft, Anhörung oder Einsicht ab, so entscheidet der Verwaltungsrat.
 > Regelungen oder Beschlüsse des Verwaltungsrates, die das Recht auf Auskunft und Einsichtnahme der Verwaltungsräte erweitern, bleiben vorbehalten.
 
-### 27. `ASL44_vr_aufgaben` — «Aufgaben des Verwaltungsrates»
+### 29. `ASL44_vr_aufgaben` — «Aufgaben des Verwaltungsrates»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 716a OR
@@ -391,7 +414,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > – die Einreichung eines Gesuchs um Nachlassstundung und die Benachrichtigung des Gerichts im Falle der Überschuldung.
 > Der Verwaltungsrat kann die Vorbereitung und die Ausführung seiner Beschlüsse oder die Überwachung von Geschäften Ausschüssen oder einzelnen Mitgliedern zuweisen. Er hat für eine angemessene Berichterstattung an seine Mitglieder zu sorgen.
 
-### 28. `ASL45_vr_delegation` — «Übertragung der Geschäftsführung und der Vertretung»
+### 30. `ASL45_vr_delegation` — «Übertragung der Geschäftsführung und der Vertretung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 716b OR
@@ -405,7 +428,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Soweit die Geschäftsführung nicht übertragen worden ist, steht sie allen Mitgliedern des Verwaltungsrates gesamthaft zu.
 > Der Verwaltungsrat kann die Vertretung einem oder mehreren Mitgliedern (Delegierte) oder Dritten (Direktoren) übertragen. Mindestens ein Mitglied des Verwaltungsrates muss zur Vertretung befugt sein. Die Gesellschaft muss durch eine Person vertreten werden können, die Wohnsitz in der Schweiz hat.
 
-### 29. `ASL50_revision` — «Revision»
+### 31. `ASL50_revision` — «Revision»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 727a OR
@@ -420,7 +443,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > – die Gesellschaft nicht mehr als zehn Vollzeitstellen im Jahresdurchschnitt hat.
 > Der Verzicht gilt auch für die nachfolgenden Jahre. Jeder Aktionär hat jedoch das Recht, spätestens zehn Tage vor der Generalversammlung die Durchführung einer eingeschränkten Revision und die Wahl einer entsprechenden Revisionsstelle zu verlangen. Die Generalversammlung darf diesfalls die Beschlüsse über die Genehmigung der Jahresrechnung und die Verwendung des Bilanzgewinnes erst fassen, wenn der Revisionsbericht vorliegt.
 
-### 30. `ASL51_rs_anforderungen` — «Anforderungen an die Revisionsstelle»
+### 32. `ASL51_rs_anforderungen` — «Anforderungen an die Revisionsstelle»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 727b OR
@@ -436,7 +459,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Die Revisionsstelle muss nach Art. 728 bzw. 729 OR unabhängig sein.
 > Die Revisionsstelle wird für ein Geschäftsjahr gewählt. Ihr Amt endet mit der Abnahme der letzten Jahresrechnung. Eine Wiederwahl ist möglich. Die Generalversammlung kann die Revisionsstelle nur aus wichtigen Gründen abberufen.
 
-### 31. `AS15_geschaeftsjahr` — «Geschäftsjahr und Buchführung»
+### 33. `AS15_geschaeftsjahr` — «Geschäftsjahr und Buchführung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 958 Abs. 2 OR
@@ -448,7 +471,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Das Geschäftsjahr beginnt am {{gjBeginnTxt}} und endet am {{gjEndeTxt}}.
 > Die Jahresrechnung, bestehend aus Erfolgsrechnung, Bilanz und Anhang, ist gemäss den Vorschriften des Schweizerischen Obligationenrechts, insbesondere der Art. 957 ff., zu erstellen.
 
-### 32. `ASL60_reserven` — «Reserven und Gewinnverwendung»
+### 34. `ASL60_reserven` — «Reserven und Gewinnverwendung»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 672 OR
@@ -459,7 +482,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 
 > Aus dem Jahresgewinn ist zuerst die Zuweisung an die gesetzliche Gewinnreserve entsprechend den Vorschriften des Gesetzes vorzunehmen. Der Bilanzgewinn steht zur Verfügung der Generalversammlung, die ihn im Rahmen der gesetzlichen Auflagen (insbesondere Art. 671 ff. OR) nach freiem Ermessen verwenden kann.
 
-### 33. `ASL61_aufloesung` — «Auflösung und Liquidation»
+### 35. `ASL61_aufloesung` — «Auflösung und Liquidation»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 736 OR
@@ -472,7 +495,7 @@ Schema `ag-statuten` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-Dossier
 > Die Liquidation wird durch den Verwaltungsrat besorgt, falls sie nicht durch einen Beschluss der Generalversammlung anderen Personen übertragen wird. Die Liquidation erfolgt gemäss Art. 742 ff. OR.
 > Das Vermögen der aufgelösten Gesellschaft wird nach Tilgung ihrer Schulden nach Massgabe der einbezahlten Beträge unter die Aktionäre verteilt.
 
-### 34. `AS04_mitteilungen` — «Mitteilungen»
+### 36. `AS04_mitteilungen` — «Mitteilungen»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 626 Abs. 1 Ziff. 7 OR
@@ -561,7 +584,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> Das Aktienkapital der Gesellschaft beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} Namenaktien zu je {{waehrungCode}} {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von {{waehrungCode}} {{ausgabeFmt}} je Aktie wie folgt gezeichnet werden:
+> Das Aktienkapital der Gesellschaft beträgt {{waehrungCode}} {{akFmt}} und ist eingeteilt in {{anzahlAktien}} {{aktienArt}} zu je {{waehrungCode}} {{nennwertFmt}} (Nennwert), welche zum Ausgabebetrag von {{waehrungCode}} {{ausgabeFmt}} je Aktie wie folgt gezeichnet werden:
 
 ### 7. `AE05_zeichnungsliste`
 
@@ -573,7 +596,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> – {{item.name}}: {{item.anzahl}} Namenaktien
+> – {{item.name}}: {{item.anzahl}} {{aktienArt}}
 
 ### 8. `AE05b_verpflichtung`
 
@@ -707,7 +730,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
+> Auf {{barAktienTxt}} {{aktienArt}} wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
 
 ### 20. `AE07g_geld_bescheinigung` — «Einlagen»
 
@@ -718,7 +741,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
+> Auf {{barAktienTxt}} {{aktienArt}} wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.
 
 ### 21. `AE07g_geld_teil_bank` — «Einlagen»
 
@@ -729,7 +752,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus Sacheinlage und Verrechnung gelten als voll liberiert.
+> Auf {{barAktienTxt}} {{aktienArt}} wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus Sacheinlage und Verrechnung gelten als voll liberiert.
 
 ### 22. `AE07g_geld_teil_bescheinigung` — «Einlagen»
 
@@ -740,7 +763,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus Sacheinlage und Verrechnung gelten als voll liberiert.
+> Auf {{barAktienTxt}} {{aktienArt}} wurden Einlagen von gesamthaft {{waehrungCode}} {{barEinlageFmt}} ({{liberierungProzent}} % des Nennwerts jeder dieser Aktien) in Geld geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt. Die Aktien aus Sacheinlage und Verrechnung gelten als voll liberiert.
 
 ### 23. `AE07gx_agio_gemischt`
 
@@ -798,7 +821,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> – Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.einleger}} über {{item.objektLabel}} ({{item.belegSatz}}; Bewertung {{waehrungCode}} {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselSatz}}), welcher genehmigt wird, mit der Bestätigung, dass die Gesellschaft nach ihrer Eintragung in das Handelsregister {{item.verfuegungsSatz}}.
+> – Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.einleger}} über {{item.objektLabel}} ({{item.belegSatz}}; Bewertung {{waehrungCode}} {{item.wertFmt}} für {{item.aktien}} {{aktienArt}}{{item.gutschriftKlauselSatz}}), welcher genehmigt wird, mit der Bestätigung, dass die Gesellschaft nach ihrer Eintragung in das Handelsregister {{item.verfuegungsSatz}}.
 
 ### 28. `AE07q_verrliste`
 
@@ -810,7 +833,7 @@ Schema `ag-errichtungsakt` · Version 1.0.0 (Rechtsstand OR 1.1.2026; Wortlaut-D
 
 **Wortlaut:**
 
-> – Verrechnungsliberierung: {{item.aktien}} Namenaktien werden durch Verrechnung mit einer Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert (Art. 634a OR).
+> – Verrechnungsliberierung: {{item.aktien}} {{aktienArt}} werden durch Verrechnung mit einer Forderung von {{item.glaeubiger}} im Betrag von {{waehrungCode}} {{item.forderungFmt}} liberiert (Art. 634a OR).
 
 ### 29. `AE07q_vorteile`
 
@@ -1239,7 +1262,7 @@ Schema `ag-sacheinlagevertrag` · Version 1.0.0 (ZH-Vorlagen vertrag_se_einfach/
 
 **Wortlaut:**
 
-> Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}
+> Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende {{aktienArt}} der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}
 
 ### 5. `SV04_zeitpunkt` — «Zeitpunkt»
 
@@ -1377,7 +1400,7 @@ Schema `ag-sacheinlagevertrag-grundstueck` · Version 1.0.0 (ZH-Vorlagen vertrag
 
 **Wortlaut:**
 
-> Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}
+> Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende {{aktienArt}} der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}
 
 ### 5. `SV04_zeitpunkt` — «Zeitpunkt»
 
@@ -2269,7 +2292,29 @@ Schema `ag-hr-anmeldung` · Version 1.0.0 (ZH-Formular-Struktur; Wortlaut-Dossie
 
 > Zur Eintragung in das Handelsregister wird angemeldet: die Gründung der {{firma}} mit Sitz in {{sitz}}. Die einzutragenden Tatsachen ergeben sich aus den beigelegten Belegen.
 
-### 6. `AA06_beilagen` — «Beilagen»
+### 6. `AA05b_inhaber_bucheffekten`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 622 Abs. 2bis OR
+- **Aufnahme:** inhaberBucheffekten = true
+- **Begründung (Protokoll):** Stufe 2 P2: Eine Gesellschaft mit Inhaberaktien muss im Handelsregister eintragen lassen, ob sie Beteiligungspapiere kotiert hat oder ihre Inhaberaktien als Bucheffekten ausgestaltet sind (Art. 622 Abs. 2bis OR am Cache verifiziert) — Bucheffekten-Variante.
+
+**Wortlaut:**
+
+> Die Gesellschaft hat Inhaberaktien; diese sind als Bucheffekten im Sinne des Bucheffektengesetzes vom 3. Oktober 2008 (BEG) ausgestaltet. Wir beantragen die entsprechende Eintragung.
+
+### 7. `AA05b_inhaber_kotiert`
+
+- [ ] **abgenommen** (David)
+- **Norm:** Art. 622 Abs. 2bis OR
+- **Aufnahme:** inhaberKotiertAktiv = true
+- **Begründung (Protokoll):** Stufe 2 P2: Eintragungs-Erklärung nach Art. 622 Abs. 2bis OR — Kotierungs-Variante.
+
+**Wortlaut:**
+
+> Die Gesellschaft hat Inhaberaktien und Beteiligungspapiere an einer Börse kotiert. Wir beantragen die entsprechende Eintragung.
+
+### 8. `AA06_beilagen` — «Beilagen»
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 43 HRegV
@@ -2281,7 +2326,7 @@ Schema `ag-hr-anmeldung` · Version 1.0.0 (ZH-Formular-Struktur; Wortlaut-Dossie
 
 > – {{item.titel}} ({{item.norm}})
 
-### 7. `AA07_unterschriften`
+### 9. `AA07_unterschriften`
 
 - [ ] **abgenommen** (David)
 - **Norm:** Art. 18 HRegV
@@ -2293,7 +2338,7 @@ Schema `ag-hr-anmeldung` · Version 1.0.0 (ZH-Formular-Struktur; Wortlaut-Dossie
 
 > Die Mitglieder des Verwaltungsrates:
 
-### 8. `AA07b_liste`
+### 10. `AA07b_liste`
 
 - [ ] **abgenommen** (David)
 - **Aufnahme:** immer
@@ -2308,4 +2353,4 @@ Schema `ag-hr-anmeldung` · Version 1.0.0 (ZH-Formular-Struktur; Wortlaut-Dossie
 
 ---
 
-**Summe:** 181 Bausteine in 12 Schemas.
+**Summe:** 185 Bausteine in 12 Schemas.
