@@ -83,33 +83,33 @@ Originale vor. Kein Funktionsausbau, nur Präzisierung:
 
 ## Etappe 2 — Qualifizierte Gründung (D3, D4, D5) — grösster Nutzen
 
-- [ ] 2.1 Eingabe-Modell: `einlageArt`-Erweiterung je Gründer-Tranche
+- [x] 2.1 Eingabe-Modell: `einlageArt`-Erweiterung je Gründer-Tranche
   (bar / sacheinlage / sacheinlageVerrechnung / sachuebernahmeKombi),
   Sacheinlage-Objekte (Bezeichnung, Inventarlisten-/Bilanz-Datum, Wert,
   Grundstück-Flag, Empfänger-Aktien, Gutschrift, bei Geschäft:
   CHE-Nr./Aktiven/Passiven/Kaufpreis/Rückwirkungsdatum) — getrennt von
   der GmbH (§4).
-- [ ] 2.2 Urkunden-Varianten Ziff. IV nach 3.3 (kombinierbar mit bar!),
+- [x] 2.2 Urkunden-Varianten Ziff. IV nach 3.3 (kombinierbar mit bar!),
   inkl. Grundstücks-Weiche («sofort verfügen» vs. «bedingungsloser
   Anspruch auf Eintragung in das Grundbuch»), besondere Vorteile als
   Zusatz-Variante; Statuten-Pflichtklauseln 634 IV / 634a III
   automatisch erzeugen (Gegenstand/Bewertung/Einleger/Aktien).
-- [ ] 2.3 Neue druckfertige Dokumente: **Sacheinlagevertrag** (einfach +
+- [x] 2.3 Neue druckfertige Dokumente: **Sacheinlagevertrag** (einfach +
   Geschäft, ZH verbatim inkl. Rückwirkungsklausel) und
   **Gründungsbericht** (einfach + Geschäft, je Bilanzposten-Zeilen);
   Prüfungsbestätigung bleibt FREMDBELEG (zugelassener Revisor) —
   nur Checklisten-Zeile, kein Export.
-- [ ] 2.4 Gates: Bewertungs-Summen = gezeichnete Aktien-Gegenwerte;
+- [x] 2.4 Gates: Bewertungs-Summen = gezeichnete Aktien-Gegenwerte;
   Verrechnung nur mit Forderungs-Betrag; Art.-181-IV-Hinweis;
   Lex-Koller-Frage 3 koppeln (Sacheinlage + Grundstück).
-- [ ] 2.5 Blocker `qualifiziert` entfernt; Checklisten-Weichen
+- [x] 2.5 Blocker `qualifiziert` entfernt; Checklisten-Weichen
   (sacheinlagevertrag/gruendungsbericht/pruefungsbestaetigung bestehen)
   mit der Mappe verknüpft. Bug-Check §9 mit juristischer Handrechnung
   (Agent 2 rechnet die Belegkette am Gesetz nach).
 
 ## Etappe 3 — Fremdwährung (D2) + Agio (D7) + Liberierung je Gründer (D6)
 
-- [ ] 3.1 Fremdwährung GBP/EUR/USD/JPY: Währungsfeld, Kurs-Satz verbatim
+- [x] 3.1 Fremdwährung GBP/EUR/USD/JPY: Währungsfeld, Kurs-Satz verbatim
   (Devisenmittelkurs-Quelle als Eingabe), CHF-Äquivalenz-Gate
   ≥ 100'000, Statuten/Urkunde in Währung; Blocker entfällt.
 - [ ] 3.2 Agio: Ausgabebetrag-Feld (Default = Nennwert); Gate Ausgabebetrag
@@ -131,7 +131,7 @@ Originale vor. Kein Funktionsausbau, nur Präzisierung:
 - [ ] 4.2 **Konstituierung + Domizil in der Urkunde** (D9, Ziff. VII mit
   Vollzähligkeits-Bedingung) → VR-Protokoll entbehrlich; Domizil in
   der Urkunde weglassbar (dann nur Anmeldung).
-- [ ] 4.3 **Lex-Koller-Erklärung** als druckfertiges Dokument (D16):
+- [x] 4.3 **Lex-Koller-Erklärung** als druckfertiges Dokument (D16):
   4 Ja/Nein-Erklärungen + Definitions-Fussnoten, Unterschrift EIN
   VR-Mitglied; ausgelöst durch `immobilienHauptzweck` (Checkliste
   `lex-koller` besteht); Bewilligungsbehörde kantonsoffen.
