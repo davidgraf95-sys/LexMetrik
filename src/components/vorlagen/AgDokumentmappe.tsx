@@ -83,6 +83,10 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
   const [waehrung, setWaehrung] = useState<AgWaehrung>('EUR');
   const [kursChf, setKursChf] = useState('');
   const [kursQuelle, setKursQuelle] = useState('');
+  // Etappe 4.3: Lex-Koller-Erklärung (Weiche immobilienHauptzweck)
+  const [lkAusland, setLkAusland] = useState(false);
+  const [lkNeuerwerb, setLkNeuerwerb] = useState(false);
+  const [lkGrundstueck, setLkGrundstueck] = useState(false);
   const [ort, setOrt] = useState('');
   const [datum, setDatum] = useState('');
 
@@ -103,12 +107,13 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
     vinkulierung, virtuelleGv, statutenUmfang, gjBeginn, gjEnde,
     sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
     waehrung, kursChf, kursQuelle,
+    lexKollerAuslandBeteiligt: lkAusland, lexKollerNeuerwerb: lkNeuerwerb, lexKollerGrundstueckErwerb: lkGrundstueck,
     sacheinlagen, verrechnungen, vorteile, revisorName, ort, datum,
   }), [weichen, firma, sitz, kanton, zweck, zweckErweiterung, ak, anzahl, nennwert, liberierung,
     gruender, vr, vertretungen, protokollfuehrer, bankName, bankOrt, rechtsdomizil,
     domizilhalterName, domizilhalterAdresse, rsName, rsSitz, vinkulierung, virtuelleGv,
     statutenUmfang, gjBeginn, gjEnde, sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
-    waehrung, kursChf, kursQuelle,
+    waehrung, kursChf, kursQuelle, lkAusland, lkNeuerwerb, lkGrundstueck,
     sacheinlagen, verrechnungen, vorteile, revisorName, ort, datum]);
 
   const mappe = useMemo(() => agDokumentmappe(antworten), [antworten]);
@@ -360,6 +365,27 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
         <Field label="Zugelassene:r Revisor:in der Prüfungsbestätigung (Art. 635a OR; leer = Blanko)">
           <input className={inputCls} value={revisorName} onChange={(e) => setRevisorName(e.target.value)} />
         </Field>
+      )}
+
+      {/* Etappe 4.3: Lex-Koller-Erklärung (Art. 18 BewG; ZH-Formular) */}
+      {weichen.immobilienHauptzweck && (
+        <div className="space-y-2">
+          <p className="text-body-s font-medium text-ink-900">Lex-Koller-Erklärung (Erwerb von Grundstücken durch Personen im Ausland)</p>
+          <div className="flex flex-col gap-1.5 text-body-s text-ink-700">
+            <label className="flex items-center gap-2">
+              <input type="checkbox" checked={lkAusland} onChange={(e) => setLkAusland(e.target.checked)} />
+              Personen im Ausland (Art. 5 BewG) sind an der Gesellschaft beteiligt
+            </label>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" checked={lkNeuerwerb} onChange={(e) => setLkNeuerwerb(e.target.checked)} />
+              Personen im Ausland erwerben mit der Gründung neu eine Beteiligung
+            </label>
+            <label className="flex items-center gap-2">
+              <input type="checkbox" checked={lkGrundstueck} onChange={(e) => setLkGrundstueck(e.target.checked)} />
+              Bei Sacheinlage: Die Gesellschaft erwirbt Nicht-Betriebsstätte-Grundstücke in der Schweiz
+            </label>
+          </div>
+        </div>
       )}
 
       {/* Etappe 3.1: Fremdwährung (Art. 621 Abs. 2 OR; Anhang 3 HRegV) */}

@@ -466,6 +466,29 @@ describe('AG — Qualifizierte Gründung (Etappe 2/D3–D5)', () => {
   });
 });
 
+describe('AG — Lex-Koller-Erklärung (Etappe 4.3/D16)', () => {
+  it('Nur bei Immobilien-Haupttätigkeit; Ja/Nein-Antworten; Frage 4 nicht anwendbar; VR-Unterschrift', () => {
+    expect(agDokumentmappe(BASIS).dokumente.map((d) => d.id)).not.toContain('lex-koller');
+
+    const m = agDokumentmappe({
+      ...BASIS,
+      immobilienHauptzweck: true,
+      lexKollerAuslandBeteiligt: true,
+      lexKollerNeuerwerb: true,
+      lexKollerGrundstueckErwerb: false,
+    });
+    expect(m.gates.blocker).toEqual([]);
+    expect(m.dokumente.map((d) => d.id)).toContain('lex-koller');
+    const t = text(m, 'lex-koller');
+    expect(t).toContain('neu eine Beteiligung: Ja.');
+    expect(t).toContain('Nicht-Betriebsstätte-Grundstücke in der Schweiz: Nein.');
+    expect(t).toContain('4. Bei Kapitalherabsetzung: nicht anwendbar (Gründung).');
+    expect(t).toContain('verweist die Anmeldenden an die zuständige kantonale Bewilligungsbehörde (Art. 18 Abs. 1 und 2 BewG)');
+    expect(t).toContain('Persönliche Unterschrift eines Mitglieds des Verwaltungsrates:');
+    expect(m.dokumente.find((d) => d.id === 'lex-koller')!.ergebnis.dokument.ausgabeArt).toBe('fertig');
+  });
+});
+
 describe('AG — Fremdwährungs-Gründung (Etappe 3.1/D2)', () => {
   const FW_BASIS: AgDokAntworten = {
     ...BASIS,

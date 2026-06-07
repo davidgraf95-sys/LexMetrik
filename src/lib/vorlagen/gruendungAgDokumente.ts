@@ -149,6 +149,12 @@ export type AgDokAntworten = AgGruendungEingaben & {
   /** Quelle des Devisenmittelkurses (ZH 3.2: «Dieser Umrechnungskurs
    *  entspricht dem Devisenmittelkurs der {{Bank}}.»). */
   kursQuelle: string;
+  /** Lex-Koller-Erklärung (Etappe 4.3/D16; ZH-Formular 1.1.2025) — wirksam
+   *  nur mit der Checklisten-Weiche `immobilienHauptzweck`. Frage 4
+   *  (Kapitalherabsetzung) ist bei der Gründung nicht anwendbar. */
+  lexKollerAuslandBeteiligt: boolean;
+  lexKollerNeuerwerb: boolean;
+  lexKollerGrundstueckErwerb: boolean;
   /** Qualifizierte Gründung (Etappe 2) — wirksam nur mit den Checklisten-
    *  Weichen `einlageArt`/`besondereVorteile` (§5). */
   sacheinlagen: AgSacheinlageZeile[];
@@ -176,6 +182,7 @@ export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = 
   sitzungBeginn: '', sitzungEnde: '',
   nachtragsbevollmaechtigter: '',
   waehrung: 'CHF', kursChf: '', kursQuelle: '',
+  lexKollerAuslandBeteiligt: false, lexKollerNeuerwerb: false, lexKollerGrundstueckErwerb: false,
   sacheinlagen: [], verrechnungen: [], vorteile: [], revisorName: '',
   ort: '', datum: '',
 };
@@ -484,6 +491,11 @@ function basisAntworten(a: AgDokAntworten): Antworten {
           ? 'Die in den Statuten angegebenen Sacheinlagen gemäss folgenden, vorliegenden Unterlagen:'
           : 'Die in den Statuten angegebene Verrechnungsliberierung gemäss folgenden, vorliegenden Unterlagen:',
     revisorZeile: a.revisorName.trim() || '________',
+    // Etappe 4.3: Lex-Koller-Antworten als Ja/Nein-Text (Frage 4 ist bei
+    // der Gründung nicht anwendbar — keine Kapitalherabsetzung).
+    lkFrage1: a.lexKollerAuslandBeteiligt ? 'Ja' : 'Nein',
+    lkFrage2: a.lexKollerNeuerwerb ? 'Ja' : 'Nein',
+    lkFrage3: a.lexKollerGrundstueckErwerb ? 'Ja' : 'Nein',
     sachListe: sachen.map((s) => ({
       // Vertragsdatum = Mappen-Datum (alle Dokumente derselben Gründung).
       vertragDatumFmt: datum,
@@ -1759,6 +1771,79 @@ const SACHEINLAGEVERTRAG_ENTWURF_SCHEMA: VorlageSchema = {
     'Urkundsperson am Sitz der Gesellschaft zu errichten (Art. 634 Abs. 3 OR).',
 };
 
+// ── 7b · LEX-KOLLER-ERKLÄRUNG (Etappe 4.3/D16; fertig) ──────────────────────
+// Inhalt nach dem amtlichen ZH-Formular (Stand 1.1.2025); nur bei
+// Immobilien-Haupttätigkeit einzureichen, unterzeichnet von EINEM Mitglied
+// des obersten Leitungs- oder Verwaltungsorgans.
+
+const LEXKOLLER_SCHEMA: VorlageSchema = {
+  id: 'ag-lex-koller',
+  version: '1.0.0 (ZH-Formular allg_formular_lex_koller_erklaerung 1.1.2025)',
+  titel: 'Lex-Koller-Erklärung',
+  format: 'eingabe',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Nur einzureichen, wenn die Gesellschaft eine ' +
+    'Immobilien-Haupttätigkeit verfolgt; persönliche Unterschrift EINES Mitglieds des obersten ' +
+    'Leitungs- oder Verwaltungsorgans (Merkblatt HRegA ZH). Fehlende Angaben können die Verweisung ' +
+    'an die kantonale Bewilligungsbehörde zur Folge haben (Art. 18 Abs. 1 und 2 BewG).',
+  bausteine: [
+    { id: 'LK01_absender', rolle: 'absender', text: '{{firma}} (in Gründung)\n{{anmeldeAdresseZeile}}', begruendung: 'Absenderin ist die Gesellschaft in Gründung.' },
+    { id: 'LK02_adressat', rolle: 'adressat', text: 'Handelsregisteramt des Kantons {{kanton}}', begruendung: 'Beleg zur HR-Anmeldung (Art. 43 HRegV; ZH-Checkliste «Lex-Koller-Erklärung»).' },
+    { id: 'LK03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}', begruendung: 'Ort und Datum.' },
+    { id: 'LK04_betreff', rolle: 'betreff', text: 'Lex-Koller-Erklärung', begruendung: 'Titel des amtlichen ZH-Formulars.' },
+    {
+      id: 'LK05_ingress',
+      text:
+        'Im Hinblick auf die Bestimmungen des Bundesgesetzes und der Verordnung über den Erwerb von ' +
+        'Grundstücken durch Personen im Ausland erklärt das unterzeichnende Mitglied des Verwaltungsrates ' +
+        'bezüglich der Gesellschaft {{firma}}, mit Sitz in {{sitz}}, Folgendes zum angemeldeten ' +
+        'Eintragungsgeschäft (Neueintragung/Gründung):',
+      begruendung: 'Ingress nach dem ZH-Formular («Im Hinblick auf die Bestimmungen … erklären die Unterzeichnenden bezüglich der Gesellschaft … Folgendes zum angemeldeten Eintragungsgeschäft» — Haus-Fassung im Singular, da ein VR-Mitglied unterzeichnet).',
+    },
+    {
+      id: 'LK06_fragen',
+      text:
+        '1. Personen im Ausland bzw. Personen, die für Rechnung von Personen im Ausland handeln, sind an ' +
+        'der Gesellschaft beteiligt: {{lkFrage1}}.\n' +
+        '2. Personen im Ausland bzw. Personen, die für Rechnung von Personen im Ausland handeln, erwerben ' +
+        'im Zusammenhang mit dem angemeldeten Eintragungsgeschäft an der Gesellschaft neu eine ' +
+        'Beteiligung: {{lkFrage2}}.\n' +
+        '3. Bei Sacheinlage, Fusion, Umwandlung oder Spaltung: Die Gesellschaft erwirbt ' +
+        'Nicht-Betriebsstätte-Grundstücke in der Schweiz: {{lkFrage3}}.\n' +
+        '4. Bei Kapitalherabsetzung: nicht anwendbar (Gründung).',
+      begruendung: 'Die vier Erklärungen des ZH-Formulars verbatim-nah; Frage 4 betrifft nur Kapitalherabsetzungen und ist bei der Gründung als «nicht anwendbar» ausgewiesen (§8 — ehrlicher als eine leere Ankreuzzeile).',
+    },
+    {
+      id: 'LK07_definitionen',
+      text:
+        'Personen im Ausland (Art. 5 BewG) sind insbesondere: Ausländerinnen und Ausländer mit Wohnsitz im ' +
+        'Ausland; Ausländerinnen und Ausländer mit Wohnsitz in der Schweiz, die weder Staatsangehörige eines ' +
+        'EU-/EFTA-Mitgliedstaates sind noch eine gültige Niederlassungsbewilligung (Ausweis C) besitzen; ' +
+        'juristische Personen mit Sitz im Ausland oder mit Sitz in der Schweiz, die von Personen im Ausland ' +
+        'beherrscht werden; sowie Personen, die ein Grundstück auf Rechnung einer Person im Ausland erwerben. ' +
+        'Betriebsstätte-Grundstück (Art. 2 Abs. 2 lit. a und Abs. 3 BewG) ist ein Grundstück, das als ständige ' +
+        'Betriebsstätte eines nach kaufmännischer Art geführten Gewerbes, eines Handwerksbetriebes oder eines ' +
+        'freien Berufes dient.',
+      begruendung: 'Definitions-Fussnoten des ZH-Formulars (gekürzt um den GB-Staatsvertrags-Sonderfall SR 0.142.113.672 — als Detail dem Formular-Original vorbehalten; Abweichung offengelegt).',
+    },
+    {
+      id: 'LK08_folge',
+      text:
+        'Kann die Handelsregisterbehörde die Bewilligungspflicht nicht ohne Weiteres ausschliessen, so setzt ' +
+        'sie das Eintragungsverfahren aus und verweist die Anmeldenden an die zuständige kantonale ' +
+        'Bewilligungsbehörde (Art. 18 Abs. 1 und 2 BewG).',
+      begruendung: 'Folgen-Hinweis des ZH-Formulars, kantonsneutral gefasst (ZH nennt die Bezirksräte — die Bewilligungsbehörde ist kantonal verschieden; Abweichung offengelegt).',
+    },
+    {
+      id: 'LK09_unterschrift',
+      rolle: 'unterschrift',
+      text: 'Persönliche Unterschrift eines Mitglieds des Verwaltungsrates:\n\n_________________________________\n{{praesidentName}}',
+      begruendung: 'ZH-Formular: «Persönliche Unterschrift von einem Mitglied des obersten Leitungs- oder Verwaltungsorgans»; vorbelegt mit der Präsidentin / dem Präsidenten.',
+    },
+  ],
+};
+
 // ── 8 · GRÜNDUNGSBERICHT (Etappe 2; fertig — Art. 635 OR) ───────────────────
 
 const GRUENDUNGSBERICHT_SCHEMA: VorlageSchema = {
@@ -1957,6 +2042,21 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
     });
   }
 
+  const anmeldeAdresseZeile = a.eigeneBueros
+    ? (a.rechtsdomizilAdresse.trim() || '________')
+    : `c/o ${a.domizilhalterName.trim() || '________'}, ${a.domizilhalterAdresse.trim() || '________'}`;
+
+  // Etappe 4.3/D16: Lex-Koller-Erklärung (nur bei Immobilien-Haupttätigkeit).
+  if (hat('lex-koller')) {
+    dokumente.push({
+      id: 'lex-koller',
+      titel: 'Lex-Koller-Erklärung',
+      dateiName: 'ag-lex-koller',
+      ausgeloestDurch: 'Immobilien-Haupttätigkeit (ZH-Checkliste; Art. 18 BewG)',
+      ergebnis: assemble(LEXKOLLER_SCHEMA, { ...basis, anmeldeAdresseZeile }),
+    });
+  }
+
   if (hat('wahlannahme-vr')) {
     // Review-Befund M-1 (7.6.2026): Index-ID gegen Namens-Kollisionen;
     // zudem NIEDRIG-1: Auslöser-Etikett wie bei der GmbH führen.
@@ -2011,9 +2111,7 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
     ergebnis: assemble(ANMELDUNG_SCHEMA, {
       ...basis,
       belegeAnmeldung,
-      anmeldeAdresseZeile: a.eigeneBueros
-        ? (a.rechtsdomizilAdresse.trim() || '________')
-        : `c/o ${a.domizilhalterName.trim() || '________'}, ${a.domizilhalterAdresse.trim() || '________'}`,
+      anmeldeAdresseZeile,
     }),
   });
 

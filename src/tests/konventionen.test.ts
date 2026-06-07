@@ -163,7 +163,7 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     // Nachtragsvollmacht → alle Singular-Varianten-Bausteine.
     const agSingular = agDokumentmappe({
       einlageArt: 'bar', besondereVorteile: false, optingOut: true,
-      eigeneBueros: true, immobilienHauptzweck: false, inhaberaktien: false,
+      eigeneBueros: true, immobilienHauptzweck: true, inhaberaktien: false,
       fremdwaehrung: false, bankInUrkundeGenannt: true, chWohnsitzVertretung: true,
       leistungenChf: undefined,
       ...AG_DOK_DEFAULTS,
