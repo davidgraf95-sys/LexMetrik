@@ -194,6 +194,54 @@ Agent 1 (Empirie-Sweep) Befunde werden nachgeführt. NÄCHSTER SCHRITT
 gruendungGmbhDokumente.ts (Wizard, qualifizierte Gründung, Optionen,
 Sammel-Download; GmbH-Spiegelungs-Liste unten beachten).
 
+**STAND 7.6.2026 spätnachmittags — PERFEKTIONS-PROGRAMM (UEBERGABE-AG-
+PERFEKTION.md, Auftrag David «mach alles») ABGEARBEITET:**
+
+- **P6+P7** (`028522d`): Sammel-Download als EIN ZIP (fflate,
+  gruendung-<firma-slug>.zip) + lokale Zwischenspeicherung
+  (lexmetrik:ag-gruendung:v1, Hydration-Guards je Array-Feld,
+  agGruendungHydration.test). Auf Davids Zusatzauftrag (`f4d71a1`):
+  ZIP enthält je Dokument auch **Word (DOCX)** — vorlagenDocxDokument()
+  als Blob-API spiegelbildlich zur PDF-API.
+- **P15** (`e91a331`): Abnahme-Registry AG_ALLE_SCHEMAS +
+  scripts/abnahme-ag.ts → ABNAHME-AG-BAUSTEINE.md (Wort-für-Wort-Abnahme
+  David; nach Engine-Änderungen neu generieren).
+- **P1 Stufe-2-Kombinationen** (`0b4d5e7`, deklarierte fachliche
+  Änderungen, alle am OR-Cache 1.1.2026): qualifiziert+Fremdwährung
+  (Beträge in Kapitalwährung, Kurs-Basis = geleistete Einlagen GESAMT) ·
+  Agio+Teilliberierung (Agio VOLL, nur Nennwert-Teil teilliberierbar;
+  AE07x) · qualifiziert+Agio (Wert-Gates auf AUSGABEBETRAG, 629 II
+  Ziff. 2) · gemischte Teilliberierung (globaler Grad auf Bar-Aktien,
+  Sach-/Verrechnungsaktien gelten voll; AE07g_teil; individuelle Grade
+  qualifiziert weiter gesperrt — Zuordnung nicht eindeutig).
+- **P2 Inhaberaktien** (`795a17e`): Weiche statt Sperre — 622 Abs.
+  1bis-Erklärung (Bucheffekten+Verwahrungsstelle ODER Kotierung),
+  HR-Eintrag 622 Abs. 2bis in der Anmeldung, {{aktienArt}} an 12
+  Stellen; Gates: Volliberierung (683!), keine Vinkulierung (685a),
+  Kurzfassung (ZH-Lang ist Namenaktien-spezifisch).
+- **P3 Statuten-Zusatzklauseln** (`2d44c0c`): Schiedsklausel 697n (+
+  Anmeldungs-Verweis 45 I lit. u HRegV) · Kapitalband 653s ff. (zwei
+  Varianten, Gates ±½/5 Jahre/Opting-out-Schranke 653s IV) · bedingtes
+  Kapital 653 ff. (Gates ½-Schranke 653a I, Nennwert-Vielfaches,
+  Kreis-Pflicht) · Stichentscheid-GV-Abwahl (Lang; SG-Default B8) ·
+  «Erstes Geschäftsjahr endet am». **OFFEN (deklariert):**
+  Stimmrechtsaktien 693 / Vorzugsaktien 654 / Partizipationsscheine 656a
+  brauchen ein Zwei-Kategorien-Kapitalmodell durch Zeichnung/Liberierung/
+  Urkunde — eigener Ausbauschritt, Davids Entscheid.
+- **P4 Unterschriftenblatt** (`0bbd77b`): neues Mappen-Dokument
+  (Haus-Fassung, Art. 21 HRegV-Modalitäten); Golden-Stand deklariert neu.
+- **P5 Kantonsvergleich SG/GL** (`edbc227`): Dossier
+  ag-gruendung-kantonsvergleich-sg-gl.md — Haus-Bausteine tragen
+  kantonsneutral; optionale Schärfungen B4/E2/W1/D2 offen.
+- **P8–P10** (`e6fcbe9`): Vorschau-Dokument-Dropdown · Musterdaten-Knopf
+  (Golden-Fall gemischt-qualifiziert) · rote Schritt-Sektionen mit den
+  eigenen Blockern (Bereichs-Tags der Engine).
+- **QS** (`ea1e8c3`): logik-sweep Stufe-2-Strang (AG-S1–S10, 3264
+  AG-Komb.) + Sweep-Exit-Fix (Verletzungen brachen das Tor bisher NICHT)
+  + 3 neue Golden-Fälle (87).
+- **P11 Notariatstarife** + **Sammel-Bug-Check §9 (2 Agents)**: laufen —
+  Befunde werden hier nachgetragen.
+
 **Empfohlene Reihenfolge = Etappen-Nummern.** Etappe 0 ist
 Korrektheits-Pflicht vor jedem Ausbau (§1); Etappe 2 bringt den grössten
 fachlichen Mehrwert (qualifizierte Gründung ist die häufigste reale
