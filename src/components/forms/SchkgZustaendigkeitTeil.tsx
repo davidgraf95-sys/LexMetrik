@@ -9,6 +9,7 @@ import {
 } from '../../lib/schkgZustaendigkeit';
 import { GEBV_SCHKG_URL } from '../../data/erlassLinks';
 import { BETREIBUNGSAEMTER, type BetreibungsamtAdresse } from '../../data/betreibungsaemter';
+import { BETREIBUNGSAMT_KANTONE, betreibungsamtFuer, type BetreibungsamtTreffer } from '../../data/betreibung/amtAufloesung';
 import { hauptTreffer, plzAufloesen } from '../../data/plz/plzAufloesung';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
@@ -82,6 +83,7 @@ export function SchkgZustaendigkeitTeil() {
   // konkreten Amts über die Datenschicht data/betreibungsaemter.ts (§3/§5).
   const [ortPlz, setOrtPlz] = useState('');
   const [ortKanton, setOrtKanton] = useState<Kanton | ''>('');
+  const [ortGemeinde, setOrtGemeinde] = useState('');
   // Render-Abgleich statt synchronem setState im Effect (Haus-Lint-Regel):
   // gemerkt wird die PLZ, die im Verzeichnis fehlte; die Warnung gilt nur,
   // solange das Feld genau diese PLZ trägt.
@@ -95,15 +97,35 @@ export function SchkgZustaendigkeitTeil() {
         setPlzUnbekanntFuer(treffer === null || treffer.length === 0 ? ortPlz : null);
         if (!treffer || treffer.length === 0) return;
         const kantone = [...new Set(treffer.map((t) => t.kanton))];
+        const gemeinden = [...new Set(treffer.map((t) => t.gemeinde))];
         const haupt = hauptTreffer(treffer);
         if (kantone.length === 1) setOrtKanton(kantone[0]);
         else if (haupt) setOrtKanton(haupt.kanton);
+        if (gemeinden.length === 1) setOrtGemeinde(gemeinden[0]);
+        else if (haupt) setOrtGemeinde(haupt.gemeinde);
       })
       .catch(() => { if (aktiv) setPlzUnbekanntFuer(null); });
     return () => { aktiv = false; };
   }, [ortPlz]);
   const plzUnbekannt = plzUnbekanntFuer !== null && plzUnbekanntFuer === ortPlz;
   const kantonsAemter = ortKanton === '' ? null : BETREIBUNGSAEMTER[ortKanton];
+
+  // Konkretes Amt über die Gemeinde (lazy, deterministisch — §2/§3).
+  // Render-Abgleich: gespeichert wird der Treffer MIT seinem Schlüssel; die
+  // Anzeige gilt nur, solange Kanton+Gemeinde noch dem Schlüssel entsprechen
+  // (kein synchrones Zurücksetzen im Effect, keine stale Adresse).
+  const [amtErgebnis, setAmtErgebnis] = useState<{ schluessel: string; treffer: BetreibungsamtTreffer | null } | null>(null);
+  const amtSchluessel = `${ortKanton}|${ortGemeinde.trim().toLowerCase()}`;
+  useEffect(() => {
+    let aktiv = true;
+    if (ortKanton === '' || ortGemeinde.trim() === '') return;
+    const schluessel = `${ortKanton}|${ortGemeinde.trim().toLowerCase()}`;
+    betreibungsamtFuer(ortKanton, ortGemeinde)
+      .then((t) => { if (aktiv) setAmtErgebnis({ schluessel, treffer: t }); })
+      .catch(() => { if (aktiv) setAmtErgebnis({ schluessel, treffer: null }); });
+    return () => { aktiv = false; };
+  }, [ortKanton, ortGemeinde]);
+  const amtTreffer = amtErgebnis !== null && amtErgebnis.schluessel === amtSchluessel ? amtErgebnis.treffer : null;
 
   const forderung = forderungRoh.trim() === '' ? null : Number(forderungRoh.replace(/['\s]/g, '').replace(',', '.'));
   const forderungUngueltig = forderung !== null && (!Number.isFinite(forderung) || forderung < 0);
@@ -188,12 +210,18 @@ export function SchkgZustaendigkeitTeil() {
           PLZ oder Kanton des Betreibungsortes (oben hergeleitet: z. B. Wohnsitz/Sitz der Schuldnerseite) —
           zeigt das zuständige Betreibungsamt bzw. das amtliche kantonale Verzeichnis.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Field label="PLZ" hint="amtliches Ortschaftenverzeichnis — setzt den Kanton automatisch">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Field label="PLZ" hint="amtliches Ortschaftenverzeichnis — setzt Kanton und Gemeinde">
             <input
               type="text" inputMode="numeric" maxLength={4} value={ortPlz}
               onChange={(e) => setOrtPlz(e.target.value.replace(/\D/g, ''))}
               className={inputCls + ' num w-28'} placeholder="PLZ" aria-label="Postleitzahl des Betreibungsortes"
+            />
+          </Field>
+          <Field label="Politische Gemeinde" hint="für die Kreis-Auflösung (ZH/FR/SO/AR/GR/TG/TI/VD)">
+            <input
+              type="text" value={ortGemeinde} onChange={(e) => setOrtGemeinde(e.target.value)}
+              className={inputCls} placeholder="Gemeinde" aria-label="Politische Gemeinde des Betreibungsortes"
             />
           </Field>
           <Field label="Kanton">
@@ -235,7 +263,29 @@ export function SchkgZustaendigkeitTeil() {
               ) : kantonsAemter.aufloesung.modus === 'kreise' ? (
                 <div className="space-y-2">
                   {kantonsAemter.aufloesung.hinweis && <p className="text-body-s text-ink-600">{kantonsAemter.aufloesung.hinweis}</p>}
-                  {kantonsAemter.aufloesung.aemter.map((a) => <AmtAdresse key={a.name} amt={a} />)}
+                  {amtTreffer?.art === 'amt' ? (
+                    <AmtAdresse amt={amtTreffer.amt} />
+                  ) : amtTreffer?.art === 'stadtkreise' ? (
+                    <>
+                      <p className="text-body-s text-ink-700">{amtTreffer.stadt}: je Stadtkreis ein Amt — massgeblich ist der Kreis der Adresse.</p>
+                      {amtTreffer.aemter.map((a) => <AmtAdresse key={a.name} amt={a} />)}
+                    </>
+                  ) : kantonsAemter.aufloesung.aemter.length <= 8 ? (
+                    <>
+                      {ortGemeinde.trim() !== '' && BETREIBUNGSAMT_KANTONE.includes(ortKanton as Kanton) && (
+                        <p className="text-body-s text-warn-700">
+                          Gemeinde «{ortGemeinde.trim()}» nicht in der Zuordnungskarte gefunden — alle Ämter des Kantons:
+                        </p>
+                      )}
+                      {kantonsAemter.aufloesung.aemter.map((a) => <AmtAdresse key={a.name} amt={a} />)}
+                    </>
+                  ) : (
+                    <p className="text-body-s text-ink-700">
+                      {kantonsAemter.aufloesung.aemter.length} Ämter — politische Gemeinde unter 3b eingeben
+                      {ortGemeinde.trim() !== '' ? ` («${ortGemeinde.trim()}» wurde nicht gefunden — Schreibweise prüfen)` : ''}
+                      {kantonsAemter.url ? <> oder <a href={kantonsAemter.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">amtliche Suche ({ortKanton}) ↗</a></> : null}.
+                    </p>
+                  )}
                 </div>
               ) : (
                 <p className="text-body-s text-ink-700">
