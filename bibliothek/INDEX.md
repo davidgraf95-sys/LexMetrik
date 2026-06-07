@@ -96,7 +96,7 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 ### SchKG (Betreibung) — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Befund 2. Durchgang |
 |---|---|---|
-| [betreibungskreise-kantone.md](behoerden/betreibungskreise-kantone.md) | Betreibungskreis-Systeme aller 26 Kantone (10 Einheitsamt · 10 Bezirks-/Regional · 2 Gemeinde · 4 gemischt) + Rechtsgrundlage, amtliches Verzeichnis, geprüfte Beispieladressen je Kanton; EasyGov-Finder-Analyse (kein offenes API, Negativbefund Bundes-Verzeichnis); Bau-Etappierung für `src/data/betreibungsaemter.ts` (Plan) | 52 Agents 7.6.2026 (je Kanton adversarial); TG-Zitate an geltender Fassung korrigiert; ZH-Reorganisation 56→34/18 in Vernehmlassung → Verfallsregister; Wortlaut-Lücken OW/FR (LexWork-Portale) markiert |
+| [betreibungskreise-kantone.md](behoerden/betreibungskreise-kantone.md) | Betreibungskreis-Systeme aller 26 Kantone (10 Einheitsamt · 10 Bezirks-/Regional · 2 Gemeinde · 4 gemischt) + Rechtsgrundlage, amtliches Verzeichnis, geprüfte Beispieladressen je Kanton; EasyGov-Finder-Analyse (kein offenes API, Negativbefund Bundes-Verzeichnis); **GEBAUT 7.6.2026**: `src/data/betreibungsaemter.ts` + Gemeinde-Auflösung `src/data/betreibung/` (Etappen 1+2: 10 Einheitsämter + 117 Kreis-Ämter, Karten 8 Kt./981 Gemeinden) im SchKG-Rechner | 52 Agents Recherche + 20 Agents Extraktion 7.6.2026 (je Kanton adversarial; 49/49 Adress-Stichproben); TG-Zitate an geltender Fassung korrigiert; ZH-Reorganisation 56→34/18 in Vernehmlassung → Verfallsregister; Wortlaut-Lücken OW/FR (LexWork-Portale) markiert |
 
 ### Verwaltung — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Offen |

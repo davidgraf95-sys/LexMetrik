@@ -16,6 +16,22 @@ Toggle-Kopplung gefixt).
 **Produktion:** https://lexmetrik.vercel.app (Vercel-Projekt `lexmetrik`;
 `legal-calc.vercel.app` = 308-Redirect). Marke: **LexMetrik** (grosses M).
 
+## Session 7.6.2026 abends — Betreibungsamt-Finder (Auftrag David, ungepusht)
+
+Auf Davids Frage zum EasyGov-Finder («kann ich das?») + «bau»: **Recherche-
+Dossier** `behoerden/betreibungskreise-kantone.md` (52 Agents, je Kanton
+adversarial: 10 Einheitsamt · 10 Bezirks-/Regional · 2 Gemeinde · 4 gemischt;
+Negativbefund: kein offenes Bundes-Verzeichnis, EasyGov-Detail-API geschützt) ·
+**Datenschicht** `data/betreibungsaemter.ts` (einheitsamt/kreise/verzeichnis,
+§8) + `data/betreibung/` (Resolver + Gemeinde-Karten 8 Kt./981 Gemeinden,
+gegen swisstopo-Register normalisiert; ZH-Städte → Stadtkreis-Listen 12/3) ·
+**UI** SchKG-Rechner Sektion 3b (PLZ→Kanton+Gemeinde) + Amts-Anzeige in der
+Forum-Karte (EasyGov bleibt Zweitweg). Extraktion per Workflow (20 Agents,
+49/49 Adress-Stichproben zeichengenau). 24 Akzeptanztests; Suite 1088.
+PFLEGE: ZH-Kreis-Reorganisation in Vernehmlassung (Verfallsregister,
+halbjährlich); BE «Avenir Berne romande». OFFEN: Etappe 3 (LU/UR/SZ/ZG/AG/SG
+nur Verzeichnis-Link) · Davids fachliche Abnahme.
+
 ## Session 7.6.2026 nachts — Plan 9b VOLLDOKUMENTE Gründung (Aufträge David, ungepusht)
 
 **Wortlaut-Dossier** `recherche/gruendungsdokumente-wortlaute.md` (4 Muster-

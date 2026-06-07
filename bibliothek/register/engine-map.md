@@ -23,6 +23,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | zustaendigkeit.ts · zustaendigkeitFahrplan.ts | normen/zpo-zustaendigkeit-regelwerk.md · normen/zustaendigkeit-engine-verifikation.md · behoerden/gerichtsbehoerden-kantone.md (+GOG) | entwurf; Bug-Check 4b (8 Fixes) + Ultra-Review 7.6. |
 | bestimmeRechtsmittel (in zustaendigkeit.ts) | recherche/bgg-beschwerde-engine.md · behoerden/rechtsmittel-spruchkoerper-kantone.md | entwurf; BGG Stufe 2 offen (Plan B.8) |
 | schkgZustaendigkeit.ts | normen/schkg-zustaendigkeit-regelwerk.md · recherche/schkg-existenzminimum-vorlagen.md | entwurf |
+| data/betreibungsaemter.ts + data/betreibung/ (Amts-Finder) | behoerden/betreibungskreise-kantone.md | entwurf; GEBAUT 7.6.2026 (Etappen 1+2: 10 Einheitsämter + 117 Kreis-Ämter, Gemeinde-Karten 8 Kt.) |
 | strafZustaendigkeit.ts · strafRechtsmittel.ts | normen/stpo-zustaendigkeit-regelwerk.md · recherche/stpo-rechtsmittel.md | entwurf (Rechtsmittel teilverdrahtet) |
 
 ## Beträge & Quoten

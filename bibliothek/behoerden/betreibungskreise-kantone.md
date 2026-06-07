@@ -680,3 +680,48 @@ Kantonsseiten-Zitate bzw. Versionsvergleich. TG: Erst-Zitate stammten aus
 einer Altfassung — vom Prüf-Agent am amtsidentischen PDF korrigiert (geltende
 Fassung: § 57 Abs. 1 ZSRG «Jeder Bezirk hat ein Betreibungsamt», Anhang
 aufgehoben per 1.6.2016). Fachliche Abnahme durch David: AUSSTEHEND.
+
+## GEBAUT 7.6.2026 — Etappen 1+2 (Commits `aeb8fed` + `eb307a9`)
+
+**Datenschicht** `src/data/betreibungsaemter.ts` (Ehrlichkeits-Modell §8:
+einheitsamt/kreise/verzeichnis) + Resolver `src/data/betreibung/
+amtAufloesung.ts` mit Gemeinde-Karten `src/data/betreibung/aemterKantone.json`;
+UI: SchKG-Zuständigkeitsrechner Sektion «3b · Betreibungsort lokalisieren»
+(PLZ→Kanton+Gemeinde via amtliches Ortschaftenverzeichnis) + Anzeige
+«Betreibungsamt am Betreibungsort».
+
+- **Etappe 1:** 10 Einheitsamt-Kantone mit dossier-verifizierter Adresse.
+- **Etappe 2:** 117 Kreis-Ämter (ZH 55 · BE 8 · FR 7 · SO 5 · AR 3 · GR 11 ·
+  TG 5 · TI 8 · VD 10 · VS 5) per Workflow-Extraktion von den amtlichen
+  Verzeichnissen (20 Agents; adversariale Stichproben: **49/49 Adressen
+  zeichengenau**, alle Ämterzahlen amtlich bestätigt, Gemeinde-Stichproben
+  6/6 Kantone ok). Prüf-Korrekturen eingearbeitet: BE Burgdorf «Dunantstrasse
+  7C»; ZH = LIVE-Struktur mit 55 Ämtern (die PDF-Ämterliste führt noch 57 —
+  Elgg ist in den Seuzach-Kreis, Wald-Fischenthal in den Rüti-Kreis
+  integriert; Live-Detailseiten massgeblich).
+- **Gemeinde-Karten (8 Kantone, 981 aktuelle Gemeinden)** gegen das
+  swisstopo-Ortschaftenverzeichnis normalisiert: 32 Suffix-/Schreibvarianten
+  auf amtliche Form («Wald (ZH)», «Roggwil (TG)», «Corminboeuf»,
+  14× «… (VD)»), 14 aufgelöste Gemeinden entfernt (ZH 12, SO Brunnenthal/
+  Küttigkofen), Fusions-Nachfolger per Vorgänger-Konsens abgeleitet
+  (ZH Stammheim; TI Verzasca/Tresa/Riviera/Monteceneri/Collina d'Oro/
+  Val Mara/Lema); manuell ergänzt: VD Crans (VD) [amtliche Umbenennung von
+  Crans-près-Céligny 2021, gleicher Kreis Nyon], TI Locarno → Ufficio Locarno
+  und Brusino Arsizio → Ufficio Mendrisio [definitorische Distriktzugehörig-
+  keit; TI ist ohnehin seit 2015 EIN kantonsweiter Kreis, Zuteilung
+  administrativ]. NICHT kartiert (gemeindefreie Gebiete): FR Staatswald Galm,
+  TI Comunanza Cadenazzo/Monteceneri.
+- **ZH-Städte:** Zürich (12) und Winterthur (3) lösen auf ihre
+  Stadtkreis-Ämter als LISTE auf (massgeblich ist der Kreis der Adresse —
+  kein Raten, §2).
+- **BE/VS ehrlich ohne Gemeinde-Karte** (amtlich keine gemeindescharfe
+  Zuordnung publiziert) → Dienststellen-/Ämterliste mit Gebiets-Beschrieb.
+  VS-Amtsname Sion als Haus-Fassung «Betreibungsamt der Bezirke Sitten,
+  Ering und Gundis» (amtliche Seite schreibt «Betreibungamt des
+  Bezirkes …» [sic] — Tippfehler der Quelle, Inhalt identisch).
+- **Tests:** 24 Akzeptanztests inkl. Integritäts-Invariante «jeder
+  Karten-Schlüssel ist eine AKTUELLE Gemeinde im swisstopo-Register» und
+  Goldwerten aus den adversarial bestätigten Stichproben.
+- **Offen (Etappe 3):** LU/UR/SZ/ZG/AG/SG nur Verzeichnis-Link; BE-Folge
+  «Avenir Berne romande» (Moutier-Wechsel 1.1.2026 → Umzüge Berner Jura/Biel
+  innert ~3 J.) im Verfallsregister.
