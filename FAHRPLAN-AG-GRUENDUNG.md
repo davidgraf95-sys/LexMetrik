@@ -112,48 +112,48 @@ Originale vor. Kein Funktionsausbau, nur Präzisierung:
 - [x] 3.1 Fremdwährung GBP/EUR/USD/JPY: Währungsfeld, Kurs-Satz verbatim
   (Devisenmittelkurs-Quelle als Eingabe), CHF-Äquivalenz-Gate
   ≥ 100'000, Statuten/Urkunde in Währung; Blocker entfällt.
-- [ ] 3.2 Agio: Ausgabebetrag-Feld (Default = Nennwert); Gate Ausgabebetrag
+- [x] 3.2 Agio: Ausgabebetrag-Feld (Default = Nennwert); Gate Ausgabebetrag
   ≥ Nennwert; Einlagen-/Feststellungs-Sätze auf Ausgabebetrag
   umgestellt (sie referenzieren ihn schon); Statuten unverändert
   (Agio kein Statuteninhalt).
-- [ ] 3.3 Teilliberierung je Gründer (a/b/c zu X %): pro-Gründer-Feld mit
+- [x] 3.3 Teilliberierung je Gründer (a/b/c zu X %): pro-Gründer-Feld mit
   Gates 20 % je Aktie / gesamthaft 50'000 (CHF-Äquivalent bei
   Fremdwährung); UI-Default «alle gleich» (ein Feld, aufklappbar).
-- [ ] 3.4 Goldwerte für Kurs-/Agio-/Mischfälle; Bug-Check §9.
+- [x] 3.4 Goldwerte für Kurs-/Agio-/Mischfälle; Bug-Check §9.
 
 ## Etappe 4 — Urkunden-Optionen + Nebendokumente
 
-- [ ] 4.1 **Wahlannahme in der Urkunde** (D8): Option je VR-Mitglied
+- [x] 4.1 **Wahlannahme in der Urkunde** (D8): Option je VR-Mitglied
   (anwesend → «welcher hiermit die Annahme erklärt» / Erklärung liegt
   vor → «dessen Annahmeerklärung vorliegt») → separate
   Wahlannahme-Dokumente entfallen entsprechend (Checklisten-Zeile
   passt sich an).
-- [ ] 4.2 **Konstituierung + Domizil in der Urkunde** (D9, Ziff. VII mit
+- [x] 4.2 **Konstituierung + Domizil in der Urkunde** (D9, Ziff. VII mit
   Vollzähligkeits-Bedingung) → VR-Protokoll entbehrlich; Domizil in
   der Urkunde weglassbar (dann nur Anmeldung).
 - [x] 4.3 **Lex-Koller-Erklärung** als druckfertiges Dokument (D16):
   4 Ja/Nein-Erklärungen + Definitions-Fussnoten, Unterschrift EIN
   VR-Mitglied; ausgelöst durch `immobilienHauptzweck` (Checkliste
   `lex-koller` besteht); Bewilligungsbehörde kantonsoffen.
-- [ ] 4.4 **Gründungs-Nachtrag** (D11) als eigene kleine Vorlage
+- [x] 4.4 **Gründungs-Nachtrag** (D11) als eigene kleine Vorlage
   (ENTWURF-Gate §8): Urkunden-Ziffer- und Statuten-Artikel-Änderung,
   Fortgeltungs-Klausel — Einstieg über die AG-Maske (Phase 3) und
   Katalog-Karte `geplant`→`entwurf`?  → Zuschnitt-Entscheid David
   (eigene Karte vs. Unterpunkt der Maske).
-- [ ] 4.5 Bug-Check §9.
+- [x] 4.5 Bug-Check §9.
 
 ## Etappe 5 — Info-Schicht (keine Engine-Logik)
 
-- [ ] 5.1 Phase-4-Hinweisblöcke (D20/D21): VR-Pflichten kompakt
+- [x] 5.1 Phase-4-Hinweisblöcke (D20/D21): VR-Pflichten kompakt
   (Buchführung persönlich · 725/725b-Stufen · StGB 165/166) +
   Warnung private Register (nur HRA-Rechnung; Merkmale) — Quelle/Stand
   ausweisen.
-- [ ] 5.2 FINMA-Warnung (D23): deterministische Wortprüfung
+- [x] 5.2 FINMA-Warnung (D23): deterministische Wortprüfung
   Firma/Zweck («Vermögensverwalter», «Trustee», «Verwalter von
   Kollektivvermögen», «Fondsleitung», «Wertpapierhaus», Bank).
-- [ ] 5.3 Übersetzungs-Hinweis (D24) bei fremdsprachigen Belegen
+- [x] 5.3 Übersetzungs-Hinweis (D24) bei fremdsprachigen Belegen
   (statischer Hinweis Phase 3).
-- [ ] 5.4 Erläuterungs-Hinweise aus 3.1 (Revisionsstellen-Anforderungen
+- [x] 5.4 Erläuterungs-Hinweise aus 3.1 (Revisionsstellen-Anforderungen
   727b/727c/RAV 8 I) am Revisions-Feld.
 
 ## Ausserhalb des Zuschnitts (bewusst)
@@ -180,6 +180,19 @@ getrennte Schemas (§4).
 3. **Nachtrag** (4.4) als eigene Katalog-Karte oder Unterpunkt der Maske?
 4. **Liberierung je Gründer** (3.3) — UI-Mehraufwand vertretbar oder
    global belassen?
+
+**STAND 7.6.2026 abends: ALLE Etappen GEBAUT** (Auftrag David «mach es
+einfach ganz fertig» — Zuschnitt-Fragen mit den empfohlenen Defaults
+aufgelöst: Statuten-Default kurz · Agio drin [nur Volliberierung] ·
+Nachtrag als Mappen-Unterpunkt · Liberierung je Gründer drin). Zusätzlich
+auf Davids Auftrag: **Wizard-Umbau** (6 Schritte, durchklickbar analog den
+anderen Masken) mit **Sammel-Download** aller notwendigen Dokumente im
+Schluss-Schritt (`7aacd4b`). Sammel-Bug-Check §9: Agent 2 (Wortlaut)
+abgeschlossen — Befund 1 (Nicht-Gründer-VR-Gate) + 2 gefixt (`6c18fcd`);
+Agent 1 (Empirie-Sweep) Befunde werden nachgeführt. NÄCHSTER SCHRITT
+(Auftrag David): **GmbH-Maske analog** — gleiches Programm auf
+gruendungGmbhDokumente.ts (Wizard, qualifizierte Gründung, Optionen,
+Sammel-Download; GmbH-Spiegelungs-Liste unten beachten).
 
 **Empfohlene Reihenfolge = Etappen-Nummern.** Etappe 0 ist
 Korrektheits-Pflicht vor jedem Ausbau (§1); Etappe 2 bringt den grössten
