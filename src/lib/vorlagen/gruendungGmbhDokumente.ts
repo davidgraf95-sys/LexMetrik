@@ -1,6 +1,6 @@
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
 import { assemble } from './engine';
-import { fmtCHF, fmtDatum, zahl } from './datum';
+import { fmtCHF, fmtDatum, ganzePositive, zahl } from './datum';
 import {
   gmbhGruendungsunterlagen,
   type GmbhGruendungEingaben,
@@ -139,7 +139,7 @@ export function pruefeGmbhDokGates(a: GmbhDokAntworten): GmbhDokGates {
   } else {
     if (nennwert <= 0) blocker.push('Der Nennwert muss grösser als null sein (Art. 774 Abs. 1 OR).');
     if (kapital < 20_000) blocker.push('Das Stammkapital beträgt mindestens CHF 20\'000 (Art. 773 Abs. 1 OR).');
-    if (anteile <= 0 || !Number.isInteger(anteile)) blocker.push('Anzahl Stammanteile als ganze Zahl angeben.');
+    if (ganzePositive(a.anzahlAnteile) === null) blocker.push('Anzahl Stammanteile als positive ganze Zahl angeben.');
     if (nennwert > 0 && anteile > 0 && Math.abs(anteile * nennwert - kapital) > 0.005) {
       blocker.push(
         `Rechnerische Unstimmigkeit: ${a.anzahlAnteile} Stammanteile × CHF ${fmtCHF(a.nennwertChf)} ergeben nicht das Stammkapital von CHF ${fmtCHF(a.stammkapitalChf)}.`,
@@ -906,14 +906,14 @@ export function gmbhDokumentmappe(a: GmbhDokAntworten): { dokumente: GmbhDokumen
   }
 
   // Anmeldungs-Beilagen: alle HRegV-Belege der Checkliste ausser den reinen
-  // Vorbereitungs-Schritten und Nach-Eintrag-Pflichten. Der Vorsitz-Beschluss
-  // (lit. e) entfällt ZUSÄTZLICH: Der erzeugte Errichtungsakt hält den
-  // Vorsitz inline fest (EA09b), und «für Angaben, die bereits in der
-  // öffentlichen Urkunde … festgehalten sind, ist kein zusätzlicher Beleg
-  // erforderlich» (Art. 71 Abs. 2 HRegV) — Ultra-Review MITTEL 7.6.2026.
-  const KEINE_BEILAGE = new Set(['statutenentwurf', 'kapitaleinlagekonto', 'hr-anmeldung', 'freigabe-einlagen', 'anteilbuch', 'wb-verzeichnis', 'vorsitz-beschluss']);
+  // Vorbereitungs-Schritten und Nach-Eintrag-Pflichten. Belege mit
+  // `entbehrlichWennInUrkunde` entfallen zusätzlich, weil der ERZEUGTE
+  // Errichtungsakt ihren Inhalt stets aufnimmt (Vorsitz: EA09b) — Art. 71
+  // Abs. 2 HRegV; Attribut an der Beleg-Definition statt id-Sonderliste
+  // hier (/simplify-Altitude-Befund 7.6.2026, §5: eine Quelle).
+  const KEINE_BEILAGE = new Set(['statutenentwurf', 'kapitaleinlagekonto', 'hr-anmeldung', 'freigabe-einlagen', 'anteilbuch', 'wb-verzeichnis']);
   const belegeAnmeldung = unterlagen
-    .filter((u) => !KEINE_BEILAGE.has(u.id))
+    .filter((u) => !KEINE_BEILAGE.has(u.id) && !u.entbehrlichWennInUrkunde)
     .map((u) => ({ titel: u.titel, norm: u.norm }));
 
   const dokumente: GmbhDokument[] = [];

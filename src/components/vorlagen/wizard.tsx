@@ -156,7 +156,7 @@ function VorschauZeile({ zeile, dicht, striche }: { zeile: string; dicht?: boole
 
 function VorschauAbsatz({ abs }: { abs: AssembleErgebnis['dokument']['absaetze'][number] }) {
   const zeilen = abs.text.split('\n');
-  const striche = abs.rolle === 'unterschrift' || !!abs.schemaStriche;
+  const striche = !!abs.stricheErlaubt; // Engine-Boolean (/simplify 7.6.2026)
 
   switch (abs.rolle) {
     case 'absender':

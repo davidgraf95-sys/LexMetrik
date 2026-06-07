@@ -1,6 +1,6 @@
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
 import { assemble } from './engine';
-import { fmtCHF, fmtDatumLang, zahl } from './datum';
+import { fmtCHF, fmtDatumLang, ganzePositive, zahl } from './datum';
 import type { GmbhStatutKlausel } from '../gruendungsunterlagen';
 
 // ─── Kapitalerhöhung AG + GmbH (Plan 9c, Auftrag David 7.6.2026) ─────────────
@@ -126,8 +126,8 @@ export function pruefeKeGates(a: KeAntworten): KeGates {
     blocker.push(`Bisheriges Kapital, Stückzahlen, Nennwert und Ausgabebetrag beziffern (${kapNorm}).`);
   } else {
     if (nennwert <= 0) blocker.push(`Der Nennwert muss grösser als null sein (${ag ? 'Art. 622 Abs. 4' : 'Art. 774 Abs. 1'} OR).`);
-    if (neue <= 0 || !Number.isInteger(neue)) blocker.push('Anzahl neuer Stücke als ganze Zahl angeben.');
-    if (bisherAnzahl <= 0 || !Number.isInteger(bisherAnzahl)) blocker.push('Bisherige Stückzahl als ganze Zahl angeben.');
+    if (ganzePositive(a.anzahlNeue) === null) blocker.push('Anzahl neuer Stücke als positive ganze Zahl angeben.');
+    if (ganzePositive(a.bisherigeAnzahl) === null) blocker.push('Bisherige Stückzahl als positive ganze Zahl angeben.');
     if (nennwert > 0 && bisherAnzahl > 0 && Math.abs(bisherAnzahl * nennwert - bisher) > 0.005) {
       blocker.push(
         `Rechnerische Unstimmigkeit: ${a.bisherigeAnzahl} × CHF ${fmtCHF(a.nennwertChf)} ergeben nicht das bisherige Kapital von CHF ${fmtCHF(a.bisherigesKapitalChf)}.`,
@@ -139,8 +139,7 @@ export function pruefeKeGates(a: KeAntworten): KeGates {
     // Review-Befund M-1 (7.6.2026): jede Einzel-Zeichnung als positive ganze
     // Zahl prüfen — sonst stünde im fertigen Schein «3.5 Namenaktien».
     for (const z of a.zeichner) {
-      const za = zahl(z.anzahl);
-      if (z.name.trim() && (za === null || za <= 0 || !Number.isInteger(za))) {
+      if (z.name.trim() && ganzePositive(z.anzahl) === null) {
         blocker.push(`Gezeichnete Stückzahl von ${z.name.trim()} als positive ganze Zahl angeben (keine Bruchteile von ${ag ? 'Aktien' : 'Stammanteilen'}).`);
       }
     }

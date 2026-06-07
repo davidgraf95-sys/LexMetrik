@@ -139,6 +139,10 @@ export function SchkgFristenForm() {
   const wechslePhase = (code: SchkgPhase) => { setPhase(code); setAktiv(null); setOverride(''); };
 
   // Gemeinsame Eingabe-Basis
+  // EINE Quelle für Engine-Input UND Anzeige (/simplify 7.6.2026: die
+  // Bedingung stand zuvor doppelt — die Gleichheit war nur kommentargestützt).
+  const aktiverOverride = aktiv?.modusUmstritten && override ? override : undefined;
+
   const basis = (einheit: SchkgEinheit, laenge: number, fristnatur: SchkgFristnatur, mitHemmung: boolean): SchkgInput => ({
     ereignis: form.ereignis,
     einheit,
@@ -147,7 +151,7 @@ export function SchkgFristenForm() {
     fristnatur,
     kanton: form.kanton,
     ausloeser: form.ausloeser,
-    modusOverride: aktiv?.modusUmstritten && override ? override : undefined,
+    modusOverride: aktiverOverride,
     hemmungVon: mitHemmung && hemmung.an ? hemmung.von : undefined,
     hemmungBis: mitHemmung && hemmung.an ? hemmung.bis : undefined,
     rechtsstillstandVon: rechtsstillstand.an ? rechtsstillstand.von : undefined,
@@ -180,11 +184,9 @@ export function SchkgFristenForm() {
 
   const verweise = (aktiv?.verweise ?? []).filter((k) => k in VERIFIKATION).map((k) => rechtsprechung(k as keyof typeof VERIFIKATION));
 
-  // Ultra-Review NIEDRIG (7.6.2026): Anzeige/PDF aus DERSELBEN Bedingung wie
-  // der Engine-Input ableiten — ein präparierter Permalink (o= ohne
-  // umstrittenes Preset) zeigte sonst ein anderes Regime an, als gerechnet
-  // wurde (Engine erhält modusOverride nur bei aktiv?.modusUmstritten).
-  const effektivesRegime = aktiv?.modusUmstritten && override ? override : form.modus;
+  // Ultra-Review NIEDRIG (7.6.2026): Anzeige/PDF aus DERSELBEN Quelle wie
+  // der Engine-Input — strukturell statt per Auge (aktiverOverride oben).
+  const effektivesRegime = aktiverOverride ?? form.modus;
 
   const eingaben: Record<string, string> = {
     'Auslösendes Ereignis': form.ereignis,

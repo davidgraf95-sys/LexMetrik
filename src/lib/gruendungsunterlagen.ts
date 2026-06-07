@@ -41,6 +41,12 @@ export interface Unterlage {
   /** Nur bei bedingten Unterlagen: welche Weiche sie ausgelöst hat. */
   ausgeloestDurch?: string;
   hinweis?: string;
+  /** Norm-Anker, wenn der Beleg ENTFÄLLT, sobald sein Inhalt bereits im
+   *  Errichtungsakt festgehalten ist (Art. 71 Abs. 2 / 43 Abs. 2 HRegV).
+   *  EINE Quelle für Checkliste (Anzeige) und Dokumentmappe (Beilagen-
+   *  Filter, weil deren Urkunde den Inhalt immer aufnimmt) — /simplify-
+   *  Altitude-Befund 7.6.2026 statt id-Sonderliste in der Mappe (§5). */
+  entbehrlichWennInUrkunde?: string;
 }
 
 export interface StatutenKlauselZeile {
@@ -333,7 +339,8 @@ export function gmbhGruendungsunterlagen(e: GmbhGruendungEingaben): Gruendungsun
       phase: 'beurkundung',
       ersteller: 'gruender',
       ausgeloestDurch: 'Mehrere Geschäftsführer:innen',
-      hinweis: 'Bei mehreren Geschäftsführern muss der Vorsitz geregelt werden (Art. 809 Abs. 3 OR); Beschluss der Gründer oder – soweit statutarisch vorgesehen – der Geschäftsführung.',
+      hinweis: 'Bei mehreren Geschäftsführern muss der Vorsitz geregelt werden (Art. 809 Abs. 3 OR); Beschluss der Gründer oder – soweit statutarisch vorgesehen – der Geschäftsführung. Als separater Beleg entbehrlich, wenn der Vorsitz bereits im Errichtungsakt festgehalten ist (Art. 71 Abs. 2 HRegV).',
+      entbehrlichWennInUrkunde: 'Art. 71 Abs. 2 HRegV',
     });
   }
   // lit. f nachgerüstet auf juristischen Review-Befund M-2 (6.6.2026).

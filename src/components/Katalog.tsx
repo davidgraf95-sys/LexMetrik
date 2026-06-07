@@ -397,8 +397,12 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
   // Keyword exakt > Keyword > Norm > Gebiet), bei Gleichstand bzw. reiner
   // Pill-Filterung bleibt die Katalog-Reihenfolge (stabil, erwartbar).
   const treffer = basisKarten.filter(passt);
-  const trefferSortiert = q === '' ? treffer : [...treffer].sort(
-    (a, b) => (sucheRang(a, suche) ?? 9) - (sucheRang(b, suche) ?? 9));
+  // Rang je Karte EINMAL berechnen, dann sortieren (/simplify 7.6.2026:
+  // der Comparator rief sucheRang zuvor O(n log n)-fach neu auf).
+  const trefferSortiert = q === '' ? treffer : treffer
+    .map((k) => [k, sucheRang(k, suche) ?? 9] as const)
+    .sort((a, b) => a[1] - b[1])
+    .map(([k]) => k);
   const allesZuruecksetzen = () => { setSuche(''); setBereiche(new Set()); setArten(new Set()); };
 
   // Rechtsgebiete in FESTER Auftrags-Reihenfolge (RECHTSGEBIETE pur), als

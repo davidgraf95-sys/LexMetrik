@@ -64,13 +64,15 @@ export interface DokumentAbsatz {
   ueberschrift?: string;
   text: string;
   rolle?: AbsatzRolle;       // durchgereicht für die Renderer
-  /** true = der SCHEMA-Text dieses Bausteins enthält selbst Strichzeilen
-   *  («______») — nur dann (oder bei rolle 'unterschrift') dürfen die
-   *  Renderer Strichzeilen als gezeichnete Unterschriftslinie deuten.
-   *  Ultra-Review MITTEL (7.6.2026): Nutzer-Freitext mit ≥6 Unterstrichen
-   *  wurde sonst zur Linie und der Inhalt verschwand (Renderer-Divergenz
-   *  zu vorlagenText, §5). */
-  schemaStriche?: boolean;
+  /** true = Strichzeilen («______») dieses Absatzes dürfen als gezeichnete
+   *  Unterschriftslinie gerendert werden. Die ENGINE entscheidet das EINMAL
+   *  (rolle 'unterschrift' ODER Schema-Text enthält selbst Strichzeilen,
+   *  geprüft VOR der Interpolation) — die drei Renderer konsumieren nur
+   *  noch das Boolean (/simplify 7.6.2026: zuvor bildeten PDF/DOCX/Vorschau
+   *  dasselbe ODER je selbst). Ultra-Review MITTEL (7.6.2026): Nutzer-
+   *  Freitext mit ≥6 Unterstrichen wurde sonst zur Linie und der Inhalt
+   *  verschwand (Renderer-Divergenz zu vorlagenText, §5). */
+  stricheErlaubt?: boolean;
 }
 
 export interface ProtokollEintrag {
@@ -153,9 +155,10 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
       liste = roh;
     }
 
-    // Strichzeilen-Lizenz NUR aus dem Schema-Text ableiten (vor der
+    // Strichzeilen-Lizenz NUR aus rolle/Schema-Text ableiten (vor der
     // Interpolation) — Nutzerwerte können so nie eine Linie auslösen.
-    const schemaStriche = b.text.split('\n').some((z) => SCHEMA_STRICHE.test(z)) || undefined;
+    const stricheErlaubt =
+      (b.rolle === 'unterschrift' || b.text.split('\n').some((z) => SCHEMA_STRICHE.test(z))) || undefined;
 
     if (liste) {
       // Ultra-Review HOCH-2 (7.6.2026): Bei nummeriert + wiederholeUeber
@@ -166,10 +169,10 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
       const nummeriert = b.nummeriert
         ? texte.map((t) => `${++ziffer}. ${t}`)
         : texte;
-      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummeriert.join('\n'), rolle: b.rolle, schemaStriche });
+      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummeriert.join('\n'), rolle: b.rolle, stricheErlaubt });
     } else {
       const nummer = b.nummeriert ? `${++ziffer}. ` : '';
-      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + interpoliere(b.text, antworten), rolle: b.rolle, schemaStriche });
+      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + interpoliere(b.text, antworten), rolle: b.rolle, stricheErlaubt });
     }
 
     aufgenommen.push(b.id);

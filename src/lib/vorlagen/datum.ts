@@ -40,3 +40,12 @@ export const zahl = (roh?: string): number | null => {
   const n = Number(String(roh ?? '').replace(/['\s]/g, '').replace(',', '.'));
   return Number.isFinite(n) && String(roh ?? '').trim() !== '' ? n : null;
 };
+
+/** Positive GANZE Zahl aus Nutzereingabe (Stückzahlen: Aktien, Stammanteile,
+ *  Zeichnungen) – sonst null. /simplify 7.6.2026: das Muster
+ *  «zahl(x) ≤ 0 ‖ !Number.isInteger» stand zuvor 5× wortgleich in den
+ *  Mappen-Gates; die NORM-Fehlertexte bleiben bewusst beim Aufrufer (§3/§4). */
+export const ganzePositive = (roh?: string): number | null => {
+  const n = zahl(roh);
+  return n !== null && n > 0 && Number.isInteger(n) ? n : null;
+};

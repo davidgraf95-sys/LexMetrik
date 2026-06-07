@@ -48,12 +48,10 @@ export function docxAbsaetze(e: AssembleErgebnis, banner?: PdfBanner): DocxAbsat
     if (a.ueberschrift) liste.push({ typ: 'ueberschrift', text: a.ueberschrift });
     // \n innerhalb eines Bausteins (Listen, Adressblöcke) → je eigener Absatz
     const zeilen = a.text.split('\n');
-    // Strichzeilen-Lizenz wie PDF/Vorschau (Ultra-Review MITTEL 7.6.2026):
-    // nur rolle 'unterschrift' oder Schema-eigene Striche — nie Nutzertext.
-    const stricheErlaubt = a.rolle === 'unterschrift' || !!a.schemaStriche;
     zeilen.forEach((zeile, i) => liste.push({
       typ: 'absatz', text: zeile,
-      ...(stricheErlaubt ? { stricheErlaubt } : {}),
+      // Strichzeilen-Lizenz = Engine-Boolean (assemble), /simplify 7.6.2026.
+      ...(a.stricheErlaubt ? { stricheErlaubt: true } : {}),
       ...(a.rolle ? { rolle: a.rolle, blockEnde: i === zeilen.length - 1 } : {}),
     }));
   });

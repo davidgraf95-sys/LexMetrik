@@ -106,17 +106,15 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
   const blockHoehe = (text: string, zeilenHoehe: number, breite = BREITE): number =>
     text.split('\n').reduce((h, zl) => h + zeilenVon(zl, breite).length * zeilenHoehe, 0);
 
-  // Strichzeilen-Lizenz des AKTUELLEN Absatzes (Ultra-Review MITTEL 7.6.2026):
-  // Linien nur bei rolle 'unterschrift' oder Schema-eigenen Strichen — nie
-  // aus interpoliertem Nutzer-Freitext (Konsistenz mit vorlagenText, §5).
-  let stricheErlaubt = false;
-
-  type ZeilenOpt = { align?: 'right' | 'center'; dicht?: boolean; brechen?: boolean };
+  // Strichzeilen-Lizenz kommt als ENGINE-Boolean am Absatz (stricheErlaubt)
+  // und wird je Aufruf explizit durchgereicht (/simplify 7.6.2026: zuvor
+  // mutable Closure-Variable — latenter Zustands-Riss zwischen Absätzen).
+  type ZeilenOpt = { align?: 'right' | 'center'; dicht?: boolean; brechen?: boolean; striche?: boolean };
   const schreibe = (text: string, opt: ZeilenOpt = {}) => {
     const zh = opt.dicht ? P.zeileDicht : P.zeile;
     for (const zl of text.split('\n')) {
       // Strichzeile → gezeichnete Unterschriftslinie
-      if (stricheErlaubt && STRICHE.test(zl)) {
+      if (opt.striche && STRICHE.test(zl)) {
         seitenumbruch(6);
         y += 2;
         hairline(RAND, RAND + 62, 0.3, 90);
@@ -159,7 +157,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
   // darf er zeilenweise brechen – sonst liefe der Text über den Seitenrand
   // hinaus (Audit-Befund H2 5.6.2026: brechen:false ohne Schranke).
   const MAX_BLOCK = 297 - 20 - RAND;
-  const blockGeschuetzt = (text: string, zeilenHoehe: number, pad: number, opt: { align?: 'right' | 'center'; dicht?: boolean } = {}) => {
+  const blockGeschuetzt = (text: string, zeilenHoehe: number, pad: number, opt: { align?: 'right' | 'center'; dicht?: boolean; striche?: boolean } = {}) => {
     const h = blockHoehe(text, zeilenHoehe);
     if (h <= MAX_BLOCK) {
       seitenumbruch(h + pad);
@@ -171,23 +169,23 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
 
   // ── Rollen-Renderer (Brief-/Vertrags-Anatomie) ──
   const absatzRendern = (a: DokumentAbsatz) => {
-    stricheErlaubt = a.rolle === 'unterschrift' || !!a.schemaStriche;
+    const striche = !!a.stricheErlaubt;
     switch (a.rolle) {
       case 'absender':
       case 'adressat':
         setzeBrot();
-        blockGeschuetzt(a.text, P.zeileDicht, 4, { dicht: true });
+        blockGeschuetzt(a.text, P.zeileDicht, 4, { dicht: true, striche });
         y += a.rolle === 'adressat' ? 10 : 8;
         return;
       case 'datumzeile':
         setzeBrot();
         y += 2;
-        schreibe(a.text, { align: 'right' });
+        schreibe(a.text, { align: 'right', striche });
         y += 8;
         return;
       case 'betreff':
         doc.setFont('helvetica', 'bold'); doc.setFontSize(13);
-        blockGeschuetzt(a.text, 5.6, 8);
+        blockGeschuetzt(a.text, 5.6, 8, { striche });
         y += 1.5;
         hairline(RAND, RAND + BREITE);
         y += 7;
@@ -207,9 +205,9 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
             y += P.zeile + 2;
           } else if (zl.startsWith('betreffend ')) {
             y += 1.5;
-            schreibe(zl);
+            schreibe(zl, { striche });
           } else {
-            schreibe(zl, { dicht: zl.trim() !== '' && zl !== 'in Sachen' });
+            schreibe(zl, { dicht: zl.trim() !== '' && zl !== 'in Sachen', striche });
             if (zl === 'in Sachen') y += 1.5;
           }
         }
@@ -218,24 +216,24 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
       case 'anrede':
         setzeBrot();
         y += 1.5;
-        schreibe(a.text);
+        schreibe(a.text, { striche });
         y += 4;
         return;
       case 'schlussformel':
         setzeBrot();
         y += 4;
-        schreibe(a.text);
+        schreibe(a.text, { striche });
         y += 2;
         return;
       case 'parteien':
         setzeBrot();
-        blockGeschuetzt(a.text, P.zeile, 4, { align: 'center' });
+        blockGeschuetzt(a.text, P.zeile, 4, { align: 'center', striche });
         y += 8;
         return;
       case 'unterschrift':
         setzeBrot();
         y += 5;
-        blockGeschuetzt(a.text, P.zeile, 8);
+        blockGeschuetzt(a.text, P.zeile, 8, { striche });
         y += P.absatzGap;
         return;
       default: {
@@ -250,7 +248,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
           y += P.ueberschriftNach;
         }
         setzeBrot();
-        schreibe(a.text);
+        schreibe(a.text, { striche });
         y += P.absatzGap;
       }
     }
