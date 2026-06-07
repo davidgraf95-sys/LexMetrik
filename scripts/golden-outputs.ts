@@ -232,6 +232,33 @@ agGolden('fw-agio', {
   aktienkapitalChf: "120'000", anzahlAktien: '120', ausgabebetragChf: "1'200",
   gruender: [{ name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '120', liberierung: '' }],
 });
+// Stufe 2 (Perfektion P1–P4, 7.6.2026): neue Konstellationen einfrieren.
+agGolden('inhaber-bucheffekten', {
+  ...AG_BASIS,
+  inhaberaktien: true, verwahrungsstelle: 'SIX SIS AG, Olten',
+});
+agGolden('gemischt-teil-agio', {
+  ...AG_BASIS,
+  einlageArt: 'gemischt',
+  aktienkapitalChf: "200'000", anzahlAktien: '200',
+  liberierungProzent: '50', ausgabebetragChf: "1'200",
+  gruender: [{ name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '200', liberierung: '' }],
+  sacheinlagen: [{
+    typ: 'sachgesamtheit', bezeichnung: 'eine Werkstatteinrichtung', belegDatum: '2026-06-01',
+    wertChf: "120'000", grundstueck: false, einlegerName: 'Anna Muster', aktienAnzahl: '100',
+    gutschriftChf: '', zustand: 'gebraucht, betriebsbereit', imHrEingetragen: false, cheNr: '',
+    aktivenChf: '', passivenChf: '', rueckwirkungDatum: '',
+  }],
+  revisorName: 'Revisia AG',
+});
+agGolden('zusatzklauseln', {
+  ...AG_BASIS,
+  optingOut: false, revisionsstelleName: 'Revisia AG', revisionsstelleSitz: 'Zürich',
+  schiedsklausel: true, schiedsOrt: 'Zürich',
+  kapitalband: true, kbRichtung: 'beide', kbUntergrenze: "50'000", kbObergrenze: "150'000", kbEndeDatum: '2031-06-01',
+  bedingtesKapital: true, bkBetrag: "50'000", bkKreis: 'den Arbeitnehmerinnen und Arbeitnehmern der Gesellschaft',
+  gjErstesEnde: '31. Dezember 2026',
+});
 agGolden('urkunden-optionen-nachtrag', {
   ...AG_BASIS,
   konstituierungInUrkunde: true, domizilNurAnmeldung: true,

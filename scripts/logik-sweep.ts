@@ -275,6 +275,12 @@ for (const zweiGruender of [false, true]) {
     const n = einlageArt === 'verrechnung' ? Number(a.anzahlAktien) : 30;
     a.verrechnungen = [{ glaeubigerName: 'A', forderungChf: String(n * 1000), aktienAnzahl: String(n), begruendungTxt: 'Darlehen, fällig.' }];
   }
+  pruefeAgInvarianten(a);
+}
+
+// Geteilte AG-Invarianten (P-Abschluss 7.6.2026: zweiter Sweep-Strang für
+// die Stufe-2-Weichen nutzt dieselben Checks).
+function pruefeAgInvarianten(a: AgDokAntworten) {
   try {
     const m = agDokumentmappe(a);
     if (m.gates.blocker.join('|') !== m.gates.blockerDetails.map((d) => d.text).join('|')) {
@@ -309,6 +315,60 @@ for (const zweiGruender of [false, true]) {
   }
 }
 
+// ── AG Stufe-2-Weichen (Perfektion P1–P4, 7.6.2026): Zusatzklauseln,
+// Inhaberaktien, Kapitalband, bedingtes Kapital — eigener Strang, damit das
+// Hauptgitter nicht um ×16 wächst. ──
+for (const inhaberaktien of [false, true])
+for (const schiedsklausel of [false, true])
+for (const kapitalband of ['aus', 'erhoehen', 'beide'] as const)
+for (const bedingtesKapital of [false, true])
+for (const statutenUmfang of ['kurz', 'lang'] as const)
+for (const optingOut of [true, false])
+for (const gjErstes of [false, true]) {
+  agN++;
+  const a = agBasis();
+  a.statutenUmfang = statutenUmfang;
+  a.optingOut = optingOut;
+  a.inhaberaktien = inhaberaktien;
+  if (inhaberaktien) a.verwahrungsstelle = 'SIX SIS AG, Olten';
+  a.schiedsklausel = schiedsklausel;
+  if (schiedsklausel) a.schiedsOrt = 'Zürich';
+  if (kapitalband !== 'aus') {
+    a.kapitalband = true;
+    a.kbRichtung = kapitalband;
+    a.kbUntergrenze = kapitalband === 'erhoehen' ? "100'000" : "50'000";
+    a.kbObergrenze = "150'000";
+    a.kbEndeDatum = '2031-06-01';
+  }
+  if (bedingtesKapital) { a.bedingtesKapital = true; a.bkBetrag = "50'000"; a.bkKreis = 'den Arbeitnehmenden der Gesellschaft'; }
+  a.gjErstesEnde = gjErstes ? '31. Dezember 2026' : '';
+  pruefeAgInvarianten(a);
+
+  // Zusätzliche Stufe-2-Invarianten
+  const m = agDokumentmappe(a);
+  const erwarteteBlocker = (kapitalband === 'beide' && optingOut)   // 653s IV
+    || (inhaberaktien && statutenUmfang === 'lang');                 // P2-Erstausbau
+  if (erwarteteBlocker && m.gates.blocker.length === 0) melde('AG-S1', a, 'erwarteter Stufe-2-Blocker fehlt');
+  if (!erwarteteBlocker && m.gates.blocker.length > 0) melde('AG-S2', a, `unerwarteter Blocker: ${m.gates.blocker[0]}`);
+  if (m.gates.blocker.length === 0) {
+    const st = m.dokumente.find((d) => d.id === 'statuten');
+    const stText = st?.ergebnis.dokument.absaetze.map((x) => `${x.ueberschrift ?? ''} ${x.text}`).join(' ') ?? '';
+    // Klausel-Präsenz an den ÜBERSCHRIFTEN messen — der 704-Katalog der
+    // Langfassung (ASL37) nennt «Kapitalband»/«bedingtes Kapital»/
+    // «Schiedsklausel» auch OHNE die Klauseln (Gesetzeswortlaut).
+    const stKoepfe = st?.ergebnis.dokument.absaetze.map((x) => x.ueberschrift ?? '').join(' | ') ?? '';
+    if (inhaberaktien && !stText.includes('Inhaberaktien')) melde('AG-S3', a, 'Inhaberaktien-Weiche ohne Inhaber-Text');
+    if (!inhaberaktien && stText.includes('Inhaberaktien')) melde('AG-S4', a, 'Inhaber-Text ohne Weiche');
+    if (schiedsklausel !== stKoepfe.includes('Schiedsklausel')) melde('AG-S5', a, 'Schiedsklausel-Weiche ↮ Artikel');
+    if ((kapitalband !== 'aus') !== stKoepfe.includes('Kapitalband')) melde('AG-S6', a, 'Kapitalband-Weiche ↮ Artikel');
+    if (bedingtesKapital !== stKoepfe.includes('Bedingtes Kapital')) melde('AG-S7', a, 'BedingtesKapital-Weiche ↮ Artikel');
+    if (gjErstes !== stText.includes('Das erste Geschäftsjahr endet am')) melde('AG-S8', a, 'gjErstesEnde-Weiche ↮ Text');
+    if (kapitalband === 'erhoehen' && !stText.includes('Herabsetzung des Aktienkapitals innerhalb des Kapitalbands ist ausgeschlossen')) melde('AG-S9', a, 'Nur-Erhöhungs-Satz fehlt');
+    // Unterschriftenblatt in jeder Mappe (P4)
+    if (!m.dokumente.some((d) => d.id === 'unterschriftenbogen')) melde('AG-S10', a, 'Unterschriftenblatt fehlt');
+  }
+}
+
 console.log(`Geprüft: Zivil ${zivilN} · SchKG ${schkgN} · Straf ${strafN} · AG-Mappe ${agN} Kombinationen`);
 if (fehler.length === 0) console.log('KEINE WIDERSPRÜCHE');
 else {
@@ -320,4 +380,7 @@ else {
   }
   console.log(`\n${fehler.length} VERLETZUNGEN in ${gruppen.size} Regeln:`);
   for (const [id, g] of gruppen) console.log(`\n■ ${id} (${g.n}×)\n  ${g.beispiel.slice(0, 400)}`);
+  // P-Abschluss 7.6.2026: Verletzungen müssen das Tor BRECHEN (Exit ≠ 0) —
+  // bisher exitete der Sweep auch mit Befunden mit 0 (CI-Lücke).
+  process.exitCode = 1;
 }
