@@ -4,18 +4,25 @@ import { SEKTIONEN, VORLAGE_SEKTIONEN, RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, RE
 import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
 import { ladeZuletzt, merkeZuletzt } from '../lib/schnellzugriff';
 import { kartePasst, sucheRang } from '../lib/katalogSuche';
-import { ANLIEGEN } from '../lib/anliegen';
 import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 import { Tabs } from './ui/Tabs';
 
-// Gemeinsamer Rechner-Katalog für /pro (Pro-only seit 5.6.2026).
+// Katalog der Hauptseite «/» (eine Hauptseite seit 7.6.2026).
 // Anatomie seit 6.6.2026 (Auftrag David, «Kachel-Katalog»): Die Rechtsgebiete
 // erscheinen als KOMPAKTE KACHELN unter ihren juristischen Obergruppen; ein
 // Klick öffnet das Gebiet als volle Breite direkt unter der Kachel-Zeile
 // (die übrigen Kacheln rutschen nach unten), ein zweiter Klick schliesst.
 // Aktive Suche/Filter ersetzen das Raster durch eine flache, deterministisch
 // gerankte Trefferliste (Titel > Keyword exakt > Keyword > Norm > Gebiet).
+//
+// Übersichts-Umbau 7.6.2026 (FAHRPLAN-STARTSEITE-UEBERSICHT U2–U4, Auftrag
+// David): Die Seitenleiste ist AUFGELÖST — ihre Gebietsliste duplizierte das
+// Kachel-Raster 1:1. Die Suche steht als EIN Feld in voller Breite über dem
+// Register; die Typ-Filter liegen hinter einer kompakten «Filter»-Schaltung
+// im Katalog-Kopf; die Anliegen-Zeile lebt jetzt auf Seitenebene (vereinte
+// Einstiegszeile in Startseite.tsx); «Zuletzt verwendet» erscheint nur,
+// wenn es Einträge gibt (Leerzustand braucht keine Erklär-Prosa).
 
 export function SectionHead({ children }: { children: React.ReactNode }) {
   return (
@@ -69,7 +76,9 @@ function GebietKachel({ gebiet, karten, onOeffnen }: {
         {verf.length > 0 && geplant > 0 && ' · '}
         {geplant > 0 && <><span className="num">{geplant}</span> in Vorbereitung</>}
       </span>
-      <span className="text-body-s text-ink-500 leading-relaxed line-clamp-3">{inhalt}</span>
+      {/* Inhaltsangabe auf EINE Zeile geklemmt (U4): einheitliche Kachel-
+          höhe, scanbare Spalten; der Volltext steht im Panel. */}
+      <span className="text-body-s text-ink-500 leading-relaxed line-clamp-1">{inhalt}</span>
     </button>
   );
 }
@@ -185,70 +194,6 @@ function FilterLeiste({ zusatzGruppen }: { zusatzGruppen?: PillGruppe[] }) {
   );
 }
 
-// ─── Gruppierte Übersicht (Seitenleiste): Obergruppe → Gebiete ──────────────
-// Klick wählt die Kachel an (öffnet das Panel) und springt zur Gruppe.
-
-function UebersichtGruppiert(props: {
-  gruppen: { label: string; eintraege: { id: string; title: string; anzahl: number }[] }[];
-  aktiveSektion: string | null;
-  onSprung?: (id: string) => void;
-}) {
-  const { gruppen, aktiveSektion, onSprung } = props;
-  return (
-    <nav aria-label="Rechtsgebiete nach Obergruppen" className="space-y-4">
-      {gruppen.map((gr) => (
-        <div key={gr.label} className="space-y-1">
-          <p className="lc-overline mb-1.5">{gr.label}</p>
-          {gr.eintraege.map((s) => {
-            const aktiv = s.id === aktiveSektion;
-            return (
-              /* Ziel ist das PANEL (die Kachel weicht ihm beim Öffnen) —
-                 preventDefault: kein toter Hash; gescrollt wird nach dem
-                 Render im Katalog-Effekt (Review-Befund 6.6.2026). */
-              <a key={s.id} href={`#panel-${s.id}`} aria-current={aktiv ? 'true' : undefined}
-                onClick={(e) => { e.preventDefault(); onSprung?.(s.id); }}
-                className={`relative flex items-baseline justify-between gap-2 px-2 py-1 -mx-2 rounded-md text-body-s no-underline transition-colors ${
-                  aktiv ? 'bg-brass-100/60 text-ink-900 font-medium' : 'text-ink-600 hover:text-ink-900 hover:bg-brass-100/40'
-                }`}>
-                {aktiv && <span aria-hidden className="absolute left-0 top-1 bottom-1 w-[3px] rounded-full bg-brass-500" />}
-                <span className="truncate pl-1">{s.title}</span>
-                <span className="num text-xs text-ink-500">{s.anzahl}</span>
-              </a>
-            );
-          })}
-        </div>
-      ))}
-    </nav>
-  );
-}
-
-// ─── Anliegen-Einstiege: situativer Zugang quer zur Taxonomie (Etappe 2.1) ──
-// Dieselbe leise Chip-Anatomie wie der Schnellzugriff; nur verfügbare Ziele.
-
-function AnliegenZeile({ onOeffnen }: { onOeffnen: (id: string) => void }) {
-  const eintraege = ANLIEGEN
-    .map((a) => ({ a, k: karte(a.zielId) }))
-    .filter((x): x is { a: typeof x.a; k: NonNullable<typeof x.k> } =>
-      !!x.k && istVerfuegbar(x.k) && !!x.k.href);
-  if (eintraege.length === 0) return null;
-
-  return (
-    <section aria-label="Einstieg nach Anliegen"
-      className="grid grid-cols-1 sm:grid-cols-[9.5rem_minmax(0,1fr)] gap-x-3 gap-y-1 sm:items-start">
-      <span className="lc-overline text-ink-500 sm:mt-1">Einstieg nach Anliegen</span>
-      <div className="flex flex-wrap gap-1.5">
-        {eintraege.map(({ a, k }) => (
-          <Link key={a.label} to={k.href!} onClick={() => onOeffnen(k.id)}
-            title={k.title}
-            className="inline-flex items-center gap-1 h-7 px-2.5 rounded-md border border-line text-body-s text-ink-600 no-underline hover:text-brass-700 hover:border-brass-400 transition-colors">
-            {a.label}
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 // ─── Schnellzugriff: Zuletzt verwendet ──────────────────────────────────────
 // Zeigt NUR Verfügbares (defensiv gegen entfernte IDs via karte()-Lookup).
 // Favoriten entfernt (Anweisung David 5.6.2026) — nur noch «Zuletzt».
@@ -271,14 +216,9 @@ function Schnellzugriff(props: {
     </Link>
   );
 
-  // Leer (z. B. Erstbesuch): EINE dezente Zeile statt leerem Gerüst.
-  if (zuletztKarten.length === 0) {
-    return (
-      <p aria-label="Schnellzugriff" className="text-xs text-ink-500">
-        Schnellzugriff: Zuletzt geöffnete Tools erscheinen hier automatisch.
-      </p>
-    );
-  }
+  // Leer (z. B. Erstbesuch): NICHTS rendern (U2 — ein Leerzustand braucht
+  // keine Erklär-Prosa; die Zeile erscheint mit dem ersten geöffneten Tool).
+  if (zuletztKarten.length === 0) return null;
 
   return (
     <section aria-label="Schnellzugriff"
@@ -289,12 +229,14 @@ function Schnellzugriff(props: {
   );
 }
 
-// ─── Katalog: Seitenleiste (Suche/Übersicht/Filter) + Kachel-Raster ─────────
+// ─── Katalog: Suchleiste + Kopfzeile (Tabs/Filter/Notiz) + Kachel-Raster ────
 
-export function Katalog({ karten, filterBereich = false, filterArt = false }: {
+export function Katalog({ karten, filterBereich = false, filterArt = false, kopfNotiz }: {
   karten: CalculatorCard[];
   filterBereich?: boolean;
   filterArt?: boolean;
+  /** Stille Zeile rechts der Tabs (z. B. Entwurf-Legende der Seite, U4). */
+  kopfNotiz?: React.ReactNode;
 }) {
   // ── URL-Zustand: Tab Verfügbar/Katalog + offenes Gebiet (teilbar) ──
   const [searchParams, setSearchParams] = useSearchParams();
@@ -330,19 +272,6 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
     setSearchParams(p, { replace: true });
   };
 
-  // Seitenleisten-Sprung: erst nach dem Render existiert das Panel —
-  // dorthin scrollen (scroll-margin trägt den Header-Versatz); sanft nur,
-  // wenn Motion erlaubt ist (Review-Befund 6.6.2026: Anker zeigte auf die
-  // soeben ersetzte Kachel und lief ins Leere).
-  const sprungZiel = useRef<string | null>(null);
-  useEffect(() => {
-    if (!sprungZiel.current || sprungZiel.current !== offenGebiet) return;
-    sprungZiel.current = null;
-    const ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    document.getElementById(`panel-${offenGebiet}`)
-      ?.scrollIntoView({ block: 'start', behavior: ruhig ? 'auto' : 'smooth' });
-  }, [offenGebiet]);
-
   // Fokus-Verwaltung des Kachel↔Panel-Tauschs (Deploy-Bug-Check 7.6.2026,
   // MITTEL/a11y): das fokussierte Element verschwindet beim Öffnen wie beim
   // Schliessen aus dem DOM, der Fokus fiel auf <body>. Beim Öffnen erhält
@@ -358,22 +287,24 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
     }
   }, [offenGebiet]);
 
-  // «/» fokussiert das Suchfeld (Etappe 1.4) — kein neues UI-Muster, nur das
-  // bestehende Feld bedienbarer; Eingabefelder bleiben unberührt.
-  const suchFeldDesktop = useRef<HTMLInputElement>(null);
-  const suchFeldMobil = useRef<HTMLInputElement>(null);
+  // «/» fokussiert das Suchfeld (Etappe 1.4) — seit U2/U3 gibt es genau
+  // EIN Feld (volle Breite über dem Register), kein Desktop/Drawer-Paar mehr.
+  const suchFeldRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
       const ziel = e.target as HTMLElement | null;
       if (ziel && (/^(INPUT|TEXTAREA|SELECT)$/.test(ziel.tagName) || ziel.isContentEditable)) return;
-      const feld = [suchFeldDesktop.current, suchFeldMobil.current]
-        .find((el) => el && el.offsetParent !== null);
-      if (feld) { e.preventDefault(); feld.focus(); }
+      if (suchFeldRef.current) { e.preventDefault(); suchFeldRef.current.focus(); }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, []);
+
+  // Filter-Schaltung (U3): die Typ-Filter liegen hinter EINER kompakten
+  // Schaltfläche im Katalog-Kopf statt in einer eigenen Seitenleiste;
+  // bei aktiven Filtern bleibt die Gruppe sichtbar (nichts Verstecktes wirkt).
+  const [filterOffen, setFilterOffen] = useState(false);
 
   const toggleIn = (set: (f: (alt: Set<string>) => Set<string>) => void) => (g: string) =>
     set((alt) => {
@@ -441,85 +372,54 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
           },
         ].filter((gr) => gr.optionen.length > 0) : []),
   ];
-  // Kompaktes Suchfeld – sitzt in der Seitenleiste (Desktop) bzw. im
-  // Filter-Drawer (mobil); filtert den Katalog live (flache Trefferliste).
-  const suchFeld = (ref: React.RefObject<HTMLInputElement | null>) => (
+  // EIN Suchfeld in voller Breite — der prominente Einstieg (U2); filtert
+  // den Katalog live (flache Trefferliste), «/» fokussiert, ?q= teilbar.
+  const suchFeld = (
     <input
-      ref={ref}
+      ref={suchFeldRef}
       type="search"
       value={suche}
       onChange={(e) => setSuche(e.target.value)}
-      placeholder="Katalog filtern …  ( / )"
-      className="lc-input h-9 py-0 text-body-s"
-      aria-label="Katalog filtern"
+      placeholder="Rechner, Vorlage oder Norm suchen …  ( / )"
+      className="lc-input h-11 py-0"
+      aria-label="Katalog durchsuchen"
       aria-keyshortcuts="/"
     />
   );
-  // Seitenleiste = EIN Ort für alles Steuernde: Suche, Übersicht, Filter
-  // (Entscheid 5.6.2026 – keine horizontale Filterleiste mehr über den Karten).
-  const uebersicht = (variante: 'desktop' | 'mobil') => (
-    <>
-      {suchFeld(variante === 'desktop' ? suchFeldDesktop : suchFeldMobil)}
-      <UebersichtGruppiert
-        gruppen={gruppenSichtbar.map((x) => ({
-          label: x.gr.label,
-          eintraege: x.sektionen.map((sx) => ({
-            id: sx.g.id, title: sx.g.name,
-            // Zähler = Panel-Inhalt (Deploy-Bug-Check 7.6.2026, MITTEL):
-            // im Tab «Gesamter Katalog» zählte die Seitenleiste nur die
-            // Verfügbaren und widersprach Kachel + Panel (§8).
-            anzahl: sx.karten.length,
-          })),
-        }))}
-        aktiveSektion={offenGebiet}
-        onSprung={(id) => { sprungZiel.current = id; patchParams({ gebiet: id }, true); }} />
-      <FilterLeiste zusatzGruppen={zusatzGruppen} />
-    </>
-  );
+  const filterSichtbar = zusatzGruppen.length > 0 && (filterOffen || bereiche.size > 0 || arten.size > 0);
 
   return (
     <div className="space-y-6">
-      {/* Mobil: Suche, Übersicht & Filter in einem Drawer – Kacheln sofort da */}
-      <details className="lg:hidden bg-surface border border-line rounded-xl">
-        <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between gap-2 text-body-s font-medium text-ink-700">
-          <span>Suche, Filter & Übersicht</span>
-          <span className="flex items-center gap-2">
-            {filterAnzahl > 0 && (
-              <span className="num text-xs rounded-full px-2 py-0.5 bg-brass-100 text-brass-700">{filterAnzahl} aktiv</span>
-            )}
-            <span aria-hidden className="text-ink-500">▾</span>
-          </span>
-        </summary>
-        <div className="px-4 pb-4 space-y-5">
-          {uebersicht('mobil')}
-        </div>
-      </details>
+      {suchFeld}
 
-      <div className="lg:grid lg:grid-cols-[230px_minmax(0,1fr)] lg:gap-10 lg:items-start">
-        {/* Schlanke Übersicht: klebt auf Desktop unter dem Header */}
-        <aside className="hidden lg:block lg:sticky lg:top-28 space-y-6">
-          {uebersicht('desktop')}
-        </aside>
+      {/* Kopfzeile: Tabs links · Filter-Schaltung + stille Notiz rechts */}
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+        <Tabs
+          ariaLabel="Katalog-Ansicht"
+          items={[
+            { code: 'verfuegbar', label: `Verfügbar (${karten.filter(istVerfuegbar).length})` },
+            { code: 'katalog', label: `Gesamter Katalog (${karten.length})` },
+          ] as const}
+          value={ansicht}
+          onChange={setAnsicht}
+        />
+        <div className="flex items-center gap-4">
+          {kopfNotiz}
+          {zusatzGruppen.length > 0 && (
+            <button type="button" onClick={() => setFilterOffen((o) => !o)}
+              aria-expanded={filterSichtbar}
+              className="text-body-s font-medium text-ink-600 hover:text-brass-700 transition-colors whitespace-nowrap">
+              Filter{filterAnzahl > 0 && <span className="num text-brass-700"> ({filterAnzahl})</span>} <span aria-hidden>{filterSichtbar ? '▴' : '▾'}</span>
+            </button>
+          )}
+        </div>
+      </div>
+      {filterSichtbar && <FilterLeiste zusatzGruppen={zusatzGruppen} />}
 
-        {/* Kacheln/Treffer: ab hier beginnt das Produkt */}
-        <div className="space-y-8 min-w-0">
-        {/* Tabs: steuern NUR die Sichtbarkeit; Default «Verfügbar»; in der URL gespiegelt */}
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <Tabs
-            ariaLabel="Katalog-Ansicht"
-            items={[
-              { code: 'verfuegbar', label: `Verfügbar (${karten.filter(istVerfuegbar).length})` },
-              { code: 'katalog', label: `Gesamter Katalog (${karten.length})` },
-            ] as const}
-            value={ansicht}
-            onChange={setAnsicht}
-          />
-        </div>
-        {/* Situativer Einstieg + Schnellzugriff – in beiden Tabs, nur Verfügbares */}
-        <div className="space-y-2">
-          <AnliegenZeile onOeffnen={onOeffnen} />
-          <Schnellzugriff zuletzt={zuletzt} onOeffnen={onOeffnen} />
-        </div>
+      {/* «Zuletzt verwendet» — nur wenn vorhanden (U2) */}
+      <Schnellzugriff zuletzt={zuletzt} onOeffnen={onOeffnen} />
+
+      <div className="space-y-8 min-w-0">
         {filterAktiv ? (
           trefferSortiert.length === 0 ? (
             /* Leerer Zustand: kein stilles Verschwinden */
@@ -558,12 +458,15 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
              die ÜBRIGEN Kacheln bleiben sichtbar und rutschen nach unten —
              animiert über je einen eigenen view-transition-name. */
           gruppenSichtbar.map((x) => (
-            <section key={x.gr.id} aria-labelledby={`gruppe-${x.gr.id}`} className="space-y-5">
-              <div className="flex items-center gap-4 pt-2">
-                <h2 id={`gruppe-${x.gr.id}`} className="font-sans font-semibold text-ink-900 text-h3 tracking-tight whitespace-nowrap">
+            <section key={x.gr.id} aria-labelledby={`gruppe-${x.gr.id}`} className="space-y-4">
+              {/* Obergruppe als STILLE Overline (U4): vorher fünf h3-Schwer-
+                  gewichte mit eigener Ablesekante — das Register trägt die
+                  Hierarchie jetzt typografisch, nicht mit fünf Linealen. */}
+              <div className="flex items-center gap-4 pt-1">
+                <h2 id={`gruppe-${x.gr.id}`} className="lc-overline text-ink-700 whitespace-nowrap">
                   {sansAmp(x.gr.label)}
                 </h2>
-                <span aria-hidden className="scale-rule flex-1" />
+                <span aria-hidden className="flex-1 h-px bg-line" />
               </div>
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(240px,100%),1fr))] gap-4">
                 {x.sektionen.map((sx) => (
@@ -579,7 +482,6 @@ export function Katalog({ karten, filterBereich = false, filterArt = false }: {
             </section>
           ))
         )}
-        </div>
       </div>
     </div>
   );

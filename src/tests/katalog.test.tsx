@@ -38,8 +38,10 @@ describe('Katalog auf der Hauptseite: Tabs + Kachel-Raster (Umbau 6.6.2026, Auft
     expect(html).toContain(`Verfügbar (${verf})`);
     expect(html).toContain(`Gesamter Katalog (${ALLE_KARTEN.length})`);
     // 5er-Gruppen sichtbar (mit Verfügbarem): materiell + prozess + übergreifend
+    // (&-Labels seit U3 nur noch via sansAmp gerendert → Teilstrings prüfen)
     expect(html).toContain('Zivilrecht (materiell)');
-    expect(html).toContain('Zivilprozess &amp; Vollstreckung');
+    expect(html).toContain('Zivilprozess');
+    expect(html).toContain('Vollstreckung');
     // Raster-Ansicht: kein Panel offen — keine Karten, keine Badges sichtbar
     expect(html).not.toContain('id="panel-');
     expect(html).not.toContain('In Vorbereitung</span>');
@@ -54,7 +56,8 @@ describe('Katalog auf der Hauptseite: Tabs + Kachel-Raster (Umbau 6.6.2026, Auft
     const html = seiteHtml('/?ansicht=katalog');
     expect(html).toContain('in Vorbereitung');
     expect(html).toContain('Öffentliches Recht');
-    expect(html).toContain('Strafrecht &amp; Strafprozess');
+    expect(html).toContain('Strafrecht');
+    expect(html).toContain('Strafprozess');
     // auch im Katalog-Tab: Karten erst im geöffneten Panel
     expect(html).not.toContain('In Vorbereitung</span>');
   });
@@ -86,7 +89,7 @@ describe('Katalog auf der Hauptseite: Tabs + Kachel-Raster (Umbau 6.6.2026, Auft
     expect(html).toContain('Treffer');
     expect(html).toContain('href="/rechner/schkg-fristen"'); // schkg-fristen via Keyword
     expect(html).not.toContain('id="kachel-'); // Kachel-Raster ausgeblendet
-    // Suchfeld trägt den URL-Wert (beide Instanzen: Desktop + Drawer)
+    // Suchfeld trägt den URL-Wert (seit U2/U3 EIN Feld in voller Breite)
     expect(html).toContain('value="Rechtsvorschlag"');
   });
 
@@ -110,10 +113,10 @@ describe('Anliegen-Einstiege (Etappe 2.1 — Entwurf, Abnahme David offen)', () 
     expect(new Set(ANLIEGEN.map((a) => a.label)).size).toBe(ANLIEGEN.length);
   });
 
-  it('die Zeile erscheint im Katalog mit allen Anliegen-Chips', async () => {
+  it('die Anliegen erscheinen in der vereinten Einstiegszeile (U2/D-A: Anliegen zuerst → alle sichtbar)', async () => {
     const { ANLIEGEN } = await import('../lib/anliegen');
     const html = seiteHtml('/');
-    expect(html).toContain('Einstieg nach Anliegen');
+    expect(html).toContain('Direkter Einstieg');
     ANLIEGEN.forEach((a) => expect(html).toContain(a.label.replace(/&/g, '&amp;')));
   });
 });
@@ -147,31 +150,54 @@ describe('Katalog: Schnellzugriff (nur «Zuletzt» — Favoriten entfernt, Anwei
   });
 });
 
-describe('Eine Hauptseite (FAHRPLAN-EINE-HAUPTSEITE, Auftrag David 7.6.2026)', () => {
-  it('Hero kompakt (D-1) + Häufig gebraucht (D-2) + Vollkatalog; keine Pro-Reste, keine Preisaussage (D-4)', async () => {
+describe('Eine Hauptseite — Übersichts-Umbau (FAHRPLAN-STARTSEITE-UEBERSICHT, Auftrag David 7.6.2026)', () => {
+  it('Zone 1: Hero = Claim + EIN Satz + Kennzahlen ohne Preisaussage (U1/D-4); Methodik-Anker entfallen', () => {
     const html = seiteHtml('/');
-    // Hero: Claim-Overline + Free-Nutzen-Headline in Kompakthöhe
     expect(html).toContain('Schweizer Recht, berechenbar');
     expect(html).toContain('Fristen berechnen. Beträge beziffern. Rechtsdokumente aufsetzen.');
-    // Kennzahlen ohne Preisaussage (D-4)
     expect(html).toContain('sofort verfügbar');
     expect(html).toContain('Rechtsgebiete');
     expect(html).not.toContain('kostenlos');
-    // Kuratierter Schnelleinstieg (D-2): Zeile vorhanden, nur Verfügbare
+    // U1: die drei Anker-Zeilen leben auf /methodik, nicht mehr im Hero
+    expect(html).not.toContain('Deterministisch – gleiche Eingabe');
+  });
+
+  it('Zone 2: EINE Einstiegszeile (Anliegen + Werkzeuge dedupliziert, max. 10 + «mehr»), EIN Suchfeld', async () => {
+    const html = seiteHtml('/');
+    const { ANLIEGEN } = await import('../lib/anliegen');
     const { haeufigGebrauchtKarten } = await import('../lib/haeufigGebraucht');
-    expect(html).toContain('Häufig gebraucht');
-    expect(haeufigGebrauchtKarten().length).toBeGreaterThan(0);
-    haeufigGebrauchtKarten().forEach((k) => expect(html).toContain(`href="${k.href}"`));
-    // Vollkatalog liegt auf der Hauptseite (Tabs + Gruppen + Schnellzugriff)
+    expect(html).toContain('Direkter Einstieg');
+    expect(html).not.toContain('Häufig gebraucht');        // alte Doppel-Zeile weg
+    expect(html).not.toContain('Einstieg nach Anliegen');  // in der vereinten Zeile aufgegangen
+    // Dedupe + Klemmung: 10 Chips sichtbar, Rest hinter «mehr (N) …»
+    const ziele = new Set(ANLIEGEN.map((a) => a.zielId));
+    const werkzeuge = haeufigGebrauchtKarten().filter((k) => !ziele.has(k.id));
+    const gesamt = ANLIEGEN.length + werkzeuge.length;
+    if (gesamt > 10) expect(html).toContain(`mehr (${gesamt - 10})`);
+    // EIN Suchfeld in voller Breite (U2/U3): genau eine search-Instanz
+    expect(html.match(/type="search"/g)?.length).toBe(1);
+    expect(html).not.toContain('Suche, Filter &amp; Übersicht'); // Drawer aufgelöst
+  });
+
+  it('Zone 3: Register voller Breite, Filter hinter Schaltung, Zuletzt/Hinweis-Prosa nur bei Inhalt (U2–U4)', () => {
+    const html = seiteHtml('/');
     expect(html).toContain('role="tablist"');
-    expect(html).toContain('Schnellzugriff');
-    // bleibende Blöcke
+    expect(html).toContain('>Filter');                      // kompakte Filter-Schaltung im Kopf
+    expect(html).not.toContain('Output-Typ');               // Gruppen erst nach Klick sichtbar
+    // Seitenleiste aufgelöst: Gebietsliste (nav) existiert nicht mehr
+    expect(html).not.toContain('Rechtsgebiete nach Obergruppen');
+    // Leerzustand «Zuletzt» rendert NICHTS (keine Erklär-Prosa)
+    expect(html).not.toContain('erscheinen hier automatisch');
+    expect(html).not.toContain('Zuletzt verwendet');
+    // Entwurf-Legende als stille Notiz im Katalog-Kopf
+    expect(html).toContain('fachlich noch nicht geprüft');
+    // Fuss: Methodik EINE Zeile mit Link statt 4 Karten (U5)
     expect(html).toContain('So rechnet LexMetrik');
+    expect(html).toContain('href="/methodik"');
+    expect(html).not.toContain('Praxis statt Schublade');   // Langtext-Karten weg
     expect(html).toContain('Rechtlicher Hinweis');
-    // Pro-Reste getilgt: kein Teaser, kein Pro-Etikett
+    // Pro-Reste bleiben getilgt
     expect(html).not.toContain('Werkzeuge für die anwaltliche Praxis');
-    expect(html).not.toContain('Zu Pro');
-    expect(html).not.toContain('(Pro)');
   });
 });
 
