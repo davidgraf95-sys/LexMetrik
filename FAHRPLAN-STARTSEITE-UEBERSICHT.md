@@ -1,5 +1,24 @@
 # FAHRPLAN — Startseite deutlich übersichtlicher (Auftrag David 7.6.2026)
 
+> **UMGESETZT 7.6.2026** auf Davids «bau» mit allen Defaults (Commit
+> `3a00d48`): U1 Hero halbiert · U2 EIN Suchfeld volle Breite + vereinte
+> Chip-Zeile «Direkter Einstieg» (10 + «mehr (N)») + Zuletzt nur bei
+> Inhalt · U3 Seitenleiste aufgelöst, Filter hinter Kopf-Schaltung ·
+> U4 Kacheln line-clamp-1, Obergruppen als Overlines, Entwurf-Notiz bei
+> den Tabs · U5 Methodik-Fuss eine Zeile. Tore grün (1063 Tests; Golden-
+> ag:*-Abweichungen = fremdes Engine-WIP der Parallel-Session, zugeordnet).
+> 390px-Overflow besteht AUCH OHNE Seitenleiste fort → Treiber liegt
+> tiefer, bleibt FAHRPLAN-DESIGN E4.
+>
+> **Mandat David (im Bau erteilt): Engines dürfen anders dargestellt/
+> aufgeteilt werden, wenn fachlich besser.** Prüfergebnis: Karte↔Engine-
+> Zuordnung bleibt — (a) der Doppelpfad Fristenrechner-Tabs ↔ eigene
+> ZPO-/SchKG-Karten rendert DIESELBEN Forms (geprüft RechnerTagerechner
+> .tsx) und ist als Laien- vs. Fach-Einstieg gewollt (Entscheid
+> 5.6.2026); (b) konsolidierte Karten mit szenarien entsprechen §4.
+> Unter dem Mandat umgesetzt: Werkzeug-Chips, deren Karte schon
+> Anliegen-Ziel ist, erscheinen nicht doppelt (Darstellungs-Dedupe).
+
 **Auftrag (wörtlich):** «erstelle handlungsplan zum startseite viel
 übersichtlicher zu machen» — mit Design-Skill (frontend-design) als
 Leitplanke. Reine Darstellungsschicht (§3): keine Engine, kein Golden,
