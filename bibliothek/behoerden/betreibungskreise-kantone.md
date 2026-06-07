@@ -725,3 +725,39 @@ UI: SchKG-Zuständigkeitsrechner Sektion «3b · Betreibungsort lokalisieren»
 - **Offen (Etappe 3):** LU/UR/SZ/ZG/AG/SG nur Verzeichnis-Link; BE-Folge
   «Avenir Berne romande» (Moutier-Wechsel 1.1.2026 → Umzüge Berner Jura/Biel
   innert ~3 J.) im Verfallsregister.
+
+## GEBAUT 7.6.2026 — Etappe 3 (ZG/UR/SZ gemeindescharf; LU/AG/SG bleiben Verzeichnis)
+
+Workflow-Extraktion (12 Agents, je Kanton adversarial). Ergebnis:
+
+- **ZG → kreise (7 Ämter, 11/11 Gemeinden):** kommunale Betreibungsämter,
+  amtliches zg.ch-Adressverzeichnis (Stand 2/2023, Einzelangaben 2026 an
+  Gemeindeseiten gegengeprüft; 7/7 Adressen bestätigt). Zusammenlegungen in
+  die Karte eingearbeitet: **Steinhausen → Betreibungsamt Zug (seit 1.4.2017),
+  Walchwil → Zug (seit 1.1.2023)**; **Menzingen/Neuheim = EIN gemeinsam
+  geführtes Amt** (das PDF führt 2 Zeilen mit identischer Adresse → auf einen
+  Eintrag «Betreibungsamt Menzingen / Neuheim» zusammengeführt, daher 7 statt
+  «8»).
+- **UR → kreise (2 Ämter, 19/19 Gemeinden):** 2 Betreibungskreise, Adressen
+  + Gemeinde-Zuordnung amtlich bestätigt (3/3 Stichproben).
+- **SZ → kreise (11 Ämter, 30/30 Gemeinden):** Bezirks-/Gemeindemix
+  (§ 1 EGzSchKG SZ). Verzeichnis ist VERBANDSGEFÜHRT (ba-sz.ch) — im
+  `quelle`-Feld offengelegt; Adressen an Gemeinde-/Bezirksquellen
+  gegengeprüft (5/5). Schreibvariante «Wangen» → «Wangen (SZ)» (swisstopo).
+- **LU → bleibt verzeichnis (§8):** amtliche gerichte.lu.ch führt KEINE
+  eigene Adressliste, delegiert auf die regionale Verbands-Plattform
+  betreibungsaemter-zentralschweiz.ch; ~34 Amtsstellen, Liste durch
+  Mehrkreis-Ämter aufgebläht, laufende Fusionen (Honau→Root 1.1.2025),
+  keine belastbare amtliche gemeindescharfe Gesamtliste (gemOk=false).
+- **AG → bleibt verzeichnis (§8):** nur ~14 von rund 19 aktiven Kreisen mit
+  amtlicher Adresse belegbar (Verbands-Verzeichnis betreibungsamt-ag.ch bei
+  jedem Abruf ECONNREFUSED); Teilliste (86/196 Gemeinden) wäre als
+  «gemeindescharf» irreführend → Verzeichnis-Link aufs ag.ch-Inspektorat.
+- **SG → bleibt verzeichnis (§8):** Negativbefund an sg.ch/regress.admin.ch
+  bestätigt — KEINE amtliche kantonale Sammelliste; jede der ~75 Gemeinden
+  ist ein Kreis, Adressen dezentral. EasyGov-Fallback.
+
+**Stand nach Etappe 3:** 13 Kantone gemeindescharf (ZH/FR/SO/AR/GR/TG/TI/VD +
+ZG/UR/SZ), 10 Einheitsämter direkt, BE/VS als Dienststellen-Liste, LU/AG/SG +
+Rest als Verzeichnis-Link. Aufgelöste Karten-Kantone (`BETREIBUNGSAMT_KANTONE`):
+ZH, FR, SO, AR, GR, TG, TI, VD, ZG, UR, SZ. Tests: 26 Akzeptanztests.
