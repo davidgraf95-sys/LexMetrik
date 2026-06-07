@@ -79,18 +79,19 @@ function GebietKachel({ gebiet, karten, onOeffnen }: {
 // ÖFFNET das Werkzeug direkt (kein Panel); Status ehrlich als Badge (§8).
 
 function WerkzeugKachel({ k }: { k: CalculatorCard }) {
+  // Übersichtlichkeits-Runde 7.6.2026 (Frage David «noch übersichtlicher?»):
+  // Direktlink PUR — Titel + Pfeil auf einer Zeile statt Voll-Karte mit
+  // Beschrieb/CTA (halbiert die Rubrik). Status-Badge bleibt (§8); der
+  // Beschrieb steht auf der Gebiets-Karte und der Detailseite.
   return (
     <Link to={k.href!} id={`werkzeug-${k.id}`}
-      className="lc-card text-left p-5 flex flex-col gap-2 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
-      <span className="flex items-start justify-between gap-2">
-        <span className="font-sans font-semibold text-ink-900 text-body-l leading-snug text-balance">{sansAmp(k.title)}</span>
+      className="lc-card text-left px-4 py-3 flex items-center justify-between gap-3 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
+      <span className="font-sans font-medium text-ink-900 text-body-s leading-snug min-w-0">{sansAmp(k.title)}</span>
+      <span className="flex items-center gap-2 shrink-0">
         {k.status === 'entwurf' && (
-          <span className="lc-badge-entwurf shrink-0" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
+          <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
         )}
-      </span>
-      <span className="text-body-s text-ink-500 leading-relaxed line-clamp-1">{k.description}</span>
-      <span className="text-body-s font-medium text-brass-700">
-        {k.modus === 'vorlage' ? 'Erstellen →' : 'Öffnen →'}
+        <span aria-hidden className="text-brass-700 leading-none">→</span>
       </span>
     </Link>
   );
@@ -234,7 +235,14 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
     .sort((a, b) => RECHTSGEBIETE.indexOf(a.name) - RECHTSGEBIETE.indexOf(b.name))
     .map((g) => ({ g, karten: karten.filter((k) => k.rechtsgebiet === g.name) }))
     .filter((x) => x.karten.length > 0);
-  const sektionFuer = new Map(gebietSichtbar.map((x) => [x.g.name, x]));
+  // Übersichtlichkeits-Runde 7.6.2026: Gebiete OHNE ein einziges verfügbares
+  // Werkzeug stehen nicht mehr als gleichwertige Kacheln im Raster (ehrlich,
+  // aber raumgreifend «0 verfügbar»), sondern als EINE kompakte Zeile am
+  // Register-Ende — anklickbar (Panel + ?gebiet=-Permalinks funktionieren
+  // weiter), §8-ehrlich mit Zähler.
+  const mitVerfuegbaren = gebietSichtbar.filter((x) => x.karten.some(istVerfuegbar));
+  const nurGeplant = gebietSichtbar.filter((x) => !x.karten.some(istVerfuegbar));
+  const sektionFuer = new Map(mitVerfuegbaren.map((x) => [x.g.name, x]));
   const gruppenSichtbar = RECHTSBEREICH_GRUPPEN
     .map((gr) => ({ gr, sektionen: gr.gebiete.map((n) => sektionFuer.get(n)).filter((x): x is NonNullable<typeof x> => !!x) }))
     .filter((x) => x.sektionen.length > 0);
@@ -288,7 +296,9 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
               <h2 id="gruppe-haeufig" className="lc-overline text-ink-700 whitespace-nowrap">Häufig gebraucht</h2>
               <span aria-hidden className="flex-1 h-px bg-line" />
             </div>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(min(240px,100%),1fr))] gap-4">
+            {/* Breitere Spalten als das Gebiets-Raster: einzeilige Titel
+                sollen nicht kappen (Übersichtlichkeits-Runde 7.6.2026). */}
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
               {haeufigGebrauchtKarten().map((k) => <WerkzeugKachel key={k.id} k={k} />)}
             </div>
           </section>
@@ -316,6 +326,28 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
             </div>
           </section>
         ))}
+        {nurGeplant.length > 0 && (
+          <section aria-label="Rechtsgebiete in Vorbereitung" className="space-y-4">
+            {/* Geöffnetes Panel eines Nur-geplant-Gebiets (alte ?gebiet=-
+                Permalinks!) rendert hier — sonst wäre es unerreichbar. */}
+            {nurGeplant.filter((x) => offenGebiet === x.g.id).map((x) => (
+              <GebietPanel key={x.g.id} gebiet={x.g} karten={x.karten}
+                onSchliessen={() => toggleGebiet(x.g.id)} />
+            ))}
+            <p className="text-body-s text-ink-500 leading-relaxed">
+              <span className="lc-overline mr-3">In Vorbereitung</span>
+              {nurGeplant.map((x, i) => (
+                <span key={x.g.id}>
+                  {i > 0 && <span aria-hidden> · </span>}
+                  <button type="button" onClick={() => toggleGebiet(x.g.id)}
+                    className="text-ink-600 hover:text-brass-700 transition-colors">
+                    {sansAmp(x.g.name)}{' '}<span className="num">({x.karten.length})</span>
+                  </button>
+                </span>
+              ))}
+            </p>
+          </section>
+        )}
         </>
       )}
     </div>

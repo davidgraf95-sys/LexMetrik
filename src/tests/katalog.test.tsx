@@ -43,15 +43,25 @@ const headerHtml = (url: string) =>
 describe('Register auf der Hauptseite: Kachel-Raster ohne Steuer-Apparat (Radikal-Verschlankung 7.6.2026)', () => {
   it('Default: GESAMTER Katalog als Gebiets-KACHELN mit ehrlichen Zählern; kein Tab-/Filter-/Chip-Apparat', () => {
     const html = seiteHtml('/');
-    // 5er-Gruppen sichtbar (&-Labels via sansAmp → Teilstrings prüfen)
+    // Gruppen mit VERFÜGBAREM sichtbar (&-Labels via sansAmp → Teilstrings)
     expect(html).toContain('Zivilrecht (materiell)');
     expect(html).toContain('Zivilprozess');
     expect(html).toContain('Vollstreckung');
-    expect(html).toContain('Öffentliches Recht');
+    // Übersichtlichkeits-Runde 7.6.2026 (deklariert, Frage David «noch
+    // übersichtlicher?»): Gebiete OHNE verfügbares Werkzeug stehen nicht
+    // mehr als Kacheln im Raster — ihre Obergruppe (Öffentliches Recht)
+    // entfällt ganz; die Gebiete bleiben in der kompakten, anklickbaren
+    // «In Vorbereitung»-Zeile gelistet (§8-ehrlich mit Zähler).
+    expect(html).not.toContain('Öffentliches Recht');
+    expect(html).toContain('aria-label="Rechtsgebiete in Vorbereitung"');
+    expect(html).toContain('Verwaltungsrecht');
+    expect(html).toContain('Steuerrecht');
     expect(html).toContain('Strafrecht');
-    // Raster-Ansicht: kein Panel offen — keine Karten, keine Badges sichtbar
+    // Raster-Ansicht: kein Panel offen — keine Karten, kein Karten-Badge
+    // («In Vorbereitung»-Badge der Einzelkarte = lc-badge-soft; der gleich-
+    // lautende Zeilen-Titel ist neu gewollt).
     expect(html).not.toContain('id="panel-');
-    expect(html).not.toContain('In Vorbereitung</span>');
+    expect(html).not.toContain('lc-badge-soft');
     // Kachel trägt Inhaltsangabe + ehrliches Mengenbild (voller Katalog, §8)
     expect(html).toContain('id="kachel-arbeit"');
     expect(html).toContain('verfügbar');
