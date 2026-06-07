@@ -12,7 +12,9 @@ ausstehend (§7).**
 
 - **Erlass:** Gebührenverordnung vom 23. September 1996 zum SchKG
   (GebV SchKG), **SR 281.35**, ELI `eli/cc/1996/2937_2937_2937`.
-- **Geltende Konsolidierung: 1.1.2026** — als Filestore-HTML verfügbar
+- **Geltende Konsolidierung: 1.1.2026** — **seit 7.6.2026 reproduzierbar gepinnt**
+  in `scripts/fedlex-cache.sh` (`gebv_schkg`; Spezialfall: Filestore-Datei OHNE
+  «-N»-Suffix); als Filestore-HTML verfügbar
   (`…/20260101/de/html/…`, abgerufen 6.6.2026). Die frühere Annahme
   «nur signiertes PDF publiziert» ist überholt.
 - **Keine künftigen Fassungen** angekündigt (SPARQL `dateApplicability`,

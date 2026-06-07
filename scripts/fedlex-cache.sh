@@ -42,6 +42,14 @@ EINTRAEGE=(
   # GebV-HReg: gepinnt 6.6.2026 (HReg-Gebühren, Anhang Ziff. 1.3 = CHF 420;
   # ELI via SPARQL aufgelöst, 20210101 = einzige Konsolidierung; nur ~30 kB!).
   "gebv_hreg|cc/2020/180|20210101|1|art_3,art_4,art_8"
+  # GebV SchKG: gepinnt 7.6.2026 (Bibliotheks-Standard S3-Nachzug — der
+  # Betreibungskosten-Rechner nutzte einen Ad-hoc-Cache; ELI lt. Dossier
+  # gebv-schkg-kostenrechner.md, Konsolidierung 1.1.2026).
+  "gebv_schkg|cc/1996/2937_2937_2937|20260101|0|art_16,art_15_a"
+  # StGB: gepinnt 7.6.2026 (S3-Nachzug — strafrecht-cluster.md nutzte einen
+  # Ad-hoc-Cache ohne dokumentiertes ELI; 20260101 empirisch bestätigt,
+  # html-2, 981 kB; Verjährung 97 ff., Antrag 30 ff.).
+  "stgb|cc/54/757_781_799|20260101|2|art_30,art_97,art_98,art_101,art_109,art_333,art_389"
   # StG: gepinnt 6.6.2026 (Emissionsabgabe in den Gründungs-Masken:
   # Art. 8 Abs. 1 = 1 %, Art. 6 Abs. 1 lit. h = Freibetrag 1 Mio.;
   # 20240101 = neuste Konsolidierung).
@@ -53,7 +61,12 @@ for e in "${EINTRAEGE[@]}"; do
   IFS='|' read -r name eli kons n anker <<<"$e"
   datei="/tmp/${name}.html"
   pfad="${eli//\//-}"
-  url="${BASIS}/${eli}/${kons}/de/html/fedlex-data-admin-ch-eli-${pfad}-${kons}-de-html-${n}.html"
+  # n=0: Datei OHNE «-N»-Suffix (Spezialfall GebV SchKG, festgestellt 7.6.2026)
+  if [ "$n" = "0" ]; then
+    url="${BASIS}/${eli}/${kons}/de/html/fedlex-data-admin-ch-eli-${pfad}-${kons}-de-html.html"
+  else
+    url="${BASIS}/${eli}/${kons}/de/html/fedlex-data-admin-ch-eli-${pfad}-${kons}-de-html-${n}.html"
+  fi
   code=$(curl -s -o "$datei" -w "%{http_code}" "$url")
   groesse=$(wc -c < "$datei" | tr -d ' ')
   # Schwelle 20 kB: SPA-Shell/Fehlerseiten sind ~9 kB bzw. ~77 kB OHNE Anker —

@@ -10,7 +10,7 @@ Anforderung, siehe Teil 0). · **Baut auf:**
 
 **Recherche:** 4 parallele Muster-Sweeps (EHRA · ZH · SG/GL · Zeichnungs-/
 Erklärungs-/Anmeldungs-Muster), alle Dokumente lokal geparst
-(dauerhaft archiviert: [`bibliothek/muster/`](../muster/MANIFEST.md); Arbeitskopie der Session: /tmp/muster/); Norm-Kerne verbatim am
+(dauerhaft archiviert: [`bibliothek/muster/`](../muster/MANIFEST.md)); Norm-Kerne verbatim am
 Fedlex-Cache gezogen (`/tmp/gruendung-normen-extrakt.txt` + `…-extrakt2.txt`,
 OR @ **1.1.2026**, HRegV @ 1.1.2025 — `scripts/fedlex-cache.sh`).
 
@@ -265,7 +265,7 @@ die Urkundsperson. Statuten ebenso `entwurf` (Beglaubigung 22 IV HRegV).
 - Konventionen (`konventionen.ts`) gelten für alle neuen Texte;
   `scripts/norm-zitate-pruefen.ts` + Konventions-Test decken die Schemas ab.
 
-# TEIL 8 — Pflegebedarf (Verfallsregister-Kandidaten)
+# TEIL 8 — Pflegebedarf (im Verfallsregister eingetragen, 7.6.2026)
 
 - ZH-Vorlagen-Suite Stand 26.7.2024, SG «…2023», GL undatiert → bei
   OR-Änderungen neu abgleichen (Prüfrhythmus: mit HRegV-Cache-Pin).

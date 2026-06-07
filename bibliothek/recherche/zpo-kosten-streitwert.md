@@ -1,5 +1,7 @@
 # Recherche-Dossier — Cluster «ZPO/BGer Kosten & Verfahren»
 
+**Status: ERSTRECHERCHE** (Standard-Nachzug 7.6.2026; Streitwert-Teil ist seit 7.6.2026 GEBAUT — `/rechner/streitwert`).
+
 **Erstellt:** 6.6.2026 · **Auftraggeber:** David · **Zweck:** Bau-Grundlage für
 8 geplante Rechner (Streitwert, Prozesskosten kantonal, Bundesgerichtsgebühren,
 Kostenvorschuss, Sicherheit Parteientschädigung, Fristwiederherstellung,

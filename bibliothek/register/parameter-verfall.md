@@ -26,6 +26,9 @@ Kandidat» markiert waren).
 | Emissionsabgabe (1 %, Freibetrag CHF 1 Mio.) | `gruendungsunterlagen.ts` (`emissionsabgabe`, `EMISSIONSABGABE_FREIBETRAG_CHF`) | Art. 6 Abs. 1 lit. h / 8 Abs. 1 StG @ 1.1.2024 (Cache) | jährlich — **politisch volatil** (Abschaffungs-Vorlagen) | Jan. 2027 |
 | MWST-Pflicht-Schwellen (100k; 150k gemeinnützig) | nur Dossier (`recherche/gesellschaftsgruendung.md` Teil 5) — NICHT verdrahtet | ESTV-Abruf 6.6.2026; MWSTG-Cache-Verifikation offen | jährlich + zwingend vor Verdrahtung | vor Verdrahtung |
 | Notariats-Anlaufstellen je Kanton (inkl. Listen-PDFs) | `src/lib/notariate.ts` ↔ `behoerden/notariate-kantone.md` | URLs geprüft 7.6.2026; Listen-Stände SZ 4/2026 · OW 5/2026 · NE 1/2026 · GE 6/2025; **UR/AI/BL unverifiziert** | **jährlich**; UR/AI/BL vorab klären | **UR/AI/BL: vor Abnahme** · Listen: Juni 2027 |
+| Gesetzgebungs-Monitoring: «kleine BGG-Revision» | `bestimmeRechtsmittel` (Art. 74/100/46-Behauptungen) ← `normen/zustaendigkeit-engine-verifikation.md` | Botschaft 5.12.2025, parlamentarisches Stadium (Stand 6.6.2026, bj.admin.ch) | bei AS-Publikation: Art. 74/100/46 neu prüfen | bei Inkrafttreten |
+| HG-Bestand & internationale Spruchkörper (Art. 6 IV lit. c ZPO) | `zustaendigkeit.ts` (HG-Weichen) ← dito | ZH/BE/AG/SG, Stand 6.6.2026 | bei kantonaler Errichtung nachführen | — |
+| AHV/IV/EO Selbständige (Satz, sinkende Skala) + Bundes-Verzugszinsen | nur Dossiers (`gesellschaftsgruendung.md` Teil 5; `recherche/INDEX.md`-Nachträge) — nicht verdrahtet | 10,0 % / Skala < CHF 60'500 (Merkblatt 2.02, 2026); EFD 4,0 % | **jährlich** + vor Verdrahtung | Jan. 2027 |
 | Amtliche Muster-Suiten (Statuten/Urkunden/Erklärungen/KE) | `bibliothek/muster/` (MANIFEST.md) ← Bausteine der 3 Dokumentmappen | ZH 26.7.2024 · SG «…2023» · GL undatiert · EHRA 1.4.2017 (ÜBERHOLT, nur Referenz) | bei OR-/HRegV-Rechtsänderung neu abrufen + Baustein-Abgleich | mit nächstem OR-Pin |
 
 ## Konventionen
@@ -51,13 +54,15 @@ Kandidat» markiert waren).
 - **BE EAV (BSG 168.711, amtliche Anwälte): bis 31.12.2026** (Nachfolge 1.1.2027).
 - Quelle: OrdoLex-API `current_version`-Metadaten (Doppelcheck 5.6.2026).
 
-## GebV SchKG (SR 281.35) — Konsolidierung 1.1.2026 nur signiert (6.6.2026)
-- Die Engine-Staffel «Gebühr Zahlungsbefehl» (src/lib/schkgZustaendigkeit.ts,
-  Art. 16 Abs. 1) ist am Filestore-HTML **Stand 1.1.2022** verifiziert.
-- Es EXISTIERT eine Konsolidierung per **1.1.2026** (Änderung AS 2025/630),
-  deren HTML-Manifestation nicht publiziert ist (nur signiertes PDF, JS-Shell).
-  → Beträge VOR fachlicher Abnahme am signierten PDF gegenprüfen; UI weist
-  den Vorbehalt aus. Prüfweg: Filestore cc/1996/2937_2937_2937/20260101.
+## GebV SchKG (SR 281.35) — ~~Konsolidierung 1.1.2026 nur signiert~~ KORRIGIERT (S8, 7.6.2026)
+- ~~«HTML-Manifestation nicht publiziert (nur signiertes PDF)»~~ — **widerlegt
+  7.6.2026:** Das Filestore-HTML der Konsolidierung 20260101 existiert, nur
+  OHNE das übliche «-N»-Suffix im Dateinamen; seither reproduzierbar gepinnt
+  (`fedlex-cache.sh`, Eintrag `gebv_schkg`, Anker art_16/art_15_a geprüft).
+- Bereits 6.6.2026 hatte die Kostenrechner-Recherche dieselbe Fundstelle
+  (Voll-Diff 2022↔2026: nur Art. 15a/15b geändert) — dieser Registerblock
+  hinkte hinterher. Der UI-Vorbehalt in zustaendigkeitKosten kann nach
+  Davids Abnahme des Kostenrechner-Dossiers fallen.
 
 ## SG GKV — DIVERGENZ zum Sunset 30.6.2026 (6.6.2026)
 Die Gebühren-Tiefenerfassung fand im aktuell publizierten konsolidierten

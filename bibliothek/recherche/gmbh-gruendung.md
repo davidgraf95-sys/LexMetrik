@@ -8,8 +8,8 @@ HRegV + OR 777–777c dort verbatim — hier nicht dupliziert, §5) und
 Praxis-Regeln dort in Teil 2). · **Recherche:** Deep-Research-Workflow
 (108 Agents; 106 Claims → 25 geprüft → **24 bestätigt, 1 widerlegt** →
 11 Findings; alle Findings auf Primärquellen) + Cache-Verifikation
-(`/tmp/or_gmbh_extrakt.txt`: 772, 776, 785–791, 795/796, 803, 806–814 @
-OR-Cache 1.1.2026).
+(Arbeits-Extrakt aus dem OR-Cache `/tmp/or.html` @ 1.1.2026: 772, 776,
+785–791, 795/796, 803, 806–814 — reproduzierbar via `fedlex-cache.sh`).
 
 **Status: ERSTRECHERCHE (einfach belegt; Norm-Kerne zweifach).**
 Fachliche Abnahme David ausstehend (§7).

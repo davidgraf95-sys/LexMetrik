@@ -1,5 +1,7 @@
 # Schlichtungsstellen — amtliche Detail-URLs (Erstrecherche 6.6.2026)
 
+**Erstellt:** 6.6.2026 · **Status: ERSTRECHERCHE** (Kopf-Standardisierung 7.6.2026).
+
 Beleg-Liste zur `url?`-Anreicherung der Schlichtungsstellen-Schicht
 (`src/data/schlichtungsstellen.ts`, BS zusätzlich `src/lib/vorlagen/behoerden.ts`).
 

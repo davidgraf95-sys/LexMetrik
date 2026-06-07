@@ -1,5 +1,7 @@
 # Gerichtsadressen — Erstliste David (5.6.2026)
 
+**Erstellt:** 5.6.2026 (Material David; Kopf-Standardisierung 7.6.2026).
+
 **Status: UNVERIFIZIERT — nicht in Stammdaten übernehmen.** Liste von David
 geliefert (Quelle/Stand je Eintrag offen). Amtliche Verifikation läuft
 (Agents, 5.6.2026 abends); Ergebnisse werden hier nachgetragen.

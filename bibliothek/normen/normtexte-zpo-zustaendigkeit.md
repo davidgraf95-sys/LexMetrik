@@ -1,5 +1,7 @@
 # Normtexte ZPO – Grundlagen der Zuständigkeitsengine
 
+**Erstellt:** 5.6.2026 (maschinelle Extraktion; Kopf-Standardisierung 7.6.2026) · **Status: ZWEIFACH GEPRÜFT** (Wortlaute = amtlicher Cache; Verifikations-Dossier 6.6.2026).
+
 **Quelle:** Konsolidiertes Fedlex-Filestore-HTML der ZPO (SR 272), Konsolidierung
 **1.1.2025** (enthält die ZPO-Revision 2025), maschinell extrahiert am 5.6.2026 aus
 `https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/262/20250101/de/html/fedlex-data-admin-ch-eli-cc-2010-262-20250101-de-html-1.html`.

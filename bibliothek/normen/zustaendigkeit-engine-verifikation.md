@@ -1,5 +1,7 @@
 # Verifikations-Dossier — `src/lib/zustaendigkeit.ts` (Deep-Research 6.6.2026)
 
+**Erstellt:** 6.6.2026 · **Status: ZWEIFACH GEPRÜFT** (Kern 25 Claims à 3:0 adversarial; Kopf-Standardisierung 7.6.2026).
+
 **Gegenstand:** Sämtliche Norm-Behauptungen der ZPO-Zuständigkeits-Engine
 (838 Zeilen: `bestimmeZustaendigkeit` + `bestimmeRechtsmittel`), zerlegt in
 37 Behauptungs-Cluster und gegen die amtlichen Quellen geprüft.
@@ -11,7 +13,7 @@
   waren deutsche ZPO bzw. SchKG-Punktänderung; «20.4.2026» = Fedlex-UI-Artefakt).
 - BGG SR 173.110, Filestore-HTML, Konsolidierung **20250101** — die «kleine
   BGG-Revision» ist Stand 6.6.2026 NICHT in Kraft (Botschaft 5.12.2025,
-  parlamentarisches Stadium; Quelle bj.admin.ch). → Verfallsregister-Kandidat.
+  parlamentarisches Stadium; Quelle bj.admin.ch). → im Verfallsregister (Monitoring-Zeile, 7.6.2026).
 - Revision 1.1.2025: AS 2023 491 · BBl 2023 786 · bj.admin.ch (Inkraftsetzung
   6.9.2023 per 1.1.2025).
 - Wo der Filestore-Fetch truncierte (Art. 197/198/200/202, 243): wortgetreue
@@ -97,7 +99,7 @@ Wortlaut stand — einschliesslich der heiklen Punkte:
 - Art. 6 hat zudem Abs. 5 (vorsorgl. Massnahmen, analog 5 II) und Abs. 6
   (Streitgenossenschaft) — von der Engine nicht behauptet, nur Vollständigkeits-Notiz.
 
-## Pflegebedarf (→ Verfallsregister-Kandidaten)
+## Pflegebedarf (im Verfallsregister eingetragen, 7.6.2026)
 - **BGG-Revision (klein):** Botschaft 5.12.2025 im Parlament — bei Inkrafttreten
   Art. 74/100/46 neu prüfen.
 - Handelsgerichts-Bestand ZH/BE/AG/SG: Tatsachenbehauptung mit Stand 6.6.2026;

@@ -1,6 +1,6 @@
 # Quellen-Register (verifizierte amtliche Quellen)
 
-Stand: 6.6.2026. Ergänzungen immer mit Konsolidierungsdatum/Abrufdatum.
+Stand: 7.6.2026 (S3-Nachzug Bibliotheks-Standard: HRegV, GebV-HReg, StG, GebV SchKG, StGB nachregistriert — die Pins existierten teils ohne Register-Zeile).
 
 ## Fedlex — verifizierte Gesetzesquellen
 
@@ -28,6 +28,11 @@ Anker-Format: `art_335_c` (Buchstaben-/bis-Artikel mit Unterstrich, sprachunabh�
 | BGG | 173.110 | cc/2006/218 | 20250101 (6.6.2026, html-1 bestätigt) | art_1–133 durchgehend; verdrahtet: 45, 46, 74, 75, 93, 98, 100, 113 |
 | VVG | 221.229.1 | cc/24/719_735_717 | 20240101 (6.6.2026, html-2; 2025/26 liefern nur SPA-Shell) | art_35_a/b/c, 97, 98 — 35a halbzwingend (98), 35b/c zwingend (97), Lebensvers. ausgenommen (35a Abs. 3), Krankenzusatz: Kündigungsrecht nur VN (35a Abs. 4) |
 | Fristengesetz | 173.110.3 | cc/1963/819_815_843 | (Link ohne Anker) | — |
+| HRegV | 221.411 | cc/2007/686 | 20250101 (6.6.2026) | art_20, 22, 43–46, 71–76, 84, 90, 94, 117; Anhang 3 (Fremdwährungen) |
+| GebV-HReg | 221.411.1 | cc/2020/180 | 20210101 — einzige Konsolidierung (6.6.2026) | Gebühren-Anhang (Neueintragung 420/280/210) |
+| StG | 641.10 | cc/1974/11_11_11 | 20240101 (6.6.2026) | art_5, 6 (lit. h Freibetrag 1 Mio.), 8 (1 %) |
+| GebV SchKG | 281.35 | cc/1996/2937_2937_2937 | 20260101 (7.6.2026) — **Spezialfall: Filestore-Datei OHNE «-N»-Suffix** (Skript n=0) | art_16, art_15_a; Staffeln Wert für Wert verifiziert (gebv-schkg-kostenrechner.md) |
+| StGB | 311.0 | cc/54/757_781_799 | 20260101 (7.6.2026, html-2) | art_30–33, 97–101, 109, 333, 389 (Verjährung/Antrag) |
 
 **Offene Diskrepanz VMWG Art. 19a** (Befund 5.6.2026 abends): Der Kommentar in
 `src/lib/fedlex.ts` nennt `art_19a` als verifiziert (Konsolidierung 20251001) — die

@@ -6,7 +6,10 @@ Bibliotheks-Audit: Zählung korrigiert, recherche-INDEX vervollständigt,
 Verfallsregister um 6 Gründungs-Kandidaten ergänzt, Muster-Quellsammlung
 aus /tmp dauerhaft archiviert, Engine-Map neu).
 Verbindlich seit 6.6.2026: **CLAUDE.md §11** — jede Recherche mündet hier in eine
-geordnete, engine-orientierte Übersichtsliste mit INDEX-Eintrag. Regeln:
+geordnete, engine-orientierte Übersichtsliste mit INDEX-Eintrag.
+**Verbindliche Mindeststandards S1–S10: [STANDARDS.md](STANDARDS.md)** —
+maschinell durchgesetzt via `bash scripts/bibliothek-check.sh` (Teil des
+§9-Bug-Checks). Kurzregeln:
 
 1. **Nur amtliche Quellen als Beleg**, immer mit URL und Abrufdatum (§7);
    kantonale Erlasse stets in der geltenden konsolidierten Fassung via

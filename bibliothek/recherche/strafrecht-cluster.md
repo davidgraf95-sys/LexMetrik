@@ -2,9 +2,11 @@
 
 **Erstellt:** 6.6.2026 · **Autor:** Recherche-Agent (Auftrag David)
 **Wortlaut-Quellen:**
-- **StGB** SR 311.0 — Cache `/tmp/stgb.html` (Verjährung Art. 97–101, 109;
-  Antrag Art. 30–33; Übergang Art. 389; Anwendung AT Art. 333). Anker
-  `id="art_X"`.
+- **StGB** SR 311.0 — Cache `/tmp/stgb.html`, **seit 7.6.2026 reproduzierbar
+  gepinnt** in `scripts/fedlex-cache.sh` (ELI `cc/54/757_781_799`,
+  Konsolidierung **20260101**, html-2; Pflicht-Anker 30/97/98/101/109/333/389
+  verifiziert). Verjährung Art. 97–101, 109; Antrag Art. 30–33; Übergang
+  Art. 389; Anwendung AT Art. 333.
 - **StPO** SR 312.0 — Cache `/tmp/stpo.html`, konsolidierte Fassung
   **«Stand am 1. Januar 2024»** (ELI `cc/2010/267`, Konsolidierung
   `20240101`; Revision BG 17.6.2022, AS 2023 468, in Kraft seit 1.1.2024).

@@ -356,7 +356,7 @@ HRegV).
 - **Einzelunternehmen / KlG / KmG:** keine Beurkundung; Anmeldung (+
   Identifikation); Pflicht-Auslöser Teil 1.6.
 
-# TEIL 5 — Datierte Parameter (→ Verfallsregister-Kandidaten markiert)
+# TEIL 5 — Datierte Parameter (im Verfallsregister geführt, Nachtrag 7.6.2026)
 
 | Parameter | Wert | Quelle / Stand | Pflege |
 |---|---|---|---|
