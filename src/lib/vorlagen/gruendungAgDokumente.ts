@@ -40,6 +40,60 @@ export type AgVrZeile = {
 
 export type AgVertretungsZeile = { name: string; funktion: string; zeichnungsArt: AgVertretungsZeichnungsArt };
 
+// ── Qualifizierte Gründung (Etappe 2/D3–D5; Dossier ag-qualifizierte-gruendung.md) ──
+
+/** Eine Sacheinlage (Art. 634 OR). `typ`: Sachgesamtheit (Inventarliste) oder
+ *  Geschäft/Einzelunternehmen (Übernahmebilanz) — ZH-Vorlagen «einfach»/«Geschäft». */
+export type AgSacheinlageZeile = {
+  typ: 'sachgesamtheit' | 'geschaeft';
+  /** Umfang der Sacheinlage bzw. Firma des Einzelunternehmens. */
+  bezeichnung: string;
+  /** Datum der Inventarliste bzw. «Übernahmebilanz per» (ISO). */
+  belegDatum: string;
+  /** Anrechnungswert/Kaufpreis in CHF (Erstausbau ohne Agio: = Aktien ×
+   *  Nennwert + Gutschrift). */
+  wertChf: string;
+  /** Grundstück enthalten → Vertrag beurkundungspflichtig (Art. 657 ZGB),
+   *  Export nur als ENTWURF (§8); Urkunden-Weiche «bedingungsloser Anspruch
+   *  auf Eintragung in das Grundbuch» (Art. 634 Abs. 1 Ziff. 3 OR). */
+  grundstueck: boolean;
+  einlegerName: string;
+  aktienAnzahl: string;
+  /** Gutschrift in den Büchern (weitere Gegenleistung, Art. 634 Abs. 4 OR);
+   *  leer = keine. */
+  gutschriftChf: string;
+  /** Zustand der Sacheinlage bzw. Bericht je Bilanzposten (Gründungsbericht
+   *  Art. 635 Ziff. 1 OR — Freitext der fachkundigen Eingabe). */
+  zustand: string;
+  // nur typ 'geschaeft':
+  imHrEingetragen: boolean;
+  cheNr: string;                 // leer = keine UID-Angabe
+  aktivenChf: string;
+  passivenChf: string;
+  /** «Die seit dem … abgeschlossenen Rechtsgeschäfte gelten als für Rechnung
+   *  der Gesellschaft getätigt» (ZH-Vertragsvorlage Geschäft; ISO). */
+  rueckwirkungDatum: string;
+};
+
+/** Verrechnungsliberierung (Art. 634a OR) — eigenständige qualifizierte
+ *  Liberierungsart, KEINE Sacheinlage (BE-Merkblatt; Dossier Teil 1). */
+export type AgVerrechnungZeile = {
+  glaeubigerName: string;
+  forderungChf: string;
+  aktienAnzahl: string;
+  /** Bestand + Verrechenbarkeit (Gründungsbericht Art. 635 Ziff. 2 OR). */
+  begruendungTxt: string;
+};
+
+/** Besonderer Vorteil (Art. 636 OR). */
+export type AgVorteilZeile = {
+  beguenstigter: string;
+  inhalt: string;
+  wertChf: string;
+  /** Begründung + Angemessenheit (Gründungsbericht Art. 635 Ziff. 3 OR). */
+  begruendungTxt: string;
+};
+
 export type AgDokAntworten = AgGruendungEingaben & {
   firma: string;             // inkl. Rechtsformzusatz «… AG» (Art. 950 OR)
   sitz: string;
@@ -80,6 +134,14 @@ export type AgDokAntworten = AgGruendungEingaben & {
   /** Nachtrags-Bevollmächtigte:r mit vollen Personalien (D10: ZH-Klausel «Auf
    *  Verlangen der Gründer» — leer = Klausel entfällt). */
   nachtragsbevollmaechtigter: string;
+  /** Qualifizierte Gründung (Etappe 2) — wirksam nur mit den Checklisten-
+   *  Weichen `einlageArt`/`besondereVorteile` (§5). */
+  sacheinlagen: AgSacheinlageZeile[];
+  verrechnungen: AgVerrechnungZeile[];
+  vorteile: AgVorteilZeile[];
+  /** Zugelassene:r Revisor:in der Prüfungsbestätigung (Art. 635a OR);
+   *  leer = Blanko-Linie. */
+  revisorName: string;
   ort: string;
   datum: string;
 };
@@ -98,6 +160,7 @@ export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = 
   gjBeginn: '1. Januar', gjEnde: '31. Dezember',
   sitzungBeginn: '', sitzungEnde: '',
   nachtragsbevollmaechtigter: '',
+  sacheinlagen: [], verrechnungen: [], vorteile: [], revisorName: '',
   ort: '', datum: '',
 };
 
@@ -121,11 +184,32 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   const blocker: string[] = [];
   const warnungen: string[] = [];
 
-  if (a.einlageArt !== 'bar' || a.besondereVorteile) {
+  // ── Qualifizierte Gründung (Etappe 2): Sacheinlage / Verrechnung / Vorteile ──
+  const mitSach = a.einlageArt === 'sacheinlage' || a.einlageArt === 'gemischt';
+  const mitVerr = a.einlageArt === 'verrechnung' || a.einlageArt === 'gemischt';
+  const sachen = mitSach ? a.sacheinlagen.filter((s) => s.einlegerName.trim() || s.bezeichnung.trim()) : [];
+  const verr = mitVerr ? a.verrechnungen.filter((v) => v.glaeubigerName.trim()) : [];
+  const vorteile = a.besondereVorteile ? a.vorteile.filter((v) => v.beguenstigter.trim()) : [];
+  const qualifiziert = sachen.length > 0 || verr.length > 0 || vorteile.length > 0
+    || mitSach || mitVerr || a.besondereVorteile;
+
+  if (a.einlageArt === 'sacheinlage' && sachen.length === 0) {
+    blocker.push('Mindestens eine Sacheinlage erfassen (Art. 634 OR) – oder die Einlage-Art auf «bar» stellen.');
+  }
+  if (a.einlageArt === 'verrechnung' && verr.length === 0) {
+    blocker.push('Mindestens eine Verrechnungsliberierung erfassen (Art. 634a OR) – oder die Einlage-Art anpassen.');
+  }
+  if (a.einlageArt === 'gemischt' && sachen.length === 0 && verr.length === 0) {
+    blocker.push('Einlage-Art «gemischt»: mindestens eine Sacheinlage (Art. 634 OR) ODER Verrechnung (Art. 634a OR) erfassen.');
+  }
+  if (a.besondereVorteile && vorteile.length === 0) {
+    blocker.push('Besondere Vorteile mit Begünstigten, Inhalt und Wert erfassen (Art. 636 OR) – oder die Weiche ausschalten.');
+  }
+  if (qualifiziert && (zahl(a.liberierungProzent) ?? 100) < 100) {
     blocker.push(
-      'Volldokumente sind zurzeit nur für die reine BARGRÜNDUNG verfügbar. Qualifizierte Gründungen ' +
-      '(Sacheinlage, Verrechnung, besondere Vorteile) verlangen zusätzliche Statuten-Angaben (Art. 634 ' +
-      'Abs. 4 / Art. 634a Abs. 3 OR) und eigene Urkunden-Bausteine – bitte die Checkliste verwenden.',
+      'Erstausbau: Teilliberierung nur bei der reinen Bargründung – Aktien aus Sacheinlage/Verrechnung ' +
+      'gelten als voll liberiert (ZH-Vertragsvorlage: «als voll liberiert geltende Aktien»); ' +
+      'gemischte Teilliberierung als Stufe 2.',
     );
   }
   if (a.fremdwaehrung) {
@@ -177,6 +261,91 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
         `Die Zeichnungen der Gründer (${gezeichnet} Aktien) müssen sämtliche ${a.anzahlAktien} Aktien abdecken (Art. 629 Abs. 2 Ziff. 1 OR).`,
       );
     }
+
+    // ── Etappe 2: Wert-Deckung je qualifizierter Position (Erstausbau ohne
+    // Agio: Ausgabebetrag = Nennwert; «die versprochenen Einlagen entsprechen
+    // dem gesamten Ausgabebetrag», Art. 629 Abs. 2 Ziff. 2 OR). ──
+    if (nennwert > 0) {
+      for (const s of sachen) {
+        const wer = s.einlegerName.trim() || s.bezeichnung.trim() || 'Sacheinlage';
+        const akt = ganzePositive(s.aktienAnzahl);
+        const wert = zahl(s.wertChf);
+        const gut = s.gutschriftChf.trim() === '' ? 0 : zahl(s.gutschriftChf);
+        if (!s.bezeichnung.trim()) blocker.push(`Sacheinlage von ${wer}: Gegenstand bezeichnen (Statuten-Pflichtinhalt, Art. 634 Abs. 4 OR).`);
+        if (!s.einlegerName.trim()) blocker.push('Sacheinlage: Name der Einlegerin / des Einlegers angeben (Art. 634 Abs. 4 OR).');
+        if (akt === null) blocker.push(`Sacheinlage von ${wer}: Anzahl der dafür ausgegebenen Aktien als positive ganze Zahl angeben (Art. 634 Abs. 4 OR).`);
+        if (wert === null || wert <= 0) blocker.push(`Sacheinlage von ${wer}: Bewertung in CHF beziffern (Art. 634 Abs. 4 OR).`);
+        if (gut === null || gut < 0) blocker.push(`Sacheinlage von ${wer}: Gutschrift als Betrag ab 0 angeben.`);
+        if (akt !== null && wert !== null && gut !== null && gut >= 0 && Math.abs(wert - (akt * nennwert + gut)) > 0.005) {
+          blocker.push(
+            `Sacheinlage von ${wer}: Bewertung CHF ${fmtCHF(s.wertChf)} muss ${s.aktienAnzahl} Aktien × CHF ${fmtCHF(a.nennwertChf)}` +
+            (gut > 0 ? ` + Gutschrift CHF ${fmtCHF(s.gutschriftChf)}` : '') +
+            ' entsprechen (Erstausbau ohne Agio; Art. 629 Abs. 2 Ziff. 2 OR).',
+          );
+        }
+        if (s.typ === 'geschaeft') {
+          const akt2 = zahl(s.aktivenChf);
+          const pas = zahl(s.passivenChf);
+          if (akt2 === null || pas === null) {
+            blocker.push(`Sacheinlage von ${wer}: Aktiven und Passiven der Übernahmebilanz beziffern (ZH-Vorlage «Geschäft»).`);
+          } else if (wert !== null && wert > akt2 - pas + 0.005) {
+            blocker.push(
+              `Sacheinlage von ${wer}: Der Kaufpreis CHF ${fmtCHF(s.wertChf)} übersteigt die Netto-Aktiven der Übernahmebilanz ` +
+              `(CHF ${fmtCHF(String(akt2 - pas))}) – Deckung nicht plausibel (Art. 634 Abs. 1 Ziff. 1 OR).`,
+            );
+          }
+          // Art. 181 OR am Cache verifiziert (7.6.2026): Solidarhaftung des
+          // bisherigen Schuldners 3 Jahre; Abs. 4 verweist eingetragene
+          // Rechtsträger auf die FusG-Vermögensübertragung.
+          warnungen.push(
+            `Geschäftsübernahme von ${wer}: Mit der Übernahme von Aktiven und Passiven haftet die Gesellschaft den ` +
+            'Gläubigern ab Mitteilung bzw. Auskündigung; die bisherige Schuldnerin haftet drei Jahre solidarisch weiter ' +
+            '(Art. 181 Abs. 1 und 2 OR). Bei im Handelsregister eingetragenen Rechtsträgern richtet sich die Übernahme ' +
+            'nach dem Fusionsgesetz (Art. 181 Abs. 4 OR).',
+          );
+        }
+        if (s.grundstueck && a.immobilienHauptzweck === false) {
+          warnungen.push(
+            `Sacheinlage von ${wer} enthält ein Grundstück: Lex-Koller-Erklärung prüfen (Erwerb von ` +
+            'Nicht-Betriebsstätte-Grundstücken durch Personen im Ausland, Frage 3 des ZH-Formulars; Art. 4 Abs. 1 lit. e BewG).',
+          );
+        }
+      }
+      for (const v of verr) {
+        const akt = ganzePositive(v.aktienAnzahl);
+        const ford = zahl(v.forderungChf);
+        if (akt === null) blocker.push(`Verrechnung von ${v.glaeubigerName.trim()}: Anzahl der zukommenden Aktien als positive ganze Zahl angeben (Art. 634a Abs. 3 OR).`);
+        if (ford === null || ford <= 0) blocker.push(`Verrechnung von ${v.glaeubigerName.trim()}: Betrag der Forderung beziffern (Art. 634a Abs. 3 OR).`);
+        if (akt !== null && ford !== null && Math.abs(ford - akt * nennwert) > 0.005) {
+          blocker.push(
+            `Verrechnung von ${v.glaeubigerName.trim()}: Verrechneter Betrag CHF ${fmtCHF(v.forderungChf)} muss ` +
+            `${v.aktienAnzahl} Aktien × CHF ${fmtCHF(a.nennwertChf)} entsprechen (Erstausbau ohne Agio).`,
+          );
+        }
+      }
+      for (const vt of vorteile) {
+        if (!vt.inhalt.trim() || zahl(vt.wertChf) === null) {
+          blocker.push(`Besonderer Vorteil für ${vt.beguenstigter.trim()}: Inhalt und Wert angeben (Art. 636 OR: «Inhalt und Wert des gewährten Vorteils»).`);
+        }
+      }
+      // Deckungs-Summe: qualifizierte Aktien dürfen die Gesamtzahl nicht
+      // übersteigen; bei reiner Sach-/Verrechnungsgründung müssen sie ALLE
+      // Aktien decken (sonst bliebe ein ungedeckter Bar-Rest ohne Bareinlage).
+      const qAktien = sachen.reduce((s, x) => s + (ganzePositive(x.aktienAnzahl) ?? 0), 0)
+        + verr.reduce((s, x) => s + (ganzePositive(x.aktienAnzahl) ?? 0), 0);
+      if (anzahl > 0 && qAktien > anzahl) {
+        blocker.push(`Sacheinlage-/Verrechnungs-Aktien (${qAktien}) übersteigen die Gesamtzahl von ${a.anzahlAktien} Aktien.`);
+      }
+      if (anzahl > 0 && a.einlageArt !== 'gemischt' && (mitSach || mitVerr) && qAktien > 0 && qAktien < anzahl) {
+        blocker.push(
+          `Bei der Einlage-Art «${a.einlageArt}» müssen sämtliche ${a.anzahlAktien} Aktien qualifiziert gedeckt sein ` +
+          `(erfasst: ${qAktien}) – für einen Bar-Anteil die Einlage-Art «gemischt» wählen.`,
+        );
+      }
+      if (a.einlageArt === 'gemischt' && anzahl > 0 && qAktien >= anzahl) {
+        blocker.push('Einlage-Art «gemischt»: mindestens eine Aktie muss bar liberiert bleiben – sonst die reine Einlage-Art wählen.');
+      }
+    }
   }
 
   if (a.gruender.filter((g) => g.name.trim()).length === 0) {
@@ -192,7 +361,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   if (vr.length > 0 && vr.every((v) => v.zeichnungsArt === 'ohne')) {
     blocker.push('Mindestens ein Mitglied des Verwaltungsrates muss zur Vertretung befugt sein (Art. 718 Abs. 3 OR).');
   }
-  if (a.bankInUrkundeGenannt && a.einlageArt === 'bar' && (!a.bankName.trim() || !a.bankOrt.trim())) {
+  if (a.bankInUrkundeGenannt && (a.einlageArt === 'bar' || a.einlageArt === 'gemischt') && (!a.bankName.trim() || !a.bankOrt.trim())) {
     blocker.push('Bank in der Urkunde nennen: Name und Ort des Instituts angeben (sonst separate Bankbescheinigung, Art. 43 Abs. 1 lit. f HRegV).');
   }
   if (!a.eigeneBueros && (!a.domizilhalterName.trim() || !a.domizilhalterAdresse.trim())) {
@@ -221,12 +390,84 @@ function basisAntworten(a: AgDokAntworten): Antworten {
   const datum = a.datum ? fmtDatum(a.datum) : '________';
   const prozent = zahl(a.liberierungProzent) ?? 100;
   const kapital = zahl(a.aktienkapitalChf) ?? 0;
+  const nennwert = zahl(a.nennwertChf) ?? 0;
+  const anzahl = zahl(a.anzahlAktien) ?? 0;
   const praesident = a.verwaltungsraete.find((v) => v.praesident)?.name.trim()
     ?? a.verwaltungsraete.find((v) => v.name.trim())?.name.trim() ?? '________';
   const gruenderAnzahl = a.gruender.filter((g) => g.name.trim()).length;
   const vrAnzahl = a.verwaltungsraete.filter((v) => v.name.trim()).length;
+  // Etappe 2: qualifizierte Tatbestände (Weichen-gefiltert wie in den Gates, §5).
+  const mitSach = a.einlageArt === 'sacheinlage' || a.einlageArt === 'gemischt';
+  const mitVerr = a.einlageArt === 'verrechnung' || a.einlageArt === 'gemischt';
+  const sachen = mitSach ? a.sacheinlagen.filter((s) => s.einlegerName.trim() || s.bezeichnung.trim()) : [];
+  const verr = mitVerr ? a.verrechnungen.filter((v) => v.glaeubigerName.trim()) : [];
+  const vorteile = a.besondereVorteile ? a.vorteile.filter((v) => v.beguenstigter.trim()) : [];
+  const qAktien = sachen.reduce((s, x) => s + (ganzePositive(x.aktienAnzahl) ?? 0), 0)
+    + verr.reduce((s, x) => s + (ganzePositive(x.aktienAnzahl) ?? 0), 0);
+  const barAktien = Math.max(0, anzahl - qAktien);
   return {
     ...a,
+    hatQualifiziert: sachen.length > 0 || verr.length > 0 || vorteile.length > 0,
+    hatSacheinlagen: sachen.length > 0,
+    hatVerrechnungen: verr.length > 0,
+    hatVorteile: vorteile.length > 0,
+    nurBar: a.einlageArt === 'bar',
+    istGemischt: a.einlageArt === 'gemischt',
+    hatBarEinlage: a.einlageArt === 'bar' || (a.einlageArt === 'gemischt' && barAktien > 0),
+    barEinlageFmt: fmtCHF(String(barAktien * nennwert)),
+    barAktienTxt: String(barAktien),
+    qualifiziertIntro:
+      sachen.length > 0 && verr.length > 0
+        ? 'Die in den Statuten angegebenen Sacheinlagen und Verrechnungstatbestände gemäss folgenden, vorliegenden Unterlagen:'
+        : sachen.length > 0
+          ? 'Die in den Statuten angegebenen Sacheinlagen gemäss folgenden, vorliegenden Unterlagen:'
+          : 'Die in den Statuten angegebene Verrechnungsliberierung gemäss folgenden, vorliegenden Unterlagen:',
+    revisorZeile: a.revisorName.trim() || '________',
+    sachListe: sachen.map((s) => ({
+      // Vertragsdatum = Mappen-Datum (alle Dokumente derselben Gründung).
+      vertragDatumFmt: datum,
+      typGeschaeft: s.typ === 'geschaeft',
+      bezeichnung: s.bezeichnung.trim() || '________',
+      belegDatumFmt: s.belegDatum ? fmtDatum(s.belegDatum) : '________',
+      belegSatz: s.typ === 'geschaeft'
+        ? `Übernahmebilanz per ${s.belegDatum ? fmtDatum(s.belegDatum) : '________'}`
+        : `Inventarliste vom ${s.belegDatum ? fmtDatum(s.belegDatum) : '________'}`,
+      wertFmt: fmtCHF(s.wertChf),
+      einleger: s.einlegerName.trim() || '________',
+      aktien: s.aktienAnzahl,
+      gutschriftSatz: s.gutschriftChf.trim()
+        ? ` Ferner werden ${s.einlegerName.trim() || '________'} CHF ${fmtCHF(s.gutschriftChf)} in den Büchern der Gesellschaft gutgeschrieben.`
+        : '',
+      gutschriftKlauselZusatz: s.gutschriftChf.trim()
+        ? `; als weitere Gegenleistung wird eine Gutschrift von CHF ${fmtCHF(s.gutschriftChf)} gewährt`
+        : '',
+      // Art. 634 Abs. 1 Ziff. 3 OR / ZH-Urkunde 3.3: Grundstücks-Weiche.
+      verfuegungsSatz: s.grundstueck
+        ? 'einen bedingungslosen Anspruch auf Eintragung in das Grundbuch erhält'
+        : 'sofort als Eigentümerin über die Sacheinlage verfügen kann',
+      grundstueck: s.grundstueck,
+      hrZusatz: s.typ === 'geschaeft' ? (s.imHrEingetragen ? 'des im Handelsregister eingetragenen' : 'des im Handelsregister nicht eingetragenen') : '',
+      cheZusatz: s.typ === 'geschaeft' && s.cheNr.trim() ? ` (${s.cheNr.trim()})` : '',
+      aktivenFmt: fmtCHF(s.aktivenChf),
+      passivenFmt: fmtCHF(s.passivenChf),
+      rueckwirkungFmt: s.rueckwirkungDatum ? fmtDatum(s.rueckwirkungDatum) : '',
+      zustandTxt: s.zustand.trim() || '________',
+      objektLabel: s.typ === 'geschaeft'
+        ? `alle Aktiven und Passiven ${s.imHrEingetragen ? 'des im Handelsregister eingetragenen' : 'des im Handelsregister nicht eingetragenen'} Einzelunternehmens ${s.bezeichnung.trim() || '________'}`
+        : (s.bezeichnung.trim() || '________'),
+    })),
+    verrListe: verr.map((v) => ({
+      glaeubiger: v.glaeubigerName.trim(),
+      forderungFmt: fmtCHF(v.forderungChf),
+      aktien: v.aktienAnzahl,
+      begruendungTxt: v.begruendungTxt.trim() || '________',
+    })),
+    vorteilListe: vorteile.map((v) => ({
+      beguenstigter: v.beguenstigter.trim(),
+      inhalt: v.inhalt.trim() || '________',
+      wertFmt: fmtCHF(v.wertChf),
+      begruendungTxt: v.begruendungTxt.trim() || '________',
+    })),
     // D1: Einpersonen-Gründung → Urkunde im Singular (Erläuterung ZH-Vorlage
     // 3.1/3.5: «Falls nur eine einzige natürliche Person gründet …, ist die
     // Gründungsurkunde in der Einzahl abzufassen»).
@@ -326,6 +567,43 @@ const STATUTEN_SCHEMA: VorlageSchema = {
         'zu CHF {{nennwertFmt}}. Die Aktien sind {{liberierungSatz}}.',
       norm: 'Art. 626 Abs. 1 Ziff. 3 und 4 OR',
       begruendung: 'Pflichtinhalt: Höhe des Kapitals, geleistete Einlagen (Liberierungsgrad) sowie Anzahl, Nennwert und Art der Aktien (rev. 2023; Wortlaut ZH/SG/GL).',
+    },
+    // ── Etappe 2: Pflichtklauseln der qualifizierten Gründung ───────────────
+    {
+      id: 'AS06_sacheinlagen',
+      ueberschrift: 'Sacheinlagen',
+      text:
+        'Die Gesellschaft übernimmt bei der Gründung von {{item.einleger}} als Sacheinlage: ' +
+        '{{item.objektLabel}} ({{item.belegSatz}}), bewertet mit CHF {{item.wertFmt}}. Dafür werden ' +
+        '{{item.aktien}} Namenaktien zu CHF {{nennwertFmt}} ausgegeben{{item.gutschriftKlauselZusatz}}.',
+      wiederholeUeber: 'sachListe',
+      includeIf: { feld: 'hatSacheinlagen', eq: true },
+      norm: 'Art. 634 Abs. 4 OR',
+      begruendung: 'Pflichtinhalt bei Sacheinlage: Gegenstand, Bewertung, Name des Einlegers, ausgegebene Aktien und allfällige weitere Gegenleistungen (Art. 634 Abs. 4 OR; Elemente-Katalog am Cache verifiziert, Dossier ag-qualifizierte-gruendung.md Teil 1). Haus-Formulierung — die amtlichen Muster enthalten keinen Standard-Klauseltext.',
+      hinweis: 'Die Generalversammlung kann diese Statutenbestimmung erst nach zehn Jahren aufheben (Art. 634 Abs. 4 Satz 2 OR — Nachfolgeregel des aufgehobenen Art. 628 aOR).',
+    },
+    {
+      id: 'AS07_verrechnung',
+      ueberschrift: 'Verrechnungsliberierung',
+      text:
+        'Bei der Gründung werden {{item.aktien}} Namenaktien zu CHF {{nennwertFmt}} durch Verrechnung ' +
+        'mit einer Forderung von {{item.glaeubiger}} im Betrag von CHF {{item.forderungFmt}} liberiert.',
+      wiederholeUeber: 'verrListe',
+      includeIf: { feld: 'hatVerrechnungen', eq: true },
+      norm: 'Art. 634a Abs. 3 OR',
+      begruendung: 'Pflichtinhalt bei Verrechnungsliberierung: Betrag der Forderung, Name des Aktionärs, zukommende Aktien (Art. 634a Abs. 3 OR am Cache verifiziert). Eigenständige qualifizierte Liberierungsart — KEINE Sacheinlage; Werthaltigkeit der Forderung ist keine Voraussetzung (Art. 634a Abs. 2 OR).',
+      hinweis: 'Die Generalversammlung kann diese Statutenbestimmung erst nach zehn Jahren aufheben (Art. 634a Abs. 3 Satz 2 OR).',
+    },
+    {
+      id: 'AS08_vorteile',
+      ueberschrift: 'Besondere Vorteile',
+      text:
+        'Bei der Gründung wird {{item.beguenstigter}} folgender besonderer Vorteil gewährt: ' +
+        '{{item.inhalt}} (Wert: CHF {{item.wertFmt}}).',
+      wiederholeUeber: 'vorteilListe',
+      includeIf: { feld: 'hatVorteile', eq: true },
+      norm: 'Art. 636 OR',
+      begruendung: 'Pflichtinhalt bei besonderen Vorteilen: begünstigte Personen mit Namen sowie Inhalt und Wert des gewährten Vorteils (Art. 636 OR am Cache verifiziert).',
     },
     // ── LANG-Stufe (Etappe 1/D18): amtliche ZH-Langvorlage, Block «Kapital» ──
     {
@@ -739,9 +1017,9 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'Sämtliche Einlagen von gesamthaft CHF {{akFmt}} wurden in Geld geleistet und sind bei der ' +
         '{{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über die Banken und ' +
         'Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
-      includeIf: { and: [{ feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
+      includeIf: { and: [{ feld: 'nurBar', eq: true }, { feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
       norm: 'Art. 633 OR',
-      begruendung: 'Volliberierung in Geld mit Banknennung in der Urkunde (separate Bescheinigung entfällt, Art. 43 Abs. 1 lit. f HRegV).',
+      begruendung: 'Volliberierung in Geld mit Banknennung in der Urkunde (separate Bescheinigung entfällt, Art. 43 Abs. 1 lit. f HRegV); nur bei der reinen Bargründung («Sämtliche Einlagen»).',
     },
     {
       id: 'AE07_einlagen_voll_bescheinigung',
@@ -750,9 +1028,9 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'Sämtliche Einlagen von gesamthaft CHF {{akFmt}} wurden in Geld geleistet und gemäss separater ' +
         'Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über die Banken und Sparkassen zur ' +
         'ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
-      includeIf: { and: [{ feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
+      includeIf: { and: [{ feld: 'nurBar', eq: true }, { feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
       norm: 'Art. 633 OR',
-      begruendung: 'Volliberierung in Geld mit separater Bankbescheinigung als Beleg.',
+      begruendung: 'Volliberierung in Geld mit separater Bankbescheinigung als Beleg; nur bei der reinen Bargründung.',
     },
     {
       id: 'AE07_einlagen_teil_bank',
@@ -777,6 +1055,93 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       includeIf: { and: [{ feld: 'vollLiberiert', eq: false }, { feld: 'bankInUrkundeGenannt', eq: false }] },
       norm: 'Art. 632 OR',
       begruendung: 'Teilliberierung mit separater Bankbescheinigung.',
+    },
+    // ── Etappe 2: Einlagen bei gemischter und qualifizierter Gründung ───────
+    {
+      id: 'AE07g_geld_bank',
+      ueberschrift: 'Einlagen',
+      text:
+        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft CHF {{barEinlageFmt}} in Geld ' +
+        'geleistet und bei der {{bankName}}, {{bankOrt}}, einer Bank nach Art. 1 des Bundesgesetzes über ' +
+        'die Banken und Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
+      includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
+      norm: 'Art. 633 OR',
+      begruendung: 'Bar-Anteil der gemischten Gründung (ZH-Bemerkung 3.3: Varianten «mit Ziff. IV der Textvorlage 3.1 kombinierbar»); Banknennung in der Urkunde.',
+    },
+    {
+      id: 'AE07g_geld_bescheinigung',
+      ueberschrift: 'Einlagen',
+      text:
+        'Auf {{barAktienTxt}} Namenaktien wurden Einlagen von gesamthaft CHF {{barEinlageFmt}} in Geld ' +
+        'geleistet und gemäss separater Bescheinigung bei einer Bank nach Art. 1 des Bundesgesetzes über ' +
+        'die Banken und Sparkassen zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
+      includeIf: { and: [{ feld: 'istGemischt', eq: true }, { feld: 'hatBarEinlage', eq: true }, { feld: 'bankInUrkundeGenannt', eq: false }] },
+      norm: 'Art. 633 OR',
+      begruendung: 'Bar-Anteil der gemischten Gründung mit separater Bankbescheinigung.',
+    },
+    {
+      id: 'AE07q_intro_mit_titel',
+      ueberschrift: 'Einlagen',
+      text: '{{qualifiziertIntro}}',
+      includeIf: { and: [{ feld: 'hatQualifiziert', eq: true }, { feld: 'hatBarEinlage', eq: false }] },
+      norm: 'Art. 629 Abs. 2 Ziff. 4 OR',
+      begruendung: 'Einleitung des qualifizierten Einlagen-Blocks nach ZH-Urkunde 3.3 («Die in den Statuten angegebenen Sacheinlagen gemäss folgenden, uns vorliegenden Unterlagen» — Haus-Fassung ohne «uns», dritte Person); trägt die Abschnitts-Überschrift, wenn kein Bar-Absatz vorangeht.',
+    },
+    {
+      id: 'AE07q_intro',
+      text: '{{qualifiziertIntro}}',
+      includeIf: { and: [{ feld: 'hatQualifiziert', eq: true }, { feld: 'hatBarEinlage', eq: true }] },
+      norm: 'Art. 629 Abs. 2 Ziff. 4 OR',
+      begruendung: 'Einleitung des qualifizierten Einlagen-Blocks (gemischte Gründung — folgt dem Bar-Absatz unter derselben Ziffer).',
+    },
+    {
+      id: 'AE07q_sachliste',
+      text:
+        '– Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.einleger}} über {{item.objektLabel}} ' +
+        '({{item.belegSatz}}; Bewertung CHF {{item.wertFmt}} für {{item.aktien}} Namenaktien{{item.gutschriftKlauselZusatz}}), ' +
+        'welcher genehmigt wird, mit der Bestätigung, dass die Gesellschaft nach ihrer Eintragung in das ' +
+        'Handelsregister {{item.verfuegungsSatz}}.',
+      wiederholeUeber: 'sachListe',
+      includeIf: { feld: 'hatSacheinlagen', eq: true },
+      norm: 'Art. 634 OR',
+      begruendung: 'Je Sacheinlage eine Beleg-Zeile nach ZH-Urkunde 3.3 inkl. Grundstücks-Weiche (Art. 634 Abs. 1 Ziff. 3 OR: «sofort als Eigentümerin verfügen» vs. «bedingungsloser Anspruch auf Eintragung in das Grundbuch»).',
+    },
+    {
+      id: 'AE07q_verrliste',
+      text:
+        '– Verrechnungsliberierung: {{item.aktien}} Namenaktien werden durch Verrechnung mit einer ' +
+        'Forderung von {{item.glaeubiger}} im Betrag von CHF {{item.forderungFmt}} liberiert (Art. 634a OR).',
+      wiederholeUeber: 'verrListe',
+      includeIf: { feld: 'hatVerrechnungen', eq: true },
+      norm: 'Art. 634a OR',
+      begruendung: 'Je Verrechnungsliberierung eine Zeile — Haus-Fassung (die ZH-Vorlage kennt die Verrechnung nur in der Geschäftsübernahme-Variante; die generische Fassung deckt Art. 634a Abs. 1 OR, Bestand/Verrechenbarkeit belegt der Gründungsbericht, Art. 635 Ziff. 2 OR).',
+    },
+    {
+      id: 'AE07q_vorteile',
+      text: 'Ferner werden bei der Gründung die in den Statuten umschriebenen besonderen Vorteile gewährt.',
+      includeIf: { feld: 'hatVorteile', eq: true },
+      norm: 'Art. 636 OR',
+      begruendung: 'Zusatz-Variante besondere Vorteile nach ZH-Urkunde 3.3.',
+    },
+    {
+      id: 'AE07q_bericht',
+      text:
+        '– Gründungsbericht gemäss Art. 635 OR vom ________, von allen Gründerinnen und Gründern unterzeichnet.\n' +
+        '– Prüfungsbestätigung gemäss Art. 635a OR vom ________ der zugelassenen Revisorin bzw. des zugelassenen ' +
+        'Revisors {{revisorZeile}}, wonach der Gründungsbericht vollständig und richtig ist.',
+      includeIf: { and: [{ feld: 'hatQualifiziert', eq: true }, { feld: 'einGruender', eq: false }] },
+      norm: 'Art. 635a OR',
+      begruendung: 'EINE Bericht- und Prüfungs-Zeile für alle Tatbestände (ZH-Bemerkung 3.3 erlaubt die Zusammenfassung ausdrücklich: «Werden mehrere Sachverhalte im gleichen Gründungsbericht … dargestellt, so ist der Varianten-Text entsprechend anzupassen»). Zugelassener REVISOR genügt (Art. 635a OR — Dossier: ZH-Checklisten-«Revisionsunternehmen» ist enger als das Gesetz).',
+    },
+    {
+      id: 'AE07q_bericht_singular',
+      text:
+        '– Gründungsbericht gemäss Art. 635 OR vom ________, von der Gründerin bzw. dem Gründer unterzeichnet.\n' +
+        '– Prüfungsbestätigung gemäss Art. 635a OR vom ________ der zugelassenen Revisorin bzw. des zugelassenen ' +
+        'Revisors {{revisorZeile}}, wonach der Gründungsbericht vollständig und richtig ist.',
+      includeIf: { and: [{ feld: 'hatQualifiziert', eq: true }, { feld: 'einGruender', eq: true }] },
+      norm: 'Art. 635a OR',
+      begruendung: 'Bericht-/Prüfungs-Zeile im Singular (D1).',
     },
     {
       id: 'AE07c_resteinlage',
@@ -1197,6 +1562,218 @@ const ANMELDUNG_SCHEMA: VorlageSchema = {
 };
 
 
+// ── 7 · SACHEINLAGEVERTRAG (Etappe 2; fertig — mit Grundstück ENTWURF, §8) ──
+// EIN Bausteinsatz (§5); zwei Schema-Hüllen, weil ausgabeArt formgebunden
+// ist: Schriftform (Art. 634 Abs. 2 Satz 1 OR) → druckfertig; Grundstück →
+// öffentliche Beurkundung (Art. 634 Abs. 2 Satz 2 OR i. V. m. Art. 657 ZGB)
+// → nur ENTWURF. Wortlaute: ZH-Vorlagen vertrag_se_einfach / _geschaeft.
+
+const SACHEINLAGEVERTRAG_BAUSTEINE: VorlageSchema['bausteine'] = [
+  {
+    id: 'SV01_parteien',
+    text:
+      'zwischen\n{{einlegerName}},\nals Veräusserer/in und Sacheinleger/in,\nund\n' +
+      '{{firma}} in Gründung, {{sitz}}, vertreten durch die Gründerinnen und Gründer,\n' +
+      'als übernehmende Gesellschaft.',
+    begruendung: 'Parteien-Ingress nach den ZH-Vertragsvorlagen (Vertretung durch die Gründer; Haus-Fassung sammelt sie statt Einzelaufzählung — Unterschriftsblock nennt alle).',
+  },
+  {
+    id: 'SV02_gegenstand_einfach',
+    ueberschrift: 'Sacheinlage',
+    text:
+      'Der/die Sacheinleger/in bringt in die zu gründende {{firma}} ein: {{bezeichnung}} gemäss ' +
+      'beiliegender Inventarliste vom {{belegDatumFmt}} im Wert und zum Preis von CHF {{wertFmt}}.\n' +
+      'Die beiliegende Inventarliste bildet einen integrierenden Bestandteil des vorliegenden Vertrages ' +
+      'und wird demselben, von den Vertragsparteien unterzeichnet, beigeheftet.',
+    includeIf: { feld: 'typGeschaeft', eq: false },
+    norm: 'Art. 634 OR',
+    begruendung: 'ZH-Vorlage «Sacheinlagevertrag einfach» verbatim (Sachgesamtheit mit unterzeichneter, datierter Inventarliste — Beleg-Anforderung des ZH-Merkblatts: Gegenstände einzeln aufgeführt und bewertet).',
+  },
+  {
+    id: 'SV02_gegenstand_geschaeft',
+    ueberschrift: 'Gegenstand der Sacheinlage',
+    text:
+      'Die {{firma}} übernimmt alle Aktiven und Passiven {{hrZusatz}} Einzelunternehmens ' +
+      '{{bezeichnung}}{{cheZusatz}} gemäss Übernahmebilanz per {{belegDatumFmt}}. Danach betragen die ' +
+      'Aktiven CHF {{aktivenFmt}} und die Passiven CHF {{passivenFmt}}. Der Kaufpreis beträgt ' +
+      'CHF {{wertFmt}}. Die Bilanz bildet einen Bestandteil dieses Vertrages und wird von den ' +
+      'Vertragsparteien anerkannt.',
+    includeIf: { feld: 'typGeschaeft', eq: true },
+    norm: 'Art. 634 OR',
+    begruendung: 'ZH-Vorlage «Sacheinlagevertrag Geschäft» verbatim (Übernahme aller Aktiven und Passiven eines Einzelunternehmens mit Übernahmebilanz).',
+  },
+  {
+    id: 'SV03_gegenleistung',
+    ueberschrift: 'Gegenleistung',
+    text:
+      'Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende Namenaktien ' +
+      'der Gesellschaft zu nominal CHF {{nennwertFmt}}.{{gutschriftSatz}}',
+    norm: 'Art. 634 Abs. 4 OR',
+    begruendung: 'Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst.',
+  },
+  {
+    id: 'SV04_zeitpunkt',
+    ueberschrift: 'Zeitpunkt',
+    text:
+      'Der/die Sacheinleger/in erteilt mit der Unterzeichnung dieses Vertrages der {{firma}} die ' +
+      'unwiderrufliche Befugnis, sofort nach ihrer Eintragung im Handelsregister über sämtliche ' +
+      'übertragenen Vermögenswerte tatsächlich und rechtlich zu verfügen. Mit der Eintragung der ' +
+      '{{firma}} im Handelsregister kann sie frei und bedingungslos über die Sacheinlage verfügen.',
+    norm: 'Art. 634 Abs. 1 Ziff. 3 OR',
+    begruendung: 'ZH-Vorlagen verbatim — setzt die Deckungs-Voraussetzung der sofortigen freien Verfügbarkeit um.',
+  },
+  {
+    id: 'SV05_zusicherungen',
+    ueberschrift: 'Zusicherungen',
+    text: 'Die übernommenen Vermögenswerte sind frei von Rechten Dritter.',
+    begruendung: 'ZH-Vorlagen verbatim.',
+  },
+  {
+    id: 'SV06_rechtsgeschaefte',
+    ueberschrift: 'Rechtsgeschäfte',
+    text:
+      'Die seit dem {{rueckwirkungFmt}} abgeschlossenen Rechtsgeschäfte des Einzelunternehmens ' +
+      '{{bezeichnung}} gelten als für Rechnung der in Gründung begriffenen {{firma}} getätigt.',
+    includeIf: { feld: 'typGeschaeft', eq: true },
+    begruendung: 'Rückwirkungsklausel der ZH-Vorlage «Geschäft» (nur Geschäftsübernahme).',
+  },
+  {
+    id: 'SV07_nutzen_gefahr',
+    ueberschrift: 'Nutzen und Gefahr',
+    text: 'Nutzen und Gefahr hinsichtlich aller übertragenen Vermögenswerte gelten als per {{belegDatumFmt}} auf die {{firma}} übergegangen.',
+    begruendung: 'ZH-Vorlagen verbatim; Stichtag = Inventarlisten- bzw. Übernahmebilanz-Datum.',
+  },
+  {
+    id: 'SV08_gewaehrleistung',
+    ueberschrift: 'Gewährleistung',
+    text: 'Der vorliegende Vertrag wird unter Aufhebung jeder Gewährleistung abgeschlossen.',
+    begruendung: 'ZH-Vorlagen verbatim.',
+  },
+  {
+    id: 'SV09_unterschriften',
+    rolle: 'unterschrift',
+    text: '{{ortDatumZeile}}\n\n_________________________________\n{{einlegerName}} (Sacheinleger/in)\n\n{{firma}} in Gründung – die Gründerinnen und Gründer:',
+    begruendung: 'Unterschriften der Sacheinlegerin / des Sacheinlegers und aller Gründerinnen und Gründer (ZH-Vorlagen).',
+  },
+  {
+    id: 'SV09b_gruenderliste',
+    rolle: 'unterschrift',
+    text: '_________________________________\n{{item.name}}',
+    wiederholeUeber: 'gruenderListe',
+    begruendung: 'Je Gründerin/Gründer eine Unterschriftslinie.',
+  },
+];
+
+const SACHEINLAGEVERTRAG_SCHEMA: VorlageSchema = {
+  id: 'ag-sacheinlagevertrag',
+  version: '1.0.0 (ZH-Vorlagen vertrag_se_einfach/_geschaeft 26.7.2024; Dossier 7.6.2026)',
+  titel: 'Sacheinlagevertrag',
+  format: 'vertrag',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Schriftform (Art. 634 Abs. 2 OR); im Original oder ' +
+    'als beglaubigte Kopie einzureichen (Art. 20 HRegV). Inventarliste bzw. Übernahmebilanz unterzeichnet ' +
+    'und datiert beiheften (Merkblatt HRegA ZH).',
+  bausteine: SACHEINLAGEVERTRAG_BAUSTEINE,
+};
+
+const SACHEINLAGEVERTRAG_ENTWURF_SCHEMA: VorlageSchema = {
+  ...SACHEINLAGEVERTRAG_SCHEMA,
+  id: 'ag-sacheinlagevertrag-grundstueck',
+  ausgabeArt: 'entwurf',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. ENTWURF: Dieser Sacheinlagevertrag enthält ein ' +
+    'Grundstück und bedarf der öffentlichen Beurkundung (Art. 634 Abs. 2 OR i. V. m. Art. 657 ZGB); ' +
+    'eine einzige Urkunde genügt auch für Grundstücke in verschiedenen Kantonen und ist durch eine ' +
+    'Urkundsperson am Sitz der Gesellschaft zu errichten (Art. 634 Abs. 3 OR).',
+};
+
+// ── 8 · GRÜNDUNGSBERICHT (Etappe 2; fertig — Art. 635 OR) ───────────────────
+
+const GRUENDUNGSBERICHT_SCHEMA: VorlageSchema = {
+  id: 'ag-gruendungsbericht',
+  version: '1.0.0 (ZH-Vorlagen gruendungsbericht_se_einfach/_geschaeft 26.7.2024; Dossier 7.6.2026)',
+  titel: 'Gründungsbericht',
+  format: 'vertrag',
+  ausgabeArt: 'fertig',
+  disclaimer:
+    'Erstellt mit LexMetrik – keine Rechtsberatung. Von allen Gründerinnen und Gründern (oder ihren ' +
+    'Vertretern) ORIGINAL HANDSCHRIFTLICH zu unterzeichnen (Praxis HRegA ZH); ein zugelassener Revisor ' +
+    'prüft den Bericht und bestätigt schriftlich, dass er vollständig und richtig ist (Art. 635a OR).',
+  bausteine: [
+    {
+      id: 'GB01_ingress',
+      text: 'Die Gründerinnen und Gründer der {{firma}}, in {{sitz}}, erstatten hiermit folgenden Gründungsbericht im Sinne von Art. 635 OR:',
+      includeIf: { feld: 'einGruender', eq: false },
+      norm: 'Art. 635 OR',
+      begruendung: 'Ingress nach der ZH-Vorlage («Die Gründer der … AG erstatten hiermit folgenden Gründungsbericht im Sinne von Art. 635 OR»).',
+    },
+    {
+      id: 'GB01_ingress_singular',
+      text: 'Die Gründerin bzw. der Gründer der {{firma}}, in {{sitz}}, erstattet hiermit folgenden Gründungsbericht im Sinne von Art. 635 OR:',
+      includeIf: { feld: 'einGruender', eq: true },
+      norm: 'Art. 635 OR',
+      begruendung: 'Ingress im Singular (D1).',
+    },
+    {
+      id: 'GB02_sach',
+      ueberschrift: 'Art und Zustand der Sacheinlage',
+      text:
+        'Die Sacheinlage von {{item.einleger}} umfasst {{item.objektLabel}}. Der entsprechende ' +
+        'Sacheinlagevertrag vom {{item.vertragDatumFmt}} mit {{item.belegSatz}} liegt diesem Bericht als ' +
+        'integrierender Bestandteil bei. Zum Zustand der Sacheinlage wird Folgendes erklärt: {{item.zustandTxt}}\n' +
+        'Auf Grund obiger Feststellungen kann die Bewertung der Sacheinlage mit CHF {{item.wertFmt}} als angemessen bezeichnet werden.',
+      wiederholeUeber: 'sachListe',
+      includeIf: { feld: 'hatSacheinlagen', eq: true },
+      norm: 'Art. 635 Ziff. 1 OR',
+      begruendung: 'Je Sacheinlage ein Abschnitt nach den ZH-Vorlagen (Art/Zustand + Angemessenheit der Bewertung); beim Geschäft tritt die Übernahmebilanz an die Stelle der Inventarliste, die Posten-Würdigung steht im Zustands-Text (ZH-Vorlage «Geschäft»: je Bilanzposten Bestand und Bewertung).',
+    },
+    {
+      id: 'GB03_verrechnung',
+      ueberschrift: 'Bestand und Verrechenbarkeit',
+      text:
+        'Die zur Verrechnung gebrachte Forderung von {{item.glaeubiger}} im Betrag von ' +
+        'CHF {{item.forderungFmt}} besteht und ist verrechenbar. Begründung: {{item.begruendungTxt}}',
+      wiederholeUeber: 'verrListe',
+      includeIf: { feld: 'hatVerrechnungen', eq: true },
+      norm: 'Art. 635 Ziff. 2 OR',
+      begruendung: 'Rechenschaft über Bestand und Verrechenbarkeit der Schuld (Art. 635 Ziff. 2 OR; BE-Merkblatt) — Haus-Fassung, die ZH-Vorlagen decken nur den Sacheinlage-Fall.',
+    },
+    {
+      id: 'GB04_vorteile',
+      ueberschrift: 'Besondere Vorteile',
+      text:
+        '{{item.beguenstigter}} wird folgender besonderer Vorteil gewährt: {{item.inhalt}} ' +
+        '(Wert: CHF {{item.wertFmt}}). Begründung und Angemessenheit: {{item.begruendungTxt}}',
+      wiederholeUeber: 'vorteilListe',
+      includeIf: { feld: 'hatVorteile', eq: true },
+      norm: 'Art. 635 Ziff. 3 OR',
+      begruendung: 'Rechenschaft über Begründung und Angemessenheit besonderer Vorteile (Art. 635 Ziff. 3 OR) — Haus-Fassung.',
+    },
+    {
+      id: 'GB05_unterschriften',
+      rolle: 'unterschrift',
+      text: '{{ortDatumZeile}}\n\nDie Gründerinnen und Gründer:',
+      includeIf: { feld: 'einGruender', eq: false },
+      begruendung: 'Unterschriften ALLER Gründerinnen und Gründer (ZH-Praxis: original handschriftlich).',
+    },
+    {
+      id: 'GB05_unterschriften_singular',
+      rolle: 'unterschrift',
+      text: '{{ortDatumZeile}}\n\nDie Gründerin bzw. der Gründer:',
+      includeIf: { feld: 'einGruender', eq: true },
+      begruendung: 'Unterschrift im Singular (D1).',
+    },
+    {
+      id: 'GB05b_gruenderliste',
+      rolle: 'unterschrift',
+      text: '_________________________________\n{{item.name}}',
+      wiederholeUeber: 'gruenderListe',
+      begruendung: 'Je Gründerin/Gründer eine Unterschriftslinie.',
+    },
+  ],
+};
+
 // Errichtungsakt: römische Ziffern werden NACH der Weichen-Auswertung vergeben
 // (lückenlos auch ohne optionale Abschnitte wie die Nachtragsvollmacht, D10);
 // die Urkundsperson-Bestätigung bleibt unnummeriert (ZH-Vorlagen-Anatomie).
@@ -1239,6 +1816,16 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
   if (hat('bankbescheinigung')) {
     belegeListe.push({ titel: 'die Bestätigung über die Hinterlegung der Einlagen in Geld' });
   }
+  // Etappe 2: Belege der qualifizierten Gründung (Art. 631 Abs. 2 OR).
+  if (hat('sacheinlagevertrag')) {
+    belegeListe.push({ titel: 'die Sacheinlageverträge mit den Inventarlisten bzw. Übernahmebilanzen' });
+  }
+  if (hat('gruendungsbericht')) {
+    belegeListe.push({ titel: 'der Gründungsbericht (Art. 635 OR)' });
+  }
+  if (hat('pruefungsbestaetigung')) {
+    belegeListe.push({ titel: 'die Prüfungsbestätigung des zugelassenen Revisors (Art. 635a OR)' });
+  }
 
   const KEINE_BEILAGE = new Set(['statutenentwurf', 'kapitaleinlagekonto', 'hr-anmeldung', 'freigabe-einlagen', 'aktienbuch', 'wb-verzeichnis']);
   const belegeAnmeldung = unterlagen
@@ -1260,6 +1847,44 @@ export function agDokumentmappe(a: AgDokAntworten): { dokumente: AgDokument[]; g
     dateiName: 'ag-errichtungsakt-entwurf',
     ergebnis: nummeriereUrkundenZiffern(assemble(ERRICHTUNGSAKT_SCHEMA, { ...basis, belegeListe })),
   });
+
+  // ── Etappe 2: Sacheinlageverträge + Gründungsbericht ──────────────────────
+  if (hat('sacheinlagevertrag')) {
+    type SachItem = Record<string, string | boolean>;
+    const sachItems = (basis as { sachListe: SachItem[] }).sachListe;
+    const mitSachWeiche = a.einlageArt === 'sacheinlage' || a.einlageArt === 'gemischt';
+    const sachen = mitSachWeiche ? a.sacheinlagen.filter((s) => s.einlegerName.trim() || s.bezeichnung.trim()) : [];
+    sachen.forEach((s, i) => {
+      const item = sachItems[i];
+      dokumente.push({
+        id: `sacheinlagevertrag-${i}`,
+        titel: `Sacheinlagevertrag – ${String(item.einleger)}${s.grundstueck ? ' (Entwurf, Grundstück)' : ''}`,
+        dateiName: s.grundstueck ? 'ag-sacheinlagevertrag-entwurf' : 'ag-sacheinlagevertrag',
+        ausgeloestDurch: s.grundstueck
+          ? 'Sacheinlage mit Grundstück (öffentliche Beurkundung, Art. 634 Abs. 2 OR / Art. 657 ZGB)'
+          : 'Sacheinlage (Art. 634 OR)',
+        ergebnis: assemble(
+          s.grundstueck ? SACHEINLAGEVERTRAG_ENTWURF_SCHEMA : SACHEINLAGEVERTRAG_SCHEMA,
+          {
+            ...basis,
+            ...item,
+            einlegerName: String(item.einleger),
+            rueckwirkungFmt: String(item.rueckwirkungFmt || '________'),
+          },
+        ),
+      });
+    });
+  }
+
+  if (hat('gruendungsbericht')) {
+    dokumente.push({
+      id: 'gruendungsbericht',
+      titel: 'Gründungsbericht',
+      dateiName: 'ag-gruendungsbericht',
+      ausgeloestDurch: 'Qualifizierte Gründung (Art. 635 OR)',
+      ergebnis: assemble(GRUENDUNGSBERICHT_SCHEMA, basis),
+    });
+  }
 
   if (hat('wahlannahme-vr')) {
     // Review-Befund M-1 (7.6.2026): Index-ID gegen Namens-Kollisionen;

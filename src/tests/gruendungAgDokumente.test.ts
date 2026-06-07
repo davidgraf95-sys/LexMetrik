@@ -317,10 +317,147 @@ describe('AG-VR-Protokoll — Formalia (D13/D14) + Wahlannahme RS (0.6)', () => 
   });
 });
 
+describe('AG — Qualifizierte Gründung (Etappe 2/D3–D5)', () => {
+  const SACH_BASIS: AgDokAntworten = {
+    ...BASIS,
+    einlageArt: 'sacheinlage',
+    sacheinlagen: [{
+      typ: 'sachgesamtheit', bezeichnung: 'eine Werkstatteinrichtung', belegDatum: '2026-06-01',
+      wertChf: "100'000", grundstueck: false, einlegerName: 'Anna Muster', aktienAnzahl: '100',
+      gutschriftChf: '', zustand: 'gebraucht, betriebsbereit, regelmässig gewartet',
+      imHrEingetragen: false, cheNr: '', aktivenChf: '', passivenChf: '', rueckwirkungDatum: '',
+    }],
+    revisorName: 'Revisia AG',
+  };
+
+  it('Reine Sacheinlage: Vertrag (druckfertig) + Gründungsbericht; Statuten-Klausel 634 IV; Urkunden-Block', () => {
+    const m = agDokumentmappe(SACH_BASIS);
+    expect(m.gates.blocker).toEqual([]);
+    expect(m.dokumente.map((d) => d.id)).toContain('sacheinlagevertrag-0');
+    expect(m.dokumente.map((d) => d.id)).toContain('gruendungsbericht');
+
+    const st = text(m, 'statuten');
+    expect(st).toContain('eine Werkstatteinrichtung');
+    expect(st).toContain("bewertet mit CHF 100'000.00");
+    const klausel = m.dokumente[0].ergebnis.protokoll.find((p) => p.bausteinId === 'AS06_sacheinlagen');
+    expect(klausel?.norm).toBe('Art. 634 Abs. 4 OR');
+
+    const ea = text(m, 'errichtungsakt');
+    expect(ea).toContain('Die in den Statuten angegebenen Sacheinlagen gemäss folgenden, vorliegenden Unterlagen:');
+    expect(ea).toContain('sofort als Eigentümerin über die Sacheinlage verfügen kann');
+    expect(ea).toContain('Gründungsbericht gemäss Art. 635 OR');
+    expect(ea).toContain('Revisors Revisia AG, wonach der Gründungsbericht vollständig und richtig ist');
+    expect(ea).not.toContain('Sämtliche Einlagen von gesamthaft');   // Bar-Absatz nur bei nurBar
+
+    const sv = text(m, 'sacheinlagevertrag-0');
+    expect(sv).toContain('gemäss beiliegender Inventarliste vom 01.06.2026');
+    expect(sv).toContain('100 als voll liberiert geltende Namenaktien');
+    expect(sv).toContain('unter Aufhebung jeder Gewährleistung');
+    expect(m.dokumente.find((d) => d.id === 'sacheinlagevertrag-0')!.ergebnis.dokument.ausgabeArt).toBe('fertig');
+
+    const gb = text(m, 'gruendungsbericht');
+    expect(gb).toContain('Gründungsbericht im Sinne von Art. 635 OR');
+    expect(gb).toContain('gebraucht, betriebsbereit');
+    expect(gb).toContain("Bewertung der Sacheinlage mit CHF 100'000.00 als angemessen");
+  });
+
+  it('Grundstück → Sacheinlagevertrag nur als ENTWURF (§8; Art. 634 Abs. 2 OR/657 ZGB) + Grundbuch-Weiche', () => {
+    const m = agDokumentmappe({
+      ...SACH_BASIS,
+      sacheinlagen: [{ ...SACH_BASIS.sacheinlagen[0], grundstueck: true, bezeichnung: 'das Grundstück Kat.-Nr. 123, Zürich' }],
+    });
+    expect(m.gates.blocker).toEqual([]);
+    expect(m.dokumente.find((d) => d.id === 'sacheinlagevertrag-0')!.ergebnis.dokument.ausgabeArt).toBe('entwurf');
+    expect(text(m, 'errichtungsakt')).toContain('einen bedingungslosen Anspruch auf Eintragung in das Grundbuch erhält');
+  });
+
+  it('Geschäftsübernahme: Übernahmebilanz + Rückwirkungsklausel + 181-OR-Warnung; Netto-Aktiven-Gate', () => {
+    const geschaeft: AgDokAntworten = {
+      ...SACH_BASIS,
+      sacheinlagen: [{
+        typ: 'geschaeft', bezeichnung: 'Schreinerei Muster', belegDatum: '2025-12-31',
+        wertChf: "100'000", grundstueck: false, einlegerName: 'Anna Muster', aktienAnzahl: '100',
+        gutschriftChf: '', zustand: 'Warenlager: Bestand gemäss Inventur, zu Einstandspreisen bewertet.',
+        imHrEingetragen: true, cheNr: 'CHE-123.456.789', aktivenChf: "180'000", passivenChf: "80'000",
+        rueckwirkungDatum: '2026-01-01',
+      }],
+    };
+    const m = agDokumentmappe(geschaeft);
+    expect(m.gates.blocker).toEqual([]);
+    expect(m.gates.warnungen.join(' ')).toContain('Art. 181 Abs. 1 und 2 OR');
+    const sv = text(m, 'sacheinlagevertrag-0');
+    expect(sv).toContain('alle Aktiven und Passiven des im Handelsregister eingetragenen Einzelunternehmens Schreinerei Muster (CHE-123.456.789) gemäss Übernahmebilanz per 31.12.2025');
+    expect(sv).toContain('Die seit dem 01.01.2026 abgeschlossenen Rechtsgeschäfte');
+
+    const zuTeuer = pruefeAgDokGates({
+      ...geschaeft,
+      sacheinlagen: [{ ...geschaeft.sacheinlagen[0], aktivenChf: "150'000", passivenChf: "80'000" }],
+    });
+    expect(zuTeuer.blocker.join(' ')).toContain('Netto-Aktiven');
+  });
+
+  it('Verrechnung: Statuten-Klausel 634a III + Urkunden-Zeile + Bericht Ziff. 2; Betrags-Gate', () => {
+    const verr: AgDokAntworten = {
+      ...BASIS,
+      einlageArt: 'verrechnung',
+      verrechnungen: [{ glaeubigerName: 'Anna Muster', forderungChf: "100'000", aktienAnzahl: '100', begruendungTxt: 'Darlehen vom 1. Februar 2026, valutiert und fällig.' }],
+    };
+    const m = agDokumentmappe(verr);
+    expect(m.gates.blocker).toEqual([]);
+    expect(text(m, 'statuten')).toContain("durch Verrechnung mit einer Forderung von Anna Muster im Betrag von CHF 100'000.00");
+    expect(text(m, 'errichtungsakt')).toContain('Verrechnungsliberierung');
+    expect(text(m, 'gruendungsbericht')).toContain('besteht und ist verrechenbar. Begründung: Darlehen vom 1. Februar 2026');
+
+    const falsch = pruefeAgDokGates({
+      ...verr,
+      verrechnungen: [{ ...verr.verrechnungen[0], forderungChf: "90'000" }],
+    });
+    expect(falsch.blocker.join(' ')).toContain('Verrechnung von Anna Muster');
+  });
+
+  it('Gemischt: Bar-Absatz mit Restbetrag + qualifizierter Block; rein-qualifiziert verlangt volle Deckung', () => {
+    const gemischt: AgDokAntworten = {
+      ...SACH_BASIS,
+      einlageArt: 'gemischt',
+      aktienkapitalChf: "200'000", anzahlAktien: '200',
+      gruender: [{ name: 'Anna Muster', angaben: 'von Basel, in Zürich', anzahl: '200' }],
+    };
+    const m = agDokumentmappe(gemischt);
+    expect(m.gates.blocker).toEqual([]);
+    const ea = text(m, 'errichtungsakt');
+    expect(ea).toContain("Auf 100 Namenaktien wurden Einlagen von gesamthaft CHF 100'000.00 in Geld");
+    expect(ea).toContain('Die in den Statuten angegebenen Sacheinlagen gemäss folgenden, vorliegenden Unterlagen:');
+
+    const unvollstaendig = pruefeAgDokGates({
+      ...SACH_BASIS,
+      anzahlAktien: '200', aktienkapitalChf: "200'000",
+      gruender: [{ name: 'Anna Muster', angaben: '', anzahl: '200' }],
+    });
+    expect(unvollstaendig.blocker.join(' ')).toContain('qualifiziert gedeckt');
+  });
+
+  it('Besondere Vorteile: Statuten-Klausel 636 + Bericht Ziff. 3; Teilliberierung qualifiziert gesperrt', () => {
+    const m = agDokumentmappe({
+      ...BASIS,
+      besondereVorteile: true,
+      vorteile: [{ beguenstigter: 'Beat Beispiel', inhalt: 'lebenslanger Vorzugsbezug von Dienstleistungen', wertChf: "5'000", begruendungTxt: 'Abgeltung der Aufbauarbeit; marktüblich bewertet.' }],
+    });
+    expect(m.gates.blocker).toEqual([]);
+    expect(text(m, 'statuten')).toContain("Beat Beispiel folgender besonderer Vorteil gewährt: lebenslanger Vorzugsbezug von Dienstleistungen (Wert: CHF 5'000.00)");
+    expect(text(m, 'gruendungsbericht')).toContain('Begründung und Angemessenheit: Abgeltung der Aufbauarbeit');
+    expect(text(m, 'errichtungsakt')).toContain('die in den Statuten umschriebenen besonderen Vorteile gewährt');
+
+    expect(pruefeAgDokGates({ ...SACH_BASIS, liberierungProzent: '50' }).blocker.join(' ')).toContain('Teilliberierung nur bei der reinen Bargründung');
+  });
+});
+
 describe('AG-Gates — Erstausbau-Grenzen + 632-Arithmetik', () => {
   it('Inhaberaktien/Sacheinlage/Fremdwährung sperren ehrlich', () => {
     expect(pruefeAgDokGates({ ...BASIS, inhaberaktien: true }).blocker.join(' ')).toContain('NAMENAKTIEN');
-    expect(pruefeAgDokGates({ ...BASIS, einlageArt: 'verrechnung' }).blocker.join(' ')).toContain('BARGRÜNDUNG');
+    // Qualifizierte Gründung (FAHRPLAN-AG-GRUENDUNG Etappe 2): Verrechnung
+    // ist nicht mehr pauschal gesperrt (alter BARGRÜNDUNG-Blocker), das Gate
+    // bleibt aber ehrlich — ohne erfasste Verrechnungszeile blockt es.
+    expect(pruefeAgDokGates({ ...BASIS, einlageArt: 'verrechnung' }).blocker.join(' ')).toContain('Verrechnungsliberierung erfassen');
     expect(pruefeAgDokGates({ ...BASIS, fremdwaehrung: true }).blocker.join(' ')).toContain('CHF');
   });
 

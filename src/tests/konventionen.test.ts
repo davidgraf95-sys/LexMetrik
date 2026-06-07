@@ -113,6 +113,51 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     expect(agMappe.gates.blocker).toEqual([]);
     for (const d of agMappe.dokumente) faelle.push([`ag-dok-${d.id}`, d.ergebnis.dokument]);
 
+    // AG QUALIFIZIERT (Etappe 2): gemischt mit Sacheinlage (Geschäft mit
+    // Grundstück + Sachgesamtheit mit Gutschrift), Verrechnung, besonderen
+    // Vorteilen und Bar-Rest → alle neuen Schemas/Bausteine inkl.
+    // Statuten-Klauseln 634 IV/634a III/636 und beide Vertrags-Varianten.
+    const agQualifiziert = agDokumentmappe({
+      einlageArt: 'gemischt', besondereVorteile: true, optingOut: true,
+      eigeneBueros: true, immobilienHauptzweck: false, inhaberaktien: false,
+      fremdwaehrung: false, bankInUrkundeGenannt: true, chWohnsitzVertretung: true,
+      leistungenChf: undefined,
+      ...AG_DOK_DEFAULTS,
+      firma: 'Qualifia AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Produktion',
+      aktienkapitalChf: "400'000", anzahlAktien: '400', nennwertChf: "1'000",
+      gruender: [
+        { name: 'A', angaben: 'von Basel, in Zürich', anzahl: '300' },
+        { name: 'B', angaben: 'von Bern, in Bern', anzahl: '100' },
+      ],
+      verwaltungsraete: [
+        { name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' },
+        { name: 'B', herkunft: 'Bern', wohnort: 'Bern', adresse: 'W 2', praesident: false, zeichnungsArt: 'kollektivzuzweien' },
+      ],
+      bankName: 'Zürcher Kantonalbank', bankOrt: 'Zürich',
+      rechtsdomizilAdresse: 'Weg 1, 8000 Zürich',
+      sacheinlagen: [
+        {
+          typ: 'geschaeft', bezeichnung: 'Werkbau Muster', belegDatum: '2025-12-31', wertChf: "100'000",
+          grundstueck: true, einlegerName: 'A', aktienAnzahl: '100', gutschriftChf: '',
+          zustand: 'Liegenschaft und Maschinenpark gemäss Bilanzpositionen, zu Fortführungswerten.',
+          imHrEingetragen: true, cheNr: 'CHE-111.222.333', aktivenChf: "250'000", passivenChf: "120'000",
+          rueckwirkungDatum: '2026-01-01',
+        },
+        {
+          typ: 'sachgesamtheit', bezeichnung: 'eine EDV-Anlage', belegDatum: '2026-05-31', wertChf: "60'000",
+          grundstueck: false, einlegerName: 'B', aktienAnzahl: '50', gutschriftChf: "10'000",
+          zustand: 'neuwertig, unter Herstellergarantie',
+          imHrEingetragen: false, cheNr: '', aktivenChf: '', passivenChf: '', rueckwirkungDatum: '',
+        },
+      ],
+      verrechnungen: [{ glaeubigerName: 'A', forderungChf: "100'000", aktienAnzahl: '100', begruendungTxt: 'Darlehen vom 01.02.2026, valutiert und fällig.' }],
+      vorteile: [{ beguenstigter: 'B', inhalt: 'Vorzugskonditionen für Beratungsleistungen', wertChf: "5'000", begruendungTxt: 'Abgeltung der Aufbauarbeit, marktüblich.' }],
+      revisorName: 'Revisia AG',
+      ort: 'Zürich', datum: '2026-06-15',
+    });
+    expect(agQualifiziert.gates.blocker).toEqual([]);
+    for (const d of agQualifiziert.dokumente) faelle.push([`ag-dok-qualifiziert-${d.id}`, d.ergebnis.dokument]);
+
     // AG SINGULAR-Fassung (D1, Etappe 0.1): Einpersonen-Gründung mit
     // Volliberierung, Bank in der Urkunde, Opting-out, eigenem Büro und
     // Nachtragsvollmacht → alle Singular-Varianten-Bausteine.
