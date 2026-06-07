@@ -915,14 +915,6 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
 
   // – Weitere Rechtsgebiete —
-  markenwiderspruch: {
-    id: 'markenwiderspruch', modus: 'rechner', art: 'frist', rechtsgebiet: 'Weitere Rechtsgebiete',
-    rechtsbereich: 'privat',
-    title: 'Markenwiderspruch (Frist)',
-    description: 'Widerspruchsfrist nach Veröffentlichung einer Markeneintragung.',
-    status: 'geplant', norms: [],
-    keywords: ['Marke', 'Widerspruch', 'IGE'],
-  },
 
   // – Übergreifende Werkzeuge —
   checklisten: {

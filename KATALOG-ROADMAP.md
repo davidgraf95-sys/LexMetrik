@@ -32,11 +32,19 @@ Sozialversicherung (Art. 38 Abs. 4 ATSG: Stillstand auch für
 MONATS-Fristen — breiter als VwVG!) · strafrechtliche Verjährung
 (Art. 97 ff. StGB strafrahmenabhängig, eigene Beginn-/Ruhensregeln).
 
-**OFFEN (Regime-Recherche vor Bau/Streichung):** steuer-verjaehrung
-(DBG 120 II/III eigene Stillstands-/Unterbrechungsregeln — NICHT mit
-dem Verfahrens-Rechner verwechseln) · markenwiderspruch (MSchG 31 am
-Cache nicht verifizierbar — ELI klären) · vergabe-fristen (22a II VwVG
-nimmt Beschaffungen vom Stillstand AUS; kantonale IVöB-Lage) ·
+**NACHVERIFIZIERT (7.6.2026 abends, Fedlex-Volltext):**
+- *Markenwiderspruch* GESTRICHEN — MSchG 31 III: 3 MONATE ab
+  Veröffentlichung; Art. 22a VwVG greift nur für TAGES-bestimmte
+  Fristen → KEIN Stillstand; nicht erstreckbar, Weiterbehandlung
+  ausgeschlossen (41 IV lit. c). → Tagerechner-Preset (Monatsfrist).
+  ⚠ Fach-Falle für später: NIE die VwVG-Stillstand-Logik anwenden.
+- *steuer-verjaehrung* BLEIBT (Korrektur der Erst-Triage!) — DBG 120/121
+  verbatim: relativ 5 J. + ABSOLUT 15/10 J., abschliessende Stillstands-
+  (Abs. 2) und NEUBEGINN-Gründe (Abs. 3); StHG 47 harmonisiert. Eigenes
+  Regime, getrennt vom Verfahrensfristen-Rechner (§4).
+
+**OFFEN (Regime-Recherche vor Bau/Streichung):** vergabe-fristen (22a II
+VwVG nimmt Beschaffungen vom Stillstand AUS; kantonale IVöB-Lage) ·
 baurecht-fristen (kantonale Sonderstillstände?) · schadenszins als
 Verzugszins-Preset? · ferien-checker in ferien-assistent falten?
 
@@ -103,7 +111,7 @@ Verzugszins-Preset? · ferien-checker in ferien-assistent falten?
 **Vorlagen:** —
 
 ## Weitere Rechtsgebiete
-- **Immaterialgüterrecht** — Rechner: Markenwiderspruch (Frist)
+- **Immaterialgüterrecht** — ~~Markenwiderspruch~~ §0-gestrichen (MSchG 31 III: 3 Monate, KEIN 22a-Stillstand [monatsbestimmt!] → Tagerechner-Preset)
 - **Sachenrecht** — ~~Bauhandwerkerpfandrecht~~ §0-gestrichen (Art. 839 II ZGB: 4 Monate fix → Tagerechner-Preset)
 - **Übergreifend** — Rechner: Klagebewilligung (Geltungsdauer)
 

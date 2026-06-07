@@ -106,10 +106,21 @@ unten stammen aus der amtlichen Geschäftsverteilung des Bundesgerichts
 (bger.ch, Abteilungs-Seiten, Abruf 6.6.2026); die formelle Grundlage ist Art.
 33/34 BGerR.
 
-⚠ Reglements-Wortlaut (Art. 33/34) noch nicht am Fedlex-Filestore-HTML
-zeichengenau verifiziert (fedlex SR 173.110.131 / ELI cc/2006/871 lieferte am
-6.6.2026 nur die JS-Shell; Sachgebiete daher von bger.ch übernommen) → vor
-Produktivnahme am konsolidierten Volltext gegenlesen.
+✅ **NACHVERIFIKATION 7.6.2026 (Fedlex-Volltext, löst den ⚠-Vermerk):**
+ELI ist **cc/2006/834** (die frühere Annahme cc/2006/871 war falsch);
+Konsolidierung **1.2.2026**; Filestore-HTML NUR ohne -N-Suffix (die
+-1…-4-Varianten sind Shells). Art. 33/34 zeichengenau bestätigt — inkl.
+**Art. 33 lit. i: provisorische und definitive Rechtsöffnungen → I.
+zivilrechtliche** (Falle bestätigt) und **Art. 34 lit. c: SchKG OHNE
+Rechtsöffnungen → II. zivilrechtliche**. Miet- und privates Arbeitsrecht
+laufen unter «Schuldrecht» (Art. 33 lit. a) → I. zivilrechtliche.
+**NEU seit 1.2.2026 (V BGer 18.11.2025, AS 2025 856): ZWEI strafrechtliche
+Abteilungen — Art. 35 (Erste: materielle Straf-/Zivilfragen, Revision) und
+Art. 35a (Zweite: strafprozessuale Zwischen-/Endentscheide, Vollzug,
+nachträgliche Entscheide).** Zuteilungsregel Art. 36: Schwergewicht der
+Entscheidung. Pin-Vorschlag fedlex-cache.sh:
+`bgerr|cc/2006/834|20260201|0|art_33,art_34,art_35,art_35_a,art_36`.
+Verdrahtung in bestimmeRechtsmittel: HANDLUNGSPLAN B.5a (nach Abnahme).
 
 | Rechtsgebiet (Streitsache) | Zuständige Abteilung BGer | Grundlage |
 |---|---|---|
