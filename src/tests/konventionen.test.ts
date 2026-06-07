@@ -111,10 +111,38 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       vinkulierung: true, virtuelleGv: true, statutenUmfang: 'lang',
       sitzungBeginn: '11.00', sitzungEnde: '11.30',
       nachtragsbevollmaechtigter: 'N. Muster, 1.1.1990, von Chur, Weg 1, 7000 Chur',
+      // Stufe 2 P1b/P3 (Perfektion 7.6.2026): Agio bei Teilliberierung +
+      // alle Statuten-Zusatzklauseln in den Konventions-Check.
+      ausgabebetragChf: "1'200",
+      schiedsklausel: true, schiedsOrt: 'Zürich',
+      kapitalband: true, kbRichtung: 'beide',
+      kbUntergrenze: "100'000", kbObergrenze: "300'000", kbEndeDatum: '2031-06-14',
+      bedingtesKapital: true, bkBetrag: "100'000",
+      bkKreis: 'den Arbeitnehmerinnen und Arbeitnehmern der Gesellschaft',
+      gjErstesEnde: '31. Dezember 2026',
       ort: 'Zürich', datum: '2026-06-15',
     });
     expect(agMappe.gates.blocker).toEqual([]);
     for (const d of agMappe.dokumente) faelle.push([`ag-dok-${d.id}`, d.ergebnis.dokument]);
+
+    // AG INHABERAKTIEN (Stufe 2 P2): Bucheffekten-Variante mit
+    // Verwahrungsstelle — AS03b-/AA05b-Texte in den Konventions-Check.
+    const agInhaber = agDokumentmappe({
+      einlageArt: 'bar', besondereVorteile: false, optingOut: true,
+      eigeneBueros: true, immobilienHauptzweck: false, inhaberaktien: true,
+      fremdwaehrung: false, bankInUrkundeGenannt: true, chWohnsitzVertretung: true,
+      leistungenChf: undefined,
+      ...AG_DOK_DEFAULTS,
+      firma: 'Muster AG', sitz: 'Zürich', kanton: 'ZH', zweck: 'Beteiligungen',
+      gruender: [{ name: 'A', angaben: 'von Basel, in Zürich', anzahl: '100' }],
+      verwaltungsraete: [{ name: 'A', herkunft: 'Basel', wohnort: 'Zürich', adresse: 'W 1', praesident: true, zeichnungsArt: 'einzelunterschrift' }],
+      bankName: 'Zürcher Kantonalbank', bankOrt: 'Zürich',
+      rechtsdomizilAdresse: 'Weg 1, 8000 Zürich',
+      verwahrungsstelle: 'SIX SIS AG, Olten',
+      ort: 'Zürich', datum: '2026-06-15',
+    });
+    expect(agInhaber.gates.blocker).toEqual([]);
+    for (const d of agInhaber.dokumente) faelle.push([`ag-inhaber-${d.id}`, d.ergebnis.dokument]);
 
     // AG QUALIFIZIERT (Etappe 2): gemischt mit Sacheinlage (Geschäft mit
     // Grundstück + Sachgesamtheit mit Gutschrift), Verrechnung, besonderen

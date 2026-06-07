@@ -897,3 +897,83 @@ describe('AG — Stufe 2 P2 (Perfektion 7.6.2026): Inhaberaktien-Weiche', () => 
     expect(text(m, 'hr-anmeldung')).not.toContain('Inhaberaktien');
   });
 });
+
+describe('AG — Stufe 2 P3 (Perfektion 7.6.2026): Statuten-Zusatzklauseln', () => {
+  it('Schiedsklausel 697n: Statuten-Artikel + HR-Anmeldungs-Verweis (45 I lit. u HRegV); ohne Ort blockt', () => {
+    const m = agDokumentmappe({ ...BASIS, schiedsklausel: true, schiedsOrt: 'Zürich' });
+    expect(m.gates.blocker).toEqual([]);
+    const st = text(m, 'statuten');
+    expect(st).toContain('ein Schiedsgericht mit Sitz in Zürich (Schweiz)');
+    expect(st).toContain('bindet die Gesellschaft, die Organe der Gesellschaft, die Mitglieder der Organe und die Aktionäre');
+    expect(st).toContain('3. Teils der Schweizerischen Zivilprozessordnung');
+    expect(st).toContain('über die Einleitung und die Beendigung des Verfahrens zu informieren');
+    expect(text(m, 'hr-anmeldung')).toContain('Die Statuten enthalten eine Schiedsklausel');
+    expect(pruefeAgDokGates({ ...BASIS, schiedsklausel: true }).blocker.join(' ')).toContain('Sitz des Schiedsgerichts');
+  });
+
+  it('Kapitalband 653s: Nur-Erhöhungs-Klausel mit Höchstzahl; Gates ±½, 5 Jahre, Opting-out', () => {
+    const KB = {
+      ...BASIS,
+      kapitalband: true, kbRichtung: 'erhoehen' as const,
+      kbUntergrenze: "100'000", kbObergrenze: "150'000", kbEndeDatum: '2031-06-01',
+    };
+    const m = agDokumentmappe(KB);
+    expect(m.gates.blocker).toEqual([]);
+    const st = text(m, 'statuten');
+    expect(st).toContain("unteren Grenze von CHF 100'000.00 (entspricht dem Aktienkapital) und einer oberen Grenze von CHF 150'000.00 zu erhöhen");
+    // (150'000 − 100'000) / 1'000 = 50 neue Aktien
+    expect(st).toContain('Ausgabe von höchstens 50 neuen, vollständig zu liberierenden Namenaktien');
+    expect(st).toContain('Herabsetzung des Aktienkapitals innerhalb des Kapitalbands ist ausgeschlossen');
+
+    // obere Grenze > 1.5 × AK (Art. 653s Abs. 2 OR)
+    expect(pruefeAgDokGates({ ...KB, kbObergrenze: "160'000" }).blocker.join(' ')).toContain('höchstens um die Hälfte übersteigen');
+    // Dauer > 5 Jahre ab Beschluss (Art. 653s Abs. 1 OR; datum 2026-06-07)
+    expect(pruefeAgDokGates({ ...KB, kbEndeDatum: '2031-06-08' }).blocker.join(' ')).toContain('längstens FÜNF Jahre');
+    // Herabsetzungs-Ermächtigung bei Opting-out gesperrt (Art. 653s Abs. 4 OR)
+    expect(pruefeAgDokGates({ ...KB, kbRichtung: 'beide' }).blocker.join(' ')).toContain('Art. 653s Abs. 4 OR');
+    // nur Erhöhung: Untergrenze muss dem Kapital entsprechen
+    expect(pruefeAgDokGates({ ...KB, kbUntergrenze: "80'000" }).blocker.join(' ')).toContain('untere Grenze entspricht dem Aktienkapital');
+  });
+
+  it('Kapitalband beide Richtungen (mit Revisionsstelle): Klausel + Untergrenze-Gate', () => {
+    const KB2 = {
+      ...BASIS,
+      optingOut: false, revisionsstelleName: 'Revisia AG', revisionsstelleSitz: 'Zürich',
+      kapitalband: true, kbRichtung: 'beide' as const,
+      kbUntergrenze: "50'000", kbObergrenze: "150'000", kbEndeDatum: '2030-12-31',
+    };
+    const m = agDokumentmappe(KB2);
+    expect(m.gates.blocker).toEqual([]);
+    const st = text(m, 'statuten');
+    expect(st).toContain('zu erhöhen oder herabzusetzen');
+    // Vernichtung von höchstens (100'000 − 50'000)/1'000 = 50 Aktien
+    expect(st).toContain('Vernichtung von höchstens 50 Namenaktien');
+    expect(pruefeAgDokGates({ ...KB2, kbUntergrenze: "40'000" }).blocker.join(' ')).toContain('höchstens um die Hälfte unterschreiten');
+  });
+
+  it('Bedingtes Kapital 653/653a/653b: Klausel; Gates ½-Schranke, Teilbarkeit, Kreis', () => {
+    const BK = { ...BASIS, bedingtesKapital: true, bkBetrag: "50'000", bkKreis: 'den Arbeitnehmerinnen und Arbeitnehmern der Gesellschaft' };
+    const m = agDokumentmappe(BK);
+    expect(m.gates.blocker).toEqual([]);
+    const st = text(m, 'statuten');
+    expect(st).toContain("erhöht sich um höchstens CHF 50'000.00 durch Ausgabe von höchstens 50 vollständig zu liberierenden Namenaktien");
+    expect(st).toContain('die den Arbeitnehmerinnen und Arbeitnehmern der Gesellschaft eingeräumt werden (bedingtes Kapital)');
+    expect(st).toContain('Bezugsrecht der bisherigen Aktionäre ist ausgeschlossen, soweit');
+    expect(pruefeAgDokGates({ ...BK, bkBetrag: "60'000" }).blocker.join(' ')).toContain('Art. 653a Abs. 1 OR');
+    expect(pruefeAgDokGates({ ...BK, bkBetrag: "50'500" }).blocker.join(' ')).toContain('Vielfachen des Nennwerts');
+    expect(pruefeAgDokGates({ ...BK, bkKreis: '' }).blocker.join(' ')).toContain('Kreis der Wandel- bzw. Optionsberechtigten');
+  });
+
+  it('Stichentscheid-Abwahl (Lang) + «erstes Geschäftsjahr endet am»', () => {
+    const mitDefault = text(agDokumentmappe({ ...BASIS, statutenUmfang: 'lang' }), 'statuten');
+    expect(mitDefault).toContain('Bei Stimmengleichheit hat der Vorsitzende den Stichentscheid.');
+    const ohne = text(agDokumentmappe({ ...BASIS, statutenUmfang: 'lang', stichentscheidGv: false }), 'statuten');
+    expect(ohne).not.toContain('Bei Stimmengleichheit hat der Vorsitzende den Stichentscheid.');
+    // Der 704-Gesetzeskatalog («Einführung des Stichentscheids») bleibt.
+    expect(ohne).toContain('die Einführung des Stichentscheids des Vorsitzenden in der Generalversammlung');
+
+    const gj = text(agDokumentmappe({ ...BASIS, gjErstesEnde: '31. Dezember 2026' }), 'statuten');
+    expect(gj).toContain('Das Geschäftsjahr beginnt am 1. Januar und endet am 31. Dezember. Das erste Geschäftsjahr endet am 31. Dezember 2026.');
+    expect(text(agDokumentmappe(BASIS), 'statuten')).not.toContain('Das erste Geschäftsjahr');
+  });
+});

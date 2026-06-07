@@ -192,6 +192,19 @@ export function VorlageAgGruendung() {
   // Stufe 2 P2: Inhaberaktien-Voraussetzung (Art. 622 Abs. 1bis OR).
   const [inhaberKotiert, setInhaberKotiert] = useState(() => bool(stand?.inhaberKotiert, false));
   const [verwahrungsstelle, setVerwahrungsstelle] = useState(() => txt(stand?.verwahrungsstelle, ''));
+  // Stufe 2 P3: Statuten-Zusatzklauseln.
+  const [schiedsklausel, setSchiedsklausel] = useState(() => bool(stand?.schiedsklausel, false));
+  const [schiedsOrt, setSchiedsOrt] = useState(() => txt(stand?.schiedsOrt, ''));
+  const [kapitalband, setKapitalband] = useState(() => bool(stand?.kapitalband, false));
+  const [kbUntergrenze, setKbUntergrenze] = useState(() => txt(stand?.kbUntergrenze, ''));
+  const [kbObergrenze, setKbObergrenze] = useState(() => txt(stand?.kbObergrenze, ''));
+  const [kbEndeDatum, setKbEndeDatum] = useState(() => txt(stand?.kbEndeDatum, ''));
+  const [kbRichtung, setKbRichtung] = useState<AgDokAntworten['kbRichtung']>(() => wahl(stand?.kbRichtung, ['erhoehen', 'beide'], 'erhoehen'));
+  const [bedingtesKapital, setBedingtesKapital] = useState(() => bool(stand?.bedingtesKapital, false));
+  const [bkBetrag, setBkBetrag] = useState(() => txt(stand?.bkBetrag, ''));
+  const [bkKreis, setBkKreis] = useState(() => txt(stand?.bkKreis, ''));
+  const [stichentscheidGv, setStichentscheidGv] = useState(() => bool(stand?.stichentscheidGv, true));
+  const [gjErstesEnde, setGjErstesEnde] = useState(() => txt(stand?.gjErstesEnde, ''));
   const [gjBeginn, setGjBeginn] = useState(() => txt(stand?.gjBeginn, AG_DOK_DEFAULTS.gjBeginn));
   const [gjEnde, setGjEnde] = useState(() => txt(stand?.gjEnde, AG_DOK_DEFAULTS.gjEnde));
 
@@ -289,6 +302,9 @@ export function VorlageAgGruendung() {
     revisionsstelleName: rsName, revisionsstelleSitz: rsSitz,
     vinkulierung, virtuelleGv, statutenUmfang, gjBeginn, gjEnde,
     inhaberKotiert, verwahrungsstelle,
+    schiedsklausel, schiedsOrt, kapitalband, kbUntergrenze, kbObergrenze,
+    kbEndeDatum, kbRichtung, bedingtesKapital, bkBetrag, bkKreis,
+    stichentscheidGv, gjErstesEnde,
     sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
     waehrung, kursChf, kursQuelle,
     lexKollerAuslandBeteiligt: lkAusland, lexKollerNeuerwerb: lkNeuerwerb, lexKollerGrundstueckErwerb: lkGrundstueck,
@@ -301,6 +317,9 @@ export function VorlageAgGruendung() {
     gruender, vr, vertretungen, protokollfuehrer, bankName, bankOrt, rechtsdomizil,
     domizilhalterName, domizilhalterAdresse, rsName, rsSitz, vinkulierung, virtuelleGv,
     inhaberKotiert, verwahrungsstelle,
+    schiedsklausel, schiedsOrt, kapitalband, kbUntergrenze, kbObergrenze,
+    kbEndeDatum, kbRichtung, bedingtesKapital, bkBetrag, bkKreis,
+    stichentscheidGv, gjErstesEnde,
     statutenUmfang, gjBeginn, gjEnde, sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter,
     waehrung, kursChf, kursQuelle, lkAusland, lkNeuerwerb, lkGrundstueck,
     ausgabebetrag, konstituierungInUrkunde, domizilNurAnmeldung,
@@ -347,6 +366,9 @@ export function VorlageAgGruendung() {
           inhaberaktien, fremdwaehrung, bankInUrkunde, chVertretung, leistungen,
           firma, sitz, kanton, zweck, zweckErweiterung, statutenUmfang, vinkulierung,
           virtuelleGv, gjBeginn, gjEnde, inhaberKotiert, verwahrungsstelle,
+          schiedsklausel, schiedsOrt, kapitalband, kbUntergrenze, kbObergrenze,
+          kbEndeDatum, kbRichtung, bedingtesKapital, bkBetrag, bkKreis,
+          stichentscheidGv, gjErstesEnde,
           ak, anzahl, nennwert, liberierung, ausgabebetrag, waehrung, kursChf, kursQuelle,
           bankName, bankOrt, sacheinlagen, verrechnungen, vorteile, revisorName,
           gruender, vr, vertretungen, protokollfuehrer, sitzungBeginn, sitzungEnde, rsName, rsSitz,
@@ -546,12 +568,74 @@ export function VorlageAgGruendung() {
           </p>
         </div>
       )}
+      {/* Stufe 2 P3: Statuten-Zusatzklauseln */}
+      <div className="rounded-md border border-line p-3 space-y-3">
+        <p className="text-body-s font-medium text-ink-900">Statuten-Zusatzklauseln (optional)</p>
+        <label className="flex items-center gap-2 text-body-s text-ink-700">
+          <input type="checkbox" checked={schiedsklausel} onChange={(e) => setSchiedsklausel(e.target.checked)} />
+          Schiedsklausel (Art. 697n OR)
+        </label>
+        {schiedsklausel && (
+          <Field label="Sitz des Schiedsgerichts (Ort in der Schweiz)">
+            <input className={inputCls} value={schiedsOrt} onChange={(e) => setSchiedsOrt(e.target.value)} placeholder="z. B. Zürich" />
+          </Field>
+        )}
+        <label className="flex items-center gap-2 text-body-s text-ink-700">
+          <input type="checkbox" checked={kapitalband} onChange={(e) => setKapitalband(e.target.checked)} />
+          Kapitalband (Art. 653s ff. OR — VR-Ermächtigung, max. 5 Jahre, ±½ des Kapitals)
+        </label>
+        {kapitalband && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <Field label="Richtung der Ermächtigung">
+              <select className={inputCls} value={kbRichtung}
+                onChange={(e) => setKbRichtung(e.target.value as AgDokAntworten['kbRichtung'])}>
+                <option value="erhoehen">Nur Erhöhung (bei Opting-out zwingend)</option>
+                <option value="beide">Erhöhung und Herabsetzung (nur mit Revisionsstelle)</option>
+              </select>
+            </Field>
+            <Field label="Ende der Ermächtigung (max. 5 Jahre)">
+              <input type="date" className={inputCls} value={kbEndeDatum} onChange={(e) => setKbEndeDatum(e.target.value)} />
+            </Field>
+            <Field label={`Untere Grenze (${wc}${kbRichtung === 'erhoehen' ? ' — bei «nur Erhöhung» = Aktienkapital' : ''})`}>
+              <input className={inputCls} inputMode="numeric" value={kbUntergrenze} onChange={(e) => setKbUntergrenze(e.target.value)} />
+            </Field>
+            <Field label={`Obere Grenze (${wc}, höchstens das Anderthalbfache des Kapitals)`}>
+              <input className={inputCls} inputMode="numeric" value={kbObergrenze} onChange={(e) => setKbObergrenze(e.target.value)} />
+            </Field>
+          </div>
+        )}
+        <label className="flex items-center gap-2 text-body-s text-ink-700">
+          <input type="checkbox" checked={bedingtesKapital} onChange={(e) => setBedingtesKapital(e.target.checked)} />
+          Bedingtes Kapital (Art. 653 ff. OR — Wandel-/Optionsrechte, max. ½ des Kapitals)
+        </label>
+        {bedingtesKapital && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <Field label={`Nennbetrag des bedingten Kapitals (${wc})`}>
+              <input className={inputCls} inputMode="numeric" value={bkBetrag} onChange={(e) => setBkBetrag(e.target.value)} placeholder="z. B. 50'000" />
+            </Field>
+            <Field label="Kreis der Berechtigten (Art. 653b Abs. 1 Ziff. 3 OR)">
+              <input className={inputCls} value={bkKreis} onChange={(e) => setBkKreis(e.target.value)}
+                placeholder="z. B. den Arbeitnehmerinnen und Arbeitnehmern der Gesellschaft" />
+            </Field>
+          </div>
+        )}
+        {statutenUmfang === 'lang' && (
+          <label className="flex items-center gap-2 text-body-s text-ink-700"
+            title="ZH-Langvorlage: «Bei Stimmengleichheit hat der Vorsitzende den Stichentscheid.» — abwählbar; ohne Klausel gilt: Stimmengleichheit = Antrag abgelehnt (SG-Default, Kantonsvergleich B8).">
+            <input type="checkbox" checked={stichentscheidGv} onChange={(e) => setStichentscheidGv(e.target.checked)} />
+            Stichentscheid des Vorsitzenden in der Generalversammlung (Langfassung)
+          </label>
+        )}
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Geschäftsjahr-Beginn (Statuten)">
           <input className={inputCls} value={gjBeginn} onChange={(e) => setGjBeginn(e.target.value)} placeholder="z. B. 1. Januar" />
         </Field>
         <Field label="Geschäftsjahr-Ende (Statuten)">
           <input className={inputCls} value={gjEnde} onChange={(e) => setGjEnde(e.target.value)} placeholder="z. B. 31. Dezember" />
+        </Field>
+        <Field label="Erstes Geschäftsjahr endet am (optional — bei unterjähriger Gründung)">
+          <input className={inputCls} value={gjErstesEnde} onChange={(e) => setGjErstesEnde(e.target.value)} placeholder="z. B. 31. Dezember 2026" />
         </Field>
       </div>
     </div>

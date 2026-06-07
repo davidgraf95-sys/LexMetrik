@@ -200,6 +200,38 @@ export type AgDokAntworten = AgGruendungEingaben & {
   /** Zugelassene:r Revisor:in der Prüfungsbestätigung (Art. 635a OR);
    *  leer = Blanko-Linie. */
   revisorName: string;
+  /** Statuten-Zusatzklauseln (Stufe 2 P3; alle am OR-Cache 1.1.2026
+   *  verifiziert). Schiedsklausel Art. 697n OR: Schiedsgericht MIT SITZ IN
+   *  DER SCHWEIZ; bindet ohne andere Regelung Gesellschaft, Organe, deren
+   *  Mitglieder und Aktionäre; Verfahren nach ZPO Teil 3. */
+  schiedsklausel: boolean;
+  /** Sitz des Schiedsgerichts (Ort in der Schweiz; Pflicht bei Weiche). */
+  schiedsOrt: string;
+  /** Kapitalband Art. 653s ff. OR: Ermächtigung des VR, das Kapital während
+   *  längstens 5 Jahren innerhalb der Bandbreite zu verändern. */
+  kapitalband: boolean;
+  kbUntergrenze: string;     // ≥ ½ des AK (653s II)
+  kbObergrenze: string;      // ≤ 1½ des AK (653s II)
+  kbEndeDatum: string;       // ISO; ≤ 5 Jahre (653s I; 653t I Ziff. 2)
+  /** 'beide' = erhöhen und herabsetzen; 'erhoehen' = nur erhöhen (653s III).
+   *  Herabsetzungs-Ermächtigung setzt voraus, dass NICHT auf die
+   *  eingeschränkte Revision verzichtet wurde (653s IV → Opting-out-Gate);
+   *  «nur herabsetzen» ist bei der Gründung praxisfern und nicht abgebildet
+   *  (offengelegt). */
+  kbRichtung: 'beide' | 'erhoehen';
+  /** Bedingtes Kapital Art. 653 ff. OR (Wandel-/Optionsrechte). */
+  bedingtesKapital: boolean;
+  bkBetrag: string;          // Nennbetrag, ≤ ½ des AK (653a I)
+  /** Kreis der Wandel-/Optionsberechtigten (653b I Ziff. 3; Freitext, z. B.
+   *  «den Arbeitnehmerinnen und Arbeitnehmern der Gesellschaft»). */
+  bkKreis: string;
+  /** Lang-Stufe: Stichentscheid des Vorsitzenden in der GV (ZH-Langvorlage;
+   *  statutarische Klausel — abwählbar, dann gilt die gesetzliche Lage:
+   *  Stimmengleichheit = Antrag abgelehnt). */
+  stichentscheidGv: boolean;
+  /** «Geschäftsjahr erstmals am»: Ende des ERSTEN Geschäftsjahrs (Freitext
+   *  wie «31. Dezember 2026»; leer = kein Satz). */
+  gjErstesEnde: string;
   /** Inhaberaktien (Stufe 2 P2; wirksam nur mit der Checklisten-Weiche
    *  `inhaberaktien`): Zulässigkeits-Voraussetzung nach Art. 622 Abs. 1bis
    *  OR (am Cache verifiziert) — Börsenkotierung ODER Ausgestaltung als
@@ -235,6 +267,10 @@ export const AG_DOK_DEFAULTS: Omit<AgDokAntworten, keyof AgGruendungEingaben> = 
   lexKollerAuslandBeteiligt: false, lexKollerNeuerwerb: false, lexKollerGrundstueckErwerb: false,
   sacheinlagen: [], verrechnungen: [], vorteile: [], revisorName: '',
   inhaberKotiert: false, verwahrungsstelle: '',
+  schiedsklausel: false, schiedsOrt: '',
+  kapitalband: false, kbUntergrenze: '', kbObergrenze: '', kbEndeDatum: '', kbRichtung: 'erhoehen',
+  bedingtesKapital: false, bkBetrag: '', bkKreis: '',
+  stichentscheidGv: true, gjErstesEnde: '',
   ort: '', datum: '',
 };
 
@@ -441,6 +477,84 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
         'Erstausbau: Inhaberaktien nur mit der Statuten-KURZFASSUNG – die amtliche ZH-Langvorlage ist ' +
         'Namenaktien-spezifisch (Aktienbuch-, Übertragungs- und Stimmrechts-Artikel müssten angepasst werden).',
       );
+    }
+  }
+  // ── Stufe 2 P3: Statuten-Zusatzklauseln (697n/653s/653a — am Cache) ──
+  if (a.schiedsklausel && !a.schiedsOrt.trim()) {
+    blocker.push(
+      'Schiedsklausel: Sitz des Schiedsgerichts angeben – er muss in der Schweiz liegen ' +
+      '(Art. 697n Abs. 1 OR: «durch ein Schiedsgericht mit Sitz in der Schweiz»).',
+    );
+  }
+  if (a.kapitalband) {
+    const kapitalKb = zahl(a.aktienkapitalChf);
+    const unter = zahl(a.kbUntergrenze);
+    const ober = zahl(a.kbObergrenze);
+    if (unter === null || ober === null) {
+      blocker.push('Kapitalband: untere und obere Grenze beziffern (Art. 653t Abs. 1 Ziff. 1 OR).');
+    } else if (kapitalKb !== null && kapitalKb > 0) {
+      if (ober > kapitalKb * 1.5 + 0.005) {
+        blocker.push(
+          `Kapitalband: Die obere Grenze darf das Aktienkapital höchstens um die Hälfte übersteigen ` +
+          `(Art. 653s Abs. 2 OR) – zulässig sind höchstens ${fmtCHF(String(kapitalKb * 1.5))}.`,
+        );
+      }
+      if (a.kbRichtung === 'beide' && unter < kapitalKb * 0.5 - 0.005) {
+        blocker.push(
+          `Kapitalband: Die untere Grenze darf das Aktienkapital höchstens um die Hälfte unterschreiten ` +
+          `(Art. 653s Abs. 2 OR) – zulässig sind mindestens ${fmtCHF(String(kapitalKb * 0.5))}.`,
+        );
+      }
+      if (a.kbRichtung === 'erhoehen' && Math.abs(unter - kapitalKb) > 0.005) {
+        blocker.push(
+          'Kapitalband (nur Erhöhung): Die untere Grenze entspricht dem Aktienkapital – ohne ' +
+          'Herabsetzungs-Ermächtigung kann das Kapital die Gründungshöhe nicht unterschreiten (Art. 653s Abs. 3 OR).',
+        );
+      }
+      if (ober <= kapitalKb + 0.005 && a.kbRichtung === 'erhoehen') {
+        blocker.push('Kapitalband (nur Erhöhung): Die obere Grenze muss über dem Aktienkapital liegen.');
+      }
+      if (unter > kapitalKb + 0.005 || ober < kapitalKb - 0.005) {
+        blocker.push('Kapitalband: Das Aktienkapital muss innerhalb der Bandbreite liegen.');
+      }
+    }
+    if (!a.kbEndeDatum) {
+      blocker.push('Kapitalband: Ende der Ermächtigung datieren (Art. 653t Abs. 1 Ziff. 2 OR) – längstens fünf Jahre (Art. 653s Abs. 1 OR).');
+    } else if (a.datum) {
+      const ende = new Date(a.kbEndeDatum);
+      const max = new Date(a.datum);
+      max.setFullYear(max.getFullYear() + 5);
+      if (ende.getTime() > max.getTime()) {
+        blocker.push('Kapitalband: Die Ermächtigung gilt für längstens FÜNF Jahre ab Beschluss (Art. 653s Abs. 1 OR) – Ende-Datum kürzen.');
+      }
+    }
+    if (a.kbRichtung === 'beide' && a.optingOut) {
+      blocker.push(
+        'Kapitalband mit Herabsetzungs-Ermächtigung nur, wenn die Gesellschaft NICHT auf die ' +
+        'eingeschränkte Revision verzichtet hat (Art. 653s Abs. 4 OR) – «nur Erhöhung» wählen oder ' +
+        'eine Revisionsstelle bestellen.',
+      );
+    }
+  }
+  if (a.bedingtesKapital) {
+    const kapitalBk = zahl(a.aktienkapitalChf);
+    const betrag = zahl(a.bkBetrag);
+    if (betrag === null || betrag <= 0) {
+      blocker.push('Bedingtes Kapital: Nennbetrag beziffern (Art. 653b Abs. 1 Ziff. 1 OR).');
+    } else {
+      if (kapitalBk !== null && kapitalBk > 0 && betrag > kapitalBk * 0.5 + 0.005) {
+        blocker.push(
+          `Bedingtes Kapital: Der Nennbetrag darf die Hälfte des eingetragenen Aktienkapitals nicht ` +
+          `übersteigen (Art. 653a Abs. 1 OR) – zulässig sind höchstens ${fmtCHF(String(kapitalBk * 0.5))}.`,
+        );
+      }
+      const nwBk = zahl(a.nennwertChf);
+      if (nwBk !== null && nwBk > 0 && Math.abs(betrag / nwBk - Math.round(betrag / nwBk)) > 0.0001) {
+        blocker.push('Bedingtes Kapital: Der Nennbetrag muss einem Vielfachen des Nennwerts entsprechen (ganze Anzahl Aktien, Art. 653b Abs. 1 Ziff. 2 OR).');
+      }
+    }
+    if (!a.bkKreis.trim()) {
+      blocker.push('Bedingtes Kapital: Kreis der Wandel- bzw. Optionsberechtigten angeben (Art. 653b Abs. 1 Ziff. 3 OR), z. B. «den Arbeitnehmerinnen und Arbeitnehmern der Gesellschaft».');
     }
   }
 
@@ -745,6 +859,34 @@ function basisAntworten(a: AgDokAntworten): Antworten {
     inhaberBucheffekten: a.inhaberaktien && !a.inhaberKotiert,
     inhaberKotiertAktiv: a.inhaberaktien && a.inhaberKotiert,
     verwahrungsstelleZeile: a.verwahrungsstelle.trim() || '________',
+    // Stufe 2 P3: Statuten-Zusatzklauseln.
+    hatSchiedsklausel: a.schiedsklausel,
+    schiedsOrtTxt: a.schiedsOrt.trim() || '________',
+    kapitalbandBeide: a.kapitalband && a.kbRichtung === 'beide',
+    kapitalbandErhoehen: a.kapitalband && a.kbRichtung === 'erhoehen',
+    kbUntergrenzeFmt: fmtCHF(a.kbUntergrenze),
+    kbObergrenzeFmt: fmtCHF(a.kbObergrenze),
+    kbEndeFmt: a.kbEndeDatum ? fmtDatum(a.kbEndeDatum) : '________',
+    // Höchstzahlen neuer/zu vernichtender Aktien aus den Band-Grenzen
+    // (653t I Ziff. 4: Anzahl, Nennwert und Art der Aktien).
+    kbMaxNeuTxt: nennwert > 0 && zahl(a.kbObergrenze) !== null
+      ? String(Math.max(0, Math.floor(((zahl(a.kbObergrenze) ?? 0) - (zahl(a.aktienkapitalChf) ?? 0)) / nennwert)))
+      : '________',
+    kbMaxWegTxt: nennwert > 0 && zahl(a.kbUntergrenze) !== null
+      ? String(Math.max(0, Math.floor(((zahl(a.aktienkapitalChf) ?? 0) - (zahl(a.kbUntergrenze) ?? 0)) / nennwert)))
+      : '________',
+    hatBedingtesKapital: a.bedingtesKapital,
+    bkBetragFmt: fmtCHF(a.bkBetrag),
+    bkKreisTxt: a.bkKreis.trim() || '________',
+    bkAnzahlTxt: nennwert > 0 && zahl(a.bkBetrag) !== null
+      ? String(Math.max(0, Math.floor((zahl(a.bkBetrag) ?? 0) / nennwert)))
+      : '________',
+    // Lang-Stufe: Stichentscheid des Vorsitzenden (Fragment — leer, wenn
+    // abgewählt; dann gilt die gesetzliche Lage: Stimmengleichheit =
+    // Antrag abgelehnt). Wortlaut = ZH-Langvorlage verbatim.
+    stichentscheidSatz: a.stichentscheidGv ? ' Bei Stimmengleichheit hat der Vorsitzende den Stichentscheid.' : '',
+    // «Geschäftsjahr erstmals am»: Zusatzsatz im GJ-Artikel (Fragment).
+    gjErstesSatz: a.gjErstesEnde.trim() ? ` Das erste Geschäftsjahr endet am ${a.gjErstesEnde.trim()}.` : '',
     // Bug-Check 3.1 Befund 2: Komma-Eingaben normalisieren (Urkunde zeigt
     // den Kurs in Punkt-Notation wie die ZH-Vorlage «CHF 1.xxxx»).
     kursTxt: a.kursChf.trim().replace(',', '.') || '________',
@@ -1002,6 +1144,58 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       begruendung: 'Stufe 2 P2: Kotierungs-Variante der Zulässigkeits-Erklärung (Art. 622 Abs. 1bis OR); bei einer Neugründung praxisfern, aber gesetzlich vorgesehen.',
     },
     // ── Etappe 2: Pflichtklauseln der qualifizierten Gründung ───────────────
+    // ── Stufe 2 P3: Kapitalband + bedingtes Kapital (Module der GV — bei
+    // der Gründung von den Gründern in den Statuten festgelegt) ──
+    {
+      id: 'AS03c_kapitalband_beide',
+      ueberschrift: 'Kapitalband',
+      text:
+        'Der Verwaltungsrat ist ermächtigt, das Aktienkapital bis zum {{kbEndeFmt}} innerhalb des ' +
+        'Kapitalbands mit einer unteren Grenze von {{waehrungCode}} {{kbUntergrenzeFmt}} und einer oberen ' +
+        'Grenze von {{waehrungCode}} {{kbObergrenzeFmt}} zu erhöhen oder herabzusetzen. Eine Erhöhung ' +
+        'erfolgt durch Ausgabe von höchstens {{kbMaxNeuTxt}} neuen, vollständig zu liberierenden ' +
+        '{{aktienArt}} zu je {{waehrungCode}} {{nennwertFmt}}; eine Herabsetzung erfolgt durch Vernichtung ' +
+        'von höchstens {{kbMaxWegTxt}} {{aktienArt}} oder durch Herabsetzung des Nennwerts. Das ' +
+        'Bezugsrecht der Aktionäre ist weder eingeschränkt noch aufgehoben. Die Ermächtigung ist an ' +
+        'keine weiteren Einschränkungen, Auflagen oder Bedingungen geknüpft. Nach Ablauf der ' +
+        'Ermächtigung streicht der Verwaltungsrat die Bestimmungen über das Kapitalband aus den Statuten.',
+      includeIf: { feld: 'kapitalbandBeide', eq: true },
+      norm: 'Art. 653s OR',
+      begruendung: 'Stufe 2 P3 (Haus-Fassung am 653t-Katalog, offengelegt — die amtlichen Gründungs-Muster enthalten kein Kapitalband-Modul): Ziff. 1 Grenzen, Ziff. 2 Ende der Ermächtigung, Ziff. 3 «keine weiteren Einschränkungen», Ziff. 4 Anzahl/Nennwert/Art, Ziff. 6/7 ohne Beschränkungen, Streichungspflicht nach Ablauf (Art. 653t Abs. 2 OR). Grenzen ±½ und Dauer ≤ 5 Jahre erzwingen die Gates (Art. 653s Abs. 1 und 2 OR, am Cache verifiziert).',
+      hinweis: 'Die Herabsetzungs-Ermächtigung setzt voraus, dass die Gesellschaft NICHT auf die eingeschränkte Revision verzichtet hat (Art. 653s Abs. 4 OR) — bei Opting-out sperrt das Gate. Vorrechte einzelner Kategorien, besondere Vorteile und Bezugsrechts-Beschränkungen innerhalb des Bands (Art. 653t Abs. 1 Ziff. 5/7/8/9/10 OR) deckt diese Klausel nicht ab.',
+    },
+    {
+      id: 'AS03c_kapitalband_erhoehen',
+      ueberschrift: 'Kapitalband',
+      text:
+        'Der Verwaltungsrat ist ermächtigt, das Aktienkapital bis zum {{kbEndeFmt}} innerhalb des ' +
+        'Kapitalbands mit einer unteren Grenze von {{waehrungCode}} {{kbUntergrenzeFmt}} (entspricht dem ' +
+        'Aktienkapital) und einer oberen Grenze von {{waehrungCode}} {{kbObergrenzeFmt}} zu erhöhen; eine ' +
+        'Herabsetzung des Aktienkapitals innerhalb des Kapitalbands ist ausgeschlossen. Die Erhöhung ' +
+        'erfolgt durch Ausgabe von höchstens {{kbMaxNeuTxt}} neuen, vollständig zu liberierenden ' +
+        '{{aktienArt}} zu je {{waehrungCode}} {{nennwertFmt}}. Das Bezugsrecht der Aktionäre ist weder ' +
+        'eingeschränkt noch aufgehoben. Die Ermächtigung ist an keine weiteren Einschränkungen, Auflagen ' +
+        'oder Bedingungen geknüpft. Nach Ablauf der Ermächtigung streicht der Verwaltungsrat die ' +
+        'Bestimmungen über das Kapitalband aus den Statuten.',
+      includeIf: { feld: 'kapitalbandErhoehen', eq: true },
+      norm: 'Art. 653s OR',
+      begruendung: 'Stufe 2 P3: Nur-Erhöhungs-Variante (Art. 653s Abs. 3 OR: «Sie können insbesondere vorsehen, dass der Verwaltungsrat das Aktienkapital nur erhöhen … kann») — die einzige bei Opting-out zulässige Variante (Art. 653s Abs. 4 OR). Untergrenze = eingetragenes Aktienkapital (die Gates erzwingen das).',
+    },
+    {
+      id: 'AS03d_bedingtes_kapital',
+      ueberschrift: 'Bedingtes Kapital',
+      text:
+        'Das Aktienkapital erhöht sich um höchstens {{waehrungCode}} {{bkBetragFmt}} durch Ausgabe von ' +
+        'höchstens {{bkAnzahlTxt}} vollständig zu liberierenden {{aktienArt}} zu je {{waehrungCode}} ' +
+        '{{nennwertFmt}}, soweit Wandel- oder Optionsrechte ausgeübt werden, die {{bkKreisTxt}} ' +
+        'eingeräumt werden (bedingtes Kapital). Das Bezugsrecht der bisherigen Aktionäre ist ' +
+        'ausgeschlossen, soweit die Wandel- oder Optionsrechte nicht ihnen zugeteilt werden. Die ' +
+        'Ausübung der Wandel- oder Optionsrechte und der Verzicht auf diese Rechte erfolgen schriftlich.',
+      includeIf: { feld: 'hatBedingtesKapital', eq: true },
+      norm: 'Art. 653b OR',
+      begruendung: 'Stufe 2 P3 (Haus-Fassung am 653b-Katalog, offengelegt): Ziff. 1 Nennbetrag, Ziff. 2 Anzahl/Nennwert/Art, Ziff. 3 Kreis der Berechtigten, Ziff. 4 Bezugsrechts-Folge, Ziff. 7 Form der Ausübung/des Verzichts (Haus-Default: schriftlich). Erhöhung «ohne Weiteres» bei Ausübung (Art. 653 Abs. 2 OR); Einlage mindestens zum Nennwert (Art. 653a Abs. 2 OR); Höchstbetrag ½ des eingetragenen Kapitals erzwingt das Gate (Art. 653a Abs. 1 OR, alle am Cache verifiziert).',
+      hinweis: 'Werden Anleihens- oder ähnliche Obligationen mit Wandel-/Optionsrechten nicht den Aktionären vorweg angeboten, verlangen die Statuten ZUSÄTZLICHE Angaben (Art. 653b Abs. 2 OR) — nicht abgebildet. Vor dem Handelsregister-Eintrag eingeräumte Wandel-/Optionsrechte sind nichtig (Art. 653b Abs. 3 OR). Vorrechte einzelner Kategorien und Übertragungsbeschränkungen neuer Namenaktien (Ziff. 5/6) deckt die Klausel nicht ab.',
+    },
     {
       id: 'AS06_sacheinlagen',
       ueberschrift: 'Sacheinlagen',
@@ -1189,7 +1383,7 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       id: 'ASL37_beschlussfassung',
       ueberschrift: 'Beschlussfassung',
       text:
-        'Die Generalversammlung fasst ihre Beschlüsse und vollzieht ihre Wahlen, soweit das Gesetz oder die Statuten es nicht anders bestimmen, mit der Mehrheit der vertretenen Aktienstimmen. Bei Stimmengleichheit hat der Vorsitzende den Stichentscheid.\n' +
+        'Die Generalversammlung fasst ihre Beschlüsse und vollzieht ihre Wahlen, soweit das Gesetz oder die Statuten es nicht anders bestimmen, mit der Mehrheit der vertretenen Aktienstimmen.{{stichentscheidSatz}}\n' +
         'Ein Beschluss der Generalversammlung, der mindestens zwei Drittel der vertretenen Stimmen und die Mehrheit der vertretenen Aktiennennwerte auf sich vereinigt, ist erforderlich für:\n' +
         '– die Änderung des Gesellschaftszweckes;\n' +
         '– die Zusammenlegung von Aktien, soweit dafür nicht die Zustimmung aller betroffenen Aktionäre erforderlich ist;\n' +
@@ -1209,7 +1403,7 @@ const STATUTEN_SCHEMA: VorlageSchema = {
         'Statutenbestimmungen, die für die Fassung bestimmter Beschlüsse grössere Mehrheiten als die vom Gesetz vorgeschriebenen festlegen, können nur mit dem vorgesehenen Mehr eingeführt, geändert oder aufgehoben werden.',
       includeIf: { feld: 'istLang', eq: true },
       norm: 'Art. 703 und 704 OR',
-      begruendung: 'ZH-Langvorlage verbatim — Mehrheitserfordernis (Art. 703 OR), statutarischer Stichentscheid des Vorsitzenden sowie der qualifizierte Katalog nach revidiertem Recht (Art. 704 Abs. 1 OR, inkl. Währungswechsel, Kapitalband, Schiedsklausel, GV im Ausland, Sitzverlegung, Stimmrechtsvertreter-Verzicht) und die Verschärfungs-Schranke (Art. 704 Abs. 2 OR). Haus-Anmerkung (Bug-Check B2, 7.6.2026): Ziff. 12 des Gesetzeskatalogs (Dekotierung der Beteiligungspapiere) ist wie in der ZH-Vorlage bewusst weggelassen — sie betrifft nur Gesellschaften mit börsenkotierten Papieren.',
+      begruendung: 'ZH-Langvorlage verbatim — Mehrheitserfordernis (Art. 703 OR), statutarischer Stichentscheid des Vorsitzenden (P3: als Weiche abwählbar — der SG-Lang-Default kennt KEINEN Stichentscheid, Kantonsvergleich B8; ohne Klausel gilt: Stimmengleichheit = Antrag abgelehnt) sowie der qualifizierte Katalog nach revidiertem Recht (Art. 704 Abs. 1 OR, inkl. Währungswechsel, Kapitalband, Schiedsklausel, GV im Ausland, Sitzverlegung, Stimmrechtsvertreter-Verzicht) und die Verschärfungs-Schranke (Art. 704 Abs. 2 OR). Haus-Anmerkung (Bug-Check B2, 7.6.2026): Ziff. 12 des Gesetzeskatalogs (Dekotierung der Beteiligungspapiere) ist wie in der ZH-Vorlage bewusst weggelassen — sie betrifft nur Gesellschaften mit börsenkotierten Papieren.',
     },
     // ── LANG-Stufe: Block «Verwaltungsrat» (ZH-Langvorlage) ─────────────────
     {
@@ -1321,7 +1515,7 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       id: 'AS15_geschaeftsjahr',
       ueberschrift: 'Geschäftsjahr und Buchführung',
       text:
-        'Das Geschäftsjahr beginnt am {{gjBeginnTxt}} und endet am {{gjEndeTxt}}.\n' +
+        'Das Geschäftsjahr beginnt am {{gjBeginnTxt}} und endet am {{gjEndeTxt}}.{{gjErstesSatz}}\n' +
         'Die Jahresrechnung, bestehend aus Erfolgsrechnung, Bilanz und Anhang, ist gemäss den Vorschriften des Schweizerischen Obligationenrechts, insbesondere der Art. 957 ff., zu erstellen.',
       norm: 'Art. 958 Abs. 2 OR',
       begruendung: 'Geschäftsjahr-Artikel der amtlichen ZH-Kurzvorlage (verbatim; kein Pflichtinhalt nach Art. 626 OR, aber Standard aller amtlichen Muster). Der Norm-Anker deckt die Jahresrechnungs-Bestandteile des zweiten Satzes (Bilanz, Erfolgsrechnung, Anhang — Art. 958 Abs. 2 OR); das Geschäftsjahr selbst ist gesetzlich nicht fixiert (Bug-Check-Befund 5, 7.6.2026).',
@@ -1345,6 +1539,24 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       includeIf: { feld: 'istLang', eq: true },
       norm: 'Art. 736 OR',
       begruendung: 'ZH-Langvorlage verbatim (Auflösungsbeschluss mit öffentlicher Urkunde Art. 736 Abs. 1 Ziff. 2 OR; Liquidatoren Art. 740 OR; Verteilung nach einbezahlten Beträgen Art. 745 Abs. 1 OR).',
+    },
+    // ── Stufe 2 P3: Schiedsklausel (Art. 697n OR) ───────────────────────────
+    {
+      id: 'AS16_schiedsklausel',
+      ueberschrift: 'Schiedsklausel',
+      text:
+        'Gesellschaftsrechtliche Streitigkeiten beurteilt unter Ausschluss der staatlichen Gerichte ein ' +
+        'Schiedsgericht mit Sitz in {{schiedsOrtTxt}} (Schweiz). Die Schiedsklausel bindet die ' +
+        'Gesellschaft, die Organe der Gesellschaft, die Mitglieder der Organe und die Aktionäre. Für das ' +
+        'Verfahren vor dem Schiedsgericht gelten die Bestimmungen des 3. Teils der Schweizerischen ' +
+        'Zivilprozessordnung. Personen, die von den Rechtswirkungen des Schiedsspruchs direkt betroffen ' +
+        'sein können, sind über die Einleitung und die Beendigung des Verfahrens zu informieren; sie ' +
+        'können sich bei der Bestellung des Schiedsgerichts beteiligen und dem Verfahren als ' +
+        'Intervenienten beitreten.',
+      includeIf: { feld: 'hatSchiedsklausel', eq: true },
+      norm: 'Art. 697n OR',
+      begruendung: 'Stufe 2 P3 (Haus-Fassung am Normtext, offengelegt — kein amtlicher Mustertext): Abs. 1 Sitz in der Schweiz + Bindungswirkung verbatim-nah; Abs. 2 ZPO Teil 3 (das 12. Kapitel des IPRG ist nicht anwendbar); Abs. 3 Pflicht-Sicherstellung von Information und Mitwirkung der direkt Betroffenen (am Cache verifiziert). Der Handelsregister-Eintrag enthält einen Verweis auf die Schiedsklausel (Art. 45 Abs. 1 lit. u HRegV).',
+      hinweis: 'Einzelheiten (z. B. Verweisung auf eine Schiedsordnung) können die Statuten zusätzlich regeln (Art. 697n Abs. 3 OR) — hier bewusst nicht vorbelegt; die Einführung bedarf bei bestehenden Gesellschaften des qualifizierten Mehrs (Art. 704 Abs. 1 Ziff. 14 OR).',
     },
     {
       id: 'AS04_mitteilungen',
@@ -2149,6 +2361,13 @@ const ANMELDUNG_SCHEMA: VorlageSchema = {
       includeIf: { feld: 'inhaberKotiertAktiv', eq: true },
       norm: 'Art. 622 Abs. 2bis OR',
       begruendung: 'Stufe 2 P2: Eintragungs-Erklärung nach Art. 622 Abs. 2bis OR — Kotierungs-Variante.',
+    },
+    {
+      id: 'AA05c_schiedsklausel',
+      text: 'Die Statuten enthalten eine Schiedsklausel; wir beantragen die Eintragung des entsprechenden Verweises.',
+      includeIf: { feld: 'hatSchiedsklausel', eq: true },
+      norm: 'Art. 45 Abs. 1 lit. u HRegV',
+      begruendung: 'Stufe 2 P3: Der Handelsregister-Eintrag der AG enthält bei statutarischer Schiedsklausel einen Verweis darauf (Art. 45 Abs. 1 lit. u HRegV).',
     },
     {
       id: 'AA06_beilagen',
