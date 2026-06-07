@@ -26,11 +26,22 @@ Negativbefund: kein offenes Bundes-Verzeichnis, EasyGov-Detail-API geschützt) �
 §8) + `data/betreibung/` (Resolver + Gemeinde-Karten 8 Kt./981 Gemeinden,
 gegen swisstopo-Register normalisiert; ZH-Städte → Stadtkreis-Listen 12/3) ·
 **UI** SchKG-Rechner Sektion 3b (PLZ→Kanton+Gemeinde) + Amts-Anzeige in der
-Forum-Karte (EasyGov bleibt Zweitweg). Extraktion per Workflow (20 Agents,
-49/49 Adress-Stichproben zeichengenau). 24 Akzeptanztests; Suite 1088.
-PFLEGE: ZH-Kreis-Reorganisation in Vernehmlassung (Verfallsregister,
-halbjährlich); BE «Avenir Berne romande». OFFEN: Etappe 3 (LU/UR/SZ/ZG/AG/SG
-nur Verzeichnis-Link) · Davids fachliche Abnahme.
+Forum-Karte (EasyGov bleibt Zweitweg). Extraktion per Workflow, Adress-
+Stichproben durchwegs zeichengenau bestätigt. Bug-Check §9 (2 Agents): 1 HOCH
+gefixt (3b-Ortshinweis folgt jetzt der Engine-Weiche — Grundpfand=Grundstücks-
+ort, nicht Wohnsitz). **Etappen 1–3 FERTIG (Commits `bb3adba`…`ae8730f`):**
+13 Kantone gemeindescharf (ZH/FR/SO/AR/GR/TG/TI/VD + ZG/UR/SZ; 130 Kreis-Ämter,
+Karten 11 Kt.), 10 Einheitsämter direkt, BE/VS Dienststellen-Liste, **LU/AG/SG
+bewusst Verzeichnis-Link (§8: keine belastbare amtliche Gesamtliste — LU
+Verbands-Plattform/Fusionen, AG ~14/19 Kreise [Verbands-URL tot], SG
+Negativbefund)**. 26 Akzeptanztests; Suite 1090. PFLEGE: ZH-Kreis-
+Reorganisation in Vernehmlassung (Verfallsregister halbjährlich); BE «Avenir
+Berne romande» (Moutier 1.1.2026); ZG-PDF Stand 2/2023.
+**OFFEN: Davids fachliche Abnahme · Push/Deploy-Ja · Verbesserungspotential**
+(siehe Memory/HANDLUNGSPLAN): LU/AG/SG-Vollerfassung wenn amtliche Liste
+verfügbar; SG-Gemeinde-Vollerfassung (~75 dezentrale Adressen); PLZ-Feld
+in 3b könnte die Gemeinde-Mehrdeutigkeit (mehrere Gemeinden je PLZ) als
+Auswahl statt Hauptgemeinde-Default anbieten.
 
 ## Session 7.6.2026 nachts — Plan 9b VOLLDOKUMENTE Gründung (Aufträge David, ungepusht)
 
