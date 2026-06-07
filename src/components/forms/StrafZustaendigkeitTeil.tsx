@@ -166,7 +166,7 @@ export function StrafZustaendigkeitTeil() {
         </div>
       </div>
 
-      <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite" aria-atomic="true">
+      <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
         <ErgebnisSprung zielId="lc-ergebnis" />
         <LiveHeader />
 
@@ -408,7 +408,7 @@ function StrafRechtsmittelTeil() {
         )}
       </div>
 
-      <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite" aria-atomic="true">
+      <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
         <ErgebnisSprung zielId="lc-ergebnis" />
         <LiveHeader />
 

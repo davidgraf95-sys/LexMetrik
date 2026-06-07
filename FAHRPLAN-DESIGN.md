@@ -30,8 +30,23 @@ Abweichungen/Präzisierungen bei der Umsetzung:
   UI-Texten tragen `.num`; bei Neubauten beachten.
 - 3.5 FristenKalender: arbeitsfrei ink-300→ink-400 als Kompromiss
   (Abschwächung ist Gestaltungsabsicht; Info zusätzlich in title+Legende).
-Offen: Abschluss-Bug-Check §9 (2 Agents) + axe-Stichprobe (3.7) +
-Screenshot-Serien (4.6/5.8) als Abnahmegrundlage.
+**Abschluss-Bug-Check §9 (2 unabhängige Agents, 7.6.2026):** Agent 1
+(Technik, 6 Prüfpunkte inkl. emittiertes CSS): keine Befunde. Agent 2
+(Verhalten/A11y) — 3 bestätigte Befunde, alle gefixt:
+1. DatumsFeld: ‹/›-Blättern liess das Raster untabbar werden (fokusIso
+   zeigte auf nicht gerenderten Monat) → roving tabindex monats-robust
+   (Monatserster wird tabbar; Pfeil-Start beim Monatsersten, kein
+   Fokus-Klau beim Maus-Blättern).
+2. Tabs-Hit-Area: Pseudo-Element wurde vom overflow-x-auto-Container
+   geclippt (wirkungslos) → entfernt; h-8/h-9 erfüllen WCAG 2.2 AA
+   (≥24px), AAA in scrollbarer Segmented-Control nicht erreichbar.
+3. aria-atomic=true auf grossen Live-Regionen → Voll-Ansage bei jedem
+   Tastendruck (Dauergeplapper) → revertiert (aria-live=polite genügt).
+Akzeptierter Trade-off (kein Fix): Blocker-Boxen als lc-notice-danger
+tragen nur noch den Links-Akzent statt Voll-Umrandung — Familien-Entscheid
+2.2; die Sperre selbst tragen die deaktivierten Export-Buttons.
+Offen: axe-Stichprobe (3.7) + Screenshot-Serien (4.6/5.8) als
+Abnahmegrundlage für David.
 
 **Grundsätze:** Reine Darstellungsschicht (§3) — `src/lib/` bleibt unberührt;
 Golden-Outputs müssen nach JEDER Etappe byte-identisch sein. Tore je Etappe:

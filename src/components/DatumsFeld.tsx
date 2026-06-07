@@ -81,13 +81,18 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
 
   // Pfeiltasten-Navigation im Tagesraster (APG-Grid-Muster); Monatswechsel
   // folgt dem Fokus. Enter/Space wählen nativ (Tage sind Buttons).
+  // Liegt der Fokus-Tag nach ‹/›-Blättern NICHT im angezeigten Monat
+  // (Bug-Check §9 Agent 2, 7.6.2026), startet die Navigation beim
+  // Monatsersten statt zurückzuspringen; der tabbare Tag fällt dann
+  // ebenfalls auf den Monatsersten (kein Fokus-Klau beim Maus-Blättern).
   const SCHRITTE: Record<string, number> = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 };
   const rasterTaste = (e: React.KeyboardEvent) => {
-    if (!fokusIso) return;
     const schritt = SCHRITTE[e.key];
     if (schritt === undefined) return;
     e.preventDefault();
-    const ziel = addDays(parseISO(fokusIso), schritt);
+    const f = fokusIso ? parseISO(fokusIso) : null;
+    const imMonat = !!f && f.getFullYear() === monat.getFullYear() && f.getMonth() === monat.getMonth();
+    const ziel = imMonat && f ? addDays(f, schritt) : new Date(monat.getFullYear(), monat.getMonth(), 1);
     setMonat(new Date(ziel.getFullYear(), ziel.getMonth(), 1));
     setFokusIso(format(ziel, 'yyyy-MM-dd'));
   };
@@ -127,6 +132,9 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
   ];
   const gewaehlt = value && isValid(parseISO(value)) ? parseISO(value) : null;
   const heute = new Date();
+  // Roving tabindex monats-robust: zeigt der Fokus-Tag auf einen anderen
+  // Monat (nach ‹/›-Blättern), wird der Monatserste tabbar (Bug-Check §9).
+  const fokusImMonat = !!fokusIso && fokusIso.startsWith(format(monat, 'yyyy-MM'));
 
   const navBtn = 'inline-flex items-center justify-center w-7 h-7 rounded-md text-brass-700 hover:bg-brass-100 transition-colors';
 
@@ -186,7 +194,7 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
                   return (
                     <button
                       key={i} type="button" role="gridcell" onClick={() => waehlen(d)}
-                      data-iso={iso} tabIndex={iso === fokusIso ? 0 : -1}
+                      data-iso={iso} tabIndex={iso === fokusIso || (!fokusImMonat && d.getDate() === 1) ? 0 : -1}
                       aria-label={format(d, 'dd.MM.yyyy')} aria-selected={istGewaehlt}
                       className={`num h-8 flex items-center justify-center rounded-md text-body-s transition-colors ${
                         istGewaehlt

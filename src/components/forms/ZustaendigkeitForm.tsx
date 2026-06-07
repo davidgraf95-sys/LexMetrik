@@ -795,7 +795,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
         </div>
       )}
       {zeige('ergebnis') && f.instanz === 'rechtsmittel' && rechtsmittel && (
-        <div className="lc-reveal space-y-4" aria-live="polite" aria-atomic="true">
+        <div className="lc-reveal space-y-4" aria-live="polite">
           <LiveHeader />
 
           {/* Schritt 1 · Statthaftes Rechtsmittel */}
@@ -939,7 +939,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
         </div>
       )}
       {zeige('ergebnis') && ergebnis && r && f.instanz === 'einleitung' && (
-        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite" aria-atomic="true">
+        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
           <ErgebnisSprung zielId="lc-ergebnis" />
           <LiveHeader />
 
