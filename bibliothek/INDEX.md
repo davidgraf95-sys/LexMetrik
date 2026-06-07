@@ -108,6 +108,11 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 |---|---|---|
 | [notariate-kantone.md](behoerden/notariate-kantone.md) | Notariats-System + Anlaufstelle/Verzeichnis-Link je Kanton (wer beurkundet GmbH-/AG-Gründungen; Sonderregel SH: HRegA beurkundet selbst; keine örtliche Ausschliesslichkeit bei Gründungen) — Stammdaten-Quelle für `src/lib/notariate.ts` | Erstrecherche 7.6.2026 (Auftrag David); 23/26 URL-geprüft; UR/AI/BL unsicher markiert; Listen-PDFs datiert → Verfallsregister |
 
+### Handelsregister — ERSTRECHERCHE
+| Dokument | Inhalt | Status |
+|---|---|---|
+| [handelsregisteraemter-kantone.md](behoerden/handelsregisteraemter-kantone.md) | Adressdossier aller 26 kantonalen Handelsregisterämter: Amtsbezeichnung, Postadresse, PLZ/Ort, Telefon, E-Mail, amtliche Website je Kanton — je Eintrag Quelle + Abrufdatum 7.6.2026. Mehrfachstandorte offengelegt (VS 3 Arrondissements; TI Amt Biasca ≠ Sektion Bellinzona; SG Hauptsitz + Aussenstellen); Sitz ≠ Hauptort dokumentiert (BE Ostermundigen, BL Arlesheim, SO Klus-Balsthal, VD Moudon). Befund: kein Konkordat — OW/NW und AI/AR je eigenes Amt | Erstrecherche 7.6.2026 (Auftrag David); 26/26 Kantone; zefix-API (EHRA) 401 → amtliche kantonale Seiten als Quelle; 4 E-Mail-Lücken (LU/FR/AI/TG) ehrlich offen; zefix-Abgleich + Doppelcheck ausstehend |
+
 ## kosten/ — Tarife — ZWEIFACH GEPRÜFT
 
 | Dokument | Inhalt | Befund 2. Durchgang |
