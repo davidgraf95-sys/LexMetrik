@@ -906,8 +906,12 @@ export function gmbhDokumentmappe(a: GmbhDokAntworten): { dokumente: GmbhDokumen
   }
 
   // Anmeldungs-Beilagen: alle HRegV-Belege der Checkliste ausser den reinen
-  // Vorbereitungs-Schritten und Nach-Eintrag-Pflichten.
-  const KEINE_BEILAGE = new Set(['statutenentwurf', 'kapitaleinlagekonto', 'hr-anmeldung', 'freigabe-einlagen', 'anteilbuch', 'wb-verzeichnis']);
+  // Vorbereitungs-Schritten und Nach-Eintrag-Pflichten. Der Vorsitz-Beschluss
+  // (lit. e) entfällt ZUSÄTZLICH: Der erzeugte Errichtungsakt hält den
+  // Vorsitz inline fest (EA09b), und «für Angaben, die bereits in der
+  // öffentlichen Urkunde … festgehalten sind, ist kein zusätzlicher Beleg
+  // erforderlich» (Art. 71 Abs. 2 HRegV) — Ultra-Review MITTEL 7.6.2026.
+  const KEINE_BEILAGE = new Set(['statutenentwurf', 'kapitaleinlagekonto', 'hr-anmeldung', 'freigabe-einlagen', 'anteilbuch', 'wb-verzeichnis', 'vorsitz-beschluss']);
   const belegeAnmeldung = unterlagen
     .filter((u) => !KEINE_BEILAGE.has(u.id))
     .map((u) => ({ titel: u.titel, norm: u.norm }));
@@ -960,9 +964,11 @@ export function gmbhDokumentmappe(a: GmbhDokAntworten): { dokumente: GmbhDokumen
   if (hat('vorsitz-beschluss')) {
     dokumente.push({
       id: 'vorsitz-beschluss',
-      titel: 'Beschluss über den Vorsitz der Geschäftsführung',
+      titel: 'Vorsitz-Beschluss (optional)',
       dateiName: 'gmbh-vorsitz-beschluss',
-      ausgeloestDurch: 'Mehrere Geschäftsführer:innen',
+      // Art. 71 Abs. 2 HRegV: entbehrlich, weil der erzeugte Errichtungsakt
+      // den Vorsitz bereits festhält — nur für Ämter, die ihn separat wollen.
+      ausgeloestDurch: 'Mehrere GF — als Beleg entbehrlich (Vorsitz steht im Errichtungsakt, Art. 71 Abs. 2 HRegV)',
       ergebnis: assemble(VORSITZ_SCHEMA, basis),
     });
   }

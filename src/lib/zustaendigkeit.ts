@@ -816,9 +816,19 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
   let bger: RechtsmittelErgebnis['bger'];
   let bgerText: string;
   const bgerSchwelle = mietArbeit ? RECHTSMITTEL_SCHWELLEN.BGER_MIETE_ARBEIT : RECHTSMITTEL_SCHWELLEN.BGER_UEBRIGE;
-  if (istEinzigeInstanzArt5 || vorinstanz === 'handelsgericht') {
+  // Ultra-Review MITTEL (7.6.2026): Auch die Direktklage ans obere Gericht
+  // (Art. 8 ZPO) ist eine bundesgesetzlich vorgesehene einzige kantonale
+  // Instanz → Art. 74 Abs. 2 lit. b BGG, streitwertUNABHÄNGIG. Zuvor lief
+  // sie in den Streitwert-Zweig (bei reduziertem Streitwert sogar falsches
+  // «schwelle_verfehlt»; bei sw ≥ Grenze nur falsche Begründung).
+  if (istEinzigeInstanzArt5 || vorinstanz === 'handelsgericht' || vorinstanz === 'direktklage_oberes_gericht') {
     bger = 'zulaessig';
-    bgerText = `Beschwerde in Zivilsachen ans Bundesgericht streitwertUNABHÄNGIG zulässig, weil ${istEinzigeInstanzArt5 ? 'ein Bundesgesetz eine einzige kantonale Instanz vorsieht' : 'das Handelsgericht als einzige kantonale Instanz entschieden hat'} (Art. 74 Abs. 2 lit. b BGG).`;
+    const grund = istEinzigeInstanzArt5
+      ? 'ein Bundesgesetz eine einzige kantonale Instanz vorsieht'
+      : vorinstanz === 'handelsgericht'
+        ? 'das Handelsgericht als einzige kantonale Instanz entschieden hat'
+        : 'das obere Gericht auf Direktklage hin als einzige kantonale Instanz entschieden hat (Art. 8 Abs. 2 ZPO)';
+    bgerText = `Beschwerde in Zivilsachen ans Bundesgericht streitwertUNABHÄNGIG zulässig, weil ${grund} (Art. 74 Abs. 2 lit. b BGG).`;
     normverweise.push({ artikel: 'Art. 74 Abs. 2 BGG' });
   } else if (!input.vermoegensrechtlich) {
     bger = 'zulaessig';

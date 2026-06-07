@@ -157,6 +157,9 @@ export function ErbteilungForm() {
     disclaimer: ERB_DISCLAIMER,
   };
 
+  // CHF-Beträge kommen seit dem Ultra-Review-Fix (7.6.2026, §3) fertig aus
+  // der Engine (erbteilChf/pflichtteilChf/verfuegbareQuoteChf) — hier wird
+  // nur noch gerendert.
   const nachlass = ergebnis?.nachlassChf;
 
   return (
@@ -301,7 +304,7 @@ export function ErbteilungForm() {
             </div>
             <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Verfügbare Quote</p>
-              <p className="text-body-l font-semibold text-ink-900">{fmtB(ergebnis.verfuegbareQuote)}{nachlass != null ? ` · CHF ${fmtCHF(zahl(ergebnis.verfuegbareQuote) * nachlass)}` : ''}</p>
+              <p className="text-body-l font-semibold text-ink-900">{fmtB(ergebnis.verfuegbareQuote)}{ergebnis.verfuegbareQuoteChf != null ? ` · CHF ${fmtCHF(ergebnis.verfuegbareQuoteChf)}` : ''}</p>
             </div>
             <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Nachlass</p>
@@ -328,8 +331,8 @@ export function ErbteilungForm() {
                     <td className="py-1.5 pr-3 text-ink-900">{e.bezeichnung}{e.anzahl ? ` – ${e.anzahl} Personen, je:` : ''}</td>
                     <td className="py-1.5 pr-3 num text-ink-900">{fmtB(e.erbteil)}</td>
                     <td className="py-1.5 pr-3 num">{istNull(e.pflichtteil) ? <span className="text-ink-500">– kein PT</span> : <span className="text-ink-900">{fmtB(e.pflichtteil)}</span>}</td>
-                    {nachlass != null && <td className="py-1.5 pr-3 num text-ink-700">{fmtCHF(zahl(e.erbteil) * nachlass)}</td>}
-                    {nachlass != null && <td className="py-1.5 num text-ink-700">{istNull(e.pflichtteil) ? '–' : fmtCHF(zahl(e.pflichtteil) * nachlass)}</td>}
+                    {e.erbteilChf != null && <td className="py-1.5 pr-3 num text-ink-700">{fmtCHF(e.erbteilChf)}</td>}
+                    {e.pflichtteilChf != null && <td className="py-1.5 num text-ink-700">{istNull(e.pflichtteil) ? '–' : fmtCHF(e.pflichtteilChf)}</td>}
                   </tr>
                 ))}
                 <tr className="bg-surface">
@@ -337,7 +340,7 @@ export function ErbteilungForm() {
                   <td className="py-1.5 pr-3" />
                   <td className="py-1.5 pr-3 num font-semibold text-brass-700">{fmtB(ergebnis.verfuegbareQuote)}</td>
                   {nachlass != null && <td className="py-1.5 pr-3" />}
-                  {nachlass != null && <td className="py-1.5 num font-semibold text-brass-700">{fmtCHF(zahl(ergebnis.verfuegbareQuote) * nachlass)}</td>}
+                  {ergebnis.verfuegbareQuoteChf != null && <td className="py-1.5 num font-semibold text-brass-700">{fmtCHF(ergebnis.verfuegbareQuoteChf)}</td>}
                 </tr>
               </tbody>
             </table>

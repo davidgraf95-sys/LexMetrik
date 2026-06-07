@@ -341,6 +341,17 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
     .map((e) => `${e.bezeichnung}${e.anzahl ? ` (je)` : ''}: Erbteil ${fmtB(e.erbteil)}, Pflichtteil ${fmtB(e.pflichtteil)}`)
     .join(' · ');
 
+  // CHF-Beträge GENAU EINMAL hier rechnen (Ultra-Review NIEDRIG 7.6.2026,
+  // §3/§5): UI und PDF rendern nur noch — keine Quote-×-Nachlass-Arithmetik
+  // mehr in der Darstellungsschicht.
+  const chf = (b: { z: number; n: number }) =>
+    g.nachlass != null ? (b.z / b.n) * g.nachlass : undefined;
+  const erbenMitChf = erben.map((e) => ({
+    ...e,
+    erbteilChf: chf(e.erbteil),
+    pflichtteilChf: chf(e.pflichtteil),
+  }));
+
   return {
     ergebnis: `Verfügbare Quote: ${fmtB(verfuegbareQuote)}${g.nachlass != null ? ` (CHF ${fmtCHF((verfuegbareQuote.z / verfuegbareQuote.n) * g.nachlass)})` : ''}. ${titelzeile}.`,
     status: 'ok',
@@ -349,8 +360,9 @@ export function berechneErbteilung(input: ErbteilungInput): ErbteilungErgebnis {
     warnungen,
     normverweise,
     rechtsstand,
-    erben,
+    erben: erbenMitChf,
     verfuegbareQuote,
     nachlassChf: g.nachlass,
+    verfuegbareQuoteChf: chf(verfuegbareQuote),
   };
 }

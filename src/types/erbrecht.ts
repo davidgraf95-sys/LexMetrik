@@ -69,6 +69,12 @@ export type ErbeAnteil = {
   erbteil: Bruch;             // gesetzlicher Erbteil (Anteil am Nachlass)
   pflichtteil: Bruch;         // Anteil am Nachlass (0 = nicht pflichtteilsberechtigt)
   anzahl?: number;            // bei Sammelpositionen (z. B. «2 Enkel zu je …»)
+  // CHF-Beträge aus der ENGINE (Ultra-Review NIEDRIG 7.6.2026, §3/§5: zuvor
+  // rechnete die UI Quote × Nachlass selbst — Drift-Risiko, sobald die
+  // Pflichtteils-Bemessung von «nachlassChf» abweicht, etwa bei künftigen
+  // Hinzurechnungen nach Art. 475/476 ZGB). Nur gesetzt, wenn Nachlass bekannt.
+  erbteilChf?: number;
+  pflichtteilChf?: number;
 };
 
 export type ErbteilungErgebnis = Berechnungsergebnis & {
@@ -76,4 +82,5 @@ export type ErbteilungErgebnis = Berechnungsergebnis & {
   erben: ErbeAnteil[];
   verfuegbareQuote: Bruch;
   nachlassChf?: number;                  // falls güterrechtlich/direkt bestimmt
+  verfuegbareQuoteChf?: number;          // Engine-gerechnet (§3, s. ErbeAnteil)
 };

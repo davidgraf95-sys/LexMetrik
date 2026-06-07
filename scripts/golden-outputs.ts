@@ -96,8 +96,28 @@ f('rm:geld:9999', () => bestimmeRechtsmittel({ streitsache: 'geldforderung', ver
 f('schkg:einleiten:grundpfand', () => bestimmeSchkgZustaendigkeit({ anliegen: 'betreibung_einleiten', schuldnerTyp: 'jur_person_hr', pfand: 'grundpfand', forderungCHF: 250_000 }));
 f('schkg:ro:prov', () => bestimmeSchkgZustaendigkeit({ anliegen: 'rechtsoeffnung', schuldnerTyp: 'natuerlich_wohnsitz', rechtsoeffnungArt: 'provisorisch' }));
 f('schkg:widerspruch:dritter_ch', () => bestimmeSchkgZustaendigkeit({ anliegen: 'widerspruch', schuldnerTyp: 'natuerlich_wohnsitz', widerspruchKonstellation: 'gewahrsam_dritter_ch' }));
+// Erweiterung Golden-Matrix 7.6.2026: alle 11 SchKG-Anliegen abdecken
+// (bislang nur betreibung_einleiten/rechtsoeffnung/widerspruch). Eingaben
+// fachlich plausibel, deterministisch.
+f('schkg:aberkennung', () => bestimmeSchkgZustaendigkeit({ anliegen: 'aberkennungsklage', schuldnerTyp: 'natuerlich_wohnsitz', forderungCHF: 30_000 }));
+f('schkg:anerkennung', () => bestimmeSchkgZustaendigkeit({ anliegen: 'anerkennungsklage', schuldnerTyp: 'jur_person_hr', forderungCHF: 50_000 }));
+f('schkg:rueckforderung', () => bestimmeSchkgZustaendigkeit({ anliegen: 'rueckforderung', schuldnerTyp: 'natuerlich_wohnsitz', forderungCHF: 8_000 }));
+f('schkg:feststellung', () => bestimmeSchkgZustaendigkeit({ anliegen: 'feststellung', schuldnerTyp: 'natuerlich_wohnsitz', forderungCHF: 15_000 }));
+f('schkg:kollokation:konkurs', () => bestimmeSchkgZustaendigkeit({ anliegen: 'kollokation', schuldnerTyp: 'jur_person_hr', kollokationIn: 'konkurs', forderungCHF: 120_000 }));
+f('schkg:kollokation:pfaendung', () => bestimmeSchkgZustaendigkeit({ anliegen: 'kollokation', schuldnerTyp: 'natuerlich_wohnsitz', kollokationIn: 'pfaendung', forderungCHF: 20_000 }));
+f('schkg:arrest', () => bestimmeSchkgZustaendigkeit({ anliegen: 'arrest', schuldnerTyp: 'ausland_niederlassung', arrestGelegt: true, forderungCHF: 200_000 }));
+f('schkg:konkursbegehren:hr', () => bestimmeSchkgZustaendigkeit({ anliegen: 'konkursbegehren', schuldnerTyp: 'jur_person_hr', forderungCHF: 90_000 }));
+f('schkg:konkursbegehren:natuerlich', () => bestimmeSchkgZustaendigkeit({ anliegen: 'konkursbegehren', schuldnerTyp: 'natuerlich_wohnsitz', arrestGelegt: true, forderungCHF: 40_000 }));
+f('schkg:beschwerde_amt', () => bestimmeSchkgZustaendigkeit({ anliegen: 'beschwerde_amt', schuldnerTyp: 'natuerlich_wohnsitz' }));
 f('straf:anzeige:antragsdelikt', () => bestimmeStrafZustaendigkeit({ anliegen: 'anzeige', tatort: 'bekannt', antragsdelikt: true }));
 f('straf:kaskade:ergreifung', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'ergreifungsort', mehrereTatenVerschOrte: true }));
+// Erweiterung Golden-Matrix 7.6.2026: alle 5 Kaskadenstufen des Art. 32 StPO
+// abdecken (bislang nur ergreifungsort). Kaskade greift nur bei
+// tatort='ausland_oder_ungewiss' ohne Spezialforum.
+f('straf:kaskade:wohnsitz', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'wohnsitz' }));
+f('straf:kaskade:aufenthalt', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'aufenthalt' }));
+f('straf:kaskade:heimatort', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'heimatort' }));
+f('straf:kaskade:auslieferung', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'auslieferung' }));
 f('straf:unternehmen', () => bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'bekannt', spezialforum: 'unternehmen', uebertretung: false }));
 
 // ── Vorlagen: assemble-Ergebnisse (Dokument + Protokoll) ────────────────────

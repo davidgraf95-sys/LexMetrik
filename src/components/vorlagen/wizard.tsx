@@ -128,8 +128,10 @@ export function VorlagenWizardRahmen({
 // Haarlinie, Rubrum mit zentrierten Parteirollen und fettem «gegen».
 // Reine Darstellung – keine Rechtslogik (§3).
 
-function VorschauZeile({ zeile, dicht }: { zeile: string; dicht?: boolean }) {
-  if (MUSTER.STRICHE.test(zeile)) {
+function VorschauZeile({ zeile, dicht, striche }: { zeile: string; dicht?: boolean; striche?: boolean }) {
+  // Strichzeilen-Lizenz wie PDF/DOCX (Ultra-Review MITTEL 7.6.2026):
+  // nur rolle 'unterschrift' oder Schema-eigene Striche — nie Nutzertext.
+  if (striche && MUSTER.STRICHE.test(zeile)) {
     return <span className="block w-52 max-w-full border-b border-ink-600 mt-4 mb-1" aria-label="Unterschriftslinie" />;
   }
   const num = zeile.match(MUSTER.NUMMER);
@@ -154,13 +156,14 @@ function VorschauZeile({ zeile, dicht }: { zeile: string; dicht?: boolean }) {
 
 function VorschauAbsatz({ abs }: { abs: AssembleErgebnis['dokument']['absaetze'][number] }) {
   const zeilen = abs.text.split('\n');
+  const striche = abs.rolle === 'unterschrift' || !!abs.schemaStriche;
 
   switch (abs.rolle) {
     case 'absender':
     case 'adressat':
       return (
         <div className={abs.rolle === 'adressat' ? 'mb-5' : 'mb-4'}>
-          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} dicht />)}
+          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} dicht striche={striche} />)}
         </div>
       );
     case 'datumzeile':
@@ -181,31 +184,31 @@ function VorschauAbsatz({ abs }: { abs: AssembleErgebnis['dokument']['absaetze']
             if (t === 'gegen') return <p key={i} className="text-center font-bold py-1">gegen</p>;
             if (z === 'in Sachen') return <p key={i} className="pb-1">{z}</p>;
             if (z.startsWith('betreffend ')) return <p key={i} className="pt-1">{z}</p>;
-            return <VorschauZeile key={i} zeile={z} dicht={t !== ''} />;
+            return <VorschauZeile key={i} zeile={z} dicht={t !== ''} striche={striche} />;
           })}
         </div>
       );
     case 'parteien':
       return (
         <div className="text-center mb-5 space-y-0.5">
-          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} />)}
+          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}
         </div>
       );
     case 'anrede':
-      return <div className="mt-1 mb-4">{zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} />)}</div>;
+      return <div className="mt-1 mb-4">{zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}</div>;
     case 'schlussformel':
       return <p className="mt-5 mb-1">{abs.text}</p>;
     case 'unterschrift':
       return (
         <div className="mt-4">
-          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} />)}
+          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}
         </div>
       );
     default:
       return (
         <div className="mb-2.5">
           {abs.ueberschrift && <p className="font-bold mt-4 mb-1.5">{abs.ueberschrift}</p>}
-          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} />)}
+          {zeilen.map((z, i) => <VorschauZeile key={i} zeile={z} striche={striche} />)}
         </div>
       );
   }

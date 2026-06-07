@@ -129,6 +129,14 @@ describe('Klage vereinfacht — Assemble (Art. 244 ZPO)', () => {
     const t = text(basis({ klagebewilligungVorhanden: false, ausnahme: 'art198', ausnahmeText: 'Widerklage (lit. g)' }));
     expect(t).toContain('Art. 198 ZPO: Widerklage (lit. g)');
   });
+  it('JEDES Rechtsbegehren erhält eine eigene Ziffer (Ultra-Review HOCH-2, 7.6.2026)', () => {
+    // Hauptbegehren + weiteres Begehren + (immer angehängte) Kostenfolge → 1./2./3.
+    const e = kvZusammenstellen(basis({ weitereRechtsbegehren: ['Eventualiter sei …'] }));
+    const rb = e.dokument.absaetze.find((x) => x.bausteinId === 'K06_begehren')!;
+    const zeilen = rb.text.split('\n');
+    expect(zeilen.length).toBeGreaterThanOrEqual(3);
+    zeilen.forEach((z, i) => expect(z.startsWith(`${i + 1}. `), `Zeile ${i}: «${z.slice(0, 40)}»`).toBe(true));
+  });
 });
 
 describe('Klage vereinfacht — Mängel/Hinweise', () => {

@@ -106,12 +106,17 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
   const blockHoehe = (text: string, zeilenHoehe: number, breite = BREITE): number =>
     text.split('\n').reduce((h, zl) => h + zeilenVon(zl, breite).length * zeilenHoehe, 0);
 
+  // Strichzeilen-Lizenz des AKTUELLEN Absatzes (Ultra-Review MITTEL 7.6.2026):
+  // Linien nur bei rolle 'unterschrift' oder Schema-eigenen Strichen — nie
+  // aus interpoliertem Nutzer-Freitext (Konsistenz mit vorlagenText, §5).
+  let stricheErlaubt = false;
+
   type ZeilenOpt = { align?: 'right' | 'center'; dicht?: boolean; brechen?: boolean };
   const schreibe = (text: string, opt: ZeilenOpt = {}) => {
     const zh = opt.dicht ? P.zeileDicht : P.zeile;
     for (const zl of text.split('\n')) {
       // Strichzeile → gezeichnete Unterschriftslinie
-      if (STRICHE.test(zl)) {
+      if (stricheErlaubt && STRICHE.test(zl)) {
         seitenumbruch(6);
         y += 2;
         hairline(RAND, RAND + 62, 0.3, 90);
@@ -166,6 +171,7 @@ export function vorlagenPdfDokument(e: AssembleErgebnis, opts: { banner?: PdfBan
 
   // ── Rollen-Renderer (Brief-/Vertrags-Anatomie) ──
   const absatzRendern = (a: DokumentAbsatz) => {
+    stricheErlaubt = a.rolle === 'unterschrift' || !!a.schemaStriche;
     switch (a.rolle) {
       case 'absender':
       case 'adressat':

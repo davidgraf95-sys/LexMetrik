@@ -106,6 +106,44 @@ describe('K3–K6 — Beschwerde-Fälle', () => {
   });
 });
 
+describe('K-ZMG: andere Zwangsmassnahme → Beschwerde (393 ff.), 10-Tage-Verwirkung (396 I), keine Gerichtsferien (89 II) — Testlücken-Schliessung 7.6.2026', () => {
+  // Herleitung am Cache /tmp/stpo.html (Stand 1.1.2024):
+  // Art. 393 Abs. 1 lit. c: Beschwerde zulässig gegen «die Entscheide des
+  //   Zwangsmassnahmengerichts in den in diesem Gesetz vorgesehenen Fällen».
+  // Art. 393 Abs. 2: Beschwerdegründe umfassend (Rechtsverletzung inkl.
+  //   Ermessen, Sachverhalt, Unangemessenheit).
+  // Art. 396 Abs. 1: «Die Beschwerde … ist innert 10 Tagen schriftlich und
+  //   begründet bei der Beschwerdeinstanz einzureichen.» → 10-Tage-Frist
+  //   (Verwirkung: gesetzliche Frist, nicht erstreckbar, Art. 89 Abs. 1).
+  // Art. 89 Abs. 2: «Im Strafverfahren gibt es keine Gerichtsferien.»
+  it('Grundfall: Beschwerde an die kantonale Beschwerdeinstanz, Frist-Objekt 10 Tage / Art. 396 Abs. 1 / kritisch', () => {
+    const r = bestimmeStrafRechtsmittel(base({ entscheidTyp: 'zmg_andere_zwangsmassnahme' }));
+    expect(r.statthaft).toBe('beschwerde');
+    expect(r.instanz).toContain('kantonale Beschwerdeinstanz');
+    // Frist-Objekt-Inhalt (nicht nur Prosa):
+    const f = r.fristen.find((x) => x.norm === 'Art. 396 Abs. 1 StPO')!;
+    expect(f).toBeDefined();
+    expect(f.frist).toContain('10 Tage');
+    expect(f.kritisch).toBe(true);
+    // Bezugsnorm der Statthaftigkeit (Art. 393 Abs. 1 lit. c) + volle Kognition.
+    expect(r.text).toContain('Art. 393 Abs. 1 lit. c StPO');
+    expect(r.kognition).toContain('Art. 393 Abs. 2');
+    // KEINE Gerichtsferien (Art. 89 Abs. 2) + keine aufschiebende Wirkung (387).
+    expect(r.warnungen.some((w) => w.includes('Art. 89 Abs. 2'))).toBe(true);
+    expect(r.warnungen.some((w) => w.includes('Art. 387'))).toBe(true);
+  });
+  it('Reformatio in peius nur bei «nur zugunsten» (391 II); sonst keine 391-Weiche', () => {
+    const zug = bestimmeStrafRechtsmittel(base({ entscheidTyp: 'zmg_andere_zwangsmassnahme', nurZugunstenBeschuldigte: true }));
+    expect(zug.weichen.some((w) => w.includes('Art. 391 Abs. 2'))).toBe(true);
+    const ohne = bestimmeStrafRechtsmittel(base({ entscheidTyp: 'zmg_andere_zwangsmassnahme' }));
+    expect(ohne.weichen.some((w) => w.includes('391'))).toBe(false);
+    // Anders als beim Haftentscheid (222) trägt die «andere Zwangsmassnahme»
+    // KEINE 222-Beschränkung auf die verhaftete Person.
+    expect(ohne.warnungen.some((w) => w.includes('Art. 222'))).toBe(false);
+    expect(ohne.normverweise.some((n) => n.artikel === 'Art. 222 StPO')).toBe(false);
+  });
+});
+
 describe('K8 — Einsprache Strafbefehl', () => {
   it('beschuldigte Person: 10 T., KEINE Begründungspflicht, Rückzugsfiktionen gewarnt', () => {
     const r = bestimmeStrafRechtsmittel(base({ entscheidTyp: 'strafbefehl' }));

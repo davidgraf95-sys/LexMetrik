@@ -17,7 +17,16 @@ export type PermalinkFeld<V> =
 export type PermalinkSpec<T> = { [K in keyof T & string]?: PermalinkFeld<T[K]> };
 
 const ISO_DATUM = /^\d{4}-\d{2}-\d{2}$/;
-export const istISO = (v: string) => ISO_DATUM.test(v);
+/** Format UND Kalender-Plausibilität (Ultra-Review NIEDRIG 7.6.2026:
+ *  «2026-02-30» passierte den Wächter und erzeugte Invalid-Date-Folgefehler
+ *  statt des zugesicherten stillen Weglassens). UTC-Rückvergleich deckt
+ *  Monatslängen inkl. Schaltjahr deterministisch ab. */
+export const istISO = (v: string) => {
+  if (!ISO_DATUM.test(v)) return false;
+  const [j, m, t] = v.split('-').map(Number);
+  const d = new Date(Date.UTC(j, m - 1, t));
+  return d.getUTCFullYear() === j && d.getUTCMonth() === m - 1 && d.getUTCDate() === t;
+};
 
 const KANTONE_GUELTIG = new Set(['AG', 'AI', 'AR', 'BE', 'BL', 'BS', 'FR', 'GE', 'GL', 'GR', 'JU', 'LU', 'NE', 'NW', 'OW', 'SG', 'SH', 'SO', 'SZ', 'TG', 'TI', 'UR', 'VD', 'VS', 'ZG', 'ZH']);
 export const istKanton = (v: string) => KANTONE_GUELTIG.has(v);

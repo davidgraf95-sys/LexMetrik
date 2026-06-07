@@ -31,8 +31,16 @@ export const LEERER_FILTER: KatalogFilter = {
  * Die TREFFERMENGE ist identisch mit der bisherigen sucheTrifft-Semantik
  * (gleiche Felder, gleiche includes-Regeln) — der Rang ordnet sie nur.
  */
+// Deterministische Umlaut-Faltung (Ultra-Review MITTEL 7.6.2026): Die in der
+// Deutschschweiz übliche ASCII-Ersatzschreibweise (kuendigung, gewaehrleistung,
+// patientenverfuegung) traf zuvor 0 Karten — obwohl sie sogar die hauseigene
+// ID-Konvention ist. BEIDE Seiten werden gefaltet (ä→ae …), damit auch
+// umgekehrt «Kündigung» ein Keyword «kuendigung» träfe.
+const falte = (t: string) =>
+  t.replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
+
 export function sucheRang(k: CalculatorCard, suche: string): number | null {
-  const q = suche.trim().toLowerCase();
+  const q = falte(suche.trim().toLowerCase());
   if (q === '') return null;
   // Kompakt (ohne Leerzeichen) abgleichen, damit «Art. 335c», «Art.335c»
   // und «335c» gleichermassen treffen. Kompakt-Vergleich beider Seiten ist
@@ -40,12 +48,12 @@ export function sucheRang(k: CalculatorCard, suche: string): number | null {
   // zusammenhängend) — Keywords seit 6.6.2026 ebenso tolerant wie Normen.
   const kompakt = (t: string) => t.replace(/\s+/g, '');
   const qKompakt = kompakt(q);
-  if (k.title.toLowerCase().includes(q)) return 0;
-  const kw = (k.keywords ?? []).map((t) => t.toLowerCase());
+  if (falte(k.title.toLowerCase()).includes(q)) return 0;
+  const kw = (k.keywords ?? []).map((t) => falte(t.toLowerCase()));
   if (kw.some((t) => t === q)) return 1;
   if (kw.some((t) => kompakt(t).includes(qKompakt))) return 2;
-  if (k.norms.some((n) => kompakt(n.label.toLowerCase()).includes(qKompakt))) return 3;
-  if (k.rechtsgebiet.toLowerCase().includes(q)) return 4;
+  if (k.norms.some((n) => kompakt(falte(n.label.toLowerCase())).includes(qKompakt))) return 3;
+  if (falte(k.rechtsgebiet.toLowerCase()).includes(q)) return 4;
   return null;
 }
 

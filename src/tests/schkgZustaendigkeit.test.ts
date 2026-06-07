@@ -117,6 +117,78 @@ describe('Foren + Fristen je Anliegen (Synthese-Tabelle)', () => {
   });
 });
 
+describe('Rückforderung (Art. 86 SchKG): 1-Jahres-Frist + Wahlgerichtsstand', () => {
+  // Herleitung am Fedlex-Cache /tmp/schkg.html (Stand 1.1.2025):
+  // Art. 86 Abs. 1: «…innerhalb eines Jahres nach der Zahlung … zurückfordern»
+  //   → Frist 1 Jahr ab Zahlung (Verwirkung).
+  // Art. 86 Abs. 2: «…nach der Wahl des Klägers entweder beim Gerichte des
+  //   Betreibungsortes oder dort … wo der Beklagte seinen ordentlichen
+  //   Gerichtsstand hat» → Wahlrecht Betreibungsort / Beklagten-Gerichtsstand.
+  // Art. 86 Abs. 3: Rückforderungsrecht «von keiner andern Voraussetzung als
+  //   dem Nachweis der Nichtschuld abhängig» (Abweichung von Art. 63 OR).
+  it('Grundfall: Forum trägt das Wahlrecht (Betreibungsort ODER Beklagten-Gerichtsstand), Frist 1 Jahr ab Zahlung kritisch', () => {
+    const r = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'rueckforderung' }));
+    expect(r.forum.normen.map((n) => n.artikel)).toContain('Art. 86 SchKG');
+    expect(r.forum.stelle).toContain('Betreibungsortes');
+    expect(r.forum.stelle).toContain('Wahl');
+    expect(r.forum.text).toContain('ordentlichen Gerichtsstand');
+    const f = r.fristen.find((x) => x.norm.includes('86'))!;
+    expect(f.frist).toContain('1 Jahr');
+    expect(f.frist).toContain('Zahlung');
+    expect(f.kritisch).toBe(true);
+  });
+  it('Beweisthema im Fahrplan: Nichtschuld (Art. 86 Abs. 3, Abweichung von Art. 63 OR)', () => {
+    const r = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'rueckforderung' }));
+    expect(r.fahrplan.some((s) => s.text.includes('Nichtschuld'))).toBe(true);
+    expect(r.fahrplan.some((s) => s.text.includes('Art. 86 Abs. 3'))).toBe(true);
+  });
+  it('Betreibungsort-Wurzelgrösse bleibt schuldnertyp-abhängig (Sitz statt Wohnsitz bei HR-jur.Person); Anliegen ändert die Frist nicht', () => {
+    // Das Wahlforum knüpft u.a. am Betreibungsort an — dieser folgt weiterhin
+    // der Kaskade Art. 46 ff., unabhängig vom Anliegen.
+    const jp = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'rueckforderung', schuldnerTyp: 'jur_person_hr' }));
+    expect(jp.betreibungsort.text).toContain('SITZ');
+    expect(jp.fristen.find((x) => x.norm.includes('86'))!.frist).toContain('1 Jahr');
+    // KEINE 20-Tage-Aberkennungsfrist (das ist Art. 83, nicht Art. 86).
+    expect(jp.fristen.some((x) => x.frist.includes('20 Tage'))).toBe(false);
+  });
+});
+
+describe('Feststellung (Art. 85 / 85a SchKG): Forum Betreibungsort, jederzeit, Verfahren', () => {
+  // Herleitung am Cache /tmp/schkg.html (Stand 1.1.2025):
+  // Art. 85: Urkundenbeweis Tilgung/Stundung → «jederzeit beim Gericht des
+  //   Betreibungsortes» Aufhebung (Tilgung) bzw. Einstellung (Stundung);
+  //   summarisches Verfahren (Marginalie/ZPO; Art. 198 lit. a ZPO: keine
+  //   Schlichtung bei summarischem Verfahren).
+  // Art. 85a Abs. 1: «Ungeachtet eines allfälligen Rechtsvorschlages kann der
+  //   Betriebene jederzeit vom Gericht des Betreibungsortes feststellen
+  //   lassen, dass die Schuld nicht oder nicht mehr besteht…»; Abs. 2:
+  //   vorläufige Einstellung nur bei sehr wahrscheinlicher Begründetheit;
+  //   Abs. 3: Gutheissung → Aufhebung/Einstellung.
+  it('Grundfall: Forum Gericht des Betreibungsortes; Normen 85 UND 85a; jederzeit (nicht kritisch)', () => {
+    const r = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'feststellung' }));
+    expect(r.forum.stelle).toContain('Betreibungsortes');
+    const artikel = r.forum.normen.map((n) => n.artikel);
+    expect(artikel).toContain('Art. 85 SchKG');
+    expect(artikel).toContain('Art. 85a SchKG');
+    const f = r.fristen[0];
+    expect(f.frist).toContain('jederzeit');
+    expect(f.kritisch).toBe(false);
+  });
+  it('Verfahren: 85 summarisch (keine Schlichtung Art. 198 lit. a) ≠ 85a ordentlich/vereinfacht (keine Schlichtung Art. 198 lit. e Ziff. 2)', () => {
+    const r = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'feststellung' }));
+    expect(r.eingabe.verfahren).toContain('summarisch');
+    expect(r.eingabe.verfahren).toContain('Art. 198 lit. a');
+    expect(r.eingabe.verfahren).toContain('85a');
+    expect(r.eingabe.verfahren).toContain('Ziff. 2');
+    expect(r.eingabe.verfahren).not.toContain('eschleunigt');
+  });
+  it('Wirkung Art. 85a Abs. 2: Klage stoppt die Betreibung nicht von selbst — Einstellung nur auf gerichtliche Anordnung (Weiche)', () => {
+    const r = bestimmeSchkgZustaendigkeit(basis({ anliegen: 'feststellung' }));
+    expect(r.weichen.some((w) => w.includes('Art. 85a') && w.includes('gerichtliche'))).toBe(true);
+    expect(r.weichen.some((w) => w.includes('Klage allein stoppt die Betreibung nicht'))).toBe(true);
+  });
+});
+
 describe('Gebühr Zahlungsbefehl (Art. 16 GebV SchKG, Stand 1.1.2022)', () => {
   it('Staffel wörtlich inkl. Bandgrenzen beidseitig', () => {
     expect(gebuehrZahlungsbefehl(100).gebuehrCHF).toBe(7);

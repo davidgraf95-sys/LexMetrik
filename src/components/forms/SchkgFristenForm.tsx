@@ -180,10 +180,16 @@ export function SchkgFristenForm() {
 
   const verweise = (aktiv?.verweise ?? []).filter((k) => k in VERIFIKATION).map((k) => rechtsprechung(k as keyof typeof VERIFIKATION));
 
+  // Ultra-Review NIEDRIG (7.6.2026): Anzeige/PDF aus DERSELBEN Bedingung wie
+  // der Engine-Input ableiten — ein präparierter Permalink (o= ohne
+  // umstrittenes Preset) zeigte sonst ein anderes Regime an, als gerechnet
+  // wurde (Engine erhält modusOverride nur bei aktiv?.modusUmstritten).
+  const effektivesRegime = aktiv?.modusUmstritten && override ? override : form.modus;
+
   const eingaben: Record<string, string> = {
     'Auslösendes Ereignis': form.ereignis,
     'Auslöser': form.ausloeser,
-    'Stillstand-Regime': MODI.find((m) => m.code === (override || form.modus))?.label ?? form.modus,
+    'Stillstand-Regime': MODI.find((m) => m.code === effektivesRegime)?.label ?? form.modus,
     'Kanton': form.kanton,
     ...(istDual ? {} : { 'Frist': `${form.laenge} ${form.einheit}`, 'Rechtsnatur': form.fristnatur }),
   };

@@ -11,13 +11,17 @@ export function LinkTeilenButton({ query }: {
   query: () => string;
 }) {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const [kopiert, setKopiert] = useState(false);
   const teilen = () => {
     const q = query();
-    navigate({ search: q }, { replace: true });
+    // Hash MITFÜHREN (Ultra-Review HOCH-1, 7.6.2026): Bei den Cluster-
+    // Rechnern transportiert er die Tab-/Rechtsweg-Weiche (#kuendigung,
+    // #schkg, #straf) — ohne ihn landete der Empfänger auf dem falschen
+    // Teilrechner und sah die geteilten Parameter nie.
+    navigate({ search: q, hash }, { replace: true });
     try {
-      void navigator.clipboard.writeText(`${location.origin}${pathname}${q}`);
+      void navigator.clipboard.writeText(`${location.origin}${pathname}${q}${hash}`);
       setKopiert(true); setTimeout(() => setKopiert(false), 1600);
     } catch { /* Clipboard nicht verfügbar */ }
   };

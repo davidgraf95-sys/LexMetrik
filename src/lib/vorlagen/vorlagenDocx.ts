@@ -30,7 +30,7 @@ export type DocxAbsatz =
   | { typ: 'banner-titel' | 'banner-text'; text: string }
   | { typ: 'titel'; text: string }
   | { typ: 'ueberschrift'; text: string }
-  | { typ: 'absatz'; text: string; rolle?: AbsatzRolle; blockEnde?: boolean }
+  | { typ: 'absatz'; text: string; rolle?: AbsatzRolle; blockEnde?: boolean; stricheErlaubt?: boolean }
   | { typ: 'disclaimer'; text: string };
 
 export function docxAbsaetze(e: AssembleErgebnis, banner?: PdfBanner): DocxAbsatz[] {
@@ -48,8 +48,12 @@ export function docxAbsaetze(e: AssembleErgebnis, banner?: PdfBanner): DocxAbsat
     if (a.ueberschrift) liste.push({ typ: 'ueberschrift', text: a.ueberschrift });
     // \n innerhalb eines Bausteins (Listen, Adressblöcke) → je eigener Absatz
     const zeilen = a.text.split('\n');
+    // Strichzeilen-Lizenz wie PDF/Vorschau (Ultra-Review MITTEL 7.6.2026):
+    // nur rolle 'unterschrift' oder Schema-eigene Striche — nie Nutzertext.
+    const stricheErlaubt = a.rolle === 'unterschrift' || !!a.schemaStriche;
     zeilen.forEach((zeile, i) => liste.push({
       typ: 'absatz', text: zeile,
+      ...(stricheErlaubt ? { stricheErlaubt } : {}),
       ...(a.rolle ? { rolle: a.rolle, blockEnde: i === zeilen.length - 1 } : {}),
     }));
   });
@@ -123,7 +127,7 @@ function absatzParagraph(a: Extract<DocxAbsatz, { typ: 'absatz' }>, format: Vorl
   const dicht = { after: 0, line: 252, lineRule: 'auto' as const };
 
   // Unterschrifts-Strichzeile → feine Linie (Rahmen unten, ~5.5 cm)
-  if (STRICHE.test(a.text)) {
+  if (a.stricheErlaubt && STRICHE.test(a.text)) {
     return new Paragraph({
       border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: '5A5A52' } },
       indent: { right: 6300 },

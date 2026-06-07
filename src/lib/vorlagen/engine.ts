@@ -64,6 +64,13 @@ export interface DokumentAbsatz {
   ueberschrift?: string;
   text: string;
   rolle?: AbsatzRolle;       // durchgereicht für die Renderer
+  /** true = der SCHEMA-Text dieses Bausteins enthält selbst Strichzeilen
+   *  («______») — nur dann (oder bei rolle 'unterschrift') dürfen die
+   *  Renderer Strichzeilen als gezeichnete Unterschriftslinie deuten.
+   *  Ultra-Review MITTEL (7.6.2026): Nutzer-Freitext mit ≥6 Unterstrichen
+   *  wurde sonst zur Linie und der Inhalt verschwand (Renderer-Divergenz
+   *  zu vorlagenText, §5). */
+  schemaStriche?: boolean;
 }
 
 export interface ProtokollEintrag {
@@ -123,6 +130,11 @@ function interpoliere(text: string, antworten: Antworten, item?: Record<string, 
 
 // ── Zusammenstellung (reine Funktion, kein Netzwerk, kein Zufall) ───────────
 
+// Strichzeilen-Muster (Duplikat zu formatvorlagen.MUSTER.STRICHE — bewusst:
+// formatvorlagen importiert Typen aus DIESEM Modul, ein Rückimport wäre ein
+// Zyklus; der Konventions-Test sichert die Gleichheit der Muster).
+export const SCHEMA_STRICHE = /^_{6,}\s*$/;
+
 export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleErgebnis {
   const absaetze: DokumentAbsatz[] = [];
   const aufgenommen: string[] = [];
@@ -141,13 +153,23 @@ export function assemble(schema: VorlageSchema, antworten: Antworten): AssembleE
       liste = roh;
     }
 
-    const nummer = b.nummeriert ? `${++ziffer}. ` : '';
+    // Strichzeilen-Lizenz NUR aus dem Schema-Text ableiten (vor der
+    // Interpolation) — Nutzerwerte können so nie eine Linie auslösen.
+    const schemaStriche = b.text.split('\n').some((z) => SCHEMA_STRICHE.test(z)) || undefined;
 
     if (liste) {
+      // Ultra-Review HOCH-2 (7.6.2026): Bei nummeriert + wiederholeUeber
+      // erhält JEDES Listenelement eine eigene fortlaufende Ziffer — zuvor
+      // stand die Nummer nur vor dem ersten Element, und die Rechtsbegehren
+      // jeder Klage (K06) verloren ihre Zählung samt hängendem Einzug.
       const texte = liste.map((item) => interpoliere(b.text, antworten, item as Record<string, unknown>));
-      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + texte.join('\n'), rolle: b.rolle });
+      const nummeriert = b.nummeriert
+        ? texte.map((t) => `${++ziffer}. ${t}`)
+        : texte;
+      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummeriert.join('\n'), rolle: b.rolle, schemaStriche });
     } else {
-      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + interpoliere(b.text, antworten), rolle: b.rolle });
+      const nummer = b.nummeriert ? `${++ziffer}. ` : '';
+      absaetze.push({ bausteinId: b.id, ueberschrift: b.ueberschrift, text: nummer + interpoliere(b.text, antworten), rolle: b.rolle, schemaStriche });
     }
 
     aufgenommen.push(b.id);

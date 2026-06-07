@@ -90,6 +90,52 @@ describe('Art.-32-Kaskade vollständig (Abschluss-Review-Fix 6.6.2026)', () => {
   });
 });
 
+describe('Art.-32-Kaskade — Stufen Wohnsitz/Default/Auslieferung (Testlücken-Schliessung 7.6.2026)', () => {
+  // Herleitung am Fedlex-Cache /tmp/stpo.html (Stand 1.1.2024):
+  // Art. 32 Abs. 1: «Ist eine Straftat im Ausland verübt worden oder kann der
+  //   Tatort nicht ermittelt werden, so sind … die Behörden des Ortes
+  //   zuständig, an dem die beschuldigte Person ihren Wohnsitz oder ihren
+  //   gewöhnlichen Aufenthalt hat.» → Wohnsitz = Abs.-1-Stufe.
+  // Art. 32 Abs. 2: weder Wohnsitz noch gewöhnlicher Aufenthalt → Heimatort;
+  //   fehlt auch dieser → Ort, «an dem die beschuldigte Person angetroffen
+  //   worden ist» (Ergreifungsort).
+  // Art. 32 Abs. 3: «Fehlt ein Gerichtsstand nach den Absätzen 1 und 2, so
+  //   sind die Behörden des Kantons zuständig, der die Auslieferung verlangt
+  //   hat.» → Auslieferungskanton = Abs.-3-Stufe (am Cache verifiziert; der
+  //   Befund nannte Abs. 3 — bestätigt).
+  it('Stufe Wohnsitz: Abs.-1-Stufe, Norm Art. 32 StPO, nur bei Tatort im Ausland/ungewiss', () => {
+    const w = bestimmeStrafZustaendigkeit(basis({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'wohnsitz' }));
+    expect(w.forum.text).toContain('WOHNSITZ der beschuldigten Person');
+    expect(w.forum.text).toContain('Abs. 1');
+    expect(w.forum.normen[0].artikel).toBe('Art. 32 StPO');
+    // Greift NICHT, wenn der Tatort bekannt ist (dann Grundsatz Art. 31).
+    const bekannt = bestimmeStrafZustaendigkeit(basis({ anliegen: 'gerichtsstand', tatort: 'bekannt', kaskade32: 'wohnsitz' }));
+    expect(bekannt.forum.normen[0].artikel).toBe('Art. 31 Abs. 1 StPO');
+    expect(bekannt.forum.text).not.toContain('Art. 32');
+  });
+  it('Default-Fallback der Kaskade: ohne kaskade32-Angabe greift die Abs.-1-Stufe Wohnsitz', () => {
+    const def = bestimmeStrafZustaendigkeit(basis({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss' }));
+    expect(def.forum.normen[0].artikel).toBe('Art. 32 StPO');
+    expect(def.forum.text).toContain('Abs. 1');
+    expect(def.forum.text).toContain('WOHNSITZ der beschuldigten Person');
+  });
+  it('Stufe Auslieferung: Abs. 3 (Ergreifung im Ausland), Norm Art. 32 StPO', () => {
+    const a = bestimmeStrafZustaendigkeit(basis({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: 'auslieferung' }));
+    expect(a.forum.text).toContain('AUSLIEFERUNGSKANTON');
+    expect(a.forum.text).toContain('Abs. 3');
+    expect(a.forum.normen[0].artikel).toBe('Art. 32 StPO');
+  });
+  it('Kaskade vollständig differenziert: jede Stufe trägt ihren korrekten Absatz (Abs. 1 / Abs. 2 / Abs. 3)', () => {
+    const stufe = (k: NonNullable<StrafInput['kaskade32']>) =>
+      bestimmeStrafZustaendigkeit(basis({ anliegen: 'gerichtsstand', tatort: 'ausland_oder_ungewiss', kaskade32: k })).forum.text;
+    expect(stufe('wohnsitz')).toContain('Abs. 1');
+    expect(stufe('aufenthalt')).toContain('Abs. 1');     // gleichrangig zum Wohnsitz
+    expect(stufe('heimatort')).toContain('Abs. 2');
+    expect(stufe('ergreifungsort')).toContain('Abs. 2'); // «angetroffen worden ist»
+    expect(stufe('auslieferung')).toContain('Abs. 3');
+  });
+});
+
 describe('Oberholzer-Vertiefung 6.6.2026 (N 239–330)', () => {
   it('Mittäter+Tatmehrheit kombiniert 33 II + 34 I; Verfahrenseinheits-Weiche 29/30; JStPO-Warnung', () => {
     const k = bestimmeStrafZustaendigkeit({ anliegen: 'gerichtsstand', tatort: 'bekannt', beteiligung: 'mittaeter', mehrereTatenVerschOrte: true });

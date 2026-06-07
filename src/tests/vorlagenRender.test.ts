@@ -89,3 +89,15 @@ describe('Render-Schicht: vorlagenDocxErzeugen + Form-Gate', () => {
     await expect(vorlagenDocxErzeugen(e, { dateiName: 'x.docx' })).rejects.toThrow(/gesperrt/);
   });
 });
+
+// ─── Muster-Gleichheit Engine ↔ Formatvorlagen (Ultra-Review 7.6.2026) ───────
+// engine.SCHEMA_STRICHE ist ein bewusstes Duplikat von MUSTER.STRICHE
+// (Import-Zyklus-Vermeidung); dieser Test hält beide Regexe identisch.
+describe('Strichzeilen-Muster — Engine-Duplikat bleibt deckungsgleich', () => {
+  it('SCHEMA_STRICHE (engine) === MUSTER.STRICHE (formatvorlagen)', async () => {
+    const { SCHEMA_STRICHE } = await import('../lib/vorlagen/engine');
+    const { MUSTER } = await import('../lib/vorlagen/formatvorlagen');
+    expect(SCHEMA_STRICHE.source).toBe(MUSTER.STRICHE.source);
+    expect(SCHEMA_STRICHE.flags).toBe(MUSTER.STRICHE.flags);
+  });
+});

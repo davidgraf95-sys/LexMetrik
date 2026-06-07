@@ -331,6 +331,12 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
       fristen.push(
         { label: 'Beschwerdefrist', frist: '10 Tage ab Kenntnis der Verfügung', norm: 'Art. 17 Abs. 2 SchKG', kritisch: true },
         { label: 'Rechtsverweigerung/-verzögerung', frist: 'jederzeit', norm: 'Art. 17 Abs. 3 SchKG', kritisch: false },
+        // Ultra-Review NIEDRIG (7.6.2026): Für den BGer-Weiterzug gilt NICHT
+        // die 30-Tage-Regelfrist, sondern verkürzt 10 Tage (Cache-verifiziert:
+        // «Die Beschwerdefrist beträgt zehn Tage: a. bei Entscheiden der
+        // kantonalen Aufsichtsbehörden in Schuldbetreibungs- und Konkurs-
+        // sachen»); Wechselbetreibung sogar 5 Tage (Abs. 3 lit. a).
+        { label: 'Weiterzug ans Bundesgericht', frist: '10 Tage ab Eröffnung des Aufsichts-Entscheids (Wechselbetreibung: 5 Tage)', norm: 'Art. 100 Abs. 2 lit. a BGG', kritisch: true },
       );
       weichen.push('NICHTIGE Verfügungen (Verstoss gegen Vorschriften, die im öffentlichen Interesse oder im Interesse unbeteiligter Dritter erlassen sind) sind ohne Fristbindung von Amtes wegen festzustellen (Art. 22 SchKG).');
       break;
