@@ -53,20 +53,6 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
   });
 });
 
-describe('Stufen-Zuteilung (tier)', () => {
-  // Free/Pro-Zuordnung gemäss Auftrag «Katalog-Ausbau» §3 (5.6.2026):
-  // free = kostenlose Auswahl; alle übrigen pro. Pro zeigt free UND pro.
-  it('die Free-Auswahl entspricht der Auftrags-Liste; alle übrigen «pro»', () => {
-    const free = ALLE_KARTEN.filter((k) => k.tier === 'free').map((k) => k.id).sort();
-    expect(free).toEqual([
-      'eigenhaendiges-testament',
-      'kuendigung-arbeitnehmer', 'mahnung', 'patientenverfuegung',
-      'tagerechner', 'teuerungsrechner', 'verzugszins', 'vollmacht', 'vorsorgeauftrag',
-    ]);
-    ALLE_KARTEN.forEach((k) => expect(['free', 'pro'], k.id).toContain(k.tier));
-  });
-});
-
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
 const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung']);
 
@@ -219,19 +205,20 @@ describe('RECHTSBEREICH_GRUPPEN (Pro-Katalog, Phase 2) – Vollständigkeit beid
   });
 });
 
-describe('FREE_REIHENFOLGE (Free-Kachelwand, Phase 1)', () => {
-  it('jede ID existiert mit tier free; kein free-Eintrag geht verloren; deterministisch', async () => {
-    const { FREE_REIHENFOLGE, freeKartenSortiert } = await import('../lib/freeReihenfolge');
-    const free = ALLE_KARTEN.filter((k) => k.tier === 'free');
-    for (const id of FREE_REIHENFOLGE) {
-      const k = ALLE_KARTEN.find((x) => x.id === id);
-      expect(k, id).toBeTruthy();
-      expect(k!.tier, id).toBe('free');
+describe('HAEUFIG_GEBRAUCHT (kuratierter Schnelleinstieg, eine Hauptseite — FAHRPLAN-EINE-HAUPTSEITE D-2)', () => {
+  it('jede ID existiert; nur Verfügbare mit href erscheinen; deterministisch; Reihenfolge greift', async () => {
+    const { HAEUFIG_GEBRAUCHT, haeufigGebrauchtKarten } = await import('../lib/haeufigGebraucht');
+    for (const id of HAEUFIG_GEBRAUCHT) {
+      expect(ALLE_KARTEN.find((x) => x.id === id), id).toBeTruthy();
     }
-    const sortiert = freeKartenSortiert();
-    expect(sortiert.map((k) => k.id).sort()).toEqual(free.map((k) => k.id).sort());
-    expect(sortiert).toEqual(freeKartenSortiert()); // deterministisch
+    const karten = haeufigGebrauchtKarten();
+    expect(karten.length).toBeGreaterThan(0);
+    karten.forEach((k) => {
+      expect(k.status !== 'geplant', k.id).toBe(true);
+      expect(k.href, k.id).toBeTruthy();
+    });
+    expect(karten).toEqual(haeufigGebrauchtKarten()); // deterministisch
     // kuratierte Reihenfolge greift
-    expect(sortiert[0].id).toBe('tagerechner');
+    expect(karten[0].id).toBe('tagerechner');
   });
 });

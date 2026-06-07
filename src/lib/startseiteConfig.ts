@@ -1608,7 +1608,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // Einzelkarten General-/Bankvollmacht (Entscheid 5.6.2026); «Bank» ist ein
   // Vertretungsbereich mit Warnung (Banken verlangen eigene Formulare).
   // Verschoben nach «Übergreifende Werkzeuge» (Wunsch David 6.6.2026):
-  // rechtsgebietsübergreifend einsetzbar; tier war und bleibt free.
+  // rechtsgebietsübergreifend einsetzbar.
   vollmacht: {
     id: 'vollmacht', modus: 'vorlage', art: 'vorsorge', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',
