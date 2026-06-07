@@ -197,7 +197,7 @@ export function VerzugszinsForm() {
         </div>
         {rows.length === 0 && <p className="text-body-s text-ink-500 italic">Keine Ereignisse – einfache Berechnung über den ganzen Zeitraum.</p>}
         {rows.map((row, i) => (
-          <div key={i} className="border border-line rounded-md p-3 bg-surface grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+          <div key={i} className="lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
             <div className="space-y-1">
               <label className="text-body-s font-medium text-ink-600">Typ</label>
               <select value={row.typ} onChange={(e) => updateRow(i, { typ: e.target.value as EreignisRow['typ'] })} className="lc-input">
@@ -218,7 +218,7 @@ export function VerzugszinsForm() {
                   onChange={(e) => updateRow(i, { wert: Number(e.target.value) })} className={inputNum} />
               )}
             </div>
-            <button type="button" onClick={() => removeRow(i)} className="text-body-s text-danger-700 self-end pb-2 text-left">Entfernen</button>
+            <button type="button" onClick={() => removeRow(i)} className="text-body-s text-danger-700 hover:underline self-end pb-2 text-left">Entfernen</button>
           </div>
         ))}
       </div>

@@ -86,11 +86,9 @@ export function VorlagenWizardRahmen({
           <h2 className="text-h3 font-display font-semibold text-ink-900">{schritte[schritt].label}</h2>
           {inhalt}
 
-          {fehler != null && fehler.length > 0 && (
-            <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
-              {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
-            </div>
-          )}
+          {/* FAHRPLAN-DESIGN 2.2: vierte Fehlerbox-Variante entfernt —
+              EIN Baustein (FehlerBox, role="alert") wie in den Rechner-Forms. */}
+          {fehler != null && <FehlerBox fehler={fehler} />}
 
           <div className="flex items-center justify-between pt-2 border-t border-line">
             <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}

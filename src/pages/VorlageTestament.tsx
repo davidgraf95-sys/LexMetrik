@@ -265,7 +265,7 @@ export function VorlageTestament() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.length > 0 && (
-            <div className="rounded-lg border bg-danger-bg p-4 space-y-1" style={{ borderColor: 'var(--danger-500)' }}>
+            <div className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Vor der Ausgabe zu beheben</p>
               {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
             </div>
@@ -281,7 +281,7 @@ export function VorlageTestament() {
           )}
 
           {/* Form-Gate: nicht überspringbar */}
-          <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
+          <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate – damit Ihr Testament gültig wird</p>
             <ul className="space-y-2 text-body-s text-ink-700">
               <li><strong>Vollständig von Hand abschreiben.</strong> Der ganze Text – einschliesslich Datum – muss eigenhändig geschrieben sein (Art. 505 Abs. 1 ZGB). Ein Ausdruck, auch unterschrieben, ist anfechtbar/ungültig.</li>

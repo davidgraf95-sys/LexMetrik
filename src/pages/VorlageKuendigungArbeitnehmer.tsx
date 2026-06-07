@@ -180,7 +180,7 @@ export function VorlageKuendigungArbeitnehmer() {
             </div>
           </Field>
 
-          <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
+          <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Damit die Kündigung trägt</p>
             <ul className="space-y-2 text-body-s text-ink-700">
               <li><strong>Unterschreiben und nachweisbar zustellen</strong> – eingeschrieben und zusätzlich per A-Post (Beweis + zeitnaher Zugang).</li>

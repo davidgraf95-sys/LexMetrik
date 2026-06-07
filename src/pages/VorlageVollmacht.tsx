@@ -290,7 +290,7 @@ export function VorlageVollmacht() {
               <span>Eingehung von Bürgschaften <span className="text-danger-700">(Form-Gate: Art. 493 Abs. 6 OR – sperrt den Export, Notariat erforderlich)</span></span>
             </label>
             {a.buergschaft && (
-              <div className="rounded-lg border bg-danger-bg p-4" style={{ borderColor: 'var(--danger-500)' }}>
+              <div className="lc-notice-danger">
                 <p className="text-body-s text-danger-700">
                   Die Bürgschaftsvollmacht bedarf derselben Form wie die Bürgschaft selbst (Art. 493 Abs. 6 OR);
                   bei natürlichen Personen über CHF 2000 heisst das öffentliche Beurkundung (Art. 493 Abs. 2 OR).
@@ -330,7 +330,7 @@ export function VorlageVollmacht() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
-            <div key={i} className="rounded-lg border bg-danger-bg p-4" style={{ borderColor: 'var(--danger-500)' }}>
+            <div key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700">{b}</p>
             </div>
           ))}
@@ -342,7 +342,7 @@ export function VorlageVollmacht() {
           ))}
 
           {/* Form-Gate: einfache Schriftform – Bestätigung nicht überspringbar */}
-          <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
+          <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form – damit Ihre Vollmacht wirkt</p>
             <ul className="space-y-2 text-body-s text-ink-700">
               <li><strong>Unterschreiben:</strong> Die Vollmacht ist formfrei gültig (Art. 11 OR); als Ausweis gegenüber Banken, Behörden und Gerichten dient die <strong>unterzeichnete</strong> schriftliche Fassung (Art. 33 Abs. 3 OR). Nach dem Ausdruck datieren und unterschreiben.</li>

@@ -303,13 +303,13 @@ export function VorlageKlageVereinfacht() {
       case 'pruefen': return (
         <div className="space-y-5">
           {maengel.map((m, i) => (
-            <div key={i} className="rounded-lg border bg-danger-bg p-4" style={{ borderColor: 'var(--danger-500)' }}>
+            <div key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700">{m.text}</p>
             </div>
           ))}
           {hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s">{h}</div>)}
 
-          <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
+          <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form & Einreichung</p>
             <ul className="space-y-2 text-body-s text-ink-700">
               <li><strong>Unterschreiben und im Doppel einreichen:</strong> ein Exemplar für das Gericht, je eines pro Gegenpartei (Art. 131 ZPO); Papierform oder elektronisch mit qualifizierter Signatur (Art. 130 ZPO).</li>

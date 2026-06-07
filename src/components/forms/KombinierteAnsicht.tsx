@@ -120,7 +120,7 @@ export function KombinierteAnsicht() {
   return (
     <div className="space-y-6">
       <PflichtDisclaimer />
-      <div className="rounded-lg border border-line bg-surface p-4">
+      <div className="lc-panel p-4">
         <p className="text-body-s text-ink-600">
           Kombinierte Ansicht: Alle drei Teilberechnungen (A/B/C) mit gemeinsamen Eingaben.
           Stichtage sind je Modul unterschiedlich – details im Rechenweg.
@@ -176,7 +176,7 @@ export function KombinierteAnsicht() {
           <button type="button" onClick={addEreignis} className="lc-btn-outline lc-btn-sm">+ Ereignis</button>
         </div>
         {(form.sperrereignisse ?? []).map((e, i) => (
-          <div key={i} className="border border-line rounded-lg p-3 bg-surface grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
+          <div key={i} className="lc-panel p-3 grid grid-cols-1 sm:grid-cols-4 gap-3 items-end">
             <div className="space-y-1">
               <label className="text-xs font-medium text-ink-600">Typ</label>
               <select value={e.typ} onChange={(ev) => updateEreignis(i, 'typ', ev.target.value)} className={inputCls + ' text-xs'}>
@@ -197,7 +197,7 @@ export function KombinierteAnsicht() {
                 <DatumsFeld value={e.niederkunft ?? ''} onChange={(v) => updateEreignis(i, 'niederkunft', v)} className={inputCls + ' text-xs'} />
               </div>
             )}
-            <button type="button" onClick={() => removeEreignis(i)} className="text-xs text-danger-700 hover:text-danger-700 self-end pb-2">Entfernen</button>
+            <button type="button" onClick={() => removeEreignis(i)} className="text-body-s text-danger-700 hover:underline self-end pb-2">Entfernen</button>
           </div>
         ))}
       </div>

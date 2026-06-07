@@ -155,12 +155,12 @@ export function VorlageKapitalerhoehung() {
         </div>
 
         {notariat && (
-          <div className="rounded-md bg-surface border border-line p-3 space-y-1">
+          <div className="lc-panel p-3 space-y-1">
             <p className="text-body-s text-ink-700">
               <span className="font-medium text-ink-900">Beurkundung im Kanton {kanton}:</span>{' '}
               {NOTARIAT_SYSTEM_LABEL[notariat.system]} —{' '}
               <a href={notariat.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:text-brass-600">{notariat.stelle}</a>
-              {!notariat.verifiziert && <span className="text-warn-700"> (Angabe ohne Gewähr)</span>}
+              {!notariat.urlBelegt && <span className="text-warn-700"> (Angabe ohne Gewähr)</span>}
             </p>
             {notariat.hinweis && <p className="text-xs text-warn-700">{notariat.hinweis}</p>}
             <p className="text-xs text-ink-500">{NOTARIAT_FREIZUEGIGKEIT}</p>

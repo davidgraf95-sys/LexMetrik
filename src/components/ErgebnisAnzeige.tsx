@@ -1,32 +1,10 @@
 import { useState } from 'react';
 import type { Berechnungsergebnis, BerechnungsStatus } from '../types/legal';
-import { fedlexLinkFuerArtikel } from '../lib/fedlex';
 import { sansAmp } from './typografie';
-import { useLocale, fedlexLokalisiert } from './locale';
 import { RechtsprechungAnker, RechtsprechungText } from './RechtsprechungLink';
-
-// Norm-Chip mit Fedlex-Direktlink (artikelgenauer Anker); ohne verifizierbares
-// Ziel bleibt der Chip unverlinkt (Normentreue: nie auf geratene Anker).
-function NormChip({ artikel, bemerkung }: { artikel: string; bemerkung?: string }) {
-  const { locale } = useLocale();
-  const roh = fedlexLinkFuerArtikel(artikel);
-  const url = roh ? fedlexLokalisiert(roh, locale) : null;
-  const inhalt = (
-    <>
-      {artikel}
-      {bemerkung && <span className="opacity-70"> · {bemerkung}</span>}
-    </>
-  );
-  return url ? (
-    <a href={url} target="_blank" rel="noopener noreferrer"
-      className="lc-chip no-underline hover:text-brass-700"
-      title={`${artikel} auf Fedlex öffnen`}>
-      {inhalt}
-    </a>
-  ) : (
-    <span className="lc-chip">{inhalt}</span>
-  );
-}
+// FAHRPLAN-DESIGN 2.6: lokaler NormChip entfernt — NormLink (vorlagen/ui)
+// ist die EINE Fedlex-Chip-Komponente (deckt «bemerkung» jetzt mit ab).
+import { NormLink } from './vorlagen/ui';
 
 // Status-Badges (Design-Doc 5.8): gesichert→sage · umstritten/kein Anspruch→warn · nichtig/unzulässig→danger.
 // «verdikt» färbt den Hauptsatz (Design-Review 6.6.2026): ok bleibt neutrale
@@ -144,7 +122,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
                   <p className="text-body-s text-ink-700 num">{schritt.zwischenergebnis}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {schritt.normen.map((n, j) => (
-                      <NormChip key={j} artikel={n.artikel} bemerkung={n.bemerkung} />
+                      <NormLink key={j} artikel={n.artikel} bemerkung={n.bemerkung} />
                     ))}
                     {schritt.rechtsprechung?.map((r, j) => (
                       /* Aktenzeichen → amtlicher bger.ch-Link (Auftrag David 6.6.2026);
@@ -187,7 +165,7 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
           <div>
             <p className="lc-overline mb-2">Normverweise</p>
             <div className="flex flex-wrap gap-1.5">
-              {ergebnis.normverweise.map((n, i) => <NormChip key={i} artikel={n.artikel} />)}
+              {ergebnis.normverweise.map((n, i) => <NormLink key={i} artikel={n.artikel} />)}
             </div>
           </div>
         )}

@@ -222,7 +222,7 @@ export function SchkgFristenForm() {
 
       {/* Frist-Preset — PRIMÄRWEG (UX B11): die Vorlage setzt alle Parameter;
           die manuellen Felder darunter sind der Kontroll-/Sonderfall-Weg. */}
-      <div className="rounded-lg border p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
+      <div className="rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
         <Field label="Frist-Vorlage (empfohlener Einstieg)" hint="Setzt Stillstand-Regime, Rechtsnatur, Länge und Auslöser automatisch — manuelle Felder unten nur für Sonderfälle">
           <select value={aktiv?.key ?? ''} onChange={(e) => { const p = presetsDerPhase.find((x) => x.key === e.target.value); if (p) ladePreset(p); else setAktiv(null); }} className={inputCls}>
             <option value="">– Vorlage wählen (oder manuell unten) –</option>
@@ -235,7 +235,7 @@ export function SchkgFristenForm() {
       </div>
 
       {verweise.length > 0 && (
-        <div className="rounded-lg border border-line bg-surface p-3 space-y-1">
+        <div className="lc-panel p-3 space-y-1">
           <p className="lc-overline text-ink-500">Rechtsprechung (zu verifizieren)</p>
           {verweise.map((r) => (
             <p key={r.aktenzeichen} className="text-body-s text-ink-600">

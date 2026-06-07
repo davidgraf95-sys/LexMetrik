@@ -48,10 +48,10 @@ export function SperrereignisseEditor({ wert, onChange, hinweis }: {
       )}
 
       {wert.map((e, i) => (
-        <div key={i} className="border border-line rounded-lg p-4 bg-surface space-y-3">
+        <div key={i} className="lc-panel p-4 space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-ink-600">Ereignis {i + 1}</span>
-            <button type="button" onClick={() => onChange(sperrereignisEntfernen(wert, i))} className="text-xs text-danger-700 hover:text-danger-700">Entfernen</button>
+            <button type="button" onClick={() => onChange(sperrereignisEntfernen(wert, i))} className="text-body-s text-danger-700 hover:underline">Entfernen</button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="space-y-1">

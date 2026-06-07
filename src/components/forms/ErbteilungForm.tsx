@@ -219,7 +219,7 @@ export function ErbteilungForm() {
                     className={inputCls + ' w-24'} />
                   <span className="text-body-s text-ink-500">Nachkommen</span>
                   <button type="button" onClick={() => setStaemme((arr) => arr.filter((_, j) => j !== i))}
-                    className="text-body-s text-danger-700">Entfernen</button>
+                    className="text-body-s text-danger-700 hover:underline">Entfernen</button>
                 </div>
               ))}
               <button type="button" onClick={() => setStaemme((arr) => [...arr, { enkel: 1 }])}

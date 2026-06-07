@@ -253,7 +253,7 @@ export function VorlagePatientenverfuegung() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
-            <div key={i} className="rounded-lg border bg-danger-bg p-4" style={{ borderColor: 'var(--danger-500)' }}>
+            <div key={i} className="lc-notice-danger">
               <p className="lc-overline text-danger-700 mb-1">Nicht zulässig – vor der Ausgabe zu beheben</p>
               <p className="text-body-s text-danger-700">{b}</p>
             </div>
@@ -266,7 +266,7 @@ export function VorlagePatientenverfuegung() {
           ))}
 
           {/* Form-Gate: nicht überspringbar */}
-          <section className="rounded-xl border-2 p-5 space-y-3" style={{ borderColor: 'var(--brass-500)', background: 'var(--brass-100)' }}>
+          <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate – damit Ihre Patientenverfügung gültig wird</p>
             <ul className="space-y-2 text-body-s text-ink-700">
               <li><strong>Ausdrucken genügt:</strong> Die Erstellung am Computer ist zulässig – anders als beim Testament ist keine Eigenhändigkeit des Textes nötig (Art. 371 Abs. 1 ZGB). Keine Beglaubigung erforderlich.</li>

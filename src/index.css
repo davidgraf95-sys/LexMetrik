@@ -197,6 +197,15 @@
   .lc-notice-warn { @apply lc-notice bg-warn-bg text-warn-700; border-left-color: var(--warn-500); }
   .lc-notice-danger { @apply lc-notice bg-danger-bg text-danger-700; border-left-color: var(--danger-500); }
 
+  /* Messing-Hervorhebungsbox (Form-Gates der Vorlagen: «damit Ihre Vorlage
+     wirkt») — vorher 12× wortgleich inline nachgebaut (FAHRPLAN-DESIGN 2.1). */
+  .lc-highlight { @apply rounded-xl border-2 border-brass-500 bg-brass-100 p-5; }
+
+  /* Leichter Container (Zeilen-Editoren, Eingabe-Gruppen): Karte ohne
+     Schatten — dritte Stufe neben lc-card/lc-tile (FAHRPLAN-DESIGN 2.3).
+     Padding bewusst beim Verwender (p-3 dichte Zeilen, p-4 Gruppen). */
+  .lc-panel { @apply bg-surface border border-line rounded-lg; }
+
   .lc-seal {
     display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 8px;
     background: var(--ink-900); color: var(--paper);
