@@ -271,12 +271,31 @@ function effektiveLiberierung(a: AgDokAntworten): {
 
 // ── Gates ───────────────────────────────────────────────────────────────────
 
-export type AgDokGates = { blocker: string[]; warnungen: string[] };
+/** Eingabe-Bereich eines Blockers — die Wizard-Seite mappt ihn auf den
+ *  Schritt, in dem die Eingabe liegt (Praxis-Runde 7.6.2026, Auftrag David:
+ *  «am Ende mit Klick zurück an den Punkt, wo der Fehler ist»). Die
+ *  Zuordnung ist Teil der Gate-Definition (§3: keine Logik in der Seite). */
+export type AgBereich = 'konstellation' | 'gesellschaft' | 'kapital' | 'personen' | 'weiteres';
+
+export type AgDokGates = {
+  blocker: string[];
+  warnungen: string[];
+  /** Strukturierte Blocker (gleiche Reihenfolge wie `blocker`). */
+  blockerDetails: { text: string; bereich: AgBereich }[];
+};
 
 export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
-  const blocker: string[] = [];
+  const blockerDetails: { text: string; bereich: AgBereich }[] = [];
   const warnungen: string[] = [];
+  // Sammel-Helfer: hält blocker (Strings, API-kompatibel) und Details synchron.
+  const blocker = {
+    push: (...texte: string[]) => { for (const t of texte) blockerDetails.push({ text: t, bereich: aktuellerBereich }); },
+    get length() { return blockerDetails.length; },
+  };
+  let aktuellerBereich: AgBereich = 'kapital';
+  const bereich = (b: AgBereich) => { aktuellerBereich = b; };
 
+  bereich('kapital');
   // ── Qualifizierte Gründung (Etappe 2): Sacheinlage / Verrechnung / Vorteile ──
   const mitSach = a.einlageArt === 'sacheinlage' || a.einlageArt === 'gemischt';
   const mitVerr = a.einlageArt === 'verrechnung' || a.einlageArt === 'gemischt';
@@ -326,6 +345,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       blocker.push('Quelle des Devisenmittelkurses angeben (ZH-Urkundenvorlage 3.2: «Dieser Umrechnungskurs entspricht dem Devisenmittelkurs der …»).');
     }
   }
+  bereich('konstellation');
   if (a.inhaberaktien) {
     blocker.push(
       'Volldokumente sind zurzeit nur für NAMENAKTIEN verfügbar: Inhaberaktien sind nur bei ' +
@@ -334,6 +354,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     );
   }
 
+  bereich('kapital');
   const kapital = zahl(a.aktienkapitalChf);
   const anzahl = zahl(a.anzahlAktien);
   const nennwert = zahl(a.nennwertChf);
@@ -503,6 +524,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     }
   }
 
+  bereich('personen');
   if (a.gruender.filter((g) => g.name.trim()).length === 0) {
     blocker.push('Mindestens eine Gründerin / einen Gründer erfassen (Einpersonengründung zulässig – Art. 625 OR aufgehoben).');
   }
@@ -516,6 +538,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   if (vr.length > 0 && vr.every((v) => v.zeichnungsArt === 'ohne')) {
     blocker.push('Mindestens ein Mitglied des Verwaltungsrates muss zur Vertretung befugt sein (Art. 718 Abs. 3 OR).');
   }
+  bereich('weiteres');
   // Etappe 4.2/D9: Die Urkunde ersetzt nur die VR-Konstituierung — weitere
   // Zeichnungsberechtigte (Direktion/Prokura) brauchen das VR-Protokoll.
   if (a.konstituierungInUrkunde && a.weitereVertretungen.filter((v) => v.name.trim()).length > 0) {
@@ -541,19 +564,23 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
       );
     }
   }
+  bereich('kapital');
   if (a.bankInUrkundeGenannt && (a.einlageArt === 'bar' || a.einlageArt === 'gemischt') && (!a.bankName.trim() || !a.bankOrt.trim())) {
     blocker.push('Bank in der Urkunde nennen: Name und Ort des Instituts angeben (sonst separate Bankbescheinigung, Art. 43 Abs. 1 lit. f HRegV).');
   }
+  bereich('weiteres');
   if (!a.eigeneBueros && (!a.domizilhalterName.trim() || !a.domizilhalterAdresse.trim())) {
     blocker.push('c/o-Domizil: Domizilhalter/in mit Adresse angeben (Art. 117 Abs. 3 HRegV).');
   }
   // Bug-Check-Befund Agent 1 (7.6.2026): Sitz ist Beleg-Inhalt (Art. 44
   // lit. f HRegV) und erscheint im druckfertigen RS-Wahlannahme-Absender —
   // wie bankOrt/domizilhalterAdresse hart verlangen.
+  bereich('personen');
   if (!a.optingOut && (!a.revisionsstelleName.trim() || !a.revisionsstelleSitz.trim())) {
     blocker.push('Revisionsstelle mit Name und Sitz benennen oder Opting-out wählen (Art. 727a Abs. 2 OR; Art. 44 lit. f HRegV).');
   }
 
+  bereich('weiteres');
   // Etappe 4.4/D11: Nachtrag nur mit mindestens einer erfassten Änderung.
   if (a.nachtragAktiv) {
     const hatU = a.nachtragUrkundeZiffer.trim() !== '' && a.nachtragUrkundeText.trim() !== '';
@@ -563,6 +590,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
     }
   }
 
+  bereich('gesellschaft');
   if (!a.firma.trim()) blocker.push('Firma angeben – mit Rechtsformzusatz «AG» (Art. 950 OR).');
   else if (!/\bag\b|aktiengesellschaft/i.test(a.firma)) {
     warnungen.push('Die Firma muss die Rechtsform angeben (Art. 950 Abs. 1 OR) – Zusatz «AG» ergänzen.');
@@ -570,7 +598,7 @@ export function pruefeAgDokGates(a: AgDokAntworten): AgDokGates {
   if (!a.sitz.trim()) blocker.push('Sitz (politische Gemeinde) angeben (Art. 626 Abs. 1 Ziff. 1 OR).');
   if (!a.zweck.trim()) blocker.push('Zweck angeben (Art. 626 Abs. 1 Ziff. 2 OR).');
 
-  return { blocker, warnungen };
+  return { blocker: blockerDetails.map((d) => d.text), warnungen, blockerDetails };
 }
 
 // ── Antworten-Aufbereitung ──────────────────────────────────────────────────

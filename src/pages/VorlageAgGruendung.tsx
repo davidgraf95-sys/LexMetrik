@@ -21,6 +21,7 @@ import {
   type AgVerrechnungZeile,
   type AgVorteilZeile,
   type AgWaehrung,
+  type AgBereich,
 } from '../lib/vorlagen/gruendungAgDokumente';
 import { KANTONE } from '../lib/kantone';
 
@@ -51,9 +52,18 @@ const ERSTELLER_LABEL = { gruender: 'Gründer:innen', notariat: 'Notariat', bank
 
 const CHF = new Intl.NumberFormat('de-CH', { style: 'currency', currency: 'CHF', maximumFractionDigits: 0 });
 
+// Praxis-Runde (Auftrag David): Blocker sind klickbar und führen zum
+// Schritt, in dem die Eingabe liegt (Bereichs-Tag aus der Engine, §3).
+const BEREICH_SCHRITT: Record<AgBereich, number> = {
+  konstellation: 0, gesellschaft: 1, kapital: 2, personen: 3, weiteres: 4,
+};
+
 const BANNER_ENTWURF: PdfBanner = {
   titel: 'ENTWURF – KEIN GÜLTIGES DOKUMENT',
-  text: 'Vorbereitung für die Urkundsperson: Die Statuten werden notariell beglaubigt (Art. 22 Abs. 4 HRegV), der Errichtungsakt öffentlich beurkundet (Art. 629 Abs. 1 OR).',
+  // Praxis-Runde: Text deckt ALLE Entwurfs-Dokumente der Mappe (auch
+  // Nachtrag und Sacheinlagevertrag mit Grundstück), nicht nur
+  // Statuten/Errichtungsakt.
+  text: 'Vorbereitung für die Urkundsperson: Statuten werden notariell beglaubigt (Art. 22 Abs. 4 HRegV); Errichtungsakt, Nachtrag und Sacheinlageverträge mit Grundstücken bedürfen der öffentlichen Beurkundung (Art. 629 Abs. 1 und Art. 634 Abs. 2 OR).',
 };
 
 // D14: VR-Mitglieder können «ohne Zeichnungsberechtigung» sein (Gate: mind.
@@ -155,7 +165,7 @@ export function VorlageAgGruendung() {
   const [ntStatutenAbsatz, setNtStatutenAbsatz] = useState('');
   const [ntStatutenText, setNtStatutenText] = useState('');
   const [ort, setOrt] = useState('');
-  const [datum, setDatum] = useState('');
+  const [datum, setDatum] = useState(() => new Date().toISOString().slice(0, 10));
 
   const naechsterKey = useRef(1);
   const neuerKey = () => naechsterKey.current++;
@@ -214,6 +224,21 @@ export function VorlageAgGruendung() {
   const finmaTreffer = useMemo(
     () => FINMA_BEGRIFFE.filter((b) => b.muster.test(`${firma} ${zweck}`)).map((b) => b.begriff),
     [firma, zweck],
+  );
+
+  // Praxis-Runde (Auftrag David): Blocker klickbar — Klick springt zum
+  // Schritt, in dem die Eingabe liegt (Bereichs-Tag aus den Engine-Gates).
+  const blockerKlickbar = (titel: string) => mappe.gates.blockerDetails.length === 0 ? null : (
+    <div className="rounded-md bg-danger-bg p-3 space-y-1.5" role="alert">
+      <p className="text-body-s font-medium text-danger-700">{titel}</p>
+      {mappe.gates.blockerDetails.map((b) => (
+        <button key={b.text} type="button"
+          onClick={() => setSchritt(BEREICH_SCHRITT[b.bereich])}
+          className="block w-full text-left text-body-s text-danger-700 hover:underline">
+          • {b.text} <span aria-hidden>→ {SCHRITTE[BEREICH_SCHRITT[b.bereich]].label}</span>
+        </button>
+      ))}
+    </div>
   );
 
   // Sammel-Download (Auftrag David): alle notwendigen Dokumente nacheinander
@@ -303,7 +328,7 @@ export function VorlageAgGruendung() {
       </div>
       <NotariatsHinweis kanton={kanton} />
       <Field label="Zweck">
-        <textarea className={inputCls} rows={2} value={zweck} onChange={(e) => setZweck(e.target.value)}
+        <textarea className={inputCls} rows={3} value={zweck} onChange={(e) => setZweck(e.target.value)}
           placeholder="z. B. den Erwerb, das Halten und die Verwaltung von Beteiligungen" />
       </Field>
       {finmaTreffer.length > 0 && (
@@ -497,25 +522,27 @@ export function VorlageAgGruendung() {
         <div className="space-y-2">
           <p className="text-body-s font-medium text-ink-900">Verrechnungsliberierung (Art. 634a OR)</p>
           {verrechnungen.map((v) => (
-            <div key={v.key} className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_3fr_auto] gap-2 items-end">
-              <Field label="Gläubiger:in (Name)">
-                <input className={inputCls} value={v.glaeubigerName}
-                  onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, glaeubigerName: e.target.value } : x))} />
-              </Field>
-              <Field label="Forderung (CHF)">
-                <input className={inputCls} inputMode="numeric" value={v.forderungChf}
-                  onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, forderungChf: e.target.value } : x))} />
-              </Field>
-              <Field label="Aktien">
-                <input className={inputCls} inputMode="numeric" value={v.aktienAnzahl}
-                  onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, aktienAnzahl: e.target.value } : x))} />
-              </Field>
-              <Field label="Bestand/Verrechenbarkeit (für den Gründungsbericht)">
-                <input className={inputCls} value={v.begruendungTxt}
+            <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
+              <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_auto] gap-2 items-end">
+                <Field label="Gläubiger:in (Name)">
+                  <input className={inputCls} value={v.glaeubigerName}
+                    onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, glaeubigerName: e.target.value } : x))} />
+                </Field>
+                <Field label="Forderung (CHF)">
+                  <input className={inputCls} inputMode="numeric" value={v.forderungChf}
+                    onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, forderungChf: e.target.value } : x))} />
+                </Field>
+                <Field label="Aktien">
+                  <input className={inputCls} inputMode="numeric" value={v.aktienAnzahl}
+                    onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, aktienAnzahl: e.target.value } : x))} />
+                </Field>
+                <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
+                  onClick={() => setVerrechnungen((alt) => alt.filter((x) => x.key !== v.key))}>✕</button>
+              </div>
+              <Field label="Bestand und Verrechenbarkeit der Forderung (für den Gründungsbericht, Art. 635 Ziff. 2 OR)">
+                <textarea className={inputCls} rows={2} value={v.begruendungTxt}
                   onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, begruendungTxt: e.target.value } : x))} />
               </Field>
-              <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
-                onClick={() => setVerrechnungen((alt) => alt.filter((x) => x.key !== v.key))}>✕</button>
             </div>
           ))}
           <button type="button" className="lc-btn-outline lc-btn-sm"
@@ -530,25 +557,27 @@ export function VorlageAgGruendung() {
         <div className="space-y-2">
           <p className="text-body-s font-medium text-ink-900">Besondere Vorteile (Art. 636 OR)</p>
           {vorteile.map((v) => (
-            <div key={v.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_3fr_auto] gap-2 items-end">
-              <Field label="Begünstigte:r (Name)">
-                <input className={inputCls} value={v.beguenstigter}
-                  onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, beguenstigter: e.target.value } : x))} />
-              </Field>
-              <Field label="Inhalt des Vorteils">
-                <input className={inputCls} value={v.inhalt}
+            <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
+              <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_auto] gap-2 items-end">
+                <Field label="Begünstigte:r (Name)">
+                  <input className={inputCls} value={v.beguenstigter}
+                    onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, beguenstigter: e.target.value } : x))} />
+                </Field>
+                <Field label="Wert (CHF)">
+                  <input className={inputCls} inputMode="numeric" value={v.wertChf}
+                    onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, wertChf: e.target.value } : x))} />
+                </Field>
+                <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
+                  onClick={() => setVorteile((alt) => alt.filter((x) => x.key !== v.key))}>✕</button>
+              </div>
+              <Field label="Inhalt des Vorteils (Statuten-Pflichtinhalt, Art. 636 OR)">
+                <textarea className={inputCls} rows={2} value={v.inhalt}
                   onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, inhalt: e.target.value } : x))} />
               </Field>
-              <Field label="Wert (CHF)">
-                <input className={inputCls} inputMode="numeric" value={v.wertChf}
-                  onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, wertChf: e.target.value } : x))} />
-              </Field>
-              <Field label="Begründung/Angemessenheit (für den Gründungsbericht)">
-                <input className={inputCls} value={v.begruendungTxt}
+              <Field label="Begründung und Angemessenheit (für den Gründungsbericht, Art. 635 Ziff. 3 OR)">
+                <textarea className={inputCls} rows={2} value={v.begruendungTxt}
                   onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, begruendungTxt: e.target.value } : x))} />
               </Field>
-              <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
-                onClick={() => setVorteile((alt) => alt.filter((x) => x.key !== v.key))}>✕</button>
             </div>
           ))}
           <button type="button" className="lc-btn-outline lc-btn-sm"
@@ -572,25 +601,35 @@ export function VorlageAgGruendung() {
       <div className="space-y-2">
         <p className="text-body-s font-medium text-ink-900">Gründer:innen und Zeichnung (Art. 629/630 OR)</p>
         {gruender.map((g) => (
-          <div key={g.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_1fr_auto] gap-2 items-end">
-            <Field label="Name">
-              <input className={inputCls} value={g.name}
-                onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, name: e.target.value } : x))} />
-            </Field>
-            <Field label="Angaben (z. B. «von Basel, in Zürich, Musterweg 1»)">
-              <input className={inputCls} value={g.angaben}
-                onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, angaben: e.target.value } : x))} />
-            </Field>
-            <Field label="Aktien">
-              <input className={inputCls} inputMode="numeric" value={g.anzahl}
-                onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, anzahl: e.target.value } : x))} />
-            </Field>
-            <Field label="Lib. % (leer = global)">
-              <input className={inputCls} inputMode="numeric" value={g.liberierung ?? ''}
-                onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, liberierung: e.target.value } : x))} />
-            </Field>
-            <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
-              onClick={() => setGruender((alt) => alt.filter((x) => x.key !== g.key))}>✕</button>
+          <div key={g.key} className="rounded-md border border-line p-3 space-y-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <Field label="Name">
+                <input className={inputCls} value={g.name}
+                  onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, name: e.target.value } : x))} />
+              </Field>
+              <Field label="Angaben (z. B. «von Basel, in Zürich, Musterweg 1»)">
+                <input className={inputCls} value={g.angaben}
+                  onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, angaben: e.target.value } : x))} />
+              </Field>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto_auto] gap-2 items-end">
+              <Field label="Gezeichnete Aktien">
+                <input className={inputCls} inputMode="numeric" value={g.anzahl}
+                  onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, anzahl: e.target.value } : x))} />
+              </Field>
+              <Field label="Liberierung in % (leer = globaler Wert)">
+                <input className={inputCls} inputMode="numeric" value={g.liberierung ?? ''}
+                  onChange={(e) => setGruender((alt) => alt.map((x) => x.key === g.key ? { ...x, liberierung: e.target.value } : x))} />
+              </Field>
+              <button type="button" className="lc-btn-outline lc-btn-sm"
+                title="Übernimmt den Namen in den Verwaltungsrat (Heimatort/Wohnort dort ergänzen)."
+                disabled={!g.name.trim() || vr.some((v) => v.name.trim() === g.name.trim())}
+                onClick={() => setVr((alt) => [...alt, { key: neuerKey(), name: g.name.trim(), herkunft: '', wohnort: '', adresse: '', praesident: alt.length === 0, zeichnungsArt: 'einzelunterschrift' }])}>
+                → als VR-Mitglied übernehmen
+              </button>
+              <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
+                onClick={() => setGruender((alt) => alt.filter((x) => x.key !== g.key))}>✕</button>
+            </div>
           </div>
         ))}
         <button type="button" className="lc-btn-outline lc-btn-sm"
@@ -603,42 +642,48 @@ export function VorlageAgGruendung() {
       <div className="space-y-2">
         <p className="text-body-s font-medium text-ink-900">Verwaltungsrat (Art. 707 ff. OR)</p>
         {vr.map((v) => (
-          <div key={v.key} className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_2fr_1fr_auto_auto_auto] gap-2 items-end">
-            <Field label="Name">
-              <input className={inputCls} value={v.name}
-                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, name: e.target.value } : x))} />
-            </Field>
-            <Field label="Heimatort / Staat">
-              <input className={inputCls} value={v.herkunft}
-                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, herkunft: e.target.value } : x))} />
-            </Field>
-            <Field label="Wohnort">
-              <input className={inputCls} value={v.wohnort}
-                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, wohnort: e.target.value } : x))} />
-            </Field>
-            <Field label="Adresse (für die Wahlannahme)">
-              <input className={inputCls} value={v.adresse}
-                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, adresse: e.target.value } : x))} />
-            </Field>
-            <Field label="Zeichnung">
-              <select className={inputCls} value={v.zeichnungsArt}
-                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, zeichnungsArt: e.target.value as AgVrZeichnungsArt } : x))}>
-                {VR_ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
-              </select>
-            </Field>
-            <label className="flex items-center gap-1.5 text-body-s text-ink-700 pb-2">
-              <input type="checkbox" checked={v.praesident}
-                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, praesident: e.target.checked } : x))} />
-              Präsident:in
-            </label>
-            <label className="flex items-center gap-1.5 text-body-s text-ink-700 pb-2"
-              title="Die Person ist beim Beurkundungstermin anwesend und erklärt die Annahme in der Urkunde – die separate Wahlannahmeerklärung entfällt (Art. 43 Abs. 1 lit. c HRegV).">
-              <input type="checkbox" checked={v.annahmeInUrkunde ?? false}
-                onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, annahmeInUrkunde: e.target.checked } : x))} />
-              Annahme in der Urkunde
-            </label>
-            <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
-              onClick={() => setVr((alt) => alt.filter((x) => x.key !== v.key))}>✕</button>
+          <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <Field label="Name">
+                <input className={inputCls} value={v.name}
+                  onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, name: e.target.value } : x))} />
+              </Field>
+              <Field label="Heimatort / Staatsangehörigkeit">
+                <input className={inputCls} value={v.herkunft}
+                  onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, herkunft: e.target.value } : x))} />
+              </Field>
+              <Field label="Wohnort">
+                <input className={inputCls} value={v.wohnort}
+                  onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, wohnort: e.target.value } : x))} />
+              </Field>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <Field label="Adresse (für die Wahlannahmeerklärung)">
+                <input className={inputCls} value={v.adresse}
+                  onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, adresse: e.target.value } : x))} />
+              </Field>
+              <Field label="Zeichnungsberechtigung">
+                <select className={inputCls} value={v.zeichnungsArt}
+                  onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, zeichnungsArt: e.target.value as AgVrZeichnungsArt } : x))}>
+                  {VR_ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
+                </select>
+              </Field>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-body-s text-ink-700">
+              <label className="flex items-center gap-1.5">
+                <input type="checkbox" checked={v.praesident}
+                  onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, praesident: e.target.checked } : x))} />
+                Präsident:in
+              </label>
+              <label className="flex items-center gap-1.5"
+                title="Die Person ist beim Beurkundungstermin anwesend und erklärt die Annahme in der Urkunde – die separate Wahlannahmeerklärung entfällt (Art. 43 Abs. 1 lit. c HRegV).">
+                <input type="checkbox" checked={v.annahmeInUrkunde ?? false}
+                  onChange={(e) => setVr((alt) => alt.map((x) => x.key === v.key ? { ...x, annahmeInUrkunde: e.target.checked } : x))} />
+                Annahme in der Urkunde
+              </label>
+              <button type="button" className="lc-btn-ghost lc-btn-sm" aria-label="Zeile entfernen"
+                onClick={() => setVr((alt) => alt.filter((x) => x.key !== v.key))}>✕</button>
+            </div>
           </div>
         ))}
         <button type="button" className="lc-btn-outline lc-btn-sm"
@@ -771,26 +816,28 @@ export function VorlageAgGruendung() {
         </label>
         {nachtragAktiv && (
           <div className="rounded-md border border-line p-3 space-y-2">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <Field label="Datum der Gründungsurkunde">
                 <input type="date" className={inputCls} value={ntGruendungsdatum} onChange={(e) => setNtGruendungsdatum(e.target.value)} />
               </Field>
               <Field label="Geänderte Urkunden-Ziffer (z. B. III)">
                 <input className={inputCls} value={ntUrkundeZiffer} onChange={(e) => setNtUrkundeZiffer(e.target.value)} />
               </Field>
-              <Field label="Neuer Wortlaut der Urkunden-Ziffer">
-                <input className={inputCls} value={ntUrkundeText} onChange={(e) => setNtUrkundeText(e.target.value)} />
-              </Field>
+            </div>
+            <Field label="Neuer Wortlaut der Urkunden-Ziffer">
+              <textarea className={inputCls} rows={3} value={ntUrkundeText} onChange={(e) => setNtUrkundeText(e.target.value)} />
+            </Field>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <Field label="Geänderter Statuten-Artikel (Nr.)">
                 <input className={inputCls} inputMode="numeric" value={ntStatutenArtikel} onChange={(e) => setNtStatutenArtikel(e.target.value)} />
               </Field>
               <Field label="Absatz (optional)">
                 <input className={inputCls} inputMode="numeric" value={ntStatutenAbsatz} onChange={(e) => setNtStatutenAbsatz(e.target.value)} />
               </Field>
-              <Field label="Neuer Wortlaut des Statuten-Artikels">
-                <input className={inputCls} value={ntStatutenText} onChange={(e) => setNtStatutenText(e.target.value)} />
-              </Field>
             </div>
+            <Field label="Neuer Wortlaut des Statuten-Artikels">
+              <textarea className={inputCls} rows={3} value={ntStatutenText} onChange={(e) => setNtStatutenText(e.target.value)} />
+            </Field>
           </div>
         )}
       </div>
@@ -799,7 +846,8 @@ export function VorlageAgGruendung() {
 
   const schrittDokumente = (
     <div className="space-y-5">
-      <MappenGates gates={mappe.gates} />
+      {blockerKlickbar('Damit die Dokumente erzeugt werden können, fehlt noch — Klick führt zum Eingabefeld:')}
+      <MappenGates gates={{ blocker: [], warnungen: mappe.gates.warnungen }} />
 
       {mappe.dokumente.length > 0 && (
         <div className="space-y-3">
@@ -912,7 +960,30 @@ export function VorlageAgGruendung() {
     </div>
   );
 
-  const inhalte = [schrittKonstellation, schrittGesellschaft, schrittKapital, schrittPersonen, schrittWeiteres, schrittDokumente];
+  const inhalteRoh = [schrittKonstellation, schrittGesellschaft, schrittKapital, schrittPersonen, schrittWeiteres, schrittDokumente];
+  // In den Eingabe-Schritten unten eine kompakte, klickbare Offen-Liste
+  // (nur die Punkte des AKTUELLEN Schritts zuerst, dann die übrigen).
+  const inhalte = inhalteRoh.map((inhalt, i) => i === inhalteRoh.length - 1 ? inhalt : (
+    <div className="space-y-4">
+      {inhalt}
+      {mappe.gates.blockerDetails.length > 0 && (
+        <details className="rounded-md border border-line bg-surface p-3">
+          <summary className="cursor-pointer select-none text-body-s text-ink-700">
+            Für die Dokumente noch offen: {mappe.gates.blockerDetails.length} Punkt{mappe.gates.blockerDetails.length === 1 ? '' : 'e'}
+          </summary>
+          <div className="pt-2 space-y-1">
+            {mappe.gates.blockerDetails.map((b) => (
+              <button key={b.text} type="button"
+                onClick={() => setSchritt(BEREICH_SCHRITT[b.bereich])}
+                className="block w-full text-left text-body-s text-ink-700 hover:text-brass-700 hover:underline">
+                • {b.text} <span aria-hidden className="text-ink-500">→ {SCHRITTE[BEREICH_SCHRITT[b.bereich]].label}</span>
+              </button>
+            ))}
+          </div>
+        </details>
+      )}
+    </div>
+  ));
 
   const vorschau = mappe.dokumente.length > 0
     ? <VorschauPanel ergebnis={mappe.dokumente[0].ergebnis} />
