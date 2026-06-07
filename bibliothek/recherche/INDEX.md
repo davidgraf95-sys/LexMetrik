@@ -1,6 +1,7 @@
-# Recherche-Dossiers — geplante Engines & Vorlagen (Stand 6.6.2026 nachts)
+# Recherche-Dossiers — geplante Engines & Vorlagen (Stand 7.6.2026)
 
-**22 Dossiers:** zwölf Cluster zu allen `geplant`-Einträgen des Katalogs (92 Karten/
+**27 Dossiers** (Bibliotheks-Audit 7.6.2026: Tabelle vervollständigt — alle
+Dateien dieses Ordners haben jetzt eine Zeile): zwölf Cluster zu allen `geplant`-Einträgen des Katalogs (92 Karten/
 Szenarien, gruppiert nach Rechtsgebiet) plus zehn Einzel-/Vertiefungsdossiers
 (StPO-Rechtsmittel · Strafbefehlsverfahren · Gebühren nicht-vermögensrechtlich ·
 Kündigungs-Masken · Untermietvertrag · Eheschutz/GlG-Zuständigkeit · BGG-Beschwerde
@@ -38,6 +39,11 @@ Verifikations-TODOs stehen aus. Nichts davon ist umgesetzt.
 | [fristenspiegel-konzept](fristenspiegel-konzept.md) | FAHRPLAN-PRAXIS 3.1: EIN Ereignis → ALLE parallelen Fristen (Zivilentscheid 311/314/321 · Zahlungsbefehl 74/88-Dual · AG-Kündigung 336b · Vermieter-Kündigung 273 · Strafbefehl 354 · Erbgang 567/580/521/533 · Klagebewilligung 209) als Orchestrierer über BESTEHENDE Engines/Presets (§5), Datenmodell `FristenspiegelDef` + Sammel-.ics | Eigener Rechner `/rechner/fristenspiegel`; Rahmen zuerst (§10), Pilot A.4 Vermieter-Kündigung (mietrecht liefert `anfechtungBis`/`erstreckungBis` fertig); echte Lücke nur 336b (2 Preset-Zeilen) |
 | [gebv-schkg-kostenrechner](gebv-schkg-kostenrechner.md) | Betreibungskosten-Rechner: Tarif-Register Wert für Wert am 1.1.2026-Filestore verifiziert (Voll-Diff 2022↔2026: nur Art. 15a/15b geändert) · AS-2025-630/522-Aufklärung · §2-Schnitt Punktwerte/Bandbreiten · Deep-Research-Zweitbelege 3:0 | Staffeln amtlich doppelt belegt — baufertig; MWST/Rand-Tatbestände offen |
 | [bgg-beschwerde-engine](bgg-beschwerde-engine.md) | Beschwerde ans BGer (Ausbau `bestimmeRechtsmittel`): Zivilsachen 72–77 (SchKG-Entscheide 72 II a · Streitwert 15/30k + Ausnahmen 74 II · Streitwertberechnung 51–53) · subsidiäre Verfassungsbeschwerde 113–119 · Strafsachen 78–81 (Privatkläger-Legitimation 81 I b Ziff. 5) · Vorinstanzen 75/80 · Fristen 100 + Stillstand 46 · End-/Zwischenentscheid 90–93 · Kognition 95–99 (Eheschutz = Art. 98!) | Decision-Tree A–F regelbasiert; Eheschutz/A-Post-Plus nur als Weiche (Sekundärquelle, V-1/V-2 offen); Art. 74 II lit. c/d am Wortlaut bestätigt |
+| [stpo-rechtsmittel](stpo-rechtsmittel.md) | StPO-Rechtsmittel-Engine + Fristen-Presets (StPO @ 1.1.2024, BGG-Weiterzug 78–81): Beschwerde 393 ff. (10 T., 396 I) · Berufung 398 ff. (Anmeldung 10 T./Erklärung 20 T., 399!) · Revision 410 ff. · keine Gerichtsferien (89 II) | **TEILVERDRAHTET** in `strafRechtsmittel.ts` (6.6.2026); Rest = Presets |
+| [strafbefehlsverfahren](strafbefehlsverfahren.md) | Strafbefehl 352–357 StPO: Einsprache **10 Tage** (354, schriftlich; Form-Minimum!) · Folgen 355/356 · Wegweiser-Bausteine | Vorlage «Einsprache» (Karte `einsprache`, geplant) — Bauspez liegt |
+| [kuendigungs-masken](kuendigungs-masken.md) | **Bauspezifikation** der Kündigungs-Wizard-Familie (Feldkataloge, Bausteine, Gates, ausgabeArt/Banner; vertieft arbeitsrecht-vorlagen) | **GEBAUT 6.6.2026** (Familie 1a/1b/2a/2b/3 komplett) — Dossier = Referenz für Erweiterungen |
+| [untermietvertrag](untermietvertrag.md) | Untermiete Art. 262 OR als Weiche in `mietvertrag.ts` (geltende Fassung — Revision 24.11.2024 ABGELEHNT!): Zustimmungs-Status · Verweigerungsgründe abschliessend · Missbrauchs-Gate Aufschlag | **GEBAUT 6.6.2026** (`#untermiete`-Pfad) — Dossier = Abnahme-Grundlage |
+| [gebuehren-nichtvermoegensrechtlich](gebuehren-nichtvermoegensrechtlich.md) | Gerichtsgebühren NICHT-vermögensrechtlicher Zivilsachen, 26 Kantone + Bund (aus kosten/-Tiefenerfassung; BGG/ZPO-Overlay am Volltext) | Adversarialer Doppelcheck der Sonderrahmen AUSSTEHEND — vor Verdrahtung |
 
 ## Cluster-übergreifende Bau-Empfehlung (Quick-Wins zuerst)
 

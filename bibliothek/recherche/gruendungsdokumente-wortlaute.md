@@ -10,7 +10,7 @@ Anforderung, siehe Teil 0). · **Baut auf:**
 
 **Recherche:** 4 parallele Muster-Sweeps (EHRA · ZH · SG/GL · Zeichnungs-/
 Erklärungs-/Anmeldungs-Muster), alle Dokumente lokal geparst
-(`/tmp/muster/*.txt`, Original-DOCX/PDF daneben); Norm-Kerne verbatim am
+(dauerhaft archiviert: [`bibliothek/muster/`](../muster/MANIFEST.md); Arbeitskopie der Session: /tmp/muster/); Norm-Kerne verbatim am
 Fedlex-Cache gezogen (`/tmp/gruendung-normen-extrakt.txt` + `…-extrakt2.txt`,
 OR @ **1.1.2026**, HRegV @ 1.1.2025 — `scripts/fedlex-cache.sh`).
 

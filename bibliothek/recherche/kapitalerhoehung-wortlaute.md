@@ -8,9 +8,7 @@ bauen mit research und allem»). · **Baut auf:**
 Skizze). · **Recherche:** Norm-Extraktion verbatim
 (`/tmp/kaperh-normen-extrakt.txt`: OR 650–653v, 656b, 781 @ **1.1.2026**;
 HRegV 46/48/74/76 @ 1.1.2025) + Muster-Sweep ZH/SG
-(`/tmp/muster/ke-*`: GV-/VR-/GF-Urkunden, Kapitalerhöhungsberichte,
-Zeichnungsschein, AG-Checkliste — 16 Dokumente, alle HTTP 200, verbatim
-geparst).
+(dauerhaft archiviert: [`bibliothek/muster/ke-*`](../muster/MANIFEST.md) — GV-/VR-/GF-Urkunden, Kapitalerhöhungsberichte, Zeichnungsschein, AG-Checkliste; 16 Dokumente, alle HTTP 200, verbatim geparst).
 
 **Status: ERSTRECHERCHE (Norm-Kerne zweifach: Cache + ZH/SG-Konvergenz).**
 Fachliche Abnahme David ausstehend (§7).
@@ -53,7 +51,7 @@ Fachliche Abnahme David ausstehend (§7).
    statutarische Module (Grenze ±½; Statuten-Kataloge 653t/653b) —
    **BACKLOG**, nicht Teil des 9c-Erstausbaus.
 
-# TEIL 1 — Dokument-Wortlaute (ZH/SG konvergent; Quellen `/tmp/muster/ke-*`)
+# TEIL 1 — Dokument-Wortlaute (ZH/SG konvergent; Quellen `bibliothek/muster/ke-*`)
 
 | Dokument | Form → ausgabeArt | Kern-Wortlaut |
 |---|---|---|

@@ -1,7 +1,10 @@
 # Bibliothek — Informationsgrundlagen für LexMetrik
 
 Zentrale Ablage für recherchierte Grundlagen, Quellenregister und Arbeitsmaterial,
-das (noch) nicht Code ist. 50 Dossiers in 6 Ordnern (Stand 6.6.2026 nachts).
+das (noch) nicht Code ist. **61 Dokumente in 7 Ordnern** (Stand 7.6.2026,
+Bibliotheks-Audit: Zählung korrigiert, recherche-INDEX vervollständigt,
+Verfallsregister um 6 Gründungs-Kandidaten ergänzt, Muster-Quellsammlung
+aus /tmp dauerhaft archiviert, Engine-Map neu).
 Verbindlich seit 6.6.2026: **CLAUDE.md §11** — jede Recherche mündet hier in eine
 geordnete, engine-orientierte Übersichtsliste mit INDEX-Eintrag. Regeln:
 
@@ -18,15 +21,19 @@ geordnete, engine-orientierte Übersichtsliste mit INDEX-Eintrag. Regeln:
 
 ```
 bibliothek/
-  register/    Quellen-Register (Fedlex-Stände) · Parameter-Verfallsregister
+  register/    Quellen-Register (Fedlex-Stände) · Parameter-Verfallsregister · Engine-Map
   normen/      Regelwerke ZPO·SchKG·StPO·Erbrecht·Feiertage — die Engine-Grundlagen
-  behoerden/   Gerichte · Schlichtung · Strafverfolgung · Erbgang (je 26 Kantone)
+  behoerden/   Gerichte · Schlichtung · Strafverfolgung · Erbgang · Notariate (je 26 Kantone)
   kosten/      Schlichtungsgebühren · Gerichtskosten Bund · Anwaltstarife
   recherche/   Dossiers zu geplanten Engines/Vorlagen → eigener INDEX.md dort
+  muster/      Amtliche Vorlagen verbatim (.txt) + MANIFEST (Quellen-URLs/Stände)
   rechtsprechung/  Register aller zitierten Bundesgerichtsentscheide (Links + Fundorte)
 ```
 
-**Recherche-Dossiers (22, Bau-Priorisierung):** [recherche/INDEX.md](recherche/INDEX.md) —
+**Schnellster Einstieg beim Bauen:** [register/engine-map.md](register/engine-map.md)
+— Code-Modul → tragende Dossiers → Bau-/Abnahme-Status (neu 7.6.2026).
+
+**Recherche-Dossiers (27, Bau-Priorisierung):** [recherche/INDEX.md](recherche/INDEX.md) —
 neu 6.6.2026: [gesellschaftsgruendung](recherche/gesellschaftsgruendung.md)
 (Deep-Research, Dokumente je Rechtsform verbatim aus HRegV/OR + Notariats-Praxis)
 + Vertiefungen [gmbh-gruendung](recherche/gmbh-gruendung.md) (inkl. Bauspez.
@@ -44,7 +51,8 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 | Dokument | Inhalt |
 |---|---|
 | [quellen-register.md](register/quellen-register.md) | Verifizierte Fedlex-Quellen (ELI, Konsolidierung, geprüfte Anker, Filestore-Muster) |
-| [parameter-verfall.md](register/parameter-verfall.md) | Datierte Parameter mit Prüfrhythmus — u. a. **SG GKV endet 30.6.2026**, GR HV/BE EAV 31.12.2026, NE-Umzug Sommer 2026, JU-Punktwert, BE-Formularpflicht 1.11.2026, Referenzzins |
+| [parameter-verfall.md](register/parameter-verfall.md) | Datierte Parameter mit Prüfrhythmus — u. a. **SG GKV endet 30.6.2026**, GR HV/BE EAV 31.12.2026, NE-Umzug Sommer 2026, JU-Punktwert, BE-Formularpflicht 1.11.2026, Referenzzins; **neu 7.6.2026:** HReg-Gebühren · Fremdwährungsliste · Emissionsabgabe · MWST-Schwellen · Notariats-Listen (UR/AI/BL!) · Muster-Suiten |
+| [engine-map.md](register/engine-map.md) | **Engine-Map** (neu 7.6.2026): jedes Code-Modul → tragende Dossiers/Stammdaten → Bau-/Abnahme-Status — der Rückweg zu §11 und die Checkliste je Abnahme |
 
 ## normen/ — Regelwerke (Engine-Grundlagen, Wortlaute verbatim)
 
@@ -104,6 +112,14 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 | [gerichtskosten-kantone.md](kosten/gerichtskosten-kantone.md) | TIEFENERFASSUNG: vollständige Zivil-Staffeln je Kanton (alle Bänder, summarisch, Rechtsmittel, Reduktionen, Vorschuss) — Teil A ZH–BL | einfach belegt; Teil B + Doppelcheck folgen |
 | [gerichtskosten-bund.md](kosten/gerichtskosten-bund.md) | Tarife BGer/BVGer/BStGer/BPatGer wörtlich aus Fedlex | alle Stichproben wörtlich ✓, keine neueren Konsolidierungen |
 | [anwaltstarife-kantone.md](kosten/anwaltstarife-kantone.md) | Anwaltstarife (Parteientschädigung/UR) 26 Kantone | GL-Tarif existiert doch (GS III I/5); UR-Staffel beschafft |
+
+## muster/ — amtliche Vorlagen, verbatim archiviert (NEU 7.6.2026)
+
+51 Text-Extrakte amtlicher Original-Vorlagen (EHRA · HRegA ZH inkl.
+Kapitalerhöhungs-Suite · SG · GL · AR/BE-Einzelstücke) — die verbatim-Basis
+der Wortlaut-Dossiers, zuvor nur flüchtig in `/tmp`. Quellen-URLs, Stände
+und Pflege-Regeln: [muster/MANIFEST.md](muster/MANIFEST.md). Stand-Überwachung
+im Verfallsregister («Amtliche Muster-Suiten»).
 
 ## Verdrahtung in den Code (SSoT-Karte)
 

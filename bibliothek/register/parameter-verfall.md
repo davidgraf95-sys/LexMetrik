@@ -4,7 +4,9 @@ Alle **datierten Parameter** im Code: Werte, die sich ausserhalb des Repos ände
 und darum regelmässig geprüft werden müssen. Wer einen neuen datierten Wert
 verdrahtet, trägt ihn HIER ein (mit Fundstelle, Stand, Prüfrhythmus).
 
-Stand des Registers: 6.6.2026.
+Stand des Registers: 7.6.2026 (Bibliotheks-Audit: 6 Gründungs-/Notariats-
+Kandidaten nachgetragen, die in den Dossiers nur als «Verfallsregister-
+Kandidat» markiert waren).
 
 | Parameter | Fundstelle | Wert / Stand | Prüfrhythmus | Nächste Prüfung |
 |---|---|---|---|---|
@@ -19,6 +21,12 @@ Stand des Registers: 6.6.2026.
 | Fedlex-Konsolidierungsstände | `bibliothek/register/quellen-register.md` | je Gesetz dokumentiert | bei Rechtsänderungen (AS-Publikationen) | bei neuen Aufträgen |
 | Beurkundungs-/Beglaubigungs-Hinweise (Kantone, Richtwerte CHF) | `src/lib/vorlagen/vorsorgeauftrag.ts` (`beurkundungsHinweis`) | dokumentierte Beispiele, 5.6.2026 | jährlich, niedrige Priorität | — |
 | Verzugszins-Sätze (gesetzlich 5 %) | `src/lib/…verzugszins` | gesetzlich fix (Art. 104 OR) | nur bei Gesetzesänderung | — |
+| HReg-Gebühren (Neueintragung 420/280/210 …) | `src/lib/gruendungsunterlagen.ts` + Masken-/Mappen-Texte | GebV-HReg-Anhang @ 1.1.2021 (einzige Konsolidierung, Cache) | **jährlich** (Verordnungs-Pauschalen) | Jan. 2027 |
+| Zulässige Fremdwährungen Kapital (GBP/EUR/USD/JPY) | Gates/Hinweise `gruendungsunterlagen.ts` + Dokumentmappen | Anhang 3 HRegV @ 1.1.2025 (Cache verbatim) | bei HRegV-Änderung (BR-Kompetenz) | mit nächstem HRegV-Pin |
+| Emissionsabgabe (1 %, Freibetrag CHF 1 Mio.) | `gruendungsunterlagen.ts` (`emissionsabgabe`, `EMISSIONSABGABE_FREIBETRAG_CHF`) | Art. 6 Abs. 1 lit. h / 8 Abs. 1 StG @ 1.1.2024 (Cache) | jährlich — **politisch volatil** (Abschaffungs-Vorlagen) | Jan. 2027 |
+| MWST-Pflicht-Schwellen (100k; 150k gemeinnützig) | nur Dossier (`recherche/gesellschaftsgruendung.md` Teil 5) — NICHT verdrahtet | ESTV-Abruf 6.6.2026; MWSTG-Cache-Verifikation offen | jährlich + zwingend vor Verdrahtung | vor Verdrahtung |
+| Notariats-Anlaufstellen je Kanton (inkl. Listen-PDFs) | `src/lib/notariate.ts` ↔ `behoerden/notariate-kantone.md` | URLs geprüft 7.6.2026; Listen-Stände SZ 4/2026 · OW 5/2026 · NE 1/2026 · GE 6/2025; **UR/AI/BL unverifiziert** | **jährlich**; UR/AI/BL vorab klären | **UR/AI/BL: vor Abnahme** · Listen: Juni 2027 |
+| Amtliche Muster-Suiten (Statuten/Urkunden/Erklärungen/KE) | `bibliothek/muster/` (MANIFEST.md) ← Bausteine der 3 Dokumentmappen | ZH 26.7.2024 · SG «…2023» · GL undatiert · EHRA 1.4.2017 (ÜBERHOLT, nur Referenz) | bei OR-/HRegV-Rechtsänderung neu abrufen + Baustein-Abgleich | mit nächstem OR-Pin |
 
 ## Konventionen
 
