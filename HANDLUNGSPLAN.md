@@ -163,6 +163,35 @@ löschen, Stand in STRUKTUR.md spiegeln.
    Golden byte-gleich · Lint/Build sauber. (Separater /code-review der
    Parallel-Session: `7a72e91` #1–#8 — kein Überschnitt.)
 
+9e. **/simplify-Runde + ALLE Folge-Befunde gefixt** (`d2da341` + `0e0e86c`,
+   Auftrag David 7.6.2026 mittags): 4 Cleanup-Agents (Reuse/Simplification/
+   Efficiency/Altitude) über den Review-Diff → 5 Fixes (Striche-Lizenz als
+   EIN Engine-Boolean statt 3 ODER-Kopien + mutable PDF-Closure ·
+   ganzePositive() in der zahl-Familie · Vorsitz-Entbehrlichkeit als
+   Beleg-Attribut an der SSoT statt id-Sonderliste · Katalogsuche
+   Ein-Regex-Faltung + WeakMap-Cache + Sort ohne Doppel-Rang ·
+   SchKG-aktiverOverride). Danach «fixe alle Befunde»: istGueltigesISO →
+   datumsUtils (Bonus: 4. nur-Format-Kopie in FristenspiegelForm) ·
+   notariate.urlBelegt (≠ §7-verified) · keVerfallDatum() berechnet
+   («spätestens am …» in Urkunde + UI, 77 I Ziff. 3) · AG-Stück-Gates inkl.
+   per-Gründer · Label-Spread · nummeriereUeberschriftenAlsArtikel in der
+   Engine · geteilter Mappen-Rahmen Dokumentmappe.tsx (§10-Rahmen für die
+   3 Mappen-UIs).
+
+9f. **Bibliothek: Audit + Nützlichkeit + MINDESTSTANDARDS** (`99325d9`,
+   `837121b`, `379e8e7`, Auftrag David 7.6.2026): Audit (5 INDEX-Lücken,
+   6 nie registrierte Verfalls-Kandidaten, veraltete Zählungen, 1 überholter
+   Plan-Dateiname) → behoben; NEU: bibliothek/muster/ (51 amtliche Vorlagen
+   verbatim + MANIFEST mit URLs/Ständen — vorher nur flüchtig in /tmp) ·
+   register/engine-map.md (Modul → Dossiers → Status) ·
+   **bibliothek/STANDARDS.md S1–S10** + scripts/bibliothek-check.sh
+   (Exit 1, Teil §9-Bug-Check; Erstlauf fand 14 Verstösse → alle behoben,
+   darunter: StGB + GebV SchKG waren NIE gepinnt → fedlex-cache.sh-Pins
+   ergänzt [GebV SchKG: Filestore-Datei ohne -N-Suffix, Skript-Modus n=0],
+   Quellen-Register um HRegV/GebV-HReg/StG/GebV-SchKG/StGB nachgeführt,
+   S8-Korrektur «nur signiert»-Irrtum). Verknüpfungs-Check beidseitig:
+   Code↔Bibliothek 34+70 Pfade, 0 kaputt.
+
 ## C · Pflege & Termine (Verfallsregister: `bibliothek/register/parameter-verfall.md`)
 
 10. **30.6.2026** — SG-GKV-Divergenz prüfen (Erinnerung existiert bereits).
