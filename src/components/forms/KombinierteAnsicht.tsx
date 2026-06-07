@@ -237,7 +237,7 @@ export function KombinierteAnsicht() {
             kanton={form.kanton ?? 'BE'}
             stillstandAktiv={false}
             feiertage={false}
-            labels={{ ereignis: 'Beginn der Verhinderung', aquo: 'Beginn der Verhinderung', adquem: 'Letzter bezahlter Tag' }}
+            labels={{ ereignis: 'Beginn der Verhinderung', aquo: 'Beginn der Verhinderung', adquem: 'Letzter bezahlter Tag', band: 'bezahlter Zeitraum' }}
           />
         )}
         {ergebnisse.kuendigung && (

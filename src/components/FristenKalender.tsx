@@ -24,7 +24,10 @@ type Props = {
   kanton: Kanton;
   stillstandAktiv: boolean;
   feiertage?: boolean;                 // Sa/So/Feiertage abschwächen (default true)
-  labels?: { ereignis: string; aquo: string; adquem: string };
+  // band: Beschriftung der Messing-Fläche in der Legende — Standard
+  // «laufende Frist»; abweichend, wo das Band keine Frist ist (z. B.
+  // Lohnfortzahlung: bezahlter Zeitraum).
+  labels?: { ereignis: string; aquo: string; adquem: string; band?: string };
 };
 
 function monatKey(d: Date) { return d.getFullYear() * 12 + d.getMonth(); }
@@ -44,6 +47,18 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
 
   const fristStart = aQuo < adQuem ? aQuo : adQuem;
   const fristEnde = aQuo < adQuem ? adQuem : aQuo;
+
+  // Legende erklärt nur, was in den GEZEIGTEN Monaten wirklich vorkommt
+  // (§8): der Stillstand kann ganz in einem ausgelassenen Zwischenmonat
+  // liegen (z. B. Ostern zwischen Fristbeginn März und Fristende Mai) —
+  // dann entfällt der Schraffur-Eintrag, statt Unsichtbares zu erklären.
+  const stillstandSichtbar = stillstandAktiv && monate.some((monat) => {
+    const tage = new Date(monat.getFullYear(), monat.getMonth() + 1, 0).getDate();
+    for (let t = 1; t <= tage; t++) {
+      if (stillstandsperiodeFuer(new Date(monat.getFullYear(), monat.getMonth(), t)) !== null) return true;
+    }
+    return false;
+  });
 
   // Band-Ebene: laufende Frist (Messing) bzw. Gerichtsstillstand (Schraffur)
   const bandStatus = (d: Date): BandStatus => {
@@ -132,14 +147,19 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
 
       {luecken && <p className="text-body-s text-ink-500 mt-3 italic">Dazwischenliegende Monate sind nicht dargestellt.</p>}
 
-      {/* Legende */}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-4 pt-3 border-t border-line text-body-s text-ink-600">
+      {/* Legende — Überarbeitung 7.6.2026 (Auftrag David): zwei gelesene
+          Gruppen statt einer ungegliederten Reihe — erst die drei
+          Schlüsseltage (Kreis-Marker, chronologisch), nach der Haarlinie
+          die Flächen (Band/Schraffur) und die abgeschwächten arbeitsfreien
+          Tage. Muster sind Miniaturen der echten Zellen-Rezepte. */}
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-4 pt-3 border-t border-line text-body-s text-ink-700">
         <span className="lc-overline text-ink-400">Legende</span>
         {ereignisISO !== aQuoISO && <Legende kreis="border-2 border-ink-900 bg-paper-raised" label={L.ereignis} />}
         <Legende kreis="bg-brass-500" label={L.aquo} />
         <Legende kreis="bg-sage-500 lc-termin-ring" label={L.adquem} />
-        <Legende band="bg-brass-100" label="läuft" />
-        {stillstandAktiv && <Legende band="lc-hatch-warn" label="Gerichtsstillstand" />}
+        <span aria-hidden className="hidden sm:inline-block h-4 w-px bg-line" />
+        <Legende band="bg-brass-100" label={L.band ?? 'laufende Frist'} />
+        {stillstandSichtbar && <Legende band="lc-hatch-warn" label="Gerichtsstillstand" />}
         {feiertage && <Legende muted label={`arbeitsfrei (Sa/So/Feiertage ${kanton})`} />}
       </div>
     </div>
@@ -149,9 +169,11 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
 function Legende({ kreis, band, label, muted }: { kreis?: string; band?: string; label: string; muted?: boolean }) {
   return (
     <span className="inline-flex items-center gap-2">
-      {kreis && <span className={`inline-block w-3.5 h-3.5 rounded-full ${kreis}`} />}
-      {band && <span className={`inline-block w-5 h-3 rounded-full ${band}`} />}
-      {muted && <span className="text-micro text-ink-400 leading-none font-medium">Sa</span>}
+      {kreis && <span aria-hidden className={`inline-block w-3.5 h-3.5 rounded-full shrink-0 ${kreis}`} />}
+      {band && <span aria-hidden className={`inline-block w-7 h-3.5 rounded-full shrink-0 ${band}`} />}
+      {/* Muster wie eine echte abgeschwächte Tageszelle (gleiche Schrift-
+          grösse wie die Tagesziffern, nicht mehr Mikro-Text) */}
+      {muted && <span aria-hidden className="num text-body-s text-ink-400 leading-none font-medium">Sa</span>}
       {label}
     </span>
   );
