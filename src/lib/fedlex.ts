@@ -15,7 +15,10 @@ export const FEDLEX = {
   // Filestore-HTML verifiziert (Konsolidierung 20230901; geprüft 5.6.2026).
   ArG:   'https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de',
   // VMWG SR 221.213.11 – ELI via Fedlex-SPARQL verifiziert; Anker art_16/17/
-  // 19/19a empirisch am Filestore-HTML (Konsolidierung 20251001; 5.6.2026).
+  // 19/19a empirisch am Filestore-HTML (Konsolidierung 20251001; 5.6.2026 —
+  // diese Notiz war korrekt: die zwischenzeitliche «19a existiert nicht»-
+  // Diskrepanz [5./6.6.] beruhte auf dem 20250101-Cache; aufgelöst 7.6.2026,
+  // 20251001 liegt als n=0-Datei, jetzt regulär gepinnt).
   VMWG:  'https://www.fedlex.admin.ch/eli/cc/1990/835_835_835/de',
   // StPO SR 312.0 – Anker art_129 empirisch am Filestore-HTML verifiziert
   // (Konsolidierung 20240101; geprüft 5.6.2026, Vollmacht-Vorlage).

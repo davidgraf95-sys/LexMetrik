@@ -260,11 +260,15 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
         break;
       }
     }
-    // Audit-Fix 6.6.2026: «Art. 19a VMWG» existiert nicht – die Vier-Monats-Regel
-    // steht in Art. 19 Abs. 2 VMWG («Bei gestaffelten Mietzinsen darf die Mitteilung
-    // frühestens vier Monate vor Eintritt jeder Mietzinserhöhung erfolgen»), am
-    // Cache (Stand 20250101) wörtlich verifiziert; Vorbehalt damit aufgelöst.
-    hinweise.push('Während der Staffelung sind andere Mietzinsanpassungen ausgeschlossen (BGE 121 III 397 – zu verifizieren); die Anfechtung richtet sich nach Art. 270d OR. Seit 1.10.2025 genügt für die Mitteilung der Staffelerhöhung eine formlose SCHRIFTLICHE Mitteilung (kein amtliches Formular), frühestens vier Monate vor dem Erhöhungszeitpunkt (Art. 269d Abs. 5 OR i.V.m. Art. 19 Abs. 2 VMWG).');
+    // §7-Korrektur 7.6.2026 (ersetzt den überholten «Audit-Fix 6.6.2026»):
+    // Art. 19a VMWG EXISTIERT seit 1.10.2025 (V vom 21.3.2025, AS 2025 191) –
+    // der alte Befund «existiert nicht» beruhte auf dem Cache-Stand 20250101;
+    // die 20251001-Manifestation liegt am Filestore OHNE «-N»-Suffix (n=0).
+    // Die Vier-Monats-Regel («Bei gestaffelten Mietzinsen darf die schriftliche
+    // Mitteilung frühestens vier Monate vor Eintritt jeder Mietzinserhöhung
+    // erfolgen») steht seither in Art. 19a; am Cache 20251001 wörtlich
+    // verifiziert. Dossier: bibliothek/normen/fedlex-pin-nachverifikation-2026-06.md
+    hinweise.push('Während der Staffelung sind andere Mietzinsanpassungen ausgeschlossen (BGE 121 III 397 – zu verifizieren); die Anfechtung richtet sich nach Art. 270d OR. Seit 1.10.2025 genügt für die Mitteilung der Staffelerhöhung eine formlose SCHRIFTLICHE Mitteilung (kein amtliches Formular), frühestens vier Monate vor dem Erhöhungszeitpunkt (Art. 269d Abs. 5 OR i.V.m. Art. 19a VMWG).');
   }
 
   // G6 – Nebenkosten: nur geschuldet, wenn besonders vereinbart und EINZELN

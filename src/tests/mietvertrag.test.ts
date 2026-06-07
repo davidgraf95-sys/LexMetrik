@@ -110,6 +110,16 @@ describe('Mietvertrag – Bausteine', () => {
     const a = basis({ mietzinsModell: 'staffel', mindestdauerJahre: 3, staffeln: [{ ab: '2027-10-01', erhoehungCHF: '50' }] });
     expect(mvZusammenstellen(a)).toEqual(mvZusammenstellen(a));
   });
+
+  it('MT-12a Staffel-Hinweis zitiert Art. 19a VMWG (eingefügt per 1.10.2025, AS 2025 191 — §7-Korrektur 7.6.2026)', () => {
+    const a = basis({ mietzinsModell: 'staffel', mindestdauerJahre: 3, staffeln: [{ ab: '2027-10-01', erhoehungCHF: '50' }] });
+    const hinweise = pruefeMvGates(a).hinweise.join(' ');
+    expect(hinweise).toMatch(/Art\. 19a VMWG/);
+    // Die alte Fundstelle (Audit-Fix 6.6.2026, beruhte auf Cache-Stand
+    // 20250101) darf nicht wieder einsickern: Staffel-Regel steht NICHT
+    // mehr in Art. 19 Abs. 2.
+    expect(hinweise).not.toMatch(/Art\. 19 Abs\. 2 VMWG/);
+  });
 });
 
 describe('Mietvertrag – Review-Zusatztests', () => {
