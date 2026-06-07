@@ -160,20 +160,23 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
         <span aria-hidden className="hidden sm:inline-block h-4 w-px bg-line" />
         <Legende band="bg-brass-100" label={L.band ?? 'laufende Frist'} />
         {stillstandSichtbar && <Legende band="lc-hatch-warn" label="Gerichtsstillstand" />}
-        {feiertage && <Legende muted label={`arbeitsfrei (Sa/So/Feiertage ${kanton})`} />}
+        {/* Arbeitsfreie Tage haben kein eigenes Zeichen im Raster (nur
+            abgeschwächte Ziffern) — darum auch keines in der Legende: ein
+            Text-Muster («Sa») las sich nach Zeilenumbruch als Wortfragment
+            (Befund David 7.6.2026), ein grafisches gäbe es im Kalender
+            nicht (§8). Der Eintrag erklärt die Behandlung und ist selbst
+            abgeschwächt gesetzt. */}
+        {feiertage && <span className="text-ink-500">arbeitsfreie Tage abgeschwächt (Sa/So/Feiertage {kanton})</span>}
       </div>
     </div>
   );
 }
 
-function Legende({ kreis, band, label, muted }: { kreis?: string; band?: string; label: string; muted?: boolean }) {
+function Legende({ kreis, band, label }: { kreis?: string; band?: string; label: string }) {
   return (
     <span className="inline-flex items-center gap-2">
       {kreis && <span aria-hidden className={`inline-block w-3.5 h-3.5 rounded-full shrink-0 ${kreis}`} />}
       {band && <span aria-hidden className={`inline-block w-7 h-3.5 rounded-full shrink-0 ${band}`} />}
-      {/* Muster wie eine echte abgeschwächte Tageszelle (gleiche Schrift-
-          grösse wie die Tagesziffern, nicht mehr Mikro-Text) */}
-      {muted && <span aria-hidden className="num text-body-s text-ink-400 leading-none font-medium">Sa</span>}
       {label}
     </span>
   );
