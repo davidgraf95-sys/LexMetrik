@@ -203,12 +203,22 @@ export function SchkgZustaendigkeitTeil() {
         )}
       </div>
 
-      {/* 3b · Betreibungsort lokalisieren (optional) — konkretes Amt */}
+      {/* 3b · Betreibungsort lokalisieren (optional) — konkretes Amt.
+          Bug-Check §9 (HOCH, 7.6.2026): Der Orts-Hinweis folgt DERSELBEN
+          Weiche wie die Engine (Art. 46/51/52 SchKG) — ein statisches
+          «Wohnsitz/Sitz» wäre bei Grundpfand/Arrest irreführend. */}
       <div className="space-y-2">
         <p className="lc-overline">3b · Betreibungsort lokalisieren (optional)</p>
         <p className="text-body-s text-ink-600">
-          PLZ oder Kanton des Betreibungsortes (oben hergeleitet: z. B. Wohnsitz/Sitz der Schuldnerseite) —
-          zeigt das zuständige Betreibungsamt bzw. das amtliche kantonale Verzeichnis.
+          PLZ, Gemeinde oder Kanton des Betreibungsortes —{' '}
+          {pfand === 'grundpfand'
+            ? 'zwingend der Ort des verpfändeten Grundstücks, NICHT der Wohnsitz (Art. 51 Abs. 2 SchKG)'
+            : pfand === 'faustpfand'
+              ? 'Wohnsitz/Sitz der Schuldnerseite oder wahlweise der Ort des Pfandes (Art. 51 Abs. 1 SchKG)'
+              : arrestGelegt
+                ? 'Wohnsitz/Sitz der Schuldnerseite oder wahlweise der Ort des Arrestgegenstands (Art. 52 SchKG; gilt nicht für das Konkursbegehren)'
+                : 'massgeblich ist die Herleitung oben (z. B. Wohnsitz/Sitz der Schuldnerseite)'}
+          {' '}— zeigt das zuständige Betreibungsamt bzw. das amtliche kantonale Verzeichnis.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Field label="PLZ" hint="amtliches Ortschaftenverzeichnis — setzt Kanton und Gemeinde">
@@ -306,9 +316,13 @@ export function SchkgZustaendigkeitTeil() {
                   Betreibungsamt dient der Orientierung am Betreibungsort.
                 </p>
               )}
-              <a href={BETREIBUNGSAEMTER_VERZEICHNIS} target="_blank" rel="noreferrer" className="text-brass-700 underline text-body-s inline-block">
-                Amtliche Suche nach Adresse (EasyGov, SECO) ↗
-              </a>
+              {/* Doppellink-Dedup (Bug-Check NIEDRIG): SG verlinkt als
+                  «Verzeichnis» bereits EasyGov — Zweitweg dann weglassen. */}
+              {!(kantonsAemter?.aufloesung.modus === 'verzeichnis' && kantonsAemter.aufloesung.url.startsWith('https://www.easygov.swiss/')) && (
+                <a href={BETREIBUNGSAEMTER_VERZEICHNIS} target="_blank" rel="noreferrer" className="text-brass-700 underline text-body-s inline-block">
+                  Amtliche Suche nach Adresse (EasyGov, SECO) ↗
+                </a>
+              )}
             </div>
           </div>
 
