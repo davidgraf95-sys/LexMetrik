@@ -340,7 +340,7 @@ export function VorlageKlageVereinfacht() {
 
   return (
     <VorlagenWizardRahmen
-      zurueckHref="/pro"
+      zurueckHref="/"
       overline={`${card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · Basel-Stadt`}
       titel="Klage im vereinfachten Verfahren"
       intro="Erstellt die Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren, Streitgegenstand, freiwillige strukturierte Begründung, Beilagen mit Klagebewilligung — inkl. BS-Routing (Zivil-/Arbeitsgericht), Kostenfreiheits-Prüfung und Klagefrist-Berechnung mit Gerichtsferien. Ohne Sprachmodell."

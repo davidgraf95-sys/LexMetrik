@@ -305,6 +305,10 @@ export function VorlageAgGruendung() {
 
   const mappe = useMemo(() => agDokumentmappe(antworten), [antworten]);
 
+  // Stufe 2 P1a: Beträge der qualifizierten Gründung sind Beträge in der
+  // KAPITALWÄHRUNG — die Feld-Labels führen den wirksamen Währungscode.
+  const wc = fremdwaehrung && (AG_FREMDWAEHRUNGEN as readonly string[]).includes(waehrung) ? waehrung : 'CHF';
+
   // Etappe 5/D23: FINMA-Wortprüfung über Firma + Zweck.
   const finmaTreffer = useMemo(
     () => FINMA_BEGRIFFE.filter((b) => b.muster.test(`${firma} ${zweck}`)).map((b) => b.begriff),
@@ -538,7 +542,7 @@ export function VorlageAgGruendung() {
         <Field label="Liberierung (%, 20–100; einbezahlt mind. CHF 50'000)">
           <input className={inputCls} inputMode="numeric" value={liberierung} onChange={(e) => setLiberierung(e.target.value)} />
         </Field>
-        <Field label="Ausgabebetrag je Aktie (leer = Nennwert; Agio nur bei Volliberierung)">
+        <Field label="Ausgabebetrag je Aktie (leer = Nennwert; ein Agio ist stets voll zu leisten)">
           <input className={inputCls} inputMode="numeric" value={ausgabebetrag} onChange={(e) => setAusgabebetrag(e.target.value)} placeholder="z. B. 1'200" />
         </Field>
       </div>
@@ -601,7 +605,7 @@ export function VorlageAgGruendung() {
                   onClick={() => setSacheinlagen((alt) => alt.filter((x) => x.key !== s.key))}>✕</button>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 items-end">
-                <Field label="Bewertung (CHF)">
+                <Field label={`Bewertung (${wc})`}>
                   <input className={inputCls} inputMode="numeric" value={s.wertChf}
                     onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, wertChf: e.target.value } : x))} />
                 </Field>
@@ -609,7 +613,7 @@ export function VorlageAgGruendung() {
                   <input className={inputCls} inputMode="numeric" value={s.aktienAnzahl}
                     onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, aktienAnzahl: e.target.value } : x))} />
                 </Field>
-                <Field label="Gutschrift (CHF, optional)">
+                <Field label={`Gutschrift (${wc}, optional)`}>
                   <input className={inputCls} inputMode="numeric" value={s.gutschriftChf}
                     onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, gutschriftChf: e.target.value } : x))} />
                 </Field>
@@ -629,11 +633,11 @@ export function VorlageAgGruendung() {
                     <input className={inputCls} value={s.cheNr}
                       onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, cheNr: e.target.value } : x))} />
                   </Field>
-                  <Field label="Aktiven (CHF)">
+                  <Field label={`Aktiven (${wc})`}>
                     <input className={inputCls} inputMode="numeric" value={s.aktivenChf}
                       onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, aktivenChf: e.target.value } : x))} />
                   </Field>
-                  <Field label="Passiven (CHF)">
+                  <Field label={`Passiven (${wc})`}>
                     <input className={inputCls} inputMode="numeric" value={s.passivenChf}
                       onChange={(e) => setSacheinlagen((alt) => alt.map((x) => x.key === s.key ? { ...x, passivenChf: e.target.value } : x))} />
                   </Field>
@@ -678,7 +682,7 @@ export function VorlageAgGruendung() {
                   <input className={inputCls} value={v.glaeubigerName}
                     onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, glaeubigerName: e.target.value } : x))} />
                 </Field>
-                <Field label="Forderung (CHF)">
+                <Field label={`Forderung (${wc})`}>
                   <input className={inputCls} inputMode="numeric" value={v.forderungChf}
                     onChange={(e) => setVerrechnungen((alt) => alt.map((x) => x.key === v.key ? { ...x, forderungChf: e.target.value } : x))} />
                 </Field>
@@ -713,7 +717,7 @@ export function VorlageAgGruendung() {
                   <input className={inputCls} value={v.beguenstigter}
                     onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, beguenstigter: e.target.value } : x))} />
                 </Field>
-                <Field label="Wert (CHF)">
+                <Field label={`Wert (${wc})`}>
                   <input className={inputCls} inputMode="numeric" value={v.wertChf}
                     onChange={(e) => setVorteile((alt) => alt.map((x) => x.key === v.key ? { ...x, wertChf: e.target.value } : x))} />
                 </Field>
@@ -1151,7 +1155,7 @@ export function VorlageAgGruendung() {
 
   return (
     <VorlagenWizardRahmen
-      zurueckHref="/pro"
+      zurueckHref="/"
       overline="Gesellschaftsrecht · Vorlage"
       titel="AG-Gründungsunterlagen"
       intro={

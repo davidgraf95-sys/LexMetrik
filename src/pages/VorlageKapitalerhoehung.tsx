@@ -97,7 +97,7 @@ export function VorlageKapitalerhoehung() {
 
   return (
     <div className="space-y-6">
-      <Link to="/pro" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
+      <Link to="/" className="inline-flex items-center gap-2 no-underline text-body-s font-medium text-brass-700 hover:text-brass-600">
         <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-line bg-surface">←</span>
         Zurück zum Katalog
       </Link>

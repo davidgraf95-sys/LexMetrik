@@ -1,6 +1,5 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { istProEingeloggt } from './lib/proSession';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
 import { ErrorBoundary } from './components/ErrorBoundary';
@@ -9,7 +8,6 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 // Erstbesuch lädt nur Shell + angefragte Seite, nicht alle Engines/Wizards.
 // Reine Ladezeitpunkt-Änderung (CLAUDE.md §6.4), keine Logik betroffen.
 const Startseite = lazy(() => import('./pages/Startseite').then((m) => ({ default: m.Startseite })));
-const Pro = lazy(() => import('./pages/Pro').then((m) => ({ default: m.Pro })));
 const RechnerKuendigung = lazy(() => import('./pages/RechnerKuendigung').then((m) => ({ default: m.RechnerKuendigung })));
 const RechnerZpo = lazy(() => import('./pages/RechnerZpo').then((m) => ({ default: m.RechnerZpo })));
 const RechnerVerzugszins = lazy(() => import('./pages/RechnerVerzugszins').then((m) => ({ default: m.RechnerVerzugszins })));
@@ -48,16 +46,14 @@ const Kontakt = lazy(() => import('./pages/Kontakt').then((m) => ({ default: m.K
 const Datenschutz = lazy(() => import('./pages/Datenschutz').then((m) => ({ default: m.Datenschutz })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
-// «/»: eingeloggte Pro-Nutzer landen direkt im Pro-Bereich (Sitzung
-// überlebt Neuladen); ausgeloggt ist Free der Default.
-function StartOderPro() {
-  return istProEingeloggt() ? <Navigate to="/pro" replace /> : <Startseite />;
-}
-
-// Alt-Route /fachpersonen → /pro: Redirect erhält ?modus= (Suchstring).
-function FachpersonenRedirect() {
+// Alt-Routen der aufgehobenen Free/Pro-Zweiteilung (FAHRPLAN-EINE-HAUPTSEITE
+// E2, Auftrag David 7.6.2026): /pro, /fachpersonen, /rechner → «/».
+// DAUERHAFT, kein Übergangs-Provisorium — alte Permalinks (?gebiet=, ?q=,
+// ?modus=) und versendete .ics-Kalenderlinks tragen die alten Pfade; der
+// Suchstring bleibt deshalb erhalten.
+function AltRouteRedirect() {
   const { search } = useLocation();
-  return <Navigate to={`/pro${search}`} replace />;
+  return <Navigate to={`/${search}`} replace />;
 }
 
 // SPA-Scroll-Reset: Beim Routenwechsel nach oben scrollen (sonst behält die
@@ -84,11 +80,11 @@ export default function App() {
           <p className="text-body-s text-ink-500">Wird geladen …</p>
         </div>}>
       <Routes>
-        <Route path="/" element={<StartOderPro />} />
-        <Route path="/pro" element={<Pro />} />
-        {/* Alt-Routen: /fachpersonen → /pro (erhält ?modus=); /rechner → /pro */}
-        <Route path="/fachpersonen" element={<FachpersonenRedirect />} />
-        <Route path="/rechner" element={<Navigate to="/pro" replace />} />
+        <Route path="/" element={<Startseite />} />
+        {/* Alt-Routen (Free/Pro aufgehoben): alle auf die eine Hauptseite */}
+        <Route path="/pro" element={<AltRouteRedirect />} />
+        <Route path="/fachpersonen" element={<AltRouteRedirect />} />
+        <Route path="/rechner" element={<AltRouteRedirect />} />
         <Route path="/rechner/kuendigung" element={<RechnerKuendigung />} />
         <Route path="/rechner/zpo-fristen" element={<RechnerZpo />} />
         <Route path="/rechner/verzugszins" element={<RechnerVerzugszins />} />

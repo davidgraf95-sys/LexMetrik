@@ -16,7 +16,6 @@ import { VorlageGmbhGruendung } from '../src/pages/VorlageGmbhGruendung';
 import { VorlageAgGruendung } from '../src/pages/VorlageAgGruendung';
 import { VorlageKapitalerhoehung } from '../src/pages/VorlageKapitalerhoehung';
 import { Startseite } from '../src/pages/Startseite';
-import { Pro } from '../src/pages/Pro';
 import { Kontakt } from '../src/pages/Kontakt';
 import { Datenschutz } from '../src/pages/Datenschutz';
 import { RechnerVerzugszins } from '../src/pages/RechnerVerzugszins';
@@ -36,7 +35,6 @@ import { RechnerGebvKosten } from '../src/pages/RechnerGebvKosten';
 
 const SEITEN: [string, React.ComponentType][] = [
   ['Startseite', Startseite],
-  ['Pro', Pro],
   ['Kontakt', Kontakt],
   ['Datenschutz', Datenschutz],
   ['VorlageTestament', VorlageTestament],

@@ -32,7 +32,7 @@ export function RechnerKopf({ calc, kategorieOverride, kurzbeschriebOverride, no
         </Link>
         <span aria-hidden className="h-4 w-px bg-line-strong shrink-0" />
         <span className="lc-overline text-ink-500 normal-case truncate" style={{ letterSpacing: '0.04em' }}>
-          <Link to="/pro" className="no-underline text-ink-500 hover:text-ink-600">Katalog</Link>
+          <Link to="/" className="no-underline text-ink-500 hover:text-ink-600">Katalog</Link>
           <span className="mx-1.5">/</span>
           <span className="text-ink-500">{calc.titel}</span>
         </span>
