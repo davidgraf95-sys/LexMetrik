@@ -322,13 +322,6 @@ const KARTEN: Record<string, CalculatorCard> = {
     description: 'Einsprache- und Beschwerdefristen im Verwaltungs- und Steuerverfahren – nicht eidgenössisch vereinheitlicht; kantonale Vielfalt wird gekennzeichnet.',
     status: 'geplant', norms: [],
   },
-  strafverfahren: {
-    id: 'strafverfahren', modus: 'rechner', art: 'frist', rechtsgebiet: 'Strafrecht & Strafprozess',
-    rechtsbereich: 'straf',
-    title: 'StPO-Fristen',
-    description: 'Einsprache gegen Strafbefehl und Rechtsmittelfristen – eigene Fristmechanik ohne Gerichtsferien-Stillstand.',
-    status: 'geplant', norms: [],
-  },
   sozialversicherung: {
     id: 'sozialversicherung', modus: 'rechner', art: 'frist', rechtsgebiet: 'Sozialversicherungsrecht',
     rechtsbereich: 'oeffentlich',
@@ -420,25 +413,11 @@ const KARTEN: Record<string, CalculatorCard> = {
     description: 'Beschwerdefristen ans Bundesgericht in Zivil-, Straf- und öffentlich-rechtlichen Sachen, inkl. Stillstand.',
     status: 'geplant', norms: [],
   },
-  strafantrag: {
-    id: 'strafantrag', modus: 'rechner', art: 'frist', rechtsgebiet: 'Strafrecht & Strafprozess',
-    rechtsbereich: 'straf',
-    title: 'Strafantragsfrist',
-    description: 'Frist zur Stellung des Strafantrags bei Antragsdelikten.',
-    status: 'geplant', norms: [], related: ['strafanzeige', 'strafantrag-vorlage'],
-  },
   'straf-verjaehrung': {
     id: 'straf-verjaehrung', modus: 'rechner', art: 'frist', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
     title: 'Strafrechtliche Verjährung',
     description: 'Verfolgungs- und Vollstreckungsverjährung nach Strafrahmen.',
-    status: 'geplant', norms: [],
-  },
-  bauhandwerkerpfandrecht: {
-    id: 'bauhandwerkerpfandrecht', modus: 'rechner', art: 'frist', rechtsgebiet: 'Weitere Rechtsgebiete',
-    rechtsbereich: 'privat',
-    title: 'Bauhandwerkerpfandrecht – Eintragungsfrist',
-    description: 'Frist zur Eintragung des gesetzlichen Bauhandwerkerpfandrechts.',
     status: 'geplant', norms: [],
   },
 
@@ -778,15 +757,6 @@ const KARTEN: Record<string, CalculatorCard> = {
     related: ['verzugszins', 'verjaehrung'],
     keywords: ['Schadenszins', 'Schadenersatz', 'Zins'],
   },
-  'widerruf-konsum': {
-    id: 'widerruf-konsum', modus: 'rechner', art: 'frist', rechtsgebiet: 'Vertrag & Forderung (OR)',
-    rechtsbereich: 'privat',
-    title: 'Widerrufsrechte (Konsum)',
-    description: 'Widerrufsfristen bei Konsumgeschäften – Beginn, Dauer und Form.',
-    status: 'geplant', norms: [],
-    related: ['verjaehrung'],
-    keywords: ['Widerruf', 'Konsumkredit', 'Haustürgeschäft'],
-  },
 
   // – Familienrecht —
   'gueterrecht-vorschlag': {
@@ -863,15 +833,6 @@ const KARTEN: Record<string, CalculatorCard> = {
   },
 
   // – Strafrecht & Strafprozess —
-  haftfristen: {
-    id: 'haftfristen', modus: 'rechner', art: 'frist', rechtsgebiet: 'Strafrecht & Strafprozess',
-    rechtsbereich: 'straf',
-    title: 'Haftfristen',
-    description: 'Fristen rund um Untersuchungs- und Sicherheitshaft.',
-    status: 'geplant', norms: [],
-    related: ['strafverfahren'],
-    keywords: ['Haft', 'Untersuchungshaft', 'Haftverlängerung'],
-  },
 
   // – Verwaltungsrecht —
   'baurecht-fristen': {
@@ -1522,19 +1483,12 @@ const VORLAGEN: Record<string, VorlageCard> = {
     id: 'mahnung', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
     title: 'Mahnung',
+    // §0-Mehrwert-Test 7.6.2026: «Inverzugsetzung» war eine Karten-Dublette
+    // desselben Schreibens (Art. 102 OR) — hier als Variante geführt.
     description: 'Zahlungsaufforderung mit Fristansetzung.',
     status: 'geplant', norms: [],
-    related: ['verzugszins', 'inverzugsetzung'],
+    related: ['verzugszins'],
     keywords: ['Mahnung', 'Zahlungsverzug', 'Frist'],
-  },
-  inverzugsetzung: {
-    id: 'inverzugsetzung', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Vertrag & Forderung (OR)',
-    rechtsbereich: 'privat',
-    title: 'Inverzugsetzung',
-    description: 'Erklärung, die die Schuldnerin oder den Schuldner in Verzug setzt.',
-    status: 'geplant', norms: [],
-    related: ['verzugszins', 'mahnung'],
-    keywords: ['Verzug', 'Mahnung'],
   },
   schuldanerkennung: {
     id: 'schuldanerkennung', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Vertrag & Forderung (OR)',
@@ -1647,7 +1601,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Strafanzeige',
     description: 'Anzeige eines Sachverhalts an die Strafverfolgungsbehörden.',
     status: 'geplant', norms: [],
-    related: ['strafantrag-vorlage', 'strafantrag'],
+    related: ['strafantrag-vorlage', 'zustaendigkeit'],
     keywords: ['Anzeige', 'Staatsanwaltschaft'],
   },
   'strafantrag-vorlage': {
@@ -1656,7 +1610,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Strafantrag',
     description: 'Strafantrag der berechtigten Person bei Antragsdelikten.',
     status: 'geplant', norms: [],
-    related: ['strafanzeige', 'strafantrag'],
+    related: ['strafanzeige', 'zustaendigkeit'],
     keywords: ['Strafantrag', 'Antragsdelikt'],
   },
   akteneinsichtsgesuch: {
@@ -1665,7 +1619,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Akteneinsichtsgesuch',
     description: 'Gesuch um Einsicht in die Verfahrensakten.',
     status: 'geplant', norms: [],
-    related: ['strafverfahren'],
+    related: ['zustaendigkeit'],
     keywords: ['Akteneinsicht', 'Verfahrensakten'],
   },
   entschaedigungsbegehren: {
@@ -1674,7 +1628,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Entschädigungsbegehren',
     description: 'Strukturiertes Gerüst für Entschädigungs- und Genugtuungsbegehren im Strafverfahren.',
     status: 'geplant', norms: [],
-    related: ['strafverfahren', 'adhaesionsklage'],
+    related: ['zustaendigkeit', 'adhaesionsklage'],
     keywords: ['Entschädigung', 'Genugtuung'],
   },
   adhaesionsklage: {
@@ -1683,7 +1637,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     title: 'Adhäsionsklage',
     description: 'Strukturiertes Gerüst für Zivilansprüche im Strafverfahren.',
     status: 'geplant', norms: [],
-    related: ['strafverfahren', 'entschaedigungsbegehren'],
+    related: ['zustaendigkeit', 'entschaedigungsbegehren'],
     keywords: ['Adhäsion', 'Zivilanspruch'],
   },
 

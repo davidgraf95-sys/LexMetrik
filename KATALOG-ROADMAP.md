@@ -4,6 +4,42 @@ Geplante **Rechner und Vorlagen**, gegliedert nach Rechtsgebiet (beide Modi geme
 
 **Legende:** `[live]` geschaltet · `(free)` Free-Stufe · `[Beurkundung]` öffentliche Beurkundung nötig · `[Gerüst]` nur strukturiertes Gerüst (Würdigungsanteil). Ohne Markierung: geplant, Pro.
 
+## §0-Mehrwert-Test (Daueranweisung David 7.6.2026 — HANDLUNGSPLAN §0)
+
+Geplant wird nur, was ein EIGENES Regime hat (Stillstand, Sonderunter-
+brechung, abweichende Berechnungsregeln, eigene Tarif-/Datenschicht).
+**Triage 7.6.2026 (Agent, Normen am Fedlex-Cache verbatim verifiziert):**
+
+**GESTRICHEN (Tagerechner/bestehendes Werkzeug deckt ab):**
+- *Strafverfahrensfristen* + *Haftfristen* — Art. 89 Abs. 2 StPO: «Im
+  Strafverfahren gibt es keine Gerichtsferien»; Art. 90 = generische
+  Mechanik (Davids Beispiel). → Tagerechner-Presets (Einsprache
+  Strafbefehl 10 T., Berufung 20 T.).
+- *Strafantragsfrist* (Rechner) — Art. 31 StGB: 3 Monate ab Kenntnis,
+  kein Stillstand. → Tagerechner-Preset; die VORLAGE Strafantrag bleibt.
+- *Bauhandwerkerpfandrecht* — Art. 839 Abs. 2 ZGB: 4 Monate ab
+  Vollendung, fix. → Tagerechner-Preset.
+- *Widerrufsrechte/Konsum* — Art. 40e Abs. 2 OR: 14 Tage, kein
+  Sonderregime (Fristbeginn-Gate = Hinweis, kein Rechenregime).
+  → Tagerechner-Preset mit Beginn-Notiz.
+- *Inverzugsetzung* — Karten-Dublette der Mahnung (dasselbe Schreiben,
+  Art. 102 OR). → Variante der Mahnungs-Vorlage.
+
+**BLEIBT mit verifiziertem Eigen-Regime (Auswahl):** BGG-Fristen
+(Art. 46 BGG eigener Stillstand + Ausnahmenkatalog) · Verwaltungs-/
+Steuerverfahren (Art. 22a VwVG Stillstand nur Tagesfristen) ·
+Sozialversicherung (Art. 38 Abs. 4 ATSG: Stillstand auch für
+MONATS-Fristen — breiter als VwVG!) · strafrechtliche Verjährung
+(Art. 97 ff. StGB strafrahmenabhängig, eigene Beginn-/Ruhensregeln).
+
+**OFFEN (Regime-Recherche vor Bau/Streichung):** steuer-verjaehrung
+(DBG 120 II/III eigene Stillstands-/Unterbrechungsregeln — NICHT mit
+dem Verfahrens-Rechner verwechseln) · markenwiderspruch (MSchG 31 am
+Cache nicht verifizierbar — ELI klären) · vergabe-fristen (22a II VwVG
+nimmt Beschaffungen vom Stillstand AUS; kantonale IVöB-Lage) ·
+baurecht-fristen (kantonale Sonderstillstände?) · schadenszins als
+Verzugszins-Preset? · ferien-checker in ferien-assistent falten?
+
 ---
 
 ## Zivilprozess (ZPO) & Bundesgericht
@@ -23,8 +59,8 @@ Geplante **Rechner und Vorlagen**, gegliedert nach Rechtsgebiet (beide Modi geme
 **Vorlagen:** Mietvertrag (Wohnen)
 
 ## Vertrag & Forderung (OR)
-**Rechner:** Verzugszins `[live]` `(free)` · Schadenszins · Verjährung · Gewährleistung & Mängelrüge (Frist) · Widerrufsrechte/Konsum (Frist)
-**Vorlagen:** Darlehensvertrag · einfacher Kaufvertrag · Mahnung `(free)` · Inverzugsetzung · Schuldanerkennung · Vergleichsvereinbarung `[Gerüst]`
+**Rechner:** Verzugszins `[live]` `(free)` · Schadenszins (§0: evtl. Verzugszins-Preset, offen) · Verjährung `[live]` · Gewährleistung & Mängelrüge `[live]` — ~~Widerrufsrechte/Konsum~~ §0-gestrichen (Art. 40e II OR: 14 T. fix → Tagerechner-Preset)
+**Vorlagen:** Darlehensvertrag · einfacher Kaufvertrag · Mahnung `(free)` (inkl. Variante Inverzugsetzung — Dublette §0-aufgelöst) · Schuldanerkennung · Vergleichsvereinbarung `[Gerüst]`
 
 ## Erbrecht
 **Rechner:** Pflichtteil & verfügbare Quote `[live]` · Ausgleichung · Ausschlagung/Herabsetzung/Ungültigkeit (Fristen)
@@ -43,7 +79,7 @@ Geplante **Rechner und Vorlagen**, gegliedert nach Rechtsgebiet (beide Modi geme
 **Vorlagen:** GmbH-Gründung `[Beurkundung]` · AG-Gründung `[Beurkundung]` · Statuten · GV-/VR-Beschluss
 
 ## Strafrecht & Strafprozess (StGB/StPO)
-**Rechner:** Strafverfahrensfristen · Haftfristen · Strafantragsfrist · strafrechtliche Verjährung · örtliche Zuständigkeit im Strafverfahren
+**Rechner:** strafrechtliche Verjährung (Art. 97 ff. StGB, eigenes Regime) · örtliche Zuständigkeit im Strafverfahren `[live]` — ~~Strafverfahrens-/Haft-/Strafantragsfristen~~ §0-gestrichen (Art. 89 II StPO: keine Gerichtsferien → Tagerechner-Presets)
 **Vorlagen:** Strafanzeige · Strafantrag · Einsprache gegen Strafbefehl · Akteneinsichtsgesuch · Entschädigungsbegehren `[Gerüst]` · Adhäsionsklage `[Gerüst]`
 
 ## Verwaltungsrecht
@@ -68,7 +104,7 @@ Geplante **Rechner und Vorlagen**, gegliedert nach Rechtsgebiet (beide Modi geme
 
 ## Weitere Rechtsgebiete
 - **Immaterialgüterrecht** — Rechner: Markenwiderspruch (Frist)
-- **Sachenrecht** — Rechner: Bauhandwerkerpfandrecht (Eintragungsfrist)
+- **Sachenrecht** — ~~Bauhandwerkerpfandrecht~~ §0-gestrichen (Art. 839 II ZGB: 4 Monate fix → Tagerechner-Preset)
 - **Übergreifend** — Rechner: Klagebewilligung (Geltungsdauer)
 
 ## Übergreifende Werkzeuge (keinem Rechtsgebiet zugeordnet)
