@@ -107,6 +107,70 @@ describe('AG-Statuten — Rechtsstand', () => {
   });
 });
 
+describe('AG-Statuten — Lang-Stufe (Etappe 1/D18)', () => {
+  it('Lang: vollständige Artikelfolge nach amtlicher ZH-Langvorlage', () => {
+    const m = agDokumentmappe({ ...BASIS, statutenUmfang: 'lang', vinkulierung: true });
+    const u = m.dokumente[0].ergebnis.dokument.absaetze.map((a) => a.ueberschrift).filter(Boolean);
+    expect(u).toEqual([
+      'Art. 1 – Firma und Sitz',
+      'Art. 2 – Zweck',
+      'Art. 3 – Aktienkapital und Aktien',
+      'Art. 4 – Aktienzertifikate',
+      'Art. 5 – Zerlegung und Zusammenlegung von Aktien',
+      'Art. 6 – Aktienbuch',
+      'Art. 7 – Übertragung der Aktien',
+      'Art. 8 – Befugnisse der Generalversammlung',
+      'Art. 9 – Einberufung und Traktandierung',
+      'Art. 10 – Beschlussfassungsarten der Aktionäre',
+      'Art. 11 – Generalversammlung mit Tagungsort',
+      'Art. 12 – Vorsitz und Protokoll',
+      'Art. 13 – Protokollierung von schriftlichen Beschlüssen der Aktionäre',
+      'Art. 14 – Stimmrecht und Vertretung',
+      'Art. 15 – Beschlussfassung',
+      'Art. 16 – Wahl und Zusammensetzung des Verwaltungsrates',
+      'Art. 17 – Sitzungen und Beschlussfassung des Verwaltungsrates',
+      'Art. 18 – Protokollierung von Beschlüssen des Verwaltungsrates',
+      'Art. 19 – Recht auf Auskunft und Einsicht',
+      'Art. 20 – Aufgaben des Verwaltungsrates',
+      'Art. 21 – Übertragung der Geschäftsführung und der Vertretung',
+      'Art. 22 – Revision',
+      'Art. 23 – Anforderungen an die Revisionsstelle',
+      'Art. 24 – Geschäftsjahr und Buchführung',
+      'Art. 25 – Reserven und Gewinnverwendung',
+      'Art. 26 – Auflösung und Liquidation',
+      'Art. 27 – Mitteilungen',
+    ]);
+  });
+
+  it('Lang: virtueller GV-Artikel nur mit Weiche; Binnenverweise nummerierungsfest', () => {
+    const ohne = text(agDokumentmappe({ ...BASIS, statutenUmfang: 'lang' }), 'statuten');
+    expect(ohne).not.toContain('Generalversammlung ohne Tagungsort');
+    expect(ohne).toContain('gemäss dem vorstehenden Artikel');       // statt ZH «nach Artikel 23»
+    expect(ohne).toContain('die Beschlüsse über die Genehmigung der Jahresrechnung'); // statt ZH «Art. 8 Ziff. 3 bis 6»
+    expect(ohne).not.toContain('Ziff. 3 bis 6');
+
+    const mit = text(agDokumentmappe({ ...BASIS, statutenUmfang: 'lang', virtuelleGv: true }), 'statuten');
+    expect(mit).toContain('Eine Generalversammlung kann mit elektronischen Mitteln ohne Tagungsort durchgeführt werden.');
+    expect(mit).toContain('im Einzelfall auf die Bezeichnung einer unabhängigen Stimmrechtsvertretung verzichten');
+  });
+
+  it('Lang: 704-Katalog rev. (Währungswechsel, Kapitalband, Schiedsklausel) + Zustimmung ALLER bei Zusammenlegung (623 II)', () => {
+    const t = text(agDokumentmappe({ ...BASIS, statutenUmfang: 'lang' }), 'statuten');
+    expect(t).toContain('den Wechsel der Währung des Aktienkapitals');
+    expect(t).toContain('die Einführung eines bedingten Kapitals oder die Einführung eines Kapitalbands');
+    expect(t).toContain('die Einführung einer statutarischen Schiedsklausel');
+    expect(t).toContain('die Zusammenlegung bedarf der Zustimmung aller betroffenen Aktionäre');
+    expect(t).toContain('die Einreichung eines Gesuchs um Nachlassstundung und die Benachrichtigung des Gerichts im Falle der Überschuldung');
+  });
+
+  it('Kurz bleibt Teilmenge: keine Lang-Artikel ohne Schalter', () => {
+    const t = text(agDokumentmappe(BASIS), 'statuten');
+    expect(t).not.toContain('Aktienzertifikate');
+    expect(t).not.toContain('unübertragbare Befugnisse');
+    expect(t).not.toContain('Anforderungen an die Revisionsstelle');
+  });
+});
+
 describe('AG-Statuten — Norm-Anker-Regressionsschutz', () => {
   it('virtuelle GV zitiert Art. 701d OR (Review H-1)', () => {
     const m = agDokumentmappe({ ...BASIS, virtuelleGv: true });

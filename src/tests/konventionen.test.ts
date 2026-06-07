@@ -105,7 +105,7 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       weitereVertretungen: [{ name: 'C', funktion: 'Direktor', zeichnungsArt: 'kollektivprokura' }],
       domizilhalterName: 'D AG', domizilhalterAdresse: 'X 1, 8000 Zürich',
       revisionsstelleName: 'R AG', revisionsstelleSitz: 'Zürich',
-      vinkulierung: true, virtuelleGv: true,
+      vinkulierung: true, virtuelleGv: true, statutenUmfang: 'lang',
       sitzungBeginn: '11.00', sitzungEnde: '11.30',
       nachtragsbevollmaechtigter: 'N. Muster, 1.1.1990, von Chur, Weg 1, 7000 Chur',
       ort: 'Zürich', datum: '2026-06-15',

@@ -15,6 +15,9 @@ const QUELLEN = [
   'src/data/zustaendigkeitKosten.ts',
   // Gründungs-Masken GmbH/AG (6.6.2026) — HRegV-/StG-Zitate
   'src/lib/gruendungsunterlagen.ts',
+  // AG-Volldokumente (Etappe 0/1 der Komplett-Überarbeitung, 7.6.2026) —
+  // Statuten-/Urkunden-Bausteine zitieren OR + HRegV in text/norm/begruendung.
+  'src/lib/vorlagen/gruendungAgDokumente.ts',
 ];
 const CACHES: Record<string, string> = {
   ZPO: '/tmp/zpo.html', SchKG: '/tmp/schkg.html', StPO: '/tmp/stpo.html',

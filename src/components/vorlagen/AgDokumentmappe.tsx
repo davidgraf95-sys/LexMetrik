@@ -70,6 +70,7 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
   const [rsSitz, setRsSitz] = useState('');
   const [vinkulierung, setVinkulierung] = useState(false);
   const [virtuelleGv, setVirtuelleGv] = useState(false);
+  const [statutenUmfang, setStatutenUmfang] = useState<AgDokAntworten['statutenUmfang']>('kurz');
   const [gjBeginn, setGjBeginn] = useState(AG_DOK_DEFAULTS.gjBeginn);
   const [gjEnde, setGjEnde] = useState(AG_DOK_DEFAULTS.gjEnde);
   const [sitzungBeginn, setSitzungBeginn] = useState('');
@@ -94,12 +95,12 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
     bankName, bankOrt, rechtsdomizilAdresse: rechtsdomizil,
     domizilhalterName, domizilhalterAdresse,
     revisionsstelleName: rsName, revisionsstelleSitz: rsSitz,
-    vinkulierung, virtuelleGv, gjBeginn, gjEnde,
+    vinkulierung, virtuelleGv, statutenUmfang, gjBeginn, gjEnde,
     sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter, ort, datum,
   }), [weichen, firma, sitz, kanton, zweck, zweckErweiterung, ak, anzahl, nennwert, liberierung,
     gruender, vr, vertretungen, protokollfuehrer, bankName, bankOrt, rechtsdomizil,
     domizilhalterName, domizilhalterAdresse, rsName, rsSitz, vinkulierung, virtuelleGv,
-    gjBeginn, gjEnde, sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter, ort, datum]);
+    statutenUmfang, gjBeginn, gjEnde, sitzungBeginn, sitzungEnde, nachtragsbevollmaechtigter, ort, datum]);
 
   const mappe = useMemo(() => agDokumentmappe(antworten), [antworten]);
   const dok = mappe.dokumente.find((d) => d.id === aktivesDok) ?? mappe.dokumente[0];
@@ -348,6 +349,14 @@ export function AgDokumentmappe({ weichen, docxErlaubt }: {
         <label className="flex items-center gap-2">
           <input type="checkbox" checked={virtuelleGv} onChange={(e) => setVirtuelleGv(e.target.checked)} />
           Virtuelle/hybride Generalversammlung (Art. 701d OR)
+        </label>
+        <label className="flex items-center gap-2">
+          Statuten-Umfang:
+          <select className={inputCls} value={statutenUmfang}
+            onChange={(e) => setStatutenUmfang(e.target.value as AgDokAntworten['statutenUmfang'])}>
+            <option value="kurz">Kurzfassung (amtliche ZH-Kurzvorlage)</option>
+            <option value="lang">Langfassung (mit Organisations-Artikeln)</option>
+          </select>
         </label>
       </div>
 

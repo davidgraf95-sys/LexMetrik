@@ -26,36 +26,36 @@ Etappen-Abschluss. Push/Deploy nur nach Davids Ja.
 Die bisherigen Bausteine entstanden aus Web-Parsings; jetzt liegen die
 Originale vor. Kein Funktionsausbau, nur Präzisierung:
 
-- [ ] 0.1 **Singular-Urkunde** (D1): Numerus-Weiche bei genau einer
+- [x] 0.1 **Singular-Urkunde** (D1): Numerus-Weiche bei genau einer
   Gründerin/einem Gründer — Urkunde 3.5 als Wortlaut-Referenz
   («gründe ich», «Ich stelle fest», ein Unterschriftsblock).
   Gleiches Muster prüfen für: Wahlannahme-Adressat, Opting-out-Satz
   («Der Gründer erklärt …»).
-- [ ] 0.2 **VR-Protokoll formalia-fest** (D13/D14): Felder Sitzungs-Beginn/
+- [x] 0.2 **VR-Protokoll formalia-fest** (D13/D14): Felder Sitzungs-Beginn/
   -Ende (Uhrzeit), Abwesende (Anzahl-Feststellung), Feststellungssatz
   Einladung; Zeichnungsarten erweitern um `ohne` («ohne
   Zeichnungsberechtigung») und `kollektivprokura` (weitere
   Vertretungen) — Typ ist mit der GmbH geteilt (fachneutral), GmbH
   golden-byte-identisch halten oder Erweiterung nur AG-seitig labeln.
-- [ ] 0.3 **634b-Satz schärfen** (D6 Teil 2): «… die restliche und
+- [x] 0.3 **634b-Satz schärfen** (D6 Teil 2): «… die restliche und
   vollständige Leistung seiner Einlage im Sinne von Art. 634b OR sofort
   zu erbringen» (ZH verbatim; bisher ohne «sofort»/Normzitat im Satz).
-- [ ] 0.4 **Nachtragsvollmacht ZH-konform** (D10): optional + EINE benannte
+- [x] 0.4 **Nachtragsvollmacht ZH-konform** (D10): optional + EINE benannte
   Person mit vollen Personalien (Feld), statt pauschal jeder
   Gründer/VR; Default AUS (ZH: «Auf Verlangen der Gründer»).
-- [ ] 0.5 **Statuten kurz ergänzen** (D19): Geschäftsjahr-Artikel
+- [x] 0.5 **Statuten kurz ergänzen** (D19): Geschäftsjahr-Artikel
   (Beginn/Ende, Art. 957 ff.; «erstmals am» optional) +
   Beschlussfassungsarten-Artikel (vor Ort/hybrid/virtuell + schriftliche
   Beschlussfassung Art. 701 Abs. 3 OR) — beide in der amtlichen
   KURZ-Vorlage enthalten.
-- [ ] 0.6 **Wahlannahme Revisionsstelle** (D15): bei `!optingOut` je
+- [x] 0.6 **Wahlannahme Revisionsstelle** (D15): bei `!optingOut` je
   Revisionsstelle eine Erklärung in die Mappe (Checkliste kennt
   `wahlannahme-rs` bereits — nur Dokument fehlt).
-- [ ] 0.7 **HR-Anmeldung ergänzen** (D17): Beilagen-Zeile «Ausweiskopien
+- [x] 0.7 **HR-Anmeldung ergänzen** (D17): Beilagen-Zeile «Ausweiskopien
   aller einzutragenden Personen (Art. 24a HRegV, nicht öffentlich, lose
   beilegen)»; Hinweis «Anmeldung zwingend auf Deutsch»;
   Vollmacht-Drittperson-Hinweis (Kopie genügt).
-- [ ] 0.8 Bug-Check §9 über Etappe 0; Golden-Stand NEU schreiben
+- [x] 0.8 Bug-Check §9 über Etappe 0; Golden-Stand NEU schreiben
   (deklarierte fachliche Änderungen).
 
 ## Etappe 1 — Statuten-Stufen kurz/lang (D18)
