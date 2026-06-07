@@ -74,6 +74,8 @@ export function KuendigungSperrForm() {
   // PDF: Kündigungs-/Sperrfristen-Disclaimer (GAV einschlägig, Lohnfortzahlungsskalen NICHT).
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
   const [aktenzeichen, setAktenzeichen] = useState('');
+  // Geteilte Permalink-Closure für «Link teilen» UND Kalender-Eintrag (§5).
+  const kspQuery = () => permalinkKodieren(KSP_LINK_SPEC, form as SperrfristenInput & Record<string, unknown>);
   const pdfConfig: PdfDocConfig = {
     aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Kündigungs- und Sperrfristen',
@@ -246,14 +248,16 @@ export function KuendigungSperrForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={() => permalinkKodieren(KSP_LINK_SPEC, form as SperrfristenInput & Record<string, unknown>)} />
+            <LinkTeilenButton query={kspQuery} />
             {gesamt.status === 'nichtig'
               /* «Frühestens neu kündbar» = FRÜHESTMÖGLICHER Termin: keine
                  3-Tage-VORfrist-Erinnerung (richtungsverkehrt, Nichtigkeits-
                  risiko 336c — Code-Review #2, 7.6.2026) → vorfristTage 0. */
               ? <IcsExportButton endISO={gesamt.fruehesteNeueKuendigungISO} titel="Frühestens neu kündbar (Art. 336c OR)"
+                  aktenzeichen={aktenzeichen} query={kspQuery}
                   vorfristTage={0} beschreibung={gesamt.ergebnis} dateiName="Neue-Kuendigung-fruehestens.ics" />
               : <IcsExportButton endISO={gesamt.beendigungISO} titel="Beendigung Arbeitsverhältnis"
+                  aktenzeichen={aktenzeichen} query={kspQuery}
                   beschreibung={gesamt.ergebnis} dateiName="Beendigung-Arbeitsverhaeltnis.ics" />}
             {/* Brücke 3.1d: Beendigungsdatum (inkl. Sperrfristen-Verschiebung!)
                 als Anker in den Fristenspiegel — 336b-Einsprache/Klagefrist */}

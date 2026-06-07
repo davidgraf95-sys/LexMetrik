@@ -312,6 +312,12 @@ export function MietrechtForm() {
               formular, familienwohnung, separat, zustimmung, zaZugang: zaZugang || undefined,
             })} />
             <IcsExportButton endISO={ergebnis.endterminISO} titel="Mietende (Kündigungstermin)"
+              aktenzeichen={aktenzeichen}
+              query={() => permalinkKodieren(MR_LINK_SPEC, {
+                art, objekt, partei, zugang, kanton, quelle, monate, ohneDez,
+                mietbeginn: mietbeginn || undefined, fristMonate: fristMonate || undefined,
+                formular, familienwohnung, separat, zustimmung, zaZugang: zaZugang || undefined,
+              })}
               beschreibung={ergebnis.ergebnis} dateiName="Mietende.ics" />
             {/* Brücke 3.1d: Vermieter-Kündigung an Wohn-/Geschäftsräumen →
                 Fristenspiegel (Anfechtung/Erstreckung parallel, vorbefüllt) */}

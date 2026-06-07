@@ -141,6 +141,12 @@ export function GewaehrleistungForm() {
 
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
   const [aktenzeichen, setAktenzeichen] = useState('');
+  // Geteilte Permalink-Closure für «Link teilen» UND Kalender-Eintrag (§5).
+  const gwQuery = () => permalinkKodieren(GW_LINK_SPEC, {
+    typ, vertragsdatum, objekt, uebergabe, eigentumserwerb: eigentumserwerb || undefined,
+    mangelTyp, entdeckung: entdeckung || undefined, ruegeAm: ruegeAm || undefined,
+    arglist, konsument, gebraucht, sia, vereinbart: vereinbart || undefined, kanton, stichtag,
+  });
   const pdfConfig: PdfDocConfig = {
     aktenzeichen: aktenzeichen.trim() || undefined,
     title: 'Gewährleistung & Mängelrüge (OR)',
@@ -304,14 +310,12 @@ export function GewaehrleistungForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={() => permalinkKodieren(GW_LINK_SPEC, {
-              typ, vertragsdatum, objekt, uebergabe, eigentumserwerb: eigentumserwerb || undefined,
-              mangelTyp, entdeckung: entdeckung || undefined, ruegeAm: ruegeAm || undefined,
-              arglist, konsument, gebraucht, sia, vereinbart: vereinbart || undefined, kanton, stichtag,
-            })} />
+            <LinkTeilenButton query={gwQuery} />
             <IcsExportButton endISO={ergebnis.ruege.endeISO} titel="Rügefrist-Ende (Mängelrüge)"
+              aktenzeichen={aktenzeichen} query={gwQuery}
               beschreibung={ergebnis.ergebnis} dateiName="Ruegefrist.ics" />
             <IcsExportButton endISO={ergebnis.verjaehrung.endeISO} titel="Verjährung Mängelrechte"
+              aktenzeichen={aktenzeichen} query={gwQuery}
               beschreibung={ergebnis.ergebnis} dateiName="Verjaehrung-Maengelrechte.ics" />
           </div>
         </div>

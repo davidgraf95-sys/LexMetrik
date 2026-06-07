@@ -282,7 +282,11 @@ describe('Fristenspiegel A.3: AG-Kündigung (Art. 336b OR) — Anker-Datum + 180
 });
 
 describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
-  it('icsFuerFrist ist nach der Helfer-Hebung BYTE-IDENTISCH (Anker vor dem Umbau erfasst)', () => {
+  // DEKLARIERTE Darstellungs-Änderung 7.6.2026 (Auftrag David, bessere
+  // Kalender-Beschriftung): zentrale Fusszeile in DESCRIPTION, Vorfrist-Alarm
+  // nennt die Vorlaufzeit. Der Anker wurde neu erfasst; UID/SUMMARY ohne
+  // Aktenzeichen sind UNVERÄNDERT zum 3.1b-Stand (separat geprüft unten).
+  it('icsFuerFrist: Byte-Anker der Kalender-Beschriftung (Stand 7.6.2026)', () => {
     const out = icsFuerFrist({
       titel: 'Berufung; Frist, läuft\nab',
       endISO: '2026-07-07',
@@ -290,8 +294,37 @@ describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
       vorfristTage: 3,
     });
     expect(out).toBe(
-      'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//LexMetrik//Fristenrechner//DE\r\nCALSCALE:GREGORIAN\r\nBEGIN:VEVENT\r\nUID:frist-20260707-BerufungFristluftab@lexmetrik\r\nDTSTAMP:20260707T000000Z\r\nDTSTART;VALUE=DATE:20260707\r\nDTEND;VALUE=DATE:20260708\r\nSUMMARY:Berufung\\; Frist\\, läuft\\nab\r\nDESCRIPTION:Ein länger Text mit Umlauten äöü und Sonderzeichen \\;\\,\\\\ d\r\n er sicher über fünfundsiebzig Oktette hinausläuft\\, damit die Faltung g\r\n reift.\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:Vorfrist: Berufung\\; Frist\\, läuft\\nab\r\nTRIGGER:-P3D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n',
+      'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//LexMetrik//Fristenrechner//DE\r\nCALSCALE:GREGORIAN\r\nBEGIN:VEVENT\r\nUID:frist-20260707-BerufungFristluftab@lexmetrik\r\nDTSTAMP:20260707T000000Z\r\nDTSTART;VALUE=DATE:20260707\r\nDTEND;VALUE=DATE:20260708\r\nSUMMARY:Berufung\\; Frist\\, läuft\\nab\r\nDESCRIPTION:Ein länger Text mit Umlauten äöü und Sonderzeichen \\;\\,\\\\ d\r\n er sicher über fünfundsiebzig Oktette hinausläuft\\, damit die Faltung g\r\n reift.\\nBerechnet mit LexMetrik – automatisierte Orientierung\\, keine Re\r\n chtsberatung.\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:Vorfrist (3 Tage): Berufung\\; Frist\\, läuft\\nab\r\nTRIGGER:-P3D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n',
     );
+  });
+
+  it('Beschriftung: Aktenzeichen wandert in SUMMARY, DESCRIPTION und UID (kollisionsfrei je Mandat)', () => {
+    const basis = { titel: 'Fristende – Berufung', endISO: '2026-07-07', vorfristTage: 1 };
+    const a = icsFuerFrist({ ...basis, aktenzeichen: '2026-014 MUS' });
+    const b = icsFuerFrist({ ...basis, aktenzeichen: '2026-099 XYZ' });
+    expect(a).toContain('SUMMARY:Fristende – Berufung – 2026-014 MUS');
+    expect(a).toContain('Aktenzeichen: 2026-014 MUS');
+    expect(a).toContain('DESCRIPTION:Vorfrist (1 Tag): Fristende – Berufung – 2026-014 MUS');
+    // Zwei gleichnamige Fristen am selben Tag, verschiedene Mandate →
+    // VERSCHIEDENE UIDs (vorher: Kollision, Kalender dedupliziert stumm).
+    const uid = (ics: string) => ics.match(/UID:[^\r]+/)![0];
+    expect(uid(a)).not.toBe(uid(b));
+    // Ohne Aktenzeichen bleibt die UID auf dem 3.1b-Stand (Permalinks/Re-Importe stabil).
+    expect(uid(icsFuerFrist({ titel: 'Fristende – Berufung', endISO: '2026-07-07' })))
+      .toBe('UID:frist-20260707-FristendeBerufung@lexmetrik');
+  });
+
+  it('Beschriftung: Permalink als URL-Property (URI, unescaped) + Zeile in der Beschreibung; Fusszeile immer', () => {
+    const url = 'https://lexmetrik.vercel.app/rechner/zpo-fristen?e=2026-06-05&l=30';
+    const out = icsFuerFrist({ titel: 'Fristende', endISO: '2026-07-07', url });
+    expect(out).toContain('URL:https://lexmetrik.verce');
+    // URI-Property wird NICHT TEXT-escaped (kein \\, vor Kommas) — nur gefaltet.
+    const entfaltet = out.replace(/\r\n[ ]/g, '');
+    expect(entfaltet).toContain(`URL:${url}`);
+    expect(entfaltet).toContain(`Berechnung: ${url}`);
+    expect(entfaltet).toContain('Berechnet mit LexMetrik – automatisierte Orientierung\\, keine Rechtsberatung.');
+    // Ohne URL keine URL-Property
+    expect(icsFuerFrist({ titel: 'Fristende', endISO: '2026-07-07' })).not.toContain('URL:');
   });
 
   it('icsSammel: EIN VCALENDAR, n VEVENTs, deterministische UIDs, RFC-Faltung', () => {

@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Field, NormLink, inputCls } from '../vorlagen/ui';
 import { DatumsFeld } from '../DatumsFeld';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BetragsFeld } from '../BetragsFeld';
 import { IcsExportButton } from '../IcsExportButton';
 import { ladeIcs } from '../icsDownload';
@@ -39,6 +40,13 @@ const EREIGNISSE: { code: Ereignis; label: string }[] = [
 ];
 const EREIGNIS_CODES = EREIGNISSE.map((e) => e.code);
 
+function spiegelBeschreibung(z: SpiegelZeile): string {
+  return [
+    `${z.normRef} (${NATUR_LABEL[z.fristnatur]})`,
+    z.bedingung ? `Bedingung: ${z.bedingung}` : undefined,
+  ].filter((t): t is string => Boolean(t)).join('\n');
+}
+
 const NATUR_LABEL: Record<Fristnatur, string> = {
   gesetzlich: 'gesetzliche Frist', gerichtlich: 'gerichtliche Frist',
   verwirkung: 'Verwirkung', verjaehrung: 'Verjährung',
@@ -47,7 +55,7 @@ const NATUR_LABEL: Record<Fristnatur, string> = {
 
 // Norm-Chips über den GETEILTEN NormLink (Code-Review #6, 7.6.2026: die
 // frühere lokale NormPill-Kopie war der einzige Chip ohne Locale-Logik).
-function ZeileAnzeige({ z }: { z: SpiegelZeile }) {
+function ZeileAnzeige({ z, aktenzeichen, query }: { z: SpiegelZeile; aktenzeichen: string; query: () => string }) {
   return (
     <div className="px-4 py-3 grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-x-6 gap-y-2 sm:items-center">
       <div className="min-w-0 space-y-1">
@@ -67,7 +75,9 @@ function ZeileAnzeige({ z }: { z: SpiegelZeile }) {
                 (Deploy-Bug-Check 7.6.2026, NIEDRIG). */}
             <IcsExportButton endISO={z.endeISO} titel={z.label} className="lc-btn-outline lc-btn-sm"
               vorfristTage={z.fristnatur === 'wartefrist' ? 0 : 3}
-              dateiName={`${z.key}.ics`} beschreibung={`${z.normRef} — LexMetrik Fristenspiegel`} />
+              aktenzeichen={aktenzeichen} query={query}
+              dateiName={`${z.key}.ics`}
+              beschreibung={spiegelBeschreibung(z)} />
           </>
         ) : (
           <span className="lc-badge lc-badge-warn">
@@ -109,6 +119,10 @@ export function FristenspiegelForm() {
   const [mietOderPacht, setMietOderPacht] = useState<boolean>(start.mietOderPacht ?? false);
   const [erbenstellung, setErbenstellung] = useState<'gesetzlich' | 'eingesetzt'>(start.erbenstellung ?? 'gesetzlich');
 
+  // Mandats-Referenz für die Kalender-Einträge (Beschriftung 7.6.2026);
+  // bewusst NICHT im Permalink (bleibt im Browser, wie überall).
+  const [aktenzeichen, setAktenzeichen] = useState('');
+
   const ergebnis: FristenspiegelErgebnis | null = useMemo(() => {
     try {
       if (ereignis === 'vermieterkuendigung') {
@@ -135,11 +149,17 @@ export function FristenspiegelForm() {
 
   // Download über den geteilten Helfer (Code-Review #8); Wartefristen ohne
   // Vorfrist-Alarm — wie beim Einzel-Export (richtungsverkehrte Mahnung).
+  const spiegelQuery = () => permalinkKodieren(FSP_LINK_SPEC, linkWerte());
   const sammelIcs = () => {
     if (!ergebnis) return;
+    const url = `${location.origin}${location.pathname}${spiegelQuery()}`;
     const eintraege = ergebnis.zeilen
       .filter((z) => z.endeISO)
-      .map((z) => ({ titel: z.label, endISO: z.endeISO!, beschreibung: `${z.normRef} — LexMetrik Fristenspiegel`, vorfristTage: z.fristnatur === 'wartefrist' ? 0 : 3 }));
+      .map((z) => ({
+        titel: z.label, endISO: z.endeISO!, beschreibung: spiegelBeschreibung(z),
+        aktenzeichen: aktenzeichen.trim() || undefined, url,
+        vorfristTage: z.fristnatur === 'wartefrist' ? 0 : 3,
+      }));
     ladeIcs('Fristenspiegel.ics', icsSammel(eintraege));
   };
 
@@ -280,16 +300,17 @@ export function FristenspiegelForm() {
               <p className="lc-overline text-ink-500"><span className="num">{ergebnis.zeilen.length}</span> Zeilen</p>
             </div>
             <div className="divide-y divide-line">
-              {ergebnis.zeilen.map((z) => <ZeileAnzeige key={z.key} z={z} />)}
+              {ergebnis.zeilen.map((z) => <ZeileAnzeige key={z.key} z={z} aktenzeichen={aktenzeichen} query={spiegelQuery} />)}
             </div>
           </div>
 
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap gap-3">
             <button type="button" className="lc-btn-primary" onClick={sammelIcs}
               disabled={!ergebnis.zeilen.some((z) => z.endeISO)}>
               Alle Fristen als Kalender (.ics)
             </button>
-            <LinkTeilenButton query={() => permalinkKodieren(FSP_LINK_SPEC, linkWerte())} />
+            <LinkTeilenButton query={spiegelQuery} />
           </div>
 
           {ergebnis.warnungen.length > 0 && (

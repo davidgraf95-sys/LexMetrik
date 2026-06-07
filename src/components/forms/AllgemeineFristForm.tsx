@@ -270,8 +270,10 @@ export function AllgemeineFristForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
                 <PdfExportButton config={pdfConfig} />
                 <IcsExportButton endISO={ergebnis.resultat.endDatumISO}
-                  titel={`Fristende (${form.laenge} ${EINHEITEN.find((e) => e.code === form.einheit)?.label})`}
-                  beschreibung="Berechnet mit LexMetrik (Art. 77/78 OR) – Orientierung, keine Rechtsberatung." />
+                  titel={`Fristende – ${form.laenge} ${EINHEITEN.find((e) => e.code === form.einheit)?.label}`}
+                  aktenzeichen={aktenzeichen}
+                  query={() => `?${fristQueryKodieren(form)}`}
+                  beschreibung={`Fristende: ${ergebnis.ergebnis} (Art. 77/78 OR).`} />
                 <button type="button" className="lc-btn-ghost lc-btn-sm" onClick={linkKopieren}>
                   {kopiertLink ? 'Link kopiert ✓' : 'Link teilen'}
                 </button>
@@ -347,7 +349,8 @@ export function AllgemeineFristForm() {
               <ErgebnisAnzeige titel="Rückwärtsfrist – spätester Handlungstag" ergebnis={rueckErgebnis} />
               <div className="flex flex-wrap items-center gap-3">
                 <IcsExportButton endISO={rueckErgebnis.resultat.endDatumISO} titel="Spätester Handlungstag"
-                  beschreibung="Berechnet mit LexMetrik (Art. 77/78 OR) – Orientierung, keine Rechtsberatung." />
+                  aktenzeichen={aktenzeichen}
+                  beschreibung={`Spätester Handlungstag: ${rueckErgebnis.ergebnis} (Rückwärtsfrist, Art. 77/78 OR).`} />
               </div>
             </div>
           )}

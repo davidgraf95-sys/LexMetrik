@@ -143,6 +143,8 @@ export function ErbFristenForm() {
             <PdfExportButton config={pdfConfig} />
             <LinkTeilenButton query={() => permalinkKodieren(EF_LINK_SPEC, { key, trigger, verschieben, kanton })} />
             <IcsExportButton endISO={ergebnis.resultat.endDatumISO} titel={`Fristende – ${preset.label}`}
+              aktenzeichen={aktenzeichen}
+              query={() => permalinkKodieren(EF_LINK_SPEC, { key, trigger, verschieben, kanton })}
               beschreibung={ergebnis.ergebnis} dateiName="Erb-Frist.ics" />
           </div>
         </div>

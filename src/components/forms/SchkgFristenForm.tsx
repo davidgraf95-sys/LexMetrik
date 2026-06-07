@@ -367,6 +367,12 @@ export function SchkgFristenForm() {
                 />
                 <ErgebnisAnzeige titel={a.titel} ergebnis={e} />
                 <IcsExportButton endISO={e.diesAdQuemISO} titel={`Fristende – ${a.titel}`}
+                  aktenzeichen={aktenzeichen}
+                  query={() => permalinkKodieren(SCHKG_LINK_SPEC, {
+                    ...form, phase, presetKey: aktiv?.key, override: override || undefined,
+                    hemmungAn: hemmung.an, hemmungVon: hemmung.von || undefined, hemmungBis: hemmung.bis || undefined,
+                    rsAn: rechtsstillstand.an, rsVon: rechtsstillstand.von || undefined, rsBis: rechtsstillstand.bis || undefined,
+                  })}
                   beschreibung={e.ergebnis} dateiName="SchKG-Frist.ics" />
                 {/* Fristbeginn-Norm aus der Engine (§5): normverweise[1] ist
                     Art. 142 Abs. 1 (Tagesfrist) bzw. Abs. 2 (Monats-/Jahres-

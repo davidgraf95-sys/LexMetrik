@@ -10,7 +10,7 @@ export function AktenzeichenFeld({ value, onChange }: {
   onChange: (v: string) => void;
 }) {
   return (
-    <Field label="Aktenzeichen / Referenz" optional hint="erscheint auf dem PDF-Rechenbericht (bleibt im Browser)">
+    <Field label="Aktenzeichen / Referenz" optional hint="erscheint auf dem PDF-Rechenbericht und im Kalender-Eintrag (bleibt im Browser)">
       <input
         className={inputCls + ' sm:max-w-[18rem]'}
         value={value}

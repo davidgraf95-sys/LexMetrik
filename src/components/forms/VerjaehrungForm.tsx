@@ -334,7 +334,14 @@ export function VerjaehrungForm() {
               strafbar, stillstaende, unterbrechungen, verzichtAn,
               verzichtDatum: verzichtDatum || undefined, verzichtJahre: verzichtJahre || undefined,
             })} />
-            <IcsExportButton endISO={ergebnis.verjaehrungISO} titel="Verjährungseintritt"
+            <IcsExportButton endISO={ergebnis.verjaehrungISO}
+              titel={`Verjährungseintritt – ${(REGIMES.find((r) => r.code === regime)?.label ?? '').split(' – ')[0]}`}
+              aktenzeichen={aktenzeichen}
+              query={() => permalinkKodieren(VJ_LINK_SPEC, {
+                regime, beginnRelativ, beginnAbsolut: beginnAbsolut || undefined, stichtag, kanton,
+                strafbar, stillstaende, unterbrechungen, verzichtAn,
+                verzichtDatum: verzichtDatum || undefined, verzichtJahre: verzichtJahre || undefined,
+              })}
               beschreibung={ergebnis.ergebnis} dateiName="Verjaehrung.ics" />
           </div>
         </div>

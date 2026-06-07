@@ -12,8 +12,28 @@ import { formatISO } from './datumsUtils';
 // Etappe 3.1b (Fristenspiegel): esc/falte/VEVENT-Bau aus der Closure auf
 // Modulebene gehoben (§6, byte-identischer Einzel-Export — Anker-Test) und
 // icsSammel() ergänzt: MEHRERE VEVENTs in EINEM VCALENDAR (Sammel-Export).
+//
+// Beschriftungs-Überarbeitung (Auftrag David 7.6.2026, deklarierte
+// Darstellungs-Änderung): Aktenzeichen wandert in Titel, Beschreibung und
+// UID (zwei gleichnamige Fristen am selben Tag wurden sonst vom Kalender
+// als Duplikat verschluckt); Beschreibung strukturiert (Ergebnis-Satz +
+// Aktenzeichen + Permalink zur Berechnung + zentrale Fusszeile §8);
+// URL-Property nach RFC 5545 §3.8.4.6; Vorfrist-Alarm nennt die Vorlaufzeit.
 
-export type IcsFrist = { titel: string; endISO: string; beschreibung?: string; vorfristTage?: number };
+export type IcsFrist = {
+  titel: string;
+  endISO: string;
+  beschreibung?: string;
+  vorfristTage?: number;
+  /** Mandats-/Aktenzeichen — erscheint in Titel, Beschreibung und UID. */
+  aktenzeichen?: string;
+  /** Permalink zur Berechnung — URL-Property + Zeile in der Beschreibung. */
+  url?: string;
+};
+
+// Zentrale Fusszeile jedes Eintrags (§8) — die Formulare liefern nur noch
+// den fachlichen Kontext (Ergebnis-Satz, Norm), nie mehr eigene Disclaimer.
+const FUSSZEILE = 'Berechnet mit LexMetrik – automatisierte Orientierung, keine Rechtsberatung.';
 
 const esc = (t: string) => t.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
 
@@ -43,18 +63,31 @@ const falte = (zeile: string): string => {
 function veventZeilen(opts: IcsFrist): string[] {
   const kompakt = opts.endISO.replace(/-/g, '');
   const folgetag = formatISO(addDays(parseISO(opts.endISO), 1)).replace(/-/g, '');
+  const az = opts.aktenzeichen?.trim() || undefined;
+  const summary = az ? `${opts.titel} – ${az}` : opts.titel;
+  const beschreibung = [
+    opts.beschreibung,
+    az ? `Aktenzeichen: ${az}` : undefined,
+    opts.url ? `Berechnung: ${opts.url}` : undefined,
+    FUSSZEILE,
+  ].filter((z): z is string => Boolean(z)).join('\n');
+  const vorfrist = opts.vorfristTage ?? 0;
   return [
     'BEGIN:VEVENT',
     // Titel-Token kann bei rein nicht-lateinischen Titeln leer werden →
-    // deterministischer Fallback 'frist' (Review-Befund 6.6.2026, kosmetisch)
-    `UID:frist-${kompakt}-${opts.titel.replace(/\W+/g, '').slice(0, 24) || 'frist'}@lexmetrik`,
+    // deterministischer Fallback 'frist' (Review-Befund 6.6.2026, kosmetisch).
+    // UID aus dem VOLLEN Summary (inkl. Aktenzeichen): ohne Az byte-identisch
+    // zu vorher, mit Az kollisionsfrei je Mandat.
+    `UID:frist-${kompakt}-${summary.replace(/\W+/g, '').slice(0, 24) || 'frist'}@lexmetrik`,
     `DTSTAMP:${kompakt}T000000Z`,
     `DTSTART;VALUE=DATE:${kompakt}`,
     `DTEND;VALUE=DATE:${folgetag}`,
-    `SUMMARY:${esc(opts.titel)}`,
-    ...(opts.beschreibung ? [`DESCRIPTION:${esc(opts.beschreibung)}`] : []),
-    ...(opts.vorfristTage && opts.vorfristTage > 0
-      ? ['BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${esc(`Vorfrist: ${opts.titel}`)}`, `TRIGGER:-P${opts.vorfristTage}D`, 'END:VALARM']
+    `SUMMARY:${esc(summary)}`,
+    `DESCRIPTION:${esc(beschreibung)}`,
+    // URL ist Value-Typ URI (kein TEXT) — nicht escapen, nur falten.
+    ...(opts.url ? [`URL:${opts.url}`] : []),
+    ...(vorfrist > 0
+      ? ['BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${esc(`Vorfrist (${vorfrist === 1 ? '1 Tag' : `${vorfrist} Tage`}): ${summary}`)}`, `TRIGGER:-P${vorfrist}D`, 'END:VALARM']
       : []),
     'END:VEVENT',
   ];
