@@ -148,6 +148,25 @@ describe('Kapitalerhöhung — Gates', () => {
     expect(pruefeKeGates({ ...AG, fremdwaehrung: true }).blocker.join(' ')).toContain('CHF');
   });
 
+  it('Einzel-Zeichnungen nur als positive ganze Zahl (Review M-1: keine «3.5 Namenaktien»)', () => {
+    const bruch = pruefeKeGates({
+      ...AG,
+      zeichner: [
+        { name: 'A', angaben: '', anzahl: '3.5', bereitsBeteiligt: true },
+        { name: 'B', angaben: '', anzahl: '46.5', bereitsBeteiligt: true },
+      ],
+    });
+    expect(bruch.blocker.join(' ')).toContain('positive ganze Zahl');
+    const negativ = pruefeKeGates({
+      ...AG,
+      zeichner: [
+        { name: 'A', angaben: '', anzahl: '-5', bereitsBeteiligt: true },
+        { name: 'B', angaben: '', anzahl: '55', bereitsBeteiligt: true },
+      ],
+    });
+    expect(negativ.blocker.join(' ')).toContain('positive ganze Zahl');
+  });
+
   it('Arithmetik: Unter-pari gesperrt; Zeichnungs-Summe; bisheriges Kapital konsistent; GV-Datum Pflicht', () => {
     expect(pruefeKeGates({ ...AG, ausgabebetragChf: '999' }).blocker.join(' ')).toContain('Unter-pari');
     expect(pruefeKeGates({ ...AG, zeichner: [{ name: 'A', angaben: '', anzahl: '49', bereitsBeteiligt: true }] }).blocker.join(' ')).toContain('Art. 652g Abs. 1 Ziff. 1');

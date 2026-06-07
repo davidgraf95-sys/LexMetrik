@@ -84,6 +84,15 @@ describe('AG-Statuten — Rechtsstand', () => {
   });
 });
 
+describe('AG-Statuten — Norm-Anker-Regressionsschutz', () => {
+  it('virtuelle GV zitiert Art. 701d OR (Review H-1)', () => {
+    const m = agDokumentmappe({ ...BASIS, virtuelleGv: true });
+    const st = m.dokumente.find((d) => d.id === 'statuten')!;
+    const eintrag = st.ergebnis.protokoll.find((p) => p.bausteinId === 'AS13_virtuelle_gv');
+    expect(eintrag?.norm).toBe('Art. 701d OR');
+  });
+});
+
 describe('AG-Errichtungsakt — Feststellungen 629 II + Liberierungs-Varianten', () => {
   it('Volliberierung: Verpflichtungssatz (630) + alle 4 Feststellungen + Opting-out', () => {
     const t = text(agDokumentmappe(BASIS), 'errichtungsakt');

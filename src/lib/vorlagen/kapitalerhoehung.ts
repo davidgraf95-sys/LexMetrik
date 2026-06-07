@@ -320,7 +320,7 @@ function gvSchema(r: KeRechtsform): VorlageSchema {
           'innerhalb von sechs Monaten durchzuführen. Wird die Kapitalerhöhung nicht innerhalb dieser ' +
           'Frist beim Handelsregisteramt zur Eintragung angemeldet, so fällt der heutige Beschluss dahin.',
         norm: t.normVerfall,
-        begruendung: 'Sechs-Monats-Verfall – wörtlich nach der ZH-Vorlage.',
+        begruendung: 'Sechs-Monats-Verfall nach der ZH-Vorlage (Haus-Fassung: rechtsform-neutral gekürzt, Norm-Anker im Normfeld statt im Fliesstext).',
       },
       {
         id: 'KG05_beurkundung',

@@ -14,6 +14,7 @@ import { VorlageVollmacht } from '../src/pages/VorlageVollmacht';
 import { VorlageKlageVereinfacht } from '../src/pages/VorlageKlageVereinfacht';
 import { VorlageGmbhGruendung } from '../src/pages/VorlageGmbhGruendung';
 import { VorlageAgGruendung } from '../src/pages/VorlageAgGruendung';
+import { VorlageKapitalerhoehung } from '../src/pages/VorlageKapitalerhoehung';
 import { Startseite } from '../src/pages/Startseite';
 import { Pro } from '../src/pages/Pro';
 import { Kontakt } from '../src/pages/Kontakt';
@@ -48,6 +49,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['VorlageKlageVereinfacht', VorlageKlageVereinfacht],
   ['VorlageGmbhGruendung', VorlageGmbhGruendung],
   ['VorlageAgGruendung', VorlageAgGruendung],
+  ['VorlageKapitalerhoehung', VorlageKapitalerhoehung],
   ['RechnerVerzugszins', RechnerVerzugszins],
   ['RechnerZpo', RechnerZpo],
   ['RechnerKuendigung', RechnerKuendigung],

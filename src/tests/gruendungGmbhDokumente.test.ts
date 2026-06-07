@@ -108,6 +108,14 @@ describe('GmbH-Statuten — Rechtsstand + Nummerierung', () => {
     expect(t).not.toContain('776a');
   });
 
+  it('virtuelle GV: Norm-Anker ist die materielle Grundlage Art. 701d OR (Review H-1 — Regressionsschutz)', () => {
+    const m = gmbhDokumentmappe({ ...BASIS, virtuelleGv: true });
+    const st = m.dokumente.find((d) => d.id === 'statuten')!;
+    const eintrag = st.ergebnis.protokoll.find((p) => p.bausteinId === 'ST19_virtuelle_gv');
+    expect(eintrag?.norm).toBe('Art. 701d OR'); // NICHT die blosse Verweisungsnorm 805 V Ziff. 2bis
+    expect(eintrag?.begruendung).toContain('Art. 805 Abs. 5 Ziff. 2bis');
+  });
+
   it('bedingte Klauseln schieben die Nummerierung lückenlos (Vorkaufsrecht 30/60-Tage-Fristen)', () => {
     const m = gmbhDokumentmappe({ ...BASIS, statutKlauseln: ['vorkaufsrecht'] });
     const st = m.dokumente.find((d) => d.id === 'statuten')!;

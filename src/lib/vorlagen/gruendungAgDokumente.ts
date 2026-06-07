@@ -605,7 +605,7 @@ const VR_PROTOKOLL_SCHEMA: VorlageSchema = {
         'Protokollführer/in. Der Vorsitzende stellt fest, dass der Verwaltungsrat in beschlussfähiger ' +
         'Anzahl anwesend ist. Gegen diese Feststellungen wird kein Widerspruch erhoben. Der ' +
         'Verwaltungsrat beschliesst:',
-      begruendung: 'Eröffnungs-Passus nach der amtlichen ZH-Vorlage.',
+      begruendung: 'Eröffnungs-Passus nach der amtlichen ZH-Vorlage (Haus-Fassung: statt des Einladungs-Satzes die für die Konstituierungs-Sitzung passende Beschlussfähigkeits-Feststellung).',
       norm: 'Art. 713 OR',
     },
     {

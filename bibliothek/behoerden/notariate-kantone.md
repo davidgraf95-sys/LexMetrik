@@ -3,7 +3,7 @@
 **Erstellt:** 7.6.2026 (Auftrag David: Notariats-Anlaufstellen mit Link in den
 Gründungs-Masken anzeigen). **Recherche:** Web-Sweep über alle 26 Kantone,
 jede URL per Abruf geprüft (Ausnahmen unten vermerkt).
-**Status: ERSTRECHERCHE (einfach belegt; 5 als unsicher markierte Einträge).**
+**Status: ERSTRECHERCHE (einfach belegt; 3 als unsicher markierte Einträge: UR/AI/BL).**
 Fachliche Abnahme David ausstehend.
 
 **Bundesrahmen:** Art. 55 SchlT ZGB überlässt den Kantonen, wer öffentliche
