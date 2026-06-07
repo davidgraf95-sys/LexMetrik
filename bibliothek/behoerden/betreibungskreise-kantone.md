@@ -761,3 +761,40 @@ Workflow-Extraktion (12 Agents, je Kanton adversarial). Ergebnis:
 ZG/UR/SZ), 10 Einheitsämter direkt, BE/VS als Dienststellen-Liste, LU/AG/SG +
 Rest als Verzeichnis-Link. Aufgelöste Karten-Kantone (`BETREIBUNGSAMT_KANTONE`):
 ZH, FR, SO, AR, GR, TG, TI, VD, ZG, UR, SZ. Tests: 26 Akzeptanztests.
+
+## OFFEN / TODO (Stand 7.6.2026, nach Etappen 1–3)
+
+**Datengrundlage vervollständigen (Etappe 4, wenn amtliche Quellen verfügbar):**
+1. **LU** auf `kreise` heben, sobald eine AMTLICHE gemeindescharfe Gesamtliste
+   existiert (heute nur Verbands-Plattform betreibungsaemter-zentralschweiz.ch;
+   ~34 Mehrkreis-Stellen, Honau→Root-Fusion 1.1.2025 beachten).
+2. **AG** auf `kreise`, sobald das Verbands-Amtsverzeichnis
+   (betreibungsamt-ag.ch) wieder erreichbar ist ODER eine amtliche Liste
+   vorliegt — aktuell nur ~14 von rund 19 Kreisen belegbar (86/196 Gemeinden),
+   Teilliste wäre als «gemeindescharf» irreführend (§8).
+3. **SG** Gemeinde-Vollerfassung (~75 dezentrale Adressen) als eigener
+   Arbeitsgang — Muster: die Schlichtungs-Vollerfassungen
+   (`schlichtungsbehoerden-*-vollerfassung.md`). Heute Negativbefund: kein
+   amtliches kantonales Adressverzeichnis → EasyGov-Fallback.
+4. **BE/VS** gemeindescharf, falls eine amtliche Verwaltungskreis-/Bezirks-
+   →Gemeinde-Zuordnung publiziert wird (heute Dienststellen-Liste).
+
+**Funktional:**
+5. **3b-PLZ-Feld**: bei mehrdeutiger PLZ (mehrere Gemeinden) eine AUSWAHL
+   statt Hauptgemeinde-Default anbieten (heute: erste/dominante Gemeinde).
+6. **Konkursämter** sind ein separates, oft zentralisiertes Netz (SO/FR/AG =
+   ein Konkurskreis trotz vieler Betreibungskreise) — NICHT erfasst; bei
+   Bedarf eigener Arbeitsgang (Anliegen konkursbegehren/kollokation).
+
+**Pflege (Verfallsregister):**
+7. **ZH-Kreis-Reorganisation** (Vernehmlassung 56→34/18, RR 5.11.2025): bei
+   Inkrafttreten Ämterliste + Gemeinde-Karte KOMPLETT neu — halbjährlich prüfen.
+8. **BE «Avenir Berne romande»** (Moutier-Kantonswechsel 1.1.2026): Umzüge der
+   Dienststellen Berner Jura/Biel innert ~3 Jahren — ab 2027 Adressen prüfen.
+9. **ZG-Adressliste** trägt amtlichen Stand 2/2023 — bei neuer kantonaler
+   Publikation gegenprüfen.
+
+**Abnahme:**
+10. **Davids fachliche Abnahme** der gesamten Schicht (Status «Abnahme
+    ausstehend» ist in der UI je Kanton offengelegt) — danach ggf.
+    `verified`/«geprüft»-Hebung nach dem Status-Modell.
