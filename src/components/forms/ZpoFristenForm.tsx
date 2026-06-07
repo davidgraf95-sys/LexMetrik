@@ -124,6 +124,17 @@ export function ZpoFristenForm() {
     'Berechnungsmodus': form.modus === 'mindermeinung' ? 'Mindermeinung' : 'bundesgerichtliche Praxis',
   };
 
+  // ── Kalender-Titel (.ics): Preset-Label nur, solange die Form-Werte dem
+  //    Preset noch entsprechen — presetKey überlebt manuelle Änderungen, der
+  //    Eintrag darf dann nicht mehr «Berufung» heissen (§8). Reine Beschriftung (§3).
+  const aktPreset = PRESETS.find((p) => p.key === presetKey);
+  const presetPasst = !!aktPreset && form.einheit === aktPreset.einheit
+    && form.fristnatur === aktPreset.fristnatur
+    && (aktPreset.laenge == null || form.laenge === aktPreset.laenge);
+  const icsTitel = presetPasst
+    ? `Fristende – ${aktPreset.label} (${aktPreset.norm})`
+    : `Fristende ZPO – ${form.laenge} ${EINHEITEN.find((e) => e.code === form.einheit)?.label}`;
+
   // ── PDF-Konfiguration (zentrale Vorlage, nur einschlägige Bausteine) ──
   const istTagesfrist = form.einheit === 'tage';
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
@@ -312,7 +323,12 @@ export function ZpoFristenForm() {
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <IcsExportButton endISO={ergebnis.diesAdQuemISO} titel="Fristende (ZPO)"
+            <IcsExportButton endISO={ergebnis.diesAdQuemISO} titel={icsTitel}
+              aktenzeichen={aktenzeichen}
+              query={() => permalinkKodieren(ZPO_LINK_SPEC, {
+                ...form, erstreckungAn,
+                erstreckungLaenge: erstreckung.laenge, erstreckungEinheit: erstreckung.einheit,
+              })}
               beschreibung={ergebnis.ergebnis} dateiName="ZPO-Frist.ics" />
             <LinkTeilenButton query={() => permalinkKodieren(ZPO_LINK_SPEC, {
               ...form, erstreckungAn,
