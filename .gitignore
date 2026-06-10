@@ -38,3 +38,8 @@ playwright-report/
 # Screenshot-Serien der Design-Abnahme (19 MB, regenerierbar:
 # scripts/screenshots.ts — Anleitung in abnahme/design-2026-06/BERICHT.md)
 abnahme/design-2026-06/screenshots/
+
+# Lokale Wissens-Quellen (PDFs/DOCX aus Davids Ablagen — urheberrechtlich
+# geschützt, nie ins Git/Deploy; Sichtung: bibliothek/quellen/SICHTUNG.md)
+bibliothek/quellen/*
+!bibliothek/quellen/SICHTUNG.md

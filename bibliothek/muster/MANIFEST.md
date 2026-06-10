@@ -37,6 +37,42 @@ Basis: `https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/wirtschaft-a
 | zh-gmbh-gruendung-1person-bar.txt · zh-gmbh-gruendung-mehrere-bar.txt | notariate-zh.ch `/sites/default/files/2025-07/13.4_GmbH_Gruendung (eine Person) bar.docx` · `…13.1_GmbH_Gruendung_mehrere_Personen_bar_20240726.docx` (byte-identisch mit HRegA-Fassung) |
 | zh-ag-gruendung-1person-bar.txt · zh-ag-gruendung-bar-chf.txt | notariate-zh.ch `…/3.5_AG_Gruendung (eine Person) bar.docx` · `…/3.1_AG_Gruendung_bar_in_CHF_20240726.docx` |
 
+## HRegA Zürich / Notariate ZH — AG-Gründungs-Suite, Nacharchivierung 10.6.2026 (B2)
+
+Extrakte (textutil/pymupdf, 10.6.2026) aus der lokalen Ablage
+`bibliothek/quellen/legal-calc-knowledge/Gründung AG/` (gitignored;
+md5-Inventar und Duplikat-Nachweis im Dossier
+[ag-gruendung-musterabgleich](../recherche/ag-gruendung-musterabgleich.md)).
+Die `ag_*`-/`allg_*`-Dateinamen sind identisch mit den Pfad-Suffixen der
+ZH-Basis oben (`aktiengesellschaft/` bzw. `rechtsformuebergreifend/` für
+`allg_*`; Abruf der Web-Originale 6./7.6.2026, HTTP 200 — Beleg im
+Musterabgleich-Dossier). Für die Notariats-Textvorlagen 3.2/3.4 ist KEINE
+amtliche Einzel-URL dokumentiert (Quelle: Ablage David; sie liegen im
+notariate-zh.ch-Ordner `/sites/default/files/2025-07/` der oben belegten
+3.1/3.5, dort nicht eigens abgerufen).
+
+| Datei | Quelle | Stand |
+|---|---|---|
+| zh-ag-gruendung-bar-fremdwaehrung.txt | Notariate ZH Textvorlage 3.2 (`3.2_AG_Gruendung_bar_in_Fremdwaehrung_20240726.docx`) — Einzel-URL nicht dokumentiert | 26.7.2024 |
+| zh-ag-gruendung-qualifiziert.txt | Notariate ZH Textvorlage 3.3, byte-identisch mit `aktiengesellschaft/ag_vorlage_urkunde_gruendung_qualifiziert.docx` | 26.7.2024 |
+| zh-ag-gruendungs-nachtrag.txt | Notariate ZH Textvorlage 3.4 (`3.4_AG_Gruendungs-Nachtrag.docx`) — Einzel-URL nicht dokumentiert | undatiert |
+| zh-ag-anmeldung-neueintragung.txt | `aktiengesellschaft/ag_anmeldung_neueintragung.docx` | undatiert |
+| zh-ag-vertrag-se-einfach/-geschaeft.txt | `aktiengesellschaft/ag_vorlage_vertrag_se_einfach.docx` / `…_geschaeft.docx` | Suite 26.7.2024 |
+| zh-ag-gruendungsbericht-se-einfach/-geschaeft.txt | `aktiengesellschaft/ag_vorlage_gruendungsbericht_se_einfach.docx` / `…_geschaeft.docx` | Suite 26.7.2024 |
+| zh-ag-muster-vertrag-se-einfach/-geschaeft.txt · zh-ag-muster-gruendungsbericht-se-einfach/-geschaeft.txt · zh-ag-muster-protokoll-vr.txt (ausgefüllte Beispiele «Brinkmann Lux AG») | `aktiengesellschaft/ag_muster_vertrag_se_einfach.pdf` / `…_geschaeft.pdf` · `…ag_muster_gruendungsbericht_se_einfach.pdf` / `…_geschaeft.pdf` · `…ag_muster_protokoll_vr.pdf` | PDF-Metadaten 10.–11.12.2024 |
+| zh-ag-muster-wahlannahme-vr.txt (ausgefülltes Beispiel) | `aktiengesellschaft/ag_muster_wahlannahme_vr.pdf` | PDF-Metadaten 30.7.2024 |
+| zh-ag-checkliste-mindestinhalt-statuten.txt · zh-ag-checkliste-minimalanforderungen-errichtungsakt.txt · zh-ag-checkliste-neueintragung.txt | `aktiengesellschaft/ag_checkliste_mindestinhalt_statuten.pdf` · `…minimalanforderungen_errichtungsakt.pdf` · `…neueintragung.pdf` | 11.12.2024 (im PDF) |
+| zh-ag-merkblatt-neueintragung.txt | `aktiengesellschaft/ag_merkblatt_neueintragung.pdf` | 11.12.2024 |
+| zh-ag-merkblatt-gesetzl-pflichten-vr.txt | `aktiengesellschaft/ag_merkblatt_gesetzl_pflichten_vr.pdf` | 3.12.2025 |
+| zh-allg-merkblatt-formelle-anforderungen-handelsregisterbelege.txt | `rechtsformuebergreifend/allg_merkblatt_formelle_anforderungen_handelsregisterbelege.pdf` | 7.1.2025 |
+| zh-allg-merkblatt-achtung-vor-privaten-registern.txt | `rechtsformuebergreifend/allg_merkblatt_achtung_vor_privaten_registern.pdf` | 17.2.2026 |
+| zh-allg-merkblatt-kmu-erklaerung-opting-out.txt | `rechtsformuebergreifend/allg_merkblatt_kmu_erklaerung_opting_out.pdf` (= «div-zh-kmu-erklaerung-optingout» unten, Abruf 6./7.6.2026) | 11.12.2024 |
+| zh-allg-formular-lex-koller-erklaerung.txt | `rechtsformuebergreifend/allg_formular_lex_koller_erklaerung.pdf` (Datei-interner Name `allg_formular_lex_friedrich_erklaerung`) | 1.1.2025 |
+
+Damit sind alle 30 eindeutigen Payloads der AG-Gründungs-Ablage als
+Text-Extrakt archiviert (7 bereits oben, 23 hier; 9 byte-identische
+Duplikatpaare nur einmal).
+
 ## HRegA Zürich — Kapitalerhöhung (ke-zh-*)
 Gleiche Basis; Übersichten `…/kapitalerhoehung-eintragen.html` (AG) bzw. `…/gmbh/kapitalerhoehung-bar-eintragen.html`.
 

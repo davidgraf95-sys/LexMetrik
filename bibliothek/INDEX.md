@@ -31,6 +31,7 @@ bibliothek/
   recherche/   Dossiers zu geplanten Engines/Vorlagen → eigener INDEX.md dort
   muster/      Amtliche Vorlagen verbatim (.txt) + MANIFEST (Quellen-URLs/Stände)
   rechtsprechung/  Register aller zitierten Bundesgerichtsentscheide (Links + Fundorte)
+  quellen/     Lokale Quellkopien aus Davids Ablagen (gitignored, Urheberrecht) — committet nur die Sichtung [SICHTUNG.md](quellen/SICHTUNG.md)
 ```
 
 **Schnellster Einstieg beim Bauen:** [register/engine-map.md](register/engine-map.md)
@@ -68,6 +69,9 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 | [erbrecht-regelwerk.md](normen/erbrecht-regelwerk.md) | 3 Teile: Erbfolge+Pflichtteile (Rev. 2023, Quoten-Synthesen beide Rechtsstände) · Verfügungen+Klagen (Fristen 521/533) · Erbgang+Teilung (22 Fristen, Ausgleichung 626 ff.); **Engine-Audits: erbteilung.ts + testament.ts bestanden** | 16/16 Wortlaut-Proben ✓ |
 | [normtexte-zpo-zustaendigkeit.md](normen/normtexte-zpo-zustaendigkeit.md) | Wortlaut der 25 Schlüsselartikel (Erstbestand der Engine) | maschinell extrahiert |
 | [fedlex-pin-nachverifikation-2026-06.md](normen/fedlex-pin-nachverifikation-2026-06.md) | §7-Nachverifikation der 5 überholten Pins (SchKG/StPO/VwVG/VMWG/BGG: Wortlaut-Diffs alt↔neu, Auslöser-Erlasse, Engine-Folgen — VMWG-19a-Auflösung!) + Voraus-Check StGB 12.6./ZGB+ZPO 1.7.2026 | zweifach (Diff-Agents + Nachextraktion) · Abnahme David offen |
+| [zpo-fristen-bk-abgleich.md](normen/zpo-fristen-bk-abgleich.md) | Abgleich BK Art. 142–147 ZPO (Privatquelle) gegen `zpoFristen.ts`/`fristenEngine.ts`: 31 Regeln, 29 korrekt (19 empirische Sonden) — B-1 MITTEL Mindermeinungs-Modus verliert Stillstandsverlängerung am Stillstands-Folgetag · B-2/B-3 NIEDRIG | ERSTRECHERCHE (10.6.2026) · Befunde offen für David |
+| [arbeitsrecht-shk-abgleich.md](normen/arbeitsrecht-shk-abgleich.md) | Abgleich SHK Art. 324a/b, 335c, 336c OR (Privatquelle) gegen `lohnfortzahlung.ts`/`kuendigungsfrist.ts`/`sperrfristen.ts`: 66 Regeln, 58 korrekt — **Skalen BS/BE/ZH byte-genau an SECO-Tabelle belegt**; B1 HOCH 335c III Vaterschafts-Resttage vom Monatsende-Rounding verschluckt · B2 HOCH 336c erneuter Unterbruch ab Dienstjahres-Jahrestag (BGE 133 III 517, 2. Konstellation) fehlt · 4 NIEDRIG | ERSTRECHERCHE (10.6.2026) · 2 HOCH offen für David |
+| [verzugszins-praejudizien-abgleich.md](normen/verzugszins-praejudizien-abgleich.md) | Abgleich Präjudizienbuch OR Art. 104 (11. Aufl. 2025, Privatquelle) gegen `verzugszins.ts`: 15 Komplexe, 10 korrekt, kein Rechenfehler im Hauptpfad — 2 MITTEL (kaufm. Satz ≤ 5 % ohne Warnung · Kumulationsverbot Schadens-/Verzugszins fehlt als Hinweis) · 2 NIEDRIG · §7-Abweichung Verfalltag (Buch: 108 Ziff. 1, Engine: 102 II — Engine gewinnt am Normtext) | ERSTRECHERCHE (10.6.2026) |
 | [feiertage-kantone-bj.md](normen/feiertage-kantone-bj.md) | Feiertags-Matrix 26 Kantone (BJ-Verzeichnis SR 0.221.122.3, lit. a = lit. b) inkl. bedingter Tage (NE/UR/AR/AI-Fussnoten), Näfelser-Fahrt-Karwoche-Regel, offengelegte Annahmen | 26/26 Sektionen zweifach geprüft (Agent + Vollabgleich am PDF) ✓ |
 
 ## behoerden/ — Behördenlisten
