@@ -110,14 +110,24 @@ Begründung in KATALOG-ROADMAP.md festhalten.
    M-3 IP nicht-vermögensrechtlich ehrlich (`7718bc6`) · M-4 Widerspruch-
    Frist-Norm differenziert (`280365f`) · M-5 Art.-39-Warnung Konkursbegehren
    (`0256d13`) · M-6 StPO-Beschwerdefrist als Frist-Objekt (`6e1acb6`).
-   **Offen daraus (nicht beauftragt):** M-7 Permalink plausibilisiert
-   Sub-Felder nicht gegen Streitsache (latent, Input-Gates fangen es heute) ·
-   M-8 PDF/Aktenzeichen/Teilen fehlen im Rechtsmittel-/SchKG-/Straf-Zweig ·
-   NIEDRIG-Befunde (Art.-40-Zitatschärfe Straf, Erbschaft+Pfand-Text,
-   Widerspruch-Fahrplantext grundstueck, toter Engine-Aufruf
-   StrafZustaendigkeitTeil, rmFamilienSummarsache ohne Streitsachen-Check) ·
-   Testlücken: rueckforderung/feststellung (SchKG) ohne Akzeptanztest,
-   Straf-Kaskade wohnsitz/auslieferung/Default ungetestet.
+   **Triage 10.6.2026 (FAHRPLAN-GRUNDLAGEN G2/A3, alle 6 am Code verifiziert):**
+   ~~M-7 Permalink-Sub-Felder~~ GEFIXT (nur bei passender Streitsache/Instanz
+   in den State übernommen) · ~~rmFamilienSummarsache ohne Streitsachen-Check~~
+   GEFIXT als deklarierte fachliche Änderung: Art. 314 Abs. 2 ZPO (Wortlaut
+   verifiziert: nur Streitigkeiten nach 271/276/302/305) greift nur noch bei
+   plausibler Streitsache (scheidung/geldforderung); sonst fristsichere
+   10 Tage + erklärende Weiche — auch im Fristenspiegel (familienWirksam
+   statt Roh-Flag; widersprüchliches mietOderArbeit+Familien-Flag → Abs. 1) ·
+   ~~toter Engine-Aufruf StrafZustaendigkeitTeil~~ FALSIFIZIERT (Ergebnis
+   wird vollständig genutzt) · ~~Testlücken rueckforderung/feststellung +
+   Straf-Kaskade-Default~~ waren bereits geschlossen (verifiziert).
+   **WEITER OFFEN (je «klein», Output-wirksam → Wortlaut-Verifikation +
+   Golden-Deklaration nötig):** Art.-40/41-StPO-Zitatschärfe in der
+   Gerichtsstands-Weiche (strafZustaendigkeit.ts:138) · Erbschaft+Pfand-
+   Kombination ohne Vorrang-Klärung (schkgZustaendigkeit.ts, Art. 49 vs.
+   51) · Widerspruch-Fahrplantext ignoriert grundstueck-Konstellation
+   (Parteirollen nach Grundbuch-Eintrag, Art. 109 Abs. 3 / 107 f. SchKG).
+   M-8 PDF/Aktenzeichen/Teilen → FAHRPLAN-GRUNDLAGEN G3.1.
    Repro-Skripte in `.scratch/review-*`.
 
 5. ~~Kündigungs-Masken~~ → **FAMILIE KOMPLETT** (6.6.2026 nachts, je mit

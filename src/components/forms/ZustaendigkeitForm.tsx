@@ -215,6 +215,34 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   const [f, setF] = useState<State>(() => {
     const rest = { ...ausLink };
     delete rest.schritt;
+    // M-7-Härtung (10.6.2026): Sub-Felder aus dem Permalink nur übernehmen,
+    // wenn die zugehörige Streitsache/Instanz im SELBEN Link steht. Die
+    // Engine-Eingabe filtert zwar ohnehin (unten), aber ein manipulierter
+    // Link liesse sonst z. B. mieteUnterfall im State zurück, der beim
+    // späteren Umschalten auf Miete unbemerkt vorbelegt wäre.
+    const sache = rest.streitsache ?? DEFAULTS.streitsache;
+    const instanz = rest.instanz ?? DEFAULTS.instanz;
+    const passt: Partial<Record<keyof State, boolean>> = {
+      mieteUnterfall: sache === 'miete_wohn_geschaeft',
+      glgBetroffen: sache === 'arbeit',
+      avgVerleih: sache === 'arbeit',
+      konsumentenvertrag: sache === 'geldforderung',
+      geschaeftlicheTaetigkeit: sache === 'geldforderung',
+      beklagteImHR: sache === 'geldforderung',
+      klaegerImHR: sache === 'geldforderung',
+      ausVertrag: sache === 'geldforderung',
+      deliktUnterfall: sache === 'delikt',
+      persoenlichkeitUnterfall: sache === 'persoenlichkeit',
+      ipUnterfall: sache === 'ip_wettbewerb',
+      bundKlagerecht: sache === 'ip_wettbewerb',
+      rmObjekt: instanz === 'rechtsmittel',
+      rmVerfahren: instanz === 'rechtsmittel',
+      rmVorinstanz: instanz === 'rechtsmittel',
+      rmFamilienSummarsache: instanz === 'rechtsmittel',
+    };
+    for (const k of Object.keys(passt) as (keyof State)[]) {
+      if (passt[k] === false) delete rest[k];
+    }
     return { ...DEFAULTS, ...rest };
   });
   // Rechtsweg-Wahl (5.6.2026): Zivil + SchKG aktiv; Straf/Verwaltung folgen.

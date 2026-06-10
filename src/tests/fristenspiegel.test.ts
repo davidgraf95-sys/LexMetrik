@@ -138,6 +138,16 @@ describe('Fristenspiegel A.1: Zivilentscheid — Weiche aus bestimmeRechtsmittel
     expect(e.zeilen.find((z) => z.key === 'anschlussberufung')!.status).toBe('hinweis');
   });
 
+  it('widersprüchliche Flags familienSummarsache + mietOderArbeit (Härtung 10.6.2026): miet-/arbeitsrechtlich ist keine 271/276/302/305-Sache → 10 Tage + erklärende Warnung', () => {
+    const e = berechneZivilentscheidsSpiegel({
+      zustellung: '2026-07-01', kanton: 'ZH', vermoegensrechtlich: true,
+      streitwertCHF: 20_000, verfahren: 'summarisch',
+      familienSummarsache: true, mietOderArbeit: true,
+    });
+    expect(rmZeile(e).normRef).toBe('Art. 314 Abs. 1 ZPO');
+    expect(e.warnungen.some((w) => w.includes('Art. 314 Abs. 2') && w.includes('271'))).toBe(true);
+  });
+
   it('Spiegel-Norm steht im Weiche-Text (Schutz gegen Divergenz der Norm-Pille)', () => {
     const faelle = [
       { vr: true, sw: 50_000, vf: 'ordentlich_vereinfacht' as const, fam: false },

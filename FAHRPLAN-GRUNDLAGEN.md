@@ -110,11 +110,17 @@ Zwei Stränge — **erst härten, dann abnehmen** (Davids Reihenfolge).
 - [x] **A2 · Determinismus mechanisch sperren (§2).** ✓ 10.6.2026: Lint-Regeln
       aktiv für `src/lib/**` (Ausnahme `src/lib/pdf/**`, Erstellungs-Zeitstempel
       = Darstellung); empirisch verifiziert (Probe-Datei → 3 Fehler), Lint 0.
-- [ ] **A3 · Bekannte Testlücken schliessen.** Akzeptanztests für
-      `rueckforderung`/`feststellung` (`src/tests/schkgZustaendigkeit.test.ts`)
-      und Straf-Kaskade-Default `kaskade32=undefined`
-      (`src/tests/strafZustaendigkeit.test.ts`); Latenz-Backlog
-      (M-7/M-8/NIEDRIG) triagieren.
+- [x] **A3 · Bekannte Testlücken schliessen.** ✓ 10.6.2026: Die genannten
+      Akzeptanztests (rueckforderung/feststellung, Kaskade-Default) waren
+      bereits von den Sessions 7./8.6. geschlossen (verifiziert). Latenz-Backlog
+      triagiert (6 Befunde): Befund 5 (toter Engine-Aufruf) FALSIFIZIERT ·
+      Befund 6 (rmFamilienSummarsache) GEFIXT — Art. 314 Abs. 2 nur noch bei
+      plausibler Streitsache, sonst fristsicher 10 T. + Weiche (Engine +
+      Fristenspiegel, 2 neue Tests) · M-7 GEFIXT (Permalink-Sub-Felder nur bei
+      passender Streitsache/Instanz in den State) · Befunde 2/3/4 (Art.-40-Text,
+      Erbschaft+Pfand, Widerspruch-grundstueck) bleiben dokumentiert offen
+      (HANDLUNGSPLAN B.4b, je «klein», Output-wirksam → mit Wortlaut-Verifikation
+      und Golden-Deklaration in eigener Welle). M-8 = G3.1.
 
 ### Phase B — Abnehmen (David-getaktet, §7; nach A, fortlaufend)
 

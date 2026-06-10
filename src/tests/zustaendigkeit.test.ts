@@ -501,6 +501,27 @@ describe('Rechtsmittel — obere Instanzen (Ausbau 5.6.2026; Art. 308/319 ZPO + 
     expect(r.kantonalFrist!.stillstand).toBe(false);
     expect(r.kantonalFrist!.text).toContain('Art. 314 Abs. 2');
   });
+  it('Familien-Flag mit unplausibler Streitsache (Härtung 10.6.2026): Art. 314 Abs. 2 setzt 271/276/302/305 voraus — Flag wird ignoriert (10 Tage) + erklärende Weiche', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    // arbeit/miete & Co. können begrifflich keine familienrechtliche
+    // Streitigkeit nach Art. 271/276/302/305 ZPO sein (Wortlaut am Cache).
+    for (const streitsache of ['arbeit', 'miete_wohn_geschaeft', 'erbrecht'] as const) {
+      const r = bestimmeRechtsmittel(basis(20_000, { streitsache, rmVerfahren: 'summarisch', rmFamilienSummarsache: true }));
+      expect(r.kantonalFrist!.tage, streitsache).toBe(10);
+      expect(r.kantonalFrist!.text, streitsache).toContain('Art. 314 Abs. 1');
+      expect(r.weichen.some((w) => w.includes('Art. 314 Abs. 2') && w.includes('271')), streitsache).toBe(true);
+    }
+    // Plausible Streitsachen bleiben unverändert bei 30 Tagen:
+    // 'scheidung' (Eheschutz 271 / Massnahmen 276) und 'geldforderung'
+    // (Unterhalts-/PartG-Geldsachen 302/305).
+    const geld = bestimmeRechtsmittel(basis(20_000, { rmVerfahren: 'summarisch', rmFamilienSummarsache: true }));
+    expect(geld.kantonalFrist!.tage).toBe(30);
+    expect(geld.weichen.some((w) => w.includes('ausgeschlossen'))).toBe(false);
+    // Ohne summarisches Verfahren ändert das Flag nichts und löst KEINE Weiche aus.
+    const ord = bestimmeRechtsmittel(basis(20_000, { streitsache: 'arbeit', rmFamilienSummarsache: true }));
+    expect(ord.kantonalFrist!.tage).toBe(30);
+    expect(ord.weichen.some((w) => w.includes('Art. 314 Abs. 2'))).toBe(false);
+  });
   it('familienrechtliche Summarsache mit Streitwert unter 10\'000 (BESCHWERDE): 10 Tage, Art. 314 Abs. 2 verlängert NICHT (K-1-Fix Bug-Check 6.6.2026)', async () => {
     const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
     // Erreichbar z.B. bei vermögensrechtlicher Unterhalts-Abänderung < CHF 10'000:

@@ -70,9 +70,14 @@ export function berechneZivilentscheidsSpiegel(input: ZivilentscheidSpiegelInput
   const rmLabel = rm.kantonal === 'berufung' ? 'Berufung an die obere kantonale Instanz'
     : rm.kantonal === 'beschwerde' ? 'Beschwerde an die obere kantonale Instanz'
     : 'Kantonales Rechtsmittel';
+  // Härtung 10.6.2026: massgeblich ist das WIRKSAME Familien-Flag — bei
+  // mietOderArbeit ist eine Streitigkeit nach Art. 271/276/302/305 ZPO
+  // begrifflich ausgeschlossen (dieselbe Regel wendet bestimmeRechtsmittel
+  // auf die Streitsache an; deren erklärende Weiche landet in den Warnungen).
+  const familienWirksam = input.familienSummarsache === true && !input.mietOderArbeit;
   const rmNorm = rm.kantonal === 'berufung'
     ? (input.verfahren === 'summarisch'
-        ? (input.familienSummarsache ? 'Art. 314 Abs. 2 ZPO' : 'Art. 314 Abs. 1 ZPO')
+        ? (familienWirksam ? 'Art. 314 Abs. 2 ZPO' : 'Art. 314 Abs. 1 ZPO')
         : 'Art. 311 Abs. 1 ZPO')
     : (input.verfahren === 'summarisch' ? 'Art. 321 Abs. 2 ZPO' : 'Art. 321 Abs. 1 ZPO');
 
@@ -113,7 +118,7 @@ export function berechneZivilentscheidsSpiegel(input: ZivilentscheidSpiegelInput
 
   // ── Anschlussberufung: anderer Auslöser bzw. unzulässig ──
   if (rm.kantonal === 'berufung') {
-    if (input.verfahren === 'summarisch' && !input.familienSummarsache) {
+    if (input.verfahren === 'summarisch' && !familienWirksam) {
       zeilen.push({
         key: 'anschlussberufung', label: 'Anschlussberufung', normRef: 'Art. 314 Abs. 1 ZPO',
         fristnatur: 'gesetzlich', status: 'ausgeschlossen',

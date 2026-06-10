@@ -712,7 +712,16 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
   const objekt = input.rmObjekt ?? 'endentscheid';
   const verfahren = input.rmVerfahren ?? 'ordentlich_vereinfacht';
   const vorinstanz = input.rmVorinstanz ?? 'erstinstanz';
-  const familienSummarsache = input.rmFamilienSummarsache === true && verfahren === 'summarisch';
+  // Härtung 10.6.2026 (Latenz-Befund 6 Bug-Check 6.6., deklarierte fachliche
+  // Änderung): Art. 314 Abs. 2 ZPO setzt eine familienrechtliche Streitigkeit
+  // nach Art. 271/276/302/305 ZPO voraus (Wortlaut am Cache verifiziert).
+  // Im Streitsachen-Katalog können solche Sachen nur als 'scheidung'
+  // (Eheschutz 271 / vorsorgliche Massnahmen 276) oder 'geldforderung'
+  // (Unterhalts-/PartG-Geldsachen 302/305) auftreten — bei allen übrigen
+  // Streitsachen ist Abs. 2 begrifflich ausgeschlossen: Das Flag wird
+  // ignoriert (fristsichere 10 Tage nach Abs. 1) und die Weiche erklärt es.
+  const familienPlausibel = input.streitsache === 'scheidung' || input.streitsache === 'geldforderung';
+  const familienSummarsache = input.rmFamilienSummarsache === true && verfahren === 'summarisch' && familienPlausibel;
   // Art. 5 ZPO: lit. a–c, e, g–i unbedingt; lit. d (UWG)/f (Bund) NUR über 30 000
   // (H1-Fix 6.6.2026). Bei uwg_oder_bund ≤30k läuft der ordentliche Weg.
   const ipU = input.ipUnterfall ?? 'ip_kartell_firma';
@@ -727,6 +736,9 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
   const mietArbeit = input.streitsache === 'arbeit' || input.streitsache === 'miete_wohn_geschaeft';
   const normverweise: Normverweis[] = [];
   const weichen: string[] = [];
+  if (input.rmFamilienSummarsache === true && verfahren === 'summarisch' && !familienPlausibel) {
+    weichen.push('Die 30-Tage-Berufungsfrist für familienrechtliche Summarsachen (Art. 314 Abs. 2 ZPO) setzt eine Streitigkeit nach Art. 271/276/302/305 ZPO voraus — mit der gewählten Streitsache ist das ausgeschlossen; gerechnet wird die 10-Tage-Frist des summarischen Verfahrens (Art. 314 Abs. 1 ZPO).');
+  }
 
   // ── Kantonale Ebene: statthaftes Rechtsmittel (Art. 308/319 ZPO) ──────────
   // Art. 308 Abs. 1: berufungsfähig sind End- UND Zwischenentscheide (lit. a)
