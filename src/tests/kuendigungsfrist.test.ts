@@ -251,3 +251,77 @@ describe('Bug-Check-Fix 10.6.2026: Probezeit-Ende (Art. 335b OR — erster Arbei
     expect(ds(danach.beendigungsdatum!)).toBe('2026-06-30');
   });
 });
+
+describe('SHK-Abgleich-Fix 10.6.2026 (B1): Art. 335c Abs. 3 OR — Vaterschafts-Resttage laufen taggenau ÜBER den Endtermin hinaus', () => {
+  // Soll-Regel (normen/arbeitsrecht-shk-abgleich.md B1, SHK 335c N 16): erst
+  // ordentlicher Endtermin (Monatsende), DANN + Resttage taggenau. Vorher wurden
+  // die Resttage vor der Monatsende-Erstreckung addiert und vom Rounding
+  // verschluckt (Verlängerung blieb wirkungslos — Abs. 3 ist teilzwingend).
+  it('Zugang 15.03., 1 Monat, Monatsende, 10 Resttage → 10.05. (nicht 30.04.)', () => {
+    const r = berechneKuendigungsfrist({
+      vertragsbeginn: '2025-06-01',
+      zugangKuendigung: '2026-03-15',
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+      vaterschaftsurlaubResttage: 10,
+    });
+    expect(r.fristMonate).toBe(1);
+    expect(ds(r.beendigungsdatum!)).toBe('2026-05-10'); // 30.04. + 10 Tage
+  });
+
+  it('ohne Monatsendtermin: taggenau 15.04. + 10 Resttage → 25.04.', () => {
+    const r = berechneKuendigungsfrist({
+      vertragsbeginn: '2025-06-01',
+      zugangKuendigung: '2026-03-15',
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: false,
+      vaterschaftsurlaubResttage: 10,
+    });
+    expect(ds(r.beendigungsdatum!)).toBe('2026-04-25');
+  });
+
+  it('Resttage über den Monatswechsel: 35 Resttage ab 30.04. → 04.06.', () => {
+    const r = berechneKuendigungsfrist({
+      vertragsbeginn: '2025-06-01',
+      zugangKuendigung: '2026-03-15',
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+      vaterschaftsurlaubResttage: 35,
+    });
+    expect(ds(r.beendigungsdatum!)).toBe('2026-06-04');
+  });
+
+  it('Arbeitnehmerkündigung: Resttage ohne Wirkung (Abs. 3 nur bei AG-Kündigung)', () => {
+    const r = berechneKuendigungsfrist({
+      vertragsbeginn: '2025-06-01',
+      zugangKuendigung: '2026-03-15',
+      kuendigendePartei: 'arbeitnehmer',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+      vaterschaftsurlaubResttage: 10,
+    });
+    expect(ds(r.beendigungsdatum!)).toBe('2026-04-30');
+  });
+
+  it('Sperrfristen-Rückrechnung bleibt am ORDENTLICHEN Endtermin verankert (Fenster nicht durch Resttage verschoben)', () => {
+    // Sperrgrund 02.04.–10.04. liegt in der rückgerechneten Frist (30.03.–30.04.);
+    // würde das Fenster um die Resttage nach hinten rutschen (09.04.–10.05.),
+    // gingen Hemmungstage verloren.
+    const r = berechneSperrfristen({
+      vertragsbeginn: '2025-06-01',
+      zugangKuendigung: '2026-03-15',
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+      vaterschaftsurlaubResttage: 10,
+      sperrereignisse: [
+        { typ: 'krankheit_unfall', von: '2026-04-02', bis: '2026-04-10' },
+      ],
+    });
+    expect(r.status).toBe('ok');
+    expect(r.gehemmtTage).toBeGreaterThan(0);
+  });
+});

@@ -20,6 +20,10 @@ export type KuendigungsfristResultat = {
   ergebnis: Berechnungsergebnis;
   beendigungsdatum?: Date;
   fristLaufendeDatum?: Date;
+  /** Ordentlicher Endtermin OHNE die Verlängerung nach Art. 335c Abs. 3 OR —
+   *  Anker für die Sperrfristen-Rückrechnung (das hemmbare Fenster beginnt
+   *  beim ordentlichen Fristlauf, nicht erst um die Resttage verschoben). */
+  ordentlichesEndeDatum?: Date;
   istProbezeit: boolean;
   fristMonate: number;
 };
@@ -173,38 +177,46 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
 
   // ─── Fristberechnung und Endtermin (inkl. §3.4 Vaterschaftsurlaub) ────
 
-  let fristLaufende = addMonths(zugang, fristMonate);
+  const fristLaufende = addMonths(zugang, fristMonate);
 
-  // §3.4 Art. 335c Abs. 3 OR: Verlängerung um nicht bezogene Vaterschaftsurlaubstage —
-  // nur bei Arbeitgeberkündigung.
+  // SHK-Abgleich-Fix 10.6.2026 (B1, deklarierte fachliche Änderung —
+  // normen/arbeitsrecht-shk-abgleich.md): Die Verlängerung um nicht bezogene
+  // Vaterschaftsurlaubstage (Art. 335c Abs. 3 OR, nur Arbeitgeberkündigung)
+  // läuft TAGGENAU über den ordentlichen Endtermin hinaus; eine Erstreckung
+  // der Verlängerung auf das nächste Monatsende gibt es von Gesetzes wegen
+  // nicht (nur durch vertragliche Abrede, Analogie zu Art. 336c Abs. 3).
+  // Vorher wurden die Resttage VOR der Monatsende-Erstreckung addiert und vom
+  // Rounding verschluckt (Zugang 15.3. + 1 Mt. + 10 Resttage ergab 30.4. —
+  // identisch mit dem Ergebnis ohne Resttage; Abs. 3 ist teilzwingend).
   const vaterschaftResttage =
     kuendigendePartei === 'arbeitgeber' && input.vaterschaftsurlaubResttage
       ? Math.max(0, input.vaterschaftsurlaubResttage)
       : 0;
-  if (vaterschaftResttage > 0) {
-    fristLaufende = addDays(fristLaufende, vaterschaftResttage); // VERIFY: genaue Tagesberechnung
-  }
 
-  const beendigung = kuendigungsterminMonatsende
+  const ordentlichesEnde = kuendigungsterminMonatsende
     ? letzerTagDesMonats(fristLaufende)
     : fristLaufende;
+  const beendigung =
+    vaterschaftResttage > 0 ? addDays(ordentlichesEnde, vaterschaftResttage) : ordentlichesEnde;
 
   rechenweg.push({
     beschreibung: `Schritt ${abweichendeFristMonate != null ? 4 : 3} – Fristberechnung und Endtermin`,
     zwischenergebnis:
-      `Frist: ${fristMonate} Monat/e ab Zugang ${formatDatum(zugang)} → ${formatDatum(addMonths(zugang, fristMonate))}. ` +
+      `Frist: ${fristMonate} Monat/e ab Zugang ${formatDatum(zugang)} → ${formatDatum(fristLaufende)}. ` +
       (vaterschaftResttage > 0
-        ? `Verlängerung um ${vaterschaftResttage} nicht bezogene Vaterschaftsurlaubstage (Art. 335c Abs. 3 OR) → ${formatDatum(fristLaufende)}. `
-        : '') +
-      (kuendigungsterminMonatsende
-        ? `Kündigungstermin = Monatsende: Beendigung ${formatDatum(beendigung)}.`
-        : `Kein Monatsendtermin: Beendigung ${formatDatum(beendigung)}.`),
+        ? (kuendigungsterminMonatsende
+            ? `Kündigungstermin = Monatsende: ordentlicher Endtermin ${formatDatum(ordentlichesEnde)}. `
+            : `Kein Monatsendtermin: ordentlicher Endtermin ${formatDatum(ordentlichesEnde)}. `) +
+          `Verlängerung um ${vaterschaftResttage} nicht bezogene Vaterschaftsurlaubstage taggenau über den Endtermin hinaus (Art. 335c Abs. 3 OR): Beendigung ${formatDatum(beendigung)}.`
+        : kuendigungsterminMonatsende
+          ? `Kündigungstermin = Monatsende: Beendigung ${formatDatum(beendigung)}.`
+          : `Kein Monatsendtermin: Beendigung ${formatDatum(beendigung)}.`),
     normen: vaterschaftResttage > 0 ? [N_335c, N_335c_3] : [N_335c],
   });
 
   if (vaterschaftResttage > 0) {
     annahmen.push(
-      'Während des Vaterschaftsurlaubs besteht kein zeitlicher Kündigungsschutz (keine Sperrfrist), die Kündigungsfrist verlängert sich aber um die nicht bezogenen Urlaubstage (Art. 335c Abs. 3 OR; Tagesberechnung zu verifizieren).',
+      'Während des Vaterschaftsurlaubs besteht kein zeitlicher Kündigungsschutz (keine Sperrfrist), die Kündigungsfrist verlängert sich aber um die nicht bezogenen Urlaubstage (Art. 335c Abs. 3 OR). Die Verlängerung läuft taggenau; eine zusätzliche Erstreckung auf das nächste Monatsende gilt nur bei entsprechender vertraglicher Abrede und ist hier nicht berücksichtigt.',
     );
   }
 
@@ -223,6 +235,7 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
     },
     beendigungsdatum: beendigung,
     fristLaufendeDatum: fristLaufende,
+    ordentlichesEndeDatum: ordentlichesEnde,
     istProbezeit: false,
     fristMonate,
   };

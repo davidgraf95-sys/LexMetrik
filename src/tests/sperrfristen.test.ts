@@ -366,3 +366,83 @@ describe('Bug-Check-Fix 10.6.2026: zweite Sperrfrist in der gehemmt VERLÄNGERTE
     expect(zwei.beendigungISO! > eine.beendigungISO!).toBe(true);
   });
 });
+
+describe('SHK-Abgleich-Fix 10.6.2026 (B2): BGE 133 III 517, zweite Konstellation — erneuter Unterbruch am Dienstjahres-Jahrestag', () => {
+  // Soll-Regel (normen/arbeitsrecht-shk-abgleich.md B2, SHK 336c N 20): Ist die
+  // kürzere Sperrfrist VOR dem Jahrestag aufgebraucht, dauert die Arbeits-
+  // unfähigkeit an und läuft die (gehemmte) Kündigungsfrist über den Jahrestag,
+  // wird sie dort ERNEUT unterbrochen — längere Sperrfrist unter Anrechnung
+  // der bezogenen Tage (1.→2. DJ: 30 bezogen → bis zu 60 weitere ab Jahrestag).
+  it('1.→2. DJ: Sperrfrist aufgebraucht, AUF dauert an → erneuter Unterbruch ab Jahrestag (61 Hemmungstage)', () => {
+    const r = berechneSperrfristen({
+      vertragsbeginn: '2025-06-01',          // Jahrestag 01.06.2026
+      zugangKuendigung: '2026-05-15',        // in der Lücke nach Sperrfrist-Ende (01.05.)
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+      sperrereignisse: [
+        { typ: 'krankheit_unfall', von: '2026-04-01', bis: '2026-08-31' }, // 30-T-Frist endet 01.05., AUF dauert an
+      ],
+    });
+    expect(r.status).toBe('ok');
+    // Fenster 30.05.–30.06.; Wiederaufleben 01.06.–31.07. (60 Zusatztage, Art. 77 OR)
+    // → 61 Hemmungstage, Ende 30.06. + 61 = 30.08. → Monatsende 31.08.2026.
+    expect(r.gehemmtTage).toBe(61);
+    expect(r.beendigungISO).toBe('2026-08-31');
+    const txt = rechenwegText(r);
+    expect(txt).toContain('133 III 517');
+    expect(txt).toContain('erneut');
+    // Sperrtage-Zähler: Kontingent 90 (2. DJ), beansprucht 30 + 60 = 90
+    expect(r.sperrtage?.[0].kontingent).toBe(90);
+    expect(r.sperrtage?.[0].beansprucht).toBe(90);
+  });
+
+  it('5.→6. DJ: 90 Tage aufgebraucht, AUF dauert an → bis zu 90 weitere Sperrtage ab Jahrestag', () => {
+    const r = berechneSperrfristen({
+      vertragsbeginn: '2021-06-01',          // Jahrestag (5 Jahre) 01.06.2026
+      zugangKuendigung: '2026-05-15',        // 5. DJ → Frist 2 Monate
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+      sperrereignisse: [
+        { typ: 'krankheit_unfall', von: '2026-01-01', bis: '2026-08-31' }, // 90-T-Frist endet 01.04.
+      ],
+    });
+    expect(r.status).toBe('ok');
+    // Fenster 31.05.–31.07.; Wiederaufleben 01.06.–30.08. (90 Zusatztage)
+    // → 91 Hemmungstage, 31.07. + 91 = 30.10. → Monatsende 31.10.2026.
+    expect(r.gehemmtTage).toBe(91);
+    expect(r.beendigungISO).toBe('2026-10-31');
+  });
+
+  it('Gate: AUF endet VOR dem Jahrestag → kein Wiederaufleben', () => {
+    const r = berechneSperrfristen({
+      vertragsbeginn: '2025-06-01',
+      zugangKuendigung: '2026-05-15',
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+      sperrereignisse: [
+        { typ: 'krankheit_unfall', von: '2026-04-01', bis: '2026-05-10' }, // endet vor Jahrestag 01.06.
+      ],
+    });
+    expect(r.status).toBe('ok');
+    expect(rechenwegText(r)).not.toContain('133 III 517');
+    expect(r.gehemmtTage).toBe(0);
+    expect(r.beendigungISO).toBe('2026-06-30');
+  });
+
+  it('Zugang IM wiederauflebenden Intervall → Warnung (offene Rechtsfrage), keine stillschweigende Gültigkeit', () => {
+    const r = berechneSperrfristen({
+      vertragsbeginn: '2025-06-01',
+      zugangKuendigung: '2026-06-15',        // im Wiederaufleben-Intervall 01.06.–31.07.
+      kuendigendePartei: 'arbeitgeber',
+      probezeitMonate: 1,
+      kuendigungsterminMonatsende: true,
+      sperrereignisse: [
+        { typ: 'krankheit_unfall', von: '2026-04-01', bis: '2026-08-31' },
+      ],
+    });
+    expect(r.warnungen.some((w) => w.includes('nichtig'))).toBe(true);
+  });
+});

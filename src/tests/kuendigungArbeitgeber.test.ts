@@ -85,11 +85,14 @@ describe('Vorlage Kündigung Arbeitgeber:in (Maske 1b)', () => {
 
   it('Vaterschaftsurlaub-Resttage verlängern die Frist (Art. 335c Abs. 3 — über die Engine)', () => {
     const ohne = kagEngine(basis())!;
-    // 20 Resttage: 15.6. + 20 Tage = 5.7. → Monatsende 31.7. (10 Tage blieben
-    // im selben Monatsende-Raster — bewusst über die Monatsgrenze getestet).
+    // SHK-Abgleich-Fix 10.6.2026 (B1, fachliche Änderung): Die Resttage laufen
+    // TAGGENAU über den ordentlichen Endtermin hinaus (30.6. + 20 = 20.7.);
+    // die frühere Erwartung 31.7. beruhte auf «Resttage vor Monatsende-
+    // Erstreckung» — von Gesetzes wegen gibt es keine Monatsende-Erstreckung
+    // der Verlängerung (normen/arbeitsrecht-shk-abgleich.md B1).
     const mit = kagEngine(basis({ vaterschaftsurlaubResttage: 20 }))!;
     expect(ohne.beendigungISO).toBe('2025-06-30');
-    expect(mit.beendigungISO).toBe('2025-07-31');
+    expect(mit.beendigungISO).toBe('2025-07-20');
   });
 
   it('Schema-Konventionen: Eingabe-Format, fertig, Unterschrift mit Unterzeichner', () => {

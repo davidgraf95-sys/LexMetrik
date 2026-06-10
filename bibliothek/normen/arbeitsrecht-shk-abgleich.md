@@ -194,6 +194,14 @@ auf das nächste Monatsende (nur auf ausdrückliche Eingabe).
 **Folgewirkung:** `sperrfristen.ts:482` (Rückrechnung ab `kb.beendigungsdatum`) übernimmt
 den Fehler in den Sperrfristen-Rechner. Korrektur nur als deklarierte fachliche Änderung (§6 Ziff. 3).
 
+**UMGESETZT 10.6.2026 (Ja David, deklarierte fachliche Änderung):** Resttage
+laufen taggenau über den ordentlichen Endtermin hinaus (`kuendigungsfrist.ts`,
+neues Rückgabefeld `ordentlichesEndeDatum`); Sperrfristen-Rückrechnung bleibt
+am ordentlichen Endtermin verankert. Tests: 5 neue Fälle + nachgeführte
+Vorlagen-Erwartung (`kuendigungArbeitgeber.test.ts`, alt 31.7. → neu 20.7.).
+Die optionale vertragliche Monatsende-Analogie ist NICHT gebaut, nur als
+Annahme offengelegt (§8).
+
 ### B2 — HOCH: 336c Abs. 1 lit. b, zweite Konstellation von BGE 133 III 517 fehlt
 
 **Fundstelle Code:** `src/lib/sperrfristen.ts:81–104` (`laeuftNoch`-Bedingung).
@@ -214,6 +222,15 @@ noch → zusätzliches Sperr-Intervall ab Jahrestag, Dauer = (90−30) bzw. (180
 (Art.-77-Zählung), gekappt auf das AUF-Ende. Nur im Hemmungspfad relevant (bei Zugang in
 einer Sperrfrist gilt ohnehin Nichtigkeit). Achtung Wechselwirkung mit der
 Fixpunkt-Schleife (Z. 514–523): Bedingung «Frist läuft am Jahrestag noch» ist iterativ.
+
+**UMGESETZT 10.6.2026 (Ja David, deklarierte fachliche Änderung):**
+Wiederaufleben-Kandidat (`folgeKandidat`) ab Jahrestag, Zusatztage = Kontingent-
+Differenz, gekappt aufs AUF-Ende; läuft in der Fixpunkt-Union mit (wirkungslos,
+wenn die gehemmte Frist den Jahrestag nicht erreicht — genau die Soll-Bedingung,
+iterativ). Sperrtage-Zähler rechnet bezogene Tage an (Kontingent neues DJ).
+Zugang IM Wiederaufleben-Intervall: Nichtigkeit höchstrichterlich offen →
+Warnung statt Verdikt (§8). Tests: 4 neue Fälle (1.→2. DJ 61 Hemmungstage,
+5.→6. DJ 91, Gate AUF-Ende vor Jahrestag, Zugang-Warnung).
 
 ### B3 — NIEDRIG: 324a, mehrere Verhinderungen im selben Dienstjahr nicht verrechenbar
 

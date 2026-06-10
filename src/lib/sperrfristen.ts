@@ -54,6 +54,13 @@ type SperrfristIntervall = {
   /** Randfall-Fix 6.6.2026: Tatbestand greift NICHT (z. B. cter-Urlaub beginnt
    *  erst nach Ablauf der Kappung) — kein Intervall, nur erklärender Schritt. */
   keinSchutz?: boolean;
+  /** SHK-Abgleich-Fix 10.6.2026 (B2): zweite Konstellation von BGE 133 III 517
+   *  (SHK 336c N 20) — die kürzere Sperrfrist ist VOR dem Dienstjahres-Jahrestag
+   *  aufgebraucht, die Arbeitsunfähigkeit dauert an. Läuft die (gehemmte)
+   *  Kündigungsfrist über den Jahrestag, wird sie dort ERNEUT unterbrochen:
+   *  längere Sperrfrist unter Anrechnung der bezogenen Tage. Der Kandidat wirkt
+   *  nur, wo er die laufende Frist tatsächlich schneidet (Hemmungspfad). */
+  folgeKandidat?: { von: Date; bis: Date; zusatzTage: number; neueMaxTage: number; jahrestag: Date; dj: number };
 };
 
 function berechneSperrfristIntervall(
@@ -99,6 +106,29 @@ function berechneSperrfristIntervall(
               `ab erstem AUF-Tag (Art. 77 OR), alte Tage angerechnet. Effektives Ende: ${formatDatum(neuEnde)}. ` +
               `(BGE 133 III 517, zu verifizieren.)`,
             normen: [N_336c_1, N_77],
+          };
+        }
+        // SHK-Abgleich-Fix 10.6.2026 (B2, deklarierte fachliche Änderung —
+        // normen/arbeitsrecht-shk-abgleich.md): zweite Konstellation von
+        // BGE 133 III 517 — Sperrfrist vor dem Jahrestag aufgebraucht, die
+        // Arbeitsunfähigkeit dauert am Jahrestag an. Kandidat für das
+        // Wiederaufleben ab Jahrestag: Zusatztage = Differenz der Kontingente
+        // (90−30 bzw. 180−90, Art.-77-Zählung ab Jahrestag), gekappt auf das
+        // AUF-Ende. Wirkung entscheidet sich erst am Hemmungsfenster.
+        if (isAfter(bis, jahrestag) || isEqual(bis, jahrestag)) {
+          const neueMaxTage = dj === 1 ? 90 : 180;
+          const zusatzTage = neueMaxTage - kurzeMaxTage;
+          const folgeEndeMax = sperrfristEnde(jahrestag, zusatzTage);
+          const folgeEnde = isBefore(bis, folgeEndeMax) ? bis : folgeEndeMax;
+          return {
+            von,
+            bis: kurzeEnde,
+            kontingent: kurzeMaxTage,
+            beschreibung:
+              `Krankheit/Unfall: Schutz max. ${kurzeMaxTage} Tage (${dj}. DJ), Anfangstag zählt nicht (Art. 77 OR). ` +
+              `Sperrfrist ${formatDatum(von)} – ${formatDatum(kurzeEnde)}.`,
+            normen: [N_336c_1, N_77],
+            folgeKandidat: { von: jahrestag, bis: folgeEnde, zusatzTage, neueMaxTage, jahrestag, dj },
           };
         }
       }
@@ -377,6 +407,8 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
   const intervalle: SperrfristIntervall[] = [];
   const sperrIntervalle: { von: string; bis: string; typ: string }[] = [];
   const sperrtage: NonNullable<SperrfristenErgebnis['sperrtage']> = [];
+  // B2-Fix 10.6.2026: Wiederaufleben-Kandidaten (BGE 133 III 517, 2. Konstellation)
+  const folgeKandidaten: { ereignis: number; typ: string; von: Date; bis: Date; zusatzTage: number; neueMaxTage: number; jahrestag: Date; dj: number }[] = [];
   sperrereignisse.forEach((e, i) => {
     if (e.gleicheUrsacheWieEreignis != null) {
       sperrtage.push({
@@ -406,6 +438,7 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
       return;
     }
     intervalle.push(iv);
+    if (iv.folgeKandidat) folgeKandidaten.push({ ereignis: i + 1, typ: e.typ, ...iv.folgeKandidat });
     sperrIntervalle.push({ von: iso(iv.von), bis: iso(iv.bis), typ: e.typ });
     // Zähler: Krankheit nach Art.-77-Zählung (Anfangstag zählt nicht, daher
     // ohne +1 – deckungsgleich mit dem Kontingent); übrige Typen Kalendertage.
@@ -479,11 +512,15 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
   rechenweg.push(...kb.ergebnis.rechenweg);
   annahmen.push(...kb.ergebnis.annahmen);
 
-  const ende_ungehemmt = kb.beendigungsdatum!; // Endtermin (Monatsende) aus Modul B
+  const ende_ungehemmt = kb.beendigungsdatum!; // Endtermin aus Modul B (inkl. Art.-335c-III-Resttage)
   // VERIFY: Rückrechnung Fristbeginn = Endtermin − Frist (Kalendermonate). Bei Monatsendtermin
   // beginnt die Frist effektiv am 1. des auf den Zugang folgenden Monats; Rückrechnungslehre
   // (h.L., BGE 134 III 354 / 115 V 437), a.M. BGE 131 III 467 (Frist ab Zustellung).
-  const beginn_frist = subMonths(ende_ungehemmt, kb.fristMonate);
+  // B1-Folgefix 10.6.2026: Anker der Rückrechnung ist der ORDENTLICHE Endtermin
+  // (ohne Vaterschafts-Resttage) — sonst rutscht das hemmbare Fenster um die
+  // Resttage nach hinten und frühe Sperrgründe gingen verloren; das Fenster
+  // endet aber am verlängerten Endtermin.
+  const beginn_frist = subMonths(kb.ordentlichesEndeDatum ?? ende_ungehemmt, kb.fristMonate);
 
   annahmen.push(
     `Hemmung nach Rückrechnungsprinzip: massgeblich ist die rückgerechnete Kündigungsfrist ` +
@@ -501,6 +538,16 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
     rechtsprechung: [rechtsprechung('BGE_134_III_354'), rechtsprechung('BGE_115_V_437'), rechtsprechung('BGE_131_III_467')],
   });
 
+  // B2-Fix 10.6.2026 (§8-Offenlegung): Fällt der ZUGANG in ein Wiederaufleben-
+  // Intervall, ist die Nichtigkeitsfrage höchstrichterlich nicht gesichert —
+  // die Engine rechnet gültig weiter, legt die offene Rechtsfrage aber offen.
+  const zugangInFolge = folgeKandidaten.find((f) => istInIntervall(zugang, f.von, f.bis));
+  if (zugangInFolge) {
+    warnungen.push(
+      `Der Zugang der Kündigung (${formatDatum(zugang)}) fällt in das am Dienstjahres-Jahrestag wiederauflebende Sperr-Intervall (${formatDatum(zugangInFolge.von)} – ${formatDatum(zugangInFolge.bis)}; BGE 133 III 517, zweite Konstellation). Ob eine in dieser Phase ausgesprochene Kündigung nichtig ist, ist höchstrichterlich nicht geklärt — das Ergebnis ist mit Vorsicht zu verwenden.`,
+    );
+  }
+
   // §1.3: Union der Sperrfrist-Intervalle bilden, dann mit dem Fenster schneiden.
   // Bug-Check 10.6.2026 (HOCH, deklarierte fachliche Änderung): Das Fenster
   // wird ITERIERT — jede Hemmung verlängert die LAUFENDE Kündigungsfrist
@@ -509,7 +556,13 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
   // Schleife wie mitStillstand() in verjaehrung.ts). Vorher wurde nur das
   // ungehemmte Fenster geschnitten — eine zweite Arbeitsunfähigkeit in der
   // verlängerten Frist blieb wirkungslos (zu frühes Beendigungsdatum).
-  const union = unionIntervalle(intervalle.map((iv) => ({ von: iv.von, bis: iv.bis })));
+  // B2-Fix 10.6.2026: Die Wiederaufleben-Kandidaten laufen in der Union mit —
+  // schneiden sie das (iterativ verlängerte) Fenster nicht, bleiben sie
+  // wirkungslos (genau die Bedingung «Kündigungsfrist läuft am Jahrestag noch»).
+  const union = unionIntervalle([
+    ...intervalle.map((iv) => ({ von: iv.von, bis: iv.bis })),
+    ...folgeKandidaten.map((f) => ({ von: f.von, bis: f.bis })),
+  ]);
 
   let totalHemmungTage = 0;
   let fensterBis = ende_ungehemmt;
@@ -521,6 +574,32 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
     totalHemmungTage = neu;
     fensterBis = addDays(ende_ungehemmt, totalHemmungTage);
   }
+  // B2-Fix 10.6.2026: wirksame Wiederaufleben-Kandidaten rapportieren —
+  // erklärender Schritt, Zeitstrahl-Intervall und Sperrtage-Zähler (Kontingent
+  // des neuen Dienstjahrs, bezogene Tage angerechnet).
+  folgeKandidaten.forEach((f) => {
+    const schnitt = intervallSchnittTage({ von: beginn_frist, bis: fensterBis }, { von: f.von, bis: f.bis });
+    if (schnitt === 0) return;
+    sperrIntervalle.push({ von: iso(f.von), bis: iso(f.bis), typ: f.typ });
+    const zaehler = sperrtage.find((s) => s.ereignis === f.ereignis);
+    if (zaehler && zaehler.kontingent != null) {
+      const folgeTage = differenceInDays(f.bis, f.von); // Art.-77-Zählung ab Jahrestag
+      zaehler.kontingent = f.neueMaxTage;
+      zaehler.beansprucht += folgeTage;
+      zaehler.verbleibend = Math.max(0, f.neueMaxTage - zaehler.beansprucht);
+    }
+    rechenweg.push({
+      beschreibung: `C3a – Erneuter Unterbruch am Dienstjahres-Jahrestag (Art. 336c Abs. 1 lit. b und Abs. 2 OR)`,
+      zwischenergebnis:
+        `Die Sperrfrist des Ereignisses ${f.ereignis} war vor dem Jahrestag aufgebraucht, die Arbeitsunfähigkeit dauert an ` +
+        `und die Kündigungsfrist wirkt über den Dienstjahreswechsel (${formatDatum(f.jahrestag)}) hinaus: Die Frist wird am Jahrestag ` +
+        `erneut unterbrochen — es gilt die Sperrfrist des ${f.dj + 1}. Dienstjahrs (${f.neueMaxTage} Tage) unter Anrechnung der bezogenen Tage, ` +
+        `d. h. bis zu ${f.zusatzTage} weitere Sperrtage ab Jahrestag (Art. 77 OR), gekappt auf das Ende der Arbeitsunfähigkeit: ` +
+        `${formatDatum(f.von)} – ${formatDatum(f.bis)}. (BGE 133 III 517, zweite Konstellation, zu verifizieren.)`,
+      normen: [N_336c_1, N_336c_2, N_77],
+    });
+  });
+
   union.forEach((piece) => {
     const schnitt = intervallSchnittTage({ von: beginn_frist, bis: fensterBis }, piece);
     if (schnitt > 0) {
