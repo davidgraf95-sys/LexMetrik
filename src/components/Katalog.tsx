@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { RECHTSGEBIETE, istVerfuegbar, istAktiv, type CalculatorCard } from '../lib/startseiteConfig';
 import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
 import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
+import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_FACH_DIREKTEINSTIEGE, FRISTEN_EIGENE_REGIMES, fristenEinstiegArt } from '../lib/fristenKategorie';
 import { kartePasst, sucheRang } from '../lib/katalogSuche';
 import { sansAmp } from './typografie';
 
@@ -101,6 +102,115 @@ function WerkzeugZeile({ k, subLabel }: { k: CalculatorCard; subLabel?: string }
   );
 }
 
+// ─── Fristen-Register (FE-1, FAHRPLAN-FRISTEN-EINHEIT) ──────────────────────
+//
+// EIN «Fristen berechnen»-Einstieg: zwei grosse Haupteinstiege (Tagerechner
+// mit Regime-Untertiteln + Fristenspiegel), darunter die Spezialrechner als
+// «Eigenes Regime»-Zeilen mit Ein-Satz-WARUM; zpo-/schkg-fristen als
+// gekennzeichnete Fach-Direkteinstiege (Doppelpfad gewollt). Daten/Texte:
+// lib/fristenKategorie.ts (fachliche Aussagen, Abnahme David offen).
+
+function FristenHauptKarte({ k, untertitel }: { k: CalculatorCard; untertitel: string }) {
+  return (
+    <Link to={k.href!}
+      className="lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5 group">
+      <span className="flex items-baseline gap-3">
+        <span className="font-sans font-semibold text-ink-900 text-h3 leading-snug group-hover:text-brass-700 transition-colors">{sansAmp(k.title)}</span>
+        <span aria-hidden className="ml-auto text-brass-700 leading-none">→</span>
+      </span>
+      <span className="text-body-s text-ink-600 leading-relaxed">{untertitel}</span>
+      {k.status === 'entwurf' && (
+        <span><span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span></span>
+      )}
+    </Link>
+  );
+}
+
+function FristenRegimeZeile({ k, warum }: { k: CalculatorCard; warum?: string }) {
+  const aktiv = istAktiv(k.status) && !!k.href;
+  const inhalt = (
+    <>
+      <span className="min-w-0">
+        <span className="block font-sans font-medium text-ink-900 text-body-s leading-snug">{sansAmp(k.title)}</span>
+        {/* WARUM-eigen-Satz darf umbrechen (kein truncate — der Satz IST die Information) */}
+        <span className="block text-xs text-ink-500 leading-snug">{warum ?? k.rechtsgebiet}</span>
+      </span>
+      <span className="flex items-center gap-2 shrink-0">
+        {k.status === 'entwurf' && (
+          <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
+        )}
+        <span aria-hidden className="text-brass-700 leading-none">→</span>
+      </span>
+    </>
+  );
+  const klasse = 'lc-card text-left px-4 py-3 flex items-center justify-between gap-3 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none';
+  return aktiv ? (
+    <Link to={k.href!} className={`${klasse} hover:shadow-lg hover:-translate-y-0.5`}>{inhalt}</Link>
+  ) : (
+    <div className={klasse}>{inhalt}</div>
+  );
+}
+
+function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
+  const byId = new Map(karten.map((k) => [k.id, k]));
+  const haupt = FRISTEN_HAUPTEINSTIEGE
+    .map((h) => ({ ...h, k: byId.get(h.id) }))
+    .filter((h): h is typeof h & { k: CalculatorCard } => !!h.k && istVerfuegbar(h.k) && !!h.k.href);
+  const fach = FRISTEN_FACH_DIREKTEINSTIEGE
+    .map((id) => byId.get(id))
+    .filter((k): k is CalculatorCard => !!k && istVerfuegbar(k) && !!k.href);
+  const regimes = FRISTEN_EIGENE_REGIMES
+    .map((r) => ({ ...r, k: byId.get(r.id) }))
+    .filter((r): r is typeof r & { k: CalculatorCard } => !!r.k && istVerfuegbar(r.k));
+  // Ehrlicher Fallback: verfügbare Fristen-Karten ohne FE-1-Zuordnung
+  // erscheinen als Regime-Zeile ohne WARUM-Satz (der Test bricht zusätzlich).
+  const unzugeordnet = karten.filter((k) => istVerfuegbar(k) && fristenEinstiegArt(k.id) === null);
+
+  return (
+    <div className="space-y-5">
+      <div className="space-y-2">
+        <div className="flex items-center gap-3">
+          <h3 className="lc-overline text-brass-700">Fristen berechnen</h3>
+          <span aria-hidden className="flex-1 h-px bg-line" />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {haupt.map((h) => <FristenHauptKarte key={h.id} k={h.k} untertitel={h.untertitel} />)}
+        </div>
+        {fach.length > 0 && (
+          <p className="text-body-s text-ink-500">
+            Fach-Direkteinstieg (derselbe Rechner, direkt im Regime geöffnet):{' '}
+            {fach.map((k, i) => (
+              <span key={k.id} className="whitespace-nowrap">
+                {i > 0 && <span aria-hidden> · </span>}
+                <Link to={k.href!} className="font-medium text-brass-700 hover:text-brass-600 no-underline">
+                  {sansAmp(k.title)} <span aria-hidden>→</span>
+                </Link>
+              </span>
+            ))}
+          </p>
+        )}
+      </div>
+
+      {(regimes.length > 0 || unzugeordnet.length > 0) && (
+        <div className="space-y-2">
+          <div className="flex items-center gap-3">
+            <h3 className="lc-overline text-ink-500">Eigenes Regime – Spezialrechner</h3>
+            <span aria-hidden className="flex-1 h-px bg-line" />
+          </div>
+          <p className="text-body-s text-ink-500 max-w-reading">
+            Diese Fristen folgen eigenen Regeln und haben darum einen eigenen Rechner –
+            der Grund steht an jeder Zeile.
+          </p>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+            {regimes.map((r) => <FristenRegimeZeile key={r.id} k={r.k} warum={r.warum} />)}
+            {unzugeordnet.map((k) => <FristenRegimeZeile key={k.id} k={k} />)}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
 function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck: () => void }) {
@@ -138,27 +248,35 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
         <p className="text-body-s text-ink-500 max-w-reading">{kat.lede}</p>
       </div>
 
-      {alltag.length > 0 && (
-        <div className="space-y-2">
-          <div className="flex items-center gap-3">
-            <h3 className="lc-overline text-brass-700">Alltag</h3>
-            <span aria-hidden className="flex-1 h-px bg-line" />
-          </div>
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-            {alltag.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
-          </div>
-        </div>
-      )}
-      {weitere.length > 0 && (
-        <div className="space-y-2">
-          <div className="flex items-center gap-3">
-            <h3 className="lc-overline text-ink-500">{alltag.length > 0 ? 'Weitere Werkzeuge' : 'Werkzeuge'} <span className="num">({weitere.length})</span></h3>
-            <span aria-hidden className="flex-1 h-px bg-line" />
-          </div>
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-            {weitere.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
-          </div>
-        </div>
+      {kat.id === 'fristen' ? (
+        /* FE-1 (FAHRPLAN-FRISTEN-EINHEIT): EIN Einstieg + Regime-Abzweigungen
+           statt der Alltag/Weitere-Mischliste. */
+        <FristenRegister karten={karten} />
+      ) : (
+        <>
+          {alltag.length > 0 && (
+            <div className="space-y-2">
+              <div className="flex items-center gap-3">
+                <h3 className="lc-overline text-brass-700">Alltag</h3>
+                <span aria-hidden className="flex-1 h-px bg-line" />
+              </div>
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+                {alltag.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+              </div>
+            </div>
+          )}
+          {weitere.length > 0 && (
+            <div className="space-y-2">
+              <div className="flex items-center gap-3">
+                <h3 className="lc-overline text-ink-500">{alltag.length > 0 ? 'Weitere Werkzeuge' : 'Werkzeuge'} <span className="num">({weitere.length})</span></h3>
+                <span aria-hidden className="flex-1 h-px bg-line" />
+              </div>
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+                {weitere.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+              </div>
+            </div>
+          )}
+        </>
       )}
 
       {geplant.length > 0 && (

@@ -78,6 +78,24 @@ describe('Register: Vier-Kategorien-DECKBLATT mit Klick-Ansicht (Präzisierung D
     expect(html).not.toContain('href="/rechner/verzugszins"');
   });
 
+  it('?kategorie=fristen: FE-1-Anatomie — zwei Haupteinstiege, Fach-Direkteinstieg-Kennzeichnung, Eigenes-Regime-Zeilen mit WARUM-Satz', () => {
+    const html = seiteHtml('/?kategorie=fristen');
+    // EIN Einstieg: Tagerechner + Fristenspiegel zuoberst, mit Regime-Untertiteln
+    expect(html).toContain('Fristen berechnen');
+    expect(html).toContain('Allgemein (Vertrag/OR) · Zivilprozess (ZPO) · Betreibung (SchKG) · Rückwärts');
+    expect(html).toContain('Ein Ereignis – alle Fristen daraus');
+    // Doppelpfad gewollt, aber gekennzeichnet
+    expect(html).toContain('Fach-Direkteinstieg');
+    expect(html).toContain('href="/rechner/zpo-fristen"');
+    expect(html).toContain('href="/rechner/schkg-fristen"');
+    // Spezialrechner als benannte Abzweigungen mit Ein-Satz-Begründung
+    expect(html).toContain('Eigenes Regime');
+    expect(html).toContain('Unterbrechungs-Kette');
+    expect(html).toContain('Art. 336c OR');
+    // Keine gleichrangige Mischliste mehr
+    expect(html).not.toContain('Weitere Werkzeuge');
+  });
+
   it('Kachel-Direktlinks decken alle vier Kategorien (Schnellzugriff-Funktion erhalten)', async () => {
     const html = seiteHtml('/');
     const { kachelDirektlinks } = await import('../lib/praxisRang');
