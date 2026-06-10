@@ -84,7 +84,7 @@ extrahieren, OR-Regime als erste Instanziierung (byte-golden).
 5. Ein Commit pro Stufe, Stand hier abhaken.
 
 - [x] V1 Termin-Arithmetik ✓ 10.6.2026 — Befund: weitgehend SCHON konvergiert (kuendigungsfrist nutzte datumsUtils; AG-Kapitalband seit HOCH-2-Fix date-fns addYears). Einzige Rest-Dublette gehoben: sperrfristen endOfMonth → letzerTagDesMonats. Byte-golden.
-- [ ] V2 Preset-Rahmen
-- [ ] V3 Fristen-Restdubletten (mit Inventur-Skript)
-- [ ] V4 Gesellschafts-Geldkern (Extraktion)
+- [x] V2 Preset-Rahmen — ABGEBROCHEN nach Abbruchkriterium (10.6.2026): Strukturgleichheit war oberflächlich; SchkgPreset trägt 7 regime-eigene Felder (Dual wartefrist/verwirkung, infoOnly, modus/modusUmstritten, hemmungMoeglich, ausloeser, verweise). Gemeinsamer Typ = Optional-Feld-Brei (§1) → bewusstes Duplikat belassen.
+- [x] V3 Fristen-Restdubletten ✓ 10.6.2026 — Inventur über alle src/lib-Datums-Helfer: die vermuteten Werktags-Dubletten (fristenEngine/verjaehrung/mietrecht) sind BEREITS eine Quelle (alle Wrapper um data/zpoFeiertage.naechsterWerktag); verjaehrung-Mechanik (rohesEnde/mitStillstand = OR-Hemmungskette Art. 134) als bewusste Regime-Kopie kommentiert. Kein Hebe-Bedarf.
+- [x] V4 Gesellschafts-Geldkern ✓ 10.6.2026 — effektiveLiberierung() byte-identisch nach vorlagen/kapitalKern.ts extrahiert (strukturelle Eingabe KapitalKernEingabe; AG konsumiert; GmbH/KE docken bei §0a-Öffnung an — GmbH-Volliberierungs-Zwang 777c bleibt GATE im Konsumenten, §4). Golden 87/87 inkl. ag:* byte-gleich, AG-Sweep 3264 ohne Widersprüche.
 - [ ] V5 Verjährungs-Rahmen

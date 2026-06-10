@@ -129,6 +129,13 @@ const TYP_LABEL: Record<UnterbrechungsTyp, string> = {
 
 // Art. 132: Beginntag nicht mitrechnen; Jahresfrist endet am zahlengleichen Tag
 // (fehlt der Tag, am Monatsletzten – addYears bildet 29.02. → 28.02. ab).
+// V3-Inventur 10.6.2026 (FAHRPLAN-VEREINHEITLICHUNG): rohesEnde/mitStillstand
+// sind KEINE Dublette der fristenEngine-Bausteine, sondern bewusste
+// Regime-Kopie — die OR-Verjährung ruht über BENANNTE Hemmungs-Intervalle
+// (Art. 134 OR, abschliessend) statt über die fixen Gerichtsferien-Fenster
+// der ZPO/SchKG (§1: lieber Duplikat als eine Abstraktion, die zwei
+// rechtlich verschiedene Regimes gleich behandelt). Die fachNEUTRALE
+// Werktags-Arithmetik kommt bereits aus data/zpoFeiertage.naechsterWerktag.
 function rohesEnde(start: Date, jahre: number): Date {
   return addYears(start, jahre);
 }
