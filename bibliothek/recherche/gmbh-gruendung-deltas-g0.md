@@ -1,5 +1,7 @@
 # GmbH-Gründung — Delta-Liste G0 (Korrektheits-Abgleich am ZH-Original)
 
+**Erstellt:** 7.6.2026 abends (Analyse-Agent GmbH-Programm G0; S1-Datumszeile
+nachgetragen 10.6.2026, Bibliotheks-Tor).
 **Quelle + Stand:** Abgleich `src/lib/vorlagen/gruendungGmbhDokumente.ts` (987 Z.,
 Erstausbau 9b) gegen die amtlichen Originale in `.scratch/gmbh-knowledge/`
 (ZH-Notariats-/HRegA-Vorlagen, session-fest gesichert aus den Muster-Sweeps);

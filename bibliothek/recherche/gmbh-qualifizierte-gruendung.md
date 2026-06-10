@@ -1,5 +1,7 @@
 # GmbH — Qualifizierte Gründung via Art. 777c Abs. 2 OR (G2-Recherche)
 
+**Erstellt:** 7.6.2026 (G2-Recherche GmbH-Programm; S1-Datumszeile
+nachgetragen 10.6.2026, Bibliotheks-Tor).
 **Quelle + Stand:** Cache-Verifikation 7.6.2026 (`/tmp/or.html` OR @ 1.1.2026 ·
 `/tmp/hregv.html` HRegV @ 1.1.2026 · `/tmp/zgb.html`); AG-Referenz
 `src/lib/vorlagen/gruendungAgDokumente.ts`; Wissensbestand `.scratch/gmbh-knowledge/`.

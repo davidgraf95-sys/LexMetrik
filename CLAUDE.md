@@ -32,13 +32,23 @@ Rechenregeln, keine Schätzung» ist das Produktversprechen.
   (Wizard, Vorschau, Gates-Anzeige) finden in der Darstellungsschicht statt.
   Die Logikschicht wird dadurch nie berührt.
 
-## §4 Eine Engine pro Rechtsgebiet — keine Fusion zur Code-Ersparnis
+## §4 Eine Engine pro Rechtsgebiet — Verschmelzung nur Golden-gegated
 
 Die Trennung der Engines (verjaehrung, sperrfristen, mietrecht, …) ist kein
 Ballast, sondern ein Sicherheitsmerkmal: einzeln testbar, keine Querwirkungen
-zwischen Rechtsgebieten. Geteilt wird nur fachneutrale Infrastruktur
+zwischen Rechtsgebieten. Geteilt wird fachneutrale Infrastruktur
 (Datums-Arithmetik, Feiertage/Computus, Bruchrechnung, Fristen-Grundmuster) —
 nie materielle Rechtsregeln.
+
+**Code-Verschmelzung ist erlaubt (Entscheid David 8.6.2026), aber nur unter
+zwei Bedingungen:** (1) strikt nach dem §6-Golden-Protokoll — committete
+Basis vorher aktuell, nachher `npm run golden:vergleich` byte-gleich; (2)
+**regime-treu**: verschiedene Rechtsregimes bleiben im verschmolzenen Code
+als **interne Verzweigung** erkennbar, sie werden nie zu einer gemeinsamen
+Regel kollabiert (§1: lieber Duplikat als eine Abstraktion, die zwei
+rechtlich verschiedene Fälle gleich behandelt). §1 und §3 bleiben
+unangetastet. Risikoärmste Merges zuerst (geteilte Infrastruktur hinter den
+Regime-Engines).
 
 ## §5 Single Source of Truth
 
