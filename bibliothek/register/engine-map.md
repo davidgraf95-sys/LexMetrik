@@ -59,3 +59,33 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | fedlex.ts + scripts/fedlex-cache.sh | register/quellen-register.md (Pins) | gepflegt; bei jedem neuen Gesetz Pin + Pflicht-Anker |
 | startseiteConfig.ts (Katalog) | recherche/INDEX.md (geplant-Cluster) | SSoT §5; Zählung im Test |
 | bge.ts | rechtsprechung/bge-register.md | entwurf; Teil-Regex-Fix 7.6. |
+
+## Dossier-only & Abnahme-Blocker (G4.1, Stand 10.6.2026)
+
+**Dossier-only** (Wissen liegt geordnet vor, ist aber NICHT verdrahtet — Bau-
+Kandidaten nach G1-Rangliste, §0a beachten):
+
+| Dossier | Inhalt | Verdrahtungs-Ziel |
+|---|---|---|
+| kosten/gerichtsgebuehren-kantone (Tiefenerfassung 26/26) · kosten/anwaltstarife-kantone.md | kantonale Kosten-/Tarifrahmen, zweifach geprüft | `prozesskosten` (Lücken-Rang 1) |
+| recherche/bgg-beschwerde-engine.md (Decision Tree A–F) | BGG-Fristen/Zulässigkeit Stufe 2 | `bgg-fristen` (Rang 2; §0a) |
+| behoerden/handelsregisteraemter-kantone.md | HR-Ämter 26 Kt. (zefix-Abgleich offen) | Gründungs-Masken (G3.4) |
+| kosten/notariatstarife-gruendung-kantone.md | Beurkundungstarife (ZH-123/SG offen) | teilverdrahtet (`notariatsgebuehrenGruendung.ts`) |
+| recherche/zwei-kategorien-kapitalmodell (AG) · GmbH-G-Dossiers (G0/G2) | §0a-GESPERRT (David) | — |
+| normen/erbrecht-regelwerk.md (Ausgleichung/Herabsetzung) | Regelwerk liegt | `erb-ausgleichung` (Rang 8) |
+
+**Abnahme-Blocker** (verhindern `geprüft` quer durch die Engines):
+
+1. **Feiertagsverzeichnis**: BJ-Doppelcheck 26/26 ✓, aber je Kanton noch
+   nicht am kantonalen Erlass verifiziert (Verfallsregister «offen») —
+   blockiert ALLE Fristen-Engines.
+2. **GebV-Revision AS 2025 630** (15a/15b eSchKG): Diff erfasst, amtliche
+   Verifikation vor Abnahme `betreibungskosten`/`gebvKosten.ts`.
+3. **VMWG 19a** (seit 1.10.2025): mietvertrag.ts-Fundstelle korrigiert
+   (`ed4365b`), fachliche Abnahme offen.
+4. **Notariate UR/AI/BL** + **ZH-Nachtrag 123 / SG-«volle»-Lesart**
+   (Tarife): vor Abnahme der Gründungs-Masken.
+5. **Behörden-Stammdaten** (`stand`-Felder): je Adresse vor «geprüft»
+   gegenprüfen (Strafgerichte: Erstrecherche, Doppelcheck offen).
+6. **0 Abnahme-Protokolle**: `abnahme/<id>.md` existiert für kein Werkzeug —
+   Gate `abnahmeGate.test.ts` ist scharf; Reihenfolge = KATALOG-ROADMAP A.
