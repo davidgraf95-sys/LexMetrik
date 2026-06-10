@@ -53,12 +53,12 @@ describe('Schlichtungsstellen — Stichproben (zweifach geprüfte Werte)', () =>
       expect(ti.stellen.some((s) => s.plzOrt.includes('Chiasso'))).toBe(true);
     }
   });
-  it('GR ordentlich: 11 Vermittlerämter (Imboden Postfach 308)', () => {
+  it('GR ordentlich: 11 Vermittlerämter (Imboden Postfach 667 — Korrektur 10.6.2026, Tamins/Domat-Ems)', () => {
     const gr = SCHLICHTUNGSSTELLEN.GR.ordentlich;
     expect(gr.modus).toBe('liste');
     if (gr.modus === 'liste') {
       expect(gr.stellen.length).toBe(11);
-      expect(gr.stellen.find((s) => s.name.includes('Imboden'))?.strasse).toContain('Postfach 308');
+      expect(gr.stellen.find((s) => s.name.includes('Imboden'))?.strasse).toContain('Postfach 667');
     }
   });
   it('SH: Adresse amtlich bestätigt (Behörden-Audit 6.6.2026, Vorbehalt aufgelöst)', () => {
@@ -125,8 +125,10 @@ describe('Gemeinde→Amt-Auflösung AG/SG/TG/FR/ZG/AI (amtAufloesung)', () => {
     expect((await amtFuer('ZG', 'Cham'))?.plzOrt).toBe('6330 Cham');
     expect((await amtFuer('AI', 'Gonten'))?.name).toBe('Vermittleramt Gonten');
     // SZ/BL bewusst nicht auflösbar (Verzeichnis-Fallback)
-    expect(await amtFuer('SZ', 'Lachen')).toBeNull();
-    expect(await amtFuer('BL', 'Sissach')).toBeNull();
+    // Deklarierte Anpassung 10.6.2026: SZ/BL haben jetzt Gemeinde-Karten
+    // (Sektionen 35/36 des Dossiers) — Auflösung ist gewollt.
+    expect((await amtFuer('SZ', 'Lachen'))?.name).toContain('Lachen');
+    expect((await amtFuer('BL', 'Sissach'))?.name).toContain('Sissach');
   });
   it('Kette PLZ → Gemeinde → Amt (3280 Murten → Seebezirk; 9500 dokumentiert die Mehr-Gemeinden-Ambiguität)', async () => {
     const { plzAufloesen } = await import('../data/plz/plzAufloesung');

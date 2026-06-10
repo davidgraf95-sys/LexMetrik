@@ -93,7 +93,7 @@ Oberschwarzstrasse 7); direkte amtliche URL für alle 5: ai.ch/gerichte/vermittl
 
 ---
 
-## 4. SZ — Schwyz: Vermittlerämter — TEILWEISE OFFEN (per-Gemeinde-System, amtliche Karte JS-only)
+## ALT (ersetzt durch 36) · SZ — Schwyz: Vermittlerämter — TEILWEISE OFFEN (per-Gemeinde-System, amtliche Karte JS-only)
 
 **Struktur:** Das SZ-System ist NICHT in wenige Kreise gegliedert, sondern grundsätzlich **per Gemeinde**: Jede der 30 Gemeinden hat (amtlich) einen Vermittler + Stellvertreter, gewählt auf 4 Jahre. Einzelne Bezirke/Gemeinden teilen sich ein Amt (Konsolidierungen). Gemeinde→Amt ist daher überwiegend 1:1 mit einigen Ausnahmen.
 
@@ -118,7 +118,7 @@ Oberschwarzstrasse 7); direkte amtliche URL für alle 5: ai.ch/gerichte/vermittl
 
 ---
 
-## 5. BL — Basel-Landschaft: 15 Friedensrichterkreise — Kreisstruktur VOLLSTÄNDIG, Korrespondenzadressen TEILWEISE
+## ALT (ersetzt durch 35) · BL — Basel-Landschaft: 15 Friedensrichterkreise — Kreisstruktur VOLLSTÄNDIG, Korrespondenzadressen TEILWEISE
 
 baselland.ch blockt durchgängig (403). Kreisstruktur aus GOG §18 (SGS 170) + amtsnahen Quellen rekonstruiert; je 2 Friedensrichter/Kreis. Die Korrespondenzadresse ist i. d. R. die Sitzgemeinde-Verwaltung (Termine nur nach Vereinbarung; Friedensrichter amtieren nebenamtlich, oft ohne separates Büro).
 
@@ -268,7 +268,7 @@ Unsicherheiten TG:
 
 # NACHTRAG 6.6.2026 — SZ und BL GESCHLOSSEN (Restlücken-Recherche)
 
-## 1. SZ — Vermittlerämter mit Gemeinde-Zuordnung — **GESCHLOSSEN**
+## ALT (ersetzt durch 36) · SZ — Vermittlerämter mit Gemeinde-Zuordnung — **GESCHLOSSEN**
 
 Wichtigste Erkenntnis (korrigiert die bisherige Annahme): Die sz.ch-Aussage «jede der 30 Gemeinden hat einen Vermittler» ist vereinfacht/teilweise überholt. Tatsächlich gibt es **Bezirks-Vermittlerämter** (Höfe, Einsiedeln, Küssnacht, Gersau) und **gemeindeübergreifende Vermittlerkreise**. Massgebliche amtliche Quelle ist der **Staatskalender SZ 2024–2026** (Staatskanzlei), nicht die JS-Karte auf sz.ch/vermittler.
 
@@ -305,7 +305,7 @@ Wichtigste Erkenntnis (korrigiert die bisherige Annahme): Die sz.ch-Aussage «je
 Amtliche Quelle: Staatskalender SZ 2024–2026, https://www.sz.ch/public/upload/assets/61726/Staatskalender_aktuell.pdf (Abruf 6.6.2026); ergänzend sz.ch Vermittlerämter https://www.sz.ch/behoerden/justiz/vermittleraemter.html (Abruf 6.6.2026), Einsiedeln-Adresse https://www.einsiedeln.ch (Abruf 6.6.2026).
 Ehrliche Restlücke: Einzeladressen der reinen Gemeinde-Vermittler stehen im Kalender meist ohne Strasse (nur Name/Wohnsitz); für Volladressen ist je Gemeinde-Website nachzuziehen. Bezirks-Vermittlerämter sind vollständig adressiert.
 
-## 2. BL — Friedensrichterkreise K9–K12 + Itingen — **GESCHLOSSEN**
+## ALT (ersetzt durch 35) · BL — Friedensrichterkreise K9–K12 + Itingen — **GESCHLOSSEN**
 
 Korrektur zur Dossier-Annahme: Die Kreiseinteilung steht **nicht** in einem separaten Dekret (SGS 170.1) und auch nicht in «§ 2», sondern direkt im **GOG BL § 18** (SGS 170). § 2 GOG regelt nur, *dass* Friedensrichter die Zivilgerichtsbarkeit ausüben.
 
@@ -429,7 +429,7 @@ PLZ-Lookup): Hauterive + La Tène + Saint-Blaise + Enges → **Laténa**;
 Cressier amtlich «Cressier (NE)». Die LDP-44a-Schreibweisen (Fassung 2021)
 sind insoweit überholt; Liste oben auf swisstopo-Stand normalisiert.
 
-## 34. BE — Schlichtungsbehörden je Gerichtsregion (GSOG Art. 80/84; OrG Art. 39a) — GENERATOR-OFFEN
+## 34. BE — Schlichtungsbehörden je Gerichtsregion (GSOG Art. 80/84; OrG Art. 39a) — VERDRAHTET 10.6.2026 (BFS-Join)
 
 Zuordnung über VERWALTUNGSKREISE (= BFS-Bezirke): Bern-Mittelland ·
 Emmental+Oberaargau · Thun+Frutigen-Niedersimmental+Obersimmental-Saanen+
@@ -438,7 +438,16 @@ Effingerstrasse 34, 3008 Bern · Dunantstrasse 3, 3400 Burgdorf ·
 Scheibenstrasse 11 B, 3600 Thun · Neuengasse 8, 2502 Biel/Bienne
 (Aussenstelle Berner Jura prov. Unionsgasse 13, 2502 Biel — Moutier seit
 1.1.2026 JU!). zsg.justice.be.ch …/schlichtungsbehoerden/<region>.html.
-Gemeinde-Map braucht BFS-Join (wie GR) → nächster Generator-Lauf.
+Gemeinde-Map via BFS-Join (Verwaltungskreise; BFS führt den Berner Jura
+französisch als «Arrondissement administratif Jura bernois»). VERDRAHTET
+10.6.2026 (334/334 Gemeinden, agvchapp-Snapshot 1.6.2026):
+
+| Amt | Strasse | PLZ Ort | Verwaltungskreise | URL |
+|---|---|---|---|---|
+| Schlichtungsbehörde Bern-Mittelland | Effingerstrasse 34 | 3008 Bern | Bern-Mittelland | https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/bern-mittelland.html |
+| Schlichtungsbehörde Emmental-Oberaargau | Dunantstrasse 3 | 3400 Burgdorf | Emmental, Oberaargau | https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/emmental-oberaargau.html |
+| Schlichtungsbehörde Oberland | Scheibenstrasse 11 B (Verwaltungsgebäude Selve) | 3600 Thun | Thun, Frutigen-Niedersimmental, Obersimmental-Saanen, Interlaken-Oberhasli | https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/oberland.html |
+| Schlichtungsbehörde Berner Jura-Seeland | Neuengasse 8 | 2502 Biel/Bienne | Jura bernois, Biel/Bienne, Seeland | https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/berner-jura-seeland.html |
 
 ## 35. BL — 15 Friedensrichterkreise VOLLSTÄNDIG (§ 18 GOG BL, SGS 170 — Volltext via bl.clex.ch 10.6.2026)
 
@@ -496,7 +505,7 @@ Alpthal, Wangen — dort Dropdown/Handeingabe. 26/30 Gemeinden automatisch.
 | Vermittleramt Vorderthal | Kreuzstrasse 30 | 8854 Siebnen | Vorderthal | https://www.vorderthal.ch/verwaltung/vermittler |
 | Vermittleramt Innerthal | Mühlestrasse 16 | 8855 Wangen | Innerthal | https://www.innerthal.ch/verwaltung/vermittleramt-1456 |
 
-## 37. VD — KEINE eigene Schlichtungsstelle (Struktur-Befund 10.6.2026) — GENERATOR-OFFEN
+## VD (kein Generator-Eintrag) — KEINE eigene Schlichtungsstelle (Struktur-Befund 10.6.2026) — GENERATOR-OFFEN
 
 Schlichtung «par le juge matériellement compétent» (Art. 41 CDPJ-VD;
 Circulaire TC Nr. 18 v. 9.11.2010): < CHF 10'000 Juge de paix (9 je

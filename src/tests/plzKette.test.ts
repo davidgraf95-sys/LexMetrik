@@ -166,3 +166,18 @@ describe('BL/SZ — Gemeinde→Schlichtungsstelle (10.6.2026)', () => {
     expect(await amtFuer('SZ', 'Lauerz')).toBeNull();
   });
 });
+
+describe('BE — Schlichtungsbehörden je Gerichtsregion (GSOG Art. 80/84, BFS-Join 10.6.2026)', () => {
+  it('334 Gemeinden auf 4 Behörden; Berner Jura (BFS frz. «Arrondissement administratif») → Jura-Seeland', async () => {
+    const { amtFuer, AMT_KANTONE } = await import('../data/schlichtung/amtAufloesung');
+    expect(AMT_KANTONE).toContain('BE');
+    expect((await amtFuer('BE', 'Bern'))?.name).toContain('Bern-Mittelland');
+    expect((await amtFuer('BE', 'Thun'))?.name).toContain('Oberland');
+    expect((await amtFuer('BE', 'Langenthal'))?.name).toContain('Emmental-Oberaargau');
+    expect((await amtFuer('BE', 'Biel/Bienne'))?.name).toContain('Jura-Seeland');
+    expect((await amtFuer('BE', 'Saint-Imier'))?.name).toContain('Jura-Seeland');
+    expect((await amtFuer('BE', 'Saanen'))?.name).toContain('Oberland');
+    // Kantonswechsel 1.1.2026: Moutier ist JU — darf in BE nicht auflösen.
+    expect(await amtFuer('BE', 'Moutier')).toBeNull();
+  });
+});

@@ -124,6 +124,35 @@ for (const z of zuordnungMd.split('\n')) {
     d.gemeinden[g] = idx;
   }
 }
+// BE: «Verwaltungskreise»-Spalte → Gemeindelisten aus dem BFS-Verzeichnis
+// (Level 2 BE; Berner Jura bei BFS französisch «Arrondissement administratif
+// Jura bernois» — Match über Namens-Suffix). Verdrahtet 10.6.2026.
+if (kantonsDaten.BE) {
+  const bfsB = readFileSync('/tmp/bfs_gemeinden.csv', 'utf-8').replace(/^\uFEFF/, '').split('\n').map((z) => z.split(','));
+  const kopfB = bfsB[0];
+  const ixB = (n: string) => kopfB.indexOf(n);
+  const beHist = bfsB.slice(1).find((r) => r[ixB('Level')] === '1' && r[ixB('ShortName')] === 'BE')?.[ixB('HistoricalCode')];
+  const kreisName = new Map<string, string>();
+  for (const r of bfsB.slice(1)) {
+    if (r[ixB('Level')] === '2' && r[ixB('Parent')] === beHist && !r[ixB('ValidTo')]) {
+      kreisName.set(r[ixB('HistoricalCode')], r[ixB('Name')].replace(/^Verwaltungskreis /, '').replace(/^Arrondissement administratif /, ''));
+    }
+  }
+  const beD = kantonsDaten.BE;
+  const kreisZuIdx = new Map<string, number>();
+  // Die Dossier-Spalte «Verwaltungskreise» wurde beim Tabellen-Parse als
+  // gemeinden-Liste eingelesen → in Kreis-Zuordnung umdeuten.
+  for (const [kreis, idx] of Object.entries(beD.gemeinden)) kreisZuIdx.set(kreis, idx);
+  beD.gemeinden = {};
+  for (const r of bfsB.slice(1)) {
+    if (r[ixB('Level')] === '3' && kreisName.has(r[ixB('Parent')]) && !r[ixB('ValidTo')]) {
+      const k = kreisName.get(r[ixB('Parent')])!;
+      const idx = kreisZuIdx.get(k);
+      if (idx !== undefined) beD.gemeinden[r[ixB('Name')]] = idx;
+    }
+  }
+}
+
 // GR: «Regionen»-Spalte → Gemeindelisten aus dem BFS-Verzeichnis
 // (Level 2 GR trägt das Präfix «Region », z. B. «Region Prättigau / Davos»).
 if (kantonsDaten.GR) {
@@ -155,12 +184,8 @@ for (const [k, d] of Object.entries(kantonsDaten)) {
   console.log(`${k}: ${d.aemter.length} Ämter, ${Object.keys(d.gemeinden).length} Gemeinde-Einträge.`);
 }
 
-// ── 4 · Nachbearbeitung ─────────────────────────────────────────────────────
-// SZ/BL: im Dossier ausdrücklich als TEILWEISE OFFEN markiert (SZ JS-Karte
-// ohne Datenquelle; BL Kreise K9–K12 + Itingen-Konflikt ungeklärt) →
-// BEWUSST nicht generieren; UI behält den ehrlichen Verzeichnis-Fallback.
-delete kantonsDaten.SZ;
-delete kantonsDaten.BL;
+// SZ/BL werden seit 10.6.2026 regulär generiert (Sektionen 35/36 des
+// Dossiers — Alt-Sektionen sind parser-unsichtbar markiert).
 // AI-Präfix + FR über BFS-Bezirke:
 // AI: Tabellen-Spalte trägt «Bezirk X» — amtlicher Gemeindename ist X.
 if (kantonsDaten.AI) {
