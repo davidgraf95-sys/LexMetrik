@@ -19,7 +19,17 @@ export type Rechtsbereich = 'privat' | 'oeffentlich' | 'straf' | 'uebergreifend'
 export const istAktiv = (s: Status) => s !== 'geplant';
 export type Modus = 'rechner' | 'vorlage'; // inhaltliche Hauptweiche (In-Page-Toggle)
 export type Art = 'frist' | 'betrag' | 'zuordnung' | 'werkzeug'; // Rechner-Output-Typ → Sektion
-export type VorlageArt = 'vorsorge' | 'vertrag' | 'eingabe' | 'gesellschaft' | 'korrespondenz'; // Dokument-Typ → Sektion/Filter
+// S-2 STRUKTUR-UMBAU (Auftrag David 10.6.2026 abends): Vorlagen-Gruppen neu —
+// Behördeneingaben · Verträge · Einseitige Willenserklärungen (vorher
+// «korrespondenz») · Gesellschaftsrecht · Vorsorge & Nachlass (ergänzt auf
+// Davids «gerne ergänzen»: Testament/Vorsorgeauftrag wären dogmatisch auch
+// einseitige Willenserklärungen, der Praxis-Block bleibt aber eigener
+// Einstieg — fachliche Aussage, Abnahme David offen).
+export type VorlageArt = 'eingabe' | 'vertrag' | 'erklaerung' | 'gesellschaft' | 'vorsorge'; // Dokument-Typ → Sektion/Filter
+// Unterrubriken der Behördeneingaben (S-2): Klagen allgemein (Schlichtungs-
+// gesuch · vereinfachte · ordentliche Klage) · Klagen besondere Verfahren
+// (nach klageGebiet) · Gesuche & sonstige Eingaben.
+export type EingabeRubrik = 'klage_allgemein' | 'klage_besonders' | 'gesuch_sonstige';
 // Die frühere Stufe «tier: free|pro» (Free-Auswahl auf «/», Vollkatalog auf
 // /pro, PAYWALL_ACTIVE als Andockpunkt) ist mit der Aufhebung der Free/Pro-
 // Zweiteilung ENTFERNT (FAHRPLAN-EINE-HAUPTSEITE D-3, Auftrag David
@@ -63,6 +73,11 @@ export interface RechnerCard extends BaseItem {
 export interface VorlageCard extends BaseItem {
   modus: 'vorlage';
   art: VorlageArt;        // Dokument-Typ → bestimmt die Sektion
+  /** Nur art 'eingabe' (S-2): Unterrubrik im Behördeneingaben-Register. */
+  eingabeRubrik?: EingabeRubrik;
+  /** Nur eingabeRubrik 'klage_besonders': Klage-Gebiet als Gruppen-Label
+      (Familienrecht, Haftpflichtrecht, Zwangsvollstreckung …). */
+  klageGebiet?: string;
   schemaId?: string;      // Vorlagen-Schema (nur bei 'geprüft')
   formvorschrift?: string; // Kurzhinweis für die Karte, z. B. «Eigenhändig zu errichten»
   // Angebotene Download-Formate; 'xlsx' ist vorbereitet (Renderer andockbar),
@@ -115,18 +130,19 @@ export const RECHTSBEREICH_SEKTIONEN: { code: Rechtsbereich; id: string; title: 
     lede: 'Rechtsmittel ans Bundesgericht, Einordnung und Werkzeuge über alle Verfahren.' },
 ];
 
-// Vorlagen-Sektionen: vier Dokument-Typen (Modus «Vorlagen»)
+// Vorlagen-Sektionen: fünf Dokument-Gruppen (S-2 STRUKTUR-UMBAU, Auftrag
+// David 10.6.2026 abends — Reihenfolge und Zuschnitt nach seinem Wortlaut).
 export const VORLAGE_SEKTIONEN: Sektion[] = [
-  { art: 'vorsorge', id: 'vorsorge', numeral: 'I', title: 'Vorsorge & Nachlass',
-    lede: 'Testament, Erbvertrag, Vorsorgeauftrag, Patientenverfügung – aus festen Bausteinen.' },
+  { art: 'eingabe', id: 'eingaben', numeral: 'I', title: 'Behördeneingaben',
+    lede: 'Klagen, Gesuche, Einsprachen und Beschwerden an Gerichte und Behörden – strukturierte Gerüste mit offenen Optionen.' },
   { art: 'vertrag', id: 'vertraege', numeral: 'II', title: 'Verträge',
-    lede: 'Arbeits-, Miet-, Darlehens- und Kaufverträge – Klausel für Klausel nachvollziehbar.' },
-  { art: 'eingabe', id: 'eingaben', numeral: 'III', title: 'Eingaben',
-    lede: 'Klagen, Gesuche, Einsprachen und Beschwerden – strukturierte Gerüste mit offenen Optionen.' },
-  { art: 'gesellschaft', id: 'gesellschaft', numeral: 'IV', title: 'Gesellschaftsdokumente',
-    lede: 'Gründungsunterlagen, Statuten und Beschlüsse – formbewusst zusammengestellt.' },
-  { art: 'korrespondenz', id: 'korrespondenz', numeral: 'V', title: 'Schreiben & Erklärungen',
-    lede: 'Kündigungen, Mahnungen, Begehren und einseitige Erklärungen – kurz und formgerecht.' },
+    lede: 'Arbeits-, Miet-, Darlehens- und Kaufverträge sowie Vereinbarungen – Klausel für Klausel nachvollziehbar.' },
+  { art: 'erklaerung', id: 'erklaerungen', numeral: 'III', title: 'Einseitige Willenserklärungen',
+    lede: 'Kündigungen, Mahnungen, Vollmachten und weitere einseitige Erklärungen – kurz und formgerecht.' },
+  { art: 'gesellschaft', id: 'gesellschaft', numeral: 'IV', title: 'Gesellschaftsrecht',
+    lede: 'Gründungsunterlagen, Statuten, Beschlüsse und Kapitalmassnahmen – formbewusst zusammengestellt.' },
+  { art: 'vorsorge', id: 'vorsorge', numeral: 'V', title: 'Vorsorge & Nachlass',
+    lede: 'Testament, Erbvertrag, Vorsorgeauftrag, Patientenverfügung – aus festen Bausteinen.' },
 ];
 
 // ─── Rechtsgebiete: primäre Katalog-Gliederung (Auftrag «Katalog-Ausbau» §4) ─
@@ -1103,7 +1119,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // bewusst KEINE Vollvorlage — amtliches Formular zwingend (266l Abs. 2);
   // Checkliste + Engine-Auskunft, darum ohne schemaId/output (kein Export).
   'kuendigung-vermieter': {
-    id: 'kuendigung-vermieter', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Miete',
+    id: 'kuendigung-vermieter', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Miete',
     rechtsbereich: 'privat',
     title: 'Kündigung durch Vermieter:in (Checkliste)',
     description: 'Bewusst keine ausfüllbare Vorlage: Die Vermieter-Kündigung von Wohn- und Geschäftsräumen braucht das amtliche kantonale Formular (Art. 266l Abs. 2 OR) – diese Checkliste führt durch die Gültigkeitsvoraussetzungen (separate Zustellung Art. 266n!) und liefert Termin, Anfechtungs- und Erstreckungsfristen als Auskunft.',
@@ -1127,7 +1143,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // Maske 2a der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
   // gebaut 6.6.2026): Mietengine LIVE; Familienwohnung-Nichtigkeit = Blocker.
   'kuendigung-mieter': {
-    id: 'kuendigung-mieter', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Miete',
+    id: 'kuendigung-mieter', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Miete',
     rechtsbereich: 'privat',
     title: 'Kündigung durch Mieter:in',
     description: 'Kündigungsschreiben für das Mietverhältnis mit live berechnetem Endtermin (Vertrag → Ortsgebrauch → Gesetz), Familienwohnung-Schutz (Art. 266m OR, zweite Unterschrift) und ausserterminlicher Rückgabe mit Nachmieter-Vorschlag (Art. 264 OR).',
@@ -1195,7 +1211,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
 
   // ════ III – Eingaben ════
   schlichtungsgesuch: {
-    id: 'schlichtungsgesuch', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    id: 'schlichtungsgesuch', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_allgemein', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
     title: 'Schlichtungsgesuch (alle Kantone)',
     description: 'Stellt ein Schlichtungsgesuch nach Art. 202 ZPO zusammen – Parteien, Rechtsbegehren, Streitgegenstand, Beilagen. Behördenadresse automatisch für alle 26 Kantone (PLZ/Gemeinde-genau in ZH/AG/SG/TG/FR/ZG/AI); sachliches Spezial-Routing amtlich abgenommen für Basel-Stadt.',
@@ -1223,7 +1239,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     icon: 'clipboard',
   },
   'klage-vereinfacht': {
-    id: 'klage-vereinfacht', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    id: 'klage-vereinfacht', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_allgemein', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
     title: 'Klage (vereinfachtes Verfahren) – Basel-Stadt',
     description: 'Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren (beziffert/unbeziffert), Streitgegenstand, freiwillige strukturierte Begründung mit Beweismitteln, Beilagen mit Klagebewilligung – BS-Routing (Zivil-/Arbeitsgericht), Kostenfreiheits-Prüfung und Klagefrist mit Gerichtsferien.',
@@ -1248,8 +1264,21 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['schlichtungsgesuch', 'zustaendigkeit', 'zpo-fristen'],
     icon: 'document',
   },
+  'klage-ordentlich': {
+    // S-2 (Auftrag David 10.6.2026: «Klage einmal allgemein in Schlichtungs-
+    // gesuch, einfache [vereinfachte], ordentliche Klage») — Platzhalter der
+    // Rubrik «Klagen – allgemein»; Bau folgt nach Roadmap-Priorisierung.
+    id: 'klage-ordentlich', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_allgemein', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    rechtsbereich: 'privat',
+    title: 'Klage (ordentliches Verfahren)',
+    description: 'Klageschrift im ordentlichen Verfahren (Art. 220 ff. ZPO) – Rechtsbegehren, Streitwert, Begründung und Beilagen als strukturiertes Gerüst.',
+    status: 'geplant', norms: [],
+    keywords: ['Klage', 'ordentliches Verfahren', 'Klageschrift', 'Rechtsbegehren'],
+    related: ['klage-vereinfacht', 'schlichtungsgesuch', 'zustaendigkeit', 'streitwert'],
+    icon: 'document',
+  },
   einsprache: {
-    id: 'einsprache', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Strafrecht & Strafprozess',
+    id: 'einsprache', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
     title: 'Einsprache (Straf-/Verwaltungsbefehl)',
     description: 'Fristgerechte Einsprache mit Antrag und Begründungsgerüst.',
@@ -1257,7 +1286,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     icon: 'document',
   },
   beschwerde: {
-    id: 'beschwerde', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Verwaltungsrecht',
+    id: 'beschwerde', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Verwaltungsrecht',
     rechtsbereich: 'oeffentlich',
     title: 'Beschwerde',
     description: 'Verwaltungsbeschwerde mit Anträgen, Begründung und Beilagen.',
@@ -1265,7 +1294,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     icon: 'document',
   },
   rechtsoeffnungsbegehren: {
-    id: 'rechtsoeffnungsbegehren', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    id: 'rechtsoeffnungsbegehren', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',
     title: 'Rechtsöffnungsbegehren',
     description: 'Begehren um provisorische oder definitive Rechtsöffnung mit Forderungsnachweis.',
@@ -1353,7 +1382,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
 
   // – Betreibung & Konkurs (SchKG) —
   rechtsvorschlag: {
-    id: 'rechtsvorschlag', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    id: 'rechtsvorschlag', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',
     title: 'Rechtsvorschlag',
     description: 'Erklärung des Rechtsvorschlags gegen den Zahlungsbefehl.',
@@ -1362,7 +1391,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Rechtsvorschlag', 'Zahlungsbefehl', 'Betreibung'],
   },
   aberkennungsklage: {
-    id: 'aberkennungsklage', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    id: 'aberkennungsklage', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_besonders', klageGebiet: 'Zwangsvollstreckung', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',
     title: 'Aberkennungsklage',
     description: 'Strukturiertes Gerüst für die Aberkennungsklage nach provisorischer Rechtsöffnung.',
@@ -1371,7 +1400,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Aberkennung', 'Rechtsöffnung'],
   },
   arrestgesuch: {
-    id: 'arrestgesuch', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    id: 'arrestgesuch', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',
     title: 'Arrestgesuch',
     description: 'Strukturiertes Gerüst für das Arrestgesuch.',
@@ -1380,7 +1409,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Arrest', 'Sicherung'],
   },
   'schkg-beschwerde': {
-    id: 'schkg-beschwerde', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    id: 'schkg-beschwerde', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',
     title: 'Beschwerde gegen Betreibungs- & Konkursämter',
     description: 'Strukturiertes Gerüst für die betreibungsrechtliche Beschwerde an die Aufsichtsbehörde.',
@@ -1393,7 +1422,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // Maske 1b der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
   // gebaut 6.6.2026): Sperrfristen-Engine LIVE; 'nichtig' = harter Blocker.
   'kuendigung-arbeitgeber': {
-    id: 'kuendigung-arbeitgeber', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Arbeit',
+    id: 'kuendigung-arbeitgeber', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
     title: 'Kündigung durch Arbeitgeber:in',
     description: 'Kündigungsschreiben mit Live-Prüfung der Sperrfristen (Art. 336c OR): nichtige Kündigungen werden blockiert, Hemmung und Erstreckung fliessen ins Beendigungsdatum ein; Begründung und Freistellung optional.',
@@ -1421,7 +1450,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // Maske 1a der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
   // gebaut 6.6.2026): Beendigungsdatum LIVE aus lib/kuendigungsfrist.ts.
   'kuendigung-arbeitnehmer': {
-    id: 'kuendigung-arbeitnehmer', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Arbeit',
+    id: 'kuendigung-arbeitnehmer', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
     title: 'Kündigung durch Arbeitnehmer:in',
     description: 'Kündigungsschreiben der Arbeitnehmerin oder des Arbeitnehmers – mit live berechnetem Beendigungsdatum (Dienstjahr, Probezeit, abweichende Fristen) und Zeugnis-/Abrechnungsbitte.',
@@ -1445,7 +1474,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Kündigung', 'Arbeitsverhältnis', 'Kündigungsschreiben', 'Beendigungsdatum', 'Probezeit', 'Arbeitszeugnis'],
   },
   freistellung: {
-    id: 'freistellung', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Arbeit',
+    id: 'freistellung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
     title: 'Freistellung',
     description: 'Strukturiertes Gerüst für die Freistellungserklärung.',
@@ -1454,7 +1483,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Freistellung'],
   },
   verwarnung: {
-    id: 'verwarnung', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Arbeit',
+    id: 'verwarnung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
     title: 'Verwarnung',
     description: 'Strukturiertes Gerüst für die arbeitsrechtliche Verwarnung.',
@@ -1463,7 +1492,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Verwarnung', 'Abmahnung'],
   },
   arbeitszeugnis: {
-    id: 'arbeitszeugnis', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Arbeit',
+    id: 'arbeitszeugnis', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Arbeit',
     rechtsbereich: 'privat',
     title: 'Arbeitszeugnis',
     description: 'Strukturiertes Gerüst für Voll- und Zwischenzeugnisse.',
@@ -1485,7 +1514,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // Maske 3 der Kündigungs-Familie (Spez. recherche/kuendigungs-masken.md,
   // gebaut 6.6.2026): Presets mit verifizierten VVG-/OR-Wortlauten.
   'kuendigung-vertrag': {
-    id: 'kuendigung-vertrag', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    id: 'kuendigung-vertrag', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
     title: 'Vertrag kündigen (Versicherung · Darlehen · Auftrag · Abo)',
     description: 'Ein Kündigungsschreiben mit Vertragstyp-Presets: Versicherung (Art. 35a VVG, Drei-Jahres-Regel), Darlehen mit 6-Wochen-Frist (Art. 318 OR), Auftrag mit Unzeit-Warnung (Art. 404 OR), Abo/Telecom nach AGB – ohne erfundene Fristen.',
@@ -1506,7 +1535,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Kündigung', 'Vertrag kündigen', 'Versicherung kündigen', 'Abo kündigen', 'Darlehen', 'Auftrag', 'Art. 35a VVG', 'Art. 404'],
   },
   mahnung: {
-    id: 'mahnung', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    id: 'mahnung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
     title: 'Mahnung',
     // §0-Mehrwert-Test 7.6.2026: «Inverzugsetzung» war eine Karten-Dublette
@@ -1517,7 +1546,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Mahnung', 'Zahlungsverzug', 'Frist'],
   },
   schuldanerkennung: {
-    id: 'schuldanerkennung', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    id: 'schuldanerkennung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
     title: 'Schuldanerkennung',
     description: 'Schriftliche Anerkennung einer Schuld als Grundlage der späteren Durchsetzung.',
@@ -1561,9 +1590,11 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // Einzelkarten General-/Bankvollmacht (Entscheid 5.6.2026); «Bank» ist ein
   // Vertretungsbereich mit Warnung (Banken verlangen eigene Formulare).
   // Verschoben nach «Übergreifende Werkzeuge» (Wunsch David 6.6.2026):
-  // rechtsgebietsübergreifend einsetzbar.
+  // rechtsgebietsübergreifend einsetzbar. S-2 10.6.2026: Gruppe neu
+  // «Einseitige Willenserklärungen» (Bevollmächtigung = einseitiges
+  // Rechtsgeschäft; vorher «vorsorge») — Abnahme David offen.
   vollmacht: {
-    id: 'vollmacht', modus: 'vorlage', art: 'vorsorge', rechtsgebiet: 'Übergreifende Werkzeuge',
+    id: 'vollmacht', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',
     title: 'Vollmacht (Anwalt · General · Spezial)',
     description: 'Anwaltsvollmacht, Generalvollmacht oder Spezialvollmacht in einer Maske – besondere Ermächtigungen (Art. 396 Abs. 3 OR), Substitution, Befristung und deterministische Form-Warnungen (Grundstück, Bank, Bürgschaft).',
@@ -1622,7 +1653,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
 
   // – Strafrecht & Strafprozess —
   strafanzeige: {
-    id: 'strafanzeige', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Strafrecht & Strafprozess',
+    id: 'strafanzeige', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
     title: 'Strafanzeige',
     description: 'Anzeige eines Sachverhalts an die Strafverfolgungsbehörden.',
@@ -1631,7 +1662,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Anzeige', 'Staatsanwaltschaft'],
   },
   'strafantrag-vorlage': {
-    id: 'strafantrag-vorlage', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Strafrecht & Strafprozess',
+    id: 'strafantrag-vorlage', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
     title: 'Strafantrag',
     description: 'Strafantrag der berechtigten Person bei Antragsdelikten.',
@@ -1640,7 +1671,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Strafantrag', 'Antragsdelikt'],
   },
   akteneinsichtsgesuch: {
-    id: 'akteneinsichtsgesuch', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Strafrecht & Strafprozess',
+    id: 'akteneinsichtsgesuch', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
     title: 'Akteneinsichtsgesuch',
     description: 'Gesuch um Einsicht in die Verfahrensakten.',
@@ -1649,7 +1680,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Akteneinsicht', 'Verfahrensakten'],
   },
   entschaedigungsbegehren: {
-    id: 'entschaedigungsbegehren', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Strafrecht & Strafprozess',
+    id: 'entschaedigungsbegehren', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
     title: 'Entschädigungsbegehren',
     description: 'Strukturiertes Gerüst für Entschädigungs- und Genugtuungsbegehren im Strafverfahren.',
@@ -1658,7 +1689,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Entschädigung', 'Genugtuung'],
   },
   adhaesionsklage: {
-    id: 'adhaesionsklage', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Strafrecht & Strafprozess',
+    id: 'adhaesionsklage', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_besonders', klageGebiet: 'Strafverfahren', rechtsgebiet: 'Strafrecht & Strafprozess',
     rechtsbereich: 'straf',
     title: 'Adhäsionsklage',
     description: 'Strukturiertes Gerüst für Zivilansprüche im Strafverfahren.',
@@ -1670,7 +1701,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // – Verwaltungsrecht – (Einsprache deckt die bestehende Vorlage
   //   «Einsprache (Straf-/Verwaltungsbefehl)» ab; nicht gedoppelt)
   rekurs: {
-    id: 'rekurs', modus: 'vorlage', art: 'eingabe', rechtsgebiet: 'Verwaltungsrecht',
+    id: 'rekurs', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Verwaltungsrecht',
     rechtsbereich: 'oeffentlich',
     title: 'Rekurs',
     description: 'Strukturiertes Gerüst für den kantonalen Rekurs.',
@@ -1681,7 +1712,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
 
   // – Datenschutzrecht —
   auskunftsbegehren: {
-    id: 'auskunftsbegehren', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Datenschutzrecht',
+    id: 'auskunftsbegehren', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Datenschutzrecht',
     rechtsbereich: 'privat',
     title: 'Auskunftsbegehren (Datenschutz)',
     description: 'Begehren um Auskunft über die Bearbeitung eigener Personendaten.',
@@ -1690,7 +1721,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Auskunft', 'Datenschutz', 'Personendaten'],
   },
   loeschungsbegehren: {
-    id: 'loeschungsbegehren', modus: 'vorlage', art: 'korrespondenz', rechtsgebiet: 'Datenschutzrecht',
+    id: 'loeschungsbegehren', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Datenschutzrecht',
     rechtsbereich: 'privat',
     title: 'Löschungsbegehren (Datenschutz)',
     description: 'Begehren um Löschung von Personendaten.',

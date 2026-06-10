@@ -85,8 +85,11 @@ describe('Routen-Integrität', () => {
 describe('Modus «Vorlagen» (Katalog-Regeln)', () => {
   const vorlagen = ALLE_KARTEN.filter((k) => k.modus === 'vorlage');
 
-  it('alle fünf Dokument-Typen sind belegt (inkl. korrespondenz)', () => {
-    (['vorsorge', 'vertrag', 'eingabe', 'gesellschaft', 'korrespondenz'] as const).forEach((art) => {
+  // S-2 STRUKTUR-UMBAU 10.6.2026 (deklariert): 'korrespondenz' →
+  // 'erklaerung' (Einseitige Willenserklärungen), Reihenfolge nach Davids
+  // Wortlaut; Detail-Invarianten in vorlagenKategorie.test.ts.
+  it('alle fünf Dokument-Gruppen sind belegt (inkl. erklaerung)', () => {
+    (['eingabe', 'vertrag', 'erklaerung', 'gesellschaft', 'vorsorge'] as const).forEach((art) => {
       expect(vorlagen.some((v) => v.art === art), art).toBe(true);
     });
   });

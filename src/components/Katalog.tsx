@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { RECHTSGEBIETE, istVerfuegbar, istAktiv, type CalculatorCard } from '../lib/startseiteConfig';
+import { RECHTSGEBIETE, VORLAGE_SEKTIONEN, istVerfuegbar, istAktiv, type CalculatorCard, type VorlageCard } from '../lib/startseiteConfig';
+import { EINGABE_RUBRIKEN, istVorlage } from '../lib/vorlagenKategorie';
 import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
 import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
 import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_FACH_DIREKTEINSTIEGE, FRISTEN_EIGENE_REGIMES, fristenEinstiegArt } from '../lib/fristenKategorie';
@@ -261,6 +262,86 @@ function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
   );
 }
 
+// ─── Vorlagen-Register (S-2 FAHRPLAN-STRUKTUR-UMBAU) ────────────────────────
+//
+// Fünf Dokument-Gruppen nach Davids Wortlaut (10.6.2026 abends):
+// Behördeneingaben (dreigliedrig: Klagen allgemein · Klagen besondere
+// Verfahren [nach Klage-Gebiet] · Gesuche & sonstige Eingaben) · Verträge ·
+// Einseitige Willenserklärungen · Gesellschaftsrecht · Vorsorge & Nachlass.
+// Geplante Vorlagen stehen je Gruppe als gedämpfte Ein-Zeilen-Liste (ehrliche
+// Struktur-Sicht §8, ohne die Ansicht zu fluten).
+
+function GeplantZeile({ karten }: { karten: CalculatorCard[] }) {
+  if (karten.length === 0) return null;
+  return (
+    <p className="text-body-s text-ink-500 leading-relaxed">
+      <span className="lc-badge lc-badge-soft mr-2">In Vorbereitung</span>
+      {karten.map((k, i) => (
+        <span key={k.id}>
+          {i > 0 && <span aria-hidden> · </span>}
+          {sansAmp(k.title)}
+        </span>
+      ))}
+    </p>
+  );
+}
+
+function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
+  const vorlagen = karten.filter(istVorlage);
+  const proGruppe = VORLAGE_SEKTIONEN
+    .map((s) => ({ s, alle: vorlagen.filter((v) => v.art === s.art) }))
+    .filter((g) => g.alle.length > 0);
+
+  const zeilen = (xs: VorlageCard[], subLabel?: (v: VorlageCard) => string | undefined) => (
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+      {xs.map((v) => <WerkzeugZeile key={v.id} k={v} subLabel={subLabel?.(v) ?? v.rechtsgebiet} />)}
+    </div>
+  );
+
+  return (
+    <div className="space-y-6">
+      {proGruppe.map(({ s, alle }) => {
+        const verf = alle.filter(istVerfuegbar);
+        const geplant = alle.filter((v) => !istVerfuegbar(v));
+        return (
+          <div key={s.id} className="space-y-2">
+            <div className="flex items-center gap-3">
+              <h3 className="lc-overline text-brass-700">{s.title}
+                {verf.length > 0 && <span className="num text-ink-500"> ({verf.length})</span>}</h3>
+              <span aria-hidden className="flex-1 h-px bg-line" />
+            </div>
+            <p className="text-body-s text-ink-500 max-w-reading">{s.lede}</p>
+            {s.art === 'eingabe' ? (
+              /* Behördeneingaben: drei Unterrubriken (Davids «Kachel für
+                 Gesuche und sonstige Eingaben» = dritte Rubrik). */
+              <div className="space-y-4">
+                {EINGABE_RUBRIKEN.map((r) => {
+                  const inRubrik = alle.filter((v) => v.eingabeRubrik === r.id);
+                  if (inRubrik.length === 0) return null;
+                  const rVerf = inRubrik.filter(istVerfuegbar);
+                  const rGeplant = inRubrik.filter((v) => !istVerfuegbar(v));
+                  return (
+                    <div key={r.id} className="space-y-2 pl-3 border-l-2 border-line">
+                      <h4 className="lc-overline text-ink-600">{r.titel}</h4>
+                      {rVerf.length > 0 && zeilen(rVerf, (v) => v.klageGebiet ?? v.rechtsgebiet)}
+                      <GeplantZeile karten={rGeplant} />
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <>
+                {verf.length > 0 && zeilen(verf)}
+                <GeplantZeile karten={geplant} />
+              </>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
 function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck: () => void }) {
@@ -276,11 +357,12 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
   const alltag = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) === 1));
   const weitere = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) !== 1));
   const verfuegbar = [...alltag, ...weitere];
-  // Geplante Karten, die bereits als festes Register-Feld sichtbar sind
-  // (S-3: Verwaltungs-Zuständigkeit), erscheinen nicht zusätzlich in der
-  // «In Vorbereitung»-Aufklappzeile.
+  // Geplante Karten, die bereits im Register sichtbar sind (S-3:
+  // Verwaltungs-Zuständigkeit; S-2: Vorlagen je Gruppe), erscheinen nicht
+  // zusätzlich in der «In Vorbereitung»-Aufklappzeile.
   const geplant = karten.filter((k) => !istVerfuegbar(k)
-    && !(kat.id === 'zustaendigkeiten' && ZUSTAENDIGKEIT_FELD_IDS.has(k.id)));
+    && !(kat.id === 'zustaendigkeiten' && ZUSTAENDIGKEIT_FELD_IDS.has(k.id))
+    && kat.id !== 'vorlagen');
 
   return (
     <section id={`register-${kat.id}`} aria-labelledby={`register-titel-${kat.id}`} className="space-y-4 scroll-mt-28">
@@ -309,6 +391,9 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
       ) : kat.id === 'zustaendigkeiten' ? (
         /* S-3 (FAHRPLAN-STRUKTUR-UMBAU): vier feste Rechtsweg-Felder. */
         <ZustaendigkeitRegister karten={karten} />
+      ) : kat.id === 'vorlagen' ? (
+        /* S-2 (FAHRPLAN-STRUKTUR-UMBAU): fünf Dokument-Gruppen. */
+        <VorlagenRegister karten={karten} />
       ) : (
         <>
           {alltag.length > 0 && (
