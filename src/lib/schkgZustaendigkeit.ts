@@ -13,6 +13,8 @@
 // 1) BETREIBUNGSORT (Wurzelgrösse, Art. 46–55) → 2) FORUM des Anliegens
 // (Synthese-Tabelle) → 3) Eingabe-Art/Verfahren → 4) FRISTEN (Verwirkung!).
 
+import type { Berechnungsergebnis } from '../types/legal';
+
 export type SchkgSchuldnerTyp =
   | 'natuerlich_wohnsitz'      // Art. 46 Abs. 1
   | 'natuerlich_ohne_wohnsitz' // Art. 48
@@ -360,3 +362,33 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
  *  amtlicher Nachfolger ist die EasyGov-Betreibungsauskunft des SECO
  *  (vom BJ verlinkt, HTTP 200 verifiziert). */
 export const BETREIBUNGSAEMTER_VERZEICHNIS = 'https://www.easygov.swiss/easygov/#/de/betreibungen';
+
+// ── Abbildung in das einheitliche Berichts-Format (G3.1 / M-8, 10.6.2026):
+// reine Darstellungs-Abbildung für PDF/Anzeige — alle Texte stammen
+// unverändert aus dem SchkgErgebnis (§3/§5). Weichen erscheinen im Bericht
+// bei den Warnhinweisen (§8: offene Rechtsfragen gehören ins Dokument).
+export function schkgZustaendigkeitBericht(r: SchkgErgebnis): Berechnungsergebnis {
+  return {
+    ergebnis: `${r.forum.stelle} · ${r.eingabe.art}`,
+    status: 'ok',
+    rechenweg: [
+      { beschreibung: 'Betreibungsort (Wurzelgrösse)', zwischenergebnis: `${r.betreibungsort.text}.`, normen: r.betreibungsort.normen },
+      { beschreibung: 'Forum für dieses Anliegen', zwischenergebnis: `${r.forum.stelle}. ${r.forum.text}`, normen: r.forum.normen },
+      { beschreibung: 'Eingabe und Verfahren', zwischenergebnis: `${r.eingabe.art}. ${r.eingabe.verfahren}.`, normen: [] },
+      ...r.fristen.map((f) => ({
+        beschreibung: `Frist: ${f.label}${f.kritisch ? ' (Verwirkung)' : ''}`,
+        zwischenergebnis: `${f.frist} (${f.norm})`,
+        normen: [],
+      })),
+      ...(r.kostenZahlungsbefehl ? [{
+        beschreibung: 'Gebühr Zahlungsbefehl',
+        zwischenergebnis: `CHF ${r.kostenZahlungsbefehl.gebuehrCHF.toFixed(2)} (Forderung ${r.kostenZahlungsbefehl.band} Franken)`,
+        normen: [{ artikel: 'Art. 16 Abs. 1 GebV SchKG' }],
+      }] : []),
+      ...r.fahrplan.map((s) => ({ beschreibung: s.titel, zwischenergebnis: s.text, normen: [] })),
+    ],
+    annahmen: [],
+    warnungen: [...r.weichen, ...r.warnungen],
+    normverweise: r.normverweise,
+  };
+}

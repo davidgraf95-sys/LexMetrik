@@ -213,7 +213,10 @@ describe('SchKG-Teil — SSR-Integration', () => {
     const { SchkgZustaendigkeitTeil } = await import('../components/forms/SchkgZustaendigkeitTeil');
     const { renderToString } = await import('react-dom/server');
     const { createElement } = await import('react');
-    const html = renderToString(createElement(SchkgZustaendigkeitTeil));
+    // Deklarierte Anpassung G3.1/M-8 (10.6.2026): Der Teil trägt jetzt den
+    // LinkTeilenButton (useNavigate) → Router-Kontext nötig, wie im Smoke.
+    const { MemoryRouter } = await import('react-router-dom');
+    const html = renderToString(createElement(MemoryRouter, null, createElement(SchkgZustaendigkeitTeil)));
     expect(html).toContain('Betreibung einleiten');
     expect(html).toContain('Ihr Fahrplan');
     expect(html).toContain('Betreibungsort');

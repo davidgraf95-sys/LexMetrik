@@ -12,6 +12,8 @@
 // gestützte Punkte am Cache verifiziert; Praxis-Aussagen als «(Praxis)»
 // markiert — Belege in bibliothek/normen/stpo-zustaendigkeit-regelwerk.md).
 
+import type { Berechnungsergebnis } from '../types/legal';
+
 export type StrafSpezialforum = 'kein' | 'medien' | 'schkg_delikt' | 'unternehmen' | 'einziehung';
 export type StrafTatortLage = 'bekannt' | 'nur_erfolgsort' | 'mehrere_orte' | 'ausland_oder_ungewiss';
 export type StrafKaskade32 = 'wohnsitz' | 'aufenthalt' | 'heimatort' | 'ergreifungsort' | 'auslieferung';
@@ -178,4 +180,26 @@ export function bestimmeStrafZustaendigkeit(input: StrafInput): StrafErgebnis {
   }
 
   return { forum: { text: forumText, normen: forumNormen }, behoerdeTyp, fahrplan, fristen, warnungen, weichen, normverweise };
+}
+
+// ── Abbildung in das einheitliche Berichts-Format (G3.1 / M-8, 10.6.2026):
+// reine Darstellungs-Abbildung für PDF/Anzeige — alle Texte stammen
+// unverändert aus dem StrafErgebnis (§3/§5).
+export function strafZustaendigkeitBericht(r: StrafErgebnis): Berechnungsergebnis {
+  return {
+    ergebnis: r.forum.text,
+    status: 'ok',
+    rechenweg: [
+      { beschreibung: 'Zuständiges Forum', zwischenergebnis: `${r.forum.text} (${r.behoerdeTyp})`, normen: r.forum.normen },
+      ...r.fristen.map((f) => ({
+        beschreibung: `Frist: ${f.label}${f.kritisch ? ' (Verwirkung)' : ''}`,
+        zwischenergebnis: `${f.frist} (${f.norm})`,
+        normen: [],
+      })),
+      ...r.fahrplan.map((s) => ({ beschreibung: s.titel, zwischenergebnis: s.text, normen: [] })),
+    ],
+    annahmen: [],
+    warnungen: [...r.weichen, ...r.warnungen],
+    normverweise: r.normverweise,
+  };
 }

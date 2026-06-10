@@ -9,14 +9,15 @@ import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BegruendungAbsatz } from '../BegruendungAbsatz';
 import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
-import { permalinkKodieren, permalinkLesen, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
+import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
+import { ZUST_LINK_SPEC, type Instanz, type ZustFormState } from './zustaendigkeitLinkSpecs';
 import { zpoFristenLink } from '../../lib/rechnerPermalinks';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import {
-  zustaendigkeitErgebnis, ZPO_SCHWELLEN, bestimmeRechtsmittel,
+  zustaendigkeitErgebnis, ZPO_SCHWELLEN, bestimmeRechtsmittel, rechtsmittelBericht,
   type ZustaendigkeitInput, type Streitsache, type MieteUnterfall, type Rechtsweg,
   type DeliktUnterfall, type PersoenlichkeitUnterfall, type IpUnterfall,
   type RmObjekt, type RmVerfahren, type RmVorinstanz,
@@ -106,39 +107,7 @@ const ORT_LABEL: Record<Streitsache, string> = {
   ip_wettbewerb: 'Wohnsitz/Sitz der beklagten Partei (bzw. Handlungs-/Erfolgsort)',
 };
 
-type Instanz = 'einleitung' | 'rechtsmittel';
-
-type State = {
-  streitsache: Streitsache;
-  vermoegensrechtlich: boolean;
-  streitwertRoh: string;
-  mieteUnterfall: MieteUnterfall;
-  glgBetroffen: boolean;
-  konsumentenvertrag: boolean;
-  klaegeristGeschuetzt: boolean;
-  geschaeftlicheTaetigkeit: boolean;
-  beklagteImHR: boolean;
-  klaegerImHR: boolean;
-  beklagteAuslandOderUnbekannt: boolean;
-  widerklageOderGerichtlicheFrist: boolean;
-  // Ausbau 5.6.2026:
-  ausVertrag: boolean;
-  deliktUnterfall: DeliktUnterfall;
-  persoenlichkeitUnterfall: PersoenlichkeitUnterfall;
-  ipUnterfall: IpUnterfall;
-  bundKlagerecht: boolean;
-  avgVerleih: boolean;
-  gerichtsstandsvereinbarung: boolean;
-  gemeinde: string;
-  plz: string;
-  kanton: Kanton | '';
-  instanz: Instanz;
-  // Rechtsmittel-Umbau 6.6.2026 (Auftrag David):
-  rmObjekt: RmObjekt;
-  rmVerfahren: RmVerfahren;
-  rmVorinstanz: RmVorinstanz;
-  rmFamilienSummarsache: boolean;
-};
+type State = ZustFormState;
 
 const DEFAULTS: State = {
   streitsache: 'geldforderung',
@@ -168,39 +137,6 @@ const DEFAULTS: State = {
   rmVerfahren: 'ordentlich_vereinfacht',
   rmVorinstanz: 'erstinstanz',
   rmFamilienSummarsache: false,
-};
-
-// Permalink (FAHRPLAN-PRAXIS 1.3): kompletter Zivil-Fall inkl. Rechtsmittel-
-// Weichen; der Rechtsweg (zivil/schkg/straf) läuft über den bestehenden Hash.
-const ZUST_LINK_SPEC: PermalinkSpec<State & { schritt?: number } & Record<string, unknown>> = {
-  streitsache: { p: 'ss', typ: 'str', gueltig: einerVon('geldforderung', 'miete_wohn_geschaeft', 'arbeit', 'scheidung', 'erbrecht', 'delikt', 'persoenlichkeit', 'gesellschaft', 'ip_wettbewerb') },
-  vermoegensrechtlich: { p: 'vr', typ: 'bool' },
-  streitwertRoh: { p: 'sw', typ: 'str', gueltig: (v) => v.length <= 16 },
-  mieteUnterfall: { p: 'mu', typ: 'str', gueltig: einerVon('kuendigungsschutz', 'erstreckung', 'mietzins_anfechtung', 'hinterlegung', 'sonstige') },
-  glgBetroffen: { p: 'gl', typ: 'bool' },
-  konsumentenvertrag: { p: 'kv', typ: 'bool' },
-  klaegeristGeschuetzt: { p: 'kg', typ: 'bool' },
-  geschaeftlicheTaetigkeit: { p: 'gt', typ: 'bool' },
-  beklagteImHR: { p: 'bh', typ: 'bool' },
-  klaegerImHR: { p: 'kh', typ: 'bool' },
-  beklagteAuslandOderUnbekannt: { p: 'ba', typ: 'bool' },
-  widerklageOderGerichtlicheFrist: { p: 'wf', typ: 'bool' },
-  ausVertrag: { p: 'av', typ: 'bool' },
-  deliktUnterfall: { p: 'du', typ: 'str', gueltig: einerVon('allgemein', 'verkehrsunfall', 'ungerechtfertigte_massnahme') },
-  persoenlichkeitUnterfall: { p: 'pu', typ: 'str', gueltig: einerVon('verletzung', 'gegendarstellung', 'datenschutz', 'gewaltschutz') },
-  ipUnterfall: { p: 'iu', typ: 'str', gueltig: einerVon('ip_kartell_firma', 'uwg', 'klage_gegen_bund') },
-  bundKlagerecht: { p: 'bk', typ: 'bool' },
-  avgVerleih: { p: 'al', typ: 'bool' },
-  gerichtsstandsvereinbarung: { p: 'gv', typ: 'bool' },
-  gemeinde: { p: 'g', typ: 'str', gueltig: (v) => v.length <= 60 },
-  plz: { p: 'pl', typ: 'str', gueltig: (v) => /^\d{4}$/.test(v) },
-  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
-  instanz: { p: 'in', typ: 'str', gueltig: einerVon('einleitung', 'rechtsmittel') },
-  rmObjekt: { p: 'ro', typ: 'str', gueltig: einerVon('endentscheid', 'zwischenentscheid', 'vorsorgliche_massnahme', 'prozessleitende_verfuegung') },
-  rmVerfahren: { p: 'rv', typ: 'str', gueltig: einerVon('ordentlich_vereinfacht', 'summarisch') },
-  rmVorinstanz: { p: 'ri', typ: 'str', gueltig: einerVon('erstinstanz', 'handelsgericht', 'direktklage_oberes_gericht') },
-  rmFamilienSummarsache: { p: 'rf', typ: 'bool' },
-  schritt: { p: 'sch', typ: 'num', gueltig: (n) => Number.isInteger(n) && n >= 0 && n <= 8 },
 };
 
 export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
@@ -949,6 +885,43 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           <div className="lc-notice text-body-s">{rechtsmittel.fristHinweis}</div>
           <div className="flex flex-wrap gap-1.5">
             {rechtsmittel.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
+          </div>
+
+          {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +
+              PDF + Teilen auch im Rechtsmittel-Zweig — gleicher geteilter
+              Rahmen wie die Einleitungs-Sicht (§10). */}
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={{
+              aktenzeichen: aktenzeichen.trim() || undefined,
+              title: 'Rechtsmittel-Fahrplan (ZPO/BGG)',
+              rechtsgrundlage: 'Bestimmung nach Art. 308 ff., 319 ff. ZPO · Art. 72 ff. BGG',
+              domain: 'zustaendigkeit',
+              fileBase: 'Rechtsmittel',
+              inputs: {
+                'Rechtsweg': 'Zivil — Rechtsmittel',
+                'Streitsache': STREITSACHEN.find((s) => s.code === f.streitsache)?.label ?? f.streitsache,
+                ...(istScheidung ? {} : { 'Streitwert': vermoegensrechtlich && streitwert !== null ? `CHF ${streitwert.toLocaleString('de-CH')}` : 'nicht vermögensrechtlich' }),
+                'Anfechtungsobjekt': f.rmObjekt === 'endentscheid' ? 'Endentscheid' : f.rmObjekt === 'zwischenentscheid' ? 'Zwischenentscheid' : f.rmObjekt === 'vorsorgliche_massnahme' ? 'Vorsorgliche Massnahme' : 'Prozessleitende Verfügung',
+                'Verfahren der Vorinstanz': f.rmVerfahren === 'summarisch' ? 'summarisch' : 'ordentlich/vereinfacht',
+                'Vorinstanz': f.rmVorinstanz === 'erstinstanz' ? 'Erstinstanzliches Gericht' : f.rmVorinstanz === 'handelsgericht' ? 'Handelsgericht' : 'Oberes Gericht (Direktklage)',
+                ...(f.kanton ? { 'Kanton': f.kanton } : {}),
+              },
+              hero: {
+                hauptlabel: 'Kantonales Rechtsmittel',
+                hauptwert: rechtsmittel.kantonal === 'berufung' ? 'Berufung'
+                  : rechtsmittel.kantonal === 'beschwerde' ? 'Beschwerde'
+                  : rechtsmittel.kantonal === 'offen' ? 'Streitwertabhängig'
+                  : 'Entfällt (einzige Instanz)',
+                nebenwerte: [
+                  ...(rechtsmittel.kantonalFrist && rechtsmittel.kantonalFrist.tage !== null ? [{ label: 'Frist (kantonal)', wert: `${rechtsmittel.kantonalFrist.tage} Tage` }] : []),
+                  { label: 'Bundesgericht', wert: rechtsmittel.bger === 'zulaessig' ? `zulässig · ${rechtsmittel.bgerFrist.tage} Tage` : rechtsmittel.bger === 'schwelle_verfehlt' ? 'Grenze nicht erreicht' : 'streitwertabhängig' },
+                ],
+              },
+              sections: [{ titel: 'Rechtsmittel-Fahrplan', ergebnis: rechtsmittelBericht(rechtsmittel) }],
+              disclaimer: DISCLAIMER,
+            }} />
+            <LinkTeilenButton query={() => permalinkKodieren(ZUST_LINK_SPEC, { ...f, schritt })} />
           </div>
         </div>
       )}

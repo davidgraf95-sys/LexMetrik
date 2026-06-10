@@ -1,14 +1,22 @@
 import { useState } from 'react';
 import { EckdatenKachel, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { PdfExportButton } from '../PdfExport';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
+import {
+  STRAF_LINK_SPEC, STRAF_RM_LINK_SPEC,
+  type StrafLinkZustand, type StrafRmLinkZustand, type StrafTeilAnliegen,
+} from './zustaendigkeitLinkSpecs';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
 import {
-  bestimmeStrafZustaendigkeit,
-  type StrafInput, type StrafKaskade32, type StrafSpezialforum, type StrafTatortLage, type StrafBeteiligung,
+  bestimmeStrafZustaendigkeit, strafZustaendigkeitBericht,
+  type StrafKaskade32, type StrafSpezialforum, type StrafTatortLage, type StrafBeteiligung,
 } from '../../lib/strafZustaendigkeit';
 import {
-  bestimmeStrafRechtsmittel,
+  bestimmeStrafRechtsmittel, strafRechtsmittelBericht,
   type StrafEntscheidTyp, type StrafAnfechtende, type StrafAnfechtungsziel, type RevisionsGrund,
 } from '../../lib/strafRechtsmittel';
 import { staatsanwaltschaftFuer, BUNDESANWALTSCHAFT } from '../../data/staatsanwaltschaften';
@@ -20,7 +28,7 @@ import { strafgerichteFuer, type StrafGerichtAdresse } from '../../data/strafger
 // Gleiche Bausteine wie Zivil/SchKG (einheitliches Design).
 
 // Eingangs-Gabelung analog Zivil (Einleitung/Rechtsmittel) — Ausbau 6.6.2026.
-type TeilAnliegen = StrafInput['anliegen'] | 'rechtsmittel';
+type TeilAnliegen = StrafTeilAnliegen;
 const ANLIEGEN = [
   { code: 'anzeige' as TeilAnliegen, label: 'Strafanzeige erstatten', sub: 'Wo und wie anzeigen? (Art. 301 StPO)' },
   { code: 'gerichtsstand' as TeilAnliegen, label: 'Gerichtsstand prüfen', sub: 'Welcher Kanton verfolgt? (Art. 31–42 StPO)' },
@@ -56,18 +64,29 @@ const BETEILIGUNG: { code: StrafBeteiligung; label: string }[] = [
   { code: 'mittaeter', label: 'Mehrere Mittäter' },
 ];
 
+
+const STRAF_DISCLAIMER =
+  'Automatisierte Orientierung zur Zuständigkeit im Strafverfahren (StPO-Wortlaut-Stand 1.1.2024) – keine ' +
+  'Rechtsberatung. Die Qualifikation der Tat und streitige Gerichtsstandsfragen (Art. 40 ff. StPO) sind ' +
+  'Rechtsfragen; offene Weichen werden ausgewiesen. Behördenangaben: geprüfte Recherche, fachliche Abnahme ausstehend.';
+
 export function StrafZustaendigkeitTeil() {
-  const [anliegen, setAnliegen] = useState<TeilAnliegen>('anzeige');
-  const [tatort, setTatort] = useState<StrafTatortLage>('bekannt');
-  const [kaskade, setKaskade] = useState<StrafKaskade32>('wohnsitz');
-  const [spezial, setSpezial] = useState<StrafSpezialforum>('kein');
-  const [beteiligung, setBeteiligung] = useState<StrafBeteiligung>('allein');
-  const [mehrereTaten, setMehrereTaten] = useState(false);
-  const [antragsdelikt, setAntragsdelikt] = useState(false);
-  const [uebertretung, setUebertretung] = useState(false);
-  const [bund, setBund] = useState(false);
-  const [minderjaehrig, setMinderjaehrig] = useState(false); // B3-Fix 6.6.2026: Art. 10 JStPO war im UI nicht erreichbar
-  const [kanton, setKanton] = useState<Kanton | ''>('');
+  const [ausLink] = useState<Partial<StrafLinkZustand>>(() => {
+    try { return permalinkLesen(STRAF_LINK_SPEC, window.location.search) as Partial<StrafLinkZustand>; }
+    catch { return {}; }
+  });
+  const [anliegen, setAnliegen] = useState<TeilAnliegen>(ausLink.anliegen ?? 'anzeige');
+  const [tatort, setTatort] = useState<StrafTatortLage>(ausLink.tatort ?? 'bekannt');
+  const [kaskade, setKaskade] = useState<StrafKaskade32>(ausLink.kaskade ?? 'wohnsitz');
+  const [spezial, setSpezial] = useState<StrafSpezialforum>(ausLink.spezial ?? 'kein');
+  const [beteiligung, setBeteiligung] = useState<StrafBeteiligung>(ausLink.beteiligung ?? 'allein');
+  const [mehrereTaten, setMehrereTaten] = useState(ausLink.mehrereTaten ?? false);
+  const [antragsdelikt, setAntragsdelikt] = useState(ausLink.antragsdelikt ?? false);
+  const [uebertretung, setUebertretung] = useState(ausLink.uebertretung ?? false);
+  const [bund, setBund] = useState(ausLink.bund ?? false);
+  const [minderjaehrig, setMinderjaehrig] = useState(ausLink.minderjaehrig ?? false); // B3-Fix 6.6.2026: Art. 10 JStPO war im UI nicht erreichbar
+  const [kanton, setKanton] = useState<Kanton | ''>(ausLink.kanton ?? '');
+  const [aktenzeichen, setAktenzeichen] = useState('');
 
   const r = bestimmeStrafZustaendigkeit({
     anliegen: anliegen === 'rechtsmittel' ? 'gerichtsstand' : anliegen,
@@ -248,6 +267,47 @@ export function StrafZustaendigkeitTeil() {
           {r.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}{n.bemerkung ? ` · ${n.bemerkung}` : ''}</span>)}
         </div>
 
+        {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +
+            PDF + Teilen — gleicher geteilter Rahmen wie Zivil/SchKG (§10). */}
+        <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+        <div className="flex flex-wrap items-center gap-3">
+          <PdfExportButton config={{
+            aktenzeichen: aktenzeichen.trim() || undefined,
+            title: 'Zuständigkeit (Strafverfahren)',
+            rechtsgrundlage: 'Bestimmung nach Art. 31–42, 301 StPO (Stand 1.1.2024)',
+            domain: 'zustaendigkeit',
+            fileBase: 'Straf-Zustaendigkeit',
+            inputs: {
+              'Rechtsweg': 'Straf (StPO)',
+              'Anliegen': anliegen === 'anzeige' ? 'Strafanzeige erstatten' : 'Gerichtsstand prüfen',
+              'Tatort-Lage': TATORT.find((t) => t.code === tatort)?.label ?? tatort,
+              ...(tatort === 'ausland_oder_ungewiss' ? { 'Kaskade (Art. 32)': KASKADE.find((k) => k.code === kaskade)?.label ?? '' } : {}),
+              ...(spezial !== 'kein' ? { 'Spezialforum': SPEZIAL.find((s) => s.code === spezial)?.label ?? '' } : {}),
+              'Beteiligung': BETEILIGUNG.find((b) => b.code === beteiligung)?.label ?? beteiligung,
+              ...(antragsdelikt ? { 'Antragsdelikt': 'ja' } : {}),
+              ...(uebertretung ? { 'Übertretung': 'ja' } : {}),
+              ...(bund ? { 'Bund-Katalogfall': 'möglich (Art. 23/24 StPO)' } : {}),
+              ...(minderjaehrig ? { 'Minderjährig': 'ja (Art. 10 JStPO)' } : {}),
+              ...(kanton ? { 'Kanton (Forum)': kanton } : {}),
+            },
+            hero: {
+              hauptlabel: 'Örtliches Forum',
+              hauptwert: r.forum.normen[0]?.artikel ?? '—',
+              nebenwerte: [
+                { label: 'Behörde', wert: uebertretung ? 'StA / Übertretungsbehörde' : 'Staatsanwaltschaft' },
+                ...(r.fristen.some((x) => x.kritisch) ? [{ label: 'Kritische Frist', wert: r.fristen.find((x) => x.kritisch)!.frist }] : []),
+              ],
+              kontext: r.forum.text,
+            },
+            sections: [{ titel: 'Zuständigkeit im Strafverfahren', ergebnis: strafZustaendigkeitBericht(r) }],
+            disclaimer: STRAF_DISCLAIMER,
+          }} />
+          <LinkTeilenButton query={() => permalinkKodieren(STRAF_LINK_SPEC, {
+            anliegen, tatort, kaskade, spezial, beteiligung, mehrereTaten,
+            antragsdelikt, uebertretung, bund, minderjaehrig, kanton,
+          })} />
+        </div>
+
         <p className="text-xs text-ink-500 pt-2 border-t border-line">
           Regelwerk verbatim am StPO-Wortlaut verifiziert (Stand 1.1.2024; Art. 301 StPO/Art. 31 StGB am 6.6.2026) — fachliche Abnahme ausstehend.
         </p>
@@ -315,15 +375,21 @@ const RM_LABEL: Record<string, string> = {
   revision: 'Revision', keines: 'Kein Rechtsmittel',
 };
 
+
 function StrafRechtsmittelTeil() {
-  const [entscheidTyp, setEntscheidTyp] = useState<StrafEntscheidTyp>('urteil_erstinstanz');
-  const [werFichtAn, setWerFichtAn] = useState<StrafAnfechtende>('beschuldigte_person');
-  const [ziel, setZiel] = useState<StrafAnfechtungsziel>('umfassend');
-  const [uebertretung, setUebertretung] = useState(false);
-  const [nurZugunsten, setNurZugunsten] = useState(false);
-  const [revGrund, setRevGrund] = useState<RevisionsGrund>('noven');
-  const [bund, setBund] = useState(false);
-  const [kanton, setKanton] = useState<Kanton | ''>('');
+  const [ausLink] = useState<Partial<StrafRmLinkZustand>>(() => {
+    try { return permalinkLesen(STRAF_RM_LINK_SPEC, window.location.search) as Partial<StrafRmLinkZustand>; }
+    catch { return {}; }
+  });
+  const [entscheidTyp, setEntscheidTyp] = useState<StrafEntscheidTyp>(ausLink.entscheidTyp ?? 'urteil_erstinstanz');
+  const [werFichtAn, setWerFichtAn] = useState<StrafAnfechtende>(ausLink.werFichtAn ?? 'beschuldigte_person');
+  const [ziel, setZiel] = useState<StrafAnfechtungsziel>(ausLink.ziel ?? 'umfassend');
+  const [uebertretung, setUebertretung] = useState(ausLink.uebertretung ?? false);
+  const [nurZugunsten, setNurZugunsten] = useState(ausLink.nurZugunsten ?? false);
+  const [revGrund, setRevGrund] = useState<RevisionsGrund>(ausLink.revGrund ?? 'noven');
+  const [bund, setBund] = useState(ausLink.bund ?? false);
+  const [kanton, setKanton] = useState<Kanton | ''>(ausLink.kanton ?? '');
+  const [aktenzeichen, setAktenzeichen] = useState('');
 
   const r = bestimmeStrafRechtsmittel({
     entscheidTyp, werFichtAn, anfechtungsziel: ziel,
@@ -463,6 +529,43 @@ function StrafRechtsmittelTeil() {
 
         <div className="flex flex-wrap gap-1.5">
           {r.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}{n.bemerkung ? ` · ${n.bemerkung}` : ''}</span>)}
+        </div>
+
+        {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026). */}
+        <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+        <div className="flex flex-wrap items-center gap-3">
+          <PdfExportButton config={{
+            aktenzeichen: aktenzeichen.trim() || undefined,
+            title: 'Rechtsmittel im Strafverfahren',
+            rechtsgrundlage: 'Bestimmung nach Art. 379 ff. StPO (Stand 1.1.2024)',
+            domain: 'zustaendigkeit',
+            fileBase: 'Straf-Rechtsmittel',
+            inputs: {
+              'Rechtsweg': 'Straf — Rechtsmittel',
+              'Angefochtener Entscheid': ENTSCHEIDTYPEN.find((t) => t.code === entscheidTyp)?.label ?? entscheidTyp,
+              'Wer ficht an': ANFECHTENDE.find((t) => t.code === werFichtAn)?.label ?? werFichtAn,
+              'Anfechtungsziel': ZIELE.find((t) => t.code === ziel)?.label ?? ziel,
+              ...(entscheidTyp === 'rechtskraeftiges_urteil' ? { 'Revisionsgrund': REV_GRUENDE.find((t) => t.code === revGrund)?.label ?? '' } : {}),
+              ...(entscheidTyp === 'urteil_erstinstanz' && uebertretung ? { 'Nur Übertretungen': 'ja (Art. 398 Abs. 4 StPO)' } : {}),
+              ...(nurZugunsten ? { 'Nur zugunsten Beschuldigter': 'ja (Art. 391 Abs. 2 StPO)' } : {}),
+              ...(bund ? { 'Bundesgerichtsbarkeit': 'ja' } : {}),
+              ...(kanton ? { 'Kanton': kanton } : {}),
+            },
+            hero: {
+              hauptlabel: 'Statthaftes Rechtsmittel',
+              hauptwert: RM_LABEL[r.statthaft],
+              nebenwerte: [
+                ...(r.statthaft !== 'keines' ? [{ label: 'Instanz', wert: r.instanz.split(' (')[0] }] : []),
+                ...(r.fristen.some((x) => x.kritisch) ? [{ label: 'Kritische Frist', wert: r.fristen.find((x) => x.kritisch)!.frist.split(' — ')[0] }] : []),
+              ],
+            },
+            sections: [{ titel: 'Rechtsmittel im Strafverfahren', ergebnis: strafRechtsmittelBericht(r) }],
+            disclaimer: STRAF_DISCLAIMER,
+          }} />
+          <LinkTeilenButton query={() => permalinkKodieren(STRAF_RM_LINK_SPEC, {
+            anliegen: 'rechtsmittel', entscheidTyp, werFichtAn, ziel,
+            uebertretung, nurZugunsten, revGrund, bund, kanton,
+          })} />
         </div>
 
         <p className="text-xs text-ink-500 pt-2 border-t border-line">

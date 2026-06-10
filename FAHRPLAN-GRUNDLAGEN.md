@@ -66,13 +66,14 @@ Kanzlei**, gegen die das Produkt gemessen wird. Ersetzt die lose «~80
 geplante Karten»-Liste durch praxiswertgetriebene Steuerung (löst die
 Roadmap-Triage B.18 ab).
 
-- [ ] **G1.1 · Aufgaben erfassen.** Je Rechtsgebiet (Zivilprozess, SchKG,
+- [x] **G1.1 · Aufgaben erfassen.** ✓ 10.6.2026 (KATALOG-ROADMAP Teil B). Je Rechtsgebiet (Zivilprozess, SchKG,
       Arbeit, Miete, Vertrag/Forderung, Erbrecht, Vorsorge, Gesellschaft,
       Straf, Verwaltung/Steuer/Sozial …) die wiederkehrenden deterministischen
       Aufgaben über die vier Ausgabetypen auflisten: **Fristen · Beträge &
       Quoten · Zuständigkeit/Einordnung · Vorlagen.**
-- [ ] **G1.2 · Klassifizieren — Fall für Fall, David entscheidet.** Je
-      Aufgabe ein Vorschlag:
+- [~] **G1.2 · Klassifizieren — Fall für Fall, David entscheidet.** Vorschläge
+      liegen vollständig vor (10.6.2026, Teil B/D mit [V]/[E]-Markern) —
+      **Davids Einzel-Entscheide offen.** Je Aufgabe ein Vorschlag:
       - ✅ **rein** — eigenes deterministisches Regime → Rechner/Vorlage
       - ◐ **nur Hinweis/Checkliste** — Wert vorhanden, aber Ermessen/Form-only
         (Präzedenz: beurkundungspflichtige Gründung, §8)
@@ -81,10 +82,10 @@ Roadmap-Triage B.18 ab).
         Tagerechner genügt)
       Regime-Freiheit/Ermessens-Charakter **am Gesetz verifizieren**, nicht
       raten.
-- [ ] **G1.3 · Ist-Stand spiegeln.** Je behaltene Aufgabe: abgedeckt
+- [x] **G1.3 · Ist-Stand spiegeln.** ✓ 10.6.2026 (Inventur: 105 · 32 · 0 geprüft). Je behaltene Aufgabe: abgedeckt
       (entwurf/geprüft) / geplant / Lücke — gegen `startseiteConfig.ts` +
       `bibliothek/register/engine-map.md`.
-- [ ] **G1.4 · Priorisieren nach Praxiswert.** Häufigkeit im Kanzleialltag ×
+- [x] **G1.4 · Priorisieren nach Praxiswert.** ✓ 10.6.2026 (Ranglisten A + C). Häufigkeit im Kanzleialltag ×
       Risiko bei Fehlen (verpasste Frist = Haftung) × Determinismus-Klarheit
       → Rangliste der Lücken.
 
@@ -144,11 +145,14 @@ ausgewiesen.
 
 ## G3 — Arbeitsplatz-Tauglichkeit: in den Kanzleialltag einpassen
 
-- [ ] **G3.1 · Mandatstauglicher Output (schliesst M-8).** Jedes Werkzeug
-      bietet durchgängig PDF/DOCX mit **Aktenzeichen · Mandant · Gegenpartei**
-      und Kanzlei-Formatierung. Heute fehlen PDF/Aktenzeichen/Teilen im
-      Rechtsmittel-/SchKG-/Straf-Zweig — vereinheitlichen über den geteilten
-      Export-Rahmen.
+- [x] **G3.1 · Mandatstauglicher Output (schliesst M-8).** ✓ 10.6.2026: Alle
+      vier fehlenden Sichten (Zivil-Rechtsmittel · SchKG · Straf-Zuständigkeit ·
+      Straf-Rechtsmittel) bieten jetzt Aktenzeichen + PDF + Link-Teilen über
+      den geteilten Rahmen. Berichts-Mapper in der Logikschicht
+      (`rechtsmittelBericht`/`schkg-`/`straf-`/`strafRechtsmittelBericht`,
+      verlustfrei getestet); Permalink-Specs der Seite in
+      `zustaendigkeitLinkSpecs.ts` zentralisiert mit Eindeutigkeits-Invariante
+      (4 Specs, ein Query-String). Golden 87/87 byte-gleich.
 - [ ] **G3.2 · Auffindbarkeit & Übersicht (Konsolidierung, durch Praxisnutzen
       begründet).** `startseiteConfig.ts` + `katalogSuche.ts`: «ein Einstieg
       pro Rechtsfrage», Thema-Bündel, `szenarien[]`/`imKatalog:false`,

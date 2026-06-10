@@ -2,8 +2,13 @@ import { useEffect, useState } from 'react';
 import { EckdatenKachel, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { PdfExportButton } from '../PdfExport';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
+import { SCHKG_LINK_SPEC, type SchkgLinkZustand } from './zustaendigkeitLinkSpecs';
 import {
-  bestimmeSchkgZustaendigkeit, BETREIBUNGSAEMTER_VERZEICHNIS,
+  bestimmeSchkgZustaendigkeit, schkgZustaendigkeitBericht, BETREIBUNGSAEMTER_VERZEICHNIS,
   type SchkgAnliegen, type SchkgInput, type SchkgPfand, type SchkgSchuldnerTyp,
   type WiderspruchKonstellation,
 } from '../../lib/schkgZustaendigkeit';
@@ -68,22 +73,33 @@ function AmtAdresse({ amt }: { amt: BetreibungsamtAdresse }) {
   );
 }
 
+
+const SCHKG_DISCLAIMER =
+  'Automatisierte Orientierung zur Zuständigkeit nach SchKG (Wortlaut-Stand 1.1.2025) – keine Rechtsberatung. ' +
+  'Internationale Sachverhalte (IPRG/LugÜ) sind nicht abgebildet; offene Weichen werden ausgewiesen und der ' +
+  'konkrete Fall ist fachlich zu prüfen. Behörden-/Amtsangaben: zweifach geprüfte Recherche, fachliche Abnahme ausstehend.';
+
 export function SchkgZustaendigkeitTeil() {
-  const [anliegen, setAnliegen] = useState<SchkgAnliegen>('betreibung_einleiten');
-  const [schuldnerTyp, setSchuldnerTyp] = useState<SchkgSchuldnerTyp>('natuerlich_wohnsitz');
-  const [pfand, setPfand] = useState<SchkgPfand>('kein');
-  const [arrestGelegt, setArrestGelegt] = useState(false);
-  const [forderungRoh, setForderungRoh] = useState('');
-  const [widerspruchK, setWiderspruchK] = useState<WiderspruchKonstellation>('gewahrsam_schuldner');
-  const [kollokationIn, setKollokationIn] = useState<'pfaendung' | 'konkurs'>('pfaendung');
-  const [roArt, setRoArt] = useState<'provisorisch' | 'definitiv'>('provisorisch');
+  const [ausLink] = useState<Partial<SchkgLinkZustand>>(() => {
+    try { return permalinkLesen(SCHKG_LINK_SPEC, window.location.search) as Partial<SchkgLinkZustand>; }
+    catch { return {}; }
+  });
+  const [anliegen, setAnliegen] = useState<SchkgAnliegen>(ausLink.anliegen ?? 'betreibung_einleiten');
+  const [schuldnerTyp, setSchuldnerTyp] = useState<SchkgSchuldnerTyp>(ausLink.schuldnerTyp ?? 'natuerlich_wohnsitz');
+  const [pfand, setPfand] = useState<SchkgPfand>(ausLink.pfand ?? 'kein');
+  const [arrestGelegt, setArrestGelegt] = useState(ausLink.arrestGelegt ?? false);
+  const [forderungRoh, setForderungRoh] = useState(ausLink.forderungRoh ?? '');
+  const [widerspruchK, setWiderspruchK] = useState<WiderspruchKonstellation>(ausLink.widerspruchK ?? 'gewahrsam_schuldner');
+  const [kollokationIn, setKollokationIn] = useState<'pfaendung' | 'konkurs'>(ausLink.kollokationIn ?? 'pfaendung');
+  const [roArt, setRoArt] = useState<'provisorisch' | 'definitiv'>(ausLink.roArt ?? 'provisorisch');
+  const [aktenzeichen, setAktenzeichen] = useState('');
 
   // ── Betreibungsort lokalisieren (optional): PLZ → Kanton (amtliches
   // Ortschaftenverzeichnis, lazy; Muster ZustaendigkeitForm). Auflösung des
   // konkreten Amts über die Datenschicht data/betreibungsaemter.ts (§3/§5).
-  const [ortPlz, setOrtPlz] = useState('');
-  const [ortKanton, setOrtKanton] = useState<Kanton | ''>('');
-  const [ortGemeinde, setOrtGemeinde] = useState('');
+  const [ortPlz, setOrtPlz] = useState(ausLink.ortPlz ?? '');
+  const [ortKanton, setOrtKanton] = useState<Kanton | ''>(ausLink.ortKanton ?? '');
+  const [ortGemeinde, setOrtGemeinde] = useState(ausLink.ortGemeinde ?? '');
   // Render-Abgleich statt synchronem setState im Effect (Haus-Lint-Regel):
   // gemerkt wird die PLZ, die im Verzeichnis fehlte; die Warnung gilt nur,
   // solange das Feld genau diese PLZ trägt.
@@ -384,6 +400,44 @@ export function SchkgZustaendigkeitTeil() {
 
           <div className="flex flex-wrap gap-1.5">
             {r.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}{n.bemerkung ? ` · ${n.bemerkung}` : ''}</span>)}
+          </div>
+
+          {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +
+              PDF + Teilen — gleicher geteilter Rahmen wie der Zivil-Teil (§10). */}
+          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+          <div className="flex flex-wrap items-center gap-3">
+            <PdfExportButton config={{
+              aktenzeichen: aktenzeichen.trim() || undefined,
+              title: 'Zuständigkeit (SchKG)',
+              rechtsgrundlage: 'Bestimmung nach Art. 17, 46–55, 67 ff. SchKG (Stand 1.1.2025)',
+              domain: 'zustaendigkeit',
+              fileBase: 'SchKG-Zustaendigkeit',
+              inputs: {
+                'Rechtsweg': 'Betreibung (SchKG)',
+                'Anliegen': ANLIEGEN.find((a) => a.code === anliegen)?.label ?? anliegen,
+                'Schuldner-Typ': SCHULDNER.find((s) => s.code === schuldnerTyp)?.label ?? schuldnerTyp,
+                ...(pfand !== 'kein' ? { 'Pfandsicherung': pfand === 'grundpfand' ? 'Grundpfand' : 'Faustpfand' } : {}),
+                ...(arrestGelegt ? { 'Arrest gelegt': 'ja (Art. 52 SchKG)' } : {}),
+                ...(r.kostenZahlungsbefehl && forderung !== null ? { 'Forderung': `CHF ${forderung.toLocaleString('de-CH')}` } : {}),
+                ...(anliegen === 'widerspruch' ? { 'Konstellation': WIDERSPRUCH.find((w) => w.code === widerspruchK)?.label ?? '' } : {}),
+                ...(ortKanton !== '' || ortGemeinde.trim() || ortPlz ? { 'Betreibungsort': [ortPlz, ortGemeinde.trim(), ortKanton].filter(Boolean).join(' ') } : {}),
+              },
+              hero: {
+                hauptlabel: 'Forum für dieses Anliegen',
+                hauptwert: r.forum.stelle,
+                nebenwerte: [
+                  { label: 'Eingabe', wert: r.eingabe.art },
+                  ...(r.fristen.some((x) => x.kritisch) ? [{ label: 'Kritische Frist', wert: r.fristen.find((x) => x.kritisch)!.frist }] : []),
+                ],
+                kontext: r.betreibungsort.text,
+              },
+              sections: [{ titel: 'Zuständigkeit nach SchKG', ergebnis: schkgZustaendigkeitBericht(r) }],
+              disclaimer: SCHKG_DISCLAIMER,
+            }} />
+            <LinkTeilenButton query={() => permalinkKodieren(SCHKG_LINK_SPEC, {
+              anliegen, schuldnerTyp, pfand, arrestGelegt, forderungRoh,
+              widerspruchK, kollokationIn, roArt, ortPlz, ortKanton, ortGemeinde,
+            })} />
           </div>
 
           <p className="text-xs text-ink-500 pt-2 border-t border-line">

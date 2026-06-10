@@ -1,4 +1,5 @@
 import type { StrafFrist, StrafNorm } from './strafZustaendigkeit';
+import type { Berechnungsergebnis } from '../types/legal';
 
 // ─── StPO-Rechtsmittel-Engine (Rechtsweg «Straf», Stufe Rechtsmittel) ───────
 //
@@ -284,4 +285,31 @@ export function bestimmeStrafRechtsmittel(input: StrafRmInput): StrafRmErgebnis 
       };
     }
   }
+}
+
+// ── Abbildung in das einheitliche Berichts-Format (G3.1 / M-8, 10.6.2026):
+// reine Darstellungs-Abbildung für PDF/Anzeige — alle Texte stammen
+// unverändert aus dem StrafRmErgebnis (§3/§5).
+export function strafRechtsmittelBericht(r: StrafRmErgebnis): Berechnungsergebnis {
+  return {
+    ergebnis: r.text,
+    status: r.statthaft === 'keines' ? 'unzulaessig' : 'ok',
+    rechenweg: [
+      { beschreibung: 'Statthaftes Rechtsmittel', zwischenergebnis: r.text, normen: [] },
+      ...(r.statthaft !== 'keines' ? [
+        { beschreibung: 'Instanz', zwischenergebnis: r.instanz, normen: [] },
+        { beschreibung: 'Form', zwischenergebnis: r.form, normen: [] },
+        ...(r.kognition ? [{ beschreibung: 'Kognition', zwischenergebnis: r.kognition, normen: [] }] : []),
+      ] : []),
+      ...r.fristen.map((f) => ({
+        beschreibung: `Frist: ${f.label}${f.kritisch ? ' (Verwirkung)' : ''}`,
+        zwischenergebnis: `${f.frist} (${f.norm})`,
+        normen: [],
+      })),
+      { beschreibung: 'Weiterzug ans Bundesgericht', zwischenergebnis: r.bger.text, normen: r.bger.normen },
+    ],
+    annahmen: [],
+    warnungen: [...r.weichen, ...r.warnungen],
+    normverweise: r.normverweise,
+  };
 }

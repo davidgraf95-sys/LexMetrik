@@ -912,3 +912,35 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
     normverweise,
   };
 }
+
+// ── Abbildung des Rechtsmittel-Fahrplans in das einheitliche Berichts-Format
+// (G3.1 / M-8, 10.6.2026): reine Darstellungs-Abbildung für PDF/Anzeige —
+// alle Texte stammen unverändert aus dem RechtsmittelErgebnis (§3/§5).
+export function rechtsmittelBericht(r: RechtsmittelErgebnis): Berechnungsergebnis {
+  const kantonalLabel = r.kantonal === 'berufung' ? 'Berufung'
+    : r.kantonal === 'beschwerde' ? 'Beschwerde'
+    : r.kantonal === 'offen' ? 'Berufung oder Beschwerde (streitwertabhängig)'
+    : 'Kein kantonales Rechtsmittel (einzige kantonale Instanz)';
+  const fristKurz = r.kantonalFrist && r.kantonalFrist.tage !== null ? ` — ${r.kantonalFrist.tage} Tage` : '';
+  const bgerKurz = r.bger === 'zulaessig' ? `Beschwerde in Zivilsachen zulässig (${r.bgerFrist.tage} Tage)`
+    : r.bger === 'schwelle_verfehlt' ? 'BGer: Streitwertgrenze nicht erreicht'
+    : 'BGer: vom Streitwert abhängig';
+  const rechenweg: Rechenschritt[] = [
+    { beschreibung: 'Kantonales Rechtsmittel', zwischenergebnis: `${kantonalLabel}. ${r.kantonalText}`, normen: [] },
+    ...(r.kantonalFrist ? [{
+      beschreibung: 'Frist (kantonal)',
+      zwischenergebnis: `${r.kantonalFrist.tage !== null ? `${r.kantonalFrist.tage} Tage. ` : ''}${r.kantonalFrist.text} ${r.kantonalFrist.stillstandText}`,
+      normen: [],
+    }] : []),
+    { beschreibung: 'Weiterzug ans Bundesgericht', zwischenergebnis: r.bgerText, normen: [] },
+    { beschreibung: 'Frist (Bundesgericht)', zwischenergebnis: `${r.bgerFrist.tage} Tage. ${r.bgerFrist.text} ${r.bgerFrist.stillstandText}`, normen: [] },
+  ];
+  return {
+    ergebnis: `${kantonalLabel}${fristKurz} · ${bgerKurz}`,
+    status: 'ok',
+    rechenweg,
+    annahmen: [r.fristHinweis],
+    warnungen: [...r.weichen, ...(r.kognitionHinweis ? [r.kognitionHinweis] : [])],
+    normverweise: r.normverweise,
+  };
+}
