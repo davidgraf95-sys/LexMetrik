@@ -362,8 +362,11 @@ export const SG_SCHEMA: VorlageSchema = {
       wiederholeUeber: 'beilagenListe', includeIf: { feld: 'beilagenListe', nichtLeer: true },
       begruendung: 'Beilagenverzeichnis (inkl. automatischer Vollmacht bei Vertretung).',
       norm: 'Art. 131 ZPO' },
+    // Bug-Check 10.6.2026 (NIEDRIG, deklarierte fachliche Änderung): Vermerk
+    // folgt der Exemplar-Rechnung (1 + Beklagtenzahl) – bei Mehrparteien
+    // stand vorher fix «im Doppel», obwohl 3+ Exemplare nötig sind.
     { id: 'doppel_vermerk',
-      text: 'Diese Eingabe und ihre Beilagen werden im Doppel eingereicht.',
+      text: 'Diese Eingabe und ihre Beilagen werden {{exemplareWort}} eingereicht.',
       begruendung: 'Exemplar-Vermerk (Art. 131 ZPO: je ein Exemplar für Behörde und Gegenpartei) – Usanz-Baustein.',
       norm: 'Art. 131 ZPO' },
   ],
@@ -456,6 +459,9 @@ export function sgZusammenstellen(a: SgAnswers) {
       : parteiZeilen(a.klaeger[0] ?? { ...SG_PERSON_NATUERLICH }).join('\n'),
     adressatBlock,
     datumFmt: fmtDatumLang(a.datum),
+    // 1 Behörden- + je 1 Gegenpartei-Exemplar (Art. 131 ZPO), identisch zur
+    // exemplare-Rechnung unten (Bug-Check 10.6.2026).
+    exemplareWort: a.beklagte.length <= 1 ? 'im Doppel' : `in ${1 + a.beklagte.length} Exemplaren`,
     rubrumText,
     rbListe,
     antragEntscheidZulaessig,

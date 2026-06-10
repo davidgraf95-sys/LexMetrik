@@ -362,7 +362,7 @@ describe('Bug-Check-Fix 10.6.2026: zweite Sperrfrist in der gehemmt VERLÄNGERTE
     ] });
     expect(eine.gehemmtTage).toBe(28);
     // Das zweite Ereignis liegt in der verlängerten Frist (bis ~28.6.) und hemmt ab 20.6.
-    expect(zwei.gehemmtTage).toBeGreaterThan(eine.gehemmtTage);
+    expect(zwei.gehemmtTage!).toBeGreaterThan(eine.gehemmtTage!);
     expect(zwei.beendigungISO! > eine.beendigungISO!).toBe(true);
   });
 });

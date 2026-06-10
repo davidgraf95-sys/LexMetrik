@@ -283,3 +283,12 @@ describe('Untermietvertrag (Art. 262 OR)', () => {
     expect(text({ ...um(), mietverhaeltnis: 'hauptmiete' })).not.toContain('Hauptmietvertrag mit');
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: möbliertes Zimmer (teilweise Untermiete) — Art. 266e statt 266c', () => {
+  it('1 Monat Frist ist gültig (Minimum 2 Wochen); reine Wohnung bleibt beim 3-Monats-Blocker', () => {
+    const moebliert = pruefeMvGates({ ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X', mieterName: 'M', mieterAdresse: 'Y', objektBeschrieb: 'Zimmer', objektAdresse: 'Z', beginn: '2026-10-01', mietzinsNettoCHF: '800', ort: 'Basel', datum: '2026-06-15', mietverhaeltnis: 'untermiete', untermieteUmfang: 'teilweise', moebliert: true, kuendigungsfristMonate: 1 });
+    expect(moebliert.blocker.some((b) => b.includes('266c'))).toBe(false);
+    const wohnung = pruefeMvGates({ ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X', mieterName: 'M', mieterAdresse: 'Y', objektBeschrieb: '3.5-Zi', objektAdresse: 'Z', beginn: '2026-10-01', mietzinsNettoCHF: '2000', ort: 'Basel', datum: '2026-06-15', kuendigungsfristMonate: 1 });
+    expect(wohnung.blocker.some((b) => b.includes('266c'))).toBe(true);
+  });
+});

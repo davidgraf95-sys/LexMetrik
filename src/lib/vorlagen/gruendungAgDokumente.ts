@@ -2054,7 +2054,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'ernannten Mitglieder des Verwaltungsrates:',
       includeIf: { and: [{ feld: 'konstituierungInUrkunde', eq: true }, { feld: 'einVr', eq: false }] },
       norm: 'Art. 712 OR',
-      begruendung: 'ZH-Urkunde Ziff. VII mit der Vollzähligkeits-Bedingung («[Variante: Unter der Bedingung, dass der Verwaltungsrat vollzählig anwesend ist]»). Haus-Abweichung (offengelegt): «die soeben ernannten Mitglieder des Verwaltungsrates» statt ZH «die soeben als Verwaltungsräte ernannten Gründer» — die Maske erlaubt VR-Mitglieder, die nicht Gründer sind. Das separate VR-Protokoll ist damit entbehrlich (Art. 43 Abs. 1 lit. e HRegV — die Konstituierung ist aus der Urkunde ersichtlich).',
+      begruendung: 'ZH-Urkunde Ziff. VII mit der Vollzähligkeits-Bedingung («[Variante: Unter der Bedingung, dass der Verwaltungsrat vollzählig anwesend ist]»). Haus-Abweichung (offengelegt): «die soeben ernannten Mitglieder des Verwaltungsrates» statt ZH «die soeben als Verwaltungsräte ernannten Gründer» — sprachliche Vereinfachung; in der Sache erzwingt das Gate, dass bei Konstituierung in der Urkunde ALLE VR-Mitglieder zugleich Gründer (Anwesende) sind (Sammel-Bug-Check 7.6.2026). Das separate VR-Protokoll ist damit entbehrlich (Art. 43 Abs. 1 lit. e HRegV — die Konstituierung ist aus der Urkunde ersichtlich).',
     },
     {
       id: 'AE12k_konstituierung_singular',

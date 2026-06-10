@@ -213,7 +213,13 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
   // konsistent zum Arbeitsvertrag-G2).
   const fristMin = mvGesetzlicheFrist(a.objektTyp);
   const frist = a.kuendigungsfristMonate ?? fristMin;
-  if (!a.befristet && frist < fristMin) {
+  // Bug-Check 10.6.2026 (MITTEL, deklarierte fachliche Änderung): Beim
+  // möblierten Zimmer (teilweise Untermiete) gilt Art. 266e OR als lex
+  // specialis — gesetzliche Frist zwei Wochen; der 3-Monats-Blocker des
+  // Art. 266c darf dort nicht feuern (der bestehende 266e-Hinweis bleibt).
+  const moebliertesZimmer = a.mietverhaeltnis === 'untermiete'
+    && a.untermieteUmfang === 'teilweise' && a.moebliert === true;
+  if (!a.befristet && frist < fristMin && !moebliertesZimmer) {
     blocker.push(wohnung
       ? 'Die Kündigungsfrist für Wohnungen beträgt mindestens drei Monate (Art. 266c OR) – kürzere Abreden sind ungültig.'
       : 'Die Kündigungsfrist für Geschäftsräume beträgt mindestens sechs Monate (Art. 266d OR) – kürzere Abreden sind ungültig.');

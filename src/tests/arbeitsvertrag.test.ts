@@ -222,3 +222,15 @@ describe('Arbeitsvertrag – Vertiefungs-Gutachten 5.6.2026', () => {
     expect(r.dokument.absaetze.map((x) => x.text).join()).not.toMatch(/Karenzentschädigung/);
     expect(pruefeAvGates(basis({ konkurrenzverbot: false, kvKarenz: true })).blocker).toEqual([]);
   });
+
+describe('Bug-Check-Fix 10.6.2026: Ferienzuschlag folgt w/(52−w)', () => {
+  it('6 Ferienwochen → 13.04 % (vorher fälschlich 10.64 %); 5 → 10.64; 4 → 8.33', () => {
+    const text = (wochen: number) => {
+      const e = avZusammenstellen({ ...AV_DEFAULTS, arbeitgeberName: 'AG', arbeitgeberAdresse: 'X 1', arbeitnehmerVorname: 'A', arbeitnehmerName: 'B', arbeitnehmerAdresse: 'Y 2', funktion: 'F', arbeitsort: 'Basel', arbeitsortKanton: 'BS', beginn: '2026-08-01', lohnBetrag: '40', ort: 'Basel', datum: '2026-06-15', lohnModell: 'stundenlohn', ferienzuschlagSeparat: true, pensumProzent: 50, ferienWochen: wochen });
+      return e.dokument.absaetze.map((a) => a.text).join('\n');
+    };
+    expect(text(6)).toContain('13.04 %');
+    expect(text(5)).toContain('10.64 %');
+    expect(text(4)).toContain('8.33 %');
+  });
+});

@@ -26,13 +26,19 @@ describe('Vorlage Vertragskündigung (Maske 3, Presets)', () => {
     }
   });
 
-  it('Darlehen: 6-Wochen-Datum als reine Datums-Addition (Art. 318 OR) im Brief', () => {
+  it('Darlehen: 6-Wochen-Datum nur bei ERFASSTEM (zugegangenem) Aufforderungsdatum — Art. 318 OR läuft ab Zugang (Bug-Check-Fix 10.6.2026)', () => {
     expect(kvDarlehenRueckzahlungBis('2026-06-06')).toBe('18.07.2026'); // +42 Tage
     const { ergebnis, rueckzahlungBis } = kvZusammenstellen(basis({ preset: 'darlehen', aufforderungDatum: '2026-06-06' }));
     expect(rueckzahlungBis).toBe('18.07.2026');
     expect(dokumentAlsText(ergebnis)).toContain('bis zum 18.07.2026');
-    // ohne Aufforderungsdatum: Erklärungsdatum als Anker
-    expect(kvZusammenstellen(basis({ preset: 'darlehen' })).rueckzahlungBis).toBe('18.07.2026');
+    expect(dokumentAlsText(ergebnis)).toContain('seit Zugang der ersten Aufforderung vom 06.06.2026');
+    // Deklarierte fachliche Änderung: OHNE erfasstes Aufforderungsdatum kein
+    // konkretes Datum mehr (vorher ab Briefdatum gerechnet → zu früh, da die
+    // empfangsbedürftige Aufforderung erst mit Zugang wirkt).
+    const ohne = kvZusammenstellen(basis({ preset: 'darlehen' }));
+    expect(ohne.rueckzahlungBis).toBeNull();
+    expect(dokumentAlsText(ohne.ergebnis)).toContain('seit Zugang dieser Aufforderung');
+    expect(dokumentAlsText(ohne.ergebnis)).not.toContain('somit bis zum');
   });
 
   it('Versicherung: verifizierte VVG-Gates — <3 Jahre Warnung, Lebensversicherung Warnung (35a Abs. 3), Krankenzusatz Hinweis (Abs. 4)', () => {

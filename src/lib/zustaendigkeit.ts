@@ -746,10 +746,10 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
   const normverweise: Normverweis[] = [];
   const weichen: string[] = [];
   if (objekt === 'vorsorgliche_massnahme' && input.rmVerfahren === 'ordentlich_vereinfacht') {
-    weichen.push('Vorsorgliche Massnahmen ergehen von Gesetzes wegen im SUMMARISCHEN Verfahren (Art. 248 lit. d ZPO) — die Verfahrens-Angabe «ordentlich/vereinfacht» wurde dafür übersteuert; massgeblich sind 10 Tage ohne Fristenstillstand (Art. 314 Abs. 1 / Art. 145 Abs. 2 lit. b ZPO).');
+    weichen.push('Vorsorgliche Massnahmen ergehen von Gesetzes wegen im SUMMARISCHEN Verfahren (Art. 248 lit. d ZPO) – die Verfahrens-Angabe «ordentlich/vereinfacht» wurde dafür übersteuert; massgeblich sind 10 Tage ohne Fristenstillstand (Art. 314 Abs. 1 / Art. 145 Abs. 2 lit. b ZPO).');
   }
   if (input.rmFamilienSummarsache === true && verfahren === 'summarisch' && !familienPlausibel) {
-    weichen.push('Die 30-Tage-Berufungsfrist für familienrechtliche Summarsachen (Art. 314 Abs. 2 ZPO) setzt eine Streitigkeit nach Art. 271/276/302/305 ZPO voraus. Mit der gewählten Streitsache bildet der Katalog eine solche Sache nicht ab — gerechnet wird fristsicher mit 10 Tagen (Art. 314 Abs. 1 ZPO). Liegt tatsächlich eine Sache nach Art. 302/305 ZPO vor (z. B. HKÜ-Rückführung, Schutzmassnahmen der eingetragenen Partnerschaft), gilt die 30-Tage-Frist — im Einzelfall prüfen.');
+    weichen.push('Die 30-Tage-Berufungsfrist für familienrechtliche Summarsachen (Art. 314 Abs. 2 ZPO) setzt eine Streitigkeit nach Art. 271/276/302/305 ZPO voraus. Mit der gewählten Streitsache bildet der Katalog eine solche Sache nicht ab – gerechnet wird fristsicher mit 10 Tagen (Art. 314 Abs. 1 ZPO). Liegt tatsächlich eine Sache nach Art. 302/305 ZPO vor (z. B. HKÜ-Rückführung, Schutzmassnahmen der eingetragenen Partnerschaft), gilt die 30-Tage-Frist – im Einzelfall prüfen.');
   }
 
   // ── Kantonale Ebene: statthaftes Rechtsmittel (Art. 308/319 ZPO) ──────────
@@ -933,7 +933,7 @@ export function rechtsmittelBericht(r: RechtsmittelErgebnis): Berechnungsergebni
     : r.kantonal === 'beschwerde' ? 'Beschwerde'
     : r.kantonal === 'offen' ? 'Berufung oder Beschwerde (streitwertabhängig)'
     : 'Kein kantonales Rechtsmittel (einzige kantonale Instanz)';
-  const fristKurz = r.kantonalFrist && r.kantonalFrist.tage !== null ? ` — ${r.kantonalFrist.tage} Tage` : '';
+  const fristKurz = r.kantonalFrist && r.kantonalFrist.tage !== null ? ` – ${r.kantonalFrist.tage} Tage` : '';
   const bgerKurz = r.bger === 'zulaessig' ? `Beschwerde in Zivilsachen zulässig (${r.bgerFrist.tage} Tage)`
     : r.bger === 'schwelle_verfehlt' ? 'BGer: Streitwertgrenze nicht erreicht'
     : 'BGer: vom Streitwert abhängig';

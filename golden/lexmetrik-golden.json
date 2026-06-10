@@ -2271,7 +2271,7 @@
    },
    {
     "beschreibung": "C3 – Hemmung: Sperrfrist schneidet rückgerechnete Kündigungsfrist",
-    "zwischenergebnis": "Sperrfrist-Abschnitt 01.05.2025 – 20.05.2025 schneidet das Fenster 30.04.2025 – 30.06.2025: 20 Hemmungstage.",
+    "zwischenergebnis": "Sperrfrist-Abschnitt 01.05.2025 – 20.05.2025 schneidet die (um bisherige Hemmungen verlängerte) Frist 30.04.2025 – 20.07.2025: 20 Hemmungstage.",
     "normen": [
      {
       "artikel": "Art. 336c Abs. 2 OR",
@@ -4191,10 +4191,10 @@
   "fristbeginnISO": "2026-02-01"
  },
  "allg:rueck": {
-  "endDatum": "31.03.2026",
-  "endDatumISO": "2026-03-31",
-  "endWochentag": "Dienstag",
-  "rohEndDatum": "31.03.2026",
+  "endDatum": "29.03.2026",
+  "endDatumISO": "2026-03-29",
+  "endWochentag": "Sonntag",
+  "rohEndDatum": "29.03.2026",
   "verschoben": false,
   "verschiebeGruende": [],
   "schritte": [
@@ -4205,17 +4205,18 @@
    },
    {
     "label": "Spätester Handlungstag: 3 Monaten vor dem Stichtag",
-    "datum": "31.03.2026",
-    "wochentag": "Dienstag",
+    "datum": "29.03.2026",
+    "wochentag": "Sonntag",
     "grund": "Spiegelung der Fristberechnung nach Art. 77 OR (volle Frist zwischen Handlung und Stichtag)"
    },
    {
     "label": "Spätester Handlungstag",
-    "datum": "31.03.2026",
-    "wochentag": "Dienstag"
+    "datum": "29.03.2026",
+    "wochentag": "Sonntag"
    }
   ],
   "hinweise": [
+   "Zählweise: Gerechnet wird die VOLLE Frist zwischen Handlungstag und Stichtag (weder Handlungs- noch Stichtag zählen mit – sichere Zählung für Einberufungs-/Ankündigungsfristen wie Art. 700 Abs. 1 OR). Für miet-/arbeitsrechtliche KÜNDIGUNGSTERMINE gilt die Zugangs-Konvention (Zugang am Vortag des Fristbeginns genügt – dort kann ein Tag später noch fristwahrend sein): dafür den Kündigungs- bzw. Mietrechts-Rechner verwenden.",
    "Rückwärtsfrist: Ob sich der späteste Handlungstag bei Wochenende/Feiertag auf den VORANGEHENDEN Werktag vorverlegt, ist in der Schweiz höchstrichterlich ungeklärt (Art. 78 OR betrifft Vorwärtsfristen) – zu verifizieren. Ein Hinausschieben verbietet sich, weil es die Frist verkürzen würde. Im Zweifel früher handeln.",
    "Dieser allgemeine Rechner berücksichtigt keine verfahrensspezifischen Stillstände. Für gerichtliche Fristen den ZPO-Fristenrechner, für betreibungsrechtliche den SchKG-Fristenrechner verwenden."
   ],

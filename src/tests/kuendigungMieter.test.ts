@@ -97,3 +97,12 @@ describe('Vorlage Kündigung Mieter:in (Maske 2a)', () => {
     expect(pruefeKmGates(beweglich, kmEngine(beweglich)).hinweise.some((h) => h.includes('266l'))).toBe(false);
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: keine Fragment-Striche in der Unterschriftszeile', () => {
+  it('Standardfall ohne Mitmieter: Unterschriftsblock endet mit dem Namen (vorher «Name________»)', () => {
+    const { ergebnis } = kmZusammenstellen({ ...KM_DEFAULTS, absenderName: 'Max Muster', kanton: 'BS', zugang: '2026-06-12', mietbeginn: '2024-01-01' });
+    const u = ergebnis.dokument.absaetze.map((a) => a.text).join('\n');
+    expect(u).not.toContain('Max Muster________');
+    expect(u).toContain('Max Muster');
+  });
+});

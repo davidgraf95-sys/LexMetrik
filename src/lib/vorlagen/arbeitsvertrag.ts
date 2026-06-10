@@ -503,8 +503,12 @@ export function avZusammenstellen(a: AvAntworten) {
           ? '; zusätzlich wird ein 13. Monatslohn ausgerichtet (bei unterjährigem Ein- oder Austritt anteilsmässig)'
           : '; zusätzlich wird ein 13. Monatslohn von 8.33 % des massgebenden Lohnes ausgerichtet')
       : '',
+    // Bug-Check 10.6.2026 (MITTEL, deklarierte fachliche Änderung): Der
+    // Zuschlag folgt der Formel w/(52−w) — 4 W → 8.33 %, 5 W → 10.64 %,
+    // 6 W → 13.04 % (Art. 329d Abs. 1 OR: voller Lohn). Vorher stand bei
+    // 6+ Ferienwochen fälschlich 10.64 % im Vertrag.
     ferienzuschlagSatz: a.lohnModell === 'stundenlohn' && a.ferienzuschlagSeparat && a.pensumProzent < 100
-      ? `; der Ferienlohn wird laufend ausgerichtet und beträgt ${a.ferienWochen >= 5 ? '10.64' : '8.33'} % des Grundlohnes (in jeder Lohnabrechnung gesondert ausgewiesen)`
+      ? `; der Ferienlohn wird laufend ausgerichtet und beträgt ${((a.ferienWochen / (52 - a.ferienWochen)) * 100).toFixed(2)} % des Grundlohnes (in jeder Lohnabrechnung gesondert ausgewiesen)`
       : '',
     // Probezeit-Variante: bei Befristung gilt die gesetzliche Vermutung nicht
     // (Art. 335b Abs. 1 OR nur unbefristet) – «gesetzlich» wird dort zur

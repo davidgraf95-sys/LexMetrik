@@ -243,7 +243,7 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
     rechenweg.push({
       beschreibung: 'Schritt 4 – Frühestes zulässiges Datum (Wartefrist)',
       zwischenergebnis:
-        `Die Wartefrist läuft am ${fmt(diesAdQuem)} um 24.00 Uhr ab — die Handlung ist frühestens am Folgetag, ${fmt(massgeblich)}, zulässig.`,
+        `Die Wartefrist läuft am ${fmt(diesAdQuem)} um 24.00 Uhr ab – die Handlung ist frühestens am Folgetag, ${fmt(massgeblich)}, zulässig.`,
       normen: [N_31],
     });
   }

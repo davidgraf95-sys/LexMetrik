@@ -168,7 +168,7 @@ export const KM_SCHEMA: VorlageSchema = {
       begruendung: 'Übergabe-/Depot-Bitte — immer enthalten (praktische Abwicklung).' },
     kdgSchluss('M_schluss'),
     { id: 'M_unterschrift', rolle: 'unterschrift',
-      text: '___________________________\n{{absenderName}}{{mitmieterUnterschriften}}',
+      text: '___________________________\n{{absenderName}}{{mitmieterUnterschriftenZeile}}',
       begruendung: 'Unterschrift der kündigenden Mietpartei; weitere Mieter:innen unterschreiben mit.' },
     { id: 'M_unterschrift_ehegatte', rolle: 'unterschrift',
       text: '___________________________\n{{ehegatteName}} (Zustimmung nach Art. 266m OR)',
@@ -189,7 +189,10 @@ export function kmZusammenstellen(a: KmAntworten) {
     ...kdgBasisAbgeleitet(a),
     endterminFmt: !nichtig && engine?.endtermin ? engine.endtermin : '',
     mitmieterSatz: mitmieter.length > 0 ? ` Diese Kündigung erfolgt gemeinsam mit ${mitmieter.join(', ')}.` : '',
-    mitmieterUnterschriften: mitmieter.map((m) => `\n\n___________________________\n${m}`).join(''),
+    // Bug-Check 10.6.2026 (HOCH): Zeile-Suffix → Fragment-Konvention der
+    // Engine greift; vorher druckte der Standardfall ohne Mitmieter
+    // «Name________» in die Unterschriftszeile.
+    mitmieterUnterschriftenZeile: mitmieter.map((m) => `\n\n___________________________\n${m}`).join(''),
     rueckgabeWunschSatz: ISO.test(a.rueckgabeWunschdatum)
       ? `, gewünscht per ${a.rueckgabeWunschdatum.split('-').reverse().join('.')}`
       : '',

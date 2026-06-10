@@ -316,7 +316,7 @@ export function berechneRueckwaertsFrist(input: RueckFristInput): AllgFristResul
   });
 
   const hinweise = [
-    'Zählweise: Gerechnet wird die VOLLE Frist zwischen Handlungstag und Stichtag (weder Handlungs- noch Stichtag zählen mit — sichere Zählung für Einberufungs-/Ankündigungsfristen wie Art. 700 Abs. 1 OR). Für miet-/arbeitsrechtliche KÜNDIGUNGSTERMINE gilt die Zugangs-Konvention (Zugang am Vortag des Fristbeginns genügt — dort kann ein Tag später noch fristwahrend sein): dafür den Kündigungs- bzw. Mietrechts-Rechner verwenden.',
+    'Zählweise: Gerechnet wird die VOLLE Frist zwischen Handlungstag und Stichtag (weder Handlungs- noch Stichtag zählen mit – sichere Zählung für Einberufungs-/Ankündigungsfristen wie Art. 700 Abs. 1 OR). Für miet-/arbeitsrechtliche KÜNDIGUNGSTERMINE gilt die Zugangs-Konvention (Zugang am Vortag des Fristbeginns genügt – dort kann ein Tag später noch fristwahrend sein): dafür den Kündigungs- bzw. Mietrechts-Rechner verwenden.',
     'Rückwärtsfrist: Ob sich der späteste Handlungstag bei Wochenende/Feiertag auf den VORANGEHENDEN Werktag vorverlegt, ist in der Schweiz höchstrichterlich ungeklärt (Art. 78 OR betrifft Vorwärtsfristen) – zu verifizieren. Ein Hinausschieben verbietet sich, weil es die Frist verkürzen würde. Im Zweifel früher handeln.',
     ALLG_FRIST_HINWEIS,
   ];

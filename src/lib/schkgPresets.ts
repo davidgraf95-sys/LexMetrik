@@ -186,7 +186,7 @@ export const PRESETS_SCHKG: SchkgPreset[] = [
   // Vorher modus 'zpo_stillstand' → Verjährungseintritt ~8 Monate zu spät.
   { key: 'pauliana', phase: 'anfechtung', label: 'Paulianische Anfechtungsklage – 3 Jahre', norm: 'Art. 285 Abs. 2 / Art. 292 SchKG',
     einheit: 'jahre', laenge: 3, modus: 'kein', fristnatur: 'frist', ausloeser: 'Pfändungsverlustschein / Konkurseröffnung / Bestätigung Nachlassvertrag',
-    hinweis: 'VERJÄHRUNGSfrist (seit 1.1.2020 drei Jahre) — kein Gerichtsferien-Stillstand; Hemmung/Unterbrechung nur nach Art. 134 f. OR. Verdachtsperioden materiell: 1 Jahr (Art. 286/287), 5 Jahre (Art. 288).' },
+    hinweis: 'VERJÄHRUNGSfrist (seit 1.1.2020 drei Jahre) – kein Gerichtsferien-Stillstand; Hemmung/Unterbrechung nur nach Art. 134 f. OR. Verdachtsperioden materiell: 1 Jahr (Art. 286/287), 5 Jahre (Art. 288).' },
 
   // ── Rechtsbehelfe / Rechtsmittel ──
   { key: 'beschwerde_aufsicht', phase: 'rechtsmittel', label: 'Beschwerde an Aufsichtsbehörde – 10 Tage', norm: 'Art. 17 Abs. 2 SchKG',

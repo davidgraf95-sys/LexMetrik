@@ -141,7 +141,7 @@ export const KV_SCHEMA: VorlageSchema = {
       norm: 'Art. 35a VVG',
       begruendung: 'Ordentliche VVG-Kündigung (Wortlaut verifiziert: Ende des dritten oder jedes folgenden Jahres, Frist 3 Monate, schriftlich oder textnachweisbar).' },
     { id: 'V_darlehen',
-      text: 'Hiermit kündige ich das Darlehen und fordere Sie zur Rückzahlung auf. Die Rückzahlung hat innert sechs Wochen seit dieser Aufforderung zu erfolgen{{darlehenBisSatz}} (Art. 318 OR).',
+      text: 'Hiermit kündige ich das Darlehen und fordere Sie zur Rückzahlung auf. Die Rückzahlung hat innert sechs Wochen seit Zugang {{darlehenAusloeserWort}} zu erfolgen{{darlehenBisSatz}} (Art. 318 OR).',
       includeIf: { feld: 'preset', eq: 'darlehen' },
       norm: 'Art. 318 OR',
       begruendung: 'Darlehenskündigung mit 6-Wochen-Frist ab erster Aufforderung (Art. 318 OR).' },
@@ -165,7 +165,14 @@ export const KV_SCHEMA: VorlageSchema = {
 // ── Zusammenstellung ────────────────────────────────────────────────────────
 
 export function kvZusammenstellen(a: KvAntworten) {
-  const rueckzahlungBis = a.preset === 'darlehen' ? kvDarlehenRueckzahlungBis(a.aufforderungDatum || a.datum) : null;
+  // Bug-Check 10.6.2026 (NIEDRIG, deklarierte fachliche Änderung): Die
+  // 6-Wochen-Frist des Art. 318 OR läuft ab ZUGANG der Aufforderung
+  // (empfangsbedürftig; so auch KDG_ZUGANGS_HINWEIS). Ein konkretes
+  // «somit bis zum»-Datum erscheint nur, wenn ein bereits zugegangenes
+  // Aufforderungsdatum erfasst ist – sonst nannte der Brief ein zu frühes
+  // Fälligkeitsdatum (ab Briefdatum gerechnet, ohne Zustelldauer).
+  const rueckzahlungBis = a.preset === 'darlehen' && ISO.test(a.aufforderungDatum)
+    ? kvDarlehenRueckzahlungBis(a.aufforderungDatum) : null;
   const antworten: Antworten = {
     ...a,
     ...kdgBasisAbgeleitet(a),
@@ -174,6 +181,9 @@ export function kvZusammenstellen(a: KvAntworten) {
     terminSatz: a.aufNaechstmoeglich
       ? 'auf den nächstmöglichen Termin'
       : ISO.test(a.kuendigungsterminWunsch) ? `per ${fmtDatum(a.kuendigungsterminWunsch)}` : 'auf den nächstmöglichen Termin',
+    darlehenAusloeserWort: ISO.test(a.aufforderungDatum)
+      ? `der ersten Aufforderung vom ${fmtDatum(a.aufforderungDatum)}`
+      : 'dieser Aufforderung',
     darlehenBisSatz: rueckzahlungBis ? `, somit bis zum ${rueckzahlungBis}` : '',
   };
   return { ergebnis: assemble(KV_SCHEMA, antworten), rueckzahlungBis };
