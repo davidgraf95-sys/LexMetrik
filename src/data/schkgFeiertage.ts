@@ -9,10 +9,13 @@ import type { Periode } from '../lib/fristenEngine';
 //   • Weihnachten endet am 1. Januar (ZPO: 2. Januar)
 //   • Ostern: sieben Tage vor bis sieben Tage nach Ostern (wie ZPO)
 //
-// VERIFY: Exakte gesetzliche Tagesgrenzen vor Produktivschaltung gegen den
-// geltenden Wortlaut von Art. 56 Abs. 1 Ziff. 2 SchKG (Fedlex SR 281.1)
-// endkontrollieren. Werte aus dem redaktionellen Konzept übernommen
-// (BGE 143 III 149; Wuffli, Jusletter 24.4.2017).
+// VERIFIZIERT 10.6.2026 (§7, Fedlex-Cache SR 281.1 Stand 20260101):
+// Art. 56 Ziff. 2 SchKG wörtlich «sieben Tage vor und sieben Tage nach
+// Ostern und Weihnachten sowie vom 15. Juli bis zum 31. Juli; in der
+// Wechselbetreibung gibt es keine Betreibungsferien» — die Tagesgrenzen
+// unten entsprechen dem geltenden Wortlaut. (Werte ursprünglich aus dem
+// redaktionellen Konzept: BGE 143 III 149; Wuffli, Jusletter 24.4.2017.)
+// Wechselbetreibungs-Ausnahme: siehe Limitation im Abnahme-Paket.
 //
 // Anders als der ZPO-Stillstand HEMMEN die Betreibungsferien den Fristenlauf
 // nicht (Art. 63 SchKG). Dieser Kalender liefert nur die geschlossenen
