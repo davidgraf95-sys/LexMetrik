@@ -107,9 +107,9 @@ Zwei Stränge — **erst härten, dann abnehmen** (Davids Reihenfolge).
       umstellen; CI-Schritt `npm run golden:vergleich` in
       `.github/workflows/ci.yml`; Kopf-Kommentar dort anpassen. → friert die
       Basis ein **und** ist Voraussetzung für sichere G3-Merges.
-- [ ] **A2 · Determinismus mechanisch sperren (§2).** `eslint.config.js`:
-      `Date.now()` / `Math.random()` / arg-loses `new Date()` in `src/lib/**`
-      verbieten (UI/PDF ausgenommen).
+- [x] **A2 · Determinismus mechanisch sperren (§2).** ✓ 10.6.2026: Lint-Regeln
+      aktiv für `src/lib/**` (Ausnahme `src/lib/pdf/**`, Erstellungs-Zeitstempel
+      = Darstellung); empirisch verifiziert (Probe-Datei → 3 Fehler), Lint 0.
 - [ ] **A3 · Bekannte Testlücken schliessen.** Akzeptanztests für
       `rueckforderung`/`feststellung` (`src/tests/schkgZustaendigkeit.test.ts`)
       und Straf-Kaskade-Default `kaskade32=undefined`
