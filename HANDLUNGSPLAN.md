@@ -3,6 +3,11 @@
 Priorisiertes weiteres Vorgehen. Gepflegt wird dieser Plan NUR hier;
 erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 
+> **NEU (Auftrag David 10.6.2026): `FAHRPLAN-VEREINHEITLICHUNG.md`** —
+> Engine-Vereinheitlichung gleicher Logik-/Rechenbasis, 5 Stufen V1–V5,
+> golden-gegated nach neuem §4 (Tabu-Liste: Zuständigkeits-Trio, materielle
+> Regimes). Konkretisiert FAHRPLAN-GRUNDLAGEN G3.2.
+
 > **ÜBERGEORDNET (Anweisung David 8.6.2026): `FAHRPLAN-GRUNDLAGEN.md`** —
 > der vom Endziel (Kanzlei-Praxistauglichkeit) her umgebaute Plan mit den
 > vier Grundlagen G1–G4 (Abdeckungskarte · Vertrauen · Arbeitsplatz ·
