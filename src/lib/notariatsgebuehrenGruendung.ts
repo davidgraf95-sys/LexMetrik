@@ -1,3 +1,4 @@
+// Dossier: bibliothek/kosten/notariatstarife-gruendung-kantone.md
 // ─── Notariatsgebühren der Gründungs-Beurkundung je Kanton (P11) ─────────────
 //
 // Quelle: bibliothek/kosten/notariatstarife-gruendung-kantone.md (7.6.2026;

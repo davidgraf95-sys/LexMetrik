@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/kuendigungs-masken.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtDatum } from './datum';

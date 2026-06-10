@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/zpo-zustaendigkeit-regelwerk.md
 import type { ZustaendigkeitErgebnis } from './zustaendigkeit';
 
 // ─── Praxis-Fahrplan aus dem Zuständigkeits-Ergebnis ────────────────────────

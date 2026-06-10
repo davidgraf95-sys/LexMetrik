@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/arbeitsrecht-rechner.md
 import { parseISO, addMonths, addYears, isBefore, isAfter } from 'date-fns';
 import type { LohnfortzahlungInput, Berechnungsergebnis, Normverweis, SkalaDauer, KtgKriterien } from '../types/legal';
 import {

@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/schkg-zustaendigkeit-regelwerk.md
 import { parseISO, addDays, differenceInCalendarDays, isAfter, isBefore } from 'date-fns';
 import type { Normverweis, Rechenschritt } from '../types/legal';
 import { formatDatum, formatISO } from './datumsUtils';

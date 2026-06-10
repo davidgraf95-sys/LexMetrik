@@ -1,3 +1,4 @@
+// Dossier: bibliothek/register/quellen-register.md
 // ─── Fedlex-Verlinkung (verifizierte Anker) ───────────────────────────────
 //
 // Verifizierte Fedlex-Basis-URLs (Systematische Rechtssammlung, konsolidierte,

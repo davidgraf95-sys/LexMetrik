@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/fristenspiegel-konzept.md
 // ─── Fristenspiegel: Typen des Orchestrierer-Rahmens (FAHRPLAN-PRAXIS 3.1b) ─
 //
 // Konzept: bibliothek/recherche/fristenspiegel-konzept.md (§B). Der Spiegel

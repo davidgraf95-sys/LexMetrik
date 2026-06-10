@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/feiertage-kantone-bj.md
 import { addDays, addMonths, addYears, isAfter, isBefore } from 'date-fns';
 import type { Kanton } from '../types/legal';
 import { dauerTageInklusiv } from './datumsUtils';

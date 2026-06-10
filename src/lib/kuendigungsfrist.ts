@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/arbeitsrecht-rechner.md
 import { parseISO, addDays, addMonths, isBefore, isEqual } from 'date-fns';
 import type { KuendigungsfristInput, Berechnungsergebnis, Normverweis } from '../types/legal';
 import {

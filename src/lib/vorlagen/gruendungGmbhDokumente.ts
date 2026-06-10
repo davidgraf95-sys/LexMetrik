@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/gruendungsdokumente-wortlaute.md
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
 import { assemble, nummeriereUeberschriftenAlsArtikel } from './engine';
 import { fmtCHF, fmtDatum, ganzePositive, zahl } from './datum';

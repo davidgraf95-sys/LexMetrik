@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/gesellschaftsgruendung.md
 // ─── Gründungsunterlagen GmbH / AG – deterministische Dokumenten-Checkliste ──
 //
 // Bauspezifikationen (Normen dort verbatim am Fedlex-Cache verifiziert, §7):

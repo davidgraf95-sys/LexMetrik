@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/stpo-zustaendigkeit-regelwerk.md
 // ─── StPO-Zuständigkeits-Engine (Rechtsweg «Straf») ─────────────────────────
 //
 // Eigene Engine analog Zivil/SchKG (§4: keine Fusion). Quelle:

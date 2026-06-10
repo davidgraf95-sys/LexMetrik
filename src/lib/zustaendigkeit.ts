@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/zpo-zustaendigkeit-regelwerk.md · bibliothek/normen/zustaendigkeit-engine-verifikation.md
 import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/legal';
 
 // ─── Zuständigkeits-Engine (ZPO) — Bundesrechtsschicht ──────────────────────

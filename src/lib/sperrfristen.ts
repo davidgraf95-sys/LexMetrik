@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/arbeitsrecht-rechner.md
 import { parseISO, addDays, addMonths, addYears, differenceInDays, isAfter, isBefore, isEqual, endOfMonth, subMonths, format } from 'date-fns';
 import type { SperrfristenInput, Sperrereignis, Berechnungsergebnis, Normverweis } from '../types/legal';
 

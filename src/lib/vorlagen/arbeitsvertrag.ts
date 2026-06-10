@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/arbeitsrecht-vorlagen.md
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtDatumLang, fmtDatum, fmtCHF } from './datum';

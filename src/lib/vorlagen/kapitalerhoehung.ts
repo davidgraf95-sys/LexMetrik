@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/kapitalerhoehung-wortlaute.md
 import { addMonths } from 'date-fns';
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
 import { assemble } from './engine';

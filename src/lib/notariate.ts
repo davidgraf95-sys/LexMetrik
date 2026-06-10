@@ -1,3 +1,4 @@
+// Dossier: bibliothek/behoerden/notariate-kantone.md
 import type { Kanton } from '../types/legal';
 
 // ─── Notariats-Anlaufstellen je Kanton (Gründungs-Beurkundung GmbH/AG) ───────

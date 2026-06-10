@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/normtexte-zpo-zustaendigkeit.md
 import type { ZpoEinheit, ZpoVerfahren, ZpoFristnatur } from '../types/zpo';
 
 // Verfahrensphasen-Presets für den ZPO-Fristenrechner (Stand revidierte ZPO, 1.1.2025).

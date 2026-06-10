@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/mietrecht-ausbau.md
 import { parseISO, addDays, addMonths, lastDayOfMonth, isLastDayOfMonth, isBefore, isAfter } from 'date-fns';
 import type { Normverweis, Rechenschritt } from '../types/legal';
 import { formatDatum, formatISO } from './datumsUtils';

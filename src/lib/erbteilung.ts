@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/erbrecht-regelwerk.md
 import type { Normverweis, Rechenschritt } from '../types/legal';
 import type { ErbteilungInput, ErbteilungErgebnis, ErbeAnteil, ErbeGruppe } from '../types/erbrecht';
 import { br, addB, subB, mulB, divB, fmtB, istNull, EINS, NULL_BRUCH, type Bruch } from './bruch';

@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/ag-gruendung-amtliche-vorlagen.md · bibliothek/recherche/ag-qualifizierte-gruendung.md
 import { addYears, parseISO } from 'date-fns';
 import type { VorlageSchema, Antworten, AssembleErgebnis } from './engine';
 import { assemble, nummeriereUeberschriftenAlsArtikel } from './engine';

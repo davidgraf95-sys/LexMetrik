@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/erbrecht-regelwerk.md · bibliothek/recherche/erbrecht-ausbau.md
 import type { Berechnungsergebnis, Kanton, Normverweis } from '../types/legal';
 import { berechneAllgemeineFrist, type AllgFristResult } from './allgemeineFrist';
 

@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/zpo-kosten-streitwert.md
 import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/legal';
 
 // ─── Streitwert-Engine (Art. 91–94a ZPO, Konsolidierung 1.1.2025) ───────────

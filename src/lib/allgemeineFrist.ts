@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/arbeitsrecht-rechner.md
 import { addMonths, addYears, addDays, differenceInCalendarDays, isSaturday, isSunday, parseISO } from 'date-fns';
 import { fristendeTage, fristendeKalender, OHNE_STILLSTAND, type Einheit } from './fristenEngine';
 import { formatDatum, formatISO } from './datumsUtils';

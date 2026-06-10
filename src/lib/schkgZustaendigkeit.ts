@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/schkg-zustaendigkeit-regelwerk.md
 // ─── SchKG-Zuständigkeits-Engine (Rechtsweg «Betreibung») ───────────────────
 //
 // Eigene Engine analog Zivil (Anordnung David 5.6.2026; §4: KEINE Fusion mit

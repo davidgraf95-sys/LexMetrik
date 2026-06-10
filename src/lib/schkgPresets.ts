@@ -1,3 +1,4 @@
+// Dossier: bibliothek/normen/schkg-zustaendigkeit-regelwerk.md
 import type { SchkgModus, SchkgFristnatur, SchkgEinheit, SchkgFristSpec } from '../types/schkg';
 
 // ─── SchKG-Fristen-Presets (Konzept Tabelle A / Gruppierung B) ────────────

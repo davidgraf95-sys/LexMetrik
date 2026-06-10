@@ -1,3 +1,4 @@
+// Dossier: bibliothek/recherche/stpo-rechtsmittel.md
 import type { StrafFrist, StrafNorm } from './strafZustaendigkeit';
 import type { Berechnungsergebnis } from '../types/legal';
 
