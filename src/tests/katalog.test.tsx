@@ -75,17 +75,23 @@ describe('Register: VIER Oberkategorien (Auftrag David 10.6.2026 — deklarierte
     expect(html).not.toContain('type="search"');
   });
 
-  it('Rubrik «Häufig gebraucht» steht zwischen Einstiegen und Registerteil I (Power-Pfad bleibt)', async () => {
+  it('Schnellzugriff lebt als Top-Direktlinks in den Einstiegskacheln; Praxis-Rang sortiert die Sektionen (Versimplung 10.6.2026)', async () => {
     const html = seiteHtml('/');
-    const { haeufigGebrauchtKarten } = await import('../lib/haeufigGebraucht');
-    expect(html).toContain('Häufig gebraucht');
-    const karten = haeufigGebrauchtKarten();
-    expect(karten.length).toBeGreaterThan(0);
-    for (const k of karten) expect(html).toContain(`href="${k.href}"`);
-    expect(html.indexOf('aria-label="Oberkategorien"')).toBeLessThan(html.indexOf('gruppe-haeufig'));
-    expect(html.indexOf('gruppe-haeufig')).toBeLessThan(html.indexOf('id="register-zustaendigkeiten"'));
-    // Rubrik verschwindet bei aktiver Suche (Trefferliste ersetzt das Register)
-    expect(seiteHtml('/?q=Verzugszins')).not.toContain('gruppe-haeufig');
+    // Die frühere «Häufig gebraucht»-Rubrik ist aufgegangen (Subtraktion).
+    expect(html).not.toContain('Häufig gebraucht');
+    // Kachel-Direktlinks: Alltags-Werkzeuge je Kategorie, EIN Klick.
+    const { kachelDirektlinks } = await import('../lib/praxisRang');
+    const { KATALOG_KARTEN } = await import('../lib/startseiteConfig');
+    for (const kat of ['zustaendigkeiten', 'fristen', 'gebuehren', 'vorlagen'] as const) {
+      const links = kachelDirektlinks(kat, KATALOG_KARTEN);
+      expect(links.length, kat).toBeGreaterThan(0);
+      for (const k of links) expect(html).toContain(`href="${k.href}"`);
+    }
+    // Praxis-Rang: in «Fristen» steht der Tagerechner (Alltag) VOR der
+    // Gewährleistung (regelmässig); Rechtsgebiet als Sub-Label in der Zeile.
+    const fristen = html.slice(html.indexOf('id="register-fristen"'), html.indexOf('id="register-gebuehren"'));
+    expect(fristen.indexOf('Fristenrechner')).toBeGreaterThan(-1);
+    expect(fristen.indexOf('Fristenrechner')).toBeLessThan(fristen.indexOf('Gewährleistung'));
   });
 
   it('geplante Karten je Kategorie hinter der «In Vorbereitung (N)»-Aufklappzeile (§8, ohne Ballast)', () => {

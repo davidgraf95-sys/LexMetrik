@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { RECHTSGEBIETE, istVerfuegbar, istAktiv, type CalculatorCard } from '../lib/startseiteConfig';
 import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
-import { haeufigGebrauchtKarten } from '../lib/haeufigGebraucht';
+import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
 import { kartePasst, sucheRang } from '../lib/katalogSuche';
 import { sansAmp } from './typografie';
 
@@ -15,13 +15,18 @@ import { sansAmp } from './typografie';
 //     brauche ein Schreiben») — die vier Einstiegskacheln zuoberst sind
 //     genau diese Fragen und springen zur Sektion.
 //  2. KLICKTIEFE 1: Verfügbare Werkzeuge stehen DIREKT als Link-Zeilen in
-//     ihrer Kategorie (vorher Gebiets-Kachel → Panel → Karte); das
-//     Rechtsgebiet bleibt als stille Zwischenüberschrift erhalten.
-//  3. EHRLICH OHNE BALLAST (§8): Geplante Karten je Kategorie hinter einer
+//     ihrer Kategorie (vorher Gebiets-Kachel → Panel → Karte).
+//  3. PRAXIS-RANG STATT GEBIETS-GRUPPEN (Versimplung, Auftrag David
+//     10.6.2026 «teile das UI weiter nach dem Praxis-Gebrauch auf»):
+//     je Kategorie EINE flache Liste, Alltags-Werkzeuge zuoberst
+//     (lib/praxisRang.ts, kuratiert aus der Abdeckungskarte); das
+//     Rechtsgebiet steht als dezentes Sub-Label IN der Zeile.
+//  4. EHRLICH OHNE BALLAST (§8): Geplante Karten je Kategorie hinter einer
 //     kompakten «In Vorbereitung (N)»-Aufklappzeile; Entwurf-Badges an
 //     jeder Zeile.
-//  4. POWER-PFADE UNVERÄNDERT: «Häufig gebraucht» (Direktlinks) und die
-//     Header-Suche (?q=, gerankte Trefferliste — neu mit Kategorie-Label).
+//  5. SUBTRAKTION: Die separate «Häufig gebraucht»-Rubrik ist aufgegangen
+//     in den Top-DIREKTLINKS der vier Einstiegskacheln (gleiche Funktion,
+//     ein Apparat weniger); Header-Suche (?q=) unverändert.
 // Die Suche-Mechanik (lib/katalogSuche.ts, Goldliste) ist unverändert (§5).
 
 const KATEGORIE_VON = new Map<string, OberkategorieId>();
@@ -36,29 +41,45 @@ const KATEGORIE_TITEL = new Map(OBERKATEGORIEN.map((k) => [k.id, k.titel]));
 function KategorieEinstieg({ kat, karten }: { kat: Oberkategorie; karten: CalculatorCard[] }) {
   const verf = karten.filter(istVerfuegbar).length;
   const geplant = karten.length - verf;
+  const links = kachelDirektlinks(kat.id, karten);
   return (
-    <a href={`#register-${kat.id}`}
-      className="lc-card text-left p-4 sm:p-5 flex flex-col gap-1.5 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
-      <span className="flex items-baseline gap-2.5">
+    <div className="lc-card p-4 sm:p-5 flex flex-col gap-1.5 min-w-0 bg-surface">
+      <a href={`#register-${kat.id}`}
+        className="flex items-baseline gap-2.5 no-underline group">
         <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{kat.numeral}</span>
-        <span className="font-sans font-semibold text-ink-900 text-body-l leading-snug">{kat.titel}</span>
-      </span>
+        <span className="font-sans font-semibold text-ink-900 text-body-l leading-snug group-hover:text-brass-700 transition-colors">{kat.titel}</span>
+        <span aria-hidden className="ml-auto text-ink-400 group-hover:text-brass-700 transition-colors">↓</span>
+      </a>
       <span className="lc-overline text-ink-500">
         <span className="num text-brass-700">{verf}</span> verfügbar
         {geplant > 0 && <> · <span className="num">{geplant}</span> in Vorbereitung</>}
       </span>
-      <span className="text-body-s text-ink-500 leading-relaxed line-clamp-1">{kat.lede}</span>
-    </a>
+      {/* Top-Direktlinks: der frühere «Häufig gebraucht»-Schnellzugriff lebt
+          hier (Subtraktion 10.6.2026) — ein Klick ins Alltags-Werkzeug. */}
+      {links.length > 0 && (
+        <span className="flex flex-col gap-0.5 pt-1 border-t border-line mt-0.5">
+          {links.map((k) => (
+            <Link key={k.id} to={k.href!}
+              className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline truncate">
+              {sansAmp(k.title)} <span aria-hidden>→</span>
+            </Link>
+          ))}
+        </span>
+      )}
+    </div>
   );
 }
 
 // ─── Werkzeug-Zeile: Direktlink (Klicktiefe 1); Status ehrlich als Badge ────
 
-function WerkzeugZeile({ k }: { k: CalculatorCard }) {
+function WerkzeugZeile({ k, subLabel }: { k: CalculatorCard; subLabel?: string }) {
   const aktiv = istAktiv(k.status) && !!k.href;
   const inhalt = (
     <>
-      <span className="font-sans font-medium text-ink-900 text-body-s leading-snug min-w-0">{sansAmp(k.title)}</span>
+      <span className="min-w-0">
+        <span className="block font-sans font-medium text-ink-900 text-body-s leading-snug">{sansAmp(k.title)}</span>
+        {subLabel && <span className="block text-xs text-ink-500 truncate">{sansAmp(subLabel)}</span>}
+      </span>
       <span className="flex items-center gap-2 shrink-0">
         {k.status === 'entwurf' && (
           <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
@@ -78,14 +99,15 @@ function WerkzeugZeile({ k }: { k: CalculatorCard }) {
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
 function KategorieSektion({ kat, karten }: { kat: Oberkategorie; karten: CalculatorCard[] }) {
-  const verfuegbar = karten.filter(istVerfuegbar);
+  // Praxis-Rang zuerst (Alltag → regelmässig → gelegentlich), innerhalb des
+  // Rangs die feste Gebiets-Reihenfolge; das Rechtsgebiet steht als
+  // Sub-Label in der Zeile (Versimplung 10.6.2026: keine Zwischen-H3 mehr).
+  const gebietsRang = (g: string) => { const i = RECHTSGEBIETE.indexOf(g); return i === -1 ? RECHTSGEBIETE.length : i; };
+  const verfuegbar = karten.filter(istVerfuegbar).sort((a, b) =>
+    praxisRang(a.id) - praxisRang(b.id) ||
+    gebietsRang(a.rechtsgebiet) - gebietsRang(b.rechtsgebiet) ||
+    a.title.localeCompare(b.title, 'de'));
   const geplant = karten.filter((k) => !istVerfuegbar(k));
-  // Rechtsgebiet als zweite Ebene in fester Auftrags-Reihenfolge; Gebiete
-  // ohne verfügbares Werkzeug erscheinen nur in der Geplant-Zeile.
-  const gruppen = RECHTSGEBIETE
-    .map((g) => ({ g, karten: verfuegbar.filter((k) => k.rechtsgebiet === g) }))
-    .filter((x) => x.karten.length > 0);
-  const uebrige = verfuegbar.filter((k) => !RECHTSGEBIETE.includes(k.rechtsgebiet));
 
   return (
     <section id={`register-${kat.id}`} aria-labelledby={`register-titel-${kat.id}`} className="space-y-4 scroll-mt-28">
@@ -103,22 +125,9 @@ function KategorieSektion({ kat, karten }: { kat: Oberkategorie; karten: Calcula
         <p className="text-body-s text-ink-500 max-w-reading">{kat.lede}</p>
       </div>
 
-      {gruppen.map((x) => (
-        <div key={x.g} className="space-y-2">
-          <h3 className="lc-overline text-ink-700">{sansAmp(x.g)}</h3>
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
-            {x.karten.map((k) => <WerkzeugZeile key={k.id} k={k} />)}
-          </div>
-        </div>
-      ))}
-      {uebrige.length > 0 && (
-        <div className="space-y-2">
-          <h3 className="lc-overline text-ink-700">Übergreifend</h3>
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
-            {uebrige.map((k) => <WerkzeugZeile key={k.id} k={k} />)}
-          </div>
-        </div>
-      )}
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
+        {verfuegbar.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+      </div>
 
       {geplant.length > 0 && (
         <details className="group">
@@ -250,21 +259,8 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
           {proKategorie.map((x) => <KategorieEinstieg key={x.kat.id} kat={x.kat} karten={x.karten} />)}
         </nav>
 
-        {/* Rubrik «Häufig gebraucht» (Auftrag David 7.6.2026) — der schnellste
-            Pfad für tägliche Nutzer bleibt direkt unter den Einstiegen. */}
-        {haeufigGebrauchtKarten().length > 0 && (
-          <section aria-labelledby="gruppe-haeufig" className="space-y-4">
-            <div className="flex items-center gap-4 pt-1">
-              <h2 id="gruppe-haeufig" className="lc-overline text-ink-700 whitespace-nowrap">Häufig gebraucht</h2>
-              <span aria-hidden className="flex-1 h-px bg-line" />
-            </div>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
-              {haeufigGebrauchtKarten().map((k) => <WerkzeugZeile key={k.id} k={k} />)}
-            </div>
-          </section>
-        )}
-
-        {/* Die vier Registerteile */}
+        {/* Die vier Registerteile (der frühere «Häufig gebraucht»-
+            Schnellzugriff lebt als Direktlinks in den Einstiegskacheln) */}
         {proKategorie.map((x) => <KategorieSektion key={x.kat.id} kat={x.kat} karten={x.karten} />)}
         </>
       )}
