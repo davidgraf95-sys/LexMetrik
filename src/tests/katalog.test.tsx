@@ -40,46 +40,46 @@ const headerHtml = (url: string) =>
     </MemoryRouter>,
   );
 
-describe('Register: VIER Oberkategorien (Auftrag David 10.6.2026 — deklarierte Test-Anpassung, §6 Ziff. 3)', () => {
-  it('Default: vier Registerteile I–IV mit Einstiegs-Navigation, Direktlink-Zeilen und ehrlichen Zählern; kein Kachel/Panel-Apparat', () => {
+describe('Register: Vier-Kategorien-DECKBLATT mit Klick-Ansicht (Präzisierung David 10.6.2026 — deklarierte Test-Anpassung, §6 Ziff. 3)', () => {
+  it('Default: NUR die vier Oberkategorien als Deckblatt — keine Unterthemen auf der Seite', () => {
     const html = seiteHtml('/');
-    // Die vier Aufgaben-Einstiege (Navigation) + Sektionen
     expect(html).toContain('aria-label="Oberkategorien"');
-    for (const id of ['zustaendigkeiten', 'fristen', 'gebuehren', 'vorlagen']) {
-      expect(html).toContain(`href="#register-${id}"`);
-      expect(html).toContain(`id="register-${id}"`);
+    for (const titel of ['Zuständigkeiten', 'Fristen', 'Gebühren', 'Vorlagen']) {
+      expect(html).toContain(titel);
     }
-    expect(html).toContain('Zuständigkeiten');
-    expect(html).toContain('Gebühren');
-    expect(html).toContain('Vorlagen');
-    // Reihenfolge I → IV
-    expect(html.indexOf('id="register-zustaendigkeiten"')).toBeLessThan(html.indexOf('id="register-fristen"'));
-    expect(html.indexOf('id="register-fristen"')).toBeLessThan(html.indexOf('id="register-gebuehren"'));
-    expect(html.indexOf('id="register-gebuehren"')).toBeLessThan(html.indexOf('id="register-vorlagen"'));
-    // Rechtsgebiet bleibt als zweite Ebene (stille Overline)
-    expect(html).toContain('Arbeit');
-    expect(html).toContain('Miete');
-    // Klicktiefe 1: Verfügbare als Direktlinks; ehrliches Mengenbild
-    expect(html).toContain('href="/rechner/zpo-fristen"');
-    expect(html).toContain('href="/rechner/zustaendigkeit"');
+    // Ehrliche Zähler + Direktlinks (Schnellzugriff) in den Kacheln
     expect(html).toContain('verfügbar');
-    expect(html).toContain('In Vorbereitung');
-    expect(html).toContain('Entwurf</span>');
-    // WEG: Gebiets-Kacheln/Panels und der alte Steuer-Apparat
+    expect(html).toContain('href="/rechner/tagerechner"');
+    expect(html).toContain('href="/rechner/verzugszins"');
+    // KEINE Unterthemen-Sektionen, keine Werkzeug-Listen unten an der Seite
+    expect(html).not.toContain('id="register-titel-');
+    expect(html).not.toContain('In Vorbereitung (');
+    expect(html).not.toContain('href="/rechner/verjaehrung"'); // Alltag-Werkzeug, aber NICHT Kachel-Direktlink
     expect(html).not.toContain('id="kachel-');
     expect(html).not.toContain('id="panel-');
     expect(html).not.toContain('role="tablist"');
-    expect(html).not.toContain('Direkter Einstieg');
-    expect(html).not.toContain('Zuletzt verwendet');
-    // Suche NICHT auf der Seite (lebt im Header)
     expect(html).not.toContain('type="search"');
   });
 
-  it('Schnellzugriff lebt als Top-Direktlinks in den Einstiegskacheln; Praxis-Rang sortiert die Sektionen (Versimplung 10.6.2026)', async () => {
+  it('?kategorie=fristen: Unterthemen-Ansicht — praxis-gerankte Liste, Sub-Labels, Geplant-Zeile, Zurück-Weg', () => {
+    const html = seiteHtml('/?kategorie=fristen');
+    expect(html).toContain('id="register-titel-fristen"');
+    expect(html).toContain('Alle Kategorien'); // Zurück-Weg
+    // Klicktiefe 1 + Praxis-Rang: Tagerechner (Alltag) vor Gewährleistung (regelmässig)
+    expect(html).toContain('href="/rechner/tagerechner"');
+    expect(html).toContain('href="/rechner/verjaehrung"');
+    expect(html.indexOf('Fristenrechner')).toBeLessThan(html.indexOf('Gewährleistung'));
+    // Ehrlichkeit: Entwurf-Badges + Geplant-Aufklappzeile
+    expect(html).toContain('Entwurf</span>');
+    expect(html).toContain('<details');
+    expect(html).toContain('In Vorbereitung');
+    // Die ANDEREN Kategorien sind nicht gelistet
+    expect(html).not.toContain('id="register-titel-vorlagen"');
+    expect(html).not.toContain('href="/rechner/verzugszins"');
+  });
+
+  it('Kachel-Direktlinks decken alle vier Kategorien (Schnellzugriff-Funktion erhalten)', async () => {
     const html = seiteHtml('/');
-    // Die frühere «Häufig gebraucht»-Rubrik ist aufgegangen (Subtraktion).
-    expect(html).not.toContain('Häufig gebraucht');
-    // Kachel-Direktlinks: Alltags-Werkzeuge je Kategorie, EIN Klick.
     const { kachelDirektlinks } = await import('../lib/praxisRang');
     const { KATALOG_KARTEN } = await import('../lib/startseiteConfig');
     for (const kat of ['zustaendigkeiten', 'fristen', 'gebuehren', 'vorlagen'] as const) {
@@ -87,36 +87,22 @@ describe('Register: VIER Oberkategorien (Auftrag David 10.6.2026 — deklarierte
       expect(links.length, kat).toBeGreaterThan(0);
       for (const k of links) expect(html).toContain(`href="${k.href}"`);
     }
-    // Praxis-Rang: in «Fristen» steht der Tagerechner (Alltag) VOR der
-    // Gewährleistung (regelmässig); Rechtsgebiet als Sub-Label in der Zeile.
-    const fristen = html.slice(html.indexOf('id="register-fristen"'), html.indexOf('id="register-gebuehren"'));
-    expect(fristen.indexOf('Fristenrechner')).toBeGreaterThan(-1);
-    expect(fristen.indexOf('Fristenrechner')).toBeLessThan(fristen.indexOf('Gewährleistung'));
   });
 
-  it('geplante Karten je Kategorie hinter der «In Vorbereitung (N)»-Aufklappzeile (§8, ohne Ballast)', () => {
-    const html = seiteHtml('/');
-    expect(html).toContain('<details');
-    expect(html).toContain('In Vorbereitung');
-    // geplante Titel sind enthalten (Stichprobe), aber nicht als Link
-    expect(html).toContain('Existenzminimum');
-    expect(html).not.toContain('href="/rechner/existenzminimum"');
-  });
-
-  it('Alt-Parameter ?ansicht= und ?gebiet= bleiben harmlos (Link-Erbe)', () => {
+  it('Alt-Parameter ?ansicht= bleibt harmlos; ?gebiet= öffnet die passende Kategorie erst clientseitig (SSR: Deckblatt)', () => {
     for (const url of ['/?ansicht=katalog', '/?gebiet=arbeit']) {
       const html = seiteHtml(url);
-      expect(html).toContain('id="register-fristen"');
+      expect(html).toContain('aria-label="Oberkategorien"');
       expect(html).not.toContain('role="tablist"');
     }
   });
 
-  it('?q= ersetzt das Register durch die flache Trefferliste — mit Kategorie-Label (teilbare Suche)', () => {
+  it('?q= ersetzt das Deckblatt durch die flache Trefferliste — mit Kategorie-Label (teilbare Suche)', () => {
     const html = seiteHtml('/?q=Rechtsvorschlag');
     expect(html).toContain('Treffer');
-    expect(html).toContain('href="/rechner/schkg-fristen"'); // schkg-fristen via Keyword
-    expect(html).not.toContain('id="register-'); // Register ausgeblendet
-    expect(html).toContain('Fristen ·'); // Kategorie-Label in der Trefferzeile
+    expect(html).toContain('href="/rechner/schkg-fristen"');
+    expect(html).not.toContain('aria-label="Oberkategorien"');
+    expect(html).toContain('Fristen ·');
   });
 
   it('?q= ohne Treffer: ehrlicher Leerzustand statt stillen Verschwindens', () => {

@@ -12,8 +12,10 @@ import { sansAmp } from './typografie';
 // Hauptabschnitte eines Kanzlei-Handbuchs. Praxistauglichkeits-Leitsätze:
 //  1. AUFGABENDENKEN: Die Kanzlei kommt mit einer Aufgabe («wer ist
 //     zuständig?», «wann läuft die Frist ab?», «was kostet es?», «ich
-//     brauche ein Schreiben») — die vier Einstiegskacheln zuoberst sind
-//     genau diese Fragen und springen zur Sektion.
+//     brauche ein Schreiben») — die Startseite zeigt NUR die vier
+//     Kategorien als Deckblatt (Präzisierung David 10.6.2026); die
+//     Unterthemen erscheinen erst beim Klick als eigene Ansicht
+//     (?kategorie=, teilbar, Zurück-Taste funktioniert).
 //  2. KLICKTIEFE 1: Verfügbare Werkzeuge stehen DIREKT als Link-Zeilen in
 //     ihrer Kategorie (vorher Gebiets-Kachel → Panel → Karte).
 //  3. PRAXIS-RANG STATT GEBIETS-GRUPPEN (Versimplung, Auftrag David
@@ -38,26 +40,29 @@ const KATEGORIE_TITEL = new Map(OBERKATEGORIEN.map((k) => [k.id, k.titel]));
 
 // ─── Einstiegskachel: eine der vier Aufgaben-Fragen, springt zur Sektion ────
 
-function KategorieEinstieg({ kat, karten }: { kat: Oberkategorie; karten: CalculatorCard[] }) {
+function KategorieEinstieg({ kat, karten, onOeffnen }: {
+  kat: Oberkategorie; karten: CalculatorCard[]; onOeffnen: () => void;
+}) {
   const verf = karten.filter(istVerfuegbar).length;
   const geplant = karten.length - verf;
   const links = kachelDirektlinks(kat.id, karten);
   return (
-    <div className="lc-card p-4 sm:p-5 flex flex-col gap-1.5 min-w-0 bg-surface">
-      <a href={`#register-${kat.id}`}
-        className="flex items-baseline gap-2.5 no-underline group">
-        <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{kat.numeral}</span>
-        <span className="font-sans font-semibold text-ink-900 text-body-l leading-snug group-hover:text-brass-700 transition-colors">{kat.titel}</span>
-        <span aria-hidden className="ml-auto text-ink-400 group-hover:text-brass-700 transition-colors">↓</span>
-      </a>
+    <div className="lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
+      <button type="button" onClick={onOeffnen}
+        className="flex items-baseline gap-3 text-left group cursor-pointer">
+        <span aria-hidden className="font-display text-h2 leading-none text-brass-700">{kat.numeral}</span>
+        <span className="font-sans font-semibold text-ink-900 text-h3 leading-snug group-hover:text-brass-700 transition-colors">{kat.titel}</span>
+        <span aria-hidden className="ml-auto text-ink-400 group-hover:text-brass-700 transition-colors">▸</span>
+      </button>
       <span className="lc-overline text-ink-500">
         <span className="num text-brass-700">{verf}</span> verfügbar
         {geplant > 0 && <> · <span className="num">{geplant}</span> in Vorbereitung</>}
       </span>
-      {/* Top-Direktlinks: der frühere «Häufig gebraucht»-Schnellzugriff lebt
-          hier (Subtraktion 10.6.2026) — ein Klick ins Alltags-Werkzeug. */}
+      <span className="text-body-s text-ink-500 leading-relaxed">{kat.lede}</span>
+      {/* Top-Direktlinks: der «Häufig gebraucht»-Schnellzugriff — ein Klick
+          ins Alltags-Werkzeug, ohne die Kategorie zu öffnen. */}
       {links.length > 0 && (
-        <span className="flex flex-col gap-0.5 pt-1 border-t border-line mt-0.5">
+        <span className="flex flex-col gap-1 pt-2 border-t border-line mt-1">
           {links.map((k) => (
             <Link key={k.id} to={k.href!}
               className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline truncate">
@@ -98,7 +103,7 @@ function WerkzeugZeile({ k, subLabel }: { k: CalculatorCard; subLabel?: string }
 
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
-function KategorieSektion({ kat, karten }: { kat: Oberkategorie; karten: CalculatorCard[] }) {
+function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck: () => void }) {
   // Praxis-Rang zuerst (Alltag → regelmässig → gelegentlich), innerhalb des
   // Rangs die feste Gebiets-Reihenfolge; das Rechtsgebiet steht als
   // Sub-Label in der Zeile (Versimplung 10.6.2026: keine Zwischen-H3 mehr).
@@ -112,6 +117,10 @@ function KategorieSektion({ kat, karten }: { kat: Oberkategorie; karten: Calcula
   return (
     <section id={`register-${kat.id}`} aria-labelledby={`register-titel-${kat.id}`} className="space-y-4 scroll-mt-28">
       <div className="space-y-1.5 pt-2">
+        <button type="button" onClick={onZurueck}
+          className="text-body-s font-medium text-ink-500 hover:text-brass-700 transition-colors">
+          ← Alle Kategorien
+        </button>
         <div className="flex items-baseline gap-4">
           <h2 id={`register-titel-${kat.id}`} className="flex items-baseline gap-2.5 whitespace-nowrap">
             <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{kat.numeral}</span>
@@ -194,15 +203,24 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
     setSearchParams(p, { replace: true });
   };
 
+  // Ansichts-Weiche (Präzisierung David 10.6.2026): ?kategorie=<id> öffnet
+  // die Unterthemen-Ansicht; ohne Parameter zeigt die Seite NUR das
+  // Vier-Kategorien-Deckblatt. Teilbar, Zurück-Taste funktioniert.
+  const offenId = searchParams.get('kategorie');
+  const offen = OBERKATEGORIEN.find((k) => k.id === offenId) ?? null;
+  const oeffnen = (id: OberkategorieId | null) => {
+    const p = new URLSearchParams(searchParams);
+    if (id === null) p.delete('kategorie'); else p.set('kategorie', id);
+    setSearchParams(p);
+  };
+
   // Link-Erbe: Alte ?gebiet=-Links (Kachel/Panel-Register bis 10.6.2026)
-  // springen zur ersten Kategorie, die Karten dieses Gebiets führt — der
-  // Parameter bleibt harmlos in der URL (wie ?ansicht=).
+  // öffnen die erste Kategorie, die Karten dieses Gebiets führt.
   const altGebiet = searchParams.get('gebiet');
   useEffect(() => {
-    if (!altGebiet) return;
+    if (!altGebiet || offenId) return;
     const treffer = karten.find((k) => k.rechtsgebiet.toLowerCase().includes(altGebiet) || altGebiet === k.rechtsgebiet);
-    const kat = treffer ? kategorieVon(treffer) : null;
-    if (kat) document.getElementById(`register-${kat}`)?.scrollIntoView();
+    if (treffer) oeffnen(kategorieVon(treffer));
     // eslint-disable-next-line react-hooks/exhaustive-deps -- nur beim Mount (Link-Erbe)
   }, []);
 
@@ -253,16 +271,20 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
           </section>
         )
       ) : (
-        <>
-        {/* Die vier Aufgaben-Einstiege (Auftrag David 10.6.2026) */}
-        <nav aria-label="Oberkategorien" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {proKategorie.map((x) => <KategorieEinstieg key={x.kat.id} kat={x.kat} karten={x.karten} />)}
-        </nav>
-
-        {/* Die vier Registerteile (der frühere «Häufig gebraucht»-
-            Schnellzugriff lebt als Direktlinks in den Einstiegskacheln) */}
-        {proKategorie.map((x) => <KategorieSektion key={x.kat.id} kat={x.kat} karten={x.karten} />)}
-        </>
+        offen ? (
+          /* Unterthemen-Ansicht EINER Kategorie (erst nach Klick) */
+          <KategorieSektion kat={offen}
+            karten={proKategorie.find((x) => x.kat.id === offen.id)?.karten ?? []}
+            onZurueck={() => oeffnen(null)} />
+        ) : (
+          /* Deckblatt: NUR die vier Oberkategorien (Präzisierung David) */
+          <nav aria-label="Oberkategorien" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {proKategorie.map((x) => (
+              <KategorieEinstieg key={x.kat.id} kat={x.kat} karten={x.karten}
+                onOeffnen={() => oeffnen(x.kat.id)} />
+            ))}
+          </nav>
+        )
       )}
     </div>
   );
