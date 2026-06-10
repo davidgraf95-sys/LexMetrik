@@ -418,6 +418,31 @@ export function zustellHinweis(art: ZustellArt, datumISO: string, kanton?: Kanto
 // (FAHRPLAN-PRAXIS 1.1) — Re-Export erhält die bestehende API (§6).
 export { icsFuerFrist } from './icsExport';
 
+// ─── Mechanik-Presets des Allgemein-Tabs (FE-3: aus der Form gehoben) ───────
+// Setzen nur Einheit/Toggles – keine vorgetäuschte Subsumtion. Liegen hier,
+// damit der Preset-Index (lib/presetIndex.ts) sie ohne UI-Import listet (§3).
+export const MECHANIK_PRESETS: { key: string; label: string; patch: Partial<AllgFristInput>; info?: string }[] = [
+  { key: 'tagesfrist', label: 'Tagesfrist (Kalendertage)',
+    patch: { einheit: 'tage', wochenendeVerschieben: true, feiertageVerschieben: true } },
+  { key: 'monatsfrist_or', label: 'Monatsfrist nach OR',
+    patch: { einheit: 'monate', laenge: 1, wochenendeVerschieben: true, feiertageVerschieben: true },
+    info: 'endet am gleichbezeichneten Tag (BGE 150 III 367)' },
+  { key: 'kalendertage_pur', label: 'Kalendertage ohne Verschiebung',
+    patch: { einheit: 'tage', wochenendeVerschieben: false, feiertageVerschieben: false } },
+];
+
+/** Query eines Mechanik-Presets — dieselben Parameter, die fristQueryLesen
+ *  liest (§5); ohne Startdatum (das Datum gibt der Nutzer ein). */
+export function mechanikPresetQuery(patch: Partial<AllgFristInput>): string {
+  const p = new URLSearchParams();
+  if (patch.einheit) p.set('e', patch.einheit);
+  if (patch.laenge != null) p.set('l', String(patch.laenge));
+  if (patch.wochenendeVerschieben) p.set('w', '1');
+  if (patch.feiertageVerschieben) p.set('f', '1');
+  const q = p.toString();
+  return q ? `?${q}` : '';
+}
+
 // Permalink: Eingaben → URL-Query und zurück (kein Tracking, rein lokal).
 export function fristQueryKodieren(f: AllgFristInput): string {
   const p = new URLSearchParams();
@@ -429,19 +454,37 @@ export function fristQueryKodieren(f: AllgFristInput): string {
 
 export function fristQueryLesen(query: string): Partial<AllgFristInput> | null {
   const p = new URLSearchParams(query);
+  // FE-3 (FAHRPLAN-FRISTEN-EINHEIT): s/l/e sind einzeln optional — Preset-
+  // Index-Links tragen Länge/Einheit ohne Startdatum (das Datum gibt der
+  // Nutzer ein). VORHANDENE Werte werden unverändert strikt validiert; ein
+  // ungültiger Wert verwirft wie bisher den ganzen Link. Vollständige
+  // Teilen-Links (s+l+e) dekodieren byte-identisch wie zuvor.
+  const teil: Partial<AllgFristInput> = {};
   const s = p.get('s');
-  if (!s || !/^\d{4}-\d{2}-\d{2}$/.test(s)) return null;
-  const laenge = Number(p.get('l'));
-  const einheit = p.get('e') as Einheit | null;
-  if (!Number.isInteger(laenge) || laenge <= 0) return null;
-  if (!einheit || !['tage', 'wochen', 'monate', 'jahre'].includes(einheit)) return null;
+  if (s !== null) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(s)) return null;
+    teil.start = s;
+  }
+  const lRoh = p.get('l');
+  if (lRoh !== null) {
+    const laenge = Number(lRoh);
+    if (!Number.isInteger(laenge) || laenge <= 0) return null;
+    teil.laenge = laenge;
+  }
+  const eRoh = p.get('e');
+  if (eRoh !== null) {
+    if (!['tage', 'wochen', 'monate', 'jahre'].includes(eRoh)) return null;
+    teil.einheit = eRoh as Einheit;
+  }
+  if (teil.start === undefined && teil.laenge === undefined && teil.einheit === undefined) return null;
   // Kanton nur übernehmen, wenn er ein echter Kanton ist (Review A2:
   // ungeprüfter Cast liess Fantasie-Werte ins <select> durchsickern)
   const KANTONE_GUELTIG = new Set(['AG','AI','AR','BE','BL','BS','FR','GE','GL','GR','JU','LU','NE','NW','OW','SG','SH','SO','SZ','TG','TI','UR','VD','VS','ZG','ZH']);
   const kantonRoh = p.get('k');
   const kanton = kantonRoh && KANTONE_GUELTIG.has(kantonRoh) ? (kantonRoh as Kanton) : undefined;
   return {
-    start: s, laenge, einheit,
+    ...teil,
+    // w/f-Abwesenheit heisst «aus» — so kodiert der Teilen-Knopf (unverändert).
     wochenendeVerschieben: p.get('w') === '1' || p.get('f') === '1',
     feiertageVerschieben: p.get('f') === '1',
     ...(kanton ? { kanton } : {}),

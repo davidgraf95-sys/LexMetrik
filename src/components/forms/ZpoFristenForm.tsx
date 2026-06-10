@@ -83,9 +83,13 @@ export function ZpoFristenForm() {
     ...(ausLink.modus ? { modus: ausLink.modus as ZpoInput['modus'] } : {}),
     ...(ausLink.gerichtshinweisStillstand != null ? { gerichtshinweisStillstand: ausLink.gerichtshinweisStillstand } : {}),
   }));
-  const [phase, setPhase] = useState<ZpoPhase>('rechtsmittel');
-  const [presetKey, setPresetKey] = useState('');
-  const [presetHinweis, setPresetHinweis] = useState<string | null>(null);
+  // FE-3: Preset-Index-Links tragen den Preset-Schlüssel — Phase, Auswahl
+  // und Hinweis werden wiederhergestellt (die Fach-Parameter kommen wie
+  // bisher einzeln aus dem Link, §5: eine Kodierung).
+  const linkPreset = PRESETS.find((p) => p.key === ausLink.presetKey);
+  const [phase, setPhase] = useState<ZpoPhase>(linkPreset?.phase ?? 'rechtsmittel');
+  const [presetKey, setPresetKey] = useState(linkPreset?.key ?? '');
+  const [presetHinweis, setPresetHinweis] = useState<string | null>(linkPreset?.hinweis ?? null);
   const [erweitert, setErweitert] = useState(false);
   const [fiktionDatum, setFiktionDatum] = useState('');
   const [erstreckungAn, setErstreckungAn] = useState(ausLink.erstreckungAn ?? false);

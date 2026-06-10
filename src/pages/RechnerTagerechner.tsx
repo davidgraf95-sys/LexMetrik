@@ -6,6 +6,7 @@ import { SchkgFristenForm } from '../components/forms/SchkgFristenForm';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { Tabs } from '../components/ui/Tabs';
 import { getCalculator } from '../lib/calculators';
+import { presetSuche, type PresetIndexEintrag } from '../lib/presetIndex';
 
 // ─── Kombinierter Fristenrechner (Free) — Auftrag 5.6.2026 ──────────────────
 //
@@ -31,7 +32,7 @@ const HASH_VERFAHREN: Record<string, Verfahren> = { '#zpo': 'zpo', '#schkg': 'sc
 
 export function RechnerTagerechner() {
   const calc = getCalculator('tagerechner')!;
-  const { hash } = useLocation();
+  const { hash, search } = useLocation();
   const navigate = useNavigate();
   const [verfahren, setVerfahren] = useState<Verfahren>(HASH_VERFAHREN[hash] ?? 'allgemein');
   // Hash-Navigation: Sync während des Renderns (React-Muster «adjusting
@@ -55,11 +56,55 @@ export function RechnerTagerechner() {
     setWeicheOffen(false);
     wechsle(v);
   };
+  // FE-3: EIN Preset-Katalog über alle Regimes (lib/presetIndex.ts) — die
+  // Wahl setzt Regime-Tab UND Parameter (Link-Kodierung der Ziel-Form, §5);
+  // die Form remountet über den search-Key und hydratisiert daraus.
+  const [presetQuery, setPresetQuery] = useState('');
+  const treffer = presetSuche(presetQuery);
+  const waehlePreset = (e: PresetIndexEintrag) => {
+    setPresetQuery('');
+    setVerfahren(e.regime);
+    navigate({ search: e.query, hash: e.hash }, { replace: true });
+  };
 
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
       <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+        {/* FE-3: Preset-Suche über alle Regimes */}
+        <div className="space-y-1.5 mb-5">
+          <label htmlFor="preset-suche" className="lc-overline block">
+            Frist suchen (alle Verfahren)
+          </label>
+          <input id="preset-suche" type="search" value={presetQuery}
+            onChange={(e) => setPresetQuery(e.target.value)}
+            placeholder="z. B. «Berufung», «Rechtsvorschlag», «Art. 256c ZGB»"
+            autoComplete="off"
+            className="w-full max-w-xl h-10 px-3 rounded-lg border border-line bg-surface text-body-s text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-brass-400" />
+          {presetQuery.trim() !== '' && (
+            treffer.length === 0 ? (
+              <p className="text-body-s text-ink-500 max-w-reading">
+                Kein Preset gefunden – Frist manuell eingeben oder die Spezialrechner
+                der Fristen-Kategorie prüfen (Verjährung, Arbeits-/Mietkündigung, …).
+              </p>
+            ) : (
+              <ul className="border border-line rounded-lg divide-y divide-line bg-surface max-w-xl overflow-hidden">
+                {treffer.map((e) => (
+                  <li key={e.key}>
+                    <button type="button" onClick={() => waehlePreset(e)}
+                      className="w-full text-left px-3 py-2 flex items-baseline justify-between gap-3 hover:bg-brass-100/40 transition-colors">
+                      <span className="min-w-0">
+                        <span className="block text-body-s font-medium text-ink-900 leading-snug">{e.label}</span>
+                        {e.norm !== '' && <span className="block text-xs text-ink-500">{e.norm}</span>}
+                      </span>
+                      <span className="text-xs text-ink-500 whitespace-nowrap shrink-0">{e.regimeLabel}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )
+          )}
+        </div>
         <div className="space-y-1.5">
           <p className="lc-overline">In welchem Verfahren läuft die Frist?</p>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
@@ -111,9 +156,11 @@ export function RechnerTagerechner() {
             {verfahren === 'schkg' && 'Betreibungsferien und Rechtsstillstand (Art. 56 ff. SchKG) – getrennt vom ZPO-Stillstand gerechnet.'}
           </p>
         </div>
-        {verfahren === 'allgemein' && <AllgemeineFristForm />}
-        {verfahren === 'zpo' && <ZpoFristenForm />}
-        {verfahren === 'schkg' && <SchkgFristenForm />}
+        {/* search-Key: Preset-Wahl ändert die Query → Remount → die Form
+            hydratisiert aus der URL (dieselbe Mechanik wie Prefill-Brücken). */}
+        {verfahren === 'allgemein' && <AllgemeineFristForm key={search} />}
+        {verfahren === 'zpo' && <ZpoFristenForm key={search} />}
+        {verfahren === 'schkg' && <SchkgFristenForm key={search} />}
       </div>
     </div>
   );

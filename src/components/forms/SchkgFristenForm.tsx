@@ -17,7 +17,8 @@ import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BegruendungAbsatz } from '../BegruendungAbsatz';
 import { begruendungsAbsatz, fristbeginnZusatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
-import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
+import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
+import { SCHKG_LINK_SPEC, type SchkgLink } from '../../lib/rechnerPermalinks';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
 
@@ -71,30 +72,8 @@ const DEFAULTS: FormState = {
 
 
 // Permalink (FAHRPLAN-PRAXIS 1.3): Form + Phase/Preset + Hemmung/Rechtsstillstand.
-type SchkgLink = {
-  ereignis: string; einheit: string; laenge: number; modus: string; fristnatur: string;
-  kanton: string; ausloeser?: string; phase?: string; presetKey?: string; override?: string;
-  hemmungAn?: boolean; hemmungVon?: string; hemmungBis?: string;
-  rsAn?: boolean; rsVon?: string; rsBis?: string;
-};
-const SCHKG_LINK_SPEC: PermalinkSpec<SchkgLink> = {
-  ereignis: { p: 'e', typ: 'str', gueltig: istISO },
-  einheit: { p: 'u', typ: 'str', gueltig: einerVon('tage', 'monate', 'jahre') },
-  laenge: { p: 'l', typ: 'num', gueltig: (n) => Number.isInteger(n) && n > 0 },
-  modus: { p: 'm', typ: 'str', gueltig: einerVon('schkg_betreibungsferien', 'zpo_stillstand', 'kein') },
-  fristnatur: { p: 'n', typ: 'str', gueltig: einerVon('verwirkung', 'wartefrist', 'frist') },
-  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
-  ausloeser: { p: 'a', typ: 'str' },
-  phase: { p: 'ph', typ: 'str', gueltig: einerVon(...PHASEN_SCHKG.map((x) => x.code)) },
-  presetKey: { p: 'p', typ: 'str', gueltig: einerVon(...PRESETS_SCHKG.map((x) => x.key)) },
-  override: { p: 'o', typ: 'str', gueltig: einerVon('schkg_betreibungsferien', 'zpo_stillstand', 'kein') },
-  hemmungAn: { p: 'ha', typ: 'bool' },
-  hemmungVon: { p: 'hv', typ: 'str', gueltig: istISO },
-  hemmungBis: { p: 'hb', typ: 'str', gueltig: istISO },
-  rsAn: { p: 'ra', typ: 'bool' },
-  rsVon: { p: 'rv', typ: 'str', gueltig: istISO },
-  rsBis: { p: 'rb', typ: 'str', gueltig: istISO },
-};
+// Spec seit FE-3 in lib/rechnerPermalinks.ts (eine Spec, zwei Nutzer: die
+// Form liest/teilt, der Preset-Index des Tagerechners baut dieselben Links).
 
 export function SchkgFristenForm() {
   const [ausLink] = useState<Partial<SchkgLink>>(() => {

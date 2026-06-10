@@ -27,6 +27,8 @@ import type { Einheit } from './fristenEngine';
 // → Rückwärts-Tab, im Hinweis vermerkt.
 
 export interface FamStatusPreset {
+  /** Stabiler Schlüssel für Preset-Index-Links (FE-3, fp=-Parameter). */
+  key: string;
   label: string;
   norm: string;
   laenge: number;
@@ -37,48 +39,56 @@ export interface FamStatusPreset {
 
 export const FAM_STATUS_PRESETS: FamStatusPreset[] = [
   {
+    key: 'vaterschaft_mutter',
     label: 'Vaterschaftsklage der Mutter – 1 Jahr',
     norm: 'Art. 263 Abs. 1 Ziff. 1 ZGB',
     laenge: 1, einheit: 'jahre',
     info: 'Start = Geburt. Verwirkungsfrist; bei bestehendem Kindesverhältnis zu einem anderen Mann läuft die Frist erst ab dessen Beseitigung (Abs. 2); Wiederherstellung nur aus wichtigen Gründen (Abs. 3).',
   },
   {
+    key: 'anfechtung_relativ',
     label: 'Anfechtung der Vaterschaft – relativ 1 Jahr',
     norm: 'Art. 256c Abs. 1 ZGB',
     laenge: 1, einheit: 'jahre',
     info: 'Start = Kenntnis von Geburt UND Nichtvaterschaft bzw. Drittbeiwohnung. ZUSÄTZLICH gilt die absolute 5-Jahres-Frist seit Geburt — massgeblich ist das FRÜHERE Ende; nach Fristablauf nur Wiederherstellung aus wichtigen Gründen (Abs. 3), dann ohne Verzug klagen.',
   },
   {
+    key: 'anfechtung_absolut',
     label: 'Anfechtung der Vaterschaft – absolut 5 Jahre',
     norm: 'Art. 256c Abs. 1 ZGB',
     laenge: 5, einheit: 'jahre',
     info: 'Start = Geburt. Kappt die relative Jahresfrist («in jedem Fall»); massgeblich ist das FRÜHERE der beiden Enden.',
   },
   {
+    key: 'statusklage_kind',
     label: 'Status-Klagen des Kindes – 1 Jahr ab Volljährigkeit',
     norm: 'Art. 263 Abs. 1 Ziff. 2 / Art. 256c Abs. 2 ZGB',
     laenge: 1, einheit: 'jahre',
     info: 'Start = 18. Geburtstag (Erreichen der Volljährigkeit) — gilt für Vaterschafts- UND Anfechtungsklage des Kindes.',
   },
   {
+    key: 'sorge_wiedererteilung',
     label: 'Wiedererteilung entzogener Sorge – Sperrfrist 1 Jahr',
     norm: 'Art. 313 Abs. 2 ZGB',
     laenge: 1, einheit: 'jahre',
     info: 'Start = Entzug der elterlichen Sorge; vorher ist die Wiederherstellung ausgeschlossen (frühester Antragstermin).',
   },
   {
+    key: 'einfache_gesellschaft',
     label: 'Kündigung einfache Gesellschaft – 6 Monate',
     norm: 'Art. 546 Abs. 1 OR',
     laenge: 6, einheit: 'monate',
     info: 'Konkubinats-/Gesellschaftsauflösung: Kündigung in guten Treuen, nicht zur Unzeit; bei vereinbarten Jahresabschlüssen nur aufs Ende des Geschäftsjahres (Abs. 2). Entfällt bei Auflösung nach Art. 545 Abs. 1 Ziff. 1 OR.',
   },
   {
+    key: 'kesb_beschwerde',
     label: 'KESB-Beschwerde – 30 Tage',
     norm: 'Art. 450b Abs. 1 ZGB',
     laenge: 30, einheit: 'tage',
     info: 'Start = Mitteilung des Entscheids. Kantonales Verfahrensrecht beachten — z. B. ZH kennt KEINE Fristenstillstände im KESR (kantonal zu prüfen).',
   },
   {
+    key: 'kesb_vorsorglich',
     label: 'KESB-Beschwerde gegen vorsorgliche Massnahmen – 10 Tage',
     norm: 'Art. 445 Abs. 3 ZGB',
     laenge: 10, einheit: 'tage',

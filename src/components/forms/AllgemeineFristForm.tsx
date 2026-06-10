@@ -4,7 +4,7 @@ import { Tabs } from '../ui/Tabs';
 import { Link } from 'react-router-dom';
 import {
   allgemeineFristErgebnis, tageZwischen, ALLG_FRIST_HINWEIS,
-  rueckwaertsErgebnis, zustellHinweis, fristQueryKodieren, fristQueryLesen,
+  rueckwaertsErgebnis, zustellHinweis, fristQueryKodieren, fristQueryLesen, MECHANIK_PRESETS,
   type AllgFristInput, type AllgFristResult, type Einheit, type RueckVerschiebung, type ZustellArt,
 } from '../../lib/allgemeineFrist';
 import { FAM_STATUS_PRESETS } from '../../lib/famStatusPresets';
@@ -47,22 +47,28 @@ const DEFAULTS: State = {
   wochenendeVerschieben: true, feiertageVerschieben: true, kanton: 'ZH',
 };
 
-// Presets setzen nur Einheit/Toggles – keine vorgetäuschte Subsumtion.
-const PRESETS: { label: string; patch: Partial<State>; info?: string }[] = [
-  { label: 'Tagesfrist (Kalendertage)', patch: { einheit: 'tage', wochenendeVerschieben: true, feiertageVerschieben: true } },
-  { label: 'Monatsfrist nach OR', patch: { einheit: 'monate', laenge: 1, wochenendeVerschieben: true, feiertageVerschieben: true },
-    info: 'endet am gleichbezeichneten Tag (BGE 150 III 367)' },
-  { label: 'Kalendertage ohne Verschiebung', patch: { einheit: 'tage', wochenendeVerschieben: false, feiertageVerschieben: false } },
-];
+// Mechanik-Presets seit FE-3 in lib/allgemeineFrist.ts (MECHANIK_PRESETS) —
+// der Preset-Index des Tagerechners listet sie von dort (§5).
 
 export function AllgemeineFristForm() {
   const [tab, setTab] = useState<'frist' | 'rueckwaerts' | 'zwischen'>('frist');
+  // FE-3: Preset-Index-Links tragen den Fach-Preset-Schlüssel (fp=) —
+  // dieselbe Wirkung wie der Chip-Klick (Länge/Einheit/Toggles + Hinweis).
+  const [famAusLink] = useState(() => {
+    try {
+      const k = new URLSearchParams(window.location.search).get('fp');
+      return FAM_STATUS_PRESETS.find((p) => p.key === k) ?? null;
+    } catch { return null; }
+  });
   // Permalink (P1.4): Eingaben werden beim ersten Render deterministisch
   // aus der URL rekonstruiert (Lazy-Initializer statt Effekt).
   const [form, setForm] = useState<State>(() => {
     try {
       const aus = fristQueryLesen(window.location.search);
-      return aus ? { ...DEFAULTS, ...aus } : DEFAULTS;
+      const basis = aus ? { ...DEFAULTS, ...aus } : DEFAULTS;
+      return famAusLink
+        ? { ...basis, laenge: famAusLink.laenge, einheit: famAusLink.einheit, wochenendeVerschieben: true, feiertageVerschieben: true }
+        : basis;
     } catch { return DEFAULTS; }
   });
   const [von, setVon] = useState('2026-06-05');
@@ -74,7 +80,8 @@ export function AllgemeineFristForm() {
   // P1.2 Zustell-Helfer (rein informativ)
   const [zustellArt, setZustellArt] = useState<ZustellArt | ''>('');
   // gewählter Fach-Preset-Kontext (Familienrecht & Status, 10.6.2026)
-  const [famHinweis, setFamHinweis] = useState<string | null>(null);
+  const [famHinweis, setFamHinweis] = useState<string | null>(
+    famAusLink ? `${famAusLink.norm}: ${famAusLink.info}` : null);
   const [zustellDatum, setZustellDatum] = useState('');
 
   const set = <K extends keyof State>(k: K, v: State[K]) => setForm((f) => ({ ...f, [k]: v }));
@@ -187,7 +194,7 @@ export function AllgemeineFristForm() {
           {/* Presets */}
           <div className="flex flex-wrap items-center gap-2">
             <span className="lc-overline text-ink-500 normal-case">Voreinstellung:</span>
-            {PRESETS.map((p) => (
+            {MECHANIK_PRESETS.map((p) => (
               <button type="button" key={p.label} onClick={() => setForm((f) => ({ ...f, ...p.patch }))}
                 title={p.info} className="lc-chip hover:bg-brass-200 transition-colors">{p.label}</button>
             ))}

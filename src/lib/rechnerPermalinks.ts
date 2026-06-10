@@ -1,5 +1,7 @@
 import { permalinkKodieren, istISO, istKanton, einerVon, type PermalinkSpec } from './permalink';
 import type { SperrfristenInput } from '../types/legal';
+import { PRESETS as ZPO_PRESETS } from './zpoPresets';
+import { PHASEN_SCHKG, PRESETS_SCHKG } from './schkgPresets';
 
 // ─── Geteilte Rechner-Permalink-Specs (FAHRPLAN-PRAXIS 1.3/2.1) ─────────────
 //
@@ -15,6 +17,7 @@ export type ZpoLink = {
   kanton: string; fristnatur: string; zustellart?: string; modus?: string;
   gerichtshinweisStillstand?: boolean;
   erstreckungAn?: boolean; erstreckungLaenge?: number; erstreckungEinheit?: string;
+  presetKey?: string;
 };
 
 export const ZPO_LINK_SPEC: PermalinkSpec<ZpoLink & Record<string, unknown>> = {
@@ -30,12 +33,51 @@ export const ZPO_LINK_SPEC: PermalinkSpec<ZpoLink & Record<string, unknown>> = {
   erstreckungAn: { p: 'ea', typ: 'bool' },
   erstreckungLaenge: { p: 'el', typ: 'num', gueltig: (n) => Number.isInteger(n) && n > 0 },
   erstreckungEinheit: { p: 'eu', typ: 'str', gueltig: einerVon('tage', 'wochen') },
+  // FE-3 (FAHRPLAN-FRISTEN-EINHEIT): Preset-Index-Links tragen den Preset-
+  // Schlüssel, damit die Form Phase + Hinweis wiederherstellt. Nur DEKODIERT
+  // additiv — der Teilen-Knopf der Form kodiert ihn weiterhin nicht
+  // (bestehende Link-/ICS-Byte-Stände bleiben unberührt).
+  presetKey: { p: 'p', typ: 'str', gueltig: einerVon(...ZPO_PRESETS.map((x) => x.key)) },
 };
 
 /** Vorbefüllter Link in den ZPO-Fristenrechner (Brücke 2.1a). */
 export function zpoFristenLink(teil: Partial<ZpoLink>): string {
   return '/rechner/zpo-fristen' + permalinkKodieren(ZPO_LINK_SPEC, teil as ZpoLink & Record<string, unknown>);
 }
+
+// ── SchKG-Fristenrechner ────────────────────────────────────────────────────
+// Verbatim aus SchkgFristenForm.tsx hierher gehoben (FE-3, §6-verhaltens-
+// neutral): der Preset-Index baut dieselben Links, die die Form liest/teilt.
+
+export type SchkgLink = {
+  ereignis: string; einheit: string; laenge: number; modus: string; fristnatur: string;
+  kanton: string; ausloeser?: string; phase?: string; presetKey?: string; override?: string;
+  hemmungAn?: boolean; hemmungVon?: string; hemmungBis?: string;
+  rsAn?: boolean; rsVon?: string; rsBis?: string;
+};
+
+export const SCHKG_LINK_SPEC: PermalinkSpec<SchkgLink & Record<string, unknown>> = {
+  ereignis: { p: 'e', typ: 'str', gueltig: istISO },
+  einheit: { p: 'u', typ: 'str', gueltig: einerVon('tage', 'monate', 'jahre') },
+  laenge: { p: 'l', typ: 'num', gueltig: (n) => Number.isInteger(n) && n > 0 },
+  modus: { p: 'm', typ: 'str', gueltig: einerVon('schkg_betreibungsferien', 'zpo_stillstand', 'kein') },
+  // Deklarierter Fix (FE-3-Befund 10.6.2026): Die Form kennt SECHS Natur-
+  // Werte (types/schkg.ts) — die alte Dreier-Liste verwarf 'klagefrist'/
+  // 'beschwerdefrist'/'ordnungsfrist' beim DEKODIEREN, Empfänger geteilter
+  // Links sahen «Rechtsnatur: frist» samt falscher Warnlage.
+  fristnatur: { p: 'n', typ: 'str', gueltig: einerVon('verwirkung', 'wartefrist', 'frist', 'klagefrist', 'beschwerdefrist', 'ordnungsfrist') },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+  ausloeser: { p: 'a', typ: 'str' },
+  phase: { p: 'ph', typ: 'str', gueltig: einerVon(...PHASEN_SCHKG.map((x) => x.code)) },
+  presetKey: { p: 'p', typ: 'str', gueltig: einerVon(...PRESETS_SCHKG.map((x) => x.key)) },
+  override: { p: 'o', typ: 'str', gueltig: einerVon('schkg_betreibungsferien', 'zpo_stillstand', 'kein') },
+  hemmungAn: { p: 'ha', typ: 'bool' },
+  hemmungVon: { p: 'hv', typ: 'str', gueltig: istISO },
+  hemmungBis: { p: 'hb', typ: 'str', gueltig: istISO },
+  rsAn: { p: 'ra', typ: 'bool' },
+  rsVon: { p: 'rv', typ: 'str', gueltig: istISO },
+  rsBis: { p: 'rb', typ: 'str', gueltig: istISO },
+};
 
 // ── Kündigungs-/Sperrfristen-Rechner ────────────────────────────────────────
 
