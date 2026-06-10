@@ -188,16 +188,15 @@ ausgewiesen.
 - [ ] **G4.2 · Geteilte Rahmen pflegen (§10).** Neue Werkzeuge nutzen
       wizard/Dokumentmappe/ui/Tabs/SelectionGrid + Export-Rahmen statt
       Kopien — fehlt ein Rahmen, erst den Rahmen (verhaltensneutral, §6).
-- [ ] **G4.3 · Wachstums-Reglement (`WACHSTUM-REGLEMENT.md`, Repo-Root).**
+- [x] **G4.3 · Wachstums-Reglement (`WACHSTUM-REGLEMENT.md`, Repo-Root).** ✓ 10.6.2026.
       §0/§0a/§10 aus dem laufenden HANDLUNGSPLAN in ein stabiles Dokument
       heben: **Checkliste, die jeder künftige Einstieg besteht** — (1) Dient
       er ermessensfreier Kanzlei-Praxis (G1-klassifiziert)? (2) Mehrwert über
       generische Werkzeuge (§0)? (3) Rahmen vorhanden (§10)? (4) Bibliothek-
       Dossier (§11) + Abnahme-/Export-Pfad geklärt? Steuert den Bau ab
       §0a-Öffnung entlang G1.
-- [ ] **G4.4 · CLAUDE.md §4 anpassen.** Code-Verschmelzung erlaubt **unter**
-      §6-Golden-Protokoll + Regime-Treue; §1 (Korrektheit über allem) und §3
-      (Schichtentrennung) unangetastet.
+- [x] **G4.4 · CLAUDE.md §4 anpassen.** ✓ 10.6.2026: Verschmelzung erlaubt
+      unter §6-Golden-Protokoll + Regime-Treue; §1/§3 unangetastet.
 
 ---
 
