@@ -476,7 +476,12 @@ export function fristQueryLesen(query: string): Partial<AllgFristInput> | null {
     if (!['tage', 'wochen', 'monate', 'jahre'].includes(eRoh)) return null;
     teil.einheit = eRoh as Einheit;
   }
-  if (teil.start === undefined && teil.laenge === undefined && teil.einheit === undefined) return null;
+  // Bug-Check 10.6.2026 (MITTEL): «l» allein genügt NICHT — ZPO-/SchKG-Links
+  // teilen den Parameter «l»; verliert ein solcher Link sein #-Fragment
+  // (Mail-/Messenger-Sanitizer), darf er den Allgemein-Tab nicht partiell
+  // hydratisieren (Toggles wären still AUS). Alle legitimen Erzeuger tragen
+  // s (Teilen-Link) oder e (Mechanik-Preset-Link).
+  if (teil.start === undefined && teil.einheit === undefined) return null;
   // Kanton nur übernehmen, wenn er ein echter Kanton ist (Review A2:
   // ungeprüfter Cast liess Fantasie-Werte ins <select> durchsickern)
   const KANTONE_GUELTIG = new Set(['AG','AI','AR','BE','BL','BS','FR','GE','GL','GR','JU','LU','NE','NW','OW','SG','SH','SO','SZ','TG','TI','UR','VD','VS','ZG','ZH']);

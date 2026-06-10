@@ -274,7 +274,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     // der Vorlage kuendigung-arbeitgeber — bei Gleichstand steht der RECHNER
     // zuoberst (Katalogposition; Logik-Check-Befund 6.6.2026).
     keywords: ['gekündigt', 'Kündigung', 'Kündigungsfrist', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär',
-      'Kündigung erhalten', 'Kündigungsfrist', 'Art. 336c', 'Art. 335c',
+      'Kündigung erhalten', 'Art. 336c', 'Art. 335c',
       // Schreiben-Masken (übernommen, E3)
       'Kündigungsschreiben', 'Beendigungsdatum', 'Freistellung', 'kündigen'],
     related: ['lohnfortzahlung', 'arbeitsvertrag'],

@@ -34,7 +34,7 @@ export const FRISTEN_HAUPTEINSTIEGE: FristenHaupteinstieg[] = [
   { id: 'tagerechner',
     untertitel: 'Allgemein (Vertrag/OR) · Zivilprozess (ZPO) · Betreibung (SchKG) · Rückwärts' },
   { id: 'fristenspiegel',
-    untertitel: 'Ein Ereignis – alle Fristen daraus als Tabelle, mit Kalender-Export' },
+    untertitel: 'Ein Ereignis – die parallel laufenden Fristen daraus als Tabelle, mit Kalender-Export' },
 ];
 
 /** Fach-Direkteinstiege: dieselben Engines wie die Tagerechner-Tabs,
@@ -45,15 +45,15 @@ export const FRISTEN_FACH_DIREKTEINSTIEGE: string[] = ['zpo-fristen', 'schkg-fri
  *  Aussage, Abnahme David offen). */
 export const FRISTEN_EIGENE_REGIMES: FristenRegimeZeile[] = [
   { id: 'verjaehrung',
-    warum: 'mit Unterbrechungs-Kette: Anerkennung, Betreibung oder Klage lassen die Frist neu laufen (Art. 135 ff. OR), relative und absolute Frist parallel' },
+    warum: 'mit Unterbrechungs-Kette: Anerkennung, Betreibung oder Klage lassen die Frist neu laufen (bei Klage ab Abschluss vor der Instanz; Art. 135 ff. OR), relative und absolute Frist parallel' },
   { id: 'kuendigung-sperrfristen',
     warum: 'mit Sperrfristen nach Art. 336c OR: Krankheit, Unfall, Schwangerschaft machen die Kündigung nichtig oder hemmen die laufende Frist' },
   { id: 'mietrecht',
     warum: 'rechnet auf Kündigungstermine (Vertrag → Ortsgebrauch → Gesetz, Art. 266a ff. OR), nicht nur auf Fristlängen – samt Anfechtung und Erstreckung' },
   { id: 'gewaehrleistung',
-    warum: 'zwei getrennte Uhren am selben Mangel: Rügeobliegenheit (Verwirkung – keine Hemmung) und Verjährung (Art. 197 ff. OR)' },
+    warum: 'zwei getrennte Uhren am selben Mangel: Rügeobliegenheit (Verwirkung – keine Hemmung) und Verjährung (Art. 197 ff., 367 ff. OR)' },
   { id: 'erbrecht-fristen',
-    warum: 'eigener Fristen-Katalog je Tatbestand (Ausschlagung, Inventar, Klagefristen – Art. 521 ff. ZGB), je mit eigenem Fristauslöser' },
+    warum: 'eigener Fristen-Katalog je Tatbestand (Ausschlagung, Inventar, Klagefristen – Art. 521, 533, 567 ff. ZGB), je mit eigenem Fristauslöser' },
 ];
 
 /** Einstiegstyp einer Karte der Fristen-Kategorie — null heisst: noch nicht

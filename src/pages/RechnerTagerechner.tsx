@@ -45,7 +45,7 @@ const REGIME_ABZWEIGUNGEN: { warum: string; karte: CalculatorCard }[] = FRISTEN_
 
 export function RechnerTagerechner() {
   const calc = getCalculator('tagerechner')!;
-  const { hash, search } = useLocation();
+  const { hash } = useLocation();
   const navigate = useNavigate();
   const [verfahren, setVerfahren] = useState<Verfahren>(HASH_VERFAHREN[hash] ?? 'allgemein');
   // Hash-Navigation: Sync während des Renderns (React-Muster «adjusting
@@ -56,6 +56,9 @@ export function RechnerTagerechner() {
     if (HASH_VERFAHREN[hash]) setVerfahren(HASH_VERFAHREN[hash]);
   }
   const wechsle = (v: Verfahren) => {
+    // Bug-Check 10.6.2026 (MITTEL): Klick auf den AKTIVEN Tab darf die
+    // Query (und damit hydratisierte Eingaben) nicht verwerfen.
+    if (v === verfahren) return;
     setVerfahren(v);
     // Such-Parameter gehören zum bisherigen Tab — beim manuellen Wechsel
     // fallen sie weg (die Forms hydratisieren ohnehin nur beim Mount).
@@ -70,15 +73,21 @@ export function RechnerTagerechner() {
     wechsle(v);
   };
   // FE-3: EIN Preset-Katalog über alle Regimes (lib/presetIndex.ts) — die
-  // Wahl setzt Regime-Tab UND Parameter (Link-Kodierung der Ziel-Form, §5);
-  // die Form remountet über den search-Key und hydratisiert daraus.
+  // Wahl setzt Regime-Tab UND Parameter (Link-Kodierung der Ziel-Form, §5).
+  // Bug-Check 10.6.2026 (HOCH): Remount NICHT am search-String aufhängen —
+  // der Teilen-Knopf schreibt die Query ebenfalls (replace) und hätte die
+  // Form samt Aktenzeichen/Phase/Hinweis zurückgesetzt; ausserdem blieb die
+  // erneute Wahl DESSELBEN Presets wirkungslos (identischer Key). Stattdessen
+  // eine explizite Remount-Nonce, die nur die Preset-Wahl erhöht.
   const [presetQuery, setPresetQuery] = useState('');
+  const [presetNonce, setPresetNonce] = useState(0);
   const treffer = presetSuche(presetQuery);
   const abzweigungen = presetQuery.trim() === '' ? []
     : REGIME_ABZWEIGUNGEN.filter((a) => sucheTrifft(a.karte, presetQuery));
   const waehlePreset = (e: PresetIndexEintrag) => {
     setPresetQuery('');
     setVerfahren(e.regime);
+    setPresetNonce((n) => n + 1);
     navigate({ search: e.query, hash: e.hash }, { replace: true });
   };
 
@@ -158,19 +167,21 @@ export function RechnerTagerechner() {
               </p>
               <ol className="space-y-1.5 text-body-s text-ink-600 list-decimal pl-5 max-w-reading">
                 <li>
-                  Hat ein <span className="font-medium text-ink-900">Gericht oder die ZPO</span> die
-                  Frist gesetzt (Klage, Stellungnahme, Berufung, Vorschuss)?{' '}
-                  <button type="button" onClick={() => weicheWahl('zpo')}
-                    className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
-                    → Zivilprozess (ZPO)
-                  </button>
-                </li>
-                <li>
-                  Geht es um eine <span className="font-medium text-ink-900">Betreibungshandlung</span> (Zahlungsbefehl,
-                  Rechtsvorschlag, Fortsetzung, Konkursandrohung)?{' '}
+                  Läuft die Frist in einer <span className="font-medium text-ink-900">Betreibungssache</span> (Zahlungsbefehl,
+                  Rechtsvorschlag, Fortsetzung, Konkursandrohung – auch gerichtliche Fristen daraus,
+                  z. B. Rechtsöffnung)?{' '}
                   <button type="button" onClick={() => weicheWahl('schkg')}
                     className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
                     → Betreibung (SchKG)
+                  </button>
+                </li>
+                <li>
+                  Hat sonst ein <span className="font-medium text-ink-900">Zivilgericht oder die
+                  Schlichtungsbehörde</span> die Frist nach ZPO gesetzt (Klage, Stellungnahme,
+                  Berufung, Vorschuss)?{' '}
+                  <button type="button" onClick={() => weicheWahl('zpo')}
+                    className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
+                    → Zivilprozess (ZPO)
                   </button>
                 </li>
                 <li>
@@ -183,6 +194,11 @@ export function RechnerTagerechner() {
                   Ergebnis gelten unverändert.</span>
                 </li>
               </ol>
+              <p className="text-body-s text-ink-500 max-w-reading">
+                <span className="font-medium text-ink-700">Nicht abgebildet:</span> Fristen in
+                Straf- (StPO), Verwaltungs- (VwVG) und Bundesgerichtsverfahren (BGG) folgen
+                eigenen Stillstandsregeln – dieser Rechner deckt sie nicht ab.
+              </p>
             </div>
           )}
           <p className="text-micro text-ink-500">
@@ -191,11 +207,12 @@ export function RechnerTagerechner() {
             {verfahren === 'schkg' && 'Betreibungsferien und Rechtsstillstand (Art. 56 ff. SchKG) – getrennt vom ZPO-Stillstand gerechnet.'}
           </p>
         </div>
-        {/* search-Key: Preset-Wahl ändert die Query → Remount → die Form
-            hydratisiert aus der URL (dieselbe Mechanik wie Prefill-Brücken). */}
-        {verfahren === 'allgemein' && <AllgemeineFristForm key={search} />}
-        {verfahren === 'zpo' && <ZpoFristenForm key={search} />}
-        {verfahren === 'schkg' && <SchkgFristenForm key={search} />}
+        {/* Nonce-Key: NUR die Preset-Wahl erzwingt einen Remount (die Form
+            hydratisiert dann aus der frisch gesetzten URL — dieselbe Mechanik
+            wie die Prefill-Brücken); Teilen-Klicks remounten nicht. */}
+        {verfahren === 'allgemein' && <AllgemeineFristForm key={presetNonce} />}
+        {verfahren === 'zpo' && <ZpoFristenForm key={presetNonce} />}
+        {verfahren === 'schkg' && <SchkgFristenForm key={presetNonce} />}
       </div>
     </div>
   );

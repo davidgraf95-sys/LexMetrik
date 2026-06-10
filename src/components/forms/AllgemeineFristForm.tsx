@@ -79,9 +79,13 @@ export function AllgemeineFristForm() {
   });
   // P1.2 Zustell-Helfer (rein informativ)
   const [zustellArt, setZustellArt] = useState<ZustellArt | ''>('');
-  // gewählter Fach-Preset-Kontext (Familienrecht & Status, 10.6.2026)
-  const [famHinweis, setFamHinweis] = useState<string | null>(
-    famAusLink ? `${famAusLink.norm}: ${famAusLink.info}` : null);
+  // gewählter Fach-Preset-Kontext (Familienrecht & Status, 10.6.2026).
+  // Bug-Check 10.6.2026 (NIEDRIG): Hinweis nur, solange die Form-Werte dem
+  // Preset noch entsprechen (Muster ZPO-presetPasst) — sonst unterdrückte
+  // ein verlassener Fach-Preset dauerhaft das Verjährungs-Signal (FE-4).
+  const [famPreset, setFamPreset] = useState(famAusLink);
+  const famHinweis = famPreset && form.laenge === famPreset.laenge && form.einheit === famPreset.einheit
+    ? `${famPreset.norm}: ${famPreset.info}` : null;
   const [zustellDatum, setZustellDatum] = useState('');
 
   const set = <K extends keyof State>(k: K, v: State[K]) => setForm((f) => ({ ...f, [k]: v }));
@@ -207,7 +211,7 @@ export function AllgemeineFristForm() {
             <span className="lc-overline text-ink-500 normal-case">Familienrecht &amp; Status:</span>
             {FAM_STATUS_PRESETS.map((p) => (
               <button type="button" key={p.label}
-                onClick={() => { setForm((f) => ({ ...f, laenge: p.laenge, einheit: p.einheit, wochenendeVerschieben: true, feiertageVerschieben: true })); setFamHinweis(`${p.norm}: ${p.info}`); }}
+                onClick={() => { setForm((f) => ({ ...f, laenge: p.laenge, einheit: p.einheit, wochenendeVerschieben: true, feiertageVerschieben: true })); setFamPreset(p); }}
                 title={`${p.norm} — ${p.info}`} className="lc-chip hover:bg-brass-200 transition-colors">{p.label}</button>
             ))}
           </div>

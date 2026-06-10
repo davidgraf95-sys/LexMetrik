@@ -98,6 +98,13 @@ describe('FE-3: fristQueryLesen — Teil-Links (deklarierte Erweiterung)', () =>
     expect(fristQueryLesen('')).toBeNull();
     expect(fristQueryLesen('q=foo&kategorie=fristen')).toBeNull();
   });
+  it('«l» allein hydratisiert NICHT (Bug-Check: fragment-gestrippte ZPO-/SchKG-Links)', () => {
+    expect(fristQueryLesen('l=30')).toBeNull();
+    // ZPO-Index-Query ohne #zpo-Fragment: u/v/n/p sind fristQuery-fremd, l darf nicht greifen
+    expect(fristQueryLesen('u=tage&l=30&v=ordentlich&n=gesetzlich&p=berufung')).toBeNull();
+    // SchKG-Index-Query ohne #schkg-Fragment analog
+    expect(fristQueryLesen('u=tage&l=10&m=schkg_betreibungsferien&n=frist&ph=einleitung&p=rechtsvorschlag')).toBeNull();
+  });
 });
 
 describe('FE-3: Suche (katalogSuche-Muster)', () => {

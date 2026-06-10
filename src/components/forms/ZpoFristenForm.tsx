@@ -85,8 +85,19 @@ export function ZpoFristenForm() {
   }));
   // FE-3: Preset-Index-Links tragen den Preset-Schlüssel — Phase, Auswahl
   // und Hinweis werden wiederhergestellt (die Fach-Parameter kommen wie
-  // bisher einzeln aus dem Link, §5: eine Kodierung).
-  const linkPreset = PRESETS.find((p) => p.key === ausLink.presetKey);
+  // bisher einzeln aus dem Link, §5: eine Kodierung). Bug-Check 10.6.2026
+  // (NIEDRIG): nur übernehmen, wenn die Link-Parameter dem Preset wirklich
+  // entsprechen — hand-editierte Links (p=berufung&l=10) zeigten sonst
+  // Berufungs-Hinweis neben abweichender Rechnung.
+  const linkPreset = (() => {
+    const p = PRESETS.find((x) => x.key === ausLink.presetKey);
+    if (!p) return undefined;
+    const passt = ausLink.einheit === p.einheit
+      && ausLink.verfahren === p.verfahren
+      && ausLink.fristnatur === p.fristnatur
+      && (p.laenge == null ? ausLink.laenge === undefined : ausLink.laenge === p.laenge);
+    return passt ? p : undefined;
+  })();
   const [phase, setPhase] = useState<ZpoPhase>(linkPreset?.phase ?? 'rechtsmittel');
   const [presetKey, setPresetKey] = useState(linkPreset?.key ?? '');
   const [presetHinweis, setPresetHinweis] = useState<string | null>(linkPreset?.hinweis ?? null);

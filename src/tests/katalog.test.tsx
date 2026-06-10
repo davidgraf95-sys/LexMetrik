@@ -83,7 +83,7 @@ describe('Register: Vier-Kategorien-DECKBLATT mit Klick-Ansicht (Präzisierung D
     // EIN Einstieg: Tagerechner + Fristenspiegel zuoberst, mit Regime-Untertiteln
     expect(html).toContain('Fristen berechnen');
     expect(html).toContain('Allgemein (Vertrag/OR) · Zivilprozess (ZPO) · Betreibung (SchKG) · Rückwärts');
-    expect(html).toContain('Ein Ereignis – alle Fristen daraus');
+    expect(html).toContain('Ein Ereignis – die parallel laufenden Fristen daraus');
     // Doppelpfad gewollt, aber gekennzeichnet
     expect(html).toContain('Fach-Direkteinstieg');
     expect(html).toContain('href="/rechner/zpo-fristen"');
