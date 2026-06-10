@@ -1,91 +1,63 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { RECHTSGEBIETE, RECHTSGEBIET_SEKTIONEN, istVerfuegbar, istAktiv, type CalculatorCard } from '../lib/startseiteConfig';
-import { RECHTSBEREICH_GRUPPEN } from '../lib/rechtsbereichGruppen';
+import { RECHTSGEBIETE, istVerfuegbar, istAktiv, type CalculatorCard } from '../lib/startseiteConfig';
+import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
 import { haeufigGebrauchtKarten } from '../lib/haeufigGebraucht';
 import { kartePasst, sucheRang } from '../lib/katalogSuche';
-import { RechnerKarte } from './RechnerKarte';
 import { sansAmp } from './typografie';
 
-// Katalog der Hauptseite «/» (eine Hauptseite seit 7.6.2026).
-// Anatomie seit 6.6.2026 (Auftrag David, «Kachel-Katalog»): Die Rechtsgebiete
-// erscheinen als KOMPAKTE KACHELN unter ihren juristischen Obergruppen; ein
-// Klick öffnet das Gebiet als volle Breite direkt unter der Kachel-Zeile
-// (die übrigen Kacheln rutschen nach unten), ein zweiter Klick schliesst.
-// Eine aktive Suche (?q=) ersetzt das Raster durch eine flache,
-// deterministisch gerankte Trefferliste (Titel > Keyword exakt > Keyword >
-// Norm > Gebiet).
-//
-// Radikal-Verschlankung 7.6.2026 (Auftrag David «mache das alles weg»):
-// Das REGISTER ist die ganze Seite — Tabs (Verfügbar/Gesamt), Typ-Filter,
-// Chip-Einstiege, «Zuletzt verwendet» und das seiteneigene Suchfeld sind
-// ENTFERNT; die Suche lebt im Header (HeaderSuche schreibt ?q=). Gezeigt
-// wird immer der GESAMTE Katalog — das ehrliche Mengenbild tragen die
-// Kachel-Zähler («N verfügbar · M in Vorbereitung», §8); Alt-Parameter
-// ?ansicht= wird ignoriert und bleibt harmlos.
+// Katalog der Hauptseite «/» — NEU STRUKTURIERT (Auftrag David 10.6.2026):
+// Vier OBERKATEGORIEN als Primärachse (Zuständigkeiten · Fristen ·
+// Gebühren & Beträge · Vorlagen), römisch nummerierte Registerteile wie die
+// Hauptabschnitte eines Kanzlei-Handbuchs. Praxistauglichkeits-Leitsätze:
+//  1. AUFGABENDENKEN: Die Kanzlei kommt mit einer Aufgabe («wer ist
+//     zuständig?», «wann läuft die Frist ab?», «was kostet es?», «ich
+//     brauche ein Schreiben») — die vier Einstiegskacheln zuoberst sind
+//     genau diese Fragen und springen zur Sektion.
+//  2. KLICKTIEFE 1: Verfügbare Werkzeuge stehen DIREKT als Link-Zeilen in
+//     ihrer Kategorie (vorher Gebiets-Kachel → Panel → Karte); das
+//     Rechtsgebiet bleibt als stille Zwischenüberschrift erhalten.
+//  3. EHRLICH OHNE BALLAST (§8): Geplante Karten je Kategorie hinter einer
+//     kompakten «In Vorbereitung (N)»-Aufklappzeile; Entwurf-Badges an
+//     jeder Zeile.
+//  4. POWER-PFADE UNVERÄNDERT: «Häufig gebraucht» (Direktlinks) und die
+//     Header-Suche (?q=, gerankte Trefferliste — neu mit Kategorie-Label).
+// Die Suche-Mechanik (lib/katalogSuche.ts, Goldliste) ist unverändert (§5).
 
-// ─── Karten-Sortierung innerhalb eines Gebiets: verfügbare vor geplanten ────
+const KATEGORIE_VON = new Map<string, OberkategorieId>();
+const kategorieVon = (k: CalculatorCard): OberkategorieId => {
+  if (!KATEGORIE_VON.has(k.id)) KATEGORIE_VON.set(k.id, kategorieFuer(k) ?? 'vorlagen');
+  return KATEGORIE_VON.get(k.id)!;
+};
+const KATEGORIE_TITEL = new Map(OBERKATEGORIEN.map((k) => [k.id, k.titel]));
 
-function sortiereKarten(karten: CalculatorCard[]): CalculatorCard[] {
-  const hatAktiv = new Set(karten.filter((k) => k.status !== 'geplant').map((k) => k.rechtsgebiet));
-  const gebietsRang = (g: string) => {
-    const idx = RECHTSGEBIETE.indexOf(g);
-    return (hatAktiv.has(g) ? 0 : RECHTSGEBIETE.length + 1) + (idx === -1 ? RECHTSGEBIETE.length : idx);
-  };
-  return [...karten].sort((a, b) =>
-    gebietsRang(a.rechtsgebiet) - gebietsRang(b.rechtsgebiet) ||
-    Number(a.status === 'geplant') - Number(b.status === 'geplant'));
-}
+// ─── Einstiegskachel: eine der vier Aufgaben-Fragen, springt zur Sektion ────
 
-// ─── Gebiet-Kachel: kleines Viereck mit Inhaltsangabe ───────────────────────
-// «Was ist drin?» konkret: die verfügbaren Werkzeug-Titel (geklemmt), sonst
-// die Gebiets-Lede; der Zähler trägt das ehrliche Mengenbild (§8).
-// Klick → die Kachel weicht ihrem Panel an Ort und Stelle; die ÜBRIGEN
-// Kacheln bleiben sichtbar und rutschen nach unten (Wunsch David 6.6.2026).
-// Eigener view-transition-name je Kachel: der Browser animiert das
-// Nachrutschen jedes Vierecks einzeln (View Transitions; ohne Support hart).
-
-function GebietKachel({ gebiet, karten, onOeffnen }: {
-  gebiet: { name: string; id: string; lede: string };
-  karten: CalculatorCard[];
-  onOeffnen: () => void;
-}) {
-  const verf = karten.filter(istVerfuegbar);
-  const geplant = karten.length - verf.length;
-  const inhalt = verf.length > 0 ? verf.map((k) => k.title).join(' · ') : gebiet.lede;
-
+function KategorieEinstieg({ kat, karten }: { kat: Oberkategorie; karten: CalculatorCard[] }) {
+  const verf = karten.filter(istVerfuegbar).length;
+  const geplant = karten.length - verf;
   return (
-    <button type="button" onClick={onOeffnen} id={`kachel-${gebiet.id}`}
-      style={{ viewTransitionName: `kachel-${gebiet.id}` }}
-      className="lc-card text-left p-5 flex flex-col gap-2 min-w-0 scroll-mt-28 bg-surface transition-all motion-reduce:transition-none motion-reduce:transform-none cursor-pointer hover:shadow-lg hover:-translate-y-0.5">
-      <span className="flex items-start justify-between gap-2">
-        <span className="font-sans font-semibold text-ink-900 text-body-l leading-snug text-balance">{sansAmp(gebiet.name)}</span>
-        <span aria-hidden className="text-brass-700 leading-none mt-1">▸</span>
+    <a href={`#register-${kat.id}`}
+      className="lc-card text-left p-4 sm:p-5 flex flex-col gap-1.5 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
+      <span className="flex items-baseline gap-2.5">
+        <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{kat.numeral}</span>
+        <span className="font-sans font-semibold text-ink-900 text-body-l leading-snug">{kat.titel}</span>
       </span>
       <span className="lc-overline text-ink-500">
-        {verf.length > 0 && <><span className="num text-brass-700">{verf.length}</span> verfügbar</>}
-        {verf.length > 0 && geplant > 0 && ' · '}
-        {geplant > 0 && <><span className="num">{geplant}</span> in Vorbereitung</>}
+        <span className="num text-brass-700">{verf}</span> verfügbar
+        {geplant > 0 && <> · <span className="num">{geplant}</span> in Vorbereitung</>}
       </span>
-      {/* Inhaltsangabe auf EINE Zeile geklemmt (U4): einheitliche Kachel-
-          höhe, scanbare Spalten; der Volltext steht im Panel. */}
-      <span className="text-body-s text-ink-500 leading-relaxed line-clamp-1">{inhalt}</span>
-    </button>
+      <span className="text-body-s text-ink-500 leading-relaxed line-clamp-1">{kat.lede}</span>
+    </a>
   );
 }
 
-// ─── Werkzeug-Kachel: Direktlink der Rubrik «Häufig gebraucht» ──────────────
-// Gleiche Kachel-Anatomie wie die Gebiete (ruhiges Register), aber der Klick
-// ÖFFNET das Werkzeug direkt (kein Panel); Status ehrlich als Badge (§8).
+// ─── Werkzeug-Zeile: Direktlink (Klicktiefe 1); Status ehrlich als Badge ────
 
-function WerkzeugKachel({ k }: { k: CalculatorCard }) {
-  // Übersichtlichkeits-Runde 7.6.2026 (Frage David «noch übersichtlicher?»):
-  // Direktlink PUR — Titel + Pfeil auf einer Zeile statt Voll-Karte mit
-  // Beschrieb/CTA (halbiert die Rubrik). Status-Badge bleibt (§8); der
-  // Beschrieb steht auf der Gebiets-Karte und der Detailseite.
-  return (
-    <Link to={k.href!} id={`werkzeug-${k.id}`}
-      className="lc-card text-left px-4 py-3 flex items-center justify-between gap-3 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
+function WerkzeugZeile({ k }: { k: CalculatorCard }) {
+  const aktiv = istAktiv(k.status) && !!k.href;
+  const inhalt = (
+    <>
       <span className="font-sans font-medium text-ink-900 text-body-s leading-snug min-w-0">{sansAmp(k.title)}</span>
       <span className="flex items-center gap-2 shrink-0">
         {k.status === 'entwurf' && (
@@ -93,58 +65,82 @@ function WerkzeugKachel({ k }: { k: CalculatorCard }) {
         )}
         <span aria-hidden className="text-brass-700 leading-none">→</span>
       </span>
-    </Link>
+    </>
+  );
+  const klasse = 'lc-card text-left px-4 py-3 flex items-center justify-between gap-3 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none';
+  return aktiv ? (
+    <Link to={k.href!} className={`${klasse} hover:shadow-lg hover:-translate-y-0.5`}>{inhalt}</Link>
+  ) : (
+    <div className={klasse}>{inhalt}</div>
   );
 }
 
-// ─── Gebiet-Panel: volle Breite an der Stelle der angeklickten Kachel ───────
-// Untergruppen «Rechner» und «Vorlagen» wie bisher (feste Auftrags-Ordnung);
-// «Schliessen» (oder Zurück-Taste, ?gebiet=) stellt die Kachel wieder her.
+// ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
-function GebietPanel({ gebiet, karten, onSchliessen }: {
-  gebiet: { name: string; id: string; lede: string };
-  karten: CalculatorCard[];
-  onSchliessen: () => void;
-}) {
-  const gruppen = ([
-    { id: 'rechner', titel: 'Rechner', karten: karten.filter((k) => k.modus === 'rechner') },
-    { id: 'vorlagen', titel: 'Vorlagen', karten: karten.filter((k) => k.modus === 'vorlage') },
-  ] as const).filter((g) => g.karten.length > 0);
-  if (gruppen.length === 0) return null;
+function KategorieSektion({ kat, karten }: { kat: Oberkategorie; karten: CalculatorCard[] }) {
+  const verfuegbar = karten.filter(istVerfuegbar);
+  const geplant = karten.filter((k) => !istVerfuegbar(k));
+  // Rechtsgebiet als zweite Ebene in fester Auftrags-Reihenfolge; Gebiete
+  // ohne verfügbares Werkzeug erscheinen nur in der Geplant-Zeile.
+  const gruppen = RECHTSGEBIETE
+    .map((g) => ({ g, karten: verfuegbar.filter((k) => k.rechtsgebiet === g) }))
+    .filter((x) => x.karten.length > 0);
+  const uebrige = verfuegbar.filter((k) => !RECHTSGEBIETE.includes(k.rechtsgebiet));
 
   return (
-    <section id={`panel-${gebiet.id}`} aria-label={gebiet.name} tabIndex={-1}
-      style={{ viewTransitionName: 'gebiet-panel' }}
-      className="lc-reveal-panel col-span-full scroll-mt-28 bg-surface rounded-2xl border border-line p-6 sm:p-8 space-y-6 focus:outline-none">
-      <div className="flex items-start justify-between gap-4">
-        <div className="space-y-1">
-          <h3 className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{sansAmp(gebiet.name)}</h3>
-          <p className="text-body-s text-ink-500 max-w-reading">{gebiet.lede}</p>
+    <section id={`register-${kat.id}`} aria-labelledby={`register-titel-${kat.id}`} className="space-y-4 scroll-mt-28">
+      <div className="space-y-1.5 pt-2">
+        <div className="flex items-baseline gap-4">
+          <h2 id={`register-titel-${kat.id}`} className="flex items-baseline gap-2.5 whitespace-nowrap">
+            <span aria-hidden className="font-display text-h3 leading-none text-brass-700">{kat.numeral}</span>
+            <span className="font-sans font-semibold text-ink-900 text-h3 tracking-tight">{kat.titel}</span>
+          </h2>
+          <span aria-hidden className="flex-1 h-px bg-line" />
+          <span className="lc-overline num text-ink-500 whitespace-nowrap">
+            <span className="text-brass-700">{verfuegbar.length}</span> verfügbar
+          </span>
         </div>
-        <button type="button" onClick={onSchliessen}
-          className="shrink-0 text-body-s font-medium text-ink-500 hover:text-brass-700 transition-colors">
-          Schliessen <span aria-hidden>✕</span>
-        </button>
+        <p className="text-body-s text-ink-500 max-w-reading">{kat.lede}</p>
       </div>
-      {gruppen.map((g) => (
-        <div key={g.id}>
-          <div className="flex items-center gap-4 mb-4">
-            <h4 className="lc-overline text-ink-700">{g.titel}</h4>
-            <div className="flex-1 h-px bg-line" />
-            <span className="lc-overline num text-ink-500">{g.karten.length}</span>
-          </div>
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(340px,100%),1fr))] gap-6">
-            {sortiereKarten(g.karten).map((c) => (
-              <RechnerKarte key={c.id} card={c} headingLevel="h5" />
-            ))}
+
+      {gruppen.map((x) => (
+        <div key={x.g} className="space-y-2">
+          <h3 className="lc-overline text-ink-700">{sansAmp(x.g)}</h3>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
+            {x.karten.map((k) => <WerkzeugZeile key={k.id} k={k} />)}
           </div>
         </div>
       ))}
+      {uebrige.length > 0 && (
+        <div className="space-y-2">
+          <h3 className="lc-overline text-ink-700">Übergreifend</h3>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
+            {uebrige.map((k) => <WerkzeugZeile key={k.id} k={k} />)}
+          </div>
+        </div>
+      )}
+
+      {geplant.length > 0 && (
+        <details className="group">
+          <summary className="cursor-pointer list-none text-body-s text-ink-500 hover:text-brass-700 transition-colors select-none">
+            <span aria-hidden className="inline-block mr-1.5 transition-transform group-open:rotate-90">▸</span>
+            In Vorbereitung <span className="num">({geplant.length})</span>
+          </summary>
+          <p className="text-body-s text-ink-500 leading-relaxed pt-2 pl-4">
+            {geplant.map((k, i) => (
+              <span key={k.id}>
+                {i > 0 && <span aria-hidden> · </span>}
+                {sansAmp(k.title)}
+              </span>
+            ))}
+          </p>
+        </details>
+      )}
     </section>
   );
 }
 
-// ─── Treffer-Zeile: kompakte Zeile der flachen Suchergebnis-Liste ───────────
+// ─── Treffer-Zeile der flachen Suchergebnis-Liste (mit Kategorie-Label) ─────
 
 function TrefferZeile({ k }: { k: CalculatorCard }) {
   const aktiv = istAktiv(k.status) && !!k.href;
@@ -152,7 +148,11 @@ function TrefferZeile({ k }: { k: CalculatorCard }) {
     <>
       <span className="min-w-0 flex-1">
         <span className="block font-sans font-medium text-ink-900 text-body-l leading-snug">{sansAmp(k.title)}</span>
-        <span className="block text-body-s text-ink-500 truncate">{k.rechtsgebiet} · {k.modus === 'vorlage' ? 'Vorlage' : 'Rechner'}</span>
+        {/* EIN Template-Literal: SSR setzt sonst Kommentar-Marker zwischen
+            die Segmente (Lektion 7.6.2026) */}
+        <span className="block text-body-s text-ink-500 truncate">
+          {`${KATEGORIE_TITEL.get(kategorieVon(k))} · ${k.rechtsgebiet}`}
+        </span>
       </span>
       <span className="flex items-center gap-3 shrink-0">
         {k.status === 'entwurf' && <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>}
@@ -172,27 +172,12 @@ function TrefferZeile({ k }: { k: CalculatorCard }) {
   );
 }
 
-// ─── Katalog: das Register (Kacheln/Panels) + Trefferliste bei ?q= ──────────
+// ─── Katalog: vier Registerteile + Trefferliste bei ?q= ─────────────────────
 
 export function Katalog({ karten }: { karten: CalculatorCard[] }) {
-  // ── URL-Zustand: offenes Gebiet + Suche (teilbar) ──
   const [searchParams, setSearchParams] = useSearchParams();
-  const offenGebiet = searchParams.get('gebiet');
-  const patchParams = (patch: Record<string, string | null>, viewTransition = false) => {
-    const p = new URLSearchParams(searchParams);
-    for (const [key, wert] of Object.entries(patch)) {
-      if (wert === null) p.delete(key); else p.set(key, wert);
-    }
-    // viewTransition: Raster ⇄ Fokus-Panel weich überblenden (View
-    // Transitions API via Router; Browser ohne Support wechseln hart,
-    // prefers-reduced-motion wird von der globalen Regel abgedeckt).
-    setSearchParams(p, viewTransition ? { viewTransition: true } : undefined);
-  };
-  const toggleGebiet = (id: string) =>
-    patchParams({ gebiet: offenGebiet === id ? null : id }, true);
 
-  // Suche kommt aus der URL (?q=, geschrieben von der Header-Suche);
-  // Zurücksetzen löscht nur den Parameter.
+  // Suche kommt aus der URL (?q=, geschrieben von der Header-Suche).
   const suche = searchParams.get('q') ?? '';
   const sucheZuruecksetzen = () => {
     const p = new URLSearchParams(searchParams);
@@ -200,52 +185,30 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
     setSearchParams(p, { replace: true });
   };
 
-  // Fokus-Verwaltung des Kachel↔Panel-Tauschs (Deploy-Bug-Check 7.6.2026,
-  // MITTEL/a11y): das fokussierte Element verschwindet beim Öffnen wie beim
-  // Schliessen aus dem DOM, der Fokus fiel auf <body>. Beim Öffnen erhält
-  // das Panel den Fokus (tabIndex -1), beim Schliessen wieder die Kachel.
-  const vorherOffen = useRef<string | null>(null);
+  // Link-Erbe: Alte ?gebiet=-Links (Kachel/Panel-Register bis 10.6.2026)
+  // springen zur ersten Kategorie, die Karten dieses Gebiets führt — der
+  // Parameter bleibt harmlos in der URL (wie ?ansicht=).
+  const altGebiet = searchParams.get('gebiet');
   useEffect(() => {
-    const vorher = vorherOffen.current;
-    vorherOffen.current = offenGebiet;
-    if (offenGebiet) {
-      document.getElementById(`panel-${offenGebiet}`)?.focus({ preventScroll: true });
-    } else if (vorher) {
-      document.getElementById(`kachel-${vorher}`)?.focus({ preventScroll: true });
-    }
-  }, [offenGebiet]);
+    if (!altGebiet) return;
+    const treffer = karten.find((k) => k.rechtsgebiet.toLowerCase().includes(altGebiet) || altGebiet === k.rechtsgebiet);
+    const kat = treffer ? kategorieVon(treffer) : null;
+    if (kat) document.getElementById(`register-${kat}`)?.scrollIntoView();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- nur beim Mount (Link-Erbe)
+  }, []);
 
   const q = suche.trim();
-  // Treffer-Semantik lebt in lib/katalogSuche.ts (Etappe 0.1) — dieselbe
-  // Logik, gegen die auch die Suchbegriff-Goldliste testet; die früheren
-  // Pill-Filter sind entfernt (leere Mengen).
   const passt = (k: CalculatorCard) =>
     kartePasst(k, { gebiete: new Set<string>(), bereiche: new Set<string>(), arten: new Set<string>(), nurVerfuegbar: false, suche });
   const treffer = karten.filter(passt);
-  // Rang je Karte EINMAL berechnen, dann sortieren (/simplify 7.6.2026:
-  // der Comparator rief sucheRang zuvor O(n log n)-fach neu auf).
   const trefferSortiert = q === '' ? treffer : treffer
     .map((k) => [k, sucheRang(k, suche) ?? 9] as const)
     .sort((a, b) => a[1] - b[1])
     .map(([k]) => k);
 
-  // Rechtsgebiete in FESTER Auftrags-Reihenfolge (RECHTSGEBIETE pur), als
-  // Kacheln unter ihren Obergruppen; leere Gebiete/Gruppen entfallen.
-  const gebietSichtbar = [...RECHTSGEBIET_SEKTIONEN]
-    .sort((a, b) => RECHTSGEBIETE.indexOf(a.name) - RECHTSGEBIETE.indexOf(b.name))
-    .map((g) => ({ g, karten: karten.filter((k) => k.rechtsgebiet === g.name) }))
+  const proKategorie = OBERKATEGORIEN
+    .map((kat) => ({ kat, karten: karten.filter((k) => kategorieVon(k) === kat.id) }))
     .filter((x) => x.karten.length > 0);
-  // Übersichtlichkeits-Runde 7.6.2026: Gebiete OHNE ein einziges verfügbares
-  // Werkzeug stehen nicht mehr als gleichwertige Kacheln im Raster (ehrlich,
-  // aber raumgreifend «0 verfügbar»), sondern als EINE kompakte Zeile am
-  // Register-Ende — anklickbar (Panel + ?gebiet=-Permalinks funktionieren
-  // weiter), §8-ehrlich mit Zähler.
-  const mitVerfuegbaren = gebietSichtbar.filter((x) => x.karten.some(istVerfuegbar));
-  const nurGeplant = gebietSichtbar.filter((x) => !x.karten.some(istVerfuegbar));
-  const sektionFuer = new Map(mitVerfuegbaren.map((x) => [x.g.name, x]));
-  const gruppenSichtbar = RECHTSBEREICH_GRUPPEN
-    .map((gr) => ({ gr, sektionen: gr.gebiete.map((n) => sektionFuer.get(n)).filter((x): x is NonNullable<typeof x> => !!x) }))
-    .filter((x) => x.sektionen.length > 0);
 
   return (
     <div className="space-y-8">
@@ -281,73 +244,28 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
           </section>
         )
       ) : (
-        /* Kachel-Katalog (Auftrag David 6.6.2026, präzisiert): Obergruppen
-           als ruhige Trenner, darunter die Gebiets-Kacheln. Die angeklickte
-           Kachel weicht ihrem Panel an Ort und Stelle (col-span-full);
-           die ÜBRIGEN Kacheln bleiben sichtbar und rutschen nach unten —
-           animiert über je einen eigenen view-transition-name. */
         <>
-        {/* Rubrik «Häufig gebraucht» an der Register-Spitze (Auftrag David
-            7.6.2026): die fachlich wichtigsten Werkzeuge als Direktlinks —
-            Übergreifend wanderte dafür ans Gruppen-Ende. */}
+        {/* Die vier Aufgaben-Einstiege (Auftrag David 10.6.2026) */}
+        <nav aria-label="Oberkategorien" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {proKategorie.map((x) => <KategorieEinstieg key={x.kat.id} kat={x.kat} karten={x.karten} />)}
+        </nav>
+
+        {/* Rubrik «Häufig gebraucht» (Auftrag David 7.6.2026) — der schnellste
+            Pfad für tägliche Nutzer bleibt direkt unter den Einstiegen. */}
         {haeufigGebrauchtKarten().length > 0 && (
           <section aria-labelledby="gruppe-haeufig" className="space-y-4">
             <div className="flex items-center gap-4 pt-1">
               <h2 id="gruppe-haeufig" className="lc-overline text-ink-700 whitespace-nowrap">Häufig gebraucht</h2>
               <span aria-hidden className="flex-1 h-px bg-line" />
             </div>
-            {/* Breitere Spalten als das Gebiets-Raster: einzeilige Titel
-                sollen nicht kappen (Übersichtlichkeits-Runde 7.6.2026). */}
             <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
-              {haeufigGebrauchtKarten().map((k) => <WerkzeugKachel key={k.id} k={k} />)}
+              {haeufigGebrauchtKarten().map((k) => <WerkzeugZeile key={k.id} k={k} />)}
             </div>
           </section>
         )}
-        {gruppenSichtbar.map((x) => (
-          <section key={x.gr.id} aria-labelledby={`gruppe-${x.gr.id}`} className="space-y-4">
-            {/* Obergruppe als STILLE Overline (U4): das Register trägt die
-                Hierarchie typografisch, nicht mit fünf Linealen. */}
-            <div className="flex items-center gap-4 pt-1">
-              <h2 id={`gruppe-${x.gr.id}`} className="lc-overline text-ink-700 whitespace-nowrap">
-                {sansAmp(x.gr.label)}
-              </h2>
-              <span aria-hidden className="flex-1 h-px bg-line" />
-            </div>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(min(240px,100%),1fr))] gap-4">
-              {x.sektionen.map((sx) => (
-                offenGebiet === sx.g.id ? (
-                  <GebietPanel key={sx.g.id} gebiet={sx.g} karten={sx.karten}
-                    onSchliessen={() => toggleGebiet(sx.g.id)} />
-                ) : (
-                  <GebietKachel key={sx.g.id} gebiet={sx.g} karten={sx.karten}
-                    onOeffnen={() => toggleGebiet(sx.g.id)} />
-                )
-              ))}
-            </div>
-          </section>
-        ))}
-        {nurGeplant.length > 0 && (
-          <section aria-label="Rechtsgebiete in Vorbereitung" className="space-y-4">
-            {/* Geöffnetes Panel eines Nur-geplant-Gebiets (alte ?gebiet=-
-                Permalinks!) rendert hier — sonst wäre es unerreichbar. */}
-            {nurGeplant.filter((x) => offenGebiet === x.g.id).map((x) => (
-              <GebietPanel key={x.g.id} gebiet={x.g} karten={x.karten}
-                onSchliessen={() => toggleGebiet(x.g.id)} />
-            ))}
-            <p className="text-body-s text-ink-500 leading-relaxed">
-              <span className="lc-overline mr-3">In Vorbereitung</span>
-              {nurGeplant.map((x, i) => (
-                <span key={x.g.id}>
-                  {i > 0 && <span aria-hidden> · </span>}
-                  <button type="button" onClick={() => toggleGebiet(x.g.id)}
-                    className="text-ink-600 hover:text-brass-700 transition-colors">
-                    {sansAmp(x.g.name)}{' '}<span className="num">({x.karten.length})</span>
-                  </button>
-                </span>
-              ))}
-            </p>
-          </section>
-        )}
+
+        {/* Die vier Registerteile */}
+        {proKategorie.map((x) => <KategorieSektion key={x.kat.id} kat={x.kat} karten={x.karten} />)}
         </>
       )}
     </div>

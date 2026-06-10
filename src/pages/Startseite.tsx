@@ -27,7 +27,7 @@ export function Startseite() {
               auslaufendem Messing-Akzent unter der Overline. */}
           <div className="scale-rule max-w-[280px] !mt-2.5" aria-hidden />
           <h1 className="font-display font-semibold text-ink-900 text-h2 leading-tight">
-            Fristen berechnen. Beträge beziffern. Rechtsdokumente aufsetzen.
+            Zuständigkeit klären. Fristen berechnen. Gebühren beziffern. Dokumente aufsetzen.
           </h1>
           <p className="text-body-l text-ink-600 leading-relaxed max-w-reading">
             Fristen, Beträge und Dokumente nach festen Regeln – ohne Sprachmodell,

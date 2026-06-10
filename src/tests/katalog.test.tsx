@@ -40,87 +40,77 @@ const headerHtml = (url: string) =>
     </MemoryRouter>,
   );
 
-describe('Register auf der Hauptseite: Kachel-Raster ohne Steuer-Apparat (Radikal-Verschlankung 7.6.2026)', () => {
-  it('Default: GESAMTER Katalog als Gebiets-KACHELN mit ehrlichen Zählern; kein Tab-/Filter-/Chip-Apparat', () => {
+describe('Register: VIER Oberkategorien (Auftrag David 10.6.2026 — deklarierte Test-Anpassung, §6 Ziff. 3)', () => {
+  it('Default: vier Registerteile I–IV mit Einstiegs-Navigation, Direktlink-Zeilen und ehrlichen Zählern; kein Kachel/Panel-Apparat', () => {
     const html = seiteHtml('/');
-    // Gruppen mit VERFÜGBAREM sichtbar (&-Labels via sansAmp → Teilstrings)
-    expect(html).toContain('Zivilrecht (materiell)');
-    expect(html).toContain('Zivilprozess');
-    expect(html).toContain('Vollstreckung');
-    // Übersichtlichkeits-Runde 7.6.2026 (deklariert, Frage David «noch
-    // übersichtlicher?»): Gebiete OHNE verfügbares Werkzeug stehen nicht
-    // mehr als Kacheln im Raster — ihre Obergruppe (Öffentliches Recht)
-    // entfällt ganz; die Gebiete bleiben in der kompakten, anklickbaren
-    // «In Vorbereitung»-Zeile gelistet (§8-ehrlich mit Zähler).
-    expect(html).not.toContain('Öffentliches Recht');
-    expect(html).toContain('aria-label="Rechtsgebiete in Vorbereitung"');
-    expect(html).toContain('Verwaltungsrecht');
-    expect(html).toContain('Steuerrecht');
-    expect(html).toContain('Strafrecht');
-    // Raster-Ansicht: kein Panel offen — keine Karten, kein Karten-Badge
-    // («In Vorbereitung»-Badge der Einzelkarte = lc-badge-soft; der gleich-
-    // lautende Zeilen-Titel ist neu gewollt).
-    expect(html).not.toContain('id="panel-');
-    expect(html).not.toContain('lc-badge-soft');
-    // Kachel trägt Inhaltsangabe + ehrliches Mengenbild (voller Katalog, §8)
-    expect(html).toContain('id="kachel-arbeit"');
+    // Die vier Aufgaben-Einstiege (Navigation) + Sektionen
+    expect(html).toContain('aria-label="Oberkategorien"');
+    for (const id of ['zustaendigkeiten', 'fristen', 'gebuehren', 'vorlagen']) {
+      expect(html).toContain(`href="#register-${id}"`);
+      expect(html).toContain(`id="register-${id}"`);
+    }
+    expect(html).toContain('Zuständigkeiten');
+    expect(html).toContain('Gebühren');
+    expect(html).toContain('Vorlagen');
+    // Reihenfolge I → IV
+    expect(html.indexOf('id="register-zustaendigkeiten"')).toBeLessThan(html.indexOf('id="register-fristen"'));
+    expect(html.indexOf('id="register-fristen"')).toBeLessThan(html.indexOf('id="register-gebuehren"'));
+    expect(html.indexOf('id="register-gebuehren"')).toBeLessThan(html.indexOf('id="register-vorlagen"'));
+    // Rechtsgebiet bleibt als zweite Ebene (stille Overline)
+    expect(html).toContain('Arbeit');
+    expect(html).toContain('Miete');
+    // Klicktiefe 1: Verfügbare als Direktlinks; ehrliches Mengenbild
+    expect(html).toContain('href="/rechner/zpo-fristen"');
+    expect(html).toContain('href="/rechner/zustaendigkeit"');
     expect(html).toContain('verfügbar');
-    expect(html).toContain('in Vorbereitung');
-    // WEG (Auftrag David): Tabs, Typ-Filter, Chip-Einstiege, Zuletzt, Entwurf-Notiz
+    expect(html).toContain('In Vorbereitung');
+    expect(html).toContain('Entwurf</span>');
+    // WEG: Gebiets-Kacheln/Panels und der alte Steuer-Apparat
+    expect(html).not.toContain('id="kachel-');
+    expect(html).not.toContain('id="panel-');
     expect(html).not.toContain('role="tablist"');
-    expect(html).not.toContain('Gesamter Katalog (');
-    expect(html).not.toContain('Output-Typ');
     expect(html).not.toContain('Direkter Einstieg');
-    expect(html).not.toContain('Einstieg nach Anliegen');
     expect(html).not.toContain('Zuletzt verwendet');
-    expect(html).not.toContain('erscheinen hier automatisch');
-    expect(html).not.toContain('fachlich noch nicht geprüft —');
     // Suche NICHT auf der Seite (lebt im Header)
     expect(html).not.toContain('type="search"');
   });
 
-  it('Rubrik «Häufig gebraucht» führt das Register als Direktlinks; «Übergreifend» steht am ENDE (Auftrag 7.6.2026)', async () => {
+  it('Rubrik «Häufig gebraucht» steht zwischen Einstiegen und Registerteil I (Power-Pfad bleibt)', async () => {
     const html = seiteHtml('/');
     const { haeufigGebrauchtKarten } = await import('../lib/haeufigGebraucht');
-    // Rubrik zuoberst mit allen kuratierten, verfügbaren Werkzeugen als Links
     expect(html).toContain('Häufig gebraucht');
     const karten = haeufigGebrauchtKarten();
     expect(karten.length).toBeGreaterThan(0);
-    karten.forEach((k) => expect(html).toContain(`id="werkzeug-${k.id}"`));
-    expect(html.indexOf('gruppe-haeufig')).toBeLessThan(html.indexOf('gruppe-zivil-prozess'));
-    // Übergreifend als LETZTE Obergruppe (nach Öffentliches Recht)
-    expect(html.indexOf('id="gruppe-uebergreifend"')).toBeGreaterThan(html.indexOf('id="gruppe-oeffentlich"'));
+    for (const k of karten) expect(html).toContain(`href="${k.href}"`);
+    expect(html.indexOf('aria-label="Oberkategorien"')).toBeLessThan(html.indexOf('gruppe-haeufig'));
+    expect(html.indexOf('gruppe-haeufig')).toBeLessThan(html.indexOf('id="register-zustaendigkeiten"'));
     // Rubrik verschwindet bei aktiver Suche (Trefferliste ersetzt das Register)
     expect(seiteHtml('/?q=Verzugszins')).not.toContain('gruppe-haeufig');
   });
 
-  it('?gebiet=arbeit: Panel ersetzt die ANGEKLICKTE Kachel an Ort und Stelle, übrige Kacheln bleiben (Wunsch David)', () => {
-    const html = seiteHtml('/?gebiet=arbeit');
-    expect(html).toContain('id="panel-arbeit"');
-    expect(html).not.toContain('id="kachel-arbeit"');  // die geöffnete Kachel weicht ihrem Panel
-    expect(html).toContain('id="kachel-miete"');       // … die übrigen bleiben sichtbar
-    expect(html).toContain('Schliessen');              // expliziter Rückweg im Panel (✕ seit FAHRPLAN-DESIGN 3.3 aria-hidden)
-    expect(html).toContain('lc-reveal-panel');         // gemächliche Einblendung (motion-reduce global)
-    expect(html).toContain('view-transition-name:kachel-miete'); // Nachrutschen animierbar
-    expect(html).toContain('In Vorbereitung</span>'); // geplante Karten im Panel sichtbar (voller Katalog)
-    expect(html).toContain('Entwurf</span>');          // gebaute, ungeprüfte ebenso (§8)
-    // Untergruppen-Anatomie bleibt
-    expect(html).toContain('>Rechner<');
-    // nur EIN Panel offen (das angewählte Gebiet)
-    expect(html.match(/id="panel-/g)?.length).toBe(1);
+  it('geplante Karten je Kategorie hinter der «In Vorbereitung (N)»-Aufklappzeile (§8, ohne Ballast)', () => {
+    const html = seiteHtml('/');
+    expect(html).toContain('<details');
+    expect(html).toContain('In Vorbereitung');
+    // geplante Titel sind enthalten (Stichprobe), aber nicht als Link
+    expect(html).toContain('Existenzminimum');
+    expect(html).not.toContain('href="/rechner/existenzminimum"');
   });
 
-  it('Alt-Parameter ?ansicht= wird ignoriert (Link-Erbe bleibt harmlos)', () => {
-    const html = seiteHtml('/?ansicht=katalog');
-    expect(html).toContain('id="kachel-arbeit"');
-    expect(html).not.toContain('role="tablist"');
+  it('Alt-Parameter ?ansicht= und ?gebiet= bleiben harmlos (Link-Erbe)', () => {
+    for (const url of ['/?ansicht=katalog', '/?gebiet=arbeit']) {
+      const html = seiteHtml(url);
+      expect(html).toContain('id="register-fristen"');
+      expect(html).not.toContain('role="tablist"');
+    }
   });
 
-  it('?q= ersetzt die Kacheln durch die flache Trefferliste (teilbare Suche, Etappe 1.3)', () => {
+  it('?q= ersetzt das Register durch die flache Trefferliste — mit Kategorie-Label (teilbare Suche)', () => {
     const html = seiteHtml('/?q=Rechtsvorschlag');
     expect(html).toContain('Treffer');
     expect(html).toContain('href="/rechner/schkg-fristen"'); // schkg-fristen via Keyword
-    expect(html).not.toContain('id="kachel-'); // Kachel-Raster ausgeblendet
+    expect(html).not.toContain('id="register-'); // Register ausgeblendet
+    expect(html).toContain('Fristen ·'); // Kategorie-Label in der Trefferzeile
   });
 
   it('?q= ohne Treffer: ehrlicher Leerzustand statt stillen Verschwindens', () => {
@@ -149,7 +139,7 @@ describe('Hauptseiten-Anatomie (Radikal-Verschlankung: Hero → Register → Fus
   it('Hero = Claim + EIN Satz + Kennzahlen ohne Preisaussage (D-4); Fuss = Methodik-Zeile + Hinweis', () => {
     const html = seiteHtml('/');
     expect(html).toContain('Schweizer Recht, berechenbar');
-    expect(html).toContain('Fristen berechnen. Beträge beziffern. Rechtsdokumente aufsetzen.');
+    expect(html).toContain('Zuständigkeit klären. Fristen berechnen. Gebühren beziffern. Dokumente aufsetzen.');
     expect(html).toContain('sofort verfügbar');
     expect(html).toContain('Rechtsgebiete');
     expect(html).not.toContain('kostenlos');
