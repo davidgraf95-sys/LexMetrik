@@ -7,6 +7,7 @@ import {
   rueckwaertsErgebnis, zustellHinweis, fristQueryKodieren, fristQueryLesen,
   type AllgFristInput, type AllgFristResult, type Einheit, type RueckVerschiebung, type ZustellArt,
 } from '../../lib/allgemeineFrist';
+import { FAM_STATUS_PRESETS } from '../../lib/famStatusPresets';
 import type { Berechnungsergebnis, Kanton } from '../../types/legal';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -72,6 +73,8 @@ export function AllgemeineFristForm() {
   });
   // P1.2 Zustell-Helfer (rein informativ)
   const [zustellArt, setZustellArt] = useState<ZustellArt | ''>('');
+  // gewählter Fach-Preset-Kontext (Familienrecht & Status, 10.6.2026)
+  const [famHinweis, setFamHinweis] = useState<string | null>(null);
   const [zustellDatum, setZustellDatum] = useState('');
 
   const set = <K extends keyof State>(k: K, v: State[K]) => setForm((f) => ({ ...f, [k]: v }));
@@ -189,6 +192,21 @@ export function AllgemeineFristForm() {
                 title={p.info} className="lc-chip hover:bg-brass-200 transition-colors">{p.label}</button>
             ))}
           </div>
+          {/* Fach-Presets Familienrecht & Status (gebaut 10.6.2026, Bauspez.
+              recherche/familienrecht-klagen-vorlagen.md): fixe gesetzliche
+              Fristen ohne Sonderregime — Länge/Einheit + ehrlicher Kontext
+              (§8) im Tooltip und nach Wahl als Hinweis. */}
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="lc-overline text-ink-500 normal-case">Familienrecht &amp; Status:</span>
+            {FAM_STATUS_PRESETS.map((p) => (
+              <button type="button" key={p.label}
+                onClick={() => { setForm((f) => ({ ...f, laenge: p.laenge, einheit: p.einheit, wochenendeVerschieben: true, feiertageVerschieben: true })); setFamHinweis(`${p.norm}: ${p.info}`); }}
+                title={`${p.norm} — ${p.info}`} className="lc-chip hover:bg-brass-200 transition-colors">{p.label}</button>
+            ))}
+          </div>
+          {famHinweis && (
+            <p className="lc-notice text-body-s">{famHinweis}</p>
+          )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Startdatum (auslösendes Ereignis)" hint="zählt nicht mit – dies a quo non computatur (Art. 77 OR)">

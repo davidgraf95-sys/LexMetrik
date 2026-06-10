@@ -138,8 +138,7 @@ Baustein-Typ (Tatsache+Offerte-Paar) — Rahmen-Arbeit nach §10 VOR dem Bau.
   Volljährigkeit; 258 III 1 J. ab Kenntnis Tod) · «ohne Verzug»-Band nach
   Wiederherstellung (Richtwerte ≈1 Mt. ok / >3 Mt. kritisch — als
   WARN-Band) · Art. 262 ZGB Empfängniszeit-Fenster 300.–180. Tag vor
-  Geburt (reines Datumsfenster) · **Art. 279 ZPO Unterhalts-Rückwirkung
-  1 Jahr vor Klageeinleitung**.
+  Geburt (reines Datumsfenster) · **Art. 279 Abs. 1 ZGB Unterhalts-Rückwirkung 1 Jahr vor Klageerhebung** (Agent zitierte ZPO — am Cache korrigiert 10.6.2026).
 - Klage-Strukturen: § 86 Kind als Kläger (Prozessstandschaft), Begehren
   Status (261 I) + Sorge 298c + Unterhalt; § 87 notwendige passive
   Streitgenossenschaft Kind+Mutter, EIN Begehren, Begründungs-Schwerpunkt
@@ -160,9 +159,8 @@ Baustein-Typ (Tatsache+Offerte-Paar) — Rahmen-Arbeit nach §10 VOR dem Bau.
 
 1. **Tagerechner-Preset-Paket «Familienrecht/Status»** (§0-konform, keine
    neue Engine): 263 ZGB (3 Trigger) · 256c (Doppelfrist min(rel,abs)) ·
-   262 (Fenster) · 279 ZPO (Rückwirkung) · 546 OR · 313 II ZGB ·
-   KESB 450b/445 III (Kantons-Flag ZH ohne Stillstand) · 291 III ZPO
-   (60 T. Klagebegründung, nicht erstreckbar) → auch Fristenspiegel-
+   262 (Fenster) · 279 Abs. 1 ZGB (Rückwirkung, RÜCKWÄRTS-Rechnung) · 546 OR · 313 II ZGB ·
+   KESB 450b/445 III (Kantons-Flag ZH ohne Stillstand) · ~~291 III ZPO~~ (KORREKTUR 10.6.: Frist ist RICHTERLICH angesetzt — die «60 Tage» sind Gerichtspraxis, kein Gesetzeswert → kein Preset) → auch Fristenspiegel-
    Ereignis-Kandidaten.
 2. **Zuständigkeits-Routing Gericht/KESB** als vierter Rechtsweg-Tab der
    Zuständigkeits-Engine (deterministisch; §0a-gesperrt, bau-bereit).
@@ -173,6 +171,14 @@ Baustein-Typ (Tatsache+Offerte-Paar) — Rahmen-Arbeit nach §10 VOR dem Bau.
    Beilagen-Taxonomie als geteilte Checklisten-Mechanik.
 4. **Rechtsmittel-Fahrplan**: «Superprovisorik-Bypass»-Knoten (BGE 139 III
    86) als künftige Erweiterung notieren.
+
+**GEBAUT (10.6.2026, Auftrag David «bau alles wofür du bereit bist»):**
+Fach-Preset-Gruppe «Familienrecht & Status» im Tagerechner
+(`src/lib/famStatusPresets.ts`, 8 Presets: 263 I Ziff. 1/2 · 256c I
+relativ+absolut+II · 313 II ZGB · 546 I OR · 450b I · 445 III ZGB), alle
+Werte am Cache verifiziert; 262/279-I-ZGB als Rückwärts-Rechnungen und
+291-III-ZPO (richterlich) bewusst NICHT als Preset. OFFEN/bau-bereit:
+Gericht/KESB-Routing (4. Rechtsweg) · Vorlagen-Gerüste (BO-Rahmen zuerst).
 
 ## 5. Pflegebedarf
 

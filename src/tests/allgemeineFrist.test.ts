@@ -262,3 +262,20 @@ describe('Kombinierter Fristenrechner – Trennungs-Querschnitt (5.6.2026)', () 
     expect(rw.fristbeginnISO).toBeUndefined();
   });
 });
+
+describe('Fach-Presets Familienrecht & Status (gebaut 10.6.2026 — Normwerte am Cache verifiziert)', () => {
+  it('Preset-Werte entsprechen den Gesetzen (263/256c/313 II ZGB · 546 OR · 450b I/445 III ZGB)', async () => {
+    const { FAM_STATUS_PRESETS } = await import('../lib/famStatusPresets');
+    const by = (norm: string) => FAM_STATUS_PRESETS.filter((p) => p.norm.includes(norm));
+    expect(by('263 Abs. 1 Ziff. 1')[0]).toMatchObject({ laenge: 1, einheit: 'jahre' });
+    const c256 = by('256c Abs. 1');
+    expect(c256.map((p) => [p.laenge, p.einheit])).toEqual([[1, 'jahre'], [5, 'jahre']]);
+    expect(c256[0].info).toContain('FRÜHERE'); // min(relativ, absolut) offengelegt
+    expect(by('313 Abs. 2')[0]).toMatchObject({ laenge: 1, einheit: 'jahre' });
+    expect(by('546 Abs. 1 OR')[0]).toMatchObject({ laenge: 6, einheit: 'monate' });
+    expect(by('450b Abs. 1')[0]).toMatchObject({ laenge: 30, einheit: 'tage' });
+    expect(by('445 Abs. 3')[0]).toMatchObject({ laenge: 10, einheit: 'tage' });
+    // Bewusst KEIN 291-III-Preset (richterliche Frist) und KEIN 262/279-ZGB-Preset (Rückwärts-Rechnungen)
+    expect(FAM_STATUS_PRESETS.some((p) => p.norm.includes('291'))).toBe(false);
+  });
+});
