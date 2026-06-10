@@ -33,6 +33,15 @@ const LAIE: Goldpaar[] = [
   ['Schulden', 'schkg-fristen'],
   ['ausziehen', 'mietrecht'], // Konsolidierung E3: Maske über den Themen-Einstieg
   ['Mietzins', 'mietvertrag-wohnen'],
+  // FE-6 (FAHRPLAN-FRISTEN-EINHEIT): Fristen-Laienbegriffe — jeder Begriff
+  // muss den RICHTIGEN Einstieg treffen (Keywords am Preset-/Engine-Code
+  // verifiziert: famStatusPresets, mietrecht-/sperrfristen-Engine).
+  ['Kündigungsfrist', 'mietrecht'],
+  ['Kündigungsfrist', 'kuendigung-sperrfristen'],
+  ['verjährt', 'verjaehrung'],
+  ['Erbschaft ausschlagen', 'erbrecht-fristen'],
+  ['Vaterschaft', 'tagerechner'],
+  ['KESB', 'tagerechner'],
 ];
 
 const FACH: Goldpaar[] = [
@@ -52,6 +61,8 @@ const FACH: Goldpaar[] = [
   ['Konkursandrohung', 'schkg-fristen'],
   ['Berufungsfrist', 'zpo-fristen'],
   ['Rechtsmittel', 'zustaendigkeit'],
+  // FE-6: Fach-Direkteinstiege bleiben über die Fachbegriffe auffindbar
+  ['Betreibungsferien', 'schkg-fristen'],
 ];
 
 const NORM: Goldpaar[] = [

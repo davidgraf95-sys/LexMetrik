@@ -52,4 +52,15 @@ describe('FE-1: Einstiegs-Klassifikation der Fristen-Kategorie', () => {
       expect(r.warum.length, r.id).toBeGreaterThan(20);
     }
   });
+
+  it('FE-6 Inventur-Zähler: ein Einstieg pro Rechtsfrage — bewusste Zahlen', () => {
+    // 2 Haupteinstiege + 2 Fach-Direkteinstiege (Doppelpfad GEWOLLT, einziger)
+    // + 5 Eigenes-Regime-Rechner = 9 verfügbare Fristen-Einstiege. Ändert
+    // sich eine Zahl, ist das eine bewusste IA-Entscheidung (FE-1), kein
+    // stilles Anwachsen.
+    expect(FRISTEN_HAUPTEINSTIEGE.length).toBe(2);
+    expect(FRISTEN_FACH_DIREKTEINSTIEGE.length).toBe(2);
+    expect(FRISTEN_EIGENE_REGIMES.length).toBe(5);
+    expect(verfuegbar.length).toBe(9);
+  });
 });

@@ -273,7 +273,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     // 'Art. 336c' auch als KEYWORD (nicht nur Norm-Pill): Rang-Parität mit
     // der Vorlage kuendigung-arbeitgeber — bei Gleichstand steht der RECHNER
     // zuoberst (Katalogposition; Logik-Check-Befund 6.6.2026).
-    keywords: ['gekündigt', 'Kündigung', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär',
+    keywords: ['gekündigt', 'Kündigung', 'Kündigungsfrist', 'Probezeit', 'Sperrfrist', 'Krankheit', 'Unfall', 'Schwangerschaft', 'Militär',
       'Kündigung erhalten', 'Kündigungsfrist', 'Art. 336c', 'Art. 335c',
       // Schreiben-Masken (übernommen, E3)
       'Kündigungsschreiben', 'Beendigungsdatum', 'Freistellung', 'kündigen'],
@@ -305,7 +305,7 @@ const KARTEN: Record<string, CalculatorCard> = {
     ],
     href: '/rechner/mietrecht',
     // 'Zahlungsrückstand' = Art. 257d OR (Norm-Pill der Karte) — Laien-Synonym
-    keywords: ['Mietwohnung', 'Wohnung kündigen', 'Kündigungstermin', 'Vermieter', 'Mieter', 'Geschäftsraum',
+    keywords: ['Mietwohnung', 'Wohnung kündigen', 'Kündigungsfrist', 'Kündigungstermin', 'Vermieter', 'Mieter', 'Geschäftsraum',
       'Zahlungsrückstand', 'Kündigung erhalten',
       // Schreiben-Maske + Vermieter-Checkliste (übernommen, E3)
       'Kündigungsschreiben', 'Familienwohnung', 'Nachmieter', 'ausziehen', 'Auszug',
@@ -603,7 +603,10 @@ const KARTEN: Record<string, CalculatorCard> = {
     ],
     href: '/rechner/tagerechner',
     related: ['zpo-fristen', 'schkg-fristen'],
-    keywords: ['Frist', 'Fristende', 'Tagerechner', 'Art. 77', 'Art. 78', 'Feiertag', 'dies a quo'],
+    // FE-6: Vaterschaft/KESB am Preset-Code verifiziert (famStatusPresets —
+    // Vaterschaftsklage Art. 263, Anfechtung Art. 256c, KESB 450b/445 ZGB).
+    keywords: ['Frist', 'Fristende', 'Tagerechner', 'Art. 77', 'Art. 78', 'Feiertag', 'dies a quo',
+      'Vaterschaft', 'KESB'],
     icon: 'clock',
   },
   fristenspiegel: {

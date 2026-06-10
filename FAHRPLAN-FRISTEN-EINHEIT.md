@@ -81,9 +81,38 @@ Rechtsfrage» für die Fristen-Kategorie; Davids Abnahme der FE-1-Texte
 Keine Engine-Fusion der Regimes (V2/V3-Verdikte); keine «intelligente»
 Regime-Erkennung aus Freitext (§2 — die Weiche FE-2 fragt, sie rät nicht).
 
-- [ ] FE-1 IA Fristen-Kategorie
-- [ ] FE-2 Regime-Frage
-- [ ] FE-3 Preset-Index
-- [ ] FE-4 Abzweigungen
-- [ ] FE-5 Ergebnis-Anatomie
-- [ ] FE-6 Messlatte
+## Umsetzung (Session 10.6.2026 nachmittags)
+
+- [x] FE-1 IA Fristen-Kategorie — `lib/fristenKategorie.ts` (Haupteinstiege/
+  Fach-Direkteinstiege/Eigene-Regimes mit WARUM-Sätzen) + FristenRegister in
+  `Katalog.tsx`; Invarianten-Test erzwingt Klassifikation jeder verfügbaren
+  Fristen-Karte. **WARUM-Sätze = fachliche Aussagen, Abnahme David OFFEN.**
+- [x] FE-2 Regime-Frage — Eingangsfrage + «Weiss nicht?»-Weiche (3 Punkte)
+  im Tagerechner; Tabs/Hash unverändert.
+- [x] FE-3 Preset-Index — `lib/presetIndex.ts` (dünner Index, Daten bleiben
+  je Regime-Datei); Wahl setzt Tab + Parameter via Form-Link-Kodierung (§5),
+  Form-Remount per search-Key. Dazu: SCHKG_LINK_SPEC → rechnerPermalinks.ts
+  (geteilt), ZPO-presetKey dekodiert (Phase+Hinweis), famStatusPresets mit
+  Keys + fp=, MECHANIK_PRESETS in die lib, fristQueryLesen s/l/e einzeln
+  optional. Round-Trip-Tests Index↔Form. **Deklarierter Fix (MITTEL):
+  SCHKG-Spec verwarf die Fristnaturen klagefrist/beschwerdefrist/
+  ordnungsfrist beim Dekodieren geteilter Links.**
+- [x] FE-4 Abzweigungen — Preset-Suche zeigt Eigenes-Regime-Treffer
+  (katalogSuche über Karten); Jahre-ohne-Fach-Preset-Signal → Verjährungs-
+  rechner; 5 Spezialrechner mit Rückverweis «Zum Fristenrechner».
+- [x] FE-5 Ergebnis-Anatomie — Inventur (Subagent, alle 8 Forms + Spiegel):
+  Anatomie BEREITS konvergent (geteilte Bausteine überall); einzige byte-
+  gleiche Rest-Dublette (Mietrecht-Eckdaten) auf EckdatenKachel gehoben
+  (SSR-byte-verglichen). Erb-/Sperr-/Gewährleistungs-Blöcke bleiben BEWUSST
+  eigen (Akzentrand/Status-Farben/Bedingungsbäume — lieber Variation als
+  falsche Abstraktion). Export-Zeilen-Vereinheitlichung VERWORFEN
+  (Props-Parametrisierung würde Komplexität erhöhen).
+- [x] FE-6 Messlatte — Goldliste +7 Fristen-Paare (Keywords Vaterschaft/
+  KESB/Kündigungsfrist am Preset-/Engine-Code verifiziert); Inventur-Zähler
+  2+2+5=9 in fristenKategorie.test.ts. **OFFEN: Davids Abnahme der
+  FE-1-Texte (WARUM-Sätze) + der Weiche-Formulierungen (FE-2).**
+
+Nicht aufgenommen (ehrlich): «Frist Strafbefehl» hat KEINEN richtigen
+Einstieg (kein StPO-Preset im Tagerechner; Mehrwert-Test-Frage an David —
+StPO-Fristen ohne Regime wären Tagerechner-Presets, Art. 89 Abs. 2 StPO
+kennt keinen Stillstand).
