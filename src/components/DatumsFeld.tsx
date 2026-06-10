@@ -14,6 +14,7 @@ type Props = {
   className?: string;                 // Klassen des Eingabefelds
   wrapperClassName?: string;          // Breite/Layout des Felds (z. B. 'w-44')
   'aria-label'?: string;
+  'aria-labelledby'?: string;
 };
 
 function isoZuAnzeige(iso: string): string {
@@ -25,7 +26,7 @@ function gleicherTag(a: Date, b: Date | null): boolean {
   return !!b && a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
 }
 
-export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperClassName = '', 'aria-label': ariaLabel }: Props) {
+export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperClassName = '', 'aria-label': ariaLabel, 'aria-labelledby': ariaLabelledby }: Props) {
   const [offen, setOffen] = useState(false);
   const [text, setText] = useState(() => (value ? isoZuAnzeige(value) : ''));
   const [monat, setMonat] = useState(() => {
@@ -143,7 +144,7 @@ export function DatumsFeld({ value, onChange, className = 'lc-input', wrapperCla
       <input
         type="text" inputMode="numeric" placeholder="TT.MM.JJJJ"
         value={text} onChange={(e) => tippen(e.target.value)} onBlur={verlassen}
-        className={`${className} pr-11`} aria-label={ariaLabel}
+        className={`${className} pr-11`} aria-label={ariaLabel} aria-labelledby={ariaLabelledby}
       />
       <button
         ref={toggleRef}

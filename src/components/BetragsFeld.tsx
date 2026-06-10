@@ -31,6 +31,7 @@ type Props = {
   placeholder?: string;
   erlaubeNegativ?: boolean;
   'aria-label'?: string;
+  'aria-labelledby'?: string;
   'aria-invalid'?: boolean;
 };
 

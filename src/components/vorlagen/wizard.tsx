@@ -130,7 +130,10 @@ function VorschauZeile({ zeile, dicht, striche }: { zeile: string; dicht?: boole
   // Strichzeilen-Lizenz wie PDF/DOCX (Ultra-Review MITTEL 7.6.2026):
   // nur rolle 'unterschrift' oder Schema-eigene Striche — nie Nutzertext.
   if (striche && MUSTER.STRICHE.test(zeile)) {
-    return <span className="block w-52 max-w-full border-b border-ink-600 mt-4 mb-1" aria-label="Unterschriftslinie" />;
+    // role="img": aria-label ist auf einem rollenlosen span unzulässig
+    // (axe aria-prohibited-attr, 10.6.2026); als benanntes Grafik-Element
+    // bleibt die Linie für Screenreader «Unterschriftslinie».
+    return <span role="img" className="block w-52 max-w-full border-b border-ink-600 mt-4 mb-1" aria-label="Unterschriftslinie" />;
   }
   const num = zeile.match(MUSTER.NUMMER);
   if (num) {

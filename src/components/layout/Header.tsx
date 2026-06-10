@@ -77,7 +77,9 @@ export function Header() {
           steht genau einmal im Hero. Auf Mobile ausgeblendet. */}
       <div className="hidden sm:block border-b border-line" style={{ background: 'color-mix(in srgb, var(--paper-sunken) 55%, transparent)' }}>
         <div className="max-w-content mx-auto px-5 sm:px-6 h-7 flex items-center justify-end">
-          <p className="lc-overline text-ink-500 truncate">Orientierung – keine Rechtsberatung</p>
+          {/* ink-600 statt ink-500: auf dem paper-sunken-Streifen mass axe
+              4.44:1 (< 4.5 AA) für die 11-px-Zeile — axe-Befund 10.6.2026. */}
+          <p className="lc-overline text-ink-600 truncate">Orientierung – keine Rechtsberatung</p>
         </div>
       </div>
 

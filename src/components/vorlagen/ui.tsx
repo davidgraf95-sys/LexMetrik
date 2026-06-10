@@ -11,15 +11,24 @@ export function Field({ label, children, hint, optional }: {
 }) {
   // Label↔Control-Verknüpfung (FAHRPLAN-DESIGN 3.6): native Einzel-Controls
   // (input/select/textarea) bekommen automatisch id + htmlFor; zusammengesetzte
-  // Komponenten (DatumsFeld, BetragsFeld) behalten ihr aria-label — ein
-  // Label-Wrap wäre dort riskant (Klick-Redispatch ins Kalender-Popover).
+  // Einzel-Komponenten (DatumsFeld, BetragsFeld) bekommen das Label per
+  // aria-labelledby aufs innere input gereicht (axe-Befund label/critical,
+  // 10.6.2026) — ein Label-Wrap wäre dort riskant (Klick-Redispatch ins
+  // Kalender-Popover). Eigenes aria-label des Kindes hat Vorrang.
   const id = useId();
   const nativ = isValidElement(children) && typeof children.type === 'string'
     && !(children.props as { id?: string }).id;
-  const control = nativ ? cloneElement(children as React.ReactElement<{ id?: string }>, { id }) : children;
+  const komposit = isValidElement(children) && typeof children.type !== 'string'
+    && (children.props as Record<string, unknown>)['aria-label'] === undefined
+    && (children.props as Record<string, unknown>)['aria-labelledby'] === undefined;
+  const control = nativ
+    ? cloneElement(children as React.ReactElement<{ id?: string }>, { id })
+    : komposit
+      ? cloneElement(children as React.ReactElement<{ 'aria-labelledby'?: string }>, { 'aria-labelledby': `${id}-label` })
+      : children;
   return (
     <div className="space-y-1">
-      <label htmlFor={nativ ? id : undefined} className="block text-body-s font-medium text-ink-700">
+      <label id={`${id}-label`} htmlFor={nativ ? id : undefined} className="block text-body-s font-medium text-ink-700">
         {label}{optional && <span className="text-ink-500 font-normal"> · optional</span>}
       </label>
       {control}
