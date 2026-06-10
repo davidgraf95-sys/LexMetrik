@@ -18,7 +18,9 @@ export const ERLASSE: Record<string, ErlassInfo> = {
 };
 
 const KUERZEL = /\b(ZPO|SchKG|ZGB|BGG|OR)\b/;
-const ARTIKEL = /Art\.\s*(\d+)([a-z])?/i;
+// Bug-Check 10.6.2026 (NIEDRIG): lat. Suffix mit erfassen — «Art. 334bis OR»
+// ergäbe sonst den FALSCHEN Anker #art_334_b statt #art_334_bis.
+const ARTIKEL = /Art\.\s*(\d+)([a-z])?(bis|ter|quater|quinquies)?/i;
 
 export type NormLink = {
   url: string;       // klickbarer Fedlex-Link inkl. Artikel-Anker
@@ -41,7 +43,7 @@ export function normLink(artikel: string): NormLink | null {
   const info = ERLASSE[erlass];
   if (!info) return null;
   const a = artikel.match(ARTIKEL);
-  const anker = a ? `#art_${a[1]}${a[2] ? '_' + a[2].toLowerCase() : ''}` : '';
+  const anker = a ? `#art_${a[1]}${a[2] ? '_' + a[2].toLowerCase() : ''}${a[3] ? '_' + a[3].toLowerCase() : ''}` : '';
   return {
     url: `https://www.fedlex.admin.ch/${info.eli}/de${anker}`,
     sr: info.sr,

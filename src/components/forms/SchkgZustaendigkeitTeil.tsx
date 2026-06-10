@@ -394,8 +394,9 @@ export function SchkgZustaendigkeitTeil() {
                 (Forderung {r.kostenZahlungsbefehl.band} Franken; <a href={GEBV_SCHKG_URL} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">Art. 16 Abs. 1 GebV SchKG ↗</a>).
               </p>
               <p className="text-xs text-ink-500">
-                Stand der Staffel: 1.1.2022; eine Änderung der GebV per 1.1.2026 (AS 2025 630) ist nur als signiertes PDF
-                publiziert — Betrag vor Einreichung kurz gegenprüfen. Hinzu kommen Zustellkosten (CHF 7.– je Versuch, Abs. 3);
+                Tarifstand: Konsolidierung 1.1.2026 — die Art.-16-Staffel ist seit 1.1.2022 unverändert (AS 2025 630
+                betrifft nur Art. 15a/15b eSchKG; Wert für Wert am Filestore-HTML verifiziert, Dossier
+                gebv-schkg-kostenrechner 7.6.2026). Hinzu kommen Zustellkosten (CHF 7.– je Versuch, Abs. 3);
                 die Kosten sind von der Gläubigerseite vorzuschiessen und der Forderung zuschlagbar (Art. 68 SchKG).
               </p>
             </div>

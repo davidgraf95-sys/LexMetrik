@@ -4235,7 +4235,7 @@
    "Hinweis, keine verbindliche Zustellberechnung – massgeblich ist der Einzelfall."
   ]
  },
- "allg:ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//LexMetrik//Fristenrechner//DE\r\nCALSCALE:GREGORIAN\r\nBEGIN:VEVENT\r\nUID:frist-20260630-Fristende@lexmetrik\r\nDTSTAMP:20260630T000000Z\r\nDTSTART;VALUE=DATE:20260630\r\nDTEND;VALUE=DATE:20260701\r\nSUMMARY:Fristende\r\nDESCRIPTION:Berechnet mit LexMetrik – automatisierte Orientierung\\, keine\r\n  Rechtsberatung.\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:Vorfrist (3 Tage): Fristende\r\nTRIGGER:-P3D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
+ "allg:ics": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//LexMetrik//Fristenrechner//DE\r\nCALSCALE:GREGORIAN\r\nBEGIN:VEVENT\r\nUID:frist-20260630-Fristende-fbt439@lexmetrik\r\nDTSTAMP:20260630T000000Z\r\nDTSTART;VALUE=DATE:20260630\r\nDTEND;VALUE=DATE:20260701\r\nSUMMARY:Fristende\r\nDESCRIPTION:Berechnet mit LexMetrik – automatisierte Orientierung\\, keine\r\n  Rechtsberatung.\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:Vorfrist (3 Tage): Fristende\r\nTRIGGER:-P3D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n",
  "zust:geld:80k": {
   "verfahrensart": "ordentlich",
   "schlichtung": {
@@ -5375,7 +5375,7 @@
    },
    {
     "label": "Fortsetzungsbegehren nach unbestrittenem Zahlungsbefehl",
-    "frist": "20 Tage ab Beseitigung/Ausbleiben des Rechtsvorschlags",
+    "frist": "20 Tage ab Zustellung des Gläubigerdoppels des Zahlungsbefehls (ohne Rechtsvorschlag) bzw. ab rechtskräftiger Beseitigung des Rechtsvorschlags",
     "norm": "Art. 279 Abs. 3 SchKG",
     "kritisch": true
    }

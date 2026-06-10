@@ -48,8 +48,13 @@ const kurzHash = (t: string): string => {
 };
 
 const uidToken = (summary: string): string => {
+  // Bug-Check 10.6.2026 (MITTEL, deklarierte Änderung): Hash IMMER anhängen,
+  // und zwar über das ROHE Summary — die \W-Bereinigung warf vorher genau
+  // die Zeichen weg, in denen sich Aktenzeichen unterscheiden können
+  // ('HG-2026.14' vs. 'HG.2026-14' → identische UID, Kalender dedupliziert
+  // stumm; RFC 5545 §3.8.4.7 verlangt eindeutige UIDs).
   const voll = summary.replace(/\W+/g, '') || 'frist';
-  return voll.length <= 24 ? voll : `${voll.slice(0, 24)}-${kurzHash(voll)}`;
+  return `${voll.slice(0, 24)}-${kurzHash(summary)}`;
 };
 
 // RFC 5545 §3.1: Zeilen über 75 Oktette falten (CRLF + Leerzeichen).
@@ -58,7 +63,10 @@ const falte = (zeile: string): string => {
   if (enc.encode(zeile).length <= 75) return zeile;
   let rest = zeile;
   const teile: string[] = [];
-  while (enc.encode(rest).length > 75) {
+  // Bug-Check 10.6.2026 (NIEDRIG): Fortsetzungsstücke erhalten beim Join ein
+  // führendes Leerzeichen, das zu den 75 Oktetten zählt — auch das LETZTE
+  // Stück darf darum nur 74 Inhalts-Oktette tragen (vorher 76er-Zeile möglich).
+  while (enc.encode(rest).length > (teile.length ? 74 : 75)) {
     let schnitt = 75 - (teile.length ? 1 : 0);
     while (schnitt > 1 && enc.encode(rest.slice(0, schnitt)).length > 75 - (teile.length ? 1 : 0)) schnitt--;
     // Nie mitten im Surrogate-Paar schneiden (Deploy-Bug-Check 7.6.2026,

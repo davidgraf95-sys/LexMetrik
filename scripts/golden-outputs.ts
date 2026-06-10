@@ -7,6 +7,7 @@
 //                             # fachlicher Änderung, im selben Commit begründen
 //   npm run golden:vergleich  # Gate: aktueller Code vs. committete Basis
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 import { berechneFrist } from '../src/lib/zpoFristen';
 import { berechneSchkgFrist } from '../src/lib/schkgFristen';
@@ -270,7 +271,9 @@ agGolden('urkunden-optionen-nachtrag', {
 });
 
 // ── Schreiben oder Vergleichen ──────────────────────────────────────────────
-const PFAD = new URL('../golden/lexmetrik-golden.json', import.meta.url).pathname;
+// Bug-Check 10.6.2026 (NIEDRIG): fileURLToPath statt .pathname — Letzteres
+// liefert prozent-kodierte Pfade (Leerzeichen/Umlaute/Windows-Laufwerke).
+const PFAD = fileURLToPath(new URL('../golden/lexmetrik-golden.json', import.meta.url));
 const json = JSON.stringify(faelle, null, 1);
 if (process.argv[2] === 'vergleich') {
   if (!existsSync(PFAD)) { console.error('Kein Golden-Stand vorhanden — zuerst ohne Argument laufen lassen.'); process.exit(2); }

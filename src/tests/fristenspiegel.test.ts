@@ -294,8 +294,12 @@ describe('Fristenspiegel A.3: AG-Kündigung (Art. 336b OR) — Anker-Datum + 180
 describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
   // DEKLARIERTE Darstellungs-Änderung 7.6.2026 (Auftrag David, bessere
   // Kalender-Beschriftung): zentrale Fusszeile in DESCRIPTION, Vorfrist-Alarm
-  // nennt die Vorlaufzeit. Der Anker wurde neu erfasst; UID/SUMMARY ohne
-  // Aktenzeichen sind UNVERÄNDERT zum 3.1b-Stand (separat geprüft unten).
+  // nennt die Vorlaufzeit. DEKLARIERTE Änderung 10.6.2026 (Bug-Check MITTEL):
+  // UIDs tragen IMMER den Kurz-Hash über das ROHE Summary — verschiedene
+  // Aktenzeichen, die sich nur in Nicht-Wort-Zeichen unterscheiden, ergaben
+  // sonst identische UIDs (RFC 5545 §3.8.4.7; Kalender dedupliziert stumm).
+  // Bestands-Kalendereinträge erhalten beim Re-Import damit EINMALIG neue
+  // UIDs (Duplikat statt Update) — bewusst in Kauf genommen.
   it('icsFuerFrist: Byte-Anker der Kalender-Beschriftung (Stand 7.6.2026)', () => {
     const out = icsFuerFrist({
       titel: 'Berufung; Frist, läuft\nab',
@@ -304,7 +308,7 @@ describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
       vorfristTage: 3,
     });
     expect(out).toBe(
-      'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//LexMetrik//Fristenrechner//DE\r\nCALSCALE:GREGORIAN\r\nBEGIN:VEVENT\r\nUID:frist-20260707-BerufungFristluftab@lexmetrik\r\nDTSTAMP:20260707T000000Z\r\nDTSTART;VALUE=DATE:20260707\r\nDTEND;VALUE=DATE:20260708\r\nSUMMARY:Berufung\\; Frist\\, läuft\\nab\r\nDESCRIPTION:Ein länger Text mit Umlauten äöü und Sonderzeichen \\;\\,\\\\ d\r\n er sicher über fünfundsiebzig Oktette hinausläuft\\, damit die Faltung g\r\n reift.\\nBerechnet mit LexMetrik – automatisierte Orientierung\\, keine Re\r\n chtsberatung.\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:Vorfrist (3 Tage): Berufung\\; Frist\\, läuft\\nab\r\nTRIGGER:-P3D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n',
+      'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//LexMetrik//Fristenrechner//DE\r\nCALSCALE:GREGORIAN\r\nBEGIN:VEVENT\r\nUID:frist-20260707-BerufungFristluftab-1gy4ff8@lexmetrik\r\nDTSTAMP:20260707T000000Z\r\nDTSTART;VALUE=DATE:20260707\r\nDTEND;VALUE=DATE:20260708\r\nSUMMARY:Berufung\\; Frist\\, läuft\\nab\r\nDESCRIPTION:Ein länger Text mit Umlauten äöü und Sonderzeichen \\;\\,\\\\ d\r\n er sicher über fünfundsiebzig Oktette hinausläuft\\, damit die Faltung g\r\n reift.\\nBerechnet mit LexMetrik – automatisierte Orientierung\\, keine Re\r\n chtsberatung.\r\nBEGIN:VALARM\r\nACTION:DISPLAY\r\nDESCRIPTION:Vorfrist (3 Tage): Berufung\\; Frist\\, läuft\\nab\r\nTRIGGER:-P3D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n',
     );
   });
 
@@ -319,9 +323,9 @@ describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
     // VERSCHIEDENE UIDs (vorher: Kollision, Kalender dedupliziert stumm).
     const uid = (ics: string) => ics.match(/UID:[^\r]+/)![0];
     expect(uid(a)).not.toBe(uid(b));
-    // Ohne Aktenzeichen bleibt die UID auf dem 3.1b-Stand (Permalinks/Re-Importe stabil).
+    // Hash deterministisch auch ohne Aktenzeichen (deklariert 10.6.2026).
     expect(uid(icsFuerFrist({ titel: 'Fristende – Berufung', endISO: '2026-07-07' })))
-      .toBe('UID:frist-20260707-FristendeBerufung@lexmetrik');
+      .toBe('UID:frist-20260707-FristendeBerufung-11h14ws@lexmetrik');
   });
 
   it('UID hinter der 24-Zeichen-Kappung: Az-Suffix bleibt unterscheidend (Bug-Check 7.6.2026 M-1)', () => {
@@ -333,9 +337,14 @@ describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
     const a = uid(icsFuerFrist({ ...basis, aktenzeichen: 'HG2026-000123-A' }));
     const b = uid(icsFuerFrist({ ...basis, aktenzeichen: 'HG2026-000123-B' }));
     expect(a).not.toBe(b);
-    // Kurz-Tokens (≤ 24 Zeichen) tragen KEINEN Hash — Bestands-UIDs stabil.
+    // Auch Kurz-Tokens tragen den Hash (deklariert 10.6.2026) — nur so
+    // unterscheiden sich Summaries, die sich allein in \W-Zeichen
+    // unterscheiden ('HG-2026.14' vs. 'HG.2026-14').
     expect(uid(icsFuerFrist({ titel: 'Kurz', endISO: '2026-09-15', aktenzeichen: 'AB-1' })))
-      .toBe('UID:frist-20260915-KurzAB1@lexmetrik');
+      .toBe('UID:frist-20260915-KurzAB1-f5auov@lexmetrik');
+    const nurInterpunktion1 = uid(icsFuerFrist({ titel: 'Berufungsfrist', endISO: '2026-09-15', aktenzeichen: 'HG-2026.14' }));
+    const nurInterpunktion2 = uid(icsFuerFrist({ titel: 'Berufungsfrist', endISO: '2026-09-15', aktenzeichen: 'HG.2026-14' }));
+    expect(nurInterpunktion1).not.toBe(nurInterpunktion2);
   });
 
   it('Beschriftung: Permalink als URL-Property (URI, unescaped) + Zeile in der Beschreibung; Fusszeile immer', () => {
@@ -360,8 +369,8 @@ describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
     expect(out.match(/BEGIN:VCALENDAR/g)).toHaveLength(1);
     expect(out.match(/END:VCALENDAR/g)).toHaveLength(1);
     expect(out.match(/BEGIN:VEVENT/g)).toHaveLength(2);
-    expect(out).toContain('UID:frist-20260706-AnfechtungderKndigung@lexmetrik');
-    expect(out).toContain('UID:frist-20260706-Erstreckungsbegehren@lexmetrik');
+    expect(out).toContain('UID:frist-20260706-AnfechtungderKndigung-dapzfa@lexmetrik');
+    expect(out).toContain('UID:frist-20260706-Erstreckungsbegehren-39onpt@lexmetrik');
     expect(out).not.toContain('kein-iso');
     // Faltung: keine Zeile über 75 Oktette
     const enc = new TextEncoder();

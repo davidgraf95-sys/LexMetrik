@@ -84,6 +84,9 @@ export function fedlexLinkFuerArtikel(text: string): string | null {
     ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(bereinigt));
   if (!gesetz) return null;
   if (/\bSchlT\b/.test(text)) return FEDLEX[gesetz];
-  const m = text.match(/^Art\.\s*(\d+(?:bis|ter|quater|quinquies|[a-z])?)\b/);
+  // Bug-Check 10.6.2026 (NIEDRIG): Buchstabe UND lat. Suffix kombinierbar
+  // (329gbis/663bbis/697hbis) — vorher matchte der Extraktor solche Artikel
+  // gar nicht und lieferte die Gesetzes-URL ohne Anker.
+  const m = text.match(/^Art\.\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)\b/);
   return m ? fedlexUrl(gesetz, m[1]) : FEDLEX[gesetz];
 }

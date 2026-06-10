@@ -4,10 +4,10 @@
 // lib/zustaendigkeit.ts). Quelle: bibliothek/normen/schkg-zustaendigkeit-
 // regelwerk.md (Wortlaute verbatim am Fedlex-Cache /tmp/schkg.html, Stand
 // 1.1.2025, verifiziert 5.6.2026) — insb. die Synthese-Tabelle §6.
-// Kosten: GebV SchKG (SR 281.35) Art. 16, Wortlaut verifiziert am Filestore
-// Stand 1.1.2022; eine Änderung per 1.1.2026 (AS 2025 630) ist nur als
-// signiertes PDF publiziert → Beträge tragen einen Prüf-Vorbehalt
-// (Parameter-Verfallsregister).
+// Kosten: GebV SchKG (SR 281.35) Art. 16 — Staffel Wert für Wert am
+// Filestore-HTML der Konsolidierung 1.1.2026 verifiziert (Dossier
+// gebv-schkg-kostenrechner, 7.6.2026: AS 2025 630 ändert nur Art. 15a/15b
+// eSchKG; Beträge seit 1.1.2022 unverändert).
 //
 // Rein und deterministisch (§2). Reihenfolge der Prüfung analog Zivil:
 // 1) BETREIBUNGSORT (Wurzelgrösse, Art. 46–55) → 2) FORUM des Anliegens
@@ -73,8 +73,8 @@ export interface SchkgErgebnis {
   normverweise: SchkgNorm[];
 }
 
-// Art. 16 Abs. 1 GebV SchKG — Staffel wörtlich (Stand 1.1.2022; Vorbehalt
-// AS 2025 630 per 1.1.2026, nur signiertes PDF):
+// Art. 16 Abs. 1 GebV SchKG — Staffel wörtlich (verifiziert an der
+// Konsolidierung 1.1.2026; Beträge seit 1.1.2022 unverändert):
 const GEBUEHR_ZB: { bis: number; gebuehr: number; band: string }[] = [
   { bis: 100, gebuehr: 7, band: 'bis 100' },
   { bis: 500, gebuehr: 20, band: 'über 100 bis 500' },
@@ -288,7 +288,7 @@ export function bestimmeSchkgZustaendigkeit(input: SchkgInput): SchkgErgebnis {
         { label: 'Arresteinsprache der Gegenseite', frist: '10 Tage ab Kenntnis des Arrests', norm: 'Art. 278 Abs. 1 SchKG', kritisch: true },
         { label: 'Arrestprosequierung (Betreibung/Klage)', frist: '10 Tage ab Zustellung der Arresturkunde', norm: 'Art. 279 Abs. 1 SchKG', kritisch: true },
         { label: 'Prosequierung nach Rechtsvorschlag', frist: '10 Tage ab Zustellung des Gläubigerdoppels des Zahlungsbefehls: Rechtsöffnung verlangen oder Anerkennungsklage; nach Abweisung im Rechtsöffnungsverfahren weitere 10 Tage für die Klage', norm: 'Art. 279 Abs. 2 SchKG', kritisch: true },
-        { label: 'Fortsetzungsbegehren nach unbestrittenem Zahlungsbefehl', frist: '20 Tage ab Beseitigung/Ausbleiben des Rechtsvorschlags', norm: 'Art. 279 Abs. 3 SchKG', kritisch: true },
+        { label: 'Fortsetzungsbegehren nach unbestrittenem Zahlungsbefehl', frist: '20 Tage ab Zustellung des Gläubigerdoppels des Zahlungsbefehls (ohne Rechtsvorschlag) bzw. ab rechtskräftiger Beseitigung des Rechtsvorschlags', norm: 'Art. 279 Abs. 3 SchKG', kritisch: true },
       );
       warnungen.push('Arrestkaution/Schadenersatzrisiko: Bei ungerechtfertigtem Arrest haftet die Arrestgläubigerin (Art. 273 SchKG); das Gericht kann Sicherheitsleistung verlangen.');
       fahrplan.push(
@@ -387,7 +387,9 @@ export function schkgZustaendigkeitBericht(r: SchkgErgebnis): Berechnungsergebni
       }] : []),
       ...r.fahrplan.map((s) => ({ beschreibung: s.titel, zwischenergebnis: s.text, normen: [] })),
     ],
-    annahmen: [],
+    annahmen: r.kostenZahlungsbefehl
+      ? ['Tarifstand GebV SchKG: Konsolidierung 1.1.2026 (Art.-16-Staffel unverändert seit 1.1.2022; am Filestore-HTML verifiziert, Dossier gebv-schkg-kostenrechner). Hinzu kommen Zustellkosten (CHF 7.– je Versuch, Art. 16 Abs. 3) – vorzuschiessen und der Forderung zuschlagbar (Art. 68 SchKG).']
+      : [],
     warnungen: [...r.weichen, ...r.warnungen],
     normverweise: r.normverweise,
   };

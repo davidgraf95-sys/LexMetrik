@@ -67,6 +67,10 @@ export function permalinkLesen<T extends Record<string, unknown>>(spec: Permalin
         if (!def.gueltig || def.gueltig(roh)) aus[feld] = roh;
         break;
       case 'num': {
+        // Bug-Check 10.6.2026 (NIEDRIG): Number('') === 0 — ein vorhandener,
+        // aber leerer Parameter ('?z=') injizierte sonst die 0 statt (wie
+        // jeder andere ungültige Wert) wegzufallen.
+        if (roh.trim() === '') break;
         const n = Number(roh);
         if (Number.isFinite(n) && (!def.gueltig || def.gueltig(n))) aus[feld] = n;
         break;
