@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { MietInput, MietErgebnis, Mietobjekt, Kuendigungsart, TerminQuelle, MietPartei } from '../../types/mietrecht';
@@ -283,19 +283,17 @@ export function MietrechtForm() {
         <div className="space-y-4">
           <LiveHeader />
 
+          {/* FE-5: byte-gleiches Markup → geteilte EckdatenKachel (Inventur
+              10.6.2026: einzige exakt deckungsgleiche Rest-Dublette). */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="lc-tile">
-              <p className="text-xs text-ink-500 mb-1">{ergebnis.status === 'nichtig' ? 'Form' : 'Mietverhältnis endet am'}</p>
-              <p className="text-body-l font-semibold text-ink-900">{ergebnis.status === 'nichtig' ? 'NICHTIG (Art. 266o OR)' : ergebnis.endtermin ?? '–'}</p>
-            </div>
-            <div className="lc-tile">
-              <p className="text-xs text-ink-500 mb-1">Spätester Zugang für diesen Termin</p>
-              <p className="text-body-l font-semibold text-ink-900">{ergebnis.spaetesterZugang ?? '–'}</p>
-            </div>
-            <div className="lc-tile">
-              <p className="text-xs text-ink-500 mb-1">{ergebnis.zahlungsfristEnde ? 'Zahlungsfrist läuft bis' : 'Anfechtung/Erstreckung bis'}</p>
-              <p className="text-body-l font-semibold text-ink-900">{ergebnis.zahlungsfristEnde ?? ergebnis.anfechtungBis ?? '–'}</p>
-            </div>
+            <EckdatenKachel
+              label={ergebnis.status === 'nichtig' ? 'Form' : 'Mietverhältnis endet am'}
+              wert={ergebnis.status === 'nichtig' ? 'NICHTIG (Art. 266o OR)' : ergebnis.endtermin ?? '–'} />
+            <EckdatenKachel label="Spätester Zugang für diesen Termin"
+              wert={ergebnis.spaetesterZugang ?? '–'} />
+            <EckdatenKachel
+              label={ergebnis.zahlungsfristEnde ? 'Zahlungsfrist läuft bis' : 'Anfechtung/Erstreckung bis'}
+              wert={ergebnis.zahlungsfristEnde ?? ergebnis.anfechtungBis ?? '–'} />
           </div>
 
           {ergebnis.endterminISO && (
