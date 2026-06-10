@@ -59,8 +59,10 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
   };
 
   return (
-    // aria-live: Screenreader erfahren von Live-Neuberechnungen (UX C7)
-    <div className="lc-reveal" aria-live="polite">
+    // Einblendung + aria-live trägt der umgebende ErgebnisBlock (R4) — eine
+    // Live-Region pro Ergebnis statt zwei verschachtelter (D3, 11.6.2026);
+    // Screenreader erfahren von Live-Neuberechnungen weiterhin (UX C7).
+    <div>
       {/* Messing-Akzentlinie als Ablesekante über dem Readout */}
       <div className="scale-rule" aria-hidden />
       <div className="bg-surface border border-line rounded-b-lg rounded-t-none shadow-md overflow-hidden">

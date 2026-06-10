@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { ThemenEinstieg } from '../components/ThemenEinstieg';
 import { LohnfortzahlungForm } from '../components/forms/LohnfortzahlungForm';
 import { KuendigungSperrForm } from '../components/forms/KuendigungSperrForm';
 import { KombinierteAnsicht } from '../components/forms/KombinierteAnsicht';
@@ -71,12 +72,10 @@ export function RechnerKuendigung() {
 
       {/* Themen-Einstieg (Konsolidierung 7.6.2026, E3): die Schreiben-Masken
           haben keine eigenen Katalog-Karten mehr — hier ist ihr Direktzugang. */}
-      <p className="text-body-s text-ink-600">
-        <span className="font-medium text-ink-900">Kündigungsschreiben erstellen:</span>{' '}
-        <Link to="/vorlagen/kuendigung-arbeitnehmer" className="text-brass-700 hover:text-brass-600 no-underline">durch Arbeitnehmer:in →</Link>
-        {' · '}
-        <Link to="/vorlagen/kuendigung-arbeitgeber" className="text-brass-700 hover:text-brass-600 no-underline">durch Arbeitgeber:in (mit Sperrfristen-Gate) →</Link>
-      </p>
+      <ThemenEinstieg label="Kündigungsschreiben erstellen:" links={[
+        { to: '/vorlagen/kuendigung-arbeitnehmer', label: 'durch Arbeitnehmer:in' },
+        { to: '/vorlagen/kuendigung-arbeitgeber', label: 'durch Arbeitgeber:in (mit Sperrfristen-Gate)' },
+      ]} />
     </div>
   );
 }
