@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { RECHTSGEBIETE, VORLAGE_SEKTIONEN, istVerfuegbar, istAktiv, type CalculatorCard, type VorlageCard } from '../lib/startseiteConfig';
 import { EINGABE_RUBRIKEN, istVorlage } from '../lib/vorlagenKategorie';
+import { GEBUEHREN_RUBRIKEN, gebuehrenRubrik, type GebuehrenRubrik } from '../lib/gebuehrenKategorie';
 import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
 import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
 import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_FACH_DIREKTEINSTIEGE, FRISTEN_EIGENE_REGIMES, fristenEinstiegArt } from '../lib/fristenKategorie';
@@ -262,6 +263,43 @@ function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
   );
 }
 
+// ─── Gebühren-Register (S-6 FAHRPLAN-STRUKTUR-UMBAU) ────────────────────────
+//
+// Zwei Rubriken (prozessual/materiell, Auftrag David 10.6.2026 abends) +
+// Hilfsrechner; innerhalb der Rubrik Alltag (Praxis-Rang 1) zuerst, dann
+// feste Gebiets-Reihenfolge.
+
+function GebuehrenRegister({ karten, sortiert }: {
+  karten: CalculatorCard[]; sortiert: (xs: CalculatorCard[]) => CalculatorCard[];
+}) {
+  const verfuegbarAlle = karten.filter(istVerfuegbar);
+  const inRubrik = (r: GebuehrenRubrik) => {
+    const xs = verfuegbarAlle.filter((k) => gebuehrenRubrik(k.id) === r);
+    return [...sortiert(xs.filter((k) => praxisRang(k.id) === 1)),
+      ...sortiert(xs.filter((k) => praxisRang(k.id) !== 1))];
+  };
+  return (
+    <div className="space-y-6">
+      {GEBUEHREN_RUBRIKEN.map((r) => {
+        const xs = inRubrik(r.id);
+        if (xs.length === 0) return null;
+        return (
+          <div key={r.id} className="space-y-2">
+            <div className="flex items-center gap-3">
+              <h3 className="lc-overline text-brass-700">{r.titel} <span className="num text-ink-500">({xs.length})</span></h3>
+              <span aria-hidden className="flex-1 h-px bg-line" />
+            </div>
+            <p className="text-body-s text-ink-500 max-w-reading">{r.lede}</p>
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+              {xs.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 // ─── Vorlagen-Register (S-2 FAHRPLAN-STRUKTUR-UMBAU) ────────────────────────
 //
 // Fünf Dokument-Gruppen nach Davids Wortlaut (10.6.2026 abends):
@@ -394,6 +432,9 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
       ) : kat.id === 'vorlagen' ? (
         /* S-2 (FAHRPLAN-STRUKTUR-UMBAU): fünf Dokument-Gruppen. */
         <VorlagenRegister karten={karten} />
+      ) : kat.id === 'gebuehren' ? (
+        /* S-6 (FAHRPLAN-STRUKTUR-UMBAU): prozessual/materiell + Hilfsrechner. */
+        <GebuehrenRegister karten={karten} sortiert={sortiert} />
       ) : (
         <>
           {alltag.length > 0 && (
