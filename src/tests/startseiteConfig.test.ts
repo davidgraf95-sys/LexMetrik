@@ -203,10 +203,15 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // 4 Masken-Karten via imKatalog:false VERSTECKT (bleiben SSoT ihrer
   // Seiten; Auffindbarkeit tragen die Themen-Einstiege) → 32 gebaut,
   // davon 28 im sichtbaren Katalog.
-  it('verfügbar = status !== geplant; Regressionszählung 32 gebaut / 28 sichtbar (Stand 7.6.2026, Konsolidierung)', () => {
+  // Deklarierte Anpassung S-3 STRUKTUR-UMBAU 10.6.2026 abends (Auftrag
+  // David, übersteuert E2 für die Zuständigkeit): die Rechtsweg-Karten
+  // schkg-/straf-zustaendigkeit kehren als eigene Felder ZURÜCK (+2
+  // entwurf) → 34 gebaut / 30 sichtbar; dazu verwaltung-zustaendigkeit
+  // als geplantes viertes Feld.
+  it('verfügbar = status !== geplant; Regressionszählung 34 gebaut / 30 sichtbar (Stand 10.6.2026, S-3)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(32);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(28);
+    expect(verf.length).toBe(34);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(30);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

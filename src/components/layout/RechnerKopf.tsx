@@ -10,13 +10,15 @@ import { useLocale, fedlexLokalisiert } from '../locale';
 // (Zuständigkeit: Rechtswege Zivil/SchKG/Straf) zeigen sonst immer die
 // ZPO-Chips der Registry — Kategorie/Beschrieb/Normen sind deshalb pro
 // gewähltem Rechtsweg überschreibbar (reine Anzeige, §3).
-export function RechnerKopf({ calc, kategorieOverride, kurzbeschriebOverride, normenOverride }: {
+export function RechnerKopf({ calc, titelOverride, kategorieOverride, kurzbeschriebOverride, normenOverride }: {
   calc: Calculator;
+  titelOverride?: string;
   kategorieOverride?: string;
   kurzbeschriebOverride?: string;
   normenOverride?: string[];
 }) {
   const { locale } = useLocale();
+  const titel = titelOverride ?? calc.titel;
   const kategorie = kategorieOverride ?? calc.kategorie;
   const kurzbeschrieb = kurzbeschriebOverride ?? calc.kurzbeschrieb;
   const normen = normenOverride ?? calc.normen;
@@ -34,11 +36,11 @@ export function RechnerKopf({ calc, kategorieOverride, kurzbeschriebOverride, no
         <span className="lc-overline text-ink-500 normal-case truncate" style={{ letterSpacing: '0.04em' }}>
           <Link to="/" className="no-underline text-ink-500 hover:text-ink-600">Katalog</Link>
           <span className="mx-1.5">/</span>
-          <span className="text-ink-500">{calc.titel}</span>
+          <span className="text-ink-500">{titel}</span>
         </span>
       </nav>
       <p className="lc-overline">{kategorie}</p>
-      <h1 className="text-h1 font-display font-semibold text-ink-900">{sansAmp(calc.titel)}</h1>
+      <h1 className="text-h1 font-display font-semibold text-ink-900">{sansAmp(titel)}</h1>
       <p className="text-body-l text-ink-600 max-w-reading">{kurzbeschrieb}</p>
       <div className="flex flex-wrap gap-1.5">
         {/* Norm-Chips mit Fedlex-Direktlink (Spannen/ff. → führender Artikel) */}

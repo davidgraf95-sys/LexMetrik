@@ -18,8 +18,8 @@ const RANG_1_ALLTAG: ReadonlySet<string> = new Set([
   // Fristen (verpasste Frist = Haftung; KATALOG-ROADMAP Rang 1–8)
   'tagerechner', 'fristenspiegel', 'zpo-fristen', 'schkg-fristen',
   'verjaehrung', 'mietrecht', 'kuendigung-sperrfristen',
-  // Zuständigkeit (Eingangsfrage jedes Mandats)
-  'zustaendigkeit',
+  // Zuständigkeit (Eingangsfrage jedes Mandats; S-3: vier Rechtsweg-Felder)
+  'zustaendigkeit', 'schkg-zustaendigkeit', 'straf-zustaendigkeit',
   // Gebühren & Beträge (Standardrechnung jeder Forderung/Betreibung)
   'verzugszins', 'betreibungskosten',
   // Vorlagen (Standard-Schreiben des Kanzleialltags)
@@ -45,7 +45,7 @@ export function praxisRang(id: string): 1 | 2 | 3 {
  *  kuratierter Reihenfolge) — ersetzt die separate «Häufig gebraucht»-Rubrik
  *  (Versimplung 10.6.2026: gleiche Funktion, ein Apparat weniger). */
 const KACHEL_LINKS: Record<OberkategorieId, string[]> = {
-  zustaendigkeiten: ['zustaendigkeit'],
+  zustaendigkeiten: ['zustaendigkeit', 'schkg-zustaendigkeit'],
   fristen: ['tagerechner', 'fristenspiegel'],
   gebuehren: ['verzugszins', 'betreibungskosten'],
   vorlagen: ['vollmacht', 'kuendigung-vertrag'],

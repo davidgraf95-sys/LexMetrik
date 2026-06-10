@@ -29,7 +29,7 @@ const LAIE: Goldpaar[] = [
   ['Kündigung erhalten', 'kuendigung-sperrfristen'],
   ['Urteil erhalten', 'zustaendigkeit'],
   ['Scheidung', 'zustaendigkeit'],
-  ['betreiben', 'zustaendigkeit'], // Konsolidierung E2: Rechtsweg-Karten vereint
+  ['betreiben', 'schkg-zustaendigkeit'], // S-3 10.6.2026: Rechtsweg-Felder wieder eigenständig
   ['Schulden', 'schkg-fristen'],
   ['ausziehen', 'mietrecht'], // Konsolidierung E3: Maske über den Themen-Einstieg
   ['Mietzins', 'mietvertrag-wohnen'],
@@ -46,7 +46,7 @@ const LAIE: Goldpaar[] = [
 
 const FACH: Goldpaar[] = [
   ['Rechtsvorschlag', 'schkg-fristen'],
-  ['Rechtsöffnung', 'zustaendigkeit'], // Konsolidierung E2
+  ['Rechtsöffnung', 'schkg-zustaendigkeit'], // S-3 10.6.2026
   ['Sperrfrist', 'kuendigung-sperrfristen'],
   ['Gerichtsferien', 'zpo-fristen'],
   ['Stillstand', 'zpo-fristen'],
@@ -54,7 +54,7 @@ const FACH: Goldpaar[] = [
   ['Klagebewilligung', 'schlichtungsgesuch'],
   ['Mängelrüge', 'gewaehrleistung'],
   ['Ausschlagung', 'erbrecht-fristen'],
-  ['Arrest', 'zustaendigkeit'], // Konsolidierung E2
+  ['Arrest', 'schkg-zustaendigkeit'], // S-3 10.6.2026
   ['Gerichtsstand', 'zustaendigkeit'],
   // Etappe 1.1 (6.6.2026): Fachbegriffe gemäss schkgPresets/Engine-Umfang
   ['Fortsetzungsbegehren', 'schkg-fristen'],

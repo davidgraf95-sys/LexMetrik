@@ -4,6 +4,7 @@ import { RECHTSGEBIETE, istVerfuegbar, istAktiv, type CalculatorCard } from '../
 import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
 import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
 import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_FACH_DIREKTEINSTIEGE, FRISTEN_EIGENE_REGIMES, fristenEinstiegArt } from '../lib/fristenKategorie';
+import { ZUSTAENDIGKEIT_FELDER, ZUSTAENDIGKEIT_FELD_IDS } from '../lib/zustaendigkeitKategorie';
 import { kartePasst, sucheRang } from '../lib/katalogSuche';
 import { sansAmp } from './typografie';
 
@@ -83,7 +84,7 @@ function KategorieEinstieg({ kat, karten, onOeffnen }: {
 
 // ─── Werkzeug-Zeile: Direktlink (Klicktiefe 1); Status ehrlich als Badge ────
 
-function WerkzeugZeile({ k, subLabel }: { k: CalculatorCard; subLabel?: string }) {
+function WerkzeugZeile({ k, subLabel, zeigeGeplant }: { k: CalculatorCard; subLabel?: string; zeigeGeplant?: boolean }) {
   const aktiv = istAktiv(k.status) && !!k.href;
   const inhalt = (
     <>
@@ -95,7 +96,10 @@ function WerkzeugZeile({ k, subLabel }: { k: CalculatorCard; subLabel?: string }
         {k.status === 'entwurf' && (
           <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
         )}
-        <span aria-hidden className="text-brass-700 leading-none">→</span>
+        {zeigeGeplant && k.status === 'geplant' && (
+          <span className="lc-badge lc-badge-soft">In Vorbereitung</span>
+        )}
+        {aktiv && <span aria-hidden className="text-brass-700 leading-none">→</span>}
       </span>
     </>
   );
@@ -216,6 +220,47 @@ function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
   );
 }
 
+// ─── Zuständigkeits-Register (S-3 FAHRPLAN-STRUKTUR-UMBAU) ──────────────────
+//
+// Vier feste Rechtsweg-Felder (Zivilprozess · Vollstreckung · Strafverfahren
+// · Verwaltungsverfahren, Auftrag David 10.6.2026 abends) zuoberst — auch
+// das geplante Verwaltungs-Feld ist SICHTBAR (ehrlich «In Vorbereitung»,
+// §8) statt in der Aufklappzeile versteckt. Weitere zuordnung-Karten
+// erscheinen darunter wie gehabt.
+
+function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
+  const byId = new Map(karten.map((k) => [k.id, k]));
+  const felder = ZUSTAENDIGKEIT_FELDER
+    .map((f) => ({ ...f, k: byId.get(f.id) }))
+    .filter((f): f is typeof f & { k: CalculatorCard } => !!f.k);
+  const weitere = karten.filter((k) => istVerfuegbar(k) && !ZUSTAENDIGKEIT_FELD_IDS.has(k.id));
+
+  return (
+    <div className="space-y-5">
+      <div className="space-y-2">
+        <div className="flex items-center gap-3">
+          <h3 className="lc-overline text-brass-700">Rechtswege</h3>
+          <span aria-hidden className="flex-1 h-px bg-line" />
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+          {felder.map((f) => <WerkzeugZeile key={f.id} k={f.k} subLabel={f.untertitel} zeigeGeplant />)}
+        </div>
+      </div>
+      {weitere.length > 0 && (
+        <div className="space-y-2">
+          <div className="flex items-center gap-3">
+            <h3 className="lc-overline text-ink-500">Weitere Werkzeuge <span className="num">({weitere.length})</span></h3>
+            <span aria-hidden className="flex-1 h-px bg-line" />
+          </div>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+            {weitere.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
 function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck: () => void }) {
@@ -231,7 +276,11 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
   const alltag = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) === 1));
   const weitere = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) !== 1));
   const verfuegbar = [...alltag, ...weitere];
-  const geplant = karten.filter((k) => !istVerfuegbar(k));
+  // Geplante Karten, die bereits als festes Register-Feld sichtbar sind
+  // (S-3: Verwaltungs-Zuständigkeit), erscheinen nicht zusätzlich in der
+  // «In Vorbereitung»-Aufklappzeile.
+  const geplant = karten.filter((k) => !istVerfuegbar(k)
+    && !(kat.id === 'zustaendigkeiten' && ZUSTAENDIGKEIT_FELD_IDS.has(k.id)));
 
   return (
     <section id={`register-${kat.id}`} aria-labelledby={`register-titel-${kat.id}`} className="space-y-4 scroll-mt-28">
@@ -257,6 +306,9 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
         /* FE-1 (FAHRPLAN-FRISTEN-EINHEIT): EIN Einstieg + Regime-Abzweigungen
            statt der Alltag/Weitere-Mischliste. */
         <FristenRegister karten={karten} />
+      ) : kat.id === 'zustaendigkeiten' ? (
+        /* S-3 (FAHRPLAN-STRUKTUR-UMBAU): vier feste Rechtsweg-Felder. */
+        <ZustaendigkeitRegister karten={karten} />
       ) : (
         <>
           {alltag.length > 0 && (

@@ -52,7 +52,10 @@ export const CALCULATORS: Calculator[] = [
   { slug: 'teuerung', titel: 'Teuerungsrechner (LIK-Indexierung)', kategorie: 'Übergreifend',
     kurzbeschrieb: 'Indexierung von Beträgen nach dem Landesindex der Konsumentenpreise – Indexmiete (100 %-Weitergabe), Unterhaltsbeiträge und generische Wertsicherung, mit amtlicher BFS-Reihe und automatischer Basis-Wahl.',
     normen: ['Art. 269b OR', 'Art. 17 VMWG', 'Art. 286 ZGB', 'Art. 128 ZGB'], status: 'entwurf', icon: 'percent' },
-  { slug: 'zustaendigkeit', titel: 'Zuständigkeit (Zivilprozess · Betreibung · Strafverfahren)', kategorie: 'Zivilprozess',
+  // S-3 Struktur-Umbau 10.6.2026: Registry-Titel = Zivil-Default; die
+  // SchKG-/Straf-Sichten überschreiben Titel/Kategorie/Normen im Kopf
+  // (HERO_JE_RECHTSWEG, reine Anzeige §3).
+  { slug: 'zustaendigkeit', titel: 'Zuständigkeit Zivilprozess', kategorie: 'Zivilprozess',
     kurzbeschrieb: 'Verfahrensart, Schlichtungspflicht und -behörde sowie örtlicher Gerichtsstand nach ZPO (Fassung 1.1.2025) – mit Handelsgerichts- und Direktklage-Weichen; konkrete Stelle mit Adresse für erfasste Kantone (BS).',
     normen: ['Art. 197 ZPO', 'Art. 199 ZPO', 'Art. 200 ZPO', 'Art. 210 ZPO', 'Art. 243 ZPO'], status: 'entwurf', icon: 'scale' },
   { slug: 'tagerechner', titel: 'Fristenrechner (Tage · ZPO · SchKG)', kategorie: 'Übergreifend',

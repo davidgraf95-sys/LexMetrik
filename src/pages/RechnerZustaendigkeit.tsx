@@ -13,9 +13,12 @@ import type { Rechtsweg } from '../lib/zustaendigkeit';
 // Beschrieb und Norm-Chips folgen jetzt der Auswahl (reine Anzeige, §3/§5:
 // die Zivil-Werte bleiben einzig in der Registry gepflegt).
 const HERO_JE_RECHTSWEG: Record<Exclude<Rechtsweg, 'zivil' | 'verwaltung'>, {
-  kategorie: string; kurzbeschrieb: string; normen: string[];
+  titel: string; kategorie: string; kurzbeschrieb: string; normen: string[];
 }> = {
   schkg: {
+    // S-3 Struktur-Umbau 10.6.2026: Titel folgt der Rechtsweg-Karte
+    // (Registry-Titel = Zivil-Default «Zuständigkeit Zivilprozess»).
+    titel: 'Zuständigkeit Vollstreckung (SchKG)',
     kategorie: 'SchKG',
     kurzbeschrieb:
       'Betreibungsort, zuständige Stelle (Betreibungsamt, Gericht oder Aufsichtsbehörde) und Fristen je '
@@ -23,6 +26,7 @@ const HERO_JE_RECHTSWEG: Record<Exclude<Rechtsweg, 'zivil' | 'verwaltung'>, {
     normen: ['Art. 46–55 SchKG', 'Art. 84 SchKG', 'Art. 272 SchKG', 'Art. 17 SchKG'],
   },
   straf: {
+    titel: 'Zuständigkeit Strafverfahren',
     kategorie: 'Strafprozess',
     kurzbeschrieb:
       'Örtlicher Gerichtsstand und zuständige Strafbehörde (Art. 31–42 StPO), Anzeige-Fahrplan sowie das '
@@ -67,6 +71,7 @@ export function RechnerZustaendigkeit() {
     <div className="space-y-6">
       <RechnerKopf
         calc={calc}
+        titelOverride={hero?.titel}
         kategorieOverride={hero?.kategorie}
         kurzbeschriebOverride={hero?.kurzbeschrieb}
         normenOverride={hero?.normen}

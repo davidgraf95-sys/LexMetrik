@@ -534,20 +534,22 @@ const KARTEN: Record<string, CalculatorCard> = {
   // EINE Zuständigkeits-Karte statt der drei Einzelkarten gerichtsstand/
   // verfahrensart/schlichtung (Konsolidierung 5.6.2026): die Engine
   // beantwortet alle drei Fragen in einem Durchlauf (ZUSTAENDIGKEIT-AUFTRAG.md).
+  // S-3 STRUKTUR-UMBAU (Auftrag David 10.6.2026 abends): Die Zuständigkeit
+  // ist wieder VIERTEILIG sichtbar — Zivilprozess · Vollstreckung ·
+  // Strafverfahren · Verwaltungsverfahren erhalten je ein eigenes Feld in
+  // der Kategorie-Ansicht (übersteuert die E2-Konsolidierung vom 7.6. für
+  // diese Kategorie). Dieselbe Rechner-Seite trägt weiterhin die Weiche
+  // (#schkg/#straf); Verwaltungsverfahren ist ehrlich «geplant» (keine
+  // Engine). Reihenfolge: lib/zustaendigkeitKategorie.ts.
   zustaendigkeit: {
     id: 'zustaendigkeit', modus: 'rechner', art: 'zuordnung', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
-    title: 'Zuständigkeit (Zivilprozess · Betreibung · Strafverfahren)',
-    // Konsolidierung 7.6.2026 (FAHRPLAN-KATALOG-KONSOLIDIERUNG E2, Auftrag
-    // David «simplifizieren»): die drei Rechtsweg-Karten des Katalog-Splits
-    // vom 6.6. sind wieder EINE Karte — die Seite trägt die Rechtsweg-Weiche
-    // (#zivil/#schkg/#straf), die Szenarien-Zeilen machen die Abdeckung sichtbar.
+    title: 'Zuständigkeit Zivilprozess',
     szenarien: [
-      { label: 'Zivilprozess: Verfahrensart · Schlichtung · Gerichtsstand', status: 'entwurf' },
-      { label: 'Betreibung: Betreibungsort · zuständige Stelle (Art. 46 ff. SchKG)', status: 'entwurf' },
-      { label: 'Strafverfahren: Gerichtsstand · Behörde · Rechtsmittel', status: 'entwurf' },
+      { label: 'Einleitung: Verfahrensart · Schlichtung · Gerichtsstand', status: 'entwurf' },
+      { label: 'Rechtsmittel: Berufung/Beschwerde mit Fristen', status: 'entwurf' },
     ],
-    description: 'Welches Gericht, welche Behörde, welches Verfahren – für alle drei Rechtswege: Zivilprozess (Verfahrensart, Schlichtungspflicht und -behörde, örtlicher Gerichtsstand nach ZPO), Betreibung (Betreibungsort Art. 46–55 SchKG, zuständige Stelle, Rechtsmittelweg) und Strafverfahren (Tatort-Grundsatz, Strafbehörde, Anzeige-Fahrplan); konkrete Stelle mit Adresse für erfasste Kantone.',
+    description: 'Welches Gericht und welches Verfahren im Zivilprozess: Verfahrensart, Schlichtungspflicht und -behörde, örtlicher Gerichtsstand nach ZPO sowie die Rechtsmittel-Strecke (Berufung/Beschwerde samt Fristen); konkrete Stelle mit Adresse für erfasste Kantone.',
     status: 'entwurf',
     norms: [
       // Schlichtung: Grundsatz, Verzicht, paritätische Behörden
@@ -558,25 +560,54 @@ const KARTEN: Record<string, CalculatorCard> = {
       { label: 'Art. 210 ZPO', url: fedlexUrl('ZPO', '210'), verified: false },
       // Verfahrensart
       { label: 'Art. 243 ZPO', url: fedlexUrl('ZPO', '243'), verified: false },
-      // Betreibungs-Rechtsweg: ordentlicher Betreibungsort
-      { label: 'Art. 46 SchKG', url: fedlexUrl('SchKG', '46'), verified: false },
-      // Straf-Rechtsweg: Gerichtsstand des Tatortes
-      { label: 'Art. 31 StPO', url: fedlexUrl('StPO', '31'), verified: false },
     ],
     href: '/rechner/zustaendigkeit',
-    // Rechtsmittel-Strecke (bestimmeRechtsmittel: Berufung/Beschwerde samt
-    // Fristen) und Streitsache «Scheidung» sind Teil des Wizards; Kosten je
-    // Kanton verdrahtet — Keywords entsprechend (verifiziert 6.6.2026).
     keywords: ['Zuständigkeit', 'Gerichtsstand', 'Verfahrensart', 'Schlichtung', 'Schlichtungsbehörde', 'Streitwert', 'Handelsgericht',
       'Urteil', 'Urteil erhalten', 'Entscheid', 'Rechtsmittel', 'Berufung', 'Beschwerde', 'Scheidung',
-      'Gerichtskosten', 'örtliche Zuständigkeit', 'sachliche Zuständigkeit',
-      // Betreibungs-Rechtsweg (übernommen aus der aufgelösten Split-Karte)
-      'Betreibungsort', 'Betreibungsamt', 'Rechtsöffnung', 'Arrest', 'Aufsichtsbeschwerde', 'Konkursgericht',
-      'betreiben', 'Betreibung einleiten', 'Schuldner', 'Wohnsitz',
-      // Straf-Rechtsweg (übernommen aus der aufgelösten Split-Karte)
-      'Tatort', 'Staatsanwaltschaft', 'Strafanzeige', 'Strafantrag', 'Einsprache'],
-    related: ['zpo-fristen', 'schlichtungsgesuch', 'schkg-fristen'],
+      'Gerichtskosten', 'örtliche Zuständigkeit', 'sachliche Zuständigkeit'],
+    related: ['zpo-fristen', 'schlichtungsgesuch', 'schkg-zustaendigkeit', 'straf-zustaendigkeit'],
     icon: 'scale',
+  },
+  'schkg-zustaendigkeit': {
+    id: 'schkg-zustaendigkeit', modus: 'rechner', art: 'zuordnung', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    rechtsbereich: 'privat',
+    title: 'Zuständigkeit Vollstreckung (SchKG)',
+    description: 'Betreibungsort (Art. 46–55 SchKG), zuständige Stelle (Betreibungsamt, Gericht oder Aufsichtsbehörde) und Fristen je Anliegen – von der Einleitung der Betreibung bis zur Beschwerde gegen das Amt; konkrete Amtsadresse für erfasste Kantone.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 46 SchKG', url: fedlexUrl('SchKG', '46'), verified: false },
+      { label: 'Art. 84 SchKG', url: fedlexUrl('SchKG', '84'), verified: false },
+      { label: 'Art. 17 SchKG', url: fedlexUrl('SchKG', '17'), verified: false },
+    ],
+    href: '/rechner/zustaendigkeit#schkg',
+    keywords: ['Zuständigkeit', 'Vollstreckung', 'Betreibungsort', 'Betreibungsamt', 'Rechtsöffnung', 'Arrest', 'Aufsichtsbeschwerde', 'Konkursgericht',
+      'betreiben', 'Betreibung einleiten', 'Schuldner', 'Wohnsitz'],
+    related: ['schkg-fristen', 'betreibungskosten', 'zustaendigkeit'],
+    icon: 'scale',
+  },
+  'straf-zustaendigkeit': {
+    id: 'straf-zustaendigkeit', modus: 'rechner', art: 'zuordnung', rechtsgebiet: 'Strafrecht & Strafprozess',
+    rechtsbereich: 'straf',
+    title: 'Zuständigkeit Strafverfahren',
+    description: 'Örtlicher Gerichtsstand und zuständige Strafbehörde (Art. 31–42 StPO), Anzeige-Fahrplan sowie das statthafte Rechtsmittel mit Fristen (Art. 379 ff. StPO); Staatsanwaltschafts-Adresse für erfasste Kantone.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 31 StPO', url: fedlexUrl('StPO', '31'), verified: false },
+      { label: 'Art. 301 StPO', url: fedlexUrl('StPO', '301'), verified: false },
+    ],
+    href: '/rechner/zustaendigkeit#straf',
+    keywords: ['Zuständigkeit', 'Strafverfahren', 'Tatort', 'Staatsanwaltschaft', 'Strafanzeige', 'Strafantrag', 'Einsprache', 'Gerichtsstand'],
+    related: ['strafanzeige', 'strafantrag-vorlage', 'zustaendigkeit'],
+    icon: 'scale',
+  },
+  'verwaltung-zustaendigkeit': {
+    id: 'verwaltung-zustaendigkeit', modus: 'rechner', art: 'zuordnung', rechtsgebiet: 'Verwaltungsrecht',
+    rechtsbereich: 'oeffentlich',
+    title: 'Zuständigkeit Verwaltungsverfahren',
+    description: 'Zuständige Behörde und Beschwerdeinstanz im Verwaltungsverfahren (VwVG/kantonal) – Einsprache, Beschwerde und Rechtsmittelweg.',
+    status: 'geplant', norms: [],
+    keywords: ['Zuständigkeit', 'Verwaltungsverfahren', 'Verfügung', 'Einsprache', 'Beschwerde', 'Beschwerdeinstanz', 'VwVG'],
+    related: ['zustaendigkeit'],
   },
   iprg: {
     id: 'iprg', modus: 'rechner', art: 'zuordnung', rechtsgebiet: 'Weitere Rechtsgebiete',
