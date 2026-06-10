@@ -9,6 +9,9 @@ import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
+import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
+import { KANTONE } from '../lib/kantone';
+import type { Kanton } from '../types/legal';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { kvPrefillLesen } from '../lib/vorlagen/klageVereinfacht';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -90,10 +93,10 @@ export function VorlageKlageVereinfacht() {
   const maengel = useMemo(() => kvMaengel(a), [a]);
   const hinweise = useMemo(() => kvHinweise(a), [a]);
   const sw = kvStreitwert(a);
-  const routing = a.materie ? kvRouting(a.materie, sw) : null;
+  const routing = a.materie ? kvRouting(a.materie, sw, a.gerichtsKanton) : null;
   const stopp = routing !== null && !routing.anwendbar;
   const frist = a.klagebewilligungVorhanden && a.klagebewilligungDatum && a.materie
-    ? kvKlagefrist(a.klagebewilligungDatum, a.materie) : null;
+    ? kvKlagefrist(a.klagebewilligungDatum, a.materie, a.gerichtsKanton) : null;
 
   const fehler = maengel.filter((m) => m.schritt === schritt).map((m) => m.text);
   const card = karte('klage-vereinfacht');
@@ -102,6 +105,54 @@ export function VorlageKlageVereinfacht() {
     switch (SCHRITTE[schritt].id) {
       case 'materie': return (
         <div className="space-y-4">
+          {/* Kantonsausbau 10.6.2026 (Auftrag David): Gericht je Kanton.
+              BS = abgenommenes GOG-Routing; übrige Kantone über die zweifach
+              geprüfte Recherche-Schicht (KvGerichtWahl) bzw. Handeingabe. */}
+          <div className="space-y-3">
+            <p className="lc-overline">Zuständiges Gericht</p>
+            <div className="grid grid-cols-[8rem_1fr] gap-3 items-start">
+              <Field label="Kanton">
+                <select className={inputCls} value={a.gerichtsKanton}
+                  onChange={(e) => set('gerichtsKanton', e.target.value as Kanton)}>
+                  {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+                </select>
+              </Field>
+              {a.gerichtsKanton === 'BS' && !a.gerichtManuellAktiv && (
+                <div className="lc-notice text-body-s self-end">
+                  Basel-Stadt: Zivil- bzw. Arbeitsgericht wird nach Materie und Streitwert
+                  automatisch gesetzt (§§ 71/73 GOG BS, abgenommen).
+                </div>
+              )}
+            </div>
+            {a.gerichtsKanton !== 'BS' && !a.gerichtManuellAktiv && (
+              <KvGerichtWahl kanton={a.gerichtsKanton} materie={a.materie}
+                onAufgeloest={(z) => set('gerichtAufgeloest', z ? { zeilen: z } : undefined)} />
+            )}
+            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
+                onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
+              <span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
+            </label>
+            {a.gerichtManuellAktiv && (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-6">
+                <Field label="Gericht">
+                  <input className={inputCls} value={a.gerichtManuell?.name ?? ''}
+                    onChange={(e) => set('gerichtManuell', { name: e.target.value, strasse: a.gerichtManuell?.strasse ?? '', plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
+                    placeholder="z. B. Bezirksgericht X" />
+                </Field>
+                <Field label="Strasse und Hausnummer">
+                  <input className={inputCls} value={a.gerichtManuell?.strasse ?? ''}
+                    onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: e.target.value, plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
+                    placeholder="z. B. Gerichtsgasse 1" />
+                </Field>
+                <Field label="PLZ und Ort">
+                  <input className={inputCls} value={a.gerichtManuell?.plzOrt ?? ''}
+                    onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: a.gerichtManuell?.strasse ?? '', plzOrt: e.target.value })}
+                    placeholder="z. B. 8001 Zürich" />
+                </Field>
+              </div>
+            )}
+          </div>
           <SelectionGrid
             className="grid grid-cols-1 sm:grid-cols-2 gap-2"
             items={KV_MATERIEN.map((m) => ({ code: m.id, label: m.label, sub: m.hint }))}
@@ -330,8 +381,9 @@ export function VorlageKlageVereinfacht() {
               : undefined} />
 
           <p className="text-xs text-ink-500">
-            Pilot Basel-Stadt (GOG-BS-Routing). Andere Kantone: Gericht und Spruchkörper weichen ab —
-            Vorlage dort nur mit eigener Anpassung der Zuständigkeitsangaben verwenden.
+            {a.gerichtsKanton === 'BS'
+              ? 'Basel-Stadt: Spruchkörper-Routing amtlich abgenommen (GOG BS).'
+              : `Kanton ${a.gerichtsKanton}: Gerichtsadresse aus zweifach geprüfter Recherche (fachliche Abnahme ausstehend); Spruchkörper und kantonale Besonderheiten richten sich nach kantonalem Recht — Angaben vor Einreichung prüfen.`}
           </p>
         </div>
       );
@@ -341,9 +393,9 @@ export function VorlageKlageVereinfacht() {
   return (
     <VorlagenWizardRahmen
       zurueckHref="/"
-      overline={`${card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · Basel-Stadt`}
+      overline={`${card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · ${a.gerichtsKanton === 'BS' ? 'Basel-Stadt' : `Kanton ${a.gerichtsKanton}`}`}
       titel="Klage im vereinfachten Verfahren"
-      intro="Erstellt die Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren, Streitgegenstand, freiwillige strukturierte Begründung, Beilagen mit Klagebewilligung — inkl. BS-Routing (Zivil-/Arbeitsgericht), Kostenfreiheits-Prüfung und Klagefrist-Berechnung mit Gerichtsferien. Ohne Sprachmodell."
+      intro="Erstellt die Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren, Streitgegenstand, freiwillige strukturierte Begründung, Beilagen mit Klagebewilligung — inkl. Gerichts-Adressat für alle Kantone (BS: abgenommenes Zivil-/Arbeitsgericht-Routing), Kostenfreiheits-Prüfung und Klagefrist-Berechnung mit Gerichtsferien. Ohne Sprachmodell."
       norms={card?.norms ?? []}
       badge="Papierform · unterschreiben · im Doppel"
       fussnote="Eingaben werden nicht gespeichert – sie bestehen nur, solange diese Seite geöffnet ist."

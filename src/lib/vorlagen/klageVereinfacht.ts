@@ -2,8 +2,11 @@ import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtDatum, fmtCHF } from './datum';
 import { parteiZeilen, parteiVollstaendig, parteiKurz, SG_PERSON_NATUERLICH, type SgPartei } from './schlichtungsgesuchBs';
+import { behoerdeManuellVollstaendig, type BehoerdeManuell } from './behoerden';
 import { ZPO_SCHWELLEN } from '../zustaendigkeit';
 import { berechneFrist } from '../zpoFristen';
+import { KANTONE } from '../kantone';
+import type { Kanton } from '../../types/legal';
 
 // ─── Klage im vereinfachten Verfahren (Art. 243 ff. ZPO) · Basel-Stadt ───────
 //
@@ -58,38 +61,62 @@ export const KV_GERICHTE_BS = {
 // ── Routing (deterministisch, Auftrag «Routing-Logik der Engine») ───────────
 
 export type KvRouting =
-  | { anwendbar: true; gericht: keyof typeof KV_GERICHTE_BS; spruchkoerper: string; spruchkoerperNorm: string;
+  | { anwendbar: true; gericht: keyof typeof KV_GERICHTE_BS | 'kantonal'; spruchkoerper: string; spruchkoerperNorm: string;
       kostenlos: boolean; kostenlosNorm?: string; abs2Lit?: string }
   | { anwendbar: false; stopp: 'ordentlich' | 'arbeit_ueber_30k' | 'kvg_sozialversicherungsgericht' };
 
-export function kvRouting(materie: KvMaterie, streitwertCHF: number | null): KvRouting {
+// Kantonsausbau 10.6.2026 (Auftrag David «alle Kantone abbilden»): Die
+// ANWENDBARKEIT (Art. 243/114 ZPO) ist Bundesrecht und gilt überall gleich;
+// kantonsspezifisch sind nur Gericht und Spruchkörper. Ausserhalb BS liefert
+// das Routing gericht:'kantonal' mit neutraler Spruchkörper-Angabe — die
+// konkrete Adresse löst die UI über data/zivilgerichteErstinstanz.ts auf
+// (zweifach geprüft, Abnahme ausstehend); die BS-Spruchkörper (§ 71 GOG BS)
+// bleiben dem abgenommenen BS-Pilot vorbehalten (§1: kein stilles
+// Übertragen kantonalen Organisationsrechts auf andere Kantone).
+export function kvRouting(materie: KvMaterie, streitwertCHF: number | null, kanton: Kanton = 'BS'): KvRouting {
+  const bs = kanton === 'BS';
+  const kantonal = {
+    gericht: 'kantonal' as const,
+    spruchkoerper: 'Erstinstanzliches Zivilgericht',
+    spruchkoerperNorm: `Spruchkörper nach kantonalem Gerichtsorganisationsrecht (${kanton})`,
+  };
   if (materie === 'arbeit') {
     if (streitwertCHF !== null && streitwertCHF <= ZPO_SCHWELLEN.VEREINFACHT) {
-      return { anwendbar: true, gericht: 'arbeitsgericht', spruchkoerper: 'Arbeitsgericht (Dreiergericht)',
-        spruchkoerperNorm: '§§ 73 f. GOG BS', kostenlos: true, kostenlosNorm: 'Art. 114 lit. c ZPO' };
+      return bs
+        ? { anwendbar: true, gericht: 'arbeitsgericht', spruchkoerper: 'Arbeitsgericht (Dreiergericht)',
+            spruchkoerperNorm: '§§ 73 f. GOG BS', kostenlos: true, kostenlosNorm: 'Art. 114 lit. c ZPO' }
+        : { anwendbar: true, ...kantonal, kostenlos: true, kostenlosNorm: 'Art. 114 lit. c ZPO' };
     }
     return { anwendbar: false, stopp: 'arbeit_ueber_30k' };
   }
   if (materie === 'glg' || materie === 'mitwirkung') {
-    return { anwendbar: true, gericht: 'zivilgericht', spruchkoerper: 'Dreiergericht des Zivilgerichts',
-      spruchkoerperNorm: '§ 71 GOG BS (Geschäftsverteilung 2026)',
-      kostenlos: true, kostenlosNorm: materie === 'glg' ? 'Art. 114 lit. a ZPO' : 'Art. 114 lit. d ZPO',
+    const kosten = { kostenlos: true, kostenlosNorm: materie === 'glg' ? 'Art. 114 lit. a ZPO' : 'Art. 114 lit. d ZPO',
       abs2Lit: materie === 'glg' ? 'a' : 'e' };
+    return bs
+      ? { anwendbar: true, gericht: 'zivilgericht', spruchkoerper: 'Dreiergericht des Zivilgerichts',
+          spruchkoerperNorm: '§ 71 GOG BS (Geschäftsverteilung 2026)', ...kosten }
+      : { anwendbar: true, ...kantonal, ...kosten };
   }
   if (materie === 'gewaltschutz' || materie === 'dsg_auskunft' || materie === 'miete_kernbereich') {
-    return { anwendbar: true, gericht: 'zivilgericht', spruchkoerper: 'Einzelgericht des Zivilgerichts',
-      spruchkoerperNorm: '§ 71 GOG BS (Geschäftsverteilung 2026)',
+    const kosten = {
       // Miete: im Entscheidverfahren NICHT kostenfrei (Art. 114 kennt keine
       // Miete-Position — verifizierter Wortlaut; Abweichung vom Auftrag).
       kostenlos: materie !== 'miete_kernbereich',
       kostenlosNorm: materie === 'gewaltschutz' ? 'Art. 114 lit. f ZPO' : materie === 'dsg_auskunft' ? 'Art. 114 lit. g ZPO' : undefined,
-      abs2Lit: materie === 'gewaltschutz' ? 'b' : materie === 'dsg_auskunft' ? 'd' : 'c' };
+      abs2Lit: materie === 'gewaltschutz' ? 'b' : materie === 'dsg_auskunft' ? 'd' : 'c',
+    };
+    return bs
+      ? { anwendbar: true, gericht: 'zivilgericht', spruchkoerper: 'Einzelgericht des Zivilgerichts',
+          spruchkoerperNorm: '§ 71 GOG BS (Geschäftsverteilung 2026)', ...kosten }
+      : { anwendbar: true, ...kantonal, ...kosten };
   }
   if (materie === 'kvg_zusatz') return { anwendbar: false, stopp: 'kvg_sozialversicherungsgericht' };
   // vermögensrechtlich (Art. 243 Abs. 1)
   if (streitwertCHF !== null && streitwertCHF <= ZPO_SCHWELLEN.VEREINFACHT) {
-    return { anwendbar: true, gericht: 'zivilgericht', spruchkoerper: 'Einzelgericht des Zivilgerichts',
-      spruchkoerperNorm: '§ 71 GOG BS (Geschäftsverteilung 2026)', kostenlos: false };
+    return bs
+      ? { anwendbar: true, gericht: 'zivilgericht', spruchkoerper: 'Einzelgericht des Zivilgerichts',
+          spruchkoerperNorm: '§ 71 GOG BS (Geschäftsverteilung 2026)', kostenlos: false }
+      : { anwendbar: true, ...kantonal, kostenlos: false };
   }
   return { anwendbar: false, stopp: 'ordentlich' };
 }
@@ -100,7 +127,7 @@ export function kvRouting(materie: KvMaterie, streitwertCHF: number | null): KvR
 // Berechnung über die BESTEHENDE ZPO-Fristen-Engine (§4/§5: geteilte, getestete
 // Arithmetik mit Stillstand; Verfahrenstyp 'klagefrist_klagebewilligung').
 
-export function kvKlagefrist(kbDatumISO: string, materie: KvMaterie): {
+export function kvKlagefrist(kbDatumISO: string, materie: KvMaterie, kanton: Kanton = 'BS'): {
   ablauf: string; ablaufISO: string; stillstandAktiv: boolean; fristLabel: string;
 } | null {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(kbDatumISO)) return null;
@@ -115,7 +142,8 @@ export function kvKlagefrist(kbDatumISO: string, materie: KvMaterie): {
     einheit: miete ? 'tage' : 'monate',
     laenge: miete ? 30 : 3,
     verfahren: 'klagefrist_klagebewilligung',
-    kanton: 'BS',
+    // Kantonsausbau 10.6.2026: Feiertage am GERICHTSORT (Art. 142 Abs. 3 ZPO).
+    kanton,
     fristnatur: 'gesetzlich',
   });
   return {
@@ -131,6 +159,12 @@ export type KvAusnahme = '' | 'verzicht_gemeinsam' | 'verzicht_einseitig' | 'art
 export type KvAnswers = {
   materie: KvMaterie | '';
   streitwert: string;             // BetragsFeld-Rohwert; leer = nicht beziffert
+  // Kantonsausbau 10.6.2026 (Auftrag David): Gericht je Kanton.
+  gerichtsKanton: Kanton;
+  /** Ausserhalb BS: aufgelöste Gerichtsadresse (data/zivilgerichteErstinstanz) */
+  gerichtAufgeloest?: { zeilen: string[] };
+  gerichtManuellAktiv?: boolean;
+  gerichtManuell?: BehoerdeManuell;
   // Parteien (je eine; Mehrparteien später)
   klaeger: SgPartei;
   beklagte: SgPartei;
@@ -164,12 +198,13 @@ export type KvAnswers = {
 // ── Prefill-Brücke (FAHRPLAN-PRAXIS 2.1b): Zuständigkeits-Wizard → Klage ────
 // Muster sgPrefill (§5: Kodieren/Lesen am selben Ort); nur validierte Werte.
 
-export function kvPrefillKodieren(p: { materie: KvMaterie; streitwertCHF?: number | null }): string {
+export function kvPrefillKodieren(p: { materie: KvMaterie; streitwertCHF?: number | null; kanton?: Kanton }): string {
   const q = new URLSearchParams();
   q.set('materie', p.materie);
   if (p.streitwertCHF != null && Number.isFinite(p.streitwertCHF) && p.streitwertCHF >= 0) {
     q.set('streitwert', String(p.streitwertCHF));
   }
+  if (p.kanton) q.set('kanton', p.kanton);
   return q.toString();
 }
 
@@ -180,12 +215,15 @@ export function kvPrefillLesen(search: string): Partial<KvAnswers> | null {
   const aus: Partial<KvAnswers> = { materie };
   const sw = q.get('streitwert');
   if (sw && /^\d+(\.\d{1,2})?$/.test(sw)) aus.streitwert = sw;
+  const kt = q.get('kanton');
+  if (kt && (KANTONE as readonly string[]).includes(kt)) aus.gerichtsKanton = kt as Kanton;
   return aus;
 }
 
 export const KV_DEFAULTS: KvAnswers = {
   materie: '',
   streitwert: '',
+  gerichtsKanton: 'BS',
   klaeger: { ...SG_PERSON_NATUERLICH },
   beklagte: { ...SG_PERSON_NATUERLICH },
   begehrenTyp: 'beziffert',
@@ -218,16 +256,39 @@ export type KvMangel = { schritt: number; text: string };
 export function kvMaengel(a: KvAnswers): KvMangel[] {
   const m: KvMangel[] = [];
   const sw = kvStreitwert(a);
-  const routing = a.materie ? kvRouting(a.materie, sw) : null;
+  const routing = a.materie ? kvRouting(a.materie, sw, a.gerichtsKanton) : null;
 
   if (!a.materie) m.push({ schritt: 0, text: 'Materie wählen (bestimmt Verfahren, Spruchkörper und Kosten).' });
   if (routing && !routing.anwendbar) {
     if (routing.stopp === 'ordentlich') m.push({ schritt: 0, text: `Streitwert über CHF ${fmtCHF(String(ZPO_SCHWELLEN.VEREINFACHT))} ohne Materie nach Art. 243 Abs. 2 ZPO → ordentliches Verfahren (Art. 219 ff. ZPO); diese Vorlage ist nicht anwendbar.` });
-    if (routing.stopp === 'arbeit_ueber_30k') m.push({ schritt: 0, text: `Arbeitsrechtliche Streitigkeit über CHF ${fmtCHF(String(ZPO_SCHWELLEN.VEREINFACHT))}: ordentliches Verfahren vor dem Zivilgericht; das Arbeitsgericht ist nur mit Vereinbarung beider Parteien zuständig (§ 73 Abs. 2 GOG BS).` });
+    if (routing.stopp === 'arbeit_ueber_30k') m.push({
+      schritt: 0,
+      text: a.gerichtsKanton === 'BS'
+        ? `Arbeitsrechtliche Streitigkeit über CHF ${fmtCHF(String(ZPO_SCHWELLEN.VEREINFACHT))}: ordentliches Verfahren vor dem Zivilgericht; das Arbeitsgericht ist nur mit Vereinbarung beider Parteien zuständig (§ 73 Abs. 2 GOG BS).`
+        : `Arbeitsrechtliche Streitigkeit über CHF ${fmtCHF(String(ZPO_SCHWELLEN.VEREINFACHT))}: ordentliches Verfahren (Art. 219 ff. ZPO); diese Vorlage ist nicht anwendbar.`,
+    });
     // § 82 GOG BS: Sozialversicherungsgericht als einzige kantonale Instanz
     // inkl. Zusatzversicherungen (Art. 7 ZPO) — GOG-Recherche 5.6.2026; die
     // Auftrags-Angabe «§ 50 GOG» war falsch (§ 50 = Verwaltungschef).
-    if (routing.stopp === 'kvg_sozialversicherungsgericht') m.push({ schritt: 0, text: 'Zusatzversicherungen zur sozialen Krankenversicherung: In Basel-Stadt entscheidet das Sozialversicherungsgericht als einzige kantonale Instanz (§ 82 GOG BS; Art. 7 ZPO) — diese Vorlage deckt den Weg nicht ab.' });
+    // Kantonsausbau 10.6.2026: Art. 7 ZPO gilt bundesweit (einzige kantonale
+    // Instanz möglich) — ausserhalb BS kantonsneutral formuliert.
+    if (routing.stopp === 'kvg_sozialversicherungsgericht') m.push({
+      schritt: 0,
+      text: a.gerichtsKanton === 'BS'
+        ? 'Zusatzversicherungen zur sozialen Krankenversicherung: In Basel-Stadt entscheidet das Sozialversicherungsgericht als einzige kantonale Instanz (§ 82 GOG BS; Art. 7 ZPO) — diese Vorlage deckt den Weg nicht ab.'
+        : `Zusatzversicherungen zur sozialen Krankenversicherung: Die Kantone können ein Gericht als einzige kantonale Instanz bezeichnen (Art. 7 ZPO — im Kanton ${a.gerichtsKanton} regelmässig das Versicherungs-/Sozialversicherungsgericht); diese Vorlage deckt den Weg nicht ab. Hat der Kanton keine einzige Instanz bezeichnet, gilt das vereinfachte Verfahren vor dem ordentlichen Gericht — auch diesen Weg deckt die Vorlage bewusst nicht ab.`,
+    });
+  }
+  // Kantonsausbau 10.6.2026: ausserhalb BS muss das Gericht bestimmt sein
+  // (aufgelöst über die Recherche-Schicht oder von Hand) — Export-Gate wie
+  // beim Schlichtungsgesuch.
+  if (a.gerichtsKanton !== 'BS'
+      && !(a.gerichtManuellAktiv && behoerdeManuellVollstaendig(a.gerichtManuell))
+      && (a.gerichtAufgeloest?.zeilen.length ?? 0) < 3) {
+    m.push({ schritt: 0, text: `Zuständiges Gericht für den Kanton ${a.gerichtsKanton} bestimmen (Gericht wählen) — oder die Adresse von Hand erfassen.` });
+  }
+  if (a.gerichtManuellAktiv && !behoerdeManuellVollstaendig(a.gerichtManuell)) {
+    m.push({ schritt: 0, text: 'Gerichtsadresse von Hand: Name, Strasse mit Hausnummer und PLZ/Ort vollständig erfassen.' });
   }
   if (a.materie === 'vermoegensrechtlich' && sw === null) {
     m.push({ schritt: 0, text: 'Streitwert angeben (Art. 244 Abs. 1 lit. d ZPO; Berechnung nach Art. 91 ZPO – ohne Zinsen und Kosten).' });
@@ -254,7 +315,7 @@ export function kvMaengel(a: KvAnswers): KvMangel[] {
 export function kvHinweise(a: KvAnswers): string[] {
   const h: string[] = [];
   const sw = kvStreitwert(a);
-  const routing = a.materie ? kvRouting(a.materie, sw) : null;
+  const routing = a.materie ? kvRouting(a.materie, sw, a.gerichtsKanton) : null;
   if (routing?.anwendbar && routing.kostenlos && routing.kostenlosNorm) {
     h.push(`Gerichtskostenfrei (${routing.kostenlosNorm}); die Parteientschädigung an die Gegenpartei bleibt bei Unterliegen geschuldet.`);
   }
@@ -292,7 +353,7 @@ export const KV_SCHEMA: VorlageSchema = {
     { id: 'K01_absender', rolle: 'absender', text: '{{klaegerBlock}}{{vertretungZeile}}',
       begruendung: 'Absenderin = klagende Partei (bzw. Vertretung).', norm: 'Art. 244 Abs. 1 lit. a ZPO' },
     { id: 'K02_adressat', rolle: 'adressat', text: '{{gerichtBlock}}',
-      begruendung: 'Zuständiges Gericht aus dem deterministischen BS-Routing (Materie/Streitwert).', norm: 'Art. 4 ZPO i.V.m. GOG BS' },
+      begruendung: 'Zuständiges Gericht aus dem deterministischen Routing (BS: GOG-Spruchkörper; übrige Kantone: kantonale Gerichtsschicht).', norm: 'Art. 4 ZPO i.V.m. GOG BS' },
     { id: 'K03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}',
       begruendung: 'Ort und Datum der Eingabe.', norm: 'Art. 244 Abs. 1 lit. e ZPO' },
     { id: 'K04_betreff', rolle: 'betreff', text: 'Klage im vereinfachten Verfahren (Art. 243 ff. ZPO){{streitwertBetreffZeile}}',
@@ -337,8 +398,19 @@ export const KV_SCHEMA: VorlageSchema = {
 
 export function kvZusammenstellen(a: KvAnswers) {
   const sw = kvStreitwert(a);
-  const routing = a.materie ? kvRouting(a.materie, sw) : null;
-  const gericht = routing?.anwendbar ? KV_GERICHTE_BS[routing.gericht] : KV_GERICHTE_BS.zivilgericht;
+  const routing = a.materie ? kvRouting(a.materie, sw, a.gerichtsKanton) : null;
+  // Adressat-Kaskade (Kantonsausbau 10.6.2026, Muster Schlichtungsgesuch §5):
+  // Handeingabe → BS-Stammdaten (abgenommen) → kantonal aufgelöste Adresse
+  // (zweifach geprüfte Recherche-Schicht) → Striche (Mängel-Gate hält Export).
+  const bsGericht = routing?.anwendbar && routing.gericht !== 'kantonal'
+    ? KV_GERICHTE_BS[routing.gericht] : KV_GERICHTE_BS.zivilgericht;
+  const gerichtBlock = a.gerichtManuellAktiv && behoerdeManuellVollstaendig(a.gerichtManuell)
+    ? [a.gerichtManuell!.name, a.gerichtManuell!.strasse, a.gerichtManuell!.plzOrt].join('\n')
+    : a.gerichtsKanton === 'BS'
+      ? [bsGericht.name, bsGericht.strasse, bsGericht.plzOrt].join('\n')
+      : (a.gerichtAufgeloest?.zeilen.length ?? 0) >= 3
+        ? a.gerichtAufgeloest!.zeilen.join('\n')
+        : '________\n________\n________';
 
   // Rechtsbegehren-Liste deterministisch aufbauen
   const begehren: { text: string }[] = [];
@@ -358,7 +430,9 @@ export function kvZusammenstellen(a: KvAnswers) {
   // Formelles
   const formellesTeile: string[] = [];
   if (routing?.anwendbar) {
-    formellesTeile.push(`Sachlich zuständig ist das ${routing.spruchkoerper} (${routing.spruchkoerperNorm}); es gilt das vereinfachte Verfahren (${routing.abs2Lit ? `Art. 243 Abs. 2 lit. ${routing.abs2Lit} ZPO, streitwertunabhängig` : 'Art. 243 Abs. 1 ZPO'}).`);
+    formellesTeile.push(routing.gericht === 'kantonal'
+      ? `Sachlich zuständig ist das erstinstanzliche Zivilgericht (Spruchkörper nach kantonalem Gerichtsorganisationsrecht, Kanton ${a.gerichtsKanton}); es gilt das vereinfachte Verfahren (${routing.abs2Lit ? `Art. 243 Abs. 2 lit. ${routing.abs2Lit} ZPO, streitwertunabhängig` : 'Art. 243 Abs. 1 ZPO'}).`
+      : `Sachlich zuständig ist das ${routing.spruchkoerper} (${routing.spruchkoerperNorm}); es gilt das vereinfachte Verfahren (${routing.abs2Lit ? `Art. 243 Abs. 2 lit. ${routing.abs2Lit} ZPO, streitwertunabhängig` : 'Art. 243 Abs. 1 ZPO'}).`);
     if (routing.kostenlos && routing.kostenlosNorm) formellesTeile.push(`Es werden keine Gerichtskosten gesprochen (${routing.kostenlosNorm}).`);
   }
   if (a.klagebewilligungVorhanden) {
@@ -388,7 +462,7 @@ export function kvZusammenstellen(a: KvAnswers) {
     ...a,
     klaegerBlock: parteiZeilen(a.klaeger).join('\n'),
     vertretungZeile: a.vertretung?.trim() ? `\nvertreten durch ${a.vertretung.trim()}` : '',
-    gerichtBlock: [gericht.name, gericht.strasse, gericht.plzOrt].join('\n'),
+    gerichtBlock,
     ortDatumZeile: `${a.ort.trim() ? a.ort.trim() + ', ' : ''}${a.datum ? fmtDatum(a.datum) : '________'}`,
     streitwertBetreffZeile: sw !== null ? `\nStreitwert: CHF ${fmtCHF(String(sw))} (Art. 91 ZPO)` : '',
     klaegerRubrum: parteiZeilen(a.klaeger).join(', '),

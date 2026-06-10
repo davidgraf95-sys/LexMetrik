@@ -176,3 +176,36 @@ describe('kvKlagefrist — Kalender-Gültigkeit (Bug-Check-Fix 5.6.2026)', () =>
     expect(kvKlagefrist('2024-02-29', 'vermoegensrechtlich')).not.toBeNull();
   });
 });
+
+describe('Kantonsausbau (Auftrag David 10.6.2026) — Routing/Adressat alle Kantone', () => {
+  it('BS bleibt unverändert: Arbeit ≤ 30k → Arbeitsgericht (§§ 73 f. GOG BS)', () => {
+    expect(kvRouting('arbeit', 6000, 'BS')).toMatchObject({ anwendbar: true, gericht: 'arbeitsgericht' });
+    // Default-Parameter = BS (Rückwärtskompatibilität)
+    expect(kvRouting('arbeit', 6000)).toMatchObject({ anwendbar: true, gericht: 'arbeitsgericht' });
+  });
+  it('ZH: Anwendbarkeit (Bundesrecht) gleich, Gericht kantonal — keine BS-Spruchkörper', () => {
+    const r = kvRouting('arbeit', 6000, 'ZH');
+    expect(r).toMatchObject({ anwendbar: true, gericht: 'kantonal', kostenlos: true, kostenlosNorm: 'Art. 114 lit. c ZPO' });
+    if (r.anwendbar) expect(r.spruchkoerperNorm).not.toContain('GOG BS');
+    expect(kvRouting('vermoegensrechtlich', 12000, 'ZH')).toMatchObject({ anwendbar: true, gericht: 'kantonal', kostenlos: false });
+    expect(kvRouting('vermoegensrechtlich', 50000, 'ZH')).toMatchObject({ anwendbar: false, stopp: 'ordentlich' });
+  });
+  it('Nicht-BS ohne Gericht: Mangel + Striche; mit Auflösung: Adresse im Dokument', () => {
+    const ohne = basis({ gerichtsKanton: 'ZH' });
+    expect(kvMaengel(ohne).some((m) => m.text.includes('Kanton ZH'))).toBe(true);
+    expect(kvZusammenstellen(ohne).dokument.absaetze.map((x) => x.text).join('\n')).toContain('________');
+    const mit = basis({ gerichtsKanton: 'ZH', gerichtAufgeloest: { zeilen: ['Bezirksgericht Zürich', 'Postfach', '8036 Zürich'] } });
+    expect(kvMaengel(mit).some((m) => m.text.includes('Kanton ZH'))).toBe(false);
+    expect(kvZusammenstellen(mit).dokument.absaetze.map((x) => x.text).join('\n')).toContain('8036 Zürich');
+  });
+  it('Handeingabe übersteuert (alle Kantone)', () => {
+    const a = basis({ gerichtsKanton: 'GR', gerichtManuellAktiv: true, gerichtManuell: { name: 'Regionalgericht Plessur', strasse: 'Poststrasse 14', plzOrt: '7001 Chur' } });
+    expect(kvZusammenstellen(a).dokument.absaetze.map((x) => x.text).join('\n')).toContain('Poststrasse 14');
+  });
+  it('kvKlagefrist: BS-Default unverändert; Kanton wird durchgereicht', () => {
+    const bs = kvKlagefrist('2026-05-04', 'vermoegensrechtlich');
+    const bsExplizit = kvKlagefrist('2026-05-04', 'vermoegensrechtlich', 'BS');
+    expect(bs?.ablaufISO).toBe(bsExplizit?.ablaufISO);
+    expect(kvKlagefrist('2026-05-04', 'vermoegensrechtlich', 'ZH')).not.toBeNull();
+  });
+});

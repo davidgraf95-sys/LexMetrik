@@ -1223,8 +1223,8 @@ const VORLAGEN: Record<string, VorlageCard> = {
   'klage-vereinfacht': {
     id: 'klage-vereinfacht', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_allgemein', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
-    title: 'Klage (vereinfachtes Verfahren) – Basel-Stadt',
-    description: 'Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren (beziffert/unbeziffert), Streitgegenstand, freiwillige strukturierte Begründung mit Beweismitteln, Beilagen mit Klagebewilligung – BS-Routing (Zivil-/Arbeitsgericht), Kostenfreiheits-Prüfung und Klagefrist mit Gerichtsferien.',
+    title: 'Klage (vereinfachtes Verfahren)',
+    description: 'Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren (beziffert/unbeziffert), Streitgegenstand, freiwillige strukturierte Begründung mit Beweismitteln, Beilagen mit Klagebewilligung – Gerichts-Adressat für alle 26 Kantone (Spruchkörper-Routing amtlich abgenommen für Basel-Stadt), Kostenfreiheits-Prüfung und Klagefrist mit Gerichtsferien.',
     status: 'entwurf',
     norms: [
       // Geltungsbereich vereinfachtes Verfahren

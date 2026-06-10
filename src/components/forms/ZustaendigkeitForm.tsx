@@ -328,15 +328,19 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
   // CTA «Weiter zur Vorlage» (Auftrag §8): nur wenn die Ziel-Vorlage den Fall
   // trägt UND die Stelle erfasst ist; sonst ehrlich ausgeblendet.
-  const sgTyp = istGeld ? 'geldforderung' as const : istArbeit ? 'arbeitsrecht' as const
+  // Bug-Check 10.6.2026 abends (Befund David «automatische Zuweisung»):
+  // auch Miete/GlG springen mit Typ + Ort in die Vorlage — sie adressiert
+  // seit dem Umbau die paritätische Stelle selbst (kein Stopp mehr).
+  const sgTyp = istGeld ? 'geldforderung' as const
+    : istArbeit ? (f.glgBetroffen ? 'gleichstellung_glg' as const : 'arbeitsrecht' as const)
+    : f.streitsache === 'miete_wohn_geschaeft' ? 'miete_pacht' as const
     : f.streitsache === 'erbrecht' ? 'uebrige_zivilsache' as const : null;
   // S-4 (Auftrag David 10.6.2026): nicht mehr auf BS begrenzt — die
-  // SG-Vorlage löst die ordentliche Schlichtungsbehörde ALLER Kantone über
-  // dieselben Datenschichten auf (SgBehoerdenWahl, Anordnung 5.6.2026);
+  // SG-Vorlage löst die Schlichtungsbehörde (ordentlich wie paritätisch)
+  // ALLER Kantone über dieselben Datenschichten auf (SgBehoerdenWahl);
   // PLZ/Gemeinde der Ermittlung reisen als Schlüssel mit, die Vorlage
   // setzt daraus die konkrete Stelle samt ADRESSE als Adressat ein (§5).
-  const sgPrefill = r && f.kanton !== '' && r.eingabeArt === 'schlichtungsgesuch'
-    && r.schlichtung.behoerdeTyp === 'ordentlich' && sgTyp
+  const sgPrefill = r && f.kanton !== '' && r.eingabeArt === 'schlichtungsgesuch' && sgTyp
     ? sgPrefillKodieren({
       typ: sgTyp, betragCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton,
       plz: f.plz, gemeinde: f.gemeinde.trim(),
@@ -1026,9 +1030,10 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             // K-2-Fix Bug-Check 6.6.2026: Die klage-vereinfacht-Vorlage ist
             // BS-spezifisch (Schema klage-vereinfacht-bs, BS-Gerichtsrouting) —
             // für andere Kantone wäre Titel + Prefill-Link irreführend (§8).
-            // Nicht-BS → ehrlich «in Vorbereitung», kein Link.
-            const kantonsfremd = k?.id === 'klage-vereinfacht' && f.kanton !== 'BS';
-            const gebaut = k && k.status !== 'geplant' && k.href && !kantonsfremd;
+            // Bug-Check 10.6.2026 (MITTEL): K-2-Guard entfernt — die
+            // KV-Vorlage adressiert seit dem Kantonsausbau alle 26 Kantone.
+            const kantonsfremd = false;
+            const gebaut = k && k.status !== 'geplant' && k.href;
             // Prefill-Brücken: BS-Schlichtungsgesuch (bestehend) und
             // klage-vereinfacht (2.1b — Materie + Streitwert reisen mit).
             const kvMaterie: KvMaterie | null = k?.id === 'klage-vereinfacht'
@@ -1043,7 +1048,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               ? (k.id === 'schlichtungsgesuch' && sgPrefill
                   ? { pathname: '/vorlagen/schlichtungsgesuch-bs', search: sgPrefill }
                   : k.id === 'klage-vereinfacht' && kvMaterie
-                    ? { pathname: k.href!, search: kvPrefillKodieren({ materie: kvMaterie, streitwertCHF: vermoegensrechtlich ? streitwert : null }) }
+                    ? { pathname: k.href!, search: kvPrefillKodieren({ materie: kvMaterie, streitwertCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton === '' ? undefined : f.kanton }) }
                     : { pathname: k.href! })
               : null;
             return (
