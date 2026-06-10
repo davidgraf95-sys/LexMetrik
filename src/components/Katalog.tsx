@@ -104,14 +104,18 @@ function WerkzeugZeile({ k, subLabel }: { k: CalculatorCard; subLabel?: string }
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
 function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck: () => void }) {
-  // Praxis-Rang zuerst (Alltag → regelmässig → gelegentlich), innerhalb des
-  // Rangs die feste Gebiets-Reihenfolge; das Rechtsgebiet steht als
-  // Sub-Label in der Zeile (Versimplung 10.6.2026: keine Zwischen-H3 mehr).
+  // Übersichtlichkeits-Politur (Auftrag David 10.6.2026): ZWEI ruhige
+  // Gebrauchs-Ebenen statt einer Mischliste — «Alltag» (Praxis-Rang 1)
+  // zuoberst, «Weitere Werkzeuge» darunter; innerhalb der Ebene die feste
+  // Gebiets-Reihenfolge, Rechtsgebiet als Sub-Label in der Zeile.
   const gebietsRang = (g: string) => { const i = RECHTSGEBIETE.indexOf(g); return i === -1 ? RECHTSGEBIETE.length : i; };
-  const verfuegbar = karten.filter(istVerfuegbar).sort((a, b) =>
-    praxisRang(a.id) - praxisRang(b.id) ||
+  const sortiert = (xs: CalculatorCard[]) => [...xs].sort((a, b) =>
     gebietsRang(a.rechtsgebiet) - gebietsRang(b.rechtsgebiet) ||
     a.title.localeCompare(b.title, 'de'));
+  const verfuegbarAlle = karten.filter(istVerfuegbar);
+  const alltag = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) === 1));
+  const weitere = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) !== 1));
+  const verfuegbar = [...alltag, ...weitere];
   const geplant = karten.filter((k) => !istVerfuegbar(k));
 
   return (
@@ -134,9 +138,28 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
         <p className="text-body-s text-ink-500 max-w-reading">{kat.lede}</p>
       </div>
 
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(330px,100%),1fr))] gap-3">
-        {verfuegbar.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
-      </div>
+      {alltag.length > 0 && (
+        <div className="space-y-2">
+          <div className="flex items-center gap-3">
+            <h3 className="lc-overline text-brass-700">Alltag</h3>
+            <span aria-hidden className="flex-1 h-px bg-line" />
+          </div>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+            {alltag.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+          </div>
+        </div>
+      )}
+      {weitere.length > 0 && (
+        <div className="space-y-2">
+          <div className="flex items-center gap-3">
+            <h3 className="lc-overline text-ink-500">{alltag.length > 0 ? 'Weitere Werkzeuge' : 'Werkzeuge'} <span className="num">({weitere.length})</span></h3>
+            <span aria-hidden className="flex-1 h-px bg-line" />
+          </div>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+            {weitere.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+          </div>
+        </div>
+      )}
 
       {geplant.length > 0 && (
         <details className="group">
