@@ -1068,7 +1068,9 @@ const STATUTEN_SCHEMA: VorlageSchema = {
       text: 'Die Gesellschaft kann Zweigniederlassungen errichten, sich an anderen Unternehmen beteiligen, Grundstücke erwerben, halten und veräussern, Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Sicherheiten für Verbindlichkeiten verbundener Gesellschaften leisten.',
       includeIf: { feld: 'zweckErweiterung', eq: true },
       norm: 'Art. 626 Abs. 1 Ziff. 2 OR',
-      begruendung: 'Aufgenommen, weil die übliche Zweck-Erweiterungsklausel gewählt wurde (ZH-/GL-Muster-Wortlaut).',
+      // Musterabgleich-Fix B1 10.6.2026 (recherche/ag-gruendung-musterabgleich.md):
+      // Die frühere Begründung behauptete «ZH-/GL-Muster-Wortlaut» — falsch.
+      begruendung: 'Aufgenommen, weil die übliche Zweck-Erweiterungsklausel gewählt wurde. HAUS-KURZFASSUNG: Die amtlichen Muster (ZH kurz+lang, GL, SG lang) führen einen einheitlichen, umfassenderen Wortlaut (Tochtergesellschaften im In- und Ausland · alle direkt oder indirekt zweckbezogenen Geschäfte · Grundeigentum auch belasten und verwalten · Garantien und Bürgschaften für Tochtergesellschaften und Dritte) – Wortlaut-Entscheid bei der Abnahme (Musterabgleich 10.6.2026, B1).',
     },
     {
       id: 'AS03_kapital',
@@ -1597,6 +1599,15 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
       norm: 'Art. 44 lit. d HRegV',
     },
     {
+      // Musterabgleich-Fix B6 10.6.2026: ZH 3.1/3.3 Ziff. III führen unter der
+      // Zeichnungsliste eine Summenzeile («…-Aktien total»); die Deckung prüft
+      // zusätzlich das Gate rechnerisch (Art. 629 Abs. 2 Ziff. 1 OR).
+      id: 'AE05c_summe',
+      text: '– Total: {{anzahlAktien}} {{aktienArt}}',
+      norm: 'Art. 629 Abs. 2 Ziff. 1 OR',
+      begruendung: 'Summenzeile der Zeichnungsliste nach den ZH-Urkunden 3.1/3.3 («…-Aktien total»); bestätigt, dass sämtliche Aktien gezeichnet sind.',
+    },
+    {
       id: 'AE05b_verpflichtung',
       text: 'Jede Gründerin und jeder Gründer verpflichtet sich hiermit bedingungslos, die dem Ausgabebetrag der gezeichneten Aktien entsprechende Einlage zu leisten.',
       includeIf: { feld: 'einGruender', eq: false },
@@ -1619,7 +1630,7 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
         'Sparkassen, zur ausschliesslichen Verfügung der Gesellschaft hinterlegt.',
       includeIf: { and: [{ feld: 'nurBar', eq: true }, { feld: 'vollLiberiert', eq: true }, { feld: 'bankInUrkundeGenannt', eq: true }] },
       norm: 'Art. 633 OR',
-      begruendung: 'Volliberierung in Geld mit Banknennung in der Urkunde (separate Bescheinigung entfällt, Art. 43 Abs. 1 lit. f HRegV); nur bei der reinen Bargründung («Sämtliche Einlagen»).',
+      begruendung: 'Volliberierung in Geld mit Banknennung in der Urkunde (separate Bescheinigung entfällt als HR-BELEG, Art. 43 Abs. 1 lit. f HRegV); nur bei der reinen Bargründung («Sämtliche Einlagen»). ABWEICHUNG vom Notariatsmuster (Musterabgleich 10.6.2026, B4): ZH 3.1/3.2 Ziff. IV nennen auch bei Banknennung die Bescheinigung («gemäss deren vorliegender schriftlicher Bescheinigung vom …») – die Haus-Fassung lässt die Nennung weg; gilt für alle Bank-Varianten.',
     },
     {
       id: 'AE07_einlagen_voll_bescheinigung',
@@ -2034,18 +2045,18 @@ const ERRICHTUNGSAKT_SCHEMA: VorlageSchema = {
     {
       id: 'AE14_gruendungserklaerung',
       ueberschrift: 'Gründungserklärung',
-      text: 'Abschliessend erklären die erschienenen Personen die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet.',
+      text: 'Abschliessend erklären die erschienenen Personen die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet. Die Gesellschaft ist zur Eintragung ins Handelsregister anzumelden.',
       includeIf: { feld: 'einGruender', eq: false },
       norm: 'Art. 629 Abs. 1 OR',
-      begruendung: 'Abschliessende Gründungserklärung (ZH-Vorlage wortgleich).',
+      begruendung: 'Abschliessende Gründungserklärung mit Anmelde-Satz (ZH-Vorlage 3.1 Ziff. VIII wortgleich; Anmelde-Satz ergänzt per Musterabgleich 10.6.2026, B5 — deklaratorisch).',
     },
     {
       id: 'AE14_gruendungserklaerung_singular',
       ueberschrift: 'Gründungserklärung',
-      text: 'Abschliessend erklärt die erschienene Person die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet.',
+      text: 'Abschliessend erklärt die erschienene Person die Gesellschaft den gesetzlichen Vorschriften entsprechend als gegründet. Die Gesellschaft ist zur Eintragung ins Handelsregister anzumelden.',
       includeIf: { feld: 'einGruender', eq: true },
       norm: 'Art. 629 Abs. 1 OR',
-      begruendung: 'Abschliessende Gründungserklärung im Singular (D1; ZH-Vorlage 3.5: «erkläre ich» — Haus-Fassung dritte Person).',
+      begruendung: 'Abschliessende Gründungserklärung im Singular (D1; ZH-Vorlage 3.5: «erkläre ich» — Haus-Fassung dritte Person). Anmelde-Satz ergänzt per Musterabgleich 10.6.2026 (B5).',
     },
     {
       id: 'AE15_belege',
@@ -2440,7 +2451,7 @@ const SACHEINLAGEVERTRAG_BAUSTEINE: VorlageSchema['bausteine'] = [
       'Als Gegenleistung erhält {{einlegerName}} {{aktien}} als voll liberiert geltende {{aktienArt}} ' +
       'der Gesellschaft zu nominal {{waehrungCode}} {{nennwertFmt}}{{ausgabeKlammerSatz}}.{{gutschriftSatz}}',
     norm: 'Art. 634 Abs. 4 OR',
-    begruendung: 'Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst. Stufe 2: Währungscode = Kapitalwährung; bei Agio wird der Ausgabebetrag offengelegt (die Bewertung deckt Aktien × Ausgabebetrag, Art. 629 Abs. 2 Ziff. 2 OR).',
+    begruendung: 'Gegenleistung nach den ZH-Vorlagen («als voll liberiert geltende Aktien … zu nominal»); Gutschrift-Satz = weitere Gegenleistung (Art. 634 Abs. 4 OR), nur wenn erfasst. Stufe 2: Währungscode = Kapitalwährung; bei Agio wird der Ausgabebetrag offengelegt (die Bewertung deckt Aktien × Ausgabebetrag, Art. 629 Abs. 2 Ziff. 2 OR). MODELL-EINSCHRÄNKUNG (Musterabgleich 10.6.2026, B7): eine Sacheinlage = EIN Aktien-Empfänger – die ZH-Vertragsvorlagen verteilen die Aktien auf mehrere benannte Empfänger; bei mehreren Einlegern je ein eigener Vertrag.',
   },
   {
     id: 'SV04_zeitpunkt',

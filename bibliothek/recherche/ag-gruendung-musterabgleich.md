@@ -257,3 +257,21 @@ Session): INDEX-Zeile für dieses Dossier (S7) · Text-Extrakte der 23
 fehlenden Payloads nach `bibliothek/muster/` + MANIFEST (B2) ·
 B1-Entscheid David (Zweck-Erweiterung) vor der Abnahme von Baustein
 `AS02b_zweck_erweiterung`.
+
+---
+
+## Umsetzung (10.6.2026, Ja David — deklarierte Änderungen)
+
+B1 → `AS02b`-Begründung berichtigt: Klausel ist als HAUS-KURZFASSUNG
+deklariert (amtlicher Voll-Wortlaut ZH/GL/SG beschrieben); Wortlaut-Entscheid
+bleibt bei Davids Abnahme (Baustein 4). B4 → Abweichung vom Notariatsmuster
+(Bescheinigungs-Nennung bei Banknennung) in der `AE07_einlagen_voll_bank`-
+Begründung offengelegt (gilt für alle Bank-Varianten). B5 → Anmelde-Satz
+(ZH 3.1 Ziff. VIII) in beide `AE14`-Varianten ergänzt. B6 → neue Summenzeile
+`AE05c_summe` («Total: n Aktien», ZH 3.1/3.3 Ziff. III). B7 →
+Modell-Einschränkung (eine Sacheinlage = ein Empfänger) in `SV03` offengelegt.
+B8 → Lex-Koller-BEWILLIGUNGs-Hinweis (Ziff. 12) in beiden Checklisten
+(AG + GmbH). Golden deklariert regeneriert (8 ag-Fälle: nur AE05c-Block +
+AE14-Satz); ABNAHME-AG-BAUSTEINE.md regeneriert (195 Bausteine).
+B2 (Muster-Archivierung) und B3 (Verfallsregister) waren bereits am
+10.6.2026 erledigt. Damit sind ALLE Befunde dieses Abgleichs abgearbeitet.

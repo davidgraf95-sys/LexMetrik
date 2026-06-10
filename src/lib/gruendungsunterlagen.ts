@@ -301,7 +301,7 @@ export function gmbhGruendungsunterlagen(e: GmbhGruendungEingaben): Gruendungsun
       ersteller: 'gruender',
       ausgeloestDurch: 'Immobilien-Haupttätigkeit',
       hinweis:
-        'Kein HRegV-Beleg mehr (lit. i aufgehoben 1.1.2021), kantonal aber weiter verlangt; Bezeichnung uneinheitlich («Lex Koller» ZH/SG/AR, «Lex Friedrich» BE, Formular-Stand 2025).',
+        'Kein HRegV-Beleg mehr (lit. i aufgehoben 1.1.2021), kantonal aber weiter verlangt; Bezeichnung uneinheitlich («Lex Koller» ZH/SG/AR, «Lex Friedrich» BE, Formular-Stand 2025). Verlangt die Bewilligungsbehörde nach Verweisung zusätzlich eine Lex-Koller-BEWILLIGUNG (ZH-Checkliste Neueintragung Ziff. 12), ist diese beizubringen – Einzelfall, kein Beleg des Normalfalls (Musterabgleich 10.6.2026, B8).',
     });
   }
 
@@ -576,7 +576,7 @@ export function agGruendungsunterlagen(e: AgGruendungEingaben): Gruendungsunterl
       phase: 'vorbereitung',
       ersteller: 'gruender',
       ausgeloestDurch: 'Immobilien-Haupttätigkeit',
-      hinweis: 'Durch ein VR-Mitglied zu unterzeichnen (Praxis ZH); BE nennt sie weiterhin «Lex-Friedrich-Erklärung».',
+      hinweis: 'Durch ein VR-Mitglied zu unterzeichnen (Praxis ZH); BE nennt sie weiterhin «Lex-Friedrich-Erklärung». Verlangt die Bewilligungsbehörde nach Verweisung zusätzlich eine Lex-Koller-BEWILLIGUNG (ZH-Checkliste Neueintragung Ziff. 12), ist diese beizubringen – Einzelfall, kein Beleg des Normalfalls (Musterabgleich 10.6.2026, B8).',
     });
   }
   if (e.inhaberaktien) {

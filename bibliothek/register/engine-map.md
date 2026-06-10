@@ -47,7 +47,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | klageVereinfacht.ts · schlichtungsgesuchBs.ts | behoerden/schlichtungs*-Dossiers · gerichtsadressen · recherche/ordentliche-klage-rechtsbegehren.md (Rechtsbegehren-Bausteine + 7 Härtungs-Kandidaten KV, 10.6.2026) | entwurf |
 | gruendungsunterlagen.ts (Checklisten) | recherche/gesellschaftsgruendung.md · gmbh-gruendung.md · ag-gruendung.md | entwurf (Bug-Checks bestanden) |
 | gruendungGmbhDokumente.ts | recherche/gruendungsdokumente-wortlaute.md · **muster/** (MANIFEST) · behoerden/notariate-kantone.md | entwurf; 2× reviewt 7.6. |
-| gruendungAgDokumente.ts | dito + recherche/ag-gruendung-amtliche-vorlagen.md (**FAHRPLAN-AG-GRUENDUNG.md läuft!**) · recherche/ag-gruendung-musterabgleich.md (Zweitabgleich am Original 10.6.2026: 0 neu/0 Abweichung; B1 AS02b-Beleg) | **in Umbau** (Etappen 0–5) |
+| gruendungAgDokumente.ts | dito + recherche/ag-gruendung-amtliche-vorlagen.md (**FAHRPLAN-AG-GRUENDUNG.md läuft!**) · recherche/ag-gruendung-musterabgleich.md (Zweitabgleich am Original 10.6.2026: 0 neu/0 Abweichung; Befunde B1–B8 UMGESETZT 10.6.2026, Ja David) | **in Umbau** (Etappen 0–5) |
 | kapitalerhoehung.ts | recherche/kapitalerhoehung-wortlaute.md · muster/ke-* | entwurf; 2× reviewt 7.6.; Stufe 2 = Plan 9c-OFFEN |
 | notariate.ts | behoerden/notariate-kantone.md | entwurf; UR/AI/BL vor Abnahme |
 | behoerden.ts | behoerden/* (Vollerfassungen) | je Adresse `stand`-Feld |
