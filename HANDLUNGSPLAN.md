@@ -22,6 +22,16 @@ erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 > fachliche Abnahme der Zuordnungen (Liste im Fahrplan-Schlussabschnitt
 > und STRUKTUR.md) · Bau-Priorität Verwaltungs-Zuständigkeits-Engine.
 
+> **DEPLOYED 10.6.2026 ~23:55 (Davids Ja «push und deploy»):** origin/main =
+> `f26a8b3` (31 Commits: alle Session-Pakete unten + Parallel-Session-
+> Abgleiche Arbeitsrecht/Verzugszins/ZPO). §9-Ritual komplett: Tore grün
+> (1241 Tests · Golden 88/88 · Sweep 14'448 · Smoke 28 · 512 Zitate 0
+> Befunde · 33 e2e), 6 Review-Agents über das Delta (alle Befunde gefixt),
+> /tmp-Worktree-Deploy, Nachkontrolle: Live-Hash = HEAD-Build, 8 Kernrouten
+> 200. Schlichtungs-Zuordnung Endstand: 14 Kantone Auto-PLZ/Gemeinde+
+> Dropdown; offen VD (Streitwert-Weiche) · TI (38 Giudicature) · 4 SZ-
+> Gemeinden ohne publizierte Adresse · GlG-Stellen-Recherche.
+
 > **NEU (Session 10.6.2026 spätabends, Aufträge David):** (1) **Schlichtungs-
 > gesuch: Miete/GlG erstellen das Gesuch MIT paritätischem Adressat** statt
 > Stopp (`0e3c90f`; Brücke aus dem Rechner springt mit Typ+Kanton+Ort —
