@@ -22,6 +22,18 @@ erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 > fachliche Abnahme der Zuordnungen (Liste im Fahrplan-Schlussabschnitt
 > und STRUKTUR.md) · Bau-Priorität Verwaltungs-Zuständigkeits-Engine.
 
+> **NEU (Session 10.6.2026 abends, «grünes Licht» David):** (1) **PLZ-
+> Mehrdeutigkeit als Auswahl** (TODO 5 betreibungskreise): klickbare
+> Gemeinde-Kacheln in SchKG-3b + Zivil-Ortsschritt, Klick setzt Gemeinde+
+> Kanton (`924cb11`). (2) **Design-Abnahmegrundlage FERTIG** (FAHRPLAN-DESIGN
+> 3.7/4.6/5.8): axe-CI-Spec + Tastatur-Spec + Screenshot-Serien
+> vorher/nachher/ist; axe-Erstlauf: 1 critical + 2 serious GEFIXT
+> (`e17b936`: Field→aria-labelledby-Rahmen, role=img Unterschriftslinie,
+> Header-Kontrast). OFFEN für David: `abnahme/design-2026-06/BERICHT.md`
+> Entscheid-Block E (B-1 Kalender-Kontrast ink-400, B-2 Inline-Link-
+> Unterstreichung, manuelle Screenreader-Posten) + Abnahme der
+> PLZ-Auswahl-UI. NICHT gepusht (§9 wartet auf Ja).
+
 > **NEU (Auftrag David 10.6.2026): `FAHRPLAN-VEREINHEITLICHUNG.md`** —
 > Engine-Vereinheitlichung gleicher Logik-/Rechenbasis, 5 Stufen V1–V5,
 > golden-gegated nach neuem §4 (Tabu-Liste: Zuständigkeits-Trio, materielle
