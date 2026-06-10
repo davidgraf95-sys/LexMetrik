@@ -1,10 +1,11 @@
 // Golden-Output-Protokoll (§6 CLAUDE.md): friert die Ergebnisse ALLER
-// Engines und Vorlagen über eine breite Eingaben-Matrix ein. Vor einem
-// Refactoring laufen lassen (→ /tmp/lexmetrik-golden.json), nach dem
-// Refactoring erneut + diffen: byte-identisch = verhaltensneutral.
+// Engines und Vorlagen über eine breite Eingaben-Matrix ein. Die Basis ist
+// COMMITTET (golden/lexmetrik-golden.json) und wird im CI gegated
+// (FAHRPLAN-GRUNDLAGEN G2/A1): jeder Push muss byte-gleich sein.
 //
-//   npx vite-node .scratch/golden-outputs.ts            # schreiben
-//   npx vite-node .scratch/golden-outputs.ts vergleich  # vergleichen
+//   npm run golden            # Basis NEU schreiben — nur bei deklarierter
+//                             # fachlicher Änderung, im selben Commit begründen
+//   npm run golden:vergleich  # Gate: aktueller Code vs. committete Basis
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 
 import { berechneFrist } from '../src/lib/zpoFristen';
@@ -269,7 +270,7 @@ agGolden('urkunden-optionen-nachtrag', {
 });
 
 // ── Schreiben oder Vergleichen ──────────────────────────────────────────────
-const PFAD = '/tmp/lexmetrik-golden.json';
+const PFAD = new URL('../golden/lexmetrik-golden.json', import.meta.url).pathname;
 const json = JSON.stringify(faelle, null, 1);
 if (process.argv[2] === 'vergleich') {
   if (!existsSync(PFAD)) { console.error('Kein Golden-Stand vorhanden — zuerst ohne Argument laufen lassen.'); process.exit(2); }
@@ -278,8 +279,14 @@ if (process.argv[2] === 'vergleich') {
     console.log(`IDENTISCH — ${Object.keys(faelle).length} Fälle byte-gleich (verhaltensneutral).`);
   } else {
     const altObj = JSON.parse(alt) as Record<string, unknown>;
-    const diffs = Object.keys(faelle).filter((k) => JSON.stringify(altObj[k]) !== JSON.stringify(faelle[k]));
-    console.error(`ABWEICHUNG in ${diffs.length} Fällen: ${diffs.join(', ')}`);
+    const geaendert = Object.keys(faelle).filter((k) => k in altObj && JSON.stringify(altObj[k]) !== JSON.stringify(faelle[k]));
+    const neu = Object.keys(faelle).filter((k) => !(k in altObj));
+    const entfernt = Object.keys(altObj).filter((k) => !(k in faelle));
+    console.error(`ABWEICHUNG von der committeten Basis (${PFAD}):`);
+    if (geaendert.length) console.error(`  geändert (${geaendert.length}): ${geaendert.join(', ')}`);
+    if (neu.length) console.error(`  neu (${neu.length}): ${neu.join(', ')}`);
+    if (entfernt.length) console.error(`  entfernt (${entfernt.length}): ${entfernt.join(', ')}`);
+    console.error('Fachliche Änderung? → `npm run golden` + Begründung im Commit. Refactoring? → Bug.');
     process.exit(1);
   }
 } else {

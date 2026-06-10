@@ -100,7 +100,9 @@ Zwei Stränge — **erst härten, dann abnehmen** (Davids Reihenfolge).
 
 ### Phase A — Härten (technische Basis, §0a-konform, keine fachliche Abnahme)
 
-- [ ] **A1 · Golden-Outputs als committete Basis ins CI (Etappe F3.2).**
+- [x] **A1 · Golden-Outputs als committete Basis ins CI (Etappe F3.2).** ✓ 10.6.2026:
+      Basis committet `golden/lexmetrik-golden.json` (87 Fälle), CI-Schritt
+      `golden:vergleich` aktiv, Vergleich meldet geändert/neu/entfernt getrennt.
       `scripts/golden-outputs.ts` von `/tmp` auf eine **committete** Datei
       umstellen; CI-Schritt `npm run golden:vergleich` in
       `.github/workflows/ci.yml`; Kopf-Kommentar dort anpassen. → friert die

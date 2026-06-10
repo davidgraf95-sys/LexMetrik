@@ -1,9 +1,9 @@
 # ─── CI: erzwingt die §6/§9-Tore maschinell bei jedem Push ──────────────────
 # Bisher liefen tsc/Tests/Lint/Sweeps nur, wenn eine Session sie manuell
-# startete (STRATEGIE-PLATTFORM.md F2.2). Golden-Outputs bleiben bewusst
-# draussen: Das Protokoll vergleicht gegen einen lokalen Vorher-Stand in /tmp
-# (Refactoring-Werkzeug, kein CI-Gate) — bis F3.2 (Golden-Archiv je
-# Engine-Version) eine committete Basis schafft.
+# startete (STRATEGIE-PLATTFORM.md F2.2). Seit G2/A1 (FAHRPLAN-GRUNDLAGEN)
+# ist auch der Golden-Vergleich ein Gate: Basis committet in
+# golden/lexmetrik-golden.json; Abweichung = fachliche Änderung, die mit
+# `npm run golden` + Begründung im selben Commit deklariert sein muss.
 name: CI
 
 on:
@@ -38,5 +38,7 @@ jobs:
         run: npm run check:verfall
       - name: Logik-Sweep (Invarianten)
         run: npm run check:sweep
+      - name: Golden-Outputs (byte-gleich zur committeten Basis)
+        run: npm run golden:vergleich
       - name: SSR-Smoke (alle Seiten)
         run: npm run check:smoke
