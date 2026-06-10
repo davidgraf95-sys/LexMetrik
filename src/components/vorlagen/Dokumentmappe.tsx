@@ -3,6 +3,7 @@ import { VorschauPanel, ExportLeiste } from './wizard';
 import { BANNER_MAPPE_FERTIG, type PdfBanner } from '../../lib/vorlagen/banner';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
 import { NOTARIATE, NOTARIAT_SYSTEM_LABEL, NOTARIAT_FREIZUEGIGKEIT } from '../../lib/notariate';
+import { HR_AEMTER, HR_AEMTER_STAND } from '../../data/handelsregisteraemter';
 import type { Kanton } from '../../types/legal';
 
 // ─── Geteilter Rahmen der Dokumentmappen (/simplify B1, 7.6.2026) ────────────
@@ -26,6 +27,26 @@ export function NotariatsHinweis({ kanton }: { kanton: string }) {
       </p>
       {n.hinweis && <p className="text-xs text-warn-700">{n.hinweis}</p>}
       <p className="text-xs text-ink-500">{NOTARIAT_FREIZUEGIGKEIT}</p>
+    </div>
+  );
+}
+
+/** «Wo anmelden?» — Stammdaten data/handelsregisteraemter.ts (Dossier
+ *  behoerden/handelsregisteraemter-kantone.md; G3.4 verdrahtet 10.6.2026). */
+export function HrAmtHinweis({ kanton }: { kanton: string }) {
+  const a = HR_AEMTER[kanton as Kanton];
+  if (!a) return null;
+  return (
+    <div className="rounded-md bg-surface border border-line p-3 space-y-1">
+      <p className="text-body-s text-ink-700">
+        <span className="font-medium text-ink-900">Anmeldung beim Handelsregisteramt ({kanton}):</span>{' '}
+        <a href={a.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:text-brass-600">{a.name}</a>
+        {`, ${a.strasse}, ${a.plzOrt} · ${a.telefon}`}
+      </p>
+      {a.hinweis && <p className="text-xs text-ink-500">{a.hinweis}</p>}
+      <p className="text-xs text-ink-500">
+        {`Massgeblich ist der SITZ-Kanton der Gesellschaft (Art. 927 OR). Stand ${HR_AEMTER_STAND} (amtliche Kantonsseiten; zefix-Abgleich offen) – Erstrecherche, vor Einreichung kurz gegenprüfen.`}
+      </p>
     </div>
   );
 }

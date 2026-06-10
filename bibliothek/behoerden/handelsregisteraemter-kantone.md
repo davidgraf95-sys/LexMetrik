@@ -6,6 +6,10 @@ Web-Sweep über die amtlichen kantonalen *.ch-Seiten; jede Adresse von der
 jeweiligen kantonalen Behördenseite (Kontakt-/Standortseite des HR-Amts)
 abgerufen am 7.6.2026.
 **Status: ERSTRECHERCHE (einfach belegt).** Fachliche Abnahme David ausstehend.
+**GEBAUT (G3.4, 10.6.2026):** verdrahtet als `src/data/handelsregisteraemter.ts`
+(26/26, Stichproben-Test `src/tests/handelsregisteraemter.test.ts`); Anzeige
+in den Gründungs-/Kapitalerhöhungs-Mappen (`HrAmtHinweis`, neben dem
+Notariats-Hinweis), mit offengelegtem Erstrecherche-Stand.
 
 ## 1. Quelle + Stand
 

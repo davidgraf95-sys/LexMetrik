@@ -59,6 +59,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | fedlex.ts + scripts/fedlex-cache.sh | register/quellen-register.md (Pins) | gepflegt; bei jedem neuen Gesetz Pin + Pflicht-Anker |
 | startseiteConfig.ts (Katalog) | recherche/INDEX.md (geplant-Cluster) | SSoT §5; Zählung im Test |
 | bge.ts | rechtsprechung/bge-register.md | entwurf; Teil-Regex-Fix 7.6. |
+| data/handelsregisteraemter.ts | behoerden/handelsregisteraemter-kantone.md | entwurf; verdrahtet 10.6.2026 (G3.4), zefix-Abgleich offen |
 
 ## Dossier-only & Abnahme-Blocker (G4.1, Stand 10.6.2026)
 
@@ -69,7 +70,7 @@ Kandidaten nach G1-Rangliste, §0a beachten):
 |---|---|---|
 | kosten/gerichtsgebuehren-kantone (Tiefenerfassung 26/26) · kosten/anwaltstarife-kantone.md | kantonale Kosten-/Tarifrahmen, zweifach geprüft | `prozesskosten` (Lücken-Rang 1) |
 | recherche/bgg-beschwerde-engine.md (Decision Tree A–F) | BGG-Fristen/Zulässigkeit Stufe 2 | `bgg-fristen` (Rang 2; §0a) |
-| behoerden/handelsregisteraemter-kantone.md | HR-Ämter 26 Kt. (zefix-Abgleich offen) | Gründungs-Masken (G3.4) |
+| ~~behoerden/handelsregisteraemter-kantone.md~~ | HR-Ämter 26 Kt. (zefix-Abgleich offen) | VERDRAHTET 10.6.2026 → `src/data/handelsregisteraemter.ts` (AG-/KE-Mappe) |
 | kosten/notariatstarife-gruendung-kantone.md | Beurkundungstarife (ZH-123/SG offen) | teilverdrahtet (`notariatsgebuehrenGruendung.ts`) |
 | recherche/zwei-kategorien-kapitalmodell (AG) · GmbH-G-Dossiers (G0/G2) | §0a-GESPERRT (David) | — |
 | normen/erbrecht-regelwerk.md (Ausgleichung/Herabsetzung) | Regelwerk liegt | `erb-ausgleichung` (Rang 8) |

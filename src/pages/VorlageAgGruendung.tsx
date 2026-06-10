@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { agGruendungsunterlagen, type EinlageArt, type Phase , finmaBegriffsTreffer } from '../lib/gruendungsunterlagen';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { VorlagenWizardRahmen, VorschauPanel } from '../components/vorlagen/wizard';
-import { MappenAnsicht, MappenGates, NotariatsHinweis } from '../components/vorlagen/Dokumentmappe';
+import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { karte } from '../lib/startseiteConfig';
 import { BANNER_MAPPE_FERTIG, type PdfBanner } from '../lib/vorlagen/banner';
@@ -556,6 +556,7 @@ export function VorlageAgGruendung() {
         </Field>
       </div>
       <NotariatsHinweis kanton={kanton} />
+      <HrAmtHinweis kanton={kanton} />
       <Field label="Zweck">
         <textarea className={inputCls} rows={3} value={zweck} onChange={(e) => setZweck(e.target.value)}
           placeholder="z. B. den Erwerb, das Halten und die Verwaltung von Beteiligungen" />

@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Field, inputCls } from '../components/vorlagen/ui';
-import { MappenAnsicht, MappenGates, NotariatsHinweis } from '../components/vorlagen/Dokumentmappe';
+import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import {
   keDokumentmappe,
@@ -144,6 +144,7 @@ export function VorlageKapitalerhoehung() {
         </div>
 
         <NotariatsHinweis kanton={kanton} />
+      <HrAmtHinweis kanton={kanton} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label={`Firma (mit Zusatz «${ag ? 'AG' : 'GmbH'}»)`}>
