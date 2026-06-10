@@ -29,6 +29,7 @@ import { kostenFuer } from '../../data/zustaendigkeitKosten';
 import { ERLASS_LINKS } from '../../data/erlassLinks';
 import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
+import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
@@ -610,24 +611,21 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               {plzTreffer && plzTreffer.length > 0 && (() => {
                 const kantone = [...new Set(plzTreffer.map((t) => t.kanton))];
                 const gemeinden = [...new Set(plzTreffer.map((t) => t.gemeinde))];
-                const haupt = hauptTreffer(plzTreffer);
-                // Randgebiets-Fall (z. B. 4052): Hauptgemeinde anzeigen, die
-                // Splitter-Gemeinden mit ihrem amtlichen Adressenanteil nur als
-                // Ausnahme-Hinweis — statt einer pauschalen Mehrkantons-Rückfrage.
-                if (haupt && (kantone.length > 1 || gemeinden.length > 1)) {
-                  const rand = plzTreffer.filter((t) => t !== haupt);
+                // Mehrdeutige PLZ (Randgebiets-Fall 4052 wie echte Mehrdeutig-
+                // keit 1041): klickbare Auswahl statt Hand-Tippen (TODO 5
+                // betreibungskreise-kantone.md); der Klick setzt Gemeinde UND
+                // Kanton, der Auto-Fill oben (nur leere Felder) bleibt unberührt.
+                if (gemeinden.length > 1) {
                   return (
-                    <p className="text-xs text-ink-500">
-                      PLZ {f.plz}: {haupt.gemeinde} ({haupt.kanton}, {haupt.anteilProzent} % der Adressen)
-                      <span> — Randgebiete: {rand.slice(0, 3).map((t) => `${t.gemeinde} (${t.kanton}, ${t.anteilProzent} %)`).join(', ')}{rand.length > 3 ? ` +${rand.length - 3}` : ''}; nur wählen, falls die Adresse dort liegt.</span>
-                    </p>
+                    <PlzGemeindeWahl
+                      plz={f.plz} treffer={plzTreffer} gemeinde={f.gemeinde} kanton={f.kanton}
+                      onWahl={({ gemeinde, kanton }) => setF((alt) => ({ ...alt, gemeinde, kanton }))}
+                    />
                   );
                 }
                 return (
                   <p className="text-xs text-ink-500">
-                    PLZ {f.plz}: {gemeinden.slice(0, 4).join(', ')}{gemeinden.length > 4 ? ` +${gemeinden.length - 4}` : ''} ({kantone.join('/')})
-                    {kantone.length > 1 && <span className="text-warn-700"> — PLZ liegt in mehreren Kantonen, Kanton bitte selbst wählen.</span>}
-                    {gemeinden.length > 1 && kantone.length === 1 && <span> — Gemeinde präzisieren.</span>}
+                    PLZ {f.plz}: {gemeinden[0]} ({kantone.join('/')})
                   </p>
                 );
               })()}

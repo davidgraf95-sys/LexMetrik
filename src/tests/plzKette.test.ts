@@ -86,3 +86,41 @@ describe('PLZ-Audit-Fix 6.6.2026 — Adressenanteil & Hauptgemeinde (Befund 4052
     expect(hauptTreffer(t)?.kanton).toBe('ZH');
   });
 });
+
+describe('PLZ-Mehrdeutigkeit als Auswahl (TODO 5 betreibungskreise, 10.6.2026)', () => {
+  // gemeindeOptionen speist die klickbaren Kacheln (PlzGemeindeWahl): Dedupe
+  // über Gemeinde+Kanton, Hauptgemeinde (höchster Adressenanteil) zuerst.
+  it('1008: zwei 100-%-Gemeinden (VD) → 2 Optionen, keine Hauptgemeinde', async () => {
+    const { gemeindeOptionen } = await import('../components/ui/plzGemeindeOptionen');
+    const { plzAufloesen, hauptTreffer } = await import('../data/plz/plzAufloesung');
+    const t = (await plzAufloesen('1008'))!;
+    const o = gemeindeOptionen(t);
+    expect(o.map((x) => x.gemeinde).sort()).toEqual(['Jouxtens-Mézery', 'Prilly']);
+    expect(o.every((x) => x.kanton === 'VD')).toBe(true);
+    expect(hauptTreffer(t)).toBeNull();
+  });
+  it('1041: vier 100-%-Gemeinden (VD) → 4 Optionen', async () => {
+    const { gemeindeOptionen } = await import('../components/ui/plzGemeindeOptionen');
+    const { plzAufloesen } = await import('../data/plz/plzAufloesung');
+    const o = gemeindeOptionen((await plzAufloesen('1041'))!);
+    expect(o.map((x) => x.gemeinde).sort()).toEqual(['Bottens', 'Jorat-Menthue', 'Montilliez', 'Poliez-Pittet']);
+  });
+  it('4052: Hauptgemeinde Basel zuerst, Randgebiet Münchenstein (BL) wählbar', async () => {
+    const { gemeindeOptionen } = await import('../components/ui/plzGemeindeOptionen');
+    const { plzAufloesen } = await import('../data/plz/plzAufloesung');
+    const o = gemeindeOptionen((await plzAufloesen('4052'))!);
+    expect(o[0]).toEqual({ gemeinde: 'Basel', kanton: 'BS', anteilProzent: 97.7 });
+    expect(o[1]).toEqual({ gemeinde: 'Münchenstein', kanton: 'BL', anteilProzent: 2.3 });
+  });
+  it('1410: kantonsübergreifend — beide Kantone in den Optionen (Wahl setzt den Kanton)', async () => {
+    const { gemeindeOptionen } = await import('../components/ui/plzGemeindeOptionen');
+    const { plzAufloesen } = await import('../data/plz/plzAufloesung');
+    const o = gemeindeOptionen((await plzAufloesen('1410'))!);
+    expect(o.map((x) => `${x.gemeinde}|${x.kanton}`).sort()).toEqual(['Montanaire|VD', 'Prévondavaux|FR'].sort());
+  });
+  it('eindeutige PLZ (8001) → eine Option: die Kachel-Auswahl erscheint nicht (< 2)', async () => {
+    const { gemeindeOptionen } = await import('../components/ui/plzGemeindeOptionen');
+    const { plzAufloesen } = await import('../data/plz/plzAufloesung');
+    expect(gemeindeOptionen((await plzAufloesen('8001'))!)).toHaveLength(1);
+  });
+});

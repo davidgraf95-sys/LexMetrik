@@ -780,8 +780,13 @@ ZH, FR, SO, AR, GR, TG, TI, VD, ZG, UR, SZ. Tests: 26 Akzeptanztests.
    →Gemeinde-Zuordnung publiziert wird (heute Dienststellen-Liste).
 
 **Funktional:**
-5. **3b-PLZ-Feld**: bei mehrdeutiger PLZ (mehrere Gemeinden) eine AUSWAHL
-   statt Hauptgemeinde-Default anbieten (heute: erste/dominante Gemeinde).
+5. ~~**3b-PLZ-Feld**: bei mehrdeutiger PLZ (mehrere Gemeinden) eine AUSWAHL
+   statt Hauptgemeinde-Default anbieten (heute: erste/dominante Gemeinde).~~
+   **ERLEDIGT 10.6.2026:** klickbare Gemeinde-Kacheln (`PlzGemeindeWahl`,
+   SelectionGrid-Baustein) in BEIDEN Konsumenten (SchKG-3b und
+   Zivil-Zuständigkeit); Klick setzt Gemeinde UND Kanton, der Auto-Fill
+   (nur leere Felder) bleibt unberührt; Tests plzKette (1008/1041/4052/1410)
+   + e2e/plz-wahl.e2e.ts.
 6. **Konkursämter** sind ein separates, oft zentralisiertes Netz (SO/FR/AG =
    ein Konkurskreis trotz vieler Betreibungskreise) — NICHT erfasst; bei
    Bedarf eigener Arbeitsgang (Anliegen konkursbegehren/kollokation).

@@ -15,7 +15,8 @@ import {
 import { GEBV_SCHKG_URL } from '../../data/erlassLinks';
 import { BETREIBUNGSAEMTER, type BetreibungsamtAdresse } from '../../data/betreibungsaemter';
 import { BETREIBUNGSAMT_KANTONE, betreibungsamtFuer, type BetreibungsamtTreffer } from '../../data/betreibung/amtAufloesung';
-import { hauptTreffer, plzAufloesen } from '../../data/plz/plzAufloesung';
+import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
+import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { KANTONE } from '../../lib/kantone';
 import { VorlagenSprung } from './VorlagenSprung';
 import type { Kanton } from '../../types/legal';
@@ -122,6 +123,10 @@ export function SchkgZustaendigkeitTeil() {
   // gemerkt wird die PLZ, die im Verzeichnis fehlte; die Warnung gilt nur,
   // solange das Feld genau diese PLZ trägt.
   const [plzUnbekanntFuer, setPlzUnbekanntFuer] = useState<string | null>(null);
+  // Treffer für die Mehrdeutigkeits-Auswahl merken (TODO 5 betreibungskreise-
+  // kantone.md) — gleicher Render-Abgleich: die Kacheln gelten nur, solange
+  // das PLZ-Feld genau die aufgelöste PLZ trägt.
+  const [plzWahl, setPlzWahl] = useState<{ plz: string; treffer: PlzTreffer[] } | null>(null);
   useEffect(() => {
     let aktiv = true;
     if (!/^\d{4}$/.test(ortPlz)) return;
@@ -129,6 +134,7 @@ export function SchkgZustaendigkeitTeil() {
       .then((treffer) => {
         if (!aktiv) return;
         setPlzUnbekanntFuer(treffer === null || treffer.length === 0 ? ortPlz : null);
+        setPlzWahl(treffer && treffer.length > 0 ? { plz: ortPlz, treffer } : null);
         if (!treffer || treffer.length === 0) return;
         const kantone = [...new Set(treffer.map((t) => t.kanton))];
         const gemeinden = [...new Set(treffer.map((t) => t.gemeinde))];
@@ -281,6 +287,12 @@ export function SchkgZustaendigkeitTeil() {
         </div>
         {plzUnbekannt && (
           <p className="text-xs text-warn-700">PLZ {ortPlz}: im amtlichen Ortschaftenverzeichnis nicht gefunden — bitte prüfen.</p>
+        )}
+        {plzWahl && plzWahl.plz === ortPlz && (
+          <PlzGemeindeWahl
+            plz={ortPlz} treffer={plzWahl.treffer} gemeinde={ortGemeinde} kanton={ortKanton}
+            onWahl={({ gemeinde, kanton }) => { setOrtGemeinde(gemeinde); setOrtKanton(kanton); }}
+          />
         )}
       </div>
 
