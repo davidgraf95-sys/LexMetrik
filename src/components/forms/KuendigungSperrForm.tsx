@@ -54,9 +54,20 @@ export function KuendigungSperrForm({ onBeendigung }: {
     try { return { ...DEFAULTS, ...permalinkLesen(KSP_LINK_SPEC, window.location.search) }; }
     catch { return DEFAULTS; }
   });
+  // Bug-Check §9 10.6.2026 (Code-Lupe, MITTEL): Die Demo-DEFAULTS rechnen
+  // ab Mount ein Beendigungsdatum — das darf eine per Alt-Link
+  // (?ev=agkuendigung&zu=…) hydratisierte 336b-Zustellung NICHT
+  // überschreiben. Gemeldet wird erst, wenn der Nutzer die Form berührt
+  // hat oder sie aus einem eigenen KSP-Permalink stammt.
+  const [beruehrt, setBeruehrt] = useState<boolean>(() => {
+    try { return Object.keys(permalinkLesen(KSP_LINK_SPEC, window.location.search)).length > 0; }
+    catch { return false; }
+  });
 
-  const set = <K extends keyof SperrfristenInput>(k: K, v: SperrfristenInput[K]) =>
+  const set = <K extends keyof SperrfristenInput>(k: K, v: SperrfristenInput[K]) => {
+    setBeruehrt(true);
     setForm((f) => ({ ...f, [k]: v }));
+  };
 
   // Live-Berechnung – EIN kohärentes Ergebnis (Kündigungsfrist inkl. Sperrfristen).
   const fehler = validiere(form);
@@ -66,7 +77,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
   }
   const hatEreignisse = (form.sperrereignisse ?? []).length > 0;
 
-  const beendigungFuer336b = gesamt && gesamt.status !== 'nichtig'
+  const beendigungFuer336b = beruehrt && gesamt && gesamt.status !== 'nichtig'
     && form.kuendigendePartei === 'arbeitgeber' ? gesamt.beendigungISO ?? null : null;
   useEffect(() => { onBeendigung?.(beendigungFuer336b); }, [beendigungFuer336b, onBeendigung]);
 

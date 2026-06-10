@@ -26,6 +26,9 @@ import { RechnerVerjaehrung } from '../src/pages/RechnerVerjaehrung';
 import { RechnerGewaehrleistung } from '../src/pages/RechnerGewaehrleistung';
 import { RechnerSchkg } from '../src/pages/RechnerSchkg';
 import { RechnerErbteilung } from '../src/pages/RechnerErbteilung';
+// Bug-Check §9 10.6.2026 (Empirie-Lupe, NIEDRIG): Erb-Fristen-Seite war
+// nie im Smoke — seit S-5c trägt sie den Erbgang-Ereignis-Block.
+import { RechnerErbFristen } from '../src/pages/RechnerErbFristen';
 import { RechnerTagerechner } from '../src/pages/RechnerTagerechner';
 import { RechnerTeuerung } from '../src/pages/RechnerTeuerung';
 import { RechnerZustaendigkeit } from '../src/pages/RechnerZustaendigkeit';
@@ -55,6 +58,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['RechnerGewaehrleistung', RechnerGewaehrleistung],
   ['RechnerSchkg', RechnerSchkg],
   ['RechnerErbteilung', RechnerErbteilung],
+  ['RechnerErbFristen', RechnerErbFristen],
   ['RechnerTagerechner', RechnerTagerechner],
   ['RechnerTeuerung', RechnerTeuerung],
   ['RechnerZustaendigkeit', RechnerZustaendigkeit],

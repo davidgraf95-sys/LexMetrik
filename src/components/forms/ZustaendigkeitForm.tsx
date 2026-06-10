@@ -1063,8 +1063,14 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                     </Link>
                     {((k!.id === 'schlichtungsgesuch' && sgPrefill) || (k!.id === 'klage-vereinfacht' && kvMaterie)) && (
                       <p className="text-xs text-ink-500 mt-2">
+                        {/* Bug-Check §9 10.6.2026 (fachliche Lupe, NIEDRIG):
+                            Adress-Versprechen nur, wenn ein Ort erfasst ist —
+                            ohne PLZ/Gemeinde kann die Vorlage in Verzeichnis-
+                            Kantonen nichts auflösen (§8). */}
                         {k!.id === 'schlichtungsgesuch'
-                          ? 'Streitsache, Streitwert, Kanton und Ort werden vorbefüllt — die Vorlage setzt die Adresse der zuständigen Stelle als Adressat ein; alles bleibt editierbar.'
+                          ? (f.plz !== '' || f.gemeinde.trim() !== ''
+                            ? 'Streitsache, Streitwert, Kanton und Ort werden vorbefüllt — die Vorlage setzt die Adresse der zuständigen Stelle als Adressat ein; alles bleibt editierbar.'
+                            : 'Streitsache, Streitwert und Kanton werden vorbefüllt — die Adresse der zuständigen Stelle bestimmt die Vorlage, sofern dort der Ort erfasst wird; alles bleibt editierbar.')
                           : 'Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.'}
                       </p>
                     )}

@@ -214,6 +214,9 @@ const KARTEN: Record<string, CalculatorCard> = {
     // Wiederherstellungs-Warnung) — verifiziert 6.6.2026 (Katalog-UI 1.1).
     keywords: ['Frist', 'Gericht', 'Berufung', 'Beschwerde', 'Klage', 'Gerichtsferien', 'Stillstand', 'Zustellung',
       'Berufungsfrist', 'Beschwerdefrist', 'Rechtsmittelfrist', 'Klagebewilligung',
+      // S-5c (Bug-Check §9, NIEDRIG): Begriffe des aufgelösten
+      // Fristenspiegels — der Ereignis-Block lebt auf dieser Seite.
+      'Fristenspiegel', 'parallele Fristen', 'Urteil erhalten', 'Fristenkontrolle',
       'Art. 311 ZPO', 'Art. 314 ZPO', 'Art. 321 ZPO', 'Art. 209 ZPO', 'Art. 145 ZPO', 'Art. 148 ZPO'],
     icon: 'clock',
   },
@@ -241,6 +244,8 @@ const KARTEN: Record<string, CalculatorCard> = {
     // Fortsetzung, Verwertung, Konkursandrohung) — verifiziert 6.6.2026.
     keywords: ['Betreibung', 'Zahlungsbefehl', 'Rechtsvorschlag', 'Konkurs', 'Pfändung', 'Betreibungsferien',
       'betreiben', 'Schulden', 'Fortsetzungsbegehren', 'Verwertungsbegehren', 'Konkursandrohung', 'Rechtsstillstand',
+      // S-5c (Bug-Check §9, NIEDRIG): Begriff des aufgelösten Fristenspiegels
+      'Zahlungsbefehl erhalten',
       'Art. 88 SchKG', 'Art. 116 SchKG', 'Art. 166 SchKG'],
     related: ['verzugszins', 'rechtsoeffnungsbegehren', 'tagerechner'],
     icon: 'clipboard',

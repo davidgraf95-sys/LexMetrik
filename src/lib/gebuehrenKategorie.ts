@@ -37,11 +37,28 @@ const HILFSMITTEL: ReadonlySet<string> = new Set([
   'kostenblatt-export',
 ]);
 
-/** Rubrik einer Karte der Kategorie «Gebühren & Beträge»; Default ist
- *  MATERIELL (Anspruchs-/Quotenrechner sind die Regel, Verfahrenskosten
- *  die explizit gepflegte Ausnahmen-Liste). */
-export function gebuehrenRubrik(id: string): GebuehrenRubrik {
+// Bug-Check §9 10.6.2026 (fachliche Lupe, MITTEL): MATERIELL ebenfalls als
+// EXPLIZITE Liste — ein stiller materiell-Default hätte künftige
+// prozessuale Karten unauffällig falsch einsortiert (der Test wäre
+// tautologisch grün geblieben). Unbekannte IDs → null + Testbruch
+// (gleiches Muster wie fristenKategorie).
+const MATERIELL: ReadonlySet<string> = new Set([
+  'verzugszins', 'schadenszins',
+  'lohnfortzahlung', 'arbeit-entschaedigung', 'ferienanspruch', 'ferienkuerzung',
+  'dreizehnter-monatslohn', 'ueberstunden-zuschlag',
+  'mietzinsanpassung',
+  'erbteilung', 'erb-ausgleichung',
+  'gueterrecht-vorschlag', 'vorsorgeausgleich',
+  'beteiligungsquoten', 'liberierungsgrad', 'kapitalverlust', 'ueberschuldung',
+  'verrechnungssteuer', 'grundstueckgewinnsteuer', 'ahv-beitraege',
+]);
+
+/** Rubrik einer Karte der Kategorie «Gebühren & Beträge» — null heisst:
+ *  noch nicht zugeordnet (der Test bricht; die UI zeigt die Karte nicht
+ *  im Register, die «In Vorbereitung»-Zeile bleibt davon unberührt). */
+export function gebuehrenRubrik(id: string): GebuehrenRubrik | null {
   if (PROZESSUAL.has(id)) return 'prozessual';
   if (HILFSMITTEL.has(id)) return 'hilfsmittel';
-  return 'materiell';
+  if (MATERIELL.has(id)) return 'materiell';
+  return null;
 }

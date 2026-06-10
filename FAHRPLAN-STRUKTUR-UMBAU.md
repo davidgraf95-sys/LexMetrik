@@ -1,5 +1,11 @@
 # FAHRPLAN STRUKTUR-UMBAU (Auftrag David 10.6.2026 abends)
 
+> **STAND: S-1–S-6 UMGESETZT** (gleiche Session, 8 Commits ab f7bbf07;
+> Reihenfolge S-1 → S-3 → S-2 → S-6 → S-5a → S-5b/c → S-4). Alle Etappen
+> golden-gegated (87/87 byte-gleich), Suite/Lint/Build/SSR-Smoke grün.
+> §9-Bug-Check (3 Lupen) + Push/Deploy: siehe Schluss-Abschnitt;
+> Davids Freigabe liegt vor («anschliessend bug check push und deploy»).
+
 Auftrag wörtlich (Chat): Vorlagen-Taxonomie neu (Behördeneingaben · Verträge ·
 Gesellschaftsrecht · Einseitige Willenserklärungen; Klagen allgemein/besonders;
 Kachel Gesuche) · Startseiten-Kacheln ganz klickbar · Zuständigkeit vierteilig

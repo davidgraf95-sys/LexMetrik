@@ -20,10 +20,14 @@ export interface EingabeRubrikDef {
 export const EINGABE_RUBRIKEN: EingabeRubrikDef[] = [
   { id: 'klage_allgemein', titel: 'Klagen – allgemein',
     lede: 'Der Standard-Weg der Klage: Schlichtungsgesuch, Klage im vereinfachten und im ordentlichen Verfahren.' },
-  { id: 'klage_besonders', titel: 'Klagen – besondere Verfahren',
+  // Bug-Check §9 10.6.2026 (fachliche Lupe, NIEDRIG): «besondere
+  // Konstellationen» statt «besondere Verfahren» — Letzteres ist in der
+  // ZPO der Titel des vereinfachten/summarischen Verfahrens, das hier
+  // gerade unter «allgemein» steht.
+  { id: 'klage_besonders', titel: 'Klagen – besondere Konstellationen',
     lede: 'Klagen mit eigenem Zuschnitt, nach Gebiet geordnet (Familienrecht, Haftpflicht, Zwangsvollstreckung …).' },
   { id: 'gesuch_sonstige', titel: 'Gesuche & sonstige Eingaben',
-    lede: 'Gesuche, Begehren, Einsprachen und Beschwerden an Gerichte, Ämter und Behörden.' },
+    lede: 'Gesuche, Begehren, Erklärungen (z. B. Rechtsvorschlag), Einsprachen und Beschwerden an Gerichte, Ämter und Behörden.' },
 ];
 
 export const istVorlage = (k: CalculatorCard): k is VorlageCard => k.modus === 'vorlage';

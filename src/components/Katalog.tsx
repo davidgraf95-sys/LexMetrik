@@ -69,12 +69,15 @@ function KategorieEinstieg({ kat, karten, onOeffnen }: {
       </span>
       <span className="text-body-s text-ink-500 leading-relaxed">{kat.lede}</span>
       {/* Top-Direktlinks: der «Häufig gebraucht»-Schnellzugriff — ein Klick
-          ins Alltags-Werkzeug, ohne die Kategorie zu öffnen. */}
+          ins Alltags-Werkzeug, ohne die Kategorie zu öffnen. Bug-Check §9
+          10.6.2026 (Code-Lupe, NIEDRIG): pointer-events-none auf dem
+          Container — die Lücken NEBEN den Links gehören dem gestreckten
+          Kachel-Button, nur die Links selbst fangen Klicks. */}
       {links.length > 0 && (
-        <span className="relative flex flex-col gap-1 pt-2 border-t border-line mt-1">
+        <span className="relative pointer-events-none flex flex-col gap-1 pt-2 border-t border-line mt-1">
           {links.map((k) => (
             <Link key={k.id} to={k.href!}
-              className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline truncate self-start max-w-full">
+              className="pointer-events-auto text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline truncate self-start max-w-full">
               {sansAmp(k.title)} <span aria-hidden>→</span>
             </Link>
           ))}
@@ -389,10 +392,14 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
   const verfuegbar = [...alltag, ...weitere];
   // Geplante Karten, die bereits im Register sichtbar sind (S-3:
   // Verwaltungs-Zuständigkeit; S-2: Vorlagen je Gruppe), erscheinen nicht
-  // zusätzlich in der «In Vorbereitung»-Aufklappzeile.
+  // zusätzlich in der «In Vorbereitung»-Aufklappzeile. Bug-Check §9
+  // 10.6.2026 (Code-Lupe, MITTEL): in der Vorlagen-Kategorie nur ECHTE
+  // Vorlagen ausnehmen — geplante Werkzeug-Karten (checklisten,
+  // mandatsaufnahme) zeigt das VorlagenRegister nicht, sie müssen hier
+  // sichtbar bleiben (Kachel-Zähler = Ansicht, §8).
   const geplant = karten.filter((k) => !istVerfuegbar(k)
     && !(kat.id === 'zustaendigkeiten' && ZUSTAENDIGKEIT_FELD_IDS.has(k.id))
-    && kat.id !== 'vorlagen');
+    && !(kat.id === 'vorlagen' && istVorlage(k)));
 
   return (
     <section id={`register-${kat.id}`} aria-labelledby={`register-titel-${kat.id}`} className="space-y-4 scroll-mt-28">

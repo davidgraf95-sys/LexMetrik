@@ -22,9 +22,14 @@ import type { Kanton } from '../../types/legal';
 type Ferien = 'keine' | 'zpo' | 'schkg';
 
 const FERIEN_OPTIONEN: { code: Ferien; label: string; sub: string }[] = [
-  { code: 'keine', label: 'Keine Ferien', sub: 'Vertrags-/Gesetzesfrist (Art. 77/78 OR) – nur Wochenend-/Feiertags-Verschiebung' },
+  // Bug-Check §9 (fachliche Lupe, MITTEL): Samstag-Verschiebung folgt dem
+  // Fristengesetz (SR 173.110.3, eidg. Recht) — bei reinen Vertragsfristen
+  // nicht zwingend; der Rechenweg nennt den Verschiebegrund.
+  { code: 'keine', label: 'Keine Ferien', sub: 'Vertrags-/Gesetzesfrist (Art. 77/78 OR) – Verschiebung bei Sa/So/Feiertag (Sa nach Fristengesetz; bei reinen Vertragsfristen nicht zwingend – im Zweifel vorher handeln)' },
   { code: 'zpo', label: 'Gerichtsferien (ZPO)', sub: 'Stillstand nach Art. 145 ZPO – Annahme: ordentliches Verfahren, gesetzliche Frist' },
-  { code: 'schkg', label: 'Betreibungsferien (SchKG)', sub: 'Art. 56/63 SchKG – Fristende in den Ferien → Verlängerung bis zum 3. Werktag' },
+  // Bug-Check §9 (fachliche Lupe, MITTEL): präzise Art.-63-Kurzform —
+  // dritter TAG NACH Ferienende, Sa/So/Feiertage nicht mitgezählt.
+  { code: 'schkg', label: 'Betreibungsferien (SchKG)', sub: 'Art. 56/63 SchKG – Fristende in den Ferien → Verlängerung bis zum 3. Tag nach Ferienende (Sa/So/Feiertage zählen nicht)' },
 ];
 
 const EINHEITEN: { code: Einheit; label: string }[] = [
@@ -37,16 +42,24 @@ const EINHEITEN: { code: Einheit; label: string }[] = [
 const istISOTag = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
 export function EinfacheFristForm() {
-  // Datum-Default heute (Darstellungsschicht; Konvention der übrigen Forms).
-  const heute = new Date().toISOString().slice(0, 10);
+  // Datum-Default heute in LOKALER Zeit (Bug-Check §9, NIEDRIG: toISOString
+  // wäre UTC — zwischen 00:00 und 02:00 Schweizer Zeit der Vortag).
+  const heute = new Date().toLocaleDateString('sv-SE');
   const [start, setStart] = useState(heute);
   const [laenge, setLaenge] = useState(10);
   const [einheit, setEinheit] = useState<Einheit>('tage');
   const [ferien, setFerien] = useState<Ferien>('keine');
   const [kanton, setKanton] = useState<Kanton>('ZH');
 
-  // SchKG-Engine kennt keine Wochenfristen (Art. 31 SchKG i. V. m. ZPO;
-  // types/schkg.ts) — keine stille Umrechnung (§1), die Option entfällt.
+  // Die SchKG-Engine führt keine Wochenfristen (gesetzliche SchKG-Fristen
+  // sind tage-/monatsbasiert; types/schkg.ts) — die Option entfällt dort.
+  // Bug-Check §9 (Code-Lupe, MITTEL): beim Wechsel auf SchKG wird die
+  // Einheit EXPLIZIT auf Tage gestellt (State = Anzeige) statt «N Wochen»
+  // still als «N Tage» zu rechnen.
+  const waehleFerien = (code: Ferien) => {
+    setFerien(code);
+    if (code === 'schkg' && einheit === 'wochen') setEinheit('tage');
+  };
   const einheiten = ferien === 'schkg' ? EINHEITEN.filter((e) => e.code !== 'wochen') : EINHEITEN;
   const einheitEffektiv = ferien === 'schkg' && einheit === 'wochen' ? 'tage' : einheit;
 
@@ -136,7 +149,7 @@ export function EinfacheFristForm() {
               className={`lc-card px-3 py-2 cursor-pointer space-y-0.5 ${ferien === o.code ? 'ring-2 ring-brass-400' : ''}`}>
               <span className="flex items-center gap-2">
                 <input type="radio" name="einfache-frist-ferien" value={o.code}
-                  checked={ferien === o.code} onChange={() => setFerien(o.code)} />
+                  checked={ferien === o.code} onChange={() => waehleFerien(o.code)} />
                 <span className="text-body-s font-medium text-ink-900">{o.label}</span>
               </span>
               <span className="block text-xs text-ink-500 leading-snug">{o.sub}</span>
