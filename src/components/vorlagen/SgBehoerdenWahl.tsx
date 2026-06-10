@@ -138,3 +138,66 @@ export function SgBehoerdenWahl({ kanton, onAufgeloest, startPlz = '', startGeme
     </div>
   );
 }
+
+// ─── Paritätische Stelle (Miete/GlG) des gewählten Kantons — reine Anzeige ──
+// Befund 10.6.2026 (Auftrag David «richtige Zuständigkeit auch in den anderen
+// Kantonen»): Die Stopp-Karte der Schlichtungsgesuch-Vorlage zeigte bei
+// Miete/GlG IMMER die Basler Stelle, auch wenn ein anderer Kanton gewählt
+// war. Diese Komponente zeigt die kantonsrichtige paritätische Stelle aus
+// der zweifach geprüften Recherche-Schicht (schlichtungsstellen.ts):
+// zentral → Adresse · liste → alle Stellen · verzeichnis → amtlicher Link.
+// Hat der Kanton keine separate Stelle erfasst, wird die ordentliche
+// Schlichtungsbehörde in paritätischer Besetzung gezeigt (Art. 200 ZPO) —
+// offen deklariert, kein stilles Gleichsetzen (§8). BS läuft nicht hierüber
+// (abgenommene Registry hat Vorrang, §5).
+export function SgParitaetischeStelle({ kanton, typ }: {
+  kanton: Kanton;
+  typ: 'paritaetisch_miete' | 'paritaetisch_glg';
+}) {
+  const recherche = schlichtungAufloesung(kanton, typ);
+  if (!recherche) return null;
+  const a = recherche.aufloesung;
+  const miete = typ === 'paritaetisch_miete';
+  const gegenstand = miete ? 'Miete und Pacht von Wohn- und Geschäftsräumen' : 'Streitigkeiten nach Gleichstellungsgesetz';
+  const absatz = miete ? 'Art. 200 Abs. 1 ZPO' : 'Art. 200 Abs. 2 ZPO';
+  return (
+    <div className="space-y-2">
+      {recherche.glgFallback ? (
+        <p className="text-body-s text-ink-700">
+          Im Kanton {kanton} ist keine separate {miete ? 'Miet-Schlichtungsstelle' : 'GlG-Schlichtungsstelle'} erfasst
+          — zuständig ist die Schlichtungsbehörde in paritätischer Besetzung ({absatz}):
+        </p>
+      ) : (
+        <p className="text-body-s text-ink-700">
+          Für {gegenstand} besteht im Kanton {kanton} eine paritätische Stelle ({absatz}) – dieses Gesuch ist dort einzureichen:
+        </p>
+      )}
+      {a.modus === 'zentral' && (
+        <p className="text-body-s text-ink-900 whitespace-pre-line font-medium">
+          {a.stelle.name}{'\n'}{a.stelle.strasse}{'\n'}{a.stelle.plzOrt}
+        </p>
+      )}
+      {a.modus === 'liste' && (
+        <ul className="space-y-1">
+          {a.stellen.map((s) => (
+            <li key={s.name} className="text-body-s text-ink-900">
+              <span className="font-medium">{s.name}</span> — {s.strasse}, {s.plzOrt}
+              {s.zustaendigFuer && <span className="text-ink-500"> ({s.zustaendigFuer})</span>}
+            </li>
+          ))}
+        </ul>
+      )}
+      {a.modus === 'verzeichnis' && (
+        <p className="text-body-s text-ink-700">
+          {a.beschreibung}.{' '}
+          <a href={a.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">Amtliches Verzeichnis öffnen ↗</a>
+          {' '}— massgeblich ist das Gebiet der beklagten Partei bzw. der Sache.
+        </p>
+      )}
+      <p className="text-xs text-ink-500">
+        Quelle: {recherche.quelle} (Stand {recherche.stand}) — zweifach geprüft, fachliche Abnahme ausstehend;
+        Adresse vor Einreichung kurz gegenprüfen.
+      </p>
+    </div>
+  );
+}

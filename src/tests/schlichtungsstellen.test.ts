@@ -170,3 +170,37 @@ describe('GR: PLZ → Region → Vermittleramt (Task 12, 6.6.2026)', () => {
     expect((await amtFuer('GR', ilanz.gemeinde))?.name).toContain('Surselva');
   });
 });
+
+describe('Paritätische Stellen (Miete/GlG) — kantonsrichtige Stopp-Karte (Auftrag David 10.6.2026)', () => {
+  // Regression: die Schlichtungsgesuch-Stopp-Karte zeigte bei Miete/GlG für
+  // JEDEN Kanton die Basler Stelle; jetzt löst sie kantonsrichtig über
+  // schlichtungAufloesung auf (SgParitaetischeStelle).
+  it('paritaetisch_miete liefert für alle 26 Kantone eine Auflösung; eigener Eintrag ausser BE/NE', () => {
+    for (const k of KANTONE) {
+      const r = schlichtungAufloesung(k, 'paritaetisch_miete');
+      expect(r, k).not.toBeNull();
+      const erwarteFallback = k === 'BE' || k === 'NE';
+      expect(r!.glgFallback, `${k}: Fallback auf ordentliche Behörde`).toBe(erwarteFallback);
+    }
+  });
+  it('LU Miete zentral: Schlichtungsbehörde Miete und Pacht, 6002 Luzern', () => {
+    const r = schlichtungAufloesung('LU', 'paritaetisch_miete')!;
+    expect(r.aufloesung.modus).toBe('zentral');
+    if (r.aufloesung.modus === 'zentral') {
+      expect(r.aufloesung.stelle.name).toBe('Schlichtungsbehörde Miete und Pacht');
+      expect(r.aufloesung.stelle.plzOrt).toBe('6002 Luzern');
+    }
+  });
+  it('GE Miete zentral: Commission de conciliation en matière de baux et loyers', () => {
+    const r = schlichtungAufloesung('GE', 'paritaetisch_miete')!;
+    expect(r.aufloesung.modus).toBe('zentral');
+    if (r.aufloesung.modus === 'zentral') expect(r.aufloesung.stelle.plzOrt).toBe('1205 Genève');
+  });
+  it('paritaetisch_glg: eigene Stelle nur ZH/BS, sonst deklarierter Fallback auf die ordentliche Behörde', () => {
+    for (const k of KANTONE) {
+      const r = schlichtungAufloesung(k, 'paritaetisch_glg');
+      expect(r, k).not.toBeNull();
+      expect(r!.glgFallback, k).toBe(!(k === 'ZH' || k === 'BS'));
+    }
+  });
+});

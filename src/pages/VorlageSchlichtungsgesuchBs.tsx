@@ -11,7 +11,7 @@ import { KANTONE } from '../lib/kantone';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
-import { SgBehoerdenWahl } from '../components/vorlagen/SgBehoerdenWahl';
+import { SgBehoerdenWahl, SgParitaetischeStelle } from '../components/vorlagen/SgBehoerdenWahl';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -149,13 +149,24 @@ export function VorlageSchlichtungsgesuchBs() {
     return (
       <div className="lc-notice-warn rounded-xl p-5 space-y-2">
         <p className="lc-overline text-warn-700">Eigene Schlichtungsstelle zuständig</p>
-        <p className="text-body-s text-ink-700">
-          Für {routing.stopp === 'miete' ? 'Miete und Pacht von Wohn- und Geschäftsräumen' : 'Streitigkeiten nach Gleichstellungsgesetz'} besteht
-          eine paritätische Stelle (Art. 200 ZPO) – dieses Gesuch ist dort einzureichen:
-        </p>
-        <p className="text-body-s text-ink-900 whitespace-pre-line font-medium">
-          {b.name}{'\n'}{b.postadresse.join('\n')}{'\n'}Tel. {b.tel}{'email' in b && b.email ? `\n${b.email}` : ''}
-        </p>
+        {/* Kantonsrichtige paritätische Stelle (Auftrag David 10.6.2026):
+            vorher zeigte die Karte bei JEDEM Kanton die Basler Adresse.
+            BS weiter aus der abgenommenen Registry (§5-Vorrang); andere
+            Kantone aus der zweifach geprüften Recherche-Schicht. */}
+        {a.gerichtsKanton === 'BS' ? (
+          <>
+            <p className="text-body-s text-ink-700">
+              Für {routing.stopp === 'miete' ? 'Miete und Pacht von Wohn- und Geschäftsräumen' : 'Streitigkeiten nach Gleichstellungsgesetz'} besteht
+              eine paritätische Stelle (Art. 200 ZPO) – dieses Gesuch ist dort einzureichen:
+            </p>
+            <p className="text-body-s text-ink-900 whitespace-pre-line font-medium">
+              {b.name}{'\n'}{b.postadresse.join('\n')}{'\n'}Tel. {b.tel}{'email' in b && b.email ? `\n${b.email}` : ''}
+            </p>
+          </>
+        ) : (
+          <SgParitaetischeStelle kanton={a.gerichtsKanton}
+            typ={routing.stopp === 'miete' ? 'paritaetisch_miete' : 'paritaetisch_glg'} />
+        )}
         {routing.stopp === 'miete' && (
           <p className="text-xs text-ink-600">
             Hinweis: Bei Miete/Pacht von Wohn- und Geschäftsräumen gilt die Klagebewilligung nur
