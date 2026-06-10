@@ -195,5 +195,8 @@ describe('Kombinierter Fristenrechner (Auftrag 5.6.2026)', () => {
     expect(html).toContain('Betreibung (SchKG)');
     // Default = Allgemein-Form gerendert (Tabs frist/rueckwaerts/zwischen)
     expect(html).toContain('Tage zwischen');
+    // FE-2: geführte Regime-Frage statt nackter Tabs; Weiche fragt, rät nicht
+    expect(html).toContain('In welchem Verfahren läuft die Frist?');
+    expect(html).toContain('Weiss nicht?');
   });
 });

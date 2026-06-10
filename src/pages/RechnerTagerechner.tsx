@@ -47,15 +47,64 @@ export function RechnerTagerechner() {
     // fallen sie weg (die Forms hydratisieren ohnehin nur beim Mount).
     navigate({ search: '', hash: v === 'allgemein' ? '' : `#${v}` }, { replace: true });
   };
+  // FE-2 (FAHRPLAN-FRISTEN-EINHEIT): geführte Regime-Frage. Die Weiche
+  // FRAGT, sie rät nicht (§2 — keine Erkennung aus Freitext); die Tabs
+  // bleiben als Profi-Schnellzugriff, der URL-Hash unverändert.
+  const [weicheOffen, setWeicheOffen] = useState(false);
+  const weicheWahl = (v: Verfahren) => {
+    setWeicheOffen(false);
+    wechsle(v);
+  };
 
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
       <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
         <div className="space-y-1.5">
-          <p className="lc-overline">Verfahren</p>
-          <Tabs items={VERFAHREN} value={verfahren} onChange={wechsle}
-            ariaLabel="Verfahrensart wählen" />
+          <p className="lc-overline">In welchem Verfahren läuft die Frist?</p>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+            <Tabs items={VERFAHREN} value={verfahren} onChange={wechsle}
+              ariaLabel="Verfahrensart wählen" />
+            <button type="button" onClick={() => setWeicheOffen((o) => !o)}
+              aria-expanded={weicheOffen}
+              className="text-body-s font-medium text-brass-700 hover:text-brass-600 transition-colors">
+              Weiss nicht?
+            </button>
+          </div>
+          {weicheOffen && (
+            <div className="lc-notice space-y-2 !mt-3">
+              <p className="text-body-s text-ink-600 max-w-reading">
+                Drei Fragen führen zum Regime – die Wahl bleibt bei Ihnen:
+              </p>
+              <ol className="space-y-1.5 text-body-s text-ink-600 list-decimal pl-5 max-w-reading">
+                <li>
+                  Hat ein <span className="font-medium text-ink-900">Gericht oder die ZPO</span> die
+                  Frist gesetzt (Klage, Stellungnahme, Berufung, Vorschuss)?{' '}
+                  <button type="button" onClick={() => weicheWahl('zpo')}
+                    className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
+                    → Zivilprozess (ZPO)
+                  </button>
+                </li>
+                <li>
+                  Geht es um eine <span className="font-medium text-ink-900">Betreibungshandlung</span> (Zahlungsbefehl,
+                  Rechtsvorschlag, Fortsetzung, Konkursandrohung)?{' '}
+                  <button type="button" onClick={() => weicheWahl('schkg')}
+                    className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
+                    → Betreibung (SchKG)
+                  </button>
+                </li>
+                <li>
+                  Sonst – Vertrags- oder Gesetzesfrist ausserhalb eines solchen Verfahrens:{' '}
+                  <button type="button" onClick={() => weicheWahl('allgemein')}
+                    className="font-medium text-brass-700 hover:text-brass-600 whitespace-nowrap">
+                    → Allgemein (Vertrag/OR)
+                  </button>{' '}
+                  <span className="text-ink-500">– rechnet ohne Gerichtsferien; die Warnungen im
+                  Ergebnis gelten unverändert.</span>
+                </li>
+              </ol>
+            </div>
+          )}
           <p className="text-micro text-ink-500">
             {verfahren === 'allgemein' && 'Vertrags- und Verwirkungsfristen nach OR/ZGB – ohne Gerichtsferien; inkl. Rückwärtsrechnung, Tage-zwischen, Zustell-Helfer und Kalenderexport.'}
             {verfahren === 'zpo' && 'Gerichtliche und gesetzliche Fristen mit Stillstand (Art. 145 ZPO), kantonalen Feiertagen und Zustellungsregeln.'}
