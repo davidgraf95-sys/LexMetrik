@@ -348,3 +348,21 @@ describe('Randfall-Fix 6.6.2026 — cter-Urlaub nach Ablauf der Kappung', () => 
     expect(rechenwegText(r)).toContain('KEIN zeitlicher');
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: zweite Sperrfrist in der gehemmt VERLÄNGERTEN Frist hemmt erneut (Art. 336c Abs. 2 OR)', () => {
+  it('Krankheit 1.5.–28.5. verlängert bis ~28.6.; neue Krankheit 20.6.–5.7. hemmt zusätzlich', () => {
+    const basis = {
+      vertragsbeginn: '2018-01-01', zugangKuendigung: '2026-03-20',
+      kuendigendePartei: 'arbeitgeber' as const, probezeitMonate: 1, kuendigungsterminMonatsende: true,
+    };
+    const eine = berechneSperrfristen({ ...basis, sperrereignisse: [{ typ: 'krankheit_unfall', von: '2026-05-01', bis: '2026-05-28' }] });
+    const zwei = berechneSperrfristen({ ...basis, sperrereignisse: [
+      { typ: 'krankheit_unfall', von: '2026-05-01', bis: '2026-05-28' },
+      { typ: 'krankheit_unfall', von: '2026-06-20', bis: '2026-07-05' },
+    ] });
+    expect(eine.gehemmtTage).toBe(28);
+    // Das zweite Ereignis liegt in der verlängerten Frist (bis ~28.6.) und hemmt ab 20.6.
+    expect(zwei.gehemmtTage).toBeGreaterThan(eine.gehemmtTage);
+    expect(zwei.beendigungISO! > eine.beendigungISO!).toBe(true);
+  });
+});

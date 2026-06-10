@@ -255,9 +255,16 @@ export function berechneVerjaehrung(input: VerjaehrungInput): VerjaehrungErgebni
   for (const u of unterbrechungen) {
     const d = parseISO(u.datum);
     const aktuellesEnde = mitStillstand(segStart, rohesEnde(segStart, segJahre), hemmungen).ende;
-    if (isAfter(d, aktuellesEnde)) {
+    // Bug-Check 10.6.2026 (HOCH, deklarierte fachliche Änderung): Fällt der
+    // letzte Tag auf Sa/So/Feiertag, läuft die Frist erst am nächsten
+    // Werktag ab (Art. 78 i.V.m. Art. 132 Abs. 2 OR) — eine Unterbrechung
+    // an DIESEM Werktag ist rechtzeitig. Vorher wurde gegen das rohe Ende
+    // verglichen und die rechtzeitige Handlung als wirkungslos verworfen,
+    // obwohl die Engine denselben Werktag als letzten Tag publiziert.
+    const wirksamBis = werktagsEnde(aktuellesEnde, input.kanton);
+    if (isAfter(d, wirksamBis)) {
       warnungen.push(
-        `${TYP_LABEL[u.typ]} vom ${fmt(d)} liegt nach dem Verjährungseintritt (${fmt(aktuellesEnde)}) und bleibt wirkungslos – eine verjährte Forderung wird nicht wiederbelebt.`,
+        `${TYP_LABEL[u.typ]} vom ${fmt(d)} liegt nach dem Verjährungseintritt (${fmt(wirksamBis)}) und bleibt wirkungslos – eine verjährte Forderung wird nicht wiederbelebt.`,
       );
       continue;
     }

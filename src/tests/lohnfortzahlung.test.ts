@@ -287,3 +287,10 @@ describe('Audit-Fix B5 – KTG-Kriterium «alle Risiken abgedeckt» wirkt', () =
     expect(alle).toContain('Nicht alle relevanten Risiken abgedeckt');
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: Anspruch ab dem ERSTEN Tag des vierten Monats (Art. 324a Abs. 1 OR)', () => {
+  it('Vertragsbeginn 1.1., Verhinderung ab 1.4.: Anspruch besteht (vorher kein_anspruch)', () => {
+    const r = berechneLohnfortzahlung({ vertragsbeginn: '2026-01-01', verhinderungBeginn: '2026-04-01', verhinderungEnde: '2026-04-10', arbeitsunfaehigkeitProzent: 100, kanton: 'ZH', ktgGleichwertigVorhanden: false });
+    expect(r.status).not.toBe('kein_anspruch');
+  });
+});

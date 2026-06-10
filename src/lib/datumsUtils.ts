@@ -35,8 +35,12 @@ export function berechneDienstjahr(vertragsbeginn: Date, stichtag: Date): number
 // ─── Anspruchsvoraussetzung: > 3 Monate Dauer ────────────────────────────
 
 export function dauerUeberDreiMonate(von: Date, bis: Date): boolean {
+  // Bug-Check 10.6.2026 (MITTEL, deklarierte fachliche Änderung): Am ersten
+  // Tag des vierten Monats hat das Verhältnis MEHR als drei Monate gedauert
+  // (Art. 324a Abs. 1 OR; so auch der eigene Engine-Grenzwert-Text in
+  // lohnfortzahlung.ts). Vorher entstand der Anspruch einen Tag zu spät.
   return differenceInMonths(bis, von) > 3 ||
-    (differenceInMonths(bis, von) === 3 && differenceInDays(bis, addMonths(von, 3)) > 0);
+    (differenceInMonths(bis, von) === 3 && differenceInDays(bis, addMonths(von, 3)) >= 0);
 }
 
 export function letzerTagDesMonats(d: Date): Date {

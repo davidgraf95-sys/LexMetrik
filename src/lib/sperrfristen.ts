@@ -501,19 +501,33 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
   });
 
   // §1.3: Union der Sperrfrist-Intervalle bilden, dann mit dem Fenster schneiden.
-  const fenster: Iv = { von: beginn_frist, bis: ende_ungehemmt };
+  // Bug-Check 10.6.2026 (HOCH, deklarierte fachliche Änderung): Das Fenster
+  // wird ITERIERT — jede Hemmung verlängert die LAUFENDE Kündigungsfrist
+  // (Art. 336c Abs. 2 OR: Frist steht still und läuft danach weiter); eine
+  // neue Sperrfrist innerhalb der verlängerten Frist hemmt erneut (Fixpunkt-
+  // Schleife wie mitStillstand() in verjaehrung.ts). Vorher wurde nur das
+  // ungehemmte Fenster geschnitten — eine zweite Arbeitsunfähigkeit in der
+  // verlängerten Frist blieb wirkungslos (zu frühes Beendigungsdatum).
   const union = unionIntervalle(intervalle.map((iv) => ({ von: iv.von, bis: iv.bis })));
 
   let totalHemmungTage = 0;
+  let fensterBis = ende_ungehemmt;
+  for (let runde = 0; runde < 24; runde++) {
+    const fenster: Iv = { von: beginn_frist, bis: fensterBis };
+    let neu = 0;
+    union.forEach((piece) => { neu += intervallSchnittTage(fenster, piece); });
+    if (neu === totalHemmungTage) break;
+    totalHemmungTage = neu;
+    fensterBis = addDays(ende_ungehemmt, totalHemmungTage);
+  }
   union.forEach((piece) => {
-    const schnitt = intervallSchnittTage(fenster, piece);
+    const schnitt = intervallSchnittTage({ von: beginn_frist, bis: fensterBis }, piece);
     if (schnitt > 0) {
-      totalHemmungTage += schnitt;
       rechenweg.push({
         beschreibung: 'C3 – Hemmung: Sperrfrist schneidet rückgerechnete Kündigungsfrist',
         zwischenergebnis:
-          `Sperrfrist-Abschnitt ${formatDatum(piece.von)} – ${formatDatum(piece.bis)} schneidet das Fenster ` +
-          `${formatDatum(beginn_frist)} – ${formatDatum(ende_ungehemmt)}: ${schnitt} Hemmungstage.`,
+          `Sperrfrist-Abschnitt ${formatDatum(piece.von)} – ${formatDatum(piece.bis)} schneidet die (um bisherige Hemmungen verlängerte) Frist ` +
+          `${formatDatum(beginn_frist)} – ${formatDatum(fensterBis)}: ${schnitt} Hemmungstage.`,
         normen: [N_336c_2],
       });
     }

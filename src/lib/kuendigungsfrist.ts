@@ -25,7 +25,11 @@ export type KuendigungsfristResultat = {
 
 function istInProbezeit(vb: Date, zugang: Date, probezeitMonate: number): boolean {
   if (probezeitMonate === 0) return false;
-  const probezeitEnde = addMonths(vb, probezeitMonate);
+  // Bug-Check 10.6.2026 (MITTEL, deklarierte fachliche Änderung): Der erste
+  // Arbeitstag zählt mit (Praxis zu Art. 335b OR: 1 Monat ab 1.4. endet am
+  // 30.4.). Vorher galt der Zugang am Tag NACH Probezeitende noch als
+  // Probezeitkündigung (7 Tage, keine Sperrfristen).
+  const probezeitEnde = addDays(addMonths(vb, probezeitMonate), -1);
   return isBefore(zugang, probezeitEnde) || isEqual(zugang, probezeitEnde);
 }
 

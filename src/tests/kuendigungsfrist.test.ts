@@ -241,3 +241,13 @@ describe('Sperrfristen (Art. 336c OR)', () => {
     expect(result.ergebnis).toContain('30.06.2025');
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: Probezeit-Ende (Art. 335b OR — erster Arbeitstag zählt mit)', () => {
+  it('1 Monat Probezeit ab 1.4. endet am 30.4. — Zugang 1.5. ist ORDENTLICHE Kündigung', () => {
+    const inProbe = berechneKuendigungsfrist({ vertragsbeginn: '2026-04-01', zugangKuendigung: '2026-04-30', kuendigendePartei: 'arbeitgeber', kuendigungsterminMonatsende: true, probezeitMonate: 1 });
+    expect(inProbe.istProbezeit).toBe(true);
+    const danach = berechneKuendigungsfrist({ vertragsbeginn: '2026-04-01', zugangKuendigung: '2026-05-01', kuendigendePartei: 'arbeitgeber', kuendigungsterminMonatsende: true, probezeitMonate: 1 });
+    expect(danach.istProbezeit).toBe(false);
+    expect(ds(danach.beendigungsdatum!)).toBe('2026-06-30');
+  });
+});

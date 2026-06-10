@@ -196,3 +196,14 @@ describe('Verjährung – Hinweise und Grenzen', () => {
     expect(r.warnungen.some((w) => w.includes('SchlT'))).toBe(true);
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: Unterbrechung am werktagsverschobenen letzten Tag ist rechtzeitig (Art. 78/132 Abs. 2 OR)', () => {
+  it('rohes Ende Sa 15.6.2024 → Betreibung am Mo 17.6.2024 unterbricht (vorher «wirkungslos»)', () => {
+    const r = berechneVerjaehrung({
+      regime: 'ordentlich', beginnRelativ: '2014-06-15', stichtag: '2024-07-01', kanton: 'ZH',
+      unterbrechungen: [{ datum: '2024-06-17', typ: 'betreibung' }],
+    } as never);
+    expect(r.warnungen.some((w) => w.includes('wirkungslos'))).toBe(false);
+    expect((r as { verjaehrtAmStichtag?: boolean }).verjaehrtAmStichtag ?? false).toBe(false);
+  });
+});
