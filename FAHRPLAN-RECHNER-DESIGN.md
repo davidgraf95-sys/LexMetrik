@@ -80,3 +80,24 @@ und in der Block-Reihenfolge, nicht in den Inhalten.
 ## Verdikte / Stand
 
 - 11.6.2026 00:07 — Basis-Tore grün, Audit abgeschlossen, D1 begonnen.
+- 11.6.2026 ~00:35 — **D1–D6 KOMPLETT** (Commits `2cd3791` D1 ·
+  `ff5bbb4` D2 · `fcd2c38` D3+D4 · Bericht-Commit folgt). Alle 16
+  Formulare auf dem R4-Skelett; Export-Zeile überall PDF→ICS→Teilen;
+  Kalender/Timeline hinter dem Verdikt; kurz-Disclaimer vollständig;
+  eine aria-live-Region pro Ergebnis; ThemenEinstieg geteilt.
+  **Zurückgestellt:** ErgebnisBlock-Adoption im Zuständigkeits-Trio
+  (bereits regelkonform, war das Referenzmuster) — eine PARALLEL-SESSION
+  baut zeitgleich den VD-Schlichtungs-Ausbau in genau dieser Zone
+  (`schlichtungsstellen.ts`, `vdSchlichtung.ts`); §12: fremd belegte
+  Dateien nicht anfassen. Nachziehen, sobald deren Stand committet ist.
+- **D5-Tore:** Golden 88/88 byte-gleich (§6-Beweis) · 1239/1241 Tests
+  grün (2 rote = fremder VD-WIP: vdSchlichtung-Dossierverweis,
+  VD-Stand-Datum — §12 ausgehalten) · Lint 0 · Build ok · smoke alle
+  Seiten · e2e 33/33 (axe ohne neue Befunde, kein Overflow, Tastatur).
+- **D6:** Screenshot-Serien vorher (`0b30683`, /tmp-Worktree-Preview
+  4322) / nachher (`fcd2c38`, 4321) unter
+  `abnahme/design-2026-06/screenshots/rechner-einheit-*` (gitignored);
+  Abnahme-Bericht mit Entscheid-Posten E-1–E-5:
+  `abnahme/design-2026-06/RECHNER-EINHEIT.md`.
+- OFFEN für David: Entscheid-Posten E-1–E-5 im Bericht · Push/Deploy
+  (§9, erst auf frisches Ja).

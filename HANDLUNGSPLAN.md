@@ -3,6 +3,20 @@
 Priorisiertes weiteres Vorgehen. Gepflegt wird dieser Plan NUR hier;
 erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 
+> **NEU (Auftrag David 10.6.2026 spätnachts, ERLEDIGT über Nacht auf den
+> 11.6.): Rechner-Design-Vereinheitlichung.** Regelwerk
+> `DESIGN-REGLEMENT-RECHNER.md` (R1–R12: Seiten-/Formular-/Ergebnisblock-
+> Skelett · Export-Zeile PDF→ICS→Teilen · Rechtsinfo-Hierarchie Verdikt→
+> Vorbehalte→Rechenweg→Annahmen→Normverweise · Disclaimer-Zweistufigkeit) +
+> Umsetzung D1–D6 über alle 16 Formulare (`FAHRPLAN-RECHNER-DESIGN.md`;
+> neue §10-Bausteine ErgebnisBlock/ThemenEinstieg; Kalender/Timeline hinter
+> das Verdikt; eine aria-live-Region pro Ergebnis). §6-Beweis: Golden 88/88
+> byte-gleich, e2e 33/33, smoke ok. **OFFEN für David:** Entscheid-Posten
+> E-1–E-5 in `abnahme/design-2026-06/RECHNER-EINHEIT.md` (Akzent-Regel,
+> Kalender-Position, 5 Kurz-Disclaimer-Wortlaute, Trio-Nachzug, R-Abnahme) ·
+> Push/Deploy auf frisches Ja. Zuständigkeits-Trio-Kosmetik zurückgestellt
+> (§12: Parallel-Session baut zeitgleich VD-Schlichtung in dieser Zone).
+
 > ~~**NEU (Auftrag David 10.6.2026): `FAHRPLAN-FRISTEN-EINHEIT.md`**~~ —
 > **FE-1–FE-6 UMGESETZT + DEPLOYED 10.6.2026 nachmittags** (Davids Ja
 > «bug check und push und deploy»; §9-Check 3 Agents: 2 HOCH + 2 MITTEL +

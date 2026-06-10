@@ -13,6 +13,26 @@ GRUENDUNG). Abgeschlossene Fahrpläne und historische Dokumente liegen in
 Verweise in Code-Kommentaren per grep auffindbar bleiben). Wissens-Quellen
 (PDF/DOCX, gitignored) in `bibliothek/quellen/` (`SICHTUNG.md`).
 
+## Session 11.6.2026 über Nacht — Rechner-Design-Vereinheitlichung D1–D6 (Auftrag David, ungepusht)
+
+Regelwerk **`DESIGN-REGLEMENT-RECHNER.md` (R1–R12)**: verbindlicher Aufbau
+jeder Rechner-Seite (Kopf → Rückverweis → Werkzeug-Karte → Ereignis-Sektion →
+Themen-Einstieg) und jedes Formulars (Disclaimer → Preset → Eingaben →
+Erweitert → FehlerBox → Ergebnisblock), Ergebnisblock-Skelett (Eckdaten mit
+Akzent auf dem massgeblichen Wert → ErgebnisAnzeige → Kalender/Timeline →
+Begründung → Aktenzeichen → Export-Zeile PDF→ICS→Teilen → Quellen-Mikrozeile),
+Rechtsinfo-Hierarchie (R6) und abschliessende Ausnahmen (R12). Umsetzung über
+alle 16 ergebnistragenden Formulare (`FAHRPLAN-RECHNER-DESIGN.md`, Commits
+`2cd3791`/`ff5bbb4`/`fcd2c38`): neue §10-Bausteine **`ErgebnisBlock`**
+(id · lc-reveal · EINE aria-live-Region · ErgebnisSprung · LiveHeader) und
+**`ThemenEinstieg`**; EckdatenKachel mit `akzent`-Prop; Doppel-aria-live der
+ErgebnisAnzeige aufgelöst. §6-Beweis: Golden 88/88 byte-gleich · e2e 33/33 ·
+smoke ok. Abnahme-Grundlage mit Screenshots vorher/nachher + Entscheid-Posten
+E-1–E-5: `abnahme/design-2026-06/RECHNER-EINHEIT.md`. Zuständigkeits-Trio
+bereits regelkonform (Referenzmuster); dessen rein kosmetische
+ErgebnisBlock-Adoption zurückgestellt (§12 — Parallel-Session baut
+zeitgleich VD-Schlichtung).
+
 ## Session 10.6.2026 abends — STRUKTUR-UMBAU S-1–S-6 (Auftrag David)
 
 **`FAHRPLAN-STRUKTUR-UMBAU.md` komplett umgesetzt** (10 Commits ab

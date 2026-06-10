@@ -35,6 +35,9 @@ für Bau.
    (Engine-Muster, Wizard-Rahmen, `ui.tsx`, Export-/PDF-Renderer,
    Permalink-/ICS-/Begründungs-Bausteine)? Fehlt ein Rahmen → **erst den
    Rahmen** bauen (verhaltensneutral nach §6), dann das Feature.
+   Rechner-UIs folgen zwingend dem Aufbau-Reglement
+   `DESIGN-REGLEMENT-RECHNER.md` (R1–R12: Seiten-/Formular-/
+   Ergebnisblock-Skelett, ErgebnisBlock-Rahmen, Export-Reihenfolge).
 5. **Bibliothek zuerst (§11):** Liegt ein engine-orientiertes Dossier in
    `bibliothek/` (Quelle+Stand · Regel decision-tree-fähig · Geltungs-
    bereich/Ausnahmen · Pflegebedarf/Verfallsregister · Abnahme-Status),
