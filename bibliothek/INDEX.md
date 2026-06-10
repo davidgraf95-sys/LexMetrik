@@ -75,7 +75,7 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 ### Zivil (Gerichte + Schlichtung) — ZWEIFACH GEPRÜFT
 | Dokument | Inhalt | Befund 2. Durchgang |
 |---|---|---|
-| [gerichtsbehoerden-kantone.md](behoerden/gerichtsbehoerden-kantone.md) | Master-Liste Gerichte 26 Kantone | 0 Widerlegungen, 8/8 Stichproben; offen nur AR-Hausnr. + TI-Leventina |
+| [gerichtsbehoerden-kantone.md](behoerden/gerichtsbehoerden-kantone.md) | Master-Liste Gerichte 26 Kantone | 0 Widerlegungen, 8/8 Stichproben; Nachtrag 10.6.: ZH alle 12 BG amtlich (BG ZH Briefpost PF 8036!); offen nur AR-Hausnr. |
 | [gerichte-bund.md](behoerden/gerichte-bund.md) | BGer/BStGer/BVGer/BPatGer | 1 Korrektur (BVGer-PLZ 9023) eingearbeitet |
 | [gog-gerichtsorganisation-kantone.md](behoerden/gog-gerichtsorganisation-kantone.md) | Behörde→GOG-Artikel + kantonale Zivil-Gebührenstaffeln | 15/15 Stichproben bestätigt |
 | [rechtsmittel-spruchkoerper-kantone.md](behoerden/rechtsmittel-spruchkoerper-kantone.md) | Spruchkörper Berufung (Art. 308 ZPO) / Beschwerde (Art. 319 ZPO) je Kanton + BGerR Art. 33/34 (I./II. zivilrechtl. Abt.) — Verdrahtungs-Empfehlung obereInstanzen.ts | **Erstrecherche** (6.6.2026); deterministisch nach Rechtsmittel nur VD (+ ZG-Teil); Rest (B)/(A) ehrlich offen |

@@ -46,13 +46,17 @@ erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 > Detail-Backlog. B.18 (Roadmap-Triage) geht in G1 auf; A.2 (Markt-Themen)
 > bleibt bewusst draussen; §0a gilt weiter.
 
-## §0a · LEITPRINZIP PERFEKTION VOR NEUBAU (Daueranweisung David 7.6.2026 abends)
+## §0a · ~~LEITPRINZIP PERFEKTION VOR NEUBAU~~ (AUFGEHOBEN, Anweisung David 10.6.2026 abends)
 
-«Wir perfektionieren jetzt zuerst die bestehenden Engines und bauen
+**GESTRICHEN durch David 10.6.2026 («streiche die regel von §0a»)** —
+Neubau ist wieder offen; erste Aufträge: Kantonsausbau vereinfachte Klage,
+Vorlage ordentliche Klage. Der Mehrwert-Test (§0) gilt weiter.
+
+~~«Wir perfektionieren jetzt zuerst die bestehenden Engines und bauen
 gerade nichts Neues.» Konkret: KEINE neuen Engines/Rechner/Vorlagen/
 Features (auch nicht Zwei-Kategorien-Kapitalmodell AG-6, Mahnung,
 Eheschutz/GlG, BGG-Stufe 2, GmbH-G-Programm) — bis David den Neubau
-wieder öffnet. ERLAUBT bleibt alles, was Bestehendes besser macht:
+wieder öffnet.~~ ERLAUBT bleibt alles, was Bestehendes besser macht:
 Bug-Fixes, Härtungen/Invarianten, Verifikationen am Gesetz,
 Vereinheitlichung der Rechner-Ausstattung, Dossier-/Recherche-Arbeit
 (Bau-Vorwissen), Abnahme-Vorbereitung.

@@ -345,3 +345,31 @@ war ein FEHLER und ist hiermit aufgehoben.
 - Alle übrigen re-verifizierten Zeilen (Bund 4/4, 24/26 obere
   Instanzen, ZH/BE/SG-HG, kantonale Stichproben): BESTÄTIGT.
 
+
+## NACHTRAG 10.6.2026 — ZH: alle 12 Bezirksgerichte amtlich verifiziert
+
+Direkt-Abruf gerichte-zh.ch (Adressblöcke serverseitig im HTML), 10.6.2026;
+damit ist die ZH-Lücke der Erstliste (nur Zürich + Meilen) geschlossen.
+
+| Bezirksgericht | Adresse (Standort/Paket) | Briefpost |
+|---|---|---|
+| Affoltern | Im Grund 15, 8910 Affoltern am Albis | — |
+| Andelfingen | Thurtalstrasse 1, 8450 Andelfingen | Postfach, 8450 Andelfingen |
+| Bülach | Spitalstrasse 13, 8180 Bülach | Postfach, 8180 Bülach |
+| Dielsdorf | Spitalstrasse 7, 8157 Dielsdorf | — |
+| Dietikon | Bahnhofplatz 10, 8953 Dietikon | Postfach, 8953 Dietikon |
+| Hinwil | Gerichtshausstrasse 12, 8340 Hinwil | — (Neubau bis ~April 2028, Adresse bleibt) |
+| Horgen | Burghaldenstrasse 3, 8810 Horgen | — |
+| Meilen | Untere Bruech 139/140, 8706 Meilen | Postfach, 8706 Meilen |
+| Pfäffikon | Hörnlistrasse 55, 8330 Pfäffikon ZH | — |
+| Uster | Gerichtsstrasse 17, 8610 Uster | — |
+| Winterthur | Lindstrasse 10, 8400 Winterthur | — |
+| Zürich | Badenerstrasse 90, 8004 Zürich (Paket) | **Postfach, 8036 Zürich** |
+
+**Engine-relevant (BG Zürich):** Für ALLE Abteilungen (inkl. Einzelgerichte,
+Miet-/Arbeitsgericht) gilt einheitlich Briefpost «Postfach, 8036 Zürich»;
+die Einzelgerichte (Audienz, SchKG/summarisch, 5. Abt. Erbschaft) sowie
+Miet- und Arbeitsgericht sitzen physisch an der Wengistrasse 30 (9./10. Abt.
+Wengistrasse 28), Kollegialgericht/Zivilabteilungen Badenerstrasse 90.
+Quelle: gerichte-zh.ch …/bezirksgericht-zuerich/kontakt/abteilungen-und-bereiche-2.
+Status: Erstrecherche amtlich (Direkt-HTML); Abnahme David ausstehend.
