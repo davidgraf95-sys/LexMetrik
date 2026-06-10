@@ -38,6 +38,22 @@ gilt VOR jedem Neubau und rückwirkend für die ~80 geplanten Karten
 Regime-Freiheit erst am Gesetz verifizieren, dann streichen und die
 Begründung in KATALOG-ROADMAP.md festhalten.
 
+## A.0a · Gesamt-Bug-/Logik-Check 10.6.2026 (Auftrag David, ABGESCHLOSSEN)
+
+Workflow über den GANZEN Code: 6 Strang-Finder (Fristen · Zuständigkeit ·
+Beträge · Vorlagen · UI · Querschnitt), jeder Roh-Befund von 2 adversarialen
+Lupen geprüft (70 Agenten). Ergebnis: **29 doppelt bestätigte Befunde
+(7 HOCH · 10 MITTEL · 12 NIEDRIG) — ALLE GEFIXT** (Commits `b57a58c`,
+`47ce858`, `b4bbd57`, `6533f55`, `035c8b8`; je Regressionstest, Golden 2×
+deklariert regeneriert); 2 strittige Befunde nach Lupen-Verdikt als
+NIEDRIG-Residuen gefixt (Art.-279-III-Label, GebV-Tarifstand); 1 verworfen.
+Top-Funde: Art.-209-Klagefristen ohne Stillstand (BGE 138 III 615) ·
+Pauliana-Verjährung +8 Mt. · Verjährungs-Unterbrechung am verschobenen
+letzten Tag verworfen · Sperrfristen-Hemmung nicht iteriert · vorsorgliche
+Massnahme 30 T MIT statt 10 T OHNE Stillstand · Teilen-Link verlor
+#schkg/#straf · ICS-UID-Kollisionen. Voller Befundbericht (Roh + Verdikte):
+Workflow-Transcript wf_189d14a5-2b0.
+
 ## A · Entscheide, die nur David treffen kann (blockieren anderes)
 
 0. **Stand 7.6.2026 abends:** gepusht bis `4b5b9c3` (71 Commits, Token-Frage
