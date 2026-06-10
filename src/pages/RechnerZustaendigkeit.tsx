@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ZustaendigkeitForm } from '../components/forms/ZustaendigkeitForm';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { getCalculator } from '../lib/calculators';
@@ -40,8 +40,19 @@ const HASH_WEG: Record<string, Rechtsweg> = {
 
 export function RechnerZustaendigkeit() {
   const calc = getCalculator('zustaendigkeit')!;
-  const { hash } = useLocation();
+  const { hash, pathname, search } = useLocation();
+  const navigate = useNavigate();
   const [rechtsweg, setRechtsweg] = useState<Rechtsweg>(HASH_WEG[hash] ?? 'zivil');
+  // Bug-Check 10.6.2026 (HOCH): Der Rechtsweg-Wechsel schreibt den Hash in
+  // die URL — die Teilen-Links der SchKG-/Straf-Sichten funktionieren nur
+  // mit #schkg/#straf (LinkTeilenButton kopiert pathname+query+HASH; ohne
+  // Hash landete der Empfänger auf dem Zivil-Default und sah die geteilten
+  // s-/t-Parameter nie).
+  const wegWechsel = (w: Rechtsweg) => {
+    setRechtsweg(w);
+    const ziel = w === 'schkg' ? '#schkg' : w === 'straf' ? '#straf' : '';
+    if (ziel !== hash) navigate({ pathname, search, hash: ziel }, { replace: true });
+  };
 
   // Hash-Navigation bei bereits gemounteter Seite (z. B. «Verwandte Rechner») —
   // Sync während des Renderns statt im Effect (React-Pattern «adjusting state»).
@@ -61,7 +72,7 @@ export function RechnerZustaendigkeit() {
         normenOverride={hero?.normen}
       />
       <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
-        <ZustaendigkeitForm onRechtswegChange={setRechtsweg} rechtswegVorwahl={HASH_WEG[hash]} />
+        <ZustaendigkeitForm onRechtswegChange={wegWechsel} rechtswegVorwahl={HASH_WEG[hash]} />
       </div>
     </div>
   );

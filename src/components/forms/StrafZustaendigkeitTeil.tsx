@@ -72,8 +72,12 @@ const STRAF_DISCLAIMER =
 
 export function StrafZustaendigkeitTeil() {
   const [ausLink] = useState<Partial<StrafLinkZustand>>(() => {
-    try { return permalinkLesen(STRAF_LINK_SPEC, window.location.search) as Partial<StrafLinkZustand>; }
-    catch { return {}; }
+    try {
+      const l = permalinkLesen(STRAF_LINK_SPEC, window.location.search) as Partial<StrafLinkZustand>;
+      // M-7-Guard (Bug-Check 10.6.2026): Kaskade nur bei passender Tatort-Lage.
+      if (l.tatort !== 'ausland_oder_ungewiss') delete l.kaskade;
+      return l;
+    } catch { return {}; }
   });
   const [anliegen, setAnliegen] = useState<TeilAnliegen>(ausLink.anliegen ?? 'anzeige');
   const [tatort, setTatort] = useState<StrafTatortLage>(ausLink.tatort ?? 'bekannt');
@@ -378,8 +382,14 @@ const RM_LABEL: Record<string, string> = {
 
 function StrafRechtsmittelTeil() {
   const [ausLink] = useState<Partial<StrafRmLinkZustand>>(() => {
-    try { return permalinkLesen(STRAF_RM_LINK_SPEC, window.location.search) as Partial<StrafRmLinkZustand>; }
-    catch { return {}; }
+    try {
+      const l = permalinkLesen(STRAF_RM_LINK_SPEC, window.location.search) as Partial<StrafRmLinkZustand>;
+      // M-7-Guard (Bug-Check 10.6.2026): Sub-Felder nur beim passenden
+      // Entscheidtyp übernehmen.
+      if (l.entscheidTyp !== 'urteil_erstinstanz') delete l.uebertretung;
+      if (l.entscheidTyp !== 'rechtskraeftiges_urteil') delete l.revGrund;
+      return l;
+    } catch { return {}; }
   });
   const [entscheidTyp, setEntscheidTyp] = useState<StrafEntscheidTyp>(ausLink.entscheidTyp ?? 'urteil_erstinstanz');
   const [werFichtAn, setWerFichtAn] = useState<StrafAnfechtende>(ausLink.werFichtAn ?? 'beschuldigte_person');

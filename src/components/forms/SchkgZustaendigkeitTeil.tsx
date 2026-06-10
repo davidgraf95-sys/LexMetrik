@@ -81,8 +81,16 @@ const SCHKG_DISCLAIMER =
 
 export function SchkgZustaendigkeitTeil() {
   const [ausLink] = useState<Partial<SchkgLinkZustand>>(() => {
-    try { return permalinkLesen(SCHKG_LINK_SPEC, window.location.search) as Partial<SchkgLinkZustand>; }
-    catch { return {}; }
+    try {
+      const l = permalinkLesen(SCHKG_LINK_SPEC, window.location.search) as Partial<SchkgLinkZustand>;
+      // M-7-Guard (Bug-Check 10.6.2026): Sub-Felder nur übernehmen, wenn das
+      // zugehörige Anliegen im SELBEN Link steht — sonst bleibt ein fremder
+      // Unterfall im State vorbelegt.
+      if (l.anliegen !== 'widerspruch') delete l.widerspruchK;
+      if (l.anliegen !== 'kollokation') delete l.kollokationIn;
+      if (l.anliegen !== 'rechtsoeffnung') delete l.roArt;
+      return l;
+    } catch { return {}; }
   });
   const [anliegen, setAnliegen] = useState<SchkgAnliegen>(ausLink.anliegen ?? 'betreibung_einleiten');
   const [schuldnerTyp, setSchuldnerTyp] = useState<SchkgSchuldnerTyp>(ausLink.schuldnerTyp ?? 'natuerlich_wohnsitz');
@@ -115,10 +123,14 @@ export function SchkgZustaendigkeitTeil() {
         const kantone = [...new Set(treffer.map((t) => t.kanton))];
         const gemeinden = [...new Set(treffer.map((t) => t.gemeinde))];
         const haupt = hauptTreffer(treffer);
+        // Bug-Check 10.6.2026 (MITTEL): Leer-Guards wie im Zivil-Teil — der
+        // Haupt-Treffer füllt nur LEERE Felder; vorher überschrieb er nach
+        // der Link-Hydration den im Link kodierten Randgebiets-Kanton/-Ort
+        // (Empfänger sah ein anderes Betreibungsamt als der Absender).
         if (kantone.length === 1) setOrtKanton(kantone[0]);
-        else if (haupt) setOrtKanton(haupt.kanton);
-        if (gemeinden.length === 1) setOrtGemeinde(gemeinden[0]);
-        else if (haupt) setOrtGemeinde(haupt.gemeinde);
+        else if (haupt) setOrtKanton((alt) => (alt === '' ? haupt.kanton : alt));
+        if (gemeinden.length === 1) setOrtGemeinde((alt) => (alt.trim() === '' ? gemeinden[0] : alt));
+        else if (haupt) setOrtGemeinde((alt) => (alt.trim() === '' ? haupt.gemeinde : alt));
       })
       .catch(() => { if (aktiv) setPlzUnbekanntFuer(null); });
     return () => { aktiv = false; };
