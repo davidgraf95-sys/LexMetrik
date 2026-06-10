@@ -1,25 +1,32 @@
-// Dossier: FAHRPLAN-FRISTEN-EINHEIT.md
-// ─── FE-1 · Informationsarchitektur der Fristen-Kategorie ───────────────────
+// Dossier: FAHRPLAN-FRISTEN-EINHEIT.md · FAHRPLAN-STRUKTUR-UMBAU.md
+// ─── S-5b · Informationsarchitektur der Fristen-Kategorie ───────────────────
 //
-// EIN «Fristen berechnen»-Einstieg: Der Tagerechner (mit Regime-Führung
-// Allgemein · ZPO · SchKG) und der Fristenspiegel sind die HAUPTEINSTIEGE;
-// die Spezialrechner bleiben eigenständige Werkzeuge (eigene Eingabemodelle,
-// §4 — keine Engine-Fusion, V2/V3-Verdikte) und erscheinen als benannte
-// «Eigenes Regime»-Abzweigungen mit Ein-Satz-Begründung, WARUM eigen.
-// Der Doppelpfad zpo-/schkg-fristen ↔ Tagerechner-Tabs ist GEWOLLT
-// (Fach-/Laien-Einstieg) und wird als «Fach-Direkteinstieg» gekennzeichnet.
+// Auftrag David 10.6.2026 abends: «Fristen soll unterteilt werden in
+// prozessual und materiell.» Aufbau der Kategorie-Ansicht:
+//  - HAUPTEINSTIEG: der Tagerechner mit dem ganz simplen Fristenrechner
+//    zuoberst (Datum · Frist · Ferien-Wahl) und den Vorauswahl-Rechnern
+//    darunter (S-5a).
+//  - PROZESSUALE FRISTEN: Rechner für Fristen IM VERFAHREN mit eigenem
+//    Stillstands-Regime (ZPO Art. 145 · SchKG Art. 56/63) — dieselben
+//    Engines wie die Tagerechner-Tabs, direkt im Regime geöffnet
+//    (Doppelpfad gewollt, FE-1).
+//  - MATERIELLE FRISTEN: Rechner für Fristen des MATERIELLEN Rechts
+//    (Verjährung, Sperrfristen 336c, Kündigungstermine, Rüge/Gewährleistung,
+//    Erbrecht) — eigene Regimes ohne Gerichtsferien, mit Ein-Satz-WARUM.
+// Der frühere zweite Haupteinstieg «Fristenspiegel» ist AUFGELÖST (S-5c) —
+// seine Ereignisse leben in den Fach-Rechnern (EreignisFristenSektion).
 //
-// Die WARUM-Begründungen sind fachliche Aussagen (Kuratierung Claude aus den
-// Engine-Kopfkommentaren, Abnahme David offen — FE-6). Der Test
+// Die Zuordnung prozessual/materiell und die WARUM-Sätze sind fachliche
+// Aussagen (Kuratierung Claude, Abnahme David offen). Der Test
 // src/tests/fristenKategorie.test.ts erzwingt, dass jede VERFÜGBARE Karte
 // der Fristen-Kategorie genau einem Einstiegstyp zugeordnet ist — eine neue
 // Fristen-Karte ohne Zuordnung bricht die Suite (keine stille Mischliste).
 
-export type FristenEinstiegArt = 'haupt' | 'fach' | 'regime';
+export type FristenEinstiegArt = 'haupt' | 'prozessual' | 'materiell';
 
 export interface FristenHaupteinstieg {
   id: string;
-  /** Kurzzeile unter dem Titel (Regime-Untertitel bzw. Spiegel-Erklärung). */
+  /** Kurzzeile unter dem Titel. */
   untertitel: string;
 }
 
@@ -29,21 +36,22 @@ export interface FristenRegimeZeile {
   warum: string;
 }
 
-/** Die zwei grossen Einstiege der Fristen-Kategorie (FE-1). */
+/** Der grosse Einstieg der Fristen-Kategorie (S-5a: simpler Rechner oben). */
 export const FRISTEN_HAUPTEINSTIEGE: FristenHaupteinstieg[] = [
   { id: 'tagerechner',
-    untertitel: 'Allgemein (Vertrag/OR) · Zivilprozess (ZPO) · Betreibung (SchKG) · Rückwärts' },
-  { id: 'fristenspiegel',
-    untertitel: 'Ein Ereignis – die parallel laufenden Fristen daraus als Tabelle, mit Kalender-Export' },
+    untertitel: 'Einfacher Fristenrechner (Datum · Frist · Ferien-Wahl) – darunter Presets und die Voll-Rechner Allgemein/ZPO/SchKG inkl. Rückwärts' },
 ];
 
-/** Fach-Direkteinstiege: dieselben Engines wie die Tagerechner-Tabs,
- *  direkt im Regime geöffnet (Doppelpfad gewollt). */
-export const FRISTEN_FACH_DIREKTEINSTIEGE: string[] = ['zpo-fristen', 'schkg-fristen'];
+/** Prozessuale Fristen: eigenes Stillstands-Regime im Verfahren. */
+export const FRISTEN_PROZESSUAL: FristenRegimeZeile[] = [
+  { id: 'zpo-fristen',
+    warum: 'Fristen im Zivilprozess mit Stillstand (Art. 145 ZPO), Zustellregeln und kantonalen Feiertagen – gerichtliche und gesetzliche Fristen' },
+  { id: 'schkg-fristen',
+    warum: 'Fristen in der Betreibung mit Betreibungsferien und Rechtsstillstand (Art. 56/63 SchKG) – getrennt vom ZPO-Stillstand gerechnet' },
+];
 
-/** Spezialrechner mit eigenem Regime — Begründung WARUM eigen (fachliche
- *  Aussage, Abnahme David offen). */
-export const FRISTEN_EIGENE_REGIMES: FristenRegimeZeile[] = [
+/** Materielle Fristen: Regimes des materiellen Rechts (ohne Gerichtsferien). */
+export const FRISTEN_MATERIELL: FristenRegimeZeile[] = [
   { id: 'verjaehrung',
     warum: 'mit Unterbrechungs-Kette: Anerkennung, Betreibung oder Klage lassen die Frist neu laufen (bei Klage ab Abschluss vor der Instanz; Art. 135 ff. OR), relative und absolute Frist parallel' },
   { id: 'kuendigung-sperrfristen',
@@ -58,10 +66,10 @@ export const FRISTEN_EIGENE_REGIMES: FristenRegimeZeile[] = [
 
 /** Einstiegstyp einer Karte der Fristen-Kategorie — null heisst: noch nicht
  *  zugeordnet (der Test bricht dann; die UI fällt ehrlich auf eine
- *  Regime-Zeile ohne WARUM-Satz zurück). */
+ *  Zeile ohne WARUM-Satz zurück). */
 export function fristenEinstiegArt(id: string): FristenEinstiegArt | null {
   if (FRISTEN_HAUPTEINSTIEGE.some((h) => h.id === id)) return 'haupt';
-  if (FRISTEN_FACH_DIREKTEINSTIEGE.includes(id)) return 'fach';
-  if (FRISTEN_EIGENE_REGIMES.some((r) => r.id === id)) return 'regime';
+  if (FRISTEN_PROZESSUAL.some((r) => r.id === id)) return 'prozessual';
+  if (FRISTEN_MATERIELL.some((r) => r.id === id)) return 'materiell';
   return null;
 }

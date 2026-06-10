@@ -67,9 +67,8 @@ export const CALCULATORS: Calculator[] = [
   { slug: 'betreibungskosten', titel: 'Betreibungskosten (GebV SchKG)', kategorie: 'SchKG',
     kurzbeschrieb: 'Amtliche Gebühren je Betreibungsschritt nach der GebV SchKG (Stand 1.1.2026): Zahlungsbefehl, Pfändung, Verwertung, Einzahlung als Punktwerte; Entscheidgebühren (z. B. Rechtsöffnung) ehrlich als Rahmen; Auslagen und Überwälzung (Art. 68 SchKG) als Hinweis.',
     normen: ['Art. 16 GebV SchKG', 'Art. 20 GebV SchKG', 'Art. 30 GebV SchKG', 'Art. 48 GebV SchKG', 'Art. 68 SchKG'], status: 'entwurf', icon: 'percent' },
-  { slug: 'fristenspiegel', titel: 'Fristenspiegel (ein Ereignis · alle Fristen)', kategorie: 'Übergreifend',
-    kurzbeschrieb: 'Ein auslösendes Ereignis startet mehrere Fristen zugleich – der Spiegel zeigt sie als Tabelle, gerechnet von den bestehenden Fach-Engines (er rechnet nichts selbst). Pilot: Zugang einer Vermieter-Kündigung (Anfechtung und Erstreckung, Art. 273 OR); weitere Ereignisse folgen.',
-    normen: ['Art. 273 OR'], status: 'entwurf', icon: 'clock' },
+  // S-5c 10.6.2026: Fristenspiegel aufgelöst (Ereignis-Blöcke in den Fach-
+  // Rechnern; /rechner/fristenspiegel = Redirect mit Query-Weiterreichung).
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {

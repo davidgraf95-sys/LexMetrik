@@ -11,7 +11,7 @@ import { presetSuche, type PresetIndexEintrag } from '../lib/presetIndex';
 import { Link } from 'react-router-dom';
 import { KATALOG_KARTEN, istVerfuegbar, type CalculatorCard } from '../lib/startseiteConfig';
 import { sucheTrifft } from '../lib/katalogSuche';
-import { FRISTEN_EIGENE_REGIMES } from '../lib/fristenKategorie';
+import { FRISTEN_MATERIELL } from '../lib/fristenKategorie';
 import { sansAmp } from '../components/typografie';
 
 // ─── Kombinierter Fristenrechner (Free) — Auftrag 5.6.2026 ──────────────────
@@ -39,7 +39,7 @@ const HASH_VERFAHREN: Record<string, Verfahren> = { '#zpo': 'zpo', '#schkg': 'sc
 // FE-4: Abzweigungs-Treffer — die Preset-Suche prüft deterministisch auch
 // die «Eigenes Regime»-Spezialrechner (katalogSuche über die Karten, §5);
 // reine Hinweise mit WARUM-Satz, keine Auto-Navigation.
-const REGIME_ABZWEIGUNGEN: { warum: string; karte: CalculatorCard }[] = FRISTEN_EIGENE_REGIMES
+const REGIME_ABZWEIGUNGEN: { warum: string; karte: CalculatorCard }[] = FRISTEN_MATERIELL
   .map((r) => ({ warum: r.warum, karte: KATALOG_KARTEN.find((k) => k.id === r.id) }))
   .filter((x): x is { warum: string; karte: CalculatorCard } =>
     !!x.karte && istVerfuegbar(x.karte) && !!x.karte.href);

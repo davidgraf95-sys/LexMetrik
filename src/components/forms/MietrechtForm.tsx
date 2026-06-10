@@ -17,8 +17,6 @@ import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, istISO, istKanton, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import { IcsExportButton } from '../IcsExportButton';
 import { FristenKalender } from '../FristenKalender';
-import { Link } from 'react-router-dom';
-import { fristenspiegelLink } from '../../lib/rechnerPermalinks';
 
 const MIET_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der Kündigungstermine und -fristen im Mietrecht (Art. 253 ff. OR) – ' +
@@ -317,16 +315,10 @@ export function MietrechtForm() {
               aktenzeichen={aktenzeichen}
               query={mietQuery}
               beschreibung={ergebnis.ergebnis} dateiName="Mietende.ics" />
-            {/* Brücke 3.1d: Vermieter-Kündigung an Wohn-/Geschäftsräumen →
-                Fristenspiegel (Anfechtung/Erstreckung parallel, vorbefüllt) */}
-            {partei === 'vermieter'
-              && (objekt === 'wohnung' || objekt === 'geschaeftsraum')
-              && ['ordentlich', 'zahlungsverzug', 'pflichtverletzung', 'wichtige_gruende'].includes(art) && (
-              <Link className="lc-btn-outline no-underline"
-                to={fristenspiegelLink({ ereignis: 'vermieterkuendigung', zugang, objekt, kanton, kuendigungsart: art as 'ordentlich' | 'zahlungsverzug' | 'pflichtverletzung' | 'wichtige_gruende' })}>
-                Im Fristenspiegel öffnen →
-              </Link>
-            )}
+            {/* S-5c (Fristenspiegel-Auflösung): die alte Brücke «Im
+                Fristenspiegel öffnen» entfällt ersatzlos — Anfechtungs- und
+                Erstreckungsfrist (Art. 273 OR) zeigt dieser Rechner bereits
+                selbst (der Spiegel war reiner Konsument derselben Engine). */}
           </div>
         </div>
       )}

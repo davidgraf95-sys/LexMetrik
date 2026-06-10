@@ -7,7 +7,8 @@
 // AUSWAHL (fachliche Einschätzung Claude, 8 Einträge — Davids Anpassung
 // jederzeit; Kriterien: Breite der Praxisrelevanz × Fehlerfolgen):
 //  1 tagerechner            Fristen = Kern des Produkts (drei Engines, ein Einstieg)
-//  2 fristenspiegel         ein Ereignis → alle Fristen (Praxis-Orchestrierer)
+//  2 zpo-fristen            prozessuale Fristen mit Stillstand (S-5c: ersetzt den
+//                           aufgelösten Fristenspiegel in dieser Liste)
 //  3 zustaendigkeit         Eingangsfrage jedes Verfahrens (3 Rechtswege)
 //  4 verjaehrung            hohe Fehlerfolgen (Anspruchsverlust)
 //  5 verzugszins            häufigster Betragswert der Praxis
@@ -23,7 +24,7 @@ import { ALLE_KARTEN, istVerfuegbar, type CalculatorCard } from './startseiteCon
 
 export const HAEUFIG_GEBRAUCHT: string[] = [
   'tagerechner',
-  'fristenspiegel',
+  'zpo-fristen',
   'zustaendigkeit',
   'verjaehrung',
   'verzugszins',

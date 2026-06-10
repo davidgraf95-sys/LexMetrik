@@ -22,13 +22,22 @@ import { berechneAgKuendigungsSpiegel } from '../../lib/fristenspiegel/agKuendig
 import type { Fristnatur, FristenspiegelErgebnis, SpiegelZeile } from '../../lib/fristenspiegel/typen';
 import type { Kanton } from '../../types/legal';
 
-// ─── Fristenspiegel-Form (FAHRPLAN-PRAXIS 3.1b/3.1c) ────────────────────────
+// ─── Ereignis-Fristen (S-5c FAHRPLAN-STRUKTUR-UMBAU) ────────────────────────
 // EIN Ereignis → ALLE parallelen Fristen als Tabelle. Reine Darstellung (§3):
 // jede Zeile kommt aus lib/fristenspiegel/* (Orchestrierer über bestehende
-// Engines); hier wird nichts gerechnet. Ereignisse gemäss Konzept-Dossier:
-// A.4 Vermieter-Kündigung (Pilot) · A.1 Zivilentscheid; weitere folgen.
+// Engines); hier wird nichts gerechnet.
+// Vorgeschichte: Bis 10.6.2026 war dies die Form des eigenständigen
+// «Fristenspiegel»-Einstiegs (/rechner/fristenspiegel). Auftrag David
+// 10.6.2026 abends: «Der Fristenspiegel soll aufgelöst werden und sofern
+// ein Ereignis zu mehreren Fristen führt, das im jeweilig spezifischen
+// Fristenrechner abgebildet werden.» — Der Block lebt jetzt EINGEBETTET in
+// den Fach-Rechnern (ZPO: Zivilentscheid/Klagebewilligung · SchKG:
+// Zahlungsbefehl · Erbrecht: Erbgang · Kündigung: 336b); die `ereignisse`-
+// Prop filtert je Seite. Alte /rechner/fristenspiegel-Links (Teilen/.ics)
+// leitet FristenspiegelRedirect mit derselben FSP-Query auf die Fach-Seite
+// um (§8 — geteilte Links laufen nicht ins Leere).
 
-type Ereignis = 'vermieterkuendigung' | 'zivilentscheid' | 'zahlungsbefehl' | 'klagebewilligung' | 'erbgang' | 'agkuendigung';
+export type Ereignis = 'vermieterkuendigung' | 'zivilentscheid' | 'zahlungsbefehl' | 'klagebewilligung' | 'erbgang' | 'agkuendigung';
 
 const EREIGNISSE: { code: Ereignis; label: string }[] = [
   { code: 'zivilentscheid', label: 'Zustellung eines erstinstanzlichen Zivilentscheids' },
@@ -89,15 +98,43 @@ function ZeileAnzeige({ z, aktenzeichen, query }: { z: SpiegelZeile; aktenzeiche
   );
 }
 
-export function FristenspiegelForm() {
-  // Vorbefüllung aus dem Permalink (Brücken-Ziel; SSR-sicher).
+/** Karten-Sektion für die Fach-Rechner-Seiten: Überschrift + Ereignis-Block.
+ *  `id` dient als Sprungziel (z. B. #ereignis-336b aus dem Sperrfristen-
+ *  Rechner); `zustellungVorgabe` füllt das Ereignisdatum live vom Rechner
+ *  derselben Seite vor (ersetzt die alte Permalink-Brücke verlustfrei —
+ *  die Sperrfristen-VERSCHIEBUNG bleibt im Datum enthalten). */
+export function EreignisFristenSektion({ ereignisse, id, zustellungVorgabe }: {
+  ereignisse: Ereignis[]; id?: string; zustellungVorgabe?: string | null;
+}) {
+  return (
+    <section id={id} aria-label="Ereignis-Fristen"
+      className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8 space-y-4 scroll-mt-28">
+      <div className="space-y-1">
+        <h2 className="lc-overline text-brass-700">Ereignis-Fristen – ein Anlass, mehrere Fristen</h2>
+        <p className="text-body-s text-ink-500 max-w-reading">
+          Ein Ereignis löst mehrere Fristen parallel aus – die Tabelle zeigt sie
+          mit Norm und Fristnatur, einzeln oder gesammelt als Kalender-Export
+          (gerechnet von denselben Engines wie der Rechner oben).
+        </p>
+      </div>
+      <EreignisFristen ereignisse={ereignisse} zustellungVorgabe={zustellungVorgabe} />
+    </section>
+  );
+}
+
+export function EreignisFristen({ ereignisse, zustellungVorgabe }: {
+  ereignisse: Ereignis[]; zustellungVorgabe?: string | null;
+}) {
+  const erlaubt = EREIGNISSE.filter((e) => ereignisse.includes(e.code));
+  // Vorbefüllung aus dem Permalink (Brücken-/Redirect-Ziel; SSR-sicher).
   const start = useMemo(() => {
     try { return permalinkLesen(FSP_LINK_SPEC, typeof window === 'undefined' ? '' : window.location.search); }
     catch { return {}; }
   }, []);
 
   const [ereignis, setEreignis] = useState<Ereignis>(
-    EREIGNIS_CODES.includes(start.ereignis as Ereignis) ? (start.ereignis as Ereignis) : 'zivilentscheid');
+    EREIGNIS_CODES.includes(start.ereignis as Ereignis) && ereignisse.includes(start.ereignis as Ereignis)
+      ? (start.ereignis as Ereignis) : erlaubt[0].code);
   const [kanton, setKanton] = useState<Kanton>((start.kanton as Kanton) ?? 'ZH');
 
   // ── A.4 Vermieter-Kündigung ──
@@ -107,6 +144,14 @@ export function FristenspiegelForm() {
 
   // ── A.1 Zivilentscheid ──
   const [zustellung, setZustellung] = useState<string>(start.zustellung ?? '');
+  // Live-Vorgabe vom Rechner derselben Seite (S-5c, z. B. 336b-Beendigung):
+  // Sync während des Renderns («adjusting state»); manuelle Edits bleiben
+  // erhalten, bis sich die Vorgabe erneut ändert.
+  const [letzteVorgabe, setLetzteVorgabe] = useState(zustellungVorgabe ?? null);
+  if ((zustellungVorgabe ?? null) !== letzteVorgabe) {
+    setLetzteVorgabe(zustellungVorgabe ?? null);
+    if (zustellungVorgabe && istISO(zustellungVorgabe)) setZustellung(zustellungVorgabe);
+  }
   const [vermoegensrechtlich, setVermoegensrechtlich] = useState<boolean>(start.vermoegensrechtlich ?? true);
   const [streitwertRoh, setStreitwertRoh] = useState<string>(start.streitwertCHF != null ? String(start.streitwertCHF) : '');
   const [verfahren, setVerfahren] = useState<'ordentlich_vereinfacht' | 'summarisch'>(start.verfahren ?? 'ordentlich_vereinfacht');
@@ -177,11 +222,17 @@ export function FristenspiegelForm() {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label="Ereignis" hint="Was wurde zugestellt / ist eingetreten?">
-          <select value={ereignis} onChange={(e) => setEreignis(e.target.value as Ereignis)} className={inputCls} aria-label="Ereignis">
-            {EREIGNISSE.map((e) => <option key={e.code} value={e.code}>{e.label}</option>)}
-          </select>
-        </Field>
+        {erlaubt.length > 1 ? (
+          <Field label="Ereignis" hint="Was wurde zugestellt / ist eingetreten?">
+            <select value={ereignis} onChange={(e) => setEreignis(e.target.value as Ereignis)} className={inputCls} aria-label="Ereignis">
+              {erlaubt.map((e) => <option key={e.code} value={e.code}>{e.label}</option>)}
+            </select>
+          </Field>
+        ) : (
+          <Field label="Ereignis">
+            <p className="text-body-s text-ink-700 mt-2">{erlaubt[0].label}</p>
+          </Field>
+        )}
 
         {ereignis === 'vermieterkuendigung' ? (
           <>

@@ -24,7 +24,6 @@ describe('Oberkategorien (Register-Primärachse)', () => {
     expect(kat('zustaendigkeit')).toBe('zustaendigkeiten');
     expect(kat('zpo-fristen')).toBe('fristen');
     expect(kat('tagerechner')).toBe('fristen');
-    expect(kat('fristenspiegel')).toBe('fristen');
     expect(kat('betreibungskosten')).toBe('gebuehren');
     expect(kat('teuerungsrechner')).toBe('gebuehren');
     expect(kat('mietvertrag-wohnen')).toBe('vorlagen');

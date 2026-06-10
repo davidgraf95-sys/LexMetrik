@@ -61,11 +61,11 @@ describe('Register: Vier-Kategorien-DECKBLATT mit Klick-Ansicht (Präzisierung D
     expect(html).not.toContain('type="search"');
   });
 
-  it('?kategorie=fristen: Unterthemen-Ansicht — praxis-gerankte Liste, Sub-Labels, Geplant-Zeile, Zurück-Weg', () => {
+  it('?kategorie=fristen: Unterthemen-Ansicht — Haupteinstieg zuoberst, Geplant-Zeile, Zurück-Weg', () => {
     const html = seiteHtml('/?kategorie=fristen');
     expect(html).toContain('id="register-titel-fristen"');
     expect(html).toContain('Alle Kategorien'); // Zurück-Weg
-    // Klicktiefe 1 + Praxis-Rang: Tagerechner (Alltag) vor Gewährleistung (regelmässig)
+    // Klicktiefe 1: Haupteinstieg (Tagerechner) vor den Rubriken-Zeilen
     expect(html).toContain('href="/rechner/tagerechner"');
     expect(html).toContain('href="/rechner/verjaehrung"');
     expect(html.indexOf('Fristenrechner')).toBeLessThan(html.indexOf('Gewährleistung'));
@@ -78,20 +78,20 @@ describe('Register: Vier-Kategorien-DECKBLATT mit Klick-Ansicht (Präzisierung D
     expect(html).not.toContain('href="/rechner/verzugszins"');
   });
 
-  it('?kategorie=fristen: FE-1-Anatomie — zwei Haupteinstiege, Fach-Direkteinstieg-Kennzeichnung, Eigenes-Regime-Zeilen mit WARUM-Satz', () => {
+  it('?kategorie=fristen: S-5b-Anatomie — Haupteinstieg + Rubriken prozessual/materiell mit WARUM-Sätzen (deklarierte Ablösung FE-1)', () => {
     const html = seiteHtml('/?kategorie=fristen');
-    // EIN Einstieg: Tagerechner + Fristenspiegel zuoberst, mit Regime-Untertiteln
+    // EIN Haupteinstieg: Tagerechner mit dem simplen Rechner zuoberst
     expect(html).toContain('Fristen berechnen');
-    expect(html).toContain('Allgemein (Vertrag/OR) · Zivilprozess (ZPO) · Betreibung (SchKG) · Rückwärts');
-    expect(html).toContain('Ein Ereignis – die parallel laufenden Fristen daraus');
-    // Doppelpfad gewollt, aber gekennzeichnet
-    expect(html).toContain('Fach-Direkteinstieg');
+    expect(html).toContain('Einfacher Fristenrechner (Datum · Frist · Ferien-Wahl)');
+    // Auftrag David 10.6.2026 abends: prozessual / materiell
+    expect(html).toContain('Prozessuale Fristen');
     expect(html).toContain('href="/rechner/zpo-fristen"');
     expect(html).toContain('href="/rechner/schkg-fristen"');
-    // Spezialrechner als benannte Abzweigungen mit Ein-Satz-Begründung
-    expect(html).toContain('Eigenes Regime');
+    expect(html).toContain('Materielle Fristen');
     expect(html).toContain('Unterbrechungs-Kette');
     expect(html).toContain('Art. 336c OR');
+    // Fristenspiegel ist aufgelöst (S-5c) — kein Einstieg mehr
+    expect(html).not.toContain('Fristenspiegel');
     // Keine gleichrangige Mischliste mehr
     expect(html).not.toContain('Weitere Werkzeuge');
   });

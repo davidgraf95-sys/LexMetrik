@@ -656,35 +656,12 @@ const KARTEN: Record<string, CalculatorCard> = {
       'Vaterschaft', 'KESB'],
     icon: 'clock',
   },
-  fristenspiegel: {
-    id: 'fristenspiegel', modus: 'rechner', art: 'werkzeug', rechtsgebiet: 'Übergreifende Werkzeuge',
-    rechtsbereich: 'uebergreifend',
-    title: 'Fristenspiegel (ein Ereignis · alle Fristen)',
-    description: 'Ein auslösendes Ereignis startet mehrere Fristen zugleich – der Spiegel zeigt sie als Tabelle mit Fristnatur, Norm und Kalender-Export, gerechnet von den bestehenden Fach-Engines (er rechnet nichts selbst). Sechs Ereignisse: erstinstanzlicher Zivilentscheid (Berufung/Beschwerde-Weiche, Dispositiv-Vorstufe), Zahlungsbefehl (Rechtsvorschlag, Art.-88-Dual), Klagebewilligung, Vermieter-Kündigung (Anfechtung/Erstreckung), Arbeitgeber-Kündigung (Einsprache & 336b-Klagefrist) und Erbgang (Ausschlagung/Inventar).',
-    status: 'entwurf',
-    norms: [
-      { label: 'Art. 311 ZPO', url: fedlexUrl('ZPO', '311'), verified: false },
-      { label: 'Art. 321 ZPO', url: fedlexUrl('ZPO', '321'), verified: false },
-      { label: 'Art. 209 ZPO', url: fedlexUrl('ZPO', '209'), verified: false },
-      { label: 'Art. 74 SchKG', url: fedlexUrl('SchKG', '74'), verified: false },
-      { label: 'Art. 88 SchKG', url: fedlexUrl('SchKG', '88'), verified: false },
-      { label: 'Art. 273 OR', url: fedlexUrl('OR', '273'), verified: false },
-      { label: 'Art. 336b OR', url: fedlexUrl('OR', '336b'), verified: false },
-      { label: 'Art. 567 ZGB', url: fedlexUrl('ZGB', '567'), verified: false },
-    ],
-    href: '/rechner/fristenspiegel',
-    related: ['mietrecht', 'zpo-fristen', 'schkg-fristen', 'erbrecht-fristen', 'kuendigung-sperrfristen', 'zustaendigkeit'],
-    keywords: ['Fristenspiegel', 'parallele Fristen', 'Kündigung erhalten', 'Urteil erhalten', 'Zahlungsbefehl erhalten', 'Anfechtung', 'Erstreckung', 'Berufung', 'Beschwerde', 'Rechtsvorschlag', 'Ausschlagung', 'Klagebewilligung', 'Einsprache', 'Art. 336b', 'Fristenkontrolle'],
-    szenarien: [
-      { label: 'Zivilentscheid: Berufung/Beschwerde, Begründung, Folgestufe BGer', status: 'entwurf' },
-      { label: 'Zahlungsbefehl: Rechtsvorschlag & Art.-88-Dual (Fortsetzung)', status: 'entwurf' },
-      { label: 'Klagebewilligung: Klagefrist (3 Monate / Miete 30 Tage)', status: 'entwurf' },
-      { label: 'Vermieter-Kündigung: Anfechtung & Erstreckung (Art. 273 OR)', status: 'entwurf' },
-      { label: 'AG-Kündigung: Einsprache & 336b-Klagefrist (Anker: Sperrfristen-Rechner)', status: 'entwurf' },
-      { label: 'Erbgang: Ausschlagung & öffentliches Inventar', status: 'entwurf' },
-    ],
-    icon: 'clock',
-  },
+  // S-5c STRUKTUR-UMBAU 10.6.2026 abends (Auftrag David): Die Karte
+  // «Fristenspiegel» ist AUFGELÖST — die sechs Ereignisse leben als
+  // Ereignis-Block in den Fach-Rechnern (ZPO: Zivilentscheid +
+  // Klagebewilligung · SchKG: Zahlungsbefehl · Erbrecht: Erbgang ·
+  // Kündigung: 336b · Mietrecht: zeigt Anfechtung/Erstreckung selbst);
+  // /rechner/fristenspiegel ist ein Redirect mit Query-Weiterreichung.
   'ferien-checker': {
     id: 'ferien-checker', modus: 'rechner', art: 'werkzeug', rechtsgebiet: 'Übergreifende Werkzeuge',
     rechtsbereich: 'uebergreifend',

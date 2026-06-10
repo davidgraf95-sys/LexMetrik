@@ -1,6 +1,6 @@
 import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { SperrfristenInput } from '../../types/legal';
 import { berechneSperrfristen, type SperrfristenErgebnis } from '../../lib/sperrfristen';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
@@ -12,8 +12,7 @@ import { BegruendungAbsatz } from '../BegruendungAbsatz';
 import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
-import { KSP_LINK_SPEC, fristenspiegelLink } from '../../lib/rechnerPermalinks';
-import { Link } from 'react-router-dom';
+import { KSP_LINK_SPEC } from '../../lib/rechnerPermalinks';
 import { IcsExportButton } from '../IcsExportButton';
 import { KuendigungTimeline } from '../KuendigungTimeline';
 import { SperrtageZaehler } from '../SperrtageZaehler';
@@ -45,7 +44,12 @@ function validiere(f: SperrfristenInput): string[] {
 // SperrereignisseEditor (§10) — genutzt auch von der Vorlagen-Maske
 // «Kündigung durch Arbeitgeber:in».
 
-export function KuendigungSperrForm() {
+export function KuendigungSperrForm({ onBeendigung }: {
+  /** S-5c: meldet das (sperrfristen-verschobene) Beendigungsdatum der
+   *  AG-Kündigung an die Seite — sie füllt damit den Ereignis-Block
+   *  «336b-Fristen» vor (ersetzt die alte Fristenspiegel-Brücke). */
+  onBeendigung?: (iso: string | null) => void;
+} = {}) {
   const [form, setForm] = useState<SperrfristenInput>(() => {
     try { return { ...DEFAULTS, ...permalinkLesen(KSP_LINK_SPEC, window.location.search) }; }
     catch { return DEFAULTS; }
@@ -61,6 +65,10 @@ export function KuendigungSperrForm() {
     try { gesamt = berechneSperrfristen(form); } catch { gesamt = null; }
   }
   const hatEreignisse = (form.sperrereignisse ?? []).length > 0;
+
+  const beendigungFuer336b = gesamt && gesamt.status !== 'nichtig'
+    && form.kuendigendePartei === 'arbeitgeber' ? gesamt.beendigungISO ?? null : null;
+  useEffect(() => { onBeendigung?.(beendigungFuer336b); }, [beendigungFuer336b, onBeendigung]);
 
   const eingaben = {
     'Vertragsbeginn': form.vertragsbeginn,
@@ -259,13 +267,14 @@ export function KuendigungSperrForm() {
               : <IcsExportButton endISO={gesamt.beendigungISO} titel="Beendigung Arbeitsverhältnis"
                   aktenzeichen={aktenzeichen} query={kspQuery}
                   beschreibung={gesamt.ergebnis} dateiName="Beendigung-Arbeitsverhaeltnis.ics" />}
-            {/* Brücke 3.1d: Beendigungsdatum (inkl. Sperrfristen-Verschiebung!)
-                als Anker in den Fristenspiegel — 336b-Einsprache/Klagefrist */}
+            {/* S-5c (Fristenspiegel-Auflösung): die 336b-Fristen leben jetzt
+                als Ereignis-Block UNTEN AUF DIESER SEITE; das Beendigungs-
+                datum (inkl. Sperrfristen-Verschiebung!) fliesst live über
+                onBeendigung hinein — der Anker springt nur hin. */}
             {gesamt.status !== 'nichtig' && gesamt.beendigungISO && form.kuendigendePartei === 'arbeitgeber' && (
-              <Link className="lc-btn-outline no-underline"
-                to={fristenspiegelLink({ ereignis: 'agkuendigung', zustellung: gesamt.beendigungISO })}>
-                336b-Fristen im Fristenspiegel →
-              </Link>
+              <a className="lc-btn-outline no-underline" href="#ereignis-336b">
+                336b-Fristen (Einsprache &amp; Klage) unten anzeigen →
+              </a>
             )}
           </div>
         </div>

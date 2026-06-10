@@ -5,7 +5,7 @@ import { EINGABE_RUBRIKEN, istVorlage } from '../lib/vorlagenKategorie';
 import { GEBUEHREN_RUBRIKEN, gebuehrenRubrik, type GebuehrenRubrik } from '../lib/gebuehrenKategorie';
 import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
 import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
-import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_FACH_DIREKTEINSTIEGE, FRISTEN_EIGENE_REGIMES, fristenEinstiegArt } from '../lib/fristenKategorie';
+import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_PROZESSUAL, FRISTEN_MATERIELL, fristenEinstiegArt, type FristenRegimeZeile as FristenRegimeZeileDef } from '../lib/fristenKategorie';
 import { ZUSTAENDIGKEIT_FELDER, ZUSTAENDIGKEIT_FELD_IDS } from '../lib/zustaendigkeitKategorie';
 import { kartePasst, sucheRang } from '../lib/katalogSuche';
 import { sansAmp } from './typografie';
@@ -113,13 +113,14 @@ function WerkzeugZeile({ k, subLabel, zeigeGeplant }: { k: CalculatorCard; subLa
   );
 }
 
-// ─── Fristen-Register (FE-1, FAHRPLAN-FRISTEN-EINHEIT) ──────────────────────
+// ─── Fristen-Register (S-5b FAHRPLAN-STRUKTUR-UMBAU) ────────────────────────
 //
-// EIN «Fristen berechnen»-Einstieg: zwei grosse Haupteinstiege (Tagerechner
-// mit Regime-Untertiteln + Fristenspiegel), darunter die Spezialrechner als
-// «Eigenes Regime»-Zeilen mit Ein-Satz-WARUM; zpo-/schkg-fristen als
-// gekennzeichnete Fach-Direkteinstiege (Doppelpfad gewollt). Daten/Texte:
-// lib/fristenKategorie.ts (fachliche Aussagen, Abnahme David offen).
+// Haupteinstieg Tagerechner (simpler Fristenrechner zuoberst, S-5a),
+// darunter ZWEI Rubriken nach Davids Wortlaut (10.6.2026 abends):
+// «Prozessuale Fristen» (eigenes Stillstands-Regime: ZPO · SchKG) und
+// «Materielle Fristen» (Verjährung, 336c, Kündigungstermine, Rüge,
+// Erbrecht), je mit Ein-Satz-WARUM. Daten/Texte: lib/fristenKategorie.ts
+// (fachliche Aussagen, Abnahme David offen).
 
 function FristenHauptKarte({ k, untertitel }: { k: CalculatorCard; untertitel: string }) {
   return (
@@ -167,15 +168,30 @@ function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
   const haupt = FRISTEN_HAUPTEINSTIEGE
     .map((h) => ({ ...h, k: byId.get(h.id) }))
     .filter((h): h is typeof h & { k: CalculatorCard } => !!h.k && istVerfuegbar(h.k) && !!h.k.href);
-  const fach = FRISTEN_FACH_DIREKTEINSTIEGE
-    .map((id) => byId.get(id))
-    .filter((k): k is CalculatorCard => !!k && istVerfuegbar(k) && !!k.href);
-  const regimes = FRISTEN_EIGENE_REGIMES
+  const zeilenFuer = (defs: FristenRegimeZeileDef[]) => defs
     .map((r) => ({ ...r, k: byId.get(r.id) }))
     .filter((r): r is typeof r & { k: CalculatorCard } => !!r.k && istVerfuegbar(r.k));
-  // Ehrlicher Fallback: verfügbare Fristen-Karten ohne FE-1-Zuordnung
-  // erscheinen als Regime-Zeile ohne WARUM-Satz (der Test bricht zusätzlich).
+  const prozessual = zeilenFuer(FRISTEN_PROZESSUAL);
+  const materiell = zeilenFuer(FRISTEN_MATERIELL);
+  // Ehrlicher Fallback: verfügbare Fristen-Karten ohne Zuordnung erscheinen
+  // als Zeile ohne WARUM-Satz unter «Materiell» (der Test bricht zusätzlich).
   const unzugeordnet = karten.filter((k) => istVerfuegbar(k) && fristenEinstiegArt(k.id) === null);
+
+  const rubrik = (titel: string, lede: string, zeilen: ReturnType<typeof zeilenFuer>, extra: CalculatorCard[] = []) => (
+    (zeilen.length > 0 || extra.length > 0) && (
+      <div className="space-y-2">
+        <div className="flex items-center gap-3">
+          <h3 className="lc-overline text-brass-700">{titel}</h3>
+          <span aria-hidden className="flex-1 h-px bg-line" />
+        </div>
+        <p className="text-body-s text-ink-500 max-w-reading">{lede}</p>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
+          {zeilen.map((r) => <FristenRegimeZeile key={r.id} k={r.k} warum={r.warum} />)}
+          {extra.map((k) => <FristenRegimeZeile key={k.id} k={k} />)}
+        </div>
+      </div>
+    )
+  );
 
   return (
     <div className="space-y-5">
@@ -184,40 +200,16 @@ function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
           <h3 className="lc-overline text-brass-700">Fristen berechnen</h3>
           <span aria-hidden className="flex-1 h-px bg-line" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 gap-3">
           {haupt.map((h) => <FristenHauptKarte key={h.id} k={h.k} untertitel={h.untertitel} />)}
         </div>
-        {fach.length > 0 && (
-          <p className="text-body-s text-ink-500">
-            Fach-Direkteinstieg (derselbe Rechner, direkt im Regime geöffnet):{' '}
-            {fach.map((k, i) => (
-              <span key={k.id} className="whitespace-nowrap">
-                {i > 0 && <span aria-hidden> · </span>}
-                <Link to={k.href!} className="font-medium text-brass-700 hover:text-brass-600 no-underline">
-                  {sansAmp(k.title)} <span aria-hidden>→</span>
-                </Link>
-              </span>
-            ))}
-          </p>
-        )}
       </div>
-
-      {(regimes.length > 0 || unzugeordnet.length > 0) && (
-        <div className="space-y-2">
-          <div className="flex items-center gap-3">
-            <h3 className="lc-overline text-ink-500">Eigenes Regime – Spezialrechner</h3>
-            <span aria-hidden className="flex-1 h-px bg-line" />
-          </div>
-          <p className="text-body-s text-ink-500 max-w-reading">
-            Diese Fristen folgen eigenen Regeln und haben darum einen eigenen Rechner –
-            der Grund steht an jeder Zeile.
-          </p>
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-            {regimes.map((r) => <FristenRegimeZeile key={r.id} k={r.k} warum={r.warum} />)}
-            {unzugeordnet.map((k) => <FristenRegimeZeile key={k.id} k={k} />)}
-          </div>
-        </div>
-      )}
+      {rubrik('Prozessuale Fristen',
+        'Fristen im Verfahren mit eigenem Stillstands-Regime – Gerichtsferien (ZPO) bzw. Betreibungsferien (SchKG).',
+        prozessual)}
+      {rubrik('Materielle Fristen',
+        'Fristen des materiellen Rechts – eigene Regimes ohne Gerichtsferien; der Grund steht an jeder Zeile.',
+        materiell, unzugeordnet)}
     </div>
   );
 }

@@ -142,10 +142,6 @@ export const FSP_LINK_SPEC: PermalinkSpec<FspFelder & Record<string, unknown>> =
   erbenstellung: { p: 'es', typ: 'str', gueltig: einerVon('gesetzlich', 'eingesetzt') },
 };
 
-/** Vereinigte Link-Felder aller Spiegel-Ereignisse; `ereignis` wählt den Zweig. */
-export type FspLink = FspFelder;
-
-/** Vorbefüllter Link in den Fristenspiegel (Brücken-Ziel, z. B. aus dem Mietrechner). */
-export function fristenspiegelLink(teil: Partial<FspLink>): string {
-  return '/rechner/fristenspiegel' + permalinkKodieren(FSP_LINK_SPEC, teil as FspLink & Record<string, unknown>);
-}
+// S-5c 10.6.2026: fristenspiegelLink() entfernt — der eigenständige
+// Fristenspiegel ist aufgelöst; FSP_LINK_SPEC bleibt als gemeinsame
+// Kodierung der EreignisFristen-Blöcke und des Link-Erbe-Redirects (§5/§8).

@@ -35,7 +35,6 @@ export const OBERKATEGORIEN: Oberkategorie[] = [
 // neue Werkzeug-Karte hier fehlt (keine stille Fallback-Einsortierung).
 const WERKZEUG_KATEGORIE: Record<string, OberkategorieId> = {
   tagerechner: 'fristen',
-  fristenspiegel: 'fristen',
   'ferien-checker': 'fristen',
   'ferien-assistent': 'fristen',
   teuerungsrechner: 'gebuehren',

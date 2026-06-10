@@ -29,7 +29,6 @@ import { RechnerErbteilung } from '../src/pages/RechnerErbteilung';
 import { RechnerTagerechner } from '../src/pages/RechnerTagerechner';
 import { RechnerTeuerung } from '../src/pages/RechnerTeuerung';
 import { RechnerZustaendigkeit } from '../src/pages/RechnerZustaendigkeit';
-import { RechnerFristenspiegel } from '../src/pages/RechnerFristenspiegel';
 import { RechnerStreitwert } from '../src/pages/RechnerStreitwert';
 import { RechnerGebvKosten } from '../src/pages/RechnerGebvKosten';
 
@@ -59,7 +58,6 @@ const SEITEN: [string, React.ComponentType][] = [
   ['RechnerTagerechner', RechnerTagerechner],
   ['RechnerTeuerung', RechnerTeuerung],
   ['RechnerZustaendigkeit', RechnerZustaendigkeit],
-  ['RechnerFristenspiegel', RechnerFristenspiegel],
   ['RechnerStreitwert', RechnerStreitwert],
   ['RechnerGebvKosten', RechnerGebvKosten],
 ];

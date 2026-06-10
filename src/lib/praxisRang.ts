@@ -16,7 +16,7 @@ import { kategorieFuer, type OberkategorieId } from './oberkategorien';
 
 const RANG_1_ALLTAG: ReadonlySet<string> = new Set([
   // Fristen (verpasste Frist = Haftung; KATALOG-ROADMAP Rang 1–8)
-  'tagerechner', 'fristenspiegel', 'zpo-fristen', 'schkg-fristen',
+  'tagerechner', 'zpo-fristen', 'schkg-fristen',
   'verjaehrung', 'mietrecht', 'kuendigung-sperrfristen',
   // Zuständigkeit (Eingangsfrage jedes Mandats; S-3: vier Rechtsweg-Felder)
   'zustaendigkeit', 'schkg-zustaendigkeit', 'straf-zustaendigkeit',
@@ -46,7 +46,7 @@ export function praxisRang(id: string): 1 | 2 | 3 {
  *  (Versimplung 10.6.2026: gleiche Funktion, ein Apparat weniger). */
 const KACHEL_LINKS: Record<OberkategorieId, string[]> = {
   zustaendigkeiten: ['zustaendigkeit', 'schkg-zustaendigkeit'],
-  fristen: ['tagerechner', 'fristenspiegel'],
+  fristen: ['tagerechner', 'zpo-fristen'],
   gebuehren: ['verzugszins', 'betreibungskosten'],
   vorlagen: ['vollmacht', 'kuendigung-vertrag'],
 };

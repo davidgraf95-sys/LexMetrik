@@ -5,6 +5,7 @@ import { KuendigungSperrForm } from '../components/forms/KuendigungSperrForm';
 import { KombinierteAnsicht } from '../components/forms/KombinierteAnsicht';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { TagerechnerRueckverweis } from '../components/TagerechnerRueckverweis';
+import { EreignisFristenSektion } from '../components/forms/EreignisFristen';
 import { getCalculator } from '../lib/calculators';
 
 type Tab = 'a' | 'b_c' | 'kombiniert';
@@ -35,6 +36,10 @@ export function RechnerKuendigung() {
     if (HASH_TAB[hash]) setTab(HASH_TAB[hash]);
   }
 
+  // S-5c: Beendigungsdatum (inkl. Sperrfristen-Verschiebung) aus dem
+  // B+C-Rechner → Vorgabe für den 336b-Ereignis-Block unten.
+  const [beendigung, setBeendigung] = useState<string | null>(null);
+
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
@@ -54,9 +59,15 @@ export function RechnerKuendigung() {
 
       <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
         {tab === 'a' && <LohnfortzahlungForm />}
-        {tab === 'b_c' && <KuendigungSperrForm />}
+        {tab === 'b_c' && <KuendigungSperrForm onBeendigung={setBeendigung} />}
         {tab === 'kombiniert' && <KombinierteAnsicht />}
       </div>
+
+      {/* S-5c (Fristenspiegel-Auflösung): die 336b-Fristen (Einsprache &
+          Klagefrist nach der AG-Kündigung) leben auf DIESER Seite; der
+          Sperrfristen-Rechner verweist per Anker hierher. */}
+      <EreignisFristenSektion ereignisse={['agkuendigung']} id="ereignis-336b"
+        zustellungVorgabe={beendigung} />
 
       {/* Themen-Einstieg (Konsolidierung 7.6.2026, E3): die Schreiben-Masken
           haben keine eigenen Katalog-Karten mehr — hier ist ihr Direktzugang. */}

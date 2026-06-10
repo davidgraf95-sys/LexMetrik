@@ -1,4 +1,5 @@
 import { ErbFristenForm } from '../components/forms/ErbFristenForm';
+import { EreignisFristenSektion } from '../components/forms/EreignisFristen';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { TagerechnerRueckverweis } from '../components/TagerechnerRueckverweis';
 import { getCalculator } from '../lib/calculators';
@@ -6,6 +7,8 @@ import { getCalculator } from '../lib/calculators';
 // ─── Erb-Fristen-Rechner (Quick-Win 1, bibliothek/recherche/erbrecht-ausbau.md)
 // Darstellung über src/lib/erbFristen.ts; Engine getrennt von erbteilung.ts (§4).
 
+// S-5c (Fristenspiegel-Auflösung): das Ereignis Erbgang (Ausschlagung ·
+// Inventar · Klage-Hinweise) lebt auf DIESER Seite.
 export function RechnerErbFristen() {
   const calc = getCalculator('erb-fristen')!;
   return (
@@ -15,6 +18,7 @@ export function RechnerErbFristen() {
       <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
         <ErbFristenForm />
       </div>
+      <EreignisFristenSektion ereignisse={['erbgang']} />
     </div>
   );
 }

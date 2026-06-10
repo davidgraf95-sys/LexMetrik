@@ -211,10 +211,13 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // schkg-/straf-zustaendigkeit kehren als eigene Felder ZURÜCK (+2
   // entwurf) → 34 gebaut / 30 sichtbar; dazu verwaltung-zustaendigkeit
   // als geplantes viertes Feld.
-  it('verfügbar = status !== geplant; Regressionszählung 34 gebaut / 30 sichtbar (Stand 10.6.2026, S-3)', () => {
+  // Deklarierte Anpassung S-5c (gleicher Auftrag): Karte «Fristenspiegel»
+  // AUFGELÖST (−1; Ereignis-Blöcke leben in den Fach-Rechnern) →
+  // 33 gebaut / 29 sichtbar.
+  it('verfügbar = status !== geplant; Regressionszählung 33 gebaut / 29 sichtbar (Stand 10.6.2026, S-3/S-5c)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(34);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(30);
+    expect(verf.length).toBe(33);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(29);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

@@ -20,7 +20,9 @@ const RechnerGewaehrleistung = lazy(() => import('./pages/RechnerGewaehrleistung
 const RechnerTagerechner = lazy(() => import('./pages/RechnerTagerechner').then((m) => ({ default: m.RechnerTagerechner })));
 const RechnerTeuerung = lazy(() => import('./pages/RechnerTeuerung').then((m) => ({ default: m.RechnerTeuerung })));
 const RechnerZustaendigkeit = lazy(() => import('./pages/RechnerZustaendigkeit').then((m) => ({ default: m.RechnerZustaendigkeit })));
-const RechnerFristenspiegel = lazy(() => import('./pages/RechnerFristenspiegel').then((m) => ({ default: m.RechnerFristenspiegel })));
+// S-5c: Fristenspiegel AUFGELÖST (Auftrag David 10.6.2026 abends) — Link-Erbe
+// alter Teilen-/.ics-Links übernimmt der Redirect auf die Fach-Rechner.
+const FristenspiegelRedirect = lazy(() => import('./pages/FristenspiegelRedirect').then((m) => ({ default: m.FristenspiegelRedirect })));
 const RechnerStreitwert = lazy(() => import('./pages/RechnerStreitwert').then((m) => ({ default: m.RechnerStreitwert })));
 const RechnerGebvKosten = lazy(() => import('./pages/RechnerGebvKosten').then((m) => ({ default: m.RechnerGebvKosten })));
 const VorlageTestament = lazy(() => import('./pages/VorlageTestament').then((m) => ({ default: m.VorlageTestament })));
@@ -97,7 +99,7 @@ export default function App() {
         <Route path="/rechner/tagerechner" element={<RechnerTagerechner />} />
         <Route path="/rechner/teuerung" element={<RechnerTeuerung />} />
         <Route path="/rechner/zustaendigkeit" element={<RechnerZustaendigkeit />} />
-        <Route path="/rechner/fristenspiegel" element={<RechnerFristenspiegel />} />
+        <Route path="/rechner/fristenspiegel" element={<FristenspiegelRedirect />} />
         <Route path="/rechner/streitwert" element={<RechnerStreitwert />} />
         <Route path="/rechner/betreibungskosten" element={<RechnerGebvKosten />} />
         {/* Vorlagen (Modus «Vorlagen») */}
