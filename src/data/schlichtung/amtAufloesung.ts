@@ -27,7 +27,7 @@ function kleinFuer(kanton: string, d: KantonsAemter): Map<string, number> {
 
 /** Kantone mit Gemeinde→Amt-Auflösung (ZH separat über zhAmt.ts).
  *  SZ/BL bewusst ausgenommen (Quellenlage teiloffen — Verzeichnis-Fallback). */
-export const AMT_KANTONE: readonly Kanton[] = ['ZH', 'AG', 'SG', 'TG', 'FR', 'ZG', 'AI', 'GR'] as const;
+export const AMT_KANTONE: readonly Kanton[] = ['ZH', 'AG', 'SG', 'TG', 'FR', 'ZG', 'AI', 'GR', 'LU', 'AR', 'NE'] as const;
 
 export async function amtFuer(kanton: Kanton, gemeinde: string): Promise<SchlichtungsAmt | null> {
   const g = gemeinde.trim();

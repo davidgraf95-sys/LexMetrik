@@ -124,3 +124,28 @@ describe('PLZ-Mehrdeutigkeit als Auswahl (TODO 5 betreibungskreise, 10.6.2026)',
     expect(gemeindeOptionen((await plzAufloesen('8001'))!)).toHaveLength(1);
   });
 });
+
+describe('LU/AR/NE — Gemeinde→Schlichtungsstelle (Doppel-Muster Auto+Dropdown, 10.6.2026)', () => {
+  // Rechtsgrundlagen volltext-verifiziert: LU JusG § 45 + SRL 261 §§ 2–5 ·
+  // AR ar.ch Vermittler · NE OJN Art. 98a/98e + LDP Art. 44a (Wahlregionen).
+  it('LU: 79 Gemeinden auf 4 Friedensrichterämter; swisstopo-Langname Hergiswil bei Willisau', async () => {
+    const { amtFuer, AMT_KANTONE } = await import('../data/schlichtung/amtAufloesung');
+    expect(AMT_KANTONE).toContain('LU');
+    expect((await amtFuer('LU', 'Emmen'))?.name).toContain('Hochdorf');
+    expect((await amtFuer('LU', 'Hergiswil bei Willisau'))?.name).toContain('Willisau');
+    expect((await amtFuer('LU', 'Vitznau'))?.name).toContain('Kriens');
+  });
+  it('AR: 20 Gemeinden auf 3 Vermittlerämter (Teufen (AR) → Mittelland)', async () => {
+    const { amtFuer } = await import('../data/schlichtung/amtAufloesung');
+    expect((await amtFuer('AR', 'Teufen (AR)'))?.name).toContain('Mittelland');
+    expect((await amtFuer('AR', 'Herisau'))?.name).toContain('Hinterland');
+    expect((await amtFuer('AR', 'Walzenhausen'))?.name).toContain('Vorderland');
+  });
+  it('NE: Wahlregionen-Zuordnung; Fusion Laténa (ex Hauterive/La Tène/Saint-Blaise/Enges) + Cressier (NE)', async () => {
+    const { amtFuer } = await import('../data/schlichtung/amtAufloesung');
+    expect((await amtFuer('NE', 'Laténa'))?.name).toContain('Littoral');
+    expect((await amtFuer('NE', 'Cressier (NE)'))?.name).toContain('Littoral');
+    expect((await amtFuer('NE', 'Le Locle'))?.name).toContain('Montagnes');
+    expect((await amtFuer('NE', 'Val-de-Ruz'))?.name).toContain('Montagnes');
+  });
+});

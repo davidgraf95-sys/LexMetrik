@@ -384,3 +384,58 @@ Einzelseiten (Sammelseiten; alte fr.ch-Institutionsseiten 410 Gone) — Link-
 Fallback bleibt die Verzeichnis-URL. AG-Kernbefund: Milizämter, amtlich
 überwiegend NUR Postfach (Bremgarten verlangt Adressierung ausdrücklich
 ohne Strasse) — Postfach-Adressen sind dort der korrekte Stand, keine Lücke.
+
+## 31. LU — Friedensrichterämter = Gerichtsbezirke (JusG § 45; SRL 261 §§ 2–5, Stand 1.1.2025)
+
+Volltext-verifiziert 10.6.2026 (srl.lu.ch PDF Version 4329). 1+11+18+49 = 79
+Gemeinden = aktueller Bestand. SRL-Schreibweise «Hergiswil»/«Rickenbach» —
+Gemeinden-Spalte unten in swisstopo-Schreibweise (Lookup-Schlüssel).
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+|---|---|---|---|---|
+| Friedensrichteramt Luzern | Grabenstrasse 2, Postfach 2266 | 6002 Luzern | Luzern | https://gerichte.lu.ch/organisation/schlichtungsbehoerden/Friedensrichterinnen_und_Friedensrichter/Kontakt |
+| Friedensrichteramt Kriens | c/o Bezirksgericht Kriens, Villastrasse 1 | 6010 Kriens | Adligenswil, Greppen, Horw, Kriens, Malters, Meggen, Meierskappel, Schwarzenberg, Udligenswil, Vitznau, Weggis | https://gerichte.lu.ch/organisation/schlichtungsbehoerden/Friedensrichterinnen_und_Friedensrichter/Kontakt |
+| Friedensrichteramt Hochdorf | c/o Bezirksgericht Hochdorf, Hohenrainstrasse 8 | 6280 Hochdorf | Aesch (LU), Ballwil, Buchrain, Dierikon, Ebikon, Emmen, Ermensee, Eschenbach (LU), Gisikon, Hitzkirch, Hochdorf, Hohenrain, Inwil, Rain, Römerswil, Rothenburg, Root, Schongau | https://gerichte.lu.ch/organisation/schlichtungsbehoerden/Friedensrichterinnen_und_Friedensrichter/Kontakt |
+| Friedensrichteramt Willisau | Menzbergstrasse 16, Postfach | 6130 Willisau | Alberswil, Altbüron, Altishofen, Beromünster, Büron, Buttisholz, Dagmersellen, Doppleschwand, Egolzwil, Eich, Entlebuch, Escholzmatt-Marbach, Ettiswil, Fischbach, Flühli, Geuensee, Grossdietwil, Grosswangen, Hasle (LU), Hergiswil bei Willisau, Hildisrieden, Knutwil, Luthern, Mauensee, Menznau, Nebikon, Neuenkirch, Nottwil, Oberkirch, Pfaffnau, Reiden, Rickenbach (LU), Roggliswil, Romoos, Ruswil, Schenkon, Schlierbach, Schötz, Schüpfheim, Sempach, Sursee, Triengen, Ufhusen, Wauwil, Werthenstein, Wikon, Willisau, Wolhusen, Zell (LU) | https://gerichte.lu.ch/organisation/schlichtungsbehoerden/Friedensrichterinnen_und_Friedensrichter/Kontakt |
+
+## 32. AR — 3 Vermittlerämter (ordentliche Schlichtung; ar.ch verifiziert 10.6.2026)
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+|---|---|---|---|---|
+| Vermittleramt Appenzeller Hinterland | Obstmarkt 3 (Regierungsgebäude) | 9102 Herisau | Herisau, Urnäsch, Schwellbrunn, Hundwil, Stein (AR), Schönengrund, Waldstatt | https://ar.ch/gerichte/vermittler-und-schlichtungsstellen/vermittler/ |
+| Vermittleramt Appenzeller Mittelland | Landsgemeindeplatz 2, Rathaus 3. Stock | 9043 Trogen | Teufen (AR), Bühler, Gais, Speicher, Trogen | https://ar.ch/gerichte/vermittler-und-schlichtungsstellen/vermittler/ |
+| Vermittleramt Appenzeller Vorderland | Landsgemeindeplatz 2, Rathaus 3. Stock | 9043 Trogen | Rehetobel, Wald (AR), Grub (AR), Heiden, Wolfhalden, Lutzenberg, Walzenhausen, Reute (AR) | https://ar.ch/gerichte/vermittler-und-schlichtungsstellen/vermittler/ |
+
+OFFEN: gesetzliche Verankerung der drei Kreise im AR-JG nicht volltext-geprüft
+(Gemeindelisten = amtliche ar.ch-Seite; 20/20 Gemeinden gedeckt).
+
+## 33. NE — Chambres de conciliation der 2 Tribunaux régionaux (OJN Art. 98a/98e; LDP Art. 44a)
+
+Volltext-verifiziert 10.6.2026 (rsn.ne.ch PDFs, OJN état 1.2.2026):
+Zuordnung nach WAHLREGIONEN (seit 1.1.2021), nicht mehr Bezirken. Site
+Boudry = zweiter Eingabeort desselben Sprengels (OJN Art. 98c) → im
+Dropdown wählbar, ohne eigene Gemeinden.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+|---|---|---|---|---|
+| Tribunal régional Littoral/Val-de-Travers — Chambre de conciliation (Neuchâtel) | Rue de l'Hôtel-de-Ville 2 | 2000 Neuchâtel | Boudry, Cornaux, Cortaillod, Cressier (NE), La Grande Béroche, Laténa, Le Landeron, Lignières, Milvignes, Neuchâtel, Rochefort, La Côte-aux-Fées, Les Verrières, Val-de-Travers | https://www.ne.ch/autorites/PJNE/tribunaux-regionaux/Pages/accueil.aspx |
+| — Site Boudry (gleicher Sprengel, Art. 98c OJN) | Rue Louis-Favre 39 | 2017 Boudry |  | https://www.ne.ch/autorites/PJNE/tribunaux-regionaux/Pages/accueil.aspx |
+| Tribunal régional Montagnes/Val-de-Ruz — Chambre de conciliation | Avenue Léopold-Robert 10 (Hôtel judiciaire) | 2300 La Chaux-de-Fonds | Brot-Plamboz, La Brévine, La Chaux-de-Fonds, La Chaux-du-Milieu, La Sagne, Le Cerneux-Péquignot, Le Locle, Les Planchettes, Les Ponts-de-Martel, Val-de-Ruz | https://www.ne.ch/autorites/PJNE/tribunaux-regionaux/Pages/accueil.aspx |
+
+Vorbehalt: Reform «Tribunal d'instance» (OJN Art. 8) beschlossen, Spezial-
+gesetz zu Sitz/Sprengel noch nicht in Kraft → bei Inkrafttreten anpassen.
+FUSIONS-NACHTRAG 10.6.2026 (swisstopo aktuell, massgeblich für den
+PLZ-Lookup): Hauterive + La Tène + Saint-Blaise + Enges → **Laténa**;
+Cressier amtlich «Cressier (NE)». Die LDP-44a-Schreibweisen (Fassung 2021)
+sind insoweit überholt; Liste oben auf swisstopo-Stand normalisiert.
+
+## 34. BE — Schlichtungsbehörden je Gerichtsregion (GSOG Art. 80/84; OrG Art. 39a) — GENERATOR-OFFEN
+
+Zuordnung über VERWALTUNGSKREISE (= BFS-Bezirke): Bern-Mittelland ·
+Emmental+Oberaargau · Thun+Frutigen-Niedersimmental+Obersimmental-Saanen+
+Interlaken-Oberhasli · Berner Jura+Biel/Bienne+Seeland. Adressen/URLs:
+Effingerstrasse 34, 3008 Bern · Dunantstrasse 3, 3400 Burgdorf ·
+Scheibenstrasse 11 B, 3600 Thun · Neuengasse 8, 2502 Biel/Bienne
+(Aussenstelle Berner Jura prov. Unionsgasse 13, 2502 Biel — Moutier seit
+1.1.2026 JU!). zsg.justice.be.ch …/schlichtungsbehoerden/<region>.html.
+Gemeinde-Map braucht BFS-Join (wie GR) → nächster Generator-Lauf.
