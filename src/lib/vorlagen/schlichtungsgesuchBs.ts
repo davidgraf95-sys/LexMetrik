@@ -213,16 +213,32 @@ export function sgPrefillLesen(search: string): Partial<SgAnswers> | null {
 }
 
 // ── Routing (Art. 200 ZPO: paritätische Behörden → eigene Stellen) ──────────
-export type SgRouting =
-  | { dokument: true; behoerde: typeof SCHLICHTUNGSBEHOERDEN_BS.zivilgericht; arbeitsrecht: boolean }
-  | { dokument: false; stopp: 'miete' | 'glg' | 'art198'; behoerde?: typeof SCHLICHTUNGSBEHOERDEN_BS.miete | typeof SCHLICHTUNGSBEHOERDEN_BS.diskriminierung };
+export type SgBehoerdeTyp = 'ordentlich' | 'paritaetisch_miete' | 'paritaetisch_glg';
 
+export type SgRouting =
+  | { dokument: true; behoerdeTyp: SgBehoerdeTyp;
+      behoerde: typeof SCHLICHTUNGSBEHOERDEN_BS.zivilgericht | typeof SCHLICHTUNGSBEHOERDEN_BS.miete | typeof SCHLICHTUNGSBEHOERDEN_BS.diskriminierung;
+      arbeitsrecht: boolean }
+  | { dokument: false; stopp: 'art198' };
+
+// Umbau 10.6.2026 (Auftrag David «bei miete pacht/glg gleich die adressen in
+// der vorlage übernehmen»): Miete/Pacht und GlG STOPPEN nicht mehr — das
+// Gesuch wird erstellt und an die PARITÄTISCHE Stelle adressiert (Art. 200
+// Abs. 1/2 ZPO); die behoerde-Felder hier sind die abgenommenen BS-Stammdaten,
+// ausserhalb BS löst die Adressat-Kaskade kantonsrichtig auf.
 export function sgRouting(a: SgAnswers): SgRouting | null {
   if (!a.streitgegenstandTyp) return null;
   if (a.ausnahmeArt198) return { dokument: false, stopp: 'art198' }; // Art. 198 ZPO
-  if (a.streitgegenstandTyp === 'miete_pacht') return { dokument: false, stopp: 'miete', behoerde: SCHLICHTUNGSBEHOERDEN_BS.miete };
-  if (a.streitgegenstandTyp === 'gleichstellung_glg') return { dokument: false, stopp: 'glg', behoerde: SCHLICHTUNGSBEHOERDEN_BS.diskriminierung };
-  return { dokument: true, behoerde: SCHLICHTUNGSBEHOERDEN_BS.zivilgericht, arbeitsrecht: a.streitgegenstandTyp === 'arbeitsrecht' };
+  if (a.streitgegenstandTyp === 'miete_pacht') return { dokument: true, behoerdeTyp: 'paritaetisch_miete', behoerde: SCHLICHTUNGSBEHOERDEN_BS.miete, arbeitsrecht: false };
+  if (a.streitgegenstandTyp === 'gleichstellung_glg') return { dokument: true, behoerdeTyp: 'paritaetisch_glg', behoerde: SCHLICHTUNGSBEHOERDEN_BS.diskriminierung, arbeitsrecht: false };
+  return { dokument: true, behoerdeTyp: 'ordentlich', behoerde: SCHLICHTUNGSBEHOERDEN_BS.zivilgericht, arbeitsrecht: a.streitgegenstandTyp === 'arbeitsrecht' };
+}
+
+/** Registry-EingabeArt je Behördentyp (BS-Stammdaten, §5). */
+export function sgEingabeArt(typ: SgBehoerdeTyp): 'schlichtungsbehoerde_zivil' | 'schlichtungsstelle_miete' | 'schlichtungsstelle_diskriminierung' {
+  return typ === 'paritaetisch_miete' ? 'schlichtungsstelle_miete'
+    : typ === 'paritaetisch_glg' ? 'schlichtungsstelle_diskriminierung'
+    : 'schlichtungsbehoerde_zivil';
 }
 
 // ── Validierung / Mängelliste (deterministisch; Download-Gate) ──────────────
@@ -264,7 +280,11 @@ export function sgMaengel(a: SgAnswers): SgMangel[] {
       m.push({ schritt: 3, text: 'Beseitigung des Rechtsvorschlags setzt eine Betreibung mit erhobenem Rechtsvorschlag voraus (Schritt 2).' });
     }
   }
-  if (a.streitgegenstandTyp === 'uebrige_zivilsache' && a.freieRechtsbegehren.filter((r) => r.trim()).length === 0) {
+  // Bug-Check 10.6.2026 (HOCH): gilt für ALLE nicht-vermögensrechtlichen
+  // Typen — Miete/GlG liefen nach Aufhebung des Stopps sonst ohne
+  // Rechtsbegehren durch (Art. 202 Abs. 2 lit. b ZPO).
+  if ((a.streitgegenstandTyp === 'uebrige_zivilsache' || a.streitgegenstandTyp === 'miete_pacht' || a.streitgegenstandTyp === 'gleichstellung_glg')
+      && a.freieRechtsbegehren.filter((r) => r.trim()).length === 0) {
     m.push({ schritt: 3, text: 'Mindestens ein Rechtsbegehren formulieren.' });
   }
   if (!a.streitgegenstand.trim()) m.push({ schritt: 4, text: 'Streitgegenstand kurz umschreiben (Pflicht, Art. 202 Abs. 2 ZPO).' });
@@ -282,6 +302,15 @@ export function sgMaengel(a: SgAnswers): SgMangel[] {
 export function sgHinweise(a: SgAnswers): string[] {
   const h: string[] = [];
   const sw = sgStreitwert(a);
+  // Bug-Check 10.6.2026: Hinweise für die neuen paritätischen Pfade.
+  if (a.streitgegenstandTyp === 'miete_pacht') {
+    h.push('Das Schlichtungsverfahren ist bei Miete/Pacht von Wohn- und Geschäftsräumen gerichtskostenfrei (Art. 113 Abs. 2 lit. c ZPO).');
+    h.push('Die Schlichtungsbehörde kann streitwertunabhängig einen Entscheidvorschlag unterbreiten (Art. 210 Abs. 1 lit. b ZPO); bei Ablehnung wird die Klagebewilligung der ablehnenden Partei zugestellt (Art. 211 Abs. 2 lit. a ZPO).');
+  }
+  if (a.streitgegenstandTyp === 'gleichstellung_glg') {
+    h.push('Das Schlichtungsverfahren ist bei Streitigkeiten nach dem Gleichstellungsgesetz gerichtskostenfrei (Art. 113 Abs. 2 lit. a ZPO).');
+    h.push('Die Schlichtungsbehörde kann streitwertunabhängig einen Entscheidvorschlag unterbreiten (Art. 210 Abs. 1 lit. a ZPO).');
+  }
   if (sw !== null && sw >= SG_SCHWELLEN.VERZICHT_GEMEINSAM) {
     h.push('Streitwert ≥ CHF 100\'000: Die Parteien könnten gemeinsam auf die Schlichtung verzichten (Art. 199 Abs. 1 ZPO).'); // Art. 199 Abs. 1 ZPO
   }
@@ -328,8 +357,8 @@ export const SG_SCHEMA: VorlageSchema = {
   disclaimer:
     'Entwurf – erstellt mit LexMetrik. Orientierungsdokument, keine Rechtsberatung. Massgeblich sind ' +
     'Gesetz, Vertrag und der konkrete Sachverhalt; für Fristwahrung, Formgültigkeit und inhaltliche ' +
-    'Richtigkeit ist die nutzende Person verantwortlich. Diese Vorlage setzt einen Basler Gerichtsstand ' +
-    'voraus (örtliche/sachliche Zuständigkeit selbst prüfen).',
+    'Richtigkeit ist die nutzende Person verantwortlich. Die örtliche und sachliche Zuständigkeit der ' +
+    'angeschriebenen Behörde ist selbst zu prüfen.',
   bausteine: [
     { id: 'absender', rolle: 'absender', text: '{{absenderBlock}}',
       begruendung: 'Absenderblock: Vertretung, sonst erste klagende Partei – immer enthalten.',
@@ -418,8 +447,9 @@ export function sgZusammenstellen(a: SgAnswers) {
     const zins = a.unbeziffert.zins ? `, nebst Zins zu ${a.unbeziffert.zins.satz} % seit ${fmtDatumLang(a.unbeziffert.zins.abDatum)}` : '';
     rb.push(`Die beklagte Partei sei zu verpflichten, der klagenden Partei einen nach Durchführung des Beweisverfahrens zu beziffernden Betrag, mindestens jedoch CHF ${fmtCHF(a.unbeziffert.mindestbetrag)}${zins}, zu bezahlen.`);
   }
-  if (a.streitgegenstandTyp === 'uebrige_zivilsache') {
-    a.freieRechtsbegehren.filter((r) => r.trim()).forEach((r) => rb.push(r.trim())); // 1:1, kein generierter Text
+  if (a.streitgegenstandTyp === 'uebrige_zivilsache' || a.streitgegenstandTyp === 'miete_pacht' || a.streitgegenstandTyp === 'gleichstellung_glg') {
+    // Bug-Check 10.6.2026 (HOCH): auch Miete/GlG — 1:1, kein generierter Text
+    a.freieRechtsbegehren.filter((r) => r.trim()).forEach((r) => rb.push(r.trim()));
   }
   a.weitereRechtsbegehren.filter((r) => r.trim()).forEach((r) => rb.push(r.trim()));
   // Kostenfolge – immer letztes Begehren
@@ -463,7 +493,13 @@ export function sgZusammenstellen(a: SgAnswers) {
 
   // Adressat: Handeingabe vor Registry; ausserhalb BS ohne Handadresse
   // bleibt der Block leer-markiert (Mängelliste blockiert den Export).
-  const registryAdresse = behoerdeFuer('schlichtungsbehoerde_zivil', a.gerichtsKanton);
+  // Umbau 10.6.2026: Registry-Art folgt dem sachlichen Routing (ordentlich/
+  // Miete/GlG) — in BS damit automatisch die paritätische Stelle.
+  const routingFuerAdressat = sgRouting(a);
+  const registryAdresse = behoerdeFuer(
+    sgEingabeArt(routingFuerAdressat?.dokument ? routingFuerAdressat.behoerdeTyp : 'ordentlich'),
+    a.gerichtsKanton,
+  );
   const aufgeloestOk = (a.behoerdeAufgeloest?.zeilen.length ?? 0) >= 3;
   const adressatBlock = a.behoerdeManuellAktiv && behoerdeManuellVollstaendig(a.behoerdeManuell)
     ? behoerdeAlsBlock(a.behoerdeManuell!)

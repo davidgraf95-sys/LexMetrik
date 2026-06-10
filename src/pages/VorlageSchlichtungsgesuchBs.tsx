@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import {
   SG_DEFAULTS, SG_PERSON_NATUERLICH, SG_SCHWELLEN, SG_OFFENE_VERIFIKATIONEN, SG_KANTONALE_ERLASSE,
   sgZusammenstellen, sgMaengel, sgHinweise, sgRouting, sgStreitwert, sgPrefillLesen, sgPrefillOrt, fmtCHF,
-  type SgAnswers, type SgPartei, type SgTyp,
+  sgEingabeArt, type SgAnswers, type SgPartei, type SgTyp,
 } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
@@ -11,14 +11,15 @@ import { KANTONE } from '../lib/kantone';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
-import { SgBehoerdenWahl, SgParitaetischeStelle } from '../components/vorlagen/SgBehoerdenWahl';
+import { SgBehoerdenWahl } from '../components/vorlagen/SgBehoerdenWahl';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
 
 // ─── Vorlagen-Wizard: Schlichtungsgesuch (Art. 202 ZPO) · Basel-Stadt ───────
-// Routing mit Stopp-Karten (Miete/GlG → eigene Stellen, Art. 200 ZPO;
-// Art.-198-Ausnahmen → direkt ans Gericht), Mängelliste mit Sprung zum
+// Routing: Miete/GlG adressieren die paritätische Stelle des Kantons
+// (Art. 200 ZPO, Umbau 10.6.2026); Stopp nur noch bei Art.-198-Ausnahmen
+// (direkt ans Gericht). Mängelliste mit Sprung zum
 // Schritt, Form-Gate (Papierform, Exemplare, Erscheinen, Kosten, Fristen).
 // Gemäss Anweisung: KEINE Browser-Storage-APIs – State nur im Speicher.
 
@@ -145,37 +146,7 @@ export function VorlageSchlichtungsgesuchBs() {
         <p><NormLink artikel="Art. 198 ZPO" /></p>
       </div>
     );
-    const b = routing.behoerde!;
-    return (
-      <div className="lc-notice-warn rounded-xl p-5 space-y-2">
-        <p className="lc-overline text-warn-700">Eigene Schlichtungsstelle zuständig</p>
-        {/* Kantonsrichtige paritätische Stelle (Auftrag David 10.6.2026):
-            vorher zeigte die Karte bei JEDEM Kanton die Basler Adresse.
-            BS weiter aus der abgenommenen Registry (§5-Vorrang); andere
-            Kantone aus der zweifach geprüften Recherche-Schicht. */}
-        {a.gerichtsKanton === 'BS' ? (
-          <>
-            <p className="text-body-s text-ink-700">
-              Für {routing.stopp === 'miete' ? 'Miete und Pacht von Wohn- und Geschäftsräumen' : 'Streitigkeiten nach Gleichstellungsgesetz'} besteht
-              eine paritätische Stelle (Art. 200 ZPO) – dieses Gesuch ist dort einzureichen:
-            </p>
-            <p className="text-body-s text-ink-900 whitespace-pre-line font-medium">
-              {b.name}{'\n'}{b.postadresse.join('\n')}{'\n'}Tel. {b.tel}{'email' in b && b.email ? `\n${b.email}` : ''}
-            </p>
-          </>
-        ) : (
-          <SgParitaetischeStelle kanton={a.gerichtsKanton}
-            typ={routing.stopp === 'miete' ? 'paritaetisch_miete' : 'paritaetisch_glg'} />
-        )}
-        {routing.stopp === 'miete' && (
-          <p className="text-xs text-ink-600">
-            Hinweis: Bei Miete/Pacht von Wohn- und Geschäftsräumen gilt die Klagebewilligung nur
-            {' '}{SG_SCHWELLEN.KLAGEBEWILLIGUNG_MIETE_TAGE} Tage (Art. 209 Abs. 4 ZPO).
-          </p>
-        )}
-        <p><NormLink artikel="Art. 200 ZPO" /></p>
-      </div>
-    );
+    return null;
   };
 
   const inhalt = () => {
@@ -195,7 +166,10 @@ export function VorlageSchlichtungsgesuchBs() {
               </Field>
               {(() => {
                 const manuell = a.behoerdeManuellAktiv;
-                const reg = behoerdeFuer('schlichtungsbehoerde_zivil', a.gerichtsKanton);
+                // Umbau 10.6.2026 (Auftrag David): Registry-Art folgt dem
+                // sachlichen Routing — Miete/GlG adressieren die paritätische
+                // Stelle (Art. 200 ZPO) statt zu stoppen.
+                const reg = behoerdeFuer(sgEingabeArt(routing?.dokument ? routing.behoerdeTyp : 'ordentlich'), a.gerichtsKanton);
                 if (manuell) return null;
                 if (reg) return (
                   <div className="lc-tile">
@@ -213,8 +187,19 @@ export function VorlageSchlichtungsgesuchBs() {
             </div>
             {a.gerichtsKanton !== 'BS' && !a.behoerdeManuellAktiv && (
               <SgBehoerdenWahl kanton={a.gerichtsKanton}
+                typ={routing?.dokument ? routing.behoerdeTyp : 'ordentlich'}
                 startPlz={prefillOrt.plz} startGemeinde={prefillOrt.gemeinde}
                 onAufgeloest={(z) => set('behoerdeAufgeloest', z ? { zeilen: z } : undefined)} />
+            )}
+            {routing?.dokument && routing.behoerdeTyp !== 'ordentlich' && (
+              <p className="lc-notice text-body-s">
+                Für {routing.behoerdeTyp === 'paritaetisch_miete' ? 'Miete und Pacht von Wohn- und Geschäftsräumen' : 'Streitigkeiten nach Gleichstellungsgesetz'} ist
+                die paritätische Schlichtungsstelle zuständig ({routing.behoerdeTyp === 'paritaetisch_miete' ? 'Art. 200 Abs. 1 ZPO' : 'Art. 200 Abs. 2 ZPO'}) —
+                sie wird als Adressat des Gesuchs eingesetzt.
+                {routing.behoerdeTyp === 'paritaetisch_miete' && (
+                  <> Hinweis: Die Klagebewilligung gilt hier nur {SG_SCHWELLEN.KLAGEBEWILLIGUNG_MIETE_TAGE} Tage (Art. 209 Abs. 4 ZPO).</>
+                )}
+              </p>
             )}
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.behoerdeManuellAktiv ?? false}
@@ -509,8 +494,14 @@ export function VorlageSchlichtungsgesuchBs() {
                 <li><strong>Exemplare:</strong> Gesuch, Beilagenverzeichnis und Beilagen in je einem Exemplar für die Behörde und jede Gegenpartei (Art. 131 ZPO) – hier: <span className="num font-semibold">{ergebnis.exemplare}</span> Exemplare.</li>
                 {a.vertretung?.bezeichnung && <li><strong>Vollmacht</strong> beilegen.</li>}
                 <li><strong>Persönliches Erscheinen</strong> an der Verhandlung (Art. 204 ZPO); Dispens u. a. bei ausserkantonalem/ausländischem Wohnsitz oder Streitwert bis CHF {fmtCHF(String(SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS))} (Abs. 3). Säumnis der klagenden Partei: Gesuch gilt als zurückgezogen; Ordnungsbusse bis CHF {fmtCHF(String(SG_SCHWELLEN.ORDNUNGSBUSSE_MAX))} möglich (Art. 206 Abs. 4 ZPO).</li>
-                <li><strong>Klagebewilligung:</strong> bei Nichteinigung {SG_SCHWELLEN.KLAGEBEWILLIGUNG_MONATE} Monate gültig (Art. 209 Abs. 3 ZPO).</li>
-                <li><strong>Kosten:</strong> Gebühr ab CHF 100 bis max. 30 % der Gerichtsgebühr (GGR BS, SG 154.810 – §-Nummer zu verifizieren); grundsätzlich keine Parteientschädigung.{a.streitgegenstandTyp === 'arbeitsrecht' && sw !== null && sw <= SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS && <> <strong>Hier: kostenlos</strong> (arbeitsrechtlich bis CHF 30'000, Art. 113 f. ZPO).</>}</li>
+                <li><strong>Klagebewilligung:</strong> bei Nichteinigung {routing?.dokument && routing.behoerdeTyp === 'paritaetisch_miete'
+                  ? <>nur {SG_SCHWELLEN.KLAGEBEWILLIGUNG_MIETE_TAGE} Tage gültig (Art. 209 Abs. 4 ZPO)</>
+                  : <>{SG_SCHWELLEN.KLAGEBEWILLIGUNG_MONATE} Monate gültig (Art. 209 Abs. 3 ZPO)</>}.</li>
+                {routing?.dokument && routing.behoerdeTyp !== 'ordentlich' ? (
+                  <li><strong>Kosten:</strong> Das Schlichtungsverfahren ist hier gerichtskostenfrei ({routing.behoerdeTyp === 'paritaetisch_glg' ? 'Art. 113 Abs. 2 lit. a ZPO' : 'Art. 113 Abs. 2 lit. c ZPO'}); grundsätzlich keine Parteientschädigung (Art. 113 Abs. 1 ZPO).</li>
+                ) : (
+                  <li><strong>Kosten:</strong> Gebühr ab CHF 100 bis max. 30 % der Gerichtsgebühr (GGR BS, SG 154.810 – §-Nummer zu verifizieren); grundsätzlich keine Parteientschädigung.{a.streitgegenstandTyp === 'arbeitsrecht' && sw !== null && sw <= SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS && <> <strong>Hier: kostenlos</strong> (arbeitsrechtlich bis CHF 30'000, Art. 113 f. ZPO).</>}</li>
+                )}
                 <li><strong>Fristen:</strong> Im Schlichtungsverfahren gelten keine Gerichtsferien (Art. 145 Abs. 2 lit. a ZPO); die anschliessende Klagefrist gehört zum Entscheidverfahren – dort gelten sie (BGE 138 III 615 – zu verifizieren).</li>
               </ul>
             </section>
@@ -557,7 +548,7 @@ export function VorlageSchlichtungsgesuchBs() {
       weiterDeaktiviert={stopp}
       inhalt={inhalt()}
       vorschau={stopp
-        ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument – siehe Stopp-Hinweis: Dieses Gesuch gehört an eine andere Stelle bzw. direkt ans Gericht.</div>
+        ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument – siehe Stopp-Hinweis: In diesem Fall findet kein Schlichtungsverfahren statt — die Klage geht direkt ans Gericht (Art. 198 ZPO).</div>
         : <VorschauPanel ergebnis={ergebnis} kompakt nichtAufgenommen={ergebnis.nichtAufgenommen} />}
     />
   );

@@ -84,17 +84,29 @@ describe('Schlichtungsgesuch BS – Akzeptanztests', () => {
     expect(sgHinweise(a).some((h) => h.includes('kostenlos'))).toBe(true);
   });
 
-  it('7. Routing Miete: Stopp-Karte mit Stelle + 30-Tage-Hinweis-Daten', () => {
-    const r = sgRouting(basis({ streitgegenstandTyp: 'miete_pacht' }));
-    expect(r).toMatchObject({ dokument: false, stopp: 'miete' });
+  // FACHLICHE ÄNDERUNG (Auftrag David 10.6.2026): Miete/GlG stoppen nicht
+  // mehr — das Gesuch wird erstellt und an die paritätische Stelle
+  // adressiert (Art. 200 Abs. 1/2 ZPO).
+  it('7. Routing Miete: Dokument MIT paritätischer Stelle als Adressat (BS-Stammdaten)', () => {
+    const a = basis({ streitgegenstandTyp: 'miete_pacht' });
+    const r = sgRouting(a);
+    expect(r).toMatchObject({ dokument: true, behoerdeTyp: 'paritaetisch_miete' });
     expect((r as { behoerde: { name: string; postadresse: readonly string[] } }).behoerde.name).toContain('Mietstreitigkeiten');
     expect((r as { behoerde: { postadresse: readonly string[] } }).behoerde.postadresse.join(' ')).toContain('Grenzacherstrasse 62');
+    // Adressat-Kaskade (BS): Registry liefert die Miet-Schlichtungsstelle ins Dokument
+    const dok = sgZusammenstellen(a);
+    const text = dok.dokument.absaetze.map((x) => x.text).join('\n');
+    expect(text).toContain('Grenzacherstrasse 62');
   });
 
-  it('8. Routing Gleichstellung: Stopp-Karte Diskriminierungsstelle', () => {
-    const r = sgRouting(basis({ streitgegenstandTyp: 'gleichstellung_glg' }));
-    expect(r).toMatchObject({ dokument: false, stopp: 'glg' });
+  it('8. Routing Gleichstellung: Dokument MIT Diskriminierungsstelle als Adressat', () => {
+    const a = basis({ streitgegenstandTyp: 'gleichstellung_glg' });
+    const r = sgRouting(a);
+    expect(r).toMatchObject({ dokument: true, behoerdeTyp: 'paritaetisch_glg' });
     expect((r as { behoerde: { name: string } }).behoerde.name).toContain('Diskriminierungsfragen');
+    const dok = sgZusammenstellen(a);
+    const text = dok.dokument.absaetze.map((x) => x.text).join('\n');
+    expect(text).toContain('Schlichtungsstelle für Diskriminierungsfragen');
   });
 
   it('9. Ausnahme Art. 198: kein Dokument', () => {
