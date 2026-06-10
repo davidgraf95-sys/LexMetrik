@@ -205,6 +205,9 @@ Vorschlag · Ist · H×R×D · Entscheid David.
 | Güterrechtliche Auseinandersetzung / Vorschlag | B | ✅ [E: Errungenschafts-Arithmetik (Art. 215) deterministisch bei erfassten Massen; Massen-Zuordnung = Eingabe] | geplant | 2·2·2=8 | **offen** |
 | Unterhalt (Kindes-/Ehegatten-) | B | ✗ [bestätigt: Ermessen — Backlog] | Backlog | — | entschieden ✗ |
 | Trennungsvereinbarung · Scheidungskonvention · Elternvereinbarung | V | ◐ Gerüste [E: stark wertend + Genehmigungsvorbehalt] | geplant | 4 | **offen** |
+| **Eheschutzgesuch · gemeinsames Scheidungsbegehren · Scheidungsklage (unbegründet zuerst!) · Abänderungs-/Massnahmengesuch · Konkubinatsauflösung** | V | ◐ Gerüste mit deterministischen Begehren-Rastern [Bauspez. liegt: recherche/familienrecht-klagen-vorlagen.md, 10.6.2026 — Voraussetzung: BO-Baustein-Rahmen §10] | Lücke | 2·3·2=12 | **offen** |
+| Vaterschafts-/Anfechtungs-/Unterhalts-Fristen (263/256c/262 ZGB · 279 ZPO · 546 OR · 313 II ZGB · KESB 450b/445 III · 291 III ZPO) | F | ✅ als Tagerechner-PRESET-Paket [Bauspez. dito; 256c = Doppelfrist min(rel,abs); ZH-KESB ohne Stillstand!] | Lücke (Presets) | 2·3·3=18 | **offen** |
+| Zuständigkeits-Routing Gericht/KESB (315/315a/b, 298b III, 304 II) | Z | ✅ vierter Rechtsweg-Tab der Zuständigkeits-Engine [deterministisch; Bauspez. dito] | Lücke (§0a) | 2·3·3=18 | **offen** |
 
 ### Gesellschaftsrecht
 

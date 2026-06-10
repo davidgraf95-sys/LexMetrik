@@ -79,3 +79,4 @@ Vorsorgeausgleich: Aufzinsung nach FZG 22a (kein additiver Zins-Term) · Art. 62
 aufgehoben · 20-Tage-Einberufung = Art. 700 (nicht 699 III) · VStG-Zins variabel (nicht
 5 %) · KKG-Widerruf 14 Tage · Eigentumsvorbehalt Art. 715 ZGB (nicht OR) · 30-Tage-Sperre
 Massenentlassung = 335g Abs. 4 · Sperrfrist-Tatbestand cter ≠ Vaterschaftsurlaub.
+- [Familienrechtliche Klagen & Gesuche — Bauspezifikation Vorlagen](familienrecht-klagen-vorlagen.md) — Struktur-Auswertung der 15 Musterklagen §§ 72–89 (Eheschutz · Scheidung · Massnahmen/Abänderung · Vaterschafts-Trio · Konkubinat); Determinismus-Grenzen, Fristen-Preset-Paket, Gericht/KESB-Routing; NUR Struktur (Urheberrecht), Erstrecherche 10.6.2026
