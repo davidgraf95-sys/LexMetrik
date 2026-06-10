@@ -201,3 +201,34 @@ describe('Coverage-Fix – Warnungen vertraglich/kaufmännisch', () => {
     expect(r.warnungen.some((w) => w.includes('Art. 104 Abs. 3') && w.includes('Privatdiskontsatz'))).toBe(true);
   });
 });
+
+// ─── Präjudizien-Abgleich-Fixes 10.6.2026 (normen/verzugszins-praejudizien-abgleich.md) ──
+
+describe('Präjudizien-Abgleich-Fixes – Warnungen und Normklammern', () => {
+  it('kaufmännisch ≤ 5 % → Warnung, dass das Abs.-1-Minimum unterschritten wird (MITTEL)', () => {
+    const r = berechneVerzugszins(base({ satzGrund: 'kaufmaennisch', zinssatzProzent: 4 }));
+    expect(r.warnungen.some((w) => w.includes('unterschreitet das gesetzliche Minimum'))).toBe(true);
+  });
+  it('kaufmännisch > 5 % → keine Minimum-Warnung', () => {
+    const r = berechneVerzugszins(base({ satzGrund: 'kaufmaennisch', zinssatzProzent: 6 }));
+    expect(r.warnungen.some((w) => w.includes('unterschreitet das gesetzliche Minimum'))).toBe(false);
+  });
+  it('vertraglich < 5 % → Normklammer Dispositivität Abs. 1, NICHT Abs. 2 (NIEDRIG)', () => {
+    const r = berechneVerzugszins(base({ satzGrund: 'vertraglich', zinssatzProzent: 3 }));
+    const satzSchritt = r.rechenweg.find((s) => s.beschreibung.includes('Massgebender Zinssatz'))!;
+    expect(satzSchritt.zwischenergebnis).toContain('Dispositivität von Art. 104 Abs. 1');
+    expect(satzSchritt.normen?.some((n) => n.artikel === 'Art. 104 Abs. 2 OR')).toBe(false);
+    // Rechnung selbst unverändert: 3 % auf 10'000 für 365 Tage = 300
+    expect(r.zinsTotal).toBe(300);
+  });
+  it('vertraglich 8 % → weiterhin Abs. 2 (unverändert)', () => {
+    const r = berechneVerzugszins(base({ satzGrund: 'vertraglich', zinssatzProzent: 8 }));
+    const satzSchritt = r.rechenweg.find((s) => s.beschreibung.includes('Massgebender Zinssatz'))!;
+    expect(satzSchritt.normen?.some((n) => n.artikel === 'Art. 104 Abs. 2 OR')).toBe(true);
+  });
+  it('Standard-Warnungen: Kumulationsverbot Schadens-/Verzugszins + Geltungsbereich öffentliches Recht', () => {
+    const r = berechneVerzugszins(base({}));
+    expect(r.warnungen.some((w) => w.includes('nicht kumulierbar') && w.includes('Schadenszins'))).toBe(true);
+    expect(r.warnungen.some((w) => w.includes('öffentlich-rechtliche'))).toBe(true);
+  });
+});

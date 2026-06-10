@@ -164,3 +164,33 @@ describe('Bug-Check-Fix 10.6.2026: Art.-209-Klagefristen MIT Stillstand (BGE 138
     expect(r.diesAdQuemISO).toBe('2026-09-01');
   });
 });
+
+// ─── BK-Abgleich-Fixes 10.6.2026 (normen/zpo-fristen-bk-abgleich.md) ─────────
+
+describe('BK-Abgleich-Fix B-1: Mindermeinungs-Modus × Folgetag = erster Stillstandstag', () => {
+  // Soll (BK Art. 145 N 7–8, Art. 146 N 6b): Die Stillstandsverlängerung gilt
+  // unabhängig davon, wie der Fristbeginn bestimmt wird — eine Lesart, bei der
+  // die Folgetags-These die Ferien-Verlängerung eliminiert, vertritt niemand.
+  // Vorher lieferte der Modus, der einen Tag MEHR geben soll, ein um die
+  // Stillstandsdauer FRÜHERES Ende (Sonden 14.7./17.12.).
+  it('Zustellung 14.7.2024 + 1 Monat (ordentlich): Mindermeinung 16.9.2024 (vorher 16.8.)', () => {
+    const r = berechneFrist(base({ ereignis: '2024-07-14', einheit: 'monate', laenge: 1, verfahren: 'ordentlich', modus: 'mindermeinung' }));
+    expect(r.diesAdQuemISO).toBe('2024-09-16');
+  });
+  it('Zustellung 17.12.2024 + 1 Monat (ordentlich): Mindermeinung 3.2.2025 (vorher 20.1.)', () => {
+    const r = berechneFrist(base({ ereignis: '2024-12-17', einheit: 'monate', laenge: 1, verfahren: 'ordentlich', modus: 'mindermeinung' }));
+    expect(r.diesAdQuemISO).toBe('2025-02-03');
+  });
+  it('Regression: BGer-Modus bleibt unverändert (14.7.2024 + 1 Monat → 16.9.2024)', () => {
+    const r = berechneFrist(base({ ereignis: '2024-07-14', einheit: 'monate', laenge: 1, verfahren: 'ordentlich' }));
+    expect(r.diesAdQuemISO).toBe('2024-09-16');
+  });
+});
+
+describe('BK-Abgleich-Fix B-2: Fristwahrungs-Hinweis nennt die Auslandsvertretung', () => {
+  it('Rechenwegschritt «Fristwahrung (Art. 143 ZPO)» erwähnt die diplomatische/konsularische Vertretung', () => {
+    const r = berechneFrist(base({}));
+    const schritt = r.rechenweg.find((s) => s.beschreibung.includes('Fristwahrung'))!;
+    expect(schritt.zwischenergebnis).toContain('konsularisch');
+  });
+});

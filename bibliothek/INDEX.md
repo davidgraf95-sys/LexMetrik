@@ -45,7 +45,7 @@ Maske Gründungsunterlagen) und [ag-gruendung](recherche/ag-gruendung.md)
 (inkl. Emissionsabgabe am neu gepinnten StG-Cache)
 
 **Rechtsprechungs-Register:** [rechtsprechung/bge-register.md](rechtsprechung/bge-register.md) —
-alle 90 im Code zitierten BGE/BGer-Urteile mit amtlichem Link (URL-Schema §7-verifiziert
+alle 92 im Code zitierten BGE/BGer-Urteile mit amtlichem Link (URL-Schema §7-verifiziert
 6.6.2026: ATF-Permalink bzw. AZA-Suche), Aussage, Code-Fundorten und Status; generiert
 aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-generieren.ts`
 (meldet Lücken — Stand: 0). Inhaltliche Abnahme der einzelnen Entscheide: David, offen.

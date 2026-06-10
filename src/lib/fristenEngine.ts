@@ -130,7 +130,14 @@ export function fristendeKalender(
       for (let jy = ref.getFullYear() - 1; jy <= ende.getFullYear() + 1; jy++) {
         for (const p of st.perioden(jy)) {
           if (angewandt.has(p.key)) continue;
-          if (isAfter(p.von, ref) && leq(p.von, ende)) {
+          // BK-Abgleich-Fix 10.6.2026 (B-1, deklarierte fachliche Änderung —
+          // normen/zpo-fristen-bk-abgleich.md): p.von ≥ ref statt strikt >.
+          // Im Mindermeinungs-Modus ist ref = diesAQuo + 1; fällt dieser
+          // Folgetag exakt auf den Periodenbeginn (15.7./18.12./7. Tag vor
+          // Ostern), ging die Verlängerung verloren (Ende einen Monat zu
+          // früh). Im BGer-Modus ist p.von = ref unerreichbar (Ereignis IM
+          // Stillstand verschiebt diesAQuo ans Periodenende) — byte-golden.
+          if (!isBefore(p.von, ref) && leq(p.von, ende)) {
             if (!cand || isBefore(p.von, cand.von)) cand = p;
           }
         }

@@ -10,7 +10,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | Modul (src/lib/) | Grundlage (bibliothek/) | Stand |
 |---|---|---|
 | fristenEngine.ts · datumsUtils.ts | normen/feiertage-kantone-bj.md (Matrix, Doppelcheck 26/26) · register/quellen-register.md (Caches) | entwurf; Feiertage je Kanton vor «geprüft» gegen kantonales Recht |
-| zpoFristen.ts (+zpoPresets) | normen/normtexte-zpo-zustaendigkeit.md · recherche/zpo-kosten-streitwert.md · normen/zpo-fristen-bk-abgleich.md (BK-Zweitabgleich 10.6.2026: 29/31 ✓) | entwurf; BK-Befund B-1 (Mindermeinungs-Modus × Stillstands-Folgetag, MITTEL) offen |
+| zpoFristen.ts (+zpoPresets) | normen/normtexte-zpo-zustaendigkeit.md · recherche/zpo-kosten-streitwert.md · normen/zpo-fristen-bk-abgleich.md (BK-Zweitabgleich 10.6.2026: 29/31 ✓) | entwurf; BK-Befunde B-1+B-2 **UMGESETZT 10.6.2026 (Ja David)**; B-3 (Jahresfristen-Streit) bewusst offen via [UNGEKLÄRT]-Warnung |
 | schkgFristen.ts (+schkgPresets) | normen/schkg-zustaendigkeit-regelwerk.md | entwurf; Art.-63-Doppelfix 6.6.2026 |
 | erbFristen.ts | recherche/erbrecht-ausbau.md · normen/erbrecht-regelwerk.md | entwurf |
 | fristenspiegel/ | recherche/fristenspiegel-konzept.md | entwurf (Orchestrierer über Engines) |
@@ -30,7 +30,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 
 | Modul | Grundlage | Stand |
 |---|---|---|
-| verzugszins.ts · teuerung.ts | (Normen direkt; LIK: Verfallsregister) · normen/verzugszins-praejudizien-abgleich.md (Präjudizien-Abgleich 10.6.2026: Hauptpfad ✓) | entwurf; 2 MITTEL-Befunde (Warnung kaufm. ≤ 5 % · Kumulationsverbot-Hinweis) offen |
+| verzugszins.ts · teuerung.ts | (Normen direkt; LIK: Verfallsregister) · normen/verzugszins-praejudizien-abgleich.md (Präjudizien-Abgleich 10.6.2026: Hauptpfad ✓) | entwurf; alle 4 Abgleich-Befunde + Register-Hygiene **UMGESETZT 10.6.2026 (Ja David)** |
 | erbteilung.ts | normen/erbrecht-regelwerk.md | entwurf; CHF-Beträge seit 7.6. in der Engine (§3) |
 | streitwert.ts | recherche/zpo-kosten-streitwert.md | entwurf (gebaut 7.6.) |
 | gebvKosten.ts | recherche/gebv-schkg-kostenrechner.md · kosten/ | entwurf (gebaut 7.6.); GebV-Revision AS 2025 630 vor Abnahme (Plan C.13a) |

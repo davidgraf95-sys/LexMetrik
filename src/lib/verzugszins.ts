@@ -172,10 +172,20 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
   });
 
   // ── Schritt 3: Satz ──
-  const satzNormen = grund === 'vertraglich' ? [N_104_2] : grund === 'kaufmaennisch' ? [N_104_3] : [N_104_1];
+  // Präjudizien-Abgleich-Fix 10.6.2026 (NIEDRIG, Normklammer): Ein vertraglich
+  // VEREINBARTER Satz UNTER 5 % ist zulässig, ruht aber auf der Dispositivität
+  // von Art. 104 Abs. 1 OR (BGE 117 V 349 E. 3b) — Abs. 2 erfasst nur HÖHERE
+  // Zinsen. Vorher zitierte der Rechenweg auch für tiefere Sätze Abs. 2.
+  const vertraglichUnterGesetzlich = grund === 'vertraglich' && startSatz < 5;
+  const satzNormen =
+    grund === 'vertraglich'
+      ? (vertraglichUnterGesetzlich ? [N_104_1] : [N_104_2])
+      : grund === 'kaufmaennisch' ? [N_104_3] : [N_104_1];
   const satzText =
     grund === 'vertraglich'
-      ? `Vertraglich vereinbarter Verzugszins von ${startSatz} % (Art. 104 Abs. 2 OR); Beweislast für die Vereinbarung beim Gläubiger.`
+      ? (vertraglichUnterGesetzlich
+          ? `Vertraglich vereinbarter Verzugszins von ${startSatz} % unter dem gesetzlichen Satz: zulässig kraft Dispositivität von Art. 104 Abs. 1 OR (Abs. 2 erfasst nur höhere Zinsen); Beweislast für die Vereinbarung beim Gläubiger.`
+          : `Vertraglich vereinbarter Verzugszins von ${startSatz} % (Art. 104 Abs. 2 OR); Beweislast für die Vereinbarung beim Gläubiger.`)
       : grund === 'kaufmaennisch'
         ? `Kaufmännischer Verzugszins von ${startSatz} % (Art. 104 Abs. 3 OR): nur im objektiv kaufmännischen Verkehr, soweit der übliche Bankdiskonto (Privatdiskontsatz) 5 % übersteigt.`
         : `Gesetzlicher Verzugszins von ${startSatz} % pro Jahr (Art. 104 Abs. 1 OR).`;
@@ -183,7 +193,8 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
     beschreibung: 'Schritt 3 – Massgebender Zinssatz',
     zwischenergebnis: satzText,
     normen: satzNormen,
-    rechtsprechung: grund === 'vertraglich' ? [rechtsprechung('BGE_137_III_453')]
+    rechtsprechung: grund === 'vertraglich'
+      ? [rechtsprechung(vertraglichUnterGesetzlich ? 'BGE_117_V_349' : 'BGE_137_III_453')]
       : grund === 'kaufmaennisch' ? [rechtsprechung('BGE_116_II_140')]
       : startSatz !== 5 ? [rechtsprechung('BGE_117_V_349')] : undefined,
   });
@@ -286,9 +297,21 @@ export function berechneVerzugszins(input: VerzugszinsInput): VerzugszinsErgebni
     'Teilzahlungen werden zuerst auf Zinsen/Kosten, dann auf das Kapital angerechnet (Art. 85 OR; Reihenfolge Kosten→Zinsen→Kapital nach Lehre/Praxis).',
     'Zinseszinsverbot: Auf aufgelaufene Verzugszinsen werden keine weiteren Verzugszinsen berechnet (Art. 105 Abs. 3 OR).',
     'Über den Verzugszins hinausgehender Schaden bleibt vorbehalten und ist gesondert nachzuweisen (Art. 106 OR).',
+    // Präjudizien-Abgleich-Fix 10.6.2026 (MITTEL, fehlender Warnhinweis):
+    // Kumulationsverbot Schadenszins/Verzugszins.
+    'Bei Schadenersatzforderungen: Schadenszins (ab schädigendem Ereignis) und Verzugszins sind nicht kumulierbar, und auf dem Schadenszinsbetrag läuft kein Verzugszins – auch nicht ab Urteilstag (BGE 122 III 53; BGE 131 III 12, zu verifizieren).',
+    // Präjudizien-Abgleich-Fix 10.6.2026 (NIEDRIG, Geltungsbereich):
+    'Dieser Rechner gilt für privatrechtliche Geldforderungen; für öffentlich-rechtliche Forderungen gilt der 5-%-Satz von Art. 104 Abs. 1 OR nicht ohne Weiteres (marktangepasster Satz; Sozialversicherung nur bei gesetzlicher Grundlage).',
   );
   if (grund === 'vertraglich') warnungen.push('Höherer vertraglicher Zinssatz (Art. 104 Abs. 2 OR): Beweislast für die Vereinbarung beim Gläubiger.');
   if (grund === 'kaufmaennisch') warnungen.push('Art. 104 Abs. 3 OR gilt nur im objektiv kaufmännischen Verkehr; der Privatdiskontsatz am Zahlungsort ist nachzuweisen.');
+  // Präjudizien-Abgleich-Fix 10.6.2026 (MITTEL): Abs. 3 greift nur, SOWEIT der
+  // Diskonto 5 % übersteigt — ein kaufmännischer Satz ≤ 5 % unterschritte still
+  // das Minimum, das Abs. 1 dem Gläubiger garantiert (analog zur bestehenden
+  // Guard-Warnung für `gesetzlich` ≠ 5 %). Gerechnet wird mit der Eingabe.
+  if (grund === 'kaufmaennisch' && startSatz <= 5) warnungen.push(
+    `Der eingegebene kaufmännische Satz von ${startSatz} % übersteigt 5 % nicht: Art. 104 Abs. 3 OR greift nur, soweit der übliche Bankdiskonto 5 % übersteigt – Abs. 1 garantiert dem Gläubiger mindestens 5 %. Das Ergebnis unterschreitet das gesetzliche Minimum; Satzwahl prüfen.`,
+  );
   if (grund === 'gesetzlich' && startSatz !== 5) warnungen.push('Art. 104 Abs. 1 OR ist dispositiv; ein abweichender Satz bedarf einer Grundlage (Vereinbarung/Reglement/Sondergesetz).');
   if (input.rueckstaendigeZinsforderung) warnungen.push('Rückständige Zins-/Rentenforderung: Verzugszinsen laufen erst ab Anhebung der Betreibung oder gerichtlichen Klage (Art. 105 Abs. 1 OR) – der Verzugsbeginn sollte diesem Datum entsprechen.');
 

@@ -557,3 +557,20 @@ Eingabe→Ausgabe dokumentiert; Kanton ZH):
    per Auftrags-Verbot ausgelassen.
 4. Status-Hebung auf ZWEIFACH GEPRÜFT erst nach unabhängigem adversarialem
    Durchgang (S2), idealerweise gegen einen zweiten Kommentar (KuKo/BSK).
+
+---
+
+## Umsetzung (10.6.2026, Ja David — deklarierte fachliche Änderungen)
+
+B-1 MITTEL umgesetzt: Kandidaten-Bedingung in `fristenEngine.ts` neu
+`p.von ≥ ref` (statt strikt >) — der Mindermeinungs-Modus verliert die
+Stillstandsverlängerung am Stillstands-Folgetag nicht mehr (Sonden:
+14.7.2024 + 1 Mt. neu 16.9.2024 statt 16.8.; 17.12.2024 + 1 Mt. neu
+3.2.2025 statt 20.1.). Im BGer-Modus ist `p.von = ref` unerreichbar
+(dies-a-quo-Verschiebung ans Periodenende) — Golden 88/88: kein einziges
+Datum verändert, byte-Beweis der Verhaltensneutralität ausserhalb des
+Modus. B-2 NIEDRIG umgesetzt: Fristwahrungs-Hinweis nennt die
+schweizerische diplomatische/konsularische Vertretung (Abs. 1) inkl.
+Geltung für vorübergehend im Ausland Weilende; Golden-Textdiff in allen
+zpo-Fällen deklariert regeneriert. 4 neue Tests. B-3 bleibt bewusst
+offen ([UNGEKLÄRT]-Warnung genügt, §8).

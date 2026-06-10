@@ -101,10 +101,25 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
     aussage: 'Tritt Verzug ohne Mahnung ein (bestimmter Verfalltag, Art. 102 Abs. 2 OR), läuft der Zins umgehend.',
     verifiziert: false,
   },
-  // RESERVE (Audit 5.6.2026): noch unreferenziert.
+  // Referenziert in verzugszins.ts (Validierungs-Warnung; Hygiene-Bereinigung
+  // 10.6.2026 nach Präjudizien-Abgleich — Kommentar «RESERVE» war überholt).
   BGer_4A_117_2014: {
     aktenzeichen: 'BGer 4A_117/2014',
     aussage: 'Verzugszins nur auf geschuldeten Beträgen, nicht auf zu Unrecht verlangten.',
+    verifiziert: false,
+  },
+  // Nachregistrierung 10.6.2026 (Präjudizien-Abgleich Art. 104,
+  // bibliothek/normen/verzugszins-praejudizien-abgleich.md):
+  BGE_122_III_53: {
+    aktenzeichen: 'BGE 122 III 53',
+    aussage:
+      'Art. 104 Abs. 3 OR gilt nur im objektiv kaufmännischen Verkehr; Schadenszins und Verzugszins sind nicht kumulierbar.',
+    verifiziert: false,
+  },
+  BGE_131_III_12: {
+    aktenzeichen: 'BGE 131 III 12',
+    aussage:
+      'Auf dem Schadenszinsbetrag läuft kein Verzugszins, auch nicht ab Urteilstag (E. 9.3/9.4).',
     verifiziert: false,
   },
   BGE_117_V_349: {

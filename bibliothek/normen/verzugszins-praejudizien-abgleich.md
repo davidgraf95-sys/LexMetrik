@@ -345,3 +345,19 @@ Die dokumentierte Normverweis-Differenz (R7: Buch «Art. 108 Ziff. 1» vs.
 Engine «Art. 102 Abs. 2») geht nach Normtext-Lage zugunsten der Engine
 aus. Keine neuen datierten Parameter → kein Verfallsregister-Eintrag
 nötig (S6).
+
+---
+
+## Umsetzung (10.6.2026, Ja David — deklarierte fachliche Änderungen)
+
+Alle 4 Befunde umgesetzt (`verzugszins.ts` + `verifikation.ts`):
+MITTEL R9 → Warnung bei `kaufmaennisch` ≤ 5 % (Ergebnis unterschreitet
+Abs.-1-Minimum, gerechnet wird weiterhin mit der Eingabe) · MITTEL R10 →
+Standard-Warnung Kumulationsverbot Schadens-/Verzugszins (BGE 122 III 53,
+BGE 131 III 12 — beide ins Verifikations-Register nachregistriert,
+`verifiziert: false`) · NIEDRIG R6 → Normklammer bei vertraglichem Satz
+< 5 % neu Dispositivität Abs. 1 (BGE 117 V 349) statt Abs. 2 · NIEDRIG
+R15 → Standard-Warnung Geltungsbereich öffentliches Recht · Hygiene R4 →
+«RESERVE»-Kommentar zu BGer 4A_117/2014 berichtigt. 5 neue Tests;
+Golden deklariert regeneriert (verzug:einfach/teilzahlung, nur
+Warnungs-Texte). Übrige Nachregistrierungs-Kandidaten bleiben offen.

@@ -231,7 +231,10 @@ export function berechneFrist(input: ZpoInput): ZpoErgebnis {
   // Fristwahrung (Art. 143) + Säumnis (Art. 147/148)
   rechenweg.push({
     beschreibung: 'Fristwahrung (Art. 143 ZPO)',
-    zwischenergebnis: 'Eingaben spätestens am letzten Tag bis 24.00 Uhr beim Gericht oder zu dessen Handen der Schweizerischen Post übergeben (Expeditionsprinzip; rechtzeitige Aufgabe ist beweisbelastet). Elektronisch: Quittung der Zustellplattform (Abs. 2). Fristgerecht beim unzuständigen schweizerischen Gericht eingereicht gilt als rechtzeitig (Abs. 1bis).',
+    // BK-Abgleich-Fix 10.6.2026 (B-2): Abs. 1 nennt als dritte fristwahrende
+    // Übergabestelle die schweizerische diplomatische/konsularische Vertretung —
+    // auch für nur vorübergehend im Ausland weilende Parteien.
+    zwischenergebnis: 'Eingaben spätestens am letzten Tag bis 24.00 Uhr beim Gericht oder zu dessen Handen der Schweizerischen Post oder einer schweizerischen diplomatischen oder konsularischen Vertretung übergeben (Expeditionsprinzip; rechtzeitige Aufgabe ist beweisbelastet; die Vertretung steht auch nur vorübergehend im Ausland weilenden Parteien offen). Elektronisch: Quittung der Zustellplattform (Abs. 2). Fristgerecht beim unzuständigen schweizerischen Gericht eingereicht gilt als rechtzeitig (Abs. 1bis).',
     normen: [N_143],
   });
   rechenweg.push({
