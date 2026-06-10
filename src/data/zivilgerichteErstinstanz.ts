@@ -26,6 +26,8 @@ export interface GerichtsAdresse {
   /** Bei 'liste': Gerichtskreis/Bezirk, für den dieses Gericht zuständig ist. */
   zustaendigFuer?: string;
   hinweis?: string;
+  /** Amtliche Detailseite DIESES Gerichts (nur https, verifiziert). */
+  url?: string;
 }
 
 export type GerichtsAufloesung =
@@ -36,6 +38,8 @@ export type GerichtsAufloesung =
 export interface KantonZivilgerichteErstinstanz {
   stand: string;
   quelle: string;
+  /** Amtliche Übersichtsseite der Erstinstanzen (Link-Fallback, nur https). */
+  url?: string;
   erstinstanz: GerichtsAufloesung;
   /** Belegte Sonderwege je Materie (nur wo das Dossier sie ausweist) —
    *  reine Hinweis-Texte für die UI, KEIN automatisches Routing (§1/§8). */
@@ -49,24 +53,25 @@ const Q_ERSTLISTE = 'gerichtsadressen-erstliste.md (amtlich verifiziert 5.6.2026
 export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstinstanz> = {
   ZH: {
     stand: '10.6.2026', quelle: 'gerichte-zh.ch (Direkt-Abruf 10.6.2026; Nachtrag in gerichtsbehoerden-kantone.md)',
+    url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte',
     // Alle 12 Bezirksgerichte amtlich verifiziert. BG Zürich: Briefpost
     // einheitlich «Postfach, 8036 Zürich» für alle Abteilungen — als
     // Eingabe-Adresse massgeblich (Badenerstrasse 90 = Paket/Standort).
     erstinstanz: {
       modus: 'liste',
       gerichte: [
-        { name: 'Bezirksgericht Zürich', strasse: 'Postfach', plzOrt: '8036 Zürich', zustaendigFuer: 'Bezirk Zürich', hinweis: 'Briefpost für alle Abteilungen; Paket/Standort: Badenerstrasse 90, 8004 Zürich' },
-        { name: 'Bezirksgericht Affoltern', strasse: 'Im Grund 15', plzOrt: '8910 Affoltern am Albis', zustaendigFuer: 'Bezirk Affoltern' },
-        { name: 'Bezirksgericht Andelfingen', strasse: 'Thurtalstrasse 1, Postfach', plzOrt: '8450 Andelfingen', zustaendigFuer: 'Bezirk Andelfingen' },
-        { name: 'Bezirksgericht Bülach', strasse: 'Spitalstrasse 13, Postfach', plzOrt: '8180 Bülach', zustaendigFuer: 'Bezirk Bülach' },
-        { name: 'Bezirksgericht Dielsdorf', strasse: 'Spitalstrasse 7', plzOrt: '8157 Dielsdorf', zustaendigFuer: 'Bezirk Dielsdorf' },
-        { name: 'Bezirksgericht Dietikon', strasse: 'Bahnhofplatz 10, Postfach', plzOrt: '8953 Dietikon', zustaendigFuer: 'Bezirk Dietikon' },
-        { name: 'Bezirksgericht Hinwil', strasse: 'Gerichtshausstrasse 12', plzOrt: '8340 Hinwil', zustaendigFuer: 'Bezirk Hinwil', hinweis: 'Neubau bis ~April 2028 — Adresse bleibt gültig' },
-        { name: 'Bezirksgericht Horgen', strasse: 'Burghaldenstrasse 3', plzOrt: '8810 Horgen', zustaendigFuer: 'Bezirk Horgen' },
-        { name: 'Bezirksgericht Meilen', strasse: 'Untere Bruech 139/140, Postfach', plzOrt: '8706 Meilen', zustaendigFuer: 'Bezirk Meilen' },
-        { name: 'Bezirksgericht Pfäffikon', strasse: 'Hörnlistrasse 55', plzOrt: '8330 Pfäffikon ZH', zustaendigFuer: 'Bezirk Pfäffikon' },
-        { name: 'Bezirksgericht Uster', strasse: 'Gerichtsstrasse 17', plzOrt: '8610 Uster', zustaendigFuer: 'Bezirk Uster' },
-        { name: 'Bezirksgericht Winterthur', strasse: 'Lindstrasse 10', plzOrt: '8400 Winterthur', zustaendigFuer: 'Bezirk Winterthur' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-zuerich', name: 'Bezirksgericht Zürich', strasse: 'Postfach', plzOrt: '8036 Zürich', zustaendigFuer: 'Bezirk Zürich', hinweis: 'Briefpost für alle Abteilungen; Paket/Standort: Badenerstrasse 90, 8004 Zürich' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-affoltern', name: 'Bezirksgericht Affoltern', strasse: 'Im Grund 15', plzOrt: '8910 Affoltern am Albis', zustaendigFuer: 'Bezirk Affoltern' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-andelfingen', name: 'Bezirksgericht Andelfingen', strasse: 'Thurtalstrasse 1, Postfach', plzOrt: '8450 Andelfingen', zustaendigFuer: 'Bezirk Andelfingen' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-buelach', name: 'Bezirksgericht Bülach', strasse: 'Spitalstrasse 13, Postfach', plzOrt: '8180 Bülach', zustaendigFuer: 'Bezirk Bülach' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-dielsdorf', name: 'Bezirksgericht Dielsdorf', strasse: 'Spitalstrasse 7', plzOrt: '8157 Dielsdorf', zustaendigFuer: 'Bezirk Dielsdorf' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-dietikon', name: 'Bezirksgericht Dietikon', strasse: 'Bahnhofplatz 10, Postfach', plzOrt: '8953 Dietikon', zustaendigFuer: 'Bezirk Dietikon' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-hinwil', name: 'Bezirksgericht Hinwil', strasse: 'Gerichtshausstrasse 12', plzOrt: '8340 Hinwil', zustaendigFuer: 'Bezirk Hinwil', hinweis: 'Neubau bis ~April 2028 — Adresse bleibt gültig' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-horgen', name: 'Bezirksgericht Horgen', strasse: 'Burghaldenstrasse 3', plzOrt: '8810 Horgen', zustaendigFuer: 'Bezirk Horgen' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-meilen', name: 'Bezirksgericht Meilen', strasse: 'Untere Bruech 139/140, Postfach', plzOrt: '8706 Meilen', zustaendigFuer: 'Bezirk Meilen' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-pfaeffikon', name: 'Bezirksgericht Pfäffikon', strasse: 'Hörnlistrasse 55', plzOrt: '8330 Pfäffikon ZH', zustaendigFuer: 'Bezirk Pfäffikon' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-uster', name: 'Bezirksgericht Uster', strasse: 'Gerichtsstrasse 17', plzOrt: '8610 Uster', zustaendigFuer: 'Bezirk Uster' },
+        { url: 'https://www.gerichte-zh.ch/de/organisation/bezirksgerichte/bezirksgericht-winterthur', name: 'Bezirksgericht Winterthur', strasse: 'Lindstrasse 10', plzOrt: '8400 Winterthur', zustaendigFuer: 'Bezirk Winterthur' },
       ],
     },
     hinweisArbeit: 'Arbeitsgericht am Bezirksgericht (§§ 15, 20, 25 GOG ZH; Einzelgericht bis CHF 30’000) — Eingabe an das Arbeitsgericht des zuständigen Bezirks.',

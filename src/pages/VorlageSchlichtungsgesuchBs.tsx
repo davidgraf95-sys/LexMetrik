@@ -11,7 +11,7 @@ import { KANTONE } from '../lib/kantone';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
-import { SgBehoerdenWahl } from '../components/vorlagen/SgBehoerdenWahl';
+import { SgAdressatKachel, SgBehoerdenWahl } from '../components/vorlagen/SgBehoerdenWahl';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -172,10 +172,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 const reg = behoerdeFuer(sgEingabeArt(routing?.dokument ? routing.behoerdeTyp : 'ordentlich'), a.gerichtsKanton);
                 if (manuell) return null;
                 if (reg) return (
-                  <div className="lc-tile">
-                    <p className="text-body-s text-ink-900 whitespace-pre-line font-medium">{behoerdeAlsBlock(reg)}</p>
-                    <p className="text-micro text-ink-500 mt-1.5">Amtliche Anschrift · {reg.quelle} · Stand {reg.stand}</p>
-                  </div>
+                  <SgAdressatKachel zeilen={behoerdeAlsBlock(reg).split('\n')} url={reg.url} />
                 );
                 return (
                   <div className="lc-notice text-body-s">

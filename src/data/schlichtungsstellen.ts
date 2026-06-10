@@ -363,15 +363,15 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
 /** Auflösung für Kanton + Behördentyp; GlG fällt mangels eigener Stelle auf
  *  die ordentliche Behörde zurück (mit Hinweis in der UI). */
 export function schlichtungAufloesung(kanton: Kanton, typ: SchlichtungsbehoerdeTyp): {
-  aufloesung: SchlichtungsAufloesung; stand: string; quelle: string; glgFallback: boolean;
+  aufloesung: SchlichtungsAufloesung; stand: string; quelle: string; glgFallback: boolean; kantonsUrl?: string;
 } | null {
   const k = SCHLICHTUNGSSTELLEN[kanton];
   if (!k) return null;
-  if (typ === 'paritaetisch_miete' && k.miete) return { aufloesung: k.miete, stand: k.stand, quelle: k.quelle, glgFallback: false };
+  if (typ === 'paritaetisch_miete' && k.miete) return { aufloesung: k.miete, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
   if (typ === 'paritaetisch_glg') {
-    if (k.glg) return { aufloesung: k.glg, stand: k.stand, quelle: k.quelle, glgFallback: false };
-    return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true };
+    if (k.glg) return { aufloesung: k.glg, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
+    return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true, kantonsUrl: k.url };
   }
-  if (typ === 'paritaetisch_miete') return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true };
-  return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: false };
+  if (typ === 'paritaetisch_miete') return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true, kantonsUrl: k.url };
+  return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
 }

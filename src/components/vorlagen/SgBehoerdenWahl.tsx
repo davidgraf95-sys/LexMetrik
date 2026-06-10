@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Field, inputCls } from './ui';
 import type { Kanton } from '../../types/legal';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
-import { plzAufloesen } from '../../data/plz/plzAufloesung';
+import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
+import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { amtFuer, AMT_KANTONE } from '../../data/schlichtung/amtAufloesung';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 
@@ -14,6 +15,23 @@ import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAm
 // amtlicher Verzeichnis-Link) und meldet die Adresszeilen ans Schema
 // (answers.behoerdeAufgeloest). BS läuft weiter über die abgenommene
 // Registry (Vorrang in der Assemble-Kette).
+
+// ─── Einheitliche Adressat-Kachel (Auftrag David 10.6.2026) ─────────────────
+// EINE Darstellung für jede aufgelöste Behörde — Name (verlinkt auf die
+// amtliche Seite, sofern belegt), Adresse, Einsatz-Hinweis. Verwendet von
+// der BS-Registry-Anzeige und allen Auflösungs-Zweigen (zentral · Liste ·
+// PLZ/Gemeinde · ZH-Kreise).
+export function SgAdressatKachel({ zeilen, url }: { zeilen: string[]; url?: string }) {
+  const [name, ...rest] = zeilen;
+  return (
+    <div className="lc-notice text-body-s">
+      {url
+        ? <a href={url} target="_blank" rel="noreferrer" className="font-medium text-ink-900 underline decoration-brass-400 hover:text-brass-700">{name} ↗</a>
+        : <span className="font-medium text-ink-900">{name}</span>}<br />
+      {rest.join(', ')} — wird als Adressat eingesetzt.
+    </div>
+  );
+}
 
 export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, startPlz = '', startGemeinde = '' }: {
   kanton: Kanton;
@@ -38,6 +56,10 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   const [kreisIdx, setKreisIdx] = useState(0);
   const [amtZeilen, setAmtZeilen] = useState<string[] | null>(null);
+  // Befund David 10.6.2026 («PLZ bzw. Gemeinde funktioniert nicht»):
+  // Treffer im Kanton aufbewahren — bei Mehrdeutigkeit ohne Hauptgemeinde
+  // übernehmen die PlzGemeindeWahl-Kacheln (§10) die Präzisierung.
+  const [plzWahl, setPlzWahl] = useState<{ plz: string; treffer: PlzTreffer[] } | null>(null);
 
   const recherche = schlichtungAufloesung(kanton, typ);
   const modus = recherche?.aufloesung.modus ?? null;
@@ -45,23 +67,34 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   // PLZ → Gemeinde (amtliches Register); Amt → Adresse (7 Kantone)
   useEffect(() => {
     let aktiv = true;
-    const lade = async (): Promise<{ amt: string[] | null; kreise: ZhKreisAmt[] | null }> => {
+    const lade = async (): Promise<{ amt: string[] | null; kreise: ZhKreisAmt[] | null; wahl: PlzTreffer[] | null }> => {
       let g = gemeinde.trim();
+      let wahl: PlzTreffer[] | null = null;
       if (/^\d{4}$/.test(plz)) {
         const treffer = await plzAufloesen(plz);
         const imKanton = treffer?.filter((t) => t.kanton === kanton) ?? [];
-        if (g === '' && imKanton.length === 1) g = imKanton[0].gemeinde;
+        wahl = imKanton.length > 0 ? imKanton : null;
+        if (g === '') {
+          if (imKanton.length === 1) g = imKanton[0].gemeinde;
+          else {
+            // Randgebiets-PLZ (z. B. 5000: Aarau 99.7 % / Suhr 0.3 %):
+            // amtliche Hauptgemeinde übernehmen (Befund David 10.6.2026) —
+            // echte Mehrdeutigkeit lösen die Kacheln darunter.
+            const haupt = hauptTreffer(imKanton);
+            if (haupt) g = haupt.gemeinde;
+          }
+        }
       }
-      if (typ !== 'ordentlich' || !AMT_KANTONE.includes(kanton) || g === '') return { amt: null, kreise: null };
+      if (typ !== 'ordentlich' || !AMT_KANTONE.includes(kanton) || g === '') return { amt: null, kreise: null, wahl };
       if (kanton === 'ZH' && g.toLowerCase() === 'zürich') {
-        return { amt: null, kreise: await zuerichKreisAemter() };
+        return { amt: null, kreise: await zuerichKreisAemter(), wahl };
       }
       const a = await amtFuer(kanton, g);
-      return { amt: a ? [a.name, a.strasse, a.plzOrt] : null, kreise: null };
+      return { amt: a ? [a.name, a.strasse, a.plzOrt] : null, kreise: null, wahl };
     };
     lade()
-      .then((r) => { if (aktiv) { setAmtZeilen(r.amt); setZhKreise(r.kreise); } })
-      .catch(() => { if (aktiv) { setAmtZeilen(null); setZhKreise(null); } });
+      .then((r) => { if (aktiv) { setAmtZeilen(r.amt); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
+      .catch(() => { if (aktiv) { setAmtZeilen(null); setZhKreise(null); setPlzWahl(null); } });
     return () => { aktiv = false; };
   }, [kanton, typ, plz, gemeinde]);
 
@@ -77,8 +110,11 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
     if (a.modus === 'zentral') {
       onAufgeloest([a.stelle.name, a.stelle.strasse, a.stelle.plzOrt]);
     } else if (a.modus === 'liste') {
+      // PLZ-/Gemeinde-Auflösung gilt auch in Listen-Kantonen (z. B. GR:
+      // Vermittlerämter je Region) — Befund David 10.6.2026; die manuelle
+      // Stellen-Wahl bleibt als Übersteuerung.
       const s = wahlIdx >= 0 ? a.stellen[Math.min(wahlIdx, a.stellen.length - 1)] : undefined;
-      onAufgeloest(s ? [s.name, s.strasse, s.plzOrt] : null);
+      onAufgeloest(s ? [s.name, s.strasse, s.plzOrt] : (typ === 'ordentlich' ? amtZeilen : null));
     } else if (typ === 'ordentlich' && zhKreise && zhKreise.length > 0) {
       const k = zhKreise[Math.min(kreisIdx, zhKreise.length - 1)];
       onAufgeloest([k.name, k.strasse, k.plzOrt]);
@@ -109,22 +145,44 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             Im Kanton {kanton} ist keine GlG-Schlichtungsstelle erfasst (einzelne Kantone führen eigene Stellen,
             z. B. LU § 50 JusG) — Adressat wird NICHT automatisch gesetzt; zuständige Stelle prüfen und unten von Hand erfassen.
           </p>
-          <p className="text-xs text-ink-500">Quelle: {recherche.quelle} (Stand {recherche.stand}).</p>
         </div>
       )}
       {!glgOhneStelle && a.modus === 'zentral' && (
-        <div className="lc-notice text-body-s">
-          <span className="font-medium text-ink-900">{a.stelle.name}</span><br />
-          {a.stelle.strasse}, {a.stelle.plzOrt} — wird als Adressat eingesetzt.
-        </div>
+        <SgAdressatKachel zeilen={[a.stelle.name, a.stelle.strasse, a.stelle.plzOrt]}
+          url={a.stelle.url ?? recherche.kantonsUrl} />
       )}
       {!glgOhneStelle && a.modus === 'liste' && (
-        <Field label="Zuständige Stelle wählen" hint={`${a.stellen.length} Stellen im Kanton ${kanton} — massgeblich ist das Gebiet der beklagten Partei bzw. der Sache`}>
-          <select className={inputCls} value={wahlIdx} onChange={(e) => setWahlSchluessel({ kanton, typ, idx: Number(e.target.value) })}>
-            <option value={-1}>– Stelle wählen –</option>
-            {a.stellen.map((s, i) => <option key={s.name} value={i}>{s.name} — {s.plzOrt}</option>)}
-          </select>
-        </Field>
+        <>
+          {typ === 'ordentlich' && AMT_KANTONE.includes(kanton) && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Field label="PLZ (beklagte Partei / Sache)" hint="amtliches Ortschaftenverzeichnis — löst die Stelle automatisch auf">
+                <input className={inputCls + ' num w-28'} inputMode="numeric" maxLength={4} value={plz}
+                  onChange={(e) => setPlz(e.target.value.replace(/\D/g, '').slice(0, 4))} />
+              </Field>
+              <Field label="Gemeinde" hint="falls die PLZ mehrere Gemeinden umfasst">
+                <input className={inputCls} value={gemeinde} onChange={(e) => setGemeinde(e.target.value)} />
+              </Field>
+            </div>
+          )}
+          {typ === 'ordentlich' && plzWahl && plzWahl.plz === plz && (
+            <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
+              onWahl={({ gemeinde: g }) => setGemeinde(g)} />
+          )}
+          {typ === 'ordentlich' && amtZeilen && wahlIdx < 0 && (
+            <SgAdressatKachel zeilen={amtZeilen} url={recherche.kantonsUrl} />
+          )}
+          <Field label={amtZeilen && wahlIdx < 0 ? 'Oder Stelle direkt wählen (übersteuert)' : 'Zuständige Stelle wählen'}
+            hint={`${a.stellen.length} Stellen im Kanton ${kanton} — massgeblich ist das Gebiet der beklagten Partei bzw. der Sache`}>
+            <select className={inputCls} value={wahlIdx} onChange={(e) => setWahlSchluessel({ kanton, typ, idx: Number(e.target.value) })}>
+              <option value={-1}>{amtZeilen ? '– automatisch (PLZ/Gemeinde) –' : '– Stelle wählen –'}</option>
+              {a.stellen.map((s, i) => <option key={s.name} value={i}>{s.name} — {s.plzOrt}</option>)}
+            </select>
+          </Field>
+          {wahlIdx >= 0 && (() => {
+            const s2 = a.stellen[Math.min(wahlIdx, a.stellen.length - 1)];
+            return <SgAdressatKachel zeilen={[s2.name, s2.strasse, s2.plzOrt]} url={s2.url ?? recherche.kantonsUrl} />;
+          })()}
+        </>
       )}
       {!glgOhneStelle && a.modus === 'verzeichnis' && (
         <>
@@ -139,6 +197,10 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             </Field>
           </div>
           )}
+          {typ === 'ordentlich' && plzWahl && plzWahl.plz === plz && (
+            <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
+              onWahl={({ gemeinde: g }) => setGemeinde(g)} />
+          )}
           {zhKreise && (
             <Field label="Stadt Zürich: Kreis-Amt wählen" hint="massgeblich ist der Stadtkreis der beklagten Partei">
               <select className={inputCls} value={kreisIdx} onChange={(e) => setKreisIdx(Number(e.target.value))}>
@@ -147,10 +209,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             </Field>
           )}
           {amtZeilen && (
-            <div className="lc-notice text-body-s">
-              <span className="font-medium text-ink-900">{amtZeilen[0]}</span><br />
-              {amtZeilen[1]}, {amtZeilen[2]} — wird als Adressat eingesetzt.
-            </div>
+            <SgAdressatKachel zeilen={amtZeilen} url={a.url} />
           )}
           {!amtZeilen && !zhKreise && (
             <p className="text-body-s text-ink-600">
@@ -163,10 +222,6 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           )}
         </>
       )}
-      <p className="text-xs text-ink-500">
-        Quelle: {recherche.quelle} (Stand {recherche.stand}) — zweifach geprüft, fachliche Abnahme ausstehend;
-        Adresse vor Einreichung kurz gegenprüfen.
-      </p>
     </div>
   );
 }

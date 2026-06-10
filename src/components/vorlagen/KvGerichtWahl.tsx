@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Field, inputCls } from './ui';
 import type { Kanton } from '../../types/legal';
 import { zivilgerichtErstinstanz } from '../../data/zivilgerichteErstinstanz';
+import { SgAdressatKachel } from './SgBehoerdenWahl';
 import type { KvMaterie } from '../../lib/vorlagen/klageVereinfacht';
 
 // ─── Klage (vereinfachtes Verfahren): Gerichts-Auflösung alle Kantone ───────
@@ -59,9 +60,6 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
         <p className="text-body-s text-ink-600">
           Adressat wird hier NICHT automatisch gesetzt — Adresse des zuständigen Spezialgerichts unten von Hand erfassen.
         </p>
-        <p className="text-xs text-ink-500">
-          Quelle: {eintrag.quelle} (Stand {eintrag.stand}) — zweifach geprüft, fachliche Abnahme ausstehend.
-        </p>
       </div>
     );
   }
@@ -69,11 +67,11 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
   return (
     <div className="space-y-3">
       {e.modus === 'zentral' && (
-        <div className="lc-notice text-body-s">
-          <span className="font-medium text-ink-900">{e.stelle.name}</span><br />
-          {e.stelle.strasse}, {e.stelle.plzOrt} — wird als Adressat eingesetzt.
-          {e.stelle.hinweis && <span className="block text-xs text-ink-600 mt-1">{e.stelle.hinweis}.</span>}
-        </div>
+        <>
+          <SgAdressatKachel zeilen={[e.stelle.name, e.stelle.strasse, e.stelle.plzOrt]}
+            url={e.stelle.url ?? eintrag.url} />
+          {e.stelle.hinweis && <p className="text-xs text-ink-600">{e.stelle.hinweis}.</p>}
+        </>
       )}
       {e.modus === 'liste' && (
         <>
@@ -83,6 +81,10 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
               {e.gerichte.map((g, i) => <option key={g.name} value={i}>{g.name} — {g.plzOrt}{g.zustaendigFuer ? ` (${g.zustaendigFuer})` : ''}</option>)}
             </select>
           </Field>
+          {gewaehlt && (
+            <SgAdressatKachel zeilen={[gewaehlt.name, gewaehlt.strasse, gewaehlt.plzOrt]}
+              url={gewaehlt.url ?? eintrag.url} />
+          )}
           {gewaehlt?.hinweis && <p className="text-xs text-ink-600">{gewaehlt.hinweis}.</p>}
         </>
       )}
@@ -99,10 +101,6 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
           Gerichte oder Spruchkörper — massgeblich ist das kantonale Gerichtsorganisationsrecht; Adressat vor Einreichung prüfen.
         </p>
       )}
-      <p className="text-xs text-ink-500">
-        Quelle: {eintrag.quelle} (Stand {eintrag.stand}) — zweifach geprüft, fachliche Abnahme ausstehend;
-        Adresse vor Einreichung kurz gegenprüfen.
-      </p>
     </div>
   );
 }
