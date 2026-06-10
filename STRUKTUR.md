@@ -3,6 +3,25 @@
 **Verbindliche Grundprinzipien: `CLAUDE.md`** (§1 Logik vor allem; §6
 Refactoring-Protokoll) — dieses Dokument hier beschreibt den Zustand.
 
+## Session 10.6.2026 nachmittags — Fristen-Einheit FE-1–FE-6 (DEPLOYED)
+
+**Deployed + gepusht bis `a7adb98`** (Davids Ja «bug check und push und
+deploy»; Asset-Hash live=lokal ✓, 7 Routen 200; **erster gelungener Push
+seit dem PAT-Blocker: origin/main = a7adb98, 62 Commits** — CI-/Normen-
+Monitor-Erstlauf auf GitHub noch zu verifizieren, Repo privat). Inhalt:
+FAHRPLAN-FRISTEN-EINHEIT FE-1–FE-6 komplett — EIN Fristenrechner-Erlebnis:
+Fristen-Kategorie mit zwei Haupteinstiegen + «Eigenes Regime»-Zeilen
+(lib/fristenKategorie.ts; WARUM-Sätze = fachliche Aussagen, **Abnahme
+David offen**) · Regime-Frage mit Weiche (Betreibungssache → Zivilgericht/
+ZPO → sonst Allgemein; ehrliche Zeile «Nicht abgebildet: StPO/VwVG/BGG») ·
+Preset-Such-Index über alle Regimes (lib/presetIndex.ts, 69 Einträge,
+Round-Trip-getestet; SCHKG_LINK_SPEC geteilt in rechnerPermalinks.ts,
+fristnatur-Sechserliste als deklarierter Fix) · Abzweigungen in beide
+Richtungen · Mietrecht-Eckdaten auf EckdatenKachel (byte-identisch) ·
+Goldliste +7. §9-Bug-Check (3 Agents) fixte 2 HOCH (Teilen-Klick
+remountete die Tagerechner-Form; Weiche schickte StPO/VwVG/BGG-Fristen in
+den ZPO-Stillstand). Details: FAHRPLAN-FRISTEN-EINHEIT.md.
+
 **Voll-Audit 5.6.2026** (4 parallele Agenten: Engines, Vorlagen, UI, Daten/Infra):
 Fixes `21446ac`…`b8c9312` — PDF-Freitext-Datumsverdrehung (H1), Block-
 Seitenüberlauf (H2), Testament-Quoten, PV-R6-Normalisierung, Mietvertrag-G3,

@@ -3,11 +3,16 @@
 Priorisiertes weiteres Vorgehen. Gepflegt wird dieser Plan NUR hier;
 erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 
-> **NEU (Auftrag David 10.6.2026): `FAHRPLAN-FRISTEN-EINHEIT.md`** —
-> EIN Fristenrechner-Erlebnis: Rechenbasis ist schon vereinheitlicht,
-> der Hebel ist die DARSTELLUNG (FE-1 IA · FE-2 Regime-Frage · FE-3
-> Preset-Index · FE-4 Abzweigungen · FE-5 Ergebnis-Anatomie · FE-6
-> Messlatte).
+> ~~**NEU (Auftrag David 10.6.2026): `FAHRPLAN-FRISTEN-EINHEIT.md`**~~ —
+> **FE-1–FE-6 UMGESETZT + DEPLOYED 10.6.2026 nachmittags** (Davids Ja
+> «bug check und push und deploy»; §9-Check 3 Agents: 2 HOCH + 2 MITTEL +
+> 4 NIEDRIG gefixt, Empirie 69/69 Preset-Round-Trips; Stand/Verdikte im
+> Fahrplan). **PUSH GELUNGEN: origin/main = a7adb98 (62 Commits) — der
+> PAT-workflow-Blocker ist GELÖST.** OFFEN für David: Abnahme der
+> FE-1-WARUM-Sätze (lib/fristenKategorie.ts) + FE-2-Weiche-Texte
+> (RechnerTagerechner) · Mehrwert-Frage StPO-Presets («Frist Strafbefehl»
+> hat keinen Einstieg) · erster CI-/Normen-Monitor-Lauf auf GitHub
+> verifizieren (Repo privat, ohne Login nicht prüfbar).
 
 > **NEU (Auftrag David 10.6.2026): `FAHRPLAN-VEREINHEITLICHUNG.md`** —
 > Engine-Vereinheitlichung gleicher Logik-/Rechenbasis, 5 Stufen V1–V5,
