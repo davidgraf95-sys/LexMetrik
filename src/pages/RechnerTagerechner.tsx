@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { EinfacheFristForm } from '../components/forms/EinfacheFristForm';
 import { AllgemeineFristForm } from '../components/forms/AllgemeineFristForm';
 import { ZpoFristenForm } from '../components/forms/ZpoFristenForm';
 import { SchkgFristenForm } from '../components/forms/SchkgFristenForm';
@@ -94,7 +95,25 @@ export function RechnerTagerechner() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
+      {/* S-5a (FAHRPLAN-STRUKTUR-UMBAU, Auftrag David 10.6.2026 abends):
+          GANZ SIMPLER Fristenrechner zuoberst — Datum · Frist · Ferien-Wahl
+          (keine/ZPO/SchKG); die Vorauswahl-Rechner (Presets, Voll-Tabs)
+          erscheinen DARUNTER. */}
+      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8 space-y-4">
+        <div className="space-y-1">
+          <h2 className="lc-overline text-brass-700">Einfacher Fristenrechner</h2>
+          <p className="text-body-s text-ink-500 max-w-reading">
+            Datum, Dauer und Ferien-Behandlung – das Fristende sofort. Für
+            Zustellarten, gerichtliche Fristen, Hemmung oder Presets die
+            Rechner mit Vorauswahl darunter verwenden.
+          </p>
+        </div>
+        <EinfacheFristForm />
+      </div>
       <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+        <div className="space-y-1 mb-5">
+          <h2 className="lc-overline text-brass-700">Mit Vorauswahl (Presets · ZPO · SchKG · Rückwärts)</h2>
+        </div>
         {/* FE-3: Preset-Suche über alle Regimes */}
         <div className="space-y-1.5 mb-5">
           <label htmlFor="preset-suche" className="lc-overline block">
