@@ -67,6 +67,8 @@ function validiere(f: LohnfortzahlungInput): string[] {
   if (f.arbeitsunfaehigkeitProzent <= 0 || f.arbeitsunfaehigkeitProzent > 100) fehler.push('Arbeitsunfähigkeit muss zwischen 1 und 100 % liegen.');
   if (f.pensumProzent != null && (f.pensumProzent <= 0 || f.pensumProzent > 100)) fehler.push('Beschäftigungsgrad muss zwischen 1 und 100 % liegen.');
   if (f.monatslohnBrutto != null && f.monatslohnBrutto < 0) fehler.push('Monatslohn darf nicht negativ sein.');
+  if (f.bereitsBezogeneTageImDienstjahr != null && f.bereitsBezogeneTageImDienstjahr < 0) fehler.push('Bereits bezogene Tage dürfen nicht negativ sein.');
+  if (f.arbeitsverhaeltnisEnde && f.arbeitsverhaeltnisEnde < f.vertragsbeginn) fehler.push('Ende des Arbeitsverhältnisses liegt vor dem Vertragsbeginn.');
   return fehler;
 }
 
@@ -88,6 +90,9 @@ const LF_LINK_SPEC: PermalinkSpec<LohnfortzahlungInput & Record<string, unknown>
   kanton: { p: 'k', typ: 'str', gueltig: istKanton },
   ktgGleichwertigVorhanden: { p: 'kt', typ: 'bool' },
   monatslohnBrutto: { p: 'ml', typ: 'num', gueltig: (n) => n >= 0 },
+  // B3/B4-Fix 10.6.2026 (SHK-Abgleich): Vorabsenzen-Verrechnung + AV-Ende-Kappung
+  bereitsBezogeneTageImDienstjahr: { p: 'bz', typ: 'num', gueltig: (n) => n >= 0 },
+  arbeitsverhaeltnisEnde: { p: 'ave', typ: 'str', gueltig: istISO },
 };
 
 export function LohnfortzahlungForm() {
@@ -114,6 +119,8 @@ export function LohnfortzahlungForm() {
     'Vertragsbeginn': form.vertragsbeginn,
     'Beginn Verhinderung': form.verhinderungBeginn,
     ...(form.verhinderungEnde ? { 'Ende Verhinderung': form.verhinderungEnde } : {}),
+    ...(form.bereitsBezogeneTageImDienstjahr ? { 'Bereits bezogene Tage im DJ': String(form.bereitsBezogeneTageImDienstjahr) } : {}),
+    ...(form.arbeitsverhaeltnisEnde ? { 'Ende Arbeitsverhältnis': form.arbeitsverhaeltnisEnde } : {}),
     'Arbeitsunfähigkeit': `${form.arbeitsunfaehigkeitProzent} %`,
     ...(form.pensumProzent != null && form.pensumProzent !== 100 ? { 'Pensum': `${form.pensumProzent} %` } : {}),
     'Kanton': form.kanton,
@@ -270,6 +277,15 @@ export function LohnfortzahlungForm() {
             <Field label="Ende der Verhinderung (optional)" hint="§2.1 für DJ-übergreifende Verhinderung (zwei Kredite)">
               <DatumsFeld value={form.verhinderungEnde ?? ''} className={inputCls}
                 onChange={(v) => set('verhinderungEnde', v || undefined)} />
+            </Field>
+            <Field label="Bereits bezogene Tage im laufenden Dienstjahr (optional)" hint="frühere Absenzen verbrauchen das Kontingent (SHK Art. 324a N 52)">
+              <input type="number" inputMode="decimal" min={0} className={inputCls} placeholder="0"
+                value={form.bereitsBezogeneTageImDienstjahr ?? ''}
+                onChange={(e) => set('bereitsBezogeneTageImDienstjahr', e.target.value ? Number(e.target.value) : undefined)} />
+            </Field>
+            <Field label="Ende des Arbeitsverhältnisses (optional)" hint="Lohnfortzahlung endet mit dem AV (BGE 127 III 318); KTG-Nachdeckung prüfen">
+              <DatumsFeld value={form.arbeitsverhaeltnisEnde ?? ''} className={inputCls}
+                onChange={(v) => set('arbeitsverhaeltnisEnde', v || undefined)} />
             </Field>
             <Field label="Vereinbarte Kündigungsfrist (Monate, optional)" hint="§2.2 > 3 Monate → Anspruch ab Tag 1">
               <input type="number" inputMode="decimal" min={0} className={inputCls} placeholder="Leer = Standard"

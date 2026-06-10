@@ -14,7 +14,11 @@ const N_335a:   Normverweis = { artikel: 'Art. 335a OR', bemerkung: 'Parität de
 const N_335b:   Normverweis = { artikel: 'Art. 335b OR', bemerkung: 'Probezeit' };
 const N_335c:   Normverweis = { artikel: 'Art. 335c OR', bemerkung: 'Kündigungsfristen und -termine' };
 const N_335c_2: Normverweis = { artikel: 'Art. 335c Abs. 2 OR', bemerkung: 'Abänderung; < 1 Monat nur GAV & 1. DJ' };
-const N_335c_3: Normverweis = { artikel: 'Art. 335c Abs. 3 OR', bemerkung: 'Verlängerung bei Vaterschaftsurlaub' };
+// B6-Fix 10.6.2026 (SHK-Abgleich, am OR-Cache 20260101 verifiziert): Abs. 3
+// spricht seit der Revision vom «Urlaub des andern Elternteils nach Art. 329g»
+// (nicht mehr «Vaterschaftsurlaub»). Internes Feld vaterschaftsurlaubResttage
+// bleibt (Permalink-/Schema-Stabilität); nutzersichtbare Texte folgen dem Gesetz.
+const N_335c_3: Normverweis = { artikel: 'Art. 335c Abs. 3 OR', bemerkung: 'Verlängerung bei Urlaub des andern Elternteils (Art. 329g OR)' };
 
 export type KuendigungsfristResultat = {
   ergebnis: Berechnungsergebnis;
@@ -175,7 +179,7 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
     }
   }
 
-  // ─── Fristberechnung und Endtermin (inkl. §3.4 Vaterschaftsurlaub) ────
+  // ─── Fristberechnung und Endtermin (inkl. §3.4 Urlaub des andern Elternteils) ────
 
   const fristLaufende = addMonths(zugang, fristMonate);
 
@@ -207,7 +211,7 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
         ? (kuendigungsterminMonatsende
             ? `Kündigungstermin = Monatsende: ordentlicher Endtermin ${formatDatum(ordentlichesEnde)}. `
             : `Kein Monatsendtermin: ordentlicher Endtermin ${formatDatum(ordentlichesEnde)}. `) +
-          `Verlängerung um ${vaterschaftResttage} nicht bezogene Vaterschaftsurlaubstage taggenau über den Endtermin hinaus (Art. 335c Abs. 3 OR): Beendigung ${formatDatum(beendigung)}.`
+          `Verlängerung um ${vaterschaftResttage} nicht bezogene Tage des Urlaubs des andern Elternteils (Art. 335c Abs. 3 i.V.m. Art. 329g OR) taggenau über den Endtermin hinaus: Beendigung ${formatDatum(beendigung)}.`
         : kuendigungsterminMonatsende
           ? `Kündigungstermin = Monatsende: Beendigung ${formatDatum(beendigung)}.`
           : `Kein Monatsendtermin: Beendigung ${formatDatum(beendigung)}.`),
@@ -216,7 +220,7 @@ export function berechneKuendigungsfrist(input: KuendigungsfristInput): Kuendigu
 
   if (vaterschaftResttage > 0) {
     annahmen.push(
-      'Während des Vaterschaftsurlaubs besteht kein zeitlicher Kündigungsschutz (keine Sperrfrist), die Kündigungsfrist verlängert sich aber um die nicht bezogenen Urlaubstage (Art. 335c Abs. 3 OR). Die Verlängerung läuft taggenau; eine zusätzliche Erstreckung auf das nächste Monatsende gilt nur bei entsprechender vertraglicher Abrede und ist hier nicht berücksichtigt.',
+      'Während des Urlaubs des andern Elternteils (Art. 329g OR, vormals «Vaterschaftsurlaub») besteht kein zeitlicher Kündigungsschutz (keine Sperrfrist), die Kündigungsfrist verlängert sich aber um die nicht bezogenen Urlaubstage (Art. 335c Abs. 3 OR). Die Verlängerung läuft taggenau; eine zusätzliche Erstreckung auf das nächste Monatsende gilt nur bei entsprechender vertraglicher Abrede und ist hier nicht berücksichtigt.',
     );
   }
 

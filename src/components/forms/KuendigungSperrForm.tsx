@@ -178,7 +178,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
         )}
 
         {form.kuendigendePartei === 'arbeitgeber' && (
-          <Field label="Vaterschaftsurlaub – nicht bezogene Tage (optional)" hint="§3.4 Art. 335c Abs. 3 OR, verlängert die Frist">
+          <Field label="Urlaub des andern Elternteils (Art. 329g) – nicht bezogene Tage (optional)" hint="Art. 335c Abs. 3 OR (vormals Vaterschaftsurlaub), verlängert die Frist taggenau">
             <input
               type="number" inputMode="decimal" min={0} step={1}
               value={form.vaterschaftsurlaubResttage ?? ''}

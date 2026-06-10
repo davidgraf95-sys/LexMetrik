@@ -31,6 +31,12 @@ export const VERIFIKATION: Record<string, VerifikationsEintrag> = {
     aussage: 'Gleichwertigkeitsmassstab bei Krankentaggeldversicherung (Art. 324a Abs. 4 OR).',
     verifiziert: false,
   },
+  // Nachregistrierung 10.6.2026 (SHK-Abgleich B4, normen/arbeitsrecht-shk-abgleich.md):
+  BGE_127_III_318: {
+    aktenzeichen: 'BGE 127 III 318',
+    aussage: 'Die Lohnfortzahlungspflicht nach Art. 324a OR endet mit der Beendigung des Arbeitsverhältnisses.',
+    verifiziert: false,
+  },
 
   // Kündigungsfrist (Art. 335c OR)
   BGE_131_III_467: {

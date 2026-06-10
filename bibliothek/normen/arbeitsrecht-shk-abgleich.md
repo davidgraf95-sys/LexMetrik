@@ -302,3 +302,17 @@ Gegen den Fedlex-Cache 20260101 zu prüfen und Labels/`N_335c_3`-Bemerkung nachz
 **Bilanz:** 66 Regeln geprüft · 58 Engine-korrekt · 2 HOCH (B1, B2) · 4 NIEDRIG (B3–B6) ·
 2 vertretbare Auslegungen offen markiert (Rückfall-Höhe bei unzulässiger Fristverkürzung,
 §2.2 Nr. 37; kalendarische Streckung des Geldminimums, §1.3 Nr. 18).
+
+**UMGESETZT 10.6.2026 — auch B3–B6 (Ja David, deklarierte fachliche
+Erweiterungen/Korrekturen):** B3 → neues optionales Feld
+`bereitsBezogeneTageImDienstjahr` (Verrechnung aufs DJ-Kontingent, Erschöpfung
+= `kein_anspruch`, 2. Kredit lebt am Jahrestag frisch auf; Teil-AUF-Annahme
+offengelegt) · B4 → neues optionales Feld `arbeitsverhaeltnisEnde` (Kappung,
+BGE 127 III 318 nachregistriert, KTG-Nachdeckungs-Warnung) · B5 →
+Von-Label des Betreuungsurlaubs verlangt den Rahmenfrist-Beginn; Engine-Text
+legt die Annahme offen · B6 → Terminologie am OR-Cache 20260101 verifiziert
+(«Urlaub des andern Elternteils nach Art. 329g», Art. 335c Abs. 3): alle
+nutzersichtbaren Texte/Labels angepasst, internes Feld
+`vaterschaftsurlaubResttage` bleibt (Permalink-Stabilität). 6 neue Tests;
+Golden 88/88 byte-gleich (Default-Pfade unverändert). Damit sind ALLE
+Befunde dieses Abgleichs umgesetzt.

@@ -292,7 +292,9 @@ function berechneSperrfristIntervall(
 
     case 'betreuungsurlaub': {
       // Art. 329i OR: zeitlicher Kündigungsschutz solange Anspruch, längstens 6 Monate
-      // ab Beginn der Rahmenfrist.
+      // ab Beginn der Rahmenfrist. B5-Fix 10.6.2026 (SHK-Abgleich): Die Kappung
+      // hängt an der Eingabe-Semantik — «von» MUSS der Rahmenfrist-Beginn sein
+      // (UI-Label angepasst); die Annahme wird im Text offengelegt.
       const maxEnde = addMonths(von, 6);
       const ende = isBefore(bis, maxEnde) ? bis : maxEnde;
       return {
@@ -300,7 +302,8 @@ function berechneSperrfristIntervall(
         bis: ende,
         beschreibung:
           `Betreuungsurlaub (Art. 329i OR): zeitlicher Kündigungsschutz solange der Anspruch besteht, ` +
-          `längstens 6 Monate ab Beginn der Rahmenfrist. ${formatDatum(von)} – ${formatDatum(ende)}.`,
+          `längstens 6 Monate ab Beginn der Rahmenfrist (Annahme: das eingegebene Von-Datum ist der Rahmenfrist-Beginn, nicht erst der erste Urlaubstag). ` +
+          `${formatDatum(von)} – ${formatDatum(ende)}.`,
         normen: [N_336c_1],
       };
     }

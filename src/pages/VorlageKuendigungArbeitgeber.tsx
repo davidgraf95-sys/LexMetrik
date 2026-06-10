@@ -220,7 +220,7 @@ export function VorlageKuendigungArbeitgeber() {
               onChange={(e) => set('kuendigungsterminMonatsende', e.target.checked)} />
             <span>Kündigungstermin ist das Monatsende <span className="text-ink-500">(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)</span></span>
           </label>
-          <Field label="Nicht bezogene Vaterschaftsurlaubstage" optional hint="verlängern die Kündigungsfrist (Art. 335c Abs. 3 OR)">
+          <Field label="Nicht bezogene Tage Urlaub des andern Elternteils" optional hint="Art. 335c Abs. 3 i.V.m. Art. 329g OR (vormals Vaterschaftsurlaub), verlängern die Frist taggenau">
             <input type="number" min={0} className={inputCls + ' num sm:max-w-[9rem]'} value={a.vaterschaftsurlaubResttage}
               onChange={(e) => set('vaterschaftsurlaubResttage', Math.max(0, Number(e.target.value)))} />
           </Field>

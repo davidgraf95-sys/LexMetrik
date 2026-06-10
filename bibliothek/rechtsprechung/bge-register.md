@@ -2,7 +2,7 @@
 
 Generiert: `npx vite-node scripts/bge-register-generieren.ts` · Stand 2026-06-10
 
-**Quelle + Stand:** SSoT ist `src/data/verifikation.ts` (92 Einträge);
+**Quelle + Stand:** SSoT ist `src/data/verifikation.ts` (93 Einträge);
 Links deterministisch aus `src/lib/bge.ts`. **URL-Schemata empirisch verifiziert**
 (§7, WebFetch 2026-06-10): BGE → ATF-Permalink der amtlichen Sammlung (bger.ch, zeigt
 den Entscheid direkt; Stichprobe BGE 139 III 78); BGer-Urteile → Suchlink der
@@ -21,7 +21,7 @@ Aktenzeichen im Code, das hier nicht registriert ist»).
 INHALTLICHE Verifikation der einzelnen Entscheide (Spalte Status) bleibt
 Davids fachliche Abnahme — `verifiziert: false` bedeutet «zu verifizieren».
 
-## Register (92 Entscheide)
+## Register (93 Entscheide)
 
 | Aktenzeichen | Aussage (Register) | Link | Fundorte (produktiver Code) | Status |
 |---|---|---|---|---|
@@ -70,6 +70,7 @@ Davids fachliche Abnahme — `verifiziert: false` bedeutet «zu verifizieren».
 | BGE 124 III 474 | Neue Arbeitsunfähigkeit in der Erstreckungsphase (Abs. 3) löst keine neue Sperrfrist aus. | [Entscheid](https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F124-III-474%3Ade&lang=de&type=show_document) | src/data/verifikation.ts · src/lib/sperrfristen.ts | zu verifizieren |
 | BGE 124 III 57 | Indexmiete: Mischklauseln (Kombination Index/Staffel) sind unzulässig. | [Entscheid](https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F124-III-57%3Ade&lang=de&type=show_document) | src/data/verifikation.ts · src/lib/vorlagen/mietvertrag.ts | zu verifizieren |
 | BGE 125 III 358 | Anfangsmietzins: Ein vertraglicher Ausschluss der Herabsetzung (Art. 270 OR) wäre nichtig. | [Entscheid](https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F125-III-358%3Ade&lang=de&type=show_document) | src/data/verifikation.ts · src/lib/vorlagen/mietvertrag.ts | zu verifizieren |
+| BGE 127 III 318 | Die Lohnfortzahlungspflicht nach Art. 324a OR endet mit der Beendigung des Arbeitsverhältnisses. | [Entscheid](https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F127-III-318%3Ade&lang=de&type=show_document) | src/components/forms/LohnfortzahlungForm.tsx · src/data/verifikation.ts · src/lib/lohnfortzahlung.ts · src/types/legal.ts | zu verifizieren |
 | BGE 129 III 276 | Gratifikation: Eine während mindestens dreier Jahre vorbehaltlos ausgerichtete Gratifikation kann trotz Freiwilligkeitsvorbehalt zum Anspruch erstarken (Art. 322d OR). | [Entscheid](https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F129-III-276%3Ade&lang=de&type=show_document) | src/data/verifikation.ts · src/lib/vorlagen/arbeitsvertrag.ts | zu verifizieren |
 | BGE 129 III 618 | Kettenverträge ohne sachlichen Grund werden in ein unbefristetes Arbeitsverhältnis umgedeutet (Art. 334 OR). | [Entscheid](https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F129-III-618%3Ade&lang=de&type=show_document) | src/data/verifikation.ts · src/lib/vorlagen/arbeitsvertrag.ts | zu verifizieren |
 | BGE 130 III 591 | Verzugszinspflicht setzt Fälligkeit und Inverzugsetzung voraus; kein Schaden-/Verschuldensnachweis nötig. | [Entscheid](https://www.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F130-III-591%3Ade&lang=de&type=show_document) | src/data/verifikation.ts | zu verifizieren |

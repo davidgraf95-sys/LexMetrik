@@ -14,7 +14,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | schkgFristen.ts (+schkgPresets) | normen/schkg-zustaendigkeit-regelwerk.md | entwurf; Art.-63-Doppelfix 6.6.2026 |
 | erbFristen.ts | recherche/erbrecht-ausbau.md · normen/erbrecht-regelwerk.md | entwurf |
 | fristenspiegel/ | recherche/fristenspiegel-konzept.md | entwurf (Orchestrierer über Engines) |
-| allgemeineFrist.ts · sperrfristen.ts · kuendigungsfrist.ts · lohnfortzahlung.ts | recherche/arbeitsrecht-rechner.md (+kuendigungs-masken) · normen/arbeitsrecht-shk-abgleich.md (SHK-Zweitabgleich 10.6.2026: 58/66 ✓, Skalen SECO-belegt) | entwurf; SHK-Befunde B1 (335c III Resttage × Monatsende) + B2 (336c Jahrestag-Unterbruch, BGE 133 III 517) HOCH **UMGESETZT 10.6.2026 (Ja David)**; B3–B6 NIEDRIG offen |
+| allgemeineFrist.ts · sperrfristen.ts · kuendigungsfrist.ts · lohnfortzahlung.ts | recherche/arbeitsrecht-rechner.md (+kuendigungs-masken) · normen/arbeitsrecht-shk-abgleich.md (SHK-Zweitabgleich 10.6.2026: 58/66 ✓, Skalen SECO-belegt) | entwurf; SHK-Befunde B1–B6 ALLE **UMGESETZT 10.6.2026 (Ja David)** — Abgleich vollständig abgearbeitet |
 
 ## Zuständigkeit & Rechtsmittel
 

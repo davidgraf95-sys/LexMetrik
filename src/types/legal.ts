@@ -83,6 +83,8 @@ export type LohnfortzahlungInput = {
   befristetFest?: boolean;          // §2.2 befristeter Vertrag fester Dauer
   vereinbarteKuendigungsfristMonate?: number; // §2.2 (unbefristet)
   anrechenbareVordienstzeitMonate?: number;   // §2.2 SHK N 44 (Lehre, Praktikum, Folge-Befristungen)
+  bereitsBezogeneTageImDienstjahr?: number;   // B3-Fix 10.6.2026 (SHK N 52): frühere Absenzen im selben DJ verbrauchen das Kontingent
+  arbeitsverhaeltnisEnde?: string;            // B4-Fix 10.6.2026 (SHK N 55, BGE 127 III 318): Pflicht endet mit dem AV
 };
 
 // ─── Module B: Kündigungsfrist ────────────────────────────────────────────

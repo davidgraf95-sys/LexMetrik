@@ -1420,7 +1420,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     norms: [
       // Art. 335 OR – ordentliche Kündigung / Begründung auf Verlangen
       { label: 'Art. 335 OR', url: fedlexUrl('OR', '335'), verified: false },
-      // Art. 335c OR – Fristen und Termine (inkl. Abs. 3 Vaterschaftsurlaub)
+      // Art. 335c OR – Fristen und Termine (inkl. Abs. 3 Urlaub des andern Elternteils)
       { label: 'Art. 335c OR', url: fedlexUrl('OR', '335c'), verified: false },
       // Art. 336c OR – Sperrfristen (Kündigung zur Unzeit)
       { label: 'Art. 336c OR', url: fedlexUrl('OR', '336c'), verified: false },

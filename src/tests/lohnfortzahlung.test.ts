@@ -294,3 +294,89 @@ describe('Bug-Check-Fix 10.6.2026: Anspruch ab dem ERSTEN Tag des vierten Monats
     expect(r.status).not.toBe('kein_anspruch');
   });
 });
+
+// ─── SHK-Abgleich-Fixes B3/B4 10.6.2026 (normen/arbeitsrecht-shk-abgleich.md) ─
+
+describe('B3: frühere Absenzen im selben Dienstjahr verbrauchen das Kontingent (SHK 324a N 52)', () => {
+  // 3. DJ Basler Skala = 9 Wochen? — bewusst 1. DJ (3 Wochen = 21 Tage), BS.
+  it('1. DJ BS, 10 von 21 Tagen bezogen → letzter bezahlter Tag = Beginn + 11 − 1', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2026-01-01',
+      verhinderungBeginn: '2026-06-01',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+      bereitsBezogeneTageImDienstjahr: 10,
+    });
+    expect(r.status).toBe('ok');
+    expect(r.letzterTagISO).toBe('2026-06-11'); // 21 − 10 = 11 Tage ab 1.6. inkl.
+  });
+
+  it('Kontingent aufgebraucht (21 von 21) → kein Anspruch, ehrlicher Text', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2026-01-01',
+      verhinderungBeginn: '2026-06-01',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+      bereitsBezogeneTageImDienstjahr: 21,
+    });
+    expect(r.status).toBe('kein_anspruch');
+    expect(r.ergebnis).toContain('aufgebraucht');
+    expect(r.letzterTagISO).toBeUndefined();
+  });
+
+  it('aufgebrauchter 1. Kredit + DJ-übergreifende Verhinderung → 2. Kredit lebt am Jahrestag frisch auf', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2025-02-01',          // Jahrestag 01.02.2026
+      verhinderungBeginn: '2026-01-15',
+      verhinderungEnde: '2026-06-01',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+      bereitsBezogeneTageImDienstjahr: 21,   // 1. DJ (3 Wochen) aufgebraucht
+    });
+    expect(r.status).toBe('ok');
+    expect(r.ergebnis).toContain('2. Kredit');
+    expect(r.ergebnis).toContain('aufgebraucht');
+  });
+
+  it('ohne Eingabe: Verhalten unverändert (voller Kredit)', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2026-01-01',
+      verhinderungBeginn: '2026-06-01',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+    });
+    expect(r.letzterTagISO).toBe('2026-06-21'); // 1.6. + 21 Tage − 1
+  });
+});
+
+describe('B4: Kappung auf das Ende des Arbeitsverhältnisses (SHK 324a N 55, BGE 127 III 318)', () => {
+  it('AV endet vor Skala-Ende → letzter bezahlter Tag = AV-Ende + KTG-Nachdeckungs-Warnung', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2026-01-01',
+      verhinderungBeginn: '2026-06-01',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+      arbeitsverhaeltnisEnde: '2026-06-10',
+    });
+    expect(r.letzterTagISO).toBe('2026-06-10');
+    expect(r.warnungen.some((w) => w.includes('Krankentaggeld'))).toBe(true);
+  });
+
+  it('AV endet nach Skala-Ende → keine Wirkung', () => {
+    const r = berechneLohnfortzahlung({
+      vertragsbeginn: '2026-01-01',
+      verhinderungBeginn: '2026-06-01',
+      arbeitsunfaehigkeitProzent: 100,
+      kanton: 'BS',
+      ktgGleichwertigVorhanden: false,
+      arbeitsverhaeltnisEnde: '2026-12-31',
+    });
+    expect(r.letzterTagISO).toBe('2026-06-21');
+    expect(r.warnungen.some((w) => w.includes('Krankentaggeld'))).toBe(false);
+  });
+});

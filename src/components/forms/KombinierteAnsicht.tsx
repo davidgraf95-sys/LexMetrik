@@ -184,7 +184,10 @@ export function KombinierteAnsicht() {
               </select>
             </div>
             <div className="space-y-1">
-              <label className="text-xs font-medium text-ink-600">Von</label>
+              {/* B5-Fix 10.6.2026 (SHK-Abgleich): Die 6-Monats-Kappung des
+                  Art. 329i OR läuft ab Beginn der RAHMENFRIST, nicht zwingend
+                  ab Urlaubsbeginn — das Eingabefeld muss das verlangen. */}
+              <label className="text-xs font-medium text-ink-600">{e.typ === 'betreuungsurlaub' ? 'Von (Beginn der Rahmenfrist)' : 'Von'}</label>
               <DatumsFeld value={e.von} onChange={(v) => updateEreignis(i, 'von', v)} className={inputCls + ' text-xs'} />
             </div>
             <div className="space-y-1">

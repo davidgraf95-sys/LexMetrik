@@ -1,5 +1,5 @@
 // Dossier: bibliothek/recherche/arbeitsrecht-rechner.md
-import { parseISO, addMonths, addYears, isBefore, isAfter } from 'date-fns';
+import { parseISO, addDays, addMonths, addYears, isBefore, isAfter } from 'date-fns';
 import type { LohnfortzahlungInput, Berechnungsergebnis, Normverweis, SkalaDauer, KtgKriterien } from '../types/legal';
 import {
   berechneDienstjahr,
@@ -256,7 +256,8 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
 
   // ─── Schritt 6: Enddatum 1. Kredit ───────────────────────────────────
 
-  const erstesEnde = letzterTagLohnfortzahlung(vhb, effektiveDauer);
+  let erstesEnde = letzterTagLohnfortzahlung(vhb, effektiveDauer);
+  let ersterKreditErschoepft = false;
 
   rechenweg.push({
     beschreibung: 'Schritt 6 – Letzter bezahlter Tag, 1. Kredit (Lohn ab erstem Tag inkl.)',
@@ -264,6 +265,33 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
       `Beginn der Verhinderung ${formatDatum(vhb)} + ${formatSkalaDauer(effektiveDauer)} − 1 Tag = ${formatDatum(erstesEnde)}.`,
     normen: [N_324a_2],
   });
+
+  // B3-Fix 10.6.2026 (SHK 324a N 52, deklarierte fachliche Erweiterung —
+  // normen/arbeitsrecht-shk-abgleich.md): Das Kontingent gilt PRO Dienstjahr;
+  // frühere Absenzen im selben DJ sind zu addieren. Vorher rechnete die Engine
+  // jede Verhinderung mit vollem Kredit und wies bei Vorabsenzen zu viel aus.
+  const bereitsBezogen = Math.max(0, input.bereitsBezogeneTageImDienstjahr ?? 0);
+  if (bereitsBezogen > 0) {
+    const kreditTage = skalaDauerTage(effektiveDauer);
+    const restTage = Math.max(0, kreditTage - bereitsBezogen);
+    ersterKreditErschoepft = restTage === 0;
+    erstesEnde = restTage > 0
+      ? letzterTagLohnfortzahlung(vhb, { typ: 'tage', anzahl: restTage })
+      : addDays(vhb, -1); // kein bezahlter Tag im 1. Kredit
+    rechenweg.push({
+      beschreibung: 'Schritt 6a – Verrechnung früherer Absenzen im selben Dienstjahr (Art. 324a Abs. 2 OR)',
+      zwischenergebnis:
+        `Das Kontingent gilt pro Dienstjahr; mehrere Absenzen werden addiert (SHK N 52). ` +
+        `Bereits bezogen: ${bereitsBezogen} Tage von ${kreditTage} Tagen (${formatSkalaDauer(effektiveDauer)}) → Rest ${restTage} Tage. ` +
+        (ersterKreditErschoepft
+          ? `Der Anspruch des laufenden Dienstjahrs ist AUFGEBRAUCHT — im 1. Kredit kein bezahlter Tag mehr.`
+          : `Letzter bezahlter Tag des 1. Kredits neu: ${formatDatum(erstesEnde)}.`),
+      normen: [N_324a_2],
+    });
+    annahmen.push(
+      'Frühere Absenzen: Die eingegebenen, bereits bezogenen Tage werden 1:1 von der (bei Teil-AUF gestreckten) Kalenderdauer abgezogen; bei unterschiedlichen AUF-Graden der Vorabsenzen ist die Anrechnung im Einzelfall zu prüfen.',
+    );
+  }
 
   // ─── Schritt 6b: Dienstjahr-übergreifend – zweiter Kredit (§2.1) ─────
 
@@ -309,6 +337,27 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
     if (isBefore(ve, letzterTag)) {
       letzterTag = ve;
       annahmen.push(`Lohnfortzahlung gekappt auf das Ende der Verhinderung (${formatDatum(ve)}); danach kein Lohnausfall.`);
+    }
+  }
+
+  // B4-Fix 10.6.2026 (SHK 324a N 55, BGE 127 III 318 — deklarierte fachliche
+  // Erweiterung): Die Lohnfortzahlungspflicht endet mit der Beendigung des
+  // Arbeitsverhältnisses. Vorher gab es keine Kappung aufs AV-Ende.
+  if (input.arbeitsverhaeltnisEnde) {
+    const avEnde = parseISO(input.arbeitsverhaeltnisEnde);
+    if (isBefore(avEnde, letzterTag)) {
+      letzterTag = avEnde;
+      rechenweg.push({
+        beschreibung: 'Schritt 6c – Kappung auf das Ende des Arbeitsverhältnisses (Art. 324a OR)',
+        zwischenergebnis:
+          `Die Lohnfortzahlungspflicht endet mit der Beendigung des Arbeitsverhältnisses am ${formatDatum(avEnde)}; ` +
+          `der Skala-Anspruch reicht darüber hinaus, wird aber nicht mehr geschuldet.`,
+        normen: [N_324a_1],
+        rechtsprechung: [rechtsprechung('BGE_127_III_318')],
+      });
+      warnungen.push(
+        'Nach dem Ende des Arbeitsverhältnisses besteht keine Lohnfortzahlung mehr; eine allfällige Krankentaggeld-Versicherung kann abweichend nachdecken (Übertritts-/Nachdeckungsrechte prüfen).',
+      );
     }
   }
 
@@ -376,22 +425,25 @@ export function berechneLohnfortzahlung(input: LohnfortzahlungInput): Berechnung
   // ─── Ergebnis-Text ───────────────────────────────────────────────────
 
   const teilAufZusatz = arbeitsunfaehigkeitProzent < 100 ? `, bei ${arbeitsunfaehigkeitProzent} % AUF nach Geldminimum (gestreckt)` : '';
-  const ergebnisText = zweiKredite && zweitesEnde && jahrestag
-    ? `Lohnfortzahlung über Dienstjahreswechsel: 1. Kredit (${dienstjahr}. DJ) bis ${formatDatum(erstesEnde)}, ` +
+  const ergebnisText = ersterKreditErschoepft && !zweiKredite
+    ? `Kein Lohnfortzahlungsanspruch mehr: Das Kontingent des ${dienstjahr}. Dienstjahrs (${formatSkalaDauer(effektiveDauer)}) ist durch die bereits bezogenen ${bereitsBezogen} Tage aufgebraucht.`
+    : zweiKredite && zweitesEnde && jahrestag
+    ? `Lohnfortzahlung über Dienstjahreswechsel: 1. Kredit (${dienstjahr}. DJ)${ersterKreditErschoepft ? ' aufgebraucht' : ` bis ${formatDatum(erstesEnde)}`}, ` +
       `2. Kredit (${dienstjahr + 1}. DJ) ab ${formatDatum(jahrestag)} bis und mit ${formatDatum(letzterTag)}${teilAufZusatz}.`
     : `Lohnfortzahlung bis und mit ${formatDatum(letzterTag)} (${formatSkalaDauer(effektiveDauer)}${teilAufZusatz}).`;
 
   const normverweise = [N_324a_1, N_324a_2, N_324a_3, N_324a_4, N_362];
   if (grund === 'unfall' || grund === 'dienst') normverweise.push(N_324b, N_324b_1, N_324b_2, N_324b_3);
 
+  const kontingentAufgebraucht = ersterKreditErschoepft && !zweiKredite;
   return {
     ergebnis: ergebnisText + koordHinweis,
-    status: 'ok',
+    status: kontingentAufgebraucht ? 'kein_anspruch' : 'ok',
     rechenweg,
     annahmen,
     warnungen,
     normverweise,
-    zeitraumVonISO: formatISO(vhb),
-    letzterTagISO: formatISO(letzterTag),
+    zeitraumVonISO: kontingentAufgebraucht ? undefined : formatISO(vhb),
+    letzterTagISO: kontingentAufgebraucht ? undefined : formatISO(letzterTag),
   };
 }
