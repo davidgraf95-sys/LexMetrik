@@ -233,9 +233,23 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
   if (modus === 'zpo_stillstand') normverweise.push(N_56_2, N_145_4, N_145_1);
   if (input.fristnatur === 'verwirkung') normverweise.push(N_33_4);
 
+  // Bug-Check 10.6.2026 (MITTEL, deklarierte fachliche Änderung): Die Warte-
+  // frist läuft am rechnerischen Ende um 24.00 Uhr ab — frühestes ZULÄSSIGES
+  // Datum ist erst der FOLGETAG (Art. 88 Abs. 1 SchKG: «frühestens 20 Tage
+  // NACH der Zustellung»). Vorher wurde der letzte Tag DER LAUFENDEN Frist
+  // als zulässig ausgewiesen (verfrühtes Begehren → Rückweisung).
+  const massgeblich = input.fristnatur === 'wartefrist' ? addDays(diesAdQuem, 1) : diesAdQuem;
+  if (input.fristnatur === 'wartefrist') {
+    rechenweg.push({
+      beschreibung: 'Schritt 4 – Frühestes zulässiges Datum (Wartefrist)',
+      zwischenergebnis:
+        `Die Wartefrist läuft am ${fmt(diesAdQuem)} um 24.00 Uhr ab — die Handlung ist frühestens am Folgetag, ${fmt(massgeblich)}, zulässig.`,
+      normen: [N_31],
+    });
+  }
   const datumLabel =
     input.fristnatur === 'wartefrist'
-      ? `Frühestes zulässiges Datum: ${fmt(diesAdQuem)}`
+      ? `Frühestes zulässiges Datum: ${fmt(massgeblich)}`
       : input.fristnatur === 'verwirkung'
         ? `Letzter zulässiger Tag (Verwirkung): ${fmt(diesAdQuem)}, 24.00 Uhr`
         : `Fristende: ${fmt(diesAdQuem)}, 24.00 Uhr`;
@@ -249,10 +263,10 @@ export function berechneSchkgFrist(input: SchkgInput): SchkgErgebnis {
     normverweise,
     massgeblicherEreignistag: fmt(ereignis),
     diesAQuo: fmt(diesAQuo),
-    diesAdQuem: fmt(diesAdQuem),
+    diesAdQuem: fmt(massgeblich),
     ereignisISO: iso(ereignis),
     diesAQuoISO: iso(diesAQuo),
-    diesAdQuemISO: iso(diesAdQuem),
+    diesAdQuemISO: iso(massgeblich),
     modusAktiv: modus,
     ruhenAnzeige: modus === 'zpo_stillstand',
   };

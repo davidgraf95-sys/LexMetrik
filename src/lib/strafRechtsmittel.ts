@@ -105,10 +105,18 @@ export function bestimmeStrafRechtsmittel(input: StrafRmInput): StrafRmErgebnis 
       normverweise: [N('Art. 382 Abs. 2 StPO'), N('Art. 354 Abs. 1bis StPO')],
     };
   }
-  if (input.werFichtAn === 'staatsanwaltschaft' && input.entscheidTyp === 'zmg_haftentscheid') {
+  // Bug-Check 10.6.2026 (MITTEL, deklarierte fachliche Änderung): Art. 222
+  // StPO (Fassung seit 1.1.2024) lässt EINZIG die verhaftete Person zu —
+  // das Gate galt vorher nur für die Staatsanwaltschaft; Privatklägerschaft/
+  // weitere Parteien/Angehörige erhielten trotzdem «BESCHWERDE» als
+  // Hauptaussage (Widerspruch zur eigenen Warnung).
+  if (input.werFichtAn !== 'beschuldigte_person' && input.entscheidTyp === 'zmg_haftentscheid') {
+    const wer = input.werFichtAn === 'staatsanwaltschaft' ? 'der Staatsanwaltschaft'
+      : input.werFichtAn === 'privatklaegerschaft' ? 'der Privatklägerschaft'
+      : input.werFichtAn === 'angehoerige' ? 'der Angehörigen' : 'weiterer Verfahrensbeteiligter';
     return {
       statthaft: 'keines',
-      text: 'KEINE Beschwerde der Staatsanwaltschaft gegen Haftentscheide: Seit der Revision (in Kraft 1.1.2024) kann EINZIG die verhaftete Person Entscheide über Anordnung, Verlängerung und Aufhebung der Untersuchungs- oder Sicherheitshaft anfechten (Art. 222 StPO).',
+      text: `KEINE Beschwerde ${wer} gegen Haftentscheide: Seit der Revision (in Kraft 1.1.2024) kann EINZIG die verhaftete Person Entscheide über Anordnung, Verlängerung und Aufhebung der Untersuchungs- oder Sicherheitshaft anfechten (Art. 222 StPO).`,
       instanz: '—', form: '—', kognition: null, fristen: [],
       warnungen: ['Ältere Bundesgerichtsentscheide zum StA-Beschwerderecht (vor 2024) sind durch die Revision überholt; kohärent dazu Art. 81 Abs. 1 Ziff. 3 BGG.'],
       weichen: [],

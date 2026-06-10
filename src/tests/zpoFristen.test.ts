@@ -150,3 +150,17 @@ describe('Coverage-Fix – Jahresfrist × Gerichtsferien → [UNGEKLÄRT]-Warnun
     expect(r.warnungen.some((w) => w.includes('[UNGEKLÄRT]'))).toBe(true);
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: Art.-209-Klagefristen MIT Stillstand (BGE 138 III 615)', () => {
+  it('Presets klagebewilligung/klagefrist_miete nutzen den Engine-Zweig klagefrist_klagebewilligung', async () => {
+    const { PRESETS } = await import('../lib/zpoPresets');
+    for (const key of ['klagebewilligung', 'klagefrist_miete'] as const) {
+      expect(PRESETS.find((p) => p.key === key)!.verfahren, key).toBe('klagefrist_klagebewilligung');
+    }
+  });
+  it('Klagefrist Miete ab 1.7.2026 endet MIT Sommerstillstand am 1.9.2026 — identisch mit klageVereinfacht (BGE 138 III 615 E. 2.4)', async () => {
+    const { berechneFrist } = await import('../lib/zpoFristen');
+    const r = berechneFrist({ ereignis: '2026-07-01', einheit: 'tage', laenge: 30, verfahren: 'klagefrist_klagebewilligung', kanton: 'BS', fristnatur: 'gesetzlich' });
+    expect(r.diesAdQuemISO).toBe('2026-09-01');
+  });
+});

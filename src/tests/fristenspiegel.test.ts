@@ -372,3 +372,18 @@ describe('icsExport: Byte-Anker + Sammel-Export (3.1b, §6)', () => {
     expect(icsSammel([{ titel: 'Anfechtung der Kündigung', endISO: '2026-07-06', vorfristTage: 3 }, { titel: 'Erstreckungsbegehren', endISO: '2026-07-06' }, { titel: 'ohne gültiges Datum', endISO: 'kein-iso' }])).toBe(out);
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: Begründungsfrist folgt dem Verfahren (Art. 145 Abs. 2 lit. b ZPO)', () => {
+  it('Summarentscheid nur im Dispositiv: 10-Tage-Frist OHNE Stillstand (vorher bis ~4 Wochen zu spät)', async () => {
+    const { berechneZivilentscheidsSpiegel } = await import('../lib/fristenspiegel/zivilentscheid');
+    const { berechneFrist } = await import('../lib/zpoFristen');
+    const e = berechneZivilentscheidsSpiegel({
+      zustellung: '2026-07-20', kanton: 'ZH', vermoegensrechtlich: true,
+      streitwertCHF: 20_000, verfahren: 'summarisch', nurDispositiv: true,
+    });
+    const beg = e.zeilen.find((z) => z.key === 'begruendung')!;
+    const direkt = berechneFrist({ ereignis: '2026-07-20', einheit: 'tage', laenge: 10, verfahren: 'summarisch', kanton: 'ZH', fristnatur: 'gesetzlich' });
+    expect(beg.endeISO).toBe(direkt.diesAdQuemISO);
+    expect(direkt.diesAdQuemISO).toBe('2026-07-30');
+  });
+});

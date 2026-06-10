@@ -49,10 +49,15 @@ export function berechneZivilentscheidsSpiegel(input: ZivilentscheidSpiegelInput
 
   // ── Vorstufe: Begründung verlangen (Art. 239 Abs. 2 ZPO) ──
   // Parameter identisch mit zpoPresets key 'begruendung' (Test sichert das).
+  // Bug-Check 10.6.2026 (HOCH, deklarierte fachliche Änderung): bei
+  // SUMMARENTSCHEIDEN gilt für die 10-Tage-Frist kein Stillstand (Art. 145
+  // Abs. 2 lit. b ZPO) — Verfahren wie bei der Rechtsmittel-Zeile aus der
+  // Eingabe ableiten statt hart 'ordentlich' (vorher bis ~4 Wochen zu spät).
   if (input.nurDispositiv) {
     const beg = berechneFrist({
       ereignis: input.zustellung, einheit: 'tage', laenge: 10,
-      verfahren: 'ordentlich', kanton: input.kanton, fristnatur: 'gesetzlich',
+      verfahren: input.verfahren === 'summarisch' ? 'summarisch' : 'ordentlich',
+      kanton: input.kanton, fristnatur: 'gesetzlich',
     });
     zeilen.push({
       key: 'begruendung',

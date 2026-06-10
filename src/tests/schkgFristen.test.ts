@@ -175,3 +175,22 @@ describe('Audit-Fix B2 – Wechselbetreibung ohne Betreibungsferien', () => {
     expect(falsch.diesAdQuem).not.toBe('30.07.2025'); // belegt die Differenz
   });
 });
+
+describe('Bug-Check-Fixes 10.6.2026 (deklarierte fachliche Änderungen)', () => {
+  it('Wartefrist: frühestes zulässiges Datum ist der FOLGETAG des Fristablaufs (Art. 88 Abs. 1: «frühestens 20 Tage NACH Zustellung»)', () => {
+    const r = berechneSchkgFrist({ ereignis: '2026-04-01', einheit: 'tage', laenge: 20, modus: 'schkg_betreibungsferien', fristnatur: 'wartefrist', kanton: 'ZH' });
+    // dies a quo 2.4., 20. Tag (Fristablauf 24.00 Uhr) = 21.4. → frühestens 22.4.
+    expect(r.diesAdQuem).toBe('22.04.2026');
+    expect(r.ergebnis).toContain('Frühestes zulässiges Datum: 22.04.2026');
+    expect(r.rechenweg.some((s) => s.beschreibung.includes('Frühestes zulässiges Datum'))).toBe(true);
+  });
+  it('Pauliana: VERJÄHRUNGSfrist ohne Gerichtsferien-Ruhen (Art. 292 SchKG; Hemmung nur nach OR)', async () => {
+    const { PRESETS_SCHKG } = await import('../lib/schkgPresets');
+    const p = PRESETS_SCHKG.find((x) => x.key === 'pauliana')!;
+    expect(p.modus).toBe('kein');
+    expect(p.hinweis).toContain('kein Gerichtsferien-Stillstand');
+    // 3 Jahre ab 10.1.2026 enden am 10.1.2029 — ohne ~8-Monats-Verlängerung
+    const r = berechneSchkgFrist({ ereignis: '2026-01-10', einheit: 'jahre', laenge: 3, modus: p.modus, fristnatur: p.fristnatur, kanton: 'ZH' });
+    expect(r.diesAdQuemISO).toBe('2029-01-10');
+  });
+});

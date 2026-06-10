@@ -155,27 +155,39 @@ describe('Allgemeiner Fristenrechner – Review-Befund (Toggle-Kopplung)', () =>
 });
 
 describe('Verbesserungs-Auftrag 5.6.2026 – P1', () => {
-  it('AF-18 Rückwärts: Termin 20.4.2026 − 10 Tage = spätester Ladungstag 10.4.2026 (volle Tage 11.–20.4.)', async () => {
+  // Deklarierte fachliche Änderung 10.6.2026 (Bug-Check MITTEL): Der Stichtag
+  // zählte als letzter Fristtag mit — zwischen Handlung und Stichtag lagen nur
+  // frist−1 freie Tage. Neu liegt die VOLLE Frist dazwischen (h.L. zu Art. 700
+  // Abs. 1 OR: weder Versand- noch Versammlungstag zählen mit). Für
+  // Kündigungstermine (Zugangs-Konvention) verweist ein Hinweis auf die
+  // Fach-Rechner.
+  it('AF-18 Rückwärts: Termin 20.4.2026 − 10 Tage = spätester Ladungstag 9.4.2026 (volle freie Tage 10.–19.4., Versammlungstag zählt nicht)', async () => {
     const { berechneRueckwaertsFrist } = await import('../lib/allgemeineFrist');
     const r = berechneRueckwaertsFrist({ stichtag: '2026-04-20', laenge: 10, einheit: 'tage', verschiebung: 'keine' });
-    expect(r.endDatum).toBe('10.04.2026');
+    expect(r.endDatum).toBe('09.04.2026');
     expect(r.verschoben).toBe(false);
+    expect(r.hinweise.join()).toMatch(/Zugangs-Konvention/);
   });
 
-  it('AF-19 Rückwärts: Kündigungs-Edge 30.6.2026 − 3 Monate = 31.3.2026; Klemmung 31.5. − 3 M = 28.2.', async () => {
+  it('AF-19 Rückwärts: 30.6.2026 − 3 Monate = 29.3.2026 (volle 3 Monate 30.3.–29.6. dazwischen); Klemmung 31.5. − 3 M = 27.2.', async () => {
     const { berechneRueckwaertsFrist } = await import('../lib/allgemeineFrist');
-    expect(berechneRueckwaertsFrist({ stichtag: '2026-06-30', laenge: 3, einheit: 'monate', verschiebung: 'keine' }).endDatum).toBe('31.03.2026');
-    expect(berechneRueckwaertsFrist({ stichtag: '2026-05-31', laenge: 3, einheit: 'monate', verschiebung: 'keine' }).endDatum).toBe('28.02.2026');
+    expect(berechneRueckwaertsFrist({ stichtag: '2026-06-30', laenge: 3, einheit: 'monate', verschiebung: 'keine' }).endDatum).toBe('29.03.2026');
+    expect(berechneRueckwaertsFrist({ stichtag: '2026-05-31', laenge: 3, einheit: 'monate', verschiebung: 'keine' }).endDatum).toBe('27.02.2026');
   });
 
   it('AF-20 Rückwärts: KEINE automatische Verschiebung am Wochenende; Vorverlegung nur als Option mit Vorbehalt', async () => {
     const { berechneRueckwaertsFrist } = await import('../lib/allgemeineFrist');
-    // spätester Tag Sa 25.4.2026 (Stichtag 5.5. − 10 Tage)
+    // spätester Tag Fr 24.4.2026 (Stichtag 5.5. − 10 Tage − 1, neue Zählweise)
     const ohne = berechneRueckwaertsFrist({ stichtag: '2026-05-05', laenge: 10, einheit: 'tage', verschiebung: 'keine' });
-    expect(ohne.endDatum).toBe('25.04.2026');
-    expect(ohne.endWochentag).toBe('Samstag');
+    expect(ohne.endDatum).toBe('24.04.2026');
+    expect(ohne.endWochentag).toBe('Freitag');
     expect(ohne.hinweise.join()).toMatch(/höchstrichterlich ungeklärt/);
-    const mit = berechneRueckwaertsFrist({ stichtag: '2026-05-05', laenge: 10, einheit: 'tage', verschiebung: 'vorverlegen' });
+    // Wochenend-Fall mit neuer Zählweise: Stichtag 4.5. → Sa 25.4. − 1 = Fr? Nein:
+    // 4.5.−10−1 = 23.4. (Do). Wochenende erreicht der Stichtag 6.5.: 6.5.−11 = Sa 25.4.
+    const sa = berechneRueckwaertsFrist({ stichtag: '2026-05-06', laenge: 10, einheit: 'tage', verschiebung: 'keine' });
+    expect(sa.endDatum).toBe('25.04.2026');
+    expect(sa.endWochentag).toBe('Samstag');
+    const mit = berechneRueckwaertsFrist({ stichtag: '2026-05-06', laenge: 10, einheit: 'tage', verschiebung: 'vorverlegen' });
     expect(mit.endDatum).toBe('24.04.2026'); // Freitag
     expect(mit.verschoben).toBe(true);
   });

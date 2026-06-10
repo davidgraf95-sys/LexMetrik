@@ -179,9 +179,14 @@ export const PRESETS_SCHKG: SchkgPreset[] = [
     hinweis: '«Einleitung» = Stellung des Betreibungsbegehrens. Arrest fällt sonst dahin (Art. 280 SchKG); Stillstand während Einspracheverfahren (Art. 278 Abs. 5).', verweise: ['BGer_5A_288_2012'] },
 
   // ── Anfechtung (Pauliana) ──
+  // Bug-Check 10.6.2026 (HOCH, deklarierte fachliche Änderung): Art. 292 SchKG
+  // ist seit 1.1.2020 VERJÄHRUNGSfrist — materielle Verjährung ruht nicht
+  // während der Gerichtsferien (Hemmungs-/Stillstandsgründe abschliessend
+  // Art. 134 OR; Repo-Prinzip MATERIELL_WARNUNG zpoPresets, BGE 140 III 561).
+  // Vorher modus 'zpo_stillstand' → Verjährungseintritt ~8 Monate zu spät.
   { key: 'pauliana', phase: 'anfechtung', label: 'Paulianische Anfechtungsklage – 3 Jahre', norm: 'Art. 285 Abs. 2 / Art. 292 SchKG',
-    einheit: 'jahre', laenge: 3, modus: 'zpo_stillstand', fristnatur: 'frist', ausloeser: 'Pfändungsverlustschein / Konkurseröffnung / Bestätigung Nachlassvertrag',
-    hinweis: 'Verjährungsfrist (seit 1.1.2020 drei Jahre). Verdachtsperioden materiell: 1 Jahr (Art. 286/287), 5 Jahre (Art. 288).' },
+    einheit: 'jahre', laenge: 3, modus: 'kein', fristnatur: 'frist', ausloeser: 'Pfändungsverlustschein / Konkurseröffnung / Bestätigung Nachlassvertrag',
+    hinweis: 'VERJÄHRUNGSfrist (seit 1.1.2020 drei Jahre) — kein Gerichtsferien-Stillstand; Hemmung/Unterbrechung nur nach Art. 134 f. OR. Verdachtsperioden materiell: 1 Jahr (Art. 286/287), 5 Jahre (Art. 288).' },
 
   // ── Rechtsbehelfe / Rechtsmittel ──
   { key: 'beschwerde_aufsicht', phase: 'rechtsmittel', label: 'Beschwerde an Aufsichtsbehörde – 10 Tage', norm: 'Art. 17 Abs. 2 SchKG',

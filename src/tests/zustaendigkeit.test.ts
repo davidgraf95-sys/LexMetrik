@@ -747,3 +747,20 @@ describe('Art.-114-Spiegelung 6.6.2026 — Kostenfreiheit Entscheidverfahren (li
     expect(g.warnungen.some((w) => w.includes('Art. 114'))).toBe(false);
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: vorsorgliche Massnahme erzwingt summarisches Verfahren (Art. 248 lit. d ZPO)', () => {
+  it('Default-Verfahren: 10 Tage OHNE Stillstand statt 30 MIT (Art. 314 Abs. 1 / 145 Abs. 2 lit. b ZPO)', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 50_000, rmObjekt: 'vorsorgliche_massnahme' });
+    expect(r.kantonal).toBe('berufung'); // Art. 308 Abs. 1 lit. b
+    expect(r.kantonalFrist!.tage).toBe(10);
+    expect(r.kantonalFrist!.stillstand).toBe(false);
+    expect(r.bgerFrist.stillstand).toBe(false); // Art. 46 Abs. 2 lit. a BGG — jetzt konsistent
+  });
+  it('explizit «ordentlich/vereinfacht» gewählt: wird übersteuert + erklärende Weiche', async () => {
+    const { bestimmeRechtsmittel } = await import('../lib/zustaendigkeit');
+    const r = bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 50_000, rmObjekt: 'vorsorgliche_massnahme', rmVerfahren: 'ordentlich_vereinfacht' });
+    expect(r.kantonalFrist!.tage).toBe(10);
+    expect(r.weichen.some((w) => w.includes('Art. 248 lit. d'))).toBe(true);
+  });
+});

@@ -54,12 +54,17 @@ export const PRESETS: ZpoPreset[] = [
     hinweis: 'Ab Entdeckung des Revisionsgrundes. Absolute Frist: 10 Jahre ab Rechtskraft (Art. 329 Abs. 2).' },
 
   // ── Schlichtung ──
+  // Bug-Check 10.6.2026 (HOCH, deklarierte fachliche Änderung): Die Art.-209-
+  // Klagefristen gehören zum GERICHTLICHEN Verfahren — Stillstand gilt
+  // (BGE 138 III 615 E. 2.4; eigener Engine-Zweig klagefrist_klagebewilligung,
+  // identisch gerechnet in vorlagen/klageVereinfacht.ts). Vorher verfahren
+  // 'schlichtung' → Frist ohne Stillstand bis 1 Monat zu früh angezeigt.
   { key: 'klagebewilligung', phase: 'schlichtung', label: 'Gültigkeit Klagebewilligung – 3 Monate', norm: 'Art. 209 Abs. 3 ZPO',
-    einheit: 'monate', laenge: 3, verfahren: 'schlichtung', fristnatur: 'gesetzlich',
+    einheit: 'monate', laenge: 3, verfahren: 'klagefrist_klagebewilligung', fristnatur: 'gesetzlich',
     hinweis: 'Ab Zustellung/Eröffnung. Ob für die Prosekutionsfrist ein Stillstand greift, ist nicht abschliessend geklärt – im Einzelfall prüfen.' },
   { key: 'klagefrist_miete', phase: 'schlichtung', label: 'Klagefrist Miete/Pacht – 30 Tage', norm: 'Art. 209 Abs. 4 ZPO',
-    einheit: 'tage', laenge: 30, verfahren: 'schlichtung', fristnatur: 'gesetzlich',
-    hinweis: 'Wohn-/Geschäftsräume und landw. Pacht. Ab Zustellung der Klagebewilligung.' },
+    einheit: 'tage', laenge: 30, verfahren: 'klagefrist_klagebewilligung', fristnatur: 'gesetzlich',
+    hinweis: 'Wohn-/Geschäftsräume und landw. Pacht. Ab Zustellung der Klagebewilligung. Stillstand gilt (BGE 138 III 615).' },
   { key: 'entscheidvorschlag', phase: 'schlichtung', label: 'Ablehnung Entscheidvorschlag – 20 Tage', norm: 'Art. 211 Abs. 1 ZPO',
     einheit: 'tage', laenge: 20, verfahren: 'ordentlich', fristnatur: 'gesetzlich',
     hinweis: 'Hier ist der Fristenstillstand zu berücksichtigen (BGE 144 III 404; Ausnahme für Schlichtung gilt nicht).' },

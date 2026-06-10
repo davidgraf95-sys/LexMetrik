@@ -187,3 +187,16 @@ describe('K12 — BGer-Weiterzug immer als Hinweis', () => {
     }
   });
 });
+
+describe('Bug-Check-Fix 10.6.2026: Art.-222-Gate für ALLE Nicht-Verhafteten (Haftentscheide ZMG)', () => {
+  it('Privatklägerschaft/weitere Partei/Angehörige: statthaft=keines (vorher fälschlich «BESCHWERDE»)', async () => {
+    const { bestimmeStrafRechtsmittel } = await import('../lib/strafRechtsmittel');
+    for (const wer of ['privatklaegerschaft', 'weitere_partei', 'angehoerige', 'staatsanwaltschaft'] as const) {
+      const r = bestimmeStrafRechtsmittel({ entscheidTyp: 'zmg_haftentscheid', werFichtAn: wer, anfechtungsziel: 'umfassend' });
+      expect(r.statthaft, wer).toBe('keines');
+      expect(r.text, wer).toContain('EINZIG die verhaftete Person');
+    }
+    const verhaftete = bestimmeStrafRechtsmittel({ entscheidTyp: 'zmg_haftentscheid', werFichtAn: 'beschuldigte_person', anfechtungsziel: 'umfassend' });
+    expect(verhaftete.statthaft).toBe('beschwerde');
+  });
+});

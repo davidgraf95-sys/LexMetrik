@@ -263,20 +263,24 @@ export function berechneRueckwaertsFrist(input: RueckFristInput): AllgFristResul
     datum: fmt(stichtag), wochentag: wochentag(stichtag),
   });
 
-  // Spiegelung: (Stichtag + 1) − Frist − 1. Direkt gespiegelte Kalender-
-  // arithmetik (Versimplung 5.6.2026 – zuvor unintuitive Umnutzung der
-  // Vorwärts-Engine mit negativer Länge; golden-bewiesen identisch).
+  // Spiegelung: Stichtag − Frist − 1. Bug-Check 10.6.2026 (MITTEL,
+  // deklarierte fachliche Änderung): Vorher ergab die Formel stichtag−frist —
+  // der STICHTAG selbst wurde als letzter Fristtag mitgezählt, zwischen
+  // Handlung und Stichtag lagen nur frist−1 freie Tage. Nach h.L. zu
+  // Mindestfristen (z. B. Art. 700 Abs. 1 OR: weder Versand- noch
+  // Versammlungstag zählen mit) muss die VOLLE Frist dazwischen liegen →
+  // spätester Handlungstag ein Tag früher.
   // Monatsende-Klemmung übernimmt date-fns addMonths/addYears.
-  const ref = addDays(stichtag, 1);
   const zurueck: Record<Einheit, (d: Date, n: number) => Date> = {
     tage: (d, n) => addDays(d, -n),
     wochen: (d, n) => addDays(d, -7 * n),
     monate: (d, n) => addMonths(d, -n),
     jahre: (d, n) => addYears(d, -n),
   };
-  const roh = addDays(zurueck[input.einheit](ref, input.laenge), -1);
+  const gespiegelt = zurueck[input.einheit](stichtag, input.laenge);
+  const roh = addDays(gespiegelt, -1);
   const geklemmt = (input.einheit === 'monate' || input.einheit === 'jahre')
-    && addDays(roh, 1).getDate() !== ref.getDate();
+    && gespiegelt.getDate() !== stichtag.getDate();
   schritte.push({
     label: `Spätester Handlungstag: ${input.laenge} ${EINHEIT_LABEL[input.einheit]} vor dem Stichtag`,
     datum: fmt(roh), wochentag: wochentag(roh),
@@ -312,6 +316,7 @@ export function berechneRueckwaertsFrist(input: RueckFristInput): AllgFristResul
   });
 
   const hinweise = [
+    'Zählweise: Gerechnet wird die VOLLE Frist zwischen Handlungstag und Stichtag (weder Handlungs- noch Stichtag zählen mit — sichere Zählung für Einberufungs-/Ankündigungsfristen wie Art. 700 Abs. 1 OR). Für miet-/arbeitsrechtliche KÜNDIGUNGSTERMINE gilt die Zugangs-Konvention (Zugang am Vortag des Fristbeginns genügt — dort kann ein Tag später noch fristwahrend sein): dafür den Kündigungs- bzw. Mietrechts-Rechner verwenden.',
     'Rückwärtsfrist: Ob sich der späteste Handlungstag bei Wochenende/Feiertag auf den VORANGEHENDEN Werktag vorverlegt, ist in der Schweiz höchstrichterlich ungeklärt (Art. 78 OR betrifft Vorwärtsfristen) – zu verifizieren. Ein Hinausschieben verbietet sich, weil es die Frist verkürzen würde. Im Zweifel früher handeln.',
     ALLG_FRIST_HINWEIS,
   ];
