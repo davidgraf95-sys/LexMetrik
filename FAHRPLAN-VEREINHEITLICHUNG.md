@@ -83,7 +83,7 @@ extrahieren, OR-Regime als erste Instanziierung (byte-golden).
    diesen Fahrplan schreiben, ggf. als bewusstes Duplikat belassen (§1).
 5. Ein Commit pro Stufe, Stand hier abhaken.
 
-- [ ] V1 Termin-Arithmetik
+- [x] V1 Termin-Arithmetik ✓ 10.6.2026 — Befund: weitgehend SCHON konvergiert (kuendigungsfrist nutzte datumsUtils; AG-Kapitalband seit HOCH-2-Fix date-fns addYears). Einzige Rest-Dublette gehoben: sperrfristen endOfMonth → letzerTagDesMonats. Byte-golden.
 - [ ] V2 Preset-Rahmen
 - [ ] V3 Fristen-Restdubletten (mit Inventur-Skript)
 - [ ] V4 Gesellschafts-Geldkern (Extraktion)

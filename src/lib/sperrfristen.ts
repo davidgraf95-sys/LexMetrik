@@ -1,5 +1,5 @@
 // Dossier: bibliothek/recherche/arbeitsrecht-rechner.md
-import { parseISO, addDays, addMonths, addYears, differenceInDays, isAfter, isBefore, isEqual, endOfMonth, subMonths, format } from 'date-fns';
+import { parseISO, addDays, addMonths, addYears, differenceInDays, isAfter, isBefore, isEqual, subMonths, format } from 'date-fns';
 import type { SperrfristenInput, Sperrereignis, Berechnungsergebnis, Normverweis } from '../types/legal';
 
 // Reicheres Ergebnis: strukturierte Beendigung bzw. – bei Nichtigkeit – das Datum,
@@ -25,7 +25,7 @@ export type SperrfristenErgebnis = Berechnungsergebnis & {
 };
 
 const iso = (d: Date) => format(d, 'yyyy-MM-dd');
-import {
+import { letzerTagDesMonats,
   berechneDienstjahr,
   formatDatum,
   intervallSchnittTage,
@@ -566,7 +566,9 @@ export function berechneSperrfristen(input: SperrfristenInput): SperrfristenErge
 
   // ─── §1.4 / C4: Erstreckung auf Endtermin (Monatsende) ───────────────
 
-  const eoM = endOfMonth(beendigungNachHemmung);
+  // V1 Vereinheitlichung 10.6.2026: Monatsende-Erstreckung aus datumsUtils
+  // (EINE Quelle, identische date-fns-Semantik — byte-golden).
+  const eoM = letzerTagDesMonats(beendigungNachHemmung);
   const beendigungEndgueltig =
     input.kuendigungsterminMonatsende && !isEqual(beendigungNachHemmung, eoM)
       ? eoM
