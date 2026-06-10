@@ -22,6 +22,19 @@ erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 > fachliche Abnahme der Zuordnungen (Liste im Fahrplan-Schlussabschnitt
 > und STRUKTUR.md) · Bau-Priorität Verwaltungs-Zuständigkeits-Engine.
 
+> **NEU (Session 10.6.2026 spätabends, Aufträge David):** (1) **Schlichtungs-
+> gesuch: Miete/GlG erstellen das Gesuch MIT paritätischem Adressat** statt
+> Stopp (`0e3c90f`; Brücke aus dem Rechner springt mit Typ+Kanton+Ort —
+> Befund David «automatische Zuweisung» gefixt). (2) **Vereinfachte Klage:
+> Gerichts-Adressat für ALLE 26 Kantone** (`e45115e`; neue Schicht
+> zivilgerichteErstinstanz aus den zweifach geprüften Dossiers, ZH alle
+> 12 BG amtlich 10.6.). (3) **NEU GEBAUT: Klage ordentliches Verfahren**
+> (`702c72b`; Art. 221-Pflichtstruktur, alle Kantone, Golden vorl:ko).
+> Bug-Checks §9 dazwischen (BUGCHECK-SG-KV-2026-06-10.md: 11 Befunde
+> gefixt; KO-Lupe: 9 Befunde, B1 HOCH Miete-30-Tage gefixt). **§0a von
+> David GESTRICHEN.** OFFEN für David: Abnahme Gerichts-/Schlichtungs-
+> Adressschicht + GlG-Stellen-Recherche je Kanton (LU § 50 JusG belegt).
+
 > **NEU (Session 10.6.2026 abends, «grünes Licht» David):** (1) **PLZ-
 > Mehrdeutigkeit als Auswahl** (TODO 5 betreibungskreise): klickbare
 > Gemeinde-Kacheln in SchKG-3b + Zivil-Ortsschritt, Klick setzt Gemeinde+
