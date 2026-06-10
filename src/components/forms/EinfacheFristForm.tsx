@@ -7,6 +7,7 @@ import { zpoFristenLink, SCHKG_LINK_SPEC } from '../../lib/rechnerPermalinks';
 import { permalinkKodieren } from '../../lib/permalink';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 
 // ─── Einfacher Fristenrechner (S-5a FAHRPLAN-STRUKTUR-UMBAU) ────────────────
 //
@@ -168,23 +169,28 @@ export function EinfacheFristForm() {
       ) : fehler !== '' ? (
         <p className="text-body-s text-danger-700">{fehler}</p>
       ) : (
-        <div className="lc-notice space-y-1.5">
-          <p className="lc-overline text-ink-500">Fristende</p>
-          <p className="text-h3 font-semibold text-ink-900 num">{ende}</p>
-          {endeZusatz !== '' && <p className="text-body-s text-ink-600">{endeZusatz}</p>}
-          {zeilen.length > 0 && (
-            <ul className="text-body-s text-ink-500 leading-relaxed list-disc pl-5 space-y-0.5">
-              {zeilen.map((z) => <li key={z}>{z}</li>)}
-            </ul>
-          )}
-          {verfeinernZiel && (
-            <p className="text-body-s">
-              <Link to={verfeinernZiel} className="font-medium text-brass-700 hover:text-brass-600 no-underline">
-                Im {ferien === 'zpo' ? 'ZPO' : 'SchKG'}-Rechner verfeinern (Verfahren, Zustellart, Hemmung …) →
-              </Link>
-            </p>
-          )}
-        </div>
+        /* R12-Schnellrechner: derselbe Ergebnis-Rahmen, aber ohne Sprungmarke
+           (steht im ersten Viewport; im Tagerechner lebt darunter ein zweiter
+           Ergebnisblock mit eigener Sprungmarke). */
+        <ErgebnisBlock id="lc-ergebnis-einfach" sprung={false}>
+          <div className="lc-notice space-y-1.5">
+            <p className="lc-overline text-ink-500">Fristende</p>
+            <p className="text-h3 font-semibold text-ink-900 num">{ende}</p>
+            {endeZusatz !== '' && <p className="text-body-s text-ink-600">{endeZusatz}</p>}
+            {zeilen.length > 0 && (
+              <ul className="text-body-s text-ink-500 leading-relaxed list-disc pl-5 space-y-0.5">
+                {zeilen.map((z) => <li key={z}>{z}</li>)}
+              </ul>
+            )}
+            {verfeinernZiel && (
+              <p className="text-body-s">
+                <Link to={verfeinernZiel} className="font-medium text-brass-700 hover:text-brass-600 no-underline">
+                  Im {ferien === 'zpo' ? 'ZPO' : 'SchKG'}-Rechner verfeinern (Verfahren, Zustellart, Hemmung …) →
+                </Link>
+              </p>
+            )}
+          </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

@@ -1,5 +1,6 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeispielChips, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { BeispielChips, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import type { Kanton } from '../../types/legal';
@@ -285,10 +286,7 @@ export function VerjaehrungForm() {
       </div>
 
       {ergebnis && (
-        <div id="lc-ergebnis" className="space-y-4">
-          <ErgebnisSprung zielId="lc-ergebnis" />
-          <LiveHeader />
-
+        <ErgebnisBlock>
           {/* Eckdaten – relative und absolute Frist getrennt; die massgebliche trägt das Badge */}
           <div className={`grid grid-cols-1 sm:grid-cols-2 ${hatAbsolut ? 'lg:grid-cols-4' : 'sm:grid-cols-3'} gap-3`}>
             <FristKarte
@@ -305,10 +303,8 @@ export function VerjaehrungForm() {
                 massgeblich={ergebnis.massgeblicheFrist === 'absolut'}
               />
             )}
-            <div className="lc-tile">
-              <p className="text-xs text-ink-500 mb-1">Verjährungseintritt</p>
-              <p className="text-body-l font-semibold text-ink-900">{ergebnis.verjaehrungISO ? `${fmtISO(ergebnis.verjaehrungISO)} · 24.00 Uhr` : 'noch offen'}</p>
-            </div>
+            <EckdatenKachel akzent num label="Verjährungseintritt"
+              wert={ergebnis.verjaehrungISO ? `${fmtISO(ergebnis.verjaehrungISO)} · 24.00 Uhr` : 'noch offen'} />
             <div className="lc-tile">
               <p className="text-xs text-ink-500 mb-1">Am Stichtag ({fmtISO(stichtag)})</p>
               <p className="text-body-l font-semibold">
@@ -325,15 +321,10 @@ export function VerjaehrungForm() {
           )}
 
           <ErgebnisAnzeige titel="Verjährung (Art. 60, 67, 127 ff. OR)" ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={() => permalinkKodieren(VJ_LINK_SPEC, {
-              regime, beginnRelativ, beginnAbsolut: beginnAbsolut || undefined, stichtag, kanton,
-              strafbar, stillstaende, unterbrechungen, verzichtAn,
-              verzichtDatum: verzichtDatum || undefined, verzichtJahre: verzichtJahre || undefined,
-            })} />
             <IcsExportButton endISO={ergebnis.verjaehrungISO}
               titel={`Verjährungseintritt – ${(REGIMES.find((r) => r.code === regime)?.label ?? '').split(' – ')[0]}`}
               aktenzeichen={aktenzeichen}
@@ -343,8 +334,13 @@ export function VerjaehrungForm() {
                 verzichtDatum: verzichtDatum || undefined, verzichtJahre: verzichtJahre || undefined,
               })}
               beschreibung={ergebnis.ergebnis} dateiName="Verjaehrung.ics" />
+            <LinkTeilenButton query={() => permalinkKodieren(VJ_LINK_SPEC, {
+              regime, beginnRelativ, beginnAbsolut: beginnAbsolut || undefined, stichtag, kanton,
+              strafbar, stillstaende, unterbrechungen, verzichtAn,
+              verzichtDatum: verzichtDatum || undefined, verzichtJahre: verzichtJahre || undefined,
+            })} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

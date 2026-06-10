@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { BetragsFeld } from '../BetragsFeld';
@@ -243,7 +244,7 @@ export function StreitwertForm() {
       {fehler && <FehlerBox fehler={[fehler]} />}
 
       {ergebnis && (
-        <div className="space-y-4">
+        <ErgebnisBlock>
           <ErgebnisAnzeige titel="Streitwert (Art. 91–94a ZPO)" ergebnis={ergebnis} />
           <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
@@ -253,7 +254,7 @@ export function StreitwertForm() {
               begehren, ausschliessend, widerklage: zahl(widerklageRoh), wkSchliesstAus, teilklage,
             })} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

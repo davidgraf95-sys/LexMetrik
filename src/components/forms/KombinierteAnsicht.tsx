@@ -1,4 +1,5 @@
-import { LiveHeader, inputCls } from '../vorlagen/ui';
+import { inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { useState } from 'react';
 import type { ArbeitsrechtInput, Kanton, SperrereignisTyp, Sperrereignis } from '../../types/legal';
@@ -119,7 +120,8 @@ export function KombinierteAnsicht() {
 
   return (
     <div className="space-y-6">
-      <PflichtDisclaimer />
+      <PflichtDisclaimer
+        kurz="Drei Teilberechnungen (Lohnfortzahlung · Kündigungsfrist · Sperrfristen) mit gemeinsamen Eingaben; Stichtage je Modul verschieden." />
       <div className="lc-panel p-4">
         <p className="text-body-s text-ink-600">
           Kombinierte Ansicht: Alle drei Teilberechnungen (A/B/C) mit gemeinsamen Eingaben.
@@ -205,8 +207,7 @@ export function KombinierteAnsicht() {
         ))}
       </div>
 
-      <LiveHeader />
-
+      <ErgebnisBlock>
       {ergebnisse.kuendigung?.status === 'nichtig' && (
         <div className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Kündigung nichtig</p>
@@ -251,8 +252,11 @@ export function KombinierteAnsicht() {
           <SperrtageZaehler sperrtage={ergebnisse.kuendigung.sperrtage} />
         )}
         <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
-        <PdfExportButton config={pdfConfig} />
+        <div className="flex flex-wrap items-center gap-3">
+          <PdfExportButton config={pdfConfig} />
+        </div>
       </div>
+      </ErgebnisBlock>
     </div>
   );
 }

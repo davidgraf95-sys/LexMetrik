@@ -66,8 +66,10 @@ Reihenfolge — vom Verdikt zur Mitnahme:
 ```
 <ErgebnisBlock>            (geteilter Rahmen: id, lc-reveal, aria-live,
                             ErgebnisSprung, LiveHeader — §10-Baustein)
-  1. EckdatenKacheln        (max. 3 wichtigste Werte; erste Kachel mit
-                            Messing-Oberkante border-t-[3px] border-brass-500)
+  1. EckdatenKacheln        (max. 3 wichtigste Werte; die Kachel des
+                            MASSGEBLICHEN Werts — i. d. R. Fristende bzw.
+                            Hauptbetrag — trägt die Messing-Oberkante,
+                            EckdatenKachel akzent)
   2. ErgebnisAnzeige        (Status-Verdikt → Vorbehalte → Rechenweg →
                             Annahmen → Normverweise → Volltext-Disclaimer)
   3. Visualisierung         (FristenKalender · Timeline — falls vorhanden)

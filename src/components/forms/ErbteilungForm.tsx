@@ -1,4 +1,5 @@
-import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
 import type { ErbteilungInput, Zivilstand, Gueterstand, ErbteilungErgebnis } from '../../types/erbrecht';
@@ -293,23 +294,15 @@ export function ErbteilungForm() {
       <FehlerBox fehler={fehler} />
 
       {ergebnis && (
-        <div className="space-y-4">
-          <LiveHeader />
-
+        <ErgebnisBlock>
           {/* Eckdaten */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="lc-tile">
-              <p className="text-xs text-ink-500 mb-1">Rechtsstand</p>
-              <p className="text-body-l font-semibold text-ink-900">{ergebnis.rechtsstand === 'neu' ? 'Neues Recht (ab 1.1.2023)' : 'Altes Recht (bis 31.12.2022)'}</p>
-            </div>
-            <div className="lc-tile">
-              <p className="text-xs text-ink-500 mb-1">Verfügbare Quote</p>
-              <p className="text-body-l font-semibold text-ink-900">{fmtB(ergebnis.verfuegbareQuote)}{ergebnis.verfuegbareQuoteChf != null ? ` · CHF ${fmtCHF(ergebnis.verfuegbareQuoteChf)}` : ''}</p>
-            </div>
-            <div className="lc-tile">
-              <p className="text-xs text-ink-500 mb-1">Nachlass</p>
-              <p className="text-body-l font-semibold text-ink-900">{nachlass != null ? `CHF ${fmtCHF(nachlass)}` : 'nur Quoten (keine Beträge erfasst)'}</p>
-            </div>
+            <EckdatenKachel label="Rechtsstand"
+              wert={ergebnis.rechtsstand === 'neu' ? 'Neues Recht (ab 1.1.2023)' : 'Altes Recht (bis 31.12.2022)'} />
+            <EckdatenKachel akzent num label="Verfügbare Quote"
+              wert={`${fmtB(ergebnis.verfuegbareQuote)}${ergebnis.verfuegbareQuoteChf != null ? ` · CHF ${fmtCHF(ergebnis.verfuegbareQuoteChf)}` : ''}`} />
+            <EckdatenKachel num label="Nachlass"
+              wert={nachlass != null ? `CHF ${fmtCHF(nachlass)}` : 'nur Quoten (keine Beträge erfasst)'} />
           </div>
 
           {/* Erben-Tabelle */}
@@ -368,7 +361,7 @@ export function ErbteilungForm() {
           </div>
 
           <ErgebnisAnzeige titel="Erbteilung & Pflichtteil (Art. 457 ff., 462, 470 ff. ZGB)" ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
@@ -377,7 +370,7 @@ export function ErbteilungForm() {
               vater, mutter, dritteParentel, gueterrechtAn, gueterstand, betraege,
             })} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

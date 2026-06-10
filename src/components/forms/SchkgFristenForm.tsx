@@ -1,5 +1,6 @@
 import { KANTONE } from '../../lib/kantone';
-import { EckdatenKachel, ErgebnisSprung, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
@@ -322,9 +323,7 @@ export function SchkgFristenForm() {
       <FehlerBox fehler={fehler} />
 
       {ausgaben.length > 0 && (
-        <div id="lc-ergebnis" className="space-y-6">
-          <ErgebnisSprung zielId="lc-ergebnis" />
-          <LiveHeader />
+        <ErgebnisBlock id="lc-ergebnis-schkg">
           {ausgaben.map((a) => {
             const e = a.ergebnis;
             const badge = NATUR_BADGE[a.natur];
@@ -338,11 +337,12 @@ export function SchkgFristenForm() {
                   {[
                     { label: 'Auslösendes Ereignis', val: e.massgeblicherEreignistag },
                     { label: 'Fristbeginn (dies a quo)', val: e.diesAQuo },
-                    { label: 'Fristende (dies ad quem)', val: `${e.diesAdQuem} · 24.00 Uhr` },
+                    { label: 'Fristende (dies ad quem)', val: `${e.diesAdQuem} · 24.00 Uhr`, akzent: true },
                   ].map((c) => (
-                    <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
+                    <EckdatenKachel key={c.label} label={c.label} wert={c.val} num akzent={c.akzent} />
                   ))}
                 </div>
+                <ErgebnisAnzeige titel={a.titel} ergebnis={e} />
                 <FristenKalender
                   ereignisISO={e.ereignisISO}
                   aQuoISO={e.diesAQuoISO}
@@ -351,15 +351,14 @@ export function SchkgFristenForm() {
                   stillstandAktiv={e.ruhenAnzeige}
                   labels={{ ereignis: 'Auslösendes Ereignis', aquo: 'Fristbeginn', adquem: 'Fristende' }}
                 />
-                <ErgebnisAnzeige titel={a.titel} ergebnis={e} />
-                <IcsExportButton endISO={e.diesAdQuemISO} titel={`Fristende – ${a.titel}`}
-                  aktenzeichen={aktenzeichen}
-                  query={schkgQuery}
-                  beschreibung={e.ergebnis} dateiName="SchKG-Frist.ics" />
                 {/* Fristbeginn-Norm aus der Engine (§5): normverweise[1] ist
                     Art. 142 Abs. 1 (Tagesfrist) bzw. Abs. 2 (Monats-/Jahres-
                     frist). Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert. */}
                 <BegruendungAbsatz text={begruendungsAbsatz(e, fristbeginnZusatz(e.diesAQuoISO, `Art. 31 SchKG i.V.m. ${e.normverweise[1].artikel}`))} />
+                <IcsExportButton endISO={e.diesAdQuemISO} titel={`Fristende – ${a.titel}`}
+                  aktenzeichen={aktenzeichen}
+                  query={schkgQuery}
+                  beschreibung={e.ergebnis} dateiName="SchKG-Frist.ics" />
               </div>
             );
           })}
@@ -368,7 +367,7 @@ export function SchkgFristenForm() {
             <PdfExportButton config={pdfConfig} />
             <LinkTeilenButton query={schkgQuery} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

@@ -1,5 +1,6 @@
 import { KANTONE } from '../../lib/kantone';
-import { Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
@@ -259,9 +260,7 @@ export function GewaehrleistungForm() {
       </div>
 
       {ergebnis && ergebnis.status === 'ok' && (
-        <div className="space-y-4">
-          <LiveHeader />
-
+        <ErgebnisBlock>
           {/* Eckdaten: Rügefrist (Verwirkung) und Verjährung (Einrede) strikt getrennt */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="lc-tile space-y-1">
@@ -306,19 +305,19 @@ export function GewaehrleistungForm() {
           </div>
 
           <ErgebnisAnzeige titel="Gewährleistung & Mängelrüge (Art. 197 ff., 367 ff. OR)" ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={gwQuery} />
             <IcsExportButton endISO={ergebnis.ruege.endeISO} titel="Rügefrist-Ende (Mängelrüge)"
               aktenzeichen={aktenzeichen} query={gwQuery}
               beschreibung={ergebnis.ergebnis} dateiName="Ruegefrist.ics" />
             <IcsExportButton endISO={ergebnis.verjaehrung.endeISO} titel="Verjährung Mängelrechte"
               aktenzeichen={aktenzeichen} query={gwQuery}
               beschreibung={ergebnis.ergebnis} dateiName="Verjaehrung-Maengelrechte.ics" />
+            <LinkTeilenButton query={gwQuery} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
 
       {ergebnis && ergebnis.status !== 'ok' && (

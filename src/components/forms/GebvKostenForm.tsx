@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
 import { BetragsFeld } from '../BetragsFeld';
@@ -153,7 +154,7 @@ export function GebvKostenForm() {
       {fehler && <FehlerBox fehler={[fehler]} />}
 
       {ergebnis && (
-        <div className="space-y-4">
+        <ErgebnisBlock>
           <ErgebnisAnzeige titel="Betreibungskosten (GebV SchKG)" ergebnis={ergebnis} />
           <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
@@ -164,7 +165,7 @@ export function GebvKostenForm() {
               pf: pf || undefined, vw: zahl(vw), vwKein, ez: zahl(ez), sw: zahl(sw),
             })} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

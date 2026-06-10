@@ -1,4 +1,5 @@
-import { BeispielChips, Field, LiveHeader } from '../vorlagen/ui';
+import { BeispielChips, EckdatenKachel, Field } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
 import { berechneVerzugszins, formatCHF } from '../../lib/verzugszins';
@@ -139,7 +140,9 @@ export function VerzugszinsForm() {
 
   return (
     <div className="space-y-6">
-      <PflichtDisclaimer text={VERZUGSZINS_DISCLAIMER} />
+      <PflichtDisclaimer
+        kurz="Verzugszins nach Art. 104 OR; die Tageszählungs-Methode ist eine offengelegte methodische Wahl."
+        text={VERZUGSZINS_DISCLAIMER} />
 
       {/* Beispiele */}
       <BeispielChips items={BEISPIELE.map((b) => ({ label: b.label, laden: () => ladeBeispiel(b.state) }))} />
@@ -224,20 +227,16 @@ export function VerzugszinsForm() {
       </div>
 
       {ergebnis && (
-        <div className="space-y-4">
-          <LiveHeader />
+        <ErgebnisBlock>
           {ergebnis.status === 'ok' && (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
-                  { label: 'Verzugszins (gesamt)', val: `CHF ${ergebnis.zinsTotalCHF}`, stark: true },
+                  { label: 'Verzugszins (gesamt)', val: `CHF ${ergebnis.zinsTotalCHF}`, akzent: true },
                   { label: 'Offenes Kapital', val: `CHF ${ergebnis.kapitalOffenCHF}` },
-                  { label: 'Total offen', val: `CHF ${ergebnis.totalOffenCHF}`, stark: true },
+                  { label: 'Total offen', val: `CHF ${ergebnis.totalOffenCHF}` },
                 ].map((c) => (
-                  <div key={c.label} className="lc-tile">
-                    <p className="text-xs text-ink-500 mb-1">{c.label}</p>
-                    <p className={`num text-ink-900 ${c.stark ? 'text-h2 leading-none font-medium' : 'text-body-l'}`}>{c.val}</p>
-                  </div>
+                  <EckdatenKachel key={c.label} label={c.label} wert={c.val} num akzent={c.akzent} />
                 ))}
               </div>
               {ergebnis.zinsGetilgt > 0 && (
@@ -245,17 +244,17 @@ export function VerzugszinsForm() {
                   Durch Teilzahlungen getilgte Zinsen: CHF {formatCHF(ergebnis.zinsGetilgt)} · offener Verzugszins: CHF {ergebnis.zinsOffenCHF} · {ergebnis.tageTotal} Tage ({ergebnis.ersterZinstag}–{ergebnis.stichtag}).
                 </p>
               )}
-              <VerzugszinsTimeline e={ergebnis} />
             </>
           )}
           <ErgebnisAnzeige titel="Verzugszins (Art. 104 OR)" ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          {ergebnis.status === 'ok' && <VerzugszinsTimeline e={ergebnis} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <LinkTeilenButton query={() => permalinkKodieren(VZ_LINK_SPEC, { ...form, rows, zinsforderung } as VzLink)} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

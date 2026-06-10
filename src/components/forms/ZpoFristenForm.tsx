@@ -1,5 +1,6 @@
 import { KANTONE } from '../../lib/kantone';
-import { EckdatenKachel, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
@@ -311,16 +312,15 @@ export function ZpoFristenForm() {
       <FehlerBox fehler={fehler} />
 
       {ergebnis && (
-        <div className="space-y-4">
-          <LiveHeader />
+        <ErgebnisBlock id="lc-ergebnis-zpo">
           {/* Prominente Eckdaten */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
               { label: 'Massgeblicher Ereignistag', val: ergebnis.massgeblicherEreignistag },
               { label: 'Fristbeginn (dies a quo)', val: ergebnis.diesAQuo },
-              { label: 'Fristende (dies ad quem)', val: `${ergebnis.diesAdQuem} · 24.00 Uhr` },
+              { label: 'Fristende (dies ad quem)', val: `${ergebnis.diesAdQuem} · 24.00 Uhr`, akzent: true },
             ].map((c) => (
-              <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
+              <EckdatenKachel key={c.label} label={c.label} wert={c.val} num akzent={c.akzent} />
             ))}
           </div>
           {ergebnis.erstrecktBis && (
@@ -328,6 +328,7 @@ export function ZpoFristenForm() {
               Nach Erstreckung: <strong>{ergebnis.erstrecktBis}</strong> (24.00 Uhr).
             </div>
           )}
+          <ErgebnisAnzeige titel="ZPO-Fristberechnung (Art. 142 ff. ZPO)" ergebnis={ergebnis} />
           <FristenKalender
             ereignisISO={ergebnis.ereignisISO}
             aQuoISO={ergebnis.diesAQuoISO}
@@ -335,12 +336,11 @@ export function ZpoFristenForm() {
             kanton={form.kanton}
             stillstandAktiv={ergebnis.stillstandAktiv}
           />
-          <ErgebnisAnzeige titel="ZPO-Fristberechnung (Art. 142 ff. ZPO)" ergebnis={ergebnis} />
           {/* Fristbeginn-Norm aus der Engine (§5): Tagesfrist → Art. 142
               Abs. 1, Wochen-/Monats-/Jahresfrist → Abs. 2 (normverweise[0]).
               Deploy-Bug-Check 7.6.2026 (HOCH): war hartcodiert «Abs. 1» und
               widersprach bei Monatsfristen dem eigenen Normen-Satz. */}
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.diesAQuoISO, ergebnis.normverweise[0].artikel))} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.diesAQuoISO, ergebnis.normverweise[0].artikel))} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
@@ -350,7 +350,7 @@ export function ZpoFristenForm() {
               beschreibung={ergebnis.ergebnis} dateiName="ZPO-Frist.ics" />
             <LinkTeilenButton query={zpoQuery} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
       </>
       )}

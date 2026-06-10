@@ -1,4 +1,5 @@
-import { BeispielChips, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { BeispielChips, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
 import type { LohnfortzahlungInput, Kanton, Verhinderungsgrund } from '../../types/legal';
@@ -316,8 +317,8 @@ export function LohnfortzahlungForm() {
       <FehlerBox fehler={fehler} />
 
       {ergebnis && (
-        <div className="space-y-4">
-          <LiveHeader />
+        <ErgebnisBlock>
+          <ErgebnisAnzeige titel="Lohnfortzahlung (Art. 324a OR)" ergebnis={ergebnis} />
           {ergebnis.status === 'ok' && ergebnis.zeitraumVonISO && ergebnis.letzterTagISO && (
             <FristenKalender
               ereignisISO={ergebnis.zeitraumVonISO}
@@ -329,14 +330,13 @@ export function LohnfortzahlungForm() {
               labels={{ ereignis: 'Beginn der Verhinderung', aquo: 'Beginn der Verhinderung', adquem: 'Letzter bezahlter Tag', band: 'bezahlter Zeitraum' }}
             />
           )}
-          <ErgebnisAnzeige titel="Lohnfortzahlung (Art. 324a OR)" ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <LinkTeilenButton query={() => permalinkKodieren(LF_LINK_SPEC, form as LohnfortzahlungInput & Record<string, unknown>)} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

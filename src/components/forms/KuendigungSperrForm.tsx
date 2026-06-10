@@ -1,4 +1,5 @@
-import { FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { useEffect, useState } from 'react';
 import type { SperrfristenInput } from '../../types/legal';
@@ -19,6 +20,12 @@ import { SperrtageZaehler } from '../SperrtageZaehler';
 import { SperrereignisseEditor } from './SperrereignisseEditor';
 
 const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
+
+// EIN Wortlaut für Bildschirm-Disclaimer und PDF (§5).
+const KSP_DISCLAIMER =
+  'Automatisierte Orientierungsberechnung zu Kündigungs- und Sperrfristen (Art. 335c / 336c OR) – ' +
+  'keine Rechtsberatung. Massgeblich sind GAV, Einzelvertrag und der konkrete Sachverhalt; abweichende ' +
+  'Regelungen gehen vor. Norm- und Rechtsprechungsverweise sind im Einzelfall zu prüfen.';
 
 const DEFAULTS: SperrfristenInput = {
   vertragsbeginn: '2020-01-01',
@@ -115,16 +122,14 @@ export function KuendigungSperrForm({ onBeendigung }: {
           nebenwerte: [{ label: 'Hemmung', wert: gesamt.gehemmtTage ? `${gesamt.gehemmtTage} Tage` : 'keine' }],
         }) : undefined,
     sections: gesamt ? [{ titel: 'Kündigung & Sperrfristen (Art. 335c / 336c OR)', ergebnis: gesamt }] : [],
-    disclaimer:
-      'Automatisierte Orientierungsberechnung zu Kündigungs- und Sperrfristen (Art. 335c / 336c OR) – ' +
-      'keine Rechtsberatung. Massgeblich sind GAV, Einzelvertrag und der konkrete Sachverhalt; abweichende ' +
-      'Regelungen gehen vor. Norm- und Rechtsprechungsverweise sind im Einzelfall zu prüfen.',
+    disclaimer: KSP_DISCLAIMER,
   };
 
   return (
     <div className="space-y-6">
-      <PflichtDisclaimer />
-      <p className="lc-overline">Eingaben</p>
+      <PflichtDisclaimer
+        kurz="Kündigungsfrist und Sperrfristen nach Art. 335c / 336c OR; massgeblich sind GAV und Einzelvertrag."
+        text={KSP_DISCLAIMER} />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Vertragsbeginn">
           <DatumsFeld value={form.vertragsbeginn} onChange={(v) => set('vertragsbeginn', v)} className={inputCls} />
@@ -213,9 +218,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
       <FehlerBox fehler={fehler} />
 
       {gesamt && (
-        <div className="space-y-4">
-          <LiveHeader />
-
+        <ErgebnisBlock>
           {/* Prominente Eckdaten – ein kohärentes Ergebnis */}
           {gesamt.status === 'nichtig' ? (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -260,14 +263,13 @@ export function KuendigungSperrForm({ onBeendigung }: {
             </div>
           )}
 
+          <ErgebnisAnzeige titel="Kündigung & Sperrfristen (Art. 335c / 336c OR)" ergebnis={gesamt} />
           <KuendigungTimeline e={gesamt} />
           {gesamt.sperrtage && gesamt.sperrtage.length > 0 && <SperrtageZaehler sperrtage={gesamt.sperrtage} />}
-          <ErgebnisAnzeige titel="Kündigung & Sperrfristen (Art. 335c / 336c OR)" ergebnis={gesamt} />
-          {gesamt && <BegruendungAbsatz text={begruendungsAbsatz(gesamt)} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(gesamt)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={kspQuery} />
             {gesamt.status === 'nichtig'
               /* «Frühestens neu kündbar» = FRÜHESTMÖGLICHER Termin: keine
                  3-Tage-VORfrist-Erinnerung (richtungsverkehrt, Nichtigkeits-
@@ -278,6 +280,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
               : <IcsExportButton endISO={gesamt.beendigungISO} titel="Beendigung Arbeitsverhältnis"
                   aktenzeichen={aktenzeichen} query={kspQuery}
                   beschreibung={gesamt.ergebnis} dateiName="Beendigung-Arbeitsverhaeltnis.ics" />}
+            <LinkTeilenButton query={kspQuery} />
             {/* S-5c (Fristenspiegel-Auflösung): die 336b-Fristen leben jetzt
                 als Ereignis-Block UNTEN AUF DIESER SEITE; das Beendigungs-
                 datum (inkl. Sperrfristen-Verschiebung!) fliesst live über
@@ -288,7 +291,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
               </a>
             )}
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

@@ -1,5 +1,6 @@
 import { KANTONE } from '../../lib/kantone';
-import { EckdatenKachel, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import type { MietInput, MietErgebnis, Mietobjekt, Kuendigungsart, TerminQuelle, MietPartei } from '../../types/mietrecht';
@@ -278,21 +279,21 @@ export function MietrechtForm() {
       <FehlerBox fehler={fehler} />
 
       {ergebnis && (
-        <div className="space-y-4">
-          <LiveHeader />
-
+        <ErgebnisBlock>
           {/* FE-5: byte-gleiches Markup → geteilte EckdatenKachel (Inventur
               10.6.2026: einzige exakt deckungsgleiche Rest-Dublette). */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <EckdatenKachel
+            <EckdatenKachel akzent num
               label={ergebnis.status === 'nichtig' ? 'Form' : 'Mietverhältnis endet am'}
               wert={ergebnis.status === 'nichtig' ? 'NICHTIG (Art. 266o OR)' : ergebnis.endtermin ?? '–'} />
-            <EckdatenKachel label="Spätester Zugang für diesen Termin"
+            <EckdatenKachel num label="Spätester Zugang für diesen Termin"
               wert={ergebnis.spaetesterZugang ?? '–'} />
-            <EckdatenKachel
+            <EckdatenKachel num
               label={ergebnis.zahlungsfristEnde ? 'Zahlungsfrist läuft bis' : 'Anfechtung/Erstreckung bis'}
               wert={ergebnis.zahlungsfristEnde ?? ergebnis.anfechtungBis ?? '–'} />
           </div>
+
+          <ErgebnisAnzeige titel="Kündigungstermine und -fristen (Art. 253 ff. OR)" ergebnis={ergebnis} />
 
           {ergebnis.endterminISO && (
             <FristenKalender
@@ -305,22 +306,21 @@ export function MietrechtForm() {
             />
           )}
 
-          <ErgebnisAnzeige titel="Kündigungstermine und -fristen (Art. 253 ff. OR)" ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={mietQuery} />
             <IcsExportButton endISO={ergebnis.endterminISO} titel="Mietende (Kündigungstermin)"
               aktenzeichen={aktenzeichen}
               query={mietQuery}
               beschreibung={ergebnis.ergebnis} dateiName="Mietende.ics" />
+            <LinkTeilenButton query={mietQuery} />
             {/* S-5c (Fristenspiegel-Auflösung): die alte Brücke «Im
                 Fristenspiegel öffnen» entfällt ersatzlos — Anfechtungs- und
                 Erstreckungsfrist (Art. 273 OR) zeigt dieser Rechner bereits
                 selbst (der Spiegel war reiner Konsument derselben Engine). */}
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

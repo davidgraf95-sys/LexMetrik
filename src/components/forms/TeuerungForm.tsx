@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { EckdatenKachel, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import {
@@ -117,7 +118,9 @@ export function TeuerungForm() {
 
   return (
     <div className="space-y-6">
-      <PflichtDisclaimer text={DISCLAIMER} />
+      <PflichtDisclaimer
+        kurz="LIK-Indexierung nach den publizierten BFS-Reihen; massgeblich sind Vertrag bzw. Urteil (Indexklausel, Basis, Rundung)."
+        text={DISCLAIMER} />
 
       {/* Anwendungsfall (Progressive Disclosure) */}
       <SelectionGrid
@@ -147,37 +150,32 @@ export function TeuerungForm() {
           hint={`letzter publizierter Monat: ${monatLabel(LIK_LETZTER_MONAT)} – der LIK erscheint erst im Folgemonat${modus === 'unterhalt' ? '; Praxis: November des Vorjahres' : ''}`} />
       </div>
 
-      {fehler && (
-        <p className="lc-notice-danger text-body-s" role="alert">{fehler}</p>
-      )}
+      {fehler && <FehlerBox fehler={[fehler]} />}
 
       {ergebnis && (
-        <div className="lc-reveal space-y-4" aria-live="polite">
-          <LiveHeader />
+        <ErgebnisBlock>
           {/* Eckdaten (UX B17): Wichtigstes zuerst, wie bei den übrigen Rechnern */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
-              { label: 'Indexierter Betrag', val: `CHF ${ergebnis.betragNeu.toLocaleString('de-CH', { minimumFractionDigits: 2 })}` },
+              { label: 'Indexierter Betrag', val: `CHF ${ergebnis.betragNeu.toLocaleString('de-CH', { minimumFractionDigits: 2 })}`, akzent: true },
               { label: 'Veränderung', val: `${ergebnis.prozent > 0 ? '+' : ''}${ergebnis.prozent.toFixed(1)} %` },
               { label: 'Index (Basis ' + monatLabel(ergebnis.basis) + ' = 100)', val: `${ergebnis.indexAlt.toFixed(1)} → ${ergebnis.indexNeu.toFixed(1)}` },
             ].map((c) => (
-              <EckdatenKachel key={c.label} label={c.label} wert={c.val} num />
+              <EckdatenKachel key={c.label} label={c.label} wert={c.val} num akzent={c.akzent} />
             ))}
           </div>
           <ErgebnisAnzeige titel={`LIK-Indexierung (Basis ${monatLabel(ergebnis.basis)} = 100)`} ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
-            <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
             <LinkTeilenButton query={() => permalinkKodieren(TEU_LINK_SPEC, { modus, betrag, von, bis, rundung: rundung || undefined })} />
           </div>
-            <p className="text-micro text-ink-500">
-              Quelle: {LIK_QUELLE} · {LIK_STAND} · freie Nutzung, Quellenangabe Pflicht (OPEN-BY)
-              {basisAuto(von, bis) && ` · Basis automatisch gewählt`}
-            </p>
-          </div>
-        </div>
+          <p className="text-micro text-ink-500">
+            Quelle: {LIK_QUELLE} · {LIK_STAND} · freie Nutzung, Quellenangabe Pflicht (OPEN-BY)
+            {basisAuto(von, bis) && ` · Basis automatisch gewählt`}
+          </p>
+        </ErgebnisBlock>
       )}
     </div>
   );

@@ -10,14 +10,18 @@ import { ErgebnisSprung, LiveHeader } from './vorlagen/ui';
 // id: Standard `lc-ergebnis`; Formulare, die gemeinsam auf einer Seite
 // gerendert werden können (Tagerechner-Teilformulare, Kombinierte Ansicht),
 // übergeben eindeutige Suffixe — doppelte DOM-ids brechen die Sprungmarke.
-export function ErgebnisBlock({ id = 'lc-ergebnis', live = true, children }: {
+// sprung={false} für Blöcke, die ohnehin im ersten Viewport stehen (Schnell-
+// rechner) oder neben einem zweiten Ergebnisblock leben — die Sprungmarke ist
+// fixed positioniert, zwei Stück würden sich überlagern.
+export function ErgebnisBlock({ id = 'lc-ergebnis', live = true, sprung = true, children }: {
   id?: string;
   live?: boolean;
+  sprung?: boolean;
   children: ReactNode;
 }) {
   return (
     <div id={id} className="lc-reveal space-y-4" aria-live="polite">
-      <ErgebnisSprung zielId={id} />
+      {sprung && <ErgebnisSprung zielId={id} />}
       {live && <LiveHeader />}
       {children}
     </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { KANTONE } from '../../lib/kantone';
-import { ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import type { Kanton } from '../../types/legal';
 import { berechneErbFrist, ERB_FRISTEN, type ErbFristKey } from '../../lib/erbFristen';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
@@ -114,40 +115,28 @@ export function ErbFristenForm() {
       </div>
 
       {ergebnis && (
-        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
-          <ErgebnisSprung zielId="lc-ergebnis" />
-          <LiveHeader />
+        <ErgebnisBlock>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="lc-tile border-brass-500 border-t-[3px]">
-              <p className="lc-overline mb-1">Fristende</p>
-              <p className="text-body-l font-semibold text-ink-900 num">{ergebnis.resultat.endDatum}</p>
-              <p className="text-xs text-ink-500 mt-0.5">{ergebnis.resultat.endWochentag}</p>
-            </div>
-            <div className="lc-tile">
-              <p className="lc-overline mb-1">Frist</p>
-              <p className="text-body-l font-semibold text-ink-900 num">
-                {preset.laenge} {preset.einheit === 'monate' ? 'Monat(e)' : 'Jahr(e)'}
-              </p>
-              <p className="text-xs text-ink-500 mt-0.5">{preset.norm}</p>
-            </div>
-            <div className="lc-tile">
-              <p className="lc-overline mb-1">Verschoben</p>
-              <p className="text-body-l font-semibold text-ink-900">{ergebnis.resultat.verschoben ? 'ja' : 'nein'}</p>
-              <p className="text-xs text-ink-500 mt-0.5">{ergebnis.resultat.verschoben ? ergebnis.resultat.verschiebeGruende.join(' · ') : 'Fristende ist Werktag bzw. Verschiebung aus'}</p>
-            </div>
+            <EckdatenKachel akzent num label="Fristende" wert={ergebnis.resultat.endDatum}
+              sub={ergebnis.resultat.endWochentag} />
+            <EckdatenKachel num label="Frist"
+              wert={`${preset.laenge} ${preset.einheit === 'monate' ? 'Monat(e)' : 'Jahr(e)'}`}
+              sub={preset.norm} />
+            <EckdatenKachel label="Verschoben" wert={ergebnis.resultat.verschoben ? 'ja' : 'nein'}
+              sub={ergebnis.resultat.verschoben ? ergebnis.resultat.verschiebeGruende.join(' · ') : 'Fristende ist Werktag bzw. Verschiebung aus'} />
           </div>
           <ErgebnisAnzeige titel={`Erb-Frist: ${preset.label}`} ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+          <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />
           <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
           <div className="flex flex-wrap items-center gap-3">
             <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={() => permalinkKodieren(EF_LINK_SPEC, { key, trigger, verschieben, kanton })} />
             <IcsExportButton endISO={ergebnis.resultat.endDatumISO} titel={`Fristende – ${preset.label}`}
               aktenzeichen={aktenzeichen}
               query={() => permalinkKodieren(EF_LINK_SPEC, { key, trigger, verschieben, kanton })}
               beschreibung={ergebnis.ergebnis} dateiName="Erb-Frist.ics" />
+            <LinkTeilenButton query={() => permalinkKodieren(EF_LINK_SPEC, { key, trigger, verschieben, kanton })} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

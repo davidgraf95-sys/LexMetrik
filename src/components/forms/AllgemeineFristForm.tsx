@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { EckdatenKachel, FehlerBox, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { Link } from 'react-router-dom';
 import {
@@ -147,7 +148,9 @@ export function AllgemeineFristForm() {
 
   return (
     <div className="space-y-6">
-      <PflichtDisclaimer text={DISCLAIMER} />
+      <PflichtDisclaimer
+        kurz="Fristende nach Art. 77/78 OR ab dem eingegebenen Startdatum; Fristbeginn (Zustellung) und verfahrensrechtliche Stillstände bestimmt der Rechner nicht."
+        text={DISCLAIMER} />
 
       {/* Tabs: Hauptmodus + informatives Hilfsmittel */}
       <Tabs
@@ -273,18 +276,18 @@ export function AllgemeineFristForm() {
           </div>
 
           {ergebnis && (
-            <div className="lc-reveal space-y-4" aria-live="polite">
-              <LiveHeader />
-              {/* Prominente Eckdaten + Kalender (Angleichung an ZPO/SchKG) */}
+            <ErgebnisBlock id="lc-ergebnis-allgemein">
+              {/* Prominente Eckdaten (Angleichung an ZPO/SchKG) */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
                   { label: 'Ereignistag (zählt nicht)', val: ergebnis.resultat.startISO.split('-').reverse().join('.') },
                   { label: 'Fristbeginn (dies a quo)', val: ergebnis.resultat.fristbeginnISO!.split('-').reverse().join('.') },
-                  { label: 'Fristende (dies ad quem)', val: `${ergebnis.resultat.endDatum} · 24.00 Uhr` },
+                  { label: 'Fristende (dies ad quem)', val: `${ergebnis.resultat.endDatum} · 24.00 Uhr`, akzent: true },
                 ].map((c) => (
-                  <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
+                  <EckdatenKachel key={c.label} label={c.label} wert={c.val} num akzent={c.akzent} />
                 ))}
               </div>
+              <ErgebnisAnzeige titel="Allgemeine Frist (Art. 77/78 OR)" ergebnis={ergebnis} />
               <FristenKalender
                 ereignisISO={ergebnis.resultat.startISO}
                 aQuoISO={ergebnis.resultat.fristbeginnISO!}
@@ -292,13 +295,12 @@ export function AllgemeineFristForm() {
                 kanton={form.kanton}
                 stillstandAktiv={false}
               />
-              <ErgebnisAnzeige titel="Allgemeine Frist (Art. 77/78 OR)" ergebnis={ergebnis} />
+              {/* Fristbeginn-Baustein wie ZPO/SchKG (Code-Review #5, 7.6.2026):
+                  Norm aus der Engine (Art. 77 OR), bei Rückwärtsfrist ohne
+                  Beginn entfällt der Satz ersatzlos. */}
+              <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.resultat.fristbeginnISO, ergebnis.normverweise[0]?.artikel))} />
+              <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
               <div className="flex flex-wrap items-center gap-3">
-                {/* Fristbeginn-Baustein wie ZPO/SchKG (Code-Review #5, 7.6.2026):
-                    Norm aus der Engine (Art. 77 OR), bei Rückwärtsfrist ohne
-                    Beginn entfällt der Satz ersatzlos. */}
-                {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis, fristbeginnZusatz(ergebnis.resultat.fristbeginnISO, ergebnis.normverweise[0]?.artikel))} />}
-          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
                 <PdfExportButton config={pdfConfig} />
                 <IcsExportButton endISO={ergebnis.resultat.endDatumISO}
                   titel={`Fristende – ${form.laenge} ${EINHEITEN.find((e) => e.code === form.einheit)?.label}`}
@@ -309,13 +311,13 @@ export function AllgemeineFristForm() {
                     LinkTeilenButton statt Eigenbau — führt im Gegensatz zum
                     alten Knopf auch den Hash mit (Verfahrens-Tab!). */}
                 <LinkTeilenButton query={() => `?${fristQueryKodieren(form)}`} />
-                <p className="text-body-s text-ink-500">
-                  {ALLG_FRIST_HINWEIS.replace(' den ZPO-Fristenrechner, für betreibungsrechtliche den SchKG-Fristenrechner verwenden.', ':')}{' '}
-                  <Link to="/rechner/zpo-fristen" className="text-brass-700 no-underline hover:text-brass-600">ZPO-Fristen →</Link>{' · '}
-                  <Link to="/rechner/schkg-fristen" className="text-brass-700 no-underline hover:text-brass-600">SchKG-Fristen →</Link>
-                </p>
               </div>
-            </div>
+              <p className="text-body-s text-ink-500">
+                {ALLG_FRIST_HINWEIS.replace(' den ZPO-Fristenrechner, für betreibungsrechtliche den SchKG-Fristenrechner verwenden.', ':')}{' '}
+                <Link to="/rechner/zpo-fristen" className="text-brass-700 no-underline hover:text-brass-600">ZPO-Fristen →</Link>{' · '}
+                <Link to="/rechner/schkg-fristen" className="text-brass-700 no-underline hover:text-brass-600">SchKG-Fristen →</Link>
+              </p>
+            </ErgebnisBlock>
           )}
         </>
       ) : tab === 'rueckwaerts' ? (
@@ -358,16 +360,16 @@ export function AllgemeineFristForm() {
             )}
           </div>
           {rueckErgebnis && (
-            <div className="lc-reveal space-y-4" aria-live="polite">
-              <LiveHeader />
+            <ErgebnisBlock id="lc-ergebnis-allgemein">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { label: 'Spätester Handlungstag', val: `${rueckErgebnis.resultat.endWochentag}, ${rueckErgebnis.resultat.endDatum}` },
+                  { label: 'Spätester Handlungstag', val: `${rueckErgebnis.resultat.endWochentag}, ${rueckErgebnis.resultat.endDatum}`, akzent: true },
                   { label: 'Stichtag / Termin', val: rueckErgebnis.resultat.startISO.split('-').reverse().join('.') },
                 ].map((c) => (
-                  <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
+                  <EckdatenKachel key={c.label} label={c.label} wert={c.val} num akzent={c.akzent} />
                 ))}
               </div>
+              <ErgebnisAnzeige titel="Rückwärtsfrist – spätester Handlungstag" ergebnis={rueckErgebnis} />
               {/* Band läuft vom Handlungstag zum Stichtag; Ereignis-Marker =
                   Handlungstag (brass), Stichtag als Endmarker (sage). */}
               <FristenKalender
@@ -378,13 +380,12 @@ export function AllgemeineFristForm() {
                 stillstandAktiv={false}
                 labels={{ ereignis: 'Spätester Handlungstag', aquo: 'Spätester Handlungstag', adquem: 'Stichtag / Termin' }}
               />
-              <ErgebnisAnzeige titel="Rückwärtsfrist – spätester Handlungstag" ergebnis={rueckErgebnis} />
               <div className="flex flex-wrap items-center gap-3">
                 <IcsExportButton endISO={rueckErgebnis.resultat.endDatumISO} titel="Spätester Handlungstag"
                   aktenzeichen={aktenzeichen}
                   beschreibung={`Spätester Handlungstag: ${rueckErgebnis.ergebnis} (Rückwärtsfrist, Art. 77/78 OR).`} />
               </div>
-            </div>
+            </ErgebnisBlock>
           )}
         </div>
       ) : (
