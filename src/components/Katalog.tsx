@@ -48,13 +48,18 @@ function KategorieEinstieg({ kat, karten, onOeffnen }: {
   const geplant = karten.length - verf;
   const links = kachelDirektlinks(kat.id, karten);
   return (
-    <div className="lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
-      <button type="button" onClick={onOeffnen}
-        className="flex items-baseline gap-3 text-left group cursor-pointer">
+    <div className="relative group lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
+      {/* Gestreckter Klickbereich: die GANZE Kachel öffnet die Kategorie
+          (Auftrag David 10.6.2026 — vorher war nur die Titelzeile ein
+          Button); Muster RechnerKarte. Die Direktlinks darunter liegen als
+          positionierte Elemente später im DOM und bleiben klickbar. */}
+      <button type="button" onClick={onOeffnen} aria-label={`${kat.titel} öffnen`}
+        className="absolute inset-0 rounded-lg cursor-pointer" />
+      <span className="flex items-baseline gap-3 text-left">
         <span aria-hidden className="font-display text-h2 leading-none text-brass-700">{kat.numeral}</span>
         <span className="font-sans font-semibold text-ink-900 text-h3 leading-snug group-hover:text-brass-700 transition-colors">{kat.titel}</span>
         <span aria-hidden className="ml-auto text-ink-400 group-hover:text-brass-700 transition-colors">▸</span>
-      </button>
+      </span>
       <span className="lc-overline text-ink-500">
         <span className="num text-brass-700">{verf}</span> verfügbar
         {geplant > 0 && <> · <span className="num">{geplant}</span> in Vorbereitung</>}
@@ -63,10 +68,10 @@ function KategorieEinstieg({ kat, karten, onOeffnen }: {
       {/* Top-Direktlinks: der «Häufig gebraucht»-Schnellzugriff — ein Klick
           ins Alltags-Werkzeug, ohne die Kategorie zu öffnen. */}
       {links.length > 0 && (
-        <span className="flex flex-col gap-1 pt-2 border-t border-line mt-1">
+        <span className="relative flex flex-col gap-1 pt-2 border-t border-line mt-1">
           {links.map((k) => (
             <Link key={k.id} to={k.href!}
-              className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline truncate">
+              className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline truncate self-start max-w-full">
               {sansAmp(k.title)} <span aria-hidden>→</span>
             </Link>
           ))}
