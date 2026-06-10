@@ -3,6 +3,16 @@
 **Verbindliche Grundprinzipien: `CLAUDE.md`** (§1 Logik vor allem; §6
 Refactoring-Protokoll) — dieses Dokument hier beschreibt den Zustand.
 
+**Dokument-Ordnung im Root (Aufräumung 10.6.2026, Auftrag David):** Im Root
+liegen nur AKTIVE Steuerungsdokumente — CLAUDE/README/STRUKTUR/HANDLUNGSPLAN,
+Projekt- und Strategie-Papiere (PROJEKTBESCHRIEB, STRATEGIE-PLATTFORM,
+WACHSTUM-REGLEMENT, BETRIEB, KATALOG-ROADMAP, ABNAHME-AG-BAUSTEINE) und die
+laufenden Fahrpläne (GRUNDLAGEN, DESIGN, VEREINHEITLICHUNG, AG-/GMBH-
+GRUENDUNG). Abgeschlossene Fahrpläne und historische Dokumente liegen in
+**`archiv/`** (Index: `archiv/README.md`; Dateinamen unverändert, damit
+Verweise in Code-Kommentaren per grep auffindbar bleiben). Wissens-Quellen
+(PDF/DOCX, gitignored) in `bibliothek/quellen/` (`SICHTUNG.md`).
+
 ## Session 10.6.2026 abends — STRUKTUR-UMBAU S-1–S-6 (Auftrag David)
 
 **`FAHRPLAN-STRUKTUR-UMBAU.md` komplett umgesetzt** (10 Commits ab
