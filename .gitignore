@@ -30,3 +30,7 @@ pdf-beispiele/
 
 # Lokaler Notiz-/Scratch-Ordner
 .scratch/
+
+# Playwright-Artefakte (Browser-Smoke e2e/)
+test-results/
+playwright-report/

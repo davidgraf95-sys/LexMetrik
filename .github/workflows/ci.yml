@@ -15,6 +15,13 @@ jobs:
   tore:
     name: Tore (tsc · Tests · Lint · Build · Checks)
     runs-on: ubuntu-latest
+    env:
+      # Produkt-Zeitzone: Engines geben teils Date-Instants zurück (z. B.
+      # kuendigungsfrist beendigungsdatum); Golden-Basis ist in Zürich
+      # erzeugt, und die TZ-Bugklasse vom 7.6.2026 feuerte NUR in
+      # Europe/Zurich — UTC-CI maskierte sie. CI rechnet darum wie die
+      # Nutzer in der Schweiz.
+      TZ: Europe/Zurich
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -42,3 +49,7 @@ jobs:
         run: npm run golden:vergleich
       - name: SSR-Smoke (alle Seiten)
         run: npm run check:smoke
+      - name: Playwright-Browser (Chromium)
+        run: npx playwright install --with-deps chromium
+      - name: Browser-Smoke (Playwright, e2e/ gegen dist)
+        run: npm run test:e2e

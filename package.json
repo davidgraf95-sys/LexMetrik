@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "playwright test",
     "check": "npm run check:inventur && npm run check:bibliothek && npm run check:verfall && npm run check:sweep && npm run check:smoke",
     "check:netz": "npm run check:caches && npm run check:zitate && npm run check:fedlex-versionen",
     "check:inventur": "vite-node scripts/katalog-inventur.ts",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.60.0",
     "@types/node": "^24.12.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
