@@ -3,6 +3,44 @@
 **Verbindliche Grundprinzipien: `CLAUDE.md`** (§1 Logik vor allem; §6
 Refactoring-Protokoll) — dieses Dokument hier beschreibt den Zustand.
 
+## Session 10.6.2026 abends — STRUKTUR-UMBAU S-1–S-6 (Auftrag David)
+
+**`FAHRPLAN-STRUKTUR-UMBAU.md` komplett umgesetzt** (10 Commits ab
+`f7bbf07`; jede Etappe golden-gegated 87/87 byte-gleich): **S-1**
+Deckblatt-Kacheln ganz klickbar (gestreckter Klickbereich, Direktlinks
+separat) · **S-3** Zuständigkeit VIERTEILIG — Zivilprozess · Vollstreckung
+(SchKG) · Strafverfahren · Verwaltungsverfahren (geplant, ehrlich) als
+eigene Felder (`lib/zustaendigkeitKategorie.ts`; Kopf-Titel je Rechtsweg
+via titelOverride; übersteuert E2-Konsolidierung; Zähler 33/29) · **S-2**
+Vorlagen in FÜNF Gruppen (Behördeneingaben [Rubriken: Klagen allgemein =
+Schlichtungsgesuch/vereinfacht/ordentlich (neu, geplant) · Klagen
+besondere Konstellationen nach klageGebiet · Gesuche & sonstige Eingaben]
+· Verträge · Einseitige Willenserklärungen [vorher korrespondenz; +
+Vollmacht] · Gesellschaftsrecht · Vorsorge & Nachlass;
+`lib/vorlagenKategorie.ts`) · **S-6** Gebühren zweigeteilt
+prozessual/materiell + Hilfsrechner (`lib/gebuehrenKategorie.ts`, beide
+Rubriken explizite Listen) · **S-5a** EINFACHER Fristenrechner zuoberst im
+Tagerechner (Datum · Frist · Ferien-Wahl keine/ZPO/SchKG; reine
+Engine-Komposition, Annahmen offen; `EinfacheFristForm.tsx`) · **S-5b**
+Fristen-Kategorie prozessual (zpo/schkg) / materiell (5 Regimes) ·
+**S-5c FRISTENSPIEGEL AUFGELÖST** — Ereignis-Blöcke
+(`EreignisFristenSektion`, ex-FristenspiegelForm) leben in den
+Fach-Rechnern (ZPO: Zivilentscheid+Klagebewilligung · SchKG:
+Zahlungsbefehl · Erbrecht: Erbgang · Kündigung: 336b mit
+Live-Beendigungs-Vorgabe via onBeendigung · Mietrecht zeigt 273-Fristen
+selbst); `/rechner/fristenspiegel` = Redirect mit Query-Weiterreichung
+(`FristenspiegelRedirect.tsx`; lib/fristenspiegel-Engines + Tests
+UNVERÄNDERT) · **S-4** Zuständigkeit→Vorlagen-Sprung: SG-Brücke auf ALLE
+Kantone (Kanton/PLZ/Gemeinde als Schlüssel → Vorlage setzt Adresse der
+zuständigen Stelle als Adressat, `sgPrefillOrt`/`SgBehoerdenWahl`-
+Startwerte); geteilter `VorlagenSprung`-Block in SchKG-/Straf-Rechtsweg.
+**Bug-Check §9 (3 Lupen Code/Empirie/fachlich): 0 HOCH, 5 MITTEL + 6
+NIEDRIG — alle gefixt** (`ce30b37`; Empirie: 10 Konstellationen
+handgerechnet, 6/6 FSP-Round-Trips, Sweep 14'448 Komb.). Abnahme David
+offen: Gruppen-/Rubrik-Zuordnungen S-2, prozessual/materiell S-5b/S-6
+(Wackelkandidaten im Lupen-Bericht), WARUM-Sätze, Verwaltungs-Engine-
+Priorität.
+
 ## Session 10.6.2026 nachmittags — Fristen-Einheit FE-1–FE-6 (DEPLOYED)
 
 **Deployed + gepusht bis `a7adb98`** (Davids Ja «bug check und push und

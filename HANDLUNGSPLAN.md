@@ -14,6 +14,14 @@ erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 > hat keinen Einstieg) · erster CI-/Normen-Monitor-Lauf auf GitHub
 > verifizieren (Repo privat, ohne Login nicht prüfbar).
 
+> **NEU (Auftrag David 10.6.2026 abends): `FAHRPLAN-STRUKTUR-UMBAU.md`
+> S-1–S-6 KOMPLETT UMGESETZT + §9-GEPRÜFT** (Vorlagen-Taxonomie 5 Gruppen ·
+> Kacheln ganz klickbar · Zuständigkeit vierteilig + Vorlagen-Sprung mit
+> Adress-Prefill · Fristen prozessual/materiell + simpler Rechner +
+> Fristenspiegel AUFGELÖST · Gebühren zweigeteilt). OFFEN für David:
+> fachliche Abnahme der Zuordnungen (Liste im Fahrplan-Schlussabschnitt
+> und STRUKTUR.md) · Bau-Priorität Verwaltungs-Zuständigkeits-Engine.
+
 > **NEU (Auftrag David 10.6.2026): `FAHRPLAN-VEREINHEITLICHUNG.md`** —
 > Engine-Vereinheitlichung gleicher Logik-/Rechenbasis, 5 Stufen V1–V5,
 > golden-gegated nach neuem §4 (Tabu-Liste: Zuständigkeits-Trio, materielle
