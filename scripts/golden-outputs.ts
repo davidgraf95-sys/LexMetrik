@@ -28,6 +28,7 @@ import { testamentZusammenstellen, TESTAMENT_DEFAULTS } from '../src/lib/vorlage
 import { pvZusammenstellen, PV_DEFAULTS } from '../src/lib/vorlagen/patientenverfuegung';
 import { vaZusammenstellen, VA_DEFAULTS } from '../src/lib/vorlagen/vorsorgeauftrag';
 import { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } from '../src/lib/vorlagen/schlichtungsgesuchBs';
+import { koZusammenstellen, KO_DEFAULTS } from '../src/lib/vorlagen/klageOrdentlich';
 import { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } from '../src/lib/vorlagen/arbeitsvertrag';
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
@@ -146,6 +147,25 @@ const avBasis = {
   arbeitnehmerAdresse: 'Y 2', funktion: 'F', arbeitsort: 'Basel', arbeitsortKanton: 'BS', beginn: '2026-08-01',
   lohnBetrag: '6500', ort: 'Basel', datum: '2026-06-15',
 } as const;
+// Klage ordentliches Verfahren (NEU 10.6.2026, Auftrag David): repräsentativer
+// ZH-Fall mit Pflicht-Begründung und dedupliziertem Beweismittelverzeichnis.
+f('vorl:ko', () => koZusammenstellen({
+  ...KO_DEFAULTS, gerichtsKanton: 'ZH',
+  gerichtAufgeloest: { zeilen: ['Bezirksgericht Zürich', 'Postfach', '8036 Zürich'] },
+  streitwert: '80000',
+  klaeger: { typ: 'natuerlich', vorname: 'A', name: 'B', strasse: 'S 1', plz: '8001', ort: 'Zürich' },
+  beklagte: { typ: 'juristisch', firma: 'X AG', sitzStrasse: 'S 2', sitzPlz: '8002', sitzOrt: 'Zürich' },
+  streitgegenstand: 'Forderung aus Werkvertrag',
+  zins: { satz: '5', abDatum: '2026-04-15' },
+  tatsachen: [
+    { text: 'Die Parteien schlossen am 1.2.2026 einen Werkvertrag.', beweise: [{ bezeichnung: 'Werkvertrag (Urkunde)' }] },
+    { text: 'Die Rechnung blieb trotz Mahnung unbezahlt.', beweise: [{ bezeichnung: 'Mahnung vom 20.4.2026 (Urkunde)' }, { bezeichnung: 'Werkvertrag (Urkunde)' }] },
+  ],
+  rechtlicheBegruendung: [{ text: 'Der Anspruch stützt sich auf Art. 363 OR.' }],
+  klagebewilligungVorhanden: true, klagebewilligungDatum: '2026-05-04',
+  vollmachtBeilage: true, ort: 'Zürich', datum: '2026-06-15',
+}));
+
 f('vorl:av', () => avZusammenstellen({ ...avBasis }));
 f('vorl:av-gates', () => pruefeAvGates({ ...avBasis, lohnfortzahlung: 'ktg', ktgWartefristTage: 60, ktgWartefristLohnProzent: 0 }));
 f('vorl:av-kv', () => avZusammenstellen({ ...avBasis, konkurrenzverbot: true, kvEinblickBestaetigt: true, kvGegenstand: 'Treuhand', kvOrt: 'BS', kvDauerMonate: 12, kvKonventionalstrafeCHF: '20000', kvKarenz: true, kvKarenzCHFProMonat: '2000', kvKarenzVerzichtsrecht: true }));

@@ -33,6 +33,7 @@ const VorlageArbeitsvertrag = lazy(() => import('./pages/VorlageArbeitsvertrag')
 const VorlageMietvertrag = lazy(() => import('./pages/VorlageMietvertrag').then((m) => ({ default: m.VorlageMietvertrag })));
 const VorlageVollmacht = lazy(() => import('./pages/VorlageVollmacht').then((m) => ({ default: m.VorlageVollmacht })));
 const VorlageKlageVereinfacht = lazy(() => import('./pages/VorlageKlageVereinfacht').then((m) => ({ default: m.VorlageKlageVereinfacht })));
+const VorlageKlageOrdentlich = lazy(() => import('./pages/VorlageKlageOrdentlich').then((m) => ({ default: m.VorlageKlageOrdentlich })));
 const VorlageKuendigungArbeitnehmer = lazy(() => import('./pages/VorlageKuendigungArbeitnehmer').then((m) => ({ default: m.VorlageKuendigungArbeitnehmer })));
 const VorlageKuendigungArbeitgeber = lazy(() => import('./pages/VorlageKuendigungArbeitgeber').then((m) => ({ default: m.VorlageKuendigungArbeitgeber })));
 const VorlageKuendigungMieter = lazy(() => import('./pages/VorlageKuendigungMieter').then((m) => ({ default: m.VorlageKuendigungMieter })));
@@ -111,6 +112,7 @@ export default function App() {
         <Route path="/vorlagen/mietvertrag" element={<VorlageMietvertrag />} />
         <Route path="/vorlagen/vollmacht" element={<VorlageVollmacht />} />
         <Route path="/vorlagen/klage-vereinfacht" element={<VorlageKlageVereinfacht />} />
+        <Route path="/vorlagen/klage-ordentlich" element={<VorlageKlageOrdentlich />} />
         <Route path="/vorlagen/kuendigung-arbeitnehmer" element={<VorlageKuendigungArbeitnehmer />} />
         <Route path="/vorlagen/kuendigung-arbeitgeber" element={<VorlageKuendigungArbeitgeber />} />
         <Route path="/vorlagen/kuendigung-mieter" element={<VorlageKuendigungMieter />} />

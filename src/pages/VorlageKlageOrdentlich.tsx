@@ -1,9 +1,10 @@
 import { useMemo } from 'react';
 import {
-  KV_DEFAULTS, KV_MATERIEN, kvZusammenstellen, kvMaengel, kvHinweise, kvRouting, kvStreitwert, kvKlagefrist,
-  type KvAnswers, type KvMaterie, type KvAusnahme,
-} from '../lib/vorlagen/klageVereinfacht';
-import type { SgPartei } from '../lib/vorlagen/schlichtungsgesuchBs';
+  KO_DEFAULTS, koZusammenstellen, koMaengel, koHinweise, koStreitwert, koPrefillLesen,
+  type KoAnswers,
+} from '../lib/vorlagen/klageOrdentlich';
+import { kvKlagefrist, type KvAusnahme } from '../lib/vorlagen/klageVereinfacht';
+import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
@@ -13,101 +14,54 @@ import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { KANTONE } from '../lib/kantone';
 import type { Kanton } from '../types/legal';
 import { useWizardState } from '../components/vorlagen/useWizardState';
-import { kvPrefillLesen } from '../lib/vorlagen/klageVereinfacht';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
 
-// ─── Vorlagen-Wizard: Klage im vereinfachten Verfahren (BS-Pilot) ───────────
-// Zweite Eingabe-Vorlage (nach Schlichtungsgesuch BS). Wie dort BEWUSST ohne
-// localStorage (Parteidaten). Logik in lib/vorlagen/klageVereinfacht.ts (§3).
+// ─── Vorlagen-Wizard: Klage im ordentlichen Verfahren (alle Kantone) ─────────
+// Auftrag David 10.6.2026. Dritte Klage-Vorlage; Gerüst und Bausteine wie
+// die vereinfachte Klage (§10), aber: Begründung (Tatsachen + Beweismittel
+// je Tatsache) ist PFLICHT (Art. 221 Abs. 1 lit. d/e ZPO), Streitwert ist
+// Pflichtangabe (lit. c), Beweismittelverzeichnis automatisch (Abs. 2 lit. d).
+// Wie die Schwester-Vorlagen BEWUSST ohne localStorage (Parteidaten).
+// Logik in lib/vorlagen/klageOrdentlich.ts (§3).
 
 const SCHRITTE = [
-  { id: 'materie', label: 'Materie & Streitwert' },
+  { id: 'verfahren', label: 'Gericht & Streitwert' },
   { id: 'parteien', label: 'Parteien' },
   { id: 'begehren', label: 'Rechtsbegehren' },
-  { id: 'begruendung', label: 'Begründung (freiwillig)' },
+  { id: 'begruendung', label: 'Begründung (Pflicht)' },
   { id: 'beilagen', label: 'Klagebewilligung & Beilagen' },
   { id: 'pruefen', label: 'Prüfen & Ausgabe' },
 ] as const;
 
-const BANNER_KV: PdfBanner = {
-  titel: 'NACH DEM AUSDRUCK DATIEREN, UNTERSCHREIBEN UND IM DOPPEL EINREICHEN',
-  text:
-    'Klage im vereinfachten Verfahren (Art. 243 ff. ZPO): unterschrieben einreichen, ein Exemplar ' +
-    'für das Gericht und je eines pro Gegenpartei (Art. 131 ZPO); Klagebewilligung bzw. ' +
-    'Ausnahme-Nachweis beilegen. Klagefrist nach Art. 209 Abs. 3/4 ZPO eigenverantwortlich wahren.',
+const BANNER_KO: PdfBanner = {
+  titel: 'NACH DEM AUSDRUCK EIGENHÄNDIG UNTERZEICHNEN',
+  text: 'Einreichung in Papierform mit Unterschrift (Art. 130 ZPO); elektronisch nur mit anerkannter qualifizierter Signatur. Je ein Exemplar für das Gericht und jede Gegenpartei (Art. 131 ZPO).',
 };
 
-// Kompakter Partei-Editor (natürlich/juristisch) — Darstellung, keine Logik.
-export function ParteiEditor({ p, onChange }: { p: SgPartei; onChange: (p: SgPartei) => void }) {
-  return (
-    <div className="space-y-3">
-      <SelectionGrid
-        className="grid grid-cols-2 gap-2"
-        items={[
-          { code: 'natuerlich' as const, label: 'Natürliche Person' },
-          { code: 'juristisch' as const, label: 'Juristische Person' },
-        ]}
-        value={p.typ}
-        onSelect={(code) => onChange(code === 'natuerlich'
-          ? { typ: 'natuerlich', vorname: '', name: '', strasse: '', plz: '', ort: '' }
-          : { typ: 'juristisch', firma: '', sitzStrasse: '', sitzPlz: '', sitzOrt: '' })}
-      />
-      {p.typ === 'natuerlich' ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Field label="Vorname"><input className={inputCls} value={p.vorname} onChange={(e) => onChange({ ...p, vorname: e.target.value })} /></Field>
-          <Field label="Nachname"><input className={inputCls} value={p.name} onChange={(e) => onChange({ ...p, name: e.target.value })} /></Field>
-          <Field label="Strasse Nr."><input className={inputCls} value={p.strasse} onChange={(e) => onChange({ ...p, strasse: e.target.value })} /></Field>
-          <div className="grid grid-cols-[6rem_1fr] gap-3">
-            <Field label="PLZ"><input className={inputCls + ' num'} value={p.plz} onChange={(e) => onChange({ ...p, plz: e.target.value })} /></Field>
-            <Field label="Ort"><input className={inputCls} value={p.ort} onChange={(e) => onChange({ ...p, ort: e.target.value })} /></Field>
-          </div>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Field label="Firma (gemäss Handelsregister)"><input className={inputCls} value={p.firma} onChange={(e) => onChange({ ...p, firma: e.target.value })} /></Field>
-          <Field label="Strasse Nr."><input className={inputCls} value={p.sitzStrasse} onChange={(e) => onChange({ ...p, sitzStrasse: e.target.value })} /></Field>
-          <div className="grid grid-cols-[6rem_1fr] gap-3">
-            <Field label="PLZ"><input className={inputCls + ' num'} value={p.sitzPlz} onChange={(e) => onChange({ ...p, sitzPlz: e.target.value })} /></Field>
-            <Field label="Ort"><input className={inputCls} value={p.sitzOrt} onChange={(e) => onChange({ ...p, sitzOrt: e.target.value })} /></Field>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-export function VorlageKlageVereinfacht() {
-  // KEIN speicherKey (Parteidaten — wie Schlichtungsgesuch BS).
+export function VorlageKlageOrdentlich() {
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
-    useWizardState<KvAnswers>({
+    useWizardState<KoAnswers>({
       defaults: {
-        ...KV_DEFAULTS,
-        // Prefill-Brücke 2.1b (Zuständigkeits-Wizard): Materie + Streitwert
-        // vorbefüllt, voll editierbar; SSR-sicher via try/catch.
-        ...((() => { try { return kvPrefillLesen(window.location.search) ?? {}; } catch { return {}; } })()),
+        ...KO_DEFAULTS,
+        ...((() => { try { return koPrefillLesen(window.location.search) ?? {}; } catch { return {}; } })()),
       },
     });
 
-  const ergebnis = useMemo(() => kvZusammenstellen(a), [a]);
-  const maengel = useMemo(() => kvMaengel(a), [a]);
-  const hinweise = useMemo(() => kvHinweise(a), [a]);
-  const sw = kvStreitwert(a);
-  const routing = a.materie ? kvRouting(a.materie, sw, a.gerichtsKanton) : null;
-  const stopp = routing !== null && !routing.anwendbar;
-  const frist = a.klagebewilligungVorhanden && a.klagebewilligungDatum && a.materie
-    ? kvKlagefrist(a.klagebewilligungDatum, a.materie, a.gerichtsKanton) : null;
+  const ergebnis = useMemo(() => koZusammenstellen(a), [a]);
+  const maengel = useMemo(() => koMaengel(a), [a]);
+  const hinweise = useMemo(() => koHinweise(a), [a]);
+  const sw = koStreitwert(a);
+  const frist = a.klagebewilligungVorhanden && a.klagebewilligungDatum
+    ? kvKlagefrist(a.klagebewilligungDatum, a.mietePacht ? 'miete_kernbereich' : 'vermoegensrechtlich', a.gerichtsKanton) : null;
 
   const fehler = maengel.filter((m) => m.schritt === schritt).map((m) => m.text);
-  const card = karte('klage-vereinfacht');
+  const card = karte('klage-ordentlich');
 
   const inhalt = () => {
     switch (SCHRITTE[schritt].id) {
-      case 'materie': return (
+      case 'verfahren': return (
         <div className="space-y-4">
-          {/* Kantonsausbau 10.6.2026 (Auftrag David): Gericht je Kanton.
-              BS = abgenommenes GOG-Routing; übrige Kantone über die zweifach
-              geprüfte Recherche-Schicht (KvGerichtWahl) bzw. Handeingabe. */}
           <div className="space-y-3">
             <p className="lc-overline">Zuständiges Gericht</p>
             <div className="grid grid-cols-[8rem_1fr] gap-3 items-start">
@@ -119,13 +73,13 @@ export function VorlageKlageVereinfacht() {
               </Field>
               {a.gerichtsKanton === 'BS' && !a.gerichtManuellAktiv && (
                 <div className="lc-notice text-body-s self-end">
-                  Basel-Stadt: Zivil- bzw. Arbeitsgericht wird nach Materie und Streitwert
-                  automatisch gesetzt (§§ 71/73 GOG BS, abgenommen).
+                  Basel-Stadt: Zivilgericht (Bäumleingasse 5) wird als Adressat gesetzt —
+                  Spruchkörper richtet sich nach dem GOG BS.
                 </div>
               )}
             </div>
             {a.gerichtsKanton !== 'BS' && !a.gerichtManuellAktiv && (
-              <KvGerichtWahl kanton={a.gerichtsKanton} materie={a.materie}
+              <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ? { zeilen: z } : undefined)} />
             )}
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
@@ -153,21 +107,30 @@ export function VorlageKlageVereinfacht() {
               </div>
             )}
           </div>
-          <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
-            items={KV_MATERIEN.map((m) => ({ code: m.id, label: m.label, sub: m.hint }))}
-            value={a.materie}
-            onSelect={(code) => set('materie', code as KvMaterie)}
-          />
-          <Field label="Streitwert (CHF)" hint="nach Art. 91 ZPO – ohne Zinsen und Kosten; bei unbezifferter Klage der Mindestwert (Schritt Rechtsbegehren)">
-            <BetragsFeld value={a.streitwert} onChange={(v) => set('streitwert', v)} className={inputCls}
-              placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
-          </Field>
-          {routing?.anwendbar && (
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" className="mt-0.5" checked={a.vermoegensrechtlich}
+              onChange={(e) => set('vermoegensrechtlich', e.target.checked)} />
+            <span>Vermögensrechtliche Streitigkeit <span className="text-ink-500">(Streitwertangabe ist Pflichtinhalt, Art. 221 Abs. 1 lit. c ZPO)</span></span>
+          </label>
+          {a.vermoegensrechtlich && (
+            <Field label="Streitwert (CHF)" hint="nach Art. 91 ZPO – ohne Zinsen und Kosten; über CHF 30'000 (sonst gilt das vereinfachte Verfahren)">
+              <BetragsFeld value={a.streitwert} onChange={(v) => set('streitwert', v)} className={inputCls}
+                placeholder="z. B. 80'000" aria-label="Streitwert in Franken" />
+            </Field>
+          )}
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" className="mt-0.5" checked={a.mietePacht}
+              onChange={(e) => set('mietePacht', e.target.checked)} />
+            <span>Streitigkeit aus Miete/Pacht von Wohn-/Geschäftsräumen oder landwirtschaftlicher Pacht <span className="text-ink-500">(Klagefrist 30 Tage, Art. 209 Abs. 4 ZPO)</span></span>
+          </label>
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" className="mt-0.5" checked={a.einzigeInstanz}
+              onChange={(e) => set('einzigeInstanz', e.target.checked)} />
+            <span>Einzige kantonale Instanz <span className="text-ink-500">(Art. 5/6/8 ZPO — ordentliches Verfahren auch bis CHF 30'000, Art. 243 Abs. 3)</span></span>
+          </label>
+          {a.vermoegensrechtlich && sw !== null && sw > 30000 && (
             <p className="lc-notice text-body-s">
-              Zuständig: <strong>{routing.spruchkoerper}</strong> ({routing.spruchkoerperNorm}) ·
-              vereinfachtes Verfahren{routing.abs2Lit ? ` (Art. 243 Abs. 2 lit. ${routing.abs2Lit} ZPO)` : ' (Art. 243 Abs. 1 ZPO)'}
-              {routing.kostenlos && routing.kostenlosNorm ? <> · <strong>gerichtskostenfrei</strong> ({routing.kostenlosNorm})</> : null}.
+              Ordentliches Verfahren (Art. 219 ff. ZPO) — Streitwert über der Grenze des vereinfachten Verfahrens (Art. 243 Abs. 1 ZPO).
             </p>
           )}
         </div>
@@ -178,7 +141,7 @@ export function VorlageKlageVereinfacht() {
           <div className="space-y-2">
             <p className="lc-overline">Klagende Partei</p>
             <ParteiEditor p={a.klaeger} onChange={(p) => set('klaeger', p)} />
-            <Field label="Vertretung" optional hint="Name/Kanzlei; Vollmacht als Beilage (Schritt Beilagen)">
+            <Field label="Vertretung" optional hint="Name/Kanzlei; Vollmacht als Beilage (Art. 221 Abs. 2 lit. a ZPO)">
               <input className={inputCls} value={a.vertretung ?? ''} onChange={(e) => set('vertretung', e.target.value)} />
             </Field>
           </div>
@@ -195,21 +158,23 @@ export function VorlageKlageVereinfacht() {
       case 'begehren': return (
         <div className="space-y-4">
           <SelectionGrid
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-2"
             items={[
               { code: 'beziffert' as const, label: 'Beziffertes Begehren', sub: 'Bestimmter Betrag (Art. 84 Abs. 2 ZPO)' },
               { code: 'unbeziffert' as const, label: 'Unbezifferte Forderungsklage', sub: 'Mit Mindestwert (Art. 85 ZPO)' },
+              { code: 'frei' as const, label: 'Frei formuliert', sub: 'z. B. Feststellung, Gestaltung, Realleistung' },
             ]}
             value={a.begehrenTyp}
             onSelect={(code) => set('begehrenTyp', code)}
           />
-          {a.begehrenTyp === 'beziffert' ? (
+          {a.begehrenTyp === 'beziffert' && (
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <Field label="Betrag (CHF)"><BetragsFeld value={a.streitwert} onChange={(v) => set('streitwert', v)} className={inputCls} aria-label="Forderungsbetrag" /></Field>
-              <Field label="Zins % " optional><input className={inputCls + ' num'} value={a.zins?.satz ?? ''} onChange={(e) => set('zins', { satz: e.target.value, abDatum: a.zins?.abDatum ?? '' })} placeholder="5" /></Field>
+              <Field label="Zins %" optional><input className={inputCls + ' num'} value={a.zins?.satz ?? ''} onChange={(e) => set('zins', { satz: e.target.value, abDatum: a.zins?.abDatum ?? '' })} placeholder="5" /></Field>
               <Field label="Zins seit" optional><DatumsFeld value={a.zins?.abDatum ?? ''} onChange={(v) => set('zins', { satz: a.zins?.satz ?? '', abDatum: v })} className={inputCls} /></Field>
             </div>
-          ) : (
+          )}
+          {a.begehrenTyp === 'unbeziffert' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Mindestwert (CHF)" hint="Art. 85 Abs. 1 ZPO – vorläufiger Streitwert">
                 <BetragsFeld value={a.unbeziffertMindest ?? ''} onChange={(v) => set('unbeziffertMindest', v)} className={inputCls} aria-label="Mindestwert" />
@@ -217,6 +182,21 @@ export function VorlageKlageVereinfacht() {
               <Field label="Grund der Unbezifferbarkeit" optional>
                 <input className={inputCls} value={a.unbeziffertGrund ?? ''} onChange={(e) => set('unbeziffertGrund', e.target.value)} placeholder="z. B. Bezifferung erst nach Beweisverfahren möglich" />
               </Field>
+            </div>
+          )}
+          {a.begehrenTyp === 'frei' && (
+            <div className="space-y-2">
+              <p className="lc-overline">Rechtsbegehren</p>
+              {a.freieRechtsbegehren.map((w, i) => (
+                <div key={i} className="flex gap-2">
+                  <textarea className={inputCls} rows={2} value={w}
+                    onChange={(e) => set('freieRechtsbegehren', a.freieRechtsbegehren.map((x, j) => j === i ? e.target.value : x))} />
+                  <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0 self-start pt-2"
+                    onClick={() => set('freieRechtsbegehren', a.freieRechtsbegehren.filter((_, j) => j !== i))}>entfernen</button>
+                </div>
+              ))}
+              <button type="button" className="lc-btn-outline lc-btn-sm"
+                onClick={() => set('freieRechtsbegehren', [...a.freieRechtsbegehren, ''])}>+ Begehren</button>
             </div>
           )}
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
@@ -228,7 +208,7 @@ export function VorlageKlageVereinfacht() {
               <input className={inputCls + ' sm:max-w-[14rem]'} value={a.betreibungNr ?? ''} onChange={(e) => set('betreibungNr', e.target.value)} />
             </Field>
           )}
-          <Field label="Streitgegenstand" hint="in wenigen Sätzen oder Stichworten (Art. 244 Abs. 1 lit. c ZPO); identisch mit der Klagebewilligung">
+          <Field label="Streitgegenstand" hint="Kurzbezeichnung für das Rubrum; identisch mit der Klagebewilligung">
             <textarea className={inputCls} rows={2} value={a.streitgegenstand} onChange={(e) => set('streitgegenstand', e.target.value)} />
           </Field>
           <div className="space-y-2">
@@ -249,47 +229,61 @@ export function VorlageKlageVereinfacht() {
 
       case 'begruendung': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.begruendungAktiv} onChange={(e) => set('begruendungAktiv', e.target.checked)} />
-            <span>Schriftliche Begründung beifügen <span className="text-ink-500">(freiwillig, Art. 244 Abs. 2 ZPO — ohne Begründung lädt das Gericht direkt zur Verhandlung vor, Art. 245 Abs. 1)</span></span>
-          </label>
-          {a.begruendungAktiv && (
-            <>
-              <div className="space-y-2">
-                <p className="lc-overline">Sachverhalt — Tatsachenbehauptungen</p>
-                {a.sachverhalt.map((s, i) => (
-                  <div key={i} className="flex gap-2">
-                    <textarea className={inputCls} rows={2} value={s.text}
-                      onChange={(e) => set('sachverhalt', a.sachverhalt.map((x, j) => j === i ? { text: e.target.value } : x))} />
-                    <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0 self-start pt-2"
-                      onClick={() => set('sachverhalt', a.sachverhalt.filter((_, j) => j !== i))}>entfernen</button>
-                  </div>
-                ))}
-                <button type="button" className="lc-btn-outline lc-btn-sm"
-                  onClick={() => set('sachverhalt', [...a.sachverhalt, { text: '' }])}>+ Behauptung</button>
-              </div>
-              <div className="space-y-2">
-                <p className="lc-overline">Beweismittel</p>
-                {a.beweismittel.map((b, i) => (
-                  <div key={i} className="flex flex-wrap gap-2 items-end">
-                    <div className="flex-1 min-w-[12rem]">
-                      <Field label="Bezeichnung"><input className={inputCls} value={b.bezeichnung}
-                        onChange={(e) => set('beweismittel', a.beweismittel.map((x, j) => j === i ? { ...x, bezeichnung: e.target.value } : x))} /></Field>
+          <p className="lc-notice text-body-s">
+            Im ordentlichen Verfahren sind die Tatsachenbehauptungen und die Beweismittel zu den
+            einzelnen Tatsachen <strong>Pflichtinhalt</strong> der Klage (Art. 221 Abs. 1 lit. d/e ZPO).
+          </p>
+          <div className="space-y-3">
+            <p className="lc-overline">Tatsachenbehauptungen mit Beweisofferte</p>
+            {a.tatsachen.map((t, i) => (
+              <div key={i} className="lc-card p-4 space-y-3">
+                <div className="flex items-start justify-between gap-2">
+                  <p className="lc-overline">Ziffer {i + 1}</p>
+                  {a.tatsachen.length > 1 && (
+                    <button type="button" className="text-body-s text-danger-700 hover:underline"
+                      onClick={() => set('tatsachen', a.tatsachen.filter((_, j) => j !== i))}>entfernen</button>
+                  )}
+                </div>
+                <textarea className={inputCls} rows={3} value={t.text} placeholder="Behauptete Tatsache, je Ziffer ein Lebenssachverhalt"
+                  onChange={(e) => set('tatsachen', a.tatsachen.map((x, j) => j === i ? { ...x, text: e.target.value } : x))} />
+                <div className="space-y-2 pl-2 border-l-2 border-line">
+                  <p className="text-xs text-ink-600">Beweismittel zu dieser Tatsache (Art. 221 Abs. 1 lit. e ZPO):</p>
+                  {t.beweise.map((b, bi) => (
+                    <div key={bi} className="flex gap-2">
+                      <input className={inputCls} value={b.bezeichnung} placeholder="z. B. Werkvertrag vom 1.2.2026 (Urkunde); Zeuge X; Parteibefragung"
+                        onChange={(e) => set('tatsachen', a.tatsachen.map((x, j) => j === i
+                          ? { ...x, beweise: x.beweise.map((y, k) => k === bi ? { bezeichnung: e.target.value } : y) } : x))} />
+                      <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0"
+                        onClick={() => set('tatsachen', a.tatsachen.map((x, j) => j === i
+                          ? { ...x, beweise: x.beweise.filter((_, k) => k !== bi) } : x))}>entfernen</button>
                     </div>
-                    <div className="flex-1 min-w-[12rem]">
-                      <Field label="zum Beweis von" optional><input className={inputCls} value={b.fuer ?? ''}
-                        onChange={(e) => set('beweismittel', a.beweismittel.map((x, j) => j === i ? { ...x, fuer: e.target.value } : x))} /></Field>
-                    </div>
-                    <button type="button" className="text-body-s text-danger-700 hover:underline pb-2.5"
-                      onClick={() => set('beweismittel', a.beweismittel.filter((_, j) => j !== i))}>entfernen</button>
-                  </div>
-                ))}
-                <button type="button" className="lc-btn-outline lc-btn-sm"
-                  onClick={() => set('beweismittel', [...a.beweismittel, { bezeichnung: '' }])}>+ Beweismittel</button>
-                <p className="text-xs text-ink-500">Verfügbare Urkunden sind beizulegen (Art. 244 Abs. 3 ZPO) — sie erscheinen automatisch im Beilagenverzeichnis.</p>
+                  ))}
+                  <button type="button" className="lc-btn-outline lc-btn-sm"
+                    onClick={() => set('tatsachen', a.tatsachen.map((x, j) => j === i
+                      ? { ...x, beweise: [...x.beweise, { bezeichnung: '' }] } : x))}>+ Beweismittel</button>
+                </div>
               </div>
-            </>
-          )}
+            ))}
+            <button type="button" className="lc-btn-outline lc-btn-sm"
+              onClick={() => set('tatsachen', [...a.tatsachen, { text: '', beweise: [] }])}>+ Tatsachenbehauptung</button>
+          </div>
+          <div className="space-y-2">
+            <p className="lc-overline">Rechtliche Begründung <span className="normal-case text-ink-500">(fakultativ, Art. 221 Abs. 3 ZPO)</span></p>
+            {a.rechtlicheBegruendung.map((r, i) => (
+              <div key={i} className="flex gap-2">
+                <textarea className={inputCls} rows={2} value={r.text}
+                  onChange={(e) => set('rechtlicheBegruendung', a.rechtlicheBegruendung.map((x, j) => j === i ? { text: e.target.value } : x))} />
+                <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0 self-start pt-2"
+                  onClick={() => set('rechtlicheBegruendung', a.rechtlicheBegruendung.filter((_, j) => j !== i))}>entfernen</button>
+              </div>
+            ))}
+            <button type="button" className="lc-btn-outline lc-btn-sm"
+              onClick={() => set('rechtlicheBegruendung', [...a.rechtlicheBegruendung, { text: '' }])}>+ Erwägung</button>
+          </div>
+          <p className="text-xs text-ink-500">
+            Das Beweismittelverzeichnis (Art. 221 Abs. 2 lit. d ZPO) und das Beilagenverzeichnis
+            werden aus den bezeichneten Beweismitteln automatisch erstellt.
+          </p>
         </div>
       );
 
@@ -297,7 +291,7 @@ export function VorlageKlageVereinfacht() {
         <div className="space-y-4">
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.klagebewilligungVorhanden} onChange={(e) => set('klagebewilligungVorhanden', e.target.checked)} />
-            <span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Prozessvoraussetzung, Art. 209 ZPO)</span></span>
+            <span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Art. 221 Abs. 2 lit. b ZPO)</span></span>
           </label>
           {a.klagebewilligungVorhanden ? (
             <div className="space-y-2">
@@ -312,24 +306,24 @@ export function VorlageKlageVereinfacht() {
               )}
             </div>
           ) : (
-            <Field label="Ausnahme/Verzicht (Art. 198/199 ZPO)">
+            <Field label="Verzicht/Ausnahme (Art. 198/199 ZPO)">
               <div className="space-y-2">
                 <select className={inputCls} value={a.ausnahme} onChange={(e) => set('ausnahme', e.target.value as KvAusnahme)}>
                   <option value="">– wählen –</option>
                   <option value="verzicht_gemeinsam">Gemeinsamer Verzicht (Streitwert ≥ CHF 100'000, Art. 199 Abs. 1)</option>
-                  <option value="verzicht_einseitig">Einseitiger Verzicht (Gegenpartei im Ausland/unbekannt; GlG — Art. 199 Abs. 2)</option>
+                  <option value="verzicht_einseitig">Einseitiger Verzicht (Gegenpartei im Ausland/unbekannt — Art. 199 Abs. 2)</option>
                   <option value="art198">Ausnahme nach Art. 198 ZPO</option>
                 </select>
                 {a.ausnahme === 'art198' && (
                   <input className={inputCls} value={a.ausnahmeText ?? ''} onChange={(e) => set('ausnahmeText', e.target.value)}
-                    placeholder="Tatbestand, z. B. Widerklage (lit. g) oder gerichtliche Klagefrist (lit. h)" />
+                    placeholder="Tatbestand, z. B. einzige kantonale Instanz (lit. f) oder Widerklage (lit. g)" />
                 )}
               </div>
             </Field>
           )}
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage} onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
-            Vollmacht als Beilage (bei Vertretung)
+            Vollmacht als Beilage (bei Vertretung, Art. 221 Abs. 2 lit. a ZPO)
           </label>
           <div className="space-y-2">
             <p className="lc-overline">Weitere Beilagen</p>
@@ -364,7 +358,7 @@ export function VorlageKlageVereinfacht() {
             <p className="lc-overline text-brass-700">Form & Einreichung</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Unterschreiben und im Doppel einreichen:</strong> ein Exemplar für das Gericht, je eines pro Gegenpartei (Art. 131 ZPO); Papierform oder elektronisch mit qualifizierter Signatur (Art. 130 ZPO).</li>
-              <li><strong>Klagebewilligung beilegen</strong> (bzw. Ausnahme-Nachweis) — fehlt sie, setzt das Gericht Nachfrist (Art. 132 ZPO); die Klagefrist (Art. 209 Abs. 3/4 ZPO) läuft unabhängig davon.</li>
+              <li><strong>Klagebewilligung beilegen</strong> (bzw. Verzichts-/Ausnahme-Nachweis) und die verfügbaren Beweisurkunden (Art. 221 Abs. 2 ZPO).</li>
               <li><strong>Identität wahren:</strong> Parteien, Rechtsbegehren und Streitgegenstand müssen der Klagebewilligung entsprechen; Änderungen nur nach Art. 227/230 ZPO.</li>
             </ul>
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
@@ -375,15 +369,15 @@ export function VorlageKlageVereinfacht() {
 
           <ExportLeiste ergebnis={ergebnis} deaktiviert={!bestaetigt || maengel.length > 0}
             kopiert={kopiert} onKopieren={kopieren}
-            pdf={{ label: 'Klage als PDF', banner: BANNER_KV, dateiName: 'Klage-vereinfachtes-Verfahren.pdf' }}
+            pdf={{ label: 'Klage als PDF', banner: BANNER_KO, dateiName: 'Klage-ordentliches-Verfahren.pdf' }}
             docx={card?.modus === 'vorlage' && card.output?.includes('docx')
-              ? { label: 'Klage als Word (DOCX)', banner: BANNER_KV, dateiName: 'Klage-vereinfachtes-Verfahren.docx' }
+              ? { label: 'Klage als Word (DOCX)', banner: BANNER_KO, dateiName: 'Klage-ordentliches-Verfahren.docx' }
               : undefined} />
 
           <p className="text-xs text-ink-500">
-            {a.gerichtsKanton === 'BS'
-              ? 'Basel-Stadt: Spruchkörper-Routing amtlich abgenommen (GOG BS).'
-              : `Kanton ${a.gerichtsKanton}: Gerichtsadresse aus zweifach geprüfter Recherche (fachliche Abnahme ausstehend); Spruchkörper und kantonale Besonderheiten richten sich nach kantonalem Recht — Angaben vor Einreichung prüfen.`}
+            Gerichtsadresse aus zweifach geprüfter Recherche (fachliche Abnahme ausstehend);
+            Spruchkörper und kantonale Besonderheiten richten sich nach kantonalem Recht —
+            Angaben vor Einreichung prüfen.
           </p>
         </div>
       );
@@ -394,19 +388,16 @@ export function VorlageKlageVereinfacht() {
     <VorlagenWizardRahmen
       zurueckHref="/"
       overline={`${card?.rechtsgebiet ?? 'Zivilprozess (ZPO)'} · Vorlage · ${a.gerichtsKanton === 'BS' ? 'Basel-Stadt' : `Kanton ${a.gerichtsKanton}`}`}
-      titel="Klage im vereinfachten Verfahren"
-      intro="Erstellt die Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren, Streitgegenstand, freiwillige strukturierte Begründung, Beilagen mit Klagebewilligung — inkl. Gerichts-Adressat für alle Kantone (BS: abgenommenes Zivil-/Arbeitsgericht-Routing), Kostenfreiheits-Prüfung und Klagefrist-Berechnung mit Gerichtsferien. Ohne Sprachmodell."
+      titel="Klage im ordentlichen Verfahren"
+      intro="Erstellt die Klageschrift nach Art. 221 ZPO aus festen Bausteinen: Rechtsbegehren, Streitwertangabe, Tatsachenbehauptungen mit Beweisofferte je Ziffer (Pflicht), fakultative rechtliche Begründung, Beweismittel- und Beilagenverzeichnis — Gerichts-Adressat für alle Kantone, Klagefrist-Berechnung mit Gerichtsferien. Ohne Sprachmodell."
       norms={card?.norms ?? []}
       badge="Papierform · unterschreiben · im Doppel"
       fussnote="Eingaben werden nicht gespeichert – sie bestehen nur, solange diese Seite geöffnet ist."
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
-      weiterDeaktiviert={stopp && schritt === 0}
       inhalt={inhalt()}
-      vorschau={stopp
-        ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument — siehe Hinweis: Für diese Konstellation ist das vereinfachte Verfahren nicht anwendbar (Streitwert/Materie prüfen).</div>
-        : <VorschauPanel ergebnis={ergebnis} kompakt />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} kompakt />}
     />
   );
 }

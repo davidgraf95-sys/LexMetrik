@@ -35,6 +35,7 @@ import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtu
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
 import { kvPrefillKodieren, type KvMaterie } from '../../lib/vorlagen/klageVereinfacht';
+import { koPrefillKodieren } from '../../lib/vorlagen/klageOrdentlich';
 import { karte } from '../../lib/startseiteConfig';
 import { SchkgZustaendigkeitTeil } from './SchkgZustaendigkeitTeil';
 import { StrafZustaendigkeitTeil } from './StrafZustaendigkeitTeil';
@@ -1049,7 +1050,11 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                   ? { pathname: '/vorlagen/schlichtungsgesuch-bs', search: sgPrefill }
                   : k.id === 'klage-vereinfacht' && kvMaterie
                     ? { pathname: k.href!, search: kvPrefillKodieren({ materie: kvMaterie, streitwertCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton === '' ? undefined : f.kanton }) }
-                    : { pathname: k.href! })
+                    : k.id === 'klage-ordentlich'
+                      // Bug-Check B9 (10.6.2026): klage_direkt = ohne Schlichtung
+                      // → Klagebewilligung-Default aus; Kanton/Streitwert reisen mit.
+                      ? { pathname: k.href!, search: koPrefillKodieren({ streitwertCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton === '' ? undefined : f.kanton, ohneKlagebewilligung: true }) }
+                      : { pathname: k.href! })
               : null;
             return (
               <div className="lc-card p-4 space-y-2">

@@ -6517,6 +6517,193 @@
   ],
   "exemplare": 2
  },
+ "vorl:ko": {
+  "dokument": {
+   "titel": "Klage im ordentlichen Verfahren",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "O01_absender",
+     "text": "A B\nS 1\n8001 Zürich",
+     "rolle": "absender"
+    },
+    {
+     "bausteinId": "O02_adressat",
+     "text": "Bezirksgericht Zürich\nPostfach\n8036 Zürich",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "O03_datum",
+     "text": "Zürich, 15.06.2026",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "O04_betreff",
+     "text": "Klage (ordentliches Verfahren, Art. 219 ff. ZPO)\nStreitwert: CHF 80'000.00 (Art. 221 Abs. 1 lit. c / Art. 91 ZPO)",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "O05_rubrum",
+     "text": "in Sachen\nA B, S 1, 8001 Zürich\n(klagende Partei)\n\ngegen\n\nX AG, S 2, 8002 Zürich\n(beklagte Partei)\n\nbetreffend Forderung aus Werkvertrag",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "O06_begehren",
+     "ueberschrift": "Rechtsbegehren",
+     "text": "1. Die beklagte Partei sei zu verpflichten, der klagenden Partei CHF 80'000.00, nebst Zins zu 5 % seit 15.04.2026 zu bezahlen.\n2. Unter Kosten- und Entschädigungsfolge zulasten der beklagten Partei."
+    },
+    {
+     "bausteinId": "O07_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Sachlich zuständig ist das erstinstanzliche Zivilgericht (Kanton ZH); es gilt das ordentliche Verfahren (Art. 219 ff. ZPO). Die Klagebewilligung der Schlichtungsbehörde vom 04.05.2026 liegt als Beilage 1 bei (Art. 209 ZPO)."
+    },
+    {
+     "bausteinId": "O08_tatsachen_intro",
+     "ueberschrift": "Begründung",
+     "text": "I. Tatsächliches"
+    },
+    {
+     "bausteinId": "O08b_tatsachen",
+     "text": "1. Die Parteien schlossen am 1.2.2026 einen Werkvertrag.\nBeweis: Werkvertrag (Urkunde)\n2. Die Rechnung blieb trotz Mahnung unbezahlt.\nBeweis: Mahnung vom 20.4.2026 (Urkunde); Werkvertrag (Urkunde)"
+    },
+    {
+     "bausteinId": "O09_recht_intro",
+     "text": "II. Rechtliches"
+    },
+    {
+     "bausteinId": "O09b_recht",
+     "text": "1. Der Anspruch stützt sich auf Art. 363 OR."
+    },
+    {
+     "bausteinId": "O10_beweisverzeichnis",
+     "ueberschrift": "Beweismittelverzeichnis",
+     "text": "– Werkvertrag (Urkunde)\n– Mahnung vom 20.4.2026 (Urkunde)"
+    },
+    {
+     "bausteinId": "O11_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Klagebewilligung vom 04.05.2026\n– Beilage 2: Vollmacht\n– Beilage 3: Werkvertrag (Urkunde)\n– Beilage 4: Mahnung vom 20.4.2026 (Urkunde)"
+    },
+    {
+     "bausteinId": "O12_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "O13_unterschrift",
+     "text": "_________________________________\nA B",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    },
+    {
+     "bausteinId": "O14_doppel",
+     "text": "Einreichung im Doppel: ein Exemplar für das Gericht und je ein Exemplar für jede beklagte Partei (Art. 131 ZPO)."
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Klage im ordentlichen Verfahren nach Art. 219 ff. ZPO; einzureichen unterschrieben im Doppel (Art. 131 ZPO), mit Klagebewilligung bzw. Verzichts-/Ausnahme-Nachweis und den verfügbaren Beweisurkunden als Beilagen (Art. 221 Abs. 2 ZPO). Die örtliche und sachliche Zuständigkeit des angeschriebenen Gerichts ist selbst zu prüfen; Fristen (Art. 209 Abs. 3 ZPO) eigenverantwortlich wahren.",
+   "version": "1.0.0 (ZPO-Fassung seit 1.1.2025)"
+  },
+  "aufgenommen": [
+   "O01_absender",
+   "O02_adressat",
+   "O03_datum",
+   "O04_betreff",
+   "O05_rubrum",
+   "O06_begehren",
+   "O07_formelles",
+   "O08_tatsachen_intro",
+   "O08b_tatsachen",
+   "O09_recht_intro",
+   "O09b_recht",
+   "O10_beweisverzeichnis",
+   "O11_beilagen",
+   "O12_gruss",
+   "O13_unterschrift",
+   "O14_doppel"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "O01_absender",
+    "begruendung": "Absenderin = klagende Partei (bzw. Vertretung).",
+    "norm": "Art. 221 Abs. 1 lit. a ZPO"
+   },
+   {
+    "bausteinId": "O02_adressat",
+    "begruendung": "Erstinstanzliches Zivilgericht des gewählten Kantons (kantonale Gerichtsschicht; Handeingabe möglich).",
+    "norm": "Art. 4 ZPO"
+   },
+   {
+    "bausteinId": "O03_datum",
+    "begruendung": "Ort und Datum der Eingabe.",
+    "norm": "Art. 221 Abs. 1 lit. f ZPO"
+   },
+   {
+    "bausteinId": "O04_betreff",
+    "begruendung": "Betreff mit Verfahrensart und Streitwertangabe.",
+    "norm": "Art. 221 Abs. 1 lit. c ZPO"
+   },
+   {
+    "bausteinId": "O05_rubrum",
+    "begruendung": "Rubrum mit Parteien und Streitgegenstand.",
+    "norm": "Art. 221 Abs. 1 lit. a ZPO"
+   },
+   {
+    "bausteinId": "O06_begehren",
+    "begruendung": "Bezifferte (Art. 84 Abs. 2), unbezifferte (Art. 85) oder frei formulierte Begehren; Kostenfolge.",
+    "norm": "Art. 221 Abs. 1 lit. b ZPO"
+   },
+   {
+    "bausteinId": "O07_formelles",
+    "begruendung": "Zuständigkeit, Verfahrensart, Klagebewilligung/Verzicht/Ausnahme.",
+    "norm": "Art. 219/209 ZPO"
+   },
+   {
+    "bausteinId": "O08_tatsachen_intro",
+    "begruendung": "Pflicht-Begründung: Tatsachenbehauptungen mit Beweismitteln je Behauptung.",
+    "norm": "Art. 221 Abs. 1 lit. d/e ZPO"
+   },
+   {
+    "bausteinId": "O08b_tatsachen",
+    "begruendung": "Je Ziffer eine Behauptung; darunter die Beweisofferte («Beweis: …»).",
+    "norm": "Art. 221 Abs. 1 lit. d/e ZPO"
+   },
+   {
+    "bausteinId": "O09_recht_intro",
+    "begruendung": "Fakultative rechtliche Begründung.",
+    "norm": "Art. 221 Abs. 3 ZPO"
+   },
+   {
+    "bausteinId": "O09b_recht",
+    "begruendung": "Rechtliche Erwägungen, je Ziffer.",
+    "norm": "Art. 221 Abs. 3 ZPO"
+   },
+   {
+    "bausteinId": "O10_beweisverzeichnis",
+    "begruendung": "Verzeichnis aller bezeichneten Beweismittel — Pflichtbeilage.",
+    "norm": "Art. 221 Abs. 2 lit. d ZPO"
+   },
+   {
+    "bausteinId": "O11_beilagen",
+    "begruendung": "Vollmacht, Klagebewilligung/Verzicht, verfügbare Beweisurkunden.",
+    "norm": "Art. 221 Abs. 2 ZPO"
+   },
+   {
+    "bausteinId": "O12_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "O13_unterschrift",
+    "begruendung": "Eigenhändige Unterschrift (Gültigkeitserfordernis).",
+    "norm": "Art. 221 Abs. 1 lit. f ZPO"
+   },
+   {
+    "bausteinId": "O14_doppel",
+    "begruendung": "Exemplare-Hinweis nach Art. 131 ZPO.",
+    "norm": "Art. 131 ZPO"
+   }
+  ]
+ },
  "vorl:av": {
   "dokument": {
    "titel": "Einzelarbeitsvertrag",
