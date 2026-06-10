@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Field, inputCls } from './ui';
 import type { Kanton } from '../../types/legal';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
-import { amtFuer, AMT_KANTONE } from '../../data/schlichtung/amtAufloesung';
+import { amtFuer, AMT_KANTONE, vdAmtFuer } from '../../data/schlichtung/amtAufloesung';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
+import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
 
 // ─── Schlichtungsgesuch: Behörden-Auflösung für alle Kantone ────────────────
 // Kantonsübergreifender Ausbau (Anordnung David 5.6.2026). Reine Darstellung:
@@ -36,7 +37,7 @@ export function SgAdressatKachel({ zeilen, url }: { zeilen: string[]; url?: stri
   );
 }
 
-export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, startPlz = '', startGemeinde = '' }: {
+export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, startPlz = '', startGemeinde = '', streitwertCHF = null, arbeitsrechtlich = false }: {
   kanton: Kanton;
   /** Umbau 10.6.2026 (Auftrag David): auch paritätische Stellen (Miete/GlG)
    *  werden hier aufgelöst und als Adressat übernommen (Art. 200 ZPO).
@@ -50,14 +51,20 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
    *  voll editierbare Startwerte, keine Sperre. */
   startPlz?: string;
   startGemeinde?: string;
+  /** VD-Stufen-Weiche (Art. 41 CDPJ-VD, 11.6.2026): Streitwert des Gesuchs
+   *  (sgStreitwert) — bestimmt in VD die zuständige Instanz; null = ohne
+   *  bezifferten Streitwert keine Auto-Zuordnung (ehrlicher Fallback). */
+  streitwertCHF?: number | null;
+  /** Arbeitsrechtliche Streitigkeit — in VD eigene Kaskade über das
+   *  Tribunal de prud'hommes (Art. 2 LJT-VD). */
+  arbeitsrechtlich?: boolean;
 }) {
   const [plz, setPlz] = useState(startPlz);
   const [gemeinde, setGemeinde] = useState(startGemeinde);
   // MITTEL-Befund 6.6.2026: KEINE Auto-Vorwahl der ersten Regionalstelle —
   // massgeblich ist das Gebiet der beklagten Partei; bis zur Wahl wird null
   // gemeldet (Mängel-Gate hält den Export an).
-  const [wahlSchluessel, setWahlSchluessel] = useState<{ kanton: Kanton; typ: string; idx: number }>({ kanton, typ, idx: -1 });
-  const wahlIdx = wahlSchluessel.kanton === kanton && wahlSchluessel.typ === typ ? wahlSchluessel.idx : -1;
+  const [wahlSchluessel, setWahlSchluessel] = useState<{ kanton: Kanton; typ: string; stufe: string; idx: number }>({ kanton, typ, stufe: '', idx: -1 });
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   const [kreisIdx, setKreisIdx] = useState(0);
   const [amtZeilen, setAmtZeilen] = useState<string[] | null>(null);
@@ -67,7 +74,21 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   // übernehmen die PlzGemeindeWahl-Kacheln (§10) die Präzisierung.
   const [plzWahl, setPlzWahl] = useState<{ plz: string; treffer: PlzTreffer[] } | null>(null);
 
-  const recherche = schlichtungAufloesung(kanton, typ);
+  // VD: Stufe der zuständigen Instanz aus dem Streitwert (lib-Engine);
+  // ein bezifferter Streitwert gilt als vermögensrechtliche Streitigkeit.
+  // Memoisiert (stabile Referenz für den Lade-Effect, je Eingabe-Tupel).
+  const vdStufe = useMemo(() => (kanton === 'VD'
+    ? vdSchlichtungsStufe(streitwertCHF !== null, streitwertCHF)
+    : null), [kanton, streitwertCHF]);
+  // Stufen-Schlüssel: identifiziert die ANGEZEIGTE Stellen-Liste (Bug-Check
+  // 11.6.2026 HOCH: beim Stufenwechsel JdP↔TA müssen Stellen-Wahl und
+  // Schema-Meldung mitwechseln, sonst bleibt ein sachlich unzuständiger
+  // Adressat im Gesuch stehen).
+  const vdStufeKey = kanton === 'VD' ? `${vdStufe?.stufe ?? 'keine'}${arbeitsrechtlich ? '|arb' : ''}` : '';
+  const wahlIdx = wahlSchluessel.kanton === kanton && wahlSchluessel.typ === typ
+    && wahlSchluessel.stufe === vdStufeKey ? wahlSchluessel.idx : -1;
+  const recherche = schlichtungAufloesung(kanton, typ,
+    { vermoegensrechtlich: streitwertCHF !== null, streitwertCHF, arbeitsrechtlich });
   const modus = recherche?.aufloesung.modus ?? null;
 
   // PLZ → Gemeinde (amtliches Register); Amt → Adresse (7 Kantone)
@@ -95,14 +116,19 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       if (kanton === 'ZH' && g.toLowerCase() === 'zürich') {
         return { amt: null, amtUrl: undefined, kreise: await zuerichKreisAemter(), wahl };
       }
-      const a = await amtFuer(kanton, g);
+      // VD: stufengerechte Instanz (Art. 41 CDPJ-VD; Arbeit: Art. 2 LJT-VD)
+      // — ohne bezifferten Streitwert keine Auto-Zuordnung (die JdP wäre ab
+      // CHF 10'000 falsch).
+      const a = kanton === 'VD'
+        ? (vdStufe ? await vdAmtFuer(g, vdStufe.stufe, arbeitsrechtlich) : null)
+        : await amtFuer(kanton, g);
       return { amt: a ? [a.name, a.strasse, a.plzOrt] : null, amtUrl: a?.url, kreise: null, wahl };
     };
     lade()
       .then((r) => { if (aktiv) { setAmtZeilen(r.amt); setAmtUrl(r.amtUrl); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
       .catch(() => { if (aktiv) { setAmtZeilen(null); setAmtUrl(undefined); setZhKreise(null); setPlzWahl(null); } });
     return () => { aktiv = false; };
-  }, [kanton, typ, plz, gemeinde]);
+  }, [kanton, typ, plz, gemeinde, vdStufe, arbeitsrechtlich]);
 
   // Aufgelöste Zeilen ans Schema melden.
   // Bug-Check 10.6.2026 (MITTEL, fachlich): Beim GlG-Fallback (keine eigene
@@ -118,8 +144,10 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
     } else if (a.modus === 'liste') {
       // PLZ-/Gemeinde-Auflösung gilt auch in Listen-Kantonen (z. B. GR:
       // Vermittlerämter je Region) — Befund David 10.6.2026; die manuelle
-      // Stellen-Wahl bleibt als Übersteuerung.
-      const s = wahlIdx >= 0 ? a.stellen[Math.min(wahlIdx, a.stellen.length - 1)] : undefined;
+      // Stellen-Wahl bleibt als Übersteuerung. KEIN Index-Clamp (Bug-Check
+      // 11.6.2026: er bog einen Stufen-fremden Index still auf die letzte
+      // Stelle der neuen Liste um) — ausserhalb der Liste gilt -1.
+      const s = wahlIdx >= 0 && wahlIdx < a.stellen.length ? a.stellen[wahlIdx] : undefined;
       onAufgeloest(s
         ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
         : (typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? recherche.kantonsUrl } : null));
@@ -132,8 +160,11 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       // nach Typwechsel).
       onAufgeloest(typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? a.url } : null);
     }
+    // vdStufeKey in den Deps (Bug-Check 11.6.2026 HOCH): beim Stufenwechsel
+    // JdP↔TA blieben modus ('liste') und wahlIdx identisch — der Effect
+    // feuerte nicht und das Schema behielt die sachlich unzuständige Stelle.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [kanton, typ, modus, wahlIdx, amtZeilen, amtUrl, zhKreise, kreisIdx, glgOhneStelle]);
+  }, [kanton, typ, modus, vdStufeKey, wahlIdx, amtZeilen, amtUrl, zhKreise, kreisIdx, glgOhneStelle]);
 
   if (!recherche) return null;
   const a = recherche.aufloesung;
@@ -174,7 +205,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           )}
           <Field label={amtZeilen && wahlIdx < 0 ? 'Oder Stelle direkt wählen (übersteuert)' : 'Zuständige Stelle wählen'}
             hint={`${a.stellen.length} Stellen im Kanton ${kanton} — massgeblich ist das Gebiet der beklagten Partei bzw. der Sache`}>
-            <select className={inputCls} value={wahlIdx} onChange={(e) => setWahlSchluessel({ kanton, typ, idx: Number(e.target.value) })}>
+            <select className={inputCls} value={wahlIdx} onChange={(e) => setWahlSchluessel({ kanton, typ, stufe: vdStufeKey, idx: Number(e.target.value) })}>
               <option value={-1}>{amtZeilen ? '– automatisch (PLZ/Gemeinde) –' : '– Stelle wählen –'}</option>
               {a.stellen.map((s, i) => <option key={s.name} value={i}>{s.name} — {s.plzOrt}</option>)}
             </select>
@@ -209,9 +240,11 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             <p className="text-body-s text-ink-600">
               {a.beschreibung}.{' '}
               <a href={a.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">Amtliches Verzeichnis öffnen ↗</a>
-              {!paritaetisch && AMT_KANTONE.includes(kanton)
+              {!paritaetisch && AMT_KANTONE.includes(kanton) && !(kanton === 'VD' && !vdStufe)
                 ? ' — oder oben PLZ/Gemeinde eingeben für die automatische Zuordnung.'
-                : ' — Adresse dort entnehmen und unten von Hand erfassen.'}
+                : kanton === 'VD' && !vdStufe
+                  ? ' — sobald ein bezifferter Streitwert vorliegt, ordnet die Vorlage die Instanz automatisch zu; sonst Adresse dort entnehmen und unten von Hand erfassen.'
+                  : ' — Adresse dort entnehmen und unten von Hand erfassen.'}
             </p>
           )}
         </>

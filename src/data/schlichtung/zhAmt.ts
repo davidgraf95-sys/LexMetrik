@@ -16,13 +16,19 @@ export interface ZhKreisAmt extends ZhAmt { kreise: string }
  *  ins Leere, obwohl die Ämter erfasst sind. */
 export function namensKandidaten(gemeinde: string, kanton: string): string[] {
   const out = new Set<string>();
-  const basis = gemeinde.trim();
-  for (const v of [basis, basis.replace(/ \([A-Z]{2}\)$/, '')]) {
-    for (const w of [v, v.replace(/\bSt\.\s+/g, 'St.'), v.replace(/\bSt\.(?=\S)/g, 'St. ')]) {
-      out.add(w);
-      out.add(`${w} (${kanton})`);
-      const kurz = w.replace(/ (?:an der|an dem|am|bei|im) .+$/, '');
-      if (kurz !== w) out.add(kurz);
+  const roh = gemeinde.trim();
+  // Apostroph-Normalisierung beidseitig (Bug-Check 11.6.2026: handgetipptes
+  // «Château-d’Oex» mit U+2019 fand den ASCII-Schlüssel der BFS-/swisstopo-
+  // Daten nicht; macOS setzt typografische Apostrophe automatisch). Feste
+  // Abbildung U+2019↔U+0027, kein Fuzzy-Matching.
+  for (const basis of new Set([roh, roh.replace(/’/g, "'"), roh.replace(/'/g, '’')])) {
+    for (const v of [basis, basis.replace(/ \([A-Z]{2}\)$/, '')]) {
+      for (const w of [v, v.replace(/\bSt\.\s+/g, 'St.'), v.replace(/\bSt\.(?=\S)/g, 'St. ')]) {
+        out.add(w);
+        out.add(`${w} (${kanton})`);
+        const kurz = w.replace(/ (?:an der|an dem|am|bei|im) .+$/, '');
+        if (kurz !== w) out.add(kurz);
+      }
     }
   }
   return [...out];

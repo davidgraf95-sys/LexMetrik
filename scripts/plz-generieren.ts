@@ -109,6 +109,13 @@ for (const z of zuordnungMd.split('\n')) {
     if (aktuellerKanton && !kantonsDaten[aktuellerKanton]) kantonsDaten[aktuellerKanton] = { aemter: [], gemeinden: {} };
     continue;
   }
+  // Härtung 11.6.2026 (Folge-Befund zu Bug B1 vom 10.6.): JEDER andere
+  // «## »-Kopf beendet die aktive Kantons-Sektion. Ohne den Reset hingen
+  // die ALT-Sektionen (Teil 2: «## ALT … SZ/BL» nach «## 3. AI») weiter an
+  // der zuletzt matchenden Sektion — der nächste Lauf hätte AI still um
+  // 20 fremde Ämter + 103 fremde Gemeinde-Schlüssel erweitert (empirisch
+  // belegt via /tmp-Trockenlauf gegen den committeten Stand).
+  if (/^##\s/.test(z)) { aktuellerKanton = null; continue; }
   if (!aktuellerKanton || !z.startsWith('|')) continue;
   const t = z.split('|').map((x) => x.trim());
   // Datenzeile: 4 Spalten, keine Kopf-/Trennzeile
@@ -223,6 +230,34 @@ if (kantonsDaten.FR) {
     if (amtIdx !== undefined) gemeinden[r[idx('Name')]] = amtIdx;
   }
   kantonsDaten.FR.gemeinden = gemeinden;
+}
+// VD: «Districts»-Spalte → Gemeindelisten aus dem BFS-Verzeichnis (Level 2
+// VD trägt Präfixe «District de/du/de la/de l'/d'» — Match nach Präfix-
+// Abwurf; Apostrophe ASCII wie typografisch normalisiert). Verdrahtet
+// 11.6.2026; die JdP «Jura-Nord vaudois/Gros-de-Vaud» deckt ZWEI Districts.
+if (kantonsDaten.VD) {
+  const bfsV = readFileSync('/tmp/bfs_gemeinden.csv', 'utf-8').replace(/^\uFEFF/, '').split('\n').map((z) => z.split(','));
+  const kopfV = bfsV[0];
+  const ixV = (n: string) => kopfV.indexOf(n);
+  const byHistV = new Map(bfsV.slice(1).map((r) => [r[ixV('HistoricalCode')], r]));
+  const normApostroph = (s: string) => s.replace(/’/g, "'");
+  const distriktName = new Map<string, string>(); // HistCode → Kurzname
+  for (const r of bfsV.slice(1)) {
+    if (r[ixV('Level')] === '2' && byHistV.get(r[ixV('Parent')])?.[ixV('ShortName')] === 'VD' && !r[ixV('ValidTo')]) {
+      distriktName.set(r[ixV('HistoricalCode')],
+        normApostroph(r[ixV('Name')]).replace(/^District (?:de la |de l'|du |de |d')/, '').trim());
+    }
+  }
+  const distZuIdx = new Map<string, number>();
+  for (const [d, i] of Object.entries(kantonsDaten.VD.gemeinden)) distZuIdx.set(normApostroph(d), i);
+  const neuVD: Record<string, number> = {};
+  for (const r of bfsV.slice(1)) {
+    if (r[ixV('Level')] === '3' && distriktName.has(r[ixV('Parent')]) && !r[ixV('ValidTo')]) {
+      const idx = distZuIdx.get(distriktName.get(r[ixV('Parent')])!);
+      if (idx !== undefined) neuVD[r[ixV('Name')]] = idx;
+    }
+  }
+  kantonsDaten.VD.gemeinden = neuVD;
 }
 writeFileSync('src/data/schlichtung/aemterKantone.json', JSON.stringify(kantonsDaten));
 console.log('Nachbearbeitung:', Object.entries(kantonsDaten).map(([k, d]) => `${k}=${d.aemter.length}Ä/${Object.keys(d.gemeinden).length}G`).join(' · '));

@@ -12,7 +12,10 @@ describe('Schlichtungsstellen — Vollständigkeit & Integrität', () => {
       const e = SCHLICHTUNGSSTELLEN[k];
       expect(e, k).toBeDefined();
       expect(e.quelle.length, k).toBeGreaterThan(5);
-      expect(e.stand, k).toBe('5.6.2026');
+      // Deklarierte Anpassung 11.6.2026: VD wurde mit der Streitwert-Weiche
+      // neu verifiziert (eigener Stand) — übrige Kantone bleiben am
+      // Recherche-Stand 5.6.2026 festgenagelt.
+      expect(e.stand, k).toBe(k === 'VD' ? '11.6.2026' : '5.6.2026');
       expect(['zentral', 'liste', 'verzeichnis']).toContain(e.ordentlich.modus);
     }
   });
@@ -198,11 +201,14 @@ describe('Paritätische Stellen (Miete/GlG) — kantonsrichtige Stopp-Karte (Auf
     expect(r.aufloesung.modus).toBe('zentral');
     if (r.aufloesung.modus === 'zentral') expect(r.aufloesung.stelle.plzOrt).toBe('1205 Genève');
   });
-  it('paritaetisch_glg: eigene Stelle nur ZH/BS, sonst deklarierter Fallback auf die ordentliche Behörde', () => {
+  it('paritaetisch_glg: eigene Stelle nur ZH/BS/VD, sonst deklarierter Fallback auf die ordentliche Behörde', () => {
+    // Deklarierte Erweiterung 11.6.2026: VD weist GlG-Streitigkeiten dem
+    // Tribunal de prud'hommes zu (Art. 1 Abs. 1 lit. c LJT-VD) — echte
+    // Stelle, kein Fallback (Detail-Tests in vdSchlichtung.test.ts).
     for (const k of KANTONE) {
       const r = schlichtungAufloesung(k, 'paritaetisch_glg');
       expect(r, k).not.toBeNull();
-      expect(r!.glgFallback, k).toBe(!(k === 'ZH' || k === 'BS'));
+      expect(r!.glgFallback, k).toBe(!(k === 'ZH' || k === 'BS' || k === 'VD'));
     }
   });
 });

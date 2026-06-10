@@ -505,13 +505,85 @@ Alpthal, Wangen — dort Dropdown/Handeingabe. 26/30 Gemeinden automatisch.
 | Vermittleramt Vorderthal | Kreuzstrasse 30 | 8854 Siebnen | Vorderthal | https://www.vorderthal.ch/verwaltung/vermittler |
 | Vermittleramt Innerthal | Mühlestrasse 16 | 8855 Wangen | Innerthal | https://www.innerthal.ch/verwaltung/vermittleramt-1456 |
 
-## VD (kein Generator-Eintrag) — KEINE eigene Schlichtungsstelle (Struktur-Befund 10.6.2026) — GENERATOR-OFFEN
+## 37. VD — Justices de paix je District (Streitwert-Stufe < CHF 10'000) — VERDRAHTET 11.6.2026 (BFS-Join)
 
-Schlichtung «par le juge matériellement compétent» (Art. 41 CDPJ-VD;
-Circulaire TC Nr. 18 v. 9.11.2010): < CHF 10'000 Juge de paix (9 je
-District), CHF 10'000–100'000 Tribunal d'arrondissement (4; Districts:
-Lausanne+Ouest lausannois · Morges+Nyon · Broye-Vully+Gros-de-Vaud+
-Jura-Nord vaudois · Aigle+Lavaux-Oron+Riviera-Pays-d'Enhaut), > 100'000
-Chambre patrimoniale (Schwelle nicht wörtlich verifiziert — OFFEN); Miete
-CCBL, Arbeit ≤ 30k prud'hommes. Auto-Zuordnung braucht Streitwert-Weiche +
-Justices-de-paix-Adressen (nicht erhoben) → eigener Bauschritt.
+**Normlage WÖRTLICH verifiziert 11.6.2026** (LOJV BLV 173.01, konsolidierte
+Fassung via Lexfind-Spiegel der BLV-Publikation; CDPJ BLV 211.02; Arrêté
+AAJTJ BLV 173.01.2, Fassung in Kraft seit 1.9.2008):
+
+- **Art. 41 Abs. 1 CDPJ:** «Le juge de la tentative de conciliation est le
+  juge matériellement compétent pour l'instance au fond.» Abs. 2: bei einem
+  Kollegialgericht der juge délégué (für die Chambre patrimoniale
+  ausdrücklich Art. 42 Abs. 1 CDPJ). Abs. 3: Spezialgesetze vorbehalten
+  (Miete → Commission préfectorale; Arbeit inkl. GlG → LJT, unten).
+- **Arbeitsrecht inkl. GlG — LJT (BLV 173.61), wörtlich verifiziert
+  11.6.2026 (Bug-Check-Befund: die ordentliche Kaskade gilt hier NICHT):**
+  Art. 1 Abs. 1 (Geltung: Arbeitsvertrag, AVG-Verleih, GlG,
+  Mitwirkungsgesetz) · Art. 2 Abs. 1: a. Tribunal de prud'hommes
+  «n'excède pas 30'000» · b. Tribunal d'arrondissement > 30'000 bis
+  ≤ 100'000 · c. Chambre patrimoniale > 100'000 · Art. 2 Abs. 2: nur-GlG
+  ohne Geldbegehren → prud'hommes streitwertunabhängig · Art. 5: das
+  prud'hommes ist die spezialisierte Kammer JEDES Tribunal
+  d'arrondissement (= dessen Anschrift) · Art. 10 Abs. 2: Schlichtung
+  ohne Beisitzer, Art. 200 Abs. 2 ZPO (GlG-Parität) vorbehalten.
+- **Art. 113 Abs. 1bis LOJV:** Juge de paix für vermögensrechtliche
+  Streitigkeiten **unter CHF 10'000** («inférieure à 10'000 francs …
+  Cette règle est impérative»).
+- **Art. 96d Abs. 2 LOJV:** Präsident des Tribunal d'arrondissement
+  **CHF 10'000 bis 30'000** («comprise entre 10'000 et 30'000 francs»).
+- **Art. 96b Abs. 3 LOJV:** Tribunal d'arrondissement (Kollegium)
+  **über CHF 30'000 bis und mit 100'000** («supérieure à 30'000 …
+  inférieure ou égale à 100'000»).
+- **Art. 96g LOJV:** Chambre patrimoniale cantonale **über CHF 100'000**
+  («supérieure à 100'000 francs»); Art. 96f: der Kammer-Sitz ist beim
+  Tribunal d'arrondissement de Lausanne. Damit ist die im Struktur-Befund
+  10.6.2026 offene >-100k-Schwelle wörtlich geschlossen; die dortige Angabe
+  «10'000–100'000 Tribunal d'arrondissement» war ungenau (Stufe 10–30k =
+  Präsident als Einzelrichter, gleicher Sitz/gleiche Adresse).
+- Frühere Dossier-Notiz «Justices-de-paix-Adressen nicht erhoben» ist
+  überholt: alle 9 Adressen seit 6.6.2026 WebFetch-verifiziert (vd.ch/ojv).
+
+Korrektur der alten Distrikts-Angabe: Die **Arrondissement-Einteilung**
+folgt dem AAJTJ Art. 1 (nicht dem Struktur-Befund): Lausanne =
+Lausanne + Ouest lausannois (Sitz Lausanne) · La Côte = Morges + Nyon
+(Sitz Nyon) · Est vaudois = Aigle + Lavaux-Oron + Riviera-Pays-d'Enhaut
+(Sitz **Vevey**) · Broye et Nord vaudois = Broye-Vully + Gros-de-Vaud +
+Jura-Nord vaudois (Sitz Yverdon-les-Bains).
+
+Generator-Muster wie BE: Spalte 4 trägt die **Districts** (BFS-Level-2-
+Namen ohne Präfix «District de/du/d'/de la/de l'»); `plz-generieren.ts`
+löst sie über den BFS-Snapshot (/tmp/bfs_gemeinden.csv, agvchapp 1.6.2026)
+in die 300 VD-Gemeinden auf. Die Justice de paix «Jura-Nord vaudois et
+Gros-de-Vaud» deckt amtlich ZWEI Districts (vd.ch/ojv).
+
+| Amt | Strasse | PLZ Ort | Districts | URL |
+| --- | --- | --- | --- | --- |
+| Justice de paix Lausanne | Côtes-de-Montbenon 8 | 1014 Lausanne | Lausanne | https://www.vd.ch/ojv/justices-de-paix/lausanne |
+| Justice de paix Ouest lausannois | Av. de Longemalle 1 | 1020 Renens | Ouest lausannois | https://www.vd.ch/ojv/justices-de-paix/ouest-lausannois |
+| Justice de paix Morges | Rue Saint-Louis 2 | 1110 Morges | Morges | https://www.vd.ch/ojv/justices-de-paix/morges |
+| Justice de paix Nyon | Rue Jules-Gachet 5 | 1260 Nyon | Nyon | https://www.vd.ch/ojv/justices-de-paix/nyon |
+| Justice de paix Aigle | Hôtel de Ville, Place du Marché 1 | 1860 Aigle | Aigle | https://www.vd.ch/ojv/justices-de-paix/aigle |
+| Justice de paix Riviera | Rue du Musée 6 | 1800 Vevey | Riviera-Pays-d'Enhaut | https://www.vd.ch/ojv/justices-de-paix/riviera-pays-denhaut |
+| Justice de paix Lavaux-Oron | Rue Davel 9 | 1096 Cully | Lavaux-Oron | https://www.vd.ch/ojv/justices-de-paix/lavaux-oron |
+| Justice de paix Broye-Vully | Rue de la Gare 45 | 1530 Payerne | Broye-Vully | https://www.vd.ch/ojv/justices-de-paix/broye-vully |
+| Justice de paix Jura-Nord vaudois/Gros-de-Vaud | Rue des Moulins 10, Case postale | 1401 Yverdon-les-Bains | Jura-Nord vaudois, Gros-de-Vaud | https://www.vd.ch/ojv/justices-de-paix/jura-nord-vaudois-et-gros-de-vaud |
+
+**Tribunaux d'arrondissement + Chambre patrimoniale (Stufen ≥ CHF 10'000)** —
+Adressen WebFetch-verifiziert 11.6.2026 an den vd.ch/ojv-Detailseiten; die
+Daten leben in `src/data/schlichtungsstellen.ts` (VD_TRIBUNAUX /
+VD_CHAMBRE_PATRIMONIALE), NICHT in der Generator-Tabelle oben. Bewusst als
+Liste statt Tabelle (Bug-B1-Muster: `|`-Zeilen in der VD-Sektion würde der
+Generator als weitere «Justices de paix» einlesen und die Districts-Spalte
+würde die Gemeinde-Zuordnung überschreiben):
+
+- Tribunal d'arrondissement de Lausanne · Allée E.-Ansermet 2, Palais de justice de Montbenon · 1014 Lausanne · Districts Lausanne + Ouest lausannois · https://www.vd.ch/ojv/tribunaux-darrondissement/lausanne
+- Tribunal d'arrondissement de La Côte · Route de Saint-Cergue 38 · 1260 Nyon · Districts Morges + Nyon · https://www.vd.ch/ojv/tribunaux-darrondissement/la-cote
+- Tribunal d'arrondissement de l'Est vaudois · Cour-au-Chantre, Rue du Simplon 22 · 1800 Vevey · Districts Aigle + Lavaux-Oron + Riviera-Pays-d'Enhaut · https://www.vd.ch/ojv/tribunaux-darrondissement/est-vaudois
+- Tribunal d'arrondissement de la Broye et du Nord vaudois · Rue des Moulins 8, Case postale · 1401 Yverdon-les-Bains · Districts Broye-Vully + Gros-de-Vaud + Jura-Nord vaudois · https://www.vd.ch/ojv/tribunaux-darrondissement/broye-et-nord-vaudois
+- Chambre patrimoniale cantonale · Allée E.-Ansermet 2, Palais de justice de Montbenon · 1014 Lausanne · ganzer Kanton (Art. 96f LOJV: beim TA Lausanne) · https://www.vd.ch/ojv/chambre-patrimoniale-cantonale
+
+**Pflegebedarf:** Schwellenwerte (10'000/30'000/100'000) sind Gesetzes-
+Parameter (LOJV-Revisionen beobachten, kein fixes Verfallsdatum);
+TA-Adressen wie übrige Behördenadressen jährlich mit dem BWO-Durchgang.
+**Abnahme-Status:** Normlage + Adressen Erstrecherche wörtlich am amtlichen
+Erlass (11.6.2026); fachliche Abnahme durch David ausstehend.

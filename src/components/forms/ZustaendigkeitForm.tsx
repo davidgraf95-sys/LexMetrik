@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { EckdatenKachel, ErgebnisSprung, FehlerBox, Field, LiveHeader, Stepper, inputCls } from '../vorlagen/ui';
 import { SelectionGrid } from '../ui/SelectionGrid';
@@ -31,7 +31,8 @@ import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
-import { amtFuer, AMT_KANTONE, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
+import { amtFuer, AMT_KANTONE, vdAmtFuer, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
+import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
 import { kvPrefillKodieren, type KvMaterie } from '../../lib/vorlagen/klageVereinfacht';
@@ -240,9 +241,25 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
     return () => { aktiv = false; };
   }, [f.plz]);
 
+  const istMiete = f.streitsache === 'miete_wohn_geschaeft';
+  const istArbeit = f.streitsache === 'arbeit';
+  const istGeld = f.streitsache === 'geldforderung';
+  const istScheidung = f.streitsache === 'scheidung';
+
+  // Scheidung: nicht vermögensrechtlich, kein Streitwert (UI blendet aus).
+  const vermoegensrechtlich = istScheidung ? false : f.vermoegensrechtlich;
+  const streitwert = f.streitwertRoh.trim() === '' ? null : Number(f.streitwertRoh);
+  // VD-Sonderfall (Art. 41 CDPJ-VD): die Schlichtungsinstanz hängt vom
+  // Streitwert ab — Stufe aus der reinen Engine (lib/vdSchlichtung.ts);
+  // memoisiert (stabile Referenz je Eingabe-Tupel für den Amts-Effect).
+  const vdStufe = useMemo(() => (f.kanton === 'VD'
+    ? vdSchlichtungsStufe(vermoegensrechtlich, vermoegensrechtlich ? streitwert : null)
+    : null), [f.kanton, vermoegensrechtlich, streitwert]);
+
   // ── Konkretes Schlichtungsamt über Gemeinde (PLZ→Gemeinde→Amt) ────────────
   // Aufgelöste Kantone: AMT_KANTONE (ZH/AG/SG/TG; Ausbau folgt mit den
   // weiteren Gemeinde-Zuordnungen). Stadt Zürich: sechs Kreis-Ämter.
+  // VD: stufengerechte Instanz (JdP/TA/Chambre) statt pauschalem Amt.
   const [amt, setAmt] = useState<SchlichtungsAmt | null>(null);
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   useEffect(() => {
@@ -254,22 +271,18 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
       if (kanton === 'ZH' && gemeinde.toLowerCase() === 'zürich') {
         return { amt: null, kreise: await zuerichKreisAemter() };
       }
+      if (kanton === 'VD') {
+        if (!vdStufe) return { amt: null, kreise: null };
+        // Arbeit: prud'hommes-Kaskade (Art. 2 LJT-VD, Bug-Check 11.6.2026)
+        return { amt: await vdAmtFuer(gemeinde, vdStufe.stufe, istArbeit), kreise: null };
+      }
       return { amt: await amtFuer(kanton, gemeinde), kreise: null };
     };
     lade()
       .then((r) => { if (aktiv) { setAmt(r.amt); setZhKreise(r.kreise); } })
       .catch(() => { if (aktiv) { setAmt(null); setZhKreise(null); } });
     return () => { aktiv = false; };
-  }, [f.kanton, f.gemeinde]);
-
-  const istMiete = f.streitsache === 'miete_wohn_geschaeft';
-  const istArbeit = f.streitsache === 'arbeit';
-  const istGeld = f.streitsache === 'geldforderung';
-  const istScheidung = f.streitsache === 'scheidung';
-
-  // Scheidung: nicht vermögensrechtlich, kein Streitwert (UI blendet aus).
-  const vermoegensrechtlich = istScheidung ? false : f.vermoegensrechtlich;
-  const streitwert = f.streitwertRoh.trim() === '' ? null : Number(f.streitwertRoh);
+  }, [f.kanton, f.gemeinde, vdStufe, istArbeit]);
   const fehler: string[] = [];
   if (vermoegensrechtlich && streitwert === null) fehler.push('Streitwert angeben (oder «nicht vermögensrechtlich» wählen).');
   if (vermoegensrechtlich && streitwert !== null && (!Number.isFinite(streitwert) || streitwert < 0)) fehler.push('Streitwert muss eine Zahl ≥ 0 sein.');
@@ -320,7 +333,8 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   // Recherche-Schicht (Anordnung David 5.6.2026): konkrete Stelle für ALLE
   // Kantone — abgenommene Stammdaten (behoerden.ts) haben Vorrang.
   const recherche = r && f.kanton && !stelle && f.instanz === 'einleitung' && r.schlichtung.obligatorisch
-    ? schlichtungAufloesung(f.kanton, r.schlichtung.behoerdeTyp)
+    ? schlichtungAufloesung(f.kanton, r.schlichtung.behoerdeTyp,
+      { vermoegensrechtlich, streitwertCHF: vermoegensrechtlich ? streitwert : null, arbeitsrechtlich: istArbeit })
     : null;
   const kantonOffen = f.kanton !== '' && !kantonErfasst(f.kanton) && !recherche;
   const kantonDaten = f.kanton ? kantonZustaendigkeit(f.kanton) : null;
@@ -1120,6 +1134,21 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               {recherche.aufloesung.modus === 'liste' && (
                 <div className="space-y-2">
                   {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500">{recherche.aufloesung.hinweis} — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
+                  {/* VD (11.6.2026): konkrete Instanz aus PLZ/Gemeinde + Streit-
+                      wert-Stufe (Art. 41 CDPJ-VD) — die Liste darunter bleibt
+                      als Übersicht aller Stellen der Stufe stehen. */}
+                  {f.kanton === 'VD' && amt && (
+                    <div className="border-b border-line pb-2">
+                      <p className="text-body-s text-ink-900 whitespace-pre-line">
+                        {amt.url ? (
+                          <a href={amt.url} target="_blank" rel="noopener noreferrer"
+                            className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">{amt.name} ↗</a>
+                        ) : <span className="font-medium">{amt.name}</span>}
+                        {'\n'}{amt.strasse}{'\n'}{amt.plzOrt}
+                      </p>
+                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} und den Streitwert (amtl. Ortschaftenverzeichnis + Art. 41 CDPJ-VD).</p>
+                    </div>
+                  )}
                   <ul className="space-y-1.5 max-h-64 overflow-y-auto pr-1">
                     {recherche.aufloesung.stellen.map((s) => (
                       <li key={s.name + s.plzOrt} className="text-body-s text-ink-800">
@@ -1164,7 +1193,10 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                   {!(amtAufloesbar && (amt || zhKreise)) && (
                     <p className="text-body-s text-ink-800">
                       {recherche.aufloesung.beschreibung}.{' '}
-                      {amtAufloesbar && (
+                      {/* VD ohne Streitwert-Stufe: die PLZ-Auflösung ist hier
+                          bewusst inaktiv — Hinweis unterdrücken (Bug-Check
+                          11.6.2026). */}
+                      {amtAufloesbar && !(f.kanton === 'VD' && !vdStufe) && (
                         <span className="text-ink-500">PLZ oder Gemeinde eingeben für die konkrete Amts-Adresse. </span>
                       )}
                       <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">

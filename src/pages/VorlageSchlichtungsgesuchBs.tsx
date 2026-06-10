@@ -194,6 +194,7 @@ export function VorlageSchlichtungsgesuchBs() {
               <SgBehoerdenWahl kanton={a.gerichtsKanton}
                 typ={routing?.dokument ? routing.behoerdeTyp : 'ordentlich'}
                 startPlz={prefillOrt.plz} startGemeinde={prefillOrt.gemeinde}
+                streitwertCHF={sw} arbeitsrechtlich={a.streitgegenstandTyp === 'arbeitsrecht'}
                 onAufgeloest={(z) => set('behoerdeAufgeloest', z ?? undefined)} />
             )}
             {routing?.dokument && routing.behoerdeTyp !== 'ordentlich' && (

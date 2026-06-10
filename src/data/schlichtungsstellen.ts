@@ -1,5 +1,6 @@
 import type { Kanton } from '../types/legal';
 import type { SchlichtungsbehoerdeTyp } from '../lib/zustaendigkeit';
+import { vdArbeitsStufe, vdSchlichtungsStufe, VD_GLG_OHNE_GELD_TEXT, VD_KASKADE_TEXT } from '../lib/vdSchlichtung';
 
 // ─── Schlichtungsstellen aller Kantone (Recherche-Schicht) ──────────────────
 //
@@ -64,6 +65,39 @@ export const BS_ADRESSEN = {
   miete: { strasse: 'Grenzacherstrasse 62', plzOrt: '4005 Basel' },
   diskriminierung: { strasse: 'Grenzacherstrasse 62', plzOrt: '4005 Basel' },
 } as const;
+
+// ─── VD: Instanzen der Streitwert-Stufen ≥ CHF 10'000 (Dossier §37) ──────────
+// Adressen WebFetch-verifiziert 11.6.2026 (vd.ch/ojv-Detailseiten); die
+// Arrondissement-Einteilung folgt dem AAJTJ (BLV 173.01.2, Art. 1/2).
+export const VD_TRIBUNAUX: SchlichtungsAdresse[] = [
+  A('Tribunal d’arrondissement de Lausanne', 'Allée E.-Ansermet 2, Palais de justice de Montbenon', '1014 Lausanne', 'Districts Lausanne und Ouest lausannois', undefined, 'https://www.vd.ch/ojv/tribunaux-darrondissement/lausanne'),
+  A('Tribunal d’arrondissement de La Côte', 'Route de Saint-Cergue 38', '1260 Nyon', 'Districts Morges und Nyon', undefined, 'https://www.vd.ch/ojv/tribunaux-darrondissement/la-cote'),
+  A('Tribunal d’arrondissement de l’Est vaudois', 'Cour-au-Chantre, Rue du Simplon 22', '1800 Vevey', 'Districts Aigle, Lavaux-Oron und Riviera-Pays-d’Enhaut', 'Verhandlungen überwiegend an der Rue du Musée 6, Vevey (vd.ch)', 'https://www.vd.ch/ojv/tribunaux-darrondissement/est-vaudois'),
+  A('Tribunal d’arrondissement de la Broye et du Nord vaudois', 'Rue des Moulins 8, Case postale', '1401 Yverdon-les-Bains', 'Districts Broye-Vully, Gros-de-Vaud und Jura-Nord vaudois', undefined, 'https://www.vd.ch/ojv/tribunaux-darrondissement/broye-et-nord-vaudois'),
+];
+export const VD_CHAMBRE_PATRIMONIALE: SchlichtungsAdresse =
+  A('Chambre patrimoniale cantonale', 'Allée E.-Ansermet 2, Palais de justice de Montbenon', '1014 Lausanne', 'ganzer Kanton (Art. 96f LOJV-VD: beim Tribunal d’arrondissement de Lausanne)', undefined, 'https://www.vd.ch/ojv/chambre-patrimoniale-cantonale');
+// Justice de paix (Name wie in aemterKantone.json/Dossier §37) → Index in
+// VD_TRIBUNAUX. Eindeutig, weil die Doppel-District-JdP (Jura-Nord vaudois/
+// Gros-de-Vaud) beide Districts im selben Arrondissement hat.
+export const VD_JDP_ZU_TA: Record<string, number> = {
+  'Justice de paix Lausanne': 0,
+  'Justice de paix Ouest lausannois': 0,
+  'Justice de paix Morges': 1,
+  'Justice de paix Nyon': 1,
+  'Justice de paix Aigle': 2,
+  'Justice de paix Riviera': 2,
+  'Justice de paix Lavaux-Oron': 2,
+  'Justice de paix Broye-Vully': 3,
+  'Justice de paix Jura-Nord vaudois/Gros-de-Vaud': 3,
+};
+/** Amtliche Instanz-Suche des Kantons (Gemeinde/PLZ → zuständige Instanz). */
+export const VD_INSTANZSUCHE_URL = 'https://www.vd.ch/justice/le-pouvoir-judiciaire/recherche-de-linstance-judiciaire-competente';
+// Arbeitsrecht inkl. GlG (LJT-VD): das Tribunal de prud'hommes ist die
+// spezialisierte Kammer JEDES Tribunal d'arrondissement (Art. 5 LJT) —
+// gleiche Anschrift wie das TA; verlinkt wird die verifizierte TA-Seite.
+export const VD_PRUDHOMMES: SchlichtungsAdresse[] = VD_TRIBUNAUX.map((t) =>
+  A(`Tribunal de prud’hommes (${t.name})`, t.strasse, t.plzOrt, t.zustaendigFuer, undefined, t.url));
 
 export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   ZH: {
@@ -296,9 +330,13 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     },
   },
   VD: {
-    stand: '5.6.2026', quelle: 'vd.ch/ojv (justices de paix — alle 9 amtlich; Miete: 10 commissions préfectorales)',
+    stand: '11.6.2026', quelle: 'vd.ch/ojv (9 justices de paix · 4 tribunaux d’arrondissement · chambre patrimoniale) · LOJV/CDPJ am konsolidierten Erlass verifiziert; Miete: 10 commissions préfectorales',
+    // VD-Sonderfall (Dossier §37): KEINE eigene Schlichtungsstelle — die
+    // sachlich zuständige Instanz schlichtet selbst (Art. 41 CDPJ-VD).
+    // schlichtungAufloesung() ersetzt diesen Eintrag streitwertabhängig
+    // (lib/vdSchlichtung.ts); die JdP-Liste hier ist die Stufe < CHF 10'000.
     ordentlich: {
-      modus: 'liste', hinweis: 'neun Justices de paix (Friedensgerichte) als Schlichtungsbehörde',
+      modus: 'liste', hinweis: 'neun Justices de paix (Friedensgerichte) als Schlichtungsbehörde für Streitwerte unter CHF 10’000 (Art. 113 Abs. 1bis LOJV-VD)',
       stellen: [
         // url je Justice de paix: Erstrecherche 6.6.2026 (WebFetch verifiziert) — vd.ch/ojv
         A('Justice de paix Lausanne', 'Côtes-de-Montbenon 8', '1014 Lausanne', 'District Lausanne', undefined, 'https://www.vd.ch/ojv/justices-de-paix/lausanne'),
@@ -309,7 +347,8 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
         A('Justice de paix Riviera', 'Rue du Musée 6', '1800 Vevey', 'Riviera–Pays-d’Enhaut', undefined, 'https://www.vd.ch/ojv/justices-de-paix/riviera-pays-denhaut'),
         A('Justice de paix Lavaux-Oron', 'Rue Davel 9', '1096 Cully', 'Lavaux-Oron', undefined, 'https://www.vd.ch/ojv/justices-de-paix/lavaux-oron'),
         A('Justice de paix Broye-Vully', 'Rue de la Gare 45', '1530 Payerne', 'Broye-Vully', undefined, 'https://www.vd.ch/ojv/justices-de-paix/broye-vully'),
-        A('Justice de paix Jura-Nord vaudois/Gros-de-Vaud', 'Rue des Moulins 10', '1400 Yverdon-les-Bains', 'JNV + Gros-de-Vaud', undefined, 'https://www.vd.ch/ojv/justices-de-paix/jura-nord-vaudois-et-gros-de-vaud'),
+        // Postanschrift amtlich mit Postfach (Bug-Check 11.6.2026: vd.ch führt «Case postale, 1401»)
+        A('Justice de paix Jura-Nord vaudois/Gros-de-Vaud', 'Rue des Moulins 10, Case postale', '1401 Yverdon-les-Bains', 'JNV + Gros-de-Vaud', undefined, 'https://www.vd.ch/ojv/justices-de-paix/jura-nord-vaudois-et-gros-de-vaud'),
       ],
     },
     miete: { modus: 'verzeichnis', beschreibung: '10 Commissions préfectorales de conciliation (eine je District)', url: 'https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/prestations-des-prefectures/commissions-prefectorales-de-conciliation' },
@@ -360,18 +399,68 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   },
 };
 
+/** Streitwert-Kontext für Kantone, deren ordentliche Schlichtungsinstanz
+ *  streitwertabhängig ist (heute nur VD, Art. 41 CDPJ-VD). */
+export interface SchlichtungsKontext {
+  vermoegensrechtlich: boolean;
+  streitwertCHF: number | null;
+  /** Arbeitsrechtliche Streitigkeit (inkl. AVG) — in VD eigene Kaskade
+   *  über das Tribunal de prud'hommes (Art. 2 LJT-VD). */
+  arbeitsrechtlich?: boolean;
+}
+
+/** VD: ordentliche Auflösung nach Streitwert-Stufe (Dossier §37). Ohne
+ *  bezifferten Streitwert KEINE Stellen-Liste (die pauschale JdP-Liste wäre
+ *  ab CHF 10'000 falsch) — stattdessen die Kaskade + amtliche Instanzsuche.
+ *  Arbeitsrecht: LJT-Kaskade (prud'hommes ≤ 30'000, Bug-Check 11.6.2026). */
+function vdOrdentlich(kontext: SchlichtungsKontext | undefined, jdpListe: SchlichtungsAufloesung): SchlichtungsAufloesung {
+  if (kontext?.arbeitsrechtlich) {
+    const a = vdArbeitsStufe(kontext.vermoegensrechtlich ? kontext.streitwertCHF : null);
+    if (!a) return { modus: 'verzeichnis', beschreibung: VD_KASKADE_TEXT, url: VD_INSTANZSUCHE_URL };
+    if (a.instanz === 'prudhommes') return { modus: 'liste', stellen: VD_PRUDHOMMES, hinweis: a.text };
+    if (a.instanz === 'chambre_patrimoniale') {
+      return { modus: 'zentral', stelle: { ...VD_CHAMBRE_PATRIMONIALE, hinweis: a.text } };
+    }
+    return { modus: 'liste', stellen: VD_TRIBUNAUX, hinweis: a.text };
+  }
+  const s = kontext ? vdSchlichtungsStufe(kontext.vermoegensrechtlich, kontext.streitwertCHF) : null;
+  if (!s) return { modus: 'verzeichnis', beschreibung: VD_KASKADE_TEXT, url: VD_INSTANZSUCHE_URL };
+  if (s.stufe === 'justice_de_paix') {
+    return jdpListe.modus === 'liste' ? { ...jdpListe, hinweis: s.text } : jdpListe;
+  }
+  if (s.stufe === 'chambre_patrimoniale') {
+    return { modus: 'zentral', stelle: { ...VD_CHAMBRE_PATRIMONIALE, hinweis: s.text } };
+  }
+  return { modus: 'liste', stellen: VD_TRIBUNAUX, hinweis: s.text };
+}
+
+/** VD-GlG: das Tribunal de prud'hommes ist die GlG-Instanz (Art. 1 Abs. 1
+ *  lit. c LJT-VD) — mit Geldbegehren nach der Streitwert-Kaskade (Art. 2
+ *  Abs. 1), ohne Geldbegehren streitwertunabhängig (Art. 2 Abs. 2). */
+function vdGlg(kontext: SchlichtungsKontext | undefined): SchlichtungsAufloesung {
+  const sw = kontext && kontext.vermoegensrechtlich ? kontext.streitwertCHF : null;
+  if (sw === null) return { modus: 'liste', stellen: VD_PRUDHOMMES, hinweis: VD_GLG_OHNE_GELD_TEXT };
+  return vdOrdentlich({ vermoegensrechtlich: true, streitwertCHF: sw, arbeitsrechtlich: true },
+    { modus: 'liste', stellen: VD_PRUDHOMMES });
+}
+
 /** Auflösung für Kanton + Behördentyp; GlG fällt mangels eigener Stelle auf
- *  die ordentliche Behörde zurück (mit Hinweis in der UI). */
-export function schlichtungAufloesung(kanton: Kanton, typ: SchlichtungsbehoerdeTyp): {
+ *  die ordentliche Behörde zurück (mit Hinweis in der UI). Der optionale
+ *  Streitwert-Kontext steuert die VD-Stufen-Weiche. */
+export function schlichtungAufloesung(kanton: Kanton, typ: SchlichtungsbehoerdeTyp, kontext?: SchlichtungsKontext): {
   aufloesung: SchlichtungsAufloesung; stand: string; quelle: string; glgFallback: boolean; kantonsUrl?: string;
 } | null {
   const k = SCHLICHTUNGSSTELLEN[kanton];
   if (!k) return null;
+  const ordentlich = kanton === 'VD' ? vdOrdentlich(kontext, k.ordentlich) : k.ordentlich;
   if (typ === 'paritaetisch_miete' && k.miete) return { aufloesung: k.miete, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
   if (typ === 'paritaetisch_glg') {
     if (k.glg) return { aufloesung: k.glg, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
-    return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true, kantonsUrl: k.url };
+    // VD: GlG ist gesetzlich dem Tribunal de prud'hommes zugewiesen (Art. 1
+    // Abs. 1 lit. c LJT-VD) — echte Stelle, kein Fallback-Disclaimer.
+    if (kanton === 'VD') return { aufloesung: vdGlg(kontext), stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
+    return { aufloesung: ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true, kantonsUrl: k.url };
   }
-  if (typ === 'paritaetisch_miete') return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true, kantonsUrl: k.url };
-  return { aufloesung: k.ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
+  if (typ === 'paritaetisch_miete') return { aufloesung: ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true, kantonsUrl: k.url };
+  return { aufloesung: ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
 }
