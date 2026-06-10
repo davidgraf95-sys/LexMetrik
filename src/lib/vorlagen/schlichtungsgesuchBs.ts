@@ -169,12 +169,32 @@ export function sgStreitwert(a: SgAnswers): number | null {
 
 const SG_TYPEN: readonly SgTyp[] = ['geldforderung', 'uebrige_zivilsache', 'arbeitsrecht', 'miete_pacht', 'gleichstellung_glg'];
 
-export function sgPrefillKodieren(p: { typ: SgTyp; betragCHF?: number | null; kanton?: Kanton }): string {
+export function sgPrefillKodieren(p: {
+  typ: SgTyp; betragCHF?: number | null; kanton?: Kanton;
+  /** S-4 (Auftrag David 10.6.2026): Ort der Zuständigkeits-Ermittlung —
+   *  die Behörden-Wahl der Vorlage löst daraus die KONKRETE Stelle samt
+   *  Adresse auf (§5: Schlüssel statt Roh-Adresse in der URL). */
+  plz?: string; gemeinde?: string;
+}): string {
   const q = new URLSearchParams();
   q.set('typ', p.typ);
   if (p.betragCHF != null && Number.isFinite(p.betragCHF) && p.betragCHF >= 0) q.set('betrag', String(p.betragCHF));
   if (p.kanton) q.set('kanton', p.kanton);
+  if (p.plz && /^\d{4}$/.test(p.plz)) q.set('plz', p.plz);
+  if (p.gemeinde && p.gemeinde.trim() !== '') q.set('gemeinde', p.gemeinde.trim().slice(0, 60));
   return q.toString();
+}
+
+/** Orts-Vorgabe für die Behörden-Auflösung (getrennt von den Antworten —
+ *  PLZ/Gemeinde sind Auflösungs-Hilfen, keine Dokument-Inhalte). */
+export function sgPrefillOrt(search: string): { plz: string; gemeinde: string } {
+  const q = new URLSearchParams(search);
+  const plz = q.get('plz') ?? '';
+  const gemeinde = q.get('gemeinde') ?? '';
+  return {
+    plz: /^\d{4}$/.test(plz) ? plz : '',
+    gemeinde: gemeinde.trim().slice(0, 60),
+  };
 }
 
 export function sgPrefillLesen(search: string): Partial<SgAnswers> | null {

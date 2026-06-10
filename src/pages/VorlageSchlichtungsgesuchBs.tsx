@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import {
   SG_DEFAULTS, SG_PERSON_NATUERLICH, SG_SCHWELLEN, SG_OFFENE_VERIFIKATIONEN, SG_KANTONALE_ERLASSE,
-  sgZusammenstellen, sgMaengel, sgHinweise, sgRouting, sgStreitwert, sgPrefillLesen, fmtCHF,
+  sgZusammenstellen, sgMaengel, sgHinweise, sgRouting, sgStreitwert, sgPrefillLesen, sgPrefillOrt, fmtCHF,
   type SgAnswers, type SgPartei, type SgTyp,
 } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
@@ -52,6 +52,11 @@ export function VorlageSchlichtungsgesuchBs() {
   // Render, voll editierbar; SSR-sicher via try/catch (kein window im Smoke).
   const prefill = (() => {
     try { return sgPrefillLesen(window.location.search); } catch { return null; }
+  })();
+  // S-4: Orts-Vorgabe aus dem Zuständigkeitsrechner → die Behörden-Wahl
+  // löst daraus die konkrete Stelle samt Adresse auf (voll editierbar).
+  const prefillOrt = (() => {
+    try { return sgPrefillOrt(window.location.search); } catch { return { plz: '', gemeinde: '' }; }
   })();
   const { a, set, schritt, setSchritt, kopiert, kopieren, zuruecksetzen } =
     useWizardState<SgAnswers>({ defaults: prefill ? { ...SG_DEFAULTS, ...prefill } : SG_DEFAULTS });
@@ -197,6 +202,7 @@ export function VorlageSchlichtungsgesuchBs() {
             </div>
             {a.gerichtsKanton !== 'BS' && !a.behoerdeManuellAktiv && (
               <SgBehoerdenWahl kanton={a.gerichtsKanton}
+                startPlz={prefillOrt.plz} startGemeinde={prefillOrt.gemeinde}
                 onAufgeloest={(z) => set('behoerdeAufgeloest', z ? { zeilen: z } : undefined)} />
             )}
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">

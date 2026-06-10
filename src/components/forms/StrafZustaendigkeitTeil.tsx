@@ -21,6 +21,7 @@ import {
 } from '../../lib/strafRechtsmittel';
 import { staatsanwaltschaftFuer, BUNDESANWALTSCHAFT } from '../../data/staatsanwaltschaften';
 import { strafgerichteFuer, type StrafGerichtAdresse } from '../../data/strafgerichte';
+import { VorlagenSprung } from './VorlagenSprung';
 
 // ─── Rechtsweg «Straf» — UI-Teil des Zuständigkeitsrechners ─────────────────
 // Task 7b (6.6.2026). Reine Darstellung (§3): Bundesrecht in
@@ -257,6 +258,14 @@ export function StrafZustaendigkeitTeil() {
             ))}
           </ol>
         </div>
+
+        {/* S-4 (Auftrag David 10.6.2026): direkter Sprung zur passenden
+            Eingabe-Vorlage; die zuständige Behörde samt Adresse steht oben.
+            Beide Karten sind geplant → ehrlich «in Vorbereitung» (§8). */}
+        {anliegen === 'anzeige' && (
+          <VorlagenSprung karteId="strafanzeige"
+            zusatz="Für antragsabhängige Delikte zusätzlich: Vorlage «Strafantrag» (Art. 30 ff. StGB, Frist 3 Monate)." />
+        )}
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <EckdatenKachel label="Forum" wert={r.forum.normen[0]?.artikel ?? '—'} sub="örtliche Anknüpfung" />

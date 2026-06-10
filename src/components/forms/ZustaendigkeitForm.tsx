@@ -329,9 +329,17 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   // trägt UND die Stelle erfasst ist; sonst ehrlich ausgeblendet.
   const sgTyp = istGeld ? 'geldforderung' as const : istArbeit ? 'arbeitsrecht' as const
     : f.streitsache === 'erbrecht' ? 'uebrige_zivilsache' as const : null;
-  const sgPrefill = r && stelle && f.kanton === 'BS' && r.eingabeArt === 'schlichtungsgesuch'
+  // S-4 (Auftrag David 10.6.2026): nicht mehr auf BS begrenzt — die
+  // SG-Vorlage löst die ordentliche Schlichtungsbehörde ALLER Kantone über
+  // dieselben Datenschichten auf (SgBehoerdenWahl, Anordnung 5.6.2026);
+  // PLZ/Gemeinde der Ermittlung reisen als Schlüssel mit, die Vorlage
+  // setzt daraus die konkrete Stelle samt ADRESSE als Adressat ein (§5).
+  const sgPrefill = r && f.kanton !== '' && r.eingabeArt === 'schlichtungsgesuch'
     && r.schlichtung.behoerdeTyp === 'ordentlich' && sgTyp
-    ? sgPrefillKodieren({ typ: sgTyp, betragCHF: vermoegensrechtlich ? streitwert : null, kanton: 'BS' })
+    ? sgPrefillKodieren({
+      typ: sgTyp, betragCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton,
+      plz: f.plz, gemeinde: f.gemeinde.trim(),
+    })
     : null;
 
   // Praxis-Fahrplan + kantonale Kosten (Umbau 5.6.2026)
@@ -1009,8 +1017,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                 ? (r.verfahrensart === 'vereinfacht'
                     ? { karte: karte('klage-vereinfacht'),
                         zusatz: kantonDaten?.erstinstanzName ? `Die Klage geht direkt an das erstinstanzliche Gericht (${f.kanton}: ${kantonDaten.erstinstanzName}).` : 'Die Klage geht direkt an das erstinstanzliche Gericht.' }
-                    : { karte: undefined,
-                        titel: 'Klage (ordentliches Verfahren)',
+                    // S-4: seit dem Struktur-Umbau existiert die Karte
+                    // klage-ordentlich (geplant) — Titel aus der SSoT (§5).
+                    : { karte: karte('klage-ordentlich'),
                         zusatz: kantonDaten?.erstinstanzName ? `Die Klage geht direkt an das erstinstanzliche Gericht (${f.kanton}: ${kantonDaten.erstinstanzName}).` : 'Die Klage geht direkt an das erstinstanzliche Gericht.' })
                 : { karte: undefined,
                     titel: 'Scheidungsbegehren / Scheidungsklage',
@@ -1053,7 +1062,11 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       Weiter zur Vorlage →
                     </Link>
                     {((k!.id === 'schlichtungsgesuch' && sgPrefill) || (k!.id === 'klage-vereinfacht' && kvMaterie)) && (
-                      <p className="text-xs text-ink-500 mt-2">Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.</p>
+                      <p className="text-xs text-ink-500 mt-2">
+                        {k!.id === 'schlichtungsgesuch'
+                          ? 'Streitsache, Streitwert, Kanton und Ort werden vorbefüllt — die Vorlage setzt die Adresse der zuständigen Stelle als Adressat ein; alles bleibt editierbar.'
+                          : 'Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.'}
+                      </p>
                     )}
                   </div>
                 ) : (

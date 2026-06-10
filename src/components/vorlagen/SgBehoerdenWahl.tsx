@@ -15,12 +15,16 @@ import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAm
 // (answers.behoerdeAufgeloest). BS läuft weiter über die abgenommene
 // Registry (Vorrang in der Assemble-Kette).
 
-export function SgBehoerdenWahl({ kanton, onAufgeloest }: {
+export function SgBehoerdenWahl({ kanton, onAufgeloest, startPlz = '', startGemeinde = '' }: {
   kanton: Kanton;
   onAufgeloest: (zeilen: string[] | null) => void;
+  /** S-4: Orts-Vorgabe aus dem Zuständigkeitsrechner (sgPrefillOrt) —
+   *  voll editierbare Startwerte, keine Sperre. */
+  startPlz?: string;
+  startGemeinde?: string;
 }) {
-  const [plz, setPlz] = useState('');
-  const [gemeinde, setGemeinde] = useState('');
+  const [plz, setPlz] = useState(startPlz);
+  const [gemeinde, setGemeinde] = useState(startGemeinde);
   // MITTEL-Befund 6.6.2026: KEINE Auto-Vorwahl der ersten Regionalstelle —
   // massgeblich ist das Gebiet der beklagten Partei; bis zur Wahl wird null
   // gemeldet (Mängel-Gate hält den Export an).

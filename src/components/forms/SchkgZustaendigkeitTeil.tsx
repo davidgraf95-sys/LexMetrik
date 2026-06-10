@@ -17,7 +17,17 @@ import { BETREIBUNGSAEMTER, type BetreibungsamtAdresse } from '../../data/betrei
 import { BETREIBUNGSAMT_KANTONE, betreibungsamtFuer, type BetreibungsamtTreffer } from '../../data/betreibung/amtAufloesung';
 import { hauptTreffer, plzAufloesen } from '../../data/plz/plzAufloesung';
 import { KANTONE } from '../../lib/kantone';
+import { VorlagenSprung } from './VorlagenSprung';
 import type { Kanton } from '../../types/legal';
+
+// S-4 (Auftrag David 10.6.2026): Anliegen → passende Eingabe-Vorlage
+// (reines Mapping §3; nur wo eine Karte existiert — kein Raten).
+const VORLAGE_JE_ANLIEGEN: Partial<Record<SchkgAnliegen, string>> = {
+  rechtsoeffnung: 'rechtsoeffnungsbegehren',
+  aberkennungsklage: 'aberkennungsklage',
+  arrest: 'arrestgesuch',
+  beschwerde_amt: 'schkg-beschwerde',
+};
 
 // ─── Rechtsweg «Betreibung (SchKG)» — UI-Teil des Zuständigkeitsrechners ────
 // Anordnung David 5.6.2026 («schkg analog zivilrecht»). Reine Darstellung
@@ -383,6 +393,14 @@ export function SchkgZustaendigkeitTeil() {
                 ))}
               </ol>
             </div>
+          )}
+
+          {/* S-4: direkter Sprung zur passenden Eingabe-Vorlage (die
+              ermittelte Stelle samt Adresse steht oben in der Forum-Karte;
+              gebaute Vorlagen verlinken, geplante ehrlich «in Vorbereitung»). */}
+          {VORLAGE_JE_ANLIEGEN[anliegen] && (
+            <VorlagenSprung karteId={VORLAGE_JE_ANLIEGEN[anliegen]!}
+              zusatz={`Einzureichen bei: ${r.forum.stelle}.`} />
           )}
 
           {/* Kosten */}
