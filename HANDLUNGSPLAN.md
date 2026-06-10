@@ -3,6 +3,12 @@
 Priorisiertes weiteres Vorgehen. Gepflegt wird dieser Plan NUR hier;
 erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 
+> **NEU (Auftrag David 10.6.2026): `FAHRPLAN-FRISTEN-EINHEIT.md`** —
+> EIN Fristenrechner-Erlebnis: Rechenbasis ist schon vereinheitlicht,
+> der Hebel ist die DARSTELLUNG (FE-1 IA · FE-2 Regime-Frage · FE-3
+> Preset-Index · FE-4 Abzweigungen · FE-5 Ergebnis-Anatomie · FE-6
+> Messlatte).
+
 > **NEU (Auftrag David 10.6.2026): `FAHRPLAN-VEREINHEITLICHUNG.md`** —
 > Engine-Vereinheitlichung gleicher Logik-/Rechenbasis, 5 Stufen V1–V5,
 > golden-gegated nach neuem §4 (Tabu-Liste: Zuständigkeits-Trio, materielle
