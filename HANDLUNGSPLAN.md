@@ -3,6 +3,13 @@
 Priorisiertes weiteres Vorgehen. Gepflegt wird dieser Plan NUR hier;
 erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 
+> **ÜBERGEORDNET (Anweisung David 8.6.2026): `FAHRPLAN-GRUNDLAGEN.md`** —
+> der vom Endziel (Kanzlei-Praxistauglichkeit) her umgebaute Plan mit den
+> vier Grundlagen G1–G4 (Abdeckungskarte · Vertrauen · Arbeitsplatz ·
+> Wachstum). Er steuert die Reihenfolge; dieser Handlungsplan bleibt das
+> Detail-Backlog. B.18 (Roadmap-Triage) geht in G1 auf; A.2 (Markt-Themen)
+> bleibt bewusst draussen; §0a gilt weiter.
+
 ## §0a · LEITPRINZIP PERFEKTION VOR NEUBAU (Daueranweisung David 7.6.2026 abends)
 
 «Wir perfektionieren jetzt zuerst die bestehenden Engines und bauen
