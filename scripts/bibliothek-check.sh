@@ -47,14 +47,19 @@ grep -rnoE '/tmp/[a-zA-Z0-9._-]+' --include="*.md" . | grep -vE "/tmp/(${WHITELI
 [ -s /tmp/bibcheck-tmp.txt ] && { echo "VERSTOSS [S4] /tmp-Verweise ausserhalb der Cache-Whitelist (oben)"; fehler=$((fehler+$(wc -l < /tmp/bibcheck-tmp.txt))); }
 
 # ── S6: «Verfallsregister-Kandidat»-Marker müssen registriert sein ──────────
+# Geschärft 10.6.2026 (FAHRPLAN-GRUNDLAGEN G4.1): FEHLER statt Warnung.
+# Mechanik: Wer den Marker trägt, muss mit seinem Dateinamen in
+# register/parameter-verfall.md auftauchen (Fundstellen-Spalte verlinkt das
+# Dossier). Historische Marker ohne Registereintrag sind damit Verstösse.
 grep -rln "Verfallsregister-Kandidat" --include="*.md" recherche behoerden normen kosten 2>/dev/null | while read -r f; do
-  echo "PRÜFEN [S6] $f trägt Kandidat-Marker — Eintrag in register/parameter-verfall.md vorhanden?"
+  b=$(basename "$f")
+  grep -q "$b" register/parameter-verfall.md \
+    || echo "VERSTOSS [S6] $f trägt Kandidat-Marker, aber register/parameter-verfall.md nennt $b nicht"
 done | tee /tmp/bibcheck-s6.txt
-# S6 ist eine Warnung (Marker kann historisch sein, wenn der Eintrag existiert);
-# harte Prüfung: Marker UND kein thematisches Pendant im Register → Handarbeit.
+[ -s /tmp/bibcheck-s6.txt ] && fehler=$((fehler+$(wc -l < /tmp/bibcheck-s6.txt)))
 
 if [ "$fehler" -gt 0 ]; then
-  echo; echo "❌ ${fehler} Standard-Verstoss/-Verstösse — STANDARDS.md S1/S4/S7 prüfen."
+  echo; echo "❌ ${fehler} Standard-Verstoss/-Verstösse — STANDARDS.md S1/S4/S6/S7 prüfen."
   exit 1
 fi
-echo; echo "✅ Bibliothek erfüllt die maschinell prüfbaren Mindeststandards (S1, S4, S7)."
+echo; echo "✅ Bibliothek erfüllt die maschinell prüfbaren Mindeststandards (S1, S4, S6, S7)."
