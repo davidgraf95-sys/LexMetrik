@@ -439,3 +439,70 @@ Scheibenstrasse 11 B, 3600 Thun · Neuengasse 8, 2502 Biel/Bienne
 (Aussenstelle Berner Jura prov. Unionsgasse 13, 2502 Biel — Moutier seit
 1.1.2026 JU!). zsg.justice.be.ch …/schlichtungsbehoerden/<region>.html.
 Gemeinde-Map braucht BFS-Join (wie GR) → nächster Generator-Lauf.
+
+## 35. BL — 15 Friedensrichterkreise VOLLSTÄNDIG (§ 18 GOG BL, SGS 170 — Volltext via bl.clex.ch 10.6.2026)
+
+Ersetzt die Teilliste in Abschnitt 5 (dort u.a. K9-Itingen-Verdacht: BESTÄTIGT
+— Itingen gehört zu K13 Sissach). 86/86 Gemeinden. Adressen aus der amtlichen
+Kontakttabelle baselland.ch (personengebunden, Wahlperioden-Halbwertszeit!);
+Kreiseinteilung gesetzlich stabil. Gemeinden-Spalte in swisstopo-Schreibweise.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+|---|---|---|---|---|
+| Friedensrichterkreis 1 Aesch | Ziegelbüntenweg 27 | 4147 Aesch | Aesch (BL), Pfeffingen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 2 Reinach | c/o Gemeindeverwaltung, Hauptstrasse 10 | 4153 Reinach | Reinach (BL) | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 3 Allschwil | Strengigartenweg 5A | 4123 Allschwil | Allschwil, Schönenbuch | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 4 Binningen | c/o Gemeindeverwaltung Binningen, Curt Goetz-Strasse 1 | 4102 Binningen | Binningen, Bottmingen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 5 Arlesheim | c/o Gemeindeverwaltung Münchenstein, Schulackerstrasse 4 | 4142 Münchenstein | Arlesheim, Münchenstein | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 6 Birsfelden | Kirchplatz 3 | 4132 Muttenz | Birsfelden, Muttenz | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 7 Oberwil | Rosenweg 11 | 4104 Oberwil | Biel-Benken, Ettingen, Oberwil (BL), Therwil | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 8 Laufen | Brombergstrasse 42 | 4244 Röschenz | Blauen, Brislach, Burg im Leimental, Dittingen, Duggingen, Grellingen, Laufen, Liesberg, Nenzlingen, Roggenburg, Röschenz, Wahlen, Zwingen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 9 Liestal | Rathausstrasse 36, Postfach | 4410 Liestal | Lausen, Liestal | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 10 Bubendorf | Am Rain 14 | 4419 Lupsingen | Bubendorf, Lupsingen, Ramlinsburg, Seltisberg, Ziefen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 11 Frenkendorf | Bächliackerstrasse 2 | 4402 Frenkendorf | Arisdorf, Frenkendorf, Füllinsdorf, Giebenach, Hersberg | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 12 Pratteln | Muttenzerstrasse 38 | 4133 Pratteln | Augst, Pratteln | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 13 Sissach | c/o Gemeindeverwaltung Sissach, Bahnhofstrasse 1 | 4450 Sissach | Böckten, Buckten, Diepflingen, Häfelfingen, Itingen, Känerkinden, Läufelfingen, Nusshof, Rümlingen, Sissach, Tenniken, Thürnen, Wintersingen, Wittinsburg, Zunzgen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 14 Gelterkinden | Huebacherweg 16 | 4460 Gelterkinden | Anwil, Buus, Gelterkinden, Hemmiken, Kilchberg (BL), Maisprach, Oltingen, Ormalingen, Rickenbach (BL), Rothenfluh, Rünenberg, Tecknau, Wenslingen, Zeglingen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 15 Waldenburg | c/o Gemeindeverwaltung Reigoldswil, Dorfplatz 2 | 4418 Reigoldswil | Arboldswil, Bennwil, Bretzwil, Diegten, Eptingen, Hölstein, Lampenberg, Langenbruck, Lauwil, Liedertswil, Niederdorf, Oberdorf (BL), Reigoldswil, Titterten, Waldenburg | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+
+## 36. SZ — Vermittlerämter mit Gemeinde-Zuordnung (Staatskalender 2024–2026, Stand 9.6.2026)
+
+§§ 69a–69d JG (SRSZ 231.110). Konsolidierungen: Höfe (Bezirk, seit 1.7.2020)
+und Vermittlerkreis Ingenbohl–Gersau–Morschach–Riemenstalden. OFFEN (Adresse
+amtlich nicht publiziert, NICHT in der Auto-Zuordnung): Lauerz, Steinerberg,
+Alpthal, Wangen — dort Dropdown/Handeingabe. 26/30 Gemeinden automatisch.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+|---|---|---|---|---|
+| Vermittleramt Höfe (Bezirk) | Rebhaldenstrasse 15 | 8807 Freienbach | Feusisberg, Freienbach, Wollerau | https://www.hoefe.ch/de/judikative/vermittleramt/ |
+| Vermittlerkreis Ingenbohl–Gersau–Morschach–Riemenstalden | Eisenbahnstrasse 20a, Postfach 405 | 8840 Einsiedeln | Ingenbohl, Gersau, Morschach, Riemenstalden | https://www.ingenbohl.ch/vermittler |
+| Vermittleramt Bezirk Einsiedeln | Eisenbahnstrasse 20a, Postfach 405 | 8840 Einsiedeln | Einsiedeln | https://www.einsiedeln.ch/justiz/vermittler |
+| Vermittleramt Bezirk Küssnacht | Postfach 115 | 6403 Küssnacht am Rigi | Küssnacht (SZ) | https://www.kuessnacht.ch/justiz/vermittleramt.html/76 |
+| Vermittleramt Gemeinde Schwyz | Herrengasse 17 | 6431 Schwyz | Schwyz | https://www.gemeindeschwyz.ch/kommissionen/31483 |
+| Vermittleramt Arth | Postfach | 6410 Goldau | Arth | https://www.arth.ch/verwaltung/5680 |
+| Vermittleramt Muotathal | Schwarzenbach 4 | 6436 Bisisthal | Muotathal | https://www.muotathal.ch/gemeinde/gemeindeverwaltung/vermittleramt |
+| Vermittleramt Steinen | Räbengasse 17 | 6422 Steinen | Steinen | https://www.steinen.ch/bereiche/34525 |
+| Vermittleramt Sattel | Dorfbachstrasse 18 | 6418 Rothenthurm | Sattel | https://www.sattel.ch/abteilungen/24842 |
+| Vermittleramt Rothenthurm | Dorfbachstrasse 18 | 6418 Rothenthurm | Rothenthurm | https://www.rothenthurm.ch/verwaltung/abteilungen/vermittleramt |
+| Vermittleramt Illgau | Dorfbachstrasse 18 | 6418 Rothenthurm | Illgau | https://www.illgau.ch/verwaltung/abteilungen/vermittleramt |
+| Vermittleramt Oberiberg | Eisenbahnstrasse 20a, Postfach 405 | 8840 Einsiedeln | Oberiberg | https://www.oberiberg.ch/verwaltung/vermittler |
+| Vermittleramt Unteriberg | Sonnmattstrasse 19 | 8842 Unteriberg | Unteriberg | https://www.unteriberg.ch/verwaltung/abteilungen/vermittleramt |
+| Vermittleramt Lachen | Postfach 626 | 8853 Lachen | Lachen | https://www.lachen.ch/laebe-lache-gnuesse/lache/verwaltung/aemter-und-abteilungen/vermittleramt.html/107 |
+| Vermittleramt Altendorf | Oberdorfstrasse 3, Postfach 23 | 8852 Altendorf | Altendorf | https://www.altendorf.ch/verwaltung/abteilungen/vermittleramt.html/45 |
+| Vermittleramt Galgenen | Merikenstrasse 8 | 8864 Reichenburg | Galgenen | https://www.galgenen.ch/abteilungen/28273 |
+| Vermittleramt Reichenburg | Merikenstrasse 8 | 8864 Reichenburg | Reichenburg | https://www.reichenburg.ch/politik-verwaltung/verwaltung/abteilungen/vermittleramt.html/158 |
+| Vermittleramt Schübelbach | Sieben-Eichenweg 15 | 8854 Siebnen | Schübelbach | https://www.schuebelbach.ch/aemter/12889 |
+| Vermittleramt Tuggen | Zürcherstrasse 14, Postfach 35 | 8856 Tuggen | Tuggen | https://www.tuggen.ch/de/verwaltung/aemter/?amt_id=5121 |
+| Vermittleramt Vorderthal | Kreuzstrasse 30 | 8854 Siebnen | Vorderthal | https://www.vorderthal.ch/verwaltung/vermittler |
+| Vermittleramt Innerthal | Mühlestrasse 16 | 8855 Wangen | Innerthal | https://www.innerthal.ch/verwaltung/vermittleramt-1456 |
+
+## 37. VD — KEINE eigene Schlichtungsstelle (Struktur-Befund 10.6.2026) — GENERATOR-OFFEN
+
+Schlichtung «par le juge matériellement compétent» (Art. 41 CDPJ-VD;
+Circulaire TC Nr. 18 v. 9.11.2010): < CHF 10'000 Juge de paix (9 je
+District), CHF 10'000–100'000 Tribunal d'arrondissement (4; Districts:
+Lausanne+Ouest lausannois · Morges+Nyon · Broye-Vully+Gros-de-Vaud+
+Jura-Nord vaudois · Aigle+Lavaux-Oron+Riviera-Pays-d'Enhaut), > 100'000
+Chambre patrimoniale (Schwelle nicht wörtlich verifiziert — OFFEN); Miete
+CCBL, Arbeit ≤ 30k prud'hommes. Auto-Zuordnung braucht Streitwert-Weiche +
+Justices-de-paix-Adressen (nicht erhoben) → eigener Bauschritt.

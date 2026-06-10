@@ -149,3 +149,20 @@ describe('LU/AR/NE — Gemeinde→Schlichtungsstelle (Doppel-Muster Auto+Dropdow
     expect((await amtFuer('NE', 'Val-de-Ruz'))?.name).toContain('Montagnes');
   });
 });
+
+describe('BL/SZ — Gemeinde→Schlichtungsstelle (10.6.2026)', () => {
+  it('BL: 86/86 Gemeinden auf 15 Friedensrichterkreise (§ 18 GOG BL); Itingen → Kreis 13 Sissach', async () => {
+    const { amtFuer, AMT_KANTONE } = await import('../data/schlichtung/amtAufloesung');
+    expect(AMT_KANTONE).toContain('BL');
+    expect((await amtFuer('BL', 'Itingen'))?.name).toContain('Sissach');
+    expect((await amtFuer('BL', 'Liestal'))?.name).toContain('Liestal');
+    expect((await amtFuer('BL', 'Burg im Leimental'))?.name).toContain('Laufen');
+  });
+  it('SZ: Konsolidierungen Höfe + Ingenbohl-Kreis; 4 OFFEN-Gemeinden ehrlich null (Adresse nicht publiziert)', async () => {
+    const { amtFuer } = await import('../data/schlichtung/amtAufloesung');
+    expect((await amtFuer('SZ', 'Freienbach'))?.name).toContain('Höfe');
+    expect((await amtFuer('SZ', 'Morschach'))?.name).toContain('Ingenbohl');
+    expect((await amtFuer('SZ', 'Küssnacht (SZ)'))?.name).toContain('Küssnacht');
+    expect(await amtFuer('SZ', 'Lauerz')).toBeNull();
+  });
+});
