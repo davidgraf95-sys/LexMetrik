@@ -44,7 +44,7 @@ export type KoAnswers = {
   einzigeInstanz: boolean;
   streitwert: string;             // BetragsFeld-Rohwert (Pflicht, Art. 221 Abs. 1 lit. c, wenn vermögensrechtlich)
   gerichtsKanton: Kanton;
-  gerichtAufgeloest?: { zeilen: string[] };
+  gerichtAufgeloest?: { zeilen: string[]; url?: string };
   gerichtManuellAktiv?: boolean;
   gerichtManuell?: BehoerdeManuell;
   klaeger: SgPartei;

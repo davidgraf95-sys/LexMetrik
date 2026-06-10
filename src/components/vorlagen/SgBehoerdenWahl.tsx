@@ -22,13 +22,16 @@ import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAm
 // der BS-Registry-Anzeige und allen Auflösungs-Zweigen (zentral · Liste ·
 // PLZ/Gemeinde · ZH-Kreise).
 export function SgAdressatKachel({ zeilen, url }: { zeilen: string[]; url?: string }) {
-  const [name, ...rest] = zeilen;
+  // Optik = Original-Basel-Kachel (Auftrag David 10.6.2026 «alle wie Basel»):
+  // lc-tile mit mehrzeiligem Adressblock wie eine Briefanschrift, darunter
+  // die Mikro-Zeile mit dem Link auf die amtliche Seite.
   return (
-    <div className="lc-notice text-body-s">
-      {url
-        ? <a href={url} target="_blank" rel="noreferrer" className="font-medium text-ink-900 underline decoration-brass-400 hover:text-brass-700">{name} ↗</a>
-        : <span className="font-medium text-ink-900">{name}</span>}<br />
-      {rest.join(', ')} — wird als Adressat eingesetzt.
+    <div className="lc-tile">
+      <p className="text-body-s text-ink-900 whitespace-pre-line font-medium">{zeilen.join('\n')}</p>
+      <p className="text-micro text-ink-500 mt-1.5">
+        Amtliche Anschrift — wird als Adressat eingesetzt
+        {url && <> · <a href={url} target="_blank" rel="noreferrer" className="text-brass-700 underline">Amtliche Seite ↗</a></>}
+      </p>
     </div>
   );
 }
@@ -40,7 +43,9 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
    *  Die gemeindescharfe PLZ-Auflösung gilt nur für die ORDENTLICHE Behörde
    *  (die Ämter-Verzeichnisse sind Friedensrichter-/Schlichtungsstellen). */
   typ?: 'ordentlich' | 'paritaetisch_miete' | 'paritaetisch_glg';
-  onAufgeloest: (zeilen: string[] | null) => void;
+  /** Liefert Adresszeilen + amtlichen Link der aufgelösten Stelle — die
+   *  Kachel rendert die SEITE an der Basel-Position (neben der Kantonswahl). */
+  onAufgeloest: (aufgeloest: { zeilen: string[]; url?: string } | null) => void;
   /** S-4: Orts-Vorgabe aus dem Zuständigkeitsrechner (sgPrefillOrt) —
    *  voll editierbare Startwerte, keine Sperre. */
   startPlz?: string;
@@ -108,21 +113,23 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
     if (!recherche || glgOhneStelle) { onAufgeloest(null); return; }
     const a = recherche.aufloesung;
     if (a.modus === 'zentral') {
-      onAufgeloest([a.stelle.name, a.stelle.strasse, a.stelle.plzOrt]);
+      onAufgeloest({ zeilen: [a.stelle.name, a.stelle.strasse, a.stelle.plzOrt], url: a.stelle.url ?? recherche.kantonsUrl });
     } else if (a.modus === 'liste') {
       // PLZ-/Gemeinde-Auflösung gilt auch in Listen-Kantonen (z. B. GR:
       // Vermittlerämter je Region) — Befund David 10.6.2026; die manuelle
       // Stellen-Wahl bleibt als Übersteuerung.
       const s = wahlIdx >= 0 ? a.stellen[Math.min(wahlIdx, a.stellen.length - 1)] : undefined;
-      onAufgeloest(s ? [s.name, s.strasse, s.plzOrt] : (typ === 'ordentlich' ? amtZeilen : null));
+      onAufgeloest(s
+        ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
+        : (typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: recherche.kantonsUrl } : null));
     } else if (typ === 'ordentlich' && zhKreise && zhKreise.length > 0) {
       const k = zhKreise[Math.min(kreisIdx, zhKreise.length - 1)];
-      onAufgeloest([k.name, k.strasse, k.plzOrt]);
+      onAufgeloest({ zeilen: [k.name, k.strasse, k.plzOrt], url: a.url });
     } else {
       // Bug-Check 10.6.2026 (NIEDRIG): amtZeilen sind ordentliche Ämter —
       // bei paritätischem Typ nie als Adressat melden (transienter Zustand
       // nach Typwechsel).
-      onAufgeloest(typ === 'ordentlich' ? amtZeilen : null);
+      onAufgeloest(typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: a.url } : null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [kanton, typ, modus, wahlIdx, amtZeilen, zhKreise, kreisIdx, glgOhneStelle]);
@@ -147,19 +154,8 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           </p>
         </div>
       )}
-      {!glgOhneStelle && a.modus === 'zentral' && (
-        <SgAdressatKachel zeilen={[a.stelle.name, a.stelle.strasse, a.stelle.plzOrt]}
-          url={a.stelle.url ?? recherche.kantonsUrl} />
-      )}
       {!glgOhneStelle && a.modus === 'liste' && (
         <>
-          {typ === 'ordentlich' && amtZeilen && wahlIdx < 0 && (
-            <SgAdressatKachel zeilen={amtZeilen} url={recherche.kantonsUrl} />
-          )}
-          {wahlIdx >= 0 && (() => {
-            const s2 = a.stellen[Math.min(wahlIdx, a.stellen.length - 1)];
-            return <SgAdressatKachel zeilen={[s2.name, s2.strasse, s2.plzOrt]} url={s2.url ?? recherche.kantonsUrl} />;
-          })()}
           {typ === 'ordentlich' && AMT_KANTONE.includes(kanton) && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Field label="PLZ (beklagte Partei / Sache)" hint="amtliches Ortschaftenverzeichnis — löst die Stelle automatisch auf">
@@ -186,9 +182,6 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       )}
       {!glgOhneStelle && a.modus === 'verzeichnis' && (
         <>
-          {amtZeilen && (
-            <SgAdressatKachel zeilen={amtZeilen} url={a.url} />
-          )}
           {!paritaetisch && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="PLZ (beklagte Partei / Sache)" hint="amtliches Ortschaftenverzeichnis">

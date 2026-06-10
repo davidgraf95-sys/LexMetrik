@@ -163,7 +163,7 @@ export type KvAnswers = {
   // Kantonsausbau 10.6.2026 (Auftrag David): Gericht je Kanton.
   gerichtsKanton: Kanton;
   /** Ausserhalb BS: aufgelöste Gerichtsadresse (data/zivilgerichteErstinstanz) */
-  gerichtAufgeloest?: { zeilen: string[] };
+  gerichtAufgeloest?: { zeilen: string[]; url?: string };
   gerichtManuellAktiv?: boolean;
   gerichtManuell?: BehoerdeManuell;
   // Parteien (je eine; Mehrparteien später)

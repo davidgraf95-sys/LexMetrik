@@ -102,7 +102,7 @@ export type SgAnswers = {
    *  zweifach geprüften Datenschichten (schlichtungsstellen/amtAufloesung)
    *  aufgelöste Behörde — Rang NACH Handeingabe und NACH der abgenommenen
    *  Registry (BS), VOR dem Platzhalter. */
-  behoerdeAufgeloest?: { zeilen: string[] };
+  behoerdeAufgeloest?: { zeilen: string[]; url?: string };
   // Schritt 0 – Routing & Vorprüfung
   streitgegenstandTyp: SgTyp | '';
   ausnahmeArt198: boolean;

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Field, inputCls } from './ui';
 import type { Kanton } from '../../types/legal';
 import { zivilgerichtErstinstanz } from '../../data/zivilgerichteErstinstanz';
-import { SgAdressatKachel } from './SgBehoerdenWahl';
 import type { KvMaterie } from '../../lib/vorlagen/klageVereinfacht';
 
 // ─── Klage (vereinfachtes Verfahren): Gerichts-Auflösung alle Kantone ───────
@@ -19,7 +18,7 @@ import type { KvMaterie } from '../../lib/vorlagen/klageVereinfacht';
 export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
   kanton: Kanton;
   materie: KvMaterie | '';
-  onAufgeloest: (zeilen: string[] | null) => void;
+  onAufgeloest: (aufgeloest: { zeilen: string[]; url?: string } | null) => void;
 }) {
   // Render-Abgleich mit Schlüssel statt synchronem setState im Effect
   // (Haus-Lint-Regel): die Wahl gilt nur, solange der Kanton stimmt.
@@ -39,10 +38,10 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
     if (!eintrag || spezial) { onAufgeloest(null); return; }
     const e = eintrag.erstinstanz;
     if (e.modus === 'zentral') {
-      onAufgeloest([e.stelle.name, e.stelle.strasse, e.stelle.plzOrt]);
+      onAufgeloest({ zeilen: [e.stelle.name, e.stelle.strasse, e.stelle.plzOrt], url: e.stelle.url ?? eintrag.url });
     } else if (e.modus === 'liste') {
       const g = wahlIdx >= 0 ? e.gerichte[Math.min(wahlIdx, e.gerichte.length - 1)] : undefined;
-      onAufgeloest(g ? [g.name, g.strasse, g.plzOrt] : null);
+      onAufgeloest(g ? { zeilen: [g.name, g.strasse, g.plzOrt], url: g.url ?? eintrag.url } : null);
     } else {
       onAufgeloest(null);
     }
@@ -66,12 +65,8 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
 
   return (
     <div className="space-y-3">
-      {e.modus === 'zentral' && (
-        <>
-          <SgAdressatKachel zeilen={[e.stelle.name, e.stelle.strasse, e.stelle.plzOrt]}
-            url={e.stelle.url ?? eintrag.url} />
-          {e.stelle.hinweis && <p className="text-xs text-ink-600">{e.stelle.hinweis}.</p>}
-        </>
+      {e.modus === 'zentral' && e.stelle.hinweis && (
+        <p className="text-xs text-ink-600">{e.stelle.hinweis}.</p>
       )}
       {e.modus === 'liste' && (
         <>
@@ -81,10 +76,6 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
               {e.gerichte.map((g, i) => <option key={g.name} value={i}>{g.name} — {g.plzOrt}{g.zustaendigFuer ? ` (${g.zustaendigFuer})` : ''}</option>)}
             </select>
           </Field>
-          {gewaehlt && (
-            <SgAdressatKachel zeilen={[gewaehlt.name, gewaehlt.strasse, gewaehlt.plzOrt]}
-              url={gewaehlt.url ?? eintrag.url} />
-          )}
           {gewaehlt?.hinweis && <p className="text-xs text-ink-600">{gewaehlt.hinweis}.</p>}
         </>
       )}

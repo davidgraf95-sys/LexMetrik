@@ -72,15 +72,21 @@ export function VorlageKlageOrdentlich() {
                   {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
                 </select>
               </Field>
-              {a.gerichtsKanton === 'BS' && !a.gerichtManuellAktiv && (
+              {!a.gerichtManuellAktiv && (a.gerichtsKanton === 'BS' ? (
                 <SgAdressatKachel
                   zeilen={[KV_GERICHTE_BS.zivilgericht.name, KV_GERICHTE_BS.zivilgericht.strasse, KV_GERICHTE_BS.zivilgericht.plzOrt]}
                   url={KV_GERICHTE_BS.zivilgericht.url} />
-              )}
+              ) : a.gerichtAufgeloest ? (
+                <SgAdressatKachel zeilen={a.gerichtAufgeloest.zeilen} url={a.gerichtAufgeloest.url} />
+              ) : (
+                <div className="lc-notice text-body-s">
+                  Gericht wird unten über die kantonale Gerichtsschicht bestimmt — oder von Hand erfassen.
+                </div>
+              ))}
             </div>
             {a.gerichtsKanton !== 'BS' && !a.gerichtManuellAktiv && (
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
-                onAufgeloest={(z) => set('gerichtAufgeloest', z ? { zeilen: z } : undefined)} />
+                onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}

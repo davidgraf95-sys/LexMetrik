@@ -119,15 +119,23 @@ export function VorlageKlageVereinfacht() {
                   {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
                 </select>
               </Field>
-              {a.gerichtsKanton === 'BS' && !a.gerichtManuellAktiv && (() => {
-                const g = routing?.anwendbar && routing.gericht !== 'kantonal'
-                  ? KV_GERICHTE_BS[routing.gericht] : KV_GERICHTE_BS.zivilgericht;
-                return <SgAdressatKachel zeilen={[g.name, g.strasse, g.plzOrt]} url={g.url} />;
+              {!a.gerichtManuellAktiv && (() => {
+                if (a.gerichtsKanton === 'BS') {
+                  const g = routing?.anwendbar && routing.gericht !== 'kantonal'
+                    ? KV_GERICHTE_BS[routing.gericht] : KV_GERICHTE_BS.zivilgericht;
+                  return <SgAdressatKachel zeilen={[g.name, g.strasse, g.plzOrt]} url={g.url} />;
+                }
+                if (a.gerichtAufgeloest) return <SgAdressatKachel zeilen={a.gerichtAufgeloest.zeilen} url={a.gerichtAufgeloest.url} />;
+                return (
+                  <div className="lc-notice text-body-s">
+                    Gericht wird unten über die kantonale Gerichtsschicht bestimmt — oder von Hand erfassen.
+                  </div>
+                );
               })()}
             </div>
             {a.gerichtsKanton !== 'BS' && !a.gerichtManuellAktiv && (
               <KvGerichtWahl kanton={a.gerichtsKanton} materie={a.materie}
-                onAufgeloest={(z) => set('gerichtAufgeloest', z ? { zeilen: z } : undefined)} />
+                onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
             <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}

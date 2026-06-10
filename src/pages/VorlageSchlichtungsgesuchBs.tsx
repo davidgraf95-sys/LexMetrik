@@ -157,26 +157,33 @@ export function VorlageSchlichtungsgesuchBs() {
               die VOLLSTÄNDIGE Adresse auf (Pilot BS); Handeingabe als Override */}
           <div className="space-y-3">
             <p className="lc-overline">Zuständige Schlichtungsbehörde</p>
-            <Field label="Kanton">
-              <select className={inputCls + ' sm:max-w-[9rem]'} value={a.gerichtsKanton}
-                onChange={(e) => set('gerichtsKanton', e.target.value as SgAnswers['gerichtsKanton'])}>
-                {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
-              </select>
-            </Field>
-            {/* Einheitliche Darstellung (Auftrag David 10.6.2026: «mach alles
-                wie Basel»): die Adressat-Kachel steht in JEDEM Kanton an
-                derselben Stelle direkt unter der Kantonswahl; Eingabe-
-                Controls (PLZ/Stellen-Wahl) folgen darunter. */}
-            {!a.behoerdeManuellAktiv && (() => {
-              const reg = behoerdeFuer(sgEingabeArt(routing?.dokument ? routing.behoerdeTyp : 'ordentlich'), a.gerichtsKanton);
-              if (reg) return <SgAdressatKachel zeilen={behoerdeAlsBlock(reg).split('\n')} url={reg.url} />;
-              return null;
-            })()}
+            {/* Original-Basel-Darstellung für ALLE Kantone (Auftrag David
+                10.6.2026): Kantonswahl links, lc-tile-Adresskachel daneben —
+                gespiesen aus der Registry (BS) bzw. der Auflösung darunter. */}
+            <div className="grid grid-cols-[8rem_1fr] gap-3 items-start">
+              <Field label="Kanton">
+                <select className={inputCls} value={a.gerichtsKanton}
+                  onChange={(e) => set('gerichtsKanton', e.target.value as SgAnswers['gerichtsKanton'])}>
+                  {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+                </select>
+              </Field>
+              {!a.behoerdeManuellAktiv && (() => {
+                const reg = behoerdeFuer(sgEingabeArt(routing?.dokument ? routing.behoerdeTyp : 'ordentlich'), a.gerichtsKanton);
+                if (reg) return <SgAdressatKachel zeilen={behoerdeAlsBlock(reg).split('\n')} url={reg.url} />;
+                if (a.behoerdeAufgeloest) return <SgAdressatKachel zeilen={a.behoerdeAufgeloest.zeilen} url={a.behoerdeAufgeloest.url} />;
+                return (
+                  <div className="lc-notice text-body-s">
+                    Behörde wird unten über die Recherche-Daten des Kantons {a.gerichtsKanton} bestimmt
+                    — oder von Hand erfassen.
+                  </div>
+                );
+              })()}
+            </div>
             {a.gerichtsKanton !== 'BS' && !a.behoerdeManuellAktiv && (
               <SgBehoerdenWahl kanton={a.gerichtsKanton}
                 typ={routing?.dokument ? routing.behoerdeTyp : 'ordentlich'}
                 startPlz={prefillOrt.plz} startGemeinde={prefillOrt.gemeinde}
-                onAufgeloest={(z) => set('behoerdeAufgeloest', z ? { zeilen: z } : undefined)} />
+                onAufgeloest={(z) => set('behoerdeAufgeloest', z ?? undefined)} />
             )}
             {routing?.dokument && routing.behoerdeTyp !== 'ordentlich' && (
               <p className="lc-notice text-body-s">
