@@ -182,6 +182,21 @@ describe('Karten-Invarianten', () => {
   });
 });
 
+describe('FE-4: Rück-Abzweigung der Spezialrechner (FAHRPLAN-FRISTEN-EINHEIT)', () => {
+  it.each(['RechnerVerjaehrung', 'RechnerGewaehrleistung', 'RechnerErbFristen', 'RechnerMietrecht', 'RechnerKuendigung'] as const)(
+    '%s verlinkt zurück zum EINEN Fristenrechner-Einstieg', async (name) => {
+      const mod = await import(`../pages/${name}.tsx`);
+      const Seite = mod[name] as () => React.JSX.Element;
+      const html = renderToString(
+        <MemoryRouter initialEntries={['/x']}>
+          <LocaleProvider><Seite /></LocaleProvider>
+        </MemoryRouter>,
+      );
+      expect(html).toContain('Zum Fristenrechner');
+      expect(html).toContain('href="/rechner/tagerechner"');
+    });
+});
+
 describe('Kombinierter Fristenrechner (Auftrag 5.6.2026)', () => {
   it('Verfahrens-Schnitt vorhanden; Default Allgemein; Engines getrennt erreichbar', async () => {
     const { RechnerTagerechner } = await import('../pages/RechnerTagerechner');

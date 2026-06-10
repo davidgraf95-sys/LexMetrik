@@ -7,6 +7,11 @@ import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { Tabs } from '../components/ui/Tabs';
 import { getCalculator } from '../lib/calculators';
 import { presetSuche, type PresetIndexEintrag } from '../lib/presetIndex';
+import { Link } from 'react-router-dom';
+import { KATALOG_KARTEN, istVerfuegbar, type CalculatorCard } from '../lib/startseiteConfig';
+import { sucheTrifft } from '../lib/katalogSuche';
+import { FRISTEN_EIGENE_REGIMES } from '../lib/fristenKategorie';
+import { sansAmp } from '../components/typografie';
 
 // ─── Kombinierter Fristenrechner (Free) — Auftrag 5.6.2026 ──────────────────
 //
@@ -29,6 +34,14 @@ const VERFAHREN: { code: Verfahren; label: string }[] = [
 // Kündigung) — ohne ihn landete der Empfänger eines ZPO-Links auf
 // «Allgemein» und sah die Parameter nie.
 const HASH_VERFAHREN: Record<string, Verfahren> = { '#zpo': 'zpo', '#schkg': 'schkg', '#allgemein': 'allgemein' };
+
+// FE-4: Abzweigungs-Treffer — die Preset-Suche prüft deterministisch auch
+// die «Eigenes Regime»-Spezialrechner (katalogSuche über die Karten, §5);
+// reine Hinweise mit WARUM-Satz, keine Auto-Navigation.
+const REGIME_ABZWEIGUNGEN: { warum: string; karte: CalculatorCard }[] = FRISTEN_EIGENE_REGIMES
+  .map((r) => ({ warum: r.warum, karte: KATALOG_KARTEN.find((k) => k.id === r.id) }))
+  .filter((x): x is { warum: string; karte: CalculatorCard } =>
+    !!x.karte && istVerfuegbar(x.karte) && !!x.karte.href);
 
 export function RechnerTagerechner() {
   const calc = getCalculator('tagerechner')!;
@@ -61,6 +74,8 @@ export function RechnerTagerechner() {
   // die Form remountet über den search-Key und hydratisiert daraus.
   const [presetQuery, setPresetQuery] = useState('');
   const treffer = presetSuche(presetQuery);
+  const abzweigungen = presetQuery.trim() === '' ? []
+    : REGIME_ABZWEIGUNGEN.filter((a) => sucheTrifft(a.karte, presetQuery));
   const waehlePreset = (e: PresetIndexEintrag) => {
     setPresetQuery('');
     setVerfahren(e.regime);
@@ -82,26 +97,46 @@ export function RechnerTagerechner() {
             autoComplete="off"
             className="w-full max-w-xl h-10 px-3 rounded-lg border border-line bg-surface text-body-s text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-brass-400" />
           {presetQuery.trim() !== '' && (
-            treffer.length === 0 ? (
+            treffer.length === 0 && abzweigungen.length === 0 ? (
               <p className="text-body-s text-ink-500 max-w-reading">
                 Kein Preset gefunden – Frist manuell eingeben oder die Spezialrechner
                 der Fristen-Kategorie prüfen (Verjährung, Arbeits-/Mietkündigung, …).
               </p>
             ) : (
-              <ul className="border border-line rounded-lg divide-y divide-line bg-surface max-w-xl overflow-hidden">
-                {treffer.map((e) => (
-                  <li key={e.key}>
-                    <button type="button" onClick={() => waehlePreset(e)}
-                      className="w-full text-left px-3 py-2 flex items-baseline justify-between gap-3 hover:bg-brass-100/40 transition-colors">
-                      <span className="min-w-0">
-                        <span className="block text-body-s font-medium text-ink-900 leading-snug">{e.label}</span>
-                        {e.norm !== '' && <span className="block text-xs text-ink-500">{e.norm}</span>}
-                      </span>
-                      <span className="text-xs text-ink-500 whitespace-nowrap shrink-0">{e.regimeLabel}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
+              <div className="space-y-2 max-w-xl">
+                {treffer.length > 0 && (
+                  <ul className="border border-line rounded-lg divide-y divide-line bg-surface overflow-hidden">
+                    {treffer.map((e) => (
+                      <li key={e.key}>
+                        <button type="button" onClick={() => waehlePreset(e)}
+                          className="w-full text-left px-3 py-2 flex items-baseline justify-between gap-3 hover:bg-brass-100/40 transition-colors">
+                          <span className="min-w-0">
+                            <span className="block text-body-s font-medium text-ink-900 leading-snug">{e.label}</span>
+                            {e.norm !== '' && <span className="block text-xs text-ink-500">{e.norm}</span>}
+                          </span>
+                          <span className="text-xs text-ink-500 whitespace-nowrap shrink-0">{e.regimeLabel}</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {/* FE-4: Abzweigungen zu Spezialrechnern mit eigenem Regime —
+                    Hinweis-Links, der WARUM-Satz erklärt die Abzweigung. */}
+                {abzweigungen.length > 0 && (
+                  <div className="lc-notice space-y-1.5">
+                    <p className="lc-overline text-ink-500">Eigenes Regime – Spezialrechner</p>
+                    {abzweigungen.map((a) => (
+                      <p key={a.karte.id} className="text-body-s text-ink-600 leading-snug">
+                        <Link to={a.karte.href!}
+                          className="font-medium text-brass-700 hover:text-brass-600 no-underline">
+                          {sansAmp(a.karte.title)} →
+                        </Link>{' '}
+                        <span className="text-ink-500">– {a.warum}</span>
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
             )
           )}
         </div>

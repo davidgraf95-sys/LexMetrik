@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MietrechtForm } from '../components/forms/MietrechtForm';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
+import { TagerechnerRueckverweis } from '../components/TagerechnerRueckverweis';
 import { getCalculator } from '../lib/calculators';
 
 // Mietrechtlicher Kündigungsrechner unter /rechner/mietrecht.
@@ -9,6 +10,7 @@ export function RechnerMietrecht() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
+      <TagerechnerRueckverweis />
       <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
         <MietrechtForm />
       </div>

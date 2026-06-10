@@ -214,6 +214,19 @@ export function AllgemeineFristForm() {
           {famHinweis && (
             <p className="lc-notice text-body-s">{famHinweis}</p>
           )}
+          {/* FE-4: deterministisches Abzweigungs-Signal (Einheit Jahre ohne
+              gewählten Fach-Preset) — reiner Hinweis, keine Auto-Navigation. */}
+          {form.einheit === 'jahre' && !famHinweis && (
+            <p className="lc-notice text-body-s text-ink-600">
+              Geht es um eine <span className="font-medium text-ink-900">Verjährungsfrist</span>?
+              Dieser Rechner zählt nur Kalenderjahre – Unterbrechung (Art. 135 ff. OR) und
+              Stillstand (Art. 134 OR) rechnet der{' '}
+              <Link to="/rechner/verjaehrung"
+                className="font-medium text-brass-700 hover:text-brass-600 no-underline whitespace-nowrap">
+                Verjährungsrechner →
+              </Link>
+            </p>
+          )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Startdatum (auslösendes Ereignis)" hint="zählt nicht mit – dies a quo non computatur (Art. 77 OR)">

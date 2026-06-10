@@ -4,6 +4,7 @@ import { LohnfortzahlungForm } from '../components/forms/LohnfortzahlungForm';
 import { KuendigungSperrForm } from '../components/forms/KuendigungSperrForm';
 import { KombinierteAnsicht } from '../components/forms/KombinierteAnsicht';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
+import { TagerechnerRueckverweis } from '../components/TagerechnerRueckverweis';
 import { getCalculator } from '../lib/calculators';
 
 type Tab = 'a' | 'b_c' | 'kombiniert';
@@ -37,6 +38,7 @@ export function RechnerKuendigung() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
+      <TagerechnerRueckverweis />
 
       <div className="flex flex-wrap gap-1 p-1 bg-surface rounded-xl w-fit">
         {TABS.map((t) => (
