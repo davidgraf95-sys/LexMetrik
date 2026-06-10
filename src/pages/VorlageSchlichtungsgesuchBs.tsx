@@ -157,31 +157,21 @@ export function VorlageSchlichtungsgesuchBs() {
               die VOLLSTÄNDIGE Adresse auf (Pilot BS); Handeingabe als Override */}
           <div className="space-y-3">
             <p className="lc-overline">Zuständige Schlichtungsbehörde</p>
-            <div className="grid grid-cols-[8rem_1fr] gap-3 items-start">
-              <Field label="Kanton">
-                <select className={inputCls} value={a.gerichtsKanton}
-                  onChange={(e) => set('gerichtsKanton', e.target.value as SgAnswers['gerichtsKanton'])}>
-                  {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
-                </select>
-              </Field>
-              {(() => {
-                const manuell = a.behoerdeManuellAktiv;
-                // Umbau 10.6.2026 (Auftrag David): Registry-Art folgt dem
-                // sachlichen Routing — Miete/GlG adressieren die paritätische
-                // Stelle (Art. 200 ZPO) statt zu stoppen.
-                const reg = behoerdeFuer(sgEingabeArt(routing?.dokument ? routing.behoerdeTyp : 'ordentlich'), a.gerichtsKanton);
-                if (manuell) return null;
-                if (reg) return (
-                  <SgAdressatKachel zeilen={behoerdeAlsBlock(reg).split('\n')} url={reg.url} />
-                );
-                return (
-                  <div className="lc-notice text-body-s">
-                    Behörde wird unten über die Recherche-Daten des Kantons {a.gerichtsKanton} bestimmt
-                    (zweifach geprüft) — oder von Hand erfassen.
-                  </div>
-                );
-              })()}
-            </div>
+            <Field label="Kanton">
+              <select className={inputCls + ' sm:max-w-[9rem]'} value={a.gerichtsKanton}
+                onChange={(e) => set('gerichtsKanton', e.target.value as SgAnswers['gerichtsKanton'])}>
+                {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+              </select>
+            </Field>
+            {/* Einheitliche Darstellung (Auftrag David 10.6.2026: «mach alles
+                wie Basel»): die Adressat-Kachel steht in JEDEM Kanton an
+                derselben Stelle direkt unter der Kantonswahl; Eingabe-
+                Controls (PLZ/Stellen-Wahl) folgen darunter. */}
+            {!a.behoerdeManuellAktiv && (() => {
+              const reg = behoerdeFuer(sgEingabeArt(routing?.dokument ? routing.behoerdeTyp : 'ordentlich'), a.gerichtsKanton);
+              if (reg) return <SgAdressatKachel zeilen={behoerdeAlsBlock(reg).split('\n')} url={reg.url} />;
+              return null;
+            })()}
             {a.gerichtsKanton !== 'BS' && !a.behoerdeManuellAktiv && (
               <SgBehoerdenWahl kanton={a.gerichtsKanton}
                 typ={routing?.dokument ? routing.behoerdeTyp : 'ordentlich'}

@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import {
   KV_DEFAULTS, KV_MATERIEN, kvZusammenstellen, kvMaengel, kvHinweise, kvRouting, kvStreitwert, kvKlagefrist,
   type KvAnswers, type KvMaterie, type KvAusnahme,
+  KV_GERICHTE_BS,
 } from '../lib/vorlagen/klageVereinfacht';
 import type { SgPartei } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
@@ -10,6 +11,7 @@ import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
+import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
 import { KANTONE } from '../lib/kantone';
 import type { Kanton } from '../types/legal';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -117,12 +119,11 @@ export function VorlageKlageVereinfacht() {
                   {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
                 </select>
               </Field>
-              {a.gerichtsKanton === 'BS' && !a.gerichtManuellAktiv && (
-                <div className="lc-notice text-body-s self-end">
-                  Basel-Stadt: Zivil- bzw. Arbeitsgericht wird nach Materie und Streitwert
-                  automatisch gesetzt (§§ 71/73 GOG BS, abgenommen).
-                </div>
-              )}
+              {a.gerichtsKanton === 'BS' && !a.gerichtManuellAktiv && (() => {
+                const g = routing?.anwendbar && routing.gericht !== 'kantonal'
+                  ? KV_GERICHTE_BS[routing.gericht] : KV_GERICHTE_BS.zivilgericht;
+                return <SgAdressatKachel zeilen={[g.name, g.strasse, g.plzOrt]} url={g.url} />;
+              })()}
             </div>
             {a.gerichtsKanton !== 'BS' && !a.gerichtManuellAktiv && (
               <KvGerichtWahl kanton={a.gerichtsKanton} materie={a.materie}

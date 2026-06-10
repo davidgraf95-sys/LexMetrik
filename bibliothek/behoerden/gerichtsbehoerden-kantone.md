@@ -373,3 +373,35 @@ Miet- und Arbeitsgericht sitzen physisch an der Wengistrasse 30 (9./10. Abt.
 Wengistrasse 28), Kollegialgericht/Zivilabteilungen Badenerstrasse 90.
 Quelle: gerichte-zh.ch …/bezirksgericht-zuerich/kontakt/abteilungen-und-bereiche-2.
 Status: Erstrecherche amtlich (Direkt-HTML); Abnahme David ausstehend.
+
+## NACHTRAG 10.6.2026 (2) — amtliche URLs der Erstinstanzen, alle 26 Kantone
+
+Für die Link-Anzeige der Klage-Vorlagen recherchiert (WebFetch/HTTP-200-
+verifiziert; SH/AI nur per Direktabruf mit Browser-UA, BL Snippet-verifiziert
+— WAF blockt maschinelle Abrufe). In `src/data/zivilgerichteErstinstanz.ts`
+als `url` verdrahtet (Kantons-Übersicht; ZH zusätzlich alle 12 Detailseiten,
+LU Kriens + TG Arbon/Frauenfeld/Kreuzlingen Detail per curl 200).
+
+UR ur.ch/gerichte/61 · OW ow.ch/gerichte/32 · NW nw.ch/kantonsgericht/80 ·
+GL gl.ch/rechtspflege/gerichte/kantonsgericht.html/280 · ZG zg.ch/de/gerichte/zivil-und-strafrechtspflege/kantonsgericht ·
+SH sh.ch/CMS/…/Kantonsgericht-110173-DE.html · AR ar.ch/gerichte/kantonsgericht/ ·
+AI ai.ch/gerichte/bezirksgericht · GE justice.ge.ch/fr/contenu/tribunal-de-premiere-instance ·
+JU jura.ch/fr/Autorites/JUST/…/Tribunal-de-premiere-instance.html ·
+BS bs.ch/gerichte-judikative/zivilgericht (Arbeitsgericht: staatskalender.bs.ch …/zivilgericht/arbeitsgericht) ·
+SZ sz.ch/behoerden/justiz/bezirksgerichte.html/8756-8758-8801-9217 ·
+LU gerichte.lu.ch/organisation/erstinstanzliche_gerichte/bezirksgerichte ·
+BE zsg.justice.be.ch/de/start/ueber-uns/regionalgerichte.html ·
+BL baselland.ch/politik-und-behorden/gerichte/bv-gerichte/zivilkreisgerichte ·
+AG ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/bezirksgerichte/gerichte-nach-bezirken ·
+SG sg.ch/recht/gerichte/organisation---standorte/kreisgerichte.html ·
+GR justiz-gr.ch/gerichte/regionalgerichte/ · TG bezirksgericht.tg.ch ·
+SO so.ch/gerichte/richteraemter/ · FR fr.ch/etat-et-droit/justice/pouvoir-judiciaire-tribunaux-darrondissement ·
+VD vd.ch/toutes-les-autorites/ordre-judiciaire-vaudois-ojv/tribunaux-darrondissement ·
+VS vs.ch/web/tribunaux/tribunaux-de-district · NE ne.ch/autorites/autorites-judiciaires/tribunal-dinstance ·
+TI www4.ti.ch/poteri/giudiziario/giustizia-civile/preture
+
+**NE engine-relevant:** Die Tribunaux régionaux firmieren neu unter dem Dach
+«Tribunal d'instance» (Reorganisation) — Daten-Hinweis gesetzt; Adressen
+unverändert. **Offen (Folge-Recherche):** Detail-URLs der übrigen Listen-
+Gerichte (Muster suchverifiziert: AG/SG/GR/VD/SO/TI) + Schlichtungs-Lücken
+(BL/SH/AI-Mietstellen-URLs, Kantons-URLs der Schlichtungsschicht).

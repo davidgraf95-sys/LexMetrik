@@ -153,6 +153,13 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       )}
       {!glgOhneStelle && a.modus === 'liste' && (
         <>
+          {typ === 'ordentlich' && amtZeilen && wahlIdx < 0 && (
+            <SgAdressatKachel zeilen={amtZeilen} url={recherche.kantonsUrl} />
+          )}
+          {wahlIdx >= 0 && (() => {
+            const s2 = a.stellen[Math.min(wahlIdx, a.stellen.length - 1)];
+            return <SgAdressatKachel zeilen={[s2.name, s2.strasse, s2.plzOrt]} url={s2.url ?? recherche.kantonsUrl} />;
+          })()}
           {typ === 'ordentlich' && AMT_KANTONE.includes(kanton) && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Field label="PLZ (beklagte Partei / Sache)" hint="amtliches Ortschaftenverzeichnis — löst die Stelle automatisch auf">
@@ -168,9 +175,6 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
           )}
-          {typ === 'ordentlich' && amtZeilen && wahlIdx < 0 && (
-            <SgAdressatKachel zeilen={amtZeilen} url={recherche.kantonsUrl} />
-          )}
           <Field label={amtZeilen && wahlIdx < 0 ? 'Oder Stelle direkt wählen (übersteuert)' : 'Zuständige Stelle wählen'}
             hint={`${a.stellen.length} Stellen im Kanton ${kanton} — massgeblich ist das Gebiet der beklagten Partei bzw. der Sache`}>
             <select className={inputCls} value={wahlIdx} onChange={(e) => setWahlSchluessel({ kanton, typ, idx: Number(e.target.value) })}>
@@ -178,14 +182,13 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
               {a.stellen.map((s, i) => <option key={s.name} value={i}>{s.name} — {s.plzOrt}</option>)}
             </select>
           </Field>
-          {wahlIdx >= 0 && (() => {
-            const s2 = a.stellen[Math.min(wahlIdx, a.stellen.length - 1)];
-            return <SgAdressatKachel zeilen={[s2.name, s2.strasse, s2.plzOrt]} url={s2.url ?? recherche.kantonsUrl} />;
-          })()}
         </>
       )}
       {!glgOhneStelle && a.modus === 'verzeichnis' && (
         <>
+          {amtZeilen && (
+            <SgAdressatKachel zeilen={amtZeilen} url={a.url} />
+          )}
           {!paritaetisch && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="PLZ (beklagte Partei / Sache)" hint="amtliches Ortschaftenverzeichnis">
@@ -207,9 +210,6 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
                 {zhKreise.map((k, i) => <option key={k.kreise} value={i}>{k.name} — {k.kreise}</option>)}
               </select>
             </Field>
-          )}
-          {amtZeilen && (
-            <SgAdressatKachel zeilen={amtZeilen} url={a.url} />
           )}
           {!amtZeilen && !zhKreise && (
             <p className="text-body-s text-ink-600">

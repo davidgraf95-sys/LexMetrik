@@ -54,8 +54,9 @@ export const KV_MATERIEN: { id: KvMaterie; label: string; hint?: string }[] = [
 // Gerichte BS (Quelle: Auftrag 5.6.2026, «verified true» am Staatskalender BS;
 // PLZ-Konvention wie SG-Pilot: 4001 = Postadresse).
 export const KV_GERICHTE_BS = {
-  zivilgericht: { name: 'Zivilgericht Basel-Stadt', strasse: 'Bäumleingasse 5', plzOrt: '4001 Basel', stand: '5.6.2026', quelle: 'Staatskalender BS (Auftrag «verified true»)' },
-  arbeitsgericht: { name: 'Arbeitsgericht Basel-Stadt', strasse: 'Bäumleingasse 5', plzOrt: '4001 Basel', stand: '5.6.2026', quelle: 'Staatskalender BS (Auftrag «verified true»)' },
+  // url: amtlich verifiziert 10.6.2026 (WebFetch 200; bs.ch bzw. Staatskalender)
+  zivilgericht: { name: 'Zivilgericht Basel-Stadt', strasse: 'Bäumleingasse 5', plzOrt: '4001 Basel', stand: '5.6.2026', quelle: 'Staatskalender BS (Auftrag «verified true»)', url: 'https://www.bs.ch/gerichte-judikative/zivilgericht' },
+  arbeitsgericht: { name: 'Arbeitsgericht Basel-Stadt', strasse: 'Bäumleingasse 5', plzOrt: '4001 Basel', stand: '5.6.2026', quelle: 'Staatskalender BS (Auftrag «verified true»)', url: 'https://staatskalender.bs.ch/organization/richterliche-behoerden/gerichte/zivilgericht/arbeitsgericht' },
 } as const;
 
 // ── Routing (deterministisch, Auftrag «Routing-Logik der Engine») ───────────

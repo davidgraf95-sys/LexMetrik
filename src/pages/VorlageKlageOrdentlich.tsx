@@ -3,7 +3,8 @@ import {
   KO_DEFAULTS, koZusammenstellen, koMaengel, koHinweise, koStreitwert, koPrefillLesen,
   type KoAnswers,
 } from '../lib/vorlagen/klageOrdentlich';
-import { kvKlagefrist, type KvAusnahme } from '../lib/vorlagen/klageVereinfacht';
+import { KV_GERICHTE_BS, kvKlagefrist, type KvAusnahme } from '../lib/vorlagen/klageVereinfacht';
+import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
@@ -72,10 +73,9 @@ export function VorlageKlageOrdentlich() {
                 </select>
               </Field>
               {a.gerichtsKanton === 'BS' && !a.gerichtManuellAktiv && (
-                <div className="lc-notice text-body-s self-end">
-                  Basel-Stadt: Zivilgericht (Bäumleingasse 5) wird als Adressat gesetzt —
-                  Spruchkörper richtet sich nach dem GOG BS.
-                </div>
+                <SgAdressatKachel
+                  zeilen={[KV_GERICHTE_BS.zivilgericht.name, KV_GERICHTE_BS.zivilgericht.strasse, KV_GERICHTE_BS.zivilgericht.plzOrt]}
+                  url={KV_GERICHTE_BS.zivilgericht.url} />
               )}
             </div>
             {a.gerichtsKanton !== 'BS' && !a.gerichtManuellAktiv && (

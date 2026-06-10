@@ -79,6 +79,7 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   BE: {
     stand: '5.6.2026', quelle: Q_ERSTLISTE,
+    url: 'https://www.zsg.justice.be.ch/de/start/ueber-uns/regionalgerichte.html',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -91,11 +92,12 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   LU: {
     stand: '5.6.2026', quelle: Q_ERSTLISTE,
+    url: 'https://gerichte.lu.ch/organisation/erstinstanzliche_gerichte/bezirksgerichte',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
         { name: 'Bezirksgericht Luzern', strasse: 'Grabenstrasse 2, Postfach 2266', plzOrt: '6002 Luzern', zustaendigFuer: 'Bezirk Luzern' },
-        { name: 'Bezirksgericht Kriens', strasse: 'Villastrasse 1', plzOrt: '6010 Kriens', zustaendigFuer: 'Bezirk Kriens' },
+        { url: 'https://gerichte.lu.ch/organisation/erstinstanzliche_gerichte/bezirksgerichte/bezirksgericht_kriens', name: 'Bezirksgericht Kriens', strasse: 'Villastrasse 1', plzOrt: '6010 Kriens', zustaendigFuer: 'Bezirk Kriens' },
         { name: 'Bezirksgericht Hochdorf', strasse: 'Bellevuestrasse 6', plzOrt: '6280 Hochdorf', zustaendigFuer: 'Bezirk Hochdorf' },
         { name: 'Bezirksgericht Willisau', strasse: 'Menzbergstrasse 16, Postfach', plzOrt: '6130 Willisau', zustaendigFuer: 'Bezirk Willisau' },
       ],
@@ -104,10 +106,12 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   UR: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.ur.ch/gerichte/61',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Landgericht Uri', strasse: 'Rathausplatz 2, Postfach', plzOrt: '6460 Altdorf' } },
   },
   SZ: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.sz.ch/behoerden/justiz/bezirksgerichte.html/8756-8758-8801-9217',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -122,22 +126,27 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   OW: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.ow.ch/gerichte/32',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Obwalden', strasse: 'Poststrasse 6, Postfach', plzOrt: '6060 Sarnen' } },
   },
   NW: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.nw.ch/kantonsgericht/80',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Nidwalden', strasse: 'Rathausplatz 1, Postfach 1244', plzOrt: '6371 Stans' } },
   },
   GL: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.gl.ch/rechtspflege/gerichte/kantonsgericht.html/280',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Glarus', strasse: 'Gerichtshaus, Spielhof 6', plzOrt: '8750 Glarus', hinweis: 'E-Mail-Eingaben unzulässig (Fristen)' } },
   },
   ZG: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://zg.ch/de/gerichte/zivil-und-strafrechtspflege/kantonsgericht',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Zug', strasse: 'Gerichtsgebäude an der Aa, Aabachstrasse 3, Postfach', plzOrt: '6301 Zug' } },
   },
   FR: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.fr.ch/etat-et-droit/justice/pouvoir-judiciaire-tribunaux-darrondissement',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -154,6 +163,7 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   SO: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://so.ch/gerichte/richteraemter/',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -167,11 +177,13 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   BS: {
     stand: '5.6.2026', quelle: 'Staatskalender BS (abgenommene Stammdaten — Vorrang KV_GERICHTE_BS)',
+    url: 'https://www.bs.ch/gerichte-judikative/zivilgericht',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Zivilgericht Basel-Stadt', strasse: 'Bäumleingasse 5', plzOrt: '4051 Basel' } },
     hinweisArbeit: 'Arbeitsgericht Basel-Stadt (§§ 72 ff. GOG BS) — wird vom BS-Routing dieser Vorlage automatisch gesetzt.',
   },
   BL: {
     stand: '5.6.2026', quelle: Q_ERSTLISTE,
+    url: 'https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/zivilkreisgerichte',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -182,18 +194,22 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   SH: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://sh.ch/CMS/Webseite/Kanton-Schaffhausen/Beh-rde/Justiz/Kantonsgericht-110173-DE.html',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Schaffhausen', strasse: 'Herrenacker 26', plzOrt: '8200 Schaffhausen', hinweis: 'Snippet-verifiziert (sh.ch JS-Wall) — vor Einreichung gegenprüfen' } },
   },
   AR: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://ar.ch/gerichte/kantonsgericht/',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Appenzell Ausserrhoden', strasse: 'Landsgemeindeplatz 2, Postfach', plzOrt: '9043 Trogen' } },
   },
   AI: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.ai.ch/gerichte/bezirksgericht',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Bezirksgericht Appenzell Innerrhoden', strasse: 'Unteres Ziel 20', plzOrt: '9050 Appenzell' } },
   },
   SG: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.sg.ch/recht/gerichte/organisation---standorte/kreisgerichte.html',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -209,6 +225,7 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   GR: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.justiz-gr.ch/gerichte/regionalgerichte/',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -228,6 +245,7 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   AG: {
     stand: '5.6.2026', quelle: Q_ERSTLISTE,
+    url: 'https://www.ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/bezirksgerichte/gerichte-nach-bezirken',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -248,12 +266,13 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   TG: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://bezirksgericht.tg.ch/',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
-        { name: 'Bezirksgericht Arbon', strasse: 'Schlossgasse 4, Postfach 64', plzOrt: '9320 Arbon', zustaendigFuer: 'Bezirk Arbon' },
-        { name: 'Bezirksgericht Frauenfeld', strasse: 'Zürcherstrasse 237a', plzOrt: '8501 Frauenfeld', zustaendigFuer: 'Bezirk Frauenfeld' },
-        { name: 'Bezirksgericht Kreuzlingen', strasse: 'Konstanzerstrasse 13', plzOrt: '8280 Kreuzlingen', zustaendigFuer: 'Bezirk Kreuzlingen' },
+        { url: 'https://bezirksgericht.tg.ch/arbon.html/4027', name: 'Bezirksgericht Arbon', strasse: 'Schlossgasse 4, Postfach 64', plzOrt: '9320 Arbon', zustaendigFuer: 'Bezirk Arbon' },
+        { url: 'https://bezirksgericht.tg.ch/frauenfeld.html/4028', name: 'Bezirksgericht Frauenfeld', strasse: 'Zürcherstrasse 237a', plzOrt: '8501 Frauenfeld', zustaendigFuer: 'Bezirk Frauenfeld' },
+        { url: 'https://bezirksgericht.tg.ch/kreuzlingen.html/4029', name: 'Bezirksgericht Kreuzlingen', strasse: 'Konstanzerstrasse 13', plzOrt: '8280 Kreuzlingen', zustaendigFuer: 'Bezirk Kreuzlingen' },
         { name: 'Bezirksgericht Münchwilen', strasse: 'Wilerstrasse 2', plzOrt: '9542 Münchwilen', zustaendigFuer: 'Bezirk Münchwilen' },
         { name: 'Bezirksgericht Weinfelden', strasse: 'Bahnhofstrasse 12, Postfach 44', plzOrt: '8570 Weinfelden', zustaendigFuer: 'Bezirk Weinfelden' },
       ],
@@ -261,6 +280,7 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   TI: {
     stand: '6.6.2026', quelle: Q_MASTER,
+    url: 'https://www4.ti.ch/poteri/giudiziario/giustizia-civile/preture',
     // 10 Preture amtlich belegt, aber für mehrere nur Gebäude/Ort ohne
     // PLZ-Zeile publiziert → ehrlich Verzeichnis statt unvollständiger Liste.
     erstinstanz: {
@@ -271,6 +291,7 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   VD: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.vd.ch/toutes-les-autorites/ordre-judiciaire-vaudois-ojv/tribunaux-darrondissement',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -284,6 +305,7 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   VS: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.vs.ch/web/tribunaux/tribunaux-de-district',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -300,7 +322,8 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
     },
   },
   NE: {
-    stand: '6.6.2026', quelle: Q_MASTER,
+    stand: '10.6.2026', quelle: Q_MASTER + '; URL-Recherche 10.6.2026: neu organisiert als «Tribunal d’instance» (zwei Tribunaux régionaux darunter)',
+    url: 'https://www.ne.ch/autorites/autorites-judiciaires/tribunal-dinstance',
     erstinstanz: {
       modus: 'liste',
       gerichte: [
@@ -312,12 +335,14 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
   },
   GE: {
     stand: '6.6.2026', quelle: Q_MASTER,
+    url: 'https://justice.ge.ch/fr/contenu/tribunal-de-premiere-instance',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Tribunal de première instance', strasse: 'Place du Bourg-de-Four 1, Case postale 3736', plzOrt: '1211 Genève 3' } },
     hinweisArbeit: 'Tribunal des prud’hommes (Boulevard Helvétique 27, Case postale 3688, 1211 Genève 3) — arbeitsrechtliche Klagen gehören dorthin (Art. 110 LOJ GE).',
     hinweisMiete: 'Tribunal des baux et loyers (Komplex Bourg-de-Four/Chaudronniers, Case postale 3120, 1211 Genève 3) — Miet-/Pachtsachen gehören dorthin (Art. 89 LOJ GE).',
   },
   JU: {
     stand: '5.6.2026', quelle: Q_MASTER,
+    url: 'https://www.jura.ch/fr/Autorites/JUST/Instances-judiciaires/Tribunal-de-premiere-instance/Tribunal-de-premiere-instance.html',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Tribunal de première instance', strasse: 'Chemin du Château 9, Case postale', plzOrt: '2900 Porrentruy' } },
   },
 };
