@@ -32,8 +32,16 @@ erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 > (`702c72b`; Art. 221-Pflichtstruktur, alle Kantone, Golden vorl:ko).
 > Bug-Checks §9 dazwischen (BUGCHECK-SG-KV-2026-06-10.md: 11 Befunde
 > gefixt; KO-Lupe: 9 Befunde, B1 HOCH Miete-30-Tage gefixt). **§0a von
-> David GESTRICHEN.** OFFEN für David: Abnahme Gerichts-/Schlichtungs-
-> Adressschicht + GlG-Stellen-Recherche je Kanton (LU § 50 JusG belegt).
+> David GESTRICHEN.** (4) **Adressat-Kachel: Original-Basel-Optik für
+> alle 26 Kantone** in allen drei Klage-Vorlagen (`eee62a3`; lc-tile +
+> «Amtliche Seite ↗»-Link neben der Kantonswahl) + amtliche Gerichts-URLs
+> aller Kantone recherchiert/verdrahtet (`dab08db`, Dossier-Nachtrag;
+> NE neu «Tribunal d'instance») + Randgebiets-PLZ-Fix (hauptTreffer,
+> `cf4c12d`). OFFEN für David: Abnahme Gerichts-/Schlichtungs-
+> Adressschicht + GlG-Stellen-Recherche je Kanton (LU § 50 JusG belegt) ·
+> Detail-URLs Listen-Gerichte (Muster suchverifiziert) · BL/SH/AI-
+> Mietstellen-URLs. Session-Ende 10.6. ~21:30: 19 lokale Commits,
+> NICHT gepusht (§9).
 
 > **NEU (Session 10.6.2026 abends, «grünes Licht» David):** (1) **PLZ-
 > Mehrdeutigkeit als Auswahl** (TODO 5 betreibungskreise): klickbare
