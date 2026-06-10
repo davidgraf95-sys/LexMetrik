@@ -94,10 +94,10 @@ console.log(`ZH-Zuordnung: ${Object.keys(zh).length} Gemeinde-Einträge + ${zuer
 
 // ── 3 · AG/SG/TG (+ später FR/ZG/AI/SZ/BL): Gemeinde → Amt ──────────────────
 // Quelle: bibliothek/behoerden/schlichtungsaemter-gemeindezuordnung.md
-// (amtliche Behördenverzeichnisse, 5.6.2026). Tabellenformat:
-// | Amt | Strasse | PLZ Ort | Gemeinden (kommagetrennt) |
+// (amtliche Behördenverzeichnisse, 5.6.2026; URL-Spalte 10.6.2026). Format:
+// | Amt | Strasse | PLZ Ort | Gemeinden (kommagetrennt) | URL (optional) |
 const zuordnungMd = readFileSync('bibliothek/behoerden/schlichtungsaemter-gemeindezuordnung.md', 'utf-8');
-type Amt = { name: string; strasse: string; plzOrt: string };
+type Amt = { name: string; strasse: string; plzOrt: string; url?: string };
 const kantonsDaten: Record<string, { aemter: Amt[]; gemeinden: Record<string, number> }> = {};
 let aktuellerKanton: string | null = null;
 for (const z of zuordnungMd.split('\n')) {
@@ -113,11 +113,13 @@ for (const z of zuordnungMd.split('\n')) {
   const t = z.split('|').map((x) => x.trim());
   // Datenzeile: 4 Spalten, keine Kopf-/Trennzeile
   if (t.length < 6 || t[1] === 'Amt' || /^[-: ]+$/.test(t[1])) continue;
-  const [, name, strasse, plzOrt, gemeindenRoh] = t;
+  const [, name, strasse, plzOrt, gemeindenRoh, urlRoh] = t;
   if (!/\d{4} /.test(plzOrt)) continue;
   const d = kantonsDaten[aktuellerKanton];
   const idx = d.aemter.length;
-  d.aemter.push({ name, strasse, plzOrt });
+  // 5. Spalte (10.6.2026): direkte amtliche Amts-URL — nur https übernehmen.
+  const url = urlRoh?.startsWith('https://') ? urlRoh : undefined;
+  d.aemter.push(url ? { name, strasse, plzOrt, url } : { name, strasse, plzOrt });
   for (const g of gemeindenRoh.split(',').map((x) => x.trim()).filter(Boolean)) {
     d.gemeinden[g] = idx;
   }

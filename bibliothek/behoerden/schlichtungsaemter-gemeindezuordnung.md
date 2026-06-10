@@ -41,19 +41,19 @@ Die FR-Gerichtsbezirke sind BFS-kongruent (7 Verwaltungsbezirke = 7 Gerichtsbezi
 
 Bestätigt über zg.ch: jede der 11 Gemeinden hat ihr eigenes Friedensrichteramt, 1:1.
 
-| Amt | Strasse | PLZ Ort | Gemeinde |
-|-----|---------|---------|----------|
-| Friedensrichteramt Zug | Gubelstrasse 22, PF | 6301 Zug | Zug |
-| Friedensrichteramt Baar | Leihgasse 9 | 6341 Baar | Baar |
-| Friedensrichteramt Cham | Mandelhof (ohne Hausnr.) | 6330 Cham | Cham |
-| Friedensrichteramt Hünenberg | Chamerstrasse 11 | 6331 Hünenberg | Hünenberg |
-| Friedensrichteramt Risch | Rathaus, Zentrum Dorfmatt | 6343 Rotkreuz | Risch |
-| Friedensrichteramt Steinhausen | Bahnhofstrasse 3, PF | 6312 Steinhausen | Steinhausen |
-| Friedensrichteramt Walchwil | Dorfstrasse 23, PF (Gemeindeverwaltung) | 6318 Walchwil | Walchwil |
-| Friedensrichteramt Unterägeri | Seestrasse 2 | 6314 Unterägeri | Unterägeri |
-| Friedensrichteramt Oberägeri | PF 128 | 6315 Oberägeri | Oberägeri |
-| Friedensrichteramt Neuheim | PF 134 | 6345 Neuheim | Neuheim |
-| Friedensrichteramt Menzingen | Alte Landstrasse 2a, PF (Gemeindeverwaltung) | 6313 Menzingen | Menzingen |
+| Amt | Strasse | PLZ Ort | Gemeinde | URL |
+|-----|---------|---------|----------|---|
+| Friedensrichteramt Zug | Gubelstrasse 22, PF | 6301 Zug | Zug | https://www.stadtzug.ch/aemter/782 |
+| Friedensrichteramt Baar | Leihgasse 9 | 6341 Baar | Baar | https://www.baar.ch/aemter/11308 |
+| Friedensrichteramt Cham | Mandelhof, Postfach | 6330 Cham | Cham | https://www.cham.ch/bereiche/2569 |
+| Friedensrichteramt Hünenberg | Chamerstrasse 11 | 6331 Hünenberg | Hünenberg | https://www.zg.ch/behoerden/gemeinden/hunenberg/de/verwaltung/praesidiales/friedensrichteramt |
+| Friedensrichteramt Risch | Rathaus, Zentrum Dorfmatt 1 | 6343 Rotkreuz | Risch | https://www.zg.ch/behoerden/gemeinden/risch-rotkreuz/verwaltung/praesidiales/friedensrichter |
+| Friedensrichteramt Steinhausen | Bahnhofstrasse 3, PF | 6312 Steinhausen | Steinhausen | https://www.zg.ch/behoerden/gemeinden/steinhausen/verwaltung/praesidiales/friedensrichter |
+| Friedensrichteramt Walchwil | Dorfstrasse 23, PF (Gemeindeverwaltung) | 6318 Walchwil | Walchwil | https://www.walchwil.ch/verwaltung/friedensrichteramt.html/175 |
+| Friedensrichteramt Unterägeri | Seestrasse 2 | 6314 Unterägeri | Unterägeri | https://www.unteraegeri.ch/behoerden/671 |
+| Friedensrichteramt Oberägeri | Alosenstrasse 2 | 6315 Oberägeri | Oberägeri | https://www.oberaegeri.ch/behoerden/274 |
+| Friedensrichteramt Neuheim | Dorfplatz 5, PF 134 | 6345 Neuheim | Neuheim | https://www.neuheim.ch/friedensrichteramt |
+| Friedensrichteramt Menzingen | Alte Landstrasse 2a, PF (Gemeindeverwaltung) | 6313 Menzingen | Menzingen | https://www.zg.ch/behoerden/gemeinden/menzingen/de/verwaltung/verwaltung/aemter-und-stellen/friedensrichter |
 
 **Hausnummern Cham/Menzingen geklärt:**
 - **Menzingen: GEKLÄRT** → Alte Landstrasse 2a (offizielle Gemeindeverwaltungs-Anschrift menzingen-Seite).
@@ -71,15 +71,20 @@ Bestätigt über zg.ch: jede der 11 Gemeinden hat ihr eigenes Friedensrichteramt
 
 AI-Bezirke = BFS-Bezirke. Seit 2022 fusionierten die früheren Bezirke Schwende und Rüte zu **Schwende-Rüte** — das ergibt aktuell 5 Bezirke/5 Vermittlerämter (Appenzell, Schwende-Rüte, Schlatt-Haslen, Gonten, Oberegg). Hinweis: ai.ch blockt (403); Daten aus amtlichen Bezirksseiten.
 
-| Amt | Strasse | PLZ Ort | Bezirk/Gemeinde |
-|-----|---------|---------|------------------|
-| Vermittleramt Appenzell | Landsgemeindeplatz 5 | 9050 Appenzell | Bezirk Appenzell |
-| Vermittleramt Schwende-Rüte | Zidler 19 (Vermittler T. Mainberger) | 9057 Weissbad | Bezirk Schwende-Rüte |
-| Vermittleramt Schlatt-Haslen | Hinterhaslen 41 (Vermittler P. Sutter) | 9054 Haslen | Bezirk Schlatt-Haslen |
-| Vermittleramt Gonten | Lorettohalde 1 (Vermittlerin L. Zürcher-Baumgartner; Privat: Oberschwarzstrasse 7) | 9108 Gonten | Bezirk Gonten |
-| Vermittleramt Oberegg | Sonnenstrasse 6 (Vermittlerin S. Blatter-Ulmann) | 9413 Oberegg | Bezirk Oberegg |
+| Amt | Strasse | PLZ Ort | Bezirk/Gemeinde | URL |
+|-----|---------|---------|------------------|---|
+| Vermittleramt Appenzell | Kronengarten 8 (Vermittlerin B. Manser) | 9050 Appenzell | Bezirk Appenzell | https://www.ai.ch/gerichte/vermittler |
+| Vermittleramt Schwende-Rüte | Pöppelstrasse 14 (Vermittler T. Mainberger) | 9050 Appenzell Steinegg | Bezirk Schwende-Rüte | https://www.ai.ch/gerichte/vermittler |
+| Vermittleramt Schlatt-Haslen | Hinterhaslen 41 (Vermittler P. Sutter) | 9054 Haslen | Bezirk Schlatt-Haslen | https://www.ai.ch/gerichte/vermittler |
+| Vermittleramt Gonten | Oberschwarzstrasse 7 (Vermittlerin L. Zürcher) | 9108 Gonten | Bezirk Gonten | https://www.gonten.ch/bezirk/behoerden-verwaltung/vermittleramt |
+| Vermittleramt Oberegg | Sonnenstrasse 6 (Vermittlerin S. Blatter-Ulmann) | 9413 Oberegg | Bezirk Oberegg | https://www.ai.ch/gerichte/vermittler |
 
-**Unsicherheiten AI:**
+**NACHTRAG 10.6.2026 (ai.ch per Direktabruf gelesen, Browser-UA):** Drei
+Adressen wegen Vermittler-Wechsel KORRIGIERT (Appenzell: Kronengarten 8 ·
+Schwende-Rüte: Pöppelstrasse 14, 9050 Appenzell Steinegg · Gonten:
+Oberschwarzstrasse 7); direkte amtliche URL für alle 5: ai.ch/gerichte/vermittler.
+
+**Unsicherheiten AI (Stand 5.6.2026, überholt soweit oben korrigiert):**
 - **WARNUNG Quellenvermischung:** betreibungsschalter-plus.ch führt veraltete getrennte „Vermittleramt Schwende" (Küchenrain 6, 9057 Schwende) und „Vermittleramt Rüte" sowie ein AR-„Vermittleramt Haslen, Oberbühl 9054" (deckt Gais/Bühler/Teufen AR — das ist **Appenzell Ausserrhoden**, NICHT AI). Diese wurden ausgeschlossen.
 - Schwende-Rüte: Aktuelle Vermittler-Korrespondenzadresse ist die Privat-/Funktionsadresse des Vermittlers (Zidler 19, 9057 Weissbad). Eine separate „Amts"-Anschrift in der Bezirksverwaltung (Pöppelstrasse 14, 9050 Appenzell Steinegg) ist möglich, aber für das Vermittleramt nicht eindeutig amtlich bestätigt → **leichte Unsicherheit**.
 - Da ai.ch (403) nicht direkt verifizierbar war, sind die 5 Ämter strukturell sicher, die exakten Hausnummern teils über Vermittler-Personenadressen abgeleitet.
@@ -174,25 +179,25 @@ Abrufdatum: 5. Juni 2026. Nur amtliche Quellen. Gemeinden in amtlicher Schreibwe
 
 Quelle: ag.ch, «Friedensrichterkreise» (Gerichte Kanton Aargau → Schlichtungsbehörden). Rechtsgrundlage: Gesetz über die Organisation der ordentlichen richterlichen Behörden (GOG, SAR 155.100); die konkrete Kreiseinteilung wird kantonal publiziert.
 
-| Amt | Strasse | PLZ Ort | Gemeinden |
-|---|---|---|---|
-| Kreis I (Bez. Aarau) | Postfach 2347 | 5001 Aarau | Aarau, Biberstein, Densbüren, Erlinsbach, Küttigen |
-| Kreis II (Bez. Aarau) | Postfach | 5036 Oberentfelden | Buchs, Gränichen, Hirschthal, Muhen, Oberentfelden, Suhr, Unterentfelden |
-| Kreis III (Bez. Baden) | Postfach | 5400 Baden | Baden, Ehrendingen, Ennetbaden, Freienwil, Obersiggenthal, Untersiggenthal, Würenlingen |
-| Kreis IV (Bez. Baden) | Alb.-Zwyssigstrasse 76 | 5430 Wettingen | Bergdietikon, Killwangen, Neuenhof, Spreitenbach, Wettingen, Würenlos |
-| Kreis V (Bez. Baden) | Postfach 56 | 5200 Brugg | Bellikon, Birmenstorf, Fislisbach, Gebenstorf, Künten, Mägenwil, Mellingen, Niederrohrdorf, Oberrohrdorf, Remetschwil, Stetten, Wohlenschwil |
-| Kreis VI (Bez. Bremgarten) | Postfach | 5605 Dottikon | Büttikon, Dottikon, Fischbach-Göslikon, Hägglingen, Niederwil, Sarmenstorf, Tägerig, Uezwil, Villmergen, Wohlen |
-| Kreis VII (Bez. Bremgarten) | Postfach 225 | 5620 Bremgarten | Arni, Berikon, Bremgarten, Eggenwil, Islisberg, Jonen, Oberlunkhofen, Oberwil-Lieli, Rudolfstetten-Friedlisberg, Unterlunkhofen, Widen, Zufikon |
-| Kreis VIII (Bez. Brugg) | Postfach 151 | 5103 Wildegg | Auenstein, Birr, Birrhard, Bözberg, Brugg, Habsburg, Hausen, Lupfig, Mandach, Mönthal, Mülligen, Remigen, Riniken, Rüfenach, Schinznach, Thalheim, Veltheim, Villigen, Villnachern, Windisch |
-| Kreis IX (Bez. Kulm) | Postfach 174 | 5726 Unterkulm | Beinwil am See, Birrwil, Dürrenäsch, Gontenschwil, Holziken, Leimbach, Leutwil, Menziken, Oberkulm, Reinach, Schlossrued, Schmiedrued, Schöftland, Teufenthal, Unterkulm, Zetzwil |
-| Kreis X (Bez. Laufenburg) | Postfach | 5070 Frick | Böztal, Eiken, Frick, Gansingen, Gipf-Oberfrick, Herznach-Ueken, Kaisten, Laufenburg, Mettauertal, Münchwilen, Oberhof, Oeschgen, Schwaderloch, Sisseln, Wittnau, Wölflinswil, Zeihen |
-| Kreis XI (Bez. Lenzburg) | Postfach | 5600 Lenzburg 1 | Ammerswil, Brunegg, Dintikon, Hendschiken, Holderbank, Lenzburg, Möriken-Wildegg, Niederlenz, Othmarsingen |
-| Kreis XII (Bez. Lenzburg) | Postfach | 5707 Seengen | Boniswil, Egliswil, Fahrwangen, Hallwil, Hunzenschwil, Meisterschwanden, Rupperswil, Schafisheim, Seengen, Seon, Staufen |
-| Kreis XIII (Bez. Muri) | Postfach 238 | 5630 Muri AG | Abtwil, Aristau, Auw, Beinwil (Freiamt), Besenbüren, Bettwil, Boswil, Bünzen, Buttwil, Dietwil, Geltwil, Kallern, Merenschwand, Mühlau, Muri, Oberrüti, Rottenschwil, Sins, Waltenschwil |
-| Kreis XIV (Bez. Rheinfelden) | Im Kunzental 30, Postfach 55 | 4310 Rheinfelden | Hellikon, Kaiseraugst, Magden, Möhlin, Mumpf, Obermumpf, Olsberg, Rheinfelden, Schupfart, Stein, Wallbach, Wegenstetten, Zeiningen, Zuzgen |
-| Kreis XV (Bez. Zofingen) | Postfach 110 | 4852 Rothrist | Aarburg, Murgenthal, Oftringen, Rothrist |
-| Kreis XVI (Bez. Zofingen) | Postfach 135 | 4800 Zofingen | Bottenwil, Brittnau, Kirchleerau, Kölliken, Moosleerau, Reitnau, Safenwil, Staffelbach, Strengelbach, Uerkheim, Vordemwald, Wiliberg, Zofingen |
-| Kreis XVII (Bez. Zurzach) | c/o Gerichtskanzlei, Postfach | 5330 Bad Zurzach | Böttstein, Döttingen, Endingen, Fisibach, Full-Reuenthal, Klingnau, Koblenz, Leibstadt, Lengnau, Leuggern, Mellikon, Schneisingen, Siglistorf, Tegerfelden, Zurzach |
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+|---|---|---|---|---|
+| Kreis I (Bez. Aarau) | Postfach 2347 | 5001 Aarau | Aarau, Biberstein, Densbüren, Erlinsbach, Küttigen | https://www.aarau.ch/leben/staat-und-recht.html/121 |
+| Kreis II (Bez. Aarau) | Postfach | 5036 Oberentfelden | Buchs, Gränichen, Hirschthal, Muhen, Oberentfelden, Suhr, Unterentfelden | https://www.suhr.ch/dienstleistungen/29632 |
+| Kreis III (Bez. Baden) | Rathausgasse 6, Postfach | 5400 Baden | Baden, Ehrendingen, Ennetbaden, Freienwil, Obersiggenthal, Untersiggenthal, Würenlingen | https://www.baden.ch/de/leben-wohnen/sicherheit-und-recht/recht/friedensrichteramt.html/620 |
+| Kreis IV (Bez. Baden) | Alb.-Zwyssigstrasse 76 | 5430 Wettingen | Bergdietikon, Killwangen, Neuenhof, Spreitenbach, Wettingen, Würenlos | https://www.wettingen.ch/aemter/6581 |
+| Kreis V (Bez. Baden) | Postfach 56 | 5200 Brugg | Bellikon, Birmenstorf, Fislisbach, Gebenstorf, Künten, Mägenwil, Mellingen, Niederrohrdorf, Oberrohrdorf, Remetschwil, Stetten, Wohlenschwil | https://www.mellingen.ch/verwaltung/friedensrichter.html/147 |
+| Kreis VI (Bez. Bremgarten) | Postfach | 5605 Dottikon | Büttikon, Dottikon, Fischbach-Göslikon, Hägglingen, Niederwil, Sarmenstorf, Tägerig, Uezwil, Villmergen, Wohlen | https://www.villmergen.ch/aemter/810 |
+| Kreis VII (Bez. Bremgarten) | Postfach 225 | 5620 Bremgarten | Arni, Berikon, Bremgarten, Eggenwil, Islisberg, Jonen, Oberlunkhofen, Oberwil-Lieli, Rudolfstetten-Friedlisberg, Unterlunkhofen, Widen, Zufikon | https://www.bremgarten.ch/abteilungen/17314 |
+| Kreis VIII (Bez. Brugg) | Postfach 151 | 5103 Wildegg | Auenstein, Birr, Birrhard, Bözberg, Brugg, Habsburg, Hausen, Lupfig, Mandach, Mönthal, Mülligen, Remigen, Riniken, Rüfenach, Schinznach, Thalheim, Veltheim, Villigen, Villnachern, Windisch | https://www.moenthal.ch/verwaltung/externe-amtsstellen |
+| Kreis IX (Bez. Kulm) | Postfach 174 | 5726 Unterkulm | Beinwil am See, Birrwil, Dürrenäsch, Gontenschwil, Holziken, Leimbach, Leutwil, Menziken, Oberkulm, Reinach, Schlossrued, Schmiedrued, Schöftland, Teufenthal, Unterkulm, Zetzwil | https://www.unterkulm.ch/gemeinde/verwaltung/bezirksstellen.html/270 |
+| Kreis X (Bez. Laufenburg) | Postfach | 5070 Frick | Böztal, Eiken, Frick, Gansingen, Gipf-Oberfrick, Herznach-Ueken, Kaisten, Laufenburg, Mettauertal, Münchwilen, Oberhof, Oeschgen, Schwaderloch, Sisseln, Wittnau, Wölflinswil, Zeihen | https://www.frick.ch/dienstleistungen/3378 |
+| Kreis XI (Bez. Lenzburg) | Postfach | 5600 Lenzburg 1 | Ammerswil, Brunegg, Dintikon, Hendschiken, Holderbank, Lenzburg, Möriken-Wildegg, Niederlenz, Othmarsingen | https://www.ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/schlichtungsbehoerden/friedensrichterinnen-und-friedensrichter/friedensrichterkreise |
+| Kreis XII (Bez. Lenzburg) | Postfach | 5707 Seengen | Boniswil, Egliswil, Fahrwangen, Hallwil, Hunzenschwil, Meisterschwanden, Rupperswil, Schafisheim, Seengen, Seon, Staufen | https://www.seon.ch/verwaltung/externe-dienste/friedensrichteramt-kreis-xii.html/119 |
+| Kreis XIII (Bez. Muri) | Postfach 238 | 5630 Muri AG | Abtwil, Aristau, Auw, Beinwil (Freiamt), Besenbüren, Bettwil, Boswil, Bünzen, Buttwil, Dietwil, Geltwil, Kallern, Merenschwand, Mühlau, Muri, Oberrüti, Rottenschwil, Sins, Waltenschwil | https://www.muri.ch/gemeinde/verwaltung/amtsstellen.html/326 |
+| Kreis XIV (Bez. Rheinfelden) | Im Kunzental 30, Postfach 55 | 4310 Rheinfelden | Hellikon, Kaiseraugst, Magden, Möhlin, Mumpf, Obermumpf, Olsberg, Rheinfelden, Schupfart, Stein, Wallbach, Wegenstetten, Zeiningen, Zuzgen | https://www.moehlin.ch/de/kontakte/detail/detail.php?i=448 |
+| Kreis XV (Bez. Zofingen) | Postfach 110 | 4852 Rothrist | Aarburg, Murgenthal, Oftringen, Rothrist | https://www.rothrist.ch/dienstleistungen/112975 |
+| Kreis XVI (Bez. Zofingen) | Postfach 135 | 4800 Zofingen | Bottenwil, Brittnau, Kirchleerau, Kölliken, Moosleerau, Reitnau, Safenwil, Staffelbach, Strengelbach, Uerkheim, Vordemwald, Wiliberg, Zofingen | https://www.zofingen.ch/gesellschaft/gerichte.html/387 |
+| Kreis XVII (Bez. Zurzach) | c/o Gerichtskanzlei, Hauptstrasse 50, Postfach | 5330 Bad Zurzach | Böttstein, Döttingen, Endingen, Fisibach, Full-Reuenthal, Klingnau, Koblenz, Leibstadt, Lengnau, Leuggern, Mellikon, Schneisingen, Siglistorf, Tegerfelden, Zurzach | https://www.zurzach.ch/weitereamtsstellen |
 
 Quelle: https://www.ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/schlichtungsbehoerden/friedensrichterinnen-und-friedensrichter/friedensrichterkreise · GOG: https://gesetzessammlungen.ag.ch/data/155.100
 
@@ -233,13 +238,13 @@ Unsicherheiten SG:
 
 Quelle: friedensrichteraemter.tg.ch (Adressen, je Amtsseite). Gemeindelisten = die 5 Bezirke (BFS-kongruent, Stand 1.1.2011 ff.); Bezirkszuordnung gemäss Bezirks-/Justizreform TG.
 
-| Amt | Strasse | PLZ Ort | Gemeinden |
-|---|---|---|---|
-| Friedensrichteramt Bezirk Arbon | Bahnhofstrasse 16, Postfach | 9320 Arbon | Amriswil, Arbon, Dozwil, Egnach, Hefenhofen, Horn, Kesswil, Roggwil (TG), Romanshorn, Salmsach, Sommeri, Uttwil |
-| Friedensrichteramt Bezirk Frauenfeld | St. Gallerstrasse 4, Postfach | 8510 Frauenfeld | Basadingen-Schlattingen, Berlingen, Diessenhofen, Eschenz, Felben-Wellhausen, Frauenfeld, Gachnang, Herdern, Homburg, Hüttlingen, Hüttwilen, Mammern, Matzingen, Müllheim, Neunforn, Pfyn, Schlatt (TG), Steckborn, Stettfurt, Thundorf, Uesslingen-Buch, Wagenhausen, Warth-Weiningen |
-| Friedensrichteramt Bezirk Kreuzlingen | Bachstrasse 10, Postfach | 8280 Kreuzlingen 1 | Altnau, Bottighofen, Ermatingen, Gottlieben, Güttingen, Kemmental, Kreuzlingen, Langrickenbach, Lengwil, Münsterlingen, Raperswilen, Salenstein, Tägerwilen, Wäldi |
-| Friedensrichteramt Bezirk Münchwilen | Rütiweg 1, Postfach 126 | 8370 Sirnach | Aadorf, Bettwiesen, Bichelsee-Balterswil, Braunau, Eschlikon, Fischingen, Lommis, Münchwilen, Rickenbach, Sirnach, Tobel-Tägerschen, Wängi, Wilen |
-| Friedensrichteramt Bezirk Weinfelden | Bahnhofstrasse 22, Postfach | 8570 Weinfelden | Affeltrangen, Amlikon-Bissegg, Berg (TG), Birwinken, Bischofszell, Bürglen (TG), Bussnang, Erlen, Hauptwil-Gottshaus, Hohentannen, Kradolf-Schönenberg, Märstetten, Schönholzerswilen, Sulgen, Weinfelden, Wigoltingen, Wuppenau, Zihlschlacht-Sitterdorf |
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+|---|---|---|---|---|
+| Friedensrichteramt Bezirk Arbon | Bahnhofstrasse 16, Postfach | 9320 Arbon | Amriswil, Arbon, Dozwil, Egnach, Hefenhofen, Horn, Kesswil, Roggwil (TG), Romanshorn, Salmsach, Sommeri, Uttwil | https://friedensrichteraemter.tg.ch/friedensrichtraemter/friedensrichteramt-bezirk-arbon.html/12945 |
+| Friedensrichteramt Bezirk Frauenfeld | St. Gallerstrasse 4, Postfach | 8510 Frauenfeld | Basadingen-Schlattingen, Berlingen, Diessenhofen, Eschenz, Felben-Wellhausen, Frauenfeld, Gachnang, Herdern, Homburg, Hüttlingen, Hüttwilen, Mammern, Matzingen, Müllheim, Neunforn, Pfyn, Schlatt (TG), Steckborn, Stettfurt, Thundorf, Uesslingen-Buch, Wagenhausen, Warth-Weiningen | https://friedensrichteraemter.tg.ch/friedensrichtraemter/friedensrichteramt-bezirk-frauenfeld.html/12946 |
+| Friedensrichteramt Bezirk Kreuzlingen | Bachstrasse 10, Postfach | 8280 Kreuzlingen 1 | Altnau, Bottighofen, Ermatingen, Gottlieben, Güttingen, Kemmental, Kreuzlingen, Langrickenbach, Lengwil, Münsterlingen, Raperswilen, Salenstein, Tägerwilen, Wäldi | https://friedensrichteraemter.tg.ch/friedensrichtraemter/friedensrichteramt-bezirk-kreuzlingen.html/12947 |
+| Friedensrichteramt Bezirk Münchwilen | Rütiweg 1, Postfach 126 | 8370 Sirnach | Aadorf, Bettwiesen, Bichelsee-Balterswil, Braunau, Eschlikon, Fischingen, Lommis, Münchwilen, Rickenbach, Sirnach, Tobel-Tägerschen, Wängi, Wilen | https://friedensrichteraemter.tg.ch/friedensrichtraemter/friedensrichteramt-bezirk-muenchwilen.html/12948 |
+| Friedensrichteramt Bezirk Weinfelden | Bahnhofstrasse 22, Postfach | 8570 Weinfelden | Affeltrangen, Amlikon-Bissegg, Berg (TG), Birwinken, Bischofszell, Bürglen (TG), Bussnang, Erlen, Hauptwil-Gottshaus, Hohentannen, Kradolf-Schönenberg, Märstetten, Schönholzerswilen, Sulgen, Weinfelden, Wigoltingen, Wuppenau, Zihlschlacht-Sitterdorf | https://friedensrichteraemter.tg.ch/friedensrichtraemter/friedensrichteramt-bezirk-weinfelden.html/12949 |
 
 Quellen: https://friedensrichteraemter.tg.ch/ und Amtsseiten (Arbon /12945, Frauenfeld /12946, Kreuzlingen /12947, Münchwilen /12948, Weinfelden /12949) · Bezirke/Gemeinden: https://statistik.tg.ch/verzeichnisse/bezirke-und-gemeinden.html/6777 (Zählung bestätigt: 12+23+14+13+18 = 80) · Gemeindelisten je Bezirk: de.wikipedia.org/wiki/Bezirk_Arbon etc. (BFS-Stand)
 
@@ -347,17 +352,35 @@ Regionen = amtliche BFS-Ebene (11/11 namensgleich). Gemeinde-Zuordnung
 
 ## 30. GR — Graubünden: Vermittlerämter (Region = BFS-Region)
 
-| Amt | Strasse | PLZ Ort | Regionen |
-|---|---|---|---|
-| Vermittleramt Region Albula | Stradung 26 | 7450 Tiefencastel | Albula |
-| Vermittleramt Region Bernina | Via da la Pesa 8 | 7742 Poschiavo | Bernina |
-| Vermittleramt Region Engiadina Bassa/Val Müstair | Saglina 22 | 7554 Sent | Engiadina Bassa / Val Müstair |
-| Vermittleramt Region Imboden | Postfach 308 | 7001 Chur | Imboden |
-| Vermittleramt Region Landquart | Bahnhofplatz 2b, Postfach 244 | 7302 Landquart | Landquart |
-| Vermittleramt Region Maloja | Plazza da Scoula 16, Postfach 83 | 7500 St. Moritz | Maloja |
-| Vermittleramt Region Moesa | Al Giardinètt 2 | 6535 Roveredo | Moesa |
-| Vermittleramt Region Plessur | Bärenloch 1, Postfach 290 | 7001 Chur | Plessur |
-| Vermittleramt Region Prättigau/Davos | Postfach 125 | 7250 Klosters | Prättigau / Davos |
-| Vermittleramt Region Surselva | Via Centrala 4 | 7130 Ilanz/Glion | Surselva |
-| Vermittleramt Region Viamala | Untere Gasse 1 | 7430 Thusis | Viamala |
+| Amt | Strasse | PLZ Ort | Regionen | URL |
+|---|---|---|---|---|
+| Vermittleramt Region Albula | Stradung 26 | 7450 Tiefencastel | Albula | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Bernina | Via da la Pesa 8 | 7742 Poschiavo | Bernina | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Engiadina Bassa/Val Müstair | Saglina 22 | 7554 Sent | Engiadina Bassa / Val Müstair | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Imboden | Postfach 667 | 7001 Chur | Imboden | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Landquart | Bahnhofplatz 2b, Postfach 244 | 7302 Landquart | Landquart | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Maloja | Plazza da Scoula 16, Postfach 83 | 7500 St. Moritz | Maloja | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Moesa | Al Giardinètt 2 | 6535 Roveredo | Moesa | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Plessur | Bärenloch 1, Postfach 290 | 7001 Chur | Plessur | https://www.chur.ch/dienstleistungen/35245 |
+| Vermittleramt Region Prättigau/Davos | Talstrasse 10a, Postfach 125 | 7250 Klosters | Prättigau / Davos | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Surselva | Via Centrala 4 | 7130 Ilanz/Glion | Surselva | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
+| Vermittleramt Region Viamala | Untere Gasse 1 | 7430 Thusis | Viamala | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/ |
 
+
+
+## NACHTRAG 10.6.2026 — URL-Spalte + Korrekturen (Recherche-Agents)
+
+AG (17 Kreise), TG (5 Detailseiten friedensrichteraemter.tg.ch — amtlicher
+Pfad-Tippfehler «friedensrichtraemter», so verifiziert), ZG (11 Gemeinde-
+URLs; Oberägeri neu Alosenstrasse 2, Risch «Zentrum Dorfmatt 1», Cham amtlich
+OHNE Hausnummer «Mandelhof» [eidg. Gebäuderegister], Neuheim Dorfplatz 5),
+AI (alle 5 via ai.ch/gerichte/vermittler; 3 Adressen wegen Personalwechsel
+korrigiert), GR (Sammelseite justiz-gr.ch …/vermittleraemter/; Plessur
+zusätzlich chur.ch-Detail; Prättigau/Davos Talstrasse 10a [via Gemeinde
+Davos, Tel.-identisch]; Imboden PF 308→667 — KONFLIKT justiz-gr.ch [308] vs.
+zwei Regionsgemeinden Tamins/Domat-Ems [667, Tel.-identisch, aktueller] →
+667 mit Vorbehalt; Imboden amtlich ohne Strasse). SG/FR: amtlich KEINE
+Einzelseiten (Sammelseiten; alte fr.ch-Institutionsseiten 410 Gone) — Link-
+Fallback bleibt die Verzeichnis-URL. AG-Kernbefund: Milizämter, amtlich
+überwiegend NUR Postfach (Bremgarten verlangt Adressierung ausdrücklich
+ohne Strasse) — Postfach-Adressen sind dort der korrekte Stand, keine Lücke.

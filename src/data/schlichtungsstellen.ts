@@ -225,7 +225,7 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'zentral', stelle: A('Schlichtungsstelle für Miete und nichtlandwirtschaftliche Pacht', 'Landsgemeindeplatz 7c', '9043 Trogen', 'ganzer Kanton', undefined, 'https://ar.ch/gerichte/vermittler-und-schlichtungsstellen/schlichtungsstelle-fuer-miete-und-nichtlandwirtschaftliche-pacht/') },
   },
   AI: {
-    stand: '5.6.2026', quelle: 'ai.ch (via amtliche Erlasssammlung/Staatskalender; Portal blockt Direktabruf)',
+    stand: '5.6.2026', quelle: 'ai.ch (via amtliche Erlasssammlung/Staatskalender; ai.ch/gerichte/vermittler (Direktabruf 10.6.2026))',
     ordentlich: { modus: 'verzeichnis', beschreibung: 'fünf Bezirks-Vermittler (Appenzell, Schwende-Rüte, Schlatt-Haslen, Gonten, Oberegg)', url: 'https://www.ai.ch/gerichte/vermittler' },
     miete: { modus: 'zentral', stelle: A('Schlichtungsstelle für Mietverhältnisse (Sekretariat)', 'c/o Ratskanzlei, Marktgasse 2', '9050 Appenzell', 'beide Landesteile') },
   },
@@ -243,9 +243,9 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
       modus: 'liste', hinweis: 'ein Vermittleramt je Region (GOG GR Art. 85 ff.)',
       stellen: [
         A('Vermittleramt Plessur', 'Bärenloch 1, Postfach 290', '7001 Chur', 'Region Plessur'),
-        A('Vermittleramt Imboden', 'Postfach 308', '7001 Chur', 'Region Imboden'),
+        A('Vermittleramt Imboden', 'Postfach 667' /* 10.6.2026: PF 308→667, Tamins+Domat/Ems (justiz-gr.ch noch 308 — Vorbehalt im Dossier) */, '7001 Chur', 'Region Imboden'),
         A('Vermittleramt Landquart', 'Bahnhofplatz 2b, Postfach 244', '7302 Landquart', 'Region Landquart'),
-        A('Vermittleramt Prättigau/Davos', 'Postfach 125', '7250 Klosters', 'Region Prättigau/Davos'),
+        A('Vermittleramt Prättigau/Davos', 'Talstrasse 10a, Postfach 125' /* 10.6.2026: Strasse via Gemeinde Davos, Tel.-identisch */, '7250 Klosters', 'Region Prättigau/Davos'),
         A('Vermittleramt Albula', 'Stradung 26', '7450 Tiefencastel', 'Region Albula'),
         A('Vermittleramt Viamala', 'Untere Gasse 1', '7430 Thusis', 'Region Viamala'),
         A('Vermittleramt Surselva', 'Via Centrala 4', '7130 Ilanz/Glion', 'Region Surselva'),

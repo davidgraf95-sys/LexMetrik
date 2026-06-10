@@ -61,6 +61,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   const [kreisIdx, setKreisIdx] = useState(0);
   const [amtZeilen, setAmtZeilen] = useState<string[] | null>(null);
+  const [amtUrl, setAmtUrl] = useState<string | undefined>(undefined);
   // Befund David 10.6.2026 («PLZ bzw. Gemeinde funktioniert nicht»):
   // Treffer im Kanton aufbewahren — bei Mehrdeutigkeit ohne Hauptgemeinde
   // übernehmen die PlzGemeindeWahl-Kacheln (§10) die Präzisierung.
@@ -72,7 +73,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   // PLZ → Gemeinde (amtliches Register); Amt → Adresse (7 Kantone)
   useEffect(() => {
     let aktiv = true;
-    const lade = async (): Promise<{ amt: string[] | null; kreise: ZhKreisAmt[] | null; wahl: PlzTreffer[] | null }> => {
+    const lade = async (): Promise<{ amt: string[] | null; amtUrl?: string; kreise: ZhKreisAmt[] | null; wahl: PlzTreffer[] | null }> => {
       let g = gemeinde.trim();
       let wahl: PlzTreffer[] | null = null;
       if (/^\d{4}$/.test(plz)) {
@@ -92,14 +93,14 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       }
       if (typ !== 'ordentlich' || !AMT_KANTONE.includes(kanton) || g === '') return { amt: null, kreise: null, wahl };
       if (kanton === 'ZH' && g.toLowerCase() === 'zürich') {
-        return { amt: null, kreise: await zuerichKreisAemter(), wahl };
+        return { amt: null, amtUrl: undefined, kreise: await zuerichKreisAemter(), wahl };
       }
       const a = await amtFuer(kanton, g);
-      return { amt: a ? [a.name, a.strasse, a.plzOrt] : null, kreise: null, wahl };
+      return { amt: a ? [a.name, a.strasse, a.plzOrt] : null, amtUrl: a?.url, kreise: null, wahl };
     };
     lade()
-      .then((r) => { if (aktiv) { setAmtZeilen(r.amt); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
-      .catch(() => { if (aktiv) { setAmtZeilen(null); setZhKreise(null); setPlzWahl(null); } });
+      .then((r) => { if (aktiv) { setAmtZeilen(r.amt); setAmtUrl(r.amtUrl); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
+      .catch(() => { if (aktiv) { setAmtZeilen(null); setAmtUrl(undefined); setZhKreise(null); setPlzWahl(null); } });
     return () => { aktiv = false; };
   }, [kanton, typ, plz, gemeinde]);
 
@@ -121,7 +122,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       const s = wahlIdx >= 0 ? a.stellen[Math.min(wahlIdx, a.stellen.length - 1)] : undefined;
       onAufgeloest(s
         ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
-        : (typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: recherche.kantonsUrl } : null));
+        : (typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? recherche.kantonsUrl } : null));
     } else if (typ === 'ordentlich' && zhKreise && zhKreise.length > 0) {
       const k = zhKreise[Math.min(kreisIdx, zhKreise.length - 1)];
       onAufgeloest({ zeilen: [k.name, k.strasse, k.plzOrt], url: a.url });
@@ -129,10 +130,10 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       // Bug-Check 10.6.2026 (NIEDRIG): amtZeilen sind ordentliche Ämter —
       // bei paritätischem Typ nie als Adressat melden (transienter Zustand
       // nach Typwechsel).
-      onAufgeloest(typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: a.url } : null);
+      onAufgeloest(typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? a.url } : null);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [kanton, typ, modus, wahlIdx, amtZeilen, zhKreise, kreisIdx, glgOhneStelle]);
+  }, [kanton, typ, modus, wahlIdx, amtZeilen, amtUrl, zhKreise, kreisIdx, glgOhneStelle]);
 
   if (!recherche) return null;
   const a = recherche.aufloesung;

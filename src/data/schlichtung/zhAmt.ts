@@ -5,7 +5,7 @@
 // eindeutig (sechs Kreis-Ämter) — dafür liefert zuerichKreisAemter() die
 // vollständige Liste; den massgeblichen Stadtkreis kennt nur der Nutzer.
 
-export interface ZhAmt { name: string; strasse: string; plzOrt: string }
+export interface ZhAmt { name: string; strasse: string; plzOrt: string; url?: string }
 export interface ZhKreisAmt extends ZhAmt { kreise: string }
 
 /** Deterministische Namens-Kandidaten für den Gemeinde-Lookup (KEIN Fuzzy-
