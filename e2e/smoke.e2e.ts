@@ -18,9 +18,10 @@ const ROUTEN = [
 ]
 
 // Vorbestehende, dokumentierte Overflow-Befunde (FAHRPLAN-DESIGN E4).
-// fixme statt Gate: wird der Befund behoben, meldet Playwright den Eintrag
-// als überflüssig — dann hier entfernen.
-const BEKANNTER_OVERFLOW = new Set<string>(['/'])
+// fixme statt Gate: wird der Befund behoben, den Eintrag hier entfernen.
+// '/' entfernt 10.6.2026: empirisch kein Overflow mehr bei 390px
+// (scrollWidth 390 = clientWidth, frischer Build).
+const BEKANNTER_OVERFLOW = new Set<string>([])
 
 function fehlerSammeln(page: Page): string[] {
   const fehler: string[] = []
