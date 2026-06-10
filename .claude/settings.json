@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run build)",
+      "Bash(npm test *)",
+      "Bash(npm run golden:vergleich)",
+      "Bash(npm run check)",
+      "Bash(npm run check:inventur)",
+      "Bash(npm run check:bibliothek)",
+      "Bash(npm run check:verfall)",
+      "Bash(npm run check:sweep)",
+      "Bash(npm run check:smoke)",
+      "Bash(npm run check:caches)",
+      "Bash(npm run check:zitate)",
+      "Bash(npm run check:fedlex-versionen)",
+      "Bash(npm run test:e2e)",
+      "Bash(npx tsc -b)",
+      "Bash(npx eslint *)",
+      "Bash(curl -s https://www.fedlex.admin.ch/*)",
+      "Bash(curl -s https://fedlex.data.admin.ch/*)",
+      "Bash(curl -s http://localhost:*)",
+      "mcp__Claude_Preview__preview_screenshot"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/tor-schutz.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

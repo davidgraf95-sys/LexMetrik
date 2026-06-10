@@ -121,3 +121,23 @@ daraus gearbeitet werden kann:
 
 Erkenntnisse, die bestehenden Code korrigieren, werden zusätzlich am
 Fundort als Kommentar mit Quellenverweis verankert (§7).
+
+## §12 Parallel-Sessions nur isoliert (Anweisung David 10.6.2026)
+
+Gleichzeitige Sessions im selben Arbeitsverzeichnis haben wiederholt
+Arbeit zerstört (Dateien stumm überschrieben, gestagte Inhalte über den
+geteilten Index in fremde Commits gewandert, ein fremder Commit per
+`--amend` umgeschrieben). Darum:
+
+1. **Zweite und jede weitere Session arbeitet in einem eigenen
+   git-Worktree** (`git worktree add …` bzw. die native
+   Worktree-Isolation von Claude Code) und bringt Ergebnisse als Commits
+   zurück. Wer beim Start fremden WIP in `git status` sieht, der nicht
+   zum eigenen Auftrag gehört, wechselt vor Struktur-Arbeiten in einen
+   Worktree.
+2. Im geteilten Verzeichnis gelten zwingend: Commits nur mit explizitem
+   Pathspec (`git commit -m … -- <dateien>`) · kein `git stash` bei
+   fremdem WIP · kein `git commit --amend` (Hook blockiert) · nach jedem
+   Commit die `--stat`-Dateizahl gegen die eigene add-Liste prüfen.
+3. Deploys nie aus dem Arbeitsverzeichnis, immer aus einem sauberen
+   HEAD-Worktree (Details: Skill `deploy-check`).
