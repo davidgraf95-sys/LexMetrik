@@ -18,6 +18,7 @@ import { useWizardState } from '../components/vorlagen/useWizardState';
 import { kvPrefillLesen } from '../lib/vorlagen/klageVereinfacht';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
+import { gerichtsErlass } from '../data/gerichtsorganisationErlasse';
 
 // ─── Vorlagen-Wizard: Klage im vereinfachten Verfahren (BS-Pilot) ───────────
 // Zweite Eingabe-Vorlage (nach Schlichtungsgesuch BS). Wie dort BEWUSST ohne
@@ -133,6 +134,16 @@ export function VorlageKlageVereinfacht() {
                 );
               })()}
             </div>
+            {(() => {
+              const e = gerichtsErlass(a.gerichtsKanton);
+              return (
+                <p className="text-xs text-ink-500">
+                  Rechtsgrundlage Gerichtsorganisation: {e.url
+                    ? <a href={e.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">{e.abk} {a.gerichtsKanton} ({e.nummer}) ↗</a>
+                    : <>{e.abk} {a.gerichtsKanton} ({e.nummer})</>}
+                </p>
+              );
+            })()}
             {a.gerichtsKanton !== 'BS' && !a.gerichtManuellAktiv && (
               <KvGerichtWahl kanton={a.gerichtsKanton} materie={a.materie}
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
