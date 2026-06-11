@@ -24,6 +24,7 @@
     "check:fedlex-versionen": "vite-node scripts/fedlex-versionen-pruefen.ts",
     "golden": "vite-node scripts/golden-outputs.ts",
     "golden:vergleich": "vite-node scripts/golden-outputs.ts vergleich",
+    "golden:diff": "vite-node scripts/golden-outputs.ts diff",
     "gate": "bash scripts/gate.sh voll",
     "gate:schnell": "bash scripts/gate.sh schnell"
   },

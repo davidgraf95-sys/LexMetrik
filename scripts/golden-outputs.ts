@@ -341,9 +341,58 @@ if (process.argv[2] === 'vergleich') {
     console.error('Fachliche Änderung? → `npm run golden` + Begründung im Commit. Refactoring? → Bug.');
     process.exit(1);
   }
-} else {
+} else if (process.argv[2] === 'diff') {
+  // Diagnose-Modus (Token-Disziplin 11.6.2026): NUR den Alt/Neu-Diff eines
+  // Falls zeigen statt golden/lexmetrik-golden.json (11'900 Zeilen) zu lesen.
+  // Ohne Fall-ID: kompakte Liste der abweichenden IDs. Reine Diagnose —
+  // das Gate bleibt `golden:vergleich`.
+  if (!existsSync(PFAD)) { console.error('Kein Golden-Stand vorhanden — zuerst ohne Argument laufen lassen.'); process.exit(2); }
+  const altObj = JSON.parse(readFileSync(PFAD, 'utf-8')) as Record<string, unknown>;
+  const id = process.argv[3];
+  if (!id) {
+    const geaendert = Object.keys(faelle).filter((k) => k in altObj && JSON.stringify(altObj[k]) !== JSON.stringify(faelle[k]));
+    const neu = Object.keys(faelle).filter((k) => !(k in altObj));
+    const entfernt = Object.keys(altObj).filter((k) => !(k in faelle));
+    if (!geaendert.length && !neu.length && !entfernt.length) {
+      console.log(`IDENTISCH — ${Object.keys(faelle).length} Fälle byte-gleich.`);
+    } else {
+      if (geaendert.length) console.log(`geändert (${geaendert.length}): ${geaendert.join(', ')}`);
+      if (neu.length) console.log(`neu (${neu.length}): ${neu.join(', ')}`);
+      if (entfernt.length) console.log(`entfernt (${entfernt.length}): ${entfernt.join(', ')}`);
+      console.log('Einzelfall ansehen: npm run golden:diff -- <id>');
+    }
+  } else if (!(id in altObj) && !(id in faelle)) {
+    console.error(`Unbekannte Fall-ID: ${id}`);
+    process.exit(2);
+  } else {
+    const altZeilen = id in altObj ? JSON.stringify(altObj[id], null, 1).split('\n') : [];
+    const neuZeilen = id in faelle ? JSON.stringify(faelle[id], null, 1).split('\n') : [];
+    if (altZeilen.join('\n') === neuZeilen.join('\n')) {
+      console.log(`IDENTISCH — Fall ${id} byte-gleich.`);
+    } else {
+      console.log(`DIFF ${id} (− Basis ${PFAD} / + aktueller Code):`);
+      // naiver Zeilenvergleich (genügt für Textänderungen; bei Einfügungen
+      // verschiebt sich der Index — Ausgabe gedeckelt, Hinweis am Ende)
+      const max = Math.max(altZeilen.length, neuZeilen.length);
+      let ausgegeben = 0;
+      for (let i = 0; i < max && ausgegeben < 80; i++) {
+        const a = altZeilen[i];
+        const n = neuZeilen[i];
+        if (a === n) continue;
+        if (a !== undefined) { console.log(`− ${a}`); ausgegeben++; }
+        if (n !== undefined) { console.log(`+ ${n}`); ausgegeben++; }
+      }
+      if (ausgegeben >= 80) console.log(`… gekürzt (Fall stark verändert; Zeilen alt ${altZeilen.length} / neu ${neuZeilen.length}).`);
+    }
+  }
+} else if (process.argv[2] === undefined) {
   writeFileSync(PFAD, json);
   const fehler = Object.entries(faelle).filter(([, v]) => (v as { FEHLER?: string })?.FEHLER);
   console.log(`Golden-Stand geschrieben: ${Object.keys(faelle).length} Fälle → ${PFAD}`);
   if (fehler.length) console.log('Mit FEHLER erfasst (Signatur prüfen):', fehler.map(([k]) => k).join(', '));
+} else {
+  // Schutz (11.6.2026): JEDES unbekannte Argument fiel früher in den
+  // Schreib-Zweig und überschrieb still die committete Basis.
+  console.error(`Unbekanntes Argument «${process.argv[2]}» — erlaubt: (ohne) = Basis schreiben · vergleich · diff [id]. Basis NICHT angefasst.`);
+  process.exit(2);
 }
