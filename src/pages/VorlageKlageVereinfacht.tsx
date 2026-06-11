@@ -15,6 +15,8 @@ import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
 import { KANTONE } from '../lib/kantone';
 import type { Kanton } from '../types/legal';
 import { useWizardState } from '../components/vorlagen/useWizardState';
+import { ZefixSuche } from '../components/vorlagen/ZefixSuche';
+import { uidGueltig, uidNormalisieren } from '../lib/uid';
 import { kvPrefillLesen } from '../lib/vorlagen/klageVereinfacht';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -69,10 +71,19 @@ export function ParteiEditor({ p, onChange }: { p: SgPartei; onChange: (p: SgPar
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Firma (gemäss Handelsregister)"><input className={inputCls} value={p.firma} onChange={(e) => onChange({ ...p, firma: e.target.value })} /></Field>
+          <Field label="UID" optional hint={p.uid?.trim() && !uidGueltig(p.uid) ? 'Prüfziffer stimmt nicht — Format CHE-xxx.xxx.xxx' : undefined}>
+            <input className={inputCls} placeholder="CHE-xxx.xxx.xxx" value={p.uid ?? ''}
+              onChange={(e) => onChange({ ...p, uid: e.target.value })}
+              onBlur={() => { const n = p.uid ? uidNormalisieren(p.uid) : null; if (n && n !== p.uid) onChange({ ...p, uid: n }); }} />
+          </Field>
           <Field label="Strasse Nr."><input className={inputCls} value={p.sitzStrasse} onChange={(e) => onChange({ ...p, sitzStrasse: e.target.value })} /></Field>
           <div className="grid grid-cols-[6rem_1fr] gap-3">
             <Field label="PLZ"><input className={inputCls + ' num'} value={p.sitzPlz} onChange={(e) => onChange({ ...p, sitzPlz: e.target.value })} /></Field>
             <Field label="Ort"><input className={inputCls} value={p.sitzOrt} onChange={(e) => onChange({ ...p, sitzOrt: e.target.value })} /></Field>
+          </div>
+          <div className="sm:col-span-2">
+            <ZefixSuche firma={p.firma} onUebernehmen={(t) =>
+              onChange({ ...p, firma: t.firma, uid: t.uid, sitzOrt: p.sitzOrt.trim() ? p.sitzOrt : t.sitzOrt })} />
           </div>
         </div>
       )}

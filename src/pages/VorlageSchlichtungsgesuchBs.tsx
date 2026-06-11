@@ -14,6 +14,8 @@ import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { SgAdressatKachel, SgBehoerdenWahl } from '../components/vorlagen/SgBehoerdenWahl';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
+import { ZefixSuche } from '../components/vorlagen/ZefixSuche';
+import { uidGueltig, uidNormalisieren } from '../lib/uid';
 import { karte } from '../lib/startseiteConfig';
 import { gerichtsErlass } from '../data/gerichtsorganisationErlasse';
 
@@ -112,6 +114,15 @@ export function VorlageSchlichtungsgesuchBs() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Firma"><input className={inputCls} value={p.firma} onChange={(e) => setListe(liste.map((x, j) => j === i ? { ...p, firma: e.target.value } : x))} /></Field>
               <Field label="Rechtsform" optional><input className={inputCls} placeholder="z. B. AG, GmbH" value={p.rechtsform ?? ''} onChange={(e) => setListe(liste.map((x, j) => j === i ? { ...p, rechtsform: e.target.value } : x))} /></Field>
+              <Field label="UID" optional hint={p.uid?.trim() && !uidGueltig(p.uid) ? 'Prüfziffer stimmt nicht — Format CHE-xxx.xxx.xxx' : undefined}>
+                <input className={inputCls} placeholder="CHE-xxx.xxx.xxx" value={p.uid ?? ''}
+                  onChange={(e) => setListe(liste.map((x, j) => j === i ? { ...p, uid: e.target.value } : x))}
+                  onBlur={() => { const n = p.uid ? uidNormalisieren(p.uid) : null; if (n && n !== p.uid) setListe(liste.map((x, j) => j === i ? { ...p, uid: n } : x)); }} />
+              </Field>
+              <div className="sm:col-span-2">
+                <ZefixSuche firma={p.firma} onUebernehmen={(t) =>
+                  setListe(liste.map((x, j) => j === i ? { ...p, firma: t.firma, uid: t.uid, sitzOrt: p.sitzOrt.trim() ? p.sitzOrt : t.sitzOrt } : x))} />
+              </div>
               <Field label="Sitz: Strasse / Nr."><input className={inputCls} value={p.sitzStrasse} onChange={(e) => setListe(liste.map((x, j) => j === i ? { ...p, sitzStrasse: e.target.value } : x))} /></Field>
               <div className="grid grid-cols-[6rem_1fr] gap-3">
                 <Field label="PLZ"><input className={inputCls} inputMode="numeric" maxLength={4} value={p.sitzPlz} onChange={(e) => setListe(liste.map((x, j) => j === i ? { ...p, sitzPlz: e.target.value } : x))} /></Field>

@@ -49,6 +49,14 @@ export function Datenschutz() {
           Gerät nicht und lassen sich jederzeit über den Button «Eingaben zurücksetzen» in der
           jeweiligen Vorlage oder über die Browser-Einstellungen löschen.
         </p>
+        <p>
+          {/* Zefix-Offenlegung (§8, Entscheid David 11.6.2026) — Wortlaut-Abnahme David offen */}
+          Eine Ausnahme erfolgt nur auf Ihren ausdrücklichen Klick: In Vorlagen mit juristischen
+          Personen können Sie über den Knopf «UID in Zefix nachschlagen» den von Ihnen eingegebenen
+          Firmennamen an den Zentralen Firmenindex des Bundes (zefix.ch) übermitteln, um Firma,
+          UID und Sitz aus dem Handelsregister zu übernehmen. Ohne diesen Klick findet keine
+          solche Übermittlung statt; es gelten die Datenschutzhinweise von zefix.ch.
+        </p>
       </Abschnitt>
 
       <Abschnitt titel="3. Keine Analyse, kein Tracking">
