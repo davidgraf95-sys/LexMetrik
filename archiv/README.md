@@ -21,3 +21,4 @@ auffindbar bleiben (`grep <name>`).
 | [UMBAU-NOTIZEN.md](UMBAU-NOTIZEN.md) | Bestandsaufnahme vor dem Umbau «Berechnen und Erstellen» (4.6.2026) | historisch |
 | [fundamentalanalyse-2026-06-06.md](fundamentalanalyse-2026-06-06.md) | Fundamentalanalyse Nacht-Session 6.6.2026 (18 Agents) | historisch; Befunde in HANDLUNGSPLAN übernommen |
 | [legalcalc-review.md](legalcalc-review.md) | Juristisches Review-Dokument Modul 1 Arbeitsrecht (3.6.2026) | überholt durch bibliothek/ (§11) |
+| [STRUKTUR-SESSIONKARTEN.md](STRUKTUR-SESSIONKARTEN.md) | Rotierte Session-Karten aus STRUKTUR.md (laufend, byte-genau verschoben; Pflegeregel im Kopf von STRUKTUR.md) | angelegt 11.6.2026 (Token-Disziplin T-4) |
