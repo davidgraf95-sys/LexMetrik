@@ -235,8 +235,8 @@ export const KO_SCHEMA: VorlageSchema = {
     '(Art. 221 Abs. 2 ZPO). Die örtliche und sachliche Zuständigkeit des angeschriebenen ' +
     'Gerichts ist selbst zu prüfen; Fristen (Art. 209 Abs. 3 ZPO) eigenverantwortlich wahren.',
   bausteine: [
-    { id: 'O01_absender', rolle: 'absender', text: '{{klaegerBlock}}{{vertretungZeile}}',
-      begruendung: 'Absenderin = klagende Partei (bzw. Vertretung).', norm: 'Art. 221 Abs. 1 lit. a ZPO' },
+    // O01_absender ENTFERNT (Entscheid David 11.6.2026 «Gericht zuoberst»):
+    // Parteien samt Adressen und Vertretung vollständig im Rubrum (O05).
     { id: 'O02_adressat', rolle: 'adressat', text: '{{gerichtBlock}}',
       begruendung: 'Erstinstanzliches Zivilgericht des gewählten Kantons (kantonale Gerichtsschicht; Handeingabe möglich).', norm: 'Art. 4 ZPO' },
     { id: 'O03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}',
@@ -244,7 +244,7 @@ export const KO_SCHEMA: VorlageSchema = {
     { id: 'O04_betreff', rolle: 'betreff', text: 'Klage (ordentliches Verfahren, Art. 219 ff. ZPO){{streitwertBetreffZeile}}',
       begruendung: 'Betreff mit Verfahrensart und Streitwertangabe.', norm: 'Art. 221 Abs. 1 lit. c ZPO' },
     { id: 'O05_rubrum', rolle: 'rubrum',
-      text: 'in Sachen\n{{klaegerRubrum}}\n(klagende Partei)\n\ngegen\n\n{{beklagteRubrum}}\n(beklagte Partei)\n\nbetreffend {{streitgegenstandKurz}}',
+      text: 'in Sachen\n{{klaegerRubrum}}\n(klagende Partei){{vertretungZeile}}\n\ngegen\n\n{{beklagteRubrum}}\n(beklagte Partei)\n\nbetreffend {{streitgegenstandKurz}}',
       begruendung: 'Rubrum mit Parteien und Streitgegenstand.', norm: 'Art. 221 Abs. 1 lit. a ZPO' },
     { id: 'O06_begehren', ueberschrift: 'Rechtsbegehren', text: '{{item.text}}',
       wiederholeUeber: 'rechtsbegehrenListe', nummeriert: true,

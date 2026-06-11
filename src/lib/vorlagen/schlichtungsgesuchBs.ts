@@ -369,9 +369,9 @@ export const SG_SCHEMA: VorlageSchema = {
     'Richtigkeit ist die nutzende Person verantwortlich. Die örtliche und sachliche Zuständigkeit der ' +
     'angeschriebenen Behörde ist selbst zu prüfen.',
   bausteine: [
-    { id: 'absender', rolle: 'absender', text: '{{absenderBlock}}',
-      begruendung: 'Absenderblock: Vertretung, sonst erste klagende Partei – immer enthalten.',
-      norm: 'Art. 202 ZPO' },
+    // 'absender'-Baustein ENTFERNT (Entscheid David 11.6.2026 «Gericht
+    // zuoberst», Abnahme-Delta zur Abnahme der BS-Vorlage): Parteien samt
+    // Adressen und Vertretung stehen vollständig im Rubrum.
     { id: 'adressat', rolle: 'adressat', text: '{{adressatBlock}}',
       begruendung: 'Zuständige Behörde gemäss sachlichem Routing (Pilot: Zivilgericht BS).',
       norm: 'Art. 200 ZPO' },

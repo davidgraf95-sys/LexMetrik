@@ -45,7 +45,10 @@ describe('Schlichtungsgesuch BS – Akzeptanztests', () => {
     expect(t).toContain('Betreibung Nr. 12345 des Betreibungsamtes Basel-Stadt sei der Rechtsvorschlag zu beseitigen');
     expect(t).toContain('Unter Kosten- und Entschädigungsfolgen (zzgl. MwSt.) zulasten der beklagten Partei.');
     expect(t).toContain('Vollmacht vom 01.05.2026');
-    expect(t.startsWith('\nAdv. X')).toBe(true); // Absender = Vertretung
+    // Layout-Entscheid David 11.6.2026 («Gericht zuoberst»): kein
+    // Absender-Block mehr — die Vertretung steht vollständig im Rubrum.
+    expect(t.startsWith('\nAdv. X')).toBe(false);
+    expect(t).toContain('vertreten durch Adv. X, Gerbergasse 1, 4001 Basel');
   });
 
   it('3. Antrag auf Entscheid: nur bis CHF 2\'000; Gegentest mit Protokoll-Grund', () => {

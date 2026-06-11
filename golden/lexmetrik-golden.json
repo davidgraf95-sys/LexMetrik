@@ -7275,11 +7275,6 @@
    "ausgabeArt": "fertig",
    "absaetze": [
     {
-     "bausteinId": "absender",
-     "text": "A B\nS 1\n4051 Basel",
-     "rolle": "absender"
-    },
-    {
      "bausteinId": "adressat",
      "text": "Zivilgericht Basel-Stadt\nSchlichtungsbehörde\nBäumleingasse 5\n4001 Basel",
      "rolle": "adressat"
@@ -7339,7 +7334,6 @@
    "version": "1.0.0 (ZPO-Fassung seit 1.1.2025; Behörden-Stammdaten BS Stand 2025/2026)"
   },
   "aufgenommen": [
-   "absender",
    "adressat",
    "ortDatum",
    "betreff",
@@ -7353,11 +7347,6 @@
    "doppel_vermerk"
   ],
   "protokoll": [
-   {
-    "bausteinId": "absender",
-    "begruendung": "Absenderblock: Vertretung, sonst erste klagende Partei – immer enthalten.",
-    "norm": "Art. 202 ZPO"
-   },
    {
     "bausteinId": "adressat",
     "begruendung": "Zuständige Behörde gemäss sachlichem Routing (Pilot: Zivilgericht BS).",
@@ -7441,11 +7430,6 @@
    "ausgabeArt": "fertig",
    "absaetze": [
     {
-     "bausteinId": "O01_absender",
-     "text": "A B\nS 1\n8001 Zürich",
-     "rolle": "absender"
-    },
-    {
      "bausteinId": "O02_adressat",
      "text": "Bezirksgericht Zürich\nPostfach\n8036 Zürich",
      "rolle": "adressat"
@@ -7522,7 +7506,6 @@
    "version": "1.0.0 (ZPO-Fassung seit 1.1.2025)"
   },
   "aufgenommen": [
-   "O01_absender",
    "O02_adressat",
    "O03_datum",
    "O04_betreff",
@@ -7540,11 +7523,6 @@
    "O14_doppel"
   ],
   "protokoll": [
-   {
-    "bausteinId": "O01_absender",
-    "begruendung": "Absenderin = klagende Partei (bzw. Vertretung).",
-    "norm": "Art. 221 Abs. 1 lit. a ZPO"
-   },
    {
     "bausteinId": "O02_adressat",
     "begruendung": "Erstinstanzliches Zivilgericht des gewählten Kantons (kantonale Gerichtsschicht; Handeingabe möglich).",

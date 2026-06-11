@@ -362,8 +362,9 @@ export const KV_SCHEMA: VorlageSchema = {
     'Art. 131 ZPO), mit Klagebewilligung bzw. Ausnahme-Nachweis als Beilage. Fristen (Art. 209 ' +
     'Abs. 3/4 ZPO) eigenverantwortlich wahren.',
   bausteine: [
-    { id: 'K01_absender', rolle: 'absender', text: '{{klaegerBlock}}{{vertretungZeile}}',
-      begruendung: 'Absenderin = klagende Partei (bzw. Vertretung).', norm: 'Art. 244 Abs. 1 lit. a ZPO' },
+    // K01_absender ENTFERNT (Entscheid David 11.6.2026 «Gericht zuoberst»):
+    // die Parteien samt Adressen und Vertretung stehen vollständig im
+    // Rubrum (K05); der Kopf beginnt mit dem Gericht als Adressat.
     { id: 'K02_adressat', rolle: 'adressat', text: '{{gerichtBlock}}',
       begruendung: 'Zuständiges Gericht aus dem deterministischen Routing (BS: GOG-Spruchkörper; übrige Kantone: kantonale Gerichtsschicht).', norm: 'Art. 4 ZPO i.V.m. GOG BS' },
     { id: 'K03_datum', rolle: 'datumzeile', text: '{{ortDatumZeile}}',
@@ -371,7 +372,7 @@ export const KV_SCHEMA: VorlageSchema = {
     { id: 'K04_betreff', rolle: 'betreff', text: 'Klage im vereinfachten Verfahren (Art. 243 ff. ZPO){{streitwertBetreffZeile}}',
       begruendung: 'Betreff mit Verfahrensart; Streitwert, wo nötig.', norm: 'Art. 244 Abs. 1 lit. d ZPO' },
     { id: 'K05_rubrum', rolle: 'rubrum',
-      text: 'in Sachen\n{{klaegerRubrum}}\n(klagende Partei)\n\ngegen\n\n{{beklagteRubrum}}\n(beklagte Partei)\n\nbetreffend {{streitgegenstandKurz}}',
+      text: 'in Sachen\n{{klaegerRubrum}}\n(klagende Partei){{vertretungZeile}}\n\ngegen\n\n{{beklagteRubrum}}\n(beklagte Partei)\n\nbetreffend {{streitgegenstandKurz}}',
       begruendung: 'Rubrum mit Parteien und Streitgegenstand.', norm: 'Art. 244 Abs. 1 lit. a–c ZPO' },
     { id: 'K06_begehren', ueberschrift: 'Rechtsbegehren', text: '{{item.text}}',
       wiederholeUeber: 'rechtsbegehrenListe', nummeriert: true,
