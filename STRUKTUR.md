@@ -13,6 +13,21 @@ GRUENDUNG). Abgeschlossene Fahrpläne und historische Dokumente liegen in
 Verweise in Code-Kommentaren per grep auffindbar bleiben). Wissens-Quellen
 (PDF/DOCX, gitignored) in `bibliothek/quellen/` (`SICHTUNG.md`).
 
+## Session 11.6.2026 abends — Klage-Befunde David: Instanz-Hinweis + Kopf-Layout (DEPLOYED)
+
+**(1) «nimmt standardmässig obere kantonale Instanz» (`b06a823`):** Root
+Cause war KEIN Datenfehler — in OW/NW/GL/ZG/SH/AR heisst die ERSTE Instanz
+amtlich «Kantonsgericht» (Dossier gerichtsbehoerden-kantone.md Z. 12);
+neues Feld `namensHinweis` in data/zivilgerichteErstinstanz.ts, KvGericht-
+Wahl zeigt die Offenlegung als Warn-Notiz (wirkt KV+KO). TDD rot→grün.
+**(2) «Adresse der klagenden Partei zuoberst» (`323430d`):** Entscheid
+David per Vorschau-Auswahl: **Gericht zuoberst, Parteien+Vertretung nur im
+Rubrum** — Absender-Bausteine in ALLEN drei Eingabe-Vorlagen entfernt
+(SG BS = bewusstes Abnahme-Delta; Muster-Dossier-Punkt 1 damit überholt,
+Wortlaut-Hoheit David). Golden vorl:sg/vorl:ko deklariert neu, 1 SG-Test-
+Assertion deklariert umgestellt. Prod `323430d` live (Hash live=lokal,
+Instanz-Hinweis ZG empirisch).
+
 ## Session 11.6.2026 nachmittags — SSG/SEO-Umbau DEPLOYED (Auftrag + Freigaben David)
 
 **Auftrag `claude-code-auftrag-ssg-seo.md` komplett umgesetzt und LIVE**
