@@ -13,6 +13,36 @@ GRUENDUNG). Abgeschlossene Fahrpläne und historische Dokumente liegen in
 Verweise in Code-Kommentaren per grep auffindbar bleiben). Wissens-Quellen
 (PDF/DOCX, gitignored) in `bibliothek/quellen/` (`SICHTUNG.md`).
 
+## Session 11.6.2026 vormittags — Abnahme Design · Mahnung · BGer-Rechtsweg · Trio-Nachzug (Aufträge David, ungepusht)
+
+**(1) Design-Abnahme:** `abnahme/design-2026-06/RECHNER-EINHEIT.md` E-1–E-5
+durch David ABGENOMMEN (ohne Auflagen, `0b83423`) — R1–R12 verbindlich.
+**(2) Vorlage Mahnung & Inverzugsetzung** (`c2a0572`, Quick-Win B.9 — damit
+alle 4 Quick-Wins gebaut): EINE Maske `/vorlagen/mahnung`, Varianten
+Zahlungs-Mahnung (Art. 102 Abs. 1/104 OR; Verzug AB ZUGANG ausdrücklich,
+§5-konsistent mit verzugszins.ts; Verfalltag-Weiche 102 II mit Zins ab
+Folgetag; G-Mahngebühren) ↔ Nachfristansetzung (Art. 107, Wahlrechts-
+Vorbehalt; Entscheid 7.6.: Inverzugsetzung = Variante). OR-Wortlaute
+102/104/107/108 am Cache verifiziert; Katalog 35/31.
+**(3) BGer-Rechtsweg** (`f443dd5`, Auftrag «recherche … handlungsplan …
+umsetzen»; `FAHRPLAN-BGER-RECHTSWEG.md`): EIGENE Engine
+`lib/bgerRechtsweg.ts` (§4-Entscheid: BGG-Regime quer zu ZPO/SchKG/StPO;
+bestimmeRechtsmittel unangetastet) + Rechner `/rechner/bgg-fristen`
+(Karte bgg-fristen entwurf; 3. prozessuales Fristen-Regime; Katalog 36/32).
+Dossier am Cache 20260401 nachverifiziert; **BGerR neu gepinnt**
+(Art. 33/34/35/35a/36 zeichengenau; Rechtsöffnungs-Falle 33 lit. i;
+2 Straf-Abteilungen seit 1.2.2026). Alle 4 Beschwerdewege, Fristen-Matrix
+30/10/5/3/jederzeit + Stillstand 46 inkl. aller Abs.-2-Ausnahmen +
+konkretes Fristende (Kantons-Werktagsregel 45 II), Art. 74-Schwellen mit
+Abs.-2-Ausnahmen, subsidiäre VB, Eheschutz NUR als Warnung (V-1).
+Anschlüsse additiv: bestimmeRechtsmittel.bgerAbteilung (B.5a),
+strafRechtsmittel-Hinweis präzisiert. Golden 104 (deklariert +10 / 2).
+**(4) Trio-ErgebnisBlock-Nachzug** (`4e6d4b1`, E-4): 5 Hand-Wrapper auf den
+geteilten Rahmen, Golden byte-gleich, e2e 33/33.
+OFFEN: fachliche Abnahme (Mahnungs-Bausteine; BGer: Eheschutz-Weiche +
+Hinweis-Texte + 7 Dossier-Fragen-Antworten als Vorschlag) · Push/Deploy
+nur auf frisches Ja.
+
 ## Session 11.6.2026 über Nacht — Rechner-Design-Vereinheitlichung D1–D6 (Auftrag David, ungepusht)
 
 Regelwerk **`DESIGN-REGLEMENT-RECHNER.md` (R1–R12)**: verbindlicher Aufbau
