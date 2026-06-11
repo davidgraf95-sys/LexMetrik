@@ -101,6 +101,16 @@ for (const pfad of routen) {
     if (inhalt.includes(STUB_MARKER)) {
       throw new Error('rendert die Stub-Seite — Katalog-href zeigt auf keinen gebauten Rechner');
     }
+    // Prod-Befund 11.6.2026: Suspense-Reste im Prerender-Output (Fallback +
+    // <div hidden>-Segment + $RC-Inline-Script) bleiben unter der CSP als
+    // sichtbares «Wird geladen …» stehen — der Zwei-Pass-Render in
+    // entry-server muss sauberes, script-freies HTML liefern.
+    if (inhalt.includes('<script')) {
+      throw new Error('Inline-Script im gerenderten HTML — Suspense-Segment statt synchronem Render (entry-server-Zwei-Pass prüfen)');
+    }
+    if (inhalt.includes('Wird geladen')) {
+      throw new Error('Suspense-Fallback im gerenderten HTML — eine lazy()-Grenze hat nicht aufgelöst');
+    }
     // Flache <pfad>.html-Dateien (nicht <pfad>/index.html): vite preview
     // (sirv) löst extensionslose URLs über die .html-Erweiterung auf,
     // Vercel über "cleanUrls": true — lokal und prod dasselbe Verhalten,
