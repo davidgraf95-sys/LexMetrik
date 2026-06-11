@@ -98,7 +98,8 @@ export const VD_INSTANZSUCHE_URL = 'https://www.vd.ch/justice/le-pouvoir-judicia
 // ordentliche Chambre de conciliation UND die paritätische Miet-Besetzung
 // (Art. 12 Abs. 1 OJN; Erhebung 11.6.2026).
 const NE_TRIBUNAUX: SchlichtungsAdresse[] = [
-  A('Tribunal régional Littoral/Val-de-Travers', 'Rue de l’Hôtel-de-Ville 2 (CP 1)', '2000 Neuchâtel', 'Littoral/Val-de-Travers'),
+  // Postfach-PLZ amtlich 2002 (Bug-Check B4 11.6.2026; Standort 2000)
+  A('Tribunal régional Littoral/Val-de-Travers', 'Rue de l’Hôtel-de-Ville 2 (CP 1)', '2002 Neuchâtel 2', 'Littoral/Val-de-Travers'),
   A('Tribunal régional Littoral/Val-de-Travers (Boudry)', 'Rue Louis-Favre 39, CP 36', '2017 Boudry', 'Littoral/Val-de-Travers'),
   A('Tribunal régional Montagnes/Val-de-Ruz', 'Av. Léopold-Robert 10, CP 2284', '2300 La Chaux-de-Fonds', 'Montagnes/Val-de-Ruz', 'Umzug ins Hauptpost-Gebäude 1.7.–14.8.2026 angekündigt'),
 ];
@@ -229,6 +230,13 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
         A('Oberamt Dorneck-Thierstein', 'Passwangstrasse 29', '4226 Breitenbach', 'Dorneck-Thierstein'),
       ],
     },
+    // GlG (Bug-Check 11.6.2026 B1): § 34bis/ter GO SO — EINE kantonale
+    // Schlichtungsbehörde für Gleichstellung (privatrechtliche Arbeits-
+    // verhältnisse); Sekretariat beim Oberamt Region Solothurn (§ 34quater,
+    // Adresse = Oberamt, PLZ amtlich 4502). GlG ist dem Friedensrichter
+    // ausdrücklich entzogen (§ 5 Abs. 2 lit. e) — vorher fiel der Typ
+    // fälschlich in die § 5-Weiche zurück.
+    glg: { modus: 'zentral', stelle: A('Kantonale Schlichtungsbehörde für Gleichstellung von Frau und Mann', 'Sekretariat: Oberamt Region Solothurn, Rötistrasse 4', '4502 Solothurn', 'ganzer Kanton (§§ 34bis f. GO SO)') },
   },
   BS: {
     // SSoT (B7, Adress-Gesamtprüfung 6.6.2026): Die BS-Schlichtungsadressen
@@ -440,7 +448,7 @@ function soOrdentlich(kontext: SchlichtungsKontext | undefined): SchlichtungsAuf
   if (kontext?.gleicheGemeinde === true) {
     return {
       modus: 'verzeichnis',
-      beschreibung: 'Beide Parteien in derselben Gemeinde: Schlichtungsbehörde ist die Friedensrichterin/der Friedensrichter dieser Gemeinde (§ 5 Abs. 1 GO SO) — ein Gemeindeorgan mit Amtssitz in der Wahlgemeinde (§ 86 GO); Anlaufstelle ist die Gemeindeverwaltung, eine Strassenadresse publiziert der Kanton nicht. Kreis-Zusammenschlüsse ändern an der Gleiche-Gemeinde-Voraussetzung nichts',
+      beschreibung: 'Beide Parteien in derselben Gemeinde: Schlichtungsbehörde ist die Friedensrichterin/der Friedensrichter dieser Gemeinde (§ 5 Abs. 1 GO SO) — ein Gemeindeorgan mit Amtssitz in der Wahlgemeinde (§ 86 GO); Anlaufstelle ist die Gemeindeverwaltung, eine Strassenadresse publiziert der Kanton nicht. Kreis-Zusammenschlüsse ändern an der Gleiche-Gemeinde-Voraussetzung nichts. Ausnahmen (§ 5 Abs. 2 GO): ist der Staat oder eine Gemeinde Partei oder geht es um Klagen nach Art. 961/975 ZGB, schlichtet stattdessen das Amtsgerichtspräsidium',
       url: FR_URL,
     };
   }

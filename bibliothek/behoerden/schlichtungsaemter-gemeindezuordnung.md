@@ -827,7 +827,7 @@ wörtlich am amtlichen Erlass/so.ch (11.6.2026); Abnahme David ausstehend.
 | Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Martigny-Combe) | Route de la Croix 32, Case postale 25 | 1921 Martigny-Croix | Martigny-Combe | https://www.martigny-combe.ch |
 | Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Massongex) | Place de l'Eglise 1 | 1869 Massongex | Massongex | https://www.massongex.ch |
 | Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Mont-Noble) | La Vaye-Plane 13, Case postale 11 | 1973 Nax | Mont-Noble | https://www.mont-noble.ch |
-| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Monthey) | Place de l'Hôtel-de-Ville 2, Case postale 512 | 1870 Monthey | Monthey | https://www.monthey.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Monthey) | Place de l'Hôtel-de-Ville 2, Case postale 512 | 1870 Monthey 1 | Monthey | https://www.monthey.ch |
 | Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Mörel-Filet) | Furkastrasse 39 | 3983 Mörel-Filet | Mörel-Filet | https://www.moerel-filet.ch |
 | Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Naters) | Bahnhofstrasse 9a | 3904 Naters | Naters | https://www.naters.ch |
 | Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Nendaz) | Route de Nendaz 352 | 1996 Basse-Nendaz | Nendaz | https://www.nendaz.org |

@@ -86,3 +86,14 @@ describe('NE: Miet-Schlichtung paritätisch bei der Chambre de conciliation (Art
     }
   });
 });
+
+describe('SO: GlG geht NIE in die § 5-Weiche (Bug-Check B1, § 5 Abs. 2 lit. e GO)', () => {
+  it('paritaetisch_glg → kantonale GlG-Stelle (zentral), auch bei gleicher Gemeinde', () => {
+    const r = schlichtungAufloesung('SO', 'paritaetisch_glg', { vermoegensrechtlich: true, streitwertCHF: 5000, gleicheGemeinde: true })!;
+    expect(r.glgFallback).toBe(false);
+    expect(r.aufloesung.modus).toBe('zentral');
+    if (r.aufloesung.modus === 'zentral') {
+      expect(r.aufloesung.stelle.name).toContain('Gleichstellung');
+    }
+  });
+});

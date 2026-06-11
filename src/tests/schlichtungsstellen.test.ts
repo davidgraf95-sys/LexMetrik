@@ -204,14 +204,14 @@ describe('Paritätische Stellen (Miete/GlG) — kantonsrichtige Stopp-Karte (Auf
     expect(r.aufloesung.modus).toBe('zentral');
     if (r.aufloesung.modus === 'zentral') expect(r.aufloesung.stelle.plzOrt).toBe('1205 Genève');
   });
-  it('paritaetisch_glg: eigene Stelle nur ZH/BS/VD, sonst deklarierter Fallback auf die ordentliche Behörde', () => {
-    // Deklarierte Erweiterung 11.6.2026: VD weist GlG-Streitigkeiten dem
-    // Tribunal de prud'hommes zu (Art. 1 Abs. 1 lit. c LJT-VD) — echte
-    // Stelle, kein Fallback (Detail-Tests in vdSchlichtung.test.ts).
+  it('paritaetisch_glg: eigene Stelle nur ZH/BS/VD/SO, sonst deklarierter Fallback auf die ordentliche Behörde', () => {
+    // Deklarierte Erweiterungen 11.6.2026: VD → Tribunal de prud'hommes
+    // (Art. 1 Abs. 1 lit. c LJT-VD); SO → kantonale GlG-Schlichtungsbehörde
+    // (§§ 34bis f. GO SO; Detail-Tests in vd-/soSchlichtung.test.ts).
     for (const k of KANTONE) {
       const r = schlichtungAufloesung(k, 'paritaetisch_glg');
       expect(r, k).not.toBeNull();
-      expect(r!.glgFallback, k).toBe(!(k === 'ZH' || k === 'BS' || k === 'VD'));
+      expect(r!.glgFallback, k).toBe(!['ZH', 'BS', 'VD', 'SO'].includes(k));
     }
   });
 });

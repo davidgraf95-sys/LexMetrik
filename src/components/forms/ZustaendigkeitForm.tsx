@@ -1250,8 +1250,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {recherche.aufloesung.beschreibung}.{' '}
                       {/* VD ohne Streitwert-Stufe: die PLZ-Auflösung ist hier
                           bewusst inaktiv — Hinweis unterdrücken (Bug-Check
-                          11.6.2026). */}
-                      {amtAufloesbar && !(f.kanton === 'VD' && !vdStufe) && !(f.kanton === 'SO' && soGleicheGemeinde !== false) && (
+                          11.6.2026). SO: Instruktion steht bereits in der
+                          Weiche-beschreibung (Bug-Check B3). */}
+                      {amtAufloesbar && !(f.kanton === 'VD' && !vdStufe) && f.kanton !== 'SO' && (
                         <span className="text-ink-500">PLZ oder Gemeinde eingeben für die konkrete Amts-Adresse. </span>
                       )}
                       <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">
