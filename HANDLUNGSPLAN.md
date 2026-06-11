@@ -259,7 +259,11 @@ Workflow-Transcript wf_189d14a5-2b0.
    für Wert am 1.1.2026-Stand verifiziert; AS-2025-630/522-Aufklärung) ·
    ~~336b-Fristen~~ → im Fristenspiegel A.3 (Anker beendigungISO,
    §2-Gate; `54c585b`) — eigener Rechner nur noch bei Bedarf ·
-   OFFEN: Vorlage «Mahnung» (free; or-vertragsvorlagen.md baufertig).
+   ~~OFFEN: Vorlage «Mahnung»~~ → **GEBAUT** (11.6.2026, Auftrag David,
+   `c2a0572`): EINE Maske /vorlagen/mahnung mit Varianten-Weiche
+   Zahlungs-Mahnung (Art. 102 Abs. 1/104 OR, Verfalltag-Weiche 102 II)
+   ↔ Nachfristansetzung (Art. 107; Inverzugsetzung = Variante, Entscheid
+   7.6.). Golden +6, Katalog 35/31. Damit sind ALLE 4 Quick-Wins gebaut.
 9a. ~~Gründungs-Masken GmbH/AG~~ → **GEBAUT** (6./7.6.2026, Auftrag David;
    `fb0b2f1`): Checklisten nach 2b-Muster (§8: Beurkundungszwang → kein
    Export) auf 3 neuen Recherche-Dossiers (gesellschaftsgruendung ·
