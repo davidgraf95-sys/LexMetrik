@@ -225,4 +225,14 @@ describe('Klage vereinfacht — Platzhalter-Begründung', () => {
     const t = e.dokument.absaetze.map((x) => `${x.ueberschrift ?? ''}\n${x.text}`).join('\n');
     expect(t).toContain('Auf eine schriftliche Begründung wird verzichtet');
   });
+  it('Platzhalter: ausgeblendete Masken-Beweismittel leaken NICHT ins Beilagenverzeichnis (Bug-Check 11.6.2026)', () => {
+    const a = basis({
+      begruendungAktiv: true, begruendungPlatzhalter: true,
+      beweismittel: [{ bezeichnung: 'Mietvertrag vom 1.1.2024', fuer: '' }],
+    });
+    const e = kvZusammenstellen(a);
+    const t = e.dokument.absaetze.map((x) => `${x.ueberschrift ?? ''}\n${x.text}`).join('\n');
+    expect(t).not.toContain('Mietvertrag vom 1.1.2024');
+    expect(t).toMatch(/Beilage \d+: ________/); // Urkunden-Platzhalter wie in klageOrdentlich
+  });
 });

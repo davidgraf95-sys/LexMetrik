@@ -68,9 +68,12 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   const [wahlSchluessel, setWahlSchluessel] = useState<{ kanton: Kanton; typ: string; stufe: string; idx: number }>({ kanton, typ, stufe: '', idx: -1 });
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   const [kreisIdx, setKreisIdx] = useState(0);
-  // Bug-Check 11.6.2026 B2: amtZeilen tragen den erzeugenden Typ — beim
-  // Typwechsel wird nie ein staler Adressat des anderen Typs gemeldet.
-  const [amtZeilen, setAmtZeilenRoh] = useState<{ typ: string; zeilen: string[] } | null>(null);
+  // Bug-Check 11.6.2026 B2 + Nachschärfung Deploy-Check: amtZeilen tragen
+  // den vollen erzeugenden Schlüssel (kanton|typ|vd-Stufe, wie
+  // wahlSchluessel) — der nur typ-scharfe Guard meldete beim Kantons-/
+  // VD-Stufenwechsel einen Async-Tick lang den stalen Adressaten des
+  // alten Kantons bzw. der alten Stufe.
+  const [amtZeilen, setAmtZeilenRoh] = useState<{ schluessel: string; zeilen: string[] } | null>(null);
   const [amtUrl, setAmtUrl] = useState<string | undefined>(undefined);
   // Befund David 10.6.2026 («PLZ bzw. Gemeinde funktioniert nicht»):
   // Treffer im Kanton aufbewahren — bei Mehrdeutigkeit ohne Hauptgemeinde
@@ -147,10 +150,10 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       return { amt: a ? [a.name, a.strasse, a.plzOrt].filter(Boolean) : null, amtUrl: a?.url, kreise: null, wahl };
     };
     lade()
-      .then((r) => { if (aktiv) { setAmtZeilenRoh(r.amt ? { typ, zeilen: r.amt } : null); setAmtUrl(r.amtUrl); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
+      .then((r) => { if (aktiv) { setAmtZeilenRoh(r.amt ? { schluessel: `${kanton}|${typ}|${vdStufeKey}`, zeilen: r.amt } : null); setAmtUrl(r.amtUrl); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
       .catch(() => { if (aktiv) { setAmtZeilenRoh(null); setAmtUrl(undefined); setZhKreise(null); setPlzWahl(null); } });
     return () => { aktiv = false; };
-  }, [kanton, typ, plz, gemeinde, vdStufe, arbeitsrechtlich, soGleicheGemeinde]);
+  }, [kanton, typ, plz, gemeinde, vdStufe, arbeitsrechtlich, soGleicheGemeinde, vdStufeKey]);
 
   // Aufgelöste Zeilen ans Schema melden.
   // Bug-Check 10.6.2026 (MITTEL, fachlich): Beim GlG-Fallback (keine eigene
@@ -158,7 +161,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   // GOG-Dossier belegt mit LU (§ 50 JusG: eigene SB Gleichstellung) ein
   // Gegenbeispiel; bis zur GlG-Recherche je Kanton gilt Handeingabe.
   const glgOhneStelle = typ === 'paritaetisch_glg' && (recherche?.glgFallback ?? false);
-  const amtZeilenTyp = amtZeilen && amtZeilen.typ === typ ? amtZeilen.zeilen : null;
+  const amtZeilenTyp = amtZeilen && amtZeilen.schluessel === `${kanton}|${typ}|${vdStufeKey}` ? amtZeilen.zeilen : null;
   useEffect(() => {
     if (!recherche || glgOhneStelle) { onAufgeloest(null); return; }
     const a = recherche.aufloesung;

@@ -60,6 +60,15 @@ describe('Vorlage Mahnung & Inverzugsetzung (Art. 102/104/107 OR)', () => {
     expect(dokumentAlsText(maZusammenstellen(mit).ergebnis)).toContain("Mahngebühr von CHF 20.00");
   });
 
+  it('vertraglicher Zins ≤ 5 %: BLOCKER in der Logikschicht (§3-Defense-in-depth, Bug-Check 11.6.2026) — über 5 % kein Blocker', () => {
+    const tief = basis({ zinsVertraglich: true, zinssatzProzent: '4' });
+    expect(pruefeMaGates(tief).blocker.some((b) => b.includes('ÜBER 5 %'))).toBe(true);
+    const leer = basis({ zinsVertraglich: true, zinssatzProzent: '' });
+    expect(pruefeMaGates(leer).blocker.length).toBeGreaterThan(0);
+    const hoch = basis({ zinsVertraglich: true, zinssatzProzent: '8' });
+    expect(pruefeMaGates(hoch).blocker).toEqual([]);
+  });
+
   it('Variante Nachfrist (Art. 107): Mahnung + Nachfrist verbunden, Wahlrechts-Vorbehalt, KEINE Zahlungs-Bausteine', () => {
     const a = basis({ variante: 'nachfrist' });
     const { ergebnis } = maZusammenstellen(a);

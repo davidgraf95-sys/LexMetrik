@@ -195,4 +195,19 @@ describe('BGer-Rechtsweg — Objekt, Kognition, Eheschutz', () => {
     const r = berechneBgerRechtsweg(zivil({ verwaltungSonderfall: 'beschaffung', eroeffnung: '2026-07-01' }));
     expect(r.stillstand).toBe(true); // Sommerstillstand gilt; lit. e setzt den Verwaltungsweg voraus
   });
+
+  it('Defense-in-depth: schiedsgericht wirkt nur im Zivilweg (Art. 77 gilt nicht für straf/verwaltung)', () => {
+    expect(berechneBgerRechtsweg({ weg: 'straf', objekt: 'zwischen_anderer', schiedsgericht: true }).zulaessigkeit).not.toBe('zulaessig_ausnahme');
+    expect(berechneBgerRechtsweg({ weg: 'verwaltung', vorsorglicheMassnahme: true, schiedsgericht: true })
+      .warnungen.some((w) => w.includes('Art. 98'))).toBe(true); // Flag unterdrückt die Warnung nicht mehr
+  });
+
+  it('Permalink-Wächter kennt alle Sonderfall-Werte (Bug-Check 11.6.2026: stimmrechtssache ging im geteilten Link verloren)', async () => {
+    const { BGER_LINK_SPEC } = await import('../lib/rechnerPermalinks');
+    const { permalinkKodieren, permalinkLesen } = await import('../lib/permalink');
+    for (const sf of ['keiner', 'rechtshilfe_amtshilfe', 'abstimmung', 'nationalratswahl', 'stimmrechtssache', 'beschaffung']) {
+      const q = permalinkKodieren(BGER_LINK_SPEC, { weg: 'verwaltung', sonderfall: sf });
+      expect(permalinkLesen(BGER_LINK_SPEC, q).sonderfall, sf).toBe(sf);
+    }
+  });
 });

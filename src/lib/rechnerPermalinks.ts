@@ -173,7 +173,10 @@ export const BGER_LINK_SPEC: PermalinkSpec<BgerLink & Record<string, unknown>> =
   markenwiderspruch: { p: 'mw', typ: 'bool' },
   hkue: { p: 'hk', typ: 'bool' },
   wechsel: { p: 'wb', typ: 'bool' },
-  sonderfall: { p: 'sf', typ: 'str', gueltig: einerVon('keiner', 'rechtshilfe_amtshilfe', 'abstimmung', 'nationalratswahl', 'beschaffung') },
+  // 'stimmrechtssache' nachgezogen (Bug-Check 11.6.2026 MITTEL: der Wächter
+  // kannte den neuen Wert nicht — geteilte Links fielen still auf 'keiner'
+  // zurück und zeigten das Fristende MIT Stillstand, bis 32 Tage zu spät).
+  sonderfall: { p: 'sf', typ: 'str', gueltig: einerVon('keiner', 'rechtshilfe_amtshilfe', 'abstimmung', 'nationalratswahl', 'stimmrechtssache', 'beschaffung') },
   eroeffnung: { p: 'e', typ: 'str', gueltig: istISO },
   kanton: { p: 'k', typ: 'str', gueltig: istKanton },
 };

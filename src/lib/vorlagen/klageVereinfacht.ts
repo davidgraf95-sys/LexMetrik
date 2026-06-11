@@ -463,8 +463,17 @@ export function kvZusammenstellen(a: KvAnswers) {
   if (a.klagebewilligungVorhanden) beilagen.push({ text: `Beilage 1: Klagebewilligung vom ${a.klagebewilligungDatum ? fmtDatum(a.klagebewilligungDatum) : '________'}` });
   else if (a.ausnahme === 'verzicht_gemeinsam') beilagen.push({ text: 'Beilage 1: Verzichtserklärung (Art. 199 Abs. 1 ZPO)' });
   if (a.vollmachtBeilage) beilagen.push({ text: `Beilage ${beilagen.length + 1}: Vollmacht` });
-  for (const b of a.beweismittel) {
-    if (b.bezeichnung.trim()) beilagen.push({ text: `Beilage ${beilagen.length + 1}: ${b.bezeichnung.trim()}` });
+  // Platzhalter-Modus (Bug-Check 11.6.2026 MITTEL): die ausgeblendeten
+  // Masken-Beweismittel dürfen NICHT ins Beilagenverzeichnis leaken; statt-
+  // dessen ein Urkunden-Platzhalter — konsistent mit der beweismittelListe
+  // ('________') und mit klageOrdentlich (dort speist das platzhalter-
+  // bewusste verzeichnis die Beilagen).
+  if (a.begruendungAktiv && a.begruendungPlatzhalter) {
+    beilagen.push({ text: `Beilage ${beilagen.length + 1}: ________` });
+  } else {
+    for (const b of a.beweismittel) {
+      if (b.bezeichnung.trim()) beilagen.push({ text: `Beilage ${beilagen.length + 1}: ${b.bezeichnung.trim()}` });
+    }
   }
   for (const b of a.weitereBeilagen) {
     if (b.bezeichnung.trim()) beilagen.push({ text: `Beilage ${beilagen.length + 1}: ${b.bezeichnung.trim()}` });

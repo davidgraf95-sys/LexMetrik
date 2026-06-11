@@ -109,7 +109,12 @@ export function pruefeMaGates(a: MaAntworten): MaGateErgebnis {
     if (a.zinsVertraglich) {
       const satz = Number(String(a.zinssatzProzent).replace(/['\s]/g, '').replace(',', '.'));
       if (!Number.isFinite(satz) || satz <= 5) {
-        warnungen.push(
+        // BLOCKER statt Warnung (Bug-Check 11.6.2026, Defense-in-depth §3):
+        // das Dokument trüge sonst die falsche Rechtsaussage «… (Art. 104
+        // Abs. 2 OR)» für einen Satz ≤ 5 % — Abs. 2 erfasst nur HÖHERE
+        // Zinsen (s. lib/verzugszins.ts); die Sperre hing allein am
+        // UI-Schrittfehler.
+        blocker.push(
           'Der vertragliche Verzugszins-Baustein setzt einen Satz ÜBER 5 % voraus (Art. 104 Abs. 2 OR '
           + 'erfasst nur HÖHERE vertragliche Zinsen) – bei 5 % oder weniger das Feld deaktivieren; '
           + 'es gilt der gesetzliche Satz (Abs. 1).',

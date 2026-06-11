@@ -342,7 +342,10 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
       normen: [N('Art. 74 Abs. 2 BGG')],
     });
     normverweise.push(N('Art. 74 Abs. 2 BGG'));
-  } else if (input.schiedsgericht) {
+  } else if (input.weg === 'zivil' && input.schiedsgericht) {
+    // Weg-Gate (Bug-Check 11.6.2026, Defense-in-depth §3): Art. 77 gilt nur
+    // für die Beschwerde in Zivilsachen — ohne Gate lieferte API-Misuse
+    // (straf/verwaltung + schiedsgericht) «streitwertunabhängig zulässig».
     zulaessigkeit = 'zulaessig_ausnahme';
   }
 
@@ -457,7 +460,7 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
   // der Form angebotene Haft-Konstellation eine falsche Rechtsaussage. Ein
   // straf-eigener Hinweis (freie Kognition) braucht Davids Abnahme — bis
   // dahin wird hier bewusst NICHTS behauptet.
-  if (vorsorglich && !input.schiedsgericht && input.weg !== 'straf') {
+  if (vorsorglich && !(input.weg === 'zivil' && input.schiedsgericht) && input.weg !== 'straf') {
     warnungen.push('KOGNITION: Gegen Entscheide über vorsorgliche Massnahmen kann nur die Verletzung VERFASSUNGSMÄSSIGER Rechte gerügt werden (Art. 98 BGG).');
     normverweise.push(N('Art. 98 BGG'));
   }
