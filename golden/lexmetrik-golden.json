@@ -7422,6 +7422,552 @@
    }
   ]
  },
+ "vorl:ma-zahlung": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Mahnung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "MA_absender",
+      "text": "A\nX 1",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "MA_adressat",
+      "text": "B\nY 2",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "MA_datumzeile",
+      "text": "Basel, 11. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "MA_betreff_zahlung",
+      "text": "Mahnung – Rechnung Nr. 4711 vom 12. Mai 2026",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "MA_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "MA_forderung",
+      "text": "Trotz Fälligkeit ist die folgende Forderung offen: CHF 1'250.00 aus Rechnung Nr. 4711 vom 12. Mai 2026, fällig seit dem 15.05.2026."
+     },
+     {
+      "bausteinId": "MA_verzug_mahnung",
+      "text": "Ich mahne Sie hiermit. Mit dem Zugang dieser Mahnung befinden Sie sich in Verzug (Art. 102 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "MA_zins_gesetzlich",
+      "text": "Ab Verzugseintritt schulden Sie Verzugszins von 5 % pro Jahr (Art. 104 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "MA_zahlungsaufforderung",
+      "text": "Ich fordere Sie auf, den offenen Betrag innert 10 Tagen seit Erhalt dieses Schreibens zu bezahlen (IBAN CH00 0000 0000 0000 0000 0)."
+     },
+     {
+      "bausteinId": "MA_betreibung",
+      "text": "Nach unbenutztem Ablauf der Frist behalte ich mir vor, ohne weitere Mitteilung die Betreibung einzuleiten."
+     },
+     {
+      "bausteinId": "MA_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "MA_unterschrift",
+      "text": "___________________________\nA",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Massgebend sind Vertrag und Gesetz; der Zugang beim Empfänger entscheidet. Mahnung ist keine Betreibung – für die Zwangsvollstreckung ist das Betreibungsbegehren der nächste Schritt.",
+    "version": "1.0.0 (Bauspezifikation or-vertragsvorlagen.md; OR-Wortlaute verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "MA_absender",
+    "MA_adressat",
+    "MA_datumzeile",
+    "MA_betreff_zahlung",
+    "MA_anrede",
+    "MA_forderung",
+    "MA_verzug_mahnung",
+    "MA_zins_gesetzlich",
+    "MA_zahlungsaufforderung",
+    "MA_betreibung",
+    "MA_schluss",
+    "MA_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "MA_absender",
+     "begruendung": "Absenderin/Absender des Schreibens – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_adressat",
+     "begruendung": "Schuldnerin/Schuldner als Empfänger – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_betreff_zahlung",
+     "begruendung": "Betreff der Zahlungs-Mahnung mit dem Rechtsgrund der Forderung."
+    },
+    {
+     "bausteinId": "MA_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_forderung",
+     "begruendung": "Bestimmte Bezeichnung der Forderung (Betrag und Rechtsgrund) – Kern der Mahnung."
+    },
+    {
+     "bausteinId": "MA_verzug_mahnung",
+     "begruendung": "Verzugseintritt durch Mahnung bei fälliger Verbindlichkeit; der ausdrückliche Satz stellt klar, dass die Zahlungsfrist kein Zuwarten mit den Verzugsfolgen bedeutet (Konsistenz mit dem Verzugszins-Rechner: Zins ab Erhalt der Mahnung).",
+     "norm": "Art. 102 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "MA_zins_gesetzlich",
+     "begruendung": "Gesetzlicher Verzugszins von 5 % pro Jahr bei Geldschulden.",
+     "norm": "Art. 104 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "MA_zahlungsaufforderung",
+     "begruendung": "Zahlungsaufforderung mit gesetzter Frist – die Frist ist eine Praxis-Wahl, keine gesetzliche Vorgabe."
+    },
+    {
+     "bausteinId": "MA_betreibung",
+     "begruendung": "Ankündigung des nächsten Vollstreckungsschritts (optional) – die Mahnung selbst ist keine Betreibung."
+    },
+    {
+     "bausteinId": "MA_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_unterschrift",
+     "begruendung": "Unterschrift der Gläubigerin/des Gläubigers."
+    }
+   ]
+  },
+  "zinsAb": null
+ },
+ "vorl:ma-verfalltag": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Mahnung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "MA_absender",
+      "text": "A\nX 1",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "MA_adressat",
+      "text": "B\nY 2",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "MA_datumzeile",
+      "text": "Basel, 11. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "MA_betreff_zahlung",
+      "text": "Mahnung – Rechnung Nr. 4711 vom 12. Mai 2026",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "MA_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "MA_forderung",
+      "text": "Trotz Fälligkeit ist die folgende Forderung offen: CHF 1'250.00 aus Rechnung Nr. 4711 vom 12. Mai 2026, fällig seit dem 15.05.2026."
+     },
+     {
+      "bausteinId": "MA_verzug_verfalltag",
+      "text": "Die Zahlung war auf den 31.05.2026 vereinbart. Sie befinden sich daher seit Ablauf dieses Tages in Verzug (Art. 102 Abs. 2 OR), ohne dass es einer Mahnung bedurft hätte."
+     },
+     {
+      "bausteinId": "MA_zins_vertraglich",
+      "text": "Ab Verzugseintritt, somit seit dem 01.06.2026 schulden Sie den vertraglich vereinbarten Verzugszins von 8 % pro Jahr (Art. 104 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "MA_zahlungsaufforderung",
+      "text": "Ich fordere Sie auf, den offenen Betrag innert 10 Tagen seit Erhalt dieses Schreibens zu bezahlen (IBAN CH00 0000 0000 0000 0000 0)."
+     },
+     {
+      "bausteinId": "MA_betreibung",
+      "text": "Nach unbenutztem Ablauf der Frist behalte ich mir vor, ohne weitere Mitteilung die Betreibung einzuleiten."
+     },
+     {
+      "bausteinId": "MA_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "MA_unterschrift",
+      "text": "___________________________\nA",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Massgebend sind Vertrag und Gesetz; der Zugang beim Empfänger entscheidet. Mahnung ist keine Betreibung – für die Zwangsvollstreckung ist das Betreibungsbegehren der nächste Schritt.",
+    "version": "1.0.0 (Bauspezifikation or-vertragsvorlagen.md; OR-Wortlaute verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "MA_absender",
+    "MA_adressat",
+    "MA_datumzeile",
+    "MA_betreff_zahlung",
+    "MA_anrede",
+    "MA_forderung",
+    "MA_verzug_verfalltag",
+    "MA_zins_vertraglich",
+    "MA_zahlungsaufforderung",
+    "MA_betreibung",
+    "MA_schluss",
+    "MA_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "MA_absender",
+     "begruendung": "Absenderin/Absender des Schreibens – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_adressat",
+     "begruendung": "Schuldnerin/Schuldner als Empfänger – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_betreff_zahlung",
+     "begruendung": "Betreff der Zahlungs-Mahnung mit dem Rechtsgrund der Forderung."
+    },
+    {
+     "bausteinId": "MA_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_forderung",
+     "begruendung": "Bestimmte Bezeichnung der Forderung (Betrag und Rechtsgrund) – Kern der Mahnung."
+    },
+    {
+     "bausteinId": "MA_verzug_verfalltag",
+     "begruendung": "Bei verabredetem Verfalltag tritt der Verzug mit dessen Ablauf ein – das Schreiben hält den bereits eingetretenen Verzug fest.",
+     "norm": "Art. 102 Abs. 2 OR"
+    },
+    {
+     "bausteinId": "MA_zins_vertraglich",
+     "begruendung": "Vertraglich höhere Zinsen können auch während des Verzugs gefordert werden.",
+     "norm": "Art. 104 Abs. 2 OR"
+    },
+    {
+     "bausteinId": "MA_zahlungsaufforderung",
+     "begruendung": "Zahlungsaufforderung mit gesetzter Frist – die Frist ist eine Praxis-Wahl, keine gesetzliche Vorgabe."
+    },
+    {
+     "bausteinId": "MA_betreibung",
+     "begruendung": "Ankündigung des nächsten Vollstreckungsschritts (optional) – die Mahnung selbst ist keine Betreibung."
+    },
+    {
+     "bausteinId": "MA_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_unterschrift",
+     "begruendung": "Unterschrift der Gläubigerin/des Gläubigers."
+    }
+   ]
+  },
+  "zinsAb": "01.06.2026"
+ },
+ "vorl:ma-mahngebuehr": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Mahnung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "MA_absender",
+      "text": "A\nX 1",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "MA_adressat",
+      "text": "B\nY 2",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "MA_datumzeile",
+      "text": "Basel, 11. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "MA_betreff_zahlung",
+      "text": "Mahnung – Rechnung Nr. 4711 vom 12. Mai 2026",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "MA_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "MA_forderung",
+      "text": "Trotz Fälligkeit ist die folgende Forderung offen: CHF 1'250.00 aus Rechnung Nr. 4711 vom 12. Mai 2026, fällig seit dem 15.05.2026."
+     },
+     {
+      "bausteinId": "MA_verzug_mahnung",
+      "text": "Ich mahne Sie hiermit. Mit dem Zugang dieser Mahnung befinden Sie sich in Verzug (Art. 102 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "MA_zins_gesetzlich",
+      "text": "Ab Verzugseintritt schulden Sie Verzugszins von 5 % pro Jahr (Art. 104 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "MA_zahlungsaufforderung",
+      "text": "Ich fordere Sie auf, den offenen Betrag innert 10 Tagen seit Erhalt dieses Schreibens zu bezahlen (IBAN CH00 0000 0000 0000 0000 0)."
+     },
+     {
+      "bausteinId": "MA_mahngebuehr",
+      "text": "Zusätzlich verrechne ich Ihnen die vertraglich vereinbarte Mahngebühr von CHF 20.00."
+     },
+     {
+      "bausteinId": "MA_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "MA_unterschrift",
+      "text": "___________________________\nA",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Massgebend sind Vertrag und Gesetz; der Zugang beim Empfänger entscheidet. Mahnung ist keine Betreibung – für die Zwangsvollstreckung ist das Betreibungsbegehren der nächste Schritt.",
+    "version": "1.0.0 (Bauspezifikation or-vertragsvorlagen.md; OR-Wortlaute verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "MA_absender",
+    "MA_adressat",
+    "MA_datumzeile",
+    "MA_betreff_zahlung",
+    "MA_anrede",
+    "MA_forderung",
+    "MA_verzug_mahnung",
+    "MA_zins_gesetzlich",
+    "MA_zahlungsaufforderung",
+    "MA_mahngebuehr",
+    "MA_schluss",
+    "MA_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "MA_absender",
+     "begruendung": "Absenderin/Absender des Schreibens – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_adressat",
+     "begruendung": "Schuldnerin/Schuldner als Empfänger – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_betreff_zahlung",
+     "begruendung": "Betreff der Zahlungs-Mahnung mit dem Rechtsgrund der Forderung."
+    },
+    {
+     "bausteinId": "MA_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_forderung",
+     "begruendung": "Bestimmte Bezeichnung der Forderung (Betrag und Rechtsgrund) – Kern der Mahnung."
+    },
+    {
+     "bausteinId": "MA_verzug_mahnung",
+     "begruendung": "Verzugseintritt durch Mahnung bei fälliger Verbindlichkeit; der ausdrückliche Satz stellt klar, dass die Zahlungsfrist kein Zuwarten mit den Verzugsfolgen bedeutet (Konsistenz mit dem Verzugszins-Rechner: Zins ab Erhalt der Mahnung).",
+     "norm": "Art. 102 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "MA_zins_gesetzlich",
+     "begruendung": "Gesetzlicher Verzugszins von 5 % pro Jahr bei Geldschulden.",
+     "norm": "Art. 104 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "MA_zahlungsaufforderung",
+     "begruendung": "Zahlungsaufforderung mit gesetzter Frist – die Frist ist eine Praxis-Wahl, keine gesetzliche Vorgabe."
+    },
+    {
+     "bausteinId": "MA_mahngebuehr",
+     "begruendung": "Mahngebühr NUR bei bestätigter vertraglicher Grundlage – von Gesetzes wegen besteht kein Anspruch (nur Verzugszins, Art. 104 OR)."
+    },
+    {
+     "bausteinId": "MA_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_unterschrift",
+     "begruendung": "Unterschrift der Gläubigerin/des Gläubigers."
+    }
+   ]
+  },
+  "zinsAb": null
+ },
+ "vorl:ma-nachfrist": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Mahnung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "MA_absender",
+      "text": "A\nX 1",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "MA_adressat",
+      "text": "B\nY 2",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "MA_datumzeile",
+      "text": "Basel, 11. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "MA_betreff_nachfrist",
+      "text": "Inverzugsetzung mit Nachfristansetzung – Werkvertrag vom 1. Februar 2026",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "MA_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "MA_nf_leistung",
+      "text": "Aus Werkvertrag vom 1. Februar 2026 schulden Sie mir die folgende Leistung: Lieferung und Montage der Kücheneinrichtung. Diese Leistung ist fällig, fällig seit dem 15.05.2026 und bis heute nicht erbracht."
+     },
+     {
+      "bausteinId": "MA_nf_nachfrist",
+      "text": "Ich mahne Sie hiermit (Art. 102 Abs. 1 OR) und setze Ihnen für die nachträgliche Erfüllung eine Nachfrist von 10 Tagen seit Erhalt dieses Schreibens an (Art. 107 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "MA_nf_wahlrechte",
+      "text": "Nach unbenutztem Ablauf dieser Frist behalte ich mir vor, auf die nachträgliche Leistung zu verzichten und Ersatz des aus der Nichterfüllung entstandenen Schadens zu verlangen oder vom Vertrag zurückzutreten (Art. 107 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "MA_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "MA_unterschrift",
+      "text": "___________________________\nA",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Massgebend sind Vertrag und Gesetz; der Zugang beim Empfänger entscheidet. Mahnung ist keine Betreibung – für die Zwangsvollstreckung ist das Betreibungsbegehren der nächste Schritt.",
+    "version": "1.0.0 (Bauspezifikation or-vertragsvorlagen.md; OR-Wortlaute verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "MA_absender",
+    "MA_adressat",
+    "MA_datumzeile",
+    "MA_betreff_nachfrist",
+    "MA_anrede",
+    "MA_nf_leistung",
+    "MA_nf_nachfrist",
+    "MA_nf_wahlrechte",
+    "MA_schluss",
+    "MA_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "MA_absender",
+     "begruendung": "Absenderin/Absender des Schreibens – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_adressat",
+     "begruendung": "Schuldnerin/Schuldner als Empfänger – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_betreff_nachfrist",
+     "begruendung": "Betreff der Nachfristansetzung mit der Vertragsbezeichnung."
+    },
+    {
+     "bausteinId": "MA_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_nf_leistung",
+     "begruendung": "Bestimmte Bezeichnung der geschuldeten Leistung aus dem zweiseitigen Vertrag."
+    },
+    {
+     "bausteinId": "MA_nf_nachfrist",
+     "begruendung": "Mahnung und Nachfristansetzung verbunden – Art. 107 setzt Verzug voraus; die Verbindung beider Erklärungen in einem Schreiben ist zulässig und praxisüblich.",
+     "norm": "Art. 107 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "MA_nf_wahlrechte",
+     "begruendung": "Ankündigung der Wahlrechte – Verzicht/Rücktritt verlangen nach Fristablauf eine unverzügliche Erklärung (in der UI offengelegt).",
+     "norm": "Art. 107 Abs. 2 OR"
+    },
+    {
+     "bausteinId": "MA_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "MA_unterschrift",
+     "begruendung": "Unterschrift der Gläubigerin/des Gläubigers."
+    }
+   ]
+  },
+  "zinsAb": null
+ },
+ "vorl:ma-gates": {
+  "blocker": [],
+  "warnungen": [
+   "Mahngebühren sind OHNE vertragliche Grundlage nicht geschuldet – von Gesetzes wegen besteht nur der Anspruch auf Verzugszins (Art. 104 OR). Der Brief nimmt die Gebühr deshalb nicht auf; bestätigen Sie die vertragliche Grundlage, wenn eine besteht."
+  ],
+  "hinweise": [
+   "Die Mahnung setzt die FÄLLIGKEIT der Forderung voraus (Art. 102 Abs. 1 OR) – eine Mahnung vor Fälligkeit löst keinen Verzug aus.",
+   "Der Brief erklärt den Verzugseintritt ab ZUGANG ausdrücklich. Ohne diese Klarstellung wird eine Zahlungsfrist in der Mahnung teilweise so gelesen, dass die Verzugsfolgen erst nach Fristablauf geltend gemacht werden."
+  ]
+ },
+ "vorl:ma-gates-nachfrist": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "Die Nachfristansetzung nach Art. 107 OR gilt für ZWEISEITIGE Verträge (Leistung gegen Gegenleistung). Für reine Geldforderungen ist die Zahlungs-Mahnung die richtige Variante.",
+   "Ob die gewählte Nachfrist ANGEMESSEN ist (Art. 107 Abs. 1 OR), ist eine Wertungsfrage – LexMetrik berechnet hier bewusst nichts. Eine zu kurz angesetzte Frist setzt nach der Praxis immerhin eine angemessene Frist in Gang.",
+   "Verzicht auf die Leistung oder Rücktritt müssen nach Ablauf der Nachfrist UNVERZÜGLICH erklärt werden (Art. 107 Abs. 2 OR) – der Vorbehalt in diesem Schreiben ersetzt diese spätere Erklärung nicht.",
+   "In drei Fällen ist die Nachfrist entbehrlich (Art. 108 OR): wenn sie sich als nutzlos erweisen würde, wenn die Leistung durch den Verzug für Sie nutzlos geworden ist oder beim Fixgeschäft."
+  ]
+ },
  "ag:bar-voll-singular": {
   "blocker": [],
   "warnungen": [],

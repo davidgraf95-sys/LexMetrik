@@ -51,6 +51,25 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       ['mv-gates', pruefeMvGates({ ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X', mieterName: 'M', mieterAdresse: 'Y', objektBeschrieb: 'Z', objektAdresse: 'A', kanton: 'BE', beginn: '2026-10-01', mietzinsNettoCHF: '2000', nkPositionen: ['Heizung'], kautionCHF: '9000', ort: 'Basel', datum: '2026-06-15' })],
     ];
 
+    // Mahnung & Inverzugsetzung (11.6.2026): Maximalkombis beider Varianten
+    // (Verfalltag + vertraglicher Zins + Mahngebühr bzw. Nachfrist) + Gates.
+    const { maZusammenstellen, pruefeMaGates, MA_DEFAULTS } = await import('../lib/vorlagen/mahnung');
+    const maBasis = {
+      ...MA_DEFAULTS, absenderName: 'A', absenderAdresse: 'X 1', adressatName: 'B', adressatAdresse: 'Y 2',
+      betrag: '1250', rechtsgrund: 'Rechnung Nr. 1 vom 12. Mai 2026', faelligSeit: '2026-05-15',
+      vertragBezeichnung: 'Werkvertrag vom 1. Februar 2026', leistungBeschrieb: 'Lieferung der Ware',
+      ort: 'Basel', datum: '2026-06-11',
+    } as const;
+    const maMax = { ...maBasis, verfalltagVereinbart: true, verfalltag: '2026-05-31', zinsVertraglich: true, zinssatzProzent: '8', mahngebuehrErfassen: true, mahngebuehr: '20', mahngebuehrVertraglich: true };
+    faelle.push(
+      ['ma-zahlung', maZusammenstellen({ ...maBasis }).ergebnis.dokument],
+      ['ma-zahlung-max', maZusammenstellen(maMax).ergebnis.dokument],
+      ['ma-nachfrist', maZusammenstellen({ ...maBasis, variante: 'nachfrist' }).ergebnis.dokument],
+      ['ma-gates-zahlung', pruefeMaGates({ ...maBasis, mahngebuehrErfassen: true, mahngebuehr: '20' })],
+      ['ma-gates-verfalltag', pruefeMaGates({ ...maBasis, verfalltagVereinbart: true, verfalltag: '2026-05-31' })],
+      ['ma-gates-nachfrist', pruefeMaGates({ ...maBasis, variante: 'nachfrist' })],
+    );
+
     // GmbH-Dokumentmappe (9b, 7.6.2026): Maximal-Konfiguration → alle Schemas
     // und alle bedingten Bausteine laufen durch den Linter.
     const { gmbhDokumentmappe, GMBH_DOK_DEFAULTS } = await import('../lib/vorlagen/gruendungGmbhDokumente');

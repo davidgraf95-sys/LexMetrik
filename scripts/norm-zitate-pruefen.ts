@@ -18,6 +18,9 @@ const QUELLEN = [
   // AG-Volldokumente (Etappe 0/1 der Komplett-Überarbeitung, 7.6.2026) —
   // Statuten-/Urkunden-Bausteine zitieren OR + HRegV in text/norm/begruendung.
   'src/lib/vorlagen/gruendungAgDokumente.ts',
+  // Mahnung & Inverzugsetzung (11.6.2026) — Art. 102/104/107/108 OR in
+  // Bausteinen und Gates.
+  'src/lib/vorlagen/mahnung.ts',
 ];
 const CACHES: Record<string, string> = {
   ZPO: '/tmp/zpo.html', SchKG: '/tmp/schkg.html', StPO: '/tmp/stpo.html',

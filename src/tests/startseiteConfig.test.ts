@@ -54,7 +54,7 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/klage-ordentlich', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/klage-ordentlich', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung', '/vorlagen/mahnung']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -215,10 +215,13 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // AUFGELÖST (−1; Ereignis-Blöcke leben in den Fach-Rechnern) →
   // 34 gebaut / 30 sichtbar (10.6.2026 abends: + klage-ordentlich,
   // Auftrag David — dritte Klage-Vorlage, alle Kantone).
-  it('verfügbar = status !== geplant; Regressionszählung 34 gebaut / 30 sichtbar (Stand 10.6.2026 abends)', () => {
+  // Deklarierte Anpassung 11.6.2026 (Auftrag David «mache mahnungsengine»):
+  // + Vorlage «Mahnung & Inverzugsetzung» (B.9, geplant → entwurf) →
+  // 35 gebaut / 31 sichtbar.
+  it('verfügbar = status !== geplant; Regressionszählung 35 gebaut / 31 sichtbar (Stand 11.6.2026)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(34);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(30);
+    expect(verf.length).toBe(35);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(31);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

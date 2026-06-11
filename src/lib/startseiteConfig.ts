@@ -1527,13 +1527,25 @@ const VORLAGEN: Record<string, VorlageCard> = {
   mahnung: {
     id: 'mahnung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
-    title: 'Mahnung',
+    title: 'Mahnung & Inverzugsetzung',
     // §0-Mehrwert-Test 7.6.2026: «Inverzugsetzung» war eine Karten-Dublette
     // desselben Schreibens (Art. 102 OR) — hier als Variante geführt.
-    description: 'Zahlungsaufforderung mit Fristansetzung.',
-    status: 'geplant', norms: [],
-    related: ['verzugszins'],
-    keywords: ['Mahnung', 'Zahlungsverzug', 'Frist'],
+    description: 'Zahlungsaufforderung, die den Verzug auslöst (Art. 102 OR), mit Verzugszins-Androhung (Art. 104 OR) – als Variante die Nachfristansetzung beim zweiseitigen Vertrag (Art. 107 OR).',
+    status: 'entwurf',
+    norms: [
+      // Art. 102 OR – Verzugseintritt durch Mahnung/Verfalltag (Wortlaut verifiziert 11.6.2026)
+      { label: 'Art. 102 OR', url: fedlexUrl('OR', '102'), verified: false },
+      // Art. 104 OR – Verzugszins 5 %, vertraglich höher (Wortlaut verifiziert 11.6.2026)
+      { label: 'Art. 104 OR', url: fedlexUrl('OR', '104'), verified: false },
+      // Art. 107 OR – Nachfrist + Wahlrechte (Wortlaut verifiziert 11.6.2026)
+      { label: 'Art. 107 OR', url: fedlexUrl('OR', '107'), verified: false },
+    ],
+    href: '/vorlagen/mahnung',
+    schemaId: 'mahnung',
+    formvorschrift: 'Formfrei – unterschreiben und nachweisbar zustellen (massgebend ist der Zugang).',
+    output: ['pdf', 'docx'],
+    related: ['verzugszins', 'betreibungskosten'],
+    keywords: ['Mahnung', 'Zahlungsverzug', 'Frist', 'Inverzugsetzung', 'Nachfrist', 'Verzugszins', 'Art. 102', 'Art. 107'],
   },
   schuldanerkennung: {
     id: 'schuldanerkennung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',

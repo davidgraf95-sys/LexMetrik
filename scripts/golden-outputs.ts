@@ -32,6 +32,7 @@ import { koZusammenstellen, KO_DEFAULTS } from '../src/lib/vorlagen/klageOrdentl
 import { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } from '../src/lib/vorlagen/arbeitsvertrag';
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
+import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
 
 const faelle: Record<string, unknown> = {};
 const f = (id: string, fn: () => unknown) => {
@@ -177,6 +178,21 @@ const mvBasis = {
 f('vorl:mv', () => mvZusammenstellen({ ...mvBasis }));
 f('vorl:mv-gates', () => pruefeMvGates({ ...mvBasis, kautionCHF: '6800' }));
 f('vorl:mv-staffel', () => mvZusammenstellen({ ...mvBasis, mietzinsModell: 'staffel', mindestdauerJahre: 3, staffeln: [{ ab: '2027-10-01', erhoehungCHF: '50' }] }));
+// Mahnung & Inverzugsetzung (11.6.2026): beide Varianten + Verfalltag-/
+// Vertragszins-/Mahngebühren-Weichen + Gates.
+const maBasis: MaAntworten = {
+  ...MA_DEFAULTS, absenderName: 'A', absenderAdresse: 'X 1', adressatName: 'B', adressatAdresse: 'Y 2',
+  betrag: '1250', rechtsgrund: 'Rechnung Nr. 4711 vom 12. Mai 2026', faelligSeit: '2026-05-15',
+  vertragBezeichnung: 'Werkvertrag vom 1. Februar 2026', leistungBeschrieb: 'Lieferung und Montage der Kücheneinrichtung',
+  zahlungsverbindung: 'IBAN CH00 0000 0000 0000 0000 0',
+  ort: 'Basel', datum: '2026-06-11',
+};
+f('vorl:ma-zahlung', () => maZusammenstellen({ ...maBasis }));
+f('vorl:ma-verfalltag', () => maZusammenstellen({ ...maBasis, verfalltagVereinbart: true, verfalltag: '2026-05-31', zinsVertraglich: true, zinssatzProzent: '8' }));
+f('vorl:ma-mahngebuehr', () => maZusammenstellen({ ...maBasis, mahngebuehrErfassen: true, mahngebuehr: '20', mahngebuehrVertraglich: true, betreibungAndrohen: false }));
+f('vorl:ma-nachfrist', () => maZusammenstellen({ ...maBasis, variante: 'nachfrist' }));
+f('vorl:ma-gates', () => pruefeMaGates({ ...maBasis, mahngebuehrErfassen: true, mahngebuehr: '20' }));
+f('vorl:ma-gates-nachfrist', () => pruefeMaGates({ ...maBasis, variante: 'nachfrist' }));
 
 // ── AG-Gründungsmappe (Perfektions-Runde 12, 7.6.2026): repräsentative
 // Konstellationen über ALLE Schemas/Weichen — schützt jedes künftige

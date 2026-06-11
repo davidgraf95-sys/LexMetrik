@@ -49,6 +49,7 @@ nach. Status-Vokabular = Katalog (`entwurf`/`geprüft`) + «Dossier only».
 | gruendungGmbhDokumente.ts | recherche/gruendungsdokumente-wortlaute.md · **muster/** (MANIFEST) · behoerden/notariate-kantone.md | entwurf; 2× reviewt 7.6. |
 | gruendungAgDokumente.ts | dito + recherche/ag-gruendung-amtliche-vorlagen.md (**FAHRPLAN-AG-GRUENDUNG.md läuft!**) · recherche/ag-gruendung-musterabgleich.md (Zweitabgleich am Original 10.6.2026: 0 neu/0 Abweichung; Befunde B1–B8 UMGESETZT 10.6.2026, Ja David) | **in Umbau** (Etappen 0–5) |
 | kapitalerhoehung.ts | recherche/kapitalerhoehung-wortlaute.md · muster/ke-* | entwurf; 2× reviewt 7.6.; Stufe 2 = Plan 9c-OFFEN |
+| mahnung.ts (Zahlung + Nachfrist Art. 107) | recherche/or-vertragsvorlagen.md §§3–4 (OR-Wortlaute 102/104/107/108 verifiziert 11.6.2026) | entwurf (gebaut 11.6.2026, B.9) |
 | notariate.ts | behoerden/notariate-kantone.md | entwurf; UR/AI/BL vor Abnahme |
 | behoerden.ts | behoerden/* (Vollerfassungen) | je Adresse `stand`-Feld |
 
