@@ -79,6 +79,14 @@ EINTRAEGE=(
   # Art. 8 Abs. 1 = 1 %, Art. 6 Abs. 1 lit. h = Freibetrag 1 Mio.;
   # 20240101 = neuste Konsolidierung).
   "stg|cc/1974/11_11_11|20240101|1|art_5,art_6,art_8"
+  # KVG: gepinnt 11.6.2026 (KVG-Preset der Kündigungs-Maske 3 — Art. 7
+  # Wechsel des Versicherers, Art. 64a Abs. 6 Ausstands-Sperre; 20260101 =
+  # neuste echte Konsolidierung, 202602–202606 liefern nur die SPA-Shell;
+  # Datei OHNE -N-Suffix. Dossier kvg-grundversicherung-kuendigung.md).
+  "kvg|cc/1995/1328_1328_1328|20260101|0|art_7,art_62,art_64_a"
+  # KVV: gepinnt 11.6.2026 (besondere Versicherungsformen: Art. 94 Abs. 2 /
+  # Art. 100 Abs. 3 — Wechsel nur auf Jahresende, Fassung AS 2024 697).
+  "kvv|cc/1995/3867_3867_3867|20260101|0|art_94,art_99,art_100"
 )
 
 fehler=0
