@@ -42,15 +42,27 @@ ohne Inhalt (leere Hülle, globaler Einheits-Titel); der neue Stand liefert
 H1 «Verzugszins», individuellen `<title>`, Canonical, JSON-LD und den
 gesamten Seitentext ohne JS-Ausführung.
 
-## Verifikation am Vercel-Preview (OFFEN — braucht Deploy, §9 nur auf Ja)
+## Verifikation am Vercel-Preview — DURCHGEFÜHRT 11.6.2026 (Ja David)
 
-curl-Matrix nach dem Preview-Deploy:
-`/rechner/verzugszins` → 200 mit Inhalt · `/rechner/verzugszins/` → 308 →
-200 · `/rechner/verzugszins.html` → 308 (cleanUrls) · `/pro` →
-app.html-Hülle, Client-Redirect auf `/` · geplanter Stub-Slug →
-app.html + noindex · `/sitemap.xml` + `/robots.txt` → 200 · CSP-Header
-unverändert · Lighthouse-Vergleich (Erwartung: LCP deutlich besser, da
-Inhalt im HTML).
+Preview `lexmetrik-9lmi4f72v` (nach Fix `6b4ae58`: Rewrite-Ziel `/app`
+statt `/app.html` — mit cleanUrls exponiert Vercel die Datei als `/app`,
+das alte Ziel lief ins 404; Befund am ersten Preview `lexmetrik-j07tnhiqh`):
+
+| Probe | Ergebnis |
+| --- | --- |
+| `/rechner/verzugszins` | 200, Titel «Verzugszins — LexMetrik», H1 + JSON-LD im Roh-HTML |
+| `/rechner/verzugszins/` | 308 → slash-lose Canonical-Form |
+| `/rechner/verzugszins.html` | 308 (cleanUrls) |
+| `/pro` · Stub-Slug · unbekannter Pfad | 200, app-Hülle mit noindex (Client rendert Redirect/Stub/404 wie bisher) |
+| `/sitemap.xml` | 200, 38 URLs · robots.txt mit Sitemap-Zeile |
+| CSP-Header | unverändert vorhanden |
+| Asset-Hash | live = lokal (`index-DilMcf47.js`) |
+| Browser-Probe | Verzugszins-Preset → CHF 126.03 identisch; 0 eigene Konsolenfehler (geblockte vercel.live-Toolbar-Scripts sind Preview-Rauschen, in Prod nicht vorhanden) |
+
+LCP/Web-Vitals: Verbesserung strukturell gesichert (Inhalt + H1 stehen im
+ausgelieferten HTML, Bundle-Grösse = Basislinie 258 kB); Lighthouse-Messung
+sinnvollerweise nach dem Prod-Deploy gegen die öffentliche URL (Preview ist
+zugriffsgeschützt).
 
 ## Offene TODO(David) — juristische/inhaltliche Entscheide, nichts erfunden
 
