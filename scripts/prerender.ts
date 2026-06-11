@@ -18,7 +18,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { metaFuerPfad, prerenderRouten, SITE_URL } from '../src/lib/seo';
+import { jsonLdFuerPfad, metaFuerPfad, prerenderRouten, SITE_URL } from '../src/lib/seo';
 import { renderRoute } from '../src/entry-server';
 
 // Deklarierter Routen-Zähler (wie die Katalog-Zähler in den Tests): bei neuen
@@ -63,9 +63,16 @@ function seitenHtml(pfad: string, inhalt: string): string {
     if (!re.test(out)) throw new Error(`Meta-Tag-Muster nicht gefunden (${pfad}): ${re}`);
     out = out.replace(re, (_, vor: string, nach: string) => vor + esc(wert) + nach);
   }
+  // JSON-LD (E4): nicht-ausführbarer Data-Block, von der CSP (script-src
+  // 'self') nicht erfasst; «<» escapen, damit kein </script> im JSON-Inhalt
+  // den Block beenden kann.
+  const jsonLd = jsonLdFuerPfad(pfad);
+  const ldTag = jsonLd
+    ? `    <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>\n`
+    : '';
   out = out.replace(
     '</head>',
-    `    <link rel="canonical" href="${meta.canonical}" />\n  </head>`,
+    `    <link rel="canonical" href="${meta.canonical}" />\n${ldTag}  </head>`,
   );
   return out.replace(ROOT_MARKER, () => `<div id="root">${inhalt}</div>`);
 }

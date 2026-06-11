@@ -5,7 +5,7 @@
 // Hashes, keine Duplikate, keine Redirect-/Stub-Pfade) und mit individuellen
 // Metadaten je Route (Auftrag: keine Titel-Duplikate über Seiten hinweg).
 import { describe, expect, it } from 'vitest';
-import { metaFuerPfad, prerenderRouten, SITE_URL } from '../lib/seo';
+import { jsonLdFuerPfad, metaFuerPfad, prerenderRouten, SITE_URL } from '../lib/seo';
 import { ALLE_KARTEN, istVerfuegbar } from '../lib/startseiteConfig';
 
 const ROUTEN = prerenderRouten();
@@ -68,5 +68,28 @@ describe('metaFuerPfad()', () => {
   it('unbekannte Pfade → null', () => {
     expect(metaFuerPfad('/rechner/gibts-nicht')).toBeNull();
     expect(metaFuerPfad('/pro')).toBeNull();
+  });
+});
+
+describe('jsonLdFuerPfad()', () => {
+  it('Karten-Routen → WebApplication mit Karten-Daten (nichts erfunden)', () => {
+    const ld = jsonLdFuerPfad('/rechner/verzugszins') as Record<string, unknown>;
+    expect(ld['@type']).toBe('WebApplication');
+    expect(ld.name).toBe(metaFuerPfad('/rechner/verzugszins')!.karte!.title);
+    expect(ld.url).toBe(SITE_URL + '/rechner/verzugszins');
+    // keine erfundenen Bewertungs-/Angebots-Daten
+    expect(ld).not.toHaveProperty('aggregateRating');
+    expect(ld).not.toHaveProperty('offers');
+  });
+
+  it('Startseite → WebSite+Organization; übrige statische Seiten → null; nirgends FAQPage', () => {
+    const start = jsonLdFuerPfad('/') as { '@graph': { '@type': string }[] };
+    expect(start['@graph'].map((g) => g['@type'])).toEqual(['WebSite', 'Organization']);
+    for (const p of ['/methodik', '/ueber', '/kontakt', '/datenschutz']) {
+      expect(jsonLdFuerPfad(p)).toBeNull();
+    }
+    for (const p of ROUTEN) {
+      expect(JSON.stringify(jsonLdFuerPfad(p) ?? {})).not.toContain('FAQPage');
+    }
   });
 });

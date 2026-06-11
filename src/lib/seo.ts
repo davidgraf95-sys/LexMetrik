@@ -104,3 +104,43 @@ export function metaFuerPfad(pfad: string): RouteMetadaten | null {
     karte,
   };
 }
+
+// ─── JSON-LD (SSG-Etappe E4) ───────────────────────────────────────────────
+// Pro Karten-Route ein WebApplication-Objekt — Felder NUR aus Vorhandenem
+// (Karte + SITE_URL); isAccessibleForFree ist faktisch korrekt (Free/Pro-
+// Zweiteilung aufgehoben, s. startseiteConfig.ts). KEINE FAQPage: im Repo
+// existieren keine FAQ-Inhalte (nichts erfinden). Kein aggregateRating/
+// offers — keine Daten erfinden, auch wenn Google dann kein Rich Result
+// zeigt. Startseite: WebSite + Organization.
+
+export function jsonLdFuerPfad(pfad: string): object | null {
+  if (pfad === '/') {
+    return {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebSite',
+          name: 'LexMetrik',
+          url: `${SITE_URL}/`,
+          description: SITE_DESCRIPTION,
+          inLanguage: 'de-CH',
+        },
+        { '@type': 'Organization', name: 'LexMetrik', url: `${SITE_URL}/` },
+      ],
+    };
+  }
+  const meta = metaFuerPfad(pfad);
+  if (!meta?.karte) return null; // statische Seiten ausser «/»: kein JSON-LD
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: meta.karte.title,
+    description: meta.beschreibung,
+    url: meta.canonical,
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    isAccessibleForFree: true,
+    inLanguage: 'de-CH',
+    publisher: { '@type': 'Organization', name: 'LexMetrik', url: `${SITE_URL}/` },
+  };
+}
