@@ -63,6 +63,10 @@ Vor jedem Struktur-Umbau gilt das Protokoll:
 
 1. Tests vorher grün (`npx tsc -b` · `npm test` · `npm run lint` mit
    **voller Ausgabe**, nie `tail -1` · `npm run build`).
+   Für den grünen Routine-Check `npm run gate` (bzw. `gate:schnell` pro
+   Iteration); die fünf Einzelbefehle mit voller Ausgabe nur zur Diagnose
+   eines roten Gates. Der Wrapper kürzt nur die grüne Ausgabe — ein Fehler
+   erhält weiterhin die volle Ausgabe (§6-Sinn: kein verstecktes Versagen).
 2. Wo Texte/Dokumente entstehen (assemble, PDF-Modell, Warnungen): vorher
    **Golden-Outputs** festhalten (Snapshot/Vergleichslauf) — nachher müssen
    sie identisch sein.
