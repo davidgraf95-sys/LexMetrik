@@ -1001,7 +1001,7 @@ Quelle: amtliche Liste erechtsverkehr.tg.ch/7980 (Abruf 11.6.2026; führt KEINE 
 | Schlichtungsbehörde in Miet- und Pachtsachen | Seestrasse 123 | 8266 Steckborn | Berlingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/berlingen.html/196 |
 | Schlichtungsbehörde in Mietsachen Diessenhofen | Hintergasse 49 | 8253 Diessenhofen | Diessenhofen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/diessenhofen.html/202 |
 | Schlichtungsbehörde in Miet- und Pachtsachen | Seestrasse 123 | 8266 Steckborn | Eschenz | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/eschenz.html/207 |
-| Schlichtungsbehörde in Mietsachen Felben-Wellhausen | Hauptstrasse 52 | 8553 Hüttlingen | Felben-Wellhaussen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/felben-wllhausen.html/209 |
+| Schlichtungsbehörde in Mietsachen Felben-Wellhausen | Hauptstrasse 52 | 8553 Hüttlingen | Felben-Wellhausen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/felben-wllhausen.html/209 |
 | Schlichtungsbehörde in Mietsachen Frauenfeld | Postfach | 8501 Frauenfeld | Frauenfeld | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/frauenfeld.html/210 |
 | Schlichtungsbehörden in Mietsachen Gachnang | Hauptstrasse 52 | 8553 Hüttlingen | Gachnang | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/gachnang.html/211 |
 | Schlichtungsbehörde in Mietsachen Herdern | Hauptstrasse 52 | 8553 Hüttlingen | Herdern | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/herdern.html/216 |

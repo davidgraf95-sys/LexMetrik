@@ -68,7 +68,9 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   const [wahlSchluessel, setWahlSchluessel] = useState<{ kanton: Kanton; typ: string; stufe: string; idx: number }>({ kanton, typ, stufe: '', idx: -1 });
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   const [kreisIdx, setKreisIdx] = useState(0);
-  const [amtZeilen, setAmtZeilen] = useState<string[] | null>(null);
+  // Bug-Check 11.6.2026 B2: amtZeilen tragen den erzeugenden Typ — beim
+  // Typwechsel wird nie ein staler Adressat des anderen Typs gemeldet.
+  const [amtZeilen, setAmtZeilenRoh] = useState<{ typ: string; zeilen: string[] } | null>(null);
   const [amtUrl, setAmtUrl] = useState<string | undefined>(undefined);
   // Befund David 10.6.2026 («PLZ bzw. Gemeinde funktioniert nicht»):
   // Treffer im Kanton aufbewahren — bei Mehrdeutigkeit ohne Hauptgemeinde
@@ -145,8 +147,8 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       return { amt: a ? [a.name, a.strasse, a.plzOrt].filter(Boolean) : null, amtUrl: a?.url, kreise: null, wahl };
     };
     lade()
-      .then((r) => { if (aktiv) { setAmtZeilen(r.amt); setAmtUrl(r.amtUrl); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
-      .catch(() => { if (aktiv) { setAmtZeilen(null); setAmtUrl(undefined); setZhKreise(null); setPlzWahl(null); } });
+      .then((r) => { if (aktiv) { setAmtZeilenRoh(r.amt ? { typ, zeilen: r.amt } : null); setAmtUrl(r.amtUrl); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
+      .catch(() => { if (aktiv) { setAmtZeilenRoh(null); setAmtUrl(undefined); setZhKreise(null); setPlzWahl(null); } });
     return () => { aktiv = false; };
   }, [kanton, typ, plz, gemeinde, vdStufe, arbeitsrechtlich, soGleicheGemeinde]);
 
@@ -156,6 +158,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   // GOG-Dossier belegt mit LU (§ 50 JusG: eigene SB Gleichstellung) ein
   // Gegenbeispiel; bis zur GlG-Recherche je Kanton gilt Handeingabe.
   const glgOhneStelle = typ === 'paritaetisch_glg' && (recherche?.glgFallback ?? false);
+  const amtZeilenTyp = amtZeilen && amtZeilen.typ === typ ? amtZeilen.zeilen : null;
   useEffect(() => {
     if (!recherche || glgOhneStelle) { onAufgeloest(null); return; }
     const a = recherche.aufloesung;
@@ -170,7 +173,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       const s = wahlIdx >= 0 && wahlIdx < a.stellen.length ? a.stellen[wahlIdx] : undefined;
       onAufgeloest(s
         ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
-        : (typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? recherche.kantonsUrl } : null));
+        : (typ === 'ordentlich' && amtZeilenTyp ? { zeilen: amtZeilenTyp, url: amtUrl ?? recherche.kantonsUrl } : null));
     } else if (typ === 'ordentlich' && zhKreise && zhKreise.length > 0) {
       // Index ausserhalb der (neuen) Liste → deterministisch erste Option,
       // Anzeige und Meldung identisch (kein stiller Letzte-Stelle-Clamp;
@@ -184,7 +187,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       // Miete-Register (11.6.2026): amtZeilen sind hier die paritätische
       // Miet-Stelle des Registers — ebenfalls als Adressat melden.
       const amtMeldbar = typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton));
-      onAufgeloest(amtMeldbar && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? a.url } : null);
+      onAufgeloest(amtMeldbar && amtZeilenTyp ? { zeilen: amtZeilenTyp, url: amtUrl ?? a.url } : null);
     }
     // vdStufeKey in den Deps (Bug-Check 11.6.2026 HOCH): beim Stufenwechsel
     // JdP↔TA blieben modus ('liste') und wahlIdx identisch — der Effect
@@ -229,10 +232,10 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
           )}
-          <Field label={amtZeilen && wahlIdx < 0 ? 'Oder Stelle direkt wählen (übersteuert)' : 'Zuständige Stelle wählen'}
+          <Field label={amtZeilenTyp && wahlIdx < 0 ? 'Oder Stelle direkt wählen (übersteuert)' : 'Zuständige Stelle wählen'}
             hint={`${a.stellen.length} Stellen im Kanton ${kanton} — massgeblich ist das Gebiet der beklagten Partei bzw. der Sache`}>
             <select className={inputCls} value={wahlIdx} onChange={(e) => setWahlSchluessel({ kanton, typ, stufe: vdStufeKey, idx: Number(e.target.value) })}>
-              <option value={-1}>{amtZeilen ? '– automatisch (PLZ/Gemeinde) –' : '– Stelle wählen –'}</option>
+              <option value={-1}>{amtZeilenTyp ? '– automatisch (PLZ/Gemeinde) –' : '– Stelle wählen –'}</option>
               {a.stellen.map((s, i) => <option key={s.name} value={i}>{s.name} — {s.plzOrt}</option>)}
             </select>
           </Field>
@@ -278,13 +281,15 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
               </select>
             </Field>
           )}
-          {!amtZeilen && !zhKreise && (
+          {!amtZeilenTyp && !zhKreise && (
             <p className="text-body-s text-ink-600">
               {a.beschreibung}.{' '}
               <a href={a.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">Amtliches Verzeichnis öffnen ↗</a>
-              {!paritaetisch && AMT_KANTONE.includes(kanton) && !(kanton === 'VD' && !vdStufe) && !(kanton === 'SO' && soGleicheGemeinde !== false)
+              {typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton)
+                ? ' — oder oben PLZ/Gemeinde des Mietobjekts eingeben für die automatische Zuordnung.'
+                : !paritaetisch && AMT_KANTONE.includes(kanton) && !(kanton === 'VD' && !vdStufe) && !(kanton === 'SO' && soGleicheGemeinde !== false)
                 ? ' — oder oben PLZ/Gemeinde eingeben für die automatische Zuordnung.'
-                : kanton === 'VD' && !vdStufe
+                : kanton === 'VD' && !vdStufe && typ === 'ordentlich'
                   ? ' — sobald ein bezifferter Streitwert vorliegt, ordnet die Vorlage die Instanz automatisch zu; sonst Adresse dort entnehmen und unten von Hand erfassen.'
                   : ' — Adresse dort entnehmen und unten von Hand erfassen.'}
             </p>
