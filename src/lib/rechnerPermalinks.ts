@@ -155,7 +155,7 @@ export type BgerLink = {
   weg: string; zivilGebiet?: string; objekt?: string;
   vermoegensrechtlich?: boolean; streitwert?: number;
   vorsorglich?: boolean; eheschutz?: boolean; einzigeInstanz?: boolean;
-  konkursrichter?: boolean; schiedsgericht?: boolean; hkue?: boolean;
+  konkursrichter?: boolean; schiedsgericht?: boolean; markenwiderspruch?: boolean; hkue?: boolean;
   wechsel?: boolean; sonderfall?: string; eroeffnung?: string; kanton?: string;
 };
 
@@ -170,6 +170,7 @@ export const BGER_LINK_SPEC: PermalinkSpec<BgerLink & Record<string, unknown>> =
   einzigeInstanz: { p: 'ei', typ: 'bool' },
   konkursrichter: { p: 'kr', typ: 'bool' },
   schiedsgericht: { p: 'sg', typ: 'bool' },
+  markenwiderspruch: { p: 'mw', typ: 'bool' },
   hkue: { p: 'hk', typ: 'bool' },
   wechsel: { p: 'wb', typ: 'bool' },
   sonderfall: { p: 'sf', typ: 'str', gueltig: einerVon('keiner', 'rechtshilfe_amtshilfe', 'abstimmung', 'nationalratswahl', 'beschaffung') },

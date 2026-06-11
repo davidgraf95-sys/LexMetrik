@@ -95,6 +95,7 @@ export function BgerRechtswegForm() {
   const [einzigeInstanz, setEinzigeInstanz] = useState<boolean>((ausLink.einzigeInstanz as boolean) ?? false);
   const [konkursrichter, setKonkursrichter] = useState<boolean>((ausLink.konkursrichter as boolean) ?? false);
   const [schiedsgericht, setSchiedsgericht] = useState<boolean>((ausLink.schiedsgericht as boolean) ?? false);
+  const [markenwiderspruch, setMarkenwiderspruch] = useState<boolean>((ausLink.markenwiderspruch as boolean) ?? false);
   const [hkue, setHkue] = useState<boolean>((ausLink.hkue as boolean) ?? false);
   const [wechsel, setWechsel] = useState<boolean>((ausLink.wechsel as boolean) ?? false);
   const [sonderfall, setSonderfall] = useState<BgerVerwaltungSonderfall>((ausLink.sonderfall as BgerVerwaltungSonderfall) ?? 'keiner');
@@ -110,7 +111,7 @@ export function BgerRechtswegForm() {
     zivilGebiet: gebiet,
     vermoegensrechtlich,
     streitwertCHF: vermoegensrechtlich ? zahl(streitwertRoh) : null,
-    markenwiderspruch: false,
+    markenwiderspruch: weg === 'zivil' && gebiet === 'immaterialgueter' ? markenwiderspruch : false,
     schiedsgericht: weg === 'zivil' ? schiedsgericht : false,
     einzigeKantonaleInstanz: weg === 'zivil' ? einzigeInstanz : false,
     konkursNachlassrichter: weg === 'zivil' ? konkursrichter : false,
@@ -119,7 +120,7 @@ export function BgerRechtswegForm() {
     verwaltungSonderfall: weg === 'verwaltung' ? sonderfall : 'keiner',
     eroeffnung: /^\d{4}-\d{2}-\d{2}$/.test(eroeffnung) ? eroeffnung : null,
     kanton,
-  }), [weg, gebiet, objekt, vermoegensrechtlich, streitwertRoh, vorsorglich, eheschutz,
+  }), [weg, gebiet, objekt, vermoegensrechtlich, streitwertRoh, vorsorglich, eheschutz, markenwiderspruch,
     einzigeInstanz, konkursrichter, schiedsgericht, hkue, wechsel, sonderfall, eroeffnung, kanton]);
 
   const ergebnis = useMemo(() => {
@@ -129,7 +130,7 @@ export function BgerRechtswegForm() {
   const query = () => permalinkKodieren(BGER_LINK_SPEC, {
     weg, zivilGebiet: weg === 'zivil' ? gebiet : undefined, objekt,
     vermoegensrechtlich, streitwert: zahl(streitwertRoh) ?? undefined,
-    vorsorglich, eheschutz, einzigeInstanz, konkursrichter, schiedsgericht, hkue,
+    vorsorglich, eheschutz, einzigeInstanz, konkursrichter, schiedsgericht, hkue, markenwiderspruch,
     wechsel, sonderfall: weg === 'verwaltung' ? sonderfall : undefined,
     eroeffnung: input.eroeffnung ?? undefined, kanton,
   });
@@ -144,6 +145,12 @@ export function BgerRechtswegForm() {
       ...(weg === 'zivil' ? { 'Rechtsgebiet': GEBIETE.find((g) => g.code === gebiet)?.label ?? gebiet } : {}),
       'Anfechtungsobjekt': OBJEKTE.find((o) => o.code === objekt)?.label ?? objekt,
       ...(weg === 'zivil' && vermoegensrechtlich ? { 'Streitwert': streitwertRoh ? `CHF ${streitwertRoh}` : 'nicht beziffert' } : {}),
+      ...(weg === 'zivil' && schiedsgericht ? { 'Schiedsentscheid (Art. 77 BGG)': 'ja' } : {}),
+      ...(weg === 'zivil' && einzigeInstanz ? { 'Einzige kantonale Instanz': 'ja' } : {}),
+      ...(weg === 'zivil' && konkursrichter ? { 'Konkurs-/Nachlassrichter': 'ja' } : {}),
+      ...(vorsorglich || eheschutz ? { 'Vorsorgliche Massnahme / Eheschutz': eheschutz ? 'Eheschutz' : 'ja' } : {}),
+      ...(weg === 'schkg_aufsicht' ? { 'Wechselbetreibung': wechsel ? 'ja' : 'nein' } : {}),
+      ...(weg === 'verwaltung' ? { 'Sonderfall': SONDERFAELLE.find((x) => x.code === sonderfall)?.label ?? sonderfall } : {}),
       ...(input.eroeffnung ? { 'Eröffnung': input.eroeffnung.split('-').reverse().join('.'), 'Kanton (Art. 45 Abs. 2 BGG)': kanton } : {}),
     },
     sections: [{ titel: 'Weiterzug ans Bundesgericht (BGG)', ergebnis }],
@@ -216,6 +223,12 @@ export function BgerRechtswegForm() {
               <input type="checkbox" checked={vorsorglich} onChange={(e) => setVorsorglich(e.target.checked)} />
               vorsorgliche Massnahme / aufschiebende Wirkung
             </label>
+            {gebiet === 'immaterialgueter' && (
+              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+                <input type="checkbox" checked={markenwiderspruch} onChange={(e) => setMarkenwiderspruch(e.target.checked)} />
+                Entscheid im Markenwiderspruchsverfahren (Art. 73 BGG)
+              </label>
+            )}
             {gebiet === 'familienrecht' && (
               <>
                 <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
@@ -239,7 +252,7 @@ export function BgerRechtswegForm() {
         </label>
       )}
 
-      {(weg === 'straf' || weg === 'verwaltung') && (
+      {(weg === 'straf' || weg === 'verwaltung' || weg === 'schkg_aufsicht') && (
         <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" checked={vorsorglich} onChange={(e) => setVorsorglich(e.target.checked)} />
           Verfahren betreffend aufschiebende Wirkung / vorsorgliche Massnahmen (inkl. Haftsachen)

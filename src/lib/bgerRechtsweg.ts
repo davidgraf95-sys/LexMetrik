@@ -5,7 +5,7 @@ import { formatISO } from './datumsUtils';
 import type { Kanton, Berechnungsergebnis, Rechenschritt, Normverweis } from '../types/legal';
 import { fristendeTage, normalisiereEnde, OHNE_STILLSTAND, type Stillstand } from './fristenEngine';
 import { stillstandsperioden, stillstandsperiodeFuer } from '../data/zpoFeiertage';
-import { formatDatum } from './datumsUtils';
+import { formatDatum, istGueltigesISO } from './datumsUtils';
 
 // ─── BGer-Rechtsweg-Engine (BGG, SR 173.110) ─────────────────────────────────
 //
@@ -146,7 +146,18 @@ export function bgerAbteilungZivil(gebiet: BgerZivilgebiet): { name: string; nor
 }
 
 const N = (artikel: string, bemerkung?: string): Normverweis => ({ artikel, bemerkung });
-const ISO = /^\d{4}-\d{2}-\d{2}$/;
+
+/** Massgebliche Begehren je Anfechtungsobjekt (Art. 51 Abs. 1 lit. a–c BGG —
+ *  Fach-Lupe M2, 11.6.2026: lit. a gilt NUR für Endentscheide). */
+function sw51Satz(objekt: BgerObjekt): string {
+  if (objekt === 'teilentscheid') {
+    return 'Massgeblich sind beim Teilentscheid die GESAMTEN Begehren, die vor der Instanz streitig waren, die den Teilentscheid getroffen hat (Art. 51 Abs. 1 lit. b BGG).';
+  }
+  if (objekt === 'zwischen_zustaendigkeit_ausstand' || objekt === 'zwischen_anderer') {
+    return 'Massgeblich sind beim Vor-/Zwischenentscheid die Begehren, die vor der Instanz streitig sind, wo die Hauptsache hängig ist (Art. 51 Abs. 1 lit. c BGG).';
+  }
+  return 'Massgeblich sind die vor der Vorinstanz streitig GEBLIEBENEN Begehren (Art. 51 Abs. 1 lit. a BGG).';
+}
 const chf = (n: number) => n.toLocaleString('de-CH');
 
 // ── Hauptfunktion ────────────────────────────────────────────────────────────
@@ -227,7 +238,7 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
       zwischenergebnis: 'Angelegenheit des öffentlichen Rechts → Beschwerde in öffentlich-rechtlichen Angelegenheiten (Art. 82 lit. a BGG); Vorinstanzen sind das Bundesverwaltungsgericht und letzte kantonale obere Gerichte (Art. 86).',
       normen: [N('Art. 82 BGG'), N('Art. 86 BGG')],
     });
-    warnungen.push('Der AUSNAHMEKATALOG des Art. 83 BGG (u. a. Ausländer- und Asylsachen, ordentliche Einbürgerung, öffentliche Beschaffungen ohne Grundsatzfrage) ist hier NICHT abgebildet – vor dem Weiterzug prüfen, ob die Materie ausgenommen ist; ausgenommene Materien führen zur subsidiären Verfassungsbeschwerde (Art. 113 ff. BGG).');
+    warnungen.push('Der AUSNAHMEKATALOG des Art. 83 BGG (u. a. Ausländer- und Asylsachen, ordentliche Einbürgerung, öffentliche Beschaffungen ohne Grundsatzfrage) ist hier NICHT abgebildet – vor dem Weiterzug prüfen, ob die Materie ausgenommen ist; ausgenommene Materien führen bei KANTONALEN Vorinstanzen zur subsidiären Verfassungsbeschwerde (Art. 113 BGG) – gegen Entscheide des Bundesverwaltungsgerichts gibt es sie nicht.');
     normverweise.push(N('Art. 82 BGG'), N('Art. 83 BGG', 'Ausnahmekatalog – nicht abgebildet'));
   }
 
@@ -251,10 +262,10 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
     } else if (objekt === 'zwischen_anderer') {
       rechenweg.push({
         beschreibung: 'Anfechtungsobjekt',
-        zwischenergebnis: 'Anderer selbständig eröffneter Vor-/Zwischenentscheid: Beschwerde nur zulässig, wenn er einen nicht wieder gutzumachenden Nachteil bewirken kann ODER die Gutheissung sofort einen Endentscheid herbeiführen würde (Art. 93 Abs. 1 lit. a/b BGG) – sonst Anfechtung erst mit dem Endentscheid (Abs. 3).',
+        zwischenergebnis: 'Anderer selbständig eröffneter Vor-/Zwischenentscheid: Beschwerde nur zulässig, wenn er einen nicht wieder gutzumachenden Nachteil bewirken kann ODER die Gutheissung sofort einen Endentscheid herbeiführen UND damit einen bedeutenden Aufwand an Zeit oder Kosten für ein weitläufiges Beweisverfahren ersparen würde (Art. 93 Abs. 1 lit. a/b BGG) – sonst Anfechtung erst mit dem Endentscheid (Abs. 3).',
         normen: [N('Art. 93 BGG')],
       });
-      warnungen.push('Offene Rechtsfrage (Art. 93 Abs. 1 BGG): Droht ein nicht wieder gutzumachender Nachteil, oder führt die Gutheissung sofort einen Endentscheid herbei? Nur dann ist der Zwischenentscheid jetzt anfechtbar.');
+      warnungen.push('Offene Rechtsfrage (Art. 93 Abs. 1 BGG): Droht ein nicht wieder gutzumachender Nachteil, oder führt die Gutheissung sofort einen Endentscheid herbei UND erspart damit einen bedeutenden Aufwand für ein weitläufiges Beweisverfahren? Nur dann ist der Zwischenentscheid jetzt anfechtbar.');
       normverweise.push(N('Art. 93 BGG'));
     } else {
       rechenweg.push({
@@ -281,7 +292,7 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
       normverweise.push(N('Art. 74 BGG'));
     } else if (input.einzigeKantonaleInstanz) {
       zulaessigkeit = 'zulaessig_ausnahme';
-      zulText = 'StreitwertUNABHÄNGIG zulässig: Ein Bundesgesetz sieht eine einzige kantonale Instanz vor (Art. 74 Abs. 2 lit. b BGG; Art. 5/6/8 ZPO – Fachgericht/Handelsgericht/Direktklage, Art. 75 Abs. 2 BGG).';
+      zulText = 'StreitwertUNABHÄNGIG zulässig: Ein Bundesgesetz sieht eine einzige kantonale Instanz vor (Art. 74 Abs. 2 lit. b BGG; Art. 5/6/8 ZPO – für Handelsgericht und Direktklage nach gefestigter Praxis, Art. 75 Abs. 2 BGG).';
       normverweise.push(N('Art. 74 Abs. 2 BGG'), N('Art. 75 Abs. 2 BGG'));
     } else if (input.konkursNachlassrichter) {
       zulaessigkeit = 'zulaessig_ausnahme';
@@ -289,11 +300,11 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
       normverweise.push(N('Art. 74 Abs. 2 BGG'));
     } else if (gebiet === 'rechtsoeffnung' && sw !== null && sw < schwelle) {
       zulaessigkeit = 'schwelle_verfehlt';
-      zulText = `Streitwert CHF ${chf(sw)} unter der Grenze von CHF ${chf(schwelle)} (Art. 74 Abs. 1 lit. b BGG). Die Rechtsöffnung fällt unter KEINE der Streitwert-Ausnahmen des Abs. 2 (sie ist weder Aufsichts- noch Konkurseröffnungsentscheid) – offen bleiben die Rechtsfrage von grundsätzlicher Bedeutung (Abs. 2 lit. a, in der Beschwerde zu begründen, Art. 42 Abs. 2) oder die subsidiäre Verfassungsbeschwerde.`;
+      zulText = `Streitwert CHF ${chf(sw)} unter der Grenze von CHF ${chf(schwelle)} (Art. 74 Abs. 1 lit. b BGG). Die Rechtsöffnung fällt unter keine der KATEGORISCHEN Streitwert-Ausnahmen des Abs. 2 lit. b–e (sie ist weder Aufsichts- noch Konkurseröffnungsentscheid) – offen bleiben die Rechtsfrage von grundsätzlicher Bedeutung (Abs. 2 lit. a, in der Beschwerde zu begründen, Art. 42 Abs. 2) oder die subsidiäre Verfassungsbeschwerde.`;
       normverweise.push(N('Art. 74 BGG'), N('Art. 113 BGG'));
     } else if (sw === null) {
       zulaessigkeit = 'offen';
-      zulText = `Ohne bezifferten Streitwert nicht bestimmbar: Beschwerde in Zivilsachen ab CHF ${chf(schwelle)} (${mietArbeit ? 'arbeits-/mietrechtlicher Fall, Art. 74 Abs. 1 lit. a' : 'Art. 74 Abs. 1 lit. b'} BGG). Massgeblich sind die vor der Vorinstanz streitig GEBLIEBENEN Begehren (Art. 51 Abs. 1 lit. a BGG).`;
+      zulText = `Ohne bezifferten Streitwert nicht bestimmbar: Beschwerde in Zivilsachen ab CHF ${chf(schwelle)} (${mietArbeit ? 'arbeits-/mietrechtlicher Fall, Art. 74 Abs. 1 lit. a' : 'Art. 74 Abs. 1 lit. b'} BGG). ${sw51Satz(objekt)}`;
       normverweise.push(N('Art. 74 Abs. 1 BGG'), N('Art. 51 BGG'));
     } else if (sw >= schwelle) {
       zulaessigkeit = 'zulaessig';
@@ -307,7 +318,7 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
     rechenweg.push({ beschreibung: 'Zulässigkeit (Streitwert)', zwischenergebnis: zulText, normen: [N('Art. 74 BGG')] });
 
     if (vermoegensrechtlich) {
-      annahmen.push('Streitwert-Berechnung (Art. 51–53 BGG): massgeblich sind die vor der Vorinstanz streitig gebliebenen Begehren (Art. 51 Abs. 1 lit. a); Zinsen, Gerichtskosten und Parteientschädigungen als Nebenrechte zählen NICHT (Abs. 3); wiederkehrende Leistungen ungewisser Dauer mit dem 20-fachen Jahresbetrag (Abs. 4); Begehren derselben Partei werden zusammengerechnet (Art. 52), die Widerklage NICHT mit der Hauptklage (Art. 53 Abs. 1). Lautet ein Begehren nicht auf eine bestimmte Geldsumme, setzt das Bundesgericht den Streitwert nach Ermessen fest (Art. 51 Abs. 2) – das rechnet LexMetrik nicht.');
+      annahmen.push(`Streitwert-Berechnung (Art. 51–53 BGG): ${sw51Satz(objekt)} Zinsen, Gerichtskosten und Parteientschädigungen als Nebenrechte zählen NICHT (Abs. 3); wiederkehrende Leistungen ungewisser Dauer mit dem 20-fachen Jahresbetrag (Abs. 4); Begehren derselben Partei oder von Streitgenossen werden zusammengerechnet, sofern sie sich nicht gegenseitig ausschliessen (Art. 52); die Widerklage wird NICHT mit der Hauptklage zusammengerechnet (Art. 53 Abs. 1; Gegenausnahme bei sich ausschliessenden Klagen, Abs. 2). Lautet ein Begehren nicht auf eine bestimmte Geldsumme, setzt das Bundesgericht den Streitwert nach Ermessen fest (Art. 51 Abs. 2) – das rechnet LexMetrik nicht.`);
     }
 
     if (zulaessigkeit === 'schwelle_verfehlt') {
@@ -403,7 +414,7 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
 
   // ── Stufe E · konkretes Fristende (Art. 44/45) ────────────────────────────
   let fristende: BgerFristende | null = null;
-  if (fristTage !== null && input.eroeffnung && ISO.test(input.eroeffnung)) {
+  if (fristTage !== null && input.eroeffnung && istGueltigesISO(input.eroeffnung)) {
     const kanton = input.kanton ?? 'BS';
     if (!input.kanton) {
       annahmen.push('Kanton für die Feiertags-/Werktagsregel am Fristende: ohne Angabe wird BS angenommen (Art. 45 Abs. 2 BGG: massgebend ist das Recht des Kantons, in dem die Partei oder ihre Vertretung Wohnsitz oder Sitz hat).');
@@ -430,8 +441,8 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
     warnungen.push('KOGNITION: Gegen Entscheide über vorsorgliche Massnahmen kann nur die Verletzung VERFASSUNGSMÄSSIGER Rechte gerügt werden (Art. 98 BGG).');
     normverweise.push(N('Art. 98 BGG'));
   }
-  annahmen.push('Vor Bundesgericht gilt das Novenverbot: Neue Tatsachen und Beweismittel nur, soweit erst der angefochtene Entscheid dazu Anlass gibt; neue Begehren sind unzulässig (Art. 99 BGG). Die Beschwerde hat in der Regel KEINE aufschiebende Wirkung (Art. 103 Abs. 1 BGG; von Gesetzes wegen nur bei Gestaltungsurteilen in Zivilsachen bzw. unbedingten Freiheitsstrafen, Abs. 2).');
-  annahmen.push('Formelles (Art. 42 BGG): Begehren, Begründung (inwiefern der Entscheid Recht verletzt) und Unterschrift; wird die Zulässigkeit auf eine Rechtsfrage von grundsätzlicher Bedeutung gestützt, ist dies besonders zu begründen (Abs. 2).');
+  annahmen.push('Vor Bundesgericht gilt das Novenverbot: Neue Tatsachen und Beweismittel nur, soweit erst der angefochtene Entscheid dazu Anlass gibt; neue Begehren sind unzulässig (Art. 99 BGG). Die Beschwerde hat in der Regel KEINE aufschiebende Wirkung (Art. 103 Abs. 1 BGG); von Gesetzes wegen besteht sie nur bei Gestaltungsurteilen in Zivilsachen, bei unbedingten Freiheitsstrafen und freiheitsentziehenden Massnahmen sowie in Verfahren der internationalen Rechtshilfe in Strafsachen und der internationalen Amtshilfe in Steuersachen (Abs. 2 lit. a–d).');
+  annahmen.push('Formelles (Art. 42 BGG): Begehren, deren Begründung mit Angabe der Beweismittel (inwiefern der Entscheid Recht verletzt) und Unterschrift; wird die Zulässigkeit auf eine Rechtsfrage von grundsätzlicher Bedeutung gestützt, ist dies besonders zu begründen (Abs. 2).');
 
   // ── Verdikt ───────────────────────────────────────────────────────────────
   const fristKurz = fristTage === null ? 'jederzeit (Art. 100 Abs. 7 BGG)' : `${fristTage} Tage${stillstand ? ' mit Stillstand' : ' OHNE Stillstand'}`;

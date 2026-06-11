@@ -3,7 +3,7 @@ import type { VorlageSchema, Antworten, Baustein } from './engine';
 import { assemble } from './engine';
 import { fmtDatum, fmtCHF, zahl } from './datum';
 import { parseISO, addDays } from 'date-fns';
-import { formatDatum } from '../datumsUtils';
+import { formatDatum, istGueltigesISO } from '../datumsUtils';
 import {
   type KdgBasisAntworten, KDG_BASIS_DEFAULTS, kdgBasisAbgeleitet,
   kdgDatumzeile, kdgSchluss,
@@ -68,12 +68,12 @@ export const MA_DEFAULTS: MaAntworten = {
   vertragBezeichnung: '', leistungBeschrieb: '', nachfristTage: 10,
 };
 
-const ISO = /^\d{4}-\d{2}-\d{2}$/;
-
 /** Verfalltag (Art. 102 Abs. 2 OR): Zins läuft ab dem FOLGETAG — reine
  *  Datums-Addition wie in lib/verzugszins.ts (ersterZinstag), keine Engine. */
 export function maZinsAbFolgetag(verfalltagISO: string): string | null {
-  if (!ISO.test(verfalltagISO)) return null;
+  // istGueltigesISO statt Format-Regex: '2026-02-30' aus alten Speicherständen
+  // crashte sonst formatDatum beim Rendern (Bug-Check NIEDRIG-1, 11.6.2026).
+  if (!istGueltigesISO(verfalltagISO)) return null;
   return formatDatum(addDays(parseISO(verfalltagISO), 1));
 }
 
@@ -101,9 +101,20 @@ export function pruefeMaGates(a: MaAntworten): MaGateErgebnis {
     if (a.mahngebuehrErfassen && !a.mahngebuehrVertraglich) {
       warnungen.push(
         'Mahngebühren sind OHNE vertragliche Grundlage nicht geschuldet – von Gesetzes wegen '
-        + 'besteht nur der Anspruch auf Verzugszins (Art. 104 OR). Der Brief nimmt die Gebühr '
-        + 'deshalb nicht auf; bestätigen Sie die vertragliche Grundlage, wenn eine besteht.',
+        + 'bestehen nur Verzugszins (Art. 104 OR) und allfälliger NACHGEWIESENER Verspätungs- '
+        + 'bzw. Mehrschaden (Art. 103/106 OR); eine pauschale Gebühr deckt das nicht. Der Brief '
+        + 'nimmt die Gebühr deshalb nicht auf; bestätigen Sie die vertragliche Grundlage, wenn eine besteht.',
       );
+    }
+    if (a.zinsVertraglich) {
+      const satz = Number(String(a.zinssatzProzent).replace(/['\s]/g, '').replace(',', '.'));
+      if (!Number.isFinite(satz) || satz <= 5) {
+        warnungen.push(
+          'Der vertragliche Verzugszins-Baustein setzt einen Satz ÜBER 5 % voraus (Art. 104 Abs. 2 OR '
+          + 'erfasst nur HÖHERE vertragliche Zinsen) – bei 5 % oder weniger das Feld deaktivieren; '
+          + 'es gilt der gesetzliche Satz (Abs. 1).',
+        );
+      }
     }
     hinweise.push(
       'Der Brief erklärt den Verzugseintritt ab ZUGANG ausdrücklich. Ohne diese Klarstellung '
@@ -128,9 +139,9 @@ export function pruefeMaGates(a: MaAntworten): MaGateErgebnis {
       + 'spätere Erklärung nicht.',
     );
     hinweise.push(
-      'In drei Fällen ist die Nachfrist entbehrlich (Art. 108 OR): wenn sie sich als nutzlos '
-      + 'erweisen würde, wenn die Leistung durch den Verzug für Sie nutzlos geworden ist oder '
-      + 'beim Fixgeschäft.',
+      'In drei Fällen ist die Nachfrist entbehrlich (Art. 108 OR): wenn aus dem Verhalten des '
+      + 'Schuldners hervorgeht, dass sie sich als unnütz erweisen würde; wenn die Leistung durch '
+      + 'den Verzug für Sie nutzlos geworden ist; oder beim Fixgeschäft.',
     );
   }
 
@@ -229,7 +240,7 @@ export const MA_SCHEMA: VorlageSchema = {
 
     // ── Variante Nachfrist (Art. 107 OR) ────────────────────────────────────
     { id: 'MA_nf_leistung',
-      text: 'Aus {{vertragBezeichnung}} schulden Sie mir die folgende Leistung: {{leistungBeschrieb}}. Diese Leistung ist fällig{{faelligSeitSatz}} und bis heute nicht erbracht.',
+      text: 'Aus {{vertragBezeichnung}} schulden Sie mir die folgende Leistung: {{leistungBeschrieb}}. Diese Leistung ist fällig{{nfSeitSatz}} und bis heute nicht erbracht.',
       includeIf: { feld: 'variante', eq: 'nachfrist' },
       begruendung: 'Bestimmte Bezeichnung der geschuldeten Leistung aus dem zweiseitigen Vertrag.' },
     { id: 'MA_nf_nachfrist',
@@ -260,8 +271,11 @@ export function maZusammenstellen(a: MaAntworten) {
     ...kdgBasisAbgeleitet(a),
     betragFmt: zahl(a.betrag) !== null ? fmtCHF(a.betrag) : a.betrag,
     mahngebuehrFmt: zahl(a.mahngebuehr) !== null ? fmtCHF(a.mahngebuehr) : a.mahngebuehr,
-    faelligSeitSatz: ISO.test(a.faelligSeit) ? `, fällig seit dem ${fmtDatum(a.faelligSeit)}` : '',
-    verfalltagFmt: fmtDatum(a.verfalltag),
+    faelligSeitSatz: istGueltigesISO(a.faelligSeit) ? `, fällig seit dem ${fmtDatum(a.faelligSeit)}` : '',
+    // Nachfrist-Baustein sagt schon «ist fällig» – eigenes Fragment gegen die
+    // Wort-Doppelung «fällig, fällig seit» (Bug-Check NIEDRIG-2, 11.6.2026).
+    nfSeitSatz: istGueltigesISO(a.faelligSeit) ? ` (seit dem ${fmtDatum(a.faelligSeit)})` : '',
+    verfalltagFmt: istGueltigesISO(a.verfalltag) ? fmtDatum(a.verfalltag) : '________',
     // Verfalltag: Zins seit dem Folgetag (Art. 102 Abs. 2 OR; gleiche Regel
     // wie lib/verzugszins.ts ersterZinstag) – sonst ohne Datumszusatz.
     zinsSeitSatz: zinsAb ? `, somit seit dem ${zinsAb}` : '',

@@ -938,7 +938,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                 className="text-brass-700 underline">
                 BGer-Rechner (vorbefüllt)
               </Link>
-              {' '}— Rechtsgebiet, Streitwert und Konstellation reisen mit; nur noch die Eröffnung des Entscheids eintragen.
+              {' '}— Rechtsgebiet, Streitwert und Konstellation reisen mit; nur noch die Eröffnung des Entscheids eintragen.{f.rmObjekt === 'zwischenentscheid' ? ' Betrifft der Zwischenentscheid Zuständigkeit oder Ausstand, im Rechner das Objekt auf Art. 92 umstellen (sofortige Anfechtung zwingend).' : ''}
             </p>
           </div>
 

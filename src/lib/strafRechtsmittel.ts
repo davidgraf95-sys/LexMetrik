@@ -82,7 +82,7 @@ const BGER_HINWEIS = {
     'auswirken kann (Abs. 1 lit. b Ziff. 5); die Staatsanwaltschaft nicht bei Haftentscheiden (Ziff. 3). ' +
     'Gegen Entscheide der BStGer-BESCHWERDEKAMMER nur bei Zwangsmassnahmen (Art. 79 BGG). ' +
     'Vor- und Zwischenentscheide nur unter den Voraussetzungen der Art. 92/93 BGG. ' +
-    'Der BGG-Fristenstillstand (Art. 46 BGG) gilt — NICHT aber in Haftsachen (Art. 46 Abs. 2 BGG). ' +
+    'Der BGG-Fristenstillstand (Art. 46 BGG) gilt — NICHT aber in Haftsachen (nach der Praxis als Verfahren betreffend vorsorgliche Massnahmen, Art. 46 Abs. 2 lit. a BGG). ' +
     'Es entscheiden zwei strafrechtliche Abteilungen (seit 1.2.2026): materielle Straf-/Zivilfragen die Erste, ' +
     'strafprozessuale Zwischen-/Endentscheide und der Vollzug die Zweite (Art. 35/35a BGerR).',
   normen: [N('Art. 78 BGG'), N('Art. 79 BGG'), N('Art. 80 BGG'), N('Art. 81 BGG'), N('Art. 100 Abs. 1 BGG')],
