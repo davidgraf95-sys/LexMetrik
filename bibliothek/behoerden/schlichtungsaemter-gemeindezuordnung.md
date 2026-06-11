@@ -888,3 +888,182 @@ wörtlich am amtlichen Erlass/so.ch (11.6.2026); Abnahme David ausstehend.
 | Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Zwischbergen) | Simplonstrasse 34 | 3907 Gondo | Zwischbergen | https://www.zwischbergen.ch |
 
 **Pflegebedarf:** Gemeindeverwaltungs-Adressen wandern bei Fusionen/Umzügen (Sonderfall Blatten c/o Wiler seit Bergsturz 28.5.2025 — bei Wiederaufbau prüfen); jährlicher Behörden-Durchgang. **Abnahme-Status:** Erstrecherche, alle 122 an der amtlichen Gemeinde-Website erhoben (11.6.2026); Abnahme David ausstehend.
+
+## 41. VD-MIETE — 10 Commissions préfectorales de conciliation (eine je District, bei der Préfecture)
+
+Quelle: vd.ch Préfectures-Sammelseite + alle 10 Préfecture-Detailseiten einzeln (11.6.2026); District-Kongruenz amtlich («une commission … dans chaque district»). Spalte 4 = BFS-Districts (präfixfrei; Join im Generator). Besonderheit: Antenne Château-d’Oex der Préfecture Riviera; amtliche Postfach-PLZ-Formen («Morges 1», «Nyon 2», «Renens 1») übernommen.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Commission préfectorale de conciliation (Préfecture d'Aigle) | Place du Marché 2 | 1860 Aigle | Aigle | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/aigle |
+| Commission préfectorale de conciliation (Préfecture de la Broye-Vully) | Rue du Temple 6, Case postale 336 | 1530 Payerne | Broye-Vully | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/broye-vully |
+| Commission préfectorale de conciliation (Préfecture du Gros-de-Vaud) | Place Emile Gardaz 8 | 1040 Echallens | Gros-de-Vaud | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/gros-de-vaud |
+| Commission préfectorale de conciliation (Préfecture du Jura-Nord vaudois) | Rue des Moulins 10, Case postale | 1401 Yverdon-les-Bains | Jura-Nord vaudois | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/jura-nord-vaudois |
+| Commission préfectorale de conciliation (Préfecture de Lausanne) | Place du Château 1 | 1014 Lausanne | Lausanne | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/lausanne |
+| Commission préfectorale de conciliation (Préfecture de Lavaux-Oron) | Chemin de Versailles 6 | 1096 Cully | Lavaux-Oron | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/lavaux-oron |
+| Commission préfectorale de conciliation (Préfecture de Morges) | Place Saint-Louis 4 | 1110 Morges 1 | Morges | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/morges |
+| Commission préfectorale de conciliation (Préfecture de Nyon) | Rue Juste-Olivier 8, Case postale | 1260 Nyon 2 | Nyon | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/nyon |
+| Commission préfectorale de conciliation (Préfecture de l'Ouest lausannois) | Rue de Verdeaux 2, Case postale 285 | 1020 Renens 1 | Ouest lausannois | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/ouest-lausannois |
+| Commission préfectorale de conciliation (Préfecture de la Riviera-Pays-d'Enhaut) | Rue du Simplon 22 | 1800 Vevey | Riviera-Pays-d'Enhaut | https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/riviera-pays-denhaut |
+
+## 42. FR-MIETE — DREI Schlichtungskommissionen Miete/Pacht (Bezirks-Gruppen — Korrektur zur 5.6.-Annahme «je Bezirk»)
+
+Quelle: fr.ch Justizseite + Staatskalender-Detailseiten (11.6.2026). NICHT je Bezirk und nicht zentral: Saane (CCBSA) · Sense+See (CCBSL, Sitz Tafers nur Postfach) · Süd-Bezirke Greyerz/Glane/Broye/Vivisbach (CCBSUD, Romont). Spalte 4 = BFS-Bezirke (mehrere je Zeile, präfixfrei normalisiert; Join im Generator). Artikel-Nr. im RSF 130.1 nicht maschinell zitierbar — OFFEN.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Commission de conciliation en matière de bail à loyer du district de la Sarine (CCBSA) | Grand-Rue 27 | 1700 Fribourg | La Sarine | https://www.fr.ch/cha/app/gescom_com/OTAxLTE1MjY |
+| Commission de conciliation en matière de bail à loyer des districts de la Singine et du Lac (CCBSL) / Mietschlichtungskommission Sense und See | Case postale 96 | 1712 Tafers | Sense, See / Lac | https://www.fr.ch/cha/app/gescom_com/OTAxLTE1Mjc |
+| Commission de conciliation en matière de bail à loyer des districts du Sud (CCBSUD) | Rue des Moines 58, Case postale 160 | 1680 Romont | La Gruyère, La Glâne, La Broye, La Veveyse | https://www.fr.ch/cha/app/gescom_com/OTAxLTE1Mjg |
+
+## 43. GR-MIETE — 11 Schlichtungsbehörden für Mietsachen (je Region)
+
+Quelle: justiz-gr.ch Mietsachen-Seite, führt selbst alle 11 Adressen (Roh-HTML wörtlich, 11.6.2026). WICHTIG: Mietsachen-Adressen ≠ Regionalgerichts-Adressen (Imboden/Plessur/Prättigau-Davos abweichend; Imboden + Prättigau/Davos nur Postfach) — massgeblich ist die Mietsachen-Sammelseite. Spalte 4 = BFS-Regionen (Join im Generator).
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Schlichtungsbehörde Mietsachen Albula | Stradung 26 | 7450 Tiefencastel | Albula | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Bernina | Via da la Pesa 8 | 7742 Poschiavo | Bernina | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Engiadina Bassa/Val Müstair | Saglina 22 | 7554 Sent | Engiadina Bassa / Val Müstair | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Imboden | Postfach 308 | 7001 Chur | Imboden | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Landquart | Bahnhofplatz 2b, Postfach 244 | 7302 Landquart | Landquart | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Maloja | Plazza da Scuola 16 | 7500 St. Moritz | Maloja | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Moesa | Centro regionale dei servizi, Al Giardinètt 2 | 6535 Roveredo | Moesa | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Plessur | Bärenloch 1, Postfach 290 | 7001 Chur | Plessur | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Prättigau/Davos | Postfach 125 | 7250 Klosters | Prättigau / Davos | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Surselva | Via Centrala 4 | 7130 Ilanz/Glion | Surselva | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+| Schlichtungsbehörde Mietsachen Viamala | Rathaus, Untere Gasse 1 | 7430 Thusis | Viamala | https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/ |
+
+## 44. SZ-MIETE — 6 Bezirks-Schlichtungsbehörden Miete/Pacht
+
+Quelle: sz.ch-Verzeichnis + 6 amtliche Bezirksseiten einzeln (11.6.2026). Höfe ohne Strasse (nur Postfach 43, Pfäffikon); Küssnacht ohne Postfach-Nr.; ein unbelegtes «Postfach 59» Gersau bewusst weggelassen. Spalte 4 = BFS-Bezirke (Join im Generator).
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Schlichtungsbehörde im Mietwesen Bezirk Einsiedeln | Paracelsuspark 3, Postfach 161 | 8840 Einsiedeln | Einsiedeln | https://www.einsiedeln.ch/justiz/schlichtungsbehoerde-im-mietwesen |
+| Schlichtungsbehörde im Mietwesen Bezirk Gersau | c/o Bezirksverwaltung, Ausserdorfstrasse 7 | 6442 Gersau | Gersau | https://www.gersau.ch/topics/behoerden-politik/justiz-gericht/schlichtungsbehoerde-im-mietwesen |
+| Schlichtungsbehörde im Mietwesen Höfe | Postfach 43 | 8808 Pfäffikon | Höfe | https://www.hoefe.ch/de/judikative/mietschlichtung/ |
+| Schlichtungsbehörde in Mietsachen des Bezirks Küssnacht | Breitfeld 15 | 6403 Küssnacht | Küssnacht (SZ) | https://www.kuessnacht.ch/justiz/schlichtungsbehoerde-in-mietsachen.html/262 |
+| Schlichtungsbehörde in Mietsachen Bezirk March (Sekretariat) | Rathausplatz 1, Postfach 531 | 8853 Lachen | March | https://www.bezirk-march.ch/behoerden/4644 |
+| Schlichtungsbehörde im Mietwesen Bezirk Schwyz | Bahnhofstrasse 4, Postfach 547 | 6431 Schwyz | Schwyz | https://bezirk-schwyz.ch/schlichtungsbehoerde-im-mietwesen/ |
+
+## 45. AG-MIETE — 11 Schlichtungsbehörden für Miete und Pacht (je Bezirk)
+
+Quelle: ag.ch «Schlichtungsbehörden nach Bezirken» (publiziert 1.4.2026, Abruf 11.6.2026) + Behördenverzeichnis-Detailseiten. Kongruenz mit den 11 BFS-Bezirken bestätigt. Spalte 4 = BFS-Bezirke (Join im Generator).
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Aarau | Obere Vorstadt 37, Postfach | 5001 Aarau | Aarau | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/GKA-Bezirk-Aarau |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Baden | Rütistrasse 3 | 5400 Baden | Baden | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/GKA-Bezirk-Baden |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Bremgarten | Rathausplatz 1, Postfach | 5620 Bremgarten | Bremgarten | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/Bezirk-Bremgarten |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Brugg | Untere Hofstatt 4 | 5200 Brugg | Brugg | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/GKA-Bezirk-Brugg |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Kulm | Bezirksgebäude, Zentrumsplatz 3, Postfach | 5726 Unterkulm | Kulm | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/GKA-Bezirk-Kulm |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Laufenburg | Gerichtsgasse 85 | 5080 Laufenburg | Laufenburg | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/GKA-Bezirk-Laufenburg |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Lenzburg | Malagarain 2 | 5600 Lenzburg | Lenzburg | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/GKA-Bezirk-Lenzburg |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Muri | Seetalstrasse 8 | 5630 Muri | Muri | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/Bezirk-Muri |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Rheinfelden | Hermann Keller-Strasse 6 | 4310 Rheinfelden | Rheinfelden | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/GKA-Bezirk-Rheinfelden |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Zofingen | Bahnhofplatz/Untere Grabenstrasse 30 | 4800 Zofingen | Zofingen | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/GKA-Bezirk-Zofingen |
+| Schlichtungsbehörde für Miete und Pacht Bezirk Zurzach | Hauptstrasse 50 | 5330 Bad Zurzach | Zurzach | https://www.ag.ch/de/ueber-uns/kontakt/behoerdenverzeichnis?rewriteRemoteUrl=/organisations/Bezirk-Zurzach |
+
+## 46. SG-MIETE — 7 Schlichtungsstellen für Miet- und Pachtverhältnisse (Gerichtskreise)
+
+Quelle: sg.ch (Stand 15.4.2026) + Gerichtsgesetz sGS 941.1 Art. 3 (PDF). Gerichtskreis = Wahlkreis, ABER Werdenberg+Sarganserland zusammengelegt (8 Wahlkreise → 7 Stellen). Spalte 4 = BFS-Wahlkreise (mit Präfix «Wahlkreis», mehrere je Zeile möglich; Join im Generator). Nur eine Sammel-Detailseite für alle 7.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Schlichtungsstelle für Miet- und Pachtverhältnisse St.Gallen | Wohnungsamt, Rathaus | 9001 St.Gallen | Wahlkreis St. Gallen | https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html |
+| Schlichtungsstelle für Miet- und Pachtverhältnisse Rorschach | Hauptstrasse 29 | 9401 Rorschach | Wahlkreis Rorschach | https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html |
+| Schlichtungsstelle für Miet- und Pachtverhältnisse Rheintal | Rathausplatz 2 | 9450 Altstätten | Wahlkreis Rheintal | https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html |
+| Schlichtungsstelle für Miet- und Pachtverhältnisse Werdenberg-Sarganserland | St. Gallerstrasse 2 | 9471 Buchs SG | Wahlkreis Werdenberg, Wahlkreis Sarganserland | https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html |
+| Schlichtungsstelle für Miet- und Pachtverhältnisse See-Gaster | St.Gallerstrasse 40 | 8645 Jona | Wahlkreis See-Gaster | https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html |
+| Schlichtungsstelle für Miet- und Pachtverhältnisse Toggenburg | Grundbuchamt, Grüenaustrasse 7 | 9630 Wattwil | Wahlkreis Toggenburg | https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html |
+| Schlichtungsstelle für Miet- und Pachtverhältnisse Wil | Marktgasse 58 | 9500 Wil | Wahlkreis Wil | https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html |
+
+## 47. TG-MIETE — 80 kommunale Schlichtungsbehörden in Mietsachen (TG-Sonderfall, je politische Gemeinde)
+
+Quelle: amtliche Liste erechtsverkehr.tg.ch/7980 (Abruf 11.6.2026; führt KEINE Adressen) + alle 80 verlinkten tg.ch-Kontaktseiten maschinell (Rate-Limit-Backoff). 80/80 mit Adresse, 1:1 gegen BFS validiert. 49/80 mit Sitz bei fremder/geteilter Verwaltung (z. B. Ermatingen → geführt bei Kreuzlingen; Sammelsekretariate). Defekter amtlicher ERV-Link Zihlschlacht-Sitterdorf (CMS-Staging) + Quell-Tippfehler dokumentiert. Spalte 4 = Gemeinde direkt.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Schlichtungsbehörde in Mietsachen Amriswil | Postfach | 8580 Amriswil | Amriswil | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/amriswil.html/192 |
+| Schlichtungsbehörde in Mietsachen Arbon | Hauptstrasse 12 | 9320 Arbon | Arbon | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/arbon.html/193 |
+| Schlichtungsbehörde in Mietsachen Dozwil | Bahnhofsstrasse 19 | 8590 Romanshorn | Dozwil | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/dozwil.html/203 |
+| Schlichtungsbehörde in Mietsachen Egnach | Bahnhofstrasse 81 | 9315 Neukirch-Egnach | Egnach | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/egnach.html/204 |
+| Schlichtungsbehörde in Mietsachen Hefenhofen | Auenhof Aegelsee 10 | 8580 Hefenhofen | Hefenhofen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/hefenhofen.html/215 |
+| Schlichtungsbehörde in Mietsachen Horn | Tübacherstrasse 11 | 9326 Horn | Horn | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/horn.html/219 |
+| Schlichtungsbehörde in Mietsachen Kesswil | Bahnhofsstrasse 19 | 8590 Romanshorn | Kesswil | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/kesswil.html/223 |
+| Schlichtungsbehörde in Mietsachen Roggwil | St. Gallerstrasse 64 | 9325 Roggwil | Roggwil | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Roggwil.html/237 |
+| Schlichtungsbehörde in Mietsachen Romanshorn | Bahnhofstrasse 19 | 8590 Romanshorn | Romanshorn | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Romanshorn.html/238 |
+| Schlichtungsbehörde in Mietsachen Salmsach | Bahnhofstrasse 81 | 9315 Neukirch-Egnach | Salmsach | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Salmsach.html/240 |
+| Schlichtungsbehörde in Mietsachen Sommeri | Hauptstrasse 33 | 8580 Sommeri | Sommeri | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Sommeri.html/244 |
+| Schlichtungsbehörde in Mietsachen Uttwil | Postfach 53 | 8592 Uttwil | Uttwil | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Uttwil.html/250 |
+| Schlichtungsbehörde in Mietsachen Basadingen-Schlattingen | Hintergasse 49 | 8253 Diessenhofen | Basadingen-Schlattingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/basadingen-schlatingen.html/194 |
+| Schlichtungsbehörde in Miet- und Pachtsachen | Seestrasse 123 | 8266 Steckborn | Berlingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/berlingen.html/196 |
+| Schlichtungsbehörde in Mietsachen Diessenhofen | Hintergasse 49 | 8253 Diessenhofen | Diessenhofen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/diessenhofen.html/202 |
+| Schlichtungsbehörde in Miet- und Pachtsachen | Seestrasse 123 | 8266 Steckborn | Eschenz | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/eschenz.html/207 |
+| Schlichtungsbehörde in Mietsachen Felben-Wellhausen | Hauptstrasse 52 | 8553 Hüttlingen | Felben-Wellhaussen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/felben-wllhausen.html/209 |
+| Schlichtungsbehörde in Mietsachen Frauenfeld | Postfach | 8501 Frauenfeld | Frauenfeld | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/frauenfeld.html/210 |
+| Schlichtungsbehörden in Mietsachen Gachnang | Hauptstrasse 52 | 8553 Hüttlingen | Gachnang | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/gachnang.html/211 |
+| Schlichtungsbehörde in Mietsachen Herdern | Hauptstrasse 52 | 8553 Hüttlingen | Herdern | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/herdern.html/216 |
+| Schlichtungsbehörde in Mietsachen Homburg | Hauptstrasse 52 | 8553 Hüttlingen | Homburg | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/homburg.html/218 |
+| Schlichtungsbehörde in Mietsachen Hüttlingen | Hauptstrasse 52 | 8553 Hüttlingen | Hüttlingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/huettlingen.html/220 |
+| Schlichtungsbehörde in Mietsachen Hüttwilen | Hauptstrasse 52 | 8553 Hüttlingen | Hüttwilen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/huettwilen.html/221 |
+| Schlichtungsbehörde in Miet- und Pachtsachen | Seestrasse 123 | 8266 Steckborn | Mammern | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Mammern.html/228 |
+| Schlichtungsbehörde für Mietsachen der Gemeinde Matzingen | Altholzstrasse 7 | 9548 Matzingen | Matzingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Matzingen.html/230 |
+| Schlichtungsbehörde in Mietsachen Müllheim | Hauptstrasse 52 | 8553 Hüttlingen | Müllheim | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Muellheim.html/231 |
+| Schlichtungsbehörde in Mietsachen Neunforn | Hauptstrasse 52 | 8553 Hüttlingen | Neunforn | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Neunforn.html/233 |
+| Schlichtungsbehörde in Mietsachen Pfyn | Hauptstrasse 52 | 8553 Hüttlingen | Pfyn | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Pfyn.html/234 |
+| Schlichtungsbehörde in Mietsachen Schlatt | Hintergasse 49 | 8253 Diessenhofen | Schlatt | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Schlatt.html/241 |
+| Schlichtungsbehörde in Miet- und Pachtsachen | Seestrasse 123 | 8266 Steckborn | Steckborn | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Steckborn.html/245 |
+| Schlichtungsbehörde in Mietsachen Stettfurt | Wilerstrasse 3 | 9545 Wängi | Stettfurt | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Stettfurt.html/634 |
+| Schlichtungsbehörde in Mietsachen Thundorf | Altholzstrasse 3 | 9548 Matzingen | Thundorf | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Thundorf.html/248 |
+| Schlichtungsbehörde in Mietsachen Uesslingen-Buch | Hauptstrasse 52 | 8553 Hüttlingen | Uesslingen-Buch | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Uesslingen-Buch.html/249 |
+| Schlichtungsbehörde in Miet- und Pachtsachen | Seestrasse 123 | 8266 Steckborn | Wagenhausen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Wagenhausen.html/251 |
+| Schlichtungsbehörde in Mietsachen Warth-Weiningen | Hauptstrasse 52 | 8553 Hüttlingen | Warth-Weiningen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Warth-Weinigen.html/253 |
+| Schichtungsbehörde in Mietsachen Altnau | Scherzingerstrasse 2 | 8595 Altnau | Altnau | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/altnau.html/190 |
+| Schlichtungsbehörde in Mietsachen Bottighofen | Postfach 86 | 8598 Bottighofen | Bottighofen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/bottighofen.html/199 |
+| Schlichtungsbehörde in Mietsachen Kreuzlingen | Marktstrasse 4 | 8280 Kreuzlingen | Ermatingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/ermatingen.html/206 |
+| Schlichtungsbehörde in Mietsachen Kreuzlingen | Marktstrasse 4 | 8280 Kreuzlingen | Gottlieben | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/gottlieben.html/212 |
+| Schlichtungsbehörde in Mietsachen Güttingen | Klosterstrasse 4 | 8596 Münsterlingen | Güttingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/guettingen.html/213 |
+| Schlichtungsbehörde in Mietsachen Kemmental | Postfach | 8570 Weinfelden | Kemmental | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/kemmental.html/222 |
+| Schlichtungsbehörde in Mietsachen Kreuzlingen | Marktstrasse 4 | 8280 Kreuzlingen | Kreuzlingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/kreuzlingen.html/225 |
+| Schlichtungsbehörde in Mietsachen Langrickenbach | Klosterstrasse 4 | 8596 Münsterlingen | Langrickenbach | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/langrickenbach.html/226 |
+| Schlichtungsbehörde in Mietsachen Lengwil | Klosterstrasse 4 | 8596 Münsterlingen | Lengwil | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/lengwil.html/227 |
+| Schlichtungsbehörde in Mietsachen Münsterlingen | Kloserstrasse 4 | 8596 Münsterlingen | Münsterlingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Muensterlingen.html/232 |
+| Schlichtungsbehörde in Mietsachen Kreuzlingen | Marktstrasse 4 | 8280 Kreuzlingen | Raperswilen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Raperswilen.html/235 |
+| Schlichtungsbehörde in Mietsachen Salenstein | Eugensbergstrasse 2 | 8268 Salenstein | Salenstein | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/salenstein.html/239 |
+| Schlichtungsbehörde in Mietsachen Tägerwilen | Postfach 141 | 8274 Tägerwilen | Tägerwilen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Taegerwilen.html/247 |
+| Schlichtungsbehörde in Mietsachen Kreuzlingen | Marktstrasse 4 | 8280 Kreuzlingen | Wäldi | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/waeldi.html/252 |
+| Schlichtungsbehörde in Mietsachen Aadorf | Gemeindeplatz 1 | 8355 Aadorf | Aadorf | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/aadorf.html/187 |
+| Schlichtungsbehörde in Mietsachen Bettwiesen | Wilerstrasse 3 | 9545 Wängi | Bettwiesen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/bettwiesen.html/180 |
+| Schlichtungsbehörde in Mietsachen Bichelsee-Balterswil | Wiesenstrasse 3 | 8360 Eschlikon | Bichelsee-Balterswil | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/bichelsee-balterswil.html/182 |
+| Schlichtungsbehörde in Mietsachen Braunau | Wilerstrasse 3 | 9545 Wängi | Braunau | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/braunau.html/183 |
+| Schlichtungsbehörde in Mietsachen Eschlikon | Wiesenstrasse 3 | 8360 Eschlikon | Eschlikon | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/eschlikon.html/208 |
+| Schlichtungsbehörde in Mietsachen Fischingen | Wiesenstrasse 3 | 8360 Eschlikon | Fischingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/fischingen.html/188 |
+| Schlichtungsbehörde in Mietsachen Lommis | Wilerstrasse 3 | 9545 Wängi | Lommis | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Lommis.html/184 |
+| Schlichtungsbehörde in Mietsachen Münchwilen und Sirnach | Kirchplatz 5 | 8370 Sirnach | Münchwilen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Muenchwilen.html/185 |
+| Schlichtungsbehöre in Mietsachen Rickenbach b. Wil | Wilenstrasse 41 | 9532 Rickenbach | Rickenbach | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Rickenbach.html/236 |
+| Schlichtungsbehörde in Mietsachen Sirnach udn Münchwilen | Kirchplatz 5 | 8370 Sirnach | Sirnach | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Sirnach.html/243 |
+| Schlichtungsbehörde in Mietsachen Tobel-Tägerschen | Wilerstrasser 3 | 9545 Wängi | Tobel-Tägerschen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Tobel-Taegerschen.html/186 |
+| Schlichtungsbehörde in Mietsachen Wängi | Steinlerstrasse 2 | 9545 Wängi | Wängi | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/waengi.html/181 |
+| Schlichtungsbehörde in Mietsachen Wilen | Hubstrasse 1 | 9535 Wilen | Wilen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Wilen.html/256 |
+| Schlichtungsbehörde in Mietsachen Affeltrangen | Wilerstrasse 3 | 9545 Wängi | Affeltrangen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/affeltrangen.html/189 |
+| Schlichtungsstelle in Mietsachen Amlikon-Bissegg | Postfach | 8570 Weinfelden | Amlikon-Bissegg | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/amlikon-bissegg.html/191 |
+| Schlichtungsbehörde in Mietsachen Berg | Postfach | 8570 Weinfelden | Berg | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/berg.html/195 |
+| Schlichtungsbehörde für Mietsachen Birwinken | Frauenfelderstrasse 8 | 8570 Weinfelden | Birwinken | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/birwinken.html/197 |
+| Schlichtungsbehörde in Mietsachen Bischofszell | Bahnhofstrasse 5 | 9220 Bischofszell | Bischofszell | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/bischofszell.html/198 |
+| Schlichtungsbehörde in Mietsachen Bürglen | Postfach | 8570 Weinfelden | Bürglen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/buerglen.html/200 |
+| Schlichtungsbehörde in Mietsachen Bussnang | Postfach | 8570 Weinfelden | Bussnang | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/bussnang.html/201 |
+| Schlichtungsbehörde in Mietsachen Erlen | Thurbruggstrasse 11a | 9215 Kradolf-Schönenberg | Erlen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/erlen.html/205 |
+| Schlichtungsbehörde in Mietsachen Hauptwil-Gottshaus | Oberdorfstrasse 3 | 9213 Hauptwil | Hauptwil-Gottshaus | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/hauptwil-gottshaus.html/214 |
+| Schlichtungsbehörde in Mietsachen Hohentannen | Bahnhofstrasse 5 | 9220 Bischofszell | Hohentannen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/hohentannen.html/217 |
+| Schlichtungsbehörde in Mietsachen Kradolf-Schönenberg | Thurbruggstrasse 11a | 9215 Kradolf-Schönenberg | Kradolf-Schönenberg | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/kradolf-schoenenberg.html/224 |
+| Schlichtungsbehörde in Mietsachen Märstetten | Postfach | 8570 Weinfelden | Märstetten | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Maerstetten.html/229 |
+| Schlichtungsbehörde in Mietsachen Schönholzerswilen | Postfach | 8570 Weinfelden | Schönholzerswilen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Schoenholzerswilen.html/242 |
+| Schlichtungsbehörde in Mietsachen Sulgen | Thurbruggstrasse 11a | 9215 Kradolf-Schönenberg | Sulgen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Sulgen.html/246 |
+| Schlichtungsbehörde in Mietsachen Weinfelden | Postfach | 8570 Weinfelden | Weinfelden | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Weinfelden.html/254 |
+| Schlichtungsbehörde in Mietsachen Wigoltingen | Postfach | 8570 Weinfelden | Wigoltingen | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Wigoltingen.html/255 |
+| Schlichtungsbehörde in Mietsachen Wuppenau | Postfach | 8570 Weinfelden | Wuppenau | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Wuppenau.html/257 |
+| Schlichtungsbehörde in Mietsachen Zihlschlacht-Sitterdorf | Bernhauserstrasse 5 | 8588 Zihlschlacht | Zihlschlacht-Sitterdorf | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Ziehlschlacht-Sitterdorf.html/258 |
+
+**Pflegebedarf (alle Miete-Register):** jährlicher BWO-/Behörden-Durchgang; TG-Sammelsekretariate fluktuieren. **Abnahme-Status:** Erstrecherche an amtlichen Quellen (11.6.2026), Abnahme David ausstehend.

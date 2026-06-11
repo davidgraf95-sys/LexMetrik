@@ -32,7 +32,7 @@ import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
-import { amtFuer, AMT_KANTONE, vdAmtFuer, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
+import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { tiKandidaten } from '../../data/schlichtung/tiAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
@@ -267,9 +267,21 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   // weiteren Gemeinde-Zuordnungen). Stadt Zürich: sechs Kreis-Ämter.
   // VD: stufengerechte Instanz (JdP/TA/Chambre) statt pauschalem Amt.
   const [amt, setAmt] = useState<SchlichtungsAmt | null>(null);
+  // Miete-Register (Vollerhebung 11.6.2026): paritätische Miet-Stelle der
+  // Gemeinde — eigener Lookup, Anzeige nur im paritaetisch_miete-Zweig.
+  const [mieteAmt, setMieteAmt] = useState<SchlichtungsAmt | null>(null);
   const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
   useEffect(() => {
     let aktiv = true;
+    const ladeMiete = async (): Promise<SchlichtungsAmt | null> => {
+      const kanton = f.kanton;
+      const gemeinde = f.gemeinde.trim();
+      if (kanton === '' || !MIETE_AMT_KANTONE.includes(kanton) || gemeinde === '') return null;
+      return mieteAmtFuer(kanton, gemeinde);
+    };
+    ladeMiete()
+      .then((m) => { if (aktiv) setMieteAmt(m); })
+      .catch(() => { if (aktiv) setMieteAmt(null); });
     const lade = async (): Promise<{ amt: SchlichtungsAmt | null; kreise: ZhKreisAmt[] | null }> => {
       const kanton = f.kanton;
       const gemeinde = f.gemeinde.trim();
@@ -1205,7 +1217,18 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               )}
               {recherche.aufloesung.modus === 'verzeichnis' && (() => {
                 const amtAufloesbar = f.kanton !== '' && AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'ordentlich';
+                const mieteAufloesbar = f.kanton !== '' && MIETE_AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'paritaetisch_miete';
                 return <>
+                  {/* Miete-Register (11.6.2026): konkrete paritätische Stelle
+                      aus PLZ/Gemeinde (Art. 200 Abs. 1 ZPO). */}
+                  {mieteAufloesbar && mieteAmt && (
+                    <div>
+                      <p className="text-body-s text-ink-900 whitespace-pre-line">
+                        {[mieteAmt.name, mieteAmt.strasse, mieteAmt.plzOrt].filter(Boolean).join('\n')}
+                      </p>
+                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + Miete-Register, Vollerhebung 11.6.2026).</p>
+                    </div>
+                  )}
                   {/* SO-Weiche (§ 5 Abs. 1 GO SO, 11.6.2026) */}
                   {f.kanton === 'SO' && r.schlichtung.behoerdeTyp === 'ordentlich' && (
                     <div className="space-y-1.5">
@@ -1245,7 +1268,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       </ul>
                     </div>
                   )}
-                  {!(amtAufloesbar && (amt || zhKreise)) && (
+                  {!(amtAufloesbar && (amt || zhKreise)) && !(mieteAufloesbar && mieteAmt) && (
                     <p className="text-body-s text-ink-800">
                       {recherche.aufloesung.beschreibung}.{' '}
                       {/* VD ohne Streitwert-Stufe: die PLZ-Auflösung ist hier

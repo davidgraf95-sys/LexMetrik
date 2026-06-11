@@ -102,10 +102,14 @@ const kantonsDaten: Record<string, { aemter: Amt[]; gemeinden: Record<string, nu
 let aktuellerKanton: string | null = null;
 for (const z of zuordnungMd.split('\n')) {
   // Teil 1: «## 1. Aargau — …» · Teil 2: «## 1. FR — Freiburg: …»
-  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR|LU|AR|NE|BE|VD|TI|SO|VS)\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
+  // Miete-Register (11.6.2026): Sektionen «## N. XX-MIETE — …» landen unter
+  // dem Schlüssel XX_MIETE (paritätische Miet-Stellen, Art. 200 Abs. 1 ZPO)
+  // — getrennt vom ordentlichen Register desselben Kantons.
+  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR|LU|AR|NE|BE|VD|TI|SO|VS)(-MIETE)?\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
   if (kopfTreffer) {
-    aktuellerKanton = kopfTreffer[1]
-      ?? ({ Aargau: 'AG', 'St. Gallen': 'SG', 'St.Gallen': 'SG', Thurgau: 'TG' }[kopfTreffer[2] ?? ''] ?? null);
+    const basis = kopfTreffer[1]
+      ?? ({ Aargau: 'AG', 'St. Gallen': 'SG', 'St.Gallen': 'SG', Thurgau: 'TG' }[kopfTreffer[3] ?? ''] ?? null);
+    aktuellerKanton = basis ? `${basis}${kopfTreffer[2] ? '_MIETE' : ''}` : null;
     if (aktuellerKanton && !kantonsDaten[aktuellerKanton]) kantonsDaten[aktuellerKanton] = { aemter: [], gemeinden: {} };
     continue;
   }
@@ -283,6 +287,49 @@ if (kantonsDaten.VD) {
     }
   }
   kantonsDaten.VD.gemeinden = neuVD;
+}
+// Miete-Register: generischer BFS-Level-2-Join (11.6.2026). Spalte 4 der
+// XX-MIETE-Sektionen trägt Level-2-Namen (Bezirke/Districts/Regionen/
+// Wahlkreise), je Zeile auch mehrere (kommagetrennt). Beidseitige
+// Kanonisierung: Präfixe und franz. Artikel je «/»-Teil abwerfen,
+// Apostroph U+2019→ASCII, Leerraum um «/» entfernen. SG_MIETE deckt
+// Werdenberg+Sarganserland mit EINER Stelle; TG_MIETE führt Gemeinden
+// direkt (kein Join).
+{
+  const kanonL2 = (roh: string) => roh.replace(/’/g, "'").split('/').map((teil) =>
+    teil.trim()
+      .replace(/^(?:Bezirk|Region|Wahlkreis|District|Arrondissement administratif)\s+/i, '')
+      .replace(/^(?:de la |de l'|du |de |d'|la |le |les |l')/i, '')
+      .trim(),
+  ).join('/');
+  const MIETE_JOINS: [string, string][] = [
+    ['VD_MIETE', 'VD'], ['FR_MIETE', 'FR'], ['GR_MIETE', 'GR'],
+    ['SZ_MIETE', 'SZ'], ['AG_MIETE', 'AG'], ['SG_MIETE', 'SG'],
+  ];
+  const bfsM = readFileSync('/tmp/bfs_gemeinden.csv', 'utf-8').replace(/^\uFEFF/, '').split('\n').map((z) => z.split(','));
+  const kopfM = bfsM[0];
+  const ixM = (n: string) => kopfM.indexOf(n);
+  const byHistM = new Map(bfsM.slice(1).map((r) => [r[ixM('HistoricalCode')], r]));
+  for (const [sk, kt] of MIETE_JOINS) {
+    const d = kantonsDaten[sk];
+    if (!d) continue;
+    const l2Name = new Map<string, string>();
+    for (const r of bfsM.slice(1)) {
+      if (r[ixM('Level')] === '2' && byHistM.get(r[ixM('Parent')])?.[ixM('ShortName')] === kt && !r[ixM('ValidTo')]) {
+        l2Name.set(r[ixM('HistoricalCode')], kanonL2(r[ixM('Name')]));
+      }
+    }
+    const tokenZuIdx = new Map<string, number>();
+    for (const [token, i] of Object.entries(d.gemeinden)) tokenZuIdx.set(kanonL2(token), i);
+    const neu: Record<string, number> = {};
+    for (const r of bfsM.slice(1)) {
+      if (r[ixM('Level')] === '3' && l2Name.has(r[ixM('Parent')]) && !r[ixM('ValidTo')]) {
+        const idx = tokenZuIdx.get(l2Name.get(r[ixM('Parent')])!);
+        if (idx !== undefined) neu[r[ixM('Name')]] = idx;
+      }
+    }
+    d.gemeinden = neu;
+  }
 }
 writeFileSync('src/data/schlichtung/aemterKantone.json', JSON.stringify(kantonsDaten));
 console.log('Nachbearbeitung:', Object.entries(kantonsDaten).map(([k, d]) => `${k}=${d.aemter.length}Ä/${Object.keys(d.gemeinden).length}G`).join(' · '));

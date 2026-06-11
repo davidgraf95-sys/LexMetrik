@@ -176,9 +176,9 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Uri (Miete/Pacht)', 'Bahnhofstrasse 43', '6460 Altdorf', 'ganzer Kanton', undefined, 'https://www.ur.ch/aemter/1586') },
   },
   SZ: {
-    stand: '5.6.2026', quelle: 'sz.ch/vermittleraemter (amtliche Karte) — Zusammenlegungen laufend',
+    stand: '11.6.2026', quelle: 'Miete-Register 11.6.2026 · sz.ch/vermittleraemter (amtliche Karte) — Zusammenlegungen laufend',
     ordentlich: { modus: 'verzeichnis', beschreibung: 'Vermittlerämter der Gemeinden/Bezirke (mehrere Zusammenlegungen, z. B. Höfe seit 2020; Vollliste amtlich nur als Karte)', url: 'https://www.sz.ch/behoerden/justiz/vermittleraemter.html/8756-8758-8801-12287' },
-    miete: { modus: 'verzeichnis', beschreibung: 'sechs Bezirks-Schlichtungsstellen für Miete/Pacht (überwiegend Postfach-Adressen)', url: 'https://www.sz.ch/verwaltung/volkswirtschaftsdepartement/departementssekretariat/miete-und-pacht/schlichtungsbehoerden.html/8756-8758-8802-10373-10393-10887-10888' },
+    miete: { modus: 'verzeichnis', beschreibung: 'sechs Bezirks-Schlichtungsstellen für Miete/Pacht — PLZ/Gemeinde eingeben für die konkrete Stelle (Register 11.6.2026; teils Postfach)', url: 'https://www.sz.ch/verwaltung/volkswirtschaftsdepartement/departementssekretariat/miete-und-pacht/schlichtungsbehoerden.html/8756-8758-8802-10373-10393-10887-10888' },
   },
   OW: {
     stand: '5.6.2026', quelle: 'ow.ch/gerichte · BWO 13.2.2026 (2. Durchgang: Enetriederstrasse bestätigt)',
@@ -208,9 +208,9 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'zentral', stelle: A('Schlichtungsbehörde Miet- und Pachtrecht', 'Baarerstrasse 131', '6300 Zug', 'ganzer Kanton', 'PLZ amtlich 6300 (Postfach-Zeile 6301)', 'https://zg.ch/de/recht-justiz/zivilverfahren/schlichtung/mietschlichtungsverfahren') },
   },
   FR: {
-    stand: '5.6.2026', quelle: 'fr.ch (Friedensgerichte/Mietkommissionen)',
+    stand: '11.6.2026', quelle: 'Miete-Register 11.6.2026 · fr.ch (Friedensgerichte/Mietkommissionen)',
     ordentlich: { modus: 'verzeichnis', beschreibung: 'sieben Friedensgerichte (justices de paix) als Schlichtungsbehörde — je Bezirk', url: 'https://www.fr.ch/de/staat-und-recht/justiz/gerichtsbehoerden-friedensgerichte' },
-    miete: { modus: 'verzeichnis', beschreibung: 'Schlichtungskommissionen für Miete/Pacht (je Bezirk)', url: 'https://www.fr.ch/de/staat-und-recht/justiz/gerichtsbehoerden-friedensgerichte' },
+    miete: { modus: 'verzeichnis', beschreibung: 'DREI Schlichtungskommissionen Miete/Pacht (Saane · Sense+See · Süd-Bezirke — Korrektur 11.6.2026, nicht je Bezirk); PLZ/Gemeinde eingeben für die konkrete Stelle', url: 'https://www.fr.ch/de/staat-und-recht/justiz/gerichtsbehoerden-friedensgerichte' },
   },
   SO: {
     // Weiche § 5/§ 10 GO SO verdrahtet 11.6.2026 (soOrdentlich; AGP-Auto-
@@ -283,12 +283,12 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'zentral', stelle: A('Schlichtungsstelle für Mietverhältnisse (Sekretariat)', 'c/o Ratskanzlei, Marktgasse 2', '9050 Appenzell', 'beide Landesteile') },
   },
   SG: {
-    stand: '5.6.2026', quelle: 'sg.ch (Vermittlungsämter/Mietschlichtung) — 2. Durchgang: alle Adressen bestätigt',
+    stand: '11.6.2026', quelle: 'Miete-Register 11.6.2026 · sg.ch (Vermittlungsämter/Mietschlichtung) — 2. Durchgang: alle Adressen bestätigt',
     ordentlich: { modus: 'verzeichnis', beschreibung: 'zehn Vermittlungsämter (je Vermittlungskreis)', url: 'https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/vermittlungsaemter.html' },
-    miete: { modus: 'verzeichnis', beschreibung: 'sieben Schlichtungsstellen für Miet- und Pachtverhältnisse', url: 'https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html' },
+    miete: { modus: 'verzeichnis', beschreibung: 'sieben Schlichtungsstellen für Miet- und Pachtverhältnisse (Gerichtskreise; Werdenberg+Sarganserland zusammengelegt) — PLZ/Gemeinde eingeben für die konkrete Stelle (Register 11.6.2026)', url: 'https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstellen-fuer-miet--und-pachtverhaeltnisse.html' },
   },
   GR: {
-    stand: '5.6.2026', quelle: 'justiz-gr.ch (Vermittlerämter/Mietsachen) — 11/11 bestätigt',
+    stand: '11.6.2026', quelle: 'Miete-Register 11.6.2026 · justiz-gr.ch (Vermittlerämter/Mietsachen) — 11/11 bestätigt',
     // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026):
     // kantonale Verzeichnisseite der Vermittlerämter (keine Stellen-Detailseiten belegt)
     url: 'https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/vermittleraemter/',
@@ -308,17 +308,17 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
         A('Vermittleramt Moesa', 'Al Giardinètt 2', '6535 Roveredo', 'Region Moesa'),
       ],
     },
-    miete: { modus: 'verzeichnis', beschreibung: 'Schlichtungsbehörden für Mietsachen je Region (beim Regionalgericht)', url: 'https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/' },
+    miete: { modus: 'verzeichnis', beschreibung: 'Schlichtungsbehörden für Mietsachen je Region — PLZ/Gemeinde eingeben (Register 11.6.2026; Adressen der Mietsachen-Sammelseite, teils abweichend vom Regionalgericht)', url: 'https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/mietsachen/' },
   },
   AG: {
-    stand: '5.6.2026', quelle: 'ag.ch (Friedensrichterkreise/Mietschlichtung nach Bezirken)',
+    stand: '11.6.2026', quelle: 'Miete-Register 11.6.2026 · ag.ch (Friedensrichterkreise/Mietschlichtung nach Bezirken)',
     ordentlich: { modus: 'verzeichnis', beschreibung: '17 Friedensrichterkreise (Auflösung nach Gemeinde)', url: 'https://www.ag.ch/de/gerichte/schlichtungsbehoerden/friedensrichterinnen-und-friedensrichter/friedensrichterkreise' },
-    miete: { modus: 'verzeichnis', beschreibung: '11 Schlichtungsbehörden für Miete und Pacht (je Bezirk)', url: 'https://www.ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/schlichtungsbehoerden/schlichtungsbehoerden-fuer-miete-und-pacht' },
+    miete: { modus: 'verzeichnis', beschreibung: '11 Schlichtungsbehörden für Miete und Pacht (je Bezirk) — PLZ/Gemeinde eingeben für die konkrete Stelle (Register 11.6.2026)', url: 'https://www.ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/schlichtungsbehoerden/schlichtungsbehoerden-fuer-miete-und-pacht' },
   },
   TG: {
-    stand: '5.6.2026', quelle: 'friedensrichteraemter.tg.ch · erechtsverkehr.tg.ch (Miete kommunal)',
+    stand: '11.6.2026', quelle: 'Miete-Register 11.6.2026 · friedensrichteraemter.tg.ch · erechtsverkehr.tg.ch (Miete kommunal)',
     ordentlich: { modus: 'verzeichnis', beschreibung: 'fünf Friedensrichterämter (je Bezirk: Arbon, Frauenfeld, Kreuzlingen, Münchwilen, Weinfelden)', url: 'https://friedensrichteraemter.tg.ch' },
-    miete: { modus: 'verzeichnis', beschreibung: 'kommunale Schlichtungsbehörden in Mietsachen (je politische Gemeinde — TG-Sonderfall)', url: 'https://erechtsverkehr.tg.ch/schlichtungsbehoerden-in-mietsachen.html/7980' },
+    miete: { modus: 'verzeichnis', beschreibung: 'kommunale Schlichtungsbehörden in Mietsachen (je politische Gemeinde — TG-Sonderfall; 80/80 erhoben) — PLZ/Gemeinde eingeben für die konkrete Stelle (Register 11.6.2026)', url: 'https://erechtsverkehr.tg.ch/schlichtungsbehoerden-in-mietsachen.html/7980' },
   },
   TI: {
     stand: '11.6.2026', quelle: 'ti.ch (amtliche Località-Suche giudici di pace, 169/169 abgefragt; locazione — 11 Uffici, Schiedsrichter-Entscheid inkl. Chiasso, Stand 5.6.2026)',
@@ -372,7 +372,7 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
         A('Justice de paix Jura-Nord vaudois/Gros-de-Vaud', 'Rue des Moulins 10, Case postale', '1401 Yverdon-les-Bains', 'JNV + Gros-de-Vaud', undefined, 'https://www.vd.ch/ojv/justices-de-paix/jura-nord-vaudois-et-gros-de-vaud'),
       ],
     },
-    miete: { modus: 'verzeichnis', beschreibung: '10 Commissions préfectorales de conciliation (eine je District)', url: 'https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/prestations-des-prefectures/commissions-prefectorales-de-conciliation' },
+    miete: { modus: 'verzeichnis', beschreibung: '10 Commissions préfectorales de conciliation (eine je District) — PLZ/Gemeinde eingeben für die konkrete Stelle (Register 11.6.2026)', url: 'https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/prestations-des-prefectures/commissions-prefectorales-de-conciliation' },
   },
   VS: {
     // Einzelerhebung aller 122 Gemeindeverwaltungs-Adressen 11.6.2026

@@ -16,7 +16,7 @@ describe('Schlichtungsstellen — Vollständigkeit & Integrität', () => {
       // (Località-Vollerhebung), SO (§ 5/§ 10-GO-Weiche) und NE (Miete
       // paritätisch, OJN) neu verifiziert — übrige Kantone bleiben am
       // Recherche-Stand 5.6.2026 festgenagelt.
-      expect(e.stand, k).toBe(['VD', 'TI', 'SO', 'NE', 'VS'].includes(k) ? '11.6.2026' : '5.6.2026');
+      expect(e.stand, k).toBe(['VD', 'TI', 'SO', 'NE', 'VS', 'FR', 'GR', 'SZ', 'AG', 'SG', 'TG'].includes(k) ? '11.6.2026' : '5.6.2026');
       expect(['zentral', 'liste', 'verzeichnis']).toContain(e.ordentlich.modus);
     }
   });

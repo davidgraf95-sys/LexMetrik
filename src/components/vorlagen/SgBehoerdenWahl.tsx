@@ -4,7 +4,7 @@ import type { Kanton } from '../../types/legal';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
-import { amtFuer, AMT_KANTONE, vdAmtFuer } from '../../data/schlichtung/amtAufloesung';
+import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer } from '../../data/schlichtung/amtAufloesung';
 import { tiKandidaten } from '../../data/schlichtung/tiAmt';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
@@ -116,6 +116,12 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           }
         }
       }
+      // Miete-Register (Vollerhebung 11.6.2026): paritätische Stelle der
+      // Gemeinde (Art. 200 Abs. 1 ZPO) — eigener Lookup-Pfad.
+      if (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton) && g !== '') {
+        const m = await mieteAmtFuer(kanton, g);
+        return { amt: m ? [m.name, m.strasse, m.plzOrt].filter(Boolean) : null, amtUrl: m?.url, kreise: null, wahl };
+      }
       if (typ !== 'ordentlich' || !AMT_KANTONE.includes(kanton) || g === '') return { amt: null, kreise: null, wahl };
       if (kanton === 'ZH' && g.toLowerCase() === 'zürich') {
         return { amt: null, amtUrl: undefined, kreise: await zuerichKreisAemter(), wahl };
@@ -175,7 +181,10 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       // Bug-Check 10.6.2026 (NIEDRIG): amtZeilen sind ordentliche Ämter —
       // bei paritätischem Typ nie als Adressat melden (transienter Zustand
       // nach Typwechsel).
-      onAufgeloest(typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? a.url } : null);
+      // Miete-Register (11.6.2026): amtZeilen sind hier die paritätische
+      // Miet-Stelle des Registers — ebenfalls als Adressat melden.
+      const amtMeldbar = typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton));
+      onAufgeloest(amtMeldbar && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? a.url } : null);
     }
     // vdStufeKey in den Deps (Bug-Check 11.6.2026 HOCH): beim Stufenwechsel
     // JdP↔TA blieben modus ('liste') und wahlIdx identisch — der Effect
@@ -246,9 +255,9 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
               </div>
             </div>
           )}
-          {!paritaetisch && (
+          {(!paritaetisch || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Field label="PLZ (beklagte Partei / Sache)" hint="amtliches Ortschaftenverzeichnis">
+            <Field label={typ === 'paritaetisch_miete' ? 'PLZ (Mietobjekt)' : 'PLZ (beklagte Partei / Sache)'} hint="amtliches Ortschaftenverzeichnis">
               <input className={inputCls + ' num w-28'} inputMode="numeric" maxLength={4} value={plz}
                 onChange={(e) => setPlz(e.target.value.replace(/\D/g, '').slice(0, 4))} />
             </Field>
@@ -257,7 +266,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             </Field>
           </div>
           )}
-          {typ === 'ordentlich' && plzWahl && plzWahl.plz === plz && (
+          {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && plzWahl && plzWahl.plz === plz && (
             <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
           )}

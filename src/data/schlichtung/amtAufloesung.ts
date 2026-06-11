@@ -40,29 +40,46 @@ function kleinFuer(kanton: string, d: KantonsAemter): Map<string, number> {
  *  Einzelerhebung 11.6.2026; der Name der Stelle legt das offen). */
 export const AMT_KANTONE: readonly Kanton[] = ['ZH', 'AG', 'SG', 'TG', 'FR', 'ZG', 'AI', 'GR', 'LU', 'AR', 'NE', 'BL', 'SZ', 'BE', 'VD', 'TI', 'SO', 'VS'] as const;
 
-export async function amtFuer(kanton: Kanton, gemeinde: string): Promise<SchlichtungsAmt | null> {
+/** Gemeinsamer Register-Lookup (ordentlich = Schlüssel «XX», Miete =
+ *  «XX_MIETE»): deterministische Kandidatenliste + case-insensitiver
+ *  Zweitindex (PLZ-Audit-Fix 6.6.2026; siehe zhAmt.ts). */
+async function registerLookup(schluessel: string, kanton: Kanton, gemeinde: string): Promise<SchlichtungsAmt | null> {
   const g = gemeinde.trim();
   if (g === '') return null;
-  if (kanton === 'ZH') return zhFriedensrichterFuer(g);
   if (!cache) {
     cache = (await import('./aemterKantone.json')).default as unknown as Record<string, KantonsAemter>;
   }
-  const d = cache[kanton];
+  const d = cache[schluessel];
   if (!d) return null;
-  // PLZ-Audit-Fix 6.6.2026: erweiterte deterministische Kandidatenliste
-  // («St. »↔«St.», Langname→Kurzname, Suffix beidseitig) — siehe zhAmt.ts.
   const kandidaten = namensKandidaten(g, kanton);
   for (const k of kandidaten) {
     const idx = d.gemeinden[k];
     if (idx !== undefined) return d.aemter[idx];
   }
-  // Fallback case-insensitiv (gleiche Kandidatenreihenfolge, kleingeschrieben)
-  const klein = kleinFuer(kanton, d);
+  const klein = kleinFuer(schluessel, d);
   for (const k of kandidaten) {
     const idx = klein.get(k.toLowerCase());
     if (idx !== undefined) return d.aemter[idx];
   }
   return null;
+}
+
+export async function amtFuer(kanton: Kanton, gemeinde: string): Promise<SchlichtungsAmt | null> {
+  if (kanton === 'ZH') return zhFriedensrichterFuer(gemeinde.trim());
+  return registerLookup(kanton, kanton, gemeinde);
+}
+
+/** Kantone mit Gemeinde→MIET-Schlichtungsstelle-Auflösung (Art. 200 Abs. 1
+ *  ZPO; Register-Schlüssel «XX_MIETE», Vollerhebung 11.6.2026 — Dossier
+ *  §§41–47): VD 10 Commissions préfectorales · FR 3 Bezirks-Gruppen ·
+ *  GR 11 je Region · SZ 6 Bezirke · AG 11 Bezirke · SG 7 Gerichtskreise ·
+ *  TG 80 kommunale (1:1). */
+export const MIETE_AMT_KANTONE: readonly Kanton[] = ['VD', 'FR', 'GR', 'SZ', 'AG', 'SG', 'TG'] as const;
+
+/** Paritätische Miet-Schlichtungsstelle für eine Gemeinde — null, wenn der
+ *  Kanton kein Miete-Register hat (dann Liste/zentral/Verzeichnis). */
+export async function mieteAmtFuer(kanton: Kanton, gemeinde: string): Promise<SchlichtungsAmt | null> {
+  return registerLookup(`${kanton}_MIETE`, kanton, gemeinde);
 }
 
 /** VD: Gemeinde + Streitwert-Stufe → konkrete Schlichtungsinstanz
