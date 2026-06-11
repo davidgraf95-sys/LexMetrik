@@ -552,7 +552,7 @@ Jura-Nord vaudois (Sitz Yverdon-les-Bains).
 
 Generator-Muster wie BE: Spalte 4 trägt die **Districts** (BFS-Level-2-
 Namen ohne Präfix «District de/du/d'/de la/de l'»); `plz-generieren.ts`
-löst sie über den BFS-Snapshot (/tmp/bfs_gemeinden.csv, agvchapp 1.6.2026)
+löst sie über den BFS-Snapshot (agvchapp.bfs.admin.ch, Stand 1.6.2026)
 in die 300 VD-Gemeinden auf. Die Justice de paix «Jura-Nord vaudois et
 Gros-de-Vaud» deckt amtlich ZWEI Districts (vd.ch/ojv).
 
@@ -587,3 +587,93 @@ Parameter (LOJV-Revisionen beobachten, kein fixes Verfallsdatum);
 TA-Adressen wie übrige Behördenadressen jährlich mit dem BWO-Durchgang.
 **Abnahme-Status:** Normlage + Adressen Erstrecherche wörtlich am amtlichen
 Erlass (11.6.2026); fachliche Abnahme durch David ausstehend.
+
+## 38. TI — Giudicature di pace je Circolo (38 Circoli) — VERDRAHTET 11.6.2026 (amtliche Online-Suche)
+
+**Quelle + Stand:** Amtliche Località-Suche der Giudici-di-pace-Seite
+(www4.ti.ch, TYPO3-Endpunkt id=29221), Vollerhebung am 11.6.2026: die
+Suche führt 175 Località-Optionen (169 distinkte Namen — einzelne Namen
+doppelt mit eigener ID), alle distinkten Namen einzeln abgefragt; die
+Abdeckung ALLER 100 BFS-Gemeinden ist im Test `tiSchlichtung.test.ts`
+verankert. Gemeinde→Circolo-Zuordnung und Adressen stammen aus den
+Antworten (Abkürzungen wie «CP» als «Casella postale» ausgeschrieben;
+URL-Spalte = amtlicher Deep-Link der Suche je Circolo). Rechtsgrundlage:
+Art. 28 f. LOG (RL 177.100) i. V. m. RL 180.100.
+
+**Korrekturen gegenüber der Vollerfassung vom 5.6.2026** (dort Abschnitt
+1a — esecuzioni-piu-basiert, jetzt überholt):
+1. Die Circoli **Ticino** und **Giubiasco** existieren in der amtlichen
+   Suche NICHT mehr — sämtliche Ex-Gemeinden (Monte Carasso, Sementina,
+   Giubiasco, Camorino, Gudo, Pianezzo, S. Antonio …) antworten mit dem
+   **Circolo di Bellinzona**. Die 38 ergeben sich heute also OHNE die
+   alte Übergangs-Dreiteilung des Distretto Bellinzona.
+2. Die Unsicherheit «Sitz Bellinzona vs. Giubiasco» ist amtlich geklärt:
+   «Sede principale e invio corrispondenza: Piazza Grande 3,
+   6512 Giubiasco; Sede secondaria: Via Lavizzari 14, 6500 Bellinzona».
+3. Mehrere Sitz-Adressen sind gegenüber 5.6. amtlich anders: Capriasca
+   neu Vaglio (nicht Tesserete) · Gambarogno neu Magadino (nicht
+   S. Nazzaro) · Maggia neu Lodano · Olivone neu Torre · Sessa neu
+   Banco · Giornico Nr. 13 · Lugano Est Strada di Pregassona 33 ·
+   Verzasca Postanschrift Casella Postale 4, 6516 Cugnasco (Sitz
+   Lavertezzo). Lugano Nord nennt amtlich keine PLZ — 6968 Sonvico
+   ergänzt aus dem swisstopo-Ortschaftenverzeichnis.
+4. Kantonale Datenlücken: die Località-Optionen Ambrì, Pianezzo,
+   S. Antonio und Torre liefern einen LEEREN Circolo-Namen (Platzhalter
+   ohne Giudice) — ihre Gemeinden (Quinto, Bellinzona, Blenio) sind über
+   die Gemeinde-Option selbst eindeutig aufgelöst.
+5. Onsernone und Breno (Alto Malcantone) führen amtlich KEINE
+   Strassenadresse (nur PLZ/Ort) — ehrlich leer gelassen.
+
+**Drei Gemeinden liegen in MEHREREN Circoli** (Fusionen über
+Circolo-Grenzen; NICHT in der Generator-Tabelle — die UI bietet die
+Ortsteil-Wahl an, Daten in `src/data/schlichtung/tiAmt.ts`):
+
+- Lugano → Lugano Ovest (Zentrum, Barbengo, Besso, Breganzona, Carabbia, Carona, Figino, Loreto, Molino Nuovo, Pambio-Noranco, Pazzallo) · Lugano Est (Aldesago, Brè, Caprino, Cassarate, Castagnola, Cureggia, Gandria, Pregassona, Viganello) · Lugano Nord (Bogno, Cadro, Certara, Cimadera, Davesco-Soragno, Sonvico, Valcolla, Villa Luganese)
+- Lema → Sessa (Astano, Bedigliora) · Magliasina (Curio) · Breno (Miglieglia, Novaggio)
+- Tresa → Sessa (Croglio, Monteggio, Sessa) · Magliasina (Ponte Tresa)
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Giudicatura di pace del Circolo di Acquarossa | Casa comunale, Via Bosco Ciossera 9 | 6716 Acquarossa | Acquarossa | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1185&bTrova=Trova |
+| Giudicatura di pace del Circolo di Agno | Piazza Colonnello Vicari 1 | 6982 Agno | Agno, Bioggio, Cademario, Muzzano, Vernate | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1044&bTrova=Trova |
+| Giudicatura di pace del Circolo di Airolo | Municipio | 6780 Airolo | Airolo, Bedretto | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1176&bTrova=Trova |
+| Giudicatura di pace del Circolo di Arbedo-Castione | Via Centro Civico 7 | 6517 Arbedo-Castione | Arbedo-Castione, Lumino | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1166&bTrova=Trova |
+| Giudicatura di pace del Circolo di Balerna | Via San Gottardo 90, Casella postale 137 | 6828 Balerna | Balerna, Castel San Pietro, Chiasso, Morbio Inferiore | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1001&bTrova=Trova |
+| Giudicatura di pace del Circolo di Bellinzona | Piazza Grande 3 | 6512 Giubiasco | Bellinzona | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1164&bTrova=Trova |
+| Giudicatura di pace del Circolo di Breno |  | 6937 Alto Malcantone | Alto Malcantone, Aranno | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1046&bTrova=Trova |
+| Giudicatura di pace del Circolo di Caneggio | Casella postale 91 | 6833 Vacallo | Breggia, Vacallo | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1032&bTrova=Trova |
+| Giudicatura di pace del Circolo di Capriasca | Via della Pieve 46 | 6947 Vaglio | Capriasca, Origlio, Ponte Capriasca | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1518&bTrova=Trova |
+| Giudicatura di pace del Circolo di Ceresio | Palazzo Comunale | 6817 Maroggia | Arogno, Bissone, Brusino Arsizio, Val Mara | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1025&bTrova=Trova |
+| Giudicatura di pace del Circolo di Faido | Casa Comunale, Piazza Frascini | 6760 Faido | Faido | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1192&bTrova=Trova |
+| Giudicatura di pace del Circolo di Gambarogno | Via Orgnana 7 | 6573 Magadino | Gambarogno | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1399&bTrova=Trova |
+| Giudicatura di pace del Circolo di Giornico | Via Fond la Tera 13 | 6745 Giornico | Giornico, Personico, Pollegio | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1180&bTrova=Trova |
+| Giudicatura di pace del Circolo di Isole | Via Bartolomeo Papio 10 | 6612 Ascona | Ascona, Brissago, Losone, Ronco sopra Ascona | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1122&bTrova=Trova |
+| Giudicatura di pace del Circolo di Lavizzara | Palazzo Giudicatura | 6695 Lavizzara | Lavizzara | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1144&bTrova=Trova |
+| Giudicatura di pace del Circolo di Locarno | Via Trevani 1a, Casella postale 831 | 6600 Locarno | Locarno, Muralto, Orselina | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1106&bTrova=Trova |
+| Giudicatura di pace del Circolo di Lugano Est | Strada di Pregassona 33 | 6963 Pregassona |  | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1538&bTrova=Trova |
+| Giudicatura di pace del Circolo di Lugano Nord | Piazza Gránda | 6968 Sonvico |  | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1340&bTrova=Trova |
+| Giudicatura di pace del Circolo di Lugano Ovest | Via Carducci 4 | 6901 Lugano |  | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1418&bTrova=Trova |
+| Giudicatura di pace del Circolo di Maggia | Palazzo Comunale | 6678 Lodano | Avegno Gordevio, Maggia | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1478&bTrova=Trova |
+| Giudicatura di pace del Circolo di Magliasina | Palazzo scolastico, Via Baragia 34 | 6987 Caslano | Caslano, Magliaso, Neggio, Pura | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1074&bTrova=Trova |
+| Giudicatura di pace del Circolo di Malvaglia | Casella postale 205 | 6713 Malvaglia | Serravalle | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1519&bTrova=Trova |
+| Giudicatura di pace del Circolo di Melezza | Piazza Intragna 1, Casella postale | 6653 Verscio | Centovalli, Terre di Pedemonte | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1558&bTrova=Trova |
+| Giudicatura di pace del Circolo di Mendrisio | Palazzo Municipale, Piazza Municipio | 6850 Mendrisio | Coldrerio, Mendrisio | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1005&bTrova=Trova |
+| Giudicatura di pace del Circolo di Navegna | Via S. Gottardo 80 | 6648 Minusio | Brione sopra Minusio, Gordola, Mergoscia, Minusio, Tenero-Contra | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1140&bTrova=Trova |
+| Giudicatura di pace del Circolo di Olivone | Via Chiesa Santo Stefano 17 | 6717 Torre | Blenio | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1217&bTrova=Trova |
+| Giudicatura di pace del Circolo di Onsernone |  | 6662 Onsernone | Onsernone | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1110&bTrova=Trova |
+| Giudicatura di pace del Circolo di Paradiso | Palazzo Comunale, Via delle Scuole 23 | 6900 Paradiso | Collina d'Oro, Grancia, Melide, Morcote, Paradiso, Vico Morcote | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1065&bTrova=Trova |
+| Giudicatura di pace del Circolo di Quinto | c/o Scuole Medie | 6775 Ambrì | Dalpe, Quinto | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1191&bTrova=Trova |
+| Giudicatura di pace del Circolo di Riva San Vitale | Via Opera don Guanella | 6826 Riva San Vitale | Riva San Vitale | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1024&bTrova=Trova |
+| Giudicatura di pace del Circolo di Riviera | Palazzo Patriziale, Via A. Tognola 1 | 6710 Biasca | Biasca, Riviera | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1175&bTrova=Trova |
+| Giudicatura di pace del Circolo di Rovana | Pretorio | 6675 Cevio | Bosco/Gurin, Campo (Vallemaggia), Cerentino, Cevio, Linescio | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1132&bTrova=Trova |
+| Giudicatura di pace del Circolo di Sant'Antonino | Via Serrai 10, Casella postale | 6592 S. Antonino | Cadenazzo, Isone, Sant'Antonino | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1165&bTrova=Trova |
+| Giudicatura di pace del Circolo di Sessa | Casella postale 10 | 6981 Banco |  | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1438&bTrova=Trova |
+| Giudicatura di pace del Circolo di Stabio | Casa Yvette, Via Arca 40, Casella postale 633 | 6855 Stabio | Novazzano, Stabio | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1026&bTrova=Trova |
+| Giudicatura di pace del Circolo di Taverne | Casa Comunale | 6808 Torricella-Taverne | Bedano, Gravesano, Manno, Mezzovico-Vira, Monteceneri, Torricella-Taverne | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1063&bTrova=Trova |
+| Giudicatura di pace del Circolo di Verzasca | Casella Postale 4 | 6516 Cugnasco | Cugnasco-Gerra, Lavertezzo, Verzasca | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1136&bTrova=Trova |
+| Giudicatura di pace del Circolo di Vezia | Via Daldini 13 | 6943 Vezia | Cadempino, Canobbio, Comano, Cureglia, Lamone, Massagno, Porza, Savosa, Sorengo, Vezia | https://www4.ti.ch/index.php?id=29221&user_pgiudiziario_pi4%5Bbox%5D=1099&bTrova=Trova |
+**Pflegebedarf:** Giudici/Supplenti sind personengebunden (Amtsperioden)
+— Adressen beim jährlichen Behörden-Durchgang gegen die ti.ch-Suche
+prüfen; die vier kantonalen Datenlücken-Località gelegentlich neu
+abfragen. **Abnahme-Status:** Erstrecherche vollerhoben an der amtlichen
+Quelle (169/169 Località, 11.6.2026); fachliche Abnahme David ausstehend.

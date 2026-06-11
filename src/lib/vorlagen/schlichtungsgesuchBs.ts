@@ -250,6 +250,12 @@ export function parteiVollstaendig(p: SgPartei): boolean {
     : !!(p.firma.trim() && p.sitzStrasse.trim() && /^\d{4}$/.test(p.sitzPlz) && p.sitzOrt.trim());
 }
 
+/** Aufgelöste Behörde gilt als vollständig mit Name + PLZ/Ort (mindestens
+ *  zwei nichtleere Zeilen) — einzelne Ämter führen amtlich KEINE Strasse
+ *  (z. B. TI: Circoli Breno und Onsernone; Bug-Check 11.6.2026). */
+const aufgeloestVollstaendig = (zeilen?: string[]): boolean =>
+  (zeilen?.filter((z) => z.trim() !== '').length ?? 0) >= 2;
+
 export function sgMaengel(a: SgAnswers): SgMangel[] {
   const m0: SgMangel[] = [];
   // Behörden-Gate (Schritt 0): ausserhalb BS nur mit vollständiger Handadresse
@@ -258,7 +264,7 @@ export function sgMaengel(a: SgAnswers): SgMangel[] {
   }
   if (a.gerichtsKanton !== 'BS'
       && !(a.behoerdeManuellAktiv && behoerdeManuellVollstaendig(a.behoerdeManuell))
-      && (a.behoerdeAufgeloest?.zeilen.length ?? 0) < 3) {
+      && !aufgeloestVollstaendig(a.behoerdeAufgeloest?.zeilen)) {
     m0.push({ schritt: 0, text: `Zuständige Schlichtungsbehörde für den Kanton ${a.gerichtsKanton} bestimmen (PLZ/Gemeinde eingeben bzw. Stelle wählen) — oder die Adresse von Hand erfassen.` });
   }
   const m: SgMangel[] = [...m0];
@@ -500,13 +506,13 @@ export function sgZusammenstellen(a: SgAnswers) {
     sgEingabeArt(routingFuerAdressat?.dokument ? routingFuerAdressat.behoerdeTyp : 'ordentlich'),
     a.gerichtsKanton,
   );
-  const aufgeloestOk = (a.behoerdeAufgeloest?.zeilen.length ?? 0) >= 3;
+  const aufgeloestOk = aufgeloestVollstaendig(a.behoerdeAufgeloest?.zeilen);
   const adressatBlock = a.behoerdeManuellAktiv && behoerdeManuellVollstaendig(a.behoerdeManuell)
     ? behoerdeAlsBlock(a.behoerdeManuell!)
     : registryAdresse
       ? behoerdeAlsBlock(registryAdresse)
       : aufgeloestOk
-        ? a.behoerdeAufgeloest!.zeilen.join('\n')
+        ? a.behoerdeAufgeloest!.zeilen.filter((z) => z.trim() !== '').join('\n')
         : '________\n________\n________';
   const antworten: Antworten = {
     ...a,

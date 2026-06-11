@@ -5,6 +5,7 @@ import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { amtFuer, AMT_KANTONE, vdAmtFuer } from '../../data/schlichtung/amtAufloesung';
+import { tiKandidaten } from '../../data/schlichtung/tiAmt';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
 
@@ -116,13 +117,21 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       if (kanton === 'ZH' && g.toLowerCase() === 'zürich') {
         return { amt: null, amtUrl: undefined, kreise: await zuerichKreisAemter(), wahl };
       }
+      // TI (11.6.2026): Mehr-Circoli-Gemeinden → Ortsteil-Wahl (wie ZH-Kreise).
+      if (kanton === 'TI') {
+        const kandidaten = await tiKandidaten(g);
+        if (kandidaten) return { amt: null, amtUrl: undefined, kreise: kandidaten, wahl };
+      }
       // VD: stufengerechte Instanz (Art. 41 CDPJ-VD; Arbeit: Art. 2 LJT-VD)
       // — ohne bezifferten Streitwert keine Auto-Zuordnung (die JdP wäre ab
       // CHF 10'000 falsch).
       const a = kanton === 'VD'
         ? (vdStufe ? await vdAmtFuer(g, vdStufe.stufe, arbeitsrechtlich) : null)
         : await amtFuer(kanton, g);
-      return { amt: a ? [a.name, a.strasse, a.plzOrt] : null, amtUrl: a?.url, kreise: null, wahl };
+      // filter(Boolean): einzelne Ämter führen amtlich keine Strasse (TI:
+      // Breno/Onsernone) — keine Leerzeile in Adressat/Dokument (Bug-Check
+      // 11.6.2026 B2).
+      return { amt: a ? [a.name, a.strasse, a.plzOrt].filter(Boolean) : null, amtUrl: a?.url, kreise: null, wahl };
     };
     lade()
       .then((r) => { if (aktiv) { setAmtZeilen(r.amt); setAmtUrl(r.amtUrl); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
@@ -152,8 +161,11 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
         ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
         : (typ === 'ordentlich' && amtZeilen ? { zeilen: amtZeilen, url: amtUrl ?? recherche.kantonsUrl } : null));
     } else if (typ === 'ordentlich' && zhKreise && zhKreise.length > 0) {
-      const k = zhKreise[Math.min(kreisIdx, zhKreise.length - 1)];
-      onAufgeloest({ zeilen: [k.name, k.strasse, k.plzOrt], url: a.url });
+      // Index ausserhalb der (neuen) Liste → deterministisch erste Option,
+      // Anzeige und Meldung identisch (kein stiller Letzte-Stelle-Clamp;
+      // relevant seit TI-Kandidatenlisten unterschiedlicher Länge, 11.6.2026).
+      const k = zhKreise[kreisIdx < zhKreise.length ? kreisIdx : 0];
+      onAufgeloest({ zeilen: [k.name, k.strasse, k.plzOrt].filter(Boolean), url: k.url ?? a.url });
     } else {
       // Bug-Check 10.6.2026 (NIEDRIG): amtZeilen sind ordentliche Ämter —
       // bei paritätischem Typ nie als Adressat melden (transienter Zustand
@@ -230,8 +242,9 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
           )}
           {zhKreise && (
-            <Field label="Stadt Zürich: Kreis-Amt wählen" hint="massgeblich ist der Stadtkreis der beklagten Partei">
-              <select className={inputCls} value={kreisIdx} onChange={(e) => setKreisIdx(Number(e.target.value))}>
+            <Field label={kanton === 'TI' ? 'Circolo nach Ortsteil wählen' : 'Stadt Zürich: Kreis-Amt wählen'}
+              hint={kanton === 'TI' ? 'die Gemeinde erstreckt sich über mehrere Circoli — massgeblich ist der Ortsteil der beklagten Partei' : 'massgeblich ist der Stadtkreis der beklagten Partei'}>
+              <select className={inputCls} value={kreisIdx < zhKreise.length ? kreisIdx : 0} onChange={(e) => setKreisIdx(Number(e.target.value))}>
                 {zhKreise.map((k, i) => <option key={k.kreise} value={i}>{k.name} — {k.kreise}</option>)}
               </select>
             </Field>

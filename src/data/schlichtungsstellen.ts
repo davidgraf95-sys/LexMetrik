@@ -302,8 +302,10 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'verzeichnis', beschreibung: 'kommunale Schlichtungsbehörden in Mietsachen (je politische Gemeinde — TG-Sonderfall)', url: 'https://erechtsverkehr.tg.ch/schlichtungsbehoerden-in-mietsachen.html/7980' },
   },
   TI: {
-    stand: '5.6.2026', quelle: 'ti.ch (giudici di pace; locazione — 11 Uffici, Schiedsrichter-Entscheid inkl. Chiasso)',
-    ordentlich: { modus: 'verzeichnis', beschreibung: '38 Giudicature di pace (je Circolo; Art. 28 f. LOG)', url: 'https://www4.ti.ch/poteri/giudiziario/giustizia-civile/giudici-di-pace' },
+    stand: '11.6.2026', quelle: 'ti.ch (amtliche Località-Suche giudici di pace, 169/169 abgefragt; locazione — 11 Uffici, Schiedsrichter-Entscheid inkl. Chiasso, Stand 5.6.2026)',
+    // Gemeinde→Circolo amtlich verdrahtet (aemterKantone.json, Dossier §38);
+    // Lugano/Lema/Tresa über die Ortsteil-Wahl (tiAmt.ts).
+    ordentlich: { modus: 'verzeichnis', beschreibung: '38 Giudicature di pace (je Circolo; Art. 28 f. LOG — Auflösung nach Gemeinde, bei Lugano/Lema/Tresa nach Ortsteil)', url: 'https://www4.ti.ch/poteri/giudiziario/giustizia-civile/giudici-di-pace' },
     miete: {
       modus: 'liste', hinweis: '11 Uffici di conciliazione in materia di locazione',
       stellen: [

@@ -30,8 +30,10 @@ function kleinFuer(kanton: string, d: KantonsAemter): Map<string, number> {
 /** Kantone mit Gemeinde→Amt-Auflösung (ZH separat über zhAmt.ts).
  *  SZ/BL bewusst ausgenommen (Quellenlage teiloffen — Verzeichnis-Fallback).
  *  VD: amtFuer liefert die Justice de paix (Stufe < CHF 10'000) — für die
- *  höheren Streitwert-Stufen vdAmtFuer verwenden (Art. 41 CDPJ-VD). */
-export const AMT_KANTONE: readonly Kanton[] = ['ZH', 'AG', 'SG', 'TG', 'FR', 'ZG', 'AI', 'GR', 'LU', 'AR', 'NE', 'BL', 'SZ', 'BE', 'VD'] as const;
+ *  höheren Streitwert-Stufen vdAmtFuer verwenden (Art. 41 CDPJ-VD).
+ *  TI: drei Mehr-Circoli-Gemeinden (Lugano/Lema/Tresa) liefern null —
+ *  die UI bietet dort die Ortsteil-Wahl an (tiKandidaten, tiAmt.ts). */
+export const AMT_KANTONE: readonly Kanton[] = ['ZH', 'AG', 'SG', 'TG', 'FR', 'ZG', 'AI', 'GR', 'LU', 'AR', 'NE', 'BL', 'SZ', 'BE', 'VD', 'TI'] as const;
 
 export async function amtFuer(kanton: Kanton, gemeinde: string): Promise<SchlichtungsAmt | null> {
   const g = gemeinde.trim();

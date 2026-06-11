@@ -32,6 +32,7 @@ import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzA
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { amtFuer, AMT_KANTONE, vdAmtFuer, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
+import { tiKandidaten } from '../../data/schlichtung/tiAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
@@ -270,6 +271,12 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
       if (kanton === '' || !AMT_KANTONE.includes(kanton) || gemeinde === '') return { amt: null, kreise: null };
       if (kanton === 'ZH' && gemeinde.toLowerCase() === 'zürich') {
         return { amt: null, kreise: await zuerichKreisAemter() };
+      }
+      // TI (11.6.2026): Lugano/Lema/Tresa liegen in mehreren Circoli —
+      // Ortsteil-Wahl über denselben Kreis-Mechanismus wie Stadt Zürich.
+      if (kanton === 'TI') {
+        const kandidaten = await tiKandidaten(gemeinde);
+        if (kandidaten) return { amt: null, kreise: kandidaten };
       }
       if (kanton === 'VD') {
         if (!vdStufe) return { amt: null, kreise: null };
@@ -1173,18 +1180,21 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                   {amtAufloesbar && amt && (
                     <div>
                       <p className="text-body-s text-ink-900 whitespace-pre-line">
-                        {amt.name}{'\n'}{amt.strasse}{'\n'}{amt.plzOrt}
+                        {/* strassenlose Ämter (TI: Breno/Onsernone) ohne Leerzeile */}
+                        {[amt.name, amt.strasse, amt.plzOrt].filter(Boolean).join('\n')}
                       </p>
                       <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + amtliches Ämterverzeichnis).</p>
                     </div>
                   )}
                   {amtAufloesbar && zhKreise && (
                     <div className="space-y-1.5">
-                      <p className="text-xs text-ink-500">Stadt Zürich: massgeblich ist der STADTKREIS der beklagten Partei — sechs Kreis-Ämter:</p>
+                      <p className="text-xs text-ink-500">{f.kanton === 'TI'
+                        ? `Die Gemeinde ${f.gemeinde.trim()} erstreckt sich über mehrere Circoli — massgeblich ist der ORTSTEIL/das Quartier der beklagten Partei:`
+                        : 'Stadt Zürich: massgeblich ist der STADTKREIS der beklagten Partei — sechs Kreis-Ämter:'}</p>
                       <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
                         {zhKreise.map((a) => (
                           <li key={a.kreise} className="text-body-s text-ink-800">
-                            <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}<br />{a.strasse}, {a.plzOrt}
+                            <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}<br />{[a.strasse, a.plzOrt].filter(Boolean).join(', ')}
                           </li>
                         ))}
                       </ul>

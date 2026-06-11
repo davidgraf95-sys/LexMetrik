@@ -81,6 +81,18 @@ Adressen aus dem Behördenverzeichnis esecuzioni-piu.ch (Spiegel der kantonalen 
 
 **UNSICHERHEIT Zeile 28 (Circolo di Bellinzona):** Das esecuzioni-piu-Verzeichnis gibt für den «Circolo di Bellinzona» die Adresse **Piazza Grande 3, 6512 Giubiasco** an (Tel. identisch mit Giubiasco). Das widerspricht dem capoluogo-Prinzip (Sede sollte Bellinzona sein). Möglich ist eine kantonale Sonderverlegung nach Art. 29 Abs. 2 LOG oder ein Datenfehler der Quelle. **Vor produktiver Nutzung beim Kanton (Divisione della giustizia) bestätigen.**
 
+> **ÜBERHOLT-NACHTRAG 11.6.2026:** Diese Sektion 1a ist durch die
+> Vollerhebung an der amtlichen ti.ch-Località-Suche (169/169 Antworten)
+> ersetzt — massgeblich ist neu **schlichtungsaemter-gemeindezuordnung.md
+> §38** (Generator-Quelle). Wichtigste Abweichungen: die Circoli
+> **Ticino** und **Giubiasco** existieren amtlich nicht mehr (alles
+> Circolo di Bellinzona; «Sede principale e invio corrispondenza:
+> Piazza Grande 3, 6512 Giubiasco; Sede secondaria: Via Lavizzari 14,
+> 6500 Bellinzona» — die obige Unsicherheit ist damit GEKLÄRT, kein
+> Datenfehler); mehrere Sitz-Adressen aktualisiert (Capriasca→Vaglio,
+> Gambarogno→Magadino, Maggia→Lodano, Olivone→Torre, Sessa→Banco,
+> Verzasca→Postanschrift CP 4, 6516 Cugnasco u. a.).
+
 **Quellen 1a:** [Giudici di pace – www4.ti.ch](https://www4.ti.ch/poteri/giudiziario/giustizia-civile/giudici-di-pace) · [LOG RL 177.100 (PDF)](https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/7343) · [Circoscrizioni RL 180.100 (PDF)](https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/64) · Einzeladressen: esecuzioni-piu.ch/indirizzo/ufficio/giudicatura-di-pace-del-circolo-… (je Circolo).
 
 ---

@@ -12,10 +12,10 @@ describe('Schlichtungsstellen — Vollständigkeit & Integrität', () => {
       const e = SCHLICHTUNGSSTELLEN[k];
       expect(e, k).toBeDefined();
       expect(e.quelle.length, k).toBeGreaterThan(5);
-      // Deklarierte Anpassung 11.6.2026: VD wurde mit der Streitwert-Weiche
-      // neu verifiziert (eigener Stand) — übrige Kantone bleiben am
-      // Recherche-Stand 5.6.2026 festgenagelt.
-      expect(e.stand, k).toBe(k === 'VD' ? '11.6.2026' : '5.6.2026');
+      // Deklarierte Anpassung 11.6.2026: VD (Streitwert-Weiche) und TI
+      // (amtliche Località-Vollerhebung) neu verifiziert — übrige Kantone
+      // bleiben am Recherche-Stand 5.6.2026 festgenagelt.
+      expect(e.stand, k).toBe(k === 'VD' || k === 'TI' ? '11.6.2026' : '5.6.2026');
       expect(['zentral', 'liste', 'verzeichnis']).toContain(e.ordentlich.modus);
     }
   });

@@ -102,7 +102,7 @@ const kantonsDaten: Record<string, { aemter: Amt[]; gemeinden: Record<string, nu
 let aktuellerKanton: string | null = null;
 for (const z of zuordnungMd.split('\n')) {
   // Teil 1: «## 1. Aargau — …» · Teil 2: «## 1. FR — Freiburg: …»
-  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR|LU|AR|NE|BE|VD)\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
+  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR|LU|AR|NE|BE|VD|TI)\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
   if (kopfTreffer) {
     aktuellerKanton = kopfTreffer[1]
       ?? ({ Aargau: 'AG', 'St. Gallen': 'SG', 'St.Gallen': 'SG', Thurgau: 'TG' }[kopfTreffer[2] ?? ''] ?? null);
