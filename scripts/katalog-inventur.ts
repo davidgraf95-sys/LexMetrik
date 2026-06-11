@@ -42,3 +42,14 @@ verfuegbar.filter((k) => k.modus === 'rechner' && (!('szenarien' in k) || !k.sze
 // GEPLANTE Karten: keywords sind dort zweitrangig (kein href), aber die Suche
 // findet sie im Katalog-Tab — nur Zähler, keine Liste.
 console.log(`\nGeplant ohne keywords: ${ohneKeywords(geplant).length} von ${geplant.length} (zweitrangig — kein Öffnen möglich)`);
+
+// href-Hygiene (SSG-Auftrag 11.6.2026): src/lib/seo.ts leitet die Prerender-
+// Routen aus den hrefs ab — verfügbare Karten ohne href fallen aus dem
+// Prerender/der Sitemap, hrefs ausserhalb /rechner|/vorlagen wären Routen,
+// die App.tsx nicht kennt (das Prerender-Tor bräche dann den Build).
+const ohneHref = verfuegbar.filter((k) => !k.href);
+console.log(`\n── VERFÜGBAR ohne href (${ohneHref.length}) — fehlt im Prerender und in der Sitemap:`);
+ohneHref.forEach((k) => console.log(`   ${k.id}  (${k.title})`));
+const fremdHref = verfuegbar.filter((k) => k.href && !/^\/(rechner|vorlagen)\//.test(k.href));
+console.log(`\n── href ausserhalb /rechner|/vorlagen (${fremdHref.length}):`);
+fremdHref.forEach((k) => console.log(`   ${k.id}  →  ${k.href}`));
