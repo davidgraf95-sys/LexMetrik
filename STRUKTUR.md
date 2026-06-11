@@ -20,6 +20,30 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 11.6.2026 früher Abend — durchblick.nl-Sichtung + KVG-Preset Krankenkasse (Entscheid David, ungepusht)
+
+**(1) Konkurrenz-Sichtung** (`9c007af`): Sieben Offline-Rechner-ZIPs von
+David geprüft — KEINE Übernahme (Gerichtskosten = Zürcher Basistabelle ×
+geschätzte Kantons-Multiplikatoren, Anwaltskosten «10-15% of Streitwert»:
+§2-Gegenmodell; wo seriös, ist der eigene Bestand stärker; fremdes Werk).
+Befund in bibliothek/recherche/durchblick-nl-sichtung.md; bestätigt
+Nachfrage für `prozesskosten` (Roadmap Prio 1, Entscheid offen).
+**(2) KVG-Preset «Krankenkasse (Grundversicherung)»** in Maske 3
+(`5790fc2`, Entscheid David nach Befund-Optionen): §7-Recherche zuerst —
+KVG/KVV am Filestore 20260101 zeichengenau (beide OHNE -N-Suffix, neuere
+Daten nur SPA-Shell; Dossier kvg-grundversicherung-kuendigung.md,
+Quellen-Register + fedlex-cache.sh erweitert). Drei regime-treue Pfade:
+Prämienmitteilung (Art. 7 Abs. 2 KVG, 30.-November-Fall) · ordentlich
+Semesterende (Abs. 1) · Jahresende bei besonderer Form (Art. 94 Abs. 2/
+100 Abs. 3 KVV); Nahtlos-Klausel (Abs. 5) in jedem Brief. Gates:
+Ausstands-Sperre 64a Abs. 6 als Warnung, Termin-Hinweise, Koppelungsverbot
+Abs. 7/8. Schema 1.0.0→1.1.0 deklariert; kein Golden-Fall betroffen
+(IDENTISCH 104). norm-zitate-pruefen.ts neu mit kuendigungAllgemein.ts +
+VVG/KVG/KVV (616 Zitate, 0 Befunde). Tore: gate voll GRÜN; empirisch im
+Dev-Server verifiziert (Playwright: Kachel, Norm-Pill-Link, Vorschau-
+Umschaltung). **Abnahme Art. 7 KVG durch David offen (verified: false).**
+**10 Commits ungepusht — Push/Deploy nur auf frisches Ja (§9).**
+
 ## Session 11.6.2026 später Nachmittag — Token-Disziplin (Aufträge David, ungepusht)
 
 **(1) Quiet-on-Green Gate-Wrapper** (`ab1fdd6`/`8202aab`/`8c4e809`, Auftrag
