@@ -124,4 +124,10 @@ const sitemap = [
 writeFileSync(join(DIST, 'sitemap.xml'), sitemap);
 console.log(`OK  sitemap.xml (${routen.length} URLs)`);
 
+// robots.txt: Sitemap-Zeile aus SITE_URL anhängen (§5: Domain nur in seo.ts;
+// public/robots.txt bleibt domainfrei).
+const robots = readFileSync(join(DIST, 'robots.txt'), 'utf8');
+writeFileSync(join(DIST, 'robots.txt'), `${robots.trimEnd()}\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+console.log('OK  robots.txt (+Sitemap-Verweis)');
+
 console.log(`\nAlle ${routen.length} Routen prerendered.`);
