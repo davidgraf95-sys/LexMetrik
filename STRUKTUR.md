@@ -13,7 +13,24 @@ GRUENDUNG). Abgeschlossene Fahrpläne und historische Dokumente liegen in
 Verweise in Code-Kommentaren per grep auffindbar bleiben). Wissens-Quellen
 (PDF/DOCX, gitignored) in `bibliothek/quellen/` (`SICHTUNG.md`).
 
-## Session 11.6.2026 vormittags — Abnahme Design · Mahnung · BGer-Rechtsweg · Trio-Nachzug (Aufträge David, ungepusht)
+## Session 11.6.2026 vormittags — Abnahme Design · Mahnung · BGer-Rechtsweg · Trio-Nachzug (Aufträge David)
+
+> **GEPUSHT + DEPLOYED 11.6.2026 mittags (Ja David «bug check push und
+> deploy»): origin/main = `91dde33`, Prod-Deploy
+> `dpl_3uCHqYuNGrD1etvWCLSDyN4fWQMx` via /tmp-HEAD-Worktree; Asset-Hash
+> live = lokal (`index-BG0IjHoG.js`), 8/8 Kernrouten 200 (inkl. neu
+> /rechner/bgg-fristen + /vorlagen/mahnung). §9-Bug-Check: 3 unabhängige
+> Lupen über das 17-Commit-Delta, 0 HOCH, 9 MITTEL + 6 NIEDRIG alle
+> gefixt (`cf16b9b` — u. a. Art. 93 lit. b kumulativ, Art. 51 lit. a/b/c
+> je Objekt, Art. 103 Abs. 2 vollständig, verwaistes vorsorglich-Flag
+> SchKG-Aufsicht, Render-Crash bei ungültigem Speicher-ISO);
+> Empirie-Lupe 173/173 Konstellationen handgerechnet. Dazu (5) BGG in
+> die drei Rechtsmittel-Fahrpläne verdrahtet (`2cfeff8`, Auftrag David):
+> Zivil-Schritt 4 zeigt Abteilung + Prefill-Brücke in den BGer-Rechner;
+> SchKG-Beschwerdeweg/Rechtsöffnungs-Falle + Straf je mit Brücke
+> (BGER_LINK_SPEC zentral in rechnerPermalinks.ts). Der spätere
+> SO/NE/BL/VS-Stand der Parallel-Session (`40fb888`) ist NICHT in diesem
+> Deploy.**
 
 **(1) Design-Abnahme:** `abnahme/design-2026-06/RECHNER-EINHEIT.md` E-1–E-5
 durch David ABGENOMMEN (ohne Auflagen, `0b83423`) — R1–R12 verbindlich.
