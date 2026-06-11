@@ -173,7 +173,8 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       const s = wahlIdx >= 0 && wahlIdx < a.stellen.length ? a.stellen[wahlIdx] : undefined;
       onAufgeloest(s
         ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
-        : (typ === 'ordentlich' && amtZeilenTyp ? { zeilen: amtZeilenTyp, url: amtUrl ?? recherche.kantonsUrl } : null));
+        : ((typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && amtZeilenTyp
+          ? { zeilen: amtZeilenTyp, url: amtUrl ?? recherche.kantonsUrl } : null));
     } else if (typ === 'ordentlich' && zhKreise && zhKreise.length > 0) {
       // Index ausserhalb der (neuen) Liste → deterministisch erste Option,
       // Anzeige und Meldung identisch (kein stiller Letzte-Stelle-Clamp;
@@ -217,9 +218,9 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       )}
       {!glgOhneStelle && a.modus === 'liste' && (
         <>
-          {typ === 'ordentlich' && AMT_KANTONE.includes(kanton) && (
+          {((typ === 'ordentlich' && AMT_KANTONE.includes(kanton)) || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Field label="PLZ (beklagte Partei / Sache)" hint="amtliches Ortschaftenverzeichnis — löst die Stelle automatisch auf">
+              <Field label={typ === 'paritaetisch_miete' ? 'PLZ (Mietobjekt)' : 'PLZ (beklagte Partei / Sache)'} hint="amtliches Ortschaftenverzeichnis — löst die Stelle automatisch auf">
                 <input className={inputCls + ' num w-28'} inputMode="numeric" maxLength={4} value={plz}
                   onChange={(e) => setPlz(e.target.value.replace(/\D/g, '').slice(0, 4))} />
               </Field>
@@ -228,7 +229,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
               </Field>
             </div>
           )}
-          {typ === 'ordentlich' && plzWahl && plzWahl.plz === plz && (
+          {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && plzWahl && plzWahl.plz === plz && (
             <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
           )}

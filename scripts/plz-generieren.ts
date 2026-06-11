@@ -105,7 +105,7 @@ for (const z of zuordnungMd.split('\n')) {
   // Miete-Register (11.6.2026): Sektionen «## N. XX-MIETE — …» landen unter
   // dem Schlüssel XX_MIETE (paritätische Miet-Stellen, Art. 200 Abs. 1 ZPO)
   // — getrennt vom ordentlichen Register desselben Kantons.
-  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR|LU|AR|NE|BE|VD|TI|SO|VS)(-MIETE)?\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
+  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR|LU|AR|NE|BE|VD|TI|SO|VS|ZH|JU)(-MIETE)?\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
   if (kopfTreffer) {
     const basis = kopfTreffer[1]
       ?? ({ Aargau: 'AG', 'St. Gallen': 'SG', 'St.Gallen': 'SG', Thurgau: 'TG' }[kopfTreffer[3] ?? ''] ?? null);
@@ -299,12 +299,13 @@ if (kantonsDaten.VD) {
   const kanonL2 = (roh: string) => roh.replace(/’/g, "'").split('/').map((teil) =>
     teil.trim()
       .replace(/^(?:Bezirk|Region|Wahlkreis|District|Arrondissement administratif)\s+/i, '')
-      .replace(/^(?:de la |de l'|du |de |d'|la |le |les |l')/i, '')
+      .replace(/^(?:de la |de l'|du |des |de |d'|la |le |les |l')/i, '')
       .trim(),
   ).join('/');
   const MIETE_JOINS: [string, string][] = [
     ['VD_MIETE', 'VD'], ['FR_MIETE', 'FR'], ['GR_MIETE', 'GR'],
     ['SZ_MIETE', 'SZ'], ['AG_MIETE', 'AG'], ['SG_MIETE', 'SG'],
+    ['ZH_MIETE', 'ZH'], ['SO_MIETE', 'SO'], ['JU_MIETE', 'JU'],
   ];
   const bfsM = readFileSync('/tmp/bfs_gemeinden.csv', 'utf-8').replace(/^\uFEFF/, '').split('\n').map((z) => z.split(','));
   const kopfM = bfsM[0];

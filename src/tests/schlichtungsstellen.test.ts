@@ -181,13 +181,13 @@ describe('Paritätische Stellen (Miete/GlG) — kantonsrichtige Stopp-Karte (Auf
   // Regression: die Schlichtungsgesuch-Stopp-Karte zeigte bei Miete/GlG für
   // JEDEN Kanton die Basler Stelle; jetzt löst sie kantonsrichtig über
   // schlichtungAufloesung auf (SgParitaetischeStelle).
-  it('paritaetisch_miete liefert für alle 26 Kantone eine Auflösung; eigener Eintrag ausser BE/NE', () => {
+  it('paritaetisch_miete liefert für alle 26 Kantone eine Auflösung mit eigenem Eintrag', () => {
     for (const k of KANTONE) {
       const r = schlichtungAufloesung(k, 'paritaetisch_miete');
       expect(r, k).not.toBeNull();
-      // Deklariert 11.6.2026: NE hat neu einen eigenen miete-Eintrag
-      // (Chambre de conciliation paritätisch, Art. 12 OJN) — nur BE bleibt.
-      const erwarteFallback = k === 'BE';
+      // Deklariert 11.6.2026 (2×): NE eigener miete-Eintrag (Art. 12 OJN);
+      // BE neu ebenfalls (vier regionale SB paritätisch, Auto via Alias).
+      const erwarteFallback = false;
       expect(r!.glgFallback, `${k}: Fallback auf ordentliche Behörde`).toBe(erwarteFallback);
     }
   });

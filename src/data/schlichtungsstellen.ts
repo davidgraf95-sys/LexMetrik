@@ -149,6 +149,10 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
         A('Schlichtungsbehörde Oberland', 'Scheibenstrasse 11B', '3600 Thun', 'Region Oberland', undefined, 'https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/oberland.html'),
       ],
     },
+    // Miete (11.6.2026): dieselben vier regionalen Schlichtungsbehörden in
+    // paritätischer Besetzung (Art. 200 Abs. 1 ZPO) — Auto-Auflösung über
+    // das ordentliche BE-Register (mieteAmtFuer-Alias).
+    miete: { modus: 'verzeichnis', beschreibung: 'die vier regionalen Schlichtungsbehörden amten paritätisch auch für Miete/Pacht (Art. 200 Abs. 1 ZPO) — PLZ/Gemeinde eingeben für die konkrete Stelle', url: 'https://www.zsg.justice.be.ch/de/start/themen/schlichtungsverfahren.html' },
   },
   LU: {
     stand: '5.6.2026', quelle: 'gerichte.lu.ch (Friedensrichter/Kontakt) · BWO 13.2.2026',

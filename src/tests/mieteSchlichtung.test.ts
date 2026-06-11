@@ -12,6 +12,8 @@ describe('Miete-Register: Vollständigkeit', () => {
   const SOLL: [string, number, number][] = [
     ['VD_MIETE', 10, 300], ['FR_MIETE', 3, 119], ['GR_MIETE', 11, 100],
     ['SZ_MIETE', 6, 30], ['AG_MIETE', 11, 196], ['SG_MIETE', 7, 75], ['TG_MIETE', 80, 80],
+    // Nachzug 11.6.2026: Listen-Kantone mit amtlicher Level-2-Zuordnung
+    ['ZH_MIETE', 12, 160], ['SO_MIETE', 4, 104], ['JU_MIETE', 3, 51],
   ];
   for (const [k, ae, ge] of SOLL) {
     it(`${k}: ${ae} Stellen, ${ge} Gemeinden, alle Stellen erreicht`, () => {
@@ -20,8 +22,8 @@ describe('Miete-Register: Vollständigkeit', () => {
       expect(new Set(Object.values(reg[k].gemeinden)).size, k).toBe(ae);
     });
   }
-  it('MIETE_AMT_KANTONE deckt exakt die Register', () => {
-    expect([...MIETE_AMT_KANTONE].sort()).toEqual(['AG', 'FR', 'GR', 'SG', 'SZ', 'TG', 'VD']);
+  it('MIETE_AMT_KANTONE deckt exakt die Register (+BE-Alias aufs ordentliche Register)', () => {
+    expect([...MIETE_AMT_KANTONE].sort()).toEqual(['AG', 'BE', 'FR', 'GR', 'JU', 'SG', 'SO', 'SZ', 'TG', 'VD', 'ZH']);
   });
 });
 
@@ -55,7 +57,23 @@ describe('Miete-Register: Empirie (Erhebung 11.6.2026)', () => {
     expect((await mieteAmtFuer('TG', 'Amriswil'))?.plzOrt).toContain('Amriswil');
     expect((await mieteAmtFuer('TG', 'Ermatingen'))?.plzOrt).toContain('Kreuzlingen');
   });
-  it('kein Register (z. B. BE) → null', async () => {
-    expect(await mieteAmtFuer('BE', 'Bern')).toBeNull();
+  it('ZH: Winterthur → SB Miete BezGer Winterthur; Zürich → Wengistrasse 30', async () => {
+    expect((await mieteAmtFuer('ZH', 'Winterthur'))?.strasse).toBe('Lindstrasse 10');
+    expect((await mieteAmtFuer('ZH', 'Zürich'))?.strasse).toBe('Wengistrasse 30');
+  });
+  it('SO: Grenchen UND Messen → Oberamt Region Solothurn (deckt zwei Amteien); Olten → Oberamt Olten', async () => {
+    expect((await mieteAmtFuer('SO', 'Grenchen'))?.plzOrt).toBe('4502 Solothurn');
+    expect((await mieteAmtFuer('SO', 'Messen'))?.plzOrt).toBe('4502 Solothurn');
+    expect((await mieteAmtFuer('SO', 'Olten'))?.plzOrt).toBe('4600 Olten');
+  });
+  it('JU: Moutier → Commission Delémont (Kantonswechsel 1.1.2026); Saignelégier → Franches-Montagnes', async () => {
+    expect((await mieteAmtFuer('JU', 'Moutier'))?.plzOrt).toBe('2800 Delémont');
+    expect((await mieteAmtFuer('JU', 'Saignelégier'))?.plzOrt).toBe('2360 Le Bémont');
+  });
+  it('BE-Alias: Biel/Bienne → regionale SB Berner Jura-Seeland (paritätisch auch Miete)', async () => {
+    expect((await mieteAmtFuer('BE', 'Biel/Bienne'))?.plzOrt).toContain('Biel');
+  });
+  it('kein Register (z. B. GE: zentral) → null', async () => {
+    expect(await mieteAmtFuer('GE', 'Genève')).toBeNull();
   });
 });

@@ -1182,6 +1182,16 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               )}
               {recherche.aufloesung.modus === 'liste' && (
                 <div className="space-y-2">
+                  {/* Miete-Register (11.6.2026): konkrete Stelle auch in
+                      Listen-Kantonen (ZH/SO/JU) aus PLZ/Gemeinde. */}
+                  {r.schlichtung.behoerdeTyp === 'paritaetisch_miete' && f.kanton !== '' && MIETE_AMT_KANTONE.includes(f.kanton) && mieteAmt && (
+                    <div className="border-b border-line pb-2">
+                      <p className="text-body-s text-ink-900 whitespace-pre-line">
+                        {[mieteAmt.name, mieteAmt.strasse, mieteAmt.plzOrt].filter(Boolean).join('\n')}
+                      </p>
+                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (Miete-Register, Vollerhebung 11.6.2026).</p>
+                    </div>
+                  )}
                   {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500">{recherche.aufloesung.hinweis} — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
                   {/* VD (11.6.2026): konkrete Instanz aus PLZ/Gemeinde + Streit-
                       wert-Stufe (Art. 41 CDPJ-VD) — die Liste darunter bleibt

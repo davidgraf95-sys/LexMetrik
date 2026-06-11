@@ -1067,3 +1067,51 @@ Quelle: amtliche Liste erechtsverkehr.tg.ch/7980 (Abruf 11.6.2026; führt KEINE 
 | Schlichtungsbehörde in Mietsachen Zihlschlacht-Sitterdorf | Bernhauserstrasse 5 | 8588 Zihlschlacht | Zihlschlacht-Sitterdorf | https://www.tg.ch/zivil--und-strafrechtspflege/organisation/Ziehlschlacht-Sitterdorf.html/258 |
 
 **Pflegebedarf (alle Miete-Register):** jährlicher BWO-/Behörden-Durchgang; TG-Sammelsekretariate fluktuieren. **Abnahme-Status:** Erstrecherche an amtlichen Quellen (11.6.2026), Abnahme David ausstehend.
+
+## 48. ZH-MIETE — 12 paritätische Mietschlichtungsbehörden (je Bezirk, beim Bezirksgericht)
+
+Quelle: schlichtungsbehoerden-zh-vollerfassung.md (gerichte-zh.ch, 5.6.2026;
+Bezirk Zürich seit 9.3.2026 Wengistrasse 30). Spalte 4 = BFS-Bezirke
+(Join im Generator). Auto-Verdrahtung 11.6.2026.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| SB Miete Bezirk Zürich | Wengistrasse 30 | 8004 Zürich | Zürich | https://www.gerichte-zh.ch/organisation/bezirksgerichte/bezirksgericht-zuerich/kontakt/adressen-telefonnummern/mietgericht-und-schlichtungsbehoerde |
+| SB Miete (BezGer Winterthur) | Lindstrasse 10 | 8400 Winterthur | Winterthur | |
+| SB Miete (BezGer Bülach) | Spitalstrasse 13 | 8180 Bülach | Bülach | |
+| SB Miete (BezGer Dietikon) | Bahnhofplatz 10 | 8953 Dietikon | Dietikon | |
+| SB Miete (BezGer Affoltern) | Im Grund 15 | 8910 Affoltern am Albis | Affoltern | |
+| SB Miete (BezGer Andelfingen) | Thurtalstrasse 1 | 8450 Andelfingen | Andelfingen | |
+| SB Miete (BezGer Dielsdorf) | Spitalstrasse 7 | 8157 Dielsdorf | Dielsdorf | |
+| SB Miete (BezGer Hinwil) | Gerichtshausstrasse 12 | 8340 Hinwil | Hinwil | |
+| SB Miete (BezGer Horgen) | Burghaldenstrasse 3 | 8810 Horgen | Horgen | |
+| SB Miete (BezGer Meilen) | Untere Bruech 139/140 | 8706 Meilen | Meilen | |
+| SB Miete (BezGer Pfäffikon) | Hörnlistrasse 55 | 8330 Pfäffikon ZH | Pfäffikon | |
+| SB Miete (BezGer Uster) | Gerichtsstrasse 17 | 8610 Uster | Uster | |
+
+## 49. SO-MIETE — 4 Schlichtungsbehörden für Miet- und Pachtverhältnisse (Sekretariat: Oberamt, § 34quinquies/septies GO)
+
+Quelle: so.ch Mietschlichtungs-Sammelseite (zweifach geprüft 5.6./6.6.2026;
+PLZ Solothurn amtlich 4502). Oberamtsregion→Bezirke amtlich (Region
+Solothurn deckt die Amteien Solothurn-Lebern UND Bucheggberg-Wasseramt).
+Spalte 4 = BFS-Bezirke (Join im Generator). Auto-Verdrahtung 11.6.2026.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Schlichtungsbehörde Miete/Pacht — Oberamt Region Solothurn | Rötistrasse 4 | 4502 Solothurn | Solothurn, Lebern, Bucheggberg, Wasseramt | https://so.ch/verwaltung/departement-des-innern/oberaemter/schlichtung-und-vermittlung/mietschlichtung/ |
+| Schlichtungsbehörde Miete/Pacht — Oberamt Region Olten | Amthausquai 23 | 4600 Olten | Olten, Gösgen | https://so.ch/verwaltung/departement-des-innern/oberaemter/schlichtung-und-vermittlung/mietschlichtung/ |
+| Schlichtungsbehörde Miete/Pacht — Oberamt Thal-Gäu | Wengimattstrasse 2 | 4710 Balsthal | Thal, Gäu | https://so.ch/verwaltung/departement-des-innern/oberaemter/schlichtung-und-vermittlung/mietschlichtung/ |
+| Schlichtungsbehörde Miete/Pacht — Oberamt Dorneck-Thierstein | Passwangstrasse 29 | 4226 Breitenbach | Dorneck, Thierstein | https://so.ch/verwaltung/departement-des-innern/oberaemter/schlichtung-und-vermittlung/mietschlichtung/ |
+
+## 50. JU-MIETE — 3 Commissions de conciliation en matière de bail (je District; Moutier seit 1.1.2026 bei Delémont)
+
+Quelle: jura.ch/JUST Sammelseite «Droit du travail et du bail» (verifiziert
+6.6.2026); Moutier-Zuordnung gemäss Bestandes-Eintrag (Kantonswechsel
+1.1.2026). Spalte 4 = BFS-Districts (Join im Generator). Auto-Verdrahtung
+11.6.2026.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Commission de conciliation District de Delémont | Hôtel-de-Ville, Case postale | 2800 Delémont | Delémont, Moutier | https://www.jura.ch/JUST/Renseignements-juridiques/Droit-du-travail-et-du-bail/Droit-du-travail-et-du-bail.html |
+| Commission de conciliation District de Porrentruy | Rue de la Roche-de-Mars 5 | 2900 Porrentruy | Porrentruy | https://www.jura.ch/JUST/Renseignements-juridiques/Droit-du-travail-et-du-bail/Droit-du-travail-et-du-bail.html |
+| Commission de conciliation Franches-Montagnes | Au Village 21c | 2360 Le Bémont | Franches-Montagnes | https://www.jura.ch/JUST/Renseignements-juridiques/Droit-du-travail-et-du-bail/Droit-du-travail-et-du-bail.html |

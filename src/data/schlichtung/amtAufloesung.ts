@@ -74,12 +74,16 @@ export async function amtFuer(kanton: Kanton, gemeinde: string): Promise<Schlich
  *  §§41–47): VD 10 Commissions préfectorales · FR 3 Bezirks-Gruppen ·
  *  GR 11 je Region · SZ 6 Bezirke · AG 11 Bezirke · SG 7 Gerichtskreise ·
  *  TG 80 kommunale (1:1). */
-export const MIETE_AMT_KANTONE: readonly Kanton[] = ['VD', 'FR', 'GR', 'SZ', 'AG', 'SG', 'TG'] as const;
+export const MIETE_AMT_KANTONE: readonly Kanton[] = ['VD', 'FR', 'GR', 'SZ', 'AG', 'SG', 'TG', 'ZH', 'SO', 'JU', 'BE'] as const;
+
+/** BE: die vier regionalen Schlichtungsbehörden amten AUCH paritätisch für
+ *  Miete (kein eigenes Register nötig) — Alias aufs ordentliche Register. */
+const MIETE_REGISTER_ALIAS: Partial<Record<Kanton, string>> = { BE: 'BE' };
 
 /** Paritätische Miet-Schlichtungsstelle für eine Gemeinde — null, wenn der
  *  Kanton kein Miete-Register hat (dann Liste/zentral/Verzeichnis). */
 export async function mieteAmtFuer(kanton: Kanton, gemeinde: string): Promise<SchlichtungsAmt | null> {
-  return registerLookup(`${kanton}_MIETE`, kanton, gemeinde);
+  return registerLookup(MIETE_REGISTER_ALIAS[kanton] ?? `${kanton}_MIETE`, kanton, gemeinde);
 }
 
 /** VD: Gemeinde + Streitwert-Stufe → konkrete Schlichtungsinstanz
