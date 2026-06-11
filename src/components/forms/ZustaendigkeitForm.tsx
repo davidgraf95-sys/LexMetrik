@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EckdatenKachel, ErgebnisSprung, FehlerBox, Field, LiveHeader, Stepper, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, FehlerBox, Field, Stepper, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -792,8 +793,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
         </div>
       )}
       {zeige('ergebnis') && f.instanz === 'rechtsmittel' && rechtsmittel && (
-        <div className="lc-reveal space-y-4" aria-live="polite">
-          <LiveHeader />
+        <ErgebnisBlock>
 
           {/* Schritt 1 · Statthaftes Rechtsmittel */}
           <div className="lc-card p-5 space-y-2">
@@ -957,7 +957,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             }} />
             <LinkTeilenButton query={() => permalinkKodieren(ZUST_LINK_SPEC, { ...f, schritt })} />
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
 
       {/* 4 · Ergebnis — EINLEITUNGS-Sicht (Bug-Check 5.6.2026: im
@@ -974,9 +974,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
         </div>
       )}
       {zeige('ergebnis') && ergebnis && r && f.instanz === 'einleitung' && (
-        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
-          <ErgebnisSprung zielId="lc-ergebnis" />
-          <LiveHeader />
+        <ErgebnisBlock>
 
           {/* UX-Fix 5.6.2026 (Frage David «wieso bei Arbeitsrecht keine
               Schlichtungsbehörde?»): Ohne Kantonswahl gab es WEDER Stelle noch
@@ -1340,7 +1338,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               Entscheid ≤ {ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG.toLocaleString('de-CH')} (ZPO-Fassung 1.1.2025).
             </p>
           </div>
-        </div>
+        </ErgebnisBlock>
       )}
 
       {/* Schritt-Navigation (Muster wie VorlagenWizardRahmen): Zurück immer,

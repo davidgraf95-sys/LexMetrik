@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { EckdatenKachel, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
@@ -298,9 +299,7 @@ export function SchkgZustaendigkeitTeil() {
 
       {/* 4 · Ergebnis */}
       {r && (
-        <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
-          <ErgebnisSprung zielId="lc-ergebnis" />
-          <LiveHeader />
+        <ErgebnisBlock>
 
           {/* Betreibungsort + Forum */}
           <div className="lc-card p-5 space-y-3">
@@ -486,7 +485,7 @@ export function SchkgZustaendigkeitTeil() {
           <p className="text-xs text-ink-500 pt-2 border-t border-line">
             Regelwerk verbatim am SchKG-Wortlaut verifiziert (Stand 1.1.2025) — fachliche Abnahme ausstehend.
           </p>
-        </div>
+        </ErgebnisBlock>
       )}
     </div>
   );

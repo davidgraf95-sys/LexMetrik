@@ -85,7 +85,8 @@ und in der Block-Reihenfolge, nicht in den Inhalten.
   Formulare auf dem R4-Skelett; Export-Zeile überall PDF→ICS→Teilen;
   Kalender/Timeline hinter dem Verdikt; kurz-Disclaimer vollständig;
   eine aria-live-Region pro Ergebnis; ThemenEinstieg geteilt.
-  **Zurückgestellt:** ErgebnisBlock-Adoption im Zuständigkeits-Trio
+  **Zurückgestellt → NACHGEZOGEN 11.6.2026 (E-4 abgenommen):**
+  ErgebnisBlock-Adoption im Zuständigkeits-Trio
   (bereits regelkonform, war das Referenzmuster) — eine PARALLEL-SESSION
   baut zeitgleich den VD-Schlichtungs-Ausbau in genau dieser Zone
   (`schlichtungsstellen.ts`, `vdSchlichtung.ts`); §12: fremd belegte

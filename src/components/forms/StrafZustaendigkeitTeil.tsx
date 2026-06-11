@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { EckdatenKachel, ErgebnisSprung, Field, LiveHeader, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { PdfExportButton } from '../PdfExport';
@@ -190,9 +191,7 @@ export function StrafZustaendigkeitTeil() {
         </div>
       </div>
 
-      <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
-        <ErgebnisSprung zielId="lc-ergebnis" />
-        <LiveHeader />
+      <ErgebnisBlock>
 
         <div className="lc-card p-5 space-y-3">
           <p className="lc-overline">Örtliches Forum</p>
@@ -324,7 +323,7 @@ export function StrafZustaendigkeitTeil() {
         <p className="text-xs text-ink-500 pt-2 border-t border-line">
           Regelwerk verbatim am StPO-Wortlaut verifiziert (Stand 1.1.2024; Art. 301 StPO/Art. 31 StGB am 6.6.2026) — fachliche Abnahme ausstehend.
         </p>
-      </div>
+      </ErgebnisBlock>
     </div>
   );
 }
@@ -493,9 +492,7 @@ function StrafRechtsmittelTeil() {
         )}
       </div>
 
-      <div id="lc-ergebnis" className="lc-reveal space-y-4" aria-live="polite">
-        <ErgebnisSprung zielId="lc-ergebnis" />
-        <LiveHeader />
+      <ErgebnisBlock>
 
         <div className={`lc-card p-5 space-y-3 ${r.statthaft === 'keines' ? 'border-t-[3px] border-t-danger-500' : ''}`}>
           <p className="lc-overline">Statthaftes Rechtsmittel</p>
@@ -590,7 +587,7 @@ function StrafRechtsmittelTeil() {
         <p className="text-xs text-ink-500 pt-2 border-t border-line">
           Decision Tree aus dem StPO-Rechtsmittel-Dossier (6.6.2026), Wortlaute am StPO-Cache (Stand 1.1.2024) verifiziert — fachliche Abnahme ausstehend. Die Qualifikation des Entscheidtyps und das rechtlich geschützte Interesse (Art. 382 Abs. 1) sind Rechtsfragen.
         </p>
-      </div>
+      </ErgebnisBlock>
     </div>
   );
 }
