@@ -427,6 +427,36 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
   },
 };
 
+// ─── GlG-Schlichtungsstellen (Art. 200 Abs. 2 ZPO) — Vollerhebung 11.6.2026 ──
+// Quelle: bibliothek/behoerden/glg-schlichtungsstellen-kantone.md (alle 26
+// Kantone, Norm WÖRTLICH am kantonalen Erlass + amtliche Adresse). 17 weitere
+// Kantone mit eigener/konzentrierter GlG-Stelle (inkl. Arbeitsgerichte GE/JU
+// und BE-Konzentration auf die SB Bern-Mittelland in Fünferbesetzung) —
+// zusätzlich zu den Record-Einträgen ZH/BS/SO und dem VD-Sonderpfad.
+// UR/OW/NW/GL bleiben bewusst beim Fallback (zentrale ordentliche Stelle =
+// fachlich korrekt); NE schlichtet GlG paritätisch bei der Chambre de
+// conciliation (gleiche Standorte — eigener Listen-Eintrag unten).
+const GLG_STELLEN: Partial<Record<Kanton, SchlichtungsAufloesung>> = {
+  BE: { modus: 'zentral', stelle: A('Schlichtungsbehörde Bern-Mittelland (kantonsweit ausschliesslich zuständig für GlG)', 'Effingerstrasse 34', '3008 Bern', 'ganzer Kanton (GSOG, BSG 161.1, Art. 85 Abs. 1)', undefined, 'https://www.zsg.justice.be.ch/de/start/ueber-uns/schlichtungsbehoerden/bern-mittelland.html') },
+  LU: { modus: 'zentral', stelle: A('Schlichtungsbehörde Gleichstellung (administrativ beim Arbeitsgericht)', 'Zentralstrasse 28', '6002 Luzern', 'ganzer Kanton (JusG, SRL 260, § 3 Abs. 1 lit. d)', undefined, 'https://gerichte.lu.ch/organisation/schlichtungsbehoerden/gleichstellung') },
+  SZ: { modus: 'zentral', stelle: A('Kantonale Schlichtungsstelle für Diskriminierungsstreitigkeiten im Erwerbsleben', 'c/o Vorsitzende Dr. iur. Stefanie Wiget, RAin, Hauptplatz 7, Postfach 46', '6430 Schwyz', 'ganzer Kanton (KGlG, SRSZ 140.310, § 3 Abs. 1–2)', undefined, 'https://www.sz.ch/kanton/gleichstellung.html/8756-8757-12155') },
+  ZG: { modus: 'zentral', stelle: A('Schlichtungsbehörde Arbeitsrecht, c/o Kantonsgerichtskanzlei', 'Aabachstrasse 3', '6300 Zug', 'ganzer Kanton (GOG, BGS 161.1, § 39 Abs. 1)', undefined, 'https://zg.ch/de/gerichte/zivil-und-strafrechtspflege/schlichtungsbehoerden/schlichtungsbehoerde-arbeitsrecht') },
+  FR: { modus: 'zentral', stelle: A('Schlichtungskommission für die Gleichstellung der Geschlechter im Erwerbsleben / Commission de conciliation en matière d\'égalité', 'p.A. Büro für die Gleichstellung von Frau und Mann und für Familienfragen (GFB), Rue de la Poste 1', '1700 Freiburg', 'ganzer Kanton (JG, SGF 130.1, Art. 62 Abs. 1)', undefined, 'https://www.fr.ch/de/staat-und-recht/justiz/gerichtsbehoerden-schlichtungskommission-fuer-die-gleichstellung-der-geschlechter-im-erwerbsleben') },
+  BL: { modus: 'zentral', stelle: A('Schlichtungsstelle für Diskriminierungsstreitigkeiten im Erwerbsleben (administrativ beim GS der Volkswirtschafts- und Gesundheitsdirektion)', 'Bahnhofstrasse 3', '4410 Liestal', 'ganzer Kanton (EG ZPO, SGS 221, § 2 lit. b)', undefined, 'https://www.baselland.ch/politik-und-behorden/direktionen/volkswirtschafts-und-gesundheitsdirektion/generalsekretariat/aufgaben/schlichtungsstellen/diskriminierung') },
+  SH: { modus: 'zentral', stelle: A('Schlichtungsstelle bei Diskriminierungen im Erwerbsleben (Kanzlei beim Kantonsgericht)', 'Vordergasse 54', '8201 Schaffhausen', 'ganzer Kanton (JG, SHR 173.200, Art. 11 Abs. 1)', undefined, 'https://sh.ch/CMS/Webseite/Kanton-Schaffhausen/Beh-rde/Justiz/Schlichtungsstelle-bei-Diskriminierungen-im-Erwerbsleben-110374-DE.html') },
+  AR: { modus: 'zentral', stelle: A('Kantonale Schlichtungsstelle bei Diskriminierung im Erwerbsleben (Sitz beim Kantonsgericht)', 'Landsgemeindeplatz 7c / Fünfeckpalast', '9043 Trogen', 'ganzer Kanton (Justizgesetz, bGS 145.31, Art. 5 Abs. 1 lit. a/c (Wahl durch Kantonsrat)', undefined, 'https://ar.ch/gerichte/vermittler-und-schlichtungsstellen/schlichtungsstelle-bei-diskriminierung-im-erwerbsleben/') },
+  AI: { modus: 'zentral', stelle: A('Schlichtungsstelle Gleichstellung von Frau und Mann (Sekretariat: Volkswirtschaftsdepartement)', 'c/o Departementssekretariat Volkswirtschaft, Marktgasse 2', '9050 Appenzell', 'ganzer Kanton (GOG, GS 173.000, Art. 5 Abs. 2 (Marginalie «Paritätische Schlichtungsstellen»))', undefined, 'https://www.ai.ch/verwaltung/kommissionen/schlichtungsstelle-gleichstellung-von-frau-und-mann') },
+  SG: { modus: 'zentral', stelle: A('Schlichtungsstelle für Klagen nach dem Gleichstellungsgesetz', 'Engelgasse 2 / Marktplatz', '9004 St.Gallen', 'ganzer Kanton (EG-ZPO, sGS 961.2, Art. 5)', undefined, 'https://www.sg.ch/recht/gerichte/organisation---standorte/schlichtungsstellen-und-vermittlungsaemter/schlichtungsstelle-fuer-klagen-nach-dem-gleichstellungsgesetz.html') },
+  GR: { modus: 'zentral', stelle: A('Kantonale Schlichtungsbehörde für Gleichstellungssachen', 'c/o Obergericht, Grabenstrasse 30', '7001 Chur', 'ganzer Kanton (GOG, BR 173.000, Art. 92 Abs. 1)', undefined, 'https://www.justiz-gr.ch/schlichtungsbehoerden-und-mediation/ueber-uns/gleichstellungssachen/') },
+  AG: { modus: 'zentral', stelle: A('Schlichtungsstelle für Gleichstellungsfragen', 'Obere Vorstadt 37 (Post: Postfach, 5001 Aarau)', '5000 Aarau', 'ganzer Kanton (EG ZPO, SAR 221.200, § 4 Abs. 1 lit. d)', undefined, 'https://www.ag.ch/de/ueber-uns/gerichte-kanton-aargau/organisation/schlichtungsbehoerden/schlichtungsstelle-fuer-gleichstellungsfragen') },
+  TG: { modus: 'zentral', stelle: A('Schlichtungsstelle gemäss Gleichstellungsgesetz (kantonal; Eingaben über das Präsidium — keine eigene Amtsadresse publiziert)', 'Präsidium: Doris Ammann, RAin, Thundorferstrasse 13', '8501 Frauenfeld', 'ganzer Kanton (ZSRG, RB 271.1, § 18)', undefined, 'https://www.tg.ch/regierung/kommissionen/schlichtungsstelle-gemaess-gleichstellungsgesetz-.html/78') },
+  TI: { modus: 'zentral', stelle: A('Ufficio di conciliazione in materia di parità dei sessi', 'c/o Segreteria della Divisione della giustizia, Palazzo Governativo', '6500 Bellinzona', 'ganzer Kanton (LACPC, RL/TI 270.100, Art. 6 Abs. 1)', undefined, 'https://www4.ti.ch/poteri/giudiziario/giustizia-civile/la-parita-di-sessi') },
+  VS: { modus: 'zentral', stelle: A('Commission cantonale de conciliation pour les litiges relevant de la loi fédérale sur l\'égalité / Kantonale Schlichtungskommission für Streitigkeiten nach dem GlG', 'c/o Service de protection des travailleurs et des relations du travail (SPT/DAA), Rue des Cèdres 5', '1951 Sion', 'ganzer Kanton (Loi cantonale sur le travail, RS/VS 822.1, Art. 32 Abs. 1)', undefined, 'https://www.vs.ch/web/spt/commission-cantonale-de-conciliation-pour-les-litiges-relevant-de-la-leg') },
+  GE: { modus: 'zentral', stelle: A('Tribunal des prud\'hommes — Autorité de conciliation', 'Boulevard Helvétique 27 (Post: Case postale 3688, 1211 Genève 3)', '1207 Genève', 'ganzer Kanton (LTPH, RS/GE E 3 10, Art. 11 al. 3)', undefined, 'https://justice.ge.ch/fr/contenu/tribunal-des-prudhommes') },
+  JU: { modus: 'zentral', stelle: A('Conseil de prud\'hommes (Präsident:in als autorité de conciliation), beim Tribunal de première instance', 'Chemin du Château 9, Case postale', '2900 Porrentruy 1', 'ganzer Kanton (Loi instituant le Conseil de prud\'hommes, RSJU 182.34, Art. 22)', undefined, 'https://www.jura.ch/JUST/Instances-judiciaires/Tribunal-de-premiere-instance/Conseil-de-prud-hommes/Conseil-de-prud-hommes.html') },
+  NE: { modus: 'liste', hinweis: 'Chambre de conciliation in paritätischer GlG-Besetzung (Art. 200 Abs. 2 ZPO)', stellen: NE_TRIBUNAUX },
+};
+
 /** Streitwert-Kontext für Kantone, deren ordentliche Schlichtungsinstanz
  *  streitwertabhängig ist (heute nur VD, Art. 41 CDPJ-VD). */
 export interface SchlichtungsKontext {
@@ -518,6 +548,9 @@ export function schlichtungAufloesung(kanton: Kanton, typ: SchlichtungsbehoerdeT
     // VD: GlG ist gesetzlich dem Tribunal de prud'hommes zugewiesen (Art. 1
     // Abs. 1 lit. c LJT-VD) — echte Stelle, kein Fallback-Disclaimer.
     if (kanton === 'VD') return { aufloesung: vdGlg(kontext), stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
+    // Vollerhebung 11.6.2026: konkrete GlG-Stellen aller übrigen Kantone.
+    const glgStelle = GLG_STELLEN[kanton];
+    if (glgStelle) return { aufloesung: glgStelle, stand: '11.6.2026', quelle: 'GlG-Vollerhebung 11.6.2026 (glg-schlichtungsstellen-kantone.md)', glgFallback: false, kantonsUrl: k.url };
     return { aufloesung: ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true, kantonsUrl: k.url };
   }
   if (typ === 'paritaetisch_miete') return { aufloesung: ordentlich, stand: k.stand, quelle: k.quelle, glgFallback: true, kantonsUrl: k.url };

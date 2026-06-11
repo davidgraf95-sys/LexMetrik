@@ -204,14 +204,26 @@ describe('Paritätische Stellen (Miete/GlG) — kantonsrichtige Stopp-Karte (Auf
     expect(r.aufloesung.modus).toBe('zentral');
     if (r.aufloesung.modus === 'zentral') expect(r.aufloesung.stelle.plzOrt).toBe('1205 Genève');
   });
-  it('paritaetisch_glg: eigene Stelle nur ZH/BS/VD/SO, sonst deklarierter Fallback auf die ordentliche Behörde', () => {
-    // Deklarierte Erweiterungen 11.6.2026: VD → Tribunal de prud'hommes
-    // (Art. 1 Abs. 1 lit. c LJT-VD); SO → kantonale GlG-Schlichtungsbehörde
-    // (§§ 34bis f. GO SO; Detail-Tests in vd-/soSchlichtung.test.ts).
+  it('paritaetisch_glg: GlG-Vollerhebung 11.6.2026 — Fallback nur noch UR/OW/NW/GL (zentrale ordentliche = fachlich korrekt)', () => {
+    // Deklarierte Erweiterung: 22 Kantone mit konkreter GlG-Stelle (eigene
+    // Stellen, Arbeitsgerichte GE/JU, BE-Konzentration, NE paritätische
+    // Chambre) — Quelle glg-schlichtungsstellen-kantone.md.
     for (const k of KANTONE) {
       const r = schlichtungAufloesung(k, 'paritaetisch_glg');
       expect(r, k).not.toBeNull();
-      expect(r!.glgFallback, k).toBe(!['ZH', 'BS', 'VD', 'SO'].includes(k));
+      expect(r!.glgFallback, k).toBe(['UR', 'OW', 'NW', 'GL'].includes(k));
     }
+  });
+  it('GlG-Stichproben: BE-Konzentration, GE/JU prud\u2019hommes, ZG eigene SB Arbeitsrecht, TG Präsidiums-Anschrift', () => {
+    const be = schlichtungAufloesung('BE', 'paritaetisch_glg')!;
+    if (be.aufloesung.modus === 'zentral') expect(be.aufloesung.stelle.plzOrt).toBe('3008 Bern');
+    const ge = schlichtungAufloesung('GE', 'paritaetisch_glg')!;
+    if (ge.aufloesung.modus === 'zentral') expect(ge.aufloesung.stelle.name).toContain('prud');
+    const zg = schlichtungAufloesung('ZG', 'paritaetisch_glg')!;
+    if (zg.aufloesung.modus === 'zentral') expect(zg.aufloesung.stelle.name).toContain('Arbeitsrecht');
+    const tg = schlichtungAufloesung('TG', 'paritaetisch_glg')!;
+    if (tg.aufloesung.modus === 'zentral') expect(tg.aufloesung.stelle.plzOrt).toContain('Frauenfeld');
+    const ne = schlichtungAufloesung('NE', 'paritaetisch_glg')!;
+    expect(ne.aufloesung.modus).toBe('liste');
   });
 });

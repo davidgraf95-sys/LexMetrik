@@ -169,3 +169,4 @@ im Verfallsregister («Amtliche Muster-Suiten»).
 - `src/data/verifikation.ts` — Rechtsprechungs-Register (BGE/BGer)
 - `src/lib/vorlagen/behoerden.ts` — abgenommene Behörden-Stammdaten (BS)
 - `STRUKTUR.md` — Gesamtstand · `KATALOG-ROADMAP.md` — Soll-Inventar
+- [GlG-Schlichtungsstellen aller 26 Kantone](behoerden/glg-schlichtungsstellen-kantone.md) — Art. 200 Abs. 2 ZPO: je Kanton Norm WÖRTLICH + amtliche Stelle/Adresse (16 eigene · BE-Konzentration · GE/JU/VD Arbeitsgerichte · 7 ordentlich-paritätisch); Vollerhebung 11.6.2026, Abnahme ausstehend
