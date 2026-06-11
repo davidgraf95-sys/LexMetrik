@@ -238,19 +238,24 @@ Workflow-Transcript wf_189d14a5-2b0.
    (§8-Grenze, kein Export) `0af1215`. Katalog 28 verfügbare Einträge.
 5a. **Rechtsmittel-Spruchkörper** ✅ verdrahtet `e749583` (nur belegte:
    VD nach Rechtsmittel-Typ; GE/TI/NE/JU ein Spruchkörper; Rest ehrlich
-   offen). OFFEN daraus: ZG-Beschwerde-Schnitt bestätigen · BGer-
-   Abteilungsregel (Art. 33/34 BGerR) am Fedlex-Wortlaut verifizieren,
-   dann in bestimmeRechtsmittel (Dossier §3, Rechtsöffnungs-Falle!).
+   offen). OFFEN daraus: ZG-Beschwerde-Schnitt bestätigen · ~~BGer-
+   Abteilungsregel~~ → **VERDRAHTET** (11.6.2026: BGerR gepinnt,
+   `bgerAbteilung` in bestimmeRechtsmittel + Rechtsöffnungs-Falle im
+   neuen BGer-Rechner, Regel zentral in lib/bgerRechtsweg.ts §5).
 6. ~~Untermietvertrag~~ → **GEBAUT** (6.6.2026, Weiche in mietvertrag.ts +
    Katalog-Einstieg; 7.6. abends in die Mietvertrags-Karte KONSOLIDIERT).
 7. **Eheschutz + GlG in der Zuständigkeits-Engine** — Dossier
    `recherche/eheschutz-glg-zustaendigkeit.md`: 4. Verfahrensart
    `summarisch`, Streitsache Eheschutz (Art. 23/198 lit. a/271/314 Abs. 2),
    GlG-Verwaltungsweg-Hard-Stop (Art. 13 GlG).
-8. **BGG-Ausbau Stufe 2** — aus `recherche/bgg-beschwerde-engine.md` noch
-   nicht verdrahtet: Sonderfristen Art. 100 Abs. 2/3 (SchKG-Aufsicht 10 T.,
-   Wechsel 5 T.), Streitwertberechnung Art. 51 (Kapitalisierung 20×),
-   Schiedsgericht Art. 77, Anschluss an den SchKG-Rechtsweg.
+8. ~~BGG-Ausbau Stufe 2~~ → **GEBAUT** (11.6.2026, Auftrag David
+   «recherche zu rechtswege ans bundesgericht … handlungsplan … umsetzen»;
+   `FAHRPLAN-BGER-RECHTSWEG.md`): EIGENE Engine `lib/bgerRechtsweg.ts` +
+   Rechner `/rechner/bgg-fristen` — alle 4 Beschwerdewege, Sonderfristen
+   Art. 100 Abs. 2/3 inkl. konkretem Fristende (BGG-Stillstand eigenes
+   Regime), Art. 51–53-Hinweise + 20×-Helfer, Art. 77, SchKG-Aufsichtsweg,
+   subsidiäre VB, Abteilungs-Auskunft BGerR (Cache gepinnt). OFFEN:
+   fachliche Abnahme (insb. Eheschutz-Weiche V-1 + Hinweis-Texte).
 9. **Quick-Wins** (recherche/INDEX-Priorisierung) — 3 von 4 GEBAUT 7.6.2026:
    ~~Streitwert-Rechner~~ → `/rechner/streitwert` (`80c78e4`, Art. 91–94a
    inkl. Teilklage Rev. 2025; Ermessen nie geschätzt) ·

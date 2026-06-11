@@ -51,6 +51,12 @@ EINTRAEGE=(
   # ACHTUNG: Das ist NICHT die «kleine BGG-Revision» (Botschaft 5.12.2025) —
   # deren Monitoring im Verfallsregister bleibt offen!
   "bgg|cc/2006/218|20260401|1|art_45,art_46,art_74,art_75,art_93,art_98,art_100,art_113"
+  # BGerR (Reglement für das Bundesgericht, SR 173.110.131): gepinnt 11.6.2026
+  # für die Abteilungs-Auskunft (BGer-Rechtsweg-Ausbau; Vorverifikation
+  # 7.6.2026 im Dossier behoerden/rechtsmittel-spruchkoerper-kantone.md §3 —
+  # ELI cc/2006/834, Konsolidierung 1.2.2026, Filestore NUR ohne -N-Suffix;
+  # seit 1.2.2026 ZWEI strafrechtliche Abteilungen Art. 35/35a, AS 2025 856).
+  "bgerr|cc/2006/834|20260201|0|art_33,art_34,art_35,art_35_a,art_36"
   # VVG: gepinnt 6.6.2026 (html-2!, 200 kB; Kündigungs-Maske 3 — 35a/b/c
   # + Zwingend-Kataloge 97/98 am Wortlaut verifiziert).
   "vvg|cc/24/719_735_717|20240101|2|art_35_a,art_35_b,art_35_c,art_97,art_98"

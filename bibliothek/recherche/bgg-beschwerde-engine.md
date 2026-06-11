@@ -750,3 +750,30 @@ Wortlaut ableitbar.
 **ERSTRECHERCHE – fachliche Abnahme durch David ausstehend (§7).** Kein
 `verified:true`, kein Deploy ohne Abnahme. Nur dieses Dossier und `INDEX.md`
 geändert.
+
+---
+
+## NACHTRAG 11.6.2026 — Nachverifikation + VERDRAHTUNG (FAHRPLAN-BGER-RECHTSWEG)
+
+- **V-0 erledigt:** Alle hier zitierten Artikel am Cache-Stand **20260401**
+  nachgeprüft (zusätzlich zum Re-Pin 7.6.): 72, 73, 77, 78–81, 51–53, 90–92,
+  103, 117, 119, 42, 44, 47, 50, 100, 46 wortidentisch — mit zwei Befunden:
+  **Art. 80 Abs. 2** lautet heute «… nach der Strafprozessordnung ein OBERES
+  GERICHT oder ein Zwangsmassnahmengericht als einzige kantonale Instanz
+  entscheidet» (Teil 3.2 oben zitiert die ältere Fassung); **Art. 117 Abs. 2**
+  ist neu (Wasserkraft-Beschleunigung, ohne Verdrahtungsrelevanz).
+- **BGerR gepinnt** (`bgerr|cc/2006/834|20260201`, fedlex-cache.sh):
+  Art. 33/34/35/35a/36 zeichengenau — Details im Spruchkörper-Dossier §3.
+- **VERDRAHTET** als eigene Engine `src/lib/bgerRechtsweg.ts` + Rechner
+  `/rechner/bgg-fristen` (Karte `bgg-fristen` entwurf): Decision-Tree
+  Stufen A–F dieses Dossiers; Eheschutz (V-1) als WARNUNG mit
+  Rechtsprechungs-Vorbehalt umgesetzt; A-Post-Plus (V-2) NICHT verdrahtet
+  (nur Art.-44-Abs.-2-Hinweis); 20×-Kapitalisierung als Helfer
+  (`bgerKapitalwert20x`), Streitwert-Eingabe bleibt Nutzer-Sache (Frage 3);
+  Art. 74 Abs. 2 lit. a nur als Weiche (Frage 4); `BGER_HINWEIS` in
+  strafRechtsmittel.ts präzisiert (Frage 5); Verwaltung nur Grundzüge mit
+  ehrlichem Art.-83-Vorbehalt (Frage 6); Verfassungsbeschwerde-Block bei
+  schwelle_verfehlt (Frage 7). Abteilungs-Auskunft zusätzlich in
+  `bestimmeRechtsmittel` (B.5a; Regel zentral in bgerRechtsweg.ts, §5).
+  **Die Antworten auf die «Offenen Fragen» sind fachliche Vorschläge Claude —
+  Davids Abnahme steht aus.**

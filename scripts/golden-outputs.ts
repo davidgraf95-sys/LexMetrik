@@ -33,6 +33,7 @@ import { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } from '../src/lib/vorlag
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
+import { berechneBgerRechtsweg } from '../src/lib/bgerRechtsweg';
 
 const faelle: Record<string, unknown> = {};
 const f = (id: string, fn: () => unknown) => {
@@ -98,6 +99,18 @@ f('zust:gewaltschutz', () => bestimmeZustaendigkeit({ streitsache: 'persoenlichk
 f('zust:ip:gsv', () => bestimmeZustaendigkeit({ streitsache: 'ip_wettbewerb', vermoegensrechtlich: true, streitwertCHF: 12_000, gerichtsstandsvereinbarung: true }));
 f('rm:arbeit:15k', () => bestimmeRechtsmittel({ streitsache: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 15_000 }));
 f('rm:geld:9999', () => bestimmeRechtsmittel({ streitsache: 'geldforderung', vermoegensrechtlich: true, streitwertCHF: 9_999 }));
+
+// ── BGer-Rechtsweg (FAHRPLAN-BGER-RECHTSWEG R-1, 11.6.2026) ─────────────────
+f('bger:zivil:50k', () => berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'schuldrecht', vermoegensrechtlich: true, streitwertCHF: 50_000 }));
+f('bger:zivil:schwelle', () => berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'arbeit', vermoegensrechtlich: true, streitwertCHF: 14_999 }));
+f('bger:rechtsoeffnung', () => berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'rechtsoeffnung', vermoegensrechtlich: true, streitwertCHF: 50_000, eroeffnung: '2026-07-01', kanton: 'ZH' }));
+f('bger:schkg-aufsicht', () => berechneBgerRechtsweg({ weg: 'schkg_aufsicht', eroeffnung: '2026-02-04', kanton: 'ZH' }));
+f('bger:wechsel', () => berechneBgerRechtsweg({ weg: 'schkg_aufsicht', wechselbetreibung: true }));
+f('bger:eheschutz', () => berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'familienrecht', vermoegensrechtlich: false, eheschutz: true, eroeffnung: '2026-07-01', kanton: 'BS' }));
+f('bger:schied', () => berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'schuldrecht', vermoegensrechtlich: true, streitwertCHF: 1_000, schiedsgericht: true }));
+f('bger:marke', () => berechneBgerRechtsweg({ weg: 'zivil', markenwiderspruch: true }));
+f('bger:straf', () => berechneBgerRechtsweg({ weg: 'straf', objekt: 'zwischen_anderer' }));
+f('bger:verwaltung', () => berechneBgerRechtsweg({ weg: 'verwaltung', verwaltungSonderfall: 'rechtshilfe_amtshilfe' }));
 f('schkg:einleiten:grundpfand', () => bestimmeSchkgZustaendigkeit({ anliegen: 'betreibung_einleiten', schuldnerTyp: 'jur_person_hr', pfand: 'grundpfand', forderungCHF: 250_000 }));
 f('schkg:ro:prov', () => bestimmeSchkgZustaendigkeit({ anliegen: 'rechtsoeffnung', schuldnerTyp: 'natuerlich_wohnsitz', rechtsoeffnungArt: 'provisorisch' }));
 f('schkg:widerspruch:dritter_ch', () => bestimmeSchkgZustaendigkeit({ anliegen: 'widerspruch', schuldnerTyp: 'natuerlich_wohnsitz', widerspruchKonstellation: 'gewahrsam_dritter_ch' }));

@@ -70,13 +70,22 @@ export interface StrafRmErgebnis {
 
 const N = (artikel: string, bemerkung?: string): StrafNorm => ({ artikel, bemerkung });
 
+// Präzisiert 11.6.2026 (FAHRPLAN-BGER-RECHTSWEG R-3b, Dossier-Empfehlung
+// Teil 3/5 — reiner Hinweistext, keine Logikänderung): Privatkläger-Bedingung
+// (Art. 81 Abs. 1 lit. b Ziff. 5), Art.-79-Ausnahme (BStGer-Beschwerdekammer)
+// und die zwei strafrechtlichen Abteilungen seit 1.2.2026 (Art. 35/35a BGerR).
 const BGER_HINWEIS = {
   text:
     'WEITERZUG: Gegen den letztinstanzlichen kantonalen Endentscheid steht die Beschwerde in Strafsachen ans ' +
-    'BUNDESGERICHT offen (Art. 78 ff. BGG) — Frist 30 Tage (Art. 100 Abs. 1 BGG), KEINE Streitwertgrenze; ' +
-    'Legitimation nach Art. 81 BGG. Vor- und Zwischenentscheide nur unter den Voraussetzungen der Art. 92/93 BGG. ' +
-    'Der BGG-Fristenstillstand (Art. 46 BGG) gilt — NICHT aber in Haftsachen (Art. 46 Abs. 2 BGG).',
-  normen: [N('Art. 78 BGG'), N('Art. 80 BGG'), N('Art. 81 BGG'), N('Art. 100 Abs. 1 BGG')],
+    'BUNDESGERICHT offen (Art. 78 ff. BGG) — Frist 30 Tage (Art. 100 Abs. 1 BGG), KEINE Streitwertgrenze. ' +
+    'Legitimation nach Art. 81 BGG: Die PRIVATKLÄGERSCHAFT nur, wenn sich der Entscheid auf ihre Zivilansprüche ' +
+    'auswirken kann (Abs. 1 lit. b Ziff. 5); die Staatsanwaltschaft nicht bei Haftentscheiden (Ziff. 3). ' +
+    'Gegen Entscheide der BStGer-BESCHWERDEKAMMER nur bei Zwangsmassnahmen (Art. 79 BGG). ' +
+    'Vor- und Zwischenentscheide nur unter den Voraussetzungen der Art. 92/93 BGG. ' +
+    'Der BGG-Fristenstillstand (Art. 46 BGG) gilt — NICHT aber in Haftsachen (Art. 46 Abs. 2 BGG). ' +
+    'Es entscheiden zwei strafrechtliche Abteilungen (seit 1.2.2026): materielle Straf-/Zivilfragen die Erste, ' +
+    'strafprozessuale Zwischen-/Endentscheide und der Vollzug die Zweite (Art. 35/35a BGerR).',
+  normen: [N('Art. 78 BGG'), N('Art. 79 BGG'), N('Art. 80 BGG'), N('Art. 81 BGG'), N('Art. 100 Abs. 1 BGG')],
 };
 
 /** Reine Engine: statthaftes StPO-Rechtsmittel + Frist/Trigger/Instanz/Kognition. */

@@ -1,5 +1,6 @@
 // Dossier: bibliothek/normen/zpo-zustaendigkeit-regelwerk.md · bibliothek/normen/zustaendigkeit-engine-verifikation.md
 import type { Berechnungsergebnis, Normverweis, Rechenschritt } from '../types/legal';
+import { bgerAbteilungZivil, type BgerZivilgebiet } from './bgerRechtsweg';
 
 // ─── Zuständigkeits-Engine (ZPO) — Bundesrechtsschicht ──────────────────────
 //
@@ -695,6 +696,9 @@ export interface RechtsmittelErgebnis {
   weichen: string[];
   /** Kognitions-/Rügen-Hinweise (z. B. Art. 98 BGG bei vorsorglichen Massnahmen). */
   kognitionHinweis: string | null;
+  /** Zuständige BGer-Abteilung nach Geschäftsverteilung (Art. 33/34 BGerR;
+   *  B.5a, 11.6.2026 — Regel lebt in lib/bgerRechtsweg.ts, §5). */
+  bgerAbteilung: string;
   fristHinweis: string;
   normverweise: Normverweis[];
 }
@@ -918,9 +922,24 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
     : null;
   if (kognitionHinweis) normverweise.push({ artikel: 'Art. 98 BGG' });
 
+  // BGer-Abteilung (B.5a, 11.6.2026): Zuteilung nach Rechtsgebiet, Art. 33/34
+  // BGerR — gilt für die ordentliche Beschwerde UND die subsidiäre
+  // Verfassungsbeschwerde (Wortlaut beider Artikel). Die Streitsachen des
+  // Katalogs sind Schuldrecht-/Haftpflicht-Materien der I. Abteilung bzw.
+  // ZGB-Materien der II.; «geldforderung» meint die vertragliche Forderung
+  // (Schuldrecht). Regel zentral in lib/bgerRechtsweg.ts (§5).
+  const STREITSACHE_GEBIET: Record<Streitsache, BgerZivilgebiet> = {
+    geldforderung: 'schuldrecht', miete_wohn_geschaeft: 'miete', arbeit: 'arbeit',
+    scheidung: 'familienrecht', erbrecht: 'erbrecht', delikt: 'haftpflicht',
+    persoenlichkeit: 'personenrecht', gesellschaft: 'schuldrecht', ip_wettbewerb: 'immaterialgueter',
+  };
+  const abt = bgerAbteilungZivil(STREITSACHE_GEBIET[input.streitsache]);
+  const bgerAbteilung = `${abt.name} (${abt.norm})`;
+  normverweise.push({ artikel: abt.norm, bemerkung: 'Geschäftsverteilung Bundesgericht' });
+
   return {
     kantonal, kantonalText, kantonalFrist, bger, bgerText, bgerFrist,
-    weichen, kognitionHinweis,
+    weichen, kognitionHinweis, bgerAbteilung,
     fristHinweis: 'Fristauslösend ist kantonal die Zustellung des begründeten Entscheids (Art. 311/321 ZPO), vor Bundesgericht die Eröffnung der vollständigen Ausfertigung (Art. 100 Abs. 1 BGG). Fristende an Sa/So/Feiertag → nächster Werktag (Art. 142 Abs. 3 ZPO / Art. 45 Abs. 1 BGG).',
     normverweise,
   };
@@ -945,7 +964,7 @@ export function rechtsmittelBericht(r: RechtsmittelErgebnis): Berechnungsergebni
       zwischenergebnis: `${r.kantonalFrist.tage !== null ? `${r.kantonalFrist.tage} Tage. ` : ''}${r.kantonalFrist.text} ${r.kantonalFrist.stillstandText}`,
       normen: [],
     }] : []),
-    { beschreibung: 'Weiterzug ans Bundesgericht', zwischenergebnis: r.bgerText, normen: [] },
+    { beschreibung: 'Weiterzug ans Bundesgericht', zwischenergebnis: `${r.bgerText} Zuständig wäre die ${r.bgerAbteilung}.`, normen: [] },
     { beschreibung: 'Frist (Bundesgericht)', zwischenergebnis: `${r.bgerFrist.tage} Tage. ${r.bgerFrist.text} ${r.bgerFrist.stillstandText}`, normen: [] },
   ];
   return {

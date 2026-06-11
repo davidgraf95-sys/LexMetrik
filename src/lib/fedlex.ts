@@ -42,6 +42,14 @@ export const FEDLEX = {
   // neuste, keine künftige Fassung; geprüft 7.6.2026, Betreibungskosten-
   // Rechner; Dossier bibliothek/recherche/gebv-schkg-kostenrechner.md).
   GebVSchKG: 'https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de',
+  // BGG SR 173.110 — Cache gepinnt (fedlex-cache.sh, Konsolidierung 20260401);
+  // Anker art_42–art_119 empirisch verifiziert (11.6.2026, BGer-Rechtsweg;
+  // Dossier bibliothek/recherche/bgg-beschwerde-engine.md).
+  BGG:   'https://www.fedlex.admin.ch/eli/cc/2006/218/de',
+  // BGerR SR 173.110.131 — Cache gepinnt 11.6.2026 (Konsolidierung 20260201,
+  // Filestore NUR ohne -N-Suffix); Anker art_33/34/35/35_a/36 zeichengenau
+  // verifiziert (rechtsmittel-spruchkoerper-kantone.md §3).
+  BGerR: 'https://www.fedlex.admin.ch/eli/cc/2006/834/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

@@ -67,6 +67,9 @@ export const CALCULATORS: Calculator[] = [
   { slug: 'betreibungskosten', titel: 'Betreibungskosten (GebV SchKG)', kategorie: 'SchKG',
     kurzbeschrieb: 'Amtliche Gebühren je Betreibungsschritt nach der GebV SchKG (Stand 1.1.2026): Zahlungsbefehl, Pfändung, Verwertung, Einzahlung als Punktwerte; Entscheidgebühren (z. B. Rechtsöffnung) ehrlich als Rahmen; Auslagen und Überwälzung (Art. 68 SchKG) als Hinweis.',
     normen: ['Art. 16 GebV SchKG', 'Art. 20 GebV SchKG', 'Art. 30 GebV SchKG', 'Art. 48 GebV SchKG', 'Art. 68 SchKG'], status: 'entwurf', icon: 'percent' },
+  { slug: 'bgg-fristen', titel: 'Beschwerde ans Bundesgericht (BGG)', kategorie: 'Übergreifend',
+    kurzbeschrieb: 'Weiterzug ans Bundesgericht für alle vier Beschwerdewege: Zulässigkeit (Streitwertgrenzen Art. 74 BGG mit Ausnahmen), Beschwerdefrist 30/10/5/3 Tage mit Stillstand (Art. 100/46 BGG) und konkretem Fristende, zuständige Abteilung nach BGerR – inkl. subsidiärer Verfassungsbeschwerde.',
+    normen: ['Art. 74 BGG', 'Art. 100 BGG', 'Art. 46 BGG', 'Art. 113 BGG', 'Art. 33 BGerR'], status: 'entwurf', icon: 'scale' },
   // S-5c 10.6.2026: Fristenspiegel aufgelöst (Ereignis-Blöcke in den Fach-
   // Rechnern; /rechner/fristenspiegel = Redirect mit Query-Weiterreichung).
 ];

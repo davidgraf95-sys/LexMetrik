@@ -431,8 +431,23 @@ const KARTEN: Record<string, CalculatorCard> = {
     id: 'bgg-fristen', modus: 'rechner', art: 'frist', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'uebergreifend',
     title: 'Beschwerde ans Bundesgericht (BGG)',
-    description: 'Beschwerdefristen ans Bundesgericht in Zivil-, Straf- und öffentlich-rechtlichen Sachen, inkl. Stillstand.',
-    status: 'geplant', norms: [],
+    description: 'Weiterzug ans Bundesgericht für alle vier Beschwerdewege: Zulässigkeit (Streitwertgrenzen mit Ausnahmen), Frist 30/10/5/3 Tage mit Stillstand und konkretem Fristende, zuständige Abteilung – inkl. subsidiärer Verfassungsbeschwerde.',
+    status: 'entwurf',
+    norms: [
+      // Art. 74 BGG – Streitwertgrenzen + Ausnahmen (Wortlaut verifiziert 11.6.2026)
+      { label: 'Art. 74 BGG', url: fedlexUrl('BGG', '74'), verified: false },
+      // Art. 100 BGG – Beschwerdefristen inkl. Sonderfristen (Wortlaut verifiziert 11.6.2026)
+      { label: 'Art. 100 BGG', url: fedlexUrl('BGG', '100'), verified: false },
+      // Art. 46 BGG – Fristenstillstand + Ausnahmen (Wortlaut verifiziert 11.6.2026)
+      { label: 'Art. 46 BGG', url: fedlexUrl('BGG', '46'), verified: false },
+      // Art. 113 BGG – subsidiäre Verfassungsbeschwerde (Wortlaut verifiziert 11.6.2026)
+      { label: 'Art. 113 BGG', url: fedlexUrl('BGG', '113'), verified: false },
+      // Art. 33 BGerR – Abteilungs-Zuteilung (zeichengenau verifiziert 7.6./11.6.2026)
+      { label: 'Art. 33 BGerR', url: fedlexUrl('BGerR', '33'), verified: false },
+    ],
+    href: '/rechner/bgg-fristen',
+    related: ['zustaendigkeit', 'streitwert', 'tagerechner', 'schkg-fristen'],
+    keywords: ['Bundesgericht', 'BGer', 'Beschwerde', 'BGG', 'Streitwertgrenze', 'Verfassungsbeschwerde', 'Rechtsöffnung', 'Abteilung', 'Frist 30 Tage'],
   },
   'straf-verjaehrung': {
     id: 'straf-verjaehrung', modus: 'rechner', art: 'frist', rechtsgebiet: 'Strafrecht & Strafprozess',

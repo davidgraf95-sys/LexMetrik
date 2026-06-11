@@ -218,10 +218,13 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // Deklarierte Anpassung 11.6.2026 (Auftrag David «mache mahnungsengine»):
   // + Vorlage «Mahnung & Inverzugsetzung» (B.9, geplant → entwurf) →
   // 35 gebaut / 31 sichtbar.
-  it('verfügbar = status !== geplant; Regressionszählung 35 gebaut / 31 sichtbar (Stand 11.6.2026)', () => {
+  // Deklarierte Anpassung 11.6.2026 (Auftrag David, FAHRPLAN-BGER-RECHTSWEG):
+  // + Rechner «Beschwerde ans Bundesgericht (BGG)» (bgg-fristen,
+  // geplant → entwurf) → 36 gebaut / 32 sichtbar.
+  it('verfügbar = status !== geplant; Regressionszählung 36 gebaut / 32 sichtbar (Stand 11.6.2026)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(35);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(31);
+    expect(verf.length).toBe(36);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(32);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

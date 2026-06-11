@@ -48,6 +48,8 @@ export const FRISTEN_PROZESSUAL: FristenRegimeZeile[] = [
     warum: 'Fristen im Zivilprozess mit Stillstand (Art. 145 ZPO), Zustellregeln und kantonalen Feiertagen – gerichtliche und gesetzliche Fristen' },
   { id: 'schkg-fristen',
     warum: 'Fristen in der Betreibung mit Betreibungsferien und Rechtsstillstand (Art. 56/63 SchKG) – getrennt vom ZPO-Stillstand gerechnet' },
+  { id: 'bgg-fristen',
+    warum: 'eigenes Bundesgerichts-Regime: Fristen 30/10/5/3 Tage je Materie (Art. 100 BGG) mit eigenem Stillstand samt abschliessenden Ausnahmen (Art. 46 BGG) – dazu Zulässigkeit und Abteilung' },
 ];
 
 /** Materielle Fristen: Regimes des materiellen Rechts (ohne Gerichtsferien). */

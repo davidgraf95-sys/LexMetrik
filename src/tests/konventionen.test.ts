@@ -51,6 +51,19 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       ['mv-gates', pruefeMvGates({ ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X', mieterName: 'M', mieterAdresse: 'Y', objektBeschrieb: 'Z', objektAdresse: 'A', kanton: 'BE', beginn: '2026-10-01', mietzinsNettoCHF: '2000', nkPositionen: ['Heizung'], kautionCHF: '9000', ort: 'Basel', datum: '2026-06-15' })],
     ];
 
+    // BGer-Rechtsweg (11.6.2026): alle vier Wege + Sonderkonstellationen
+    // (Eheschutz/Schied/Rechtsöffnung/Zwischenentscheid) durch den Linter.
+    const { berechneBgerRechtsweg } = await import('../lib/bgerRechtsweg');
+    faelle.push(
+      ['bger-zivil', berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'rechtsoeffnung', vermoegensrechtlich: true, streitwertCHF: 20_000, eroeffnung: '2026-07-01', kanton: 'ZH' })],
+      ['bger-eheschutz', berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'familienrecht', vermoegensrechtlich: false, eheschutz: true, objekt: 'zwischen_anderer' })],
+      ['bger-schied', berechneBgerRechtsweg({ weg: 'zivil', zivilGebiet: 'schuldrecht', vermoegensrechtlich: true, streitwertCHF: 1_000, schiedsgericht: true })],
+      ['bger-schkg', berechneBgerRechtsweg({ weg: 'schkg_aufsicht', wechselbetreibung: true })],
+      ['bger-straf', berechneBgerRechtsweg({ weg: 'straf', vorsorglicheMassnahme: true })],
+      ['bger-verwaltung', berechneBgerRechtsweg({ weg: 'verwaltung', verwaltungSonderfall: 'nationalratswahl' })],
+      ['bger-marke', berechneBgerRechtsweg({ weg: 'zivil', markenwiderspruch: true })],
+    );
+
     // Mahnung & Inverzugsetzung (11.6.2026): Maximalkombis beider Varianten
     // (Verfalltag + vertraglicher Zins + Mahngebühr bzw. Nachfrist) + Gates.
     const { maZusammenstellen, pruefeMaGates, MA_DEFAULTS } = await import('../lib/vorlagen/mahnung');

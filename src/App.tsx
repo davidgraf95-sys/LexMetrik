@@ -25,6 +25,7 @@ const RechnerZustaendigkeit = lazy(() => import('./pages/RechnerZustaendigkeit')
 const FristenspiegelRedirect = lazy(() => import('./pages/FristenspiegelRedirect').then((m) => ({ default: m.FristenspiegelRedirect })));
 const RechnerStreitwert = lazy(() => import('./pages/RechnerStreitwert').then((m) => ({ default: m.RechnerStreitwert })));
 const RechnerGebvKosten = lazy(() => import('./pages/RechnerGebvKosten').then((m) => ({ default: m.RechnerGebvKosten })));
+const RechnerBgerRechtsweg = lazy(() => import('./pages/RechnerBgerRechtsweg').then((m) => ({ default: m.RechnerBgerRechtsweg })));
 const VorlageTestament = lazy(() => import('./pages/VorlageTestament').then((m) => ({ default: m.VorlageTestament })));
 const VorlagePatientenverfuegung = lazy(() => import('./pages/VorlagePatientenverfuegung').then((m) => ({ default: m.VorlagePatientenverfuegung })));
 const VorlageVorsorgeauftrag = lazy(() => import('./pages/VorlageVorsorgeauftrag').then((m) => ({ default: m.VorlageVorsorgeauftrag })));
@@ -104,6 +105,7 @@ export default function App() {
         <Route path="/rechner/fristenspiegel" element={<FristenspiegelRedirect />} />
         <Route path="/rechner/streitwert" element={<RechnerStreitwert />} />
         <Route path="/rechner/betreibungskosten" element={<RechnerGebvKosten />} />
+        <Route path="/rechner/bgg-fristen" element={<RechnerBgerRechtsweg />} />
         {/* Vorlagen (Modus «Vorlagen») */}
         <Route path="/vorlagen/testament" element={<VorlageTestament />} />
         <Route path="/vorlagen/patientenverfuegung" element={<VorlagePatientenverfuegung />} />
