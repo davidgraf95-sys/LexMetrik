@@ -1,5 +1,10 @@
 # Vollerhebung GlG-Schlichtungsbehörden (Art. 200 Abs. 2 ZPO) — alle 26 Kantone
 
+**Erstellt:** 11.6.2026 (Schlichtungs-Vollerhebung, Auftrag David; S1-Kopf
+nachgetragen im Deploy-Check 11.6.2026) · **Abrufdatum: 10./11.6.2026** ·
+**Status: einfach belegt (kantonale amtliche Quellen via
+lexfind/clex/LexWork); Abnahme David ausstehend.**
+
 Erhebung: 10./11.06.2026. Gegenstand: paritätische Schlichtungsbehörde für Diskriminierungs-Streitigkeiten nach dem Gleichstellungsgesetz (GlG/LEg/LPar) aus **privatrechtlichen** Arbeitsverhältnissen.
 Methode: kantonales Organisationsrecht via lexfind.ch-API / kantonale clex-/LexWork-Portale (PDF-Volltexte extrahiert, Normen wörtlich zitiert); Adressen ausschliesslich von amtlichen Kantonsseiten. Das EBG-Adress-PDF («Adressen_Schlichtungsstellen nach GlG.pdf», ebg.admin.ch) war am Stichtag grossteils 404 und diente nur punktuell als Sekundär-Abgleich; ersatzweise Sekundär-Abgleich über SKS-Mitgliederliste (sks-coc.ch) und gleichstellungsgesetz.ch — massgeblich sind durchwegs die kantonalen amtlichen Quellen.
 
