@@ -75,6 +75,12 @@ Vor jedem Struktur-Umbau gilt das Protokoll:
    deklarierten Schritt mit Begründung.
 4. Performance-Massnahmen (Lazy Loading, Code-Splitting) ändern nur den
    **Ladezeitpunkt**, nie Inhalt oder Reihenfolge der Logik.
+5. Diagnose sparsam (Token-Disziplin, 11.6.2026): Bei rotem vitest zuerst
+   nur die rote Datei nachfahren (`npx vitest run src/tests/<datei>`), nicht
+   die Suite. Golden-Abweichungen je Fall über `npm run golden:diff -- <id>`
+   ansehen — `golden/lexmetrik-golden.json`, `dist/` und `package-lock.json`
+   werden nie direkt gelesen (auch nicht von Review-Agents). Das kürzt nur
+   den Diagnoseweg, nie ein Tor.
 
 ## §7 Normen: verifizieren, nicht vertrauen
 
