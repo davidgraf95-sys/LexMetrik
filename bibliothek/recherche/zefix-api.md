@@ -13,8 +13,14 @@
   mit Origin lexmetrik.vercel.app) → Browser-Direktaufruf möglich, kein
   Proxy nötig. CSP-Erweiterung: `connect-src 'self' https://www.zefix.ch`.
 - Antwortfelder (genutzt): `list[].name` (Firma wörtlich gemäss HR),
-  `list[].uidFormatted` («CHE-105.829.940»), `list[].legalSeat`
-  (Sitzgemeinde), `list[].status` («EXISTIEREND»).
+  `list[].ehraid`, `list[].uidFormatted` («CHE-105.829.940»),
+  `list[].legalSeat` (Sitzgemeinde), `list[].status` («EXISTIEREND»).
+- Suche akzeptiert auch die **UID direkt als `name`** (empirisch 11.6.2026:
+  `{"name":"CHE-105.829.940"}` → Treffer Migros).
+- **Detail** (für die Domiziladresse, Z1b): `GET
+  https://www.zefix.ch/ZefixREST/api/v1/firm/{ehraid}.json` → `address`
+  mit `street`, `houseNumber`, `swissZipCode`, `town`; CORS ebenfalls
+  offen (empirisch 11.6.2026, Migros: Limmatstrasse 152, 8005 Zürich).
 
 ## Regel deterministisch (Eingabe → Ausgabe)
 

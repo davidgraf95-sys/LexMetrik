@@ -120,8 +120,13 @@ export function VorlageSchlichtungsgesuchBs() {
                   onBlur={() => { const n = p.uid ? uidNormalisieren(p.uid) : null; if (n && n !== p.uid) setListe(liste.map((x, j) => j === i ? { ...p, uid: n } : x)); }} />
               </Field>
               <div className="sm:col-span-2">
-                <ZefixSuche firma={p.firma} onUebernehmen={(t) =>
-                  setListe(liste.map((x, j) => j === i ? { ...p, firma: t.firma, uid: t.uid, sitzOrt: p.sitzOrt.trim() ? p.sitzOrt : t.sitzOrt } : x))} />
+                <ZefixSuche firma={p.firma} uid={p.uid} onUebernehmen={(t) =>
+                  setListe(liste.map((x, j) => j === i ? {
+                    ...p, firma: t.firma, uid: t.uid,
+                    sitzStrasse: t.strasse || p.sitzStrasse,
+                    sitzPlz: t.plz || p.sitzPlz,
+                    sitzOrt: t.ort || p.sitzOrt,
+                  } : x))} />
               </div>
               <Field label="Sitz: Strasse / Nr."><input className={inputCls} value={p.sitzStrasse} onChange={(e) => setListe(liste.map((x, j) => j === i ? { ...p, sitzStrasse: e.target.value } : x))} /></Field>
               <div className="grid grid-cols-[6rem_1fr] gap-3">
