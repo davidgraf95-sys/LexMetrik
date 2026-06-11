@@ -5,6 +5,8 @@
       "Bash(npm run build)",
       "Bash(npm test *)",
       "Bash(npm run golden:vergleich)",
+      "Bash(npm run gate)",
+      "Bash(npm run gate:schnell)",
       "Bash(npm run check)",
       "Bash(npm run check:inventur)",
       "Bash(npm run check:bibliothek)",
