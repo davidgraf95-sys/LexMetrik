@@ -91,6 +91,24 @@ erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 > Detail-Backlog. B.18 (Roadmap-Triage) geht in G1 auf; A.2 (Markt-Themen)
 > bleibt bewusst draussen; §0a gilt weiter.
 
+> **DEPLOYED 11.6.2026 nachmittags (Freigaben David): SSG/SEO-Umbau LIVE**
+> — Push origin/main `58eaa7c`/`ae32021`, Prod lexmetrik.vercel.app: alle
+> 38 Routen volles HTML ohne JS (Titel/Canonical/OG/JSON-LD je Route,
+> sitemap.xml, robots), LCP 184 ms, Rechner unverändert (Golden 104/104
+> in jeder Etappe). Details: docs/ssg-diagnose.md +
+> docs/ssg-umbau-protokoll.md. §9-Bug-Check (6×2-Workflow) fixte 10
+> Befunde, darunter BGer-Stimmrechtssachen-Stillstand (Sonderfall neu)
+> und Art.-98-Haftsachen-Gate — **fachliche Abnahme dieser
+> §7-Abweichungen durch David OFFEN**. Damit ist das frühere «NICHT
+> gepusht (§9 wartet auf Ja)» oben erledigt.
+>
+> **NEU (Entscheid David 11.6.2026): Zefix-UID für juristische Personen**
+> — optionales UID-Feld (CHE-Validierung eCH-0097) in ALLEN Vorlagen mit
+> jur. Personen + Zefix-Auto-Lookup auf Klick (API CORS-offen, empirisch
+> geprüft; CSP connect-src um https://www.zefix.ch erweitern; /datenschutz
+> nachführen = TODO David). Behördeneingaben-Familie hat uid?-Feld im
+> Modell bereits (PersonJuristisch/parteiZeilen).
+
 ## §0a · ~~LEITPRINZIP PERFEKTION VOR NEUBAU~~ (AUFGEHOBEN, Anweisung David 10.6.2026 abends)
 
 **GESTRICHEN durch David 10.6.2026 («streiche die regel von §0a»)** —
