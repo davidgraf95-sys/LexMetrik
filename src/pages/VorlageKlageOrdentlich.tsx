@@ -254,6 +254,20 @@ export function VorlageKlageOrdentlich() {
             Im ordentlichen Verfahren sind die Tatsachenbehauptungen und die Beweismittel zu den
             einzelnen Tatsachen <strong>Pflichtinhalt</strong> der Klage (Art. 221 Abs. 1 lit. d/e ZPO).
           </p>
+          {/* Auftrag David 11.6.2026: Begründung wahlweise hier erfassen oder
+              als Platzhalter im Dokument später ausfüllen. */}
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" className="mt-0.5" checked={a.begruendungModus === 'platzhalter'}
+              onChange={(e) => set('begruendungModus', e.target.checked ? 'platzhalter' : 'maske')} />
+            <span>Begründung später ausfüllen <span className="text-ink-500">(die Klage erhält nummerierte Platzhalter für Tatsachen, Beweise und Rechtliches; die Pflichtinhalte sind vor der Einreichung zu ergänzen)</span></span>
+          </label>
+          {a.begruendungModus === 'platzhalter' && (
+            <p className="lc-notice-warn text-body-s">
+              Das Dokument enthält Leer-Ziffern («________») unter «I. Tatsächliches», «II. Rechtliches»
+              und im Beweismittelverzeichnis — vor der Einreichung vollständig ausfüllen (Art. 221 Abs. 1 lit. d/e ZPO).
+            </p>
+          )}
+          {a.begruendungModus !== 'platzhalter' && (<>
           <div className="space-y-3">
             <p className="lc-overline">Tatsachenbehauptungen mit Beweisofferte</p>
             {a.tatsachen.map((t, i) => (
@@ -305,6 +319,7 @@ export function VorlageKlageOrdentlich() {
             Das Beweismittelverzeichnis (Art. 221 Abs. 2 lit. d ZPO) und das Beilagenverzeichnis
             werden aus den bezeichneten Beweismitteln automatisch erstellt.
           </p>
+          </>)}
         </div>
       );
 

@@ -429,9 +429,21 @@ export function VorlageSchlichtungsgesuchBs() {
               placeholder="z. B. Forderung aus Werkvertrag vom 01.02.2025 (Rechnung Nr. 1234)"
               onChange={(e) => set('streitgegenstand', e.target.value)} />
           </Field>
-          <Field label="Begründung" optional hint="nicht erforderlich – eine kurze Begründung ist möglich">
-            <textarea className={inputCls} rows={4} value={a.begruendung ?? ''} onChange={(e) => set('begruendung', e.target.value)} />
-          </Field>
+          {/* Auftrag David 11.6.2026: wahlweise Platzhalter im Dokument. */}
+          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <input type="checkbox" className="mt-0.5" checked={a.begruendungPlatzhalter ?? false}
+              onChange={(e) => set('begruendungPlatzhalter', e.target.checked || undefined)} />
+            <span>Begründung später ausfüllen <span className="text-ink-500">(das Gesuch erhält einen Platzhalter-Block; eine Begründung ist nicht erforderlich, Art. 202 ZPO)</span></span>
+          </label>
+          {a.begruendungPlatzhalter ? (
+            <p className="lc-notice-warn text-body-s">
+              Das Gesuch enthält unter «Begründung» Platzhalter-Linien («________») zum Handausfüllen.
+            </p>
+          ) : (
+            <Field label="Begründung" optional hint="nicht erforderlich – eine kurze Begründung ist möglich">
+              <textarea className={inputCls} rows={4} value={a.begruendung ?? ''} onChange={(e) => set('begruendung', e.target.value)} />
+            </Field>
+          )}
         </div>
       );
 

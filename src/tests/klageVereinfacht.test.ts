@@ -209,3 +209,20 @@ describe('Kantonsausbau (Auftrag David 10.6.2026) — Routing/Adressat alle Kant
     expect(kvKlagefrist('2026-05-04', 'vermoegensrechtlich', 'ZH')).not.toBeNull();
   });
 });
+
+// ── Begründungs-Platzhalter (Auftrag David 11.6.2026) ────────────────────────
+describe('Klage vereinfacht — Platzhalter-Begründung', () => {
+  it('aktiv + Platzhalter: Leer-Ziffern statt Masken-Eingaben, Hinweis offengelegt', () => {
+    const a = basis({ begruendungAktiv: true, begruendungPlatzhalter: true, sachverhalt: [], beweismittel: [] });
+    const e = kvZusammenstellen(a);
+    const t = e.dokument.absaetze.map((x) => `${x.ueberschrift ?? ''}\n${x.text}`).join('\n');
+    expect(t).toContain('– ________');
+    expect(t).not.toContain('Auf eine schriftliche Begründung wird verzichtet');
+    expect(kvHinweise(a).some((h) => h.includes('Platzhalter'))).toBe(true);
+  });
+  it('Default unverändert: ohne Begründung weiterhin Verzichts-Baustein', () => {
+    const e = kvZusammenstellen(basis());
+    const t = e.dokument.absaetze.map((x) => `${x.ueberschrift ?? ''}\n${x.text}`).join('\n');
+    expect(t).toContain('Auf eine schriftliche Begründung wird verzichtet');
+  });
+});

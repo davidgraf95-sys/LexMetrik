@@ -63,6 +63,13 @@ export type KoAnswers = {
   // Begründung (PFLICHT, Art. 221 Abs. 1 lit. d/e)
   tatsachen: KoTatsache[];
   rechtlicheBegruendung: { text: string }[];  // fakultativ (Abs. 3)
+  /** Auftrag David 11.6.2026: Begründung wahlweise in der Maske ('maske',
+   *  Default — alte Speicherstände ohne Feld bleiben gültig) oder als
+   *  PLATZHALTER im Dokument zum späteren Ausfüllen ('platzhalter').
+   *  Tatsachen + Beweismittel bleiben Pflichtinhalt (Art. 221 Abs. 1
+   *  lit. d/e ZPO) — der Modus verschiebt nur das Ausfüllen; Hinweis
+   *  legt das offen (§8). */
+  begruendungModus?: 'maske' | 'platzhalter';
   // Klagebewilligung / Ausnahme (Art. 221 Abs. 2 lit. b)
   klagebewilligungVorhanden: boolean;
   klagebewilligungDatum: string;
@@ -164,12 +171,16 @@ export function koMaengel(a: KoAnswers): KoMangel[] {
     m.push({ schritt: 2, text: 'Mindestens ein Rechtsbegehren formulieren (Art. 221 Abs. 1 lit. b ZPO).' });
   }
   if (!a.streitgegenstand.trim()) m.push({ schritt: 2, text: 'Streitgegenstand kurz bezeichnen (Rubrum).' });
-  // PFLICHT-Begründung (Art. 221 Abs. 1 lit. d/e)
-  if (a.tatsachen.filter((t) => t.text.trim()).length === 0) {
-    m.push({ schritt: 3, text: 'Mindestens eine Tatsachenbehauptung ausführen (Pflichtinhalt, Art. 221 Abs. 1 lit. d ZPO).' });
-  }
-  if (a.tatsachen.some((t) => t.text.trim() && t.beweise.filter((b) => b.bezeichnung.trim()).length === 0)) {
-    m.push({ schritt: 3, text: 'Zu jeder behaupteten Tatsache die Beweismittel bezeichnen (Art. 221 Abs. 1 lit. e ZPO) — notfalls «Parteibefragung».' });
+  // PFLICHT-Begründung (Art. 221 Abs. 1 lit. d/e) — im Platzhalter-Modus
+  // (Auftrag David 11.6.2026) hält das Gate nicht an: das Dokument trägt
+  // die Lücken sichtbar, der Hinweis legt die Ergänzungspflicht offen (§8).
+  if (a.begruendungModus !== 'platzhalter') {
+    if (a.tatsachen.filter((t) => t.text.trim()).length === 0) {
+      m.push({ schritt: 3, text: 'Mindestens eine Tatsachenbehauptung ausführen (Pflichtinhalt, Art. 221 Abs. 1 lit. d ZPO) — oder im Begründungs-Schritt «später ausfüllen» wählen (Platzhalter im Dokument).' });
+    }
+    if (a.tatsachen.some((t) => t.text.trim() && t.beweise.filter((b) => b.bezeichnung.trim()).length === 0)) {
+      m.push({ schritt: 3, text: 'Zu jeder behaupteten Tatsache die Beweismittel bezeichnen (Art. 221 Abs. 1 lit. e ZPO) — notfalls «Parteibefragung».' });
+    }
   }
   if (a.ausnahme === 'verzicht_gemeinsam' && a.vermoegensrechtlich && sw !== null && sw < ZPO_SCHWELLEN.VERZICHT_GEMEINSAM) {
     m.push({ schritt: 4, text: `Gemeinsamer Verzicht setzt einen Streitwert von mindestens CHF ${fmtCHF(String(ZPO_SCHWELLEN.VERZICHT_GEMEINSAM))} voraus (Art. 199 Abs. 1 ZPO) — der angegebene Streitwert liegt darunter.` });
@@ -189,6 +200,9 @@ const HG_KANTONE: readonly Kanton[] = ['ZH', 'BE', 'AG', 'SG'] as const;
 
 export function koHinweise(a: KoAnswers): string[] {
   const h: string[] = [];
+  if (a.begruendungModus === 'platzhalter') {
+    h.push('Begründung als Platzhalter: Tatsachenbehauptungen mit Beweismitteln je Behauptung sind PFLICHTINHALT der Klage (Art. 221 Abs. 1 lit. d/e ZPO) — die Lücken im Dokument vor der Einreichung vollständig ausfüllen; das Beweismittelverzeichnis entsprechend ergänzen.');
+  }
   if (a.klagebewilligungVorhanden && a.klagebewilligungDatum) {
     // Art. 209 Abs. 4 ZPO gilt für ALLE Miete-/Pachtstreitigkeiten
     // Wohn-/Geschäftsräume (auch ordentlich, Bug-Check B1 10.6.2026).
@@ -317,16 +331,22 @@ export function koZusammenstellen(a: KoAnswers) {
   // Tatsachen mit Beweisofferte je Ziffer (Art. 221 Abs. 1 lit. d/e)
   // Manuelle Nummerierung (die Engine-Ziffern laufen baustein-übergreifend
   // fort — Bug-Fund 10.6.2026); Beweisofferte je Ziffer (lit. e).
-  const tatsachenListe = a.tatsachen
-    .filter((t) => t.text.trim())
-    .map((t, i) => {
-      const beweise = t.beweise.map((b) => b.bezeichnung.trim()).filter(Boolean);
-      return { text: `${i + 1}. ${t.text.trim()}${beweise.length > 0 ? `\nBeweis: ${beweise.join('; ')}` : ''}` };
-    });
+  // Platzhalter-Modus (Auftrag David 11.6.2026): drei Leer-Ziffern mit
+  // Beweis-Zeile zum Handausfüllen statt der Masken-Eingaben.
+  const platzhalter = a.begruendungModus === 'platzhalter';
+  const tatsachenListe = platzhalter
+    ? [1, 2, 3].map((i) => ({ text: `${i}. ________\nBeweis: ________` }))
+    : a.tatsachen
+      .filter((t) => t.text.trim())
+      .map((t, i) => {
+        const beweise = t.beweise.map((b) => b.bezeichnung.trim()).filter(Boolean);
+        return { text: `${i + 1}. ${t.text.trim()}${beweise.length > 0 ? `\nBeweis: ${beweise.join('; ')}` : ''}` };
+      });
 
   // Beweismittelverzeichnis (Abs. 2 lit. d): dedupliziert über alle Tatsachen
   const verzeichnis: string[] = [];
-  for (const t of a.tatsachen) for (const b of t.beweise) {
+  if (platzhalter) verzeichnis.push('________');
+  else for (const t of a.tatsachen) for (const b of t.beweise) {
     const bez = b.bezeichnung.trim();
     if (bez && !verzeichnis.includes(bez)) verzeichnis.push(bez);
   }
@@ -357,7 +377,9 @@ export function koZusammenstellen(a: KoAnswers) {
     rechtsbegehrenListe: begehren,
     formellesText: formellesTeile.join(' '),
     tatsachenListe,
-    rechtListe: a.rechtlicheBegruendung.map((r) => r.text.trim()).filter(Boolean).map((text, i) => ({ text: `${i + 1}. ${text}` })),
+    rechtListe: platzhalter
+      ? [{ text: '1. ________' }]
+      : a.rechtlicheBegruendung.map((r) => r.text.trim()).filter(Boolean).map((text, i) => ({ text: `${i + 1}. ${text}` })),
     beweisverzeichnisListe: verzeichnis.map((text) => ({ text })),
     beilagenListe: beilagen,
     unterschriftName,

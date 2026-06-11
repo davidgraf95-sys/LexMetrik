@@ -99,3 +99,27 @@ describe('Klage ordentlich — Prefill-Brücke', () => {
     expect(koStreitwert(basis({ streitwert: "120'500.50" }))).toBe(120500.5);
   });
 });
+
+// ── Begründungs-Modus «später ausfüllen» (Auftrag David 11.6.2026) ──────────
+describe('Klage ordentlich — Platzhalter-Begründung', () => {
+  it('Platzhalter-Modus: kein Tatsachen-Mangel, dafür Offenlegungs-Hinweis', async () => {
+    const a = basis({ begruendungModus: 'platzhalter', tatsachen: [{ text: '', beweise: [] }] });
+    expect(koMaengel(a).some((m) => m.text.includes('Tatsachenbehauptung'))).toBe(false);
+    const { koHinweise } = await import('../lib/vorlagen/klageOrdentlich');
+    expect(koHinweise(a).some((h) => h.includes('Platzhalter'))).toBe(true);
+  });
+  it('Dokument trägt Leer-Ziffern unter Tatsächlichem, Rechtlichem und im Verzeichnis', () => {
+    const t = text(basis({ begruendungModus: 'platzhalter', tatsachen: [{ text: '', beweise: [] }] }));
+    expect(t).toContain('I. Tatsächliches');
+    expect(t).toContain('1. ________\nBeweis: ________');
+    expect(t).toContain('3. ________');
+    expect(t).toContain('II. Rechtliches');
+    expect(t).toContain('Beweismittelverzeichnis');
+  });
+  it('Masken-Modus (Default) unverändert: Pflicht-Mangel ohne Tatsachen', () => {
+    const a = basis({ tatsachen: [{ text: '', beweise: [] }] });
+    expect(koMaengel(a).some((m) => m.text.includes('Tatsachenbehauptung'))).toBe(true);
+    const t = text(basis());
+    expect(t).not.toContain('1. ________');
+  });
+});

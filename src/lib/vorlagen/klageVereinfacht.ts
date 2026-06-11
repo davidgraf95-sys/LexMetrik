@@ -184,6 +184,10 @@ export type KvAnswers = {
   begruendungAktiv: boolean;
   sachverhalt: { text: string }[];          // Tatsachenbehauptungen, je Ziffer
   beweismittel: { bezeichnung: string; fuer?: string }[];
+  /** Auftrag David 11.6.2026: bei aktiver Begründung wahlweise PLATZHALTER
+   *  im Dokument («später ausfüllen») statt der Masken-Eingaben; alte
+   *  Speicherstände ohne Feld = false (Maske). */
+  begruendungPlatzhalter?: boolean;
   // Klagebewilligung / Ausnahme (Art. 209 bzw. 198/199 ZPO)
   klagebewilligungVorhanden: boolean;
   klagebewilligungDatum: string;  // ISO (Eröffnung/Zustellung)
@@ -331,6 +335,9 @@ export function kvHinweise(a: KvAnswers): string[] {
   if (!a.begruendungAktiv) {
     h.push('Ohne schriftliche Begründung stellt das Gericht die Klage der Gegenpartei zu und lädt direkt zur Verhandlung vor (Art. 245 Abs. 1 ZPO); die Begründung kann mündlich erfolgen.');
   }
+  if (a.begruendungAktiv && a.begruendungPlatzhalter) {
+    h.push('Begründung als Platzhalter: die Leer-Ziffern (Tatsachendarstellung und Beweismittel) vor der Einreichung von Hand ausfüllen — oder die Eingaben in der Maske erfassen.');
+  }
   if (routing?.anwendbar) {
     h.push(`Sachlich zuständig: ${routing.spruchkoerper} (${routing.spruchkoerperNorm}). Berufung ans Appellationsgericht ab Streitwert CHF 10'000 (Art. 308 Abs. 2 ZPO).`);
   }
@@ -471,12 +478,20 @@ export function kvZusammenstellen(a: KvAnswers) {
     streitgegenstandKurz: a.streitgegenstand.trim() || '________',
     rechtsbegehrenListe: begehren,
     formellesText: formellesTeile.join(' '),
-    sachverhaltListe: a.begruendungAktiv ? a.sachverhalt.filter((s) => s.text.trim()).map((s) => ({ text: s.text.trim() })) : [],
+    // Platzhalter-Modus (Auftrag David 11.6.2026): Leer-Ziffern zum
+    // Handausfüllen statt der Masken-Eingaben.
+    sachverhaltListe: a.begruendungAktiv
+      ? (a.begruendungPlatzhalter
+        ? [{ text: '________' }, { text: '________' }, { text: '________' }]
+        : a.sachverhalt.filter((s) => s.text.trim()).map((s) => ({ text: s.text.trim() })))
+      : [],
     beweismittelListe: a.begruendungAktiv
-      ? a.beweismittel.filter((b) => b.bezeichnung.trim()).map((b) => ({
-          bezeichnung: b.bezeichnung.trim(),
-          fuerZeile: b.fuer?.trim() ? ` (zum Beweis: ${b.fuer.trim()})` : '',
-        }))
+      ? (a.begruendungPlatzhalter
+        ? [{ bezeichnung: '________', fuerZeile: '' }]
+        : a.beweismittel.filter((b) => b.bezeichnung.trim()).map((b) => ({
+            bezeichnung: b.bezeichnung.trim(),
+            fuerZeile: b.fuer?.trim() ? ` (zum Beweis: ${b.fuer.trim()})` : '',
+          })))
       : [],
     ohneBegruendung: !a.begruendungAktiv,
     beilagenListe: beilagen,

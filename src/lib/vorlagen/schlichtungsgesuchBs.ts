@@ -123,6 +123,9 @@ export type SgAnswers = {
   // Schritt 4 – Streitgegenstand
   streitgegenstand: string;        // Pflicht (Art. 202 Abs. 2 ZPO)
   begruendung?: string;            // möglich, nicht erforderlich
+  /** Auftrag David 11.6.2026: statt Masken-Text einen PLATZHALTER-Block
+   *  im Gesuch lassen («wird später ausgefüllt»); übersteuert begruendung. */
+  begruendungPlatzhalter?: boolean;
   // Schritt 5 – Anträge, Beilagen, Ort/Datum
   antragMediation: boolean;        // Art. 213 ZPO
   antragEntscheid: boolean;        // Art. 212 ZPO – nur vermögensrechtlich ≤ 2'000
@@ -516,6 +519,9 @@ export function sgZusammenstellen(a: SgAnswers) {
         : '________\n________\n________';
   const antworten: Antworten = {
     ...a,
+    // Platzhalter-Modus (Auftrag David 11.6.2026): Leer-Block zum
+    // Handausfüllen — übersteuert einen allfälligen Masken-Text.
+    begruendung: a.begruendungPlatzhalter ? '________\n\n________' : a.begruendung,
     absenderBlock: a.vertretung?.bezeichnung
       ? [a.vertretung.bezeichnung, a.vertretung.zusatz, a.vertretung.strasse, `${a.vertretung.plz} ${a.vertretung.ort}`].filter(Boolean).join('\n')
       : parteiZeilen(a.klaeger[0] ?? { ...SG_PERSON_NATUERLICH }).join('\n'),
@@ -554,7 +560,7 @@ export function sgZusammenstellen(a: SgAnswers) {
   if (!(a.geld?.rechtsoeffnung && a.betreibung?.rechtsvorschlagErhoben)) {
     nichtAufgenommen.push({ label: 'Beseitigung des Rechtsvorschlags', grund: a.geld?.rechtsoeffnung ? 'kein Rechtsvorschlag erhoben' : 'nicht beantragt' });
   }
-  if (!a.begruendung?.trim()) nichtAufgenommen.push({ label: 'Begründung', grund: 'keine erfasst – nicht erforderlich (Art. 202 ZPO)' });
+  if (!a.begruendungPlatzhalter && !a.begruendung?.trim()) nichtAufgenommen.push({ label: 'Begründung', grund: 'keine erfasst – nicht erforderlich (Art. 202 ZPO)' });
 
   return { ...ergebnis, nichtAufgenommen, exemplare: 1 + a.beklagte.length /* Art. 131 ZPO */ };
 }

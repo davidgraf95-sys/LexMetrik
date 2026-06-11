@@ -158,3 +158,16 @@ describe('Bug-Check-Regressionen', () => {
     expect(m.some((x) => x.text.includes('212'))).toBe(true);
   });
 });
+
+// ── Begründungs-Platzhalter (Auftrag David 11.6.2026) ────────────────────────
+describe('Schlichtungsgesuch — Platzhalter-Begründung', () => {
+  it('Platzhalter: Begründungs-Block mit Leerlinien, nicht als «keine erfasst» gemeldet', () => {
+    const r = sgZusammenstellen(basis({ begruendungPlatzhalter: true, begruendung: 'wird ignoriert' }));
+    expect(texte(r)).toContain('________\n\n________');
+    expect(r.nichtAufgenommen.some((n) => n.label === 'Begründung')).toBe(false);
+  });
+  it('Default unverändert: ohne Begründung «keine erfasst»-Zeile', () => {
+    const r = sgZusammenstellen(basis({}));
+    expect(r.nichtAufgenommen.some((n) => n.label === 'Begründung')).toBe(true);
+  });
+});

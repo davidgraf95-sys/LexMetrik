@@ -279,6 +279,19 @@ export function VorlageKlageVereinfacht() {
           </label>
           {a.begruendungAktiv && (
             <>
+              {/* Auftrag David 11.6.2026: wahlweise Platzhalter im Dokument. */}
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
+                <input type="checkbox" className="mt-0.5" checked={a.begruendungPlatzhalter ?? false}
+                  onChange={(e) => set('begruendungPlatzhalter', e.target.checked || undefined)} />
+                <span>Begründung später ausfüllen <span className="text-ink-500">(die Klage erhält Leer-Ziffern für Tatsachendarstellung und Beweismittel)</span></span>
+              </label>
+              {a.begruendungPlatzhalter && (
+                <p className="lc-notice-warn text-body-s">
+                  Das Dokument enthält Platzhalter («________») unter «Begründung» und «Beweismittel» —
+                  vor der Einreichung ausfüllen oder hier in der Maske erfassen.
+                </p>
+              )}
+              {!a.begruendungPlatzhalter && (<>
               <div className="space-y-2">
                 <p className="lc-overline">Sachverhalt — Tatsachenbehauptungen</p>
                 {a.sachverhalt.map((s, i) => (
@@ -312,6 +325,7 @@ export function VorlageKlageVereinfacht() {
                   onClick={() => set('beweismittel', [...a.beweismittel, { bezeichnung: '' }])}>+ Beweismittel</button>
                 <p className="text-xs text-ink-500">Verfügbare Urkunden sind beizulegen (Art. 244 Abs. 3 ZPO) — sie erscheinen automatisch im Beilagenverzeichnis.</p>
               </div>
+              </>)}
             </>
           )}
         </div>
