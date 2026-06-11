@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { Link } from 'react-router-dom';
+import { bgerRechtswegLink } from '../../lib/rechnerPermalinks';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
@@ -541,6 +543,14 @@ function StrafRechtsmittelTeil() {
         <div className="lc-card p-5 space-y-2">
           <p className="lc-overline">Weiterzug ans Bundesgericht</p>
           <p className="text-body-s text-ink-700">{r.bger.text}</p>
+          <p className="text-xs text-ink-500">
+            {/* Prefill-Brücke BGer (Auftrag David 11.6.2026). */}
+            Konkretes Fristende und Details (Haftsachen, Zwischenentscheide):{' '}
+            <Link to={bgerRechtswegLink({ weg: 'straf' })} className="text-brass-700 underline">
+              BGer-Rechner (vorbefüllt)
+            </Link>
+            {' '}— nur noch die Eröffnung des Entscheids eintragen.
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-1.5">

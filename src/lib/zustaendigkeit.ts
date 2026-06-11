@@ -703,6 +703,23 @@ export interface RechtsmittelErgebnis {
   normverweise: Normverweis[];
 }
 
+// BGer-Abteilung (B.5a, 11.6.2026): Zuteilung nach Rechtsgebiet, Art. 33/34
+// BGerR — gilt für die ordentliche Beschwerde UND die subsidiäre
+// Verfassungsbeschwerde (Wortlaut beider Artikel). Die Streitsachen des
+// Katalogs sind Schuldrecht-/Haftpflicht-Materien der I. Abteilung bzw.
+// ZGB-Materien der II.; «geldforderung» meint die vertragliche Forderung
+// (Schuldrecht). Regel zentral in lib/bgerRechtsweg.ts (§5); exportiert für
+// die Prefill-Brücke des Rechtsmittel-Fahrplans in den BGer-Rechner.
+const STREITSACHE_GEBIET: Record<Streitsache, BgerZivilgebiet> = {
+  geldforderung: 'schuldrecht', miete_wohn_geschaeft: 'miete', arbeit: 'arbeit',
+  scheidung: 'familienrecht', erbrecht: 'erbrecht', delikt: 'haftpflicht',
+  persoenlichkeit: 'personenrecht', gesellschaft: 'schuldrecht', ip_wettbewerb: 'immaterialgueter',
+};
+
+export function bgerGebietFuerStreitsache(s: Streitsache): BgerZivilgebiet {
+  return STREITSACHE_GEBIET[s];
+}
+
 export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelErgebnis {
   // Gleiche Eingabe-Validierung wie bestimmeZustaendigkeit (Stufe-2-Check
   // 6.6.2026: jetzt wirklich symmetrisch — auch fehlender Streitwert wirft).
@@ -922,18 +939,7 @@ export function bestimmeRechtsmittel(input: ZustaendigkeitInput): RechtsmittelEr
     : null;
   if (kognitionHinweis) normverweise.push({ artikel: 'Art. 98 BGG' });
 
-  // BGer-Abteilung (B.5a, 11.6.2026): Zuteilung nach Rechtsgebiet, Art. 33/34
-  // BGerR — gilt für die ordentliche Beschwerde UND die subsidiäre
-  // Verfassungsbeschwerde (Wortlaut beider Artikel). Die Streitsachen des
-  // Katalogs sind Schuldrecht-/Haftpflicht-Materien der I. Abteilung bzw.
-  // ZGB-Materien der II.; «geldforderung» meint die vertragliche Forderung
-  // (Schuldrecht). Regel zentral in lib/bgerRechtsweg.ts (§5).
-  const STREITSACHE_GEBIET: Record<Streitsache, BgerZivilgebiet> = {
-    geldforderung: 'schuldrecht', miete_wohn_geschaeft: 'miete', arbeit: 'arbeit',
-    scheidung: 'familienrecht', erbrecht: 'erbrecht', delikt: 'haftpflicht',
-    persoenlichkeit: 'personenrecht', gesellschaft: 'schuldrecht', ip_wettbewerb: 'immaterialgueter',
-  };
-  const abt = bgerAbteilungZivil(STREITSACHE_GEBIET[input.streitsache]);
+  const abt = bgerAbteilungZivil(bgerGebietFuerStreitsache(input.streitsache));
   const bgerAbteilung = `${abt.name} (${abt.norm})`;
   normverweise.push({ artikel: abt.norm, bemerkung: 'Geschäftsverteilung Bundesgericht' });
 

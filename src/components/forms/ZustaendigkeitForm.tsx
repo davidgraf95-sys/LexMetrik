@@ -12,13 +12,13 @@ import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { ZUST_LINK_SPEC, type Instanz, type ZustFormState } from './zustaendigkeitLinkSpecs';
-import { zpoFristenLink } from '../../lib/rechnerPermalinks';
+import { zpoFristenLink, bgerRechtswegLink } from '../../lib/rechnerPermalinks';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { KANTONE } from '../../lib/kantone';
 import type { Kanton } from '../../types/legal';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import {
-  zustaendigkeitErgebnis, ZPO_SCHWELLEN, bestimmeRechtsmittel, rechtsmittelBericht,
+  zustaendigkeitErgebnis, ZPO_SCHWELLEN, bestimmeRechtsmittel, rechtsmittelBericht, bgerGebietFuerStreitsache,
   type ZustaendigkeitInput, type Streitsache, type MieteUnterfall, type Rechtsweg,
   type DeliktUnterfall, type PersoenlichkeitUnterfall, type IpUnterfall,
   type RmObjekt, type RmVerfahren, type RmVorinstanz,
@@ -905,8 +905,33 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             {rechtsmittel.kognitionHinweis && (
               <div className="lc-notice-warn text-body-s">{rechtsmittel.kognitionHinweis}</div>
             )}
-            <p className="text-body-s text-ink-900 whitespace-pre-line border-t border-line pt-3">
+            {/* Abteilungs-Auskunft (B.5a, 11.6.2026; Art. 33/34 BGerR — Regel
+                in lib/bgerRechtsweg.ts, inkl. Rechtsöffnungs-Falle) */}
+            <p className="text-body-s text-ink-700 border-t border-line pt-3">
+              Zuständig wäre die <span className="font-medium text-ink-900">{rechtsmittel.bgerAbteilung}</span> — gilt auch für die subsidiäre Verfassungsbeschwerde.
+            </p>
+            <p className="text-body-s text-ink-900 whitespace-pre-line">
               Schweizerisches Bundesgericht{'\n'}Av. du Tribunal-fédéral 29{'\n'}1005 Lausanne
+            </p>
+            <p className="text-xs text-ink-500">
+              {/* Prefill-Brücke (Auftrag David 11.6.2026): Gebiet/Streitwert/
+                  Objekt/Kanton reisen mit — nur noch die Eröffnung eintragen. */}
+              Konkretes Fristende und Details (Sonderfristen, Verfassungsbeschwerde):{' '}
+              <Link
+                to={bgerRechtswegLink({
+                  weg: 'zivil',
+                  zivilGebiet: bgerGebietFuerStreitsache(f.streitsache),
+                  vermoegensrechtlich,
+                  ...(vermoegensrechtlich && streitwert !== null ? { streitwert } : {}),
+                  objekt: f.rmObjekt === 'endentscheid' ? 'endentscheid' : 'zwischen_anderer',
+                  ...(f.rmObjekt === 'vorsorgliche_massnahme' ? { objekt: 'endentscheid', vorsorglich: true } : {}),
+                  ...(rechtsmittel.kantonal === 'entfaellt_einzige_instanz' ? { einzigeInstanz: true } : {}),
+                  ...(f.kanton !== '' ? { kanton: f.kanton } : {}),
+                })}
+                className="text-brass-700 underline">
+                BGer-Rechner (vorbefüllt)
+              </Link>
+              {' '}— Rechtsgebiet, Streitwert und Konstellation reisen mit; nur noch die Eröffnung des Entscheids eintragen.
             </p>
           </div>
 

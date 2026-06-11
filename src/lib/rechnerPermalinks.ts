@@ -145,3 +145,39 @@ export const FSP_LINK_SPEC: PermalinkSpec<FspFelder & Record<string, unknown>> =
 // S-5c 10.6.2026: fristenspiegelLink() entfernt — der eigenständige
 // Fristenspiegel ist aufgelöst; FSP_LINK_SPEC bleibt als gemeinsame
 // Kodierung der EreignisFristen-Blöcke und des Link-Erbe-Redirects (§5/§8).
+
+// ── BGer-Rechtsweg (FAHRPLAN-BGER-RECHTSWEG; Brücken aus den drei
+// Rechtsmittel-Fahrplänen Zivil/SchKG/Straf, Auftrag David 11.6.2026) ───────
+// Aus BgerRechtswegForm.tsx hierher gehoben (§6-verhaltensneutral, gleiche
+// Parameter): die Form liest/teilt, die Fahrpläne bauen vorbefüllte Links.
+
+export type BgerLink = {
+  weg: string; zivilGebiet?: string; objekt?: string;
+  vermoegensrechtlich?: boolean; streitwert?: number;
+  vorsorglich?: boolean; eheschutz?: boolean; einzigeInstanz?: boolean;
+  konkursrichter?: boolean; schiedsgericht?: boolean; hkue?: boolean;
+  wechsel?: boolean; sonderfall?: string; eroeffnung?: string; kanton?: string;
+};
+
+export const BGER_LINK_SPEC: PermalinkSpec<BgerLink & Record<string, unknown>> = {
+  weg: { p: 'w', typ: 'str', gueltig: einerVon('zivil', 'schkg_aufsicht', 'straf', 'verwaltung') },
+  zivilGebiet: { p: 'g', typ: 'str', gueltig: einerVon('schuldrecht', 'arbeit', 'miete', 'versicherungsvertrag', 'haftpflicht', 'uwg', 'immaterialgueter', 'rechtsoeffnung', 'schkg_uebrig', 'personenrecht', 'familienrecht', 'erbrecht', 'sachenrecht', 'baeuerliches_bodenrecht') },
+  objekt: { p: 'o', typ: 'str', gueltig: einerVon('endentscheid', 'teilentscheid', 'zwischen_zustaendigkeit_ausstand', 'zwischen_anderer') },
+  vermoegensrechtlich: { p: 'v', typ: 'bool' },
+  streitwert: { p: 's', typ: 'num', gueltig: (n) => Number.isFinite(n) && n >= 0 },
+  vorsorglich: { p: 'vm', typ: 'bool' },
+  eheschutz: { p: 'eh', typ: 'bool' },
+  einzigeInstanz: { p: 'ei', typ: 'bool' },
+  konkursrichter: { p: 'kr', typ: 'bool' },
+  schiedsgericht: { p: 'sg', typ: 'bool' },
+  hkue: { p: 'hk', typ: 'bool' },
+  wechsel: { p: 'wb', typ: 'bool' },
+  sonderfall: { p: 'sf', typ: 'str', gueltig: einerVon('keiner', 'rechtshilfe_amtshilfe', 'abstimmung', 'nationalratswahl', 'beschaffung') },
+  eroeffnung: { p: 'e', typ: 'str', gueltig: istISO },
+  kanton: { p: 'k', typ: 'str', gueltig: istKanton },
+};
+
+/** Vorbefüllter Link in den BGer-Rechtsweg-Rechner. */
+export function bgerRechtswegLink(teil: Partial<BgerLink>): string {
+  return '/rechner/bgg-fristen' + permalinkKodieren(BGER_LINK_SPEC, teil as BgerLink & Record<string, unknown>);
+}

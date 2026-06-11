@@ -13,7 +13,8 @@ import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BegruendungAbsatz } from '../BegruendungAbsatz';
 import { begruendungsAbsatz } from '../../lib/begruendung';
 import { LinkTeilenButton } from '../LinkTeilenButton';
-import { permalinkKodieren, permalinkLesen, type PermalinkSpec } from '../../lib/permalink';
+import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
+import { BGER_LINK_SPEC } from '../../lib/rechnerPermalinks';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import {
@@ -70,23 +71,7 @@ const BGER_DISCLAIMER =
   + 'werden offengelegt, nie entschieden. Klage nach Art. 120 BGG und Revision (Art. 121 ff. BGG) sind nicht abgebildet. '
   + 'Den kantonalen Rechtsmittelweg zeigt der Zuständigkeits-Rechner.';
 
-const BGER_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
-  weg: { p: 'w', typ: 'str', gueltig: (v) => WEGE.some((x) => x.code === v) },
-  zivilGebiet: { p: 'g', typ: 'str', gueltig: (v) => GEBIETE.some((x) => x.code === v) },
-  objekt: { p: 'o', typ: 'str', gueltig: (v) => OBJEKTE.some((x) => x.code === v) },
-  vermoegensrechtlich: { p: 'v', typ: 'bool' },
-  streitwert: { p: 's', typ: 'num', gueltig: (n) => Number.isFinite(n) && n >= 0 },
-  vorsorglich: { p: 'vm', typ: 'bool' },
-  eheschutz: { p: 'eh', typ: 'bool' },
-  einzigeInstanz: { p: 'ei', typ: 'bool' },
-  konkursrichter: { p: 'kr', typ: 'bool' },
-  schiedsgericht: { p: 'sg', typ: 'bool' },
-  hkue: { p: 'hk', typ: 'bool' },
-  wechsel: { p: 'wb', typ: 'bool' },
-  sonderfall: { p: 'sf', typ: 'str', gueltig: (v) => SONDERFAELLE.some((x) => x.code === v) },
-  eroeffnung: { p: 'e', typ: 'str', gueltig: (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) },
-  kanton: { p: 'k', typ: 'str', gueltig: (v) => KANTONE.includes(v as Kanton) },
-};
+// Spec zentral in lib/rechnerPermalinks.ts (Brücken aus den Fahrplänen, §5).
 
 const zahl = (roh: string): number | null => {
   if (roh.trim() === '') return null;

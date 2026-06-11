@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
@@ -8,6 +9,7 @@ import { PdfExportButton } from '../PdfExport';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen } from '../../lib/permalink';
 import { SCHKG_LINK_SPEC, type SchkgLinkZustand } from './zustaendigkeitLinkSpecs';
+import { bgerRechtswegLink } from '../../lib/rechnerPermalinks';
 import {
   bestimmeSchkgZustaendigkeit, schkgZustaendigkeitBericht, BETREIBUNGSAEMTER_VERZEICHNIS,
   type SchkgAnliegen, type SchkgInput, type SchkgPfand, type SchkgSchuldnerTyp,
@@ -385,6 +387,27 @@ export function SchkgZustaendigkeitTeil() {
                   <span className="font-medium text-ink-900">{f.label}:</span> {f.frist} <span className="text-ink-500">({f.norm})</span>
                 </p>
               ))}
+              {/* Prefill-Brücke BGer (Auftrag David 11.6.2026): der Weiterzug
+                  des Aufsichts-Entscheids — 10 T. (Wechsel 5 T.), streitwert-
+                  unabhängig, II. zivilrechtliche Abteilung (Art. 34 BGerR). */}
+              {anliegen === 'beschwerde_amt' && (
+                <p className="text-xs text-ink-500 border-t border-line pt-2.5">
+                  Weiterzug des Aufsichts-Entscheids ans Bundesgericht — konkretes Fristende und Details:{' '}
+                  <Link to={bgerRechtswegLink({ weg: 'schkg_aufsicht' })} className="text-brass-700 underline">
+                    BGer-Rechner (vorbefüllt)
+                  </Link>
+                  {' '}— nur noch die Eröffnung des Aufsichts-Entscheids eintragen.
+                </p>
+              )}
+              {anliegen === 'rechtsoeffnung' && (
+                <p className="text-xs text-ink-500 border-t border-line pt-2.5">
+                  Weiterzug des Rechtsöffnungs-ENTSCHEIDS: kantonal Beschwerde (Art. 319 ff. ZPO), danach ans Bundesgericht — dort zur{' '}
+                  <span className="font-medium text-ink-700">I. zivilrechtlichen Abteilung</span> (Art. 33 lit. i BGerR; nicht zur II. wie übriges SchKG).{' '}
+                  <Link to={bgerRechtswegLink({ weg: 'zivil', zivilGebiet: 'rechtsoeffnung', ...(forderung !== null ? { streitwert: forderung } : {}) })} className="text-brass-700 underline">
+                    BGer-Rechner (vorbefüllt)
+                  </Link>
+                </p>
+              )}
             </div>
           )}
 
