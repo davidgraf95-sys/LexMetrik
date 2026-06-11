@@ -35,6 +35,7 @@ const BANNER_KV: PdfBanner = {
 const PRESETS: { code: KvPreset; label: string; sub: string }[] = [
   { code: 'generisch', label: 'Allgemeiner Dauervertrag', sub: 'Ohne Spezialgesetz — vertragliche/gesetzliche Frist' },
   { code: 'versicherung', label: 'Versicherung (VVG)', sub: 'Art. 35a: Ende des 3. Jahres, 3 Monate Frist' },
+  { code: 'krankenkasse', label: 'Krankenkasse (Grundversicherung)', sub: 'Art. 7 KVG: Prämienmitteilung bzw. Semesterende' },
   { code: 'darlehen', label: 'Darlehen', sub: 'Art. 318: Rückzahlung innert 6 Wochen ab Aufforderung' },
   { code: 'auftrag', label: 'Auftrag / Mandat', sub: 'Art. 404: jederzeit — Achtung Unzeit' },
   { code: 'abo_telecom', label: 'Abo / Telecom', sub: 'AGB-Termine — ehrlich ohne berechnete Frist' },
@@ -110,7 +111,7 @@ export function VorlageKuendigungVertrag() {
         <div className="space-y-4">
           <Field label="Vertragsbezeichnung">
             <input className={inputCls} value={a.vertragsBezeichnung} onChange={(e) => set('vertragsBezeichnung', e.target.value)}
-              placeholder={a.preset === 'versicherung' ? 'z. B. Hausratversicherung' : a.preset === 'darlehen' ? 'z. B. Privatdarlehen vom …' : 'z. B. Fitness-Abo'} />
+              placeholder={a.preset === 'versicherung' ? 'z. B. Hausratversicherung' : a.preset === 'krankenkasse' ? 'z. B. Grundversicherung (OKP)' : a.preset === 'darlehen' ? 'z. B. Privatdarlehen vom …' : 'z. B. Fitness-Abo'} />
           </Field>
           <Field label="Vertrags-/Kundennummer" optional>
             <input className={inputCls + ' sm:max-w-[16rem]'} value={a.vertragsnummer} onChange={(e) => set('vertragsnummer', e.target.value)} />
@@ -134,6 +135,34 @@ export function VorlageKuendigungVertrag() {
                 <input type="checkbox" className="mt-0.5" checked={a.krankenzusatz}
                   onChange={(e) => set('krankenzusatz', e.target.checked)} />
                 <span>Zusatzversicherung zur Krankenversicherung <span className="text-ink-500">(Kündigungsrecht nur Versicherungsnehmer:in, Art. 35a Abs. 4 VVG)</span></span>
+              </label>
+            </div>
+          )}
+          {a.preset === 'krankenkasse' && (
+            <div className="space-y-3">
+              <Field label="Versicherten-Nummer" optional>
+                <input className={inputCls + ' sm:max-w-[16rem]'} value={a.kkVersichertennummer} onChange={(e) => set('kkVersichertennummer', e.target.value)} />
+              </Field>
+              <Field label="Anlass der Kündigung">
+                <SelectionGrid
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+                  items={[
+                    { code: 'praemienmitteilung', label: 'Neue Prämie mitgeteilt', sub: '1 Monat auf Ende des Vormonats — der 30.-November-Fall (Art. 7 Abs. 2 KVG)' },
+                    { code: 'ordentlich', label: 'Ordentliche Kündigung', sub: '3 Monate auf Semesterende 30.6./31.12. (Art. 7 Abs. 1 KVG)' },
+                  ]}
+                  value={a.kkGrund}
+                  onSelect={(code) => set('kkGrund', code)}
+                />
+              </Field>
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <input type="checkbox" className="mt-0.5" checked={a.kkBesondereForm}
+                  onChange={(e) => set('kkBesondereForm', e.target.checked)} />
+                <span>Besondere Versicherungsform <span className="text-ink-500">(wählbare Franchise, HMO/Hausarzt/Telmed — ordentlicher Wechsel nur auf Jahresende, Art. 94 Abs. 2 KVV)</span></span>
+              </label>
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <input type="checkbox" className="mt-0.5" checked={a.kkAusstaende}
+                  onChange={(e) => set('kkAusstaende', e.target.checked)} />
+                <span>Es bestehen offene Prämien, Kostenbeteiligungen oder Betreibungskosten <span className="text-warn-700">(Wechselsperre, Art. 64a Abs. 6 KVG)</span></span>
               </label>
             </div>
           )}
@@ -213,8 +242,8 @@ export function VorlageKuendigungVertrag() {
   return (
     <VorlagenWizardRahmen
       overline={`${card?.rechtsgebiet ?? 'Vertrag & Forderung (OR)'} · Vorlage`}
-      titel="Vertrag kündigen (Versicherung · Darlehen · Auftrag · Abo)"
-      intro="EIN Kündigungsschreiben mit Vertragstyp-Presets: Versicherung nach Art. 35a VVG (Wortlaut verifiziert), Darlehen mit 6-Wochen-Frist (Art. 318 OR), Auftrag mit Unzeit-Warnung (Art. 404 OR), Abo/Telecom ehrlich nach AGB. Wo kein Gesetz eine Frist vorgibt, wird keine erfunden."
+      titel="Vertrag kündigen (Versicherung · Krankenkasse · Darlehen · Auftrag · Abo)"
+      intro="EIN Kündigungsschreiben mit Vertragstyp-Presets: Versicherung nach Art. 35a VVG, Krankenkassen-Grundversicherung nach Art. 7 KVG (Prämienmitteilung bzw. Semesterende, Wortlaute verifiziert), Darlehen mit 6-Wochen-Frist (Art. 318 OR), Auftrag mit Unzeit-Warnung (Art. 404 OR), Abo/Telecom ehrlich nach AGB. Wo kein Gesetz eine Frist vorgibt, wird keine erfunden."
       norms={card?.norms ?? []}
       badge="Zu unterzeichnen"
       zuruecksetzen={zuruecksetzen}

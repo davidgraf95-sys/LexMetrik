@@ -28,8 +28,17 @@ import {
 // 35b/35c absolut zwingend (Art. 97 VVG).
 // Presets 'arbeitsvertrag' und 'miete_moebliert' der Spez. sind KEINE
 // Dokument-Pfade — die Seite verweist auf die Masken 1a/1b bzw. 2a.
+//
+// KVG-Preset 'krankenkasse' (11.6.2026, Dossier bibliothek/recherche/
+// kvg-grundversicherung-kuendigung.md; Wortlaute am 20260101-Cache
+// verifiziert): Art. 7 Abs. 1 KVG (3 Monate auf Kalendersemester-Ende),
+// Abs. 2 (Prämienmitteilung: 1 Monat auf Ende des Vormonats der neuen
+// Prämie — der 30.-November-Fall), Abs. 5 (nahtloser Wechsel), Abs. 7/8
+// (Koppelungsverbot Zusatzversicherungen); Art. 64a Abs. 6 KVG
+// (Ausstands-Sperre); Art. 94 Abs. 2 / Art. 100 Abs. 3 KVV (besondere
+// Versicherungsformen: ordentlicher Wechsel nur auf Jahresende).
 
-export type KvPreset = 'generisch' | 'versicherung' | 'darlehen' | 'auftrag' | 'abo_telecom';
+export type KvPreset = 'generisch' | 'versicherung' | 'krankenkasse' | 'darlehen' | 'auftrag' | 'abo_telecom';
 
 export type KvAntworten = KdgBasisAntworten & {
   preset: KvPreset;
@@ -43,6 +52,11 @@ export type KvAntworten = KdgBasisAntworten & {
   lebensversicherung: boolean;
   krankenzusatz: boolean;
   policennummer: string;
+  // Preset krankenkasse (Grundversicherung, Art. 7 KVG)
+  kkGrund: 'praemienmitteilung' | 'ordentlich';
+  kkBesondereForm: boolean;          // wählbare Franchise / eingeschränkte Wahl (HMO u. ä.)
+  kkAusstaende: boolean;             // offene Prämien/Kostenbeteiligungen → Wechselsperre 64a Abs. 6
+  kkVersichertennummer: string;
   // Preset darlehen
   aufforderungDatum: string;         // ISO — 6-Wochen-Frist ab erster Aufforderung
 };
@@ -54,6 +68,8 @@ export const KV_DEFAULTS: KvAntworten = {
   zugang: '', aufNaechstmoeglich: true, kuendigungsterminWunsch: '',
   vertragsdauerUeber3Jahre: false, lebensversicherung: false, krankenzusatz: false,
   policennummer: '',
+  kkGrund: 'praemienmitteilung', kkBesondereForm: false, kkAusstaende: false,
+  kkVersichertennummer: '',
   aufforderungDatum: '',
 };
 
@@ -99,6 +115,44 @@ export function pruefeKvGates(a: KvAntworten): KvGateErgebnis {
     }
     hinweise.push('Art. 35a VVG ist halbzwingend (Art. 98 VVG): Vertragsklauseln dürfen nur ZU IHREN GUNSTEN abweichen; Art. 35b/35c sind zwingend (Art. 97 VVG).');
   }
+  if (a.preset === 'krankenkasse') {
+    if (a.kkAusstaende) {
+      warnungen.push(
+        'Ausstehende Prämien, Kostenbeteiligungen, Verzugszinse oder Betreibungskosten SPERREN den '
+        + 'Versichererwechsel, bis sie vollständig bezahlt sind (Art. 64a Abs. 6 KVG). Vorbehalten bleiben '
+        + 'Wohnort-/Stellenwechsel und Bewilligungsentzug (Art. 7 Abs. 3 und 4 KVG).',
+      );
+    }
+    if (a.kkGrund === 'praemienmitteilung') {
+      hinweise.push(
+        'Gelten die neuen Prämien ab 1. Januar, muss diese Kündigung bis am 30. November beim Versicherer '
+        + 'EINGETROFFEN sein (einmonatige Frist auf das Ende des Vormonats, Art. 7 Abs. 2 KVG) — massgebend '
+        + 'ist der Zugang, nicht der Poststempel.',
+      );
+    } else if (!a.kkBesondereForm) {
+      hinweise.push(
+        'Ordentliche Termine sind der 30. Juni und der 31. Dezember (Ende des Kalendersemesters); die '
+        + 'Kündigung muss drei Monate vorher — bis 31. März bzw. 30. September — zugegangen sein (Art. 7 Abs. 1 KVG).',
+      );
+    }
+    if (a.kkBesondereForm && a.kkGrund === 'ordentlich') {
+      hinweise.push(
+        'Besondere Versicherungsform (wählbare Franchise, HMO/Hausarzt u. ä.): Der ordentliche Wechsel ist '
+        + 'nur auf das Ende des Kalenderjahres möglich (Art. 94 Abs. 2 KVV bzw. Art. 100 Abs. 3 KVV, Fassung '
+        + 'in Kraft seit 1.1.2025); die Kündigung auf Prämienmitteilung hin bleibt vorbehalten.',
+      );
+    }
+    hinweise.push(
+      'Zuerst den neuen Versicherer wählen und sich aufnehmen lassen: Das Verhältnis beim bisherigen '
+      + 'Versicherer endet erst, wenn ihm der neue Versicherer die nahtlose Aufnahme mitgeteilt hat '
+      + '(Art. 7 Abs. 5 KVG) — die Versicherungspflicht kennt keine Lücke.',
+    );
+    hinweise.push(
+      'Zusatzversicherungen (VVG) sind von dieser Kündigung NICHT erfasst und werden separat gekündigt '
+      + '(Preset «Versicherung (VVG)»); der bisherige Versicherer darf den Wechsel der Grundversicherung '
+      + 'nicht an die Kündigung der Zusatzversicherungen koppeln (Art. 7 Abs. 7 und 8 KVG).',
+    );
+  }
   if (a.preset === 'darlehen') {
     hinweise.push('Ohne vereinbarten Termin oder Frist gilt: Rückzahlung innert SECHS Wochen ab der ersten Aufforderung (Art. 318 OR); eine vereinbarte Regelung geht vor.');
   }
@@ -117,7 +171,9 @@ export const KV_SCHEMA: VorlageSchema = {
   id: 'kuendigung-vertrag',
   format: 'eingabe',
   ausgabeArt: 'fertig',
-  version: '1.0.0 (Masken-Spezifikation 6.6.2026; VVG-Wortlaute verifiziert 20240101)',
+  // 1.0.0→1.1.0: KVG-Preset 'krankenkasse' (deklarierte fachliche Änderung
+  // 11.6.2026; bestehende Presets unverändert, kein Golden-Fall betroffen).
+  version: '1.1.0 (KVG-Preset 11.6.2026, Art. 7/64a KVG + Art. 94/100 KVV verifiziert 20260101; Basis: Masken-Spez. 6.6.2026, VVG verifiziert 20240101)',
   titel: 'Kündigung',
   disclaimer:
     'Erstellt mit LexMetrik. Keine Rechtsberatung. Massgebend sind Vertrag/AGB und die genannten '
@@ -141,6 +197,29 @@ export const KV_SCHEMA: VorlageSchema = {
       includeIf: { feld: 'preset', eq: 'versicherung' },
       norm: 'Art. 35a VVG',
       begruendung: 'Ordentliche VVG-Kündigung (Wortlaut verifiziert: Ende des dritten oder jedes folgenden Jahres, Frist 3 Monate, schriftlich oder textnachweisbar).' },
+    // KVG-Grundversicherung: drei regime-treue Pfade (Abs. 2 / Abs. 1 /
+    // Abs. 1 i. V. m. KVV-Jahresende) — nie zu einer Regel kollabiert (§1/§4).
+    { id: 'V_krankenkasse_praemie',
+      text: 'Hiermit kündige ich die obligatorische Krankenpflegeversicherung (Grundversicherung){{kkVersichertenSatz}} im Anschluss an die Mitteilung der neuen Prämie unter Einhaltung der einmonatigen Kündigungsfrist auf das Ende des Monats, der der Gültigkeit der neuen Prämie vorangeht{{kkWunschterminSatz}} (Art. 7 Abs. 2 KVG).',
+      includeIf: { and: [{ feld: 'preset', eq: 'krankenkasse' }, { feld: 'kkGrund', eq: 'praemienmitteilung' }] },
+      norm: 'Art. 7 Abs. 2 KVG',
+      begruendung: 'Kündigung auf Prämienmitteilung hin (Wortlaut verifiziert: einmonatige Frist auf das Ende des Monats vor Gültigkeit der neuen Prämie) — der Praxisfall «bis 30. November».' },
+    { id: 'V_krankenkasse_semester',
+      text: 'Hiermit kündige ich die obligatorische Krankenpflegeversicherung (Grundversicherung){{kkVersichertenSatz}} ordentlich unter Einhaltung der dreimonatigen Kündigungsfrist auf das Ende des Kalendersemesters{{kkWunschterminSatz}} (Art. 7 Abs. 1 KVG).',
+      includeIf: { and: [{ feld: 'preset', eq: 'krankenkasse' }, { feld: 'kkGrund', eq: 'ordentlich' }, { not: { feld: 'kkBesondereForm', eq: true } }] },
+      norm: 'Art. 7 Abs. 1 KVG',
+      begruendung: 'Ordentliche Kündigung ohne besondere Versicherungsform (Wortlaut verifiziert: dreimonatige Frist auf das Ende eines Kalendersemesters).' },
+    { id: 'V_krankenkasse_jahresende',
+      text: 'Hiermit kündige ich die obligatorische Krankenpflegeversicherung (Grundversicherung){{kkVersichertenSatz}} ordentlich unter Einhaltung der dreimonatigen Kündigungsfrist auf das Ende des Kalenderjahres{{kkWunschterminSatz}}, da eine besondere Versicherungsform besteht (Art. 7 Abs. 1 KVG; Art. 94 Abs. 2 KVV bzw. Art. 100 Abs. 3 KVV).',
+      includeIf: { and: [{ feld: 'preset', eq: 'krankenkasse' }, { feld: 'kkGrund', eq: 'ordentlich' }, { feld: 'kkBesondereForm', eq: true }] },
+      norm: 'Art. 7 Abs. 1 KVG',
+      begruendung: 'Ordentliche Kündigung bei wählbarer Franchise/eingeschränkter Wahl: Wechsel nur auf Jahresende (Art. 94 Abs. 2 bzw. Art. 100 Abs. 3 KVV, Fassung in Kraft seit 1.1.2025).',
+      hinweis: 'Die Kündigung auf Prämienmitteilung hin (Art. 7 Abs. 2 KVG) bleibt auch bei besonderen Versicherungsformen vorbehalten.' },
+    { id: 'V_krankenkasse_nahtlos',
+      text: 'Das Versicherungsverhältnis endet, sobald Ihnen mein neuer Versicherer die Aufnahme ohne Unterbrechung des Versicherungsschutzes mitgeteilt hat (Art. 7 Abs. 5 KVG).',
+      includeIf: { feld: 'preset', eq: 'krankenkasse' },
+      norm: 'Art. 7 Abs. 5 KVG',
+      begruendung: 'Nahtlosigkeits-Klausel: Ende beim bisherigen Versicherer erst nach Mitteilung des neuen Versicherers (Versicherungspflicht ohne Lücke).' },
     { id: 'V_darlehen',
       text: 'Hiermit kündige ich das Darlehen und fordere Sie zur Rückzahlung auf. Die Rückzahlung hat innert sechs Wochen seit Zugang {{darlehenAusloeserWort}} zu erfolgen{{darlehenBisSatz}} (Art. 318 OR).',
       includeIf: { feld: 'preset', eq: 'darlehen' },
@@ -179,6 +258,9 @@ export function kvZusammenstellen(a: KvAntworten) {
     ...kdgBasisAbgeleitet(a),
     vertragsnummerSatz: a.vertragsnummer.trim() ? ` (Nr. ${a.vertragsnummer.trim()})` : '',
     policennummerSatz: a.policennummer.trim() ? ` (Police ${a.policennummer.trim()})` : '',
+    kkVersichertenSatz: a.kkVersichertennummer.trim() ? ` (Versicherten-Nr. ${a.kkVersichertennummer.trim()})` : '',
+    kkWunschterminSatz: !a.aufNaechstmoeglich && ISO.test(a.kuendigungsterminWunsch)
+      ? `, somit per ${fmtDatum(a.kuendigungsterminWunsch)}` : '',
     terminSatz: a.aufNaechstmoeglich
       ? 'auf den nächstmöglichen Termin'
       : ISO.test(a.kuendigungsterminWunsch) ? `per ${fmtDatum(a.kuendigungsterminWunsch)}` : 'auf den nächstmöglichen Termin',

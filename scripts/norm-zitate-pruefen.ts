@@ -23,6 +23,9 @@ const QUELLEN = [
   'src/lib/vorlagen/mahnung.ts',
   // BGer-Rechtsweg (11.6.2026) — BGG- und BGerR-Zitate in Rechenweg/Hinweisen.
   'src/lib/bgerRechtsweg.ts',
+  // Vertrags-Kündigungsmaske 3 (KVG-Preset 11.6.2026) — VVG-/OR-/KVG-/KVV-
+  // Zitate in Bausteinen und Gates.
+  'src/lib/vorlagen/kuendigungAllgemein.ts',
 ];
 const CACHES: Record<string, string> = {
   ZPO: '/tmp/zpo.html', SchKG: '/tmp/schkg.html', StPO: '/tmp/stpo.html',
@@ -31,6 +34,8 @@ const CACHES: Record<string, string> = {
   HRegV: '/tmp/hregv.html', StG: '/tmp/stg.html',
   // BGerR gepinnt 11.6.2026 (BGer-Rechtsweg, Abteilungs-Auskunft)
   BGerR: '/tmp/bgerr.html',
+  // VVG/KVG/KVV gepinnt (Kündigungs-Maske 3; KVG-Preset 11.6.2026)
+  VVG: '/tmp/vvg.html', KVG: '/tmp/kvg.html', KVV: '/tmp/kvv.html',
 };
 const html: Record<string, string> = {};
 for (const [g, p] of Object.entries(CACHES)) {
@@ -47,7 +52,8 @@ const artText = (gesetz: string, nr: string): string | null => {
 
 // Zitate einsammeln: «Art. 74 Abs. 2 lit. b BGG», «Art. 198 lit. e Ziff. 3 ZPO» …
 // BGerR vor BGG, damit die Alternation «Art. 33 BGerR» nicht an BGG scheitert.
-const RX = /Art\.\s*(\d+[a-z]*)\s*(?:Abs\.\s*(\d+)\s*)?(?:lit\.\s*([a-z]+(?:bis|ter)?)\s*)?(?:Ziff\.\s*(\d+)\s*)?(ZPO|SchKG|StPO|BGerR|BGG|StGB|ZGB|OR|HRegV|StG)\b/g;
+// KVV vor KVG analog (distinkte Tokens, Reihenfolge nur der Klarheit halber).
+const RX = /Art\.\s*(\d+[a-z]*)\s*(?:Abs\.\s*(\d+)\s*)?(?:lit\.\s*([a-z]+(?:bis|ter)?)\s*)?(?:Ziff\.\s*(\d+)\s*)?(ZPO|SchKG|StPO|BGerR|BGG|StGB|ZGB|OR|HRegV|StG|VVG|KVV|KVG)\b/g;
 let total = 0, fehler = 0;
 const gesehen = new Set<string>();
 for (const q of QUELLEN) {

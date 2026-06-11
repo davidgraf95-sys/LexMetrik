@@ -1521,12 +1521,15 @@ const VORLAGEN: Record<string, VorlageCard> = {
   'kuendigung-vertrag': {
     id: 'kuendigung-vertrag', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
-    title: 'Vertrag kündigen (Versicherung · Darlehen · Auftrag · Abo)',
-    description: 'Ein Kündigungsschreiben mit Vertragstyp-Presets: Versicherung (Art. 35a VVG, Drei-Jahres-Regel), Darlehen mit 6-Wochen-Frist (Art. 318 OR), Auftrag mit Unzeit-Warnung (Art. 404 OR), Abo/Telecom nach AGB – ohne erfundene Fristen.',
+    title: 'Vertrag kündigen (Versicherung · Krankenkasse · Darlehen · Auftrag · Abo)',
+    description: 'Ein Kündigungsschreiben mit Vertragstyp-Presets: Versicherung (Art. 35a VVG, Drei-Jahres-Regel), Krankenkassen-Grundversicherung (Art. 7 KVG, Prämienmitteilung bzw. Semesterende), Darlehen mit 6-Wochen-Frist (Art. 318 OR), Auftrag mit Unzeit-Warnung (Art. 404 OR), Abo/Telecom nach AGB – ohne erfundene Fristen.',
     status: 'entwurf',
     norms: [
       // Art. 35a VVG – ordentliche Kündigung (Wortlaut verifiziert 6.6.2026)
       { label: 'Art. 35a VVG', url: fedlexUrl('VVG', '35a'), verified: false },
+      // Art. 7 KVG – Wechsel des Versicherers (Wortlaut verifiziert 11.6.2026,
+      // Dossier kvg-grundversicherung-kuendigung.md)
+      { label: 'Art. 7 KVG', url: fedlexUrl('KVG', '7'), verified: false },
       // Art. 318 OR – Darlehen: 6 Wochen ab Aufforderung
       { label: 'Art. 318 OR', url: fedlexUrl('OR', '318'), verified: false },
       // Art. 404 OR – Auftrag: jederzeitiger Widerruf, Unzeit-Folge
@@ -1537,7 +1540,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     formvorschrift: 'Formfrei (Versicherung: schriftlich oder textnachweisbar, Art. 35a VVG) — unterschreiben und nachweisbar zustellen.',
     output: ['pdf', 'docx'],
     related: ['mahnung', 'verzugszins', 'kuendigung-sperrfristen', 'mietrecht'], // Konsolidierung E3: Masken-Refs → Themen-Einstiege
-    keywords: ['Kündigung', 'Vertrag kündigen', 'Versicherung kündigen', 'Abo kündigen', 'Darlehen', 'Auftrag', 'Art. 35a VVG', 'Art. 404'],
+    keywords: ['Kündigung', 'Vertrag kündigen', 'Versicherung kündigen', 'Krankenkasse kündigen', 'Grundversicherung', 'Krankenkasse wechseln', 'Abo kündigen', 'Darlehen', 'Auftrag', 'Art. 35a VVG', 'Art. 7 KVG', 'Art. 404'],
   },
   mahnung: {
     id: 'mahnung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',

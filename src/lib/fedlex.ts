@@ -50,6 +50,16 @@ export const FEDLEX = {
   // Filestore NUR ohne -N-Suffix); Anker art_33/34/35/35_a/36 zeichengenau
   // verifiziert (rechtsmittel-spruchkoerper-kantone.md §3).
   BGerR: 'https://www.fedlex.admin.ch/eli/cc/2006/834/de',
+  // KVG SR 832.10 — Cache gepinnt 11.6.2026 (Konsolidierung 20260101 = neuste
+  // echte, 202602–202606 nur SPA-Shell; Filestore OHNE -N-Suffix); Anker
+  // art_7/62/64_a zeichengenau verifiziert (KVG-Preset Kündigungs-Maske 3;
+  // Dossier bibliothek/recherche/kvg-grundversicherung-kuendigung.md).
+  KVG:   'https://www.fedlex.admin.ch/eli/cc/1995/1328_1328_1328/de',
+  // KVV SR 832.102 — Cache gepinnt 11.6.2026 (Konsolidierung 20260101, OHNE
+  // -N-Suffix); Anker art_94/99/100 verifiziert (besondere Versicherungs-
+  // formen: Wechsel nur auf Jahresende, Art. 94 Abs. 2 / 100 Abs. 3 KVV,
+  // Fassung AS 2024 697).
+  KVV:   'https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;
