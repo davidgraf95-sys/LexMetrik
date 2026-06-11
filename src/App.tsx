@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Shell } from './components/layout/Shell';
 import { LocaleProvider } from './components/locale';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { RouteMeta } from './components/RouteMeta';
 
 // Code-Splitting auf Routenebene: Jede Seite ist ein eigener Chunk – der
 // Erstbesuch lädt nur Shell + angefragte Seite, nicht alle Engines/Wizards.
@@ -77,6 +78,7 @@ export default function App() {
     <LocaleProvider>
     <Shell>
       <ScrollToTop />
+      <RouteMeta />
       <ErrorBoundary>
       <Suspense fallback={
         /* Laden ist Aktivität, kein Fehler: Ablesekante + ruhige Zeile (FAHRPLAN-DESIGN 5.3) */
