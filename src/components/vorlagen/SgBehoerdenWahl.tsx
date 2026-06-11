@@ -88,8 +88,11 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   const vdStufeKey = kanton === 'VD' ? `${vdStufe?.stufe ?? 'keine'}${arbeitsrechtlich ? '|arb' : ''}` : '';
   const wahlIdx = wahlSchluessel.kanton === kanton && wahlSchluessel.typ === typ
     && wahlSchluessel.stufe === vdStufeKey ? wahlSchluessel.idx : -1;
+  // SO-Weiche (§ 5 Abs. 1 GO SO, 11.6.2026): gleiche Gemeinde beider
+  // Parteien? Lokale Frage — bestimmt Friedensrichter vs. AGP.
+  const [soGleicheGemeinde, setSoGleicheGemeinde] = useState<boolean | undefined>(undefined);
   const recherche = schlichtungAufloesung(kanton, typ,
-    { vermoegensrechtlich: streitwertCHF !== null, streitwertCHF, arbeitsrechtlich });
+    { vermoegensrechtlich: streitwertCHF !== null, streitwertCHF, arbeitsrechtlich, gleicheGemeinde: soGleicheGemeinde });
   const modus = recherche?.aufloesung.modus ?? null;
 
   // PLZ → Gemeinde (amtliches Register); Amt → Adresse (7 Kantone)
@@ -124,10 +127,12 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       }
       // VD: stufengerechte Instanz (Art. 41 CDPJ-VD; Arbeit: Art. 2 LJT-VD)
       // — ohne bezifferten Streitwert keine Auto-Zuordnung (die JdP wäre ab
-      // CHF 10'000 falsch).
+      // CHF 10'000 falsch). SO: AGP nur bei verschiedenen Gemeinden (§ 10 GO).
       const a = kanton === 'VD'
         ? (vdStufe ? await vdAmtFuer(g, vdStufe.stufe, arbeitsrechtlich) : null)
-        : await amtFuer(kanton, g);
+        : kanton === 'SO'
+          ? (soGleicheGemeinde === false ? await amtFuer('SO', g) : null)
+          : await amtFuer(kanton, g);
       // filter(Boolean): einzelne Ämter führen amtlich keine Strasse (TI:
       // Breno/Onsernone) — keine Leerzeile in Adressat/Dokument (Bug-Check
       // 11.6.2026 B2).
@@ -137,7 +142,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       .then((r) => { if (aktiv) { setAmtZeilen(r.amt); setAmtUrl(r.amtUrl); setZhKreise(r.kreise); setPlzWahl(r.wahl ? { plz, treffer: r.wahl } : null); } })
       .catch(() => { if (aktiv) { setAmtZeilen(null); setAmtUrl(undefined); setZhKreise(null); setPlzWahl(null); } });
     return () => { aktiv = false; };
-  }, [kanton, typ, plz, gemeinde, vdStufe, arbeitsrechtlich]);
+  }, [kanton, typ, plz, gemeinde, vdStufe, arbeitsrechtlich, soGleicheGemeinde]);
 
   // Aufgelöste Zeilen ans Schema melden.
   // Bug-Check 10.6.2026 (MITTEL, fachlich): Beim GlG-Fallback (keine eigene
@@ -226,6 +231,21 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       )}
       {!glgOhneStelle && a.modus === 'verzeichnis' && (
         <>
+          {/* SO-Weiche (§ 5 Abs. 1 GO SO, 11.6.2026) */}
+          {kanton === 'SO' && !paritaetisch && (
+            <div className="space-y-1.5">
+              <p className="text-body-s text-ink-800">Wohnen oder sitzen beide Parteien in derselben Gemeinde? <span className="text-ink-500">(§ 5 Abs. 1 GO SO)</span></p>
+              <div className="flex gap-4 text-body-s">
+                {[{ v: true, l: 'Ja — gleiche Gemeinde' }, { v: false, l: 'Nein — verschiedene Gemeinden' }].map(({ v, l }) => (
+                  <label key={l} className="flex items-center gap-1.5 cursor-pointer text-ink-700">
+                    <input type="radio" name="sg-so-gleiche-gemeinde" checked={soGleicheGemeinde === v}
+                      onChange={() => setSoGleicheGemeinde(v)} />
+                    {l}
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
           {!paritaetisch && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="PLZ (beklagte Partei / Sache)" hint="amtliches Ortschaftenverzeichnis">
@@ -253,7 +273,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             <p className="text-body-s text-ink-600">
               {a.beschreibung}.{' '}
               <a href={a.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">Amtliches Verzeichnis öffnen ↗</a>
-              {!paritaetisch && AMT_KANTONE.includes(kanton) && !(kanton === 'VD' && !vdStufe)
+              {!paritaetisch && AMT_KANTONE.includes(kanton) && !(kanton === 'VD' && !vdStufe) && !(kanton === 'SO' && soGleicheGemeinde !== false)
                 ? ' — oder oben PLZ/Gemeinde eingeben für die automatische Zuordnung.'
                 : kanton === 'VD' && !vdStufe
                   ? ' — sobald ein bezifferter Streitwert vorliegt, ordnet die Vorlage die Instanz automatisch zu; sonst Adresse dort entnehmen und unten von Hand erfassen.'

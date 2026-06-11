@@ -93,6 +93,15 @@ export const VD_JDP_ZU_TA: Record<string, number> = {
 };
 /** Amtliche Instanz-Suche des Kantons (Gemeinde/PLZ → zuständige Instanz). */
 export const VD_INSTANZSUCHE_URL = 'https://www.vd.ch/justice/le-pouvoir-judiciaire/recherche-de-linstance-judiciaire-competente';
+
+// NE: drei Standorte der zwei Tribunaux régionaux — SSoT (§5) für die
+// ordentliche Chambre de conciliation UND die paritätische Miet-Besetzung
+// (Art. 12 Abs. 1 OJN; Erhebung 11.6.2026).
+const NE_TRIBUNAUX: SchlichtungsAdresse[] = [
+  A('Tribunal régional Littoral/Val-de-Travers', 'Rue de l’Hôtel-de-Ville 2 (CP 1)', '2000 Neuchâtel', 'Littoral/Val-de-Travers'),
+  A('Tribunal régional Littoral/Val-de-Travers (Boudry)', 'Rue Louis-Favre 39, CP 36', '2017 Boudry', 'Littoral/Val-de-Travers'),
+  A('Tribunal régional Montagnes/Val-de-Ruz', 'Av. Léopold-Robert 10, CP 2284', '2300 La Chaux-de-Fonds', 'Montagnes/Val-de-Ruz', 'Umzug ins Hauptpost-Gebäude 1.7.–14.8.2026 angekündigt'),
+];
 // Arbeitsrecht inkl. GlG (LJT-VD): das Tribunal de prud'hommes ist die
 // spezialisierte Kammer JEDES Tribunal d'arrondissement (Art. 5 LJT) —
 // gleiche Anschrift wie das TA; verlinkt wird die verifizierte TA-Seite.
@@ -203,7 +212,9 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'verzeichnis', beschreibung: 'Schlichtungskommissionen für Miete/Pacht (je Bezirk)', url: 'https://www.fr.ch/de/staat-und-recht/justiz/gerichtsbehoerden-friedensgerichte' },
   },
   SO: {
-    stand: '5.6.2026', quelle: 'so.ch (Friedensrichter/Oberämter)',
+    // Weiche § 5/§ 10 GO SO verdrahtet 11.6.2026 (soOrdentlich; AGP-Auto-
+    // Auflösung über aemterKantone, Dossier §39).
+    stand: '11.6.2026', quelle: 'GO SO (BGS 125.12, Stand 1.1.2026) wörtlich · so.ch Richterämter/Friedensrichter · Miete: so.ch Oberämter (5.6.2026)',
     // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — kantonale Mietschlichtungs-Sammelseite
     // listet alle vier Oberämter (Miete) mit Adressen; keine Stellen-Detailseiten je Oberamt.
     url: 'https://so.ch/verwaltung/departement-des-innern/oberaemter/schlichtung-und-vermittlung/mietschlichtung/',
@@ -362,18 +373,22 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'zentral', stelle: A('Commission cantonale de conciliation en matière de bail à loyer', 'Av. du Midi 7', '1950 Sion', 'ganzer Kanton', 'PLZ 1951 ebenfalls amtlich in Gebrauch', 'https://www.vs.ch/en-GB/web/sict/bail-a-loyer') },
   },
   NE: {
-    stand: '5.6.2026', quelle: 'ne.ch/PJNE (Chambre de conciliation, 3 Standorte; in Bail-Sachen paritätisch besetzt)',
+    stand: '11.6.2026', quelle: 'ne.ch/PJNE (Chambre de conciliation, 3 Standorte) · OJN RSN 161.1 (état 1.2.2026) wörtlich: Miete paritätisch nach Art. 12 Abs. 1 OJN',
     // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — PJNE-Übersicht der Tribunaux régionaux
     // nennt alle drei Standorte (Neuchâtel, Boudry, La Chaux-de-Fonds) mit Adressen; keine
     // Stellen-Detailseiten je Tribunal → Kantons-Fallback.
     url: 'https://www.ne.ch/autorites/PJNE/tribunaux-regionaux/Pages/accueil.aspx',
     ordentlich: {
       modus: 'liste', hinweis: 'Chambre de conciliation der zwei Regionalgerichte (drei Standorte)',
-      stellen: [
-        A('Tribunal régional Littoral/Val-de-Travers', 'Rue de l’Hôtel-de-Ville 2 (CP 1)', '2000 Neuchâtel', 'Littoral/Val-de-Travers'),
-        A('Tribunal régional Littoral/Val-de-Travers (Boudry)', 'Rue Louis-Favre 39, CP 36', '2017 Boudry', 'Littoral/Val-de-Travers'),
-        A('Tribunal régional Montagnes/Val-de-Ruz', 'Av. Léopold-Robert 10, CP 2284', '2300 La Chaux-de-Fonds', 'Montagnes/Val-de-Ruz', 'Umzug auf Nr. 63 im Sommer 2026 angekündigt'),
-      ],
+      stellen: NE_TRIBUNAUX,
+    },
+    // Miete (Erhebung 11.6.2026, OJN RSN 161.1 «état au 1.2.2026» wörtlich):
+    // KEINE separate Mietschlichtungsstelle — die Chambre de conciliation
+    // tagt in Miet-/Pachtsachen paritätisch (Art. 12 Abs. 1 OJN: Richter +
+    // je eine Mieter- und Vermietervertretung; Art. 200 Abs. 1 ZPO).
+    miete: {
+      modus: 'liste', hinweis: 'Chambre de conciliation in paritätischer Besetzung für Miete/Pacht (Art. 200 Abs. 1 ZPO; Art. 12 Abs. 1 OJN-NE)',
+      stellen: NE_TRIBUNAUX,
     },
   },
   GE: {
@@ -409,6 +424,35 @@ export interface SchlichtungsKontext {
   /** Arbeitsrechtliche Streitigkeit (inkl. AVG) — in VD eigene Kaskade
    *  über das Tribunal de prud'hommes (Art. 2 LJT-VD). */
   arbeitsrechtlich?: boolean;
+  /** SO-Weiche (§ 5 Abs. 1 GO SO): wohnen/sitzen BEIDE Parteien in
+   *  derselben Gemeinde? true → Friedensrichter dieser Gemeinde ·
+   *  false → Amtsgerichtspräsidium (§ 10 GO) · undefined → unbeantwortet
+   *  (ehrliche Weiche-Erklärung, keine Auto-Zuordnung). */
+  gleicheGemeinde?: boolean;
+}
+
+/** SO: ordentliche Auflösung nach der § 5/§ 10-GO-Weiche (Dossier §39). */
+function soOrdentlich(kontext: SchlichtungsKontext | undefined): SchlichtungsAufloesung {
+  const FR_URL = 'https://so.ch/gerichte/weitere-gerichte/friedensrichter/';
+  if (kontext?.gleicheGemeinde === true) {
+    return {
+      modus: 'verzeichnis',
+      beschreibung: 'Beide Parteien in derselben Gemeinde: Schlichtungsbehörde ist die Friedensrichterin/der Friedensrichter dieser Gemeinde (§ 5 Abs. 1 GO SO) — ein Gemeindeorgan mit Amtssitz in der Wahlgemeinde (§ 86 GO); Anlaufstelle ist die Gemeindeverwaltung, eine Strassenadresse publiziert der Kanton nicht. Kreis-Zusammenschlüsse ändern an der Gleiche-Gemeinde-Voraussetzung nichts',
+      url: FR_URL,
+    };
+  }
+  if (kontext?.gleicheGemeinde === false) {
+    return {
+      modus: 'verzeichnis',
+      beschreibung: 'Parteien in verschiedenen Gemeinden: Schlichtungsbehörde ist das Amtsgerichtspräsidium des zuständigen Richteramts (§ 10 Abs. 1 GO SO) — PLZ/Gemeinde eingeben für die konkrete Adresse (fünf Richterämter, Amtei-Einteilung nach Art. 43 KV SO)',
+      url: 'https://so.ch/gerichte/richteraemter/',
+    };
+  }
+  return {
+    modus: 'verzeichnis',
+    beschreibung: 'Weiche nach § 5 Abs. 1 GO SO: Wohnen oder sitzen BEIDE Parteien in derselben Gemeinde, schlichtet die Friedensrichterin/der Friedensrichter dieser Gemeinde (Anlaufstelle Gemeindeverwaltung); sonst das Amtsgerichtspräsidium des Richteramts (§ 10 GO). Die Frage oben beantworten für die konkrete Zuordnung',
+    url: FR_URL,
+  };
 }
 
 /** VD: ordentliche Auflösung nach Streitwert-Stufe (Dossier §37). Ohne
@@ -454,7 +498,9 @@ export function schlichtungAufloesung(kanton: Kanton, typ: SchlichtungsbehoerdeT
 } | null {
   const k = SCHLICHTUNGSSTELLEN[kanton];
   if (!k) return null;
-  const ordentlich = kanton === 'VD' ? vdOrdentlich(kontext, k.ordentlich) : k.ordentlich;
+  const ordentlich = kanton === 'VD' ? vdOrdentlich(kontext, k.ordentlich)
+    : kanton === 'SO' ? soOrdentlich(kontext)
+    : k.ordentlich;
   if (typ === 'paritaetisch_miete' && k.miete) return { aufloesung: k.miete, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };
   if (typ === 'paritaetisch_glg') {
     if (k.glg) return { aufloesung: k.glg, stand: k.stand, quelle: k.quelle, glgFallback: false, kantonsUrl: k.url };

@@ -102,7 +102,7 @@ const kantonsDaten: Record<string, { aemter: Amt[]; gemeinden: Record<string, nu
 let aktuellerKanton: string | null = null;
 for (const z of zuordnungMd.split('\n')) {
   // Teil 1: «## 1. Aargau — …» · Teil 2: «## 1. FR — Freiburg: …»
-  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR|LU|AR|NE|BE|VD|TI)\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
+  const kopfTreffer = /^##\s+\d+\.\s+(?:(AG|SG|TG|FR|ZG|AI|SZ|BL|GR|LU|AR|NE|BE|VD|TI|SO)\b|(Aargau|St\. ?Gallen|Thurgau))/.exec(z);
   if (kopfTreffer) {
     aktuellerKanton = kopfTreffer[1]
       ?? ({ Aargau: 'AG', 'St. Gallen': 'SG', 'St.Gallen': 'SG', Thurgau: 'TG' }[kopfTreffer[2] ?? ''] ?? null);
@@ -230,6 +230,31 @@ if (kantonsDaten.FR) {
     if (amtIdx !== undefined) gemeinden[r[idx('Name')]] = amtIdx;
   }
   kantonsDaten.FR.gemeinden = gemeinden;
+}
+// SO: «Bezirke»-Spalte → Gemeindelisten aus dem BFS-Verzeichnis (Level 2
+// SO trägt das Präfix «Bezirk », z. B. «Bezirk Gäu»). Verdrahtet 11.6.2026;
+// die Richterämter decken je zwei Bezirke (Amtei, Art. 43 KV SO).
+if (kantonsDaten.SO) {
+  const bfsS = readFileSync('/tmp/bfs_gemeinden.csv', 'utf-8').replace(/^\uFEFF/, '').split('\n').map((z) => z.split(','));
+  const kopfS = bfsS[0];
+  const ixS = (n: string) => kopfS.indexOf(n);
+  const byHistS = new Map(bfsS.slice(1).map((r) => [r[ixS('HistoricalCode')], r]));
+  const bezirkName = new Map<string, string>();
+  for (const r of bfsS.slice(1)) {
+    if (r[ixS('Level')] === '2' && byHistS.get(r[ixS('Parent')])?.[ixS('ShortName')] === 'SO' && !r[ixS('ValidTo')]) {
+      bezirkName.set(r[ixS('HistoricalCode')], r[ixS('Name')].replace(/^Bezirk /, ''));
+    }
+  }
+  const bezZuIdx = new Map<string, number>();
+  for (const [b, i] of Object.entries(kantonsDaten.SO.gemeinden)) bezZuIdx.set(b, i);
+  const neuSO: Record<string, number> = {};
+  for (const r of bfsS.slice(1)) {
+    if (r[ixS('Level')] === '3' && bezirkName.has(r[ixS('Parent')]) && !r[ixS('ValidTo')]) {
+      const idx = bezZuIdx.get(bezirkName.get(r[ixS('Parent')])!);
+      if (idx !== undefined) neuSO[r[ixS('Name')]] = idx;
+    }
+  }
+  kantonsDaten.SO.gemeinden = neuSO;
 }
 // VD: «Districts»-Spalte → Gemeindelisten aus dem BFS-Verzeichnis (Level 2
 // VD trägt Präfixe «District de/du/de la/de l'/d'» — Match nach Präfix-

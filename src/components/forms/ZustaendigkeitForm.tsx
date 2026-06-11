@@ -258,6 +258,10 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
     ? vdSchlichtungsStufe(vermoegensrechtlich, vermoegensrechtlich ? streitwert : null)
     : null), [f.kanton, vermoegensrechtlich, streitwert]);
 
+  // SO-Weiche (§ 5 Abs. 1 GO SO, 11.6.2026): wohnen/sitzen beide Parteien
+  // in derselben Gemeinde? Reine Darstellungs-Frage der Kantonsschicht (§3).
+  const [soGleicheGemeinde, setSoGleicheGemeinde] = useState<boolean | undefined>(undefined);
+
   // ── Konkretes Schlichtungsamt über Gemeinde (PLZ→Gemeinde→Amt) ────────────
   // Aufgelöste Kantone: AMT_KANTONE (ZH/AG/SG/TG; Ausbau folgt mit den
   // weiteren Gemeinde-Zuordnungen). Stadt Zürich: sechs Kreis-Ämter.
@@ -284,13 +288,16 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
         // Arbeit: prud'hommes-Kaskade (Art. 2 LJT-VD, Bug-Check 11.6.2026)
         return { amt: await vdAmtFuer(gemeinde, vdStufe.stufe, istArbeit), kreise: null };
       }
+      // SO: Amtsgerichtspräsidium nur, wenn die Parteien NICHT in derselben
+      // Gemeinde wohnen/sitzen (§ 10 GO; sonst Friedensrichter, § 5 Abs. 1).
+      if (kanton === 'SO' && soGleicheGemeinde !== false) return { amt: null, kreise: null };
       return { amt: await amtFuer(kanton, gemeinde), kreise: null };
     };
     lade()
       .then((r) => { if (aktiv) { setAmt(r.amt); setZhKreise(r.kreise); } })
       .catch(() => { if (aktiv) { setAmt(null); setZhKreise(null); } });
     return () => { aktiv = false; };
-  }, [f.kanton, f.gemeinde, vdStufe, istArbeit]);
+  }, [f.kanton, f.gemeinde, vdStufe, istArbeit, soGleicheGemeinde]);
   const fehler: string[] = [];
   if (vermoegensrechtlich && streitwert === null) fehler.push('Streitwert angeben (oder «nicht vermögensrechtlich» wählen).');
   if (vermoegensrechtlich && streitwert !== null && (!Number.isFinite(streitwert) || streitwert < 0)) fehler.push('Streitwert muss eine Zahl ≥ 0 sein.');
@@ -342,7 +349,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   // Kantone — abgenommene Stammdaten (behoerden.ts) haben Vorrang.
   const recherche = r && f.kanton && !stelle && f.instanz === 'einleitung' && r.schlichtung.obligatorisch
     ? schlichtungAufloesung(f.kanton, r.schlichtung.behoerdeTyp,
-      { vermoegensrechtlich, streitwertCHF: vermoegensrechtlich ? streitwert : null, arbeitsrechtlich: istArbeit })
+      { vermoegensrechtlich, streitwertCHF: vermoegensrechtlich ? streitwert : null, arbeitsrechtlich: istArbeit, gleicheGemeinde: soGleicheGemeinde })
     : null;
   const kantonOffen = f.kanton !== '' && !kantonErfasst(f.kanton) && !recherche;
   const kantonDaten = f.kanton ? kantonZustaendigkeit(f.kanton) : null;
@@ -1199,6 +1206,21 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               {recherche.aufloesung.modus === 'verzeichnis' && (() => {
                 const amtAufloesbar = f.kanton !== '' && AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'ordentlich';
                 return <>
+                  {/* SO-Weiche (§ 5 Abs. 1 GO SO, 11.6.2026) */}
+                  {f.kanton === 'SO' && r.schlichtung.behoerdeTyp === 'ordentlich' && (
+                    <div className="space-y-1.5">
+                      <p className="text-body-s text-ink-800">Wohnen oder sitzen beide Parteien in derselben Gemeinde? <span className="text-ink-500">(§ 5 Abs. 1 GO SO — bestimmt die Schlichtungsbehörde)</span></p>
+                      <div className="flex gap-4 text-body-s">
+                        {[{ v: true, l: 'Ja — gleiche Gemeinde' }, { v: false, l: 'Nein — verschiedene Gemeinden' }].map(({ v, l }) => (
+                          <label key={l} className="flex items-center gap-1.5 cursor-pointer text-ink-700">
+                            <input type="radio" name="so-gleiche-gemeinde" checked={soGleicheGemeinde === v}
+                              onChange={() => setSoGleicheGemeinde(v)} />
+                            {l}
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                   {/* PLZ→Gemeinde→Amt-Auflösung (ZH/AG/SG/TG/FR/ZG/AI, ordentliche Behörde) */}
                   {amtAufloesbar && amt && (
                     <div>
@@ -1229,7 +1251,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {/* VD ohne Streitwert-Stufe: die PLZ-Auflösung ist hier
                           bewusst inaktiv — Hinweis unterdrücken (Bug-Check
                           11.6.2026). */}
-                      {amtAufloesbar && !(f.kanton === 'VD' && !vdStufe) && (
+                      {amtAufloesbar && !(f.kanton === 'VD' && !vdStufe) && !(f.kanton === 'SO' && soGleicheGemeinde !== false) && (
                         <span className="text-ink-500">PLZ oder Gemeinde eingeben für die konkrete Amts-Adresse. </span>
                       )}
                       <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">

@@ -12,10 +12,11 @@ describe('Schlichtungsstellen — Vollständigkeit & Integrität', () => {
       const e = SCHLICHTUNGSSTELLEN[k];
       expect(e, k).toBeDefined();
       expect(e.quelle.length, k).toBeGreaterThan(5);
-      // Deklarierte Anpassung 11.6.2026: VD (Streitwert-Weiche) und TI
-      // (amtliche Località-Vollerhebung) neu verifiziert — übrige Kantone
-      // bleiben am Recherche-Stand 5.6.2026 festgenagelt.
-      expect(e.stand, k).toBe(k === 'VD' || k === 'TI' ? '11.6.2026' : '5.6.2026');
+      // Deklarierte Anpassung 11.6.2026: VD (Streitwert-Weiche), TI
+      // (Località-Vollerhebung), SO (§ 5/§ 10-GO-Weiche) und NE (Miete
+      // paritätisch, OJN) neu verifiziert — übrige Kantone bleiben am
+      // Recherche-Stand 5.6.2026 festgenagelt.
+      expect(e.stand, k).toBe(['VD', 'TI', 'SO', 'NE'].includes(k) ? '11.6.2026' : '5.6.2026');
       expect(['zentral', 'liste', 'verzeichnis']).toContain(e.ordentlich.modus);
     }
   });
@@ -184,7 +185,9 @@ describe('Paritätische Stellen (Miete/GlG) — kantonsrichtige Stopp-Karte (Auf
     for (const k of KANTONE) {
       const r = schlichtungAufloesung(k, 'paritaetisch_miete');
       expect(r, k).not.toBeNull();
-      const erwarteFallback = k === 'BE' || k === 'NE';
+      // Deklariert 11.6.2026: NE hat neu einen eigenen miete-Eintrag
+      // (Chambre de conciliation paritätisch, Art. 12 OJN) — nur BE bleibt.
+      const erwarteFallback = k === 'BE';
       expect(r!.glgFallback, `${k}: Fallback auf ordentliche Behörde`).toBe(erwarteFallback);
     }
   });

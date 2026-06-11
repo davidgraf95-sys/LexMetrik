@@ -467,9 +467,9 @@ Kreiseinteilung gesetzlich stabil. Gemeinden-Spalte in swisstopo-Schreibweise.
 | Friedensrichterkreis 7 Oberwil | Rosenweg 11 | 4104 Oberwil | Biel-Benken, Ettingen, Oberwil (BL), Therwil | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
 | Friedensrichterkreis 8 Laufen | Brombergstrasse 42 | 4244 Röschenz | Blauen, Brislach, Burg im Leimental, Dittingen, Duggingen, Grellingen, Laufen, Liesberg, Nenzlingen, Roggenburg, Röschenz, Wahlen, Zwingen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
 | Friedensrichterkreis 9 Liestal | Rathausstrasse 36, Postfach | 4410 Liestal | Lausen, Liestal | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
-| Friedensrichterkreis 10 Bubendorf | Am Rain 14 | 4419 Lupsingen | Bubendorf, Lupsingen, Ramlinsburg, Seltisberg, Ziefen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 10 Bubendorf | Am Rain 20 | 4419 Lupsingen | Bubendorf, Lupsingen, Ramlinsburg, Seltisberg, Ziefen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
 | Friedensrichterkreis 11 Frenkendorf | Bächliackerstrasse 2 | 4402 Frenkendorf | Arisdorf, Frenkendorf, Füllinsdorf, Giebenach, Hersberg | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
-| Friedensrichterkreis 12 Pratteln | Muttenzerstrasse 38 | 4133 Pratteln | Augst, Pratteln | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
+| Friedensrichterkreis 12 Pratteln-Augst | Postfach 1335 | 4133 Pratteln | Augst, Pratteln | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
 | Friedensrichterkreis 13 Sissach | c/o Gemeindeverwaltung Sissach, Bahnhofstrasse 1 | 4450 Sissach | Böckten, Buckten, Diepflingen, Häfelfingen, Itingen, Känerkinden, Läufelfingen, Nusshof, Rümlingen, Sissach, Tenniken, Thürnen, Wintersingen, Wittinsburg, Zunzgen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
 | Friedensrichterkreis 14 Gelterkinden | Huebacherweg 16 | 4460 Gelterkinden | Anwil, Buus, Gelterkinden, Hemmiken, Kilchberg (BL), Maisprach, Oltingen, Ormalingen, Rickenbach (BL), Rothenfluh, Rünenberg, Tecknau, Wenslingen, Zeglingen | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
 | Friedensrichterkreis 15 Waldenburg | c/o Gemeindeverwaltung Reigoldswil, Dorfplatz 2 | 4418 Reigoldswil | Arboldswil, Bennwil, Bretzwil, Diegten, Eptingen, Hölstein, Lampenberg, Langenbruck, Lauwil, Liedertswil, Niederdorf, Oberdorf (BL), Reigoldswil, Titterten, Waldenburg | https://www.baselland.ch/politik-und-behorden/gerichte/bv-gerichte/friedensrichter |
@@ -504,6 +504,8 @@ Alpthal, Wangen — dort Dropdown/Handeingabe. 26/30 Gemeinden automatisch.
 | Vermittleramt Tuggen | Zürcherstrasse 14, Postfach 35 | 8856 Tuggen | Tuggen | https://www.tuggen.ch/de/verwaltung/aemter/?amt_id=5121 |
 | Vermittleramt Vorderthal | Kreuzstrasse 30 | 8854 Siebnen | Vorderthal | https://www.vorderthal.ch/verwaltung/vermittler |
 | Vermittleramt Innerthal | Mühlestrasse 16 | 8855 Wangen | Innerthal | https://www.innerthal.ch/verwaltung/vermittleramt-1456 |
+
+**NACHTRAG 11.6.2026 (Sektion 35, Gemeindeseiten-Verifikation aller 15 Kreise — baselland.ch Cloudflare-gesperrt):** 10 Zeilen amtlich bestätigt; ZWEI korrigiert: K10 amtlich «Am Rain 20» (seltisberg.ch; war 14) · K12 amtlich «Friedensrichteramt Pratteln-Augst, Postfach 1335, 4133 Pratteln» (pratteln.ch; war Muttenzerstrasse 38). K4/K15 als c/o-Verwaltungsadressen bestätigt; K8 (Brombergstrasse 42, Röschenz) bleibt UNSICHER (nirgends amtlich publiziert, nur indiziell — Vorbehalt im Kreis-Eintrag belassen, bei Gelegenheit beim Kreis nachfragen). Detail-Protokoll /tmp-Erhebung der Session.
 
 ## 37. VD — Justices de paix je District (Streitwert-Stufe < CHF 10'000) — VERDRAHTET 11.6.2026 (BFS-Join)
 
@@ -677,3 +679,68 @@ Ortsteil-Wahl an, Daten in `src/data/schlichtung/tiAmt.ts`):
 prüfen; die vier kantonalen Datenlücken-Località gelegentlich neu
 abfragen. **Abnahme-Status:** Erstrecherche vollerhoben an der amtlichen
 Quelle (169/169 Località, 11.6.2026); fachliche Abnahme David ausstehend.
+
+## 39. SO — Amtsgerichtspräsidien als Auffang-Schlichtungsbehörde (§ 10 GO) — VERDRAHTET 11.6.2026 (BFS-Bezirks-Join)
+
+**Normlage WÖRTLICH verifiziert 11.6.2026** (GO SO, BGS 125.12, Stand
+1.1.2026, via bgs.so.ch; Vollerhebung /tmp-Protokoll der Session):
+
+- **§ 5 Abs. 1 GO:** «Der Friedensrichter ist die zuständige
+  Schlichtungsbehörde gemäss Artikel 197 ZPO, sofern beide bzw. alle
+  Parteien in derselben Gemeinde wohnen oder ihren Sitz haben.»
+  (juristische Personen über den SITZ erfasst). Abs. 2 nimmt aus:
+  Staat/Gemeinde als Partei · Art. 961/975 ZGB · Miete/Pacht Wohn- und
+  Geschäftsräume + landwirtschaftliche Pacht (lit. d) · GlG (lit. e) ·
+  Unterstützungspflicht.
+- **§ 10 Abs. 1 GO:** «Der Amtsgerichtspräsident ist in allen
+  Streitigkeiten, die nicht ausdrücklich einer anderen Stelle zugewiesen
+  sind, die Schlichtungsbehörde nach den Bestimmungen der ZPO.»
+- **Kreis-Negativprobe (so.ch, amtlich):** Auch in
+  Friedensrichterkreisen bleibt der gemeinsame Friedensrichter NUR
+  zuständig, wenn beide Parteien in der GLEICHEN Gemeinde wohnen —
+  der Kreis erweitert die Zuständigkeit nicht.
+- **§ 86 Abs. 1 GO:** Amtssitz der Friedensrichter ist die Wahlgemeinde;
+  Friedensrichter sind Gemeindeorgane → Anlaufstelle ist die
+  Gemeindeverwaltung (eine explizite Adress-Publikation existiert NICHT —
+  ehrlich ohne Strassenadresse führen). so.ch publiziert keine
+  FR-Strassenadressen; einzige bekannte Kreis-Adresse (Solothurn-Bellach,
+  Baselstrasse 7) ist nur über die Gemeinde Bellach belegt — NICHT
+  übernehmen.
+
+**Deterministische Weiche (Decision-Tree):** gleiche Wohnsitz-/
+Sitzgemeinde beider Parteien? JA → Friedensrichter/in dieser Gemeinde
+(Anlaufstelle Gemeindeverwaltung; 10 Kreis-Zusammenschlüsse mit 29
+Gemeinden ändern daran nichts) · NEIN bzw. Ausnahme nach § 5 Abs. 2 →
+Amtsgerichtspräsidium des Richteramts der massgeblichen Gemeinde
+(Tabelle unten). Miete/GlG laufen über die Sonder-Schlichtungsbehörden
+(§§ 34bis ff. GO — bereits erfasst).
+
+Generator-Muster wie BE: Spalte 4 trägt die BFS-BEZIRKE (Level-2-Namen
+ohne Präfix «Bezirk »); plz-generieren.ts löst sie über
+/tmp/bfs_gemeinden.csv in die 104 Gemeinden auf. Amtei-Einteilung
+amtlich doppelt belegt (so.ch-Zuständigkeitslisten + Art. 43 KV SO).
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Richteramt Solothurn-Lebern (Amtsgerichtspräsidium) | Amthaus 2, Westbahnhofstrasse 16 | 4502 Solothurn | Solothurn, Lebern | https://so.ch/gerichte/richteraemter/richteramt-solothurn-lebern/ |
+| Richteramt Bucheggberg-Wasseramt (Amtsgerichtspräsidium) | Amthaus 1, Bielstrasse 1 | 4502 Solothurn | Bucheggberg, Wasseramt | https://so.ch/gerichte/richteraemter/richteramt-bucheggberg-wasseramt/ |
+| Richteramt Thal-Gäu (Amtsgerichtspräsidium) | Schmelzihof, Wengimattstrasse 2 | 4710 Balsthal | Thal, Gäu | https://so.ch/gerichte/richteraemter/richteramt-thal-gaeu/ |
+| Richteramt Olten-Gösgen (Amtsgerichtspräsidium) | Römerstrasse 2 | 4600 Olten | Olten, Gösgen | https://so.ch/gerichte/richteraemter/richteramt-olten-goesgen/ |
+| Richteramt Dorneck-Thierstein (Amtsgerichtspräsidium) | Amthausstrasse 15 | 4143 Dornach | Dorneck, Thierstein | https://so.ch/gerichte/richteraemter/richteramt-dorneck-thierstein/ |
+
+**Friedensrichter-Kreise (10, Stand inkl. GVK 23.2.2026 — als Liste,
+parser-unsichtbar; massgeblich bleibt die GLEICHE Gemeinde):**
+
+- Unterer Leberberg (Sitz Flumenthal): Flumenthal, Günsberg, Hubersdorf, Riedholz
+- Gäu (Egerkingen): Egerkingen, Härkingen, Neuendorf, Niederbuchsiten, Oberbuchsiten (Erweiterung GVK 23.2.2026)
+- Niederamt (Schönenwerd): Schönenwerd, Gretzenbach, Eppenberg-Wöschnau
+- Bärschwil-Erschwil-Grindel (Erschwil) · Erlinsbach-Kienberg (Erlinsbach SO) · Solothurn-Bellach (Solothurn) · Wartenfels (Lostorf) · Fehren-Himmelried (Fehren) · Unterer Hauenstein (Trimbach): Trimbach, Hauenstein-Ifenthal, Wisen, Winznau · Derendingen-Luterbach (Derendingen, GVK 18.8.2025)
+
+**Pflegebedarf:** GVK-Genehmigungen neuer Kreis-Zusammenschlüsse
+(laufend, zuletzt 23.2.2026/18.8.2025) — jährlich mit dem
+Behörden-Durchgang; so.ch-Zuständigkeitsliste führt teils
+Alt-Gemeindenamen (Fusions-Mapping: Halten/Oekingen→Kriegstetten 2026 ·
+Lüterswil-Gächliwil→Buchegg 2024 · Gänsbrunnen/Welschenrohr→
+Welschenrohr-Gänsbrunnen 2021 · Rohr→Stüsslingen 2021 — alle
+richteramts-intern). **Abnahme-Status:** Norm + Adressen Erstrecherche
+wörtlich am amtlichen Erlass/so.ch (11.6.2026); Abnahme David ausstehend.
