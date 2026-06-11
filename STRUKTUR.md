@@ -20,6 +20,27 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 11.6.2026 später Nachmittag — Token-Disziplin (Aufträge David, ungepusht)
+
+**(1) Quiet-on-Green Gate-Wrapper** (`ab1fdd6`/`8202aab`/`8c4e809`, Auftrag
+AUFTRAG-gate-wrapper.md): `npm run gate` (Fünferkette) / `gate:schnell`
+(tsc·vitest·golden, ~7 s) — bei Grün ein Einzeiler pro Tor, volle Ausgabe
+NUR für rote Tore; §6 Ziff. 1 zeigt auf den Wrapper; Rot-Pfad empirisch
+belegt. **(2) Token-Fahrplan** `FAHRPLAN-TOKEN-DISZIPLIN.md` («freie
+Fahrt»): T-1 `npm run golden:diff -- <id>` = Fall-Diff statt 11'900-Zeilen-
+JSON, dazu Schutz-Fund gefixt — unbekannte Argumente an `npm run golden`
+überschrieben bisher STILL die Basis (`ffeb549`) · T-3 §6 Ziff. 5
+Diagnose-Sparsamkeit (`776ecc5`) · T-4 STRUKTUR-Rotation 826→587 Zeilen,
+Chronik byte-genau (Rekonstruktions-Assert) nach
+archiv/STRUKTUR-SESSIONKARTEN.md, Pflegeregel im Kopf, Verifikationsstand-
+Zeile aktualisiert (`e8d3802`) · T-2 Stop-Hook `gate-stopp.py`: fährt
+gate:schnell nativ nach jeder Antwort, Grün = 0 Tokens, Rot blockiert
+EINMAL mit voller Ausgabe; Anlage durch David selbst (Permission-Classifier
+liess Hook-/Permission-Schreiben durch die Session zweimal nicht zu),
+Empirie 4/4 Pfade (`e164491`). Kein Tor abgeschwächt. Beginn der Session:
+READ-ONLY-Repo-Inspektionsbericht für das Loop-Setup (Plan-Datei).
+**7 Commits ungepusht — Push/Deploy nur auf frisches Ja (§9).**
+
 ## Session 11.6.2026 abends — Klage-Befunde David: Instanz-Hinweis + Kopf-Layout (DEPLOYED)
 
 **(1) «nimmt standardmässig obere kantonale Instanz» (`b06a823`):** Root
