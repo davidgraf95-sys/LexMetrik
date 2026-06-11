@@ -717,7 +717,7 @@ Amtsgerichtspräsidium des Richteramts der massgeblichen Gemeinde
 
 Generator-Muster wie BE: Spalte 4 trägt die BFS-BEZIRKE (Level-2-Namen
 ohne Präfix «Bezirk »); plz-generieren.ts löst sie über
-/tmp/bfs_gemeinden.csv in die 104 Gemeinden auf. Amtei-Einteilung
+den BFS-Snapshot (agvchapp.bfs.admin.ch) in die 104 Gemeinden auf. Amtei-Einteilung
 amtlich doppelt belegt (so.ch-Zuständigkeitslisten + Art. 43 KV SO).
 
 | Amt | Strasse | PLZ Ort | Gemeinden | URL |
