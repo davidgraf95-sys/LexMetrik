@@ -744,3 +744,147 @@ Lüterswil-Gächliwil→Buchegg 2024 · Gänsbrunnen/Welschenrohr→
 Welschenrohr-Gänsbrunnen 2021 · Rohr→Stüsslingen 2021 — alle
 richteramts-intern). **Abnahme-Status:** Norm + Adressen Erstrecherche
 wörtlich am amtlichen Erlass/so.ch (11.6.2026); Abnahme David ausstehend.
+
+## 40. VS — Juge de commune / Gemeinderichter: Anlaufstelle Gemeindeverwaltung (122 Gemeinden) — VERDRAHTET 11.6.2026 (Einzelerhebung)
+
+
+**Abrufdatum:** 11.06.2026
+
+**Quellen:**
+1. Amtliche Namensliste der Richter/Vizerichter je Gemeinde (nur Namen, keine Adressen): https://www.vs.ch/web/communes/juges-vice-juges (verlinkt von https://www.vs.ch/web/tribunaux/liste-de-juges-et-vice-juges-de-commune)
+2. Kantonales Gemeindeverzeichnis (Detailseiten je Gemeinde, ohne Postadressen — liefert amtliche Gemeinde-Websites): https://www.vs.ch/web/communes/commune
+3. Postadressen: amtliche Website jeder einzelnen Gemeinde (alle 122 einzeln abgerufen; Footer/Kontakt/Impressum bzw. bei Megaphone-CMS-Sites der JSON-Endpunkt api.megaphone.info/v1/websites?domain=…, Feld configs.footer.attributes.addressComponents)
+4. Gemeindebestand validiert gegen BFS (Level 3 unter Kanton VS, ValidTo leer): 122 Gemeinden, Stand 2026
+
+**Methodik:** Keine kantonale Zentralliste mit Strassenadressen vorhanden (vs.ch-Annuaire nur Staatspersonal; opendata.swiss-Datensatz «Adressen der Gemeindeverwaltungen» betrifft nur BL). Daher Auto-Auflösung über das kantonale Verzeichnis (Slug→amtliche Website) und Einzelerhebung aller 122 Gemeinde-Websites; 12 JS-gerenderte Sites (Megaphone-CMS) über den dahinterliegenden JSON-Endpunkt erhoben. Jede Zeile gegen die BFS-Gemeindeliste validiert (122/122, 0 Lücken).
+
+**Gemeinden ohne auffindbare amtliche Strassenadresse (Gemeinde publiziert selbst keine Strasse/Hausnummer):** Baltschieder (nur «3937 Baltschieder»), Bellwald (nur «3997 Bellwald»), Grächen («Dorfplatz» ohne Nr.), Saas-Almagell («Dorfplatz» ohne Nr.), Ardon («Place Saint-Jean» ohne Nr.), Anniviers/Salvan/Unterbäch (nur Postfach/Case postale — für Postzustellung korrekt).
+
+**Sonderfälle:** Blatten: Verwaltung seit 28.05.2025 (Bergsturz) c/o Gemeindeverwaltung Wiler, Dorfstrasse 24, 3918 Wiler (Lötschen). Leuk: Verwaltung in Susten (3952). Riederalp: Verwaltung in Ried-Mörel (3986). Conthey: Verwaltung in St-Séverin (1975). Goms: Verwaltung in Gluringen (3998). Obergoms: Verwaltung in Obergesteln (3988). Mont-Noble: Verwaltung in Nax (1973). Noble-Contrée: Verwaltung in Veyras (3968). Port-Valais: Verwaltung in Le Bouveret (1897). Zwischbergen: Verwaltung in Gondo (3907). Nendaz: Basse-Nendaz (1996). Val de Bagnes: Le Châble (1934). Martigny-Combe: Martigny-Croix (1921).
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+|---|---|---|---|---|
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Agarn) | Alte Kantonsstrasse 14, Postfach 17 | 3951 Agarn | Agarn | https://www.agarn.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Albinen) | Torrentstrasse 49 | 3955 Albinen | Albinen | https://www.albinen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Anniviers) | Case postale 46 | 3961 Vissoie | Anniviers | https://www.anniviers.org |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Arbaz) | Rte du Village 14 | 1974 Arbaz | Arbaz | https://www.arbaz.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Ardon) | Place Saint-Jean | 1957 Ardon | Ardon | https://www.ardon.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Ausserberg) | Dorfstrasse 71 | 3938 Ausserberg | Ausserberg | https://www.ausserberg.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Ayent) | Rte d'Anzère 1 | 1966 Ayent | Ayent | https://www.ayent.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Baltschieder) |  | 3937 Baltschieder | Baltschieder | https://www.baltschieder.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Bellwald) |  | 3997 Bellwald | Bellwald | https://gemeinde.bellwald.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Bettmeralp) | Hauptstrasse 156 | 3992 Bettmeralp | Bettmeralp | https://gemeinde.bettmeralp.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Binn) | Dorfstrasse 11 | 3996 Binn | Binn | https://www.binn.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Bister) | Kantonsstrasse 50 | 3983 Bister | Bister | https://www.bister.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Bitsch) | Furkastrasse 88 | 3982 Bitsch | Bitsch | https://www.bitsch.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Blatten) | c/o Gemeindeverwaltung Wiler, Dorfstrasse 24 | 3918 Wiler (Lötschen) | Blatten | https://www.blatten.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Bourg-Saint-Pierre) | Route de Raveire 5 | 1946 Bourg-St-Pierre | Bourg-Saint-Pierre | https://www.bourg-st-pierre.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Bovernier) | Rue Principale 105 | 1932 Bovernier | Bovernier | https://www.bovernier.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Brig-Glis) | Alte Simplonstrasse 28 | 3900 Brig | Brig-Glis | https://www.brig-glis.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Bürchen) | Haselstrasse 42 | 3935 Bürchen | Bürchen | https://www.buerchen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Chalais) | Route de l'Eglise 10 B | 3966 Chalais | Chalais | https://www.chalais.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Chamoson) | Chemin Neuf 9 | 1955 Chamoson | Chamoson | https://www.chamoson.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Champéry) | Rue du Village 46, Case postale 54 | 1874 Champéry | Champéry | https://www.champery.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Chippis) | Grande Avenue 5, Case postale 24 | 3965 Chippis | Chippis | https://www.chippis.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Collombey-Muraz) | Rue des Dents-du-Midi 44, Case postale 246 | 1868 Collombey | Collombey-Muraz | https://www.collombey-muraz.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Collonges) | Rue Sainte-Anne 5 | 1903 Collonges | Collonges | https://www.collonges.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Conthey) | Route de Savoie 54 | 1975 St-Séverin | Conthey | https://www.conthey.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Crans-Montana) | Avenue de la Gare 20, Case postale 308 | 3963 Crans-Montana 1 | Crans-Montana | https://www.cransmontana.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Dorénaz) | Rue de la Mairie 17 | 1905 Dorénaz | Dorénaz | https://www.dorenaz.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Eggerberg) | Bahnhofstrasse 2 | 3939 Eggerberg | Eggerberg | https://www.eggerberg.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Eischoll) | Dorfstrasse 54 | 3943 Eischoll | Eischoll | https://gemeinde.eischoll.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Eisten) | Zenschmieden 6 | 3922 Eisten | Eisten | https://www.eisten.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Embd) | Kirchweg 18 | 3926 Embd | Embd | https://www.embd.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Ergisch) | Mitteldorf 12 | 3947 Ergisch | Ergisch | https://www.ergisch.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Ernen) | Hengert 1 | 3995 Ernen | Ernen | https://www.ernen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Evionnaz) | Rue principale 26, Case postale 13 | 1902 Evionnaz | Evionnaz | https://www.evionnaz.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Evolène) | Rue Centrale 216, Case postale 83 | 1983 Evolène | Evolène | https://www.commune-evolene.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Ferden) | Leischa 1b | 3916 Ferden | Ferden | https://www.ferden.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Fiesch) | Furkastrasse 44 | 3984 Fiesch | Fiesch | https://www.fiesch.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Fieschertal) | Dorfplatz 6 | 3984 Fieschertal | Fieschertal | https://www.fieschertal.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Finhaut) | Place de l'Eglise 3 | 1925 Finhaut | Finhaut | https://www.finhaut.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Fully) | Rue de l'Eglise 46 | 1926 Fully | Fully | https://www.fully.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Gampel-Bratsch) | Kirchstrasse 6 | 3945 Gampel | Gampel-Bratsch | https://www.gampel-bratsch.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Goms) | Furkastrasse 399 | 3998 Gluringen | Goms | https://www.gemeinde-goms.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Grengiols) | Heerstrasse 2 | 3993 Grengiols | Grengiols | https://www.grengiols.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Grimisuat) | Place Mgr Gabriel Balet 1 | 1971 Grimisuat | Grimisuat | https://www.grimisuat.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Grächen) | Dorfplatz | 3925 Grächen | Grächen | https://www.gemeinde-graechen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Grône) | Rue Centrale 182 | 3979 Grône | Grône | https://www.grone.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Guttet-Feschel) | Kirchstrasse 2 | 3956 Guttet-Feschel | Guttet-Feschel | https://www.guttet-feschel.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Hérémence) | Rue de l'Eglise 14, Case postale 16 | 1987 Hérémence | Hérémence | https://www.heremence.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Icogne) | Rte de la Bourgeoisie 7 | 1977 Icogne | Icogne | https://www.icogne.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Inden) | Hauptstrasse 41 | 3953 Inden | Inden | https://www.inden.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Isérables) | Place de la Maison de Commune 1 | 1914 Isérables | Isérables | https://www.iserables.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Kippel) | Hauptstrasse 61 | 3917 Kippel | Kippel | https://www.kippel.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Lalden) | Dorfstrasse 60 | 3931 Lalden | Lalden | https://www.lalden.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Lax) | Furkastrasse 46 | 3994 Lax | Lax | https://www.lax.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Lens) | Place du Village 1 | 1978 Lens | Lens | https://www.lens.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Leuk) | Sustenstrasse 3 | 3952 Susten | Leuk | https://www.leuk.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Leukerbad) | Ringstrasse 85, Postfach 346 | 3954 Leukerbad | Leukerbad | https://www.leukerbad.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Leytron) | Place de la Maison de Commune 1 | 1912 Leytron | Leytron | https://www.leytron.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Liddes) | Rue du Fond de Ville 46 | 1945 Liddes | Liddes | https://www.liddes.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Martigny) | Hôtel de Ville 1, Case postale 176 | 1920 Martigny | Martigny | https://www.martigny.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Martigny-Combe) | Route de la Croix 32, Case postale 25 | 1921 Martigny-Croix | Martigny-Combe | https://www.martigny-combe.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Massongex) | Place de l'Eglise 1 | 1869 Massongex | Massongex | https://www.massongex.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Mont-Noble) | La Vaye-Plane 13, Case postale 11 | 1973 Nax | Mont-Noble | https://www.mont-noble.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Monthey) | Place de l'Hôtel-de-Ville 2, Case postale 512 | 1870 Monthey | Monthey | https://www.monthey.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Mörel-Filet) | Furkastrasse 39 | 3983 Mörel-Filet | Mörel-Filet | https://www.moerel-filet.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Naters) | Bahnhofstrasse 9a | 3904 Naters | Naters | https://www.naters.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Nendaz) | Route de Nendaz 352 | 1996 Basse-Nendaz | Nendaz | https://www.nendaz.org |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Niedergesteln) | Pfarreigasse 10 | 3942 Niedergesteln | Niedergesteln | https://www.niedergesteln.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Noble-Contrée) | Avenue St-François 6 | 3968 Veyras | Noble-Contrée | https://www.noble-contree.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Oberems) | Moosmattenstrasse 3 | 3948 Oberems | Oberems | https://www.oberems.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Obergoms) | Bahnhofstrasse 1 | 3988 Obergesteln | Obergoms | https://gemeinde.obergoms.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Orsières) | Rue de la Commune 3 | 1937 Orsières | Orsières | https://www.orsieres.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Port-Valais) | Place de la Gare, Case postale 28 | 1897 Le Bouveret | Port-Valais | https://www.port-valais.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Randa) | Dorfstrasse 138 | 3928 Randa | Randa | https://www.randa.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Raron) | Gemeindezentrum Scheibenmoos, Theaterstrasse 4, Postfach 53 | 3942 Raron | Raron | https://www.raron.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Riddes) | Rue du Village 2 | 1908 Riddes | Riddes | https://www.riddes.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Ried-Brig) | Dorfstrasse 43 | 3911 Ried-Brig | Ried-Brig | https://www.ried-brig.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Riederalp) | Schulhausweg 1 | 3986 Ried-Mörel | Riederalp | https://www.gemeinde-riederalp.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saas-Almagell) | Dorfplatz | 3905 Saas-Almagell | Saas-Almagell | https://www.saas-almagell.org |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saas-Balen) | Dorfstrasse 1 | 3908 Saas-Balen | Saas-Balen | https://www.saas-balen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saas-Fee) | Dorfplatz 8 | 3906 Saas-Fee | Saas-Fee | https://www.gemeinde-saas-fee.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saas-Grund) | Saastalstrasse 390 | 3910 Saas-Grund | Saas-Grund | https://www.saas-grund.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saillon) | Rue du Bourg 19 | 1913 Saillon | Saillon | https://www.saillon.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saint-Gingolph) | Place de la Croix-Blanche 1, Case postale 1 | 1898 St-Gingolph | Saint-Gingolph | https://www.st-gingolph.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saint-Léonard) | Rue Centrale 22 | 1958 St-Léonard | Saint-Léonard | https://www.st-leonard.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saint-Martin (VS)) | Rue de l'Eglise 5 | 1969 St-Martin | Saint-Martin (VS) | https://www.saint-martin.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saint-Maurice) | Chemin de la Tuilerie 3, Case postale 83 | 1890 Saint-Maurice | Saint-Maurice | https://www.st-maurice.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Salgesch) | Klareistrasse 1 | 3970 Salgesch | Salgesch | https://www.salgesch.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Salvan) | Case postale 10 | 1922 Salvan | Salvan | https://www.salvan.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Savièse) | Rue de St-Germain 50, Case postale 32 | 1965 Savièse | Savièse | https://www.saviese.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Saxon) | Route du Village 42 | 1907 Saxon | Saxon | https://www.saxon.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Sembrancher) | Rue Principale 24 | 1933 Sembrancher | Sembrancher | https://www.sembrancher.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Sierre) | Rue du Bourg 14, Case postale 96 | 3960 Sierre | Sierre | https://www.sierre.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Simplon) | Dorfplatz 25 | 3907 Simplon Dorf | Simplon | https://www.simplon.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Sion) | Hôtel de Ville, Rue du Grand-Pont 12, Case postale 2272 | 1950 Sion 2 | Sion | https://www.sion.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung St. Niklaus) | Talstrasse 31 | 3924 St. Niklaus | St. Niklaus | https://www.st-niklaus.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Stalden (VS)) | Märtplatz 7 | 3922 Stalden | Stalden (VS) | https://www.stalden.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Staldenried) | Zer Chirchu 58 | 3933 Staldenried | Staldenried | https://www.staldenried.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Steg-Hohtenn) | Kirchstrasse 37 | 3940 Steg | Steg-Hohtenn | https://www.steg.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Termen) | Termerstrasse 6 | 3912 Termen | Termen | https://www.termen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Trient) | Gilliod 27 | 1929 Trient | Trient | https://www.trient.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Troistorrents) | Place du Village 1, Case postale 65 | 1872 Troistorrents | Troistorrents | https://www.troistorrents.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Turtmann-Unterems) | Dorfstrasse 26, Postfach 18 | 3946 Turtmann | Turtmann-Unterems | https://www.turtmann-unterems.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Täsch) | Dorfstrasse 5 | 3929 Täsch | Täsch | https://www.taesch.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Törbel) | Wegsolstrasse 17 | 3923 Törbel | Törbel | https://www.toerbel.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Unterbäch) | Postfach 17 | 3944 Unterbäch | Unterbäch | https://www.unterbaech.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Val de Bagnes) | Route de Clouchèvre 44 | 1934 Le Châble VS | Val de Bagnes | https://www.valdebagnes.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Val-d'Illiez) | Route de Proz 4 | 1873 Val-d'Illiez | Val-d'Illiez | https://www.illiez.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Varen) | Dorfstrasse 35 | 3953 Varen | Varen | https://www.varen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Vernayaz) | Rue du Collège 10 | 1904 Vernayaz | Vernayaz | https://www.vernayaz.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Vex) | Route de Sion 10, Case postale 79 | 1981 Vex | Vex | https://www.vex.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Veysonnaz) | Rue Centre du Village 17 | 1993 Veysonnaz | Veysonnaz | https://www.veysonnaz.org |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Vionnaz) | Rue du Pavé 14 | 1895 Vionnaz | Vionnaz | https://www.vionnaz.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Visp) | St. Martiniplatz 1 | 3930 Visp | Visp | https://www.visp.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Visperterminen) | Kanzleiweg 8 | 3932 Visperterminen | Visperterminen | https://www.visperterminen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Vouvry) | Grand'Rue 25 | 1896 Vouvry | Vouvry | https://www.vouvry.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Vérossaz) | Place communale 1, Case postale 22 | 1891 Vérossaz | Vérossaz | https://www.verossaz.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Vétroz) | Rue des Pêcheurs 12 | 1963 Vétroz | Vétroz | https://www.vetroz.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Wiler (Lötschen)) | Dorfstrasse 24 | 3918 Wiler | Wiler (Lötschen) | https://www.wiler.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Zeneggen) | Dorfstrasse 53 | 3934 Zeneggen | Zeneggen | https://www.zeneggen.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Zermatt) | Gemeindehaus, Kirchplatz 3, Postfach 345 | 3920 Zermatt | Zermatt | https://www.gemeinde.zermatt.ch |
+| Juge de commune / Gemeinderichter (Anlaufstelle Gemeindeverwaltung Zwischbergen) | Simplonstrasse 34 | 3907 Gondo | Zwischbergen | https://www.zwischbergen.ch |
+
+**Pflegebedarf:** Gemeindeverwaltungs-Adressen wandern bei Fusionen/Umzügen (Sonderfall Blatten c/o Wiler seit Bergsturz 28.5.2025 — bei Wiederaufbau prüfen); jährlicher Behörden-Durchgang. **Abnahme-Status:** Erstrecherche, alle 122 an der amtlichen Gemeinde-Website erhoben (11.6.2026); Abnahme David ausstehend.

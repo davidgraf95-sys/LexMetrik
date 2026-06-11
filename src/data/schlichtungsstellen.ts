@@ -367,8 +367,11 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'verzeichnis', beschreibung: '10 Commissions préfectorales de conciliation (eine je District)', url: 'https://www.vd.ch/etat-droit-finances/districts-/-prefectures/prefectures/prestations-des-prefectures/commissions-prefectorales-de-conciliation' },
   },
   VS: {
-    stand: '5.6.2026', quelle: 'vs.ch (Liste juges de commune; SICT bail à loyer)',
-    ordentlich: { modus: 'verzeichnis', beschreibung: 'Juge de commune je Gemeinde (122 Gemeinden; Anlaufstelle = Gemeindeverwaltung)', url: 'https://www.vs.ch/web/tribunaux/liste-de-juges-et-vice-juges-de-commune' },
+    // Einzelerhebung aller 122 Gemeindeverwaltungs-Adressen 11.6.2026
+    // (Dossier §40) — Auto-Auflösung via aemterKantone; die amtliche
+    // Richterliste (nur Namen) bleibt der Verzeichnis-Link.
+    stand: '11.6.2026', quelle: 'vs.ch/communes (Richterliste + Gemeindeverzeichnis) · amtliche Website jeder Gemeinde (122/122 einzeln, 11.6.2026); SICT bail à loyer (5.6.2026)',
+    ordentlich: { modus: 'verzeichnis', beschreibung: 'Juge de commune / Gemeinderichter je Gemeinde (122; Anlaufstelle = Gemeindeverwaltung — PLZ/Gemeinde eingeben für die konkrete Adresse)', url: 'https://www.vs.ch/web/communes/juges-vice-juges' },
     // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
     miete: { modus: 'zentral', stelle: A('Commission cantonale de conciliation en matière de bail à loyer', 'Av. du Midi 7', '1950 Sion', 'ganzer Kanton', 'PLZ 1951 ebenfalls amtlich in Gebrauch', 'https://www.vs.ch/en-GB/web/sict/bail-a-loyer') },
   },

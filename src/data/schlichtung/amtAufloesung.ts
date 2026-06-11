@@ -35,8 +35,10 @@ function kleinFuer(kanton: string, d: KantonsAemter): Map<string, number> {
  *  die UI bietet dort die Ortsteil-Wahl an (tiKandidaten, tiAmt.ts).
  *  SO: amtFuer liefert das Amtsgerichtspräsidium (§ 10 GO) — gilt NUR,
  *  wenn die Parteien nicht in derselben Gemeinde wohnen/sitzen (die UIs
- *  gaten über die § 5-Weiche; gleiche Gemeinde → Friedensrichter). */
-export const AMT_KANTONE: readonly Kanton[] = ['ZH', 'AG', 'SG', 'TG', 'FR', 'ZG', 'AI', 'GR', 'LU', 'AR', 'NE', 'BL', 'SZ', 'BE', 'VD', 'TI', 'SO'] as const;
+ *  gaten über die § 5-Weiche; gleiche Gemeinde → Friedensrichter).
+ *  VS: Juge de commune — Anlaufstelle ist die Gemeindeverwaltung (1:1,
+ *  Einzelerhebung 11.6.2026; der Name der Stelle legt das offen). */
+export const AMT_KANTONE: readonly Kanton[] = ['ZH', 'AG', 'SG', 'TG', 'FR', 'ZG', 'AI', 'GR', 'LU', 'AR', 'NE', 'BL', 'SZ', 'BE', 'VD', 'TI', 'SO', 'VS'] as const;
 
 export async function amtFuer(kanton: Kanton, gemeinde: string): Promise<SchlichtungsAmt | null> {
   const g = gemeinde.trim();
