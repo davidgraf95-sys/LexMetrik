@@ -753,3 +753,18 @@ Aufnahme nur bei klar regelbasiertem, deterministischem Umfang — sonst
 Widerspruch zu «feste Rechenregeln, keine Schätzung»: Konsumkredit-Widerruf
 (Anwendungsbereich klären) · Schadenersatz/Genugtuung · Unterhalt ·
 Tagessatz · Mietzinsherabsetzung · Konkurrenzverbot (alle wertend/Ermessen).
+
+## Session-Karte 11.6.2026 (Tag, Session «Schlichtung fertig + Vollerhebungen»)
+
+**Schlichtungs-Matrix komplett (alle 26 Kantone, alle drei Typen):**
+- **VD** (de677e0): Streitwert-Weiche Art. 41 CDPJ (JdP <10k · Präsident TA 10–30k · TA >30–100k · Chambre patrimoniale >100k; LOJV/AAJTJ wörtlich) + Arbeitskaskade LJT (prud'hommes ≤30k) + GlG; 9 JdP + 4 TA + Chambre verdrahtet (300/300 Gemeinden).
+- **TI** (f306f6e): amtliche Località-Suche vollerhoben — Circoli Ticino/Giubiasco existieren amtlich nicht mehr; 38 Circoli, 97 Gemeinden auto + Ortsteil-Wahl Lugano/Lema/Tresa (ZH-Kreis-Mechanismus wiederverwendet).
+- **SO** (45d31fe): § 5/§ 10-GO-Weiche («gleiche Gemeinde?» → Friedensrichter, sonst AGP-Auto 104/104); GlG-Eigenstelle §§ 34bis (40fb888).
+- **VS** (5d31de9): alle 122 Gemeindeverwaltungen einzeln erhoben (Juge-de-commune-Anlaufstellen; Blatten c/o Wiler).
+- **Miete** (d836a20, 1b5faae): 11 Auto-Register (ZH/BE/SO/JU/VD/FR/GR/SZ/AG/SG/TG — 147 Stellen, 1'215 Zuordnungen; FR-Korrektur: 3 Kommissionen statt je Bezirk; TG 80/80 kommunal; Moutier→Delémont) + 13 zentral + NE-Wahl; **TI einziger ohne Auto (Gebiete amtlich nicht gemeindescharf)**.
+- **GlG** (92b5a50): alle 26 wörtlich am Erlass — 22 konkrete Stellen (BE-Konzentration Fünferbesetzung · GE gekreuzte Parität · ZG SB Arbeitsrecht), Fallback nur UR/OW/NW/GL.
+- Generator: XX-MIETE-Register + generischer BFS-Level-2-Join + Parser-Härtung (Folge-Befund zu B1: ALT-Sektionen hätten AI korrumpiert).
+
+**Ausserdem:** Begründungs-Wahl Maske/Platzhalter in Klage ordentlich/vereinfacht + SG (58f17e7) · Dossier Klageschrift-Gliederung (84f5e31; Davids Triade bestätigt, 2 Schnitt-Varianten) · Handeingabe-Kacheln entzerrt (7c5bfd3) · 3 Bug-Check-Lupen-Runden, alle Befunde gefixt (u. a. TG-Quell-Tippfehler Felben-Wellhausen, stale-Adressat-Härtungen).
+
+**OFFEN (Merkpunkte David):** TI vertiefen (Miete-Uffici gemeindescharf; Anfrage/Karten-Erhebung) · ZH Stadt: Kreis→Schlichtungsstelle AUTOMATISCH (statt Dropdown; PLZ→Kreis-Quelle erheben) · Abnahme-Welle (Lunch; Paket Tagerechner in .scratch/) · Gliederungs-Entscheide O07/V1-V2/K08 · Teil D. ~16 Session-Commits ungepusht — Push/Deploy nur auf frisches Ja.
