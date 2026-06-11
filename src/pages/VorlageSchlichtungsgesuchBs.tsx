@@ -213,22 +213,27 @@ export function VorlageSchlichtungsgesuchBs() {
               <span>Adresse der Behörde/des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
             </label>
             {a.behoerdeManuellAktiv && (
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-6">
+              // Layout-Anpassung 11.6.2026 (Auftrag David «zu kleine Kacheln»):
+              // Behördenname volle Breite (lange amtliche Bezeichnungen),
+              // Strasse + PLZ/Ort zweispaltig — statt drei gequetschter Felder.
+              <div className="space-y-3 pl-6">
                 <Field label="Behörde/Gericht">
                   <input className={inputCls} value={a.behoerdeManuell?.name ?? ''}
                     onChange={(e) => set('behoerdeManuell', { name: e.target.value, strasse: a.behoerdeManuell?.strasse ?? '', plzOrt: a.behoerdeManuell?.plzOrt ?? '' })}
                     placeholder="z. B. Friedensrichteramt X" />
                 </Field>
-                <Field label="Strasse und Hausnummer">
-                  <input className={inputCls} value={a.behoerdeManuell?.strasse ?? ''}
-                    onChange={(e) => set('behoerdeManuell', { name: a.behoerdeManuell?.name ?? '', strasse: e.target.value, plzOrt: a.behoerdeManuell?.plzOrt ?? '' })}
-                    placeholder="z. B. Gerichtsgasse 1" />
-                </Field>
-                <Field label="PLZ und Ort">
-                  <input className={inputCls} value={a.behoerdeManuell?.plzOrt ?? ''}
-                    onChange={(e) => set('behoerdeManuell', { name: a.behoerdeManuell?.name ?? '', strasse: a.behoerdeManuell?.strasse ?? '', plzOrt: e.target.value })}
-                    placeholder="z. B. 4001 Basel" />
-                </Field>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <Field label="Strasse und Hausnummer">
+                    <input className={inputCls} value={a.behoerdeManuell?.strasse ?? ''}
+                      onChange={(e) => set('behoerdeManuell', { name: a.behoerdeManuell?.name ?? '', strasse: e.target.value, plzOrt: a.behoerdeManuell?.plzOrt ?? '' })}
+                      placeholder="z. B. Gerichtsgasse 1" />
+                  </Field>
+                  <Field label="PLZ und Ort">
+                    <input className={inputCls} value={a.behoerdeManuell?.plzOrt ?? ''}
+                      onChange={(e) => set('behoerdeManuell', { name: a.behoerdeManuell?.name ?? '', strasse: a.behoerdeManuell?.strasse ?? '', plzOrt: e.target.value })}
+                      placeholder="z. B. 4001 Basel" />
+                  </Field>
+                </div>
               </div>
             )}
             {a.gerichtsKanton !== 'BS' && a.behoerdeManuellAktiv && (

@@ -154,22 +154,26 @@ export function VorlageKlageVereinfacht() {
               <span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
             </label>
             {a.gerichtManuellAktiv && (
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pl-6">
+              // Layout 11.6.2026 (Auftrag David, einheitlich mit dem
+              // Schlichtungsgesuch): Name volle Breite, Strasse + PLZ zweispaltig.
+              <div className="space-y-3 pl-6">
                 <Field label="Gericht">
                   <input className={inputCls} value={a.gerichtManuell?.name ?? ''}
                     onChange={(e) => set('gerichtManuell', { name: e.target.value, strasse: a.gerichtManuell?.strasse ?? '', plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
                     placeholder="z. B. Bezirksgericht X" />
                 </Field>
-                <Field label="Strasse und Hausnummer">
-                  <input className={inputCls} value={a.gerichtManuell?.strasse ?? ''}
-                    onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: e.target.value, plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
-                    placeholder="z. B. Gerichtsgasse 1" />
-                </Field>
-                <Field label="PLZ und Ort">
-                  <input className={inputCls} value={a.gerichtManuell?.plzOrt ?? ''}
-                    onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: a.gerichtManuell?.strasse ?? '', plzOrt: e.target.value })}
-                    placeholder="z. B. 8001 Zürich" />
-                </Field>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <Field label="Strasse und Hausnummer">
+                    <input className={inputCls} value={a.gerichtManuell?.strasse ?? ''}
+                      onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: e.target.value, plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
+                      placeholder="z. B. Gerichtsgasse 1" />
+                  </Field>
+                  <Field label="PLZ und Ort">
+                    <input className={inputCls} value={a.gerichtManuell?.plzOrt ?? ''}
+                      onChange={(e) => set('gerichtManuell', { name: a.gerichtManuell?.name ?? '', strasse: a.gerichtManuell?.strasse ?? '', plzOrt: e.target.value })}
+                      placeholder="z. B. 8001 Zürich" />
+                  </Field>
+                </div>
               </div>
             )}
           </div>
