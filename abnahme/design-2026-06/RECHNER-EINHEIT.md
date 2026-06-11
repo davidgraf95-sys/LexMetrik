@@ -1,5 +1,14 @@
 # Abnahme-Grundlage: Rechner-Design-Vereinheitlichung (11.6.2026, über Nacht)
 
+> **ABGENOMMEN — Verdikt David 11.6.2026 («das gilt als abgenommen»),
+> ohne Auflagen, E-1 bis E-5 vollständig.** Prüfer: David Graf (Jurist,
+> Anwaltsprüfung BS). Folgen: Reglement R1–R12 ist verbindliche
+> Bau-Checkliste (E-5, via WACHSTUM-REGLEMENT Ziff. 4); der kosmetische
+> ErgebnisBlock-Nachzug im Zuständigkeits-Trio ist freigegeben (E-4,
+> VD-Stand ist seit `de677e0` committet). Diese Abnahme betrifft das
+> DESIGN (Darstellungsschicht); sie ist KEINE fachliche Abnahme einzelner
+> Katalog-Einträge (§7-Status «geprüft» bleibt unberührt).
+
 Auftrag David 10.6.2026 spätnachts: alle Engines-UIs überprüfen,
 vergleichbare Darstellung vereinheitlichen, Wiedergabe der
 Rechtsinformationen überdenken, Regeln für den Designaufbau aufstellen,

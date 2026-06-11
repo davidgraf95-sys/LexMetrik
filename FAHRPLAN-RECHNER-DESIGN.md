@@ -99,5 +99,6 @@ und in der Block-Reihenfolge, nicht in den Inhalten.
   `abnahme/design-2026-06/screenshots/rechner-einheit-*` (gitignored);
   Abnahme-Bericht mit Entscheid-Posten E-1–E-5:
   `abnahme/design-2026-06/RECHNER-EINHEIT.md`.
-- OFFEN für David: Entscheid-Posten E-1–E-5 im Bericht · Push/Deploy
-  (§9, erst auf frisches Ja).
+- **ABGENOMMEN (David 11.6.2026, ohne Auflagen):** E-1–E-5 komplett —
+  Verdikt im Bericht protokolliert. Daraus freigegeben: Trio-Nachzug
+  (E-4). OFFEN nur noch: Push/Deploy (§9, erst auf frisches Ja).

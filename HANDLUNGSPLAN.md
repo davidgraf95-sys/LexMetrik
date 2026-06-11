@@ -11,11 +11,11 @@ erledigte Punkte durchstreichen oder löschen, Stand in STRUKTUR.md spiegeln.
 > Umsetzung D1–D6 über alle 16 Formulare (`FAHRPLAN-RECHNER-DESIGN.md`;
 > neue §10-Bausteine ErgebnisBlock/ThemenEinstieg; Kalender/Timeline hinter
 > das Verdikt; eine aria-live-Region pro Ergebnis). §6-Beweis: Golden 88/88
-> byte-gleich, e2e 33/33, smoke ok. **OFFEN für David:** Entscheid-Posten
-> E-1–E-5 in `abnahme/design-2026-06/RECHNER-EINHEIT.md` (Akzent-Regel,
-> Kalender-Position, 5 Kurz-Disclaimer-Wortlaute, Trio-Nachzug, R-Abnahme) ·
-> Push/Deploy auf frisches Ja. Zuständigkeits-Trio-Kosmetik zurückgestellt
-> (§12: Parallel-Session baut zeitgleich VD-Schlichtung in dieser Zone).
+> byte-gleich, e2e 33/33, smoke ok. **ABGENOMMEN (David 11.6.2026, ohne
+> Auflagen): E-1–E-5 komplett** (Protokoll in
+> `abnahme/design-2026-06/RECHNER-EINHEIT.md`); R1–R12 damit verbindliche
+> Bau-Checkliste, Trio-Nachzug freigegeben (VD seit `de677e0` committet).
+> OFFEN nur noch: Push/Deploy auf frisches Ja.
 
 > ~~**NEU (Auftrag David 10.6.2026): `FAHRPLAN-FRISTEN-EINHEIT.md`**~~ —
 > **FE-1–FE-6 UMGESETZT + DEPLOYED 10.6.2026 nachmittags** (Davids Ja

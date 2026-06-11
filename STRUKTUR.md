@@ -28,10 +28,11 @@ alle 16 ergebnistragenden Formulare (`FAHRPLAN-RECHNER-DESIGN.md`, Commits
 **`ThemenEinstieg`**; EckdatenKachel mit `akzent`-Prop; Doppel-aria-live der
 ErgebnisAnzeige aufgelöst. §6-Beweis: Golden 88/88 byte-gleich · e2e 33/33 ·
 smoke ok. Abnahme-Grundlage mit Screenshots vorher/nachher + Entscheid-Posten
-E-1–E-5: `abnahme/design-2026-06/RECHNER-EINHEIT.md`. Zuständigkeits-Trio
-bereits regelkonform (Referenzmuster); dessen rein kosmetische
-ErgebnisBlock-Adoption zurückgestellt (§12 — Parallel-Session baut
-zeitgleich VD-Schlichtung).
+E-1–E-5: `abnahme/design-2026-06/RECHNER-EINHEIT.md` — **ABGENOMMEN durch
+David 11.6.2026 ohne Auflagen** (R1–R12 verbindlich, Trio-Nachzug
+freigegeben). Zuständigkeits-Trio bereits regelkonform (Referenzmuster);
+dessen rein kosmetische ErgebnisBlock-Adoption war §12-zurückgestellt,
+Nachzug seit der Abnahme freigegeben.
 
 ## Session 10.6.2026 abends — STRUKTUR-UMBAU S-1–S-6 (Auftrag David)
 
