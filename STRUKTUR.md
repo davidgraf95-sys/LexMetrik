@@ -38,7 +38,16 @@ Stimmrechtssachen ohne Stillstand Art. 46 II lit. c als neuer Sonderfall;
 Art.-98-Warnung nicht bei Haftsachen) + Permalink-Nachzug + KV-Platzhalter-
 Beilagen-Leak + 3× §3-Defense-in-depth. §12-Vorfall: Parallel-Session
 (Schlichtung) erzwang Worktree-Etappen E3–E6 (Branch ssg-seo, gemergt
-`1e1a44a`). OFFEN: fachliche Abnahme der §7-Abweichungen (Stimmrechts-
+`1e1a44a`). **Zefix-UID Z1/Z1b DEPLOYED (gleiche Session, Push `8c691f3`):**
+UID-Feld (lib/uid.ts: eCH-0097-Prüfziffer, rein §2) + ZefixSuche-Baustein
+(ERSTER externer Request des Produkts, NUR auf Klick; CSP connect-src +
+zefix.ch; Datenschutz-Offenlegung Abschnitt 2 — Wortlaut-Abnahme offen)
+in den Behördeneingaben (ParteiEditor KV/KO + Schlichtungsgesuch BS);
+Suche per Firma ODER UID, Übernahme füllt Firma/UID/Strasse/PLZ/Ort aus
+dem Register (Detail-API; Dossier bibliothek/recherche/zefix-api.md).
+Prod-verifiziert (UID-only → Migros + Limmatstrasse 152, 0 CSP-Fehler).
+OFFEN Z2: Rollout auf Verträge/Kündigungen/Mahnung/Vollmacht/Gründungen.
+OFFEN: fachliche Abnahme der §7-Abweichungen (Stimmrechts-
 Sonderfall, Art.-98-Gate, Mahnungs-Blocker) · TODO(David): statische
 Meta-Descriptions, Kündigung-Titelwahl, og:image · **iCloud synct das
 Repo und legt Konfliktkopien in dist/ an (empirisch belegt) — Repo aus
