@@ -45,7 +45,18 @@ export interface KantonZivilgerichteErstinstanz {
    *  reine Hinweis-Texte für die UI, KEIN automatisches Routing (§1/§8). */
   hinweisArbeit?: string;
   hinweisMiete?: string;
+  /** Befund David 11.6.2026 («nimmt standardmässig obere kantonale
+   *  Instanz»): In OW/NW/GL/ZG/SH/AR heisst das ERSTINSTANZLICHE
+   *  Zivilgericht amtlich «Kantonsgericht» (obere Instanz dort:
+   *  Obergericht; Dossier gerichtsbehoerden-kantone.md Z. 12) — anders als
+   *  in SG/VS/FR/GR/JU/NE, wo «Kantonsgericht/Tribunal cantonal» die obere
+   *  Instanz bezeichnet. Ohne Offenlegung liest sich der Auto-Adressat wie
+   *  ein Fehlgriff; die UI zeigt diesen Hinweis beim gesetzten Gericht. */
+  namensHinweis?: string;
 }
+
+const KG_ERSTE_INSTANZ = (kanton: string) =>
+  `Trotz des Namens ist das Kantonsgericht ${kanton} das ERSTINSTANZLICHE Zivilgericht dieses Kantons; Rechtsmittelinstanz ist das Obergericht`;
 
 const Q_MASTER = 'gerichtsbehoerden-kantone.md (zweifach geprüft 5./6.6.2026)';
 const Q_ERSTLISTE = 'gerichtsadressen-erstliste.md (amtlich verifiziert 5.6.2026)';
@@ -125,21 +136,25 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
     },
   },
   OW: {
+    namensHinweis: KG_ERSTE_INSTANZ('Obwalden'),
     stand: '5.6.2026', quelle: Q_MASTER,
     url: 'https://www.ow.ch/gerichte/32',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Obwalden', strasse: 'Poststrasse 6, Postfach', plzOrt: '6060 Sarnen' } },
   },
   NW: {
+    namensHinweis: KG_ERSTE_INSTANZ('Nidwalden'),
     stand: '5.6.2026', quelle: Q_MASTER,
     url: 'https://www.nw.ch/kantonsgericht/80',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Nidwalden', strasse: 'Rathausplatz 1, Postfach 1244', plzOrt: '6371 Stans' } },
   },
   GL: {
+    namensHinweis: KG_ERSTE_INSTANZ('Glarus'),
     stand: '5.6.2026', quelle: Q_MASTER,
     url: 'https://www.gl.ch/rechtspflege/gerichte/kantonsgericht.html/280',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Glarus', strasse: 'Gerichtshaus, Spielhof 6', plzOrt: '8750 Glarus', hinweis: 'E-Mail-Eingaben unzulässig (Fristen)' } },
   },
   ZG: {
+    namensHinweis: KG_ERSTE_INSTANZ('Zug'),
     stand: '5.6.2026', quelle: Q_MASTER,
     url: 'https://zg.ch/de/gerichte/zivil-und-strafrechtspflege/kantonsgericht',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Zug', strasse: 'Gerichtsgebäude an der Aa, Aabachstrasse 3, Postfach', plzOrt: '6301 Zug' } },
@@ -193,11 +208,13 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
     },
   },
   SH: {
+    namensHinweis: KG_ERSTE_INSTANZ('Schaffhausen'),
     stand: '5.6.2026', quelle: Q_MASTER,
     url: 'https://sh.ch/CMS/Webseite/Kanton-Schaffhausen/Beh-rde/Justiz/Kantonsgericht-110173-DE.html',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Schaffhausen', strasse: 'Herrenacker 26', plzOrt: '8200 Schaffhausen', hinweis: 'Snippet-verifiziert (sh.ch JS-Wall) — vor Einreichung gegenprüfen' } },
   },
   AR: {
+    namensHinweis: KG_ERSTE_INSTANZ('Appenzell Ausserrhoden'),
     stand: '5.6.2026', quelle: Q_MASTER,
     url: 'https://ar.ch/gerichte/kantonsgericht/',
     erstinstanz: { modus: 'zentral', stelle: { name: 'Kantonsgericht Appenzell Ausserrhoden', strasse: 'Landsgemeindeplatz 2, Postfach', plzOrt: '9043 Trogen' } },

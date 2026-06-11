@@ -69,3 +69,23 @@ describe('Zivilgerichte Erstinstanz — Stichproben (verifizierte Korrekturen)',
     expect(ge.hinweisMiete).toContain('baux');
   });
 });
+
+describe('Namens-Offenlegung «Kantonsgericht = erste Instanz» (Befund David 11.6.2026)', () => {
+  // In OW/NW/GL/ZG/SH/AR heisst das ERSTINSTANZLICHE Zivilgericht amtlich
+  // «Kantonsgericht» (obere Instanz: Obergericht) — Dossier
+  // gerichtsbehoerden-kantone.md. Ohne Offenlegung liest der Auto-Adressat
+  // sich wie die obere kantonale Instanz.
+  it('alle zentralen «Kantonsgericht»-Kantone tragen den Instanz-Hinweis', () => {
+    for (const k of ['OW', 'NW', 'GL', 'ZG', 'SH', 'AR'] as const) {
+      const e = zivilgerichtErstinstanz(k)!;
+      expect(e.namensHinweis, k).toBeTruthy();
+      expect(e.namensHinweis, k).toMatch(/erstinstanzlich/i);
+      expect(e.namensHinweis, k).toContain('Obergericht');
+    }
+  });
+  it('eindeutig benannte Kantone brauchen keinen Hinweis', () => {
+    for (const k of ['BS', 'GE', 'JU', 'AI', 'UR'] as const) {
+      expect(zivilgerichtErstinstanz(k)!.namensHinweis, k).toBeUndefined();
+    }
+  });
+});

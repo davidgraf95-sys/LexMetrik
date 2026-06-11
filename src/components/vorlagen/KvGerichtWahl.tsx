@@ -65,6 +65,12 @@ export function KvGerichtWahl({ kanton, materie, onAufgeloest }: {
 
   return (
     <div className="space-y-3">
+      {/* Befund David 11.6.2026: In OW/NW/GL/ZG/SH/AR heisst die ERSTE
+          Instanz «Kantonsgericht» — ohne Offenlegung wirkt der
+          Auto-Adressat wie die obere kantonale Instanz. */}
+      {eintrag.namensHinweis && (
+        <p className="lc-notice-warn text-body-s">{eintrag.namensHinweis}.</p>
+      )}
       {e.modus === 'zentral' && e.stelle.hinweis && (
         <p className="text-xs text-ink-600">{e.stelle.hinweis}.</p>
       )}
