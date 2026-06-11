@@ -13,6 +13,38 @@ GRUENDUNG). Abgeschlossene Fahrpläne und historische Dokumente liegen in
 Verweise in Code-Kommentaren per grep auffindbar bleiben). Wissens-Quellen
 (PDF/DOCX, gitignored) in `bibliothek/quellen/` (`SICHTUNG.md`).
 
+## Session 11.6.2026 nachmittags — SSG/SEO-Umbau DEPLOYED (Auftrag + Freigaben David)
+
+**Auftrag `claude-code-auftrag-ssg-seo.md` komplett umgesetzt und LIVE**
+(Push origin/main = `58eaa7c`, Prod lexmetrik.vercel.app, Asset-Hash
+live=lokal, LCP 184 ms): Build-Zeit-Prerender im bestehenden Vite-Setup —
+alle **38 öffentlichen Routen liefern volles HTML ohne JS** mit
+individuellem Titel/Description/Canonical/OG + JSON-LD (WebApplication je
+Karte, WebSite+Organization auf /), `sitemap.xml` (38 URLs) + robots-
+Verweis. Architektur: `lib/seo.ts` (§5-Quelle, SITE_URL = EINZIGER
+Domainwechsel-Wert) · `entry-server.tsx` ZWEI-PASS (prerender wärmt
+lazy-Caches, renderToString liefert script-freies HTML — Reacts
+$RC-Suspense-Scripts kollidierten mit der CSP, Prod-Befund gefixt
+`58eaa7c`) · `scripts/prerender.ts` als dritter Build-Schritt mit
+Drift-Toren (404/Stub/Script/Fallback/Zähler 38) · `RouteMeta` führt den
+Head bei SPA-Navigation nach · flache `<pfad>.html` + vercel.json
+cleanUrls/trailingSlash:false/Fallback-Rewrite `/app` (noindex-Hülle).
+`main.tsx` UNVERÄNDERT (render-then-replace statt Hydrate — Begründung
+docs/ssg-diagnose.md). Doku: `docs/ssg-diagnose.md` + 
+`docs/ssg-umbau-protokoll.md`. **§9-Bug-Check** (6 Strang-Finder × 2
+adversariale Lupen über a7adb98..HEAD): 10 bestätigte Befunde, ALLE
+gefixt (`9858c14`, `687fe58`) — darunter 2× MITTEL BGer (kantonale
+Stimmrechtssachen ohne Stillstand Art. 46 II lit. c als neuer Sonderfall;
+Art.-98-Warnung nicht bei Haftsachen) + Permalink-Nachzug + KV-Platzhalter-
+Beilagen-Leak + 3× §3-Defense-in-depth. §12-Vorfall: Parallel-Session
+(Schlichtung) erzwang Worktree-Etappen E3–E6 (Branch ssg-seo, gemergt
+`1e1a44a`). OFFEN: fachliche Abnahme der §7-Abweichungen (Stimmrechts-
+Sonderfall, Art.-98-Gate, Mahnungs-Blocker) · TODO(David): statische
+Meta-Descriptions, Kündigung-Titelwahl, og:image · **iCloud synct das
+Repo und legt Konfliktkopien in dist/ an (empirisch belegt) — Repo aus
+dem Sync nehmen oder dist/.nosync setzen** · Zefix-UID-Feld mit
+Auto-Lookup für juristische Personen (Entscheid David, nächste Etappe).
+
 ## Session 11.6.2026 vormittags — Abnahme Design · Mahnung · BGer-Rechtsweg · Trio-Nachzug (Aufträge David)
 
 > **GEPUSHT + DEPLOYED 11.6.2026 mittags (Ja David «bug check push und

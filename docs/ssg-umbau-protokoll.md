@@ -59,6 +59,15 @@ das alte Ziel lief ins 404; Befund am ersten Preview `lexmetrik-j07tnhiqh`):
 | Asset-Hash | live = lokal (`index-DilMcf47.js`) |
 | Browser-Probe | Verzugszins-Preset → CHF 126.03 identisch; 0 eigene Konsolenfehler (geblockte vercel.live-Toolbar-Scripts sind Preview-Rauschen, in Prod nicht vorhanden) |
 
+**Prod-Verifikation 11.6.2026 nachmittags (Ja David):** Push `58eaa7c` ·
+Prod-Deploy Ready · Asset-Hash live=lokal · Kernrouten-Matrix 200 mit
+individuellen Titeln · **LCP 184 ms** · 0 Konsolenfehler · Browser-Probe
+CHF 126.03 identisch. **Hotfix `58eaa7c`:** prerender-Output enthielt
+Reacts $RC-Suspense-Inline-Scripts (CSP-geblockt, sichtbar «Wird
+geladen …») → Zwei-Pass-Render + neue Drift-Tore. **Umgebungs-Hinweis:**
+iCloud-Desktop-Sync legt nach Builds Konfliktkopien in dist/ an
+(empirisch belegt) — Repo aus dem Sync nehmen oder dist/.nosync.
+
 LCP/Web-Vitals: Verbesserung strukturell gesichert (Inhalt + H1 stehen im
 ausgelieferten HTML, Bundle-Grösse = Basislinie 258 kB); Lighthouse-Messung
 sinnvollerweise nach dem Prod-Deploy gegen die öffentliche URL (Preview ist
