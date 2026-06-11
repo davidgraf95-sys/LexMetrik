@@ -338,6 +338,10 @@ export function kvHinweise(a: KvAnswers): string[] {
   if (a.begruendungAktiv && a.begruendungPlatzhalter) {
     h.push('Begründung als Platzhalter: die Leer-Ziffern (Tatsachendarstellung und Beweismittel) vor der Einreichung von Hand ausfüllen — oder die Eingaben in der Maske erfassen.');
   }
+  if (a.begruendungAktiv) {
+    // Wortlaut am Fedlex-Cache 20250101 verifiziert (11.6.2026).
+    h.push('Mit schriftlicher Begründung setzt das Gericht der beklagten Partei zunächst eine Frist zur schriftlichen Stellungnahme (Art. 245 Abs. 2 ZPO) — statt direkter Vorladung zur Verhandlung.');
+  }
   if (routing?.anwendbar) {
     h.push(`Sachlich zuständig: ${routing.spruchkoerper} (${routing.spruchkoerperNorm}). Berufung ans Appellationsgericht ab Streitwert CHF 10'000 (Art. 308 Abs. 2 ZPO).`);
   }
