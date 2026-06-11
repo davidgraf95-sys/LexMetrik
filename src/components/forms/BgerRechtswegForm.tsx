@@ -61,6 +61,9 @@ const SONDERFAELLE: { code: BgerVerwaltungSonderfall; label: string }[] = [
   { code: 'keiner', label: 'kein Sonderfall (30 Tage)' },
   { code: 'rechtshilfe_amtshilfe', label: 'internat. Rechtshilfe Straf / Amtshilfe Steuern (10 Tage)' },
   { code: 'beschaffung', label: 'öffentliche Beschaffung (30 Tage, kein Stillstand)' },
+  // Bug-Check 11.6.2026: Art. 46 Abs. 2 lit. c erfasst ALLE Stimmrechtssachen
+  // (Art. 82 lit. c) — kantonale liefen vorher fälschlich MIT Stillstand.
+  { code: 'stimmrechtssache', label: 'Stimmrechtssache kantonal (30 Tage, kein Stillstand)' },
   { code: 'abstimmung', label: 'eidg. Abstimmung (5 Tage)' },
   { code: 'nationalratswahl', label: 'Nationalratswahl (3 Tage)' },
 ];

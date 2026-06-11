@@ -60,6 +60,11 @@ export type BgerVerwaltungSonderfall =
   | 'rechtshilfe_amtshilfe'  // 10 T. (Art. 100 Abs. 2 lit. b) · kein Stillstand (Art. 46 Abs. 2 lit. d)
   | 'abstimmung'             // 5 T. (Abs. 3 lit. b) · kein Stillstand (lit. c)
   | 'nationalratswahl'       // 3 T. (Abs. 4) · kein Stillstand (lit. c)
+  // Bug-Check-Befund 11.6.2026 (§7-Abweichung, offen gelegt): Art. 46 Abs. 2
+  // lit. c nimmt ALLE Stimmrechtssachen (Art. 82 lit. c) vom Stillstand aus —
+  // auch KANTONALE mit ordentlicher 30-Tage-Frist (Art. 100 Abs. 1); das
+  // Dossier (bgg-beschwerde-engine.md) zitiert lit. c entsprechend pauschal.
+  | 'stimmrechtssache'       // 30 T. (Abs. 1) · kein Stillstand (lit. c) — kantonale Stimmrechtssachen
   | 'beschaffung';           // 30 T. · kein Stillstand (lit. e)
 
 export type BgerInput = {
@@ -374,11 +379,18 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
     } else if (sf === 'nationalratswahl') {
       fristTage = 3; fristNorm = 'Art. 100 Abs. 4 BGG';
       fristMaterieText = 'Nationalratswahlen: Beschwerdefrist 3 Tage (Art. 100 Abs. 4 BGG).';
+    } else if (sf === 'stimmrechtssache') {
+      // Frist bleibt der 30-Tage-Grundsatz (Abs. 1); die Besonderheit liegt
+      // allein beim Stillstand (Art. 46 Abs. 2 lit. c, unten).
+      fristMaterieText = 'Stimmrechtssache (Art. 82 lit. c BGG; kantonal bzw. ausserhalb der eidg. Sonderfristen): Beschwerdefrist 30 Tage (Art. 100 Abs. 1 BGG).';
     }
   }
 
   // Stillstand (Art. 46): Abs. 1 Grundsatz; Abs. 2 abschliessende Ausnahmen.
-  const sf = input.verwaltungSonderfall ?? 'keiner';
+  // Weg-Gate als Defense-in-depth (Bug-Check 11.6.2026): die Sonderfall-
+  // Ausnahmen lit. c–e setzen den Verwaltungsweg voraus; die Rechtsregel
+  // darf nicht vom UI-Gating der Form abhängen (§3).
+  const sf = input.weg === 'verwaltung' ? (input.verwaltungSonderfall ?? 'keiner') : 'keiner';
   let stillstand = true;
   let stillstandGrund = 'Fristenstillstand gilt (Art. 46 Abs. 1 BGG: Ostern ± 7 Tage · 15.7.–15.8. · 18.12.–2.1.).';
   if (fristTage === null) {
@@ -390,7 +402,7 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
   } else if (input.weg === 'schkg_aufsicht' && input.wechselbetreibung) {
     stillstand = false;
     stillstandGrund = 'KEIN Fristenstillstand: Wechselbetreibung (Art. 46 Abs. 2 lit. b BGG).';
-  } else if (sf === 'abstimmung' || sf === 'nationalratswahl') {
+  } else if (sf === 'abstimmung' || sf === 'nationalratswahl' || sf === 'stimmrechtssache') {
     stillstand = false;
     stillstandGrund = 'KEIN Fristenstillstand: Stimmrechtssachen (Art. 46 Abs. 2 lit. c BGG).';
   } else if (sf === 'rechtshilfe_amtshilfe') {
@@ -437,7 +449,15 @@ export function berechneBgerRechtsweg(input: BgerInput): BgerErgebnis {
   }
 
   // ── Stufe F · Kognition / weitere Hinweise ────────────────────────────────
-  if (vorsorglich && !input.schiedsgericht) {
+  // Weg-Gate straf (Bug-Check 11.6.2026, §7-Abweichung offen gelegt): Auf
+  // strafprozessuale Zwangsmassnahmen (Haft, Beschlagnahme) ist Art. 98 BGG
+  // nach gefestigter Rechtsprechung NICHT anwendbar — das BGer prüft frei
+  // (BGE 137 IV 122 E. 2; 138 IV 186 E. 1.2; 140 IV 57 E. 2.2); nur der
+  // Stillstands-Ausschluss (oben) bleibt. Die alte Warnung war für die von
+  // der Form angebotene Haft-Konstellation eine falsche Rechtsaussage. Ein
+  // straf-eigener Hinweis (freie Kognition) braucht Davids Abnahme — bis
+  // dahin wird hier bewusst NICHTS behauptet.
+  if (vorsorglich && !input.schiedsgericht && input.weg !== 'straf') {
     warnungen.push('KOGNITION: Gegen Entscheide über vorsorgliche Massnahmen kann nur die Verletzung VERFASSUNGSMÄSSIGER Rechte gerügt werden (Art. 98 BGG).');
     normverweise.push(N('Art. 98 BGG'));
   }

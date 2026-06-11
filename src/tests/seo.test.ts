@@ -69,6 +69,11 @@ describe('metaFuerPfad()', () => {
     expect(metaFuerPfad('/rechner/gibts-nicht')).toBeNull();
     expect(metaFuerPfad('/pro')).toBeNull();
   });
+
+  it('Startseite behält den kuratierten og-Text (Bug-Check 11.6.2026); Karten-Routen haben keinen eigenen', () => {
+    expect(metaFuerPfad('/')!.ogBeschreibung).toContain('Feste Regeln statt Sprachmodell');
+    expect(metaFuerPfad('/rechner/verzugszins')!.ogBeschreibung).toBeUndefined();
+  });
 });
 
 describe('jsonLdFuerPfad()', () => {

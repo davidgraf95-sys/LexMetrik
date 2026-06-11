@@ -169,4 +169,30 @@ describe('BGer-Rechtsweg — Objekt, Kognition, Eheschutz', () => {
   it('ungültiger Streitwert wirft (Symmetrie zu bestimmeRechtsmittel)', () => {
     expect(() => berechneBgerRechtsweg(zivil({ streitwertCHF: -1 }))).toThrow();
   });
+
+  // ── Bug-Check-Fixes 11.6.2026 (Deploy-Check, §7-Abweichungen offen gelegt) ──
+
+  it('kantonale Stimmrechtssache: 30 Tage OHNE Stillstand (Art. 46 Abs. 2 lit. c) — Handrechnung 1.7. → 31.7.2026', () => {
+    const r = berechneBgerRechtsweg({ weg: 'verwaltung', verwaltungSonderfall: 'stimmrechtssache', eroeffnung: '2026-07-01', kanton: 'ZH' });
+    expect(r.fristTage).toBe(30);
+    expect(r.fristNorm).toBe('Art. 100 Abs. 1 BGG');
+    expect(r.stillstand).toBe(false);
+    // Eröffnung Mi 1.7.2026, fristauslösend Folgetag (Art. 44 Abs. 1):
+    // 30 Tage ohne Sommerstillstand enden Fr 31.7.2026 (Werktag, Art. 45 entfällt).
+    expect(r.fristende?.endeISO).toBe('2026-07-31');
+  });
+
+  it('straf + Zwangsmassnahme: Stillstand bleibt ausgeschlossen, aber KEINE Art.-98-Kognitionswarnung (BGE 137 IV 122)', () => {
+    const r = berechneBgerRechtsweg({ weg: 'straf', objekt: 'zwischen_anderer', vorsorglicheMassnahme: true });
+    expect(r.stillstand).toBe(false); // Praxis: lit. a fristenrechtlich
+    expect(r.warnungen.some((w) => w.includes('Art. 98'))).toBe(false);
+    // im Zivilweg feuert die Warnung weiterhin
+    const z = berechneBgerRechtsweg(zivil({ vorsorglicheMassnahme: true }));
+    expect(z.warnungen.some((w) => w.includes('Art. 98'))).toBe(true);
+  });
+
+  it('Defense-in-depth: verwaltungSonderfall wirkt nur auf weg=verwaltung (kein Stillstands-Klau im Zivilweg)', () => {
+    const r = berechneBgerRechtsweg(zivil({ verwaltungSonderfall: 'beschaffung', eroeffnung: '2026-07-01' }));
+    expect(r.stillstand).toBe(true); // Sommerstillstand gilt; lit. e setzt den Verwaltungsweg voraus
+  });
 });

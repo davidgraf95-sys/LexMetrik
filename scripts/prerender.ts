@@ -25,6 +25,10 @@ import { renderRoute } from '../src/entry-server';
 // Karten/Seiten bewusst im selben Commit nachführen.
 const ERWARTETE_ROUTEN = 38;
 const NOT_FOUND_MARKER = '404 · Nicht gefunden'; // src/pages/NotFound.tsx
+// Stub-Tor (Bug-Check 11.6.2026): /rechner/:slug fängt Katalog-hrefs ohne
+// dedizierte Route VOR der 404-Seite ab — eine «in Vorbereitung»-Stub-Seite
+// darf nie prerendert/gesitemappt werden.
+const STUB_MARKER = 'Dieser Rechner ist noch nicht verfügbar'; // src/pages/RechnerStub.tsx
 const MIN_ZEICHEN = 500; // Smoke-Konvention (scripts/smoke-render.tsx)
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -57,7 +61,7 @@ function seitenHtml(pfad: string, inhalt: string): string {
   for (const [re, wert] of [
     [/(<meta name="description" content=")[^"]*(" \/>)/, meta.beschreibung],
     [/(<meta property="og:title" content=")[^"]*(" \/>)/, meta.titel],
-    [/(<meta property="og:description" content=")[^"]*(" \/>)/, meta.beschreibung],
+    [/(<meta property="og:description" content=")[^"]*(" \/>)/, meta.ogBeschreibung ?? meta.beschreibung],
     [/(<meta property="og:url" content=")[^"]*(" \/>)/, meta.canonical],
   ] as const) {
     if (!re.test(out)) throw new Error(`Meta-Tag-Muster nicht gefunden (${pfad}): ${re}`);
@@ -93,6 +97,9 @@ for (const pfad of routen) {
     }
     if (inhalt.includes(NOT_FOUND_MARKER)) {
       throw new Error('rendert die 404-Seite — Route fehlt in App.tsx');
+    }
+    if (inhalt.includes(STUB_MARKER)) {
+      throw new Error('rendert die Stub-Seite — Katalog-href zeigt auf keinen gebauten Rechner');
     }
     // Flache <pfad>.html-Dateien (nicht <pfad>/index.html): vite preview
     // (sirv) löst extensionslose URLs über die .html-Erweiterung auf,

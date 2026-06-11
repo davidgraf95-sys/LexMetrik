@@ -23,7 +23,7 @@ export function RouteMeta() {
       document.title = meta.titel;
       document.querySelector('meta[name="description"]')?.setAttribute('content', meta.beschreibung);
       document.querySelector('meta[property="og:title"]')?.setAttribute('content', meta.titel);
-      document.querySelector('meta[property="og:description"]')?.setAttribute('content', meta.beschreibung);
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', meta.ogBeschreibung ?? meta.beschreibung);
       document.querySelector('meta[property="og:url"]')?.setAttribute('content', meta.canonical);
       // canonical fehlt in der unbefüllten Hülle (index.html/app.html) → anlegen
       let canonical = document.querySelector('link[rel="canonical"]');

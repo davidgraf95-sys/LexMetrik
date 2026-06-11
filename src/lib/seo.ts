@@ -21,11 +21,19 @@ export const SITE_URL = 'https://lexmetrik.vercel.app';
 export const SITE_TITEL = 'LexMetrik — Schweizer Recht: berechnen und erstellen';
 export const SITE_DESCRIPTION =
   'LexMetrik rechnet Fristen, Beträge und Quoten nach Schweizer Recht und stellt Rechtsdokumente aus geprüften Textbausteinen zusammen — regelbasiert, nachvollziehbar, jede Norm direkt mit dem Gesetzestext verlinkt. Keine Rechtsberatung.';
+/** Kuratierter Social-Share-Text der Startseite (wörtlich aus index.html
+ *  og:description — dort bewusst kürzer als die meta description). */
+export const SITE_OG_DESCRIPTION =
+  'Fristen, Beträge und Zuständigkeiten transparent berechnet; Rechtsdokumente aus geprüften Bausteinen zusammengestellt. Feste Regeln statt Sprachmodell.';
 
 export interface RouteMetadaten {
   pfad: string;          // z. B. '/rechner/verzugszins'
   titel: string;         // kompletter <title>-Inhalt
-  beschreibung: string;  // meta description / og:description
+  beschreibung: string;  // meta description; auch og:description, wenn kein eigener og-Text
+  /** Eigener Social-Share-Text (og:description), wo einer GEPFLEGT ist —
+   *  Bug-Check 11.6.2026: die Startseite hat in index.html einen kuratierten,
+   *  kürzeren og-Text, den das Prerender nicht überschreiben darf. */
+  ogBeschreibung?: string;
   canonical: string;     // absolute URL (SITE_URL + pfad)
   /** Karte, aus der Titel/Beschreibung stammen (statische Seiten: undefined). */
   karte?: CatalogItem;
@@ -44,8 +52,8 @@ const DOPPELKARTEN_OVERRIDE: Record<string, string> = {
 // Texte vorhanden → Rückfall auf SITE_DESCRIPTION.
 // TODO(David): Erklärtext juristisch verfassen (je eine Meta-Description für
 // /methodik, /ueber, /kontakt, /datenschutz — bis dahin globale Description).
-const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string }> = {
-  '/': { titel: SITE_TITEL, beschreibung: SITE_DESCRIPTION },
+const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; ogBeschreibung?: string }> = {
+  '/': { titel: SITE_TITEL, beschreibung: SITE_DESCRIPTION, ogBeschreibung: SITE_OG_DESCRIPTION },
   '/methodik': { titel: 'Wie LexMetrik rechnet — LexMetrik', beschreibung: SITE_DESCRIPTION },
   '/ueber': { titel: 'Über LexMetrik', beschreibung: SITE_DESCRIPTION },
   '/kontakt': { titel: 'Kontakt aufnehmen — LexMetrik', beschreibung: SITE_DESCRIPTION },
