@@ -1435,6 +1435,30 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['schkg-fristen', 'rechtsoeffnungsbegehren'],
     keywords: ['Aberkennung', 'Rechtsöffnung'],
   },
+  'scheidungsbegehren-gemeinsam': {
+    id: 'scheidungsbegehren-gemeinsam', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_besonders', klageGebiet: 'Familienrecht', rechtsgebiet: 'Familienrecht',
+    formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Gemeinsames Scheidungsbegehren',
+    // Zweite Musterklagen-Maske Familienrecht (Auftrag David 12.6.2026;
+    // Bauspez. §3.2); ZPO/ZGB-Anker am Cache verifiziert 12.6.2026.
+    description: 'Gemeinsame Eingabe beider Ehegatten (Art. 285/286 ZPO) – Weiche umfassende Einigung (Art. 111 ZGB) oder Teileinigung mit Pflicht-Antrag auf gerichtliche Beurteilung der streitigen Folgen (Art. 112 ZGB).',
+    status: 'entwurf',
+    norms: [
+      // Art. 285/286 ZPO – Mindestinhalt Voll-/Teileinigung (verifiziert 12.6.2026)
+      { label: 'Art. 285 ZPO', url: fedlexUrl('ZPO', '285'), verified: false },
+      { label: 'Art. 286 ZPO', url: fedlexUrl('ZPO', '286'), verified: false },
+      // Art. 111/112 ZGB – Scheidung auf gemeinsames Begehren (verifiziert 12.6.2026)
+      { label: 'Art. 111 ZGB', url: fedlexUrl('ZGB', '111'), verified: false },
+      { label: 'Art. 112 ZGB', url: fedlexUrl('ZGB', '112'), verified: false },
+    ],
+    href: '/vorlagen/scheidungsbegehren-gemeinsam',
+    schemaId: 'scheidungsbegehren-gemeinsam',
+    formvorschrift: 'Von BEIDEN Ehegatten zu unterzeichnen; mit Vereinbarung und Belegen beim Gericht am Wohnsitz einer Partei einzureichen.',
+    output: ['pdf', 'docx'],
+    related: ['scheidungsklage', 'vorsorgeausgleich'],
+    keywords: ['Scheidung', 'gemeinsames Begehren', 'Scheidungskonvention', 'Art. 285', 'Art. 286', 'Art. 111', 'Art. 112', 'Teileinigung'],
+  },
   scheidungsklage: {
     id: 'scheidungsklage', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_besonders', klageGebiet: 'Familienrecht', rechtsgebiet: 'Familienrecht',
     formGate: 'fertig',

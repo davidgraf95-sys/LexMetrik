@@ -17,6 +17,7 @@ import { VOLLMACHT_SCHEMA } from '../lib/vorlagen/vollmacht';
 import { MA_SCHEMA } from '../lib/vorlagen/mahnung';
 import { VV_SCHEMA } from '../lib/vorlagen/verjaehrungsverzicht';
 import { SK_SCHEMA } from '../lib/vorlagen/scheidungsklage';
+import { SB_SCHEMA } from '../lib/vorlagen/scheidungsbegehren';
 import { KM_SCHEMA } from '../lib/vorlagen/kuendigungMieter';
 import { KAG_SCHEMA } from '../lib/vorlagen/kuendigungArbeitgeber';
 import { KAN_SCHEMA } from '../lib/vorlagen/kuendigungArbeitnehmer';
@@ -53,6 +54,7 @@ const EINZEL: [string, VorlageSchema][] = [
   ['mahnung', MA_SCHEMA],
   ['verjaehrungsverzicht', VV_SCHEMA],
   ['scheidungsklage', SK_SCHEMA],
+  ['scheidungsbegehren-gemeinsam', SB_SCHEMA],
   ['kuendigung-mieter', KM_SCHEMA],
   ['kuendigung-arbeitgeber', KAG_SCHEMA],
   ['kuendigung-arbeitnehmer', KAN_SCHEMA],

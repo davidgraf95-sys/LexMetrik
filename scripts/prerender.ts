@@ -24,8 +24,9 @@ import { renderRoute } from '../src/entry-server';
 // Deklarierter Routen-Zähler (wie die Katalog-Zähler in den Tests): bei neuen
 // Karten/Seiten bewusst im selben Commit nachführen.
 // 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V2): +/vorlagen/verjaehrungsverzicht.
-// 12.6.2026 (Musterklagen): +/vorlagen/scheidungsklage.
-const ERWARTETE_ROUTEN = 40;
+// 12.6.2026 (Musterklagen): +/vorlagen/scheidungsklage,
+// +/vorlagen/scheidungsbegehren-gemeinsam.
+const ERWARTETE_ROUTEN = 41;
 const NOT_FOUND_MARKER = '404 · Nicht gefunden'; // src/pages/NotFound.tsx
 // Stub-Tor (Bug-Check 11.6.2026): /rechner/:slug fängt Katalog-hrefs ohne
 // dedizierte Route VOR der 404-Seite ab — eine «in Vorbereitung»-Stub-Seite

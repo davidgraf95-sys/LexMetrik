@@ -9555,6 +9555,348 @@
  "vorl:sk-warnung-zweijahre": [
   "Die zwei Jahre Getrenntleben (Art. 114 ZGB) sind am gewählten Einreichungsdatum noch NICHT erreicht — massgebend ist der Eintritt der Rechtshängigkeit. Vor Ablauf ist die Scheidung nur nach Art. 115 ZGB (Unzumutbarkeit) möglich; sonst Einreichung aufschieben."
  ],
+ "vorl:sb-voll": {
+  "dokument": {
+   "titel": "Gemeinsames Scheidungsbegehren",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "SB01_adressat",
+     "text": "Zivilgericht Basel-Stadt\nBäumleingasse 5\n4001 Basel",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "SB02_datum",
+     "text": "Basel, 12.06.2026",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "SB03_betreff",
+     "text": "Gemeinsames Scheidungsbegehren (umfassende Einigung, Art. 285 ZPO)",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "SB04_rubrum",
+     "text": "in Sachen\nAnna Muster, A-Gasse 1, 4051 Basel\n\nund\n\nBeat Muster, A-Gasse 1, 4051 Basel\n\n(gesuchstellende Parteien)\n\nbetreffend Scheidung auf gemeinsames Begehren",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "SB05_begehren",
+     "ueberschrift": "Begehren und Anträge",
+     "text": "1. Die Ehe der Parteien sei auf ihr gemeinsames Begehren hin zu scheiden (Art. 111 ZGB).\n2. Die vollständige Vereinbarung über die Scheidungsfolgen vom 20.05.2026 (Beilage 1) sei zu genehmigen.\n3. Die Gerichtskosten seien den Parteien je zur Hälfte aufzuerlegen; auf die Zusprechung von Parteientschädigungen sei zu verzichten."
+    },
+    {
+     "bausteinId": "SB06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Das Schlichtungsverfahren entfällt im Scheidungsverfahren (Art. 198 lit. c ZPO). Um Vorladung zur Anhörung (Art. 287 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "SB07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Vollständige Vereinbarung über die Scheidungsfolgen vom 20.05.2026\n– Beilage 2: Familienausweis bzw. Eheurkunde"
+    },
+    {
+     "bausteinId": "SB08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "SB09_unterschriften",
+     "text": "_________________________________\nAnna Muster\n\n_________________________________\nBeat Muster",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Gemeinsames Scheidungsbegehren nach Art. 285/286 ZPO; von BEIDEN Ehegatten zu unterzeichnen und mit der Vereinbarung über die Scheidungsfolgen samt Belegen beim Gericht am Wohnsitz einer Partei einzureichen. Das Gericht hört die Parteien an (Art. 287 ZPO) und prüft die Vereinbarung.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.2; ZPO/ZGB verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "SB01_adressat",
+   "SB02_datum",
+   "SB03_betreff",
+   "SB04_rubrum",
+   "SB05_begehren",
+   "SB06_formelles",
+   "SB07_beilagen",
+   "SB08_gruss",
+   "SB09_unterschriften"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "SB01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SB02_datum",
+    "begruendung": "Ort und Datum der Eingabe.",
+    "norm": "Art. 285 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SB03_betreff",
+    "begruendung": "Betreff mit der Einigungs-Variante (umfassende Einigung Art. 285 ZPO bzw. Teileinigung Art. 286 ZPO).",
+    "norm": "Art. 285/286 ZPO"
+   },
+   {
+    "bausteinId": "SB04_rubrum",
+    "begruendung": "Beide Ehegatten als gemeinsam gesuchstellende Parteien — kein Gegner-Rubrum.",
+    "norm": "Art. 285 lit. a ZPO"
+   },
+   {
+    "bausteinId": "SB05_begehren",
+    "begruendung": "Gemeinsames Scheidungsbegehren, Genehmigungsantrag zur Vereinbarung, Kinder-Anträge; bei Teileinigung der Pflicht-Antrag auf gerichtliche Beurteilung der streitigen Folgen.",
+    "norm": "Art. 285 lit. b–d / 286 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SB06_formelles",
+    "begruendung": "Zuständigkeit; kein Schlichtungsverfahren; Hinweis auf die Anhörung.",
+    "norm": "Art. 23 Abs. 1 / 198 lit. c / 287 ZPO"
+   },
+   {
+    "bausteinId": "SB07_beilagen",
+    "begruendung": "Vereinbarung und erforderliche Belege.",
+    "norm": "Art. 285 lit. c/e ZPO"
+   },
+   {
+    "bausteinId": "SB08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "SB09_unterschriften",
+    "begruendung": "Unterschriften BEIDER Ehegatten — Gültigkeitserfordernis der gemeinsamen Eingabe.",
+    "norm": "Art. 285 lit. f ZPO"
+   }
+  ]
+ },
+ "vorl:sb-teil-kinder": {
+  "dokument": {
+   "titel": "Gemeinsames Scheidungsbegehren",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "SB01_adressat",
+     "text": "Zivilgericht Basel-Stadt\nBäumleingasse 5\n4001 Basel",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "SB02_datum",
+     "text": "Basel, 12.06.2026",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "SB03_betreff",
+     "text": "Gemeinsames Scheidungsbegehren (Teileinigung, Art. 286 ZPO)",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "SB04_rubrum",
+     "text": "in Sachen\nAnna Muster, A-Gasse 1, 4051 Basel\n\nund\n\nBeat Muster, A-Gasse 1, 4051 Basel\n\ngemeinsame Kinder: Carla, geb. 04.05.2019\n\n(gesuchstellende Parteien)\n\nbetreffend Scheidung auf gemeinsames Begehren",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "SB05_begehren",
+     "ueberschrift": "Begehren und Anträge",
+     "text": "1. Die Ehe der Parteien sei auf ihr gemeinsames Begehren hin zu scheiden (Art. 112 ZGB).\n2. Die Teilvereinbarung über die Scheidungsfolgen vom 20.05.2026 (Beilage 1) sei zu genehmigen.\n3. Das Gericht habe die Scheidungsfolgen zu beurteilen, über die sich die Parteien nicht einig sind, nämlich: nachehelicher Unterhalt (Art. 112 Abs. 1 ZGB / Art. 286 Abs. 1 ZPO).\n4. Antrag der gesuchstellenden Partei 1: Es sei kein nachehelicher Unterhalt zuzusprechen. (Art. 286 Abs. 2 ZPO).\n5. Die gemeinsamen Anträge hinsichtlich der Kinder ergeben sich aus der beiliegenden Vereinbarung; die Kinder seien unter der gemeinsamen elterlichen Sorge der Parteien zu belassen.\n6. Die Gerichtskosten seien den Parteien je zur Hälfte aufzuerlegen; auf die Zusprechung von Parteientschädigungen sei zu verzichten."
+    },
+    {
+     "bausteinId": "SB06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Das Schlichtungsverfahren entfällt im Scheidungsverfahren (Art. 198 lit. c ZPO). Um Vorladung zur Anhörung (Art. 287 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "SB07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Teilvereinbarung über die Scheidungsfolgen vom 20.05.2026\n– Beilage 2: Familienausweis bzw. Eheurkunde\n– Beilage 3: Geburtsurkunden der Kinder"
+    },
+    {
+     "bausteinId": "SB08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "SB09_unterschriften",
+     "text": "_________________________________\nAnna Muster\n\n_________________________________\nBeat Muster",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Gemeinsames Scheidungsbegehren nach Art. 285/286 ZPO; von BEIDEN Ehegatten zu unterzeichnen und mit der Vereinbarung über die Scheidungsfolgen samt Belegen beim Gericht am Wohnsitz einer Partei einzureichen. Das Gericht hört die Parteien an (Art. 287 ZPO) und prüft die Vereinbarung.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.2; ZPO/ZGB verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "SB01_adressat",
+   "SB02_datum",
+   "SB03_betreff",
+   "SB04_rubrum",
+   "SB05_begehren",
+   "SB06_formelles",
+   "SB07_beilagen",
+   "SB08_gruss",
+   "SB09_unterschriften"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "SB01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SB02_datum",
+    "begruendung": "Ort und Datum der Eingabe.",
+    "norm": "Art. 285 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SB03_betreff",
+    "begruendung": "Betreff mit der Einigungs-Variante (umfassende Einigung Art. 285 ZPO bzw. Teileinigung Art. 286 ZPO).",
+    "norm": "Art. 285/286 ZPO"
+   },
+   {
+    "bausteinId": "SB04_rubrum",
+    "begruendung": "Beide Ehegatten als gemeinsam gesuchstellende Parteien — kein Gegner-Rubrum.",
+    "norm": "Art. 285 lit. a ZPO"
+   },
+   {
+    "bausteinId": "SB05_begehren",
+    "begruendung": "Gemeinsames Scheidungsbegehren, Genehmigungsantrag zur Vereinbarung, Kinder-Anträge; bei Teileinigung der Pflicht-Antrag auf gerichtliche Beurteilung der streitigen Folgen.",
+    "norm": "Art. 285 lit. b–d / 286 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SB06_formelles",
+    "begruendung": "Zuständigkeit; kein Schlichtungsverfahren; Hinweis auf die Anhörung.",
+    "norm": "Art. 23 Abs. 1 / 198 lit. c / 287 ZPO"
+   },
+   {
+    "bausteinId": "SB07_beilagen",
+    "begruendung": "Vereinbarung und erforderliche Belege.",
+    "norm": "Art. 285 lit. c/e ZPO"
+   },
+   {
+    "bausteinId": "SB08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "SB09_unterschriften",
+    "begruendung": "Unterschriften BEIDER Ehegatten — Gültigkeitserfordernis der gemeinsamen Eingabe.",
+    "norm": "Art. 285 lit. f ZPO"
+   }
+  ]
+ },
+ "vorl:sb-blanko": {
+  "dokument": {
+   "titel": "Gemeinsames Scheidungsbegehren",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "SB01_adressat",
+     "text": "________\n________\n________",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "SB02_datum",
+     "text": "________",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "SB03_betreff",
+     "text": "Gemeinsames Scheidungsbegehren (umfassende Einigung, Art. 285 ZPO)",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "SB04_rubrum",
+     "text": "in Sachen\n \n\nund\n\n \n\n(gesuchstellende Parteien)\n\nbetreffend Scheidung auf gemeinsames Begehren",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "SB05_begehren",
+     "ueberschrift": "Begehren und Anträge",
+     "text": "1. Die Ehe der Parteien sei auf ihr gemeinsames Begehren hin zu scheiden (Art. 111 ZGB).\n2. Die vollständige Vereinbarung über die Scheidungsfolgen vom ________ (Beilage 1) sei zu genehmigen.\n3. Die Gerichtskosten seien den Parteien je zur Hälfte aufzuerlegen; auf die Zusprechung von Parteientschädigungen sei zu verzichten."
+    },
+    {
+     "bausteinId": "SB06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Das Schlichtungsverfahren entfällt im Scheidungsverfahren (Art. 198 lit. c ZPO). Um Vorladung zur Anhörung (Art. 287 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "SB07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Vollständige Vereinbarung über die Scheidungsfolgen vom ________\n– Beilage 2: Familienausweis bzw. Eheurkunde"
+    },
+    {
+     "bausteinId": "SB08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "SB09_unterschriften",
+     "text": "_________________________________\n________\n\n_________________________________\n________",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Gemeinsames Scheidungsbegehren nach Art. 285/286 ZPO; von BEIDEN Ehegatten zu unterzeichnen und mit der Vereinbarung über die Scheidungsfolgen samt Belegen beim Gericht am Wohnsitz einer Partei einzureichen. Das Gericht hört die Parteien an (Art. 287 ZPO) und prüft die Vereinbarung.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.2; ZPO/ZGB verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "SB01_adressat",
+   "SB02_datum",
+   "SB03_betreff",
+   "SB04_rubrum",
+   "SB05_begehren",
+   "SB06_formelles",
+   "SB07_beilagen",
+   "SB08_gruss",
+   "SB09_unterschriften"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "SB01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SB02_datum",
+    "begruendung": "Ort und Datum der Eingabe.",
+    "norm": "Art. 285 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SB03_betreff",
+    "begruendung": "Betreff mit der Einigungs-Variante (umfassende Einigung Art. 285 ZPO bzw. Teileinigung Art. 286 ZPO).",
+    "norm": "Art. 285/286 ZPO"
+   },
+   {
+    "bausteinId": "SB04_rubrum",
+    "begruendung": "Beide Ehegatten als gemeinsam gesuchstellende Parteien — kein Gegner-Rubrum.",
+    "norm": "Art. 285 lit. a ZPO"
+   },
+   {
+    "bausteinId": "SB05_begehren",
+    "begruendung": "Gemeinsames Scheidungsbegehren, Genehmigungsantrag zur Vereinbarung, Kinder-Anträge; bei Teileinigung der Pflicht-Antrag auf gerichtliche Beurteilung der streitigen Folgen.",
+    "norm": "Art. 285 lit. b–d / 286 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SB06_formelles",
+    "begruendung": "Zuständigkeit; kein Schlichtungsverfahren; Hinweis auf die Anhörung.",
+    "norm": "Art. 23 Abs. 1 / 198 lit. c / 287 ZPO"
+   },
+   {
+    "bausteinId": "SB07_beilagen",
+    "begruendung": "Vereinbarung und erforderliche Belege.",
+    "norm": "Art. 285 lit. c/e ZPO"
+   },
+   {
+    "bausteinId": "SB08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "SB09_unterschriften",
+    "begruendung": "Unterschriften BEIDER Ehegatten — Gültigkeitserfordernis der gemeinsamen Eingabe.",
+    "norm": "Art. 285 lit. f ZPO"
+   }
+  ]
+ },
  "vorl:ma-gates": {
   "blocker": [],
   "warnungen": [
