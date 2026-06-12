@@ -22,6 +22,7 @@ const QUELLEN = [
   // Bausteinen und Gates.
   'src/lib/vorlagen/mahnung.ts',
   'src/lib/vorlagen/verjaehrungsverzicht.ts',
+  'src/lib/vorlagen/forderungsabtretung.ts',
   'src/lib/vorlagen/scheidungsklage.ts',
   'src/lib/vorlagen/scheidungsbegehren.ts',
   'src/lib/vorlagen/eheschutzgesuch.ts',

@@ -54,7 +54,7 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/klage-ordentlich', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung', '/vorlagen/mahnung', '/vorlagen/verjaehrungsverzicht', '/vorlagen/scheidungsklage', '/vorlagen/scheidungsbegehren-gemeinsam', '/vorlagen/eheschutzgesuch']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/klage-ordentlich', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung', '/vorlagen/mahnung', '/vorlagen/verjaehrungsverzicht', '/vorlagen/forderungsabtretung', '/vorlagen/scheidungsklage', '/vorlagen/scheidungsbegehren-gemeinsam', '/vorlagen/eheschutzgesuch']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -228,10 +228,13 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // + Vorlagen «Scheidungsklage» (Art. 290 ZPO), «Gemeinsames
   // Scheidungsbegehren» (Art. 285/286 ZPO) und «Eheschutzgesuch»
   // (Art. 175 ff. ZGB) → 40 gebaut / 36 sichtbar.
-  it('verfügbar = status !== geplant; Regressionszählung 40 gebaut / 36 sichtbar (Stand 12.6.2026)', () => {
+  // Deklarierte Anpassung 13.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V2-Rest,
+  // GO David «alles abgenommen»): + Vorlage «Abtretungserklärung (Zession)»
+  // (P1 Wettbewerbsanalyse, neu als entwurf) → 41 gebaut / 37 sichtbar.
+  it('verfügbar = status !== geplant; Regressionszählung 41 gebaut / 37 sichtbar (Stand 13.6.2026)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(40);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(36);
+    expect(verf.length).toBe(41);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(37);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

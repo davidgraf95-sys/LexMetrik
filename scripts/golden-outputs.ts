@@ -34,6 +34,7 @@ import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/li
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
 import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
+import { faZusammenstellen, FA_DEFAULTS, pruefeFaGates } from '../src/lib/vorlagen/forderungsabtretung';
 import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
 import { sbZusammenstellen, SB_DEFAULTS } from '../src/lib/vorlagen/scheidungsbegehren';
 import { egZusammenstellen, EG_DEFAULTS } from '../src/lib/vorlagen/eheschutzgesuch';
@@ -220,6 +221,19 @@ f('vorl:vv-standard', () => vvZusammenstellen(vvBasis));
 f('vorl:vv-betrag-ohne-vorbehalte', () => vvZusammenstellen({ ...vvBasis, betragErfassen: true, betrag: '25000', vorbehaltEingetreten: false, keineAnerkennung: false }));
 f('vorl:vv-blanko', () => vvZusammenstellen({ ...VV_DEFAULTS }));
 f('vorl:vv-gates-hoechstdauer', () => pruefeVvGates({ ...vvBasis, verzichtBis: '2036-06-13' }));
+
+// Abtretungserklärung/Zession (Art. 164 ff. OR; FAHRPLAN-VORLAGEN-AUSBAU V2-Rest, 13.6.2026)
+const faBasis = {
+  ...FA_DEFAULTS, absenderName: 'Z AG', absenderAdresse: 'X 1, 4051 Basel',
+  adressatName: 'E GmbH', adressatAdresse: 'Y 2, 8000 Zürich',
+  schuldnerName: 'S Bau AG', schuldnerAdresse: 'Z 3, 3000 Bern',
+  forderungBeschrieb: 'Kaufpreisforderung aus Kaufvertrag vom 1. Februar 2026',
+  ort: 'Basel', datum: '2026-06-13',
+};
+f('vorl:fa-standard', () => faZusammenstellen(faBasis));
+f('vorl:fa-betrag-minimal', () => faZusammenstellen({ ...faBasis, betragErfassen: true, betrag: '25000', zinsenAusdruecklich: false, urkundenUebergabe: false, anzeigeAnkuendigen: false, annahmeZeile: false }));
+f('vorl:fa-blanko', () => faZusammenstellen({ ...FA_DEFAULTS }));
+f('vorl:fa-gates', () => pruefeFaGates());
 
 // Scheidungsklage (Art. 290 ZPO; Musterklagen-Auftrag David 12.6.2026)
 const skBasis = {

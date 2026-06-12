@@ -9180,6 +9180,390 @@
    "Wirkungsgrenzen: Der Verzicht eines Solidarschuldners kann den übrigen Solidarschuldnern nicht entgegengehalten werden (Art. 141 Abs. 2 OR); dasselbe gilt unter Schuldnern einer unteilbaren Leistung und für den Bürgen beim Verzicht des Hauptschuldners (Abs. 3). Bei direktem Forderungsrecht gegen einen Versicherer wirkt der Verzicht auch ihm gegenüber und umgekehrt (Abs. 4)."
   ]
  },
+ "vorl:fa-standard": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Abtretungserklärung (Zession)",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "FA_absender",
+      "text": "Z AG\nX 1, 4051 Basel",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "FA_adressat",
+      "text": "E GmbH\nY 2, 8000 Zürich",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "FA_datumzeile",
+      "text": "Basel, 13. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "FA_betreff",
+      "text": "Abtretungserklärung (Zession) – Kaufpreisforderung aus Kaufvertrag vom 1. Februar 2026",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "FA_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "FA_abtretung",
+      "text": "Hiermit trete ich meine Forderung gegen S Bau AG, Z 3, 3000 Bern (Kaufpreisforderung aus Kaufvertrag vom 1. Februar 2026) an Sie ab. Mit der Forderung gehen die Vorzugs- und Nebenrechte auf Sie über, soweit sie nicht untrennbar mit meiner Person verknüpft sind (Art. 170 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "FA_zinsen",
+      "text": "Mitabgetreten sind ausdrücklich auch die rückständigen Zinse."
+     },
+     {
+      "bausteinId": "FA_urkunden",
+      "text": "Die Schuldurkunde und die vorhandenen Beweismittel händige ich Ihnen aus; die zur Geltendmachung der Forderung nötigen Aufschlüsse erteile ich Ihnen."
+     },
+     {
+      "bausteinId": "FA_anzeige",
+      "text": "Der Schuldner wird über die Abtretung schriftlich in Kenntnis gesetzt."
+     },
+     {
+      "bausteinId": "FA_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "FA_unterschrift",
+      "text": "___________________________\nZ AG (Zedentin/Zedent)",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     },
+     {
+      "bausteinId": "FA_annahme",
+      "text": "Von der Abtretung Kenntnis genommen und mit ihr einverstanden:\n___________________________\nE GmbH (Zessionarin/Zessionar)",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Die Abtretung setzt die Abtretbarkeit der Forderung voraus (Art. 164 Abs. 1 OR); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 164/165/167/170 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "FA_absender",
+    "FA_adressat",
+    "FA_datumzeile",
+    "FA_betreff",
+    "FA_anrede",
+    "FA_abtretung",
+    "FA_zinsen",
+    "FA_urkunden",
+    "FA_anzeige",
+    "FA_schluss",
+    "FA_unterschrift",
+    "FA_annahme"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "FA_absender",
+     "begruendung": "Zedentin/Zedent als erklärende Partei – ihre Unterschrift verlangt die Schriftform (Art. 165 Abs. 1 OR)."
+    },
+    {
+     "bausteinId": "FA_adressat",
+     "begruendung": "Zessionarin/Zessionar als Erwerberin der Forderung und Empfängerin der Erklärung."
+    },
+    {
+     "bausteinId": "FA_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_betreff",
+     "begruendung": "Betreff mit bestimmter Bezeichnung der abgetretenen Forderung."
+    },
+    {
+     "bausteinId": "FA_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_abtretung",
+     "begruendung": "Kern der Erklärung: Verfügung über die bestimmt bezeichnete Forderung; der gesetzliche Übergang der Nebenrechte wird deklaratorisch wiedergegeben.",
+     "norm": "Art. 164 Abs. 1 und Art. 165 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "FA_zinsen",
+     "begruendung": "Klarstellung: Der Übergang der rückständigen Zinse ist von Gesetzes wegen nur VERMUTET (Art. 170 Abs. 3 OR) – die ausdrückliche Nennung stellt ihn ausser Streit.",
+     "norm": "Art. 170 Abs. 3 OR"
+    },
+    {
+     "bausteinId": "FA_urkunden",
+     "begruendung": "Wiedergabe der gesetzlichen Auslieferungs- und Auskunftspflicht der Zedentin (Art. 170 Abs. 2 OR) als ausdrückliche Zusage.",
+     "norm": "Art. 170 Abs. 2 OR"
+    },
+    {
+     "bausteinId": "FA_anzeige",
+     "begruendung": "Praxis-Standard: Bis zur Anzeige kann der Schuldner in gutem Glauben befreiend an die bisherige Gläubigerin leisten (Art. 167 OR) – die Ankündigung dokumentiert die vorgesehene Anzeige."
+    },
+    {
+     "bausteinId": "FA_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_unterschrift",
+     "begruendung": "Unterschrift der abtretenden Partei – Schriftform ist Gültigkeitsvoraussetzung (Art. 165 Abs. 1 OR)."
+    },
+    {
+     "bausteinId": "FA_annahme",
+     "begruendung": "Gegenzeichnung der Erwerberin – formfrei möglich und keine Gültigkeitsvoraussetzung; sie dokumentiert die Annahme."
+    }
+   ]
+  }
+ },
+ "vorl:fa-betrag-minimal": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Abtretungserklärung (Zession)",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "FA_absender",
+      "text": "Z AG\nX 1, 4051 Basel",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "FA_adressat",
+      "text": "E GmbH\nY 2, 8000 Zürich",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "FA_datumzeile",
+      "text": "Basel, 13. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "FA_betreff",
+      "text": "Abtretungserklärung (Zession) – Kaufpreisforderung aus Kaufvertrag vom 1. Februar 2026",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "FA_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "FA_abtretung",
+      "text": "Hiermit trete ich meine Forderung gegen S Bau AG, Z 3, 3000 Bern (Kaufpreisforderung aus Kaufvertrag vom 1. Februar 2026, CHF 25'000.00) an Sie ab. Mit der Forderung gehen die Vorzugs- und Nebenrechte auf Sie über, soweit sie nicht untrennbar mit meiner Person verknüpft sind (Art. 170 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "FA_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "FA_unterschrift",
+      "text": "___________________________\nZ AG (Zedentin/Zedent)",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Die Abtretung setzt die Abtretbarkeit der Forderung voraus (Art. 164 Abs. 1 OR); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 164/165/167/170 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "FA_absender",
+    "FA_adressat",
+    "FA_datumzeile",
+    "FA_betreff",
+    "FA_anrede",
+    "FA_abtretung",
+    "FA_schluss",
+    "FA_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "FA_absender",
+     "begruendung": "Zedentin/Zedent als erklärende Partei – ihre Unterschrift verlangt die Schriftform (Art. 165 Abs. 1 OR)."
+    },
+    {
+     "bausteinId": "FA_adressat",
+     "begruendung": "Zessionarin/Zessionar als Erwerberin der Forderung und Empfängerin der Erklärung."
+    },
+    {
+     "bausteinId": "FA_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_betreff",
+     "begruendung": "Betreff mit bestimmter Bezeichnung der abgetretenen Forderung."
+    },
+    {
+     "bausteinId": "FA_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_abtretung",
+     "begruendung": "Kern der Erklärung: Verfügung über die bestimmt bezeichnete Forderung; der gesetzliche Übergang der Nebenrechte wird deklaratorisch wiedergegeben.",
+     "norm": "Art. 164 Abs. 1 und Art. 165 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "FA_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_unterschrift",
+     "begruendung": "Unterschrift der abtretenden Partei – Schriftform ist Gültigkeitsvoraussetzung (Art. 165 Abs. 1 OR)."
+    }
+   ]
+  }
+ },
+ "vorl:fa-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Abtretungserklärung (Zession)",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "FA_absender",
+      "text": "________",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "FA_adressat",
+      "text": "________",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "FA_datumzeile",
+      "text": "________, ________",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "FA_betreff",
+      "text": "Abtretungserklärung (Zession) – ________",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "FA_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "FA_abtretung",
+      "text": "Hiermit trete ich meine Forderung gegen ________ (________) an Sie ab. Mit der Forderung gehen die Vorzugs- und Nebenrechte auf Sie über, soweit sie nicht untrennbar mit meiner Person verknüpft sind (Art. 170 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "FA_zinsen",
+      "text": "Mitabgetreten sind ausdrücklich auch die rückständigen Zinse."
+     },
+     {
+      "bausteinId": "FA_urkunden",
+      "text": "Die Schuldurkunde und die vorhandenen Beweismittel händige ich Ihnen aus; die zur Geltendmachung der Forderung nötigen Aufschlüsse erteile ich Ihnen."
+     },
+     {
+      "bausteinId": "FA_anzeige",
+      "text": "Der Schuldner wird über die Abtretung schriftlich in Kenntnis gesetzt."
+     },
+     {
+      "bausteinId": "FA_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "FA_unterschrift",
+      "text": "___________________________\n________ (Zedentin/Zedent)",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     },
+     {
+      "bausteinId": "FA_annahme",
+      "text": "Von der Abtretung Kenntnis genommen und mit ihr einverstanden:\n___________________________\n________ (Zessionarin/Zessionar)",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Die Abtretung setzt die Abtretbarkeit der Forderung voraus (Art. 164 Abs. 1 OR); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 164/165/167/170 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "FA_absender",
+    "FA_adressat",
+    "FA_datumzeile",
+    "FA_betreff",
+    "FA_anrede",
+    "FA_abtretung",
+    "FA_zinsen",
+    "FA_urkunden",
+    "FA_anzeige",
+    "FA_schluss",
+    "FA_unterschrift",
+    "FA_annahme"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "FA_absender",
+     "begruendung": "Zedentin/Zedent als erklärende Partei – ihre Unterschrift verlangt die Schriftform (Art. 165 Abs. 1 OR)."
+    },
+    {
+     "bausteinId": "FA_adressat",
+     "begruendung": "Zessionarin/Zessionar als Erwerberin der Forderung und Empfängerin der Erklärung."
+    },
+    {
+     "bausteinId": "FA_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_betreff",
+     "begruendung": "Betreff mit bestimmter Bezeichnung der abgetretenen Forderung."
+    },
+    {
+     "bausteinId": "FA_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_abtretung",
+     "begruendung": "Kern der Erklärung: Verfügung über die bestimmt bezeichnete Forderung; der gesetzliche Übergang der Nebenrechte wird deklaratorisch wiedergegeben.",
+     "norm": "Art. 164 Abs. 1 und Art. 165 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "FA_zinsen",
+     "begruendung": "Klarstellung: Der Übergang der rückständigen Zinse ist von Gesetzes wegen nur VERMUTET (Art. 170 Abs. 3 OR) – die ausdrückliche Nennung stellt ihn ausser Streit.",
+     "norm": "Art. 170 Abs. 3 OR"
+    },
+    {
+     "bausteinId": "FA_urkunden",
+     "begruendung": "Wiedergabe der gesetzlichen Auslieferungs- und Auskunftspflicht der Zedentin (Art. 170 Abs. 2 OR) als ausdrückliche Zusage.",
+     "norm": "Art. 170 Abs. 2 OR"
+    },
+    {
+     "bausteinId": "FA_anzeige",
+     "begruendung": "Praxis-Standard: Bis zur Anzeige kann der Schuldner in gutem Glauben befreiend an die bisherige Gläubigerin leisten (Art. 167 OR) – die Ankündigung dokumentiert die vorgesehene Anzeige."
+    },
+    {
+     "bausteinId": "FA_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "FA_unterschrift",
+     "begruendung": "Unterschrift der abtretenden Partei – Schriftform ist Gültigkeitsvoraussetzung (Art. 165 Abs. 1 OR)."
+    },
+    {
+     "bausteinId": "FA_annahme",
+     "begruendung": "Gegenzeichnung der Erwerberin – formfrei möglich und keine Gültigkeitsvoraussetzung; sie dokumentiert die Annahme."
+    }
+   ]
+  }
+ },
+ "vorl:fa-gates": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "SCHRIFTFORM ist Gültigkeitsvoraussetzung der Abtretung (Art. 165 Abs. 1 OR) – drucken und von der abtretenden Partei (Zedentin/Zedent) unterschreiben lassen. Die Annahme durch die Erwerberin ist formfrei möglich; die Gegenzeichnungs-Zeile dient der Klarheit.",
+   "ABTRETBARKEIT prüfen: Die Abtretung ist ausgeschlossen, soweit Gesetz, Vereinbarung oder die Natur des Rechtsverhältnisses entgegenstehen (Art. 164 Abs. 1 OR) – insbesondere ein vertragliches Abtretungsverbot im Grundvertrag.",
+   "ANZEIGE an den Schuldner nachweisbar zustellen: Bis zur Anzeige kann er in gutem Glauben mit befreiender Wirkung an die bisherige Gläubigerin leisten (Art. 167 OR).",
+   "NICHT GEGENSTAND dieser Vorlage: das Verpflichtungsgeschäft (z. B. Forderungskauf; formfrei, Art. 165 Abs. 2 OR) und die Gewährleistung der Zedentin (Art. 171 ff. OR) – bei entgeltlicher Abtretung haftet sie für den Bestand der Forderung."
+  ]
+ },
  "vorl:sk-standard": {
   "dokument": {
    "titel": "Scheidungsklage (unbegründete Eingabe)",

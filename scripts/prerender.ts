@@ -26,7 +26,8 @@ import { renderRoute } from '../src/entry-server';
 // 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V2): +/vorlagen/verjaehrungsverzicht.
 // 12.6.2026 (Musterklagen): +/vorlagen/scheidungsklage,
 // +/vorlagen/scheidungsbegehren-gemeinsam, +/vorlagen/eheschutzgesuch.
-const ERWARTETE_ROUTEN = 42;
+// 13.6.2026 (V2-Rest): +/vorlagen/forderungsabtretung.
+const ERWARTETE_ROUTEN = 43;
 const NOT_FOUND_MARKER = '404 · Nicht gefunden'; // src/pages/NotFound.tsx
 // Stub-Tor (Bug-Check 11.6.2026): /rechner/:slug fängt Katalog-hrefs ohne
 // dedizierte Route VOR der 404-Seite ab — eine «in Vorbereitung»-Stub-Seite

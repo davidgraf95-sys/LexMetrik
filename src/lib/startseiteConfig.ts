@@ -1784,6 +1784,28 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['verjaehrung'],
     keywords: ['Verjährungsverzicht', 'Verjährungseinredeverzicht', 'Einrede', 'Verjährung', 'Art. 141', 'Verzichtserklärung'],
   },
+  forderungsabtretung: {
+    id: 'forderungsabtretung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Abtretungserklärung (Zession)',
+    // P1-Vorlage Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V2);
+    // Art. 164/165/167/170 OR am Cache verifiziert (20260101).
+    description: 'Erklärung der bisherigen Gläubigerseite, eine bestimmte Forderung an eine Erwerberin abzutreten (Art. 164 ff. OR) – mit zwingender Schriftform, Zinsen-Klarstellung und Hinweisen zu Abtretungsverbot und Schuldner-Anzeige.',
+    status: 'entwurf',
+    norms: [
+      // Art. 164/165 OR – Abtretbarkeit + Schriftform (Wortlaut verifiziert 12.6.2026)
+      { label: 'Art. 164 OR', url: fedlexUrl('OR', '164'), verified: false },
+      { label: 'Art. 165 OR', url: fedlexUrl('OR', '165'), verified: false },
+      { label: 'Art. 170 OR', url: fedlexUrl('OR', '170'), verified: false },
+    ],
+    href: '/vorlagen/forderungsabtretung',
+    schemaId: 'forderungsabtretung',
+    formvorschrift: 'Schriftform zwingend (Art. 165 Abs. 1 OR) – drucken und von der Zedentin/dem Zedenten unterschreiben lassen.',
+    output: ['pdf', 'docx'],
+    related: ['verjaehrungsverzicht', 'schuldanerkennung'],
+    keywords: ['Abtretung', 'Zession', 'Forderungsabtretung', 'Zedent', 'Zessionar', 'Art. 164', 'Art. 165', 'Gläubigerwechsel'],
+  },
   schuldanerkennung: {
     id: 'schuldanerkennung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
