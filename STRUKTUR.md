@@ -52,8 +52,13 @@ aus · FL-404-Meldung · KVG-64a-Warnung um Kinder-Ausnahme präzisiert
 Stichproben deckungsgleich. **OFFEN dokumentiert:** SZ ordentlich 26/30
 (Alpthal/Lauerz/Steinerberg/Wangen fehlen quellbedingt — SZ-Vermittler-
 Erhebung als Kandidat; SZ_MIETE deckt 30). Tore: gate voll GRÜN.
-**Push + Deploy: von David beauftragt — Vollzug siehe BETRIEB/Deploy-
-Protokoll dieser Session.**
+**PUSH + DEPLOY VOLLZOGEN (12.6.2026): origin/main = Prod = `7ff7315`**
+(dpl_CWUebRfaqtCdhzraMDHJYr9qXpuu, /tmp-HEAD-Worktree, Hash live=lokal
+index-B8c9RHkx, 8/8 Kernrouten 200, CI grün). **CSP-Klicktest auf Prod
+BESTANDEN:** Bundes-Adresssuche live (Limmatstrasse 152 → 8005/Zürich/ZH
+übernommen, 0 CSP-Fehler — connect-src api3.geo.admin.ch wirkt);
+ZH-Kreis-Automatik auf Prod verifiziert. **Verfallsregister meldet
+fällig: StGB-Re-Pin 12.6.2026 (AS 2026 231) — nächste Session.**
 
 ## Session 12.6.2026 — ZH-Kreis-Automatik + Adress-Ausbau Stufen 1–3 (Entscheide David, ungepusht)
 
