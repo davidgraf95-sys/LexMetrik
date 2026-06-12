@@ -136,6 +136,26 @@ Zweige golden-bewiesen unverändert).
 
 ---
 
+## Aufträge David 12.6.2026 (im Chat, nach Plan-Erstellung — eingeschoben)
+
+1. **GO erteilt** («weitermachen», dann «einfach weiterarbeiten bis du
+   unbedingt meinen Input brauchst») — V1 ff. laufen; Push/Deploy bleibt
+   gesperrt bis frisches Ja.
+2. **Blanko-Download-Grundsatz (Daueranweisung):** JEDE Vorlage ist auch
+   direkt herunterladbar, ohne etwas auszufüllen; wo Informationen fehlen,
+   erscheint ein leeres Feld (Blanko-Striche). → eigener Rahmen-Schritt
+   **V2b** vor den Musterklagen-Masken (§10); neue Vorlagen ab sofort
+   blanko-fähig bauen (oderBlank-Konvention in der Zusammenstellung).
+3. **Musterklagen-Rubrik + Masken (neue Phase V8):** weitere Rubrik mit
+   Musterklagen analog `~/Desktop/LexMetrik Knowledge/Musterklagen
+   Vertrags- und Haftplfichtrecht` und `…/Musterklagen im Familienrecht`,
+   dann die entsprechenden Masken bauen. NUR Struktur aus den Quellen
+   übernehmen (Urheberrechts-Lektion der Familienrecht-Bauspez.);
+   Familienrecht-Bauspez. liegt: `bibliothek/recherche/familienrecht-
+   klagen-vorlagen.md`. IA-Anker: Behördeneingaben-Rubrik
+   `klage_besonders` (nach klageGebiet gruppiert) bzw. neue Rubrik gemäss
+   Quellen-Zuschnitt.
+
 ## Davids Entscheide vor Start (Entscheidvorlage)
 
 1. P1-Listen (Dossier Abschn. 5) abnehmen/kürzen — insbesondere Reihenfolge

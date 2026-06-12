@@ -15,6 +15,7 @@ import { TESTAMENT_SCHEMA } from '../lib/vorlagen/testament';
 import { VA_SCHEMA } from '../lib/vorlagen/vorsorgeauftrag';
 import { VOLLMACHT_SCHEMA } from '../lib/vorlagen/vollmacht';
 import { MA_SCHEMA } from '../lib/vorlagen/mahnung';
+import { VV_SCHEMA } from '../lib/vorlagen/verjaehrungsverzicht';
 import { KM_SCHEMA } from '../lib/vorlagen/kuendigungMieter';
 import { KAG_SCHEMA } from '../lib/vorlagen/kuendigungArbeitgeber';
 import { KAN_SCHEMA } from '../lib/vorlagen/kuendigungArbeitnehmer';
@@ -49,6 +50,7 @@ const EINZEL: [string, VorlageSchema][] = [
   ['vorsorgeauftrag', VA_SCHEMA],
   ['vollmacht', VOLLMACHT_SCHEMA],
   ['mahnung', MA_SCHEMA],
+  ['verjaehrungsverzicht', VV_SCHEMA],
   ['kuendigung-mieter', KM_SCHEMA],
   ['kuendigung-arbeitgeber', KAG_SCHEMA],
   ['kuendigung-arbeitnehmer', KAN_SCHEMA],

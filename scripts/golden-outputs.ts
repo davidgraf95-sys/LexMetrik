@@ -33,6 +33,7 @@ import { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } from '../src/lib/vorlag
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
+import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
 import { berechneBgerRechtsweg } from '../src/lib/bgerRechtsweg';
 
 const faelle: Record<string, unknown> = {};
@@ -204,6 +205,18 @@ f('vorl:ma-zahlung', () => maZusammenstellen({ ...maBasis }));
 f('vorl:ma-verfalltag', () => maZusammenstellen({ ...maBasis, verfalltagVereinbart: true, verfalltag: '2026-05-31', zinsVertraglich: true, zinssatzProzent: '8' }));
 f('vorl:ma-mahngebuehr', () => maZusammenstellen({ ...maBasis, mahngebuehrErfassen: true, mahngebuehr: '20', mahngebuehrVertraglich: true, betreibungAndrohen: false }));
 f('vorl:ma-nachfrist', () => maZusammenstellen({ ...maBasis, variante: 'nachfrist' }));
+
+// Verjährungsverzicht (Art. 141 OR; FAHRPLAN-VORLAGEN-AUSBAU V2, 12.6.2026)
+const vvBasis = {
+  ...VV_DEFAULTS, absenderName: 'S AG', absenderAdresse: 'X 1, 4051 Basel',
+  adressatName: 'G GmbH', adressatAdresse: 'Y 2, 8000 Zürich',
+  forderungBeschrieb: 'Werklohnforderung aus Werkvertrag vom 1. Februar 2026',
+  verzichtBis: '2027-12-31', ort: 'Basel', datum: '2026-06-12',
+};
+f('vorl:vv-standard', () => vvZusammenstellen(vvBasis));
+f('vorl:vv-betrag-ohne-vorbehalte', () => vvZusammenstellen({ ...vvBasis, betragErfassen: true, betrag: '25000', vorbehaltEingetreten: false, keineAnerkennung: false }));
+f('vorl:vv-blanko', () => vvZusammenstellen({ ...VV_DEFAULTS }));
+f('vorl:vv-gates-hoechstdauer', () => pruefeVvGates({ ...vvBasis, verzichtBis: '2036-06-13' }));
 f('vorl:ma-gates', () => pruefeMaGates({ ...maBasis, mahngebuehrErfassen: true, mahngebuehr: '20' }));
 f('vorl:ma-gates-nachfrist', () => pruefeMaGates({ ...maBasis, variante: 'nachfrist' }));
 

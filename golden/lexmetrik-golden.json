@@ -8837,6 +8837,349 @@
   },
   "zinsAb": null
  },
+ "vorl:vv-standard": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Verjährungsverzichtserklärung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "VV_absender",
+      "text": "S AG\nX 1, 4051 Basel",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "VV_adressat",
+      "text": "G GmbH\nY 2, 8000 Zürich",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "VV_datumzeile",
+      "text": "Basel, 12. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "VV_betreff",
+      "text": "Verzicht auf die Einrede der Verjährung – Werklohnforderung aus Werkvertrag vom 1. Februar 2026",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "VV_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "VV_verzicht",
+      "text": "Hinsichtlich Ihrer Forderung (Werklohnforderung aus Werkvertrag vom 1. Februar 2026) verzichte ich hiermit bis zum 31.12.2027 auf die Erhebung der Einrede der Verjährung – längstens jedoch für die nach Art. 141 Abs. 1 OR zulässige Höchstdauer von zehn Jahren ab Beginn der Verjährung."
+     },
+     {
+      "bausteinId": "VV_vorbehalt",
+      "text": "Dieser Verzicht gilt nur, soweit die Verjährung im Zeitpunkt des Zugangs dieser Erklärung nicht bereits eingetreten ist."
+     },
+     {
+      "bausteinId": "VV_keine_anerkennung",
+      "text": "Mit dieser Erklärung ist keine Anerkennung der Forderung im Sinne von Art. 135 Ziff. 1 OR und keine Anerkennung ihres Bestands oder ihrer Höhe verbunden."
+     },
+     {
+      "bausteinId": "VV_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "VV_unterschrift",
+      "text": "___________________________\nS AG",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Verzicht gilt längstens für die gesetzlich zulässige Höchstdauer (Art. 141 Abs. 1 OR); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 141 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "VV_absender",
+    "VV_adressat",
+    "VV_datumzeile",
+    "VV_betreff",
+    "VV_anrede",
+    "VV_verzicht",
+    "VV_vorbehalt",
+    "VV_keine_anerkennung",
+    "VV_schluss",
+    "VV_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "VV_absender",
+     "begruendung": "Schuldnerin/Schuldner als erklärende Partei – nur sie kann verzichten (Art. 141 Abs. 1 OR)."
+    },
+    {
+     "bausteinId": "VV_adressat",
+     "begruendung": "Gläubigerin/Gläubiger als Empfänger der Erklärung."
+    },
+    {
+     "bausteinId": "VV_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_betreff",
+     "begruendung": "Betreff mit bestimmter Bezeichnung der Forderung."
+    },
+    {
+     "bausteinId": "VV_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_verzicht",
+     "begruendung": "Kern der Erklärung: befristeter Einredeverzicht mit salvatorischer Begrenzung auf die gesetzliche Höchstdauer – das Dokument kann die Grenze des Art. 141 Abs. 1 OR damit nie überschreiten.",
+     "norm": "Art. 141 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "VV_vorbehalt",
+     "begruendung": "Praxis-Standard: bereits eingetretene Verjährung bleibt vorbehalten (ein nachträglicher Verzicht auf die bereits eingetretene Verjährung wäre eine weitergehende Erklärung)."
+    },
+    {
+     "bausteinId": "VV_keine_anerkennung",
+     "begruendung": "Abgrenzung zur verjährungsunterbrechenden Anerkennung – der Verzicht auf die Einrede ist keine Anerkennung der Forderung; die Klarstellung verhindert die gegenteilige Deutung.",
+     "norm": "Art. 135 Ziff. 1 OR"
+    },
+    {
+     "bausteinId": "VV_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_unterschrift",
+     "begruendung": "Unterschrift der Schuldnerseite – Schriftform ist Gültigkeitsvoraussetzung (Art. 141 Abs. 1bis OR)."
+    }
+   ]
+  }
+ },
+ "vorl:vv-betrag-ohne-vorbehalte": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Verjährungsverzichtserklärung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "VV_absender",
+      "text": "S AG\nX 1, 4051 Basel",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "VV_adressat",
+      "text": "G GmbH\nY 2, 8000 Zürich",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "VV_datumzeile",
+      "text": "Basel, 12. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "VV_betreff",
+      "text": "Verzicht auf die Einrede der Verjährung – Werklohnforderung aus Werkvertrag vom 1. Februar 2026",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "VV_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "VV_verzicht",
+      "text": "Hinsichtlich Ihrer Forderung (Werklohnforderung aus Werkvertrag vom 1. Februar 2026, CHF 25'000.00) verzichte ich hiermit bis zum 31.12.2027 auf die Erhebung der Einrede der Verjährung – längstens jedoch für die nach Art. 141 Abs. 1 OR zulässige Höchstdauer von zehn Jahren ab Beginn der Verjährung."
+     },
+     {
+      "bausteinId": "VV_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "VV_unterschrift",
+      "text": "___________________________\nS AG",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Verzicht gilt längstens für die gesetzlich zulässige Höchstdauer (Art. 141 Abs. 1 OR); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 141 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "VV_absender",
+    "VV_adressat",
+    "VV_datumzeile",
+    "VV_betreff",
+    "VV_anrede",
+    "VV_verzicht",
+    "VV_schluss",
+    "VV_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "VV_absender",
+     "begruendung": "Schuldnerin/Schuldner als erklärende Partei – nur sie kann verzichten (Art. 141 Abs. 1 OR)."
+    },
+    {
+     "bausteinId": "VV_adressat",
+     "begruendung": "Gläubigerin/Gläubiger als Empfänger der Erklärung."
+    },
+    {
+     "bausteinId": "VV_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_betreff",
+     "begruendung": "Betreff mit bestimmter Bezeichnung der Forderung."
+    },
+    {
+     "bausteinId": "VV_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_verzicht",
+     "begruendung": "Kern der Erklärung: befristeter Einredeverzicht mit salvatorischer Begrenzung auf die gesetzliche Höchstdauer – das Dokument kann die Grenze des Art. 141 Abs. 1 OR damit nie überschreiten.",
+     "norm": "Art. 141 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "VV_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_unterschrift",
+     "begruendung": "Unterschrift der Schuldnerseite – Schriftform ist Gültigkeitsvoraussetzung (Art. 141 Abs. 1bis OR)."
+    }
+   ]
+  }
+ },
+ "vorl:vv-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Verjährungsverzichtserklärung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "VV_absender",
+      "text": "________",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "VV_adressat",
+      "text": "________",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "VV_datumzeile",
+      "text": "________, ________",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "VV_betreff",
+      "text": "Verzicht auf die Einrede der Verjährung – ________",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "VV_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "VV_verzicht",
+      "text": "Hinsichtlich Ihrer Forderung (________) verzichte ich hiermit bis zum ________ auf die Erhebung der Einrede der Verjährung – längstens jedoch für die nach Art. 141 Abs. 1 OR zulässige Höchstdauer von zehn Jahren ab Beginn der Verjährung."
+     },
+     {
+      "bausteinId": "VV_vorbehalt",
+      "text": "Dieser Verzicht gilt nur, soweit die Verjährung im Zeitpunkt des Zugangs dieser Erklärung nicht bereits eingetreten ist."
+     },
+     {
+      "bausteinId": "VV_keine_anerkennung",
+      "text": "Mit dieser Erklärung ist keine Anerkennung der Forderung im Sinne von Art. 135 Ziff. 1 OR und keine Anerkennung ihres Bestands oder ihrer Höhe verbunden."
+     },
+     {
+      "bausteinId": "VV_schluss",
+      "text": "Freundliche Grüsse",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "VV_unterschrift",
+      "text": "___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Verzicht gilt längstens für die gesetzlich zulässige Höchstdauer (Art. 141 Abs. 1 OR); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 141 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "VV_absender",
+    "VV_adressat",
+    "VV_datumzeile",
+    "VV_betreff",
+    "VV_anrede",
+    "VV_verzicht",
+    "VV_vorbehalt",
+    "VV_keine_anerkennung",
+    "VV_schluss",
+    "VV_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "VV_absender",
+     "begruendung": "Schuldnerin/Schuldner als erklärende Partei – nur sie kann verzichten (Art. 141 Abs. 1 OR)."
+    },
+    {
+     "bausteinId": "VV_adressat",
+     "begruendung": "Gläubigerin/Gläubiger als Empfänger der Erklärung."
+    },
+    {
+     "bausteinId": "VV_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_betreff",
+     "begruendung": "Betreff mit bestimmter Bezeichnung der Forderung."
+    },
+    {
+     "bausteinId": "VV_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_verzicht",
+     "begruendung": "Kern der Erklärung: befristeter Einredeverzicht mit salvatorischer Begrenzung auf die gesetzliche Höchstdauer – das Dokument kann die Grenze des Art. 141 Abs. 1 OR damit nie überschreiten.",
+     "norm": "Art. 141 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "VV_vorbehalt",
+     "begruendung": "Praxis-Standard: bereits eingetretene Verjährung bleibt vorbehalten (ein nachträglicher Verzicht auf die bereits eingetretene Verjährung wäre eine weitergehende Erklärung)."
+    },
+    {
+     "bausteinId": "VV_keine_anerkennung",
+     "begruendung": "Abgrenzung zur verjährungsunterbrechenden Anerkennung – der Verzicht auf die Einrede ist keine Anerkennung der Forderung; die Klarstellung verhindert die gegenteilige Deutung.",
+     "norm": "Art. 135 Ziff. 1 OR"
+    },
+    {
+     "bausteinId": "VV_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "VV_unterschrift",
+     "begruendung": "Unterschrift der Schuldnerseite – Schriftform ist Gültigkeitsvoraussetzung (Art. 141 Abs. 1bis OR)."
+    }
+   ]
+  }
+ },
+ "vorl:vv-gates-hoechstdauer": {
+  "blocker": [
+   "Das gewählte Ende liegt mehr als zehn Jahre nach dem Erklärungsdatum – die Höchstdauer läuft aber schon ab BEGINN der Verjährung (Art. 141 Abs. 1 OR) und wäre damit sicher überschritten. Enddatum kürzen; ein späterer ERNEUTER Verzicht bleibt möglich («jeweils»)."
+  ],
+  "warnungen": [],
+  "hinweise": [
+   "Die Höchstdauer von zehn Jahren läuft ab BEGINN der Verjährung, nicht ab dieser Erklärung (Art. 141 Abs. 1 OR). Die Erklärung enthält darum die ausdrückliche Begrenzung auf die gesetzlich zulässige Höchstdauer. Der Verzicht kann später erneuert werden («jeweils»).",
+   "SCHRIFTFORM ist Gültigkeitsvoraussetzung (Art. 141 Abs. 1bis OR) – drucken und von der Schuldnerseite unterschreiben lassen. In allgemeinen Geschäftsbedingungen kann nur der VERWENDER der AGB verzichten.",
+   "Wirkungsgrenzen: Der Verzicht eines Solidarschuldners kann den übrigen Solidarschuldnern nicht entgegengehalten werden (Art. 141 Abs. 2 OR); dasselbe gilt unter Schuldnern einer unteilbaren Leistung und für den Bürgen beim Verzicht des Hauptschuldners (Abs. 3). Bei direktem Forderungsrecht gegen einen Versicherer wirkt der Verzicht auch ihm gegenüber und umgekehrt (Abs. 4)."
+  ]
+ },
  "vorl:ma-gates": {
   "blocker": [],
   "warnungen": [

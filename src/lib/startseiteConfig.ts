@@ -1601,6 +1601,26 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['verzugszins', 'betreibungskosten'],
     keywords: ['Mahnung', 'Zahlungsverzug', 'Frist', 'Inverzugsetzung', 'Nachfrist', 'Verzugszins', 'Art. 102', 'Art. 107'],
   },
+  verjaehrungsverzicht: {
+    id: 'verjaehrungsverzicht', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Verjährungsverzichtserklärung',
+    // P1-Vorlage Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V2);
+    // Art. 141 OR am Cache verifiziert (20260101).
+    description: 'Erklärung der Schuldnerseite, befristet auf die Einrede der Verjährung zu verzichten (Art. 141 OR) – mit fester Begrenzung auf die gesetzliche Höchstdauer und Klarstellung, dass keine Anerkennung vorliegt.',
+    status: 'entwurf',
+    norms: [
+      // Art. 141 OR – Einredeverzicht, Schriftform, Wirkungsgrenzen (Wortlaut verifiziert 12.6.2026)
+      { label: 'Art. 141 OR', url: fedlexUrl('OR', '141'), verified: false },
+    ],
+    href: '/vorlagen/verjaehrungsverzicht',
+    schemaId: 'verjaehrungsverzicht',
+    formvorschrift: 'Schriftform zwingend (Art. 141 Abs. 1bis OR) – drucken und von der Schuldnerseite unterschreiben lassen.',
+    output: ['pdf', 'docx'],
+    related: ['verjaehrung'],
+    keywords: ['Verjährungsverzicht', 'Verjährungseinredeverzicht', 'Einrede', 'Verjährung', 'Art. 141', 'Verzichtserklärung'],
+  },
   schuldanerkennung: {
     id: 'schuldanerkennung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
     rechtsbereich: 'privat',
