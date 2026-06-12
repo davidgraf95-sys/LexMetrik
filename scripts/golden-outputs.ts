@@ -34,6 +34,7 @@ import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/li
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
 import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
+import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
 import { berechneBgerRechtsweg } from '../src/lib/bgerRechtsweg';
 
 const faelle: Record<string, unknown> = {};
@@ -217,6 +218,19 @@ f('vorl:vv-standard', () => vvZusammenstellen(vvBasis));
 f('vorl:vv-betrag-ohne-vorbehalte', () => vvZusammenstellen({ ...vvBasis, betragErfassen: true, betrag: '25000', vorbehaltEingetreten: false, keineAnerkennung: false }));
 f('vorl:vv-blanko', () => vvZusammenstellen({ ...VV_DEFAULTS }));
 f('vorl:vv-gates-hoechstdauer', () => pruefeVvGates({ ...vvBasis, verzichtBis: '2036-06-13' }));
+
+// Scheidungsklage (Art. 290 ZPO; Musterklagen-Auftrag David 12.6.2026)
+const skBasis = {
+  ...SK_DEFAULTS, gerichtsKanton: 'BS' as const,
+  klaeger: { typ: 'natuerlich' as const, vorname: 'Anna', name: 'Muster', firma: '', strasse: 'A-Gasse 1', plz: '4051', ort: 'Basel' },
+  beklagte: { typ: 'natuerlich' as const, vorname: 'Beat', name: 'Muster', firma: '', strasse: 'B-Weg 2', plz: '4052', ort: 'Basel' },
+  grund: '114' as const, trennungSeit: '2024-03-01',
+  ort: 'Basel', datum: '2026-06-12',
+};
+f('vorl:sk-standard', () => skZusammenstellen(skBasis));
+f('vorl:sk-kinder-115', () => skZusammenstellen({ ...skBasis, grund: '115' as const, trennungSeit: '', kinderErfassen: true, kinder: [{ vorname: 'Carla', geburtsdatum: '2019-05-04' }], obhut: 'alternierend' as const, unterhaltEhegatte: 'beziffert' as const, unterhaltBetrag: '2500' }));
+f('vorl:sk-blanko', () => skZusammenstellen({ ...SK_DEFAULTS }));
+f('vorl:sk-warnung-zweijahre', () => skWarnungen({ ...skBasis, trennungSeit: '2025-01-01' }));
 f('vorl:ma-gates', () => pruefeMaGates({ ...maBasis, mahngebuehrErfassen: true, mahngebuehr: '20' }));
 f('vorl:ma-gates-nachfrist', () => pruefeMaGates({ ...maBasis, variante: 'nachfrist' }));
 

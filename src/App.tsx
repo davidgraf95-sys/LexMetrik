@@ -43,6 +43,7 @@ const VorlageKuendigungVertrag = lazy(() => import('./pages/VorlageKuendigungVer
 const VorlageKuendigungVermieter = lazy(() => import('./pages/VorlageKuendigungVermieter').then((m) => ({ default: m.VorlageKuendigungVermieter })));
 const VorlageMahnung = lazy(() => import('./pages/VorlageMahnung').then((m) => ({ default: m.VorlageMahnung })));
 const VorlageVerjaehrungsverzicht = lazy(() => import('./pages/VorlageVerjaehrungsverzicht').then((m) => ({ default: m.VorlageVerjaehrungsverzicht })));
+const VorlageScheidungsklage = lazy(() => import('./pages/VorlageScheidungsklage').then((m) => ({ default: m.VorlageScheidungsklage })));
 const VorlageGmbhGruendung = lazy(() => import('./pages/VorlageGmbhGruendung').then((m) => ({ default: m.VorlageGmbhGruendung })));
 const VorlageAgGruendung = lazy(() => import('./pages/VorlageAgGruendung').then((m) => ({ default: m.VorlageAgGruendung })));
 const VorlageKapitalerhoehung = lazy(() => import('./pages/VorlageKapitalerhoehung').then((m) => ({ default: m.VorlageKapitalerhoehung })));
@@ -126,6 +127,7 @@ export default function App() {
         <Route path="/vorlagen/kuendigung-vermieter" element={<VorlageKuendigungVermieter />} />
         <Route path="/vorlagen/mahnung" element={<VorlageMahnung />} />
         <Route path="/vorlagen/verjaehrungsverzicht" element={<VorlageVerjaehrungsverzicht />} />
+        <Route path="/vorlagen/scheidungsklage" element={<VorlageScheidungsklage />} />
         <Route path="/vorlagen/gmbh-gruendung" element={<VorlageGmbhGruendung />} />
         <Route path="/vorlagen/ag-gruendung" element={<VorlageAgGruendung />} />
         <Route path="/vorlagen/kapitalerhoehung" element={<VorlageKapitalerhoehung />} />

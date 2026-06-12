@@ -1435,6 +1435,32 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['schkg-fristen', 'rechtsoeffnungsbegehren'],
     keywords: ['Aberkennung', 'Rechtsöffnung'],
   },
+  scheidungsklage: {
+    id: 'scheidungsklage', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_besonders', klageGebiet: 'Familienrecht', rechtsgebiet: 'Familienrecht',
+    formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Scheidungsklage (unbegründete Eingabe)',
+    // Erste Musterklagen-Maske Familienrecht (Auftrag David 12.6.2026;
+    // Bauspez. familienrecht-klagen-vorlagen.md §3.3); ZPO/ZGB-Anker am
+    // Cache verifiziert 12.6.2026.
+    description: 'Scheidungsklage ohne schriftliche Begründung (Art. 290 ZPO) – gesetzlicher Mindestinhalt mit Scheidungsgrund (Art. 114/115 ZGB), Kinder-, Unterhalts-, Güterrechts- und Vorsorge-Begehren; berechneter Zweijahres-Check.',
+    status: 'entwurf',
+    norms: [
+      // Art. 290 ZPO – Mindestinhalt der unbegründeten Eingabe (verifiziert 12.6.2026)
+      { label: 'Art. 290 ZPO', url: fedlexUrl('ZPO', '290'), verified: false },
+      // Art. 114/115 ZGB – Scheidungsgründe (verifiziert 12.6.2026)
+      { label: 'Art. 114 ZGB', url: fedlexUrl('ZGB', '114'), verified: false },
+      { label: 'Art. 115 ZGB', url: fedlexUrl('ZGB', '115'), verified: false },
+      // Art. 23 Abs. 1 ZPO – zwingender Gerichtsstand (verifiziert 12.6.2026)
+      { label: 'Art. 23 ZPO', url: fedlexUrl('ZPO', '23'), verified: false },
+    ],
+    href: '/vorlagen/scheidungsklage',
+    schemaId: 'scheidungsklage',
+    formvorschrift: 'Unterschreiben und im Doppel einreichen (Art. 131 ZPO); Gericht am Wohnsitz einer Partei.',
+    output: ['pdf', 'docx'],
+    related: ['vorsorgeausgleich', 'familie-fristen', 'tagerechner'],
+    keywords: ['Scheidung', 'Scheidungsklage', 'Art. 290', 'Art. 114', 'Art. 115', 'unbegründete Eingabe', 'Getrenntleben'],
+  },
   arrestgesuch: {
     id: 'arrestgesuch', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',

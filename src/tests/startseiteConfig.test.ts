@@ -54,7 +54,7 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/klage-ordentlich', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung', '/vorlagen/mahnung', '/vorlagen/verjaehrungsverzicht']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/klage-ordentlich', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung', '/vorlagen/mahnung', '/vorlagen/verjaehrungsverzicht', '/vorlagen/scheidungsklage']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -224,10 +224,13 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // Deklarierte Anpassung 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V2, GO David):
   // + Vorlage «Verjährungsverzichtserklärung» (P1 Wettbewerbsanalyse,
   // neu als entwurf) → 37 gebaut / 33 sichtbar.
-  it('verfügbar = status !== geplant; Regressionszählung 37 gebaut / 33 sichtbar (Stand 12.6.2026)', () => {
+  // Deklarierte Anpassung 12.6.2026 (Musterklagen-Auftrag David):
+  // + Vorlage «Scheidungsklage (unbegründete Eingabe)» (Art. 290 ZPO,
+  // neu als entwurf) → 38 gebaut / 34 sichtbar.
+  it('verfügbar = status !== geplant; Regressionszählung 38 gebaut / 34 sichtbar (Stand 12.6.2026)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(37);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(33);
+    expect(verf.length).toBe(38);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(34);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

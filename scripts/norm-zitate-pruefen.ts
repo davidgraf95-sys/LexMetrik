@@ -22,6 +22,7 @@ const QUELLEN = [
   // Bausteinen und Gates.
   'src/lib/vorlagen/mahnung.ts',
   'src/lib/vorlagen/verjaehrungsverzicht.ts',
+  'src/lib/vorlagen/scheidungsklage.ts',
   // BGer-Rechtsweg (11.6.2026) — BGG- und BGerR-Zitate in Rechenweg/Hinweisen.
   'src/lib/bgerRechtsweg.ts',
   // Vertrags-Kündigungsmaske 3 (KVG-Preset 11.6.2026) — VVG-/OR-/KVG-/KVV-

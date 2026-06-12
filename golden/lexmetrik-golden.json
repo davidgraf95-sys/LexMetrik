@@ -9180,6 +9180,381 @@
    "Wirkungsgrenzen: Der Verzicht eines Solidarschuldners kann den übrigen Solidarschuldnern nicht entgegengehalten werden (Art. 141 Abs. 2 OR); dasselbe gilt unter Schuldnern einer unteilbaren Leistung und für den Bürgen beim Verzicht des Hauptschuldners (Abs. 3). Bei direktem Forderungsrecht gegen einen Versicherer wirkt der Verzicht auch ihm gegenüber und umgekehrt (Abs. 4)."
   ]
  },
+ "vorl:sk-standard": {
+  "dokument": {
+   "titel": "Scheidungsklage (unbegründete Eingabe)",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "SK01_adressat",
+     "text": "Zivilgericht Basel-Stadt\nBäumleingasse 5\n4001 Basel",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "SK02_datum",
+     "text": "Basel, 12.06.2026",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "SK03_betreff",
+     "text": "Scheidungsklage (Art. 290 ZPO) — unbegründete Eingabe",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "SK04_rubrum",
+     "text": "in Sachen\nAnna Muster, A-Gasse 1, 4051 Basel\n(klagende Partei)\n\ngegen\n\nBeat Muster, B-Weg 2, 4052 Basel\n(beklagte Partei)\n\nbetreffend Scheidung",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "SK05_begehren",
+     "ueberschrift": "Rechtsbegehren",
+     "text": "1. Die Ehe der Parteien sei zu scheiden (Art. 114 ZGB; Getrenntleben seit 01.03.2024).\n2. Der nacheheliche Unterhalt sei gerichtlich festzusetzen.\n3. Die güterrechtliche Auseinandersetzung sei durchzuführen; die Bezifferung bleibt vorbehalten.\n4. Die während der Ehe bis zur Einleitung des Verfahrens erworbenen Ansprüche aus beruflicher Vorsorge seien auszugleichen (Art. 122 ff. ZGB).\n5. Unter Kosten- und Entschädigungsfolge zulasten der beklagten Partei."
+    },
+    {
+     "bausteinId": "SK06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Das Schlichtungsverfahren entfällt im Scheidungsverfahren (Art. 198 lit. c ZPO). Die Klage wird als unbegründete Eingabe nach Art. 290 ZPO eingereicht; um Vorladung zur Einigungsverhandlung (Art. 291 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "SK07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Familienausweis bzw. Eheurkunde"
+    },
+    {
+     "bausteinId": "SK08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "SK09_unterschrift",
+     "text": "_________________________________\nAnna Muster",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    },
+    {
+     "bausteinId": "SK10_doppel",
+     "text": "Einreichung im Doppel: ein Exemplar für das Gericht und ein Exemplar für die beklagte Partei (Art. 131 ZPO)."
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Unbegründete Scheidungsklage nach Art. 290 ZPO; einzureichen unterschrieben im Doppel beim Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO). Das Gericht lädt zur Einigungsverhandlung vor (Art. 291 ZPO); Kinderbelange unterliegen der Offizialmaxime.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.3; ZPO/ZGB verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "SK01_adressat",
+   "SK02_datum",
+   "SK03_betreff",
+   "SK04_rubrum",
+   "SK05_begehren",
+   "SK06_formelles",
+   "SK07_beilagen",
+   "SK08_gruss",
+   "SK09_unterschrift",
+   "SK10_doppel"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "SK01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SK02_datum",
+    "begruendung": "Ort und Datum der Eingabe.",
+    "norm": "Art. 290 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SK03_betreff",
+    "begruendung": "Betreff mit Verfahrensbezeichnung; die Klage darf ohne schriftliche Begründung eingereicht werden.",
+    "norm": "Art. 290 ZPO"
+   },
+   {
+    "bausteinId": "SK04_rubrum",
+    "begruendung": "Parteien und allfällige Vertretung.",
+    "norm": "Art. 290 lit. a ZPO"
+   },
+   {
+    "bausteinId": "SK05_begehren",
+    "begruendung": "Scheidungsbegehren mit Grund-Bezeichnung (lit. b), vermögensrechtliche Folgen (lit. c), Kinderbelange (lit. d), Kosten.",
+    "norm": "Art. 290 lit. b–d ZPO"
+   },
+   {
+    "bausteinId": "SK06_formelles",
+    "begruendung": "Zwingende örtliche Zuständigkeit; kein Schlichtungsverfahren; Hinweis auf die Einigungsverhandlung.",
+    "norm": "Art. 23 Abs. 1 / 198 lit. c / 291 ZPO"
+   },
+   {
+    "bausteinId": "SK07_beilagen",
+    "begruendung": "Erforderliche Belege.",
+    "norm": "Art. 290 lit. e ZPO"
+   },
+   {
+    "bausteinId": "SK08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "SK09_unterschrift",
+    "begruendung": "Unterschrift der klagenden Partei bzw. der Vertretung.",
+    "norm": "Art. 290 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SK10_doppel",
+    "begruendung": "Exemplare-Hinweis.",
+    "norm": "Art. 131 ZPO"
+   }
+  ]
+ },
+ "vorl:sk-kinder-115": {
+  "dokument": {
+   "titel": "Scheidungsklage (unbegründete Eingabe)",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "SK01_adressat",
+     "text": "Zivilgericht Basel-Stadt\nBäumleingasse 5\n4001 Basel",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "SK02_datum",
+     "text": "Basel, 12.06.2026",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "SK03_betreff",
+     "text": "Scheidungsklage (Art. 290 ZPO) — unbegründete Eingabe",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "SK04_rubrum",
+     "text": "in Sachen\nAnna Muster, A-Gasse 1, 4051 Basel\n(klagende Partei)\n\ngegen\n\nBeat Muster, B-Weg 2, 4052 Basel\n\ngemeinsame Kinder: Carla, geb. 04.05.2019\n(beklagte Partei)\n\nbetreffend Scheidung",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "SK05_begehren",
+     "ueberschrift": "Rechtsbegehren",
+     "text": "1. Die Ehe der Parteien sei zu scheiden (Art. 115 ZGB).\n2. Die gemeinsamen Kinder seien unter der gemeinsamen elterlichen Sorge der Parteien zu belassen.\n3. Die Kinder seien unter die alternierende Obhut beider Parteien zu stellen.\n4. Der persönliche Verkehr zwischen den Kindern und dem nicht obhutsberechtigten Elternteil sei gerichtlich zu regeln.\n5. Die Unterhaltsbeiträge für die Kinder seien gerichtlich festzusetzen.\n6. Die beklagte Partei sei zu verpflichten, der klagenden Partei nachehelichen Unterhalt von monatlich CHF 2500, zahlbar monatlich im Voraus, zu leisten.\n7. Die güterrechtliche Auseinandersetzung sei durchzuführen; die Bezifferung bleibt vorbehalten.\n8. Die während der Ehe bis zur Einleitung des Verfahrens erworbenen Ansprüche aus beruflicher Vorsorge seien auszugleichen (Art. 122 ff. ZGB).\n9. Unter Kosten- und Entschädigungsfolge zulasten der beklagten Partei."
+    },
+    {
+     "bausteinId": "SK06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Das Schlichtungsverfahren entfällt im Scheidungsverfahren (Art. 198 lit. c ZPO). Die Klage wird als unbegründete Eingabe nach Art. 290 ZPO eingereicht; um Vorladung zur Einigungsverhandlung (Art. 291 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "SK07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Familienausweis bzw. Eheurkunde\n– Beilage 2: Geburtsurkunden der Kinder"
+    },
+    {
+     "bausteinId": "SK08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "SK09_unterschrift",
+     "text": "_________________________________\nAnna Muster",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    },
+    {
+     "bausteinId": "SK10_doppel",
+     "text": "Einreichung im Doppel: ein Exemplar für das Gericht und ein Exemplar für die beklagte Partei (Art. 131 ZPO)."
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Unbegründete Scheidungsklage nach Art. 290 ZPO; einzureichen unterschrieben im Doppel beim Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO). Das Gericht lädt zur Einigungsverhandlung vor (Art. 291 ZPO); Kinderbelange unterliegen der Offizialmaxime.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.3; ZPO/ZGB verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "SK01_adressat",
+   "SK02_datum",
+   "SK03_betreff",
+   "SK04_rubrum",
+   "SK05_begehren",
+   "SK06_formelles",
+   "SK07_beilagen",
+   "SK08_gruss",
+   "SK09_unterschrift",
+   "SK10_doppel"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "SK01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SK02_datum",
+    "begruendung": "Ort und Datum der Eingabe.",
+    "norm": "Art. 290 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SK03_betreff",
+    "begruendung": "Betreff mit Verfahrensbezeichnung; die Klage darf ohne schriftliche Begründung eingereicht werden.",
+    "norm": "Art. 290 ZPO"
+   },
+   {
+    "bausteinId": "SK04_rubrum",
+    "begruendung": "Parteien und allfällige Vertretung.",
+    "norm": "Art. 290 lit. a ZPO"
+   },
+   {
+    "bausteinId": "SK05_begehren",
+    "begruendung": "Scheidungsbegehren mit Grund-Bezeichnung (lit. b), vermögensrechtliche Folgen (lit. c), Kinderbelange (lit. d), Kosten.",
+    "norm": "Art. 290 lit. b–d ZPO"
+   },
+   {
+    "bausteinId": "SK06_formelles",
+    "begruendung": "Zwingende örtliche Zuständigkeit; kein Schlichtungsverfahren; Hinweis auf die Einigungsverhandlung.",
+    "norm": "Art. 23 Abs. 1 / 198 lit. c / 291 ZPO"
+   },
+   {
+    "bausteinId": "SK07_beilagen",
+    "begruendung": "Erforderliche Belege.",
+    "norm": "Art. 290 lit. e ZPO"
+   },
+   {
+    "bausteinId": "SK08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "SK09_unterschrift",
+    "begruendung": "Unterschrift der klagenden Partei bzw. der Vertretung.",
+    "norm": "Art. 290 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SK10_doppel",
+    "begruendung": "Exemplare-Hinweis.",
+    "norm": "Art. 131 ZPO"
+   }
+  ]
+ },
+ "vorl:sk-blanko": {
+  "dokument": {
+   "titel": "Scheidungsklage (unbegründete Eingabe)",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "SK01_adressat",
+     "text": "________\n________\n________",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "SK02_datum",
+     "text": "________",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "SK03_betreff",
+     "text": "Scheidungsklage (Art. 290 ZPO) — unbegründete Eingabe",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "SK04_rubrum",
+     "text": "in Sachen\n \n(klagende Partei)\n\ngegen\n\n \n(beklagte Partei)\n\nbetreffend Scheidung",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "SK05_begehren",
+     "ueberschrift": "Rechtsbegehren",
+     "text": "1. Die Ehe der Parteien sei zu scheiden (Art. 114 ZGB; Getrenntleben seit ________).\n2. Der nacheheliche Unterhalt sei gerichtlich festzusetzen.\n3. Die güterrechtliche Auseinandersetzung sei durchzuführen; die Bezifferung bleibt vorbehalten.\n4. Die während der Ehe bis zur Einleitung des Verfahrens erworbenen Ansprüche aus beruflicher Vorsorge seien auszugleichen (Art. 122 ff. ZGB).\n5. Unter Kosten- und Entschädigungsfolge zulasten der beklagten Partei."
+    },
+    {
+     "bausteinId": "SK06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Das Schlichtungsverfahren entfällt im Scheidungsverfahren (Art. 198 lit. c ZPO). Die Klage wird als unbegründete Eingabe nach Art. 290 ZPO eingereicht; um Vorladung zur Einigungsverhandlung (Art. 291 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "SK07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Familienausweis bzw. Eheurkunde"
+    },
+    {
+     "bausteinId": "SK08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "SK09_unterschrift",
+     "text": "_________________________________\n________",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    },
+    {
+     "bausteinId": "SK10_doppel",
+     "text": "Einreichung im Doppel: ein Exemplar für das Gericht und ein Exemplar für die beklagte Partei (Art. 131 ZPO)."
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Unbegründete Scheidungsklage nach Art. 290 ZPO; einzureichen unterschrieben im Doppel beim Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO). Das Gericht lädt zur Einigungsverhandlung vor (Art. 291 ZPO); Kinderbelange unterliegen der Offizialmaxime.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.3; ZPO/ZGB verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "SK01_adressat",
+   "SK02_datum",
+   "SK03_betreff",
+   "SK04_rubrum",
+   "SK05_begehren",
+   "SK06_formelles",
+   "SK07_beilagen",
+   "SK08_gruss",
+   "SK09_unterschrift",
+   "SK10_doppel"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "SK01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "SK02_datum",
+    "begruendung": "Ort und Datum der Eingabe.",
+    "norm": "Art. 290 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SK03_betreff",
+    "begruendung": "Betreff mit Verfahrensbezeichnung; die Klage darf ohne schriftliche Begründung eingereicht werden.",
+    "norm": "Art. 290 ZPO"
+   },
+   {
+    "bausteinId": "SK04_rubrum",
+    "begruendung": "Parteien und allfällige Vertretung.",
+    "norm": "Art. 290 lit. a ZPO"
+   },
+   {
+    "bausteinId": "SK05_begehren",
+    "begruendung": "Scheidungsbegehren mit Grund-Bezeichnung (lit. b), vermögensrechtliche Folgen (lit. c), Kinderbelange (lit. d), Kosten.",
+    "norm": "Art. 290 lit. b–d ZPO"
+   },
+   {
+    "bausteinId": "SK06_formelles",
+    "begruendung": "Zwingende örtliche Zuständigkeit; kein Schlichtungsverfahren; Hinweis auf die Einigungsverhandlung.",
+    "norm": "Art. 23 Abs. 1 / 198 lit. c / 291 ZPO"
+   },
+   {
+    "bausteinId": "SK07_beilagen",
+    "begruendung": "Erforderliche Belege.",
+    "norm": "Art. 290 lit. e ZPO"
+   },
+   {
+    "bausteinId": "SK08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "SK09_unterschrift",
+    "begruendung": "Unterschrift der klagenden Partei bzw. der Vertretung.",
+    "norm": "Art. 290 lit. f ZPO"
+   },
+   {
+    "bausteinId": "SK10_doppel",
+    "begruendung": "Exemplare-Hinweis.",
+    "norm": "Art. 131 ZPO"
+   }
+  ]
+ },
+ "vorl:sk-warnung-zweijahre": [
+  "Die zwei Jahre Getrenntleben (Art. 114 ZGB) sind am gewählten Einreichungsdatum noch NICHT erreicht — massgebend ist der Eintritt der Rechtshängigkeit. Vor Ablauf ist die Scheidung nur nach Art. 115 ZGB (Unzumutbarkeit) möglich; sonst Einreichung aufschieben."
+ ],
  "vorl:ma-gates": {
   "blocker": [],
   "warnungen": [
