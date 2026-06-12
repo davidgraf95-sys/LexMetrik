@@ -74,7 +74,12 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   const [zhStrasse, setZhStrasse] = useState('');
   const [zhNummer, setZhNummer] = useState('');
   const [zhStrassenInfo, setZhStrassenInfo] = useState<'strasse' | 'nummer_noetig' | 'unbekannt' | null>(null);
-  const [kreisIdx, setKreisIdx] = useState(0);
+  // Bug-Check 12.6.2026 (MITTEL, Lupen 1+5): die Kreis-/Ortsteil-Wahl trägt
+  // den ERZEUGENDEN Schlüssel ihrer Kandidaten-Liste — sonst reiste eine
+  // alte Wahl still in die semantisch neue Liste (8044 Wahl «6 + 10» →
+  // PLZ 8050: 0.2-%-Amt statt der dokumentierten Vorauswahl). Muster wie
+  // wahlSchluessel/amtZeilen.
+  const [kreisWahl, setKreisWahl] = useState<{ schluessel: string; idx: number }>({ schluessel: '', idx: 0 });
   // Bug-Check 11.6.2026 B2 + Nachschärfung Deploy-Check: amtZeilen tragen
   // den vollen erzeugenden Schlüssel (kanton|typ|vd-Stufe, wie
   // wahlSchluessel) — der nur typ-scharfe Guard meldete beim Kantons-/
@@ -198,6 +203,8 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   // Gegenbeispiel; bis zur GlG-Recherche je Kanton gilt Handeingabe.
   const glgOhneStelle = typ === 'paritaetisch_glg' && (recherche?.glgFallback ?? false);
   const amtZeilenTyp = amtZeilen && amtZeilen.schluessel === `${kanton}|${typ}|${vdStufeKey}` ? amtZeilen.zeilen : null;
+  const kreisSchluessel = `${kanton}|${typ}|${plz}|${gemeinde.trim().toLowerCase()}`;
+  const kreisIdx = kreisWahl.schluessel === kreisSchluessel ? kreisWahl.idx : 0;
   useEffect(() => {
     if (!recherche || glgOhneStelle) { onAufgeloest(null); return; }
     const a = recherche.aufloesung;
@@ -210,11 +217,21 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       // 11.6.2026: er bog einen Stufen-fremden Index still auf die letzte
       // Stelle der neuen Liste um) — ausserhalb der Liste gilt -1.
       const s = wahlIdx >= 0 && wahlIdx < a.stellen.length ? a.stellen[wahlIdx] : undefined;
-      onAufgeloest(s
-        ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
-        : ((typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && amtZeilenTyp
-          ? { zeilen: amtZeilenTyp, url: amtUrl ?? recherche.kantonsUrl } : null));
-    } else if ((typ === 'ordentlich' || (typ === 'paritaetisch_miete' && kanton === 'TI')) && zhKreise && zhKreise.length > 0) {
+      // TI-Miete (Bug-Check 12.6.2026 HOCH, 3 Lupen übereinstimmend): die
+      // Ortsteil-Wahl der Mehr-Uffici-Gemeinden rendert im liste-Modus —
+      // ihre Meldung gehört darum in DIESEN Zweig (vorher unerreichbar im
+      // verzeichnis-Zweig → onAufgeloest(null), Wahl verpuffte). Die
+      // manuelle Stellen-Wahl (s) bleibt Übersteuerung.
+      if (!s && typ === 'paritaetisch_miete' && kanton === 'TI' && zhKreise && zhKreise.length > 0) {
+        const k = zhKreise[kreisIdx < zhKreise.length ? kreisIdx : 0];
+        onAufgeloest({ zeilen: [k.name, k.strasse, k.plzOrt].filter(Boolean), url: k.url ?? recherche.kantonsUrl });
+      } else {
+        onAufgeloest(s
+          ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
+          : ((typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && amtZeilenTyp
+            ? { zeilen: amtZeilenTyp, url: amtUrl ?? recherche.kantonsUrl } : null));
+      }
+    } else if (typ === 'ordentlich' && zhKreise && zhKreise.length > 0) {
       // Index ausserhalb der (neuen) Liste → deterministisch erste Option,
       // Anzeige und Meldung identisch (kein stiller Letzte-Stelle-Clamp;
       // relevant seit TI-Kandidatenlisten unterschiedlicher Länge, 11.6.2026).
@@ -269,7 +286,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             </div>
           )}
           {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && plzWahl && plzWahl.plz === plz && (
-            <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
+            <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton} kantonFest={kanton}
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
           )}
           {/* Adress-Ausbau Stufe 3 (12.6.2026): Bundes-API nur auf Klick,
@@ -277,14 +294,14 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && (
             <AdresseBundSuche kantonErwartet={kanton}
               beschriftung={typ === 'paritaetisch_miete' ? 'Oder Adresse des Mietobjekts (Bundes-Suche)' : 'Oder Adresse der beklagten Partei (Bundes-Suche)'}
-              onUebernehmen={({ gemeinde: g, plz: p }) => { setPlz(p); setGemeinde(g); }} />
+              onUebernehmen={({ gemeinde: g, plz: p }) => { setPlz(p); setGemeinde(g); setZhStrasse(''); setZhNummer(''); }} />
           )}
           {/* TI-Miete (12.6.2026): Lugano/Bellinzona/Val Mara → Ortsteil-Wahl
               (gleicher Mechanismus wie die ZH-Kreise; Dossier §51). */}
           {kanton === 'TI' && typ === 'paritaetisch_miete' && zhKreise && (
             <Field label="Ufficio nach Ortsteil/Quartier wählen"
               hint="die Gemeinde erstreckt sich über mehrere Uffici di conciliazione — massgeblich ist der Ortsteil/das Quartier des Mietobjekts">
-              <select className={inputCls} value={kreisIdx < zhKreise.length ? kreisIdx : 0} onChange={(e) => setKreisIdx(Number(e.target.value))}>
+              <select className={inputCls} value={kreisIdx < zhKreise.length ? kreisIdx : 0} onChange={(e) => setKreisWahl({ schluessel: kreisSchluessel, idx: Number(e.target.value) })}>
                 {zhKreise.map((k, i) => <option key={k.kreise} value={i}>{k.name} — {k.kreise}</option>)}
               </select>
             </Field>
@@ -327,7 +344,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           </div>
           )}
           {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && plzWahl && plzWahl.plz === plz && (
-            <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
+            <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton} kantonFest={kanton}
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
           )}
           {/* Adress-Ausbau Stufe 3 (12.6.2026): Bundes-API nur auf Klick,
@@ -335,7 +352,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && (
             <AdresseBundSuche kantonErwartet={kanton}
               beschriftung={typ === 'paritaetisch_miete' ? 'Oder Adresse des Mietobjekts (Bundes-Suche)' : 'Oder Adresse der beklagten Partei (Bundes-Suche)'}
-              onUebernehmen={({ gemeinde: g, plz: p }) => { setPlz(p); setGemeinde(g); }} />
+              onUebernehmen={({ gemeinde: g, plz: p }) => { setPlz(p); setGemeinde(g); setZhStrasse(''); setZhNummer(''); }} />
           )}
           {/* Strassen-Index Stadt Zürich (Adress-Ausbau Stufe 1, 12.6.2026):
               Strasse + Nr. lösen das Kreis-Amt offline aus den amtlichen
@@ -351,7 +368,9 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
                 </Field>
               </div>
               {zhStrassenInfo === 'nummer_noetig' && (
-                <p className="text-xs text-warn-700">Diese Strasse verläuft über mehrere Stadtkreise — Hausnummer angeben (oder unten das Kreis-Amt wählen).</p>
+                <p className="text-xs text-warn-700">{zhNummer.trim() !== ''
+                  ? 'Diese Hausnummer ist im amtlichen Adressbestand der Strasse nicht erfasst — Nummer prüfen oder unten das Kreis-Amt wählen.'
+                  : 'Diese Strasse verläuft über mehrere Stadtkreise — Hausnummer angeben (oder unten das Kreis-Amt wählen).'}</p>
               )}
               {zhStrassenInfo === 'unbekannt' && (
                 <p className="text-xs text-warn-700">Strasse im amtlichen Adressbestand der Stadt Zürich nicht gefunden — Schreibweise prüfen (z. B. «…strasse» ausgeschrieben) oder unten das Kreis-Amt wählen.</p>
@@ -366,7 +385,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
                   // Amt mit dem grössten Adressenanteil ist vorausgewählt.
                   ? `die PLZ ${plz} liegt in mehreren Stadtkreisen — massgeblich ist der Stadtkreis der beklagten Partei; vorausgewählt ist das Amt mit dem grössten Adressenanteil`
                   : 'massgeblich ist der Stadtkreis der beklagten Partei'}>
-              <select className={inputCls} value={kreisIdx < zhKreise.length ? kreisIdx : 0} onChange={(e) => setKreisIdx(Number(e.target.value))}>
+              <select className={inputCls} value={kreisIdx < zhKreise.length ? kreisIdx : 0} onChange={(e) => setKreisWahl({ schluessel: kreisSchluessel, idx: Number(e.target.value) })}>
                 {zhKreise.map((k, i) => <option key={k.kreise} value={i}>{k.name} — {k.kreise}{k.anteilProzent !== undefined ? ` (${k.anteilProzent < 0.1 ? '< 0.1' : k.anteilProzent} % der Adressen)` : ''}</option>)}
               </select>
             </Field>

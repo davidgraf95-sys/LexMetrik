@@ -119,7 +119,8 @@ export function pruefeKvGates(a: KvAntworten): KvGateErgebnis {
     if (a.kkAusstaende) {
       warnungen.push(
         'Ausstehende Prämien, Kostenbeteiligungen, Verzugszinse oder Betreibungskosten SPERREN den '
-        + 'Versichererwechsel, bis sie vollständig bezahlt sind (Art. 64a Abs. 6 KVG). Vorbehalten bleiben '
+        + 'Versichererwechsel, bis sie vollständig bezahlt sind (Art. 64a Abs. 6 KVG); wer nur Ausstände '
+        + 'für seine Kinder hat, darf den Versicherer trotzdem wechseln. Vorbehalten bleiben zudem '
         + 'Wohnort-/Stellenwechsel und Bewilligungsentzug (Art. 7 Abs. 3 und 4 KVG).',
       );
     }

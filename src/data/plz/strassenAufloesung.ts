@@ -51,6 +51,18 @@ function grenzIndex(nummern: Record<string, Record<string, number>>): Map<string
   return grenzJePlz;
 }
 
+/** Hat die PLZ einen Strassen-Index? Quellen-Versatz-Fall (Bug-Check
+ *  12.6.2026): drei PLZ sind im swisstopo-Ortschaftenverzeichnis (5.6.)
+ *  mehrdeutig, im Gebäudeadressverzeichnis (12.6.) aber eindeutig
+ *  (1296/6958/8589) — dort zeigten die Kacheln ein Strassenfeld, das nie
+ *  auflösen kann und «nicht gefunden» behauptete. Die UI blendet das Feld
+ *  ohne Index gar nicht erst ein. */
+export async function plzImStrassenIndex(plz: string): Promise<boolean> {
+  if (!/^\d{4}$/.test(plz.trim())) return false;
+  const [verz] = await lade();
+  return verz[plz.trim()] !== undefined;
+}
+
 /** Gemeinde für eine Strasse in einer gemeinde-mehrdeutigen PLZ; null bei
  *  eindeutiger/unbekannter PLZ oder unbekannter Strasse (Kachel-Wahl). */
 export async function strasseAufloesen(plz: string, strasse: string, hausnummer = ''): Promise<StrassenErgebnis | null> {

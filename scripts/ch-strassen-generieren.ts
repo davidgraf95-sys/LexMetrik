@@ -10,7 +10,7 @@
 // reale Adressen; 1'213 von 3'177 PLZ mehrdeutig; darin 92'643
 // (PLZ, Strasse)-Paare, 98.5 % allein über den Strassennamen
 // gemeinde-eindeutig; 1'425 Strassen laufen über eine Gemeindegrenze
-// (Hausnummern-Tabelle); 1'452 Einzelnummern existieren doppelt (gleiche
+// (Hausnummern-Tabelle); 1'388 Einzelnummern existieren doppelt (gleiche
 // PLZ + Strasse + Nr. in zwei Gemeinden) und werden ausgelassen — die UI
 // fällt dort ehrlich auf die Kachel-Wahl zurück. KEINE Heuristik (§2).
 //

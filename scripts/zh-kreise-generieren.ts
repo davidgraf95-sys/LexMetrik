@@ -7,7 +7,8 @@
 //     -o /tmp/zh_adressen_stzh.geojson
 //
 // Befund 12.6.2026 (Verifikationsauftrag David 11.6.): Stadt-Zürcher PLZ
-// sind NICHT kreisscharf — 11 von 24 Stadt-PLZ überlappen mehrere Kreise.
+// sind NICHT kreisscharf — 16 von 30 PLZ mit realen Stadt-Adressen
+// überlappen mehrere Kreise.
 // Darum wird je PLZ der amtliche ADRESSENANTEIL pro Stadtkreis mitgeführt
 // (analog swisstopo-Anteil in plzVerzeichnis.json, §2: keine Heuristik,
 // vollständige Auszählung aller realen Gebäudeadressen). Nur status «real»

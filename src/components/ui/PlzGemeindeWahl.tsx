@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { SelectionGrid, type SelectionItem } from './SelectionGrid';
 import { hauptTreffer, type PlzTreffer } from '../../data/plz/plzAufloesung';
-import { strasseAufloesen } from '../../data/plz/strassenAufloesung';
+import { plzImStrassenIndex, strasseAufloesen } from '../../data/plz/strassenAufloesung';
 import { gemeindeOptionen } from './plzGemeindeOptionen';
 import type { Kanton } from '../../types/legal';
 
@@ -20,7 +20,7 @@ import type { Kanton } from '../../types/legal';
 // amtlichen Gebäudeadressverzeichnis auf (strassenAufloesung.ts; nichts
 // verlässt den Browser) und setzt die Wahl wie ein Kachel-Klick.
 
-export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl }: {
+export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl, kantonFest = '' }: {
   plz: string;
   treffer: PlzTreffer[];
   /** Aktueller Feldinhalt – die passende Kachel wird als aktiv markiert
@@ -28,6 +28,12 @@ export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl }: {
   gemeinde: string;
   kanton: Kanton | '';
   onWahl: (wahl: { gemeinde: string; kanton: Kanton }) => void;
+  /** Kantons-feste Masken (z. B. Schlichtungsgesuch übergibt den gewählten
+   *  Kanton): löst die Strasse eine Gemeinde AUSSERHALB dieses Kantons auf,
+   *  wird sie offengelegt statt übernommen (Bug-Check 12.6.2026 — die
+   *  Eltern-Maske verwirft den Kanton, die Erfolgsmeldung wäre irreführend
+   *  und der Auto-Adressat verschwände kommentarlos). */
+  kantonFest?: Kanton | '';
 }) {
   // Eingabe PLZ-geschlüsselt: wechselt die PLZ, gilt die getippte Strasse
   // nicht mehr — abgeleitet leer, ohne Reset-Effect (Lint: kein synchrones
@@ -36,9 +42,21 @@ export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl }: {
   const [eingabe, setEingabe] = useState({ plz, strasse: '', nummer: '' });
   const strasse = eingabe.plz === plz ? eingabe.strasse : '';
   const nummer = eingabe.plz === plz ? eingabe.nummer : '';
-  const [statusRoh, setStatusRoh] = useState<{ schluessel: string; wert: 'aufgeloest' | 'nummer_noetig' | 'unbekannt' } | null>(null);
+  const [statusRoh, setStatusRoh] = useState<{ schluessel: string; wert: 'aufgeloest' | 'nummer_noetig' | 'unbekannt' | 'ausserhalb'; info?: string } | null>(null);
   const schluessel = `${plz}|${strasse.trim()}|${nummer.trim()}`;
   const status = strasse.trim() !== '' && statusRoh?.schluessel === schluessel ? statusRoh.wert : null;
+  // Quellen-Versatz (Bug-Check 12.6.2026): PLZ ohne Strassen-Index (im
+  // neueren Gebäudeadressverzeichnis eindeutig, z. B. 1296/6958/8589) —
+  // dort wäre das Strassenfeld nie auflösbar; gar nicht erst anbieten.
+  const [indexDa, setIndexDa] = useState<{ plz: string; da: boolean } | null>(null);
+  useEffect(() => {
+    let aktiv = true;
+    plzImStrassenIndex(plz)
+      .then((da) => { if (aktiv) setIndexDa({ plz, da }); })
+      .catch(() => { if (aktiv) setIndexDa(null); });
+    return () => { aktiv = false; };
+  }, [plz]);
+  const strassenFeldDa = indexDa !== null && indexDa.plz === plz && indexDa.da;
   useEffect(() => {
     if (strasse.trim() === '') return;
     let aktiv = true;
@@ -46,6 +64,12 @@ export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl }: {
       .then((erg) => {
         if (!aktiv) return;
         if (erg?.typ === 'gemeinde') {
+          // Kantons-feste Maske: kantonsfremde Auflösung offenlegen statt
+          // übernehmen (die Kacheln sind dort bereits kantonsgefiltert).
+          if (kantonFest !== '' && erg.kanton !== kantonFest) {
+            setStatusRoh({ schluessel, wert: 'ausserhalb', info: `${erg.gemeinde} (${erg.kanton})` });
+            return;
+          }
           setStatusRoh({ schluessel, wert: 'aufgeloest' });
           // wie ein Kachel-Klick — nur bei echter Änderung melden (Guard
           // gegen Render-Schleifen; onWahl-Identität wechselt je Render).
@@ -62,7 +86,7 @@ export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl }: {
     // nur auf die Adress-Eingabe (schluessel deckt plz/strasse/nummer); die
     // Änderungs-Guards oben verhindern Schleifen über die Eltern-Setter.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [schluessel]);
+  }, [schluessel, kantonFest]);
   const optionen = gemeindeOptionen(treffer);
   if (optionen.length < 2) return null;
   const haupt = hauptTreffer(treffer);
@@ -87,29 +111,38 @@ export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl }: {
         }}
         className="grid grid-cols-2 sm:grid-cols-3 gap-2"
       />
-      <div className="flex gap-2 items-end">
-        <label className="block flex-1">
-          <span className="text-xs text-ink-600">… oder Strasse eingeben — löst die Gemeinde automatisch (amtl. Gebäudeadressverzeichnis, offline)</span>
-          <input
-            className="lc-input w-full"
-            value={strasse}
-            onChange={(e) => setEingabe({ plz, strasse: e.target.value, nummer })}
-            aria-label={`Strasse in PLZ ${plz} — löst die Gemeinde automatisch auf`}
-          />
-        </label>
-        <label className="block w-20">
-          <span className="text-xs text-ink-600">Nr.</span>
-          <input className="lc-input w-full" value={nummer} onChange={(e) => setEingabe({ plz, strasse, nummer: e.target.value })} aria-label="Hausnummer" />
-        </label>
-      </div>
-      {status === 'aufgeloest' && (
-        <p className="text-xs text-ink-500">Gemeinde über die Strasse aufgelöst — amtliches Gebäudeadressverzeichnis (swisstopo).</p>
-      )}
-      {status === 'nummer_noetig' && (
-        <p className="text-xs text-warn-700">Diese Strasse verläuft über die Gemeindegrenze — Hausnummer angeben (oder oben die Gemeinde wählen).</p>
-      )}
-      {status === 'unbekannt' && (
-        <p className="text-xs text-warn-700">Strasse in der PLZ {plz} im amtlichen Gebäudeadressverzeichnis nicht gefunden — Schreibweise prüfen oder oben die Gemeinde wählen.</p>
+      {strassenFeldDa && (
+        <>
+          <div className="flex gap-2 items-end">
+            <label className="block flex-1">
+              <span className="text-xs text-ink-600">… oder Strasse eingeben — löst die Gemeinde automatisch (amtl. Gebäudeadressverzeichnis, offline)</span>
+              <input
+                className="lc-input w-full"
+                value={strasse}
+                onChange={(e) => setEingabe({ plz, strasse: e.target.value, nummer })}
+                aria-label={`Strasse in PLZ ${plz} — löst die Gemeinde automatisch auf`}
+              />
+            </label>
+            <label className="block w-20">
+              <span className="text-xs text-ink-600">Nr.</span>
+              <input className="lc-input w-full" value={nummer} onChange={(e) => setEingabe({ plz, strasse, nummer: e.target.value })} aria-label="Hausnummer" />
+            </label>
+          </div>
+          {status === 'aufgeloest' && (
+            <p className="text-xs text-ink-500">Gemeinde über die Strasse aufgelöst — amtliches Gebäudeadressverzeichnis (swisstopo).</p>
+          )}
+          {status === 'nummer_noetig' && (
+            <p className="text-xs text-warn-700">{nummer.trim() !== ''
+              ? 'Diese Hausnummer ist im amtlichen Bestand der Strasse nicht erfasst — Nummer prüfen oder oben die Gemeinde wählen.'
+              : 'Diese Strasse verläuft über die Gemeindegrenze — Hausnummer angeben (oder oben die Gemeinde wählen).'}</p>
+          )}
+          {status === 'unbekannt' && (
+            <p className="text-xs text-warn-700">Strasse in der PLZ {plz} im amtlichen Gebäudeadressverzeichnis nicht gefunden — Schreibweise prüfen oder oben die Gemeinde wählen.</p>
+          )}
+          {status === 'ausserhalb' && (
+            <p className="text-xs text-warn-700">Die Strasse liegt in {statusRoh?.info} — diese Maske ist auf den Kanton {kantonFest} eingestellt; Kanton wechseln oder oben die Gemeinde wählen.</p>
+          )}
+        </>
       )}
     </div>
   );

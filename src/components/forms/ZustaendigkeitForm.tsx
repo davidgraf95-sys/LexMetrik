@@ -714,7 +714,13 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                   der beklagten Partei über die Bundes-API auflösen — nur auf
                   Klick, Hinweis permanent; Offline-Wege bleiben Alternative. */}
               <AdresseBundSuche
-                onUebernehmen={({ gemeinde, kanton, plz }) => setF((alt) => ({ ...alt, gemeinde, kanton, plz }))} />
+                onUebernehmen={({ gemeinde, kanton, plz }) => {
+                  setF((alt) => ({ ...alt, gemeinde, kanton, plz }));
+                  // Bug-Check 12.6.2026 (MITTEL): die übernommene Adresse ist
+                  // die neue Wahrheit — eine stehengebliebene ZH-Strasse hätte
+                  // sonst Vorrang vor der frischen PLZ (Stufe-1-Vorrang).
+                  setZhStrasse(''); setZhNummer('');
+                }} />
             </div>
           </Field>
           )}
@@ -1304,7 +1310,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         </label>
                       </div>
                       {zhStrassenInfo === 'nummer_noetig' && (
-                        <p className="text-xs text-warn-700">Diese Strasse verläuft über mehrere Stadtkreise — Hausnummer angeben (oder unten das Kreis-Amt wählen).</p>
+                        <p className="text-xs text-warn-700">{zhNummer.trim() !== ''
+                          ? 'Diese Hausnummer ist im amtlichen Adressbestand der Strasse nicht erfasst — Nummer prüfen oder unten das Kreis-Amt wählen.'
+                          : 'Diese Strasse verläuft über mehrere Stadtkreise — Hausnummer angeben (oder unten das Kreis-Amt wählen).'}</p>
                       )}
                       {zhStrassenInfo === 'unbekannt' && (
                         <p className="text-xs text-warn-700">Strasse im amtlichen Adressbestand der Stadt Zürich nicht gefunden — Schreibweise prüfen (z. B. «…strasse» ausgeschrieben) oder unten das Kreis-Amt wählen.</p>

@@ -9,8 +9,25 @@ describe('strasseAufloesen (gemeinde-mehrdeutige PLZ, amtl. Gebäudeadressverzei
   it('löst gemeinde-eindeutige Strassen auf — auch über die Kantonsgrenze (4052 Basel/Münchenstein)', async () => {
     expect(await strasseAufloesen('4052', 'Adlerstrasse')).toEqual({ typ: 'gemeinde', gemeinde: 'Basel', kanton: 'BS' });
     expect(await strasseAufloesen('4052', 'Birswaldweg')).toEqual({ typ: 'gemeinde', gemeinde: 'Münchenstein', kanton: 'BL' });
-    // case-insensitiver Zweitindex + feste «…str.»-Abbildung
+    // case-insensitiver Zweitindex + feste «…str.»-Abbildung — auch ALL-CAPS
+    // (Bug-Check 12.6.2026: «STR.» fiel sonst durch)
     expect(await strasseAufloesen('4052', 'adlerstr.')).toEqual({ typ: 'gemeinde', gemeinde: 'Basel', kanton: 'BS' });
+    expect(await strasseAufloesen('4052', 'ADLERSTR.')).toEqual({ typ: 'gemeinde', gemeinde: 'Basel', kanton: 'BS' });
+  });
+  it('Apostroph-Normalisierung: typografisch (U+2019) findet die ASCII-Bestandes-Strasse (Bug-Check 12.6.2026)', async () => {
+    // 1008 Prilly/Jouxtens-Mézery: Romandie-Klasse «…de l'…» — macOS tippt ’
+    expect(await strasseAufloesen('1008', "Chemin de l'Usine-à-Gaz")).toEqual({ typ: 'gemeinde', gemeinde: 'Prilly', kanton: 'VD' });
+    expect(await strasseAufloesen('1008', 'Chemin de l\u2019Usine-à-Gaz')).toEqual({ typ: 'gemeinde', gemeinde: 'Prilly', kanton: 'VD' });
+  });
+  it('plzImStrassenIndex: mehrdeutige PLZ ja, eindeutige/Versatz-PLZ nein (Feld-Gate)', async () => {
+    const { plzImStrassenIndex } = await import('../data/plz/strassenAufloesung');
+    expect(await plzImStrassenIndex('4052')).toBe(true);
+    expect(await plzImStrassenIndex('4051')).toBe(false);
+    // Quellen-Versatz 5.6.↔12.6.: alt mehrdeutig, neu eindeutig → kein Index
+    expect(await plzImStrassenIndex('1296')).toBe(false);
+    expect(await plzImStrassenIndex('6958')).toBe(false);
+    expect(await plzImStrassenIndex('8589')).toBe(false);
+    expect(await plzImStrassenIndex('abc')).toBe(false);
   });
   it('Grenzstrassen entscheiden über die amtliche Hausnummer (4052 Brüglingerstrasse)', async () => {
     expect(await strasseAufloesen('4052', 'Brüglingerstrasse')).toEqual({ typ: 'nummer_noetig', strasse: 'Brüglingerstrasse' });

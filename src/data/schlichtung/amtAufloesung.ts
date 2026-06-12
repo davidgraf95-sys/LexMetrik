@@ -28,7 +28,10 @@ function kleinFuer(kanton: string, d: KantonsAemter): Map<string, number> {
 }
 
 /** Kantone mit Gemeinde→Amt-Auflösung (ZH separat über zhAmt.ts).
- *  SZ/BL bewusst ausgenommen (Quellenlage teiloffen — Verzeichnis-Fallback).
+ *  SZ ordentlich: 26 von 30 Gemeinden — Alpthal, Lauerz, Steinerberg und
+ *  Wangen (SZ) fehlen quellbedingt (Bug-Check 12.6.2026; Verzeichnis-
+ *  Fallback greift; SZ_MIETE deckt dagegen alle 30 — Asymmetrie bekannt,
+ *  Schliessung braucht die SZ-Vermittler-Erhebung).
  *  VD: amtFuer liefert die Justice de paix (Stufe < CHF 10'000) — für die
  *  höheren Streitwert-Stufen vdAmtFuer verwenden (Art. 41 CDPJ-VD).
  *  TI: drei Mehr-Circoli-Gemeinden (Lugano/Lema/Tresa) liefern null —

@@ -59,6 +59,14 @@ export function AdresseBundSuche({ onUebernehmen, kantonErwartet = '', beschrift
     setTreffer(null); setLaedt(true); setFehler(null);
     try {
       const antwort = await fetch(DETAIL_URL(t.featureId));
+      // Bug-Check 12.6.2026 (NIEDRIG): FL-Adressen (Vaduz …) erscheinen in
+      // der Bundes-SUCHE, das GWR-Detail liefert aber 404 — die generische
+      // Fehlermeldung lud sonst ein, die ausländische Gemeinde von Hand
+      // einzutragen. Übernahme bleibt deterministisch verhindert.
+      if (antwort.status === 404) {
+        setFehler('Die gewählte Adresse liegt nicht im Schweizer Gebäude- und Wohnungsregister (z. B. Fürstentum Liechtenstein) — für LexMetrik ist nur eine Schweizer Gemeinde massgeblich.');
+        return;
+      }
       if (!antwort.ok) throw new Error(`HTTP ${antwort.status}`);
       const json = (await antwort.json()) as { feature?: { attributes?: Record<string, unknown> }; attributes?: Record<string, unknown> };
       const a = json.feature?.attributes ?? json.attributes ?? {};
