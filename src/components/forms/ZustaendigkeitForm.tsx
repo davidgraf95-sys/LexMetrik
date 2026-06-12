@@ -31,6 +31,7 @@ import { ERLASS_LINKS } from '../../data/erlassLinks';
 import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
+import { AdresseBundSuche } from '../ui/AdresseBundSuche';
 import { zuerichAemterFuerPlz, zuerichAmtFuerStrasse, zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { tiKandidaten } from '../../data/schlichtung/tiAmt';
@@ -702,6 +703,11 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                   </p>
                 );
               })()}
+              {/* Adress-Ausbau Stufe 3 (Entscheid David 12.6.2026): Adresse
+                  der beklagten Partei über die Bundes-API auflösen — nur auf
+                  Klick, Hinweis permanent; Offline-Wege bleiben Alternative. */}
+              <AdresseBundSuche
+                onUebernehmen={({ gemeinde, kanton, plz }) => setF((alt) => ({ ...alt, gemeinde, kanton, plz }))} />
             </div>
           </Field>
           )}

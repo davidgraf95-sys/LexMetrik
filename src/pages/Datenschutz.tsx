@@ -57,6 +57,16 @@ export function Datenschutz() {
           UID und Sitz aus dem Handelsregister zu übernehmen. Ohne diesen Klick findet keine
           solche Übermittlung statt; es gelten die Datenschutzhinweise von zefix.ch.
         </p>
+        <p>
+          {/* geo.admin-Offenlegung (§8, Entscheid David 12.6.2026) — Wortlaut-Abnahme David offen */}
+          Ebenfalls nur auf Ihren ausdrücklichen Klick: Über den Knopf «Beim Bund nachschlagen»
+          können Sie eine eingegebene Adresse (z. B. der beklagten Partei) an die Geodaten-API des
+          Bundes (geo.admin.ch) übermitteln, um Gemeinde, Kanton und PLZ aus dem amtlichen
+          Gebäudeadressverzeichnis zu übernehmen. Ohne diesen Klick findet keine solche
+          Übermittlung statt; es gelten die Datenschutzhinweise von geo.admin.ch. Die Auflösung
+          über PLZ, Gemeinde und Strasse funktioniert alternativ vollständig offline in Ihrem
+          Browser.
+        </p>
       </Abschnitt>
 
       <Abschnitt titel="3. Keine Analyse, kein Tracking">

@@ -4,6 +4,7 @@ import type { Kanton } from '../../types/legal';
 import { schlichtungAufloesung } from '../../data/schlichtungsstellen';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
+import { AdresseBundSuche } from '../ui/AdresseBundSuche';
 import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer } from '../../data/schlichtung/amtAufloesung';
 import { tiKandidaten } from '../../data/schlichtung/tiAmt';
 import { zuerichAemterFuerPlz, zuerichAmtFuerStrasse, zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
@@ -265,6 +266,13 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
           )}
+          {/* Adress-Ausbau Stufe 3 (12.6.2026): Bundes-API nur auf Klick,
+              Hinweis permanent; Offline-Wege bleiben die Alternative. */}
+          {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && (
+            <AdresseBundSuche kantonErwartet={kanton}
+              beschriftung={typ === 'paritaetisch_miete' ? 'Oder Adresse des Mietobjekts (Bundes-Suche)' : 'Oder Adresse der beklagten Partei (Bundes-Suche)'}
+              onUebernehmen={({ gemeinde: g, plz: p }) => { setPlz(p); setGemeinde(g); }} />
+          )}
           <Field label={amtZeilenTyp && wahlIdx < 0 ? 'Oder Stelle direkt wählen (übersteuert)' : 'Zuständige Stelle wählen'}
             hint={`${a.stellen.length} Stellen im Kanton ${kanton} — massgeblich ist das Gebiet der beklagten Partei bzw. der Sache`}>
             <select className={inputCls} value={wahlIdx} onChange={(e) => setWahlSchluessel({ kanton, typ, stufe: vdStufeKey, idx: Number(e.target.value) })}>
@@ -305,6 +313,13 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && plzWahl && plzWahl.plz === plz && (
             <PlzGemeindeWahl plz={plz} treffer={plzWahl.treffer} gemeinde={gemeinde} kanton={kanton}
               onWahl={({ gemeinde: g }) => setGemeinde(g)} />
+          )}
+          {/* Adress-Ausbau Stufe 3 (12.6.2026): Bundes-API nur auf Klick,
+              Hinweis permanent; Offline-Wege bleiben die Alternative. */}
+          {(typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && (
+            <AdresseBundSuche kantonErwartet={kanton}
+              beschriftung={typ === 'paritaetisch_miete' ? 'Oder Adresse des Mietobjekts (Bundes-Suche)' : 'Oder Adresse der beklagten Partei (Bundes-Suche)'}
+              onUebernehmen={({ gemeinde: g, plz: p }) => { setPlz(p); setGemeinde(g); }} />
           )}
           {/* Strassen-Index Stadt Zürich (Adress-Ausbau Stufe 1, 12.6.2026):
               Strasse + Nr. lösen das Kreis-Amt offline aus den amtlichen

@@ -297,3 +297,12 @@ zu verifizieren war, ob Stadt-PLZ kreisscharf sind.
 5. **Abnahme-Status:** Erstrecherche, empirisch über Integritäts-Tests
    abgesichert (Kreise 1–12 decken genau die 6 Ämter; Anteilssummen
    ~100 %); fachliche Abnahme David ausstehend.
+
+**Stufe 1 (gleicher Tag, Entscheid David):** zusätzlich Strasse (+ Nr.)
+→ Kreis-Amt aus derselben Quelle: 1'984 Strassen/Lokalisationen, 94
+kreis-übergreifend, **58 amts-übergreifend** (nur diese brauchen die
+Hausnummer; 0 Nummern-Konflikte). Generator
+`scripts/zh-strassen-generieren.ts` → `zhStrassen.json` (108 KB roh /
+26 KB gzip, eigener Lazy-Chunk). Vorrang in den UIs: Strasse → PLZ →
+Wahl. Gesamtkontext: bibliothek/recherche/
+gebaeudeadressverzeichnis-adressaufloesung.md.
