@@ -133,6 +133,30 @@ describe('PLZ-Auflösung (amtliches Ortschaftenverzeichnis) + ZH-Amt', () => {
     expect(await zuerichAemterFuerPlz('8400')).toBeNull();
     expect(await zuerichAemterFuerPlz('8021')).toBeNull();
     expect(await zuerichAemterFuerPlz('')).toBeNull();
+    // Strassen-Index (Stufe 1, 12.6.2026): Strasse (+ Nr.) → Kreis-Amt
+    const { zuerichAmtFuerStrasse } = await import('../data/schlichtung/zhAmt');
+    // kreisscharf: Höfliweg liegt ganz im Kreis 3 → Amt 3 + 9
+    const hoefli = await zuerichAmtFuerStrasse('Höfliweg');
+    expect(hoefli).toMatchObject({ typ: 'amt', kreise: ['3'] });
+    expect(hoefli!.typ === 'amt' && hoefli!.amt.kreise).toBe('Kreise 3 + 9');
+    // feste «…str.»-Abbildung + case-insensitiver Zweitindex
+    expect((await zuerichAmtFuerStrasse('bahnhofstr.'))).toMatchObject({ typ: 'amt', kreise: ['1'] });
+    // kreis-übergreifend, aber amts-eindeutig: Albisriederstrasse (9 + 3)
+    const albis = await zuerichAmtFuerStrasse('Albisriederstrasse');
+    expect(albis!.typ).toBe('amt');
+    expect(albis!.typ === 'amt' && albis!.amt.kreise).toBe('Kreise 3 + 9');
+    // amts-übergreifend: Weinbergstrasse (Kreise 6/1) — ohne Nummer ehrlich
+    // nummer_noetig, mit Nummer amtliche Einzeladresse (5 → Kreis 1, 30 → 6)
+    expect((await zuerichAmtFuerStrasse('Weinbergstrasse'))!.typ).toBe('nummer_noetig');
+    const w5 = await zuerichAmtFuerStrasse('Weinbergstrasse', '5');
+    expect(w5).toMatchObject({ typ: 'amt', kreise: ['1'] });
+    const w30 = await zuerichAmtFuerStrasse('Weinbergstrasse', '30');
+    expect(w30!.typ === 'amt' && w30!.amt.kreise).toBe('Kreise 6 + 10');
+    // unbekannte Nummer einer amts-übergreifenden Strasse → nummer_noetig
+    expect((await zuerichAmtFuerStrasse('Weinbergstrasse', '9999'))!.typ).toBe('nummer_noetig');
+    // Tippfehler/auswärtige Strasse → null (UI fällt auf PLZ/Wahl zurück)
+    expect(await zuerichAmtFuerStrasse('Bundesplatz 99x')).toBeNull();
+    expect(await zuerichAmtFuerStrasse('')).toBeNull();
     // Daten-Integrität: die Kreis-Nummern der PLZ-Daten decken genau die
     // Kreise 1–12 der sechs Ämter; Anteile je PLZ summieren auf ~100 %.
     const aemter = await zuerichKreisAemter();
@@ -149,6 +173,22 @@ describe('PLZ-Auflösung (amtliches Ortschaftenverzeichnis) + ZH-Amt', () => {
       expect(summe, `Anteilssumme PLZ ${plz}`).toBeGreaterThan(99);
       expect(summe, `Anteilssumme PLZ ${plz}`).toBeLessThan(101);
       for (const [k] of kreise) expect(amtsKreise).toContain(k);
+    }
+    // Strassen-Index-Integrität: jede Kreis-Nummer existiert in den 6
+    // Ämtern; Hausnummern-Tabellen nur für amts-übergreifende Strassen.
+    const strassenRoh = (await import('../data/schlichtung/zhStrassen.json')).default as unknown as {
+      strassen: Record<string, string[]>; nummern: Record<string, Record<string, string>>;
+    };
+    expect(Object.keys(strassenRoh.strassen).length).toBeGreaterThan(1900);
+    for (const kreise of Object.values(strassenRoh.strassen)) {
+      for (const k of kreise) expect(amtsKreise).toContain(k);
+    }
+    const amtVonKreis = new Map(aemter.flatMap((a) => a.kreise.replace(/^Kreise\s+/, '').split('+').map((k) => [k.trim(), a.kreise] as const)));
+    for (const [s, tabelle] of Object.entries(strassenRoh.nummern)) {
+      const kreise = strassenRoh.strassen[s];
+      expect(kreise, `Nummern-Tabelle ohne Strassen-Eintrag: ${s}`).toBeDefined();
+      expect(new Set(kreise.map((k) => amtVonKreis.get(k))).size, `${s} ist nicht amts-übergreifend`).toBeGreaterThan(1);
+      for (const k of Object.values(tabelle)) expect(amtsKreise).toContain(k);
     }
   });
   it('Kette PLZ → Gemeinde → ZH-Amt (8400 Winterthur → Stadthausstrasse 4a)', async () => {

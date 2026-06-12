@@ -98,6 +98,80 @@ function amtKreise(a: ZhKreisAmt): string[] {
  *  grösster Adressenanteil zuerst; null bei PLZ ohne Stadt-Zürich-Adressen
  *  (dann gilt die volle Sechser-Wahl). Genau ein Treffer = amts-eindeutige
  *  PLZ (Auto-Auflösung). */
+// ── Stadt Zürich: Strasse (+ Hausnummer) → Kreis-Amt (Stufe 1, 12.6.2026) ──
+// Adress-Ausbau (Entscheid David): strassen-genaue Auflösung OHNE externen
+// Request. Eigener Lazy-Chunk zhStrassen.json (Generator
+// zh-strassen-generieren.ts; 1'984 Strassen, 58 amts-übergreifend mit
+// Hausnummern-Tabelle). Kein Fuzzy-Matching (§2): exakter Name,
+// case-insensitiver Zweitindex und die feste «…str.»→«…strasse»-Abbildung;
+// kein Treffer → null (die UI fällt auf PLZ-Automatik/Amts-Wahl zurück).
+
+interface ZhStrassenDaten {
+  strassen: Record<string, string[]>;
+  nummern: Record<string, Record<string, string>>;
+}
+let strassenCache: ZhStrassenDaten | null = null;
+let strassenKlein: Map<string, string> | null = null;
+
+async function ladeStrassen(): Promise<ZhStrassenDaten> {
+  if (!strassenCache) strassenCache = (await import('./zhStrassen.json')).default as unknown as ZhStrassenDaten;
+  return strassenCache;
+}
+
+/** Deterministische Eingabe-Kandidaten: exakt · normalisierter Leerraum ·
+ *  «…str.»/«…str» → «…strasse» (feste Abbildung, analog namensKandidaten). */
+function strassenKandidaten(roh: string): string[] {
+  const s = roh.trim().replace(/\s+/g, ' ');
+  if (s === '') return [];
+  const out = new Set([s]);
+  out.add(s.replace(/[Ss]tr\.?$/, (m) => (m.startsWith('S') ? 'Strasse' : 'strasse')));
+  return [...out];
+}
+
+export type ZuerichStrassenErgebnis =
+  | { typ: 'amt'; amt: ZhKreisAmt; kreise: string[] }
+  | { typ: 'nummer_noetig'; strasse: string; kreise: string[] };
+
+/** Kreis-Amt für eine Stadt-Zürcher Strasse; bei amts-übergreifenden
+ *  Strassen entscheidet die Hausnummer (amtliche Einzeladresse). null =
+ *  Strasse nicht im amtlichen Bestand (Tippfehler/auswärts). */
+export async function zuerichAmtFuerStrasse(strasse: string, hausnummer = ''): Promise<ZuerichStrassenErgebnis | null> {
+  const [d, daten] = await Promise.all([lade(), ladeStrassen()]);
+  let name: string | null = null;
+  for (const k of strassenKandidaten(strasse)) {
+    if (daten.strassen[k]) { name = k; break; }
+  }
+  if (name === null) {
+    if (!strassenKlein) strassenKlein = new Map(Object.keys(daten.strassen).map((s) => [s.toLowerCase(), s]));
+    for (const k of strassenKandidaten(strasse)) {
+      const t = strassenKlein.get(k.toLowerCase());
+      if (t) { name = t; break; }
+    }
+  }
+  if (name === null) return null;
+  const kreise = daten.strassen[name];
+  const amtFuerKreis = (kreis: string): ZhKreisAmt | null =>
+    d.zuerichKreise.find((a) => amtKreise(a).includes(kreis)) ?? null;
+  const aemter = new Set(kreise.map((k) => amtFuerKreis(k)?.kreise));
+  if (aemter.size === 1) {
+    const amt = amtFuerKreis(kreise[0]);
+    return amt ? { typ: 'amt', amt, kreise } : null;
+  }
+  // amts-übergreifende Strasse: Hausnummer entscheidet (Vergleich
+  // case-insensitiv wegen Buchstaben-Suffixen «12a»; feste Abbildung).
+  const nrRoh = hausnummer.trim().replace(/\s+/g, '');
+  if (nrRoh !== '') {
+    const tabelle = daten.nummern[name] ?? {};
+    const kreis = tabelle[nrRoh]
+      ?? Object.entries(tabelle).find(([nr]) => nr.toLowerCase() === nrRoh.toLowerCase())?.[1];
+    if (kreis) {
+      const amt = amtFuerKreis(kreis);
+      return amt ? { typ: 'amt', amt, kreise: [kreis] } : null;
+    }
+  }
+  return { typ: 'nummer_noetig', strasse: name, kreise };
+}
+
 export async function zuerichAemterFuerPlz(plz: string): Promise<ZhKreisAmtTreffer[] | null> {
   const d = await lade();
   const kreise = d.zuerichPlzKreise[plz.trim()];

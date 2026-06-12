@@ -31,7 +31,7 @@ import { ERLASS_LINKS } from '../../data/erlassLinks';
 import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
-import { zuerichAemterFuerPlz, zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
+import { zuerichAemterFuerPlz, zuerichAmtFuerStrasse, zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { tiKandidaten } from '../../data/schlichtung/tiAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
@@ -273,6 +273,12 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   // anteilProzent: nur bei PLZ-eingegrenzten Stadt-Zürich-Treffern gesetzt
   // (Kreis-Automatik 12.6.2026); TI-Ortsteil-Kandidaten führen keinen.
   const [zhKreise, setZhKreise] = useState<(ZhKreisAmt & { anteilProzent?: number })[] | null>(null);
+  // Strassen-Auflösung Stadt Zürich (Adress-Ausbau Stufe 1, 12.6.2026):
+  // optionale Strasse + Nr. lösen den Kreis offline aus dem amtlichen
+  // Stadt-Index — Vorrang vor der PLZ-Automatik; Status für die Hinweise.
+  const [zhStrasse, setZhStrasse] = useState('');
+  const [zhNummer, setZhNummer] = useState('');
+  const [zhStrassenInfo, setZhStrassenInfo] = useState<'strasse' | 'nummer_noetig' | 'unbekannt' | null>(null);
   useEffect(() => {
     let aktiv = true;
     const ladeMiete = async (): Promise<SchlichtungsAmt | null> => {
@@ -284,11 +290,20 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
     ladeMiete()
       .then((m) => { if (aktiv) setMieteAmt(m); })
       .catch(() => { if (aktiv) setMieteAmt(null); });
-    const lade = async (): Promise<{ amt: SchlichtungsAmt | null; kreise: ZhKreisAmt[] | null }> => {
+    const lade = async (): Promise<{ amt: SchlichtungsAmt | null; kreise: ZhKreisAmt[] | null; zhInfo?: 'strasse' | 'nummer_noetig' | 'unbekannt' | null }> => {
       const kanton = f.kanton;
       const gemeinde = f.gemeinde.trim();
       if (kanton === '' || !AMT_KANTONE.includes(kanton) || gemeinde === '') return { amt: null, kreise: null };
       if (kanton === 'ZH' && gemeinde.toLowerCase() === 'zürich') {
+        // Strassen-Index (Stufe 1, 12.6.2026): Strasse (+ Nr.) hat Vorrang —
+        // exakte amtliche Einzeladresse, offline. Kein Treffer/Nummer offen
+        // → weiter mit der PLZ-Automatik (Hinweis via zhInfo).
+        let zhInfo: 'nummer_noetig' | 'unbekannt' | null = null;
+        if (zhStrasse.trim() !== '') {
+          const erg = await zuerichAmtFuerStrasse(zhStrasse, zhNummer);
+          if (erg?.typ === 'amt') return { amt: erg.amt, kreise: null, zhInfo: 'strasse' };
+          zhInfo = erg ? 'nummer_noetig' : 'unbekannt';
+        }
         // Kreis-Automatik (12.6.2026): amts-eindeutige PLZ direkt auflösen,
         // mehrdeutige auf die in Frage kommenden Kreis-Ämter eingrenzen
         // (amtliche Gebäudeadressen der Stadt Zürich; Stadt-PLZ sind NICHT
@@ -296,10 +311,10 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
         // (z. B. Postfach-PLZ) wie bisher die volle Sechser-Wahl.
         if (/^\d{4}$/.test(f.plz)) {
           const treffer = await zuerichAemterFuerPlz(f.plz);
-          if (treffer && treffer.length === 1) return { amt: treffer[0], kreise: null };
-          if (treffer) return { amt: null, kreise: treffer };
+          if (treffer && treffer.length === 1) return { amt: treffer[0], kreise: null, zhInfo };
+          if (treffer) return { amt: null, kreise: treffer, zhInfo };
         }
-        return { amt: null, kreise: await zuerichKreisAemter() };
+        return { amt: null, kreise: await zuerichKreisAemter(), zhInfo };
       }
       // TI (11.6.2026): Lugano/Lema/Tresa liegen in mehreren Circoli —
       // Ortsteil-Wahl über denselben Kreis-Mechanismus wie Stadt Zürich.
@@ -318,10 +333,10 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
       return { amt: await amtFuer(kanton, gemeinde), kreise: null };
     };
     lade()
-      .then((r) => { if (aktiv) { setAmt(r.amt); setZhKreise(r.kreise); } })
-      .catch(() => { if (aktiv) { setAmt(null); setZhKreise(null); } });
+      .then((r) => { if (aktiv) { setAmt(r.amt); setZhKreise(r.kreise); setZhStrassenInfo(r.zhInfo ?? null); } })
+      .catch(() => { if (aktiv) { setAmt(null); setZhKreise(null); setZhStrassenInfo(null); } });
     return () => { aktiv = false; };
-  }, [f.kanton, f.gemeinde, f.plz, vdStufe, istArbeit, soGleicheGemeinde]);
+  }, [f.kanton, f.gemeinde, f.plz, zhStrasse, zhNummer, vdStufe, istArbeit, soGleicheGemeinde]);
   const fehler: string[] = [];
   if (vermoegensrechtlich && streitwert === null) fehler.push('Streitwert angeben (oder «nicht vermögensrechtlich» wählen).');
   if (vermoegensrechtlich && streitwert !== null && (!Number.isFinite(streitwert) || streitwert < 0)) fehler.push('Streitwert muss eine Zahl ≥ 0 sein.');
@@ -1240,7 +1255,34 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               {recherche.aufloesung.modus === 'verzeichnis' && (() => {
                 const amtAufloesbar = f.kanton !== '' && AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'ordentlich';
                 const mieteAufloesbar = f.kanton !== '' && MIETE_AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'paritaetisch_miete';
+                const zhStadt = amtAufloesbar && f.kanton === 'ZH' && f.gemeinde.trim().toLowerCase() === 'zürich';
                 return <>
+                  {/* Strassen-Index Stadt Zürich (Adress-Ausbau Stufe 1,
+                      12.6.2026): Strasse + Nr. lösen den Stadtkreis offline
+                      aus den amtlichen Gebäudeadressen — kein externer
+                      Request. */}
+                  {zhStadt && (
+                    <div className="space-y-1">
+                      <div className="flex gap-2 items-end">
+                        <label className="block flex-1">
+                          <span className="text-xs text-ink-600">Strasse (beklagte Partei) — löst den Stadtkreis auf</span>
+                          <input className={inputCls} value={zhStrasse} onChange={(e) => setZhStrasse(e.target.value)}
+                            placeholder="z. B. Weinbergstrasse" aria-label="Strasse der beklagten Partei in der Stadt Zürich" />
+                        </label>
+                        <label className="block w-24">
+                          <span className="text-xs text-ink-600">Nr.</span>
+                          <input className={inputCls} value={zhNummer} onChange={(e) => setZhNummer(e.target.value)}
+                            aria-label="Hausnummer" />
+                        </label>
+                      </div>
+                      {zhStrassenInfo === 'nummer_noetig' && (
+                        <p className="text-xs text-warn-700">Diese Strasse verläuft über mehrere Stadtkreise — Hausnummer angeben (oder unten das Kreis-Amt wählen).</p>
+                      )}
+                      {zhStrassenInfo === 'unbekannt' && (
+                        <p className="text-xs text-warn-700">Strasse im amtlichen Adressbestand der Stadt Zürich nicht gefunden — Schreibweise prüfen (z. B. «…strasse» ausgeschrieben) oder unten das Kreis-Amt wählen.</p>
+                      )}
+                    </div>
+                  )}
                   {/* Miete-Register (11.6.2026): konkrete paritätische Stelle
                       aus PLZ/Gemeinde (Art. 200 Abs. 1 ZPO). */}
                   {mieteAufloesbar && mieteAmt && (
@@ -1274,7 +1316,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         {[amt.name, amt.strasse, amt.plzOrt].filter(Boolean).join('\n')}
                       </p>
                       <p className="text-xs text-ink-500 mt-1">{f.kanton === 'ZH' && f.gemeinde.trim().toLowerCase() === 'zürich'
-                        ? `aufgelöst über PLZ ${f.plz} → Stadtkreis (amtliche Gebäudeadressen der Stadt Zürich + Ämterverzeichnis).`
+                        ? zhStrassenInfo === 'strasse'
+                          ? `aufgelöst über Strasse${zhNummer.trim() ? ' + Hausnummer' : ''} → Stadtkreis (amtliche Gebäudeadressen der Stadt Zürich + Ämterverzeichnis).`
+                          : `aufgelöst über PLZ ${f.plz} → Stadtkreis (amtliche Gebäudeadressen der Stadt Zürich + Ämterverzeichnis).`
                         : `aufgelöst über ${f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde ${f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + amtliches Ämterverzeichnis).`}</p>
                     </div>
                   )}
