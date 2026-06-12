@@ -5,6 +5,8 @@
 // eindeutig (sechs Kreis-Ämter) — dafür liefert zuerichKreisAemter() die
 // vollständige Liste; den massgeblichen Stadtkreis kennt nur der Nutzer.
 
+import { strassenKandidaten } from '../plz/strassenKandidaten';
+
 export interface ZhAmt { name: string; strasse: string; plzOrt: string; url?: string }
 export interface ZhKreisAmt extends ZhAmt { kreise: string }
 
@@ -116,16 +118,6 @@ let strassenKlein: Map<string, string> | null = null;
 async function ladeStrassen(): Promise<ZhStrassenDaten> {
   if (!strassenCache) strassenCache = (await import('./zhStrassen.json')).default as unknown as ZhStrassenDaten;
   return strassenCache;
-}
-
-/** Deterministische Eingabe-Kandidaten: exakt · normalisierter Leerraum ·
- *  «…str.»/«…str» → «…strasse» (feste Abbildung, analog namensKandidaten). */
-function strassenKandidaten(roh: string): string[] {
-  const s = roh.trim().replace(/\s+/g, ' ');
-  if (s === '') return [];
-  const out = new Set([s]);
-  out.add(s.replace(/[Ss]tr\.?$/, (m) => (m.startsWith('S') ? 'Strasse' : 'strasse')));
-  return [...out];
 }
 
 export type ZuerichStrassenErgebnis =
