@@ -36,6 +36,7 @@ import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from 
 import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
 import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
 import { sbZusammenstellen, SB_DEFAULTS } from '../src/lib/vorlagen/scheidungsbegehren';
+import { egZusammenstellen, EG_DEFAULTS } from '../src/lib/vorlagen/eheschutzgesuch';
 import { berechneBgerRechtsweg } from '../src/lib/bgerRechtsweg';
 
 const faelle: Record<string, unknown> = {};
@@ -243,6 +244,17 @@ const sbBasis = {
 f('vorl:sb-voll', () => sbZusammenstellen(sbBasis));
 f('vorl:sb-teil-kinder', () => sbZusammenstellen({ ...sbBasis, einigung: 'teil' as const, streitigePunkte: ['nachehelicher Unterhalt'], antraegeEhegatte1: ['Es sei kein nachehelicher Unterhalt zuzusprechen.'], kinderErfassen: true, kinder: [{ vorname: 'Carla', geburtsdatum: '2019-05-04' }] }));
 f('vorl:sb-blanko', () => sbZusammenstellen({ ...SB_DEFAULTS }));
+
+// Eheschutzgesuch (Art. 175 ff. ZGB; Musterklagen 12.6.2026)
+const egBasis = {
+  ...EG_DEFAULTS, gerichtsKanton: 'BS' as const,
+  gesuchsteller: { typ: 'natuerlich' as const, vorname: 'Anna', name: 'Muster', firma: '', strasse: 'A-Gasse 1', plz: '4051', ort: 'Basel' },
+  gesuchsgegner: { typ: 'natuerlich' as const, vorname: 'Beat', name: 'Muster', firma: '', strasse: 'A-Gasse 1', plz: '4051', ort: 'Basel' },
+  getrenntSeit: '2026-04-01', ort: 'Basel', datum: '2026-06-12',
+};
+f('vorl:eg-standard', () => egZusammenstellen(egBasis));
+f('vorl:eg-vollkatalog', () => egZusammenstellen({ ...egBasis, kinderErfassen: true, kinder: [{ vorname: 'Carla', geburtsdatum: '2019-05-04' }], obhut: 'gesuchsteller' as const, kindesunterhalt: 'beziffert' as const, barunterhaltBetrag: '1200', betreuungsunterhaltBetrag: '800', ehegattenunterhalt: 'beziffert' as const, ehegattenBetrag: '2500', rueckwirkung: true, gueterTrennung: true, schuldneranweisung: true, arbeitgeberName: 'Muster AG, Zürich', verfuegungsbeschraenkung: true, vermoegenswert: 'Konto IBAN CH00 0000 0000 0000 0000 0 bei der Bank X' }));
+f('vorl:eg-blanko', () => egZusammenstellen({ ...EG_DEFAULTS }));
 f('vorl:ma-gates', () => pruefeMaGates({ ...maBasis, mahngebuehrErfassen: true, mahngebuehr: '20' }));
 f('vorl:ma-gates-nachfrist', () => pruefeMaGates({ ...maBasis, variante: 'nachfrist' }));
 

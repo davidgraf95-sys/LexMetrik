@@ -9897,6 +9897,366 @@
    }
   ]
  },
+ "vorl:eg-standard": {
+  "dokument": {
+   "titel": "Eheschutzgesuch",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "EG01_adressat",
+     "text": "Zivilgericht Basel-Stadt\nBäumleingasse 5\n4001 Basel",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "EG02_datum",
+     "text": "Basel, 12.06.2026",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "EG03_betreff",
+     "text": "Eheschutzgesuch (Art. 175 ff. ZGB; summarisches Verfahren, Art. 271 lit. a ZPO)",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "EG04_rubrum",
+     "text": "in Sachen\nAnna Muster, A-Gasse 1, 4051 Basel\n(gesuchstellende Partei)\n\ngegen\n\nBeat Muster, A-Gasse 1, 4051 Basel\n(gesuchsgegnerische Partei)\n\nbetreffend Eheschutz",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "EG05_begehren",
+     "ueberschrift": "Rechtsbegehren",
+     "text": "1. Es sei festzustellen, dass die Parteien berechtigt sind, getrennt zu leben (faktisch getrennt seit 01.04.2026), und das Getrenntleben sei zu regeln (Art. 175 f. ZGB).\n2. Die eheliche Wohnung samt Hausrat sei für die Dauer des Getrenntlebens der gesuchstellenden Partei zur alleinigen Benützung zuzuweisen; die gesuchsgegnerische Partei sei zu verpflichten, die Wohnung innert 30 Tagen seit Rechtskraft des Entscheids zu verlassen (Art. 176 Abs. 1 Ziff. 2 ZGB).\n3. Der Unterhaltsbeitrag an die gesuchstellende Partei sei gerichtlich festzusetzen, zahlbar monatlich im Voraus (Art. 176 Abs. 1 Ziff. 1 ZGB).\n4. Unter Kosten- und Entschädigungsfolge zulasten der gesuchsgegnerischen Partei."
+    },
+    {
+     "bausteinId": "EG06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Massnahmen zum Schutz der ehelichen Gemeinschaft laufen im summarischen Verfahren (Art. 271 lit. a ZPO); das Schlichtungsverfahren entfällt (Art. 198 lit. a ZPO). Um Ansetzung der mündlichen Verhandlung (Art. 273 Abs. 1 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "EG07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Familienausweis bzw. Eheurkunde\n– Beilage 2: Lohnabrechnungen / Einkommensbelege beider Parteien (soweit verfügbar)\n– Beilage 3: Mietvertrag bzw. Wohnkostenbelege"
+    },
+    {
+     "bausteinId": "EG08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "EG09_unterschrift",
+     "text": "_________________________________\nAnna Muster",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    },
+    {
+     "bausteinId": "EG10_doppel",
+     "text": "Einreichung im Doppel: ein Exemplar für das Gericht und ein Exemplar für die gesuchsgegnerische Partei (Art. 131 ZPO)."
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Eheschutzgesuch (Art. 175 ff. ZGB) im summarischen Verfahren (Art. 271 lit. a ZPO); einzureichen unterschrieben im Doppel beim Gericht am Wohnsitz einer Partei. Tatsachen sind glaubhaft zu machen; Unterhaltshöhen bestimmt das Gericht nach den konkreten Verhältnissen.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.1; ZGB/ZPO verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "EG01_adressat",
+   "EG02_datum",
+   "EG03_betreff",
+   "EG04_rubrum",
+   "EG05_begehren",
+   "EG06_formelles",
+   "EG07_beilagen",
+   "EG08_gruss",
+   "EG09_unterschrift",
+   "EG10_doppel"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "EG01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand für eherechtliche Gesuche.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "EG02_datum",
+    "begruendung": "Ort und Datum der Eingabe."
+   },
+   {
+    "bausteinId": "EG03_betreff",
+    "begruendung": "Betreff mit Verfahrensbezeichnung.",
+    "norm": "Art. 271 ZPO"
+   },
+   {
+    "bausteinId": "EG04_rubrum",
+    "begruendung": "Parteien und allfällige Vertretung."
+   },
+   {
+    "bausteinId": "EG05_begehren",
+    "begruendung": "Begehren-Katalog des Eheschutzes: Getrenntleben, Wohnung/Hausrat, Kinderbelange, Unterhalt (Formel deterministisch, Höhe Eingabe), weitere Massnahmen, Kosten.",
+    "norm": "Art. 176 ZGB"
+   },
+   {
+    "bausteinId": "EG06_formelles",
+    "begruendung": "Zuständigkeit, summarisches Verfahren, kein Schlichtungsverfahren, mündliche Verhandlung.",
+    "norm": "Art. 271/198 lit. a/273 ZPO"
+   },
+   {
+    "bausteinId": "EG07_beilagen",
+    "begruendung": "Belege zur Glaubhaftmachung (Lohn, Wohnkosten, Krankenkassen, Kinderbelege)."
+   },
+   {
+    "bausteinId": "EG08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "EG09_unterschrift",
+    "begruendung": "Unterschrift der gesuchstellenden Partei bzw. der Vertretung."
+   },
+   {
+    "bausteinId": "EG10_doppel",
+    "begruendung": "Exemplare-Hinweis.",
+    "norm": "Art. 131 ZPO"
+   }
+  ]
+ },
+ "vorl:eg-vollkatalog": {
+  "dokument": {
+   "titel": "Eheschutzgesuch",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "EG01_adressat",
+     "text": "Zivilgericht Basel-Stadt\nBäumleingasse 5\n4001 Basel",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "EG02_datum",
+     "text": "Basel, 12.06.2026",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "EG03_betreff",
+     "text": "Eheschutzgesuch (Art. 175 ff. ZGB; summarisches Verfahren, Art. 271 lit. a ZPO)",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "EG04_rubrum",
+     "text": "in Sachen\nAnna Muster, A-Gasse 1, 4051 Basel\n(gesuchstellende Partei)\n\ngegen\n\nBeat Muster, A-Gasse 1, 4051 Basel\n\ngemeinsame Kinder: Carla, geb. 04.05.2019\n(gesuchsgegnerische Partei)\n\nbetreffend Eheschutz",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "EG05_begehren",
+     "ueberschrift": "Rechtsbegehren",
+     "text": "1. Es sei festzustellen, dass die Parteien berechtigt sind, getrennt zu leben (faktisch getrennt seit 01.04.2026), und das Getrenntleben sei zu regeln (Art. 175 f. ZGB).\n2. Die eheliche Wohnung samt Hausrat sei für die Dauer des Getrenntlebens der gesuchstellenden Partei zur alleinigen Benützung zuzuweisen; die gesuchsgegnerische Partei sei zu verpflichten, die Wohnung innert 30 Tagen seit Rechtskraft des Entscheids zu verlassen (Art. 176 Abs. 1 Ziff. 2 ZGB).\n3. Die Kinder seien für die Dauer des Getrenntlebens unter die Obhut der gesuchstellenden Partei zu stellen.\n4. Der persönliche Verkehr zwischen den Kindern und dem nicht obhutsberechtigten Elternteil sei nach dem gerichtsüblichen Besuchs- und Ferienrecht zu regeln (Art. 273 ZGB).\n5. Die unterhaltspflichtige Partei sei zu verpflichten, an den Unterhalt der Kinder monatlich im Voraus auf den Ersten je Kind CHF 1200 (Barunterhalt) zu bezahlen (Art. 276/285 ZGB).\n6. Zusätzlich sei Betreuungsunterhalt von monatlich im Voraus CHF 800 zu bezahlen (Art. 285 Abs. 2 ZGB).\n7. Die gesuchsgegnerische Partei sei zu verpflichten, der gesuchstellenden Partei Unterhalt von monatlich im Voraus CHF 2500 zu bezahlen, rückwirkend auch für das Jahr vor Einreichung dieses Gesuchs (Art. 173 Abs. 3 ZGB) (Art. 176 Abs. 1 Ziff. 1 ZGB).\n8. Es sei die Gütertrennung anzuordnen (Art. 176 Abs. 1 Ziff. 3 ZGB).\n9. Muster AG, Zürich sei anzuweisen, die Lohnzahlungen an die gesuchsgegnerische Partei im Umfang der festgesetzten Unterhaltsbeiträge direkt der gesuchstellenden Partei zu leisten (Art. 177 ZGB).\n10. Die Verfügung über den folgenden Vermögenswert sei von der Zustimmung der gesuchstellenden Partei abhängig zu machen: Konto IBAN CH00 0000 0000 0000 0000 0 bei der Bank X (Art. 178 ZGB).\n11. Unter Kosten- und Entschädigungsfolge zulasten der gesuchsgegnerischen Partei."
+    },
+    {
+     "bausteinId": "EG06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Massnahmen zum Schutz der ehelichen Gemeinschaft laufen im summarischen Verfahren (Art. 271 lit. a ZPO); das Schlichtungsverfahren entfällt (Art. 198 lit. a ZPO). Um Ansetzung der mündlichen Verhandlung (Art. 273 Abs. 1 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "EG07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Familienausweis bzw. Eheurkunde\n– Beilage 2: Lohnabrechnungen / Einkommensbelege beider Parteien (soweit verfügbar)\n– Beilage 3: Mietvertrag bzw. Wohnkostenbelege\n– Beilage 4: Geburtsurkunden der Kinder; Krankenkassen-Policen"
+    },
+    {
+     "bausteinId": "EG08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "EG09_unterschrift",
+     "text": "_________________________________\nAnna Muster",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    },
+    {
+     "bausteinId": "EG10_doppel",
+     "text": "Einreichung im Doppel: ein Exemplar für das Gericht und ein Exemplar für die gesuchsgegnerische Partei (Art. 131 ZPO)."
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Eheschutzgesuch (Art. 175 ff. ZGB) im summarischen Verfahren (Art. 271 lit. a ZPO); einzureichen unterschrieben im Doppel beim Gericht am Wohnsitz einer Partei. Tatsachen sind glaubhaft zu machen; Unterhaltshöhen bestimmt das Gericht nach den konkreten Verhältnissen.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.1; ZGB/ZPO verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "EG01_adressat",
+   "EG02_datum",
+   "EG03_betreff",
+   "EG04_rubrum",
+   "EG05_begehren",
+   "EG06_formelles",
+   "EG07_beilagen",
+   "EG08_gruss",
+   "EG09_unterschrift",
+   "EG10_doppel"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "EG01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand für eherechtliche Gesuche.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "EG02_datum",
+    "begruendung": "Ort und Datum der Eingabe."
+   },
+   {
+    "bausteinId": "EG03_betreff",
+    "begruendung": "Betreff mit Verfahrensbezeichnung.",
+    "norm": "Art. 271 ZPO"
+   },
+   {
+    "bausteinId": "EG04_rubrum",
+    "begruendung": "Parteien und allfällige Vertretung."
+   },
+   {
+    "bausteinId": "EG05_begehren",
+    "begruendung": "Begehren-Katalog des Eheschutzes: Getrenntleben, Wohnung/Hausrat, Kinderbelange, Unterhalt (Formel deterministisch, Höhe Eingabe), weitere Massnahmen, Kosten.",
+    "norm": "Art. 176 ZGB"
+   },
+   {
+    "bausteinId": "EG06_formelles",
+    "begruendung": "Zuständigkeit, summarisches Verfahren, kein Schlichtungsverfahren, mündliche Verhandlung.",
+    "norm": "Art. 271/198 lit. a/273 ZPO"
+   },
+   {
+    "bausteinId": "EG07_beilagen",
+    "begruendung": "Belege zur Glaubhaftmachung (Lohn, Wohnkosten, Krankenkassen, Kinderbelege)."
+   },
+   {
+    "bausteinId": "EG08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "EG09_unterschrift",
+    "begruendung": "Unterschrift der gesuchstellenden Partei bzw. der Vertretung."
+   },
+   {
+    "bausteinId": "EG10_doppel",
+    "begruendung": "Exemplare-Hinweis.",
+    "norm": "Art. 131 ZPO"
+   }
+  ]
+ },
+ "vorl:eg-blanko": {
+  "dokument": {
+   "titel": "Eheschutzgesuch",
+   "format": "eingabe",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "EG01_adressat",
+     "text": "________\n________\n________",
+     "rolle": "adressat"
+    },
+    {
+     "bausteinId": "EG02_datum",
+     "text": "________",
+     "rolle": "datumzeile"
+    },
+    {
+     "bausteinId": "EG03_betreff",
+     "text": "Eheschutzgesuch (Art. 175 ff. ZGB; summarisches Verfahren, Art. 271 lit. a ZPO)",
+     "rolle": "betreff"
+    },
+    {
+     "bausteinId": "EG04_rubrum",
+     "text": "in Sachen\n \n(gesuchstellende Partei)\n\ngegen\n\n \n(gesuchsgegnerische Partei)\n\nbetreffend Eheschutz",
+     "rolle": "rubrum"
+    },
+    {
+     "bausteinId": "EG05_begehren",
+     "ueberschrift": "Rechtsbegehren",
+     "text": "1. Es sei festzustellen, dass die Parteien berechtigt sind, getrennt zu leben, und das Getrenntleben sei zu regeln (Art. 175 f. ZGB).\n2. Die eheliche Wohnung samt Hausrat sei für die Dauer des Getrenntlebens der gesuchstellenden Partei zur alleinigen Benützung zuzuweisen; die gesuchsgegnerische Partei sei zu verpflichten, die Wohnung innert 30 Tagen seit Rechtskraft des Entscheids zu verlassen (Art. 176 Abs. 1 Ziff. 2 ZGB).\n3. Der Unterhaltsbeitrag an die gesuchstellende Partei sei gerichtlich festzusetzen, zahlbar monatlich im Voraus (Art. 176 Abs. 1 Ziff. 1 ZGB).\n4. Unter Kosten- und Entschädigungsfolge zulasten der gesuchsgegnerischen Partei."
+    },
+    {
+     "bausteinId": "EG06_formelles",
+     "ueberschrift": "Formelles",
+     "text": "Örtlich zuständig ist das Gericht am Wohnsitz einer Partei (Art. 23 Abs. 1 ZPO, zwingend). Massnahmen zum Schutz der ehelichen Gemeinschaft laufen im summarischen Verfahren (Art. 271 lit. a ZPO); das Schlichtungsverfahren entfällt (Art. 198 lit. a ZPO). Um Ansetzung der mündlichen Verhandlung (Art. 273 Abs. 1 ZPO) wird ersucht."
+    },
+    {
+     "bausteinId": "EG07_beilagen",
+     "ueberschrift": "Beilagen",
+     "text": "– Beilage 1: Familienausweis bzw. Eheurkunde\n– Beilage 2: Lohnabrechnungen / Einkommensbelege beider Parteien (soweit verfügbar)\n– Beilage 3: Mietvertrag bzw. Wohnkostenbelege"
+    },
+    {
+     "bausteinId": "EG08_gruss",
+     "text": "Mit freundlichen Grüssen",
+     "rolle": "schlussformel"
+    },
+    {
+     "bausteinId": "EG09_unterschrift",
+     "text": "_________________________________\n________",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    },
+    {
+     "bausteinId": "EG10_doppel",
+     "text": "Einreichung im Doppel: ein Exemplar für das Gericht und ein Exemplar für die gesuchsgegnerische Partei (Art. 131 ZPO)."
+    }
+   ],
+   "disclaimer": "Erstellt mit LexMetrik – keine Rechtsberatung. Eheschutzgesuch (Art. 175 ff. ZGB) im summarischen Verfahren (Art. 271 lit. a ZPO); einzureichen unterschrieben im Doppel beim Gericht am Wohnsitz einer Partei. Tatsachen sind glaubhaft zu machen; Unterhaltshöhen bestimmt das Gericht nach den konkreten Verhältnissen.",
+   "version": "1.0.0 (Bauspez. familienrecht-klagen-vorlagen.md §3.1; ZGB/ZPO verifiziert 20260101)"
+  },
+  "aufgenommen": [
+   "EG01_adressat",
+   "EG02_datum",
+   "EG03_betreff",
+   "EG04_rubrum",
+   "EG05_begehren",
+   "EG06_formelles",
+   "EG07_beilagen",
+   "EG08_gruss",
+   "EG09_unterschrift",
+   "EG10_doppel"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "EG01_adressat",
+    "begruendung": "Gericht am Wohnsitz einer Partei — zwingender Gerichtsstand für eherechtliche Gesuche.",
+    "norm": "Art. 23 Abs. 1 ZPO"
+   },
+   {
+    "bausteinId": "EG02_datum",
+    "begruendung": "Ort und Datum der Eingabe."
+   },
+   {
+    "bausteinId": "EG03_betreff",
+    "begruendung": "Betreff mit Verfahrensbezeichnung.",
+    "norm": "Art. 271 ZPO"
+   },
+   {
+    "bausteinId": "EG04_rubrum",
+    "begruendung": "Parteien und allfällige Vertretung."
+   },
+   {
+    "bausteinId": "EG05_begehren",
+    "begruendung": "Begehren-Katalog des Eheschutzes: Getrenntleben, Wohnung/Hausrat, Kinderbelange, Unterhalt (Formel deterministisch, Höhe Eingabe), weitere Massnahmen, Kosten.",
+    "norm": "Art. 176 ZGB"
+   },
+   {
+    "bausteinId": "EG06_formelles",
+    "begruendung": "Zuständigkeit, summarisches Verfahren, kein Schlichtungsverfahren, mündliche Verhandlung.",
+    "norm": "Art. 271/198 lit. a/273 ZPO"
+   },
+   {
+    "bausteinId": "EG07_beilagen",
+    "begruendung": "Belege zur Glaubhaftmachung (Lohn, Wohnkosten, Krankenkassen, Kinderbelege)."
+   },
+   {
+    "bausteinId": "EG08_gruss",
+    "begruendung": "Schlussformel der Eingabe."
+   },
+   {
+    "bausteinId": "EG09_unterschrift",
+    "begruendung": "Unterschrift der gesuchstellenden Partei bzw. der Vertretung."
+   },
+   {
+    "bausteinId": "EG10_doppel",
+    "begruendung": "Exemplare-Hinweis.",
+    "norm": "Art. 131 ZPO"
+   }
+  ]
+ },
  "vorl:ma-gates": {
   "blocker": [],
   "warnungen": [
