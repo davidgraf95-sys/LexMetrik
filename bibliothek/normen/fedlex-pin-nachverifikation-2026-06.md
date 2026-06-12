@@ -25,9 +25,26 @@ zugrunde liegende Erlasse aus den Fedlex-Fussnoten/AS belegt.
 
 | Gesetz | Inkrafttreten | Erlass | Betroffene Artikel | Code betroffen? | Aufgabe am Stichtag |
 |---|---|---|---|---|---|
-| StGB | **12.6.2026** | AS 2026 231 (Eurodac/Schengen) | Art. 354, 357 (Datenaustausch) | **Nein** (30/31, 97 ff., 109, 333 byte-identisch geprüft) | Nur Re-Pin auf 20260612; Datei liegt als **No-Suffix** → n=0 |
+| StGB | **12.6.2026** | AS 2026 231 (Eurodac/Schengen) | Art. 354, 357 (Datenaustausch) | **Nein** (30/31, 97 ff., 109, 333 byte-identisch geprüft) | ~~Nur Re-Pin auf 20260612; Datei liegt als **No-Suffix** → n=0~~ **VOLLZOGEN 12.6.2026, s. Nachtrag** |
 | ZGB | **1.7.2026** | AS 2026 94 (gewaltfreie Erziehung: 302/302a) + AS 2026 16 (Besitzesschutz: 926 ff.) | 302, 302a neu, 429, 926 ff. | **Nein** (Erbrecht/Vorsorge/Pflichtteile byte-identisch geprüft) | Nur Re-Pin auf 20260701 (html-1, bereits abrufbar) |
 | ZPO | **1.7.2026** | AS 2026 16 Ziff. II (Besitzesschutz) | **Art. 260a/260b NEU** (summarischer Besitzesschutz, 10-T.-Einsprache), 248/250/257/260/290 angepasst | **Nein** (Fristen 142–148, 314, 321, Zuständigkeit 2–94a byte-identisch geprüft) | Re-Pin auf 20260701 (**No-Suffix** → n=0). Backlog-Kandidat: Besitzesschutz-Verfahren 260a/b als künftiges Zuständigkeits-/Fristen-Szenario |
+
+### Nachtrag: StGB-Re-Pin VOLLZOGEN (12.6.2026)
+
+Am Stichtag empirisch nachverifiziert und gepinnt (`scripts/fedlex-cache.sh`
+neu `stgb|…|20260612|0|…`):
+
+- Konsolidierung **20260612** liegt am Filestore als **No-Suffix** (n=0,
+  wie vorausgesagt), HTTP 200, 983'987 B (alt 20260101/html-2: 981'366 B).
+- **Anker-Inventar identisch:** 477/477 `art_`-IDs, keine neuen, keine
+  entfallenen.
+- Alle 7 engine-zitierten Pflicht-Anker (art_30, 97, 98, 101, 109, 333,
+  389): **Normtext identisch** zu 20260101; verbleibende Byte-Diffs sind
+  reine Fussnoten-ID-Umnummerierung (nicht-normativ, s. Geltungsbereich).
+- Erwartungsgemäss materiell geändert NUR art_354 (+1'116 B) und art_357
+  (+641 B) — Datenaustausch Eurodac/Schengen, nicht verdrahtet.
+- `check:caches` + `check:zitate` danach grün; Verfallsregister-Zeile auf
+  den nächsten Stichtag 1.7.2026 (ZGB/ZPO) gestellt.
 
 ## Geltungsbereich & Ausnahmen
 
@@ -41,8 +58,9 @@ zugrunde liegende Erlasse aus den Fedlex-Fussnoten/AS belegt.
 
 ## Pflegebedarf (→ Verfallsregister nachgeführt)
 
-- Re-Pin-Termine StGB 12.6.2026 · ZGB/ZPO 1.7.2026 (reine Pins, keine
-  Engine-Folgen — am Stichtag `check:caches`/`check:zitate` fahren).
+- Re-Pin-Termine StGB 12.6.2026 (**vollzogen**, s. Nachtrag) · ZGB/ZPO
+  1.7.2026 offen (reine Pins, keine Engine-Folgen — am Stichtag
+  `check:caches`/`check:zitate` fahren).
 - Gesetzgebungs-Monitoring «kleine BGG-Revision» läuft WEITER (durch den
   Energierechts-Re-Pin NICHT erledigt).
 - VwVG-Konsolidierung 20270101 angekündigt (HTML noch leer) — der

@@ -20,6 +20,21 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 12.6.2026 (abends) — StGB-Re-Pin vollzogen (Verfallsregister-Termin)
+
+Der am 12.6.2026 fällige, terminierte **StGB-Re-Pin (AS 2026 231) ist
+VOLLZOGEN:** `fedlex-cache.sh` neu `20260612|0` (No-Suffix wie im
+Voraus-Check vorausgesagt). Empirie am Stichtag: Anker-Inventar 477/477
+identisch; alle 7 engine-zitierten Pflicht-Anker normtext-identisch zu
+20260101 (Diffs nur Fussnoten-IDs); materiell geändert NUR Art. 354/357
+(Eurodac/Schengen-Datenaustausch, nicht verdrahtet). Nachgeführt:
+Quellen-Register, Verfallsregister (nächster Stichtag 1.7.2026 ZGB/ZPO),
+Dossier-Nachtrag `fedlex-pin-nachverifikation-2026-06.md`. Tore:
+`check:caches` → `check:zitate` (616 Zitate, 0 Befunde) → `check:verfall`
+(StGB-Meldung weg) grün. Kein Engine-Code berührt. Ungepusht; Push/Deploy
+nur auf frisches Ja (§9). In 45-Tage-Vorschau weiter: ZGB/ZPO-Re-Pin +
+Streitwert-Formeln 1.7. · SG GKV 30.6.
+
 ## Session 12.6.2026 (Fortsetzung) — TI-Miete gemeindescharf + vertiefter §9-Bug-Check (Auftrag David: «tessin vertiefung, bug check, push, deploy»)
 
 **(1) TI-Miete VERDRAHTET** (`6cf5802`) — der LETZTE Kanton ohne

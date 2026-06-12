@@ -72,9 +72,12 @@ EINTRAEGE=(
   # gebv-schkg-kostenrechner.md, Konsolidierung 1.1.2026).
   "gebv_schkg|cc/1996/2937_2937_2937|20260101|0|art_16,art_15_a"
   # StGB: gepinnt 7.6.2026 (S3-Nachzug — strafrecht-cluster.md nutzte einen
-  # Ad-hoc-Cache ohne dokumentiertes ELI; 20260101 empirisch bestätigt,
-  # html-2, 981 kB; Verjährung 97 ff., Antrag 30 ff.).
-  "stgb|cc/54/757_781_799|20260101|2|art_30,art_97,art_98,art_101,art_109,art_333,art_389"
+  # Ad-hoc-Cache ohne dokumentiertes ELI; Verjährung 97 ff., Antrag 30 ff.).
+  # Re-Pin 20260101→20260612 (terminiert, vollzogen 12.6.2026): AS 2026 231
+  # (Eurodac/Schengen) ändert nur Art. 354/357 (nicht verdrahtet); alle
+  # zitierten Artikel normtext-identisch, Anker-Inventar 477/477 stabil;
+  # neue Datei liegt OHNE -N-Suffix (n=0, Muster GebV SchKG).
+  "stgb|cc/54/757_781_799|20260612|0|art_30,art_97,art_98,art_101,art_109,art_333,art_389"
   # StG: gepinnt 6.6.2026 (Emissionsabgabe in den Gründungs-Masken:
   # Art. 8 Abs. 1 = 1 %, Art. 6 Abs. 1 lit. h = Freibetrag 1 Mio.;
   # 20240101 = neuste Konsolidierung).
