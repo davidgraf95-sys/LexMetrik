@@ -156,6 +156,26 @@ Zweige golden-bewiesen unverändert).
    `klage_besonders` (nach klageGebiet gruppiert) bzw. neue Rubrik gemäss
    Quellen-Zuschnitt.
 
+## Abarbeitungs-Stand 12.6.2026 (Session «Wettbewerbsanalyse + Musterklagen», David abwesend)
+
+ERLEDIGT + committet: **V1** (Verträge-Rubriken + formGate-Zeile, 8a78ee2) ·
+**V2.1** Verjährungsverzicht (0b21767) · **V2b** Blanko-Download-Rahmen alle
+Einzel-Wizards (270007c; Mappen offen) · **Musterklagen M1**: Scheidungsklage
+unbegründet Art. 290 ZPO (b3ba2dc; Karte klage_besonders/Familienrecht).
+WEITER ERLEDIGT (Fortsetzung): **Bd.-I-Struktur-Dossier** §§ 1–25 in
+bibliothek/recherche/musterklagen-vertrag-haftpflicht-bd1.md (bdebf6d;
+4 Struktur-Agents, NUR Struktur) · **Gemeinsames Scheidungsbegehren**
+Art. 285/286 ZPO (00f7931) · **Eheschutzgesuch** Art. 175 ff. ZGB +
+10 GEPLANT-Karten der Musterklagen-Rubrik (7175a01). Familienrecht-Masken
+3/3 der ersten Welle gebaut (Scheidungsklage · Begehren · Eheschutz).
+NÄCHSTE SCHRITTE (V8-Fortsetzung): Masken für die geplanten Karten nach
+Davids Priorisierung — Kandidaten-Reihenfolge nach Dossier-Praxiswert:
+Bauhandwerkerpfandrecht-Gesuch (4-Monats-Gate!) → Arbeit-Kündigungsklage
+(Synergie 336b-Engine) → Werkmängel → VVG → Honorar → 158-ZPO →
+Konkurrenzverbot → Personenschaden → Abänderung/Konkubinat. Dazu V2-Rest
+(NDA, Zession, Fristerstreckung, 8a-SchKG-Löschung), V3–V7.
+Push/Deploy weiter gesperrt (Davids frisches Ja).
+
 ## Davids Entscheide vor Start (Entscheidvorlage)
 
 1. P1-Listen (Dossier Abschn. 5) abnehmen/kürzen — insbesondere Reihenfolge
