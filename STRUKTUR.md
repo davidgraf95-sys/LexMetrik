@@ -20,6 +20,40 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 12.6.2026 — ZH-Kreis-Automatik + Adress-Ausbau Stufen 1–3 (Entscheide David, ungepusht)
+
+**(0) Verifikationsfrage David beantwortet** (`8842bfd`): Stadt-Zürcher
+PLZ sind **NICHT kreisscharf** (16/30 mehrkreisig; amtliche
+Gebäudeadressen Stadt ZH, 56'666 real) — dank Ämter-Paarung sind 19 PLZ
+amts-eindeutig → **Kreis-Automatik**: eindeutige PLZ lösen das
+Kreis-Friedensrichteramt automatisch, mehrdeutige zeigen die
+eingegrenzte Wahl mit Adressenanteil (dominant vorausgewählt), Postfach
+→ Sechser-Wahl. Generator `zh-kreise-generieren.ts` → zuerichPlzKreise.
+**(1) Stufe 1** (`0ec3a5d`): Strasse (+ Nr.) → Kreis-Amt offline
+(`zhStrassen.json`, 1'984 Strassen, 58 amts-übergreifende per
+Hausnummer; 26 KB gz); Vorrang Strasse → PLZ → Wahl, beide UIs.
+**(2) Stufe 2** (`3bd6a9a`): schweizweit Strasse (+ Nr.) → Gemeinde bei
+den 1'213 gemeinde-mehrdeutigen PLZ (47.4 % aller Adressen) — swisstopo
+Gebäudeadressverzeichnis (3.24 Mio real) → `strassenVerzeichnis.json` +
+`strassenNummern.json` (91'218 eindeutige Strassen, 1'425 Grenzstrassen
+per Nummer; ~0.56 MB gz, eigene Lazy-Chunks); wirkt in PlzGemeindeWahl
+(alle Eltern-UIs); kantonsübergreifend belegt (4052 Birswaldweg →
+Münchenstein BL). Lint-Härtung `cb917b6` (PLZ-geschlüsselter Zustand).
+**(3) Stufe 3** (`10ce93d`): `AdresseBundSuche` (§10) — Freitext-Adresse
+über die Bundes-API (geo.admin.ch SearchServer + GWR-Detail) NUR auf
+Klick, **permanenter Übermittlungs-Hinweis** + Offline-Alternative
+benannt (Anweisung David); kantonsfremde Treffer offengelegt statt
+übernommen; CSP + api3.geo.admin.ch (nur am echten Vercel prüfbar);
+/datenschutz-Absatz ENTWURF. Empirie: Playwright beide UIs inkl.
+Live-API (Bundesplatz 3 Bern → 3011/Bern/BE); 8044-Lehrstück
+(Gockhausen→Dübendorf): Kreis-UI korrekt erst nach Gemeinde-Wahl.
+Dossiers: gebaeudeadressverzeichnis-adressaufloesung.md (+ Verfalls-
+Kandidat Re-Generierung 1.10.2026) · ZH-Vollerfassung Nachträge.
+**OFFEN für David:** Wortlaut-Abnahmen (Datenschutz-geo.admin-Absatz,
+«Beim Bund nachschlagen», Hinweis-Texte) · Verfallsregister-Eintrag
+1.10.2026 entscheiden. Tore: gate voll GRÜN, Build 38/38.
+**16 Commits ungepusht — Push/Deploy nur auf frisches Ja (§9).**
+
 ## Session 11.6.2026 früher Abend — durchblick.nl-Sichtung + KVG-Preset Krankenkasse (Entscheid David, ungepusht)
 
 **(1) Konkurrenz-Sichtung** (`9c007af`): Sieben Offline-Rechner-ZIPs von
