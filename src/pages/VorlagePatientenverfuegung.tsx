@@ -312,7 +312,11 @@ export function VorlagePatientenverfuegung() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_UNTERSCHREIBEN, dateiName: 'Patientenverfuegung-Entwurf.pdf' },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_UNTERSCHREIBEN, dateiName: 'Patientenverfuegung-Entwurf.docx' } : undefined,
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }

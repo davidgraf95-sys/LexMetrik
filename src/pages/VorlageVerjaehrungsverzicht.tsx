@@ -166,7 +166,11 @@ export function VorlageVerjaehrungsverzicht() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_VV, dateiName: 'Verjaehrungsverzicht.pdf' },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_VV, dateiName: 'Verjaehrungsverzicht.docx' } : undefined,
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }

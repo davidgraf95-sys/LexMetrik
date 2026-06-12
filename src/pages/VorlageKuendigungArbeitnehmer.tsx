@@ -215,7 +215,11 @@ export function VorlageKuendigungArbeitnehmer() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_KAN, dateiName: 'Kuendigung-Arbeitsverhaeltnis.pdf' },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_KAN, dateiName: 'Kuendigung-Arbeitsverhaeltnis.docx' } : undefined,
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }

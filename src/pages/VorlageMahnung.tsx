@@ -248,7 +248,11 @@ export function VorlageMahnung() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_MA, dateiName: 'Mahnung.pdf' },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_MA, dateiName: 'Mahnung.docx' } : undefined,
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }

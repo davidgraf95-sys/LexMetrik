@@ -460,7 +460,11 @@ export function VorlageKlageVereinfacht() {
       inhalt={inhalt()}
       vorschau={stopp
         ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument — siehe Hinweis: Für diese Konstellation ist das vereinfachte Verfahren nicht anwendbar (Streitwert/Materie prüfen).</div>
-        : <VorschauPanel ergebnis={ergebnis} kompakt />}
+        : <VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
+          pdf: { label: 'PDF', banner: BANNER_KV, dateiName: 'Klage-vereinfachtes-Verfahren.pdf' },
+          docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_KV, dateiName: 'Klage-vereinfachtes-Verfahren.docx' } : undefined,
+          /* Vollständigkeits-Mängel sperren den Blanko-Export nicht; der fachliche Stopp ersetzt die Vorschau ganz. */
+        }} />}
     />
   );
 }

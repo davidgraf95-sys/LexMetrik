@@ -250,7 +250,11 @@ export function VorlageKuendigungVertrag() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_KV, dateiName: 'Kuendigung-Vertrag.pdf' },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_KV, dateiName: 'Kuendigung-Vertrag.docx' } : undefined,
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }

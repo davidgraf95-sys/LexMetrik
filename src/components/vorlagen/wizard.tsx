@@ -215,9 +215,68 @@ function VorschauAbsatz({ abs }: { abs: AssembleErgebnis['dokument']['absaetze']
   }
 }
 
+// ── Geteilte Export-Aktion (PDF/DOCX lazy, Fehler sichtbar statt stiller
+//    Unhandled Rejection) — genutzt von ExportLeiste und DirektExportZeile ───
+
+function useExportAktion() {
+  const [fehler, setFehler] = useState<string | null>(null);
+  const exportieren = async (aktion: () => Promise<void>, standardMeldung: string) => {
+    setFehler(null);
+    try {
+      await aktion();
+    } catch (e) {
+      setFehler(e instanceof Error ? e.message : standardMeldung);
+    }
+  };
+  return { fehler, exportieren };
+}
+
+const pdfExport = (ergebnis: AssembleErgebnis, ziel: ExportZiel) => async () =>
+  (await import('../../lib/vorlagen/vorlagenPdf')).vorlagenPdfErzeugen(ergebnis, { banner: ziel.banner, dateiName: ziel.dateiName });
+const docxExport = (ergebnis: AssembleErgebnis, ziel: ExportZiel) => async () =>
+  (await import('../../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: ziel.banner, dateiName: ziel.dateiName });
+
+// ── Direkt-Export unter der Vorschau (Daueranweisung David 12.6.2026) ───────
+//
+// Jede Vorlage ist JEDERZEIT herunterladbar — auch unausgefüllt; leere
+// Felder bleiben Ausfüll-Striche («________», Engine-Konvention). Nur
+// FACHLICHE Blocker (das Dokument trüge eine falsche Rechtsaussage)
+// sperren auch hier; fehlende Angaben sperren nie.
+
+function DirektExportZeile({ ergebnis, pdf, docx, blocker }: {
+  ergebnis: AssembleErgebnis; pdf: ExportZiel; docx?: ExportZiel; blocker?: string[];
+}) {
+  const { fehler, exportieren } = useExportAktion();
+  const gesperrt = (blocker?.length ?? 0) > 0;
+  return (
+    <div className="space-y-2">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span className="text-xs text-ink-500">
+          Direkt herunterladen – auch unausgefüllt (leere Felder bleiben Ausfüll-Striche):
+        </span>
+        <button type="button" disabled={gesperrt}
+          title={gesperrt ? blocker![0] : undefined}
+          onClick={() => exportieren(pdfExport(ergebnis, pdf), 'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
+          className="lc-btn-outline lc-btn-sm">
+          PDF
+        </button>
+        {docx && (
+          <button type="button" disabled={gesperrt}
+            title={gesperrt ? blocker![0] : undefined}
+            onClick={() => exportieren(docxExport(ergebnis, docx), 'Der Word-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
+            className="lc-btn-outline lc-btn-sm">
+            Word (DOCX)
+          </button>
+        )}
+      </div>
+      {fehler && <FehlerBox fehler={[fehler]} />}
+    </div>
+  );
+}
+
 // ── Vorschau-Spalte: Live-«Papier» + Bausteinprotokoll ──────────────────────
 
-export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
+export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen, direktExport }: {
   ergebnis: AssembleErgebnis;
   /** Etwas kleinere Papier-Schrift (Schlichtungsgesuch). */
   kompakt?: boolean;
@@ -225,6 +284,9 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
   extra?: ReactNode;
   /** Wenn übergeben: Protokoll-Zusammenfassung «aufgenommen · nicht aufgenommen» + Liste. */
   nichtAufgenommen?: { label: string; grund: string }[];
+  /** Blanko-/Direkt-Download (Daueranweisung David 12.6.2026) — nur
+      FACHLICHE Blocker übergeben, nie blosse Vollständigkeits-Mängel. */
+  direktExport?: { pdf: ExportZiel; docx?: ExportZiel; blocker?: string[] };
 }) {
   return (
     <div className="space-y-4">
@@ -252,6 +314,8 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen }: {
         </div>
         <p className="text-micro text-ink-500 mt-6 pt-3 border-t border-line">{ergebnis.dokument.disclaimer}</p>
       </section>
+
+      {direktExport && <DirektExportZeile ergebnis={ergebnis} {...direktExport} />}
 
       {extra}
 
@@ -299,36 +363,22 @@ export function ExportLeiste({ ergebnis, deaktiviert, kopiert, onKopieren, pdf, 
   /** Nur übergeben, wo die Formvorschrift DOCX zulässt (Form-Gate hat Vorrang). */
   docx?: ExportZiel;
 }) {
-  // Async-Export mit try/catch: scheitert das Nachladen der Renderer oder die
-  // Dokument-Erzeugung – etwa der bewusste Sperr-Wurf des Word-Exports bei
-  // eigenhändigkeitspflichtigen Geschäften (vorlagenDocx.ts) –, erscheint die
-  // Meldung sichtbar statt als stille Unhandled Rejection.
-  const [fehler, setFehler] = useState<string | null>(null);
-  const exportieren = async (aktion: () => Promise<void>, standardMeldung: string) => {
-    setFehler(null);
-    try {
-      await aktion();
-    } catch (e) {
-      setFehler(e instanceof Error ? e.message : standardMeldung);
-    }
-  };
+  // Async-Export mit try/catch (useExportAktion): scheitert das Nachladen der
+  // Renderer oder die Dokument-Erzeugung – etwa der bewusste Sperr-Wurf des
+  // Word-Exports bei eigenhändigkeitspflichtigen Geschäften (vorlagenDocx.ts)
+  // –, erscheint die Meldung sichtbar statt als stille Unhandled Rejection.
+  const { fehler, exportieren } = useExportAktion();
   return (
     <div className="space-y-3">
       <div className="flex flex-wrap gap-3">
         <button type="button" disabled={deaktiviert}
-          onClick={() => exportieren(
-            async () => (await import('../../lib/vorlagen/vorlagenPdf')).vorlagenPdfErzeugen(ergebnis, { banner: pdf.banner, dateiName: pdf.dateiName }),
-            'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.',
-          )}
+          onClick={() => exportieren(pdfExport(ergebnis, pdf), 'Der PDF-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
           className="lc-btn-primary">
           {pdf.label}
         </button>
         {docx && (
           <button type="button" disabled={deaktiviert}
-            onClick={() => exportieren(
-              async () => (await import('../../lib/vorlagen/vorlagenDocx')).vorlagenDocxErzeugen(ergebnis, { banner: docx.banner, dateiName: docx.dateiName }),
-              'Der Word-Export ist fehlgeschlagen. Bitte erneut versuchen.',
-            )}
+            onClick={() => exportieren(docxExport(ergebnis, docx), 'Der Word-Export ist fehlgeschlagen. Bitte erneut versuchen.')}
             className="lc-btn-outline">
             {docx.label}
           </button>

@@ -433,7 +433,10 @@ export function VorlageKlageOrdentlich() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} kompakt />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_KO, dateiName: 'Klage-ordentliches-Verfahren.pdf' },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_KO, dateiName: 'Klage-ordentliches-Verfahren.docx' } : undefined,
+      }} />}
     />
   );
 }

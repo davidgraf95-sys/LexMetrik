@@ -386,7 +386,13 @@ export function VorlageVorsorgeauftrag() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
+        pdf: eigenhaendig
+          ? { label: 'PDF', banner: BANNER_VA_ABSCHREIBEN, dateiName: 'Vorsorgeauftrag-Mustertext.pdf' }
+          : { label: 'PDF', banner: BANNER_VA_BEURKUNDUNG, dateiName: 'Vorsorgeauftrag-Entwurf-Beurkundung.pdf' },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') && !eigenhaendig ? { label: 'DOCX', banner: BANNER_VA_BEURKUNDUNG, dateiName: 'Vorsorgeauftrag-Entwurf-Beurkundung.docx' } : undefined,
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }

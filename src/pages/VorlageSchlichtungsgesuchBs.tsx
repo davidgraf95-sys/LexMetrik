@@ -588,7 +588,10 @@ export function VorlageSchlichtungsgesuchBs() {
       inhalt={inhalt()}
       vorschau={stopp
         ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument – siehe Stopp-Hinweis: In diesem Fall findet kein Schlichtungsverfahren statt — die Klage geht direkt ans Gericht (Art. 198 ZPO).</div>
-        : <VorschauPanel ergebnis={ergebnis} kompakt nichtAufgenommen={ergebnis.nichtAufgenommen} />}
+        : <VorschauPanel ergebnis={ergebnis} kompakt nichtAufgenommen={ergebnis.nichtAufgenommen} direktExport={{
+          pdf: { label: 'PDF', banner: BANNER_SG, dateiName: `${dateiBasis}.pdf` },
+          docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_SG, dateiName: `${dateiBasis}.docx` } : undefined,
+        }} />}
     />
   );
 }

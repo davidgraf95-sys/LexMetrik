@@ -460,7 +460,11 @@ export function VorlageArbeitsvertrag() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_AV, dateiName: 'Arbeitsvertrag-Entwurf.pdf' },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_AV, dateiName: 'Arbeitsvertrag-Entwurf.docx' } : undefined,
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }

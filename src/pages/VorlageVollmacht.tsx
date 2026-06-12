@@ -383,7 +383,11 @@ export function VorlageVollmacht() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_VOLLMACHT, dateiName: `${VOLLMACHT_TITEL[a.typ]}.pdf` },
+        docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_VOLLMACHT, dateiName: `${VOLLMACHT_TITEL[a.typ]}.docx` } : undefined,
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }

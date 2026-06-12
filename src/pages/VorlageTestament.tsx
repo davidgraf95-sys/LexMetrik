@@ -345,7 +345,10 @@ export function VorlageTestament() {
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
       inhalt={inhalt()}
-      vorschau={<VorschauPanel ergebnis={ergebnis} extra={pflichtteilePanel} />}
+      vorschau={<VorschauPanel ergebnis={ergebnis} extra={pflichtteilePanel} direktExport={{
+        pdf: { label: 'PDF', banner: BANNER_ABSCHREIBEN, dateiName: 'Testament-Mustertext.pdf' },
+        blocker: gates.blocker,
+      }} />}
     />
   );
 }
