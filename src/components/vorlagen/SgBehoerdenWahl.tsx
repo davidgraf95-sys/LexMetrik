@@ -6,7 +6,7 @@ import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzA
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { AdresseBundSuche } from '../ui/AdresseBundSuche';
 import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer } from '../../data/schlichtung/amtAufloesung';
-import { tiKandidaten } from '../../data/schlichtung/tiAmt';
+import { tiKandidaten, tiMieteKandidaten } from '../../data/schlichtung/tiAmt';
 import { zuerichAemterFuerPlz, zuerichAmtFuerStrasse, zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
 
@@ -131,6 +131,12 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       // Miete-Register (Vollerhebung 11.6.2026): paritätische Stelle der
       // Gemeinde (Art. 200 Abs. 1 ZPO) — eigener Lookup-Pfad.
       if (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton) && g !== '') {
+        // TI (12.6.2026): Lugano/Bellinzona/Val Mara liegen in mehreren
+        // Uffici di conciliazione — Ortsteil-Wahl (Dossier §51).
+        if (kanton === 'TI') {
+          const kandidaten = await tiMieteKandidaten(g);
+          if (kandidaten) return { amt: null, amtUrl: undefined, kreise: kandidaten, wahl };
+        }
         const m = await mieteAmtFuer(kanton, g);
         return { amt: m ? [m.name, m.strasse, m.plzOrt].filter(Boolean) : null, amtUrl: m?.url, kreise: null, wahl };
       }
@@ -208,7 +214,7 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
         ? { zeilen: [s.name, s.strasse, s.plzOrt], url: s.url ?? recherche.kantonsUrl }
         : ((typ === 'ordentlich' || (typ === 'paritaetisch_miete' && MIETE_AMT_KANTONE.includes(kanton))) && amtZeilenTyp
           ? { zeilen: amtZeilenTyp, url: amtUrl ?? recherche.kantonsUrl } : null));
-    } else if (typ === 'ordentlich' && zhKreise && zhKreise.length > 0) {
+    } else if ((typ === 'ordentlich' || (typ === 'paritaetisch_miete' && kanton === 'TI')) && zhKreise && zhKreise.length > 0) {
       // Index ausserhalb der (neuen) Liste → deterministisch erste Option,
       // Anzeige und Meldung identisch (kein stiller Letzte-Stelle-Clamp;
       // relevant seit TI-Kandidatenlisten unterschiedlicher Länge, 11.6.2026).
@@ -272,6 +278,16 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
             <AdresseBundSuche kantonErwartet={kanton}
               beschriftung={typ === 'paritaetisch_miete' ? 'Oder Adresse des Mietobjekts (Bundes-Suche)' : 'Oder Adresse der beklagten Partei (Bundes-Suche)'}
               onUebernehmen={({ gemeinde: g, plz: p }) => { setPlz(p); setGemeinde(g); }} />
+          )}
+          {/* TI-Miete (12.6.2026): Lugano/Bellinzona/Val Mara → Ortsteil-Wahl
+              (gleicher Mechanismus wie die ZH-Kreise; Dossier §51). */}
+          {kanton === 'TI' && typ === 'paritaetisch_miete' && zhKreise && (
+            <Field label="Ufficio nach Ortsteil/Quartier wählen"
+              hint="die Gemeinde erstreckt sich über mehrere Uffici di conciliazione — massgeblich ist der Ortsteil/das Quartier des Mietobjekts">
+              <select className={inputCls} value={kreisIdx < zhKreise.length ? kreisIdx : 0} onChange={(e) => setKreisIdx(Number(e.target.value))}>
+                {zhKreise.map((k, i) => <option key={k.kreise} value={i}>{k.name} — {k.kreise}</option>)}
+              </select>
+            </Field>
           )}
           <Field label={amtZeilenTyp && wahlIdx < 0 ? 'Oder Stelle direkt wählen (übersteuert)' : 'Zuständige Stelle wählen'}
             hint={`${a.stellen.length} Stellen im Kanton ${kanton} — massgeblich ist das Gebiet der beklagten Partei bzw. der Sache`}>

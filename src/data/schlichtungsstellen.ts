@@ -325,32 +325,30 @@ export const SCHLICHTUNGSSTELLEN: Record<Kanton, KantonSchlichtung> = {
     miete: { modus: 'verzeichnis', beschreibung: 'kommunale Schlichtungsbehörden in Mietsachen (je politische Gemeinde — TG-Sonderfall; 80/80 erhoben) — PLZ/Gemeinde eingeben für die konkrete Stelle (Register 11.6.2026)', url: 'https://erechtsverkehr.tg.ch/schlichtungsbehoerden-in-mietsachen.html/7980' },
   },
   TI: {
-    stand: '11.6.2026', quelle: 'ti.ch (amtliche Località-Suche giudici di pace, 169/169 abgefragt; locazione — 11 Uffici, Schiedsrichter-Entscheid inkl. Chiasso, Stand 5.6.2026)',
+    stand: '12.6.2026', quelle: 'ti.ch (amtliche Località-Suche: giudici di pace 169/169 am 11.6.2026; locazione 168/168 am 12.6.2026 — 11 Uffici, Art. 5 LALoc)',
     // Gemeinde→Circolo amtlich verdrahtet (aemterKantone.json, Dossier §38);
     // Lugano/Lema/Tresa über die Ortsteil-Wahl (tiAmt.ts).
     ordentlich: { modus: 'verzeichnis', beschreibung: '38 Giudicature di pace (je Circolo; Art. 28 f. LOG — Auflösung nach Gemeinde, bei Lugano/Lema/Tresa nach Ortsteil)', url: 'https://www4.ti.ch/poteri/giudiziario/giustizia-civile/giudici-di-pace' },
     miete: {
-      modus: 'liste', hinweis: '11 Uffici di conciliazione in materia di locazione',
+      modus: 'liste', hinweis: '11 Uffici di conciliazione in materia di locazione (Art. 5 LALoc) — PLZ/Gemeinde oben löst automatisch auf; Lugano/Bellinzona/Val Mara nach Ortsteil',
       stellen: [
-        A('Ufficio di conciliazione Chiasso', 'Piazza Bernasconi 1', '6830 Chiasso', 'Chiasso/Balerna/Breggia/Coldrerio/Morbio Inf./Vacallo'),
-        // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
-        A('Ufficio di conciliazione Mendrisio', 'Via Municipio 13', '6850 Mendrisio', 'Mendrisiotto (übrige)', undefined, 'https://mendrisio.ch/en/home/a-proposito-di-mendrisio/chi-siamo/dicasteri-e-uffici/dicastero-istituzioni-e-risorse/ufficio-conciliazione.html'),
-        // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
-        A('Ufficio di conciliazione Lugano (Est/Ovest)', 'Via Sala 13', '6963 Pregassona', 'Lugano', undefined, 'https://www.lugano.ch/la-mia-citta/sportelli-in-citta/ufficio-conciliazione/'),
-        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — amtliche Comune-Seite (nennt Stelle; dort Adresse Contrada Nuova 3)
-        A('Ufficio di conciliazione Agno', 'Piazza Colonnello Vicari 1', '6982 Agno', 'Malcantone', undefined, 'https://www.agno.ch/index.php?node=395&lng=1&vis=1&rif=2392173537'),
-        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — amtliche Comune-Seite
-        A('Ufficio di conciliazione Massagno', 'Via Motta 53', '6900 Massagno', 'Massagno/Umgebung', undefined, 'https://www.massagno.ch/Ufficio-conciliazione-in-materia-di-locazione'),
-        // url aus schlichtungsbehoerden-ti-vs-gr-vollerfassung.md (Stand 5.6.2026)
-        A('Ufficio di conciliazione Locarno', 'Via Trevani 1a', '6600 Locarno', 'Locarnese', undefined, 'https://www.locarno.ch/it/ufficio-conciliazione-in-materia-di-locazione'),
-        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — amtliche Comune-Seite
-        A('Ufficio di conciliazione Minusio', 'Via San Gottardo 60, CP 1670', '6648 Minusio', 'Minusio/Umgebung', undefined, 'https://www.minusio.ch/uc'),
-        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — amtliche Comune-Seite Bellinzona (führt Uffici Nr. 9/10/11)
-        A('Ufficio di conciliazione Bellinzona', 'Via Lugano 1, CP 2694', '6501 Bellinzona', 'Bellinzona', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
-        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — dieselbe Bellinzona-Seite führt Ufficio Nr. 10 Giubiasco
-        A('Ufficio di conciliazione Giubiasco', 'Piazza Grande 3', '6512 Giubiasco', 'Giubiasco/Umgebung', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
-        // url: Erstrecherche 6.6.2026 (WebFetch verifiziert) — dieselbe Bellinzona-Seite führt Ufficio Nr. 11 Biasca
-        A('Ufficio di conciliazione Biasca', 'Via Lucomagno 14', '6710 Biasca', 'Tre Valli', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
+        // Località-Vollerhebung 12.6.2026 (ti.ch id=29229, 168/168; Dossier
+        // schlichtungsaemter-gemeindezuordnung.md §51) — Namen/Adressen
+        // identisch mit dem TI_MIETE-Register (Auto-Auflösung).
+        A('Ufficio di conciliazione in materia di locazione n. 1 — Chiasso', 'c/o Municipio, Piazza Bernasconi 1', '6830 Chiasso', 'Chiasso, Balerna, Breggia, Coldrerio, Morbio Inferiore, Vacallo'),
+        A('Ufficio di conciliazione in materia di locazione n. 2 — Mendrisio', 'Via Municipio 13', '6850 Mendrisio', 'übriges Mendrisiotto inkl. Melano/Rovio (Val Mara)', undefined, 'https://mendrisio.ch/en/home/a-proposito-di-mendrisio/chi-siamo/dicasteri-e-uffici/dicastero-istituzioni-e-risorse/ufficio-conciliazione.html'),
+        A('Ufficio di conciliazione in materia di locazione n. 3 — Lugano Ovest', 'Via Sala 13', '6963 Pregassona', 'Lugano: Zentrum und Westquartiere', undefined, 'https://www.lugano.ch/la-mia-citta/sportelli-in-citta/ufficio-conciliazione/'),
+        A('Ufficio di conciliazione in materia di locazione n. 4 — Lugano Est', 'Via Sala 13', '6963 Pregassona', 'Lugano: Ostquartiere inkl. Ex-Sonvico/Valcolla', undefined, 'https://www.lugano.ch/la-mia-citta/sportelli-in-citta/ufficio-conciliazione/'),
+        // Adress-KORREKTUR 12.6.2026 (amtliche Località-Suche): Contrada
+        // Nuova 3 — die agno.ch-Seite nannte sie schon am 6.6.2026; der
+        // bisherige Eintrag führte die Giudicatura-Adresse (Piazza Vicari).
+        A('Ufficio di conciliazione in materia di locazione n. 5 — Agno', 'Contrada Nuova 3', '6982 Agno', 'Malcantone inkl. Lema/Tresa, Maroggia (Val Mara), Bissone, Sorengo', undefined, 'https://www.agno.ch/index.php?node=395&lng=1&vis=1&rif=2392173537'),
+        A('Ufficio di conciliazione in materia di locazione n. 6 — Massagno', 'c/o Municipio, Via Motta 53', '6900 Massagno', 'Massagno, Vedeggio/Capriasca (u. a. Monteceneri)', undefined, 'https://www.massagno.ch/Ufficio-conciliazione-in-materia-di-locazione'),
+        A('Ufficio di conciliazione in materia di locazione n. 7 — Locarno', 'Via Trevani 1a', '6600 Locarno', 'Locarno, Losone, Brissago, Centovalli, Onsernone, Terre di Pedemonte', undefined, 'https://www.locarno.ch/it/ufficio-conciliazione-in-materia-di-locazione'),
+        A('Ufficio di conciliazione in materia di locazione n. 8 — Minusio', 'Via San Gottardo 60, CP 1670', '6648 Minusio', 'Minusio, Ascona, Muralto, Gambarogno, Verzasca, Vallemaggia', undefined, 'https://www.minusio.ch/uc'),
+        A('Ufficio di conciliazione in materia di locazione n. 9 — Bellinzona', 'Via Lugano 1, CP 2694', '6501 Bellinzona', 'Bellinzona: Kernstadt', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
+        A('Ufficio di conciliazione in materia di locazione n. 10 — Bellinzona (quartiere di Giubiasco)', 'Piazza Grande 3', '6512 Giubiasco', 'Bellinzona-Süd-Quartiere, Arbedo-Castione, Cadenazzo, Isone, Lumino, Sant’Antonino', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
+        A('Ufficio di conciliazione in materia di locazione n. 11 — Biasca', 'Via Lucomagno 14', '6710 Biasca', 'Tre Valli (Riviera, Blenio, Leventina) inkl. Quartier Claro', undefined, 'https://www.bellinzona.ch/Ufficio-di-conciliazione-c0723c00'),
       ],
     },
   },

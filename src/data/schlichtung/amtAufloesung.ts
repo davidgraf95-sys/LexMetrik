@@ -73,8 +73,12 @@ export async function amtFuer(kanton: Kanton, gemeinde: string): Promise<Schlich
  *  ZPO; Register-Schlüssel «XX_MIETE», Vollerhebung 11.6.2026 — Dossier
  *  §§41–47): VD 10 Commissions préfectorales · FR 3 Bezirks-Gruppen ·
  *  GR 11 je Region · SZ 6 Bezirke · AG 11 Bezirke · SG 7 Gerichtskreise ·
- *  TG 80 kommunale (1:1). */
-export const MIETE_AMT_KANTONE: readonly Kanton[] = ['VD', 'FR', 'GR', 'SZ', 'AG', 'SG', 'TG', 'ZH', 'SO', 'JU', 'BE'] as const;
+ *  TG 80 kommunale (1:1).
+ *  TI (Vollerhebung 12.6.2026, Dossier §51): 11 Uffici di conciliazione
+ *  in materia di locazione (Art. 5 LALoc) — drei Gemeinden liefern null
+ *  (Lugano n. 3/4 · Bellinzona n. 9/10/11 · Val Mara n. 5/2): dort bietet
+ *  die UI die Ortsteil-Wahl an (tiMieteKandidaten, tiAmt.ts). */
+export const MIETE_AMT_KANTONE: readonly Kanton[] = ['VD', 'FR', 'GR', 'SZ', 'AG', 'SG', 'TG', 'ZH', 'SO', 'JU', 'BE', 'TI'] as const;
 
 /** BE: die vier regionalen Schlichtungsbehörden amten AUCH paritätisch für
  *  Miete (kein eigenes Register nötig) — Alias aufs ordentliche Register. */

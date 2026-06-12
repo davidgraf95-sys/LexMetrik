@@ -185,3 +185,26 @@ Quelle: [justiz-gr.ch – Vermittlerämter](https://www.justiz-gr.ch/schlichtung
   Daten waren bereits korrekt. TI Circolo Bellinzona ENTSCHIEDEN:
   Sitz Piazza Grande 3, 6512 Giubiasco (Nebenbüro Bellinzona).
 
+
+## NACHTRAG TI-MIETE (12.6.2026): GEMEINDESCHARFE ZUORDNUNG ERHOBEN — VERDRAHTET
+
+Der offene Punkt aus §1b («Genaue Zuständigkeitskarte beim Kanton
+bestätigen») ist GELÖST: Die Zuordnung ist amtlich doppelt belegt —
+**Art. 5 LALoc** (RL/TI 3.3.2.1.4, elf Uffici mit gesetzlicher
+giurisdizione, Fassung 1.7.2005) und die **amtliche Località-Suche der
+Locazione-Seite** (ti.ch id=29229), am 12.6.2026 vollerhoben (168/168
+Optionen). Die Località-Suche als Praxis-Quelle geht dem 2005er-Wortlaut
+vor (Fusions-Stand; Ex-Circolo Sonvico → Ufficio n. 4 Lugano Est statt
+Massagno; Quartier Claro → n. 11 Biasca). Details, Fusions-Abbildungen
+und die Generator-Tabelle: schlichtungsaemter-gemeindezuordnung.md §51.
+Damit ist TI im Miete-Register (TI_MIETE, 97 Gemeinden) + Ortsteil-Wahl
+für Lugano (n. 3/4), Bellinzona (n. 9/10/11) und Val Mara (n. 5/2) —
+der LETZTE Kanton ohne Miete-Auto-Auflösung ist geschlossen
+(Endstand 12/12 Register + 13 zentral + NE-Wahl).
+Korrekturen aus der Erhebung: **Agno neu Contrada Nuova 3** (Tabelle
+§1b überholt); «Lugano est/ovest» sind ZWEI Uffici (n. 3/n. 4) am selben
+Standort Via Sala 13. Die 11er-Liste der Erstrecherche war damit RICHTIG
+(inkl. Chiasso) — die «9 physische Standorte»-Lesart ist überholt:
+10 Standorte, 11 Uffici. Nachfass-Stand Giudicature-Datenlücken
+(Ambrì/Pianezzo/S. Antonio/Torre): am 12.6.2026 unverändert leer beim
+Kanton; Auflösung über die Muttergemeinden bleibt massgeblich.

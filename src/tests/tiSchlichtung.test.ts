@@ -105,3 +105,68 @@ describe('TI: PLZ-Ketten', () => {
     expect((await tiKandidaten(haupt.gemeinde))?.length).toBe(3);
   });
 });
+
+// ─── TI-Miete (12.6.2026, Dossier §51) ───────────────────────────────────────
+// Quelle: amtliche Località-Suche locazione (168/168 Antworten); Art. 5
+// LALoc (RL/TI 3.3.2.1.4). 97 Gemeinden eindeutig je Ufficio; Lugano/
+// Bellinzona/Val Mara liegen in mehreren Uffici → tiMieteKandidaten.
+
+describe('TI-Miete: Generator-Stand (11 Uffici, 97 eindeutige Gemeinden)', () => {
+  const tiMiete = (aemterKantone as Record<string, { aemter: { name: string; strasse: string; plzOrt: string }[]; gemeinden: Record<string, number> }>).TI_MIETE;
+  it('11 Uffici, 97 Gemeinde-Einträge, jedes Amt mit PLZ-Ort', () => {
+    expect(tiMiete.aemter.length).toBe(11);
+    expect(Object.keys(tiMiete.gemeinden).length).toBe(97);
+    for (const a of tiMiete.aemter) expect(a.plzOrt, a.name).toMatch(/^\d{4} /);
+  });
+  it('Mehr-Uffici-Gemeinden sind bewusst NICHT in der Auto-Zuordnung', () => {
+    for (const g of ['Lugano', 'Bellinzona', 'Val Mara']) expect(tiMiete.gemeinden[g], g).toBeUndefined();
+  });
+  it('alle Kandidaten-Amtsnamen der Ortsteil-Wahl existieren im Register', async () => {
+    const { TI_MIETE_MEHRDEUTIG } = await import('../data/schlichtung/tiAmt');
+    const namen = new Set(tiMiete.aemter.map((a) => a.name));
+    for (const [g, liste] of Object.entries(TI_MIETE_MEHRDEUTIG)) {
+      for (const k of liste) expect(namen.has(k.amtName), `${g}: ${k.amtName}`).toBe(true);
+    }
+  });
+  it('Deckung: Miete-Register + Mehrdeutige = ordentliches Register + dessen Mehrdeutige (alle 100 Gemeinden)', () => {
+    const miete = new Set([...Object.keys(tiMiete.gemeinden), 'Lugano', 'Bellinzona', 'Val Mara']);
+    const ordentlich = new Set([...Object.keys(ti.gemeinden), 'Lugano', 'Lema', 'Tresa']);
+    expect([...miete].sort()).toEqual([...ordentlich].sort());
+    expect(miete.size).toBe(100);
+  });
+});
+
+describe('TI-Miete: Gemeinde → Ufficio (Empirie, amtliche Antworten 12.6.2026)', () => {
+  it('eindeutige Gemeinden lösen direkt auf — inkl. Fusions-Sonderfälle', async () => {
+    const { mieteAmtFuer } = await import('../data/schlichtung/amtAufloesung');
+    expect((await mieteAmtFuer('TI', 'Chiasso'))?.name).toContain('n. 1');
+    expect((await mieteAmtFuer('TI', 'Ascona'))?.name).toContain('n. 8');
+    // Verzasca (Fusion 2020) und Giornico (deckt Ex-Bodio) — Selektor-
+    // Vorfusions-Einträge auf den aktuellen Bestand abgebildet
+    expect((await mieteAmtFuer('TI', 'Verzasca'))?.name).toContain('n. 8');
+    expect((await mieteAmtFuer('TI', 'Giornico'))?.name).toContain('n. 11');
+    // Lema/Tresa: ordentlich mehrdeutig, für MIETE aber eindeutig (n. 5)
+    expect((await mieteAmtFuer('TI', 'Lema'))?.name).toContain('n. 5');
+    expect((await mieteAmtFuer('TI', 'Tresa'))?.name).toContain('n. 5');
+    // Adress-Korrektur Agno (Contrada Nuova 3, Località-Suche 12.6.2026)
+    expect((await mieteAmtFuer('TI', 'Agno'))?.strasse).toBe('Contrada Nuova 3');
+  });
+  it('Mehr-Uffici-Gemeinden: kein Auto-Treffer, Ortsteil-Kandidaten greifen', async () => {
+    const { mieteAmtFuer } = await import('../data/schlichtung/amtAufloesung');
+    const { tiMieteKandidaten } = await import('../data/schlichtung/tiAmt');
+    expect(await mieteAmtFuer('TI', 'Lugano')).toBeNull();
+    expect((await tiMieteKandidaten('Lugano'))!.map((k) => k.name)).toEqual([
+      'Ufficio di conciliazione in materia di locazione n. 3 — Lugano Ovest',
+      'Ufficio di conciliazione in materia di locazione n. 4 — Lugano Est',
+    ]);
+    // Bellinzona: Kern → n. 9, Süd-Quartiere → n. 10, Claro → n. 11
+    const bellinzona = (await tiMieteKandidaten('bellinzona'))!; // case-insensitiv
+    expect(bellinzona.length).toBe(3);
+    expect(bellinzona[2].kreise).toBe('Claro');
+    // Val Mara quer durch die Fusion: Maroggia → Agno, Melano/Rovio → Mendrisio
+    const valMara = (await tiMieteKandidaten('Val Mara'))!;
+    expect(valMara.map((k) => k.plzOrt)).toEqual(['6982 Agno', '6850 Mendrisio']);
+    // eindeutige Gemeinden liefern KEINE Kandidaten (mieteAmtFuer greift)
+    expect(await tiMieteKandidaten('Ascona')).toBeNull();
+  });
+});

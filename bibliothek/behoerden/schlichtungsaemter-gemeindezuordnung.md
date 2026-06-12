@@ -1115,3 +1115,63 @@ Quelle: jura.ch/JUST Sammelseite «Droit du travail et du bail» (verifiziert
 | Commission de conciliation District de Delémont | Hôtel-de-Ville, Case postale | 2800 Delémont | Delémont, Moutier | https://www.jura.ch/JUST/Renseignements-juridiques/Droit-du-travail-et-du-bail/Droit-du-travail-et-du-bail.html |
 | Commission de conciliation District de Porrentruy | Rue de la Roche-de-Mars 5 | 2900 Porrentruy | Porrentruy | https://www.jura.ch/JUST/Renseignements-juridiques/Droit-du-travail-et-du-bail/Droit-du-travail-et-du-bail.html |
 | Commission de conciliation Franches-Montagnes | Au Village 21c | 2360 Le Bémont | Franches-Montagnes | https://www.jura.ch/JUST/Renseignements-juridiques/Droit-du-travail-et-du-bail/Droit-du-travail-et-du-bail.html |
+
+## 51. TI-MIETE — 11 Uffici di conciliazione in materia di locazione (Art. 5 LALoc; Vollerhebung 12.6.2026)
+
+**Quelle + Stand:** Amtliche Località-Suche der Locazione-Seite (www4.ti.ch,
+TYPO3-Endpunkt id=29229), Vollerhebung 12.6.2026: alle 168 distinkten
+Località-Optionen einzeln abgefragt (168/168 Antworten). Rechtsgrundlage:
+Art. 5 der Legge di applicazione delle norme federali in materia di
+locazione … (LALoc, RL/TI 3.3.2.1.4, Fassung in Kraft seit 1.7.2005) —
+elf Uffici mit gesetzlich definierter giurisdizione. **Die PRAXIS-Quelle
+(Località-Suche) geht vor dem Gesetzeswortlaut von 2005:** sie bildet die
+Gemeindefusionen ab und weicht punktuell ab (Ex-Circolo Sonvico heute bei
+Ufficio n. 4 Lugano Est, nicht wie Art. 5 lit. f bei Massagno; Claro —
+seit 2017 Quartier von Bellinzona — bei Ufficio n. 11 Biasca).
+
+**Methodik/Befunde:**
+1. 8 Località-Optionen liefern den CMS-Platzhalter `###NOME_UFFICIO###`
+   (kantonale Datenlücke: Ambrì, Figino, Lodano, Magadino, Malvaglia,
+   San Nazzaro, Torre, Vaglio) — alles Fraktionen; ihre Muttergemeinden
+   (Quinto, Lugano, Maggia, Gambarogno, Serravalle, Blenio, Capriasca)
+   sind über die eigene Option eindeutig belegt.
+2. Der Selektor führt teils VOR-Fusions-Gemeinden; Abbildung auf den
+   aktuellen Bestand dokumentiert (u. a. Gresso/Isorno/Mosogno/
+   Vergeletto → Onsernone · Astano/Bedigliora/Curio/Miglieglia/
+   Novaggio → Lema · Maroggia/Melano/Rovio → Val Mara · Bodio → Giornico
+   und Prato Leventina → Quinto, beide PLZ-verifiziert am amtlichen
+   Ortschaftenverzeichnis · Sobrio → Faido · Cresciano/Iragna/Lodrino/
+   Osogna → Riviera · Vogorno u. a. → Verzasca).
+3. **Drei amts-mehrdeutige Gemeinden** (Ortsteil-Wahl in tiAmt.ts,
+   NICHT in der Tabelle): **Lugano** (n. 3 Ovest ↔ n. 4 Est — Est umfasst
+   heute auch die Ex-Sonvico-Quartiere) · **Bellinzona** (Kernstadt →
+   n. 9; Quartiere Camorino, Giubiasco, Gnosca, Gorduno, Gudo, Moleno,
+   Monte Carasso, Pianezzo, Preonzo, Sant'Antonio, Sementina → n. 10;
+   Quartier Claro → n. 11) · **Val Mara** (Maroggia → n. 5 Agno;
+   Melano, Rovio → n. 2 Mendrisio).
+4. Adress-Korrektur aus der Erhebung: **Agno neu Contrada Nuova 3**
+   (vorher Piazza Colonnello Vicari 1; agno.ch nannte die Contrada Nuova
+   bereits am 6.6.2026). Chiasso als Miet-Ufficio amtlich BESTÄTIGT
+   (eigene Selektor-Antworten; «presso il Municipio»).
+5. Deckung: 97 eindeutige + 3 mehrdeutige = alle 100 aktuellen
+   TI-Gemeinden (Invarianten-Test in schlichtungsstellen.test.ts).
+
+**Pflegebedarf:** wie Giudicature (jährlicher Behörden-Durchgang); die
+8 Platzhalter-Località gelegentlich neu abfragen (Nachfass-Stand
+12.6.2026: auch die 4 Giudicature-Lücken Ambrì/Pianezzo/S. Antonio/Torre
+weiterhin offen beim Kanton). **Abnahme-Status:** Erstrecherche
+vollerhoben an der amtlichen Quelle; fachliche Abnahme David ausstehend.
+
+| Amt | Strasse | PLZ Ort | Gemeinden | URL |
+| --- | --- | --- | --- | --- |
+| Ufficio di conciliazione in materia di locazione n. 1 — Chiasso | c/o Municipio, Piazza Bernasconi 1 | 6830 Chiasso | Balerna, Breggia, Chiasso, Coldrerio, Morbio Inferiore, Vacallo | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 2 — Mendrisio | Via Municipio 13 | 6850 Mendrisio | Arogno, Brusino Arsizio, Castel San Pietro, Mendrisio, Novazzano, Riva San Vitale, Stabio | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 3 — Lugano Ovest | Via Sala 13 | 6963 Pregassona |  | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 4 — Lugano Est | Via Sala 13 | 6963 Pregassona |  | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 5 — Agno | Contrada Nuova 3 | 6982 Agno | Agno, Alto Malcantone, Aranno, Bioggio, Bissone, Cademario, Caslano, Collina d'Oro, Grancia, Lema, Magliaso, Manno, Melide, Morcote, Muzzano, Neggio, Paradiso, Pura, Sorengo, Tresa, Vernate, Vico Morcote | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 6 — Massagno | c/o Municipio, Via Motta 53 | 6900 Massagno | Bedano, Cadempino, Canobbio, Capriasca, Comano, Cureglia, Gravesano, Lamone, Massagno, Mezzovico-Vira, Monteceneri, Origlio, Ponte Capriasca, Porza, Savosa, Torricella-Taverne, Vezia | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 7 — Locarno | Via Trevani 1a | 6600 Locarno | Brissago, Centovalli, Locarno, Losone, Onsernone, Ronco sopra Ascona, Terre di Pedemonte | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 8 — Minusio | Via San Gottardo 60, Casella postale 1670 | 6648 Minusio | Ascona, Avegno Gordevio, Bosco/Gurin, Brione sopra Minusio, Campo (Vallemaggia), Cerentino, Cevio, Cugnasco-Gerra, Gambarogno, Gordola, Lavertezzo, Lavizzara, Linescio, Maggia, Mergoscia, Minusio, Muralto, Orselina, Tenero-Contra, Verzasca | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 9 — Bellinzona | Via Lugano 1, Casella postale 2694 | 6501 Bellinzona |  | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 10 — Bellinzona (quartiere di Giubiasco) | Piazza Grande 3 | 6512 Giubiasco | Arbedo-Castione, Cadenazzo, Isone, Lumino, Sant'Antonino | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |
+| Ufficio di conciliazione in materia di locazione n. 11 — Biasca | Via Lucomagno 14 | 6710 Biasca | Acquarossa, Airolo, Bedretto, Biasca, Blenio, Dalpe, Faido, Giornico, Personico, Pollegio, Quinto, Riviera, Serravalle | https://www4.ti.ch/poteri/giudiziario/locazione/la-locazione |

@@ -34,7 +34,7 @@ import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { AdresseBundSuche } from '../ui/AdresseBundSuche';
 import { zuerichAemterFuerPlz, zuerichAmtFuerStrasse, zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
-import { tiKandidaten } from '../../data/schlichtung/tiAmt';
+import { tiKandidaten, tiMieteKandidaten } from '../../data/schlichtung/tiAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
 import { behoerdeAlsBlock } from '../../lib/vorlagen/behoerden';
 import { sgPrefillKodieren } from '../../lib/vorlagen/schlichtungsgesuchBs';
@@ -271,6 +271,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   // Miete-Register (Vollerhebung 11.6.2026): paritätische Miet-Stelle der
   // Gemeinde — eigener Lookup, Anzeige nur im paritaetisch_miete-Zweig.
   const [mieteAmt, setMieteAmt] = useState<SchlichtungsAmt | null>(null);
+  // TI-Miete (12.6.2026): Lugano/Bellinzona/Val Mara erstrecken sich über
+  // mehrere Uffici di conciliazione — Ortsteil-Kandidaten (Dossier §51).
+  const [mieteKandidaten, setMieteKandidaten] = useState<ZhKreisAmt[] | null>(null);
   // anteilProzent: nur bei PLZ-eingegrenzten Stadt-Zürich-Treffern gesetzt
   // (Kreis-Automatik 12.6.2026); TI-Ortsteil-Kandidaten führen keinen.
   const [zhKreise, setZhKreise] = useState<(ZhKreisAmt & { anteilProzent?: number })[] | null>(null);
@@ -282,15 +285,19 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   const [zhStrassenInfo, setZhStrassenInfo] = useState<'strasse' | 'nummer_noetig' | 'unbekannt' | null>(null);
   useEffect(() => {
     let aktiv = true;
-    const ladeMiete = async (): Promise<SchlichtungsAmt | null> => {
+    const ladeMiete = async (): Promise<{ amt: SchlichtungsAmt | null; kandidaten: ZhKreisAmt[] | null }> => {
       const kanton = f.kanton;
       const gemeinde = f.gemeinde.trim();
-      if (kanton === '' || !MIETE_AMT_KANTONE.includes(kanton) || gemeinde === '') return null;
-      return mieteAmtFuer(kanton, gemeinde);
+      if (kanton === '' || !MIETE_AMT_KANTONE.includes(kanton) || gemeinde === '') return { amt: null, kandidaten: null };
+      if (kanton === 'TI') {
+        const kandidaten = await tiMieteKandidaten(gemeinde);
+        if (kandidaten) return { amt: null, kandidaten };
+      }
+      return { amt: await mieteAmtFuer(kanton, gemeinde), kandidaten: null };
     };
     ladeMiete()
-      .then((m) => { if (aktiv) setMieteAmt(m); })
-      .catch(() => { if (aktiv) setMieteAmt(null); });
+      .then((m) => { if (aktiv) { setMieteAmt(m.amt); setMieteKandidaten(m.kandidaten); } })
+      .catch(() => { if (aktiv) { setMieteAmt(null); setMieteKandidaten(null); } });
     const lade = async (): Promise<{ amt: SchlichtungsAmt | null; kreise: ZhKreisAmt[] | null; zhInfo?: 'strasse' | 'nummer_noetig' | 'unbekannt' | null }> => {
       const kanton = f.kanton;
       const gemeinde = f.gemeinde.trim();
@@ -1223,6 +1230,21 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         {[mieteAmt.name, mieteAmt.strasse, mieteAmt.plzOrt].filter(Boolean).join('\n')}
                       </p>
                       <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (Miete-Register, Vollerhebung 11.6.2026).</p>
+                    </div>
+                  )}
+                  {/* TI-Miete (12.6.2026): Lugano/Bellinzona/Val Mara liegen
+                      in mehreren Uffici — Ortsteil/Quartier des Mietobjekts
+                      entscheidet (Dossier §51). */}
+                  {r.schlichtung.behoerdeTyp === 'paritaetisch_miete' && f.kanton === 'TI' && !mieteAmt && mieteKandidaten && (
+                    <div className="space-y-1.5 border-b border-line pb-2">
+                      <p className="text-xs text-ink-500">Die Gemeinde {f.gemeinde.trim()} erstreckt sich über mehrere Uffici di conciliazione — massgeblich ist der ORTSTEIL/das Quartier des Mietobjekts:</p>
+                      <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
+                        {mieteKandidaten.map((a) => (
+                          <li key={a.kreise} className="text-body-s text-ink-800">
+                            <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}<br />{[a.strasse, a.plzOrt].filter(Boolean).join(', ')}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   )}
                   {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500">{recherche.aufloesung.hinweis} — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}

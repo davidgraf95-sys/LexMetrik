@@ -23,7 +23,16 @@ describe('Miete-Register: Vollständigkeit', () => {
     });
   }
   it('MIETE_AMT_KANTONE deckt exakt die Register (+BE-Alias aufs ordentliche Register)', () => {
-    expect([...MIETE_AMT_KANTONE].sort()).toEqual(['AG', 'BE', 'FR', 'GR', 'JU', 'SG', 'SO', 'SZ', 'TG', 'VD', 'ZH']);
+    // Deklariert 12.6.2026: +TI (Località-Vollerhebung locazione, Dossier §51)
+    expect([...MIETE_AMT_KANTONE].sort()).toEqual(['AG', 'BE', 'FR', 'GR', 'JU', 'SG', 'SO', 'SZ', 'TG', 'TI', 'VD', 'ZH']);
+  });
+  it('TI_MIETE (12.6.2026): 11 Uffici, 97 Gemeinden — 3 Uffici NUR über die Ortsteil-Wahl erreichbar', () => {
+    // Sonderfall zum «alle Stellen erreicht»-Muster: die Uffici n. 3/4
+    // (Lugano) und n. 9 (Bellinzona-Kern) hängen an Mehr-Uffici-Gemeinden
+    // und sind über TI_MIETE_MEHRDEUTIG erreichbar (tiSchlichtung.test.ts).
+    expect(reg.TI_MIETE.aemter.length).toBe(11);
+    expect(Object.keys(reg.TI_MIETE.gemeinden).length).toBe(97);
+    expect(new Set(Object.values(reg.TI_MIETE.gemeinden)).size).toBe(8);
   });
 });
 

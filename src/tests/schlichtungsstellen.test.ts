@@ -15,8 +15,10 @@ describe('Schlichtungsstellen — Vollständigkeit & Integrität', () => {
       // Deklarierte Anpassung 11.6.2026: VD (Streitwert-Weiche), TI
       // (Località-Vollerhebung), SO (§ 5/§ 10-GO-Weiche) und NE (Miete
       // paritätisch, OJN) neu verifiziert — übrige Kantone bleiben am
-      // Recherche-Stand 5.6.2026 festgenagelt.
-      expect(e.stand, k).toBe(['VD', 'TI', 'SO', 'NE', 'VS', 'FR', 'GR', 'SZ', 'AG', 'SG', 'TG'].includes(k) ? '11.6.2026' : '5.6.2026');
+      // Recherche-Stand 5.6.2026 festgenagelt. TI seit 12.6.2026 (Miete-
+      // Località-Vollerhebung, Dossier §51).
+      expect(e.stand, k).toBe(k === 'TI' ? '12.6.2026'
+        : ['VD', 'SO', 'NE', 'VS', 'FR', 'GR', 'SZ', 'AG', 'SG', 'TG'].includes(k) ? '11.6.2026' : '5.6.2026');
       expect(['zentral', 'liste', 'verzeichnis']).toContain(e.ordentlich.modus);
     }
   });
@@ -49,12 +51,15 @@ describe('Schlichtungsstellen — Stichproben (zweifach geprüfte Werte)', () =>
     const zg = SCHLICHTUNGSSTELLEN.ZG.miete!;
     if (zg.modus === 'zentral') expect(zg.stelle.plzOrt).toBe('6300 Zug');
   });
-  it('TI Miete: 10 Listen-Einträge inkl. eigenem Chiasso (11 Standorte, Lugano Est/Ovest zusammen)', () => {
+  it('TI Miete: 11 Listen-Einträge = Art.-5-LALoc-Uffici (deklariert 12.6.2026: Lugano Est/Ovest getrennt wie das Register)', () => {
     const ti = SCHLICHTUNGSSTELLEN.TI.miete!;
     expect(ti.modus).toBe('liste');
     if (ti.modus === 'liste') {
-      expect(ti.stellen.length).toBe(10);
+      expect(ti.stellen.length).toBe(11);
       expect(ti.stellen.some((s) => s.plzOrt.includes('Chiasso'))).toBe(true);
+      // Adress-Korrektur 12.6.2026 (amtliche Località-Suche): Agno neu
+      // Contrada Nuova 3 (vorher fälschlich die Giudicatura-Adresse).
+      expect(ti.stellen.find((s) => s.plzOrt.includes('Agno'))?.strasse).toBe('Contrada Nuova 3');
     }
   });
   it('GR ordentlich: 11 Vermittlerämter (Imboden Postfach 667 — Korrektur 10.6.2026, Tamins/Domat-Ems)', () => {
