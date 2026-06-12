@@ -34,11 +34,17 @@ export function namensKandidaten(gemeinde: string, kanton: string): string[] {
   return [...out];
 }
 
-interface ZhDaten { gemeinden: Record<string, ZhAmt>; zuerichKreise: ZhKreisAmt[] }
+interface ZhDaten {
+  gemeinden: Record<string, ZhAmt>;
+  zuerichKreise: ZhKreisAmt[];
+  /** Stadt Zürich: PLZ → [Stadtkreis, amtlicher Adressenanteil %][] aus den
+   *  Gebäudeadressen der Stadt (zh-kreise-generieren.ts, 12.6.2026). */
+  zuerichPlzKreise: Record<string, [string, number][]>;
+}
 let cache: ZhDaten | null = null;
 
 async function lade(): Promise<ZhDaten> {
-  if (!cache) cache = (await import('./zhFriedensrichter.json')).default as ZhDaten;
+  if (!cache) cache = (await import('./zhFriedensrichter.json')).default as unknown as ZhDaten;
   return cache;
 }
 
@@ -65,4 +71,48 @@ export async function zhFriedensrichterFuer(gemeinde: string): Promise<ZhAmt | n
 
 export async function zuerichKreisAemter(): Promise<ZhKreisAmt[]> {
   return (await lade()).zuerichKreise;
+}
+
+// ── Stadt Zürich: PLZ → Kreis-Amt (Kreis-Automatik, 12.6.2026) ──────────────
+// Verifikationsauftrag David 11.6.2026: Stadt-PLZ sind NICHT kreisscharf
+// (16 von 30 Stadt-PLZ überlappen mehrere Kreise) — dank der Ämter-Paarung
+// (1+2 · 3+9 · 4+5 · 6+10 · 7+8 · 11+12) sind viele PLZ trotzdem
+// AMTS-eindeutig. Der amtliche Adressenanteil reist mit (analog
+// plzVerzeichnis.json): die UI löst eindeutige PLZ automatisch auf und
+// grenzt mehrdeutige auf die in Frage kommenden Ämter ein. Keine Heuristik
+// (§2): vollständige Auszählung der realen amtlichen Gebäudeadressen.
+
+export interface ZhKreisAmtTreffer extends ZhKreisAmt {
+  /** Anteil der realen Gebäudeadressen der PLZ in den Kreisen dieses Amts
+   *  in Prozent (amtliche Vermessung Stadt Zürich, 1 Dezimale). */
+  anteilProzent: number;
+}
+
+/** Kreisnummern eines Kreis-Amts («Kreise 1 + 2» → ['1', '2']) — feste
+ *  Abbildung aus dem Datenbestand, kein Fuzzy-Matching. */
+function amtKreise(a: ZhKreisAmt): string[] {
+  return a.kreise.replace(/^Kreise\s+/, '').split('+').map((k) => k.trim());
+}
+
+/** Kreis-Ämter, in deren Kreisen reale Gebäudeadressen der PLZ liegen —
+ *  grösster Adressenanteil zuerst; null bei PLZ ohne Stadt-Zürich-Adressen
+ *  (dann gilt die volle Sechser-Wahl). Genau ein Treffer = amts-eindeutige
+ *  PLZ (Auto-Auflösung). */
+export async function zuerichAemterFuerPlz(plz: string): Promise<ZhKreisAmtTreffer[] | null> {
+  const d = await lade();
+  const kreise = d.zuerichPlzKreise[plz.trim()];
+  if (!kreise || kreise.length === 0) return null;
+  const treffer: ZhKreisAmtTreffer[] = [];
+  for (const amt of d.zuerichKreise) {
+    const eigene = amtKreise(amt);
+    const eigeneTreffer = kreise.filter(([k]) => eigene.includes(k));
+    // Aufnahme PRÄSENZ-basiert, nicht anteil-basiert: Kleinst-Anteile sind
+    // in der Quelle auf 0.0 gerundet (8032: 1 von 3392 Adressen im Kreis 8)
+    // — ein realer Treffer darf nicht an der Rundung verschwinden.
+    if (eigeneTreffer.length === 0) continue;
+    const anteil = eigeneTreffer.reduce((s, [, a]) => s + a, 0);
+    treffer.push({ ...amt, anteilProzent: Math.round(anteil * 10) / 10 });
+  }
+  if (treffer.length === 0) return null;
+  return treffer.sort((a, b) => b.anteilProzent - a.anteilProzent || a.kreise.localeCompare(b.kreise, 'de'));
 }

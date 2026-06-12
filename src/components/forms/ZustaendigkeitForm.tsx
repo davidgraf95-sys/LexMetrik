@@ -31,7 +31,7 @@ import { ERLASS_LINKS } from '../../data/erlassLinks';
 import { fahrplanSchritte } from '../../lib/zustaendigkeitFahrplan';
 import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzAufloesung';
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
-import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
+import { zuerichAemterFuerPlz, zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer, type SchlichtungsAmt } from '../../data/schlichtung/amtAufloesung';
 import { tiKandidaten } from '../../data/schlichtung/tiAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
@@ -270,7 +270,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   // Miete-Register (Vollerhebung 11.6.2026): paritätische Miet-Stelle der
   // Gemeinde — eigener Lookup, Anzeige nur im paritaetisch_miete-Zweig.
   const [mieteAmt, setMieteAmt] = useState<SchlichtungsAmt | null>(null);
-  const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
+  // anteilProzent: nur bei PLZ-eingegrenzten Stadt-Zürich-Treffern gesetzt
+  // (Kreis-Automatik 12.6.2026); TI-Ortsteil-Kandidaten führen keinen.
+  const [zhKreise, setZhKreise] = useState<(ZhKreisAmt & { anteilProzent?: number })[] | null>(null);
   useEffect(() => {
     let aktiv = true;
     const ladeMiete = async (): Promise<SchlichtungsAmt | null> => {
@@ -287,6 +289,16 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
       const gemeinde = f.gemeinde.trim();
       if (kanton === '' || !AMT_KANTONE.includes(kanton) || gemeinde === '') return { amt: null, kreise: null };
       if (kanton === 'ZH' && gemeinde.toLowerCase() === 'zürich') {
+        // Kreis-Automatik (12.6.2026): amts-eindeutige PLZ direkt auflösen,
+        // mehrdeutige auf die in Frage kommenden Kreis-Ämter eingrenzen
+        // (amtliche Gebäudeadressen der Stadt Zürich; Stadt-PLZ sind NICHT
+        // kreisscharf — Verifikation 12.6.2026). Ohne/unbekannte PLZ
+        // (z. B. Postfach-PLZ) wie bisher die volle Sechser-Wahl.
+        if (/^\d{4}$/.test(f.plz)) {
+          const treffer = await zuerichAemterFuerPlz(f.plz);
+          if (treffer && treffer.length === 1) return { amt: treffer[0], kreise: null };
+          if (treffer) return { amt: null, kreise: treffer };
+        }
         return { amt: null, kreise: await zuerichKreisAemter() };
       }
       // TI (11.6.2026): Lugano/Lema/Tresa liegen in mehreren Circoli —
@@ -309,7 +321,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
       .then((r) => { if (aktiv) { setAmt(r.amt); setZhKreise(r.kreise); } })
       .catch(() => { if (aktiv) { setAmt(null); setZhKreise(null); } });
     return () => { aktiv = false; };
-  }, [f.kanton, f.gemeinde, vdStufe, istArbeit, soGleicheGemeinde]);
+  }, [f.kanton, f.gemeinde, f.plz, vdStufe, istArbeit, soGleicheGemeinde]);
   const fehler: string[] = [];
   if (vermoegensrechtlich && streitwert === null) fehler.push('Streitwert angeben (oder «nicht vermögensrechtlich» wählen).');
   if (vermoegensrechtlich && streitwert !== null && (!Number.isFinite(streitwert) || streitwert < 0)) fehler.push('Streitwert muss eine Zahl ≥ 0 sein.');
@@ -1261,18 +1273,27 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         {/* strassenlose Ämter (TI: Breno/Onsernone) ohne Leerzeile */}
                         {[amt.name, amt.strasse, amt.plzOrt].filter(Boolean).join('\n')}
                       </p>
-                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + amtliches Ämterverzeichnis).</p>
+                      <p className="text-xs text-ink-500 mt-1">{f.kanton === 'ZH' && f.gemeinde.trim().toLowerCase() === 'zürich'
+                        ? `aufgelöst über PLZ ${f.plz} → Stadtkreis (amtliche Gebäudeadressen der Stadt Zürich + Ämterverzeichnis).`
+                        : `aufgelöst über ${f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde ${f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + amtliches Ämterverzeichnis).`}</p>
                     </div>
                   )}
                   {amtAufloesbar && zhKreise && (
                     <div className="space-y-1.5">
                       <p className="text-xs text-ink-500">{f.kanton === 'TI'
                         ? `Die Gemeinde ${f.gemeinde.trim()} erstreckt sich über mehrere Circoli — massgeblich ist der ORTSTEIL/das Quartier der beklagten Partei:`
-                        : 'Stadt Zürich: massgeblich ist der STADTKREIS der beklagten Partei — sechs Kreis-Ämter:'}</p>
+                        : zhKreise.some((a) => a.anteilProzent !== undefined)
+                          // Kreis-Automatik (12.6.2026): PLZ liegt in Kreisen
+                          // verschiedener Ämter — eingegrenzte Wahl mit
+                          // amtlichem Adressenanteil (Gebäudeadressen Stadt ZH).
+                          ? `Stadt Zürich: PLZ ${f.plz} liegt in mehreren Stadtkreisen — massgeblich ist der STADTKREIS der beklagten Partei (Anteil der Gebäudeadressen in Klammern):`
+                          : 'Stadt Zürich: massgeblich ist der STADTKREIS der beklagten Partei — sechs Kreis-Ämter:'}</p>
                       <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
                         {zhKreise.map((a) => (
                           <li key={a.kreise} className="text-body-s text-ink-800">
-                            <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}<br />{[a.strasse, a.plzOrt].filter(Boolean).join(', ')}
+                            <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}
+                            {a.anteilProzent !== undefined && <span className="text-ink-500 num"> ({a.anteilProzent < 0.1 ? '< 0.1' : a.anteilProzent} % der Adressen)</span>}
+                            <br />{[a.strasse, a.plzOrt].filter(Boolean).join(', ')}
                           </li>
                         ))}
                       </ul>

@@ -88,8 +88,16 @@ for (const z of kreisZeilen) {
   zuerich.push({ kreise: t[1].replace('Zürich ', ''), name: t[2], strasse: t[3], plzOrt: t[4] });
 }
 mkdirSync('src/data/schlichtung', { recursive: true });
+// zuerichPlzKreise (12.6.2026) wird vom Schwester-Generator
+// scripts/zh-kreise-generieren.ts gepflegt (Quelle: amtliche Gebäudeadressen
+// der Stadt Zürich) — bei einem Voll-Regen hier unverändert weitertragen,
+// sonst verlöre die PLZ→Stadtkreis-Automatik still ihre Datenbasis.
+let zuerichPlzKreise: unknown;
+try {
+  zuerichPlzKreise = (JSON.parse(readFileSync('src/data/schlichtung/zhFriedensrichter.json', 'utf-8')) as Record<string, unknown>).zuerichPlzKreise;
+} catch { /* Erstlauf ohne bestehende Datei */ }
 writeFileSync('src/data/schlichtung/zhFriedensrichter.json',
-  JSON.stringify({ gemeinden: zh, zuerichKreise: zuerich }));
+  JSON.stringify({ gemeinden: zh, zuerichKreise: zuerich, ...(zuerichPlzKreise !== undefined ? { zuerichPlzKreise } : {}) }));
 console.log(`ZH-Zuordnung: ${Object.keys(zh).length} Gemeinde-Einträge + ${zuerich.length} Stadt-Kreis-Ämter.`);
 
 // ── 3 · AG/SG/TG (+ später FR/ZG/AI/SZ/BL): Gemeinde → Amt ──────────────────

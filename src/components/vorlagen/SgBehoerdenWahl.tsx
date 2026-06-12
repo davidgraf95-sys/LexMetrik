@@ -6,7 +6,7 @@ import { hauptTreffer, plzAufloesen, type PlzTreffer } from '../../data/plz/plzA
 import { PlzGemeindeWahl } from '../ui/PlzGemeindeWahl';
 import { amtFuer, AMT_KANTONE, mieteAmtFuer, MIETE_AMT_KANTONE, vdAmtFuer } from '../../data/schlichtung/amtAufloesung';
 import { tiKandidaten } from '../../data/schlichtung/tiAmt';
-import { zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
+import { zuerichAemterFuerPlz, zuerichKreisAemter, type ZhKreisAmt } from '../../data/schlichtung/zhAmt';
 import { vdSchlichtungsStufe } from '../../lib/vdSchlichtung';
 
 // ─── Schlichtungsgesuch: Behörden-Auflösung für alle Kantone ────────────────
@@ -66,7 +66,9 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
   // massgeblich ist das Gebiet der beklagten Partei; bis zur Wahl wird null
   // gemeldet (Mängel-Gate hält den Export an).
   const [wahlSchluessel, setWahlSchluessel] = useState<{ kanton: Kanton; typ: string; stufe: string; idx: number }>({ kanton, typ, stufe: '', idx: -1 });
-  const [zhKreise, setZhKreise] = useState<ZhKreisAmt[] | null>(null);
+  // anteilProzent: nur bei PLZ-eingegrenzten Stadt-Zürich-Treffern gesetzt
+  // (Kreis-Automatik 12.6.2026); TI-Ortsteil-Kandidaten führen keinen.
+  const [zhKreise, setZhKreise] = useState<(ZhKreisAmt & { anteilProzent?: number })[] | null>(null);
   const [kreisIdx, setKreisIdx] = useState(0);
   // Bug-Check 11.6.2026 B2 + Nachschärfung Deploy-Check: amtZeilen tragen
   // den vollen erzeugenden Schlüssel (kanton|typ|vd-Stufe, wie
@@ -129,6 +131,18 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
       }
       if (typ !== 'ordentlich' || !AMT_KANTONE.includes(kanton) || g === '') return { amt: null, kreise: null, wahl };
       if (kanton === 'ZH' && g.toLowerCase() === 'zürich') {
+        // Kreis-Automatik (12.6.2026): amts-eindeutige PLZ direkt auflösen,
+        // mehrdeutige auf die in Frage kommenden Kreis-Ämter eingrenzen
+        // (grösster Adressenanteil zuerst → kreisIdx 0 ist vorausgewählt).
+        // Ohne/unbekannte PLZ (Postfach) wie bisher die volle Sechser-Wahl.
+        if (/^\d{4}$/.test(plz)) {
+          const treffer = await zuerichAemterFuerPlz(plz);
+          if (treffer && treffer.length === 1) {
+            const t = treffer[0];
+            return { amt: [t.name, t.strasse, t.plzOrt].filter(Boolean), amtUrl: t.url, kreise: null, wahl };
+          }
+          if (treffer) return { amt: null, amtUrl: undefined, kreise: treffer, wahl };
+        }
         return { amt: null, amtUrl: undefined, kreise: await zuerichKreisAemter(), wahl };
       }
       // TI (11.6.2026): Mehr-Circoli-Gemeinden → Ortsteil-Wahl (wie ZH-Kreise).
@@ -279,9 +293,14 @@ export function SgBehoerdenWahl({ kanton, typ = 'ordentlich', onAufgeloest, star
           )}
           {zhKreise && (
             <Field label={kanton === 'TI' ? 'Circolo nach Ortsteil wählen' : 'Stadt Zürich: Kreis-Amt wählen'}
-              hint={kanton === 'TI' ? 'die Gemeinde erstreckt sich über mehrere Circoli — massgeblich ist der Ortsteil der beklagten Partei' : 'massgeblich ist der Stadtkreis der beklagten Partei'}>
+              hint={kanton === 'TI' ? 'die Gemeinde erstreckt sich über mehrere Circoli — massgeblich ist der Ortsteil der beklagten Partei'
+                : zhKreise.some((k) => k.anteilProzent !== undefined)
+                  // Kreis-Automatik (12.6.2026): PLZ-eingegrenzte Wahl, das
+                  // Amt mit dem grössten Adressenanteil ist vorausgewählt.
+                  ? `die PLZ ${plz} liegt in mehreren Stadtkreisen — massgeblich ist der Stadtkreis der beklagten Partei; vorausgewählt ist das Amt mit dem grössten Adressenanteil`
+                  : 'massgeblich ist der Stadtkreis der beklagten Partei'}>
               <select className={inputCls} value={kreisIdx < zhKreise.length ? kreisIdx : 0} onChange={(e) => setKreisIdx(Number(e.target.value))}>
-                {zhKreise.map((k, i) => <option key={k.kreise} value={i}>{k.name} — {k.kreise}</option>)}
+                {zhKreise.map((k, i) => <option key={k.kreise} value={i}>{k.name} — {k.kreise}{k.anteilProzent !== undefined ? ` (${k.anteilProzent < 0.1 ? '< 0.1' : k.anteilProzent} % der Adressen)` : ''}</option>)}
               </select>
             </Field>
           )}

@@ -107,6 +107,50 @@ describe('PLZ-Auflösung (amtliches Ortschaftenverzeichnis) + ZH-Amt', () => {
     expect(await zhFriedensrichterFuer('Bern')).toBeNull();
     expect((await zuerichKreisAemter()).length).toBe(6);
   });
+  it('Stadt Zürich: PLZ → Kreis-Amt (Kreis-Automatik 12.6.2026, amtliche Gebäudeadressen)', async () => {
+    const { zuerichAemterFuerPlz, zuerichKreisAemter } = await import('../data/schlichtung/zhAmt');
+    // amts-eindeutig, kreisscharf: 8002 liegt ganz im Kreis 2 → Kreise 1 + 2
+    const t8002 = await zuerichAemterFuerPlz('8002');
+    expect(t8002).toHaveLength(1);
+    expect(t8002![0].kreise).toBe('Kreise 1 + 2');
+    expect(t8002![0].anteilProzent).toBe(100);
+    // kreis-übergreifend (Kreise 3 UND 9), aber amts-eindeutig dank Paarung
+    const t8055 = await zuerichAemterFuerPlz('8055');
+    expect(t8055).toHaveLength(1);
+    expect(t8055![0].kreise).toBe('Kreise 3 + 9');
+    expect(t8055![0].anteilProzent).toBe(100);
+    // amts-mehrdeutig: 8044 überwiegend Kreis 7, Randgebiet Kreis 6 —
+    // dominantes Amt zuerst (kreisIdx 0 = Vorauswahl in der UI)
+    const t8044 = await zuerichAemterFuerPlz('8044');
+    expect(t8044!.map((t) => t.kreise)).toEqual(['Kreise 7 + 8', 'Kreise 6 + 10']);
+    expect(t8044![0].anteilProzent).toBeGreaterThan(90);
+    // Rundungs-Schutz: 8032 führt EINE Adresse im Kreis 8 (Quell-Anteil auf
+    // 0.0 gerundet) — das Amt 7 + 8 bleibt präsenz-basiert erhalten und die
+    // 9 Kreis-1-Adressen machen 1 + 2 zum echten Zweit-Treffer.
+    const t8032 = await zuerichAemterFuerPlz('8032');
+    expect(t8032!.map((t) => t.kreise)).toEqual(['Kreise 7 + 8', 'Kreise 1 + 2']);
+    // ausserhalb der Stadt bzw. Postfach-/Fantasie-PLZ → null (Sechser-Wahl)
+    expect(await zuerichAemterFuerPlz('8400')).toBeNull();
+    expect(await zuerichAemterFuerPlz('8021')).toBeNull();
+    expect(await zuerichAemterFuerPlz('')).toBeNull();
+    // Daten-Integrität: die Kreis-Nummern der PLZ-Daten decken genau die
+    // Kreise 1–12 der sechs Ämter; Anteile je PLZ summieren auf ~100 %.
+    const aemter = await zuerichKreisAemter();
+    const amtsKreise = aemter.flatMap((a) => a.kreise.replace(/^Kreise\s+/, '').split('+').map((k) => k.trim()));
+    expect([...amtsKreise].sort((a, b) => Number(a) - Number(b))).toEqual(
+      ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']);
+    const roh = (await import('../data/schlichtung/zhFriedensrichter.json')).default as unknown as {
+      zuerichPlzKreise: Record<string, [string, number][]>;
+    };
+    expect(Object.keys(roh.zuerichPlzKreise).length).toBeGreaterThanOrEqual(24);
+    for (const [plz, kreise] of Object.entries(roh.zuerichPlzKreise)) {
+      expect(plz).toMatch(/^\d{4}$/);
+      const summe = kreise.reduce((s, [, a]) => s + a, 0);
+      expect(summe, `Anteilssumme PLZ ${plz}`).toBeGreaterThan(99);
+      expect(summe, `Anteilssumme PLZ ${plz}`).toBeLessThan(101);
+      for (const [k] of kreise) expect(amtsKreise).toContain(k);
+    }
+  });
   it('Kette PLZ → Gemeinde → ZH-Amt (8400 Winterthur → Stadthausstrasse 4a)', async () => {
     const { plzAufloesen } = await import('../data/plz/plzAufloesung');
     const { zhFriedensrichterFuer } = await import('../data/schlichtung/zhAmt');

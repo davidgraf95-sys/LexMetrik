@@ -251,3 +251,49 @@ Quellen: gerichte-zh.ch (Miete › Schlichtungsbehörden sowie die einzelnen Bez
 
 | Zell | Friedensrichteramt Zell | Am Koppenholz 1 | 8483 Kollbrunn |
 
+
+## NACHTRAG STADT ZÜRICH: PLZ → STADTKREIS (12.6.2026, Kreis-Automatik)
+
+**Auftrag David 11.6.2026 (Merkpunkt):** In der Stadt Zürich soll die
+PLZ-Eingabe automatisch zum richtigen Kreis-Friedensrichteramt führen;
+zu verifizieren war, ob Stadt-PLZ kreisscharf sind.
+
+1. **Quelle + Stand:** Datensatz «Adressen Stadt Zürich»
+   (geo_adressen_stadt_zuerich, Open-Data-Portal der Stadt Zürich) —
+   amtliche Gebäudeadressen aus der amtlichen Vermessung, je Adresse mit
+   Feldern `plz` und `stadtkreis`. Abruf 12.6.2026 als WFS-GeoJSON
+   (Endpunkt im Kopf von `scripts/zh-kreise-generieren.ts`; das
+   CSV-Download-Portal liefert nur die JS-Shell). 59'290 Features,
+   davon **56'666 reale Adressen** (`status_txt = real`; projektierte
+   ausgeschlossen).
+2. **Regel deterministisch:** je PLZ vollständige Auszählung der realen
+   Adressen pro Stadtkreis → `zuerichPlzKreise` in
+   `src/data/schlichtung/zhFriedensrichter.json` (PLZ → [Kreis,
+   Adressenanteil %], 1 Dezimale, grösster Anteil zuerst). Auflösung:
+   Kreis → Kreis-Amt über die feste Ämter-Paarung (1+2 · 3+9 · 4+5 ·
+   6+10 · 7+8 · 11+12); genau EIN Amt → Auto-Auflösung, mehrere →
+   eingegrenzte Wahl (dominantes Amt vorausgewählt), PLZ unbekannt
+   (z. B. Postfach-PLZ) → volle Sechser-Wahl wie bisher. KEINE
+   Heuristik: Vollerhebung + amtlicher Anteil, analog swisstopo-Anteil
+   im PLZ-Verzeichnis.
+3. **Befund (Verifikationsfrage):** Stadt-Zürcher PLZ sind **NICHT
+   kreisscharf** — 16 von 30 PLZ mit realen Stadt-Adressen überlappen
+   mehrere Kreise. Dank der Ämter-Paarung sind dennoch 19 PLZ
+   **amts-eindeutig** (z. B. 8055: Kreise 3 und 9, beide Amt 3+9);
+   11 PLZ bleiben amts-mehrdeutig (8001, 8003, 8006, 8008, 8032, 8041,
+   8044, 8045, 8046, 8050, 8057), praktisch alle mit klar dominantem
+   Amt (Beispiele: 8044 → 94.1 % Kreis 7; 8041 → 1 Adresse von 1134 im
+   Kreis 3). Randfall belegt: 8032 führt EINE Adresse im Kreis 8
+   (Anteil rundet auf 0.0) — die Auflösung nimmt Ämter darum
+   PRÄSENZ-basiert auf, nicht anteil-basiert. Stadt-Adressen mit
+   auswärtiger PLZ existieren (8125/8134/8142/8143/8152/8952, 2–18
+   Adressen) und sind erfasst; sie greifen nur, wenn die Gemeinde
+   Zürich gewählt ist.
+4. **Pflegebedarf:** Kreis-Grenzen/PLZ-Bestand ändern selten; bei
+   Neulauf `curl`-Befehl im Generator-Kopf, dann
+   `npx vite-node scripts/zh-kreise-generieren.ts`.
+   `scripts/plz-generieren.ts` trägt den Schlüssel bei einem Voll-Regen
+   unverändert weiter.
+5. **Abnahme-Status:** Erstrecherche, empirisch über Integritäts-Tests
+   abgesichert (Kreise 1–12 decken genau die 6 Ämter; Anteilssummen
+   ~100 %); fachliche Abnahme David ausstehend.
