@@ -9989,6 +9989,420 @@
    "Die Erstreckung setzt ZUREICHENDE GRÜNDE voraus (Art. 144 Abs. 2 ZPO) – ob sie genügen, entscheidet das Gericht. Konkret begründen (z. B. Aktenumfang, Ferienabwesenheit der Klientschaft, laufende Vergleichsgespräche) statt formelhaft."
   ]
  },
+ "vorl:nb-standard": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Gesuch um Nichtbekanntgabe einer Betreibung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "NB_absender",
+      "text": "S Muster\nX 1, 4051 Basel",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "NB_adressat",
+      "text": "Betreibungsamt Basel-Stadt\nBäumleingasse 1, 4051 Basel",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "NB_datumzeile",
+      "text": "Basel, 13. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "NB_betreff",
+      "text": "Gesuch um Nichtbekanntgabe der Betreibung Nr. 2026/12345 (Art. 8a Abs. 3 lit. d SchKG)",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "NB_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "NB_sachverhalt",
+      "text": "In der Betreibung Nr. 2026/12345 (Gläubigerin: G Inkasso AG) wurde mir der Zahlungsbefehl am 15.02.2026 zugestellt. Ich habe Rechtsvorschlag erhoben."
+     },
+     {
+      "bausteinId": "NB_antrag",
+      "text": "Da seit der Zustellung des Zahlungsbefehls mehr als drei Monate verstrichen sind, ersuche ich Sie, diese Betreibung Dritten nicht mehr zur Kenntnis zu geben."
+     },
+     {
+      "bausteinId": "NB_kein_verfahren",
+      "text": "Ein Verfahren zur Beseitigung des Rechtsvorschlags ist mir nicht bekannt."
+     },
+     {
+      "bausteinId": "NB_beilage",
+      "text": "Beilage: Kopie des Zahlungsbefehls."
+     },
+     {
+      "bausteinId": "NB_dank",
+      "text": "Ich danke Ihnen für die Prüfung dieses Gesuchs und stehe für Rückfragen zur Verfügung."
+     },
+     {
+      "bausteinId": "NB_schluss",
+      "text": "Mit freundlichen Grüssen",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "NB_unterschrift",
+      "text": "___________________________\nS Muster",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Eintrag wird nicht gelöscht, sondern Dritten nicht mehr bekannt gegeben (Art. 8a Abs. 3 lit. d SchKG); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 8a SchKG, Fassung 1.1.2026, verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "NB_absender",
+    "NB_adressat",
+    "NB_datumzeile",
+    "NB_betreff",
+    "NB_anrede",
+    "NB_sachverhalt",
+    "NB_antrag",
+    "NB_kein_verfahren",
+    "NB_beilage",
+    "NB_dank",
+    "NB_schluss",
+    "NB_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "NB_absender",
+     "begruendung": "Schuldnerin/Schuldner als gesuchstellende Partei."
+    },
+    {
+     "bausteinId": "NB_adressat",
+     "begruendung": "Das Betreibungsamt, das die Betreibung führt – es entscheidet über die Nichtbekanntgabe (Art. 8a Abs. 3 lit. d SchKG)."
+    },
+    {
+     "bausteinId": "NB_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_betreff",
+     "begruendung": "Betreff mit Betreibungsnummer zur eindeutigen Zuordnung."
+    },
+    {
+     "bausteinId": "NB_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_sachverhalt",
+     "begruendung": "Sachverhalt mit den beiden Tatbestands-Anknüpfungen: Zustellungsdatum (Fristbeginn) und erhobener Rechtsvorschlag."
+    },
+    {
+     "bausteinId": "NB_antrag",
+     "begruendung": "Kern des Gesuchs: Antrag auf Nichtbekanntgabe nach Ablauf der 3-Monats-Frist (Art. 8a Abs. 3 lit. d SchKG, Fassung in Kraft seit 1.1.2026).",
+     "norm": "Art. 8a Abs. 3 lit. d SchKG"
+    },
+    {
+     "bausteinId": "NB_kein_verfahren",
+     "begruendung": "Abwählbare Zusatz-Aussage – den förmlichen Nachweis verlangt das Amt beim Gläubiger (20-Tage-Frist, Art. 79–84 SchKG)."
+    },
+    {
+     "bausteinId": "NB_beilage",
+     "begruendung": "Beilagen-Zeile – erleichtert dem Amt die Zuordnung."
+    },
+    {
+     "bausteinId": "NB_dank",
+     "begruendung": "Schlusssatz – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_unterschrift",
+     "begruendung": "Unterschrift der kündigenden Partei."
+    }
+   ]
+  }
+ },
+ "vorl:nb-minimal": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Gesuch um Nichtbekanntgabe einer Betreibung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "NB_absender",
+      "text": "S Muster\nX 1, 4051 Basel",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "NB_adressat",
+      "text": "Betreibungsamt Basel-Stadt\nBäumleingasse 1, 4051 Basel",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "NB_datumzeile",
+      "text": "Basel, 13. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "NB_betreff",
+      "text": "Gesuch um Nichtbekanntgabe der Betreibung Nr. 2026/12345 (Art. 8a Abs. 3 lit. d SchKG)",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "NB_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "NB_sachverhalt",
+      "text": "In der Betreibung Nr. 2026/12345 wurde mir der Zahlungsbefehl am 15.02.2026 zugestellt. Ich habe Rechtsvorschlag erhoben."
+     },
+     {
+      "bausteinId": "NB_antrag",
+      "text": "Da seit der Zustellung des Zahlungsbefehls mehr als drei Monate verstrichen sind, ersuche ich Sie, diese Betreibung Dritten nicht mehr zur Kenntnis zu geben."
+     },
+     {
+      "bausteinId": "NB_dank",
+      "text": "Ich danke Ihnen für die Prüfung dieses Gesuchs und stehe für Rückfragen zur Verfügung."
+     },
+     {
+      "bausteinId": "NB_schluss",
+      "text": "Mit freundlichen Grüssen",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "NB_unterschrift",
+      "text": "___________________________\nS Muster",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Eintrag wird nicht gelöscht, sondern Dritten nicht mehr bekannt gegeben (Art. 8a Abs. 3 lit. d SchKG); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 8a SchKG, Fassung 1.1.2026, verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "NB_absender",
+    "NB_adressat",
+    "NB_datumzeile",
+    "NB_betreff",
+    "NB_anrede",
+    "NB_sachverhalt",
+    "NB_antrag",
+    "NB_dank",
+    "NB_schluss",
+    "NB_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "NB_absender",
+     "begruendung": "Schuldnerin/Schuldner als gesuchstellende Partei."
+    },
+    {
+     "bausteinId": "NB_adressat",
+     "begruendung": "Das Betreibungsamt, das die Betreibung führt – es entscheidet über die Nichtbekanntgabe (Art. 8a Abs. 3 lit. d SchKG)."
+    },
+    {
+     "bausteinId": "NB_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_betreff",
+     "begruendung": "Betreff mit Betreibungsnummer zur eindeutigen Zuordnung."
+    },
+    {
+     "bausteinId": "NB_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_sachverhalt",
+     "begruendung": "Sachverhalt mit den beiden Tatbestands-Anknüpfungen: Zustellungsdatum (Fristbeginn) und erhobener Rechtsvorschlag."
+    },
+    {
+     "bausteinId": "NB_antrag",
+     "begruendung": "Kern des Gesuchs: Antrag auf Nichtbekanntgabe nach Ablauf der 3-Monats-Frist (Art. 8a Abs. 3 lit. d SchKG, Fassung in Kraft seit 1.1.2026).",
+     "norm": "Art. 8a Abs. 3 lit. d SchKG"
+    },
+    {
+     "bausteinId": "NB_dank",
+     "begruendung": "Schlusssatz – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_unterschrift",
+     "begruendung": "Unterschrift der kündigenden Partei."
+    }
+   ]
+  }
+ },
+ "vorl:nb-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Gesuch um Nichtbekanntgabe einer Betreibung",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "NB_absender",
+      "text": "________",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "NB_adressat",
+      "text": "________",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "NB_datumzeile",
+      "text": "________, ________",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "NB_betreff",
+      "text": "Gesuch um Nichtbekanntgabe der Betreibung Nr. ________ (Art. 8a Abs. 3 lit. d SchKG)",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "NB_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "NB_sachverhalt",
+      "text": "In der Betreibung Nr. ________ wurde mir der Zahlungsbefehl am ________ zugestellt. Ich habe Rechtsvorschlag erhoben."
+     },
+     {
+      "bausteinId": "NB_antrag",
+      "text": "Da seit der Zustellung des Zahlungsbefehls mehr als drei Monate verstrichen sind, ersuche ich Sie, diese Betreibung Dritten nicht mehr zur Kenntnis zu geben."
+     },
+     {
+      "bausteinId": "NB_kein_verfahren",
+      "text": "Ein Verfahren zur Beseitigung des Rechtsvorschlags ist mir nicht bekannt."
+     },
+     {
+      "bausteinId": "NB_beilage",
+      "text": "Beilage: Kopie des Zahlungsbefehls."
+     },
+     {
+      "bausteinId": "NB_dank",
+      "text": "Ich danke Ihnen für die Prüfung dieses Gesuchs und stehe für Rückfragen zur Verfügung."
+     },
+     {
+      "bausteinId": "NB_schluss",
+      "text": "Mit freundlichen Grüssen",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "NB_unterschrift",
+      "text": "___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Eintrag wird nicht gelöscht, sondern Dritten nicht mehr bekannt gegeben (Art. 8a Abs. 3 lit. d SchKG); massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 8a SchKG, Fassung 1.1.2026, verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "NB_absender",
+    "NB_adressat",
+    "NB_datumzeile",
+    "NB_betreff",
+    "NB_anrede",
+    "NB_sachverhalt",
+    "NB_antrag",
+    "NB_kein_verfahren",
+    "NB_beilage",
+    "NB_dank",
+    "NB_schluss",
+    "NB_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "NB_absender",
+     "begruendung": "Schuldnerin/Schuldner als gesuchstellende Partei."
+    },
+    {
+     "bausteinId": "NB_adressat",
+     "begruendung": "Das Betreibungsamt, das die Betreibung führt – es entscheidet über die Nichtbekanntgabe (Art. 8a Abs. 3 lit. d SchKG)."
+    },
+    {
+     "bausteinId": "NB_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_betreff",
+     "begruendung": "Betreff mit Betreibungsnummer zur eindeutigen Zuordnung."
+    },
+    {
+     "bausteinId": "NB_anrede",
+     "begruendung": "Anrede – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_sachverhalt",
+     "begruendung": "Sachverhalt mit den beiden Tatbestands-Anknüpfungen: Zustellungsdatum (Fristbeginn) und erhobener Rechtsvorschlag."
+    },
+    {
+     "bausteinId": "NB_antrag",
+     "begruendung": "Kern des Gesuchs: Antrag auf Nichtbekanntgabe nach Ablauf der 3-Monats-Frist (Art. 8a Abs. 3 lit. d SchKG, Fassung in Kraft seit 1.1.2026).",
+     "norm": "Art. 8a Abs. 3 lit. d SchKG"
+    },
+    {
+     "bausteinId": "NB_kein_verfahren",
+     "begruendung": "Abwählbare Zusatz-Aussage – den förmlichen Nachweis verlangt das Amt beim Gläubiger (20-Tage-Frist, Art. 79–84 SchKG)."
+    },
+    {
+     "bausteinId": "NB_beilage",
+     "begruendung": "Beilagen-Zeile – erleichtert dem Amt die Zuordnung."
+    },
+    {
+     "bausteinId": "NB_dank",
+     "begruendung": "Schlusssatz – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "NB_unterschrift",
+     "begruendung": "Unterschrift der kündigenden Partei."
+    }
+   ]
+  }
+ },
+ "vorl:nb-gates-zu-frueh": {
+  "blocker": [
+   "Das Gesuch ist erst NACH Ablauf von drei Monaten seit der Zustellung des Zahlungsbefehls zulässig (Art. 8a Abs. 3 lit. d SchKG) – frühestens am 02.07.2026."
+  ],
+  "warnungen": [
+   "Die Aussage «kein Beseitigungs-Verfahren bekannt» nur stehen lassen, wenn sie zutrifft – ist eine Rechtsöffnung oder Anerkennungsklage hängig, ist das Gesuch aussichtslos."
+  ],
+  "hinweise": [
+   "Verfahren beim Amt: Das Betreibungsamt setzt dem Gläubiger eine Frist von 20 Tagen für den Nachweis, dass rechtzeitig ein Verfahren zur Beseitigung des Rechtsvorschlags eingeleitet wurde (Art. 79–84 SchKG). Bleibt der Nachweis aus, wird die Betreibung Dritten nicht mehr bekannt gegeben (Art. 8a Abs. 3 lit. d SchKG, Fassung in Kraft seit 1.1.2026).",
+   "Keine Löschung im engeren Sinn: Der Eintrag bleibt bestehen und wird Dritten wieder bekannt gegeben, wenn der Nachweis nachträglich erbracht oder die Betreibung fortgesetzt wird – ausser es wird nachgewiesen, dass ein Begehren um Beseitigung des Rechtsvorschlags definitiv nicht gutgeheissen wurde.",
+   "Das Einsichtsrecht Dritter erlischt ohnehin fünf Jahre nach Abschluss des Verfahrens (Art. 8a Abs. 4 SchKG); das Gesuch wirkt nur innerhalb dieses Fensters."
+  ]
+ },
+ "vorl:nb-gates-ohne-rv": {
+  "blocker": [
+   "Voraussetzung des Gesuchs ist, dass RECHTSVORSCHLAG erhoben wurde (Art. 8a Abs. 3 lit. d SchKG). Ohne Rechtsvorschlag kommt dieser Weg nicht in Betracht; je nach Lage bleiben die übrigen Tatbestände von Art. 8a Abs. 3 SchKG (nichtige/aufgehobene oder zurückgezogene Betreibung, obsiegende Rückforderungsklage)."
+  ],
+  "warnungen": [
+   "Die Aussage «kein Beseitigungs-Verfahren bekannt» nur stehen lassen, wenn sie zutrifft – ist eine Rechtsöffnung oder Anerkennungsklage hängig, ist das Gesuch aussichtslos."
+  ],
+  "hinweise": [
+   "Verfahren beim Amt: Das Betreibungsamt setzt dem Gläubiger eine Frist von 20 Tagen für den Nachweis, dass rechtzeitig ein Verfahren zur Beseitigung des Rechtsvorschlags eingeleitet wurde (Art. 79–84 SchKG). Bleibt der Nachweis aus, wird die Betreibung Dritten nicht mehr bekannt gegeben (Art. 8a Abs. 3 lit. d SchKG, Fassung in Kraft seit 1.1.2026).",
+   "Keine Löschung im engeren Sinn: Der Eintrag bleibt bestehen und wird Dritten wieder bekannt gegeben, wenn der Nachweis nachträglich erbracht oder die Betreibung fortgesetzt wird – ausser es wird nachgewiesen, dass ein Begehren um Beseitigung des Rechtsvorschlags definitiv nicht gutgeheissen wurde.",
+   "Das Einsichtsrecht Dritter erlischt ohnehin fünf Jahre nach Abschluss des Verfahrens (Art. 8a Abs. 4 SchKG); das Gesuch wirkt nur innerhalb dieses Fensters."
+  ]
+ },
+ "vorl:nb-fruehester-klemmung": {
+  "normal": "2026-05-16",
+  "klemmung": "2027-03-01"
+ },
  "vorl:sk-standard": {
   "dokument": {
    "titel": "Scheidungsklage (unbegründete Eingabe)",

@@ -36,6 +36,7 @@ import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from 
 import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
 import { faZusammenstellen, FA_DEFAULTS, pruefeFaGates } from '../src/lib/vorlagen/forderungsabtretung';
 import { feZusammenstellen, FE_DEFAULTS, pruefeFeGates } from '../src/lib/vorlagen/fristerstreckung';
+import { nbZusammenstellen, NB_DEFAULTS, pruefeNbGates, nbFruehesterGesuchstag } from '../src/lib/vorlagen/nichtbekanntgabe';
 import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
 import { sbZusammenstellen, SB_DEFAULTS } from '../src/lib/vorlagen/scheidungsbegehren';
 import { egZusammenstellen, EG_DEFAULTS } from '../src/lib/vorlagen/eheschutzgesuch';
@@ -252,6 +253,24 @@ f('vorl:fe-blanko', () => feZusammenstellen({ ...FE_DEFAULTS }));
 f('vorl:fe-gates-gesetzlich', () => pruefeFeGates({ ...feBasis, fristTyp: 'gesetzlich' }));
 f('vorl:fe-gates-zu-spaet', () => pruefeFeGates({ ...feBasis, datum: '2026-07-16', erstreckungBis: '2026-07-10' }));
 f('vorl:fe-gates-letzter-tag', () => pruefeFeGates({ ...feBasis, datum: '2026-07-15', fristTyp: 'unsicher' }));
+
+// Nichtbekanntgabe Betreibung (Art. 8a III lit. d SchKG, Fassung 1.1.2026; V2-Rest, 13.6.2026)
+const nbBasis = {
+  ...NB_DEFAULTS, absenderName: 'S Muster', absenderAdresse: 'X 1, 4051 Basel',
+  adressatName: 'Betreibungsamt Basel-Stadt', adressatAdresse: 'Bäumleingasse 1, 4051 Basel',
+  betreibungNr: '2026/12345', glaeubigerName: 'G Inkasso AG',
+  zustellungZb: '2026-02-15', ort: 'Basel', datum: '2026-06-13',
+};
+f('vorl:nb-standard', () => nbZusammenstellen(nbBasis));
+f('vorl:nb-minimal', () => nbZusammenstellen({ ...nbBasis, glaeubigerName: '', keinVerfahrenBekannt: false, beilageZb: false }));
+f('vorl:nb-blanko', () => nbZusammenstellen({ ...NB_DEFAULTS }));
+f('vorl:nb-gates-zu-frueh', () => pruefeNbGates({ ...nbBasis, zustellungZb: '2026-04-01', datum: '2026-06-13' }));
+f('vorl:nb-gates-ohne-rv', () => pruefeNbGates({ ...nbBasis, rechtsvorschlag: false }));
+// Monatsende-Klemmung: 30.11. + 3 Monate → 28.02. (kein 30.02.), +1 Tag = 01.03.
+f('vorl:nb-fruehester-klemmung', () => ({
+  normal: nbFruehesterGesuchstag('2026-02-15'),
+  klemmung: nbFruehesterGesuchstag('2026-11-30'),
+}));
 
 // Scheidungsklage (Art. 290 ZPO; Musterklagen-Auftrag David 12.6.2026)
 const skBasis = {

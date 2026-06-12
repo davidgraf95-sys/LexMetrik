@@ -1,6 +1,7 @@
 import { SchkgFristenForm } from '../components/forms/SchkgFristenForm';
 import { EreignisFristenSektion } from '../components/forms/EreignisFristen';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
+import { ThemenEinstieg } from '../components/ThemenEinstieg';
 import { getCalculator } from '../lib/calculators';
 
 // SchKG-Fristenrechner unter /rechner/schkg-fristen.
@@ -15,6 +16,10 @@ export function RechnerSchkg() {
         <SchkgFristenForm />
       </div>
       <EreignisFristenSektion ereignisse={['zahlungsbefehl']} />
+      {/* R10: passende Vorlage zum Rechner (V2-Rest FAHRPLAN-VORLAGEN-AUSBAU) */}
+      <ThemenEinstieg label="Nach erhobenem Rechtsvorschlag:" links={[
+        { to: '/vorlagen/nichtbekanntgabe-betreibung', label: 'Gesuch um Nichtbekanntgabe der Betreibung (Art. 8a SchKG)' },
+      ]} />
     </div>
   );
 }

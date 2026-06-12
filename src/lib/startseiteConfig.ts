@@ -1426,6 +1426,27 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['schkg-fristen', 'rechtsoeffnungsbegehren'],
     keywords: ['Rechtsvorschlag', 'Zahlungsbefehl', 'Betreibung'],
   },
+  'nichtbekanntgabe-betreibung': {
+    id: 'nichtbekanntgabe-betreibung', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
+    formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Nichtbekanntgabe einer Betreibung («Löschung» im Auszug)',
+    // P1-Vorlage Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V2);
+    // Art. 8a Abs. 3 lit. d SchKG (Fassung 1.1.2026, AS 2025 522) am Cache
+    // verifiziert (20260101).
+    description: 'Gesuch an das Betreibungsamt, eine Betreibung mit erhobenem Rechtsvorschlag Dritten nicht mehr bekannt zu geben (Art. 8a Abs. 3 lit. d SchKG) – mit deterministischer 3-Monats-Schwelle seit Zustellung des Zahlungsbefehls.',
+    status: 'entwurf',
+    norms: [
+      // Art. 8a SchKG – Einsichtsrecht/Nichtbekanntgabe (Wortlaut verifiziert 13.6.2026, Fassung 1.1.2026)
+      { label: 'Art. 8a SchKG', url: fedlexUrl('SchKG', '8a'), verified: false },
+    ],
+    href: '/vorlagen/nichtbekanntgabe-betreibung',
+    schemaId: 'nichtbekanntgabe-betreibung',
+    formvorschrift: 'Unterzeichnete Eingabe an das Betreibungsamt – frühestens drei Monate nach Zustellung des Zahlungsbefehls (Art. 8a Abs. 3 lit. d SchKG).',
+    output: ['pdf', 'docx'],
+    related: ['schkg-fristen', 'rechtsvorschlag'],
+    keywords: ['Löschung', 'Betreibungsregister', 'Betreibungsregisterauszug', 'Nichtbekanntgabe', 'Art. 8a', 'Rechtsvorschlag', 'Betreibung löschen'],
+  },
   fristerstreckungsgesuch: {
     id: 'fristerstreckungsgesuch', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     formGate: 'fertig',

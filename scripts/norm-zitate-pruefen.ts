@@ -24,6 +24,7 @@ const QUELLEN = [
   'src/lib/vorlagen/verjaehrungsverzicht.ts',
   'src/lib/vorlagen/forderungsabtretung.ts',
   'src/lib/vorlagen/fristerstreckung.ts',
+  'src/lib/vorlagen/nichtbekanntgabe.ts',
   'src/lib/vorlagen/scheidungsklage.ts',
   'src/lib/vorlagen/scheidungsbegehren.ts',
   'src/lib/vorlagen/eheschutzgesuch.ts',
