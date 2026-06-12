@@ -29,35 +29,40 @@ export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl }: {
   kanton: Kanton | '';
   onWahl: (wahl: { gemeinde: string; kanton: Kanton }) => void;
 }) {
-  const [strasse, setStrasse] = useState('');
-  const [nummer, setNummer] = useState('');
-  const [status, setStatus] = useState<'aufgeloest' | 'nummer_noetig' | 'unbekannt' | null>(null);
-  // PLZ-Wechsel: Strassen-Eingabe gehört zur alten PLZ — zurücksetzen.
-  useEffect(() => { setStrasse(''); setNummer(''); setStatus(null); }, [plz]);
+  // Eingabe PLZ-geschlüsselt: wechselt die PLZ, gilt die getippte Strasse
+  // nicht mehr — abgeleitet leer, ohne Reset-Effect (Lint: kein synchrones
+  // setState im Effect). Status ebenso geschlüsselt, damit nie der Befund
+  // einer früheren Eingabe angezeigt wird.
+  const [eingabe, setEingabe] = useState({ plz, strasse: '', nummer: '' });
+  const strasse = eingabe.plz === plz ? eingabe.strasse : '';
+  const nummer = eingabe.plz === plz ? eingabe.nummer : '';
+  const [statusRoh, setStatusRoh] = useState<{ schluessel: string; wert: 'aufgeloest' | 'nummer_noetig' | 'unbekannt' } | null>(null);
+  const schluessel = `${plz}|${strasse.trim()}|${nummer.trim()}`;
+  const status = strasse.trim() !== '' && statusRoh?.schluessel === schluessel ? statusRoh.wert : null;
   useEffect(() => {
+    if (strasse.trim() === '') return;
     let aktiv = true;
-    if (strasse.trim() === '') { setStatus(null); return; }
     strasseAufloesen(plz, strasse, nummer)
       .then((erg) => {
         if (!aktiv) return;
         if (erg?.typ === 'gemeinde') {
-          setStatus('aufgeloest');
+          setStatusRoh({ schluessel, wert: 'aufgeloest' });
           // wie ein Kachel-Klick — nur bei echter Änderung melden (Guard
           // gegen Render-Schleifen; onWahl-Identität wechselt je Render).
           if (erg.gemeinde !== gemeinde.trim() || erg.kanton !== kanton) {
             onWahl({ gemeinde: erg.gemeinde, kanton: erg.kanton });
           }
         } else {
-          setStatus(erg ? 'nummer_noetig' : 'unbekannt');
+          setStatusRoh({ schluessel, wert: erg ? 'nummer_noetig' : 'unbekannt' });
         }
       })
-      .catch(() => { if (aktiv) setStatus(null); });
+      .catch(() => { if (aktiv) setStatusRoh(null); });
     return () => { aktiv = false; };
     // gemeinde/kanton/onWahl bewusst nicht in den Deps: der Effect reagiert
-    // nur auf die Adress-Eingabe; die Änderungs-Guards oben verhindern
-    // Schleifen über die Eltern-Setter.
+    // nur auf die Adress-Eingabe (schluessel deckt plz/strasse/nummer); die
+    // Änderungs-Guards oben verhindern Schleifen über die Eltern-Setter.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [plz, strasse, nummer]);
+  }, [schluessel]);
   const optionen = gemeindeOptionen(treffer);
   if (optionen.length < 2) return null;
   const haupt = hauptTreffer(treffer);
@@ -88,13 +93,13 @@ export function PlzGemeindeWahl({ plz, treffer, gemeinde, kanton, onWahl }: {
           <input
             className="lc-input w-full"
             value={strasse}
-            onChange={(e) => setStrasse(e.target.value)}
+            onChange={(e) => setEingabe({ plz, strasse: e.target.value, nummer })}
             aria-label={`Strasse in PLZ ${plz} — löst die Gemeinde automatisch auf`}
           />
         </label>
         <label className="block w-20">
           <span className="text-xs text-ink-600">Nr.</span>
-          <input className="lc-input w-full" value={nummer} onChange={(e) => setNummer(e.target.value)} aria-label="Hausnummer" />
+          <input className="lc-input w-full" value={nummer} onChange={(e) => setEingabe({ plz, strasse, nummer: e.target.value })} aria-label="Hausnummer" />
         </label>
       </div>
       {status === 'aufgeloest' && (

@@ -38,7 +38,7 @@ const rl = createInterface({ input: createReadStream(CSV, { encoding: 'utf-8' })
 let kopf: string[] | null = null;
 let ix: Record<string, number> = {};
 for await (const zeileRoh of rl) {
-  const zeile = zeileRoh.replace(/^﻿/, '');
+  const zeile = zeileRoh.replace(/^\uFEFF/, '');
   const t = zeile.split(';');
   if (!kopf) {
     kopf = t;
