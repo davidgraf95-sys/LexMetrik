@@ -20,6 +20,41 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 12.6.2026 (Fortsetzung) — TI-Miete gemeindescharf + vertiefter §9-Bug-Check (Auftrag David: «tessin vertiefung, bug check, push, deploy»)
+
+**(1) TI-Miete VERDRAHTET** (`6cf5802`) — der LETZTE Kanton ohne
+Miete-Auto-Auflösung ist geschlossen (12/12 Register + 13 zentral +
+NE-Wahl): Zuordnung amtlich doppelt belegt (Art. 5 LALoc RL/TI 3.3.2.1.4
++ amtliche Località-Suche locazione, **168/168 einzeln abgefragt**);
+Praxis-Quelle geht dem 2005er-Wortlaut vor (Ex-Sonvico → n. 4, Claro →
+n. 11). 97 Gemeinden eindeutig (TI_MIETE, Dossier §51 + Patch-Generator)
++ 3 Mehr-Uffici-Gemeinden via Ortsteil-Wahl (Lugano n. 3/4 · Bellinzona
+n. 9/10/11 · Val Mara n. 5/2). Stammdaten-KORREKTUR Agno: Contrada
+Nuova 3. 8 Selektor-Optionen = kantonale CMS-Lücken, über Mutter-
+gemeinden geschlossen; Giudicature-Lücken (Ambrì/Pianezzo/S. Antonio/
+Torre) am 12.6. nachgefasst: beim Kanton unverändert offen.
+**(2) VERTIEFTER §9-BUG-CHECK (Auftrag David), 6 unabhängige Lupen**
+(Code · fachlich mit ~45 amtlichen Gegen-Abfragen · Empirie/E2E ·
+Daten-Integrität über ALLE Indizes · Integration/SSG · Edge-Cases mit
+echten Aufruf-Batteries): **1 HOCH + 5 MITTEL + 7 NIEDRIG, alle
+relevanten GEFIXT** (`4bc80e8`): HOCH TI-Miete-Ortsteil-Meldung sass im
+unerreichbaren verzeichnis-Zweig (3 Lupen übereinstimmend; jetzt im
+liste-Zweig, empirisch verifiziert) · kreisIdx jetzt geschlüsselt
+(stale Wahl reiste in neue Liste: 8044→8050 meldete 0.2-%-Amt) ·
+kantonFest-Guard in PlzGemeindeWahl (kantonsfremde Strassen-Auflösung
+wird offengelegt) · Bund-Übernahme leert ZH-Strasse · Apostroph
+U+2019↔ASCII + ALL-CAPS-«STR.» in strassenKandidaten (~1'300
+Romandie-Strassen) · Versatz-PLZ ohne Index blenden das Strassenfeld
+aus · FL-404-Meldung · KVG-64a-Warnung um Kinder-Ausnahme präzisiert
+(deklariert, Fedlex wörtlich). Bestanden u. a.: SSG-Tore/Chunks sauber
+(Daten nur lazy), PDF-Kette §5, CSP, alle Daten-Invarianten exakt,
+0 Falschtreffer/0 Exceptions in allen Edge-Batteries, ti.ch/WFS/Fedlex-
+Stichproben deckungsgleich. **OFFEN dokumentiert:** SZ ordentlich 26/30
+(Alpthal/Lauerz/Steinerberg/Wangen fehlen quellbedingt — SZ-Vermittler-
+Erhebung als Kandidat; SZ_MIETE deckt 30). Tore: gate voll GRÜN.
+**Push + Deploy: von David beauftragt — Vollzug siehe BETRIEB/Deploy-
+Protokoll dieser Session.**
+
 ## Session 12.6.2026 — ZH-Kreis-Automatik + Adress-Ausbau Stufen 1–3 (Entscheide David, ungepusht)
 
 **(0) Verifikationsfrage David beantwortet** (`8842bfd`): Stadt-Zürcher
