@@ -1,5 +1,7 @@
 # Wettbewerbsanalyse rechtswissen.ch + schweizer-vertraege.ch — übernehmbare Rechner & Vorlagen, Verträge-Darstellung
 
+**Erstellt:** 12.6.2026, Auftrag David (`PROMPT-wettbewerbsanalyse.md`).
+
 **Auftrag David 12.6.2026** (`PROMPT-wettbewerbsanalyse.md`): Ziele A (Rechner-
 Kandidaten) · B (Vorlagen-Kandidaten) · C (Darstellungskonzept Verträge-
 Sektion) · D (Handlungsplan, separat als `FAHRPLAN-VORLAGEN-AUSBAU.md`).

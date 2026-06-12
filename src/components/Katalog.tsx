@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { RECHTSGEBIETE, VORLAGE_SEKTIONEN, istVerfuegbar, istAktiv, type CalculatorCard, type VorlageCard } from '../lib/startseiteConfig';
-import { EINGABE_RUBRIKEN, istVorlage } from '../lib/vorlagenKategorie';
+import { EINGABE_RUBRIKEN, VERTRAG_RUBRIKEN, formGateText, istVorlage } from '../lib/vorlagenKategorie';
 import { GEBUEHREN_RUBRIKEN, gebuehrenRubrik, type GebuehrenRubrik } from '../lib/gebuehrenKategorie';
 import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId } from '../lib/oberkategorien';
 import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
@@ -325,9 +325,17 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
     .map((s) => ({ s, alle: vorlagen.filter((v) => v.art === s.art) }))
     .filter((g) => g.alle.length > 0);
 
+  // V1 (FAHRPLAN-VORLAGEN-AUSBAU): Form-Gate als zweites Sub-Label-Element —
+  // EIN Template-Literal (SSR-Regel), Gate vor dem Gebiets-/Gruppen-Label.
+  const subMitGate = (v: VorlageCard, basis?: string) => {
+    const gate = formGateText(v);
+    const label = basis ?? v.rechtsgebiet;
+    return gate ? `${gate} · ${label}` : label;
+  };
+
   const zeilen = (xs: VorlageCard[], subLabel?: (v: VorlageCard) => string | undefined) => (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-      {xs.map((v) => <WerkzeugZeile key={v.id} k={v} subLabel={subLabel?.(v) ?? v.rechtsgebiet} />)}
+      {xs.map((v) => <WerkzeugZeile key={v.id} k={v} subLabel={subMitGate(v, subLabel?.(v))} />)}
     </div>
   );
 
@@ -358,6 +366,45 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
                       <h4 className="lc-overline text-ink-600">{r.titel}</h4>
                       {rVerf.length > 0 && zeilen(rVerf, (v) => v.klageGebiet ?? v.rechtsgebiet)}
                       <GeplantZeile karten={rGeplant} />
+                    </div>
+                  );
+                })}
+              </div>
+            ) : s.art === 'vertrag' ? (
+              /* V1 (FAHRPLAN-VORLAGEN-AUSBAU): sieben Verträge-Rubriken nach
+                 dem Eingabe-Muster; EIN Eintrag pro Vertragstyp, Varianten im
+                 Wizard. Ab >6 verfügbaren Karten klappt die Rubrik ein
+                 (<details>, Zähler) — heutiger Bestand bleibt offen. */
+              <div className="space-y-4">
+                {VERTRAG_RUBRIKEN.map((r) => {
+                  const inRubrik = alle.filter((v) => v.vertragRubrik === r.id);
+                  if (inRubrik.length === 0) return null;
+                  const rVerf = inRubrik.filter(istVerfuegbar);
+                  const rGeplant = inRubrik.filter((v) => !istVerfuegbar(v));
+                  const inhalt = (
+                    <>
+                      {rVerf.length > 0 && zeilen(rVerf)}
+                      <GeplantZeile karten={rGeplant} />
+                    </>
+                  );
+                  return (
+                    <div key={r.id} className="space-y-2 pl-3 border-l-2 border-line">
+                      {rVerf.length > 6 ? (
+                        <details className="group space-y-2">
+                          <summary className="cursor-pointer list-none select-none">
+                            <h4 className="lc-overline text-ink-600 inline">
+                              <span aria-hidden className="inline-block mr-1.5 transition-transform group-open:rotate-90">▸</span>
+                              {r.titel} <span className="num text-ink-500">({rVerf.length})</span>
+                            </h4>
+                          </summary>
+                          {inhalt}
+                        </details>
+                      ) : (
+                        <>
+                          <h4 className="lc-overline text-ink-600">{r.titel}</h4>
+                          {inhalt}
+                        </>
+                      )}
                     </div>
                   );
                 })}

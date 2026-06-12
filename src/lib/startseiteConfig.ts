@@ -70,11 +70,28 @@ export interface RechnerCard extends BaseItem {
   szenarien?: { label: string; status: 'entwurf' | 'geplant' }[];
 }
 
+// Verträge-Unterrubriken (FAHRPLAN-VORLAGEN-AUSBAU V1, Wettbewerbsanalyse
+// 12.6.2026 Abschn. 6.1): skalierbare Gliederung der Sektion II.
+export type VertragRubrik = 'arbeit' | 'miete_pacht' | 'kauf'
+  | 'auftrag_werk' | 'darlehen_sicherheiten' | 'familie' | 'zusammenarbeit';
+
+// Form-Gate-Anzeige der Karte (V1): SPIEGEL des Schema-`ausgabeArt`
+// (src/lib/vorlagen/<schema>.ts bleibt SSoT der Formfolge, §5) — als
+// Katalogfeld nur, weil die Schemas zu schwer für das Start-Bundle sind;
+// die Übereinstimmung erzwingt src/tests/formGate.test.ts mechanisch.
+// 'gemischt' = Dokumentmappe mit druckfertigen UND Entwurfs-Teilen.
+export type FormGate = 'fertig' | 'abschrift' | 'entwurf' | 'gemischt';
+
 export interface VorlageCard extends BaseItem {
   modus: 'vorlage';
   art: VorlageArt;        // Dokument-Typ → bestimmt die Sektion
   /** Nur art 'eingabe' (S-2): Unterrubrik im Behördeneingaben-Register. */
   eingabeRubrik?: EingabeRubrik;
+  /** Nur art 'vertrag' (V1): Unterrubrik im Verträge-Register. */
+  vertragRubrik?: VertragRubrik;
+  /** Form-Gate der Karte (V1) — Pflicht für jede GEBAUTE Vorlage mit
+      Export; Checklisten ohne Export (kuendigung-vermieter) tragen keins. */
+  formGate?: FormGate;
   /** Nur eingabeRubrik 'klage_besonders': Klage-Gebiet als Gruppen-Label
       (Familienrecht, Haftpflichtrecht, Zwangsvollstreckung …). */
   klageGebiet?: string;
@@ -857,6 +874,7 @@ const KARTEN: Record<string, CalculatorCard> = {
   // Dokumentmappe umgebaut — Spez. recherche/kapitalerhoehung-wortlaute.md.
   kapitalerhoehung: {
     id: 'kapitalerhoehung', modus: 'vorlage', art: 'gesellschaft', rechtsgebiet: 'Gesellschaftsrecht',
+    formGate: 'gemischt',
     rechtsbereich: 'privat',
     title: 'Kapitalerhöhung (AG / GmbH)',
     description: 'Ordentliche Kapitalerhöhung gegen Bareinlage als Dokumentmappe: Erhöhungsbeschluss und Feststellungs-Urkunde mit Statutenänderung als Entwurf für die Urkundsperson (öffentliche Beurkundung bleibt zwingend, Art. 650/652g OR), Zeichnungsscheine je Person, Kapitalerhöhungsbericht und Handelsregister-Anmeldung druckfertig – mit 6-Monats-Verfalls-Warnung (Art. 650 Abs. 3 / 781 Abs. 4 OR) und Notariats-Anlaufstelle je Kanton.',
@@ -1000,6 +1018,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // ════ I – Vorsorge & Nachlass ════
   'eigenhaendiges-testament': {
     id: 'eigenhaendiges-testament', modus: 'vorlage', art: 'vorsorge', rechtsgebiet: 'Erbrecht',
+    formGate: 'abschrift',
     rechtsbereich: 'privat',
     title: 'Eigenhändiges Testament',
     description: 'Letztwillige Verfügung aus festen Bausteinen – mit Pflichtteils-Kontrolle, Bausteinprotokoll und Form-Gate; Ausgabe als Mustertext zum eigenhändigen Abschreiben.',
@@ -1042,6 +1061,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   vorsorgeauftrag: {
     id: 'vorsorgeauftrag', modus: 'vorlage', art: 'vorsorge', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
+    formGate: 'abschrift',
     rechtsbereich: 'privat',
     title: 'Vorsorgeauftrag',
     description: 'Personensorge, Vermögenssorge und Vertretung im Rechtsverkehr bei Urteilsunfähigkeit – mit Form-Weiche (eigenhändig oder beurkundet), Sondervollmachten und KESB-Hinweisen.',
@@ -1067,6 +1087,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   patientenverfuegung: {
     id: 'patientenverfuegung', modus: 'vorlage', art: 'vorsorge', rechtsgebiet: 'Vorsorge & Erwachsenenschutz',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Patientenverfügung',
     description: 'Medizinische Massnahmen, Behandlungsziel und Vertretungsperson – mit Konsistenz-Prüfung und Form-Gate; am Computer erstellbar, handschriftlich zu unterschreiben.',
@@ -1094,6 +1115,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // ════ II – Verträge ════
   arbeitsvertrag: {
     id: 'arbeitsvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Arbeit',
+    vertragRubrik: 'arbeit', formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Arbeitsvertrag',
     description: 'Befristeter oder unbefristeter Einzelarbeitsvertrag aus festen Bausteinen – mit harten Schranken für zwingendes Recht (Probezeit, Kündigungsfristen, Ferien, Ferienlohn) und Hinweisen zu Konkurrenzverbot, Überstunden-Wegbedingung und kantonalen Mindestlöhnen.',
@@ -1141,6 +1163,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // gebaut 6.6.2026): Mietengine LIVE; Familienwohnung-Nichtigkeit = Blocker.
   'kuendigung-mieter': {
     id: 'kuendigung-mieter', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Miete',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Kündigung durch Mieter:in',
     description: 'Kündigungsschreiben für das Mietverhältnis mit live berechnetem Endtermin (Vertrag → Ortsgebrauch → Gesetz), Familienwohnung-Schutz (Art. 266m OR, zweite Unterschrift) und ausserterminlicher Rückgabe mit Nachmieter-Vorschlag (Art. 264 OR).',
@@ -1166,6 +1189,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   'mietvertrag-wohnen': {
     id: 'mietvertrag-wohnen', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Miete',
+    vertragRubrik: 'miete_pacht', formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Mietvertrag (Wohnen · Geschäft · Untermiete)',
     // Konsolidierung 7.6.2026 (E2): der Untermiete-Deep-Link-Einstieg (#untermiete,
@@ -1191,6 +1215,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   darlehensvertrag: {
     id: 'darlehensvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    vertragRubrik: 'darlehen_sicherheiten',
     rechtsbereich: 'privat',
     title: 'Darlehensvertrag',
     description: 'Privates Darlehen mit Zins-, Rückzahlungs- und Kündigungsregeln.',
@@ -1199,6 +1224,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   kaufvertrag: {
     id: 'kaufvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    vertragRubrik: 'kauf',
     rechtsbereich: 'privat',
     title: 'Einfacher Kaufvertrag',
     description: 'Kauf beweglicher Sachen mit Gewährleistungs- und Lieferklauseln.',
@@ -1209,6 +1235,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // ════ III – Eingaben ════
   schlichtungsgesuch: {
     id: 'schlichtungsgesuch', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_allgemein', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Schlichtungsgesuch (alle Kantone)',
     description: 'Stellt ein Schlichtungsgesuch nach Art. 202 ZPO zusammen – Parteien, Rechtsbegehren, Streitgegenstand, Beilagen. Behördenadresse automatisch für alle 26 Kantone (PLZ/Gemeinde-genau in ZH/AG/SG/TG/FR/ZG/AI); sachliches Spezial-Routing amtlich abgenommen für Basel-Stadt.',
@@ -1237,6 +1264,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   'klage-vereinfacht': {
     id: 'klage-vereinfacht', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_allgemein', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Klage (vereinfachtes Verfahren)',
     description: 'Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren (beziffert/unbeziffert), Streitgegenstand, freiwillige strukturierte Begründung mit Beweismitteln, Beilagen mit Klagebewilligung – Gerichts-Adressat für alle 26 Kantone (Spruchkörper-Routing amtlich abgenommen für Basel-Stadt), Kostenfreiheits-Prüfung und Klagefrist mit Gerichtsferien.',
@@ -1266,6 +1294,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
     // gesuch, einfache [vereinfachte], ordentliche Klage») — Platzhalter der
     // Rubrik «Klagen – allgemein»; Bau folgt nach Roadmap-Priorisierung.
     id: 'klage-ordentlich', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_allgemein', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Klage (ordentliches Verfahren)',
     description: 'Klageschrift nach Art. 221 ZPO aus festen Bausteinen: Rechtsbegehren, Streitwertangabe, Tatsachenbehauptungen mit Beweisofferte je Ziffer (Pflicht), fakultative rechtliche Begründung, Beweismittel- und Beilagenverzeichnis – Gerichts-Adressat für alle 26 Kantone, Klagefrist mit Gerichtsferien.',
@@ -1317,6 +1346,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // deterministisch aus lib/gruendungsunterlagen.ts (HRegV abschliessend).
   'gmbh-gruendung': {
     id: 'gmbh-gruendung', modus: 'vorlage', art: 'gesellschaft', rechtsgebiet: 'Gesellschaftsrecht',
+    formGate: 'gemischt',
     rechtsbereich: 'privat',
     title: 'GmbH-Gründung (Checkliste + Dokumentmappe)',
     description: 'Unterlagenliste UND Volldokumente für die GmbH-Gründung nach Konstellation (Opting-out, c/o-Domizil, Lex Koller, Statuten-Klauseln): Bei der Bargründung entstehen Statuten und Errichtungsakt als Entwurf für die Urkundsperson (die öffentliche Beurkundung bleibt zwingend) sowie Wahlannahme- und Domizilerklärungen, Beschlüsse und die Handelsregister-Anmeldung druckfertig – mit Notariats-Anlaufstelle je Kanton und Emissionsabgabe-Hinweis.',
@@ -1342,6 +1372,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   'ag-gruendung': {
     id: 'ag-gruendung', modus: 'vorlage', art: 'gesellschaft', rechtsgebiet: 'Gesellschaftsrecht',
+    formGate: 'gemischt',
     rechtsbereich: 'privat',
     title: 'AG-Gründung (Checkliste + Dokumentmappe)',
     description: 'Unterlagenliste UND Volldokumente für die AG-Gründung nach Konstellation (Opting-out, Inhaberaktien, c/o-Domizil, Lex Koller): Bei der Bargründung mit Namenaktien entstehen Statuten und Errichtungsakt als Entwurf für die Urkundsperson (die öffentliche Beurkundung bleibt zwingend) sowie Wahlannahmen, VR-Konstituierungsprotokoll und die Handelsregister-Anmeldung druckfertig – mit Notariats-Anlaufstelle je Kanton, Teilliberierungs-Prüfung (Art. 632 OR) und Emissionsabgabe-Hinweis.',
@@ -1428,6 +1459,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // gebaut 6.6.2026): Sperrfristen-Engine LIVE; 'nichtig' = harter Blocker.
   'kuendigung-arbeitgeber': {
     id: 'kuendigung-arbeitgeber', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Arbeit',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Kündigung durch Arbeitgeber:in',
     description: 'Kündigungsschreiben mit Live-Prüfung der Sperrfristen (Art. 336c OR): nichtige Kündigungen werden blockiert, Hemmung und Erstreckung fliessen ins Beendigungsdatum ein; Begründung und Freistellung optional.',
@@ -1456,6 +1488,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // gebaut 6.6.2026): Beendigungsdatum LIVE aus lib/kuendigungsfrist.ts.
   'kuendigung-arbeitnehmer': {
     id: 'kuendigung-arbeitnehmer', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Arbeit',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Kündigung durch Arbeitnehmer:in',
     description: 'Kündigungsschreiben der Arbeitnehmerin oder des Arbeitnehmers – mit live berechnetem Beendigungsdatum (Dienstjahr, Probezeit, abweichende Fristen) und Zeugnis-/Abrechnungsbitte.',
@@ -1507,6 +1540,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   aufhebungsvereinbarung: {
     id: 'aufhebungsvereinbarung', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Arbeit',
+    vertragRubrik: 'arbeit',
     rechtsbereich: 'privat',
     title: 'Aufhebungsvereinbarung',
     description: 'Strukturiertes Gerüst für die einvernehmliche Beendigung des Arbeitsverhältnisses.',
@@ -1520,6 +1554,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // gebaut 6.6.2026): Presets mit verifizierten VVG-/OR-Wortlauten.
   'kuendigung-vertrag': {
     id: 'kuendigung-vertrag', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Vertrag kündigen (Versicherung · Krankenkasse · Darlehen · Auftrag · Abo)',
     description: 'Ein Kündigungsschreiben mit Vertragstyp-Presets: Versicherung (Art. 35a VVG, Drei-Jahres-Regel), Krankenkassen-Grundversicherung (Art. 7 KVG, Prämienmitteilung bzw. Semesterende), Darlehen mit 6-Wochen-Frist (Art. 318 OR), Auftrag mit Unzeit-Warnung (Art. 404 OR), Abo/Telecom nach AGB – ohne erfundene Fristen.',
@@ -1544,6 +1579,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   mahnung: {
     id: 'mahnung', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    formGate: 'fertig',
     rechtsbereich: 'privat',
     title: 'Mahnung & Inverzugsetzung',
     // §0-Mehrwert-Test 7.6.2026: «Inverzugsetzung» war eine Karten-Dublette
@@ -1576,6 +1612,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   vergleichsvereinbarung: {
     id: 'vergleichsvereinbarung', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    vertragRubrik: 'darlehen_sicherheiten',
     rechtsbereich: 'privat',
     title: 'Vergleichsvereinbarung',
     description: 'Strukturiertes Gerüst für den aussergerichtlichen Vergleich.',
@@ -1615,6 +1652,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // Rechtsgeschäft; vorher «vorsorge») — Abnahme David offen.
   vollmacht: {
     id: 'vollmacht', modus: 'vorlage', art: 'erklaerung', rechtsgebiet: 'Übergreifende Werkzeuge',
+    formGate: 'fertig',
     rechtsbereich: 'uebergreifend',
     title: 'Vollmacht (Anwalt · General · Spezial)',
     description: 'Anwaltsvollmacht, Generalvollmacht oder Spezialvollmacht in einer Maske – besondere Ermächtigungen (Art. 396 Abs. 3 OR), Substitution, Befristung und deterministische Form-Warnungen (Grundstück, Bank, Bürgschaft).',
@@ -1645,6 +1683,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   // – Familienrecht —
   trennungsvereinbarung: {
     id: 'trennungsvereinbarung', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Familienrecht',
+    vertragRubrik: 'familie',
     rechtsbereich: 'privat',
     title: 'Trennungsvereinbarung',
     description: 'Strukturiertes Gerüst für die Regelung des Getrenntlebens.',
@@ -1654,6 +1693,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   scheidungskonvention: {
     id: 'scheidungskonvention', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Familienrecht',
+    vertragRubrik: 'familie',
     rechtsbereich: 'privat',
     title: 'Scheidungskonvention',
     description: 'Strukturiertes Gerüst für die Vereinbarung der Scheidungsfolgen.',
@@ -1663,6 +1703,7 @@ const VORLAGEN: Record<string, VorlageCard> = {
   },
   elternvereinbarung: {
     id: 'elternvereinbarung', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Familienrecht',
+    vertragRubrik: 'familie',
     rechtsbereich: 'privat',
     title: 'Elternvereinbarung',
     description: 'Strukturiertes Gerüst zu Obhut, Betreuung und Unterhalt.',

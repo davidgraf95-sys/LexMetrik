@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { EINGABE_RUBRIKEN } from '../lib/vorlagenKategorie';
+import { EINGABE_RUBRIKEN, VERTRAG_RUBRIKEN } from '../lib/vorlagenKategorie';
 import { ALLE_KARTEN, VORLAGE_SEKTIONEN, type VorlageCard } from '../lib/startseiteConfig';
 
 // S-2 FAHRPLAN-STRUKTUR-UMBAU (Auftrag David 10.6.2026 abends):
@@ -53,5 +53,23 @@ describe('Vorlagen-Register (S-2)', () => {
       expect(vorlagen.some((v) => v.art === s.art), s.title).toBe(true);
     });
     vorlagen.forEach((v) => expect(arten.has(v.art), `${v.id}: ${v.art}`).toBe(true));
+  });
+
+  // V1 FAHRPLAN-VORLAGEN-AUSBAU: Verträge-Rubriken (Wettbewerbsanalyse 12.6.2026)
+  it('JEDE Vertrags-Vorlage ist genau einer Verträge-Rubrik zugeordnet; andere Gruppen tragen keine', () => {
+    const VERTRAG_IDS = new Set(VERTRAG_RUBRIKEN.map((r) => r.id));
+    vorlagen.forEach((v) => {
+      if (v.art === 'vertrag') {
+        expect(v.vertragRubrik && VERTRAG_IDS.has(v.vertragRubrik), `${v.id}: vertragRubrik fehlt/unbekannt`).toBe(true);
+      } else {
+        expect(v.vertragRubrik, v.id).toBeUndefined();
+      }
+    });
+  });
+
+  it('sieben Verträge-Rubriken in fester Reihenfolge (leere sind erlaubt — Katalog blendet sie aus)', () => {
+    expect(VERTRAG_RUBRIKEN.map((r) => r.id)).toEqual([
+      'arbeit', 'miete_pacht', 'kauf', 'auftrag_werk',
+      'darlehen_sicherheiten', 'familie', 'zusammenarbeit']);
   });
 });
