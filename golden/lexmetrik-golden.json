@@ -9561,7 +9561,7 @@
    "SCHRIFTFORM ist Gültigkeitsvoraussetzung der Abtretung (Art. 165 Abs. 1 OR) – drucken und von der abtretenden Partei (Zedentin/Zedent) unterschreiben lassen. Die Annahme durch die Erwerberin ist formfrei möglich; die Gegenzeichnungs-Zeile dient der Klarheit.",
    "ABTRETBARKEIT prüfen: Die Abtretung ist ausgeschlossen, soweit Gesetz, Vereinbarung oder die Natur des Rechtsverhältnisses entgegenstehen (Art. 164 Abs. 1 OR) – insbesondere ein vertragliches Abtretungsverbot im Grundvertrag.",
    "ANZEIGE an den Schuldner nachweisbar zustellen: Bis zur Anzeige kann er in gutem Glauben mit befreiender Wirkung an die bisherige Gläubigerin leisten (Art. 167 OR).",
-   "NICHT GEGENSTAND dieser Vorlage: das Verpflichtungsgeschäft (z. B. Forderungskauf; formfrei, Art. 165 Abs. 2 OR) und die Gewährleistung der Zedentin (Art. 171 ff. OR) – bei entgeltlicher Abtretung haftet sie für den Bestand der Forderung."
+   "NICHT GEGENSTAND dieser Vorlage: das Verpflichtungsgeschäft (z. B. Forderungskauf; formfrei, Art. 165 Abs. 2 OR) und die Gewährleistung der Zedentin (Art. 171 ff. OR) – bei entgeltlicher Abtretung haftet sie für den Bestand der Forderung zur Zeit der Abtretung."
   ]
  },
  "vorl:fe-standard": {
@@ -9694,7 +9694,7 @@
     },
     {
      "bausteinId": "FE_unterschrift",
-     "begruendung": "Unterschrift der kündigenden Partei."
+     "begruendung": "Unterschrift der gesuchstellenden Partei."
     }
    ]
   }
@@ -9820,7 +9820,7 @@
     },
     {
      "bausteinId": "FE_unterschrift",
-     "begruendung": "Unterschrift der kündigenden Partei."
+     "begruendung": "Unterschrift der gesuchstellenden Partei."
     }
    ]
   }
@@ -9955,7 +9955,7 @@
     },
     {
      "bausteinId": "FE_unterschrift",
-     "begruendung": "Unterschrift der kündigenden Partei."
+     "begruendung": "Unterschrift der gesuchstellenden Partei."
     }
    ]
   }
@@ -10118,7 +10118,7 @@
     },
     {
      "bausteinId": "NB_unterschrift",
-     "begruendung": "Unterschrift der kündigenden Partei."
+     "begruendung": "Unterschrift der gesuchstellenden Partei."
     }
    ]
   }
@@ -10234,7 +10234,7 @@
     },
     {
      "bausteinId": "NB_unterschrift",
-     "begruendung": "Unterschrift der kündigenden Partei."
+     "begruendung": "Unterschrift der gesuchstellenden Partei."
     }
    ]
   }
@@ -10368,14 +10368,14 @@
     },
     {
      "bausteinId": "NB_unterschrift",
-     "begruendung": "Unterschrift der kündigenden Partei."
+     "begruendung": "Unterschrift der gesuchstellenden Partei."
     }
    ]
   }
  },
  "vorl:nb-gates-zu-frueh": {
   "blocker": [
-   "Das Gesuch ist erst NACH Ablauf von drei Monaten seit der Zustellung des Zahlungsbefehls zulässig (Art. 8a Abs. 3 lit. d SchKG) – frühestens am 02.07.2026."
+   "Das Gesuch ist erst NACH Ablauf von drei Monaten seit der Zustellung des Zahlungsbefehls zulässig (Art. 8a Abs. 3 lit. d SchKG) – frühestens am 03.07.2026."
   ],
   "warnungen": [
    "Die Aussage «kein Beseitigungs-Verfahren bekannt» nur stehen lassen, wenn sie zutrifft – ist eine Rechtsöffnung oder Anerkennungsklage hängig, ist das Gesuch aussichtslos."
@@ -10400,7 +10400,7 @@
   ]
  },
  "vorl:nb-fruehester-klemmung": {
-  "normal": "2026-05-16",
+  "normal": "2026-05-17",
   "klemmung": "2027-03-01"
  },
  "vorl:sk-standard": {

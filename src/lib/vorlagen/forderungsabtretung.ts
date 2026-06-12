@@ -78,7 +78,7 @@ export function pruefeFaGates(): FaGateErgebnis {
   hinweise.push(
     'NICHT GEGENSTAND dieser Vorlage: das Verpflichtungsgeschäft (z. B. Forderungskauf; '
     + 'formfrei, Art. 165 Abs. 2 OR) und die Gewährleistung der Zedentin (Art. 171 ff. OR) – '
-    + 'bei entgeltlicher Abtretung haftet sie für den Bestand der Forderung.',
+    + 'bei entgeltlicher Abtretung haftet sie für den Bestand der Forderung zur Zeit der Abtretung.',
   );
   return { blocker: [], warnungen: [], hinweise };
 }

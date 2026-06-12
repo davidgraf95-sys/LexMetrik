@@ -20,6 +20,28 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 13.6.2026 (Nacht) — V2-Rest KOMPLETT: Zession · Fristerstreckung · Nichtbekanntgabe (GO David «arbeite einfach»)
+
+**FAHRPLAN-VORLAGEN-AUSBAU V2 ist mit 4/4 Vorlagen FERTIG** (je eigener
+Commit, je Gate GRÜN + Build prerendered + Playwright-Sichtcheck):
+(1) **Abtretungserklärung (Zession)** `5d4ccf8` — Art. 164/165/167/170 OR
+verbatim am 20260101-Cache; Schriftform-Unterschrift Zedentin, optionale
+Gegenzeichnung, Zinsen-Klarstellung (170 III nur Vermutung), Hinweise
+Abtretungsverbot/Anzeige/Verpflichtungsgeschäft. (2) **Fristerstreckungs-
+gesuch** `fd10ff1` — Art. 143/144/148 ZPO; Frist-Art-Weiche (gesetzlich =
+Blocker mit 148-Hinweis), Gesuch nach Fristende = Blocker, letzter Tag =
+143-I-Warnung; Begründung Maske/Platzhalter; ThemenEinstieg am
+ZPO-Fristen-Rechner. (3) **Nichtbekanntgabe Betreibung** `3d1fc99` —
+Art. 8a III lit. d SchKG in der NEUEN Fassung seit 1.1.2026 (AS 2025 522)
+verifiziert ([VF] der Analyse aufgelöst); Rechtsvorschlag-Pflicht,
+3-Monats-Schwelle mit konkretem frühestem Gesuchstag (Klemmfall 30.11.
+handgerechnet), ehrliche Wieder-Bekanntgabe-Offenlegung; ThemenEinstieg
+am SchKG-Fristen-Rechner. Endstand: Zähler 43 gebaut/39 sichtbar,
+Golden 134, Routen 45. OFFENE FOLGEPOSTEN: Prefill-Brücke zpo-fristen→
+Fristerstreckung · SchKG-Anliegen «Nichtbekanntgabe» für den
+VorlagenSprung (Entscheid David). Ungepusht; Push/Deploy nur auf
+frisches Ja (§9).
+
 ## Session 12.6.2026 (spät) — Pauschal-Abnahme Wortlaute (David) + V2-Fortsetzung
 
 **Pauschal-Abnahme David («alles abgenommen»), Protokoll

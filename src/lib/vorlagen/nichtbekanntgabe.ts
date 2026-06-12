@@ -59,10 +59,18 @@ export const NB_DEFAULTS: NbAntworten = {
 // ── 3-Monats-Schwelle (rein lokal, Monatsende-Klemmung) ─────────────────────
 
 /** Frühester zulässiger Gesuchstag: Folgetag nach Ablauf der drei Monate
- *  seit Zustellung des Zahlungsbefehls (Art. 8a Abs. 3 lit. d SchKG). */
+ *  seit Zustellung des Zahlungsbefehls (Art. 8a Abs. 3 lit. d SchKG).
+ *  KONSERVATIV nach den ZPO-Fristenregeln gerechnet (Art. 31 SchKG):
+ *  der Lauf beginnt am Folgetag der Zustellung (Art. 142 Abs. 1 ZPO) und
+ *  endet am gleichbezeichneten Tag des dritten Monats (Abs. 2,
+ *  Monatsende-Klemmung via date-fns addMonths); das Gesuch ist NACH
+ *  Ablauf zulässig → frühester Tag = Folgetag des Fristendes. Die
+ *  mildere OR-77-Lesart (Ende am gleichbezeichneten Tag der Zustellung)
+ *  käme einen Tag früher — Review-Befund 13.6.2026: am Grenztag wäre
+ *  die Abweisung als verfrüht riskiert, darum die sichere Variante. */
 export function nbFruehesterGesuchstag(zustellungISO: string): string | null {
   if (!istGueltigesISO(zustellungISO)) return null;
-  return formatISO(addDays(addMonths(parseISO(zustellungISO), 3), 1));
+  return formatISO(addDays(addMonths(addDays(parseISO(zustellungISO), 1), 3), 1));
 }
 
 // ── Gates (deterministisch, normverifiziert) ────────────────────────────────
@@ -169,7 +177,7 @@ export const NB_SCHEMA: VorlageSchema = {
       begruendung: 'Schlusssatz – immer enthalten.' },
     { id: 'NB_schluss', rolle: 'schlussformel', text: 'Mit freundlichen Grüssen',
       begruendung: 'Schlussformel – immer enthalten.' },
-    kdgUnterschrift('NB_unterschrift'),
+    kdgUnterschrift('NB_unterschrift', 'absenderName', 'Unterschrift der gesuchstellenden Partei.'),
   ],
 };
 

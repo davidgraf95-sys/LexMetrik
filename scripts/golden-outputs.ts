@@ -266,10 +266,14 @@ f('vorl:nb-minimal', () => nbZusammenstellen({ ...nbBasis, glaeubigerName: '', k
 f('vorl:nb-blanko', () => nbZusammenstellen({ ...NB_DEFAULTS }));
 f('vorl:nb-gates-zu-frueh', () => pruefeNbGates({ ...nbBasis, zustellungZb: '2026-04-01', datum: '2026-06-13' }));
 f('vorl:nb-gates-ohne-rv', () => pruefeNbGates({ ...nbBasis, rechtsvorschlag: false }));
-// Monatsende-Klemmung: 30.11. + 3 Monate → 28.02. (kein 30.02.), +1 Tag = 01.03.
+// Konservative ZPO-Rechnung (Review-Befund 13.6.2026): Lauf ab Folgetag der
+// Zustellung (Art. 142 Abs. 1 ZPO), Ende am gleichbezeichneten Tag (Abs. 2),
+// frühester Gesuchstag = Folgetag. Handgerechnet: Zustellung 15.02. → Lauf ab
+// 16.02. → Ende 16.05. → 17.05.; Klemmung: Zustellung 29.11. → Lauf ab 30.11.
+// → 28.02. (kein 30.02.) → 01.03.
 f('vorl:nb-fruehester-klemmung', () => ({
   normal: nbFruehesterGesuchstag('2026-02-15'),
-  klemmung: nbFruehesterGesuchstag('2026-11-30'),
+  klemmung: nbFruehesterGesuchstag('2026-11-29'),
 }));
 
 // Scheidungsklage (Art. 290 ZPO; Musterklagen-Auftrag David 12.6.2026)

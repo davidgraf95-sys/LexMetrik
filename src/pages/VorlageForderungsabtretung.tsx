@@ -117,7 +117,7 @@ export function VorlageForderungsabtretung() {
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.anzeigeAnkuendigen}
               onChange={(e) => set('anzeigeAnkuendigen', e.target.checked)} />
-            <span>Ankündigen, dass der <strong>Schuldner schriftlich informiert</strong> wird <span className="text-ink-500">(bis zur Anzeige befreit ihn die Zahlung an die Alt-Gläubigerin, Art. 167 OR)</span></span>
+            <span>Ankündigen, dass der <strong>Schuldner schriftlich informiert</strong> wird <span className="text-ink-500">(bis zur Anzeige befreit ihn die gutgläubige Zahlung an die Alt-Gläubigerin, Art. 167 OR)</span></span>
           </label>
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.annahmeZeile}

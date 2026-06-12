@@ -96,7 +96,7 @@ export function VorlageNichtbekanntgabe() {
           </Field>
           {fruehester && (
             <div className="lc-notice text-body-s">
-              Frühester Gesuchstag: <strong>{fmtDatum(fruehester)}</strong> (drei Monate seit Zustellung, Art. 8a Abs. 3 lit. d SchKG).
+              Frühester Gesuchstag: <strong>{fmtDatum(fruehester)}</strong> – drei Monate seit Zustellung (Art. 8a Abs. 3 lit. d SchKG), vorsichtig nach den ZPO-Fristenregeln gerechnet (Fristbeginn am Folgetag, Art. 31 SchKG i. V. m. Art. 142 ZPO).
             </div>
           )}
           <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">

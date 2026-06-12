@@ -73,12 +73,18 @@ export function kdgSchluss(id: string): Baustein {
   };
 }
 
-/** Eine Unterschriftslinie (einseitige Kündigung). */
-export function kdgUnterschrift(id: string, nameFeld = 'absenderName'): Baustein {
+/** Eine Unterschriftslinie (einseitige Kündigung; per Begründungs-Override
+ *  auch für andere Eingaben nutzbar — Review-Befund 13.6.2026: das
+ *  Bausteinprotokoll sprach in Gesuchen von der «kündigenden Partei»). */
+export function kdgUnterschrift(
+  id: string,
+  nameFeld = 'absenderName',
+  begruendung = 'Unterschrift der kündigenden Partei.',
+): Baustein {
   return {
     id, rolle: 'unterschrift',
     text: `___________________________\n{{${nameFeld}}}`,
-    begruendung: 'Unterschrift der kündigenden Partei.',
+    begruendung,
   };
 }
 

@@ -177,10 +177,27 @@ Konkurrenzverbot → Personenschaden → Abänderung/Konkubinat. Dazu V2-Rest
 (NDA, Zession, Fristerstreckung, 8a-SchKG-Löschung), V3–V7.
 Push/Deploy weiter gesperrt (Davids frisches Ja).
 
+## Abarbeitungs-Stand 13.6.2026 (Session «Pauschal-Abnahme + V2-Rest»)
+
+P1-Priorisierung durch David ABGENOMMEN 12.6.2026 («alles abgenommen»,
+`abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`). **V2 KOMPLETT
+(4/4):** Verjährungsverzicht (0b21767) · **Abtretungserklärung/Zession**
+Art. 164/165/167/170 OR (5d4ccf8) · **Fristerstreckungsgesuch** Art.
+143/144/148 ZPO mit Frist-Art-Weiche + Vor-Fristablauf-Gates (fd10ff1) ·
+**Nichtbekanntgabe Betreibung** Art. 8a III lit. d SchKG, Fassung
+1.1.2026 (AS 2025 522) am Cache verifiziert, 3-Monats-Schwelle
+deterministisch (3d1fc99). NDA gehört zu V3 (Vertrags-Grundtyp).
+OFFENE FOLGEPOSTEN aus V2: (a) Ergebnis-Prefill-Brücke zpo-fristen →
+Fristerstreckung (laufende Frist reist mit, G3); (b) VorlagenSprung im
+SchKG-Zuständigkeits-Rechner bräuchte ein neues Anliegen «Löschung/
+Nichtbekanntgabe» (Engine-Änderung, Entscheid David). NÄCHSTE PHASEN:
+V3 (Auftrag · Werkvertrag · NDA · Konkubinat) → V4 ff.; parallel V8 nach
+Priorisierung. Push/Deploy weiter gesperrt (Davids frisches Ja).
+
 ## Davids Entscheide vor Start (Entscheidvorlage)
 
-1. P1-Listen (Dossier Abschn. 5) abnehmen/kürzen — insbesondere Reihenfolge
-   V2 vor V3.
+1. ~~P1-Listen (Dossier Abschn. 5) abnehmen/kürzen — insbesondere Reihenfolge
+   V2 vor V3.~~ ERLEDIGT: P1 abgenommen 12.6.2026 (Pauschal-Abnahme).
 2. Teil-D-Neuzugänge: Bussenkatalog-Rechner · Baumabstand kantonal ·
    Liquidations-Mappe AG/GmbH (P2) — je rein/Hinweis/raus.
 3. Ziel-C-Konzept (Dossier Abschn. 6): Rubriken-Schnitt, ausgabeArt-Zeile,

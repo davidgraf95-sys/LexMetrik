@@ -169,7 +169,7 @@ export const FE_SCHEMA: VorlageSchema = {
       begruendung: 'Schlusssatz – immer enthalten.' },
     { id: 'FE_schluss', rolle: 'schlussformel', text: 'Mit freundlichen Grüssen',
       begruendung: 'Schlussformel – immer enthalten.' },
-    kdgUnterschrift('FE_unterschrift'),
+    kdgUnterschrift('FE_unterschrift', 'absenderName', 'Unterschrift der gesuchstellenden Partei.'),
   ],
 };
 
