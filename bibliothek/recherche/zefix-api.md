@@ -37,7 +37,8 @@
 - Lookup ist KOMFORT (Vorbefüllung) — massgeblich bleibt die Eingabe der
   Nutzerin; keine Rechtslogik hängt an der API (§2 unberührt).
 - Datenschutz: Übermittlung des Firmennamens an zefix.ch nur auf Klick;
-  Offenlegung in /datenschutz Abschnitt 2 (Wortlaut-Abnahme David offen).
+  Offenlegung in /datenschutz Abschnitt 2 (Wortlaut abgenommen 12.6.2026,
+  `abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`).
 
 ## Pflegebedarf
 
@@ -48,4 +49,5 @@
 
 ## Abnahme-Status
 
-Erstrecherche, empirisch belegt; fachliche/Datenschutz-Abnahme David offen.
+Erstrecherche, empirisch belegt; Datenschutz-Wortlaut durch David
+abgenommen 12.6.2026 (`abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`).

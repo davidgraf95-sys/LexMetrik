@@ -202,11 +202,18 @@ Workflow-Transcript wf_189d14a5-2b0.
    Wort-für-Wort-Durchgang — Davids Entscheid 5.6.2026): 8 Vorlagen,
    NormRefs, 19 Recherche-Dossiers (neu dazu: Eheschutz/GlG, BGG-Beschwerde,
    Feiertags-Matrix `normen/feiertage-kantone-bj.md`).
+   **Pauschal-Abnahme 12.6.2026** («alles abgenommen», Protokoll
+   `abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`): Wortlaute
+   geo.admin-/Zefix-Datenschutz, KVG-Preset, TI-Miete, FE-1/FE-2,
+   Mahnung-Bausteine, BGer-Hinweise/V-1 + P1-Priorisierung der
+   Wettbewerbsanalyse. Karten-«geprüft»-Hebungen bleiben offen
+   (brauchen Karten-Verdikt nach `abnahme/SCHEMA.md`).
 4. **Offene Grundsatzfragen** (gesammelt): Dienstjahr-Stichtag Kündigungsfrist
    (Zugang [Ist] vs. Beendigung) · Sperrtage-ANZEIGE-Konvention ·
    3 Export-Antworten (Verzugszins-Hinweis kürzen? DOCX-Standardannahmen?
    Bausteinprotokoll in Exporte?) · BGG-Dossier «Offene Fragen» 1–7 (V-1
-   Eheschutz-Warnung ist seit 6.6.2026 als WARNUNG verdrahtet — Abnahme) ·
+   Eheschutz-Warnung als WARNUNG verdrahtet — durch David abgenommen
+   12.6.2026, Pauschal-Protokoll) ·
    **GebV-SchKG-Promille-Rundung** (Deploy-Bug-Check 7.6.2026: 2 ‰/5 ‰
    jetzt nach Hauskonvention auf 0.01 gerundet [round2]; ob amtlich 0.05
    gälte, ist Fachfrage — GebV nennt keine Regel).

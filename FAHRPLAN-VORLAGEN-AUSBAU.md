@@ -2,9 +2,10 @@
 
 **Quelle:** Wettbewerbsanalyse 12.6.2026
 (`bibliothek/recherche/wettbewerbsanalyse-rechtswissen-schweizer-vertraege.md`,
-Auftrag David `PROMPT-wettbewerbsanalyse.md`). **Stand: HANDLUNGSPLAN
-ERSTELLT, NICHT begonnen** — jede Phase ist ein eigener, an Claude Code
-übergebbarer Schritt; Davids P1-Abnahme der Analyse steht aus.
+Auftrag David `PROMPT-wettbewerbsanalyse.md`). **Stand: IN ARBEIT**
+(Abarbeitungs-Stand am Dokumentende) — jede Phase ist ein eigener, an
+Claude Code übergebbarer Schritt. Davids P1-Abnahme der Analyse ist am
+12.6.2026 erfolgt (`abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`).
 
 **Leitplanken (jede Phase):** Normentreue §7 (alle [VF]-Anker empirisch am
 Fedlex-Cache, Unsicheres als `// VERIFY:`) · Determinismus §2 (kein LLM) ·

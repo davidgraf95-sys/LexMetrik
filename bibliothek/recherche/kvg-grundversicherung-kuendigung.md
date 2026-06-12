@@ -94,5 +94,7 @@ kündigen sich separat nach VVG (Preset «Versicherung (VVG)» der Maske).
 ## 5. Abnahme-Status
 
 **Erstrecherche** (11.6.2026, zeichengenau am Filestore-HTML; einfacher
-Durchgang). Fachliche Abnahme durch David: **offen** — Norm-Pills bleiben
-`verified: false`, Karte bleibt `entwurf`.
+Durchgang). Preset-/Hinweis-Wortlaute durch David abgenommen 12.6.2026
+(`abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`). Norm-Pills bleiben
+`verified: false`, Karte bleibt `entwurf` — die Hebung braucht die
+Karten-Abnahme der Kündigungs-Vorlage nach `abnahme/SCHEMA.md`.

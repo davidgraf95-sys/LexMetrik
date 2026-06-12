@@ -49,7 +49,8 @@ Muster, zweiter externer Request des Produkts); Hinweis auf die
 Übermittlung an geo.admin.ch steht PERMANENT neben dem Knopf; bei
 fixer Kantons-Maske wird eine kantonsfremde Adresse offengelegt statt
 übernommen. CSP `connect-src` + `api3.geo.admin.ch`; /datenschutz
-Abschnitt 2 ergänzt (Wortlaut-Abnahme David offen).
+Abschnitt 2 ergänzt (Wortlaut abgenommen 12.6.2026, Protokoll
+`abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`).
 
 **Vorrang-Ordnung in den UIs:** Strasse (offline, exakt) → PLZ-Automatik
 → Wahl (Kacheln/Dropdown); die Bundes-Suche ist ein paralleles Angebot
@@ -85,5 +86,6 @@ Adressen). Kandidat fürs Verfallsregister: Re-Generierung 1.10.2026.
 
 Erstrecherche + empirische Verifikation (Unit-Tests mit amtlichen
 Referenzwerten; Playwright-Durchlauf beider UIs inkl. Live-API 12.6.2026).
-Fachliche Abnahme David offen: Hinweis-/Datenschutz-Wortlaute (geo.admin-
-Absatz /datenschutz, Knopf-Beschriftung «Beim Bund nachschlagen»).
+Hinweis-/Datenschutz-Wortlaute (geo.admin-Absatz /datenschutz, Knopf
+«Beim Bund nachschlagen») durch David ABGENOMMEN 12.6.2026
+(`abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`).

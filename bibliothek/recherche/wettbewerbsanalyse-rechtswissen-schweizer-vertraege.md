@@ -5,8 +5,9 @@
 **Auftrag David 12.6.2026** (`PROMPT-wettbewerbsanalyse.md`): Ziele A (Rechner-
 Kandidaten) · B (Vorlagen-Kandidaten) · C (Darstellungskonzept Verträge-
 Sektion) · D (Handlungsplan, separat als `FAHRPLAN-VORLAGEN-AUSBAU.md`).
-**Status: Erstrecherche (Claude), Abnahme David offen. Nur Analyse — nichts
-umgesetzt.**
+**Status: Erstrecherche (Claude); P1-Priorisierung + Bucket-Einordnung
+durch David ABGENOMMEN 12.6.2026
+(`abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`).**
 
 **Quellen + Stand (§11 Ziff. 1):**
 - rechtswissen.ch — Vollinventar 12.6.2026, 33 Seiten direkt gelesen

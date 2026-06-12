@@ -20,6 +20,21 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 12.6.2026 (spät) — Pauschal-Abnahme Wortlaute (David) + V2-Fortsetzung
+
+**Pauschal-Abnahme David («alles abgenommen»), Protokoll
+`abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md`:** Wortlaute
+geo.admin-Datenschutz-Absatz + «Beim Bund nachschlagen» · Zefix-Absatz ·
+KVG-Preset Maske 3 · TI-Miete-Texte · FE-1-WARUM/FE-2-Weiche ·
+Mahnung-Bausteine · BGer-Hinweise inkl. Eheschutz-V-1 — sowie die
+**P1-Priorisierung der Wettbewerbsanalyse** (V2-Rest/V3 ff. freigegeben).
+NICHT umfasst (bleibt offen): Karten-«geprüft»-Hebungen (brauchen
+Karten-Verdikt + Referenzfall-Protokoll; Paket Tagerechner liegt in
+`.scratch/`), Teil D, Praxis-Rang-Kuratierung, Anliegen-Liste, übrige
+Dossiers. Status-Stellen nachgeführt (Datenschutz.tsx-Kommentare,
+Dossier-/INDEX-Zeilen, FAHRPLAN-VORLAGEN-AUSBAU, HANDLUNGSPLAN A.3/A.4);
+Datenschutz-Seite als GANZE bleibt Entwurf (Platzhalter Ziff. 1/4).
+
 ## Session 12.6.2026 (abends) — StGB-Re-Pin vollzogen (Verfallsregister-Termin)
 
 Der am 12.6.2026 fällige, terminierte **StGB-Re-Pin (AS 2026 231) ist

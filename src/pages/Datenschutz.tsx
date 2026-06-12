@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 
-// Seite «Datenschutzerklärung» – ENTWURF (Badge), fachliche Prüfung durch
-// David (fachkundige Person) steht aus; Platzhalter [«…»] sind bewusst
-// sichtbar, bis Verantwortlicher und Kontaktweg definiert sind (§8).
+// Seite «Datenschutzerklärung» – ENTWURF (Badge), fachliche Prüfung der
+// GANZEN Seite steht aus; Platzhalter [«…»] sind bewusst sichtbar, bis
+// Verantwortlicher und Kontaktweg definiert sind (§8). Die beiden
+// Abschnitt-2-Absätze (Zefix/geo.admin) sind wortlaut-abgenommen 12.6.2026.
 // Inhaltlich am tatsächlichen Verhalten der Anwendung ausgerichtet:
 // keine Konten, kein Tracking, Eingaben bleiben im Browser (localStorage),
 // Hosting auf Vercel mit technisch bedingten Server-Logs.
@@ -50,7 +51,7 @@ export function Datenschutz() {
           jeweiligen Vorlage oder über die Browser-Einstellungen löschen.
         </p>
         <p>
-          {/* Zefix-Offenlegung (§8, Entscheid David 11.6.2026) — Wortlaut-Abnahme David offen */}
+          {/* Zefix-Offenlegung (§8, Entscheid David 11.6.2026) — Wortlaut abgenommen 12.6.2026 (abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md) */}
           Eine Ausnahme erfolgt nur auf Ihren ausdrücklichen Klick: In Vorlagen mit juristischen
           Personen können Sie über den Knopf «UID in Zefix nachschlagen» den von Ihnen eingegebenen
           Firmennamen an den Zentralen Firmenindex des Bundes (zefix.ch) übermitteln, um Firma,
@@ -58,7 +59,7 @@ export function Datenschutz() {
           solche Übermittlung statt; es gelten die Datenschutzhinweise von zefix.ch.
         </p>
         <p>
-          {/* geo.admin-Offenlegung (§8, Entscheid David 12.6.2026) — Wortlaut-Abnahme David offen */}
+          {/* geo.admin-Offenlegung (§8, Entscheid David 12.6.2026) — Wortlaut abgenommen 12.6.2026 (abnahme/wortlaute-2026-06/PAUSCHALABNAHME-2026-06-12.md) */}
           Ebenfalls nur auf Ihren ausdrücklichen Klick: Über den Knopf «Beim Bund nachschlagen»
           können Sie eine eingegebene Adresse (z. B. der beklagten Partei) an die Geodaten-API des
           Bundes (geo.admin.ch) übermitteln, um Gemeinde, Kanton und PLZ aus dem amtlichen
