@@ -35,6 +35,7 @@ import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlag
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
 import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
 import { faZusammenstellen, FA_DEFAULTS, pruefeFaGates } from '../src/lib/vorlagen/forderungsabtretung';
+import { feZusammenstellen, FE_DEFAULTS, pruefeFeGates } from '../src/lib/vorlagen/fristerstreckung';
 import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
 import { sbZusammenstellen, SB_DEFAULTS } from '../src/lib/vorlagen/scheidungsbegehren';
 import { egZusammenstellen, EG_DEFAULTS } from '../src/lib/vorlagen/eheschutzgesuch';
@@ -234,6 +235,23 @@ f('vorl:fa-standard', () => faZusammenstellen(faBasis));
 f('vorl:fa-betrag-minimal', () => faZusammenstellen({ ...faBasis, betragErfassen: true, betrag: '25000', zinsenAusdruecklich: false, urkundenUebergabe: false, anzeigeAnkuendigen: false, annahmeZeile: false }));
 f('vorl:fa-blanko', () => faZusammenstellen({ ...FA_DEFAULTS }));
 f('vorl:fa-gates', () => pruefeFaGates());
+
+// Fristerstreckungsgesuch (Art. 144 ZPO; FAHRPLAN-VORLAGEN-AUSBAU V2-Rest, 13.6.2026)
+const feBasis = {
+  ...FE_DEFAULTS, absenderName: 'P AG', absenderAdresse: 'X 1, 4051 Basel',
+  adressatName: 'Zivilgericht Basel-Stadt', adressatAdresse: 'Bäumleingasse 5, 4051 Basel',
+  verfahrenBeschrieb: 'Muster AG gegen Beispiel GmbH betreffend Forderung', verfahrenNr: 'ZG.2026.123',
+  fristBeschrieb: 'Frist zur Erstattung der Klageantwort',
+  fristEnde: '2026-07-15', erstreckungBis: '2026-08-14',
+  begruendung: 'Die Akten umfassen über 800 Seiten; die unterzeichnete Vertretung ist vom 1. bis 12. Juli 2026 landesabwesend.',
+  ort: 'Basel', datum: '2026-06-13',
+};
+f('vorl:fe-standard', () => feZusammenstellen(feBasis));
+f('vorl:fe-platzhalter-verfuegung', () => feZusammenstellen({ ...feBasis, begruendungPlatzhalter: true, begruendung: '', verfuegungVomErfassen: true, verfuegungVom: '2026-06-02', ersteErstreckung: false }));
+f('vorl:fe-blanko', () => feZusammenstellen({ ...FE_DEFAULTS }));
+f('vorl:fe-gates-gesetzlich', () => pruefeFeGates({ ...feBasis, fristTyp: 'gesetzlich' }));
+f('vorl:fe-gates-zu-spaet', () => pruefeFeGates({ ...feBasis, datum: '2026-07-16', erstreckungBis: '2026-07-10' }));
+f('vorl:fe-gates-letzter-tag', () => pruefeFeGates({ ...feBasis, datum: '2026-07-15', fristTyp: 'unsicher' }));
 
 // Scheidungsklage (Art. 290 ZPO; Musterklagen-Auftrag David 12.6.2026)
 const skBasis = {

@@ -1,6 +1,7 @@
 import { ZpoFristenForm } from '../components/forms/ZpoFristenForm';
 import { EreignisFristenSektion } from '../components/forms/EreignisFristen';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
+import { ThemenEinstieg } from '../components/ThemenEinstieg';
 import { getCalculator } from '../lib/calculators';
 
 // ZPO-Fristenrechner unter /rechner/zpo-fristen. Logik UNVERÄNDERT.
@@ -16,6 +17,10 @@ export function RechnerZpo() {
         <ZpoFristenForm />
       </div>
       <EreignisFristenSektion ereignisse={['zivilentscheid', 'klagebewilligung']} />
+      {/* R10: passende Vorlage zum Rechner (V2-Rest FAHRPLAN-VORLAGEN-AUSBAU) */}
+      <ThemenEinstieg label="Frist reicht nicht aus:" links={[
+        { to: '/vorlagen/fristerstreckung', label: 'Fristerstreckungsgesuch (Art. 144 ZPO)' },
+      ]} />
     </div>
   );
 }

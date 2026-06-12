@@ -9564,6 +9564,431 @@
    "NICHT GEGENSTAND dieser Vorlage: das Verpflichtungsgeschäft (z. B. Forderungskauf; formfrei, Art. 165 Abs. 2 OR) und die Gewährleistung der Zedentin (Art. 171 ff. OR) – bei entgeltlicher Abtretung haftet sie für den Bestand der Forderung."
   ]
  },
+ "vorl:fe-standard": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Fristerstreckungsgesuch",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "FE_absender",
+      "text": "P AG\nX 1, 4051 Basel",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "FE_adressat",
+      "text": "Zivilgericht Basel-Stadt\nBäumleingasse 5, 4051 Basel",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "FE_datumzeile",
+      "text": "Basel, 13. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "FE_betreff",
+      "text": "Gesuch um Fristerstreckung – Muster AG gegen Beispiel GmbH betreffend Forderung (Geschäfts-Nr. ZG.2026.123)",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "FE_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "FE_einleitung",
+      "text": "Im genannten Verfahren läuft mir die angesetzte Frist zur Erstattung der Klageantwort bis zum 15.07.2026."
+     },
+     {
+      "bausteinId": "FE_antrag",
+      "text": "Ich ersuche Sie, diese Frist bis zum 14.08.2026 zu erstrecken."
+     },
+     {
+      "bausteinId": "FE_begruendung",
+      "ueberschrift": "Begründung",
+      "text": "Die Akten umfassen über 800 Seiten; die unterzeichnete Vertretung ist vom 1. bis 12. Juli 2026 landesabwesend."
+     },
+     {
+      "bausteinId": "FE_erste",
+      "text": "Es handelt sich um das erste Erstreckungsgesuch in dieser Frist."
+     },
+     {
+      "bausteinId": "FE_dank",
+      "text": "Ich danke Ihnen für die Prüfung dieses Gesuchs und stehe für Rückfragen zur Verfügung."
+     },
+     {
+      "bausteinId": "FE_schluss",
+      "text": "Mit freundlichen Grüssen",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "FE_unterschrift",
+      "text": "___________________________\nP AG",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Ob die Gründe zureichend sind (Art. 144 Abs. 2 ZPO), entscheidet das Gericht; massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 143/144/148 ZPO verifiziert 20250101)"
+   },
+   "aufgenommen": [
+    "FE_absender",
+    "FE_adressat",
+    "FE_datumzeile",
+    "FE_betreff",
+    "FE_anrede",
+    "FE_einleitung",
+    "FE_antrag",
+    "FE_begruendung",
+    "FE_erste",
+    "FE_dank",
+    "FE_schluss",
+    "FE_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "FE_absender",
+     "begruendung": "Gesuchstellende Partei bzw. Vertretung."
+    },
+    {
+     "bausteinId": "FE_adressat",
+     "begruendung": "Das Gericht, das die Frist angesetzt hat – nur dieses kann sie erstrecken (Art. 144 Abs. 2 ZPO)."
+    },
+    {
+     "bausteinId": "FE_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_betreff",
+     "begruendung": "Betreff mit Verfahrensbezeichnung und Geschäftsnummer zur Zuordnung."
+    },
+    {
+     "bausteinId": "FE_anrede",
+     "begruendung": "Anrede – immer enthalten (Haus-Standard; die konkrete Besetzung des Gerichts ist dem Gesuch nicht bekannt)."
+    },
+    {
+     "bausteinId": "FE_einleitung",
+     "begruendung": "Bestimmte Bezeichnung der laufenden gerichtlichen Frist (Anlass des Gesuchs)."
+    },
+    {
+     "bausteinId": "FE_antrag",
+     "begruendung": "Kern des Gesuchs: bestimmter Erstreckungs-Antrag vor Fristablauf (Art. 144 Abs. 2 ZPO).",
+     "norm": "Art. 144 Abs. 2 ZPO"
+    },
+    {
+     "bausteinId": "FE_begruendung",
+     "begruendung": "Zureichende Gründe (Art. 144 Abs. 2 ZPO) – als Masken-Text oder Platzhalter zum späteren Ausfüllen (ob sie genügen, ist Rechtsfrage des Gerichts)."
+    },
+    {
+     "bausteinId": "FE_erste",
+     "begruendung": "Praxis-Standard: Das erste Gesuch wird regelmässig grosszügiger behandelt – die Offenlegung schafft Vertrauen."
+    },
+    {
+     "bausteinId": "FE_dank",
+     "begruendung": "Schlusssatz – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_unterschrift",
+     "begruendung": "Unterschrift der kündigenden Partei."
+    }
+   ]
+  }
+ },
+ "vorl:fe-platzhalter-verfuegung": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Fristerstreckungsgesuch",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "FE_absender",
+      "text": "P AG\nX 1, 4051 Basel",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "FE_adressat",
+      "text": "Zivilgericht Basel-Stadt\nBäumleingasse 5, 4051 Basel",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "FE_datumzeile",
+      "text": "Basel, 13. Juni 2026",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "FE_betreff",
+      "text": "Gesuch um Fristerstreckung – Muster AG gegen Beispiel GmbH betreffend Forderung (Geschäfts-Nr. ZG.2026.123)",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "FE_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "FE_einleitung",
+      "text": "Im genannten Verfahren läuft mir die mit Verfügung vom 02.06.2026 angesetzte Frist zur Erstattung der Klageantwort bis zum 15.07.2026."
+     },
+     {
+      "bausteinId": "FE_antrag",
+      "text": "Ich ersuche Sie, diese Frist bis zum 14.08.2026 zu erstrecken."
+     },
+     {
+      "bausteinId": "FE_begruendung",
+      "ueberschrift": "Begründung",
+      "text": "________\n\n________"
+     },
+     {
+      "bausteinId": "FE_dank",
+      "text": "Ich danke Ihnen für die Prüfung dieses Gesuchs und stehe für Rückfragen zur Verfügung."
+     },
+     {
+      "bausteinId": "FE_schluss",
+      "text": "Mit freundlichen Grüssen",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "FE_unterschrift",
+      "text": "___________________________\nP AG",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Ob die Gründe zureichend sind (Art. 144 Abs. 2 ZPO), entscheidet das Gericht; massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 143/144/148 ZPO verifiziert 20250101)"
+   },
+   "aufgenommen": [
+    "FE_absender",
+    "FE_adressat",
+    "FE_datumzeile",
+    "FE_betreff",
+    "FE_anrede",
+    "FE_einleitung",
+    "FE_antrag",
+    "FE_begruendung",
+    "FE_dank",
+    "FE_schluss",
+    "FE_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "FE_absender",
+     "begruendung": "Gesuchstellende Partei bzw. Vertretung."
+    },
+    {
+     "bausteinId": "FE_adressat",
+     "begruendung": "Das Gericht, das die Frist angesetzt hat – nur dieses kann sie erstrecken (Art. 144 Abs. 2 ZPO)."
+    },
+    {
+     "bausteinId": "FE_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_betreff",
+     "begruendung": "Betreff mit Verfahrensbezeichnung und Geschäftsnummer zur Zuordnung."
+    },
+    {
+     "bausteinId": "FE_anrede",
+     "begruendung": "Anrede – immer enthalten (Haus-Standard; die konkrete Besetzung des Gerichts ist dem Gesuch nicht bekannt)."
+    },
+    {
+     "bausteinId": "FE_einleitung",
+     "begruendung": "Bestimmte Bezeichnung der laufenden gerichtlichen Frist (Anlass des Gesuchs)."
+    },
+    {
+     "bausteinId": "FE_antrag",
+     "begruendung": "Kern des Gesuchs: bestimmter Erstreckungs-Antrag vor Fristablauf (Art. 144 Abs. 2 ZPO).",
+     "norm": "Art. 144 Abs. 2 ZPO"
+    },
+    {
+     "bausteinId": "FE_begruendung",
+     "begruendung": "Zureichende Gründe (Art. 144 Abs. 2 ZPO) – als Masken-Text oder Platzhalter zum späteren Ausfüllen (ob sie genügen, ist Rechtsfrage des Gerichts)."
+    },
+    {
+     "bausteinId": "FE_dank",
+     "begruendung": "Schlusssatz – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_unterschrift",
+     "begruendung": "Unterschrift der kündigenden Partei."
+    }
+   ]
+  }
+ },
+ "vorl:fe-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Fristerstreckungsgesuch",
+    "format": "eingabe",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "FE_absender",
+      "text": "________",
+      "rolle": "absender"
+     },
+     {
+      "bausteinId": "FE_adressat",
+      "text": "________",
+      "rolle": "adressat"
+     },
+     {
+      "bausteinId": "FE_datumzeile",
+      "text": "________, ________",
+      "rolle": "datumzeile"
+     },
+     {
+      "bausteinId": "FE_betreff",
+      "text": "Gesuch um Fristerstreckung – ________",
+      "rolle": "betreff"
+     },
+     {
+      "bausteinId": "FE_anrede",
+      "text": "Sehr geehrte Damen und Herren",
+      "rolle": "anrede"
+     },
+     {
+      "bausteinId": "FE_einleitung",
+      "text": "Im genannten Verfahren läuft mir die angesetzte ________ bis zum ________."
+     },
+     {
+      "bausteinId": "FE_antrag",
+      "text": "Ich ersuche Sie, diese Frist bis zum ________ zu erstrecken."
+     },
+     {
+      "bausteinId": "FE_begruendung",
+      "ueberschrift": "Begründung",
+      "text": "________"
+     },
+     {
+      "bausteinId": "FE_erste",
+      "text": "Es handelt sich um das erste Erstreckungsgesuch in dieser Frist."
+     },
+     {
+      "bausteinId": "FE_dank",
+      "text": "Ich danke Ihnen für die Prüfung dieses Gesuchs und stehe für Rückfragen zur Verfügung."
+     },
+     {
+      "bausteinId": "FE_schluss",
+      "text": "Mit freundlichen Grüssen",
+      "rolle": "schlussformel"
+     },
+     {
+      "bausteinId": "FE_unterschrift",
+      "text": "___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Ob die Gründe zureichend sind (Art. 144 Abs. 2 ZPO), entscheidet das Gericht; massgebend sind Gesetz und konkreter Sachverhalt.",
+    "version": "1.0.0 (Wettbewerbsanalyse V2; Art. 143/144/148 ZPO verifiziert 20250101)"
+   },
+   "aufgenommen": [
+    "FE_absender",
+    "FE_adressat",
+    "FE_datumzeile",
+    "FE_betreff",
+    "FE_anrede",
+    "FE_einleitung",
+    "FE_antrag",
+    "FE_begruendung",
+    "FE_erste",
+    "FE_dank",
+    "FE_schluss",
+    "FE_unterschrift"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "FE_absender",
+     "begruendung": "Gesuchstellende Partei bzw. Vertretung."
+    },
+    {
+     "bausteinId": "FE_adressat",
+     "begruendung": "Das Gericht, das die Frist angesetzt hat – nur dieses kann sie erstrecken (Art. 144 Abs. 2 ZPO)."
+    },
+    {
+     "bausteinId": "FE_datumzeile",
+     "begruendung": "Ort und Datum der Erklärung – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_betreff",
+     "begruendung": "Betreff mit Verfahrensbezeichnung und Geschäftsnummer zur Zuordnung."
+    },
+    {
+     "bausteinId": "FE_anrede",
+     "begruendung": "Anrede – immer enthalten (Haus-Standard; die konkrete Besetzung des Gerichts ist dem Gesuch nicht bekannt)."
+    },
+    {
+     "bausteinId": "FE_einleitung",
+     "begruendung": "Bestimmte Bezeichnung der laufenden gerichtlichen Frist (Anlass des Gesuchs)."
+    },
+    {
+     "bausteinId": "FE_antrag",
+     "begruendung": "Kern des Gesuchs: bestimmter Erstreckungs-Antrag vor Fristablauf (Art. 144 Abs. 2 ZPO).",
+     "norm": "Art. 144 Abs. 2 ZPO"
+    },
+    {
+     "bausteinId": "FE_begruendung",
+     "begruendung": "Zureichende Gründe (Art. 144 Abs. 2 ZPO) – als Masken-Text oder Platzhalter zum späteren Ausfüllen (ob sie genügen, ist Rechtsfrage des Gerichts)."
+    },
+    {
+     "bausteinId": "FE_erste",
+     "begruendung": "Praxis-Standard: Das erste Gesuch wird regelmässig grosszügiger behandelt – die Offenlegung schafft Vertrauen."
+    },
+    {
+     "bausteinId": "FE_dank",
+     "begruendung": "Schlusssatz – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_schluss",
+     "begruendung": "Schlussformel – immer enthalten."
+    },
+    {
+     "bausteinId": "FE_unterschrift",
+     "begruendung": "Unterschrift der kündigenden Partei."
+    }
+   ]
+  }
+ },
+ "vorl:fe-gates-gesetzlich": {
+  "blocker": [
+   "GESETZLICHE Fristen können nicht erstreckt werden (Art. 144 Abs. 1 ZPO) – ein Erstreckungsgesuch ist aussichtslos. Bei bereits versäumter Frist kommt die WIEDERHERSTELLUNG in Betracht (Art. 148 ZPO: kein oder nur leichtes Verschulden glaubhaft machen; Gesuch innert zehn Tagen seit Wegfall des Säumnisgrundes)."
+  ],
+  "warnungen": [],
+  "hinweise": [
+   "Die Erstreckung setzt ZUREICHENDE GRÜNDE voraus (Art. 144 Abs. 2 ZPO) – ob sie genügen, entscheidet das Gericht. Konkret begründen (z. B. Aktenumfang, Ferienabwesenheit der Klientschaft, laufende Vergleichsgespräche) statt formelhaft."
+  ]
+ },
+ "vorl:fe-gates-zu-spaet": {
+  "blocker": [
+   "Das Gesuchsdatum liegt NACH dem Fristende – die Erstreckung setzt voraus, dass das Gericht VOR Fristablauf ersucht wird (Art. 144 Abs. 2 ZPO). Bei bereits versäumter Frist bleibt nur die Wiederherstellung (Art. 148 ZPO).",
+   "Das beantragte neue Fristende muss nach dem laufenden Fristende liegen."
+  ],
+  "warnungen": [],
+  "hinweise": [
+   "Die Erstreckung setzt ZUREICHENDE GRÜNDE voraus (Art. 144 Abs. 2 ZPO) – ob sie genügen, entscheidet das Gericht. Konkret begründen (z. B. Aktenumfang, Ferienabwesenheit der Klientschaft, laufende Vergleichsgespräche) statt formelhaft."
+  ]
+ },
+ "vorl:fe-gates-letzter-tag": {
+  "blocker": [],
+  "warnungen": [
+   "Frist-Art prüfen: Erstreckbar sind nur GERICHTLICHE (vom Gericht angesetzte) Fristen; die von der ZPO selbst bestimmten gesetzlichen Fristen (z. B. Rechtsmittelfristen) können nicht erstreckt werden (Art. 144 ZPO).",
+   "Letzter Tag der Frist: Das Gesuch muss spätestens heute beim Gericht eingereicht oder zu dessen Handen der Schweizerischen Post übergeben werden (Art. 143 Abs. 1 ZPO)."
+  ],
+  "hinweise": [
+   "Die Erstreckung setzt ZUREICHENDE GRÜNDE voraus (Art. 144 Abs. 2 ZPO) – ob sie genügen, entscheidet das Gericht. Konkret begründen (z. B. Aktenumfang, Ferienabwesenheit der Klientschaft, laufende Vergleichsgespräche) statt formelhaft."
+  ]
+ },
  "vorl:sk-standard": {
   "dokument": {
    "titel": "Scheidungsklage (unbegründete Eingabe)",

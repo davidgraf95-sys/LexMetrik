@@ -1426,6 +1426,27 @@ const VORLAGEN: Record<string, VorlageCard> = {
     related: ['schkg-fristen', 'rechtsoeffnungsbegehren'],
     keywords: ['Rechtsvorschlag', 'Zahlungsbefehl', 'Betreibung'],
   },
+  fristerstreckungsgesuch: {
+    id: 'fristerstreckungsgesuch', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'gesuch_sonstige', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
+    formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Fristerstreckungsgesuch',
+    // P1-Vorlage Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V2);
+    // Art. 143/144/148 ZPO am Cache verifiziert (20250101).
+    description: 'Gesuch an das Gericht, eine gerichtliche Frist zu erstrecken (Art. 144 Abs. 2 ZPO) – mit Frist-Art-Weiche (gesetzliche Fristen sind nicht erstreckbar) und Vor-Fristablauf-Prüfung.',
+    status: 'entwurf',
+    norms: [
+      // Art. 144 ZPO – Erstreckung (Wortlaut verifiziert 13.6.2026)
+      { label: 'Art. 144 ZPO', url: fedlexUrl('ZPO', '144'), verified: false },
+      { label: 'Art. 143 ZPO', url: fedlexUrl('ZPO', '143'), verified: false },
+    ],
+    href: '/vorlagen/fristerstreckung',
+    schemaId: 'fristerstreckungsgesuch',
+    formvorschrift: 'Unterzeichnete Eingabe an das Gericht – vor Fristablauf einreichen (Art. 144 Abs. 2 ZPO).',
+    output: ['pdf', 'docx'],
+    related: ['zpo-fristen', 'tagerechner'],
+    keywords: ['Fristerstreckung', 'Frist erstrecken', 'Erstreckungsgesuch', 'gerichtliche Frist', 'Art. 144', 'Klageantwort'],
+  },
   aberkennungsklage: {
     id: 'aberkennungsklage', modus: 'vorlage', art: 'eingabe', eingabeRubrik: 'klage_besonders', klageGebiet: 'Zwangsvollstreckung', rechtsgebiet: 'Betreibung & Konkurs (SchKG)',
     rechtsbereich: 'privat',

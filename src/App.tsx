@@ -44,6 +44,7 @@ const VorlageKuendigungVermieter = lazy(() => import('./pages/VorlageKuendigungV
 const VorlageMahnung = lazy(() => import('./pages/VorlageMahnung').then((m) => ({ default: m.VorlageMahnung })));
 const VorlageVerjaehrungsverzicht = lazy(() => import('./pages/VorlageVerjaehrungsverzicht').then((m) => ({ default: m.VorlageVerjaehrungsverzicht })));
 const VorlageForderungsabtretung = lazy(() => import('./pages/VorlageForderungsabtretung').then((m) => ({ default: m.VorlageForderungsabtretung })));
+const VorlageFristerstreckung = lazy(() => import('./pages/VorlageFristerstreckung').then((m) => ({ default: m.VorlageFristerstreckung })));
 const VorlageScheidungsklage = lazy(() => import('./pages/VorlageScheidungsklage').then((m) => ({ default: m.VorlageScheidungsklage })));
 const VorlageScheidungsbegehren = lazy(() => import('./pages/VorlageScheidungsbegehren').then((m) => ({ default: m.VorlageScheidungsbegehren })));
 const VorlageEheschutzgesuch = lazy(() => import('./pages/VorlageEheschutzgesuch').then((m) => ({ default: m.VorlageEheschutzgesuch })));
@@ -131,6 +132,7 @@ export default function App() {
         <Route path="/vorlagen/mahnung" element={<VorlageMahnung />} />
         <Route path="/vorlagen/verjaehrungsverzicht" element={<VorlageVerjaehrungsverzicht />} />
         <Route path="/vorlagen/forderungsabtretung" element={<VorlageForderungsabtretung />} />
+        <Route path="/vorlagen/fristerstreckung" element={<VorlageFristerstreckung />} />
         <Route path="/vorlagen/scheidungsklage" element={<VorlageScheidungsklage />} />
         <Route path="/vorlagen/scheidungsbegehren-gemeinsam" element={<VorlageScheidungsbegehren />} />
         <Route path="/vorlagen/eheschutzgesuch" element={<VorlageEheschutzgesuch />} />
