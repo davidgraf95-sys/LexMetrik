@@ -60,14 +60,17 @@ export const NB_DEFAULTS: NbAntworten = {
 
 /** Frühester zulässiger Gesuchstag: Folgetag nach Ablauf der drei Monate
  *  seit Zustellung des Zahlungsbefehls (Art. 8a Abs. 3 lit. d SchKG).
- *  KONSERVATIV nach den ZPO-Fristenregeln gerechnet (Art. 31 SchKG):
- *  der Lauf beginnt am Folgetag der Zustellung (Art. 142 Abs. 1 ZPO) und
- *  endet am gleichbezeichneten Tag des dritten Monats (Abs. 2,
- *  Monatsende-Klemmung via date-fns addMonths); das Gesuch ist NACH
- *  Ablauf zulässig → frühester Tag = Folgetag des Fristendes. Die
- *  mildere OR-77-Lesart (Ende am gleichbezeichneten Tag der Zustellung)
- *  käme einen Tag früher — Review-Befund 13.6.2026: am Grenztag wäre
- *  die Abweisung als verfrüht riskiert, darum die sichere Variante. */
+ *  Gerechnet nach den ZPO-Fristenregeln — Art. 31 SchKG verweist für
+ *  Betreibungssachen zwingend auf die ZPO: der Lauf beginnt am Folgetag
+ *  der Zustellung (Art. 142 Abs. 1 ZPO) und endet am gleichbezeichneten
+ *  Tag des dritten Monats (Abs. 2, Monatsende-Klemmung via date-fns
+ *  addMonths); das Gesuch ist NACH Ablauf zulässig → frühester Tag =
+ *  Folgetag des Fristendes. Die OR-77-Berechnung (Ende am
+ *  gleichbezeichneten Tag der Zustellung, ohne Folgetags-Lauf) gilt hier
+ *  NICHT (sie beträfe materielle OR-Fristen, nicht die betreibungs-
+ *  rechtliche Frist) und käme einen Tag früher — am Grenztag würde ein
+ *  danach gerechnetes Gesuch als verfrüht riskiert (Review-Historie
+ *  13.6.2026). Maßgeblich und korrekt ist allein die ZPO-142-Rechnung. */
 export function nbFruehesterGesuchstag(zustellungISO: string): string | null {
   if (!istGueltigesISO(zustellungISO)) return null;
   return formatISO(addDays(addMonths(addDays(parseISO(zustellungISO), 1), 3), 1));
