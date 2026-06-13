@@ -859,6 +859,14 @@ const ANMELDUNG_SCHEMA: VorlageSchema = {
 };
 
 
+// ── Schema-Registry (nur für das Abnahme-Dossier, §7/§5) ────────────────────
+// Reihenfolge wie in gmbhDokumentmappe(). Reine Lese-Ableitung — wird von
+// assemble()/der Mappe NICHT konsumiert (additiv, verhaltensneutral).
+export const GMBH_ALLE_SCHEMAS: VorlageSchema[] = [
+  STATUTEN_SCHEMA, ERRICHTUNGSAKT_SCHEMA, WAHLANNAHME_SCHEMA,
+  DOMIZILANNAHME_SCHEMA, VORSITZ_SCHEMA, ERNENNUNG_SCHEMA, ANMELDUNG_SCHEMA,
+];
+
 // ── Dokumentmappe ───────────────────────────────────────────────────────────
 
 export type GmbhDokument = {
