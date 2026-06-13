@@ -22,3 +22,7 @@ auffindbar bleiben (`grep <name>`).
 | [fundamentalanalyse-2026-06-06.md](fundamentalanalyse-2026-06-06.md) | Fundamentalanalyse Nacht-Session 6.6.2026 (18 Agents) | historisch; Befunde in HANDLUNGSPLAN übernommen |
 | [legalcalc-review.md](legalcalc-review.md) | Juristisches Review-Dokument Modul 1 Arbeitsrecht (3.6.2026) | überholt durch bibliothek/ (§11) |
 | [STRUKTUR-SESSIONKARTEN.md](STRUKTUR-SESSIONKARTEN.md) | Rotierte Session-Karten aus STRUKTUR.md (laufend, byte-genau verschoben; Pflegeregel im Kopf von STRUKTUR.md) | angelegt 11.6.2026 (Token-Disziplin T-4) |
+| [FAHRPLAN-DESIGN.md](FAHRPLAN-DESIGN.md) | Design-System/Visueller Feinschliff (Etappen, axe-Stichprobe) | ERLEDIGT 10.6.2026 abends (31 Etappen abgehakt) |
+| [FAHRPLAN-RECHNER-DESIGN.md](FAHRPLAN-RECHNER-DESIGN.md) | Rechner-Design-Vereinheitlichung D1–D6 | UMGESETZT + ABGENOMMEN David 11.6.2026 (E-1–E-5 ohne Auflagen; offen nur Push §9) |
+| [FAHRPLAN-VEREINHEITLICHUNG.md](FAHRPLAN-VEREINHEITLICHUNG.md) | Engine-/Datums-Entdopplung V1–V5 (geteilte Infrastruktur) | UMGESETZT 10.6.2026; V2 bewusst abgebrochen, V5 zurückgestellt (Wiedervorlage mit §0a-Öffnung) |
+| [FAHRPLAN-TOKEN-DISZIPLIN.md](FAHRPLAN-TOKEN-DISZIPLIN.md) | Token-Disziplin T-1–T-4 (gate-Wrapper, STRUKTUR-Rotation, Diagnose-Sparsamkeit) | UMGESETZT 11.6.2026 (operative Regeln in STRUKTUR-Kopf + Lektionen gespiegelt) |

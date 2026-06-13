@@ -1,0 +1,7 @@
+# Python-Abhängigkeiten des Repos — EINZIGER Python-Lauf:
+#   scripts/lik-reihe-generieren.py  (monatlicher manueller Pflege-Lauf nach
+#   BFS-Publikation; liest die BFS-XLSX, schreibt src/data/likReihe.ts).
+# Alle übrigen Generatoren laufen in TypeScript via vite-node. Dieses Skript
+# steht bewusst ausserhalb von gate/golden/CI (manuell, nicht tor-relevant).
+# Installation:  python3 -m pip install -r requirements.txt
+openpyxl

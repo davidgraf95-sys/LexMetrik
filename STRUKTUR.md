@@ -7,8 +7,10 @@ Refactoring-Protokoll) — dieses Dokument hier beschreibt den Zustand.
 liegen nur AKTIVE Steuerungsdokumente — CLAUDE/README/STRUKTUR/HANDLUNGSPLAN,
 Projekt- und Strategie-Papiere (PROJEKTBESCHRIEB, STRATEGIE-PLATTFORM,
 WACHSTUM-REGLEMENT, BETRIEB, KATALOG-ROADMAP, ABNAHME-AG-BAUSTEINE) und die
-laufenden Fahrpläne (GRUNDLAGEN, DESIGN, VEREINHEITLICHUNG, AG-/GMBH-
-GRUENDUNG). Abgeschlossene Fahrpläne und historische Dokumente liegen in
+laufenden Fahrpläne (GRUNDLAGEN, AG-/GMBH-GRUENDUNG, BGER-RECHTSWEG,
+VORLAGEN-AUSBAU, VERTRAGS-VARIANTEN, FUNDAMENT-UMBAU). Abgeschlossene
+Fahrpläne (DESIGN, RECHNER-DESIGN, VEREINHEITLICHUNG, TOKEN-DISZIPLIN — ins
+Archiv 13.6.2026) und historische Dokumente liegen in
 **`archiv/`** (Index: `archiv/README.md`; Dateinamen unverändert, damit
 Verweise in Code-Kommentaren per grep auffindbar bleiben). Wissens-Quellen
 (PDF/DOCX, gitignored) in `bibliothek/quellen/` (`SICHTUNG.md`).
@@ -182,183 +184,16 @@ Kandidat Re-Generierung 1.10.2026) · ZH-Vollerfassung Nachträge.
 1.10.2026 entscheiden. Tore: gate voll GRÜN, Build 38/38.
 **16 Commits ungepusht — Push/Deploy nur auf frisches Ja (§9).**
 
-## Session 11.6.2026 früher Abend — durchblick.nl-Sichtung + KVG-Preset Krankenkasse (Entscheid David, ungepusht)
-
-**(1) Konkurrenz-Sichtung** (`9c007af`): Sieben Offline-Rechner-ZIPs von
-David geprüft — KEINE Übernahme (Gerichtskosten = Zürcher Basistabelle ×
-geschätzte Kantons-Multiplikatoren, Anwaltskosten «10-15% of Streitwert»:
-§2-Gegenmodell; wo seriös, ist der eigene Bestand stärker; fremdes Werk).
-Befund in bibliothek/recherche/durchblick-nl-sichtung.md; bestätigt
-Nachfrage für `prozesskosten` (Roadmap Prio 1, Entscheid offen).
-**(2) KVG-Preset «Krankenkasse (Grundversicherung)»** in Maske 3
-(`5790fc2`, Entscheid David nach Befund-Optionen): §7-Recherche zuerst —
-KVG/KVV am Filestore 20260101 zeichengenau (beide OHNE -N-Suffix, neuere
-Daten nur SPA-Shell; Dossier kvg-grundversicherung-kuendigung.md,
-Quellen-Register + fedlex-cache.sh erweitert). Drei regime-treue Pfade:
-Prämienmitteilung (Art. 7 Abs. 2 KVG, 30.-November-Fall) · ordentlich
-Semesterende (Abs. 1) · Jahresende bei besonderer Form (Art. 94 Abs. 2/
-100 Abs. 3 KVV); Nahtlos-Klausel (Abs. 5) in jedem Brief. Gates:
-Ausstands-Sperre 64a Abs. 6 als Warnung, Termin-Hinweise, Koppelungsverbot
-Abs. 7/8. Schema 1.0.0→1.1.0 deklariert; kein Golden-Fall betroffen
-(IDENTISCH 104). norm-zitate-pruefen.ts neu mit kuendigungAllgemein.ts +
-VVG/KVG/KVV (616 Zitate, 0 Befunde). Tore: gate voll GRÜN; empirisch im
-Dev-Server verifiziert (Playwright: Kachel, Norm-Pill-Link, Vorschau-
-Umschaltung). **Abnahme Art. 7 KVG durch David offen (verified: false).**
-**10 Commits ungepusht — Push/Deploy nur auf frisches Ja (§9).**
-
-## Session 11.6.2026 später Nachmittag — Token-Disziplin (Aufträge David, ungepusht)
-
-**(1) Quiet-on-Green Gate-Wrapper** (`ab1fdd6`/`8202aab`/`8c4e809`, Auftrag
-AUFTRAG-gate-wrapper.md): `npm run gate` (Fünferkette) / `gate:schnell`
-(tsc·vitest·golden, ~7 s) — bei Grün ein Einzeiler pro Tor, volle Ausgabe
-NUR für rote Tore; §6 Ziff. 1 zeigt auf den Wrapper; Rot-Pfad empirisch
-belegt. **(2) Token-Fahrplan** `FAHRPLAN-TOKEN-DISZIPLIN.md` («freie
-Fahrt»): T-1 `npm run golden:diff -- <id>` = Fall-Diff statt 11'900-Zeilen-
-JSON, dazu Schutz-Fund gefixt — unbekannte Argumente an `npm run golden`
-überschrieben bisher STILL die Basis (`ffeb549`) · T-3 §6 Ziff. 5
-Diagnose-Sparsamkeit (`776ecc5`) · T-4 STRUKTUR-Rotation 826→587 Zeilen,
-Chronik byte-genau (Rekonstruktions-Assert) nach
-archiv/STRUKTUR-SESSIONKARTEN.md, Pflegeregel im Kopf, Verifikationsstand-
-Zeile aktualisiert (`e8d3802`) · T-2 Stop-Hook `gate-stopp.py`: fährt
-gate:schnell nativ nach jeder Antwort, Grün = 0 Tokens, Rot blockiert
-EINMAL mit voller Ausgabe; Anlage durch David selbst (Permission-Classifier
-liess Hook-/Permission-Schreiben durch die Session zweimal nicht zu),
-Empirie 4/4 Pfade (`e164491`). Kein Tor abgeschwächt. Beginn der Session:
-READ-ONLY-Repo-Inspektionsbericht für das Loop-Setup (Plan-Datei).
-**7 Commits ungepusht — Push/Deploy nur auf frisches Ja (§9).**
-
-## Session 11.6.2026 abends — Klage-Befunde David: Instanz-Hinweis + Kopf-Layout (DEPLOYED)
-
-**(1) «nimmt standardmässig obere kantonale Instanz» (`b06a823`):** Root
-Cause war KEIN Datenfehler — in OW/NW/GL/ZG/SH/AR heisst die ERSTE Instanz
-amtlich «Kantonsgericht» (Dossier gerichtsbehoerden-kantone.md Z. 12);
-neues Feld `namensHinweis` in data/zivilgerichteErstinstanz.ts, KvGericht-
-Wahl zeigt die Offenlegung als Warn-Notiz (wirkt KV+KO). TDD rot→grün.
-**(2) «Adresse der klagenden Partei zuoberst» (`323430d`):** Entscheid
-David per Vorschau-Auswahl: **Gericht zuoberst, Parteien+Vertretung nur im
-Rubrum** — Absender-Bausteine in ALLEN drei Eingabe-Vorlagen entfernt
-(SG BS = bewusstes Abnahme-Delta; Muster-Dossier-Punkt 1 damit überholt,
-Wortlaut-Hoheit David). Golden vorl:sg/vorl:ko deklariert neu, 1 SG-Test-
-Assertion deklariert umgestellt. Prod `323430d` live (Hash live=lokal,
-Instanz-Hinweis ZG empirisch).
-
-## Session 11.6.2026 nachmittags — SSG/SEO-Umbau DEPLOYED (Auftrag + Freigaben David)
-
-**Auftrag `claude-code-auftrag-ssg-seo.md` komplett umgesetzt und LIVE**
-(Push origin/main = `58eaa7c`, Prod lexmetrik.vercel.app, Asset-Hash
-live=lokal, LCP 184 ms): Build-Zeit-Prerender im bestehenden Vite-Setup —
-alle **38 öffentlichen Routen liefern volles HTML ohne JS** mit
-individuellem Titel/Description/Canonical/OG + JSON-LD (WebApplication je
-Karte, WebSite+Organization auf /), `sitemap.xml` (38 URLs) + robots-
-Verweis. Architektur: `lib/seo.ts` (§5-Quelle, SITE_URL = EINZIGER
-Domainwechsel-Wert) · `entry-server.tsx` ZWEI-PASS (prerender wärmt
-lazy-Caches, renderToString liefert script-freies HTML — Reacts
-$RC-Suspense-Scripts kollidierten mit der CSP, Prod-Befund gefixt
-`58eaa7c`) · `scripts/prerender.ts` als dritter Build-Schritt mit
-Drift-Toren (404/Stub/Script/Fallback/Zähler 38) · `RouteMeta` führt den
-Head bei SPA-Navigation nach · flache `<pfad>.html` + vercel.json
-cleanUrls/trailingSlash:false/Fallback-Rewrite `/app` (noindex-Hülle).
-`main.tsx` UNVERÄNDERT (render-then-replace statt Hydrate — Begründung
-docs/ssg-diagnose.md). Doku: `docs/ssg-diagnose.md` + 
-`docs/ssg-umbau-protokoll.md`. **§9-Bug-Check** (6 Strang-Finder × 2
-adversariale Lupen über a7adb98..HEAD): 10 bestätigte Befunde, ALLE
-gefixt (`9858c14`, `687fe58`) — darunter 2× MITTEL BGer (kantonale
-Stimmrechtssachen ohne Stillstand Art. 46 II lit. c als neuer Sonderfall;
-Art.-98-Warnung nicht bei Haftsachen) + Permalink-Nachzug + KV-Platzhalter-
-Beilagen-Leak + 3× §3-Defense-in-depth. §12-Vorfall: Parallel-Session
-(Schlichtung) erzwang Worktree-Etappen E3–E6 (Branch ssg-seo, gemergt
-`1e1a44a`). **Zefix-UID Z1/Z1b DEPLOYED (gleiche Session, Push `8c691f3`):**
-UID-Feld (lib/uid.ts: eCH-0097-Prüfziffer, rein §2) + ZefixSuche-Baustein
-(ERSTER externer Request des Produkts, NUR auf Klick; CSP connect-src +
-zefix.ch; Datenschutz-Offenlegung Abschnitt 2 — Wortlaut-Abnahme offen)
-in den Behördeneingaben (ParteiEditor KV/KO + Schlichtungsgesuch BS);
-Suche per Firma ODER UID, Übernahme füllt Firma/UID/Strasse/PLZ/Ort aus
-dem Register (Detail-API; Dossier bibliothek/recherche/zefix-api.md).
-Prod-verifiziert (UID-only → Migros + Limmatstrasse 152, 0 CSP-Fehler).
-OFFEN Z2: Rollout auf Verträge/Kündigungen/Mahnung/Vollmacht/Gründungen.
-OFFEN: fachliche Abnahme der §7-Abweichungen (Stimmrechts-
-Sonderfall, Art.-98-Gate, Mahnungs-Blocker) · TODO(David): statische
-Meta-Descriptions, Kündigung-Titelwahl, og:image · **iCloud synct das
-Repo und legt Konfliktkopien in dist/ an (empirisch belegt) — Repo aus
-dem Sync nehmen oder dist/.nosync setzen** · Zefix-UID-Feld mit
-Auto-Lookup für juristische Personen (Entscheid David, nächste Etappe).
-
-## Session 11.6.2026 vormittags — Abnahme Design · Mahnung · BGer-Rechtsweg · Trio-Nachzug (Aufträge David)
-
-> **GEPUSHT + DEPLOYED 11.6.2026 mittags (Ja David «bug check push und
-> deploy»): origin/main = `91dde33`, Prod-Deploy
-> `dpl_3uCHqYuNGrD1etvWCLSDyN4fWQMx` via /tmp-HEAD-Worktree; Asset-Hash
-> live = lokal (`index-BG0IjHoG.js`), 8/8 Kernrouten 200 (inkl. neu
-> /rechner/bgg-fristen + /vorlagen/mahnung). §9-Bug-Check: 3 unabhängige
-> Lupen über das 17-Commit-Delta, 0 HOCH, 9 MITTEL + 6 NIEDRIG alle
-> gefixt (`cf16b9b` — u. a. Art. 93 lit. b kumulativ, Art. 51 lit. a/b/c
-> je Objekt, Art. 103 Abs. 2 vollständig, verwaistes vorsorglich-Flag
-> SchKG-Aufsicht, Render-Crash bei ungültigem Speicher-ISO);
-> Empirie-Lupe 173/173 Konstellationen handgerechnet. Dazu (5) BGG in
-> die drei Rechtsmittel-Fahrpläne verdrahtet (`2cfeff8`, Auftrag David):
-> Zivil-Schritt 4 zeigt Abteilung + Prefill-Brücke in den BGer-Rechner;
-> SchKG-Beschwerdeweg/Rechtsöffnungs-Falle + Straf je mit Brücke
-> (BGER_LINK_SPEC zentral in rechnerPermalinks.ts). Der spätere
-> SO/NE/BL/VS-Stand der Parallel-Session (`40fb888`) ist NICHT in diesem
-> Deploy.**
-
-**(1) Design-Abnahme:** `abnahme/design-2026-06/RECHNER-EINHEIT.md` E-1–E-5
-durch David ABGENOMMEN (ohne Auflagen, `0b83423`) — R1–R12 verbindlich.
-**(2) Vorlage Mahnung & Inverzugsetzung** (`c2a0572`, Quick-Win B.9 — damit
-alle 4 Quick-Wins gebaut): EINE Maske `/vorlagen/mahnung`, Varianten
-Zahlungs-Mahnung (Art. 102 Abs. 1/104 OR; Verzug AB ZUGANG ausdrücklich,
-§5-konsistent mit verzugszins.ts; Verfalltag-Weiche 102 II mit Zins ab
-Folgetag; G-Mahngebühren) ↔ Nachfristansetzung (Art. 107, Wahlrechts-
-Vorbehalt; Entscheid 7.6.: Inverzugsetzung = Variante). OR-Wortlaute
-102/104/107/108 am Cache verifiziert; Katalog 35/31.
-**(3) BGer-Rechtsweg** (`f443dd5`, Auftrag «recherche … handlungsplan …
-umsetzen»; `FAHRPLAN-BGER-RECHTSWEG.md`): EIGENE Engine
-`lib/bgerRechtsweg.ts` (§4-Entscheid: BGG-Regime quer zu ZPO/SchKG/StPO;
-bestimmeRechtsmittel unangetastet) + Rechner `/rechner/bgg-fristen`
-(Karte bgg-fristen entwurf; 3. prozessuales Fristen-Regime; Katalog 36/32).
-Dossier am Cache 20260401 nachverifiziert; **BGerR neu gepinnt**
-(Art. 33/34/35/35a/36 zeichengenau; Rechtsöffnungs-Falle 33 lit. i;
-2 Straf-Abteilungen seit 1.2.2026). Alle 4 Beschwerdewege, Fristen-Matrix
-30/10/5/3/jederzeit + Stillstand 46 inkl. aller Abs.-2-Ausnahmen +
-konkretes Fristende (Kantons-Werktagsregel 45 II), Art. 74-Schwellen mit
-Abs.-2-Ausnahmen, subsidiäre VB, Eheschutz NUR als Warnung (V-1).
-Anschlüsse additiv: bestimmeRechtsmittel.bgerAbteilung (B.5a),
-strafRechtsmittel-Hinweis präzisiert. Golden 104 (deklariert +10 / 2).
-**(4) Trio-ErgebnisBlock-Nachzug** (`4e6d4b1`, E-4): 5 Hand-Wrapper auf den
-geteilten Rahmen, Golden byte-gleich, e2e 33/33.
-OFFEN: fachliche Abnahme (Mahnungs-Bausteine; BGer: Eheschutz-Weiche +
-Hinweis-Texte + 7 Dossier-Fragen-Antworten als Vorschlag) · Push/Deploy
-nur auf frisches Ja.
-
-## Session 11.6.2026 über Nacht — Rechner-Design-Vereinheitlichung D1–D6 (Auftrag David, ungepusht)
-
-Regelwerk **`DESIGN-REGLEMENT-RECHNER.md` (R1–R12)**: verbindlicher Aufbau
-jeder Rechner-Seite (Kopf → Rückverweis → Werkzeug-Karte → Ereignis-Sektion →
-Themen-Einstieg) und jedes Formulars (Disclaimer → Preset → Eingaben →
-Erweitert → FehlerBox → Ergebnisblock), Ergebnisblock-Skelett (Eckdaten mit
-Akzent auf dem massgeblichen Wert → ErgebnisAnzeige → Kalender/Timeline →
-Begründung → Aktenzeichen → Export-Zeile PDF→ICS→Teilen → Quellen-Mikrozeile),
-Rechtsinfo-Hierarchie (R6) und abschliessende Ausnahmen (R12). Umsetzung über
-alle 16 ergebnistragenden Formulare (`FAHRPLAN-RECHNER-DESIGN.md`, Commits
-`2cd3791`/`ff5bbb4`/`fcd2c38`): neue §10-Bausteine **`ErgebnisBlock`**
-(id · lc-reveal · EINE aria-live-Region · ErgebnisSprung · LiveHeader) und
-**`ThemenEinstieg`**; EckdatenKachel mit `akzent`-Prop; Doppel-aria-live der
-ErgebnisAnzeige aufgelöst. §6-Beweis: Golden 88/88 byte-gleich · e2e 33/33 ·
-smoke ok. Abnahme-Grundlage mit Screenshots vorher/nachher + Entscheid-Posten
-E-1–E-5: `abnahme/design-2026-06/RECHNER-EINHEIT.md` — **ABGENOMMEN durch
-David 11.6.2026 ohne Auflagen** (R1–R12 verbindlich, Trio-Nachzug
-freigegeben). Zuständigkeits-Trio bereits regelkonform (Referenzmuster);
-dessen rein kosmetische ErgebnisBlock-Adoption war §12-zurückgestellt,
-Nachzug seit der Abnahme freigegeben.
-
 ## Ältere Session-Karten und Chroniken — rotiert ins Archiv
 
 Verbatim verschoben nach `archiv/STRUKTUR-SESSIONKARTEN.md`
-(FAHRPLAN-TOKEN-DISZIPLIN.md T-4, 11.6.2026): Sessions 10.6. abends
-(STRUKTUR-UMBAU S-1–S-6) und nachmittags (Fristen-Einheit FE-1–FE-6) ·
-7.6. abends (Betreibungsamt-Finder) und nachts (Plan 9b Volldokumente) ·
-6.6. abends und nachmittags · Verschlankung 5.6.2026 ·
-Session-Abschluss 6.6.2026.
+(FAHRPLAN-TOKEN-DISZIPLIN.md T-4): **13.6.2026** alle sieben 11.6.-Karten
+(früher Abend · später Nachmittag · abends · nachmittags · vormittags ·
+über Nacht · Tag «Schlichtung fertig + Vollerhebungen») · **11.6.2026**
+Sessions 10.6. abends (STRUKTUR-UMBAU S-1–S-6) und nachmittags
+(Fristen-Einheit FE-1–FE-6) · 7.6. abends (Betreibungsamt-Finder) und
+nachts (Plan 9b Volldokumente) · 6.6. abends und nachmittags ·
+Verschlankung 5.6.2026 · Session-Abschluss 6.6.2026.
 
 ## Verifikationsstand (eine Zeile)
 
@@ -786,18 +621,3 @@ Aufnahme nur bei klar regelbasiertem, deterministischem Umfang — sonst
 Widerspruch zu «feste Rechenregeln, keine Schätzung»: Konsumkredit-Widerruf
 (Anwendungsbereich klären) · Schadenersatz/Genugtuung · Unterhalt ·
 Tagessatz · Mietzinsherabsetzung · Konkurrenzverbot (alle wertend/Ermessen).
-
-## Session-Karte 11.6.2026 (Tag, Session «Schlichtung fertig + Vollerhebungen»)
-
-**Schlichtungs-Matrix komplett (alle 26 Kantone, alle drei Typen):**
-- **VD** (de677e0): Streitwert-Weiche Art. 41 CDPJ (JdP <10k · Präsident TA 10–30k · TA >30–100k · Chambre patrimoniale >100k; LOJV/AAJTJ wörtlich) + Arbeitskaskade LJT (prud'hommes ≤30k) + GlG; 9 JdP + 4 TA + Chambre verdrahtet (300/300 Gemeinden).
-- **TI** (f306f6e): amtliche Località-Suche vollerhoben — Circoli Ticino/Giubiasco existieren amtlich nicht mehr; 38 Circoli, 97 Gemeinden auto + Ortsteil-Wahl Lugano/Lema/Tresa (ZH-Kreis-Mechanismus wiederverwendet).
-- **SO** (45d31fe): § 5/§ 10-GO-Weiche («gleiche Gemeinde?» → Friedensrichter, sonst AGP-Auto 104/104); GlG-Eigenstelle §§ 34bis (40fb888).
-- **VS** (5d31de9): alle 122 Gemeindeverwaltungen einzeln erhoben (Juge-de-commune-Anlaufstellen; Blatten c/o Wiler).
-- **Miete** (d836a20, 1b5faae): 11 Auto-Register (ZH/BE/SO/JU/VD/FR/GR/SZ/AG/SG/TG — 147 Stellen, 1'215 Zuordnungen; FR-Korrektur: 3 Kommissionen statt je Bezirk; TG 80/80 kommunal; Moutier→Delémont) + 13 zentral + NE-Wahl; **TI einziger ohne Auto (Gebiete amtlich nicht gemeindescharf)**.
-- **GlG** (92b5a50): alle 26 wörtlich am Erlass — 22 konkrete Stellen (BE-Konzentration Fünferbesetzung · GE gekreuzte Parität · ZG SB Arbeitsrecht), Fallback nur UR/OW/NW/GL.
-- Generator: XX-MIETE-Register + generischer BFS-Level-2-Join + Parser-Härtung (Folge-Befund zu B1: ALT-Sektionen hätten AI korrumpiert).
-
-**Ausserdem:** Begründungs-Wahl Maske/Platzhalter in Klage ordentlich/vereinfacht + SG (58f17e7) · Dossier Klageschrift-Gliederung (84f5e31; Davids Triade bestätigt, 2 Schnitt-Varianten) · Handeingabe-Kacheln entzerrt (7c5bfd3) · 3 Bug-Check-Lupen-Runden, alle Befunde gefixt (u. a. TG-Quell-Tippfehler Felben-Wellhausen, stale-Adressat-Härtungen).
-
-**OFFEN (Merkpunkte David):** TI vertiefen (Miete-Uffici gemeindescharf; Anfrage/Karten-Erhebung) · ZH Stadt: Kreis→Schlichtungsstelle AUTOMATISCH (statt Dropdown; PLZ→Kreis-Quelle erheben) · Abnahme-Welle (Lunch; Paket Tagerechner in .scratch/) · Gliederungs-Entscheide O07/V1-V2/K08 · Teil D. ~16 Session-Commits ungepusht — Push/Deploy nur auf frisches Ja.
