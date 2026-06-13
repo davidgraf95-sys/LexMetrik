@@ -157,3 +157,36 @@ fertig getestete, committete Inkremente (nie 1000 halbfertige Dateien). §1
 
 Unverändert §9: NUR auf Davids frisches Ja. Diese Programm-Phase baut lokal,
 committet inkrementell; kein Push ohne ausdrückliche Freigabe.
+
+## Abarbeitungs-Stand 13.6.2026 (Session «Vertrags-Varianten Start»)
+
+**ERLEDIGT + committet (Gate je grün, Standard golden-neutral bewiesen):**
+- **P0 Framework** (`7a475c3`): `lib/vorlagen/detailgrad.ts` (Feld + Helfer
+  AB_STANDARD/NUR_EXPERTE), geteilter Kopf-Schalter `VariantenKopf`, optionaler
+  `kopfSchalter`-Slot im Wizard-Rahmen. **Pilot Auftrag** (einfach blendet
+  Umfang/Vollmacht aus; experte ergänzt Geheimhaltung 398 II / Haftung mit
+  Schranke 100 I / Gerichtsstand).
+- **P2-Teil** (`c6d832d`): Detailgrad einfach/standard/experte auf
+  **Werkvertrag, NDA, Konkubinat** verdrahtet (VariantenKopf in allen
+  Wizards). «Einfach bis experte» damit bei ALLEN vier V3-Vertragstypen real.
+
+**NÄCHSTE SCHRITTE (Programm läuft weiter):**
+- **P1 Arbeitsvertrag-Vollausbau (Flaggschiff, höchste Priorität):** Untertyp-
+  Weiche Einzel/**Kader-Manager**/**Lehrvertrag (Art. 344 ff., SCHRIFTFORM
+  344a → Form-Gate!)**/**Handelsreisender (347 ff.)**/**Heimarbeit (351 ff.)**
+  als regime-treue interne Verzweigungen + Detailgrad. Norm-Anker bereits
+  verifiziert (Session-Notiz). Der bestehende AV ist schon stark modular
+  (probezeit/lohn/überstunden/GAV/konkurrenzverbot) — Untertyp + Detailgrad
+  additiv aufsetzen, Standard/Einzel golden-neutral halten.
+- **P2-Rest:** Detailgrad auf Mietvertrag/Arbeitsvertrag (bestehende grosse
+  Engines).
+- **P3–P6:** neue Basistypen (Kauf/Schenkung/Pacht/Leihe/Darlehen/Bürgschaft/
+  Mäkler/Agentur/Lizenz/Gesellschaft …) je mit Untertyp × Detailgrad.
+- **variantenInventar** (Zähl-Modul + Test) einführen, sobald die erste Karte
+  mehrere Untertypen × Detailgrade trägt (P1) — ehrlicher Fortschrittsbalken
+  Richtung 1000.
+
+**ACHTUNG §12:** Während dieser Session lief eine PARALLEL-SESSION (legte
+`FAHRPLAN-FUNDAMENT-UMBAU.md` an, untracked — Architektur-Umbau-Vorschlag, von
+David noch nicht abgenommen). Künftige Commits strikt pathspec; deren WIP nicht
+anfassen.
