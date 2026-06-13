@@ -9564,6 +9564,553 @@
    "NICHT GEGENSTAND dieser Vorlage: das Verpflichtungsgeschäft (z. B. Forderungskauf; formfrei, Art. 165 Abs. 2 OR) und die Gewährleistung der Zedentin (Art. 171 ff. OR) – bei entgeltlicher Abtretung haftet sie für den Bestand der Forderung zur Zeit der Abtretung."
   ]
  },
+ "vorl:af-pauschal": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Auftrag (Dienstleistungsvertrag)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "AF01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Auftraggeberin)\n\nund\n\nTreuhand Beispiel GmbH\nY 2, 8000 Zürich\n(Beauftragte)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "AF02_gegenstand",
+      "ueberschrift": "Gegenstand des Auftrags",
+      "text": "1. Die Beauftragte besorgt für die Auftraggeberin die folgenden treuhänderischen Geschäfte: Buchführung und Erstellung des Jahresabschlusses 2026. Der Auftrag beginnt am 01.07.2026. Die Beauftragte besorgt die übertragenen Geschäfte vertragsgemäss."
+     },
+     {
+      "bausteinId": "AF03_umfang",
+      "ueberschrift": "Umfang und Vollmacht",
+      "text": "2. Der Umfang des Auftrags bestimmt sich nach dieser Vereinbarung und nach der Natur des zu besorgenden Geschäfts; die Beauftragte ist zu den Rechtshandlungen ermächtigt, die zur Ausführung gehören. Für besonders bezeichnete Geschäfte – namentlich den Abschluss eines Vergleichs, die Annahme eines Schiedsgerichts, das Eingehen wechselrechtlicher Verbindlichkeiten, die Veräusserung oder Belastung von Grundstücken sowie Schenkungen – bedarf sie einer besonderen Ermächtigung."
+     },
+     {
+      "bausteinId": "AF04_sorgfalt",
+      "ueberschrift": "Sorgfalt und Ausführung",
+      "text": "3. Die Beauftragte haftet für getreue und sorgfältige Ausführung des übertragenen Geschäfts. Die Beauftragte besorgt das Geschäft persönlich; die Übertragung auf Dritte bleibt vorbehalten, soweit sie dazu ermächtigt, durch die Umstände genötigt oder die Vertretung üblich ist."
+     },
+     {
+      "bausteinId": "AF05_weisungen",
+      "ueberschrift": "Weisungen",
+      "text": "4. Die Beauftragte beachtet die Weisungen der Auftraggeberin. Von einer Weisung darf sie nur abweichen, soweit die Einholung einer Erlaubnis nach den Umständen nicht tunlich ist und anzunehmen ist, die Auftraggeberin würde sie bei Kenntnis der Sachlage erteilen."
+     },
+     {
+      "bausteinId": "AF06_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "5. Für die Besorgung des Auftrags schuldet die Auftraggeberin eine Pauschalvergütung von CHF 5'000.00. Die Mehrwertsteuer ist, soweit geschuldet, zusätzlich zu entrichten."
+     },
+     {
+      "bausteinId": "AF07_auslagen",
+      "ueberschrift": "Auslagen und Verwendungen",
+      "text": "6. Die Auftraggeberin ersetzt der Beauftragten die Auslagen und Verwendungen, die diese in richtiger Ausführung des Auftrags gemacht hat, samt Zinsen, und befreit sie von den dabei eingegangenen Verbindlichkeiten."
+     },
+     {
+      "bausteinId": "AF08_rechenschaft",
+      "ueberschrift": "Rechenschaft und Herausgabe",
+      "text": "7. Die Beauftragte legt der Auftraggeberin auf Verlangen jederzeit über ihre Geschäftsführung Rechenschaft ab und erstattet alles, was ihr aus der Geschäftsbesorgung zugekommen ist. Gelder, mit deren Ablieferung sie im Rückstand ist, hat sie zu verzinsen."
+     },
+     {
+      "bausteinId": "AF09_beendigung",
+      "ueberschrift": "Dauer und Beendigung",
+      "text": "8. Der Auftrag kann von jeder Partei jederzeit widerrufen oder gekündigt werden (Art. 404 Abs. 1 OR). Dieses Recht ist zwingend und kann nicht gültig ausgeschlossen werden. Erfolgt die Auflösung zur Unzeit, ersetzt die zurücktretende Partei der anderen den dadurch verursachten Schaden (Art. 404 Abs. 2 OR). Bereits erbrachte Leistungen und entstandene Auslagen sind nach den vorstehenden Bestimmungen abzugelten."
+     },
+     {
+      "bausteinId": "AF10_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Auftrag (Art. 394 ff. OR)."
+     },
+     {
+      "bausteinId": "AF11_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nDie Auftraggeberin:\n\n___________________________\nMuster AG\n\n\nDie Beauftragte:\n\n___________________________\nTreuhand Beispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Auftrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Das jederzeitige Auflösungsrecht (Art. 404 OR) ist zwingend. Massgebend sind Gesetz (Art. 394 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 394/396/397/398/400/402/404 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "AF01_parteien",
+    "AF02_gegenstand",
+    "AF03_umfang",
+    "AF04_sorgfalt",
+    "AF05_weisungen",
+    "AF06_verguetung",
+    "AF07_auslagen",
+    "AF08_rechenschaft",
+    "AF09_beendigung",
+    "AF10_schluss",
+    "AF11_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "AF01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 394 OR"
+    },
+    {
+     "bausteinId": "AF02_gegenstand",
+     "begruendung": "Umschreibung der übertragenen Geschäfte/Dienste (Gegenstands-Modul je Mandatstyp) – immer enthalten.",
+     "norm": "Art. 394 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF03_umfang",
+     "begruendung": "Umfang nach Natur des Geschäfts und gesetzlich umschriebener Bereich der besonderen Ermächtigung (Art. 396 Abs. 3 OR) – immer enthalten.",
+     "norm": "Art. 396 OR"
+    },
+    {
+     "bausteinId": "AF04_sorgfalt",
+     "begruendung": "Sorgfalts- und Treuepflicht (Art. 398 Abs. 2 OR) sowie persönliche Ausführung bzw. zugelassene Substitution (Abs. 3) – immer enthalten.",
+     "norm": "Art. 398 OR"
+    },
+    {
+     "bausteinId": "AF05_weisungen",
+     "begruendung": "Weisungsbindung (Art. 397 Abs. 1 OR) – optional, weil deklaratorisch.",
+     "norm": "Art. 397 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF06_verguetung",
+     "begruendung": "Vergütungsregelung – eine Vergütung ist nur geschuldet, wenn verabredet oder üblich (Art. 394 Abs. 3 OR); die gewählte Regelung hält dies fest.",
+     "norm": "Art. 394 Abs. 3 OR"
+    },
+    {
+     "bausteinId": "AF07_auslagen",
+     "begruendung": "Auslagen-/Verwendungsersatz (Art. 402 Abs. 1 OR) – ausdrücklich aufgenommen.",
+     "norm": "Art. 402 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF08_rechenschaft",
+     "begruendung": "Rechenschafts- und Herausgabepflicht (Art. 400 Abs. 1 OR) – immer enthalten.",
+     "norm": "Art. 400 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF09_beendigung",
+     "begruendung": "Zwingendes jederzeitiges Auflösungsrecht (Art. 404 Abs. 1 OR) und Schadenersatz bei Beendigung zur Unzeit (Abs. 2) – immer enthalten, keine Ausschlussklausel (§8).",
+     "norm": "Art. 404 OR",
+     "hinweis": "Das jederzeitige Auflösungsrecht ist nach bundesgerichtlicher Rechtsprechung zwingend; abweichende Ausschluss- oder Mindestdauer-Klauseln sind wirkungslos."
+    },
+    {
+     "bausteinId": "AF10_schluss",
+     "begruendung": "Schriftformvorbehalt für Änderungen, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 394 OR"
+    },
+    {
+     "bausteinId": "AF11_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 394 OR"
+    }
+   ]
+  }
+ },
+ "vorl:af-aufwand-substitution": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Auftrag (Dienstleistungsvertrag)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "AF01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Auftraggeberin)\n\nund\n\nTreuhand Beispiel GmbH\nY 2, 8000 Zürich\n(Beauftragte)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "AF02_gegenstand",
+      "ueberschrift": "Gegenstand des Auftrags",
+      "text": "1. Die Beauftragte erbringt für die Auftraggeberin die folgenden Beratungsleistungen: Buchführung und Erstellung des Jahresabschlusses 2026. Die Beauftragte besorgt die übertragenen Geschäfte vertragsgemäss."
+     },
+     {
+      "bausteinId": "AF03_umfang",
+      "ueberschrift": "Umfang und Vollmacht",
+      "text": "2. Der Umfang des Auftrags bestimmt sich nach dieser Vereinbarung und nach der Natur des zu besorgenden Geschäfts; die Beauftragte ist zu den Rechtshandlungen ermächtigt, die zur Ausführung gehören. Für besonders bezeichnete Geschäfte – namentlich den Abschluss eines Vergleichs, die Annahme eines Schiedsgerichts, das Eingehen wechselrechtlicher Verbindlichkeiten, die Veräusserung oder Belastung von Grundstücken sowie Schenkungen – bedarf sie einer besonderen Ermächtigung. Die Auftraggeberin erteilt der Beauftragten die hierfür erforderliche besondere Ermächtigung im Rahmen des Gegenstands dieses Auftrags."
+     },
+     {
+      "bausteinId": "AF04_sorgfalt",
+      "ueberschrift": "Sorgfalt und Ausführung",
+      "text": "3. Die Beauftragte haftet für getreue und sorgfältige Ausführung des übertragenen Geschäfts. Die Beauftragte ist berechtigt, zur Ausführung des Auftrags Dritte beizuziehen; für deren sorgfältige Auswahl und Instruktion bleibt sie verantwortlich."
+     },
+     {
+      "bausteinId": "AF06_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "4. Die Beauftragte rechnet nach Zeitaufwand zu einem Stundenansatz von CHF 250.00 ab. Die Mehrwertsteuer ist, soweit geschuldet, zusätzlich zu entrichten."
+     },
+     {
+      "bausteinId": "AF08_rechenschaft",
+      "ueberschrift": "Rechenschaft und Herausgabe",
+      "text": "5. Die Beauftragte legt der Auftraggeberin auf Verlangen jederzeit über ihre Geschäftsführung Rechenschaft ab und erstattet alles, was ihr aus der Geschäftsbesorgung zugekommen ist. Gelder, mit deren Ablieferung sie im Rückstand ist, hat sie zu verzinsen."
+     },
+     {
+      "bausteinId": "AF09_beendigung",
+      "ueberschrift": "Dauer und Beendigung",
+      "text": "6. Der Auftrag kann von jeder Partei jederzeit widerrufen oder gekündigt werden (Art. 404 Abs. 1 OR). Dieses Recht ist zwingend und kann nicht gültig ausgeschlossen werden. Erfolgt die Auflösung zur Unzeit, ersetzt die zurücktretende Partei der anderen den dadurch verursachten Schaden (Art. 404 Abs. 2 OR). Bereits erbrachte Leistungen und entstandene Auslagen sind nach den vorstehenden Bestimmungen abzugelten."
+     },
+     {
+      "bausteinId": "AF10_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "7. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Auftrag (Art. 394 ff. OR)."
+     },
+     {
+      "bausteinId": "AF11_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nDie Auftraggeberin:\n\n___________________________\nMuster AG\n\n\nDie Beauftragte:\n\n___________________________\nTreuhand Beispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Auftrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Das jederzeitige Auflösungsrecht (Art. 404 OR) ist zwingend. Massgebend sind Gesetz (Art. 394 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 394/396/397/398/400/402/404 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "AF01_parteien",
+    "AF02_gegenstand",
+    "AF03_umfang",
+    "AF04_sorgfalt",
+    "AF06_verguetung",
+    "AF08_rechenschaft",
+    "AF09_beendigung",
+    "AF10_schluss",
+    "AF11_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "AF01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 394 OR"
+    },
+    {
+     "bausteinId": "AF02_gegenstand",
+     "begruendung": "Umschreibung der übertragenen Geschäfte/Dienste (Gegenstands-Modul je Mandatstyp) – immer enthalten.",
+     "norm": "Art. 394 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF03_umfang",
+     "begruendung": "Umfang nach Natur des Geschäfts und gesetzlich umschriebener Bereich der besonderen Ermächtigung (Art. 396 Abs. 3 OR) – immer enthalten.",
+     "norm": "Art. 396 OR"
+    },
+    {
+     "bausteinId": "AF04_sorgfalt",
+     "begruendung": "Sorgfalts- und Treuepflicht (Art. 398 Abs. 2 OR) sowie persönliche Ausführung bzw. zugelassene Substitution (Abs. 3) – immer enthalten.",
+     "norm": "Art. 398 OR"
+    },
+    {
+     "bausteinId": "AF06_verguetung",
+     "begruendung": "Vergütungsregelung – eine Vergütung ist nur geschuldet, wenn verabredet oder üblich (Art. 394 Abs. 3 OR); die gewählte Regelung hält dies fest.",
+     "norm": "Art. 394 Abs. 3 OR"
+    },
+    {
+     "bausteinId": "AF08_rechenschaft",
+     "begruendung": "Rechenschafts- und Herausgabepflicht (Art. 400 Abs. 1 OR) – immer enthalten.",
+     "norm": "Art. 400 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF09_beendigung",
+     "begruendung": "Zwingendes jederzeitiges Auflösungsrecht (Art. 404 Abs. 1 OR) und Schadenersatz bei Beendigung zur Unzeit (Abs. 2) – immer enthalten, keine Ausschlussklausel (§8).",
+     "norm": "Art. 404 OR",
+     "hinweis": "Das jederzeitige Auflösungsrecht ist nach bundesgerichtlicher Rechtsprechung zwingend; abweichende Ausschluss- oder Mindestdauer-Klauseln sind wirkungslos."
+    },
+    {
+     "bausteinId": "AF10_schluss",
+     "begruendung": "Schriftformvorbehalt für Änderungen, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 394 OR"
+    },
+    {
+     "bausteinId": "AF11_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 394 OR"
+    }
+   ]
+  }
+ },
+ "vorl:af-inkasso-unentgeltlich": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Auftrag (Dienstleistungsvertrag)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "AF01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Auftraggeberin)\n\nund\n\nTreuhand Beispiel GmbH\nY 2, 8000 Zürich\n(Beauftragte)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "AF02_gegenstand",
+      "ueberschrift": "Gegenstand des Auftrags",
+      "text": "1. Die Beauftragte zieht für die Auftraggeberin die folgenden Forderungen ein (Inkassomandat): Buchführung und Erstellung des Jahresabschlusses 2026. Die Beauftragte besorgt die übertragenen Geschäfte vertragsgemäss."
+     },
+     {
+      "bausteinId": "AF03_umfang",
+      "ueberschrift": "Umfang und Vollmacht",
+      "text": "2. Der Umfang des Auftrags bestimmt sich nach dieser Vereinbarung und nach der Natur des zu besorgenden Geschäfts; die Beauftragte ist zu den Rechtshandlungen ermächtigt, die zur Ausführung gehören. Für besonders bezeichnete Geschäfte – namentlich den Abschluss eines Vergleichs, die Annahme eines Schiedsgerichts, das Eingehen wechselrechtlicher Verbindlichkeiten, die Veräusserung oder Belastung von Grundstücken sowie Schenkungen – bedarf sie einer besonderen Ermächtigung."
+     },
+     {
+      "bausteinId": "AF04_sorgfalt",
+      "ueberschrift": "Sorgfalt und Ausführung",
+      "text": "3. Die Beauftragte haftet für getreue und sorgfältige Ausführung des übertragenen Geschäfts. Die Beauftragte besorgt das Geschäft persönlich; die Übertragung auf Dritte bleibt vorbehalten, soweit sie dazu ermächtigt, durch die Umstände genötigt oder die Vertretung üblich ist."
+     },
+     {
+      "bausteinId": "AF05_weisungen",
+      "ueberschrift": "Weisungen",
+      "text": "4. Die Beauftragte beachtet die Weisungen der Auftraggeberin. Von einer Weisung darf sie nur abweichen, soweit die Einholung einer Erlaubnis nach den Umständen nicht tunlich ist und anzunehmen ist, die Auftraggeberin würde sie bei Kenntnis der Sachlage erteilen."
+     },
+     {
+      "bausteinId": "AF06_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "5. Der Auftrag wird unentgeltlich besorgt. Die Beauftragte verzichtet auf eine Vergütung; der Ersatz von Auslagen und Verwendungen bleibt vorbehalten."
+     },
+     {
+      "bausteinId": "AF07_auslagen",
+      "ueberschrift": "Auslagen und Verwendungen",
+      "text": "6. Die Auftraggeberin ersetzt der Beauftragten die Auslagen und Verwendungen, die diese in richtiger Ausführung des Auftrags gemacht hat, samt Zinsen, und befreit sie von den dabei eingegangenen Verbindlichkeiten."
+     },
+     {
+      "bausteinId": "AF08_rechenschaft",
+      "ueberschrift": "Rechenschaft und Herausgabe",
+      "text": "7. Die Beauftragte legt der Auftraggeberin auf Verlangen jederzeit über ihre Geschäftsführung Rechenschaft ab und erstattet alles, was ihr aus der Geschäftsbesorgung zugekommen ist. Gelder, mit deren Ablieferung sie im Rückstand ist, hat sie zu verzinsen."
+     },
+     {
+      "bausteinId": "AF09_beendigung",
+      "ueberschrift": "Dauer und Beendigung",
+      "text": "8. Der Auftrag kann von jeder Partei jederzeit widerrufen oder gekündigt werden (Art. 404 Abs. 1 OR). Dieses Recht ist zwingend und kann nicht gültig ausgeschlossen werden. Erfolgt die Auflösung zur Unzeit, ersetzt die zurücktretende Partei der anderen den dadurch verursachten Schaden (Art. 404 Abs. 2 OR). Bereits erbrachte Leistungen und entstandene Auslagen sind nach den vorstehenden Bestimmungen abzugelten."
+     },
+     {
+      "bausteinId": "AF10_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Auftrag (Art. 394 ff. OR)."
+     },
+     {
+      "bausteinId": "AF11_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nDie Auftraggeberin:\n\n___________________________\nMuster AG\n\n\nDie Beauftragte:\n\n___________________________\nTreuhand Beispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Auftrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Das jederzeitige Auflösungsrecht (Art. 404 OR) ist zwingend. Massgebend sind Gesetz (Art. 394 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 394/396/397/398/400/402/404 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "AF01_parteien",
+    "AF02_gegenstand",
+    "AF03_umfang",
+    "AF04_sorgfalt",
+    "AF05_weisungen",
+    "AF06_verguetung",
+    "AF07_auslagen",
+    "AF08_rechenschaft",
+    "AF09_beendigung",
+    "AF10_schluss",
+    "AF11_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "AF01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 394 OR"
+    },
+    {
+     "bausteinId": "AF02_gegenstand",
+     "begruendung": "Umschreibung der übertragenen Geschäfte/Dienste (Gegenstands-Modul je Mandatstyp) – immer enthalten.",
+     "norm": "Art. 394 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF03_umfang",
+     "begruendung": "Umfang nach Natur des Geschäfts und gesetzlich umschriebener Bereich der besonderen Ermächtigung (Art. 396 Abs. 3 OR) – immer enthalten.",
+     "norm": "Art. 396 OR"
+    },
+    {
+     "bausteinId": "AF04_sorgfalt",
+     "begruendung": "Sorgfalts- und Treuepflicht (Art. 398 Abs. 2 OR) sowie persönliche Ausführung bzw. zugelassene Substitution (Abs. 3) – immer enthalten.",
+     "norm": "Art. 398 OR"
+    },
+    {
+     "bausteinId": "AF05_weisungen",
+     "begruendung": "Weisungsbindung (Art. 397 Abs. 1 OR) – optional, weil deklaratorisch.",
+     "norm": "Art. 397 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF06_verguetung",
+     "begruendung": "Vergütungsregelung – eine Vergütung ist nur geschuldet, wenn verabredet oder üblich (Art. 394 Abs. 3 OR); die gewählte Regelung hält dies fest.",
+     "norm": "Art. 394 Abs. 3 OR"
+    },
+    {
+     "bausteinId": "AF07_auslagen",
+     "begruendung": "Auslagen-/Verwendungsersatz (Art. 402 Abs. 1 OR) – ausdrücklich aufgenommen.",
+     "norm": "Art. 402 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF08_rechenschaft",
+     "begruendung": "Rechenschafts- und Herausgabepflicht (Art. 400 Abs. 1 OR) – immer enthalten.",
+     "norm": "Art. 400 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF09_beendigung",
+     "begruendung": "Zwingendes jederzeitiges Auflösungsrecht (Art. 404 Abs. 1 OR) und Schadenersatz bei Beendigung zur Unzeit (Abs. 2) – immer enthalten, keine Ausschlussklausel (§8).",
+     "norm": "Art. 404 OR",
+     "hinweis": "Das jederzeitige Auflösungsrecht ist nach bundesgerichtlicher Rechtsprechung zwingend; abweichende Ausschluss- oder Mindestdauer-Klauseln sind wirkungslos."
+    },
+    {
+     "bausteinId": "AF10_schluss",
+     "begruendung": "Schriftformvorbehalt für Änderungen, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 394 OR"
+    },
+    {
+     "bausteinId": "AF11_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 394 OR"
+    }
+   ]
+  }
+ },
+ "vorl:af-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Auftrag (Dienstleistungsvertrag)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "AF01_parteien",
+      "text": "zwischen\n\n________\n(Auftraggeberin)\n\nund\n\n________\n(Beauftragte)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "AF02_gegenstand",
+      "ueberschrift": "Gegenstand des Auftrags",
+      "text": "1. Die Beauftragte besorgt für die Auftraggeberin die folgenden Geschäfte und Dienste: ________. Die Beauftragte besorgt die übertragenen Geschäfte vertragsgemäss."
+     },
+     {
+      "bausteinId": "AF03_umfang",
+      "ueberschrift": "Umfang und Vollmacht",
+      "text": "2. Der Umfang des Auftrags bestimmt sich nach dieser Vereinbarung und nach der Natur des zu besorgenden Geschäfts; die Beauftragte ist zu den Rechtshandlungen ermächtigt, die zur Ausführung gehören. Für besonders bezeichnete Geschäfte – namentlich den Abschluss eines Vergleichs, die Annahme eines Schiedsgerichts, das Eingehen wechselrechtlicher Verbindlichkeiten, die Veräusserung oder Belastung von Grundstücken sowie Schenkungen – bedarf sie einer besonderen Ermächtigung."
+     },
+     {
+      "bausteinId": "AF04_sorgfalt",
+      "ueberschrift": "Sorgfalt und Ausführung",
+      "text": "3. Die Beauftragte haftet für getreue und sorgfältige Ausführung des übertragenen Geschäfts. Die Beauftragte besorgt das Geschäft persönlich; die Übertragung auf Dritte bleibt vorbehalten, soweit sie dazu ermächtigt, durch die Umstände genötigt oder die Vertretung üblich ist."
+     },
+     {
+      "bausteinId": "AF05_weisungen",
+      "ueberschrift": "Weisungen",
+      "text": "4. Die Beauftragte beachtet die Weisungen der Auftraggeberin. Von einer Weisung darf sie nur abweichen, soweit die Einholung einer Erlaubnis nach den Umständen nicht tunlich ist und anzunehmen ist, die Auftraggeberin würde sie bei Kenntnis der Sachlage erteilen."
+     },
+     {
+      "bausteinId": "AF06_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "5. Für die Besorgung des Auftrags schuldet die Auftraggeberin eine Pauschalvergütung von CHF ________. Die Mehrwertsteuer ist, soweit geschuldet, zusätzlich zu entrichten."
+     },
+     {
+      "bausteinId": "AF07_auslagen",
+      "ueberschrift": "Auslagen und Verwendungen",
+      "text": "6. Die Auftraggeberin ersetzt der Beauftragten die Auslagen und Verwendungen, die diese in richtiger Ausführung des Auftrags gemacht hat, samt Zinsen, und befreit sie von den dabei eingegangenen Verbindlichkeiten."
+     },
+     {
+      "bausteinId": "AF08_rechenschaft",
+      "ueberschrift": "Rechenschaft und Herausgabe",
+      "text": "7. Die Beauftragte legt der Auftraggeberin auf Verlangen jederzeit über ihre Geschäftsführung Rechenschaft ab und erstattet alles, was ihr aus der Geschäftsbesorgung zugekommen ist. Gelder, mit deren Ablieferung sie im Rückstand ist, hat sie zu verzinsen."
+     },
+     {
+      "bausteinId": "AF09_beendigung",
+      "ueberschrift": "Dauer und Beendigung",
+      "text": "8. Der Auftrag kann von jeder Partei jederzeit widerrufen oder gekündigt werden (Art. 404 Abs. 1 OR). Dieses Recht ist zwingend und kann nicht gültig ausgeschlossen werden. Erfolgt die Auflösung zur Unzeit, ersetzt die zurücktretende Partei der anderen den dadurch verursachten Schaden (Art. 404 Abs. 2 OR). Bereits erbrachte Leistungen und entstandene Auslagen sind nach den vorstehenden Bestimmungen abzugelten."
+     },
+     {
+      "bausteinId": "AF10_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Auftrag (Art. 394 ff. OR)."
+     },
+     {
+      "bausteinId": "AF11_unterschriften",
+      "text": "________, ________\n\n\nDie Auftraggeberin:\n\n___________________________\n________\n\n\nDie Beauftragte:\n\n___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Auftrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Das jederzeitige Auflösungsrecht (Art. 404 OR) ist zwingend. Massgebend sind Gesetz (Art. 394 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 394/396/397/398/400/402/404 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "AF01_parteien",
+    "AF02_gegenstand",
+    "AF03_umfang",
+    "AF04_sorgfalt",
+    "AF05_weisungen",
+    "AF06_verguetung",
+    "AF07_auslagen",
+    "AF08_rechenschaft",
+    "AF09_beendigung",
+    "AF10_schluss",
+    "AF11_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "AF01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 394 OR"
+    },
+    {
+     "bausteinId": "AF02_gegenstand",
+     "begruendung": "Umschreibung der übertragenen Geschäfte/Dienste (Gegenstands-Modul je Mandatstyp) – immer enthalten.",
+     "norm": "Art. 394 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF03_umfang",
+     "begruendung": "Umfang nach Natur des Geschäfts und gesetzlich umschriebener Bereich der besonderen Ermächtigung (Art. 396 Abs. 3 OR) – immer enthalten.",
+     "norm": "Art. 396 OR"
+    },
+    {
+     "bausteinId": "AF04_sorgfalt",
+     "begruendung": "Sorgfalts- und Treuepflicht (Art. 398 Abs. 2 OR) sowie persönliche Ausführung bzw. zugelassene Substitution (Abs. 3) – immer enthalten.",
+     "norm": "Art. 398 OR"
+    },
+    {
+     "bausteinId": "AF05_weisungen",
+     "begruendung": "Weisungsbindung (Art. 397 Abs. 1 OR) – optional, weil deklaratorisch.",
+     "norm": "Art. 397 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF06_verguetung",
+     "begruendung": "Vergütungsregelung – eine Vergütung ist nur geschuldet, wenn verabredet oder üblich (Art. 394 Abs. 3 OR); die gewählte Regelung hält dies fest.",
+     "norm": "Art. 394 Abs. 3 OR"
+    },
+    {
+     "bausteinId": "AF07_auslagen",
+     "begruendung": "Auslagen-/Verwendungsersatz (Art. 402 Abs. 1 OR) – ausdrücklich aufgenommen.",
+     "norm": "Art. 402 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF08_rechenschaft",
+     "begruendung": "Rechenschafts- und Herausgabepflicht (Art. 400 Abs. 1 OR) – immer enthalten.",
+     "norm": "Art. 400 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "AF09_beendigung",
+     "begruendung": "Zwingendes jederzeitiges Auflösungsrecht (Art. 404 Abs. 1 OR) und Schadenersatz bei Beendigung zur Unzeit (Abs. 2) – immer enthalten, keine Ausschlussklausel (§8).",
+     "norm": "Art. 404 OR",
+     "hinweis": "Das jederzeitige Auflösungsrecht ist nach bundesgerichtlicher Rechtsprechung zwingend; abweichende Ausschluss- oder Mindestdauer-Klauseln sind wirkungslos."
+    },
+    {
+     "bausteinId": "AF10_schluss",
+     "begruendung": "Schriftformvorbehalt für Änderungen, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 394 OR"
+    },
+    {
+     "bausteinId": "AF11_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 394 OR"
+    }
+   ]
+  }
+ },
+ "vorl:af-gates": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "JEDERZEITIGES AUFLÖSUNGSRECHT (Art. 404 Abs. 1 OR): Auftraggeberin und Beauftragte können den Auftrag jederzeit widerrufen oder kündigen. Dieses Recht ist nach bundesgerichtlicher Rechtsprechung zwingend und kann nicht gültig ausgeschlossen werden – eine feste Mindestdauer wäre wirkungslos. Erfolgt die Auflösung zur Unzeit, ist der dadurch verursachte Schaden zu ersetzen (Art. 404 Abs. 2 OR).",
+   "ABGRENZUNG zum Werkvertrag: Der Auftrag schuldet sorgfältiges Tätigwerden, NICHT einen bestimmten Erfolg. Steht ein konkretes Werk (Herstellung/Erfolg) im Vordergrund, ist der Werkvertrag (Art. 363 ff. OR) die richtige Grundlage.",
+   "VERGÜTUNG ist nur geschuldet, wenn sie verabredet oder üblich ist (Art. 394 Abs. 3 OR) – die gewählte Vergütungsregelung hält das ausdrücklich fest."
+  ]
+ },
  "vorl:fe-standard": {
   "ergebnis": {
    "dokument": {

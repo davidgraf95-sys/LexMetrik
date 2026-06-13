@@ -39,6 +39,7 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     const { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } = await import('../lib/vorlagen/schlichtungsgesuchBs');
     const { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } = await import('../lib/vorlagen/arbeitsvertrag');
     const { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } = await import('../lib/vorlagen/mietvertrag');
+    const { afZusammenstellen, AF_DEFAULTS, pruefeAfGates } = await import('../lib/vorlagen/auftrag');
 
     const faelle: [string, unknown][] = [
       ['testament', testamentZusammenstellen({ ...TESTAMENT_DEFAULTS, vorname: 'A', nachname: 'B', geburtsdatum: '1960-01-01', heimatort: 'Basel', adresse: 'X 1', erben: [{ name: 'E', angaben: 'g', quoteProzent: 100 }], vermaechtnisse: [], datumErrichtung: '2026-06-05' }).dokument],
@@ -49,6 +50,10 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       ['mv', mvZusammenstellen({ ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X', mieterName: 'M', mieterAdresse: 'Y', objektBeschrieb: 'Z', objektAdresse: 'A', beginn: '2026-10-01', mietzinsNettoCHF: '2000', nebenkostenCHF: '250', nkPositionen: ['Heizung'], kautionCHF: '6000', ort: 'Basel', datum: '2026-06-15' }).dokument],
       ['av-gates', pruefeAvGates({ ...AV_DEFAULTS, arbeitgeberName: 'AG', arbeitgeberAdresse: 'X', arbeitnehmerVorname: 'A', arbeitnehmerName: 'B', arbeitnehmerAdresse: 'Y', funktion: 'F', arbeitsort: 'Basel', arbeitsortKanton: 'BS', beginn: '2026-08-01', lohnBetrag: '6500', lohnfortzahlung: 'ktg', ktgWartefristTage: 60, ktgWartefristLohnProzent: 0, ort: 'Basel', datum: '2026-06-15' })],
       ['mv-gates', pruefeMvGates({ ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X', mieterName: 'M', mieterAdresse: 'Y', objektBeschrieb: 'Z', objektAdresse: 'A', kanton: 'BE', beginn: '2026-10-01', mietzinsNettoCHF: '2000', nkPositionen: ['Heizung'], kautionCHF: '9000', ort: 'Basel', datum: '2026-06-15' })],
+      // Auftrag/Dienstleistungsvertrag (V3, 13.6.2026): Maximalkombi (alle
+      // optionalen Bausteine) + Gegenstands-Modul Treuhand + Aufwandhonorar.
+      ['af', afZusammenstellen({ ...AF_DEFAULTS, auftraggeberName: 'AG', auftraggeberAdresse: 'X', beauftragteName: 'B', beauftragteAdresse: 'Y', mandatstyp: 'treuhand', gegenstand: 'Buchführung und Jahresabschluss', beginn: '2026-07-01', verguetung: 'aufwand', stundensatzCHF: '250', auslagenErsatz: true, weisungsKlausel: true, substitution: true, vollmachtErweitert: true, ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
+      ['af-gates', pruefeAfGates()],
     ];
 
     // BGer-Rechtsweg (11.6.2026): alle vier Wege + Sonderkonstellationen

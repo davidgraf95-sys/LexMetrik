@@ -54,7 +54,7 @@ describe('Norm-Pills (Fedlex-Direktlinks)', () => {
 });
 
 // Implementierte Vorlagen-Routen (manuell gepflegt, vgl. src/App.tsx)
-const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/klage-ordentlich', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung', '/vorlagen/mahnung', '/vorlagen/verjaehrungsverzicht', '/vorlagen/forderungsabtretung', '/vorlagen/fristerstreckung', '/vorlagen/nichtbekanntgabe-betreibung', '/vorlagen/scheidungsklage', '/vorlagen/scheidungsbegehren-gemeinsam', '/vorlagen/eheschutzgesuch']);
+const VORLAGEN_ROUTEN = new Set(['/vorlagen/testament', '/vorlagen/patientenverfuegung', '/vorlagen/vorsorgeauftrag', '/vorlagen/schlichtungsgesuch-bs', '/vorlagen/arbeitsvertrag', '/vorlagen/mietvertrag', '/vorlagen/vollmacht', '/vorlagen/klage-vereinfacht', '/vorlagen/klage-ordentlich', '/vorlagen/kuendigung-arbeitnehmer', '/vorlagen/kuendigung-arbeitgeber', '/vorlagen/kuendigung-mieter', '/vorlagen/kuendigung-vertrag', '/vorlagen/kuendigung-vermieter', '/vorlagen/mietvertrag#untermiete', '/vorlagen/gmbh-gruendung', '/vorlagen/ag-gruendung', '/vorlagen/kapitalerhoehung', '/vorlagen/auftrag', '/vorlagen/mahnung', '/vorlagen/verjaehrungsverzicht', '/vorlagen/forderungsabtretung', '/vorlagen/fristerstreckung', '/vorlagen/nichtbekanntgabe-betreibung', '/vorlagen/scheidungsklage', '/vorlagen/scheidungsbegehren-gemeinsam', '/vorlagen/eheschutzgesuch']);
 
 describe('Routen-Integrität', () => {
   it('jede aktive Karte verlinkt auf eine registrierte Route', () => {
@@ -232,10 +232,11 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // GO David «alles abgenommen»): + Vorlagen «Abtretungserklärung (Zession)»,
   // «Fristerstreckungsgesuch» und «Nichtbekanntgabe einer Betreibung»
   // (P1 Wettbewerbsanalyse, neu als entwurf) → 43 gebaut / 39 sichtbar.
-  it('verfügbar = status !== geplant; Regressionszählung 43 gebaut / 39 sichtbar (Stand 13.6.2026)', () => {
+  // 13.6.2026 (V3): +«Auftrag (Dienstleistungsvertrag)» → 44 gebaut / 40 sichtbar.
+  it('verfügbar = status !== geplant; Regressionszählung 44 gebaut / 40 sichtbar (Stand 13.6.2026)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(43);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(39);
+    expect(verf.length).toBe(44);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(40);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

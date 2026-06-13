@@ -1213,6 +1213,28 @@ const VORLAGEN: Record<string, VorlageCard> = {
       'Untermiete', 'Untermietvertrag', 'Untervermietung', 'Zustimmung Vermieter', 'Art. 262', 'WG-Zimmer', 'möbliertes Zimmer'],
     icon: 'house',
   },
+  auftrag: {
+    id: 'auftrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    vertragRubrik: 'auftrag_werk', formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Auftrag (Dienstleistungsvertrag)',
+    // P1-Grundtyp Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V3);
+    // Art. 394/396/397/398/400/402/404 OR am Cache verifiziert (20260101).
+    description: 'Dienstleistungsvertrag aus festen Bausteinen (Art. 394 ff. OR) mit Gegenstands-Modulen (Beratung, Treuhand, Inkasso) und Vergütungsweiche – das zwingende jederzeitige Auflösungsrecht (Art. 404 OR) wird offengelegt, keine wirkungslose Ausschlussklausel.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 394 OR', url: fedlexUrl('OR', '394'), verified: false },
+      { label: 'Art. 398 OR', url: fedlexUrl('OR', '398'), verified: false },
+      { label: 'Art. 404 OR', url: fedlexUrl('OR', '404'), verified: false },
+    ],
+    href: '/vorlagen/auftrag',
+    schemaId: 'auftrag',
+    formvorschrift: 'Formfrei – beidseitig zu unterzeichnen (Beweis)',
+    output: ['pdf', 'docx'],
+    related: ['gewaehrleistung', 'mahnung', 'verzugszins'],
+    keywords: ['Auftrag', 'Dienstleistungsvertrag', 'Mandat', 'Beratung', 'Treuhand', 'Inkasso', 'Consulting', 'Art. 394', 'Art. 404', 'Widerruf', 'Honorar'],
+    icon: 'doc',
+  },
   darlehensvertrag: {
     id: 'darlehensvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
     vertragRubrik: 'darlehen_sicherheiten',

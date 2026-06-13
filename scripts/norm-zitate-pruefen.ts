@@ -23,6 +23,8 @@ const QUELLEN = [
   'src/lib/vorlagen/mahnung.ts',
   'src/lib/vorlagen/verjaehrungsverzicht.ts',
   'src/lib/vorlagen/forderungsabtretung.ts',
+  // Auftrag/Dienstleistungsvertrag (V3, 13.6.2026) — Art. 394 ff. OR.
+  'src/lib/vorlagen/auftrag.ts',
   'src/lib/vorlagen/fristerstreckung.ts',
   'src/lib/vorlagen/nichtbekanntgabe.ts',
   'src/lib/vorlagen/scheidungsklage.ts',

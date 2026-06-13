@@ -35,6 +35,7 @@ import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlag
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
 import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
 import { faZusammenstellen, FA_DEFAULTS, pruefeFaGates } from '../src/lib/vorlagen/forderungsabtretung';
+import { afZusammenstellen, AF_DEFAULTS, pruefeAfGates } from '../src/lib/vorlagen/auftrag';
 import { feZusammenstellen, FE_DEFAULTS, pruefeFeGates } from '../src/lib/vorlagen/fristerstreckung';
 import { nbZusammenstellen, NB_DEFAULTS, pruefeNbGates, nbFruehesterGesuchstag } from '../src/lib/vorlagen/nichtbekanntgabe';
 import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
@@ -236,6 +237,19 @@ f('vorl:fa-standard', () => faZusammenstellen(faBasis));
 f('vorl:fa-betrag-minimal', () => faZusammenstellen({ ...faBasis, betragErfassen: true, betrag: '25000', zinsenAusdruecklich: false, urkundenUebergabe: false, anzeigeAnkuendigen: false, annahmeZeile: false }));
 f('vorl:fa-blanko', () => faZusammenstellen({ ...FA_DEFAULTS }));
 f('vorl:fa-gates', () => pruefeFaGates());
+
+// Auftrag/Dienstleistungsvertrag (Art. 394 ff. OR; FAHRPLAN-VORLAGEN-AUSBAU V3, 13.6.2026)
+const afBasis = {
+  ...AF_DEFAULTS, auftraggeberName: 'Muster AG', auftraggeberAdresse: 'X 1, 8000 Zürich',
+  beauftragteName: 'Treuhand Beispiel GmbH', beauftragteAdresse: 'Y 2, 8000 Zürich',
+  gegenstand: 'Buchführung und Erstellung des Jahresabschlusses 2026',
+  ort: 'Zürich', datum: '2026-06-13',
+};
+f('vorl:af-pauschal', () => afZusammenstellen({ ...afBasis, mandatstyp: 'treuhand', verguetung: 'pauschal', pauschalCHF: '5000', beginn: '2026-07-01' }));
+f('vorl:af-aufwand-substitution', () => afZusammenstellen({ ...afBasis, mandatstyp: 'beratung', verguetung: 'aufwand', stundensatzCHF: '250', substitution: true, vollmachtErweitert: true, weisungsKlausel: false, auslagenErsatz: false }));
+f('vorl:af-inkasso-unentgeltlich', () => afZusammenstellen({ ...afBasis, mandatstyp: 'inkasso', verguetung: 'unentgeltlich' }));
+f('vorl:af-blanko', () => afZusammenstellen({ ...AF_DEFAULTS }));
+f('vorl:af-gates', () => pruefeAfGates());
 
 // Fristerstreckungsgesuch (Art. 144 ZPO; FAHRPLAN-VORLAGEN-AUSBAU V2-Rest, 13.6.2026)
 const feBasis = {
