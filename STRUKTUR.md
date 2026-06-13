@@ -22,6 +22,40 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 13.6.2026 (Abend) — FUNDAMENT-UMBAU Phasen 0/1a/4 + Bug-Check (Auftrag David «mache fertig … nochmals bug check»)
+
+**Architektur-Umbau nach `FAHRPLAN-FUNDAMENT-UMBAU.md` (abgenommen), je Gate
+voll grün, golden/prerender byte-bewiesen, ungepusht (6 Commits `223fcae`..
+`fc5ec96`):**
+(1) **Phase 0 — Doku-Hygiene/Tooling (`4bcb5b7`):** sieben 11.6.-Session-Karten
+byte-genau rotiert (STRUKTUR 803→619 Z.); DESIGN/RECHNER-DESIGN/
+VEREINHEITLICHUNG/TOKEN-DISZIPLIN ins `archiv/` (alle 0 offene Etappen);
+`requirements.txt` für den einzigen Python-Lauf. GRUNDLAGEN (8 offene Posten,
+Nordstern) + AG-/GMBH-GRUENDUNG + BGER-RECHTSWEG bewusst im Root.
+(2) **Phase 1a — Routen-SSOT (`f33ec88`/`11155bb`, Thema B):** neues
+`src/routesManifest.ts` (44 Karten-Routen, Pfad→Lazy), App.tsx rendert
+`ROUTEN_MANIFEST.map` (−89 Z.), `seo.ts katalogRouten()` als Single Source,
+Gating-Test `routenManifest.test.ts` (Manifest === Katalog beide Richtungen).
+§5-Verstoß (doppelte Pfad-Existenz App.tsx↔Katalog) geheilt. Beweis: build →
+49 Routen, sitemap byte-gleich (Hash `67e8bed3`), Code-Splitting unverändert.
+(3) **Phase 4 — §7-Abnahme-Dossiers (`ddac5dd`, Thema C):** generischer
+`scripts/abnahmeDossier.ts`; AG-Dossier byte-identisch; additive
+`GMBH_ALLE_SCHEMAS`; `scripts/abnahme-dossiers.ts` erzeugt 26 Dossiers (GmbH +
+25 Vorlagen, 432 Bausteine) nach `abnahme/dossiers/` → Wortlaut-Abnahme aller
+Gebiete ohne TS-Lesen (bisher nur AG).
+(4) **Bug-Check (§9, `fc5ec96`):** 4-Dimensionen-Multi-Agent + adversariale
+Verifikation über das Delta; 3 bestätigt (alle niedrig/mittel, KEINE
+Rechtslogik): AG-Konsolenzahl wiederhergestellt + `KV_SCHEMA`→`KLAGE_V_SCHEMA`
+(klageVereinfacht, §5-Namensfalle) gefixt; Verifikationsstand-Drift (vor-
+bestehend) offen. Deploy-Urteil: keine Blocker.
+
+**NICHT umgesetzt (bewusst, §1/Konflikt-Register):** Thema A generische
+`VorlagenSeite` + ISO/DOCX-Dedup + Rollout (NDA verbiegt die Abstraktion →
+opt-in, golden+DOM je Seite, mit David); Phase 5 Verbatim-Hebung
+(Gefahrenzone), Persistenz-/i18n-Features; David-Entscheide (Server-Sync,
+fr/it-Inhalt, LIK Python→TS). TODO: Drift-Guard `check:abnahme` (Dossiers
+regenerieren + git diff). Push/Deploy nur auf frisches Ja (§9).
+
 ## Session 13.6.2026 — V3 Vertrags-Grundtypen KOMPLETT + Verwaltungs-/BGG-Stillstand (GO David «weitermachen mit bau» + eingeschobener Auftrag)
 
 **FAHRPLAN-VORLAGEN-AUSBAU V3 ist mit 4/4 Grundtypen FERTIG** (je eigener
