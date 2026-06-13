@@ -56,6 +56,8 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       // Auftrag/Dienstleistungsvertrag (V3, 13.6.2026): Maximalkombi (alle
       // optionalen Bausteine) + Gegenstands-Modul Treuhand + Aufwandhonorar.
       ['af', afZusammenstellen({ ...AF_DEFAULTS, auftraggeberName: 'AG', auftraggeberAdresse: 'X', beauftragteName: 'B', beauftragteAdresse: 'Y', mandatstyp: 'treuhand', gegenstand: 'Buchführung und Jahresabschluss', beginn: '2026-07-01', verguetung: 'aufwand', stundensatzCHF: '250', auslagenErsatz: true, weisungsKlausel: true, substitution: true, vollmachtErweitert: true, ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
+      // Detailgrad experte (P0-Pilot): Geheimhaltungs-/Haftungs-/Gerichtsstand-Klauseln durch den Linter.
+      ['af-experte', afZusammenstellen({ ...AF_DEFAULTS, detailgrad: 'experte', auftraggeberName: 'AG', beauftragteName: 'B', mandatstyp: 'beratung', gegenstand: 'Beratung', verguetung: 'pauschal', pauschalCHF: '5000', ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
       ['af-gates', pruefeAfGates()],
       // Werkvertrag (V3, 13.6.2026): unbewegliches Werk (60-Tage-Rüge + 5-Jahre-
       // Verjährung) + Aufwandpreis + Anzahlung + Abnahmeprotokoll.

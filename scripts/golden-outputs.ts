@@ -254,6 +254,11 @@ f('vorl:af-aufwand-substitution', () => afZusammenstellen({ ...afBasis, mandatst
 f('vorl:af-inkasso-unentgeltlich', () => afZusammenstellen({ ...afBasis, mandatstyp: 'inkasso', verguetung: 'unentgeltlich' }));
 f('vorl:af-blanko', () => afZusammenstellen({ ...AF_DEFAULTS }));
 f('vorl:af-gates', () => pruefeAfGates());
+// Detailgrad-Pilot (FAHRPLAN-VERTRAGS-VARIANTEN P0): standard = unverändert
+// (vorl:af-pauschal oben), einfach blendet Umfang/Vollmacht aus, experte
+// ergänzt Geheimhaltung/Haftung/Gerichtsstand.
+f('vorl:af-einfach', () => afZusammenstellen({ ...afBasis, detailgrad: 'einfach', mandatstyp: 'treuhand', verguetung: 'pauschal', pauschalCHF: '5000' }));
+f('vorl:af-experte', () => afZusammenstellen({ ...afBasis, detailgrad: 'experte', mandatstyp: 'beratung', verguetung: 'aufwand', stundensatzCHF: '250' }));
 
 // Werkvertrag (Art. 363 ff. OR; FAHRPLAN-VORLAGEN-AUSBAU V3, 13.6.2026)
 const wvBasis = {

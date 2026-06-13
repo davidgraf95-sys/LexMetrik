@@ -19,7 +19,7 @@ import type { PdfBanner } from '../../lib/vorlagen/banner';
 export function VorlagenWizardRahmen({
   zurueckHref = '/', overline, titel, intro, norms, badge,
   fussnote, zuruecksetzen, schritte, schritt, setSchritt, fehler,
-  weiterDeaktiviert, inhalt, vorschau,
+  weiterDeaktiviert, inhalt, vorschau, kopfSchalter,
 }: {
   zurueckHref?: string;
   overline: string;
@@ -39,6 +39,9 @@ export function VorlagenWizardRahmen({
   weiterDeaktiviert?: boolean;
   inhalt: ReactNode;
   vorschau: ReactNode;
+  /** Optionaler Kopf-Schalter (Detailgrad/Untertyp, FAHRPLAN-VERTRAGS-VARIANTEN
+   *  P0) – wird zwischen Kopf und Stepper gerendert. Reine Darstellung (§3). */
+  kopfSchalter?: ReactNode;
 }) {
   const { locale } = useLocale();
   const weiterAus = weiterDeaktiviert ?? (fehler != null && fehler.length > 0);
@@ -75,6 +78,9 @@ export function VorlagenWizardRahmen({
           </div>
         )}
       </div>
+
+      {/* Kopf-Schalter (Detailgrad/Untertyp) – optional, vor dem Stepper */}
+      {kopfSchalter}
 
       {/* Stepper */}
       <Stepper schritte={schritte} aktiv={schritt} onWechsel={setSchritt} />

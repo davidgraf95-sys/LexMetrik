@@ -2,6 +2,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtCHF, zahl } from './datum';
+import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Auftrag / Dienstleistungsvertrag (Art. 394 ff. OR) ─────────────────────
 //
@@ -36,6 +37,7 @@ export type AfMandatstyp = 'allgemein' | 'beratung' | 'treuhand' | 'inkasso';
 export type AfVerguetung = 'pauschal' | 'aufwand' | 'unentgeltlich';
 
 export type AfAntworten = {
+  detailgrad: Detailgrad;          // einfach/standard/experte (FAHRPLAN-VERTRAGS-VARIANTEN)
   auftraggeberName: string;
   auftraggeberAdresse: string;     // optional
   beauftragteName: string;
@@ -55,6 +57,7 @@ export type AfAntworten = {
 };
 
 export const AF_DEFAULTS: AfAntworten = {
+  detailgrad: DETAILGRAD_DEFAULT,
   auftraggeberName: '', auftraggeberAdresse: '',
   beauftragteName: '', beauftragteAdresse: '',
   mandatstyp: 'allgemein',
@@ -133,8 +136,8 @@ export const AF_SCHEMA: VorlageSchema = {
         + 'eines Vergleichs, die Annahme eines Schiedsgerichts, das Eingehen wechselrechtlicher '
         + 'Verbindlichkeiten, die Veräusserung oder Belastung von Grundstücken sowie Schenkungen – '
         + 'bedarf sie einer besonderen Ermächtigung.{{vollmachtSatz}}',
-      nummeriert: true,
-      begruendung: 'Umfang nach Natur des Geschäfts und gesetzlich umschriebener Bereich der besonderen Ermächtigung (Art. 396 Abs. 3 OR) – immer enthalten.',
+      includeIf: AB_STANDARD, nummeriert: true,
+      begruendung: 'Umfang nach Natur des Geschäfts und gesetzlich umschriebener Bereich der besonderen Ermächtigung (Art. 396 Abs. 3 OR) – ab Detailgrad «standard» (in «einfach» ausgeblendet).',
       norm: 'Art. 396 OR' },
     { id: 'AF04_sorgfalt', ueberschrift: 'Sorgfalt und Ausführung',
       text: 'Die Beauftragte haftet für getreue und sorgfältige Ausführung des übertragenen '
@@ -178,6 +181,27 @@ export const AF_SCHEMA: VorlageSchema = {
       begruendung: 'Zwingendes jederzeitiges Auflösungsrecht (Art. 404 Abs. 1 OR) und Schadenersatz bei Beendigung zur Unzeit (Abs. 2) – immer enthalten, keine Ausschlussklausel (§8).',
       norm: 'Art. 404 OR',
       hinweis: 'Das jederzeitige Auflösungsrecht ist nach bundesgerichtlicher Rechtsprechung zwingend; abweichende Ausschluss- oder Mindestdauer-Klauseln sind wirkungslos.' },
+    { id: 'AF09b_geheimhaltung', ueberschrift: 'Geheimhaltung',
+      text: 'Die Beauftragte hält alle ihr im Rahmen des Auftrags bekannt gewordenen, nicht '
+        + 'offenkundigen Geschäfts- und Privatangelegenheiten der Auftraggeberin geheim; diese '
+        + 'Pflicht besteht auch nach Beendigung des Auftrags fort.',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Geheimhaltungsklausel (Treuepflicht aus Art. 398 Abs. 2 OR konkretisiert) – Detailgrad «experte».',
+      norm: 'Art. 398 Abs. 2 OR' },
+    { id: 'AF09c_haftung', ueberschrift: 'Haftung',
+      text: 'Die Beauftragte haftet für getreue und sorgfältige Ausführung (Art. 398 OR). Für '
+        + 'leichte Fahrlässigkeit kann die Haftung im gesetzlich zulässigen Rahmen begrenzt werden; '
+        + 'eine Freizeichnung für rechtswidrige Absicht oder grobe Fahrlässigkeit ist unwirksam '
+        + '(Art. 100 Abs. 1 OR).',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Haftungsklausel mit zwingender Schranke Art. 100 Abs. 1 OR – Detailgrad «experte» (offengelegt, keine unzulässige Freizeichnung).',
+      norm: 'Art. 100 Abs. 1 OR' },
+    { id: 'AF09d_gerichtsstand', ueberschrift: 'Anwendbares Recht und Gerichtsstand',
+      text: 'Dieser Vertrag untersteht schweizerischem Recht. Ausschliesslicher Gerichtsstand ist '
+        + 'der Sitz der Auftraggeberin, soweit nicht zwingende Gerichtsstände entgegenstehen.',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Rechtswahl- und Gerichtsstandsklausel mit Vorbehalt zwingender Gerichtsstände – Detailgrad «experte».',
+      norm: 'Art. 19 OR' },
     { id: 'AF10_schluss', ueberschrift: 'Schlussbestimmungen',
       text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird '
         + 'in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen '
