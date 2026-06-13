@@ -1235,6 +1235,29 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Auftrag', 'Dienstleistungsvertrag', 'Mandat', 'Beratung', 'Treuhand', 'Inkasso', 'Consulting', 'Art. 394', 'Art. 404', 'Widerruf', 'Honorar'],
     icon: 'doc',
   },
+  werkvertrag: {
+    id: 'werkvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    vertragRubrik: 'auftrag_werk', formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Werkvertrag',
+    // P1-Grundtyp Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V3);
+    // Art. 363/366/367/368/370/371/372/373/377 OR am Cache verifiziert (20260101).
+    description: 'Werkvertrag aus festen Bausteinen (Art. 363 ff. OR) mit Weiche bewegliches/unbewegliches Werk – Rügefrist (60 Tage zwingend beim unbeweglichen Werk, Art. 367 Abs. 1bis) und Verjährung (2/5 Jahre, Art. 371) werden offengelegt; Brücke zum Gewährleistungs-Rechner.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 363 OR', url: fedlexUrl('OR', '363'), verified: false },
+      { label: 'Art. 367 OR', url: fedlexUrl('OR', '367'), verified: false },
+      { label: 'Art. 371 OR', url: fedlexUrl('OR', '371'), verified: false },
+      { label: 'Art. 377 OR', url: fedlexUrl('OR', '377'), verified: false },
+    ],
+    href: '/vorlagen/werkvertrag',
+    schemaId: 'werkvertrag',
+    formvorschrift: 'Formfrei – beidseitig zu unterzeichnen (Beweis)',
+    output: ['pdf', 'docx'],
+    related: ['gewaehrleistung', 'auftrag', 'bauhandwerkerpfandrecht-gesuch'],
+    keywords: ['Werkvertrag', 'Unternehmer', 'Besteller', 'Werk', 'Bau', 'Mängelrüge', 'Gewährleistung', 'Festpreis', 'Art. 363', 'Art. 367', 'Art. 371', 'Art. 377'],
+    icon: 'doc',
+  },
   darlehensvertrag: {
     id: 'darlehensvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
     vertragRubrik: 'darlehen_sicherheiten',

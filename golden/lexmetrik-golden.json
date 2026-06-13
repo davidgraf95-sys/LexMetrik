@@ -10111,6 +10111,408 @@
    "VERGÜTUNG ist nur geschuldet, wenn sie verabredet oder üblich ist (Art. 394 Abs. 3 OR) – die gewählte Vergütungsregelung hält das ausdrücklich fest."
   ]
  },
+ "vorl:wv-beweglich-pauschal": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Werkvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "WV01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Besteller)\n\nund\n\nBau Beispiel GmbH\nY 2, 8000 Zürich\n(Unternehmer)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "WV02_werk",
+      "ueberschrift": "Werk",
+      "text": "1. Der Unternehmer stellt für den Besteller das folgende Werk her: Einbau einer Küche gemäss Plan vom 1. März 2026 (bewegliches Werk). Das Werk ist bis zum 01.09.2026 abzuliefern."
+     },
+     {
+      "bausteinId": "WV03_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "2. Die Vergütung ist als Festpreis von CHF 12'000.00 fest vereinbart. Der Unternehmer stellt das Werk um diese Summe fertig und darf auch bei höherem Aufwand keine Erhöhung fordern; vorbehalten bleibt die richterliche Anpassung bei ausserordentlichen, nicht voraussehbaren Umständen (Art. 373 OR). Die Vergütung ist bei der Ablieferung des Werkes zur Zahlung fällig (Art. 372 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "WV04_ausfuehrung",
+      "ueberschrift": "Ausführung und Termine",
+      "text": "3. Der Unternehmer führt das Werk sorgfältig und vertragsgemäss aus. Beginnt er das Werk nicht rechtzeitig, verzögert er die Ausführung vertragswidrig oder ist eine mangelhafte Erstellung durch sein Verschulden bestimmt voraussehbar, so stehen dem Besteller die Rechte nach Art. 366 OR zu (Rücktritt bzw. Ersatzvornahme nach angemessener Nachfrist)."
+     },
+     {
+      "bausteinId": "WV05_abnahme",
+      "ueberschrift": "Abnahme und Mängelrüge",
+      "text": "4. Nach Ablieferung prüft der Besteller das Werk, sobald es nach dem üblichen Geschäftsgang tunlich ist, und zeigt dem Unternehmer Mängel an (Art. 367 Abs. 1 OR). Die Mängel sind nach der Prüfung ohne Verzug anzuzeigen. Verdeckte Mängel sind sofort nach ihrer Entdeckung anzuzeigen; unterlässt der Besteller die Prüfung und Anzeige, gilt das Werk als genehmigt (Art. 370 Abs. 2 und 3 OR). Über die Abnahme erstellen die Parteien ein gemeinsames Protokoll."
+     },
+     {
+      "bausteinId": "WV06_maengelrechte",
+      "ueberschrift": "Mängelrechte",
+      "text": "5. Bei mangelhaftem Werk stehen dem Besteller die gesetzlichen Mängelrechte zu: Verweigerung der Annahme bei Unbrauchbarkeit, Minderung des Lohnes oder unentgeltliche Nachbesserung, soweit diese dem Unternehmer keine übermässigen Kosten verursacht, sowie Schadenersatz bei Verschulden (Art. 368 OR)."
+     },
+     {
+      "bausteinId": "WV07_verjaehrung",
+      "ueberschrift": "Verjährung der Mängelansprüche",
+      "text": "6. Die Ansprüche des Bestellers wegen Mängel des Werkes verjähren mit Ablauf von zwei Jahren nach der Abnahme des Werkes; für bewegliche Werke, die bestimmungsgemäss in ein unbewegliches Werk integriert werden und dessen Mangelhaftigkeit verursachen, beträgt die Frist fünf Jahre (Art. 371 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "WV08_ruecktritt",
+      "ueberschrift": "Rücktritt des Bestellers",
+      "text": "7. Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten; er schuldet dann die Vergütung der bereits geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
+     },
+     {
+      "bausteinId": "WV09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "8. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Werkvertrag (Art. 363 ff. OR)."
+     },
+     {
+      "bausteinId": "WV10_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nDer Besteller:\n\n___________________________\nMuster AG\n\n\nDer Unternehmer:\n\n___________________________\nBau Beispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Werkvertrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Die Rügefrist beim unbeweglichen Werk (60 Tage, Art. 367 Abs. 1bis OR) und das Rücktrittsrecht nach Art. 377 OR sind zwingend. Massgebend sind Gesetz (Art. 363 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 363/366/367/368/370/371/372/373/377 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "WV01_parteien",
+    "WV02_werk",
+    "WV03_verguetung",
+    "WV04_ausfuehrung",
+    "WV05_abnahme",
+    "WV06_maengelrechte",
+    "WV07_verjaehrung",
+    "WV08_ruecktritt",
+    "WV09_schluss",
+    "WV10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "WV01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV02_werk",
+     "begruendung": "Gegenstand des Werkvertrags (herzustellendes Werk + Art beweglich/unbeweglich) – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV03_verguetung",
+     "begruendung": "Vergütungsregelung (Festpreis oder nach Aufwand) und Fälligkeit bei Ablieferung (Art. 372 Abs. 1 OR).",
+     "norm": "Art. 372 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "WV04_ausfuehrung",
+     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – immer enthalten.",
+     "norm": "Art. 366 OR"
+    },
+    {
+     "bausteinId": "WV05_abnahme",
+     "begruendung": "Prüf- und Rügeobliegenheit (Art. 367/370 OR); Rügefrist-Satz je Werkart (60 Tage zwingend beim unbeweglichen Werk).",
+     "norm": "Art. 367 OR"
+    },
+    {
+     "bausteinId": "WV06_maengelrechte",
+     "begruendung": "Mängelrechte nach Art. 368 OR – immer enthalten.",
+     "norm": "Art. 368 OR"
+    },
+    {
+     "bausteinId": "WV07_verjaehrung",
+     "begruendung": "Verjährung der Mängelansprüche (Art. 371 OR) – Frist je Werkart.",
+     "norm": "Art. 371 OR"
+    },
+    {
+     "bausteinId": "WV08_ruecktritt",
+     "begruendung": "Zwingendes Rücktrittsrecht des Bestellers gegen volle Schadloshaltung (Art. 377 OR) – offengelegt (§8), nicht wegbedungen.",
+     "norm": "Art. 377 OR"
+    },
+    {
+     "bausteinId": "WV09_schluss",
+     "begruendung": "Schriftformvorbehalt, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 363 OR"
+    }
+   ]
+  }
+ },
+ "vorl:wv-unbeweglich-aufwand": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Werkvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "WV01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Besteller)\n\nund\n\nBau Beispiel GmbH\nY 2, 8000 Zürich\n(Unternehmer)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "WV02_werk",
+      "ueberschrift": "Werk",
+      "text": "1. Der Unternehmer stellt für den Besteller das folgende Werk her: Einbau einer Küche gemäss Plan vom 1. März 2026 (unbewegliches Werk)."
+     },
+     {
+      "bausteinId": "WV03_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "2. Die Vergütung bemisst sich nach Aufwand zu einem Ansatz von CHF 120.00 pro Stunde. Der Unternehmer weist den Aufwand nachvollziehbar aus. Die Vergütung ist bei der Ablieferung des Werkes zur Zahlung fällig (Art. 372 Abs. 1 OR). Der Besteller leistet bei Vertragsschluss eine Akontozahlung von CHF 4'000.00, die mit der Schlussvergütung verrechnet wird."
+     },
+     {
+      "bausteinId": "WV04_ausfuehrung",
+      "ueberschrift": "Ausführung und Termine",
+      "text": "3. Der Unternehmer führt das Werk sorgfältig und vertragsgemäss aus. Beginnt er das Werk nicht rechtzeitig, verzögert er die Ausführung vertragswidrig oder ist eine mangelhafte Erstellung durch sein Verschulden bestimmt voraussehbar, so stehen dem Besteller die Rechte nach Art. 366 OR zu (Rücktritt bzw. Ersatzvornahme nach angemessener Nachfrist)."
+     },
+     {
+      "bausteinId": "WV05_abnahme",
+      "ueberschrift": "Abnahme und Mängelrüge",
+      "text": "4. Nach Ablieferung prüft der Besteller das Werk, sobald es nach dem üblichen Geschäftsgang tunlich ist, und zeigt dem Unternehmer Mängel an (Art. 367 Abs. 1 OR). Bei diesem unbeweglichen Werk beträgt die Frist für die Mängelrüge 60 Tage; die Vereinbarung einer kürzeren Frist ist unwirksam (Art. 367 Abs. 1bis OR). Verdeckte Mängel sind sofort nach ihrer Entdeckung anzuzeigen; unterlässt der Besteller die Prüfung und Anzeige, gilt das Werk als genehmigt (Art. 370 Abs. 2 und 3 OR). Über die Abnahme erstellen die Parteien ein gemeinsames Protokoll."
+     },
+     {
+      "bausteinId": "WV06_maengelrechte",
+      "ueberschrift": "Mängelrechte",
+      "text": "5. Bei mangelhaftem Werk stehen dem Besteller die gesetzlichen Mängelrechte zu: Verweigerung der Annahme bei Unbrauchbarkeit, Minderung des Lohnes oder unentgeltliche Nachbesserung, soweit diese dem Unternehmer keine übermässigen Kosten verursacht, sowie Schadenersatz bei Verschulden (Art. 368 OR)."
+     },
+     {
+      "bausteinId": "WV07_verjaehrung",
+      "ueberschrift": "Verjährung der Mängelansprüche",
+      "text": "6. Die Ansprüche des Bestellers wegen Mängel des Werkes verjähren mit Ablauf von fünf Jahren nach der Abnahme des Werkes (Art. 371 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "WV08_ruecktritt",
+      "ueberschrift": "Rücktritt des Bestellers",
+      "text": "7. Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten; er schuldet dann die Vergütung der bereits geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
+     },
+     {
+      "bausteinId": "WV09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "8. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Werkvertrag (Art. 363 ff. OR)."
+     },
+     {
+      "bausteinId": "WV10_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nDer Besteller:\n\n___________________________\nMuster AG\n\n\nDer Unternehmer:\n\n___________________________\nBau Beispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Werkvertrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Die Rügefrist beim unbeweglichen Werk (60 Tage, Art. 367 Abs. 1bis OR) und das Rücktrittsrecht nach Art. 377 OR sind zwingend. Massgebend sind Gesetz (Art. 363 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 363/366/367/368/370/371/372/373/377 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "WV01_parteien",
+    "WV02_werk",
+    "WV03_verguetung",
+    "WV04_ausfuehrung",
+    "WV05_abnahme",
+    "WV06_maengelrechte",
+    "WV07_verjaehrung",
+    "WV08_ruecktritt",
+    "WV09_schluss",
+    "WV10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "WV01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV02_werk",
+     "begruendung": "Gegenstand des Werkvertrags (herzustellendes Werk + Art beweglich/unbeweglich) – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV03_verguetung",
+     "begruendung": "Vergütungsregelung (Festpreis oder nach Aufwand) und Fälligkeit bei Ablieferung (Art. 372 Abs. 1 OR).",
+     "norm": "Art. 372 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "WV04_ausfuehrung",
+     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – immer enthalten.",
+     "norm": "Art. 366 OR"
+    },
+    {
+     "bausteinId": "WV05_abnahme",
+     "begruendung": "Prüf- und Rügeobliegenheit (Art. 367/370 OR); Rügefrist-Satz je Werkart (60 Tage zwingend beim unbeweglichen Werk).",
+     "norm": "Art. 367 OR"
+    },
+    {
+     "bausteinId": "WV06_maengelrechte",
+     "begruendung": "Mängelrechte nach Art. 368 OR – immer enthalten.",
+     "norm": "Art. 368 OR"
+    },
+    {
+     "bausteinId": "WV07_verjaehrung",
+     "begruendung": "Verjährung der Mängelansprüche (Art. 371 OR) – Frist je Werkart.",
+     "norm": "Art. 371 OR"
+    },
+    {
+     "bausteinId": "WV08_ruecktritt",
+     "begruendung": "Zwingendes Rücktrittsrecht des Bestellers gegen volle Schadloshaltung (Art. 377 OR) – offengelegt (§8), nicht wegbedungen.",
+     "norm": "Art. 377 OR"
+    },
+    {
+     "bausteinId": "WV09_schluss",
+     "begruendung": "Schriftformvorbehalt, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 363 OR"
+    }
+   ]
+  }
+ },
+ "vorl:wv-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Werkvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "WV01_parteien",
+      "text": "zwischen\n\n________\n(Besteller)\n\nund\n\n________\n(Unternehmer)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "WV02_werk",
+      "ueberschrift": "Werk",
+      "text": "1. Der Unternehmer stellt für den Besteller das folgende Werk her: ________ (bewegliches Werk)."
+     },
+     {
+      "bausteinId": "WV03_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "2. Die Vergütung ist als Festpreis von CHF ________ fest vereinbart. Der Unternehmer stellt das Werk um diese Summe fertig und darf auch bei höherem Aufwand keine Erhöhung fordern; vorbehalten bleibt die richterliche Anpassung bei ausserordentlichen, nicht voraussehbaren Umständen (Art. 373 OR). Die Vergütung ist bei der Ablieferung des Werkes zur Zahlung fällig (Art. 372 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "WV04_ausfuehrung",
+      "ueberschrift": "Ausführung und Termine",
+      "text": "3. Der Unternehmer führt das Werk sorgfältig und vertragsgemäss aus. Beginnt er das Werk nicht rechtzeitig, verzögert er die Ausführung vertragswidrig oder ist eine mangelhafte Erstellung durch sein Verschulden bestimmt voraussehbar, so stehen dem Besteller die Rechte nach Art. 366 OR zu (Rücktritt bzw. Ersatzvornahme nach angemessener Nachfrist)."
+     },
+     {
+      "bausteinId": "WV05_abnahme",
+      "ueberschrift": "Abnahme und Mängelrüge",
+      "text": "4. Nach Ablieferung prüft der Besteller das Werk, sobald es nach dem üblichen Geschäftsgang tunlich ist, und zeigt dem Unternehmer Mängel an (Art. 367 Abs. 1 OR). Die Mängel sind nach der Prüfung ohne Verzug anzuzeigen. Verdeckte Mängel sind sofort nach ihrer Entdeckung anzuzeigen; unterlässt der Besteller die Prüfung und Anzeige, gilt das Werk als genehmigt (Art. 370 Abs. 2 und 3 OR). Über die Abnahme erstellen die Parteien ein gemeinsames Protokoll."
+     },
+     {
+      "bausteinId": "WV06_maengelrechte",
+      "ueberschrift": "Mängelrechte",
+      "text": "5. Bei mangelhaftem Werk stehen dem Besteller die gesetzlichen Mängelrechte zu: Verweigerung der Annahme bei Unbrauchbarkeit, Minderung des Lohnes oder unentgeltliche Nachbesserung, soweit diese dem Unternehmer keine übermässigen Kosten verursacht, sowie Schadenersatz bei Verschulden (Art. 368 OR)."
+     },
+     {
+      "bausteinId": "WV07_verjaehrung",
+      "ueberschrift": "Verjährung der Mängelansprüche",
+      "text": "6. Die Ansprüche des Bestellers wegen Mängel des Werkes verjähren mit Ablauf von zwei Jahren nach der Abnahme des Werkes; für bewegliche Werke, die bestimmungsgemäss in ein unbewegliches Werk integriert werden und dessen Mangelhaftigkeit verursachen, beträgt die Frist fünf Jahre (Art. 371 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "WV08_ruecktritt",
+      "ueberschrift": "Rücktritt des Bestellers",
+      "text": "7. Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten; er schuldet dann die Vergütung der bereits geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
+     },
+     {
+      "bausteinId": "WV09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "8. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Werkvertrag (Art. 363 ff. OR)."
+     },
+     {
+      "bausteinId": "WV10_unterschriften",
+      "text": "________, ________\n\n\nDer Besteller:\n\n___________________________\n________\n\n\nDer Unternehmer:\n\n___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Werkvertrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Die Rügefrist beim unbeweglichen Werk (60 Tage, Art. 367 Abs. 1bis OR) und das Rücktrittsrecht nach Art. 377 OR sind zwingend. Massgebend sind Gesetz (Art. 363 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 363/366/367/368/370/371/372/373/377 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "WV01_parteien",
+    "WV02_werk",
+    "WV03_verguetung",
+    "WV04_ausfuehrung",
+    "WV05_abnahme",
+    "WV06_maengelrechte",
+    "WV07_verjaehrung",
+    "WV08_ruecktritt",
+    "WV09_schluss",
+    "WV10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "WV01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV02_werk",
+     "begruendung": "Gegenstand des Werkvertrags (herzustellendes Werk + Art beweglich/unbeweglich) – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV03_verguetung",
+     "begruendung": "Vergütungsregelung (Festpreis oder nach Aufwand) und Fälligkeit bei Ablieferung (Art. 372 Abs. 1 OR).",
+     "norm": "Art. 372 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "WV04_ausfuehrung",
+     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – immer enthalten.",
+     "norm": "Art. 366 OR"
+    },
+    {
+     "bausteinId": "WV05_abnahme",
+     "begruendung": "Prüf- und Rügeobliegenheit (Art. 367/370 OR); Rügefrist-Satz je Werkart (60 Tage zwingend beim unbeweglichen Werk).",
+     "norm": "Art. 367 OR"
+    },
+    {
+     "bausteinId": "WV06_maengelrechte",
+     "begruendung": "Mängelrechte nach Art. 368 OR – immer enthalten.",
+     "norm": "Art. 368 OR"
+    },
+    {
+     "bausteinId": "WV07_verjaehrung",
+     "begruendung": "Verjährung der Mängelansprüche (Art. 371 OR) – Frist je Werkart.",
+     "norm": "Art. 371 OR"
+    },
+    {
+     "bausteinId": "WV08_ruecktritt",
+     "begruendung": "Zwingendes Rücktrittsrecht des Bestellers gegen volle Schadloshaltung (Art. 377 OR) – offengelegt (§8), nicht wegbedungen.",
+     "norm": "Art. 377 OR"
+    },
+    {
+     "bausteinId": "WV09_schluss",
+     "begruendung": "Schriftformvorbehalt, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 363 OR"
+    }
+   ]
+  }
+ },
+ "vorl:wv-gates-unbeweglich": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "UNBEWEGLICHES WERK: Die Frist für die Mängelrüge beträgt 60 Tage; die Vereinbarung einer kürzeren Frist ist unwirksam (Art. 367 Abs. 1bis OR). Die Mängelansprüche verjähren in fünf Jahren nach der Abnahme (Art. 371 Abs. 2 OR).",
+   "RÜGEOBLIEGENHEIT: Unterlässt der Besteller die Prüfung und Anzeige, gilt das Werk als genehmigt (Art. 370 Abs. 2 OR); verdeckte Mängel sind sofort nach ihrer Entdeckung anzuzeigen (Art. 370 Abs. 3 OR). Die Fristen rechnet der Gewährleistungs-Rechner exakt aus.",
+   "RÜCKTRITTSRECHT DES BESTELLERS: Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten, schuldet dann aber die Vergütung der geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
+  ]
+ },
+ "vorl:wv-gates-beweglich": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "BEWEGLICHES WERK: Mängel sind nach Ablieferung sobald tunlich zu prüfen und zu rügen (Art. 367 Abs. 1 OR); die Mängelansprüche verjähren in zwei Jahren nach der Abnahme (Art. 371 Abs. 1 OR). Wird ein bewegliches Werk bestimmungsgemäss in ein unbewegliches integriert und verursacht dessen Mangelhaftigkeit, gilt die fünfjährige Frist.",
+   "RÜGEOBLIEGENHEIT: Unterlässt der Besteller die Prüfung und Anzeige, gilt das Werk als genehmigt (Art. 370 Abs. 2 OR); verdeckte Mängel sind sofort nach ihrer Entdeckung anzuzeigen (Art. 370 Abs. 3 OR). Die Fristen rechnet der Gewährleistungs-Rechner exakt aus.",
+   "RÜCKTRITTSRECHT DES BESTELLERS: Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten, schuldet dann aber die Vergütung der geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
+  ]
+ },
  "frist:vwvg-tage30-sommer": {
   "diesAdQuemISO": "2026-09-10",
   "diesAdQuem": "10.09.2026",

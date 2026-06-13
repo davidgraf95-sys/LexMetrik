@@ -18,6 +18,7 @@ import { MA_SCHEMA } from '../lib/vorlagen/mahnung';
 import { VV_SCHEMA } from '../lib/vorlagen/verjaehrungsverzicht';
 import { FA_SCHEMA } from '../lib/vorlagen/forderungsabtretung';
 import { AF_SCHEMA } from '../lib/vorlagen/auftrag';
+import { WV_SCHEMA } from '../lib/vorlagen/werkvertrag';
 import { FE_SCHEMA } from '../lib/vorlagen/fristerstreckung';
 import { NB_SCHEMA } from '../lib/vorlagen/nichtbekanntgabe';
 import { SK_SCHEMA } from '../lib/vorlagen/scheidungsklage';
@@ -60,6 +61,7 @@ const EINZEL: [string, VorlageSchema][] = [
   ['verjaehrungsverzicht', VV_SCHEMA],
   ['forderungsabtretung', FA_SCHEMA],
   ['auftrag', AF_SCHEMA],
+  ['werkvertrag', WV_SCHEMA],
   ['fristerstreckungsgesuch', FE_SCHEMA],
   ['nichtbekanntgabe-betreibung', NB_SCHEMA],
   ['scheidungsklage', SK_SCHEMA],

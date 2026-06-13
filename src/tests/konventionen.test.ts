@@ -40,6 +40,7 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     const { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } = await import('../lib/vorlagen/arbeitsvertrag');
     const { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } = await import('../lib/vorlagen/mietvertrag');
     const { afZusammenstellen, AF_DEFAULTS, pruefeAfGates } = await import('../lib/vorlagen/auftrag');
+    const { wvZusammenstellen, WV_DEFAULTS, pruefeWvGates } = await import('../lib/vorlagen/werkvertrag');
 
     const faelle: [string, unknown][] = [
       ['testament', testamentZusammenstellen({ ...TESTAMENT_DEFAULTS, vorname: 'A', nachname: 'B', geburtsdatum: '1960-01-01', heimatort: 'Basel', adresse: 'X 1', erben: [{ name: 'E', angaben: 'g', quoteProzent: 100 }], vermaechtnisse: [], datumErrichtung: '2026-06-05' }).dokument],
@@ -54,6 +55,10 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       // optionalen Bausteine) + Gegenstands-Modul Treuhand + Aufwandhonorar.
       ['af', afZusammenstellen({ ...AF_DEFAULTS, auftraggeberName: 'AG', auftraggeberAdresse: 'X', beauftragteName: 'B', beauftragteAdresse: 'Y', mandatstyp: 'treuhand', gegenstand: 'Buchführung und Jahresabschluss', beginn: '2026-07-01', verguetung: 'aufwand', stundensatzCHF: '250', auslagenErsatz: true, weisungsKlausel: true, substitution: true, vollmachtErweitert: true, ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
       ['af-gates', pruefeAfGates()],
+      // Werkvertrag (V3, 13.6.2026): unbewegliches Werk (60-Tage-Rüge + 5-Jahre-
+      // Verjährung) + Aufwandpreis + Anzahlung + Abnahmeprotokoll.
+      ['wv', wvZusammenstellen({ ...WV_DEFAULTS, bestellerName: 'B', unternehmerName: 'U', werkBeschrieb: 'Küche', werkArt: 'unbeweglich', preis: 'aufwand', ansatzCHF: '120', ansatzEinheit: 'pro Stunde', anzahlung: true, anzahlungCHF: '4000', ablieferung: '2026-09-01', ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
+      ['wv-gates', pruefeWvGates({ ...WV_DEFAULTS, werkArt: 'unbeweglich' })],
     ];
 
     // BGer-Rechtsweg (11.6.2026): alle vier Wege + Sonderkonstellationen

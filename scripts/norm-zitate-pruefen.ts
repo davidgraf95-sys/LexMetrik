@@ -25,6 +25,8 @@ const QUELLEN = [
   'src/lib/vorlagen/forderungsabtretung.ts',
   // Auftrag/Dienstleistungsvertrag (V3, 13.6.2026) — Art. 394 ff. OR.
   'src/lib/vorlagen/auftrag.ts',
+  // Werkvertrag (V3, 13.6.2026) — Art. 363 ff. OR.
+  'src/lib/vorlagen/werkvertrag.ts',
   'src/lib/vorlagen/fristerstreckung.ts',
   'src/lib/vorlagen/nichtbekanntgabe.ts',
   'src/lib/vorlagen/scheidungsklage.ts',

@@ -36,6 +36,7 @@ import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from 
 import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlagen/verjaehrungsverzicht';
 import { faZusammenstellen, FA_DEFAULTS, pruefeFaGates } from '../src/lib/vorlagen/forderungsabtretung';
 import { afZusammenstellen, AF_DEFAULTS, pruefeAfGates } from '../src/lib/vorlagen/auftrag';
+import { wvZusammenstellen, WV_DEFAULTS, pruefeWvGates } from '../src/lib/vorlagen/werkvertrag';
 import { feZusammenstellen, FE_DEFAULTS, pruefeFeGates } from '../src/lib/vorlagen/fristerstreckung';
 import { nbZusammenstellen, NB_DEFAULTS, pruefeNbGates, nbFruehesterGesuchstag } from '../src/lib/vorlagen/nichtbekanntgabe';
 import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
@@ -251,6 +252,19 @@ f('vorl:af-aufwand-substitution', () => afZusammenstellen({ ...afBasis, mandatst
 f('vorl:af-inkasso-unentgeltlich', () => afZusammenstellen({ ...afBasis, mandatstyp: 'inkasso', verguetung: 'unentgeltlich' }));
 f('vorl:af-blanko', () => afZusammenstellen({ ...AF_DEFAULTS }));
 f('vorl:af-gates', () => pruefeAfGates());
+
+// Werkvertrag (Art. 363 ff. OR; FAHRPLAN-VORLAGEN-AUSBAU V3, 13.6.2026)
+const wvBasis = {
+  ...WV_DEFAULTS, bestellerName: 'Muster AG', bestellerAdresse: 'X 1, 8000 Zürich',
+  unternehmerName: 'Bau Beispiel GmbH', unternehmerAdresse: 'Y 2, 8000 Zürich',
+  werkBeschrieb: 'Einbau einer Küche gemäss Plan vom 1. März 2026',
+  ort: 'Zürich', datum: '2026-06-13',
+};
+f('vorl:wv-beweglich-pauschal', () => wvZusammenstellen({ ...wvBasis, werkArt: 'beweglich', preis: 'pauschal', pauschalCHF: '12000', ablieferung: '2026-09-01' }));
+f('vorl:wv-unbeweglich-aufwand', () => wvZusammenstellen({ ...wvBasis, werkArt: 'unbeweglich', preis: 'aufwand', ansatzCHF: '120', ansatzEinheit: 'pro Stunde', anzahlung: true, anzahlungCHF: '4000', abnahmeProtokoll: true }));
+f('vorl:wv-blanko', () => wvZusammenstellen({ ...WV_DEFAULTS }));
+f('vorl:wv-gates-unbeweglich', () => pruefeWvGates({ ...WV_DEFAULTS, werkArt: 'unbeweglich' }));
+f('vorl:wv-gates-beweglich', () => pruefeWvGates({ ...WV_DEFAULTS, werkArt: 'beweglich' }));
 
 // Verwaltungs-Stillstand (Art. 22a VwVG) + BGG-Stillstand (Art. 46 BGG) im
 // Fristenrechner (Auftrag David 13.6.2026). Tagesfristen ruhen über die
