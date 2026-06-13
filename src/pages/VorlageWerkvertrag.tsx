@@ -7,6 +7,7 @@ import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, inputCls } from '../components/vorlagen/ui';
 import { ThemenEinstieg } from '../components/ThemenEinstieg';
+import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -207,6 +208,7 @@ export function VorlageWerkvertrag() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      kopfSchalter={<VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />}
       inhalt={inhalt()}
       fussnote={<ThemenEinstieg label="Mängelrüge- und Verjährungsfristen exakt berechnen:" links={[
         { to: '/rechner/gewaehrleistung', label: 'Gewährleistung & Mängelrüge' },

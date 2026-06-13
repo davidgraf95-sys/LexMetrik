@@ -71,6 +71,11 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       // einfache Gesellschaft/Kinder/Vorsorge) + Gates mit Kinder-Hinweis.
       ['kk', kkZusammenstellen({ ...KK_DEFAULTS, partner1Name: 'A', partner2Name: 'B', wohnenAufnehmen: true, wohnBeschrieb: 'gemeinsame Mietwohnung', kostenschluessel: 'fix', fix1CHF: '1500', fix2CHF: '1200', einfacheGesellschaft: true, einfacheGesellschaftZweck: 'Erwerb der Liegenschaft', kinderHinweis: true, vorsorgeHinweis: true, ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
       ['kk-gates', pruefeKkGates({ ...KK_DEFAULTS, kinderHinweis: true, vorsorgeHinweis: true })],
+      // Detailgrad experte (P0-Rollout V3): neue Gerichtsstand-/Verzug-/
+      // Unterlassung-/Mediation-Klauseln durch den Linter.
+      ['wv-experte', wvZusammenstellen({ ...WV_DEFAULTS, detailgrad: 'experte', bestellerName: 'B', unternehmerName: 'U', werkBeschrieb: 'Küche', werkArt: 'unbeweglich', preis: 'pauschal', pauschalCHF: '12000', ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
+      ['nda-experte', ndaZusammenstellen({ ...NDA_DEFAULTS, detailgrad: 'experte', parteiAName: 'A', parteiBName: 'B', zweck: 'Zusammenarbeit', konventionalstrafe: true, strafeCHF: '20000', ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
+      ['kk-experte', kkZusammenstellen({ ...KK_DEFAULTS, detailgrad: 'experte', partner1Name: 'A', partner2Name: 'B', ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
     ];
 
     // BGer-Rechtsweg (11.6.2026): alle vier Wege + Sonderkonstellationen

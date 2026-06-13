@@ -10505,7 +10505,7 @@
     },
     {
      "bausteinId": "WV04_ausfuehrung",
-     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – immer enthalten.",
+     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – ab Detailgrad «standard» (in «einfach» ausgeblendet).",
      "norm": "Art. 366 OR"
     },
     {
@@ -10633,7 +10633,7 @@
     },
     {
      "bausteinId": "WV04_ausfuehrung",
-     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – immer enthalten.",
+     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – ab Detailgrad «standard» (in «einfach» ausgeblendet).",
      "norm": "Art. 366 OR"
     },
     {
@@ -10761,7 +10761,7 @@
     },
     {
      "bausteinId": "WV04_ausfuehrung",
-     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – immer enthalten.",
+     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – ab Detailgrad «standard» (in «einfach» ausgeblendet).",
      "norm": "Art. 366 OR"
     },
     {
@@ -10814,6 +10814,273 @@
    "RÜGEOBLIEGENHEIT: Unterlässt der Besteller die Prüfung und Anzeige, gilt das Werk als genehmigt (Art. 370 Abs. 2 OR); verdeckte Mängel sind sofort nach ihrer Entdeckung anzuzeigen (Art. 370 Abs. 3 OR). Die Fristen rechnet der Gewährleistungs-Rechner exakt aus.",
    "RÜCKTRITTSRECHT DES BESTELLERS: Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten, schuldet dann aber die Vergütung der geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
   ]
+ },
+ "vorl:wv-einfach": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Werkvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "WV01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Besteller)\n\nund\n\nBau Beispiel GmbH\nY 2, 8000 Zürich\n(Unternehmer)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "WV02_werk",
+      "ueberschrift": "Werk",
+      "text": "1. Der Unternehmer stellt für den Besteller das folgende Werk her: Einbau einer Küche gemäss Plan vom 1. März 2026 (bewegliches Werk)."
+     },
+     {
+      "bausteinId": "WV03_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "2. Die Vergütung ist als Festpreis von CHF 12'000.00 fest vereinbart. Der Unternehmer stellt das Werk um diese Summe fertig und darf auch bei höherem Aufwand keine Erhöhung fordern; vorbehalten bleibt die richterliche Anpassung bei ausserordentlichen, nicht voraussehbaren Umständen (Art. 373 OR). Die Vergütung ist bei der Ablieferung des Werkes zur Zahlung fällig (Art. 372 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "WV05_abnahme",
+      "ueberschrift": "Abnahme und Mängelrüge",
+      "text": "3. Nach Ablieferung prüft der Besteller das Werk, sobald es nach dem üblichen Geschäftsgang tunlich ist, und zeigt dem Unternehmer Mängel an (Art. 367 Abs. 1 OR). Die Mängel sind nach der Prüfung ohne Verzug anzuzeigen. Verdeckte Mängel sind sofort nach ihrer Entdeckung anzuzeigen; unterlässt der Besteller die Prüfung und Anzeige, gilt das Werk als genehmigt (Art. 370 Abs. 2 und 3 OR). Über die Abnahme erstellen die Parteien ein gemeinsames Protokoll."
+     },
+     {
+      "bausteinId": "WV06_maengelrechte",
+      "ueberschrift": "Mängelrechte",
+      "text": "4. Bei mangelhaftem Werk stehen dem Besteller die gesetzlichen Mängelrechte zu: Verweigerung der Annahme bei Unbrauchbarkeit, Minderung des Lohnes oder unentgeltliche Nachbesserung, soweit diese dem Unternehmer keine übermässigen Kosten verursacht, sowie Schadenersatz bei Verschulden (Art. 368 OR)."
+     },
+     {
+      "bausteinId": "WV07_verjaehrung",
+      "ueberschrift": "Verjährung der Mängelansprüche",
+      "text": "5. Die Ansprüche des Bestellers wegen Mängel des Werkes verjähren mit Ablauf von zwei Jahren nach der Abnahme des Werkes; für bewegliche Werke, die bestimmungsgemäss in ein unbewegliches Werk integriert werden und dessen Mangelhaftigkeit verursachen, beträgt die Frist fünf Jahre (Art. 371 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "WV08_ruecktritt",
+      "ueberschrift": "Rücktritt des Bestellers",
+      "text": "6. Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten; er schuldet dann die Vergütung der bereits geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
+     },
+     {
+      "bausteinId": "WV09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "7. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Werkvertrag (Art. 363 ff. OR)."
+     },
+     {
+      "bausteinId": "WV10_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nDer Besteller:\n\n___________________________\nMuster AG\n\n\nDer Unternehmer:\n\n___________________________\nBau Beispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Werkvertrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Die Rügefrist beim unbeweglichen Werk (60 Tage, Art. 367 Abs. 1bis OR) und das Rücktrittsrecht nach Art. 377 OR sind zwingend. Massgebend sind Gesetz (Art. 363 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 363/366/367/368/370/371/372/373/377 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "WV01_parteien",
+    "WV02_werk",
+    "WV03_verguetung",
+    "WV05_abnahme",
+    "WV06_maengelrechte",
+    "WV07_verjaehrung",
+    "WV08_ruecktritt",
+    "WV09_schluss",
+    "WV10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "WV01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV02_werk",
+     "begruendung": "Gegenstand des Werkvertrags (herzustellendes Werk + Art beweglich/unbeweglich) – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV03_verguetung",
+     "begruendung": "Vergütungsregelung (Festpreis oder nach Aufwand) und Fälligkeit bei Ablieferung (Art. 372 Abs. 1 OR).",
+     "norm": "Art. 372 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "WV05_abnahme",
+     "begruendung": "Prüf- und Rügeobliegenheit (Art. 367/370 OR); Rügefrist-Satz je Werkart (60 Tage zwingend beim unbeweglichen Werk).",
+     "norm": "Art. 367 OR"
+    },
+    {
+     "bausteinId": "WV06_maengelrechte",
+     "begruendung": "Mängelrechte nach Art. 368 OR – immer enthalten.",
+     "norm": "Art. 368 OR"
+    },
+    {
+     "bausteinId": "WV07_verjaehrung",
+     "begruendung": "Verjährung der Mängelansprüche (Art. 371 OR) – Frist je Werkart.",
+     "norm": "Art. 371 OR"
+    },
+    {
+     "bausteinId": "WV08_ruecktritt",
+     "begruendung": "Zwingendes Rücktrittsrecht des Bestellers gegen volle Schadloshaltung (Art. 377 OR) – offengelegt (§8), nicht wegbedungen.",
+     "norm": "Art. 377 OR"
+    },
+    {
+     "bausteinId": "WV09_schluss",
+     "begruendung": "Schriftformvorbehalt, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 363 OR"
+    }
+   ]
+  }
+ },
+ "vorl:wv-experte": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Werkvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "WV01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Besteller)\n\nund\n\nBau Beispiel GmbH\nY 2, 8000 Zürich\n(Unternehmer)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "WV02_werk",
+      "ueberschrift": "Werk",
+      "text": "1. Der Unternehmer stellt für den Besteller das folgende Werk her: Einbau einer Küche gemäss Plan vom 1. März 2026 (unbewegliches Werk)."
+     },
+     {
+      "bausteinId": "WV03_verguetung",
+      "ueberschrift": "Vergütung",
+      "text": "2. Die Vergütung ist als Festpreis von CHF 12'000.00 fest vereinbart. Der Unternehmer stellt das Werk um diese Summe fertig und darf auch bei höherem Aufwand keine Erhöhung fordern; vorbehalten bleibt die richterliche Anpassung bei ausserordentlichen, nicht voraussehbaren Umständen (Art. 373 OR). Die Vergütung ist bei der Ablieferung des Werkes zur Zahlung fällig (Art. 372 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "WV04_ausfuehrung",
+      "ueberschrift": "Ausführung und Termine",
+      "text": "3. Der Unternehmer führt das Werk sorgfältig und vertragsgemäss aus. Beginnt er das Werk nicht rechtzeitig, verzögert er die Ausführung vertragswidrig oder ist eine mangelhafte Erstellung durch sein Verschulden bestimmt voraussehbar, so stehen dem Besteller die Rechte nach Art. 366 OR zu (Rücktritt bzw. Ersatzvornahme nach angemessener Nachfrist)."
+     },
+     {
+      "bausteinId": "WV05_abnahme",
+      "ueberschrift": "Abnahme und Mängelrüge",
+      "text": "4. Nach Ablieferung prüft der Besteller das Werk, sobald es nach dem üblichen Geschäftsgang tunlich ist, und zeigt dem Unternehmer Mängel an (Art. 367 Abs. 1 OR). Bei diesem unbeweglichen Werk beträgt die Frist für die Mängelrüge 60 Tage; die Vereinbarung einer kürzeren Frist ist unwirksam (Art. 367 Abs. 1bis OR). Verdeckte Mängel sind sofort nach ihrer Entdeckung anzuzeigen; unterlässt der Besteller die Prüfung und Anzeige, gilt das Werk als genehmigt (Art. 370 Abs. 2 und 3 OR). Über die Abnahme erstellen die Parteien ein gemeinsames Protokoll."
+     },
+     {
+      "bausteinId": "WV06_maengelrechte",
+      "ueberschrift": "Mängelrechte",
+      "text": "5. Bei mangelhaftem Werk stehen dem Besteller die gesetzlichen Mängelrechte zu: Verweigerung der Annahme bei Unbrauchbarkeit, Minderung des Lohnes oder unentgeltliche Nachbesserung, soweit diese dem Unternehmer keine übermässigen Kosten verursacht, sowie Schadenersatz bei Verschulden (Art. 368 OR)."
+     },
+     {
+      "bausteinId": "WV07_verjaehrung",
+      "ueberschrift": "Verjährung der Mängelansprüche",
+      "text": "6. Die Ansprüche des Bestellers wegen Mängel des Werkes verjähren mit Ablauf von fünf Jahren nach der Abnahme des Werkes (Art. 371 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "WV08_ruecktritt",
+      "ueberschrift": "Rücktritt des Bestellers",
+      "text": "7. Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten; er schuldet dann die Vergütung der bereits geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
+     },
+     {
+      "bausteinId": "WV08b_verzug",
+      "ueberschrift": "Zahlungsverzug und Konventionalstrafe",
+      "text": "8. Bei Verzug mit einer fälligen Vergütung schuldet der Besteller Verzugszins von 5 % (Art. 104 Abs. 1 OR). Für den Fall verspäteter Fertigstellung können die Parteien in der Beilage eine Konventionalstrafe vereinbaren; eine übermässige Strafe setzt der Richter herab (Art. 163 Abs. 3 OR)."
+     },
+     {
+      "bausteinId": "WV08c_gerichtsstand",
+      "ueberschrift": "Anwendbares Recht und Gerichtsstand",
+      "text": "9. Dieser Vertrag untersteht schweizerischem Recht. Ausschliesslicher Gerichtsstand ist der Sitz des Bestellers, soweit nicht zwingende Gerichtsstände entgegenstehen."
+     },
+     {
+      "bausteinId": "WV09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "10. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts über den Werkvertrag (Art. 363 ff. OR)."
+     },
+     {
+      "bausteinId": "WV10_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nDer Besteller:\n\n___________________________\nMuster AG\n\n\nDer Unternehmer:\n\n___________________________\nBau Beispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Werkvertrag ist formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Die Rügefrist beim unbeweglichen Werk (60 Tage, Art. 367 Abs. 1bis OR) und das Rücktrittsrecht nach Art. 377 OR sind zwingend. Massgebend sind Gesetz (Art. 363 ff. OR) und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 363/366/367/368/370/371/372/373/377 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "WV01_parteien",
+    "WV02_werk",
+    "WV03_verguetung",
+    "WV04_ausfuehrung",
+    "WV05_abnahme",
+    "WV06_maengelrechte",
+    "WV07_verjaehrung",
+    "WV08_ruecktritt",
+    "WV08b_verzug",
+    "WV08c_gerichtsstand",
+    "WV09_schluss",
+    "WV10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "WV01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV02_werk",
+     "begruendung": "Gegenstand des Werkvertrags (herzustellendes Werk + Art beweglich/unbeweglich) – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV03_verguetung",
+     "begruendung": "Vergütungsregelung (Festpreis oder nach Aufwand) und Fälligkeit bei Ablieferung (Art. 372 Abs. 1 OR).",
+     "norm": "Art. 372 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "WV04_ausfuehrung",
+     "begruendung": "Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – ab Detailgrad «standard» (in «einfach» ausgeblendet).",
+     "norm": "Art. 366 OR"
+    },
+    {
+     "bausteinId": "WV05_abnahme",
+     "begruendung": "Prüf- und Rügeobliegenheit (Art. 367/370 OR); Rügefrist-Satz je Werkart (60 Tage zwingend beim unbeweglichen Werk).",
+     "norm": "Art. 367 OR"
+    },
+    {
+     "bausteinId": "WV06_maengelrechte",
+     "begruendung": "Mängelrechte nach Art. 368 OR – immer enthalten.",
+     "norm": "Art. 368 OR"
+    },
+    {
+     "bausteinId": "WV07_verjaehrung",
+     "begruendung": "Verjährung der Mängelansprüche (Art. 371 OR) – Frist je Werkart.",
+     "norm": "Art. 371 OR"
+    },
+    {
+     "bausteinId": "WV08_ruecktritt",
+     "begruendung": "Zwingendes Rücktrittsrecht des Bestellers gegen volle Schadloshaltung (Art. 377 OR) – offengelegt (§8), nicht wegbedungen.",
+     "norm": "Art. 377 OR"
+    },
+    {
+     "bausteinId": "WV08b_verzug",
+     "begruendung": "Verzugszins (Art. 104 OR) und Konventionalstrafen-Rahmen (Art. 163 Abs. 3 OR) – Detailgrad «experte».",
+     "norm": "Art. 104 Abs. 1 OR"
+    },
+    {
+     "bausteinId": "WV08c_gerichtsstand",
+     "begruendung": "Rechtswahl- und Gerichtsstandsklausel mit Vorbehalt zwingender Gerichtsstände – Detailgrad «experte».",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV09_schluss",
+     "begruendung": "Schriftformvorbehalt, Ausfertigung und Gesetzesverweis – immer enthalten.",
+     "norm": "Art. 363 OR"
+    },
+    {
+     "bausteinId": "WV10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 363 OR"
+    }
+   ]
+  }
  },
  "vorl:nda-gegenseitig-strafe": {
   "ergebnis": {
@@ -10928,7 +11195,7 @@
     },
     {
      "bausteinId": "NDA08_keinrecht",
-     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – immer enthalten.",
+     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – ab Detailgrad «standard» (in «einfach» ausgeblendet).",
      "norm": "Art. 19 OR"
     },
     {
@@ -11023,7 +11290,7 @@
     },
     {
      "bausteinId": "NDA08_keinrecht",
-     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – immer enthalten.",
+     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – ab Detailgrad «standard» (in «einfach» ausgeblendet).",
      "norm": "Art. 19 OR"
     },
     {
@@ -11140,7 +11407,7 @@
     },
     {
      "bausteinId": "NDA08_keinrecht",
-     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – immer enthalten.",
+     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – ab Detailgrad «standard» (in «einfach» ausgeblendet).",
      "norm": "Art. 19 OR"
     },
     {
@@ -11172,6 +11439,252 @@
    "EINSEITIGE Geheimhaltung: Nur die empfangende Partei (Partei B) ist zur Vertraulichkeit verpflichtet; die offenlegende Partei (Partei A) trifft keine Geheimhaltungspflicht.",
    "PERSONENBEZOGENE DATEN: Werden vertrauliche Informationen mit Personendaten ausgetauscht, bleiben die datenschutzrechtlichen Pflichten zusätzlich vorbehalten."
   ]
+ },
+ "vorl:nda-einfach": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Geheimhaltungsvereinbarung (NDA)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "NDA01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Partei A)\n\nund\n\nBeispiel GmbH\nY 2, 8000 Zürich\n(Partei B)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "NDA02_zweck",
+      "ueberschrift": "Zweck",
+      "text": "1. Die Parteien tauschen im Hinblick auf den folgenden Zweck vertrauliche Informationen aus: Prüfung einer möglichen Zusammenarbeit im Bereich Softwareentwicklung. Diese Vereinbarung regelt den Umgang mit diesen Informationen."
+     },
+     {
+      "bausteinId": "NDA03_begriff",
+      "ueberschrift": "Vertrauliche Informationen",
+      "text": "2. Als vertraulich gelten alle nicht offenkundigen Informationen, die eine Partei der anderen im Zusammenhang mit dem Zweck schriftlich, mündlich, elektronisch oder auf andere Weise zugänglich macht. Nicht vertraulich sind Informationen, die allgemein bekannt sind oder ohne Verletzung dieser Vereinbarung werden, die der empfangenden Partei rechtmässig und ohne Geheimhaltungspflicht von Dritten zugänglich gemacht werden oder die sie nachweislich unabhängig selbst erarbeitet hat."
+     },
+     {
+      "bausteinId": "NDA04_pflicht",
+      "ueberschrift": "Geheimhaltungspflicht",
+      "text": "3. Jede Partei behandelt die vertraulichen Informationen der anderen Partei streng vertraulich und gibt sie nicht an Dritte weiter. Die Informationen dürfen ausschliesslich für den genannten Zweck verwendet und nur Personen zugänglich gemacht werden, die sie für diesen Zweck kennen müssen und ihrerseits zur Vertraulichkeit verpflichtet sind."
+     },
+     {
+      "bausteinId": "NDA05_dauer",
+      "ueberschrift": "Dauer",
+      "text": "4. Die Geheimhaltungspflicht gilt ab Unterzeichnung und besteht während 3 Jahren nach Beendigung der Zusammenarbeit oder des mit dem Zweck verfolgten Vorhabens fort."
+     },
+     {
+      "bausteinId": "NDA06_rueckgabe",
+      "ueberschrift": "Rückgabe und Vernichtung",
+      "text": "5. Auf Verlangen der offenlegenden Partei sowie nach Wegfall des Zwecks gibt die empfangende Partei alle überlassenen Unterlagen und Datenträger zurück oder vernichtet sie samt Kopien und bestätigt dies auf Wunsch schriftlich; gesetzliche Aufbewahrungspflichten bleiben vorbehalten."
+     },
+     {
+      "bausteinId": "NDA09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "6. Änderungen und Ergänzungen dieser Vereinbarung bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt die Vereinbarung im Übrigen gültig; an die Stelle der unwirksamen Bestimmung tritt eine gültige, die ihrem Zweck möglichst nahekommt. Diese Vereinbarung wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "NDA10_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nPartei A:\n\n___________________________\nMuster AG\n\n\nPartei B:\n\n___________________________\nBeispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Die Geheimhaltungsvereinbarung ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Eine übermässige Konventionalstrafe setzt der Richter herab (Art. 163 Abs. 3 OR). Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19/160/161/163 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "NDA01_parteien",
+    "NDA02_zweck",
+    "NDA03_begriff",
+    "NDA04_pflicht",
+    "NDA05_dauer",
+    "NDA06_rueckgabe",
+    "NDA09_schluss",
+    "NDA10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "NDA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Rollen je nach einseitig/gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA02_zweck",
+     "begruendung": "Zweck der Offenlegung – bestimmt den zulässigen Verwendungsrahmen.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA03_begriff",
+     "begruendung": "Definition der vertraulichen Informationen samt üblicher Ausnahmen – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA04_pflicht",
+     "begruendung": "Kern: Geheimhaltungs- und Zweckbindungspflicht (einseitig oder gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA05_dauer",
+     "begruendung": "Nachwirkungsfrist der Geheimhaltung – nur wenn vereinbart.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA06_rueckgabe",
+     "begruendung": "Rückgabe-/Vernichtungspflicht – nur wenn vereinbart.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA09_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung und Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
+ },
+ "vorl:nda-experte": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Geheimhaltungsvereinbarung (NDA)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "NDA01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Partei A)\n\nund\n\nBeispiel GmbH\nY 2, 8000 Zürich\n(Partei B)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "NDA02_zweck",
+      "ueberschrift": "Zweck",
+      "text": "1. Die Parteien tauschen im Hinblick auf den folgenden Zweck vertrauliche Informationen aus: Prüfung einer möglichen Zusammenarbeit im Bereich Softwareentwicklung. Diese Vereinbarung regelt den Umgang mit diesen Informationen."
+     },
+     {
+      "bausteinId": "NDA03_begriff",
+      "ueberschrift": "Vertrauliche Informationen",
+      "text": "2. Als vertraulich gelten alle nicht offenkundigen Informationen, die eine Partei der anderen im Zusammenhang mit dem Zweck schriftlich, mündlich, elektronisch oder auf andere Weise zugänglich macht. Nicht vertraulich sind Informationen, die allgemein bekannt sind oder ohne Verletzung dieser Vereinbarung werden, die der empfangenden Partei rechtmässig und ohne Geheimhaltungspflicht von Dritten zugänglich gemacht werden oder die sie nachweislich unabhängig selbst erarbeitet hat."
+     },
+     {
+      "bausteinId": "NDA04_pflicht",
+      "ueberschrift": "Geheimhaltungspflicht",
+      "text": "3. Jede Partei behandelt die vertraulichen Informationen der anderen Partei streng vertraulich und gibt sie nicht an Dritte weiter. Die Informationen dürfen ausschliesslich für den genannten Zweck verwendet und nur Personen zugänglich gemacht werden, die sie für diesen Zweck kennen müssen und ihrerseits zur Vertraulichkeit verpflichtet sind."
+     },
+     {
+      "bausteinId": "NDA05_dauer",
+      "ueberschrift": "Dauer",
+      "text": "4. Die Geheimhaltungspflicht gilt ab Unterzeichnung und besteht während 3 Jahren nach Beendigung der Zusammenarbeit oder des mit dem Zweck verfolgten Vorhabens fort."
+     },
+     {
+      "bausteinId": "NDA06_rueckgabe",
+      "ueberschrift": "Rückgabe und Vernichtung",
+      "text": "5. Auf Verlangen der offenlegenden Partei sowie nach Wegfall des Zwecks gibt die empfangende Partei alle überlassenen Unterlagen und Datenträger zurück oder vernichtet sie samt Kopien und bestätigt dies auf Wunsch schriftlich; gesetzliche Aufbewahrungspflichten bleiben vorbehalten."
+     },
+     {
+      "bausteinId": "NDA07_strafe",
+      "ueberschrift": "Konventionalstrafe",
+      "text": "6. Bei jeder Verletzung der Geheimhaltungspflicht schuldet die verletzende Partei eine Konventionalstrafe von CHF 20'000.00. Die Strafe ist auch ohne Schadensnachweis geschuldet (Art. 161 Abs. 1 OR); die Bezahlung befreit nicht von der Geheimhaltungspflicht. Ausdrücklich vorbehalten bleiben die weitere Unterlassung und der Ersatz eines die Strafe übersteigenden Schadens (Art. 160 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "NDA08_keinrecht",
+      "ueberschrift": "Keine Rechtsübertragung",
+      "text": "7. Diese Vereinbarung begründet keine Pflicht zur Offenlegung von Informationen und überträgt keine Rechte an den vertraulichen Informationen, insbesondere keine Lizenzen oder Immaterialgüterrechte."
+     },
+     {
+      "bausteinId": "NDA08b_unterlassung",
+      "ueberschrift": "Unterlassung und Gerichtsstand",
+      "text": "8. Bei drohender oder erfolgter Verletzung kann die verletzte Partei Unterlassung und Beseitigung verlangen; die Geltendmachung weiteren Schadens bleibt vorbehalten. Ausschliesslicher Gerichtsstand ist der Sitz der offenlegenden Partei, soweit nicht zwingende Gerichtsstände entgegenstehen."
+     },
+     {
+      "bausteinId": "NDA09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen dieser Vereinbarung bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt die Vereinbarung im Übrigen gültig; an die Stelle der unwirksamen Bestimmung tritt eine gültige, die ihrem Zweck möglichst nahekommt. Diese Vereinbarung wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "NDA10_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nPartei A:\n\n___________________________\nMuster AG\n\n\nPartei B:\n\n___________________________\nBeispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Die Geheimhaltungsvereinbarung ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Eine übermässige Konventionalstrafe setzt der Richter herab (Art. 163 Abs. 3 OR). Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19/160/161/163 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "NDA01_parteien",
+    "NDA02_zweck",
+    "NDA03_begriff",
+    "NDA04_pflicht",
+    "NDA05_dauer",
+    "NDA06_rueckgabe",
+    "NDA07_strafe",
+    "NDA08_keinrecht",
+    "NDA08b_unterlassung",
+    "NDA09_schluss",
+    "NDA10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "NDA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Rollen je nach einseitig/gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA02_zweck",
+     "begruendung": "Zweck der Offenlegung – bestimmt den zulässigen Verwendungsrahmen.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA03_begriff",
+     "begruendung": "Definition der vertraulichen Informationen samt üblicher Ausnahmen – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA04_pflicht",
+     "begruendung": "Kern: Geheimhaltungs- und Zweckbindungspflicht (einseitig oder gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA05_dauer",
+     "begruendung": "Nachwirkungsfrist der Geheimhaltung – nur wenn vereinbart.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA06_rueckgabe",
+     "begruendung": "Rückgabe-/Vernichtungspflicht – nur wenn vereinbart.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA07_strafe",
+     "begruendung": "Konventionalstrafe mit ausdrücklicher Kumulation (Art. 160 Abs. 1 OR) und Schadensunabhängigkeit (Art. 161 Abs. 1 OR); die richterliche Herabsetzung übermässiger Strafen (Art. 163 Abs. 3 OR) ist offengelegt.",
+     "norm": "Art. 160 Abs. 1 OR",
+     "hinweis": "Eine übermässig hohe Konventionalstrafe setzt der Richter nach Art. 163 Abs. 3 OR von Amtes wegen herab."
+    },
+    {
+     "bausteinId": "NDA08_keinrecht",
+     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – ab Detailgrad «standard» (in «einfach» ausgeblendet).",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA08b_unterlassung",
+     "begruendung": "Unterlassungs-/Gerichtsstandsklausel – Detailgrad «experte».",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA09_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung und Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
  },
  "vorl:kk-haelftig-voll": {
   "ergebnis": {
@@ -11533,6 +12046,134 @@
    "GEMEINSAME KINDER: Elterliche Sorge und Kindesunterhalt richten sich zwingend nach dem Gesetz (ZGB) und nicht nach diesem Vertrag; sie können nicht zulasten des Kindes geregelt werden.",
    "VORSORGE UND ERBRECHT: Da kein gesetzliches Erbrecht besteht, sind Begünstigungen (Säule 3a, Pensionskasse) und eine letztwillige Verfügung separat zu regeln, wenn der Partner abgesichert werden soll."
   ]
+ },
+ "vorl:kk-experte": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Konkubinatsvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "KK01_parteien",
+      "text": "zwischen\n\nAnna Muster\nX 1, 8000 Zürich\n(Partnerin/Partner 1)\n\nund\n\nBeat Beispiel\nX 1, 8000 Zürich\n(Partnerin/Partner 2)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "KK02_grundsatz",
+      "ueberschrift": "Grundsatz",
+      "text": "1. Die Parteien führen eine nichteheliche Lebensgemeinschaft (Konkubinat). Sie halten fest, dass zwischen ihnen kein gesetzliches Unterhalts-, Beistands- oder Güterrecht besteht; dieser Vertrag regelt ihr Zusammenleben und die Folgen einer Trennung im Rahmen der Vertragsfreiheit (Art. 19 OR)."
+     },
+     {
+      "bausteinId": "KK03_wohnen",
+      "ueberschrift": "Wohnen",
+      "text": "2. Für die gemeinsame Wohnsituation gilt: ________. Zieht eine Partei aus, verständigen sich die Parteien rechtzeitig über die Weiterführung oder Auflösung des Mietverhältnisses bzw. die Nutzung der Wohnung."
+     },
+     {
+      "bausteinId": "KK04_kosten",
+      "ueberschrift": "Kosten des Zusammenlebens",
+      "text": "3. Die Kosten des gemeinsamen Haushalts und der gemeinsamen Lebenshaltung tragen die Parteien je zur Hälfte. Für die gemeinsamen Kosten führen die Parteien ein gemeinsames Konto, das sie nach dem vorstehenden Schlüssel speisen."
+     },
+     {
+      "bausteinId": "KK05_vermoegen",
+      "ueberschrift": "Vermögen und Inventar",
+      "text": "4. Jede Partei behält das Alleineigentum an den von ihr eingebrachten und allein angeschafften Sachen. Gemeinsam angeschaffte Sachen stehen mangels anderer Abrede im Miteigentum zu gleichen Teilen (Art. 646 ZGB). Die Zuordnung der wesentlichen Gegenstände hält eine als Beilage unterzeichnete Inventarliste fest."
+     },
+     {
+      "bausteinId": "KK08_aufloesung",
+      "ueberschrift": "Auflösung des Konkubinats",
+      "text": "5. Bei Auflösung der Lebensgemeinschaft nimmt jede Partei ihr Alleineigentum zurück. Miteigentum wird aufgehoben; können sich die Parteien über die Art nicht einigen, gelten die gesetzlichen Teilungsregeln (Art. 650 f. ZGB: körperliche Teilung, Verkauf oder Übernahme gegen Auskauf). Ein gemeinsames Konto wird saldiert und der Saldo nach dem vereinbarten Kostenschlüssel ausgeglichen. Gegenseitige Ansprüche aus der Zeit des Zusammenlebens sind damit, vorbehältlich abweichender schriftlicher Abrede, abgegolten."
+     },
+     {
+      "bausteinId": "KK09_vorsorge",
+      "ueberschrift": "Vorsorge und Erbrecht",
+      "text": "6. Den Parteien ist bewusst, dass zwischen ihnen kein gesetzliches Erbrecht besteht. Wer den Partner absichern will, regelt dies gesondert durch Begünstigung (Säule 3a, Pensionskasse) und letztwillige Verfügung."
+     },
+     {
+      "bausteinId": "KK09b_mediation",
+      "ueberschrift": "Streitbeilegung und Gerichtsstand",
+      "text": "7. Die Parteien versuchen, Streitigkeiten aus diesem Vertrag zunächst durch Gespräch oder Mediation beizulegen. Gelingt dies nicht, ist ausschliesslicher Gerichtsstand der Wohnsitz der beklagten Partei, soweit nicht zwingende Gerichtsstände entgegenstehen. Belange gemeinsamer Kinder bleiben dem zwingenden Recht vorbehalten."
+     },
+     {
+      "bausteinId": "KK10_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "8. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt der Vertrag im Übrigen gültig. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "KK11_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nPartnerin/Partner 1:\n\n___________________________\nAnna Muster\n\n\nPartnerin/Partner 2:\n\n___________________________\nBeat Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Konkubinatsvertrag ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Es besteht kein gesetzliches Konkubinatsrecht; Belange gemeinsamer Kinder richten sich nach dem Gesetz. Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19 OR, Art. 646/650/651 ZGB, Art. 530/548/549 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "KK01_parteien",
+    "KK02_grundsatz",
+    "KK03_wohnen",
+    "KK04_kosten",
+    "KK05_vermoegen",
+    "KK08_aufloesung",
+    "KK09_vorsorge",
+    "KK09b_mediation",
+    "KK10_schluss",
+    "KK11_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "KK01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK02_grundsatz",
+     "begruendung": "Klarstellung der Rechtsnatur (kein gesetzliches Konkubinatsrecht) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK03_wohnen",
+     "begruendung": "Wohn-Regelung (Mietverhältnis/Nutzung) – nur wenn aufgenommen.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK04_kosten",
+     "begruendung": "Verteilung der Lebenshaltungskosten (hälftig / nach Einkommen / fix) und gemeinsames Konto – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK05_vermoegen",
+     "begruendung": "Zuordnung von Allein- und Miteigentum (Art. 646 ZGB) und Inventarverweis – immer enthalten.",
+     "norm": "Art. 646 ZGB"
+    },
+    {
+     "bausteinId": "KK08_aufloesung",
+     "begruendung": "Auflösungsfolgen: Rücknahme Alleineigentum, Aufhebung Miteigentum (Art. 650 f. ZGB), Kontosaldo – immer enthalten.",
+     "norm": "Art. 651 ZGB"
+    },
+    {
+     "bausteinId": "KK09_vorsorge",
+     "begruendung": "Hinweis auf fehlendes gesetzliches Erbrecht und separate Vorsorge-/Begünstigungsregelung – nur wenn gewählt.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK09b_mediation",
+     "begruendung": "Mediations-/Gerichtsstandsklausel mit Vorbehalt der Kindesbelange – Detailgrad «experte».",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK10_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung, Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK11_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
  },
  "frist:vwvg-tage30-sommer": {
   "diesAdQuemISO": "2026-09-10",

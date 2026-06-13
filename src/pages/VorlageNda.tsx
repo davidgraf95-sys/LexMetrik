@@ -8,6 +8,7 @@ import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
+import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { karte } from '../lib/startseiteConfig';
 
 // ─── Vorlagen-Wizard: Geheimhaltungsvereinbarung (NDA) ──────────────────────
@@ -177,6 +178,7 @@ export function VorlageNda() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      kopfSchalter={<VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_NDA, dateiName: 'Geheimhaltungsvereinbarung.pdf' },

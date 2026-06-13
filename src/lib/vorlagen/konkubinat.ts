@@ -2,6 +2,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtCHF, zahl } from './datum';
+import { type Detailgrad, DETAILGRAD_DEFAULT, NUR_EXPERTE } from './detailgrad';
 
 // ─── Konkubinatsvertrag ─────────────────────────────────────────────────────
 //
@@ -31,6 +32,7 @@ import { fmtCHF, zahl } from './datum';
 export type KkKostenschluessel = 'haelftig' | 'einkommen' | 'fix';
 
 export type KkAntworten = {
+  detailgrad: Detailgrad;
   partner1Name: string;
   partner1Adresse: string;         // optional
   partner2Name: string;
@@ -55,6 +57,7 @@ export type KkAntworten = {
 };
 
 export const KK_DEFAULTS: KkAntworten = {
+  detailgrad: DETAILGRAD_DEFAULT,
   partner1Name: '', partner1Adresse: '',
   partner2Name: '', partner2Adresse: '',
   wohnenAufnehmen: true, wohnBeschrieb: '',
@@ -179,6 +182,14 @@ export const KK_SCHEMA: VorlageSchema = {
         + 'Pensionskasse) und letztwillige Verfügung.',
       includeIf: { feld: 'vorsorgeHinweis', eq: true }, nummeriert: true,
       begruendung: 'Hinweis auf fehlendes gesetzliches Erbrecht und separate Vorsorge-/Begünstigungsregelung – nur wenn gewählt.',
+      norm: 'Art. 19 OR' },
+    { id: 'KK09b_mediation', ueberschrift: 'Streitbeilegung und Gerichtsstand',
+      text: 'Die Parteien versuchen, Streitigkeiten aus diesem Vertrag zunächst durch Gespräch oder '
+        + 'Mediation beizulegen. Gelingt dies nicht, ist ausschliesslicher Gerichtsstand der Wohnsitz '
+        + 'der beklagten Partei, soweit nicht zwingende Gerichtsstände entgegenstehen. Belange '
+        + 'gemeinsamer Kinder bleiben dem zwingenden Recht vorbehalten.',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Mediations-/Gerichtsstandsklausel mit Vorbehalt der Kindesbelange – Detailgrad «experte».',
       norm: 'Art. 19 OR' },
     { id: 'KK10_schluss', ueberschrift: 'Schlussbestimmungen',
       text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Sollte eine '

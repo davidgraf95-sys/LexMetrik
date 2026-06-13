@@ -2,6 +2,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtCHF, zahl } from './datum';
+import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Werkvertrag (Art. 363 ff. OR) ──────────────────────────────────────────
 //
@@ -38,6 +39,7 @@ export type WvWerkArt = 'beweglich' | 'unbeweglich';
 export type WvPreis = 'pauschal' | 'aufwand';
 
 export type WvAntworten = {
+  detailgrad: Detailgrad;
   bestellerName: string;
   bestellerAdresse: string;        // optional
   unternehmerName: string;
@@ -57,6 +59,7 @@ export type WvAntworten = {
 };
 
 export const WV_DEFAULTS: WvAntworten = {
+  detailgrad: DETAILGRAD_DEFAULT,
   bestellerName: '', bestellerAdresse: '',
   unternehmerName: '', unternehmerAdresse: '',
   werkBeschrieb: '',
@@ -138,8 +141,8 @@ export const WV_SCHEMA: VorlageSchema = {
         + 'nicht rechtzeitig, verzögert er die Ausführung vertragswidrig oder ist eine mangelhafte '
         + 'Erstellung durch sein Verschulden bestimmt voraussehbar, so stehen dem Besteller die '
         + 'Rechte nach Art. 366 OR zu (Rücktritt bzw. Ersatzvornahme nach angemessener Nachfrist).',
-      nummeriert: true,
-      begruendung: 'Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – immer enthalten.',
+      includeIf: AB_STANDARD, nummeriert: true,
+      begruendung: 'Ausführungspflicht und Verzugs-/Abhilferechte (Art. 366 OR) – ab Detailgrad «standard» (in «einfach» ausgeblendet).',
       norm: 'Art. 366 OR' },
     { id: 'WV05_abnahme', ueberschrift: 'Abnahme und Mängelrüge',
       text: 'Nach Ablieferung prüft der Besteller das Werk, sobald es nach dem üblichen '
@@ -170,6 +173,20 @@ export const WV_SCHEMA: VorlageSchema = {
       nummeriert: true,
       begruendung: 'Zwingendes Rücktrittsrecht des Bestellers gegen volle Schadloshaltung (Art. 377 OR) – offengelegt (§8), nicht wegbedungen.',
       norm: 'Art. 377 OR' },
+    { id: 'WV08b_verzug', ueberschrift: 'Zahlungsverzug und Konventionalstrafe',
+      text: 'Bei Verzug mit einer fälligen Vergütung schuldet der Besteller Verzugszins von 5 % '
+        + '(Art. 104 Abs. 1 OR). Für den Fall verspäteter Fertigstellung können die Parteien in der '
+        + 'Beilage eine Konventionalstrafe vereinbaren; eine übermässige Strafe setzt der Richter '
+        + 'herab (Art. 163 Abs. 3 OR).',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Verzugszins (Art. 104 OR) und Konventionalstrafen-Rahmen (Art. 163 Abs. 3 OR) – Detailgrad «experte».',
+      norm: 'Art. 104 Abs. 1 OR' },
+    { id: 'WV08c_gerichtsstand', ueberschrift: 'Anwendbares Recht und Gerichtsstand',
+      text: 'Dieser Vertrag untersteht schweizerischem Recht. Ausschliesslicher Gerichtsstand ist '
+        + 'der Sitz des Bestellers, soweit nicht zwingende Gerichtsstände entgegenstehen.',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Rechtswahl- und Gerichtsstandsklausel mit Vorbehalt zwingender Gerichtsstände – Detailgrad «experte».',
+      norm: 'Art. 363 OR' },
     { id: 'WV09_schluss', ueberschrift: 'Schlussbestimmungen',
       text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Dieser Vertrag '
         + 'wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. '

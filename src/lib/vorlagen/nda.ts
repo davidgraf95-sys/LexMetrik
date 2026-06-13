@@ -2,6 +2,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtCHF, zahl } from './datum';
+import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 
 // ─── Geheimhaltungsvereinbarung (NDA) ───────────────────────────────────────
 //
@@ -26,6 +27,7 @@ import { fmtCHF, zahl } from './datum';
 // nötige ausdrückliche Abrede getroffen wird.
 
 export type NdaAntworten = {
+  detailgrad: Detailgrad;
   gegenseitig: boolean;            // false = einseitig (nur Partei B ist verpflichtet)
   parteiAName: string;             // offenlegende Partei (einseitig) / Partei A
   parteiAAdresse: string;          // optional
@@ -43,6 +45,7 @@ export type NdaAntworten = {
 };
 
 export const NDA_DEFAULTS: NdaAntworten = {
+  detailgrad: DETAILGRAD_DEFAULT,
   gegenseitig: true,
   parteiAName: '', parteiAAdresse: '',
   parteiBName: '', parteiBAdresse: '',
@@ -152,8 +155,16 @@ export const NDA_SCHEMA: VorlageSchema = {
       text: 'Diese Vereinbarung begründet keine Pflicht zur Offenlegung von Informationen und '
         + 'überträgt keine Rechte an den vertraulichen Informationen, insbesondere keine Lizenzen oder '
         + 'Immaterialgüterrechte.',
-      nummeriert: true,
-      begruendung: 'Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – immer enthalten.',
+      includeIf: AB_STANDARD, nummeriert: true,
+      begruendung: 'Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – ab Detailgrad «standard» (in «einfach» ausgeblendet).',
+      norm: 'Art. 19 OR' },
+    { id: 'NDA08b_unterlassung', ueberschrift: 'Unterlassung und Gerichtsstand',
+      text: 'Bei drohender oder erfolgter Verletzung kann die verletzte Partei Unterlassung und '
+        + 'Beseitigung verlangen; die Geltendmachung weiteren Schadens bleibt vorbehalten. '
+        + 'Ausschliesslicher Gerichtsstand ist der Sitz der offenlegenden Partei, soweit nicht '
+        + 'zwingende Gerichtsstände entgegenstehen.',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Unterlassungs-/Gerichtsstandsklausel – Detailgrad «experte».',
       norm: 'Art. 19 OR' },
     { id: 'NDA09_schluss', ueberschrift: 'Schlussbestimmungen',
       text: 'Änderungen und Ergänzungen dieser Vereinbarung bedürfen der Schriftform. Sollte eine '

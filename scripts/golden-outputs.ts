@@ -272,6 +272,8 @@ f('vorl:wv-unbeweglich-aufwand', () => wvZusammenstellen({ ...wvBasis, werkArt: 
 f('vorl:wv-blanko', () => wvZusammenstellen({ ...WV_DEFAULTS }));
 f('vorl:wv-gates-unbeweglich', () => pruefeWvGates({ ...WV_DEFAULTS, werkArt: 'unbeweglich' }));
 f('vorl:wv-gates-beweglich', () => pruefeWvGates({ ...WV_DEFAULTS, werkArt: 'beweglich' }));
+f('vorl:wv-einfach', () => wvZusammenstellen({ ...wvBasis, detailgrad: 'einfach', werkArt: 'beweglich', preis: 'pauschal', pauschalCHF: '12000' }));
+f('vorl:wv-experte', () => wvZusammenstellen({ ...wvBasis, detailgrad: 'experte', werkArt: 'unbeweglich', preis: 'pauschal', pauschalCHF: '12000' }));
 
 // Geheimhaltungsvereinbarung/NDA (Art. 19/160 ff. OR; FAHRPLAN-VORLAGEN-AUSBAU V3, 13.6.2026)
 const ndaBasis = {
@@ -285,6 +287,8 @@ f('vorl:nda-einseitig-minimal', () => ndaZusammenstellen({ ...ndaBasis, gegensei
 f('vorl:nda-blanko', () => ndaZusammenstellen({ ...NDA_DEFAULTS }));
 f('vorl:nda-gates-strafe', () => pruefeNdaGates({ ...ndaBasis, konventionalstrafe: true, strafeCHF: '20000' }));
 f('vorl:nda-gates-einseitig', () => pruefeNdaGates({ ...ndaBasis, gegenseitig: false }));
+f('vorl:nda-einfach', () => ndaZusammenstellen({ ...ndaBasis, detailgrad: 'einfach' }));
+f('vorl:nda-experte', () => ndaZusammenstellen({ ...ndaBasis, detailgrad: 'experte', konventionalstrafe: true, strafeCHF: '20000' }));
 
 // Konkubinatsvertrag (Art. 19 OR / Art. 646 ff. ZGB; FAHRPLAN-VORLAGEN-AUSBAU V3, 13.6.2026)
 const kkBasis = {
@@ -296,6 +300,7 @@ f('vorl:kk-haelftig-voll', () => kkZusammenstellen({ ...kkBasis, kostenschluesse
 f('vorl:kk-fix-minimal', () => kkZusammenstellen({ ...kkBasis, kostenschluessel: 'fix', fix1CHF: '1500', fix2CHF: '1200', wohnenAufnehmen: false, gemeinsamesKonto: false, inventarAufnehmen: false, einfacheGesellschaft: false, kinderHinweis: false, vorsorgeHinweis: false }));
 f('vorl:kk-blanko', () => kkZusammenstellen({ ...KK_DEFAULTS }));
 f('vorl:kk-gates-kinder', () => pruefeKkGates({ ...kkBasis, kinderHinweis: true }));
+f('vorl:kk-experte', () => kkZusammenstellen({ ...kkBasis, detailgrad: 'experte' }));
 
 // Verwaltungs-Stillstand (Art. 22a VwVG) + BGG-Stillstand (Art. 46 BGG) im
 // Fristenrechner (Auftrag David 13.6.2026). Tagesfristen ruhen über die
