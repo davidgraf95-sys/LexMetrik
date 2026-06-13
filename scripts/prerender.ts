@@ -30,6 +30,10 @@ import { renderRoute } from '../src/entry-server';
 // +/vorlagen/fristerstreckung, +/vorlagen/nichtbekanntgabe-betreibung.
 // 13.6.2026 (V3): +/vorlagen/auftrag, +/vorlagen/werkvertrag, +/vorlagen/nda,
 // +/vorlagen/konkubinat.
+// Seit FUNDAMENT-UMBAU Thema B: Die Karten-Routen-EXISTENZ ist primär durch
+// src/tests/routenManifest.test.ts gegated (Manifest === katalogRouten()).
+// Dieser Zähler bleibt als sekundärer Drift-Backstop (fängt auch statische
+// Seiten) — bei neuen Karten/Seiten weiter im selben Commit nachführen.
 const ERWARTETE_ROUTEN = 49;
 const NOT_FOUND_MARKER = '404 · Nicht gefunden'; // src/pages/NotFound.tsx
 // Stub-Tor (Bug-Check 11.6.2026): /rechner/:slug fängt Katalog-hrefs ohne
