@@ -42,6 +42,7 @@ import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen
 import { sbZusammenstellen, SB_DEFAULTS } from '../src/lib/vorlagen/scheidungsbegehren';
 import { egZusammenstellen, EG_DEFAULTS } from '../src/lib/vorlagen/eheschutzgesuch';
 import { berechneBgerRechtsweg } from '../src/lib/bgerRechtsweg';
+import { berechneBggVwvgFrist } from '../src/lib/bggVwvgFristen';
 
 const faelle: Record<string, unknown> = {};
 const f = (id: string, fn: () => unknown) => {
@@ -250,6 +251,17 @@ f('vorl:af-aufwand-substitution', () => afZusammenstellen({ ...afBasis, mandatst
 f('vorl:af-inkasso-unentgeltlich', () => afZusammenstellen({ ...afBasis, mandatstyp: 'inkasso', verguetung: 'unentgeltlich' }));
 f('vorl:af-blanko', () => afZusammenstellen({ ...AF_DEFAULTS }));
 f('vorl:af-gates', () => pruefeAfGates());
+
+// Verwaltungs-Stillstand (Art. 22a VwVG) + BGG-Stillstand (Art. 46 BGG) im
+// Fristenrechner (Auftrag David 13.6.2026). Tagesfristen ruhen über die
+// Sommer-/Weihnachts-Periode; Monatsfristen stehen NICHT still (Geltungsbereich
+// «nach Tagen bestimmt»).
+f('frist:vwvg-tage30-sommer', () => berechneBggVwvgFrist({ regime: 'vwvg', ereignis: '2026-07-10', einheit: 'tage', laenge: 30, kanton: 'ZH' }));
+f('frist:vwvg-monat1-keinstillstand', () => berechneBggVwvgFrist({ regime: 'vwvg', ereignis: '2026-07-10', einheit: 'monate', laenge: 1, kanton: 'ZH' }));
+f('frist:vwvg-tage10-ausserhalb', () => berechneBggVwvgFrist({ regime: 'vwvg', ereignis: '2026-03-02', einheit: 'tage', laenge: 10, kanton: 'BE' }));
+f('frist:bgg-tage10-weihnacht', () => berechneBggVwvgFrist({ regime: 'bgg', ereignis: '2026-12-15', einheit: 'tage', laenge: 10, kanton: 'ZH' }));
+f('frist:bgg-tage30-ostern', () => berechneBggVwvgFrist({ regime: 'bgg', ereignis: '2026-03-25', einheit: 'tage', laenge: 30, kanton: 'TI' }));
+f('frist:bgg-jahr1-keinstillstand', () => berechneBggVwvgFrist({ regime: 'bgg', ereignis: '2026-07-20', einheit: 'jahre', laenge: 1, kanton: 'GE' }));
 
 // Fristerstreckungsgesuch (Art. 144 ZPO; FAHRPLAN-VORLAGEN-AUSBAU V2-Rest, 13.6.2026)
 const feBasis = {

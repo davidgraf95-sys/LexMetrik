@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { berechneAllgemeineFrist, type Einheit } from '../../lib/allgemeineFrist';
 import { berechneFrist } from '../../lib/zpoFristen';
 import { berechneSchkgFrist } from '../../lib/schkgFristen';
+import { berechneBggVwvgFrist, bvAusnahmenSatz } from '../../lib/bggVwvgFristen';
 import { zpoFristenLink, SCHKG_LINK_SPEC } from '../../lib/rechnerPermalinks';
 import { permalinkKodieren } from '../../lib/permalink';
 import { KANTONE } from '../../lib/kantone';
@@ -20,7 +21,7 @@ import { ErgebnisBlock } from '../ErgebnisBlock';
 // Standard-Annahmen (Ergebnis zeigt sie); Sonderkonstellationen gehören in
 // die Voll-Rechner («verfeinern»-Link mit denselben Werten, §5-Kodierung).
 
-type Ferien = 'keine' | 'zpo' | 'schkg';
+type Ferien = 'keine' | 'zpo' | 'schkg' | 'vwvg' | 'bgg';
 
 const FERIEN_OPTIONEN: { code: Ferien; label: string; sub: string }[] = [
   // Bug-Check §9 (fachliche Lupe, MITTEL): Samstag-Verschiebung folgt dem
@@ -31,6 +32,11 @@ const FERIEN_OPTIONEN: { code: Ferien; label: string; sub: string }[] = [
   // Bug-Check §9 (fachliche Lupe, MITTEL): präzise Art.-63-Kurzform —
   // dritter TAG NACH Ferienende, Sa/So/Feiertage nicht mitgezählt.
   { code: 'schkg', label: 'Betreibungsferien (SchKG)', sub: 'Art. 56/63 SchKG – Fristende in den Ferien → Verlängerung bis zum 3. Tag nach Ferienende (Sa/So/Feiertage zählen nicht)' },
+  // Verwaltungs-/BGG-Stillstand (13.6.2026): gleiche drei Perioden wie die ZPO,
+  // ABER nur für nach Tagen bestimmte Fristen (Wochen/Monate/Jahre stehen nicht
+  // still) – die Engine legt das offen.
+  { code: 'vwvg', label: 'Verwaltungs-Stillstand (VwVG)', sub: 'Art. 22a VwVG – Stillstand (Ostern ± 7 · 15.7.–15.8. · 18.12.–2.1.) nur für nach Tagen bestimmte Fristen; nicht bei vorsorglichen Massnahmen / öffentlichen Beschaffungen' },
+  { code: 'bgg', label: 'BGG-Stillstand (Bundesgericht)', sub: 'Art. 46 BGG – Stillstand (gleiche drei Perioden) nur für nach Tagen bestimmte Fristen; Ausnahmen nach Abs. 2 (vorsorgliche Massnahmen, Wechselbetreibung, Stimmrecht …)' },
 ];
 
 const EINHEITEN: { code: Einheit; label: string }[] = [
@@ -88,6 +94,13 @@ export function EinfacheFristForm() {
         ende = r.diesAdQuem;
         endeZusatz = r.stillstandAktiv ? 'Stillstand (Art. 145 ZPO) berücksichtigt' : '';
         zeilen = [...r.annahmen, ...r.warnungen];
+      } else if (ferien === 'vwvg' || ferien === 'bgg') {
+        const r = berechneBggVwvgFrist({ regime: ferien, ereignis: start, einheit: einheitEffektiv, laenge, kanton });
+        ende = r.diesAdQuem;
+        endeZusatz = r.stillstandAktiv
+          ? `Stillstand (${ferien === 'vwvg' ? 'Art. 22a VwVG' : 'Art. 46 BGG'}) berücksichtigt`
+          : 'Stillstand gilt nur für nach Tagen bestimmte Fristen – hier nicht angewendet';
+        zeilen = [...r.annahmen, ...r.warnungen, bvAusnahmenSatz(ferien)];
       } else {
         const r = berechneSchkgFrist({
           ereignis: start, einheit: einheitEffektiv as 'tage' | 'monate' | 'jahre', laenge,
@@ -158,9 +171,11 @@ export function EinfacheFristForm() {
           ))}
         </div>
         <p className="text-micro text-ink-500 max-w-reading">
-          Sonstige Ferienregeln: Strafprozessuale Fristen kennen KEINE Gerichtsferien
-          (Art. 89 Abs. 2 StPO) – «Keine Ferien» wählen; der Verwaltungs-Stillstand
-          (Art. 22a VwVG) und der BGG-Stillstand (Art. 46 BGG) sind noch nicht abgebildet.
+          Strafprozessuale Fristen kennen KEINE Gerichtsferien (Art. 89 Abs. 2 StPO) –
+          «Keine Ferien» wählen. Der Verwaltungs-Stillstand (Art. 22a VwVG) und der
+          BGG-Stillstand (Art. 46 BGG) gelten nur für nach Tagen bestimmte Fristen; in
+          den Ausnahmeverfahren nach Abs. 2 (vorsorgliche Massnahmen u. a.) «Keine Ferien»
+          wählen.
         </p>
       </fieldset>
 

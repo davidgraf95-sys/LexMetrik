@@ -307,9 +307,16 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     const { berechneVerjaehrung } = await import('../lib/verjaehrung');
     const { berechneLohnfortzahlung } = await import('../lib/lohnfortzahlung');
     const { gmbhGruendungsunterlagen, agGruendungsunterlagen } = await import('../lib/gruendungsunterlagen');
+    const { berechneBggVwvgFrist, bvAusnahmenSatz } = await import('../lib/bggVwvgFristen');
 
     const faelle: [string, unknown][] = [
       ['zpo', berechneFrist({ ereignis: '2025-12-10', einheit: 'tage', laenge: 30, verfahren: 'ordentlich', kanton: 'ZH', fristnatur: 'gesetzlich' })],
+      // Verwaltungs-/BGG-Stillstand (13.6.2026): Tagesfrist (Stillstand aktiv)
+      // + Monatsfrist (Warnung) + Ausnahmensatz beider Regimes.
+      ['vwvg-tage', berechneBggVwvgFrist({ regime: 'vwvg', ereignis: '2026-07-10', einheit: 'tage', laenge: 30, kanton: 'ZH' })],
+      ['bgg-monat', berechneBggVwvgFrist({ regime: 'bgg', ereignis: '2026-07-10', einheit: 'monate', laenge: 1, kanton: 'ZH' })],
+      ['vwvg-ausnahmen', bvAusnahmenSatz('vwvg')],
+      ['bgg-ausnahmen', bvAusnahmenSatz('bgg')],
       ['schkg', berechneSchkgFrist({ ereignis: '2026-03-25', einheit: 'tage', laenge: 10, modus: 'schkg_betreibungsferien', fristnatur: 'verwirkung', kanton: 'ZH' })],
       ['verzugszins', berechneVerzugszins({ kapital: 10000, verzugsbeginn: '2025-01-15', stichtag: '2026-02-20' })],
       ['teuerung', berechneTeuerung({ modus: 'indexmiete', betrag: 2500, vonMonat: '2007-10', bisMonat: '2012-03' })],

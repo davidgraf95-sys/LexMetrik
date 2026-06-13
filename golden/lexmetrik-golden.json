@@ -10111,6 +10111,131 @@
    "VERGÜTUNG ist nur geschuldet, wenn sie verabredet oder üblich ist (Art. 394 Abs. 3 OR) – die gewählte Vergütungsregelung hält das ausdrücklich fest."
   ]
  },
+ "frist:vwvg-tage30-sommer": {
+  "diesAdQuemISO": "2026-09-10",
+  "diesAdQuem": "10.09.2026",
+  "stillstandAktiv": true,
+  "verschoben": false,
+  "normen": [
+   "Art. 22a Abs. 1 VwVG",
+   "Art. 20 Abs. 3 VwVG"
+  ],
+  "annahmen": [
+   "Stillstand nach Art. 22a Abs. 1 VwVG berücksichtigt (Ostern ± 7 Tage · 15.7.–15.8. · 18.12.–2.1.); die Stillstandstage werden nicht mitgezählt.",
+   "Endverschiebung nach Art. 20 Abs. 3 VwVG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton ZH)."
+  ],
+  "warnungen": [],
+  "ausnahmen": [
+   "die aufschiebende Wirkung und andere vorsorgliche Massnahmen",
+   "die öffentlichen Beschaffungen"
+  ]
+ },
+ "frist:vwvg-monat1-keinstillstand": {
+  "diesAdQuemISO": "2026-08-10",
+  "diesAdQuem": "10.08.2026",
+  "stillstandAktiv": false,
+  "verschoben": false,
+  "normen": [
+   "Art. 22a Abs. 1 VwVG",
+   "Art. 20 Abs. 3 VwVG"
+  ],
+  "annahmen": [
+   "Endverschiebung nach Art. 20 Abs. 3 VwVG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton ZH)."
+  ],
+  "warnungen": [
+   "Der Stillstand nach Art. 22a Abs. 1 VwVG gilt nur für nach Tagen bestimmte Fristen – Monatsfristen stehen nicht still. Es wird nur der letzte Tag auf einen Werktag verschoben (Art. 20 Abs. 3 VwVG)."
+  ],
+  "ausnahmen": [
+   "die aufschiebende Wirkung und andere vorsorgliche Massnahmen",
+   "die öffentlichen Beschaffungen"
+  ]
+ },
+ "frist:vwvg-tage10-ausserhalb": {
+  "diesAdQuemISO": "2026-03-12",
+  "diesAdQuem": "12.03.2026",
+  "stillstandAktiv": true,
+  "verschoben": false,
+  "normen": [
+   "Art. 22a Abs. 1 VwVG",
+   "Art. 20 Abs. 3 VwVG"
+  ],
+  "annahmen": [
+   "Stillstand nach Art. 22a Abs. 1 VwVG berücksichtigt (Ostern ± 7 Tage · 15.7.–15.8. · 18.12.–2.1.); die Stillstandstage werden nicht mitgezählt.",
+   "Endverschiebung nach Art. 20 Abs. 3 VwVG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton BE)."
+  ],
+  "warnungen": [],
+  "ausnahmen": [
+   "die aufschiebende Wirkung und andere vorsorgliche Massnahmen",
+   "die öffentlichen Beschaffungen"
+  ]
+ },
+ "frist:bgg-tage10-weihnacht": {
+  "diesAdQuemISO": "2027-01-11",
+  "diesAdQuem": "11.01.2027",
+  "stillstandAktiv": true,
+  "verschoben": true,
+  "normen": [
+   "Art. 46 Abs. 1 BGG",
+   "Art. 45 Abs. 1 BGG"
+  ],
+  "annahmen": [
+   "Stillstand nach Art. 46 Abs. 1 BGG berücksichtigt (Ostern ± 7 Tage · 15.7.–15.8. · 18.12.–2.1.); die Stillstandstage werden nicht mitgezählt.",
+   "Endverschiebung nach Art. 45 Abs. 1 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton ZH)."
+  ],
+  "warnungen": [],
+  "ausnahmen": [
+   "die aufschiebende Wirkung und andere vorsorgliche Massnahmen",
+   "die Wechselbetreibung",
+   "Stimmrechtssachen",
+   "die internationale Rechtshilfe in Strafsachen und die internationale Amtshilfe in Steuersachen",
+   "die öffentlichen Beschaffungen"
+  ]
+ },
+ "frist:bgg-tage30-ostern": {
+  "diesAdQuemISO": "2026-05-11",
+  "diesAdQuem": "11.05.2026",
+  "stillstandAktiv": true,
+  "verschoben": true,
+  "normen": [
+   "Art. 46 Abs. 1 BGG",
+   "Art. 45 Abs. 1 BGG"
+  ],
+  "annahmen": [
+   "Stillstand nach Art. 46 Abs. 1 BGG berücksichtigt (Ostern ± 7 Tage · 15.7.–15.8. · 18.12.–2.1.); die Stillstandstage werden nicht mitgezählt.",
+   "Endverschiebung nach Art. 45 Abs. 1 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton TI)."
+  ],
+  "warnungen": [],
+  "ausnahmen": [
+   "die aufschiebende Wirkung und andere vorsorgliche Massnahmen",
+   "die Wechselbetreibung",
+   "Stimmrechtssachen",
+   "die internationale Rechtshilfe in Strafsachen und die internationale Amtshilfe in Steuersachen",
+   "die öffentlichen Beschaffungen"
+  ]
+ },
+ "frist:bgg-jahr1-keinstillstand": {
+  "diesAdQuemISO": "2027-07-20",
+  "diesAdQuem": "20.07.2027",
+  "stillstandAktiv": false,
+  "verschoben": false,
+  "normen": [
+   "Art. 46 Abs. 1 BGG",
+   "Art. 45 Abs. 1 BGG"
+  ],
+  "annahmen": [
+   "Endverschiebung nach Art. 45 Abs. 1 BGG: massgebend sind die Feiertage am Wohnsitz/Sitz der Partei (gewählter Kanton GE)."
+  ],
+  "warnungen": [
+   "Der Stillstand nach Art. 46 Abs. 1 BGG gilt nur für nach Tagen bestimmte Fristen – Jahresfristen stehen nicht still. Es wird nur der letzte Tag auf einen Werktag verschoben (Art. 45 Abs. 1 BGG)."
+  ],
+  "ausnahmen": [
+   "die aufschiebende Wirkung und andere vorsorgliche Massnahmen",
+   "die Wechselbetreibung",
+   "Stimmrechtssachen",
+   "die internationale Rechtshilfe in Strafsachen und die internationale Amtshilfe in Steuersachen",
+   "die öffentlichen Beschaffungen"
+  ]
+ },
  "vorl:fe-standard": {
   "ergebnis": {
    "dokument": {

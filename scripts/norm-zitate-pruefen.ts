@@ -32,6 +32,8 @@ const QUELLEN = [
   'src/lib/vorlagen/eheschutzgesuch.ts',
   // BGer-Rechtsweg (11.6.2026) — BGG- und BGerR-Zitate in Rechenweg/Hinweisen.
   'src/lib/bgerRechtsweg.ts',
+  // Verwaltungs-/BGG-Stillstand (13.6.2026) — Art. 22a/20 VwVG, Art. 46/45 BGG.
+  'src/lib/bggVwvgFristen.ts',
   // Vertrags-Kündigungsmaske 3 (KVG-Preset 11.6.2026) — VVG-/OR-/KVG-/KVV-
   // Zitate in Bausteinen und Gates.
   'src/lib/vorlagen/kuendigungAllgemein.ts',
@@ -39,6 +41,9 @@ const QUELLEN = [
 const CACHES: Record<string, string> = {
   ZPO: '/tmp/zpo.html', SchKG: '/tmp/schkg.html', StPO: '/tmp/stpo.html',
   BGG: '/tmp/bgg.html', StGB: '/tmp/stgb.html', ZGB: '/tmp/zgb.html', OR: '/tmp/or.html',
+  // VwVG (Verwaltungs-Stillstand 13.6.2026): Art. 22a/20 — Filestore-Anker
+  // «art_22_a» (artText baut den Unterstrich aus «22a» selbst).
+  VwVG: '/tmp/vwvg.html',
   // via scripts/fedlex-cache.sh gepinnt (6.6.2026)
   HRegV: '/tmp/hregv.html', StG: '/tmp/stg.html',
   // BGerR gepinnt 11.6.2026 (BGer-Rechtsweg, Abteilungs-Auskunft)
@@ -62,7 +67,7 @@ const artText = (gesetz: string, nr: string): string | null => {
 // Zitate einsammeln: «Art. 74 Abs. 2 lit. b BGG», «Art. 198 lit. e Ziff. 3 ZPO» …
 // BGerR vor BGG, damit die Alternation «Art. 33 BGerR» nicht an BGG scheitert.
 // KVV vor KVG analog (distinkte Tokens, Reihenfolge nur der Klarheit halber).
-const RX = /Art\.\s*(\d+[a-z]*)\s*(?:Abs\.\s*(\d+)\s*)?(?:lit\.\s*([a-z]+(?:bis|ter)?)\s*)?(?:Ziff\.\s*(\d+)\s*)?(ZPO|SchKG|StPO|BGerR|BGG|StGB|ZGB|OR|HRegV|StG|VVG|KVV|KVG)\b/g;
+const RX = /Art\.\s*(\d+[a-z]*)\s*(?:Abs\.\s*(\d+)\s*)?(?:lit\.\s*([a-z]+(?:bis|ter)?)\s*)?(?:Ziff\.\s*(\d+)\s*)?(ZPO|SchKG|StPO|BGerR|BGG|StGB|ZGB|OR|HRegV|StG|VwVG|VVG|KVV|KVG)\b/g;
 let total = 0, fehler = 0;
 const gesehen = new Set<string>();
 for (const q of QUELLEN) {
