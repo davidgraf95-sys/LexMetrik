@@ -92,8 +92,16 @@ function kartenProPfad(): Map<string, CatalogItem> {
  *  Geplante Karten (kein href), Redirect-Routen (/pro, /fachpersonen,
  *  /rechner, /rechner/fristenspiegel) und der Stub /rechner/:slug stehen nie
  *  im Katalog und sind damit automatisch ausgeschlossen. */
+/** Katalog-gestützte Routen: ein hash-loser Pfad je verfügbarer Karte.
+ *  Single Source (§5) für das Routen-Manifest (src/routesManifest.tsx) und
+ *  dessen Gating-Test — App.tsx leitet seine Karten-<Route>s daraus ab, statt
+ *  die Pfad-Existenz ein zweites Mal von Hand zu führen. */
+export function katalogRouten(): string[] {
+  return [...kartenProPfad().keys()];
+}
+
 export function prerenderRouten(): string[] {
-  return [...Object.keys(STATISCHE_SEITEN), ...kartenProPfad().keys()];
+  return [...Object.keys(STATISCHE_SEITEN), ...katalogRouten()];
 }
 
 /** Metadaten für einen Routen-Pfad; unbekannte Pfade → null (Aufrufer
