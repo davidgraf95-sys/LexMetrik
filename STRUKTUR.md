@@ -20,6 +20,42 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 13.6.2026 — V3 Vertrags-Grundtypen KOMPLETT + Verwaltungs-/BGG-Stillstand (GO David «weitermachen mit bau» + eingeschobener Auftrag)
+
+**FAHRPLAN-VORLAGEN-AUSBAU V3 ist mit 4/4 Grundtypen FERTIG** (je eigener
+Commit, je Gate GRÜN + Build prerendered):
+(1) **Auftrag/Dienstleistungsvertrag** `41dccc3` — Art. 394 ff. OR;
+Gegenstands-Module allgemein/Beratung/Treuhand/Inkasso, Vergütungsweiche;
+Kern-Offenlegung zwingendes Auflösungsrecht Art. 404. (2) **Werkvertrag**
+`704aa85` — Art. 363 ff. OR; Weiche beweglich/unbeweglich → Rügefrist
+(60 Tage zwingend, Art. 367 Abs. 1bis) und Verjährung (2/5 J, Art. 371);
+Festpreis/Aufwand; Brücke zum Gewährleistungs-Rechner; Rücktritt Art. 377.
+(3) **Geheimhaltungsvereinbarung/NDA** `5aa4b62` — Innominat (Art. 19 OR);
+einseitig/gegenseitig + Konventionalstrafe (Art. 160/161/163, richterliche
+Herabsetzung offengelegt). (4) **Konkubinatsvertrag** `d081391` — Art. 19
+OR / Art. 646/650/651 ZGB / Art. 530/548/549 OR; Module Wohnen/Kosten/
+Inventar/einfache Gesellschaft/Auflösung; kein gesetzliches Konkubinats-
+recht + Kindesbelange nach Gesetz offengelegt. Endstand: Zähler 47 gebaut/
+43 sichtbar, Golden 159, Routen 49.
+
+**EINGESCHOBENER AUFTRAG David («baue parallel den Verwaltungs-Stillstand
+Art. 22a VwVG und den BGG-Stillstand Art. 46 BGG im fristenrechner»):**
+neue Engine `lib/bggVwvgFristen.ts` (reine Kompositions-Schicht über
+fristenEngine) + zwei Ferien-Optionen im EinfacheFristForm. Beide Regimes
+teilen die drei Stillstandsperioden (Ostern ±7 · 15.7.–15.8. · 18.12.–2.1.)
+und den Ruhen-Mechanismus mit der ZPO (golden-bewiesen periodengleich);
+regime-treu erhalten (kein Kollaps, §4): Geltung NUR für nach Tagen
+bestimmte Fristen (Wochen/Monate/Jahre ruhen NICHT — anders als ZPO 145),
+Abs.-2-Ausnahmen je Regime verschieden (VwVG 2 / BGG 5), Werktag-
+verschiebung Art. 20 III VwVG / 45 I BGG. Empirie handgerechnet
+(10.9./11.1.2027/11.5.). Dossier `bibliothek/recherche/stillstand-vwvg-
+bgg.md` (§11). Alle V0-Anker am Filestore-Cache verifiziert (OR/ZGB
+20260101, VwVG 20220701, BGG 20260401; check:zitate 0 Befunde).
+
+OFFENE FOLGEPOSTEN: fachliche Abnahme der V3-Vorlagen + des Stillstand-
+Wortlauts durch David · V4 (Detailgrad-Schalter) · V5 ff. Ungepusht;
+Push/Deploy nur auf frisches Ja (§9).
+
 ## Session 13.6.2026 (Nacht) — V2-Rest KOMPLETT: Zession · Fristerstreckung · Nichtbekanntgabe (GO David «arbeite einfach»)
 
 **FAHRPLAN-VORLAGEN-AUSBAU V2 ist mit 4/4 Vorlagen FERTIG** (je eigener

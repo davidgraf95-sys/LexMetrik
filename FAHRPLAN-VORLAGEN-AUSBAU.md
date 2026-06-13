@@ -194,6 +194,32 @@ Nichtbekanntgabe» (Engine-Änderung, Entscheid David). NÄCHSTE PHASEN:
 V3 (Auftrag · Werkvertrag · NDA · Konkubinat) → V4 ff.; parallel V8 nach
 Priorisierung. Push/Deploy weiter gesperrt (Davids frisches Ja).
 
+## Abarbeitungs-Stand 13.6.2026 (Session «V3 + Verwaltungs-/BGG-Stillstand»)
+
+**V3 KOMPLETT (4/4 Grundtypen, je eigener Commit, Gate je GRÜN):**
+**Auftrag** `41dccc3` (Art. 394 ff. OR; Module Beratung/Treuhand/Inkasso;
+Auflösungsrecht Art. 404 offengelegt) · **Werkvertrag** `704aa85`
+(Art. 363 ff. OR; Weiche beweglich/unbeweglich → Rügefrist 60 T zwingend
+Art. 367 Abs. 1bis + Verjährung 2/5 J Art. 371; Brücke Gewährleistungs-
+Rechner; Rücktritt Art. 377) · **NDA** `5aa4b62` (Innominat Art. 19 OR;
+einseitig/gegenseitig + Konventionalstrafe Art. 160/161/163, Herabsetzung
+163 III offengelegt) · **Konkubinat** `d081391` (Art. 19 OR / 646/650/651
+ZGB / 530/548/549 OR; Module Wohnen/Kosten/Inventar/einfache Gesellschaft/
+Auflösung; kein gesetzliches Konkubinatsrecht + Kindesbelange nach Gesetz
+offengelegt). Alle V0-Anker am Cache verifiziert, check:zitate 0 Befunde.
+Endstand: 47 gebaut/43 sichtbar, Golden 159, Routen 49.
+
+**EINGESCHOBEN (Auftrag David im Chat):** Verwaltungs-Stillstand
+(Art. 22a VwVG) + BGG-Stillstand (Art. 46 BGG) im einfachen Fristenrechner
+— neue Engine `lib/bggVwvgFristen.ts`, Dossier `bibliothek/recherche/
+stillstand-vwvg-bgg.md`. Gilt NUR für nach Tagen bestimmte Fristen;
+Abs.-2-Ausnahmen je Regime; periodengleich zur ZPO (golden-bewiesen).
+
+NÄCHSTE PHASEN: V4 (Detailgrad-Schalter, Pilot Arbeits-/Mietvertrag) ·
+V5 (Form-Weichen Bürgschaft/Ehevertrag) · V6 (ABV) · V7 (Rechner-
+Erweiterungen) · V8 (Musterklagen-Masken). Fachliche Abnahmen der
+V3-Vorlagen + Stillstand-Wortlaut offen. Push/Deploy gesperrt (frisches Ja).
+
 ## Davids Entscheide vor Start (Entscheidvorlage)
 
 1. ~~P1-Listen (Dossier Abschn. 5) abnehmen/kürzen — insbesondere Reihenfolge
