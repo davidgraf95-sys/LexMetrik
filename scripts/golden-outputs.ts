@@ -38,6 +38,7 @@ import { faZusammenstellen, FA_DEFAULTS, pruefeFaGates } from '../src/lib/vorlag
 import { afZusammenstellen, AF_DEFAULTS, pruefeAfGates } from '../src/lib/vorlagen/auftrag';
 import { wvZusammenstellen, WV_DEFAULTS, pruefeWvGates } from '../src/lib/vorlagen/werkvertrag';
 import { ndaZusammenstellen, NDA_DEFAULTS, pruefeNdaGates } from '../src/lib/vorlagen/nda';
+import { kkZusammenstellen, KK_DEFAULTS, pruefeKkGates } from '../src/lib/vorlagen/konkubinat';
 import { feZusammenstellen, FE_DEFAULTS, pruefeFeGates } from '../src/lib/vorlagen/fristerstreckung';
 import { nbZusammenstellen, NB_DEFAULTS, pruefeNbGates, nbFruehesterGesuchstag } from '../src/lib/vorlagen/nichtbekanntgabe';
 import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
@@ -279,6 +280,17 @@ f('vorl:nda-einseitig-minimal', () => ndaZusammenstellen({ ...ndaBasis, gegensei
 f('vorl:nda-blanko', () => ndaZusammenstellen({ ...NDA_DEFAULTS }));
 f('vorl:nda-gates-strafe', () => pruefeNdaGates({ ...ndaBasis, konventionalstrafe: true, strafeCHF: '20000' }));
 f('vorl:nda-gates-einseitig', () => pruefeNdaGates({ ...ndaBasis, gegenseitig: false }));
+
+// Konkubinatsvertrag (Art. 19 OR / Art. 646 ff. ZGB; FAHRPLAN-VORLAGEN-AUSBAU V3, 13.6.2026)
+const kkBasis = {
+  ...KK_DEFAULTS, partner1Name: 'Anna Muster', partner1Adresse: 'X 1, 8000 Zürich',
+  partner2Name: 'Beat Beispiel', partner2Adresse: 'X 1, 8000 Zürich',
+  ort: 'Zürich', datum: '2026-06-13',
+};
+f('vorl:kk-haelftig-voll', () => kkZusammenstellen({ ...kkBasis, kostenschluessel: 'haelftig', wohnenAufnehmen: true, wohnBeschrieb: 'gemeinsame Mietwohnung, Hauptmieterin ist Partnerin 1', einfacheGesellschaft: true, einfacheGesellschaftZweck: 'Erwerb und Umbau der Ferienliegenschaft in Flims', kinderHinweis: true, vorsorgeHinweis: true }));
+f('vorl:kk-fix-minimal', () => kkZusammenstellen({ ...kkBasis, kostenschluessel: 'fix', fix1CHF: '1500', fix2CHF: '1200', wohnenAufnehmen: false, gemeinsamesKonto: false, inventarAufnehmen: false, einfacheGesellschaft: false, kinderHinweis: false, vorsorgeHinweis: false }));
+f('vorl:kk-blanko', () => kkZusammenstellen({ ...KK_DEFAULTS }));
+f('vorl:kk-gates-kinder', () => pruefeKkGates({ ...kkBasis, kinderHinweis: true }));
 
 // Verwaltungs-Stillstand (Art. 22a VwVG) + BGG-Stillstand (Art. 46 BGG) im
 // Fristenrechner (Auftrag David 13.6.2026). Tagesfristen ruhen über die

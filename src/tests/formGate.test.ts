@@ -20,6 +20,7 @@ import { FA_SCHEMA } from '../lib/vorlagen/forderungsabtretung';
 import { AF_SCHEMA } from '../lib/vorlagen/auftrag';
 import { WV_SCHEMA } from '../lib/vorlagen/werkvertrag';
 import { NDA_SCHEMA } from '../lib/vorlagen/nda';
+import { KK_SCHEMA } from '../lib/vorlagen/konkubinat';
 import { FE_SCHEMA } from '../lib/vorlagen/fristerstreckung';
 import { NB_SCHEMA } from '../lib/vorlagen/nichtbekanntgabe';
 import { SK_SCHEMA } from '../lib/vorlagen/scheidungsklage';
@@ -64,6 +65,7 @@ const EINZEL: [string, VorlageSchema][] = [
   ['auftrag', AF_SCHEMA],
   ['werkvertrag', WV_SCHEMA],
   ['nda', NDA_SCHEMA],
+  ['konkubinat', KK_SCHEMA],
   ['fristerstreckungsgesuch', FE_SCHEMA],
   ['nichtbekanntgabe-betreibung', NB_SCHEMA],
   ['scheidungsklage', SK_SCHEMA],

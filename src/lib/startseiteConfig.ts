@@ -1280,6 +1280,28 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['NDA', 'Geheimhaltung', 'Geheimhaltungsvereinbarung', 'Vertraulichkeit', 'Non-Disclosure', 'Konventionalstrafe', 'einseitig', 'gegenseitig', 'Art. 19', 'Art. 163'],
     icon: 'doc',
   },
+  konkubinat: {
+    id: 'konkubinat', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Familienrecht',
+    vertragRubrik: 'familie', formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Konkubinatsvertrag',
+    // P1-Vorlage Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V3);
+    // Art. 19 OR, Art. 646/650/651 ZGB, Art. 530/548/549 OR verifiziert (20260101).
+    description: 'Konkubinatsvertrag aus festen Bausteinen (Innominatvertrag, Art. 19 OR) mit Kostenschlüssel, Wohn- und Inventar-Regelung, optionaler einfacher Gesellschaft und Auflösungsfolgen – das fehlende gesetzliche Konkubinatsrecht und die Kindesbelange nach Gesetz werden offengelegt.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 19 OR', url: fedlexUrl('OR', '19'), verified: false },
+      { label: 'Art. 646 ZGB', url: fedlexUrl('ZGB', '646'), verified: false },
+      { label: 'Art. 651 ZGB', url: fedlexUrl('ZGB', '651'), verified: false },
+    ],
+    href: '/vorlagen/konkubinat',
+    schemaId: 'konkubinat',
+    formvorschrift: 'Formfrei – beidseitig zu unterzeichnen (Beweis)',
+    output: ['pdf', 'docx'],
+    related: ['eigenhaendiges-testament', 'vorsorgeauftrag'],
+    keywords: ['Konkubinat', 'Konkubinatsvertrag', 'Lebensgemeinschaft', 'Partnerschaft', 'Zusammenleben', 'Miteigentum', 'Trennung', 'Art. 19', 'Art. 646'],
+    icon: 'doc',
+  },
   darlehensvertrag: {
     id: 'darlehensvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
     vertragRubrik: 'darlehen_sicherheiten',

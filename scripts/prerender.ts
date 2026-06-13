@@ -28,8 +28,9 @@ import { renderRoute } from '../src/entry-server';
 // +/vorlagen/scheidungsbegehren-gemeinsam, +/vorlagen/eheschutzgesuch.
 // 13.6.2026 (V2-Rest): +/vorlagen/forderungsabtretung,
 // +/vorlagen/fristerstreckung, +/vorlagen/nichtbekanntgabe-betreibung.
-// 13.6.2026 (V3): +/vorlagen/auftrag, +/vorlagen/werkvertrag, +/vorlagen/nda.
-const ERWARTETE_ROUTEN = 48;
+// 13.6.2026 (V3): +/vorlagen/auftrag, +/vorlagen/werkvertrag, +/vorlagen/nda,
+// +/vorlagen/konkubinat.
+const ERWARTETE_ROUTEN = 49;
 const NOT_FOUND_MARKER = '404 · Nicht gefunden'; // src/pages/NotFound.tsx
 // Stub-Tor (Bug-Check 11.6.2026): /rechner/:slug fängt Katalog-hrefs ohne
 // dedizierte Route VOR der 404-Seite ab — eine «in Vorbereitung»-Stub-Seite

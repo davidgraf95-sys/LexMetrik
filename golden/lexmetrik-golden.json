@@ -10871,6 +10871,367 @@
    "PERSONENBEZOGENE DATEN: Werden vertrauliche Informationen mit Personendaten ausgetauscht, bleiben die datenschutzrechtlichen Pflichten zusätzlich vorbehalten."
   ]
  },
+ "vorl:kk-haelftig-voll": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Konkubinatsvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "KK01_parteien",
+      "text": "zwischen\n\nAnna Muster\nX 1, 8000 Zürich\n(Partnerin/Partner 1)\n\nund\n\nBeat Beispiel\nX 1, 8000 Zürich\n(Partnerin/Partner 2)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "KK02_grundsatz",
+      "ueberschrift": "Grundsatz",
+      "text": "1. Die Parteien führen eine nichteheliche Lebensgemeinschaft (Konkubinat). Sie halten fest, dass zwischen ihnen kein gesetzliches Unterhalts-, Beistands- oder Güterrecht besteht; dieser Vertrag regelt ihr Zusammenleben und die Folgen einer Trennung im Rahmen der Vertragsfreiheit (Art. 19 OR)."
+     },
+     {
+      "bausteinId": "KK03_wohnen",
+      "ueberschrift": "Wohnen",
+      "text": "2. Für die gemeinsame Wohnsituation gilt: gemeinsame Mietwohnung, Hauptmieterin ist Partnerin 1. Zieht eine Partei aus, verständigen sich die Parteien rechtzeitig über die Weiterführung oder Auflösung des Mietverhältnisses bzw. die Nutzung der Wohnung."
+     },
+     {
+      "bausteinId": "KK04_kosten",
+      "ueberschrift": "Kosten des Zusammenlebens",
+      "text": "3. Die Kosten des gemeinsamen Haushalts und der gemeinsamen Lebenshaltung tragen die Parteien je zur Hälfte. Für die gemeinsamen Kosten führen die Parteien ein gemeinsames Konto, das sie nach dem vorstehenden Schlüssel speisen."
+     },
+     {
+      "bausteinId": "KK05_vermoegen",
+      "ueberschrift": "Vermögen und Inventar",
+      "text": "4. Jede Partei behält das Alleineigentum an den von ihr eingebrachten und allein angeschafften Sachen. Gemeinsam angeschaffte Sachen stehen mangels anderer Abrede im Miteigentum zu gleichen Teilen (Art. 646 ZGB). Die Zuordnung der wesentlichen Gegenstände hält eine als Beilage unterzeichnete Inventarliste fest."
+     },
+     {
+      "bausteinId": "KK06_gesellschaft",
+      "ueberschrift": "Gemeinsamer Zweck",
+      "text": "5. Verfolgen die Parteien einen gemeinsamen Zweck mit gemeinsamen Mitteln (Erwerb und Umbau der Ferienliegenschaft in Flims), bilden sie insoweit eine einfache Gesellschaft (Art. 530 OR). Bei deren Auflösung erfolgt die Auseinandersetzung nach Art. 548 f. OR: Rückerstattung der Vermögensbeiträge und Verteilung eines Überschusses bzw. eines Fehlbetrags je zur Hälfte, soweit nichts anderes vereinbart ist."
+     },
+     {
+      "bausteinId": "KK07_kinder",
+      "ueberschrift": "Gemeinsame Kinder",
+      "text": "6. Die Parteien nehmen zur Kenntnis, dass sich die elterliche Sorge und der Unterhalt gemeinsamer Kinder zwingend nach dem Gesetz (ZGB) richten und nicht zulasten des Kindes durch diesen Vertrag geregelt werden können. Eine Unterhaltsvereinbarung bedarf der Genehmigung der Kindesschutzbehörde."
+     },
+     {
+      "bausteinId": "KK08_aufloesung",
+      "ueberschrift": "Auflösung des Konkubinats",
+      "text": "7. Bei Auflösung der Lebensgemeinschaft nimmt jede Partei ihr Alleineigentum zurück. Miteigentum wird aufgehoben; können sich die Parteien über die Art nicht einigen, gelten die gesetzlichen Teilungsregeln (Art. 650 f. ZGB: körperliche Teilung, Verkauf oder Übernahme gegen Auskauf). Ein gemeinsames Konto wird saldiert und der Saldo nach dem vereinbarten Kostenschlüssel ausgeglichen. Gegenseitige Ansprüche aus der Zeit des Zusammenlebens sind damit, vorbehältlich abweichender schriftlicher Abrede, abgegolten."
+     },
+     {
+      "bausteinId": "KK09_vorsorge",
+      "ueberschrift": "Vorsorge und Erbrecht",
+      "text": "8. Den Parteien ist bewusst, dass zwischen ihnen kein gesetzliches Erbrecht besteht. Wer den Partner absichern will, regelt dies gesondert durch Begünstigung (Säule 3a, Pensionskasse) und letztwillige Verfügung."
+     },
+     {
+      "bausteinId": "KK10_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt der Vertrag im Übrigen gültig. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "KK11_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nPartnerin/Partner 1:\n\n___________________________\nAnna Muster\n\n\nPartnerin/Partner 2:\n\n___________________________\nBeat Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Konkubinatsvertrag ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Es besteht kein gesetzliches Konkubinatsrecht; Belange gemeinsamer Kinder richten sich nach dem Gesetz. Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19 OR, Art. 646/650/651 ZGB, Art. 530/548/549 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "KK01_parteien",
+    "KK02_grundsatz",
+    "KK03_wohnen",
+    "KK04_kosten",
+    "KK05_vermoegen",
+    "KK06_gesellschaft",
+    "KK07_kinder",
+    "KK08_aufloesung",
+    "KK09_vorsorge",
+    "KK10_schluss",
+    "KK11_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "KK01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK02_grundsatz",
+     "begruendung": "Klarstellung der Rechtsnatur (kein gesetzliches Konkubinatsrecht) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK03_wohnen",
+     "begruendung": "Wohn-Regelung (Mietverhältnis/Nutzung) – nur wenn aufgenommen.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK04_kosten",
+     "begruendung": "Verteilung der Lebenshaltungskosten (hälftig / nach Einkommen / fix) und gemeinsames Konto – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK05_vermoegen",
+     "begruendung": "Zuordnung von Allein- und Miteigentum (Art. 646 ZGB) und Inventarverweis – immer enthalten.",
+     "norm": "Art. 646 ZGB"
+    },
+    {
+     "bausteinId": "KK06_gesellschaft",
+     "begruendung": "Einfache Gesellschaft für gemeinsame Zwecke (Art. 530/548/549 OR) – nur wenn vereinbart.",
+     "norm": "Art. 530 OR"
+    },
+    {
+     "bausteinId": "KK07_kinder",
+     "begruendung": "Deklaratorischer Hinweis auf die zwingende gesetzliche Ordnung des Kindesrechts – nur wenn gewählt.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK08_aufloesung",
+     "begruendung": "Auflösungsfolgen: Rücknahme Alleineigentum, Aufhebung Miteigentum (Art. 650 f. ZGB), Kontosaldo – immer enthalten.",
+     "norm": "Art. 651 ZGB"
+    },
+    {
+     "bausteinId": "KK09_vorsorge",
+     "begruendung": "Hinweis auf fehlendes gesetzliches Erbrecht und separate Vorsorge-/Begünstigungsregelung – nur wenn gewählt.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK10_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung, Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK11_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
+ },
+ "vorl:kk-fix-minimal": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Konkubinatsvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "KK01_parteien",
+      "text": "zwischen\n\nAnna Muster\nX 1, 8000 Zürich\n(Partnerin/Partner 1)\n\nund\n\nBeat Beispiel\nX 1, 8000 Zürich\n(Partnerin/Partner 2)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "KK02_grundsatz",
+      "ueberschrift": "Grundsatz",
+      "text": "1. Die Parteien führen eine nichteheliche Lebensgemeinschaft (Konkubinat). Sie halten fest, dass zwischen ihnen kein gesetzliches Unterhalts-, Beistands- oder Güterrecht besteht; dieser Vertrag regelt ihr Zusammenleben und die Folgen einer Trennung im Rahmen der Vertragsfreiheit (Art. 19 OR)."
+     },
+     {
+      "bausteinId": "KK04_kosten",
+      "ueberschrift": "Kosten des Zusammenlebens",
+      "text": "2. Die Parteien tragen an die Kosten des gemeinsamen Haushalts feste monatliche Beiträge: Partnerin/Partner 1 CHF 1'500.00, Partnerin/Partner 2 CHF 1'200.00."
+     },
+     {
+      "bausteinId": "KK05_vermoegen",
+      "ueberschrift": "Vermögen und Inventar",
+      "text": "3. Jede Partei behält das Alleineigentum an den von ihr eingebrachten und allein angeschafften Sachen. Gemeinsam angeschaffte Sachen stehen mangels anderer Abrede im Miteigentum zu gleichen Teilen (Art. 646 ZGB)."
+     },
+     {
+      "bausteinId": "KK08_aufloesung",
+      "ueberschrift": "Auflösung des Konkubinats",
+      "text": "4. Bei Auflösung der Lebensgemeinschaft nimmt jede Partei ihr Alleineigentum zurück. Miteigentum wird aufgehoben; können sich die Parteien über die Art nicht einigen, gelten die gesetzlichen Teilungsregeln (Art. 650 f. ZGB: körperliche Teilung, Verkauf oder Übernahme gegen Auskauf). Ein gemeinsames Konto wird saldiert und der Saldo nach dem vereinbarten Kostenschlüssel ausgeglichen. Gegenseitige Ansprüche aus der Zeit des Zusammenlebens sind damit, vorbehältlich abweichender schriftlicher Abrede, abgegolten."
+     },
+     {
+      "bausteinId": "KK10_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "5. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt der Vertrag im Übrigen gültig. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "KK11_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nPartnerin/Partner 1:\n\n___________________________\nAnna Muster\n\n\nPartnerin/Partner 2:\n\n___________________________\nBeat Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Konkubinatsvertrag ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Es besteht kein gesetzliches Konkubinatsrecht; Belange gemeinsamer Kinder richten sich nach dem Gesetz. Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19 OR, Art. 646/650/651 ZGB, Art. 530/548/549 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "KK01_parteien",
+    "KK02_grundsatz",
+    "KK04_kosten",
+    "KK05_vermoegen",
+    "KK08_aufloesung",
+    "KK10_schluss",
+    "KK11_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "KK01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK02_grundsatz",
+     "begruendung": "Klarstellung der Rechtsnatur (kein gesetzliches Konkubinatsrecht) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK04_kosten",
+     "begruendung": "Verteilung der Lebenshaltungskosten (hälftig / nach Einkommen / fix) und gemeinsames Konto – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK05_vermoegen",
+     "begruendung": "Zuordnung von Allein- und Miteigentum (Art. 646 ZGB) und Inventarverweis – immer enthalten.",
+     "norm": "Art. 646 ZGB"
+    },
+    {
+     "bausteinId": "KK08_aufloesung",
+     "begruendung": "Auflösungsfolgen: Rücknahme Alleineigentum, Aufhebung Miteigentum (Art. 650 f. ZGB), Kontosaldo – immer enthalten.",
+     "norm": "Art. 651 ZGB"
+    },
+    {
+     "bausteinId": "KK10_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung, Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK11_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
+ },
+ "vorl:kk-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Konkubinatsvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "KK01_parteien",
+      "text": "zwischen\n\n________\n(Partnerin/Partner 1)\n\nund\n\n________\n(Partnerin/Partner 2)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "KK02_grundsatz",
+      "ueberschrift": "Grundsatz",
+      "text": "1. Die Parteien führen eine nichteheliche Lebensgemeinschaft (Konkubinat). Sie halten fest, dass zwischen ihnen kein gesetzliches Unterhalts-, Beistands- oder Güterrecht besteht; dieser Vertrag regelt ihr Zusammenleben und die Folgen einer Trennung im Rahmen der Vertragsfreiheit (Art. 19 OR)."
+     },
+     {
+      "bausteinId": "KK03_wohnen",
+      "ueberschrift": "Wohnen",
+      "text": "2. Für die gemeinsame Wohnsituation gilt: ________. Zieht eine Partei aus, verständigen sich die Parteien rechtzeitig über die Weiterführung oder Auflösung des Mietverhältnisses bzw. die Nutzung der Wohnung."
+     },
+     {
+      "bausteinId": "KK04_kosten",
+      "ueberschrift": "Kosten des Zusammenlebens",
+      "text": "3. Die Kosten des gemeinsamen Haushalts und der gemeinsamen Lebenshaltung tragen die Parteien je zur Hälfte. Für die gemeinsamen Kosten führen die Parteien ein gemeinsames Konto, das sie nach dem vorstehenden Schlüssel speisen."
+     },
+     {
+      "bausteinId": "KK05_vermoegen",
+      "ueberschrift": "Vermögen und Inventar",
+      "text": "4. Jede Partei behält das Alleineigentum an den von ihr eingebrachten und allein angeschafften Sachen. Gemeinsam angeschaffte Sachen stehen mangels anderer Abrede im Miteigentum zu gleichen Teilen (Art. 646 ZGB). Die Zuordnung der wesentlichen Gegenstände hält eine als Beilage unterzeichnete Inventarliste fest."
+     },
+     {
+      "bausteinId": "KK08_aufloesung",
+      "ueberschrift": "Auflösung des Konkubinats",
+      "text": "5. Bei Auflösung der Lebensgemeinschaft nimmt jede Partei ihr Alleineigentum zurück. Miteigentum wird aufgehoben; können sich die Parteien über die Art nicht einigen, gelten die gesetzlichen Teilungsregeln (Art. 650 f. ZGB: körperliche Teilung, Verkauf oder Übernahme gegen Auskauf). Ein gemeinsames Konto wird saldiert und der Saldo nach dem vereinbarten Kostenschlüssel ausgeglichen. Gegenseitige Ansprüche aus der Zeit des Zusammenlebens sind damit, vorbehältlich abweichender schriftlicher Abrede, abgegolten."
+     },
+     {
+      "bausteinId": "KK09_vorsorge",
+      "ueberschrift": "Vorsorge und Erbrecht",
+      "text": "6. Den Parteien ist bewusst, dass zwischen ihnen kein gesetzliches Erbrecht besteht. Wer den Partner absichern will, regelt dies gesondert durch Begünstigung (Säule 3a, Pensionskasse) und letztwillige Verfügung."
+     },
+     {
+      "bausteinId": "KK10_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "7. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt der Vertrag im Übrigen gültig. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "KK11_unterschriften",
+      "text": "________, ________\n\n\nPartnerin/Partner 1:\n\n___________________________\n________\n\n\nPartnerin/Partner 2:\n\n___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Der Konkubinatsvertrag ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Es besteht kein gesetzliches Konkubinatsrecht; Belange gemeinsamer Kinder richten sich nach dem Gesetz. Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19 OR, Art. 646/650/651 ZGB, Art. 530/548/549 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "KK01_parteien",
+    "KK02_grundsatz",
+    "KK03_wohnen",
+    "KK04_kosten",
+    "KK05_vermoegen",
+    "KK08_aufloesung",
+    "KK09_vorsorge",
+    "KK10_schluss",
+    "KK11_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "KK01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK02_grundsatz",
+     "begruendung": "Klarstellung der Rechtsnatur (kein gesetzliches Konkubinatsrecht) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK03_wohnen",
+     "begruendung": "Wohn-Regelung (Mietverhältnis/Nutzung) – nur wenn aufgenommen.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK04_kosten",
+     "begruendung": "Verteilung der Lebenshaltungskosten (hälftig / nach Einkommen / fix) und gemeinsames Konto – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK05_vermoegen",
+     "begruendung": "Zuordnung von Allein- und Miteigentum (Art. 646 ZGB) und Inventarverweis – immer enthalten.",
+     "norm": "Art. 646 ZGB"
+    },
+    {
+     "bausteinId": "KK08_aufloesung",
+     "begruendung": "Auflösungsfolgen: Rücknahme Alleineigentum, Aufhebung Miteigentum (Art. 650 f. ZGB), Kontosaldo – immer enthalten.",
+     "norm": "Art. 651 ZGB"
+    },
+    {
+     "bausteinId": "KK09_vorsorge",
+     "begruendung": "Hinweis auf fehlendes gesetzliches Erbrecht und separate Vorsorge-/Begünstigungsregelung – nur wenn gewählt.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK10_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung, Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "KK11_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
+ },
+ "vorl:kk-gates-kinder": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "KEIN GESETZLICHES KONKUBINATSRECHT: Zwischen den Partnern bestehen von Gesetzes wegen weder Unterhalts- noch Beistandspflichten, keine güterrechtlichen Wirkungen und kein gesetzliches Erbrecht. Dieser Vertrag (Art. 19 OR) regelt nur, was er ausdrücklich bestimmt.",
+   "MITEIGENTUM: Gemeinsam angeschaffte Sachen stehen mangels anderer Abrede im Miteigentum zu gleichen Teilen (Art. 646 ZGB); bei Auflösung kann jeder Partner die Aufhebung verlangen (Art. 650/651 ZGB). Alleineigentum jeder Partei bleibt unberührt – eine Inventarliste schafft Klarheit.",
+   "GEMEINSAME KINDER: Elterliche Sorge und Kindesunterhalt richten sich zwingend nach dem Gesetz (ZGB) und nicht nach diesem Vertrag; sie können nicht zulasten des Kindes geregelt werden.",
+   "VORSORGE UND ERBRECHT: Da kein gesetzliches Erbrecht besteht, sind Begünstigungen (Säule 3a, Pensionskasse) und eine letztwillige Verfügung separat zu regeln, wenn der Partner abgesichert werden soll."
+  ]
+ },
  "frist:vwvg-tage30-sommer": {
   "diesAdQuemISO": "2026-09-10",
   "diesAdQuem": "10.09.2026",

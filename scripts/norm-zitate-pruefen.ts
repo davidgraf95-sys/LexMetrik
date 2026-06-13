@@ -29,6 +29,9 @@ const QUELLEN = [
   'src/lib/vorlagen/werkvertrag.ts',
   // NDA/Geheimhaltung (V3, 13.6.2026) — Art. 19/160/161/163 OR.
   'src/lib/vorlagen/nda.ts',
+  // Konkubinatsvertrag (V3, 13.6.2026) — Art. 19 OR, Art. 646/650/651 ZGB,
+  // Art. 530/548/549 OR.
+  'src/lib/vorlagen/konkubinat.ts',
   'src/lib/vorlagen/fristerstreckung.ts',
   'src/lib/vorlagen/nichtbekanntgabe.ts',
   'src/lib/vorlagen/scheidungsklage.ts',
