@@ -41,6 +41,7 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
     const { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } = await import('../lib/vorlagen/mietvertrag');
     const { afZusammenstellen, AF_DEFAULTS, pruefeAfGates } = await import('../lib/vorlagen/auftrag');
     const { wvZusammenstellen, WV_DEFAULTS, pruefeWvGates } = await import('../lib/vorlagen/werkvertrag');
+    const { ndaZusammenstellen, NDA_DEFAULTS, pruefeNdaGates } = await import('../lib/vorlagen/nda');
 
     const faelle: [string, unknown][] = [
       ['testament', testamentZusammenstellen({ ...TESTAMENT_DEFAULTS, vorname: 'A', nachname: 'B', geburtsdatum: '1960-01-01', heimatort: 'Basel', adresse: 'X 1', erben: [{ name: 'E', angaben: 'g', quoteProzent: 100 }], vermaechtnisse: [], datumErrichtung: '2026-06-05' }).dokument],
@@ -59,6 +60,10 @@ describe('Formulierungskonvention – Linter über die echte Textausgabe', () =>
       // Verjährung) + Aufwandpreis + Anzahlung + Abnahmeprotokoll.
       ['wv', wvZusammenstellen({ ...WV_DEFAULTS, bestellerName: 'B', unternehmerName: 'U', werkBeschrieb: 'Küche', werkArt: 'unbeweglich', preis: 'aufwand', ansatzCHF: '120', ansatzEinheit: 'pro Stunde', anzahlung: true, anzahlungCHF: '4000', ablieferung: '2026-09-01', ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
       ['wv-gates', pruefeWvGates({ ...WV_DEFAULTS, werkArt: 'unbeweglich' })],
+      // NDA (V3, 13.6.2026): gegenseitig + Konventionalstrafe + alle optionalen
+      // Bausteine; Gates beider Richtungen.
+      ['nda', ndaZusammenstellen({ ...NDA_DEFAULTS, parteiAName: 'A', parteiBName: 'B', zweck: 'Zusammenarbeit', infoBeschrieb: 'Quellcode', gegenseitig: true, konventionalstrafe: true, strafeCHF: '20000', ort: 'Zürich', datum: '2026-06-15' }).ergebnis.dokument],
+      ['nda-gates', pruefeNdaGates({ ...NDA_DEFAULTS, gegenseitig: false, konventionalstrafe: true, strafeCHF: '20000' })],
     ];
 
     // BGer-Rechtsweg (11.6.2026): alle vier Wege + Sonderkonstellationen

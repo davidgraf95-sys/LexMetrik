@@ -10513,6 +10513,364 @@
    "RÜCKTRITTSRECHT DES BESTELLERS: Solange das Werk unvollendet ist, kann der Besteller jederzeit vom Vertrag zurücktreten, schuldet dann aber die Vergütung der geleisteten Arbeit und die volle Schadloshaltung des Unternehmers (Art. 377 OR)."
   ]
  },
+ "vorl:nda-gegenseitig-strafe": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Geheimhaltungsvereinbarung (NDA)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "NDA01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(Partei A)\n\nund\n\nBeispiel GmbH\nY 2, 8000 Zürich\n(Partei B)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "NDA02_zweck",
+      "ueberschrift": "Zweck",
+      "text": "1. Die Parteien tauschen im Hinblick auf den folgenden Zweck vertrauliche Informationen aus: Prüfung einer möglichen Zusammenarbeit im Bereich Softwareentwicklung. Diese Vereinbarung regelt den Umgang mit diesen Informationen."
+     },
+     {
+      "bausteinId": "NDA03_begriff",
+      "ueberschrift": "Vertrauliche Informationen",
+      "text": "2. Als vertraulich gelten alle nicht offenkundigen Informationen, die eine Partei der anderen im Zusammenhang mit dem Zweck schriftlich, mündlich, elektronisch oder auf andere Weise zugänglich macht. Dazu gehören insbesondere: Quellcode, Kundenlisten. Nicht vertraulich sind Informationen, die allgemein bekannt sind oder ohne Verletzung dieser Vereinbarung werden, die der empfangenden Partei rechtmässig und ohne Geheimhaltungspflicht von Dritten zugänglich gemacht werden oder die sie nachweislich unabhängig selbst erarbeitet hat."
+     },
+     {
+      "bausteinId": "NDA04_pflicht",
+      "ueberschrift": "Geheimhaltungspflicht",
+      "text": "3. Jede Partei behandelt die vertraulichen Informationen der anderen Partei streng vertraulich und gibt sie nicht an Dritte weiter. Die Informationen dürfen ausschliesslich für den genannten Zweck verwendet und nur Personen zugänglich gemacht werden, die sie für diesen Zweck kennen müssen und ihrerseits zur Vertraulichkeit verpflichtet sind."
+     },
+     {
+      "bausteinId": "NDA05_dauer",
+      "ueberschrift": "Dauer",
+      "text": "4. Die Geheimhaltungspflicht gilt ab Unterzeichnung und besteht während 3 Jahren nach Beendigung der Zusammenarbeit oder des mit dem Zweck verfolgten Vorhabens fort."
+     },
+     {
+      "bausteinId": "NDA06_rueckgabe",
+      "ueberschrift": "Rückgabe und Vernichtung",
+      "text": "5. Auf Verlangen der offenlegenden Partei sowie nach Wegfall des Zwecks gibt die empfangende Partei alle überlassenen Unterlagen und Datenträger zurück oder vernichtet sie samt Kopien und bestätigt dies auf Wunsch schriftlich; gesetzliche Aufbewahrungspflichten bleiben vorbehalten."
+     },
+     {
+      "bausteinId": "NDA07_strafe",
+      "ueberschrift": "Konventionalstrafe",
+      "text": "6. Bei jeder Verletzung der Geheimhaltungspflicht schuldet die verletzende Partei eine Konventionalstrafe von CHF 20'000.00. Die Strafe ist auch ohne Schadensnachweis geschuldet (Art. 161 Abs. 1 OR); die Bezahlung befreit nicht von der Geheimhaltungspflicht. Ausdrücklich vorbehalten bleiben die weitere Unterlassung und der Ersatz eines die Strafe übersteigenden Schadens (Art. 160 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "NDA08_keinrecht",
+      "ueberschrift": "Keine Rechtsübertragung",
+      "text": "7. Diese Vereinbarung begründet keine Pflicht zur Offenlegung von Informationen und überträgt keine Rechte an den vertraulichen Informationen, insbesondere keine Lizenzen oder Immaterialgüterrechte."
+     },
+     {
+      "bausteinId": "NDA09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "8. Änderungen und Ergänzungen dieser Vereinbarung bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt die Vereinbarung im Übrigen gültig; an die Stelle der unwirksamen Bestimmung tritt eine gültige, die ihrem Zweck möglichst nahekommt. Diese Vereinbarung wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "NDA10_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\nPartei A:\n\n___________________________\nMuster AG\n\n\nPartei B:\n\n___________________________\nBeispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Die Geheimhaltungsvereinbarung ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Eine übermässige Konventionalstrafe setzt der Richter herab (Art. 163 Abs. 3 OR). Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19/160/161/163 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "NDA01_parteien",
+    "NDA02_zweck",
+    "NDA03_begriff",
+    "NDA04_pflicht",
+    "NDA05_dauer",
+    "NDA06_rueckgabe",
+    "NDA07_strafe",
+    "NDA08_keinrecht",
+    "NDA09_schluss",
+    "NDA10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "NDA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Rollen je nach einseitig/gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA02_zweck",
+     "begruendung": "Zweck der Offenlegung – bestimmt den zulässigen Verwendungsrahmen.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA03_begriff",
+     "begruendung": "Definition der vertraulichen Informationen samt üblicher Ausnahmen – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA04_pflicht",
+     "begruendung": "Kern: Geheimhaltungs- und Zweckbindungspflicht (einseitig oder gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA05_dauer",
+     "begruendung": "Nachwirkungsfrist der Geheimhaltung – nur wenn vereinbart.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA06_rueckgabe",
+     "begruendung": "Rückgabe-/Vernichtungspflicht – nur wenn vereinbart.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA07_strafe",
+     "begruendung": "Konventionalstrafe mit ausdrücklicher Kumulation (Art. 160 Abs. 1 OR) und Schadensunabhängigkeit (Art. 161 Abs. 1 OR); die richterliche Herabsetzung übermässiger Strafen (Art. 163 Abs. 3 OR) ist offengelegt.",
+     "norm": "Art. 160 Abs. 1 OR",
+     "hinweis": "Eine übermässig hohe Konventionalstrafe setzt der Richter nach Art. 163 Abs. 3 OR von Amtes wegen herab."
+    },
+    {
+     "bausteinId": "NDA08_keinrecht",
+     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA09_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung und Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
+ },
+ "vorl:nda-einseitig-minimal": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Geheimhaltungsvereinbarung (NDA)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "NDA01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(offenlegende Partei)\n\nund\n\nBeispiel GmbH\nY 2, 8000 Zürich\n(empfangende Partei)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "NDA02_zweck",
+      "ueberschrift": "Zweck",
+      "text": "1. Die Parteien tauschen im Hinblick auf den folgenden Zweck vertrauliche Informationen aus: Prüfung einer möglichen Zusammenarbeit im Bereich Softwareentwicklung. Diese Vereinbarung regelt den Umgang mit diesen Informationen."
+     },
+     {
+      "bausteinId": "NDA03_begriff",
+      "ueberschrift": "Vertrauliche Informationen",
+      "text": "2. Als vertraulich gelten alle nicht offenkundigen Informationen, die eine Partei der anderen im Zusammenhang mit dem Zweck schriftlich, mündlich, elektronisch oder auf andere Weise zugänglich macht. Nicht vertraulich sind Informationen, die allgemein bekannt sind oder ohne Verletzung dieser Vereinbarung werden, die der empfangenden Partei rechtmässig und ohne Geheimhaltungspflicht von Dritten zugänglich gemacht werden oder die sie nachweislich unabhängig selbst erarbeitet hat."
+     },
+     {
+      "bausteinId": "NDA04_pflicht",
+      "ueberschrift": "Geheimhaltungspflicht",
+      "text": "3. Die empfangende Partei behandelt die vertraulichen Informationen der offenlegenden Partei streng vertraulich und gibt sie nicht an Dritte weiter. Die Informationen dürfen ausschliesslich für den genannten Zweck verwendet und nur Personen zugänglich gemacht werden, die sie für diesen Zweck kennen müssen und ihrerseits zur Vertraulichkeit verpflichtet sind."
+     },
+     {
+      "bausteinId": "NDA08_keinrecht",
+      "ueberschrift": "Keine Rechtsübertragung",
+      "text": "4. Diese Vereinbarung begründet keine Pflicht zur Offenlegung von Informationen und überträgt keine Rechte an den vertraulichen Informationen, insbesondere keine Lizenzen oder Immaterialgüterrechte."
+     },
+     {
+      "bausteinId": "NDA09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "5. Änderungen und Ergänzungen dieser Vereinbarung bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt die Vereinbarung im Übrigen gültig; an die Stelle der unwirksamen Bestimmung tritt eine gültige, die ihrem Zweck möglichst nahekommt. Diese Vereinbarung wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "NDA10_unterschriften",
+      "text": "Zürich, 13.06.2026\n\n\noffenlegende Partei:\n\n___________________________\nMuster AG\n\n\nempfangende Partei:\n\n___________________________\nBeispiel GmbH",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Die Geheimhaltungsvereinbarung ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Eine übermässige Konventionalstrafe setzt der Richter herab (Art. 163 Abs. 3 OR). Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19/160/161/163 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "NDA01_parteien",
+    "NDA02_zweck",
+    "NDA03_begriff",
+    "NDA04_pflicht",
+    "NDA08_keinrecht",
+    "NDA09_schluss",
+    "NDA10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "NDA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Rollen je nach einseitig/gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA02_zweck",
+     "begruendung": "Zweck der Offenlegung – bestimmt den zulässigen Verwendungsrahmen.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA03_begriff",
+     "begruendung": "Definition der vertraulichen Informationen samt üblicher Ausnahmen – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA04_pflicht",
+     "begruendung": "Kern: Geheimhaltungs- und Zweckbindungspflicht (einseitig oder gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA08_keinrecht",
+     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA09_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung und Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
+ },
+ "vorl:nda-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Geheimhaltungsvereinbarung (NDA)",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "NDA01_parteien",
+      "text": "zwischen\n\n________\n(Partei A)\n\nund\n\n________\n(Partei B)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "NDA02_zweck",
+      "ueberschrift": "Zweck",
+      "text": "1. Die Parteien tauschen im Hinblick auf den folgenden Zweck vertrauliche Informationen aus: ________. Diese Vereinbarung regelt den Umgang mit diesen Informationen."
+     },
+     {
+      "bausteinId": "NDA03_begriff",
+      "ueberschrift": "Vertrauliche Informationen",
+      "text": "2. Als vertraulich gelten alle nicht offenkundigen Informationen, die eine Partei der anderen im Zusammenhang mit dem Zweck schriftlich, mündlich, elektronisch oder auf andere Weise zugänglich macht. Nicht vertraulich sind Informationen, die allgemein bekannt sind oder ohne Verletzung dieser Vereinbarung werden, die der empfangenden Partei rechtmässig und ohne Geheimhaltungspflicht von Dritten zugänglich gemacht werden oder die sie nachweislich unabhängig selbst erarbeitet hat."
+     },
+     {
+      "bausteinId": "NDA04_pflicht",
+      "ueberschrift": "Geheimhaltungspflicht",
+      "text": "3. Jede Partei behandelt die vertraulichen Informationen der anderen Partei streng vertraulich und gibt sie nicht an Dritte weiter. Die Informationen dürfen ausschliesslich für den genannten Zweck verwendet und nur Personen zugänglich gemacht werden, die sie für diesen Zweck kennen müssen und ihrerseits zur Vertraulichkeit verpflichtet sind."
+     },
+     {
+      "bausteinId": "NDA05_dauer",
+      "ueberschrift": "Dauer",
+      "text": "4. Die Geheimhaltungspflicht gilt ab Unterzeichnung und besteht während 3 Jahren nach Beendigung der Zusammenarbeit oder des mit dem Zweck verfolgten Vorhabens fort."
+     },
+     {
+      "bausteinId": "NDA06_rueckgabe",
+      "ueberschrift": "Rückgabe und Vernichtung",
+      "text": "5. Auf Verlangen der offenlegenden Partei sowie nach Wegfall des Zwecks gibt die empfangende Partei alle überlassenen Unterlagen und Datenträger zurück oder vernichtet sie samt Kopien und bestätigt dies auf Wunsch schriftlich; gesetzliche Aufbewahrungspflichten bleiben vorbehalten."
+     },
+     {
+      "bausteinId": "NDA08_keinrecht",
+      "ueberschrift": "Keine Rechtsübertragung",
+      "text": "6. Diese Vereinbarung begründet keine Pflicht zur Offenlegung von Informationen und überträgt keine Rechte an den vertraulichen Informationen, insbesondere keine Lizenzen oder Immaterialgüterrechte."
+     },
+     {
+      "bausteinId": "NDA09_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "7. Änderungen und Ergänzungen dieser Vereinbarung bedürfen der Schriftform. Sollte eine Bestimmung unwirksam sein, bleibt die Vereinbarung im Übrigen gültig; an die Stelle der unwirksamen Bestimmung tritt eine gültige, die ihrem Zweck möglichst nahekommt. Diese Vereinbarung wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Es gilt schweizerisches Recht."
+     },
+     {
+      "bausteinId": "NDA10_unterschriften",
+      "text": "________, ________\n\n\nPartei A:\n\n___________________________\n________\n\n\nPartei B:\n\n___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Erstellt mit LexMetrik. Keine Rechtsberatung. Die Geheimhaltungsvereinbarung ist ein Innominatvertrag (Art. 19 OR) und formfrei gültig; die beidseitige Unterzeichnung dient dem Beweis. Eine übermässige Konventionalstrafe setzt der Richter herab (Art. 163 Abs. 3 OR). Massgebend sind Gesetz und der konkrete Einzelfall.",
+    "version": "1.0.0 (Wettbewerbsanalyse V3; Art. 19/160/161/163 OR verifiziert 20260101)"
+   },
+   "aufgenommen": [
+    "NDA01_parteien",
+    "NDA02_zweck",
+    "NDA03_begriff",
+    "NDA04_pflicht",
+    "NDA05_dauer",
+    "NDA06_rueckgabe",
+    "NDA08_keinrecht",
+    "NDA09_schluss",
+    "NDA10_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "NDA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Rollen je nach einseitig/gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA02_zweck",
+     "begruendung": "Zweck der Offenlegung – bestimmt den zulässigen Verwendungsrahmen.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA03_begriff",
+     "begruendung": "Definition der vertraulichen Informationen samt üblicher Ausnahmen – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA04_pflicht",
+     "begruendung": "Kern: Geheimhaltungs- und Zweckbindungspflicht (einseitig oder gegenseitig) – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA05_dauer",
+     "begruendung": "Nachwirkungsfrist der Geheimhaltung – nur wenn vereinbart.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA06_rueckgabe",
+     "begruendung": "Rückgabe-/Vernichtungspflicht – nur wenn vereinbart.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA08_keinrecht",
+     "begruendung": "Klarstellung: weder Offenlegungspflicht noch Rechtsübergang – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA09_schluss",
+     "begruendung": "Schriftform, salvatorische Klausel, Ausfertigung und Rechtswahl – immer enthalten.",
+     "norm": "Art. 19 OR"
+    },
+    {
+     "bausteinId": "NDA10_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften – dienen dem Beweis (formfreier Vertrag).",
+     "norm": "Art. 19 OR"
+    }
+   ]
+  }
+ },
+ "vorl:nda-gates-strafe": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "GEGENSEITIGE Geheimhaltung: Beide Parteien sind zur Vertraulichkeit verpflichtet, soweit sie Informationen der anderen erhalten.",
+   "KONVENTIONALSTRAFE: Sie verfällt auch dann, wenn kein Schaden entstanden ist (Art. 161 Abs. 1 OR). Eine übermässig hohe Strafe setzt der Richter von Amtes wegen herab (Art. 163 Abs. 3 OR). Damit Strafe und Unterlassung/weitergehender Schadenersatz nebeneinander bestehen, ist dies ausdrücklich vereinbart (Art. 160 Abs. 1 OR).",
+   "PERSONENBEZOGENE DATEN: Werden vertrauliche Informationen mit Personendaten ausgetauscht, bleiben die datenschutzrechtlichen Pflichten zusätzlich vorbehalten."
+  ]
+ },
+ "vorl:nda-gates-einseitig": {
+  "blocker": [],
+  "warnungen": [],
+  "hinweise": [
+   "EINSEITIGE Geheimhaltung: Nur die empfangende Partei (Partei B) ist zur Vertraulichkeit verpflichtet; die offenlegende Partei (Partei A) trifft keine Geheimhaltungspflicht.",
+   "PERSONENBEZOGENE DATEN: Werden vertrauliche Informationen mit Personendaten ausgetauscht, bleiben die datenschutzrechtlichen Pflichten zusätzlich vorbehalten."
+  ]
+ },
  "frist:vwvg-tage30-sommer": {
   "diesAdQuemISO": "2026-09-10",
   "diesAdQuem": "10.09.2026",

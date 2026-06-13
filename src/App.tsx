@@ -35,6 +35,7 @@ const VorlageArbeitsvertrag = lazy(() => import('./pages/VorlageArbeitsvertrag')
 const VorlageMietvertrag = lazy(() => import('./pages/VorlageMietvertrag').then((m) => ({ default: m.VorlageMietvertrag })));
 const VorlageAuftrag = lazy(() => import('./pages/VorlageAuftrag').then((m) => ({ default: m.VorlageAuftrag })));
 const VorlageWerkvertrag = lazy(() => import('./pages/VorlageWerkvertrag').then((m) => ({ default: m.VorlageWerkvertrag })));
+const VorlageNda = lazy(() => import('./pages/VorlageNda').then((m) => ({ default: m.VorlageNda })));
 const VorlageVollmacht = lazy(() => import('./pages/VorlageVollmacht').then((m) => ({ default: m.VorlageVollmacht })));
 const VorlageKlageVereinfacht = lazy(() => import('./pages/VorlageKlageVereinfacht').then((m) => ({ default: m.VorlageKlageVereinfacht })));
 const VorlageKlageOrdentlich = lazy(() => import('./pages/VorlageKlageOrdentlich').then((m) => ({ default: m.VorlageKlageOrdentlich })));
@@ -126,6 +127,7 @@ export default function App() {
         <Route path="/vorlagen/mietvertrag" element={<VorlageMietvertrag />} />
         <Route path="/vorlagen/auftrag" element={<VorlageAuftrag />} />
         <Route path="/vorlagen/werkvertrag" element={<VorlageWerkvertrag />} />
+        <Route path="/vorlagen/nda" element={<VorlageNda />} />
         <Route path="/vorlagen/vollmacht" element={<VorlageVollmacht />} />
         <Route path="/vorlagen/klage-vereinfacht" element={<VorlageKlageVereinfacht />} />
         <Route path="/vorlagen/klage-ordentlich" element={<VorlageKlageOrdentlich />} />

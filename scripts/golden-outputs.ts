@@ -37,6 +37,7 @@ import { vvZusammenstellen, VV_DEFAULTS, pruefeVvGates } from '../src/lib/vorlag
 import { faZusammenstellen, FA_DEFAULTS, pruefeFaGates } from '../src/lib/vorlagen/forderungsabtretung';
 import { afZusammenstellen, AF_DEFAULTS, pruefeAfGates } from '../src/lib/vorlagen/auftrag';
 import { wvZusammenstellen, WV_DEFAULTS, pruefeWvGates } from '../src/lib/vorlagen/werkvertrag';
+import { ndaZusammenstellen, NDA_DEFAULTS, pruefeNdaGates } from '../src/lib/vorlagen/nda';
 import { feZusammenstellen, FE_DEFAULTS, pruefeFeGates } from '../src/lib/vorlagen/fristerstreckung';
 import { nbZusammenstellen, NB_DEFAULTS, pruefeNbGates, nbFruehesterGesuchstag } from '../src/lib/vorlagen/nichtbekanntgabe';
 import { skZusammenstellen, skWarnungen, SK_DEFAULTS } from '../src/lib/vorlagen/scheidungsklage';
@@ -265,6 +266,19 @@ f('vorl:wv-unbeweglich-aufwand', () => wvZusammenstellen({ ...wvBasis, werkArt: 
 f('vorl:wv-blanko', () => wvZusammenstellen({ ...WV_DEFAULTS }));
 f('vorl:wv-gates-unbeweglich', () => pruefeWvGates({ ...WV_DEFAULTS, werkArt: 'unbeweglich' }));
 f('vorl:wv-gates-beweglich', () => pruefeWvGates({ ...WV_DEFAULTS, werkArt: 'beweglich' }));
+
+// Geheimhaltungsvereinbarung/NDA (Art. 19/160 ff. OR; FAHRPLAN-VORLAGEN-AUSBAU V3, 13.6.2026)
+const ndaBasis = {
+  ...NDA_DEFAULTS, parteiAName: 'Muster AG', parteiAAdresse: 'X 1, 8000 Zürich',
+  parteiBName: 'Beispiel GmbH', parteiBAdresse: 'Y 2, 8000 Zürich',
+  zweck: 'Prüfung einer möglichen Zusammenarbeit im Bereich Softwareentwicklung',
+  ort: 'Zürich', datum: '2026-06-13',
+};
+f('vorl:nda-gegenseitig-strafe', () => ndaZusammenstellen({ ...ndaBasis, gegenseitig: true, infoBeschrieb: 'Quellcode, Kundenlisten', konventionalstrafe: true, strafeCHF: '20000' }));
+f('vorl:nda-einseitig-minimal', () => ndaZusammenstellen({ ...ndaBasis, gegenseitig: false, dauerErfassen: false, rueckgabe: false, konventionalstrafe: false }));
+f('vorl:nda-blanko', () => ndaZusammenstellen({ ...NDA_DEFAULTS }));
+f('vorl:nda-gates-strafe', () => pruefeNdaGates({ ...ndaBasis, konventionalstrafe: true, strafeCHF: '20000' }));
+f('vorl:nda-gates-einseitig', () => pruefeNdaGates({ ...ndaBasis, gegenseitig: false }));
 
 // Verwaltungs-Stillstand (Art. 22a VwVG) + BGG-Stillstand (Art. 46 BGG) im
 // Fristenrechner (Auftrag David 13.6.2026). Tagesfristen ruhen über die

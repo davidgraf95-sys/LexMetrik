@@ -1258,6 +1258,28 @@ const VORLAGEN: Record<string, VorlageCard> = {
     keywords: ['Werkvertrag', 'Unternehmer', 'Besteller', 'Werk', 'Bau', 'Mängelrüge', 'Gewährleistung', 'Festpreis', 'Art. 363', 'Art. 367', 'Art. 371', 'Art. 377'],
     icon: 'doc',
   },
+  nda: {
+    id: 'nda', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
+    vertragRubrik: 'zusammenarbeit', formGate: 'fertig',
+    rechtsbereich: 'privat',
+    title: 'Geheimhaltungsvereinbarung (NDA)',
+    // P1-Vorlage Wettbewerbsanalyse 12.6.2026 (FAHRPLAN-VORLAGEN-AUSBAU V3);
+    // Art. 19/160/161/163 OR am Cache verifiziert (20260101).
+    description: 'Geheimhaltungsvereinbarung aus festen Bausteinen (Innominatvertrag, Art. 19 OR) mit Weiche einseitig/gegenseitig, Zweckbindung, Nachwirkungsfrist und optionaler Konventionalstrafe – die richterliche Herabsetzung übermässiger Strafen (Art. 163 Abs. 3 OR) wird offengelegt.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 19 OR', url: fedlexUrl('OR', '19'), verified: false },
+      { label: 'Art. 160 OR', url: fedlexUrl('OR', '160'), verified: false },
+      { label: 'Art. 163 OR', url: fedlexUrl('OR', '163'), verified: false },
+    ],
+    href: '/vorlagen/nda',
+    schemaId: 'nda',
+    formvorschrift: 'Formfrei – beidseitig zu unterzeichnen (Beweis)',
+    output: ['pdf', 'docx'],
+    related: ['auftrag', 'arbeitsvertrag'],
+    keywords: ['NDA', 'Geheimhaltung', 'Geheimhaltungsvereinbarung', 'Vertraulichkeit', 'Non-Disclosure', 'Konventionalstrafe', 'einseitig', 'gegenseitig', 'Art. 19', 'Art. 163'],
+    icon: 'doc',
+  },
   darlehensvertrag: {
     id: 'darlehensvertrag', modus: 'vorlage', art: 'vertrag', rechtsgebiet: 'Vertrag & Forderung (OR)',
     vertragRubrik: 'darlehen_sicherheiten',
