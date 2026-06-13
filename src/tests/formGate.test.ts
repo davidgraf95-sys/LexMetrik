@@ -30,7 +30,7 @@ import { KM_SCHEMA } from '../lib/vorlagen/kuendigungMieter';
 import { KAG_SCHEMA } from '../lib/vorlagen/kuendigungArbeitgeber';
 import { KAN_SCHEMA } from '../lib/vorlagen/kuendigungArbeitnehmer';
 import { KV_SCHEMA as KVERTRAG_SCHEMA } from '../lib/vorlagen/kuendigungAllgemein';
-import { KV_SCHEMA as KVEREINFACHT_SCHEMA } from '../lib/vorlagen/klageVereinfacht';
+import { KLAGE_V_SCHEMA as KVEREINFACHT_SCHEMA } from '../lib/vorlagen/klageVereinfacht';
 import { KO_SCHEMA } from '../lib/vorlagen/klageOrdentlich';
 import { AG_ALLE_SCHEMAS } from '../lib/vorlagen/gruendungAgDokumente';
 import { gmbhDokumentmappe, GMBH_DOK_DEFAULTS } from '../lib/vorlagen/gruendungGmbhDokumente';

@@ -29,7 +29,7 @@ const geklammert = (b: Bedingung): string =>
 
 // ── Markdown bauen (kopf = vollständiger Markdown-Kopf inkl. «# …») ──────────
 
-export function abnahmeDossier(schemas: VorlageSchema[], kopf: string): string {
+export function abnahmeDossier(schemas: VorlageSchema[], kopf: string): { markdown: string; bausteine: number } {
   const teile: string[] = [kopf];
   let gesamt = 0;
 
@@ -60,5 +60,5 @@ export function abnahmeDossier(schemas: VorlageSchema[], kopf: string): string {
   }
 
   teile.push(`\n---\n\n**Summe:** ${gesamt} Bausteine in ${schemas.length} Schemas.\n`);
-  return teile.join('\n');
+  return { markdown: teile.join('\n'), bausteine: gesamt };
 }

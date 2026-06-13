@@ -3,7 +3,7 @@
 **Zweck:** Wort-für-Wort-Abnahme durch David (fachkundige Person, CLAUDE.md §7).
 Je Baustein eine Abhak-Zeile.
 
-**Quelle:** `src/lib/vorlagen/klageVereinfacht.ts (KV_SCHEMA)`. **Generiert:**
+**Quelle:** `src/lib/vorlagen/klageVereinfacht.ts (KLAGE_V_SCHEMA)`. **Generiert:**
 `npx vite-node scripts/abnahme-dossiers.ts` — nach Engine-Änderungen NEU
 laufen lassen; das Dossier ist eine Ableitung, keine zweite Pflege-Stelle (§5).
 

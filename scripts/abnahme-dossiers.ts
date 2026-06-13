@@ -21,10 +21,10 @@ import { AV_SCHEMA } from '../src/lib/vorlagen/arbeitsvertrag';
 import { EG_SCHEMA } from '../src/lib/vorlagen/eheschutzgesuch';
 import { FE_SCHEMA } from '../src/lib/vorlagen/fristerstreckung';
 import { FA_SCHEMA } from '../src/lib/vorlagen/forderungsabtretung';
-import { KV_SCHEMA as KUENDIGUNG_VERTRAG_SCHEMA } from '../src/lib/vorlagen/kuendigungAllgemein';
+import { KV_SCHEMA } from '../src/lib/vorlagen/kuendigungAllgemein';
 import { KK_SCHEMA } from '../src/lib/vorlagen/konkubinat';
 import { KM_SCHEMA } from '../src/lib/vorlagen/kuendigungMieter';
-import { KV_SCHEMA as KLAGE_VEREINFACHT_SCHEMA } from '../src/lib/vorlagen/klageVereinfacht';
+import { KLAGE_V_SCHEMA } from '../src/lib/vorlagen/klageVereinfacht';
 import { NB_SCHEMA } from '../src/lib/vorlagen/nichtbekanntgabe';
 import { NDA_SCHEMA } from '../src/lib/vorlagen/nda';
 import { KAN_SCHEMA } from '../src/lib/vorlagen/kuendigungArbeitnehmer';
@@ -76,11 +76,11 @@ const DOSSIERS: Eintrag[] = [
   { datei: 'FRISTERSTRECKUNG', anzeige: 'Fristerstreckungsgesuch', quelle: 'fristerstreckung.ts (FE_SCHEMA)', schemas: [FE_SCHEMA] },
   { datei: 'NICHTBEKANNTGABE', anzeige: 'Gesuch um Nichtbekanntgabe einer Betreibung', quelle: 'nichtbekanntgabe.ts (NB_SCHEMA)', schemas: [NB_SCHEMA] },
   { datei: 'VOLLMACHT', anzeige: 'Vollmacht', quelle: 'vollmacht.ts (VOLLMACHT_SCHEMA)', schemas: [VOLLMACHT_SCHEMA] },
-  { datei: 'KUENDIGUNG-VERTRAG', anzeige: 'Kündigung (allgemeiner Vertrag)', quelle: 'kuendigungAllgemein.ts (KV_SCHEMA)', schemas: [KUENDIGUNG_VERTRAG_SCHEMA] },
+  { datei: 'KUENDIGUNG-VERTRAG', anzeige: 'Kündigung (allgemeiner Vertrag)', quelle: 'kuendigungAllgemein.ts (KV_SCHEMA)', schemas: [KV_SCHEMA] },
   { datei: 'KUENDIGUNG-MIETER', anzeige: 'Kündigung durch Mieter', quelle: 'kuendigungMieter.ts (KM_SCHEMA)', schemas: [KM_SCHEMA] },
   { datei: 'KUENDIGUNG-ARBEITNEHMER', anzeige: 'Kündigung durch Arbeitnehmer', quelle: 'kuendigungArbeitnehmer.ts (KAN_SCHEMA)', schemas: [KAN_SCHEMA] },
   { datei: 'KUENDIGUNG-ARBEITGEBER', anzeige: 'Kündigung durch Arbeitgeber', quelle: 'kuendigungArbeitgeber.ts (KAG_SCHEMA)', schemas: [KAG_SCHEMA] },
-  { datei: 'KLAGE-VEREINFACHT', anzeige: 'Klage im vereinfachten Verfahren', quelle: 'klageVereinfacht.ts (KV_SCHEMA)', schemas: [KLAGE_VEREINFACHT_SCHEMA] },
+  { datei: 'KLAGE-VEREINFACHT', anzeige: 'Klage im vereinfachten Verfahren', quelle: 'klageVereinfacht.ts (KLAGE_V_SCHEMA)', schemas: [KLAGE_V_SCHEMA] },
   { datei: 'KLAGE-ORDENTLICH', anzeige: 'Klage im ordentlichen Verfahren', quelle: 'klageOrdentlich.ts (KO_SCHEMA)', schemas: [KO_SCHEMA] },
   { datei: 'SCHLICHTUNGSGESUCH-BS', anzeige: 'Schlichtungsgesuch', quelle: 'schlichtungsgesuchBs.ts (SG_SCHEMA)', schemas: [SG_SCHEMA] },
   { datei: 'SCHEIDUNGSKLAGE', anzeige: 'Scheidungsklage', quelle: 'scheidungsklage.ts (SK_SCHEMA)', schemas: [SK_SCHEMA] },
@@ -96,9 +96,9 @@ mkdirSync(ZIEL_DIR, { recursive: true });
 
 let bausteine = 0;
 for (const d of DOSSIERS) {
-  const md = abnahmeDossier(d.schemas, kopf(d.anzeige, d.quelle));
-  writeFileSync(join(ZIEL_DIR, `ABNAHME-${d.datei}-BAUSTEINE.md`), md, 'utf8');
-  bausteine += d.schemas.reduce((n, s) => n + s.bausteine.length, 0);
+  const { markdown, bausteine: n } = abnahmeDossier(d.schemas, kopf(d.anzeige, d.quelle));
+  writeFileSync(join(ZIEL_DIR, `ABNAHME-${d.datei}-BAUSTEINE.md`), markdown, 'utf8');
+  bausteine += n;
 }
 
 console.log(`${DOSSIERS.length} Dossiers nach abnahme/dossiers/ geschrieben — ${bausteine} Bausteine gesamt.`);

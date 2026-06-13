@@ -350,7 +350,7 @@ export function kvHinweise(a: KvAnswers): string[] {
 
 // ── Schema ──────────────────────────────────────────────────────────────────
 
-export const KV_SCHEMA: VorlageSchema = {
+export const KLAGE_V_SCHEMA: VorlageSchema = {
   id: 'klage-vereinfacht-bs',
   format: 'eingabe',
   version: '1.0.0 (ZPO-Fassung seit 1.1.2025; GOG BS gem. Auftrag 5.6.2026)',
@@ -511,5 +511,5 @@ export function kvZusammenstellen(a: KvAnswers) {
     beilagenListe: beilagen,
     unterschriftName: parteiKurz(a.klaeger) || '________',
   };
-  return assemble(KV_SCHEMA, antworten);
+  return assemble(KLAGE_V_SCHEMA, antworten);
 }

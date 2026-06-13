@@ -37,5 +37,6 @@ sonst die lesbare \`includeIf\`-Bedingung über die Antwort-Felder.
 (…Satz/…Zeile) verschwinden leer ersatzlos.
 `;
 
-writeFileSync(ZIEL, abnahmeDossier(AG_ALLE_SCHEMAS, KOPF), 'utf8');
-console.log(`ABNAHME-AG-BAUSTEINE.md geschrieben — ${AG_ALLE_SCHEMAS.length} Schemas.`);
+const { markdown, bausteine } = abnahmeDossier(AG_ALLE_SCHEMAS, KOPF);
+writeFileSync(ZIEL, markdown, 'utf8');
+console.log(`ABNAHME-AG-BAUSTEINE.md geschrieben — ${bausteine} Bausteine, ${AG_ALLE_SCHEMAS.length} Schemas.`);
