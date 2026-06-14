@@ -81,13 +81,22 @@ deterministisch, Mehrheit Ermessensrahmen je Streitwert-Band, FR/SO/GR/GL/SH/SZ
 aufwandbasiert. Re-Verif offen: AG (GK), SZ/GL/SH/GR (PE). Workflow-Runs
 wf_47cbdc5e (GK T1) · wf_3afb439f (GK T2) · wf_17e78208 (PE).
 
-**OFFEN P1 (nächster Bau, aus den Registern):** typisierte Datenschicht
-`src/data/tarif/{gerichtskosten,parteientschaedigung}.ts` (Sentinel-/%-Tail-
-Cleanup, TI-Prozentspanne, Re-Verif einbauen) · Engine `lib/prozesskosten.ts`
-nach Art. 95 (+ Art. 113/114-Kostenlos-Vorschalter, Art. 98-Vorschuss-Hinweis)
-+ per-Kanton-Stützstellen-Tests + Golden · praxistauglicher Rechner
-`prozesskosten` (Katalog-Karte existiert als `geplant`) · B-P0b Verfallsregister-
-CI (VOR 30.6.2026 SG GKV). Push/Deploy nur auf frisches Ja.
+**P1 HAUPTMOAT GEBAUT (14.6.2026, ungepusht):** Datenschicht
+`src/data/tarif/{typen,gerichtskosten,parteientschaedigung}.ts` (alle 26 Kantone
+× 2 Tarife, je amtlicher Link/Erlass/Stand/Artikel/verifiziert) · Engine
+`lib/prozesskosten.ts` nach Art. 95 (Gerichtskosten + Parteientschädigung
+getrennt; Art. 113/114-Kostenlos-Vorschalter inkl. Miete/Pacht nur Schlichtung;
+Art. 95 II lit. a Schlichtungspauschale ≠ Entscheidgebühr ehrlich; Art. 98-
+Vorschuss; `vergleichAlleKantone`) · Rechner `/rechner/prozesskosten`
+(Karte entwurf, Klarnamen-Kantone, **interkantonale Vergleichstabelle**) ·
+Tarif-Primitiv um %-vom-Streitwert-/Deckel-/Voll-/Sockel-Prozent-Typen erweitert.
+**§9-Bug-Check** (4 Lupen + adversarial, Run `wk6eknug5`): 2 HOCH + 4 MITTEL +
+NIEDRIG behoben (Schlichtungspauschale, verifiziert-Stand, BS/SZ-Register,
+INF=Infinity, ganze Franken, Monotonie). Re-Verif unsicherer Tarife abgeschlossen
+(`wibiq1gbs`). Gate grün, Build 50 Routen prerendered, empirisch (Playwright)
+verifiziert. §11-Dossier `prozesskosten-zpo-95-96.md` + 2 Register.
+OFFEN: Push+Deploy (Davids frisches Ja) · später B-P0b Verfallsregister-CI
+(VOR 30.6.2026 SG GKV) · Parteientschädigung-Detailband-Abnahme David.
 
 ## Session 13.6.2026 (Abend) — FUNDAMENT-UMBAU Phasen 0/1a/4 + Bug-Check (Auftrag David «mache fertig … nochmals bug check»)
 
