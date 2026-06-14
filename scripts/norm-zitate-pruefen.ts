@@ -23,6 +23,9 @@ const QUELLEN = [
   'src/lib/vorlagen/mahnung.ts',
   'src/lib/vorlagen/verjaehrungsverzicht.ts',
   'src/lib/vorlagen/forderungsabtretung.ts',
+  // Arbeitsvertrag (Detailgrad-Vollausbau P1a, 14.6.2026) — Art. 319 ff. OR,
+  // neu Art. 332 OR (Arbeitsergebnisse) + Art. 34 ZPO (Gerichtsstand).
+  'src/lib/vorlagen/arbeitsvertrag.ts',
   // Auftrag/Dienstleistungsvertrag (V3, 13.6.2026) — Art. 394 ff. OR.
   'src/lib/vorlagen/auftrag.ts',
   // Werkvertrag (V3, 13.6.2026) — Art. 363 ff. OR.

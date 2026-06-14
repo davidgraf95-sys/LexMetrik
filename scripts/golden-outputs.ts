@@ -195,6 +195,14 @@ f('vorl:ko', () => koZusammenstellen({
 f('vorl:av', () => avZusammenstellen({ ...avBasis }));
 f('vorl:av-gates', () => pruefeAvGates({ ...avBasis, lohnfortzahlung: 'ktg', ktgWartefristTage: 60, ktgWartefristLohnProzent: 0 }));
 f('vorl:av-kv', () => avZusammenstellen({ ...avBasis, konkurrenzverbot: true, kvEinblickBestaetigt: true, kvGegenstand: 'Treuhand', kvOrt: 'BS', kvDauerMonate: 12, kvKonventionalstrafeCHF: '20000', kvKarenz: true, kvKarenzCHFProMonat: '2000', kvKarenzVerzichtsrecht: true }));
+// Detailgrad-Vollausbau Einzelarbeitsvertrag (FAHRPLAN-VERTRAGS-VARIANTEN P1a):
+// standard = byte-identischer Dokumenttext (vorl:av oben; nur Protokoll-
+// Begründungen der gegateten Klauseln A10/A11 deklariert geändert). einfach
+// blendet Treuepflicht/Datenschutz aus; experte ergänzt Nebenbeschäftigung
+// (321a III), Erfindungen/Arbeitsergebnisse (332 OR/17 URG), Recht &
+// Gerichtsstand (34 f. ZPO).
+f('vorl:av-einfach', () => avZusammenstellen({ ...avBasis, detailgrad: 'einfach' }));
+f('vorl:av-experte', () => avZusammenstellen({ ...avBasis, detailgrad: 'experte' }));
 const mvBasis = {
   ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X 1', mieterName: 'M', mieterAdresse: 'Y 2',
   objektBeschrieb: '3.5-Zi', objektAdresse: 'Z 3', beginn: '2026-10-01', mietzinsNettoCHF: '2000',

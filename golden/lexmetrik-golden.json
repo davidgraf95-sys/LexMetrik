@@ -7744,12 +7744,12 @@
    },
    {
     "bausteinId": "A10_treuepflicht",
-    "begruendung": "Treue- und Geheimhaltungspflicht – immer enthalten (deklaratorisch).",
+    "begruendung": "Treue- und Geheimhaltungspflicht – ab «standard» (in «einfach» ausgeblendet, da deklaratorisch: Art. 321a OR gilt ohnehin).",
     "norm": "Art. 321a OR"
    },
    {
     "bausteinId": "A11_datenschutz",
-    "begruendung": "Datenschutz im Arbeitsverhältnis – immer enthalten (deklaratorisch).",
+    "begruendung": "Datenschutz im Arbeitsverhältnis – ab «standard» (in «einfach» ausgeblendet, da deklaratorisch: Art. 328b OR gilt ohnehin).",
     "norm": "Art. 328b OR"
    },
    {
@@ -7929,12 +7929,12 @@
    },
    {
     "bausteinId": "A10_treuepflicht",
-    "begruendung": "Treue- und Geheimhaltungspflicht – immer enthalten (deklaratorisch).",
+    "begruendung": "Treue- und Geheimhaltungspflicht – ab «standard» (in «einfach» ausgeblendet, da deklaratorisch: Art. 321a OR gilt ohnehin).",
     "norm": "Art. 321a OR"
    },
    {
     "bausteinId": "A11_datenschutz",
-    "begruendung": "Datenschutz im Arbeitsverhältnis – immer enthalten (deklaratorisch).",
+    "begruendung": "Datenschutz im Arbeitsverhältnis – ab «standard» (in «einfach» ausgeblendet, da deklaratorisch: Art. 328b OR gilt ohnehin).",
     "norm": "Art. 328b OR"
    },
    {
@@ -7947,6 +7947,358 @@
     "begruendung": "Konkurrenzverbot, nach Ort/Zeit/Gegenstand begrenzt – Schriftform durch diesen Vertrag erfüllt.",
     "norm": "Art. 340 OR",
     "hinweis": "Voraussetzung ist Einblick in Kundenkreis oder Geheimnisse mit Schädigungspotenzial (Art. 340 Abs. 2 OR); übermässige Verbote kann das Gericht herabsetzen (Art. 340a Abs. 2 OR). BGE 145 III 365."
+   },
+   {
+    "bausteinId": "A15_schluss",
+    "begruendung": "Schriftformvorbehalt und Verweis auf das dispositive Gesetzesrecht – immer enthalten.",
+    "norm": "Art. 320 OR"
+   },
+   {
+    "bausteinId": "A16_unterschriften",
+    "begruendung": "Ort, Datum und beidseitige Unterschriften – erfüllt die Schriftform der formbedürftigen Klauseln.",
+    "norm": "Art. 320 OR"
+   }
+  ]
+ },
+ "vorl:av-einfach": {
+  "dokument": {
+   "titel": "Einzelarbeitsvertrag",
+   "format": "vertrag",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "A01_parteien",
+     "text": "zwischen\n\nAG\nX 1\n(nachfolgend «Arbeitgeber»)\n\nund\n\nA B\nY 2\n(nachfolgend «Arbeitnehmer/in»)",
+     "rolle": "parteien"
+    },
+    {
+     "bausteinId": "A02_funktion",
+     "ueberschrift": "Funktion und Stellenantritt",
+     "text": "1. Der/Die Arbeitnehmer/in wird als F angestellt. Das Arbeitsverhältnis beginnt am 01.08.2026."
+    },
+    {
+     "bausteinId": "A03_arbeitsort",
+     "ueberschrift": "Arbeitsort, Pensum und Arbeitszeit",
+     "text": "2. Arbeitsort ist Basel. Das Pensum beträgt 100 % (42 Stunden pro Woche). Beginn und Ende der täglichen Arbeitszeit richten sich nach den betrieblichen Anordnungen; die zwingenden Schranken des Arbeitsgesetzes (Höchstarbeitszeit, Ruhezeiten, Arbeitszeiterfassung) bleiben vorbehalten."
+    },
+    {
+     "bausteinId": "A04_probezeit_gesetzlich",
+     "ueberschrift": "Probezeit",
+     "text": "3. Es gilt die gesetzliche Probezeit von einem Monat. Während der Probezeit kann das Arbeitsverhältnis beidseits mit einer Frist von sieben Tagen auf jeden Tag gekündigt werden."
+    },
+    {
+     "bausteinId": "A05_lohn_monat",
+     "ueberschrift": "Lohn",
+     "text": "4. Der Bruttolohn beträgt CHF 6'500.00 pro Monat; zusätzlich wird ein 13. Monatslohn ausgerichtet (bei unterjährigem Ein- oder Austritt anteilsmässig). Die gesetzlichen und vertraglichen Abzüge (AHV/IV/EO, ALV, NBU, BVG, ggf. Quellensteuer) gehen zulasten des Arbeitnehmers/der Arbeitnehmerin. Der Lohn wird Ende jedes Monats ausgerichtet."
+    },
+    {
+     "bausteinId": "A06_ueberstunden_gesetzlich",
+     "ueberschrift": "Überstunden",
+     "text": "5. Überstunden, die notwendig sind und dem/der Arbeitnehmer/in zugemutet werden können, sind zu leisten. Sie werden mit Einverständnis des Arbeitnehmers/der Arbeitnehmerin durch Freizeit von gleicher Dauer ausgeglichen oder mit dem Lohn samt einem Zuschlag von 25 % vergütet."
+    },
+    {
+     "bausteinId": "A07_ferien",
+     "ueberschrift": "Ferien",
+     "text": "6. Der Ferienanspruch beträgt 4 Wochen pro Dienstjahr. Die Ferien werden vom Arbeitgeber unter Rücksicht auf die Wünsche des Arbeitnehmers/der Arbeitnehmerin festgelegt; wenigstens zwei Wochen müssen zusammenhängen. Während der Ferien ist der volle Lohn geschuldet; eine Abgeltung durch Geldleistungen während des Arbeitsverhältnisses ist ausgeschlossen."
+    },
+    {
+     "bausteinId": "A08_lohnfortzahlung_gesetzlich",
+     "ueberschrift": "Lohnfortzahlung bei Verhinderung",
+     "text": "7. Wird der/die Arbeitnehmer/in ohne eigenes Verschulden an der Arbeitsleistung verhindert (Krankheit, Unfall, Erfüllung gesetzlicher Pflichten), richtet sich die Lohnfortzahlung nach Art. 324a OR (im ersten Dienstjahr drei Wochen, danach angemessen länger nach der anwendbaren Skala)."
+    },
+    {
+     "bausteinId": "A09_spesen_effektiv",
+     "ueberschrift": "Spesen",
+     "text": "8. Der Arbeitgeber ersetzt dem/der Arbeitnehmer/in alle durch die Ausführung der Arbeit notwendig entstehenden Auslagen gegen Beleg."
+    },
+    {
+     "bausteinId": "A12_kuendigung_gesetzlich",
+     "ueberschrift": "Kündigung",
+     "text": "9. Nach Ablauf der Probezeit kann das unbefristete Arbeitsverhältnis beidseits unter Einhaltung der gesetzlichen Fristen gekündigt werden: mit einem Monat im ersten, zwei Monaten im zweiten bis neunten und drei Monaten ab dem zehnten Dienstjahr, je auf das Ende eines Monats. Die Kündigung ist auf Verlangen schriftlich zu begründen. Vorbehalten bleiben der zwingende Kündigungsschutz (Sperrfristen) und die fristlose Auflösung aus wichtigem Grund."
+    },
+    {
+     "bausteinId": "A15_schluss",
+     "ueberschrift": "Schlussbestimmungen",
+     "text": "10. Änderungen und Ergänzungen dieses Vertrags bedürfen zu ihrer Gültigkeit der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 319 ff. OR) sowie die zwingenden Vorschriften des Arbeitsgesetzes."
+    },
+    {
+     "bausteinId": "A16_unterschriften",
+     "text": "Basel, 15. Juni 2026\n\n\nDer Arbeitgeber:\n\n___________________________\nAG\n\n\nDer/Die Arbeitnehmer/in:\n\n___________________________\nA B",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    }
+   ],
+   "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Arbeitsvertrag ist formfrei gültig (Art. 320 OR); einzelne Klauseln (Konkurrenzverbot, Überstunden-Wegbedingung, abweichende Kündigungsfristen, Probezeit-Verlängerung, Pauschalspesen) bedürfen der Schriftform – die beidseitige Unterzeichnung dieses Vertrags erfüllt sie. Anwendbare GAV/NAV und kantonale Mindestlöhne gehen vor und sind gesondert zu prüfen.",
+   "version": "1.1.0 (Rechtsstand OR Art. 319 ff.; Vertiefungs-Gutachten 5.6.2026: Karenzentschädigung, KTG-Gleichwertigkeit, GAV-Typen, Probezeit bei Befristung)"
+  },
+  "aufgenommen": [
+   "A01_parteien",
+   "A02_funktion",
+   "A03_arbeitsort",
+   "A04_probezeit_gesetzlich",
+   "A05_lohn_monat",
+   "A06_ueberstunden_gesetzlich",
+   "A07_ferien",
+   "A08_lohnfortzahlung_gesetzlich",
+   "A09_spesen_effektiv",
+   "A12_kuendigung_gesetzlich",
+   "A15_schluss",
+   "A16_unterschriften"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "A01_parteien",
+    "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+    "norm": "Art. 319 OR"
+   },
+   {
+    "bausteinId": "A02_funktion",
+    "begruendung": "Funktion und Beginn – immer enthalten (zugleich Information nach Art. 330b OR).",
+    "norm": "Art. 319 OR"
+   },
+   {
+    "bausteinId": "A03_arbeitsort",
+    "begruendung": "Arbeitsort, Pensum und Wochenarbeitszeit – immer enthalten.",
+    "norm": "Art. 9 ArG"
+   },
+   {
+    "bausteinId": "A04_probezeit_gesetzlich",
+    "begruendung": "Gesetzliche Probezeit gewählt.",
+    "norm": "Art. 335b OR"
+   },
+   {
+    "bausteinId": "A05_lohn_monat",
+    "begruendung": "Monatslohn mit Fälligkeit Ende Monat (Art. 323 OR, absolut zwingend).",
+    "norm": "Art. 322 OR"
+   },
+   {
+    "bausteinId": "A06_ueberstunden_gesetzlich",
+    "begruendung": "Gesetzliche Überstundenregelung.",
+    "norm": "Art. 321c OR"
+   },
+   {
+    "bausteinId": "A07_ferien",
+    "begruendung": "Ferienanspruch (mindestens 4 bzw. 5 Wochen) inkl. Abgeltungsverbot – immer enthalten.",
+    "norm": "Art. 329a OR"
+   },
+   {
+    "bausteinId": "A08_lohnfortzahlung_gesetzlich",
+    "begruendung": "Gesetzliche Lohnfortzahlung.",
+    "norm": "Art. 324a OR"
+   },
+   {
+    "bausteinId": "A09_spesen_effektiv",
+    "begruendung": "Effektiver Auslagenersatz (zwingendes Minimum).",
+    "norm": "Art. 327a OR"
+   },
+   {
+    "bausteinId": "A12_kuendigung_gesetzlich",
+    "begruendung": "Gesetzliche Kündigungsfristen (Staffel nach Dienstjahren).",
+    "norm": "Art. 335c OR"
+   },
+   {
+    "bausteinId": "A15_schluss",
+    "begruendung": "Schriftformvorbehalt und Verweis auf das dispositive Gesetzesrecht – immer enthalten.",
+    "norm": "Art. 320 OR"
+   },
+   {
+    "bausteinId": "A16_unterschriften",
+    "begruendung": "Ort, Datum und beidseitige Unterschriften – erfüllt die Schriftform der formbedürftigen Klauseln.",
+    "norm": "Art. 320 OR"
+   }
+  ]
+ },
+ "vorl:av-experte": {
+  "dokument": {
+   "titel": "Einzelarbeitsvertrag",
+   "format": "vertrag",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "A01_parteien",
+     "text": "zwischen\n\nAG\nX 1\n(nachfolgend «Arbeitgeber»)\n\nund\n\nA B\nY 2\n(nachfolgend «Arbeitnehmer/in»)",
+     "rolle": "parteien"
+    },
+    {
+     "bausteinId": "A02_funktion",
+     "ueberschrift": "Funktion und Stellenantritt",
+     "text": "1. Der/Die Arbeitnehmer/in wird als F angestellt. Das Arbeitsverhältnis beginnt am 01.08.2026."
+    },
+    {
+     "bausteinId": "A03_arbeitsort",
+     "ueberschrift": "Arbeitsort, Pensum und Arbeitszeit",
+     "text": "2. Arbeitsort ist Basel. Das Pensum beträgt 100 % (42 Stunden pro Woche). Beginn und Ende der täglichen Arbeitszeit richten sich nach den betrieblichen Anordnungen; die zwingenden Schranken des Arbeitsgesetzes (Höchstarbeitszeit, Ruhezeiten, Arbeitszeiterfassung) bleiben vorbehalten."
+    },
+    {
+     "bausteinId": "A04_probezeit_gesetzlich",
+     "ueberschrift": "Probezeit",
+     "text": "3. Es gilt die gesetzliche Probezeit von einem Monat. Während der Probezeit kann das Arbeitsverhältnis beidseits mit einer Frist von sieben Tagen auf jeden Tag gekündigt werden."
+    },
+    {
+     "bausteinId": "A05_lohn_monat",
+     "ueberschrift": "Lohn",
+     "text": "4. Der Bruttolohn beträgt CHF 6'500.00 pro Monat; zusätzlich wird ein 13. Monatslohn ausgerichtet (bei unterjährigem Ein- oder Austritt anteilsmässig). Die gesetzlichen und vertraglichen Abzüge (AHV/IV/EO, ALV, NBU, BVG, ggf. Quellensteuer) gehen zulasten des Arbeitnehmers/der Arbeitnehmerin. Der Lohn wird Ende jedes Monats ausgerichtet."
+    },
+    {
+     "bausteinId": "A06_ueberstunden_gesetzlich",
+     "ueberschrift": "Überstunden",
+     "text": "5. Überstunden, die notwendig sind und dem/der Arbeitnehmer/in zugemutet werden können, sind zu leisten. Sie werden mit Einverständnis des Arbeitnehmers/der Arbeitnehmerin durch Freizeit von gleicher Dauer ausgeglichen oder mit dem Lohn samt einem Zuschlag von 25 % vergütet."
+    },
+    {
+     "bausteinId": "A07_ferien",
+     "ueberschrift": "Ferien",
+     "text": "6. Der Ferienanspruch beträgt 4 Wochen pro Dienstjahr. Die Ferien werden vom Arbeitgeber unter Rücksicht auf die Wünsche des Arbeitnehmers/der Arbeitnehmerin festgelegt; wenigstens zwei Wochen müssen zusammenhängen. Während der Ferien ist der volle Lohn geschuldet; eine Abgeltung durch Geldleistungen während des Arbeitsverhältnisses ist ausgeschlossen."
+    },
+    {
+     "bausteinId": "A08_lohnfortzahlung_gesetzlich",
+     "ueberschrift": "Lohnfortzahlung bei Verhinderung",
+     "text": "7. Wird der/die Arbeitnehmer/in ohne eigenes Verschulden an der Arbeitsleistung verhindert (Krankheit, Unfall, Erfüllung gesetzlicher Pflichten), richtet sich die Lohnfortzahlung nach Art. 324a OR (im ersten Dienstjahr drei Wochen, danach angemessen länger nach der anwendbaren Skala)."
+    },
+    {
+     "bausteinId": "A09_spesen_effektiv",
+     "ueberschrift": "Spesen",
+     "text": "8. Der Arbeitgeber ersetzt dem/der Arbeitnehmer/in alle durch die Ausführung der Arbeit notwendig entstehenden Auslagen gegen Beleg."
+    },
+    {
+     "bausteinId": "A10_treuepflicht",
+     "ueberschrift": "Sorgfalts-, Treue- und Geheimhaltungspflicht",
+     "text": "9. Der/Die Arbeitnehmer/in führt die übertragene Arbeit sorgfältig aus und wahrt die berechtigten Interessen des Arbeitgebers. Über Tatsachen, die geheim zu halten sind (insbesondere Fabrikations- und Geschäftsgeheimnisse), bewahrt er/sie Stillschweigen – auch nach Beendigung des Arbeitsverhältnisses, soweit es zur Wahrung der berechtigten Interessen des Arbeitgebers erforderlich ist."
+    },
+    {
+     "bausteinId": "A10b_nebenbeschaeftigung",
+     "ueberschrift": "Nebenbeschäftigung",
+     "text": "10. Während der Dauer des Arbeitsverhältnisses leistet der/die Arbeitnehmer/in keine Arbeit gegen Entgelt für einen Dritten, soweit dadurch die Treuepflicht verletzt, insbesondere der Arbeitgeber konkurrenziert wird. Andere Nebenbeschäftigungen sind dem Arbeitgeber vorgängig anzuzeigen; sie sind zulässig, soweit sie die Arbeitsleistung nicht beeinträchtigen und keine berechtigten Interessen des Arbeitgebers verletzen."
+    },
+    {
+     "bausteinId": "A11_datenschutz",
+     "ueberschrift": "Datenschutz",
+     "text": "11. Der Arbeitgeber bearbeitet Personendaten des Arbeitnehmers/der Arbeitnehmerin nur, soweit sie dessen/deren Eignung für das Arbeitsverhältnis betreffen oder zur Durchführung des Vertrags erforderlich sind; im Übrigen gelten die Grundsätze des Datenschutzgesetzes."
+    },
+    {
+     "bausteinId": "A11b_arbeitsergebnisse",
+     "ueberschrift": "Erfindungen und Arbeitsergebnisse",
+     "text": "12. Erfindungen und Designs, die der/die Arbeitnehmer/in bei Ausübung der dienstlichen Tätigkeit und in Erfüllung der vertraglichen Pflichten schafft, gehören dem Arbeitgeber. Erfindungen und Designs, die bei der dienstlichen Tätigkeit, aber nicht in Erfüllung vertraglicher Pflichten entstehen, behält sich der Arbeitgeber zum Erwerb vor; der/die Arbeitnehmer/in gibt ihm davon schriftlich Kenntnis, und der Arbeitgeber teilt innert sechs Monaten schriftlich mit, ob er sie erwerben oder freigeben will. Erwirbt er sie, ist eine besondere angemessene Vergütung geschuldet (Art. 332 Abs. 3 und 4 OR). Die Rechte an Computerprogrammen, die der/die Arbeitnehmer/in in Ausübung der beruflichen Tätigkeit und in Erfüllung vertraglicher Pflichten schafft, stehen dem Arbeitgeber zu (Art. 17 URG)."
+    },
+    {
+     "bausteinId": "A12_kuendigung_gesetzlich",
+     "ueberschrift": "Kündigung",
+     "text": "13. Nach Ablauf der Probezeit kann das unbefristete Arbeitsverhältnis beidseits unter Einhaltung der gesetzlichen Fristen gekündigt werden: mit einem Monat im ersten, zwei Monaten im zweiten bis neunten und drei Monaten ab dem zehnten Dienstjahr, je auf das Ende eines Monats. Die Kündigung ist auf Verlangen schriftlich zu begründen. Vorbehalten bleiben der zwingende Kündigungsschutz (Sperrfristen) und die fristlose Auflösung aus wichtigem Grund."
+    },
+    {
+     "bausteinId": "A14b_recht_gerichtsstand",
+     "ueberschrift": "Anwendbares Recht und Gerichtsstand",
+     "text": "14. Dieser Vertrag untersteht schweizerischem Recht. Für Streitigkeiten aus dem Arbeitsverhältnis bleibt der zwingende Gerichtsstand am Wohnsitz oder Sitz der beklagten Partei oder am gewöhnlichen Arbeitsort vorbehalten; auf diesen kann die Arbeitnehmerin/der Arbeitnehmer nicht zum Voraus oder durch Einlassung verzichten (Art. 34 f. ZPO)."
+    },
+    {
+     "bausteinId": "A15_schluss",
+     "ueberschrift": "Schlussbestimmungen",
+     "text": "15. Änderungen und Ergänzungen dieses Vertrags bedürfen zu ihrer Gültigkeit der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 319 ff. OR) sowie die zwingenden Vorschriften des Arbeitsgesetzes."
+    },
+    {
+     "bausteinId": "A16_unterschriften",
+     "text": "Basel, 15. Juni 2026\n\n\nDer Arbeitgeber:\n\n___________________________\nAG\n\n\nDer/Die Arbeitnehmer/in:\n\n___________________________\nA B",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    }
+   ],
+   "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Arbeitsvertrag ist formfrei gültig (Art. 320 OR); einzelne Klauseln (Konkurrenzverbot, Überstunden-Wegbedingung, abweichende Kündigungsfristen, Probezeit-Verlängerung, Pauschalspesen) bedürfen der Schriftform – die beidseitige Unterzeichnung dieses Vertrags erfüllt sie. Anwendbare GAV/NAV und kantonale Mindestlöhne gehen vor und sind gesondert zu prüfen.",
+   "version": "1.1.0 (Rechtsstand OR Art. 319 ff.; Vertiefungs-Gutachten 5.6.2026: Karenzentschädigung, KTG-Gleichwertigkeit, GAV-Typen, Probezeit bei Befristung)"
+  },
+  "aufgenommen": [
+   "A01_parteien",
+   "A02_funktion",
+   "A03_arbeitsort",
+   "A04_probezeit_gesetzlich",
+   "A05_lohn_monat",
+   "A06_ueberstunden_gesetzlich",
+   "A07_ferien",
+   "A08_lohnfortzahlung_gesetzlich",
+   "A09_spesen_effektiv",
+   "A10_treuepflicht",
+   "A10b_nebenbeschaeftigung",
+   "A11_datenschutz",
+   "A11b_arbeitsergebnisse",
+   "A12_kuendigung_gesetzlich",
+   "A14b_recht_gerichtsstand",
+   "A15_schluss",
+   "A16_unterschriften"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "A01_parteien",
+    "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+    "norm": "Art. 319 OR"
+   },
+   {
+    "bausteinId": "A02_funktion",
+    "begruendung": "Funktion und Beginn – immer enthalten (zugleich Information nach Art. 330b OR).",
+    "norm": "Art. 319 OR"
+   },
+   {
+    "bausteinId": "A03_arbeitsort",
+    "begruendung": "Arbeitsort, Pensum und Wochenarbeitszeit – immer enthalten.",
+    "norm": "Art. 9 ArG"
+   },
+   {
+    "bausteinId": "A04_probezeit_gesetzlich",
+    "begruendung": "Gesetzliche Probezeit gewählt.",
+    "norm": "Art. 335b OR"
+   },
+   {
+    "bausteinId": "A05_lohn_monat",
+    "begruendung": "Monatslohn mit Fälligkeit Ende Monat (Art. 323 OR, absolut zwingend).",
+    "norm": "Art. 322 OR"
+   },
+   {
+    "bausteinId": "A06_ueberstunden_gesetzlich",
+    "begruendung": "Gesetzliche Überstundenregelung.",
+    "norm": "Art. 321c OR"
+   },
+   {
+    "bausteinId": "A07_ferien",
+    "begruendung": "Ferienanspruch (mindestens 4 bzw. 5 Wochen) inkl. Abgeltungsverbot – immer enthalten.",
+    "norm": "Art. 329a OR"
+   },
+   {
+    "bausteinId": "A08_lohnfortzahlung_gesetzlich",
+    "begruendung": "Gesetzliche Lohnfortzahlung.",
+    "norm": "Art. 324a OR"
+   },
+   {
+    "bausteinId": "A09_spesen_effektiv",
+    "begruendung": "Effektiver Auslagenersatz (zwingendes Minimum).",
+    "norm": "Art. 327a OR"
+   },
+   {
+    "bausteinId": "A10_treuepflicht",
+    "begruendung": "Treue- und Geheimhaltungspflicht – ab «standard» (in «einfach» ausgeblendet, da deklaratorisch: Art. 321a OR gilt ohnehin).",
+    "norm": "Art. 321a OR"
+   },
+   {
+    "bausteinId": "A10b_nebenbeschaeftigung",
+    "begruendung": "Nebenbeschäftigung/Konkurrenz während des Arbeitsverhältnisses (Art. 321a Abs. 3 OR) – Detailgrad «experte».",
+    "norm": "Art. 321a OR"
+   },
+   {
+    "bausteinId": "A11_datenschutz",
+    "begruendung": "Datenschutz im Arbeitsverhältnis – ab «standard» (in «einfach» ausgeblendet, da deklaratorisch: Art. 328b OR gilt ohnehin).",
+    "norm": "Art. 328b OR"
+   },
+   {
+    "bausteinId": "A11b_arbeitsergebnisse",
+    "begruendung": "Zuordnung von Erfindungen/Designs und Software-Urheberrechten (Art. 332 OR, Art. 17 URG) – Detailgrad «experte».",
+    "norm": "Art. 332 OR",
+    "hinweis": "Eine Abrede über Erfindungen ausserhalb der vertraglichen Pflichten ist nur gegen besondere Vergütung gültig (Art. 332 Abs. 4 OR)."
+   },
+   {
+    "bausteinId": "A12_kuendigung_gesetzlich",
+    "begruendung": "Gesetzliche Kündigungsfristen (Staffel nach Dienstjahren).",
+    "norm": "Art. 335c OR"
+   },
+   {
+    "bausteinId": "A14b_recht_gerichtsstand",
+    "begruendung": "Rechtswahl (CH) mit Vorbehalt des teilzwingenden arbeitsrechtlichen Gerichtsstands (Art. 34/35 ZPO) – Detailgrad «experte», ehrlich offengelegt (§8).",
+    "norm": "Art. 34 ZPO"
    },
    {
     "bausteinId": "A15_schluss",

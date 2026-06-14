@@ -2,6 +2,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtDatumLang, fmtDatum, fmtCHF } from './datum';
+import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 export { fmtCHF } from './datum';
 
 // ─── Einzelarbeitsvertrag (Art. 319 ff. OR) – fünfte Vorlage ────────────────
@@ -52,6 +53,10 @@ export type AvProbezeit = 'gesetzlich' | 'wegbedungen' | 'verlaengert';
 export type AvUeberstunden = 'gesetzlich' | 'kompensation' | 'inbegriffen';
 
 export type AvAntworten = {
+  // Detailgrad (FAHRPLAN-VERTRAGS-VARIANTEN P1a): einfach blendet die rein
+  // deklaratorischen Klauseln aus, experte ergänzt Zusatzmodule. Default
+  // 'standard' = byte-identischer Bestand (Golden-Invariante §6).
+  detailgrad: Detailgrad;
   // Parteien
   arbeitgeberTyp: 'juristisch' | 'natuerlich';
   arbeitgeberName: string;
@@ -121,6 +126,7 @@ export type AvAntworten = {
 };
 
 export const AV_DEFAULTS: AvAntworten = {
+  detailgrad: DETAILGRAD_DEFAULT,
   arbeitgeberTyp: 'juristisch',
   arbeitgeberName: '', arbeitgeberAdresse: '',
   arbeitnehmerVorname: '', arbeitnehmerName: '', arbeitnehmerAdresse: '',
@@ -419,13 +425,25 @@ export const AV_SCHEMA: VorlageSchema = {
     { id: 'A10_treuepflicht', ueberschrift: 'Sorgfalts-, Treue- und Geheimhaltungspflicht',
       text: 'Der/Die Arbeitnehmer/in führt die übertragene Arbeit sorgfältig aus und wahrt die berechtigten Interessen des Arbeitgebers. Über Tatsachen, die geheim zu halten sind (insbesondere Fabrikations- und Geschäftsgeheimnisse), bewahrt er/sie Stillschweigen – auch nach Beendigung des Arbeitsverhältnisses, soweit es zur Wahrung der berechtigten Interessen des Arbeitgebers erforderlich ist.',
       nummeriert: true,
-      begruendung: 'Treue- und Geheimhaltungspflicht – immer enthalten (deklaratorisch).',
+      includeIf: AB_STANDARD,
+      begruendung: 'Treue- und Geheimhaltungspflicht – ab «standard» (in «einfach» ausgeblendet, da deklaratorisch: Art. 321a OR gilt ohnehin).',
+      norm: 'Art. 321a OR' },
+    { id: 'A10b_nebenbeschaeftigung', ueberschrift: 'Nebenbeschäftigung',
+      text: 'Während der Dauer des Arbeitsverhältnisses leistet der/die Arbeitnehmer/in keine Arbeit gegen Entgelt für einen Dritten, soweit dadurch die Treuepflicht verletzt, insbesondere der Arbeitgeber konkurrenziert wird. Andere Nebenbeschäftigungen sind dem Arbeitgeber vorgängig anzuzeigen; sie sind zulässig, soweit sie die Arbeitsleistung nicht beeinträchtigen und keine berechtigten Interessen des Arbeitgebers verletzen.',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Nebenbeschäftigung/Konkurrenz während des Arbeitsverhältnisses (Art. 321a Abs. 3 OR) – Detailgrad «experte».',
       norm: 'Art. 321a OR' },
     { id: 'A11_datenschutz', ueberschrift: 'Datenschutz',
       text: 'Der Arbeitgeber bearbeitet Personendaten des Arbeitnehmers/der Arbeitnehmerin nur, soweit sie dessen/deren Eignung für das Arbeitsverhältnis betreffen oder zur Durchführung des Vertrags erforderlich sind; im Übrigen gelten die Grundsätze des Datenschutzgesetzes.',
-      nummeriert: true,
-      begruendung: 'Datenschutz im Arbeitsverhältnis – immer enthalten (deklaratorisch).',
+      includeIf: AB_STANDARD, nummeriert: true,
+      begruendung: 'Datenschutz im Arbeitsverhältnis – ab «standard» (in «einfach» ausgeblendet, da deklaratorisch: Art. 328b OR gilt ohnehin).',
       norm: 'Art. 328b OR' },
+    { id: 'A11b_arbeitsergebnisse', ueberschrift: 'Erfindungen und Arbeitsergebnisse',
+      text: 'Erfindungen und Designs, die der/die Arbeitnehmer/in bei Ausübung der dienstlichen Tätigkeit und in Erfüllung der vertraglichen Pflichten schafft, gehören dem Arbeitgeber. Erfindungen und Designs, die bei der dienstlichen Tätigkeit, aber nicht in Erfüllung vertraglicher Pflichten entstehen, behält sich der Arbeitgeber zum Erwerb vor; der/die Arbeitnehmer/in gibt ihm davon schriftlich Kenntnis, und der Arbeitgeber teilt innert sechs Monaten schriftlich mit, ob er sie erwerben oder freigeben will. Erwirbt er sie, ist eine besondere angemessene Vergütung geschuldet (Art. 332 Abs. 3 und 4 OR). Die Rechte an Computerprogrammen, die der/die Arbeitnehmer/in in Ausübung der beruflichen Tätigkeit und in Erfüllung vertraglicher Pflichten schafft, stehen dem Arbeitgeber zu (Art. 17 URG).',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Zuordnung von Erfindungen/Designs und Software-Urheberrechten (Art. 332 OR, Art. 17 URG) – Detailgrad «experte».',
+      norm: 'Art. 332 OR',
+      hinweis: 'Eine Abrede über Erfindungen ausserhalb der vertraglichen Pflichten ist nur gegen besondere Vergütung gültig (Art. 332 Abs. 4 OR).' },
     { id: 'A12_kuendigung_gesetzlich', ueberschrift: 'Kündigung',
       text: 'Nach Ablauf der Probezeit kann das unbefristete Arbeitsverhältnis beidseits unter Einhaltung der gesetzlichen Fristen gekündigt werden: mit einem Monat im ersten, zwei Monaten im zweiten bis neunten und drei Monaten ab dem zehnten Dienstjahr, je auf das Ende eines Monats. Die Kündigung ist auf Verlangen schriftlich zu begründen. Vorbehalten bleiben der zwingende Kündigungsschutz (Sperrfristen) und die fristlose Auflösung aus wichtigem Grund.',
       includeIf: { feld: 'kuendigungZeigen', eq: 'gesetzlich' }, nummeriert: true,
@@ -462,6 +480,11 @@ export const AV_SCHEMA: VorlageSchema = {
       includeIf: { feld: 'gavVariante', eq: 'verweis' }, nummeriert: true,
       begruendung: 'Blosse vertragliche Verweisung – GAV-Inhalt wird Vertragsinhalt, keine Normwirkung (Gutachten 5.6.2026).',
       norm: 'Art. 356 OR' },
+    { id: 'A14b_recht_gerichtsstand', ueberschrift: 'Anwendbares Recht und Gerichtsstand',
+      text: 'Dieser Vertrag untersteht schweizerischem Recht. Für Streitigkeiten aus dem Arbeitsverhältnis bleibt der zwingende Gerichtsstand am Wohnsitz oder Sitz der beklagten Partei oder am gewöhnlichen Arbeitsort vorbehalten; auf diesen kann die Arbeitnehmerin/der Arbeitnehmer nicht zum Voraus oder durch Einlassung verzichten (Art. 34 f. ZPO).',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Rechtswahl (CH) mit Vorbehalt des teilzwingenden arbeitsrechtlichen Gerichtsstands (Art. 34/35 ZPO) – Detailgrad «experte», ehrlich offengelegt (§8).',
+      norm: 'Art. 34 ZPO' },
     { id: 'A15_schluss', ueberschrift: 'Schlussbestimmungen',
       text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen zu ihrer Gültigkeit der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 319 ff. OR) sowie die zwingenden Vorschriften des Arbeitsgesetzes.',
       nummeriert: true,

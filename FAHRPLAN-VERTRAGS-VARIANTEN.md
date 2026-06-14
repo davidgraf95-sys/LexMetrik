@@ -190,3 +190,62 @@ committet inkrementell; kein Push ohne ausdrückliche Freigabe.
 `FAHRPLAN-FUNDAMENT-UMBAU.md` an, untracked — Architektur-Umbau-Vorschlag, von
 David noch nicht abgenommen). Künftige Commits strikt pathspec; deren WIP nicht
 anfassen.
+
+---
+
+## 7 · P1 — Detail-Handlungsplan (14.6.2026, Auftrag «mache es wirklich gut»)
+
+**Recherche-Grundlage (§11):** `bibliothek/recherche/arbeitsvertrag-untertypen.md`
+— alle Sonderregime-Artikel 344–354 OR verbatim am Fedlex-Cache 20260101
+verifiziert (Anker 27/27 OK, 14.6.2026).
+
+**Architektur-Entscheid (§4, im Dossier begründet):** EINE Karte
+`arbeitsvertrag`. **Einzel + Kader** = dasselbe 319-ff-Regime → bleiben in
+`arbeitsvertrag.ts` (untertyp/detailgrad-gegatete Bausteine, golden-neutral für
+einzel/standard). **Lehrvertrag / Handelsreisender / Heimarbeit** = je
+distinktes Sonderregime → **eigene Schemas** (`lehrvertrag.ts`,
+`handelsreisendenvertrag.ts`, `heimarbeitsvertrag.ts`) mit eigener Antworten-
+Struktur, Gates, Tests; die AV-Seite dispatcht über `untertyp`. Lieber Duplikat
+als kollabierende Abstraktion (§1), Regimes einzeln testbar (§4).
+
+**Sub-Phasen (jede: V0-Norm verifiziert → Schema/Gates → Wizard → Test → Golden
+deklariert → `gate:schnell` grün → eigener pathspec-Commit):**
+
+- **P1a — Detailgrad auf Einzel + VariantenKopf** *(golden-neutral)*. Felder
+  `detailgrad` (Default `standard`) + `untertyp` (Default `einzel`) in
+  `AvAntworten`/`AV_DEFAULTS`. `einfach` blendet die rein deklaratorischen
+  Klauseln (Treuepflicht-Wiedergabe A10, Datenschutz A11) aus; `experte`
+  ergänzt IP/Arbeitsergebnisse (332 OR/17 URG), Nebenbeschäftigung (321a III),
+  Recht & Gerichtsstand (Vorbehalt 34 ZPO). VariantenKopf in die Seite.
+  Golden: `einzel`+`standard` byte-identisch (bestehende `vorl:av*`-Fälle),
+  neue Fälle `av-einfach`/`av-experte` deklariert.
+- **P1b — Untertyp Kader/Manager** *(gleiches Regime)*. untertyp=`kader`:
+  leitende Stellung / ArG-Ausnahme (3 lit. d ArG, deklaratorisch offengelegt),
+  variable Vergütung / Bonus-Abgrenzung (322d), Freistellung bei Kündigung.
+  Golden neue Fälle.
+- **P1c — Lehrvertrag** (`lehrvertrag.ts`, neues Schema). Schriftform =
+  Gültigkeit (344a I) → `ausgabeArt`; Pflichtinhalt Art/Dauer/Lohn/Probezeit/
+  Arbeitszeit/Ferien (344a II) als Pflicht-Felder + Gates; Probezeit 1–3 Mt.,
+  Default 3 (344a III); KEIN nachvertragliches Konkurrenzverbot (344a VI,
+  Blocker); Fachkraft/Schulzeit/5-Wochen-Ferien (345a); Kündigung regime-eigen
+  (346: Probezeit 7 Tage, sonst fristlos 337); Zeugnis (346a); BBG-14-
+  Genehmigungs-Hinweis. Unterschrift gesetzl. Vertretung bei Minderjährigkeit.
+- **P1d — Handelsreisendenvertrag** (`handelsreisendenvertrag.ts`). Schriftform
+  Soll (347a); Vollmacht Vermittlung/Abschluss (348b); Delkredere-Schranke ¼ +
+  Provision (348a); Lohn fest ± Provision (349a), Ausschliesslichkeit/Provision
+  Gebiet (349/349b), Auslagenersatz zwingend (349d), Retentionsrecht (349e),
+  Saison-Kündigung (350), Provision bei Beendigung (350a). Gates für die
+  Nichtigkeits-Schranken.
+- **P1e — Heimarbeitsvertrag** (`heimarbeitsvertrag.ts`). Schriftliche
+  Lohn-/Materialangabe vor Ausgabe (351a); Pflichten/Mängelhaftung
+  Selbstkosten (352/352a); Prüfung 1 Woche (353); Lohn halbmonatlich +
+  schriftliche Abrechnung (353a), Annahmeverzug/Verhinderung 324/324a (353b);
+  Dauer/Probe-Vermutung (354).
+- **P1f — `variantenInventar`** (Zähl-Modul + Test): zählt je Karte die
+  erzeugbaren Dokumente (Untertyp × Detailgrad × kohärente Modulprofile),
+  summiert → ehrlicher Fortschrittsbalken Richtung 1000; als Test fixiert.
+
+**Leitplanken bleiben:** §1 Korrektheit vor Stückzahl · §6 jede Detailgrad-/
+Untertyp-Einführung golden-bewiesen additiv · §7 jeder Anker am Cache
+verifiziert · §12 pathspec-Commits, kein `git add -A`. Mehr-Session-Programm;
+fertig getestete Inkremente, kein Push ohne Davids frisches Ja (§9).

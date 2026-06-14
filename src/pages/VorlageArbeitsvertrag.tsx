@@ -9,6 +9,7 @@ import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
+import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { KANTONE } from '../lib/kantone';
 import { karte } from '../lib/startseiteConfig';
@@ -459,6 +460,7 @@ export function VorlageArbeitsvertrag() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      kopfSchalter={<VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_AV, dateiName: 'Arbeitsvertrag-Entwurf.pdf' },

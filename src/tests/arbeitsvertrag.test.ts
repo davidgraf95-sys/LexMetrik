@@ -234,3 +234,49 @@ describe('Bug-Check-Fix 10.6.2026: Ferienzuschlag folgt w/(52−w)', () => {
     expect(text(4)).toContain('8.33 %');
   });
 });
+
+describe('Arbeitsvertrag – Detailgrad (P1a Vertrags-Varianten)', () => {
+  it('AT-23 standard = Bestand: deklaratorische Klauseln enthalten, keine Experte-Module', () => {
+    const l = ids(basis());
+    expect(l).toContain('A10_treuepflicht');
+    expect(l).toContain('A11_datenschutz');
+    expect(l).not.toContain('A10b_nebenbeschaeftigung');
+    expect(l).not.toContain('A11b_arbeitsergebnisse');
+    expect(l).not.toContain('A14b_recht_gerichtsstand');
+  });
+
+  it('AT-24 einfach blendet die rein deklaratorischen Klauseln aus, Kernpflichten bleiben', () => {
+    const l = ids(basis({ detailgrad: 'einfach' }));
+    expect(l).not.toContain('A10_treuepflicht');
+    expect(l).not.toContain('A11_datenschutz');
+    for (const id of ['A01_parteien', 'A05_lohn_monat', 'A07_ferien', 'A08_lohnfortzahlung_gesetzlich',
+      'A12_kuendigung_gesetzlich', 'A15_schluss', 'A16_unterschriften']) {
+      expect(l, id).toContain(id);
+    }
+  });
+
+  it('AT-25 experte ergänzt Nebenbeschäftigung (321a III), Arbeitsergebnisse (332 OR/17 URG), Recht & Gerichtsstand (34 ZPO)', () => {
+    const l = ids(basis({ detailgrad: 'experte' }));
+    expect(l).toContain('A10b_nebenbeschaeftigung');
+    expect(l).toContain('A11b_arbeitsergebnisse');
+    expect(l).toContain('A14b_recht_gerichtsstand');
+    const t = texte(basis({ detailgrad: 'experte' }));
+    expect(t).toMatch(/keine Arbeit gegen Entgelt für einen Dritten/);
+    expect(t).toMatch(/Art\. 332 Abs\. 3 und 4 OR/);
+    expect(t).toMatch(/Art\. 17 URG/);
+    expect(t).toMatch(/Art\. 34 f\. ZPO/);
+    expect(t).toMatch(/nicht zum Voraus oder durch Einlassung verzichten/);
+  });
+
+  it('AT-26 experte ist additiv (Superset von standard): keine Kernklausel geht verloren', () => {
+    const std = ids(basis());
+    const exp = ids(basis({ detailgrad: 'experte' }));
+    for (const id of std) expect(exp, id).toContain(id);
+  });
+
+  it('AT-27 Detailgrad ändert die zwingenden Gates nicht (Ferienminimum bleibt in jeder Stufe)', () => {
+    for (const detailgrad of ['einfach', 'standard', 'experte'] as const) {
+      expect(pruefeAvGates(basis({ detailgrad, ferienWochen: 3 })).blocker.join()).toMatch(/vier Wochen/);
+    }
+  });
+});
