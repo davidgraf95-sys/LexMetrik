@@ -249,3 +249,34 @@ deklariert → `gate:schnell` grün → eigener pathspec-Commit):**
 Untertyp-Einführung golden-bewiesen additiv · §7 jeder Anker am Cache
 verifiziert · §12 pathspec-Commits, kein `git add -A`. Mehr-Session-Programm;
 fertig getestete Inkremente, kein Push ohne Davids frisches Ja (§9).
+
+### Abarbeitungs-Stand P1 (14.6.2026) — VOLLSTÄNDIG, ungepusht
+
+**P1a–f erledigt + committet** (`52771cc`, `1b6baab`, `08405c2`, `67ca355`,
+`0dc99eb`, `fba6475`; je Gate grün, golden additiv bewiesen, §7-Zitate 0 Befunde):
+
+- **P1a** (`52771cc`): Detailgrad einfach/standard/experte auf den Einzelarbeits-
+  vertrag (VariantenKopf); experte = Nebenbeschäftigung (321a III), Erfindungen/
+  Arbeitsergebnisse (332 OR/17 URG), Recht & Gerichtsstand (34 f. ZPO).
+- **P1b** (`1b6baab`): Untertyp Kader/Manager — leitende Stellung (3 lit. d ArG),
+  Bonus (322d), Freistellung (324 II, experte).
+- **P1c** (`08405c2`): Lehrvertrag (344–346a) als eigenes Schema + Dispatcher
+  (EINE Karte, Vertragstyp-Wahl schaltet das Regime). Schriftform-Gültigkeit,
+  Pflichtinhalt, Probezeit 1–3/Default 3, 5 Wochen Ferien, gesetzl. Vertretung,
+  Zeugnis, BBG-14-Hinweis, kein Konkurrenzverbot (344a VI).
+- **P1d** (`67ca355`): Handelsreisendenvertrag (347–350a) — Vollmacht, Provision/
+  Lohn, Delkredere-Schranke, Auslagenersatz, Saison-Kündigung, Retention.
+- **P1e** (`0dc99eb`): Heimarbeitsvertrag (351–354) — 351a-Schriftangabe, 352a-
+  Haftungsschranke, 353-Wochenfrist, 353a/b-Lohn, 354-Dauer.
+- **P1f** (`fba6475`): `variantenInventar` (test-fixiert): Arbeitsvertrag-Karte
+  78 erzeugbare Dokumente, gesamt 120 = 12 % des 1000-Ziels.
+
+**Gesamtstand nach P1:** alle 1481 Tests grün, Golden 185 byte-gleich,
+check:zitate 837/0, Sweep widerspruchsfrei, Smoke (4 Regime-Seiten) ok. Normen
+344–354 OR verbatim am Cache 20260101 verifiziert; Recherche in
+`bibliothek/recherche/arbeitsvertrag-untertypen.md`. Fachliche Abnahme durch
+David ausstehend (bewusst zurückgestellt, Ausbau-Direktive 14.6.2026).
+
+**NÄCHSTE SCHRITTE (P2-Rest / P3):** Detailgrad auf Mietvertrag (grosse Engine);
+neue Basistypen Kauf/Schenkung/Pacht/Leihe/Darlehen/Bürgschaft je mit Untertyp ×
+Detailgrad; `variantenInventar` beim Ausbau jeder Karte nachführen.
