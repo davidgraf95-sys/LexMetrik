@@ -49,12 +49,22 @@ Rechtslogik): AG-Konsolenzahl wiederhergestellt + `KV_SCHEMA`→`KLAGE_V_SCHEMA`
 (klageVereinfacht, §5-Namensfalle) gefixt; Verifikationsstand-Drift (vor-
 bestehend) offen. Deploy-Urteil: keine Blocker.
 
-**NICHT umgesetzt (bewusst, §1/Konflikt-Register):** Thema A generische
-`VorlagenSeite` + ISO/DOCX-Dedup + Rollout (NDA verbiegt die Abstraktion →
-opt-in, golden+DOM je Seite, mit David); Phase 5 Verbatim-Hebung
-(Gefahrenzone), Persistenz-/i18n-Features; David-Entscheide (Server-Sync,
-fr/it-Inhalt, LIK Python→TS). TODO: Drift-Guard `check:abnahme` (Dossiers
-regenerieren + git diff). Push/Deploy nur auf frisches Ja (§9).
+(5) **Thema A — generische `VorlagenSeite` + Pilot (`325ccc1`):**
+`src/components/vorlagen/VorlagenSeite.tsx` übernimmt die fehleranfällige
+Orchestrierung (useWizardState, useMemo, pruefen-Scaffold, DOCX-Gate,
+VorschauPanel); `seiteHelfer.ts` (istIsoDatum/docxAktiv, Schritt-2-Dedup).
+Pilot **Forderungsabtretung** umgestellt — §6-Beweis: golden 166 byte-gleich +
+**Playwright-DOM byte-identisch über alle 3 Schritte + bedingtes Feld**; Logik-
+Check: src/lib unberührt, Sweep 14448 ohne Widerspruch. Opt-in; seiten-
+spezifisches JSX bleibt in der Config (§1).
+
+**NICHT umgesetzt (bewusst, §1/Konflikt-Register):** Rollout `VorlagenSeite`
+auf weitere LINEARE Seiten (je golden+DOM, mit David — Kandidaten:
+Verjährungsverzicht, Mahnung, Vollmacht …); NDA/Toggle-/Variantenseiten bleiben
+handgeschrieben; Phase 5 Verbatim-Hebung (Gefahrenzone), Persistenz-/i18n-
+Features; David-Entscheide (Server-Sync, fr/it-Inhalt, LIK Python→TS). TODO:
+Drift-Guard `check:abnahme` (Dossiers regenerieren + git diff). Push/Deploy nur
+auf frisches Ja (§9).
 
 ## Session 13.6.2026 — V3 Vertrags-Grundtypen KOMPLETT + Verwaltungs-/BGG-Stillstand (GO David «weitermachen mit bau» + eingeschobener Auftrag)
 
