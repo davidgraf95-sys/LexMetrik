@@ -165,6 +165,72 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
   return { kanton: e.kanton, streitwertCHF: e.streitwertCHF, phase: e.phase, materie: e.materie, gerichtskosten, parteientschaedigung, hinweise };
 }
 
+// ─── Kostenrisiko nach Obsiegensquote (Art. 106/111 ZPO) ────────────────────
+// Verteilung der Prozesskosten nach Ausgang des Verfahrens (Art. 106 Abs. 2:
+// «nach dem Ausgang verteilt»); die unterliegende Partei zahlt der anderen die
+// zugesprochene Parteientschädigung (Art. 111 Abs. 2). Vorbehalten bleibt die
+// Verteilung nach Ermessen (Art. 107, u. a. Familienrecht) und Art. 108 — daher
+// als Schätzung mit Hinweis. Ermessenstarife → Spanne (von/bis).
+
+export interface Spanne { vonChf: number; bisChf: number }
+
+export interface Kostenrisiko {
+  obsiegensquote: number; // 0..1
+  berechenbar: boolean;
+  /** Gerichtskosten zu eigenen Lasten = Gerichtskosten × (1 − Quote). */
+  gerichtskostenZuLasten?: Spanne;
+  /** Saldo Parteientschädigung = (2·Quote − 1) × Tarif; positiv = Sie erhalten,
+   *  negativ = Sie zahlen (Art. 111 Abs. 2). */
+  parteientschaedigungSaldo?: Spanne;
+  /** Eigene Anwaltskosten als Richtwert (kant. Tarif). Achtung Deckungslücke:
+   *  das effektiv vereinbarte Honorar kann höher sein als der Tarif. */
+  eigeneAnwaltskostenRichtwert?: Spanne;
+  /** Geschätzte Netto-Kostenbelastung = (1−Quote) × (Gerichtskosten + 2 ×
+   *  Parteientschädigung): eigener + gegnerischer Tarifanteil abzüglich
+   *  Erstattung. */
+  nettoBelastung?: Spanne;
+  hinweise: string[];
+}
+
+const postenSpanne = (p: PostenErgebnis): Spanne | null => {
+  if (p.kostenlos) return { vonChf: 0, bisChf: 0 };
+  if (p.schlichtungspauschale) return null;
+  const e = p.ergebnis;
+  if (!e) return null;
+  if (e.deterministisch) return { vonChf: e.betragChf, bisChf: e.betragChf };
+  if (typeof e.vonChf === 'number' && typeof e.bisChf === 'number') return { vonChf: e.vonChf, bisChf: e.bisChf };
+  return null; // formel_extern / nur einseitig offene Spanne → nicht rechenbar
+};
+
+const skaliere = (s: Spanne, f: number): Spanne =>
+  f >= 0 ? { vonChf: Math.round(s.vonChf * f), bisChf: Math.round(s.bisChf * f) }
+         : { vonChf: Math.round(s.bisChf * f), bisChf: Math.round(s.vonChf * f) };
+
+/** Kostenrisiko aus Gerichtskosten- und Parteientschädigungs-Posten bei
+ *  gegebener Obsiegensquote (0..1). gk/pe stammen aus berechneProzesskosten. */
+export function berechneKostenrisiko(gk: PostenErgebnis, pe: PostenErgebnis, obsiegensquote: number): Kostenrisiko {
+  const q = Math.min(1, Math.max(0, obsiegensquote));
+  const gkS = postenSpanne(gk);
+  const peS = postenSpanne(pe);
+  const hinweise = [
+    'Verteilung nach Ausgang des Verfahrens (Art. 106 ZPO); die unterliegende Partei zahlt die zugesprochene Parteientschädigung (Art. 111 Abs. 2 ZPO).',
+    'Schätzung: das Gericht kann nach Ermessen abweichen (Art. 107 ZPO, u. a. familienrechtliche Verfahren) und unnötige Kosten gesondert auferlegen (Art. 108 ZPO).',
+    'Deckungslücke: die zugesprochene Parteientschädigung (Tarif) kann unter dem effektiv vereinbarten Anwaltshonorar liegen.',
+  ];
+  if (!gkS || !peS) {
+    return { obsiegensquote: q, berechenbar: false, hinweise: [...hinweise, 'Für diese Konstellation (z. B. Schlichtungspauschale oder aufwandbasierter Anwaltstarif) ist das Kostenrisiko nicht beziffert.'] };
+  }
+  return {
+    obsiegensquote: q,
+    berechenbar: true,
+    gerichtskostenZuLasten: skaliere(gkS, 1 - q),
+    parteientschaedigungSaldo: skaliere(peS, 2 * q - 1),
+    eigeneAnwaltskostenRichtwert: peS,
+    nettoBelastung: { vonChf: Math.round((1 - q) * (gkS.vonChf + 2 * peS.vonChf)), bisChf: Math.round((1 - q) * (gkS.bisChf + 2 * peS.bisChf)) },
+    hinweise,
+  };
+}
+
 /** Interkantonaler Vergleich: dieselbe Konstellation über ALLE 26 Kantone
  *  (Auftrag David — Vergleichstabelle «was kostet es anderswo»). */
 export function vergleichAlleKantone(streitwertCHF: number, phase: Verfahrensphase, materie: Materie): ProzesskostenErgebnis[] {

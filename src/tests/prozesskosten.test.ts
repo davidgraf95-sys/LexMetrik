@@ -1,6 +1,6 @@
 // ─── Prozesskosten-Engine (Art. 95/96/113/114 ZPO) ─────────────────────────
 import { describe, expect, it } from 'vitest';
-import { berechneProzesskosten, vergleichAlleKantone, postenText, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
+import { berechneProzesskosten, berechneKostenrisiko, vergleichAlleKantone, postenText, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 
@@ -71,6 +71,40 @@ describe('kostenlose Verfahren (Art. 113/114 ZPO)', () => {
     const r = berechneProzesskosten({ kanton: 'GE', streitwertCHF: 200000, phase: 'schlichtung', materie: 'allgemein' });
     expect(r.parteientschaedigung.kostenlos).toBe(true);
     expect(r.parteientschaedigung.kostenlosGrund).toContain('Art. 113 Abs. 1');
+  });
+});
+
+describe('Kostenrisiko nach Obsiegensquote (Art. 106/111 ZPO)', () => {
+  const zh = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+  it('ZH 50 000, hälftiges Obsiegen: Gerichtskosten-Anteil + Netto handgerechnet', () => {
+    const r = berechneKostenrisiko(zh.gerichtskosten, zh.parteientschaedigung, 0.5);
+    expect(r.berechenbar).toBe(true);
+    // GK 5550, PE 7000. q=0,5 → GK-Anteil 0,5×5550=2775; Saldo 0; Netto 0,5×(5550+2×7000)=9775
+    expect(r.gerichtskostenZuLasten).toEqual({ vonChf: 2775, bisChf: 2775 });
+    expect(r.parteientschaedigungSaldo).toEqual({ vonChf: 0, bisChf: 0 });
+    expect(r.nettoBelastung).toEqual({ vonChf: 9775, bisChf: 9775 });
+  });
+  it('volles Obsiegen → Netto 0, Parteientschädigung wird zugesprochen', () => {
+    const r = berechneKostenrisiko(zh.gerichtskosten, zh.parteientschaedigung, 1);
+    expect(r.nettoBelastung).toEqual({ vonChf: 0, bisChf: 0 });
+    expect(r.parteientschaedigungSaldo).toEqual({ vonChf: 7000, bisChf: 7000 }); // Sie erhalten
+  });
+  it('volles Unterliegen → Gerichtskosten + beide Parteientschädigungen', () => {
+    const r = berechneKostenrisiko(zh.gerichtskosten, zh.parteientschaedigung, 0);
+    // Netto 1×(5550+2×7000)=19550; Saldo −7000 (Sie zahlen)
+    expect(r.nettoBelastung).toEqual({ vonChf: 19550, bisChf: 19550 });
+    expect(r.parteientschaedigungSaldo).toEqual({ vonChf: -7000, bisChf: -7000 });
+  });
+  it('Ermessensrahmen (BS) → Spannen', () => {
+    const bs = berechneProzesskosten({ kanton: 'BS', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    const r = berechneKostenrisiko(bs.gerichtskosten, bs.parteientschaedigung, 0.5);
+    // GK [3000,6000], PE [4500,10000]; Netto 0,5×(GK+2PE) = [6000,13000]
+    expect(r.nettoBelastung).toEqual({ vonChf: 6000, bisChf: 13000 });
+  });
+  it('aufwandbasierter Tarif (GR Parteientschädigung) → nicht beziffert', () => {
+    const gr = berechneProzesskosten({ kanton: 'GR', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    const r = berechneKostenrisiko(gr.gerichtskosten, gr.parteientschaedigung, 0.5);
+    expect(r.berechenbar).toBe(false);
   });
 });
 
