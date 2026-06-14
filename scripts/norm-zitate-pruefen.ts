@@ -26,6 +26,8 @@ const QUELLEN = [
   // Arbeitsvertrag (Detailgrad-Vollausbau P1a, 14.6.2026) — Art. 319 ff. OR,
   // neu Art. 332 OR (Arbeitsergebnisse) + Art. 34 ZPO (Gerichtsstand).
   'src/lib/vorlagen/arbeitsvertrag.ts',
+  // Lehrvertrag (Sonderregime P1c, 14.6.2026) — Art. 344–346a OR.
+  'src/lib/vorlagen/lehrvertrag.ts',
   // Auftrag/Dienstleistungsvertrag (V3, 13.6.2026) — Art. 394 ff. OR.
   'src/lib/vorlagen/auftrag.ts',
   // Werkvertrag (V3, 13.6.2026) — Art. 363 ff. OR.

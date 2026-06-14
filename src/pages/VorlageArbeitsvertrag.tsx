@@ -1,8 +1,9 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import {
   AV_DEFAULTS, AV_MINDESTLOEHNE, AV_OFFENE_VERIFIKATIONEN,
-  avZusammenstellen, pruefeAvGates, type AvAntworten,
+  avZusammenstellen, pruefeAvGates, type AvAntworten, type AvUntertyp,
 } from '../lib/vorlagen/arbeitsvertrag';
+import { VorlageLehrvertrag } from './VorlageLehrvertrag';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
@@ -39,14 +40,59 @@ const BANNER_AV: PdfBanner = {
 
 const MINDESTLOHN_KANTONE = new Set(AV_MINDESTLOEHNE.map((m) => m.kanton));
 
+// ─── Dispatcher (FAHRPLAN-VERTRAGS-VARIANTEN P1c): EINE Katalog-Karte, der
+// Vertragstyp schaltet das passende Regime-Schema (§4). Einzel/Kader teilen
+// das 319-ff-Regime (EinzelKaderWizard); Lehrvertrag (344 ff.) ist ein eigenes
+// Schema mit eigenem Wizard. Die Regime-Wahl wird separat persistiert.
+const REGIME_KEY = 'lexmetrik.vorlage.arbeitsvertrag.regime.v1';
+type AvRegime = AvUntertyp | 'lehrvertrag';
+const REGIME_OPTIONEN: { id: AvRegime; label: string; sub: string }[] = [
+  { id: 'einzel', label: 'Einzelarbeitsvertrag', sub: 'Standard (Art. 319 ff. OR)' },
+  { id: 'kader', label: 'Kader / Manager', sub: 'leitende Stellung, Bonus' },
+  { id: 'lehrvertrag', label: 'Lehrvertrag', sub: 'Art. 344 ff. OR (Schriftform)' },
+];
+
+function VertragstypWahl({ regime, onWahl }: { regime: AvRegime; onWahl: (v: AvRegime) => void }) {
+  return (
+    <fieldset className="rounded-xl border border-line bg-surface-raised p-4 space-y-1.5">
+      <legend className="lc-overline">Vertragstyp</legend>
+      <div className="flex flex-wrap gap-2">
+        {REGIME_OPTIONEN.map((o) => (
+          <button key={o.id} type="button" onClick={() => onWahl(o.id)}
+            aria-pressed={regime === o.id}
+            className={`rounded-lg border px-3 py-1.5 text-left text-body-s ${regime === o.id ? 'border-brass-500 bg-brass-50 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
+            <span className="font-medium block leading-tight">{o.label}</span>
+            <span className="text-ink-500 text-xs">{o.sub}</span>
+          </button>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
+
 export function VorlageArbeitsvertrag() {
+  const [regime, setRegime] = useState<AvRegime>(() => {
+    try {
+      const r = localStorage.getItem(REGIME_KEY);
+      if (r === 'einzel' || r === 'kader' || r === 'lehrvertrag') return r;
+    } catch { /* defekter Speicher → Default */ }
+    return 'einzel';
+  });
+  useEffect(() => { try { localStorage.setItem(REGIME_KEY, regime); } catch { /* Speicher blockiert */ } }, [regime]);
+
+  const kopf = <VertragstypWahl regime={regime} onWahl={setRegime} />;
+  if (regime === 'lehrvertrag') return <VorlageLehrvertrag kopf={kopf} />;
+  return <EinzelKaderWizard untertyp={regime} kopf={kopf} />;
+}
+
+function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: ReactNode }) {
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
     useWizardState<AvAntworten>({
       defaults: AV_DEFAULTS,
       speicherKey: SPEICHER_KEY,
     });
 
-  const ergebnis = useMemo(() => avZusammenstellen(a), [a]);
+  const ergebnis = useMemo(() => avZusammenstellen({ ...a, untertyp }), [a, untertyp]);
   const gates = useMemo(() => pruefeAvGates(a), [a]);
 
   const fehlerImSchritt = (i: number): string[] => {
@@ -460,16 +506,10 @@ export function VorlageArbeitsvertrag() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
-      kopfSchalter={<VariantenKopf
-        untertypLabel="Vertragstyp"
-        untertypOptionen={[
-          { id: 'einzel', label: 'Einzelarbeitsvertrag', sub: 'Standard (Art. 319 ff. OR)' },
-          { id: 'kader', label: 'Kader / Manager', sub: 'leitende Stellung, Bonus' },
-        ] as const}
-        untertyp={a.untertyp}
-        onUntertyp={(v) => set('untertyp', v)}
-        detailgrad={a.detailgrad}
-        onDetailgrad={(v) => set('detailgrad', v)} />}
+      kopfSchalter={<div className="space-y-3">
+        {kopf}
+        <VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />
+      </div>}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_AV, dateiName: 'Arbeitsvertrag-Entwurf.pdf' },

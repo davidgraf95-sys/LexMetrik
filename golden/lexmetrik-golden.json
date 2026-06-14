@@ -8746,6 +8746,640 @@
    }
   ]
  },
+ "vorl:lv-standard": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Lehrvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "L01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 4051 Basel\n(nachfolgend «Lehrbetrieb»)\n\nund\n\nLea Beispiel\ngeboren am 01.05.2009\nY 2, 4052 Basel\n(nachfolgend «lernende Person»)\n\nvertreten durch die gesetzliche Vertretung\nMaria Beispiel",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "L02_gegenstand",
+      "ueberschrift": "Gegenstand und Dauer der beruflichen Bildung",
+      "text": "1. Der Lehrbetrieb bildet die lernende Person fachgemäss für die berufliche Tätigkeit als Kauffrau (eidgenössisches Fähigkeitszeugnis EFZ). Das Lehrverhältnis beginnt am 01.08.2026 und dauert 3 Jahre; es endet mit Ablauf der vereinbarten Lehrzeit."
+     },
+     {
+      "bausteinId": "L03_probezeit",
+      "ueberschrift": "Probezeit",
+      "text": "2. Die Probezeit beträgt 3 Monate. Während der Probezeit kann das Lehrverhältnis jederzeit mit einer Kündigungsfrist von sieben Tagen gekündigt werden (Art. 346 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "L04_arbeitszeit",
+      "ueberschrift": "Arbeitszeit",
+      "text": "3. Die wöchentliche Arbeitszeit beträgt 41 Stunden; sie umfasst auch den Besuch der Berufsfachschule und der überbetrieblichen Kurse. Vorbehalten bleiben die zwingenden Vorschriften über den Jugendarbeitsschutz (Arbeitsgesetz, ArGV 5)."
+     },
+     {
+      "bausteinId": "L05_lohn",
+      "ueberschrift": "Lohn",
+      "text": "4. Im 1. Lehrjahr beträgt der Bruttolohn CHF 700.00 pro Monat.\n5. Im 2. Lehrjahr beträgt der Bruttolohn CHF 900.00 pro Monat.\n6. Im 3. Lehrjahr beträgt der Bruttolohn CHF 1'200.00 pro Monat."
+     },
+     {
+      "bausteinId": "L06_ferien",
+      "ueberschrift": "Ferien",
+      "text": "7. Die lernende Person hat Anspruch auf 5 Wochen Ferien pro Lehrjahr. Bis zum vollendeten 20. Altersjahr beträgt der Ferienanspruch für jedes Lehrjahr mindestens fünf Wochen (Art. 345a Abs. 3 OR)."
+     },
+     {
+      "bausteinId": "L07_schule",
+      "ueberschrift": "Berufsfachschule und überbetriebliche Kurse",
+      "text": "8. Der Lehrbetrieb gibt der lernenden Person ohne Lohnabzug die Zeit frei, die für den Besuch der Berufsfachschule und der überbetrieblichen Kurse sowie für die Teilnahme an den Lehrabschlussprüfungen erforderlich ist (Art. 345a Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "L08_bildungspflichten",
+      "ueberschrift": "Pflichten des Lehrbetriebs",
+      "text": "9. Der Lehrbetrieb sorgt dafür, dass die berufliche Bildung unter der Verantwortung einer Fachkraft steht, welche die erforderlichen beruflichen Fähigkeiten und persönlichen Eigenschaften besitzt. Die lernende Person darf zu anderen als beruflichen Arbeiten und zu Akkordarbeiten nur eingesetzt werden, soweit diese mit dem zu erlernenden Beruf zusammenhängen und die Bildung nicht beeinträchtigt wird (Art. 345a Abs. 1 und 4 OR)."
+     },
+     {
+      "bausteinId": "L09_pflichten_lernende",
+      "ueberschrift": "Pflichten der lernenden Person",
+      "text": "10. Die lernende Person tut alles, um das Lehrziel zu erreichen. Die gesetzliche Vertretung unterstützt den Lehrbetrieb in der Erfüllung seiner Aufgabe und fördert das gute Einvernehmen (Art. 345 OR)."
+     },
+     {
+      "bausteinId": "L11_beendigung",
+      "ueberschrift": "Auflösung des Lehrverhältnisses",
+      "text": "11. Nach Ablauf der Probezeit kann das Lehrverhältnis nicht ordentlich gekündigt werden; es endet mit Ablauf der vereinbarten Lehrzeit. Aus wichtigen Gründen im Sinne von Art. 337 OR kann es jederzeit fristlos aufgelöst werden, namentlich wenn der Fachkraft die erforderlichen Fähigkeiten fehlen, wenn die lernende Person nicht über die unentbehrlichen Anlagen verfügt oder gesundheitlich oder sittlich gefährdet ist, oder wenn die Bildung nicht zu Ende geführt werden kann. Vor einer Auflösung wegen fehlender Anlagen oder Gefährdung sind die lernende Person und ihre gesetzliche Vertretung anzuhören (Art. 346 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "L12_zeugnis",
+      "ueberschrift": "Lehrzeugnis",
+      "text": "12. Nach Beendigung der Lehre stellt der Lehrbetrieb der lernenden Person ein Zeugnis aus, das die erlernte Berufstätigkeit und die Dauer der Lehre angibt; auf Verlangen äussert es sich auch über Fähigkeiten, Leistungen und Verhalten (Art. 346a OR)."
+     },
+     {
+      "bausteinId": "L13_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "13. Der Vertrag ist vor Lehrbeginn der kantonalen Behörde zur Genehmigung einzureichen (Art. 14 BBG). Abreden, welche die lernende Person im freien Entscheid über die berufliche Tätigkeit nach der Lehre beeinträchtigen, sind nichtig (Art. 344a Abs. 6 OR). Änderungen bedürfen der Schriftform; im Übrigen gelten die Art. 344 ff. OR sowie die Berufsbildungsgesetzgebung. Dieser Vertrag wird in so vielen Exemplaren ausgefertigt, dass Lehrbetrieb, lernende Person und gesetzliche Vertretung je ein unterzeichnetes Exemplar erhalten."
+     },
+     {
+      "bausteinId": "L14_unterschriften",
+      "text": "Basel, 15.06.2026\n\n\nDer Lehrbetrieb:\n\n___________________________\nMuster AG\n\n\nDie lernende Person:\n\n___________________________\nLea Beispiel\n\n\nDie gesetzliche Vertretung:\n\n___________________________\nMaria Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Lehrvertrag bedarf zu seiner Gültigkeit der Schriftform (Art. 344a Abs. 1 OR) und der Genehmigung durch die kantonale Behörde (Art. 14 BBG). Zwingend sind insbesondere die Probezeit (1–3 Monate, Art. 344a OR), die fünf Wochen Ferien bis zum 20. Altersjahr (Art. 345a OR) und der Jugendarbeitsschutz (ArGV 5). Massgebend sind Gesetz und der Einzelfall.",
+    "version": "1.0.0 (Art. 344–346a OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1c)"
+   },
+   "aufgenommen": [
+    "L01_parteien",
+    "L02_gegenstand",
+    "L03_probezeit",
+    "L04_arbeitszeit",
+    "L05_lohn",
+    "L06_ferien",
+    "L07_schule",
+    "L08_bildungspflichten",
+    "L09_pflichten_lernende",
+    "L11_beendigung",
+    "L12_zeugnis",
+    "L13_schluss",
+    "L14_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "L01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Lehrbetrieb, lernende Person, bei Minderjährigkeit gesetzliche Vertretung) – immer enthalten.",
+     "norm": "Art. 344 OR"
+    },
+    {
+     "bausteinId": "L02_gegenstand",
+     "begruendung": "Art und Dauer der beruflichen Bildung – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L03_probezeit",
+     "begruendung": "Probezeit (1–3 Monate, Default 3) – zwingender Pflichtinhalt und Kündigungsregel (Art. 344a Abs. 3, 346 Abs. 1 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L04_arbeitszeit",
+     "begruendung": "Arbeitszeit – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR); Jugendarbeitsschutz vorbehalten.",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L05_lohn",
+     "begruendung": "Lohn je Lehrjahr – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L06_ferien",
+     "begruendung": "Ferien – zwingender Pflichtinhalt; erhöhtes Minimum von 5 Wochen bis 20 (Art. 344a Abs. 2, 345a Abs. 3 OR).",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L07_schule",
+     "begruendung": "Freistellung für Schule/Kurse/Prüfungen ohne Lohnabzug (Art. 345a Abs. 2 OR) – zwingend.",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L08_bildungspflichten",
+     "begruendung": "Fachkraft-Verantwortung und Einsatzgrenzen (Art. 345a Abs. 1/4 OR) – ab «standard».",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L09_pflichten_lernende",
+     "begruendung": "Pflichten der lernenden Person und der gesetzlichen Vertretung (Art. 345 OR) – ab «standard» (deklaratorisch).",
+     "norm": "Art. 345 OR"
+    },
+    {
+     "bausteinId": "L11_beendigung",
+     "begruendung": "Beendigung: keine ordentliche Kündigung nach der Probezeit, fristlose Auflösung aus wichtigem Grund mit Anhörungspflicht (Art. 346 OR).",
+     "norm": "Art. 346 OR"
+    },
+    {
+     "bausteinId": "L12_zeugnis",
+     "begruendung": "Anspruch auf Lehrzeugnis (Art. 346a OR) – ab «standard».",
+     "norm": "Art. 346a OR"
+    },
+    {
+     "bausteinId": "L13_schluss",
+     "begruendung": "Genehmigungspflicht (BBG 14), Nichtigkeit berufswahlbeschränkender Abreden (344a VI), Schriftform, Ausfertigung – immer enthalten.",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L14_unterschriften",
+     "begruendung": "Ort, Datum und Unterschriften aller Beteiligten – erfüllt die Gültigkeits-Schriftform (Art. 344a Abs. 1 OR).",
+     "norm": "Art. 344a OR"
+    }
+   ]
+  }
+ },
+ "vorl:lv-experte": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Lehrvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "L01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 4051 Basel\n(nachfolgend «Lehrbetrieb»)\n\nund\n\nLea Beispiel\ngeboren am 01.05.2009\nY 2, 4052 Basel\n(nachfolgend «lernende Person»)\n\nvertreten durch die gesetzliche Vertretung\nMaria Beispiel",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "L02_gegenstand",
+      "ueberschrift": "Gegenstand und Dauer der beruflichen Bildung",
+      "text": "1. Der Lehrbetrieb bildet die lernende Person fachgemäss für die berufliche Tätigkeit als Kauffrau (eidgenössisches Fähigkeitszeugnis EFZ). Das Lehrverhältnis beginnt am 01.08.2026 und dauert 3 Jahre; es endet mit Ablauf der vereinbarten Lehrzeit."
+     },
+     {
+      "bausteinId": "L03_probezeit",
+      "ueberschrift": "Probezeit",
+      "text": "2. Die Probezeit beträgt 3 Monate. Während der Probezeit kann das Lehrverhältnis jederzeit mit einer Kündigungsfrist von sieben Tagen gekündigt werden (Art. 346 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "L04_arbeitszeit",
+      "ueberschrift": "Arbeitszeit",
+      "text": "3. Die wöchentliche Arbeitszeit beträgt 41 Stunden; sie umfasst auch den Besuch der Berufsfachschule und der überbetrieblichen Kurse. Vorbehalten bleiben die zwingenden Vorschriften über den Jugendarbeitsschutz (Arbeitsgesetz, ArGV 5)."
+     },
+     {
+      "bausteinId": "L05_lohn",
+      "ueberschrift": "Lohn",
+      "text": "4. Im 1. Lehrjahr beträgt der Bruttolohn CHF 700.00 pro Monat.\n5. Im 2. Lehrjahr beträgt der Bruttolohn CHF 900.00 pro Monat.\n6. Im 3. Lehrjahr beträgt der Bruttolohn CHF 1'200.00 pro Monat."
+     },
+     {
+      "bausteinId": "L06_ferien",
+      "ueberschrift": "Ferien",
+      "text": "7. Die lernende Person hat Anspruch auf 5 Wochen Ferien pro Lehrjahr. Bis zum vollendeten 20. Altersjahr beträgt der Ferienanspruch für jedes Lehrjahr mindestens fünf Wochen (Art. 345a Abs. 3 OR)."
+     },
+     {
+      "bausteinId": "L07_schule",
+      "ueberschrift": "Berufsfachschule und überbetriebliche Kurse",
+      "text": "8. Der Lehrbetrieb gibt der lernenden Person ohne Lohnabzug die Zeit frei, die für den Besuch der Berufsfachschule und der überbetrieblichen Kurse sowie für die Teilnahme an den Lehrabschlussprüfungen erforderlich ist (Art. 345a Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "L08_bildungspflichten",
+      "ueberschrift": "Pflichten des Lehrbetriebs",
+      "text": "9. Der Lehrbetrieb sorgt dafür, dass die berufliche Bildung unter der Verantwortung einer Fachkraft steht, welche die erforderlichen beruflichen Fähigkeiten und persönlichen Eigenschaften besitzt. Die lernende Person darf zu anderen als beruflichen Arbeiten und zu Akkordarbeiten nur eingesetzt werden, soweit diese mit dem zu erlernenden Beruf zusammenhängen und die Bildung nicht beeinträchtigt wird (Art. 345a Abs. 1 und 4 OR)."
+     },
+     {
+      "bausteinId": "L09_pflichten_lernende",
+      "ueberschrift": "Pflichten der lernenden Person",
+      "text": "10. Die lernende Person tut alles, um das Lehrziel zu erreichen. Die gesetzliche Vertretung unterstützt den Lehrbetrieb in der Erfüllung seiner Aufgabe und fördert das gute Einvernehmen (Art. 345 OR)."
+     },
+     {
+      "bausteinId": "L10_weitere_leistungen",
+      "ueberschrift": "Weitere Leistungen",
+      "text": "11. Die Parteien vereinbaren zusätzlich:\n– Der Lehrbetrieb stellt die für die Bildung erforderlichen Berufswerkzeuge zur Verfügung.\n– Der Lehrbetrieb leistet einen Beitrag an Unterkunft und Verpflegung.\n– Der Lehrbetrieb übernimmt die Prämien der obligatorischen Unfallversicherung im gesetzlichen Umfang."
+     },
+     {
+      "bausteinId": "L11_beendigung",
+      "ueberschrift": "Auflösung des Lehrverhältnisses",
+      "text": "12. Nach Ablauf der Probezeit kann das Lehrverhältnis nicht ordentlich gekündigt werden; es endet mit Ablauf der vereinbarten Lehrzeit. Aus wichtigen Gründen im Sinne von Art. 337 OR kann es jederzeit fristlos aufgelöst werden, namentlich wenn der Fachkraft die erforderlichen Fähigkeiten fehlen, wenn die lernende Person nicht über die unentbehrlichen Anlagen verfügt oder gesundheitlich oder sittlich gefährdet ist, oder wenn die Bildung nicht zu Ende geführt werden kann. Vor einer Auflösung wegen fehlender Anlagen oder Gefährdung sind die lernende Person und ihre gesetzliche Vertretung anzuhören (Art. 346 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "L12_zeugnis",
+      "ueberschrift": "Lehrzeugnis",
+      "text": "13. Nach Beendigung der Lehre stellt der Lehrbetrieb der lernenden Person ein Zeugnis aus, das die erlernte Berufstätigkeit und die Dauer der Lehre angibt; auf Verlangen äussert es sich auch über Fähigkeiten, Leistungen und Verhalten (Art. 346a OR)."
+     },
+     {
+      "bausteinId": "L13_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "14. Der Vertrag ist vor Lehrbeginn der kantonalen Behörde zur Genehmigung einzureichen (Art. 14 BBG). Abreden, welche die lernende Person im freien Entscheid über die berufliche Tätigkeit nach der Lehre beeinträchtigen, sind nichtig (Art. 344a Abs. 6 OR). Änderungen bedürfen der Schriftform; im Übrigen gelten die Art. 344 ff. OR sowie die Berufsbildungsgesetzgebung. Dieser Vertrag wird in so vielen Exemplaren ausgefertigt, dass Lehrbetrieb, lernende Person und gesetzliche Vertretung je ein unterzeichnetes Exemplar erhalten."
+     },
+     {
+      "bausteinId": "L14_unterschriften",
+      "text": "Basel, 15.06.2026\n\n\nDer Lehrbetrieb:\n\n___________________________\nMuster AG\n\n\nDie lernende Person:\n\n___________________________\nLea Beispiel\n\n\nDie gesetzliche Vertretung:\n\n___________________________\nMaria Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Lehrvertrag bedarf zu seiner Gültigkeit der Schriftform (Art. 344a Abs. 1 OR) und der Genehmigung durch die kantonale Behörde (Art. 14 BBG). Zwingend sind insbesondere die Probezeit (1–3 Monate, Art. 344a OR), die fünf Wochen Ferien bis zum 20. Altersjahr (Art. 345a OR) und der Jugendarbeitsschutz (ArGV 5). Massgebend sind Gesetz und der Einzelfall.",
+    "version": "1.0.0 (Art. 344–346a OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1c)"
+   },
+   "aufgenommen": [
+    "L01_parteien",
+    "L02_gegenstand",
+    "L03_probezeit",
+    "L04_arbeitszeit",
+    "L05_lohn",
+    "L06_ferien",
+    "L07_schule",
+    "L08_bildungspflichten",
+    "L09_pflichten_lernende",
+    "L10_weitere_leistungen",
+    "L11_beendigung",
+    "L12_zeugnis",
+    "L13_schluss",
+    "L14_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "L01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Lehrbetrieb, lernende Person, bei Minderjährigkeit gesetzliche Vertretung) – immer enthalten.",
+     "norm": "Art. 344 OR"
+    },
+    {
+     "bausteinId": "L02_gegenstand",
+     "begruendung": "Art und Dauer der beruflichen Bildung – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L03_probezeit",
+     "begruendung": "Probezeit (1–3 Monate, Default 3) – zwingender Pflichtinhalt und Kündigungsregel (Art. 344a Abs. 3, 346 Abs. 1 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L04_arbeitszeit",
+     "begruendung": "Arbeitszeit – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR); Jugendarbeitsschutz vorbehalten.",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L05_lohn",
+     "begruendung": "Lohn je Lehrjahr – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L06_ferien",
+     "begruendung": "Ferien – zwingender Pflichtinhalt; erhöhtes Minimum von 5 Wochen bis 20 (Art. 344a Abs. 2, 345a Abs. 3 OR).",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L07_schule",
+     "begruendung": "Freistellung für Schule/Kurse/Prüfungen ohne Lohnabzug (Art. 345a Abs. 2 OR) – zwingend.",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L08_bildungspflichten",
+     "begruendung": "Fachkraft-Verantwortung und Einsatzgrenzen (Art. 345a Abs. 1/4 OR) – ab «standard».",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L09_pflichten_lernende",
+     "begruendung": "Pflichten der lernenden Person und der gesetzlichen Vertretung (Art. 345 OR) – ab «standard» (deklaratorisch).",
+     "norm": "Art. 345 OR"
+    },
+    {
+     "bausteinId": "L10_weitere_leistungen",
+     "begruendung": "Weitere Bestimmungen über Berufswerkzeuge, Unterkunft/Verpflegung, Versicherungsprämien (Art. 344a Abs. 5 OR) – Detailgrad «experte».",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L11_beendigung",
+     "begruendung": "Beendigung: keine ordentliche Kündigung nach der Probezeit, fristlose Auflösung aus wichtigem Grund mit Anhörungspflicht (Art. 346 OR).",
+     "norm": "Art. 346 OR"
+    },
+    {
+     "bausteinId": "L12_zeugnis",
+     "begruendung": "Anspruch auf Lehrzeugnis (Art. 346a OR) – ab «standard».",
+     "norm": "Art. 346a OR"
+    },
+    {
+     "bausteinId": "L13_schluss",
+     "begruendung": "Genehmigungspflicht (BBG 14), Nichtigkeit berufswahlbeschränkender Abreden (344a VI), Schriftform, Ausfertigung – immer enthalten.",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L14_unterschriften",
+     "begruendung": "Ort, Datum und Unterschriften aller Beteiligten – erfüllt die Gültigkeits-Schriftform (Art. 344a Abs. 1 OR).",
+     "norm": "Art. 344a OR"
+    }
+   ]
+  }
+ },
+ "vorl:lv-volljaehrig-einfach": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Lehrvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "L01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 4051 Basel\n(nachfolgend «Lehrbetrieb»)\n\nund\n\nLea Beispiel\ngeboren am 01.01.2000\nY 2, 4052 Basel\n(nachfolgend «lernende Person»)________",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "L02_gegenstand",
+      "ueberschrift": "Gegenstand und Dauer der beruflichen Bildung",
+      "text": "1. Der Lehrbetrieb bildet die lernende Person fachgemäss für die berufliche Tätigkeit als Kauffrau (eidgenössisches Fähigkeitszeugnis EFZ). Das Lehrverhältnis beginnt am 01.08.2026 und dauert 3 Jahre; es endet mit Ablauf der vereinbarten Lehrzeit."
+     },
+     {
+      "bausteinId": "L03_probezeit",
+      "ueberschrift": "Probezeit",
+      "text": "2. Die Probezeit beträgt 3 Monate. Während der Probezeit kann das Lehrverhältnis jederzeit mit einer Kündigungsfrist von sieben Tagen gekündigt werden (Art. 346 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "L04_arbeitszeit",
+      "ueberschrift": "Arbeitszeit",
+      "text": "3. Die wöchentliche Arbeitszeit beträgt 41 Stunden; sie umfasst auch den Besuch der Berufsfachschule und der überbetrieblichen Kurse. Vorbehalten bleiben die zwingenden Vorschriften über den Jugendarbeitsschutz (Arbeitsgesetz, ArGV 5)."
+     },
+     {
+      "bausteinId": "L05_lohn",
+      "ueberschrift": "Lohn",
+      "text": "4. Im 1. Lehrjahr beträgt der Bruttolohn CHF 700.00 pro Monat.\n5. Im 2. Lehrjahr beträgt der Bruttolohn CHF 900.00 pro Monat.\n6. Im 3. Lehrjahr beträgt der Bruttolohn CHF 1'200.00 pro Monat."
+     },
+     {
+      "bausteinId": "L06_ferien",
+      "ueberschrift": "Ferien",
+      "text": "7. Die lernende Person hat Anspruch auf 5 Wochen Ferien pro Lehrjahr. Bis zum vollendeten 20. Altersjahr beträgt der Ferienanspruch für jedes Lehrjahr mindestens fünf Wochen (Art. 345a Abs. 3 OR)."
+     },
+     {
+      "bausteinId": "L07_schule",
+      "ueberschrift": "Berufsfachschule und überbetriebliche Kurse",
+      "text": "8. Der Lehrbetrieb gibt der lernenden Person ohne Lohnabzug die Zeit frei, die für den Besuch der Berufsfachschule und der überbetrieblichen Kurse sowie für die Teilnahme an den Lehrabschlussprüfungen erforderlich ist (Art. 345a Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "L11_beendigung",
+      "ueberschrift": "Auflösung des Lehrverhältnisses",
+      "text": "9. Nach Ablauf der Probezeit kann das Lehrverhältnis nicht ordentlich gekündigt werden; es endet mit Ablauf der vereinbarten Lehrzeit. Aus wichtigen Gründen im Sinne von Art. 337 OR kann es jederzeit fristlos aufgelöst werden, namentlich wenn der Fachkraft die erforderlichen Fähigkeiten fehlen, wenn die lernende Person nicht über die unentbehrlichen Anlagen verfügt oder gesundheitlich oder sittlich gefährdet ist, oder wenn die Bildung nicht zu Ende geführt werden kann. Vor einer Auflösung wegen fehlender Anlagen oder Gefährdung sind die lernende Person und ihre gesetzliche Vertretung anzuhören (Art. 346 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "L13_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "10. Der Vertrag ist vor Lehrbeginn der kantonalen Behörde zur Genehmigung einzureichen (Art. 14 BBG). Abreden, welche die lernende Person im freien Entscheid über die berufliche Tätigkeit nach der Lehre beeinträchtigen, sind nichtig (Art. 344a Abs. 6 OR). Änderungen bedürfen der Schriftform; im Übrigen gelten die Art. 344 ff. OR sowie die Berufsbildungsgesetzgebung. Dieser Vertrag wird in so vielen Exemplaren ausgefertigt, dass Lehrbetrieb, lernende Person und gesetzliche Vertretung je ein unterzeichnetes Exemplar erhalten."
+     },
+     {
+      "bausteinId": "L14_unterschriften",
+      "text": "Basel, 15.06.2026\n\n\nDer Lehrbetrieb:\n\n___________________________\nMuster AG\n\n\nDie lernende Person:\n\n___________________________\nLea Beispiel\n\n\nDie gesetzliche Vertretung:\n\n___________________________\nentfällt (volljährig)",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Lehrvertrag bedarf zu seiner Gültigkeit der Schriftform (Art. 344a Abs. 1 OR) und der Genehmigung durch die kantonale Behörde (Art. 14 BBG). Zwingend sind insbesondere die Probezeit (1–3 Monate, Art. 344a OR), die fünf Wochen Ferien bis zum 20. Altersjahr (Art. 345a OR) und der Jugendarbeitsschutz (ArGV 5). Massgebend sind Gesetz und der Einzelfall.",
+    "version": "1.0.0 (Art. 344–346a OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1c)"
+   },
+   "aufgenommen": [
+    "L01_parteien",
+    "L02_gegenstand",
+    "L03_probezeit",
+    "L04_arbeitszeit",
+    "L05_lohn",
+    "L06_ferien",
+    "L07_schule",
+    "L11_beendigung",
+    "L13_schluss",
+    "L14_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "L01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Lehrbetrieb, lernende Person, bei Minderjährigkeit gesetzliche Vertretung) – immer enthalten.",
+     "norm": "Art. 344 OR"
+    },
+    {
+     "bausteinId": "L02_gegenstand",
+     "begruendung": "Art und Dauer der beruflichen Bildung – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L03_probezeit",
+     "begruendung": "Probezeit (1–3 Monate, Default 3) – zwingender Pflichtinhalt und Kündigungsregel (Art. 344a Abs. 3, 346 Abs. 1 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L04_arbeitszeit",
+     "begruendung": "Arbeitszeit – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR); Jugendarbeitsschutz vorbehalten.",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L05_lohn",
+     "begruendung": "Lohn je Lehrjahr – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L06_ferien",
+     "begruendung": "Ferien – zwingender Pflichtinhalt; erhöhtes Minimum von 5 Wochen bis 20 (Art. 344a Abs. 2, 345a Abs. 3 OR).",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L07_schule",
+     "begruendung": "Freistellung für Schule/Kurse/Prüfungen ohne Lohnabzug (Art. 345a Abs. 2 OR) – zwingend.",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L11_beendigung",
+     "begruendung": "Beendigung: keine ordentliche Kündigung nach der Probezeit, fristlose Auflösung aus wichtigem Grund mit Anhörungspflicht (Art. 346 OR).",
+     "norm": "Art. 346 OR"
+    },
+    {
+     "bausteinId": "L13_schluss",
+     "begruendung": "Genehmigungspflicht (BBG 14), Nichtigkeit berufswahlbeschränkender Abreden (344a VI), Schriftform, Ausfertigung – immer enthalten.",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L14_unterschriften",
+     "begruendung": "Ort, Datum und Unterschriften aller Beteiligten – erfüllt die Gültigkeits-Schriftform (Art. 344a Abs. 1 OR).",
+     "norm": "Art. 344a OR"
+    }
+   ]
+  }
+ },
+ "vorl:lv-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Lehrvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "L01_parteien",
+      "text": "zwischen\n\n________\n(nachfolgend «Lehrbetrieb»)\n\nund\n\n________\n(nachfolgend «lernende Person»)________",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "L02_gegenstand",
+      "ueberschrift": "Gegenstand und Dauer der beruflichen Bildung",
+      "text": "1. Der Lehrbetrieb bildet die lernende Person fachgemäss für die berufliche Tätigkeit als ________ (eidgenössisches Fähigkeitszeugnis EFZ). Das Lehrverhältnis beginnt am ________ und dauert 3 Jahre; es endet mit Ablauf der vereinbarten Lehrzeit."
+     },
+     {
+      "bausteinId": "L03_probezeit",
+      "ueberschrift": "Probezeit",
+      "text": "2. Die Probezeit beträgt 3 Monate. Während der Probezeit kann das Lehrverhältnis jederzeit mit einer Kündigungsfrist von sieben Tagen gekündigt werden (Art. 346 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "L04_arbeitszeit",
+      "ueberschrift": "Arbeitszeit",
+      "text": "3. Die wöchentliche Arbeitszeit beträgt 41 Stunden; sie umfasst auch den Besuch der Berufsfachschule und der überbetrieblichen Kurse. Vorbehalten bleiben die zwingenden Vorschriften über den Jugendarbeitsschutz (Arbeitsgesetz, ArGV 5)."
+     },
+     {
+      "bausteinId": "L05_lohn",
+      "ueberschrift": "Lohn",
+      "text": "4. Im 1. Lehrjahr beträgt der Bruttolohn CHF ________ pro Monat."
+     },
+     {
+      "bausteinId": "L06_ferien",
+      "ueberschrift": "Ferien",
+      "text": "5. Die lernende Person hat Anspruch auf 5 Wochen Ferien pro Lehrjahr. Bis zum vollendeten 20. Altersjahr beträgt der Ferienanspruch für jedes Lehrjahr mindestens fünf Wochen (Art. 345a Abs. 3 OR)."
+     },
+     {
+      "bausteinId": "L07_schule",
+      "ueberschrift": "Berufsfachschule und überbetriebliche Kurse",
+      "text": "6. Der Lehrbetrieb gibt der lernenden Person ohne Lohnabzug die Zeit frei, die für den Besuch der Berufsfachschule und der überbetrieblichen Kurse sowie für die Teilnahme an den Lehrabschlussprüfungen erforderlich ist (Art. 345a Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "L08_bildungspflichten",
+      "ueberschrift": "Pflichten des Lehrbetriebs",
+      "text": "7. Der Lehrbetrieb sorgt dafür, dass die berufliche Bildung unter der Verantwortung einer Fachkraft steht, welche die erforderlichen beruflichen Fähigkeiten und persönlichen Eigenschaften besitzt. Die lernende Person darf zu anderen als beruflichen Arbeiten und zu Akkordarbeiten nur eingesetzt werden, soweit diese mit dem zu erlernenden Beruf zusammenhängen und die Bildung nicht beeinträchtigt wird (Art. 345a Abs. 1 und 4 OR)."
+     },
+     {
+      "bausteinId": "L09_pflichten_lernende",
+      "ueberschrift": "Pflichten der lernenden Person",
+      "text": "8. Die lernende Person tut alles, um das Lehrziel zu erreichen. Die gesetzliche Vertretung unterstützt den Lehrbetrieb in der Erfüllung seiner Aufgabe und fördert das gute Einvernehmen (Art. 345 OR)."
+     },
+     {
+      "bausteinId": "L11_beendigung",
+      "ueberschrift": "Auflösung des Lehrverhältnisses",
+      "text": "9. Nach Ablauf der Probezeit kann das Lehrverhältnis nicht ordentlich gekündigt werden; es endet mit Ablauf der vereinbarten Lehrzeit. Aus wichtigen Gründen im Sinne von Art. 337 OR kann es jederzeit fristlos aufgelöst werden, namentlich wenn der Fachkraft die erforderlichen Fähigkeiten fehlen, wenn die lernende Person nicht über die unentbehrlichen Anlagen verfügt oder gesundheitlich oder sittlich gefährdet ist, oder wenn die Bildung nicht zu Ende geführt werden kann. Vor einer Auflösung wegen fehlender Anlagen oder Gefährdung sind die lernende Person und ihre gesetzliche Vertretung anzuhören (Art. 346 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "L12_zeugnis",
+      "ueberschrift": "Lehrzeugnis",
+      "text": "10. Nach Beendigung der Lehre stellt der Lehrbetrieb der lernenden Person ein Zeugnis aus, das die erlernte Berufstätigkeit und die Dauer der Lehre angibt; auf Verlangen äussert es sich auch über Fähigkeiten, Leistungen und Verhalten (Art. 346a OR)."
+     },
+     {
+      "bausteinId": "L13_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "11. Der Vertrag ist vor Lehrbeginn der kantonalen Behörde zur Genehmigung einzureichen (Art. 14 BBG). Abreden, welche die lernende Person im freien Entscheid über die berufliche Tätigkeit nach der Lehre beeinträchtigen, sind nichtig (Art. 344a Abs. 6 OR). Änderungen bedürfen der Schriftform; im Übrigen gelten die Art. 344 ff. OR sowie die Berufsbildungsgesetzgebung. Dieser Vertrag wird in so vielen Exemplaren ausgefertigt, dass Lehrbetrieb, lernende Person und gesetzliche Vertretung je ein unterzeichnetes Exemplar erhalten."
+     },
+     {
+      "bausteinId": "L14_unterschriften",
+      "text": "________, ________\n\n\nDer Lehrbetrieb:\n\n___________________________\n________\n\n\nDie lernende Person:\n\n___________________________\n________\n\n\nDie gesetzliche Vertretung:\n\n___________________________\nentfällt (volljährig)",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Lehrvertrag bedarf zu seiner Gültigkeit der Schriftform (Art. 344a Abs. 1 OR) und der Genehmigung durch die kantonale Behörde (Art. 14 BBG). Zwingend sind insbesondere die Probezeit (1–3 Monate, Art. 344a OR), die fünf Wochen Ferien bis zum 20. Altersjahr (Art. 345a OR) und der Jugendarbeitsschutz (ArGV 5). Massgebend sind Gesetz und der Einzelfall.",
+    "version": "1.0.0 (Art. 344–346a OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1c)"
+   },
+   "aufgenommen": [
+    "L01_parteien",
+    "L02_gegenstand",
+    "L03_probezeit",
+    "L04_arbeitszeit",
+    "L05_lohn",
+    "L06_ferien",
+    "L07_schule",
+    "L08_bildungspflichten",
+    "L09_pflichten_lernende",
+    "L11_beendigung",
+    "L12_zeugnis",
+    "L13_schluss",
+    "L14_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "L01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien (Lehrbetrieb, lernende Person, bei Minderjährigkeit gesetzliche Vertretung) – immer enthalten.",
+     "norm": "Art. 344 OR"
+    },
+    {
+     "bausteinId": "L02_gegenstand",
+     "begruendung": "Art und Dauer der beruflichen Bildung – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L03_probezeit",
+     "begruendung": "Probezeit (1–3 Monate, Default 3) – zwingender Pflichtinhalt und Kündigungsregel (Art. 344a Abs. 3, 346 Abs. 1 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L04_arbeitszeit",
+     "begruendung": "Arbeitszeit – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR); Jugendarbeitsschutz vorbehalten.",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L05_lohn",
+     "begruendung": "Lohn je Lehrjahr – zwingender Pflichtinhalt (Art. 344a Abs. 2 OR).",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L06_ferien",
+     "begruendung": "Ferien – zwingender Pflichtinhalt; erhöhtes Minimum von 5 Wochen bis 20 (Art. 344a Abs. 2, 345a Abs. 3 OR).",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L07_schule",
+     "begruendung": "Freistellung für Schule/Kurse/Prüfungen ohne Lohnabzug (Art. 345a Abs. 2 OR) – zwingend.",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L08_bildungspflichten",
+     "begruendung": "Fachkraft-Verantwortung und Einsatzgrenzen (Art. 345a Abs. 1/4 OR) – ab «standard».",
+     "norm": "Art. 345a OR"
+    },
+    {
+     "bausteinId": "L09_pflichten_lernende",
+     "begruendung": "Pflichten der lernenden Person und der gesetzlichen Vertretung (Art. 345 OR) – ab «standard» (deklaratorisch).",
+     "norm": "Art. 345 OR"
+    },
+    {
+     "bausteinId": "L11_beendigung",
+     "begruendung": "Beendigung: keine ordentliche Kündigung nach der Probezeit, fristlose Auflösung aus wichtigem Grund mit Anhörungspflicht (Art. 346 OR).",
+     "norm": "Art. 346 OR"
+    },
+    {
+     "bausteinId": "L12_zeugnis",
+     "begruendung": "Anspruch auf Lehrzeugnis (Art. 346a OR) – ab «standard».",
+     "norm": "Art. 346a OR"
+    },
+    {
+     "bausteinId": "L13_schluss",
+     "begruendung": "Genehmigungspflicht (BBG 14), Nichtigkeit berufswahlbeschränkender Abreden (344a VI), Schriftform, Ausfertigung – immer enthalten.",
+     "norm": "Art. 344a OR"
+    },
+    {
+     "bausteinId": "L14_unterschriften",
+     "begruendung": "Ort, Datum und Unterschriften aller Beteiligten – erfüllt die Gültigkeits-Schriftform (Art. 344a Abs. 1 OR).",
+     "norm": "Art. 344a OR"
+    }
+   ]
+  }
+ },
+ "vorl:lv-gates": {
+  "blocker": [
+   "Eine Probezeit von mehr als drei Monaten ist nur mit Zustimmung der kantonalen Behörde gültig (Art. 344a Abs. 4 OR) – diese ist zu bestätigen oder die Probezeit auf höchstens drei Monate zu setzen.",
+   "Bis zum vollendeten 20. Altersjahr stehen der lernenden Person für jedes Lehrjahr mindestens fünf Wochen Ferien zu (Art. 345a Abs. 3 OR)."
+  ],
+  "warnungen": [],
+  "hinweise": [
+   "Der Lehrvertrag bedarf zu seiner Gültigkeit der schriftlichen Form (Art. 344a Abs. 1 OR): Er ist von der lernenden Person, der gesetzlichen Vertretung (bei Minderjährigkeit) und dem Lehrbetrieb zu unterzeichnen. Ein bloss mündlicher Lehrvertrag ist nichtig.",
+   "Der Lehrvertrag ist vor Lehrbeginn der kantonalen Behörde zur Genehmigung einzureichen (Art. 14 des Berufsbildungsgesetzes); ohne Genehmigung darf die Bildung nicht begonnen werden. Verfahren und Formular sind kantonal.",
+   "Ein nachvertragliches Konkurrenzverbot oder eine andere Abrede, welche die lernende Person im freien Entscheid über ihre berufliche Tätigkeit nach der Lehre beeinträchtigt, ist nichtig (Art. 344a Abs. 6 OR) – eine solche Klausel wird bewusst NICHT angeboten."
+  ]
+ },
  "vorl:mv": {
   "dokument": {
    "titel": "Mietvertrag",

@@ -30,6 +30,7 @@ import { vaZusammenstellen, VA_DEFAULTS } from '../src/lib/vorlagen/vorsorgeauft
 import { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } from '../src/lib/vorlagen/schlichtungsgesuchBs';
 import { koZusammenstellen, KO_DEFAULTS } from '../src/lib/vorlagen/klageOrdentlich';
 import { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } from '../src/lib/vorlagen/arbeitsvertrag';
+import { lvZusammenstellen, LV_DEFAULTS, pruefeLvGates } from '../src/lib/vorlagen/lehrvertrag';
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
@@ -208,6 +209,20 @@ f('vorl:av-experte', () => avZusammenstellen({ ...avBasis, detailgrad: 'experte'
 // einzel bleibt byte-identisch (vorl:av oben).
 f('vorl:av-kader', () => avZusammenstellen({ ...avBasis, untertyp: 'kader' }));
 f('vorl:av-kader-experte', () => avZusammenstellen({ ...avBasis, untertyp: 'kader', detailgrad: 'experte' }));
+// Lehrvertrag (Art. 344–346a OR; P1c) – Sonderregime, eigenes Schema.
+const lvBasis = {
+  ...LV_DEFAULTS, betriebName: 'Muster AG', betriebAdresse: 'X 1, 4051 Basel',
+  lernendeVorname: 'Lea', lernendeName: 'Beispiel', lernendeAdresse: 'Y 2, 4052 Basel',
+  lernendeGeburtsdatum: '2009-05-01', gesetzlicheVertretung: 'Maria Beispiel',
+  beruf: 'Kauffrau', beginn: '2026-08-01', dauerJahre: 3,
+  lohnLehrjahre: [{ jahr: 1, chf: '700' }, { jahr: 2, chf: '900' }, { jahr: 3, chf: '1200' }],
+  ort: 'Basel', datum: '2026-06-15',
+} as const;
+f('vorl:lv-standard', () => lvZusammenstellen(lvBasis));
+f('vorl:lv-experte', () => lvZusammenstellen({ ...lvBasis, detailgrad: 'experte', berufswerkzeuge: true, unterkunftVerpflegung: true, versicherungspraemien: true }));
+f('vorl:lv-volljaehrig-einfach', () => lvZusammenstellen({ ...lvBasis, detailgrad: 'einfach', lernendeGeburtsdatum: '2000-01-01', gesetzlicheVertretung: '' }));
+f('vorl:lv-blanko', () => lvZusammenstellen({ ...LV_DEFAULTS }));
+f('vorl:lv-gates', () => pruefeLvGates({ ...lvBasis, probezeitMonate: 4, ferienWochen: 4 }));
 const mvBasis = {
   ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X 1', mieterName: 'M', mieterAdresse: 'Y 2',
   objektBeschrieb: '3.5-Zi', objektAdresse: 'Z 3', beginn: '2026-10-01', mietzinsNettoCHF: '2000',
