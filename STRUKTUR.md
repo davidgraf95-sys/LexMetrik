@@ -58,11 +58,12 @@ Pilot **Forderungsabtretung** umgestellt — §6-Beweis: golden 166 byte-gleich 
 Check: src/lib unberührt, Sweep 14448 ohne Widerspruch. Opt-in; seiten-
 spezifisches JSX bleibt in der Config (§1).
 
-(6) **Thema A — Rollout (`6a2c538`):** Verjährungsverzicht + Nichtbekanntgabe
-auf `VorlagenSeite` umgestellt (3 lineare Seiten gesamt: FA/VV/NB). VorlagenSeite
-opt-in erweitert: `zeigeWarnungen` (gates.warnungen im pruefen-Schritt) +
-`fehlerEingabe(a,schritt,gates)`. §6: gate grün, golden byte-gleich, Playwright-
-DOM byte-identisch (VV+NB+FA, alle Schritte/bedingte Felder) vorher/nachher.
+(6) **Thema A — Rollout (`6a2c538`, `c175d4c`):** Verjährungsverzicht,
+Nichtbekanntgabe + Mahnung auf `VorlagenSeite` umgestellt — **4 lineare Seiten
+gesamt: FA/VV/NB/Mahnung**. VorlagenSeite opt-in erweitert: `zeigeWarnungen`
+(gates.warnungen) · `fehlerEingabe(a,schritt,gates)` · `blockerImLetztenSchritt`
+(Mahnung false). §6 je Seite: gate grün, golden byte-gleich, Playwright-DOM
+byte-identisch (alle Schritte/bedingte Felder/Mahnung beide Varianten) v/n.
 
 (7) **Grundsatz David «kein Eingabefehler im leeren Zustand» (`05c1899`,
 `2d69e8a`):** Fehlerbox erst nach erster Eingabe («berührt»). Wizards zentral im
@@ -74,8 +75,7 @@ gleich (Rechtslogik unberührt), Playwright-verifiziert. Memory:
 Beispiel-Defaults (keine sichtbare Änderung) — betraf v.a. die Wizards.
 
 **NICHT umgesetzt (bewusst, §1/Konflikt-Register):** Rollout `VorlagenSeite`
-auf weitere geeignete Seiten (Mahnung hat letzte-Schritt-ohne-blocker-Abweichung
-→ eigener Flag nötig; VariantenKopf-/Mehrschritt-/eigenes-Gate-Seiten bleiben
+auf weitere Seiten — VariantenKopf-/Mehrschritt-/eigenes-Gate-Seiten bleiben
 handgeschrieben); Phase 5 Verbatim-Hebung (Gefahrenzone), Persistenz-/i18n-
 Features; David-Entscheide (Server-Sync, fr/it-Inhalt, LIK Python→TS). TODO:
 Drift-Guard `check:abnahme` (Dossiers regenerieren + git diff). Push/Deploy nur
