@@ -62,9 +62,32 @@ explizit typisiert (inklusiv/exklusiv, §1); `rahmen`/`formel_extern` tragen
 KEINEN Betrag (Ergebnis-Union zwingt ehrlichen Rahmen, §2/§8). Test
 `tarifStaffel.test.ts` (11) inkl. **Charakterisierung gegen die gebvKosten-
 Pfändungsstaffel** (Art. 20 GebV SchKG) → spätere byte-gleiche Ablösung möglich.
-Gate voll grün. OFFEN P1: B-P0b Verfallsregister+CI (VOR 30.6.2026, SG GKV) ·
-B-P1 Gerichtskosten-Datenschicht je Kanton (§7-Recherche, Pilot ZH zuerst) ·
-B-P2 sichtbarer Prozesskostenrechner. Push/Deploy nur auf frisches Ja.
+Gate voll grün.
+
+**B-P0a/Primitiv erweitert + RECHERCHE KOMPLETT (14.6.2026, Aufträge David
+«beide Tranchen · Honorar dazu · doppelt prüfen · praxistauglich · kostenlose
+Verfahren · amtliche Links»):** `tarif/staffel.ts` deckt jetzt 7 Tarifformen
+(fix · sockel_prozent · promille · staffel_inklusiv/exklusiv · **staffel_rahmen**
+· **staffel_sockel_prozent** · **staffel_voll_prozent** · rahmen · formel_extern),
+§2/§8-ehrlich, Charakterisierungs-Tests ZH/AG/BS. §7-Grundlage:
+`bibliothek/recherche/prozesskosten-zpo-95-96.md` (Art. 95/96/98/113/114 ZPO,
+Fedlex 1.1.2025 verbatim — Engine teilt Gerichtskosten↔Parteientschädigung;
+Schlichtung↔Entscheid-Kostenlos-Unterscheidung). **Alle 26 Kantone × 2 Tarife
+amtlich (doppelt) verifiziert** und durabel als Register persistiert (je mit
+amtlichem Link/Erlass/Stand/Artikel/TarifRegel/kostenlos-Hinweis):
+`bibliothek/register/gerichtskosten-tarife-kantone.md` +
+`…/parteientschaedigung-tarife-kantone.md`. Befund: ZH/AG/VD/ZG/GE/SG/AI/AR
+deterministisch, Mehrheit Ermessensrahmen je Streitwert-Band, FR/SO/GR/GL/SH/SZ
+aufwandbasiert. Re-Verif offen: AG (GK), SZ/GL/SH/GR (PE). Workflow-Runs
+wf_47cbdc5e (GK T1) · wf_3afb439f (GK T2) · wf_17e78208 (PE).
+
+**OFFEN P1 (nächster Bau, aus den Registern):** typisierte Datenschicht
+`src/data/tarif/{gerichtskosten,parteientschaedigung}.ts` (Sentinel-/%-Tail-
+Cleanup, TI-Prozentspanne, Re-Verif einbauen) · Engine `lib/prozesskosten.ts`
+nach Art. 95 (+ Art. 113/114-Kostenlos-Vorschalter, Art. 98-Vorschuss-Hinweis)
++ per-Kanton-Stützstellen-Tests + Golden · praxistauglicher Rechner
+`prozesskosten` (Katalog-Karte existiert als `geplant`) · B-P0b Verfallsregister-
+CI (VOR 30.6.2026 SG GKV). Push/Deploy nur auf frisches Ja.
 
 ## Session 13.6.2026 (Abend) — FUNDAMENT-UMBAU Phasen 0/1a/4 + Bug-Check (Auftrag David «mache fertig … nochmals bug check»)
 
