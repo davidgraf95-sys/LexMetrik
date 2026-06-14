@@ -277,6 +277,23 @@ check:zitate 837/0, Sweep widerspruchsfrei, Smoke (4 Regime-Seiten) ok. Normen
 `bibliothek/recherche/arbeitsvertrag-untertypen.md`. Fachliche Abnahme durch
 David ausstehend (bewusst zurückgestellt, Ausbau-Direktive 14.6.2026).
 
-**NÄCHSTE SCHRITTE (P2-Rest / P3):** Detailgrad auf Mietvertrag (grosse Engine);
-neue Basistypen Kauf/Schenkung/Pacht/Leihe/Darlehen/Bürgschaft je mit Untertyp ×
-Detailgrad; `variantenInventar` beim Ausbau jeder Karte nachführen.
+### Abarbeitungs-Stand P2 (14.6.2026) — Mietvertrag-Detailgrad, ungepusht
+
+**P2 erledigt + committet** (`aa67ebb`): Detailgrad einfach/standard/experte auf
+den **Mietvertrag**. einfach blendet die deklaratorische Zahlungsverzugs-Klausel
+(257d) aus; experte ergänzt **Mietzinsvorbehalt** (Art. 18 VMWG, beziffert, Gate)
+und **Duldungspflicht** (Art. 257h OR). standard byte-identisch (nur M06b-
+Begründung deklariert). **§7-Korrektur:** das mit der ZPO (2011) aufgehobene
+«Art. 274 OR» in M14 → Art. 33 ZPO. `variantenInventar` +Mietvertrag-Karte (48) →
+**168 Dokumente = 17 %** von 1000. Golden 187, MV-Test 36, zitate 884/0, gate grün.
+
+**Damit ist der Detailgrad-Rollout auf alle bestehenden Vertrags-Karten
+abgeschlossen** (Arbeitsvertrag, Mietvertrag, Auftrag, Werkvertrag, NDA,
+Konkubinat).
+
+**NÄCHSTE SCHRITTE (P3):** neue Basistypen Kauf (184 ff.)/Schenkung/Pacht/Leihe/
+Darlehen/Bürgschaft je mit Untertyp × Detailgrad. **ACHTUNG:** jeder neue Basistyp
+ist eine NEUE Karte (startseiteConfig/routesManifest) — solange die Parallel-
+Session am `vorlagenRegistry` arbeitet (untracked `src/lib/vorlagen/registry.ts`),
+besteht Kollisionsrisiko; neue Karten in eigenem Worktree bauen (§12) oder nach
+Abschluss der Registry-Arbeit. `variantenInventar` bei jeder neuen Karte nachführen.
