@@ -6,6 +6,7 @@ import { ZpoFristenForm } from '../components/forms/ZpoFristenForm';
 import { SchkgFristenForm } from '../components/forms/SchkgFristenForm';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { Tabs } from '../components/ui/Tabs';
+import { Card } from '../components/ui/Card';
 import { getCalculator } from '../lib/calculators';
 import { presetSuche, type PresetIndexEintrag } from '../lib/presetIndex';
 import { Link } from 'react-router-dom';
@@ -99,7 +100,7 @@ export function RechnerTagerechner() {
           GANZ SIMPLER Fristenrechner zuoberst — Datum · Frist · Ferien-Wahl
           (keine/ZPO/SchKG); die Vorauswahl-Rechner (Presets, Voll-Tabs)
           erscheinen DARUNTER. */}
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8 space-y-4">
+      <Card className="space-y-4">
         <div className="space-y-1">
           <h2 className="lc-overline text-brass-700">Einfacher Fristenrechner</h2>
           <p className="text-body-s text-ink-500 max-w-reading">
@@ -109,8 +110,8 @@ export function RechnerTagerechner() {
           </p>
         </div>
         <EinfacheFristForm />
-      </div>
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+      </Card>
+      <Card>
         <div className="space-y-1 mb-5">
           <h2 className="lc-overline text-brass-700">Mit Vorauswahl (Presets · ZPO · SchKG · Rückwärts)</h2>
         </div>
@@ -232,7 +233,7 @@ export function RechnerTagerechner() {
         {verfahren === 'allgemein' && <AllgemeineFristForm key={presetNonce} />}
         {verfahren === 'zpo' && <ZpoFristenForm key={presetNonce} />}
         {verfahren === 'schkg' && <SchkgFristenForm key={presetNonce} />}
-      </div>
+      </Card>
     </div>
   );
 }

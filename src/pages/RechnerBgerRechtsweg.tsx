@@ -1,4 +1,5 @@
 import { BgerRechtswegForm } from '../components/forms/BgerRechtswegForm';
+import { Card } from '../components/ui/Card';
 import { ThemenEinstieg } from '../components/ThemenEinstieg';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { getCalculator } from '../lib/calculators';
@@ -10,9 +11,9 @@ export function RechnerBgerRechtsweg() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+      <Card>
         <BgerRechtswegForm />
-      </div>
+      </Card>
       <ThemenEinstieg
         label="Vor dem Weiterzug:"
         links={[

@@ -1,4 +1,5 @@
 import { ErbFristenForm } from '../components/forms/ErbFristenForm';
+import { Card } from '../components/ui/Card';
 import { EreignisFristenSektion } from '../components/forms/EreignisFristen';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { TagerechnerRueckverweis } from '../components/TagerechnerRueckverweis';
@@ -15,9 +16,9 @@ export function RechnerErbFristen() {
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
       <TagerechnerRueckverweis />
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+      <Card>
         <ErbFristenForm />
-      </div>
+      </Card>
       <EreignisFristenSektion ereignisse={['erbgang']} />
     </div>
   );

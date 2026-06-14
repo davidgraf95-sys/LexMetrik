@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Card } from '../components/ui/Card';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ZustaendigkeitForm } from '../components/forms/ZustaendigkeitForm';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
@@ -76,9 +77,9 @@ export function RechnerZustaendigkeit() {
         kurzbeschriebOverride={hero?.kurzbeschrieb}
         normenOverride={hero?.normen}
       />
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+      <Card>
         <ZustaendigkeitForm onRechtswegChange={wegWechsel} rechtswegVorwahl={HASH_WEG[hash]} />
-      </div>
+      </Card>
     </div>
   );
 }

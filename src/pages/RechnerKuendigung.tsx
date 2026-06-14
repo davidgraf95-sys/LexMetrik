@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ThemenEinstieg } from '../components/ThemenEinstieg';
+import { Card } from '../components/ui/Card';
 import { LohnfortzahlungForm } from '../components/forms/LohnfortzahlungForm';
 import { KuendigungSperrForm } from '../components/forms/KuendigungSperrForm';
 import { KombinierteAnsicht } from '../components/forms/KombinierteAnsicht';
@@ -58,11 +59,11 @@ export function RechnerKuendigung() {
         ))}
       </div>
 
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+      <Card>
         {tab === 'a' && <LohnfortzahlungForm />}
         {tab === 'b_c' && <KuendigungSperrForm onBeendigung={setBeendigung} />}
         {tab === 'kombiniert' && <KombinierteAnsicht />}
-      </div>
+      </Card>
 
       {/* S-5c (Fristenspiegel-Auflösung): die 336b-Fristen (Einsprache &
           Klagefrist nach der AG-Kündigung) leben auf DIESER Seite; der

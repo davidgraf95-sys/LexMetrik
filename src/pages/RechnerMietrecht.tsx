@@ -1,4 +1,5 @@
 import { MietrechtForm } from '../components/forms/MietrechtForm';
+import { Card } from '../components/ui/Card';
 import { ThemenEinstieg } from '../components/ThemenEinstieg';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { TagerechnerRueckverweis } from '../components/TagerechnerRueckverweis';
@@ -11,9 +12,9 @@ export function RechnerMietrecht() {
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
       <TagerechnerRueckverweis />
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+      <Card>
         <MietrechtForm />
-      </div>
+      </Card>
 
       {/* Themen-Einstieg (Konsolidierung 7.6.2026, E3): Mieter-Schreiben und
           Vermieter-Checkliste ohne eigene Katalog-Karten — Direktzugang hier. */}

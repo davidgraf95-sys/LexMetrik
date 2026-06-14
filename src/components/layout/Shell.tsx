@@ -8,6 +8,12 @@ export function Shell({ children }: { children: ReactNode }) {
   const { locale, setLocale } = useLocale();
   return (
     <div className="min-h-screen bg-paper flex flex-col">
+      {/* Skip-Link (WCAG 2.4.1): erstes fokussierbares Element, springt am
+          Header vorbei in den Inhalt. sr-only bis Tastatur-Fokus. */}
+      <a href="#inhalt"
+        className="lc-btn lc-btn-primary sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50">
+        Zum Inhalt springen
+      </a>
       <Header />
       {/* Persistenter Hinweis bei Nicht-DE-Locale: Inhalte fallen auf Deutsch zurück */}
       {locale !== 'de' && (
@@ -23,7 +29,7 @@ export function Shell({ children }: { children: ReactNode }) {
           </div>
         </div>
       )}
-      <main className="flex-1 w-full">
+      <main id="inhalt" tabIndex={-1} aria-label="Hauptinhalt" className="flex-1 w-full focus:outline-none">
         <div className="max-w-content mx-auto px-5 sm:px-6 py-8 sm:py-12">{children}</div>
       </main>
       <Footer />

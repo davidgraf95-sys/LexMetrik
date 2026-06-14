@@ -1,4 +1,5 @@
 import { ZpoFristenForm } from '../components/forms/ZpoFristenForm';
+import { Card } from '../components/ui/Card';
 import { EreignisFristenSektion } from '../components/forms/EreignisFristen';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { ThemenEinstieg } from '../components/ThemenEinstieg';
@@ -13,9 +14,9 @@ export function RechnerZpo() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+      <Card>
         <ZpoFristenForm />
-      </div>
+      </Card>
       <EreignisFristenSektion ereignisse={['zivilentscheid', 'klagebewilligung']} />
       {/* R10: passende Vorlage zum Rechner (V2-Rest FAHRPLAN-VORLAGEN-AUSBAU) */}
       <ThemenEinstieg label="Frist reicht nicht aus:" links={[

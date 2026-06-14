@@ -1,4 +1,5 @@
 import { ProzesskostenForm } from '../components/forms/ProzesskostenForm';
+import { Card } from '../components/ui/Card';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { getCalculator } from '../lib/calculators';
 
@@ -11,9 +12,9 @@ export function RechnerProzesskosten() {
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
-      <div className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8">
+      <Card>
         <ProzesskostenForm />
-      </div>
+      </Card>
     </div>
   );
 }
