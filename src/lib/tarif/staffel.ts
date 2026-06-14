@@ -34,8 +34,20 @@ export interface StaffelBand {
  *  (z. B. BS § 5 GGR, BL, SO, BE, GE, SG). Letztes Band `grenzeChf: Infinity`. */
 export interface RahmenBand {
   grenzeChf: number;
-  minChf: number;
-  maxChf: number;
+  /** Feste Untergrenze des Gebührenrahmens. `null`/weglassen, wenn keine
+   *  Untergrenze gilt (z. B. Bemessung nach Zeitaufwand) oder eine
+   *  prozentuale Untergrenze (`minProzent`) zu verwenden ist. */
+  minChf?: number | null;
+  /** Feste Obergrenze des Gebührenrahmens. */
+  maxChf?: number | null;
+  /** Alternativ: Unter-/Obergrenze als Prozentsatz des Streitwerts (häufig im
+   *  obersten Band, «über X Mio: a–b % des Streitwerts»; ganze TI-Skala). */
+  minProzent?: number;
+  maxProzent?: number;
+  /** Bei prozentualer Bemessung: harter Sockel-/Deckelbetrag (CHF). */
+  mindestChf?: number;
+  hoechstChf?: number;
+  hinweis?: string;
 }
 
 /** Ein Band einer mehrbandigen Sockel+Prozent-Staffel: bis zur Grenze gilt
@@ -176,16 +188,34 @@ export function auswertenTarif(regel: TarifRegel, basisChf: number): TarifErgebn
 
     case 'staffel_rahmen': {
       pruefeBasis(basisChf);
-      const treffer = regel.baender.find((b) => basisChf <= b.grenzeChf);
-      if (!treffer) {
+      const b = regel.baender.find((x) => basisChf <= x.grenzeChf);
+      if (!b) {
         throw new RangeError(`Rahmen-Staffel deckt den Bemessungswert ${chf(basisChf)} nicht (letztes Band braucht grenzeChf: Infinity).`);
       }
-      const grenze = Number.isFinite(treffer.grenzeChf) ? `bis und mit ${chf(treffer.grenzeChf)}` : 'oberstes Band';
+      // Grenze fest (minChf/maxChf) ODER prozentual (minProzent/maxProzent ×
+      // Streitwert, optional mit Sockel/Deckel). `null`/undefined = keine Grenze.
+      const seite = (fest: number | null | undefined, pct: number | undefined): number | undefined => {
+        if (fest != null) return fest;
+        if (pct == null) return undefined;
+        let v = round2((basisChf * pct) / 100);
+        if (b.mindestChf != null) v = Math.max(v, b.mindestChf);
+        if (b.hoechstChf != null) v = Math.min(v, b.hoechstChf);
+        return v;
+      };
+      const von = seite(b.minChf, b.minProzent);
+      const bis = seite(b.maxChf, b.maxProzent);
+      const grenze = Number.isFinite(b.grenzeChf) ? `bis und mit ${chf(b.grenzeChf)}` : 'oberstes Band';
+      const spanne = von != null && bis != null ? `${chf(von)}–${chf(bis)}`
+        : bis != null ? `bis ${chf(bis)}`
+        : von != null ? `ab ${chf(von)}`
+        : 'nach Aufwand';
+      const pctNote = (b.minProzent != null || b.maxProzent != null)
+        ? ` (${b.minProzent ?? 0}–${b.maxProzent ?? 0} % des Streitwerts)` : '';
       return {
         deterministisch: false,
-        vonChf: treffer.minChf,
-        bisChf: treffer.maxChf,
-        hinweis: `Gebührenrahmen ${chf(treffer.minChf)}–${chf(treffer.maxChf)} (Streitwert-Band ${grenze}); Festsetzung im Ermessen der Behörde.`,
+        vonChf: von,
+        bisChf: bis,
+        hinweis: b.hinweis ?? `Gebührenrahmen ${spanne}${pctNote} (Streitwert-Band ${grenze}); Festsetzung im Ermessen der Behörde.`,
       };
     }
 

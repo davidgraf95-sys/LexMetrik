@@ -169,6 +169,35 @@ describe('staffel_rahmen – Band-Wahl deterministisch, Gebühr als ehrliche Spa
   });
 });
 
+describe('staffel_rahmen – prozentuale Bänder, Sockel/Deckel und offene Grenzen', () => {
+  it('berechnet einen %-vom-Streitwert-Tail (z. B. BE >2 Mio: 0,5–7 %)', () => {
+    const r: TarifRegel = { typ: 'staffel_rahmen', baender: [
+      { grenzeChf: 2_000_000, minChf: 12_000, maxChf: 120_000 },
+      { grenzeChf: 1e15, minProzent: 0.5, maxProzent: 7 },
+    ] };
+    const e = auswertenTarif(r, 3_000_000);
+    expect(e.deterministisch).toBe(false);
+    if (!e.deterministisch) { expect(e.vonChf).toBe(15_000); expect(e.bisChf).toBe(210_000); }
+  });
+
+  it('respektiert Deckel bei prozentualer Obergrenze (z. B. VS: 3,3 %, max 140 000)', () => {
+    const r: TarifRegel = { typ: 'staffel_rahmen', baender: [
+      { grenzeChf: 1e15, maxProzent: 3.3, hoechstChf: 140_000 },
+    ] };
+    const e = auswertenTarif(r, 5_000_000);
+    if (!e.deterministisch) expect(e.bisChf).toBe(140_000); // 3,3 % = 165 000 → gedeckelt
+  });
+
+  it('lässt eine offene Untergrenze zu (z. B. SZ <2000: nach Zeitaufwand, max 1500)', () => {
+    const r: TarifRegel = { typ: 'staffel_rahmen', baender: [
+      { grenzeChf: 2_000, minChf: null, maxChf: 1_500, hinweis: 'nach Zeitaufwand, höchstens CHF 1500' },
+      { grenzeChf: 1e15, minChf: 440, maxChf: 1_650 },
+    ] };
+    const e = auswertenTarif(r, 1_500);
+    if (!e.deterministisch) { expect(e.vonChf).toBeUndefined(); expect(e.bisChf).toBe(1_500); }
+  });
+});
+
 describe('auswertenTarif – Eingabeschutz', () => {
   it('wirft bei negativem oder ungültigem Bemessungswert', () => {
     expect(() => auswertenTarif({ typ: 'promille', promille: 2 }, -1)).toThrow(RangeError);

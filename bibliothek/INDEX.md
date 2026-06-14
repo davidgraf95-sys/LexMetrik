@@ -57,6 +57,8 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 | [quellen-register.md](register/quellen-register.md) | Verifizierte Fedlex-Quellen (ELI, Konsolidierung, geprüfte Anker, Filestore-Muster) |
 | [parameter-verfall.md](register/parameter-verfall.md) | Datierte Parameter mit Prüfrhythmus — u. a. **SG GKV endet 30.6.2026**, GR HV/BE EAV 31.12.2026, NE-Umzug Sommer 2026, JU-Punktwert, BE-Formularpflicht 1.11.2026, Referenzzins; **neu 7.6.2026:** HReg-Gebühren · Fremdwährungsliste · Emissionsabgabe · MWST-Schwellen · Notariats-Listen (UR/AI/BL!) · Muster-Suiten |
 | [engine-map.md](register/engine-map.md) | **Engine-Map** (neu 7.6.2026): jedes Code-Modul → tragende Dossiers/Stammdaten → Bau-/Abnahme-Status — der Rückweg zu §11 und die Checkliste je Abnahme |
+| [gerichtskosten-tarife-kantone.md](register/gerichtskosten-tarife-kantone.md) | **Kantonale Gerichtskosten-Tarife** (neu 14.6.2026): alle 26 Kantone Entscheidgebühr Zivil erstinstanzlich, amtlich doppelt verifiziert — TarifRegel + Link + Erlass + Stand + kostenlose-Verfahren-Hinweis (Art. 113/114 ZPO); Vorlage für `src/data/tarif/gerichtskosten.ts` |
+| [parteientschaedigung-tarife-kantone.md](register/parteientschaedigung-tarife-kantone.md) | **Kantonale Parteientschädigung/Anwaltshonorar** (neu 14.6.2026): alle 26 Kantone, amtlich doppelt verifiziert (+ Re-Verif AG/SZ/GL/SH/GR) — TarifRegel + Link + Erlass + Stand; Querschnitt Art. 113 Abs. 1 ZPO (keine Parteientschädigung in Schlichtung) |
 
 ## normen/ — Regelwerke (Engine-Grundlagen, Wortlaute verbatim)
 
