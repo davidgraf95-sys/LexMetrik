@@ -83,6 +83,53 @@ describe('auswertenTarif – ehrliche Nicht-Determinismus-Fälle (§2/§8)', () 
   });
 });
 
+describe('staffel_sockel_prozent – Charakterisierung gegen ZH GebV OG § 4 Abs. 1', () => {
+  const zh: TarifRegel = {
+    typ: 'staffel_sockel_prozent',
+    baender: [
+      { bisChf: 1_000, sockelChf: 0, abChf: 0, prozent: 25, minChf: 150 },
+      { bisChf: 5_000, sockelChf: 250, abChf: 1_000, prozent: 20 },
+      { bisChf: 20_000, sockelChf: 1_050, abChf: 5_000, prozent: 14 },
+      { bisChf: 80_000, sockelChf: 3_150, abChf: 20_000, prozent: 8 },
+      { bisChf: 300_000, sockelChf: 7_950, abChf: 80_000, prozent: 4 },
+      { bisChf: 1_000_000, sockelChf: 16_750, abChf: 300_000, prozent: 2 },
+      { bisChf: 10_000_000, sockelChf: 30_750, abChf: 1_000_000, prozent: 1 },
+      { bisChf: 1e15, sockelChf: 120_750, abChf: 10_000_000, prozent: 0.5 },
+    ],
+  };
+  it('reproduziert die amtlich verifizierten Stützstellen (Grundgebühr)', () => {
+    expect(betrag(zh, 5_000)).toBe(1_050);
+    expect(betrag(zh, 50_000)).toBe(5_550);
+    expect(betrag(zh, 500_000)).toBe(20_750);
+  });
+  it('wendet die Mindestgebühr des untersten Bandes an', () => {
+    expect(betrag(zh, 500)).toBe(150); // 25 % von 500 = 125 < 150
+  });
+});
+
+describe('staffel_voll_prozent – Charakterisierung gegen AG GebührD § 7 Abs. 1', () => {
+  const ag: TarifRegel = {
+    typ: 'staffel_voll_prozent',
+    baender: [
+      { bisChf: 6_500, fixChf: 900, prozent: 11 },
+      { bisChf: 13_000, fixChf: 1_160, prozent: 7 },
+      { bisChf: 52_000, fixChf: 1_290, prozent: 6 },
+      { bisChf: 100_000, fixChf: 770, prozent: 7 },
+      { bisChf: 200_000, fixChf: 4_270, prozent: 3.5 },
+      { bisChf: 400_000, fixChf: 6_870, prozent: 2.2 },
+      { bisChf: 800_000, fixChf: 9_670, prozent: 1.5 },
+      { bisChf: 1_600_000, fixChf: 13_670, prozent: 1 },
+      { bisChf: 3_300_000, fixChf: 21_670, prozent: 0.5 },
+      { bisChf: 1e15, fixChf: 28_270, prozent: 0.3 },
+    ],
+  };
+  it('reproduziert die amtlich verifizierten Stützstellen (Fix + % vom Gesamtwert)', () => {
+    expect(betrag(ag, 5_000)).toBe(1_450);
+    expect(betrag(ag, 50_000)).toBe(4_290);
+    expect(betrag(ag, 500_000)).toBe(17_170);
+  });
+});
+
 describe('staffel_rahmen – Band-Wahl deterministisch, Gebühr als ehrliche Spanne', () => {
   // BS § 5 GGR (Reglement über die Gerichtsgebühren), Grundgebühr
   // vermögensrechtlich, vereinfachtes/ordentliches Verfahren.

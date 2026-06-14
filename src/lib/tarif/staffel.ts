@@ -38,6 +38,27 @@ export interface RahmenBand {
   maxChf: number;
 }
 
+/** Ein Band einer mehrbandigen Sockel+Prozent-Staffel: bis zur Grenze gilt
+ *  `sockelChf + prozent% × (wert − abChf)`. Der Sockel kumuliert die unteren
+ *  Bänder, der Prozentsatz wirkt nur auf den Überschuss über `abChf`.
+ *  (Deterministische Grundgebühr, z. B. ZH § 4 Abs. 1 GebV OG.) */
+export interface SockelProzentBand {
+  bisChf: number;
+  sockelChf: number;
+  abChf: number;
+  prozent: number;
+  minChf?: number;
+}
+
+/** Ein Band einer Fix+Prozent-vom-Gesamtwert-Staffel: bis zur Grenze gilt
+ *  `fixChf + prozent% × wert` (Prozent auf den GESAMTEN Streitwert, nicht den
+ *  Überschuss). (Deterministisch, z. B. AG § 7 Abs. 1 GebührD.) */
+export interface VollProzentBand {
+  bisChf: number;
+  fixChf: number;
+  prozent: number;
+}
+
 export type TarifRegel =
   | { typ: 'fix'; chf: number }
   /** Sockelbetrag + Prozentsatz auf den Überschuss über eine Schwelle,
@@ -48,6 +69,10 @@ export type TarifRegel =
   | { typ: 'promille'; promille: number; minChf?: number; maxChf?: number }
   | { typ: 'staffel_inklusiv'; baender: StaffelBand[] }
   | { typ: 'staffel_exklusiv'; baender: StaffelBand[] }
+  /** Mehrbandige Sockel+Prozent-Tabelle (deterministische Grundgebühr). */
+  | { typ: 'staffel_sockel_prozent'; baender: SockelProzentBand[] }
+  /** Fix + Prozent vom Gesamtwert je Band (deterministisch). */
+  | { typ: 'staffel_voll_prozent'; baender: VollProzentBand[] }
   /** Bracket-Staffel, deren Bänder einen Gebühren-RAHMEN statt eines
    *  Punktwerts tragen (deterministische Band-Wahl, ehrliche Spanne). */
   | { typ: 'staffel_rahmen'; baender: RahmenBand[] }
@@ -128,6 +153,26 @@ export function auswertenTarif(regel: TarifRegel, basisChf: number): TarifErgebn
     case 'staffel_exklusiv':
       pruefeBasis(basisChf);
       return ausStaffel(regel.baender, basisChf, false);
+
+    case 'staffel_sockel_prozent': {
+      pruefeBasis(basisChf);
+      const b = regel.baender.find((x) => basisChf <= x.bisChf);
+      if (!b) throw new RangeError(`Sockel-Prozent-Staffel deckt ${chf(basisChf)} nicht (letztes Band braucht bisChf: Infinity).`);
+      const ueberschuss = Math.max(0, basisChf - b.abChf);
+      const schritte: string[] = [];
+      if (b.sockelChf > 0) schritte.push(`Sockel ${chf(b.sockelChf)}`);
+      schritte.push(`${b.prozent} % auf ${chf(ueberschuss)}${b.abChf > 0 ? ` (Überschuss über ${chf(b.abChf)})` : ''} = ${chf((ueberschuss * b.prozent) / 100)}`);
+      const roh = round2(b.sockelChf + (ueberschuss * b.prozent) / 100);
+      return { deterministisch: true, betragChf: klammere(roh, b.minChf, undefined, schritte), schritte };
+    }
+
+    case 'staffel_voll_prozent': {
+      pruefeBasis(basisChf);
+      const b = regel.baender.find((x) => basisChf <= x.bisChf);
+      if (!b) throw new RangeError(`Voll-Prozent-Staffel deckt ${chf(basisChf)} nicht (letztes Band braucht bisChf: Infinity).`);
+      const betrag = round2(b.fixChf + (basisChf * b.prozent) / 100);
+      return { deterministisch: true, betragChf: betrag, schritte: [`Fix ${chf(b.fixChf)} + ${b.prozent} % von ${chf(basisChf)} = ${chf(betrag)}`] };
+    }
 
     case 'staffel_rahmen': {
       pruefeBasis(basisChf);
