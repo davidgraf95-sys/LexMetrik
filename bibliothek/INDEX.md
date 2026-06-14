@@ -59,6 +59,8 @@ aus der SSoT `src/data/verifikation.ts` via `npx vite-node scripts/bge-register-
 | [engine-map.md](register/engine-map.md) | **Engine-Map** (neu 7.6.2026): jedes Code-Modul → tragende Dossiers/Stammdaten → Bau-/Abnahme-Status — der Rückweg zu §11 und die Checkliste je Abnahme |
 | [gerichtskosten-tarife-kantone.md](register/gerichtskosten-tarife-kantone.md) | **Kantonale Gerichtskosten-Tarife** (neu 14.6.2026): alle 26 Kantone Entscheidgebühr Zivil erstinstanzlich, amtlich doppelt verifiziert — TarifRegel + Link + Erlass + Stand + kostenlose-Verfahren-Hinweis (Art. 113/114 ZPO); Vorlage für `src/data/tarif/gerichtskosten.ts` |
 | [parteientschaedigung-tarife-kantone.md](register/parteientschaedigung-tarife-kantone.md) | **Kantonale Parteientschädigung/Anwaltshonorar** (neu 14.6.2026): alle 26 Kantone, amtlich doppelt verifiziert (+ Re-Verif AG/SZ/GL/SH/GR) — TarifRegel + Link + Erlass + Stand; Querschnitt Art. 113 Abs. 1 ZPO (keine Parteientschädigung in Schlichtung) |
+| [kosten-modifikatoren-kantone.md](register/kosten-modifikatoren-kantone.md) | **Kosten-Modifikatoren** (neu 14.6.2026, Workflow wbqdyap3x): je Kanton Faktoren für Schlichtung · vereinfacht · summarisch · Rechtsmittel (GK + Parteientschädigung), je mit Norm; doppelt verifiziert. Vorlage Cockpit-Modifikatoren |
+| [sonderkonstellationen-kantone.md](register/sonderkonstellationen-kantone.md) | **Kantonale Sonderkonstellationen** (neu 14.–15.6.2026, Workflow wi80t134r): 877 kostenrelevante Sonderregeln über 26 Kantone (Erhöhung/Reduktion, einkommensabhängig, Materie-Sondertarife, Streitgenossen, MwSt/Auslagen), je mit §/Artikel; doppelt verifiziert |
 
 ## normen/ — Regelwerke (Engine-Grundlagen, Wortlaute verbatim)
 
