@@ -28,6 +28,16 @@ export interface StaffelBand {
   chf: number;
 }
 
+/** Ein Band einer Rahmen-Staffel: bis zur Streitwert-Grenze gilt der
+ *  Gebühren-RAHMEN [minChf, maxChf] (Festsetzung im Ermessen der Behörde nach
+ *  ihren Kriterien — KEIN Punktwert, §2/§8). Häufigster Schweizer Tarif-Typ
+ *  (z. B. BS § 5 GGR, BL, SO, BE, GE, SG). Letztes Band `grenzeChf: Infinity`. */
+export interface RahmenBand {
+  grenzeChf: number;
+  minChf: number;
+  maxChf: number;
+}
+
 export type TarifRegel =
   | { typ: 'fix'; chf: number }
   /** Sockelbetrag + Prozentsatz auf den Überschuss über eine Schwelle,
@@ -38,6 +48,9 @@ export type TarifRegel =
   | { typ: 'promille'; promille: number; minChf?: number; maxChf?: number }
   | { typ: 'staffel_inklusiv'; baender: StaffelBand[] }
   | { typ: 'staffel_exklusiv'; baender: StaffelBand[] }
+  /** Bracket-Staffel, deren Bänder einen Gebühren-RAHMEN statt eines
+   *  Punktwerts tragen (deterministische Band-Wahl, ehrliche Spanne). */
+  | { typ: 'staffel_rahmen'; baender: RahmenBand[] }
   /** Behördlicher Rahmen ohne deterministischen Punktwert. */
   | { typ: 'rahmen'; vonChf: number; bisChf: number; hinweis?: string }
   /** Tarif hängt von extern bestimmten Faktoren ab (nicht berechenbar). */
@@ -115,6 +128,21 @@ export function auswertenTarif(regel: TarifRegel, basisChf: number): TarifErgebn
     case 'staffel_exklusiv':
       pruefeBasis(basisChf);
       return ausStaffel(regel.baender, basisChf, false);
+
+    case 'staffel_rahmen': {
+      pruefeBasis(basisChf);
+      const treffer = regel.baender.find((b) => basisChf <= b.grenzeChf);
+      if (!treffer) {
+        throw new RangeError(`Rahmen-Staffel deckt den Bemessungswert ${chf(basisChf)} nicht (letztes Band braucht grenzeChf: Infinity).`);
+      }
+      const grenze = Number.isFinite(treffer.grenzeChf) ? `bis und mit ${chf(treffer.grenzeChf)}` : 'oberstes Band';
+      return {
+        deterministisch: false,
+        vonChf: treffer.minChf,
+        bisChf: treffer.maxChf,
+        hinweis: `Gebührenrahmen ${chf(treffer.minChf)}–${chf(treffer.maxChf)} (Streitwert-Band ${grenze}); Festsetzung im Ermessen der Behörde.`,
+      };
+    }
 
     case 'rahmen':
       return { deterministisch: false, vonChf: regel.vonChf, bisChf: regel.bisChf, hinweis: regel.hinweis ?? 'Behördlicher Gebührenrahmen – kein fester Punktwert.' };

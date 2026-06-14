@@ -83,6 +83,45 @@ describe('auswertenTarif – ehrliche Nicht-Determinismus-Fälle (§2/§8)', () 
   });
 });
 
+describe('staffel_rahmen – Band-Wahl deterministisch, Gebühr als ehrliche Spanne', () => {
+  // BS § 5 GGR (Reglement über die Gerichtsgebühren), Grundgebühr
+  // vermögensrechtlich, vereinfachtes/ordentliches Verfahren.
+  const bs: TarifRegel = {
+    typ: 'staffel_rahmen',
+    baender: [
+      { grenzeChf: 10_000, minChf: 200, maxChf: 1_000 },
+      { grenzeChf: 30_000, minChf: 1_000, maxChf: 3_000 },
+      { grenzeChf: 100_000, minChf: 3_000, maxChf: 6_000 },
+      { grenzeChf: 500_000, minChf: 6_000, maxChf: 20_000 },
+      { grenzeChf: 1_000_000, minChf: 20_000, maxChf: 30_000 },
+      { grenzeChf: 5_000_000, minChf: 30_000, maxChf: 60_000 },
+    ],
+  };
+
+  it('wählt das richtige Band und liefert dessen Rahmen ohne Punktwert', () => {
+    const e = auswertenTarif(bs, 50_000);
+    expect(e.deterministisch).toBe(false);
+    if (!e.deterministisch) {
+      expect(e.vonChf).toBe(3_000);
+      expect(e.bisChf).toBe(6_000);
+      expect(e).not.toHaveProperty('betragChf');
+    }
+  });
+
+  it('respektiert die inklusive Bandgrenze', () => {
+    const an = auswertenTarif(bs, 10_000);
+    const ueber = auswertenTarif(bs, 10_001);
+    if (!an.deterministisch && !ueber.deterministisch) {
+      expect([an.vonChf, an.bisChf]).toEqual([200, 1_000]);
+      expect([ueber.vonChf, ueber.bisChf]).toEqual([1_000, 3_000]);
+    }
+  });
+
+  it('wirft, wenn kein Band den Streitwert deckt', () => {
+    expect(() => auswertenTarif(bs, 9_000_000)).toThrow(RangeError);
+  });
+});
+
 describe('auswertenTarif – Eingabeschutz', () => {
   it('wirft bei negativem oder ungültigem Bemessungswert', () => {
     expect(() => auswertenTarif({ typ: 'promille', promille: 2 }, -1)).toThrow(RangeError);
