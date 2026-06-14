@@ -11,6 +11,7 @@ import { VorlageSchlichtungsgesuchBs } from '../src/pages/VorlageSchlichtungsges
 import { VorlageArbeitsvertrag } from '../src/pages/VorlageArbeitsvertrag';
 import { VorlageLehrvertrag } from '../src/pages/VorlageLehrvertrag';
 import { VorlageHandelsreisendenvertrag } from '../src/pages/VorlageHandelsreisendenvertrag';
+import { VorlageHeimarbeitsvertrag } from '../src/pages/VorlageHeimarbeitsvertrag';
 import { VorlageMietvertrag } from '../src/pages/VorlageMietvertrag';
 import { VorlageVollmacht } from '../src/pages/VorlageVollmacht';
 import { VorlageKlageVereinfacht } from '../src/pages/VorlageKlageVereinfacht';
@@ -48,6 +49,7 @@ const SEITEN: [string, React.ComponentType][] = [
   ['VorlageArbeitsvertrag', VorlageArbeitsvertrag],
   ['VorlageLehrvertrag', () => <VorlageLehrvertrag kopf={null} />],
   ['VorlageHandelsreisendenvertrag', () => <VorlageHandelsreisendenvertrag kopf={null} />],
+  ['VorlageHeimarbeitsvertrag', () => <VorlageHeimarbeitsvertrag kopf={null} />],
   ['VorlageMietvertrag', VorlageMietvertrag],
   ['VorlageVollmacht', VorlageVollmacht],
   ['VorlageKlageVereinfacht', VorlageKlageVereinfacht],

@@ -9938,6 +9938,551 @@
    "Beträgt die Provision mindestens einen Fünftel des Lohnes und unterliegt sie erheblichen saisonalen Schwankungen, kann während der Saison nur auf das Ende des zweiten der Kündigung folgenden Monats gekündigt werden (Art. 350 OR)."
   ]
  },
+ "vorl:ha-ununterbrochen": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Heimarbeitsvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "HA01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(nachfolgend «Arbeitgeber»)\n\nund\n\nHeidi Beispiel\nY 2, 8400 Winterthur\n(nachfolgend «Heimarbeitnehmer/in»)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "HA02_gegenstand",
+      "ueberschrift": "Gegenstand",
+      "text": "1. Der/Die Heimarbeitnehmer/in führt in der Wohnung des Heimarbeitnehmers – allein oder mit Familienangehörigen – im Lohn die folgenden Arbeiten für den Arbeitgeber aus: Konfektionierung von Verpackungen (Art. 351 OR)."
+     },
+     {
+      "bausteinId": "HA03_bekanntgabe",
+      "ueberschrift": "Arbeitsausgabe und Bedingungen",
+      "text": "2. Vor jeder Ausgabe von Arbeit gibt der Arbeitgeber die für die Ausführung erheblichen Bedingungen bekannt, namentlich die Einzelheiten der Arbeit. Lohn und Material-Entschädigung werden schriftlich angegeben (Art. 351a OR)."
+     },
+     {
+      "bausteinId": "HA04_lohn",
+      "ueberschrift": "Lohn",
+      "text": "3. Der Lohn beträgt CHF 4.50 pro Stück. Der Lohn wird halbmonatlich oder mit Zustimmung des Heimarbeitnehmers/der Heimarbeitnehmerin am Ende jedes Monats ausgerichtet (Art. 353a Abs. 1 OR). Bei jeder Lohnzahlung erhält der/die Heimarbeitnehmer/in eine schriftliche Abrechnung, in der für Lohnabzüge der Grund anzugeben ist (Art. 353a Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "HA05_material",
+      "ueberschrift": "Material und Geräte",
+      "text": "4. Vom Arbeitgeber übergebenes Material und übergebene Geräte behandelt der/die Heimarbeitnehmer/in mit aller Sorgfalt, legt über deren Verwendung Rechenschaft ab und gibt den nicht verwendeten Rest sowie die Geräte zurück. Mängel am Material oder an den Geräten sind sofort zu melden und die Weisungen des Arbeitgebers abzuwarten. Für schuldhaft verdorbenes Material oder Gerät haftet er/sie höchstens für den Ersatz der Selbstkosten (Art. 352a OR)."
+     },
+     {
+      "bausteinId": "HA06_ausfuehrung",
+      "ueberschrift": "Ausführung",
+      "text": "5. Der/Die Heimarbeitnehmer/in beginnt mit der übernommenen Arbeit rechtzeitig, stellt sie bis zum verabredeten Termin fertig und übergibt das Arbeitserzeugnis dem Arbeitgeber. Wird die Arbeit aus seinem/ihrem Verschulden mangelhaft ausgeführt, ist er/sie zur unentgeltlichen Verbesserung verpflichtet, soweit die Mängel dadurch behoben werden können (Art. 352 OR)."
+     },
+     {
+      "bausteinId": "HA07_pruefung",
+      "ueberschrift": "Prüfung und Abnahme",
+      "text": "6. Der Arbeitgeber prüft das abgelieferte Arbeitserzeugnis und gibt allfällige Mängel spätestens innert einer Woche bekannt. Unterlässt er die rechtzeitige Bekanntgabe, gilt die Arbeit als abgenommen (Art. 353 OR)."
+     },
+     {
+      "bausteinId": "HA08_verhinderung",
+      "ueberschrift": "Lohn bei Annahmeverzug und Verhinderung",
+      "text": "7. Da der/die Heimarbeitnehmer/in ununterbrochen im Dienst des Arbeitgebers steht, ist der Lohn nach Massgabe von Art. 324 und 324a OR auch dann geschuldet, wenn der Arbeitgeber mit der Annahme der Arbeitsleistung in Verzug kommt oder der/die Heimarbeitnehmer/in ohne eigenes Verschulden an der Arbeitsleistung verhindert ist (Art. 353b Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "HA09_dauer",
+      "ueberschrift": "Dauer des Arbeitsverhältnisses",
+      "text": "8. Da der/die Heimarbeitnehmer/in ununterbrochen im Dienst des Arbeitgebers steht, gilt das Arbeitsverhältnis als auf unbestimmte Zeit eingegangen (Art. 354 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "HA11_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen bedürfen der Schriftform. Soweit dieser Vertrag nichts regelt, gelten die Art. 351 ff. OR und subsidiär die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR). Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar."
+     },
+     {
+      "bausteinId": "HA12_unterschriften",
+      "text": "Zürich, 15.06.2026\n\n\nDer Arbeitgeber:\n\n___________________________\nMuster AG\n\n\nDer/Die Heimarbeitnehmer/in:\n\n___________________________\nHeidi Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Beim Heimarbeitsvertrag sind Lohn und Material-Entschädigung vor der Arbeitsausgabe schriftlich anzugeben (Art. 351a OR); zwingend sind ferner die Prüf-/Rügefrist von einer Woche (Art. 353 OR) und die Haftungsschranke auf die Selbstkosten (Art. 352a OR). Subsidiär gelten die Art. 319 ff. OR sowie das Heimarbeitsgesetz (SR 822.31).",
+    "version": "1.0.0 (Art. 351–354 OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1e)"
+   },
+   "aufgenommen": [
+    "HA01_parteien",
+    "HA02_gegenstand",
+    "HA03_bekanntgabe",
+    "HA04_lohn",
+    "HA05_material",
+    "HA06_ausfuehrung",
+    "HA07_pruefung",
+    "HA08_verhinderung",
+    "HA09_dauer",
+    "HA11_schluss",
+    "HA12_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "HA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA02_gegenstand",
+     "begruendung": "Gegenstand der Heimarbeit und Arbeitsraum (Art. 351 OR) – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA03_bekanntgabe",
+     "begruendung": "Bekanntgabepflicht vor Arbeitsausgabe, schriftliche Lohn-/Materialangabe (Art. 351a OR).",
+     "norm": "Art. 351a OR"
+    },
+    {
+     "bausteinId": "HA04_lohn",
+     "begruendung": "Lohnhöhe und Zahlungsweise (halbmonatlich/Monatsende bzw. bei Ablieferung), schriftliche Abrechnung (Art. 353a OR).",
+     "norm": "Art. 353a OR"
+    },
+    {
+     "bausteinId": "HA05_material",
+     "begruendung": "Sorgfalts-/Rückgabepflicht und Haftungsschranke auf die Selbstkosten (Art. 352a OR) – nur bei vom Arbeitgeber gestelltem Material.",
+     "norm": "Art. 352a OR"
+    },
+    {
+     "bausteinId": "HA06_ausfuehrung",
+     "begruendung": "Ausführungs- und Nachbesserungspflicht (Art. 352 OR) – ab «standard».",
+     "norm": "Art. 352 OR"
+    },
+    {
+     "bausteinId": "HA07_pruefung",
+     "begruendung": "Prüf- und Rügeobliegenheit mit Wochenfrist (Art. 353 OR) – immer enthalten.",
+     "norm": "Art. 353 OR"
+    },
+    {
+     "bausteinId": "HA08_verhinderung",
+     "begruendung": "Lohn bei Annahmeverzug/Verhinderung im ununterbrochenen Dienst (Art. 353b Abs. 1 OR).",
+     "norm": "Art. 353b OR"
+    },
+    {
+     "bausteinId": "HA09_dauer",
+     "begruendung": "Vermutung über die Dauer (Probe/ununterbrochen unbefristet) nach Art. 354 OR.",
+     "norm": "Art. 354 OR"
+    },
+    {
+     "bausteinId": "HA11_schluss",
+     "begruendung": "Schriftformvorbehalt, Gesetzesverweis und Ausfertigung – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA12_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften.",
+     "norm": "Art. 351 OR"
+    }
+   ]
+  }
+ },
+ "vorl:ha-stueck-experte": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Heimarbeitsvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "HA01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(nachfolgend «Arbeitgeber»)\n\nund\n\nHeidi Beispiel\nY 2, 8400 Winterthur\n(nachfolgend «Heimarbeitnehmer/in»)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "HA02_gegenstand",
+      "ueberschrift": "Gegenstand",
+      "text": "1. Der/Die Heimarbeitnehmer/in führt in der Wohnung des Heimarbeitnehmers – allein oder mit Familienangehörigen – im Lohn die folgenden Arbeiten für den Arbeitgeber aus: Konfektionierung von Verpackungen (Art. 351 OR)."
+     },
+     {
+      "bausteinId": "HA03_bekanntgabe",
+      "ueberschrift": "Arbeitsausgabe und Bedingungen",
+      "text": "2. Vor jeder Ausgabe von Arbeit gibt der Arbeitgeber die für die Ausführung erheblichen Bedingungen bekannt, namentlich die Einzelheiten der Arbeit. Beschafft der/die Heimarbeitnehmer/in Material selbst, wird dafür eine Entschädigung von CHF 0.20 pro Stück geschuldet. Lohn und Material-Entschädigung werden schriftlich angegeben (Art. 351a OR)."
+     },
+     {
+      "bausteinId": "HA04_lohn",
+      "ueberschrift": "Lohn",
+      "text": "3. Der Lohn beträgt CHF 4.50 pro Stück. Der Lohn wird jeweils bei Ablieferung des Arbeitserzeugnisses ausgerichtet (Art. 353a Abs. 1 OR). Bei jeder Lohnzahlung erhält der/die Heimarbeitnehmer/in eine schriftliche Abrechnung, in der für Lohnabzüge der Grund anzugeben ist (Art. 353a Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "HA06_ausfuehrung",
+      "ueberschrift": "Ausführung",
+      "text": "4. Der/Die Heimarbeitnehmer/in beginnt mit der übernommenen Arbeit rechtzeitig, stellt sie bis zum verabredeten Termin fertig und übergibt das Arbeitserzeugnis dem Arbeitgeber. Wird die Arbeit aus seinem/ihrem Verschulden mangelhaft ausgeführt, ist er/sie zur unentgeltlichen Verbesserung verpflichtet, soweit die Mängel dadurch behoben werden können (Art. 352 OR)."
+     },
+     {
+      "bausteinId": "HA07_pruefung",
+      "ueberschrift": "Prüfung und Abnahme",
+      "text": "5. Der Arbeitgeber prüft das abgelieferte Arbeitserzeugnis und gibt allfällige Mängel spätestens innert einer Woche bekannt. Unterlässt er die rechtzeitige Bekanntgabe, gilt die Arbeit als abgenommen (Art. 353 OR)."
+     },
+     {
+      "bausteinId": "HA09_dauer",
+      "ueberschrift": "Dauer des Arbeitsverhältnisses",
+      "text": "6. Mit der übergebenen Probearbeit gilt das Arbeitsverhältnis auf bestimmte Zeit zur Probe eingegangen (Art. 354 Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "HA10_harg",
+      "ueberschrift": "Heimarbeitsgesetz",
+      "text": "7. Vorbehalten bleiben die zwingenden Vorschriften des Bundesgesetzes über die Heimarbeit (Heimarbeitsgesetz, SR 822.31), insbesondere über die Bekanntgabe der Arbeitsbedingungen und den Gesundheitsschutz."
+     },
+     {
+      "bausteinId": "HA11_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "8. Änderungen und Ergänzungen bedürfen der Schriftform. Soweit dieser Vertrag nichts regelt, gelten die Art. 351 ff. OR und subsidiär die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR). Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar."
+     },
+     {
+      "bausteinId": "HA12_unterschriften",
+      "text": "Zürich, 15.06.2026\n\n\nDer Arbeitgeber:\n\n___________________________\nMuster AG\n\n\nDer/Die Heimarbeitnehmer/in:\n\n___________________________\nHeidi Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Beim Heimarbeitsvertrag sind Lohn und Material-Entschädigung vor der Arbeitsausgabe schriftlich anzugeben (Art. 351a OR); zwingend sind ferner die Prüf-/Rügefrist von einer Woche (Art. 353 OR) und die Haftungsschranke auf die Selbstkosten (Art. 352a OR). Subsidiär gelten die Art. 319 ff. OR sowie das Heimarbeitsgesetz (SR 822.31).",
+    "version": "1.0.0 (Art. 351–354 OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1e)"
+   },
+   "aufgenommen": [
+    "HA01_parteien",
+    "HA02_gegenstand",
+    "HA03_bekanntgabe",
+    "HA04_lohn",
+    "HA06_ausfuehrung",
+    "HA07_pruefung",
+    "HA09_dauer",
+    "HA10_harg",
+    "HA11_schluss",
+    "HA12_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "HA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA02_gegenstand",
+     "begruendung": "Gegenstand der Heimarbeit und Arbeitsraum (Art. 351 OR) – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA03_bekanntgabe",
+     "begruendung": "Bekanntgabepflicht vor Arbeitsausgabe, schriftliche Lohn-/Materialangabe (Art. 351a OR).",
+     "norm": "Art. 351a OR"
+    },
+    {
+     "bausteinId": "HA04_lohn",
+     "begruendung": "Lohnhöhe und Zahlungsweise (halbmonatlich/Monatsende bzw. bei Ablieferung), schriftliche Abrechnung (Art. 353a OR).",
+     "norm": "Art. 353a OR"
+    },
+    {
+     "bausteinId": "HA06_ausfuehrung",
+     "begruendung": "Ausführungs- und Nachbesserungspflicht (Art. 352 OR) – ab «standard».",
+     "norm": "Art. 352 OR"
+    },
+    {
+     "bausteinId": "HA07_pruefung",
+     "begruendung": "Prüf- und Rügeobliegenheit mit Wochenfrist (Art. 353 OR) – immer enthalten.",
+     "norm": "Art. 353 OR"
+    },
+    {
+     "bausteinId": "HA09_dauer",
+     "begruendung": "Vermutung über die Dauer (Probe/ununterbrochen unbefristet) nach Art. 354 OR.",
+     "norm": "Art. 354 OR"
+    },
+    {
+     "bausteinId": "HA10_harg",
+     "begruendung": "Hinweis auf das öffentlich-rechtliche Heimarbeitsgesetz (HArG) – Detailgrad «experte».",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA11_schluss",
+     "begruendung": "Schriftformvorbehalt, Gesetzesverweis und Ausfertigung – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA12_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften.",
+     "norm": "Art. 351 OR"
+    }
+   ]
+  }
+ },
+ "vorl:ha-einfach": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Heimarbeitsvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "HA01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(nachfolgend «Arbeitgeber»)\n\nund\n\nHeidi Beispiel\nY 2, 8400 Winterthur\n(nachfolgend «Heimarbeitnehmer/in»)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "HA02_gegenstand",
+      "ueberschrift": "Gegenstand",
+      "text": "1. Der/Die Heimarbeitnehmer/in führt in der Wohnung des Heimarbeitnehmers – allein oder mit Familienangehörigen – im Lohn die folgenden Arbeiten für den Arbeitgeber aus: Konfektionierung von Verpackungen (Art. 351 OR)."
+     },
+     {
+      "bausteinId": "HA03_bekanntgabe",
+      "ueberschrift": "Arbeitsausgabe und Bedingungen",
+      "text": "2. Vor jeder Ausgabe von Arbeit gibt der Arbeitgeber die für die Ausführung erheblichen Bedingungen bekannt, namentlich die Einzelheiten der Arbeit. Lohn und Material-Entschädigung werden schriftlich angegeben (Art. 351a OR)."
+     },
+     {
+      "bausteinId": "HA04_lohn",
+      "ueberschrift": "Lohn",
+      "text": "3. Der Lohn beträgt CHF 4.50 pro Stück. Der Lohn wird halbmonatlich oder mit Zustimmung des Heimarbeitnehmers/der Heimarbeitnehmerin am Ende jedes Monats ausgerichtet (Art. 353a Abs. 1 OR). Bei jeder Lohnzahlung erhält der/die Heimarbeitnehmer/in eine schriftliche Abrechnung, in der für Lohnabzüge der Grund anzugeben ist (Art. 353a Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "HA05_material",
+      "ueberschrift": "Material und Geräte",
+      "text": "4. Vom Arbeitgeber übergebenes Material und übergebene Geräte behandelt der/die Heimarbeitnehmer/in mit aller Sorgfalt, legt über deren Verwendung Rechenschaft ab und gibt den nicht verwendeten Rest sowie die Geräte zurück. Mängel am Material oder an den Geräten sind sofort zu melden und die Weisungen des Arbeitgebers abzuwarten. Für schuldhaft verdorbenes Material oder Gerät haftet er/sie höchstens für den Ersatz der Selbstkosten (Art. 352a OR)."
+     },
+     {
+      "bausteinId": "HA07_pruefung",
+      "ueberschrift": "Prüfung und Abnahme",
+      "text": "5. Der Arbeitgeber prüft das abgelieferte Arbeitserzeugnis und gibt allfällige Mängel spätestens innert einer Woche bekannt. Unterlässt er die rechtzeitige Bekanntgabe, gilt die Arbeit als abgenommen (Art. 353 OR)."
+     },
+     {
+      "bausteinId": "HA08_verhinderung",
+      "ueberschrift": "Lohn bei Annahmeverzug und Verhinderung",
+      "text": "6. Da der/die Heimarbeitnehmer/in ununterbrochen im Dienst des Arbeitgebers steht, ist der Lohn nach Massgabe von Art. 324 und 324a OR auch dann geschuldet, wenn der Arbeitgeber mit der Annahme der Arbeitsleistung in Verzug kommt oder der/die Heimarbeitnehmer/in ohne eigenes Verschulden an der Arbeitsleistung verhindert ist (Art. 353b Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "HA09_dauer",
+      "ueberschrift": "Dauer des Arbeitsverhältnisses",
+      "text": "7. Da der/die Heimarbeitnehmer/in ununterbrochen im Dienst des Arbeitgebers steht, gilt das Arbeitsverhältnis als auf unbestimmte Zeit eingegangen (Art. 354 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "HA11_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "8. Änderungen und Ergänzungen bedürfen der Schriftform. Soweit dieser Vertrag nichts regelt, gelten die Art. 351 ff. OR und subsidiär die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR). Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar."
+     },
+     {
+      "bausteinId": "HA12_unterschriften",
+      "text": "Zürich, 15.06.2026\n\n\nDer Arbeitgeber:\n\n___________________________\nMuster AG\n\n\nDer/Die Heimarbeitnehmer/in:\n\n___________________________\nHeidi Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Beim Heimarbeitsvertrag sind Lohn und Material-Entschädigung vor der Arbeitsausgabe schriftlich anzugeben (Art. 351a OR); zwingend sind ferner die Prüf-/Rügefrist von einer Woche (Art. 353 OR) und die Haftungsschranke auf die Selbstkosten (Art. 352a OR). Subsidiär gelten die Art. 319 ff. OR sowie das Heimarbeitsgesetz (SR 822.31).",
+    "version": "1.0.0 (Art. 351–354 OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1e)"
+   },
+   "aufgenommen": [
+    "HA01_parteien",
+    "HA02_gegenstand",
+    "HA03_bekanntgabe",
+    "HA04_lohn",
+    "HA05_material",
+    "HA07_pruefung",
+    "HA08_verhinderung",
+    "HA09_dauer",
+    "HA11_schluss",
+    "HA12_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "HA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA02_gegenstand",
+     "begruendung": "Gegenstand der Heimarbeit und Arbeitsraum (Art. 351 OR) – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA03_bekanntgabe",
+     "begruendung": "Bekanntgabepflicht vor Arbeitsausgabe, schriftliche Lohn-/Materialangabe (Art. 351a OR).",
+     "norm": "Art. 351a OR"
+    },
+    {
+     "bausteinId": "HA04_lohn",
+     "begruendung": "Lohnhöhe und Zahlungsweise (halbmonatlich/Monatsende bzw. bei Ablieferung), schriftliche Abrechnung (Art. 353a OR).",
+     "norm": "Art. 353a OR"
+    },
+    {
+     "bausteinId": "HA05_material",
+     "begruendung": "Sorgfalts-/Rückgabepflicht und Haftungsschranke auf die Selbstkosten (Art. 352a OR) – nur bei vom Arbeitgeber gestelltem Material.",
+     "norm": "Art. 352a OR"
+    },
+    {
+     "bausteinId": "HA07_pruefung",
+     "begruendung": "Prüf- und Rügeobliegenheit mit Wochenfrist (Art. 353 OR) – immer enthalten.",
+     "norm": "Art. 353 OR"
+    },
+    {
+     "bausteinId": "HA08_verhinderung",
+     "begruendung": "Lohn bei Annahmeverzug/Verhinderung im ununterbrochenen Dienst (Art. 353b Abs. 1 OR).",
+     "norm": "Art. 353b OR"
+    },
+    {
+     "bausteinId": "HA09_dauer",
+     "begruendung": "Vermutung über die Dauer (Probe/ununterbrochen unbefristet) nach Art. 354 OR.",
+     "norm": "Art. 354 OR"
+    },
+    {
+     "bausteinId": "HA11_schluss",
+     "begruendung": "Schriftformvorbehalt, Gesetzesverweis und Ausfertigung – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA12_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften.",
+     "norm": "Art. 351 OR"
+    }
+   ]
+  }
+ },
+ "vorl:ha-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Heimarbeitsvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "HA01_parteien",
+      "text": "zwischen\n\n________\n(nachfolgend «Arbeitgeber»)\n\nund\n\n________\n(nachfolgend «Heimarbeitnehmer/in»)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "HA02_gegenstand",
+      "ueberschrift": "Gegenstand",
+      "text": "1. Der/Die Heimarbeitnehmer/in führt in der Wohnung des Heimarbeitnehmers – allein oder mit Familienangehörigen – im Lohn die folgenden Arbeiten für den Arbeitgeber aus: ________ (Art. 351 OR)."
+     },
+     {
+      "bausteinId": "HA03_bekanntgabe",
+      "ueberschrift": "Arbeitsausgabe und Bedingungen",
+      "text": "2. Vor jeder Ausgabe von Arbeit gibt der Arbeitgeber die für die Ausführung erheblichen Bedingungen bekannt, namentlich die Einzelheiten der Arbeit. Lohn und Material-Entschädigung werden schriftlich angegeben (Art. 351a OR)."
+     },
+     {
+      "bausteinId": "HA04_lohn",
+      "ueberschrift": "Lohn",
+      "text": "3. Der Lohn beträgt ________ pro Stück. Der Lohn wird halbmonatlich oder mit Zustimmung des Heimarbeitnehmers/der Heimarbeitnehmerin am Ende jedes Monats ausgerichtet (Art. 353a Abs. 1 OR). Bei jeder Lohnzahlung erhält der/die Heimarbeitnehmer/in eine schriftliche Abrechnung, in der für Lohnabzüge der Grund anzugeben ist (Art. 353a Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "HA05_material",
+      "ueberschrift": "Material und Geräte",
+      "text": "4. Vom Arbeitgeber übergebenes Material und übergebene Geräte behandelt der/die Heimarbeitnehmer/in mit aller Sorgfalt, legt über deren Verwendung Rechenschaft ab und gibt den nicht verwendeten Rest sowie die Geräte zurück. Mängel am Material oder an den Geräten sind sofort zu melden und die Weisungen des Arbeitgebers abzuwarten. Für schuldhaft verdorbenes Material oder Gerät haftet er/sie höchstens für den Ersatz der Selbstkosten (Art. 352a OR)."
+     },
+     {
+      "bausteinId": "HA06_ausfuehrung",
+      "ueberschrift": "Ausführung",
+      "text": "5. Der/Die Heimarbeitnehmer/in beginnt mit der übernommenen Arbeit rechtzeitig, stellt sie bis zum verabredeten Termin fertig und übergibt das Arbeitserzeugnis dem Arbeitgeber. Wird die Arbeit aus seinem/ihrem Verschulden mangelhaft ausgeführt, ist er/sie zur unentgeltlichen Verbesserung verpflichtet, soweit die Mängel dadurch behoben werden können (Art. 352 OR)."
+     },
+     {
+      "bausteinId": "HA07_pruefung",
+      "ueberschrift": "Prüfung und Abnahme",
+      "text": "6. Der Arbeitgeber prüft das abgelieferte Arbeitserzeugnis und gibt allfällige Mängel spätestens innert einer Woche bekannt. Unterlässt er die rechtzeitige Bekanntgabe, gilt die Arbeit als abgenommen (Art. 353 OR)."
+     },
+     {
+      "bausteinId": "HA08_verhinderung",
+      "ueberschrift": "Lohn bei Annahmeverzug und Verhinderung",
+      "text": "7. Da der/die Heimarbeitnehmer/in ununterbrochen im Dienst des Arbeitgebers steht, ist der Lohn nach Massgabe von Art. 324 und 324a OR auch dann geschuldet, wenn der Arbeitgeber mit der Annahme der Arbeitsleistung in Verzug kommt oder der/die Heimarbeitnehmer/in ohne eigenes Verschulden an der Arbeitsleistung verhindert ist (Art. 353b Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "HA09_dauer",
+      "ueberschrift": "Dauer des Arbeitsverhältnisses",
+      "text": "8. Da der/die Heimarbeitnehmer/in ununterbrochen im Dienst des Arbeitgebers steht, gilt das Arbeitsverhältnis als auf unbestimmte Zeit eingegangen (Art. 354 Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "HA11_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen bedürfen der Schriftform. Soweit dieser Vertrag nichts regelt, gelten die Art. 351 ff. OR und subsidiär die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR). Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar."
+     },
+     {
+      "bausteinId": "HA12_unterschriften",
+      "text": "________, ________\n\n\nDer Arbeitgeber:\n\n___________________________\n________\n\n\nDer/Die Heimarbeitnehmer/in:\n\n___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Beim Heimarbeitsvertrag sind Lohn und Material-Entschädigung vor der Arbeitsausgabe schriftlich anzugeben (Art. 351a OR); zwingend sind ferner die Prüf-/Rügefrist von einer Woche (Art. 353 OR) und die Haftungsschranke auf die Selbstkosten (Art. 352a OR). Subsidiär gelten die Art. 319 ff. OR sowie das Heimarbeitsgesetz (SR 822.31).",
+    "version": "1.0.0 (Art. 351–354 OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1e)"
+   },
+   "aufgenommen": [
+    "HA01_parteien",
+    "HA02_gegenstand",
+    "HA03_bekanntgabe",
+    "HA04_lohn",
+    "HA05_material",
+    "HA06_ausfuehrung",
+    "HA07_pruefung",
+    "HA08_verhinderung",
+    "HA09_dauer",
+    "HA11_schluss",
+    "HA12_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "HA01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA02_gegenstand",
+     "begruendung": "Gegenstand der Heimarbeit und Arbeitsraum (Art. 351 OR) – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA03_bekanntgabe",
+     "begruendung": "Bekanntgabepflicht vor Arbeitsausgabe, schriftliche Lohn-/Materialangabe (Art. 351a OR).",
+     "norm": "Art. 351a OR"
+    },
+    {
+     "bausteinId": "HA04_lohn",
+     "begruendung": "Lohnhöhe und Zahlungsweise (halbmonatlich/Monatsende bzw. bei Ablieferung), schriftliche Abrechnung (Art. 353a OR).",
+     "norm": "Art. 353a OR"
+    },
+    {
+     "bausteinId": "HA05_material",
+     "begruendung": "Sorgfalts-/Rückgabepflicht und Haftungsschranke auf die Selbstkosten (Art. 352a OR) – nur bei vom Arbeitgeber gestelltem Material.",
+     "norm": "Art. 352a OR"
+    },
+    {
+     "bausteinId": "HA06_ausfuehrung",
+     "begruendung": "Ausführungs- und Nachbesserungspflicht (Art. 352 OR) – ab «standard».",
+     "norm": "Art. 352 OR"
+    },
+    {
+     "bausteinId": "HA07_pruefung",
+     "begruendung": "Prüf- und Rügeobliegenheit mit Wochenfrist (Art. 353 OR) – immer enthalten.",
+     "norm": "Art. 353 OR"
+    },
+    {
+     "bausteinId": "HA08_verhinderung",
+     "begruendung": "Lohn bei Annahmeverzug/Verhinderung im ununterbrochenen Dienst (Art. 353b Abs. 1 OR).",
+     "norm": "Art. 353b OR"
+    },
+    {
+     "bausteinId": "HA09_dauer",
+     "begruendung": "Vermutung über die Dauer (Probe/ununterbrochen unbefristet) nach Art. 354 OR.",
+     "norm": "Art. 354 OR"
+    },
+    {
+     "bausteinId": "HA11_schluss",
+     "begruendung": "Schriftformvorbehalt, Gesetzesverweis und Ausfertigung – immer enthalten.",
+     "norm": "Art. 351 OR"
+    },
+    {
+     "bausteinId": "HA12_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften.",
+     "norm": "Art. 351 OR"
+    }
+   ]
+  }
+ },
+ "vorl:ha-gates": {
+  "blocker": [],
+  "warnungen": [
+   "Der Heimarbeitnehmer beschafft das Material: Die dafür geschuldete Entschädigung ist schriftlich anzugeben; sonst gelten die üblichen Bedingungen (Art. 351a Abs. 2 OR)."
+  ],
+  "hinweise": [
+   "Vor jeder Ausgabe von Arbeit sind die erheblichen Bedingungen bekanntzugeben; der Lohn und – soweit der Heimarbeitnehmer das Material beschafft – dessen Entschädigung sind schriftlich anzugeben. Fehlt die schriftliche Angabe, gelten die üblichen Arbeitsbedingungen (Art. 351a OR).",
+   "Der Arbeitgeber prüft das abgelieferte Arbeitserzeugnis und gibt Mängel spätestens innert einer Woche bekannt; unterlässt er dies, gilt die Arbeit als abgenommen (Art. 353 OR).",
+   "Da kein ununterbrochenes Dienstverhältnis vorliegt, besteht keine Lohnpflicht nach Art. 324/324a OR bei Verhinderung, und das Verhältnis gilt – vorbehältlich anderer Abrede – als auf bestimmte Zeit eingegangen (Art. 353b Abs. 2, 354 Abs. 2 OR)."
+  ]
+ },
  "vorl:mv": {
   "dokument": {
    "titel": "Mietvertrag",

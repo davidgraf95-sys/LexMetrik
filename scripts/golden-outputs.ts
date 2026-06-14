@@ -32,6 +32,7 @@ import { koZusammenstellen, KO_DEFAULTS } from '../src/lib/vorlagen/klageOrdentl
 import { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } from '../src/lib/vorlagen/arbeitsvertrag';
 import { lvZusammenstellen, LV_DEFAULTS, pruefeLvGates } from '../src/lib/vorlagen/lehrvertrag';
 import { hrZusammenstellen, HR_DEFAULTS, pruefeHrGates } from '../src/lib/vorlagen/handelsreisendenvertrag';
+import { haZusammenstellen, HA_DEFAULTS, pruefeHaGates } from '../src/lib/vorlagen/heimarbeitsvertrag';
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
@@ -237,6 +238,18 @@ f('vorl:hr-provision-experte', () => hrZusammenstellen({ ...hrBasis, detailgrad:
 f('vorl:hr-fix-einfach', () => hrZusammenstellen({ ...hrBasis, detailgrad: 'einfach', lohnmodell: 'fix' }));
 f('vorl:hr-blanko', () => hrZusammenstellen({ ...HR_DEFAULTS }));
 f('vorl:hr-gates', () => pruefeHrGates({ ...hrBasis, delkredere: true, lohnmodell: 'provision', vollmacht: 'abschluss', saisonschwankung: true }));
+// Heimarbeitsvertrag (Art. 351–354 OR; P1e) – Sonderregime, eigenes Schema.
+const haBasis = {
+  ...HA_DEFAULTS, arbeitgeberName: 'Muster AG', arbeitgeberAdresse: 'X 1, 8000 Zürich',
+  heimarbeiterVorname: 'Heidi', heimarbeiterName: 'Beispiel', heimarbeiterAdresse: 'Y 2, 8400 Winterthur',
+  arbeitsbeschrieb: 'Konfektionierung von Verpackungen', lohnAngabe: '4.50', lohnEinheit: 'pro Stück',
+  ort: 'Zürich', datum: '2026-06-15',
+} as const;
+f('vorl:ha-ununterbrochen', () => haZusammenstellen(haBasis));
+f('vorl:ha-stueck-experte', () => haZusammenstellen({ ...haBasis, detailgrad: 'experte', ununterbrochen: false, materialVomArbeitgeber: false, materialBeschafftHeimarbeiter: true, materialEntschaedigung: 'CHF 0.20 pro Stück', probearbeit: true }));
+f('vorl:ha-einfach', () => haZusammenstellen({ ...haBasis, detailgrad: 'einfach' }));
+f('vorl:ha-blanko', () => haZusammenstellen({ ...HA_DEFAULTS }));
+f('vorl:ha-gates', () => pruefeHaGates({ ...haBasis, materialBeschafftHeimarbeiter: true, ununterbrochen: false }));
 const mvBasis = {
   ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X 1', mieterName: 'M', mieterAdresse: 'Y 2',
   objektBeschrieb: '3.5-Zi', objektAdresse: 'Z 3', beginn: '2026-10-01', mietzinsNettoCHF: '2000',
