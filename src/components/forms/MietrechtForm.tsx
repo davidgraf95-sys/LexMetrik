@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
@@ -172,6 +172,7 @@ export function MietrechtForm() {
   const ort = ORTSUEBLICHE_TERMINE[kanton];
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       <PflichtDisclaimer kurz="Orientierung (Art. 253 ff. OR). Ortsübliche Termine sind Tatfrage; verbindlich ist die Schlichtungsbehörde." text={MIET_DISCLAIMER} />
 
@@ -323,5 +324,6 @@ export function MietrechtForm() {
         </ErgebnisBlock>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

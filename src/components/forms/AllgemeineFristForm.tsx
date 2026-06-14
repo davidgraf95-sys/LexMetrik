@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { Link } from 'react-router-dom';
@@ -147,6 +147,7 @@ export function AllgemeineFristForm() {
   };
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       <PflichtDisclaimer
         kurz="Fristende nach Art. 77/78 OR ab dem eingegebenen Startdatum; Fristbeginn (Zustellung) und verfahrensrechtliche Stillstände bestimmt der Rechner nicht."
@@ -418,5 +419,6 @@ export function AllgemeineFristForm() {
         </div>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

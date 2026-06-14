@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EckdatenKachel, FehlerBox, Field, Stepper, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, Stepper, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
@@ -509,6 +509,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
   const weiterAus = aktuelleId === 'streitwert' && fehler.length > 0;
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       <PflichtDisclaimer text={
         rechtsweg === 'schkg'
@@ -1535,5 +1536,6 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
       </div>
       </>}
     </div>
+    </BeruehrtRahmen>
   );
 }

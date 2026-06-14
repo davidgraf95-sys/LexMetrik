@@ -1,4 +1,4 @@
-import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
@@ -164,6 +164,7 @@ export function ErbteilungForm() {
   const nachlass = ergebnis?.nachlassChf;
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
       <PflichtDisclaimer kurz="Quoten-Orientierung (Art. 457 ff., 470 ff. ZGB, Revision 2023). Massgebend ist das Todesdatum." text={ERB_DISCLAIMER} />
@@ -373,5 +374,6 @@ export function ErbteilungForm() {
         </ErgebnisBlock>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

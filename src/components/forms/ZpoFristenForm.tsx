@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
@@ -175,6 +175,7 @@ export function ZpoFristenForm() {
   };
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       {/* Pflicht-Disclaimer (Ziff. 9) – immer sichtbar, kompakt. Volltext im Ergebnis-Panel. */}
       <PflichtDisclaimer kurz="Rechnerische Orientierung (Art. 142–147 ZPO, Praxis BGer 5A_691/2023). Massgeblich ist der Gerichtsort." text={DISCLAIMER} />
@@ -355,5 +356,6 @@ export function ZpoFristenForm() {
       </>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

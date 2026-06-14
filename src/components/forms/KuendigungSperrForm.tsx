@@ -1,4 +1,4 @@
-import { FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { useEffect, useState } from 'react';
@@ -126,6 +126,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
   };
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       <PflichtDisclaimer
         kurz="Kündigungsfrist und Sperrfristen nach Art. 335c / 336c OR; massgeblich sind GAV und Einzelvertrag."
@@ -294,5 +295,6 @@ export function KuendigungSperrForm({ onBeendigung }: {
         </ErgebnisBlock>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

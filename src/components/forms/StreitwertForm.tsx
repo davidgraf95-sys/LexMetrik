@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -140,6 +140,7 @@ export function StreitwertForm() {
   };
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       <PflichtDisclaimer kurz="Streitwert nach Rechtsbegehren (Art. 91 ff. ZPO); Ermessens-Konstellationen setzt das Gericht fest." text={SW_DISCLAIMER} />
 
@@ -257,5 +258,6 @@ export function StreitwertForm() {
         </ErgebnisBlock>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

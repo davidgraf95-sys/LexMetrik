@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
@@ -197,6 +197,7 @@ export function SchkgFristenForm() {
   };
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       {/* Pflicht-Disclaimer */}
       <PflichtDisclaimer kurz="Rechnerische Orientierung (Art. 31/56/63 SchKG, Schnittstelle Art. 145 ZPO). Betreibungsferien ≠ Gerichtsferien." text={SCHKG_DISCLAIMER} />
@@ -370,5 +371,6 @@ export function SchkgFristenForm() {
         </ErgebnisBlock>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

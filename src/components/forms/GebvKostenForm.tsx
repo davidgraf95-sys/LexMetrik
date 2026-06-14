@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -95,6 +95,7 @@ export function GebvKostenForm() {
   };
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       <PflichtDisclaimer kurz="Amtliche Gebühren je Betreibungsschritt (GebV SchKG); Rahmengebühren nur als Bandbreite, Auslagen effektiv." text={GK_DISCLAIMER} />
 
@@ -168,5 +169,6 @@ export function GebvKostenForm() {
         </ErgebnisBlock>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

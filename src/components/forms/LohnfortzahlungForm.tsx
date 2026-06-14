@@ -1,4 +1,4 @@
-import { BeispielChips, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, BeispielChips, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
@@ -147,6 +147,7 @@ export function LohnfortzahlungForm() {
   };
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       {/* Skalen-Hinweis – kompakt, aufklappbar */}
       <PflichtDisclaimer kurz="Skalen = Gerichtspraxis, nicht gerichtsverbindlich (Art. 324a Abs. 2 OR)." text={SKALEN_HINWEIS} />
@@ -339,5 +340,6 @@ export function LohnfortzahlungForm() {
         </ErgebnisBlock>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }

@@ -1,4 +1,4 @@
-import { cloneElement, isValidElement, useId } from 'react';
+import { cloneElement, createContext, isValidElement, useContext, useId, useState } from 'react';
 import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { useLocale, fedlexLokalisiert } from '../locale';
 
@@ -97,9 +97,27 @@ export function LiveHeader() {
   );
 }
 
+// Grundsatz David (14.6.2026): im leeren Anfangszustand keine Eingabefehler.
+// FehlerBox wird erst sichtbar, wenn das umschliessende Formular «berührt»
+// wurde. Default true → ausserhalb eines BeruehrtRahmen (z. B. Vorlagen-
+// Wizards, die selbst gaten) unverändert. BeruehrtRahmen ist layout-transparent
+// (display:contents) und setzt «berührt» beim ersten onInput/onChange.
+const BeruehrtContext = createContext(true);
+
+export function BeruehrtRahmen({ children }: { children: React.ReactNode }) {
+  const [beruehrt, setBeruehrt] = useState(false);
+  const merke = () => { if (!beruehrt) setBeruehrt(true); };
+  return (
+    <BeruehrtContext.Provider value={beruehrt}>
+      <div className="contents" onInput={merke} onChange={merke}>{children}</div>
+    </BeruehrtContext.Provider>
+  );
+}
+
 /** Einheitliche Eingabefehler-Box (vorher 4 Varianten; immer role="alert"). */
 export function FehlerBox({ fehler }: { fehler: string[] }) {
-  if (fehler.length === 0) return null;
+  const beruehrt = useContext(BeruehrtContext);
+  if (!beruehrt || fehler.length === 0) return null;
   return (
     <div role="alert" className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
       <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>

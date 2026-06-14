@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
@@ -117,6 +117,7 @@ export function TeuerungForm() {
   };
 
   return (
+    <BeruehrtRahmen>
     <div className="space-y-6">
       <PflichtDisclaimer
         kurz="LIK-Indexierung nach den publizierten BFS-Reihen; massgeblich sind Vertrag bzw. Urteil (Indexklausel, Basis, Rundung)."
@@ -178,5 +179,6 @@ export function TeuerungForm() {
         </ErgebnisBlock>
       )}
     </div>
+    </BeruehrtRahmen>
   );
 }
