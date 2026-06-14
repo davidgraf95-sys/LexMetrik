@@ -4,6 +4,7 @@ import {
   avZusammenstellen, pruefeAvGates, type AvAntworten, type AvUntertyp,
 } from '../lib/vorlagen/arbeitsvertrag';
 import { VorlageLehrvertrag } from './VorlageLehrvertrag';
+import { VorlageHandelsreisendenvertrag } from './VorlageHandelsreisendenvertrag';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
@@ -45,11 +46,12 @@ const MINDESTLOHN_KANTONE = new Set(AV_MINDESTLOEHNE.map((m) => m.kanton));
 // das 319-ff-Regime (EinzelKaderWizard); Lehrvertrag (344 ff.) ist ein eigenes
 // Schema mit eigenem Wizard. Die Regime-Wahl wird separat persistiert.
 const REGIME_KEY = 'lexmetrik.vorlage.arbeitsvertrag.regime.v1';
-type AvRegime = AvUntertyp | 'lehrvertrag';
+type AvRegime = AvUntertyp | 'lehrvertrag' | 'handelsreisendenvertrag';
 const REGIME_OPTIONEN: { id: AvRegime; label: string; sub: string }[] = [
   { id: 'einzel', label: 'Einzelarbeitsvertrag', sub: 'Standard (Art. 319 ff. OR)' },
   { id: 'kader', label: 'Kader / Manager', sub: 'leitende Stellung, Bonus' },
   { id: 'lehrvertrag', label: 'Lehrvertrag', sub: 'Art. 344 ff. OR (Schriftform)' },
+  { id: 'handelsreisendenvertrag', label: 'Handelsreisender', sub: 'Art. 347 ff. OR' },
 ];
 
 function VertragstypWahl({ regime, onWahl }: { regime: AvRegime; onWahl: (v: AvRegime) => void }) {
@@ -74,7 +76,7 @@ export function VorlageArbeitsvertrag() {
   const [regime, setRegime] = useState<AvRegime>(() => {
     try {
       const r = localStorage.getItem(REGIME_KEY);
-      if (r === 'einzel' || r === 'kader' || r === 'lehrvertrag') return r;
+      if (r === 'einzel' || r === 'kader' || r === 'lehrvertrag' || r === 'handelsreisendenvertrag') return r;
     } catch { /* defekter Speicher → Default */ }
     return 'einzel';
   });
@@ -82,6 +84,7 @@ export function VorlageArbeitsvertrag() {
 
   const kopf = <VertragstypWahl regime={regime} onWahl={setRegime} />;
   if (regime === 'lehrvertrag') return <VorlageLehrvertrag kopf={kopf} />;
+  if (regime === 'handelsreisendenvertrag') return <VorlageHandelsreisendenvertrag kopf={kopf} />;
   return <EinzelKaderWizard untertyp={regime} kopf={kopf} />;
 }
 

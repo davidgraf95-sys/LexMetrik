@@ -31,6 +31,7 @@ import { sgZusammenstellen, SG_DEFAULTS, SG_PERSON_NATUERLICH } from '../src/lib
 import { koZusammenstellen, KO_DEFAULTS } from '../src/lib/vorlagen/klageOrdentlich';
 import { avZusammenstellen, AV_DEFAULTS, pruefeAvGates } from '../src/lib/vorlagen/arbeitsvertrag';
 import { lvZusammenstellen, LV_DEFAULTS, pruefeLvGates } from '../src/lib/vorlagen/lehrvertrag';
+import { hrZusammenstellen, HR_DEFAULTS, pruefeHrGates } from '../src/lib/vorlagen/handelsreisendenvertrag';
 import { agDokumentmappe, AG_DOK_DEFAULTS, type AgDokAntworten } from '../src/lib/vorlagen/gruendungAgDokumente';
 import { mvZusammenstellen, MV_DEFAULTS, pruefeMvGates } from '../src/lib/vorlagen/mietvertrag';
 import { maZusammenstellen, MA_DEFAULTS, pruefeMaGates, type MaAntworten } from '../src/lib/vorlagen/mahnung';
@@ -223,6 +224,19 @@ f('vorl:lv-experte', () => lvZusammenstellen({ ...lvBasis, detailgrad: 'experte'
 f('vorl:lv-volljaehrig-einfach', () => lvZusammenstellen({ ...lvBasis, detailgrad: 'einfach', lernendeGeburtsdatum: '2000-01-01', gesetzlicheVertretung: '' }));
 f('vorl:lv-blanko', () => lvZusammenstellen({ ...LV_DEFAULTS }));
 f('vorl:lv-gates', () => pruefeLvGates({ ...lvBasis, probezeitMonate: 4, ferienWochen: 4 }));
+// Handelsreisendenvertrag (Art. 347–350a OR; P1d) – Sonderregime, eigenes Schema.
+const hrBasis = {
+  ...HR_DEFAULTS, arbeitgeberName: 'Muster AG', arbeitgeberAdresse: 'X 1, 8000 Zürich',
+  reisenderVorname: 'Rolf', reisenderName: 'Beispiel', reisenderAdresse: 'Y 2, 3000 Bern',
+  gegenstand: 'Werkzeugmaschinen', reisegebiet: 'Kantone BE und SO',
+  beginn: '2026-08-01', fixCHF: '5000', provisionProzent: '3',
+  ort: 'Zürich', datum: '2026-06-15',
+} as const;
+f('vorl:hr-fixprovision', () => hrZusammenstellen(hrBasis));
+f('vorl:hr-provision-experte', () => hrZusammenstellen({ ...hrBasis, detailgrad: 'experte', lohnmodell: 'provision', vollmacht: 'abschluss', auslagen: 'pauschal', auslagenPauschaleCHF: '600', saisonschwankung: true, delkredere: true, delkredereProvisionProzent: '2', ausschliesslich: false }));
+f('vorl:hr-fix-einfach', () => hrZusammenstellen({ ...hrBasis, detailgrad: 'einfach', lohnmodell: 'fix' }));
+f('vorl:hr-blanko', () => hrZusammenstellen({ ...HR_DEFAULTS }));
+f('vorl:hr-gates', () => pruefeHrGates({ ...hrBasis, delkredere: true, lohnmodell: 'provision', vollmacht: 'abschluss', saisonschwankung: true }));
 const mvBasis = {
   ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X 1', mieterName: 'M', mieterAdresse: 'Y 2',
   objektBeschrieb: '3.5-Zi', objektAdresse: 'Z 3', beginn: '2026-10-01', mietzinsNettoCHF: '2000',

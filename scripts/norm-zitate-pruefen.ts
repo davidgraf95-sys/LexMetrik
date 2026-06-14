@@ -28,6 +28,8 @@ const QUELLEN = [
   'src/lib/vorlagen/arbeitsvertrag.ts',
   // Lehrvertrag (Sonderregime P1c, 14.6.2026) — Art. 344–346a OR.
   'src/lib/vorlagen/lehrvertrag.ts',
+  // Handelsreisendenvertrag (Sonderregime P1d, 14.6.2026) — Art. 347–350a OR.
+  'src/lib/vorlagen/handelsreisendenvertrag.ts',
   // Auftrag/Dienstleistungsvertrag (V3, 13.6.2026) — Art. 394 ff. OR.
   'src/lib/vorlagen/auftrag.ts',
   // Werkvertrag (V3, 13.6.2026) — Art. 363 ff. OR.

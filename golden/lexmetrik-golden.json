@@ -9380,6 +9380,564 @@
    "Ein nachvertragliches Konkurrenzverbot oder eine andere Abrede, welche die lernende Person im freien Entscheid über ihre berufliche Tätigkeit nach der Lehre beeinträchtigt, ist nichtig (Art. 344a Abs. 6 OR) – eine solche Klausel wird bewusst NICHT angeboten."
   ]
  },
+ "vorl:hr-fixprovision": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Handelsreisendenvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "H01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(nachfolgend «Arbeitgeber»)\n\nund\n\nRolf Beispiel\nY 2, 3000 Bern\n(nachfolgend «Handelsreisende/r»)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "H02_taetigkeit",
+      "ueberschrift": "Tätigkeit und Reisegebiet",
+      "text": "1. Der/Die Handelsreisende vermittelt________ auf Rechnung des Arbeitgebers ausserhalb von dessen Geschäftsräumen Geschäfte über Werkzeugmaschinen. Zugewiesen ist folgendes Reisegebiet bzw. folgender Kundenkreis: Kantone BE und SO. Die Zuweisung erfolgt ausschliesslich; der Arbeitgeber bleibt befugt, mit Kunden im Gebiet selbst Geschäfte abzuschliessen (Art. 349 Abs. 1 OR). Das Arbeitsverhältnis beginnt am 01.08.2026."
+     },
+     {
+      "bausteinId": "H03_vollmacht",
+      "ueberschrift": "Vollmacht",
+      "text": "2. Der/Die Handelsreisende ist ermächtigt, Geschäfte zu vermitteln, nicht aber abzuschliessen (Art. 348b Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "H04_pflichten",
+      "ueberschrift": "Pflichten des Handelsreisenden",
+      "text": "3. Der/Die Handelsreisende besucht die Kundschaft in der vorgeschriebenen Weise und darf ohne schriftliche Bewilligung des Arbeitgebers weder für eigene noch für fremde Rechnung Geschäfte vermitteln oder abschliessen. Er/Sie erstattet regelmässig Bericht, übermittelt die erhaltenen Bestellungen sofort und informiert über erhebliche Tatsachen, die den Kundenkreis betreffen (Art. 348 OR)."
+     },
+     {
+      "bausteinId": "H05_lohn",
+      "ueberschrift": "Lohn",
+      "text": "4. Der/Die Handelsreisende erhält ein festes Gehalt von CHF 5'000.00 pro Monat zuzüglich einer Provision von 3 % des Nettoumsatz der zustande gekommenen Geschäfte. Der Lohn wird am Ende jedes Monats abgerechnet und ausgerichtet; die gesetzlichen und vertraglichen Abzüge gehen zulasten des Handelsreisenden/der Handelsreisenden."
+     },
+     {
+      "bausteinId": "H06_provision_bezug",
+      "ueberschrift": "Provisionsanspruch",
+      "text": "5. Da dem/der Handelsreisenden das Reisegebiet bzw. der Kundenkreis ausschliesslich zugewiesen ist, ist ihm/ihr die Provision auf allen Geschäften auszurichten, die mit Kunden in diesem Gebiet oder Kundenkreis abgeschlossen werden – auch auf den vom Arbeitgeber selbst abgeschlossenen (Art. 349b Abs. 1 OR). Ist im Zeitpunkt der Fälligkeit der Wert eines Geschäftes noch nicht bestimmbar, wird die Provision zunächst auf dem geschätzten Mindestwert und der Rest bei Ausführung ausgerichtet (Art. 349b Abs. 3 OR)."
+     },
+     {
+      "bausteinId": "H07_auslagen",
+      "ueberschrift": "Auslagenersatz",
+      "text": "6. Der Arbeitgeber ersetzt dem/der Handelsreisenden die mit der Reisetätigkeit notwendig verbundenen Auslagen gegen Beleg. Eine Abrede, wonach der Auslagenersatz im festen Gehalt oder in der Provision eingeschlossen sei, ist nichtig (Art. 349d Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "H09_verhinderung",
+      "ueberschrift": "Lohn bei unverschuldeter Verhinderung",
+      "text": "7. Ist der/die Handelsreisende ohne eigenes Verschulden an der Reisetätigkeit verhindert und gleichwohl Lohn geschuldet, bemisst sich dieser nach dem festen Gehalt und einer angemessenen Entschädigung für den Ausfall der Provision (Art. 349c OR)."
+     },
+     {
+      "bausteinId": "H10_kuendigung",
+      "ueberschrift": "Beendigung des Arbeitsverhältnisses",
+      "text": "8. Für die Kündigung gelten die allgemeinen Fristen des Einzelarbeitsvertrags (Art. 335 ff. OR). Bei Beendigung ist dem/der Handelsreisenden die Provision auf allen bis dahin abgeschlossenen oder vermittelten Geschäften sowie auf den bis zur Beendigung eingehenden Bestellungen auszurichten; die überlassenen Muster, Preistarife und Kundenverzeichnisse sind zurückzugeben (Art. 350a OR)."
+     },
+     {
+      "bausteinId": "H12_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen bedürfen der Schriftform. Soweit dieser Vertrag nichts regelt, gelten die Art. 347 ff. OR und subsidiär die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR). Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar."
+     },
+     {
+      "bausteinId": "H13_unterschriften",
+      "text": "Zürich, 15.06.2026\n\n\nDer Arbeitgeber:\n\n___________________________\nMuster AG\n\n\nDer/Die Handelsreisende:\n\n___________________________\nRolf Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Handelsreisendenvertrag ist schriftlich zu regeln (Art. 347a OR). Zwingend sind insbesondere die Delkredere-Schranke (Art. 348a OR), der gesonderte Auslagenersatz (Art. 349d OR) und die Saison-Kündigungsregel (Art. 350 OR). Subsidiär gelten die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR).",
+    "version": "1.0.0 (Art. 347–350a OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1d)"
+   },
+   "aufgenommen": [
+    "H01_parteien",
+    "H02_taetigkeit",
+    "H03_vollmacht",
+    "H04_pflichten",
+    "H05_lohn",
+    "H06_provision_bezug",
+    "H07_auslagen",
+    "H09_verhinderung",
+    "H10_kuendigung",
+    "H12_schluss",
+    "H13_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "H01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 347 OR"
+    },
+    {
+     "bausteinId": "H02_taetigkeit",
+     "begruendung": "Gegenstand, Reisegebiet/Kundenkreis und Beginn (Art. 347/349 OR) – immer enthalten.",
+     "norm": "Art. 347 OR"
+    },
+    {
+     "bausteinId": "H03_vollmacht",
+     "begruendung": "Umfang der Vollmacht (Vermittlung/Abschluss; keine Inkasso-/Stundungsbefugnis ohne Sondervollmacht) – Art. 348b OR.",
+     "norm": "Art. 348b OR"
+    },
+    {
+     "bausteinId": "H04_pflichten",
+     "begruendung": "Besuchs-, Konkurrenzunterlassungs- und Berichtspflicht (Art. 348 OR) – ab «standard».",
+     "norm": "Art. 348 OR"
+    },
+    {
+     "bausteinId": "H05_lohn",
+     "begruendung": "Lohn als festes Gehalt mit/ohne Provision bzw. reine Provision (Art. 349a OR).",
+     "norm": "Art. 349a OR"
+    },
+    {
+     "bausteinId": "H06_provision_bezug",
+     "begruendung": "Bezugsumfang der Provision je nach (Aus-)Schliesslichkeit des Gebiets (Art. 349b OR).",
+     "norm": "Art. 349b OR"
+    },
+    {
+     "bausteinId": "H07_auslagen",
+     "begruendung": "Gesonderter Auslagenersatz; Einschluss-Verbot (Art. 349d OR) – zwingend.",
+     "norm": "Art. 349d OR"
+    },
+    {
+     "bausteinId": "H09_verhinderung",
+     "begruendung": "Lohn bei unverschuldeter Verhinderung mit Provisionsausfall (Art. 349c OR) – ab «standard», nur mit Provision.",
+     "norm": "Art. 349c OR"
+    },
+    {
+     "bausteinId": "H10_kuendigung",
+     "begruendung": "Kündigung (335 ff. subsidiär), Saison-Sonderregel (350) und Provisionsabrechnung/Rückgabe bei Beendigung (350a OR).",
+     "norm": "Art. 350a OR"
+    },
+    {
+     "bausteinId": "H12_schluss",
+     "begruendung": "Schriftformvorbehalt, Gesetzesverweis und Ausfertigung – immer enthalten.",
+     "norm": "Art. 347a OR"
+    },
+    {
+     "bausteinId": "H13_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften (Art. 347a OR Schriftform).",
+     "norm": "Art. 347a OR"
+    }
+   ]
+  }
+ },
+ "vorl:hr-provision-experte": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Handelsreisendenvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "H01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(nachfolgend «Arbeitgeber»)\n\nund\n\nRolf Beispiel\nY 2, 3000 Bern\n(nachfolgend «Handelsreisende/r»)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "H02_taetigkeit",
+      "ueberschrift": "Tätigkeit und Reisegebiet",
+      "text": "1. Der/Die Handelsreisende vermittelt und schliesst auf Rechnung des Arbeitgebers ausserhalb von dessen Geschäftsräumen Geschäfte über Werkzeugmaschinen. Zugewiesen ist folgendes Reisegebiet bzw. folgender Kundenkreis: Kantone BE und SO. Das Arbeitsverhältnis beginnt am 01.08.2026."
+     },
+     {
+      "bausteinId": "H03_vollmacht",
+      "ueberschrift": "Vollmacht",
+      "text": "2. Der/Die Handelsreisende ist ermächtigt, Geschäfte abzuschliessen. Die Vollmacht erstreckt sich auf die zur Ausführung gewöhnlich gehörenden Rechtshandlungen; zur Entgegennahme von Zahlungen und zur Bewilligung von Zahlungsfristen bedarf es einer besonderen Ermächtigung (Art. 348b Abs. 2 OR). Die vorgeschriebenen Preise und Geschäftsbedingungen sind einzuhalten."
+     },
+     {
+      "bausteinId": "H04_pflichten",
+      "ueberschrift": "Pflichten des Handelsreisenden",
+      "text": "3. Der/Die Handelsreisende besucht die Kundschaft in der vorgeschriebenen Weise und darf ohne schriftliche Bewilligung des Arbeitgebers weder für eigene noch für fremde Rechnung Geschäfte vermitteln oder abschliessen. Er/Sie erstattet regelmässig Bericht, übermittelt die erhaltenen Bestellungen sofort und informiert über erhebliche Tatsachen, die den Kundenkreis betreffen (Art. 348 OR)."
+     },
+     {
+      "bausteinId": "H05_lohn",
+      "ueberschrift": "Lohn",
+      "text": "4. Der Lohn besteht ausschliesslich aus einer Provision von 3 % des Nettoumsatz der zustande gekommenen Geschäfte; die Parteien halten fest, dass diese Provision ein angemessenes Entgelt für die Tätigkeit ergibt (Art. 349a Abs. 2 OR). Der Lohn wird am Ende jedes Monats abgerechnet und ausgerichtet; die gesetzlichen und vertraglichen Abzüge gehen zulasten des Handelsreisenden/der Handelsreisenden."
+     },
+     {
+      "bausteinId": "H06_provision_bezug",
+      "ueberschrift": "Provisionsanspruch",
+      "text": "5. Da das Reisegebiet bzw. der Kundenkreis nicht ausschliesslich zugewiesen ist, ist die Provision nur auf den vom/von der Handelsreisenden vermittelten oder abgeschlossenen Geschäften auszurichten (Art. 349b Abs. 2 OR). Ist im Zeitpunkt der Fälligkeit der Wert eines Geschäftes noch nicht bestimmbar, wird die Provision zunächst auf dem geschätzten Mindestwert und der Rest bei Ausführung ausgerichtet (Art. 349b Abs. 3 OR)."
+     },
+     {
+      "bausteinId": "H07_auslagen",
+      "ueberschrift": "Auslagenersatz",
+      "text": "6. Der Arbeitgeber ersetzt die mit der Reisetätigkeit notwendig verbundenen Auslagen durch eine gesonderte Pauschale von CHF 600.00 pro Monat. Eine Abrede, wonach der Auslagenersatz im festen Gehalt oder in der Provision eingeschlossen sei, ist nichtig (Art. 349d Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "H08_delkredere",
+      "ueberschrift": "Delkredere",
+      "text": "7. Bei Geschäften mit Privatkunden haftet der/die Handelsreisende beim einzelnen Geschäft für höchstens einen Viertel des Schadens, der dem Arbeitgeber aus der Nichterfüllung durch den Kunden erwächst. Als Gegenleistung wird eine Delkredere-Provision von 2 % vereinbart. Jede weitergehende Einstandspflicht ist nichtig (Art. 348a OR)."
+     },
+     {
+      "bausteinId": "H09_verhinderung",
+      "ueberschrift": "Lohn bei unverschuldeter Verhinderung",
+      "text": "8. Ist der/die Handelsreisende ohne eigenes Verschulden an der Reisetätigkeit verhindert und gleichwohl Lohn geschuldet, bemisst sich dieser nach dem festen Gehalt und einer angemessenen Entschädigung für den Ausfall der Provision (Art. 349c OR)."
+     },
+     {
+      "bausteinId": "H10_kuendigung",
+      "ueberschrift": "Beendigung des Arbeitsverhältnisses",
+      "text": "9. Für die Kündigung gelten die allgemeinen Fristen des Einzelarbeitsvertrags (Art. 335 ff. OR). Beträgt die Provision mindestens einen Fünftel des Lohnes und unterliegt sie erheblichen saisonalen Schwankungen, kann während der Saison nur auf das Ende des zweiten der Kündigung folgenden Monats gekündigt werden (Art. 350 OR). Bei Beendigung ist dem/der Handelsreisenden die Provision auf allen bis dahin abgeschlossenen oder vermittelten Geschäften sowie auf den bis zur Beendigung eingehenden Bestellungen auszurichten; die überlassenen Muster, Preistarife und Kundenverzeichnisse sind zurückzugeben (Art. 350a OR)."
+     },
+     {
+      "bausteinId": "H11_retention",
+      "ueberschrift": "Retentionsrecht",
+      "text": "10. Zur Sicherung seiner fälligen Forderungen aus dem Arbeitsverhältnis steht dem/der Handelsreisenden das Retentionsrecht an beweglichen Sachen, Wertpapieren und an Inkassozahlungen zu; an Fahrausweisen, Preistarifen und Kundenverzeichnissen besteht es nicht (Art. 349e OR)."
+     },
+     {
+      "bausteinId": "H12_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "11. Änderungen und Ergänzungen bedürfen der Schriftform. Soweit dieser Vertrag nichts regelt, gelten die Art. 347 ff. OR und subsidiär die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR). Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar."
+     },
+     {
+      "bausteinId": "H13_unterschriften",
+      "text": "Zürich, 15.06.2026\n\n\nDer Arbeitgeber:\n\n___________________________\nMuster AG\n\n\nDer/Die Handelsreisende:\n\n___________________________\nRolf Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Handelsreisendenvertrag ist schriftlich zu regeln (Art. 347a OR). Zwingend sind insbesondere die Delkredere-Schranke (Art. 348a OR), der gesonderte Auslagenersatz (Art. 349d OR) und die Saison-Kündigungsregel (Art. 350 OR). Subsidiär gelten die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR).",
+    "version": "1.0.0 (Art. 347–350a OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1d)"
+   },
+   "aufgenommen": [
+    "H01_parteien",
+    "H02_taetigkeit",
+    "H03_vollmacht",
+    "H04_pflichten",
+    "H05_lohn",
+    "H06_provision_bezug",
+    "H07_auslagen",
+    "H08_delkredere",
+    "H09_verhinderung",
+    "H10_kuendigung",
+    "H11_retention",
+    "H12_schluss",
+    "H13_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "H01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 347 OR"
+    },
+    {
+     "bausteinId": "H02_taetigkeit",
+     "begruendung": "Gegenstand, Reisegebiet/Kundenkreis und Beginn (Art. 347/349 OR) – immer enthalten.",
+     "norm": "Art. 347 OR"
+    },
+    {
+     "bausteinId": "H03_vollmacht",
+     "begruendung": "Umfang der Vollmacht (Vermittlung/Abschluss; keine Inkasso-/Stundungsbefugnis ohne Sondervollmacht) – Art. 348b OR.",
+     "norm": "Art. 348b OR"
+    },
+    {
+     "bausteinId": "H04_pflichten",
+     "begruendung": "Besuchs-, Konkurrenzunterlassungs- und Berichtspflicht (Art. 348 OR) – ab «standard».",
+     "norm": "Art. 348 OR"
+    },
+    {
+     "bausteinId": "H05_lohn",
+     "begruendung": "Lohn als festes Gehalt mit/ohne Provision bzw. reine Provision (Art. 349a OR).",
+     "norm": "Art. 349a OR"
+    },
+    {
+     "bausteinId": "H06_provision_bezug",
+     "begruendung": "Bezugsumfang der Provision je nach (Aus-)Schliesslichkeit des Gebiets (Art. 349b OR).",
+     "norm": "Art. 349b OR"
+    },
+    {
+     "bausteinId": "H07_auslagen",
+     "begruendung": "Gesonderter Auslagenersatz; Einschluss-Verbot (Art. 349d OR) – zwingend.",
+     "norm": "Art. 349d OR"
+    },
+    {
+     "bausteinId": "H08_delkredere",
+     "begruendung": "Delkredere-Haftung in den zwingenden Schranken des Art. 348a OR – Detailgrad «experte».",
+     "norm": "Art. 348a OR"
+    },
+    {
+     "bausteinId": "H09_verhinderung",
+     "begruendung": "Lohn bei unverschuldeter Verhinderung mit Provisionsausfall (Art. 349c OR) – ab «standard», nur mit Provision.",
+     "norm": "Art. 349c OR"
+    },
+    {
+     "bausteinId": "H10_kuendigung",
+     "begruendung": "Kündigung (335 ff. subsidiär), Saison-Sonderregel (350) und Provisionsabrechnung/Rückgabe bei Beendigung (350a OR).",
+     "norm": "Art. 350a OR"
+    },
+    {
+     "bausteinId": "H11_retention",
+     "begruendung": "Retentionsrecht des Handelsreisenden (Art. 349e OR) – Detailgrad «experte».",
+     "norm": "Art. 349e OR"
+    },
+    {
+     "bausteinId": "H12_schluss",
+     "begruendung": "Schriftformvorbehalt, Gesetzesverweis und Ausfertigung – immer enthalten.",
+     "norm": "Art. 347a OR"
+    },
+    {
+     "bausteinId": "H13_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften (Art. 347a OR Schriftform).",
+     "norm": "Art. 347a OR"
+    }
+   ]
+  }
+ },
+ "vorl:hr-fix-einfach": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Handelsreisendenvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "H01_parteien",
+      "text": "zwischen\n\nMuster AG\nX 1, 8000 Zürich\n(nachfolgend «Arbeitgeber»)\n\nund\n\nRolf Beispiel\nY 2, 3000 Bern\n(nachfolgend «Handelsreisende/r»)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "H02_taetigkeit",
+      "ueberschrift": "Tätigkeit und Reisegebiet",
+      "text": "1. Der/Die Handelsreisende vermittelt________ auf Rechnung des Arbeitgebers ausserhalb von dessen Geschäftsräumen Geschäfte über Werkzeugmaschinen. Zugewiesen ist folgendes Reisegebiet bzw. folgender Kundenkreis: Kantone BE und SO. Die Zuweisung erfolgt ausschliesslich; der Arbeitgeber bleibt befugt, mit Kunden im Gebiet selbst Geschäfte abzuschliessen (Art. 349 Abs. 1 OR). Das Arbeitsverhältnis beginnt am 01.08.2026."
+     },
+     {
+      "bausteinId": "H03_vollmacht",
+      "ueberschrift": "Vollmacht",
+      "text": "2. Der/Die Handelsreisende ist ermächtigt, Geschäfte zu vermitteln, nicht aber abzuschliessen (Art. 348b Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "H05_lohn",
+      "ueberschrift": "Lohn",
+      "text": "3. Der/Die Handelsreisende erhält ein festes Gehalt von CHF 5'000.00 pro Monat. Der Lohn wird am Ende jedes Monats abgerechnet und ausgerichtet; die gesetzlichen und vertraglichen Abzüge gehen zulasten des Handelsreisenden/der Handelsreisenden."
+     },
+     {
+      "bausteinId": "H07_auslagen",
+      "ueberschrift": "Auslagenersatz",
+      "text": "4. Der Arbeitgeber ersetzt dem/der Handelsreisenden die mit der Reisetätigkeit notwendig verbundenen Auslagen gegen Beleg. Eine Abrede, wonach der Auslagenersatz im festen Gehalt oder in der Provision eingeschlossen sei, ist nichtig (Art. 349d Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "H10_kuendigung",
+      "ueberschrift": "Beendigung des Arbeitsverhältnisses",
+      "text": "5. Für die Kündigung gelten die allgemeinen Fristen des Einzelarbeitsvertrags (Art. 335 ff. OR). Bei Beendigung ist dem/der Handelsreisenden die Provision auf allen bis dahin abgeschlossenen oder vermittelten Geschäften sowie auf den bis zur Beendigung eingehenden Bestellungen auszurichten; die überlassenen Muster, Preistarife und Kundenverzeichnisse sind zurückzugeben (Art. 350a OR)."
+     },
+     {
+      "bausteinId": "H12_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "6. Änderungen und Ergänzungen bedürfen der Schriftform. Soweit dieser Vertrag nichts regelt, gelten die Art. 347 ff. OR und subsidiär die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR). Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar."
+     },
+     {
+      "bausteinId": "H13_unterschriften",
+      "text": "Zürich, 15.06.2026\n\n\nDer Arbeitgeber:\n\n___________________________\nMuster AG\n\n\nDer/Die Handelsreisende:\n\n___________________________\nRolf Beispiel",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Handelsreisendenvertrag ist schriftlich zu regeln (Art. 347a OR). Zwingend sind insbesondere die Delkredere-Schranke (Art. 348a OR), der gesonderte Auslagenersatz (Art. 349d OR) und die Saison-Kündigungsregel (Art. 350 OR). Subsidiär gelten die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR).",
+    "version": "1.0.0 (Art. 347–350a OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1d)"
+   },
+   "aufgenommen": [
+    "H01_parteien",
+    "H02_taetigkeit",
+    "H03_vollmacht",
+    "H05_lohn",
+    "H07_auslagen",
+    "H10_kuendigung",
+    "H12_schluss",
+    "H13_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "H01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 347 OR"
+    },
+    {
+     "bausteinId": "H02_taetigkeit",
+     "begruendung": "Gegenstand, Reisegebiet/Kundenkreis und Beginn (Art. 347/349 OR) – immer enthalten.",
+     "norm": "Art. 347 OR"
+    },
+    {
+     "bausteinId": "H03_vollmacht",
+     "begruendung": "Umfang der Vollmacht (Vermittlung/Abschluss; keine Inkasso-/Stundungsbefugnis ohne Sondervollmacht) – Art. 348b OR.",
+     "norm": "Art. 348b OR"
+    },
+    {
+     "bausteinId": "H05_lohn",
+     "begruendung": "Lohn als festes Gehalt mit/ohne Provision bzw. reine Provision (Art. 349a OR).",
+     "norm": "Art. 349a OR"
+    },
+    {
+     "bausteinId": "H07_auslagen",
+     "begruendung": "Gesonderter Auslagenersatz; Einschluss-Verbot (Art. 349d OR) – zwingend.",
+     "norm": "Art. 349d OR"
+    },
+    {
+     "bausteinId": "H10_kuendigung",
+     "begruendung": "Kündigung (335 ff. subsidiär), Saison-Sonderregel (350) und Provisionsabrechnung/Rückgabe bei Beendigung (350a OR).",
+     "norm": "Art. 350a OR"
+    },
+    {
+     "bausteinId": "H12_schluss",
+     "begruendung": "Schriftformvorbehalt, Gesetzesverweis und Ausfertigung – immer enthalten.",
+     "norm": "Art. 347a OR"
+    },
+    {
+     "bausteinId": "H13_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften (Art. 347a OR Schriftform).",
+     "norm": "Art. 347a OR"
+    }
+   ]
+  }
+ },
+ "vorl:hr-blanko": {
+  "ergebnis": {
+   "dokument": {
+    "titel": "Handelsreisendenvertrag",
+    "format": "vertrag",
+    "ausgabeArt": "fertig",
+    "absaetze": [
+     {
+      "bausteinId": "H01_parteien",
+      "text": "zwischen\n\n________\n(nachfolgend «Arbeitgeber»)\n\nund\n\n________\n(nachfolgend «Handelsreisende/r»)",
+      "rolle": "parteien"
+     },
+     {
+      "bausteinId": "H02_taetigkeit",
+      "ueberschrift": "Tätigkeit und Reisegebiet",
+      "text": "1. Der/Die Handelsreisende vermittelt________ auf Rechnung des Arbeitgebers ausserhalb von dessen Geschäftsräumen Geschäfte über ________. Zugewiesen ist folgendes Reisegebiet bzw. folgender Kundenkreis: ________. Die Zuweisung erfolgt ausschliesslich; der Arbeitgeber bleibt befugt, mit Kunden im Gebiet selbst Geschäfte abzuschliessen (Art. 349 Abs. 1 OR). Das Arbeitsverhältnis beginnt am ________."
+     },
+     {
+      "bausteinId": "H03_vollmacht",
+      "ueberschrift": "Vollmacht",
+      "text": "2. Der/Die Handelsreisende ist ermächtigt, Geschäfte zu vermitteln, nicht aber abzuschliessen (Art. 348b Abs. 1 OR)."
+     },
+     {
+      "bausteinId": "H04_pflichten",
+      "ueberschrift": "Pflichten des Handelsreisenden",
+      "text": "3. Der/Die Handelsreisende besucht die Kundschaft in der vorgeschriebenen Weise und darf ohne schriftliche Bewilligung des Arbeitgebers weder für eigene noch für fremde Rechnung Geschäfte vermitteln oder abschliessen. Er/Sie erstattet regelmässig Bericht, übermittelt die erhaltenen Bestellungen sofort und informiert über erhebliche Tatsachen, die den Kundenkreis betreffen (Art. 348 OR)."
+     },
+     {
+      "bausteinId": "H05_lohn",
+      "ueberschrift": "Lohn",
+      "text": "4. Der/Die Handelsreisende erhält ein festes Gehalt von CHF ________ pro Monat zuzüglich einer Provision von ________ % des Nettoumsatz der zustande gekommenen Geschäfte. Der Lohn wird am Ende jedes Monats abgerechnet und ausgerichtet; die gesetzlichen und vertraglichen Abzüge gehen zulasten des Handelsreisenden/der Handelsreisenden."
+     },
+     {
+      "bausteinId": "H06_provision_bezug",
+      "ueberschrift": "Provisionsanspruch",
+      "text": "5. Da dem/der Handelsreisenden das Reisegebiet bzw. der Kundenkreis ausschliesslich zugewiesen ist, ist ihm/ihr die Provision auf allen Geschäften auszurichten, die mit Kunden in diesem Gebiet oder Kundenkreis abgeschlossen werden – auch auf den vom Arbeitgeber selbst abgeschlossenen (Art. 349b Abs. 1 OR). Ist im Zeitpunkt der Fälligkeit der Wert eines Geschäftes noch nicht bestimmbar, wird die Provision zunächst auf dem geschätzten Mindestwert und der Rest bei Ausführung ausgerichtet (Art. 349b Abs. 3 OR)."
+     },
+     {
+      "bausteinId": "H07_auslagen",
+      "ueberschrift": "Auslagenersatz",
+      "text": "6. Der Arbeitgeber ersetzt dem/der Handelsreisenden die mit der Reisetätigkeit notwendig verbundenen Auslagen gegen Beleg. Eine Abrede, wonach der Auslagenersatz im festen Gehalt oder in der Provision eingeschlossen sei, ist nichtig (Art. 349d Abs. 2 OR)."
+     },
+     {
+      "bausteinId": "H09_verhinderung",
+      "ueberschrift": "Lohn bei unverschuldeter Verhinderung",
+      "text": "7. Ist der/die Handelsreisende ohne eigenes Verschulden an der Reisetätigkeit verhindert und gleichwohl Lohn geschuldet, bemisst sich dieser nach dem festen Gehalt und einer angemessenen Entschädigung für den Ausfall der Provision (Art. 349c OR)."
+     },
+     {
+      "bausteinId": "H10_kuendigung",
+      "ueberschrift": "Beendigung des Arbeitsverhältnisses",
+      "text": "8. Für die Kündigung gelten die allgemeinen Fristen des Einzelarbeitsvertrags (Art. 335 ff. OR). Bei Beendigung ist dem/der Handelsreisenden die Provision auf allen bis dahin abgeschlossenen oder vermittelten Geschäften sowie auf den bis zur Beendigung eingehenden Bestellungen auszurichten; die überlassenen Muster, Preistarife und Kundenverzeichnisse sind zurückzugeben (Art. 350a OR)."
+     },
+     {
+      "bausteinId": "H12_schluss",
+      "ueberschrift": "Schlussbestimmungen",
+      "text": "9. Änderungen und Ergänzungen bedürfen der Schriftform. Soweit dieser Vertrag nichts regelt, gelten die Art. 347 ff. OR und subsidiär die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR). Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar."
+     },
+     {
+      "bausteinId": "H13_unterschriften",
+      "text": "________, ________\n\n\nDer Arbeitgeber:\n\n___________________________\n________\n\n\nDer/Die Handelsreisende:\n\n___________________________\n________",
+      "rolle": "unterschrift",
+      "stricheErlaubt": true
+     }
+    ],
+    "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Handelsreisendenvertrag ist schriftlich zu regeln (Art. 347a OR). Zwingend sind insbesondere die Delkredere-Schranke (Art. 348a OR), der gesonderte Auslagenersatz (Art. 349d OR) und die Saison-Kündigungsregel (Art. 350 OR). Subsidiär gelten die allgemeinen Bestimmungen über den Einzelarbeitsvertrag (Art. 319 ff. OR).",
+    "version": "1.0.0 (Art. 347–350a OR verifiziert 20260101; FAHRPLAN-VERTRAGS-VARIANTEN P1d)"
+   },
+   "aufgenommen": [
+    "H01_parteien",
+    "H02_taetigkeit",
+    "H03_vollmacht",
+    "H04_pflichten",
+    "H05_lohn",
+    "H06_provision_bezug",
+    "H07_auslagen",
+    "H09_verhinderung",
+    "H10_kuendigung",
+    "H12_schluss",
+    "H13_unterschriften"
+   ],
+   "protokoll": [
+    {
+     "bausteinId": "H01_parteien",
+     "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+     "norm": "Art. 347 OR"
+    },
+    {
+     "bausteinId": "H02_taetigkeit",
+     "begruendung": "Gegenstand, Reisegebiet/Kundenkreis und Beginn (Art. 347/349 OR) – immer enthalten.",
+     "norm": "Art. 347 OR"
+    },
+    {
+     "bausteinId": "H03_vollmacht",
+     "begruendung": "Umfang der Vollmacht (Vermittlung/Abschluss; keine Inkasso-/Stundungsbefugnis ohne Sondervollmacht) – Art. 348b OR.",
+     "norm": "Art. 348b OR"
+    },
+    {
+     "bausteinId": "H04_pflichten",
+     "begruendung": "Besuchs-, Konkurrenzunterlassungs- und Berichtspflicht (Art. 348 OR) – ab «standard».",
+     "norm": "Art. 348 OR"
+    },
+    {
+     "bausteinId": "H05_lohn",
+     "begruendung": "Lohn als festes Gehalt mit/ohne Provision bzw. reine Provision (Art. 349a OR).",
+     "norm": "Art. 349a OR"
+    },
+    {
+     "bausteinId": "H06_provision_bezug",
+     "begruendung": "Bezugsumfang der Provision je nach (Aus-)Schliesslichkeit des Gebiets (Art. 349b OR).",
+     "norm": "Art. 349b OR"
+    },
+    {
+     "bausteinId": "H07_auslagen",
+     "begruendung": "Gesonderter Auslagenersatz; Einschluss-Verbot (Art. 349d OR) – zwingend.",
+     "norm": "Art. 349d OR"
+    },
+    {
+     "bausteinId": "H09_verhinderung",
+     "begruendung": "Lohn bei unverschuldeter Verhinderung mit Provisionsausfall (Art. 349c OR) – ab «standard», nur mit Provision.",
+     "norm": "Art. 349c OR"
+    },
+    {
+     "bausteinId": "H10_kuendigung",
+     "begruendung": "Kündigung (335 ff. subsidiär), Saison-Sonderregel (350) und Provisionsabrechnung/Rückgabe bei Beendigung (350a OR).",
+     "norm": "Art. 350a OR"
+    },
+    {
+     "bausteinId": "H12_schluss",
+     "begruendung": "Schriftformvorbehalt, Gesetzesverweis und Ausfertigung – immer enthalten.",
+     "norm": "Art. 347a OR"
+    },
+    {
+     "bausteinId": "H13_unterschriften",
+     "begruendung": "Ort, Datum und beidseitige Unterschriften (Art. 347a OR Schriftform).",
+     "norm": "Art. 347a OR"
+    }
+   ]
+  }
+ },
+ "vorl:hr-gates": {
+  "blocker": [
+   "Delkredere-Haftung gewählt: Eine angemessene Delkredere-Provision ist anzugeben – ohne sie ist die Haftungsabrede nichtig (Art. 348a Abs. 2 OR)."
+  ],
+  "warnungen": [],
+  "hinweise": [
+   "Reiner Provisionslohn ist nur gültig, wenn die Provision ein angemessenes Entgelt für die Tätigkeit ergibt (Art. 349a Abs. 2 OR); die Schriftform erfüllt dieser Vertrag. Für eine Probezeit von höchstens zwei Monaten kann der Lohn frei bestimmt werden (Art. 349a Abs. 3 OR).",
+   "Die Delkredere-Haftung ist auf Geschäfte mit PRIVATKUNDEN und auf höchstens einen Viertel des Schadens je Geschäft beschränkt; jede weitergehende Einstandspflicht für die Zahlung der Kunden ist nichtig (Art. 348a Abs. 1 und 2 OR).",
+   "Der Auslagenersatz wird stets gesondert geschuldet; eine Abrede, er sei im festen Gehalt oder in der Provision eingeschlossen, ist nichtig (Art. 349d Abs. 2 OR).",
+   "Abschlussvollmacht vereinbart: Sie erstreckt sich auf die zur Ausführung üblichen Rechtshandlungen, NICHT aber – ohne besondere Ermächtigung – auf die Entgegennahme von Zahlungen oder die Bewilligung von Zahlungsfristen (Art. 348b Abs. 2 OR).",
+   "Beträgt die Provision mindestens einen Fünftel des Lohnes und unterliegt sie erheblichen saisonalen Schwankungen, kann während der Saison nur auf das Ende des zweiten der Kündigung folgenden Monats gekündigt werden (Art. 350 OR)."
+  ]
+ },
  "vorl:mv": {
   "dokument": {
    "titel": "Mietvertrag",
