@@ -60,6 +60,8 @@ export interface SockelProzentBand {
   abChf: number;
   prozent: number;
   minChf?: number;
+  /** Höchstbetrag des Bandes (Deckel), z. B. NE >1 Mio: 4 %, max CHF 300'000. */
+  maxChf?: number;
 }
 
 /** Ein Band einer Fix+Prozent-vom-Gesamtwert-Staffel: bis zur Grenze gilt
@@ -175,7 +177,7 @@ export function auswertenTarif(regel: TarifRegel, basisChf: number): TarifErgebn
       if (b.sockelChf > 0) schritte.push(`Sockel ${chf(b.sockelChf)}`);
       schritte.push(`${b.prozent} % auf ${chf(ueberschuss)}${b.abChf > 0 ? ` (Überschuss über ${chf(b.abChf)})` : ''} = ${chf((ueberschuss * b.prozent) / 100)}`);
       const roh = round2(b.sockelChf + (ueberschuss * b.prozent) / 100);
-      return { deterministisch: true, betragChf: klammere(roh, b.minChf, undefined, schritte), schritte };
+      return { deterministisch: true, betragChf: klammere(roh, b.minChf, b.maxChf, schritte), schritte };
     }
 
     case 'staffel_voll_prozent': {
