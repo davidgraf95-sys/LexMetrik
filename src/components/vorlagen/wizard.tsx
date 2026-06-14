@@ -45,6 +45,12 @@ export function VorlagenWizardRahmen({
 }) {
   const { locale } = useLocale();
   const weiterAus = weiterDeaktiviert ?? (fehler != null && fehler.length > 0);
+  // Grundsatz David (14.6.2026): im leeren Anfangszustand keine Eingabefehler
+  // zeigen — die Fehlerbox erscheint erst, nachdem der Nutzer etwas eingegeben
+  // hat («berührt»). Der «Weiter»-Button bleibt bei leeren Pflichtfeldern
+  // weiterhin deaktiviert (weiterAus oben), nur die MELDUNG wird zurückgehalten.
+  const [beruehrt, setBeruehrt] = useState(false);
+  const merkeEingabe = () => { if (!beruehrt) setBeruehrt(true); };
 
   return (
     <div className="space-y-6">
@@ -67,7 +73,7 @@ export function VorlagenWizardRahmen({
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2 pt-1">
             {zuruecksetzen && (
               <button type="button"
-                onClick={() => { if (window.confirm('Alle Eingaben dieser Vorlage zurücksetzen?')) zuruecksetzen(); }}
+                onClick={() => { if (window.confirm('Alle Eingaben dieser Vorlage zurücksetzen?')) { zuruecksetzen(); setBeruehrt(false); } }}
                 className="lc-btn-outline lc-btn-sm">
                 ↺ Eingaben zurücksetzen
               </button>
@@ -88,13 +94,15 @@ export function VorlagenWizardRahmen({
       {/* Zweispaltig: Formular links, klebende Vorschau rechts;
           mobil einspaltig mit einklappbarer Vorschau */}
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
-        <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5">
+        <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5"
+          onInput={merkeEingabe} onChange={merkeEingabe}>
           <h2 className="text-h3 font-display font-semibold text-ink-900">{schritte[schritt].label}</h2>
           {inhalt}
 
           {/* FAHRPLAN-DESIGN 2.2: vierte Fehlerbox-Variante entfernt —
-              EIN Baustein (FehlerBox, role="alert") wie in den Rechner-Forms. */}
-          {fehler != null && <FehlerBox fehler={fehler} />}
+              EIN Baustein (FehlerBox, role="alert") wie in den Rechner-Forms.
+              Grundsatz David: erst nach erster Eingabe zeigen (beruehrt). */}
+          {beruehrt && fehler != null && <FehlerBox fehler={fehler} />}
 
           <div className="flex items-center justify-between pt-2 border-t border-line">
             <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
