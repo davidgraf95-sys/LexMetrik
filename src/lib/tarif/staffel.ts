@@ -100,7 +100,8 @@ export type TarifErgebnis =
   | { deterministisch: false; vonChf?: number; bisChf?: number; hinweis: string };
 
 const round2 = (x: number) => Math.round(x * 100) / 100;
-const chf = (x: number) => `CHF ${round2(x).toLocaleString('de-CH')}`;
+// Gebühren werden ganzzahlig dargestellt (Frankenbeträge; Bug-Check 14.6.2026).
+const chf = (x: number) => `CHF ${Math.round(x).toLocaleString('de-CH')}`;
 
 const pruefeBasis = (basisChf: number): void => {
   if (!Number.isFinite(basisChf) || basisChf < 0) {
@@ -110,6 +111,9 @@ const pruefeBasis = (basisChf: number): void => {
 
 /** Mindest-/Höchstbetrag anwenden; protokolliert die wirksame Klammer. */
 const klammere = (roh: number, minChf: number | undefined, maxChf: number | undefined, schritte: string[]): number => {
+  if (typeof minChf === 'number' && typeof maxChf === 'number' && minChf > maxChf) {
+    throw new RangeError(`Bandgrenzen widersprüchlich: minChf ${minChf} > maxChf ${maxChf}.`);
+  }
   let betrag = roh;
   if (typeof maxChf === 'number' && betrag > maxChf) {
     betrag = maxChf;
@@ -199,7 +203,7 @@ export function auswertenTarif(regel: TarifRegel, basisChf: number): TarifErgebn
       const seite = (fest: number | null | undefined, pct: number | undefined): number | undefined => {
         if (fest != null) return fest;
         if (pct == null) return undefined;
-        let v = round2((basisChf * pct) / 100);
+        let v = Math.round((basisChf * pct) / 100);
         if (b.mindestChf != null) v = Math.max(v, b.mindestChf);
         if (b.hoechstChf != null) v = Math.min(v, b.hoechstChf);
         return v;
@@ -211,8 +215,11 @@ export function auswertenTarif(regel: TarifRegel, basisChf: number): TarifErgebn
         : bis != null ? `bis ${chf(bis)}`
         : von != null ? `ab ${chf(von)}`
         : 'nach Aufwand';
-      const pctNote = (b.minProzent != null || b.maxProzent != null)
-        ? ` (${b.minProzent ?? 0}–${b.maxProzent ?? 0} % des Streitwerts)` : '';
+      // %-Hinweis nur für tatsächlich prozentual bestimmte Seiten (kein irreführendes «0 %»).
+      const pctNote = (b.minProzent != null && b.maxProzent != null) ? ` (${b.minProzent}–${b.maxProzent} % des Streitwerts)`
+        : b.maxProzent != null ? ` (bis ${b.maxProzent} % des Streitwerts)`
+        : b.minProzent != null ? ` (ab ${b.minProzent} % des Streitwerts)`
+        : '';
       return {
         deterministisch: false,
         vonChf: von,

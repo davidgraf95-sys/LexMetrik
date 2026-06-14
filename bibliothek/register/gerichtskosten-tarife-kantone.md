@@ -46,7 +46,12 @@ Vorlage für `src/data/tarif/gerichtskosten.ts`.
 - REGEL: `{"typ":"staffel_voll_prozent","baender":[{"bisChf":6500,"fixChf":900,"prozent":11},{"bisChf":13000,"fixChf":1160,"prozent":7},{"bisChf":52000,"fixChf":1290,"prozent":6},{"bisChf":100000,"fixChf":770,"prozent":7},{"bisChf":200000,"fixChf":4270,"prozent":3.5},{"bisChf":400000,"fixChf":6870,"prozent":2.2},{"bisChf":800000,"fixChf":9670,"prozent":1.5},{"bisChf":1600000,"fixChf":13670,"prozent":1},{"bisChf":3300000,"fixChf":21670,"prozent":0.5},{"bisChf":1000000000000,"fixChf":28270,"prozent":0.3}]}`
 - verifiziert: einfach (Re-Verifikation des GebührD-Wortlauts vor Abnahme empfohlen). Kostenlos: Art. 113/114 ZPO.
 
-### LU/BE/SO/TG/BL/SG/SZ/GR/ZG — siehe Tranche 1 (oben ZH/BE/LU/AG; übrige):
+_(Tranche 1, Fortsetzung — übrige Deutschschweizer Kantone:)_
+
+### BS — Reglement über die Gerichtsgebühren (GGR, SG 154.810), § 5 · Stand Reglement v. 11.9.2017 → `staffel_rahmen`
+- Quelle: https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810
+- Bänder (§ 5 Abs. 1): bis 10'000 → 200–1'000 · bis 30'000 → 1'000–3'000 · bis 100'000 → 3'000–6'000 · bis 500'000 → 6'000–20'000 · bis 1 Mio → 20'000–30'000 · bis 5 Mio → 30'000–60'000 · **>5 Mio → 0,5–1,5 %, mind. 60'000**. §§ 15–17 modifizierbar. Kostenlos: Art. 113/114 ZPO.
+
 ### SO — Gebührentarif GT (BGS 615.11), § 145 · Stand 1.3.2026 → `staffel_rahmen`
 - Quelle: https://bgs.so.ch/app/de/texts_of_law/615.11
 - Bänder: bis 30'000 → 200–4'000 · 30'001–50'000 → 600–5'500 · 50'001–100'000 → 800–8'000 · 100'001–200'000 → 1'200–13'000 · 200'001–500'000 → 1'800–25'000 · 500'001–1 Mio → 2'500–50'000 · **>1 Mio → Max + bis 1 %** (%-Tail). Kostenlos: Art. 113/114 ZPO.

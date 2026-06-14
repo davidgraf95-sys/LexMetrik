@@ -10,7 +10,7 @@
 import type { KantonCode, KantonalerTarif } from './typen';
 import type { SockelProzentBand } from '../../lib/tarif/staffel';
 
-const INF = 1e12;
+const INF = Infinity;
 
 // ZH-Skala der Anwaltsgebühr (AnwGebV § 4) — von ZG und GE übernommen.
 const ZH_SKALA: SockelProzentBand[] = [
@@ -339,7 +339,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
       { grenzeChf: 200000, minChf: 12800, maxChf: 17600 },
       { grenzeChf: 500000, minChf: 22700, maxChf: 30500 },
       { grenzeChf: 1000000, minChf: 33300, maxChf: 41200 },
-      { grenzeChf: INF, maxProzent: 3.3, hoechstChf: 140000 },
+      // >1 Mio: 3,3 % des Streitwerts, max CHF 140 000; Höchstbetrag nicht unter
+      // den Anschluss-Höchstbetrag des Vorbands fallend (Monotonie, Bug-Check).
+      { grenzeChf: INF, maxProzent: 3.3, mindestChf: 41200, hoechstChf: 140000 },
     ] },
   },
   NE: {

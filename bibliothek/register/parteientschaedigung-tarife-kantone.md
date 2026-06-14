@@ -15,9 +15,13 @@ bestätigen das ausdrücklich (z. B. VD Art. 2 al. 2 TDC). Engine-Folge: bei
 `REGEL` = `TarifRegel` für `src/lib/tarif/staffel.ts`. Diese Datei ist die
 durable Persistenz; Vorlage für `src/data/tarif/parteientschaedigung.ts`.
 
-> **⚠ Re-Verifikation vor Abnahme:** SZ, GL, SH, GR (Verifizierer
-> `bestaetigt=false`/`nicht_verifiziert`). **⚠ Platzhalter-Obergrenzen**
-> (sentinel, NICHT amtlich) bei %-Tails: UR/SZ/OW/BE/JU/NW/NE/BS — bereinigen.
+> **Re-Verifikation 14.6.2026 ABGESCHLOSSEN** (Workflow `wibiq1gbs`): SZ, GL,
+> SH, GR amtlich nachgeprüft und bestätigt — GL/SH/GR = aufwandbasiert (kein
+> Streitwert-Tarif, `formel_extern`), SZ = `staffel_rahmen` mit den unten
+> ausgeschriebenen Bändern (§ 8 GebT verbatim) + %-Tail >1 Mio = 1–3,5 %.
+> Ebenso re-verifiziert: AG/SG/AI = Prozent vom Gesamtwert (`staffel_voll_prozent`).
+> Damit alle 26 doppelt verifiziert. Platzhalter-Obergrenzen sind im Code durch
+> `minProzent/maxProzent` (%-Tail) bzw. ehrliche offene Grenzen ersetzt.
 
 ---
 
@@ -75,10 +79,11 @@ durable Persistenz; Vorlage für `src/data/tarif/parteientschaedigung.ts`.
 
 - **FR** — RJ (RSF 130.11) Art. 65/66 · 1.1.2018 — Stundenansatz CHF 250 + streitwertabhängige *majoration* (max 350 %); Pauschale Art. 64 (≤30k: max 6000). Quelle: https://bdlf.fr.ch/app/fr/texts_of_law/130.11
 - **SO** — GT (BGS 615.11) § 160 · 1.3.2026 — Aufwand × Stundenansatz 230–330 (uR 180). Quelle: https://bgs.so.ch/app/de/texts_of_law/615.11
-- **GR** — HV (BR 310.250) Art. 2/3 · Stand 1.1.2011 ⚠ Re-Verif — Stundenansatz 210–270 + Interessenwertzuschlag (>1 Mio max 2 %). Quelle: https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250
-- **GL** — EG ZPO (GS III C/1) Art. 20 ⚠ Re-Verif — reines Ermessen (kein vom OG erlassener Tarif auffindbar); Art. 20 III: Arbeit ≤30k keine Parteientschädigung. Quelle: https://gesetze.gl.ch/app/de/texts_of_law/III-C.1
-- **SH** — JG (SHR 173.200) Art. 86 ⚠ Re-Verif — kein Streitwert-Tarif; Ermessen nach effektivem Aufwand (HonV 173.811: 200/Std). Quelle: https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200
-- **SZ** — GebT (SRSZ 280.411) § 8 · 1.1.2015 ⚠ Re-Verif (bestaetigt=false) — Ermessensrahmen je Band; **>1 Mio 1–3,5 %** ⚠ Platzhalter. Quelle: https://www.sz.ch/public/upload/assets/5862/280_411.pdf
+- **GR** — HV (BR 310.250) Art. 2/3 · Stand 1.1.2011 · re-verifiziert ✓ 14.6.2026 — Stundenansatz 210–270 + Interessenwertzuschlag (>1 Mio max 2 %). Quelle: https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250
+- **GL** — EG ZPO (GS III C/1) Art. 20 · re-verifiziert ✓ 14.6.2026 — reines Ermessen (kein vom OG erlassener Tarif); Art. 20 III: Arbeit ≤30k keine Parteientschädigung. Quelle: https://gesetze.gl.ch/app/de/texts_of_law/III-C.1
+- **SH** — JG (SHR 173.200) Art. 86 · re-verifiziert ✓ 14.6.2026 — kein Streitwert-Tarif; Ermessen nach effektivem Aufwand (HonV 173.811: 200/Std). Quelle: https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200
+
+**SZ — Gebührentarif für Rechtsanwälte (SRSZ 280.411), § 8 · Stand 1.1.2015 · re-verifiziert ✓ 14.6.2026** (`staffel_rahmen`, kein aufwandbasierter Tarif): <2'000 nach Zeitaufwand (Ansatz 180–220, höchstens 1'500) · 2'000–4'000 → 440–1'650 · 4'001–10'000 → 500–2'000 · 10'001–20'000 → 1'100–3'300 · 20'001–50'000 → 1'650–6'600 · 50'001–100'000 → 3'300–9'250 · 100'001–1 Mio → 5'500–39'600 · **>1 Mio → 1–3,5 % des Streitwerts** (§ 8 GebT verbatim bestätigt). Quelle: https://www.sz.ch/public/upload/assets/5862/280_411.pdf
 
 ---
 
@@ -86,6 +91,6 @@ durable Persistenz; Vorlage für `src/data/tarif/parteientschaedigung.ts`.
 1. **Platzhalter-Obergrenzen / null-Top-Bänder** (UR, SZ, OW, BE, JU, NW, NE, BS, LU): %-Tail ehrlich als Hinweis, kein erfundener Frankenbetrag.
 2. **TI** braucht einen Prozent-Spannen-Typ (min/max % × Streitwert) — neues Primitiv-Muster oder als `staffel_rahmen` mit vorab gerechneten min/max je Band.
 3. **% auf Gesamtwert vs. marginal** (AG/SG/AI): Agent-Modellierung fachlich prüfen.
-4. **Re-Verifikation:** SZ, GL, SH, GR (vor Abnahme).
+4. **Re-Verifikation:** SZ, GL, SH, GR — **ABGESCHLOSSEN 14.6.2026** (Workflow `wibiq1gbs`, am amtlichen Wortlaut bestätigt).
 5. **Art. 113 Abs. 1 ZPO** als harter Engine-Vorschalter: Schlichtung → Parteientschädigung 0.
 6. Jede Datei: `quelleUrl`, `erlassNr`, `stand`, `artikel`, `verifiziert`, Stützstellen-Test (deterministische Typen).

@@ -9,7 +9,7 @@
 
 import type { KantonCode, KantonalerTarif } from './typen';
 
-const INF = 1e12;
+const INF = Infinity;
 
 export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   ZH: {
@@ -315,7 +315,7 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
     kanton: 'NE', erlassName: 'Loi sur les tarifs des frais (LTFrais)', erlassNr: 'RSN 164.1',
     artikel: 'Art. 12', stand: '1.4.2023', verifiziert: 'doppelt',
     quelleUrl: 'https://rsn.ne.ch/DATA/program/books/RSN2024/20245/htm/164.1.htm',
-    hinweis: 'Gemischt: fix bis 10 000; 10–30k = 13 % des Streitwerts; 30–100k = 4000 + 3 % über 30 000; 100k–1 Mio = 6500 + 3 % über 100 000; >1 Mio = 4 % (max CHF 300 000). Abrundung auf die nächsten 10.',
+    hinweis: 'Gemischt: fix bis 10 000; 10–30k = 13 % des Streitwerts; 30–100k = 4000 + 3 % über 30 000; 100k–1 Mio = 6500 + 3 % über 100 000; >1 Mio = 4 % (max CHF 300 000).',
     regel: { typ: 'staffel_sockel_prozent', baender: [
       { bisChf: 2000, sockelChf: 500, abChf: 0, prozent: 0 },
       { bisChf: 5000, sockelChf: 900, abChf: 0, prozent: 0 },

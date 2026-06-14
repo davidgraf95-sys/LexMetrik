@@ -44,9 +44,11 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
       <div className="mt-1 text-h4 text-ink-900">{postenText(posten)}</div>
       {posten.kostenlos
         ? <div className="mt-1 text-body-s text-ink-600">{posten.kostenlosGrund}</div>
-        : posten.ergebnis && !posten.ergebnis.deterministisch
-          ? <div className="mt-1 text-body-s text-ink-600">Ermessensrahmen – konkrete Festsetzung durch die Behörde.</div>
-          : null}
+        : posten.schlichtungspauschale
+          ? <div className="mt-1 text-body-s text-ink-600">Art. 95 II lit. a ZPO: eigener, meist reduzierter Tarif (oft ein Bruchteil der Entscheidgebühr) – hier nicht beziffert.</div>
+          : posten.ergebnis && !posten.ergebnis.deterministisch
+            ? <div className="mt-1 text-body-s text-ink-600">Ermessensrahmen – konkrete Festsetzung durch die Behörde.</div>
+            : null}
       <div className="mt-2 text-caption text-ink-500">
         {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
         {' · '}

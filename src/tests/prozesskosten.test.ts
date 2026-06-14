@@ -60,6 +60,13 @@ describe('kostenlose Verfahren (Art. 113/114 ZPO)', () => {
     expect(berechneProzesskosten({ kanton: 'BE', streitwertCHF: 100000, phase: 'schlichtung', materie: 'gleichstellung' }).gerichtskosten.kostenlos).toBe(true);
     expect(berechneProzesskosten({ kanton: 'BE', streitwertCHF: 100000, phase: 'entscheid', materie: 'gleichstellung' }).gerichtskosten.kostenlos).toBe(true);
   });
+  it('Schlichtung: Gerichtskosten = Schlichtungspauschale (separater Tarif), NICHT die Entscheidgebühr', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
+    expect(r.gerichtskosten.kostenlos).toBe(false);
+    expect(r.gerichtskosten.schlichtungspauschale).toBe(true);
+    expect(r.gerichtskosten.ergebnis).toBeUndefined(); // keine bezifferte Entscheidgebühr
+    expect(postenText(r.gerichtskosten)).toMatch(/Schlichtungspauschale/);
+  });
   it('Parteientschädigung: in der Schlichtung immer keine (Art. 113 Abs. 1)', () => {
     const r = berechneProzesskosten({ kanton: 'GE', streitwertCHF: 200000, phase: 'schlichtung', materie: 'allgemein' });
     expect(r.parteientschaedigung.kostenlos).toBe(true);

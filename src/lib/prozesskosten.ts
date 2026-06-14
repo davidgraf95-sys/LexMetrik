@@ -70,6 +70,9 @@ export interface PostenErgebnis {
   kostenlos: boolean;
   /** Norm + Materie, wenn kostenlos (Art. 113/114 ZPO). */
   kostenlosGrund?: string;
+  /** true = Schlichtungspauschale (Art. 95 II lit. a ZPO): eigener, meist
+   *  reduzierter Tarif (nicht die Entscheidgebühr) — hier nicht beziffert. */
+  schlichtungspauschale?: boolean;
   /** Tarif-Ergebnis (Betrag oder Rahmen), wenn nicht kostenlos. */
   ergebnis?: TarifErgebnis;
   quelle: TarifQuelle;
@@ -132,12 +135,17 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
   const gkTarif = GERICHTSKOSTEN[e.kanton];
   const peTarif = PARTEIENTSCHAEDIGUNG[e.kanton];
 
-  // Gerichtskosten (Art. 95 II lit. b): Entscheidgebühr nach kantonalem Tarif,
-  // vorbehältlich der Kostenlosigkeit nach Art. 113/114 ZPO.
+  // Gerichtskosten (Art. 95 II): im Entscheidverfahren die Entscheidgebühr
+  // (lit. b) nach kantonalem Tarif; im Schlichtungsverfahren gilt die
+  // Schlichtungspauschale (lit. a) — ein eigener, meist reduzierter Tarif, der
+  // (noch) nicht erhoben ist und daher NICHT mit der Entscheidgebühr beziffert
+  // wird (§1/§8; Bug-Check 14.6.2026). Vorbehältlich Kostenlosigkeit (113/114).
   const gkFrei = gerichtskostenKostenlos(e.phase, e.materie, e.streitwertCHF);
   const gerichtskosten: PostenErgebnis = gkFrei.kostenlos
     ? { kostenlos: true, kostenlosGrund: `${gkFrei.norm}: ${gkFrei.grund}`, quelle: quelle(gkTarif) }
-    : { kostenlos: false, ergebnis: auswertenTarif(gkTarif.regel, e.streitwertCHF), quelle: quelle(gkTarif) };
+    : e.phase === 'schlichtung'
+      ? { kostenlos: false, schlichtungspauschale: true, quelle: quelle(gkTarif) }
+      : { kostenlos: false, ergebnis: auswertenTarif(gkTarif.regel, e.streitwertCHF), quelle: quelle(gkTarif) };
 
   // Parteientschädigung (Art. 95 III): im Schlichtungsverfahren wird KEINE
   // gesprochen (Art. 113 Abs. 1 ZPO); im Entscheidverfahren nach kant. Tarif.
@@ -150,6 +158,9 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
     'Kostenvorschuss in der Regel bis zur Hälfte der mutmasslichen Gerichtskosten (Art. 98 ZPO).',
     'Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.',
   ];
+  if (e.phase === 'schlichtung') {
+    hinweise.push('Im Schlichtungsverfahren gilt für die Gerichtskosten die Schlichtungspauschale (Art. 95 II lit. a ZPO) — ein eigener, meist reduzierter kantonaler Tarif (oft ein Bruchteil der Entscheidgebühr); hier nicht beziffert. Der angezeigte kantonale Tarif betrifft die Entscheidgebühr im Gerichtsverfahren.');
+  }
 
   return { kanton: e.kanton, streitwertCHF: e.streitwertCHF, phase: e.phase, materie: e.materie, gerichtskosten, parteientschaedigung, hinweise };
 }
@@ -164,6 +175,7 @@ export function vergleichAlleKantone(streitwertCHF: number, phase: Verfahrenspha
  *  «kostenlos»/«nach Aufwand»). Reine Darstellung. */
 export function postenText(p: PostenErgebnis): string {
   if (p.kostenlos) return 'keine Kosten';
+  if (p.schlichtungspauschale) return 'Schlichtungspauschale (separater Tarif)';
   const e = p.ergebnis;
   if (!e) return '—';
   if (e.deterministisch) return `CHF ${Math.round(e.betragChf).toLocaleString('de-CH')}`;
