@@ -51,8 +51,20 @@ optionale Gate-Prüfung), deklariert nichts neu (§5/§1). Drift-Guard
 `kv`-Namenskollision (klageVereinfacht vs. kuendigungAllgemein). §6: Gate voll
 grün, golden byte-gleich (verhaltensneutral; Registry wird von Golden/Engines
 nicht importiert). Test-/Skript-Modul (nicht aus UI importieren — Bundle).
-OFFEN: C1b (golden-outputs aus Registry — niedriger Wert, zurückgestellt) · C4
-(Drift-Guard erweitern) · dann P1 Hauptmoat. Push/Deploy nur auf frisches Ja.
+C1b (golden-outputs aus Registry) bewusst zurückgestellt (niedriger Wert,
+hohe Byte-Fragilität) · C4 offen.
+
+**P1 Hauptmoat begonnen — B-P0a GEBAUT (ungepusht):** `src/lib/tarif/staffel.ts`
+= fachneutrales, deterministisches Tarif-Staffel-Primitiv (§2/§4 Infrastruktur,
+kein Recht). Diskriminierte Regel-Union `fix · sockel_prozent · promille ·
+staffel_inklusiv · staffel_exklusiv · rahmen · formel_extern`; Bandgrenzen
+explizit typisiert (inklusiv/exklusiv, §1); `rahmen`/`formel_extern` tragen
+KEINEN Betrag (Ergebnis-Union zwingt ehrlichen Rahmen, §2/§8). Test
+`tarifStaffel.test.ts` (11) inkl. **Charakterisierung gegen die gebvKosten-
+Pfändungsstaffel** (Art. 20 GebV SchKG) → spätere byte-gleiche Ablösung möglich.
+Gate voll grün. OFFEN P1: B-P0b Verfallsregister+CI (VOR 30.6.2026, SG GKV) ·
+B-P1 Gerichtskosten-Datenschicht je Kanton (§7-Recherche, Pilot ZH zuerst) ·
+B-P2 sichtbarer Prozesskostenrechner. Push/Deploy nur auf frisches Ja.
 
 ## Session 13.6.2026 (Abend) — FUNDAMENT-UMBAU Phasen 0/1a/4 + Bug-Check (Auftrag David «mache fertig … nochmals bug check»)
 
