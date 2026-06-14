@@ -50,9 +50,14 @@ export interface VorlagenSeitenConfig<T extends { ort: string; datum: string }> 
   badge: string;
   // Eingabe-Schritte (alle ausser dem letzten «pruefen»-Schritt)
   eingabeInhalt: (ctx: SeiteCtx<T>, schritt: number) => ReactNode;
-  /** Pflichtfeld-Fehler je Eingabe-Schritt (NICHT für den letzten Schritt). */
-  fehlerEingabe: (a: T, schritt: number) => string[];
+  /** Pflichtfeld-Fehler je Eingabe-Schritt (NICHT für den letzten Schritt).
+   *  `gates` für Seiten, die schon in einem Eingabe-Schritt einen fachlichen
+   *  Blocker spiegeln (z. B. Nichtbekanntgabe: Rechtsvorschlag-Voraussetzung). */
+  fehlerEingabe: (a: T, schritt: number, gates: VorlagenGates) => string[];
   // «pruefen»-Schritt
+  /** Im pruefen-Schritt zusätzlich gates.warnungen (lc-notice-warn) VOR den
+   *  Hinweisen rendern (nur Seiten, die das tun — z. B. Nichtbekanntgabe). */
+  zeigeWarnungen?: boolean;
   ortDatumLabel: string;
   ortPlaceholder: string;
   ortFehler: string;
@@ -80,7 +85,7 @@ export function VorlagenSeite<T extends { ort: string; datum: string }>(
   const letzter = config.schritte.length - 1;
 
   const fehlerImSchritt = (i: number): string[] => {
-    if (i !== letzter) return config.fehlerEingabe(a, i);
+    if (i !== letzter) return config.fehlerEingabe(a, i, gates);
     const f: string[] = [];
     if (!a.ort.trim()) f.push(config.ortFehler);
     if (!istIsoDatum(a.datum)) f.push(config.datumFehler);
@@ -94,6 +99,9 @@ export function VorlagenSeite<T extends { ort: string; datum: string }>(
 
   const pruefenInhalt = (
     <div className="space-y-5">
+      {config.zeigeWarnungen && gates.warnungen.map((w, i) => (
+        <div key={`w${i}`} className="lc-notice-warn text-body-s">{w}</div>
+      ))}
       {gates.hinweise.map((h, i) => (
         <div key={i} className="lc-notice text-body-s">{h}</div>
       ))}
