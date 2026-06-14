@@ -58,6 +58,10 @@ export interface VorlagenSeitenConfig<T extends { ort: string; datum: string }> 
   /** Im pruefen-Schritt zusätzlich gates.warnungen (lc-notice-warn) VOR den
    *  Hinweisen rendern (nur Seiten, die das tun — z. B. Nichtbekanntgabe). */
   zeigeWarnungen?: boolean;
+  /** Ob der letzte-Schritt-Fehler die gates.blocker enthält (Default true).
+   *  false z. B. bei Mahnung, deren Navigations-Fehler nur Ort/Datum prüft
+   *  (Blocker sperren dort nur den Export, nicht die Fehlerbox). */
+  blockerImLetztenSchritt?: boolean;
   ortDatumLabel: string;
   ortPlaceholder: string;
   ortFehler: string;
@@ -89,7 +93,7 @@ export function VorlagenSeite<T extends { ort: string; datum: string }>(
     const f: string[] = [];
     if (!a.ort.trim()) f.push(config.ortFehler);
     if (!istIsoDatum(a.datum)) f.push(config.datumFehler);
-    f.push(...gates.blocker);
+    if (config.blockerImLetztenSchritt !== false) f.push(...gates.blocker);
     return f;
   };
   const fehler = fehlerImSchritt(schritt);
