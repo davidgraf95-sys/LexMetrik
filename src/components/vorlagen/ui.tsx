@@ -109,6 +109,11 @@ export function BeruehrtRahmen({ children }: { children: React.ReactNode }) {
   const merke = () => { if (!beruehrt) setBeruehrt(true); };
   return (
     <BeruehrtContext.Provider value={beruehrt}>
+      {/* Bewusst nur onInput/onChange (keine onClick): ein Fokus-Klick ins leere
+          Feld ist noch keine Eingabe und darf keine Fehler zeigen (Grundsatz
+          David). Reine Klick-Auswahlen (SelectionGrid) lösen «berührt» daher
+          erst über ein begleitendes Feld aus — in der Praxis unkritisch, da
+          Fehler dieser Formulare von onChange-Feldern abhängen. */}
       <div className="contents" onInput={merke} onChange={merke}>{children}</div>
     </BeruehrtContext.Provider>
   );
