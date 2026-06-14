@@ -234,10 +234,12 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // (P1 Wettbewerbsanalyse, neu als entwurf) → 43 gebaut / 39 sichtbar.
   // 13.6.2026 (V3 komplett): +«Auftrag» +«Werkvertrag» +«NDA» +«Konkubinat»
   // → 47 gebaut / 43 sichtbar.
-  it('verfügbar = status !== geplant; Regressionszählung 47 gebaut / 43 sichtbar (Stand 13.6.2026)', () => {
+  // 14.6.2026 (P1 Hauptmoat): +«Prozesskosten (Gerichts- & Parteikosten)»
+  // (geplant→entwurf, Rechner /rechner/prozesskosten) → 48 gebaut / 44 sichtbar.
+  it('verfügbar = status !== geplant; Regressionszählung 48 gebaut / 44 sichtbar (Stand 14.6.2026)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(47);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(43);
+    expect(verf.length).toBe(48);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(44);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

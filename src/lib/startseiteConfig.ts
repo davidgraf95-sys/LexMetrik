@@ -527,9 +527,20 @@ const KARTEN: Record<string, CalculatorCard> = {
   prozesskosten: {
     id: 'prozesskosten', modus: 'rechner', art: 'betrag', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
     rechtsbereich: 'privat',
-    title: 'Gerichts-, Partei- & Betreibungskosten',
-    description: 'Kostenschätzung nach Streitwert und Tarif; kantonale Tarife werden gekennzeichnet.',
-    status: 'geplant', norms: [],
+    title: 'Prozesskosten (Gerichts- & Parteikosten)',
+    description: 'Gerichtskosten (Entscheidgebühr) und Parteientschädigung im erstinstanzlichen Zivilprozess nach Streitwert – amtlich verifizierte Tarife aller 26 Kantone, mit interkantonaler Vergleichstabelle. Kostenlose Verfahren (Art. 113/114 ZPO) und Schlichtung/Entscheid berücksichtigt; Ermessenstarife als Spanne.',
+    status: 'entwurf',
+    norms: [
+      { label: 'Art. 95 ZPO', url: fedlexUrl('ZPO', '95'), verified: false },
+      { label: 'Art. 96 ZPO', url: fedlexUrl('ZPO', '96'), verified: false },
+      { label: 'Art. 98 ZPO', url: fedlexUrl('ZPO', '98'), verified: false },
+      { label: 'Art. 113 ZPO', url: fedlexUrl('ZPO', '113'), verified: false },
+      { label: 'Art. 114 ZPO', url: fedlexUrl('ZPO', '114'), verified: false },
+    ],
+    href: '/rechner/prozesskosten',
+    related: ['streitwert', 'zustaendigkeit', 'betreibungskosten', 'bgg-fristen'],
+    keywords: ['Prozesskosten', 'Gerichtskosten', 'Gerichtsgebühr', 'Parteientschädigung', 'Anwaltskosten', 'Was kostet ein Prozess', 'Kostenrisiko', 'Entscheidgebühr', 'Honorar', 'kantonaler Tarif', 'Streitwert'],
+    icon: 'percent',
   },
   streitwert: {
     id: 'streitwert', modus: 'rechner', art: 'betrag', rechtsgebiet: 'Zivilprozess (ZPO) & Bundesgericht',
