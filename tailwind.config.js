@@ -49,7 +49,7 @@ export default {
         sm: 'var(--radius-sm)', md: 'var(--radius-md)', lg: 'var(--radius-lg)',
         xl: 'var(--radius-xl)', '2xl': 'var(--radius-2xl)',
       },
-      transitionDuration: { fast: '120ms', slow: '220ms' },
+      transitionDuration: { fast: '120ms', base: '160ms', slow: '220ms', stage: '420ms' },
       transitionTimingFunction: { DEFAULT: 'var(--ease)' },
       boxShadow: { sm: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)' },
       maxWidth: { content: '70rem', reading: '40rem' }, // content ≈ 1120px (Iteration 3: einheitlich schmalere Spalte)

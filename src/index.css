@@ -75,6 +75,10 @@
   a:hover { color: var(--brass-600); }
   :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--radius-sm); }
 
+  /* Ankreuzfelder im Hausakzent (Messing) statt Browser-Blau — reine Farbe,
+     keine Grössen-/Layoutänderung (die Touch-Grösse löst das Checkbox-Primitiv). */
+  input[type="checkbox"], input[type="radio"] { accent-color: var(--brass-500); }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
   }
@@ -107,6 +111,9 @@
     font-size: .6875rem; line-height: 1.4; letter-spacing: var(--tracking-overline);
     text-transform: uppercase; color: var(--ink-500);
   }
+  /* Feinschrift (Copyright/Disclaimer-Zeilen) — eigene Rolle statt das
+     lc-overline mit normal-case + Inline-letter-spacing zweckzuentfremden. */
+  .lc-fineprint { font-family: var(--font-sans), system-ui, sans-serif; font-size: .6875rem; line-height: 1.5; letter-spacing: .01em; color: var(--ink-500); }
 
   /* Signature-Element neu: Messing-Akzentlinie (Designsystem §4) —
      Haarlinie mit kurzem, nach rechts auslaufendem Messing-Akzent.
@@ -132,6 +139,11 @@
   .lc-card { @apply bg-surface border border-line rounded-lg shadow-md; }
   /* Ergebnis-Kachel (Hauptwerte in Ergebnisblöcken) — eine Anatomie überall */
   .lc-tile { @apply bg-surface-raised border border-line rounded-xl p-4; }
+  /* Akzent-Oberkante (massgeblich/Warnung/Gefahr) — EINE Quelle statt 6×
+     inline border-t-[3px]; die Bedeutung trägt die Farbe, nicht die Stelle. */
+  .lc-akzent-brass { border-top: 3px solid var(--brass-500); }
+  .lc-akzent-warn { border-top: 3px solid var(--warn-500); }
+  .lc-akzent-danger { border-top: 3px solid var(--danger-500); }
 
   /* FristenKalender (Überarbeitung 7.6.2026, Auftrag David) — zwei Rezepte:
 
@@ -165,6 +177,19 @@
     outline: none; border-color: var(--brass-600);
     box-shadow: 0 0 0 2px var(--focus); /* Werteinstellung am Gerät */
   }
+  /* Kompakte Eingabe-Variante (Zeilen/Toolbars) — analog .lc-btn-sm; löst die
+     ad-hoc h-10/rounded-lg/ring-Inseln (EinfacheFrist/Tagerechner) ab. */
+  .lc-input-sm { height: 36px; padding: 0 12px; font-size: .875rem; }
+  /* Select mit eigenem Messing-Chevron statt nativem OS-Pfeil — gleiche
+     Anatomie wie lc-input, nur appearance-none + Platz rechts für die Glyphe. */
+  .lc-select {
+    @apply lc-input;
+    appearance: none; -webkit-appearance: none;
+    padding-right: 38px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%238A6A2F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;
+  }
+  .lc-textarea { @apply lc-input; height: auto; min-height: 88px; resize: vertical; line-height: 1.6; }
 
   .lc-btn {
     @apply inline-flex items-center justify-center rounded-md font-semibold transition-colors;
@@ -235,18 +260,14 @@
   .lc-seal {
     display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 8px;
     background: var(--ink-900); color: var(--paper);
-    font-family: var(--font-display), serif; font-weight: 600; font-size: 1.1rem; line-height: 1;
+    font-family: var(--font-display), system-ui, sans-serif; font-weight: 600; font-size: 1.1rem; line-height: 1;
     box-shadow: inset 0 0 0 1.5px var(--brass-500);
   }
-  .lc-word { font-family: var(--font-display), serif; font-weight: 600; font-size: 1.35rem; color: var(--ink-900); letter-spacing: .01em; }
+  .lc-word { font-family: var(--font-display), system-ui, sans-serif; font-weight: 600; font-size: 1.35rem; color: var(--ink-900); letter-spacing: .01em; }
 
   /* Live-Berechnung: dezentes Einblenden des Ergebnisses */
   .lc-reveal { animation: lc-fade var(--dur-slow) var(--ease); }
   @keyframes lc-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-
-  /* Kachel-Katalog (Pro): Panel-Einblendung bewusst gemächlicher als die
-     Standard-Reveals (Wunsch David 6.6.2026 «etwas langsamer»). */
-  .lc-reveal-panel { animation: lc-fade var(--dur-stage) var(--ease); }
 
   /* Aufklappbare Hinweise: dezentes Disclosure-Symbol statt Default-Dreieck.
      Ausnahme .lc-disclosure: bringt einen eigenen Chevron mit (Rubrik-Zeilen). */
@@ -263,7 +284,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lc-reveal, .lc-reveal-panel { animation: none; }
+  .lc-reveal { animation: none; }
 }
 
 /* View Transitions (Kachel ⇄ Panel im Pro-Katalog): jede Kachel trägt einen
