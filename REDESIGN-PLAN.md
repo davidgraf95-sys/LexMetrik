@@ -87,4 +87,21 @@ festschreiben, werden bei Bedarf **deklariert** angepasst (Schutzabsicht bleibt)
   leiser Einzel-Badges (zur Diskussion, nichts wird auf «geprüft» gehoben).
 - Sprachen en/fr/it sind «in Bearbeitung» → Umschalter wird optisch zurückgenommen.
 
-**Stand:** Phase 0 abgeschlossen. Umsetzung beginnt mit E1.
+## Umsetzungs-Stand
+
+- **E1 ✓** (572f7aa) Fundament: Form-Primitive (`.lc-select`/`.lc-textarea`/
+  `.lc-input-sm`), `.lc-akzent-*`, `.lc-fineprint`, accent-color Messing,
+  Fraunces-Serif-Fallbacks weg, totes `.lc-reveal-panel` weg, 4 Timing-Tokens.
+- **E2 ✓** (3c3b8c0) Skip-Link + `<main id>`-Landmark; `<Card>`-Primitive ersetzt
+  17× Inline-Wrapper auf 16 Rechner-Seiten (byte-neutral).
+- **E3 ✓** (1431f18) Persistente Kategorie-Navigation (Desktop) + Off-Canvas-
+  Mobile-Menü; redundante Disclaimer-Utility-Bar ersetzt.
+- **E4–E10** offen (Katalog-Filter · Rechner-Konsistenz · Wizard · Mobile/Touch ·
+  Animation · A11y · Sekundärseiten).
+
+### Korrektur Phase-0-Befund
+Die «leere RECHTLICHER HINWEIS»-Box ist **kein Bug**: `PflichtDisclaimer` ist ein
+zugeklapptes `<details>` (nur die Summary-Zeile sichtbar). Funktioniert wie
+vorgesehen — keine Reparatur nötig; bleibt nur Teil der Disclaimer-Entdoppelung.
+
+**Stand:** Phase 0 + E1–E3 abgeschlossen (alle Tore + build grün, je eigener Commit).
