@@ -20,6 +20,14 @@ export const KANTONE: readonly KantonCode[] = [
   'SH', 'AR', 'AI', 'SG', 'GR', 'AG', 'TG', 'TI', 'VD', 'VS', 'NE', 'GE', 'JU',
 ];
 
+export const KANTON_NAMEN: Record<KantonCode, string> = {
+  ZH: 'Zürich', BE: 'Bern', LU: 'Luzern', UR: 'Uri', SZ: 'Schwyz', OW: 'Obwalden',
+  NW: 'Nidwalden', GL: 'Glarus', ZG: 'Zug', FR: 'Freiburg', SO: 'Solothurn',
+  BS: 'Basel-Stadt', BL: 'Basel-Landschaft', SH: 'Schaffhausen', AR: 'Appenzell A.Rh.',
+  AI: 'Appenzell I.Rh.', SG: 'St. Gallen', GR: 'Graubünden', AG: 'Aargau', TG: 'Thurgau',
+  TI: 'Tessin', VD: 'Waadt', VS: 'Wallis', NE: 'Neuenburg', GE: 'Genf', JU: 'Jura',
+};
+
 /** §7-Verifikationsstand. NIE 'geprüft' — das setzt Davids Wort-für-Wort-
  *  Abnahme nach abnahme/SCHEMA.md voraus (§8). */
 export type Verifiziert = 'recherche' | 'doppelt';

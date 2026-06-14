@@ -10,6 +10,7 @@ import {
   MATERIEN, VERFAHRENSPHASEN, KANTONE,
   type KantonCode, type Verfahrensphase, type Materie, type PostenErgebnis,
 } from '../../lib/prozesskosten';
+import { KANTON_NAMEN } from '../../data/tarif/typen';
 
 // ─── Prozesskosten-Rechner (Art. 95/96 ZPO) ─────────────────────────────────
 // Reine Darstellung (§3): gerechnet wird in lib/prozesskosten.ts über die
@@ -86,7 +87,7 @@ export function ProzesskostenForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Field label="Kanton">
           <select value={kanton} onChange={(e) => setKanton(e.target.value as KantonCode)} className={inputCls} aria-label="Kanton">
-            {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+            {KANTONE.map((k) => <option key={k} value={k}>{k} — {KANTON_NAMEN[k]}</option>)}
           </select>
         </Field>
         <Field label="Streitwert (CHF)" hint="vermögensrechtliche Streitigkeit nach Art. 91 ff. ZPO">
