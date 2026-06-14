@@ -43,6 +43,14 @@ export const VERTRAGS_INVENTAR: KartenInventar[] = [
     ],
   },
   {
+    karte: 'mietvertrag', titel: 'Mietvertrag',
+    untertypen: [
+      { id: 'wohnung', label: 'Wohnraum', detailgrade: 3, modulprofile: 6 },
+      { id: 'geschaeftsraum', label: 'Geschäftsraum', detailgrade: 3, modulprofile: 6 },
+      { id: 'untermiete', label: 'Untermiete', detailgrade: 3, modulprofile: 4 },
+    ],
+  },
+  {
     karte: 'auftrag', titel: 'Auftrag / Dienstleistung',
     untertypen: [{ id: 'standard', label: 'Auftrag', detailgrade: 3, modulprofile: 4 }],
   },

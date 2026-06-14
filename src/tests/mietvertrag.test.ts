@@ -292,3 +292,43 @@ describe('Bug-Check-Fix 10.6.2026: möbliertes Zimmer (teilweise Untermiete) —
     expect(wohnung.blocker.some((b) => b.includes('266c'))).toBe(true);
   });
 });
+
+describe('Mietvertrag – Detailgrad (P2 Vertrags-Varianten)', () => {
+  it('MT-D1 standard: Zahlungsverzug enthalten, keine Experte-Module', () => {
+    const l = ids(basis());
+    expect(l).toContain('M06b_zahlungsverzug');
+    expect(l).not.toContain('M05c_mietzinsvorbehalt');
+    expect(l).not.toContain('M07b_duldung');
+  });
+
+  it('MT-D2 einfach blendet die deklaratorische Zahlungsverzugs-Klausel aus; Kern bleibt', () => {
+    const l = ids(basis({ detailgrad: 'einfach' }));
+    expect(l).not.toContain('M06b_zahlungsverzug');
+    for (const id of ['M01_parteien', 'M04_mietzins', 'M12_kuendigung', 'M13_rueckgabe', 'M15_unterschriften']) {
+      expect(l, id).toContain(id);
+    }
+  });
+
+  it('MT-D3 experte: Duldung (257h) immer, Mietzinsvorbehalt (18 VMWG) nur beziffert', () => {
+    const l = ids(basis({ detailgrad: 'experte' }));
+    expect(l).toContain('M07b_duldung');
+    expect(l).not.toContain('M05c_mietzinsvorbehalt');
+    const mitVorbehalt = basis({ detailgrad: 'experte', mietzinsvorbehalt: true, vorbehaltProzent: '3', vorbehaltGrund: 'nicht ausgeschöpfte Kostenmiete' });
+    expect(ids(mitVorbehalt)).toContain('M05c_mietzinsvorbehalt');
+    const t = texte(mitVorbehalt);
+    expect(t).toMatch(/Art\. 18 VMWG/);
+    expect(t).toMatch(/3 % des Nettomietzinses/);
+    expect(t).toMatch(/Art\. 257h OR/);
+  });
+
+  it('MT-D4 Mietzinsvorbehalt ohne Bezifferung → Warnung (Art. 18 VMWG); nur im experte aktiv', () => {
+    expect(pruefeMvGates(basis({ detailgrad: 'experte', mietzinsvorbehalt: true })).warnungen.join()).toMatch(/Art\. 18 VMWG/);
+    expect(pruefeMvGates(basis({ mietzinsvorbehalt: true })).warnungen.join()).not.toMatch(/Art\. 18 VMWG/);
+  });
+
+  it('MT-D5 Detailgrad ändert die zwingenden Gates nicht (Kautionsmaximum bleibt)', () => {
+    for (const detailgrad of ['einfach', 'standard', 'experte'] as const) {
+      expect(pruefeMvGates(basis({ detailgrad, kautionCHF: '9000' })).blocker.join()).toMatch(/drei Monatszinse/);
+    }
+  });
+});

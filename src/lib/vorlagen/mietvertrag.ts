@@ -2,6 +2,7 @@
 import type { VorlageSchema, Antworten } from './engine';
 import { assemble } from './engine';
 import { fmtDatumLang, fmtDatum, fmtCHF, zahl } from './datum';
+import { type Detailgrad, DETAILGRAD_DEFAULT, AB_STANDARD, NUR_EXPERTE } from './detailgrad';
 export { fmtCHF } from './datum';
 
 // ─── Mietvertrag Wohn- & Geschäftsräume (Art. 253 ff. OR) – sechste Vorlage ──
@@ -79,6 +80,11 @@ export type MvZustimmungStatus = 'schriftlich' | 'muendlich' | 'angefragt' | 'ni
 export type MvStaffel = { ab: string; erhoehungCHF: string };
 
 export type MvAntworten = {
+  // Detailgrad (FAHRPLAN-VERTRAGS-VARIANTEN P2): einfach blendet die rein
+  // deklaratorische Zahlungsverzugs-Klausel aus, experte ergänzt Mietzins-
+  // vorbehalt (Art. 18 VMWG) und Duldungspflicht (Art. 257h OR). Default
+  // 'standard' = byte-identischer Bestand (§6).
+  detailgrad: Detailgrad;
   objektTyp: MvObjektTyp;
   /** Untermiete-Weiche: bei 'untermiete' sind vermieter*-Felder der UNTER-
    *  vermieter (= Hauptmieter) und mieter*-Felder der Untermieter. */
@@ -136,12 +142,17 @@ export type MvAntworten = {
   konkurrenzschutz?: boolean;
   konkurrenzschutzText?: string;
   konkurrenzschutzStrafeCHF?: string; // empfohlen: blosses Verbot erzwingt keine Vertragsauflösung beim Konkurrenten
+  // Mietzinsvorbehalt (Art. 18 VMWG) – experte
+  mietzinsvorbehalt?: boolean;
+  vorbehaltProzent?: string;         // Vorbehalt in Prozenten des Mietzinses (Art. 18 VMWG)
+  vorbehaltGrund?: string;           // z. B. «nicht ausgeschöpfte Kostenmiete»
   // Abschluss
   ort: string;
   datum: string;
 };
 
 export const MV_DEFAULTS: MvAntworten = {
+  detailgrad: DETAILGRAD_DEFAULT,
   objektTyp: 'wohnung',
   vermieterName: '', vermieterAdresse: '',
   mieterName: '', mieterAdresse: '',
@@ -311,6 +322,12 @@ export function pruefeMvGates(a: MvAntworten): MvGateErgebnis {
     hinweise.push('Konkurrenzschutz ohne Konventionalstrafe: Ein blosses vertragliches Verbot erzwingt die Auflösung eines mit dem Konkurrenten geschlossenen Mietvertrags nicht – der geschützte Mieter wird auf Schadenersatz verwiesen. Eine Konventionalstrafe wird empfohlen (Vertiefungs-Gutachten 5.6.2026).');
   }
 
+  // G10 – Mietzinsvorbehalt muss in Franken oder Prozenten beziffert sein
+  // (Art. 18 VMWG); nur im Detailgrad «experte» wählbar.
+  if (a.detailgrad === 'experte' && a.mietzinsvorbehalt && !zahl(a.vorbehaltProzent)) {
+    warnungen.push('Mietzinsvorbehalt: Der Vorbehalt einer nicht ausgeschöpften Mietzinsanpassung ist in Franken oder in Prozenten des Mietzinses zu beziffern, sonst geht er verloren (Art. 18 VMWG).');
+  }
+
   // Familienwohnung (nur Hinweis – Schutz gilt von Gesetzes wegen)
   if (wohnung && a.familienwohnung) {
     hinweise.push('Familienwohnung: Kündigung durch die Mieterseite nur mit ausdrücklicher Zustimmung des Ehegatten/eingetragenen Partners (Art. 266m OR); der Vermieter muss Kündigungen und Zahlungsfristen beiden Ehegatten SEPARAT zustellen (Art. 266n OR), sonst Nichtigkeit (Art. 266o OR).');
@@ -434,6 +451,12 @@ export const MV_SCHEMA: VorlageSchema = {
       wiederholeUeber: 'staffelListe',
       begruendung: 'Je Staffel eine Zeile (Datum + Frankenbetrag).',
       norm: 'Art. 269c OR' },
+    { id: 'M05c_mietzinsvorbehalt', ueberschrift: 'Mietzinsvorbehalt',
+      text: 'Der Vermieter macht die ihm zustehende Mietzinsanpassung nicht vollständig geltend und behält sich eine spätere Erhöhung im Umfang von {{vorbehaltProzentText}} % des Nettomietzinses vor{{vorbehaltGrundSatz}}. Der Vorbehalt ist in Prozenten des Mietzinses festgelegt (Art. 18 VMWG).',
+      includeIf: { feld: 'mietzinsvorbehaltZeigen', eq: true }, nummeriert: true,
+      begruendung: 'Mietzinsvorbehalt bei unvollständiger Mietzinsanpassung, in Prozenten beziffert (Art. 18 VMWG) – Detailgrad «experte».',
+      norm: 'Art. 18 VMWG',
+      hinweis: 'Ohne ziffernmässige Festlegung in Franken oder Prozenten geht der Vorbehalt verloren (Art. 18 VMWG).' },
     { id: 'M06_kaution', ueberschrift: 'Sicherheitsleistung',
       text: 'Der Mieter leistet eine Sicherheit von CHF {{kautionFmt}}{{kautionMonateSatz}}. Der Vermieter hinterlegt die Sicherheit bei einer Bank auf einem Sparkonto oder Depot, das auf den Namen des Mieters lautet. Macht der Vermieter innert eines Jahres nach Beendigung des Mietverhältnisses keinen Anspruch gegenüber dem Mieter geltend, kann dieser die Rückerstattung verlangen.',
       includeIf: { feld: 'kautionZeigen', eq: true }, nummeriert: true,
@@ -441,14 +464,19 @@ export const MV_SCHEMA: VorlageSchema = {
       norm: 'Art. 257e OR' },
     { id: 'M06b_zahlungsverzug', ueberschrift: 'Zahlungsverzug',
       text: 'Ist der Mieter mit der Zahlung von Mietzins oder Nebenkosten im Rückstand, kann ihm der Vermieter schriftlich eine Zahlungsfrist von mindestens 30 Tagen setzen und ihm für den Fall der Nichtzahlung die Kündigung androhen; bezahlt der Mieter innert Frist nicht, kann der Vermieter mit einer Frist von mindestens 30 Tagen auf das Ende eines Monats kündigen. Bei einer Familienwohnung sind Fristansetzung und Androhung dem Ehegatten bzw. der eingetragenen Partnerin/dem eingetragenen Partner separat zuzustellen.',
-      nummeriert: true,
-      begruendung: 'Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) – immer enthalten.',
+      includeIf: AB_STANDARD, nummeriert: true,
+      begruendung: 'Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) – ab «standard» (in «einfach» ausgeblendet, da Art. 257d ohnehin gilt).',
       norm: 'Art. 257d OR' },
     { id: 'M07_unterhalt', ueberschrift: 'Unterhalt und Mängel',
       text: 'Der Vermieter erhält das Mietobjekt in einem zum vorausgesetzten Gebrauch tauglichen Zustand. Der Mieter trägt den kleinen Unterhalt, d. h. Reinigungen und Ausbesserungen, die für den gewöhnlichen Gebrauch erforderlich sind und die er ohne besonderen Aufwand selbst vornehmen kann. Mängel sind dem Vermieter unverzüglich zu melden; die gesetzlichen Mängelrechte des Mieters bleiben vorbehalten.',
       nummeriert: true,
       begruendung: 'Erhaltungspflicht (relativ zwingend) und kleiner Unterhalt in den gesetzlichen Schranken – immer enthalten.',
       norm: 'Art. 256 OR' },
+    { id: 'M07b_duldung', ueberschrift: 'Duldung von Arbeiten und Besichtigungen',
+      text: 'Der Mieter duldet Arbeiten an der Mietsache, wenn sie zur Beseitigung von Mängeln oder zur Behebung oder Vermeidung von Schäden notwendig sind, und gestattet dem Vermieter die Besichtigung, soweit dies für Unterhalt, Verkauf oder Wiedervermietung notwendig ist. Der Vermieter kündigt Arbeiten und Besichtigungen rechtzeitig an und nimmt bei der Durchführung auf die Interessen des Mieters Rücksicht; allfällige Ansprüche des Mieters auf Herabsetzung des Mietzinses und auf Schadenersatz bleiben vorbehalten (Art. 257h OR).',
+      includeIf: NUR_EXPERTE, nummeriert: true,
+      begruendung: 'Duldungspflicht für Arbeiten/Besichtigungen mit Ankündigung und Rücksichtnahme (Art. 257h OR) – Detailgrad «experte».',
+      norm: 'Art. 257h OR' },
     { id: 'M08_gebrauch', ueberschrift: 'Gebrauch, Untermiete und bauliche Änderungen',
       text: 'Der Mieter gebraucht das Mietobjekt sorgfältig und nimmt Rücksicht auf Hausbewohner und Nachbarn.{{untermieteSatz}} Erneuerungen und Änderungen am Mietobjekt durch den Mieter bedürfen der schriftlichen Zustimmung des Vermieters; hat der Vermieter zugestimmt, kann er die Wiederherstellung des früheren Zustands nur verlangen, wenn dies schriftlich vereinbart wurde. Weist das Mietobjekt bei Mietende dank solcher Arbeiten einen erheblichen Mehrwert auf, kann der Mieter dafür eine entsprechende Entschädigung verlangen (Art. 260a Abs. 3 OR).{{tierhaltungSatz}}{{hausordnungSatz}}',
       nummeriert: true,
@@ -494,7 +522,10 @@ export const MV_SCHEMA: VorlageSchema = {
       text: 'Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Streitigkeiten aus diesem Vertrag werden zunächst der Schlichtungsbehörde am Ort des Mietobjekts unterbreitet. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 253 ff. OR) und der VMWG.',
       nummeriert: true,
       begruendung: 'Schriftformvorbehalt, Schlichtung am Ort der Sache, Gesetzesverweis – immer enthalten.',
-      norm: 'Art. 274 OR' },
+      // §7-Korrektur 14.6.2026: vormals Art. 274 ff. OR – die mietrechtlichen
+      // Verfahrensartikel sind mit der ZPO (1.1.2011) aufgehoben; die
+      // Schlichtung am Ort der gelegenen Sache richtet sich nach der ZPO.
+      norm: 'Art. 33 ZPO' },
     { id: 'M15_unterschriften', rolle: 'unterschrift',
       text: '{{ort}}, {{datumFmt}}\n\n\nDer Vermieter:\n\n___________________________\n{{vermieterName}}\n\n\nDer Mieter / Die Mieter:\n\n___________________________\n{{mieterUnterschrift}}{{zweiteUnterschriftSatz}}',
       begruendung: 'Ort, Datum und Unterschriften – erfüllt die Schriftform der formbedürftigen Klauseln.',
@@ -585,6 +616,9 @@ export function mvZusammenstellen(a: MvAntworten) {
     ksStrafeSatz: zahl(a.konkurrenzschutzStrafeCHF)
       ? ` Bei Verletzung dieser Pflicht schuldet der Vermieter dem Mieter eine Konventionalstrafe von CHF ${fmtCHF(a.konkurrenzschutzStrafeCHF!)} je Verletzungsfall; der Ersatz weiteren Schadens bleibt vorbehalten.`
       : '',
+    mietzinsvorbehaltZeigen: a.detailgrad === 'experte' && !!a.mietzinsvorbehalt && zahl(a.vorbehaltProzent) !== null,
+    vorbehaltProzentText: zahl(a.vorbehaltProzent) !== null ? String(zahl(a.vorbehaltProzent)) : '________',
+    vorbehaltGrundSatz: a.vorbehaltGrund?.trim() ? ` (Grund: ${a.vorbehaltGrund.trim()})` : '',
     kuendigungText,
     familienwohnungSatz: wohnung && a.familienwohnung
       ? ' Das Mietobjekt dient als Familienwohnung; die besonderen Schutzbestimmungen (Art. 266m–266n OR) sind zu beachten.'

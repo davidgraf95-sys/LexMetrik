@@ -12,6 +12,7 @@ import { DatumsFeld } from '../components/DatumsFeld';
 import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
+import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { KANTONE } from '../lib/kantone';
 import { karte } from '../lib/startseiteConfig';
@@ -406,6 +407,25 @@ export function VorlageMietvertrag() {
               )}
             </div>
           )}
+          {a.detailgrad === 'experte' && (
+            <div className="space-y-3 pt-1">
+              <p className="lc-overline">Mietzinsvorbehalt (Art. 18 VMWG)</p>
+              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <input type="checkbox" className="mt-0.5" checked={a.mietzinsvorbehalt ?? false} onChange={(e) => set('mietzinsvorbehalt', e.target.checked || undefined)} />
+                <span><strong>Mietzinsvorbehalt</strong> aufnehmen <span className="text-ink-500">(nicht ausgeschöpfte Mietzinsanpassung, in Prozenten zu beziffern)</span></span>
+              </label>
+              {a.mietzinsvorbehalt && (
+                <>
+                  <Field label="Vorbehalt (% des Nettomietzinses)" hint="ohne Bezifferung in Franken oder Prozenten geht der Vorbehalt verloren (Art. 18 VMWG)">
+                    <input type="number" min={0} step={0.1} className={inputCls + ' num w-40'} value={a.vorbehaltProzent ?? ''} onChange={(e) => set('vorbehaltProzent', e.target.value || undefined)} />
+                  </Field>
+                  <Field label="Grund" optional>
+                    <input className={inputCls} value={a.vorbehaltGrund ?? ''} onChange={(e) => set('vorbehaltGrund', e.target.value || undefined)} placeholder="z. B. nicht ausgeschöpfte Kostenmiete" />
+                  </Field>
+                </>
+              )}
+            </div>
+          )}
         </div>
       );
 
@@ -476,6 +496,7 @@ export function VorlageMietvertrag() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      kopfSchalter={<VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_MV, dateiName: 'Mietvertrag-Entwurf.pdf' },

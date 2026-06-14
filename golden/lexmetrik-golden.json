@@ -10601,7 +10601,7 @@
    },
    {
     "bausteinId": "M06b_zahlungsverzug",
-    "begruendung": "Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) – immer enthalten.",
+    "begruendung": "Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) – ab «standard» (in «einfach» ausgeblendet, da Art. 257d ohnehin gilt).",
     "norm": "Art. 257d OR"
    },
    {
@@ -10632,7 +10632,7 @@
    {
     "bausteinId": "M14_schluss",
     "begruendung": "Schriftformvorbehalt, Schlichtung am Ort der Sache, Gesetzesverweis – immer enthalten.",
-    "norm": "Art. 274 OR"
+    "norm": "Art. 33 ZPO"
    },
    {
     "bausteinId": "M15_unterschriften",
@@ -10794,7 +10794,7 @@
    },
    {
     "bausteinId": "M06b_zahlungsverzug",
-    "begruendung": "Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) – immer enthalten.",
+    "begruendung": "Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) – ab «standard» (in «einfach» ausgeblendet, da Art. 257d ohnehin gilt).",
     "norm": "Art. 257d OR"
    },
    {
@@ -10825,7 +10825,335 @@
    {
     "bausteinId": "M14_schluss",
     "begruendung": "Schriftformvorbehalt, Schlichtung am Ort der Sache, Gesetzesverweis – immer enthalten.",
-    "norm": "Art. 274 OR"
+    "norm": "Art. 33 ZPO"
+   },
+   {
+    "bausteinId": "M15_unterschriften",
+    "begruendung": "Ort, Datum und Unterschriften – erfüllt die Schriftform der formbedürftigen Klauseln.",
+    "norm": "Art. 255 OR"
+   }
+  ]
+ },
+ "vorl:mv-einfach": {
+  "dokument": {
+   "titel": "Mietvertrag",
+   "format": "vertrag",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "M01_parteien",
+     "text": "zwischen\n\nV\nX 1\n(Vermieter)\n\nund\n\nM\nY 2\n(Mieter)",
+     "rolle": "parteien"
+    },
+    {
+     "bausteinId": "M02_objekt",
+     "ueberschrift": "Mietobjekt",
+     "text": "1. Vermietet wird: 3.5-Zi, Z 3. Das Mietobjekt dient zu Wohnzwecken. Der Zustand des Mietobjekts wird bei der Übergabe in einem gemeinsamen Protokoll festgehalten."
+    },
+    {
+     "bausteinId": "M03_beginn_unbefristet",
+     "ueberschrift": "Mietbeginn und Dauer",
+     "text": "2. Das Mietverhältnis beginnt am 01.10.2026 und läuft auf unbestimmte Zeit."
+    },
+    {
+     "bausteinId": "M04_mietzins",
+     "ueberschrift": "Mietzins und Nebenkosten",
+     "text": "3. Der monatliche Nettomietzins beträgt CHF 2'000.00. Zusätzlich leistet der Mieter monatliche Akontozahlungen von CHF 250.00 an die folgenden Nebenkosten (jährliche Abrechnung): Mietzins und Nebenkosten sind monatlich im Voraus, jeweils auf den Ersten des Monats, zu bezahlen. Der Mietzins basiert auf dem hypothekarischen Referenzzinssatz von 1.25 % (Stand 2.6.2026)."
+    },
+    {
+     "bausteinId": "M04b_nkliste",
+     "text": "– Heizung"
+    },
+    {
+     "bausteinId": "M07_unterhalt",
+     "ueberschrift": "Unterhalt und Mängel",
+     "text": "4. Der Vermieter erhält das Mietobjekt in einem zum vorausgesetzten Gebrauch tauglichen Zustand. Der Mieter trägt den kleinen Unterhalt, d. h. Reinigungen und Ausbesserungen, die für den gewöhnlichen Gebrauch erforderlich sind und die er ohne besonderen Aufwand selbst vornehmen kann. Mängel sind dem Vermieter unverzüglich zu melden; die gesetzlichen Mängelrechte des Mieters bleiben vorbehalten."
+    },
+    {
+     "bausteinId": "M08_gebrauch",
+     "ueberschrift": "Gebrauch, Untermiete und bauliche Änderungen",
+     "text": "5. Der Mieter gebraucht das Mietobjekt sorgfältig und nimmt Rücksicht auf Hausbewohner und Nachbarn. Untervermietung bedarf der Zustimmung des Vermieters; dieser kann sie nur aus den gesetzlichen Gründen verweigern. Erneuerungen und Änderungen am Mietobjekt durch den Mieter bedürfen der schriftlichen Zustimmung des Vermieters; hat der Vermieter zugestimmt, kann er die Wiederherstellung des früheren Zustands nur verlangen, wenn dies schriftlich vereinbart wurde. Weist das Mietobjekt bei Mietende dank solcher Arbeiten einen erheblichen Mehrwert auf, kann der Mieter dafür eine entsprechende Entschädigung verlangen (Art. 260a Abs. 3 OR). Übliche Kleintiere dürfen frei gehalten werden; übrige Haustiere bedürfen der Zustimmung des Vermieters. Die Hausordnung bildet einen integrierenden Bestandteil dieses Vertrags."
+    },
+    {
+     "bausteinId": "M09_versicherung",
+     "ueberschrift": "Versicherung",
+     "text": "6. Der Mieter schliesst eine Privathaftpflichtversicherung ab, die Mieterschäden deckt, und hält sie während der Mietdauer aufrecht."
+    },
+    {
+     "bausteinId": "M12_kuendigung",
+     "ueberschrift": "Kündigung",
+     "text": "7. Das Mietverhältnis kann von beiden Parteien mit einer Frist von 3 Monaten auf einen ortsüblichen Termin, mangels Ortsüblichkeit auf das Ende einer dreimonatigen Mietdauer, gekündigt werden. Die Kündigung bedarf der Schriftform; der Vermieter kündigt mit dem vom Kanton genehmigten amtlichen Formular, sonst ist die Kündigung nichtig. Vorbehalten bleiben die ausserordentlichen Kündigungsgründe des Gesetzes."
+    },
+    {
+     "bausteinId": "M13_rueckgabe",
+     "ueberschrift": "Rückgabe",
+     "text": "8. Bei Beendigung des Mietverhältnisses gibt der Mieter das Mietobjekt in dem Zustand zurück, der sich aus vertragsgemässem Gebrauch ergibt. Über die Rückgabe wird ein gemeinsames Protokoll erstellt; der Vermieter prüft den Zustand sofort und meldet Mängel, für die der Mieter einzustehen hat, umgehend."
+    },
+    {
+     "bausteinId": "M14_schluss",
+     "ueberschrift": "Schlussbestimmungen",
+     "text": "9. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Streitigkeiten aus diesem Vertrag werden zunächst der Schlichtungsbehörde am Ort des Mietobjekts unterbreitet. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 253 ff. OR) und der VMWG."
+    },
+    {
+     "bausteinId": "M15_unterschriften",
+     "text": "Basel, 15. Juni 2026\n\n\nDer Vermieter:\n\n___________________________\nV\n\n\nDer Mieter / Die Mieter:\n\n___________________________\nM",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    }
+   ],
+   "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Mietvertrag ist formfrei gültig; Index- und Staffelmiete bedürfen der Schriftform – die beidseitige Unterzeichnung erfüllt sie. Kantonale Formularpflichten für den Anfangsmietzins (Art. 270 Abs. 2 OR) sind zusätzlich zu beachten; massgeblich sind Gesetz (OR/VMWG) und der konkrete Einzelfall.",
+   "version": "1.2.0 (Rechtsstand OR Art. 253 ff./VMWG; + Untermiete 6.6.2026: Art. 262 GELTENDE Fassung – Revision in der Volksabstimmung 24.11.2024 abgelehnt)"
+  },
+  "aufgenommen": [
+   "M01_parteien",
+   "M02_objekt",
+   "M03_beginn_unbefristet",
+   "M04_mietzins",
+   "M04b_nkliste",
+   "M07_unterhalt",
+   "M08_gebrauch",
+   "M09_versicherung",
+   "M12_kuendigung",
+   "M13_rueckgabe",
+   "M14_schluss",
+   "M15_unterschriften"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "M01_parteien",
+    "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+    "norm": "Art. 253 OR"
+   },
+   {
+    "bausteinId": "M02_objekt",
+    "begruendung": "Mietobjekt mit Beschrieb, Nebenräumen und Zweck – immer enthalten.",
+    "norm": "Art. 253 OR"
+   },
+   {
+    "bausteinId": "M03_beginn_unbefristet",
+    "begruendung": "Unbefristetes Mietverhältnis.",
+    "norm": "Art. 255 OR"
+   },
+   {
+    "bausteinId": "M04_mietzins",
+    "begruendung": "Nettomietzins, Nebenkosten-Modus und Referenzzins-Basis (Grundlage künftiger Anpassungen) – immer enthalten.",
+    "norm": "Art. 257 OR"
+   },
+   {
+    "bausteinId": "M04b_nkliste",
+    "begruendung": "Nebenkosten-Positionen einzeln aufgeführt (Pauschalverweis genügt nicht).",
+    "norm": "Art. 257a OR"
+   },
+   {
+    "bausteinId": "M07_unterhalt",
+    "begruendung": "Erhaltungspflicht (relativ zwingend) und kleiner Unterhalt in den gesetzlichen Schranken – immer enthalten.",
+    "norm": "Art. 256 OR"
+   },
+   {
+    "bausteinId": "M08_gebrauch",
+    "begruendung": "Sorgfaltspflicht, Untermiete (gesetzliche Verweigerungsgründe) und Art. 260a – immer enthalten.",
+    "norm": "Art. 262 OR"
+   },
+   {
+    "bausteinId": "M09_versicherung",
+    "begruendung": "Haftpflichtversicherung des Mieters (übliche Klausel).",
+    "norm": "Art. 257f OR"
+   },
+   {
+    "bausteinId": "M12_kuendigung",
+    "begruendung": "Kündigungsfristen/-termine und zwingende Formvorschriften (Art. 266l–266o OR).",
+    "norm": "Art. 266l OR"
+   },
+   {
+    "bausteinId": "M13_rueckgabe",
+    "begruendung": "Rückgabe und sofortige Prüf-/Rügeobliegenheit des Vermieters – immer enthalten.",
+    "norm": "Art. 267 OR"
+   },
+   {
+    "bausteinId": "M14_schluss",
+    "begruendung": "Schriftformvorbehalt, Schlichtung am Ort der Sache, Gesetzesverweis – immer enthalten.",
+    "norm": "Art. 33 ZPO"
+   },
+   {
+    "bausteinId": "M15_unterschriften",
+    "begruendung": "Ort, Datum und Unterschriften – erfüllt die Schriftform der formbedürftigen Klauseln.",
+    "norm": "Art. 255 OR"
+   }
+  ]
+ },
+ "vorl:mv-experte": {
+  "dokument": {
+   "titel": "Mietvertrag",
+   "format": "vertrag",
+   "ausgabeArt": "fertig",
+   "absaetze": [
+    {
+     "bausteinId": "M01_parteien",
+     "text": "zwischen\n\nV\nX 1\n(Vermieter)\n\nund\n\nM\nY 2\n(Mieter)",
+     "rolle": "parteien"
+    },
+    {
+     "bausteinId": "M02_objekt",
+     "ueberschrift": "Mietobjekt",
+     "text": "1. Vermietet wird: 3.5-Zi, Z 3. Das Mietobjekt dient zu Wohnzwecken. Der Zustand des Mietobjekts wird bei der Übergabe in einem gemeinsamen Protokoll festgehalten."
+    },
+    {
+     "bausteinId": "M03_beginn_unbefristet",
+     "ueberschrift": "Mietbeginn und Dauer",
+     "text": "2. Das Mietverhältnis beginnt am 01.10.2026 und läuft auf unbestimmte Zeit."
+    },
+    {
+     "bausteinId": "M04_mietzins",
+     "ueberschrift": "Mietzins und Nebenkosten",
+     "text": "3. Der monatliche Nettomietzins beträgt CHF 2'000.00. Zusätzlich leistet der Mieter monatliche Akontozahlungen von CHF 250.00 an die folgenden Nebenkosten (jährliche Abrechnung): Mietzins und Nebenkosten sind monatlich im Voraus, jeweils auf den Ersten des Monats, zu bezahlen. Der Mietzins basiert auf dem hypothekarischen Referenzzinssatz von 1.25 % (Stand 2.6.2026)."
+    },
+    {
+     "bausteinId": "M04b_nkliste",
+     "text": "– Heizung"
+    },
+    {
+     "bausteinId": "M05c_mietzinsvorbehalt",
+     "ueberschrift": "Mietzinsvorbehalt",
+     "text": "4. Der Vermieter macht die ihm zustehende Mietzinsanpassung nicht vollständig geltend und behält sich eine spätere Erhöhung im Umfang von 3 % des Nettomietzinses vor (Grund: nicht ausgeschöpfte Kostenmiete). Der Vorbehalt ist in Prozenten des Mietzinses festgelegt (Art. 18 VMWG)."
+    },
+    {
+     "bausteinId": "M06b_zahlungsverzug",
+     "ueberschrift": "Zahlungsverzug",
+     "text": "5. Ist der Mieter mit der Zahlung von Mietzins oder Nebenkosten im Rückstand, kann ihm der Vermieter schriftlich eine Zahlungsfrist von mindestens 30 Tagen setzen und ihm für den Fall der Nichtzahlung die Kündigung androhen; bezahlt der Mieter innert Frist nicht, kann der Vermieter mit einer Frist von mindestens 30 Tagen auf das Ende eines Monats kündigen. Bei einer Familienwohnung sind Fristansetzung und Androhung dem Ehegatten bzw. der eingetragenen Partnerin/dem eingetragenen Partner separat zuzustellen."
+    },
+    {
+     "bausteinId": "M07_unterhalt",
+     "ueberschrift": "Unterhalt und Mängel",
+     "text": "6. Der Vermieter erhält das Mietobjekt in einem zum vorausgesetzten Gebrauch tauglichen Zustand. Der Mieter trägt den kleinen Unterhalt, d. h. Reinigungen und Ausbesserungen, die für den gewöhnlichen Gebrauch erforderlich sind und die er ohne besonderen Aufwand selbst vornehmen kann. Mängel sind dem Vermieter unverzüglich zu melden; die gesetzlichen Mängelrechte des Mieters bleiben vorbehalten."
+    },
+    {
+     "bausteinId": "M07b_duldung",
+     "ueberschrift": "Duldung von Arbeiten und Besichtigungen",
+     "text": "7. Der Mieter duldet Arbeiten an der Mietsache, wenn sie zur Beseitigung von Mängeln oder zur Behebung oder Vermeidung von Schäden notwendig sind, und gestattet dem Vermieter die Besichtigung, soweit dies für Unterhalt, Verkauf oder Wiedervermietung notwendig ist. Der Vermieter kündigt Arbeiten und Besichtigungen rechtzeitig an und nimmt bei der Durchführung auf die Interessen des Mieters Rücksicht; allfällige Ansprüche des Mieters auf Herabsetzung des Mietzinses und auf Schadenersatz bleiben vorbehalten (Art. 257h OR)."
+    },
+    {
+     "bausteinId": "M08_gebrauch",
+     "ueberschrift": "Gebrauch, Untermiete und bauliche Änderungen",
+     "text": "8. Der Mieter gebraucht das Mietobjekt sorgfältig und nimmt Rücksicht auf Hausbewohner und Nachbarn. Untervermietung bedarf der Zustimmung des Vermieters; dieser kann sie nur aus den gesetzlichen Gründen verweigern. Erneuerungen und Änderungen am Mietobjekt durch den Mieter bedürfen der schriftlichen Zustimmung des Vermieters; hat der Vermieter zugestimmt, kann er die Wiederherstellung des früheren Zustands nur verlangen, wenn dies schriftlich vereinbart wurde. Weist das Mietobjekt bei Mietende dank solcher Arbeiten einen erheblichen Mehrwert auf, kann der Mieter dafür eine entsprechende Entschädigung verlangen (Art. 260a Abs. 3 OR). Übliche Kleintiere dürfen frei gehalten werden; übrige Haustiere bedürfen der Zustimmung des Vermieters. Die Hausordnung bildet einen integrierenden Bestandteil dieses Vertrags."
+    },
+    {
+     "bausteinId": "M09_versicherung",
+     "ueberschrift": "Versicherung",
+     "text": "9. Der Mieter schliesst eine Privathaftpflichtversicherung ab, die Mieterschäden deckt, und hält sie während der Mietdauer aufrecht."
+    },
+    {
+     "bausteinId": "M12_kuendigung",
+     "ueberschrift": "Kündigung",
+     "text": "10. Das Mietverhältnis kann von beiden Parteien mit einer Frist von 3 Monaten auf einen ortsüblichen Termin, mangels Ortsüblichkeit auf das Ende einer dreimonatigen Mietdauer, gekündigt werden. Die Kündigung bedarf der Schriftform; der Vermieter kündigt mit dem vom Kanton genehmigten amtlichen Formular, sonst ist die Kündigung nichtig. Vorbehalten bleiben die ausserordentlichen Kündigungsgründe des Gesetzes."
+    },
+    {
+     "bausteinId": "M13_rueckgabe",
+     "ueberschrift": "Rückgabe",
+     "text": "11. Bei Beendigung des Mietverhältnisses gibt der Mieter das Mietobjekt in dem Zustand zurück, der sich aus vertragsgemässem Gebrauch ergibt. Über die Rückgabe wird ein gemeinsames Protokoll erstellt; der Vermieter prüft den Zustand sofort und meldet Mängel, für die der Mieter einzustehen hat, umgehend."
+    },
+    {
+     "bausteinId": "M14_schluss",
+     "ueberschrift": "Schlussbestimmungen",
+     "text": "12. Änderungen und Ergänzungen dieses Vertrags bedürfen der Schriftform, soweit das Gesetz nichts anderes zulässt. Dieser Vertrag wird in zwei Exemplaren ausgefertigt; jede Partei erhält ein unterzeichnetes Exemplar. Streitigkeiten aus diesem Vertrag werden zunächst der Schlichtungsbehörde am Ort des Mietobjekts unterbreitet. Im Übrigen gelten die Bestimmungen des Obligationenrechts (Art. 253 ff. OR) und der VMWG."
+    },
+    {
+     "bausteinId": "M15_unterschriften",
+     "text": "Basel, 15. Juni 2026\n\n\nDer Vermieter:\n\n___________________________\nV\n\n\nDer Mieter / Die Mieter:\n\n___________________________\nM",
+     "rolle": "unterschrift",
+     "stricheErlaubt": true
+    }
+   ],
+   "disclaimer": "Entwurf – erstellt mit LexMetrik. Keine Rechtsberatung. Der Mietvertrag ist formfrei gültig; Index- und Staffelmiete bedürfen der Schriftform – die beidseitige Unterzeichnung erfüllt sie. Kantonale Formularpflichten für den Anfangsmietzins (Art. 270 Abs. 2 OR) sind zusätzlich zu beachten; massgeblich sind Gesetz (OR/VMWG) und der konkrete Einzelfall.",
+   "version": "1.2.0 (Rechtsstand OR Art. 253 ff./VMWG; + Untermiete 6.6.2026: Art. 262 GELTENDE Fassung – Revision in der Volksabstimmung 24.11.2024 abgelehnt)"
+  },
+  "aufgenommen": [
+   "M01_parteien",
+   "M02_objekt",
+   "M03_beginn_unbefristet",
+   "M04_mietzins",
+   "M04b_nkliste",
+   "M05c_mietzinsvorbehalt",
+   "M06b_zahlungsverzug",
+   "M07_unterhalt",
+   "M07b_duldung",
+   "M08_gebrauch",
+   "M09_versicherung",
+   "M12_kuendigung",
+   "M13_rueckgabe",
+   "M14_schluss",
+   "M15_unterschriften"
+  ],
+  "protokoll": [
+   {
+    "bausteinId": "M01_parteien",
+    "begruendung": "Bezeichnung der Vertragsparteien – immer enthalten.",
+    "norm": "Art. 253 OR"
+   },
+   {
+    "bausteinId": "M02_objekt",
+    "begruendung": "Mietobjekt mit Beschrieb, Nebenräumen und Zweck – immer enthalten.",
+    "norm": "Art. 253 OR"
+   },
+   {
+    "bausteinId": "M03_beginn_unbefristet",
+    "begruendung": "Unbefristetes Mietverhältnis.",
+    "norm": "Art. 255 OR"
+   },
+   {
+    "bausteinId": "M04_mietzins",
+    "begruendung": "Nettomietzins, Nebenkosten-Modus und Referenzzins-Basis (Grundlage künftiger Anpassungen) – immer enthalten.",
+    "norm": "Art. 257 OR"
+   },
+   {
+    "bausteinId": "M04b_nkliste",
+    "begruendung": "Nebenkosten-Positionen einzeln aufgeführt (Pauschalverweis genügt nicht).",
+    "norm": "Art. 257a OR"
+   },
+   {
+    "bausteinId": "M05c_mietzinsvorbehalt",
+    "begruendung": "Mietzinsvorbehalt bei unvollständiger Mietzinsanpassung, in Prozenten beziffert (Art. 18 VMWG) – Detailgrad «experte».",
+    "norm": "Art. 18 VMWG",
+    "hinweis": "Ohne ziffernmässige Festlegung in Franken oder Prozenten geht der Vorbehalt verloren (Art. 18 VMWG)."
+   },
+   {
+    "bausteinId": "M06b_zahlungsverzug",
+    "begruendung": "Zahlungsverzugs-Folge (deklaratorisch; Art. 257d OR) – ab «standard» (in «einfach» ausgeblendet, da Art. 257d ohnehin gilt).",
+    "norm": "Art. 257d OR"
+   },
+   {
+    "bausteinId": "M07_unterhalt",
+    "begruendung": "Erhaltungspflicht (relativ zwingend) und kleiner Unterhalt in den gesetzlichen Schranken – immer enthalten.",
+    "norm": "Art. 256 OR"
+   },
+   {
+    "bausteinId": "M07b_duldung",
+    "begruendung": "Duldungspflicht für Arbeiten/Besichtigungen mit Ankündigung und Rücksichtnahme (Art. 257h OR) – Detailgrad «experte».",
+    "norm": "Art. 257h OR"
+   },
+   {
+    "bausteinId": "M08_gebrauch",
+    "begruendung": "Sorgfaltspflicht, Untermiete (gesetzliche Verweigerungsgründe) und Art. 260a – immer enthalten.",
+    "norm": "Art. 262 OR"
+   },
+   {
+    "bausteinId": "M09_versicherung",
+    "begruendung": "Haftpflichtversicherung des Mieters (übliche Klausel).",
+    "norm": "Art. 257f OR"
+   },
+   {
+    "bausteinId": "M12_kuendigung",
+    "begruendung": "Kündigungsfristen/-termine und zwingende Formvorschriften (Art. 266l–266o OR).",
+    "norm": "Art. 266l OR"
+   },
+   {
+    "bausteinId": "M13_rueckgabe",
+    "begruendung": "Rückgabe und sofortige Prüf-/Rügeobliegenheit des Vermieters – immer enthalten.",
+    "norm": "Art. 267 OR"
+   },
+   {
+    "bausteinId": "M14_schluss",
+    "begruendung": "Schriftformvorbehalt, Schlichtung am Ort der Sache, Gesetzesverweis – immer enthalten.",
+    "norm": "Art. 33 ZPO"
    },
    {
     "bausteinId": "M15_unterschriften",

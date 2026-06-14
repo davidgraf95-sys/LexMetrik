@@ -26,6 +26,9 @@ const QUELLEN = [
   // Arbeitsvertrag (Detailgrad-Vollausbau P1a, 14.6.2026) — Art. 319 ff. OR,
   // neu Art. 332 OR (Arbeitsergebnisse) + Art. 34 ZPO (Gerichtsstand).
   'src/lib/vorlagen/arbeitsvertrag.ts',
+  // Mietvertrag (Detailgrad P2, 14.6.2026) — Art. 253 ff. OR + VMWG (neu
+  // Art. 18 VMWG Mietzinsvorbehalt, Art. 257h OR Duldungspflicht).
+  'src/lib/vorlagen/mietvertrag.ts',
   // Lehrvertrag (Sonderregime P1c, 14.6.2026) — Art. 344–346a OR.
   'src/lib/vorlagen/lehrvertrag.ts',
   // Handelsreisendenvertrag (Sonderregime P1d, 14.6.2026) — Art. 347–350a OR.

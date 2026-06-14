@@ -258,6 +258,12 @@ const mvBasis = {
 f('vorl:mv', () => mvZusammenstellen({ ...mvBasis }));
 f('vorl:mv-gates', () => pruefeMvGates({ ...mvBasis, kautionCHF: '6800' }));
 f('vorl:mv-staffel', () => mvZusammenstellen({ ...mvBasis, mietzinsModell: 'staffel', mindestdauerJahre: 3, staffeln: [{ ab: '2027-10-01', erhoehungCHF: '50' }] }));
+// Detailgrad Mietvertrag (FAHRPLAN-VERTRAGS-VARIANTEN P2): standard byte-gleich
+// (vorl:mv; nur M06b-Begründung deklariert geändert). einfach blendet die
+// deklaratorische Zahlungsverzugs-Klausel aus; experte ergänzt Mietzins-
+// vorbehalt (18 VMWG) und Duldungspflicht (257h OR).
+f('vorl:mv-einfach', () => mvZusammenstellen({ ...mvBasis, detailgrad: 'einfach' }));
+f('vorl:mv-experte', () => mvZusammenstellen({ ...mvBasis, detailgrad: 'experte', mietzinsvorbehalt: true, vorbehaltProzent: '3', vorbehaltGrund: 'nicht ausgeschöpfte Kostenmiete' }));
 // Mahnung & Inverzugsetzung (11.6.2026): beide Varianten + Verfalltag-/
 // Vertragszins-/Mahngebühren-Weichen + Gates.
 const maBasis: MaAntworten = {

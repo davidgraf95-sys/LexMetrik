@@ -23,13 +23,20 @@ describe('Varianten-Inventar', () => {
     }
   });
 
-  it('VI-3 Gesamtzahl fixiert (kein stiller Schwund/Aufblähung)', () => {
-    // AV 78 + Auftrag 12 + Werkvertrag 12 + NDA 9 + Konkubinat 9
-    expect(dokumenteGesamt()).toBe(120);
+  it('VI-3 Mietvertrag-Karte: 3 Untertypen, 48 erzeugbare Dokumente', () => {
+    const mv = VERTRAGS_INVENTAR.find((k) => k.karte === 'mietvertrag')!;
+    expect(mv.untertypen.map((u) => u.id)).toEqual(['wohnung', 'geschaeftsraum', 'untermiete']);
+    // 3×6 + 3×6 + 3×4 = 18+18+12
+    expect(dokumenteJeKarte(mv)).toBe(48);
   });
 
-  it('VI-4 Fortschritt ehrlich gegen das 1000-Ziel', () => {
+  it('VI-4 Gesamtzahl fixiert (kein stiller Schwund/Aufblähung)', () => {
+    // AV 78 + Mietvertrag 48 + Auftrag 12 + Werkvertrag 12 + NDA 9 + Konkubinat 9
+    expect(dokumenteGesamt()).toBe(168);
+  });
+
+  it('VI-5 Fortschritt ehrlich gegen das 1000-Ziel', () => {
     expect(ZIEL_DOKUMENTE).toBe(1000);
-    expect(fortschrittProzent()).toBe(12);
+    expect(fortschrittProzent()).toBe(17);
   });
 });
