@@ -51,12 +51,20 @@ export const AV_OFFENE_VERIFIKATIONEN: string[] = [
 
 export type AvProbezeit = 'gesetzlich' | 'wegbedungen' | 'verlaengert';
 export type AvUeberstunden = 'gesetzlich' | 'kompensation' | 'inbegriffen';
+// Untertyp (FAHRPLAN-VERTRAGS-VARIANTEN P1b): regime-treue Variante DESSELBEN
+// Einzelarbeitsvertrags-Regimes (Art. 319 ff. OR). Kader/Manager ergänzt
+// Module (leitende Stellung, Bonus, Freistellung), ändert die zwingenden
+// OR-Regeln NICHT. Die Sonderregimes Lehrvertrag/Handelsreisender/Heimarbeit
+// leben in eigenen Schemas (P1c–e), nicht hier.
+export type AvUntertyp = 'einzel' | 'kader';
 
 export type AvAntworten = {
   // Detailgrad (FAHRPLAN-VERTRAGS-VARIANTEN P1a): einfach blendet die rein
   // deklaratorischen Klauseln aus, experte ergänzt Zusatzmodule. Default
   // 'standard' = byte-identischer Bestand (Golden-Invariante §6).
   detailgrad: Detailgrad;
+  // Untertyp (P1b): 'einzel' = Standard, 'kader' ergänzt Kader-Module.
+  untertyp: AvUntertyp;
   // Parteien
   arbeitgeberTyp: 'juristisch' | 'natuerlich';
   arbeitgeberName: string;
@@ -127,6 +135,7 @@ export type AvAntworten = {
 
 export const AV_DEFAULTS: AvAntworten = {
   detailgrad: DETAILGRAD_DEFAULT,
+  untertyp: 'einzel',
   arbeitgeberTyp: 'juristisch',
   arbeitgeberName: '', arbeitgeberAdresse: '',
   arbeitnehmerVorname: '', arbeitnehmerName: '', arbeitnehmerAdresse: '',
@@ -343,6 +352,12 @@ export const AV_SCHEMA: VorlageSchema = {
       nummeriert: true,
       begruendung: 'Arbeitsort, Pensum und Wochenarbeitszeit – immer enthalten.',
       norm: 'Art. 9 ArG' },
+    { id: 'A03b_leitende_stellung', ueberschrift: 'Leitende Stellung',
+      text: 'Der/Die Arbeitnehmer/in übt eine höhere leitende Tätigkeit aus und gestaltet die Arbeitszeit im Rahmen der betrieblichen Erfordernisse eigenverantwortlich. Auf das Arbeitsverhältnis sind die Vorschriften des Arbeitsgesetzes über die Arbeits- und Ruhezeiten nicht anwendbar (Art. 3 lit. d ArG). Die zwingenden Bestimmungen des Obligationenrechts – insbesondere zu Lohn, Ferien, Lohnfortzahlung und Kündigungsschutz – bleiben uneingeschränkt anwendbar.',
+      includeIf: { feld: 'untertyp', eq: 'kader' }, nummeriert: true,
+      begruendung: 'Kader: höhere leitende Stellung mit ArG-Ausnahme (Art. 3 lit. d ArG) – offengelegt, dass die zwingenden OR-Schutzregeln unberührt bleiben (§8).',
+      norm: 'Art. 3 ArG',
+      hinweis: 'Die Ausnahme von Art. 3 lit. d ArG erfasst nur die wirklich höhere leitende Tätigkeit; die Abgrenzung ist Gerichtspraxis und im Einzelfall zu prüfen.' },
     { id: 'A04_probezeit_gesetzlich', ueberschrift: 'Probezeit',
       text: 'Es gilt die gesetzliche Probezeit von einem Monat. Während der Probezeit kann das Arbeitsverhältnis beidseits mit einer Frist von sieben Tagen auf jeden Tag gekündigt werden.',
       includeIf: { feld: 'probezeitVariante', eq: 'gesetzlich' }, nummeriert: true,
@@ -380,6 +395,12 @@ export const AV_SCHEMA: VorlageSchema = {
       begruendung: 'Freiwilligkeitsvorbehalt – ohne ihn kann die Gratifikation zum Anspruch erstarken.',
       norm: 'Art. 322d OR',
       hinweis: 'Trotz Vorbehalt kann langjährige vorbehaltlose Ausrichtung einen Anspruch begründen (BGE 129 III 276).' },
+    { id: 'A05c_bonus_kader', ueberschrift: 'Bonus / variable Vergütung',
+      text: 'Zusätzlich zum Festlohn kann der Arbeitgeber einen Bonus ausrichten. Soweit dieser Bonus im Ermessen des Arbeitgebers steht und unter Freiwilligkeitsvorbehalt gewährt wird, besteht auch nach wiederholter Ausrichtung kein Rechtsanspruch (Art. 322d OR). Ein fest zugesagter oder nach im Voraus bestimmten objektiven Kriterien berechenbarer Bonus gilt demgegenüber als Lohnbestandteil und ist bei unterjährigem Austritt anteilsmässig geschuldet.',
+      includeIf: { feld: 'untertyp', eq: 'kader' }, nummeriert: true,
+      begruendung: 'Kader: Abgrenzung Bonus/Gratifikation (Ermessen + Vorbehalt) zum Lohnbestandteil (Art. 322d OR).',
+      norm: 'Art. 322d OR',
+      hinweis: 'Eine über Jahre vorbehaltlos ausgerichtete Gratifikation kann zum Anspruch erstarken; bei sehr hohem Einkommen entfällt das Akzessorietätskriterium (BGE 139 III 155 – zu verifizieren).' },
     { id: 'A06_ueberstunden_gesetzlich', ueberschrift: 'Überstunden',
       text: 'Überstunden, die notwendig sind und dem/der Arbeitnehmer/in zugemutet werden können, sind zu leisten. Sie werden mit Einverständnis des Arbeitnehmers/der Arbeitnehmerin durch Freizeit von gleicher Dauer ausgeglichen oder mit dem Lohn samt einem Zuschlag von 25 % vergütet.',
       includeIf: { feld: 'ueberstunden', eq: 'gesetzlich' }, nummeriert: true,
@@ -459,6 +480,12 @@ export const AV_SCHEMA: VorlageSchema = {
       includeIf: { feld: 'kuendigungZeigen', eq: 'befristet' }, nummeriert: true,
       begruendung: 'Befristung: Ende ohne Kündigung; stillschweigende Fortsetzung → unbefristet.',
       norm: 'Art. 334 OR' },
+    { id: 'A12c_freistellung_kader', ueberschrift: 'Freistellung',
+      text: 'Nach einer Kündigung ist der Arbeitgeber berechtigt, den/die Arbeitnehmer/in unter Fortzahlung des Lohnes ganz oder teilweise von der Arbeitspflicht freizustellen. Was der/die Arbeitnehmer/in während der Freistellung infolge Wegfalls der Arbeitsleistung erspart oder durch anderweitige Arbeit erwirbt oder zu erwerben absichtlich unterlässt, wird angerechnet (Art. 324 Abs. 2 OR). Noch nicht bezogene Ferienguthaben werden, soweit die Dauer der Freistellung dies zulässt, während der Freistellung bezogen.',
+      includeIf: { and: [{ feld: 'untertyp', eq: 'kader' }, NUR_EXPERTE] }, nummeriert: true,
+      begruendung: 'Kader (experte): Freistellungsrecht mit Anrechnung nach Art. 324 Abs. 2 OR und Ferienbezug während der Freistellung.',
+      norm: 'Art. 324 OR',
+      hinweis: 'Ferien gelten nur als bezogen, soweit die Freistellungsdauer den Ferienanspruch hinreichend übersteigt (BGE 128 III 271 – zu verifizieren).' },
     { id: 'A13_konkurrenzverbot', ueberschrift: 'Konkurrenzverbot',
       text: 'Der/Die Arbeitnehmer/in verpflichtet sich, nach Beendigung des Arbeitsverhältnisses während {{kvDauerText}} im folgenden örtlichen Geltungsbereich: {{kvOrt}}, jede den Arbeitgeber konkurrenzierende Tätigkeit im folgenden Bereich zu unterlassen: {{kvGegenstand}}.{{kvStrafeSatz}}{{kvRealSatz}}{{kvKarenzSatz}} Das Verbot fällt dahin, wenn der Arbeitgeber nachweislich kein erhebliches Interesse mehr an seiner Aufrechterhaltung hat, sowie in den Fällen von Art. 340c Abs. 2 OR.',
       includeIf: { feld: 'konkurrenzverbot', eq: true }, nummeriert: true,

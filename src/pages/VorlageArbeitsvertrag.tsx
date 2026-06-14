@@ -460,7 +460,16 @@ export function VorlageArbeitsvertrag() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
-      kopfSchalter={<VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />}
+      kopfSchalter={<VariantenKopf
+        untertypLabel="Vertragstyp"
+        untertypOptionen={[
+          { id: 'einzel', label: 'Einzelarbeitsvertrag', sub: 'Standard (Art. 319 ff. OR)' },
+          { id: 'kader', label: 'Kader / Manager', sub: 'leitende Stellung, Bonus' },
+        ] as const}
+        untertyp={a.untertyp}
+        onUntertyp={(v) => set('untertyp', v)}
+        detailgrad={a.detailgrad}
+        onDetailgrad={(v) => set('detailgrad', v)} />}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_AV, dateiName: 'Arbeitsvertrag-Entwurf.pdf' },

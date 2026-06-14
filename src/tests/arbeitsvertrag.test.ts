@@ -280,3 +280,35 @@ describe('Arbeitsvertrag – Detailgrad (P1a Vertrags-Varianten)', () => {
     }
   });
 });
+
+describe('Arbeitsvertrag – Untertyp Kader (P1b Vertrags-Varianten)', () => {
+  it('AT-28 einzel (Default) enthält keine Kader-Module (golden-neutral)', () => {
+    const l = ids(basis());
+    expect(l).not.toContain('A03b_leitende_stellung');
+    expect(l).not.toContain('A05c_bonus_kader');
+    expect(l).not.toContain('A12c_freistellung_kader');
+  });
+
+  it('AT-29 kader ergänzt leitende Stellung (3 lit. d ArG) und Bonus (322d); OR-Schutz offengelegt', () => {
+    const l = ids(basis({ untertyp: 'kader' }));
+    expect(l).toContain('A03b_leitende_stellung');
+    expect(l).toContain('A05c_bonus_kader');
+    const t = texte(basis({ untertyp: 'kader' }));
+    expect(t).toMatch(/Art\. 3 lit\. d ArG/);
+    expect(t).toMatch(/zwingenden Bestimmungen des Obligationenrechts/);
+    expect(t).toMatch(/Art\. 322d OR/);
+  });
+
+  it('AT-30 Freistellung nur bei kader UND experte (Art. 324 Abs. 2 OR)', () => {
+    expect(ids(basis({ untertyp: 'kader' }))).not.toContain('A12c_freistellung_kader');
+    expect(ids(basis({ untertyp: 'einzel', detailgrad: 'experte' }))).not.toContain('A12c_freistellung_kader');
+    expect(ids(basis({ untertyp: 'kader', detailgrad: 'experte' }))).toContain('A12c_freistellung_kader');
+    expect(texte(basis({ untertyp: 'kader', detailgrad: 'experte' }))).toMatch(/Art\. 324 Abs\. 2 OR/);
+  });
+
+  it('AT-31 kader ist additiv: alle einzel-Bausteine bleiben enthalten', () => {
+    const einzel = ids(basis());
+    const kader = ids(basis({ untertyp: 'kader' }));
+    for (const id of einzel) expect(kader, id).toContain(id);
+  });
+});

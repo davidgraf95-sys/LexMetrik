@@ -203,6 +203,11 @@ f('vorl:av-kv', () => avZusammenstellen({ ...avBasis, konkurrenzverbot: true, kv
 // Gerichtsstand (34 f. ZPO).
 f('vorl:av-einfach', () => avZusammenstellen({ ...avBasis, detailgrad: 'einfach' }));
 f('vorl:av-experte', () => avZusammenstellen({ ...avBasis, detailgrad: 'experte' }));
+// Untertyp Kader/Manager (P1b): gleiches 319-ff-Regime, additiv — leitende
+// Stellung (3 lit. d ArG), Bonus (322d), Freistellung (324 II, nur experte).
+// einzel bleibt byte-identisch (vorl:av oben).
+f('vorl:av-kader', () => avZusammenstellen({ ...avBasis, untertyp: 'kader' }));
+f('vorl:av-kader-experte', () => avZusammenstellen({ ...avBasis, untertyp: 'kader', detailgrad: 'experte' }));
 const mvBasis = {
   ...MV_DEFAULTS, vermieterName: 'V', vermieterAdresse: 'X 1', mieterName: 'M', mieterAdresse: 'Y 2',
   objektBeschrieb: '3.5-Zi', objektAdresse: 'Z 3', beginn: '2026-10-01', mietzinsNettoCHF: '2000',
