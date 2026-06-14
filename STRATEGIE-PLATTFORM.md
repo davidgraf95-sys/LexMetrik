@@ -14,6 +14,27 @@ in `HANDLUNGSPLAN.md`.
 
 ---
 
+## Direktive David (14.6.2026): Ausbau-Phase vor den Kanzleigesprächen
+
+**Übersteuert die Tagespriorität bis zu den ersten Kanzleigesprächen (G1, erst in
+einigen Monaten).** Bis dahin gilt NICHT Nutzer-Validierung als Maßstab, sondern
+**maximaler Produktausbau zu einem imposanten Produkt mit Burggraben** — kein
+simples Werkzeug, das ohnehin schon existiert. Jeder Bau-Entscheid wird an drei
+Maßstäben gemessen: **(1) Praxistauglichkeit · (2) Skalierbarkeit der
+Bau-Architektur · (3) fachliche Tiefe** (Differenzierung durch Tiefe/Abdeckung,
+nicht Breite an Trivialem).
+
+Burggraben-Priorität = die unter §0 genannten verteidigbaren Schichten:
+**Datenassets** (26-Kantone, Behörden-Registries, **Tarif-Staffeln**) +
+**Durchgängigkeit/Verknüpfung** der Werkzeuge + **Verifikations-Prozess**.
+
+**Bewusst zurückgestellt:** die Abnahme-Welle / `geprüft`-Hebungen / Validierung
+sind bis G1 NICHT die Priorität und werden nicht proaktiv vorangetrieben. Es wird
+weiter auf `entwurf`-Niveau gebaut (§8-Ehrlichkeit bleibt). Markt-Themen
+(Hosting/Zahlung/Login) bleiben draußen.
+
+---
+
 ## 0 · Kernbefunde (das Fundament der Priorisierung)
 
 1. **Der Moat ist nicht der Code.** Engine-Logik ist von einem LLM-Team in Wochen

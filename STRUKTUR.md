@@ -22,6 +22,38 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 14.6.2026 — Ausbau-Direktive + Ultra-Fahrplan PRODUKTAUSBAU & BURGGRABEN
+
+**Neue aktive Direktive David (14.6.2026):** Bis zu den ersten Kanzleigesprächen
+(Monate weg) ist das Ziel maximaler Produktausbau zu einem *imposanten Produkt
+mit Burggraben* — Maßstäbe Praxistauglichkeit · Skalierbarkeit · fachliche Tiefe.
+**Abnahme-Welle/Validierung bewusst zurückgestellt** (nicht mehr proaktiv
+treiben). Verankert: `STRATEGIE-PLATTFORM.md` (Kopf-Block) + Memory
+`lexmetrik-ausbau-direktive`.
+
+**Neuer Fahrplan `FAHRPLAN-PRODUKTAUSBAU-BURGGRABEN.md`** (Ultra-Workflow, 16
+Agenten: 5 Bestandsleser → 4 Säulen-Designs inkl. 3-Wege-Panel für die
+Fall-Kontext-Säule → 3 adversariale Kritiker [Solo-Machbarkeit · CLAUDE.md-Treue
+§1–§6 · Moat/Imposanz] → Synthese). Kern: **P0** Schema-Registry + Drift-Guards
+(Bau-Hygiene, §6-verhaltensneutral) · **P1 Hauptmoat** Prozesskostenrechner
+26/26 (deterministische Tarif-Staffeln statt Prosa; Verfallsregister VOR
+30.6.2026 wegen SG GKV-Ablauf) · **P2** schlankes Fall-Kontext-Rückgrat
+(URL-Transport, kein Cockpit) · **P3** fachliche Spitze (Zustellfiktion +
+kant. Gerichtsferien + Feiertags-Verifikation) · **P4** opportunistisch.
+
+**Umsetzung begonnen (14.6.2026): P0/C1 GEBAUT (ungepusht).**
+`src/lib/vorlagen/registry.ts` = SSOT über die Menge aller 28 gebauten Vorlagen
+(25 Einzel-Schemas + 3 Dokumentmappen AG/GmbH/KE); referenziert die echten
+Modul-Exporte (Schema-Objekt, `zusammenstellen`/Mappe-Builder, `DEFAULTS`,
+optionale Gate-Prüfung), deklariert nichts neu (§5/§1). Drift-Guard
+`src/tests/vorlagenRegistry.test.ts`: Bijektion Registry↔Katalog-`schemaId`,
+`schema.id === schemaId`, Karte+Route je schemaId, Identitäts-Guard gegen die
+`kv`-Namenskollision (klageVereinfacht vs. kuendigungAllgemein). §6: Gate voll
+grün, golden byte-gleich (verhaltensneutral; Registry wird von Golden/Engines
+nicht importiert). Test-/Skript-Modul (nicht aus UI importieren — Bundle).
+OFFEN: C1b (golden-outputs aus Registry — niedriger Wert, zurückgestellt) · C4
+(Drift-Guard erweitern) · dann P1 Hauptmoat. Push/Deploy nur auf frisches Ja.
+
 ## Session 13.6.2026 (Abend) — FUNDAMENT-UMBAU Phasen 0/1a/4 + Bug-Check (Auftrag David «mache fertig … nochmals bug check»)
 
 **Architektur-Umbau nach `FAHRPLAN-FUNDAMENT-UMBAU.md` (abgenommen), je Gate
