@@ -17,8 +17,9 @@ import { SCHLICHTUNG } from '../data/tarif/schlichtung';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 import { KANTONE, MWST_NORMALSATZ_PROZENT, type KantonCode, type KantonalerTarif } from '../data/tarif/typen';
 import {
-  BGER_GERICHTSKOSTEN, BGER_GERICHTSKOSTEN_REDUZIERT, BGER_PARTEIENTSCHAEDIGUNG, type BgerTarif,
+  BGER_GERICHTSKOSTEN, BGER_GERICHTSKOSTEN_REDUZIERT, BGER_GERICHTSKOSTEN_OHNE_VERMOEGEN, BGER_PARTEIENTSCHAEDIGUNG, type BgerTarif,
 } from '../data/tarif/bundesgericht';
+import { GERICHTSKOSTEN_NV, PARTEIENTSCHAEDIGUNG_NV, SCHLICHTUNG_NV } from '../data/tarif/nicht-vermoegensrechtlich';
 
 export type { KantonCode } from '../data/tarif/typen';
 export { KANTONE } from '../data/tarif/typen';
@@ -81,6 +82,9 @@ export interface ProzesskostenEingabe {
   instanz?: Instanz;
   /** Default 'ordentlich' (Modifikator auf den Basistarif). */
   verfahren?: Verfahrensart;
+  /** true = nicht vermögensrechtliche Streitigkeit (kein Streitwert): eigener
+   *  kantonaler Gebührenrahmen, Festsetzung nach Bedeutung/Aufwand (Ermessen). */
+  nichtVermoegensrechtlich?: boolean;
 }
 
 /** Herkunfts-/Anzeige-Metadaten eines Tarifs (ohne die Regel selbst). */
@@ -132,8 +136,11 @@ interface KostenlosBefund { kostenlos: boolean; norm?: string; grund?: string; }
 /** Gerichtskosten-Kostenlosigkeit nach Art. 113 Abs. 2 (Schlichtung) bzw.
  *  Art. 114 ZPO (Entscheidverfahren). WICHTIG: Miete/Pacht ist NUR in der
  *  Schlichtung kostenfrei (Art. 113 II lit. c), NICHT im Entscheidverfahren. */
-function gerichtskostenKostenlos(phase: Verfahrensphase, materie: Materie, streitwertCHF: number): KostenlosBefund {
-  const arbeitFrei = streitwertCHF <= 30000;
+function gerichtskostenKostenlos(phase: Verfahrensphase, materie: Materie, streitwertCHF: number, nichtVermoegensrechtlich = false): KostenlosBefund {
+  // Die Arbeits-Kostenfreiheit (Art. 113 II lit. d / 114 lit. c) knüpft an einen
+  // Streitwert ≤ 30 000 an — bei einer nicht vermögensrechtlichen Streitigkeit
+  // (kein Streitwert) greift sie nicht automatisch (§8: ehrlich nicht annehmen).
+  const arbeitFrei = !nichtVermoegensrechtlich && streitwertCHF <= 30000;
   if (phase === 'schlichtung') {
     switch (materie) {
       case 'gleichstellung': return { kostenlos: true, norm: 'Art. 113 Abs. 2 lit. a ZPO', grund: 'Gleichstellungsgesetz' };
@@ -171,31 +178,34 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
   // kantonsunabhängig. Kein Art.-113/114-Vorschalter — reduzierter Ansatz nach
   // Art. 65 Abs. 4 BGG (NICHT Mietrecht!), sonst ordentliche BGer-Staffel.
   if (e.instanz === 'bundesgericht') {
-    const reduziert = e.materie === 'gleichstellung' || e.materie === 'behindertengleichstellung'
-      || (e.materie === 'arbeit' && e.streitwertCHF <= 30000);
-    const gkB = reduziert ? BGER_GERICHTSKOSTEN_REDUZIERT : BGER_GERICHTSKOSTEN;
+    const nv = e.nichtVermoegensrechtlich === true;
+    const reduziert = !nv && (e.materie === 'gleichstellung' || e.materie === 'behindertengleichstellung'
+      || (e.materie === 'arbeit' && e.streitwertCHF <= 30000));
+    const gkB = nv ? BGER_GERICHTSKOSTEN_OHNE_VERMOEGEN : reduziert ? BGER_GERICHTSKOSTEN_REDUZIERT : BGER_GERICHTSKOSTEN;
     return {
       kanton: e.kanton, streitwertCHF: e.streitwertCHF, phase: 'entscheid', materie: e.materie,
       gerichtskosten: { kostenlos: false, ergebnis: auswertenTarif(gkB.regel, e.streitwertCHF), quelle: bgerQuelle(gkB) },
       parteientschaedigung: { kostenlos: false, ergebnis: auswertenTarif(BGER_PARTEIENTSCHAEDIGUNG.regel, e.streitwertCHF), quelle: bgerQuelle(BGER_PARTEIENTSCHAEDIGUNG) },
       hinweise: [
         'Beschwerde ans Bundesgericht (Art. 65/68 BGG); Tarife bundesrechtlich, kantonsunabhängig.',
-        reduziert ? 'Reduzierter Ansatz nach Art. 65 Abs. 4 BGG (streitwertunabhängig).' : 'Gerichtsgebühr nach Streitwert (Art. 65 Abs. 3 lit. b BGG); Überschreitung bis zum Doppelten möglich (Abs. 5).',
+        nv ? 'Streitigkeit ohne Vermögensinteresse: Gerichtsgebühr nach Art. 65 Abs. 3 lit. a BGG (CHF 200–5000), streitwertunabhängig; die Parteientschädigung setzt das Gericht nach Ermessen fest.'
+          : reduziert ? 'Reduzierter Ansatz nach Art. 65 Abs. 4 BGG (streitwertunabhängig).' : 'Gerichtsgebühr nach Streitwert (Art. 65 Abs. 3 lit. b BGG); Überschreitung bis zum Doppelten möglich (Abs. 5).',
         'Kostenvorschuss in Höhe der mutmasslichen Gerichtskosten (Art. 62 BGG); unentgeltliche Rechtspflege Art. 64 BGG.',
       ],
     };
   }
 
-  const gkTarif = GERICHTSKOSTEN[e.kanton];
-  const schlichtungTarif = SCHLICHTUNG[e.kanton];
-  const peTarif = PARTEIENTSCHAEDIGUNG[e.kanton];
+  const nv = e.nichtVermoegensrechtlich === true;
+  const gkTarif = nv ? GERICHTSKOSTEN_NV[e.kanton] : GERICHTSKOSTEN[e.kanton];
+  const schlichtungTarif = nv ? SCHLICHTUNG_NV[e.kanton] : SCHLICHTUNG[e.kanton];
+  const peTarif = nv ? PARTEIENTSCHAEDIGUNG_NV[e.kanton] : PARTEIENTSCHAEDIGUNG[e.kanton];
 
   // Gerichtskosten (Art. 95 II): im Entscheidverfahren die Entscheidgebühr
   // (lit. b) nach kantonalem Tarif; im Schlichtungsverfahren die Pauschale für
   // das Schlichtungsverfahren (lit. a) nach dem EIGENEN kantonalen Schlichtungs-
   // tarif (data/tarif/schlichtung.ts — regime-treu getrennt vom Entscheidgebühr-
   // Tarif, §4). Vorbehältlich Kostenlosigkeit (Art. 113/114 ZPO).
-  const gkFrei = gerichtskostenKostenlos(e.phase, e.materie, e.streitwertCHF);
+  const gkFrei = gerichtskostenKostenlos(e.phase, e.materie, e.streitwertCHF, nv);
   const aktiverGkTarif = e.phase === 'schlichtung' ? schlichtungTarif : gkTarif;
   let gerichtskosten: PostenErgebnis = gkFrei.kostenlos
     ? { kostenlos: true, kostenlosGrund: `${gkFrei.norm}: ${gkFrei.grund}`, quelle: quelle(aktiverGkTarif) }
@@ -214,6 +224,10 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
   ];
   if (e.phase === 'schlichtung') {
     hinweise.push('Im Schlichtungsverfahren gilt der kantonale Schlichtungstarif (Pauschale, Art. 95 II lit. a ZPO) — ein eigener, vom Entscheidgebühr-Tarif getrennter Ansatz. Fällt die Schlichtungsbehörde einen Entscheid oder unterbreitet sie einen Urteilsvorschlag (Art. 210/212 ZPO), kann er sich erhöhen (siehe Tarif-Hinweis).');
+  }
+  if (nv) {
+    hinweise.push('Nicht vermögensrechtliche Streitigkeit: kein Streitwert — die Gebühr wird im gesetzlichen Rahmen nach Bedeutung der Sache, Umfang/Schwierigkeit und Zeitaufwand festgesetzt (Ermessen, daher Spanne).');
+    if (e.materie === 'arbeit') hinweise.push('Hinweis Arbeitsrecht: Die Kostenfreiheit nach Art. 113 II lit. d / 114 lit. c ZPO knüpft an einen Streitwert ≤ CHF 30 000 an und greift bei einer nicht vermögensrechtlichen Streitigkeit nicht ohne Weiteres.');
   }
 
   // Verfahrensart-/Instanz-Modifikator (Entscheidphase, kantonale Instanz):
@@ -462,6 +476,7 @@ const STUFEN_REIHENFOLGE: { schluessel: keyof InstanzenzugWahl; label: string; p
  *  ausgewiesen. `verfahren` gilt für die kantonalen Tatsacheninstanzen. */
 export function berechneInstanzenzug(
   kanton: KantonCode, streitwertCHF: number, materie: Materie, verfahren: Verfahrensart, wahl: InstanzenzugWahl,
+  nichtVermoegensrechtlich = false,
 ): Instanzenzug {
   pruefeStreitwert(streitwertCHF);
   const stufen: InstanzStufe[] = STUFEN_REIHENFOLGE
@@ -469,7 +484,7 @@ export function berechneInstanzenzug(
     .map((s) => {
       // Verfahrensart wirkt nur auf den kantonalen Tatsachen-/Rechtsmittelzweig.
       const vf: Verfahrensart = (s.instanz === 'bundesgericht' || s.phase === 'schlichtung') ? 'ordentlich' : verfahren;
-      const ergebnis = berechneProzesskosten({ kanton, streitwertCHF, phase: s.phase, materie, instanz: s.instanz, verfahren: vf });
+      const ergebnis = berechneProzesskosten({ kanton, streitwertCHF, phase: s.phase, materie, instanz: s.instanz, verfahren: vf, nichtVermoegensrechtlich });
       return { schluessel: s.schluessel, label: s.label, ergebnis, gk: postenSpanne(ergebnis.gerichtskosten), pe: postenSpanne(ergebnis.parteientschaedigung) };
     });
 
@@ -586,9 +601,9 @@ export function prozesskostenBericht(e: ProzesskostenErgebnis, zusatz: BerichtZu
  *  (Auftrag David — Vergleichstabelle «was kostet es anderswo»). */
 export function vergleichAlleKantone(
   streitwertCHF: number, phase: Verfahrensphase, materie: Materie,
-  instanz?: Instanz, verfahren?: Verfahrensart,
+  instanz?: Instanz, verfahren?: Verfahrensart, nichtVermoegensrechtlich?: boolean,
 ): ProzesskostenErgebnis[] {
-  return KANTONE.map((kanton) => berechneProzesskosten({ kanton, streitwertCHF, phase, materie, instanz, verfahren }));
+  return KANTONE.map((kanton) => berechneProzesskosten({ kanton, streitwertCHF, phase, materie, instanz, verfahren, nichtVermoegensrechtlich }));
 }
 
 /** Anzeige-Hilfe: ein PostenErgebnis als kurzer Text (Betrag, Spanne oder

@@ -275,6 +275,49 @@ describe('Schlichtungstarif (Art. 95 II lit. a ZPO — eigene kantonale Datensch
   });
 });
 
+describe('Nicht vermögensrechtliche Streitigkeiten (eigener Tarif, kein Streitwert)', () => {
+  it('ZH: eigener n.-verm.-Gerichtskostenrahmen (§ 5, 300–13 000), streitwertunabhängig', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 0, phase: 'entscheid', materie: 'allgemein', nichtVermoegensrechtlich: true });
+    const e = r.gerichtskosten.ergebnis;
+    expect(e?.deterministisch).toBe(false);
+    if (e && !e.deterministisch) { expect(e.vonChf).toBe(300); expect(e.bisChf).toBe(13000); }
+    expect(r.gerichtskosten.quelle.artikel).toBe('§ 5');
+    // Streitwert irrelevant: gleicher Rahmen bei beliebigem Streitwert-Argument
+    const r2 = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 999999, phase: 'entscheid', materie: 'allgemein', nichtVermoegensrechtlich: true });
+    expect(r2.gerichtskosten.ergebnis).toEqual(e);
+    expect(r.hinweise.some((h) => h.includes('Nicht vermögensrechtlich'))).toBe(true);
+  });
+  it('Parteientschädigung im Zeitsystem (z. B. SO) → nicht beziffert (formel_extern)', () => {
+    const r = berechneProzesskosten({ kanton: 'SO', streitwertCHF: 0, phase: 'entscheid', materie: 'allgemein', nichtVermoegensrechtlich: true });
+    expect(r.parteientschaedigung.ergebnis?.deterministisch).toBe(false);
+    expect(postenText(r.parteientschaedigung)).toMatch(/Aufwand/);
+  });
+  it('Bundesgericht n. verm.: Art. 65 III lit. a (200–5000)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 0, phase: 'entscheid', materie: 'allgemein', instanz: 'bundesgericht', nichtVermoegensrechtlich: true });
+    const e = r.gerichtskosten.ergebnis;
+    if (e && !e.deterministisch) { expect(e.vonChf).toBe(200); expect(e.bisChf).toBe(5000); }
+    expect(r.gerichtskosten.quelle.artikel).toContain('Art. 65 Abs. 3 lit. a');
+  });
+  it('Arbeit n. verm.: NICHT automatisch kostenlos (Befreiung ist streitwertbedingt)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 0, phase: 'entscheid', materie: 'arbeit', nichtVermoegensrechtlich: true });
+    expect(r.gerichtskosten.kostenlos).toBe(false);
+    expect(r.hinweise.some((h) => h.includes('Art. 113 II lit. d'))).toBe(true);
+  });
+  it('Gewaltschutz bleibt kostenlos (materie-basiert, streitwertunabhängig)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 0, phase: 'entscheid', materie: 'gewaltschutz', nichtVermoegensrechtlich: true });
+    expect(r.gerichtskosten.kostenlos).toBe(true);
+  });
+  it('alle 26 Kantone liefern einen anzeigbaren n.-verm.-Posten ohne Crash', () => {
+    for (const k of KANTONE) {
+      for (const phase of ['schlichtung', 'entscheid'] as const) {
+        const r = berechneProzesskosten({ kanton: k, streitwertCHF: 0, phase, materie: 'allgemein', nichtVermoegensrechtlich: true });
+        expect(postenText(r.gerichtskosten).length, `${k}/${phase}`).toBeGreaterThan(0);
+        expect(postenText(r.parteientschaedigung).length).toBeGreaterThan(0);
+      }
+    }
+  });
+});
+
 describe('Erschöpfender Konstellations-Sweep (I6/I7/I8 — wirft nie, Invarianten halten)', () => {
   const SW = [0, 1000, 5000, 30000, 50000, 100000, 500000, 2_000_000];
   const PHASEN = ['schlichtung', 'entscheid'] as const;
@@ -285,8 +328,9 @@ describe('Erschöpfender Konstellations-Sweep (I6/I7/I8 — wirft nie, Invariant
   it('berechneProzesskosten + I6/I8 werfen über die gesamte Matrix nicht und liefern konsistente Werte', () => {
     let n = 0;
     for (const kanton of KANTONE) for (const sw of SW) for (const phase of PHASEN)
-      for (const materie of MATERIEN_T) for (const instanz of INSTANZEN_T) for (const verfahren of VERFAHREN_T) {
-        const e = berechneProzesskosten({ kanton, streitwertCHF: sw, phase, materie, instanz, verfahren });
+      for (const materie of MATERIEN_T) for (const instanz of INSTANZEN_T) for (const verfahren of VERFAHREN_T)
+      for (const nichtVermoegensrechtlich of [false, true]) {
+        const e = berechneProzesskosten({ kanton, streitwertCHF: sw, phase, materie, instanz, verfahren, nichtVermoegensrechtlich });
         // Kostenvorschuss: nie negativ, ½-Fall ≤ vollem Betrag der GK-Spanne.
         const v = berechneKostenvorschuss(e.gerichtskosten, e.phase, instanz, verfahren);
         if (v.spanne) {

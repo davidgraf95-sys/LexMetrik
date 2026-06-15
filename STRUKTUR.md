@@ -38,9 +38,16 @@ Dossier `bibliothek/kosten/schlichtungsgebuehren-kantone.md`, 5.6.2026) — impl
   (15+ Konstellationen handnachgerechnet). Erschöpfender Konstellations-Sweep als
   bleibender Test (>5000 Kombinationen, kein Crash, Invarianten halten). Gate voll
   grün (golden byte-gleich, lint, check:zitate). 45 Tests.
-- **OFFEN (Anwalts-Lückenanalyse, in Arbeit):** nicht vermögensrechtliche
-  Streitigkeiten (eigener Tarif-Rahmen, kein Streitwert) · Sicherheit Art. 99 ZPO ·
-  Handelsgericht als eigene Instanz · Push/Deploy auf Davids Ja. Nichts `geprüft`.
+- **NV-Modus (nicht vermögensrechtliche Streitigkeiten) GEBAUT:** neue Datenschicht
+  `src/data/tarif/nicht-vermoegensrechtlich.ts` (GERICHTSKOSTEN_NV/PARTEIENTSCHAEDIGUNG_NV/
+  SCHLICHTUNG_NV, alle 26 Kt aus den Dossiers); Engine-Schalter `nichtVermoegensrechtlich`
+  → eigener Gebührenrahmen ohne Streitwert, BGer Art. 65 III lit. a (200–5000), Arbeit
+  nicht mehr auto-kostenlos (streitwertbedingt, Hinweis); Zeitsystem-Kantone bei der
+  Parteientschädigung ehrlich `formel_extern` («nach Aufwand»). UI: Schalter blendet
+  Streitwertfeld aus. GK-NV durchgängig `recherche` (Quelldossier einfach belegt →
+  **Doppelcheck-Agent läuft**).
+- **OFFEN:** Sicherheit Art. 99 ZPO (cautio) · Handelsgericht als eigene Instanz ·
+  Push/Deploy auf Davids Ja. Nichts `geprüft`.
 
 ## Session 15.6.2026 — Prozesskosten-Cockpit I6 (Vollständigkeit der Kostenposten) GEBAUT (ungepusht)
 
