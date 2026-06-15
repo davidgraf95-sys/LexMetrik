@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { Checkbox, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
 import { Link } from 'react-router-dom';
 import { bgerRechtswegLink } from '../../lib/rechnerPermalinks';
 import { ErgebnisBlock } from '../ErgebnisBlock';
@@ -170,26 +170,11 @@ export function StrafZustaendigkeitTeil() {
           </Field>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={mehrereTaten} onChange={(e) => setMehrereTaten(e.target.checked)} />
-            Mehrere Taten an verschiedenen Orten (Art. 34)
-          </label>
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={antragsdelikt} onChange={(e) => setAntragsdelikt(e.target.checked)} />
-            Antragsdelikt (z. B. einfache Körperverletzung, Hausfriedensbruch)
-          </label>
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={uebertretung} onChange={(e) => setUebertretung(e.target.checked)} />
-            Übertretung (Busse)
-          </label>
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={bund} onChange={(e) => setBund(e.target.checked)} />
-            Möglicher Bund-Katalogfall (Art. 23/24)
-          </label>
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={minderjaehrig} onChange={(e) => setMinderjaehrig(e.target.checked)} />
-            Beschuldigte Person ist minderjährig (Art. 10 JStPO)
-          </label>
+          <Checkbox checked={mehrereTaten} onChange={setMehrereTaten} label="Mehrere Taten an verschiedenen Orten (Art. 34)" />
+          <Checkbox checked={antragsdelikt} onChange={setAntragsdelikt} label="Antragsdelikt (z. B. einfache Körperverletzung, Hausfriedensbruch)" />
+          <Checkbox checked={uebertretung} onChange={setUebertretung} label="Übertretung (Busse)" />
+          <Checkbox checked={bund} onChange={setBund} label="Möglicher Bund-Katalogfall (Art. 23/24)" />
+          <Checkbox checked={minderjaehrig} onChange={setMinderjaehrig} label="Beschuldigte Person ist minderjährig (Art. 10 JStPO)" />
         </div>
       </div>
 
@@ -468,19 +453,10 @@ function StrafRechtsmittelTeil() {
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           {entscheidTyp === 'urteil_erstinstanz' && (
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={uebertretung} onChange={(e) => setUebertretung(e.target.checked)} />
-              Gegenstand waren ausschliesslich Übertretungen (Art. 398 Abs. 4)
-            </label>
+            <Checkbox checked={uebertretung} onChange={setUebertretung} label="Gegenstand waren ausschliesslich Übertretungen (Art. 398 Abs. 4)" />
           )}
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={nurZugunsten} onChange={(e) => setNurZugunsten(e.target.checked)} />
-            Rechtsmittel nur ZUGUNSTEN der beschuldigten Person (Art. 391 Abs. 2)
-          </label>
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={bund} onChange={(e) => setBund(e.target.checked)} />
-            Bundesgerichtsbarkeit (Verfahren der Bundesanwaltschaft)
-          </label>
+          <Checkbox checked={nurZugunsten} onChange={setNurZugunsten} label="Rechtsmittel nur ZUGUNSTEN der beschuldigten Person (Art. 391 Abs. 2)" />
+          <Checkbox checked={bund} onChange={setBund} label="Bundesgerichtsbarkeit (Verfahren der Bundesanwaltschaft)" />
         </div>
         {!bund && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

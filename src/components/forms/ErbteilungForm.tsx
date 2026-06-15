@@ -1,4 +1,4 @@
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
@@ -191,15 +191,9 @@ export function ErbteilungForm() {
 
       {zivilstand !== 'ledig' && (
         <div className="space-y-2">
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={scheidung} onChange={(e) => setScheidung(e.target.checked)} />
-            Scheidungs-/Auflösungsverfahren beim Tod hängig
-          </label>
+          <Checkbox checked={scheidung} onChange={setScheidung} label="Scheidungs-/Auflösungsverfahren beim Tod hängig" />
           {scheidung && (
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
-              <input type="checkbox" checked={scheidung472} onChange={(e) => setScheidung472(e.target.checked)} />
-              Voraussetzungen von Art. 472 ZGB erfüllt (gemeinsames Begehren oder ≥ 2 Jahre getrennt) → Pflichtteilsverlust
-            </label>
+            <Checkbox checked={scheidung472} onChange={setScheidung472} label="Voraussetzungen von Art. 472 ZGB erfüllt (gemeinsames Begehren oder ≥ 2 Jahre getrennt) → Pflichtteilsverlust" className="pl-6" />
           )}
         </div>
       )}
@@ -250,10 +244,7 @@ export function ErbteilungForm() {
             </Field>
           </div>
           {vater === 'keine_angabe' && mutter === 'keine_angabe' && zivilstand === 'ledig' && (
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={dritteParentel} onChange={(e) => setDritteParentel(e.target.checked)} />
-              3. Parentel vorhanden (Grosseltern oder deren Nachkommen, Art. 459 ZGB)
-            </label>
+            <Checkbox checked={dritteParentel} onChange={setDritteParentel} label="3. Parentel vorhanden (Grosseltern oder deren Nachkommen, Art. 459 ZGB)" />
           )}
         </div>
       )}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { KANTONE } from '../../lib/kantone';
-import { EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { Checkbox, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import type { Kanton } from '../../types/legal';
 import { berechneErbFrist, ERB_FRISTEN, type ErbFristKey } from '../../lib/erbFristen';
@@ -100,10 +100,7 @@ export function ErbFristenForm() {
       </div>
 
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" checked={verschieben} onChange={(e) => setVerschieben(e.target.checked)} />
-          Fristende auf Sa/So/Feiertag → nächster Werktag (Art. 78 OR analog)
-        </label>
+        <Checkbox checked={verschieben} onChange={setVerschieben} label="Fristende auf Sa/So/Feiertag → nächster Werktag (Art. 78 OR analog)" />
         {verschieben && (
           <label className="flex items-center gap-2 text-body-s text-ink-700">
             Kanton (Behördensitz)

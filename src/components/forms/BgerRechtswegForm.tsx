@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { Kanton } from '../../types/legal';
 import { KANTONE } from '../../lib/kantone';
-import { Field, inputCls, EckdatenKachel } from '../vorlagen/ui';
+import { Checkbox, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -199,10 +199,7 @@ export function BgerRechtswegForm() {
 
       {weg === 'zivil' && (
         <div className="space-y-3">
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={vermoegensrechtlich} onChange={(e) => setVermoegensrechtlich(e.target.checked)} />
-            vermögensrechtliche Angelegenheit (Streitwertgrenze Art. 74 Abs. 1 BGG)
-          </label>
+          <Checkbox checked={vermoegensrechtlich} onChange={setVermoegensrechtlich} label="vermögensrechtliche Angelegenheit (Streitwertgrenze Art. 74 Abs. 1 BGG)" />
           {vermoegensrechtlich && !schiedsgericht && (
             <Field label="Streitwert (CHF)" hint="vor der Vorinstanz streitig GEBLIEBENE Begehren (Art. 51 Abs. 1 lit. a BGG) — ohne Zinsen und Kosten">
               <BetragsFeld value={streitwertRoh} onChange={setStreitwertRoh} className={inputCls}
@@ -210,38 +207,17 @@ export function BgerRechtswegForm() {
             </Field>
           )}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={einzigeInstanz} onChange={(e) => setEinzigeInstanz(e.target.checked)} />
-              einzige kantonale Instanz hat entschieden (Art. 5/6/8 ZPO)
-            </label>
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={konkursrichter} onChange={(e) => setKonkursrichter(e.target.checked)} />
-              Entscheid des Konkurs-/Nachlassrichters
-            </label>
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={schiedsgericht} onChange={(e) => setSchiedsgericht(e.target.checked)} />
-              Schiedsentscheid (Art. 77 BGG)
-            </label>
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={vorsorglich} onChange={(e) => setVorsorglich(e.target.checked)} />
-              vorsorgliche Massnahme / aufschiebende Wirkung
-            </label>
+            <Checkbox checked={einzigeInstanz} onChange={setEinzigeInstanz} label="einzige kantonale Instanz hat entschieden (Art. 5/6/8 ZPO)" />
+            <Checkbox checked={konkursrichter} onChange={setKonkursrichter} label="Entscheid des Konkurs-/Nachlassrichters" />
+            <Checkbox checked={schiedsgericht} onChange={setSchiedsgericht} label="Schiedsentscheid (Art. 77 BGG)" />
+            <Checkbox checked={vorsorglich} onChange={setVorsorglich} label="vorsorgliche Massnahme / aufschiebende Wirkung" />
             {gebiet === 'immaterialgueter' && (
-              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" checked={markenwiderspruch} onChange={(e) => setMarkenwiderspruch(e.target.checked)} />
-                Entscheid im Markenwiderspruchsverfahren (Art. 73 BGG)
-              </label>
+              <Checkbox checked={markenwiderspruch} onChange={setMarkenwiderspruch} label="Entscheid im Markenwiderspruchsverfahren (Art. 73 BGG)" />
             )}
             {gebiet === 'familienrecht' && (
               <>
-                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={eheschutz} onChange={(e) => setEheschutz(e.target.checked)} />
-                  Eheschutzentscheid
-                </label>
-                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={hkue} onChange={(e) => setHkue(e.target.checked)} />
-                  Kindesrückgabe (HKÜ/ESÜ)
-                </label>
+                <Checkbox checked={eheschutz} onChange={setEheschutz} label="Eheschutzentscheid" />
+                <Checkbox checked={hkue} onChange={setHkue} label="Kindesrückgabe (HKÜ/ESÜ)" />
               </>
             )}
           </div>
@@ -249,17 +225,11 @@ export function BgerRechtswegForm() {
       )}
 
       {weg === 'schkg_aufsicht' && (
-        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" checked={wechsel} onChange={(e) => setWechsel(e.target.checked)} />
-          Wechselbetreibung (5 Tage, kein Stillstand — Art. 100 Abs. 3 lit. a / Art. 46 Abs. 2 lit. b BGG)
-        </label>
+        <Checkbox checked={wechsel} onChange={setWechsel} label="Wechselbetreibung (5 Tage, kein Stillstand — Art. 100 Abs. 3 lit. a / Art. 46 Abs. 2 lit. b BGG)" />
       )}
 
       {(weg === 'straf' || weg === 'verwaltung' || weg === 'schkg_aufsicht') && (
-        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" checked={vorsorglich} onChange={(e) => setVorsorglich(e.target.checked)} />
-          Verfahren betreffend aufschiebende Wirkung / vorsorgliche Massnahmen (inkl. Haftsachen)
-        </label>
+        <Checkbox checked={vorsorglich} onChange={setVorsorglich} label="Verfahren betreffend aufschiebende Wirkung / vorsorgliche Massnahmen (inkl. Haftsachen)" />
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

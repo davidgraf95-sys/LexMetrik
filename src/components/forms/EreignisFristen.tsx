@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Field, NormLink, inputCls } from '../vorlagen/ui';
+import { Checkbox, Field, inputCls, NormLink } from '../vorlagen/ui';
 import { DatumsFeld } from '../DatumsFeld';
 import { AktenzeichenFeld } from '../AktenzeichenFeld';
 import { BetragsFeld } from '../BetragsFeld';
@@ -286,19 +286,10 @@ export function EreignisFristen({ ereignisse, zustellungVorgabe }: {
             <Field label="Weichen">
               <div className="space-y-2">
                 {verfahren === 'summarisch' && (
-                  <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                    <input type="checkbox" checked={familienSummarsache} onChange={(e) => setFamilienSummarsache(e.target.checked)} />
-                    familienrechtliche Summarsache (Art. 271/276/302/305 ZPO — 30 Tage, Art. 314 Abs. 2)
-                  </label>
+                  <Checkbox checked={familienSummarsache} onChange={setFamilienSummarsache} label="familienrechtliche Summarsache (Art. 271/276/302/305 ZPO — 30 Tage, Art. 314 Abs. 2)" />
                 )}
-                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={mietOderArbeit} onChange={(e) => setMietOderArbeit(e.target.checked)} />
-                  arbeits- oder mietrechtlicher Fall (BGer-Grenze CHF 15&#8239;000, Art. 74 Abs. 1 lit. a BGG)
-                </label>
-                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={nurDispositiv} onChange={(e) => setNurDispositiv(e.target.checked)} />
-                  nur das Dispositiv wurde eröffnet (Art. 239 ZPO — zuerst Begründung verlangen)
-                </label>
+                <Checkbox checked={mietOderArbeit} onChange={setMietOderArbeit} label="arbeits- oder mietrechtlicher Fall (BGer-Grenze CHF 15&#8239;000, Art. 74 Abs. 1 lit. a BGG)" />
+                <Checkbox checked={nurDispositiv} onChange={setNurDispositiv} label="nur das Dispositiv wurde eröffnet (Art. 239 ZPO — zuerst Begründung verlangen)" />
               </div>
             </Field>
           </>
