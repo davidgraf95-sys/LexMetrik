@@ -234,6 +234,14 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
     }
   }
 
+  // Ermessenskriterien (Auftrag David): bei Spannen nennen, wonach die Behörde
+  // innerhalb des Rahmens festsetzt. Die genaue Bemessungsnorm je Tarif steht im
+  // quelle.hinweis; hier die kantonsübergreifend einschlägigen Kriterien.
+  const istSpanne = (p: PostenErgebnis) => !p.kostenlos && p.ergebnis !== undefined && !p.ergebnis.deterministisch;
+  if (istSpanne(gerichtskosten) || istSpanne(parteientschaedigung)) {
+    hinweise.push('Innerhalb des Rahmens setzt die Behörde nach Ermessen fest — massgebend sind Bedeutung der Sache, tatsächliche und rechtliche Schwierigkeit/Komplexität, Umfang der Sache und Zeitaufwand (teils wirtschaftliche Verhältnisse der Parteien); die genaue Bemessungsnorm steht beim jeweiligen Tarif.');
+  }
+
   return { kanton: e.kanton, streitwertCHF: e.streitwertCHF, phase: e.phase, materie: e.materie, gerichtskosten, parteientschaedigung, hinweise };
 }
 
