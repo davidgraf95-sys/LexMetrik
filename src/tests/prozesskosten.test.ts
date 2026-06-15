@@ -80,6 +80,27 @@ const spanne = (p: PostenErgebnis): [number | undefined, number | undefined] => 
   return [e.vonChf, e.bisChf];
 };
 
+describe('Verfahrensart-/Instanz-Modifikatoren (Cockpit I2/I3)', () => {
+  it('ZH summarisch: GK ×½–¾, PE ×⅕–⅔ auf den Basistarif', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', verfahren: 'summarisch' });
+    expect(spanne(r.gerichtskosten)).toEqual([2775, 4163]);   // 5550 × [0.5, 0.75]
+    expect(spanne(r.parteientschaedigung)).toEqual([1400, 4667]); // 7000 × [0.2, 0.6667]
+  });
+  it('ZH Rechtsmittel: GK ×0,33–1, PE ×0,2–1', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', instanz: 'rechtsmittel' });
+    expect(spanne(r.gerichtskosten)).toEqual([1832, 5550]);
+    expect(spanne(r.parteientschaedigung)).toEqual([1400, 7000]);
+  });
+  it('ordentlich/erstinstanz: kein Modifikator (unverändert deterministisch)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    expect(r.gerichtskosten.ergebnis?.deterministisch).toBe(true);
+  });
+  it('nicht abschliessend verifizierter Modifikator wird offengelegt (§8)', () => {
+    const r = berechneProzesskosten({ kanton: 'SG', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', verfahren: 'summarisch' });
+    expect(r.hinweise.some((h) => h.includes('nicht abschliessend verifiziert'))).toBe(true);
+  });
+});
+
 describe('Instanz Bundesgericht (Art. 65/68 BGG)', () => {
   it('vermögensrechtlich: BGer-Staffel statt kantonalem Tarif (SW 60 000)', () => {
     const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 60000, phase: 'entscheid', materie: 'allgemein', instanz: 'bundesgericht' });

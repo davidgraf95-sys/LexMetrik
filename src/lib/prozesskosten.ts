@@ -9,7 +9,8 @@
 // Schätzung — Ermessenstarife liefern die Spanne, nie einen erfundenen Punkt.
 // Grundlage/Verifikation: bibliothek/recherche/prozesskosten-zpo-95-96.md.
 
-import { auswertenTarif, type TarifErgebnis } from './tarif/staffel';
+import { auswertenTarif, skaliereErgebnis, type TarifErgebnis } from './tarif/staffel';
+import { MODIFIKATOREN, type Faktor } from '../data/tarif/modifikatoren';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 import { KANTONE, type KantonCode, type KantonalerTarif } from '../data/tarif/typen';
@@ -50,10 +51,24 @@ export const VERFAHRENSPHASEN: { wert: Verfahrensphase; label: string }[] = [
   { wert: 'schlichtung', label: 'Schlichtungsverfahren' },
 ];
 
-/** Instanz. 'erstinstanz' = kantonale erste Instanz (Default, kantonaler Tarif);
- *  'bundesgericht' = Beschwerde ans BGer (bundesrechtlicher Tarif, Art. 65/68 BGG).
- *  Kantonale Rechtsmittelinstanz folgt später (Modifikator-Ausbau). */
-export type Instanz = 'erstinstanz' | 'bundesgericht';
+/** Instanz. 'erstinstanz' = kantonale erste Instanz; 'rechtsmittel' = obere
+ *  kantonale Instanz (Berufung/Beschwerde, Faktor auf den kant. Tarif);
+ *  'bundesgericht' = Beschwerde ans BGer (bundesrechtlicher Tarif, Art. 65/68 BGG). */
+export type Instanz = 'erstinstanz' | 'rechtsmittel' | 'bundesgericht';
+
+/** Verfahrensart als Kosten-Modifikator (nur erste/Rechtsmittelinstanz, nicht BGer). */
+export type Verfahrensart = 'ordentlich' | 'vereinfacht' | 'summarisch';
+
+export const INSTANZEN: { wert: Instanz; label: string }[] = [
+  { wert: 'erstinstanz', label: 'Erste Instanz (kantonal)' },
+  { wert: 'rechtsmittel', label: 'Rechtsmittel (Berufung/Beschwerde)' },
+  { wert: 'bundesgericht', label: 'Bundesgericht' },
+];
+export const VERFAHRENSARTEN: { wert: Verfahrensart; label: string }[] = [
+  { wert: 'ordentlich', label: 'Ordentliches Verfahren' },
+  { wert: 'vereinfacht', label: 'Vereinfachtes Verfahren (Art. 243 ZPO)' },
+  { wert: 'summarisch', label: 'Summarisches Verfahren' },
+];
 
 export interface ProzesskostenEingabe {
   kanton: KantonCode;
@@ -62,6 +77,8 @@ export interface ProzesskostenEingabe {
   materie: Materie;
   /** Default 'erstinstanz' (additiv; bestehende Aufrufe unverändert). */
   instanz?: Instanz;
+  /** Default 'ordentlich' (Modifikator auf den Basistarif). */
+  verfahren?: Verfahrensart;
 }
 
 /** Herkunfts-/Anzeige-Metadaten eines Tarifs (ohne die Regel selbst). */
@@ -176,7 +193,7 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
   // (noch) nicht erhoben ist und daher NICHT mit der Entscheidgebühr beziffert
   // wird (§1/§8; Bug-Check 14.6.2026). Vorbehältlich Kostenlosigkeit (113/114).
   const gkFrei = gerichtskostenKostenlos(e.phase, e.materie, e.streitwertCHF);
-  const gerichtskosten: PostenErgebnis = gkFrei.kostenlos
+  let gerichtskosten: PostenErgebnis = gkFrei.kostenlos
     ? { kostenlos: true, kostenlosGrund: `${gkFrei.norm}: ${gkFrei.grund}`, quelle: quelle(gkTarif) }
     : e.phase === 'schlichtung'
       ? { kostenlos: false, schlichtungspauschale: true, quelle: quelle(gkTarif) }
@@ -184,7 +201,7 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
 
   // Parteientschädigung (Art. 95 III): im Schlichtungsverfahren wird KEINE
   // gesprochen (Art. 113 Abs. 1 ZPO); im Entscheidverfahren nach kant. Tarif.
-  const parteientschaedigung: PostenErgebnis = e.phase === 'schlichtung'
+  let parteientschaedigung: PostenErgebnis = e.phase === 'schlichtung'
     ? { kostenlos: true, kostenlosGrund: 'Art. 113 Abs. 1 ZPO: im Schlichtungsverfahren keine Parteientschädigung', quelle: quelle(peTarif) }
     : { kostenlos: false, ergebnis: auswertenTarif(peTarif.regel, e.streitwertCHF), quelle: quelle(peTarif) };
 
@@ -195,6 +212,26 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
   ];
   if (e.phase === 'schlichtung') {
     hinweise.push('Im Schlichtungsverfahren gilt für die Gerichtskosten die Schlichtungspauschale (Art. 95 II lit. a ZPO) — ein eigener, meist reduzierter kantonaler Tarif (oft ein Bruchteil der Entscheidgebühr); hier nicht beziffert. Der angezeigte kantonale Tarif betrifft die Entscheidgebühr im Gerichtsverfahren.');
+  }
+
+  // Verfahrensart-/Instanz-Modifikator (Entscheidphase, kantonale Instanz):
+  // Faktor-Spanne auf den Basistarif (Rechtsmittel hat Vorrang vor Verfahrensart).
+  if (e.phase === 'entscheid') {
+    const mod = MODIFIKATOREN[e.kanton];
+    let fak: Faktor | null = null; let label = '';
+    if (e.instanz === 'rechtsmittel') { fak = mod.rechtsmittel; label = 'Rechtsmittelinstanz'; }
+    else if (e.verfahren === 'summarisch') { fak = mod.summarisch; label = 'summarisches Verfahren'; }
+    else if (e.verfahren === 'vereinfacht') { fak = mod.vereinfacht; label = 'vereinfachtes Verfahren'; }
+    if (fak && !(fak.gkMin === 1 && fak.gkMax === 1 && fak.peMin === 1 && fak.peMax === 1)) {
+      const caveat = mod.verifiziert === 'recherche' ? ', nicht abschliessend verifiziert' : '';
+      if (!gerichtskosten.kostenlos && gerichtskosten.ergebnis) {
+        gerichtskosten = { ...gerichtskosten, ergebnis: skaliereErgebnis(gerichtskosten.ergebnis, fak.gkMin, fak.gkMax, `${label}: Faktor ${fak.gkMin}–${fak.gkMax} (${mod.artikel}${caveat})`) };
+      }
+      if (!parteientschaedigung.kostenlos && parteientschaedigung.ergebnis) {
+        parteientschaedigung = { ...parteientschaedigung, ergebnis: skaliereErgebnis(parteientschaedigung.ergebnis, fak.peMin, fak.peMax, `${label}: Faktor ${fak.peMin}–${fak.peMax} (${mod.artikel}${caveat})`) };
+      }
+      hinweise.push(`Modifikator «${label}»: Faktor auf den erstinstanzlichen Basistarif (${mod.artikel})${caveat}.`);
+    }
   }
 
   return { kanton: e.kanton, streitwertCHF: e.streitwertCHF, phase: e.phase, materie: e.materie, gerichtskosten, parteientschaedigung, hinweise };
