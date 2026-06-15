@@ -1,4 +1,5 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
+import { SeitenKopf } from './layout/SeitenKopf';
 
 // Auffangnetz für unerwartete Render-Fehler (CLAUDE.md §3: reine Darstellung,
 // keine Rechtslogik). React kennt für solche Fehler nur Klassen-Komponenten
@@ -29,14 +30,9 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (!this.state.fehler) return this.props.children;
     return (
-      <div className="py-16 text-center space-y-4">
-        <p className="text-body-s font-semibold text-ink-500 uppercase tracking-wide">Fehler</p>
-        <h1 className="text-2xl font-bold text-ink-900">Diese Ansicht konnte nicht angezeigt werden</h1>
-        <p className="text-body-s text-ink-600 max-w-reading mx-auto">
-          Ein unerwarteter Fehler hat die Darstellung unterbrochen. Ihre Eingaben
-          verlassen den Browser nicht; ein Neuladen der Seite stellt die Ansicht
-          in der Regel wieder her.
-        </p>
+      <div className="py-16 max-w-reading space-y-4">
+        <SeitenKopf overline="Fehler" titel="Diese Ansicht konnte nicht angezeigt werden"
+          intro="Ein unerwarteter Fehler hat die Darstellung unterbrochen. Ihre Eingaben verlassen den Browser nicht; ein Neuladen der Seite stellt die Ansicht in der Regel wieder her." />
         <button type="button" onClick={() => window.location.reload()} className="lc-btn-primary">
           Seite neu laden
         </button>

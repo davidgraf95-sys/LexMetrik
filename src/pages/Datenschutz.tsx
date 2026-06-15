@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { SeitenKopf } from '../components/layout/SeitenKopf';
 
 // Seite «Datenschutzerklärung» – ENTWURF (Badge), fachliche Prüfung der
 // GANZEN Seite steht aus; Platzhalter [«…»] sind bewusst sichtbar, bis
@@ -20,15 +21,12 @@ function Abschnitt({ titel, children }: { titel: string; children: React.ReactNo
 export function Datenschutz() {
   return (
     <div className="space-y-8 max-w-reading">
-      <div className="space-y-2">
-        <p className="lc-overline">Rechtliches</p>
-        <div className="scale-rule max-w-[280px]" aria-hidden />
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Datenschutzerklärung</h1>
+      <SeitenKopf overline="Rechtliches" titel="Datenschutzerklärung">
         <div className="flex flex-wrap items-center gap-2">
           <span className="lc-badge-entwurf" title="Entwurf – fachliche Prüfung steht aus">Entwurf</span>
           <span className="text-body-s text-ink-500">Stand: 5. Juni 2026 · nach Schweizer Datenschutzgesetz (DSG)</span>
         </div>
-      </div>
+      </SeitenKopf>
 
       <Abschnitt titel="1. Verantwortliche Stelle">
         <p>

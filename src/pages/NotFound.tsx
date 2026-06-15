@@ -1,19 +1,26 @@
 import { Link } from 'react-router-dom';
+import { SeitenKopf } from '../components/layout/SeitenKopf';
 
-// 404 in der Familie der statischen Seiten (FAHRPLAN-DESIGN 5.4):
-// Overline + Ablesekante + Display-Titel statt der früheren Fallback-Optik.
+// 404 in der Familie der statischen Seiten (SeitenKopf): Overline + Ablesekante
+// + Display-Titel. Statt einer Sackgasse mehrere geführte Wiedereinstiege.
+const WEGE = [
+  { to: '/', label: 'Katalog – alle Rechner & Vorlagen' },
+  { to: '/methodik', label: 'Methodik' },
+  { to: '/kontakt', label: 'Kontakt' },
+];
+
 export function NotFound() {
   return (
-    <div className="py-16 max-w-reading space-y-3">
-      <p className="lc-overline">404 · Nicht gefunden</p>
-      <div className="scale-rule max-w-[280px]" aria-hidden />
-      <h1 className="text-h1 font-display font-semibold text-ink-900">Diese Seite gibt es nicht.</h1>
-      <p className="text-body-s text-ink-600 max-w-reading">
-        Die Adresse ist veraltet oder vertippt. Alle Rechner und Vorlagen finden Sie im Katalog.
-      </p>
-      <Link to="/" className="inline-block text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline pt-2">
-        ← Zur Startseite
-      </Link>
+    <div className="py-16 max-w-reading space-y-4">
+      <SeitenKopf overline="404 · Nicht gefunden" titel="Diese Seite gibt es nicht."
+        intro="Die Adresse ist veraltet oder vertippt. Hier kommen Sie zurück ins Werkzeug:" />
+      <ul className="lc-list">
+        {WEGE.map((w) => (
+          <li key={w.to}>
+            <Link to={w.to} className="text-body-s font-medium text-brass-700 hover:text-brass-600 no-underline">{w.label}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

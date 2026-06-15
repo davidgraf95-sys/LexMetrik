@@ -1,12 +1,10 @@
+import { SeitenKopf } from '../components/layout/SeitenKopf';
+
 // Seite «Über» – Entstehungsgeschichte mit persönlichem Bezug.
 export function Ueber() {
   return (
     <div className="space-y-10 max-w-reading">
-      <div className="space-y-2">
-        <p className="lc-overline">Über</p>
-        <div className="scale-rule max-w-[280px]" aria-hidden />
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Über LexMetrik</h1>
-      </div>
+      <SeitenKopf overline="Über" titel="Über LexMetrik" />
 
       <div className="space-y-4 text-body-s text-ink-600 leading-relaxed">
         <p>Die Idee zu LexMetrik kam mir bei der Vorbereitung auf die Anwaltsprüfung in Basel-Stadt.</p>

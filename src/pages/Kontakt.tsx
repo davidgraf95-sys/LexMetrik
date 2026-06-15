@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Field, inputCls } from '../components/vorlagen/ui';
+import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { KONTAKT_EMPFAENGER, kontaktMailto, type KontaktEingaben } from '../lib/kontakt';
 
 // Seite «Kontakt»: schlichtes Formular im Stil der Wizards. Kein Backend –
@@ -35,14 +36,8 @@ export function Kontakt() {
 
   return (
     <div className="space-y-8 max-w-reading">
-      <div className="space-y-2">
-        <p className="lc-overline">Kontakt</p>
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Kontakt aufnehmen</h1>
-        <p className="text-body-l text-ink-600 leading-relaxed">
-          Fragen, Korrekturen zu einer Berechnung oder einem Baustein, Vorschläge für neue
-          Rechner und Vorlagen – Hinweise auf Fehler sind besonders willkommen.
-        </p>
-      </div>
+      <SeitenKopf overline="Kontakt" titel="Kontakt aufnehmen"
+        intro="Fragen, Korrekturen zu einer Berechnung oder einem Baustein, Vorschläge für neue Rechner und Vorlagen – Hinweise auf Fehler sind besonders willkommen." />
 
       <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -1,5 +1,6 @@
 // Seite «Methodik» – vertiefte Fassung; die Kurzfassung («So rechnet LexMetrik»)
 // auf der Startseite bleibt davon unberührt.
+import { SeitenKopf } from '../components/layout/SeitenKopf';
 
 const ABSCHNITTE: { titel: string; text: string }[] = [
   {
@@ -60,11 +61,7 @@ const ABSCHNITTE: { titel: string; text: string }[] = [
 export function Methodik() {
   return (
     <div className="space-y-10 max-w-reading">
-      <div className="space-y-2">
-        <p className="lc-overline">Methodik</p>
-        <div className="scale-rule max-w-[280px]" aria-hidden />
-        <h1 className="text-h1 font-display font-semibold text-ink-900">Wie LexMetrik rechnet</h1>
-      </div>
+      <SeitenKopf overline="Methodik" titel="Wie LexMetrik rechnet" />
 
       <div className="space-y-8">
         {ABSCHNITTE.map((a) => (
