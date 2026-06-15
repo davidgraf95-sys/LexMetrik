@@ -41,16 +41,18 @@ export function Field({ label, children, hint, optional }: {
  *  gebrandetes Häkchen (accent-color global), einheitlicher Abstand und
  *  Fokus. Ersetzt schrittweise die ~290 inline-Label-Checkboxen. Reine
  *  Darstellung (§3) — der Zustand bleibt beim aufrufenden Formular. */
-export function Checkbox({ checked, onChange, label, hint, disabled, name }: {
+export function Checkbox({ checked, onChange, label, hint, disabled, name, className = '' }: {
   checked: boolean;
   onChange: (v: boolean) => void;
   label: React.ReactNode;
   hint?: React.ReactNode;
   disabled?: boolean;
   name?: string;
+  /** Zusatzklassen am Label (z. B. pl-6 für eingerückte Unter-Optionen). */
+  className?: string;
 }) {
   return (
-    <label className={`flex items-start gap-2.5 py-1.5 min-h-[2.25rem] text-body-s ${disabled ? 'text-ink-400 cursor-not-allowed' : 'text-ink-700 cursor-pointer'}`}>
+    <label className={`flex items-start gap-2.5 py-1.5 min-h-[2.25rem] text-body-s ${disabled ? 'text-ink-400 cursor-not-allowed' : 'text-ink-700 cursor-pointer'}${className ? ' ' + className : ''}`}>
       <input type="checkbox" name={name} checked={checked} disabled={disabled}
         onChange={(e) => onChange(e.target.checked)} className="mt-0.5 shrink-0" />
       <span className="min-w-0">

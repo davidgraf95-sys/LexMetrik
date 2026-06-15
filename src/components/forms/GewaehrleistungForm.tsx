@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { Field, inputCls } from '../vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { format } from 'date-fns';
@@ -221,29 +221,17 @@ export function GewaehrleistungForm() {
 
       {/* Schalter */}
       <div className="space-y-2">
-        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" checked={arglist} onChange={(e) => setArglist(e.target.checked)} />
-          Absichtliche Täuschung durch Verkäufer/Unternehmer (Art. 203 / 210 Abs. 6 OR)
-        </label>
+        <Checkbox checked={arglist} onChange={setArglist} label="Absichtliche Täuschung durch Verkäufer/Unternehmer (Art. 203 / 210 Abs. 6 OR)" />
         {typ === 'fahrniskauf' && (
           <>
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={konsument} onChange={(e) => setKonsument(e.target.checked)} />
-              Konsumentenkauf (persönlicher/familiärer Gebrauch, gewerblicher Verkäufer – Art. 210 Abs. 4 OR)
-            </label>
+            <Checkbox checked={konsument} onChange={setKonsument} label="Konsumentenkauf (persönlicher/familiärer Gebrauch, gewerblicher Verkäufer – Art. 210 Abs. 4 OR)" />
             {konsument && (
-              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
-                <input type="checkbox" checked={gebraucht} onChange={(e) => setGebraucht(e.target.checked)} />
-                Gebrauchte Sache (Mindestfrist 1 statt 2 Jahre)
-              </label>
+              <Checkbox checked={gebraucht} onChange={setGebraucht} label="Gebrauchte Sache (Mindestfrist 1 statt 2 Jahre)" className="pl-6" />
             )}
           </>
         )}
         {istWerk && (
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={sia} onChange={(e) => setSia(e.target.checked)} />
-            SIA-Norm 118 vereinbart (zweijährige Garantiefrist, 5-Jahres-Verjährung – Vertragswerk, zu prüfen)
-          </label>
+          <Checkbox checked={sia} onChange={setSia} label="SIA-Norm 118 vereinbart (zweijährige Garantiefrist, 5-Jahres-Verjährung – Vertragswerk, zu prüfen)" />
         )}
       </div>
 

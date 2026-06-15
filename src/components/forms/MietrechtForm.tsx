@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
@@ -224,10 +224,7 @@ export function MietrechtForm() {
         </Field>
       )}
       {terminsucheAktiv && quelle === 'jedes_monatsende' && (
-        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" checked={ohneDez} onChange={(e) => setOhneDez(e.target.checked)} />
-          Ausnahme: nicht auf den 31. Dezember
-        </label>
+        <Checkbox checked={ohneDez} onChange={setOhneDez} label="Ausnahme: nicht auf den 31. Dezember" />
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -253,26 +250,14 @@ export function MietrechtForm() {
         <div className="space-y-2">
           <p className="lc-overline">Form (Art. 266l–266o OR)</p>
           {partei === 'vermieter' && (
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={formular} onChange={(e) => setFormular(e.target.checked)} />
-              Amtlich genehmigtes Kündigungsformular verwendet (Art. 266l Abs. 2 OR)
-            </label>
+            <Checkbox checked={formular} onChange={setFormular} label="Amtlich genehmigtes Kündigungsformular verwendet (Art. 266l Abs. 2 OR)" />
           )}
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={familienwohnung} onChange={(e) => setFamilienwohnung(e.target.checked)} />
-            Familienwohnung (Sonderschutz Art. 266m/266n OR)
-          </label>
+          <Checkbox checked={familienwohnung} onChange={setFamilienwohnung} label="Familienwohnung (Sonderschutz Art. 266m/266n OR)" />
           {familienwohnung && partei === 'vermieter' && (
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
-              <input type="checkbox" checked={separat} onChange={(e) => setSeparat(e.target.checked)} />
-              Kündigung beiden Ehegatten/Partnern separat zugestellt (Art. 266n OR)
-            </label>
+            <Checkbox checked={separat} onChange={setSeparat} label="Kündigung beiden Ehegatten/Partnern separat zugestellt (Art. 266n OR)" className="pl-6" />
           )}
           {familienwohnung && partei === 'mieter' && (
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
-              <input type="checkbox" checked={zustimmung} onChange={(e) => setZustimmung(e.target.checked)} />
-              Ausdrückliche Zustimmung des Ehegatten/Partners liegt vor (Art. 266m OR)
-            </label>
+            <Checkbox checked={zustimmung} onChange={setZustimmung} label="Ausdrückliche Zustimmung des Ehegatten/Partners liegt vor (Art. 266m OR)" className="pl-6" />
           )}
         </div>
       )}

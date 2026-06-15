@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeispielChips, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { BeispielChips, Checkbox, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { format } from 'date-fns';
@@ -209,10 +209,7 @@ export function VerjaehrungForm() {
       </div>
 
       {hatAbsolut && regime !== 'bereicherung' && (
-        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" checked={strafbar} onChange={(e) => setStrafbar(e.target.checked)} />
-          Das schädigende Verhalten ist eine strafbare Handlung (Art. 60 Abs. 2 OR – strafrechtliche Längerfrist vorbehalten)
-        </label>
+        <Checkbox checked={strafbar} onChange={setStrafbar} label="Das schädigende Verhalten ist eine strafbare Handlung (Art. 60 Abs. 2 OR – strafrechtliche Längerfrist vorbehalten)" />
       )}
 
       {/* Unterbrechungen */}
@@ -269,10 +266,7 @@ export function VerjaehrungForm() {
 
       {/* Verzicht */}
       <div className="space-y-2">
-        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" checked={verzichtAn} onChange={(e) => setVerzichtAn(e.target.checked)} />
-          Schriftlicher Verzicht auf die Verjährungseinrede (Art. 141 OR)
-        </label>
+        <Checkbox checked={verzichtAn} onChange={setVerzichtAn} label="Schriftlicher Verzicht auf die Verjährungseinrede (Art. 141 OR)" />
         {verzichtAn && (
           <div className="flex flex-wrap items-center gap-2 pl-6">
             <span className="text-body-s text-ink-500">erklärt am</span>

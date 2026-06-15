@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BeruehrtRahmen, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -106,10 +106,7 @@ export function GebvKostenForm() {
         </Field>
         <Field label="Zahlungsbefehl (Art. 16)">
           <div className="space-y-2">
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={zb} onChange={(e) => setZb(e.target.checked)} />
-              Zahlungsbefehl erlassen/zugestellt
-            </label>
+            <Checkbox checked={zb} onChange={setZb} label="Zahlungsbefehl erlassen/zugestellt" />
             {zb && (
               <div className="grid grid-cols-2 gap-3">
                 <label className="text-body-s text-ink-700">weitere Ausfertigungen
@@ -135,10 +132,7 @@ export function GebvKostenForm() {
             <BetragsFeld value={vw} onChange={setVw} className={inputCls}
               placeholder="Erlös/Schätzwert (leer = keine)" aria-label="Verwertungserlös" />
             {vw.trim() !== '' && (
-              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" checked={vwKein} onChange={(e) => setVwKein(e.target.checked)} />
-                kein Erwerber gefunden (½, max. CHF 1'000 — Abs. 4)
-              </label>
+              <Checkbox checked={vwKein} onChange={setVwKein} label="kein Erwerber gefunden (½, max. CHF 1'000 — Abs. 4)" />
             )}
           </div>
         </Field>
