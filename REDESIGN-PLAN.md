@@ -111,6 +111,19 @@ festschreiben, werden bei Bedarf **deklariert** angepasst (Schutzabsicht bleibt)
 - **E10 ✓** (90878a8) Sekundärseiten: `<SeitenKopf>`-Primitive, ErrorBoundary in
   der Familie, 404-Wegweiser.
 
+### Fortsetzung (E11–E14, nur lokal — kein Push)
+- **E11 ✓** (4c951e2) Such-A11y: `aria-live`-Region kündigt die Trefferzahl an
+  (letzter hoch-A11y-Befund).
+- **E12 ✓** (5c2db95) `<Checkbox>`-Primitiv (gebrandet, ≥44px-Zeile, Fokus) +
+  StreitwertForm als erste Migration.
+- **E13 ✓** (8e85a25) SprachUmschalter: `role=menu` → ehrliche Disclosure
+  (role=group, Fokus-Management); totes `.lc-disclosure`-CSS weg; Raster-Kommentar.
+- **E14 ✓** (5215560 · 71c36b1 · 97bdfb4) Checkbox-Migration in **3 Wellen**:
+  **44 Stellen** über 12 `forms/`-Dateien aufs Primitiv (einfache + komplexe Handler).
+
+Checkbox-Rest: ~25 Sondermuster in `forms/` (v.a. ZustaendigkeitForm) + ~150 in den
+`Vorlage*`-Seiten — letztere bewusst **nicht während der aktiven Parallel-Session**.
+
 ### Bewusst zurückgestellt (für David / spätere Runde)
 - **lc-select**-Rollout (Messing-Chevron) über alle `<select>` — Primitive steht,
   Sweep bewusst gebündelt statt einzeln (Konsistenz).
