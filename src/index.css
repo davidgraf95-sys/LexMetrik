@@ -35,7 +35,8 @@
     --accent-text:var(--brass-700);  /* Brass-Text & Links (kontraststark) */
     --focus:var(--brass-500);
 
-    /* Mass-Skala (8-px-Raster) — alle Bandabstände stammen hieraus */
+    /* Mass-Skala (8-px-Raster) — Grundlage der meisten Abstände; einzelne
+       Halbstufen (gap-1.5 = 6px) werden bewusst über Tailwind-Utilities gesetzt */
     --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px;
     --space-6:24px; --space-8:32px; --space-12:48px; --space-16:64px; --space-24:96px;
     --control-h:44px;  /* Suchfeld, Toggle-Segmente */
@@ -286,11 +287,11 @@
   .lc-wert-puls { animation: lc-wert-puls var(--dur-base) var(--ease); }
 
   /* Aufklappbare Hinweise: dezentes Disclosure-Symbol statt Default-Dreieck.
-     Ausnahme .lc-disclosure: bringt einen eigenen Chevron mit (Rubrik-Zeilen). */
+     (Die frühere .lc-disclosure-Ausnahme war ungenutzt — entfernt, E13.) */
   details > summary { list-style: none; }
   details > summary::-webkit-details-marker { display: none; }
-  details > summary:not(.lc-disclosure)::after { content: '  ▸'; color: var(--ink-400); font-size: .7em; }
-  details[open] > summary:not(.lc-disclosure)::after { content: '  ▾'; }
+  details > summary::after { content: '  ▸'; color: var(--ink-400); font-size: .7em; }
+  details[open] > summary::after { content: '  ▾'; }
 
   .lc-live { display: inline-flex; align-items: center; gap: .4rem; }
   .lc-live::before {
