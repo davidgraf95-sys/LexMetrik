@@ -85,6 +85,7 @@ export const BGER_PARTEIENTSCHAEDIGUNG: BgerTarif = {
 
 /** Parteientschädigung BGer ohne Vermögensinteresse (Reglement Art. 6). */
 export const BGER_PARTEIENTSCHAEDIGUNG_OHNE_VERMOEGEN: BgerTarif = {
-  ...PE_QUELLE, artikel: 'Art. 68 BGG / Reglement Art. 6',
+  ...PE_QUELLE, artikel: 'Art. 68 BGG / Reglement Art. 6', mwstInbegriffen: true,
+  hinweis: 'Honorar inkl. MwSt (Art. 12 Abs. 1 Reglement).',
   regel: { typ: 'rahmen', vonChf: 600, bisChf: 18000 },
 };

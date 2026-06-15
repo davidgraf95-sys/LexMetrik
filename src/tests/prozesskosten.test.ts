@@ -393,11 +393,16 @@ describe('Nicht vermögensrechtliche Streitigkeiten (eigener Tarif, kein Streitw
     expect(r.parteientschaedigung.ergebnis?.deterministisch).toBe(false);
     expect(postenText(r.parteientschaedigung)).toMatch(/Aufwand/);
   });
-  it('Bundesgericht n. verm.: Art. 65 III lit. a (200–5000)', () => {
+  it('Bundesgericht n. verm.: GK Art. 65 III lit. a (200–5000) UND PE Reglement Art. 6 (600–18000)', () => {
     const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 0, phase: 'entscheid', materie: 'allgemein', instanz: 'bundesgericht', nichtVermoegensrechtlich: true });
-    const e = r.gerichtskosten.ergebnis;
-    if (e && !e.deterministisch) { expect(e.vonChf).toBe(200); expect(e.bisChf).toBe(5000); }
+    const gk = r.gerichtskosten.ergebnis;
+    if (gk && !gk.deterministisch) { expect(gk.vonChf).toBe(200); expect(gk.bisChf).toBe(5000); }
     expect(r.gerichtskosten.quelle.artikel).toContain('Art. 65 Abs. 3 lit. a');
+    const pe = r.parteientschaedigung.ergebnis;
+    if (pe && !pe.deterministisch) { expect(pe.vonChf).toBe(600); expect(pe.bisChf).toBe(18000); }
+    expect(r.parteientschaedigung.quelle.artikel).toContain('Reglement Art. 6');
+    // inkl. MwSt → kein Aufschlag
+    expect(berechneMwstParteientschaedigung(r.parteientschaedigung).betrag).toBeNull();
   });
   it('Arbeit n. verm.: NICHT automatisch kostenlos (Befreiung ist streitwertbedingt)', () => {
     const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 0, phase: 'entscheid', materie: 'arbeit', nichtVermoegensrechtlich: true });

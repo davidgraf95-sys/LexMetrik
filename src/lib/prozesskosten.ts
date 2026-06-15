@@ -17,7 +17,8 @@ import { SCHLICHTUNG } from '../data/tarif/schlichtung';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 import { KANTONE, MWST_NORMALSATZ_PROZENT, type KantonCode, type KantonalerTarif } from '../data/tarif/typen';
 import {
-  BGER_GERICHTSKOSTEN, BGER_GERICHTSKOSTEN_REDUZIERT, BGER_GERICHTSKOSTEN_OHNE_VERMOEGEN, BGER_PARTEIENTSCHAEDIGUNG, type BgerTarif,
+  BGER_GERICHTSKOSTEN, BGER_GERICHTSKOSTEN_REDUZIERT, BGER_GERICHTSKOSTEN_OHNE_VERMOEGEN,
+  BGER_PARTEIENTSCHAEDIGUNG, BGER_PARTEIENTSCHAEDIGUNG_OHNE_VERMOEGEN, type BgerTarif,
 } from '../data/tarif/bundesgericht';
 import { GERICHTSKOSTEN_NV, PARTEIENTSCHAEDIGUNG_NV, SCHLICHTUNG_NV } from '../data/tarif/nicht-vermoegensrechtlich';
 
@@ -190,10 +191,11 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
     const reduziert = !nv && (e.materie === 'gleichstellung' || e.materie === 'behindertengleichstellung'
       || (e.materie === 'arbeit' && e.streitwertCHF <= 30000));
     const gkB = nv ? BGER_GERICHTSKOSTEN_OHNE_VERMOEGEN : reduziert ? BGER_GERICHTSKOSTEN_REDUZIERT : BGER_GERICHTSKOSTEN;
+    const peB = nv ? BGER_PARTEIENTSCHAEDIGUNG_OHNE_VERMOEGEN : BGER_PARTEIENTSCHAEDIGUNG;
     return {
       kanton: e.kanton, streitwertCHF: e.streitwertCHF, phase: 'entscheid', materie: e.materie,
       gerichtskosten: { kostenlos: false, ergebnis: auswertenTarif(gkB.regel, e.streitwertCHF), quelle: bgerQuelle(gkB) },
-      parteientschaedigung: { kostenlos: false, ergebnis: auswertenTarif(BGER_PARTEIENTSCHAEDIGUNG.regel, e.streitwertCHF), quelle: bgerQuelle(BGER_PARTEIENTSCHAEDIGUNG) },
+      parteientschaedigung: { kostenlos: false, ergebnis: auswertenTarif(peB.regel, e.streitwertCHF), quelle: bgerQuelle(peB) },
       hinweise: [
         'Beschwerde ans Bundesgericht (Art. 65/68 BGG); Tarife bundesrechtlich, kantonsunabhängig.',
         nv ? 'Streitigkeit ohne Vermögensinteresse: Gerichtsgebühr nach Art. 65 Abs. 3 lit. a BGG (CHF 200–5000), streitwertunabhängig; die Parteientschädigung setzt das Gericht nach Ermessen fest.'
