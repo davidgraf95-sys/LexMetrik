@@ -6,8 +6,8 @@ import { BetragsFeld } from '../BetragsFeld';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import {
-  berechneProzesskosten, berechneKostenrisiko, vergleichAlleKantone, postenText,
-  MATERIEN, VERFAHRENSPHASEN, VERFAHRENSARTEN, INSTANZEN, KANTONE,
+  berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung,
+  vergleichAlleKantone, postenText, MATERIEN, VERFAHRENSPHASEN, VERFAHRENSARTEN, INSTANZEN, KANTONE, WEITERE_KOSTENPOSTEN,
   type KantonCode, type Verfahrensphase, type Materie, type Verfahrensart, type Instanz, type PostenErgebnis,
 } from '../../lib/prozesskosten';
 import { KANTON_NAMEN } from '../../data/tarif/typen';
@@ -30,6 +30,7 @@ const PK_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
   instanz: { p: 'in', typ: 'str', gueltig: einerVon(...INSTANZEN.map((i) => i.wert)) },
   verfahren: { p: 'vf', typ: 'str', gueltig: einerVon(...VERFAHRENSARTEN.map((v) => v.wert)) },
   quote: { p: 'q', typ: 'num', gueltig: (n) => Number.isInteger(n) && n >= 0 && n <= 100 },
+  mwst: { p: 'mw', typ: 'bool' },
 };
 
 const zahl = (roh: string): number | undefined => {
@@ -80,6 +81,7 @@ export function ProzesskostenForm() {
   const [verfahren, setVerfahren] = useState<Verfahrensart>((ausLink.verfahren as Verfahrensart) ?? 'ordentlich');
   const [quote, setQuote] = useState<number>(typeof ausLink.quote === 'number' ? (ausLink.quote as number) : 50);
   const [vergleich, setVergleich] = useState(false);
+  const [mwst, setMwst] = useState<boolean>(ausLink.mwst === true);
   // Geteilter Link mit Quote (q=…) öffnet das Kostenrisiko-Panel direkt.
   const [risiko, setRisiko] = useState(typeof ausLink.quote === 'number');
 
@@ -98,6 +100,14 @@ export function ProzesskostenForm() {
   const kostenrisiko = useMemo(
     () => (risiko && ergebnis) ? berechneKostenrisiko(ergebnis.gerichtskosten, ergebnis.parteientschaedigung, quote / 100) : null,
     [risiko, ergebnis, quote],
+  );
+  const vorschuss = useMemo(
+    () => ergebnis ? berechneKostenvorschuss(ergebnis.gerichtskosten, phase, instanz, verfahrenRelevant ? verfahren : 'ordentlich') : null,
+    [ergebnis, phase, instanz, verfahren, verfahrenRelevant],
+  );
+  const mwstAufschlag = useMemo(
+    () => (mwst && ergebnis) ? berechneMwstParteientschaedigung(ergebnis.parteientschaedigung) : null,
+    [mwst, ergebnis],
   );
 
   return (
@@ -147,9 +157,50 @@ export function ProzesskostenForm() {
             <PostenKarte titel="Parteientschädigung" posten={ergebnis.parteientschaedigung} />
           </div>
 
+          {/* Kostenvorschuss (Art. 98 ZPO / Art. 62 BGG) — Liquiditätsposten. */}
+          {vorschuss && (
+            <div className="mt-3 lc-tile">
+              <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                <p className="text-xs text-ink-500">Mutmasslicher Kostenvorschuss <span className="text-ink-400">({vorschuss.norm})</span></p>
+                <p className="num text-body-l font-semibold text-ink-900">
+                  {vorschuss.spanne ? (vorschuss.faktor === 0.5 ? `bis ${spanneText(vorschuss.spanne)}` : spanneText(vorschuss.spanne)) : '—'}
+                </p>
+              </div>
+              <p className="mt-1 text-xs text-ink-500">{vorschuss.hinweis}</p>
+            </div>
+          )}
+
+          {/* MwSt auf die Parteientschädigung (Art. 95 III lit. b ZPO i.V.m. MWSTG) — fallabhängig. */}
+          {!ergebnis.parteientschaedigung.kostenlos && (
+            <label className="mt-3 flex items-start gap-2 text-body-s text-ink-700">
+              <input type="checkbox" checked={mwst} onChange={(e) => setMwst(e.target.checked)} className="mt-0.5" />
+              <span>Berechtigte Partei nicht vorsteuerabzugsberechtigt (z.&nbsp;B. Privatperson) — MwSt auf die Parteientschädigung hinzurechnen</span>
+            </label>
+          )}
+          {mwstAufschlag && (
+            <div className="mt-2 lc-tile lc-akzent-brass">
+              <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                <p className="text-xs text-ink-500">Parteientschädigung inkl. MwSt {mwstAufschlag.satzProzent.toLocaleString('de-CH')} %</p>
+                <p className="num text-body-l font-semibold text-ink-900">
+                  {mwstAufschlag.bruttoSpanne ? spanneText(mwstAufschlag.bruttoSpanne) : '—'}
+                </p>
+              </div>
+              {mwstAufschlag.betrag && <p className="mt-1 text-xs text-ink-500">MwSt-Anteil: {spanneText(mwstAufschlag.betrag)}.</p>}
+              <p className="mt-1 text-xs text-ink-500">{mwstAufschlag.hinweis}</p>
+            </div>
+          )}
+
           <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
             {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}
           </ul>
+
+          {/* Weitere, nicht bezifferbare Kostenposten (Art. 95 II c–e / III a; UR Art. 117 ff.). */}
+          <details className="mt-3 rounded-xl border border-line bg-surface p-3">
+            <summary className="cursor-pointer text-body-s text-ink-700 hover:text-ink-900">Weitere Kostenposten (nicht beziffert)</summary>
+            <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
+              {WEITERE_KOSTENPOSTEN.map((h, i) => <li key={i}>{h}</li>)}
+            </ul>
+          </details>
 
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <button type="button" onClick={() => setRisiko((v) => !v)}
@@ -162,7 +213,7 @@ export function ProzesskostenForm() {
                 {vergleich ? 'Interkantonalen Vergleich ausblenden' : 'Was würde es in anderen Kantonen kosten? →'}
               </button>
             )}
-            <LinkTeilenButton query={() => permalinkKodieren(PK_LINK_SPEC, { kanton, sw: streitwert, phase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : undefined, quote: risiko ? quote : undefined })} />
+            <LinkTeilenButton query={() => permalinkKodieren(PK_LINK_SPEC, { kanton, sw: streitwert, phase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : undefined, quote: risiko ? quote : undefined, mwst: mwst ? true : undefined })} />
           </div>
 
           {risiko && kostenrisiko && (

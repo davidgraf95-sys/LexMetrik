@@ -1,6 +1,6 @@
 // ─── Prozesskosten-Engine (Art. 95/96/113/114 ZPO) ─────────────────────────
 import { describe, expect, it } from 'vitest';
-import { berechneProzesskosten, berechneKostenrisiko, vergleichAlleKantone, postenText, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
+import { berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung, vergleichAlleKantone, postenText, WEITERE_KOSTENPOSTEN, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 
@@ -150,6 +150,74 @@ describe('Kostenrisiko nach Obsiegensquote (Art. 106/111 ZPO)', () => {
     const gr = berechneProzesskosten({ kanton: 'GR', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
     const r = berechneKostenrisiko(gr.gerichtskosten, gr.parteientschaedigung, 0.5);
     expect(r.berechenbar).toBe(false);
+  });
+});
+
+describe('Kostenvorschuss (I6 — Art. 98 ZPO / Art. 62 BGG)', () => {
+  it('ordentlich erstinstanz: höchstens die Hälfte der mutmasslichen Gerichtskosten', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    const v = berechneKostenvorschuss(r.gerichtskosten, 'entscheid', 'erstinstanz', 'ordentlich');
+    expect(v.voll).toBe(false);
+    expect(v.faktor).toBe(0.5);
+    expect(v.spanne).toEqual({ vonChf: 2775, bisChf: 2775 }); // ½ × 5550
+    expect(v.norm).toContain('Art. 98 Abs. 1');
+  });
+  it('summarisches Verfahren: voller Vorschuss (Art. 98 Abs. 2)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', verfahren: 'summarisch' });
+    const v = berechneKostenvorschuss(r.gerichtskosten, 'entscheid', 'erstinstanz', 'summarisch');
+    expect(v.voll).toBe(true);
+    expect(v.faktor).toBe(1);
+    expect(v.spanne).toEqual({ vonChf: 2775, bisChf: 4163 }); // voller Betrag der (skalierten) GK-Spanne
+  });
+  it('Rechtsmittelverfahren: voller Vorschuss', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', instanz: 'rechtsmittel' });
+    const v = berechneKostenvorschuss(r.gerichtskosten, 'entscheid', 'rechtsmittel', 'ordentlich');
+    expect(v.voll).toBe(true);
+    expect(v.spanne).toEqual({ vonChf: 1832, bisChf: 5550 });
+  });
+  it('Bundesgericht: voller Vorschuss nach Art. 62 BGG', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 60000, phase: 'entscheid', materie: 'allgemein', instanz: 'bundesgericht' });
+    const v = berechneKostenvorschuss(r.gerichtskosten, 'entscheid', 'bundesgericht', 'ordentlich');
+    expect(v.voll).toBe(true);
+    expect(v.norm).toBe('Art. 62 BGG');
+    expect(v.spanne).toEqual({ vonChf: 1500, bisChf: 5000 });
+  });
+  it('Schlichtung: voll, aber Pauschale nicht beziffert (spanne null)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
+    const v = berechneKostenvorschuss(r.gerichtskosten, 'schlichtung', 'erstinstanz', 'ordentlich');
+    expect(v.voll).toBe(true);
+    expect(v.spanne).toBeNull();
+  });
+  it('kostenloses Verfahren: kein Vorschuss', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 25000, phase: 'entscheid', materie: 'arbeit' });
+    const v = berechneKostenvorschuss(r.gerichtskosten, 'entscheid', 'erstinstanz', 'ordentlich');
+    expect(v.spanne).toEqual({ vonChf: 0, bisChf: 0 });
+  });
+});
+
+describe('MwSt auf Parteientschädigung (I6 — Art. 95 III lit. b / MWSTG 8,1 %)', () => {
+  it('deterministischer Tarif: 8,1 % Aufschlag + Brutto handgerechnet', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    const m = berechneMwstParteientschaedigung(r.parteientschaedigung);
+    expect(m.satzProzent).toBe(8.1);
+    expect(m.betrag).toEqual({ vonChf: 567, bisChf: 567 });       // 7000 × 8,1 %
+    expect(m.bruttoSpanne).toEqual({ vonChf: 7567, bisChf: 7567 });
+  });
+  it('Rahmen-Tarif (BS): MwSt auf die Spanne', () => {
+    const r = berechneProzesskosten({ kanton: 'BS', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    const m = berechneMwstParteientschaedigung(r.parteientschaedigung);
+    expect(m.bruttoSpanne?.vonChf).toBe(Math.round(4500 * 1.081));
+    expect(m.bruttoSpanne?.bisChf).toBe(Math.round(10000 * 1.081));
+  });
+  it('Schlichtung (keine Parteientschädigung): nicht beziffert', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
+    const m = berechneMwstParteientschaedigung(r.parteientschaedigung);
+    expect(m.betrag).toBeNull();
+    expect(m.hinweis).toContain('Keine Parteientschädigung');
+  });
+  it('weitere Kostenposten sind als Hinweis vorhanden (Art. 95 II c–e / 117 ff.)', () => {
+    expect(WEITERE_KOSTENPOSTEN.length).toBeGreaterThanOrEqual(3);
+    expect(WEITERE_KOSTENPOSTEN.some((h) => h.includes('Art. 117'))).toBe(true);
   });
 });
 

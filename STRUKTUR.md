@@ -22,6 +22,31 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 15.6.2026 — Prozesskosten-Cockpit I6 (Vollständigkeit der Kostenposten) GEBAUT (ungepusht)
+
+**Auftrag David: «mach weiter mit prozesskosten, deep research wenn nötig».**
+Etappe I6 aus `FAHRPLAN-PROZESSKOSTEN-COCKPIT.md`. **Keine neue Deep Research
+nötig** — die Norm-Basis (Art. 95/98/117 ff. ZPO) lag bereits doppelt verifiziert
+in `prozesskosten-zpo-95-96.md` §A (Art. 98 Rev. 1.1.2025) und
+`prozesskosten-sonderkonstellationen.md` §6.4/§6.7/§3; MwSt-Satz im Verfallsregister.
+
+**Gebaut (rein additiv, §6 verhaltensneutral — golden byte-gleich):**
+- `lib/prozesskosten.ts` +3 Exporte: **`berechneKostenvorschuss`** (Art. 98: ½ GK
+  als Regel; voller Vorschuss in Schlichtung/summarisch/Rechtsmittel nach Abs. 2,
+  summarisch-Ausnahmen offengelegt; BGer = Art. 62 BGG voll; kostenlos → 0) ·
+  **`berechneMwstParteientschaedigung`** (8,1 % Normalsatz, fallabhängig, nur auf
+  Schalter; kantonale Behandlung inkl./zzgl./ohne offengelegt) · **`WEITERE_KOSTENPOSTEN`**
+  (Art. 95 II c–e / III a + UR Art. 117–118/123 als ehrlicher Hinweis).
+- `data/tarif/typen.ts`: **`MWST_NORMALSATZ_PROZENT = 8.1`** als §5-SSOT der
+  Tarif-Domäne (Mietvertrags-Kopie bleibt; beide im Verfallsregister).
+- UI `ProzesskostenForm.tsx`: Vorschuss-Kachel · MwSt-Schalter (Permalink `mw`) ·
+  aufklappbare «Weitere Kostenposten».
+- 11 neue handgerechnete Tests (36/36 grün). Gate voll grün, Build ok.
+
+**OFFEN:** §9-Bug-Check noch nicht über unabhängige Lupen gefahren · Push/Deploy
+auf Davids frisches Ja (§9). Nichts trägt `geprüft`. Nächste Etappen: I7
+(Instanz-Akkumulation) → I8 (PDF) → I9 (Notariat/GebV-SchKG).
+
 ## Session 15.6.2026 — UI-REDESIGN «frischer Blick» GEBAUT + DEPLOYED (Auftrag David, parallel zum Cockpit)
 
 **Auftrag `~/Downloads/AUFTRAG-UI-Redesign.md`:** ganze Darstellungsschicht frei,

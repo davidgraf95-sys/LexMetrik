@@ -50,10 +50,17 @@ Norm (z. B. § 2 GGR BS: Bedeutung/Zeitaufwand/Komplexität/Streitwert) als
 und Parteientschädigung. Macht aus dem Tariflook-up den eigentlichen
 Kostenrisiko-Rechner. Rein bundesrechtlich/deterministisch (vor §7-Verifikation).
 
-**I6 — Vollständigkeit der Kostenposten (Art. 95/98):** Kostenvorschuss (½ GK,
-Art. 98), MwSt auf Parteientschädigung (Hinweis/Schalter), Auslagen/Beweis-/
-Übersetzungs-/Kindesvertretungskosten (Art. 95 II c–e, als Hinweis, nicht
-beziffert), unentgeltliche Rechtspflege (Art. 117 ff., Hinweis).
+**I6 — Vollständigkeit der Kostenposten (Art. 95/98) — FERTIG (15.6.2026):**
+Engine-Funktionen `berechneKostenvorschuss` (Art. 98: ½ GK als Regel; voller
+Vorschuss in Schlichtung/summarisch/Rechtsmittel, Art. 98 II — summarisch mit
+offengelegten Ausnahmen; BGer = Art. 62 BGG voll) · `berechneMwstParteientschaedigung`
+(Normalsatz 8,1 % seit 1.1.2024, MWST_NORMALSATZ_PROZENT als §5-SSOT in
+`data/tarif/typen.ts`; fallabhängig, nur auf Schalter, kantonale Behandlung
+inkl./zzgl./ohne offengelegt) · `WEITERE_KOSTENPOSTEN` (Auslagen/Beweis-/
+Übersetzungs-/Kindesvertretungskosten Art. 95 II c–e / III a + unentgeltliche
+Rechtspflege Art. 117–118/123 als ehrlicher Hinweis). UI: Vorschuss-Kachel,
+MwSt-Schalter (+Permalink `mw`), aufklappbare «Weitere Kostenposten». 11 neue
+Tests (handgerechnet), Gate grün, golden byte-gleich. Nichts trägt `geprüft`.
 
 **I7 — Instanz-Akkumulation:** Gesamt-Kostenrisiko über den Instanzenzug
 (Schlichtung → 1. Instanz → Rechtsmittel → BGer), summiert.
@@ -67,6 +74,6 @@ kosten-Sonderfälle — wo deterministisch und praxisrelevant.
 
 ## Reihenfolge
 I2 (sobald Recherche zurück) → I4 (Kriterien, mit I2) → I3 (Handelsgericht) →
-I5 (Kostenrisiko, eigene §7-Grundlage Art. 106 ff.) → I6 → I7 → I8 → I9.
+I5 (Kostenrisiko, eigene §7-Grundlage Art. 106 ff.) → **I6 (fertig)** → I7 → I8 → I9.
 Je Etappe: Gate grün, §9-Bug-Check, Deploy auf frisches Ja. Nichts trägt
 `geprüft` bis zu Davids Wort-für-Wort-Abnahme (§7/§8).

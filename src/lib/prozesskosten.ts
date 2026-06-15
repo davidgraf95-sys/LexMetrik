@@ -13,7 +13,7 @@ import { auswertenTarif, skaliereErgebnis, type TarifErgebnis } from './tarif/st
 import { MODIFIKATOREN, type Faktor } from '../data/tarif/modifikatoren';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
-import { KANTONE, type KantonCode, type KantonalerTarif } from '../data/tarif/typen';
+import { KANTONE, MWST_NORMALSATZ_PROZENT, type KantonCode, type KantonalerTarif } from '../data/tarif/typen';
 import {
   BGER_GERICHTSKOSTEN, BGER_GERICHTSKOSTEN_REDUZIERT, BGER_PARTEIENTSCHAEDIGUNG, type BgerTarif,
 } from '../data/tarif/bundesgericht';
@@ -310,6 +310,100 @@ export function berechneKostenrisiko(gk: PostenErgebnis, pe: PostenErgebnis, obs
     hinweise,
   };
 }
+
+// ─── Vollständigkeit der Kostenposten (I6 — Art. 95/98/117 ff. ZPO) ─────────
+// Über die Entscheidgebühr + Parteientschädigung hinaus prägen weitere Posten
+// das Kostenbild: der Kostenvorschuss (Liquidität, Art. 98), die MwSt auf die
+// Parteientschädigung (fallabhängig) sowie die nicht bezifferbaren Auslagen-/
+// Beweis-/Übersetzungs-/Kindesvertretungskosten und die unentgeltliche
+// Rechtspflege (Hinweis). Grundlage/Verifikation: prozesskosten-zpo-95-96.md §A
+// (Art. 98 Rev. 1.1.2025) + prozesskosten-sonderkonstellationen.md §6.4/§6.7/§3.
+
+/** Kostenvorschuss nach Art. 98 ZPO (Stand 1.1.2025): Regel = höchstens die
+ *  Hälfte der mutmasslichen Gerichtskosten; voller Vorschuss im Schlichtungs-,
+ *  summarischen und Rechtsmittelverfahren (sowie Art. 6 IV lit. c / Art. 8 ZPO).
+ *  Am Bundesgericht gilt Art. 62 BGG (voller mutmasslicher Betrag). */
+export interface Kostenvorschuss {
+  /** Vorschuss-Spanne aus den mutmasslichen Gerichtskosten × Faktor; null =
+   *  nicht bezifferbar (Schlichtungspauschale / aufwandbasierte Gerichtskosten). */
+  spanne: Spanne | null;
+  /** true = voller Vorschuss (Faktor 1); false = höchstens die Hälfte (Faktor ½). */
+  voll: boolean;
+  faktor: 0.5 | 1;
+  norm: string;
+  hinweis: string;
+}
+
+export function berechneKostenvorschuss(
+  gk: PostenErgebnis, phase: Verfahrensphase, instanz: Instanz, verfahren: Verfahrensart,
+): Kostenvorschuss {
+  if (gk.kostenlos) {
+    return { spanne: { vonChf: 0, bisChf: 0 }, voll: false, faktor: 0.5, norm: 'Art. 98 ZPO',
+      hinweis: 'Für diese Konstellation fallen keine Gerichtskosten an — kein Kostenvorschuss.' };
+  }
+  // Bundesgericht: Art. 62 BGG (voller mutmasslicher Betrag), nicht Art. 98 ZPO.
+  if (instanz === 'bundesgericht') {
+    const s = postenSpanne(gk);
+    return { spanne: s, voll: true, faktor: 1, norm: 'Art. 62 BGG',
+      hinweis: 'Beschwerde ans Bundesgericht: Vorschuss in Höhe der mutmasslichen Gerichtskosten (Art. 62 Abs. 1 BGG).' };
+  }
+  // Voller Vorschuss (Art. 98 II): Schlichtung, summarisches und Rechtsmittelverfahren.
+  const grundVoll = phase === 'schlichtung' ? 'Schlichtungsverfahren'
+    : instanz === 'rechtsmittel' ? 'Rechtsmittelverfahren'
+    : verfahren === 'summarisch' ? 'summarisches Verfahren'
+    : null;
+  const voll = grundVoll !== null;
+  const faktor: 0.5 | 1 = voll ? 1 : 0.5;
+  const s = postenSpanne(gk);
+  const spanne = s ? skaliere(s, faktor) : null;
+  const summarischAusnahme = grundVoll === 'summarisches Verfahren'
+    ? ' — im summarischen Verfahren mit Ausnahmen (Art. 248 lit. d sowie bestimmte familienrechtliche Angelegenheiten: dort nur die Hälfte)'
+    : '';
+  const hinweis = voll
+    ? `Voller Vorschuss möglich (${grundVoll}, Art. 98 Abs. 2 ZPO)${gk.schlichtungspauschale ? ' — die Schlichtungspauschale ist hier nicht beziffert' : ''}${summarischAusnahme}.`
+    : 'Regel: höchstens die Hälfte der mutmasslichen Gerichtskosten (Art. 98 Abs. 1 ZPO, Fassung seit 1.1.2025).';
+  return { spanne, voll, faktor, norm: voll ? 'Art. 98 Abs. 2 ZPO' : 'Art. 98 Abs. 1 ZPO', hinweis };
+}
+
+/** MwSt auf die Parteientschädigung (Art. 95 III lit. b ZPO i.V.m. MWSTG):
+ *  Normalsatz 8,1 % (seit 1.1.2024). Kommt hinzu, wenn die berechtigte Partei
+ *  NICHT vorsteuerabzugsberechtigt ist (z. B. Privatperson); die kantonale
+ *  Behandlung ist uneinheitlich (inkl./zzgl./ohne). Anwendbarkeit fallabhängig
+ *  → nur auf ausdrücklichen Wunsch hinzugerechnet (§8). */
+export interface MwstAufschlag {
+  satzProzent: number;
+  /** MwSt-Betrag auf die Parteientschädigung; null = PE nicht beziffert. */
+  betrag: Spanne | null;
+  /** Parteientschädigung inkl. MwSt; null = nicht beziffert. */
+  bruttoSpanne: Spanne | null;
+  hinweis: string;
+}
+
+export function berechneMwstParteientschaedigung(
+  pe: PostenErgebnis, satzProzent: number = MWST_NORMALSATZ_PROZENT,
+): MwstAufschlag {
+  const s = postenSpanne(pe);
+  const basis = `MwSt-Normalsatz ${satzProzent.toLocaleString('de-CH')} % (seit 1.1.2024) auf die Parteientschädigung — anwendbar, wenn die berechtigte Partei nicht vorsteuerabzugsberechtigt ist (z. B. Privatperson); die kantonale Behandlung ist uneinheitlich (inkl./zzgl./ohne).`;
+  if (!s || (s.vonChf === 0 && s.bisChf === 0)) {
+    return { satzProzent, betrag: null, bruttoSpanne: null,
+      hinweis: pe.kostenlos ? 'Keine Parteientschädigung — kein MwSt-Aufschlag.' : `${basis} Hier nicht beziffert.` };
+  }
+  const f = satzProzent / 100;
+  const betrag: Spanne = { vonChf: Math.round(s.vonChf * f), bisChf: Math.round(s.bisChf * f) };
+  const bruttoSpanne: Spanne = { vonChf: Math.round(s.vonChf * (1 + f)), bisChf: Math.round(s.bisChf * (1 + f)) };
+  return { satzProzent, betrag, bruttoSpanne, hinweis: basis };
+}
+
+/** Nicht bezifferbare weitere Kostenposten (Art. 95 II lit. c–e / III lit. a ZPO)
+ *  und die unentgeltliche Rechtspflege (Art. 117 ff. ZPO) — ehrlich als Hinweis
+ *  ausgewiesen (§2/§8: aufwand-/bedürftigkeitsabhängig, kein deterministischer
+ *  Betrag). Reine, statische Aufklärung; keine fallabhängige Berechnung. */
+export const WEITERE_KOSTENPOSTEN: readonly string[] = [
+  'Kosten der Beweisführung (Gutachten, Zeugen) — Art. 95 Abs. 2 lit. c ZPO: aufwandabhängig, nicht im Voraus beziffert.',
+  'Übersetzungskosten — Art. 95 Abs. 2 lit. d ZPO; Kosten der Kindesvertretung (Art. 299/300) — Art. 95 Abs. 2 lit. e ZPO.',
+  'Notwendige Auslagen der Partei (z. B. Reise-/Porto-/Kopierkosten) — Art. 95 Abs. 3 lit. a ZPO.',
+  'Unentgeltliche Rechtspflege bei Mittellosigkeit und nicht aussichtsloser Sache: Befreiung von Vorschüssen und Gerichtskosten, unentgeltlicher Rechtsbeistand (Art. 117–118 ZPO) — mit Nachzahlungspflicht binnen 10 Jahren (Art. 123 ZPO); die Parteientschädigung an die Gegenpartei bleibt geschuldet.',
+];
 
 /** Interkantonaler Vergleich: dieselbe Konstellation über ALLE 26 Kantone
  *  (Auftrag David — Vergleichstabelle «was kostet es anderswo»). */

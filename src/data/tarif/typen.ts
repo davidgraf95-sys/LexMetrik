@@ -28,6 +28,15 @@ export const KANTON_NAMEN: Record<KantonCode, string> = {
   TI: 'Tessin', VD: 'Waadt', VS: 'Wallis', NE: 'Neuenburg', GE: 'Genf', JU: 'Jura',
 };
 
+/** MWST-Normalsatz (Art. 25 Abs. 1 MWSTG, SR 641.20): **8,1 %** seit 1.1.2024.
+ *  Bundesrechtlicher Satz; relevant für den MwSt-Aufschlag auf die
+ *  Parteientschädigung (Art. 95 III lit. b ZPO i.V.m. MWSTG), wenn die
+ *  berechtigte Partei nicht vorsteuerabzugsberechtigt ist. §5-SSOT für die
+ *  Tarif-Domäne; das Mietvertrags-Modul (`MV_PARAMETER.mwstSatz`) hält aus
+ *  Domänengründen eine eigene Kopie — beide stehen im Verfallsregister
+ *  (`bibliothek/register/parameter-verfall.md`, Zeile «MWST-Normalsatz»). */
+export const MWST_NORMALSATZ_PROZENT = 8.1;
+
 /** §7-Verifikationsstand. NIE 'geprüft' — das setzt Davids Wort-für-Wort-
  *  Abnahme nach abnahme/SCHEMA.md voraus (§8). */
 export type Verifiziert = 'recherche' | 'doppelt';
