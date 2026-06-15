@@ -1,0 +1,194 @@
+# Notariats- & Grundbuchgebühren beim Grundstückkauf — kantonale Tarife
+
+**Erstellt:** 15.6.2026 · **Anlass:** FAHRPLAN-NOTARIAT-GRUNDBUCH (Direktive David).
+**Status:** ERSTRECHERCHE im Aufbau (Cluster-Fan-out). Jeder Wert mit amtlichem
+Erlass + Artikel/§ + Link + Stand. Doppelcheck-Pass folgt (dann `doppelt`).
+**Nicht abgenommen** (§7 — nichts trägt `geprüft`).
+
+Vier Kostenblöcke beim Erwerb (Stützstelle Kaufpreis CHF 1'000'000):
+**N** Beurkundung Kaufvertrag (Notariat) · **G** Grundbuch Eigentumsübertragung ·
+**P** Grundpfand/Schuldbrief (Beurkundung + Eintrag, über Pfandsumme) ·
+**H** Handänderungssteuer (kantonale/kommunale STEUER, separat).
+
+Notariatssysteme: Amtsnotariat (staatlich, fixer Tarif) · freies/lateinisches
+Notariat (selbständig, Tarif teils mit Bandbreite) · gemischt.
+
+---
+
+## Tranche 1 — AI · SG · GR · AG · TG (recherchiert 15.6.2026, doppelt verifiziert)
+
+### AI — Appenzell Innerrhoden (Amtsnotariat)
+- **N** Beurkundung Kaufvertrag: **1‰**, min. 60, kein Max → 1 Mio = CHF 1'000. Gebührentarif (GebT), **GS 172.513, Art. 14 Abs. 2 Ziff. 1**, Stand 1.1.2026. https://ai.clex.ch/app/de/texts_of_law/172.513 — Bemessung: Handänderungswert.
+- **G** Grundbuch Eigentum: **1‰** (öff. beurkundet), min. 100 → CHF 1'000. GebT GS 172.513, **Art. 11 Abs. 1 Ziff. 1.1**.
+- **P** Schuldbrief: Beurkundung 1‰ (50–2'000) Art. 14 II Ziff. 3 + Eintrag 1‰ (50–2'000) Art. 11 I Ziff. 6.1.
+- **H** Handänderungssteuer: **1 %**. Steuergesetz **GS 640.000, Art. 119 Abs. 1** (Befr. Art. 118, u. a. Ehegatten), Stand 1.1.2024. https://ai.clex.ch/app/de/texts_of_law/640.000
+
+### SG — St. Gallen (Amtsnotariat: Grundbuchverwalter beurkundet)
+- **N** Beurkundung: Eintragungsansatz, bei amtl. Beurkundung verdoppelt → effektiv ~2‰ → CHF 2'000. Gebührentarif Grundbuchämter **sGS 914.5, Nr. 60.01.01 + Verdoppelung Nr. 0.2**.
+- **G** Grundbuch Eigentum: **2‰** bis 3 Mio (darüber +0.5‰), min. 100 / max. 12'500 → CHF 2'000. **sGS 914.5, Nr. 10.01**. https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/914.5 — Korrektur: Schwelle 3 Mio / 0.5‰ (nicht 2 Mio/0.05‰).
+- **P** Schuldbrief: Papier 1.5‰ (100–3'000) Nr. 11.01 / Register 1‰ (100–2'000) Nr. 11.01.01; Beurkundung verdoppelt (Nr. 60.01.02).
+- **H** Handänderungssteuer: **1 %** (Gemeindesteuer, kantonal einheitlich), reduziert 0.5 % (Eltern–Kinder/Geschwister Nachlassteilung). Steuergesetz **sGS 811.1, Art. 245** (Befr. 244, u. a. Ehegatten). https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/811.1
+
+### GR — Graubünden (gemischt: patentierte Notare / Kreisnotare / Grundbuchverwalter)
+- **N** Beurkundung: **1‰**, min. 100 / max. 15'000 → CHF 1'000. NotGebV **BR 210.370, Art. 16 Abs. 1 lit. a**, Stand 1.1.2024. https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370 — zzgl. MwSt./Auslagen.
+- **G** Grundbuch Eigentum: **1‰**, min. 50 / max. 15'000 → CHF 1'000. V. Gebühren Grundbuchämter **BR 217.200, Art. 13 Abs. 1 lit. a**, Stand 1.1.2025. https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200
+- **P** Schuldbrief: Beurkundung 1‰ (100–15'000) NotGebV Art. 16 I lit. i Ziff. 1 + Eintrag 1‰ (50–15'000) BR 217.200 Art. 13 I lit. j.
+- **H** Handänderungssteuer: **reine Gemeindesteuer** (Kanton erhebt keine), Gemeinde max. **2 %**. GKStG **BR 720.200, Art. 12 Abs. 1** (Befr. Art. 9). https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200 — konkreter Satz NUR im kommunalen Gesetz (nicht zentral) → ehrlich als Rahmen 0–2 %.
+
+### AG — Aargau (freiberufliches Notariat — KORREKTUR: kein Amtsnotariat)
+- **N** Beurkundung: Staffel **4‰ bis 600'000 (min. 300) + 2‰ 600'001–3 Mio + 1‰ darüber, max. 20'000** → 1 Mio = CHF 3'200. Dekret Notariatstarif **SAR 295.250, § 2 Abs. 1**, Stand 1.1.2025. https://gesetzessammlungen.ag.ch/app/de/texts_of_law/295.250 — zzgl. MwSt./Auslagen (§ 9).
+- **G** Grundbuchabgabe Eigentum: **4‰** der Kaufsumme, min. 100, kein Max → CHF 4'000. GBAG **SAR 725.100, § 8 Abs. 1**, Stand 1.1.2020 (Bemessung auf 1'000 gerundet § 4). https://gesetzessammlungen.ag.ch/app/de/texts_of_law/725.100
+- **P** Schuldbrief: Beurkundung ⅔ der §2-Ansätze (max. 7'500) NotTarif § 3 I + Eintrag vertragl. Grundpfand **1.5‰** (min. 100) GBAG § 23 I lit. a + GBGD-Fixgebühr CHF 40/Gläubiger.
+- **H** Handänderungssteuer: **keine separate** — die Grundbuchabgabe § 8 GBAG (Gemengsteuer) deckt es ab (= Posten G). Reduziert: Erbgang 2‰ (§ 15), Baulandumlegung 1‰ (§ 12).
+
+### TG — Thurgau (Amtsnotariat/Mischform: kant. Grundbuchverwalter/Notare)
+- **N** Beurkundung: **1‰**, min. 100 / max. 5'000 → CHF 1'000. GGG **RB 632.1, § 14 Abs. 1**, i. K. 1.4.1997 (Preisliste GNI 1.1.2026). https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1 — zzgl. MwSt.
+- **G** Grundbuch Eigentum: **4‰**, min. 100 / max. 20'000 → CHF 4'000. GGG **RB 632.1, § 14 Abs. 2 Ziff. 1**. Sonderfälle 1‰ (Erbgang/Ehegatten, max. 2'000).
+- **P** Schuldbrief: Beurkundung 1‰ (100–5'000) § 14 I + Eintrag 1.5‰ (100–10'000) § 14 II Ziff. 11.
+- **H** Handänderungssteuer: **1 %**. Steuergesetz **RB 640.1, § 140 Abs. 1** (Befr. § 138, u. a. Eltern–Nachkommen/Geschwister). https://www.rechtsbuch.tg.ch/app/de/texts_of_law/640.1
+
+---
+
+## Tranche 2 — OW · NW · GL · ZG · FR (recherchiert 15.6.2026, amtlich verifiziert)
+
+### OW — Obwalden (freies Notariat)
+- **N** Beurkundung: Staffel **3‰ bis 300k + 2‰ bis 600k + 1‰ über 600k**, min. 600 → 1 Mio = CHF 1'900 (+MwSt). V. Beurkundungsgebühren **GDB 210.32, Art. 10 Ziff. 12**, Stand 1.4.2012. https://gdb.ow.ch/app/de/texts_of_law/210.32 (Erhöhung max. +50 % Art. 4).
+- **G** Grundbuch: **1.5‰ bis 1 Mio + 1‰ darüber**, min. 100 / max. 15'000 → CHF 1'500. Grundbuchgebührentarif **GDB 213.61, Art. 6 Abs. 1**, Stand 1.1.2022. https://gdb.ow.ch/app/de/texts_of_law/213.61
+- **P** Schuldbrief: Beurkundung GDB 210.32 Art. 10 Ziff. 23 (1.5/1/0.5‰, min. 400) + Eintrag GDB 213.61 Art. 12 (2/1.5/1‰, min. 80/max. 10'000).
+- **H** Handänderungssteuer: **1.5 %**. Steuergesetz **GDB 641.4, Art. 162**, Stand 1.1.2026 (Befr. Art. 159: Erbgang/Ehegatten/gerade Linie/Geschwister). https://gdb.ow.ch/app/de/texts_of_law/641.4
+
+### NW — Nidwalden (Amtsnotariat)
+- **N** Beurkundung: Staffel **2.5‰ bis 200k + 2‰ bis 500k + 1.5‰ bis 1 Mio + 1‰ bis 5 Mio + 0.5‰ darüber**, min. 300 → 1 Mio = CHF 1'850. Beurkundungsgebührenverordnung **NG 268.12, § 20**, Stand 1.1.2016. https://gesetze.nw.ch/app/de/texts_of_law/268.12
+- **G** Grundbuch: **1‰ bis 3 Mio (min. 200/Grundstück) + 0.5‰ darüber**, max. 8'000 → CHF 1'000. Gebührenverordnung **NG 265.51, Tarif-Nr. 2.6.1.1**, Stand 1.1.2025. https://gesetze.nw.ch/app/de/texts_of_law/265.51
+- **P** Schuldbrief: Beurkundung NG 268.12 § 28 (1.5/1.25/1‰, min. 200) + Eintrag NG 265.51 Tarif 2.6.3.1 (2‰ bis 3 Mio, min. 100/max. 8'000) + Ausfertigung 100.
+- **H** Handänderungssteuer: **1 %**. Steuergesetz **NG 521.1, Art. 140** (Befr. Art. 139: Eltern/Kinder/Ehegatten/Erbgang), seit 1.1.2001. https://gesetze.nw.ch/app/de/texts_of_law/521.1
+
+### GL — Glarus (Amtsnotariat-Mischform)
+- **N** Beurkundung: Staffel **3‰ bis 200k + 2‰ bis 500k + 1‰ bis 5 Mio + 0.5‰ darüber**, min. 400 → 1 Mio = CHF 1'700. V. Beurkundung/Beglaubigung **GS III B/3/2, Anhang Art. A1-1 Ziff. 1**, Stand 1.1.2009. https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2
+- **G** Grundbuch: **3.5‰** des Erwerbspreises, min. 100, kein Max → CHF 3'500. GebT ZGB **GS III B/7/1, Art. 13 Abs. 1 Bst. a**, Stand 1.1.2022. https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1 (faktischer Ersatz für fehlende Handänderungssteuer).
+- **P** Schuldbrief: Beurkundung GS III B/3/2 Art. A1-1 Ziff. 7.1 (1.5‰, min. 50/max. 500) + Eintrag GS III B/7/1 Art. 13 Abs. 2 Bst. a (3‰, min. 50).
+- **H** Handänderungssteuer: **KEINE** (GL erhebt keine; nur Erbschaft/Schenkung + Grundstückgewinn). Quelle: gl.ch Spezialsteuern.
+
+### ZG — Zug (gemischt/freiberuflich; AUFWANDBASIERT, kein Promille seit 1.1.2019)
+- **N** Beurkundung: **fester Rahmen CHF 300–4'000** (kein Promille), +10–50 % Mehraufwand. Verwaltungsgebührentarif **BGS 641.1, § 9 Abschn. J Ziff. 89**, Stand 22.8.2025. https://bgs.zg.ch/app/de/texts_of_law/641.1
+- **G** Grundbuch: Zeitaufwand × CHF 180/h × Faktor 4, bis ~CHF 6'000 (kein kaufpreisproportionaler Betrag). Grundbuchgebührentarif **BGS 215.35, § 13/§ 14 Abs. 1 Bst. a**, Stand 1.1.2019. https://bgs.zg.ch/app/de/texts_of_law/215.35
+- **P** Schuldbrief: Beurkundung BGS 641.1 Ziff. 89bis (Rahmen 210–850) + Eintrag BGS 215.35 § 14 Abs. 1 Bst. e (180/h × 3, bis 4'500).
+- **H** Handänderungssteuer: **KEINE** (am Erlass BGS 215.35 § 1 belegt; per Revision 2019 gestrichen). Vorbehalt: ESTV-Gegenprüfung beim Doppelcheck nachziehen.
+
+### FR — Freiburg (freies Notariat, Pflichttarif; Grundbuch Fixgebühr)
+- **N** Beurkundung: Staffel **7‰/5‰/3‰/2‰/1‰/0.5‰** je Stufe, min. 150 / max. 10'000 → 1 Mio = CHF 2'455. Tarif des émoluments des notaires **RSF 261.16, Art. 4 ch. 1bis**, Fassung 1986/1993. https://bdlf.fr.ch/app/fr/texts_of_law/261.16
+- **G** Grundbuch: **FIX CHF 120** (1–10 Grundstücke), kein Promille. Tarif émoluments fixes RF **RSF 214.5.16, Art. 2 ch. 6**, Stand 1.12.2018. https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16
+- **P** Schuldbrief: Notar RSF 261.16 Art. 4 ch. 3 (Staffel 5‰…0.45‰, max. 10'000) + GB-Eintrag RSF 214.5.16 Art. 2 ch. 11 (fix 100 + Ausf. 30) + **Grundpfandsteuer 0.75 %** RSF 635.1.1 Art. 23/20.
+- **H** Handänderungssteuer: **1.5 % kantonal + Gemeindezuschlag bis 100 % → effektiv bis 3.0 %**. Loi droits de mutation **RSF 635.1.1, Art. 21** (+ Art. 22 Gemeinde; Erstwohnungs-Abzug Art. 19a seit 2024), Stand 1.1.2024. https://bdlf.fr.ch/app/fr/texts_of_law/635.1.1
+
+## Tranche 1 — ZH · BE · LU · UR · SZ (recherchiert 15.6.2026, amtlich verifiziert)
+
+### ZH — Zürich (Amtsnotariat, staatlicher Fixtarif)
+- **N** Beurkundung: **1‰** Verkehrswert (≈ Kaufpreis), min. 100, kein Max → CHF 1'000. NotGebV **LS 243, Anhang Ziff. 1.1.1**, Nachtrag 123, Stand 1.1.2024. https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html
+- **G** Grundbuch: **1‰**, min. 100 → CHF 1'000. NotGebV LS 243, Anhang Ziff. 2.2.1.
+- **P** Schuldbrief: Beurkundung 1‰ (Ziff. 1.2.1) + Eintrag 1‰ (Ziff. 2.3.1), je min. 100.
+- **H** Handänderungssteuer: **KEINE** (abgeschafft per 1.1.2005, Volksabstimmung 30.11.2003). OS 631.1.
+
+### BE — Bern (freies Notariat; Grundbuch Fix-Taxpunkte)
+- **N** Beurkundung: **Rahmentarif** nach Vertragswert (Anhang 1), bei 1 Mio ca. **min. 2'915 / Mittel 3'745 / max. 4'575**. GebVN **BSG 169.81, Art. 13 + Anhang 1**, Stand 1.3.2022. https://www.belex.sites.be.ch/app/de/texts_of_law/169.81 — (volle Staffel im Doppelcheck nachtragen).
+- **G** Grundbuch: **FIX 200 Taxpunkte = CHF 200** (1 TP = CHF 1; −20 % elektronisch → 160), KEIN Promille. GebV **BSG 154.21, Anhang 4B Ziff. 3.1.1**, Stand 1.5.2026. https://www.belex.sites.be.ch/app/de/texts_of_law/154.21
+- **P** Schuldbrief: Beurkundung nach Zeitaufwand min. 200 (GebVN Art. 18) + Eintrag 100 TP (Anhang 4B Ziff. 3.3.1), KEIN Promille.
+- **H** Handänderungssteuer: **1.8 %** der Gegenleistung. HStG **BSG 215.326.2, Art. 11 Abs. 1** (Bemessung Art. 6; Hauptwohnsitz-Befreiung erste 800'000, Art. 11a/11b), Stand 1.4.2023. https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2
+
+### LU — Luzern (freies Notariat, Tarif vom Kantonsgericht)
+- **N** Beurkundung: Staffel **3‰ bis 500k + 2.5‰ bis 1 Mio + 2‰ bis 5 Mio + 1‰ bis 10 Mio (>10 Mio frei)**, min. 500 / max. 15'750 → 1 Mio = CHF 2'750. BeurkGebV **SRL 258, § 21 Abs. 1**, Stand 1.1.2022. https://srl.lu.ch/app/de/texts_of_law/258 (§ 10: kein Über-/Unterschreiten).
+- **G** Grundbuch: **2‰** der Vertragssumme, min. 100, kein Max → CHF 2'000. GBGT **SRL 228, § 2 Abs. 1 Ziff. 1**, Stand 1.1.2026 (halber Ansatz Ehegatten/Verwandte § 2 I Ziff. 2). https://srl.lu.ch/app/de/texts_of_law/228
+- **P** Schuldbrief: Beurkundung Staffel 2/1.25/0.75/0.5‰ (min. 300/max. 7'125) SRL 258 § 29 + Eintrag 2‰ (min. 50) SRL 228 § 8 + Titel 40 (§ 10).
+- **H** Handänderungssteuer: **1.5 %**. HStG **SRL 645, § 6** (Befr. § 3: Ehegatten/gerade Linie, Wert < 20'000), Stand 1.6.2013. https://srl.lu.ch/app/de/texts_of_law/645
+
+### UR — Uri (freies Notariat; Notariatstarif = VERBANDS-Konventionaltarif, kein staatlicher Erlass)
+- **N** Beurkundung: Staffel (Tarif A) **3‰ bis 250k + 2.5‰ bis 1 Mio + 2‰ über 1 Mio** (>5 Mio nach Vereinbarung), min. 500/750/2'500, **Max generell 30'000** → 1 Mio = CHF 2'500. Notariatstarif der Urner Notar:innen, **Ziff. 5.2** (Verbandstarif, Mitgliederversammlung, gestützt RB 9.2311), vom 25.3.2014/Stand 17.3.2015. https://www.urilaw.ch/fileadmin/user_upload/documents/Notariatstarif-Uri.pdf — **ehrlich kennzeichnen: kein kantonaler Gebührenerlass**.
+- **G** Grundbuch: **2‰** der Vertragssumme, min. 50 / max. 10'000 → CHF 2'000. Grundbuchgebührentarif (Justizdirektion) **Art. 2 Abs. 1+3** (gestützt RB 3.2521 / RB 9.3408), vom 4.12.2024, i. K. 1.1.2025. https://www.ur.ch/online-schalter/2127/download
+- **P** Schuldbrief: Beurkundung (Tarif B) 2.5/2/1.5‰ (min. 350/625/2'000) Ziff. 6.2 + Eintrag 2‰ (min. 70/max. 10'000) Art. 5.
+- **H** Handänderungssteuer: **KEINE** (kein HStG in der RB); stattdessen die 2‰-Grundbuchgebühr.
+
+### SZ — Schwyz (Bezirksnotariat/Amtsnotariat)
+- **N** Beurkundung: **CHF 45 je CHF 50'000** Handänderungswert (≈ 0.9‰), Max 13'500 (>10 Mio Mehrbetrag −50 %) → 1 Mio = CHF 900. Gebührentarif Notare/Grundbuchverwalter **SRSZ 213.512, § 5 Abs. 1 Nr. 1**, Stand 1.2.2021. https://www.sz.ch/public/upload/assets/7361/213_512.pdf
+- **G** Grundbuch: KEIN Promille — Eintragung pauschal **CHF 8** (Nr. 5) + Blatt-Anlage 35 (Nr. 6) + Publikation 20 (Nr. 15); Wertbasis liegt in Posten N. SRSZ 213.512 § 5 I.
+- **P** Schuldbrief: Errichtung CHF 45 je 50'000 (≈ 0.9‰, max. 10'350) Nr. 2 + Eintrag 8 (Nr. 5).
+- **H** Handänderungssteuer: **1.0 %** (durch die Gemeinde). Gesetz HStG **SRSZ 172.500, § 7** (Wert § 8; Befr. § 5/§ 6: Ehegatten/gerade Linie/Geschwister/Erbgang), Stand 1.2.2007. https://www.lexfind.ch/tolv/82040/de — Korrektur: SZ erhebt sehr wohl eine HÄSt.
+
+## Tranche 3 — SO · BS · BL · SH · AR (recherchiert 15.6.2026, amtlich verifiziert)
+
+### SO — Solothurn (gemischt: Amtschreiberei + freies Notariat; rahmenbasiert)
+- **N** Beurkundung: **Gebührenrahmen CHF 100–10'000** (kein gesetzl. Promille; Preisblatt ~1'600 + 1‰ über 100k) → ~CHF 2'500 bei 1 Mio. GT **BGS 615.11, § 25 Abs. 1 lit. a** i.V.m. § 3, Stand 1.1.2025. https://bgs.so.ch/app/de/texts_of_law/615.11
+- **G** Grundbuch: gleicher Tarif (Amtschreiberei = Grundbuchamt), Rahmen 100–10'000, ~2'500. GT § 25 Abs. 1 lit. a.
+- **P** Schuldbrief: Rahmen CHF 20–10'000, GT § 25 Abs. 1 lit. m.
+- **H** Handänderungssteuer: **2.2 %** (Ehegatten/eingetr. Partner/Nachkommen die Hälfte = 1.1 %). StG **BGS 614.11, § 212** (Bemessung § 210, Befr. § 207; keine Eigenheim-Befreiung), Stand 1.1.2025. https://bgs.so.ch/app/de/texts_of_law/614.11
+
+### BS — Basel-Stadt (freies Notariat)
+- **N** Beurkundung: Staffel **0.25 % bis 2 Mio (min. 500), darüber 0.2/0.1/0.075 %**, max. 50'000 → 1 Mio = CHF 2'500. Notariatstarif **SG 292.400, § 11 Abs. 1 Ziff. 17** (max. § 8 IV), Stand 1.7.2016. https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/292.400
+- **G** Grundbuch: **1‰**, min. 200 / max. 50'000 → CHF 1'000. V. zum EG ZGB **SG 211.110, § 51** (amtl. Merkblatt GVA 15.8.2024). https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110
+- **P** Schuldbrief: Beurkundung SG 292.400 § 11 I Ziff. 28 lit. a (0.25 %, min. 500/max. 50'000) + Eintrag 1‰ + Erstausstellung 100.
+- **H** Handänderungssteuer: **3 %** (ermässigt 1.5 % bei ≥6 J selbstbewohnt / Ersatzbeschaffung). HStG **SG 650.100, § 1 Abs. 2** (Befr. § 4: Nachkommen/Ehegatten/Erbteilung), Stand 2010. https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.100
+
+### BL — Basel-Landschaft (freies Notariat; Notariat/Grundbuch FIX, kein Promille)
+- **N** Beurkundung: **Rahmen CHF 800–2'500** (+MwSt), aufwandbasiert, kaufpreis-unabhängig. NotGebV **SGS 217.13, § 9 Abs. 1 lit. d**, Stand 1.11.2012. https://bl.clex.ch/app/de/texts_of_law/217.13
+- **G** Grundbuch: **FIX CHF 300** (+80 Handänderungsanzeige), kaufpreis-unabhängig. GebV zum Zivilrecht **SGS 211.71, § 16 Ziff. 1 lit. d**, Stand 1.1.2013. https://bl.clex.ch/app/de/texts_of_law/211.71
+- **P** Schuldbrief: Beurkundung NotGebV § 9 I lit. f (Rahmen 350–1'500) + Eintrag GebV § 16 Ziff. 4 lit. a (fix 300).
+- **H** Handänderungssteuer: **je 1.25 % Veräusserer UND Erwerber = 2.5 % total**; **Erwerber CHF 0 bei ausschliesslich/dauernd selbstgenutztem Wohneigentum** (§ 82 Abs. 2). StG **SGS 331, § 84 Abs. 1**, Stand 1.1.2023. https://bl.clex.ch/app/de/texts_of_law/331
+
+### SH — Schaffhausen (reines Amtsnotariat)
+- **N** Beurkundung: **1‰** der Vertragssumme, min. 50, kein Max → CHF 1'000. Grundbuchgebührenverordnung **SHR 211.433, § 13 Abs. 1 Ziff. 1**, Stand 1.1.2011. https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433
+- **G** Grundbuch: **6‰** der Vertragssumme, min. 50 (ermässigt 3‰ Verwandte / 1‰ Ehe/Erbgang) → CHF 6'000. SHR 211.433, **§ 14 Abs. 1 Ziff. 1**.
+- **P** Schuldbrief: Beurkundung § 13 I Ziff. 3.1 (1‰) + Eintrag § 15 I Ziff. 1 (2‰), je min. 50.
+- **H** Handänderungssteuer: **KEINE** (StG SHR 641.100 kennt sie nicht; nur Grundstückgewinnsteuer). https://rechtsbuch.sh.ch/app/de/texts_of_law/641.100
+
+### AR — Appenzell Ausserrhoden (Amtsnotariat; N+G kombiniert)
+- **N+G** Beurkundung **inkl. Grundbucheintrag** kombiniert: **1‰ des Handänderungswerts, min. 200 / max. 4'000** (AR trennt N und G nicht) → CHF 1'000 total. Gebührentarif für die Gemeinden **bGS 153.2, Art. 12 Ziff. 8.1 lit. a** (½‰ Erbgang lit. b), Stand 1.1.2018. https://ar.clex.ch/app/de/texts_of_law/153.2
+- **P** Schuldbrief: Errichtung **1‰** der Pfandsumme, min. 100 / max. 2'000 (Beurkundung eingeschlossen). bGS 153.2 Art. 12 Ziff. 8.2 lit. a.
+- **H** Handänderungssteuer: **2 %** (Gemeindesteuer, Gemeinden dürfen tiefer; halber Satz 1 % Eltern→Nachkommen). StG **bGS 621.11, Art. 238** (Bemessung 236, Befr. 237), Stand 1.1.2025. https://ar.clex.ch/app/de/texts_of_law/621.11
+
+## Tranche 5 — TI · VD · VS · NE · GE · JU (recherchiert 15.6.2026; freies/lateinisches Notariat)
+
+### TI — Tessin (keine separate Handänderungssteuer; Grundbuchgebühr = tassa di trapasso)
+- **N** Beurkundung: Höchst-Staffel (kumulativ) **5‰ bis 250k + 4‰ + 3.5‰ + 3‰ bis 1 Mio**, min. 500 (Notar darf unterschreiten, Art. 1 cpv. 5) → CHF 3'875. Tariffa notarile **RL 952.300, Art. 5 cpv. 1**, Stand 1.7.2015.
+- **G** Grundbuch/Handänderung: **11‰** (Wert < 2 Mio) / 13‰ (> 2 Mio), auf Gesamtwert → CHF 11'000. LTORF **RL 216.200, Art. 11 cpv. 1** (Reduktion 1/8 Ehegatten/Erbgang Art. 12), Stand 1.1.2017.
+- **P** Schuldbrief: Beurkundung 952.300 Art. 6 (halber Art.-5 ab 100k) + Eintrag 216.200 Art. 25 (7‰).
+- **H** = Posten G (keine separate Steuer).
+
+### VD — Waadt (freies Notariat)
+- **N** Beurkundung: Staffel (kumulativ) **7‰ bis 100k + 5‰ + 3‰ + 2.5‰ + 2‰ bis 1 Mio**, min. 100 → CHF 3'425. TNo **BLV 178.11.2, Art. 14**, Stand 1.1.2005.
+- **G** Grundbuch: **1.5‰**, min. 100 / max. 20'000 → CHF 1'500. LRF **BLV 211.61, Art. 26**, Stand 1.1.2018.
+- **P** Schuldbrief: Beurkundung TNo Art. 20 + Eintrag LRF Art. 28 (1.5‰, max. 20'000); Pfand vom droit de mutation ausgenommen.
+- **H** Droits de mutation: **2.2 % Kanton + Gemeindezuschlag bis 50 % → max. 3.3 %** → CHF 22'000 (bis 33'000). LMSD **BLV 648.11, Art. 10** (+ LICom 650.11 Art. 23–24; Befr. Art. 3 Ehegatten; kein Eigenheim-Rabatt), Stand aktuell.
+
+### VS — Wallis (freies Notariat)
+- **N** Beurkundung: Staffel (kumulativ) **5‰ bis 200k + 4‰ + 3‰ bis 1 Mio + 2‰ darüber**, min. 200, kein Max → CHF 3'875 (zzgl. MwSt). Tarif émoluments notaires **RS 178.104, Art. 13 al. 1**, Stand 1.1.2011.
+- **G** Grundbuch: **2‰**, min. 50 / max. 3'000 → CHF 2'000. Ordonnance RF **RS 211.611, Art. 96 ch. I.1 lit. a** (Schuldner Käufer Art. 95), Stand 1.3.2003.
+- **P** Schuldbrief: Beurkundung 178.104 Art. 13 al. 2 + Eintrag 211.611 Art. 96 ch. I.3 (2.5‰, max. 3'000) + Pfandsteuer LDM Art. 16 (0.2 %).
+- **H** Droits de mutation: **pauschal-stufig 1 % (50k–500k) / 1.3 % (500k–1 Mio) / 1.5 % (>1 Mio)** auf Gesamtwert + Gemeindezuschlag bis 50 % → bei 1 Mio CHF 13'000 (bis 19'500). LDM **RS 643.1, Art. 14 al. 1** (Befr. Art. 18 gerade Linie/Ehegatten), Stand 1.1.2013. *(Stufenmodus pauschal — im Praxisfall zu bestätigen.)*
+
+### NE — Neuenburg (freies Notariat; Notariat = feste Pauschalen pro Preistranche)
+- **N** Beurkundung: **feste Pauschalbeträge pro Preistranche** (kein Promille); Tranche 900'001–1'000'000 = **CHF 2'950** (exkl. MwSt). Arrêté tarif notaires **RSN 166.31, Art. 54**, Stand 13.6.2012.
+- **G** Grundbuch: **1.5‰ bis 800k + 0.8‰ Überschuss**, min. 50 → CHF 1'360. LERF **RSN 215.411.6, Art. 9 al. 2**, Stand 1.8.2013.
+- **P** Schuldbrief: Beurkundung 166.31 Art. 44 (Pauschalstaffel; 900k–1M = 2'300) + Eintrag 215.411.6 Art. 10 (2‰ bis 2 Mio).
+- **H** Droits de mutation (lods): **3.3 %** (ermässigt 2.2 % erste Selbstbewohnung Art. 11) → CHF 33'000 (bzw. 22'000). LDMI **RSN 635.0, Art. 6** (Befr. Art. 8 Erbgang/Ehegatten/gerade Linie), Stand aktuell.
+
+### GE — Genf (freies Notariat)
+- **N** Beurkundung: Staffel (tranchenweise) **7‰ bis 200k + 6‰ + 4.5‰ + 4‰ bis 1 Mio**, min. 200 → ≈ CHF 5'200. REmNot **RSG E 6 05.03, Art. 10**, Stand 1.9.1985. **VORBEHALT:** silgeneve.ch liefert das ‰-Zeichen fehlerhaft als «%»; korrekte Lesart zweifelsfrei Promille (‰) — beim Doppelcheck am Originaltext gegenlesen.
+- **G** Grundbuch: **0.21 % (2.1‰)**, max. 40'000 → CHF 2'100. REmORFDIT **RSG E 1 50.06, Art. 3 al. 6**, Stand 1.7.2011.
+- **P** Schuldbrief: Beurkundung REmNot Art. 16 + Eintrag REmORFDIT Art. 4 al. 6 (0.085 %) + Registrierungssteuer LDE Art. 84/85 (0.65 %).
+- **H** Droits d'enregistrement: **3 %** des Preises (Käufer) → CHF 30'000. LDE **RSG D 3 30, Art. 33** (Reduktion Art. 8A: −15'000 bei Hauptwohnsitz wenn Preis ≤ 1 Mio).
+
+### JU — Jura (freies Notariat; Beträge in Punkten ≈ CHF 1)
+- **N** Beurkundung: Staffel (degressiv-zonal) **7‰ bis 100k + 5‰ + 3.5‰ + 2.5‰ + 2‰ bis 1 Mio**, min. 200 / Max gesamt 15'000 → CHF 3'525. Décret émoluments notaires **RSJU 189.61, Art. 9 al. 1**, Stand 1.1.2005.
+- **G** Grundbuch: **1.5‰**, min. 40 / max. 10'000 Punkte → ≈ CHF 1'500. Décret émoluments RF **RSJU 176.331, Art. 6**, Stand 1.1.2017. *(Exakter Punktwert 2026 = separater Indexierungs-Arrêté; Basis 1 Punkt ≈ CHF 1 → Frankenbetrag «≈».)*
+- **P** Schuldbrief: Beurkundung 189.61 Art. 10 + Eintrag 176.331 Art. 7 (1‰ + 70 Pkt) + Pfandsteuer LDMG Art. 13 (3.5‰).
+- **H** Droits de mutation: **2.5 % (≤ 1 Mio) / 3.2 % (Teil über 1 Mio)**, ermässigt 1.5 % Nachkommen/Vorfahren (Art. 9) → CHF 25'000. LDMG **RSJU 215.326.2, Art. 6** (Befr. Art. 10 Ehegatten/Konkubinat), Stand 1.3.2024.
+
+---
+
+## Offene Doppelcheck-Punkte (vor `geprüft` / produktiver Nutzung)
+- **GE** ‰-vs-%-Zeichen REmNot Art. 10/16 am Originaltext gegenlesen.
+- **JU** exakter Punktwert 2026 (RSJU 176.331-Indexierung).
+- **VS** LDM Art. 14 Anwendungsmodus (pauschal-stufig bestätigt durch Wortlaut).
+- **ZG** Handänderungssteuer-Negativbefund an ESTV gegenchecken.
+- **BS** § 51 SG 211.110 Grundbuch-Promille am Volltext (bisher amtl. Merkblatt).
+- **BE** volle Anhang-1-Staffel der Kaufbeurkundung nachtragen.
+- **AG** Kanzlei-Grundbuchgebühr-Fixbetrag (GBGD) — wertabhängiger Teil über § 8 GBAG.
