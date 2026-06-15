@@ -6,16 +6,16 @@ import { BetragsFeld } from '../BetragsFeld';
 import { LinkTeilenButton } from '../LinkTeilenButton';
 import { permalinkKodieren, permalinkLesen, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import {
-  berechneProzesskosten, vergleichAlleKantone, postenText,
-  MATERIEN, VERFAHRENSPHASEN, KANTONE,
-  type KantonCode, type Verfahrensphase, type Materie, type PostenErgebnis,
+  berechneProzesskosten, berechneKostenrisiko, vergleichAlleKantone, postenText,
+  MATERIEN, VERFAHRENSPHASEN, VERFAHRENSARTEN, INSTANZEN, KANTONE,
+  type KantonCode, type Verfahrensphase, type Materie, type Verfahrensart, type Instanz, type PostenErgebnis,
 } from '../../lib/prozesskosten';
 import { KANTON_NAMEN } from '../../data/tarif/typen';
 
-// ─── Prozesskosten-Rechner (Art. 95/96 ZPO) ─────────────────────────────────
+// ─── Prozesskosten-Cockpit (Art. 95/96 ZPO) ─────────────────────────────────
 // Reine Darstellung (§3): gerechnet wird in lib/prozesskosten.ts über die
-// amtlich verifizierte kantonale Datenschicht. Mit interkantonaler
-// Vergleichstabelle (Auftrag David).
+// amtlich verifizierte Datenschicht. Matrix Kanton × Verfahren × Verfahrensart ×
+// Instanz (inkl. Bundesgericht) × Materie + Kostenrisiko + interkant. Vergleich.
 
 const DISCLAIMER =
   'Prozesskosten = Gerichtskosten + Parteientschädigung (Art. 95 ZPO); die Kantone setzen die Tarife fest (Art. 96 ZPO). ' +
@@ -27,6 +27,9 @@ const PK_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
   sw: { p: 'sw', typ: 'num', gueltig: (n) => Number.isFinite(n) && n >= 0 },
   phase: { p: 'ph', typ: 'str', gueltig: einerVon('schlichtung', 'entscheid') },
   materie: { p: 'ma', typ: 'str', gueltig: einerVon(...MATERIEN.map((m) => m.wert)) },
+  instanz: { p: 'in', typ: 'str', gueltig: einerVon(...INSTANZEN.map((i) => i.wert)) },
+  verfahren: { p: 'vf', typ: 'str', gueltig: einerVon(...VERFAHRENSARTEN.map((v) => v.wert)) },
+  quote: { p: 'q', typ: 'num', gueltig: (n) => Number.isInteger(n) && n >= 0 && n <= 100 },
 };
 
 const zahl = (roh: string): number | undefined => {
@@ -35,9 +38,10 @@ const zahl = (roh: string): number | undefined => {
   return Number.isFinite(n) ? n : undefined;
 };
 
-/** Ein Kostenposten als Eckdaten-Kachel (Hauptwert mit Messing-Oberkante,
- *  Anatomie wie EckdatenKachel) + Rechtsgrundlage und amtlicher Link.
- *  Reine Darstellung — Betrag/Text kommen unverändert aus postenText(). */
+const chf = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
+const spanneText = (s?: { vonChf: number; bisChf: number }): string =>
+  !s ? '—' : s.vonChf === s.bisChf ? chf(s.vonChf) : `${chf(s.vonChf)} – ${chf(s.bisChf)}`;
+
 function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis }) {
   const q = posten.quelle;
   return (
@@ -53,6 +57,7 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
             : null}
       <p className="mt-2 text-xs text-ink-500">
         {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
+        {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
         {' · '}
         <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a>
       </p>
@@ -71,16 +76,27 @@ export function ProzesskostenForm() {
   const [sw, setSw] = useState<string>(ausLink.sw != null ? String(ausLink.sw) : '');
   const [phase, setPhase] = useState<Verfahrensphase>((ausLink.phase as Verfahrensphase) ?? 'entscheid');
   const [materie, setMaterie] = useState<Materie>((ausLink.materie as Materie) ?? 'allgemein');
+  const [instanz, setInstanz] = useState<Instanz>((ausLink.instanz as Instanz) ?? 'erstinstanz');
+  const [verfahren, setVerfahren] = useState<Verfahrensart>((ausLink.verfahren as Verfahrensart) ?? 'ordentlich');
+  const [quote, setQuote] = useState<number>(typeof ausLink.quote === 'number' ? (ausLink.quote as number) : 50);
   const [vergleich, setVergleich] = useState(false);
+  const [risiko, setRisiko] = useState(false);
+
+  const bger = instanz === 'bundesgericht';
+  const verfahrenRelevant = phase === 'entscheid' && !bger;
 
   const streitwert = zahl(sw);
   const ergebnis = useMemo(
-    () => streitwert === undefined ? null : berechneProzesskosten({ kanton, streitwertCHF: streitwert, phase, materie }),
-    [kanton, streitwert, phase, materie],
+    () => streitwert === undefined ? null : berechneProzesskosten({ kanton, streitwertCHF: streitwert, phase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : 'ordentlich' }),
+    [kanton, streitwert, phase, materie, instanz, verfahren, verfahrenRelevant],
   );
   const vergleichsListe = useMemo(
-    () => (vergleich && streitwert !== undefined) ? vergleichAlleKantone(streitwert, phase, materie) : null,
-    [vergleich, streitwert, phase, materie],
+    () => (vergleich && streitwert !== undefined && !bger) ? vergleichAlleKantone(streitwert, phase, materie, instanz, verfahrenRelevant ? verfahren : 'ordentlich') : null,
+    [vergleich, streitwert, phase, materie, instanz, verfahren, verfahrenRelevant, bger],
+  );
+  const kostenrisiko = useMemo(
+    () => (risiko && ergebnis) ? berechneKostenrisiko(ergebnis.gerichtskosten, ergebnis.parteientschaedigung, quote / 100) : null,
+    [risiko, ergebnis, quote],
   );
 
   return (
@@ -97,11 +113,25 @@ export function ProzesskostenForm() {
         <Field label="Streitwert (CHF)" hint="vermögensrechtliche Streitigkeit nach Art. 91 ff. ZPO">
           <BetragsFeld value={sw} onChange={setSw} className={inputCls} placeholder="z. B. 50'000" aria-label="Streitwert in Franken" />
         </Field>
-        <Field label="Verfahren">
-          <select value={phase} onChange={(e) => setPhase(e.target.value as Verfahrensphase)} className={inputCls} aria-label="Verfahren">
-            {VERFAHRENSPHASEN.map((p) => <option key={p.wert} value={p.wert}>{p.label}</option>)}
+        <Field label="Instanz">
+          <select value={instanz} onChange={(e) => setInstanz(e.target.value as Instanz)} className={inputCls} aria-label="Instanz">
+            {INSTANZEN.map((i) => <option key={i.wert} value={i.wert}>{i.label}</option>)}
           </select>
         </Field>
+        {!bger && (
+          <Field label="Verfahrensphase">
+            <select value={phase} onChange={(e) => setPhase(e.target.value as Verfahrensphase)} className={inputCls} aria-label="Verfahrensphase">
+              {VERFAHRENSPHASEN.map((p) => <option key={p.wert} value={p.wert}>{p.label}</option>)}
+            </select>
+          </Field>
+        )}
+        {verfahrenRelevant && (
+          <Field label="Verfahrensart" hint="Modifikator auf den Basistarif (summarisch/vereinfacht)">
+            <select value={verfahren} onChange={(e) => setVerfahren(e.target.value as Verfahrensart)} className={inputCls} aria-label="Verfahrensart">
+              {VERFAHRENSARTEN.map((v) => <option key={v.wert} value={v.wert}>{v.label}</option>)}
+            </select>
+          </Field>
+        )}
         <Field label="Materie" hint="für kostenlose Verfahren (Art. 113/114 ZPO)">
           <select value={materie} onChange={(e) => setMaterie(e.target.value as Materie)} className={inputCls} aria-label="Materie">
             {MATERIEN.map((m) => <option key={m.wert} value={m.wert}>{m.label}</option>)}
@@ -112,7 +142,7 @@ export function ProzesskostenForm() {
       {ergebnis && (
         <ErgebnisBlock>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <PostenKarte titel="Gerichtskosten (Entscheidgebühr)" posten={ergebnis.gerichtskosten} />
+            <PostenKarte titel={bger ? 'Gerichtskosten (BGer)' : 'Gerichtskosten (Entscheidgebühr)'} posten={ergebnis.gerichtskosten} />
             <PostenKarte titel="Parteientschädigung" posten={ergebnis.parteientschaedigung} />
           </div>
 
@@ -121,18 +151,58 @@ export function ProzesskostenForm() {
           </ul>
 
           <div className="mt-4 flex flex-wrap items-center gap-3">
-            <button type="button" onClick={() => setVergleich((v) => !v)}
+            <button type="button" onClick={() => setRisiko((v) => !v)}
               className="text-body-s underline text-ink-700 hover:text-ink-900">
-              {vergleich ? 'Interkantonalen Vergleich ausblenden' : 'Was würde es in anderen Kantonen kosten? →'}
+              {risiko ? 'Kostenrisiko ausblenden' : 'Kostenrisiko bei Teilobsiegen berechnen →'}
             </button>
-            <LinkTeilenButton query={() => permalinkKodieren(PK_LINK_SPEC, { kanton, sw: streitwert, phase, materie })} />
+            {!bger && (
+              <button type="button" onClick={() => setVergleich((v) => !v)}
+                className="text-body-s underline text-ink-700 hover:text-ink-900">
+                {vergleich ? 'Interkantonalen Vergleich ausblenden' : 'Was würde es in anderen Kantonen kosten? →'}
+              </button>
+            )}
+            <LinkTeilenButton query={() => permalinkKodieren(PK_LINK_SPEC, { kanton, sw: streitwert, phase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : undefined, quote: risiko ? quote : undefined })} />
           </div>
+
+          {risiko && kostenrisiko && (
+            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+              <div className="flex items-center gap-3 flex-wrap">
+                <label htmlFor="pk-quote" className="text-body-s text-ink-700">Ihre Obsiegensquote</label>
+                <input id="pk-quote" type="range" min={0} max={100} step={5} value={quote} onChange={(e) => setQuote(Number(e.target.value))} className="flex-1 min-w-[8rem]" aria-label="Obsiegensquote in Prozent" />
+                <span className="num text-body-s font-semibold text-ink-900 w-12 text-right">{quote}%</span>
+              </div>
+              {kostenrisiko.berechenbar ? (
+                <>
+                  <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="lc-tile">
+                      <p className="text-xs text-ink-500 mb-1">Gerichtskosten zu Ihren Lasten</p>
+                      <p className="num text-body-l font-semibold text-ink-900">{spanneText(kostenrisiko.gerichtskostenZuLasten)}</p>
+                    </div>
+                    <div className="lc-tile">
+                      <p className="text-xs text-ink-500 mb-1">Parteientschädigung (Saldo)</p>
+                      <p className="num text-body-l font-semibold text-ink-900">{spanneText(kostenrisiko.parteientschaedigungSaldo)}</p>
+                      <p className="mt-1 text-xs text-ink-500">+ Sie erhalten · − Sie zahlen</p>
+                    </div>
+                    <div className="lc-tile lc-akzent-brass">
+                      <p className="text-xs text-ink-500 mb-1">Geschätzte Netto-Kostenbelastung</p>
+                      <p className="num text-body-l font-semibold text-ink-900">{spanneText(kostenrisiko.nettoBelastung)}</p>
+                    </div>
+                  </div>
+                  <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
+                    {kostenrisiko.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+                  </ul>
+                </>
+              ) : (
+                <p className="mt-3 text-body-s text-ink-600">{kostenrisiko.hinweise[kostenrisiko.hinweise.length - 1]}</p>
+              )}
+            </div>
+          )}
 
           {vergleichsListe && (
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[34rem] text-body-s border-collapse">
                 <caption className="text-xs text-ink-500 text-left mb-2">
-                  Interkantonaler Vergleich bei Streitwert CHF {streitwert?.toLocaleString('de-CH')} ({VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}, {MATERIEN.find((m) => m.wert === materie)?.label}) — Gerichtsgebühr / Parteientschädigung. Quelle je Kanton verlinkt.
+                  Interkantonaler Vergleich bei Streitwert CHF {streitwert?.toLocaleString('de-CH')} ({VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}{verfahrenRelevant && verfahren !== 'ordentlich' ? `, ${VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label}` : ''}{instanz === 'rechtsmittel' ? ', Rechtsmittel' : ''}, {MATERIEN.find((m) => m.wert === materie)?.label}) — Gerichtsgebühr / Parteientschädigung. Quelle je Kanton verlinkt.
                 </caption>
                 <thead>
                   <tr className="lc-overline text-ink-500 border-b border-line">

@@ -305,8 +305,11 @@ export function berechneKostenrisiko(gk: PostenErgebnis, pe: PostenErgebnis, obs
 
 /** Interkantonaler Vergleich: dieselbe Konstellation über ALLE 26 Kantone
  *  (Auftrag David — Vergleichstabelle «was kostet es anderswo»). */
-export function vergleichAlleKantone(streitwertCHF: number, phase: Verfahrensphase, materie: Materie): ProzesskostenErgebnis[] {
-  return KANTONE.map((kanton) => berechneProzesskosten({ kanton, streitwertCHF, phase, materie }));
+export function vergleichAlleKantone(
+  streitwertCHF: number, phase: Verfahrensphase, materie: Materie,
+  instanz?: Instanz, verfahren?: Verfahrensart,
+): ProzesskostenErgebnis[] {
+  return KANTONE.map((kanton) => berechneProzesskosten({ kanton, streitwertCHF, phase, materie, instanz, verfahren }));
 }
 
 /** Anzeige-Hilfe: ein PostenErgebnis als kurzer Text (Betrag, Spanne oder
