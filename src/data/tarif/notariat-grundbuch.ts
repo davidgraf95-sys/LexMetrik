@@ -196,8 +196,8 @@ export const HANDAENDERUNGSSTEUER: Record<KantonCode, KantonalerTarif> = {
   ] } },
   NE: { kanton: 'NE', erlassName: 'Loi sur les lods et droits de mutation immobilière (LDMI)', erlassNr: 'RSN 635.0', artikel: 'Art. 6', stand: '2024', verifiziert: R, quelleUrl: 'https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm', hinweis: '3,3 %; reduziert 2,2 % bei erster Selbstbewohnung (Art. 11); Befr. Erbgang/Ehegatten/gerade Linie (Art. 8).', regel: { typ: 'promille', promille: 33 } },
   GE: { kanton: 'GE', erlassName: 'Loi sur les droits d’enregistrement (LDE)', erlassNr: 'RSG D 3 30', artikel: 'Art. 33', stand: '2024', verifiziert: R, quelleUrl: 'https://silgeneve.ch/legis/data/rsg_d3_30.htm', hinweis: '3 % (Käufer); Abzug CHF 15’000 bei eigenem Hauptwohnsitz, wenn Preis ≤ 1 Mio (Art. 8A).', regel: { typ: 'promille', promille: 30 } },
-  JU: { kanton: 'JU', erlassName: 'Loi sur les droits de mutation et les gages (LDMG)', erlassNr: 'RSJU 215.326.2', artikel: 'Art. 6', stand: '1.3.2024', verifiziert: R, quelleUrl: 'https://rsju.jura.ch/fr/viewdocument.html?idn=20037&id=33943&download=1', hinweis: '2,5 % (≤ 1 Mio) / 3,2 % für den Teil über 1 Mio; reduziert 1,5 % Nachkommen/Vorfahren (Art. 9); Befr. Ehegatten/Konkubinat (Art. 10).', regel: { typ: 'staffel_voll_prozent', baender: [
-    { bisChf: 1000000, fixChf: 0, prozent: 2.5 },
-    { bisChf: INF, fixChf: 0, prozent: 3.2 },
+  JU: { kanton: 'JU', erlassName: 'Loi sur les droits de mutation et les gages (LDMG)', erlassNr: 'RSJU 215.326.2', artikel: 'Art. 6', stand: '1.3.2024', verifiziert: R, quelleUrl: 'https://rsju.jura.ch/fr/viewdocument.html?idn=20037&id=33943&download=1', hinweis: '2,5 % (≤ 1 Mio); für den Teil über 1 Mio 3,2 % (marginal, «pour la part»); reduziert 1,5 % Nachkommen/Vorfahren (Art. 9); Befr. Ehegatten/Konkubinat (Art. 10).', regel: { typ: 'staffel_sockel_prozent', baender: [
+    { bisChf: 1000000, sockelChf: 0, abChf: 0, prozent: 2.5 },
+    { bisChf: INF, sockelChf: 25000, abChf: 1000000, prozent: 3.2 },
   ] } },
 };
