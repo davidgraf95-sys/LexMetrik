@@ -22,6 +22,30 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 15.6.2026 — NEUE DOMÄNE: Notariats- & Grundbuchkosten-Rechner GEBAUT (ungepusht)
+
+**Auftrag David: «Notariat/Grundbuch von Anfang an richtig, ausführlicher
+Handlungsplan (ultra effort), Deep Research, überprüfen und nochmals überprüfen,
+amtliche Quelle hinterlegt.»** Plan: `FAHRPLAN-NOTARIAT-GRUNDBUCH.md`.
+- **Deep Research** (5-Cluster-Fan-out, alle 26 Kantone): Beurkundung (Notariat) +
+  Grundbuch + Grundpfand + Handänderungssteuer beim Grundstückkauf, je Wert mit
+  amtlichem Erlass + Artikel + Link + Stand → Dossier `bibliothek/kosten/notariat-grundbuch-kantone.md` (+ INDEX).
+- **Engine** `src/lib/notariatGrundbuch.ts` (dünner Lader über `tarif/staffel`) +
+  **Datenschicht** `src/data/tarif/notariat-grundbuch.ts` (NOTARIAT/GRUNDBUCH/
+  GRUNDPFAND/HANDAENDERUNGSSTEUER, 26 Kt). Determinismus: Promille/Staffel (marginal)
+  wo klare Bänder; ehrlich `rahmen`/`formel_extern` wo aufwand-/bandbreitenbasiert
+  (ZG/SO/BL freies Notariat) oder Bänder unscharf (BE/FR/VD/VS/NE/GE/JU-Notariat,
+  Stützstelle im Hinweis). Handänderungssteuer als getrennter Steuerblock
+  (1–3,3 %; ZH/UR/GL/ZG/SH/AG/TI keine separate).
+- **UI** `/rechner/notariat-grundbuch` (Form + Page + Route + Katalog + neues
+  Rechtsgebiet «Immobilien / Grundstückkauf»); interkant. Vergleich (günstigste
+  zuoberst), Permalink, Aktenzeichen, PDF. 8 Stützstellen-Tests, Gate voll grün,
+  golden byte-gleich, 51 Routen prerendered. Zähler 49 gebaut / 45 sichtbar.
+- **Verifikation läuft:** Daten-Doppelcheck (Restunsicherheiten GE ‰/% · JU Punktwert ·
+  VS Stufenmodus · BS § 51 · ZG ESTV · BE Anhang-1) + adversarialer Engine-Review.
+- Status durchgehend `entwurf`/`recherche`; nichts `geprüft` (§7). Push/Deploy auf
+  Davids frisches Ja (§9).
+
 ## Session 15.6.2026 — Prozesskosten-Cockpit I7/I8 + Schlichtungstarif GEBAUT (ungepusht)
 
 **Auftrag David (Fortsetzung): «weiter mit nächsten Etappen» + «Schlichtungstarif
