@@ -22,6 +22,36 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 15.6.2026 — Prozesskosten-Cockpit GEBAUT + DEPLOYED (Hauptmoat P1)
+
+**Auftrag David (vielstufig): Prozesskostenrechner zum vollen Cockpit vertiefen,
+fundiert recherchieren, alle Sonderkonstellationen, doppelt verifizieren +
+normhinterlegen, Logik-/Bug-Check, deployen.** Erledigt + LIVE auf
+lexmetrik.vercel.app (`dpl_9YUEU1tckdLYK4wyJ7besDZsjnn9`, origin/main `0896d6c`,
+22 Commits inkl. paralleler UI-Redesign-Session E1–E10).
+
+**Cockpit `/rechner/prozesskosten`** (Engine `lib/prozesskosten.ts` + Datenschicht
+`src/data/tarif/*` + Primitiv `lib/tarif/staffel.ts`): Matrix **Kanton ×
+Verfahrensphase (Schlichtung/Entscheid) × Verfahrensart (ordentlich/vereinfacht/
+summarisch) × Instanz (erst/Rechtsmittel/Bundesgericht) × Materie** →
+Gerichtskosten + Parteientschädigung getrennt (Art. 95/96), Art. 113/114-
+Kostenlos-Vorschalter (Miete nur Schlichtung), **Kostenrisiko nach Obsiegensquote
+(Art. 106/111)**, Ermessenskriterien bei Spannen, **interkantonale
+Vergleichstabelle**, jeder Wert mit amtlichem Link/Erlass/Stand/Verifikationsstand.
+Bundesgericht: BGG Art. 65/68 + Reglemente (`data/tarif/bundesgericht.ts`).
+
+**Recherche (alle doppelt verifiziert, normhinterlegt) — bibliothek/:** Dossiers
+prozesskosten-zpo-95-96 · -bundesgericht · -sonderkonstellationen (104/132) ·
+-wettbewerbsanalyse; Register gerichtskosten- · parteientschaedigung- ·
+kosten-modifikatoren- · sonderkonstellationen-tarife-kantone (877 Sonderregeln).
+
+**§9-Logik-/Bug-Check** (Workflows wk6eknug5 + w04tm2mr9, je 4 Lupen + adversarial)
+abgearbeitet. **OFFEN für David:** Modifikatoren sind ERSTRECHERCHE
+(`verifiziert: 'recherche'`, Caveat sichtbar) — vor `geprüft` Abnahme +
+GR-Modifikatoren/LU-PE/BE-RM-GK am Wortlaut bestätigen; Fahrplan-Restposten
+I6 (Vorschuss/MwSt/Auslagen) · I7 (Instanz-Akkumulation) · I8 (PDF) · I9
+(Notariat etc.) in `FAHRPLAN-PROZESSKOSTEN-COCKPIT.md`. Nichts trägt `geprüft`.
+
 ## Session 14.6.2026 — Ausbau-Direktive + Ultra-Fahrplan PRODUKTAUSBAU & BURGGRABEN
 
 **Neue aktive Direktive David (14.6.2026):** Bis zu den ersten Kanzleigesprächen
