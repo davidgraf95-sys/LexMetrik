@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
@@ -284,10 +284,8 @@ export function SchkgFristenForm() {
       {/* Optionale Sonderlogik */}
       {(aktiv?.hemmungMoeglich || !aktiv) && (
         <div className="space-y-2">
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={hemmung.an} onChange={(e) => setHemmung((s) => ({ ...s, an: e.target.checked }))} />
-            Hemmung der Verwirkungsfrist (Art. 88 Abs. 2 / Art. 166 Abs. 2 SchKG)
-          </label>
+          <Checkbox checked={hemmung.an} onChange={(v) => setHemmung((s) => ({ ...s, an: v }))}
+            label="Hemmung der Verwirkungsfrist (Art. 88 Abs. 2 / Art. 166 Abs. 2 SchKG)" />
           {hemmung.an && (
             <div className="flex flex-wrap gap-2 items-center pl-6">
               <span className="text-body-s text-ink-500">Hemmendes Verfahren von</span>
@@ -300,10 +298,8 @@ export function SchkgFristenForm() {
       )}
 
       <div className="space-y-2">
-        <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" checked={rechtsstillstand.an} onChange={(e) => setRechtsstillstand((s) => ({ ...s, an: e.target.checked }))} />
-          Schuldnerbezogener Rechtsstillstand (Art. 57–62 SchKG)
-        </label>
+        <Checkbox checked={rechtsstillstand.an} onChange={(v) => setRechtsstillstand((s) => ({ ...s, an: v }))}
+          label="Schuldnerbezogener Rechtsstillstand (Art. 57–62 SchKG)" />
         {rechtsstillstand.an && (
           <div className="flex flex-wrap gap-2 items-center pl-6">
             <span className="text-body-s text-ink-500">von</span>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { Link } from 'react-router-dom';
@@ -255,16 +255,12 @@ export function AllgemeineFristForm() {
               <div className="space-y-1.5 pt-1">
                 {/* Rechtlich EINE Operation «nächster Werktag»: Feiertage
                     implizieren die Wochenend-Verschiebung (gekoppelt) */}
-                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={form.wochenendeVerschieben || form.feiertageVerschieben}
-                    onChange={(e) => setForm((f) => ({ ...f, wochenendeVerschieben: e.target.checked, feiertageVerschieben: e.target.checked && f.feiertageVerschieben }))} />
-                  Samstag/Sonntag → nächster Werktag (Art. 78 OR; SR 173.110.3)
-                </label>
-                <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={form.feiertageVerschieben}
-                    onChange={(e) => setForm((f) => ({ ...f, feiertageVerschieben: e.target.checked, wochenendeVerschieben: f.wochenendeVerschieben || e.target.checked }))} />
-                  zusätzlich gesetzliche Feiertage (kantonal)
-                </label>
+                <Checkbox checked={form.wochenendeVerschieben || form.feiertageVerschieben}
+                  onChange={(v) => setForm((f) => ({ ...f, wochenendeVerschieben: v, feiertageVerschieben: v && f.feiertageVerschieben }))}
+                  label="Samstag/Sonntag → nächster Werktag (Art. 78 OR; SR 173.110.3)" />
+                <Checkbox checked={form.feiertageVerschieben}
+                  onChange={(v) => setForm((f) => ({ ...f, feiertageVerschieben: v, wochenendeVerschieben: f.wochenendeVerschieben || v }))}
+                  label="zusätzlich gesetzliche Feiertage (kantonal)" />
               </div>
             </Field>
             {form.feiertageVerschieben && (

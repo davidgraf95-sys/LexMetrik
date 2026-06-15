@@ -1,4 +1,4 @@
-import { BeruehrtRahmen, BeispielChips, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeispielChips, BeruehrtRahmen, Checkbox, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
@@ -251,18 +251,14 @@ export function LohnfortzahlungForm() {
                 onChange={(e) => setKtg('praemienAnteilArbeitgeberProzent', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
           </div>
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={form.ktgKriterien?.schriftlichVereinbart ?? false}
-              onChange={(e) => setKtg('schriftlichVereinbart', e.target.checked)} />
-            Schriftlich / in GAV-NAV vereinbart (Gültigkeitsvoraussetzung)
-          </label>
+          <Checkbox checked={form.ktgKriterien?.schriftlichVereinbart ?? false}
+            onChange={(v) => setKtg('schriftlichVereinbart', v)}
+            label="Schriftlich / in GAV-NAV vereinbart (Gültigkeitsvoraussetzung)" />
           {/* B5-Fix 6.6.2026: Kriterium war in der Engine vorhanden (lohnfortzahlung.ts),
               aber im UI nie erreichbar — die Checkliste war unvollständig (§8). */}
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" checked={form.ktgKriterien?.alleRisikenAbgedeckt ?? true}
-              onChange={(e) => setKtg('alleRisikenAbgedeckt', e.target.checked)} />
-            Alle relevanten Risiken abgedeckt (Krankheit UND Unfall bzw. UVG-Deckung)
-          </label>
+          <Checkbox checked={form.ktgKriterien?.alleRisikenAbgedeckt ?? true}
+            onChange={(v) => setKtg('alleRisikenAbgedeckt', v)}
+            label="Alle relevanten Risiken abgedeckt (Krankheit UND Unfall bzw. UVG-Deckung)" />
         </div>
       )}
 
