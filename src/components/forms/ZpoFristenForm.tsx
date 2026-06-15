@@ -230,7 +230,7 @@ export function ZpoFristenForm() {
 
         {!aktVerfahren.stillstand && (
           <Field label="Hinweis des Gerichts auf Nichtgeltung des Stillstands?" hint="Art. 145 Abs. 3 ZPO – Gültigkeitsvorschrift (BGE 139 III 78)">
-            <label className="flex items-center gap-2 text-body-s cursor-pointer pt-2 text-ink-700">
+            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer pt-2 text-ink-700">
               <input type="checkbox" checked={form.gerichtshinweisStillstand ?? true}
                 onChange={(e) => set('gerichtshinweisStillstand', e.target.checked)} />
               Gericht hat hingewiesen (sonst gilt der Stillstand gleichwohl)
@@ -278,7 +278,7 @@ export function ZpoFristenForm() {
 
             {form.fristnatur === 'gerichtlich' && (
               <div className="space-y-2">
-                <label className="flex items-center gap-2 text-body-s cursor-pointer">
+                <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
                   <input type="checkbox" checked={erstreckungAn} onChange={(e) => setErstreckungAn(e.target.checked)} />
                   Erstreckung berechnen (Art. 144 Abs. 2 ZPO)
                 </label>

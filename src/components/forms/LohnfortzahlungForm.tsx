@@ -213,11 +213,11 @@ export function LohnfortzahlungForm() {
 
         <Field label="KTG-Versicherung gleichwertig?">
           <div className="flex items-center gap-4 pt-2">
-            <label className="flex items-center gap-2 text-body-s cursor-pointer">
+            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
               <input type="radio" name="ktg" checked={!form.ktgGleichwertigVorhanden} onChange={() => set('ktgGleichwertigVorhanden', false)} />
               Nein (Skala gilt)
             </label>
-            <label className="flex items-center gap-2 text-body-s cursor-pointer">
+            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
               <input type="radio" name="ktg" checked={form.ktgGleichwertigVorhanden} onChange={() => set('ktgGleichwertigVorhanden', true)} />
               Ja (KTG-Regime, Art. 324b OR)
             </label>
@@ -296,12 +296,12 @@ export function LohnfortzahlungForm() {
                 onChange={(e) => set('anrechenbareVordienstzeitMonate', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
             <div className="flex flex-col justify-end gap-2">
-              <label className="flex items-center gap-2 text-body-s cursor-pointer">
+              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
                 <input type="checkbox" checked={form.befristetFest ?? false}
                   onChange={(e) => set('befristetFest', e.target.checked)} />
                 Befristeter Vertrag fester Dauer &gt; 3 Monate
               </label>
-              <label className="flex items-center gap-2 text-body-s cursor-pointer">
+              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
                 <input type="checkbox" checked={form.dreizehnterMonatslohn ?? false}
                   onChange={(e) => set('dreizehnterMonatslohn', e.target.checked)} />
                 13. Monatslohn (anteilig) berücksichtigen

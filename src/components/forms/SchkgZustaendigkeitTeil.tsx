@@ -217,7 +217,7 @@ export function SchkgZustaendigkeitTeil() {
           <Field label="Forderung (CHF)" hint="für die Gebühr des Zahlungsbefehls (Art. 16 GebV SchKG)">
             <BetragsFeld className={inputCls + ' num w-44'} value={forderungRoh} onChange={setForderungRoh} aria-invalid={forderungUngueltig} />
           </Field>
-          <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 sm:mt-7">
+          <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 sm:mt-7">
             <input type="checkbox" checked={arrestGelegt} onChange={(e) => setArrestGelegt(e.target.checked)} />
             Für die Forderung ist bereits Arrest gelegt (Art. 52 SchKG)
           </label>

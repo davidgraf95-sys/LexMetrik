@@ -169,12 +169,12 @@ export function KuendigungSperrForm({ onBeendigung }: {
         {form.abweichendeFristMonate != null && (
           <Field label="Abweichende Frist – Gültigkeit (§3.2)">
             <div className="flex flex-col gap-2 pt-1">
-              <label className="flex items-center gap-2 text-body-s cursor-pointer">
+              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
                 <input type="checkbox" checked={form.abweichendeFristFormGueltig ?? false}
                   onChange={(e) => set('abweichendeFristFormGueltig', e.target.checked)} />
                 Schriftlich / GAV / NAV (Gültigkeitsvoraussetzung)
               </label>
-              <label className="flex items-center gap-2 text-body-s cursor-pointer">
+              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
                 <input type="checkbox" checked={form.abweichendeFristQuelleGAV ?? false}
                   onChange={(e) => set('abweichendeFristQuelleGAV', e.target.checked)} />
                 Quelle GAV (Verkürzung &lt; 1 Monat nur GAV &amp; 1. DJ)
@@ -197,11 +197,11 @@ export function KuendigungSperrForm({ onBeendigung }: {
 
         <Field label="Kündigungstermin">
           <div className="flex items-center gap-4 pt-2">
-            <label className="flex items-center gap-2 text-body-s cursor-pointer">
+            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
               <input type="radio" name="kterm" checked={form.kuendigungsterminMonatsende} onChange={() => set('kuendigungsterminMonatsende', true)} />
               Monatsende (Standard)
             </label>
-            <label className="flex items-center gap-2 text-body-s cursor-pointer">
+            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
               <input type="radio" name="kterm" checked={!form.kuendigungsterminMonatsende} onChange={() => set('kuendigungsterminMonatsende', false)} />
               Freies Datum
             </label>

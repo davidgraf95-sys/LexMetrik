@@ -606,7 +606,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             </Field>
           </div>
           {f.rmVerfahren === 'summarisch' && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={f.rmFamilienSummarsache} onChange={(e) => set('rmFamilienSummarsache', e.target.checked)} />
               <span>
                 Familienrechtliche Streitigkeit nach Art. 271/276/302/305 ZPO (Eheschutz, vorsorgliche
@@ -658,7 +658,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             <option value="klage_gegen_bund">Klage gegen den Bund (lit. f — nur über 30'000)</option>
           </select>
           {f.ipUnterfall === 'uwg' && (
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700 mt-2">
+            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 mt-2">
               <input type="checkbox" checked={f.bundKlagerecht} onChange={(e) => set('bundKlagerecht', e.target.checked)} />
               Der Bund übt sein Klagerecht aus (dann einzige Instanz unabhängig vom Streitwert)
             </label>
@@ -751,7 +751,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             <div className="space-y-1.5">
               <BetragsFeld value={f.streitwertRoh} onChange={(v) => set('streitwertRoh', v)} className={inputCls}
                 placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
-              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" checked={!f.vermoegensrechtlich}
                   onChange={(e) => set('vermoegensrechtlich', !e.target.checked)} />
                 nicht vermögensrechtliche Streitigkeit
@@ -775,44 +775,44 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           <div className="space-y-3 mt-3">
 
           {istGeld && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={f.konsumentenvertrag} onChange={(e) => set('konsumentenvertrag', e.target.checked)} />
               <span>Konsumentenvertrag <span className="text-ink-500">(Leistung des üblichen Verbrauchs für persönliche/familiäre Bedürfnisse, Art. 32 ZPO)</span></span>
             </label>
           )}
           {istGeld && !f.konsumentenvertrag && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={f.ausVertrag} onChange={(e) => set('ausVertrag', e.target.checked)} />
               <span>Forderung aus Vertrag <span className="text-ink-500">(zusätzliches Forum am Ort der charakteristischen Leistung — der vertragstypprägenden, i. d. R. nicht der Geldleistung, Art. 31 ZPO)</span></span>
             </label>
           )}
           {istArbeit && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={f.avgVerleih} onChange={(e) => set('avgVerleih', e.target.checked)} />
               <span>Personalverleih/-vermittlung (AVG) <span className="text-ink-500">(zusätzliches Forum am Ort der Geschäftsniederlassung der verleihenden Person, Art. 34 Abs. 2 ZPO)</span></span>
             </label>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={f.gerichtsstandsvereinbarung} onChange={(e) => set('gerichtsstandsvereinbarung', e.target.checked)} />
             <span>Gerichtsstandsvereinbarung vorhanden <span className="text-ink-500">(Wirksamkeit hängt vom Bindungsgrad ab, Art. 9/17/35 ZPO)</span></span>
           </label>
           {istGeld && f.konsumentenvertrag && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 pl-6">
               <input type="checkbox" className="mt-0.5" checked={f.klaegeristGeschuetzt} onChange={(e) => set('klaegeristGeschuetzt', e.target.checked)} />
               Die Konsumentin / der Konsument klagt
             </label>
           )}
           {istArbeit && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={f.glgBetroffen} onChange={(e) => set('glgBetroffen', e.target.checked)} />
               <span>Streit nach Gleichstellungsgesetz <span className="text-ink-500">(paritätische Behörde, vereinfacht streitwertunabhängig)</span></span>
             </label>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={f.beklagteAuslandOderUnbekannt} onChange={(e) => set('beklagteAuslandOderUnbekannt', e.target.checked)} />
             <span>Beklagte Partei mit Sitz/Wohnsitz im Ausland oder Aufenthalt unbekannt <span className="text-ink-500">(einseitiger Schlichtungsverzicht, Art. 199 Abs. 2 ZPO)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={f.widerklageOderGerichtlicheFrist} onChange={(e) => set('widerklageOderGerichtlicheFrist', e.target.checked)} />
             <span>Widerklage/Hauptintervention oder gerichtlich angesetzte Klagefrist <span className="text-ink-500">(Schlichtung entfällt, Art. 198 lit. g/h ZPO)</span></span>
           </label>
@@ -822,15 +822,15 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                 Handelsgerichts-Konstellation <span className="text-ink-500 font-normal">(nur Kantone mit Handelsgericht: ZH/BE/AG/SG; Art. 6 ZPO)</span>
               </summary>
               <div className="mt-3 space-y-2">
-                <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                   <input type="checkbox" className="mt-0.5" checked={f.geschaeftlicheTaetigkeit} onChange={(e) => set('geschaeftlicheTaetigkeit', e.target.checked)} />
                   Geschäftliche Tätigkeit mindestens einer Partei betroffen
                 </label>
-                <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                   <input type="checkbox" className="mt-0.5" checked={f.beklagteImHR} onChange={(e) => set('beklagteImHR', e.target.checked)} />
                   Beklagte Partei im Handelsregister eingetragen
                 </label>
-                <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                   <input type="checkbox" className="mt-0.5" checked={f.klaegerImHR} onChange={(e) => set('klaegerImHR', e.target.checked)} />
                   Klagende Partei im Handelsregister eingetragen
                 </label>
