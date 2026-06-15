@@ -20,7 +20,7 @@ function Abschnitt({ titel, children }: { titel: string; children: React.ReactNo
 
 export function Datenschutz() {
   return (
-    <div className="space-y-8 max-w-reading">
+    <div className="space-y-10 max-w-reading">
       <SeitenKopf overline="Rechtliches" titel="Datenschutzerklärung">
         <div className="flex flex-wrap items-center gap-2">
           <span className="lc-badge-entwurf" title="Entwurf – fachliche Prüfung steht aus">Entwurf</span>

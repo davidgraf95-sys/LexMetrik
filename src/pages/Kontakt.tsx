@@ -35,7 +35,7 @@ export function Kontakt() {
   };
 
   return (
-    <div className="space-y-8 max-w-reading">
+    <div className="space-y-10 max-w-reading">
       <SeitenKopf overline="Kontakt" titel="Kontakt aufnehmen"
         intro="Fragen, Korrekturen zu einer Berechnung oder einem Baustein, Vorschläge für neue Rechner und Vorlagen – Hinweise auf Fehler sind besonders willkommen." />
 

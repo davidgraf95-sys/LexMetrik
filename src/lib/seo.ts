@@ -47,17 +47,16 @@ const DOPPELKARTEN_OVERRIDE: Record<string, string> = {
   '/rechner/kuendigung': 'kuendigung-sperrfristen',
 };
 
-// Statische Seiten: Titel = vorhandene H1-Formulierung der Seite (keine neuen
-// Texte). Beschreibung: noch keine individuellen, juristisch abgenommenen
-// Texte vorhanden → Rückfall auf SITE_DESCRIPTION.
-// TODO(David): Erklärtext juristisch verfassen (je eine Meta-Description für
-// /methodik, /ueber, /kontakt, /datenschutz — bis dahin globale Description).
+// Statische Seiten: Titel nach EINEM Schema «… — LexMetrik». Beschreibungen je
+// Seite individuell (Freigabe David 15.6.2026) — faktisch aus dem vorhandenen
+// Seitentext destilliert, keine neuen Rechtsaussagen; Datenschutz bleibt ehrlich
+// als Entwurf gekennzeichnet.
 const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; ogBeschreibung?: string }> = {
   '/': { titel: SITE_TITEL, beschreibung: SITE_DESCRIPTION, ogBeschreibung: SITE_OG_DESCRIPTION },
-  '/methodik': { titel: 'Wie LexMetrik rechnet — LexMetrik', beschreibung: SITE_DESCRIPTION },
-  '/ueber': { titel: 'Über LexMetrik', beschreibung: SITE_DESCRIPTION },
-  '/kontakt': { titel: 'Kontakt aufnehmen — LexMetrik', beschreibung: SITE_DESCRIPTION },
-  '/datenschutz': { titel: 'Datenschutzerklärung — LexMetrik', beschreibung: SITE_DESCRIPTION },
+  '/methodik': { titel: 'Wie LexMetrik rechnet — LexMetrik', beschreibung: 'Wie LexMetrik Fristen, Beträge und Quoten herleitet: feste Regeln statt Sprachmodell, jeder Schritt nachvollziehbar, jede Norm mit der amtlichen Sammlung verlinkt.' },
+  '/ueber': { titel: 'Über — LexMetrik', beschreibung: 'Warum es LexMetrik gibt — entstanden bei der Vorbereitung auf die Anwaltsprüfung: überprüfbare, normtreue Rechtsberechnung statt Black Box.' },
+  '/kontakt': { titel: 'Kontakt aufnehmen — LexMetrik', beschreibung: 'Fragen, Korrekturen zu einer Berechnung oder einem Baustein, Vorschläge für neue Rechner und Vorlagen — Hinweise auf Fehler sind besonders willkommen.' },
+  '/datenschutz': { titel: 'Datenschutzerklärung — LexMetrik', beschreibung: 'Datenschutzerklärung von LexMetrik (Entwurf). Die Eingaben verlassen den Browser nicht — Berechnung und Dokumenterstellung laufen lokal im Gerät.' },
 };
 
 /** href → Pfad ohne Hash-Sprungmarke. */

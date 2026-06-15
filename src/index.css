@@ -8,7 +8,12 @@
     /* Tinte – Text & Struktur */
     --ink-900:#1A1A17; --ink-700:#3A3A33; --ink-600:#54544B; --ink-500:#6E6E64;
     --ink-400:#8B8B81; --ink-300:#A9A99F;
-    /* Papier – Flächen */
+    /* Papier – Flächen. Token-Landkarte (Regel, ohne Wertänderung):
+       --paper*   = SEITENHINTERGRUND (Body, grosse Flächen)
+       --surface* = KARTEN/Panels (lc-card, lc-tile, lc-panel)
+       --well     = versenkte Eingabefelder (lc-input).
+       surface-raised/well sind bewusst Aliasse auf die Papier-Werte —
+       eine Tönung, zwei semantische Namensräume. */
     --paper:#F7F4EC; --paper-raised:#FCFBF5; --paper-sunken:#EEEADF;
     --surface:#FBF9F2; --surface-raised:var(--paper-raised);
     --well:var(--paper-sunken);
