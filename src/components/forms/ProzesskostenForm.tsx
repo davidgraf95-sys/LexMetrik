@@ -166,7 +166,7 @@ export function ProzesskostenForm() {
       }) }],
       disclaimer: DISCLAIMER,
     };
-  }, [ergebnis, aktenzeichen, kanton, streitwertRoh, nv, phase, verfahren, verfahrenRelevant, instanz, materie, vorschuss, mwstAufschlag, kostenrisiko, instanzenzug, sicherheit]);
+  }, [ergebnis, aktenzeichen, kanton, streitwertRoh, nv, effektivePhase, verfahren, verfahrenRelevant, instanz, materie, vorschuss, mwstAufschlag, kostenrisiko, instanzenzug, sicherheit]);
 
   return (
     <BeruehrtRahmen>
