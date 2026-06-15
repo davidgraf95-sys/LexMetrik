@@ -1,19 +1,20 @@
-import { NotariatGrundbuchForm } from '../components/forms/NotariatGrundbuchForm';
+import { BeurkundungForm } from '../components/forms/BeurkundungForm';
 import { Card } from '../components/ui/Card';
 import { RechnerKopf } from '../components/layout/RechnerKopf';
 import { getCalculator } from '../lib/calculators';
 
-// Notariats- & Grundbuchkosten /rechner/notariat-grundbuch (FAHRPLAN-NOTARIAT-
-// GRUNDBUCH). Erwerbs-Nebenkosten beim Grundstückkauf aller 26 Kantone:
-// Beurkundung + Grundbuch + Grundpfand + Handänderungssteuer. Dossier
-// bibliothek/kosten/notariat-grundbuch-kantone.md.
+// Notariats- & Grundbuchkosten /rechner/notariat-grundbuch (FAHRPLAN-
+// BEURKUNDUNGS-AUSBAU). Drei Bereiche: Grundstückkauf (4 Kostenblöcke) ·
+// Beurkundung (Notariat) je Geschäftsart · Grundbuch je Eintragungsart – alle
+// 26 Kantone, amtlich belegt, doppelt verifiziert. Dossiers
+// bibliothek/kosten/{notariat-grundbuch,beurkundungstarife,grundbuchgebuehren}-kantone.md.
 export function RechnerNotariatGrundbuch() {
   const calc = getCalculator('notariat-grundbuch')!;
   return (
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
       <Card>
-        <NotariatGrundbuchForm />
+        <BeurkundungForm />
       </Card>
     </div>
   );

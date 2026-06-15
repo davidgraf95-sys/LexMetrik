@@ -1,0 +1,75 @@
+// ─── Grundbuchgebühren-Engine (Eintragungsart-Dimension) ────────────────────
+import { describe, expect, it } from 'vitest';
+import { berechneGrundbuchgebuehr, vergleichGrundbuchgebuehr, tarifFuerGb } from '../lib/grundbuchgebuehren';
+import { berechneNotariatGrundbuch } from '../lib/notariatGrundbuch';
+import { GB_EINTRAGSART_IDS, gbEintragsart } from '../data/tarif/grundbuch-typen';
+import { KANTONE, type KantonCode } from '../data/tarif/typen';
+
+describe('Grundbuch — Eigentum-Kauf parity (keine Regression zur GRUNDBUCH-Schicht)', () => {
+  it('Grundbuch-Posten = Grundbuch-Posten des Grundstückkauf-Rechners (alle 26 Kt)', () => {
+    for (const k of KANTONE) {
+      for (const wert of [0, 500_000, 1_000_000, 5_000_000]) {
+        const neu = berechneGrundbuchgebuehr({ eintragsart: 'eigentum_kauf', kanton: k, wertCHF: wert });
+        const alt = berechneNotariatGrundbuch({ kanton: k, kaufpreisCHF: wert });
+        expect(neu.posten, `${k} ${wert}`).not.toBeNull();
+        expect(neu.posten!.ergebnis, `${k} ${wert}`).toEqual(alt.grundbuch.ergebnis);
+      }
+    }
+  });
+});
+
+describe('Grundbuch — Ehrlichkeit & Robustheit (§8)', () => {
+  it('Eintragungsarten ohne hinterlegten Tarif liefern status "offen" (kein Schätzwert)', () => {
+    const r = berechneGrundbuchgebuehr({ eintragsart: 'vormerkung', kanton: 'ZH' });
+    if (r.status === 'offen') {
+      expect(r.posten).toBeNull();
+      expect(tarifFuerGb('vormerkung', 'ZH')).toBeNull();
+    } else {
+      expect(r.posten).not.toBeNull();
+    }
+  });
+
+  it('jede aufgelöste Eintragungsart trägt eine amtliche Quelle (oder ist Rahmen/extern)', () => {
+    for (const art of GB_EINTRAGSART_IDS) {
+      for (const k of KANTONE) {
+        const auf = tarifFuerGb(art, k as KantonCode);
+        if (!auf) continue;
+        const t = auf.tarif;
+        const ok = t.quelleUrl.startsWith('https://') || t.regel.typ === 'formel_extern';
+        expect(ok, `${art} ${k} ${t.erlassNr}`).toBe(true);
+        expect(t.verifiziert).not.toBe('geprüft' as never);
+      }
+    }
+  });
+
+  it('vergleichGrundbuchgebuehr: 26 Ergebnisse je Eintragungsart, kein Crash', () => {
+    for (const art of GB_EINTRAGSART_IDS) {
+      const bem = gbEintragsart(art).bemessung;
+      for (const wert of [0, 500_000, 1_000_000]) {
+        expect(vergleichGrundbuchgebuehr(art, bem === 'wert' ? wert : undefined), `${art} ${wert}`).toHaveLength(26);
+      }
+    }
+  });
+});
+
+describe('Grundbuch — amtliche Stützstellen (Deep Research, doppelt verifiziert)', () => {
+  const det = (art: Parameters<typeof berechneGrundbuchgebuehr>[0]['eintragsart'], k: KantonCode, w?: number): number => {
+    const r = berechneGrundbuchgebuehr({ eintragsart: art, kanton: k, wertCHF: w });
+    if (!r.posten || !r.posten.ergebnis.deterministisch) throw new Error(`${art}/${k} nicht deterministisch`);
+    return r.posten.ergebnis.betragChf;
+  };
+  it('deterministische Tarife (Promille/Fix), Wert wird je Kanton-Tarif angewendet oder ignoriert', () => {
+    expect(det('grundpfand', 'ZH', 800_000)).toBe(800);   // 1‰
+    expect(det('dienstbarkeit', 'ZH', 500_000)).toBe(500); // 1‰
+    expect(det('vormerkung', 'ZH', 1_000_000)).toBe(500);  // 0,5‰ (Promille-Feld-Fix)
+    expect(det('grundpfand', 'LU', 800_000)).toBe(1600);   // 2‰
+    expect(det('eigentum_erbgang', 'BS', 1_000_000)).toBe(500); // 0,5‰ Universalsukzession
+    expect(det('stockwerkeigentum', 'OW', 2_000_000)).toBe(1000); // 0,5‰
+    expect(det('vormerkung', 'BE')).toBe(50);              // fix, Wert ignoriert
+    expect(det('parzellierung', 'UR')).toBe(100);          // fix
+  });
+  it('Aufwandtarife (ZG) liefern Spanne, keinen Punktwert', () => {
+    const r = berechneGrundbuchgebuehr({ eintragsart: 'grundpfand', kanton: 'ZG', wertCHF: 500_000 });
+    expect(r.posten!.ergebnis.deterministisch).toBe(false);
+  });
+});

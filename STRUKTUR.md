@@ -22,6 +22,39 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 15.6.2026 (Abend) — BEURKUNDUNGS-AUSBAU: Notariatsrechner auf alle Geschäfts-/Eintragungsarten (ungepusht)
+
+**Auftrag David:** «baue den Notariatsrechner aus» + «achte darauf dass alle Arten
+von Beurkundung abgebildet sind» + «und alle Arten von Grundbuchgebühren; von mir
+aus kannst du die Engines auch aufteilen». FAHRPLAN-BEURKUNDUNGS-AUSBAU.md.
+- **Zwei getrennte Engines (§4, David-freigegeben):** `src/lib/beurkundung.ts`
+  (Notariats-/Beurkundungsgebühr je **Geschäftsart**, 22 Arten) + `src/lib/grundbuchgebuehren.ts`
+  (Grundbuchgebühr je **Eintragungsart**, 10 Arten). Beide dünne Lader über
+  `tarif/staffel`; Grundstückkauf/Eigentum-Kauf nutzen die verifizierte
+  NOTARIAT/GRUNDBUCH-Schicht weiter (Parität getestet, **keine Regression**).
+- **Taxonomien:** `beurkundung-typen.ts` (Immobilien · Familie & Nachlass ·
+  Gesellschaft · Sicherung · Übriges) + `grundbuch-typen.ts`.
+- **Deep Research (2 Workflows, je 26 Kt × find→Doppelcheck, 52 Agenten/4,1 M Token):**
+  Beurkundungstarife + Grundbuchgebühren je amtlicher Erlass + Artikel + Regel +
+  Stand → Dossiers `bibliothek/kosten/{beurkundungstarife,grundbuchgebuehren}-kantone.md`
+  (+ INDEX). **Doppelt verifiziert** (find + unabhängiger Doppelcheck); GB-Gegenprobe
+  reproduziert die GRUNDBUCH-Schicht. Korrekturen übernommen: GE Bürgschaft 1‰;
+  BS § 51 Abs. 2/4/5/6; ZH § 11; AI Löschung. **Fachlicher Drittcheck** fand
+  Überhöhungs-Risiko: Wert-Geschäfte (Schenkung/Gründung/Stiftung) in Staffel-
+  Kantonen sind **degressiv** → in der Engine als ehrliche Spanne statt Flach-
+  Promille kodiert (§8); Flach-Kantone (ZH/SZ/SG/GR/TG) behalten den Satz; TG
+  Schenkung = 1‰ (§ 14 GGG); AG Anmerkung = fix 40.
+- **UI** `/rechner/notariat-grundbuch`: drei Bereiche (Grundstückkauf · Beurkundung
+  je Geschäftsart · Grundbuch je Eintragungsart); Wertfeld dynamisch nach
+  aufgelöstem Tarif (`istWertbasiert`), interkant. Vergleich, PDF, Permalink. §8:
+  fehlende Tarife «in Recherche», nie ein Schätzwert. Rechtsgebiet umbenannt
+  «Immobilien & Beurkundung».
+- **Verifikation:** Stützstellen-Tests beider Engines, Gate **voll grün**, golden
+  byte-gleich, 51 Routen prerendered, Playwright-Smoke (OW Testament 1‰→1000,
+  GB Grundpfand ZH→800, Vergleich 26 Zeilen, 0 Console-Fehler).
+- Status durchgehend `entwurf`/`recherche`; nichts `geprüft` (§7). **Push/Deploy
+  auf Davids frisches Ja (§9).**
+
 ## Session 15.6.2026 — NEUE DOMÄNE: Notariats- & Grundbuchkosten-Rechner GEBAUT (ungepusht)
 
 **Auftrag David: «Notariat/Grundbuch von Anfang an richtig, ausführlicher

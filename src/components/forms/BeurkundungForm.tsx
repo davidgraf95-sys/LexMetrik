@@ -1,0 +1,255 @@
+import { useMemo, useState } from 'react';
+import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { ErgebnisBlock } from '../ErgebnisBlock';
+import { PflichtDisclaimer } from '../PflichtDisclaimer';
+import { BetragsFeld } from '../BetragsFeld';
+import { LinkTeilenButton } from '../LinkTeilenButton';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { PdfExportButton } from '../PdfExport';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
+import { permalinkKodieren, permalinkLesen, einerVon, type PermalinkSpec } from '../../lib/permalink';
+import { NotariatGrundbuchForm } from './NotariatGrundbuchForm';
+import { GrundbuchEintragForm } from './GrundbuchEintragForm';
+import {
+  berechneBeurkundung, vergleichBeurkundung, beurkundungBericht, beurkundungSortwert, istWertbasiert,
+  type BeurkundungErgebnis,
+} from '../../lib/beurkundung';
+import { ngPostenText } from '../../lib/notariatGrundbuch';
+import {
+  GESCHAEFTSARTEN_NACH_GRUPPE, geschaeftsart, GESCHAEFTSART_IDS, type GeschaeftsartId,
+} from '../../data/tarif/beurkundung-typen';
+import { KANTONE, KANTON_NAMEN, type KantonCode } from '../../data/tarif/typen';
+
+// ─── Allgemeiner Beurkundungskosten-Rechner (alle Geschäftsarten) ───────────
+// Reine Darstellung (§3): gerechnet wird in lib/beurkundung.ts über die amtlich
+// belegte Datenschicht. Geschäftsart-Vorschalter; Grundstückkauf rendert
+// unverändert den bestehenden 4-Block-Rechner (keine Regression). Übrige Arten:
+// die einzelne Beurkundungsgebühr nach Geschäftswert + interkantonaler Vergleich.
+// §8: fehlt ein kantonaler Tarif noch (Recherche), wird das ehrlich ausgewiesen.
+
+const chf = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
+const zahl = (roh: string): number | undefined => {
+  if (roh.trim() === '') return undefined;
+  const n = Number(roh);
+  return Number.isFinite(n) ? n : undefined;
+};
+
+const BK_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {
+  art: { p: 'ga', typ: 'str', gueltig: einerVon(...GESCHAEFTSART_IDS) },
+  wert: { p: 'gw', typ: 'num', gueltig: (n) => Number.isFinite(n) && n >= 0 },
+  kanton: { p: 'kt', typ: 'str', gueltig: einerVon(...KANTONE) },
+};
+
+function GeschaeftsartWahl({ value, onChange }: { value: GeschaeftsartId; onChange: (v: GeschaeftsartId) => void }) {
+  // Grundstückkauf hat einen eigenen Bereich (4 Kostenblöcke) → hier ausgeblendet.
+  return (
+    <Field label="Geschäftsart" hint="Was wird öffentlich beurkundet?">
+      <select value={value} onChange={(e) => onChange(e.target.value as GeschaeftsartId)} className={inputCls} aria-label="Geschäftsart">
+        {GESCHAEFTSARTEN_NACH_GRUPPE.map((g) => {
+          const arten = g.arten.filter((a) => a.id !== 'grundstueckkauf');
+          return arten.length === 0 ? null : (
+            <optgroup key={g.gruppe} label={g.label}>
+              {arten.map((a) => <option key={a.id} value={a.id}>{a.label}</option>)}
+            </optgroup>
+          );
+        })}
+      </select>
+    </Field>
+  );
+}
+
+function PostenAnzeige({ ergebnis }: { ergebnis: BeurkundungErgebnis }) {
+  const art = geschaeftsart(ergebnis.geschaeftsart);
+  if (ergebnis.status === 'offen' || !ergebnis.posten) {
+    return (
+      <div className="lc-tile">
+        <p className="text-xs text-ink-500 mb-1">Beurkundungsgebühr ({art.label})</p>
+        <p className="text-body-l font-semibold text-ink-700">In Recherche</p>
+        <p className="mt-1 text-body-s text-ink-600">
+          Der kantonale Beurkundungstarif für diese Geschäftsart ist noch nicht abschliessend verifiziert hinterlegt.
+          Es wird bewusst kein Betrag geschätzt (Erstrecherche läuft).
+        </p>
+      </div>
+    );
+  }
+  const p = ergebnis.posten;
+  const q = p.quelle;
+  return (
+    <div className="lc-tile lc-akzent-brass">
+      <p className="text-xs text-ink-500 mb-1">Beurkundungsgebühr ({art.label})</p>
+      <p key={ngPostenText(p)} className="lc-wert-puls text-body-l font-semibold text-ink-900 num">{ngPostenText(p)}</p>
+      {!p.ergebnis.deterministisch && <p className="mt-1 text-body-s text-ink-600">Rahmen/aufwandabhängig – konkrete Festsetzung im Einzelfall.</p>}
+      <p className="mt-2 text-xs text-ink-500">
+        {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
+        {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
+        {q.quelleUrl ? <> · <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
+      </p>
+    </div>
+  );
+}
+
+function AllgemeineBeurkundung({ art, startKanton, startWert }: { art: GeschaeftsartId; startKanton: KantonCode; startWert?: number }) {
+  const def = geschaeftsart(art);
+  const [kanton, setKanton] = useState<KantonCode>(startKanton);
+  const [wert, setWert] = useState<string>(startWert != null ? String(startWert) : '');
+  const [vergleich, setVergleich] = useState(false);
+  const [aktenzeichen, setAktenzeichen] = useState('');
+
+  // Ob ein Wertfeld nötig ist, entscheidet der für (Art, Kanton) aufgelöste
+  // Tarif (dieselbe Art kann je Kanton wertbasiert oder fix sein).
+  const wertNoetig = istWertbasiert(art, kanton);
+  const geschaeftswert = zahl(wert);
+  const bereit = !wertNoetig || geschaeftswert !== undefined;
+
+  const ergebnis = useMemo(
+    () => (bereit ? berechneBeurkundung({ geschaeftsart: art, kanton, geschaeftswertCHF: geschaeftswert }) : null),
+    [art, kanton, geschaeftswert, bereit],
+  );
+  const vergleichsListe = useMemo(
+    () => (vergleich && bereit) ? vergleichBeurkundung(art, geschaeftswert) : null,
+    [vergleich, art, geschaeftswert, bereit],
+  );
+
+  const pdfConfig: PdfDocConfig | null = useMemo(() => {
+    if (!ergebnis || ergebnis.status === 'offen') return null;
+    return {
+      aktenzeichen: aktenzeichen.trim() || undefined,
+      title: `Beurkundungskosten – ${def.label}`,
+      rechtsgrundlage: `${KANTON_NAMEN[kanton]}${wertNoetig && geschaeftswert ? ` · Geschäftswert ${chf(geschaeftswert)}` : ''}`,
+      domain: 'notariat-grundbuch',
+      fileBase: 'Beurkundungskosten',
+      inputs: {
+        'Geschäftsart': def.label,
+        'Kanton': `${kanton} — ${KANTON_NAMEN[kanton]}`,
+        ...(wertNoetig ? { [def.wertLabel ?? 'Geschäftswert']: geschaeftswert ? chf(geschaeftswert) : '–' } : {}),
+      },
+      sections: [{ titel: 'Beurkundungsgebühr', ergebnis: beurkundungBericht(ergebnis) }],
+      disclaimer: DISCLAIMER,
+    };
+  }, [ergebnis, aktenzeichen, kanton, geschaeftswert, def, wertNoetig]);
+
+  return (
+    <div className="space-y-4">
+      <p className="text-body-s text-ink-600">{def.beschreibung}</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Field label="Kanton">
+          <select value={kanton} onChange={(e) => setKanton(e.target.value as KantonCode)} className={inputCls} aria-label="Kanton">
+            {KANTONE.map((k) => <option key={k} value={k}>{k} — {KANTON_NAMEN[k]}</option>)}
+          </select>
+        </Field>
+        {wertNoetig && (
+          <Field label={def.wertLabel ?? 'Geschäftswert (CHF)'} hint={def.wertHinweis}>
+            <BetragsFeld value={wert} onChange={setWert} className={inputCls} placeholder="z. B. 1'000'000" />
+          </Field>
+        )}
+      </div>
+
+      {ergebnis && (
+        <ErgebnisBlock>
+          <PostenAnzeige ergebnis={ergebnis} />
+
+          <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
+            {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+          </ul>
+
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <button type="button" onClick={() => setVergleich((v) => !v)} className="text-body-s underline text-ink-700 hover:text-ink-900">
+              {vergleich ? 'Interkantonalen Vergleich ausblenden' : 'Was kostet es in anderen Kantonen? →'}
+            </button>
+            <LinkTeilenButton query={() => permalinkKodieren(BK_LINK_SPEC, { art, kanton, wert: wertNoetig ? geschaeftswert : undefined })} />
+          </div>
+
+          {vergleichsListe && (
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full min-w-[26rem] text-body-s border-collapse">
+                <caption className="text-xs text-ink-500 text-left mb-2">
+                  Interkantonaler Vergleich – Beurkundungsgebühr {def.label}
+                  {wertNoetig && geschaeftswert ? ` bei Geschäftswert ${chf(geschaeftswert)}` : ''}, aufsteigend (günstigste zuoberst; nicht bezifferbare/offene Tarife zuunterst).
+                </caption>
+                <thead>
+                  <tr className="lc-overline text-ink-500 border-b border-line">
+                    <th className="text-left py-2 pr-3">Kanton</th>
+                    <th className="text-right py-2 pl-3">Beurkundungsgebühr</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[...vergleichsListe].sort((a, b) => beurkundungSortwert(a) - beurkundungSortwert(b)).map((r) => (
+                    <tr key={r.kanton} className={`border-b border-line/60 ${r.kanton === kanton ? 'bg-surface-raised font-medium' : ''}`}>
+                      <td className="py-1.5 pr-3">
+                        <a href={r.posten?.quelle.quelleUrl || undefined} target="_blank" rel="noopener noreferrer" className="hover:underline" title={r.posten?.quelle.erlassName}>{r.kanton}</a>
+                      </td>
+                      <td className="py-1.5 pl-3 text-right num text-ink-800">{r.posten ? ngPostenText(r.posten) : 'in Recherche'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          {pdfConfig && (
+            <div className="mt-5 border-t border-line pt-4 space-y-3">
+              <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+              <PdfExportButton config={pdfConfig} />
+            </div>
+          )}
+        </ErgebnisBlock>
+      )}
+    </div>
+  );
+}
+
+const DISCLAIMER =
+  'Beurkundungskosten (Notariatsgebühr) für öffentlich beurkundbare Rechtsgeschäfte nach kantonalem Tarif. ' +
+  'In den meisten Kantonen gilt ein wertbasierter Tarif auf den Geschäftswert; einzelne Geschäfte tragen Sondersätze (Testament, Erbvertrag) oder feste Gebühren (Vollmacht, Vorsorgeauftrag). ' +
+  'Aufwand-/Rahmentarife (freies Notariat) erscheinen als Spanne oder «nach Vereinbarung», nie als erfundener Punktwert; wo der kantonale Tarif noch nicht verifiziert vorliegt, wird das offen ausgewiesen. ' +
+  'Grundbuch-/Handelsregistergebühren, Auslagen und allfällige MwSt. sind nicht enthalten. Erstrecherche, nicht abgenommen. Keine Rechtsberatung.';
+
+type Bereich = 'kauf' | 'beurkundung' | 'grundbuch';
+const BEREICHE: { id: Bereich; label: string; hint: string }[] = [
+  { id: 'kauf', label: 'Grundstückkauf', hint: 'Beurkundung + Grundbuch + Grundpfand + Handänderungssteuer' },
+  { id: 'beurkundung', label: 'Beurkundung (Notariat)', hint: 'Testament, Erbvertrag, Gründungen, Dienstbarkeiten …' },
+  { id: 'grundbuch', label: 'Grundbuch (Eintragung)', hint: 'Grundpfand, Dienstbarkeit, Vormerkung, Mutation …' },
+];
+
+export function BeurkundungForm() {
+  const ausLink = useMemo(() => {
+    try { return permalinkLesen(BK_LINK_SPEC, typeof window === 'undefined' ? '' : window.location.search); }
+    catch { return {} as Record<string, unknown>; }
+  }, []);
+  // Bereich aus dem Permalink ableiten: ?ga= → Beurkundung, ?ea= → Grundbuch.
+  const startBereich: Bereich = ausLink.art ? 'beurkundung' : (typeof window !== 'undefined' && window.location.search.includes('ea=')) ? 'grundbuch' : 'kauf';
+  const [bereich, setBereich] = useState<Bereich>(startBereich);
+  const [art, setArt] = useState<GeschaeftsartId>(
+    (ausLink.art as GeschaeftsartId) && ausLink.art !== 'grundstueckkauf' ? (ausLink.art as GeschaeftsartId) : 'testament',
+  );
+
+  return (
+    <BeruehrtRahmen>
+      <div className="space-y-6">
+        <PflichtDisclaimer kurz="Notariats- und Grundbuchkosten nach Geschäftsart/Eintragungsart und kantonalem Tarif; wertbasiert, Sondersätze oder fix. Rahmentarife als Spanne." text={DISCLAIMER} />
+
+        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Bereich">
+          {BEREICHE.map((b) => (
+            <button
+              key={b.id} type="button" role="tab" aria-selected={bereich === b.id}
+              onClick={() => setBereich(b.id)}
+              className={`px-3 py-2 rounded-md text-body-s border transition-colors ${bereich === b.id ? 'border-brass-500 bg-surface-raised text-ink-900 font-medium' : 'border-line text-ink-600 hover:text-ink-900'}`}
+              title={b.hint}
+            >
+              {b.label}
+            </button>
+          ))}
+        </div>
+
+        {bereich === 'kauf' && <NotariatGrundbuchForm />}
+        {bereich === 'beurkundung' && (
+          <div className="space-y-4">
+            <GeschaeftsartWahl value={art} onChange={setArt} />
+            <AllgemeineBeurkundung art={art} startKanton={(ausLink.kanton as KantonCode) ?? 'ZH'} startWert={ausLink.wert as number | undefined} />
+          </div>
+        )}
+        {bereich === 'grundbuch' && <GrundbuchEintragForm />}
+      </div>
+    </BeruehrtRahmen>
+  );
+}
