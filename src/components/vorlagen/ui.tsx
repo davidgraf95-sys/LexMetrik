@@ -37,6 +37,30 @@ export function Field({ label, children, hint, optional }: {
   );
 }
 
+/** Geteiltes Ankreuzfeld (Redesign E11) — eine Trefferzeile (≥44px Touch),
+ *  gebrandetes Häkchen (accent-color global), einheitlicher Abstand und
+ *  Fokus. Ersetzt schrittweise die ~290 inline-Label-Checkboxen. Reine
+ *  Darstellung (§3) — der Zustand bleibt beim aufrufenden Formular. */
+export function Checkbox({ checked, onChange, label, hint, disabled, name }: {
+  checked: boolean;
+  onChange: (v: boolean) => void;
+  label: React.ReactNode;
+  hint?: React.ReactNode;
+  disabled?: boolean;
+  name?: string;
+}) {
+  return (
+    <label className={`flex items-start gap-2.5 py-1.5 min-h-[2.25rem] text-body-s ${disabled ? 'text-ink-400 cursor-not-allowed' : 'text-ink-700 cursor-pointer'}`}>
+      <input type="checkbox" name={name} checked={checked} disabled={disabled}
+        onChange={(e) => onChange(e.target.checked)} className="mt-0.5 shrink-0" />
+      <span className="min-w-0">
+        {label}
+        {hint && <span className="block text-xs text-ink-500">{hint}</span>}
+      </span>
+    </label>
+  );
+}
+
 // Geteilter Fedlex-Norm-Chip (Code-Review #6, 7.6.2026: Kopien dieses
 // Musters haben den Locale-Bug im Fristenspiegel erzeugt — neue Rechner
 // nutzen DIESE Komponente, keine lokalen NormPill-Varianten).

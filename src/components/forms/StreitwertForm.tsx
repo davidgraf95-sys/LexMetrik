@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BeruehrtRahmen, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -212,10 +212,8 @@ export function StreitwertForm() {
             + Begehren hinzufügen
           </button>
           {begehren.length > 1 && (
-            <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" checked={ausschliessend} onChange={(e) => setAusschliessend(e.target.checked)} />
-              die Begehren schliessen sich gegenseitig aus (kein Zusammenrechnen, Art. 93 ZPO)
-            </label>
+            <Checkbox checked={ausschliessend} onChange={setAusschliessend}
+              label="die Begehren schliessen sich gegenseitig aus (kein Zusammenrechnen, Art. 93 ZPO)" />
           )}
         </div>
       </div>
@@ -229,14 +227,10 @@ export function StreitwertForm() {
         {widerklageRoh.trim() !== '' && (
           <Field label="Weichen zur Widerklage">
             <div className="space-y-2">
-              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" checked={wkSchliesstAus} onChange={(e) => setWkSchliesstAus(e.target.checked)} />
-                Klage und Widerklage schliessen sich gegenseitig aus (Art. 94 Abs. 2 ZPO)
-              </label>
-              <label className="flex items-center gap-2 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" checked={teilklage} onChange={(e) => setTeilklage(e.target.checked)} />
-                die Hauptklage ist eine Teilklage (Kosten nur nach Hauptklage, Art. 94 Abs. 3 ZPO)
-              </label>
+              <Checkbox checked={wkSchliesstAus} onChange={setWkSchliesstAus}
+                label="Klage und Widerklage schliessen sich gegenseitig aus (Art. 94 Abs. 2 ZPO)" />
+              <Checkbox checked={teilklage} onChange={setTeilklage}
+                label="die Hauptklage ist eine Teilklage (Kosten nur nach Hauptklage, Art. 94 Abs. 3 ZPO)" />
             </div>
           </Field>
         )}
