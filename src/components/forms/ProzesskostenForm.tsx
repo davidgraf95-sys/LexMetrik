@@ -49,6 +49,21 @@ const chf = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}
 const spanneText = (s?: { vonChf: number; bisChf: number }): string =>
   !s ? '—' : s.vonChf === s.bisChf ? chf(s.vonChf) : `${chf(s.vonChf)} – ${chf(s.bisChf)}`;
 
+// Sortier-Untergrenze eines Postens (für den interkantonalen Vergleich:
+// günstigste zuoberst). kostenlos = 0; nicht bezifferbar (Schlichtungspauschale /
+// aufwandbasiert) = Infinity → ans Ende, da nicht vergleichbar.
+const untergrenzeChf = (p: PostenErgebnis): number => {
+  if (p.kostenlos) return 0;
+  const e = p.ergebnis;
+  if (!e) return Number.POSITIVE_INFINITY;
+  if (e.deterministisch) return e.betragChf;
+  if (typeof e.vonChf === 'number') return e.vonChf;
+  if (typeof e.bisChf === 'number') return e.bisChf;
+  return Number.POSITIVE_INFINITY;
+};
+const vergleichSortwert = (r: { gerichtskosten: PostenErgebnis; parteientschaedigung: PostenErgebnis }): number =>
+  untergrenzeChf(r.gerichtskosten) + untergrenzeChf(r.parteientschaedigung);
+
 function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis }) {
   const q = posten.quelle;
   return (
@@ -356,7 +371,7 @@ export function ProzesskostenForm() {
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[34rem] text-body-s border-collapse">
                 <caption className="text-xs text-ink-500 text-left mb-2">
-                  Interkantonaler Vergleich {nv ? '(nicht vermögensrechtlich)' : `bei Streitwert CHF ${streitwertRoh?.toLocaleString('de-CH')}`} ({VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}{verfahrenRelevant && verfahren !== 'ordentlich' ? `, ${VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label}` : ''}{instanz === 'rechtsmittel' ? ', Rechtsmittel' : ''}, {MATERIEN.find((m) => m.wert === materie)?.label}) — Gerichtsgebühr / Parteientschädigung. Quelle je Kanton verlinkt.
+                  Interkantonaler Vergleich {nv ? '(nicht vermögensrechtlich)' : `bei Streitwert CHF ${streitwertRoh?.toLocaleString('de-CH')}`} ({VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}{verfahrenRelevant && verfahren !== 'ordentlich' ? `, ${VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label}` : ''}{instanz === 'rechtsmittel' ? ', Rechtsmittel' : ''}, {MATERIEN.find((m) => m.wert === materie)?.label}) — Gerichtsgebühr / Parteientschädigung, aufsteigend sortiert (günstigste zuoberst; nicht bezifferbare Tarife zuunterst). Quelle je Kanton verlinkt.
                 </caption>
                 <thead>
                   <tr className="lc-overline text-ink-500 border-b border-line">
@@ -366,7 +381,7 @@ export function ProzesskostenForm() {
                   </tr>
                 </thead>
                 <tbody>
-                  {vergleichsListe.map((r) => (
+                  {[...vergleichsListe].sort((a, b) => vergleichSortwert(a) - vergleichSortwert(b)).map((r) => (
                     <tr key={r.kanton} className={`border-b border-line/60 ${r.kanton === kanton ? 'bg-surface-raised font-medium' : ''}`}>
                       <td className="py-1.5 pr-3">
                         <a href={r.gerichtskosten.quelle.quelleUrl} target="_blank" rel="noopener noreferrer" className="hover:underline" title={`${r.gerichtskosten.quelle.erlassName} (${r.gerichtskosten.quelle.erlassNr})`}>{r.kanton}</a>
