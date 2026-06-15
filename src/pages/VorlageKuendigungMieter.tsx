@@ -7,7 +7,7 @@ import type { Mietobjekt, TerminQuelle } from '../types/mietrecht';
 import type { Kanton } from '../types/legal';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { KANTONE } from '../lib/kantone';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -94,7 +94,7 @@ export function VorlageKuendigungMieter() {
 
   const terminKachel = engine && !nichtig && engine.endtermin && (
     <div className="lc-tile">
-      <p className="lc-overline">Wirksamer Endtermin</p>
+      <GruppenTitel>Wirksamer Endtermin</GruppenTitel>
       <p className="text-h2 font-display font-semibold text-ink-900 leading-none num">{engine.endtermin}</p>
       <p className="text-body-s text-ink-600 mt-1.5">
         {engine.verfehlterTermin

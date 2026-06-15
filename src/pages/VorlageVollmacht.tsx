@@ -8,7 +8,7 @@ import {
 } from '../lib/vorlagen/vollmacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -155,7 +155,7 @@ export function VorlageVollmacht() {
       case 'bevollmaechtigte': return (
         <div className="space-y-5">
           <div className="space-y-3">
-            <p className="lc-overline">Bevollmächtigte Person(en)</p>
+            <GruppenTitel>Bevollmächtigte Person(en)</GruppenTitel>
             {a.bevollmaechtigte.map((b, i) => (
               <div key={i} className="lc-card p-4 space-y-3">
                 <Field label={istAnwalt ? 'Name (Anwältin/Anwalt bzw. Kanzlei)' : 'Name'}>
@@ -180,7 +180,7 @@ export function VorlageVollmacht() {
 
           {a.bevollmaechtigte.filter((b) => b.name.trim()).length > 1 && (
             <div className="space-y-2">
-              <p className="lc-overline">Mehrere Bevollmächtigte (Art. 33 Abs. 2 OR)</p>
+              <GruppenTitel>Mehrere Bevollmächtigte (Art. 33 Abs. 2 OR)</GruppenTitel>
               <SelectionGrid
                 className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 items={([
@@ -194,7 +194,7 @@ export function VorlageVollmacht() {
           )}
 
           <div className="space-y-2">
-            <p className="lc-overline">Substitution (Untervollmacht)</p>
+            <GruppenTitel>Substitution (Untervollmacht)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -217,7 +217,7 @@ export function VorlageVollmacht() {
                   placeholder="z. B. Forderung aus Werkvertrag gegen X AG" />
               </Field>
               <div className="space-y-2">
-                <p className="lc-overline">Besondere Prozessbefugnisse (Art. 396 Abs. 3 OR)</p>
+                <GruppenTitel>Besondere Prozessbefugnisse (Art. 396 Abs. 3 OR)</GruppenTitel>
                 <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                   <input type="checkbox" className="mt-0.5" checked={a.prozessbefugnisse} onChange={(e) => set('prozessbefugnisse', e.target.checked)} />
                   <span>Vergleich abschliessen, Klage anerkennen und zurückziehen <span className="text-ink-500">(materielle Verfügungshandlungen – ausdrücklich, Art. 241 ZPO)</span></span>
@@ -252,7 +252,7 @@ export function VorlageVollmacht() {
                 <textarea className={inputCls} rows={2} value={a.geschaeft} onChange={(e) => set('geschaeft', e.target.value)} />
               </Field>
               <div className="space-y-2">
-                <p className="lc-overline">Vertretungsbereiche</p>
+                <GruppenTitel>Vertretungsbereiche</GruppenTitel>
                 {VM_BEREICHE.map((b) => (
                   <label key={b.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                     <input type="checkbox" className="mt-0.5" checked={a.bereiche.includes(b.id)} onChange={() => toggleBereich(b.id)} />

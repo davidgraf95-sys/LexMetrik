@@ -5,7 +5,7 @@ import {
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -135,7 +135,7 @@ export function VorlageKuendigungArbeitnehmer() {
           </label>
           {engine?.beendigungsdatum && (
             <div className="lc-tile">
-              <p className="lc-overline">Beendigung des Arbeitsverhältnisses</p>
+              <GruppenTitel>Beendigung des Arbeitsverhältnisses</GruppenTitel>
               <p className="text-h2 font-display font-semibold text-ink-900 leading-none num">
                 {engine.beendigungsdatum.toLocaleDateString('de-CH')}
               </p>

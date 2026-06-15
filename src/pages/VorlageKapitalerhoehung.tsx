@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import {
@@ -102,7 +102,7 @@ export function VorlageKapitalerhoehung() {
         Zurück zum Katalog
       </Link>
       <div className="space-y-3">
-        <p className="lc-overline">Gesellschaftsrecht · Dokumentmappe</p>
+        <GruppenTitel>Gesellschaftsrecht · Dokumentmappe</GruppenTitel>
         <h1 className="text-h1 font-display font-semibold text-ink-900">Kapitalerhöhung (AG / GmbH)</h1>
         <p className="text-body-l text-ink-600 max-w-reading">
           Ordentliche Kapitalerhöhung gegen Bareinlage: Erhöhungsbeschluss und Feststellungs-Urkunde

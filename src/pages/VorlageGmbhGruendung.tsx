@@ -6,7 +6,7 @@ import {
   type GmbhStatutKlausel,
   type Phase,
 } from '../lib/gruendungsunterlagen';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { GmbhDokumentmappe } from '../components/vorlagen/GmbhDokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
@@ -91,7 +91,7 @@ export function VorlageGmbhGruendung() {
         Zurück zum Katalog
       </Link>
       <div className="space-y-3">
-        <p className="lc-overline">Gesellschaftsrecht · Checkliste</p>
+        <GruppenTitel>Gesellschaftsrecht · Checkliste</GruppenTitel>
         <h1 className="text-h1 font-display font-semibold text-ink-900">GmbH-Gründungsunterlagen</h1>
         <p className="text-body-l text-ink-600 max-w-reading">
           Checkliste UND Dokumentmappe: Die Checkliste leitet die registerrechtlich verlangten
@@ -112,7 +112,7 @@ export function VorlageGmbhGruendung() {
       <PflichtDisclaimer />
 
       <section className="lc-card p-5 sm:p-6 space-y-4">
-        <p className="lc-overline">Gründungs-Konstellation</p>
+        <GruppenTitel>Gründungs-Konstellation</GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Field label="Liberierung">
             <select className={inputCls} value={einlageArt} onChange={(e) => setEinlageArt(e.target.value as EinlageArt)}>
@@ -169,7 +169,7 @@ export function VorlageGmbhGruendung() {
         return (
           <section key={ph.id} className="lc-card p-5 sm:p-6 space-y-3">
             <div>
-              <p className="lc-overline">{ph.titel}</p>
+              <GruppenTitel>{ph.titel}</GruppenTitel>
               <p className="text-body-s text-ink-500">{ph.lead}</p>
             </div>
             <ul className="space-y-3">
@@ -191,7 +191,7 @@ export function VorlageGmbhGruendung() {
 
       {ergebnis.statutenKlauseln.length > 0 && (
         <section className="lc-card p-5 sm:p-6 space-y-3">
-          <p className="lc-overline">Pflichtklauseln in den Statuten</p>
+          <GruppenTitel>Pflichtklauseln in den Statuten</GruppenTitel>
           <ul className="space-y-2">
             {ergebnis.statutenKlauseln.map((k) => (
               <li key={k.norm} className="text-body-s text-ink-700">
@@ -203,7 +203,7 @@ export function VorlageGmbhGruendung() {
       )}
 
       <section className="lc-card p-5 sm:p-6 space-y-3">
-        <p className="lc-overline">Kosten (Bund) und Hinweise</p>
+        <GruppenTitel>Kosten (Bund) und Hinweise</GruppenTitel>
         <ul className="lc-list space-y-2 text-body-s text-ink-700">
           <li>
             <span className="font-medium text-ink-900">Handelsregister-Gebühr: CHF 420</span> (GebV-HReg, SR 221.411.1, Anhang Ziff. 1.3 «Kapitalgesellschaften», Stand 1.1.2021) — zuzüglich allfälliger Zuschläge bis 50 % und Auslagen (Art. 3/4 GebV-HReg).

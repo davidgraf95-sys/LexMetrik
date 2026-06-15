@@ -5,7 +5,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -80,12 +80,12 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
       case 'parteien': return (
         <div className="space-y-5">
           <div className="space-y-3">
-            <p className="lc-overline">Lehrbetrieb</p>
+            <GruppenTitel>Lehrbetrieb</GruppenTitel>
             <Field label="Firma / Name"><input className={inputCls} value={a.betriebName} onChange={(e) => set('betriebName', e.target.value)} placeholder="Muster AG" /></Field>
             <Field label="Adresse"><input className={inputCls} value={a.betriebAdresse} onChange={(e) => set('betriebAdresse', e.target.value)} placeholder="Strasse Nr., PLZ Ort" /></Field>
           </div>
           <div className="space-y-3">
-            <p className="lc-overline">Lernende Person</p>
+            <GruppenTitel>Lernende Person</GruppenTitel>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Vorname"><input className={inputCls} value={a.lernendeVorname} onChange={(e) => set('lernendeVorname', e.target.value)} /></Field>
               <Field label="Nachname"><input className={inputCls} value={a.lernendeName} onChange={(e) => set('lernendeName', e.target.value)} /></Field>
@@ -105,7 +105,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
         <div className="space-y-4">
           <Field label="Beruf / berufliche Grundbildung"><input className={inputCls} value={a.beruf} onChange={(e) => set('beruf', e.target.value)} placeholder="z. B. Kauffrau/Kaufmann" /></Field>
           <div className="space-y-2">
-            <p className="lc-overline">Abschluss</p>
+            <GruppenTitel>Abschluss</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -122,7 +122,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
             <Field label="Dauer (Jahre)" hint="koppelt die Lohnstaffel"><input type="number" min={1} max={5} className={inputCls + ' num w-28'} value={a.dauerJahre} onChange={(e) => setDauer(Number(e.target.value))} /></Field>
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Probezeit (Art. 344a Abs. 3 OR)</p>
+            <GruppenTitel>Probezeit (Art. 344a Abs. 3 OR)</GruppenTitel>
             <Field label="Probezeit (Monate)" hint="ein bis drei Monate; ohne Abrede gilt von Gesetzes wegen drei Monate">
               <input type="number" min={1} max={6} className={inputCls + ' num w-28'} value={a.probezeitMonate} onChange={(e) => set('probezeitMonate', Number(e.target.value))} />
             </Field>
@@ -139,7 +139,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
       case 'lohn': return (
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="lc-overline">Lohn je Lehrjahr (Art. 344a Abs. 2 OR)</p>
+            <GruppenTitel>Lohn je Lehrjahr (Art. 344a Abs. 2 OR)</GruppenTitel>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {a.lohnLehrjahre.map((l, i) => (
                 <Field key={l.jahr} label={`${l.jahr}. Lehrjahr (CHF / Monat)`}>
@@ -155,7 +155,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
           <Field label="Berufsfachschule" optional><input className={inputCls} value={a.berufsfachschule} onChange={(e) => set('berufsfachschule', e.target.value)} placeholder="z. B. BFS Basel" /></Field>
           {a.detailgrad === 'experte' && (
             <div className="space-y-2 pt-1">
-              <p className="lc-overline">Weitere Leistungen (Art. 344a Abs. 5 OR)</p>
+              <GruppenTitel>Weitere Leistungen (Art. 344a Abs. 5 OR)</GruppenTitel>
               <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.berufswerkzeuge} onChange={(e) => set('berufswerkzeuge', e.target.checked)} /><span>Berufswerkzeuge werden vom Lehrbetrieb gestellt</span></label>
               <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.unterkunftVerpflegung} onChange={(e) => set('unterkunftVerpflegung', e.target.checked)} /><span>Beitrag an Unterkunft und Verpflegung</span></label>
               <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.versicherungspraemien} onChange={(e) => set('versicherungspraemien', e.target.checked)} /><span>Übernahme der Prämien der obligatorischen Unfallversicherung</span></label>

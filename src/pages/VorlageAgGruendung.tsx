@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { agGruendungsunterlagen, type EinlageArt, type Phase , finmaBegriffsTreffer } from '../lib/gruendungsunterlagen';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { VorlagenWizardRahmen, VorschauPanel } from '../components/vorlagen/wizard';
 import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
@@ -1195,7 +1195,7 @@ export function VorlageAgGruendung() {
         return (
           <section key={ph.id} className="rounded-xl border border-line p-4 space-y-3">
             <div>
-              <p className="lc-overline">{ph.titel}</p>
+              <GruppenTitel>{ph.titel}</GruppenTitel>
               <p className="text-body-s text-ink-500">{ph.lead}</p>
             </div>
             <ul className="space-y-3">
@@ -1217,7 +1217,7 @@ export function VorlageAgGruendung() {
 
       {/* Kosten (Bund) */}
       <section className="rounded-xl border border-line p-4 space-y-3">
-        <p className="lc-overline">Kosten (Bund) und Hinweise</p>
+        <GruppenTitel>Kosten (Bund) und Hinweise</GruppenTitel>
         <ul className="lc-list space-y-2 text-body-s text-ink-700">
           <li>
             <span className="font-medium text-ink-900">Handelsregister-Gebühr: CHF 420</span> (GebV-HReg, SR 221.411.1, Anhang Ziff. 1.3 «Kapitalgesellschaften», Stand 1.1.2021) — zuzüglich allfälliger Zuschläge bis 50 % und Auslagen (Art. 3/4 GebV-HReg).
@@ -1271,7 +1271,7 @@ export function VorlageAgGruendung() {
 
       {/* Etappe 5/D20+D21: Nach dem Eintrag — Pflichten und Warnung */}
       <section className="rounded-xl border border-line p-4 space-y-3">
-        <p className="lc-overline">Nach dem Eintrag: Pflichten des Verwaltungsrates</p>
+        <GruppenTitel>Nach dem Eintrag: Pflichten des Verwaltungsrates</GruppenTitel>
         <ul className="lc-list space-y-2 text-body-s text-ink-700">
           <li>
             <span className="font-medium text-ink-900">Buchführung ist persönliche Pflicht</span> jedes

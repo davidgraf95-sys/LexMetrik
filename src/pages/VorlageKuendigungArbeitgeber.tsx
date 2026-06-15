@@ -5,7 +5,7 @@ import {
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { SperrereignisseEditor } from '../components/forms/SperrereignisseEditor';
 import { SperrtageZaehler } from '../components/SperrtageZaehler';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -89,7 +89,7 @@ export function VorlageKuendigungArbeitgeber() {
   const statusKachel = engine && ISO.test(a.zugangKuendigung) && (
     nichtig ? (
       <div className="lc-tile border-t-[3px] border-t-danger-500">
-        <p className="lc-overline">Status</p>
+        <GruppenTitel>Status</GruppenTitel>
         <p className="text-h2 font-semibold text-danger-700 leading-none">NICHTIG</p>
         <p className="text-body-s text-ink-700 mt-1.5">
           Der Zugang fällt in eine Sperrfrist (<NormLink artikel="Art. 336c OR" />). Frühestens neu kündbar:{' '}
@@ -98,7 +98,7 @@ export function VorlageKuendigungArbeitgeber() {
       </div>
     ) : (
       <div className="lc-tile">
-        <p className="lc-overline">Beendigung des Arbeitsverhältnisses</p>
+        <GruppenTitel>Beendigung des Arbeitsverhältnisses</GruppenTitel>
         <p className="text-h2 font-display font-semibold text-ink-900 leading-none num">
           {engine.beendigungISO?.split('-').reverse().join('.') ?? '–'}
         </p>

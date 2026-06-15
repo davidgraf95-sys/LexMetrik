@@ -7,7 +7,7 @@ import {
 import { BANNER_ABSCHREIBEN } from '../lib/vorlagen/banner';
 import { berechneErbteilung } from '../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../lib/bruch';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { DatumsFeld } from '../components/DatumsFeld';
@@ -158,7 +158,7 @@ export function VorlageTestament() {
 
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <p className="lc-overline">Erbinnen und Erben</p>
+              <GruppenTitel>Erbinnen und Erben</GruppenTitel>
               {a.erben.length > 0 && (
                 <span className={`num text-xs rounded-full px-2 py-0.5 ${Math.abs(erbenSumme - 100) < 0.01 ? 'bg-sage-bg text-sage-700' : 'bg-warn-bg text-warn-700'}`}>
                   Summe {erbenSumme} %
@@ -314,7 +314,7 @@ export function VorlageTestament() {
   // Pflichtteils-Panel (Live, aus der Erbteilungs-Engine) – vorlagenspezifisch
   const pflichtteilePanel = pflichtteile && (a.hatNachkommen || verheiratet) ? (
     <section className="lc-card p-4 space-y-2">
-      <p className="lc-overline">Pflichtteile (Art. 471 ZGB) – zur Kontrolle</p>
+      <GruppenTitel>Pflichtteile (Art. 471 ZGB) – zur Kontrolle</GruppenTitel>
       <ul className="text-body-s text-ink-700 space-y-0.5">
         {pflichtteile.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => (
           <li key={e.bezeichnung} className="flex justify-between gap-3">

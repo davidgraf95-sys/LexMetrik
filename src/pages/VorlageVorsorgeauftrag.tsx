@@ -5,7 +5,7 @@ import {
 } from '../lib/vorlagen/vorsorgeauftrag';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -96,7 +96,7 @@ export function VorlageVorsorgeauftrag() {
       case 'voraussetzungen': return (
         <div className="space-y-5">
           <div className="space-y-2">
-            <p className="lc-overline">Errichtungsvoraussetzungen (Art. 13 ZGB)</p>
+            <GruppenTitel>Errichtungsvoraussetzungen (Art. 13 ZGB)</GruppenTitel>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.volljaehrig} onChange={(e) => set('volljaehrig', e.target.checked)} />
               Ich bin volljährig (Art. 14 ZGB)
@@ -112,7 +112,7 @@ export function VorlageVorsorgeauftrag() {
           </div>
 
           <div className="space-y-2">
-            <p className="lc-overline">Form (Art. 361 ZGB)</p>
+            <GruppenTitel>Form (Art. 361 ZGB)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -151,7 +151,7 @@ export function VorlageVorsorgeauftrag() {
       case 'beauftragte': return (
         <div className="space-y-5">
           <div className="space-y-3">
-            <p className="lc-overline">Beauftragte Person(en)</p>
+            <GruppenTitel>Beauftragte Person(en)</GruppenTitel>
             <p className="text-xs text-ink-500">Pro Aufgabenbereich kann dieselbe oder eine andere Person bestimmt werden. Medizinische Vertretung nur durch natürliche Personen.</p>
             {a.beauftragte.map((b, i) => (
               <div key={i} className="lc-card p-4 space-y-3">
@@ -187,7 +187,7 @@ export function VorlageVorsorgeauftrag() {
           </div>
 
           <div className="space-y-2">
-            <p className="lc-overline">Ersatzpersonen (Art. 360 Abs. 3 ZGB)</p>
+            <GruppenTitel>Ersatzpersonen (Art. 360 Abs. 3 ZGB)</GruppenTitel>
             {a.ersatzpersonen.map((e, i) => (
               <div key={i} className="flex flex-wrap items-end gap-2">
                 <span className="num text-body-s text-ink-500 pb-2.5">{i + 1}.</span>
@@ -218,7 +218,7 @@ export function VorlageVorsorgeauftrag() {
           {VA_BEREICHE.filter((ber) => aktiveBereiche.has(ber.id)).map((ber) => (
             <div key={ber.id} className="space-y-2">
               <div className="flex items-center justify-between gap-3">
-                <p className="lc-overline">{ber.label}</p>
+                <GruppenTitel>{ber.label}</GruppenTitel>
                 <button type="button" className="text-xs text-brass-700 hover:text-brass-600"
                   onClick={() => set('module', { ...a.module, [ber.id]: VA_MODULE[ber.id].map((m) => m.id) })}>
                   alle wählen
@@ -244,7 +244,7 @@ export function VorlageVorsorgeauftrag() {
       case 'regelungen': return (
         <div className="space-y-5">
           <div className="space-y-2">
-            <p className="lc-overline">Sondervollmachten</p>
+            <GruppenTitel>Sondervollmachten</GruppenTitel>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.schenkungenErlaubt} onChange={(e) => set('schenkungenErlaubt', e.target.checked)} />
               <span>Übliche Gelegenheitsgeschenke erlauben <span className="text-ink-500">(Schranke: Art. 240 Abs. 2 OR)</span></span>
@@ -260,7 +260,7 @@ export function VorlageVorsorgeauftrag() {
           </Field>
 
           <div className="space-y-2">
-            <p className="lc-overline">Entschädigung (Art. 366 ZGB)</p>
+            <GruppenTitel>Entschädigung (Art. 366 ZGB)</GruppenTitel>
             <div className="flex flex-wrap gap-1.5" role="group" aria-label="Entschädigung">
               {([
                 ['keine_angabe', 'keine Regelung (KESB legt fest)'],

@@ -5,7 +5,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -58,12 +58,12 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
       case 'parteien': return (
         <div className="space-y-5">
           <div className="space-y-3">
-            <p className="lc-overline">Arbeitgeber</p>
+            <GruppenTitel>Arbeitgeber</GruppenTitel>
             <Field label="Firma / Name"><input className={inputCls} value={a.arbeitgeberName} onChange={(e) => set('arbeitgeberName', e.target.value)} placeholder="Muster AG" /></Field>
             <Field label="Adresse"><input className={inputCls} value={a.arbeitgeberAdresse} onChange={(e) => set('arbeitgeberAdresse', e.target.value)} placeholder="Strasse Nr., PLZ Ort" /></Field>
           </div>
           <div className="space-y-3">
-            <p className="lc-overline">Heimarbeitnehmer/in</p>
+            <GruppenTitel>Heimarbeitnehmer/in</GruppenTitel>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Vorname"><input className={inputCls} value={a.heimarbeiterVorname} onChange={(e) => set('heimarbeiterVorname', e.target.value)} /></Field>
               <Field label="Nachname"><input className={inputCls} value={a.heimarbeiterName} onChange={(e) => set('heimarbeiterName', e.target.value)} /></Field>
@@ -78,7 +78,7 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
           <Field label="Auszuführende Arbeiten"><input className={inputCls} value={a.arbeitsbeschrieb} onChange={(e) => set('arbeitsbeschrieb', e.target.value)} placeholder="z. B. Konfektionierung von Verpackungen" /></Field>
           <Field label="Arbeitsraum"><input className={inputCls} value={a.arbeitsraum} onChange={(e) => set('arbeitsraum', e.target.value)} placeholder="in der Wohnung des Heimarbeitnehmers" /></Field>
           <div className="space-y-2">
-            <p className="lc-overline">Material und Geräte</p>
+            <GruppenTitel>Material und Geräte</GruppenTitel>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.materialVomArbeitgeber} onChange={(e) => set('materialVomArbeitgeber', e.target.checked)} />
               <span>Material/Geräte werden vom Arbeitgeber gestellt <span className="text-ink-500">(Sorgfalts-/Rückgabepflicht, Haftung höchstens Selbstkosten, Art. 352a OR)</span></span>
@@ -105,7 +105,7 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
             <Field label="Einheit"><input className={inputCls} value={a.lohnEinheit} onChange={(e) => set('lohnEinheit', e.target.value)} placeholder="pro Stück" /></Field>
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Dienstverhältnis (Art. 353a/353b/354 OR)</p>
+            <GruppenTitel>Dienstverhältnis (Art. 353a/353b/354 OR)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([

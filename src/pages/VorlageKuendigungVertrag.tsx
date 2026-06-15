@@ -6,7 +6,7 @@ import {
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -173,7 +173,7 @@ export function VorlageKuendigungVertrag() {
           )}
           {a.preset === 'darlehen' && rueckzahlungBis && (
             <div className="lc-tile">
-              <p className="lc-overline">Rückzahlung bis</p>
+              <GruppenTitel>Rückzahlung bis</GruppenTitel>
               <p className="text-h2 font-display font-semibold text-ink-900 leading-none num">{rueckzahlungBis}</p>
               <p className="text-body-s text-ink-600 mt-1.5">Sechs Wochen ab Aufforderung (Art. 318 OR) — reine Datums-Addition, vertragliche Regelungen gehen vor.</p>
             </div>

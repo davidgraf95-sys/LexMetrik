@@ -9,7 +9,7 @@ import { BetragsFeld } from '../components/BetragsFeld';
 import { behoerdeFuer, behoerdeAlsBlock } from '../lib/vorlagen/behoerden';
 import { KANTONE } from '../lib/kantone';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { SgAdressatKachel, SgBehoerdenWahl } from '../components/vorlagen/SgBehoerdenWahl';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -82,7 +82,7 @@ export function VorlageSchlichtungsgesuchBs() {
       {liste.map((p, i) => (
         <div key={i} className="lc-card p-4 space-y-3">
           <div className="flex items-center justify-between gap-2">
-            <p className="lc-overline">{rolle} {liste.length > 1 ? i + 1 : ''}</p>
+            <GruppenTitel>{rolle} {liste.length > 1 ? i + 1 : ''}</GruppenTitel>
             <div className="flex items-center gap-2">
               <select className={inputCls + ' !w-auto text-body-s'} value={p.typ}
                 onChange={(e) => {
@@ -173,7 +173,7 @@ export function VorlageSchlichtungsgesuchBs() {
           {/* Behörden-Grundgerüst (5.6.2026): Kanton zuerst – Registry löst
               die VOLLSTÄNDIGE Adresse auf (Pilot BS); Handeingabe als Override */}
           <div className="space-y-3">
-            <p className="lc-overline">Zuständige Schlichtungsbehörde</p>
+            <GruppenTitel>Zuständige Schlichtungsbehörde</GruppenTitel>
             {/* Original-Basel-Darstellung für ALLE Kantone (Auftrag David
                 10.6.2026): Kantonswahl links, lc-tile-Adresskachel daneben —
                 gespiesen aus der Registry (BS) bzw. der Auflösung darunter. */}
@@ -262,7 +262,7 @@ export function VorlageSchlichtungsgesuchBs() {
           </div>
 
           <div className="space-y-2">
-            <p className="lc-overline">Art des Streitgegenstands</p>
+            <GruppenTitel>Art des Streitgegenstands</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={TYPEN.map((t) => ({ code: t.code, label: t.label, sub: t.sub }))}
@@ -423,7 +423,7 @@ export function VorlageSchlichtungsgesuchBs() {
           )}
 
           <div className="space-y-2">
-            <p className="lc-overline">Weitere Rechtsbegehren <span className="normal-case text-ink-500">· optional</span></p>
+            <GruppenTitel>Weitere Rechtsbegehren <span className="normal-case text-ink-500">· optional</span></GruppenTitel>
             {a.weitereRechtsbegehren.map((r, i) => (
               <div key={i} className="flex items-start gap-2">
                 <textarea className={inputCls} rows={2} value={r}
@@ -482,7 +482,7 @@ export function VorlageSchlichtungsgesuchBs() {
           </div>
 
           <div className="space-y-2">
-            <p className="lc-overline">Beilagen</p>
+            <GruppenTitel>Beilagen</GruppenTitel>
             {a.vertretung?.bezeichnung && <p className="text-xs text-ink-500">«Vollmacht» wird automatisch aufgenommen.</p>}
             {a.beilagen.map((b, i) => (
               <div key={i} className="flex items-center gap-2">

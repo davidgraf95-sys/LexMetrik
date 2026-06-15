@@ -9,7 +9,7 @@ import { VorlageHeimarbeitsvertrag } from './VorlageHeimarbeitsvertrag';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -128,7 +128,7 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
       case 'parteien': return (
         <div className="space-y-5">
           <div className="space-y-3">
-            <p className="lc-overline">Arbeitgeber</p>
+            <GruppenTitel>Arbeitgeber</GruppenTitel>
             <Field label="Rechtsform">
               <select className={inputCls} value={a.arbeitgeberTyp} onChange={(e) => set('arbeitgeberTyp', e.target.value as AvAntworten['arbeitgeberTyp'])}>
                 <option value="juristisch">juristische Person (AG, GmbH, Verein …)</option>
@@ -144,7 +144,7 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
             </Field>
           </div>
           <div className="space-y-3">
-            <p className="lc-overline">Arbeitnehmer/in</p>
+            <GruppenTitel>Arbeitnehmer/in</GruppenTitel>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Vorname"><input className={inputCls} value={a.arbeitnehmerVorname} onChange={(e) => set('arbeitnehmerVorname', e.target.value)} /></Field>
               <Field label="Nachname"><input className={inputCls} value={a.arbeitnehmerName} onChange={(e) => set('arbeitnehmerName', e.target.value)} /></Field>
@@ -195,7 +195,7 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
           {/* Probezeit ist auch beim befristeten Verhältnis vereinbar */}
           {(
             <div className="space-y-3 pt-1">
-              <p className="lc-overline">Probezeit (Art. 335b OR)</p>
+              <GruppenTitel>Probezeit (Art. 335b OR)</GruppenTitel>
               <SelectionGrid
                 className="grid grid-cols-1 sm:grid-cols-3 gap-2"
                 items={([
@@ -264,7 +264,7 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
             </Field>
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Überstunden (Art. 321c OR)</p>
+            <GruppenTitel>Überstunden (Art. 321c OR)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -289,7 +289,7 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
           </Field>
           {!a.befristet && (
             <div className="space-y-2 pt-1">
-              <p className="lc-overline">Kündigungsfrist nach der Probezeit (Art. 335c OR)</p>
+              <GruppenTitel>Kündigungsfrist nach der Probezeit (Art. 335c OR)</GruppenTitel>
               <SelectionGrid
                 className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 items={([
@@ -313,7 +313,7 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
       case 'absicherung': return (
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="lc-overline">Lohnfortzahlung bei Krankheit (Art. 324a OR)</p>
+            <GruppenTitel>Lohnfortzahlung bei Krankheit (Art. 324a OR)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -340,7 +340,7 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
             )}
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Spesen (Art. 327a OR)</p>
+            <GruppenTitel>Spesen (Art. 327a OR)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -357,7 +357,7 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
             )}
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Gesamtarbeitsvertrag</p>
+            <GruppenTitel>Gesamtarbeitsvertrag</GruppenTitel>
             <select className={inputCls} value={a.gav} onChange={(e) => set('gav', e.target.value as AvAntworten['gav'])}>
               <option value="nein">Kein GAV anwendbar</option>
               <option value="ja">GAV anwendbar</option>

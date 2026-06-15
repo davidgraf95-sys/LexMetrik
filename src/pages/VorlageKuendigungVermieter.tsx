@@ -4,7 +4,7 @@ import { berechneMietkuendigung } from '../lib/mietrecht';
 import type { Mietobjekt } from '../types/mietrecht';
 import type { Kanton } from '../types/legal';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { KANTONE } from '../lib/kantone';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
@@ -50,7 +50,7 @@ export function VorlageKuendigungVermieter() {
         Zurück zum Katalog
       </Link>
       <div className="space-y-3">
-        <p className="lc-overline">Miete · Checkliste</p>
+        <GruppenTitel>Miete · Checkliste</GruppenTitel>
         <h1 className="text-h1 font-display font-semibold text-ink-900">Kündigung durch Vermieter:in</h1>
         <p className="text-body-l text-ink-600 max-w-reading">
           Bewusst KEINE ausfüllbare Vorlage: Die Vermieter-Kündigung von Wohn- und Geschäftsräumen ist nur
@@ -69,7 +69,7 @@ export function VorlageKuendigungVermieter() {
       <PflichtDisclaimer />
 
       <section className="lc-card p-5 sm:p-6 space-y-4">
-        <p className="lc-overline">Gültigkeits-Checkliste</p>
+        <GruppenTitel>Gültigkeits-Checkliste</GruppenTitel>
         <ol className="space-y-3 text-body-s text-ink-700 list-decimal pl-5">
           <li>
             <strong>Amtliches Formular des Kantons verwenden</strong> (<NormLink artikel="Art. 266l OR" /> Abs. 2):
@@ -96,7 +96,7 @@ export function VorlageKuendigungVermieter() {
       </section>
 
       <section className="lc-card p-5 sm:p-6 space-y-4">
-        <p className="lc-overline">Termin- und Fristen-Auskunft (Mietengine)</p>
+        <GruppenTitel>Termin- und Fristen-Auskunft (Mietengine)</GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Field label="Objektart">
             <select className={inputCls} value={objekt} onChange={(e) => setObjekt(e.target.value as Mietobjekt)}>

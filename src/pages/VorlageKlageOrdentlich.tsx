@@ -9,7 +9,7 @@ import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { KANTONE } from '../lib/kantone';
@@ -65,7 +65,7 @@ export function VorlageKlageOrdentlich() {
       case 'verfahren': return (
         <div className="space-y-4">
           <div className="space-y-3">
-            <p className="lc-overline">Zuständiges Gericht</p>
+            <GruppenTitel>Zuständiges Gericht</GruppenTitel>
             <div className="grid grid-cols-[8rem_1fr] gap-3 items-start">
               <Field label="Kanton">
                 <select className={inputCls} value={a.gerichtsKanton}
@@ -160,14 +160,14 @@ export function VorlageKlageOrdentlich() {
       case 'parteien': return (
         <div className="space-y-5">
           <div className="space-y-2">
-            <p className="lc-overline">Klagende Partei</p>
+            <GruppenTitel>Klagende Partei</GruppenTitel>
             <ParteiEditor p={a.klaeger} onChange={(p) => set('klaeger', p)} />
             <Field label="Vertretung" optional hint="Name/Kanzlei; Vollmacht als Beilage (Art. 221 Abs. 2 lit. a ZPO)">
               <input className={inputCls} value={a.vertretung ?? ''} onChange={(e) => set('vertretung', e.target.value)} />
             </Field>
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Beklagte Partei</p>
+            <GruppenTitel>Beklagte Partei</GruppenTitel>
             <ParteiEditor p={a.beklagte} onChange={(p) => set('beklagte', p)} />
           </div>
           <p className="text-xs text-ink-500">
@@ -207,7 +207,7 @@ export function VorlageKlageOrdentlich() {
           )}
           {a.begehrenTyp === 'frei' && (
             <div className="space-y-2">
-              <p className="lc-overline">Rechtsbegehren</p>
+              <GruppenTitel>Rechtsbegehren</GruppenTitel>
               {a.freieRechtsbegehren.map((w, i) => (
                 <div key={i} className="flex gap-2">
                   <textarea className={inputCls} rows={2} value={w}
@@ -233,7 +233,7 @@ export function VorlageKlageOrdentlich() {
             <textarea className={inputCls} rows={2} value={a.streitgegenstand} onChange={(e) => set('streitgegenstand', e.target.value)} />
           </Field>
           <div className="space-y-2">
-            <p className="lc-overline">Weitere Rechtsbegehren <span className="normal-case text-ink-500">(optional)</span></p>
+            <GruppenTitel>Weitere Rechtsbegehren <span className="normal-case text-ink-500">(optional)</span></GruppenTitel>
             {a.weitereRechtsbegehren.map((w, i) => (
               <div key={i} className="flex gap-2">
                 <input className={inputCls} value={w}
@@ -269,11 +269,11 @@ export function VorlageKlageOrdentlich() {
           )}
           {a.begruendungModus !== 'platzhalter' && (<>
           <div className="space-y-3">
-            <p className="lc-overline">Tatsachenbehauptungen mit Beweisofferte</p>
+            <GruppenTitel>Tatsachenbehauptungen mit Beweisofferte</GruppenTitel>
             {a.tatsachen.map((t, i) => (
               <div key={i} className="lc-card p-4 space-y-3">
                 <div className="flex items-start justify-between gap-2">
-                  <p className="lc-overline">Ziffer {i + 1}</p>
+                  <GruppenTitel>Ziffer {i + 1}</GruppenTitel>
                   {a.tatsachen.length > 1 && (
                     <button type="button" className="text-body-s text-danger-700 hover:underline"
                       onClick={() => set('tatsachen', a.tatsachen.filter((_, j) => j !== i))}>entfernen</button>
@@ -303,7 +303,7 @@ export function VorlageKlageOrdentlich() {
               onClick={() => set('tatsachen', [...a.tatsachen, { text: '', beweise: [] }])}>+ Tatsachenbehauptung</button>
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Rechtliche Begründung <span className="normal-case text-ink-500">(fakultativ, Art. 221 Abs. 3 ZPO)</span></p>
+            <GruppenTitel>Rechtliche Begründung <span className="normal-case text-ink-500">(fakultativ, Art. 221 Abs. 3 ZPO)</span></GruppenTitel>
             {a.rechtlicheBegruendung.map((r, i) => (
               <div key={i} className="flex gap-2">
                 <textarea className={inputCls} rows={2} value={r.text}
@@ -362,7 +362,7 @@ export function VorlageKlageOrdentlich() {
             Vollmacht als Beilage (bei Vertretung, Art. 221 Abs. 2 lit. a ZPO)
           </label>
           <div className="space-y-2">
-            <p className="lc-overline">Weitere Beilagen</p>
+            <GruppenTitel>Weitere Beilagen</GruppenTitel>
             {a.weitereBeilagen.map((b, i) => (
               <div key={i} className="flex gap-2">
                 <input className={inputCls} value={b.bezeichnung}

@@ -9,7 +9,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, NormLink, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -131,7 +131,7 @@ export function VorlageMietvertrag() {
           />
           {a.mietverhaeltnis === 'untermiete' && (
             <div className="lc-card p-4 space-y-3">
-              <p className="lc-overline">Hauptmietvertrag & Zustimmung (Art. 262 OR)</p>
+              <GruppenTitel>Hauptmietvertrag & Zustimmung (Art. 262 OR)</GruppenTitel>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <Field label="Hauptvermieter:in (Name)">
                   <input className={inputCls} value={a.hmVermieterName ?? ''} onChange={(e) => set('hmVermieterName', e.target.value || undefined)} placeholder="z. B. Immo AG" />
@@ -227,12 +227,12 @@ export function VorlageMietvertrag() {
       case 'parteien': return (
         <div className="space-y-5">
           <div className="space-y-3">
-            <p className="lc-overline">Vermieter</p>
+            <GruppenTitel>Vermieter</GruppenTitel>
             <Field label="Name / Firma"><input className={inputCls} value={a.vermieterName} onChange={(e) => set('vermieterName', e.target.value)} /></Field>
             <Field label="Adresse"><input className={inputCls} value={a.vermieterAdresse} onChange={(e) => set('vermieterAdresse', e.target.value)} placeholder="Strasse Nr., PLZ Ort" /></Field>
           </div>
           <div className="space-y-3">
-            <p className="lc-overline">Mieter</p>
+            <GruppenTitel>Mieter</GruppenTitel>
             <Field label="Name"><input className={inputCls} value={a.mieterName} onChange={(e) => set('mieterName', e.target.value)} placeholder="Vorname Nachname (bzw. Firma)" /></Field>
             <Field label="Adresse"><input className={inputCls} value={a.mieterAdresse} onChange={(e) => set('mieterAdresse', e.target.value)} placeholder="Strasse Nr., PLZ Ort" /></Field>
             <Field label="Zweite Mieterin / zweiter Mieter" optional hint="bei zwei Mietern wird die Solidarhaftung ausdrücklich festgehalten">
@@ -276,7 +276,7 @@ export function VorlageMietvertrag() {
             <BetragsFeld className={inputCls + ' num w-44'} value={a.mietzinsNettoCHF} onChange={(v) => set('mietzinsNettoCHF', v)} placeholder="z. B. 2'150" />
           </Field>
           <div className="space-y-2">
-            <p className="lc-overline">Mietzins-Modell</p>
+            <GruppenTitel>Mietzins-Modell</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -325,7 +325,7 @@ export function VorlageMietvertrag() {
             )}
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Nebenkosten (Art. 257a OR)</p>
+            <GruppenTitel>Nebenkosten (Art. 257a OR)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -363,7 +363,7 @@ export function VorlageMietvertrag() {
             <BetragsFeld className={inputCls + ' num w-44'} value={a.kautionCHF ?? ''} onChange={(v) => set('kautionCHF', v || undefined)} placeholder="z. B. 4'300" />
           </Field>
           <div className="space-y-2">
-            <p className="lc-overline">Tierhaltung</p>
+            <GruppenTitel>Tierhaltung</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -385,7 +385,7 @@ export function VorlageMietvertrag() {
           </label>
           {!wohnung && (
             <div className="space-y-3 pt-1">
-              <p className="lc-overline">Geschäftsraum-Klauseln</p>
+              <GruppenTitel>Geschäftsraum-Klauseln</GruppenTitel>
               <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.mwstOption ?? false} onChange={(e) => set('mwstOption', e.target.checked || undefined)} />
                 <span><strong>MWST-Option</strong> des Vermieters <span className="text-ink-500">(Mietzins zzgl. {MV_PARAMETER.mwstSatz.wert.toFixed(1)} % MWST, Art. 22 MWSTG)</span></span>
@@ -409,7 +409,7 @@ export function VorlageMietvertrag() {
           )}
           {a.detailgrad === 'experte' && (
             <div className="space-y-3 pt-1">
-              <p className="lc-overline">Mietzinsvorbehalt (Art. 18 VMWG)</p>
+              <GruppenTitel>Mietzinsvorbehalt (Art. 18 VMWG)</GruppenTitel>
               <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.mietzinsvorbehalt ?? false} onChange={(e) => set('mietzinsvorbehalt', e.target.checked || undefined)} />
                 <span><strong>Mietzinsvorbehalt</strong> aufnehmen <span className="text-ink-500">(nicht ausgeschöpfte Mietzinsanpassung, in Prozenten zu beziffern)</span></span>

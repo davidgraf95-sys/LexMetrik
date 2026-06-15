@@ -8,7 +8,7 @@ import type { SgPartei } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
@@ -128,7 +128,7 @@ export function VorlageKlageVereinfacht() {
               BS = abgenommenes GOG-Routing; übrige Kantone über die zweifach
               geprüfte Recherche-Schicht (KvGerichtWahl) bzw. Handeingabe. */}
           <div className="space-y-3">
-            <p className="lc-overline">Zuständiges Gericht</p>
+            <GruppenTitel>Zuständiges Gericht</GruppenTitel>
             <div className="grid grid-cols-[8rem_1fr] gap-3 items-start">
               <Field label="Kanton">
                 <select className={inputCls} value={a.gerichtsKanton}
@@ -216,14 +216,14 @@ export function VorlageKlageVereinfacht() {
       case 'parteien': return (
         <div className="space-y-5">
           <div className="space-y-2">
-            <p className="lc-overline">Klagende Partei</p>
+            <GruppenTitel>Klagende Partei</GruppenTitel>
             <ParteiEditor p={a.klaeger} onChange={(p) => set('klaeger', p)} />
             <Field label="Vertretung" optional hint="Name/Kanzlei; Vollmacht als Beilage (Schritt Beilagen)">
               <input className={inputCls} value={a.vertretung ?? ''} onChange={(e) => set('vertretung', e.target.value)} />
             </Field>
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Beklagte Partei</p>
+            <GruppenTitel>Beklagte Partei</GruppenTitel>
             <ParteiEditor p={a.beklagte} onChange={(p) => set('beklagte', p)} />
           </div>
           <p className="text-xs text-ink-500">
@@ -272,7 +272,7 @@ export function VorlageKlageVereinfacht() {
             <textarea className={inputCls} rows={2} value={a.streitgegenstand} onChange={(e) => set('streitgegenstand', e.target.value)} />
           </Field>
           <div className="space-y-2">
-            <p className="lc-overline">Weitere Rechtsbegehren <span className="normal-case text-ink-500">(optional)</span></p>
+            <GruppenTitel>Weitere Rechtsbegehren <span className="normal-case text-ink-500">(optional)</span></GruppenTitel>
             {a.weitereRechtsbegehren.map((w, i) => (
               <div key={i} className="flex gap-2">
                 <input className={inputCls} value={w}
@@ -309,7 +309,7 @@ export function VorlageKlageVereinfacht() {
               )}
               {!a.begruendungPlatzhalter && (<>
               <div className="space-y-2">
-                <p className="lc-overline">Sachverhalt — Tatsachenbehauptungen</p>
+                <GruppenTitel>Sachverhalt — Tatsachenbehauptungen</GruppenTitel>
                 {a.sachverhalt.map((s, i) => (
                   <div key={i} className="flex gap-2">
                     <textarea className={inputCls} rows={2} value={s.text}
@@ -322,7 +322,7 @@ export function VorlageKlageVereinfacht() {
                   onClick={() => set('sachverhalt', [...a.sachverhalt, { text: '' }])}>+ Behauptung</button>
               </div>
               <div className="space-y-2">
-                <p className="lc-overline">Beweismittel</p>
+                <GruppenTitel>Beweismittel</GruppenTitel>
                 {a.beweismittel.map((b, i) => (
                   <div key={i} className="flex flex-wrap gap-2 items-end">
                     <div className="flex-1 min-w-[12rem]">
@@ -386,7 +386,7 @@ export function VorlageKlageVereinfacht() {
             Vollmacht als Beilage (bei Vertretung)
           </label>
           <div className="space-y-2">
-            <p className="lc-overline">Weitere Beilagen</p>
+            <GruppenTitel>Weitere Beilagen</GruppenTitel>
             {a.weitereBeilagen.map((b, i) => (
               <div key={i} className="flex gap-2">
                 <input className={inputCls} value={b.bezeichnung}

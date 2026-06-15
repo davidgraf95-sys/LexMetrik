@@ -6,7 +6,7 @@ import {
 } from '../lib/vorlagen/patientenverfuegung';
 import { BANNER_UNTERSCHREIBEN } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -123,7 +123,7 @@ export function VorlagePatientenverfuegung() {
       case 'situationen': return (
         <div className="space-y-5">
           <div className="space-y-2">
-            <p className="lc-overline">Anwendungssituationen</p>
+            <GruppenTitel>Anwendungssituationen</GruppenTitel>
             {PV_SITUATIONEN.map((s) => (
               <label key={s.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.situationen.includes(s.id)} onChange={() => toggleSituation(s.id)} />
@@ -139,7 +139,7 @@ export function VorlagePatientenverfuegung() {
           </div>
 
           <div className="space-y-2">
-            <p className="lc-overline">Behandlungsziel</p>
+            <GruppenTitel>Behandlungsziel</GruppenTitel>
             <p className="text-xs text-ink-500">Die Zielwahl setzt sinnvolle Vorgaben für noch offene Massnahmen (überschreibbar) – Widersprüche werden geprüft, nie still aufgelöst.</p>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
@@ -220,7 +220,7 @@ export function VorlagePatientenverfuegung() {
               placeholder="z. B. Wenn möglich möchte ich zu Hause sterben …" />
           </Field>
           <div className="space-y-2">
-            <p className="lc-overline">Organspende</p>
+            <GruppenTitel>Organspende</GruppenTitel>
             <div className="flex flex-wrap gap-1.5" role="group" aria-label="Organspende">
               {([['keine_angabe', 'keine Angabe'], ['ja', 'Ich stimme zu'], ['nein', 'Ich lehne ab']] as const).map(([code, label]) => (
                 <button key={code} type="button" aria-pressed={a.organspende === code}

@@ -5,7 +5,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -66,12 +66,12 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
       case 'parteien': return (
         <div className="space-y-5">
           <div className="space-y-3">
-            <p className="lc-overline">Arbeitgeber</p>
+            <GruppenTitel>Arbeitgeber</GruppenTitel>
             <Field label="Firma / Name"><input className={inputCls} value={a.arbeitgeberName} onChange={(e) => set('arbeitgeberName', e.target.value)} placeholder="Muster AG" /></Field>
             <Field label="Adresse"><input className={inputCls} value={a.arbeitgeberAdresse} onChange={(e) => set('arbeitgeberAdresse', e.target.value)} placeholder="Strasse Nr., PLZ Ort" /></Field>
           </div>
           <div className="space-y-3">
-            <p className="lc-overline">Handelsreisende/r</p>
+            <GruppenTitel>Handelsreisende/r</GruppenTitel>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Vorname"><input className={inputCls} value={a.reisenderVorname} onChange={(e) => set('reisenderVorname', e.target.value)} /></Field>
               <Field label="Nachname"><input className={inputCls} value={a.reisenderName} onChange={(e) => set('reisenderName', e.target.value)} /></Field>
@@ -90,7 +90,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
             <span>Gebiet/Kundenkreis <strong>ausschliesslich</strong> zugewiesen <span className="text-ink-500">(Provision dann auf allen Geschäften im Gebiet, Art. 349/349b OR)</span></span>
           </label>
           <div className="space-y-2">
-            <p className="lc-overline">Vollmacht (Art. 348b OR)</p>
+            <GruppenTitel>Vollmacht (Art. 348b OR)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -108,7 +108,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
       case 'lohn': return (
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="lc-overline">Lohnmodell (Art. 349a OR)</p>
+            <GruppenTitel>Lohnmodell (Art. 349a OR)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -132,7 +132,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
             )}
           </div>
           <div className="space-y-2">
-            <p className="lc-overline">Auslagenersatz (Art. 349d OR – stets gesondert)</p>
+            <GruppenTitel>Auslagenersatz (Art. 349d OR – stets gesondert)</GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([

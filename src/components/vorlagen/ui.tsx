@@ -63,6 +63,19 @@ export function Checkbox({ checked, onChange, label, hint, disabled, name, class
   );
 }
 
+/** Sektions-Kopf innerhalb eines Wizard-Schritts (Redesign, Entscheid David):
+ *  Overline (Messing) + Haarlinie — gleiche Anatomie wie die Abschnitts-Köpfe
+ *  der Rechner/des Katalogs, damit lange Schritte in lesbare Sektionen
+ *  zerfallen. Ersetzt das zuvor leise <p className="lc-overline">-Muster. */
+export function GruppenTitel({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-center gap-3">
+      <p className="lc-overline text-brass-700">{children}</p>
+      <span aria-hidden className="flex-1 h-px bg-line" />
+    </div>
+  );
+}
+
 // Geteilter Fedlex-Norm-Chip (Code-Review #6, 7.6.2026: Kopien dieses
 // Musters haben den Locale-Bug im Fristenspiegel erzeugt — neue Rechner
 // nutzen DIESE Komponente, keine lokalen NormPill-Varianten).
