@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   AV_DEFAULTS, AV_MINDESTLOEHNE, AV_OFFENE_VERIFIKATIONEN,
   avZusammenstellen, pruefeAvGates, type AvAntworten, type AvUntertyp,
@@ -56,6 +56,10 @@ const REGIME_OPTIONEN: { id: AvRegime; label: string; sub: string }[] = [
   { id: 'heimarbeitsvertrag', label: 'Heimarbeit', sub: 'Art. 351 ff. OR' },
 ];
 
+// Vertragstyp-Schalter für die Unter-Regime-Seiten (Lehrvertrag/Handelsreisender/
+// Heimarbeit), die ihn als eigene Kopf-Karte erhalten. Die Haupt-Seite (Einzel/
+// Kader) zeigt den Vertragstyp dagegen GEMEINSAM mit dem Detailgrad in EINER
+// VariantenKopf-Karte (Redesign: keine Schalter-Stapelung mehr).
 function VertragstypWahl({ regime, onWahl }: { regime: AvRegime; onWahl: (v: AvRegime) => void }) {
   return (
     <fieldset className="rounded-xl border border-line bg-surface-raised p-4 space-y-1.5">
@@ -88,10 +92,10 @@ export function VorlageArbeitsvertrag() {
   if (regime === 'lehrvertrag') return <VorlageLehrvertrag kopf={kopf} />;
   if (regime === 'handelsreisendenvertrag') return <VorlageHandelsreisendenvertrag kopf={kopf} />;
   if (regime === 'heimarbeitsvertrag') return <VorlageHeimarbeitsvertrag kopf={kopf} />;
-  return <EinzelKaderWizard untertyp={regime} kopf={kopf} />;
+  return <EinzelKaderWizard untertyp={regime} regime={regime} setRegime={setRegime} />;
 }
 
-function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: ReactNode }) {
+function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntertyp; regime: AvRegime; setRegime: (v: AvRegime) => void }) {
   const { a, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen } =
     useWizardState<AvAntworten>({
       defaults: AV_DEFAULTS,
@@ -512,10 +516,16 @@ function EinzelKaderWizard({ untertyp, kopf }: { untertyp: AvUntertyp; kopf: Rea
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
-      kopfSchalter={<div className="space-y-3">
-        {kopf}
-        <VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />
-      </div>}
+      kopfSchalter={
+        <VariantenKopf
+          untertypLabel="Vertragstyp"
+          untertypOptionen={REGIME_OPTIONEN}
+          untertyp={regime}
+          onUntertyp={setRegime}
+          detailgrad={a.detailgrad}
+          onDetailgrad={(v) => set('detailgrad', v)}
+        />
+      }
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{
         pdf: { label: 'PDF', banner: BANNER_AV, dateiName: 'Arbeitsvertrag-Entwurf.pdf' },
