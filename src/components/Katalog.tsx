@@ -89,13 +89,17 @@ function KategorieEinstieg({ kat, karten, onOeffnen }: {
 
 // ─── Werkzeug-Zeile: Direktlink (Klicktiefe 1); Status ehrlich als Badge ────
 
-function WerkzeugZeile({ k, subLabel, zeigeGeplant }: { k: CalculatorCard; subLabel?: string; zeigeGeplant?: boolean }) {
+// Geteilte Listen-Zeile (Redesign #1): EIN Karten-Zeilen-Muster für Werkzeuge
+// und Fristen-Regime (vorher WerkzeugZeile + FristenRegimeZeile, fast wortgleich).
+//  subWrap  – Sub-Label umbrechen statt abschneiden (Fristen-WARUM-Satz)
+//  zeigeGeplant – «In Vorbereitung»-Badge mitzeigen (sonst nur Entwurf)
+function ListenZeile({ k, subLabel, subWrap = false, zeigeGeplant }: { k: CalculatorCard; subLabel?: string; subWrap?: boolean; zeigeGeplant?: boolean }) {
   const aktiv = istAktiv(k.status) && !!k.href;
   const inhalt = (
     <>
       <span className="min-w-0">
         <span className="block font-sans font-medium text-ink-900 text-body-s leading-snug">{sansAmp(k.title)}</span>
-        {subLabel && <span className="block text-xs text-ink-500 truncate">{sansAmp(subLabel)}</span>}
+        {subLabel && <span className={`block text-xs text-ink-500 leading-snug${subWrap ? '' : ' truncate'}`}>{sansAmp(subLabel)}</span>}
       </span>
       <span className="flex items-center gap-2 shrink-0">
         {k.status === 'entwurf' && (
@@ -108,7 +112,7 @@ function WerkzeugZeile({ k, subLabel, zeigeGeplant }: { k: CalculatorCard; subLa
       </span>
     </>
   );
-  const klasse = 'lc-card text-left px-4 py-3 flex items-center justify-between gap-3 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none';
+  const klasse = 'lc-card text-left px-4 py-3 flex items-center justify-between gap-3 min-w-0 bg-surface no-underline transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none';
   return aktiv ? (
     <Link to={k.href!} className={`${klasse} hover:shadow-lg hover:-translate-y-0.5`}>{inhalt}</Link>
   ) : (
@@ -141,30 +145,6 @@ function FristenHauptKarte({ k, untertitel }: { k: CalculatorCard; untertitel: s
   );
 }
 
-function FristenRegimeZeile({ k, warum }: { k: CalculatorCard; warum?: string }) {
-  const aktiv = istAktiv(k.status) && !!k.href;
-  const inhalt = (
-    <>
-      <span className="min-w-0">
-        <span className="block font-sans font-medium text-ink-900 text-body-s leading-snug">{sansAmp(k.title)}</span>
-        {/* WARUM-eigen-Satz darf umbrechen (kein truncate — der Satz IST die Information) */}
-        <span className="block text-xs text-ink-500 leading-snug">{warum ?? k.rechtsgebiet}</span>
-      </span>
-      <span className="flex items-center gap-2 shrink-0">
-        {k.status === 'entwurf' && (
-          <span className="lc-badge-entwurf" title="erstellt, fachlich noch nicht geprüft">Entwurf</span>
-        )}
-        <span aria-hidden className="text-brass-700 leading-none">→</span>
-      </span>
-    </>
-  );
-  const klasse = 'lc-card text-left px-4 py-3 flex items-center justify-between gap-3 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none';
-  return aktiv ? (
-    <Link to={k.href!} className={`${klasse} hover:shadow-lg hover:-translate-y-0.5`}>{inhalt}</Link>
-  ) : (
-    <div className={klasse}>{inhalt}</div>
-  );
-}
 
 function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
   const byId = new Map(karten.map((k) => [k.id, k]));
@@ -189,8 +169,8 @@ function FristenRegister({ karten }: { karten: CalculatorCard[] }) {
         </div>
         <p className="text-body-s text-ink-500 max-w-reading">{lede}</p>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-          {zeilen.map((r) => <FristenRegimeZeile key={r.id} k={r.k} warum={r.warum} />)}
-          {extra.map((k) => <FristenRegimeZeile key={k.id} k={k} />)}
+          {zeilen.map((r) => <ListenZeile key={r.id} k={r.k} subLabel={r.warum ?? r.k.rechtsgebiet} subWrap />)}
+          {extra.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} subWrap />)}
         </div>
       </div>
     )
@@ -240,7 +220,7 @@ function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
           <span aria-hidden className="flex-1 h-px bg-line" />
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-          {felder.map((f) => <WerkzeugZeile key={f.id} k={f.k} subLabel={f.untertitel} zeigeGeplant />)}
+          {felder.map((f) => <ListenZeile key={f.id} k={f.k} subLabel={f.untertitel} zeigeGeplant />)}
         </div>
       </div>
       {weitere.length > 0 && (
@@ -250,7 +230,7 @@ function ZustaendigkeitRegister({ karten }: { karten: CalculatorCard[] }) {
             <span aria-hidden className="flex-1 h-px bg-line" />
           </div>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-            {weitere.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+            {weitere.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
           </div>
         </div>
       )}
@@ -286,7 +266,7 @@ function GebuehrenRegister({ karten, sortiert }: {
             </div>
             <p className="text-body-s text-ink-500 max-w-reading">{r.lede}</p>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-              {xs.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+              {xs.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
             </div>
           </div>
         );
@@ -335,7 +315,7 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
 
   const zeilen = (xs: VorlageCard[], subLabel?: (v: VorlageCard) => string | undefined) => (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-      {xs.map((v) => <WerkzeugZeile key={v.id} k={v} subLabel={subMitGate(v, subLabel?.(v))} />)}
+      {xs.map((v) => <ListenZeile key={v.id} k={v} subLabel={subMitGate(v, subLabel?.(v))} />)}
     </div>
   );
 
@@ -549,7 +529,7 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
                 <span aria-hidden className="flex-1 h-px bg-line" />
               </div>
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-                {alltag.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+                {alltag.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
               </div>
             </div>
           )}
@@ -560,7 +540,7 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
                 <span aria-hidden className="flex-1 h-px bg-line" />
               </div>
               <div className="grid grid-cols-[repeat(auto-fill,minmax(min(380px,100%),1fr))] gap-3">
-                {weitere.map((k) => <WerkzeugZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
+                {weitere.map((k) => <ListenZeile key={k.id} k={k} subLabel={k.rechtsgebiet} />)}
               </div>
             </div>
           )}
@@ -608,10 +588,11 @@ function TrefferZeile({ k }: { k: CalculatorCard }) {
       </span>
     </>
   );
-  const klasse = 'flex items-center justify-between gap-4 px-4 py-3 rounded-xl border border-line bg-surface no-underline';
+  // Konsistenz (Redesign #1): gleiche lc-card-Anatomie + Hover-Lift wie die
+  // übrigen Zeilen, nur grösser (gap-4, body-l-Titel) — kein zweiter Hover-Dialekt.
+  const klasse = 'lc-card text-left flex items-center justify-between gap-4 px-4 py-3 min-w-0 bg-surface no-underline transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none';
   return aktiv ? (
-    <Link to={k.href!}
-      className={`${klasse} hover:border-brass-400 hover:bg-brass-100/30 transition-colors motion-reduce:transition-none`}>
+    <Link to={k.href!} className={`${klasse} hover:shadow-lg hover:-translate-y-0.5`}>
       {inhalt}
     </Link>
   ) : (
