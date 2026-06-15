@@ -1,611 +1,542 @@
 # Beurkundungstarife (Notariatsgebühren) je Geschäftsart — alle 26 Kantone
 
-**Erstellt:** 15.6.2026 · **Status: ERSTRECHERCHE, doppelt verifiziert** (find + unabhängiger Doppelcheck-Pass je Kanton am amtlichen Originaltext). FAHRPLAN-BEURKUNDUNGS-AUSBAU B-2/B-3. Daueranweisung David: jede Angabe mit amtlichem Erlass + Artikel + Stand; nichts trägt «geprüft» ohne Davids Abnahme (§7/§8).
+**Erstellt:** 15.6.2026 · **Aktualisiert:** 16.6.2026 (Korrektur-Reencode) · **Status: ERSTRECHERCHE, 3-fach verifiziert** (find → unabhängiger Doppelcheck → adversariale Zweitprüfung → struktureller Korrektur-Reencode). FAHRPLAN-BEURKUNDUNGS-AUSBAU. Daueranweisung David: jede Angabe amtlich + Artikel + Stand; nichts «geprüft» ohne Abnahme (§7/§8).
 
-**Methodik:** Workflow `beurkundungstarife-research` (26 Kantone × Pipeline find→Doppelcheck, 52 Agenten). Je Kanton der einschlägige Notariats-/Beurkundungstarif in der neusten konsolidierten Fassung (abrogated/future_versions geprüft). Promillesätze deterministisch (mit Min/Max); Rahmen-/Aufwandtarife (freies Notariat) ehrlich als Spanne bzw. «nach Vereinbarung». Doppelcheck-Korrektur: **GE Bürgschaft = 1‰ (nicht 1 %)**, Min 100 / Max 500 (Art. 26 REmNot).
-
-**Engine-Korrekturen (fachlicher Drittcheck 15.6.2026 gegen Originaltext):** Wert-Geschäfte (Schenkung, AG-/GmbH-Gründung, Kapitalerhöhung, Stiftung) in Staffel-Kantonen (LU, OW, NW, FR, BS, AG, VD u. a.) sind **degressive Staffeln, kein Flach-Promille** — in der Engine darum als ehrliche Spanne (Rahmen min–max) statt überhöhtem Flachsatz kodiert (§2/§8); Flach-Promille-Kantone (ZH, SZ, SG, GR, TG) behalten den deterministischen Satz. TG Schenkung = allg. 1‰ (§ 14 Abs. 1 GGG), nicht der § 16-Aufwandtarif. Die Matrix unten gibt die Roh-Rechercheangaben wieder; `data/tarif/beurkundung.ts` setzt diese Korrekturen um.
-
-**Kern-Befund:** In Kantonen mit allgemeinem wertbasiertem Tarif (ZH, SZ, SG, GR, TG flach; UR, OW, NW, FR, BE, TI, VD, VS, NE, GE, JU als Staffel = Grundstückkauf-Tarif) bestimmt die Geschäftsart nur den Geschäftswert. Kantone ohne universellen Werttarif (LU, GL, ZG, SO, BS, BL, SH, AR, AI, AG) tarifieren tatbestandsweise (Sondersatz/Fix/Aufwand). Engine `lib/beurkundung.ts`, Daten `data/tarif/beurkundung.ts`.
+**Methodik:** Drei aufeinander aufbauende Workflows (je 26 Kt). Die adversariale Zweitprüfung deckte 286 Befunde auf (veraltete Fassungen, degressive Staffeln als Flachsatz kodiert, Aufwand-Tarife als Fix, falsche Artikel); der Korrektur-Reencode lieferte je Art die strukturell korrekte Regel (Staffeln als Marginalbänder, Aufwand als Stundensatz, aktuelle Fassung). Quelle von `src/data/tarif/beurkundung.ts + lib/beurkundung.ts`.
 
 
-## ZH — Zürich (amtsnotariat)
-- **Erlass:** Notariatsgebührenverordnung (NotGebV) (LS 243), Stand Konsolidierte Fassung NB 123, Stand 01.01.2024 (Erlass vom 9. März 2009, in Kraft seit 1. Juli 2009; nicht aufgehoben)
-- **Quelle:** https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html
-- **Genereller Werttarif:** promille — Anhang Ziff. 1.1.1 (Grundstückswesen) als wertbasierter Kern; allgemeine Auffangnorm Anhang Ziff. 4.6 fuer nicht eigens genannte Willenserklaerungen
-- **Doppelcheck:** bestätigt
+## ZH — Zürich
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | 1‰ min 100 | Anhang Ziff. 1.1.1 | hoch |
-| dienstbarkeit | sondersatz | 1‰ min 150 max 1000 | Anhang Ziff. 1.4.1.1 / 2.4.1 | hoch |
-| schenkung | genereller_werttarif | 1‰ min 200 max 15000 | Anhang Ziff. 4.6 (bzw. 1.1.1 bei Grundstueck) | mittel |
-| erbvertrag | fix | Rahmen 300–7500 | Anhang Ziff. 4.3.3 | hoch |
-| ehevertrag | fix | Rahmen 200–5000 | Anhang Ziff. 4.2.1 | hoch |
-| testament | fix | Rahmen 200–5000 | Anhang Ziff. 4.3.2 | hoch |
-| vorsorgeauftrag | aufwand | nach Aufwand | Anhang Ziff. 4.2.3 | hoch |
-| vollmacht | fix | Rahmen 20–250 | Anhang Ziff. 4.5.1 | hoch |
-| ag_gruendung | sondersatz | 1‰ min 500 max 5000 | Anhang Ziff. 4.4.3.1 | hoch |
-| gmbh_gruendung | sondersatz | 1‰ min 500 max 5000 | Anhang Ziff. 4.4.3.1 | hoch |
-| kapitalerhoehung | sondersatz | 1‰ min 500 max 5000 | Anhang Ziff. 4.4.3.1 | hoch |
-| stiftung | sondersatz | 1‰ min 300 | Anhang Ziff. 4.1 | hoch |
-| buergschaft | sondersatz | 0.5‰ min 100 max 500 | Anhang Ziff. 4.4.1 | hoch |
-| schuldanerkennung | genereller_werttarif | 1‰ min 200 max 15000 | Anhang Ziff. 4.6 | mittel |
+| baurecht | 1‰ min 150 | NotGebV LS 243, Anhang Ziff. 1.4.1.1 (Dienstbarkeiten/Grundl | 01.01.2024 (Fassung  | hoch |
+| vorkaufsrecht | 1‰ min 100 | NotGebV LS 243, Anhang Ziff. 1.1.1 (Vertraege auf Eigentumsu | 01.01.2024 (Fassung  | hoch |
+| dienstbarkeit | 1‰ min 150 | NotGebV LS 243, Anhang Ziff. 1.4.1.1 (Dienstbarkeiten/Grundl | 01.01.2024 (Fassung  | hoch |
+| schuldbrief | 1‰ min 100 | NotGebV LS 243, Anhang Ziff. 1.2.1 (Grundpfandrechte, Errich | 01.01.2024 (Fassung  | hoch |
+| testament | Rahmen 200–4000 | NotGebV LS 243, Anhang Ziff. 4.3.2 (Oeffentliche letztwillig | 01.01.2024 (Fassung  | hoch |
+| erbvertrag | Rahmen 300–6000 | NotGebV LS 243, Anhang Ziff. 4.3.3 (Erbvertrag) | 01.01.2024 (Fassung  | hoch |
+| ehevertrag | Rahmen 200–4000 | NotGebV LS 243, Anhang Ziff. 4.2.1 (Ehevertrag, Vermoegensve | 01.01.2024 (Fassung  | hoch |
+| schenkung | 1‰ min 100 | NotGebV LS 243, Anhang Ziff. 1.1.1 (Grundstueck-Schenkung);  | 01.01.2024 (Fassung  | mittel |
+| vorsorgeauftrag | Aufwand CHF 180/Std | NotGebV LS 243, Anhang Ziff. 4.2.3 (Vorsorgeauftrag - Beratu | 01.01.2024 (Fassung  | hoch |
+| verpfruendung | Rahmen 300–500 | NotGebV LS 243, Anhang Ziff. 4.4.2 (Verpfruendungsvertrag) | 01.01.2024 (Fassung  | mittel |
+| ag_gruendung | 1‰ min 500 max 4000 | NotGebV LS 243, Anhang Ziff. 4.4.3.1 (Gruendung oder Kapital | 01.01.2024 (Fassung  | hoch |
+| gmbh_gruendung | 1‰ min 500 max 4000 | NotGebV LS 243, Anhang Ziff. 4.4.3.1 (Gruendung oder Kapital | 01.01.2024 (Fassung  | hoch |
+| kapitalerhoehung | 1‰ min 500 max 4000 | NotGebV LS 243, Anhang Ziff. 4.4.3.1 (Gruendung oder Kapital | 01.01.2024 (Fassung  | hoch |
+| kapitalherabsetzung | 0.5‰ min 250 max 2000 | NotGebV LS 243, Anhang Ziff. 4.4.3.2 (Uebrige gesellschaftsr | 01.01.2024 (Fassung  | hoch |
+| stiftung | 1‰ min 300 | NotGebV LS 243, Anhang Ziff. 4.1 (Personenrecht, Stiftung) | 01.01.2024 (Fassung  | hoch |
+| buergschaft | 0.5‰ min 100 max 500 | NotGebV LS 243, Anhang Ziff. 4.4.1 (Buergschaft, pro Beurkun | 01.01.2024 (Fassung  | hoch |
+| schuldanerkennung | 1‰ min 200 max 15000 | NotGebV LS 243, Anhang Ziff. 4.6 (Oeffentliche Beurkundung v | 01.01.2024 (Fassung  | mittel |
+| vollmacht | Rahmen 20–250 | NotGebV LS 243, Anhang Ziff. 4.5.1 (Beglaubigung einer Unter | 01.01.2024 (Fassung  | hoch |
 
-## BE — Bern (freies)
-- **Erlass:** Verordnung über die Notariatsgebühren (GebVN) (BSG 169.81), Stand 01.03.2022 (konsolidierte Fassung, Version 2543; Beschluss 02.02.2022)
-- **Quelle:** https://www.belex.sites.be.ch/app/de/texts_of_law/169.81
-- **Genereller Werttarif:** rahmen — Art. 1a Abs. 1, Art. 2 i.V.m. Anhang 1 (gestaffelter Rahmentarif)
-- **Doppelcheck:** bestätigt
+## BE — Bern
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | Rahmen 715–30825 | Art. 13 i.V.m. Anhang 1 | hoch |
-| dienstbarkeit | aufwand | nach Aufwand | Art. 17 | hoch |
-| schenkung | offen | — | kein eigener Tatbestand; ggf. Art. 4 Abs. 3 / Art. | tief |
-| erbvertrag | aufwand | nach Aufwand | Art. 9 | hoch |
-| ehevertrag | aufwand | nach Aufwand | Art. 8 Abs. 1 (und Abs. 2) | hoch |
-| testament | aufwand | nach Aufwand | Art. 9 | hoch |
-| vorsorgeauftrag | aufwand | nach Aufwand | Art. 8a | hoch |
-| vollmacht | offen | — | Art. 27 (Beglaubigung) bzw. Art. 30 (Beurkundung) | tief |
-| ag_gruendung | sondersatz | Rahmen 150–27350 | Art. 21 Abs. 1 i.V.m. Anhang 4 | hoch |
-| gmbh_gruendung | sondersatz | Rahmen 150–27350 | Art. 21 Abs. 1 i.V.m. Anhang 4 | hoch |
-| kapitalerhoehung | sondersatz | — | Art. 21 Abs. 2 (AG) / Abs. 4 (GmbH) i.V.m. Anhang  | hoch |
-| stiftung | genereller_werttarif | Rahmen 715–30825 | Art. 7 i.V.m. Anhang 1 | hoch |
-| buergschaft | aufwand | nach Aufwand | Art. 19 | hoch |
-| schuldanerkennung | offen | — | kein eigener Tatbestand; ggf. Art. 30 / Art. 4 Abs | tief |
+| baurecht | Staffel  max 30825 | Art. 13 Abs. 1 i.V.m. Anhang 1 GebVN (BSG 169.81) | 01.03.2022 | hoch |
+| vorkaufsrecht | Aufwand CHF 400/Std | Art. 1a Abs. 2 i.V.m. Art. 3a Abs. 1 GebVN (BSG 169.81); ggf | 01.03.2022 | mittel |
+| dienstbarkeit | Aufwand CHF 400/Std | Art. 17 Abs. 1 i.V.m. Art. 1a Abs. 2, Art. 3a Abs. 1 GebVN ( | 01.03.2022 | hoch |
+| schuldbrief | Aufwand CHF 400/Std | Art. 1a Abs. 2 i.V.m. Art. 18 Abs. 1, Art. 3a Abs. 1 GebVN ( | 01.03.2022 | hoch |
+| testament | Aufwand CHF 400/Std | Art. 9 Abs. 1 i.V.m. Art. 1a Abs. 2, Art. 3a Abs. 1 GebVN (B | 01.03.2022 | hoch |
+| erbvertrag | Aufwand CHF 400/Std | Art. 9 Abs. 1 i.V.m. Art. 1a Abs. 2, Art. 3a Abs. 1 GebVN (B | 01.03.2022 | hoch |
+| ehevertrag | Aufwand CHF 400/Std | Art. 8 Abs. 1 i.V.m. Art. 1a Abs. 2, Art. 3a Abs. 1 GebVN (B | 01.03.2022 | hoch |
+| schenkung | Staffel  max 30825 | Art. 13 Abs. 1 i.V.m. Anhang 1 GebVN (BSG 169.81); fuer bewe | 01.03.2022 | mittel |
+| vorsorgeauftrag | Aufwand CHF 400/Std | Art. 8a Abs. 1 i.V.m. Art. 1a Abs. 2, Art. 3a Abs. 1 GebVN ( | 01.03.2022 | hoch |
+| verpfruendung | Aufwand CHF 400/Std | Art. 20 Abs. 1 i.V.m. Art. 1a Abs. 2, Art. 3a Abs. 1 GebVN ( | 01.03.2022 | hoch |
+| ag_gruendung | Staffel  max 27350 | Art. 21 Abs. 1 i.V.m. Anhang 4 GebVN (BSG 169.81) | 01.03.2022 | hoch |
+| gmbh_gruendung | Staffel  max 27350 | Art. 21 Abs. 1 i.V.m. Anhang 4 GebVN (BSG 169.81) | 01.03.2022 | hoch |
+| kapitalerhoehung | Staffel  max 27350 | Art. 21 Abs. 2 (AG) / Abs. 4 (GmbH) i.V.m. Anhang 4 GebVN (B | 01.03.2022 | hoch |
+| kapitalherabsetzung | Staffel  max 27350 | Art. 21 Abs. 2 (AG) / Abs. 4 (GmbH) i.V.m. Anhang 4 GebVN (B | 01.03.2022 | hoch |
+| stiftung | Staffel  max 30825 | Art. 7 Abs. 1 i.V.m. Anhang 1 GebVN (BSG 169.81) | 01.03.2022 | hoch |
+| buergschaft | Aufwand CHF 400/Std | Art. 19 Abs. 1 i.V.m. Art. 1a Abs. 2, Art. 3a Abs. 1 GebVN ( | 01.03.2022 | hoch |
+| schuldanerkennung | Aufwand CHF 400/Std | Art. 1a Abs. 2 i.V.m. Art. 30 Abs. 1 bzw. Art. 4 Abs. 3, Art | 01.03.2022 | mittel |
 
-## LU — Luzern (amtsnotariat)
-- **Erlass:** Verordnung über die Beurkundungsgebühren (BeurkGebV) (SRL 258), Stand 1. Januar 2022 (Beschluss 23.11.2021, G 2021-082), in Kraft, nicht aufgehoben
-- **Quelle:** https://srl.lu.ch/api/de/versions/3870/pdf_file_with_annexes
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## LU — Luzern
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | 3‰ min 500 max 15750 | § 21 Abs. 1 | hoch |
-| dienstbarkeit | aufwand | Rahmen 200–5000 | § 26 | hoch |
-| schenkung | sondersatz | 3‰ min 200 max 15750 | § 21 Abs. 1 (Grundstücke); § 33; § 49 (Fahrnis/Ver | mittel |
-| erbvertrag | aufwand | Rahmen 500–5000 | § 19 Abs. 1 | hoch |
-| ehevertrag | aufwand | Rahmen 500–3000 | § 16 Abs. 1 | hoch |
-| testament | aufwand | Rahmen 500–5000 | § 19 Abs. 1 | hoch |
-| vorsorgeauftrag | aufwand | Rahmen 100–3000 | § 18a | hoch |
-| vollmacht | fix | fix 30 | § 11 Abs. 1 (Beglaubigung); § 49 (Beurkundung) | mittel |
-| ag_gruendung | sondersatz | 3‰ min 1000 max 11750 | § 37 Abs. 1 | hoch |
-| gmbh_gruendung | sondersatz | 3‰ min 1000 max 11750 | § 42 Abs. 1 i.V.m. § 37 | hoch |
-| kapitalerhoehung | sondersatz | 3‰ min 500 max 11750 | § 38 (AG); § 42 Abs. 1 (GmbH) i.V.m. § 37 | hoch |
-| stiftung | aufwand | Rahmen 500–3000 | § 15 Abs. 1 | hoch |
-| buergschaft | sondersatz | 2‰ min 300 max 1000 | § 35 Abs. 1 | hoch |
-| schuldanerkennung | offen | 2‰ min 100 max 4600 | § 49 bzw. § 50 (kein eigener Tatbestand) | tief |
+| dienstbarkeit | Rahmen 200–5000 | BeurkGebV § 26 Abs. 1 (SRL 258) | 2022-01-01 | hoch |
+| testament | Rahmen 500–5000 | BeurkGebV § 19 Abs. 1 (SRL 258) | 2022-01-01 | hoch |
+| erbvertrag | Rahmen 500–5000 | BeurkGebV § 19 Abs. 1 (SRL 258) | 2022-01-01 | hoch |
+| ehevertrag | Rahmen 500–3000 | BeurkGebV § 16 Abs. 1 (SRL 258) | 2022-01-01 | hoch |
+| schenkung | Staffel 3‰≤500k/2.5‰≤1000k/2‰≤5000k/1‰≤10000k/0‰+ max 15750 | BeurkGebV § 21 Abs. 1 (Grundeigentum) (SRL 258) | 2022-01-01 | hoch |
+| vorsorgeauftrag | Rahmen 100–3000 | BeurkGebV § 18a Abs. 1 (SRL 258) | 2022-01-01 | hoch |
+| ag_gruendung | Staffel 3‰≤500k/2.5‰≤1000k/2‰≤2000k/1.5‰≤5000k/0.5‰≤10000k/0‰+ max 11750 | BeurkGebV § 37 Abs. 1 (SRL 258) | 2022-01-01 | hoch |
+| gmbh_gruendung | Staffel 3‰≤500k/2.5‰≤1000k/2‰≤2000k/1.5‰≤5000k/0.5‰≤10000k/0‰+ max 11750 | BeurkGebV § 42 Abs. 1 i.V.m. § 37 (SRL 258) | 2022-01-01 | hoch |
+| kapitalerhoehung | Staffel 3‰≤500k/2.5‰≤1000k/2‰≤2000k/1.5‰≤5000k/0.5‰≤10000k/0‰+ max 11750 | BeurkGebV § 38 Abs. 1 (AG) i.V.m. § 37; § 42 Abs. 1 (GmbH) ( | 2022-01-01 | mittel |
+| stiftung | Rahmen 500–3000 | BeurkGebV § 15 Abs. 1 (SRL 258) | 2022-01-01 | hoch |
+| buergschaft | 2‰ min 300 max 1000 | BeurkGebV § 35 Abs. 1 (SRL 258) | 2022-01-01 | hoch |
+| vollmacht | fix 30 | BeurkGebV § 11 Abs. 1 (Beglaubigung Unterschrift); § 49 (Beu | 2022-01-01 | hoch |
 
-## UR — Uri (freies)
-- **Erlass:** Notariatstarif der Urner Notarinnen und Notare (Verbands-/Konventionaltarif des Urner Anwalts- und Notarenverbandes) (kein amtlicher RB-Nr. (privater Verbandstarif; nicht in der kantonalen Rechtssammlung publiziert); teils zitiert als urilaw RB 9.2311), Stand vom 25. März 2014, Stand/letzte Änderung 17. März 2015 (weiterhin die auf urilaw.ch publizierte geltende Fassung, Abruf 15.06.2026)
-- **Quelle:** https://www.urilaw.ch/fileadmin/user_upload/documents/Notariatstarif-Uri.pdf
-- **Genereller Werttarif:** staffel — Ziff. 5 (Grundgebühr Tarif A) i.V.m. Ziff. 5.2; Begrenzungen Ziff. 8.3/8.4
-- **Doppelcheck:** bestätigt
+## UR — Uri
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | Rahmen 500–30000 | Ziff. 5.1 Bst. c i.V.m. Ziff. 5.2 | hoch |
-| dienstbarkeit | fix | fix 500 | Ziff. 7 Bst. h | hoch |
-| schenkung | genereller_werttarif | Rahmen 500–30000 | Ziff. 5.1 Bst. e i.V.m. Ziff. 5.2 | hoch |
-| erbvertrag | fix | fix 750 | Ziff. 7 Bst. d | hoch |
-| ehevertrag | fix | fix 750 | Ziff. 7 Bst. b | hoch |
-| testament | fix | fix 750 | Ziff. 7 Bst. c | hoch |
-| vorsorgeauftrag | fix | fix 750 | Ziff. 7 Bst. a | hoch |
-| vollmacht | fix | fix 40 | Ziff. 9.1 (Beglaubigung Unterschrift) | mittel |
-| ag_gruendung | genereller_werttarif | Rahmen 500–30000 | Ziff. 5.1 Bst. g i.V.m. Ziff. 5.2 | hoch |
-| gmbh_gruendung | genereller_werttarif | Rahmen 500–30000 | Ziff. 5.1 Bst. g i.V.m. Ziff. 5.2 | hoch |
-| kapitalerhoehung | genereller_werttarif | Rahmen 500–30000 | Ziff. 5.1 Bst. g i.V.m. Ziff. 5.2 | hoch |
-| stiftung | genereller_werttarif | Rahmen 500–30000 | Ziff. 5.1 Bst. g i.V.m. Ziff. 5.2 | hoch |
-| buergschaft | genereller_werttarif | Rahmen 500–30000 | Ziff. 5.1 Bst. f i.V.m. Ziff. 5.2 | hoch |
-| schuldanerkennung | offen | — | kein ausdruecklicher Tatbestand (weder Ziff. 5.1 n | tief |
+| baurecht | fix 500 | Notariatstarif UR Ziff. 7 Bst. h (Dienstbarkeit) | 17.3.2015 | hoch |
+| vorkaufsrecht | fix 500 | Notariatstarif UR Ziff. 7 Bst. h (Dienstbarkeit) analog | 17.3.2015 | mittel |
+| dienstbarkeit | fix 500 | Notariatstarif UR Ziff. 7 Bst. h | 17.3.2015 | hoch |
+| schuldbrief | Staffel 2.5‰≤250k/2‰≤1000k/1.5‰+ max 30000 | Notariatstarif UR Ziff. 6.1 i.V.m. 6.2 (Grundgebuehr B - Gru | 17.3.2015 | hoch |
+| testament | fix 750 | Notariatstarif UR Ziff. 7 Bst. c (Oeffentliches Testament) | 17.3.2015 | hoch |
+| erbvertrag | fix 750 | Notariatstarif UR Ziff. 7 Bst. d | 17.3.2015 | hoch |
+| ehevertrag | fix 750 | Notariatstarif UR Ziff. 7 Bst. b | 17.3.2015 | hoch |
+| schenkung | Staffel 3‰≤250k/2.5‰≤1000k/2‰+ max 30000 | Notariatstarif UR Ziff. 5.1 Bst. e i.V.m. 5.2 (Grundgebuehr  | 17.3.2015 | hoch |
+| vorsorgeauftrag | fix 750 | Notariatstarif UR Ziff. 7 Bst. a | 17.3.2015 | hoch |
+| verpfruendung | Aufwand CHF 300/Std | Notariatstarif UR Ziff. 4 (Stundenansatz); Ziff. 5.1 abschli | 17.3.2015 | mittel |
+| ag_gruendung | Staffel 3‰≤250k/2.5‰≤1000k/2‰+ max 30000 | Notariatstarif UR Ziff. 5.1 Bst. g i.V.m. 5.2 (Grundgebuehr  | 17.3.2015 | hoch |
+| gmbh_gruendung | Staffel 3‰≤250k/2.5‰≤1000k/2‰+ max 30000 | Notariatstarif UR Ziff. 5.1 Bst. g i.V.m. 5.2 (Grundgebuehr  | 17.3.2015 | hoch |
+| kapitalerhoehung | Staffel 3‰≤250k/2.5‰≤1000k/2‰+ max 30000 | Notariatstarif UR Ziff. 5.1 Bst. g i.V.m. 5.2 (Grundgebuehr  | 17.3.2015 | hoch |
+| kapitalherabsetzung | fix 500 | Notariatstarif UR Ziff. 7 Bst. k (Statutenaenderung im Gesel | 17.3.2015 | mittel |
+| stiftung | Staffel 3‰≤250k/2.5‰≤1000k/2‰+ max 30000 | Notariatstarif UR Ziff. 5.1 Bst. g i.V.m. 5.2 (Grundgebuehr  | 17.3.2015 | hoch |
+| buergschaft | Staffel 3‰≤250k/2.5‰≤1000k/2‰+ max 30000 | Notariatstarif UR Ziff. 5.1 Bst. f i.V.m. 5.2 (Grundgebuehr  | 17.3.2015 | hoch |
+| schuldanerkennung | Aufwand CHF 300/Std | Notariatstarif UR Ziff. 4 (Stundenansatz); Ziff. 5.1 abschli | 17.3.2015 | mittel |
+| vollmacht | fix 40 | Notariatstarif UR Ziff. 9.1 (Beglaubigung Unterschrift) | 17.3.2015 | hoch |
 
-## SZ — Schwyz (amtsnotariat)
-- **Erlass:** Gebührentarif für Notare und Grundbuchverwalter sowie freiberufliche Urkundspersonen (SRSZ 213.512), Stand SRSZ 1.2.2021; letzte Änderung 19. Mai 2020, in Kraft seit 1. Juli 2020 (PDF regeneriert 20.8.2025)
-- **Quelle:** https://www.sz.ch/public/upload/assets/7361/213_512.pdf
-- **Genereller Werttarif:** promille — § 5 Abs. 1 Nr. 1
-- **Doppelcheck:** bestätigt
+## SZ — Schwyz
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | 0.9‰ max 13500 | § 5 Abs. 1 Nr. 1 | hoch |
-| dienstbarkeit | genereller_werttarif | 0.9‰ max 13500 | § 5 Abs. 1 Nr. 1 | hoch |
-| schenkung | offen | — | § 5 Abs. 1 Nr. 1 / Nr. 3 / Nr. 13 | mittel |
-| erbvertrag | fix | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | hoch |
-| ehevertrag | fix | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | hoch |
-| testament | fix | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | hoch |
-| vorsorgeauftrag | fix | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | hoch |
-| vollmacht | fix | Rahmen 6–20 | § 5 Abs. 1 Nr. 3 | mittel |
-| ag_gruendung | fix | Rahmen 200–1300 | § 5 Abs. 1 Nr. 8 | hoch |
-| gmbh_gruendung | fix | Rahmen 200–1300 | § 5 Abs. 1 Nr. 8 | hoch |
-| kapitalerhoehung | fix | Rahmen 100–1000 | § 5 Abs. 1 Nr. 9 | hoch |
-| stiftung | fix | Rahmen 200–1300 | § 5 Abs. 1 Nr. 8 | mittel |
-| buergschaft | sondersatz | 0.5‰ min 50 max 1000 | § 5 Abs. 1 Nr. 10 | hoch |
-| schuldanerkennung | offen | — | § 5 Abs. 1 Nr. 3 / Nr. 13 | mittel |
+| baurecht | 0.9‰ max 13500 | § 5 Abs. 1 Nr. 1 | SRSZ 1.2.2021 (Änder | hoch |
+| vorkaufsrecht | 0.9‰ max 13500 | § 5 Abs. 1 Nr. 1 | SRSZ 1.2.2021 (Änder | hoch |
+| dienstbarkeit | 0.9‰ max 13500 | § 5 Abs. 1 Nr. 1 | SRSZ 1.2.2021 (Änder | hoch |
+| schuldbrief | 0.9‰ max 10350 | § 5 Abs. 1 Nr. 2 | SRSZ 1.2.2021 (Änder | hoch |
+| testament | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | SRSZ 1.2.2021 (Nr. 7 | hoch |
+| erbvertrag | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | SRSZ 1.2.2021 (Nr. 7 | hoch |
+| ehevertrag | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | SRSZ 1.2.2021 (Nr. 7 | hoch |
+| schenkung | 0.9‰ max 13500 | § 5 Abs. 1 Nr. 1 | SRSZ 1.2.2021 (Änder | mittel |
+| vorsorgeauftrag | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | SRSZ 1.2.2021 (Nr. 7 | hoch |
+| verpfruendung | Rahmen 60–800 | § 5 Abs. 1 Nr. 7 | SRSZ 1.2.2021 (Nr. 7 | hoch |
+| ag_gruendung | Rahmen 200–1300 | § 5 Abs. 1 Nr. 8 | SRSZ 1.2.2021 | hoch |
+| gmbh_gruendung | Rahmen 200–1300 | § 5 Abs. 1 Nr. 8 | SRSZ 1.2.2021 | hoch |
+| kapitalerhoehung | Rahmen 100–1000 | § 5 Abs. 1 Nr. 9 | SRSZ 1.2.2021 | hoch |
+| kapitalherabsetzung | Rahmen 100–1000 | § 5 Abs. 1 Nr. 9 | SRSZ 1.2.2021 | hoch |
+| stiftung | Rahmen 200–1300 | § 5 Abs. 1 Nr. 8 | SRSZ 1.2.2021 | hoch |
+| buergschaft | 0.5‰ min 50 max 1000 | § 5 Abs. 1 Nr. 10 | SRSZ 1.2.2021 | hoch |
+| schuldanerkennung | Rahmen 6–20 | § 5 Abs. 1 Nr. 3 (ggf. Nr. 13) | SRSZ 1.2.2021 | mittel |
+| vollmacht | Rahmen 6–20 | § 5 Abs. 1 Nr. 3 | SRSZ 1.2.2021 | mittel |
 
-## OW — Obwalden (freies)
-- **Erlass:** Verordnung über die Beurkundungsgebühren (GDB 210.32), Stand In Kraft seit 1. April 2012; Art. 10 Ziff. 6 (Vorsorgeauftrag) seit 1. Januar 2013 (Beschluss Kantonsrat vom 15. März 2012, OGS 2012, 18)
-- **Quelle:** https://gdb.ow.ch/app/de/texts_of_law/210.32
-- **Genereller Werttarif:** staffel — Art. 10 Ziff. 12 (Verträge auf Eigentumsübertragung, Kauf/Schenkung/Tausch)
-- **Doppelcheck:** bestätigt
+## OW — Obwalden
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | 3‰ min 600 | Art. 10 Ziff. 26 lit. a (OR 216/1) i.V.m. Ziff. 12 | hoch |
-| dienstbarkeit | fix | Rahmen 200–1500 | Art. 10 Ziff. 16 (Grunddienstbarkeit, ZGB 732); Zi | hoch |
-| schenkung | genereller_werttarif | 3‰ min 600 | Art. 10 Ziff. 12 sowie Ziff. 28 (Schenkung von Gru | hoch |
-| erbvertrag | sondersatz | 1‰ min 500 max 20000 | Art. 10 Ziff. 10 (ZGB 512) | hoch |
-| ehevertrag | fix | Rahmen 500–1800 | Art. 10 Ziff. 3 (ZGB 181) | hoch |
-| testament | sondersatz | 1‰ min 500 max 20000 | Art. 10 Ziff. 9 (ZGB 499) | hoch |
-| vorsorgeauftrag | fix | Rahmen 300–1000 | Art. 10 Ziff. 6 (ZGB 361) | hoch |
-| vollmacht | fix | fix 15 | Art. 10 Ziff. 1 (Beglaubigung) | hoch |
-| ag_gruendung | sondersatz | 3‰ min 800 max 20000 | Art. 10 Ziff. 31 lit. a (OR 620 ff./764 ff.) | hoch |
-| gmbh_gruendung | sondersatz | 3‰ min 800 max 20000 | Art. 10 Ziff. 32 (OR 772 ff.) i.V.m. Ziff. 31 | hoch |
-| kapitalerhoehung | sondersatz | 3‰ min 800 max 20000 | Art. 10 Ziff. 31 lit. b (OR 650 ff.) | hoch |
-| stiftung | sondersatz | 1‰ min 500 max 20000 | Art. 10 Ziff. 2 (ZGB 81) | hoch |
-| buergschaft | sondersatz | 1‰ min 250 max 1000 | Art. 10 Ziff. 29 (OR 493) | hoch |
-| schuldanerkennung | offen | Rahmen 200–1800 | Art. 10 (kein eigener Tatbestand); allenfalls Ziff | tief |
+| baurecht | Staffel 3‰≤300k/2‰≤600k/1‰+ | Art. 10 Ziff. 20 i.V.m. Ziff. 12 (ZGB 779a/657) | 2012-04-01 | hoch |
+| vorkaufsrecht | Staffel 1.5‰≤300k/1‰≤600k/0.5‰+ | Art. 10 Ziff. 26 lit. d (OR 216/2) | 2012-04-01 | hoch |
+| dienstbarkeit | Rahmen 200–1500 | Art. 10 Ziff. 16 (ZGB 732); Ziff. 17/19 (200-800); Ziff. 21  | 2012-04-01 | hoch |
+| schuldbrief | Staffel 1.5‰≤300k/1‰≤600k/0.5‰+ | Art. 10 Ziff. 23 (ZGB 799) | 2012-04-01 | hoch |
+| testament | Staffel 1‰+ +Sockel 500 max 20000 | Art. 10 Ziff. 9 (ZGB 499) | 2012-04-01 | hoch |
+| erbvertrag | Staffel 1‰+ +Sockel 500 max 20000 | Art. 10 Ziff. 10 (ZGB 512) | 2012-04-01 | hoch |
+| ehevertrag | Rahmen 500–1800 | Art. 10 Ziff. 3 (ZGB 181) | 2012-04-01 | hoch |
+| schenkung | Staffel 3‰≤300k/2‰≤600k/1‰+ | Art. 10 Ziff. 28 i.V.m. Ziff. 12 (OR 243/ZGB 657) | 2012-04-01 | hoch |
+| vorsorgeauftrag | Rahmen 300–1000 | Art. 10 Ziff. 6 (ZGB 361) | 2013-01-01 | hoch |
+| verpfruendung | Staffel 3‰≤300k/2‰≤600k/1‰+ | Art. 10 Ziff. 30 (OR 522) | 2012-04-01 | hoch |
+| ag_gruendung | Staffel 3‰≤200k/2‰≤500k/1‰+ max 20000 | Art. 10 Ziff. 31 lit. a (OR 620 ff./764 ff.) | 2012-04-01 | hoch |
+| gmbh_gruendung | Staffel 3‰≤200k/2‰≤500k/1‰+ max 20000 | Art. 10 Ziff. 32 i.V.m. Ziff. 31 lit. a (OR 772 ff.) | 2012-04-01 | hoch |
+| kapitalerhoehung | Staffel 3‰≤200k/2‰≤500k/1‰+ max 20000 | Art. 10 Ziff. 31 lit. b (OR 650 ff.) | 2012-04-01 | hoch |
+| kapitalherabsetzung | Rahmen 300–2000 | Art. 10 Ziff. 31 lit. c (OR 732) | 2012-04-01 | hoch |
+| stiftung | Staffel 1‰+ +Sockel 500 max 20000 | Art. 10 Ziff. 2 (ZGB 81) | 2012-04-01 | hoch |
+| buergschaft | 1‰ min 250 max 1000 | Art. 10 Ziff. 29 (OR 493) | 2012-04-01 | hoch |
+| schuldanerkennung | Rahmen 200–1800 | Art. 10 Ziff. 40 (Andere Urkunden) | 2012-04-01 | mittel |
+| vollmacht | fix 15 | Art. 10 Ziff. 1 (Beglaubigung) | 2012-04-01 | mittel |
 
-## NW — Nidwalden (amtsnotariat)
-- **Erlass:** Verordnung über die Beurkundungsgebühren (Beurkundungsgebührenverordnung, BeurkGebV) (268.12), Stand 01.01.2016
-- **Quelle:** https://gesetze.nw.ch/app/de/texts_of_law/268.12
-- **Genereller Werttarif:** staffel — § 20 (Übertragungen von Grundeigentum); §§ 4, 7 für Bemessungsgrundsätze
-- **Doppelcheck:** bestätigt
+## NW — Nidwalden
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | 2.5‰ min 300 | § 20 Abs. 1 | hoch |
-| dienstbarkeit | fix | Rahmen 300–1000 | § 24 (Nutzniessung), § 25 (Wohnrecht), § 26a (ande | hoch |
-| schenkung | fix | Rahmen 200–800 | § 32; (für Grundstücke § 20) | mittel |
-| erbvertrag | sondersatz | 3‰ min 400 | § 18 Abs. 3 i.V.m. Abs. 1 | hoch |
-| ehevertrag | fix | Rahmen 350–3000 | § 15 | hoch |
-| testament | sondersatz | 3‰ min 400 | § 18 Abs. 1 | hoch |
-| vorsorgeauftrag | fix | Rahmen 300–1000 | § 17a | hoch |
-| vollmacht | fix | fix 25 | § 49 (Beglaubigung Unterschrift); § 47 (beurkundun | mittel |
-| ag_gruendung | sondersatz | 3‰ min 1000 | § 36 Ziff. 1 | hoch |
-| gmbh_gruendung | sondersatz | 3‰ min 1000 | § 41 Abs. 1 i.V.m. § 36 | hoch |
-| kapitalerhoehung | sondersatz | 3‰ min 300 | § 37 (AG) / § 41 Abs. 1 i.V.m. § 37 (GmbH) | hoch |
-| stiftung | fix | Rahmen 250–3000 | § 14 | hoch |
-| buergschaft | sondersatz | 1.5‰ min 250 max 1000 | § 34 Abs. 1 | hoch |
-| schuldanerkennung | offen | Rahmen 200–2000 | kein spezifischer Tatbestand; ggf. § 47 oder § 48 | tief |
+| baurecht | Staffel 2.5‰≤200k/2‰≤500k/1.5‰≤1000k/1‰≤5000k/0.5‰+ | NG 268.12 § 26 i.V.m. § 20 | in Kraft seit 01.01. | hoch |
+| vorkaufsrecht | Staffel 2.5‰≤200k/2‰≤500k/1.5‰≤1000k/1‰≤5000k/0.5‰+ | NG 268.12 § 31 i.V.m. § 20 | in Kraft seit 01.01. | hoch |
+| dienstbarkeit | Rahmen 300–1000 | NG 268.12 § 24 (Nutzniessung), § 25 (Wohnrecht), § 26a (ande | in Kraft seit 01.01. | hoch |
+| schuldbrief | Staffel 1.5‰≤200k/1.25‰≤500k/1‰≤1000k/0.5‰≤5000k/0.2‰+ | NG 268.12 § 28 | in Kraft seit 01.01. | hoch |
+| testament | Staffel 3‰≤200k/2.5‰≤500k/1.5‰≤1000k/1‰≤5000k/0.5‰+ | NG 268.12 § 18 Abs. 1 | in Kraft seit 01.01. | hoch |
+| erbvertrag | Staffel 3‰≤200k/2.5‰≤500k/1.5‰≤1000k/1‰≤5000k/0.5‰+ | NG 268.12 § 18 Abs. 3 i.V.m. Abs. 1 | in Kraft seit 01.01. | hoch |
+| ehevertrag | Rahmen 350–3000 | NG 268.12 § 15 | in Kraft seit 01.01. | hoch |
+| schenkung | Rahmen 200–800 | NG 268.12 § 32 | in Kraft seit 01.01. | hoch |
+| vorsorgeauftrag | Rahmen 300–1000 | NG 268.12 § 17a | in Kraft seit 01.01. | hoch |
+| verpfruendung | Staffel 2.5‰≤200k/2‰≤500k/1.5‰≤1000k/1‰≤5000k/0.5‰+ | NG 268.12 § 35 i.V.m. § 20 | in Kraft seit 01.01. | hoch |
+| ag_gruendung | Staffel 3‰≤500k/2‰≤1000k/1‰≤5000k/0.5‰+ +Sockel 1000 | NG 268.12 § 36 Ziff. 1 | in Kraft seit 01.01. | hoch |
+| gmbh_gruendung | Staffel 3‰≤500k/2‰≤1000k/1‰≤5000k/0.5‰+ +Sockel 1000 | NG 268.12 § 41 Abs. 1 i.V.m. § 36 | in Kraft seit 01.01. | hoch |
+| kapitalerhoehung | Staffel 3‰≤500k/2‰≤1000k/1‰≤5000k/0.5‰+ +Sockel 1000 | NG 268.12 § 37 (AG) / § 41 Abs. 1 i.V.m. § 37 (GmbH) | in Kraft seit 01.01. | mittel |
+| kapitalherabsetzung | Rahmen 400–3000 | NG 268.12 § 38 (AG) / § 41 Abs. 1 i.V.m. § 38 (GmbH) | in Kraft seit 01.01. | hoch |
+| stiftung | Rahmen 250–3000 | NG 268.12 § 14 | in Kraft seit 01.01. | hoch |
+| buergschaft | 1.5‰ min 250 max 1000 | NG 268.12 § 34 Abs. 1 | in Kraft seit 01.01. | hoch |
+| schuldanerkennung | Rahmen 200–2000 | NG 268.12 § 47 (beurkundungsbeduerftig) bzw. § 48 (nicht beu | in Kraft seit 01.01. | mittel |
+| vollmacht | fix 25 | NG 268.12 § 49 Abs. 1 (Beglaubigung Unterschrift) | in Kraft seit 01.01. | hoch |
 
-## GL — Glarus (amtsnotariat)
-- **Erlass:** Verordnung über Beurkundung und Beglaubigung mit Gebührentarif (GS III B/3/2), Stand 26.11.2008, in Kraft seit 01.01.2009 (geltende Erstfassung, nicht aufgehoben, keine Folgeversionen)
-- **Quelle:** https://gesetze.gl.ch/app/de/texts_of_law/III%20B%2F3%2F2
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## GL — Glarus
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | 3‰ min 400 | Art. A1-1 Nr. 1 (Ziff. 1.1-1.4) | hoch |
-| dienstbarkeit | fix | Rahmen 200–1000 | Art. A1-1 Nr. 5 | hoch |
-| schenkung | fix | Rahmen 100–1000 | Art. A1-1 Nr. 1 (bei Grundstück) bzw. Art. A1-3 (s | mittel |
-| erbvertrag | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
-| ehevertrag | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
-| testament | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
-| vorsorgeauftrag | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
-| vollmacht | fix | Rahmen 15–1000 | Art. A1-5 Nr. 1 (Beglaubigung) bzw. Art. A1-3 (Beu | hoch |
-| ag_gruendung | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
-| gmbh_gruendung | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
-| kapitalerhoehung | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
-| stiftung | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
-| buergschaft | sondersatz | 0.5‰ min 300 max 1500 | Art. A1-2 Nr. 8 (Ziff. 8.1-8.3) | hoch |
-| schuldanerkennung | fix | Rahmen 100–1000 | Art. A1-3 | mittel |
+| dienstbarkeit | Rahmen 200–1000 | Art. A1-1 Nr. 5 (Anhang) Verordnung ueber Beurkundung und Be | 1.1.2009 | hoch |
+| testament | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| erbvertrag | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| ehevertrag | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| schenkung | Staffel 3‰≤200k/2‰≤500k/1‰≤5000k/0.5‰+ | Art. A1-1 Nr. 1 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| vorsorgeauftrag | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | mittel |
+| ag_gruendung | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| gmbh_gruendung | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| kapitalerhoehung | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| stiftung | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| buergschaft | 0.5‰ min 300 max 1500 | Art. A1-2 Nr. 8.1 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| schuldanerkennung | Rahmen 100–1000 | Art. A1-3 (Anhang) GS III B/3/2 | 1.1.2009 | hoch |
+| vollmacht | Rahmen 15–1000 | Art. A1-5 Nr. 1.1 (Beglaubigung) bzw. Art. A1-3 (Beurkundung | 1.1.2009 | hoch |
 
-## ZG — Zug (amtsnotariat)
-- **Erlass:** Kantonsratsbeschluss über die Gebühren in Verwaltungs- und Zivilsachen (Verwaltungsgebührentarif) (641.1), Stand 5.6.2025 / in Kraft seit 22.8.2025 (konsolidierte Fassung, geltend)
-- **Quelle:** https://bgs.zg.ch/app/de/texts_of_law/641.1
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## ZG — Zug
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | fix | Rahmen 300–4000 | § 9 Nr. 89 | hoch |
-| dienstbarkeit | fix | Rahmen 300–4000 | § 9 Nr. 89ter | hoch |
-| schenkung | offen | — | § 9 (kein eigener Tatbestand); evtl. Nr. 89 (bei G | tief |
-| erbvertrag | fix | Rahmen 300–4000 | § 9 Nr. 88 | hoch |
-| ehevertrag | fix | Rahmen 300–4000 | § 9 Nr. 86 | hoch |
-| testament | fix | Rahmen 300–4000 | § 9 Nr. 88 | hoch |
-| vorsorgeauftrag | fix | Rahmen 200–2000 | § 9 Nr. 86quater | hoch |
-| vollmacht | fix | Rahmen 100–500 | § 9 Nr. 91 (bzw. Nr. 95 für Unterschriftsbeglaubig | mittel |
-| ag_gruendung | fix | Rahmen 400–15000 | § 9 Nr. 90 | hoch |
-| gmbh_gruendung | fix | Rahmen 400–15000 | § 9 Nr. 90 | hoch |
-| kapitalerhoehung | fix | Rahmen 400–15000 | § 9 Nr. 90 | mittel |
-| stiftung | fix | Rahmen 500–4000 | § 9 Nr. 85 | hoch |
-| buergschaft | fix | Rahmen 100–500 | § 9 Nr. 91 | hoch |
-| schuldanerkennung | offen | — | § 9 (kein eigener Tatbestand); subsidiär Nr. 94 od | tief |
+| dienstbarkeit | Rahmen 300–4000 | BGS 641.1 § 9 Abs. 1 Nr. 89ter | 2026-06-16 | hoch |
+| testament | Rahmen 300–4000 | BGS 641.1 § 9 Abs. 1 Nr. 88 | 2026-06-16 | hoch |
+| erbvertrag | Rahmen 300–4000 | BGS 641.1 § 9 Abs. 1 Nr. 88 | 2026-06-16 | hoch |
+| ehevertrag | Rahmen 300–4000 | BGS 641.1 § 9 Abs. 1 Nr. 86 | 2026-06-16 | hoch |
+| vorsorgeauftrag | Rahmen 200–2000 | BGS 641.1 § 9 Abs. 1 Nr. 86quater | 2026-06-16 | hoch |
+| ag_gruendung | Rahmen 400–15000 | BGS 641.1 § 9 Abs. 1 Nr. 90 | 2026-06-16 | hoch |
+| gmbh_gruendung | Rahmen 400–15000 | BGS 641.1 § 9 Abs. 1 Nr. 90 | 2026-06-16 | hoch |
+| kapitalerhoehung | Rahmen 400–15000 | BGS 641.1 § 9 Abs. 1 Nr. 90 | 2026-06-16 | hoch |
+| stiftung | Rahmen 500–4000 | BGS 641.1 § 9 Abs. 1 Nr. 85 | 2026-06-16 | hoch |
+| buergschaft | Rahmen 100–500 | BGS 641.1 § 9 Abs. 1 Nr. 91 | 2026-06-16 | hoch |
+| vollmacht | Rahmen 100–300 | BGS 641.1 § 9 Abs. 1 Nr. 95 (Unterschriftsbeglaubigung); Nr. | 2026-06-16 | hoch |
 
-## FR — Freiburg (freies)
-- **Erlass:** Tarif des émoluments des notaires (RSF 261.16), Stand Version en vigueur dès le 01.07.2016 (dernière modification de l'art. 4 adoptée le 28.06.2016, ROF 2016_091); acte de base du 07.10.1986. Erlass nicht aufgehoben (aktiv).
-- **Quelle:** https://bdlf.fr.ch/api/fr/versions/8428/pdf_file
-- **Genereller Werttarif:** staffel — Art. 4 ch. 1bis (i.V.m. Art. 3 für die massgebende Summe)
-- **Doppelcheck:** bestätigt
+## FR — Freiburg
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | Rahmen 150–10000 | Art. 4 ch. 1bis i.V.m. Art. 3 | hoch |
-| dienstbarkeit | genereller_werttarif | Rahmen 150–10000 | Art. 4 ch. 1bis | hoch |
-| schenkung | genereller_werttarif | Rahmen 150–10000 | Art. 4 ch. 1bis; sonst Art. 5 ch. 12 | mittel |
-| erbvertrag | sondersatz | Rahmen 100–10000 | Art. 4 ch. 1 bzw. Art. 5 ch. 1 | hoch |
-| ehevertrag | sondersatz | Rahmen 150–10000 | Art. 4 ch. 1 i.V.m. Art. 3 | hoch |
-| testament | fix | Rahmen 100–2000 | Art. 5 ch. 1 | hoch |
-| vorsorgeauftrag | aufwand | Rahmen 50–1500 | Art. 5 ch. 12 | mittel |
-| vollmacht | fix | fix 25 | Art. 5 ch. 7 (Procuration); Art. 5 ch. 8 (Légalisa | hoch |
-| ag_gruendung | sondersatz | Rahmen 500–12000 | Art. 4 ch. 5 | hoch |
-| gmbh_gruendung | sondersatz | Rahmen 500–12000 | Art. 4 ch. 5 | hoch |
-| kapitalerhoehung | sondersatz | Rahmen 500–12000 | Art. 4 ch. 5 | hoch |
-| stiftung | sondersatz | Rahmen 500–12000 | Art. 4 ch. 5 | hoch |
-| buergschaft | sondersatz | 1.5‰ min 50 max 1000 | Art. 4 ch. 4 | hoch |
-| schuldanerkennung | aufwand | Rahmen 50–1500 | Art. 5 ch. 12 | mittel |
+| baurecht | Staffel 0‰≤5k/7‰≤20k/5‰≤50k/3‰≤200k/2‰≤2000k/1‰≤5000k/0.5‰+ +Sockel 150 max 10000 | Art. 4 ch. 1bis (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| vorkaufsrecht | Rahmen 50–1500 | Art. 5 ch. 12 | Tarif vom 7.10.1986  | mittel |
+| dienstbarkeit | Staffel 0‰≤5k/7‰≤20k/5‰≤50k/3‰≤200k/2‰≤2000k/1‰≤5000k/0.5‰+ +Sockel 150 max 10000 | Art. 4 ch. 1bis (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| schuldbrief | Staffel 0‰≤5k/5‰≤50k/2.5‰≤600k/2‰≤2000k/0.75‰≤5000k/0.45‰+ +Sockel 100 max 10000 | Art. 4 ch. 3 (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| testament | Rahmen 100–2000 | Art. 5 ch. 1 | Tarif vom 7.10.1986  | hoch |
+| erbvertrag | Rahmen 100–2000 | Art. 5 ch. 1 (Errichtung) / Art. 4 ch. 1 (entgeltl. Erbverzi | Tarif vom 7.10.1986  | mittel |
+| ehevertrag | Staffel 0‰≤5k/7‰≤20k/5‰≤100k/3‰≤1000k/2‰≤2000k/1‰≤5000k/0.5‰+ +Sockel 150 max 10000 | Art. 4 ch. 1 (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| schenkung | Staffel 0‰≤5k/7‰≤20k/5‰≤50k/3‰≤200k/2‰≤2000k/1‰≤5000k/0.5‰+ +Sockel 150 max 10000 | Art. 4 ch. 1bis (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| vorsorgeauftrag | Rahmen 50–1500 | Art. 5 ch. 12 | Tarif vom 7.10.1986  | mittel |
+| verpfruendung | Staffel 0‰≤5k/7‰≤20k/5‰≤100k/3‰≤1000k/2‰≤2000k/1‰≤5000k/0.5‰+ +Sockel 150 max 10000 | Art. 4 ch. 1 (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| ag_gruendung | Staffel 0‰≤50k/4‰≤100k/3‰≤500k/1‰≤1000k/0.5‰+ +Sockel 500 max 12000 | Art. 4 ch. 5 (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| gmbh_gruendung | Staffel 0‰≤50k/4‰≤100k/3‰≤500k/1‰≤1000k/0.5‰+ +Sockel 500 max 12000 | Art. 4 ch. 5 (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| kapitalerhoehung | Staffel 0‰≤50k/4‰≤100k/3‰≤500k/1‰≤1000k/0.5‰+ +Sockel 500 max 12000 | Art. 4 ch. 5 (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| kapitalherabsetzung | Rahmen 50–1500 | Art. 5 ch. 12 | Tarif vom 7.10.1986  | mittel |
+| stiftung | Staffel 0‰≤50k/4‰≤100k/3‰≤500k/1‰≤1000k/0.5‰+ +Sockel 500 max 12000 | Art. 4 ch. 5 (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| buergschaft | Staffel 0‰≤10k/1.5‰+ +Sockel 50 max 1000 | Art. 4 ch. 4 (i.V.m. Art. 3) | Tarif vom 7.10.1986  | hoch |
+| schuldanerkennung | Rahmen 50–1500 | Art. 5 ch. 12 | Tarif vom 7.10.1986  | mittel |
+| vollmacht | Rahmen 25–100 | Art. 5 ch. 7 (Procuration) | Tarif vom 7.10.1986  | hoch |
 
-## SO — Solothurn (amtsnotariat)
-- **Erlass:** Gebührentarif (GT) (BGS 615.11), Stand 1. März 2026 (Beschluss 11. November 2025); Erlassdatum 8. März 2016
-- **Quelle:** https://bgs.so.ch/app/de/texts_of_law/615.11
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## SO — Solothurn
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | Rahmen 100–10000 | § 25 lit. a GT | hoch |
-| dienstbarkeit | sondersatz | Rahmen 100–10000 | § 25 lit. g und lit. h GT | hoch |
-| schenkung | sondersatz | Rahmen 100–10000 | § 25 lit. a GT | hoch |
-| erbvertrag | sondersatz | Rahmen 200–6000 | § 24 lit. a GT | hoch |
-| ehevertrag | sondersatz | Rahmen 300–3000 | § 23 lit. b GT | hoch |
-| testament | sondersatz | Rahmen 200–6000 | § 24 lit. a GT | hoch |
-| vorsorgeauftrag | offen | Rahmen 10–2000 | § 27 lit. c GT (Auffangtatbestand) | tief |
-| vollmacht | offen | fix 20 | § 27 lit. a bzw. lit. c GT | tief |
-| ag_gruendung | sondersatz | Rahmen 500–10000 | § 26 lit. c GT | hoch |
-| gmbh_gruendung | sondersatz | Rahmen 500–10000 | § 26 lit. c GT | hoch |
-| kapitalerhoehung | sondersatz | Rahmen 500–10000 | § 26 lit. c GT | mittel |
-| stiftung | sondersatz | Rahmen 300–3000 | § 22 lit. a GT | hoch |
-| buergschaft | sondersatz | Rahmen 100–1000 | § 26 lit. a GT | hoch |
-| schuldanerkennung | offen | Rahmen 10–2000 | § 27 lit. c GT (Auffangtatbestand); ggf. § 25 lit. | tief |
+| dienstbarkeit | Rahmen 100–10000 | § 25 Abs. 1 lit. h GT (BGS 615.11) | 2026-06-16 | hoch |
+| testament | Rahmen 200–6000 | § 24 Abs. 1 lit. a GT (BGS 615.11) | 2026-06-16 | hoch |
+| erbvertrag | Rahmen 200–6000 | § 24 Abs. 1 lit. a GT (BGS 615.11) | 2026-06-16 | hoch |
+| ehevertrag | Rahmen 300–3000 | § 23 Abs. 1 lit. b GT (BGS 615.11) | 2026-06-16 | hoch |
+| schenkung | Rahmen 100–10000 | § 25 Abs. 1 lit. a GT (BGS 615.11) | 2026-06-16 | hoch |
+| ag_gruendung | Rahmen 500–10000 | § 26 Abs. 1 lit. c GT (BGS 615.11) | 2026-06-16 | hoch |
+| gmbh_gruendung | Rahmen 500–10000 | § 26 Abs. 1 lit. c GT (BGS 615.11) | 2026-06-16 | hoch |
+| kapitalerhoehung | Rahmen 500–10000 | § 26 Abs. 1 lit. c GT (BGS 615.11) | 2026-06-16 | hoch |
+| stiftung | Rahmen 300–3000 | § 22 Abs. 1 GT (BGS 615.11) | 2026-06-16 | hoch |
+| buergschaft | Rahmen 100–1000 | § 26 Abs. 1 lit. a GT (BGS 615.11) | 2026-06-16 | hoch |
 
-## BS — Basel-Stadt (freies)
-- **Erlass:** Verordnung über den Notariatstarif (SG 292.400), Stand 1. Juli 2016 (Beschluss 28.06.2016); Erlass vom 19.06.2001, nicht aufgehoben
-- **Quelle:** https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/292.400
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## BS — Basel-Stadt
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | 2.5‰ min 500 max 50000 | § 11 Ziff. 17 i.V.m. § 8 Abs. 4 | hoch |
-| dienstbarkeit | fix | Rahmen 200–1000 | § 11 Ziff. 22 (Dienstbarkeit), Ziff. 23 (Nutzniess | hoch |
-| schenkung | sondersatz | 2.5‰ min 200 max 50000 | § 11 Ziff. 17 (Grundstück) bzw. Ziff. 42 (übrige) | mittel |
-| erbvertrag | fix | Rahmen 400–2000 | § 11 Ziff. 8 i.V.m. Ziff. 2 | hoch |
-| ehevertrag | fix | Rahmen 400–2000 | § 11 Ziff. 2 | hoch |
-| testament | fix | Rahmen 400–2000 | § 11 Ziff. 7 i.V.m. Ziff. 2 | hoch |
-| vorsorgeauftrag | fix | Rahmen 200–1000 | § 11 Ziff. 5 | hoch |
-| vollmacht | aufwand | fix 15 | § 11 Ziff. 42 (Beurkundung) bzw. Ziff. 39 (Beglaub | hoch |
-| ag_gruendung | sondersatz | 2.4‰ min 750 max 50000 | § 11 Ziff. 33 lit. a | hoch |
-| gmbh_gruendung | sondersatz | 2.4‰ min 750 max 50000 | § 11 Ziff. 33 lit. a | hoch |
-| kapitalerhoehung | sondersatz | Rahmen 1500–37500 | § 11 Ziff. 33 lit. c | hoch |
-| stiftung | sondersatz | 1.5‰ min 400 max 2000 | § 11 Ziff. 1 | hoch |
-| buergschaft | fix | Rahmen 200–2000 | § 11 Ziff. 31 | hoch |
-| schuldanerkennung | aufwand | nach Aufwand | § 11 Ziff. 42 (Auffangtatbestand); ggf. Ziff. 36a  | mittel |
+| dienstbarkeit | Rahmen 200–1000 | § 11 Ziff. 22 (Dienstbarkeit), Ziff. 23 (Nutzniessung), Ziff | 1.7.2016 | hoch |
+| testament | Rahmen 400–2000 | § 11 Ziff. 7 i.V.m. Ziff. 2 Notariatstarif SG 292.400 | 1.7.2016 | hoch |
+| erbvertrag | Rahmen 400–2000 | § 11 Ziff. 8 i.V.m. Ziff. 2 Notariatstarif SG 292.400 | 1.7.2016 | hoch |
+| ehevertrag | Rahmen 400–2000 | § 11 Ziff. 2 Notariatstarif SG 292.400 | 1.7.2016 | hoch |
+| schenkung | Staffel 2.5‰≤2000k/2‰≤5000k/1‰≤10000k/0.75‰+ max 50000 | § 11 Ziff. 17 (Grundstueck) bzw. Ziff. 42 (uebrige) Notariat | 1.7.2016 | hoch |
+| vorsorgeauftrag | Rahmen 200–1000 | § 11 Ziff. 5 Notariatstarif SG 292.400 | 1.7.2016 | hoch |
+| ag_gruendung | Staffel 2.4‰≤200k/2.2‰≤1000k/2‰≤3000k/1.5‰≤5000k/1‰≤10000k/0.75‰+ +Sockel 2000 max 50000 | § 11 Ziff. 33 lit. a Notariatstarif SG 292.400 | 1.7.2016 | hoch |
+| gmbh_gruendung | Staffel 2.4‰≤200k/2.2‰≤1000k/2‰≤3000k/1.5‰≤5000k/1‰≤10000k/0.75‰+ +Sockel 2000 max 50000 | § 11 Ziff. 33 (Ueberschrift) lit. a Notariatstarif SG 292.40 | 1.7.2016 | hoch |
+| kapitalerhoehung | Staffel 1.8‰≤200k/1.65‰≤1000k/1.5‰≤3000k/1.125‰≤5000k/0.75‰≤10000k/0.5625‰+ +Sockel 1500 max 37500 | § 11 Ziff. 33 lit. c i.V.m. lit. a und § 8 Abs. 4 Notariatst | 1.7.2016 | hoch |
+| stiftung | Staffel 1.5‰+ +Sockel 400 max 50000 | § 11 Ziff. 1 Notariatstarif SG 292.400 | 1.7.2016 | hoch |
+| buergschaft | Rahmen 200–500 | § 11 Ziff. 31 Notariatstarif SG 292.400 | 1.7.2016 | hoch |
+| schuldanerkennung | Aufwand CHF ?/Std | § 11 Ziff. 42 (Auffangtatbestand); ggf. Ziff. 36a (Unterwerf | 1.7.2016 | mittel |
+| vollmacht | Aufwand CHF ?/Std | § 11 Ziff. 42 (Beurkundung) bzw. Ziff. 39 (Beglaubigung) Not | 1.7.2016 | hoch |
 
-## BL — Basel-Landschaft (freies)
-- **Erlass:** Verordnung über die Notariatsgebühren (NotGebV) (SGS 217.13), Stand 1.11.2012 (Erlass vom 23.10.2012, in Kraft seit 1.11.2012; keine Aufhebung/Folgeversionen)
-- **Quelle:** https://bl.clex.ch/app/de/texts_of_law/217.13
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## BL — Basel-Landschaft
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | aufwand | Rahmen 800–2500 | §9 Abs. 1 lit. d (i.V.m. Abs. 2, §8) | hoch |
-| dienstbarkeit | aufwand | Rahmen 500–1600 | §9 Abs. 1 lit. e | hoch |
-| schenkung | offen | — | §8 Abs. 1 (subsidiär) | mittel |
-| erbvertrag | aufwand | Rahmen 500–1700 | §9 Abs. 1 lit. a | hoch |
-| ehevertrag | aufwand | Rahmen 500–1700 | §9 Abs. 1 lit. a | hoch |
-| testament | aufwand | Rahmen 400–1500 | §9 Abs. 1 lit. b | hoch |
-| vorsorgeauftrag | aufwand | Rahmen 180–260 | §8 Abs. 1 (subsidiär) | mittel |
-| vollmacht | fix | fix 20 | §10 Abs. 1 lit. c (Beglaubigung); §8 (Beurkundung) | mittel |
-| ag_gruendung | aufwand | Rahmen 700–2000 | §9 Abs. 1 lit. c | hoch |
-| gmbh_gruendung | aufwand | Rahmen 700–2000 | §9 Abs. 1 lit. c | hoch |
-| kapitalerhoehung | aufwand | Rahmen 180–260 | §8 Abs. 1 (subsidiär) | mittel |
-| stiftung | offen | Rahmen 180–260 | §8 Abs. 1 (subsidiär) | tief |
-| buergschaft | fix | fix 250 | §10 Abs. 1 lit. b; sonst §8 | mittel |
-| schuldanerkennung | offen | Rahmen 180–260 | §8 Abs. 1 (subsidiär) | tief |
+| dienstbarkeit | Rahmen 500–1600 | NotGebV SGS 217.13 §9 Abs.1 lit. e (i.V.m. §9 Abs.2, §8) | 1.11.2012 | hoch |
+| testament | Rahmen 400–1500 | NotGebV SGS 217.13 §9 Abs.1 lit. b (i.V.m. §9 Abs.2, §8) | 1.11.2012 | hoch |
+| erbvertrag | Rahmen 500–1700 | NotGebV SGS 217.13 §9 Abs.1 lit. a (i.V.m. §9 Abs.2, §8) | 1.11.2012 | hoch |
+| ehevertrag | Rahmen 500–1700 | NotGebV SGS 217.13 §9 Abs.1 lit. a (i.V.m. §9 Abs.2, §8) | 1.11.2012 | hoch |
+| vorsorgeauftrag | Aufwand CHF 180/Std | NotGebV SGS 217.13 §8 Abs.1 lit. a (subsidiaer; kein fester  | 1.11.2012 | mittel |
+| ag_gruendung | Rahmen 700–2000 | NotGebV SGS 217.13 §9 Abs.1 lit. c (i.V.m. §9 Abs.2, §8) | 1.11.2012 | hoch |
+| gmbh_gruendung | Rahmen 700–2000 | NotGebV SGS 217.13 §9 Abs.1 lit. c (i.V.m. §9 Abs.2, §8) | 1.11.2012 | hoch |
+| kapitalerhoehung | Aufwand CHF 180/Std | NotGebV SGS 217.13 §8 Abs.1 lit. a (subsidiaer; Kapitalerhoe | 1.11.2012 | mittel |
+| buergschaft | Aufwand CHF 180/Std | NotGebV SGS 217.13 §8 Abs.1 lit. a (allgemeine Buergschaft); | 1.11.2012 | hoch |
+| vollmacht | Aufwand CHF 180/Std | NotGebV SGS 217.13 §8 Abs.1 lit. a (Beurkundung Vollmacht);  | 1.11.2012 | hoch |
 
-## SH — Schaffhausen (amtsnotariat)
-- **Erlass:** Verordnung über die Gebühren für öffentliche Beurkundungen (Notariatsgebührenverordnung); ergänzend für grundbuchliche Beurkundungen die Grundbuchgebührenverordnung (SHR 211.433) (221.101 (ergänzend 211.433)), Stand 221.101: Stand 1.1.2016 (Version 1125); 211.433: Stand 1.1.2011 (Version 1813)
-- **Quelle:** https://rechtsbuch.sh.ch/api/de/texts_of_law/221.101
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## SH — Schaffhausen
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | 1‰ min 50 | 211.433 § 13 Abs. 1 Ziff. 1 (Grundbuchgebührenvero | hoch |
-| dienstbarkeit | fix | Rahmen 50–500 | 211.433 § 13 Abs. 1 Ziff. 4 | hoch |
-| schenkung | aufwand | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | mittel |
-| erbvertrag | aufwand | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | mittel |
-| ehevertrag | aufwand | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | mittel |
-| testament | aufwand | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | mittel |
-| vorsorgeauftrag | aufwand | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | mittel |
-| vollmacht | aufwand | Rahmen 15–10000 | 221.101 § 1 Abs. 1 Ziff. 5; Beglaubigung 211.433 § | mittel |
-| ag_gruendung | sondersatz | 2‰ min 800 max 10000 | 221.101 § 1 Abs. 1 Ziff. 2 Bst. a | hoch |
-| gmbh_gruendung | sondersatz | 2‰ min 800 max 10000 | 221.101 § 1 Abs. 1 Ziff. 2 Bst. a | hoch |
-| kapitalerhoehung | sondersatz | 2‰ min 800 max 10000 | 221.101 § 1 Abs. 1 Ziff. 2 Bst. a | hoch |
-| stiftung | sondersatz | 2‰ min 500 max 10000 | 221.101 § 1 Abs. 1 Ziff. 1 | hoch |
-| buergschaft | sondersatz | 2‰ min 100 max 500 | 221.101 § 1 Abs. 1 Ziff. 3 | hoch |
-| schuldanerkennung | aufwand | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | mittel |
+| dienstbarkeit | Rahmen 50–500 | 211.433 § 13 Abs. 1 Ziff. 4 | 01.01.2011 | hoch |
+| testament | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | 01.01.2016 | hoch |
+| erbvertrag | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | 01.01.2016 | hoch |
+| ehevertrag | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | 01.01.2016 | hoch |
+| schenkung | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 (Grundstück: 211.433 § | 01.01.2016 | mittel |
+| vorsorgeauftrag | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 | 01.01.2016 | tief |
+| ag_gruendung | 2‰ min 800 max 10000 | 221.101 § 1 Abs. 1 Ziff. 2 Bst. a | 01.01.2016 | hoch |
+| gmbh_gruendung | 2‰ min 800 max 10000 | 221.101 § 1 Abs. 1 Ziff. 2 Bst. a | 01.01.2016 | hoch |
+| kapitalerhoehung | 2‰ min 800 max 10000 | 221.101 § 1 Abs. 1 Ziff. 2 Bst. a | 01.01.2016 | hoch |
+| stiftung | 2‰ min 500 max 10000 | 221.101 § 1 Abs. 1 Ziff. 1 | 01.01.2016 | hoch |
+| buergschaft | 2‰ min 100 max 500 | 221.101 § 1 Abs. 1 Ziff. 3 | 01.01.2016 | hoch |
+| schuldanerkennung | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 (Pfandkontext: 211.433 | 01.01.2016 | mittel |
+| vollmacht | Rahmen 100–10000 | 221.101 § 1 Abs. 1 Ziff. 5 i.V.m. § 3 (Beglaubigung: 211.433 | 01.01.2016 | mittel |
 
-## AR — Appenzell A.Rh. (amtsnotariat)
-- **Erlass:** Gesetz über die Gebühren der Gemeinden (Gebührentarif für die Gemeinden) (bGS 153.2), Stand 1. Januar 2018 (Beschluss 20. März 2017; Erlass vom 26. Februar 2001)
-- **Quelle:** https://ar.clex.ch/api/de/versions/1203/pdf_file
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## AR — Appenzell A.Rh.
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | 1‰ min 200 max 4000 | Art. 12 Ziff. 8.1 lit. a | hoch |
-| dienstbarkeit | fix | Rahmen 50–4000 | Art. 12 Ziff. 8.3 | hoch |
-| schenkung | sondersatz | 1‰ min 50 max 4000 | Art. 12 Ziff. 8.1 lit. a; subsidiaer Ziff. 5.10 | mittel |
-| erbvertrag | fix | Rahmen 50–500 | Art. 12 Ziff. 5.5 | hoch |
-| ehevertrag | fix | Rahmen 50–500 | Art. 12 Ziff. 5.2 | hoch |
-| testament | fix | Rahmen 50–500 | Art. 12 Ziff. 5.4 | hoch |
-| vorsorgeauftrag | fix | Rahmen 50–500 | Art. 12 Ziff. 5.10 (Auffanggebuehr) | mittel |
-| vollmacht | fix | Rahmen 5–500 | Art. 12 Ziff. 6 (Beglaubigung) bzw. Ziff. 5.10 (Be | mittel |
-| ag_gruendung | sondersatz | — | Art. 12 Ziff. 5.8 lit. a | hoch |
-| gmbh_gruendung | sondersatz | — | Art. 12 Ziff. 5.8 lit. a | hoch |
-| kapitalerhoehung | sondersatz | 0.25‰ min 250 | Art. 12 Ziff. 5.8 lit. b | hoch |
-| stiftung | sondersatz | 1‰ min 100 max 2000 | Art. 12 Ziff. 5.1 | hoch |
-| buergschaft | fix | Rahmen 20–100 | Art. 12 Ziff. 5.7 | hoch |
-| schuldanerkennung | fix | Rahmen 50–500 | Art. 12 Ziff. 5.10 (Auffanggebuehr) | mittel |
+| dienstbarkeit | Rahmen 50–4000 | Art. 12 Ziff. 8.3 lit. a/b bGS 153.2 | 1.1.2018 | mittel |
+| testament | Rahmen 50–500 | Art. 12 Ziff. 5.4 bGS 153.2 | 1.1.2018 | hoch |
+| erbvertrag | Rahmen 50–500 | Art. 12 Ziff. 5.5 bGS 153.2 | 1.1.2018 | hoch |
+| ehevertrag | Rahmen 50–500 | Art. 12 Ziff. 5.2 bGS 153.2 | 1.1.2018 | hoch |
+| schenkung | Rahmen 50–500 | Art. 12 Ziff. 5.10 bGS 153.2 (subsidiaer); bei Grundstueck Z | 1.1.2018 | mittel |
+| vorsorgeauftrag | Rahmen 50–500 | Art. 12 Ziff. 5.10 bGS 153.2 (Auffanggebuehr) | 1.1.2018 | mittel |
+| ag_gruendung | Staffel 0‰≤200k/0‰+ +Sockel 300 | Art. 12 Ziff. 5.8 lit. a bGS 153.2 | 1.1.2018 | hoch |
+| gmbh_gruendung | Staffel 0‰≤200k/0‰+ +Sockel 300 | Art. 12 Ziff. 5.8 lit. a bGS 153.2 | 1.1.2018 | hoch |
+| kapitalerhoehung | 0.25‰ min 250 | Art. 12 Ziff. 5.8 lit. b bGS 153.2 | 1.1.2018 | hoch |
+| stiftung | 1‰ min 100 max 2000 | Art. 12 Ziff. 5.1 bGS 153.2 | 1.1.2018 | hoch |
+| buergschaft | Rahmen 20–100 | Art. 12 Ziff. 5.7 bGS 153.2 | 1.1.2018 | hoch |
+| schuldanerkennung | Rahmen 50–500 | Art. 12 Ziff. 5.10 bGS 153.2 (Auffanggebuehr) | 1.1.2018 | mittel |
+| vollmacht | Rahmen 5–500 | Art. 12 Ziff. 6 (Beglaubigung) bzw. Ziff. 5.10 (Beurkundung) | 1.1.2018 | mittel |
 
-## AI — Appenzell I.Rh. (amtsnotariat)
-- **Erlass:** Gebührentarif (GebT) (GS 172.513), Stand 2026-01-01
-- **Quelle:** https://ai.clex.ch/app/de/texts_of_law/172.513
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## AI — Appenzell I.Rh.
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | 1‰ min 60 | Art. 14 Abs. 2 Ziff. 1 GebT | hoch |
-| dienstbarkeit | fix | Rahmen 100–2000 | Art. 14 Abs. 2 Ziff. 8 GebT | hoch |
-| schenkung | sondersatz | 1‰ min 60 | Art. 14 Abs. 2 Ziff. 1 GebT (Grundstück) bzw. Art. | mittel |
-| erbvertrag | fix | Rahmen 350–3000 | Art. 14 Abs. 1 Ziff. 5 GebT | hoch |
-| ehevertrag | fix | Rahmen 250–2000 | Art. 14 Abs. 1 Ziff. 1 GebT | hoch |
-| testament | fix | Rahmen 250–2000 | Art. 14 Abs. 1 Ziff. 3 GebT | hoch |
-| vorsorgeauftrag | fix | Rahmen 200–2000 | Art. 14 Abs. 1 Ziff. 2 GebT | hoch |
-| vollmacht | fix | fix 20 | Art. 6 Abs. 1 Ziff. 1 GebT (Beglaubigung) bzw. Art | mittel |
-| ag_gruendung | fix | Rahmen 400–4000 | Art. 14 Abs. 3 Ziff. 1 GebT | hoch |
-| gmbh_gruendung | fix | Rahmen 400–4000 | Art. 14 Abs. 3 Ziff. 1 GebT | hoch |
-| kapitalerhoehung | fix | Rahmen 300–4000 | Art. 14 Abs. 3 Ziff. 2 GebT | hoch |
-| stiftung | fix | Rahmen 400–4000 | Art. 14 Abs. 3 Ziff. 7 GebT | hoch |
-| buergschaft | sondersatz | 1‰ | Art. 14 Abs. 4 Ziff. 2 GebT | hoch |
-| schuldanerkennung | fix | Rahmen 20–200 | Art. 14 Abs. 4 Ziff. 4 GebT | mittel |
+| dienstbarkeit | Rahmen 100–2000 | Art. 14 Abs. 2 Ziff. 8 GebT (GS 172.513) | 2026-01-01 | hoch |
+| testament | Rahmen 250–2000 | Art. 14 Abs. 1 Ziff. 3 GebT (GS 172.513) | 2026-01-01 | hoch |
+| erbvertrag | Rahmen 350–3000 | Art. 14 Abs. 1 Ziff. 5 GebT (GS 172.513) | 2026-01-01 | hoch |
+| ehevertrag | Rahmen 250–2000 | Art. 14 Abs. 1 Ziff. 1 GebT (GS 172.513) | 2026-01-01 | hoch |
+| schenkung | 1‰ min 60 | Art. 14 Abs. 2 Ziff. 1 GebT (GS 172.513) | 2026-01-01 | mittel |
+| vorsorgeauftrag | Rahmen 200–2000 | Art. 14 Abs. 1 Ziff. 2 GebT (GS 172.513) | 2026-01-01 | hoch |
+| ag_gruendung | Rahmen 400–4000 | Art. 14 Abs. 3 Ziff. 1 GebT (GS 172.513) | 2026-01-01 | hoch |
+| gmbh_gruendung | Rahmen 400–4000 | Art. 14 Abs. 3 Ziff. 1 GebT (GS 172.513) | 2026-01-01 | hoch |
+| kapitalerhoehung | Rahmen 300–4000 | Art. 14 Abs. 3 Ziff. 2 GebT (GS 172.513) | 2026-01-01 | hoch |
+| stiftung | Rahmen 400–4000 | Art. 14 Abs. 3 Ziff. 7 GebT (GS 172.513) | 2026-01-01 | hoch |
+| buergschaft | 1‰ | Art. 14 Abs. 4 Ziff. 2 GebT (GS 172.513) | 2026-01-01 | hoch |
+| schuldanerkennung | Rahmen 20–200 | Art. 14 Abs. 4 Ziff. 4 GebT (GS 172.513) | 2026-01-01 | mittel |
+| vollmacht | Rahmen 20–200 | Art. 14 Abs. 4 Ziff. 4 GebT (GS 172.513) | 2026-01-01 | mittel |
 
-## SG — St. Gallen (amtsnotariat)
-- **Erlass:** Verordnung über die Gebühren für Amtshandlungen der Grundbuchämter und für die Durchführung von Grundstückschätzungen (GB-GebV) — für grundstücksbezogene Beurkundungen; ergänzt durch Gebührentarif für die Kantons- und Gemeindeverwaltung (GebT), Abschnitt III «Beurkundungen und Beglaubigungen», für die übrigen öffentlichen Beurkundungen (914.5 (GB-GebV); 821.5 (GebT)), Stand GB-GebV (sGS 914.5): Stand 1. Juni 2020 (Erlass 10.11.2015). GebT (sGS 821.5): Stand 1. Januar 2026 (XXVI. Nachtrag, RRB 9.12.2025)
-- **Quelle:** https://www.gesetzessammlung.sg.ch/api/de/versions/2935/pdf_file_with_annexes
-- **Genereller Werttarif:** promille — GB-GebV (sGS 914.5) Art. 5 Abs. 1 i.V.m. Art. 8 Nr. 20.01
-- **Doppelcheck:** bestätigt
+## SG — St. Gallen
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | 2‰ min 200 max 10000 | GB-GebV (sGS 914.5) Art. 5 Abs. 1 i.V.m. Art. 8 Nr | hoch |
-| dienstbarkeit | sondersatz | 2‰ min 150 max 10000 | GB-GebV (sGS 914.5) Art. 11 Nr. 22.01 / 22.04 i.V. | hoch |
-| schenkung | genereller_werttarif | 2‰ min 200 max 10000 | GB-GebV (sGS 914.5) Art. 7/Art. 8 (Grundstückssche | mittel |
-| erbvertrag | fix | Rahmen 330–1650 | GebT (sGS 821.5) Abschnitt III, Nr. 60.07 | hoch |
-| ehevertrag | fix | Rahmen 220–1650 | GebT (sGS 821.5) Nr. 60.02.01/02/03 | hoch |
-| testament | fix | Rahmen 110–1100 | GebT (sGS 821.5) Nr. 60.06 | hoch |
-| vorsorgeauftrag | fix | Rahmen 110–1100 | GebT (sGS 821.5) Nr. 60.05.01 | hoch |
-| vollmacht | fix | Rahmen 15–50 | GebT (sGS 821.5) Abschnitt III.B (Beglaubigungen)  | hoch |
-| ag_gruendung | sondersatz | Rahmen 385–15000 | GebT (sGS 821.5) Nr. 60.13 | hoch |
-| gmbh_gruendung | sondersatz | Rahmen 385–15000 | GebT (sGS 821.5) Nr. 60.13 (i.V.m. 60.13–18, Art.  | hoch |
-| kapitalerhoehung | sondersatz | Rahmen 385–15000 | GebT (sGS 821.5) Nr. 60.14 | hoch |
-| stiftung | sondersatz | Rahmen 330–3850 | GebT (sGS 821.5) Nr. 60.01 | hoch |
-| buergschaft | sondersatz | 0.5‰ min 50 max 400 | GebT (sGS 821.5) Nr. 60.11 | hoch |
-| schuldanerkennung | offen | — | GebT (sGS 821.5) Abschnitt III — kein ausdrücklich | tief |
+| baurecht | 2‰ min 200 max 10000 | GB-GebV (sGS 914.5) Art. 11 Nr. 22.01 i.V.m. Art. 5 Abs. 2 | 1.6.2020 | hoch |
+| vorkaufsrecht | 1‰ min 100 max 1000 | GB-GebV (sGS 914.5) Art. 13 Nr. 23.03 (limitiert) / Nr. 23.0 | 1.6.2020 | hoch |
+| dienstbarkeit | Rahmen 150–2000 | GB-GebV (sGS 914.5) Art. 11 Nr. 22.04 i.V.m. Art. 5 Abs. 2 | 1.6.2020 | hoch |
+| schuldbrief | 1‰ min 100 max 2000 | GB-GebV (sGS 914.5) Art. 10 Nr. 21.01 i.V.m. Art. 5 Abs. 2 | 1.6.2020 | hoch |
+| testament | Rahmen 110–1100 | GebT (sGS 821.5) Nr. 60.06 | 1.1.2026 | hoch |
+| erbvertrag | Rahmen 330–1650 | GebT (sGS 821.5) Nr. 60.07 | 1.1.2026 | hoch |
+| ehevertrag | Rahmen 220–1100 | GebT (sGS 821.5) Nr. 60.02.01/.02 (220-1100) bzw. Nr. 60.02. | 1.1.2026 | hoch |
+| schenkung | Staffel 2‰≤2000k/0.5‰+ max 10000 | GB-GebV (sGS 914.5) Art. 8 Nr. 20.01 i.V.m. Art. 5 Abs. 2 | 1.6.2020 | hoch |
+| vorsorgeauftrag | Rahmen 110–1100 | GebT (sGS 821.5) Nr. 60.05.01 | 1.1.2026 | hoch |
+| verpfruendung | Rahmen 300–1500 | GebT (sGS 821.5) Nr. 60.12 | 1.1.2026 | hoch |
+| ag_gruendung | Staffel 0‰≤100k/0.8‰+ +Sockel 385 max 15000 | GebT (sGS 821.5) Nr. 60.13 (i.V.m. Nrn. 60.13-18) | 1.1.2026 | hoch |
+| gmbh_gruendung | Staffel 0‰≤100k/0.8‰+ +Sockel 385 max 15000 | GebT (sGS 821.5) Nr. 60.13 (i.V.m. Nrn. 60.13-18, Art. 772 f | 1.1.2026 | hoch |
+| kapitalerhoehung | Staffel 0‰≤100k/0.8‰+ +Sockel 385 max 15000 | GebT (sGS 821.5) Nr. 60.14 i.V.m. Nr. 60.13 | 1.1.2026 | hoch |
+| kapitalherabsetzung | Staffel 0‰≤100k/0.8‰+ +Sockel 385 max 15000 | GebT (sGS 821.5) Nr. 60.14 i.V.m. Nr. 60.13 | 1.1.2026 | hoch |
+| stiftung | Staffel 0‰≤100k/0.8‰+ +Sockel 385 max 3850 | GebT (sGS 821.5) Nr. 60.01 (Ansaetze wie Nr. 60.13) | 1.1.2026 | hoch |
+| buergschaft | 0.5‰ min 50 max 400 | GebT (sGS 821.5) Nr. 60.11 | 1.1.2026 | hoch |
+| schuldanerkennung | 1‰ min 100 max 2000 | GB-GebV (sGS 914.5) Art. 10 Nr. 21.01 (grundpfandgesichert)  | 1.6.2020 | mittel |
+| vollmacht | Rahmen 15–50 | GebT (sGS 821.5) Nr. 70.01 | 1.1.2026 | hoch |
 
-## GR — Graubünden (freies)
-- **Erlass:** Verordnung über die Notariatsgebühren (NotGebV) (BR 210.370), Stand 1. Januar 2024 (Beschluss 19.12.2023)
-- **Quelle:** https://www.gr-lex.gr.ch/api/de/versions/3348/pdf_file
-- **Genereller Werttarif:** promille — Art. 16 Abs. 1 lit. a NotGebV (Sachenrecht/Beurkundung)
-- **Doppelcheck:** bestätigt
+## GR — Graubünden
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | 1‰ min 100 max 15000 | Art. 16 Abs. 1 lit. a i.V.m. Art. 14, 15 NotGebV | hoch |
-| dienstbarkeit | sondersatz | 1‰ min 100 max 15000 | Art. 16 Abs. 1 lit. n NotGebV | hoch |
-| schenkung | aufwand | nach Aufwand | Art. 7 Abs. 1 NotGebV (bzw. Art. 16 lit. a bei Gru | mittel |
-| erbvertrag | sondersatz | 1‰ min 500 max 15000 | Art. 13 Abs. 1 lit. b NotGebV | hoch |
-| ehevertrag | sondersatz | 1‰ min 500 max 15000 | Art. 12 Abs. 1 lit. a NotGebV | hoch |
-| testament | sondersatz | 1‰ min 300 max 15000 | Art. 13 Abs. 1 lit. a NotGebV | hoch |
-| vorsorgeauftrag | fix | fix 200 | Art. 12 Abs. 1 lit. d NotGebV | hoch |
-| vollmacht | fix | fix 30 | Art. 10 Abs. 1 lit. a NotGebV (Beglaubigung); Beur | mittel |
-| ag_gruendung | sondersatz | 1‰ min 1000 | Art. 17 Abs. 1 lit. a NotGebV | hoch |
-| gmbh_gruendung | sondersatz | 1‰ min 500 | Art. 18 Abs. 1 lit. a NotGebV | hoch |
-| kapitalerhoehung | sondersatz | 1‰ min 500 | Art. 17 Abs. 1 lit. c (AG) bzw. Art. 18 Abs. 1 lit | hoch |
-| stiftung | sondersatz | 1‰ min 500 | Art. 11 Abs. 1 lit. a/b NotGebV | hoch |
-| buergschaft | sondersatz | 1‰ min 100 max 5000 | Art. 19 Abs. 1 lit. c NotGebV | hoch |
-| schuldanerkennung | fix | fix 200 | Art. 19a Abs. 1 lit. a NotGebV (vollstreckbare öff | mittel |
+| baurecht | 1‰ min 100 max 15000 | Art. 16 Abs. 1 lit. c NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| vorkaufsrecht | 1‰ min 100 max 15000 | Art. 16 Abs. 1 lit. o NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| dienstbarkeit | Rahmen 100–1000 | Art. 16 Abs. 1 lit. n NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| schuldbrief | 1‰ min 100 max 15000 | Art. 16 Abs. 1 lit. i Ziff. 1 NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| testament | Staffel 0‰≤200k/1‰+ +Sockel 300 max 15300 | Art. 13 Abs. 1 lit. a NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| erbvertrag | Staffel 0‰≤200k/1‰+ +Sockel 500 max 15500 | Art. 13 Abs. 1 lit. b NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| ehevertrag | Staffel 0‰≤200k/1‰+ +Sockel 500 max 15500 | Art. 12 Abs. 1 lit. a NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| schenkung | 1‰ min 100 max 15000 | Art. 16 Abs. 1 lit. a NotGebV (Grundstueck); sonst Art. 7 No | in Kraft seit 01.01. | mittel |
+| vorsorgeauftrag | fix 200 | Art. 12 Abs. 1 lit. d NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| verpfruendung | Staffel 0‰≤200k/1‰+ +Sockel 500 max 15500 | Art. 19 Abs. 1 lit. d NotGebV; Erbverpfruendung Art. 13 Abs. | in Kraft seit 01.01. | hoch |
+| ag_gruendung | Staffel 0‰≤200k/1‰+ +Sockel 1000 | Art. 17 Abs. 1 lit. a NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| gmbh_gruendung | Staffel 0‰≤100k/1‰+ +Sockel 500 | Art. 18 Abs. 1 lit. a NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| kapitalerhoehung | Staffel 0‰≤200k/1‰+ +Sockel 500 | Art. 17 Abs. 1 lit. c (AG); Art. 18 Abs. 1 lit. c i.V.m. lit | in Kraft seit 01.01. | hoch |
+| kapitalherabsetzung | Staffel 0‰≤200k/1‰+ +Sockel 500 | Art. 17 Abs. 1 lit. d i.V.m. lit. c (AG); Art. 18 Abs. 1 lit | in Kraft seit 01.01. | hoch |
+| stiftung | Staffel 0‰≤200k/1‰+ +Sockel 500 | Art. 11 Abs. 1 lit. a NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| buergschaft | Staffel 0‰≤50k/1‰+ +Sockel 100 max 5100 | Art. 19 Abs. 1 lit. c NotGebV (BR 210.370) | in Kraft seit 01.01. | hoch |
+| schuldanerkennung | fix 200 | Art. 19a Abs. 1 lit. a NotGebV; sonst Art. 7 (BR 210.370) | in Kraft seit 01.01. | mittel |
+| vollmacht | fix 30 | Art. 10 Abs. 1 lit. a NotGebV; Beurkundung ggf. Art. 7 (BR 2 | in Kraft seit 01.01. | hoch |
 
-## AG — Aargau (freies)
-- **Erlass:** Dekret über den Notariatstarif (SAR 295.250), Stand 01.01.2025 (Version in Kraft seit 01.01.2025, Beschluss 02.07.2024; Erstfassung vom 30.08.2011)
-- **Quelle:** https://gesetzessammlungen.ag.ch/api/de/texts_of_law/295.250
-- **Genereller Werttarif:** keiner (tatbestandsweise)
-- **Doppelcheck:** bestätigt
+## AG — Aargau
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | sondersatz | 4‰ min 300 max 20000 | § 2 Abs. 1 (i.V.m. Abs. 2) | hoch |
-| dienstbarkeit | aufwand | nach Aufwand | § 1 (Aufwandtarif); arg. e § 2 (Promilletarif nur  | mittel |
-| schenkung | aufwand | nach Aufwand | § 1 (Aufwandtarif) | mittel |
-| erbvertrag | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| ehevertrag | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| testament | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| vorsorgeauftrag | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| vollmacht | fix | fix 20 | § 6 Abs. 1 lit. a (Beglaubigung) bzw. § 1 (Aufwand | hoch |
-| ag_gruendung | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| gmbh_gruendung | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| kapitalerhoehung | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| stiftung | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| buergschaft | aufwand | nach Aufwand | § 1 (Aufwandtarif) | hoch |
-| schuldanerkennung | aufwand | nach Aufwand | § 1 (Aufwandtarif); ggf. § 3 wenn grundpfandgesich | mittel |
+| dienstbarkeit | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| testament | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| erbvertrag | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| ehevertrag | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| schenkung | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | mittel |
+| vorsorgeauftrag | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| ag_gruendung | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| gmbh_gruendung | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| kapitalerhoehung | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| stiftung | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| buergschaft | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | hoch |
+| schuldanerkennung | Aufwand CHF 300/Std | § 1 Dekret über den Notariatstarif (SAR 295.250) | 2025-01-01 | mittel |
+| vollmacht | fix 20 | § 6 Abs. 1 lit. a Dekret über den Notariatstarif (SAR 295.25 | 2025-01-01 | hoch |
 
-## TG — Thurgau (amtsnotariat)
-- **Erlass:** Gesetz über die Gebühren und Gemengsteuern der Grundbuchämter und Notariate (GGG) (RB 632.1), Stand 01.01.2016 (Beschluss 22.04.2015; vom 20.11.1996)
-- **Quelle:** https://www.rechtsbuch.tg.ch/api/de/texts_of_law/632.1
-- **Genereller Werttarif:** promille — § 14 Abs. 1 GGG
-- **Doppelcheck:** bestätigt
+## TG — Thurgau
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | 1‰ min 100 max 5000 | § 14 Abs. 1 GGG | hoch |
-| dienstbarkeit | genereller_werttarif | 1‰ min 100 max 5000 | § 14 Abs. 1 GGG (Beurkundung); § 14 Abs. 2 Ziff. 1 | hoch |
-| schenkung | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| erbvertrag | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| ehevertrag | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| testament | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| vorsorgeauftrag | aufwand | Rahmen 200–10000 | § 16 GGG | mittel |
-| vollmacht | aufwand | Rahmen 200–10000 | § 16 GGG; § 7/§ 19 GGG (Beglaubigung) | mittel |
-| ag_gruendung | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| gmbh_gruendung | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| kapitalerhoehung | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| stiftung | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| buergschaft | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
-| schuldanerkennung | aufwand | Rahmen 200–10000 | § 16 GGG | hoch |
+| baurecht | 1‰ min 100 max 5000 | § 14 Abs. 1 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| vorkaufsrecht | 1‰ min 100 max 5000 | § 14 Abs. 1 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| dienstbarkeit | 1‰ min 100 max 5000 | § 14 Abs. 1 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| schuldbrief | 1‰ min 100 max 5000 | § 14 Abs. 1 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| schenkung | 1‰ min 100 max 5000 | § 14 Abs. 1 GGG (RB 632.1) | 2026 (konsolidiert) | mittel |
+| verpfruendung | 1‰ min 100 max 5000 | § 14 Abs. 1 GGG (RB 632.1) | 2026 (konsolidiert) | mittel |
+| kapitalherabsetzung | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| testament | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| erbvertrag | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| ehevertrag | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| vorsorgeauftrag | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| ag_gruendung | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| gmbh_gruendung | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| kapitalerhoehung | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| stiftung | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| buergschaft | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| schuldanerkennung | Rahmen 200–10000 | § 16 GGG (RB 632.1) | 2026 (konsolidiert) | hoch |
+| vollmacht | Rahmen null–2000 | § 19 GGG (RB 632.1); Ausführung RR-Verordnung RB 631.11 | 2026 (konsolidiert) | mittel |
 
-## TI — Tessin (freies)
-- **Erlass:** Legge sulla tariffa notarile (del 26 novembre 2013) (RL 952.300), Stand In Kraft seit 1.7.2015 (BU 2015, 169); konsolidierte Fassung, keine späteren Änderungen gefunden. Abgerufen 15.6.2026.
-- **Quelle:** https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148
-- **Genereller Werttarif:** staffel — Art. 5 cpv. 1 (i.V.m. Art. 2 u. Art. 3)
-- **Doppelcheck:** bestätigt
+## TI — Tessin
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | — | Art. 5 cpv. 1 i.V.m. Art. 3 lit. a | hoch |
-| dienstbarkeit | genereller_werttarif | — | Art. 3 lit. h i.V.m. Art. 5 / bzw. Art. 9 lit. e | hoch |
-| schenkung | genereller_werttarif | — | Art. 5 cpv. 1 i.V.m. Art. 3 lit. b | hoch |
-| erbvertrag | fix | fix 10000 | Art. 9 lit. a | hoch |
-| ehevertrag | fix | fix 10000 | Art. 9 lit. a | hoch |
-| testament | fix | fix 10000 | Art. 9 lit. a | hoch |
-| vorsorgeauftrag | fix | fix 500 | Art. 9 lit. h (analog Art. 26) | tief |
-| vollmacht | fix | fix 500 | Art. 9 lit. h (Errichtung) bzw. Art. 17 (Unterschr | hoch |
-| ag_gruendung | genereller_werttarif | — | Art. 5 cpv. 1 i.V.m. Art. 3 lit. l | hoch |
-| gmbh_gruendung | genereller_werttarif | — | Art. 5 cpv. 1 i.V.m. Art. 3 lit. l | hoch |
-| kapitalerhoehung | genereller_werttarif | — | Art. 5 cpv. 1 i.V.m. Art. 3 lit. l | hoch |
-| stiftung | fix | fix 3000 | Art. 9 lit. i | hoch |
-| buergschaft | sondersatz | — | Art. 6 i.V.m. Art. 5 cpv. 1 u. Art. 3 lit. i | hoch |
-| schuldanerkennung | genereller_werttarif | — | Art. 5 cpv. 1 i.V.m. Art. 3 lit. a (bzw. Art. 6 be | mittel |
+| baurecht | fix 2000 | Art. 9 lit. e Legge sulla tariffa notarile (RL 952.300) | 2013-11-26 (in vigor | mittel |
+| vorkaufsrecht | fix 2000 | Art. 9 lit. e Legge sulla tariffa notarile (RL 952.300) | 2013-11-26 (in vigor | tief |
+| dienstbarkeit | fix 2000 | Art. 9 lit. e Legge sulla tariffa notarile (RL 952.300) | 2013-11-26 (in vigor | hoch |
+| schuldbrief | Staffel 5‰≤250k/2‰≤500k/1.75‰≤750k/1.5‰≤1000k/1.25‰≤2000k/1‰≤5000k/0.5‰≤10000k/0.25‰≤50000k/0‰+ | Art. 6 i.V.m. Art. 5 cpv. 1 u. Art. 3 lit. i Legge sulla tar | 2013-11-26 (in vigor | hoch |
+| testament | fix 10000 | Art. 9 lit. a Legge sulla tariffa notarile (RL 952.300) | 2013-11-26 (in vigor | hoch |
+| erbvertrag | fix 10000 | Art. 9 lit. a Legge sulla tariffa notarile (RL 952.300) | 2013-11-26 (in vigor | hoch |
+| ehevertrag | fix 10000 | Art. 9 lit. a Legge sulla tariffa notarile (RL 952.300) | 2013-11-26 (in vigor | hoch |
+| schenkung | Staffel 5‰≤250k/4‰≤500k/3.5‰≤750k/3‰≤1000k/2.5‰≤2000k/2‰≤5000k/1‰≤10000k/0.5‰≤50000k/0‰+ | Art. 5 cpv. 1 i.V.m. Art. 2 u. Art. 3 lit. b Legge sulla tar | 2013-11-26 (in vigor | hoch |
+| vorsorgeauftrag | fix 3000 | Art. 9 lit. j (qualsiasi altro atto di valore indeterminabil | 2013-11-26 (in vigor | tief |
+| verpfruendung | Staffel 5‰≤250k/4‰≤500k/3.5‰≤750k/3‰≤1000k/2.5‰≤2000k/2‰≤5000k/1‰≤10000k/0.5‰≤50000k/0‰+ | Art. 5 cpv. 1 i.V.m. Art. 3 lit. g Legge sulla tariffa notar | 2013-11-26 (in vigor | hoch |
+| ag_gruendung | Staffel 5‰≤250k/4‰≤500k/3.5‰≤750k/3‰≤1000k/2.5‰≤2000k/2‰≤5000k/1‰≤10000k/0.5‰≤50000k/0‰+ | Art. 5 cpv. 1 i.V.m. Art. 3 lit. l Legge sulla tariffa notar | 2013-11-26 (in vigor | hoch |
+| gmbh_gruendung | Staffel 5‰≤250k/4‰≤500k/3.5‰≤750k/3‰≤1000k/2.5‰≤2000k/2‰≤5000k/1‰≤10000k/0.5‰≤50000k/0‰+ | Art. 5 cpv. 1 i.V.m. Art. 3 lit. l Legge sulla tariffa notar | 2013-11-26 (in vigor | hoch |
+| kapitalerhoehung | Staffel 5‰≤250k/4‰≤500k/3.5‰≤750k/3‰≤1000k/2.5‰≤2000k/2‰≤5000k/1‰≤10000k/0.5‰≤50000k/0‰+ | Art. 5 cpv. 1 i.V.m. Art. 3 lit. l Legge sulla tariffa notar | 2013-11-26 (in vigor | hoch |
+| kapitalherabsetzung | Staffel 5‰≤250k/4‰≤500k/3.5‰≤750k/3‰≤1000k/2.5‰≤2000k/2‰≤5000k/1‰≤10000k/0.5‰≤50000k/0‰+ | Art. 5 cpv. 1 i.V.m. Art. 3 lit. l Legge sulla tariffa notar | 2013-11-26 (in vigor | hoch |
+| stiftung | fix 3000 | Art. 9 lit. i Legge sulla tariffa notarile (RL 952.300) | 2013-11-26 (in vigor | mittel |
+| buergschaft | Staffel 5‰≤250k/2‰≤500k/1.75‰≤750k/1.5‰≤1000k/1.25‰≤2000k/1‰≤5000k/0.5‰≤10000k/0.25‰≤50000k/0‰+ | Art. 6 i.V.m. Art. 5 cpv. 1 u. Art. 3 lit. i Legge sulla tar | 2013-11-26 (in vigor | hoch |
+| schuldanerkennung | Staffel 5‰≤250k/4‰≤500k/3.5‰≤750k/3‰≤1000k/2.5‰≤2000k/2‰≤5000k/1‰≤10000k/0.5‰≤50000k/0‰+ | Art. 5 cpv. 1 i.V.m. Art. 3 lit. a Legge sulla tariffa notar | 2013-11-26 (in vigor | mittel |
+| vollmacht | fix 500 | Art. 9 lit. g Legge sulla tariffa notarile (RL 952.300); Unt | 2013-11-26 (in vigor | hoch |
 
-## VD — Waadt (freies)
-- **Erlass:** Tarif des honoraires dus aux notaires pour des opérations ministérielles (TNo) (BLV 178.11.2), Stand Etat au 01.03.2016 (version actuelle en vigueur, dateAbrogation: null; dernière modification Modif. 3 du 20.01.2016, e.v. 01.03.2016)
-- **Quelle:** https://prestations.vd.ch/pub/blv-publication/actes/consolide/178.11.2?id=26c09c57-9d81-4ec3-a442-e33bc904027b
-- **Genereller Werttarif:** staffel — Art. 14 al. 1 TNo (barème de base) i.V.m. Art. 6 et Art. 7
-- **Doppelcheck:** bestätigt
+## VD — Waadt
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | — | Art. 14 al. 1 TNo (acte à exécution immédiate, 100 | hoch |
-| dienstbarkeit | fix | Rahmen 100–2000 | Art. 23 TNo (autres servitudes: droits d'habitatio | hoch |
-| schenkung | genereller_werttarif | — | Art. 6 al. 1 ch. 1 TNo i.V.m. Art. 14 (resp. Art.  | mittel |
-| erbvertrag | sondersatz | 0.5‰ min 100 max 2000 | Art. 12 TNo (actes à cause de mort) | hoch |
-| ehevertrag | sondersatz | 0.5‰ min 100 max 2000 | Art. 11 TNo (contrats de mariage) | hoch |
-| testament | sondersatz | 0.5‰ min 100 max 2000 | Art. 12 TNo (actes à cause de mort) | hoch |
-| vorsorgeauftrag | offen | — | Art. 2 TNo (renvoi art. 118 LNo) – pas de disposit | tief |
-| vollmacht | fix | Rahmen 20–500 | Art. 30 TNo (procuration instrumentée en brevet);  | hoch |
-| ag_gruendung | sondersatz | 3‰ min 200 max 2000 | Art. 26 TNo (sociétés de capitaux) | hoch |
-| gmbh_gruendung | sondersatz | 3‰ min 200 max 2000 | Art. 26 TNo (sociétés de capitaux, incl. Sàrl) | hoch |
-| kapitalerhoehung | sondersatz | 3‰ min 200 max 2000 | Art. 26 al. 1 et al. 3 TNo | hoch |
-| stiftung | sondersatz | 3‰ min 200 max 2000 | Art. 9 TNo (renvoi à l'art. 26) | hoch |
-| buergschaft | sondersatz | — | Art. 25 TNo (cautionnements) | hoch |
-| schuldanerkennung | sondersatz | Rahmen 300–3000 | Art. 32a TNo (titre authentique exécutoire) si cla | mittel |
+| baurecht | Staffel 7‰≤100k/4‰≤300k/2.5‰≤500k/2‰≤750k/1.5‰≤2500k/1‰≤10000k/0.5‰≤20000k/0.25‰+ | Art. 22 i.V.m. Art. 14 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| vorkaufsrecht | Staffel 2.8‰≤100k/1.6‰≤300k/1‰≤500k/0.8‰≤750k/0.6‰≤2500k/0.4‰≤10000k/0.2‰≤20000k/0.1‰+ | Art. 18 i.V.m. Art. 14 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| dienstbarkeit | Rahmen 100–2000 | Art. 23 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| schuldbrief | Staffel 5‰≤100k/3.5‰≤300k/3‰≤500k/2‰≤750k/1.5‰≤1000k/1‰≤5000k/0.5‰≤10000k/0.25‰≤20000k/0.125‰+ | Art. 20 al.3 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| testament | Rahmen 100–2000 | Art. 12 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| erbvertrag | Rahmen 100–2000 | Art. 12 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| ehevertrag | Rahmen 100–2000 | Art. 11 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| schenkung | Staffel 7‰≤100k/4‰≤300k/2.5‰≤500k/2‰≤750k/1.5‰≤2500k/1‰≤10000k/0.5‰≤20000k/0.25‰+ | Art. 6 al.1 ch.1 i.V.m. Art. 14 TNo (BLV 178.11.2) | 01.03.2016 | mittel |
+| verpfruendung | Staffel 5.6‰≤100k/3.2‰≤300k/2‰≤500k/1.6‰≤750k/1.2‰≤2500k/0.8‰≤10000k/0.4‰≤20000k/0.2‰+ | Art. 6 al.1 ch.5 i.V.m. Art. 15 / Art. 14 TNo (BLV 178.11.2) | 01.03.2016 | mittel |
+| ag_gruendung | Staffel 3‰≤100k/2‰≤200k/1.5‰≤500k/1‰≤10000k/0.5‰≤20000k/0.25‰+ +Sockel 200 | Art. 26 al.1 u. al.2 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| gmbh_gruendung | Staffel 3‰≤100k/2‰≤200k/1.5‰≤500k/1‰≤10000k/0.5‰≤20000k/0.25‰+ +Sockel 200 | Art. 26 al.1 u. al.2 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| kapitalerhoehung | Staffel 3‰≤100k/2‰≤200k/1.5‰≤500k/1‰≤10000k/0.5‰≤20000k/0.25‰+ +Sockel 200 | Art. 26 al.1 u. al.3 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| kapitalherabsetzung | Rahmen 200–2000 | Art. 26 al.1 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| stiftung | Staffel 3‰≤100k/2‰≤200k/1.5‰≤500k/1‰≤10000k/0.5‰≤20000k/0.25‰+ +Sockel 200 | Art. 9 i.V.m. Art. 26 al.1 u. al.2 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| buergschaft | Staffel 1.25‰≤100k/0.875‰≤300k/0.75‰≤500k/0.5‰≤750k/0.375‰≤1000k/0.25‰≤5000k/0.125‰≤10000k/0.0625‰≤20000k/0.03125‰+ | Art. 25 i.V.m. Art. 20 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
+| schuldanerkennung | Staffel 1.75‰≤100k/1‰≤300k/0.625‰≤500k/0.5‰≤750k/0.375‰≤2500k/0.25‰≤10000k/0.125‰≤20000k/0.0625‰+ max 3000 | Art. 32a i.V.m. Art. 14 TNo (BLV 178.11.2) | 01.03.2016 | mittel |
+| vollmacht | Rahmen 20–500 | Art. 30 TNo (BLV 178.11.2) | 01.03.2016 | hoch |
 
-## VS — Wallis (freies)
-- **Erlass:** Règlement fixant le tarif des émoluments et des débours des notaires (178.104), Stand 26.11.2008 (état 01.01.2011)
-- **Quelle:** https://lex.vs.ch/api/fr/versions/1413/pdf_file
-- **Genereller Werttarif:** staffel — Art. 13 al. 1 i.V.m. Art. 11 und Art. 12
-- **Doppelcheck:** bestätigt
+## VS — Wallis
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | — | Art. 11 al. 1 lit. d ch. 1 (acte de vente immobili | hoch |
-| dienstbarkeit | genereller_werttarif | — | Art. 11 al. 1 lit. c ch. 3 (servitudes art. 731 CC | hoch |
-| schenkung | genereller_werttarif | — | Art. 11 al. 1 lit. d ch. 5 (donation/promesse de d | mittel |
-| erbvertrag | fix | Rahmen 200–3000 | Art. 16 al. 1 lit. c ch. 2 (pacte successoral, art | hoch |
-| ehevertrag | fix | Rahmen 200–2000 | Art. 16 al. 1 lit. b ch. 1 (contrat de mariage et  | hoch |
-| testament | fix | Rahmen 200–3000 | Art. 16 al. 1 lit. c ch. 1 (testament public, art. | hoch |
-| vorsorgeauftrag | offen | — | - | tief |
-| vollmacht | fix | fix 30 | Art. 16 al. 1 lit. i ch. 12 / ch. 13 (procuration) | hoch |
-| ag_gruendung | genereller_werttarif | — | Art. 11 al. 1 lit. e ch. 1 (acte constitutif SA, a | hoch |
-| gmbh_gruendung | genereller_werttarif | — | Art. 11 al. 1 lit. e ch. 4 (acte constitutif SARL, | hoch |
-| kapitalerhoehung | genereller_werttarif | — | Art. 11 al. 1 lit. e ch. 2 (PV CA: augmentation or | mittel |
-| stiftung | genereller_werttarif | — | Art. 11 al. 1 lit. a (constitution d'une fondation | hoch |
-| buergschaft | sondersatz | 2‰ min 200 max 1000 | Art. 14 al. 3 (cautionnement et promesse de cautio | hoch |
-| schuldanerkennung | offen | — | - | tief |
+| baurecht | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. c (droit de superficie, ar | 01.01.2011 | hoch |
+| vorkaufsrecht | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. d ch. 2 (pacte de preempti | 01.01.2011 | mittel |
+| dienstbarkeit | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. c (servitudes art. 731, us | 01.01.2011 | hoch |
+| schuldbrief | Staffel 5‰≤100k/4‰≤200k/3‰≤500k/2‰≤1000k/1‰+ +Sockel 200 | Art. 13 al. 2 i.V.m. Art. 11 let. c ch. 8 (constitution de g | 01.01.2011 | hoch |
+| testament | Rahmen 200–3000 | Art. 16 al. 1 let. c ch. 1 (testament public, art. 499 ss CC | 01.01.2011 | hoch |
+| erbvertrag | Rahmen 200–3000 | Art. 16 al. 1 let. c ch. 2 (pacte successoral, art. 512 CC), | 01.01.2011 | hoch |
+| ehevertrag | Rahmen 200–2000 | Art. 16 al. 1 let. b ch. 1 (contrat de mariage et convention | 01.01.2011 | hoch |
+| schenkung | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. d ch. 5/6 (donation d'imme | 01.01.2011 | hoch |
+| verpfruendung | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. d ch. 9 (contrat d'entreti | 01.01.2011 | hoch |
+| ag_gruendung | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. e ch. 1 (acte constitutif  | 01.01.2011 | hoch |
+| gmbh_gruendung | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. e ch. 4 (acte constitutif  | 01.01.2011 | hoch |
+| kapitalerhoehung | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. e ch. 2 (augmentation du c | 01.01.2011 | mittel |
+| kapitalherabsetzung | Rahmen 200–1200 | Art. 16 al. 1 let. f ch. 1 (proces-verbal d'assemblee de soc | 01.01.2011 | mittel |
+| stiftung | Staffel 5‰≤200k/4‰≤500k/3‰≤1000k/2‰≤10000k/1‰+ +Sockel 200 | Art. 13 al. 1 i.V.m. Art. 11 let. a (constitution d'une fond | 01.01.2011 | mittel |
+| buergschaft | Staffel 2‰+ +Sockel 200 max 1000 | Art. 14 al. 3 (cautionnement et promesse de cautionner); i.V | 01.01.2011 | hoch |
+| schuldanerkennung | offen | Art. 6 (emolument conventionnel, art. 51 loi sur le notariat | 01.01.2011 | tief |
+| vollmacht | Rahmen 40–400 | Art. 16 al. 1 let. i ch. 12 (procuration en la forme authent | 01.01.2011 | hoch |
 
-## NE — Neuenburg (freies)
-- **Erlass:** Arrêté fixant le tarif des émoluments des notaires (RSN 166.31), Stand Etat au 13 mai 2015 (en vigueur depuis le 1er juillet 2012; Art. 14 dans sa teneur selon A du 13 mai 2015, FO 2015 No 20)
-- **Quelle:** https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm
-- **Genereller Werttarif:** staffel — Art. 7 (Base de l'émolument) i.V.m. Art. 14 ch. 54 (Vente immobilière)
-- **Doppelcheck:** bestätigt
+## NE — Neuenburg
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | Rahmen 800–10000 | Art. 14 ch. 54 (Vente immobilière) | hoch |
-| dienstbarkeit | sondersatz | Rahmen 150–500 | Art. 14 ch. 38 (Servitude), ch. 39 (Usufruit), ch. | hoch |
-| schenkung | offen | — | Art. 14 ch. 71 (nur Donation immobilière); sonst A | mittel |
-| erbvertrag | sondersatz | Rahmen 150–2000 | Art. 14 ch. 19 (Pacte successoral); ch. 20 | hoch |
-| ehevertrag | sondersatz | Rahmen 150–2000 | Art. 14 ch. 15 (Contrat de mariage) | hoch |
-| testament | sondersatz | Rahmen 150–2000 | Art. 14 ch. 17 (Testament public) | hoch |
-| vorsorgeauftrag | offen | — | Art. 10 (Analogie); kein eigener Tatbestand | tief |
-| vollmacht | sondersatz | fix 20 | Art. 14 ch. 1 (Légalisation de signature); ch. 52  | hoch |
-| ag_gruendung | sondersatz | 5‰ min 500 max 11800 | Art. 14 ch. 81 lit. A ch. 1 (constitution de la so | hoch |
-| gmbh_gruendung | sondersatz | 5‰ min 500 max 11800 | Art. 14 ch. 82 lit. a i.V.m. ch. 81 (par analogie) | hoch |
-| kapitalerhoehung | sondersatz | 5‰ min 500 max 11800 | Art. 14 ch. 81 lit. A ch. 2 (augmentation ou dimin | hoch |
-| stiftung | sondersatz | Rahmen 150–2000 | Art. 14 ch. 9 (Acte constitutif ou modificatif d'u | hoch |
-| buergschaft | sondersatz | 1.5‰ min 250 max 1000 | Art. 14 ch. 73 (Cautionnement) | hoch |
-| schuldanerkennung | offen | — | Art. 14 ch. 44 al. 2 (nur in Grundpfand-Akt einges | mittel |
+| baurecht | Rahmen 800–10000 | Tarif notaires RSN 166.31 Art. 7 i.V.m. Art. 14 ch. 54 (Vent | konsolidierte Fassun | mittel |
+| vorkaufsrecht | Rahmen 150–500 | Tarif notaires RSN 166.31 Art. 14 ch. 38 (Servitude/droits a | konsolidierte Fassun | tief |
+| dienstbarkeit | Rahmen 150–500 | Tarif notaires RSN 166.31 Art. 14 ch. 38 (Servitude), ch. 39 | konsolidierte Fassun | hoch |
+| schuldbrief | Rahmen 800–10000 | Tarif notaires RSN 166.31 Art. 7 i.V.m. Art. 14 ch. 54 (Wert | konsolidierte Fassun | mittel |
+| testament | Rahmen 150–2000 | Tarif notaires RSN 166.31 Art. 14 ch. 17 (Testament public) | konsolidierte Fassun | hoch |
+| erbvertrag | Rahmen 150–2000 | Tarif notaires RSN 166.31 Art. 14 ch. 19 (Pacte successoral) | konsolidierte Fassun | mittel |
+| ehevertrag | Rahmen 150–2000 | Tarif notaires RSN 166.31 Art. 14 ch. 15 (Contrat de mariage | konsolidierte Fassun | hoch |
+| schenkung | Rahmen 800–10000 | Tarif notaires RSN 166.31 Art. 7 i.V.m. Art. 14 ch. 54 (Wert | konsolidierte Fassun | mittel |
+| verpfruendung | Rahmen 800–10000 | Tarif notaires RSN 166.31 Art. 7 i.V.m. Art. 14 ch. 54 (Wert | konsolidierte Fassun | tief |
+| ag_gruendung | Staffel 5‰≤100k/2‰≤500k/1‰≤1000k/0.5‰+ +Sockel 500 max 11800 | Tarif notaires RSN 166.31 Art. 14 ch. 81 lit. A ch. 1 (Const | konsolidierte Fassun | hoch |
+| gmbh_gruendung | Staffel 5‰≤100k/2‰≤500k/1‰≤1000k/0.5‰+ +Sockel 500 max 11800 | Tarif notaires RSN 166.31 Art. 14 ch. 82 lit. a i.V.m. ch. 8 | konsolidierte Fassun | mittel |
+| kapitalerhoehung | Staffel 5‰≤100k/2‰≤500k/1‰≤1000k/0.5‰+ +Sockel 500 max 11800 | Tarif notaires RSN 166.31 Art. 14 ch. 81 lit. A ch. 2 (Augme | konsolidierte Fassun | hoch |
+| kapitalherabsetzung | Staffel 5‰≤100k/2‰≤500k/1‰≤1000k/0.5‰+ +Sockel 500 max 11800 | Tarif notaires RSN 166.31 Art. 14 ch. 81 lit. A ch. 2 (Augme | konsolidierte Fassun | mittel |
+| stiftung | Rahmen 150–2000 | Tarif notaires RSN 166.31 Art. 14 ch. 9 (Acte constitutif ou | konsolidierte Fassun | hoch |
+| buergschaft | 1.5‰ max 1000 | Tarif notaires RSN 166.31 Art. 14 ch. 73 (Cautionnement) | konsolidierte Fassun | hoch |
+| schuldanerkennung | Rahmen 800–10000 | Tarif notaires RSN 166.31 Art. 7 i.V.m. Art. 14 ch. 54 (Wert | konsolidierte Fassun | tief |
+| vollmacht | Rahmen 150–2000 | Tarif notaires RSN 166.31 Art. 14 ch. 52 (Procuration authen | konsolidierte Fassun | hoch |
 
-## GE — Genf (freies)
-- **Erlass:** Règlement sur les émoluments des notaires (REmNot) (RSG E 6 05.03), Stand État au 30 avril 2015 (in Kraft, nicht aufgehoben)
-- **Quelle:** https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm
-- **Genereller Werttarif:** staffel — Art. 10 al. 1 REmNot
-- **Doppelcheck:** Korrekturen übernommen (1)
+## GE — Genf
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | — | Art. 10 al. 1 REmNot | hoch |
-| dienstbarkeit | fix | fix 500 | Art. 17 REmNot | hoch |
-| schenkung | genereller_werttarif | — | Art. 10 al. 1 REmNot | mittel |
-| erbvertrag | fix | Rahmen 200–2000 | Art. 18 al. 1 (und al. 2) REmNot | hoch |
-| ehevertrag | fix | Rahmen 200–2000 | Art. 18 al. 1 REmNot | hoch |
-| testament | fix | Rahmen 200–2000 | Art. 18 al. 1 REmNot | hoch |
-| vorsorgeauftrag | offen | — | — | tief |
-| vollmacht | fix | Rahmen 15–100 | Art. 29 REmNot | mittel |
-| ag_gruendung | sondersatz | — | Art. 25 al. 1 et al. 2 REmNot | hoch |
-| gmbh_gruendung | sondersatz | — | Art. 25 al. 1 et al. 2 REmNot | hoch |
-| kapitalerhoehung | sondersatz | — | Art. 25 al. 2 REmNot | mittel |
-| stiftung | sondersatz | — | Art. 25 al. 1 et al. 2 REmNot | mittel |
-| buergschaft | sondersatz | Rahmen 100–500 | Art. 26 REmNot | hoch |
-| schuldanerkennung | offen | — | — | tief |
+| baurecht | Staffel 7‰≤200k/6‰≤400k/4.5‰≤800k/4‰≤1000k/3.5‰≤1500k/3‰≤2000k/2.5‰≤3500k/2‰≤5000k/1.5‰≤7500k/1‰≤10000k/0.75‰≤20000k/0.5‰+ | Art. 10 al. 1 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| vorkaufsrecht | Rahmen 200–500 | Art. 12 al. 2 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| dienstbarkeit | fix 500 | Art. 17 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| schuldbrief | Staffel 5‰≤200k/4‰≤500k/3‰≤2000k/2‰≤5000k/1‰+ | Art. 16 al. 1 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| testament | Rahmen 200–2000 | Art. 18 al. 1 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| erbvertrag | Rahmen 200–2000 | Art. 18 al. 1 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| ehevertrag | Rahmen 200–2000 | Art. 18 al. 1 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| schenkung | Staffel 7‰≤200k/6‰≤400k/4.5‰≤800k/4‰≤1000k/3.5‰≤1500k/3‰≤2000k/2.5‰≤3500k/2‰≤5000k/1.5‰≤7500k/1‰≤10000k/0.75‰≤20000k/0.5‰+ | Art. 10 al. 1 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| verpfruendung | Staffel 7‰≤200k/6‰≤400k/4.5‰≤800k/4‰≤1000k/3.5‰≤1500k/3‰≤2000k/2.5‰≤3500k/2‰≤5000k/1.5‰≤7500k/1‰≤10000k/0.75‰≤20000k/0.5‰+ | Art. 10 al. 1 REmNot (RSG E 6 05.03) | 2015-04-30 | mittel |
+| ag_gruendung | Staffel 7‰≤50k/6‰≤100k/5‰≤200k/4‰≤300k/3‰≤400k/2‰≤500k/1‰≤10000k/0.5‰+ +Sockel 500 | Art. 25 al. 1 et al. 2 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| gmbh_gruendung | Staffel 7‰≤50k/6‰≤100k/5‰≤200k/4‰≤300k/3‰≤400k/2‰≤500k/1‰≤10000k/0.5‰+ +Sockel 500 | Art. 25 al. 1 et al. 2 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| kapitalerhoehung | Staffel 7‰≤50k/6‰≤100k/5‰≤200k/4‰≤300k/3‰≤400k/2‰≤500k/1‰≤10000k/0.5‰+ | Art. 25 al. 2 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| kapitalherabsetzung | Staffel 1.75‰≤50k/1.5‰≤100k/1.25‰≤200k/1‰≤300k/0.75‰≤400k/0.5‰≤500k/0.25‰≤10000k/0.125‰+ max 1000 | Art. 25 al. 4 REmNot (RSG E 6 05.03) | 2015-04-30 | mittel |
+| stiftung | Staffel 7‰≤50k/6‰≤100k/5‰≤200k/4‰≤300k/3‰≤400k/2‰≤500k/1‰≤10000k/0.5‰+ +Sockel 500 | Art. 25 al. 1 et al. 2 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| buergschaft | 1‰ min 100 max 500 | Art. 26 REmNot (RSG E 6 05.03) | 2015-04-30 | hoch |
+| schuldanerkennung | Rahmen 100–2000 | Art. 27 REmNot (RSG E 6 05.03) | 2015-04-30 | mittel |
+| vollmacht | Rahmen 100–2000 | Art. 27 REmNot (RSG E 6 05.03) | 2015-04-30 | mittel |
 
-## JU — Jura (freies)
-- **Erlass:** Décret concernant les émoluments des notaires du 6 décembre 1978 (RSJU 189.61), Stand État au 01.01.2007 (en vigueur); letzte materielle Änderungen: Dekret 22.9.2004 (Art. 9, in Kraft 1.1.2005) und Anpassung Partnerschaftsgesetz (Art. 12, in Kraft 1.1.2007)
-- **Quelle:** https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1
-- **Genereller Werttarif:** staffel — Art. 9 al. 1
-- **Doppelcheck:** bestätigt
+## JU — Jura
 
-| Geschäftsart | Behandlung | Regel | Artikel | Konfidenz |
+| Art | Regel | Artikel | Stand | Konf. |
 |---|---|---|---|---|
-| grundstueckkauf | genereller_werttarif | Rahmen 200–15000 | Art. 9 al. 1 | hoch |
-| dienstbarkeit | offen | — | Art. 3 i.V.m. Art. 9 / Art. 6 | mittel |
-| schenkung | offen | — | Art. 3 / Art. 9 (bei Liegenschaftsschenkung) / Art | mittel |
-| erbvertrag | sondersatz | Rahmen 200–2000 | Art. 12 al. 1 | hoch |
-| ehevertrag | sondersatz | Rahmen 200–2000 | Art. 12 al. 1 u. 3 | hoch |
-| testament | sondersatz | Rahmen 200–2000 | Art. 12 al. 1 | hoch |
-| vorsorgeauftrag | offen | — | Art. 3 i.V.m. Art. 6 / Art. 18 | tief |
-| vollmacht | fix | — | Art. 18 al. 1 | mittel |
-| ag_gruendung | sondersatz | — | Art. 16 al. 1 | hoch |
-| gmbh_gruendung | sondersatz | — | Art. 16 al. 1 | hoch |
-| kapitalerhoehung | sondersatz | — | Art. 16 al. 2 | hoch |
-| stiftung | sondersatz | — | Art. 16 al. 1 | hoch |
-| buergschaft | sondersatz | 1‰ min 10 max 200 | Art. 11 al. 1 | hoch |
-| schuldanerkennung | offen | — | Art. 3 / Art. 10 (bei Grundpfand) / Art. 6 | tief |
+| baurecht | Staffel 7‰≤100k/5‰≤300k/3.5‰≤500k/2.5‰≤750k/2‰≤1000k/1.5‰≤2500k/1‰≤10000k/0.5‰+ max 15000 | RSJU 189.61 Art. 9 al. 1 | konsolidiert, abgeru | hoch |
+| vorkaufsrecht | Rahmen 100–500 | RSJU 189.61 Art. 9 al. 3 | konsolidiert, abgeru | hoch |
+| dienstbarkeit | Aufwand CHF ?/Std | RSJU 189.61 Art. 6 al. 1 (i.V.m. Art. 3) | konsolidiert, abgeru | mittel |
+| schuldbrief | Staffel 5‰≤100k/3.5‰≤300k/3‰≤500k/2‰≤1000k/1‰+ | RSJU 189.61 Art. 10 al. 1 | konsolidiert, abgeru | hoch |
+| testament | Staffel 3‰≤100k/2‰≤500k/1‰+ max 2000 | RSJU 189.61 Art. 12 al. 1 | konsolidiert, abgeru | hoch |
+| erbvertrag | Staffel 3‰≤100k/2‰≤500k/1‰+ max 2000 | RSJU 189.61 Art. 12 al. 1 | konsolidiert, abgeru | hoch |
+| ehevertrag | Staffel 3‰≤100k/2‰≤500k/1‰+ max 2000 | RSJU 189.61 Art. 12 al. 1 (u. al. 3) | konsolidiert, abgeru | hoch |
+| schenkung | Staffel 7‰≤100k/5‰≤300k/3.5‰≤500k/2.5‰≤750k/2‰≤1000k/1.5‰≤2500k/1‰≤10000k/0.5‰+ max 15000 | RSJU 189.61 Art. 9 al. 1 (i.V.m. al. 2) | konsolidiert, abgeru | mittel |
+| verpfruendung | Staffel 3‰≤100k/2‰≤500k/1‰+ max 2000 | RSJU 189.61 Art. 12 al. 1 (i.V.m. al. 2) | konsolidiert, abgeru | hoch |
+| ag_gruendung | Staffel 0‰≤100k/2‰≤500k/1.5‰+ +Sockel 300 | RSJU 189.61 Art. 16 al. 1 | konsolidiert, abgeru | hoch |
+| gmbh_gruendung | Staffel 0‰≤100k/2‰≤500k/1.5‰+ +Sockel 300 | RSJU 189.61 Art. 16 al. 1 | konsolidiert, abgeru | hoch |
+| kapitalerhoehung | Staffel 0‰≤100k/2‰≤500k/1.5‰+ +Sockel 300 | RSJU 189.61 Art. 16 al. 2 (i.V.m. al. 1) | konsolidiert, abgeru | hoch |
+| kapitalherabsetzung | Staffel 0‰≤100k/2‰≤500k/1.5‰+ +Sockel 300 | RSJU 189.61 Art. 16 al. 2 (i.V.m. al. 1) | konsolidiert, abgeru | hoch |
+| stiftung | Staffel 0‰≤100k/2‰≤500k/1.5‰+ +Sockel 300 | RSJU 189.61 Art. 16 al. 1 | konsolidiert, abgeru | hoch |
+| buergschaft | 1‰ min 10 max 200 | RSJU 189.61 Art. 11 al. 1 | konsolidiert, abgeru | hoch |
+| schuldanerkennung | Aufwand CHF ?/Std | RSJU 189.61 Art. 6 al. 1 (i.V.m. Art. 3) | konsolidiert, abgeru | mittel |
+| vollmacht | Aufwand CHF ?/Std | RSJU 189.61 Art. 6 al. 1 (Mindestbetrag Art. 18 al. 1) | konsolidiert, abgeru | mittel |
 
 ---
-**Pflegebedarf (Verfallskandidaten):** kantonale Tarife mit datiertem Stand; bei Tarifrevision nachführen. **Abnahme-Status:** Erstrecherche, doppelt verifiziert — Davids Wort-für-Wort-Abnahme ausstehend.
+**Abnahme-Status:** Erstrecherche, 3-fach verifiziert; Davids Wort-für-Wort-Abnahme ausstehend. **Pflegebedarf:** kantonale Tarife mit Stand — bei Revision nachführen.

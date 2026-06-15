@@ -63,7 +63,7 @@ describe('Beurkundung — Ehrlichkeit & Robustheit (§8)', () => {
   });
 });
 
-describe('Beurkundung — amtliche Stützstellen (Deep Research, doppelt verifiziert)', () => {
+describe('Beurkundung — amtliche Stützstellen (3-fach verifiziert: find→Doppelcheck→Zweitprüfung→Reencode)', () => {
   const det = (art: Parameters<typeof berechneBeurkundung>[0]['geschaeftsart'], k: KantonCode, w?: number): number => {
     const r = berechneBeurkundung({ geschaeftsart: art, kanton: k, geschaeftswertCHF: w });
     if (!r.posten || !r.posten.ergebnis.deterministisch) throw new Error(`${art}/${k} nicht deterministisch`);
@@ -76,39 +76,43 @@ describe('Beurkundung — amtliche Stützstellen (Deep Research, doppelt verifiz
     return [e.vonChf, e.bisChf];
   };
 
-  it('deterministische Sondersätze/Fixgebühren', () => {
+  it('flache Promillesätze / Fixgebühren', () => {
     expect(det('buergschaft', 'ZH', 100_000)).toBe(100);   // 0,5‰ → min 100
     expect(det('stiftung', 'ZH', 1_000_000)).toBe(1000);   // 1‰
-    expect(det('testament', 'UR')).toBe(750);              // Fix Ziff. 7
+    expect(det('ag_gruendung', 'ZH', 1_000_000)).toBe(1000); // 1‰
+    expect(det('testament', 'UR')).toBe(750);              // Fix
     expect(det('vollmacht', 'UR')).toBe(40);               // Beglaubigung
-    expect(det('erbvertrag', 'OW', 1_000_000)).toBe(1000); // 1‰ Ziff. 10
-    expect(det('stiftung', 'GR', 2_000_000)).toBe(2000);   // 1‰ (Flat-Kanton)
-    expect(det('ag_gruendung', 'ZH', 1_000_000)).toBe(1000); // ZH Flat-Kanton 1‰
-    // GE Bürgschaft: Doppelcheck-Korrektur 1‰ (nicht 1%), min 100 / max 500.
-    expect(det('buergschaft', 'GE', 200_000)).toBe(200);   // 1‰ × 200k
-    expect(det('buergschaft', 'GE', 1_000_000)).toBe(500); // 1‰ × 1M → max 500
+    expect(det('dienstbarkeit', 'SZ', 500_000)).toBe(450); // 0,9‰
+    // GE Bürgschaft: Korrektur 1‰ (nicht 1%), min 100 / max 500.
+    expect(det('buergschaft', 'GE', 200_000)).toBe(200);
+    expect(det('buergschaft', 'GE', 1_000_000)).toBe(500); // max 500
   });
 
-  it('allgemeiner Werttarif greift für wertbasierte Arten ohne Sondersatz', () => {
-    expect(det('dienstbarkeit', 'SZ', 500_000)).toBe(450); // 0,9‰ genereller Werttarif
+  it('degressive Wert-Staffeln korrekt (kein Flach-Promille-Überhöhungsfehler mehr)', () => {
+    expect(det('schenkung', 'LU', 1_000_000)).toBe(2750);   // § 21 Staffel 3‰/2,5‰
+    expect(det('ag_gruendung', 'VD', 1_000_000)).toBe(1650);// TNo degressiv
+    expect(det('erbvertrag', 'NW', 1_000_000)).toBe(2100);  // § 18 Staffel
+    expect(det('ag_gruendung', 'NW', 1_000_000)).toBe(2900);// § 36 Sockel+Staffel
+    expect(det('schenkung', 'GL', 1_000_000)).toBe(1700);   // A1-1 Staffel
   });
 
-  it('dieselbe Geschäftsart je Kanton wertbasiert ODER fix (Testament: OW 1‰, ZH Rahmen)', () => {
-    expect(istWertbasiert('testament', 'OW')).toBe(true);
-    expect(det('testament', 'OW', 1_000_000)).toBe(1000);  // 1‰ — Promille-Feld-Fix
-    expect(istWertbasiert('testament', 'ZH')).toBe(false);  // Rahmen 200–5000
-  });
-
-  it('Rahmen-/Aufwandtarife als ehrliche Spanne, kein Punktwert', () => {
-    expect(spanne('testament', 'ZH')).toEqual([200, 5000]);  // Rahmen Ziff. 4.3.2
+  it('aktuelle Fassung (ZH NotGebV 1.1.2024, nicht aufgehobene v95) als Rahmen', () => {
+    expect(spanne('testament', 'ZH')).toEqual([200, 4000]);  // Korrektur 4000 (nicht 5000)
+    expect(spanne('erbvertrag', 'ZH')).toEqual([300, 6000]); // Korrektur 6000 (nicht 7500)
     expect(spanne('ag_gruendung', 'SZ', 100_000)).toEqual([200, 1300]);
-    // Überhöhungs-Schutz: Wert-Gründung in Staffel-Kanton = ehrliche Spanne (kein Flach-Promille).
-    const vdAg = berechneBeurkundung({ geschaeftsart: 'ag_gruendung', kanton: 'VD', geschaeftswertCHF: 1_000_000 });
-    expect(vdAg.posten!.ergebnis.deterministisch).toBe(false);
-    const luSchenkung = berechneBeurkundung({ geschaeftsart: 'schenkung', kanton: 'LU', geschaeftswertCHF: 1_000_000 });
-    expect(luSchenkung.posten!.ergebnis.deterministisch).toBe(false);
-    // Aufwandtarife: nicht beziffert (vonChf/bisChf undefined)
-    const be = berechneBeurkundung({ geschaeftsart: 'ehevertrag', kanton: 'BE' });
-    expect(be.posten!.ergebnis.deterministisch).toBe(false);
+  });
+
+  it('dieselbe Geschäftsart je Kanton wertbasiert ODER fix (Testament: OW Staffel, ZH Rahmen)', () => {
+    expect(istWertbasiert('testament', 'OW')).toBe(true);
+    expect(det('testament', 'OW', 1_000_000)).toBe(1500);  // Grundgebühr-Sockel + 1‰
+    expect(istWertbasiert('testament', 'ZH')).toBe(false);  // Rahmen 200–4000
+  });
+
+  it('Aufwand-/Stundensatz-Tarife als ehrliche Nicht-Bezifferung (kein Schein-Wert)', () => {
+    // ZH Vorsorgeauftrag = CHF 180/Std (Ziff. 4.2.3), nicht «nach Vereinbarung-Fix».
+    const zhVa = berechneBeurkundung({ geschaeftsart: 'vorsorgeauftrag', kanton: 'ZH' });
+    expect(zhVa.posten!.ergebnis.deterministisch).toBe(false);
+    const beEhe = berechneBeurkundung({ geschaeftsart: 'ehevertrag', kanton: 'BE' });
+    expect(beEhe.posten!.ergebnis.deterministisch).toBe(false);
   });
 });

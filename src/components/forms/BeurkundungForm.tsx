@@ -14,7 +14,8 @@ import {
   berechneBeurkundung, vergleichBeurkundung, beurkundungBericht, beurkundungSortwert, istWertbasiert,
   type BeurkundungErgebnis,
 } from '../../lib/beurkundung';
-import { ngPostenText } from '../../lib/notariatGrundbuch';
+import { ngPostenText, ergebnisSpanne } from '../../lib/notariatGrundbuch';
+import { weitereKosten } from '../../lib/beurkundungZusatzkosten';
 import {
   GESCHAEFTSARTEN_NACH_GRUPPE, geschaeftsart, GESCHAEFTSART_IDS, type GeschaeftsartId,
 } from '../../data/tarif/beurkundung-typen';
@@ -110,6 +111,19 @@ function AllgemeineBeurkundung({ art, startKanton, startWert }: { art: Geschaeft
     [vergleich, art, geschaeftswert, bereit],
   );
 
+  // Weitere Transaktionskosten (MwSt freies Notariat · HReg-Gebühr · Emissionsabgabe).
+  const gebuehrSpanne = ergebnis?.posten ? ergebnisSpanne(ergebnis.posten.ergebnis) : null;
+  const zusatz = useMemo(
+    () => (ergebnis && ergebnis.status === 'ok') ? weitereKosten(art, kanton, geschaeftswert, gebuehrSpanne) : null,
+    [ergebnis, art, kanton, geschaeftswert, gebuehrSpanne],
+  );
+  const total = useMemo(
+    () => (gebuehrSpanne && zusatz && zusatz.posten.length > 0)
+      ? { von: gebuehrSpanne.vonChf + zusatz.posten.reduce((s, p) => s + p.von, 0), bis: gebuehrSpanne.bisChf + zusatz.posten.reduce((s, p) => s + p.bis, 0) }
+      : null,
+    [gebuehrSpanne, zusatz],
+  );
+
   const pdfConfig: PdfDocConfig | null = useMemo(() => {
     if (!ergebnis || ergebnis.status === 'offen') return null;
     return {
@@ -122,11 +136,13 @@ function AllgemeineBeurkundung({ art, startKanton, startWert }: { art: Geschaeft
         'Geschäftsart': def.label,
         'Kanton': `${kanton} — ${KANTON_NAMEN[kanton]}`,
         ...(wertNoetig ? { [def.wertLabel ?? 'Geschäftswert']: geschaeftswert ? chf(geschaeftswert) : '–' } : {}),
+        ...Object.fromEntries((zusatz?.posten ?? []).map((p) => [p.label, p.von === p.bis ? chf(p.von) : `${chf(p.von)} – ${chf(p.bis)}`])),
+        ...(total ? { 'Total Notariat + Zusatzkosten (Schätzung)': total.von === total.bis ? chf(total.von) : `${chf(total.von)} – ${chf(total.bis)}` } : {}),
       },
       sections: [{ titel: 'Beurkundungsgebühr', ergebnis: beurkundungBericht(ergebnis) }],
       disclaimer: DISCLAIMER,
     };
-  }, [ergebnis, aktenzeichen, kanton, geschaeftswert, def, wertNoetig]);
+  }, [ergebnis, aktenzeichen, kanton, geschaeftswert, def, wertNoetig, zusatz, total]);
 
   return (
     <div className="space-y-4">
@@ -147,6 +163,37 @@ function AllgemeineBeurkundung({ art, startKanton, startWert }: { art: Geschaeft
       {ergebnis && (
         <ErgebnisBlock>
           <PostenAnzeige ergebnis={ergebnis} />
+
+          {zusatz && zusatz.posten.length > 0 && (
+            <div className="mt-3 lc-tile">
+              <p className="text-xs text-ink-500 mb-2">Weitere Transaktionskosten (Schätzung)</p>
+              <ul className="space-y-1.5">
+                {zusatz.posten.map((p, i) => (
+                  <li key={i} className="flex items-baseline justify-between gap-3 text-body-s">
+                    <span className="text-ink-700">
+                      {p.label}
+                      {p.url ? <> · <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-xs underline text-ink-500 hover:text-ink-800">{p.erlass} ↗</a></> : null}
+                    </span>
+                    <span className="num text-ink-900 whitespace-nowrap">{p.von === p.bis ? chf(p.von) : `${chf(p.von)} – ${chf(p.bis)}`}</span>
+                  </li>
+                ))}
+              </ul>
+              {zusatz.posten.some((p) => p.hinweis) && (
+                <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
+                  {zusatz.posten.filter((p) => p.hinweis).map((p, i) => <li key={i}>{p.hinweis}</li>)}
+                </ul>
+              )}
+            </div>
+          )}
+
+          {total && (
+            <div className="mt-3 lc-tile lc-akzent-brass">
+              <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                <p className="text-xs text-ink-500">Total Notariat + Zusatzkosten (Schätzung)</p>
+                <p className="num text-body-l font-semibold text-ink-900">{total.von === total.bis ? chf(total.von) : `${chf(total.von)} – ${chf(total.bis)}`}</p>
+              </div>
+            </div>
+          )}
 
           <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
             {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}

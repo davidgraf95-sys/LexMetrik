@@ -50,17 +50,29 @@ const sortwert = (r: NotariatGrundbuchErgebnis): number => {
 function PostenKarte({ titel, posten, akzent }: { titel: string; posten: NgPosten; akzent?: boolean }) {
   const q = posten.quelle;
   const e = posten.ergebnis;
+  // «Entfällt»-Fall: dieser Kanton kennt die Position gar nicht (z. B. keine
+  // Handänderungssteuer). Datenmarker: kein Erlass/Artikel + nicht beziffert.
+  // Dann KLAR «Entfällt» zeigen statt des irreführenden «nach Vereinbarung/
+  // Aufwand» (das suggeriert eine verhandelbare Gebühr).
+  const entfaellt = !e.deterministisch && q.erlassNr === '—' && q.artikel === '—';
   return (
     <div className={`lc-tile ${akzent ? 'lc-akzent-brass' : ''}`}>
       <p className="text-xs text-ink-500 mb-1">{titel}</p>
-      <p key={ngPostenText(posten)} className="lc-wert-puls text-body-l font-semibold text-ink-900 num">{ngPostenText(posten)}</p>
-      {!e.deterministisch && <p className="mt-1 text-body-s text-ink-600">Rahmen/aufwandabhängig – konkrete Festsetzung im Einzelfall.</p>}
-      <p className="mt-2 text-xs text-ink-500">
-        {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
-        {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
-        {q.quelleUrl ? <> · <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
-      </p>
-      {q.hinweis && <p className="mt-1 text-xs text-ink-500">{q.hinweis}</p>}
+      <p key={ngPostenText(posten)} className="lc-wert-puls text-body-l font-semibold text-ink-900 num">{entfaellt ? 'Entfällt' : ngPostenText(posten)}</p>
+      {!e.deterministisch && !entfaellt && <p className="mt-1 text-body-s text-ink-600">Rahmen/aufwandabhängig – konkrete Festsetzung im Einzelfall.</p>}
+      {!entfaellt && (
+        <p className="mt-2 text-xs text-ink-500">
+          {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
+          {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
+          {q.quelleUrl ? <> · <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
+        </p>
+      )}
+      {q.hinweis && (
+        <p className="mt-1 text-xs text-ink-500">
+          {q.hinweis}
+          {entfaellt && q.quelleUrl ? <> · <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
+        </p>
+      )}
     </div>
   );
 }

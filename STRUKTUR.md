@@ -22,6 +22,36 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 16.6.2026 — BEURKUNDUNGS-AUSBAU: 3-fach-Verifikation + Gesamtkosten + UI-Fix
+
+**Auftrag David:** «verifiziere das alles / führe nochmals Recherche durch» + «sind
+wirklich alle Kosten abgedeckt?» + «Handänderungssteuer-Anzeige verbessern».
+- **3-fache Verifikation der Tarif-Daten:** find → unabhängiger Doppelcheck →
+  **adversariale Zweitprüfung** (alle 624 kodierten Werte gegen die Erlasse) →
+  **struktureller Korrektur-Reencode**. Die Zweitprüfung deckte **286 Befunde**
+  auf (meine erste Recherche war zu nachlässig): veraltete Fassungen (ZH v95 →
+  1.1.2024: Testament/Ehevertrag 200–4000, Erbvertrag 300–6000), degressive
+  Staffeln als Flachsatz kodiert (OW/NW/GL/LU/VD … → jetzt echte Marginalbänder
+  `staffel_sockel_prozent`), Aufwand-Tarife als Fix (ZG-Grundbuch = CHF 180/Std ×
+  Faktor; Vorsorgeauftrag ZH = CHF 180/Std → formel_extern), falsche Artikel
+  (Schuldbrief Ziff. 1.2.1, GL-Grundbuch Art. 41 Nr. X). Engine-Ausgaben gegen
+  Zweitprüfungs-Stützstellen geprüft (OW Grundpfand 1'750, NW Erbvertrag 2'100,
+  LU Schenkung 2'750, GL Schenkung 1'700 …). Dossiers + Tests nachgeführt.
+- **Gesamtkosten (David: «alle Kosten?»):** neues Modul `lib/beurkundungZusatzkosten.ts`
+  — **MwSt 8,1 %** (nur freies Notariat, 14 Kt), **Handelsregistergebühr Bund**
+  (GebV-HReg SR 221.411.1, Anhang: AG/GmbH 420 · Genossenschaft 280 · Stiftung 210 ·
+  Statutenänderung/Kapital 200 · Fusion 420), **Emissionsabgabe** (StG SR 641.10,
+  1 % über **Freigrenze** 1 Mio — ganzer Betrag steuerbar). UI «Weitere
+  Transaktionskosten» + «Total (Schätzung)», auch im PDF. Bundeswerte gegen Fedlex
+  doppelt verifiziert (GebV-HReg 2021-Fassung, nicht die aufgehobene 2007er).
+- **UI-Fix:** Position «Entfällt» klar ausweisen, wo ein Kanton die Steuer/Gebühr
+  gar nicht kennt (z. B. ZH Handänderungssteuer) — statt irreführend «nach
+  Vereinbarung/Aufwand».
+- Gate **voll grün**, golden byte-gleich, 51 Routen prerendered, Playwright-Smoke
+  ok (GE AG-Gründung 2M → Total 24'798 inkl. Zusatzkosten; ZH Testament 200–4000;
+  OW Grundpfand 1'750; ZH Handänderung «Entfällt»; 0 Console-Fehler). Status
+  durchgehend `recherche`/`entwurf` (§7).
+
 ## Session 15.6.2026 (Abend) — BEURKUNDUNGS-AUSBAU: Notariatsrechner auf alle Geschäfts-/Eintragungsarten (ungepusht)
 
 **Auftrag David:** «baue den Notariatsrechner aus» + «achte darauf dass alle Arten

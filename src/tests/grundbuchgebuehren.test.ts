@@ -52,23 +52,28 @@ describe('Grundbuch — Ehrlichkeit & Robustheit (§8)', () => {
   });
 });
 
-describe('Grundbuch — amtliche Stützstellen (Deep Research, doppelt verifiziert)', () => {
+describe('Grundbuch — amtliche Stützstellen (3-fach verifiziert: find→Doppelcheck→Zweitprüfung→Reencode)', () => {
   const det = (art: Parameters<typeof berechneGrundbuchgebuehr>[0]['eintragsart'], k: KantonCode, w?: number): number => {
     const r = berechneGrundbuchgebuehr({ eintragsart: art, kanton: k, wertCHF: w });
     if (!r.posten || !r.posten.ergebnis.deterministisch) throw new Error(`${art}/${k} nicht deterministisch`);
     return r.posten.ergebnis.betragChf;
   };
-  it('deterministische Tarife (Promille/Fix), Wert wird je Kanton-Tarif angewendet oder ignoriert', () => {
+  it('flache Promille / Fix', () => {
     expect(det('grundpfand', 'ZH', 800_000)).toBe(800);   // 1‰
     expect(det('dienstbarkeit', 'ZH', 500_000)).toBe(500); // 1‰
     expect(det('vormerkung', 'ZH', 1_000_000)).toBe(500);  // 0,5‰ (Promille-Feld-Fix)
     expect(det('grundpfand', 'LU', 800_000)).toBe(1600);   // 2‰
     expect(det('eigentum_erbgang', 'BS', 1_000_000)).toBe(500); // 0,5‰ Universalsukzession
-    expect(det('stockwerkeigentum', 'OW', 2_000_000)).toBe(1000); // 0,5‰
+    expect(det('stockwerkeigentum', 'OW', 2_000_000)).toBe(1000);
     expect(det('vormerkung', 'BE')).toBe(50);              // fix, Wert ignoriert
     expect(det('parzellierung', 'UR')).toBe(100);          // fix
   });
-  it('Aufwandtarife (ZG) liefern Spanne, keinen Punktwert', () => {
+  it('degressive Staffeln (OW/NW) korrekt — kein Flach-Promille-Fehler', () => {
+    expect(det('grundpfand', 'OW', 1_000_000)).toBe(1750);     // 2‰/1,5‰ Staffel
+    expect(det('eigentum_erbgang', 'OW', 1_000_000)).toBe(1500); // 1,5‰ Staffel
+    expect(det('grundpfand', 'NW', 1_000_000)).toBe(2000);    // 2‰ bis 3 Mio
+  });
+  it('Zeitaufwand-Tarife (ZG: CHF 180/Std × Faktor) als ehrliche Nicht-Bezifferung', () => {
     const r = berechneGrundbuchgebuehr({ eintragsart: 'grundpfand', kanton: 'ZG', wertCHF: 500_000 });
     expect(r.posten!.ergebnis.deterministisch).toBe(false);
   });
