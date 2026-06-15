@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BeruehrtRahmen, Checkbox, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { ErgebnisAnzeige } from '../ErgebnisAnzeige';
@@ -149,7 +149,7 @@ export function StreitwertForm() {
         {begehren.map((b, i) => (
           <div key={i} className="border border-line rounded-md p-4 space-y-4">
             <div className="flex items-center justify-between gap-3">
-              <p className="lc-overline">Begehren {i + 1}</p>
+              <GruppenTitel>Begehren {i + 1}</GruppenTitel>
               {begehren.length > 1 && (
                 <button type="button" className="text-body-s text-ink-500 hover:text-danger-700"
                   onClick={() => setBegehren((alt) => alt.filter((_, j) => j !== i))}>

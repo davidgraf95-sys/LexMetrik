@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
@@ -182,7 +182,7 @@ export function ZpoFristenForm() {
 
       {/* Verfahrensphase */}
       <div className="space-y-2">
-        <p className="lc-overline">Verfahrensphase wählen</p>
+        <GruppenTitel>Verfahrensphase wählen</GruppenTitel>
         <Tabs items={PHASEN.map((p) => ({ code: p.code, label: p.label }))} value={phase} onChange={(c) => { setPhase(c); setPresetKey(''); setPresetHinweis(null); }} mode="pressed" ariaLabel="Verfahrensphase" />
       </div>
 

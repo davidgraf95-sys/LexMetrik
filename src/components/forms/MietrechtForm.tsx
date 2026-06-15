@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import type { Kanton } from '../../types/legal';
@@ -248,7 +248,7 @@ export function MietrechtForm() {
       {/* Form-/Nichtigkeitsprüfung */}
       {istRaum && (
         <div className="space-y-2">
-          <p className="lc-overline">Form (Art. 266l–266o OR)</p>
+          <GruppenTitel>Form (Art. 266l–266o OR)</GruppenTitel>
           {partei === 'vermieter' && (
             <Checkbox checked={formular} onChange={setFormular} label="Amtlich genehmigtes Kündigungsformular verwendet (Art. 266l Abs. 2 OR)" />
           )}

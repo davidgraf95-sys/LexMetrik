@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, Stepper, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls, Stepper } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
@@ -529,7 +529,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
       <div className="space-y-6">
       {/* Rechtsweg */}
       <div className="space-y-2">
-        <p className="lc-overline">Rechtsweg</p>
+        <GruppenTitel>Rechtsweg</GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
           {RECHTSWEGE.map((w) => (
             <button key={w.code} type="button" disabled={!w.aktiv}
@@ -559,7 +559,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           vs. Rechtsmittel – bestimmt, welche Fragen überhaupt nötig sind. */}
       {zeige('was') && (
       <div className="space-y-2">
-        <p className="lc-overline">Was suchen Sie?</p>
+        <GruppenTitel>Was suchen Sie?</GruppenTitel>
         <SelectionGrid
           className="grid grid-cols-1 sm:grid-cols-2 gap-2"
           items={[
@@ -578,7 +578,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           Abs. 2 BGG). Bleibt INHALTLICH unverändert, nur im «Was»-Schritt. */}
       {zeige('was') && f.instanz === 'rechtsmittel' && (
         <div className="space-y-3">
-          <p className="lc-overline">Was wird angefochten?</p>
+          <GruppenTitel>Was wird angefochten?</GruppenTitel>
           <SelectionGrid
             className="grid grid-cols-1 sm:grid-cols-2 gap-2"
             items={[
@@ -621,7 +621,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
       {/* SCHRITT «Worum geht es?» – Streitsache + bedingte Unterfälle */}
       {zeige('sache') && (
       <div className="space-y-2">
-        <p className="lc-overline">Art des Streits</p>
+        <GruppenTitel>Art des Streits</GruppenTitel>
         <SelectionGrid
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
           items={STREITSACHEN.map((s) => ({ code: s.code, label: s.label, sub: s.sub }))}
@@ -674,9 +674,9 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           bleibt unberührt (Art. 10/23/32–34 ZPO). */}
       {zeige('ort') && (
       <div className="space-y-3">
-        <p className="lc-overline">
+        <GruppenTitel>
           {f.instanz === 'einleitung' ? 'Wo ist die Sache örtlich anzuknüpfen?' : 'In welchem Kanton wurde entschieden?'}
-        </p>
+        </GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {f.instanz === 'einleitung' && (
           <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
@@ -745,7 +745,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           entfällt der Schritt ganz (nicht vermögensrechtlich). */}
       {zeige('streitwert') && (
       <div className="space-y-3">
-        <p className="lc-overline">Um wie viel geht es?</p>
+        <GruppenTitel>Um wie viel geht es?</GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label="Streitwert (CHF)" hint="massgeblich ist das Rechtsbegehren; die Engine berechnet den Streitwert nicht">
             <div className="space-y-1.5">
@@ -849,7 +849,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           Pflichtangaben, sagt der Fahrplan WAS fehlt, statt leer zu bleiben. */}
       {zeige('ergebnis') && f.instanz === 'rechtsmittel' && !rechtsmittel && (
         <div className="lc-card p-5 space-y-2">
-          <p className="lc-overline">Fahrplan</p>
+          <GruppenTitel>Fahrplan</GruppenTitel>
           <p className="text-body-s text-ink-700">
             Für den Rechtsmittel-Fahrplan fehlen noch Angaben:
           </p>
@@ -863,7 +863,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
           {/* Schritt 1 · Statthaftes Rechtsmittel */}
           <div className="lc-card p-5 space-y-2">
-            <p className="lc-overline">1 · Statthaftes Rechtsmittel (kantonal)</p>
+            <GruppenTitel>1 · Statthaftes Rechtsmittel (kantonal)</GruppenTitel>
             <p className="text-h3 font-medium text-ink-900 leading-none">
               {rechtsmittel.kantonal === 'berufung' ? 'Berufung'
                 : rechtsmittel.kantonal === 'beschwerde' ? 'Beschwerde'
@@ -875,7 +875,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
           {/* Schritt 2 · Zuständige Instanz */}
           <div className="lc-card p-5 space-y-3">
-            <p className="lc-overline">2 · Wohin?</p>
+            <GruppenTitel>2 · Wohin?</GruppenTitel>
             {rechtsmittel.kantonal !== 'entfaellt_einzige_instanz' ? (
               f.kanton !== '' ? (
                 <div>
@@ -922,7 +922,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           {/* Schritt 3 · Frist (kantonal) — konkret aufgelöst */}
           {rechtsmittel.kantonalFrist && (
             <div className="lc-card p-5 space-y-2">
-              <p className="lc-overline">3 · Frist (kantonal)</p>
+              <GruppenTitel>3 · Frist (kantonal)</GruppenTitel>
               <p className="text-h3 font-medium text-ink-900 leading-none">
                 {rechtsmittel.kantonalFrist.tage !== null ? `${rechtsmittel.kantonalFrist.tage} Tage` : 'Von offener Weiche abhängig'}
               </p>
@@ -952,7 +952,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
           {/* Schritt 4 · Weiterzug ans Bundesgericht */}
           <div className="lc-card p-5 space-y-3">
-            <p className="lc-overline">{rechtsmittel.kantonalFrist ? '4' : '3'} · Weiterzug ans Bundesgericht</p>
+            <GruppenTitel>{rechtsmittel.kantonalFrist ? '4' : '3'} · Weiterzug ans Bundesgericht</GruppenTitel>
             <p className="text-h3 font-medium text-ink-900 leading-none">
               {rechtsmittel.bger === 'zulaessig' ? 'Beschwerde in Zivilsachen: zulässig'
                 : rechtsmittel.bger === 'schwelle_verfehlt' ? 'Streitwertgrenze nicht erreicht'
@@ -1057,7 +1057,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           Notices/Weichen] würden dort sachfremd leaken) */}
       {zeige('ergebnis') && f.instanz === 'einleitung' && !(ergebnis && r) && (
         <div className="lc-card p-5 space-y-2">
-          <p className="lc-overline">Fahrplan</p>
+          <GruppenTitel>Fahrplan</GruppenTitel>
           <p className="text-body-s text-ink-700">Für den Fahrplan fehlen noch Angaben:</p>
           {fehler.length > 0
             ? fehler.map((x, i) => <p key={i} className="text-body-s text-warn-700">• {x}</p>)
@@ -1083,7 +1083,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           {/* Handelsgericht-Auflösung (Art. 6 ZPO; 4 Kantone) */}
           {hgWeicheAktiv && f.kanton !== '' && (
             <div className="lc-card p-4 space-y-2">
-              <p className="lc-overline">Handelsgericht ({f.kanton})</p>
+              <GruppenTitel>Handelsgericht ({f.kanton})</GruppenTitel>
               {handelsgericht ? (
                 <>
                   <p className="text-body-s text-ink-900 whitespace-pre-line">
@@ -1168,7 +1168,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               : null;
             return (
               <div className="lc-card p-4 space-y-2">
-                <p className="lc-overline">Passende Vorlage für Ihre Eingabe</p>
+                <GruppenTitel>Passende Vorlage für Ihre Eingabe</GruppenTitel>
                 <p className="text-body-s text-ink-900 font-medium">
                   {k ? k.title : (ziel as { titel: string }).titel}
                   {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">{kantonsfremd ? `Für ${f.kanton} in Vorbereitung` : 'In Vorbereitung'}</span>}
@@ -1205,7 +1205,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           })()}
           {recherche && (
             <div className="lc-card p-4 space-y-3">
-              <p className="lc-overline">Zuständige Schlichtungsstelle ({f.kanton})</p>
+              <GruppenTitel>Zuständige Schlichtungsstelle ({f.kanton})</GruppenTitel>
               {recherche.glgFallback && (
                 <p className="text-xs text-ink-500">Keine eigene paritätische Stelle hinterlegt — angezeigt wird die ordentliche Schlichtungsbehörde; die paritätische Besetzung (Art. 200 ZPO) stellt der Kanton sicher.</p>
               )}
@@ -1417,7 +1417,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           {/* Praxis-Fahrplan (Umbau «maximal praxistauglich», 5.6.2026) */}
           {fahrplan && f.instanz === 'einleitung' && (
             <div className="lc-card p-5 space-y-3">
-              <p className="lc-overline">Ihr Fahrplan</p>
+              <GruppenTitel>Ihr Fahrplan</GruppenTitel>
               <ol className="space-y-2.5">
                 {fahrplan.map((s, i) => (
                   <li key={s.titel} className="flex gap-3">
@@ -1435,7 +1435,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
           {/* Kosten (kantonale Rahmen, zweifach geprüfte Erlass-Daten) */}
           {f.instanz === 'einleitung' && (r.schlichtung.obligatorisch || r.eingabeArt === 'klage_direkt') && (
             <div className="lc-card p-5 space-y-2.5">
-              <p className="lc-overline">Voraussichtliche Kosten{f.kanton ? ` (${f.kanton})` : ''}</p>
+              <GruppenTitel>Voraussichtliche Kosten{f.kanton ? ` (${f.kanton})` : ''}</GruppenTitel>
               {r.schlichtung.obligatorisch && (
                 r.schlichtung.kostenlos ? (
                   <p className="text-body-s text-ink-800">

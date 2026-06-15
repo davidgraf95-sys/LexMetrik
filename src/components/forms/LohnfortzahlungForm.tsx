@@ -1,4 +1,4 @@
-import { BeispielChips, BeruehrtRahmen, Checkbox, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeispielChips, BeruehrtRahmen, Checkbox, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
@@ -228,7 +228,7 @@ export function LohnfortzahlungForm() {
       {/* §2.6 KTG-Gleichwertigkeits-Checkliste */}
       {form.ktgGleichwertigVorhanden && (
         <div className="lc-card p-4 space-y-3">
-          <p className="lc-overline">Gleichwertigkeits-Checkliste (Art. 324a Abs. 4 OR, Orientierung)</p>
+          <GruppenTitel>Gleichwertigkeits-Checkliste (Art. 324a Abs. 4 OR, Orientierung)</GruppenTitel>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Taggeld (% des Lohnes)" hint="Richtwert ≥ 80 %">
               <input type="number" inputMode="decimal" min={0} max={100} className={inputCls}

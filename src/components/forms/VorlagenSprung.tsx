@@ -1,4 +1,5 @@
 import { Link, type To } from 'react-router-dom';
+import { GruppenTitel } from '../vorlagen/ui';
 import { ALLE_KARTEN, istVerfuegbar } from '../../lib/startseiteConfig';
 import { sansAmp } from '../typografie';
 
@@ -25,7 +26,7 @@ export function VorlagenSprung({ karteId, link, zusatz, prefillHinweis }: {
   const ziel: To | null = gebaut ? (link ?? karte.href!) : null;
   return (
     <div className="lc-card p-4 space-y-2">
-      <p className="lc-overline">Passende Vorlage für Ihre Eingabe</p>
+      <GruppenTitel>Passende Vorlage für Ihre Eingabe</GruppenTitel>
       <p className="text-body-s text-ink-900 font-medium">
         {sansAmp(karte.title)}
         {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">In Vorbereitung</span>}

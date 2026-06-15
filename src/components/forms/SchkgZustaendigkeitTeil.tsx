@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { EckdatenKachel, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
@@ -189,7 +189,7 @@ export function SchkgZustaendigkeitTeil() {
     <div className="space-y-6">
       {/* 2 · Anliegen */}
       <div className="space-y-2">
-        <p className="lc-overline">2 · Worum geht es?</p>
+        <GruppenTitel>2 · Worum geht es?</GruppenTitel>
         <SelectionGrid
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
           items={ANLIEGEN.map((a) => ({ code: a.code, label: a.label, sub: a.sub }))}
@@ -200,7 +200,7 @@ export function SchkgZustaendigkeitTeil() {
 
       {/* 3 · Schuldner + Konstellation */}
       <div className="space-y-2">
-        <p className="lc-overline">3 · Schuldnerin/Schuldner und Konstellation</p>
+        <GruppenTitel>3 · Schuldnerin/Schuldner und Konstellation</GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label="Schuldner-Typ" hint="bestimmt den Betreibungsort (Art. 46–50 SchKG)">
             <select value={schuldnerTyp} onChange={(e) => setSchuldnerTyp(e.target.value as SchkgSchuldnerTyp)} className={inputCls}>
@@ -255,7 +255,7 @@ export function SchkgZustaendigkeitTeil() {
           Weiche wie die Engine (Art. 46/51/52 SchKG) — ein statisches
           «Wohnsitz/Sitz» wäre bei Grundpfand/Arrest irreführend. */}
       <div className="space-y-2">
-        <p className="lc-overline">3b · Betreibungsort lokalisieren (optional)</p>
+        <GruppenTitel>3b · Betreibungsort lokalisieren (optional)</GruppenTitel>
         <p className="text-body-s text-ink-600">
           PLZ, Gemeinde oder Kanton des Betreibungsortes —{' '}
           {pfand === 'grundpfand'
@@ -305,7 +305,7 @@ export function SchkgZustaendigkeitTeil() {
 
           {/* Betreibungsort + Forum */}
           <div className="lc-card p-5 space-y-3">
-            <p className="lc-overline">Betreibungsort (Wurzelgrösse)</p>
+            <GruppenTitel>Betreibungsort (Wurzelgrösse)</GruppenTitel>
             <p className="text-body-s text-ink-900">{r.betreibungsort.text}.</p>
             <div className="border-t border-line pt-3">
               <p className="lc-overline mb-1.5">Forum für dieses Anliegen</p>
@@ -380,7 +380,7 @@ export function SchkgZustaendigkeitTeil() {
           {/* Fristen */}
           {r.fristen.length > 0 && (
             <div className="lc-card p-5 space-y-2.5">
-              <p className="lc-overline">Fristen</p>
+              <GruppenTitel>Fristen</GruppenTitel>
               {r.fristen.map((f) => (
                 <p key={f.label + f.norm} className="text-body-s text-ink-800">
                   {f.kritisch && <span className="lc-badge lc-badge-danger mr-1.5">Verwirkung</span>}
@@ -414,7 +414,7 @@ export function SchkgZustaendigkeitTeil() {
           {/* Fahrplan (analog Zivil) */}
           {r.fahrplan.length > 0 && (
             <div className="lc-card p-5 space-y-3">
-              <p className="lc-overline">Ihr Fahrplan</p>
+              <GruppenTitel>Ihr Fahrplan</GruppenTitel>
               <ol className="space-y-2.5">
                 {r.fahrplan.map((s, i) => (
                   <li key={s.titel} className="flex gap-3">
@@ -440,7 +440,7 @@ export function SchkgZustaendigkeitTeil() {
           {/* Kosten */}
           {r.kostenZahlungsbefehl && (
             <div className="lc-card p-5 space-y-2">
-              <p className="lc-overline">Voraussichtliche Kosten</p>
+              <GruppenTitel>Voraussichtliche Kosten</GruppenTitel>
               <p className="text-body-s text-ink-800">
                 <span className="font-medium text-ink-900">Gebühr Zahlungsbefehl: CHF {r.kostenZahlungsbefehl.gebuehrCHF.toFixed(2).replace('.00', '.–')}</span>{' '}
                 (Forderung {r.kostenZahlungsbefehl.band} Franken; <a href={GEBV_SCHKG_URL} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">Art. 16 Abs. 1 GebV SchKG ↗</a>).

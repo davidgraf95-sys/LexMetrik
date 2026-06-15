@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeispielChips, Checkbox, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { BeispielChips, Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { format } from 'date-fns';
@@ -214,7 +214,7 @@ export function VerjaehrungForm() {
 
       {/* Unterbrechungen */}
       <div className="space-y-2">
-        <p className="lc-overline">Unterbrechungen (Art. 135 OR) – Frist beginnt neu</p>
+        <GruppenTitel>Unterbrechungen (Art. 135 OR) – Frist beginnt neu</GruppenTitel>
         {unterbrechungen.map((u, i) => (
           <div key={i} className="flex flex-wrap items-center gap-2 pl-1">
             <select value={u.typ} onChange={(e) => setU(i, { typ: e.target.value as UnterbrechungsTyp })} className={inputCls + ' sm:max-w-xs'}>
@@ -244,7 +244,7 @@ export function VerjaehrungForm() {
 
       {/* Stillstand */}
       <div className="space-y-2">
-        <p className="lc-overline">Stillstand / Hemmung (Art. 134 OR) – Uhr pausiert</p>
+        <GruppenTitel>Stillstand / Hemmung (Art. 134 OR) – Uhr pausiert</GruppenTitel>
         {stillstaende.map((s, i) => (
           <div key={i} className="flex flex-wrap items-center gap-2 pl-1">
             <select value={s.grund ?? STILLSTAND_GRUENDE[0]} onChange={(e) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, grund: e.target.value } : x)))} className={inputCls + ' sm:max-w-xs'}>

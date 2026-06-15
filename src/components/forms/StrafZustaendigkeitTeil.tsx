@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Checkbox, EckdatenKachel, Field, inputCls } from '../vorlagen/ui';
+import { Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { Link } from 'react-router-dom';
 import { bgerRechtswegLink } from '../../lib/rechnerPermalinks';
 import { ErgebnisBlock } from '../ErgebnisBlock';
@@ -112,7 +112,7 @@ export function StrafZustaendigkeitTeil() {
     return (
       <div className="space-y-6">
         <div className="space-y-2">
-          <p className="lc-overline">2 · Worum geht es?</p>
+          <GruppenTitel>2 · Worum geht es?</GruppenTitel>
           <SelectionGrid
             className="grid grid-cols-1 sm:grid-cols-3 gap-2"
             items={ANLIEGEN}
@@ -128,7 +128,7 @@ export function StrafZustaendigkeitTeil() {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <p className="lc-overline">2 · Worum geht es?</p>
+        <GruppenTitel>2 · Worum geht es?</GruppenTitel>
         <SelectionGrid
           className="grid grid-cols-1 sm:grid-cols-3 gap-2"
           items={ANLIEGEN}
@@ -138,7 +138,7 @@ export function StrafZustaendigkeitTeil() {
       </div>
 
       <div className="space-y-2">
-        <p className="lc-overline">3 · Konstellation</p>
+        <GruppenTitel>3 · Konstellation</GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label="Tatort-Lage" hint="Grundsatz: Behörden des Begehungsortes (Art. 31 StPO)">
             <select className={inputCls} value={tatort} onChange={(e) => setTatort(e.target.value as StrafTatortLage)}>
@@ -181,7 +181,7 @@ export function StrafZustaendigkeitTeil() {
       <ErgebnisBlock>
 
         <div className="lc-card p-5 space-y-3">
-          <p className="lc-overline">Örtliches Forum</p>
+          <GruppenTitel>Örtliches Forum</GruppenTitel>
           <p className="text-body-s text-ink-900">{r.forum.text}.</p>
           <p className="text-body-s text-ink-700">{r.behoerdeTyp}.</p>
           {bund ? (
@@ -205,7 +205,7 @@ export function StrafZustaendigkeitTeil() {
         {/* Sachlich zuständige Gerichte (Ausbau 6.6.2026): 1. Instanz + ZMG */}
         {gerichte && !bund && (
           <div className="lc-card p-5 space-y-3">
-            <p className="lc-overline">Sachlich zuständige Gerichte ({kanton})</p>
+            <GruppenTitel>Sachlich zuständige Gerichte ({kanton})</GruppenTitel>
             <GerichtBlock titel="Erstinstanzliches Strafgericht (Hauptverfahren nach Anklage)" g={gerichte.ersteInstanz} system={gerichte.ersteInstanz.system} />
             {gerichte.zmg && (
               <div className="border-t border-line pt-3">
@@ -220,7 +220,7 @@ export function StrafZustaendigkeitTeil() {
 
         {r.fristen.length > 0 && (
           <div className="lc-card p-5 space-y-2.5">
-            <p className="lc-overline">Fristen</p>
+            <GruppenTitel>Fristen</GruppenTitel>
             {r.fristen.map((f) => (
               <p key={f.label} className="text-body-s text-ink-800">
                 {f.kritisch && <span className="lc-badge lc-badge-danger mr-1.5">Verwirkung</span>}
@@ -231,7 +231,7 @@ export function StrafZustaendigkeitTeil() {
         )}
 
         <div className="lc-card p-5 space-y-3">
-          <p className="lc-overline">Ihr Fahrplan</p>
+          <GruppenTitel>Ihr Fahrplan</GruppenTitel>
           <ol className="space-y-2.5">
             {r.fahrplan.map((s, i) => (
               <li key={s.titel} className="flex gap-3">
@@ -426,7 +426,7 @@ function StrafRechtsmittelTeil() {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <p className="lc-overline">3 · Angefochtener Entscheid</p>
+        <GruppenTitel>3 · Angefochtener Entscheid</GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label="Entscheidtyp" hint="bestimmt das statthafte Rechtsmittel (Art. 393/398/410 StPO)">
             <select className={inputCls} value={entscheidTyp} onChange={(e) => setEntscheidTyp(e.target.value as StrafEntscheidTyp)}>
@@ -473,7 +473,7 @@ function StrafRechtsmittelTeil() {
       <ErgebnisBlock>
 
         <div className={`lc-card p-5 space-y-3 ${r.statthaft === 'keines' ? 'border-t-[3px] border-t-danger-500' : ''}`}>
-          <p className="lc-overline">Statthaftes Rechtsmittel</p>
+          <GruppenTitel>Statthaftes Rechtsmittel</GruppenTitel>
           <p className="text-body-s text-ink-900">{r.text}</p>
           {r.statthaft !== 'keines' && (
             <>
@@ -486,7 +486,7 @@ function StrafRechtsmittelTeil() {
 
         {adresse && (
           <div className="lc-card p-5 space-y-2">
-            <p className="lc-overline">Konkrete Instanz</p>
+            <GruppenTitel>Konkrete Instanz</GruppenTitel>
             <GerichtBlock titel={adresse.titel} g={adresse.g} />
             {adresse.hinweis && <p className="text-xs text-ink-500">{adresse.hinweis}</p>}
             <p className="text-xs text-ink-500 pt-2 border-t border-line">
@@ -497,7 +497,7 @@ function StrafRechtsmittelTeil() {
 
         {r.fristen.length > 0 && (
           <div className="lc-card p-5 space-y-2.5">
-            <p className="lc-overline">Fristen — kein Stillstand (Art. 89 Abs. 2 StPO)</p>
+            <GruppenTitel>Fristen — kein Stillstand (Art. 89 Abs. 2 StPO)</GruppenTitel>
             {r.fristen.map((f) => (
               <p key={f.label} className="text-body-s text-ink-800">
                 {f.kritisch && <span className="lc-badge lc-badge-danger mr-1.5">Verwirkung</span>}
@@ -517,7 +517,7 @@ function StrafRechtsmittelTeil() {
         {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s">{w}</div>)}
 
         <div className="lc-card p-5 space-y-2">
-          <p className="lc-overline">Weiterzug ans Bundesgericht</p>
+          <GruppenTitel>Weiterzug ans Bundesgericht</GruppenTitel>
           <p className="text-body-s text-ink-700">{r.bger.text}</p>
           <p className="text-xs text-ink-500">
             {/* Prefill-Brücke BGer (Auftrag David 11.6.2026). */}
