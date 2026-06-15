@@ -46,8 +46,17 @@ Dossier `bibliothek/kosten/schlichtungsgebuehren-kantone.md`, 5.6.2026) — impl
   Parteientschädigung ehrlich `formel_extern` («nach Aufwand»). UI: Schalter blendet
   Streitwertfeld aus. GK-NV durchgängig `recherche` (Quelldossier einfach belegt →
   **Doppelcheck-Agent läuft**).
-- **OFFEN:** Sicherheit Art. 99 ZPO (cautio) · Handelsgericht als eigene Instanz ·
-  Push/Deploy auf Davids Ja. Nichts `geprüft`.
+- **Art. 99 Sicherheitsleistung (Kaution) GEBAUT:** `berechneSicherheitsleistung`
+  (Höhe = mutmassliche Parteientschädigung; Ausschlüsse Art. 99 III a–d: vereinfacht/
+  Scheidung/summarisch/DSG; Kautionsgründe Abs. 1 a–d als Hinweis). **Wortlaut Art. 99
+  am Fedlex-Filestore 1.1.2025 verifiziert** (Abs. 3 lit. d = DSG bestätigt). UI-Schalter + PDF.
+- **Handelsgericht GEBAUT:** Instanz `handelsgericht` (Art. 6 ZPO am Fedlex verifiziert;
+  nur ZH/BE/AG/SG), ordentlicher erstinstanzlicher Tarif ohne Modifikator, Hinweis
+  einzige Instanz/keine Schlichtung (Art. 198 lit. f)/Weiterzug BGer (Art. 75 II lit. b BGG);
+  Nicht-HG-Kantone mit ehrlichem Hinweis. UI: Phase/Verfahrensart/Vergleich/Instanzenzug ausgeblendet.
+- **OFFEN:** GK-NV-Doppelcheck (Agent lief) einspielen · Verteilungs-Sonderfälle
+  Art. 107–109 + Streitgenossen (heute Hinweis) · UR-Vorschalter · SchKG-Gebühren-
+  Verknüpfung (I9) · Push/Deploy auf Davids Ja. Nichts `geprüft`.
 
 ## Session 15.6.2026 — Prozesskosten-Cockpit I6 (Vollständigkeit der Kostenposten) GEBAUT (ungepusht)
 

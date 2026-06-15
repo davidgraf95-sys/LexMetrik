@@ -1,6 +1,6 @@
 // ─── Prozesskosten-Engine (Art. 95/96/113/114 ZPO) ─────────────────────────
 import { describe, expect, it } from 'vitest';
-import { berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung, berechneInstanzenzug, prozesskostenBericht, vergleichAlleKantone, postenText, WEITERE_KOSTENPOSTEN, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
+import { berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung, berechneInstanzenzug, berechneSicherheitsleistung, prozesskostenBericht, vergleichAlleKantone, postenText, WEITERE_KOSTENPOSTEN, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 
@@ -275,6 +275,54 @@ describe('Schlichtungstarif (Art. 95 II lit. a ZPO — eigene kantonale Datensch
   });
 });
 
+describe('Handelsgericht (Art. 6 ZPO — einzige kantonale Instanz, ZH/BE/AG/SG)', () => {
+  it('ZH Handelsgericht: ordentlicher erstinstanzlicher Tarif, kein Modifikator', () => {
+    const hg = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', instanz: 'handelsgericht' });
+    const erst = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', instanz: 'erstinstanz' });
+    expect(hg.gerichtskosten.ergebnis).toEqual(erst.gerichtskosten.ergebnis); // = Basistarif
+    expect(hg.hinweise.some((h) => h.includes('Art. 6 ZPO'))).toBe(true);
+    expect(hg.hinweise.some((h) => h.includes('Art. 198 lit. f'))).toBe(true);
+  });
+  it('Handelsgericht ignoriert die Verfahrensart (kein summarisch-Modifikator)', () => {
+    const hg = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', instanz: 'handelsgericht', verfahren: 'summarisch' });
+    expect(hg.gerichtskosten.ergebnis?.deterministisch).toBe(true); // unverändert, keine Spanne
+  });
+  it('Kanton ohne Handelsgericht (LU): ehrlicher Hinweis', () => {
+    const hg = berechneProzesskosten({ kanton: 'LU', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein', instanz: 'handelsgericht' });
+    expect(hg.hinweise.some((h) => h.includes('kein Handelsgericht'))).toBe(true);
+  });
+});
+
+describe('Sicherheit für die Parteientschädigung (Art. 99 ZPO)', () => {
+  const zh = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+  it('ordentliches Verfahren: möglich, Höhe = mutmassliche Parteientschädigung', () => {
+    const s = berechneSicherheitsleistung(zh.parteientschaedigung, 'entscheid', 'ordentlich', 'allgemein', false);
+    expect(s.moeglich).toBe(true);
+    expect(s.spanne).toEqual({ vonChf: 7000, bisChf: 7000 }); // = PE
+    expect(s.hinweise.some((h) => h.includes('Art. 99 Abs. 1'))).toBe(true);
+  });
+  it('summarisches Verfahren: ausgeschlossen (Art. 99 III lit. c, ausser Art. 257)', () => {
+    const s = berechneSicherheitsleistung(zh.parteientschaedigung, 'entscheid', 'summarisch', 'allgemein', false);
+    expect(s.moeglich).toBe(false);
+    expect(s.ausschluss).toContain('Art. 99 Abs. 3 lit. c');
+    expect(s.spanne).toBeNull();
+  });
+  it('Datenschutz: ausgeschlossen (Art. 99 III lit. d)', () => {
+    const s = berechneSicherheitsleistung(zh.parteientschaedigung, 'entscheid', 'ordentlich', 'datenschutz', false);
+    expect(s.moeglich).toBe(false);
+    expect(s.ausschluss).toContain('lit. d');
+  });
+  it('vereinfachtes Verfahren nicht vermögensrechtlich: ausgeschlossen (lit. a); vermögensrechtlich: möglich', () => {
+    expect(berechneSicherheitsleistung(zh.parteientschaedigung, 'entscheid', 'vereinfacht', 'allgemein', true).moeglich).toBe(false);
+    expect(berechneSicherheitsleistung(zh.parteientschaedigung, 'entscheid', 'vereinfacht', 'allgemein', false).moeglich).toBe(true);
+  });
+  it('Schlichtung: keine Sicherheit (keine Parteientschädigung, Art. 113 I)', () => {
+    const sch = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
+    const s = berechneSicherheitsleistung(sch.parteientschaedigung, 'schlichtung', 'ordentlich', 'allgemein', false);
+    expect(s.moeglich).toBe(false);
+  });
+});
+
 describe('Nicht vermögensrechtliche Streitigkeiten (eigener Tarif, kein Streitwert)', () => {
   it('ZH: eigener n.-verm.-Gerichtskostenrahmen (§ 5, 300–13 000), streitwertunabhängig', () => {
     const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 0, phase: 'entscheid', materie: 'allgemein', nichtVermoegensrechtlich: true });
@@ -322,7 +370,7 @@ describe('Erschöpfender Konstellations-Sweep (I6/I7/I8 — wirft nie, Invariant
   const SW = [0, 1000, 5000, 30000, 50000, 100000, 500000, 2_000_000];
   const PHASEN = ['schlichtung', 'entscheid'] as const;
   const MATERIEN_T = ['allgemein', 'arbeit', 'miete_pacht', 'gleichstellung', 'gewaltschutz', 'datenschutz'] as const;
-  const INSTANZEN_T = ['erstinstanz', 'rechtsmittel', 'bundesgericht'] as const;
+  const INSTANZEN_T = ['erstinstanz', 'rechtsmittel', 'handelsgericht', 'bundesgericht'] as const;
   const VERFAHREN_T = ['ordentlich', 'vereinfacht', 'summarisch'] as const;
 
   it('berechneProzesskosten + I6/I8 werfen über die gesamte Matrix nicht und liefern konsistente Werte', () => {

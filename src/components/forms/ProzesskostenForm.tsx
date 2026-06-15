@@ -10,7 +10,7 @@ import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { permalinkKodieren, permalinkLesen, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import {
   berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung,
-  berechneInstanzenzug, prozesskostenBericht,
+  berechneInstanzenzug, berechneSicherheitsleistung, prozesskostenBericht,
   vergleichAlleKantone, postenText, MATERIEN, VERFAHRENSPHASEN, VERFAHRENSARTEN, INSTANZEN, KANTONE, WEITERE_KOSTENPOSTEN,
   type KantonCode, type Verfahrensphase, type Materie, type Verfahrensart, type Instanz, type PostenErgebnis,
 } from '../../lib/prozesskosten';
@@ -88,13 +88,18 @@ export function ProzesskostenForm() {
   const [vergleich, setVergleich] = useState(false);
   const [mwst, setMwst] = useState<boolean>(ausLink.mwst === true);
   const [zug, setZug] = useState(false);
+  const [kaution, setKaution] = useState(false);
   const [nv, setNv] = useState<boolean>(ausLink.nv === true);
   const [aktenzeichen, setAktenzeichen] = useState('');
   // Geteilter Link mit Quote (q=…) öffnet das Kostenrisiko-Panel direkt.
   const [risiko, setRisiko] = useState(typeof ausLink.quote === 'number');
 
   const bger = instanz === 'bundesgericht';
-  const verfahrenRelevant = phase === 'entscheid' && !bger;
+  const handelsgericht = instanz === 'handelsgericht';
+  const einzelinstanz = bger || handelsgericht; // einzige Instanz: keine Phase/Verfahrensart
+  // Handelsgericht: kein Schlichtungsverfahren (Art. 198 lit. f) → Entscheid erzwingen.
+  const effektivePhase: Verfahrensphase = handelsgericht ? 'entscheid' : phase;
+  const verfahrenRelevant = effektivePhase === 'entscheid' && !einzelinstanz;
 
   // Nicht vermögensrechtlich: kein Streitwert nötig; intern 0 (die NV-Tarife
   // sind Rahmen ohne Streitwert-Bezug). Sonst: Streitwert-Eingabe erforderlich.
@@ -102,29 +107,33 @@ export function ProzesskostenForm() {
   const streitwert = nv ? 0 : streitwertRoh;
   const hatEingabe = nv || streitwertRoh !== undefined;
   const ergebnis = useMemo(
-    () => !hatEingabe ? null : berechneProzesskosten({ kanton, streitwertCHF: streitwert!, phase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : 'ordentlich', nichtVermoegensrechtlich: nv }),
-    [kanton, streitwert, hatEingabe, phase, materie, instanz, verfahren, verfahrenRelevant, nv],
+    () => !hatEingabe ? null : berechneProzesskosten({ kanton, streitwertCHF: streitwert!, phase: effektivePhase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : 'ordentlich', nichtVermoegensrechtlich: nv }),
+    [kanton, streitwert, hatEingabe, effektivePhase, materie, instanz, verfahren, verfahrenRelevant, nv],
   );
   const vergleichsListe = useMemo(
-    () => (vergleich && hatEingabe && !bger) ? vergleichAlleKantone(streitwert!, phase, materie, instanz, verfahrenRelevant ? verfahren : 'ordentlich', nv) : null,
-    [vergleich, streitwert, hatEingabe, phase, materie, instanz, verfahren, verfahrenRelevant, bger, nv],
+    () => (vergleich && hatEingabe && !einzelinstanz) ? vergleichAlleKantone(streitwert!, effektivePhase, materie, instanz, verfahrenRelevant ? verfahren : 'ordentlich', nv) : null,
+    [vergleich, streitwert, hatEingabe, effektivePhase, materie, instanz, verfahren, verfahrenRelevant, einzelinstanz, nv],
   );
   const kostenrisiko = useMemo(
     () => (risiko && ergebnis) ? berechneKostenrisiko(ergebnis.gerichtskosten, ergebnis.parteientschaedigung, quote / 100) : null,
     [risiko, ergebnis, quote],
   );
   const vorschuss = useMemo(
-    () => ergebnis ? berechneKostenvorschuss(ergebnis.gerichtskosten, phase, instanz, verfahrenRelevant ? verfahren : 'ordentlich') : null,
-    [ergebnis, phase, instanz, verfahren, verfahrenRelevant],
+    () => ergebnis ? berechneKostenvorschuss(ergebnis.gerichtskosten, effektivePhase, instanz, verfahrenRelevant ? verfahren : 'ordentlich') : null,
+    [ergebnis, effektivePhase, instanz, verfahren, verfahrenRelevant],
   );
   const mwstAufschlag = useMemo(
     () => (mwst && ergebnis) ? berechneMwstParteientschaedigung(ergebnis.parteientschaedigung) : null,
     [mwst, ergebnis],
   );
   const instanzenzug = useMemo(
-    () => (zug && hatEingabe && !bger) ? berechneInstanzenzug(kanton, streitwert!, materie, verfahrenRelevant ? verfahren : 'ordentlich',
+    () => (zug && hatEingabe && !einzelinstanz) ? berechneInstanzenzug(kanton, streitwert!, materie, verfahrenRelevant ? verfahren : 'ordentlich',
       { schlichtung: true, erstinstanz: true, rechtsmittel: true, bundesgericht: true }, nv) : null,
-    [zug, kanton, streitwert, hatEingabe, materie, verfahren, verfahrenRelevant, bger, nv],
+    [zug, kanton, streitwert, hatEingabe, materie, verfahren, verfahrenRelevant, einzelinstanz, nv],
+  );
+  const sicherheit = useMemo(
+    () => (kaution && ergebnis) ? berechneSicherheitsleistung(ergebnis.parteientschaedigung, effektivePhase, verfahrenRelevant ? verfahren : 'ordentlich', materie, nv) : null,
+    [kaution, ergebnis, effektivePhase, verfahren, verfahrenRelevant, materie, nv],
   );
 
   const pdfConfig: PdfDocConfig | null = useMemo(() => {
@@ -132,24 +141,24 @@ export function ProzesskostenForm() {
     return {
       aktenzeichen: aktenzeichen.trim() || undefined,
       title: 'Prozesskosten (Art. 95/96 ZPO)',
-      rechtsgrundlage: `${KANTON_NAMEN[kanton]} · ${VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}${verfahrenRelevant && verfahren !== 'ordentlich' ? `, ${VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label}` : ''} · ${INSTANZEN.find((i) => i.wert === instanz)?.label}`,
+      rechtsgrundlage: `${KANTON_NAMEN[kanton]} · ${VERFAHRENSPHASEN.find((p) => p.wert === effektivePhase)?.label}${verfahrenRelevant && verfahren !== 'ordentlich' ? `, ${VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label}` : ''} · ${INSTANZEN.find((i) => i.wert === instanz)?.label}`,
       domain: 'prozesskosten',
       fileBase: 'Prozesskosten',
       inputs: {
         'Kanton': `${kanton} — ${KANTON_NAMEN[kanton]}`,
         ...(nv ? { 'Streitigkeit': 'nicht vermögensrechtlich (kein Streitwert)' }
               : { 'Streitwert': streitwertRoh !== undefined ? `CHF ${streitwertRoh.toLocaleString('de-CH')}` : '–' }),
-        'Verfahrensphase': VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label ?? '',
+        'Verfahrensphase': VERFAHRENSPHASEN.find((p) => p.wert === effektivePhase)?.label ?? '',
         ...(verfahrenRelevant ? { 'Verfahrensart': VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label ?? '' } : {}),
         'Instanz': INSTANZEN.find((i) => i.wert === instanz)?.label ?? '',
         'Materie': MATERIEN.find((m) => m.wert === materie)?.label ?? '',
       },
       sections: [{ titel: 'Kostenschätzung', ergebnis: prozesskostenBericht(ergebnis, {
-        vorschuss: vorschuss ?? undefined, mwst: mwstAufschlag, kostenrisiko, instanzenzug,
+        vorschuss: vorschuss ?? undefined, mwst: mwstAufschlag, kostenrisiko, instanzenzug, sicherheit,
       }) }],
       disclaimer: DISCLAIMER,
     };
-  }, [ergebnis, aktenzeichen, kanton, streitwertRoh, nv, phase, verfahren, verfahrenRelevant, instanz, materie, vorschuss, mwstAufschlag, kostenrisiko, instanzenzug]);
+  }, [ergebnis, aktenzeichen, kanton, streitwertRoh, nv, phase, verfahren, verfahrenRelevant, instanz, materie, vorschuss, mwstAufschlag, kostenrisiko, instanzenzug, sicherheit]);
 
   return (
     <BeruehrtRahmen>
@@ -177,7 +186,7 @@ export function ProzesskostenForm() {
             {INSTANZEN.map((i) => <option key={i.wert} value={i.wert}>{i.label}</option>)}
           </select>
         </Field>
-        {!bger && (
+        {!einzelinstanz && (
           <Field label="Verfahrensphase">
             <select value={phase} onChange={(e) => setPhase(e.target.value as Verfahrensphase)} className={inputCls} aria-label="Verfahrensphase">
               {VERFAHRENSPHASEN.map((p) => <option key={p.wert} value={p.wert}>{p.label}</option>)}
@@ -201,7 +210,7 @@ export function ProzesskostenForm() {
       {ergebnis && (
         <ErgebnisBlock>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <PostenKarte titel={bger ? 'Gerichtskosten (BGer)' : phase === 'schlichtung' ? 'Gerichtskosten (Schlichtungstarif)' : 'Gerichtskosten (Entscheidgebühr)'} posten={ergebnis.gerichtskosten} />
+            <PostenKarte titel={bger ? 'Gerichtskosten (BGer)' : handelsgericht ? 'Gerichtskosten (Handelsgericht)' : effektivePhase === 'schlichtung' ? 'Gerichtskosten (Schlichtungstarif)' : 'Gerichtskosten (Entscheidgebühr)'} posten={ergebnis.gerichtskosten} />
             <PostenKarte titel="Parteientschädigung" posten={ergebnis.parteientschaedigung} />
           </div>
 
@@ -255,18 +264,22 @@ export function ProzesskostenForm() {
               className="text-body-s underline text-ink-700 hover:text-ink-900">
               {risiko ? 'Kostenrisiko ausblenden' : 'Kostenrisiko bei Teilobsiegen berechnen →'}
             </button>
-            {!bger && (
+            {!einzelinstanz && (
               <button type="button" onClick={() => setVergleich((v) => !v)}
                 className="text-body-s underline text-ink-700 hover:text-ink-900">
                 {vergleich ? 'Interkantonalen Vergleich ausblenden' : 'Was würde es in anderen Kantonen kosten? →'}
               </button>
             )}
-            {!bger && (
+            {!einzelinstanz && (
               <button type="button" onClick={() => setZug((v) => !v)}
                 className="text-body-s underline text-ink-700 hover:text-ink-900">
                 {zug ? 'Instanzenzug ausblenden' : 'Gesamtkosten über den Instanzenzug →'}
               </button>
             )}
+            <button type="button" onClick={() => setKaution((v) => !v)}
+              className="text-body-s underline text-ink-700 hover:text-ink-900">
+              {kaution ? 'Sicherheitsleistung ausblenden' : 'Sicherheit für die Parteientschädigung (Art. 99) →'}
+            </button>
             <LinkTeilenButton query={() => permalinkKodieren(PK_LINK_SPEC, { kanton, sw: nv ? undefined : streitwertRoh, phase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : undefined, quote: risiko ? quote : undefined, mwst: mwst ? true : undefined, nv: nv ? true : undefined })} />
           </div>
 
@@ -365,6 +378,20 @@ export function ProzesskostenForm() {
               </p>
               <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
                 {instanzenzug.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {kaution && sicherheit && (
+            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+              <p className="lc-overline text-ink-500">Sicherheit für die Parteientschädigung (Art. 99 ZPO)</p>
+              {sicherheit.moeglich ? (
+                <p className="mt-2 num text-body-l font-semibold text-ink-900">{sicherheit.spanne ? spanneText(sicherheit.spanne) : 'nicht beziffert'}</p>
+              ) : (
+                <p className="mt-2 text-body-s text-ink-700">{sicherheit.ausschluss}</p>
+              )}
+              <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
+                {sicherheit.hinweise.map((h, i) => <li key={i}>{h}</li>)}
               </ul>
             </div>
           )}

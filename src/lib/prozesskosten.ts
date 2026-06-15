@@ -56,8 +56,13 @@ export const VERFAHRENSPHASEN: { wert: Verfahrensphase; label: string }[] = [
 
 /** Instanz. 'erstinstanz' = kantonale erste Instanz; 'rechtsmittel' = obere
  *  kantonale Instanz (Berufung/Beschwerde, Faktor auf den kant. Tarif);
+ *  'handelsgericht' = einzige kantonale Instanz für handelsrechtliche
+ *  Streitigkeiten (Art. 6 ZPO; nur ZH/BE/AG/SG), ordentlicher Tarif, direkt → BGer;
  *  'bundesgericht' = Beschwerde ans BGer (bundesrechtlicher Tarif, Art. 65/68 BGG). */
-export type Instanz = 'erstinstanz' | 'rechtsmittel' | 'bundesgericht';
+export type Instanz = 'erstinstanz' | 'rechtsmittel' | 'handelsgericht' | 'bundesgericht';
+
+/** Kantone mit einem Handelsgericht (Art. 6 ZPO). */
+export const HANDELSGERICHT_KANTONE: readonly KantonCode[] = ['ZH', 'BE', 'AG', 'SG'];
 
 /** Verfahrensart als Kosten-Modifikator (nur erste/Rechtsmittelinstanz, nicht BGer). */
 export type Verfahrensart = 'ordentlich' | 'vereinfacht' | 'summarisch';
@@ -65,6 +70,7 @@ export type Verfahrensart = 'ordentlich' | 'vereinfacht' | 'summarisch';
 export const INSTANZEN: { wert: Instanz; label: string }[] = [
   { wert: 'erstinstanz', label: 'Erste Instanz (kantonal)' },
   { wert: 'rechtsmittel', label: 'Rechtsmittel (Berufung/Beschwerde)' },
+  { wert: 'handelsgericht', label: 'Handelsgericht (einzige Instanz)' },
   { wert: 'bundesgericht', label: 'Bundesgericht' },
 ];
 export const VERFAHRENSARTEN: { wert: Verfahrensart; label: string }[] = [
@@ -229,10 +235,17 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
     hinweise.push('Nicht vermögensrechtliche Streitigkeit: kein Streitwert — die Gebühr wird im gesetzlichen Rahmen nach Bedeutung der Sache, Umfang/Schwierigkeit und Zeitaufwand festgesetzt (Ermessen, daher Spanne).');
     if (e.materie === 'arbeit') hinweise.push('Hinweis Arbeitsrecht: Die Kostenfreiheit nach Art. 113 II lit. d / 114 lit. c ZPO knüpft an einen Streitwert ≤ CHF 30 000 an und greift bei einer nicht vermögensrechtlichen Streitigkeit nicht ohne Weiteres.');
   }
+  if (e.instanz === 'handelsgericht') {
+    hinweise.push(HANDELSGERICHT_KANTONE.includes(e.kanton)
+      ? `Handelsgericht ${e.kanton}: einzige kantonale Instanz für handelsrechtliche Streitigkeiten (Art. 6 ZPO; Voraussetzungen Abs. 2). Kein Schlichtungsverfahren (Art. 198 lit. f ZPO); Weiterzug direkt mit Beschwerde in Zivilsachen ans Bundesgericht (Art. 75 Abs. 2 lit. b BGG). Es gilt der ordentliche erstinstanzliche Tarif.`
+      : `Der Kanton ${e.kanton} führt kein Handelsgericht (nur ZH/BE/AG/SG, Art. 6 ZPO); angezeigt ist zum Vergleich der ordentliche erstinstanzliche Tarif.`);
+  }
 
   // Verfahrensart-/Instanz-Modifikator (Entscheidphase, kantonale Instanz):
   // Faktor-Spanne auf den Basistarif (Rechtsmittel hat Vorrang vor Verfahrensart).
-  if (e.phase === 'entscheid') {
+  // Das Handelsgericht führt das ordentliche Verfahren als einzige Instanz —
+  // kein Modifikator (Basistarif).
+  if (e.phase === 'entscheid' && e.instanz !== 'handelsgericht') {
     const mod = MODIFIKATOREN[e.kanton];
     let fak: Faktor | null = null; let label = '';
     if (e.instanz === 'rechtsmittel') { fak = mod.rechtsmittel; label = 'Rechtsmittelinstanz'; }
@@ -410,6 +423,47 @@ export function berechneMwstParteientschaedigung(
   return { satzProzent, betrag, bruttoSpanne, hinweis: basis };
 }
 
+// ─── Sicherheit für die Parteientschädigung (Art. 99 ZPO — Kaution) ─────────
+// Die beklagte Partei kann von der klagenden Partei Sicherheit für ihre
+// Parteientschädigung verlangen (Kautionsgründe Art. 99 Abs. 1 lit. a–d). Höhe
+// = mutmassliche Parteientschädigung der Gegenpartei. Ausgeschlossen in den
+// Fällen von Art. 99 Abs. 3 (vereinfachtes Verfahren ausser Art. 243 I,
+// Scheidung, summarisch ausser Art. 257, DSG). Wortlaut Fedlex 1.1.2025
+// verifiziert (15.6.2026); Recherche: prozesskosten-sonderkonstellationen.md §3.17–3.19.
+
+export interface Sicherheitsleistung {
+  /** false = im aktuellen Verfahren von Gesetzes wegen ausgeschlossen (Art. 99 III). */
+  moeglich: boolean;
+  /** Höhe = mutmassliche Parteientschädigung der beklagten Partei (null = nicht beziffert). */
+  spanne: Spanne | null;
+  /** Ausschlussgrund (Art. 99 Abs. 3 ZPO), wenn moeglich = false. */
+  ausschluss?: string;
+  norm: string;
+  hinweise: string[];
+}
+
+export function berechneSicherheitsleistung(
+  pe: PostenErgebnis, phase: Verfahrensphase, verfahren: Verfahrensart, materie: Materie, nichtVermoegensrechtlich: boolean,
+): Sicherheitsleistung {
+  const ausschluss = phase === 'schlichtung'
+    ? 'Im Schlichtungsverfahren wird keine Parteientschädigung gesprochen (Art. 113 Abs. 1 ZPO) — keine Sicherheitsleistung.'
+    : materie === 'datenschutz'
+      ? 'Keine Sicherheit in Streitigkeiten nach dem DSG (Art. 99 Abs. 3 lit. d ZPO).'
+      : verfahren === 'summarisch'
+        ? 'Keine Sicherheit im summarischen Verfahren (Art. 99 Abs. 3 lit. c ZPO) — Ausnahme: Rechtsschutz in klaren Fällen (Art. 257 ZPO).'
+        : (verfahren === 'vereinfacht' && nichtVermoegensrechtlich)
+          ? 'Keine Sicherheit im vereinfachten Verfahren (Art. 99 Abs. 3 lit. a ZPO); Ausnahme nur für vermögensrechtliche Streitigkeiten nach Art. 243 Abs. 1 ZPO.'
+          : undefined;
+  const moeglich = ausschluss === undefined;
+  const hinweise = moeglich ? [
+    'Auf Antrag der beklagten Partei (Art. 99 Abs. 1 ZPO), wenn die klagende Partei: keinen Wohnsitz/Sitz in der Schweiz hat (lit. a); zahlungsunfähig erscheint — Konkurs, Nachlassverfahren, Verlustscheine (lit. b); Prozesskosten aus früheren Verfahren schuldet (lit. c); oder die Parteientschädigung aus anderen Gründen erheblich gefährdet ist (lit. d).',
+    'Höhe der Sicherheit = mutmassliche Parteientschädigung der Gegenpartei (kantonaler Tarif).',
+    'Bei notwendiger Streitgenossenschaft nur, wenn bei allen Streitgenossen ein Grund vorliegt (Art. 99 Abs. 2 ZPO).',
+    'Nicht im Scheidungsverfahren (Art. 99 Abs. 3 lit. b ZPO).',
+  ] : [ausschluss];
+  return { moeglich, spanne: moeglich ? postenSpanne(pe) : null, ausschluss, norm: 'Art. 99 ZPO', hinweise };
+}
+
 /** Nicht bezifferbare weitere Kostenposten (Art. 95 II lit. c–e / III lit. a ZPO)
  *  und die unentgeltliche Rechtspflege (Art. 117 ff. ZPO) — ehrlich als Hinweis
  *  ausgewiesen (§2/§8: aufwand-/bedürftigkeitsabhängig, kein deterministischer
@@ -518,6 +572,7 @@ export interface BerichtZusatz {
   mwst?: MwstAufschlag | null;
   kostenrisiko?: Kostenrisiko | null;
   instanzenzug?: Instanzenzug | null;
+  sicherheit?: Sicherheitsleistung | null;
 }
 
 /** Baut den Berechnungsergebnis-Bericht für den PDF-Export. `e` ist das
@@ -571,6 +626,14 @@ export function prozesskostenBericht(e: ProzesskostenErgebnis, zusatz: BerichtZu
       beschreibung: `Gesamtkostenrisiko über den Instanzenzug (${z.stufen.map((s) => s.label).join(' → ')})`,
       zwischenergebnis: `Gerichtskosten ${spanneAlsText(z.gesamtGk)} + Parteientschädigung ${spanneAlsText(z.gesamtPe)} = ${spanneAlsText(z.gesamt)}${z.unbeziffert ? ' (Untergrenze — nicht bezifferte Stufen)' : ''}`,
       normen: [norm('Art. 106 ZPO')],
+    });
+  }
+  if (zusatz.sicherheit) {
+    const si = zusatz.sicherheit;
+    rechenweg.push({
+      beschreibung: 'Sicherheit für die Parteientschädigung (Kaution)',
+      zwischenergebnis: si.moeglich ? `mutmasslich ${spanneAlsText(si.spanne)} (auf Antrag der beklagten Partei, Kautionsgründe Art. 99 Abs. 1 lit. a–d)` : (si.ausschluss ?? 'im aktuellen Verfahren ausgeschlossen'),
+      normen: [norm('Art. 99 ZPO')],
     });
   }
 
