@@ -660,6 +660,57 @@ export function prozesskostenBericht(e: ProzesskostenErgebnis, zusatz: BerichtZu
   };
 }
 
+// ─── Verfahrensausgang & Verteilungs-Sonderfälle (Art. 106–109 ZPO) ─────────
+// Art. 106 I S. 2: Nichteintreten/Rückzug → Kläger gilt als unterliegend;
+// Anerkennung → Beklagter unterliegt — deterministisch auf eine Obsiegensquote
+// abbildbar. Billigkeit (Art. 107), unnötige Kosten (Art. 108) und der Vergleich
+// (Art. 109) sind Ermessen → ehrlicher Hinweis statt Punktwert (§2/§8).
+// Recherche: prozesskosten-sonderkonstellationen.md §2 (ZPO 1.1.2025).
+
+export type Verfahrensausgang = 'quote' | 'anerkennung' | 'rueckzug' | 'vergleich' | 'billigkeit';
+
+export const VERFAHRENSAUSGAENGE: { wert: Verfahrensausgang; label: string }[] = [
+  { wert: 'quote', label: 'Obsiegen nach Quote (Art. 106 II)' },
+  { wert: 'anerkennung', label: 'Klageanerkennung (Beklagter unterliegt)' },
+  { wert: 'rueckzug', label: 'Klagerückzug / Nichteintreten (Kläger unterliegt)' },
+  { wert: 'vergleich', label: 'Vergleich (Art. 109)' },
+  { wert: 'billigkeit', label: 'Billigkeitsverteilung (Art. 107)' },
+];
+
+export interface AusgangResolved {
+  /** Obsiegensquote 0..1 aus Sicht der klagenden Partei; null = Ermessen (nicht beziffert). */
+  quote: number | null;
+  norm: string;
+  hinweis: string;
+}
+
+/** Bildet den Verfahrensausgang auf eine Obsiegensquote ab, soweit deterministisch
+ *  (Art. 106 I). `quoteManuell` (0..1) gilt nur im Modus 'quote'. */
+export function verfahrensausgang(a: Verfahrensausgang, quoteManuell: number): AusgangResolved {
+  switch (a) {
+    case 'anerkennung':
+      return { quote: 1, norm: 'Art. 106 Abs. 1 ZPO', hinweis: 'Klageanerkennung: die beklagte Partei gilt als unterliegend (volles Obsiegen der klagenden Partei). Billigkeitskorrektur nach Art. 107 Abs. 1 lit. b vorbehalten.' };
+    case 'rueckzug':
+      return { quote: 0, norm: 'Art. 106 Abs. 1 ZPO', hinweis: 'Klagerückzug / Nichteintreten: die klagende Partei gilt als unterliegend. Billigkeitskorrektur nach Art. 107 Abs. 1 lit. e (Gegenstandslosigkeit) vorbehalten.' };
+    case 'vergleich':
+      return { quote: null, norm: 'Art. 109 ZPO', hinweis: 'Vergleich: Kostenverteilung nach Parteivereinbarung. Fehlt eine Regelung oder belastet sie eine unentgeltlich prozessführende Partei einseitig, gilt die gesetzliche Verteilung (Art. 106–108 ZPO).' };
+    case 'billigkeit':
+      return { quote: null, norm: 'Art. 107 ZPO', hinweis: 'Billigkeitsverteilung nach gerichtlichem Ermessen — kein berechenbarer Wert (Wettschlagung oder Auferlegung an die obsiegende Partei je nach Tatbestand Art. 107 Abs. 1 lit. a–f).' };
+    case 'quote':
+    default:
+      return { quote: Math.min(1, Math.max(0, quoteManuell)), norm: 'Art. 106 Abs. 2 ZPO', hinweis: 'Quotale Verteilung der Prozesskosten nach Ausgang (Obsiegensquote).' };
+  }
+}
+
+/** Verteilungs-Sonderfälle (Art. 106 III / 107 / 108 / 109 ZPO) als ehrliche
+ *  Aufklärung — Ermessens-Tatbestände, daher Hinweis statt Berechnung (§8). */
+export const KOSTENVERTEILUNG_SONDERFAELLE: readonly string[] = [
+  'Mehrere Parteien/Streitgenossen: interne Aufteilung nach Beteiligung (Art. 106 Abs. 3 Satz 1 ZPO); solidarische Haftung nur bei notwendiger Streitgenossenschaft (Art. 106 Abs. 3 Satz 2 ZPO, Fassung seit 1.1.2025).',
+  'Billigkeit (Art. 107 Abs. 1 ZPO): Abweichung vom Unterliegerprinzip u. a. bei nur grundsätzlich, nicht in der Höhe gutgeheissener Klage (lit. a), gutgläubiger Veranlassung (lit. b), familienrechtlichen Verfahren / eingetragener Partnerschaft (lit. c/d), gegenstandslos abgeschriebenem Verfahren (lit. e) oder anderen besonderen Umständen (lit. f).',
+  'Unnötige Prozesskosten trägt, wer sie verursacht hat — auch eine obsiegende Partei oder ein Dritter (Art. 108 ZPO).',
+  'Bei einem Vergleich gilt die vereinbarte Kostenregelung; fehlt sie, wird nach Art. 106–108 ZPO verteilt (Art. 109 ZPO).',
+];
+
 /** Interkantonaler Vergleich: dieselbe Konstellation über ALLE 26 Kantone
  *  (Auftrag David — Vergleichstabelle «was kostet es anderswo»). */
 export function vergleichAlleKantone(

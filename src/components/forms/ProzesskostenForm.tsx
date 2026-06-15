@@ -10,9 +10,10 @@ import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { permalinkKodieren, permalinkLesen, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import {
   berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung,
-  berechneInstanzenzug, berechneSicherheitsleistung, prozesskostenBericht,
+  berechneInstanzenzug, berechneSicherheitsleistung, verfahrensausgang, prozesskostenBericht,
   vergleichAlleKantone, postenText, MATERIEN, VERFAHRENSPHASEN, VERFAHRENSARTEN, INSTANZEN, KANTONE, WEITERE_KOSTENPOSTEN,
-  type KantonCode, type Verfahrensphase, type Materie, type Verfahrensart, type Instanz, type PostenErgebnis,
+  VERFAHRENSAUSGAENGE, KOSTENVERTEILUNG_SONDERFAELLE,
+  type KantonCode, type Verfahrensphase, type Materie, type Verfahrensart, type Instanz, type Verfahrensausgang, type PostenErgebnis,
 } from '../../lib/prozesskosten';
 import { KANTON_NAMEN } from '../../data/tarif/typen';
 
@@ -85,6 +86,7 @@ export function ProzesskostenForm() {
   const [instanz, setInstanz] = useState<Instanz>((ausLink.instanz as Instanz) ?? 'erstinstanz');
   const [verfahren, setVerfahren] = useState<Verfahrensart>((ausLink.verfahren as Verfahrensart) ?? 'ordentlich');
   const [quote, setQuote] = useState<number>(typeof ausLink.quote === 'number' ? (ausLink.quote as number) : 50);
+  const [ausgang, setAusgang] = useState<Verfahrensausgang>('quote');
   const [vergleich, setVergleich] = useState(false);
   const [mwst, setMwst] = useState<boolean>(ausLink.mwst === true);
   const [zug, setZug] = useState(false);
@@ -114,9 +116,14 @@ export function ProzesskostenForm() {
     () => (vergleich && hatEingabe && !einzelinstanz) ? vergleichAlleKantone(streitwert!, effektivePhase, materie, instanz, verfahrenRelevant ? verfahren : 'ordentlich', nv) : null,
     [vergleich, streitwert, hatEingabe, effektivePhase, materie, instanz, verfahren, verfahrenRelevant, einzelinstanz, nv],
   );
+  const ausgangInfo = verfahrensausgang(ausgang, quote / 100);
   const kostenrisiko = useMemo(
-    () => (risiko && ergebnis) ? berechneKostenrisiko(ergebnis.gerichtskosten, ergebnis.parteientschaedigung, quote / 100) : null,
-    [risiko, ergebnis, quote],
+    () => {
+      if (!risiko || !ergebnis) return null;
+      const a = verfahrensausgang(ausgang, quote / 100);
+      return a.quote === null ? null : berechneKostenrisiko(ergebnis.gerichtskosten, ergebnis.parteientschaedigung, a.quote);
+    },
+    [risiko, ergebnis, ausgang, quote],
   );
   const vorschuss = useMemo(
     () => ergebnis ? berechneKostenvorschuss(ergebnis.gerichtskosten, effektivePhase, instanz, verfahrenRelevant ? verfahren : 'ordentlich') : null,
@@ -283,14 +290,25 @@ export function ProzesskostenForm() {
             <LinkTeilenButton query={() => permalinkKodieren(PK_LINK_SPEC, { kanton, sw: nv ? undefined : streitwertRoh, phase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : undefined, quote: risiko ? quote : undefined, mwst: mwst ? true : undefined, nv: nv ? true : undefined })} />
           </div>
 
-          {risiko && kostenrisiko && (
+          {risiko && (
             <div className="mt-4 rounded-xl border border-line bg-surface p-4">
-              <div className="flex items-center gap-3 flex-wrap">
-                <label htmlFor="pk-quote" className="text-body-s text-ink-700">Ihre Obsiegensquote</label>
-                <input id="pk-quote" type="range" min={0} max={100} step={5} value={quote} onChange={(e) => setQuote(Number(e.target.value))} className="flex-1 min-w-[8rem]" aria-label="Obsiegensquote in Prozent" />
-                <span className="num text-body-s font-semibold text-ink-900 w-12 text-right">{quote}%</span>
+              <div className="flex items-center gap-3 flex-wrap mb-3">
+                <label htmlFor="pk-ausgang" className="text-body-s text-ink-700">Verfahrensausgang</label>
+                <select id="pk-ausgang" value={ausgang} onChange={(e) => setAusgang(e.target.value as Verfahrensausgang)} className={inputCls + ' sm:max-w-[20rem]'} aria-label="Verfahrensausgang">
+                  {VERFAHRENSAUSGAENGE.map((a) => <option key={a.wert} value={a.wert}>{a.label}</option>)}
+                </select>
               </div>
-              {kostenrisiko.berechenbar ? (
+              {ausgang === 'quote' && (
+                <div className="flex items-center gap-3 flex-wrap">
+                  <label htmlFor="pk-quote" className="text-body-s text-ink-700">Ihre Obsiegensquote</label>
+                  <input id="pk-quote" type="range" min={0} max={100} step={5} value={quote} onChange={(e) => setQuote(Number(e.target.value))} className="flex-1 min-w-[8rem]" aria-label="Obsiegensquote in Prozent" />
+                  <span className="num text-body-s font-semibold text-ink-900 w-12 text-right">{quote}%</span>
+                </div>
+              )}
+              <p className="mt-2 text-xs text-ink-500">{ausgangInfo.hinweis} <span className="text-ink-400">({ausgangInfo.norm})</span></p>
+              {!kostenrisiko ? (
+                <p className="mt-3 text-body-s text-ink-600">Ermessensverteilung — kein bezifferter Wert; massgebend ist die richterliche Würdigung.</p>
+              ) : kostenrisiko.berechenbar ? (
                 <>
                   <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div className="lc-tile">
@@ -314,6 +332,12 @@ export function ProzesskostenForm() {
               ) : (
                 <p className="mt-3 text-body-s text-ink-600">{kostenrisiko.hinweise[kostenrisiko.hinweise.length - 1]}</p>
               )}
+              <details className="mt-3">
+                <summary className="cursor-pointer text-xs text-ink-600 hover:text-ink-800">Verteilungs-Sonderfälle (Art. 106 III / 107–109 ZPO)</summary>
+                <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
+                  {KOSTENVERTEILUNG_SONDERFAELLE.map((h, i) => <li key={i}>{h}</li>)}
+                </ul>
+              </details>
             </div>
           )}
 

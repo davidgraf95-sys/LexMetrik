@@ -1,6 +1,6 @@
 // ─── Prozesskosten-Engine (Art. 95/96/113/114 ZPO) ─────────────────────────
 import { describe, expect, it } from 'vitest';
-import { berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung, berechneInstanzenzug, berechneSicherheitsleistung, prozesskostenBericht, vergleichAlleKantone, postenText, WEITERE_KOSTENPOSTEN, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
+import { berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung, berechneInstanzenzug, berechneSicherheitsleistung, verfahrensausgang, prozesskostenBericht, vergleichAlleKantone, postenText, WEITERE_KOSTENPOSTEN, KOSTENVERTEILUNG_SONDERFAELLE, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 
@@ -272,6 +272,34 @@ describe('Schlichtungstarif (Art. 95 II lit. a ZPO — eigene kantonale Datensch
   it('Schlichtung bleibt kostenlos in den Art.-113-Materien (Tarif tritt zurück)', () => {
     expect(berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 40000, phase: 'schlichtung', materie: 'miete_pacht' }).gerichtskosten.kostenlos).toBe(true);
     expect(berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 20000, phase: 'schlichtung', materie: 'arbeit' }).gerichtskosten.kostenlos).toBe(true);
+  });
+});
+
+describe('Verfahrensausgang & Verteilungs-Sonderfälle (Art. 106–109 ZPO)', () => {
+  it('Anerkennung → Kläger obsiegt voll (Quote 1); Rückzug → Quote 0', () => {
+    expect(verfahrensausgang('anerkennung', 0.3).quote).toBe(1);
+    expect(verfahrensausgang('rueckzug', 0.7).quote).toBe(0);
+  });
+  it('Vergleich und Billigkeit → kein bezifferter Wert (Ermessen)', () => {
+    expect(verfahrensausgang('vergleich', 0.5).quote).toBeNull();
+    expect(verfahrensausgang('vergleich', 0.5).norm).toContain('Art. 109');
+    expect(verfahrensausgang('billigkeit', 0.5).quote).toBeNull();
+    expect(verfahrensausgang('billigkeit', 0.5).norm).toContain('Art. 107');
+  });
+  it('Quote-Modus reicht die manuelle Quote (geklemmt) durch', () => {
+    expect(verfahrensausgang('quote', 0.4).quote).toBe(0.4);
+    expect(verfahrensausgang('quote', 1.5).quote).toBe(1); // geklemmt
+    expect(verfahrensausgang('quote', -0.2).quote).toBe(0);
+  });
+  it('Anerkennung speist die deterministische Quote ins Kostenrisiko (volles Obsiegen)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    const a = verfahrensausgang('anerkennung', 0);
+    const k = berechneKostenrisiko(r.gerichtskosten, r.parteientschaedigung, a.quote!);
+    expect(k.nettoBelastung).toEqual({ vonChf: 0, bisChf: 0 }); // volles Obsiegen
+  });
+  it('Sonderfälle nennen Art. 106 III, 107, 108, 109', () => {
+    const txt = KOSTENVERTEILUNG_SONDERFAELLE.join(' ');
+    for (const n of ['Art. 106 Abs. 3', 'Art. 107', 'Art. 108', 'Art. 109']) expect(txt).toContain(n);
   });
 });
 

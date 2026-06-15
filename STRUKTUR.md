@@ -54,9 +54,15 @@ Dossier `bibliothek/kosten/schlichtungsgebuehren-kantone.md`, 5.6.2026) — impl
   nur ZH/BE/AG/SG), ordentlicher erstinstanzlicher Tarif ohne Modifikator, Hinweis
   einzige Instanz/keine Schlichtung (Art. 198 lit. f)/Weiterzug BGer (Art. 75 II lit. b BGG);
   Nicht-HG-Kantone mit ehrlichem Hinweis. UI: Phase/Verfahrensart/Vergleich/Instanzenzug ausgeblendet.
-- **OFFEN:** GK-NV-Doppelcheck (Agent lief) einspielen · Verteilungs-Sonderfälle
-  Art. 107–109 + Streitgenossen (heute Hinweis) · UR-Vorschalter · SchKG-Gebühren-
-  Verknüpfung (I9) · Push/Deploy auf Davids Ja. Nichts `geprüft`.
+- **GK-NV-Doppelcheck EINGESPIELT:** 23/26 bestätigt, 3 korrigiert (TG 300–20 000
+  statt 300–5 000 [Zahlenfehler], FR Art. 20 Zivilgericht 100–500 000, OW Art. 12 II
+  800–10 000); GERICHTSKOSTEN_NV jetzt durchgehend `doppelt` (zwei unabhängige Pässe).
+- **Art. 106–109 Verteilung GEBAUT:** `verfahrensausgang` (Anerkennung→Quote 1 /
+  Rückzug→0 deterministisch; Vergleich Art. 109 / Billigkeit Art. 107 → Ermessen,
+  kein Wert) + `KOSTENVERTEILUNG_SONDERFAELLE` (Art. 106 III/107/108/109). UI:
+  Verfahrensausgang-Vorschalter im Kostenrisiko + Sonderfall-Liste.
+- **OFFEN:** UR-Vorschalter (Art. 117 ff.) · SchKG-Gebühren-Verknüpfung (I9) ·
+  Push/Deploy auf Davids Ja. Nichts `geprüft`.
 
 ## Session 15.6.2026 — Prozesskosten-Cockpit I6 (Vollständigkeit der Kostenposten) GEBAUT (ungepusht)
 
