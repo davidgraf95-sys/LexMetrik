@@ -124,6 +124,21 @@ festschreiben, werden bei Bedarf **deklariert** angepasst (Schutzabsicht bleibt)
 Checkbox-Rest: ~25 Sondermuster in `forms/` (v.a. ZustaendigkeitForm) + ~150 in den
 `Vorlage*`-Seiten — letztere bewusst **nicht während der aktiven Parallel-Session**.
 
+### Folge-Umbau #1–#4 (nur lokal — kein Push)
+- **#1 ✓** (470c446) ListenZeile: WerkzeugZeile + FristenRegimeZeile → eine
+  `<ListenZeile>`; TrefferZeile auf dieselbe lc-card-Anatomie + Hover-Lift
+  (zweiter Hover-Dialekt weg).
+- **#2 — geprüft, kein Eingriff nötig:** Davids Leerzustand-Regel ist bereits
+  flächig durchgesetzt — JEDE `FehlerBox` liegt in einem `BeruehrtRahmen`, und die
+  einzige inline-`role=alert` (SchkgZustaendigkeitTeil) feuert im Leerzustand nicht
+  (`forderung=null`). Der Audit-Befund war veraltet. (Ehrlichkeit statt Schein-Fix.)
+- **#3 ✓** (cb7959d) Wizard zweispaltig schon ab `md` (768px) statt erst `lg` —
+  iPad-Hochformat bekommt Eingabe + klebende Live-Vorschau nebeneinander.
+- **#4 ✓** (a1e3232) 166 Checkbox-Tap-Zeilen in 28 Vorlage-Seiten vergrössert
+  (gap-2.5 + py-1.5). Bewusst KEINE Umstellung der reich-formatierten JSX-Labels
+  aufs Primitiv (212 Stellen, marginaler Nutzen) — die Seiten waren bereits EIN
+  konsistentes, gebrandetes Muster.
+
 ### Bewusst zurückgestellt (für David / spätere Runde)
 - **lc-select**-Rollout (Messing-Chevron) über alle `<select>` — Primitive steht,
   Sweep bewusst gebündelt statt einzeln (Konsistenz).
