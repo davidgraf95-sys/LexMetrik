@@ -73,6 +73,12 @@ describe('Grundbuch — amtliche Stützstellen (3-fach verifiziert: find→Doppe
     expect(det('eigentum_erbgang', 'OW', 1_000_000)).toBe(1500); // 1,5‰ Staffel
     expect(det('grundpfand', 'NW', 1_000_000)).toBe(2000);    // 2‰ bis 3 Mio
   });
+  it('Schwellensatz-Tarife auf Gesamtwert (TI Erbgang) + 70%-Basis (SZ Stockwerkeigentum)', () => {
+    expect(det('eigentum_erbgang', 'TI', 1_000_000)).toBe(1375); // 1,375‰ × ganzem Wert
+    expect(det('eigentum_erbgang', 'TI', 3_000_000)).toBe(4875); // 1,625‰ über 2 Mio
+    expect(det('stockwerkeigentum', 'SZ', 1_000_000)).toBe(630); // 0,63‰ (70%-Basis)
+    expect(det('stockwerkeigentum', 'SZ', 3_000_000)).toBe(1890);
+  });
   it('Zeitaufwand-Tarife (ZG: CHF 180/Std × Faktor) als ehrliche Nicht-Bezifferung', () => {
     const r = berechneGrundbuchgebuehr({ eintragsart: 'grundpfand', kanton: 'ZG', wertCHF: 500_000 });
     expect(r.posten!.ergebnis.deterministisch).toBe(false);

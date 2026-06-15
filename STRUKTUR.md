@@ -51,6 +51,18 @@ wirklich alle Kosten abgedeckt?» + «Handänderungssteuer-Anzeige verbessern».
   ok (GE AG-Gründung 2M → Total 24'798 inkl. Zusatzkosten; ZH Testament 200–4000;
   OW Grundpfand 1'750; ZH Handänderung «Entfällt»; 0 Console-Fehler). Status
   durchgehend `recherche`/`entwurf` (§7).
+- **VIERTER Pass (David «bist du absolut sicher?» → «lauf den 4. Pass»):** alle 621
+  kodierten Werte an Stützpunkten (100k/500k/1M/3M) gegen die Erlasse adversarial
+  geprüft → **529 ok, 91 Korrekturen** (Konvergenz von 286). Merge 3rd+4th-Pass.
+  Zusätzlich **automatische Kontrollen** (in meiner Macht, ohne KI): (1) **Monotonie-
+  Invariante** über 619 Tarife → fand 1 latenten Sockel-Bug (VD Schuldanerkennung,
+  `minChf` nur auf 1. Band) → Generator setzt min jetzt auf JEDES Band; (2)
+  **Stützpunkt-Abgleich** Engine vs. Sollwerte → fand 25 Mismatches (UR/TI/SZ
+  **Gesamtwert-/Schwellensatz-Tarife**, die das marginale Schema nicht abbilden
+  konnte). Fix outside the box: **Tarif-Primitiv erweitert** (`staffel_voll_prozent`
+  jetzt mit Min/Max je Band — additiv, golden byte-gleich) + Overrides (UR Tarif A/B,
+  TI LTORF-Schwellensatz, SZ 70%-Basis). Endstand: Stützpunkt-Mismatches **0** (bis
+  auf 1 offengelegte Ceil-Step-Näherung SZ Stockwerkeigentum @<500k), Monotonie **0**.
 
 ## Session 15.6.2026 (Abend) — BEURKUNDUNGS-AUSBAU: Notariatsrechner auf alle Geschäfts-/Eintragungsarten (ungepusht)
 

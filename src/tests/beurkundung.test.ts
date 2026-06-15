@@ -96,6 +96,13 @@ describe('Beurkundung — amtliche Stützstellen (3-fach verifiziert: find→Dop
     expect(det('schenkung', 'GL', 1_000_000)).toBe(1700);   // A1-1 Staffel
   });
 
+  it('Gesamtwert-/Schwellensatz-Tarife (UR Tarif A: Satz × ganzem Wert, Stufen-Minima)', () => {
+    expect(det('schenkung', 'UR', 100_000)).toBe(500);     // 3‰ × 100k = 300 → min 500
+    expect(det('schenkung', 'UR', 500_000)).toBe(1250);    // 2,5‰ × ganzem Wert
+    expect(det('schenkung', 'UR', 1_000_000)).toBe(2500);
+    expect(det('schenkung', 'UR', 3_000_000)).toBe(6000);  // 2‰ × ganzem Wert
+  });
+
   it('aktuelle Fassung (ZH NotGebV 1.1.2024, nicht aufgehobene v95) als Rahmen', () => {
     expect(spanne('testament', 'ZH')).toEqual([200, 4000]);  // Korrektur 4000 (nicht 5000)
     expect(spanne('erbvertrag', 'ZH')).toEqual([300, 6000]); // Korrektur 6000 (nicht 7500)

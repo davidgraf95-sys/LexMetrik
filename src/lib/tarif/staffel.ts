@@ -66,11 +66,15 @@ export interface SockelProzentBand {
 
 /** Ein Band einer Fix+Prozent-vom-Gesamtwert-Staffel: bis zur Grenze gilt
  *  `fixChf + prozent% × wert` (Prozent auf den GESAMTEN Streitwert, nicht den
- *  Überschuss). (Deterministisch, z. B. AG § 7 Abs. 1 GebührD.) */
+ *  Überschuss). (Deterministisch, z. B. AG § 7 Abs. 1 GebührD.) Optionaler
+ *  Mindest-/Höchstbetrag JE BAND (Schwellensatz-Tarife mit Stufen-Minima, z. B.
+ *  UR Notariatstarif A, TI LTORF Art. 11/13). */
 export interface VollProzentBand {
   bisChf: number;
   fixChf: number;
   prozent: number;
+  minChf?: number;
+  maxChf?: number;
 }
 
 export type TarifRegel =
@@ -204,8 +208,9 @@ export function auswertenTarif(regel: TarifRegel, basisChf: number): TarifErgebn
       pruefeBasis(basisChf);
       const b = regel.baender.find((x) => basisChf <= x.bisChf);
       if (!b) throw new RangeError(`Voll-Prozent-Staffel deckt ${chf(basisChf)} nicht (letztes Band braucht bisChf: Infinity).`);
-      const betrag = round2(b.fixChf + (basisChf * b.prozent) / 100);
-      return { deterministisch: true, betragChf: betrag, schritte: [`Fix ${chf(b.fixChf)} + ${b.prozent} % von ${chf(basisChf)} = ${chf(betrag)}`] };
+      const schritte = [`Fix ${chf(b.fixChf)} + ${b.prozent} % von ${chf(basisChf)} = ${chf(b.fixChf + (basisChf * b.prozent) / 100)}`];
+      const roh = round2(b.fixChf + (basisChf * b.prozent) / 100);
+      return { deterministisch: true, betragChf: klammere(roh, b.minChf, b.maxChf, schritte), schritte };
     }
 
     case 'staffel_rahmen': {
