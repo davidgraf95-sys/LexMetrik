@@ -80,7 +80,8 @@ export function ProzesskostenForm() {
   const [verfahren, setVerfahren] = useState<Verfahrensart>((ausLink.verfahren as Verfahrensart) ?? 'ordentlich');
   const [quote, setQuote] = useState<number>(typeof ausLink.quote === 'number' ? (ausLink.quote as number) : 50);
   const [vergleich, setVergleich] = useState(false);
-  const [risiko, setRisiko] = useState(false);
+  // Geteilter Link mit Quote (q=…) öffnet das Kostenrisiko-Panel direkt.
+  const [risiko, setRisiko] = useState(typeof ausLink.quote === 'number');
 
   const bger = instanz === 'bundesgericht';
   const verfahrenRelevant = phase === 'entscheid' && !bger;
@@ -111,7 +112,7 @@ export function ProzesskostenForm() {
           </select>
         </Field>
         <Field label="Streitwert (CHF)" hint="vermögensrechtliche Streitigkeit nach Art. 91 ff. ZPO">
-          <BetragsFeld value={sw} onChange={setSw} className={inputCls} placeholder="z. B. 50'000" aria-label="Streitwert in Franken" />
+          <BetragsFeld value={sw} onChange={setSw} className={inputCls} placeholder="z. B. 50'000" />
         </Field>
         <Field label="Instanz">
           <select value={instanz} onChange={(e) => setInstanz(e.target.value as Instanz)} className={inputCls} aria-label="Instanz">
