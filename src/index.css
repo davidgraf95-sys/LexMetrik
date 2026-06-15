@@ -75,9 +75,14 @@
   a:hover { color: var(--brass-600); }
   :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--radius-sm); }
 
-  /* Ankreuzfelder im Hausakzent (Messing) statt Browser-Blau — reine Farbe,
-     keine Grössen-/Layoutänderung (die Touch-Grösse löst das Checkbox-Primitiv). */
-  input[type="checkbox"], input[type="radio"] { accent-color: var(--brass-500); }
+  /* Ankreuzfelder im Hausakzent (Messing) statt Browser-Blau, dazu etwas
+     grösser für die Fingerbedienung (Redesign E7: native ~13px waren auf
+     Touch zu klein). Der vergrösserte Tap-BEREICH liegt am umschliessenden
+     <label>. */
+  input[type="checkbox"], input[type="radio"] {
+    accent-color: var(--brass-500);
+    width: 1.1rem; height: 1.1rem;
+  }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }

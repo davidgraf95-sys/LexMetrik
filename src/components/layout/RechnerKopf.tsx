@@ -40,7 +40,7 @@ export function RechnerKopf({ calc, titelOverride, kategorieOverride, kurzbeschr
         </span>
       </nav>
       <p className="lc-overline">{kategorie}</p>
-      <h1 className="text-h1 font-display font-semibold text-ink-900">{sansAmp(titel)}</h1>
+      <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">{sansAmp(titel)}</h1>
       <p className="text-body-l text-ink-600 max-w-reading">{kurzbeschrieb}</p>
       <div className="flex flex-wrap gap-1.5">
         {/* Norm-Chips mit Fedlex-Direktlink (Spannen/ff. → führender Artikel) */}

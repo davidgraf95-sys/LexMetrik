@@ -77,7 +77,7 @@ export function VorlagenWizardRahmen({
           Zurück zum Katalog
         </Link>
         <p className="lc-overline">{overline}</p>
-        <h1 className="text-h1 font-display font-semibold text-ink-900">{titel}</h1>
+        <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">{titel}</h1>
         <p className="text-body-l text-ink-600 max-w-reading">{intro}</p>
         <div className="flex flex-wrap items-center gap-1.5">
           {norms.map((n) => (

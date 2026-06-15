@@ -309,7 +309,7 @@ export function ErbteilungForm() {
           {/* Erben-Tabelle */}
           <div className="lc-card p-5 overflow-x-auto">
             <p className="lc-overline mb-3">Erbteile & Pflichtteile</p>
-            <table className="w-full text-body-s">
+            <table className="w-full min-w-[42rem] text-body-s">
               <thead>
                 <tr className="text-left text-ink-500 border-b border-line">
                   <th className="py-1.5 pr-3 font-medium">Erbe</th>

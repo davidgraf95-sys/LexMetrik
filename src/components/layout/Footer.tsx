@@ -35,7 +35,7 @@ export function Footer() {
           <p className="lc-overline mb-3">Navigation</p>
           {NAVIGATION.map((n) => (
             <Link key={n.label} to={n.to}
-              className="block text-body-s text-ink-600 hover:text-brass-700 no-underline transition-colors">
+              className="block py-1.5 text-body-s text-ink-600 hover:text-brass-700 no-underline transition-colors">
               {n.label}
             </Link>
           ))}
@@ -62,10 +62,8 @@ export function Footer() {
       {/* Feinschriftzeile */}
       <div className="border-t border-line">
         <div className="max-w-content mx-auto px-5 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-          <p className="lc-overline text-ink-500 normal-case" style={{ letterSpacing: '0.04em' }}>
-            © 2026 LexMetrik
-          </p>
-          <p className="lc-overline text-ink-500 normal-case sm:text-right" style={{ letterSpacing: '0.04em' }}>
+          <p className="lc-fineprint">© 2026 LexMetrik</p>
+          <p className="lc-fineprint sm:text-right">
             Orientierungsrechner · keine Rechtsberatung · läuft vollständig im Browser
           </p>
         </div>

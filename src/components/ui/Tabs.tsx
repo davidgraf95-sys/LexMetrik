@@ -17,7 +17,9 @@ const KNOPF: Record<TabGroesse, string> = {
   m: 'px-3 rounded-md text-body-s font-medium transition-all',
   s: 'px-2.5 rounded-md text-xs font-medium transition-all',
 };
-const HOEHE: Record<TabGroesse, string> = { m: 'h-9', s: 'h-8' };
+// Mobile grössere Trefferfläche (Redesign E7: h-11 = 44px erreicht auf Touch
+// die AAA-Empfehlung), ab sm zurück auf die kompakte Desktop-Höhe.
+const HOEHE: Record<TabGroesse, string> = { m: 'h-11 sm:h-9', s: 'h-10 sm:h-8' };
 
 const AKTIV = 'bg-surface-raised text-brass-700 shadow-sm border border-line';
 const INAKTIV = 'text-ink-600 hover:text-ink-900';

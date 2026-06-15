@@ -130,7 +130,7 @@ export function ProzesskostenForm() {
 
           {vergleichsListe && (
             <div className="mt-4 overflow-x-auto">
-              <table className="w-full text-body-s border-collapse">
+              <table className="w-full min-w-[34rem] text-body-s border-collapse">
                 <caption className="text-xs text-ink-500 text-left mb-2">
                   Interkantonaler Vergleich bei Streitwert CHF {streitwert?.toLocaleString('de-CH')} ({VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}, {MATERIEN.find((m) => m.wert === materie)?.label}) — Gerichtsgebühr / Parteientschädigung. Quelle je Kanton verlinkt.
                 </caption>
