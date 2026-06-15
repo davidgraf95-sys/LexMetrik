@@ -22,6 +22,29 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 15.6.2026 — UI-REDESIGN «frischer Blick» GEBAUT + DEPLOYED (Auftrag David, parallel zum Cockpit)
+
+**Auftrag `~/Downloads/AUFTRAG-UI-Redesign.md`:** ganze Darstellungsschicht frei,
+Rechtslogik (`src/lib`/`src/data`) + Export-Inhalte unangetastet (Golden
+byte-identisch verifiziert). Vorgehen: 10-Agent-Audit (97 Befunde) + empirische
+Playwright/DOM-Prüfung; Plan/Stand in **`REDESIGN-PLAN.md`** (Root).
+
+**Umgesetzt + DEPLOYED (15.6., lexmetrik.vercel.app):** Fundament-Primitive
+(`<Card>`/`<SeitenKopf>`/`<Checkbox>`/`<GruppenTitel>`/`.lc-select`/`.lc-akzent-*`,
+`--ring`-Fokus); Skip-Link + `<main>`-Landmark; **persistente Kategorie-Nav +
+Mobile-Off-Canvas-Menü**; **Katalog-Rechtsgebiet-Filter** (tote kartePasst-Logik
+verdrahtet, `?rg=`/`?status=`); Prozesskosten-Dialekt an Haus-Anatomie angeglichen;
+Wizard: Mobile-Stepper-Fortschritt + Vorschau-Sprung + «Weiter»-Erklärung +
+Tablet-`md`-Zweispalter + **Haarlinien-Sektionen** (`<GruppenTitel>`, Entscheid
+David) + **kombinierte Schalter-Karte** (Vertragstyp+Detailgrad); Live-Wert-Puls +
+Schritt-/Routen-Fade; A11y (Tabs-Tastatur, FristenKalender sr-only, Kontrast,
+SprachUmschalter-Disclosure); Mobile-Touch (Checkbox/Radio/Tabs/Tabellen);
+Sekundärseiten (`<SeitenKopf>`, ErrorBoundary, 404-Wegweiser, seo.ts Title/Meta).
+Bewusst NICHT: reich-JSX-Checkboxen aufs Primitiv restrukturiert (0 sichtbarer
+Gewinn, Sweep-Risiko bei verschachtelten Handlern — bleiben inline, aber
+tap-/marken-konsistent). Tore + `build` grün vor jedem Commit; §9-Review
+«deploy-tauglich»; Deploy aus sauberem /tmp-Worktree.
+
 ## Session 15.6.2026 — Prozesskosten-Cockpit GEBAUT + DEPLOYED (Hauptmoat P1)
 
 **Auftrag David (vielstufig): Prozesskostenrechner zum vollen Cockpit vertiefen,

@@ -151,12 +151,25 @@ Checkbox-Rest: ~25 Sondermuster in `forms/` (v.a. ZustaendigkeitForm) + ~150 in 
   **Entscheid David Variante A**); 86 Untertitel in 20 Vorlagen → Haarlinien-Sektionen
   wie in den Rechnern.
 
-### Bewusst zurückgestellt (für David / spätere Runde)
-- **Wizard-Schalter-Stapelung** (Vertragstyp + Detailgrad) — per-Seite.
-- **Rich-JSX-Checkboxen → Primitiv** (Pages + ZustaendigkeitForm) — nur Tap-Sweep,
-  kein Voll-Restructure (Nutzen/Risiko).
-- **Title-Suffix/Meta-Descriptions** in `src/lib/seo.ts` (ausserhalb der UI-Schranke).
-- **Cremes-Token-Dedup** (paper/surface/paper-raised) · Vertikale Rhythmik — niedrig.
+### Abschluss-Batch (15.6.2026, «mache alle Punkte in einem Schritt»)
+- **GruppenTitel → Rechner-Forms ✓** — 46 Untertitel; Haarlinien-Sektionen jetzt
+  auch in den Rechnern (konsistent mit den Wizards).
+- **Vertikale Rhythmik ✓** — Kontakt/Datenschutz auf `space-y-10` (wie Methodik/Über).
+- **seo.ts Title/Meta ✓** (Freigabe David, ausserhalb UI-Schranke) — `/ueber`-Suffix
+  vereinheitlicht, je Seite individuelle Beschreibung.
+- **Cremes-Token entwirrt ✓** — Regel dokumentiert (paper=Seite, surface=Karten,
+  well=Felder), **ohne Wertänderung**.
+- **Wizard-Schalter-Stapelung ✓** — Arbeitsvertrag: Vertragstyp + Detailgrad in EINER
+  VariantenKopf-Karte (`EinzelKaderWizard` bekommt regime/setRegime statt des
+  vorgebauten `kopf`); Unter-Regime-Seiten unverändert.
+
+### Bewusst NICHT gemacht (begründet, §1/§8)
+- **Rich-JSX-Checkboxen → `<Checkbox>`-Primitiv** (~150 Pages + ZustaendigkeitForm):
+  **null sichtbarer Gewinn** (Primitiv rendert identisch), aber realer stiller
+  Regressions-Risiko bei 150+ mehrzeiligen, reich-formatierten JSX-Labels mit
+  **verschachtelten-Klammer-Handlern** (regex-Sweep unsicher, AST-Codemod nötig).
+  Die Checkboxen sind bereits EIN konsistentes, tap-/marken-konformes Inline-Muster.
+  Auf Wunsch später per jscodeshift sauber nachziehbar.
 
 ### Korrektur Phase-0-Befund
 Die «leere RECHTLICHER HINWEIS»-Box ist **kein Bug**: `PflichtDisclaimer` ist ein
