@@ -184,11 +184,14 @@ Notariat (selbständig, Tarif teils mit Bandbreite) · gemischt.
 
 ---
 
-## Offene Doppelcheck-Punkte (vor `geprüft` / produktiver Nutzung)
-- **GE** ‰-vs-%-Zeichen REmNot Art. 10/16 am Originaltext gegenlesen.
-- **JU** exakter Punktwert 2026 (RSJU 176.331-Indexierung).
-- **VS** LDM Art. 14 Anwendungsmodus (pauschal-stufig bestätigt durch Wortlaut).
-- **ZG** Handänderungssteuer-Negativbefund an ESTV gegenchecken.
-- **BS** § 51 SG 211.110 Grundbuch-Promille am Volltext (bisher amtl. Merkblatt).
-- **BE** volle Anhang-1-Staffel der Kaufbeurkundung nachtragen.
-- **AG** Kanzlei-Grundbuchgebühr-Fixbetrag (GBGD) — wertabhängiger Teil über § 8 GBAG.
+## Doppelcheck (15.6.2026, unabhängiger Pass am Originaltext) — ERLEDIGT
+- **GE** ‰-Lesart REmNot Art. 10/16 BESTÄTIGT (silgeneve.ch rendert ‰ fehlerhaft als %; korrekt Promille).
+- **JU** Grundbuch RSJU 176.331 Art. 6: 1,5‰ bestätigt; **Punktwert CHF 1.05** (Arrêté 176.210.12, 1.1.2025) → Caps korrigiert auf ≈ CHF 42 / 10’500 (war 40/10’000). Verfallskandidat: Punktwert jährlich indexiert.
+- **VS** LDM Art. 14 BESTÄTIGT pauschal-stufig (Satz auf Gesamtwert je Band; «pour une valeur de … à …»).
+- **ZG** Handänderungssteuer-Negativbefund BESTÄTIGT (nur Grundbuchgebühr).
+- **BS** Grundbuch § 51 SG 211.110 BESTÄTIGT (1‰, min. 200/Grundstück) — nicht mehr nur Merkblatt-gestützt; `maxChf 50000` am Volltext nicht unabhängig bestätigt (niedrige Priorität).
+- **BE** volle Anhang-1-Staffel erhoben (Min 2'915 / Mittel 3'745 / Max 4'575 bei 1 Mio) — Rahmentarif, Kodierung als `formel_extern` korrekt.
+- Alle deterministischen Stichproben (ZH/LU/AG/TI/SG/SH/NE/OW/NW/GL) BESTÄTIGT (Promillesätze, Bandgrenzen, Min/Max, Artikel).
+
+**Status nach Doppelcheck:** Werte zweifach geprüft; fachliche Abnahme durch David weiterhin ausstehend (nichts `geprüft`, §7). Engine-Review (adversarial) separat bestanden (JU-HÄSt von voll_prozent auf marginal korrigiert).
+**Pflegebedarf/Restposten:** JU-Punktwert-Indexierung · AG Kanzlei-Grundbuchgebühr-Fixbetrag (GBGD; wertabhängiger Teil läuft über § 8 GBAG) · BE-Anhang-1-Staffel künftig deterministisch kodieren · FR/VD/VS/JU/GE-Notariatsstaffeln (Bänder) künftig deterministisch.
