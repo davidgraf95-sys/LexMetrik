@@ -87,6 +87,7 @@ export function ProzesskostenForm() {
   const [verfahren, setVerfahren] = useState<Verfahrensart>((ausLink.verfahren as Verfahrensart) ?? 'ordentlich');
   const [quote, setQuote] = useState<number>(typeof ausLink.quote === 'number' ? (ausLink.quote as number) : 50);
   const [ausgang, setAusgang] = useState<Verfahrensausgang>('quote');
+  const [ur, setUr] = useState(false);
   const [vergleich, setVergleich] = useState(false);
   const [mwst, setMwst] = useState<boolean>(ausLink.mwst === true);
   const [zug, setZug] = useState(false);
@@ -121,9 +122,9 @@ export function ProzesskostenForm() {
     () => {
       if (!risiko || !ergebnis) return null;
       const a = verfahrensausgang(ausgang, quote / 100);
-      return a.quote === null ? null : berechneKostenrisiko(ergebnis.gerichtskosten, ergebnis.parteientschaedigung, a.quote);
+      return a.quote === null ? null : berechneKostenrisiko(ergebnis.gerichtskosten, ergebnis.parteientschaedigung, a.quote, ur);
     },
-    [risiko, ergebnis, ausgang, quote],
+    [risiko, ergebnis, ausgang, quote, ur],
   );
   const vorschuss = useMemo(
     () => ergebnis ? berechneKostenvorschuss(ergebnis.gerichtskosten, effektivePhase, instanz, verfahrenRelevant ? verfahren : 'ordentlich') : null,
@@ -266,6 +267,12 @@ export function ProzesskostenForm() {
             </ul>
           </details>
 
+          {/* I9: Querverweis auf die GebV SchKG (Art. 16 SchKG, vorbehalten in Art. 96 ZPO). */}
+          <p className="mt-3 text-xs text-ink-500">
+            Betreibungsrechtliche Verfahren (Rechtsöffnung, Arrest, Aberkennung): Für die Betreibungshandlungen gilt die bundesrechtlich abschliessende GebV SchKG (Art. 16 SchKG, vorbehalten in Art. 96 ZPO) — siehe{' '}
+            <a href="/rechner/betreibungskosten" className="underline hover:text-ink-800">Betreibungskosten-Rechner</a>. Die gerichtliche Entscheidgebühr (z. B. Rechtsöffnung) richtet sich nach dem kantonalen Tarif bzw. Art. 48 GebV SchKG.
+          </p>
+
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <button type="button" onClick={() => setRisiko((v) => !v)}
               className="text-body-s underline text-ink-700 hover:text-ink-900">
@@ -306,13 +313,17 @@ export function ProzesskostenForm() {
                 </div>
               )}
               <p className="mt-2 text-xs text-ink-500">{ausgangInfo.hinweis} <span className="text-ink-400">({ausgangInfo.norm})</span></p>
+              <label className="mt-2 flex items-start gap-2 text-body-s text-ink-700">
+                <input type="checkbox" checked={ur} onChange={(e) => setUr(e.target.checked)} className="mt-0.5" />
+                <span>Unentgeltliche Rechtspflege bewilligt (Art. 117 ff. ZPO) — befreit von Vorschuss/Gerichtskosten, aber nicht von der gegnerischen Parteientschädigung</span>
+              </label>
               {!kostenrisiko ? (
                 <p className="mt-3 text-body-s text-ink-600">Ermessensverteilung — kein bezifferter Wert; massgebend ist die richterliche Würdigung.</p>
               ) : kostenrisiko.berechenbar ? (
                 <>
                   <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div className="lc-tile">
-                      <p className="text-xs text-ink-500 mb-1">Gerichtskosten zu Ihren Lasten</p>
+                      <p className="text-xs text-ink-500 mb-1">Gerichtskosten zu Ihren Lasten{kostenrisiko.unentgeltlich ? ' (UR-befreit)' : ''}</p>
                       <p className="num text-body-l font-semibold text-ink-900">{spanneText(kostenrisiko.gerichtskostenZuLasten)}</p>
                     </div>
                     <div className="lc-tile">
@@ -321,7 +332,7 @@ export function ProzesskostenForm() {
                       <p className="mt-1 text-xs text-ink-500">+ Sie erhalten · − Sie zahlen</p>
                     </div>
                     <div className="lc-tile lc-akzent-brass">
-                      <p className="text-xs text-ink-500 mb-1">Geschätzte Netto-Kostenbelastung</p>
+                      <p className="text-xs text-ink-500 mb-1">{kostenrisiko.unentgeltlich ? 'Netto trotz UR (nur Gegenpartei)' : 'Geschätzte Netto-Kostenbelastung'}</p>
                       <p className="num text-body-l font-semibold text-ink-900">{spanneText(kostenrisiko.nettoBelastung)}</p>
                     </div>
                   </div>

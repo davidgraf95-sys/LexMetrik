@@ -68,8 +68,14 @@ Dossier `bibliothek/kosten/schlichtungsgebuehren-kantone.md`, 5.6.2026) — impl
   § 11 Ziff. 2 (RB 638.1) selbst verifiziert; (MITTEL) **MwSt-Doppelzählung behoben** —
   Flag `mwstInbegriffen` (BGer-PE + VS-PE inkl. MwSt → kein Aufschlag); (NIEDRIG)
   VS-PE oberstes Band Untergrenze 41'200 ergänzt. Gate voll grün, golden byte-gleich.
-- **OFFEN:** UR-Vorschalter (Art. 117 ff.) · SchKG-Gebühren-Verknüpfung (I9) ·
-  Push/Deploy auf Davids Ja. Nichts `geprüft`.
+- **Unentgeltliche Rechtspflege (Art. 117 ff.) GEBAUT:** UR-Schalter im
+  Kostenrisiko → eigene Gerichtskosten befreit (Art. 118 I lit. b), nur die
+  gegnerische Parteientschädigung bleibt (Art. 118 III), Nachzahlung Art. 123;
+  Art. 118/123 am Fedlex verifiziert.
+- **I9 SchKG-Verknüpfung (Teil) GEBAUT:** Querverweis im Cockpit auf
+  `/rechner/betreibungskosten` (GebV SchKG, Art. 16 SchKG / Art. 96 ZPO-Vorbehalt).
+- **OFFEN:** Notariats-/Grundbuchgebühren (I9-Rest) · Push/Deploy auf Davids Ja.
+  Nichts `geprüft`.
 
 ## Session 15.6.2026 — Prozesskosten-Cockpit I6 (Vollständigkeit der Kostenposten) GEBAUT (ungepusht)
 

@@ -83,6 +83,15 @@ Aktenzeichen (`AktenzeichenFeld`); Permalink bereits vorhanden.
 **I9 — Weitere Tarif-Assets (Burggraben):** Notariats-/Grundbuchgebühren,
 GebV-SchKG-Verknüpfung (bestehender Betreibungskosten-Rechner), Schlichtungs-
 kosten-Sonderfälle — wo deterministisch und praxisrelevant.
+**TEIL ERLEDIGT (15.6.2026):** Schlichtungskosten als eigene Datenschicht (26 Kt,
+s. oben) · GebV-SchKG-Querverweis im Cockpit auf `/rechner/betreibungskosten`
+(Art. 16 SchKG, vorbehalten in Art. 96 ZPO). OFFEN: Notariats-/Grundbuchgebühren.
+
+**Zusätzlich gebaut (15.6.2026, über den ursprünglichen Fahrplan hinaus):**
+Schlichtungstarif (26 Kt) · Modus nicht vermögensrechtlich (26 Kt, GK/PE/Schlichtung) ·
+Sicherheit Art. 99 ZPO · Handelsgericht (Art. 6) · Verteilung Art. 106–109
+(Verfahrensausgang) · unentgeltliche Rechtspflege Art. 117 ff. (Kostenrisiko-Schalter).
+Alle Norm-Anker recherche-belegt; Art. 99/118/123/6 frisch am Fedlex verifiziert.
 
 ## Reihenfolge
 I2 (sobald Recherche zurück) → I4 (Kriterien, mit I2) → I3 (Handelsgericht) →

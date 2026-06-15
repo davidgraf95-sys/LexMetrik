@@ -288,6 +288,8 @@ export interface Spanne { vonChf: number; bisChf: number }
 export interface Kostenrisiko {
   obsiegensquote: number; // 0..1
   berechenbar: boolean;
+  /** true = unter Annahme bewilligter unentgeltlicher Rechtspflege (Art. 118 ZPO). */
+  unentgeltlich?: boolean;
   /** Gerichtskosten zu eigenen Lasten = Gerichtskosten × (1 − Quote). */
   gerichtskostenZuLasten?: Spanne;
   /** Saldo Parteientschädigung = (2·Quote − 1) × Tarif; positiv = Sie erhalten,
@@ -318,8 +320,12 @@ const skaliere = (s: Spanne, f: number): Spanne =>
          : { vonChf: Math.round(s.bisChf * f), bisChf: Math.round(s.vonChf * f) };
 
 /** Kostenrisiko aus Gerichtskosten- und Parteientschädigungs-Posten bei
- *  gegebener Obsiegensquote (0..1). gk/pe stammen aus berechneProzesskosten. */
-export function berechneKostenrisiko(gk: PostenErgebnis, pe: PostenErgebnis, obsiegensquote: number): Kostenrisiko {
+ *  gegebener Obsiegensquote (0..1). gk/pe stammen aus berechneProzesskosten.
+ *  `unentgeltlich` = bewilligte unentgeltliche Rechtspflege (Art. 118 ZPO):
+ *  eigene Gerichtskosten befreit, Vorschuss entfällt, Rechtsbeistand vom Kanton —
+ *  ABER die Parteientschädigung an die Gegenpartei bleibt geschuldet (Abs. 3),
+ *  Nachzahlungsvorbehalt (Art. 123). */
+export function berechneKostenrisiko(gk: PostenErgebnis, pe: PostenErgebnis, obsiegensquote: number, unentgeltlich = false): Kostenrisiko {
   const q = Math.min(1, Math.max(0, obsiegensquote));
   const gkS = postenSpanne(gk);
   const peS = postenSpanne(pe);
@@ -328,16 +334,29 @@ export function berechneKostenrisiko(gk: PostenErgebnis, pe: PostenErgebnis, obs
     'Schätzung: das Gericht kann nach Ermessen abweichen (Art. 107 ZPO, u. a. familienrechtliche Verfahren) und unnötige Kosten gesondert auferlegen (Art. 108 ZPO).',
     'Deckungslücke: die zugesprochene Parteientschädigung (Tarif) kann unter dem effektiv vereinbarten Anwaltshonorar liegen.',
   ];
+  if (unentgeltlich) hinweise.push(
+    'Unentgeltliche Rechtspflege bewilligt: Befreiung von Vorschuss/Sicherheit und Gerichtskosten, unentgeltlicher Rechtsbeistand (Art. 118 Abs. 1 ZPO).',
+    'ABER: keine Befreiung von der Parteientschädigung an die Gegenpartei (Art. 118 Abs. 3 ZPO) — dieses Risiko bleibt.',
+    'Nachzahlungspflicht, sobald die Partei dazu in der Lage ist; der Anspruch des Kantons verjährt 10 Jahre nach Verfahrensabschluss (Art. 123 ZPO).',
+  );
   if (!gkS || !peS) {
-    return { obsiegensquote: q, berechenbar: false, hinweise: [...hinweise, 'Für diese Konstellation (z. B. Schlichtungspauschale oder aufwandbasierter Anwaltstarif) ist das Kostenrisiko nicht beziffert.'] };
+    return { obsiegensquote: q, berechenbar: false, unentgeltlich, hinweise: [...hinweise, 'Für diese Konstellation (z. B. Schlichtungspauschale oder aufwandbasierter Anwaltstarif) ist das Kostenrisiko nicht beziffert.'] };
   }
+  // Bei UR trägt die Partei die eigenen Gerichtskosten nicht (Art. 118 I lit. b)
+  // und der eigene Rechtsbeistand wird vom Kanton entschädigt; es bleibt das
+  // Risiko der gegnerischen Parteientschädigung bei (teilweisem) Unterliegen.
+  const gkZuLasten = unentgeltlich ? { vonChf: 0, bisChf: 0 } : skaliere(gkS, 1 - q);
+  const netto = unentgeltlich
+    ? skaliere(peS, 1 - q) // nur die gegnerische Parteientschädigung
+    : { vonChf: Math.round((1 - q) * (gkS.vonChf + 2 * peS.vonChf)), bisChf: Math.round((1 - q) * (gkS.bisChf + 2 * peS.bisChf)) };
   return {
     obsiegensquote: q,
     berechenbar: true,
-    gerichtskostenZuLasten: skaliere(gkS, 1 - q),
+    unentgeltlich,
+    gerichtskostenZuLasten: gkZuLasten,
     parteientschaedigungSaldo: skaliere(peS, 2 * q - 1),
     eigeneAnwaltskostenRichtwert: peS,
-    nettoBelastung: { vonChf: Math.round((1 - q) * (gkS.vonChf + 2 * peS.vonChf)), bisChf: Math.round((1 - q) * (gkS.bisChf + 2 * peS.bisChf)) },
+    nettoBelastung: netto,
     hinweise,
   };
 }

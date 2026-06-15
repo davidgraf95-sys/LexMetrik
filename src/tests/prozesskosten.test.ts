@@ -150,6 +150,20 @@ describe('Kostenrisiko nach Obsiegensquote (Art. 106/111 ZPO)', () => {
     // GK [3000,6000], PE [4500,10000]; Netto 0,5×(GK+2PE) = [6000,13000]
     expect(r.nettoBelastung).toEqual({ vonChf: 6000, bisChf: 13000 });
   });
+  it('unentgeltliche Rechtspflege (Art. 118): GK befreit, nur Gegenpartei-PE bleibt', () => {
+    const zh = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    // q=0 (volles Unterliegen): ohne UR Netto 19'550; mit UR nur die gegnerische PE = 7'000, GK befreit
+    const r = berechneKostenrisiko(zh.gerichtskosten, zh.parteientschaedigung, 0, true);
+    expect(r.gerichtskostenZuLasten).toEqual({ vonChf: 0, bisChf: 0 });
+    expect(r.nettoBelastung).toEqual({ vonChf: 7000, bisChf: 7000 }); // nur Gegenpartei-Entschädigung
+    expect(r.unentgeltlich).toBe(true);
+    expect(r.hinweise.some((h) => h.includes('Art. 118 Abs. 3'))).toBe(true);
+    expect(r.hinweise.some((h) => h.includes('Art. 123'))).toBe(true);
+  });
+  it('UR bei vollem Obsiegen: keine Eigenbelastung', () => {
+    const zh = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    expect(berechneKostenrisiko(zh.gerichtskosten, zh.parteientschaedigung, 1, true).nettoBelastung).toEqual({ vonChf: 0, bisChf: 0 });
+  });
   it('aufwandbasierter Tarif (GR Parteientschädigung) → nicht beziffert', () => {
     const gr = berechneProzesskosten({ kanton: 'GR', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
     const r = berechneKostenrisiko(gr.gerichtskosten, gr.parteientschaedigung, 0.5);
