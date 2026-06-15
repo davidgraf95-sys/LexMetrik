@@ -61,26 +61,42 @@ export function Stepper({ schritte, aktiv, onWechsel }: {
   aktiv: number;
   onWechsel: (i: number) => void;
 }) {
+  const anteil = (aktiv + 1) / schritte.length;
   return (
-    <nav aria-label="Schritte" className="flex flex-wrap gap-x-1 gap-y-2">
-      {schritte.map((s, i) => {
-        const erledigt = i < aktiv;
-        const istAktiv = i === aktiv;
-        return (
-          <button key={s.id} type="button" onClick={() => i <= aktiv && onWechsel(i)}
-            aria-current={istAktiv ? 'step' : undefined}
-            className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-              istAktiv ? 'bg-surface-raised border border-line text-brass-700 shadow-sm'
-              : erledigt ? 'text-ink-700 hover:bg-brass-100/50'
-              : 'text-ink-500 cursor-default'
-            }`}>
-            <span className={`num inline-flex items-center justify-center w-5 h-5 rounded-full text-micro ${
-              erledigt ? 'bg-brass-500 text-ink-900' : istAktiv ? 'border border-brass-500 text-brass-700' : 'border border-line text-ink-500'
-            }`}>{erledigt ? '✓' : i + 1}</span>
-            {s.label}
-          </button>
-        );
-      })}
+    <nav aria-label="Schritte">
+      {/* Mobile: kompakter Fortschritt statt Chip-Wolke (bei 7 Schritten sonst
+          eine mehrzeilige Wolke ohne Fortschrittsgefühl, Redesign E6). */}
+      <div className="sm:hidden space-y-1.5">
+        <div className="flex items-baseline justify-between gap-3">
+          <span className="lc-overline shrink-0">Schritt <span className="num">{aktiv + 1}</span>/<span className="num">{schritte.length}</span></span>
+          <span className="text-body-s font-medium text-ink-700 truncate text-right">{schritte[aktiv].label}</span>
+        </div>
+        <div className="h-1 rounded-full bg-well overflow-hidden"
+          role="progressbar" aria-valuenow={aktiv + 1} aria-valuemin={1} aria-valuemax={schritte.length}>
+          <div className="h-full bg-brass-500 origin-left transition-transform motion-reduce:transition-none" style={{ transform: `scaleX(${anteil})` }} />
+        </div>
+      </div>
+      {/* Desktop: klickbare Schritt-Chips */}
+      <div className="hidden sm:flex flex-wrap gap-x-1 gap-y-2">
+        {schritte.map((s, i) => {
+          const erledigt = i < aktiv;
+          const istAktiv = i === aktiv;
+          return (
+            <button key={s.id} type="button" onClick={() => i <= aktiv && onWechsel(i)}
+              aria-current={istAktiv ? 'step' : undefined}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                istAktiv ? 'bg-surface-raised border border-line text-brass-700 shadow-sm'
+                : erledigt ? 'text-ink-700 hover:bg-brass-100/50'
+                : 'text-ink-500 cursor-default'
+              }`}>
+              <span className={`num inline-flex items-center justify-center w-5 h-5 rounded-full text-micro ${
+                erledigt ? 'bg-brass-500 text-ink-900' : istAktiv ? 'border border-brass-500 text-brass-700' : 'border border-line text-ink-500'
+              }`}>{erledigt ? '✓' : i + 1}</span>
+              {s.label}
+            </button>
+          );
+        })}
+      </div>
     </nav>
   );
 }

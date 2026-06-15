@@ -52,6 +52,22 @@ export function VorlagenWizardRahmen({
   const [beruehrt, setBeruehrt] = useState(false);
   const merkeEingabe = () => { if (!beruehrt) setBeruehrt(true); };
 
+  // Mobile Live-Vorschau (Redesign E6): sie ist das Kernversprechen, war aber
+  // auf dem Telefon in allen Eingabe-Schritten zugeklappt. Jetzt steuerbar +
+  // automatisch offen, sobald der Prüfen-Schritt erreicht ist (Render-Phasen-
+  // Abgleich statt Effect — lint-konform).
+  const [vorschauOffen, setVorschauOffen] = useState(false);
+  const [letzterSchritt, setLetzterSchritt] = useState(schritt);
+  if (schritt !== letzterSchritt) {
+    setLetzterSchritt(schritt);
+    if (schritt === schritte.length - 1 && !vorschauOffen) setVorschauOffen(true);
+  }
+  const zurVorschau = () => {
+    setVorschauOffen(true);
+    const rm = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    document.getElementById('wizard-vorschau')?.scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'start' });
+  };
+
   return (
     <div className="space-y-6">
       {/* Kopf */}
@@ -104,21 +120,30 @@ export function VorlagenWizardRahmen({
               Grundsatz David: erst nach erster Eingabe zeigen (beruehrt). */}
           {beruehrt && fehler != null && <FehlerBox fehler={fehler} />}
 
-          <div className="flex items-center justify-between pt-2 border-t border-line">
+          <div className="flex items-end justify-between gap-3 pt-2 border-t border-line">
             <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
               disabled={schritt === 0} className="lc-btn-ghost">← Zurück</button>
             {schritt < schritte.length - 1 && (
-              <button type="button" onClick={() => setSchritt((s) => s + 1)}
-                disabled={weiterAus} className="lc-btn-primary">
-                Weiter →
-              </button>
+              <div className="flex flex-col items-end gap-1">
+                {/* Erklärt den ausgegrauten Weiter-Button (sonst wirkt er wie
+                    ein Defekt) — immer sichtbar, nicht fehler-rot. */}
+                {weiterAus && (
+                  <p id="weiter-hinweis" className="text-xs text-ink-500">Bitte Pflichtfelder ausfüllen</p>
+                )}
+                <button type="button" onClick={() => setSchritt((s) => s + 1)}
+                  disabled={weiterAus} aria-describedby={weiterAus ? 'weiter-hinweis' : undefined}
+                  className="lc-btn-primary">
+                  Weiter →
+                </button>
+              </div>
             )}
           </div>
         </div>
 
         {/* Vorschau – mobil einklappbar, Desktop klebend; identischer Inhalt
             zweimal platziert (kein Remount, wie bisheriger Funktionsaufruf) */}
-        <details className="lg:hidden bg-surface border border-line rounded-xl" open={schritt === schritte.length - 1}>
+        <details id="wizard-vorschau" className="lg:hidden bg-surface border border-line rounded-xl scroll-mt-24"
+          open={vorschauOffen} onToggle={(e) => setVorschauOffen((e.currentTarget as HTMLDetailsElement).open)}>
           <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between text-body-s font-medium text-ink-700">
             <span>Vorschau & Bausteinprotokoll</span>
             <span aria-hidden className="text-ink-500">▾</span>
@@ -129,6 +154,14 @@ export function VorlagenWizardRahmen({
           {vorschau}
         </div>
       </div>
+
+      {/* Mobile: Sprung zur Live-Vorschau — der Kernnutzen («was du siehst,
+          kommt raus») soll auch beim Tippen erreichbar sein, nicht erst im
+          letzten Schritt. */}
+      <button type="button" onClick={zurVorschau}
+        className="lg:hidden fixed bottom-4 right-4 z-30 lc-btn-outline lc-btn-sm shadow-md bg-surface">
+        Vorschau ↓
+      </button>
     </div>
   );
 }
