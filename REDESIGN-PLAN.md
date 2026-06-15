@@ -145,9 +145,13 @@ Checkbox-Rest: ~25 Sondermuster in `forms/` (v.a. ZustaendigkeitForm) + ~150 in 
 - **forms/-Tap-Zeilen ✓** (b5ff766) — 28 restliche inline-Checkbox/Radio-Labels
   (v.a. ZustaendigkeitForm 14) auf gap-2.5 + py-1.5; Touch-Konsistenz mit #4.
 
+### Weiterer Feinschliff (Forts.)
+- **Fokus-Ring ✓** (8fe33aa) — `.lc-input` jetzt abgesetzter Doppelring (`--ring`).
+- **Wizard-Sub-Gruppen ✓** (76f4692) — `<GruppenTitel>` (Messing-Overline + Haarlinie,
+  **Entscheid David Variante A**); 86 Untertitel in 20 Vorlagen → Haarlinien-Sektionen
+  wie in den Rechnern.
+
 ### Bewusst zurückgestellt (für David / spätere Runde)
-- **Wizard-Sub-Gruppen** in langen Schritten — per-Seite (Vorlage-Step-Inhalte),
-  Feld-Gruppierung ist eine Layout-Entscheidung (besser mit Davids Blick).
 - **Wizard-Schalter-Stapelung** (Vertragstyp + Detailgrad) — per-Seite.
 - **Rich-JSX-Checkboxen → Primitiv** (Pages + ZustaendigkeitForm) — nur Tap-Sweep,
   kein Voll-Restructure (Nutzen/Risiko).
