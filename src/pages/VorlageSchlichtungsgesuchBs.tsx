@@ -507,7 +507,7 @@ export function VorlageSchlichtungsgesuchBs() {
           {stopp && stoppKarte()}
 
           {!stopp && maengel.length > 0 && (
-            <div className="rounded-lg border bg-danger-bg p-4 space-y-1.5" role="alert" aria-live="polite">
+            <div className="rounded-lg border bg-danger-bg p-4 space-y-1.5" role="alert">
               <p className="lc-overline text-danger-700">Mängelliste – vor dem Download zu beheben</p>
               {maengel.map((m, i) => (
                 <p key={i} className="text-body-s text-danger-700">

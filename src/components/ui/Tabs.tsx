@@ -41,8 +41,23 @@ export function Tabs<T extends string>({
       aria-label={ariaLabel}
       className={`flex ${HOEHE[groesse]} items-stretch gap-1 p-0.5 bg-surface border border-line rounded-lg w-fit max-w-full overflow-x-auto`}
     >
-      {items.map((it) => {
+      {items.map((it, i) => {
         const aktiv = value === it.code;
+        // APG-Tabs-Muster (Redesign E9): roving tabindex (genau ein tabbarer
+        // Tab) + Pfeiltasten/Home/End. Vorher war role=tab gesetzt, aber die
+        // erwartete Tastaturnavigation fehlte (ARIA-Versprechen ohne Verhalten).
+        const aufTaste = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+          if (mode !== 'tab') return;
+          let ziel: number;
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') ziel = (i + 1) % items.length;
+          else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ziel = (i - 1 + items.length) % items.length;
+          else if (e.key === 'Home') ziel = 0;
+          else if (e.key === 'End') ziel = items.length - 1;
+          else return;
+          e.preventDefault();
+          onChange(items[ziel].code);
+          (e.currentTarget.parentElement?.children[ziel] as HTMLElement | undefined)?.focus();
+        };
         return (
           <button
             key={it.code}
@@ -50,6 +65,8 @@ export function Tabs<T extends string>({
             role={mode === 'tab' ? 'tab' : undefined}
             aria-selected={mode === 'tab' ? aktiv : undefined}
             aria-pressed={mode === 'pressed' ? aktiv : undefined}
+            tabIndex={mode === 'tab' ? (aktiv ? 0 : -1) : undefined}
+            onKeyDown={aufTaste}
             onClick={() => onChange(it.code)}
             // Touch-Target (FAHRPLAN-DESIGN 3.2, revidiert im Bug-Check §9):
             // eine Pseudo-Element-Erweiterung wird vom overflow-x-auto-

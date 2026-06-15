@@ -4,7 +4,7 @@
 
 export function LexMetrikSiegel({ size = 32 }: { size?: number }) {
   return (
-    <svg viewBox="0 0 48 48" width={size} height={size} role="img" aria-label="LexMetrik" aria-hidden="true">
+    <svg viewBox="0 0 48 48" width={size} height={size} aria-hidden="true">
       <rect x="3" y="3" width="42" height="42" rx="9" fill="var(--ink-900)" />
       <path d="M12 3 H36 A9 9 0 0 1 45 12" fill="none"
         stroke="var(--brass-500)" strokeWidth="1.5" strokeLinecap="round" />

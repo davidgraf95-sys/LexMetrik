@@ -31,6 +31,8 @@ type Props = {
 };
 
 function monatKey(d: Date) { return d.getFullYear() * 12 + d.getMonth(); }
+// Deterministisches Klartext-Datum für die Screenreader-Zusammenfassung (E9).
+const fmtDatum = (d: Date) => `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
 
 type BandStatus = 'frist' | 'still' | null;
 
@@ -72,10 +74,13 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 mb-4">
         <p className="lc-overline">Fristenlauf</p>
         {feiertage && (
-          <p className="lc-overline text-ink-400">Feiertage <span className="text-ink-600">{kanton}</span></p>
+          <p className="lc-overline text-ink-500">Feiertage <span className="text-ink-600">{kanton}</span></p>
         )}
       </div>
-      <div className="flex flex-wrap items-start gap-x-7 gap-y-6">
+      {/* Die grafische Matrix transportiert ihre Bedeutung nur visuell (Farbe/
+          Form/title) — für Screenreader aria-hidden und durch die sr-only-
+          Zusammenfassung unten ersetzt (E9, WCAG 1.3.1/1.4.1). */}
+      <div className="flex flex-wrap items-start gap-x-7 gap-y-6" aria-hidden>
         {monate.map((monat, idx) => {
           const jahr = monat.getFullYear();
           const m = monat.getMonth();
@@ -99,8 +104,8 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
                   <span className="lc-overline text-brass-700">{jahr}</span>
                 </p>
                 <div className="grid grid-cols-7 gap-x-0 gap-y-0.5 text-center">
-                  {WTAGE.map((w, wi) => (
-                    <div key={w} className={`lc-overline py-1 ${wi >= 5 ? 'text-ink-400' : 'text-ink-500'}`}>{w}</div>
+                  {WTAGE.map((w) => (
+                    <div key={w} className="lc-overline py-1 text-ink-500">{w}</div>
                   ))}
                   {zellen.map((d, i) => {
                     if (!d) return <div key={i} />;
@@ -145,6 +150,12 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
         })}
       </div>
 
+      {/* Textgleichwertige Zusammenfassung für Screenreader (die Matrix oben
+          ist aria-hidden). Datum deterministisch, keine Logik. */}
+      <p className="sr-only">
+        {`Fristenlauf: ${L.ereignis} am ${fmtDatum(ereignis)}, ${L.aquo} am ${fmtDatum(aQuo)}, ${L.adquem} am ${fmtDatum(adQuem)}.${stillstandSichtbar ? ' Im Zeitraum liegt ein Gerichtsstillstand.' : ''}`}
+      </p>
+
       {luecken && <p className="text-body-s text-ink-500 mt-3 italic">Dazwischenliegende Monate sind nicht dargestellt.</p>}
 
       {/* Legende — Überarbeitung 7.6.2026 (Auftrag David): zwei gelesene
@@ -153,7 +164,7 @@ export function FristenKalender({ ereignisISO, aQuoISO, adQuemISO, kanton, still
           die Flächen (Band/Schraffur) und die abgeschwächten arbeitsfreien
           Tage. Muster sind Miniaturen der echten Zellen-Rezepte. */}
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-4 pt-3 border-t border-line text-body-s text-ink-700">
-        <span className="lc-overline text-ink-400">Legende</span>
+        <span className="lc-overline text-ink-500">Legende</span>
         {ereignisISO !== aQuoISO && <Legende kreis="border-2 border-ink-900 bg-paper-raised" label={L.ereignis} />}
         <Legende kreis="bg-brass-500" label={L.aquo} />
         <Legende kreis="bg-sage-500 lc-termin-ring" label={L.adquem} />
