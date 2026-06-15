@@ -34,6 +34,9 @@
     --accent:var(--brass-500);       /* nur Linien/Icons/grosse Flächen */
     --accent-text:var(--brass-700);  /* Brass-Text & Links (kontraststark) */
     --focus:var(--brass-500);
+    /* Abgesetzter Doppelring (Fokus): Papier-Spalt + Messing — auf warmem
+       Papier klar sichtbar und vom Hover unterscheidbar (Redesign A11y). */
+    --ring:0 0 0 2px var(--surface), 0 0 0 4px var(--focus);
 
     /* Mass-Skala (8-px-Raster) — Grundlage der meisten Abstände; einzelne
        Halbstufen (gap-1.5 = 6px) werden bewusst über Tailwind-Utilities gesetzt */
@@ -181,7 +184,7 @@
   .lc-input::placeholder { color: var(--ink-300); }
   .lc-input:focus, .lc-input:focus-visible {
     outline: none; border-color: var(--brass-600);
-    box-shadow: 0 0 0 2px var(--focus); /* Werteinstellung am Gerät */
+    box-shadow: var(--ring); /* abgesetzter Doppelring — klar sichtbar auf Papier */
   }
   /* Kompakte Eingabe-Variante (Zeilen/Toolbars) — analog .lc-btn-sm; löst die
      ad-hoc h-10/rounded-lg/ring-Inseln (EinfacheFrist/Tagerechner) ab. */
