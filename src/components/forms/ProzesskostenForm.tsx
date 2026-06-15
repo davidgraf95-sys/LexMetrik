@@ -4,9 +4,13 @@ import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { BetragsFeld } from '../BetragsFeld';
 import { LinkTeilenButton } from '../LinkTeilenButton';
+import { AktenzeichenFeld } from '../AktenzeichenFeld';
+import { PdfExportButton } from '../PdfExport';
+import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { permalinkKodieren, permalinkLesen, einerVon, type PermalinkSpec } from '../../lib/permalink';
 import {
   berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung,
+  berechneInstanzenzug, prozesskostenBericht,
   vergleichAlleKantone, postenText, MATERIEN, VERFAHRENSPHASEN, VERFAHRENSARTEN, INSTANZEN, KANTONE, WEITERE_KOSTENPOSTEN,
   type KantonCode, type Verfahrensphase, type Materie, type Verfahrensart, type Instanz, type PostenErgebnis,
 } from '../../lib/prozesskosten';
@@ -82,6 +86,8 @@ export function ProzesskostenForm() {
   const [quote, setQuote] = useState<number>(typeof ausLink.quote === 'number' ? (ausLink.quote as number) : 50);
   const [vergleich, setVergleich] = useState(false);
   const [mwst, setMwst] = useState<boolean>(ausLink.mwst === true);
+  const [zug, setZug] = useState(false);
+  const [aktenzeichen, setAktenzeichen] = useState('');
   // Geteilter Link mit Quote (q=…) öffnet das Kostenrisiko-Panel direkt.
   const [risiko, setRisiko] = useState(typeof ausLink.quote === 'number');
 
@@ -109,6 +115,34 @@ export function ProzesskostenForm() {
     () => (mwst && ergebnis) ? berechneMwstParteientschaedigung(ergebnis.parteientschaedigung) : null,
     [mwst, ergebnis],
   );
+  const instanzenzug = useMemo(
+    () => (zug && streitwert !== undefined && !bger) ? berechneInstanzenzug(kanton, streitwert, materie, verfahrenRelevant ? verfahren : 'ordentlich',
+      { schlichtung: true, erstinstanz: true, rechtsmittel: true, bundesgericht: true }) : null,
+    [zug, kanton, streitwert, materie, verfahren, verfahrenRelevant, bger],
+  );
+
+  const pdfConfig: PdfDocConfig | null = useMemo(() => {
+    if (!ergebnis) return null;
+    return {
+      aktenzeichen: aktenzeichen.trim() || undefined,
+      title: 'Prozesskosten (Art. 95/96 ZPO)',
+      rechtsgrundlage: `${KANTON_NAMEN[kanton]} · ${VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}${verfahrenRelevant && verfahren !== 'ordentlich' ? `, ${VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label}` : ''} · ${INSTANZEN.find((i) => i.wert === instanz)?.label}`,
+      domain: 'prozesskosten',
+      fileBase: 'Prozesskosten',
+      inputs: {
+        'Kanton': `${kanton} — ${KANTON_NAMEN[kanton]}`,
+        'Streitwert': streitwert !== undefined ? `CHF ${streitwert.toLocaleString('de-CH')}` : '–',
+        'Verfahrensphase': VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label ?? '',
+        ...(verfahrenRelevant ? { 'Verfahrensart': VERFAHRENSARTEN.find((v) => v.wert === verfahren)?.label ?? '' } : {}),
+        'Instanz': INSTANZEN.find((i) => i.wert === instanz)?.label ?? '',
+        'Materie': MATERIEN.find((m) => m.wert === materie)?.label ?? '',
+      },
+      sections: [{ titel: 'Kostenschätzung', ergebnis: prozesskostenBericht(ergebnis, {
+        vorschuss: vorschuss ?? undefined, mwst: mwstAufschlag, kostenrisiko, instanzenzug,
+      }) }],
+      disclaimer: DISCLAIMER,
+    };
+  }, [ergebnis, aktenzeichen, kanton, streitwert, phase, verfahren, verfahrenRelevant, instanz, materie, vorschuss, mwstAufschlag, kostenrisiko, instanzenzug]);
 
   return (
     <BeruehrtRahmen>
@@ -153,7 +187,7 @@ export function ProzesskostenForm() {
       {ergebnis && (
         <ErgebnisBlock>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <PostenKarte titel={bger ? 'Gerichtskosten (BGer)' : 'Gerichtskosten (Entscheidgebühr)'} posten={ergebnis.gerichtskosten} />
+            <PostenKarte titel={bger ? 'Gerichtskosten (BGer)' : phase === 'schlichtung' ? 'Gerichtskosten (Schlichtungstarif)' : 'Gerichtskosten (Entscheidgebühr)'} posten={ergebnis.gerichtskosten} />
             <PostenKarte titel="Parteientschädigung" posten={ergebnis.parteientschaedigung} />
           </div>
 
@@ -211,6 +245,12 @@ export function ProzesskostenForm() {
               <button type="button" onClick={() => setVergleich((v) => !v)}
                 className="text-body-s underline text-ink-700 hover:text-ink-900">
                 {vergleich ? 'Interkantonalen Vergleich ausblenden' : 'Was würde es in anderen Kantonen kosten? →'}
+              </button>
+            )}
+            {!bger && (
+              <button type="button" onClick={() => setZug((v) => !v)}
+                className="text-body-s underline text-ink-700 hover:text-ink-900">
+                {zug ? 'Instanzenzug ausblenden' : 'Gesamtkosten über den Instanzenzug →'}
               </button>
             )}
             <LinkTeilenButton query={() => permalinkKodieren(PK_LINK_SPEC, { kanton, sw: streitwert, phase, materie, instanz, verfahren: verfahrenRelevant ? verfahren : undefined, quote: risiko ? quote : undefined, mwst: mwst ? true : undefined })} />
@@ -275,6 +315,50 @@ export function ProzesskostenForm() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          )}
+
+          {zug && instanzenzug && (
+            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+              <p className="lc-overline text-ink-500">Gesamtkostenrisiko über den Instanzenzug</p>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full min-w-[30rem] text-body-s border-collapse">
+                  <thead>
+                    <tr className="lc-overline text-ink-500 border-b border-line">
+                      <th className="text-left py-2 pr-3">Stufe</th>
+                      <th className="text-right py-2 px-3">Gerichtskosten</th>
+                      <th className="text-right py-2 pl-3">Parteientschädigung</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {instanzenzug.stufen.map((s) => (
+                      <tr key={s.schluessel} className="border-b border-line/60">
+                        <td className="py-1.5 pr-3">{s.label}</td>
+                        <td className="py-1.5 px-3 text-right num text-ink-800">{postenText(s.ergebnis.gerichtskosten)}</td>
+                        <td className="py-1.5 pl-3 text-right num text-ink-800">{postenText(s.ergebnis.parteientschaedigung)}</td>
+                      </tr>
+                    ))}
+                    <tr className="font-semibold text-ink-900 border-t border-line">
+                      <td className="py-2 pr-3">Summe (Unterliegen auf jeder Stufe)</td>
+                      <td className="py-2 px-3 text-right num">{spanneText(instanzenzug.gesamtGk ?? undefined)}</td>
+                      <td className="py-2 pl-3 text-right num">{spanneText(instanzenzug.gesamtPe ?? undefined)}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 num text-body-l font-semibold text-ink-900">
+                Gesamt: {spanneText(instanzenzug.gesamt ?? undefined)}{instanzenzug.unbeziffert ? ' (Untergrenze)' : ''}
+              </p>
+              <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
+                {instanzenzug.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {pdfConfig && (
+            <div className="mt-5 border-t border-line pt-4 space-y-3">
+              <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+              <PdfExportButton config={pdfConfig} />
             </div>
           )}
         </ErgebnisBlock>

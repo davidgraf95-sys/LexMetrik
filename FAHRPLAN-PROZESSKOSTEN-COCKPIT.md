@@ -62,11 +62,23 @@ Rechtspflege Art. 117–118/123 als ehrlicher Hinweis). UI: Vorschuss-Kachel,
 MwSt-Schalter (+Permalink `mw`), aufklappbare «Weitere Kostenposten». 11 neue
 Tests (handgerechnet), Gate grün, golden byte-gleich. Nichts trägt `geprüft`.
 
-**I7 — Instanz-Akkumulation:** Gesamt-Kostenrisiko über den Instanzenzug
-(Schlichtung → 1. Instanz → Rechtsmittel → BGer), summiert.
+**Schlichtungstarif — FERTIG (15.6.2026):** eigene Datenschicht
+`src/data/tarif/schlichtung.ts` (alle 26 Kantone, vermögensrechtliche
+Schlichtungsgebühr wörtlich aus `bibliothek/kosten/schlichtungsgebuehren-kantone.md`,
+zweifach geprüft 5.6.2026). Engine nutzt in der Schlichtungsphase nun den echten
+Schlichtungstarif (beziffert) statt «nicht beziffert»; VD/NE forfaitaire
+(deterministisch), übrige Ermessensrahmen; FR/BS/AG `recherche`-Caveat. Art.-113-
+Kostenlos-Vorschalter bleibt vorrangig.
 
-**I8 — Mandatstauglichkeit:** PDF-Export der Kostenschätzung mit Aktenzeichen/
-Parteien (mandatstauglicher Output, §G3); Permalink (schon vorhanden) erweitern.
+**I7 — Instanz-Akkumulation — FERTIG (15.6.2026):** `berechneInstanzenzug`
+summiert GK + Parteientschädigung über die gewählten Stufen (Schlichtung →
+1. Instanz → Rechtsmittel → BGer); nicht bezifferte Stufen (aufwandbasiert) als
+Untergrenze ausgewiesen. UI: aufklappbare Stufen-Tabelle + Gesamtzeile.
+
+**I8 — Mandatstauglichkeit — FERTIG (15.6.2026):** `prozesskostenBericht` bildet
+das Kostenbild (GK + PE + Vorschuss + optional MwSt/Kostenrisiko/Instanzenzug)
+auf `Berechnungsergebnis` ab → zentraler PDF-Export (`PdfExportButton`) mit
+Aktenzeichen (`AktenzeichenFeld`); Permalink bereits vorhanden.
 
 **I9 — Weitere Tarif-Assets (Burggraben):** Notariats-/Grundbuchgebühren,
 GebV-SchKG-Verknüpfung (bestehender Betreibungskosten-Rechner), Schlichtungs-

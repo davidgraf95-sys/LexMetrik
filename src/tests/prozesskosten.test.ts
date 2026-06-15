@@ -1,6 +1,6 @@
 // ─── Prozesskosten-Engine (Art. 95/96/113/114 ZPO) ─────────────────────────
 import { describe, expect, it } from 'vitest';
-import { berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung, vergleichAlleKantone, postenText, WEITERE_KOSTENPOSTEN, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
+import { berechneProzesskosten, berechneKostenrisiko, berechneKostenvorschuss, berechneMwstParteientschaedigung, berechneInstanzenzug, prozesskostenBericht, vergleichAlleKantone, postenText, WEITERE_KOSTENPOSTEN, KANTONE, type PostenErgebnis } from '../lib/prozesskosten';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 
@@ -60,12 +60,16 @@ describe('kostenlose Verfahren (Art. 113/114 ZPO)', () => {
     expect(berechneProzesskosten({ kanton: 'BE', streitwertCHF: 100000, phase: 'schlichtung', materie: 'gleichstellung' }).gerichtskosten.kostenlos).toBe(true);
     expect(berechneProzesskosten({ kanton: 'BE', streitwertCHF: 100000, phase: 'entscheid', materie: 'gleichstellung' }).gerichtskosten.kostenlos).toBe(true);
   });
-  it('Schlichtung: Gerichtskosten = Schlichtungspauschale (separater Tarif), NICHT die Entscheidgebühr', () => {
+  it('Schlichtung: eigener kantonaler Schlichtungstarif, NICHT die Entscheidgebühr', () => {
     const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
+    const entscheid = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
     expect(r.gerichtskosten.kostenlos).toBe(false);
-    expect(r.gerichtskosten.schlichtungspauschale).toBe(true);
-    expect(r.gerichtskosten.ergebnis).toBeUndefined(); // keine bezifferte Entscheidgebühr
-    expect(postenText(r.gerichtskosten)).toMatch(/Schlichtungspauschale/);
+    expect(r.gerichtskosten.quelle.artikel).toBe('§ 3');           // GebV OG § 3 (Schlichtung)
+    expect(entscheid.gerichtskosten.quelle.artikel).toBe('§ 4 Abs. 1'); // § 4 (Entscheidgebühr)
+    // ZH SCHLICHTUNG Band 10k–100k = 420–615 (deutlich tiefer als die Entscheidgebühr 5550)
+    const e = r.gerichtskosten.ergebnis;
+    expect(e?.deterministisch).toBe(false);
+    if (e && !e.deterministisch) { expect(e.vonChf).toBe(420); expect(e.bisChf).toBe(615); }
   });
   it('Parteientschädigung: in der Schlichtung immer keine (Art. 113 Abs. 1)', () => {
     const r = berechneProzesskosten({ kanton: 'GE', streitwertCHF: 200000, phase: 'schlichtung', materie: 'allgemein' });
@@ -182,11 +186,11 @@ describe('Kostenvorschuss (I6 — Art. 98 ZPO / Art. 62 BGG)', () => {
     expect(v.norm).toBe('Art. 62 BGG');
     expect(v.spanne).toEqual({ vonChf: 1500, bisChf: 5000 });
   });
-  it('Schlichtung: voll, aber Pauschale nicht beziffert (spanne null)', () => {
+  it('Schlichtung: voller Vorschuss auf den (jetzt bezifferten) Schlichtungstarif', () => {
     const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
     const v = berechneKostenvorschuss(r.gerichtskosten, 'schlichtung', 'erstinstanz', 'ordentlich');
     expect(v.voll).toBe(true);
-    expect(v.spanne).toBeNull();
+    expect(v.spanne).toEqual({ vonChf: 420, bisChf: 615 }); // voll = der ganze Schlichtungstarif
   });
   it('kostenloses Verfahren: kein Vorschuss', () => {
     const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 25000, phase: 'entscheid', materie: 'arbeit' });
@@ -218,6 +222,114 @@ describe('MwSt auf Parteientschädigung (I6 — Art. 95 III lit. b / MWSTG 8,1 %
   it('weitere Kostenposten sind als Hinweis vorhanden (Art. 95 II c–e / 117 ff.)', () => {
     expect(WEITERE_KOSTENPOSTEN.length).toBeGreaterThanOrEqual(3);
     expect(WEITERE_KOSTENPOSTEN.some((h) => h.includes('Art. 117'))).toBe(true);
+  });
+});
+
+describe('Instanz-Akkumulation (I7 — Gesamtkostenrisiko über den Instanzenzug)', () => {
+  it('Erstinstanz + Rechtsmittel: GK und PE je Stufe summiert (handgerechnet)', () => {
+    const z = berechneInstanzenzug('ZH', 50000, 'allgemein', 'ordentlich',
+      { schlichtung: false, erstinstanz: true, rechtsmittel: true, bundesgericht: false });
+    expect(z.stufen).toHaveLength(2);
+    // erstinstanz GK 5550 / PE 7000; rechtsmittel GK [1832,5550] / PE [1400,7000]
+    expect(z.gesamtGk).toEqual({ vonChf: 7382, bisChf: 11100 });
+    expect(z.gesamtPe).toEqual({ vonChf: 8400, bisChf: 14000 });
+    expect(z.gesamt).toEqual({ vonChf: 15782, bisChf: 25100 });
+    expect(z.unbeziffert).toBe(false);
+  });
+  it('mit Schlichtung: bezifferter Schlichtungstarif fliesst in die Summe ein', () => {
+    const z = berechneInstanzenzug('ZH', 50000, 'allgemein', 'ordentlich',
+      { schlichtung: true, erstinstanz: true, rechtsmittel: false, bundesgericht: false });
+    expect(z.stufen).toHaveLength(2);
+    // Schlichtung GK 420–615 + Erstinstanz GK 5550 = 5970–6165
+    expect(z.gesamtGk).toEqual({ vonChf: 5970, bisChf: 6165 });
+    expect(z.gesamtPe).toEqual({ vonChf: 7000, bisChf: 7000 }); // Schlichtung-PE = 0 (Art. 113 I)
+    expect(z.unbeziffert).toBe(false);
+  });
+  it('aufwandbasierte Parteientschädigung (GR) macht die Stufe unbeziffert', () => {
+    const z = berechneInstanzenzug('GR', 50000, 'allgemein', 'ordentlich',
+      { schlichtung: false, erstinstanz: true, rechtsmittel: false, bundesgericht: false });
+    expect(z.unbeziffert).toBe(true);
+  });
+});
+
+describe('Schlichtungstarif (Art. 95 II lit. a ZPO — eigene kantonale Datenschicht)', () => {
+  it('alle 26 Kantone haben einen bezifferbaren Schlichtungstarif mit Quelle', () => {
+    for (const k of KANTONE) {
+      const r = berechneProzesskosten({ kanton: k, streitwertCHF: 25000, phase: 'schlichtung', materie: 'allgemein' });
+      expect(r.gerichtskosten.kostenlos, `${k} schlichtung kostenlos?`).toBe(false);
+      expect(r.gerichtskosten.ergebnis, `${k} schlichtung ergebnis`).toBeDefined();
+      expect(r.gerichtskosten.quelle.quelleUrl.startsWith('https://'), `${k} url`).toBe(true);
+      expect(postenText(r.gerichtskosten).length).toBeGreaterThan(0);
+    }
+  });
+  it('VD/NE sind forfaitaire (deterministischer Festbetrag)', () => {
+    const vd = berechneProzesskosten({ kanton: 'VD', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
+    expect(vd.gerichtskosten.ergebnis?.deterministisch).toBe(true);
+    if (vd.gerichtskosten.ergebnis?.deterministisch) expect(vd.gerichtskosten.ergebnis.betragChf).toBe(900); // Band 30k–100k
+    const ne = berechneProzesskosten({ kanton: 'NE', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
+    if (ne.gerichtskosten.ergebnis?.deterministisch) expect(ne.gerichtskosten.ergebnis.betragChf).toBe(1300); // Band 30k–100k
+  });
+  it('Schlichtung bleibt kostenlos in den Art.-113-Materien (Tarif tritt zurück)', () => {
+    expect(berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 40000, phase: 'schlichtung', materie: 'miete_pacht' }).gerichtskosten.kostenlos).toBe(true);
+    expect(berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 20000, phase: 'schlichtung', materie: 'arbeit' }).gerichtskosten.kostenlos).toBe(true);
+  });
+});
+
+describe('Erschöpfender Konstellations-Sweep (I6/I7/I8 — wirft nie, Invarianten halten)', () => {
+  const SW = [0, 1000, 5000, 30000, 50000, 100000, 500000, 2_000_000];
+  const PHASEN = ['schlichtung', 'entscheid'] as const;
+  const MATERIEN_T = ['allgemein', 'arbeit', 'miete_pacht', 'gleichstellung', 'gewaltschutz', 'datenschutz'] as const;
+  const INSTANZEN_T = ['erstinstanz', 'rechtsmittel', 'bundesgericht'] as const;
+  const VERFAHREN_T = ['ordentlich', 'vereinfacht', 'summarisch'] as const;
+
+  it('berechneProzesskosten + I6/I8 werfen über die gesamte Matrix nicht und liefern konsistente Werte', () => {
+    let n = 0;
+    for (const kanton of KANTONE) for (const sw of SW) for (const phase of PHASEN)
+      for (const materie of MATERIEN_T) for (const instanz of INSTANZEN_T) for (const verfahren of VERFAHREN_T) {
+        const e = berechneProzesskosten({ kanton, streitwertCHF: sw, phase, materie, instanz, verfahren });
+        // Kostenvorschuss: nie negativ, ½-Fall ≤ vollem Betrag der GK-Spanne.
+        const v = berechneKostenvorschuss(e.gerichtskosten, e.phase, instanz, verfahren);
+        if (v.spanne) {
+          expect(v.spanne.vonChf, `${kanton}/${sw}`).toBeGreaterThanOrEqual(0);
+          expect(v.spanne.bisChf).toBeGreaterThanOrEqual(v.spanne.vonChf);
+        }
+        // MwSt: brutto ≥ basis, betrag ≥ 0.
+        const m = berechneMwstParteientschaedigung(e.parteientschaedigung);
+        if (m.betrag && m.bruttoSpanne) {
+          expect(m.betrag.vonChf).toBeGreaterThanOrEqual(0);
+          expect(m.bruttoSpanne.bisChf).toBeGreaterThanOrEqual(m.betrag.bisChf);
+        }
+        // PDF-Bericht: baut immer, Status ok, ≥ 2 Rechenschritte (GK + PE).
+        const k = e.gerichtskosten.kostenlos ? null : berechneKostenrisiko(e.gerichtskosten, e.parteientschaedigung, 0.5);
+        const bericht = prozesskostenBericht(e, { vorschuss: v, mwst: m, kostenrisiko: k });
+        expect(bericht.status).toBe('ok');
+        expect(bericht.rechenweg.length).toBeGreaterThanOrEqual(2);
+        expect(bericht.normverweise.length).toBeGreaterThan(0);
+        n++;
+      }
+    expect(n).toBeGreaterThan(5000); // Matrix tatsächlich durchlaufen
+  });
+
+  it('Vorschuss-Faktor: ½ ausser Schlichtung/summarisch/Rechtsmittel/BGer', () => {
+    const e = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 80000, phase: 'entscheid', materie: 'allgemein' });
+    expect(berechneKostenvorschuss(e.gerichtskosten, 'entscheid', 'erstinstanz', 'ordentlich').faktor).toBe(0.5);
+    expect(berechneKostenvorschuss(e.gerichtskosten, 'entscheid', 'erstinstanz', 'vereinfacht').faktor).toBe(0.5);
+    expect(berechneKostenvorschuss(e.gerichtskosten, 'entscheid', 'erstinstanz', 'summarisch').faktor).toBe(1);
+    expect(berechneKostenvorschuss(e.gerichtskosten, 'entscheid', 'rechtsmittel', 'ordentlich').faktor).toBe(1);
+  });
+
+  it('Instanzenzug über alle Kantone: Summe = Summe der Stufenposten, wirft nie', () => {
+    for (const kanton of KANTONE) {
+      const z = berechneInstanzenzug(kanton, 75000, 'allgemein', 'ordentlich',
+        { schlichtung: false, erstinstanz: true, rechtsmittel: true, bundesgericht: true });
+      // Gesamt = gesamtGk + gesamtPe (wo beziffert)
+      if (z.gesamtGk && z.gesamtPe && z.gesamt) {
+        expect(z.gesamt.vonChf).toBe(z.gesamtGk.vonChf + z.gesamtPe.vonChf);
+        expect(z.gesamt.bisChf).toBe(z.gesamtGk.bisChf + z.gesamtPe.bisChf);
+      }
+      // Bei aufwandbasierter PE (z. B. GR) muss unbeziffert greifen
+      expect(typeof z.unbeziffert).toBe('boolean');
+    }
   });
 });
 

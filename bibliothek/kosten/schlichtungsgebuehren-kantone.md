@@ -5,6 +5,10 @@
 bestätigt, kein Erlass aufgehoben; Stand-Updates: AI geltend 1.1.2024,
 TG geltend 1.1.2022, BE VKD 1.5.2026 — Beträge je unverändert).
 NICHT abgenommen.
+**IMPLEMENTIERT 15.6.2026:** als `src/data/tarif/schlichtung.ts` (vermögens-
+rechtliche Schlichtungsgebühr je Kanton) ins Prozesskosten-Cockpit verdrahtet;
+FR/BS/AG als `recherche` markiert (weiter Rahmen / relativer 30 %-Tarif / offene
+obere Grenze). Fachliche Abnahme David weiterhin ausstehend (§7).
 Alle Gebührenrahmen wörtlich aus den amtlichen Erlass-Volltexten (PDF der
 kantonalen Gesetzessammlungen) — keine Sekundärquellen, keine Schätzungen.
 

@@ -9,9 +9,11 @@
 // Schätzung — Ermessenstarife liefern die Spanne, nie einen erfundenen Punkt.
 // Grundlage/Verifikation: bibliothek/recherche/prozesskosten-zpo-95-96.md.
 
+import type { Berechnungsergebnis, Rechenschritt, Normverweis } from '../types/legal';
 import { auswertenTarif, skaliereErgebnis, type TarifErgebnis } from './tarif/staffel';
 import { MODIFIKATOREN, type Faktor } from '../data/tarif/modifikatoren';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
+import { SCHLICHTUNG } from '../data/tarif/schlichtung';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 import { KANTONE, MWST_NORMALSATZ_PROZENT, type KantonCode, type KantonalerTarif } from '../data/tarif/typen';
 import {
@@ -185,19 +187,19 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
   }
 
   const gkTarif = GERICHTSKOSTEN[e.kanton];
+  const schlichtungTarif = SCHLICHTUNG[e.kanton];
   const peTarif = PARTEIENTSCHAEDIGUNG[e.kanton];
 
   // Gerichtskosten (Art. 95 II): im Entscheidverfahren die Entscheidgebühr
-  // (lit. b) nach kantonalem Tarif; im Schlichtungsverfahren gilt die
-  // Schlichtungspauschale (lit. a) — ein eigener, meist reduzierter Tarif, der
-  // (noch) nicht erhoben ist und daher NICHT mit der Entscheidgebühr beziffert
-  // wird (§1/§8; Bug-Check 14.6.2026). Vorbehältlich Kostenlosigkeit (113/114).
+  // (lit. b) nach kantonalem Tarif; im Schlichtungsverfahren die Pauschale für
+  // das Schlichtungsverfahren (lit. a) nach dem EIGENEN kantonalen Schlichtungs-
+  // tarif (data/tarif/schlichtung.ts — regime-treu getrennt vom Entscheidgebühr-
+  // Tarif, §4). Vorbehältlich Kostenlosigkeit (Art. 113/114 ZPO).
   const gkFrei = gerichtskostenKostenlos(e.phase, e.materie, e.streitwertCHF);
+  const aktiverGkTarif = e.phase === 'schlichtung' ? schlichtungTarif : gkTarif;
   let gerichtskosten: PostenErgebnis = gkFrei.kostenlos
-    ? { kostenlos: true, kostenlosGrund: `${gkFrei.norm}: ${gkFrei.grund}`, quelle: quelle(gkTarif) }
-    : e.phase === 'schlichtung'
-      ? { kostenlos: false, schlichtungspauschale: true, quelle: quelle(gkTarif) }
-      : { kostenlos: false, ergebnis: auswertenTarif(gkTarif.regel, e.streitwertCHF), quelle: quelle(gkTarif) };
+    ? { kostenlos: true, kostenlosGrund: `${gkFrei.norm}: ${gkFrei.grund}`, quelle: quelle(aktiverGkTarif) }
+    : { kostenlos: false, ergebnis: auswertenTarif(aktiverGkTarif.regel, e.streitwertCHF), quelle: quelle(aktiverGkTarif) };
 
   // Parteientschädigung (Art. 95 III): im Schlichtungsverfahren wird KEINE
   // gesprochen (Art. 113 Abs. 1 ZPO); im Entscheidverfahren nach kant. Tarif.
@@ -211,7 +213,7 @@ export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErg
     'Beträge sind die Grund-/Entscheidgebühr bzw. das Grundhonorar; gerichtliche Erhöhungen/Ermässigungen, Auslagen, Beweis-/Übersetzungskosten und MwSt. sind nicht enthalten.',
   ];
   if (e.phase === 'schlichtung') {
-    hinweise.push('Im Schlichtungsverfahren gilt für die Gerichtskosten die Schlichtungspauschale (Art. 95 II lit. a ZPO) — ein eigener, meist reduzierter kantonaler Tarif (oft ein Bruchteil der Entscheidgebühr); hier nicht beziffert. Der angezeigte kantonale Tarif betrifft die Entscheidgebühr im Gerichtsverfahren.');
+    hinweise.push('Im Schlichtungsverfahren gilt der kantonale Schlichtungstarif (Pauschale, Art. 95 II lit. a ZPO) — ein eigener, vom Entscheidgebühr-Tarif getrennter Ansatz. Fällt die Schlichtungsbehörde einen Entscheid oder unterbreitet sie einen Urteilsvorschlag (Art. 210/212 ZPO), kann er sich erhöhen (siehe Tarif-Hinweis).');
   }
 
   // Verfahrensart-/Instanz-Modifikator (Entscheidphase, kantonale Instanz):
@@ -404,6 +406,181 @@ export const WEITERE_KOSTENPOSTEN: readonly string[] = [
   'Notwendige Auslagen der Partei (z. B. Reise-/Porto-/Kopierkosten) — Art. 95 Abs. 3 lit. a ZPO.',
   'Unentgeltliche Rechtspflege bei Mittellosigkeit und nicht aussichtsloser Sache: Befreiung von Vorschüssen und Gerichtskosten, unentgeltlicher Rechtsbeistand (Art. 117–118 ZPO) — mit Nachzahlungspflicht binnen 10 Jahren (Art. 123 ZPO); die Parteientschädigung an die Gegenpartei bleibt geschuldet.',
 ];
+
+// ─── Instanz-Akkumulation (I7 — Gesamtkostenrisiko über den Instanzenzug) ───
+// Eine Streitsache durchläuft oft mehrere Stufen (Schlichtung → erste Instanz →
+// Rechtsmittel → Bundesgericht). Die Gerichtskosten fallen je Stufe an, die
+// Parteientschädigung schuldet die unterliegende Partei je Stufe. Dieser
+// Aggregator summiert die bezifferbaren Posten über die gewählten Stufen
+// (Maximalbetrachtung: Unterliegen auf jeder Stufe) und weist nicht bezifferte
+// Stufen (Schlichtungspauschale, aufwandbasierte Tarife) ehrlich aus (§8).
+
+export interface InstanzenzugWahl {
+  schlichtung: boolean;
+  erstinstanz: boolean;
+  rechtsmittel: boolean;
+  bundesgericht: boolean;
+}
+
+export interface InstanzStufe {
+  schluessel: keyof InstanzenzugWahl;
+  label: string;
+  ergebnis: ProzesskostenErgebnis;
+  /** Gerichtskosten dieser Stufe (null = nicht beziffert, z. B. Schlichtungspauschale). */
+  gk: Spanne | null;
+  /** Parteientschädigung dieser Stufe (null = nicht beziffert / aufwandbasiert). */
+  pe: Spanne | null;
+}
+
+export interface Instanzenzug {
+  stufen: InstanzStufe[];
+  gesamtGk: Spanne | null;
+  gesamtPe: Spanne | null;
+  /** Gerichtskosten + Parteientschädigung über alle gewählten Stufen summiert. */
+  gesamt: Spanne | null;
+  /** true = mindestens eine gewählte Stufe ist nicht beziffert (Summe = Untergrenze). */
+  unbeziffert: boolean;
+  hinweise: string[];
+}
+
+const addiere = (a: Spanne | null, b: Spanne | null): Spanne | null => {
+  if (!a) return b;
+  if (!b) return a;
+  return { vonChf: a.vonChf + b.vonChf, bisChf: a.bisChf + b.bisChf };
+};
+
+const STUFEN_REIHENFOLGE: { schluessel: keyof InstanzenzugWahl; label: string; phase: Verfahrensphase; instanz: Instanz }[] = [
+  { schluessel: 'schlichtung', label: 'Schlichtungsverfahren', phase: 'schlichtung', instanz: 'erstinstanz' },
+  { schluessel: 'erstinstanz', label: 'Erste Instanz (kantonal)', phase: 'entscheid', instanz: 'erstinstanz' },
+  { schluessel: 'rechtsmittel', label: 'Rechtsmittel (Berufung/Beschwerde)', phase: 'entscheid', instanz: 'rechtsmittel' },
+  { schluessel: 'bundesgericht', label: 'Bundesgericht', phase: 'entscheid', instanz: 'bundesgericht' },
+];
+
+/** Gesamtkostenrisiko über die gewählten Stufen des Instanzenzugs (Auftrag David,
+ *  I7). Jede Stufe wird über `berechneProzesskosten` gerechnet; bezifferte Posten
+ *  werden summiert (kumulatives Unterliegens-Szenario), nicht bezifferte ehrlich
+ *  ausgewiesen. `verfahren` gilt für die kantonalen Tatsacheninstanzen. */
+export function berechneInstanzenzug(
+  kanton: KantonCode, streitwertCHF: number, materie: Materie, verfahren: Verfahrensart, wahl: InstanzenzugWahl,
+): Instanzenzug {
+  pruefeStreitwert(streitwertCHF);
+  const stufen: InstanzStufe[] = STUFEN_REIHENFOLGE
+    .filter((s) => wahl[s.schluessel])
+    .map((s) => {
+      // Verfahrensart wirkt nur auf den kantonalen Tatsachen-/Rechtsmittelzweig.
+      const vf: Verfahrensart = (s.instanz === 'bundesgericht' || s.phase === 'schlichtung') ? 'ordentlich' : verfahren;
+      const ergebnis = berechneProzesskosten({ kanton, streitwertCHF, phase: s.phase, materie, instanz: s.instanz, verfahren: vf });
+      return { schluessel: s.schluessel, label: s.label, ergebnis, gk: postenSpanne(ergebnis.gerichtskosten), pe: postenSpanne(ergebnis.parteientschaedigung) };
+    });
+
+  const gesamtGk = stufen.reduce<Spanne | null>((acc, s) => addiere(acc, s.gk), null);
+  const gesamtPe = stufen.reduce<Spanne | null>((acc, s) => addiere(acc, s.pe), null);
+  const gesamt = addiere(gesamtGk, gesamtPe);
+  const unbeziffert = stufen.some((s) => s.gk === null || s.pe === null);
+
+  const hinweise = [
+    'Kumulative Maximalbetrachtung über den Instanzenzug: Gerichtskosten fallen je Stufe an, die Parteientschädigung schuldet die jeweils unterliegende Partei (Unterliegen auf jeder Stufe).',
+    'Bei (teilweisem) Obsiegen verschiebt sich die Verteilung nach Art. 106 ff. ZPO; die effektive Belastung liegt dann tiefer.',
+  ];
+  if (unbeziffert) hinweise.push('Mindestens eine Stufe ist nicht beziffert (Schlichtungspauschale oder aufwandbasierter Tarif) — die Summe ist insoweit eine Untergrenze.');
+
+  return { stufen, gesamtGk, gesamtPe, gesamt, unbeziffert, hinweise };
+}
+
+// ─── PDF-Rechenbericht (I8 — mandatstauglicher Output) ──────────────────────
+// Bildet das berechnete Kostenbild (Gerichtskosten + Parteientschädigung +
+// Vorschuss + optional MwSt/Kostenrisiko/Instanzenzug) auf das gemeinsame
+// `Berechnungsergebnis` ab, das die zentrale PDF-Schicht (lib/pdf) rendert.
+// Reine Abbildung bereits berechneter Werte (§3: Text/Norm stammen aus der
+// Engine, kein neuer Inhalt; §5: ein Assemble-Ergebnis für die Anzeige).
+
+const spanneAlsText = (s: Spanne | null): string =>
+  !s ? '—' : s.vonChf === s.bisChf ? chfText(s.vonChf) : `${chfText(s.vonChf)} – ${chfText(s.bisChf)}`;
+const chfText = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}`;
+
+export interface BerichtZusatz {
+  vorschuss?: Kostenvorschuss;
+  mwst?: MwstAufschlag | null;
+  kostenrisiko?: Kostenrisiko | null;
+  instanzenzug?: Instanzenzug | null;
+}
+
+/** Baut den Berechnungsergebnis-Bericht für den PDF-Export. `e` ist das
+ *  Hauptergebnis (eine Instanz); die optionalen Zusatzposten werden, wenn
+ *  übergeben, als eigene Rechenschritte ausgewiesen. */
+export function prozesskostenBericht(e: ProzesskostenErgebnis, zusatz: BerichtZusatz = {}): Berechnungsergebnis {
+  const norm = (artikel: string, bemerkung?: string): Normverweis => ({ artikel, bemerkung });
+  const postenSchritt = (titel: string, p: PostenErgebnis): Rechenschritt => {
+    const detail = !p.kostenlos && !p.schlichtungspauschale && p.ergebnis?.deterministisch && p.ergebnis.schritte.length
+      ? ` (${p.ergebnis.schritte.join('; ')})` : '';
+    const zwischen = p.kostenlos ? `keine Kosten — ${p.kostenlosGrund ?? ''}`
+      : p.schlichtungspauschale ? 'Schlichtungspauschale (separater kantonaler Tarif, hier nicht beziffert)'
+      : `${postenText(p)}${detail}`;
+    return {
+      beschreibung: `${titel}: ${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}, Stand ${p.quelle.stand}${p.quelle.verifiziert === 'recherche' ? ' — Erstrecherche' : ''}`,
+      zwischenergebnis: zwischen,
+      normen: [norm('Art. 95 ZPO'), norm(p.quelle.artikel, p.quelle.erlassName)],
+    };
+  };
+
+  const rechenweg: Rechenschritt[] = [
+    postenSchritt('Gerichtskosten', e.gerichtskosten),
+    postenSchritt('Parteientschädigung', e.parteientschaedigung),
+  ];
+
+  if (zusatz.vorschuss) {
+    rechenweg.push({
+      beschreibung: `Kostenvorschuss (${zusatz.vorschuss.norm})`,
+      zwischenergebnis: `${zusatz.vorschuss.spanne ? spanneAlsText(zusatz.vorschuss.spanne) : '—'} — ${zusatz.vorschuss.hinweis}`,
+      normen: [norm(zusatz.vorschuss.norm)],
+    });
+  }
+  if (zusatz.mwst && zusatz.mwst.bruttoSpanne) {
+    rechenweg.push({
+      beschreibung: `Parteientschädigung inkl. MwSt ${zusatz.mwst.satzProzent.toLocaleString('de-CH')} %`,
+      zwischenergebnis: `${spanneAlsText(zusatz.mwst.bruttoSpanne)} (MwSt-Anteil ${spanneAlsText(zusatz.mwst.betrag)})`,
+      normen: [norm('Art. 95 ZPO', 'Abs. 3 lit. b i.V.m. MWSTG')],
+    });
+  }
+  if (zusatz.kostenrisiko && zusatz.kostenrisiko.berechenbar) {
+    const k = zusatz.kostenrisiko;
+    rechenweg.push({
+      beschreibung: `Kostenrisiko bei ${Math.round(k.obsiegensquote * 100)} % Obsiegen`,
+      zwischenergebnis: `geschätzte Netto-Kostenbelastung ${spanneAlsText(k.nettoBelastung ?? null)}; Parteientschädigungs-Saldo ${spanneAlsText(k.parteientschaedigungSaldo ?? null)} (+ erhalten / − zu zahlen)`,
+      normen: [norm('Art. 106 ZPO'), norm('Art. 111 ZPO')],
+    });
+  }
+  if (zusatz.instanzenzug) {
+    const z = zusatz.instanzenzug;
+    rechenweg.push({
+      beschreibung: `Gesamtkostenrisiko über den Instanzenzug (${z.stufen.map((s) => s.label).join(' → ')})`,
+      zwischenergebnis: `Gerichtskosten ${spanneAlsText(z.gesamtGk)} + Parteientschädigung ${spanneAlsText(z.gesamtPe)} = ${spanneAlsText(z.gesamt)}${z.unbeziffert ? ' (Untergrenze — nicht bezifferte Stufen)' : ''}`,
+      normen: [norm('Art. 106 ZPO')],
+    });
+  }
+
+  const warnungen = [...e.hinweise];
+  if (zusatz.kostenrisiko) warnungen.push(...zusatz.kostenrisiko.hinweise);
+  if (zusatz.instanzenzug) warnungen.push(...zusatz.instanzenzug.hinweise);
+  warnungen.push(...WEITERE_KOSTENPOSTEN);
+
+  const normverweise: Normverweis[] = [
+    norm('Art. 95 ZPO', 'Begriffe der Prozesskosten'),
+    norm('Art. 96 ZPO', 'kantonale Tarifkompetenz'),
+    norm('Art. 98 ZPO', 'Kostenvorschuss'),
+    norm(e.gerichtskosten.quelle.artikel, e.gerichtskosten.quelle.erlassName),
+    norm(e.parteientschaedigung.quelle.artikel, e.parteientschaedigung.quelle.erlassName),
+  ];
+
+  return {
+    ergebnis: `Gerichtskosten ${postenText(e.gerichtskosten)} · Parteientschädigung ${postenText(e.parteientschaedigung)}`,
+    status: 'ok',
+    rechenweg,
+    annahmen: [],
+    warnungen,
+    normverweise,
+  };
+}
 
 /** Interkantonaler Vergleich: dieselbe Konstellation über ALLE 26 Kantone
  *  (Auftrag David — Vergleichstabelle «was kostet es anderswo»). */
