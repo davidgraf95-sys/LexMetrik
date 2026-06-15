@@ -186,15 +186,17 @@
   /* Kompakte Eingabe-Variante (Zeilen/Toolbars) — analog .lc-btn-sm; löst die
      ad-hoc h-10/rounded-lg/ring-Inseln (EinfacheFrist/Tagerechner) ab. */
   .lc-input-sm { height: 36px; padding: 0 12px; font-size: .875rem; }
-  /* Select mit eigenem Messing-Chevron statt nativem OS-Pfeil — gleiche
-     Anatomie wie lc-input, nur appearance-none + Platz rechts für die Glyphe. */
-  .lc-select {
-    @apply lc-input;
+  /* Select-Chevron (Redesign): JEDER <select> mit lc-input (= alle Selects der
+     App) bekommt den Messing-Chevron statt des nativen OS-Pfeils — ein Rollout
+     über den Element-Selektor, ohne ~150 Call-Sites anzufassen. .lc-select
+     bleibt als expliziter Alias (Selects ohne lc-input). */
+  select.lc-input, .lc-select {
     appearance: none; -webkit-appearance: none;
     padding-right: 38px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%238A6A2F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;
   }
+  .lc-select { @apply lc-input; }
   .lc-textarea { @apply lc-input; height: auto; min-height: 88px; resize: vertical; line-height: 1.6; }
 
   .lc-btn {
