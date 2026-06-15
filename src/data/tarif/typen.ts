@@ -57,5 +57,8 @@ export interface KantonalerTarif {
   regel: TarifRegel;
   /** Ermessens-/Modulations-/Sonderfall-Hinweis (Anzeige in der UI, §8). */
   hinweis?: string;
+  /** true = der Tarifbetrag enthält die MwSt bereits (kein zusätzlicher
+   *  MwSt-Aufschlag auf die Parteientschädigung — verhindert Doppelzählung). */
+  mwstInbegriffen?: boolean;
   verifiziert: Verifiziert;
 }

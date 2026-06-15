@@ -61,6 +61,13 @@ Dossier `bibliothek/kosten/schlichtungsgebuehren-kantone.md`, 5.6.2026) — impl
   Rückzug→0 deterministisch; Vergleich Art. 109 / Billigkeit Art. 107 → Ermessen,
   kein Wert) + `KOSTENVERTEILUNG_SONDERFAELLE` (Art. 106 III/107/108/109). UI:
   Verfahrensausgang-Vorschalter im Kostenrisiko + Sonderfall-Liste.
+- **FINALE GESAMT-VERIFIKATION (15.6.2026, «alles von vorne»):** unabhängiger
+  adversarialer Review über Engine + alle 6 Datenschichten + UI (20+ Konstellationen
+  handnachgerechnet). 3 Befunde behoben: (HOCH) **TG-NV zurück auf 300–5'000** — die
+  vorige Doppelcheck-«Korrektur» auf 20'000 war ein Agent-Irrtum, am amtlichen VGG
+  § 11 Ziff. 2 (RB 638.1) selbst verifiziert; (MITTEL) **MwSt-Doppelzählung behoben** —
+  Flag `mwstInbegriffen` (BGer-PE + VS-PE inkl. MwSt → kein Aufschlag); (NIEDRIG)
+  VS-PE oberstes Band Untergrenze 41'200 ergänzt. Gate voll grün, golden byte-gleich.
 - **OFFEN:** UR-Vorschalter (Art. 117 ff.) · SchKG-Gebühren-Verknüpfung (I9) ·
   Push/Deploy auf Davids Ja. Nichts `geprüft`.
 

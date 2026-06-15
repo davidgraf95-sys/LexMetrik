@@ -17,6 +17,8 @@ export interface BgerTarif {
   stand: string;
   regel: TarifRegel;
   hinweis?: string;
+  /** true = Betrag bereits inkl. MwSt (kein MwSt-Aufschlag, §1/§8). */
+  mwstInbegriffen?: boolean;
 }
 
 const GK_QUELLE = {
@@ -67,7 +69,7 @@ export const BGER_GERICHTSKOSTEN_OHNE_VERMOEGEN: BgerTarif = {
 
 /** Parteientschädigung BGer, Beschwerdeverfahren (Reglement Art. 4). */
 export const BGER_PARTEIENTSCHAEDIGUNG: BgerTarif = {
-  ...PE_QUELLE, artikel: 'Art. 68 BGG / Reglement Art. 4',
+  ...PE_QUELLE, artikel: 'Art. 68 BGG / Reglement Art. 4', mwstInbegriffen: true,
   hinweis: 'Honorar inkl. MwSt (Art. 12 Abs. 1 Reglement); Über-/Unterschreitung bei ausserordentlichem Aufwand (Art. 8).',
   regel: { typ: 'staffel_rahmen', baender: [
     { grenzeChf: 20000, minChf: 600, maxChf: 4000 },

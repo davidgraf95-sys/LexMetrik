@@ -213,6 +213,17 @@ describe('MwSt auf Parteientschädigung (I6 — Art. 95 III lit. b / MWSTG 8,1 %
     expect(m.bruttoSpanne?.vonChf).toBe(Math.round(4500 * 1.081));
     expect(m.bruttoSpanne?.bisChf).toBe(Math.round(10000 * 1.081));
   });
+  it('Bundesgericht (PE inkl. MwSt): KEIN Aufschlag — keine Doppelzählung', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 60000, phase: 'entscheid', materie: 'allgemein', instanz: 'bundesgericht' });
+    const m = berechneMwstParteientschaedigung(r.parteientschaedigung);
+    expect(m.betrag).toBeNull();
+    expect(m.hinweis).toContain('enthält die MwSt bereits');
+    expect(m.bruttoSpanne).toEqual({ vonChf: 3000, bisChf: 10000 }); // = PE unverändert (Band ≤100k)
+  });
+  it('VS (PE inkl. MwSt): KEIN Aufschlag', () => {
+    const r = berechneProzesskosten({ kanton: 'VS', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
+    expect(berechneMwstParteientschaedigung(r.parteientschaedigung).betrag).toBeNull();
+  });
   it('Schlichtung (keine Parteientschädigung): nicht beziffert', () => {
     const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'schlichtung', materie: 'allgemein' });
     const m = berechneMwstParteientschaedigung(r.parteientschaedigung);

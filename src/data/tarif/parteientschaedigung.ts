@@ -325,9 +325,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   VS: {
     kanton: 'VS', erlassName: 'Gebührentarif (LTar)', erlassNr: 'SR 173.8',
-    artikel: 'Art. 32 (i.V.m. Art. 27/28)', stand: '1.1.2018', verifiziert: 'doppelt',
-    quelleUrl: 'https://lex.vs.ch/app/fr/texts_of_law/173.8',
+    artikel: 'Art. 32 (i.V.m. Art. 27/28)', stand: '1.1.2018', verifiziert: 'doppelt', mwstInbegriffen: true,
     hinweis: 'Rahmen je Band; >1 Mio: 3,3 % des Streitwerts, max CHF 140 000. Inkl. MwSt. Amtliche Verteidigung 70 %.',
+    quelleUrl: 'https://lex.vs.ch/app/fr/texts_of_law/173.8',
     regel: { typ: 'staffel_rahmen', baender: [
       { grenzeChf: 2000, minChf: 550, maxChf: 1400 },
       { grenzeChf: 10000, minChf: 1500, maxChf: 2500 },
@@ -339,9 +339,9 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
       { grenzeChf: 200000, minChf: 12800, maxChf: 17600 },
       { grenzeChf: 500000, minChf: 22700, maxChf: 30500 },
       { grenzeChf: 1000000, minChf: 33300, maxChf: 41200 },
-      // >1 Mio: 3,3 % des Streitwerts, max CHF 140 000; Höchstbetrag nicht unter
-      // den Anschluss-Höchstbetrag des Vorbands fallend (Monotonie, Bug-Check).
-      { grenzeChf: INF, maxProzent: 3.3, mindestChf: 41200, hoechstChf: 140000 },
+      // >1 Mio: 3,3 % des Streitwerts, max CHF 140 000; Untergrenze = Anschluss-
+      // Höchstbetrag des Vorbands (Monotonie, kein Wegfall der von-Grenze).
+      { grenzeChf: INF, minChf: 41200, maxProzent: 3.3, mindestChf: 41200, hoechstChf: 140000 },
     ] },
   },
   NE: {

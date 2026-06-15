@@ -102,6 +102,8 @@ export interface TarifQuelle {
   stand: string;
   verifiziert: KantonalerTarif['verifiziert'];
   hinweis?: string;
+  /** true = Betrag bereits inkl. MwSt (kein MwSt-Aufschlag auf die PE). */
+  mwstInbegriffen?: boolean;
 }
 
 export interface PostenErgebnis {
@@ -129,12 +131,12 @@ export interface ProzesskostenErgebnis {
 
 const quelle = (t: KantonalerTarif): TarifQuelle => ({
   erlassName: t.erlassName, erlassNr: t.erlassNr, artikel: t.artikel,
-  quelleUrl: t.quelleUrl, stand: t.stand, verifiziert: t.verifiziert, hinweis: t.hinweis,
+  quelleUrl: t.quelleUrl, stand: t.stand, verifiziert: t.verifiziert, hinweis: t.hinweis, mwstInbegriffen: t.mwstInbegriffen,
 });
 
 const bgerQuelle = (t: BgerTarif): TarifQuelle => ({
   erlassName: t.erlassName, erlassNr: t.erlassNr, artikel: t.artikel,
-  quelleUrl: t.quelleUrl, stand: t.stand, verifiziert: 'doppelt', hinweis: t.hinweis,
+  quelleUrl: t.quelleUrl, stand: t.stand, verifiziert: 'doppelt', hinweis: t.hinweis, mwstInbegriffen: t.mwstInbegriffen,
 });
 
 interface KostenlosBefund { kostenlos: boolean; norm?: string; grund?: string; }
@@ -412,6 +414,12 @@ export function berechneMwstParteientschaedigung(
   pe: PostenErgebnis, satzProzent: number = MWST_NORMALSATZ_PROZENT,
 ): MwstAufschlag {
   const s = postenSpanne(pe);
+  // Enthält der Tarif die MwSt bereits (z. B. Bundesgericht-Reglement, VS LTar),
+  // wird KEIN Aufschlag gerechnet — sonst Doppelzählung (§1/§8, Bug-Check 15.6.2026).
+  if (pe.quelle.mwstInbegriffen) {
+    return { satzProzent, betrag: null, bruttoSpanne: s,
+      hinweis: `Die Parteientschädigung enthält die MwSt bereits (${pe.quelle.artikel}) — kein zusätzlicher Aufschlag.` };
+  }
   const basis = `MwSt-Normalsatz ${satzProzent.toLocaleString('de-CH')} % (seit 1.1.2024) auf die Parteientschädigung — anwendbar, wenn die berechtigte Partei nicht vorsteuerabzugsberechtigt ist (z. B. Privatperson); die kantonale Behandlung ist uneinheitlich (inkl./zzgl./ohne).`;
   if (!s || (s.vonChf === 0 && s.bisChf === 0)) {
     return { satzProzent, betrag: null, bruttoSpanne: null,
