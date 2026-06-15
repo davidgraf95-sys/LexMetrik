@@ -63,6 +63,18 @@ export function mwstAufschlag(gebuehrChf: number): number {
   return Math.round((gebuehrChf * MWST_NORMALSATZ_PROZENT) / 100);
 }
 
+/** Kantonale Pfandrechtssteuer/-abgabe bei Errichtung eines Grundpfands
+ *  (zusätzlich zu Notariats-/Grundbuchgebühr; nur einzelne Kantone, z. B.
+ *  FR/GE/VS/JU). Satz in % der Pfandsumme. Quelle: amtlich verifiziert
+ *  (FAHRPLAN-LUECKEN-SCHLIESSEN L3). Leer = Kanton erhebt keine. */
+export const PFANDSTEUER: Partial<Record<KantonCode, { satzProzent: number; artikel: string; url: string; stand: string }>> = {
+  FR: { satzProzent: 0.75, artikel: "Art. 23 al. 1 i.V.m. Art. 5 al. 1 lit. a Loi sur les droits de mutation et les droits sur les gages immobiliers (LDMG, RSF 635.1.1)", url: "https://bdlf.fr.ch/app/fr/texts_of_law/635.1.1", stand: "2024-03-01" },
+  GE: { satzProzent: 0.65, artikel: "LDE (RSG D 3 30) Art. 84 et Art. 85", url: "https://silgeneve.ch/legis/data/rsg_d3_30.htm", stand: "2026-03-21" },
+  JU: { satzProzent: 0.35, artikel: "Loi reglant les droits de mutation et les droits percus pour la constitution de gages (RSJU 215.326.2), Art. 1, Art. 11 et Art. 13 al. 1", url: "https://rsju.jura.ch/fr/viewdocument.html?idn=20037&id=33943&download=1", stand: "1978-11-09" },
+  VD: { satzProzent: 0.2, artikel: "Loi sur le droit de timbre (LTim, BLV 652.11) du 10.12.2013, Art. 1 (objet: contrats de gages immobiliers art. 793ss CC), Art. 3 al. 2 (taux 2 o/oo) et al. 3 (exoneration <= 5'000 fr.), Art. 4 (perception par le Registre foncier)", url: "https://www.lexfind.ch/tolv/119178/fr", stand: "01.01.2014" },
+  VS: { satzProzent: 0.2, artikel: "Art. 1, 8, 11 Abs. 1 lit. c und Art. 16 lit. b Loi sur les droits de mutations (LDM), RS 643.1", url: "https://lex.vs.ch/app/fr/texts_of_law/643.1", stand: "1.1.2013" },
+};
+
 export interface Zusatzposten {
   label: string;
   /** Betrag oder Spanne (CHF). */
@@ -108,6 +120,18 @@ export function weitereKosten(
       von: hreg.chf, bis: hreg.chf,
       erlass: `${HREG_QUELLE.erlass}, ${hreg.ziffer}`, url: HREG_QUELLE.url, stand: HREG_QUELLE.stand,
       hinweis: 'Feste Gebühr je Eintragung; weitere Tatsachen/Belege können zusätzliche Positionen auslösen.',
+    });
+  }
+
+  // 2b. Kantonale Pfandrechtssteuer bei Schuldbrief-/Grundpfand-Errichtung.
+  const pfand = PFANDSTEUER[kanton];
+  if (pfand && art === 'schuldbrief' && wertChf !== undefined) {
+    const betrag = Math.round((wertChf * pfand.satzProzent) / 100);
+    posten.push({
+      label: `Pfandrechtssteuer (${pfand.satzProzent} %)`,
+      von: betrag, bis: betrag,
+      erlass: pfand.artikel, url: pfand.url, stand: pfand.stand,
+      hinweis: 'Kantonale Abgabe auf die Pfandsumme bei Errichtung des Grundpfands.',
     });
   }
 
