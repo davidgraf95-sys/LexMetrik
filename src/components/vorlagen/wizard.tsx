@@ -109,7 +109,7 @@ export function VorlagenWizardRahmen({
 
       {/* Zweispaltig: Formular links, klebende Vorschau rechts;
           mobil einspaltig mit einklappbarer Vorschau */}
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 md:gap-8 items-start">
         <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5"
           onInput={merkeEingabe} onChange={merkeEingabe}>
           {/* key={schritt}: re-mountet den Schrittinhalt → dezenter Einblende-
@@ -146,7 +146,7 @@ export function VorlagenWizardRahmen({
 
         {/* Vorschau – mobil einklappbar, Desktop klebend; identischer Inhalt
             zweimal platziert (kein Remount, wie bisheriger Funktionsaufruf) */}
-        <details id="wizard-vorschau" className="lg:hidden bg-surface border border-line rounded-xl scroll-mt-24"
+        <details id="wizard-vorschau" className="md:hidden bg-surface border border-line rounded-xl scroll-mt-24"
           open={vorschauOffen} onToggle={(e) => setVorschauOffen((e.currentTarget as HTMLDetailsElement).open)}>
           <summary className="cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden px-4 py-3 flex items-center justify-between text-body-s font-medium text-ink-700">
             <span>Vorschau & Bausteinprotokoll</span>
@@ -154,7 +154,7 @@ export function VorlagenWizardRahmen({
           </summary>
           <div className="px-4 pb-4">{vorschau}</div>
         </details>
-        <div className="hidden lg:block lg:sticky lg:top-28">
+        <div className="hidden md:block md:sticky md:top-28">
           {vorschau}
         </div>
       </div>
@@ -163,7 +163,7 @@ export function VorlagenWizardRahmen({
           kommt raus») soll auch beim Tippen erreichbar sein, nicht erst im
           letzten Schritt. */}
       <button type="button" onClick={zurVorschau}
-        className="lg:hidden fixed bottom-4 right-4 z-30 lc-btn-outline lc-btn-sm shadow-md bg-surface">
+        className="md:hidden fixed bottom-4 right-4 z-30 lc-btn-outline lc-btn-sm shadow-md bg-surface">
         Vorschau ↓
       </button>
     </div>
