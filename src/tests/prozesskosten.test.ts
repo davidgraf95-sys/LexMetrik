@@ -74,6 +74,30 @@ describe('kostenlose Verfahren (Art. 113/114 ZPO)', () => {
   });
 });
 
+const spanne = (p: PostenErgebnis): [number | undefined, number | undefined] => {
+  const e = p.ergebnis;
+  if (!e || e.deterministisch) throw new Error('keine Spanne');
+  return [e.vonChf, e.bisChf];
+};
+
+describe('Instanz Bundesgericht (Art. 65/68 BGG)', () => {
+  it('vermögensrechtlich: BGer-Staffel statt kantonalem Tarif (SW 60 000)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 60000, phase: 'entscheid', materie: 'allgemein', instanz: 'bundesgericht' });
+    expect(spanne(r.gerichtskosten)).toEqual([1500, 5000]);   // Tarif Ziff. 1, Band 50k–100k
+    expect(spanne(r.parteientschaedigung)).toEqual([3000, 10000]); // Reglement Art. 4
+    expect(r.gerichtskosten.quelle.erlassNr).toContain('173.110.210.1');
+  });
+  it('reduzierter Ansatz Art. 65 IV bei Arbeit ≤ 30 000', () => {
+    const r = berechneProzesskosten({ kanton: 'BE', streitwertCHF: 25000, phase: 'entscheid', materie: 'arbeit', instanz: 'bundesgericht' });
+    expect(spanne(r.gerichtskosten)).toEqual([200, 1000]);
+    expect(r.gerichtskosten.quelle.artikel).toContain('Art. 65 Abs. 4');
+  });
+  it('Mietrecht ist am BGer NICHT reduziert (ordentlicher Tarif)', () => {
+    const r = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 25000, phase: 'entscheid', materie: 'miete_pacht', instanz: 'bundesgericht' });
+    expect(spanne(r.gerichtskosten)).toEqual([1000, 5000]); // Band 20k–50k, nicht 200–1000
+  });
+});
+
 describe('Kostenrisiko nach Obsiegensquote (Art. 106/111 ZPO)', () => {
   const zh = berechneProzesskosten({ kanton: 'ZH', streitwertCHF: 50000, phase: 'entscheid', materie: 'allgemein' });
   it('ZH 50 000, hälftiges Obsiegen: Gerichtskosten-Anteil + Netto handgerechnet', () => {

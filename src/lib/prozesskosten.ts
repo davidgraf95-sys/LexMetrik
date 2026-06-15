@@ -13,6 +13,9 @@ import { auswertenTarif, type TarifErgebnis } from './tarif/staffel';
 import { GERICHTSKOSTEN } from '../data/tarif/gerichtskosten';
 import { PARTEIENTSCHAEDIGUNG } from '../data/tarif/parteientschaedigung';
 import { KANTONE, type KantonCode, type KantonalerTarif } from '../data/tarif/typen';
+import {
+  BGER_GERICHTSKOSTEN, BGER_GERICHTSKOSTEN_REDUZIERT, BGER_PARTEIENTSCHAEDIGUNG, type BgerTarif,
+} from '../data/tarif/bundesgericht';
 
 export type { KantonCode } from '../data/tarif/typen';
 export { KANTONE } from '../data/tarif/typen';
@@ -47,11 +50,18 @@ export const VERFAHRENSPHASEN: { wert: Verfahrensphase; label: string }[] = [
   { wert: 'schlichtung', label: 'Schlichtungsverfahren' },
 ];
 
+/** Instanz. 'erstinstanz' = kantonale erste Instanz (Default, kantonaler Tarif);
+ *  'bundesgericht' = Beschwerde ans BGer (bundesrechtlicher Tarif, Art. 65/68 BGG).
+ *  Kantonale Rechtsmittelinstanz folgt später (Modifikator-Ausbau). */
+export type Instanz = 'erstinstanz' | 'bundesgericht';
+
 export interface ProzesskostenEingabe {
   kanton: KantonCode;
   streitwertCHF: number;
   phase: Verfahrensphase;
   materie: Materie;
+  /** Default 'erstinstanz' (additiv; bestehende Aufrufe unverändert). */
+  instanz?: Instanz;
 }
 
 /** Herkunfts-/Anzeige-Metadaten eines Tarifs (ohne die Regel selbst). */
@@ -93,6 +103,11 @@ const quelle = (t: KantonalerTarif): TarifQuelle => ({
   quelleUrl: t.quelleUrl, stand: t.stand, verifiziert: t.verifiziert, hinweis: t.hinweis,
 });
 
+const bgerQuelle = (t: BgerTarif): TarifQuelle => ({
+  erlassName: t.erlassName, erlassNr: t.erlassNr, artikel: t.artikel,
+  quelleUrl: t.quelleUrl, stand: t.stand, verifiziert: 'doppelt', hinweis: t.hinweis,
+});
+
 interface KostenlosBefund { kostenlos: boolean; norm?: string; grund?: string; }
 
 /** Gerichtskosten-Kostenlosigkeit nach Art. 113 Abs. 2 (Schlichtung) bzw.
@@ -132,6 +147,26 @@ const pruefeStreitwert = (chf: number): void => {
 /** Prozesskosten für EINEN Kanton (Art. 95 ZPO: Gerichtskosten + Parteientschädigung). */
 export function berechneProzesskosten(e: ProzesskostenEingabe): ProzesskostenErgebnis {
   pruefeStreitwert(e.streitwertCHF);
+
+  // Instanz Bundesgericht (Art. 65/68 BGG): bundesrechtlicher Tarif,
+  // kantonsunabhängig. Kein Art.-113/114-Vorschalter — reduzierter Ansatz nach
+  // Art. 65 Abs. 4 BGG (NICHT Mietrecht!), sonst ordentliche BGer-Staffel.
+  if (e.instanz === 'bundesgericht') {
+    const reduziert = e.materie === 'gleichstellung' || e.materie === 'behindertengleichstellung'
+      || (e.materie === 'arbeit' && e.streitwertCHF <= 30000);
+    const gkB = reduziert ? BGER_GERICHTSKOSTEN_REDUZIERT : BGER_GERICHTSKOSTEN;
+    return {
+      kanton: e.kanton, streitwertCHF: e.streitwertCHF, phase: 'entscheid', materie: e.materie,
+      gerichtskosten: { kostenlos: false, ergebnis: auswertenTarif(gkB.regel, e.streitwertCHF), quelle: bgerQuelle(gkB) },
+      parteientschaedigung: { kostenlos: false, ergebnis: auswertenTarif(BGER_PARTEIENTSCHAEDIGUNG.regel, e.streitwertCHF), quelle: bgerQuelle(BGER_PARTEIENTSCHAEDIGUNG) },
+      hinweise: [
+        'Beschwerde ans Bundesgericht (Art. 65/68 BGG); Tarife bundesrechtlich, kantonsunabhängig.',
+        reduziert ? 'Reduzierter Ansatz nach Art. 65 Abs. 4 BGG (streitwertunabhängig).' : 'Gerichtsgebühr nach Streitwert (Art. 65 Abs. 3 lit. b BGG); Überschreitung bis zum Doppelten möglich (Abs. 5).',
+        'Kostenvorschuss in Höhe der mutmasslichen Gerichtskosten (Art. 62 BGG); unentgeltliche Rechtspflege Art. 64 BGG.',
+      ],
+    };
+  }
+
   const gkTarif = GERICHTSKOSTEN[e.kanton];
   const peTarif = PARTEIENTSCHAEDIGUNG[e.kanton];
 
