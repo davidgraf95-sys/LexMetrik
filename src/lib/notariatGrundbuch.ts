@@ -129,7 +129,8 @@ export function notariatGrundbuchBericht(e: NotariatGrundbuchErgebnis): Berechnu
   const schritt = (titel: string, p: NgPosten): Rechenschritt => ({
     beschreibung: `${titel}: ${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}, Stand ${p.quelle.stand}${p.quelle.verifiziert === 'recherche' ? ' — Erstrecherche' : ''}`,
     zwischenergebnis: ngPostenText(p) + (p.quelle.hinweis ? ` — ${p.quelle.hinweis}` : ''),
-    normen: [{ artikel: `${p.quelle.erlassNr} ${p.quelle.artikel}` }],
+    // Kantonaler Erlass mit amtlichem Direktlink (quelleUrl), damit der PDF-Verweis klickbar ist.
+    normen: [{ artikel: `${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}`, url: p.quelle.quelleUrl || undefined }],
   });
   const rechenweg: Rechenschritt[] = [schritt('Beurkundung (Notariat)', e.beurkundung), schritt('Grundbuch', e.grundbuch)];
   if (e.grundpfand) rechenweg.push(schritt('Grundpfand (Schuldbrief)', e.grundpfand));
@@ -141,7 +142,15 @@ export function notariatGrundbuchBericht(e: NotariatGrundbuchErgebnis): Berechnu
     rechenweg,
     annahmen: [],
     warnungen: e.hinweise,
-    normverweise: [{ artikel: 'Art. 657 ZGB', bemerkung: 'öffentliche Beurkundung des Grundstückkaufs' }, { artikel: 'Art. 216 OR' }],
+    // Bundesrechtliche Grundlage (Fedlex) PLUS die einschlägigen kantonalen
+    // Erlasse mit amtlichem Direktlink (quelleUrl).
+    normverweise: [
+      { artikel: 'Art. 657 ZGB', bemerkung: 'öffentliche Beurkundung des Grundstückkaufs' },
+      { artikel: 'Art. 216 OR' },
+      ...[e.beurkundung, e.grundbuch, e.grundpfand, e.handaenderungssteuer]
+        .filter((p): p is NgPosten => !!p && !!p.quelle.quelleUrl)
+        .map((p) => ({ artikel: `${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}`, bemerkung: `Stand ${p.quelle.stand}`, url: p.quelle.quelleUrl })),
+    ],
   };
 }
 

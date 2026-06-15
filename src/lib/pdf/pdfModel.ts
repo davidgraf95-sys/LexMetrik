@@ -141,9 +141,9 @@ export function buildPdfModel(cfg: PdfDocConfig, jetzt: Date = new Date()): PdfM
           nr: i + 1,
           titel: t(schritt.beschreibung),
           text: t(schritt.zwischenergebnis),
-          // Norm-Pills je Schritt – klickbar, Status-Logik wie im Web
-          // (verifizierter Anker via normLink, sonst Gesetzes-Seite/kein Link)
-          normen: schritt.normen.map((n) => ({ label: t(n.artikel), url: normLink(n.artikel)?.url })),
+          // Norm-Pills je Schritt – klickbar. Direkter kantonaler Link (n.url)
+          // hat Vorrang; sonst Bundeserlass via normLink (Fedlex).
+          normen: schritt.normen.map((n) => ({ label: t(n.artikel), url: n.url ?? normLink(n.artikel)?.url })),
           rechtsprechung: rsp ? t(rsp) : undefined,
         });
       });
@@ -164,9 +164,10 @@ export function buildPdfModel(cfg: PdfDocConfig, jetzt: Date = new Date()): PdfM
     blocks.push({ art: 'h2', text: 'Normverweise' });
     citations.forEach((n) => {
       const link = normLink(n.artikel);
+      // Kantonaler Direktlink (n.url) hat Vorrang; SR-Zusatz nur für Bundeserlasse.
       const label = link ? `${n.artikel} (SR ${link.sr})` : n.artikel;
       const bem = n.bemerkung ? ` – ${n.bemerkung}` : '';
-      blocks.push({ art: 'norm', text: t(label + bem), url: link?.url });
+      blocks.push({ art: 'norm', text: t(label + bem), url: n.url ?? link?.url });
     });
     blocks.push({ art: 'trenner' });
   }

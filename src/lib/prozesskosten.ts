@@ -608,7 +608,7 @@ export interface BerichtZusatz {
  *  Hauptergebnis (eine Instanz); die optionalen Zusatzposten werden, wenn
  *  übergeben, als eigene Rechenschritte ausgewiesen. */
 export function prozesskostenBericht(e: ProzesskostenErgebnis, zusatz: BerichtZusatz = {}): Berechnungsergebnis {
-  const norm = (artikel: string, bemerkung?: string): Normverweis => ({ artikel, bemerkung });
+  const norm = (artikel: string, bemerkung?: string, url?: string): Normverweis => ({ artikel, bemerkung, url });
   const postenSchritt = (titel: string, p: PostenErgebnis): Rechenschritt => {
     const detail = !p.kostenlos && !p.schlichtungspauschale && p.ergebnis?.deterministisch && p.ergebnis.schritte.length
       ? ` (${p.ergebnis.schritte.join('; ')})` : '';
@@ -618,7 +618,7 @@ export function prozesskostenBericht(e: ProzesskostenErgebnis, zusatz: BerichtZu
     return {
       beschreibung: `${titel}: ${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}, Stand ${p.quelle.stand}${p.quelle.verifiziert === 'recherche' ? ' — Erstrecherche' : ''}`,
       zwischenergebnis: zwischen,
-      normen: [norm('Art. 95 ZPO'), norm(p.quelle.artikel, p.quelle.erlassName)],
+      normen: [norm('Art. 95 ZPO'), norm(`${p.quelle.artikel} (${p.quelle.erlassNr})`, p.quelle.erlassName, p.quelle.quelleUrl)],
     };
   };
 
@@ -675,8 +675,8 @@ export function prozesskostenBericht(e: ProzesskostenErgebnis, zusatz: BerichtZu
     norm('Art. 95 ZPO', 'Begriffe der Prozesskosten'),
     norm('Art. 96 ZPO', 'kantonale Tarifkompetenz'),
     norm('Art. 98 ZPO', 'Kostenvorschuss'),
-    norm(e.gerichtskosten.quelle.artikel, e.gerichtskosten.quelle.erlassName),
-    norm(e.parteientschaedigung.quelle.artikel, e.parteientschaedigung.quelle.erlassName),
+    norm(`${e.gerichtskosten.quelle.erlassName} (${e.gerichtskosten.quelle.erlassNr}), ${e.gerichtskosten.quelle.artikel}`, 'Gerichtskosten-Tarif', e.gerichtskosten.quelle.quelleUrl),
+    norm(`${e.parteientschaedigung.quelle.erlassName} (${e.parteientschaedigung.quelle.erlassNr}), ${e.parteientschaedigung.quelle.artikel}`, 'Parteientschädigungs-Tarif', e.parteientschaedigung.quelle.quelleUrl),
   ];
 
   return {

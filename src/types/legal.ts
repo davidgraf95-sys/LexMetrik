@@ -3,6 +3,10 @@
 export type Normverweis = {
   artikel: string;
   bemerkung?: string;
+  /** Direkter amtlicher Link — für KANTONALE Erlasse/Verordnungen (die die
+   *  zentrale normLinks-Registry nicht kennt). Hat Vorrang vor normLink();
+   *  fehlt er, greift normLink (Bundeserlasse via Fedlex). */
+  url?: string;
 };
 
 export type Rechtsprechungshinweis = {
