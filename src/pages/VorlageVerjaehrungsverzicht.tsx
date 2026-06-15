@@ -58,7 +58,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<VvAntworten>, schritt: number) {
         <Field label="Forderung" hint="bestimmte Bezeichnung – erscheint im Betreff und im Verzichts-Satz">
           <input className={inputCls} value={a.forderungBeschrieb} onChange={(e) => set('forderungBeschrieb', e.target.value)} placeholder="z. B. Werklohnforderung aus Werkvertrag vom 1. Februar 2026" />
         </Field>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.betragErfassen}
             onChange={(e) => set('betragErfassen', e.target.checked)} />
           <span>Betrag in der Erklärung nennen <span className="text-ink-500">(optional – die Bezeichnung muss die Forderung auch ohne Betrag bestimmen)</span></span>
@@ -71,12 +71,12 @@ function eingabeInhalt({ a, set }: SeiteCtx<VvAntworten>, schritt: number) {
         <Field label="Verzicht bis (Enddatum)" hint="höchstens zehn Jahre ab BEGINN der Verjährung (Art. 141 Abs. 1 OR) – die Erklärung begrenzt sich zusätzlich selbst auf die gesetzliche Höchstdauer">
           <DatumsFeld value={a.verzichtBis} onChange={(v) => set('verzichtBis', v)} className={inputCls} />
         </Field>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.vorbehaltEingetreten}
             onChange={(e) => set('vorbehaltEingetreten', e.target.checked)} />
           <span>Vorbehalt: Verzicht gilt nur, <strong>soweit die Verjährung nicht bereits eingetreten</strong> ist <span className="text-ink-500">(Praxis-Standard)</span></span>
         </label>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.keineAnerkennung}
             onChange={(e) => set('keineAnerkennung', e.target.checked)} />
           <span>Klarstellung: <strong>keine Anerkennung</strong> der Forderung (Art. 135 Ziff. 1 OR) <span className="text-ink-500">(Praxis-Standard)</span></span>

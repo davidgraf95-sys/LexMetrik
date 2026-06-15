@@ -84,7 +84,7 @@ export function VorlageEheschutzgesuch() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
                 onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
               <span>Adresse des Gerichts von Hand erfassen</span>
@@ -125,7 +125,7 @@ export function VorlageEheschutzgesuch() {
           <Field label="Gesuchsgegnerische Partei">
             <ParteiEditor p={a.gesuchsgegner} onChange={(p) => set('gesuchsgegner', p)} />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.kinderErfassen}
               onChange={(e) => set('kinderErfassen', e.target.checked)} />
             <span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(Massnahmen nach Kindesrecht, Art. 176 Abs. 3 ZGB)</span></span>
@@ -161,7 +161,7 @@ export function VorlageEheschutzgesuch() {
                   onSelect={(code) => set('obhut', code)}
                 />
               </Field>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.verkehrGerichtsueblich}
                   onChange={(e) => set('verkehrGerichtsueblich', e.target.checked)} />
                 <span>Persönlicher Verkehr nach dem <strong>gerichtsüblichen</strong> Besuchs- und Ferienrecht beantragen <span className="text-ink-500">(sonst: gerichtlich zu regeln)</span></span>
@@ -238,18 +238,18 @@ export function VorlageEheschutzgesuch() {
             </Field>
           )}
           {a.ehegattenunterhalt !== 'keiner' && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.rueckwirkung}
                 onChange={(e) => set('rueckwirkung', e.target.checked)} />
               <span>Rückwirkend auch für das <strong>Jahr vor Einreichung</strong> fordern <span className="text-ink-500">(Art. 173 Abs. 3 ZGB — weiter zurück nicht möglich)</span></span>
             </label>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.gueterTrennung}
               onChange={(e) => set('gueterTrennung', e.target.checked)} />
             <span>Gütertrennung beantragen <span className="text-ink-500">(Art. 176 Abs. 1 Ziff. 3 ZGB — nur «wenn es die Umstände rechtfertigen»)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.schuldneranweisung}
               onChange={(e) => set('schuldneranweisung', e.target.checked)} />
             <span>Schuldneranweisung beantragen <span className="text-ink-500">(Art. 177 ZGB — bei Nichterfüllung der Unterhaltspflicht)</span></span>
@@ -259,7 +259,7 @@ export function VorlageEheschutzgesuch() {
               <input className={inputCls} value={a.arbeitgeberName} onChange={(e) => set('arbeitgeberName', e.target.value)} placeholder="z. B. Muster AG, Zürich" />
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.verfuegungsbeschraenkung}
               onChange={(e) => set('verfuegungsbeschraenkung', e.target.checked)} />
             <span>Verfügungsbeschränkung beantragen <span className="text-ink-500">(Art. 178 ZGB — Vermögenswert individuell bezeichnen)</span></span>
@@ -278,7 +278,7 @@ export function VorlageEheschutzgesuch() {
             <div key={i} className="lc-notice text-body-s">{h}</div>
           ))}
 
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage}
               onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
             <span>Vollmacht als Beilage aufführen</span>
@@ -297,7 +297,7 @@ export function VorlageEheschutzgesuch() {
               <li><strong>Unterschreiben und im Doppel einreichen</strong> (Art. 131 ZPO).</li>
               <li><strong>Glaubhaft machen:</strong> Einkommens-, Wohnkosten- und Kinderbelege beilegen — im Summarverfahren zählen die Urkunden.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Unterhaltshöhen bestimmt das Gericht nach den konkreten Verhältnissen; die Begehren strukturieren meinen Standpunkt.
             </label>

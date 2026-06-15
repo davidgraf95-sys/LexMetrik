@@ -99,7 +99,7 @@ export function VorlageKlageOrdentlich() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
                 onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
               <span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
@@ -128,7 +128,7 @@ export function VorlageKlageOrdentlich() {
               </div>
             )}
           </div>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vermoegensrechtlich}
               onChange={(e) => set('vermoegensrechtlich', e.target.checked)} />
             <span>Vermögensrechtliche Streitigkeit <span className="text-ink-500">(Streitwertangabe ist Pflichtinhalt, Art. 221 Abs. 1 lit. c ZPO)</span></span>
@@ -139,12 +139,12 @@ export function VorlageKlageOrdentlich() {
                 placeholder="z. B. 80'000" aria-label="Streitwert in Franken" />
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.mietePacht}
               onChange={(e) => set('mietePacht', e.target.checked)} />
             <span>Streitigkeit aus Miete/Pacht von Wohn-/Geschäftsräumen oder landwirtschaftlicher Pacht <span className="text-ink-500">(Klagefrist 30 Tage, Art. 209 Abs. 4 ZPO)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.einzigeInstanz}
               onChange={(e) => set('einzigeInstanz', e.target.checked)} />
             <span>Einzige kantonale Instanz <span className="text-ink-500">(Art. 5/6/8 ZPO — ordentliches Verfahren auch bis CHF 30'000, Art. 243 Abs. 3)</span></span>
@@ -220,7 +220,7 @@ export function VorlageKlageOrdentlich() {
                 onClick={() => set('freieRechtsbegehren', [...a.freieRechtsbegehren, ''])}>+ Begehren</button>
             </div>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.rechtsoeffnung} onChange={(e) => set('rechtsoeffnung', e.target.checked)} />
             <span>Beseitigung des Rechtsvorschlags beantragen <span className="text-ink-500">(laufende Betreibung)</span></span>
           </label>
@@ -256,7 +256,7 @@ export function VorlageKlageOrdentlich() {
           </p>
           {/* Auftrag David 11.6.2026: Begründung wahlweise hier erfassen oder
               als Platzhalter im Dokument später ausfüllen. */}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.begruendungModus === 'platzhalter'}
               onChange={(e) => set('begruendungModus', e.target.checked ? 'platzhalter' : 'maske')} />
             <span>Begründung später ausfüllen <span className="text-ink-500">(die Klage erhält nummerierte Platzhalter für Tatsachen, Beweise und Rechtliches; die Pflichtinhalte sind vor der Einreichung zu ergänzen)</span></span>
@@ -325,7 +325,7 @@ export function VorlageKlageOrdentlich() {
 
       case 'beilagen': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.klagebewilligungVorhanden} onChange={(e) => set('klagebewilligungVorhanden', e.target.checked)} />
             <span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Art. 221 Abs. 2 lit. b ZPO)</span></span>
           </label>
@@ -357,7 +357,7 @@ export function VorlageKlageOrdentlich() {
               </div>
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage} onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
             Vollmacht als Beilage (bei Vertretung, Art. 221 Abs. 2 lit. a ZPO)
           </label>
@@ -397,7 +397,7 @@ export function VorlageKlageOrdentlich() {
               <li><strong>Klagebewilligung beilegen</strong> (bzw. Verzichts-/Ausnahme-Nachweis) und die verfügbaren Beweisurkunden (Art. 221 Abs. 2 ZPO).</li>
               <li><strong>Identität wahren:</strong> Parteien, Rechtsbegehren und Streitgegenstand müssen der Klagebewilligung entsprechen; Änderungen nur nach Art. 227/230 ZPO.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Dieses Werkzeug erstellt eine Eingabe-Vorlage aus festen Bausteinen — Fristen und Vollständigkeit sind eigenverantwortlich zu prüfen.
             </label>

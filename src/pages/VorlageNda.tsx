@@ -104,7 +104,7 @@ export function VorlageNda() {
           <Field label="Konkretisierung der vertraulichen Informationen" optional hint="zusätzlich zur allgemeinen Definition">
             <input className={inputCls} value={a.infoBeschrieb} onChange={(e) => set('infoBeschrieb', e.target.value)} placeholder="z. B. Quellcode, Kundenlisten, Preiskalkulationen" />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.dauerErfassen}
               onChange={(e) => set('dauerErfassen', e.target.checked)} />
             <span><strong>Nachwirkungsfrist</strong> vereinbaren (Geheimhaltung gilt N Jahre über das Vorhaben hinaus)</span>
@@ -114,12 +114,12 @@ export function VorlageNda() {
               <input className={inputCls + ' sm:max-w-[8rem]'} inputMode="numeric" value={a.dauerJahre} onChange={(e) => set('dauerJahre', e.target.value)} placeholder="z. B. 3" />
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.rueckgabe}
               onChange={(e) => set('rueckgabe', e.target.checked)} />
             <span><strong>Rückgabe/Vernichtung</strong> der Unterlagen aufnehmen</span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.konventionalstrafe}
               onChange={(e) => set('konventionalstrafe', e.target.checked)} />
             <span><strong>Konventionalstrafe</strong> vereinbaren <span className="text-ink-500">(verfällt auch ohne Schaden; übermässige setzt der Richter herab, Art. 163 Abs. 3 OR)</span></span>
@@ -151,7 +151,7 @@ export function VorlageNda() {
               <li><strong>Zweckbindung</strong> – die Informationen dürfen nur für den genannten Zweck verwendet werden.</li>
               <li><strong>Konventionalstrafe</strong> – beweiserleichternd, aber bei Übermass richterlich herabsetzbar (Art. 163 Abs. 3 OR).</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Die NDA ist ein Innominatvertrag; massgebend sind Gesetz und konkreter Sachverhalt.
             </label>

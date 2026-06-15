@@ -141,22 +141,22 @@ export function VorlageAuftrag() {
             </Field>
           )}
 
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.auslagenErsatz}
               onChange={(e) => set('auslagenErsatz', e.target.checked)} />
             <span><strong>Auslagen- und Verwendungsersatz</strong> ausdrücklich aufnehmen <span className="text-ink-500">(gesetzliche Pflicht, Art. 402 Abs. 1 OR)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.weisungsKlausel}
               onChange={(e) => set('weisungsKlausel', e.target.checked)} />
             <span><strong>Weisungsbindung</strong> aufnehmen <span className="text-ink-500">(Art. 397 Abs. 1 OR)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.substitution}
               onChange={(e) => set('substitution', e.target.checked)} />
             <span>Beizug <strong>Dritter zur Ausführung</strong> zulassen <span className="text-ink-500">(sonst persönliche Besorgung, Art. 398 Abs. 3 OR)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vollmachtErweitert}
               onChange={(e) => set('vollmachtErweitert', e.target.checked)} />
             <span><strong>Besondere Ermächtigung</strong> erteilen <span className="text-ink-500">(für Vergleich, Grundstücke usw. – Art. 396 Abs. 3 OR)</span></span>
@@ -183,7 +183,7 @@ export function VorlageAuftrag() {
               <li><strong>Jederzeitiges Auflösungsrecht</strong> – beide Parteien können den Auftrag jederzeit beenden; ein Ausschluss wäre wirkungslos (Art. 404 OR).</li>
               <li><strong>Erfolg geschuldet?</strong> – ist ein bestimmtes Werk gewollt, ist der Werkvertrag (Art. 363 ff. OR) die richtige Grundlage.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Der Auftrag schuldet sorgfältiges Tätigwerden, nicht einen Erfolg; massgebend sind Gesetz und konkreter Sachverhalt.
             </label>

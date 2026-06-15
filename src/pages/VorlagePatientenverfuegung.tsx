@@ -125,12 +125,12 @@ export function VorlagePatientenverfuegung() {
           <div className="space-y-2">
             <p className="lc-overline">Anwendungssituationen</p>
             {PV_SITUATIONEN.map((s) => (
-              <label key={s.id} className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label key={s.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.situationen.includes(s.id)} onChange={() => toggleSituation(s.id)} />
                 {s.label}
               </label>
             ))}
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 pt-1">
               <input type="checkbox" className="mt-0.5" checked={a.psychischeStoerungKontext ?? false}
                 onChange={(e) => set('psychischeStoerungKontext', e.target.checked)} />
               <span>Behandlung einer psychischen Störung in einer Klinik ist für mich relevant
@@ -233,14 +233,14 @@ export function VorlagePatientenverfuegung() {
               ))}
             </div>
             {a.organspende === 'ja' && (
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.organspendeVorbereitend ?? false}
                   onChange={(e) => set('organspendeVorbereitend', e.target.checked)} />
                 Einschliesslich vorbereitender medizinischer Massnahmen (z. B. Aufrechterhaltung der Organdurchblutung)
               </label>
             )}
           </div>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.ersetztFruehere} onChange={(e) => set('ersetztFruehere', e.target.checked)} />
             <span>Frühere Patientenverfügungen ersetzen <span className="text-ink-500">(empfohlen, Art. 371 Abs. 3 ZGB)</span></span>
           </label>
@@ -275,7 +275,7 @@ export function VorlagePatientenverfuegung() {
               <li><strong>Aktualisierung:</strong> rechtlich unbefristet gültig; Erneuerung der Unterschrift etwa alle zwei Jahre wird empfohlen.</li>
               <li><strong>Widerruf:</strong> jederzeit – durch Vernichtung, neue Verfügung oder schriftlichen Widerruf (Art. 371 Abs. 3 ZGB).</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich errichte diese Verfügung im Vollbesitz meiner Urteilsfähigkeit und nach reiflicher
               Überlegung (Art. 16 ZGB) – und habe verstanden, dass Datum und Unterschrift von Hand zu

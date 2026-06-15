@@ -164,7 +164,7 @@ export function VorlageKlageVereinfacht() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie={a.materie}
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
                 onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
               <span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
@@ -259,7 +259,7 @@ export function VorlageKlageVereinfacht() {
               </Field>
             </div>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.rechtsoeffnung} onChange={(e) => set('rechtsoeffnung', e.target.checked)} />
             <span>Beseitigung des Rechtsvorschlags beantragen <span className="text-ink-500">(laufende Betreibung)</span></span>
           </label>
@@ -289,14 +289,14 @@ export function VorlageKlageVereinfacht() {
 
       case 'begruendung': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.begruendungAktiv} onChange={(e) => set('begruendungAktiv', e.target.checked)} />
             <span>Schriftliche Begründung beifügen <span className="text-ink-500">(freiwillig, Art. 244 Abs. 2 ZPO — ohne Begründung lädt das Gericht direkt zur Verhandlung vor, Art. 245 Abs. 1)</span></span>
           </label>
           {a.begruendungAktiv && (
             <>
               {/* Auftrag David 11.6.2026: wahlweise Platzhalter im Dokument. */}
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 pl-6">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 pl-6">
                 <input type="checkbox" className="mt-0.5" checked={a.begruendungPlatzhalter ?? false}
                   onChange={(e) => set('begruendungPlatzhalter', e.target.checked || undefined)} />
                 <span>Begründung später ausfüllen <span className="text-ink-500">(die Klage erhält Leer-Ziffern für Tatsachendarstellung und Beweismittel)</span></span>
@@ -349,7 +349,7 @@ export function VorlageKlageVereinfacht() {
 
       case 'beilagen': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.klagebewilligungVorhanden} onChange={(e) => set('klagebewilligungVorhanden', e.target.checked)} />
             <span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Prozessvoraussetzung, Art. 209 ZPO)</span></span>
           </label>
@@ -381,7 +381,7 @@ export function VorlageKlageVereinfacht() {
               </div>
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage} onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
             Vollmacht als Beilage (bei Vertretung)
           </label>
@@ -421,7 +421,7 @@ export function VorlageKlageVereinfacht() {
               <li><strong>Klagebewilligung beilegen</strong> (bzw. Ausnahme-Nachweis) — fehlt sie, setzt das Gericht Nachfrist (Art. 132 ZPO); die Klagefrist (Art. 209 Abs. 3/4 ZPO) läuft unabhängig davon.</li>
               <li><strong>Identität wahren:</strong> Parteien, Rechtsbegehren und Streitgegenstand müssen der Klagebewilligung entsprechen; Änderungen nur nach Art. 227/230 ZPO.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Dieses Werkzeug erstellt eine Eingabe-Vorlage aus festen Bausteinen — Fristen und Vollständigkeit sind eigenverantwortlich zu prüfen.
             </label>

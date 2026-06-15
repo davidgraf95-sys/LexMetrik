@@ -83,7 +83,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<MaAntworten>, schritt: number) {
         <Field label="Fällig seit" optional>
           <DatumsFeld value={a.faelligSeit} onChange={(v) => set('faelligSeit', v)} className={inputCls} />
         </Field>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.verfalltagVereinbart}
             onChange={(e) => set('verfalltagVereinbart', e.target.checked)} />
           <span>Es war ein <strong>bestimmter Verfalltag</strong> vereinbart <span className="text-ink-500">(Verzug trat dann schon mit dessen Ablauf ein, Art. 102 Abs. 2 OR)</span></span>
@@ -100,7 +100,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<MaAntworten>, schritt: number) {
         <Field label="Zahlungsverbindung (IBAN/Konto)" optional>
           <input className={inputCls} value={a.zahlungsverbindung} onChange={(e) => set('zahlungsverbindung', e.target.value)} placeholder="z. B. IBAN CH00 0000 0000 0000 0000 0" />
         </Field>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.zinsVertraglich}
             onChange={(e) => set('zinsVertraglich', e.target.checked)} />
           <span>Vertraglich ist ein <strong>höherer Verzugszins</strong> als 5 % vereinbart <span className="text-ink-500">(Art. 104 Abs. 2 OR)</span></span>
@@ -110,7 +110,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<MaAntworten>, schritt: number) {
             <input className={inputCls + ' sm:max-w-[8rem]'} inputMode="decimal" value={a.zinssatzProzent} onChange={(e) => set('zinssatzProzent', e.target.value)} placeholder="z. B. 8" />
           </Field>
         )}
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.mahngebuehrErfassen}
             onChange={(e) => set('mahngebuehrErfassen', e.target.checked)} />
           <span>Mahngebühr verrechnen <span className="text-warn-700">(nur mit vertraglicher Grundlage geschuldet)</span></span>
@@ -120,14 +120,14 @@ function eingabeInhalt({ a, set }: SeiteCtx<MaAntworten>, schritt: number) {
             <Field label="Mahngebühr (CHF)">
               <input className={inputCls + ' sm:max-w-[8rem]'} inputMode="decimal" value={a.mahngebuehr} onChange={(e) => set('mahngebuehr', e.target.value)} placeholder="z. B. 20.00" />
             </Field>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.mahngebuehrVertraglich}
                 onChange={(e) => set('mahngebuehrVertraglich', e.target.checked)} />
               <span>Die vertragliche Grundlage (AGB/Vertrag) liegt vor – erst dann nimmt der Brief die Gebühr auf</span>
             </label>
           </div>
         )}
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.betreibungAndrohen}
             onChange={(e) => set('betreibungAndrohen', e.target.checked)} />
           <span>Betreibung nach Fristablauf ankündigen</span>

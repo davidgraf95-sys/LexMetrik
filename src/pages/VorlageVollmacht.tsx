@@ -218,11 +218,11 @@ export function VorlageVollmacht() {
               </Field>
               <div className="space-y-2">
                 <p className="lc-overline">Besondere Prozessbefugnisse (Art. 396 Abs. 3 OR)</p>
-                <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                   <input type="checkbox" className="mt-0.5" checked={a.prozessbefugnisse} onChange={(e) => set('prozessbefugnisse', e.target.checked)} />
                   <span>Vergleich abschliessen, Klage anerkennen und zurückziehen <span className="text-ink-500">(materielle Verfügungshandlungen – ausdrücklich, Art. 241 ZPO)</span></span>
                 </label>
-                <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                   <input type="checkbox" className="mt-0.5" checked={a.geheimnisentbindung} onChange={(e) => set('geheimnisentbindung', e.target.checked)} />
                   <span>Geheimnisentbindung Dritter (Ärzte, Banken, Versicherungen, Behörden) zur Aktenbeschaffung <span className="text-ink-500">(jederzeit schriftlich widerrufbar)</span></span>
                 </label>
@@ -254,7 +254,7 @@ export function VorlageVollmacht() {
               <div className="space-y-2">
                 <p className="lc-overline">Vertretungsbereiche</p>
                 {VM_BEREICHE.map((b) => (
-                  <label key={b.id} className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                  <label key={b.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                     <input type="checkbox" className="mt-0.5" checked={a.bereiche.includes(b.id)} onChange={() => toggleBereich(b.id)} />
                     {b.label}
                   </label>
@@ -278,14 +278,14 @@ export function VorlageVollmacht() {
           </p>
           <div className="space-y-2">
             {VM_ERMAECHTIGUNGEN.map((e) => (
-              <label key={e.id} className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label key={e.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.ermaechtigungen.includes(e.id)} onChange={() => toggleErmaechtigung(e.id)} />
                 <span>{e.label}{e.id === 'grundstuecke' && <span className="text-warn-700"> – löst Beurkundungs-/Beglaubigungs-Warnung aus</span>}</span>
               </label>
             ))}
           </div>
           <div className="space-y-2 pt-2 border-t border-line">
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.buergschaft} onChange={(e) => set('buergschaft', e.target.checked)} />
               <span>Eingehung von Bürgschaften <span className="text-danger-700">(Form-Gate: Art. 493 Abs. 6 OR – sperrt den Export, Notariat erforderlich)</span></span>
             </label>
@@ -307,7 +307,7 @@ export function VorlageVollmacht() {
           <Field label="Befristet bis" optional hint="leer = unbefristet; die Vollmacht bleibt jederzeit widerruflich (Art. 34 OR)">
             <DatumsFeld value={a.befristetBis} onChange={(v) => set('befristetBis', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.fortgeltungTod} onChange={(e) => set('fortgeltungTod', e.target.checked)} />
             <span>Fortgeltung über Tod und Verlust der Handlungsfähigkeit hinaus <span className="text-ink-500">(Art. 35 Abs. 1 OR, dispositiv)</span></span>
           </label>
@@ -349,7 +349,7 @@ export function VorlageVollmacht() {
               <li><strong>Beglaubigung (Usanz):</strong> Für Grundbuch-, Handelsregister- oder Bankgebrauch sowie im Auslandsverkehr die Unterschrift beglaubigen lassen (kantonal: Notariat, teilweise Gemeinde).</li>
               <li><strong>Widerruf:</strong> jederzeit möglich (Art. 34 Abs. 1 OR); kundgegebenen Dritten den Widerruf mitteilen (Art. 34 Abs. 3 OR) und die Urkunde zurückverlangen (Art. 36 OR).</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Dieses Werkzeug liefert eine Vorlage zum Unterschreiben – formbedürftige
               Geschäfte (Bürgschaft, Grundstückkauf) und der Vorsorgefall sind gesondert zu regeln.

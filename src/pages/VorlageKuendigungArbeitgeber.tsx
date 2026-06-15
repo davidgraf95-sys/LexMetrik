@@ -161,12 +161,12 @@ export function VorlageKuendigungArbeitgeber() {
                 <input type="number" min={0} step={0.5} className={inputCls + ' num sm:max-w-[9rem]'} value={a.abweichendeFristMonate}
                   onChange={(e) => set('abweichendeFristMonate', Number(e.target.value))} />
               </Field>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.abweichendeFristFormGueltig}
                   onChange={(e) => set('abweichendeFristFormGueltig', e.target.checked)} />
                 <span>Schriftlich im Vertrag, NAV oder GAV vereinbart <span className="text-ink-500">(Gültigkeitsvoraussetzung)</span></span>
               </label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.abweichendeFristQuelleGAV}
                   onChange={(e) => set('abweichendeFristQuelleGAV', e.target.checked)} />
                 <span>Quelle ist ein GAV <span className="text-ink-500">(Verkürzung unter 1 Monat nur durch GAV und nur im 1. Dienstjahr)</span></span>
@@ -215,7 +215,7 @@ export function VorlageKuendigungArbeitgeber() {
           <Field label="Erwarteter Zugang der Kündigung" hint="Stichtag für Dienstjahr, Frist UND Sperrfrist-Prüfung">
             <DatumsFeld value={a.zugangKuendigung} onChange={(v) => set('zugangKuendigung', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.kuendigungsterminMonatsende}
               onChange={(e) => set('kuendigungsterminMonatsende', e.target.checked)} />
             <span>Kündigungstermin ist das Monatsende <span className="text-ink-500">(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)</span></span>
@@ -231,7 +231,7 @@ export function VorlageKuendigungArbeitgeber() {
 
       case 'inhalt': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.begruendungAufnehmen}
               onChange={(e) => set('begruendungAufnehmen', e.target.checked)} />
             <span>Begründung ins Schreiben aufnehmen
@@ -243,7 +243,7 @@ export function VorlageKuendigungArbeitgeber() {
                 onChange={(e) => set('begruendungText', e.target.value)} />
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.freistellung}
               onChange={(e) => set('freistellung', e.target.checked)} />
             <span>Freistellung bis zum Austritt aussprechen <span className="text-ink-500">(Lohn läuft weiter; anderweitiger Erwerb wird angerechnet, Art. 324 OR)</span></span>
@@ -285,7 +285,7 @@ export function VorlageKuendigungArbeitgeber() {
               <li><strong>Sperrfristen erneut bedenken:</strong> Erkrankt die Person VOR dem Zugang, kann die Kündigung trotz heutiger Prüfung nichtig werden — im Zweifel Zugang dokumentieren.</li>
               <li><strong>Begründung nur auf Verlangen</strong> schriftlich nachliefern (Art. 335 Abs. 2 OR).</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Die Sperrfrist-Prüfung beruht auf den erfassten Ereignissen — nicht erfasste oder künftige Ereignisse kann sie nicht berücksichtigen.
             </label>

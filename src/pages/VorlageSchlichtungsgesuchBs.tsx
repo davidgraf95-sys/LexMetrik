@@ -223,7 +223,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 )}
               </p>
             )}
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.behoerdeManuellAktiv ?? false}
                 onChange={(e) => set('behoerdeManuellAktiv', e.target.checked || undefined)} />
               <span>Adresse der Behörde/des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
@@ -273,7 +273,7 @@ export function VorlageSchlichtungsgesuchBs() {
 
           {stopp ? stoppKarte() : (
             <>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.ausnahmeArt198} onChange={(e) => set('ausnahmeArt198', e.target.checked)} />
                 <span>Es liegt eine Ausnahme nach Art. 198 ZPO vor <span className="text-ink-500">(z. B. summarisches Verfahren, Scheidung, bestimmte SchKG-Klagen, Widerklage, einzige kantonale Instanz)</span></span>
               </label>
@@ -296,7 +296,7 @@ export function VorlageSchlichtungsgesuchBs() {
         <div className="space-y-5">
           {parteiEditor(a.klaeger, (p) => set('klaeger', p), 'Klagende Partei')}
           <div className="space-y-3">
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={!!a.vertretung}
                 onChange={(e) => set('vertretung', e.target.checked ? { bezeichnung: '', strasse: '', plz: '', ort: '' } : undefined)} />
               Die klagende Partei ist vertreten (Anwältin/Anwalt, Rechtsdienst)
@@ -313,7 +313,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 <Field label="Vollmacht vom" optional hint="wird automatisch ins Beilagenverzeichnis aufgenommen">
                   <DatumsFeld value={a.vertretung.vollmachtDatum ?? ''} onChange={(v) => set('vertretung', { ...a.vertretung!, vollmachtDatum: v })} className={inputCls} />
                 </Field>
-                <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 self-end pb-2">
+                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 self-end pb-2">
                   <input type="checkbox" checked={a.vertretung.mwstPflichtig ?? false} onChange={(e) => set('vertretung', { ...a.vertretung!, mwstPflichtig: e.target.checked })} />
                   mehrwertsteuerpflichtig (Kostenfolge «zzgl. MwSt.»)
                 </label>
@@ -328,7 +328,7 @@ export function VorlageSchlichtungsgesuchBs() {
           {parteiEditor(a.beklagte, (p) => set('beklagte', p), 'Beklagte Partei')}
           {verm && (
             <div className="space-y-3">
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={!!a.betreibung}
                   onChange={(e) => set('betreibung', e.target.checked ? { nummer: '', betreibungsamt: 'Basel-Stadt', rechtsvorschlagErhoben: false } : undefined)} />
                 Es läuft bereits eine Betreibung
@@ -337,7 +337,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 <div className="lc-card p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Field label="Betreibungs-Nr."><input className={inputCls} value={a.betreibung.nummer} onChange={(e) => set('betreibung', { ...a.betreibung!, nummer: e.target.value })} /></Field>
                   <Field label="Betreibungsamt"><input className={inputCls} value={a.betreibung.betreibungsamt} onChange={(e) => set('betreibung', { ...a.betreibung!, betreibungsamt: e.target.value })} /></Field>
-                  <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700 sm:col-span-2">
+                  <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 sm:col-span-2">
                     <input type="checkbox" checked={a.betreibung.rechtsvorschlagErhoben} onChange={(e) => set('betreibung', { ...a.betreibung!, rechtsvorschlagErhoben: e.target.checked })} />
                     Die beklagte Partei hat Rechtsvorschlag erhoben
                   </label>
@@ -372,7 +372,7 @@ export function VorlageSchlichtungsgesuchBs() {
                     <input className={inputCls} inputMode="decimal" placeholder="z. B. 3'000.00" value={a.geld?.betrag ?? ''} onChange={(e) => set('geld', { ...(a.geld ?? { betrag: '' }), betrag: e.target.value })} />
                   </Field>
                   <div className="space-y-2">
-                    <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                    <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                       <input type="checkbox" checked={!!a.geld?.zins}
                         onChange={(e) => set('geld', { ...(a.geld ?? { betrag: '' }), zins: e.target.checked ? { satz: '5', abDatum: '' } : undefined })} />
                       <span>nebst Zins <span className="text-ink-500">(Verzugszins 5 %, Art. 104 OR)</span></span>
@@ -446,7 +446,7 @@ export function VorlageSchlichtungsgesuchBs() {
               onChange={(e) => set('streitgegenstand', e.target.value)} />
           </Field>
           {/* Auftrag David 11.6.2026: wahlweise Platzhalter im Dokument. */}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.begruendungPlatzhalter ?? false}
               onChange={(e) => set('begruendungPlatzhalter', e.target.checked || undefined)} />
             <span>Begründung später ausfüllen <span className="text-ink-500">(das Gesuch erhält einen Platzhalter-Block; eine Begründung ist nicht erforderlich, Art. 202 ZPO)</span></span>
@@ -475,7 +475,7 @@ export function VorlageSchlichtungsgesuchBs() {
                   <span> – nur bei vermögensrechtlichen Streitigkeiten bis CHF {fmtCHF(String(SG_SCHWELLEN.ENTSCHEID_AUF_ANTRAG))}</span>}
               </span>
             </label>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.antragMediation} onChange={(e) => set('antragMediation', e.target.checked)} />
               <span>Antrag auf Mediation (Art. 213 ZPO) <span className="text-ink-500">— setzt Zustimmung der Gegenpartei voraus; kann auch erst an der Verhandlung gestellt werden</span></span>
             </label>

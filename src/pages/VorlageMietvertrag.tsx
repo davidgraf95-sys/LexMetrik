@@ -216,7 +216,7 @@ export function VorlageMietvertrag() {
             </Field>
           )}
           {wohnung && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.familienwohnung ?? false} onChange={(e) => set('familienwohnung', e.target.checked || undefined)} />
               <span>Das Objekt dient als <strong>Familienwohnung</strong> <span className="text-ink-500">(besonderer Kündigungsschutz, Art. 266m/266n OR)</span></span>
             </label>
@@ -247,7 +247,7 @@ export function VorlageMietvertrag() {
           <Field label="Mietbeginn">
             <DatumsFeld value={a.beginn} onChange={(v) => set('beginn', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.befristet} onChange={(e) => set('befristet', e.target.checked)} />
             <span>Befristetes Mietverhältnis <span className="text-ink-500">(endet ohne Kündigung; stillschweigende Fortsetzung → unbefristet)</span></span>
           </label>
@@ -344,7 +344,7 @@ export function VorlageMietvertrag() {
                 <p className="text-xs text-ink-500">Positionen einzeln wählen – eine Sammelklausel genügt nicht:</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {nkKatalog.map((p) => (
-                    <label key={p} className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                    <label key={p} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                       <input type="checkbox" className="mt-0.5" checked={a.nkPositionen.includes(p)} onChange={() => toggleNk(p)} />
                       {p}
                     </label>
@@ -375,22 +375,22 @@ export function VorlageMietvertrag() {
               onSelect={(code) => set('tierhaltung', code)}
             />
           </div>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.versicherungspflicht} onChange={(e) => set('versicherungspflicht', e.target.checked)} />
             <span>{wohnung ? 'Privathaftpflichtversicherung' : 'Betriebshaftpflichtversicherung'} des Mieters als Pflicht festhalten</span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.hausordnung} onChange={(e) => set('hausordnung', e.target.checked)} />
             <span>Hausordnung als Vertragsbestandteil</span>
           </label>
           {!wohnung && (
             <div className="space-y-3 pt-1">
               <p className="lc-overline">Geschäftsraum-Klauseln</p>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.mwstOption ?? false} onChange={(e) => set('mwstOption', e.target.checked || undefined)} />
                 <span><strong>MWST-Option</strong> des Vermieters <span className="text-ink-500">(Mietzins zzgl. {MV_PARAMETER.mwstSatz.wert.toFixed(1)} % MWST, Art. 22 MWSTG)</span></span>
               </label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.konkurrenzschutz ?? false} onChange={(e) => set('konkurrenzschutz', e.target.checked || undefined)} />
                 <span><strong>Konkurrenzschutz</strong> vereinbaren <span className="text-ink-500">(nicht vertragsimmanent – muss ausdrücklich umschrieben werden)</span></span>
               </label>
@@ -410,7 +410,7 @@ export function VorlageMietvertrag() {
           {a.detailgrad === 'experte' && (
             <div className="space-y-3 pt-1">
               <p className="lc-overline">Mietzinsvorbehalt (Art. 18 VMWG)</p>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.mietzinsvorbehalt ?? false} onChange={(e) => set('mietzinsvorbehalt', e.target.checked || undefined)} />
                 <span><strong>Mietzinsvorbehalt</strong> aufnehmen <span className="text-ink-500">(nicht ausgeschöpfte Mietzinsanpassung, in Prozenten zu beziffern)</span></span>
               </label>
@@ -462,7 +462,7 @@ export function VorlageMietvertrag() {
               <li><strong>Kaution</strong> auf ein Sperrkonto auf den Namen des Mieters einzahlen (Art. 257e OR).</li>
               {!wohnung && <li><strong>MWST-Option:</strong> Rechnungsanforderungen (Art. 26 MWSTG) für den Vorsteuerabzug beachten.</li>}
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Dies ist ein Entwurf nach festen Bausteinen – kantonale Formularpflichten, Referenzzins-Stand und der Einzelfall sind gesondert zu prüfen.
             </label>

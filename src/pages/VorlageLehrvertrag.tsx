@@ -127,7 +127,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
               <input type="number" min={1} max={6} className={inputCls + ' num w-28'} value={a.probezeitMonate} onChange={(e) => set('probezeitMonate', Number(e.target.value))} />
             </Field>
             {a.probezeitMonate > 3 && (
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.probezeitBehoerde} onChange={(e) => set('probezeitBehoerde', e.target.checked)} />
                 <span>Die Verlängerung über drei Monate ist von der kantonalen Behörde bewilligt <span className="text-ink-500">(Art. 344a Abs. 4 OR – sonst höchstens drei Monate)</span></span>
               </label>
@@ -156,9 +156,9 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
           {a.detailgrad === 'experte' && (
             <div className="space-y-2 pt-1">
               <p className="lc-overline">Weitere Leistungen (Art. 344a Abs. 5 OR)</p>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.berufswerkzeuge} onChange={(e) => set('berufswerkzeuge', e.target.checked)} /><span>Berufswerkzeuge werden vom Lehrbetrieb gestellt</span></label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.unterkunftVerpflegung} onChange={(e) => set('unterkunftVerpflegung', e.target.checked)} /><span>Beitrag an Unterkunft und Verpflegung</span></label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.versicherungspraemien} onChange={(e) => set('versicherungspraemien', e.target.checked)} /><span>Übernahme der Prämien der obligatorischen Unfallversicherung</span></label>
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.berufswerkzeuge} onChange={(e) => set('berufswerkzeuge', e.target.checked)} /><span>Berufswerkzeuge werden vom Lehrbetrieb gestellt</span></label>
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.unterkunftVerpflegung} onChange={(e) => set('unterkunftVerpflegung', e.target.checked)} /><span>Beitrag an Unterkunft und Verpflegung</span></label>
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.versicherungspraemien} onChange={(e) => set('versicherungspraemien', e.target.checked)} /><span>Übernahme der Prämien der obligatorischen Unfallversicherung</span></label>
             </div>
           )}
         </div>
@@ -189,7 +189,7 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
               <li><strong>Genehmigung der kantonalen Behörde</strong> vor Lehrbeginn (Art. 14 BBG); ohne sie darf die Bildung nicht beginnen.</li>
               <li><strong>Jugendarbeitsschutz</strong> (ArGV 5) und Bildungsverordnung des Berufs sind zwingend zu beachten.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Dies ist ein Entwurf nach festen Bausteinen; Schriftform, behördliche Genehmigung und die Bildungsverordnung sind gesondert sicherzustellen.
             </label>

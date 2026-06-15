@@ -121,17 +121,17 @@ export function VorlageKuendigungVertrag() {
               <Field label="Policennummer" optional>
                 <input className={inputCls + ' sm:max-w-[16rem]'} value={a.policennummer} onChange={(e) => set('policennummer', e.target.value)} />
               </Field>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.vertragsdauerUeber3Jahre}
                   onChange={(e) => set('vertragsdauerUeber3Jahre', e.target.checked)} />
                 <span>Der Vertrag läuft bereits im dritten Jahr oder länger <span className="text-ink-500">(Voraussetzung der ordentlichen Kündigung, Art. 35a Abs. 1 VVG)</span></span>
               </label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.lebensversicherung}
                   onChange={(e) => set('lebensversicherung', e.target.checked)} />
                 <span>Es handelt sich um eine Lebensversicherung <span className="text-warn-700">(vom ordentlichen Kündigungsrecht ausgenommen, Art. 35a Abs. 3 VVG)</span></span>
               </label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.krankenzusatz}
                   onChange={(e) => set('krankenzusatz', e.target.checked)} />
                 <span>Zusatzversicherung zur Krankenversicherung <span className="text-ink-500">(Kündigungsrecht nur Versicherungsnehmer:in, Art. 35a Abs. 4 VVG)</span></span>
@@ -154,12 +154,12 @@ export function VorlageKuendigungVertrag() {
                   onSelect={(code) => set('kkGrund', code)}
                 />
               </Field>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.kkBesondereForm}
                   onChange={(e) => set('kkBesondereForm', e.target.checked)} />
                 <span>Besondere Versicherungsform <span className="text-ink-500">(wählbare Franchise, HMO/Hausarzt/Telmed — ordentlicher Wechsel nur auf Jahresende, Art. 94 Abs. 2 KVV)</span></span>
               </label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.kkAusstaende}
                   onChange={(e) => set('kkAusstaende', e.target.checked)} />
                 <span>Es bestehen offene Prämien, Kostenbeteiligungen oder Betreibungskosten <span className="text-warn-700">(Wechselsperre, Art. 64a Abs. 6 KVG)</span></span>
@@ -183,7 +183,7 @@ export function VorlageKuendigungVertrag() {
 
       case 'termin': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.aufNaechstmoeglich}
               onChange={(e) => set('aufNaechstmoeglich', e.target.checked)} />
             <span>Auf den <strong>nächstmöglichen Termin</strong> kündigen <span className="text-ink-500">(empfohlen — kein Risiko eines verfehlten Wunschtermins)</span></span>
@@ -222,7 +222,7 @@ export function VorlageKuendigungVertrag() {
               <li><strong>Unterschreiben und nachweisbar zustellen</strong> — eingeschrieben empfohlen; massgebend ist der Zugang.</li>
               <li><strong>Vertrag/AGB prüfen:</strong> Mindestlaufzeiten und Termine gehen diesem Schreiben vor{a.preset === 'versicherung' ? ' (Art. 35a VVG: Abweichungen nur zu Ihren Gunsten, Art. 98 VVG)' : ''}.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Diese Maske berechnet keine Frist, wo kein Gesetz eine vorgibt — massgebend sind mein Vertrag und dessen Termine.
             </label>

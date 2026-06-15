@@ -88,7 +88,7 @@ export function VorlageScheidungsklage() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
                 onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
               <span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
@@ -147,7 +147,7 @@ export function VorlageScheidungsklage() {
           <Field label="Beklagte Partei (Ehegatte/Ehegattin)">
             <ParteiEditor p={a.beklagte} onChange={(p) => set('beklagte', p)} />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.kinderErfassen}
               onChange={(e) => set('kinderErfassen', e.target.checked)} />
             <span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(Rechtsbegehren zu den Kindern sind dann Mindestinhalt, Art. 290 lit. d ZPO)</span></span>
@@ -208,12 +208,12 @@ export function VorlageScheidungsklage() {
                 onChange={(e) => set('unterhaltBetrag', e.target.value)} placeholder="z. B. 2500" />
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.gueterrecht}
               onChange={(e) => set('gueterrecht', e.target.checked)} />
             <span>Güterrechtliche Auseinandersetzung beantragen <span className="text-ink-500">(Bezifferung vorbehalten)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vorsorgeausgleich}
               onChange={(e) => set('vorsorgeausgleich', e.target.checked)} />
             <span>Vorsorgeausgleich beantragen <span className="text-ink-500">(Art. 122 ff. ZGB)</span></span>
@@ -246,7 +246,7 @@ export function VorlageScheidungsklage() {
             <div key={i} className="lc-notice text-body-s">{h}</div>
           ))}
 
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage}
               onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
             <span>Vollmacht als Beilage aufführen</span>
@@ -265,7 +265,7 @@ export function VorlageScheidungsklage() {
               <li><strong>Unterschreiben und im Doppel einreichen</strong> (Art. 131 ZPO) — beim Gericht am Wohnsitz einer Partei.</li>
               <li><strong>Belege beilegen</strong> (Art. 290 lit. e ZPO): Familienausweis/Eheurkunde{a.kinderErfassen ? ', Geburtsurkunden der Kinder' : ''}.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Die Eingabe ist unbegründet zulässig; das Gericht lädt zur Einigungsverhandlung vor, und Kinderbelange regelt es von Amtes wegen.
             </label>

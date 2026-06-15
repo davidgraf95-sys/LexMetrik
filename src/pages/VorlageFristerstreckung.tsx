@@ -97,7 +97,7 @@ export function VorlageFristerstreckung() {
           <Field label="Art der Frist" hint="nur gerichtliche Fristen sind erstreckbar (Art. 144 ZPO)">
             <div className="space-y-2">
               {FRIST_TYPEN.map((t) => (
-                <label key={t.wert} className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+                <label key={t.wert} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                   <input type="radio" name="fristTyp" className="mt-0.5" checked={a.fristTyp === t.wert}
                     onChange={() => set('fristTyp', t.wert)} />
                   <span><strong>{t.label}</strong> <span className="text-ink-500">– {t.sub}</span></span>
@@ -108,7 +108,7 @@ export function VorlageFristerstreckung() {
           <Field label="Frist" hint="bestimmte Bezeichnung – erscheint im Gesuch">
             <input className={inputCls} value={a.fristBeschrieb} onChange={(e) => set('fristBeschrieb', e.target.value)} placeholder="z. B. Frist zur Erstattung der Klageantwort" />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.verfuegungVomErfassen}
               onChange={(e) => set('verfuegungVomErfassen', e.target.checked)} />
             <span>Datum der <strong>fristansetzenden Verfügung</strong> nennen <span className="text-ink-500">(optional)</span></span>
@@ -124,12 +124,12 @@ export function VorlageFristerstreckung() {
           <Field label="Beantragtes neues Fristende">
             <DatumsFeld value={a.erstreckungBis} onChange={(v) => set('erstreckungBis', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.ersteErstreckung}
               onChange={(e) => set('ersteErstreckung', e.target.checked)} />
             <span>Es ist das <strong>erste</strong> Erstreckungsgesuch in dieser Frist <span className="text-ink-500">(wird im Gesuch offengelegt)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.begruendungPlatzhalter}
               onChange={(e) => set('begruendungPlatzhalter', e.target.checked)} />
             <span><strong>Begründung später ausfüllen</strong> <span className="text-ink-500">(Platzhalter-Block im Gesuch – vor Einreichung ergänzen)</span></span>
@@ -169,7 +169,7 @@ export function VorlageFristerstreckung() {
               <li><strong>Vor Fristablauf einreichen</strong> (Art. 144 Abs. 2 ZPO) – spätestens am letzten Tag beim Gericht einreichen oder der Schweizerischen Post übergeben (Art. 143 Abs. 1 ZPO).</li>
               <li><strong>Unterschreiben</strong> – das Gesuch geht als unterzeichnete Eingabe an das Gericht.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Ob die Gründe zureichend sind, entscheidet das Gericht – ein Anspruch auf Erstreckung besteht nicht.
             </label>

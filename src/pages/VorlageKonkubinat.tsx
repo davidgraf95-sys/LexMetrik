@@ -91,7 +91,7 @@ export function VorlageKonkubinat() {
 
       case 'regelung': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.wohnenAufnehmen}
               onChange={(e) => set('wohnenAufnehmen', e.target.checked)} />
             <span><strong>Wohn-Klausel</strong> aufnehmen</span>
@@ -123,17 +123,17 @@ export function VorlageKonkubinat() {
               </Field>
             </div>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.gemeinsamesKonto}
               onChange={(e) => set('gemeinsamesKonto', e.target.checked)} />
             <span><strong>Gemeinsames Konto</strong> für die gemeinsamen Kosten</span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.inventarAufnehmen}
               onChange={(e) => set('inventarAufnehmen', e.target.checked)} />
             <span>Verweis auf <strong>Inventarliste</strong> (Allein-/Miteigentum) aufnehmen</span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.einfacheGesellschaft}
               onChange={(e) => set('einfacheGesellschaft', e.target.checked)} />
             <span><strong>Einfache Gesellschaft</strong> für einen gemeinsamen Zweck <span className="text-ink-500">(z. B. gemeinsames Bauvorhaben, Art. 530 OR)</span></span>
@@ -143,12 +143,12 @@ export function VorlageKonkubinat() {
               <input className={inputCls} value={a.einfacheGesellschaftZweck} onChange={(e) => set('einfacheGesellschaftZweck', e.target.value)} placeholder="z. B. Erwerb und Umbau der Liegenschaft …" />
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.kinderHinweis}
               onChange={(e) => set('kinderHinweis', e.target.checked)} />
             <span><strong>Hinweis gemeinsame Kinder</strong> aufnehmen <span className="text-ink-500">(Sorge/Unterhalt nach Gesetz)</span></span>
           </label>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.vorsorgeHinweis}
               onChange={(e) => set('vorsorgeHinweis', e.target.checked)} />
             <span><strong>Hinweis Vorsorge/Erbrecht</strong> aufnehmen <span className="text-ink-500">(kein gesetzliches Erbrecht der Partner)</span></span>
@@ -175,7 +175,7 @@ export function VorlageKonkubinat() {
               <li><strong>Kein gesetzliches Konkubinatsrecht</strong> – nur das ausdrücklich Geregelte gilt.</li>
               <li><strong>Inventarliste</strong> beilegen – sie trennt Allein- von Miteigentum (Art. 646 ZGB).</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Kindesbelange richten sich nach dem Gesetz; massgebend sind Gesetz und konkreter Sachverhalt.
             </label>

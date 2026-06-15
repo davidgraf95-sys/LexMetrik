@@ -144,7 +144,7 @@ export function VorlageWerkvertrag() {
               </Field>
             </div>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.anzahlung}
               onChange={(e) => set('anzahlung', e.target.checked)} />
             <span><strong>Akontozahlung</strong> bei Vertragsschluss vereinbaren</span>
@@ -154,7 +154,7 @@ export function VorlageWerkvertrag() {
               <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.anzahlungCHF} onChange={(e) => set('anzahlungCHF', e.target.value)} placeholder="z. B. 4000.00" />
             </Field>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.abnahmeProtokoll}
               onChange={(e) => set('abnahmeProtokoll', e.target.checked)} />
             <span>Gemeinsames <strong>Abnahmeprotokoll</strong> vereinbaren</span>
@@ -181,7 +181,7 @@ export function VorlageWerkvertrag() {
               <li><strong>Mängel rechtzeitig rügen</strong> – beim unbeweglichen Werk gilt zwingend die 60-Tage-Frist (Art. 367 Abs. 1bis OR); sonst gilt das Werk als genehmigt.</li>
               <li><strong>Verjährung</strong> – 2 Jahre (beweglich) bzw. 5 Jahre (unbeweglich) ab Abnahme (Art. 371 OR).</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Rügefristen und Verjährung sind zwingend; massgebend sind Gesetz und konkreter Sachverhalt.
             </label>

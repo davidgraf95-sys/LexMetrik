@@ -145,7 +145,7 @@ export function VorlageKuendigungMieter() {
 
       case 'familienwohnung': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.familienwohnung}
               onChange={(e) => set('familienwohnung', e.target.checked)} />
             <span>Die Mietsache dient als <strong>Wohnung der Familie</strong>
@@ -153,7 +153,7 @@ export function VorlageKuendigungMieter() {
           </label>
           {a.familienwohnung && (
             <div className="space-y-3">
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.zustimmungEhegatte}
                   onChange={(e) => set('zustimmungEhegatte', e.target.checked)} />
                 <span>Die <strong>ausdrückliche Zustimmung</strong> des Ehegatten / der eingetragenen Partnerin bzw. des Partners liegt vor
@@ -203,7 +203,7 @@ export function VorlageKuendigungMieter() {
             </Field>
           )}
           {a.terminQuelle === 'jedes_monatsende' && (
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.dezemberAusgeschlossen}
                 onChange={(e) => set('dezemberAusgeschlossen', e.target.checked)} />
               <span>«… ausser auf den 31. Dezember» vereinbart</span>
@@ -225,7 +225,7 @@ export function VorlageKuendigungMieter() {
 
       case 'ausserterminlich': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.ausserterminlich}
               onChange={(e) => set('ausserterminlich', e.target.checked)} />
             <span>Ich gebe die Mietsache <strong>vorzeitig</strong> zurück und schlage eine:n Nachmieter:in vor
@@ -236,12 +236,12 @@ export function VorlageKuendigungMieter() {
               <Field label="Nachmieter:in (Name)">
                 <input className={inputCls} value={a.nachmieterName} onChange={(e) => set('nachmieterName', e.target.value)} placeholder="Vorname Name" />
               </Field>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.nachmieterZahlungsfaehig}
                   onChange={(e) => set('nachmieterZahlungsfaehig', e.target.checked)} />
                 <span>Zahlungsfähigkeit ist belegbar (Betreibungsauszug, Lohnnachweis)</span>
               </label>
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
                 <input type="checkbox" className="mt-0.5" checked={a.uebernahmeGleicheBedingungen}
                   onChange={(e) => set('uebernahmeGleicheBedingungen', e.target.checked)} />
                 <span>Übernahme zu den GLEICHEN Vertragsbedingungen ist zugesichert</span>
@@ -284,7 +284,7 @@ export function VorlageKuendigungMieter() {
               <li><strong>Zugang entscheidet</strong> — eingeschrieben und zusätzlich per A-Post; spätester rechtzeitiger Zustelltag beachten (siehe Endtermin-Kachel).</li>
               <li><strong>Ortsübliche Termine sind eine Tatfrage</strong> des konkreten Ortes — im Zweifel den Mietvertrag und die örtliche Übung prüfen.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Endtermin und Form-Prüfung beruhen auf meinen Eingaben (Objektart, Termine, Familienwohnung) — Vertrag und örtliche Übung gehen vor.
             </label>

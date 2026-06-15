@@ -85,7 +85,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
         <div className="space-y-4">
           <Field label="Gegenstand der Geschäfte"><input className={inputCls} value={a.gegenstand} onChange={(e) => set('gegenstand', e.target.value)} placeholder="z. B. Werkzeugmaschinen" /></Field>
           <Field label="Reisegebiet / Kundenkreis"><input className={inputCls} value={a.reisegebiet} onChange={(e) => set('reisegebiet', e.target.value)} placeholder="z. B. Kantone BE und SO" /></Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.ausschliesslich} onChange={(e) => set('ausschliesslich', e.target.checked)} />
             <span>Gebiet/Kundenkreis <strong>ausschliesslich</strong> zugewiesen <span className="text-ink-500">(Provision dann auf allen Geschäften im Gebiet, Art. 349/349b OR)</span></span>
           </label>
@@ -146,13 +146,13 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
               <Field label="Auslagenpauschale (CHF / Monat)"><BetragsFeld className={inputCls + ' num w-40'} value={a.auslagenPauschaleCHF} onChange={(v) => set('auslagenPauschaleCHF', v)} placeholder="z. B. 600" /></Field>
             )}
           </div>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.saisonschwankung} onChange={(e) => set('saisonschwankung', e.target.checked)} />
             <span>Provision unterliegt erheblichen <strong>saisonalen Schwankungen</strong> <span className="text-ink-500">(Sonder-Kündigungsregel, Art. 350 OR)</span></span>
           </label>
           {a.detailgrad === 'experte' && (
             <div className="lc-card p-4 space-y-3">
-              <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium">
+              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium">
                 <input type="checkbox" className="mt-0.5" checked={a.delkredere} onChange={(e) => set('delkredere', e.target.checked)} />
                 <span><strong>Delkredere</strong> vereinbaren <span className="text-ink-500">(nur Privatkunden, höchstens ¼, Art. 348a OR)</span></span>
               </label>
@@ -190,7 +190,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
               <li><strong>Schriftlich regeln</strong> (Art. 347a OR): Soweit nicht schriftlich, gelten Gesetz und übliche Bedingungen.</li>
               <li><strong>Beidseitig unterzeichnen.</strong> Anwendbare GAV/NAV gehen vor.</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Dies ist ein Entwurf nach festen Bausteinen; die zwingenden Schranken (348a/349d/350 OR) und der Einzelfall sind gesondert zu prüfen.
             </label>

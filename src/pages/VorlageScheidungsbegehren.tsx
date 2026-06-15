@@ -114,7 +114,7 @@ export function VorlageScheidungsbegehren() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
               <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
                 onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
               <span>Adresse des Gerichts von Hand erfassen</span>
@@ -156,7 +156,7 @@ export function VorlageScheidungsbegehren() {
           <Field label="Vertretung Partei 2" optional>
             <input className={inputCls} value={a.vertretung2 ?? ''} onChange={(e) => set('vertretung2', e.target.value || undefined)} placeholder="z. B. RA lic. iur. Y" />
           </Field>
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.kinderErfassen}
               onChange={(e) => set('kinderErfassen', e.target.checked)} />
             <span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(gemeinsame Anträge sind Mindestinhalt, Art. 285 lit. d ZPO)</span></span>
@@ -203,7 +203,7 @@ export function VorlageScheidungsbegehren() {
                 'z. B. Die Partei 1 sei zu monatlichem Unterhalt von CHF … zu verpflichten')}
             </>
           )}
-          <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
             <input type="checkbox" className="mt-0.5" checked={a.kostenHaelftig}
               onChange={(e) => set('kostenHaelftig', e.target.checked)} />
             <span>Kosten-Antrag: hälftige Gerichtskosten, keine Parteientschädigungen <span className="text-ink-500">(üblich beim gemeinsamen Begehren)</span></span>
@@ -230,7 +230,7 @@ export function VorlageScheidungsbegehren() {
               <li><strong>BEIDE Ehegatten unterzeichnen</strong> die Eingabe (Art. 285 lit. f ZPO).</li>
               <li><strong>Beilegen:</strong> {a.einigung === 'voll' ? 'vollständige Vereinbarung' : 'Teilvereinbarung'} samt Belegen, Familienausweis{a.kinderErfassen ? ', Geburtsurkunden' : ''} (Art. 285 lit. c/e ZPO).</li>
             </ul>
-            <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
+            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
               Ich habe verstanden: Das Gericht hört beide Parteien an, prüft die Vereinbarung und ist bei Kinderbelangen an die Anträge nicht gebunden.
             </label>

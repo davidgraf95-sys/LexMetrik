@@ -62,7 +62,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<FaAntworten>, schritt: number) {
         <Field label="Forderung" hint="bestimmte Bezeichnung – erscheint im Betreff und im Abtretungs-Satz">
           <input className={inputCls} value={a.forderungBeschrieb} onChange={(e) => set('forderungBeschrieb', e.target.value)} placeholder="z. B. Kaufpreisforderung aus Kaufvertrag vom 1. Februar 2026" />
         </Field>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.betragErfassen}
             onChange={(e) => set('betragErfassen', e.target.checked)} />
           <span>Betrag in der Erklärung nennen <span className="text-ink-500">(optional – die Bezeichnung muss die Forderung auch ohne Betrag bestimmen)</span></span>
@@ -72,22 +72,22 @@ function eingabeInhalt({ a, set }: SeiteCtx<FaAntworten>, schritt: number) {
             <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.betrag} onChange={(e) => set('betrag', e.target.value)} placeholder="z. B. 25000.00" />
           </Field>
         )}
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.zinsenAusdruecklich}
             onChange={(e) => set('zinsenAusdruecklich', e.target.checked)} />
           <span>Rückständige Zinsen <strong>ausdrücklich mitabtreten</strong> <span className="text-ink-500">(sonst nur gesetzliche Vermutung, Art. 170 Abs. 3 OR)</span></span>
         </label>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.urkundenUebergabe}
             onChange={(e) => set('urkundenUebergabe', e.target.checked)} />
           <span>Zusage der <strong>Urkunden-/Beweismittel-Übergabe</strong> aufnehmen <span className="text-ink-500">(gesetzliche Pflicht, Art. 170 Abs. 2 OR)</span></span>
         </label>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.anzeigeAnkuendigen}
             onChange={(e) => set('anzeigeAnkuendigen', e.target.checked)} />
           <span>Ankündigen, dass der <strong>Schuldner schriftlich informiert</strong> wird <span className="text-ink-500">(bis zur Anzeige befreit ihn die gutgläubige Zahlung an die Alt-Gläubigerin, Art. 167 OR)</span></span>
         </label>
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
+        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
           <input type="checkbox" className="mt-0.5" checked={a.annahmeZeile}
             onChange={(e) => set('annahmeZeile', e.target.checked)} />
           <span>Gegenzeichnungs-Zeile der <strong>Zessionarin</strong> aufnehmen <span className="text-ink-500">(formfrei möglich – die Zeile schafft Klarheit)</span></span>
