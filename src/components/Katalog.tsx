@@ -7,7 +7,7 @@ import { OBERKATEGORIEN, kategorieFuer, type Oberkategorie, type OberkategorieId
 import { praxisRang, kachelDirektlinks } from '../lib/praxisRang';
 import { FRISTEN_HAUPTEINSTIEGE, FRISTEN_PROZESSUAL, FRISTEN_MATERIELL, fristenEinstiegArt, type FristenRegimeZeile as FristenRegimeZeileDef } from '../lib/fristenKategorie';
 import { ZUSTAENDIGKEIT_FELDER, ZUSTAENDIGKEIT_FELD_IDS } from '../lib/zustaendigkeitKategorie';
-import { kartePasst, sucheRang } from '../lib/katalogSuche';
+import { kartePasst, sucheRang, LEERER_FILTER } from '../lib/katalogSuche';
 import { sansAmp } from './typografie';
 
 // Katalog der Hauptseite «/» — NEU STRUKTURIERT (Auftrag David 10.6.2026):
@@ -424,7 +424,16 @@ function VorlagenRegister({ karten }: { karten: CalculatorCard[] }) {
 
 // ─── Registerteil: eine Oberkategorie mit Gebiets-Gruppen + Geplant-Zeile ───
 
+// Filter-Pille (Rechtsgebiet-Schnitt im Vorlagen-Register) — Pillen-Höhe
+// (--pill-h) aus dem Designsystem; aktiver Zustand im Messing-Akzent.
+const pillKlasse = (aktiv: boolean) =>
+  `h-9 px-3 rounded-full text-body-s font-medium transition-colors whitespace-nowrap motion-reduce:transition-none ${
+    aktiv
+      ? 'bg-brass-100 text-brass-700 border border-brass-500'
+      : 'bg-surface text-ink-600 border border-line hover:border-brass-400 hover:text-brass-700'}`;
+
 function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; karten: CalculatorCard[]; onZurueck: () => void }) {
+  const [params, setParams] = useSearchParams();
   // Übersichtlichkeits-Politur (Auftrag David 10.6.2026): ZWEI ruhige
   // Gebrauchs-Ebenen statt einer Mischliste — «Alltag» (Praxis-Rang 1)
   // zuoberst, «Weitere Werkzeuge» darunter; innerhalb der Ebene die feste
@@ -433,7 +442,35 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
   const sortiert = (xs: CalculatorCard[]) => [...xs].sort((a, b) =>
     gebietsRang(a.rechtsgebiet) - gebietsRang(b.rechtsgebiet) ||
     a.title.localeCompare(b.title, 'de'));
-  const verfuegbarAlle = karten.filter(istVerfuegbar);
+
+  // Rechtsgebiet-Filter + Status-Schnitt (Redesign E4) — verdrahtet die bereits
+  // vorhandene, getestete kartePasst-Logik (vorher mit leeren Sets aufgerufen,
+  // also faktisch tot). NUR in der Vorlagen-Kategorie, der einzigen «Wand»;
+  // teilbar über die URL (?rg=, ?status=). Reines Filtern, keine Logik berührt.
+  const filterAktiv = kat.id === 'vorlagen';
+  const rgRoh = params.get('rg') ?? '';
+  const aktiveGebiete = new Set(rgRoh ? rgRoh.split(',').filter(Boolean) : []);
+  const nurVerfuegbar = params.get('status') === 'verfuegbar';
+  const gefiltert = filterAktiv
+    ? karten.filter((k) => kartePasst(k, { ...LEERER_FILTER, gebiete: aktiveGebiete, nurVerfuegbar }))
+    : karten;
+  const vorhandeneGebiete = filterAktiv
+    ? [...new Set(karten.filter(istVorlage).map((k) => k.rechtsgebiet))]
+        .sort((a, b) => gebietsRang(a) - gebietsRang(b) || a.localeCompare(b, 'de'))
+    : [];
+  const setzeFilter = (rg: Set<string>, nv: boolean) => {
+    const p = new URLSearchParams(params);
+    if (rg.size > 0) p.set('rg', [...rg].join(',')); else p.delete('rg');
+    if (nv) p.set('status', 'verfuegbar'); else p.delete('status');
+    setParams(p, { replace: true });
+  };
+  const toggleGebiet = (g: string) => {
+    const s = new Set(aktiveGebiete);
+    if (s.has(g)) s.delete(g); else s.add(g);
+    setzeFilter(s, nurVerfuegbar);
+  };
+
+  const verfuegbarAlle = gefiltert.filter(istVerfuegbar);
   const alltag = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) === 1));
   const weitere = sortiert(verfuegbarAlle.filter((k) => praxisRang(k.id) !== 1));
   const verfuegbar = [...alltag, ...weitere];
@@ -444,7 +481,7 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
   // Vorlagen ausnehmen — geplante Werkzeug-Karten (checklisten,
   // mandatsaufnahme) zeigt das VorlagenRegister nicht, sie müssen hier
   // sichtbar bleiben (Kachel-Zähler = Ansicht, §8).
-  const geplant = karten.filter((k) => !istVerfuegbar(k)
+  const geplant = gefiltert.filter((k) => !istVerfuegbar(k)
     && !(kat.id === 'zustaendigkeiten' && ZUSTAENDIGKEIT_FELD_IDS.has(k.id))
     && !(kat.id === 'vorlagen' && istVorlage(k)));
 
@@ -468,7 +505,29 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
         <p className="text-body-s text-ink-500 max-w-reading">{kat.lede}</p>
       </div>
 
-      {kat.id === 'fristen' ? (
+      {/* Rechtsgebiet-Filter + Status-Schnitt — macht die Vorlagen-«Wand»
+          scanbar; die Treffer engen alle Gruppen darunter live ein. */}
+      {filterAktiv && vorhandeneGebiete.length > 1 && (
+        <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Vorlagen nach Rechtsgebiet filtern">
+          <button type="button" onClick={() => setzeFilter(new Set(), false)}
+            className={pillKlasse(aktiveGebiete.size === 0 && !nurVerfuegbar)}>Alle</button>
+          {vorhandeneGebiete.map((g) => (
+            <button key={g} type="button" aria-pressed={aktiveGebiete.has(g)} onClick={() => toggleGebiet(g)}
+              className={pillKlasse(aktiveGebiete.has(g))}>{g}</button>
+          ))}
+          <span aria-hidden className="mx-1 h-5 w-px bg-line-strong" />
+          <button type="button" aria-pressed={nurVerfuegbar} onClick={() => setzeFilter(aktiveGebiete, !nurVerfuegbar)}
+            className={pillKlasse(nurVerfuegbar)}>Nur verfügbare</button>
+        </div>
+      )}
+
+      {filterAktiv && gefiltert.filter(istVorlage).length === 0 && geplant.length === 0 ? (
+        <p className="text-body-s text-ink-500 py-6">
+          Keine Vorlage in dieser Auswahl.{' '}
+          <button type="button" onClick={() => setzeFilter(new Set(), false)}
+            className="font-medium text-brass-700 hover:text-brass-600">Filter zurücksetzen</button>
+        </p>
+      ) : kat.id === 'fristen' ? (
         /* FE-1 (FAHRPLAN-FRISTEN-EINHEIT): EIN Einstieg + Regime-Abzweigungen
            statt der Alltag/Weitere-Mischliste. */
         <FristenRegister karten={karten} />
@@ -477,7 +536,7 @@ function KategorieSektion({ kat, karten, onZurueck }: { kat: Oberkategorie; kart
         <ZustaendigkeitRegister karten={karten} />
       ) : kat.id === 'vorlagen' ? (
         /* S-2 (FAHRPLAN-STRUKTUR-UMBAU): fünf Dokument-Gruppen. */
-        <VorlagenRegister karten={karten} />
+        <VorlagenRegister karten={gefiltert} />
       ) : kat.id === 'gebuehren' ? (
         /* S-6 (FAHRPLAN-STRUKTUR-UMBAU): prozessual/materiell + Hilfsrechner. */
         <GebuehrenRegister karten={karten} sortiert={sortiert} />
