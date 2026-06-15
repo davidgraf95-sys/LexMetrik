@@ -53,6 +53,7 @@ export const ROUTEN_MANIFEST: RoutenEintrag[] = [
   { pfad: '/rechner/streitwert', Comp: lazy(() => import('./pages/RechnerStreitwert').then((m) => ({ default: m.RechnerStreitwert }))) },
   { pfad: '/rechner/betreibungskosten', Comp: lazy(() => import('./pages/RechnerGebvKosten').then((m) => ({ default: m.RechnerGebvKosten }))) },
   { pfad: '/rechner/prozesskosten', Comp: lazy(() => import('./pages/RechnerProzesskosten').then((m) => ({ default: m.RechnerProzesskosten }))) },
+  { pfad: '/rechner/notariat-grundbuch', Comp: lazy(() => import('./pages/RechnerNotariatGrundbuch').then((m) => ({ default: m.RechnerNotariatGrundbuch }))) },
   { pfad: '/rechner/bgg-fristen', Comp: lazy(() => import('./pages/RechnerBgerRechtsweg').then((m) => ({ default: m.RechnerBgerRechtsweg }))) },
   // Vorlagen
   { pfad: '/vorlagen/testament', Comp: lazy(() => import('./pages/VorlageTestament').then((m) => ({ default: m.VorlageTestament }))) },

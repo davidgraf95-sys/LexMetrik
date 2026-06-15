@@ -10,6 +10,7 @@
 //   4. Handänderungssteuer (optional)     — kantonale STEUER, klar getrennt
 // Quelle/Verifikation je Wert: bibliothek/kosten/notariat-grundbuch-kantone.md.
 
+import type { Berechnungsergebnis, Rechenschritt } from '../types/legal';
 import type { KantonCode, KantonalerTarif } from '../data/tarif/typen';
 import { auswertenTarif, type TarifErgebnis } from './tarif/staffel';
 import { NOTARIAT, GRUNDBUCH, GRUNDPFAND, HANDAENDERUNGSSTEUER } from '../data/tarif/notariat-grundbuch';
@@ -120,6 +121,28 @@ export function vergleichNotariatGrundbuch(
 ): NotariatGrundbuchErgebnis[] {
   return (Object.keys(NOTARIAT) as KantonCode[]).map((kanton) =>
     berechneNotariatGrundbuch({ kanton, kaufpreisCHF, mitGrundpfand, pfandsummeCHF, mitHandaenderungssteuer }));
+}
+
+/** PDF-Rechenbericht (mandatstauglich): bildet das Kostenbild auf das gemeinsame
+ *  Berechnungsergebnis ab, das die zentrale PDF-Schicht (lib/pdf) rendert (§3). */
+export function notariatGrundbuchBericht(e: NotariatGrundbuchErgebnis): Berechnungsergebnis {
+  const schritt = (titel: string, p: NgPosten): Rechenschritt => ({
+    beschreibung: `${titel}: ${p.quelle.erlassName} (${p.quelle.erlassNr}), ${p.quelle.artikel}, Stand ${p.quelle.stand}${p.quelle.verifiziert === 'recherche' ? ' — Erstrecherche' : ''}`,
+    zwischenergebnis: ngPostenText(p) + (p.quelle.hinweis ? ` — ${p.quelle.hinweis}` : ''),
+    normen: [{ artikel: `${p.quelle.erlassNr} ${p.quelle.artikel}` }],
+  });
+  const rechenweg: Rechenschritt[] = [schritt('Beurkundung (Notariat)', e.beurkundung), schritt('Grundbuch', e.grundbuch)];
+  if (e.grundpfand) rechenweg.push(schritt('Grundpfand (Schuldbrief)', e.grundpfand));
+  if (e.handaenderungssteuer) rechenweg.push(schritt('Handänderungssteuer (kantonale Steuer)', e.handaenderungssteuer));
+  const spanneTxt = (s: Spanne | null) => !s ? 'nicht beziffert' : s.vonChf === s.bisChf ? `CHF ${Math.round(s.vonChf).toLocaleString('de-CH')}` : `CHF ${Math.round(s.vonChf).toLocaleString('de-CH')} – ${Math.round(s.bisChf).toLocaleString('de-CH')}`;
+  return {
+    ergebnis: `Notariat ${ngPostenText(e.beurkundung)} · Grundbuch ${ngPostenText(e.grundbuch)} · Gebühren gesamt ${spanneTxt(e.gesamtGebuehren)}${e.handaenderungssteuer ? ` · inkl. Handänderungssteuer ${spanneTxt(e.gesamtMitSteuer)}` : ''}`,
+    status: 'ok',
+    rechenweg,
+    annahmen: [],
+    warnungen: e.hinweise,
+    normverweise: [{ artikel: 'Art. 657 ZGB', bemerkung: 'öffentliche Beurkundung des Grundstückkaufs' }, { artikel: 'Art. 216 OR' }],
+  };
 }
 
 /** Anzeige-Hilfe: ein Posten als kurzer Text (Betrag, Spanne oder «nach Vereinbarung»). */

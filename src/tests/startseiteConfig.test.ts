@@ -236,10 +236,12 @@ describe('istVerfuegbar (Pro-Katalog-Auftrag, Phase 1)', () => {
   // → 47 gebaut / 43 sichtbar.
   // 14.6.2026 (P1 Hauptmoat): +«Prozesskosten (Gerichts- & Parteikosten)»
   // (geplant→entwurf, Rechner /rechner/prozesskosten) → 48 gebaut / 44 sichtbar.
-  it('verfügbar = status !== geplant; Regressionszählung 48 gebaut / 44 sichtbar (Stand 14.6.2026)', () => {
+  // 15.6.2026: +«Notariats- & Grundbuchkosten (Grundstückkauf)»
+  // (Rechner /rechner/notariat-grundbuch, Rechtsgebiet Immobilien) → 49 gebaut / 45 sichtbar.
+  it('verfügbar = status !== geplant; Regressionszählung 49 gebaut / 45 sichtbar (Stand 15.6.2026)', () => {
     const verf = ALLE_KARTEN.filter(istVerfuegbar);
-    expect(verf.length).toBe(48);
-    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(44);
+    expect(verf.length).toBe(49);
+    expect(KATALOG_KARTEN.filter(istVerfuegbar).length).toBe(45);
     // Versteckte Karten sind gebaut + verlinkt (sonst wären sie tot):
     ALLE_KARTEN.filter((k) => k.imKatalog === false).forEach((k) => {
       expect(istVerfuegbar(k), k.id).toBe(true);

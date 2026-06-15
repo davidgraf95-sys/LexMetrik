@@ -51,6 +51,7 @@ const MATERIELL: ReadonlySet<string> = new Set([
   'gueterrecht-vorschlag', 'vorsorgeausgleich',
   'beteiligungsquoten', 'liberierungsgrad', 'kapitalverlust', 'ueberschuldung',
   'verrechnungssteuer', 'grundstueckgewinnsteuer', 'ahv-beitraege',
+  'notariat-grundbuch',               // Erwerbs-Nebenkosten Grundstückkauf (Gebühren + Handänderungssteuer)
 ]);
 
 /** Rubrik einer Karte der Kategorie «Gebühren & Beträge» — null heisst:
