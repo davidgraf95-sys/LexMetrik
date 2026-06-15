@@ -45,6 +45,13 @@ amtliche Quelle hinterlegt.»** Plan: `FAHRPLAN-NOTARIAT-GRUNDBUCH.md`.
   VS Stufenmodus · BS § 51 · ZG ESTV · BE Anhang-1) + adversarialer Engine-Review.
 - Status durchgehend `entwurf`/`recherche`; nichts `geprüft` (§7). Push/Deploy auf
   Davids frisches Ja (§9).
+- **PDF-Quellen (15.6.2026, gilt für ALLE Rechner):** `Normverweis.url` durchgereicht
+  → kantonale Erlasse/Verordnungen werden im PDF verlinkt (nicht nur Bundesquellen).
+- **DIREKTIVE FÜR NEUE SESSION (David 15.6.2026): `FAHRPLAN-BEURKUNDUNGS-AUSBAU.md`** —
+  Notariatsrechner extrem ausbauen auf Testament, Dienstbarkeiten, Gründungen (AG/GmbH),
+  Stiftungsurkunde, Bürgschaften, Erbvertrag/Ehevertrag/Schenkung u. a. (Geschäftsart-
+  Dimension; Deep Research je Geschäftsart × 26 Kt mit amtlicher Quelle; doppelt
+  verifizieren). David will, dass das eine NEUE Session macht.
 
 ## Session 15.6.2026 — Prozesskosten-Cockpit I7/I8 + Schlichtungstarif GEBAUT (ungepusht)
 
