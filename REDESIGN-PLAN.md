@@ -96,12 +96,34 @@ festschreiben, werden bei Bedarf **deklariert** angepasst (Schutzabsicht bleibt)
   17× Inline-Wrapper auf 16 Rechner-Seiten (byte-neutral).
 - **E3 ✓** (1431f18) Persistente Kategorie-Navigation (Desktop) + Off-Canvas-
   Mobile-Menü; redundante Disclaimer-Utility-Bar ersetzt.
-- **E4–E10** offen (Katalog-Filter · Rechner-Konsistenz · Wizard · Mobile/Touch ·
-  Animation · A11y · Sekundärseiten).
+- **E4 ✓** (42e29c3) Katalog-Filter: Rechtsgebiet-Pillen + Status-Schnitt für die
+  Vorlagen-Wand (tote kartePasst-Logik verdrahtet, URL `?rg=`/`?status=`).
+- **E5 ✓** (e8d2a99) Rechner-Konsistenz: Prozesskosten-Dialekt → Haus-Anatomie;
+  Input-Inseln (EinfacheFrist/Tagerechner) → `lc-input`; EckdatenKachel-Akzent-Token.
+- **E6 ✓** (80c2c1f) Wizard: kompakter Mobile-Stepper-Fortschritt, „Weiter"-
+  Erklärung, mobiler Vorschau-Sprung + Auto-Öffnen.
+- **E7 ✓** (7e38dee) Mobile/Touch: responsive H1, grössere Checkbox/Radio/Tabs,
+  Tabellen `min-w`, Footer-Tap-Flächen + `.lc-fineprint`.
+- **E8 ✓** (36e0d4f) Animation: Live-Wert-Puls, Schritt-/Routen-Fade,
+  `transition-all` bereinigt, totes View-Transition-CSS entfernt.
+- **E9 ✓** (a951a9c) A11y: Tabs-Tastaturmuster, FristenKalender sr-only + Kontrast,
+  Logo-ARIA, verschachtelte Live-Region.
+- **E10 ✓** (90878a8) Sekundärseiten: `<SeitenKopf>`-Primitive, ErrorBoundary in
+  der Familie, 404-Wegweiser.
+
+### Bewusst zurückgestellt (für David / spätere Runde)
+- **lc-select**-Rollout (Messing-Chevron) über alle `<select>` — Primitive steht,
+  Sweep bewusst gebündelt statt einzeln (Konsistenz).
+- **Wizard-Schalter-Stapelung** (Vertragstyp + Detailgrad zusammenfassen) ist
+  per-Seite (VariantenKopf/Vorlage-Seiten), nicht Rahmen-Ebene.
+- **Title-Suffix/Meta-Descriptions** liegen in `src/lib/seo.ts` (ausserhalb der
+  UI-Schranke).
+- **Vertikale Rhythmik** der Sekundärseiten (space-y-8 vs -10) — niedrig.
 
 ### Korrektur Phase-0-Befund
 Die «leere RECHTLICHER HINWEIS»-Box ist **kein Bug**: `PflichtDisclaimer` ist ein
 zugeklapptes `<details>` (nur die Summary-Zeile sichtbar). Funktioniert wie
 vorgesehen — keine Reparatur nötig; bleibt nur Teil der Disclaimer-Entdoppelung.
 
-**Stand:** Phase 0 + E1–E3 abgeschlossen (alle Tore + build grün, je eigener Commit).
+**Stand:** Phase 0 + E1–E10 abgeschlossen (alle Tore `npm run gate` + `npm run build`
+grün vor jedem Commit; je eigener, deklarierter Commit; kein Push/Deploy).
