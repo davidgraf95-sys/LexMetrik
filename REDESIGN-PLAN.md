@@ -139,14 +139,20 @@ Checkbox-Rest: ~25 Sondermuster in `forms/` (v.a. ZustaendigkeitForm) + ~150 in 
   aufs Primitiv (212 Stellen, marginaler Nutzen) — die Seiten waren bereits EIN
   konsistentes, gebrandetes Muster.
 
+### Weiterer Feinschliff (nur lokal — kein Push)
+- **lc-select-Rollout ✓** (6af7c45) — Messing-Chevron auf ALLEN Selects über den
+  Element-Selektor `select.lc-input`, ohne ~150 Call-Sites anzufassen.
+- **forms/-Tap-Zeilen ✓** (b5ff766) — 28 restliche inline-Checkbox/Radio-Labels
+  (v.a. ZustaendigkeitForm 14) auf gap-2.5 + py-1.5; Touch-Konsistenz mit #4.
+
 ### Bewusst zurückgestellt (für David / spätere Runde)
-- **lc-select**-Rollout (Messing-Chevron) über alle `<select>` — Primitive steht,
-  Sweep bewusst gebündelt statt einzeln (Konsistenz).
-- **Wizard-Schalter-Stapelung** (Vertragstyp + Detailgrad zusammenfassen) ist
-  per-Seite (VariantenKopf/Vorlage-Seiten), nicht Rahmen-Ebene.
-- **Title-Suffix/Meta-Descriptions** liegen in `src/lib/seo.ts` (ausserhalb der
-  UI-Schranke).
-- **Vertikale Rhythmik** der Sekundärseiten (space-y-8 vs -10) — niedrig.
+- **Wizard-Sub-Gruppen** in langen Schritten — per-Seite (Vorlage-Step-Inhalte),
+  Feld-Gruppierung ist eine Layout-Entscheidung (besser mit Davids Blick).
+- **Wizard-Schalter-Stapelung** (Vertragstyp + Detailgrad) — per-Seite.
+- **Rich-JSX-Checkboxen → Primitiv** (Pages + ZustaendigkeitForm) — nur Tap-Sweep,
+  kein Voll-Restructure (Nutzen/Risiko).
+- **Title-Suffix/Meta-Descriptions** in `src/lib/seo.ts` (ausserhalb der UI-Schranke).
+- **Cremes-Token-Dedup** (paper/surface/paper-raised) · Vertikale Rhythmik — niedrig.
 
 ### Korrektur Phase-0-Befund
 Die «leere RECHTLICHER HINWEIS»-Box ist **kein Bug**: `PflichtDisclaimer` ist ein
