@@ -669,7 +669,14 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
   return (
     <div className="space-y-8">
       {q !== '' ? (
-        trefferSortiert.length === 0 ? (
+        <>
+        {/* Trefferzahl als Live-Region (E11): die Suche liegt im Header, das
+            Ergebnis erscheint weit darunter — ohne Ansage bleibt der Erfolg
+            für Screenreader/Tastatur stumm. */}
+        <p className="sr-only" aria-live="polite" aria-atomic="true">
+          {trefferSortiert.length === 0 ? `Keine Treffer für ${q}.` : `${trefferSortiert.length} Treffer für ${q}.`}
+        </p>
+        {trefferSortiert.length === 0 ? (
           /* Leerer Zustand: kein stilles Verschwinden */
           <section className="bg-surface rounded-2xl border border-line p-10 sm:p-14 text-center space-y-3">
             <p className="lc-overline">Keine Treffer</p>
@@ -698,7 +705,8 @@ export function Katalog({ karten }: { karten: CalculatorCard[] }) {
               {trefferSortiert.map((k) => <TrefferZeile key={k.id} k={k} />)}
             </div>
           </section>
-        )
+        )}
+        </>
       ) : (
         offen ? (
           /* Unterthemen-Ansicht EINER Kategorie (erst nach Klick) */
