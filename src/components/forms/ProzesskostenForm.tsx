@@ -35,26 +35,28 @@ const zahl = (roh: string): number | undefined => {
   return Number.isFinite(n) ? n : undefined;
 };
 
-/** Ein Kostenposten als Karte (Betrag/Spanne/kostenlos + Rechtsgrundlage + Link). */
+/** Ein Kostenposten als Eckdaten-Kachel (Hauptwert mit Messing-Oberkante,
+ *  Anatomie wie EckdatenKachel) + Rechtsgrundlage und amtlicher Link.
+ *  Reine Darstellung — Betrag/Text kommen unverändert aus postenText(). */
 function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis }) {
   const q = posten.quelle;
   return (
-    <div className="rounded-xl border border-line bg-surface p-4">
-      <div className="text-overline text-ink-500">{titel}</div>
-      <div className="mt-1 text-h4 text-ink-900">{postenText(posten)}</div>
+    <div className="lc-tile lc-akzent-brass">
+      <p className="text-xs text-ink-500 mb-1">{titel}</p>
+      <p className="text-body-l font-semibold text-ink-900 num">{postenText(posten)}</p>
       {posten.kostenlos
-        ? <div className="mt-1 text-body-s text-ink-600">{posten.kostenlosGrund}</div>
+        ? <p className="mt-1 text-body-s text-ink-600">{posten.kostenlosGrund}</p>
         : posten.schlichtungspauschale
-          ? <div className="mt-1 text-body-s text-ink-600">Art. 95 II lit. a ZPO: eigener, meist reduzierter Tarif (oft ein Bruchteil der Entscheidgebühr) – hier nicht beziffert.</div>
+          ? <p className="mt-1 text-body-s text-ink-600">Art. 95 II lit. a ZPO: eigener, meist reduzierter Tarif (oft ein Bruchteil der Entscheidgebühr) – hier nicht beziffert.</p>
           : posten.ergebnis && !posten.ergebnis.deterministisch
-            ? <div className="mt-1 text-body-s text-ink-600">Ermessensrahmen – konkrete Festsetzung durch die Behörde.</div>
+            ? <p className="mt-1 text-body-s text-ink-600">Ermessensrahmen – konkrete Festsetzung durch die Behörde.</p>
             : null}
-      <div className="mt-2 text-caption text-ink-500">
+      <p className="mt-2 text-xs text-ink-500">
         {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
         {' · '}
         <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a>
-      </div>
-      {q.hinweis && <div className="mt-1 text-caption text-ink-400">{q.hinweis}</div>}
+      </p>
+      {q.hinweis && <p className="mt-1 text-xs text-ink-500">{q.hinweis}</p>}
     </div>
   );
 }
@@ -114,7 +116,7 @@ export function ProzesskostenForm() {
             <PostenKarte titel="Parteientschädigung" posten={ergebnis.parteientschaedigung} />
           </div>
 
-          <ul className="mt-3 space-y-1 text-caption text-ink-500 list-disc pl-5">
+          <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
             {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}
           </ul>
 
@@ -129,11 +131,11 @@ export function ProzesskostenForm() {
           {vergleichsListe && (
             <div className="mt-4 overflow-x-auto">
               <table className="w-full text-body-s border-collapse">
-                <caption className="text-caption text-ink-500 text-left mb-2">
+                <caption className="text-xs text-ink-500 text-left mb-2">
                   Interkantonaler Vergleich bei Streitwert CHF {streitwert?.toLocaleString('de-CH')} ({VERFAHRENSPHASEN.find((p) => p.wert === phase)?.label}, {MATERIEN.find((m) => m.wert === materie)?.label}) — Gerichtsgebühr / Parteientschädigung. Quelle je Kanton verlinkt.
                 </caption>
                 <thead>
-                  <tr className="text-overline text-ink-500 border-b border-line">
+                  <tr className="lc-overline text-ink-500 border-b border-line">
                     <th className="text-left py-2 pr-3">Kanton</th>
                     <th className="text-right py-2 px-3">Gerichtskosten</th>
                     <th className="text-right py-2 pl-3">Parteientschädigung</th>
@@ -145,8 +147,8 @@ export function ProzesskostenForm() {
                       <td className="py-1.5 pr-3">
                         <a href={r.gerichtskosten.quelle.quelleUrl} target="_blank" rel="noopener noreferrer" className="hover:underline" title={`${r.gerichtskosten.quelle.erlassName} (${r.gerichtskosten.quelle.erlassNr})`}>{r.kanton}</a>
                       </td>
-                      <td className="py-1.5 px-3 text-right tabular-nums text-ink-800">{postenText(r.gerichtskosten)}</td>
-                      <td className="py-1.5 pl-3 text-right tabular-nums text-ink-800">{postenText(r.parteientschaedigung)}</td>
+                      <td className="py-1.5 px-3 text-right num text-ink-800">{postenText(r.gerichtskosten)}</td>
+                      <td className="py-1.5 pl-3 text-right num text-ink-800">{postenText(r.parteientschaedigung)}</td>
                     </tr>
                   ))}
                 </tbody>

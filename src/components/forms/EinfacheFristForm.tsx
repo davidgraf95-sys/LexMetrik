@@ -123,7 +123,9 @@ export function EinfacheFristForm() {
       })
       : null;
 
-  const inputCls = 'h-10 px-3 rounded-lg border border-line bg-surface text-body-s text-ink-900 focus:outline-none focus:ring-2 focus:ring-brass-400';
+  // Eingabe-Atome pixelgleich zu den Voll-Rechnern (Redesign E5): das
+  // Haus-Primitiv lc-input statt eines eigenen h-10/ring-Rezepts.
+  const inputCls = 'lc-input';
 
   return (
     <div className="space-y-4">

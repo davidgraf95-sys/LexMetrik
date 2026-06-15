@@ -124,7 +124,7 @@ export function RechnerTagerechner() {
             onChange={(e) => setPresetQuery(e.target.value)}
             placeholder="z. B. «Berufung», «Rechtsvorschlag», «Art. 256c ZGB»"
             autoComplete="off"
-            className="w-full max-w-xl h-10 px-3 rounded-lg border border-line bg-surface text-body-s text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-brass-400" />
+            className="lc-input max-w-xl" />
           {presetQuery.trim() !== '' && (
             treffer.length === 0 && abzweigungen.length === 0 ? (
               <p className="text-body-s text-ink-500 max-w-reading">

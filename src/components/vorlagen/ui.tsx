@@ -151,7 +151,7 @@ export function BeispielChips({ items }: { items: { label: string; laden: () => 
  *  Messing-Oberkante (DESIGN-REGLEMENT-RECHNER R4 Ziff. 1). */
 export function EckdatenKachel({ label, wert, sub, num, akzent }: { label: string; wert: string; sub?: string; num?: boolean; akzent?: boolean }) {
   return (
-    <div className={akzent ? 'lc-tile border-brass-500 border-t-[3px]' : 'lc-tile'}>
+    <div className={akzent ? 'lc-tile lc-akzent-brass' : 'lc-tile'}>
       <p className="text-xs text-ink-500 mb-1">{label}</p>
       <p className={`text-body-l font-semibold text-ink-900${num ? ' num' : ''}`}>{wert}</p>
       {sub && <p className="text-xs text-ink-500 mt-0.5">{sub}</p>}
