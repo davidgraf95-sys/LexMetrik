@@ -137,6 +137,22 @@ const ausStaffel = (baender: StaffelBand[], basisChf: number, inklusiv: boolean)
   return { deterministisch: true, betragChf: round2(treffer.chf), schritte: [`Band ${grenze}: ${chf(treffer.chf)}`] };
 };
 
+/** Skaliert ein Tarif-Ergebnis mit einer Faktor-SPANNE (z. B. summarisches
+ *  Verfahren ½–¾, Rechtsmittelinstanz, Schlichtungs-Bruchteil). Ergebnis wird
+ *  zur Spanne (vonChf×faktorMin … bisChf×faktorMax); ein deterministischer
+ *  Betrag wird zur Spanne. Faktor [1,1] lässt das Ergebnis unverändert. Nicht
+ *  bezifferte Ergebnisse (formel_extern) bleiben unverändert. */
+export function skaliereErgebnis(e: TarifErgebnis, faktorMin: number, faktorMax: number, hinweis: string): TarifErgebnis {
+  if (faktorMin === 1 && faktorMax === 1) return e;
+  if (e.deterministisch) {
+    return { deterministisch: false, vonChf: Math.round(e.betragChf * faktorMin), bisChf: Math.round(e.betragChf * faktorMax), hinweis };
+  }
+  const von = typeof e.vonChf === 'number' ? Math.round(e.vonChf * faktorMin) : undefined;
+  const bis = typeof e.bisChf === 'number' ? Math.round(e.bisChf * faktorMax) : undefined;
+  if (von === undefined && bis === undefined) return e;
+  return { deterministisch: false, vonChf: von, bisChf: bis, hinweis: `${e.hinweis} · ${hinweis}` };
+}
+
 /** Wertet eine Tarifregel über den Bemessungswert aus. Deterministisch für
  *  fix/sockel_prozent/promille/staffel_*; ehrlicher Rahmen/Hinweis für
  *  rahmen/formel_extern. */

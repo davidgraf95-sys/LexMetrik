@@ -5,7 +5,7 @@
 // gebvKosten-Staffel (Voraussetzung für eine spätere byte-gleiche Ablösung,
 // FAHRPLAN B-P0a / Plan-Tabu C-§6).
 import { describe, expect, it } from 'vitest';
-import { auswertenTarif, type TarifRegel } from '../lib/tarif/staffel';
+import { auswertenTarif, skaliereErgebnis, type TarifRegel } from '../lib/tarif/staffel';
 import { gebuehrPfaendung } from '../lib/gebvKosten';
 
 const betrag = (regel: TarifRegel, basis: number): number => {
@@ -195,6 +195,28 @@ describe('staffel_rahmen – prozentuale Bänder, Sockel/Deckel und offene Grenz
     ] };
     const e = auswertenTarif(r, 1_500);
     if (!e.deterministisch) { expect(e.vonChf).toBeUndefined(); expect(e.bisChf).toBe(1_500); }
+  });
+});
+
+describe('skaliereErgebnis – Verfahrens-/Instanz-Faktoren', () => {
+  it('deterministischer Betrag wird zur Spanne (summarisch ½–¾)', () => {
+    const e = auswertenTarif({ typ: 'fix', chf: 5550 }, 0);
+    const m = skaliereErgebnis(e, 0.5, 0.75, 'summarisch');
+    expect(m.deterministisch).toBe(false);
+    if (!m.deterministisch) { expect(m.vonChf).toBe(2775); expect(m.bisChf).toBe(4163); }
+  });
+  it('Spanne wird mit min/max skaliert', () => {
+    const e = auswertenTarif({ typ: 'staffel_rahmen', baender: [{ grenzeChf: 1e15, minChf: 3000, maxChf: 6000 }] }, 50000);
+    const m = skaliereErgebnis(e, 0.5, 1, 'Rechtsmittel');
+    if (!m.deterministisch) { expect(m.vonChf).toBe(1500); expect(m.bisChf).toBe(6000); }
+  });
+  it('Faktor [1,1] lässt unverändert', () => {
+    const e = auswertenTarif({ typ: 'fix', chf: 1000 }, 0);
+    expect(skaliereErgebnis(e, 1, 1, 'vereinfacht')).toBe(e);
+  });
+  it('nicht beziffertes Ergebnis (formel_extern) bleibt unverändert', () => {
+    const e = auswertenTarif({ typ: 'formel_extern', hinweis: 'aufwandbasiert' }, 0);
+    expect(skaliereErgebnis(e, 0.5, 0.6, 'summarisch')).toBe(e);
   });
 });
 
