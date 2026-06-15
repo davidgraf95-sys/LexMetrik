@@ -43,7 +43,7 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
   return (
     <div className="lc-tile lc-akzent-brass">
       <p className="text-xs text-ink-500 mb-1">{titel}</p>
-      <p className="text-body-l font-semibold text-ink-900 num">{postenText(posten)}</p>
+      <p key={postenText(posten)} className="lc-wert-puls text-body-l font-semibold text-ink-900 num">{postenText(posten)}</p>
       {posten.kostenlos
         ? <p className="mt-1 text-body-s text-ink-600">{posten.kostenlosGrund}</p>
         : posten.schlichtungspauschale

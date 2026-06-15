@@ -169,7 +169,9 @@ export function EckdatenKachel({ label, wert, sub, num, akzent }: { label: strin
   return (
     <div className={akzent ? 'lc-tile lc-akzent-brass' : 'lc-tile'}>
       <p className="text-xs text-ink-500 mb-1">{label}</p>
-      <p className={`text-body-l font-semibold text-ink-900${num ? ' num' : ''}`}>{wert}</p>
+      {/* key={wert}: bei Wertänderung re-mountet der Knoten → der lc-wert-puls
+          läuft erneut, also wird die Live-Neuberechnung sichtbar (Redesign E8). */}
+      <p key={wert} className={`lc-wert-puls text-body-l font-semibold text-ink-900${num ? ' num' : ''}`}>{wert}</p>
       {sub && <p className="text-xs text-ink-500 mt-0.5">{sub}</p>}
     </div>
   );

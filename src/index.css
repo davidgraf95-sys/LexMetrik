@@ -274,6 +274,17 @@
   .lc-reveal { animation: lc-fade var(--dur-slow) var(--ease); }
   @keyframes lc-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
+  /* Seitenwechsel (Redesign E8): dezenter Opacity-Fade beim Routenwechsel
+     (key={pathname} re-mountet den Inhalt). Nur opacity (GPU), kein Layout. */
+  @keyframes lc-fade-in { from { opacity: 0; } to { opacity: 1; } }
+  .lc-route { animation: lc-fade-in var(--dur-base) var(--ease); }
+
+  /* Live-Wert-Puls: kurzer Opacity-Puls, wenn sich ein Ergebniswert ändert —
+     das wichtigste Bewegungssignal des Produkts (key-Remount des Werts in
+     EckdatenKachel triggert die Animation bei jeder Neuberechnung neu). */
+  @keyframes lc-wert-puls { from { opacity: .4; } to { opacity: 1; } }
+  .lc-wert-puls { animation: lc-wert-puls var(--dur-base) var(--ease); }
+
   /* Aufklappbare Hinweise: dezentes Disclosure-Symbol statt Default-Dreieck.
      Ausnahme .lc-disclosure: bringt einen eigenen Chevron mit (Rubrik-Zeilen). */
   details > summary { list-style: none; }
@@ -289,21 +300,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lc-reveal { animation: none; }
-}
-
-/* View Transitions (Kachel ⇄ Panel im Pro-Katalog): jede Kachel trägt einen
-   eigenen view-transition-name — der Browser animiert das Nachrutschen der
-   übrigen Kacheln einzeln. Tempo gedrosselt (Wunsch David); Browser ohne
-   View-Transition-Support wechseln hart, reduced-motion schaltet ab. */
-::view-transition-group(*) {
-  animation-duration: var(--dur-stage);
-  animation-timing-function: var(--ease);
-}
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) { animation: none !important; }
+  .lc-reveal, .lc-route, .lc-wert-puls { animation: none; }
 }
 
 /* Sanfte Auf-/Zuklapp-Animation für Disclosure-Rubriken (progressive

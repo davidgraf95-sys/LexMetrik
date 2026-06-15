@@ -112,8 +112,12 @@ export function VorlagenWizardRahmen({
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
         <div className="bg-surface-raised rounded-2xl border border-line p-5 sm:p-6 space-y-5"
           onInput={merkeEingabe} onChange={merkeEingabe}>
-          <h2 className="text-h3 font-display font-semibold text-ink-900">{schritte[schritt].label}</h2>
-          {inhalt}
+          {/* key={schritt}: re-mountet den Schrittinhalt → dezenter Einblende-
+              Fade beim Schrittwechsel (Redesign E8); Fehlerbox/Buttons bleiben ruhig. */}
+          <div key={schritt} className="lc-route space-y-5">
+            <h2 className="text-h3 font-display font-semibold text-ink-900">{schritte[schritt].label}</h2>
+            {inhalt}
+          </div>
 
           {/* FAHRPLAN-DESIGN 2.2: vierte Fehlerbox-Variante entfernt —
               EIN Baustein (FehlerBox, role="alert") wie in den Rechner-Forms.

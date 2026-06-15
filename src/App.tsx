@@ -46,6 +46,10 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  // key={pathname} am Inhalt → dezenter Opacity-Fade beim Routenwechsel
+  // (Redesign E8). Such-/Filter-Parameter (?q=, ?kategorie=) ändern den
+  // pathname NICHT → kein Remount, der Katalog-Zustand bleibt erhalten.
+  const { pathname } = useLocation();
   return (
     <LocaleProvider>
     <Shell>
@@ -58,6 +62,7 @@ export default function App() {
           <div className="scale-rule max-w-[200px] mx-auto" aria-hidden />
           <p className="text-body-s text-ink-500">Wird geladen …</p>
         </div>}>
+      <div key={pathname} className="lc-route">
       <Routes>
         <Route path="/" element={<Startseite />} />
         {/* Alt-Routen (Free/Pro aufgehoben): alle auf die eine Hauptseite */}
@@ -81,6 +86,7 @@ export default function App() {
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </div>
       </Suspense>
       </ErrorBoundary>
     </Shell>

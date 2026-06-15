@@ -51,7 +51,7 @@ function KategorieEinstieg({ kat, karten, onOeffnen }: {
   const geplant = karten.length - verf;
   const links = kachelDirektlinks(kat.id, karten);
   return (
-    <div className="relative group lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
+    <div className="relative group lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5">
       {/* Gestreckter Klickbereich: die GANZE Kachel öffnet die Kategorie
           (Auftrag David 10.6.2026 — vorher war nur die Titelzeile ein
           Button); Muster RechnerKarte. Die Direktlinks darunter liegen als
@@ -128,7 +128,7 @@ function WerkzeugZeile({ k, subLabel, zeigeGeplant }: { k: CalculatorCard; subLa
 function FristenHauptKarte({ k, untertitel }: { k: CalculatorCard; untertitel: string }) {
   return (
     <Link to={k.href!}
-      className="lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface no-underline transition-all motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5 group">
+      className="lc-card p-5 sm:p-6 flex flex-col gap-2 min-w-0 bg-surface no-underline transition-[transform,box-shadow,color] motion-reduce:transition-none motion-reduce:transform-none hover:shadow-lg hover:-translate-y-0.5 group">
       <span className="flex items-baseline gap-3">
         <span className="font-sans font-semibold text-ink-900 text-h3 leading-snug group-hover:text-brass-700 transition-colors">{sansAmp(k.title)}</span>
         <span aria-hidden className="ml-auto text-brass-700 leading-none">→</span>
