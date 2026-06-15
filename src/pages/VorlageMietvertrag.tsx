@@ -9,7 +9,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -216,10 +216,10 @@ export function VorlageMietvertrag() {
             </Field>
           )}
           {wohnung && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.familienwohnung ?? false} onChange={(e) => set('familienwohnung', e.target.checked || undefined)} />
-              <span>Das Objekt dient als <strong>Familienwohnung</strong> <span className="text-ink-500">(besonderer Kündigungsschutz, Art. 266m/266n OR)</span></span>
-            </label>
+            <Checkbox
+              checked={a.familienwohnung ?? false}
+              onChange={(v) => set('familienwohnung', v || undefined)}
+              label={<><span>Das Objekt dient als <strong>Familienwohnung</strong> <span className="text-ink-500">(besonderer Kündigungsschutz, Art. 266m/266n OR)</span></span></>} />
           )}
         </div>
       );
@@ -247,10 +247,10 @@ export function VorlageMietvertrag() {
           <Field label="Mietbeginn">
             <DatumsFeld value={a.beginn} onChange={(v) => set('beginn', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.befristet} onChange={(e) => set('befristet', e.target.checked)} />
-            <span>Befristetes Mietverhältnis <span className="text-ink-500">(endet ohne Kündigung; stillschweigende Fortsetzung → unbefristet)</span></span>
-          </label>
+          <Checkbox
+            checked={a.befristet}
+            onChange={(v) => set('befristet', v)}
+            label={<><span>Befristetes Mietverhältnis <span className="text-ink-500">(endet ohne Kündigung; stillschweigende Fortsetzung → unbefristet)</span></span></>} />
           {a.befristet ? (
             <Field label="Befristet bis">
               <DatumsFeld value={a.befristetBis ?? ''} onChange={(v) => set('befristetBis', v || undefined)} className={inputCls} />
@@ -344,10 +344,10 @@ export function VorlageMietvertrag() {
                 <p className="text-xs text-ink-500">Positionen einzeln wählen – eine Sammelklausel genügt nicht:</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                   {nkKatalog.map((p) => (
-                    <label key={p} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                      <input type="checkbox" className="mt-0.5" checked={a.nkPositionen.includes(p)} onChange={() => toggleNk(p)} />
-                      {p}
-                    </label>
+                    <Checkbox
+                      checked={a.nkPositionen.includes(p)}
+                      onChange={() => toggleNk(p)}
+                      label={<>{p}</>} />
                   ))}
                 </div>
               </>
@@ -375,25 +375,25 @@ export function VorlageMietvertrag() {
               onSelect={(code) => set('tierhaltung', code)}
             />
           </div>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.versicherungspflicht} onChange={(e) => set('versicherungspflicht', e.target.checked)} />
-            <span>{wohnung ? 'Privathaftpflichtversicherung' : 'Betriebshaftpflichtversicherung'} des Mieters als Pflicht festhalten</span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.hausordnung} onChange={(e) => set('hausordnung', e.target.checked)} />
-            <span>Hausordnung als Vertragsbestandteil</span>
-          </label>
+          <Checkbox
+            checked={a.versicherungspflicht}
+            onChange={(v) => set('versicherungspflicht', v)}
+            label={<><span>{wohnung ? 'Privathaftpflichtversicherung' : 'Betriebshaftpflichtversicherung'} des Mieters als Pflicht festhalten</span></>} />
+          <Checkbox
+            checked={a.hausordnung}
+            onChange={(v) => set('hausordnung', v)}
+            label={<><span>Hausordnung als Vertragsbestandteil</span></>} />
           {!wohnung && (
             <div className="space-y-3 pt-1">
               <GruppenTitel>Geschäftsraum-Klauseln</GruppenTitel>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.mwstOption ?? false} onChange={(e) => set('mwstOption', e.target.checked || undefined)} />
-                <span><strong>MWST-Option</strong> des Vermieters <span className="text-ink-500">(Mietzins zzgl. {MV_PARAMETER.mwstSatz.wert.toFixed(1)} % MWST, Art. 22 MWSTG)</span></span>
-              </label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.konkurrenzschutz ?? false} onChange={(e) => set('konkurrenzschutz', e.target.checked || undefined)} />
-                <span><strong>Konkurrenzschutz</strong> vereinbaren <span className="text-ink-500">(nicht vertragsimmanent – muss ausdrücklich umschrieben werden)</span></span>
-              </label>
+              <Checkbox
+                checked={a.mwstOption ?? false}
+                onChange={(v) => set('mwstOption', v || undefined)}
+                label={<><span><strong>MWST-Option</strong> des Vermieters <span className="text-ink-500">(Mietzins zzgl. {MV_PARAMETER.mwstSatz.wert.toFixed(1)} % MWST, Art. 22 MWSTG)</span></span></>} />
+              <Checkbox
+                checked={a.konkurrenzschutz ?? false}
+                onChange={(v) => set('konkurrenzschutz', v || undefined)}
+                label={<><span><strong>Konkurrenzschutz</strong> vereinbaren <span className="text-ink-500">(nicht vertragsimmanent – muss ausdrücklich umschrieben werden)</span></span></>} />
               {a.konkurrenzschutz && (
                 <>
                   <Field label="Geschützter Bereich (Branche/Nutzung)">
@@ -410,10 +410,10 @@ export function VorlageMietvertrag() {
           {a.detailgrad === 'experte' && (
             <div className="space-y-3 pt-1">
               <GruppenTitel>Mietzinsvorbehalt (Art. 18 VMWG)</GruppenTitel>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.mietzinsvorbehalt ?? false} onChange={(e) => set('mietzinsvorbehalt', e.target.checked || undefined)} />
-                <span><strong>Mietzinsvorbehalt</strong> aufnehmen <span className="text-ink-500">(nicht ausgeschöpfte Mietzinsanpassung, in Prozenten zu beziffern)</span></span>
-              </label>
+              <Checkbox
+                checked={a.mietzinsvorbehalt ?? false}
+                onChange={(v) => set('mietzinsvorbehalt', v || undefined)}
+                label={<><span><strong>Mietzinsvorbehalt</strong> aufnehmen <span className="text-ink-500">(nicht ausgeschöpfte Mietzinsanpassung, in Prozenten zu beziffern)</span></span></>} />
               {a.mietzinsvorbehalt && (
                 <>
                   <Field label="Vorbehalt (% des Nettomietzinses)" hint="ohne Bezifferung in Franken oder Prozenten geht der Vorbehalt verloren (Art. 18 VMWG)">

@@ -5,7 +5,7 @@ import {
 import { fmtDatum } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { VorlagenSeite, type SeiteCtx, type VorlagenSeitenConfig } from '../components/vorlagen/VorlagenSeite';
 import { istIsoDatum } from '../components/vorlagen/seiteHelfer';
 
@@ -69,21 +69,18 @@ function eingabeInhalt({ a, set }: SeiteCtx<NbAntworten>, schritt: number) {
               Frühester Gesuchstag: <strong>{fmtDatum(fruehester)}</strong> – drei Monate seit Zustellung (Art. 8a Abs. 3 lit. d SchKG), vorsichtig nach den ZPO-Fristenregeln gerechnet (Fristbeginn am Folgetag, Art. 31 SchKG i. V. m. Art. 142 ZPO).
             </div>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.rechtsvorschlag}
-              onChange={(e) => set('rechtsvorschlag', e.target.checked)} />
-            <span>Ich habe <strong>Rechtsvorschlag erhoben</strong> <span className="text-ink-500">(zwingende Voraussetzung)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.keinVerfahrenBekannt}
-              onChange={(e) => set('keinVerfahrenBekannt', e.target.checked)} />
-            <span>Aussage aufnehmen: <strong>kein Beseitigungs-Verfahren bekannt</strong> <span className="text-ink-500">(nur wenn zutreffend – Rechtsöffnung/Klage wäre das Gegenteil)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.beilageZb}
-              onChange={(e) => set('beilageZb', e.target.checked)} />
-            <span>Beilagen-Zeile: <strong>Kopie des Zahlungsbefehls</strong></span>
-          </label>
+          <Checkbox
+            checked={a.rechtsvorschlag}
+            onChange={(v) => set('rechtsvorschlag', v)}
+            label={<><span>Ich habe <strong>Rechtsvorschlag erhoben</strong> <span className="text-ink-500">(zwingende Voraussetzung)</span></span></>} />
+          <Checkbox
+            checked={a.keinVerfahrenBekannt}
+            onChange={(v) => set('keinVerfahrenBekannt', v)}
+            label={<><span>Aussage aufnehmen: <strong>kein Beseitigungs-Verfahren bekannt</strong> <span className="text-ink-500">(nur wenn zutreffend – Rechtsöffnung/Klage wäre das Gegenteil)</span></span></>} />
+          <Checkbox
+            checked={a.beilageZb}
+            onChange={(v) => set('beilageZb', v)}
+            label={<><span>Beilagen-Zeile: <strong>Kopie des Zahlungsbefehls</strong></span></>} />
         </div>
       );
     }

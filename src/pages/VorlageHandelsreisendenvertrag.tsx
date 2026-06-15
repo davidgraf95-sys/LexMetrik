@@ -5,7 +5,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -85,10 +85,10 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
         <div className="space-y-4">
           <Field label="Gegenstand der Geschäfte"><input className={inputCls} value={a.gegenstand} onChange={(e) => set('gegenstand', e.target.value)} placeholder="z. B. Werkzeugmaschinen" /></Field>
           <Field label="Reisegebiet / Kundenkreis"><input className={inputCls} value={a.reisegebiet} onChange={(e) => set('reisegebiet', e.target.value)} placeholder="z. B. Kantone BE und SO" /></Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.ausschliesslich} onChange={(e) => set('ausschliesslich', e.target.checked)} />
-            <span>Gebiet/Kundenkreis <strong>ausschliesslich</strong> zugewiesen <span className="text-ink-500">(Provision dann auf allen Geschäften im Gebiet, Art. 349/349b OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.ausschliesslich}
+            onChange={(v) => set('ausschliesslich', v)}
+            label={<><span>Gebiet/Kundenkreis <strong>ausschliesslich</strong> zugewiesen <span className="text-ink-500">(Provision dann auf allen Geschäften im Gebiet, Art. 349/349b OR)</span></span></>} />
           <div className="space-y-2">
             <GruppenTitel>Vollmacht (Art. 348b OR)</GruppenTitel>
             <SelectionGrid
@@ -146,10 +146,10 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
               <Field label="Auslagenpauschale (CHF / Monat)"><BetragsFeld className={inputCls + ' num w-40'} value={a.auslagenPauschaleCHF} onChange={(v) => set('auslagenPauschaleCHF', v)} placeholder="z. B. 600" /></Field>
             )}
           </div>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.saisonschwankung} onChange={(e) => set('saisonschwankung', e.target.checked)} />
-            <span>Provision unterliegt erheblichen <strong>saisonalen Schwankungen</strong> <span className="text-ink-500">(Sonder-Kündigungsregel, Art. 350 OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.saisonschwankung}
+            onChange={(v) => set('saisonschwankung', v)}
+            label={<><span>Provision unterliegt erheblichen <strong>saisonalen Schwankungen</strong> <span className="text-ink-500">(Sonder-Kündigungsregel, Art. 350 OR)</span></span></>} />
           {a.detailgrad === 'experte' && (
             <div className="lc-card p-4 space-y-3">
               <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium">

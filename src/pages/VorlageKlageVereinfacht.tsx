@@ -8,7 +8,7 @@ import type { SgPartei } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
@@ -164,15 +164,14 @@ export function VorlageKlageVereinfacht() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie={a.materie}
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
-                onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
-              <span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
-            </label>
+            <Checkbox
+              checked={a.gerichtManuellAktiv ?? false}
+              onChange={(v) => set('gerichtManuellAktiv', v || undefined)}
+              label={<><span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span></>} />
             {a.gerichtManuellAktiv && (
               // Layout 11.6.2026 (Auftrag David, einheitlich mit dem
               // Schlichtungsgesuch): Name volle Breite, Strasse + PLZ zweispaltig.
-              <div className="space-y-3 pl-6">
+              (<div className="space-y-3 pl-6">
                 <Field label="Gericht">
                   <input className={inputCls} value={a.gerichtManuell?.name ?? ''}
                     onChange={(e) => set('gerichtManuell', { name: e.target.value, strasse: a.gerichtManuell?.strasse ?? '', plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
@@ -190,7 +189,7 @@ export function VorlageKlageVereinfacht() {
                       placeholder="z. B. 8001 Zürich" />
                   </Field>
                 </div>
-              </div>
+              </div>)
             )}
           </div>
           <SelectionGrid
@@ -259,10 +258,10 @@ export function VorlageKlageVereinfacht() {
               </Field>
             </div>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.rechtsoeffnung} onChange={(e) => set('rechtsoeffnung', e.target.checked)} />
-            <span>Beseitigung des Rechtsvorschlags beantragen <span className="text-ink-500">(laufende Betreibung)</span></span>
-          </label>
+          <Checkbox
+            checked={a.rechtsoeffnung}
+            onChange={(v) => set('rechtsoeffnung', v)}
+            label={<><span>Beseitigung des Rechtsvorschlags beantragen <span className="text-ink-500">(laufende Betreibung)</span></span></>} />
           {a.rechtsoeffnung && (
             <Field label="Betreibungs-Nr." optional>
               <input className={inputCls + ' sm:max-w-[14rem]'} value={a.betreibungNr ?? ''} onChange={(e) => set('betreibungNr', e.target.value)} />
@@ -289,18 +288,18 @@ export function VorlageKlageVereinfacht() {
 
       case 'begruendung': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.begruendungAktiv} onChange={(e) => set('begruendungAktiv', e.target.checked)} />
-            <span>Schriftliche Begründung beifügen <span className="text-ink-500">(freiwillig, Art. 244 Abs. 2 ZPO — ohne Begründung lädt das Gericht direkt zur Verhandlung vor, Art. 245 Abs. 1)</span></span>
-          </label>
+          <Checkbox
+            checked={a.begruendungAktiv}
+            onChange={(v) => set('begruendungAktiv', v)}
+            label={<><span>Schriftliche Begründung beifügen <span className="text-ink-500">(freiwillig, Art. 244 Abs. 2 ZPO — ohne Begründung lädt das Gericht direkt zur Verhandlung vor, Art. 245 Abs. 1)</span></span></>} />
           {a.begruendungAktiv && (
             <>
               {/* Auftrag David 11.6.2026: wahlweise Platzhalter im Dokument. */}
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 pl-6">
-                <input type="checkbox" className="mt-0.5" checked={a.begruendungPlatzhalter ?? false}
-                  onChange={(e) => set('begruendungPlatzhalter', e.target.checked || undefined)} />
-                <span>Begründung später ausfüllen <span className="text-ink-500">(die Klage erhält Leer-Ziffern für Tatsachendarstellung und Beweismittel)</span></span>
-              </label>
+              <Checkbox
+                checked={a.begruendungPlatzhalter ?? false}
+                onChange={(v) => set('begruendungPlatzhalter', v || undefined)}
+                label={<><span>Begründung später ausfüllen <span className="text-ink-500">(die Klage erhält Leer-Ziffern für Tatsachendarstellung und Beweismittel)</span></span></>}
+                className='pl-6' />
               {a.begruendungPlatzhalter && (
                 <p className="lc-notice-warn text-body-s">
                   Das Dokument enthält Platzhalter («________») unter «Begründung» und «Beweismittel» —
@@ -349,10 +348,10 @@ export function VorlageKlageVereinfacht() {
 
       case 'beilagen': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.klagebewilligungVorhanden} onChange={(e) => set('klagebewilligungVorhanden', e.target.checked)} />
-            <span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Prozessvoraussetzung, Art. 209 ZPO)</span></span>
-          </label>
+          <Checkbox
+            checked={a.klagebewilligungVorhanden}
+            onChange={(v) => set('klagebewilligungVorhanden', v)}
+            label={<><span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Prozessvoraussetzung, Art. 209 ZPO)</span></span></>} />
           {a.klagebewilligungVorhanden ? (
             <div className="space-y-2">
               <Field label="Datum der Klagebewilligung (Eröffnung/Zustellung)" hint="massgeblich für die Klagefrist (BGE 140 III 227)">
@@ -381,10 +380,11 @@ export function VorlageKlageVereinfacht() {
               </div>
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage} onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
-            Vollmacht als Beilage (bei Vertretung)
-          </label>
+          <Checkbox
+            checked={a.vollmachtBeilage}
+            onChange={(v) => set('vollmachtBeilage', v)}
+            label={<>Vollmacht als Beilage (bei Vertretung)
+                        </>} />
           <div className="space-y-2">
             <GruppenTitel>Weitere Beilagen</GruppenTitel>
             {a.weitereBeilagen.map((b, i) => (

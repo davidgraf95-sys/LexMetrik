@@ -6,7 +6,7 @@ import {
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -121,21 +121,18 @@ export function VorlageKuendigungVertrag() {
               <Field label="Policennummer" optional>
                 <input className={inputCls + ' sm:max-w-[16rem]'} value={a.policennummer} onChange={(e) => set('policennummer', e.target.value)} />
               </Field>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.vertragsdauerUeber3Jahre}
-                  onChange={(e) => set('vertragsdauerUeber3Jahre', e.target.checked)} />
-                <span>Der Vertrag läuft bereits im dritten Jahr oder länger <span className="text-ink-500">(Voraussetzung der ordentlichen Kündigung, Art. 35a Abs. 1 VVG)</span></span>
-              </label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.lebensversicherung}
-                  onChange={(e) => set('lebensversicherung', e.target.checked)} />
-                <span>Es handelt sich um eine Lebensversicherung <span className="text-warn-700">(vom ordentlichen Kündigungsrecht ausgenommen, Art. 35a Abs. 3 VVG)</span></span>
-              </label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.krankenzusatz}
-                  onChange={(e) => set('krankenzusatz', e.target.checked)} />
-                <span>Zusatzversicherung zur Krankenversicherung <span className="text-ink-500">(Kündigungsrecht nur Versicherungsnehmer:in, Art. 35a Abs. 4 VVG)</span></span>
-              </label>
+              <Checkbox
+                checked={a.vertragsdauerUeber3Jahre}
+                onChange={(v) => set('vertragsdauerUeber3Jahre', v)}
+                label={<><span>Der Vertrag läuft bereits im dritten Jahr oder länger <span className="text-ink-500">(Voraussetzung der ordentlichen Kündigung, Art. 35a Abs. 1 VVG)</span></span></>} />
+              <Checkbox
+                checked={a.lebensversicherung}
+                onChange={(v) => set('lebensversicherung', v)}
+                label={<><span>Es handelt sich um eine Lebensversicherung <span className="text-warn-700">(vom ordentlichen Kündigungsrecht ausgenommen, Art. 35a Abs. 3 VVG)</span></span></>} />
+              <Checkbox
+                checked={a.krankenzusatz}
+                onChange={(v) => set('krankenzusatz', v)}
+                label={<><span>Zusatzversicherung zur Krankenversicherung <span className="text-ink-500">(Kündigungsrecht nur Versicherungsnehmer:in, Art. 35a Abs. 4 VVG)</span></span></>} />
             </div>
           )}
           {a.preset === 'krankenkasse' && (
@@ -154,16 +151,14 @@ export function VorlageKuendigungVertrag() {
                   onSelect={(code) => set('kkGrund', code)}
                 />
               </Field>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.kkBesondereForm}
-                  onChange={(e) => set('kkBesondereForm', e.target.checked)} />
-                <span>Besondere Versicherungsform <span className="text-ink-500">(wählbare Franchise, HMO/Hausarzt/Telmed — ordentlicher Wechsel nur auf Jahresende, Art. 94 Abs. 2 KVV)</span></span>
-              </label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.kkAusstaende}
-                  onChange={(e) => set('kkAusstaende', e.target.checked)} />
-                <span>Es bestehen offene Prämien, Kostenbeteiligungen oder Betreibungskosten <span className="text-warn-700">(Wechselsperre, Art. 64a Abs. 6 KVG)</span></span>
-              </label>
+              <Checkbox
+                checked={a.kkBesondereForm}
+                onChange={(v) => set('kkBesondereForm', v)}
+                label={<><span>Besondere Versicherungsform <span className="text-ink-500">(wählbare Franchise, HMO/Hausarzt/Telmed — ordentlicher Wechsel nur auf Jahresende, Art. 94 Abs. 2 KVV)</span></span></>} />
+              <Checkbox
+                checked={a.kkAusstaende}
+                onChange={(v) => set('kkAusstaende', v)}
+                label={<><span>Es bestehen offene Prämien, Kostenbeteiligungen oder Betreibungskosten <span className="text-warn-700">(Wechselsperre, Art. 64a Abs. 6 KVG)</span></span></>} />
             </div>
           )}
           {a.preset === 'darlehen' && (
@@ -183,11 +178,10 @@ export function VorlageKuendigungVertrag() {
 
       case 'termin': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.aufNaechstmoeglich}
-              onChange={(e) => set('aufNaechstmoeglich', e.target.checked)} />
-            <span>Auf den <strong>nächstmöglichen Termin</strong> kündigen <span className="text-ink-500">(empfohlen — kein Risiko eines verfehlten Wunschtermins)</span></span>
-          </label>
+          <Checkbox
+            checked={a.aufNaechstmoeglich}
+            onChange={(v) => set('aufNaechstmoeglich', v)}
+            label={<><span>Auf den <strong>nächstmöglichen Termin</strong> kündigen <span className="text-ink-500">(empfohlen — kein Risiko eines verfehlten Wunschtermins)</span></span></>} />
           {!a.aufNaechstmoeglich && (
             <Field label="Gewünschter Kündigungstermin">
               <DatumsFeld value={a.kuendigungsterminWunsch} onChange={(v) => set('kuendigungsterminWunsch', v)} className={inputCls} />

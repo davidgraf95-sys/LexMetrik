@@ -5,7 +5,7 @@ import {
 import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -104,26 +104,23 @@ export function VorlageNda() {
           <Field label="Konkretisierung der vertraulichen Informationen" optional hint="zusätzlich zur allgemeinen Definition">
             <input className={inputCls} value={a.infoBeschrieb} onChange={(e) => set('infoBeschrieb', e.target.value)} placeholder="z. B. Quellcode, Kundenlisten, Preiskalkulationen" />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.dauerErfassen}
-              onChange={(e) => set('dauerErfassen', e.target.checked)} />
-            <span><strong>Nachwirkungsfrist</strong> vereinbaren (Geheimhaltung gilt N Jahre über das Vorhaben hinaus)</span>
-          </label>
+          <Checkbox
+            checked={a.dauerErfassen}
+            onChange={(v) => set('dauerErfassen', v)}
+            label={<><span><strong>Nachwirkungsfrist</strong> vereinbaren (Geheimhaltung gilt N Jahre über das Vorhaben hinaus)</span></>} />
           {a.dauerErfassen && (
             <Field label="Dauer nach Beendigung (Jahre)">
               <input className={inputCls + ' sm:max-w-[8rem]'} inputMode="numeric" value={a.dauerJahre} onChange={(e) => set('dauerJahre', e.target.value)} placeholder="z. B. 3" />
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.rueckgabe}
-              onChange={(e) => set('rueckgabe', e.target.checked)} />
-            <span><strong>Rückgabe/Vernichtung</strong> der Unterlagen aufnehmen</span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.konventionalstrafe}
-              onChange={(e) => set('konventionalstrafe', e.target.checked)} />
-            <span><strong>Konventionalstrafe</strong> vereinbaren <span className="text-ink-500">(verfällt auch ohne Schaden; übermässige setzt der Richter herab, Art. 163 Abs. 3 OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.rueckgabe}
+            onChange={(v) => set('rueckgabe', v)}
+            label={<><span><strong>Rückgabe/Vernichtung</strong> der Unterlagen aufnehmen</span></>} />
+          <Checkbox
+            checked={a.konventionalstrafe}
+            onChange={(v) => set('konventionalstrafe', v)}
+            label={<><span><strong>Konventionalstrafe</strong> vereinbaren <span className="text-ink-500">(verfällt auch ohne Schaden; übermässige setzt der Richter herab, Art. 163 Abs. 3 OR)</span></span></>} />
           {a.konventionalstrafe && (
             <Field label="Konventionalstrafe je Verletzung (CHF)">
               <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.strafeCHF} onChange={(e) => set('strafeCHF', e.target.value)} placeholder="z. B. 20000.00" />

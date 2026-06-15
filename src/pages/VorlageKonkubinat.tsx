@@ -5,7 +5,7 @@ import {
 import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -91,17 +91,15 @@ export function VorlageKonkubinat() {
 
       case 'regelung': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.wohnenAufnehmen}
-              onChange={(e) => set('wohnenAufnehmen', e.target.checked)} />
-            <span><strong>Wohn-Klausel</strong> aufnehmen</span>
-          </label>
+          <Checkbox
+            checked={a.wohnenAufnehmen}
+            onChange={(v) => set('wohnenAufnehmen', v)}
+            label={<><span><strong>Wohn-Klausel</strong> aufnehmen</span></>} />
           {a.wohnenAufnehmen && (
             <Field label="Wohnsituation" hint="Mietverhältnis/Eigentum und Nutzung der gemeinsamen Wohnung">
               <textarea className={inputCls + ' min-h-[3.5rem]'} value={a.wohnBeschrieb} onChange={(e) => set('wohnBeschrieb', e.target.value)} placeholder="z. B. gemeinsame Mietwohnung an der Beispielstrasse 1, 8000 Zürich; Hauptmieter ist Partner 1" />
             </Field>
           )}
-
           <Field label="Kosten des Zusammenlebens">
             <div className="grid grid-cols-3 gap-2">
               {KOSTEN_OPTIONEN.map((k) => (
@@ -123,36 +121,31 @@ export function VorlageKonkubinat() {
               </Field>
             </div>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.gemeinsamesKonto}
-              onChange={(e) => set('gemeinsamesKonto', e.target.checked)} />
-            <span><strong>Gemeinsames Konto</strong> für die gemeinsamen Kosten</span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.inventarAufnehmen}
-              onChange={(e) => set('inventarAufnehmen', e.target.checked)} />
-            <span>Verweis auf <strong>Inventarliste</strong> (Allein-/Miteigentum) aufnehmen</span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.einfacheGesellschaft}
-              onChange={(e) => set('einfacheGesellschaft', e.target.checked)} />
-            <span><strong>Einfache Gesellschaft</strong> für einen gemeinsamen Zweck <span className="text-ink-500">(z. B. gemeinsames Bauvorhaben, Art. 530 OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.gemeinsamesKonto}
+            onChange={(v) => set('gemeinsamesKonto', v)}
+            label={<><span><strong>Gemeinsames Konto</strong> für die gemeinsamen Kosten</span></>} />
+          <Checkbox
+            checked={a.inventarAufnehmen}
+            onChange={(v) => set('inventarAufnehmen', v)}
+            label={<><span>Verweis auf <strong>Inventarliste</strong> (Allein-/Miteigentum) aufnehmen</span></>} />
+          <Checkbox
+            checked={a.einfacheGesellschaft}
+            onChange={(v) => set('einfacheGesellschaft', v)}
+            label={<><span><strong>Einfache Gesellschaft</strong> für einen gemeinsamen Zweck <span className="text-ink-500">(z. B. gemeinsames Bauvorhaben, Art. 530 OR)</span></span></>} />
           {a.einfacheGesellschaft && (
             <Field label="Gemeinsamer Zweck">
               <input className={inputCls} value={a.einfacheGesellschaftZweck} onChange={(e) => set('einfacheGesellschaftZweck', e.target.value)} placeholder="z. B. Erwerb und Umbau der Liegenschaft …" />
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.kinderHinweis}
-              onChange={(e) => set('kinderHinweis', e.target.checked)} />
-            <span><strong>Hinweis gemeinsame Kinder</strong> aufnehmen <span className="text-ink-500">(Sorge/Unterhalt nach Gesetz)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.vorsorgeHinweis}
-              onChange={(e) => set('vorsorgeHinweis', e.target.checked)} />
-            <span><strong>Hinweis Vorsorge/Erbrecht</strong> aufnehmen <span className="text-ink-500">(kein gesetzliches Erbrecht der Partner)</span></span>
-          </label>
+          <Checkbox
+            checked={a.kinderHinweis}
+            onChange={(v) => set('kinderHinweis', v)}
+            label={<><span><strong>Hinweis gemeinsame Kinder</strong> aufnehmen <span className="text-ink-500">(Sorge/Unterhalt nach Gesetz)</span></span></>} />
+          <Checkbox
+            checked={a.vorsorgeHinweis}
+            onChange={(v) => set('vorsorgeHinweis', v)}
+            label={<><span><strong>Hinweis Vorsorge/Erbrecht</strong> aufnehmen <span className="text-ink-500">(kein gesetzliches Erbrecht der Partner)</span></span></>} />
         </div>
       );
 

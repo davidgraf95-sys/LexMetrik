@@ -5,7 +5,7 @@ import {
 import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { ThemenEinstieg } from '../components/ThemenEinstieg';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -117,7 +117,6 @@ export function VorlageWerkvertrag() {
           <Field label="Ablieferungstermin" optional>
             <DatumsFeld value={a.ablieferung} onChange={(v) => set('ablieferung', v)} className={inputCls} />
           </Field>
-
           <Field label="Vergütung">
             <div className="grid grid-cols-2 gap-2">
               {PREIS_OPTIONEN.map((p) => (
@@ -144,21 +143,19 @@ export function VorlageWerkvertrag() {
               </Field>
             </div>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.anzahlung}
-              onChange={(e) => set('anzahlung', e.target.checked)} />
-            <span><strong>Akontozahlung</strong> bei Vertragsschluss vereinbaren</span>
-          </label>
+          <Checkbox
+            checked={a.anzahlung}
+            onChange={(v) => set('anzahlung', v)}
+            label={<><span><strong>Akontozahlung</strong> bei Vertragsschluss vereinbaren</span></>} />
           {a.anzahlung && (
             <Field label="Akontobetrag (CHF)">
               <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.anzahlungCHF} onChange={(e) => set('anzahlungCHF', e.target.value)} placeholder="z. B. 4000.00" />
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.abnahmeProtokoll}
-              onChange={(e) => set('abnahmeProtokoll', e.target.checked)} />
-            <span>Gemeinsames <strong>Abnahmeprotokoll</strong> vereinbaren</span>
-          </label>
+          <Checkbox
+            checked={a.abnahmeProtokoll}
+            onChange={(v) => set('abnahmeProtokoll', v)}
+            label={<><span>Gemeinsames <strong>Abnahmeprotokoll</strong> vereinbaren</span></>} />
         </div>
       );
 

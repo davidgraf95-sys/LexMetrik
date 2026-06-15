@@ -1,6 +1,15 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls, Stepper } from '../vorlagen/ui';
+import {
+  BeruehrtRahmen,
+  Checkbox,
+  EckdatenKachel,
+  FehlerBox,
+  Field,
+  GruppenTitel,
+  inputCls,
+  Stepper,
+} from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { SelectionGrid } from '../ui/SelectionGrid';
 import { BetragsFeld } from '../BetragsFeld';
@@ -510,1032 +519,1037 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
   return (
     <BeruehrtRahmen>
-    <div className="space-y-6">
-      <PflichtDisclaimer text={
-        rechtsweg === 'schkg'
-          ? 'Automatisierte Orientierung zu Betreibungsort und SchKG-Foren (SchKG, Stand 1.1.2025; GebV SchKG Stand 1.1.2022) – keine Rechtsberatung. Internationale Sachverhalte und die materielle Begründetheit sind nicht abgebildet; Fristen sind Verwirkungsfristen und im Einzelfall zu prüfen.'
-          : rechtsweg === 'straf'
-            ? 'Automatisierte Orientierung zum Gerichtsstand im Strafverfahren (StPO, Stand 1.1.2024) – keine Rechtsberatung. Die Katalog-Subsumtion der Bundesgerichtsbarkeit (Art. 23/24 StPO) und jugendstrafrechtliche Sonderwege (JStPO) sind nicht abgebildet.'
-            : DISCLAIMER
-      } />
-
-      {/* Geführter Schritt-Dialog (Auftrag David 6.6.2026): klickbarer Stepper
-          wie bei den Vorlagen-Wizards; je nach Rechtsweg/Instanz andere Strecke. */}
-      <Stepper schritte={schritte} aktiv={aktiverSchritt} onWechsel={setSchritt} />
-
-      {/* SCHRITT «Was möchten Sie tun?» – Rechtsweg + (Zivil) Einleitung/
-          Rechtsmittel-Gabelung. SchKG/Straf binden hier ihre eigene Engine ein. */}
-      {zeige('was') && (
       <div className="space-y-6">
-      {/* Rechtsweg */}
-      <div className="space-y-2">
-        <GruppenTitel>Rechtsweg</GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
-          {RECHTSWEGE.map((w) => (
-            <button key={w.code} type="button" disabled={!w.aktiv}
-              aria-pressed={rechtsweg === w.code}
-              onClick={() => w.aktiv && setRechtsweg(w.code)}
-              title={w.aktiv ? undefined : 'In Vorbereitung — eigene Engine folgt'}
-              className={`text-left p-3 rounded-lg border transition-colors ${
-                rechtsweg === w.code ? 'border-brass-500 bg-brass-100/60'
-                : w.aktiv ? 'border-line bg-surface hover:border-brass-400'
-                : 'border-line bg-surface opacity-55 cursor-not-allowed'
-              }`}>
-              <span className="block text-body-s font-medium text-ink-900">
-                {w.label}{!w.aktiv && <span className="lc-badge lc-badge-soft ml-2">in Vorbereitung</span>}
-              </span>
-              <span className="block text-xs text-ink-500 mt-0.5">{w.sub}</span>
-            </button>
-          ))}
+        <PflichtDisclaimer text={
+          rechtsweg === 'schkg'
+            ? 'Automatisierte Orientierung zu Betreibungsort und SchKG-Foren (SchKG, Stand 1.1.2025; GebV SchKG Stand 1.1.2022) – keine Rechtsberatung. Internationale Sachverhalte und die materielle Begründetheit sind nicht abgebildet; Fristen sind Verwirkungsfristen und im Einzelfall zu prüfen.'
+            : rechtsweg === 'straf'
+              ? 'Automatisierte Orientierung zum Gerichtsstand im Strafverfahren (StPO, Stand 1.1.2024) – keine Rechtsberatung. Die Katalog-Subsumtion der Bundesgerichtsbarkeit (Art. 23/24 StPO) und jugendstrafrechtliche Sonderwege (JStPO) sind nicht abgebildet.'
+              : DISCLAIMER
+        } />
+
+        {/* Geführter Schritt-Dialog (Auftrag David 6.6.2026): klickbarer Stepper
+            wie bei den Vorlagen-Wizards; je nach Rechtsweg/Instanz andere Strecke. */}
+        <Stepper schritte={schritte} aktiv={aktiverSchritt} onWechsel={setSchritt} />
+
+        {/* SCHRITT «Was möchten Sie tun?» – Rechtsweg + (Zivil) Einleitung/
+            Rechtsmittel-Gabelung. SchKG/Straf binden hier ihre eigene Engine ein. */}
+        {zeige('was') && (
+        <div className="space-y-6">
+        {/* Rechtsweg */}
+        <div className="space-y-2">
+          <GruppenTitel>Rechtsweg</GruppenTitel>
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
+            {RECHTSWEGE.map((w) => (
+              <button key={w.code} type="button" disabled={!w.aktiv}
+                aria-pressed={rechtsweg === w.code}
+                onClick={() => w.aktiv && setRechtsweg(w.code)}
+                title={w.aktiv ? undefined : 'In Vorbereitung — eigene Engine folgt'}
+                className={`text-left p-3 rounded-lg border transition-colors ${
+                  rechtsweg === w.code ? 'border-brass-500 bg-brass-100/60'
+                  : w.aktiv ? 'border-line bg-surface hover:border-brass-400'
+                  : 'border-line bg-surface opacity-55 cursor-not-allowed'
+                }`}>
+                <span className="block text-body-s font-medium text-ink-900">
+                  {w.label}{!w.aktiv && <span className="lc-badge lc-badge-soft ml-2">in Vorbereitung</span>}
+                </span>
+                <span className="block text-xs text-ink-500 mt-0.5">{w.sub}</span>
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
-      {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : rechtsweg === 'straf' ? <StrafZustaendigkeitTeil /> : null}
-      </div>
-      )}
+        {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : rechtsweg === 'straf' ? <StrafZustaendigkeitTeil /> : null}
+        </div>
+        )}
 
-      {rechtsweg === 'schkg' || rechtsweg === 'straf' ? null : <>
+        {rechtsweg === 'schkg' || rechtsweg === 'straf' ? null : <>
 
-      {/* «Was möchten Sie tun?», Forts. (Zivil): Eingangs-Gabelung Einleitung
-          vs. Rechtsmittel – bestimmt, welche Fragen überhaupt nötig sind. */}
-      {zeige('was') && (
-      <div className="space-y-2">
-        <GruppenTitel>Was suchen Sie?</GruppenTitel>
-        <SelectionGrid
-          className="grid grid-cols-1 sm:grid-cols-2 gap-2"
-          items={[
-            { code: 'einleitung' as Instanz, label: 'Verfahren einleiten', sub: 'Zuständige Schlichtungsbehörde bzw. erstes Gericht finden' },
-            { code: 'rechtsmittel' as Instanz, label: 'Rechtsmittel ergreifen', sub: 'Berufung/Beschwerde — zuständige obere Instanz' },
-          ]}
-          value={f.instanz}
-          onSelect={(code) => set('instanz', code)}
-        />
-      </div>
-      )}
-
-      {/* Angefochtener Entscheid (Rechtsmittel-Umbau 6.6.2026): die rechtlich
-          entscheidenden Weichen – Objekt (Art. 308/319 ZPO), Verfahrensart der
-          Vorinstanz (Fristlänge + Stillstand!) und Vorinstanz-Typ (Art. 75
-          Abs. 2 BGG). Bleibt INHALTLICH unverändert, nur im «Was»-Schritt. */}
-      {zeige('was') && f.instanz === 'rechtsmittel' && (
-        <div className="space-y-3">
-          <GruppenTitel>Was wird angefochten?</GruppenTitel>
+        {/* «Was möchten Sie tun?», Forts. (Zivil): Eingangs-Gabelung Einleitung
+            vs. Rechtsmittel – bestimmt, welche Fragen überhaupt nötig sind. */}
+        {zeige('was') && (
+        <div className="space-y-2">
+          <GruppenTitel>Was suchen Sie?</GruppenTitel>
           <SelectionGrid
             className="grid grid-cols-1 sm:grid-cols-2 gap-2"
             items={[
-              { code: 'endentscheid' as RmObjekt, label: 'Endentscheid', sub: 'Das Verfahren wird ganz oder teilweise abgeschlossen' },
-              { code: 'zwischenentscheid' as RmObjekt, label: 'Zwischenentscheid', sub: 'z. B. über Zuständigkeit oder Ausstand (selbständig eröffnet)' },
-              { code: 'vorsorgliche_massnahme' as RmObjekt, label: 'Vorsorgliche Massnahme', sub: 'Auch Eheschutz nach der BGer-Praxis (Art. 98 BGG)' },
-              { code: 'prozessleitende_verfuegung' as RmObjekt, label: 'Prozessleitende Verfügung', sub: 'Nicht berufungsfähig — nur Art. 319 lit. b ZPO' },
+              { code: 'einleitung' as Instanz, label: 'Verfahren einleiten', sub: 'Zuständige Schlichtungsbehörde bzw. erstes Gericht finden' },
+              { code: 'rechtsmittel' as Instanz, label: 'Rechtsmittel ergreifen', sub: 'Berufung/Beschwerde — zuständige obere Instanz' },
             ]}
-            value={f.rmObjekt}
-            onSelect={(code) => set('rmObjekt', code)}
+            value={f.instanz}
+            onSelect={(code) => set('instanz', code)}
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Field label="Verfahrensart der Vorinstanz" hint="entscheidet über Fristlänge (30/10 Tage) und Gerichtsferien-Stillstand">
-              <select className={inputCls} value={f.rmVerfahren} onChange={(e) => set('rmVerfahren', e.target.value as RmVerfahren)}>
-                <option value="ordentlich_vereinfacht">Ordentliches oder vereinfachtes Verfahren</option>
-                <option value="summarisch">Summarisches Verfahren (z. B. Rechtsschutz in klaren Fällen, Eheschutz)</option>
-              </select>
-            </Field>
-            <Field label="Wer hat entschieden?" hint="Handelsgericht/Direktklage: kein kantonales Rechtsmittel (Art. 75 Abs. 2 BGG)">
-              <select className={inputCls} value={f.rmVorinstanz} onChange={(e) => set('rmVorinstanz', e.target.value as RmVorinstanz)}>
-                <option value="erstinstanz">Erstinstanzliches Gericht (Bezirks-/Regional-/Zivilgericht)</option>
-                <option value="handelsgericht">Handelsgericht (ZH/BE/AG/SG, Art. 6 ZPO)</option>
-                <option value="direktklage_oberes_gericht">Oberes Gericht nach Direktklage (Art. 8 ZPO)</option>
-              </select>
-            </Field>
-          </div>
-          {f.rmVerfahren === 'summarisch' && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={f.rmFamilienSummarsache} onChange={(e) => set('rmFamilienSummarsache', e.target.checked)} />
-              <span>
-                Familienrechtliche Streitigkeit nach Art. 271/276/302/305 ZPO (Eheschutz, vorsorgliche
-                Massnahmen im Scheidungsverfahren, Unterhalts-/Vaterschaftsmassnahmen) —
-                Berufungsfrist dann 30 statt 10 Tage (Art. 314 Abs. 2 ZPO, seit 1.1.2025)
-              </span>
-            </label>
-          )}
         </div>
-      )}
-
-      {/* SCHRITT «Worum geht es?» – Streitsache + bedingte Unterfälle */}
-      {zeige('sache') && (
-      <div className="space-y-2">
-        <GruppenTitel>Art des Streits</GruppenTitel>
-        <SelectionGrid
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
-          items={STREITSACHEN.map((s) => ({ code: s.code, label: s.label, sub: s.sub }))}
-          value={f.streitsache}
-          onSelect={(code) => set('streitsache', code)}
-        />
-        {istMiete && (
-          <Field label="Miet-Unterfall" hint="Schutzmaterien sind streitwertunabhängig vereinfacht (Art. 243 Abs. 2 lit. c ZPO)">
-            <select className={inputCls} value={f.mieteUnterfall} onChange={(e) => set('mieteUnterfall', e.target.value as MieteUnterfall)}>
-              {MIETE_UNTERFAELLE.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
-            </select>
-          </Field>
-        )}
-        {f.streitsache === 'delikt' && (
-          <Field label="Delikts-Unterfall" hint="Spezialforen (Art. 37/38) gehen dem allgemeinen Deliktsforum vor">
-            <select className={inputCls} value={f.deliktUnterfall} onChange={(e) => set('deliktUnterfall', e.target.value as DeliktUnterfall)}>
-              {DELIKT_UNTERFAELLE.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
-            </select>
-          </Field>
-        )}
-        {f.streitsache === 'persoenlichkeit' && (
-          <Field label="Unterfall" hint="Gewaltschutz: Schlichtung entfällt (Art. 198 lit. abis), vereinfacht streitwertunabhängig, gerichtskostenfrei (Art. 114 lit. f)">
-            <select className={inputCls} value={f.persoenlichkeitUnterfall} onChange={(e) => set('persoenlichkeitUnterfall', e.target.value as PersoenlichkeitUnterfall)}>
-              {PERSOENLICHKEIT_UNTERFAELLE.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
-            </select>
-          </Field>
         )}
 
-      {f.streitsache === 'ip_wettbewerb' && (
-        <Field label="Art.-5-Materie" hint="UWG/Bund-Klagen sind nur über CHF 30 000 einzige Instanz (lit. d/f)">
-          <select className={inputCls} value={f.ipUnterfall} onChange={(e) => set('ipUnterfall', e.target.value as IpUnterfall)}>
-            <option value="ip_kartell_firma">IP / Kartell / Firma / übrige unbedingte Katalog-Materien (lit. a–c, e, g–i)</option>
-            <option value="uwg">UWG (lit. d — über 30'000 oder Bund klagt)</option>
-            <option value="klage_gegen_bund">Klage gegen den Bund (lit. f — nur über 30'000)</option>
-          </select>
-          {f.ipUnterfall === 'uwg' && (
-            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 mt-2">
-              <input type="checkbox" checked={f.bundKlagerecht} onChange={(e) => set('bundKlagerecht', e.target.checked)} />
-              Der Bund übt sein Klagerecht aus (dann einzige Instanz unabhängig vom Streitwert)
-            </label>
-          )}
-        </Field>
-      )}
-      </div>
-      )}
-
-      {/* SCHRITT «Örtliche Anknüpfung» – nur die für die Streitsache relevante
-          Frage (Einleitung: Ort + Kanton; Rechtsmittel: nur Kanton für die
-          obere Instanz). Reine Beschriftung aus ORT_LABEL; die Engine-Regel
-          bleibt unberührt (Art. 10/23/32–34 ZPO). */}
-      {zeige('ort') && (
-      <div className="space-y-3">
-        <GruppenTitel>
-          {f.instanz === 'einleitung' ? 'Wo ist die Sache örtlich anzuknüpfen?' : 'In welchem Kanton wurde entschieden?'}
-        </GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {f.instanz === 'einleitung' && (
-          <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
-            <div className="space-y-1.5">
-              <div className="grid grid-cols-[6.5rem_1fr] gap-2">
-                <input className={inputCls + ' num'} value={f.plz} inputMode="numeric" maxLength={4}
-                  onChange={(e) => set('plz', e.target.value.replace(/\D/g, '').slice(0, 4))}
-                  placeholder="PLZ" aria-label="Postleitzahl" />
-                <input className={inputCls} value={f.gemeinde} onChange={(e) => set('gemeinde', e.target.value)} placeholder="z. B. Basel" />
-              </div>
-              {f.plz.length === 4 && plzTreffer === null && (
-                <p className="text-xs text-warn-700">PLZ {f.plz}: im amtlichen Ortschaftenverzeichnis nicht gefunden — bitte prüfen.</p>
-              )}
-              {plzTreffer && plzTreffer.length > 0 && (() => {
-                const kantone = [...new Set(plzTreffer.map((t) => t.kanton))];
-                const gemeinden = [...new Set(plzTreffer.map((t) => t.gemeinde))];
-                // Mehrdeutige PLZ (Randgebiets-Fall 4052 wie echte Mehrdeutig-
-                // keit 1041): klickbare Auswahl statt Hand-Tippen (TODO 5
-                // betreibungskreise-kantone.md); der Klick setzt Gemeinde UND
-                // Kanton, der Auto-Fill oben (nur leere Felder) bleibt unberührt.
-                if (gemeinden.length > 1) {
-                  return (
-                    <PlzGemeindeWahl
-                      plz={f.plz} treffer={plzTreffer} gemeinde={f.gemeinde} kanton={f.kanton}
-                      onWahl={({ gemeinde, kanton }) => setF((alt) => ({ ...alt, gemeinde, kanton }))}
-                    />
-                  );
-                }
-                return (
-                  <p className="text-xs text-ink-500">
-                    PLZ {f.plz}: {gemeinden[0]} ({kantone.join('/')})
-                  </p>
-                );
-              })()}
-              {/* Adress-Ausbau Stufe 3 (Entscheid David 12.6.2026): Adresse
-                  der beklagten Partei über die Bundes-API auflösen — nur auf
-                  Klick, Hinweis permanent; Offline-Wege bleiben Alternative. */}
-              <AdresseBundSuche
-                onUebernehmen={({ gemeinde, kanton, plz }) => {
-                  setF((alt) => ({ ...alt, gemeinde, kanton, plz }));
-                  // Bug-Check 12.6.2026 (MITTEL): die übernommene Adresse ist
-                  // die neue Wahrheit — eine stehengebliebene ZH-Strasse hätte
-                  // sonst Vorrang vor der frischen PLZ (Stufe-1-Vorrang).
-                  setZhStrasse(''); setZhNummer('');
-                }} />
+        {/* Angefochtener Entscheid (Rechtsmittel-Umbau 6.6.2026): die rechtlich
+            entscheidenden Weichen – Objekt (Art. 308/319 ZPO), Verfahrensart der
+            Vorinstanz (Fristlänge + Stillstand!) und Vorinstanz-Typ (Art. 75
+            Abs. 2 BGG). Bleibt INHALTLICH unverändert, nur im «Was»-Schritt. */}
+        {zeige('was') && f.instanz === 'rechtsmittel' && (
+          <div className="space-y-3">
+            <GruppenTitel>Was wird angefochten?</GruppenTitel>
+            <SelectionGrid
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2"
+              items={[
+                { code: 'endentscheid' as RmObjekt, label: 'Endentscheid', sub: 'Das Verfahren wird ganz oder teilweise abgeschlossen' },
+                { code: 'zwischenentscheid' as RmObjekt, label: 'Zwischenentscheid', sub: 'z. B. über Zuständigkeit oder Ausstand (selbständig eröffnet)' },
+                { code: 'vorsorgliche_massnahme' as RmObjekt, label: 'Vorsorgliche Massnahme', sub: 'Auch Eheschutz nach der BGer-Praxis (Art. 98 BGG)' },
+                { code: 'prozessleitende_verfuegung' as RmObjekt, label: 'Prozessleitende Verfügung', sub: 'Nicht berufungsfähig — nur Art. 319 lit. b ZPO' },
+              ]}
+              value={f.rmObjekt}
+              onSelect={(code) => set('rmObjekt', code)}
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Field label="Verfahrensart der Vorinstanz" hint="entscheidet über Fristlänge (30/10 Tage) und Gerichtsferien-Stillstand">
+                <select className={inputCls} value={f.rmVerfahren} onChange={(e) => set('rmVerfahren', e.target.value as RmVerfahren)}>
+                  <option value="ordentlich_vereinfacht">Ordentliches oder vereinfachtes Verfahren</option>
+                  <option value="summarisch">Summarisches Verfahren (z. B. Rechtsschutz in klaren Fällen, Eheschutz)</option>
+                </select>
+              </Field>
+              <Field label="Wer hat entschieden?" hint="Handelsgericht/Direktklage: kein kantonales Rechtsmittel (Art. 75 Abs. 2 BGG)">
+                <select className={inputCls} value={f.rmVorinstanz} onChange={(e) => set('rmVorinstanz', e.target.value as RmVorinstanz)}>
+                  <option value="erstinstanz">Erstinstanzliches Gericht (Bezirks-/Regional-/Zivilgericht)</option>
+                  <option value="handelsgericht">Handelsgericht (ZH/BE/AG/SG, Art. 6 ZPO)</option>
+                  <option value="direktklage_oberes_gericht">Oberes Gericht nach Direktklage (Art. 8 ZPO)</option>
+                </select>
+              </Field>
             </div>
-          </Field>
-          )}
-          <Field label="Kanton (Forum)" hint="alle Kantone hinterlegt (zentrale Stelle, Stellen-Liste oder amtliches Verzeichnis)">
-            <select className={inputCls + ' sm:max-w-[9rem]'} value={f.kanton} onChange={(e) => set('kanton', e.target.value as Kanton | '')}>
-              <option value="">– wählen –</option>
-              {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
-            </select>
-          </Field>
-        </div>
-        {gemeindeFremd && (
-          <p className="lc-notice-warn text-body-s">
-            «{f.gemeinde.trim()}» ist keine Gemeinde des Kantons {f.kanton} (erfasst: {kantonDaten?.gemeinden.join(', ')}) —
-            Kanton oder Ort prüfen.
-          </p>
-        )}
-      </div>
-      )}
-
-      {/* SCHRITT «Streitwert» – nur vermögensrechtlich relevant; bei Scheidung
-          entfällt der Schritt ganz (nicht vermögensrechtlich). */}
-      {zeige('streitwert') && (
-      <div className="space-y-3">
-        <GruppenTitel>Um wie viel geht es?</GruppenTitel>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Field label="Streitwert (CHF)" hint="massgeblich ist das Rechtsbegehren; die Engine berechnet den Streitwert nicht">
-            <div className="space-y-1.5">
-              <BetragsFeld value={f.streitwertRoh} onChange={(v) => set('streitwertRoh', v)} className={inputCls}
-                placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" checked={!f.vermoegensrechtlich}
-                  onChange={(e) => set('vermoegensrechtlich', !e.target.checked)} />
-                nicht vermögensrechtliche Streitigkeit
-              </label>
-            </div>
-          </Field>
-        </div>
-        <FehlerBox fehler={fehler} />
-      </div>
-      )}
-
-      {/* SCHRITT «Sonderfälle» – die bisher eingeklappte Sektion als optionaler
-          eigener Schritt; Inhalt unverändert (Rechtsmittel-Strecke kennt ihn
-          nicht). */}
-      {zeige('sonderfaelle') && !istScheidung && f.instanz === 'einleitung' && (
-        <div className="lc-card p-4">
-          <p className="lc-overline mb-1">Weitere Angaben – Sonderfälle</p>
-          <p className="text-body-s text-ink-600 mb-3">
-            Optional. Vereinbarungen, Handelsregister-Eintrag, Auslandbezug u. a. – nur ausfüllen, wenn einschlägig.
-          </p>
-          <div className="space-y-3 mt-3">
-
-          {istGeld && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={f.konsumentenvertrag} onChange={(e) => set('konsumentenvertrag', e.target.checked)} />
-              <span>Konsumentenvertrag <span className="text-ink-500">(Leistung des üblichen Verbrauchs für persönliche/familiäre Bedürfnisse, Art. 32 ZPO)</span></span>
-            </label>
-          )}
-          {istGeld && !f.konsumentenvertrag && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={f.ausVertrag} onChange={(e) => set('ausVertrag', e.target.checked)} />
-              <span>Forderung aus Vertrag <span className="text-ink-500">(zusätzliches Forum am Ort der charakteristischen Leistung — der vertragstypprägenden, i. d. R. nicht der Geldleistung, Art. 31 ZPO)</span></span>
-            </label>
-          )}
-          {istArbeit && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={f.avgVerleih} onChange={(e) => set('avgVerleih', e.target.checked)} />
-              <span>Personalverleih/-vermittlung (AVG) <span className="text-ink-500">(zusätzliches Forum am Ort der Geschäftsniederlassung der verleihenden Person, Art. 34 Abs. 2 ZPO)</span></span>
-            </label>
-          )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={f.gerichtsstandsvereinbarung} onChange={(e) => set('gerichtsstandsvereinbarung', e.target.checked)} />
-            <span>Gerichtsstandsvereinbarung vorhanden <span className="text-ink-500">(Wirksamkeit hängt vom Bindungsgrad ab, Art. 9/17/35 ZPO)</span></span>
-          </label>
-          {istGeld && f.konsumentenvertrag && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 pl-6">
-              <input type="checkbox" className="mt-0.5" checked={f.klaegeristGeschuetzt} onChange={(e) => set('klaegeristGeschuetzt', e.target.checked)} />
-              Die Konsumentin / der Konsument klagt
-            </label>
-          )}
-          {istArbeit && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={f.glgBetroffen} onChange={(e) => set('glgBetroffen', e.target.checked)} />
-              <span>Streit nach Gleichstellungsgesetz <span className="text-ink-500">(paritätische Behörde, vereinfacht streitwertunabhängig)</span></span>
-            </label>
-          )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={f.beklagteAuslandOderUnbekannt} onChange={(e) => set('beklagteAuslandOderUnbekannt', e.target.checked)} />
-            <span>Beklagte Partei mit Sitz/Wohnsitz im Ausland oder Aufenthalt unbekannt <span className="text-ink-500">(einseitiger Schlichtungsverzicht, Art. 199 Abs. 2 ZPO)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={f.widerklageOderGerichtlicheFrist} onChange={(e) => set('widerklageOderGerichtlicheFrist', e.target.checked)} />
-            <span>Widerklage/Hauptintervention oder gerichtlich angesetzte Klagefrist <span className="text-ink-500">(Schlichtung entfällt, Art. 198 lit. g/h ZPO)</span></span>
-          </label>
-          {istGeld && (
-            <details className="lc-card p-4">
-              <summary className="cursor-pointer text-body-s font-medium text-ink-700">
-                Handelsgerichts-Konstellation <span className="text-ink-500 font-normal">(nur Kantone mit Handelsgericht: ZH/BE/AG/SG; Art. 6 ZPO)</span>
-              </summary>
-              <div className="mt-3 space-y-2">
-                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" className="mt-0.5" checked={f.geschaeftlicheTaetigkeit} onChange={(e) => set('geschaeftlicheTaetigkeit', e.target.checked)} />
-                  Geschäftliche Tätigkeit mindestens einer Partei betroffen
-                </label>
-                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" className="mt-0.5" checked={f.beklagteImHR} onChange={(e) => set('beklagteImHR', e.target.checked)} />
-                  Beklagte Partei im Handelsregister eingetragen
-                </label>
-                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" className="mt-0.5" checked={f.klaegerImHR} onChange={(e) => set('klaegerImHR', e.target.checked)} />
-                  Klagende Partei im Handelsregister eingetragen
-                </label>
-              </div>
-            </details>
-          )}
-          </div>
-        </div>
-      )}
-
-      {/* Rechtsmittel-Fahrplan (Umbau 6.6.2026, Auftrag David): vier Schritte
-          statt zweier Textkarten — 1. statthaftes Rechtsmittel · 2. Instanz mit
-          Adresse · 3. FRIST konkret aufgelöst (30/10 Tage, Stillstand ja/nein)
-          · 4. Weiterzug BGer inkl. eigener Frist, Kognition und Weichen. */}
-      {/* Ehrlicher Leerzustand (Befund Logik-Check NIEDRIG + David): fehlen
-          Pflichtangaben, sagt der Fahrplan WAS fehlt, statt leer zu bleiben. */}
-      {zeige('ergebnis') && f.instanz === 'rechtsmittel' && !rechtsmittel && (
-        <div className="lc-card p-5 space-y-2">
-          <GruppenTitel>Fahrplan</GruppenTitel>
-          <p className="text-body-s text-ink-700">
-            Für den Rechtsmittel-Fahrplan fehlen noch Angaben:
-          </p>
-          {fehler.length > 0
-            ? fehler.map((x, i) => <p key={i} className="text-body-s text-warn-700">• {x}</p>)
-            : <p className="text-body-s text-warn-700">• Bitte die vorherigen Schritte vervollständigen.</p>}
-        </div>
-      )}
-      {zeige('ergebnis') && f.instanz === 'rechtsmittel' && rechtsmittel && (
-        <ErgebnisBlock>
-
-          {/* Schritt 1 · Statthaftes Rechtsmittel */}
-          <div className="lc-card p-5 space-y-2">
-            <GruppenTitel>1 · Statthaftes Rechtsmittel (kantonal)</GruppenTitel>
-            <p className="text-h3 font-medium text-ink-900 leading-none">
-              {rechtsmittel.kantonal === 'berufung' ? 'Berufung'
-                : rechtsmittel.kantonal === 'beschwerde' ? 'Beschwerde'
-                : rechtsmittel.kantonal === 'entfaellt_einzige_instanz' ? 'Kein kantonales Rechtsmittel'
-                : 'Berufung oder Beschwerde — vom Streitwert abhängig'}
-            </p>
-            <p className="text-body-s text-ink-700">{rechtsmittel.kantonalText}</p>
-          </div>
-
-          {/* Schritt 2 · Zuständige Instanz */}
-          <div className="lc-card p-5 space-y-3">
-            <GruppenTitel>2 · Wohin?</GruppenTitel>
-            {rechtsmittel.kantonal !== 'entfaellt_einzige_instanz' ? (
-              f.kanton !== '' ? (
-                <div>
-                  {/* Genauer Spruchkörper (Auftrag David 6.6.2026): nur wo
-                      deterministisch + amtlich belegt (Dossier rechtsmittel-
-                      spruchkoerper-kantone.md) — Rest ehrlich offen (§8). */}
-                  {(() => {
-                    const kammer = rechtsmittel.kantonal === 'beschwerde'
-                      ? (obereInstanz!.kammerBeschwerde ?? obereInstanz!.kammerBerufung)
-                      : rechtsmittel.kantonal === 'berufung'
-                        ? obereInstanz!.kammerBerufung
-                        : undefined; // 'offen' (streitwertabhängig): keine Kammer-Festlegung
-                    return kammer ? (
-                      <p className="text-body-s text-ink-900 font-medium">{kammer}</p>
-                    ) : null;
-                  })()}
-                  <p className="text-body-s text-ink-900 whitespace-pre-line">
-                    {obereInstanz!.name}{'\n'}{obereInstanz!.strasse}{'\n'}{obereInstanz!.plzOrt}
-                  </p>
-                  {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1">{obereInstanz!.hinweis}.</p>}
-                  {obereInstanz!.quelleSpruchkoerper && (
-                    <p className="text-xs text-ink-500 mt-1">Spruchkörper: {obereInstanz!.quelleSpruchkoerper} — Erstrecherche, fachliche Abnahme ausstehend.</p>
-                  )}
-                  {!obereInstanz!.kammerBerufung && (
-                    <p className="text-xs text-ink-500 mt-1">
-                      Der konkrete Spruchkörper (Kammer/Abteilung) richtet sich in diesem Kanton nach der
-                      Geschäftsverteilung des Gerichts — die Eingabe an die Gerichtsadresse genügt.
-                    </p>
-                  )}
-                  <p className="text-xs text-ink-500 mt-1.5">
-                    Quelle: zweifach geprüftes Gerichts-Dossier (Stand 5.6.2026) — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
-                  </p>
-                </div>
-              ) : (
-                <p className="text-body-s text-ink-500">Kanton wählen, um die zuständige obere Instanz mit Adresse anzuzeigen.</p>
-              )
-            ) : (
-              <p className="text-body-s text-ink-700">
-                Die kantonale Rechtsmittelinstanz entfällt — nächste (und einzige) Station ist das Bundesgericht, siehe Schritt 4.
-              </p>
+            {f.rmVerfahren === 'summarisch' && (
+              <Checkbox
+                checked={f.rmFamilienSummarsache}
+                onChange={(v) => set('rmFamilienSummarsache', v)}
+                label={<><span>
+                    Familienrechtliche Streitigkeit nach Art. 271/276/302/305 ZPO (Eheschutz, vorsorgliche
+                    Massnahmen im Scheidungsverfahren, Unterhalts-/Vaterschaftsmassnahmen) —
+                    Berufungsfrist dann 30 statt 10 Tage (Art. 314 Abs. 2 ZPO, seit 1.1.2025)
+                  </span></>} />
             )}
           </div>
+        )}
 
-          {/* Schritt 3 · Frist (kantonal) — konkret aufgelöst */}
-          {rechtsmittel.kantonalFrist && (
+        {/* SCHRITT «Worum geht es?» – Streitsache + bedingte Unterfälle */}
+        {zeige('sache') && (
+        <div className="space-y-2">
+          <GruppenTitel>Art des Streits</GruppenTitel>
+          <SelectionGrid
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
+            items={STREITSACHEN.map((s) => ({ code: s.code, label: s.label, sub: s.sub }))}
+            value={f.streitsache}
+            onSelect={(code) => set('streitsache', code)}
+          />
+          {istMiete && (
+            <Field label="Miet-Unterfall" hint="Schutzmaterien sind streitwertunabhängig vereinfacht (Art. 243 Abs. 2 lit. c ZPO)">
+              <select className={inputCls} value={f.mieteUnterfall} onChange={(e) => set('mieteUnterfall', e.target.value as MieteUnterfall)}>
+                {MIETE_UNTERFAELLE.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
+              </select>
+            </Field>
+          )}
+          {f.streitsache === 'delikt' && (
+            <Field label="Delikts-Unterfall" hint="Spezialforen (Art. 37/38) gehen dem allgemeinen Deliktsforum vor">
+              <select className={inputCls} value={f.deliktUnterfall} onChange={(e) => set('deliktUnterfall', e.target.value as DeliktUnterfall)}>
+                {DELIKT_UNTERFAELLE.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
+              </select>
+            </Field>
+          )}
+          {f.streitsache === 'persoenlichkeit' && (
+            <Field label="Unterfall" hint="Gewaltschutz: Schlichtung entfällt (Art. 198 lit. abis), vereinfacht streitwertunabhängig, gerichtskostenfrei (Art. 114 lit. f)">
+              <select className={inputCls} value={f.persoenlichkeitUnterfall} onChange={(e) => set('persoenlichkeitUnterfall', e.target.value as PersoenlichkeitUnterfall)}>
+                {PERSOENLICHKEIT_UNTERFAELLE.map((m) => <option key={m.code} value={m.code}>{m.label}</option>)}
+              </select>
+            </Field>
+          )}
+
+        {f.streitsache === 'ip_wettbewerb' && (
+          <Field label="Art.-5-Materie" hint="UWG/Bund-Klagen sind nur über CHF 30 000 einzige Instanz (lit. d/f)">
+            <select className={inputCls} value={f.ipUnterfall} onChange={(e) => set('ipUnterfall', e.target.value as IpUnterfall)}>
+              <option value="ip_kartell_firma">IP / Kartell / Firma / übrige unbedingte Katalog-Materien (lit. a–c, e, g–i)</option>
+              <option value="uwg">UWG (lit. d — über 30'000 oder Bund klagt)</option>
+              <option value="klage_gegen_bund">Klage gegen den Bund (lit. f — nur über 30'000)</option>
+            </select>
+            {f.ipUnterfall === 'uwg' && (
+              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 mt-2">
+                <input type="checkbox" checked={f.bundKlagerecht} onChange={(e) => set('bundKlagerecht', e.target.checked)} />
+                Der Bund übt sein Klagerecht aus (dann einzige Instanz unabhängig vom Streitwert)
+              </label>
+            )}
+          </Field>
+        )}
+        </div>
+        )}
+
+        {/* SCHRITT «Örtliche Anknüpfung» – nur die für die Streitsache relevante
+            Frage (Einleitung: Ort + Kanton; Rechtsmittel: nur Kanton für die
+            obere Instanz). Reine Beschriftung aus ORT_LABEL; die Engine-Regel
+            bleibt unberührt (Art. 10/23/32–34 ZPO). */}
+        {zeige('ort') && (
+        <div className="space-y-3">
+          <GruppenTitel>
+            {f.instanz === 'einleitung' ? 'Wo ist die Sache örtlich anzuknüpfen?' : 'In welchem Kanton wurde entschieden?'}
+          </GruppenTitel>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {f.instanz === 'einleitung' && (
+            <Field label={`Massgeblicher Ort: ${ORT_LABEL[f.streitsache]}`} optional hint="Gemeinde (für die Auflösung der konkreten Stelle)">
+              <div className="space-y-1.5">
+                <div className="grid grid-cols-[6.5rem_1fr] gap-2">
+                  <input className={inputCls + ' num'} value={f.plz} inputMode="numeric" maxLength={4}
+                    onChange={(e) => set('plz', e.target.value.replace(/\D/g, '').slice(0, 4))}
+                    placeholder="PLZ" aria-label="Postleitzahl" />
+                  <input className={inputCls} value={f.gemeinde} onChange={(e) => set('gemeinde', e.target.value)} placeholder="z. B. Basel" />
+                </div>
+                {f.plz.length === 4 && plzTreffer === null && (
+                  <p className="text-xs text-warn-700">PLZ {f.plz}: im amtlichen Ortschaftenverzeichnis nicht gefunden — bitte prüfen.</p>
+                )}
+                {plzTreffer && plzTreffer.length > 0 && (() => {
+                  const kantone = [...new Set(plzTreffer.map((t) => t.kanton))];
+                  const gemeinden = [...new Set(plzTreffer.map((t) => t.gemeinde))];
+                  // Mehrdeutige PLZ (Randgebiets-Fall 4052 wie echte Mehrdeutig-
+                  // keit 1041): klickbare Auswahl statt Hand-Tippen (TODO 5
+                  // betreibungskreise-kantone.md); der Klick setzt Gemeinde UND
+                  // Kanton, der Auto-Fill oben (nur leere Felder) bleibt unberührt.
+                  if (gemeinden.length > 1) {
+                    return (
+                      <PlzGemeindeWahl
+                        plz={f.plz} treffer={plzTreffer} gemeinde={f.gemeinde} kanton={f.kanton}
+                        onWahl={({ gemeinde, kanton }) => setF((alt) => ({ ...alt, gemeinde, kanton }))}
+                      />
+                    );
+                  }
+                  return (
+                    <p className="text-xs text-ink-500">
+                      PLZ {f.plz}: {gemeinden[0]} ({kantone.join('/')})
+                    </p>
+                  );
+                })()}
+                {/* Adress-Ausbau Stufe 3 (Entscheid David 12.6.2026): Adresse
+                    der beklagten Partei über die Bundes-API auflösen — nur auf
+                    Klick, Hinweis permanent; Offline-Wege bleiben Alternative. */}
+                <AdresseBundSuche
+                  onUebernehmen={({ gemeinde, kanton, plz }) => {
+                    setF((alt) => ({ ...alt, gemeinde, kanton, plz }));
+                    // Bug-Check 12.6.2026 (MITTEL): die übernommene Adresse ist
+                    // die neue Wahrheit — eine stehengebliebene ZH-Strasse hätte
+                    // sonst Vorrang vor der frischen PLZ (Stufe-1-Vorrang).
+                    setZhStrasse(''); setZhNummer('');
+                  }} />
+              </div>
+            </Field>
+            )}
+            <Field label="Kanton (Forum)" hint="alle Kantone hinterlegt (zentrale Stelle, Stellen-Liste oder amtliches Verzeichnis)">
+              <select className={inputCls + ' sm:max-w-[9rem]'} value={f.kanton} onChange={(e) => set('kanton', e.target.value as Kanton | '')}>
+                <option value="">– wählen –</option>
+                {KANTONE.map((k) => <option key={k} value={k}>{k}</option>)}
+              </select>
+            </Field>
+          </div>
+          {gemeindeFremd && (
+            <p className="lc-notice-warn text-body-s">
+              «{f.gemeinde.trim()}» ist keine Gemeinde des Kantons {f.kanton} (erfasst: {kantonDaten?.gemeinden.join(', ')}) —
+              Kanton oder Ort prüfen.
+            </p>
+          )}
+        </div>
+        )}
+
+        {/* SCHRITT «Streitwert» – nur vermögensrechtlich relevant; bei Scheidung
+            entfällt der Schritt ganz (nicht vermögensrechtlich). */}
+        {zeige('streitwert') && (
+        <div className="space-y-3">
+          <GruppenTitel>Um wie viel geht es?</GruppenTitel>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Field label="Streitwert (CHF)" hint="massgeblich ist das Rechtsbegehren; die Engine berechnet den Streitwert nicht">
+              <div className="space-y-1.5">
+                <BetragsFeld value={f.streitwertRoh} onChange={(v) => set('streitwertRoh', v)} className={inputCls}
+                  placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
+                <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
+                  <input type="checkbox" checked={!f.vermoegensrechtlich}
+                    onChange={(e) => set('vermoegensrechtlich', !e.target.checked)} />
+                  nicht vermögensrechtliche Streitigkeit
+                </label>
+              </div>
+            </Field>
+          </div>
+          <FehlerBox fehler={fehler} />
+        </div>
+        )}
+
+        {/* SCHRITT «Sonderfälle» – die bisher eingeklappte Sektion als optionaler
+            eigener Schritt; Inhalt unverändert (Rechtsmittel-Strecke kennt ihn
+            nicht). */}
+        {zeige('sonderfaelle') && !istScheidung && f.instanz === 'einleitung' && (
+          <div className="lc-card p-4">
+            <p className="lc-overline mb-1">Weitere Angaben – Sonderfälle</p>
+            <p className="text-body-s text-ink-600 mb-3">
+              Optional. Vereinbarungen, Handelsregister-Eintrag, Auslandbezug u. a. – nur ausfüllen, wenn einschlägig.
+            </p>
+            <div className="space-y-3 mt-3">
+
+            {istGeld && (
+              <Checkbox
+                checked={f.konsumentenvertrag}
+                onChange={(v) => set('konsumentenvertrag', v)}
+                label={<><span>Konsumentenvertrag <span className="text-ink-500">(Leistung des üblichen Verbrauchs für persönliche/familiäre Bedürfnisse, Art. 32 ZPO)</span></span></>} />
+            )}
+            {istGeld && !f.konsumentenvertrag && (
+              <Checkbox
+                checked={f.ausVertrag}
+                onChange={(v) => set('ausVertrag', v)}
+                label={<><span>Forderung aus Vertrag <span className="text-ink-500">(zusätzliches Forum am Ort der charakteristischen Leistung — der vertragstypprägenden, i. d. R. nicht der Geldleistung, Art. 31 ZPO)</span></span></>} />
+            )}
+            {istArbeit && (
+              <Checkbox
+                checked={f.avgVerleih}
+                onChange={(v) => set('avgVerleih', v)}
+                label={<><span>Personalverleih/-vermittlung (AVG) <span className="text-ink-500">(zusätzliches Forum am Ort der Geschäftsniederlassung der verleihenden Person, Art. 34 Abs. 2 ZPO)</span></span></>} />
+            )}
+            <Checkbox
+              checked={f.gerichtsstandsvereinbarung}
+              onChange={(v) => set('gerichtsstandsvereinbarung', v)}
+              label={<><span>Gerichtsstandsvereinbarung vorhanden <span className="text-ink-500">(Wirksamkeit hängt vom Bindungsgrad ab, Art. 9/17/35 ZPO)</span></span></>} />
+            {istGeld && f.konsumentenvertrag && (
+              <Checkbox
+                checked={f.klaegeristGeschuetzt}
+                onChange={(v) => set('klaegeristGeschuetzt', v)}
+                label={<>Die Konsumentin / der Konsument klagt
+                              </>}
+                className='pl-6' />
+            )}
+            {istArbeit && (
+              <Checkbox
+                checked={f.glgBetroffen}
+                onChange={(v) => set('glgBetroffen', v)}
+                label={<><span>Streit nach Gleichstellungsgesetz <span className="text-ink-500">(paritätische Behörde, vereinfacht streitwertunabhängig)</span></span></>} />
+            )}
+            <Checkbox
+              checked={f.beklagteAuslandOderUnbekannt}
+              onChange={(v) => set('beklagteAuslandOderUnbekannt', v)}
+              label={<><span>Beklagte Partei mit Sitz/Wohnsitz im Ausland oder Aufenthalt unbekannt <span className="text-ink-500">(einseitiger Schlichtungsverzicht, Art. 199 Abs. 2 ZPO)</span></span></>} />
+            <Checkbox
+              checked={f.widerklageOderGerichtlicheFrist}
+              onChange={(v) => set('widerklageOderGerichtlicheFrist', v)}
+              label={<><span>Widerklage/Hauptintervention oder gerichtlich angesetzte Klagefrist <span className="text-ink-500">(Schlichtung entfällt, Art. 198 lit. g/h ZPO)</span></span></>} />
+            {istGeld && (
+              <details className="lc-card p-4">
+                <summary className="cursor-pointer text-body-s font-medium text-ink-700">
+                  Handelsgerichts-Konstellation <span className="text-ink-500 font-normal">(nur Kantone mit Handelsgericht: ZH/BE/AG/SG; Art. 6 ZPO)</span>
+                </summary>
+                <div className="mt-3 space-y-2">
+                  <Checkbox
+                    checked={f.geschaeftlicheTaetigkeit}
+                    onChange={(v) => set('geschaeftlicheTaetigkeit', v)}
+                    label={<>Geschäftliche Tätigkeit mindestens einer Partei betroffen
+                                      </>} />
+                  <Checkbox
+                    checked={f.beklagteImHR}
+                    onChange={(v) => set('beklagteImHR', v)}
+                    label={<>Beklagte Partei im Handelsregister eingetragen
+                                      </>} />
+                  <Checkbox
+                    checked={f.klaegerImHR}
+                    onChange={(v) => set('klaegerImHR', v)}
+                    label={<>Klagende Partei im Handelsregister eingetragen
+                                      </>} />
+                </div>
+              </details>
+            )}
+            </div>
+          </div>
+        )}
+
+        {/* Rechtsmittel-Fahrplan (Umbau 6.6.2026, Auftrag David): vier Schritte
+            statt zweier Textkarten — 1. statthaftes Rechtsmittel · 2. Instanz mit
+            Adresse · 3. FRIST konkret aufgelöst (30/10 Tage, Stillstand ja/nein)
+            · 4. Weiterzug BGer inkl. eigener Frist, Kognition und Weichen. */}
+        {/* Ehrlicher Leerzustand (Befund Logik-Check NIEDRIG + David): fehlen
+            Pflichtangaben, sagt der Fahrplan WAS fehlt, statt leer zu bleiben. */}
+        {zeige('ergebnis') && f.instanz === 'rechtsmittel' && !rechtsmittel && (
+          <div className="lc-card p-5 space-y-2">
+            <GruppenTitel>Fahrplan</GruppenTitel>
+            <p className="text-body-s text-ink-700">
+              Für den Rechtsmittel-Fahrplan fehlen noch Angaben:
+            </p>
+            {fehler.length > 0
+              ? fehler.map((x, i) => <p key={i} className="text-body-s text-warn-700">• {x}</p>)
+              : <p className="text-body-s text-warn-700">• Bitte die vorherigen Schritte vervollständigen.</p>}
+          </div>
+        )}
+        {zeige('ergebnis') && f.instanz === 'rechtsmittel' && rechtsmittel && (
+          <ErgebnisBlock>
+
+            {/* Schritt 1 · Statthaftes Rechtsmittel */}
             <div className="lc-card p-5 space-y-2">
-              <GruppenTitel>3 · Frist (kantonal)</GruppenTitel>
+              <GruppenTitel>1 · Statthaftes Rechtsmittel (kantonal)</GruppenTitel>
               <p className="text-h3 font-medium text-ink-900 leading-none">
-                {rechtsmittel.kantonalFrist.tage !== null ? `${rechtsmittel.kantonalFrist.tage} Tage` : 'Von offener Weiche abhängig'}
+                {rechtsmittel.kantonal === 'berufung' ? 'Berufung'
+                  : rechtsmittel.kantonal === 'beschwerde' ? 'Beschwerde'
+                  : rechtsmittel.kantonal === 'entfaellt_einzige_instanz' ? 'Kein kantonales Rechtsmittel'
+                  : 'Berufung oder Beschwerde — vom Streitwert abhängig'}
               </p>
-              <p className="text-body-s text-ink-700">{rechtsmittel.kantonalFrist.text}</p>
-              <p className={`text-body-s ${rechtsmittel.kantonalFrist.stillstand ? 'text-ink-700' : 'text-warn-700 font-medium'}`}>
-                {rechtsmittel.kantonalFrist.stillstandText}
+              <p className="text-body-s text-ink-700">{rechtsmittel.kantonalText}</p>
+            </div>
+
+            {/* Schritt 2 · Zuständige Instanz */}
+            <div className="lc-card p-5 space-y-3">
+              <GruppenTitel>2 · Wohin?</GruppenTitel>
+              {rechtsmittel.kantonal !== 'entfaellt_einzige_instanz' ? (
+                f.kanton !== '' ? (
+                  <div>
+                    {/* Genauer Spruchkörper (Auftrag David 6.6.2026): nur wo
+                        deterministisch + amtlich belegt (Dossier rechtsmittel-
+                        spruchkoerper-kantone.md) — Rest ehrlich offen (§8). */}
+                    {(() => {
+                      const kammer = rechtsmittel.kantonal === 'beschwerde'
+                        ? (obereInstanz!.kammerBeschwerde ?? obereInstanz!.kammerBerufung)
+                        : rechtsmittel.kantonal === 'berufung'
+                          ? obereInstanz!.kammerBerufung
+                          : undefined; // 'offen' (streitwertabhängig): keine Kammer-Festlegung
+                      return kammer ? (
+                        <p className="text-body-s text-ink-900 font-medium">{kammer}</p>
+                      ) : null;
+                    })()}
+                    <p className="text-body-s text-ink-900 whitespace-pre-line">
+                      {obereInstanz!.name}{'\n'}{obereInstanz!.strasse}{'\n'}{obereInstanz!.plzOrt}
+                    </p>
+                    {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1">{obereInstanz!.hinweis}.</p>}
+                    {obereInstanz!.quelleSpruchkoerper && (
+                      <p className="text-xs text-ink-500 mt-1">Spruchkörper: {obereInstanz!.quelleSpruchkoerper} — Erstrecherche, fachliche Abnahme ausstehend.</p>
+                    )}
+                    {!obereInstanz!.kammerBerufung && (
+                      <p className="text-xs text-ink-500 mt-1">
+                        Der konkrete Spruchkörper (Kammer/Abteilung) richtet sich in diesem Kanton nach der
+                        Geschäftsverteilung des Gerichts — die Eingabe an die Gerichtsadresse genügt.
+                      </p>
+                    )}
+                    <p className="text-xs text-ink-500 mt-1.5">
+                      Quelle: zweifach geprüftes Gerichts-Dossier (Stand 5.6.2026) — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
+                    </p>
+                  </div>
+                ) : (
+                  <p className="text-body-s text-ink-500">Kanton wählen, um die zuständige obere Instanz mit Adresse anzuzeigen.</p>
+                )
+              ) : (
+                <p className="text-body-s text-ink-700">
+                  Die kantonale Rechtsmittelinstanz entfällt — nächste (und einzige) Station ist das Bundesgericht, siehe Schritt 4.
+                </p>
+              )}
+            </div>
+
+            {/* Schritt 3 · Frist (kantonal) — konkret aufgelöst */}
+            {rechtsmittel.kantonalFrist && (
+              <div className="lc-card p-5 space-y-2">
+                <GruppenTitel>3 · Frist (kantonal)</GruppenTitel>
+                <p className="text-h3 font-medium text-ink-900 leading-none">
+                  {rechtsmittel.kantonalFrist.tage !== null ? `${rechtsmittel.kantonalFrist.tage} Tage` : 'Von offener Weiche abhängig'}
+                </p>
+                <p className="text-body-s text-ink-700">{rechtsmittel.kantonalFrist.text}</p>
+                <p className={`text-body-s ${rechtsmittel.kantonalFrist.stillstand ? 'text-ink-700' : 'text-warn-700 font-medium'}`}>
+                  {rechtsmittel.kantonalFrist.stillstandText}
+                </p>
+                <p className="text-xs text-ink-500">
+                  {/* Prefill-Brücke 2.1a: Fristlänge/Verfahren/Kanton reisen mit —
+                      nur noch das Zustellungsdatum eintragen. */}
+                  Konkretes Fristende berechnen:{' '}
+                  <Link
+                    to={zpoFristenLink({
+                      ...(rechtsmittel.kantonalFrist.tage != null ? { laenge: rechtsmittel.kantonalFrist.tage } : {}),
+                      einheit: 'tage',
+                      verfahren: f.rmVerfahren === 'summarisch' ? 'summarisch' : 'ordentlich',
+                      fristnatur: 'gesetzlich',
+                      ...(f.kanton !== '' ? { kanton: f.kanton } : {}),
+                    })}
+                    className="text-brass-700 underline">
+                    ZPO-Fristenrechner (vorbefüllt)
+                  </Link>
+                  {' '}— Frist und Verfahren reisen mit; nur noch die Zustellung eintragen.
+                </p>
+              </div>
+            )}
+
+            {/* Schritt 4 · Weiterzug ans Bundesgericht */}
+            <div className="lc-card p-5 space-y-3">
+              <GruppenTitel>{rechtsmittel.kantonalFrist ? '4' : '3'} · Weiterzug ans Bundesgericht</GruppenTitel>
+              <p className="text-h3 font-medium text-ink-900 leading-none">
+                {rechtsmittel.bger === 'zulaessig' ? 'Beschwerde in Zivilsachen: zulässig'
+                  : rechtsmittel.bger === 'schwelle_verfehlt' ? 'Streitwertgrenze nicht erreicht'
+                  : 'Vom Streitwert abhängig'}
+              </p>
+              <p className="text-body-s text-ink-700">{rechtsmittel.bgerText}</p>
+              <div className="border-t border-line pt-3 space-y-1.5">
+                <p className="text-body-s text-ink-900 font-medium">
+                  Frist: {rechtsmittel.bgerFrist.tage} Tage
+                </p>
+                <p className="text-body-s text-ink-700">{rechtsmittel.bgerFrist.text}</p>
+                <p className={`text-body-s ${rechtsmittel.bgerFrist.stillstand ? 'text-ink-700' : 'text-warn-700 font-medium'}`}>
+                  {rechtsmittel.bgerFrist.stillstandText}
+                </p>
+              </div>
+              {rechtsmittel.kognitionHinweis && (
+                <div className="lc-notice-warn text-body-s">{rechtsmittel.kognitionHinweis}</div>
+              )}
+              {/* Abteilungs-Auskunft (B.5a, 11.6.2026; Art. 33/34 BGerR — Regel
+                  in lib/bgerRechtsweg.ts, inkl. Rechtsöffnungs-Falle) */}
+              <p className="text-body-s text-ink-700 border-t border-line pt-3">
+                Zuständig wäre die <span className="font-medium text-ink-900">{rechtsmittel.bgerAbteilung}</span> — gilt auch für die subsidiäre Verfassungsbeschwerde.
+              </p>
+              <p className="text-body-s text-ink-900 whitespace-pre-line">
+                Schweizerisches Bundesgericht{'\n'}Av. du Tribunal-fédéral 29{'\n'}1005 Lausanne
               </p>
               <p className="text-xs text-ink-500">
-                {/* Prefill-Brücke 2.1a: Fristlänge/Verfahren/Kanton reisen mit —
-                    nur noch das Zustellungsdatum eintragen. */}
-                Konkretes Fristende berechnen:{' '}
+                {/* Prefill-Brücke (Auftrag David 11.6.2026): Gebiet/Streitwert/
+                    Objekt/Kanton reisen mit — nur noch die Eröffnung eintragen. */}
+                Konkretes Fristende und Details (Sonderfristen, Verfassungsbeschwerde):{' '}
                 <Link
-                  to={zpoFristenLink({
-                    ...(rechtsmittel.kantonalFrist.tage != null ? { laenge: rechtsmittel.kantonalFrist.tage } : {}),
-                    einheit: 'tage',
-                    verfahren: f.rmVerfahren === 'summarisch' ? 'summarisch' : 'ordentlich',
-                    fristnatur: 'gesetzlich',
+                  to={bgerRechtswegLink({
+                    weg: 'zivil',
+                    zivilGebiet: bgerGebietFuerStreitsache(f.streitsache),
+                    vermoegensrechtlich,
+                    ...(vermoegensrechtlich && streitwert !== null ? { streitwert } : {}),
+                    objekt: f.rmObjekt === 'endentscheid' ? 'endentscheid' : 'zwischen_anderer',
+                    ...(f.rmObjekt === 'vorsorgliche_massnahme' ? { objekt: 'endentscheid', vorsorglich: true } : {}),
+                    ...(rechtsmittel.kantonal === 'entfaellt_einzige_instanz' ? { einzigeInstanz: true } : {}),
                     ...(f.kanton !== '' ? { kanton: f.kanton } : {}),
                   })}
                   className="text-brass-700 underline">
-                  ZPO-Fristenrechner (vorbefüllt)
+                  BGer-Rechner (vorbefüllt)
                 </Link>
-                {' '}— Frist und Verfahren reisen mit; nur noch die Zustellung eintragen.
+                {' '}— Rechtsgebiet, Streitwert und Konstellation reisen mit; nur noch die Eröffnung des Entscheids eintragen.{f.rmObjekt === 'zwischenentscheid' ? ' Betrifft der Zwischenentscheid Zuständigkeit oder Ausstand, im Rechner das Objekt auf Art. 92 umstellen (sofortige Anfechtung zwingend).' : ''}
               </p>
             </div>
-          )}
 
-          {/* Schritt 4 · Weiterzug ans Bundesgericht */}
-          <div className="lc-card p-5 space-y-3">
-            <GruppenTitel>{rechtsmittel.kantonalFrist ? '4' : '3'} · Weiterzug ans Bundesgericht</GruppenTitel>
-            <p className="text-h3 font-medium text-ink-900 leading-none">
-              {rechtsmittel.bger === 'zulaessig' ? 'Beschwerde in Zivilsachen: zulässig'
-                : rechtsmittel.bger === 'schwelle_verfehlt' ? 'Streitwertgrenze nicht erreicht'
-                : 'Vom Streitwert abhängig'}
-            </p>
-            <p className="text-body-s text-ink-700">{rechtsmittel.bgerText}</p>
-            <div className="border-t border-line pt-3 space-y-1.5">
-              <p className="text-body-s text-ink-900 font-medium">
-                Frist: {rechtsmittel.bgerFrist.tage} Tage
-              </p>
-              <p className="text-body-s text-ink-700">{rechtsmittel.bgerFrist.text}</p>
-              <p className={`text-body-s ${rechtsmittel.bgerFrist.stillstand ? 'text-ink-700' : 'text-warn-700 font-medium'}`}>
-                {rechtsmittel.bgerFrist.stillstandText}
-              </p>
+            {/* Offene Rechtsfragen-Weichen (§8: ehrlich ausweisen) */}
+            {rechtsmittel.weichen.map((w, i) => (
+              <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+            ))}
+
+            <div className="lc-notice text-body-s">{rechtsmittel.fristHinweis}</div>
+            <div className="flex flex-wrap gap-1.5">
+              {rechtsmittel.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
             </div>
-            {rechtsmittel.kognitionHinweis && (
-              <div className="lc-notice-warn text-body-s">{rechtsmittel.kognitionHinweis}</div>
-            )}
-            {/* Abteilungs-Auskunft (B.5a, 11.6.2026; Art. 33/34 BGerR — Regel
-                in lib/bgerRechtsweg.ts, inkl. Rechtsöffnungs-Falle) */}
-            <p className="text-body-s text-ink-700 border-t border-line pt-3">
-              Zuständig wäre die <span className="font-medium text-ink-900">{rechtsmittel.bgerAbteilung}</span> — gilt auch für die subsidiäre Verfassungsbeschwerde.
-            </p>
-            <p className="text-body-s text-ink-900 whitespace-pre-line">
-              Schweizerisches Bundesgericht{'\n'}Av. du Tribunal-fédéral 29{'\n'}1005 Lausanne
-            </p>
-            <p className="text-xs text-ink-500">
-              {/* Prefill-Brücke (Auftrag David 11.6.2026): Gebiet/Streitwert/
-                  Objekt/Kanton reisen mit — nur noch die Eröffnung eintragen. */}
-              Konkretes Fristende und Details (Sonderfristen, Verfassungsbeschwerde):{' '}
-              <Link
-                to={bgerRechtswegLink({
-                  weg: 'zivil',
-                  zivilGebiet: bgerGebietFuerStreitsache(f.streitsache),
-                  vermoegensrechtlich,
-                  ...(vermoegensrechtlich && streitwert !== null ? { streitwert } : {}),
-                  objekt: f.rmObjekt === 'endentscheid' ? 'endentscheid' : 'zwischen_anderer',
-                  ...(f.rmObjekt === 'vorsorgliche_massnahme' ? { objekt: 'endentscheid', vorsorglich: true } : {}),
-                  ...(rechtsmittel.kantonal === 'entfaellt_einzige_instanz' ? { einzigeInstanz: true } : {}),
-                  ...(f.kanton !== '' ? { kanton: f.kanton } : {}),
-                })}
-                className="text-brass-700 underline">
-                BGer-Rechner (vorbefüllt)
-              </Link>
-              {' '}— Rechtsgebiet, Streitwert und Konstellation reisen mit; nur noch die Eröffnung des Entscheids eintragen.{f.rmObjekt === 'zwischenentscheid' ? ' Betrifft der Zwischenentscheid Zuständigkeit oder Ausstand, im Rechner das Objekt auf Art. 92 umstellen (sofortige Anfechtung zwingend).' : ''}
-            </p>
-          </div>
 
-          {/* Offene Rechtsfragen-Weichen (§8: ehrlich ausweisen) */}
-          {rechtsmittel.weichen.map((w, i) => (
-            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
-          ))}
-
-          <div className="lc-notice text-body-s">{rechtsmittel.fristHinweis}</div>
-          <div className="flex flex-wrap gap-1.5">
-            {rechtsmittel.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
-          </div>
-
-          {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +
-              PDF + Teilen auch im Rechtsmittel-Zweig — gleicher geteilter
-              Rahmen wie die Einleitungs-Sicht (§10). */}
-          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
-          <div className="flex flex-wrap items-center gap-3">
-            <PdfExportButton config={{
-              aktenzeichen: aktenzeichen.trim() || undefined,
-              title: 'Rechtsmittel-Fahrplan (ZPO/BGG)',
-              rechtsgrundlage: 'Bestimmung nach Art. 308 ff., 319 ff. ZPO · Art. 72 ff. BGG',
-              domain: 'zustaendigkeit',
-              fileBase: 'Rechtsmittel',
-              inputs: {
-                'Rechtsweg': 'Zivil — Rechtsmittel',
-                'Streitsache': STREITSACHEN.find((s) => s.code === f.streitsache)?.label ?? f.streitsache,
-                ...(istScheidung ? {} : { 'Streitwert': vermoegensrechtlich && streitwert !== null ? `CHF ${streitwert.toLocaleString('de-CH')}` : 'nicht vermögensrechtlich' }),
-                'Anfechtungsobjekt': f.rmObjekt === 'endentscheid' ? 'Endentscheid' : f.rmObjekt === 'zwischenentscheid' ? 'Zwischenentscheid' : f.rmObjekt === 'vorsorgliche_massnahme' ? 'Vorsorgliche Massnahme' : 'Prozessleitende Verfügung',
-                'Verfahren der Vorinstanz': f.rmVerfahren === 'summarisch' ? 'summarisch' : 'ordentlich/vereinfacht',
-                ...(f.rmVerfahren === 'summarisch' ? { 'Familienrechtliche Summarsache (Art. 271/276/302/305 ZPO)': f.rmFamilienSummarsache ? 'ja' : 'nein' } : {}),
-                'Vorinstanz': f.rmVorinstanz === 'erstinstanz' ? 'Erstinstanzliches Gericht' : f.rmVorinstanz === 'handelsgericht' ? 'Handelsgericht' : 'Oberes Gericht (Direktklage)',
-                ...(f.kanton ? { 'Kanton': f.kanton } : {}),
-              },
-              hero: {
-                hauptlabel: 'Kantonales Rechtsmittel',
-                hauptwert: rechtsmittel.kantonal === 'berufung' ? 'Berufung'
-                  : rechtsmittel.kantonal === 'beschwerde' ? 'Beschwerde'
-                  : rechtsmittel.kantonal === 'offen' ? 'Streitwertabhängig'
-                  : 'Entfällt (einzige Instanz)',
-                nebenwerte: [
-                  ...(rechtsmittel.kantonalFrist && rechtsmittel.kantonalFrist.tage !== null ? [{ label: 'Frist (kantonal)', wert: `${rechtsmittel.kantonalFrist.tage} Tage` }] : []),
-                  { label: 'Bundesgericht', wert: rechtsmittel.bger === 'zulaessig' ? `zulässig · ${rechtsmittel.bgerFrist.tage} Tage` : rechtsmittel.bger === 'schwelle_verfehlt' ? 'Grenze nicht erreicht' : 'streitwertabhängig' },
-                ],
-              },
-              sections: [{ titel: 'Rechtsmittel-Fahrplan', ergebnis: rechtsmittelBericht(rechtsmittel) }],
-              disclaimer: DISCLAIMER,
-            }} />
-            <LinkTeilenButton query={() => permalinkKodieren(ZUST_LINK_SPEC, { ...f, schritt })} />
-          </div>
-        </ErgebnisBlock>
-      )}
-
-      {/* 4 · Ergebnis — EINLEITUNGS-Sicht (Bug-Check 5.6.2026: im
-          Rechtsmittel-Modus tragen die Rechtsmittel-Karten oben die volle
-          Auskunft; die Einleitungs-Blöcke [Verfahrensart/Schlichtung/Stellen-
-          Notices/Weichen] würden dort sachfremd leaken) */}
-      {zeige('ergebnis') && f.instanz === 'einleitung' && !(ergebnis && r) && (
-        <div className="lc-card p-5 space-y-2">
-          <GruppenTitel>Fahrplan</GruppenTitel>
-          <p className="text-body-s text-ink-700">Für den Fahrplan fehlen noch Angaben:</p>
-          {fehler.length > 0
-            ? fehler.map((x, i) => <p key={i} className="text-body-s text-warn-700">• {x}</p>)
-            : <p className="text-body-s text-warn-700">• Bitte die vorherigen Schritte vervollständigen.</p>}
-        </div>
-      )}
-      {zeige('ergebnis') && ergebnis && r && f.instanz === 'einleitung' && (
-        <ErgebnisBlock>
-
-          {/* UX-Fix 5.6.2026 (Frage David «wieso bei Arbeitsrecht keine
-              Schlichtungsbehörde?»): Ohne Kantonswahl gab es WEDER Stelle noch
-              Hinweis — die Behörde ist hinterlegt, nur die Ortsangabe fehlte. */}
-          {r.schlichtung.obligatorisch && f.kanton === '' && (
-            <div className="lc-card p-4">
-              <p className="lc-overline mb-1.5">Zuständige Schlichtungsbehörde</p>
-              <p className="text-body-s text-ink-700">
-                Die Schlichtungsbehörde ist für alle 26 Kantone hinterlegt — bitte oben
-                <span className="font-medium text-ink-900"> PLZ eingeben oder Kanton wählen</span>, damit die
-                konkrete Stelle mit Adresse angezeigt werden kann (örtlich massgeblich: {ORT_LABEL[f.streitsache]}).
-              </p>
+            {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +
+                PDF + Teilen auch im Rechtsmittel-Zweig — gleicher geteilter
+                Rahmen wie die Einleitungs-Sicht (§10). */}
+            <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+            <div className="flex flex-wrap items-center gap-3">
+              <PdfExportButton config={{
+                aktenzeichen: aktenzeichen.trim() || undefined,
+                title: 'Rechtsmittel-Fahrplan (ZPO/BGG)',
+                rechtsgrundlage: 'Bestimmung nach Art. 308 ff., 319 ff. ZPO · Art. 72 ff. BGG',
+                domain: 'zustaendigkeit',
+                fileBase: 'Rechtsmittel',
+                inputs: {
+                  'Rechtsweg': 'Zivil — Rechtsmittel',
+                  'Streitsache': STREITSACHEN.find((s) => s.code === f.streitsache)?.label ?? f.streitsache,
+                  ...(istScheidung ? {} : { 'Streitwert': vermoegensrechtlich && streitwert !== null ? `CHF ${streitwert.toLocaleString('de-CH')}` : 'nicht vermögensrechtlich' }),
+                  'Anfechtungsobjekt': f.rmObjekt === 'endentscheid' ? 'Endentscheid' : f.rmObjekt === 'zwischenentscheid' ? 'Zwischenentscheid' : f.rmObjekt === 'vorsorgliche_massnahme' ? 'Vorsorgliche Massnahme' : 'Prozessleitende Verfügung',
+                  'Verfahren der Vorinstanz': f.rmVerfahren === 'summarisch' ? 'summarisch' : 'ordentlich/vereinfacht',
+                  ...(f.rmVerfahren === 'summarisch' ? { 'Familienrechtliche Summarsache (Art. 271/276/302/305 ZPO)': f.rmFamilienSummarsache ? 'ja' : 'nein' } : {}),
+                  'Vorinstanz': f.rmVorinstanz === 'erstinstanz' ? 'Erstinstanzliches Gericht' : f.rmVorinstanz === 'handelsgericht' ? 'Handelsgericht' : 'Oberes Gericht (Direktklage)',
+                  ...(f.kanton ? { 'Kanton': f.kanton } : {}),
+                },
+                hero: {
+                  hauptlabel: 'Kantonales Rechtsmittel',
+                  hauptwert: rechtsmittel.kantonal === 'berufung' ? 'Berufung'
+                    : rechtsmittel.kantonal === 'beschwerde' ? 'Beschwerde'
+                    : rechtsmittel.kantonal === 'offen' ? 'Streitwertabhängig'
+                    : 'Entfällt (einzige Instanz)',
+                  nebenwerte: [
+                    ...(rechtsmittel.kantonalFrist && rechtsmittel.kantonalFrist.tage !== null ? [{ label: 'Frist (kantonal)', wert: `${rechtsmittel.kantonalFrist.tage} Tage` }] : []),
+                    { label: 'Bundesgericht', wert: rechtsmittel.bger === 'zulaessig' ? `zulässig · ${rechtsmittel.bgerFrist.tage} Tage` : rechtsmittel.bger === 'schwelle_verfehlt' ? 'Grenze nicht erreicht' : 'streitwertabhängig' },
+                  ],
+                },
+                sections: [{ titel: 'Rechtsmittel-Fahrplan', ergebnis: rechtsmittelBericht(rechtsmittel) }],
+                disclaimer: DISCLAIMER,
+              }} />
+              <LinkTeilenButton query={() => permalinkKodieren(ZUST_LINK_SPEC, { ...f, schritt })} />
             </div>
-          )}
-          {/* Handelsgericht-Auflösung (Art. 6 ZPO; 4 Kantone) */}
-          {hgWeicheAktiv && f.kanton !== '' && (
-            <div className="lc-card p-4 space-y-2">
-              <GruppenTitel>Handelsgericht ({f.kanton})</GruppenTitel>
-              {handelsgericht ? (
-                <>
-                  <p className="text-body-s text-ink-900 whitespace-pre-line">
-                    {handelsgericht.name}{'\n'}{handelsgericht.strasse}{'\n'}{handelsgericht.plzOrt}
-                  </p>
-                  <p className="text-xs text-ink-500">{handelsgericht.organisation}. Bei handelsgerichtlicher Zuständigkeit: Klage direkt, keine Schlichtung (Art. 199 Abs. 3 ZPO); Rechtsmittel direkt ans Bundesgericht (Art. 75 Abs. 2 lit. b BGG).</p>
-                </>
-              ) : (
+          </ErgebnisBlock>
+        )}
+
+        {/* 4 · Ergebnis — EINLEITUNGS-Sicht (Bug-Check 5.6.2026: im
+            Rechtsmittel-Modus tragen die Rechtsmittel-Karten oben die volle
+            Auskunft; die Einleitungs-Blöcke [Verfahrensart/Schlichtung/Stellen-
+            Notices/Weichen] würden dort sachfremd leaken) */}
+        {zeige('ergebnis') && f.instanz === 'einleitung' && !(ergebnis && r) && (
+          <div className="lc-card p-5 space-y-2">
+            <GruppenTitel>Fahrplan</GruppenTitel>
+            <p className="text-body-s text-ink-700">Für den Fahrplan fehlen noch Angaben:</p>
+            {fehler.length > 0
+              ? fehler.map((x, i) => <p key={i} className="text-body-s text-warn-700">• {x}</p>)
+              : <p className="text-body-s text-warn-700">• Bitte die vorherigen Schritte vervollständigen.</p>}
+          </div>
+        )}
+        {zeige('ergebnis') && ergebnis && r && f.instanz === 'einleitung' && (
+          <ErgebnisBlock>
+
+            {/* UX-Fix 5.6.2026 (Frage David «wieso bei Arbeitsrecht keine
+                Schlichtungsbehörde?»): Ohne Kantonswahl gab es WEDER Stelle noch
+                Hinweis — die Behörde ist hinterlegt, nur die Ortsangabe fehlte. */}
+            {r.schlichtung.obligatorisch && f.kanton === '' && (
+              <div className="lc-card p-4">
+                <p className="lc-overline mb-1.5">Zuständige Schlichtungsbehörde</p>
                 <p className="text-body-s text-ink-700">
-                  Der Kanton {f.kanton} führt KEIN Handelsgericht (Art. 6 Abs. 1 ZPO ist eine Kann-Vorschrift; Handelsgerichte
-                  bestehen nur in ZH, BE, AG und SG) — die Klage geht an das ordentliche Gericht, die Handelsgericht-Weiche entfällt.
+                  Die Schlichtungsbehörde ist für alle 26 Kantone hinterlegt — bitte oben
+                  <span className="font-medium text-ink-900"> PLZ eingeben oder Kanton wählen</span>, damit die
+                  konkrete Stelle mit Adresse angezeigt werden kann (örtlich massgeblich: {ORT_LABEL[f.streitsache]}).
                 </p>
-              )}
-            </div>
-          )}
-          {/* Konkrete Stelle (Kantonsschicht) + Vorlagen-Sprung */}
-          {stelle && (
-            <div className="lc-card p-4 space-y-3">
-              <div>
-                <p className="lc-overline mb-2">Zuständige Schlichtungsstelle ({f.kanton})</p>
-                <p className="text-body-s text-ink-900 whitespace-pre-line">{behoerdeAlsBlock(stelle)}</p>
-                {stelle.url && (
-                  <p className="text-xs mt-1.5">
-                    <a href={stelle.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 underline">
-                      Amtliche Behördenseite öffnen ↗
-                    </a>
-                  </p>
-                )}
-                <p className="text-xs text-ink-500 mt-2">Quelle: {stelle.quelle} (Stand {stelle.stand}).</p>
               </div>
-              {/* Der Vorlagen-Sprung lebt seit 6.6.2026 im einheitlichen Block
-                  «Passende Vorlage für Ihre Eingabe» am Fahrplan-Ende (Auftrag
-                  David) — hier keine Doppelung mehr. */}
-            </div>
-          )}
-          {/* Passende Eingabe-Vorlage (Auftrag David 6.6.2026): IMMER verweisen —
-              gebaut → Link (mit Prefill, wo die Brücke existiert), noch nicht
-              gebaut → ehrlich «in Vorbereitung» (§8). Reines Mapping, keine
-              Rechtslogik (§3): die EingabeArt kommt aus der Engine. */}
-          {f.instanz === 'einleitung' && (() => {
-            const ziel = r.eingabeArt === 'schlichtungsgesuch'
-              ? { karte: karte('schlichtungsgesuch'), zusatz: null as string | null }
-              : r.eingabeArt === 'klage_direkt'
-                ? (r.verfahrensart === 'vereinfacht'
-                    ? { karte: karte('klage-vereinfacht'),
-                        zusatz: kantonDaten?.erstinstanzName ? `Die Klage geht direkt an das erstinstanzliche Gericht (${f.kanton}: ${kantonDaten.erstinstanzName}).` : 'Die Klage geht direkt an das erstinstanzliche Gericht.' }
-                    // S-4: seit dem Struktur-Umbau existiert die Karte
-                    // klage-ordentlich (geplant) — Titel aus der SSoT (§5).
-                    : { karte: karte('klage-ordentlich'),
-                        zusatz: kantonDaten?.erstinstanzName ? `Die Klage geht direkt an das erstinstanzliche Gericht (${f.kanton}: ${kantonDaten.erstinstanzName}).` : 'Die Klage geht direkt an das erstinstanzliche Gericht.' })
-                : { karte: undefined,
-                    titel: 'Scheidungsbegehren / Scheidungsklage',
-                    zusatz: 'Örtlich zuständig ist das Gericht am Wohnsitz einer der Parteien (zwingend, Art. 23 ZPO); das konkrete Gericht richtet sich nach kantonalem Recht (Art. 4 ZPO).' };
-            const k = 'karte' in ziel ? ziel.karte : undefined;
-            // K-2-Fix Bug-Check 6.6.2026: Die klage-vereinfacht-Vorlage ist
-            // BS-spezifisch (Schema klage-vereinfacht-bs, BS-Gerichtsrouting) —
-            // für andere Kantone wäre Titel + Prefill-Link irreführend (§8).
-            // Bug-Check 10.6.2026 (MITTEL): K-2-Guard entfernt — die
-            // KV-Vorlage adressiert seit dem Kantonsausbau alle 26 Kantone.
-            const kantonsfremd = false;
-            const gebaut = k && k.status !== 'geplant' && k.href;
-            // Prefill-Brücken: BS-Schlichtungsgesuch (bestehend) und
-            // klage-vereinfacht (2.1b — Materie + Streitwert reisen mit).
-            const kvMaterie: KvMaterie | null = k?.id === 'klage-vereinfacht'
-              ? (istArbeit && f.glgBetroffen ? 'glg' // GlG VOR arbeit (streitwertunabhängig, lit. a)
-                : istArbeit ? 'arbeit'
-                : istMiete && ['kuendigungsschutz', 'erstreckung', 'mietzins_anfechtung', 'hinterlegung'].includes(f.mieteUnterfall)
-                  ? 'miete_kernbereich' // Schutzmaterien lit. c — streitwertunabhängig
-                : f.streitsache === 'persoenlichkeit' && f.persoenlichkeitUnterfall === 'gewaltschutz' ? 'gewaltschutz'
-                : vermoegensrechtlich ? 'vermoegensrechtlich' : null)
-              : null;
-            const linkZiel = gebaut
-              ? (k.id === 'schlichtungsgesuch' && sgPrefill
-                  ? { pathname: '/vorlagen/schlichtungsgesuch-bs', search: sgPrefill }
-                  : k.id === 'klage-vereinfacht' && kvMaterie
-                    ? { pathname: k.href!, search: kvPrefillKodieren({ materie: kvMaterie, streitwertCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton === '' ? undefined : f.kanton }) }
-                    : k.id === 'klage-ordentlich'
-                      // Bug-Check B9 (10.6.2026): klage_direkt = ohne Schlichtung
-                      // → Klagebewilligung-Default aus; Kanton/Streitwert reisen mit.
-                      ? { pathname: k.href!, search: koPrefillKodieren({ streitwertCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton === '' ? undefined : f.kanton, ohneKlagebewilligung: true }) }
-                      : { pathname: k.href! })
-              : null;
-            return (
+            )}
+            {/* Handelsgericht-Auflösung (Art. 6 ZPO; 4 Kantone) */}
+            {hgWeicheAktiv && f.kanton !== '' && (
               <div className="lc-card p-4 space-y-2">
-                <GruppenTitel>Passende Vorlage für Ihre Eingabe</GruppenTitel>
-                <p className="text-body-s text-ink-900 font-medium">
-                  {k ? k.title : (ziel as { titel: string }).titel}
-                  {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">{kantonsfremd ? `Für ${f.kanton} in Vorbereitung` : 'In Vorbereitung'}</span>}
-                </p>
-                {ziel.zusatz && <p className="text-body-s text-ink-700">{ziel.zusatz}</p>}
-                {linkZiel ? (
-                  <div className="pt-1">
-                    <Link to={linkZiel} className="lc-btn-primary no-underline">
-                      Weiter zur Vorlage →
-                    </Link>
-                    {((k!.id === 'schlichtungsgesuch' && sgPrefill) || (k!.id === 'klage-vereinfacht' && kvMaterie)) && (
-                      <p className="text-xs text-ink-500 mt-2">
-                        {/* Bug-Check §9 10.6.2026 (fachliche Lupe, NIEDRIG):
-                            Adress-Versprechen nur, wenn ein Ort erfasst ist —
-                            ohne PLZ/Gemeinde kann die Vorlage in Verzeichnis-
-                            Kantonen nichts auflösen (§8). */}
-                        {k!.id === 'schlichtungsgesuch'
-                          ? (f.plz !== '' || f.gemeinde.trim() !== ''
-                            ? 'Streitsache, Streitwert, Kanton und Ort werden vorbefüllt — die Vorlage setzt die Adresse der zuständigen Stelle als Adressat ein; alles bleibt editierbar.'
-                            : 'Streitsache, Streitwert und Kanton werden vorbefüllt — die Adresse der zuständigen Stelle bestimmt die Vorlage, sofern dort der Ort erfasst wird; alles bleibt editierbar.')
-                          : 'Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.'}
-                      </p>
-                    )}
-                  </div>
+                <GruppenTitel>Handelsgericht ({f.kanton})</GruppenTitel>
+                {handelsgericht ? (
+                  <>
+                    <p className="text-body-s text-ink-900 whitespace-pre-line">
+                      {handelsgericht.name}{'\n'}{handelsgericht.strasse}{'\n'}{handelsgericht.plzOrt}
+                    </p>
+                    <p className="text-xs text-ink-500">{handelsgericht.organisation}. Bei handelsgerichtlicher Zuständigkeit: Klage direkt, keine Schlichtung (Art. 199 Abs. 3 ZPO); Rechtsmittel direkt ans Bundesgericht (Art. 75 Abs. 2 lit. b BGG).</p>
+                  </>
                 ) : (
-                  <p className="text-xs text-ink-500">
-                    {kantonsfremd
-                      ? `Die gebaute Vorlage deckt zurzeit Basel-Stadt ab (BS-Gerichtsrouting) — für ${f.kanton} ist sie in Vorbereitung. Die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.`
-                      : 'Diese Vorlage ist noch nicht verfügbar — die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.'}
+                  <p className="text-body-s text-ink-700">
+                    Der Kanton {f.kanton} führt KEIN Handelsgericht (Art. 6 Abs. 1 ZPO ist eine Kann-Vorschrift; Handelsgerichte
+                    bestehen nur in ZH, BE, AG und SG) — die Klage geht an das ordentliche Gericht, die Handelsgericht-Weiche entfällt.
                   </p>
                 )}
               </div>
-            );
-          })()}
-          {recherche && (
-            <div className="lc-card p-4 space-y-3">
-              <GruppenTitel>Zuständige Schlichtungsstelle ({f.kanton})</GruppenTitel>
-              {recherche.glgFallback && (
-                <p className="text-xs text-ink-500">Keine eigene paritätische Stelle hinterlegt — angezeigt wird die ordentliche Schlichtungsbehörde; die paritätische Besetzung (Art. 200 ZPO) stellt der Kanton sicher.</p>
-              )}
-              {recherche.aufloesung.modus === 'zentral' && (
+            )}
+            {/* Konkrete Stelle (Kantonsschicht) + Vorlagen-Sprung */}
+            {stelle && (
+              <div className="lc-card p-4 space-y-3">
                 <div>
-                  <p className="text-body-s text-ink-900 whitespace-pre-line">
-                    {/* Direktlink (Auftrag David 6.6.2026): Stellen-Name verlinkt
-                        auf die amtliche Detailseite, sofern in den Dossiers belegt. */}
-                    {recherche.aufloesung.stelle.url ? (
-                      <a href={recherche.aufloesung.stelle.url} target="_blank" rel="noopener noreferrer"
-                        className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">
-                        {recherche.aufloesung.stelle.name} ↗
-                      </a>
-                    ) : recherche.aufloesung.stelle.name}
-                    {'\n'}{recherche.aufloesung.stelle.strasse}{'\n'}{recherche.aufloesung.stelle.plzOrt}
-                  </p>
-                  {recherche.aufloesung.stelle.hinweis && (
-                    <p className="text-xs text-warn-700 mt-1">⚠ {recherche.aufloesung.stelle.hinweis}</p>
-                  )}
-                </div>
-              )}
-              {recherche.aufloesung.modus === 'liste' && (
-                <div className="space-y-2">
-                  {/* Miete-Register (11.6.2026): konkrete Stelle auch in
-                      Listen-Kantonen (ZH/SO/JU) aus PLZ/Gemeinde. */}
-                  {r.schlichtung.behoerdeTyp === 'paritaetisch_miete' && f.kanton !== '' && MIETE_AMT_KANTONE.includes(f.kanton) && mieteAmt && (
-                    <div className="border-b border-line pb-2">
-                      <p className="text-body-s text-ink-900 whitespace-pre-line">
-                        {[mieteAmt.name, mieteAmt.strasse, mieteAmt.plzOrt].filter(Boolean).join('\n')}
-                      </p>
-                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (Miete-Register, Vollerhebung 11.6.2026).</p>
-                    </div>
-                  )}
-                  {/* TI-Miete (12.6.2026): Lugano/Bellinzona/Val Mara liegen
-                      in mehreren Uffici — Ortsteil/Quartier des Mietobjekts
-                      entscheidet (Dossier §51). */}
-                  {r.schlichtung.behoerdeTyp === 'paritaetisch_miete' && f.kanton === 'TI' && !mieteAmt && mieteKandidaten && (
-                    <div className="space-y-1.5 border-b border-line pb-2">
-                      <p className="text-xs text-ink-500">Die Gemeinde {f.gemeinde.trim()} erstreckt sich über mehrere Uffici di conciliazione — massgeblich ist der ORTSTEIL/das Quartier des Mietobjekts:</p>
-                      <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
-                        {mieteKandidaten.map((a) => (
-                          <li key={a.kreise} className="text-body-s text-ink-800">
-                            <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}<br />{[a.strasse, a.plzOrt].filter(Boolean).join(', ')}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500">{recherche.aufloesung.hinweis} — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
-                  {/* VD (11.6.2026): konkrete Instanz aus PLZ/Gemeinde + Streit-
-                      wert-Stufe (Art. 41 CDPJ-VD) — die Liste darunter bleibt
-                      als Übersicht aller Stellen der Stufe stehen. */}
-                  {f.kanton === 'VD' && amt && (
-                    <div className="border-b border-line pb-2">
-                      <p className="text-body-s text-ink-900 whitespace-pre-line">
-                        {amt.url ? (
-                          <a href={amt.url} target="_blank" rel="noopener noreferrer"
-                            className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">{amt.name} ↗</a>
-                        ) : <span className="font-medium">{amt.name}</span>}
-                        {'\n'}{amt.strasse}{'\n'}{amt.plzOrt}
-                      </p>
-                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} und den Streitwert (amtl. Ortschaftenverzeichnis + Art. 41 CDPJ-VD).</p>
-                    </div>
-                  )}
-                  <ul className="space-y-1.5 max-h-64 overflow-y-auto pr-1">
-                    {recherche.aufloesung.stellen.map((s) => (
-                      <li key={s.name + s.plzOrt} className="text-body-s text-ink-800">
-                        {s.url ? (
-                          <a href={s.url} target="_blank" rel="noopener noreferrer"
-                            className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">{s.name} ↗</a>
-                        ) : (
-                          <span className="font-medium text-ink-900">{s.name}</span>
-                        )}
-                        {s.zustaendigFuer && <span className="text-ink-500"> — {s.zustaendigFuer}</span>}
-                        <br />{s.strasse}, {s.plzOrt}
-                        {s.hinweis && <span className="block text-xs text-warn-700">⚠ {s.hinweis}</span>}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {recherche.aufloesung.modus === 'verzeichnis' && (() => {
-                const amtAufloesbar = f.kanton !== '' && AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'ordentlich';
-                const mieteAufloesbar = f.kanton !== '' && MIETE_AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'paritaetisch_miete';
-                const zhStadt = amtAufloesbar && f.kanton === 'ZH' && f.gemeinde.trim().toLowerCase() === 'zürich';
-                return <>
-                  {/* Strassen-Index Stadt Zürich (Adress-Ausbau Stufe 1,
-                      12.6.2026): Strasse + Nr. lösen den Stadtkreis offline
-                      aus den amtlichen Gebäudeadressen — kein externer
-                      Request. */}
-                  {zhStadt && (
-                    <div className="space-y-1">
-                      <div className="flex gap-2 items-end">
-                        <label className="block flex-1">
-                          <span className="text-xs text-ink-600">Strasse (beklagte Partei) — löst den Stadtkreis auf</span>
-                          <input className={inputCls} value={zhStrasse} onChange={(e) => setZhStrasse(e.target.value)}
-                            placeholder="z. B. Weinbergstrasse" aria-label="Strasse der beklagten Partei in der Stadt Zürich" />
-                        </label>
-                        <label className="block w-24">
-                          <span className="text-xs text-ink-600">Nr.</span>
-                          <input className={inputCls} value={zhNummer} onChange={(e) => setZhNummer(e.target.value)}
-                            aria-label="Hausnummer" />
-                        </label>
-                      </div>
-                      {zhStrassenInfo === 'nummer_noetig' && (
-                        <p className="text-xs text-warn-700">{zhNummer.trim() !== ''
-                          ? 'Diese Hausnummer ist im amtlichen Adressbestand der Strasse nicht erfasst — Nummer prüfen oder unten das Kreis-Amt wählen.'
-                          : 'Diese Strasse verläuft über mehrere Stadtkreise — Hausnummer angeben (oder unten das Kreis-Amt wählen).'}</p>
-                      )}
-                      {zhStrassenInfo === 'unbekannt' && (
-                        <p className="text-xs text-warn-700">Strasse im amtlichen Adressbestand der Stadt Zürich nicht gefunden — Schreibweise prüfen (z. B. «…strasse» ausgeschrieben) oder unten das Kreis-Amt wählen.</p>
-                      )}
-                    </div>
-                  )}
-                  {/* Miete-Register (11.6.2026): konkrete paritätische Stelle
-                      aus PLZ/Gemeinde (Art. 200 Abs. 1 ZPO). */}
-                  {mieteAufloesbar && mieteAmt && (
-                    <div>
-                      <p className="text-body-s text-ink-900 whitespace-pre-line">
-                        {[mieteAmt.name, mieteAmt.strasse, mieteAmt.plzOrt].filter(Boolean).join('\n')}
-                      </p>
-                      <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + Miete-Register, Vollerhebung 11.6.2026).</p>
-                    </div>
-                  )}
-                  {/* SO-Weiche (§ 5 Abs. 1 GO SO, 11.6.2026) */}
-                  {f.kanton === 'SO' && r.schlichtung.behoerdeTyp === 'ordentlich' && (
-                    <div className="space-y-1.5">
-                      <p className="text-body-s text-ink-800">Wohnen oder sitzen beide Parteien in derselben Gemeinde? <span className="text-ink-500">(§ 5 Abs. 1 GO SO — bestimmt die Schlichtungsbehörde)</span></p>
-                      <div className="flex gap-4 text-body-s">
-                        {[{ v: true, l: 'Ja — gleiche Gemeinde' }, { v: false, l: 'Nein — verschiedene Gemeinden' }].map(({ v, l }) => (
-                          <label key={l} className="flex items-center gap-1.5 cursor-pointer text-ink-700">
-                            <input type="radio" name="so-gleiche-gemeinde" checked={soGleicheGemeinde === v}
-                              onChange={() => setSoGleicheGemeinde(v)} />
-                            {l}
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {/* PLZ→Gemeinde→Amt-Auflösung (ZH/AG/SG/TG/FR/ZG/AI, ordentliche Behörde) */}
-                  {amtAufloesbar && amt && (
-                    <div>
-                      <p className="text-body-s text-ink-900 whitespace-pre-line">
-                        {/* strassenlose Ämter (TI: Breno/Onsernone) ohne Leerzeile */}
-                        {[amt.name, amt.strasse, amt.plzOrt].filter(Boolean).join('\n')}
-                      </p>
-                      <p className="text-xs text-ink-500 mt-1">{f.kanton === 'ZH' && f.gemeinde.trim().toLowerCase() === 'zürich'
-                        ? zhStrassenInfo === 'strasse'
-                          ? `aufgelöst über Strasse${zhNummer.trim() ? ' + Hausnummer' : ''} → Stadtkreis (amtliche Gebäudeadressen der Stadt Zürich + Ämterverzeichnis).`
-                          : `aufgelöst über PLZ ${f.plz} → Stadtkreis (amtliche Gebäudeadressen der Stadt Zürich + Ämterverzeichnis).`
-                        : `aufgelöst über ${f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde ${f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + amtliches Ämterverzeichnis).`}</p>
-                    </div>
-                  )}
-                  {amtAufloesbar && zhKreise && (
-                    <div className="space-y-1.5">
-                      <p className="text-xs text-ink-500">{f.kanton === 'TI'
-                        ? `Die Gemeinde ${f.gemeinde.trim()} erstreckt sich über mehrere Circoli — massgeblich ist der ORTSTEIL/das Quartier der beklagten Partei:`
-                        : zhKreise.some((a) => a.anteilProzent !== undefined)
-                          // Kreis-Automatik (12.6.2026): PLZ liegt in Kreisen
-                          // verschiedener Ämter — eingegrenzte Wahl mit
-                          // amtlichem Adressenanteil (Gebäudeadressen Stadt ZH).
-                          ? `Stadt Zürich: PLZ ${f.plz} liegt in mehreren Stadtkreisen — massgeblich ist der STADTKREIS der beklagten Partei (Anteil der Gebäudeadressen in Klammern):`
-                          : 'Stadt Zürich: massgeblich ist der STADTKREIS der beklagten Partei — sechs Kreis-Ämter:'}</p>
-                      <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
-                        {zhKreise.map((a) => (
-                          <li key={a.kreise} className="text-body-s text-ink-800">
-                            <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}
-                            {a.anteilProzent !== undefined && <span className="text-ink-500 num"> ({a.anteilProzent < 0.1 ? '< 0.1' : a.anteilProzent} % der Adressen)</span>}
-                            <br />{[a.strasse, a.plzOrt].filter(Boolean).join(', ')}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {!(amtAufloesbar && (amt || zhKreise)) && !(mieteAufloesbar && mieteAmt) && (
-                    <p className="text-body-s text-ink-800">
-                      {recherche.aufloesung.beschreibung}.{' '}
-                      {/* VD ohne Streitwert-Stufe: die PLZ-Auflösung ist hier
-                          bewusst inaktiv — Hinweis unterdrücken (Bug-Check
-                          11.6.2026). SO: Instruktion steht bereits in der
-                          Weiche-beschreibung (Bug-Check B3). */}
-                      {amtAufloesbar && !(f.kanton === 'VD' && !vdStufe) && f.kanton !== 'SO' && (
-                        <span className="text-ink-500">PLZ oder Gemeinde eingeben für die konkrete Amts-Adresse. </span>
-                      )}
-                      <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">
-                        Amtliches Verzeichnis öffnen ↗
+                  <p className="lc-overline mb-2">Zuständige Schlichtungsstelle ({f.kanton})</p>
+                  <p className="text-body-s text-ink-900 whitespace-pre-line">{behoerdeAlsBlock(stelle)}</p>
+                  {stelle.url && (
+                    <p className="text-xs mt-1.5">
+                      <a href={stelle.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 underline">
+                        Amtliche Behördenseite öffnen ↗
                       </a>
                     </p>
                   )}
-                </>;
-              })()}
-              <p className="text-xs text-ink-500 pt-2 border-t border-line">
-                Quelle: {recherche.quelle} (Stand {recherche.stand}). Recherche zweifach geprüft — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
-              </p>
-            </div>
-          )}
-          {kantonOffen && (
-            <p className="lc-notice text-body-s">
-              Kanton {f.kanton}: Die konkreten Stellen sind noch nicht hinterlegt — die bundesrechtliche
-              Einordnung oben gilt; Behörde und Adresse bitte über das kantonale Justizportal ermitteln.
-            </p>
-          )}
-          {kantonDaten && r.schlichtung.obligatorisch && f.instanz === 'einleitung' && !stelle && !kantonOffen && (
-            <p className="lc-notice text-body-s">
-              Für diese Behörden-Art ist im Kanton {f.kanton} noch keine Adresse hinterlegt.
-            </p>
-          )}
-
-          {/* Praxis-Fahrplan (Umbau «maximal praxistauglich», 5.6.2026) */}
-          {fahrplan && f.instanz === 'einleitung' && (
-            <div className="lc-card p-5 space-y-3">
-              <GruppenTitel>Ihr Fahrplan</GruppenTitel>
-              <ol className="space-y-2.5">
-                {fahrplan.map((s, i) => (
-                  <li key={s.titel} className="flex gap-3">
-                    <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
-                    <span>
-                      <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
-                      <span className="block text-body-s text-ink-600">{s.text}</span>
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          )}
-
-          {/* Kosten (kantonale Rahmen, zweifach geprüfte Erlass-Daten) */}
-          {f.instanz === 'einleitung' && (r.schlichtung.obligatorisch || r.eingabeArt === 'klage_direkt') && (
-            <div className="lc-card p-5 space-y-2.5">
-              <GruppenTitel>Voraussichtliche Kosten{f.kanton ? ` (${f.kanton})` : ''}</GruppenTitel>
-              {r.schlichtung.obligatorisch && (
-                r.schlichtung.kostenlos ? (
-                  <p className="text-body-s text-ink-800">
-                    <span className="font-medium text-ink-900">Schlichtungsverfahren: kostenlos.</span>{' '}
-                    {r.schlichtung.kostenlosGrund}. Keine Parteientschädigung im Schlichtungsverfahren (Art. 113 Abs. 1 ZPO).
+                  <p className="text-xs text-ink-500 mt-2">Quelle: {stelle.quelle} (Stand {stelle.stand}).</p>
+                </div>
+                {/* Der Vorlagen-Sprung lebt seit 6.6.2026 im einheitlichen Block
+                    «Passende Vorlage für Ihre Eingabe» am Fahrplan-Ende (Auftrag
+                    David) — hier keine Doppelung mehr. */}
+              </div>
+            )}
+            {/* Passende Eingabe-Vorlage (Auftrag David 6.6.2026): IMMER verweisen —
+                gebaut → Link (mit Prefill, wo die Brücke existiert), noch nicht
+                gebaut → ehrlich «in Vorbereitung» (§8). Reines Mapping, keine
+                Rechtslogik (§3): die EingabeArt kommt aus der Engine. */}
+            {f.instanz === 'einleitung' && (() => {
+              const ziel = r.eingabeArt === 'schlichtungsgesuch'
+                ? { karte: karte('schlichtungsgesuch'), zusatz: null as string | null }
+                : r.eingabeArt === 'klage_direkt'
+                  ? (r.verfahrensart === 'vereinfacht'
+                      ? { karte: karte('klage-vereinfacht'),
+                          zusatz: kantonDaten?.erstinstanzName ? `Die Klage geht direkt an das erstinstanzliche Gericht (${f.kanton}: ${kantonDaten.erstinstanzName}).` : 'Die Klage geht direkt an das erstinstanzliche Gericht.' }
+                      // S-4: seit dem Struktur-Umbau existiert die Karte
+                      // klage-ordentlich (geplant) — Titel aus der SSoT (§5).
+                      : { karte: karte('klage-ordentlich'),
+                          zusatz: kantonDaten?.erstinstanzName ? `Die Klage geht direkt an das erstinstanzliche Gericht (${f.kanton}: ${kantonDaten.erstinstanzName}).` : 'Die Klage geht direkt an das erstinstanzliche Gericht.' })
+                  : { karte: undefined,
+                      titel: 'Scheidungsbegehren / Scheidungsklage',
+                      zusatz: 'Örtlich zuständig ist das Gericht am Wohnsitz einer der Parteien (zwingend, Art. 23 ZPO); das konkrete Gericht richtet sich nach kantonalem Recht (Art. 4 ZPO).' };
+              const k = 'karte' in ziel ? ziel.karte : undefined;
+              // K-2-Fix Bug-Check 6.6.2026: Die klage-vereinfacht-Vorlage ist
+              // BS-spezifisch (Schema klage-vereinfacht-bs, BS-Gerichtsrouting) —
+              // für andere Kantone wäre Titel + Prefill-Link irreführend (§8).
+              // Bug-Check 10.6.2026 (MITTEL): K-2-Guard entfernt — die
+              // KV-Vorlage adressiert seit dem Kantonsausbau alle 26 Kantone.
+              const kantonsfremd = false;
+              const gebaut = k && k.status !== 'geplant' && k.href;
+              // Prefill-Brücken: BS-Schlichtungsgesuch (bestehend) und
+              // klage-vereinfacht (2.1b — Materie + Streitwert reisen mit).
+              const kvMaterie: KvMaterie | null = k?.id === 'klage-vereinfacht'
+                ? (istArbeit && f.glgBetroffen ? 'glg' // GlG VOR arbeit (streitwertunabhängig, lit. a)
+                  : istArbeit ? 'arbeit'
+                  : istMiete && ['kuendigungsschutz', 'erstreckung', 'mietzins_anfechtung', 'hinterlegung'].includes(f.mieteUnterfall)
+                    ? 'miete_kernbereich' // Schutzmaterien lit. c — streitwertunabhängig
+                  : f.streitsache === 'persoenlichkeit' && f.persoenlichkeitUnterfall === 'gewaltschutz' ? 'gewaltschutz'
+                  : vermoegensrechtlich ? 'vermoegensrechtlich' : null)
+                : null;
+              const linkZiel = gebaut
+                ? (k.id === 'schlichtungsgesuch' && sgPrefill
+                    ? { pathname: '/vorlagen/schlichtungsgesuch-bs', search: sgPrefill }
+                    : k.id === 'klage-vereinfacht' && kvMaterie
+                      ? { pathname: k.href!, search: kvPrefillKodieren({ materie: kvMaterie, streitwertCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton === '' ? undefined : f.kanton }) }
+                      : k.id === 'klage-ordentlich'
+                        // Bug-Check B9 (10.6.2026): klage_direkt = ohne Schlichtung
+                        // → Klagebewilligung-Default aus; Kanton/Streitwert reisen mit.
+                        ? { pathname: k.href!, search: koPrefillKodieren({ streitwertCHF: vermoegensrechtlich ? streitwert : null, kanton: f.kanton === '' ? undefined : f.kanton, ohneKlagebewilligung: true }) }
+                        : { pathname: k.href! })
+                : null;
+              return (
+                <div className="lc-card p-4 space-y-2">
+                  <GruppenTitel>Passende Vorlage für Ihre Eingabe</GruppenTitel>
+                  <p className="text-body-s text-ink-900 font-medium">
+                    {k ? k.title : (ziel as { titel: string }).titel}
+                    {!gebaut && <span className="lc-badge lc-badge-warn ml-2 align-middle">{kantonsfremd ? `Für ${f.kanton} in Vorbereitung` : 'In Vorbereitung'}</span>}
                   </p>
-                ) : kosten ? (
+                  {ziel.zusatz && <p className="text-body-s text-ink-700">{ziel.zusatz}</p>}
+                  {linkZiel ? (
+                    <div className="pt-1">
+                      <Link to={linkZiel} className="lc-btn-primary no-underline">
+                        Weiter zur Vorlage →
+                      </Link>
+                      {((k!.id === 'schlichtungsgesuch' && sgPrefill) || (k!.id === 'klage-vereinfacht' && kvMaterie)) && (
+                        <p className="text-xs text-ink-500 mt-2">
+                          {/* Bug-Check §9 10.6.2026 (fachliche Lupe, NIEDRIG):
+                              Adress-Versprechen nur, wenn ein Ort erfasst ist —
+                              ohne PLZ/Gemeinde kann die Vorlage in Verzeichnis-
+                              Kantonen nichts auflösen (§8). */}
+                          {k!.id === 'schlichtungsgesuch'
+                            ? (f.plz !== '' || f.gemeinde.trim() !== ''
+                              ? 'Streitsache, Streitwert, Kanton und Ort werden vorbefüllt — die Vorlage setzt die Adresse der zuständigen Stelle als Adressat ein; alles bleibt editierbar.'
+                              : 'Streitsache, Streitwert und Kanton werden vorbefüllt — die Adresse der zuständigen Stelle bestimmt die Vorlage, sofern dort der Ort erfasst wird; alles bleibt editierbar.')
+                            : 'Streitsache und Streitwert werden vorbefüllt — alles bleibt editierbar.'}
+                        </p>
+                      )}
+                    </div>
+                  ) : (
+                    <p className="text-xs text-ink-500">
+                      {kantonsfremd
+                        ? `Die gebaute Vorlage deckt zurzeit Basel-Stadt ab (BS-Gerichtsrouting) — für ${f.kanton} ist sie in Vorbereitung. Die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.`
+                        : 'Diese Vorlage ist noch nicht verfügbar — die hier eruierten Angaben (Zuständigkeit, Verfahrensart, Streitwert) gelten unabhängig davon.'}
+                    </p>
+                  )}
+                </div>
+              );
+            })()}
+            {recherche && (
+              <div className="lc-card p-4 space-y-3">
+                <GruppenTitel>Zuständige Schlichtungsstelle ({f.kanton})</GruppenTitel>
+                {recherche.glgFallback && (
+                  <p className="text-xs text-ink-500">Keine eigene paritätische Stelle hinterlegt — angezeigt wird die ordentliche Schlichtungsbehörde; die paritätische Besetzung (Art. 200 ZPO) stellt der Kanton sicher.</p>
+                )}
+                {recherche.aufloesung.modus === 'zentral' && (
+                  <div>
+                    <p className="text-body-s text-ink-900 whitespace-pre-line">
+                      {/* Direktlink (Auftrag David 6.6.2026): Stellen-Name verlinkt
+                          auf die amtliche Detailseite, sofern in den Dossiers belegt. */}
+                      {recherche.aufloesung.stelle.url ? (
+                        <a href={recherche.aufloesung.stelle.url} target="_blank" rel="noopener noreferrer"
+                          className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">
+                          {recherche.aufloesung.stelle.name} ↗
+                        </a>
+                      ) : recherche.aufloesung.stelle.name}
+                      {'\n'}{recherche.aufloesung.stelle.strasse}{'\n'}{recherche.aufloesung.stelle.plzOrt}
+                    </p>
+                    {recherche.aufloesung.stelle.hinweis && (
+                      <p className="text-xs text-warn-700 mt-1">⚠ {recherche.aufloesung.stelle.hinweis}</p>
+                    )}
+                  </div>
+                )}
+                {recherche.aufloesung.modus === 'liste' && (
+                  <div className="space-y-2">
+                    {/* Miete-Register (11.6.2026): konkrete Stelle auch in
+                        Listen-Kantonen (ZH/SO/JU) aus PLZ/Gemeinde. */}
+                    {r.schlichtung.behoerdeTyp === 'paritaetisch_miete' && f.kanton !== '' && MIETE_AMT_KANTONE.includes(f.kanton) && mieteAmt && (
+                      <div className="border-b border-line pb-2">
+                        <p className="text-body-s text-ink-900 whitespace-pre-line">
+                          {[mieteAmt.name, mieteAmt.strasse, mieteAmt.plzOrt].filter(Boolean).join('\n')}
+                        </p>
+                        <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (Miete-Register, Vollerhebung 11.6.2026).</p>
+                      </div>
+                    )}
+                    {/* TI-Miete (12.6.2026): Lugano/Bellinzona/Val Mara liegen
+                        in mehreren Uffici — Ortsteil/Quartier des Mietobjekts
+                        entscheidet (Dossier §51). */}
+                    {r.schlichtung.behoerdeTyp === 'paritaetisch_miete' && f.kanton === 'TI' && !mieteAmt && mieteKandidaten && (
+                      <div className="space-y-1.5 border-b border-line pb-2">
+                        <p className="text-xs text-ink-500">Die Gemeinde {f.gemeinde.trim()} erstreckt sich über mehrere Uffici di conciliazione — massgeblich ist der ORTSTEIL/das Quartier des Mietobjekts:</p>
+                        <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
+                          {mieteKandidaten.map((a) => (
+                            <li key={a.kreise} className="text-body-s text-ink-800">
+                              <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}<br />{[a.strasse, a.plzOrt].filter(Boolean).join(', ')}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500">{recherche.aufloesung.hinweis} — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
+                    {/* VD (11.6.2026): konkrete Instanz aus PLZ/Gemeinde + Streit-
+                        wert-Stufe (Art. 41 CDPJ-VD) — die Liste darunter bleibt
+                        als Übersicht aller Stellen der Stufe stehen. */}
+                    {f.kanton === 'VD' && amt && (
+                      <div className="border-b border-line pb-2">
+                        <p className="text-body-s text-ink-900 whitespace-pre-line">
+                          {amt.url ? (
+                            <a href={amt.url} target="_blank" rel="noopener noreferrer"
+                              className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">{amt.name} ↗</a>
+                          ) : <span className="font-medium">{amt.name}</span>}
+                          {'\n'}{amt.strasse}{'\n'}{amt.plzOrt}
+                        </p>
+                        <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} und den Streitwert (amtl. Ortschaftenverzeichnis + Art. 41 CDPJ-VD).</p>
+                      </div>
+                    )}
+                    <ul className="space-y-1.5 max-h-64 overflow-y-auto pr-1">
+                      {recherche.aufloesung.stellen.map((s) => (
+                        <li key={s.name + s.plzOrt} className="text-body-s text-ink-800">
+                          {s.url ? (
+                            <a href={s.url} target="_blank" rel="noopener noreferrer"
+                              className="font-medium text-brass-700 underline" title="Amtliche Behördenseite öffnen">{s.name} ↗</a>
+                          ) : (
+                            <span className="font-medium text-ink-900">{s.name}</span>
+                          )}
+                          {s.zustaendigFuer && <span className="text-ink-500"> — {s.zustaendigFuer}</span>}
+                          <br />{s.strasse}, {s.plzOrt}
+                          {s.hinweis && <span className="block text-xs text-warn-700">⚠ {s.hinweis}</span>}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {recherche.aufloesung.modus === 'verzeichnis' && (() => {
+                  const amtAufloesbar = f.kanton !== '' && AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'ordentlich';
+                  const mieteAufloesbar = f.kanton !== '' && MIETE_AMT_KANTONE.includes(f.kanton) && r.schlichtung.behoerdeTyp === 'paritaetisch_miete';
+                  const zhStadt = amtAufloesbar && f.kanton === 'ZH' && f.gemeinde.trim().toLowerCase() === 'zürich';
+                  return <>
+                    {/* Strassen-Index Stadt Zürich (Adress-Ausbau Stufe 1,
+                        12.6.2026): Strasse + Nr. lösen den Stadtkreis offline
+                        aus den amtlichen Gebäudeadressen — kein externer
+                        Request. */}
+                    {zhStadt && (
+                      <div className="space-y-1">
+                        <div className="flex gap-2 items-end">
+                          <label className="block flex-1">
+                            <span className="text-xs text-ink-600">Strasse (beklagte Partei) — löst den Stadtkreis auf</span>
+                            <input className={inputCls} value={zhStrasse} onChange={(e) => setZhStrasse(e.target.value)}
+                              placeholder="z. B. Weinbergstrasse" aria-label="Strasse der beklagten Partei in der Stadt Zürich" />
+                          </label>
+                          <label className="block w-24">
+                            <span className="text-xs text-ink-600">Nr.</span>
+                            <input className={inputCls} value={zhNummer} onChange={(e) => setZhNummer(e.target.value)}
+                              aria-label="Hausnummer" />
+                          </label>
+                        </div>
+                        {zhStrassenInfo === 'nummer_noetig' && (
+                          <p className="text-xs text-warn-700">{zhNummer.trim() !== ''
+                            ? 'Diese Hausnummer ist im amtlichen Adressbestand der Strasse nicht erfasst — Nummer prüfen oder unten das Kreis-Amt wählen.'
+                            : 'Diese Strasse verläuft über mehrere Stadtkreise — Hausnummer angeben (oder unten das Kreis-Amt wählen).'}</p>
+                        )}
+                        {zhStrassenInfo === 'unbekannt' && (
+                          <p className="text-xs text-warn-700">Strasse im amtlichen Adressbestand der Stadt Zürich nicht gefunden — Schreibweise prüfen (z. B. «…strasse» ausgeschrieben) oder unten das Kreis-Amt wählen.</p>
+                        )}
+                      </div>
+                    )}
+                    {/* Miete-Register (11.6.2026): konkrete paritätische Stelle
+                        aus PLZ/Gemeinde (Art. 200 Abs. 1 ZPO). */}
+                    {mieteAufloesbar && mieteAmt && (
+                      <div>
+                        <p className="text-body-s text-ink-900 whitespace-pre-line">
+                          {[mieteAmt.name, mieteAmt.strasse, mieteAmt.plzOrt].filter(Boolean).join('\n')}
+                        </p>
+                        <p className="text-xs text-ink-500 mt-1">aufgelöst über {f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde {f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + Miete-Register, Vollerhebung 11.6.2026).</p>
+                      </div>
+                    )}
+                    {/* SO-Weiche (§ 5 Abs. 1 GO SO, 11.6.2026) */}
+                    {f.kanton === 'SO' && r.schlichtung.behoerdeTyp === 'ordentlich' && (
+                      <div className="space-y-1.5">
+                        <p className="text-body-s text-ink-800">Wohnen oder sitzen beide Parteien in derselben Gemeinde? <span className="text-ink-500">(§ 5 Abs. 1 GO SO — bestimmt die Schlichtungsbehörde)</span></p>
+                        <div className="flex gap-4 text-body-s">
+                          {[{ v: true, l: 'Ja — gleiche Gemeinde' }, { v: false, l: 'Nein — verschiedene Gemeinden' }].map(({ v, l }) => (
+                            <label key={l} className="flex items-center gap-1.5 cursor-pointer text-ink-700">
+                              <input type="radio" name="so-gleiche-gemeinde" checked={soGleicheGemeinde === v}
+                                onChange={() => setSoGleicheGemeinde(v)} />
+                              {l}
+                            </label>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {/* PLZ→Gemeinde→Amt-Auflösung (ZH/AG/SG/TG/FR/ZG/AI, ordentliche Behörde) */}
+                    {amtAufloesbar && amt && (
+                      <div>
+                        <p className="text-body-s text-ink-900 whitespace-pre-line">
+                          {/* strassenlose Ämter (TI: Breno/Onsernone) ohne Leerzeile */}
+                          {[amt.name, amt.strasse, amt.plzOrt].filter(Boolean).join('\n')}
+                        </p>
+                        <p className="text-xs text-ink-500 mt-1">{f.kanton === 'ZH' && f.gemeinde.trim().toLowerCase() === 'zürich'
+                          ? zhStrassenInfo === 'strasse'
+                            ? `aufgelöst über Strasse${zhNummer.trim() ? ' + Hausnummer' : ''} → Stadtkreis (amtliche Gebäudeadressen der Stadt Zürich + Ämterverzeichnis).`
+                            : `aufgelöst über PLZ ${f.plz} → Stadtkreis (amtliche Gebäudeadressen der Stadt Zürich + Ämterverzeichnis).`
+                          : `aufgelöst über ${f.plz ? `PLZ ${f.plz} → ` : ''}Gemeinde ${f.gemeinde.trim()} (amtl. Ortschaftenverzeichnis + amtliches Ämterverzeichnis).`}</p>
+                      </div>
+                    )}
+                    {amtAufloesbar && zhKreise && (
+                      <div className="space-y-1.5">
+                        <p className="text-xs text-ink-500">{f.kanton === 'TI'
+                          ? `Die Gemeinde ${f.gemeinde.trim()} erstreckt sich über mehrere Circoli — massgeblich ist der ORTSTEIL/das Quartier der beklagten Partei:`
+                          : zhKreise.some((a) => a.anteilProzent !== undefined)
+                            // Kreis-Automatik (12.6.2026): PLZ liegt in Kreisen
+                            // verschiedener Ämter — eingegrenzte Wahl mit
+                            // amtlichem Adressenanteil (Gebäudeadressen Stadt ZH).
+                            ? `Stadt Zürich: PLZ ${f.plz} liegt in mehreren Stadtkreisen — massgeblich ist der STADTKREIS der beklagten Partei (Anteil der Gebäudeadressen in Klammern):`
+                            : 'Stadt Zürich: massgeblich ist der STADTKREIS der beklagten Partei — sechs Kreis-Ämter:'}</p>
+                        <ul className="space-y-1 max-h-48 overflow-y-auto pr-1">
+                          {zhKreise.map((a) => (
+                            <li key={a.kreise} className="text-body-s text-ink-800">
+                              <span className="font-medium text-ink-900">{a.name}</span> — {a.kreise}
+                              {a.anteilProzent !== undefined && <span className="text-ink-500 num"> ({a.anteilProzent < 0.1 ? '< 0.1' : a.anteilProzent} % der Adressen)</span>}
+                              <br />{[a.strasse, a.plzOrt].filter(Boolean).join(', ')}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {!(amtAufloesbar && (amt || zhKreise)) && !(mieteAufloesbar && mieteAmt) && (
+                      <p className="text-body-s text-ink-800">
+                        {recherche.aufloesung.beschreibung}.{' '}
+                        {/* VD ohne Streitwert-Stufe: die PLZ-Auflösung ist hier
+                            bewusst inaktiv — Hinweis unterdrücken (Bug-Check
+                            11.6.2026). SO: Instruktion steht bereits in der
+                            Weiche-beschreibung (Bug-Check B3). */}
+                        {amtAufloesbar && !(f.kanton === 'VD' && !vdStufe) && f.kanton !== 'SO' && (
+                          <span className="text-ink-500">PLZ oder Gemeinde eingeben für die konkrete Amts-Adresse. </span>
+                        )}
+                        <a href={recherche.aufloesung.url} target="_blank" rel="noreferrer" className="text-brass-700 underline">
+                          Amtliches Verzeichnis öffnen ↗
+                        </a>
+                      </p>
+                    )}
+                  </>;
+                })()}
+                <p className="text-xs text-ink-500 pt-2 border-t border-line">
+                  Quelle: {recherche.quelle} (Stand {recherche.stand}). Recherche zweifach geprüft — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
+                </p>
+              </div>
+            )}
+            {kantonOffen && (
+              <p className="lc-notice text-body-s">
+                Kanton {f.kanton}: Die konkreten Stellen sind noch nicht hinterlegt — die bundesrechtliche
+                Einordnung oben gilt; Behörde und Adresse bitte über das kantonale Justizportal ermitteln.
+              </p>
+            )}
+            {kantonDaten && r.schlichtung.obligatorisch && f.instanz === 'einleitung' && !stelle && !kantonOffen && (
+              <p className="lc-notice text-body-s">
+                Für diese Behörden-Art ist im Kanton {f.kanton} noch keine Adresse hinterlegt.
+              </p>
+            )}
+
+            {/* Praxis-Fahrplan (Umbau «maximal praxistauglich», 5.6.2026) */}
+            {fahrplan && f.instanz === 'einleitung' && (
+              <div className="lc-card p-5 space-y-3">
+                <GruppenTitel>Ihr Fahrplan</GruppenTitel>
+                <ol className="space-y-2.5">
+                  {fahrplan.map((s, i) => (
+                    <li key={s.titel} className="flex gap-3">
+                      <span aria-hidden className="shrink-0 w-6 h-6 rounded-full bg-brass-100 text-brass-700 inline-flex items-center justify-center text-xs font-semibold num">{i + 1}</span>
+                      <span>
+                        <span className="block text-body-s font-medium text-ink-900">{s.titel}</span>
+                        <span className="block text-body-s text-ink-600">{s.text}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
+            {/* Kosten (kantonale Rahmen, zweifach geprüfte Erlass-Daten) */}
+            {f.instanz === 'einleitung' && (r.schlichtung.obligatorisch || r.eingabeArt === 'klage_direkt') && (
+              <div className="lc-card p-5 space-y-2.5">
+                <GruppenTitel>Voraussichtliche Kosten{f.kanton ? ` (${f.kanton})` : ''}</GruppenTitel>
+                {r.schlichtung.obligatorisch && (
+                  r.schlichtung.kostenlos ? (
+                    <p className="text-body-s text-ink-800">
+                      <span className="font-medium text-ink-900">Schlichtungsverfahren: kostenlos.</span>{' '}
+                      {r.schlichtung.kostenlosGrund}. Keine Parteientschädigung im Schlichtungsverfahren (Art. 113 Abs. 1 ZPO).
+                    </p>
+                  ) : kosten ? (
+                    <p className="text-body-s text-ink-800">
+                      <span className="font-medium text-ink-900">Schlichtungsgebühr: CHF {kosten.schlichtung.text}.</span>{' '}
+                      <span className="text-ink-500">(
+                        {f.kanton !== '' ? (
+                          <a href={ERLASS_LINKS[f.kanton].schlichtung} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.schlichtung.erlass} ↗</a>
+                        ) : kosten.schlichtung.erlass})</span>
+                      {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ {kosten.schlichtung.hinweis}</span>}
+                    </p>
+                  ) : (
+                    <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
+                  )
+                )}
+                {/* Nicht vermögensrechtlich (Auftrag David 6.6.2026): eigener
+                    kantonaler Rahmen statt der Streitwert-Staffel; bei Scheidung
+                    zusätzlich der Familien-Sonderrahmen, wo der Erlass einen kennt. */}
+                {kosten && !f.vermoegensrechtlich && kosten.nichtVermoegensrechtlich ? (
                   <p className="text-body-s text-ink-800">
-                    <span className="font-medium text-ink-900">Schlichtungsgebühr: CHF {kosten.schlichtung.text}.</span>{' '}
+                    <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz (nicht vermögensrechtlich): {/^[A-Za-zÜü(]/.test(kosten.nichtVermoegensrechtlich.text) ? '' : 'CHF '}{kosten.nichtVermoegensrechtlich.text}.</span>{' '}
                     <span className="text-ink-500">(
-                      {f.kanton !== '' ? (
-                        <a href={ERLASS_LINKS[f.kanton].schlichtung} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.schlichtung.erlass} ↗</a>
-                      ) : kosten.schlichtung.erlass})</span>
-                    {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ {kosten.schlichtung.hinweis}</span>}
+                      {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
+                        <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.nichtVermoegensrechtlich.erlass} ↗</a>
+                      ) : kosten.nichtVermoegensrechtlich.erlass})</span>
+                    {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500">{kosten.nichtVermoegensrechtlich.hinweis}</span>}
                   </p>
-                ) : (
-                  <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
-                )
-              )}
-              {/* Nicht vermögensrechtlich (Auftrag David 6.6.2026): eigener
-                  kantonaler Rahmen statt der Streitwert-Staffel; bei Scheidung
-                  zusätzlich der Familien-Sonderrahmen, wo der Erlass einen kennt. */}
-              {kosten && !f.vermoegensrechtlich && kosten.nichtVermoegensrechtlich ? (
-                <p className="text-body-s text-ink-800">
-                  <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz (nicht vermögensrechtlich): {/^[A-Za-zÜü(]/.test(kosten.nichtVermoegensrechtlich.text) ? '' : 'CHF '}{kosten.nichtVermoegensrechtlich.text}.</span>{' '}
-                  <span className="text-ink-500">(
-                    {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
-                      <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.nichtVermoegensrechtlich.erlass} ↗</a>
-                    ) : kosten.nichtVermoegensrechtlich.erlass})</span>
-                  {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500">{kosten.nichtVermoegensrechtlich.hinweis}</span>}
+                ) : kosten && (
+                  <p className="text-body-s text-ink-800">
+                    <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz: {/^[A-Za-zÜü]/.test(kosten.gericht.text) ? '' : 'CHF '}{kosten.gericht.text}.</span>{' '}
+                    <span className="text-ink-500">(
+                      {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
+                        <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.gericht.erlass} ↗</a>
+                      ) : kosten.gericht.erlass})</span>
+                    {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
+                  </p>
+                )}
+                {kosten && f.streitsache === 'scheidung' && kosten.familie && (
+                  <p className="text-body-s text-ink-800">
+                    <span className="font-medium text-ink-900">Familien-/Scheidungsrahmen: {/^[A-Za-zÜü(0-9]/.test(kosten.familie.text) && !/^\d/.test(kosten.familie.text) ? '' : 'CHF '}{kosten.familie.text}.</span>{' '}
+                    <span className="text-ink-500">({kosten.familie.erlass})</span>
+                    {kosten.familie.hinweis && <span className="block text-xs text-ink-500">{kosten.familie.hinweis}</span>}
+                  </p>
+                )}
+                <p className="text-xs text-ink-500">
+                  Rahmen aus den geltenden kantonalen Erlassen (Stand 5.6.2026) — die konkrete Festsetzung liegt bei der Behörde.
+                  Hinzu kommen ggf. eigene Anwaltskosten; die unterliegende Partei trägt im Gerichtsverfahren in der Regel die
+                  Kosten und eine Parteientschädigung (Art. 106 ZPO).
                 </p>
-              ) : kosten && (
-                <p className="text-body-s text-ink-800">
-                  <span className="font-medium text-ink-900">Gerichtskosten 1. Instanz: {/^[A-Za-zÜü]/.test(kosten.gericht.text) ? '' : 'CHF '}{kosten.gericht.text}.</span>{' '}
-                  <span className="text-ink-500">(
-                    {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
-                      <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.gericht.erlass} ↗</a>
-                    ) : kosten.gericht.erlass})</span>
-                  {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
-                </p>
-              )}
-              {kosten && f.streitsache === 'scheidung' && kosten.familie && (
-                <p className="text-body-s text-ink-800">
-                  <span className="font-medium text-ink-900">Familien-/Scheidungsrahmen: {/^[A-Za-zÜü(0-9]/.test(kosten.familie.text) && !/^\d/.test(kosten.familie.text) ? '' : 'CHF '}{kosten.familie.text}.</span>{' '}
-                  <span className="text-ink-500">({kosten.familie.erlass})</span>
-                  {kosten.familie.hinweis && <span className="block text-xs text-ink-500">{kosten.familie.hinweis}</span>}
-                </p>
-              )}
-              <p className="text-xs text-ink-500">
-                Rahmen aus den geltenden kantonalen Erlassen (Stand 5.6.2026) — die konkrete Festsetzung liegt bei der Behörde.
-                Hinzu kommen ggf. eigene Anwaltskosten; die unterliegende Partei trägt im Gerichtsverfahren in der Regel die
-                Kosten und eine Parteientschädigung (Art. 106 ZPO).
+              </div>
+            )}
+
+            {/* Verfahrens-Eckdaten — bewusst NACH Stelle/Fahrplan/Kosten (Endkonsumenten-Dramaturgie 6.6.2026) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {[
+                { label: 'Örtlich (Grundsatz)', val: r.oertlich.gerichtsstand },
+                { label: 'Verfahrensart', val: r.verfahrensart === 'vereinfacht' ? 'Vereinfacht' : r.verfahrensart === 'scheidungsverfahren' ? 'Scheidungsverfahren' : 'Ordentlich' },
+                { label: 'Einleitende Eingabe', val: eingabeText },
+              ].map((c) => (
+                <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
+              ))}
+            </div>
+
+            {r.weichen.length > 0 && (
+              <div className="space-y-1.5">
+                {r.weichen.map((w, i) => <p key={i} className="lc-notice text-body-s">{w}</p>)}
+              </div>
+            )}
+
+            <ErgebnisAnzeige titel="Zuständigkeit nach ZPO" ergebnis={ergebnis} />
+            {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
+            <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
+            <div className="flex flex-wrap items-center gap-3">
+              <PdfExportButton config={pdfConfig} />
+              <LinkTeilenButton query={() => permalinkKodieren(ZUST_LINK_SPEC, { ...f, schritt })} />
+              <p className="text-body-s text-ink-500">
+                Schwellen: vereinfacht ≤ CHF {ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} ·
+                Entscheidvorschlag ≤ {ZPO_SCHWELLEN.ENTSCHEIDVORSCHLAG.toLocaleString('de-CH')} ·
+                Entscheid ≤ {ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG.toLocaleString('de-CH')} (ZPO-Fassung 1.1.2025).
               </p>
             </div>
-          )}
-
-          {/* Verfahrens-Eckdaten — bewusst NACH Stelle/Fahrplan/Kosten (Endkonsumenten-Dramaturgie 6.6.2026) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {[
-              { label: 'Örtlich (Grundsatz)', val: r.oertlich.gerichtsstand },
-              { label: 'Verfahrensart', val: r.verfahrensart === 'vereinfacht' ? 'Vereinfacht' : r.verfahrensart === 'scheidungsverfahren' ? 'Scheidungsverfahren' : 'Ordentlich' },
-              { label: 'Einleitende Eingabe', val: eingabeText },
-            ].map((c) => (
-              <EckdatenKachel key={c.label} label={c.label} wert={c.val} />
-            ))}
-          </div>
-
-          {r.weichen.length > 0 && (
-            <div className="space-y-1.5">
-              {r.weichen.map((w, i) => <p key={i} className="lc-notice text-body-s">{w}</p>)}
-            </div>
-          )}
-
-          <ErgebnisAnzeige titel="Zuständigkeit nach ZPO" ergebnis={ergebnis} />
-          {ergebnis && <BegruendungAbsatz text={begruendungsAbsatz(ergebnis)} />}
-          <AktenzeichenFeld value={aktenzeichen} onChange={setAktenzeichen} />
-          <div className="flex flex-wrap items-center gap-3">
-            <PdfExportButton config={pdfConfig} />
-            <LinkTeilenButton query={() => permalinkKodieren(ZUST_LINK_SPEC, { ...f, schritt })} />
-            <p className="text-body-s text-ink-500">
-              Schwellen: vereinfacht ≤ CHF {ZPO_SCHWELLEN.VEREINFACHT.toLocaleString('de-CH')} ·
-              Entscheidvorschlag ≤ {ZPO_SCHWELLEN.ENTSCHEIDVORSCHLAG.toLocaleString('de-CH')} ·
-              Entscheid ≤ {ZPO_SCHWELLEN.ENTSCHEID_AUF_ANTRAG.toLocaleString('de-CH')} (ZPO-Fassung 1.1.2025).
-            </p>
-          </div>
-        </ErgebnisBlock>
-      )}
-
-      {/* Schritt-Navigation (Muster wie VorlagenWizardRahmen): Zurück immer,
-          Weiter bis zum Fahrplan; «Weiter» bei ungültigem Streitwert gesperrt. */}
-      <div className="flex items-center justify-between pt-2 border-t border-line">
-        <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
-          disabled={aktiverSchritt === 0} className="lc-btn-ghost">← Zurück</button>
-        {aktiverSchritt < maxIndex && (
-          <button type="button" onClick={() => setSchritt((s) => Math.min(maxIndex, s + 1))}
-            disabled={weiterAus} className="lc-btn-primary">Weiter →</button>
+          </ErgebnisBlock>
         )}
+
+        {/* Schritt-Navigation (Muster wie VorlagenWizardRahmen): Zurück immer,
+            Weiter bis zum Fahrplan; «Weiter» bei ungültigem Streitwert gesperrt. */}
+        <div className="flex items-center justify-between pt-2 border-t border-line">
+          <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
+            disabled={aktiverSchritt === 0} className="lc-btn-ghost">← Zurück</button>
+          {aktiverSchritt < maxIndex && (
+            <button type="button" onClick={() => setSchritt((s) => Math.min(maxIndex, s + 1))}
+              disabled={weiterAus} className="lc-btn-primary">Weiter →</button>
+          )}
+        </div>
+        </>}
       </div>
-      </>}
-    </div>
     </BeruehrtRahmen>
   );
 }

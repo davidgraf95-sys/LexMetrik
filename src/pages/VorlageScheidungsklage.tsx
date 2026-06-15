@@ -8,7 +8,7 @@ import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { KANTONE } from '../lib/kantone';
@@ -88,11 +88,10 @@ export function VorlageScheidungsklage() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
-                onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
-              <span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
-            </label>
+            <Checkbox
+              checked={a.gerichtManuellAktiv ?? false}
+              onChange={(v) => set('gerichtManuellAktiv', v || undefined)}
+              label={<><span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span></>} />
             {a.gerichtManuellAktiv && (
               <div className="space-y-3 pl-6">
                 <Field label="Gericht">
@@ -115,7 +114,6 @@ export function VorlageScheidungsklage() {
               </div>
             )}
           </div>
-
           <Field label="Scheidungsgrund (Art. 290 lit. b ZPO)">
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
@@ -147,11 +145,10 @@ export function VorlageScheidungsklage() {
           <Field label="Beklagte Partei (Ehegatte/Ehegattin)">
             <ParteiEditor p={a.beklagte} onChange={(p) => set('beklagte', p)} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.kinderErfassen}
-              onChange={(e) => set('kinderErfassen', e.target.checked)} />
-            <span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(Rechtsbegehren zu den Kindern sind dann Mindestinhalt, Art. 290 lit. d ZPO)</span></span>
-          </label>
+          <Checkbox
+            checked={a.kinderErfassen}
+            onChange={(v) => set('kinderErfassen', v)}
+            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(Rechtsbegehren zu den Kindern sind dann Mindestinhalt, Art. 290 lit. d ZPO)</span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
               {a.kinder.map((k, i) => (
@@ -208,16 +205,14 @@ export function VorlageScheidungsklage() {
                 onChange={(e) => set('unterhaltBetrag', e.target.value)} placeholder="z. B. 2500" />
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.gueterrecht}
-              onChange={(e) => set('gueterrecht', e.target.checked)} />
-            <span>Güterrechtliche Auseinandersetzung beantragen <span className="text-ink-500">(Bezifferung vorbehalten)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.vorsorgeausgleich}
-              onChange={(e) => set('vorsorgeausgleich', e.target.checked)} />
-            <span>Vorsorgeausgleich beantragen <span className="text-ink-500">(Art. 122 ff. ZGB)</span></span>
-          </label>
+          <Checkbox
+            checked={a.gueterrecht}
+            onChange={(v) => set('gueterrecht', v)}
+            label={<><span>Güterrechtliche Auseinandersetzung beantragen <span className="text-ink-500">(Bezifferung vorbehalten)</span></span></>} />
+          <Checkbox
+            checked={a.vorsorgeausgleich}
+            onChange={(v) => set('vorsorgeausgleich', v)}
+            label={<><span>Vorsorgeausgleich beantragen <span className="text-ink-500">(Art. 122 ff. ZGB)</span></span></>} />
           <Field label="Weitere Rechtsbegehren" optional>
             <div className="space-y-2">
               {a.weitereRechtsbegehren.map((r, i) => (
@@ -245,20 +240,16 @@ export function VorlageScheidungsklage() {
           {skHinweise(a).map((h, i) => (
             <div key={i} className="lc-notice text-body-s">{h}</div>
           ))}
-
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage}
-              onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
-            <span>Vollmacht als Beilage aufführen</span>
-          </label>
-
+          <Checkbox
+            checked={a.vollmachtBeilage}
+            onChange={(v) => set('vollmachtBeilage', v)}
+            label={<><span>Vollmacht als Beilage aufführen</span></>} />
           <Field label="Ort und Datum der Eingabe (Art. 290 lit. f ZPO)">
             <div className="grid grid-cols-[1fr_11rem] gap-3">
               <input className={inputCls} value={a.ort} onChange={(e) => set('ort', e.target.value)} placeholder="z. B. Zürich" />
               <DatumsFeld value={a.datum} onChange={(v) => set('datum', v)} className={inputCls} />
             </div>
           </Field>
-
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Vor der Einreichung</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
@@ -270,7 +261,6 @@ export function VorlageScheidungsklage() {
               Ich habe verstanden: Die Eingabe ist unbegründet zulässig; das Gericht lädt zur Einigungsverhandlung vor, und Kinderbelange regelt es von Amtes wegen.
             </label>
           </section>
-
           <ExportLeiste ergebnis={ergebnis} deaktiviert={!bestaetigt || maengel.length > 0}
             kopiert={kopiert} onKopieren={kopieren}
             pdf={{ label: 'Scheidungsklage als PDF', banner: BANNER_SK, dateiName: 'Scheidungsklage.pdf' }}

@@ -8,7 +8,7 @@ import {
 } from '../lib/vorlagen/vollmacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -218,18 +218,17 @@ export function VorlageVollmacht() {
               </Field>
               <div className="space-y-2">
                 <GruppenTitel>Besondere Prozessbefugnisse (Art. 396 Abs. 3 OR)</GruppenTitel>
-                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" className="mt-0.5" checked={a.prozessbefugnisse} onChange={(e) => set('prozessbefugnisse', e.target.checked)} />
-                  <span>Vergleich abschliessen, Klage anerkennen und zurückziehen <span className="text-ink-500">(materielle Verfügungshandlungen – ausdrücklich, Art. 241 ZPO)</span></span>
-                </label>
-                <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" className="mt-0.5" checked={a.geheimnisentbindung} onChange={(e) => set('geheimnisentbindung', e.target.checked)} />
-                  <span>Geheimnisentbindung Dritter (Ärzte, Banken, Versicherungen, Behörden) zur Aktenbeschaffung <span className="text-ink-500">(jederzeit schriftlich widerrufbar)</span></span>
-                </label>
+                <Checkbox
+                  checked={a.prozessbefugnisse}
+                  onChange={(v) => set('prozessbefugnisse', v)}
+                  label={<><span>Vergleich abschliessen, Klage anerkennen und zurückziehen <span className="text-ink-500">(materielle Verfügungshandlungen – ausdrücklich, Art. 241 ZPO)</span></span></>} />
+                <Checkbox
+                  checked={a.geheimnisentbindung}
+                  onChange={(v) => set('geheimnisentbindung', v)}
+                  label={<><span>Geheimnisentbindung Dritter (Ärzte, Banken, Versicherungen, Behörden) zur Aktenbeschaffung <span className="text-ink-500">(jederzeit schriftlich widerrufbar)</span></span></>} />
               </div>
             </>
           )}
-
           {a.typ === 'general' && (
             <div className="space-y-3">
               <p className="text-body-s text-ink-700">
@@ -245,7 +244,6 @@ export function VorlageVollmacht() {
               </p>
             </div>
           )}
-
           {istSpezial && (
             <>
               <Field label="Geschäft / Angelegenheit" optional hint="genaue Bezeichnung, z. B. «Verkauf des Personenwagens VW Golf, Stammnummer …»">
@@ -254,10 +252,10 @@ export function VorlageVollmacht() {
               <div className="space-y-2">
                 <GruppenTitel>Vertretungsbereiche</GruppenTitel>
                 {VM_BEREICHE.map((b) => (
-                  <label key={b.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                    <input type="checkbox" className="mt-0.5" checked={a.bereiche.includes(b.id)} onChange={() => toggleBereich(b.id)} />
-                    {b.label}
-                  </label>
+                  <Checkbox
+                    checked={a.bereiche.includes(b.id)}
+                    onChange={() => toggleBereich(b.id)}
+                    label={<>{b.label}</>} />
                 ))}
               </div>
               <p className="lc-notice text-body-s">
@@ -278,17 +276,17 @@ export function VorlageVollmacht() {
           </p>
           <div className="space-y-2">
             {VM_ERMAECHTIGUNGEN.map((e) => (
-              <label key={e.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.ermaechtigungen.includes(e.id)} onChange={() => toggleErmaechtigung(e.id)} />
-                <span>{e.label}{e.id === 'grundstuecke' && <span className="text-warn-700"> – löst Beurkundungs-/Beglaubigungs-Warnung aus</span>}</span>
-              </label>
+              <Checkbox
+                checked={a.ermaechtigungen.includes(e.id)}
+                onChange={() => toggleErmaechtigung(e.id)}
+                label={<><span>{e.label}{e.id === 'grundstuecke' && <span className="text-warn-700"> – löst Beurkundungs-/Beglaubigungs-Warnung aus</span>}</span></>} />
             ))}
           </div>
           <div className="space-y-2 pt-2 border-t border-line">
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.buergschaft} onChange={(e) => set('buergschaft', e.target.checked)} />
-              <span>Eingehung von Bürgschaften <span className="text-danger-700">(Form-Gate: Art. 493 Abs. 6 OR – sperrt den Export, Notariat erforderlich)</span></span>
-            </label>
+            <Checkbox
+              checked={a.buergschaft}
+              onChange={(v) => set('buergschaft', v)}
+              label={<><span>Eingehung von Bürgschaften <span className="text-danger-700">(Form-Gate: Art. 493 Abs. 6 OR – sperrt den Export, Notariat erforderlich)</span></span></>} />
             {a.buergschaft && (
               <div className="lc-notice-danger">
                 <p className="text-body-s text-danger-700">
@@ -307,10 +305,10 @@ export function VorlageVollmacht() {
           <Field label="Befristet bis" optional hint="leer = unbefristet; die Vollmacht bleibt jederzeit widerruflich (Art. 34 OR)">
             <DatumsFeld value={a.befristetBis} onChange={(v) => set('befristetBis', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.fortgeltungTod} onChange={(e) => set('fortgeltungTod', e.target.checked)} />
-            <span>Fortgeltung über Tod und Verlust der Handlungsfähigkeit hinaus <span className="text-ink-500">(Art. 35 Abs. 1 OR, dispositiv)</span></span>
-          </label>
+          <Checkbox
+            checked={a.fortgeltungTod}
+            onChange={(v) => set('fortgeltungTod', v)}
+            label={<><span>Fortgeltung über Tod und Verlust der Handlungsfähigkeit hinaus <span className="text-ink-500">(Art. 35 Abs. 1 OR, dispositiv)</span></span></>} />
           {a.fortgeltungTod && (
             <p className="lc-notice-warn text-body-s">
               Eine Dauervollmacht deckt den Vorsorgefall nur unvollkommen – Banken und Behörden akzeptieren

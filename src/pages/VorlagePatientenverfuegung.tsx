@@ -6,7 +6,7 @@ import {
 } from '../lib/vorlagen/patientenverfuegung';
 import { BANNER_UNTERSCHREIBEN } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -125,19 +125,18 @@ export function VorlagePatientenverfuegung() {
           <div className="space-y-2">
             <GruppenTitel>Anwendungssituationen</GruppenTitel>
             {PV_SITUATIONEN.map((s) => (
-              <label key={s.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.situationen.includes(s.id)} onChange={() => toggleSituation(s.id)} />
-                {s.label}
-              </label>
+              <Checkbox
+                checked={a.situationen.includes(s.id)}
+                onChange={() => toggleSituation(s.id)}
+                label={<>{s.label}</>} />
             ))}
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 pt-1">
-              <input type="checkbox" className="mt-0.5" checked={a.psychischeStoerungKontext ?? false}
-                onChange={(e) => set('psychischeStoerungKontext', e.target.checked)} />
-              <span>Behandlung einer psychischen Störung in einer Klinik ist für mich relevant
-                <span className="text-ink-500"> (Hinweis zur abgeschwächten Verbindlichkeit, Art. 380/433 ZGB)</span></span>
-            </label>
+            <Checkbox
+              checked={a.psychischeStoerungKontext ?? false}
+              onChange={(v) => set('psychischeStoerungKontext', v)}
+              label={<><span>Behandlung einer psychischen Störung in einer Klinik ist für mich relevant
+                  <span className="text-ink-500"> (Hinweis zur abgeschwächten Verbindlichkeit, Art. 380/433 ZGB)</span></span></>}
+              className='pt-1' />
           </div>
-
           <div className="space-y-2">
             <GruppenTitel>Behandlungsziel</GruppenTitel>
             <p className="text-xs text-ink-500">Die Zielwahl setzt sinnvolle Vorgaben für noch offene Massnahmen (überschreibbar) – Widersprüche werden geprüft, nie still aufgelöst.</p>
@@ -233,17 +232,17 @@ export function VorlagePatientenverfuegung() {
               ))}
             </div>
             {a.organspende === 'ja' && (
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.organspendeVorbereitend ?? false}
-                  onChange={(e) => set('organspendeVorbereitend', e.target.checked)} />
-                Einschliesslich vorbereitender medizinischer Massnahmen (z. B. Aufrechterhaltung der Organdurchblutung)
-              </label>
+              <Checkbox
+                checked={a.organspendeVorbereitend ?? false}
+                onChange={(v) => set('organspendeVorbereitend', v)}
+                label={<>Einschliesslich vorbereitender medizinischer Massnahmen (z. B. Aufrechterhaltung der Organdurchblutung)
+                                </>} />
             )}
           </div>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.ersetztFruehere} onChange={(e) => set('ersetztFruehere', e.target.checked)} />
-            <span>Frühere Patientenverfügungen ersetzen <span className="text-ink-500">(empfohlen, Art. 371 Abs. 3 ZGB)</span></span>
-          </label>
+          <Checkbox
+            checked={a.ersetztFruehere}
+            onChange={(v) => set('ersetztFruehere', v)}
+            label={<><span>Frühere Patientenverfügungen ersetzen <span className="text-ink-500">(empfohlen, Art. 371 Abs. 3 ZGB)</span></span></>} />
           <Field label="Ort (für die Schlusszeile)" optional>
             <input className={inputCls + ' sm:max-w-xs'} value={a.ort ?? ''} onChange={(e) => set('ort', e.target.value)} placeholder="z. B. Basel" />
           </Field>

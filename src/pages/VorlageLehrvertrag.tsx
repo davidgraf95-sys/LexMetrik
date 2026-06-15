@@ -5,7 +5,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -127,10 +127,10 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
               <input type="number" min={1} max={6} className={inputCls + ' num w-28'} value={a.probezeitMonate} onChange={(e) => set('probezeitMonate', Number(e.target.value))} />
             </Field>
             {a.probezeitMonate > 3 && (
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.probezeitBehoerde} onChange={(e) => set('probezeitBehoerde', e.target.checked)} />
-                <span>Die Verlängerung über drei Monate ist von der kantonalen Behörde bewilligt <span className="text-ink-500">(Art. 344a Abs. 4 OR – sonst höchstens drei Monate)</span></span>
-              </label>
+              <Checkbox
+                checked={a.probezeitBehoerde}
+                onChange={(v) => set('probezeitBehoerde', v)}
+                label={<><span>Die Verlängerung über drei Monate ist von der kantonalen Behörde bewilligt <span className="text-ink-500">(Art. 344a Abs. 4 OR – sonst höchstens drei Monate)</span></span></>} />
             )}
           </div>
         </div>
@@ -156,9 +156,18 @@ export function VorlageLehrvertrag({ kopf }: { kopf: ReactNode }) {
           {a.detailgrad === 'experte' && (
             <div className="space-y-2 pt-1">
               <GruppenTitel>Weitere Leistungen (Art. 344a Abs. 5 OR)</GruppenTitel>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.berufswerkzeuge} onChange={(e) => set('berufswerkzeuge', e.target.checked)} /><span>Berufswerkzeuge werden vom Lehrbetrieb gestellt</span></label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.unterkunftVerpflegung} onChange={(e) => set('unterkunftVerpflegung', e.target.checked)} /><span>Beitrag an Unterkunft und Verpflegung</span></label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700"><input type="checkbox" className="mt-0.5" checked={a.versicherungspraemien} onChange={(e) => set('versicherungspraemien', e.target.checked)} /><span>Übernahme der Prämien der obligatorischen Unfallversicherung</span></label>
+              <Checkbox
+                checked={a.berufswerkzeuge}
+                onChange={(v) => set('berufswerkzeuge', v)}
+                label={<><span>Berufswerkzeuge werden vom Lehrbetrieb gestellt</span></>} />
+              <Checkbox
+                checked={a.unterkunftVerpflegung}
+                onChange={(v) => set('unterkunftVerpflegung', v)}
+                label={<><span>Beitrag an Unterkunft und Verpflegung</span></>} />
+              <Checkbox
+                checked={a.versicherungspraemien}
+                onChange={(v) => set('versicherungspraemien', v)}
+                label={<><span>Übernahme der Prämien der obligatorischen Unfallversicherung</span></>} />
             </div>
           )}
         </div>

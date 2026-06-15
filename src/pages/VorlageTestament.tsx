@@ -7,7 +7,7 @@ import {
 import { BANNER_ABSCHREIBEN } from '../lib/vorlagen/banner';
 import { berechneErbteilung } from '../lib/erbteilung';
 import { fmtB, zahl, istNull } from '../lib/bruch';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { DatumsFeld } from '../components/DatumsFeld';
@@ -151,11 +151,10 @@ export function VorlageTestament() {
 
       case 'erben': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.widerruf} onChange={(e) => set('widerruf', e.target.checked)} />
-            <span>Frühere letztwillige Verfügungen widerrufen <span className="text-ink-500">(empfohlen – schafft klare Verhältnisse, Art. 509/511 ZGB)</span></span>
-          </label>
-
+          <Checkbox
+            checked={a.widerruf}
+            onChange={(v) => set('widerruf', v)}
+            label={<><span>Frühere letztwillige Verfügungen widerrufen <span className="text-ink-500">(empfohlen – schafft klare Verhältnisse, Art. 509/511 ZGB)</span></span></>} />
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <GruppenTitel>Erbinnen und Erben</GruppenTitel>

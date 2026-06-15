@@ -7,7 +7,7 @@ import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { KANTONE } from '../lib/kantone';
@@ -84,11 +84,10 @@ export function VorlageEheschutzgesuch() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
-                onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
-              <span>Adresse des Gerichts von Hand erfassen</span>
-            </label>
+            <Checkbox
+              checked={a.gerichtManuellAktiv ?? false}
+              onChange={(v) => set('gerichtManuellAktiv', v || undefined)}
+              label={<><span>Adresse des Gerichts von Hand erfassen</span></>} />
             {a.gerichtManuellAktiv && (
               <div className="space-y-3 pl-6">
                 <Field label="Gericht">
@@ -125,11 +124,10 @@ export function VorlageEheschutzgesuch() {
           <Field label="Gesuchsgegnerische Partei">
             <ParteiEditor p={a.gesuchsgegner} onChange={(p) => set('gesuchsgegner', p)} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.kinderErfassen}
-              onChange={(e) => set('kinderErfassen', e.target.checked)} />
-            <span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(Massnahmen nach Kindesrecht, Art. 176 Abs. 3 ZGB)</span></span>
-          </label>
+          <Checkbox
+            checked={a.kinderErfassen}
+            onChange={(v) => set('kinderErfassen', v)}
+            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(Massnahmen nach Kindesrecht, Art. 176 Abs. 3 ZGB)</span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
               {a.kinder.map((k, i) => (
@@ -161,11 +159,10 @@ export function VorlageEheschutzgesuch() {
                   onSelect={(code) => set('obhut', code)}
                 />
               </Field>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.verkehrGerichtsueblich}
-                  onChange={(e) => set('verkehrGerichtsueblich', e.target.checked)} />
-                <span>Persönlicher Verkehr nach dem <strong>gerichtsüblichen</strong> Besuchs- und Ferienrecht beantragen <span className="text-ink-500">(sonst: gerichtlich zu regeln)</span></span>
-              </label>
+              <Checkbox
+                checked={a.verkehrGerichtsueblich}
+                onChange={(v) => set('verkehrGerichtsueblich', v)}
+                label={<><span>Persönlicher Verkehr nach dem <strong>gerichtsüblichen</strong> Besuchs- und Ferienrecht beantragen <span className="text-ink-500">(sonst: gerichtlich zu regeln)</span></span></>} />
             </div>
           )}
         </div>
@@ -238,32 +235,28 @@ export function VorlageEheschutzgesuch() {
             </Field>
           )}
           {a.ehegattenunterhalt !== 'keiner' && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.rueckwirkung}
-                onChange={(e) => set('rueckwirkung', e.target.checked)} />
-              <span>Rückwirkend auch für das <strong>Jahr vor Einreichung</strong> fordern <span className="text-ink-500">(Art. 173 Abs. 3 ZGB — weiter zurück nicht möglich)</span></span>
-            </label>
+            <Checkbox
+              checked={a.rueckwirkung}
+              onChange={(v) => set('rueckwirkung', v)}
+              label={<><span>Rückwirkend auch für das <strong>Jahr vor Einreichung</strong> fordern <span className="text-ink-500">(Art. 173 Abs. 3 ZGB — weiter zurück nicht möglich)</span></span></>} />
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.gueterTrennung}
-              onChange={(e) => set('gueterTrennung', e.target.checked)} />
-            <span>Gütertrennung beantragen <span className="text-ink-500">(Art. 176 Abs. 1 Ziff. 3 ZGB — nur «wenn es die Umstände rechtfertigen»)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.schuldneranweisung}
-              onChange={(e) => set('schuldneranweisung', e.target.checked)} />
-            <span>Schuldneranweisung beantragen <span className="text-ink-500">(Art. 177 ZGB — bei Nichterfüllung der Unterhaltspflicht)</span></span>
-          </label>
+          <Checkbox
+            checked={a.gueterTrennung}
+            onChange={(v) => set('gueterTrennung', v)}
+            label={<><span>Gütertrennung beantragen <span className="text-ink-500">(Art. 176 Abs. 1 Ziff. 3 ZGB — nur «wenn es die Umstände rechtfertigen»)</span></span></>} />
+          <Checkbox
+            checked={a.schuldneranweisung}
+            onChange={(v) => set('schuldneranweisung', v)}
+            label={<><span>Schuldneranweisung beantragen <span className="text-ink-500">(Art. 177 ZGB — bei Nichterfüllung der Unterhaltspflicht)</span></span></>} />
           {a.schuldneranweisung && (
             <Field label="Arbeitgeberin / Schuldner der Gegenpartei">
               <input className={inputCls} value={a.arbeitgeberName} onChange={(e) => set('arbeitgeberName', e.target.value)} placeholder="z. B. Muster AG, Zürich" />
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.verfuegungsbeschraenkung}
-              onChange={(e) => set('verfuegungsbeschraenkung', e.target.checked)} />
-            <span>Verfügungsbeschränkung beantragen <span className="text-ink-500">(Art. 178 ZGB — Vermögenswert individuell bezeichnen)</span></span>
-          </label>
+          <Checkbox
+            checked={a.verfuegungsbeschraenkung}
+            onChange={(v) => set('verfuegungsbeschraenkung', v)}
+            label={<><span>Verfügungsbeschränkung beantragen <span className="text-ink-500">(Art. 178 ZGB — Vermögenswert individuell bezeichnen)</span></span></>} />
           {a.verfuegungsbeschraenkung && (
             <Field label="Vermögenswert (individuell)" hint="z. B. Grundstück mit Grundbuchblatt-Nr., Konto mit IBAN — keine Gesamtsperre">
               <input className={inputCls} value={a.vermoegenswert} onChange={(e) => set('vermoegenswert', e.target.value)} />
@@ -277,20 +270,16 @@ export function VorlageEheschutzgesuch() {
           {egHinweise(a).map((h, i) => (
             <div key={i} className="lc-notice text-body-s">{h}</div>
           ))}
-
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage}
-              onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
-            <span>Vollmacht als Beilage aufführen</span>
-          </label>
-
+          <Checkbox
+            checked={a.vollmachtBeilage}
+            onChange={(v) => set('vollmachtBeilage', v)}
+            label={<><span>Vollmacht als Beilage aufführen</span></>} />
           <Field label="Ort und Datum der Eingabe">
             <div className="grid grid-cols-[1fr_11rem] gap-3">
               <input className={inputCls} value={a.ort} onChange={(e) => set('ort', e.target.value)} placeholder="z. B. Zürich" />
               <DatumsFeld value={a.datum} onChange={(v) => set('datum', v)} className={inputCls} />
             </div>
           </Field>
-
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Vor der Einreichung</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
@@ -302,7 +291,6 @@ export function VorlageEheschutzgesuch() {
               Ich habe verstanden: Unterhaltshöhen bestimmt das Gericht nach den konkreten Verhältnissen; die Begehren strukturieren meinen Standpunkt.
             </label>
           </section>
-
           <ExportLeiste ergebnis={ergebnis} deaktiviert={!bestaetigt || maengel.length > 0}
             kopiert={kopiert} onKopieren={kopieren}
             pdf={{ label: 'Gesuch als PDF', banner: BANNER_EG, dateiName: 'Eheschutzgesuch.pdf' }}

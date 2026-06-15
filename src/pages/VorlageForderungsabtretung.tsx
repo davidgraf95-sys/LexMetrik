@@ -4,7 +4,7 @@ import {
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { VorlagenSeite, type SeiteCtx, type VorlagenSeitenConfig } from '../components/vorlagen/VorlagenSeite';
 
 // ─── Vorlagen-Wizard: Abtretungserklärung / Zession (Art. 164 ff. OR) ───────
@@ -62,36 +62,31 @@ function eingabeInhalt({ a, set }: SeiteCtx<FaAntworten>, schritt: number) {
         <Field label="Forderung" hint="bestimmte Bezeichnung – erscheint im Betreff und im Abtretungs-Satz">
           <input className={inputCls} value={a.forderungBeschrieb} onChange={(e) => set('forderungBeschrieb', e.target.value)} placeholder="z. B. Kaufpreisforderung aus Kaufvertrag vom 1. Februar 2026" />
         </Field>
-        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" className="mt-0.5" checked={a.betragErfassen}
-            onChange={(e) => set('betragErfassen', e.target.checked)} />
-          <span>Betrag in der Erklärung nennen <span className="text-ink-500">(optional – die Bezeichnung muss die Forderung auch ohne Betrag bestimmen)</span></span>
-        </label>
+        <Checkbox
+          checked={a.betragErfassen}
+          onChange={(v) => set('betragErfassen', v)}
+          label={<><span>Betrag in der Erklärung nennen <span className="text-ink-500">(optional – die Bezeichnung muss die Forderung auch ohne Betrag bestimmen)</span></span></>} />
         {a.betragErfassen && (
           <Field label="Forderungsbetrag (CHF)">
             <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.betrag} onChange={(e) => set('betrag', e.target.value)} placeholder="z. B. 25000.00" />
           </Field>
         )}
-        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" className="mt-0.5" checked={a.zinsenAusdruecklich}
-            onChange={(e) => set('zinsenAusdruecklich', e.target.checked)} />
-          <span>Rückständige Zinsen <strong>ausdrücklich mitabtreten</strong> <span className="text-ink-500">(sonst nur gesetzliche Vermutung, Art. 170 Abs. 3 OR)</span></span>
-        </label>
-        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" className="mt-0.5" checked={a.urkundenUebergabe}
-            onChange={(e) => set('urkundenUebergabe', e.target.checked)} />
-          <span>Zusage der <strong>Urkunden-/Beweismittel-Übergabe</strong> aufnehmen <span className="text-ink-500">(gesetzliche Pflicht, Art. 170 Abs. 2 OR)</span></span>
-        </label>
-        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" className="mt-0.5" checked={a.anzeigeAnkuendigen}
-            onChange={(e) => set('anzeigeAnkuendigen', e.target.checked)} />
-          <span>Ankündigen, dass der <strong>Schuldner schriftlich informiert</strong> wird <span className="text-ink-500">(bis zur Anzeige befreit ihn die gutgläubige Zahlung an die Alt-Gläubigerin, Art. 167 OR)</span></span>
-        </label>
-        <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" className="mt-0.5" checked={a.annahmeZeile}
-            onChange={(e) => set('annahmeZeile', e.target.checked)} />
-          <span>Gegenzeichnungs-Zeile der <strong>Zessionarin</strong> aufnehmen <span className="text-ink-500">(formfrei möglich – die Zeile schafft Klarheit)</span></span>
-        </label>
+        <Checkbox
+          checked={a.zinsenAusdruecklich}
+          onChange={(v) => set('zinsenAusdruecklich', v)}
+          label={<><span>Rückständige Zinsen <strong>ausdrücklich mitabtreten</strong> <span className="text-ink-500">(sonst nur gesetzliche Vermutung, Art. 170 Abs. 3 OR)</span></span></>} />
+        <Checkbox
+          checked={a.urkundenUebergabe}
+          onChange={(v) => set('urkundenUebergabe', v)}
+          label={<><span>Zusage der <strong>Urkunden-/Beweismittel-Übergabe</strong> aufnehmen <span className="text-ink-500">(gesetzliche Pflicht, Art. 170 Abs. 2 OR)</span></span></>} />
+        <Checkbox
+          checked={a.anzeigeAnkuendigen}
+          onChange={(v) => set('anzeigeAnkuendigen', v)}
+          label={<><span>Ankündigen, dass der <strong>Schuldner schriftlich informiert</strong> wird <span className="text-ink-500">(bis zur Anzeige befreit ihn die gutgläubige Zahlung an die Alt-Gläubigerin, Art. 167 OR)</span></span></>} />
+        <Checkbox
+          checked={a.annahmeZeile}
+          onChange={(v) => set('annahmeZeile', v)}
+          label={<><span>Gegenzeichnungs-Zeile der <strong>Zessionarin</strong> aufnehmen <span className="text-ink-500">(formfrei möglich – die Zeile schafft Klarheit)</span></span></>} />
       </div>
     );
 

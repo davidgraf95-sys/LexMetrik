@@ -9,7 +9,7 @@ import { VorlageHeimarbeitsvertrag } from './VorlageHeimarbeitsvertrag';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -182,15 +182,15 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           <Field label="Stellenantritt">
             <DatumsFeld value={a.beginn} onChange={(v) => set('beginn', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.befristet} onChange={(e) => {
-              set('befristet', e.target.checked);
+          <Checkbox
+            checked={a.befristet}
+            onChange={(v) => {
+              set('befristet', v);
               // Stale-State vermeiden: bei Befristung gibt es keine ordentliche
               // Kündigung – abweichende Frist zurücksetzen (Review-Befund B1).
-              if (e.target.checked) { set('kuendigungsfrist', 'gesetzlich'); set('kuendigungsfristMonate', undefined); }
-            }} />
-            <span>Befristetes Arbeitsverhältnis <span className="text-ink-500">(endet ohne Kündigung, Art. 334 OR)</span></span>
-          </label>
+              if (v) { set('kuendigungsfrist', 'gesetzlich'); set('kuendigungsfristMonate', undefined); }
+            }}
+            label={<><span>Befristetes Arbeitsverhältnis <span className="text-ink-500">(endet ohne Kündigung, Art. 334 OR)</span></span></>} />
           {a.befristet && (
             <Field label="Befristet bis">
               <DatumsFeld value={a.befristetBis ?? ''} onChange={(v) => set('befristetBis', v || undefined)} className={inputCls} />
@@ -238,19 +238,19 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           <Field label={a.lohnModell === 'monatslohn' ? 'Bruttolohn pro Monat (CHF)' : 'Bruttolohn pro Stunde (CHF)'}>
             <BetragsFeld className={inputCls + ' num'} value={a.lohnBetrag} onChange={(v) => set('lohnBetrag', v)} placeholder={a.lohnModell === 'monatslohn' ? "z. B. 6'500" : 'z. B. 32.50'} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.dreizehnter} onChange={(e) => set('dreizehnter', e.target.checked)} />
-            <span>13. Monatslohn <span className="text-ink-500">(Lohnbestandteil – bei unterjährigem Ein-/Austritt pro rata geschuldet)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.gratifikation} onChange={(e) => set('gratifikation', e.target.checked)} />
-            <span>Freiwillige Gratifikation vorsehen <span className="text-ink-500">(Vorbehalts-Klausel wird automatisch aufgenommen, Art. 322d OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.dreizehnter}
+            onChange={(v) => set('dreizehnter', v)}
+            label={<><span>13. Monatslohn <span className="text-ink-500">(Lohnbestandteil – bei unterjährigem Ein-/Austritt pro rata geschuldet)</span></span></>} />
+          <Checkbox
+            checked={a.gratifikation}
+            onChange={(v) => set('gratifikation', v)}
+            label={<><span>Freiwillige Gratifikation vorsehen <span className="text-ink-500">(Vorbehalts-Klausel wird automatisch aufgenommen, Art. 322d OR)</span></span></>} />
           {a.lohnModell === 'stundenlohn' && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.ferienzuschlagSeparat ?? false} onChange={(e) => set('ferienzuschlagSeparat', e.target.checked)} />
-              <span>Ferienlohn laufend ausrichten (gesondert ausgewiesener Zuschlag) <span className="text-warn-700">— nur bei unregelmässiger Teilzeit zulässig (BGE 149 III 202)</span></span>
-            </label>
+            <Checkbox
+              checked={a.ferienzuschlagSeparat ?? false}
+              onChange={(v) => set('ferienzuschlagSeparat', v)}
+              label={<><span>Ferienlohn laufend ausrichten (gesondert ausgewiesener Zuschlag) <span className="text-warn-700">— nur bei unregelmässiger Teilzeit zulässig (BGE 149 III 202)</span></span></>} />
           )}
         </div>
       );
@@ -388,10 +388,10 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
 
       case 'klauseln': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.konkurrenzverbot} onChange={(e) => set('konkurrenzverbot', e.target.checked)} />
-            <span><strong>Konkurrenzverbot</strong> vereinbaren <span className="text-ink-500">(Art. 340 ff. OR – nach Ort, Zeit und Gegenstand zu begrenzen)</span></span>
-          </label>
+          <Checkbox
+            checked={a.konkurrenzverbot}
+            onChange={(v) => set('konkurrenzverbot', v)}
+            label={<><span><strong>Konkurrenzverbot</strong> vereinbaren <span className="text-ink-500">(Art. 340 ff. OR – nach Ort, Zeit und Gegenstand zu begrenzen)</span></span></>} />
           {a.konkurrenzverbot && (
             <div className="lc-card p-4 space-y-3">
               <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium">
@@ -412,31 +412,31 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
               <Field label="Konventionalstrafe (CHF je Übertretung)" optional hint="Bezahlung befreit vom Verbot; weiterer Schaden bleibt ersatzpflichtig (Art. 340b OR)">
                 <BetragsFeld className={inputCls + ' num w-40'} value={a.kvKonventionalstrafeCHF ?? ''} onChange={(v) => set('kvKonventionalstrafeCHF', v)} placeholder="z. B. 20'000" />
               </Field>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.kvRealerfuellung ?? false} onChange={(e) => set('kvRealerfuellung', e.target.checked)} />
-                <span>Realerfüllung vorbehalten <span className="text-ink-500">(Beseitigung des vertragswidrigen Zustands, Art. 340b Abs. 3 OR – «besonders schriftlich verabredet»)</span></span>
-              </label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.kvStrafeBefreitNicht ?? false} onChange={(e) => set('kvStrafeBefreitNicht', e.target.checked)} />
-                <span>Zahlung der Konventionalstrafe befreit <strong>nicht</strong> vom Verbot <span className="text-ink-500">(abweichende Abrede, Art. 340b Abs. 2 OR)</span></span>
-              </label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.kvKarenz ?? false} onChange={(e) => set('kvKarenz', e.target.checked)} />
-                <span><strong>Karenzentschädigung</strong> vereinbaren <span className="text-ink-500">(gesetzlich nicht vorgeschrieben; erlaubt ein weitergehendes Verbot, Art. 340a Abs. 2 OR)</span></span>
-              </label>
+              <Checkbox
+                checked={a.kvRealerfuellung ?? false}
+                onChange={(v) => set('kvRealerfuellung', v)}
+                label={<><span>Realerfüllung vorbehalten <span className="text-ink-500">(Beseitigung des vertragswidrigen Zustands, Art. 340b Abs. 3 OR – «besonders schriftlich verabredet»)</span></span></>} />
+              <Checkbox
+                checked={a.kvStrafeBefreitNicht ?? false}
+                onChange={(v) => set('kvStrafeBefreitNicht', v)}
+                label={<><span>Zahlung der Konventionalstrafe befreit <strong>nicht</strong> vom Verbot <span className="text-ink-500">(abweichende Abrede, Art. 340b Abs. 2 OR)</span></span></>} />
+              <Checkbox
+                checked={a.kvKarenz ?? false}
+                onChange={(v) => set('kvKarenz', v)}
+                label={<><span><strong>Karenzentschädigung</strong> vereinbaren <span className="text-ink-500">(gesetzlich nicht vorgeschrieben; erlaubt ein weitergehendes Verbot, Art. 340a Abs. 2 OR)</span></span></>} />
               {a.kvKarenz && (
                 <div className="pl-6 space-y-3">
                   <Field label="Karenzentschädigung (CHF pro Monat)">
                     <BetragsFeld className={inputCls + ' num w-40'} value={a.kvKarenzCHFProMonat ?? ''} onChange={(v) => set('kvKarenzCHFProMonat', v || undefined)} placeholder="z. B. 2'000" />
                   </Field>
-                  <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                    <input type="checkbox" className="mt-0.5" checked={a.kvKarenzVerzichtsrecht ?? false} onChange={(e) => set('kvKarenzVerzichtsrecht', e.target.checked)} />
-                    <span>Einseitiges Verzichtsrecht des Arbeitgebers vorbehalten <span className="text-ink-500">(ohne Abrede keine einseitige Befreiung – BGer 4A_5/2025)</span></span>
-                  </label>
-                  <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                    <input type="checkbox" className="mt-0.5" checked={a.kvKarenzErsatzAnrechenbar ?? false} onChange={(e) => set('kvKarenzErsatzAnrechenbar', e.target.checked)} />
-                    <span>Ersatzeinkommen anrechenbar <span className="text-ink-500">(nur bei ausdrücklicher Abrede – BGer 4A_5/2025 E. 5.3)</span></span>
-                  </label>
+                  <Checkbox
+                    checked={a.kvKarenzVerzichtsrecht ?? false}
+                    onChange={(v) => set('kvKarenzVerzichtsrecht', v)}
+                    label={<><span>Einseitiges Verzichtsrecht des Arbeitgebers vorbehalten <span className="text-ink-500">(ohne Abrede keine einseitige Befreiung – BGer 4A_5/2025)</span></span></>} />
+                  <Checkbox
+                    checked={a.kvKarenzErsatzAnrechenbar ?? false}
+                    onChange={(v) => set('kvKarenzErsatzAnrechenbar', v)}
+                    label={<><span>Ersatzeinkommen anrechenbar <span className="text-ink-500">(nur bei ausdrücklicher Abrede – BGer 4A_5/2025 E. 5.3)</span></span></>} />
                 </div>
               )}
             </div>

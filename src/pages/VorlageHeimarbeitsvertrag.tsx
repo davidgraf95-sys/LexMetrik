@@ -5,7 +5,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -79,22 +79,22 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
           <Field label="Arbeitsraum"><input className={inputCls} value={a.arbeitsraum} onChange={(e) => set('arbeitsraum', e.target.value)} placeholder="in der Wohnung des Heimarbeitnehmers" /></Field>
           <div className="space-y-2">
             <GruppenTitel>Material und Geräte</GruppenTitel>
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.materialVomArbeitgeber} onChange={(e) => set('materialVomArbeitgeber', e.target.checked)} />
-              <span>Material/Geräte werden vom Arbeitgeber gestellt <span className="text-ink-500">(Sorgfalts-/Rückgabepflicht, Haftung höchstens Selbstkosten, Art. 352a OR)</span></span>
-            </label>
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.materialBeschafftHeimarbeiter} onChange={(e) => set('materialBeschafftHeimarbeiter', e.target.checked)} />
-              <span>Heimarbeitnehmer/in beschafft (auch) Material selbst <span className="text-ink-500">(Entschädigung schriftlich, Art. 351a OR)</span></span>
-            </label>
+            <Checkbox
+              checked={a.materialVomArbeitgeber}
+              onChange={(v) => set('materialVomArbeitgeber', v)}
+              label={<><span>Material/Geräte werden vom Arbeitgeber gestellt <span className="text-ink-500">(Sorgfalts-/Rückgabepflicht, Haftung höchstens Selbstkosten, Art. 352a OR)</span></span></>} />
+            <Checkbox
+              checked={a.materialBeschafftHeimarbeiter}
+              onChange={(v) => set('materialBeschafftHeimarbeiter', v)}
+              label={<><span>Heimarbeitnehmer/in beschafft (auch) Material selbst <span className="text-ink-500">(Entschädigung schriftlich, Art. 351a OR)</span></span></>} />
             {a.materialBeschafftHeimarbeiter && (
               <Field label="Material-Entschädigung"><input className={inputCls} value={a.materialEntschaedigung} onChange={(e) => set('materialEntschaedigung', e.target.value)} placeholder="z. B. CHF 0.20 pro Stück" /></Field>
             )}
           </div>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.probearbeit} onChange={(e) => set('probearbeit', e.target.checked)} />
-            <span>Es wird zunächst eine <strong>Probearbeit</strong> übergeben <span className="text-ink-500">(Verhältnis auf bestimmte Zeit zur Probe, Art. 354 Abs. 1 OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.probearbeit}
+            onChange={(v) => set('probearbeit', v)}
+            label={<><span>Es wird zunächst eine <strong>Probearbeit</strong> übergeben <span className="text-ink-500">(Verhältnis auf bestimmte Zeit zur Probe, Art. 354 Abs. 1 OR)</span></span></>} />
         </div>
       );
 

@@ -5,7 +5,7 @@ import {
 } from '../lib/vorlagen/fristerstreckung';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -108,11 +108,10 @@ export function VorlageFristerstreckung() {
           <Field label="Frist" hint="bestimmte Bezeichnung – erscheint im Gesuch">
             <input className={inputCls} value={a.fristBeschrieb} onChange={(e) => set('fristBeschrieb', e.target.value)} placeholder="z. B. Frist zur Erstattung der Klageantwort" />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.verfuegungVomErfassen}
-              onChange={(e) => set('verfuegungVomErfassen', e.target.checked)} />
-            <span>Datum der <strong>fristansetzenden Verfügung</strong> nennen <span className="text-ink-500">(optional)</span></span>
-          </label>
+          <Checkbox
+            checked={a.verfuegungVomErfassen}
+            onChange={(v) => set('verfuegungVomErfassen', v)}
+            label={<><span>Datum der <strong>fristansetzenden Verfügung</strong> nennen <span className="text-ink-500">(optional)</span></span></>} />
           {a.verfuegungVomErfassen && (
             <Field label="Verfügung vom">
               <DatumsFeld value={a.verfuegungVom} onChange={(v) => set('verfuegungVom', v)} className={inputCls} />
@@ -124,16 +123,14 @@ export function VorlageFristerstreckung() {
           <Field label="Beantragtes neues Fristende">
             <DatumsFeld value={a.erstreckungBis} onChange={(v) => set('erstreckungBis', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.ersteErstreckung}
-              onChange={(e) => set('ersteErstreckung', e.target.checked)} />
-            <span>Es ist das <strong>erste</strong> Erstreckungsgesuch in dieser Frist <span className="text-ink-500">(wird im Gesuch offengelegt)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.begruendungPlatzhalter}
-              onChange={(e) => set('begruendungPlatzhalter', e.target.checked)} />
-            <span><strong>Begründung später ausfüllen</strong> <span className="text-ink-500">(Platzhalter-Block im Gesuch – vor Einreichung ergänzen)</span></span>
-          </label>
+          <Checkbox
+            checked={a.ersteErstreckung}
+            onChange={(v) => set('ersteErstreckung', v)}
+            label={<><span>Es ist das <strong>erste</strong> Erstreckungsgesuch in dieser Frist <span className="text-ink-500">(wird im Gesuch offengelegt)</span></span></>} />
+          <Checkbox
+            checked={a.begruendungPlatzhalter}
+            onChange={(v) => set('begruendungPlatzhalter', v)}
+            label={<><span><strong>Begründung später ausfüllen</strong> <span className="text-ink-500">(Platzhalter-Block im Gesuch – vor Einreichung ergänzen)</span></span></>} />
           {!a.begruendungPlatzhalter && (
             <Field label="Begründung" hint="zureichende Gründe konkret darlegen (Art. 144 Abs. 2 ZPO)">
               <textarea className={inputCls + ' min-h-[6rem]'} value={a.begruendung} onChange={(e) => set('begruendung', e.target.value)}

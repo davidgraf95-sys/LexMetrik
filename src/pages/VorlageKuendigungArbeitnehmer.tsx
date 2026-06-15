@@ -5,7 +5,7 @@ import {
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { karte } from '../lib/startseiteConfig';
@@ -112,12 +112,11 @@ export function VorlageKuendigungArbeitnehmer() {
                 <input type="number" min={1} className={inputCls + ' num sm:max-w-[9rem]'} value={a.abweichendeFristMonate}
                   onChange={(e) => set('abweichendeFristMonate', Number(e.target.value))} />
               </Field>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.abweichendeFristFormGueltig}
-                  onChange={(e) => set('abweichendeFristFormGueltig', e.target.checked)} />
-                <span>Die abweichende Frist steht schriftlich im Vertrag, NAV oder GAV
-                  <span className="text-ink-500"> (Gültigkeitsvoraussetzung – sonst gilt die gesetzliche Frist)</span></span>
-              </label>
+              <Checkbox
+                checked={a.abweichendeFristFormGueltig}
+                onChange={(v) => set('abweichendeFristFormGueltig', v)}
+                label={<><span>Die abweichende Frist steht schriftlich im Vertrag, NAV oder GAV
+                    <span className="text-ink-500"> (Gültigkeitsvoraussetzung – sonst gilt die gesetzliche Frist)</span></span></>} />
             </div>
           )}
         </div>
@@ -128,11 +127,10 @@ export function VorlageKuendigungArbeitnehmer() {
           <Field label="Erwarteter Zugang der Kündigung" hint="Stichtag der Fristberechnung – nicht das Absendedatum">
             <DatumsFeld value={a.zugangKuendigung} onChange={(v) => set('zugangKuendigung', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.kuendigungsterminMonatsende}
-              onChange={(e) => set('kuendigungsterminMonatsende', e.target.checked)} />
-            <span>Kündigungstermin ist das Monatsende <span className="text-ink-500">(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.kuendigungsterminMonatsende}
+            onChange={(v) => set('kuendigungsterminMonatsende', v)}
+            label={<><span>Kündigungstermin ist das Monatsende <span className="text-ink-500">(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)</span></span></>} />
           {engine?.beendigungsdatum && (
             <div className="lc-tile">
               <GruppenTitel>Beendigung des Arbeitsverhältnisses</GruppenTitel>
@@ -151,16 +149,14 @@ export function VorlageKuendigungArbeitnehmer() {
 
       case 'bitten': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.zeugnisVerlangen}
-              onChange={(e) => set('zeugnisVerlangen', e.target.checked)} />
-            <span>Qualifiziertes Arbeitszeugnis verlangen <span className="text-ink-500">(Anspruch nach Art. 330a OR)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.schlussabrechnungVerlangen}
-              onChange={(e) => set('schlussabrechnungVerlangen', e.target.checked)} />
-            <span>Schlussabrechnung verlangen <span className="text-ink-500">(Lohn, anteiliger 13. Monatslohn, Feriensaldo, Überstunden)</span></span>
-          </label>
+          <Checkbox
+            checked={a.zeugnisVerlangen}
+            onChange={(v) => set('zeugnisVerlangen', v)}
+            label={<><span>Qualifiziertes Arbeitszeugnis verlangen <span className="text-ink-500">(Anspruch nach Art. 330a OR)</span></span></>} />
+          <Checkbox
+            checked={a.schlussabrechnungVerlangen}
+            onChange={(v) => set('schlussabrechnungVerlangen', v)}
+            label={<><span>Schlussabrechnung verlangen <span className="text-ink-500">(Lohn, anteiliger 13. Monatslohn, Feriensaldo, Überstunden)</span></span></>} />
         </div>
       );
 

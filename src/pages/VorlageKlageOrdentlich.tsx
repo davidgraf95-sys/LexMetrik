@@ -9,7 +9,7 @@ import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { KANTONE } from '../lib/kantone';
@@ -99,15 +99,14 @@ export function VorlageKlageOrdentlich() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
-                onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
-              <span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span>
-            </label>
+            <Checkbox
+              checked={a.gerichtManuellAktiv ?? false}
+              onChange={(v) => set('gerichtManuellAktiv', v || undefined)}
+              label={<><span>Adresse des Gerichts von Hand erfassen <span className="text-ink-500">(übersteuert die hinterlegte Anschrift)</span></span></>} />
             {a.gerichtManuellAktiv && (
               // Layout 11.6.2026 (Auftrag David, einheitlich mit dem
               // Schlichtungsgesuch): Name volle Breite, Strasse + PLZ zweispaltig.
-              <div className="space-y-3 pl-6">
+              (<div className="space-y-3 pl-6">
                 <Field label="Gericht">
                   <input className={inputCls} value={a.gerichtManuell?.name ?? ''}
                     onChange={(e) => set('gerichtManuell', { name: e.target.value, strasse: a.gerichtManuell?.strasse ?? '', plzOrt: a.gerichtManuell?.plzOrt ?? '' })}
@@ -125,30 +124,27 @@ export function VorlageKlageOrdentlich() {
                       placeholder="z. B. 8001 Zürich" />
                   </Field>
                 </div>
-              </div>
+              </div>)
             )}
           </div>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.vermoegensrechtlich}
-              onChange={(e) => set('vermoegensrechtlich', e.target.checked)} />
-            <span>Vermögensrechtliche Streitigkeit <span className="text-ink-500">(Streitwertangabe ist Pflichtinhalt, Art. 221 Abs. 1 lit. c ZPO)</span></span>
-          </label>
+          <Checkbox
+            checked={a.vermoegensrechtlich}
+            onChange={(v) => set('vermoegensrechtlich', v)}
+            label={<><span>Vermögensrechtliche Streitigkeit <span className="text-ink-500">(Streitwertangabe ist Pflichtinhalt, Art. 221 Abs. 1 lit. c ZPO)</span></span></>} />
           {a.vermoegensrechtlich && (
             <Field label="Streitwert (CHF)" hint="nach Art. 91 ZPO – ohne Zinsen und Kosten; über CHF 30'000 (sonst gilt das vereinfachte Verfahren)">
               <BetragsFeld value={a.streitwert} onChange={(v) => set('streitwert', v)} className={inputCls}
                 placeholder="z. B. 80'000" aria-label="Streitwert in Franken" />
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.mietePacht}
-              onChange={(e) => set('mietePacht', e.target.checked)} />
-            <span>Streitigkeit aus Miete/Pacht von Wohn-/Geschäftsräumen oder landwirtschaftlicher Pacht <span className="text-ink-500">(Klagefrist 30 Tage, Art. 209 Abs. 4 ZPO)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.einzigeInstanz}
-              onChange={(e) => set('einzigeInstanz', e.target.checked)} />
-            <span>Einzige kantonale Instanz <span className="text-ink-500">(Art. 5/6/8 ZPO — ordentliches Verfahren auch bis CHF 30'000, Art. 243 Abs. 3)</span></span>
-          </label>
+          <Checkbox
+            checked={a.mietePacht}
+            onChange={(v) => set('mietePacht', v)}
+            label={<><span>Streitigkeit aus Miete/Pacht von Wohn-/Geschäftsräumen oder landwirtschaftlicher Pacht <span className="text-ink-500">(Klagefrist 30 Tage, Art. 209 Abs. 4 ZPO)</span></span></>} />
+          <Checkbox
+            checked={a.einzigeInstanz}
+            onChange={(v) => set('einzigeInstanz', v)}
+            label={<><span>Einzige kantonale Instanz <span className="text-ink-500">(Art. 5/6/8 ZPO — ordentliches Verfahren auch bis CHF 30'000, Art. 243 Abs. 3)</span></span></>} />
           {a.vermoegensrechtlich && sw !== null && sw > 30000 && (
             <p className="lc-notice text-body-s">
               Ordentliches Verfahren (Art. 219 ff. ZPO) — Streitwert über der Grenze des vereinfachten Verfahrens (Art. 243 Abs. 1 ZPO).
@@ -220,10 +216,10 @@ export function VorlageKlageOrdentlich() {
                 onClick={() => set('freieRechtsbegehren', [...a.freieRechtsbegehren, ''])}>+ Begehren</button>
             </div>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.rechtsoeffnung} onChange={(e) => set('rechtsoeffnung', e.target.checked)} />
-            <span>Beseitigung des Rechtsvorschlags beantragen <span className="text-ink-500">(laufende Betreibung)</span></span>
-          </label>
+          <Checkbox
+            checked={a.rechtsoeffnung}
+            onChange={(v) => set('rechtsoeffnung', v)}
+            label={<><span>Beseitigung des Rechtsvorschlags beantragen <span className="text-ink-500">(laufende Betreibung)</span></span></>} />
           {a.rechtsoeffnung && (
             <Field label="Betreibungs-Nr." optional>
               <input className={inputCls + ' sm:max-w-[14rem]'} value={a.betreibungNr ?? ''} onChange={(e) => set('betreibungNr', e.target.value)} />
@@ -256,11 +252,10 @@ export function VorlageKlageOrdentlich() {
           </p>
           {/* Auftrag David 11.6.2026: Begründung wahlweise hier erfassen oder
               als Platzhalter im Dokument später ausfüllen. */}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.begruendungModus === 'platzhalter'}
-              onChange={(e) => set('begruendungModus', e.target.checked ? 'platzhalter' : 'maske')} />
-            <span>Begründung später ausfüllen <span className="text-ink-500">(die Klage erhält nummerierte Platzhalter für Tatsachen, Beweise und Rechtliches; die Pflichtinhalte sind vor der Einreichung zu ergänzen)</span></span>
-          </label>
+          <Checkbox
+            checked={a.begruendungModus === 'platzhalter'}
+            onChange={(v) => set('begruendungModus', v ? 'platzhalter' : 'maske')}
+            label={<><span>Begründung später ausfüllen <span className="text-ink-500">(die Klage erhält nummerierte Platzhalter für Tatsachen, Beweise und Rechtliches; die Pflichtinhalte sind vor der Einreichung zu ergänzen)</span></span></>} />
           {a.begruendungModus === 'platzhalter' && (
             <p className="lc-notice-warn text-body-s">
               Das Dokument enthält Leer-Ziffern («________») unter «I. Tatsächliches», «II. Rechtliches»
@@ -325,10 +320,10 @@ export function VorlageKlageOrdentlich() {
 
       case 'beilagen': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.klagebewilligungVorhanden} onChange={(e) => set('klagebewilligungVorhanden', e.target.checked)} />
-            <span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Art. 221 Abs. 2 lit. b ZPO)</span></span>
-          </label>
+          <Checkbox
+            checked={a.klagebewilligungVorhanden}
+            onChange={(v) => set('klagebewilligungVorhanden', v)}
+            label={<><span>Klagebewilligung der Schlichtungsbehörde liegt vor <span className="text-ink-500">(Art. 221 Abs. 2 lit. b ZPO)</span></span></>} />
           {a.klagebewilligungVorhanden ? (
             <div className="space-y-2">
               <Field label="Datum der Klagebewilligung (Eröffnung/Zustellung)" hint="massgeblich für die Klagefrist (BGE 140 III 227)">
@@ -357,10 +352,11 @@ export function VorlageKlageOrdentlich() {
               </div>
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.vollmachtBeilage} onChange={(e) => set('vollmachtBeilage', e.target.checked)} />
-            Vollmacht als Beilage (bei Vertretung, Art. 221 Abs. 2 lit. a ZPO)
-          </label>
+          <Checkbox
+            checked={a.vollmachtBeilage}
+            onChange={(v) => set('vollmachtBeilage', v)}
+            label={<>Vollmacht als Beilage (bei Vertretung, Art. 221 Abs. 2 lit. a ZPO)
+                        </>} />
           <div className="space-y-2">
             <GruppenTitel>Weitere Beilagen</GruppenTitel>
             {a.weitereBeilagen.map((b, i) => (

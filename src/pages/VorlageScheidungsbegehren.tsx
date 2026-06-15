@@ -7,7 +7,7 @@ import { SgAdressatKachel } from '../components/vorlagen/SgBehoerdenWahl';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { KvGerichtWahl } from '../components/vorlagen/KvGerichtWahl';
 import { KANTONE } from '../lib/kantone';
@@ -114,11 +114,10 @@ export function VorlageScheidungsbegehren() {
               <KvGerichtWahl kanton={a.gerichtsKanton} materie=""
                 onAufgeloest={(z) => set('gerichtAufgeloest', z ?? undefined)} />
             )}
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.gerichtManuellAktiv ?? false}
-                onChange={(e) => set('gerichtManuellAktiv', e.target.checked || undefined)} />
-              <span>Adresse des Gerichts von Hand erfassen</span>
-            </label>
+            <Checkbox
+              checked={a.gerichtManuellAktiv ?? false}
+              onChange={(v) => set('gerichtManuellAktiv', v || undefined)}
+              label={<><span>Adresse des Gerichts von Hand erfassen</span></>} />
             {a.gerichtManuellAktiv && (
               <div className="space-y-3 pl-6">
                 <Field label="Gericht">
@@ -156,11 +155,10 @@ export function VorlageScheidungsbegehren() {
           <Field label="Vertretung Partei 2" optional>
             <input className={inputCls} value={a.vertretung2 ?? ''} onChange={(e) => set('vertretung2', e.target.value || undefined)} placeholder="z. B. RA lic. iur. Y" />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.kinderErfassen}
-              onChange={(e) => set('kinderErfassen', e.target.checked)} />
-            <span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(gemeinsame Anträge sind Mindestinhalt, Art. 285 lit. d ZPO)</span></span>
-          </label>
+          <Checkbox
+            checked={a.kinderErfassen}
+            onChange={(v) => set('kinderErfassen', v)}
+            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(gemeinsame Anträge sind Mindestinhalt, Art. 285 lit. d ZPO)</span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
               {a.kinder.map((k, i) => (
@@ -203,11 +201,10 @@ export function VorlageScheidungsbegehren() {
                 'z. B. Die Partei 1 sei zu monatlichem Unterhalt von CHF … zu verpflichten')}
             </>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.kostenHaelftig}
-              onChange={(e) => set('kostenHaelftig', e.target.checked)} />
-            <span>Kosten-Antrag: hälftige Gerichtskosten, keine Parteientschädigungen <span className="text-ink-500">(üblich beim gemeinsamen Begehren)</span></span>
-          </label>
+          <Checkbox
+            checked={a.kostenHaelftig}
+            onChange={(v) => set('kostenHaelftig', v)}
+            label={<><span>Kosten-Antrag: hälftige Gerichtskosten, keine Parteientschädigungen <span className="text-ink-500">(üblich beim gemeinsamen Begehren)</span></span></>} />
         </div>
       );
 

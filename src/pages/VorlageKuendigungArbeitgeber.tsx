@@ -5,7 +5,7 @@ import {
 import { KDG_ZUGANGS_HINWEIS } from '../lib/vorlagen/kuendigungGemeinsam';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { SperrereignisseEditor } from '../components/forms/SperrereignisseEditor';
 import { SperrtageZaehler } from '../components/SperrtageZaehler';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -161,16 +161,14 @@ export function VorlageKuendigungArbeitgeber() {
                 <input type="number" min={0} step={0.5} className={inputCls + ' num sm:max-w-[9rem]'} value={a.abweichendeFristMonate}
                   onChange={(e) => set('abweichendeFristMonate', Number(e.target.value))} />
               </Field>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.abweichendeFristFormGueltig}
-                  onChange={(e) => set('abweichendeFristFormGueltig', e.target.checked)} />
-                <span>Schriftlich im Vertrag, NAV oder GAV vereinbart <span className="text-ink-500">(Gültigkeitsvoraussetzung)</span></span>
-              </label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.abweichendeFristQuelleGAV}
-                  onChange={(e) => set('abweichendeFristQuelleGAV', e.target.checked)} />
-                <span>Quelle ist ein GAV <span className="text-ink-500">(Verkürzung unter 1 Monat nur durch GAV und nur im 1. Dienstjahr)</span></span>
-              </label>
+              <Checkbox
+                checked={a.abweichendeFristFormGueltig}
+                onChange={(v) => set('abweichendeFristFormGueltig', v)}
+                label={<><span>Schriftlich im Vertrag, NAV oder GAV vereinbart <span className="text-ink-500">(Gültigkeitsvoraussetzung)</span></span></>} />
+              <Checkbox
+                checked={a.abweichendeFristQuelleGAV}
+                onChange={(v) => set('abweichendeFristQuelleGAV', v)}
+                label={<><span>Quelle ist ein GAV <span className="text-ink-500">(Verkürzung unter 1 Monat nur durch GAV und nur im 1. Dienstjahr)</span></span></>} />
             </div>
           )}
         </div>
@@ -215,11 +213,10 @@ export function VorlageKuendigungArbeitgeber() {
           <Field label="Erwarteter Zugang der Kündigung" hint="Stichtag für Dienstjahr, Frist UND Sperrfrist-Prüfung">
             <DatumsFeld value={a.zugangKuendigung} onChange={(v) => set('zugangKuendigung', v)} className={inputCls} />
           </Field>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.kuendigungsterminMonatsende}
-              onChange={(e) => set('kuendigungsterminMonatsende', e.target.checked)} />
-            <span>Kündigungstermin ist das Monatsende <span className="text-ink-500">(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.kuendigungsterminMonatsende}
+            onChange={(v) => set('kuendigungsterminMonatsende', v)}
+            label={<><span>Kündigungstermin ist das Monatsende <span className="text-ink-500">(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)</span></span></>} />
           <Field label="Nicht bezogene Tage Urlaub des andern Elternteils" optional hint="Art. 335c Abs. 3 i.V.m. Art. 329g OR (vormals Vaterschaftsurlaub), verlängern die Frist taggenau">
             <input type="number" min={0} className={inputCls + ' num sm:max-w-[9rem]'} value={a.vaterschaftsurlaubResttage}
               onChange={(e) => set('vaterschaftsurlaubResttage', Math.max(0, Number(e.target.value)))} />
@@ -231,23 +228,21 @@ export function VorlageKuendigungArbeitgeber() {
 
       case 'inhalt': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.begruendungAufnehmen}
-              onChange={(e) => set('begruendungAufnehmen', e.target.checked)} />
-            <span>Begründung ins Schreiben aufnehmen
-              <span className="text-warn-700"> — rechtlich nur auf Verlangen geschuldet (Art. 335 Abs. 2 OR); frühe Festlegung kann die Verteidigung gegen einen Missbrauchsvorwurf erschweren</span></span>
-          </label>
+          <Checkbox
+            checked={a.begruendungAufnehmen}
+            onChange={(v) => set('begruendungAufnehmen', v)}
+            label={<><span>Begründung ins Schreiben aufnehmen
+                <span className="text-warn-700"> — rechtlich nur auf Verlangen geschuldet (Art. 335 Abs. 2 OR); frühe Festlegung kann die Verteidigung gegen einen Missbrauchsvorwurf erschweren</span></span></>} />
           {a.begruendungAufnehmen && (
             <Field label="Begründung (Freitext)" hint="Würdigung des Einzelfalls — LexMetrik formuliert hier bewusst nicht vor">
               <textarea className={inputCls + ' min-h-[6rem]'} value={a.begruendungText}
                 onChange={(e) => set('begruendungText', e.target.value)} />
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.freistellung}
-              onChange={(e) => set('freistellung', e.target.checked)} />
-            <span>Freistellung bis zum Austritt aussprechen <span className="text-ink-500">(Lohn läuft weiter; anderweitiger Erwerb wird angerechnet, Art. 324 OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.freistellung}
+            onChange={(v) => set('freistellung', v)}
+            label={<><span>Freistellung bis zum Austritt aussprechen <span className="text-ink-500">(Lohn läuft weiter; anderweitiger Erwerb wird angerechnet, Art. 324 OR)</span></span></>} />
           {a.freistellung && (
             <Field label="Freistellung ab">
               <DatumsFeld value={a.freistellungAb} onChange={(v) => set('freistellungAb', v)} className={inputCls} />

@@ -7,7 +7,7 @@ import type { Mietobjekt, TerminQuelle } from '../types/mietrecht';
 import type { Kanton } from '../types/legal';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
 import { KANTONE } from '../lib/kantone';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -145,20 +145,18 @@ export function VorlageKuendigungMieter() {
 
       case 'familienwohnung': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.familienwohnung}
-              onChange={(e) => set('familienwohnung', e.target.checked)} />
-            <span>Die Mietsache dient als <strong>Wohnung der Familie</strong>
-              <span className="text-ink-500"> (verheiratet oder in eingetragener Partnerschaft, gemeinsame Wohnung — Art. 266m OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.familienwohnung}
+            onChange={(v) => set('familienwohnung', v)}
+            label={<><span>Die Mietsache dient als <strong>Wohnung der Familie</strong>
+                <span className="text-ink-500"> (verheiratet oder in eingetragener Partnerschaft, gemeinsame Wohnung — Art. 266m OR)</span></span></>} />
           {a.familienwohnung && (
             <div className="space-y-3">
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.zustimmungEhegatte}
-                  onChange={(e) => set('zustimmungEhegatte', e.target.checked)} />
-                <span>Die <strong>ausdrückliche Zustimmung</strong> des Ehegatten / der eingetragenen Partnerin bzw. des Partners liegt vor
-                  <span className="text-danger-700"> — ohne sie wäre die Kündigung NICHTIG (Art. 266m/266o OR)</span></span>
-              </label>
+              <Checkbox
+                checked={a.zustimmungEhegatte}
+                onChange={(v) => set('zustimmungEhegatte', v)}
+                label={<><span>Die <strong>ausdrückliche Zustimmung</strong> des Ehegatten / der eingetragenen Partnerin bzw. des Partners liegt vor
+                    <span className="text-danger-700"> — ohne sie wäre die Kündigung NICHTIG (Art. 266m/266o OR)</span></span></>} />
               <Field label="Name der zustimmenden Person" hint="unterschreibt das Schreiben mit (zweite Unterschriftslinie)">
                 <input className={inputCls} value={a.ehegatteName} onChange={(e) => set('ehegatteName', e.target.value)} placeholder="Vorname Name" />
               </Field>
@@ -203,11 +201,10 @@ export function VorlageKuendigungMieter() {
             </Field>
           )}
           {a.terminQuelle === 'jedes_monatsende' && (
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.dezemberAusgeschlossen}
-                onChange={(e) => set('dezemberAusgeschlossen', e.target.checked)} />
-              <span>«… ausser auf den 31. Dezember» vereinbart</span>
-            </label>
+            <Checkbox
+              checked={a.dezemberAusgeschlossen}
+              onChange={(v) => set('dezemberAusgeschlossen', v)}
+              label={<><span>«… ausser auf den 31. Dezember» vereinbart</span></>} />
           )}
           {brauchtMietbeginn && (
             <Field label="Mietbeginn" hint={a.objekt === 'moebliertes_zimmer' ? 'Art. 266e: Ende einer einmonatigen Mietdauer' : 'für die gesetzliche Termin-Regel'}>
@@ -225,27 +222,24 @@ export function VorlageKuendigungMieter() {
 
       case 'ausserterminlich': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.ausserterminlich}
-              onChange={(e) => set('ausserterminlich', e.target.checked)} />
-            <span>Ich gebe die Mietsache <strong>vorzeitig</strong> zurück und schlage eine:n Nachmieter:in vor
-              <span className="text-ink-500"> (Art. 264 OR — Befreiung nur bei zumutbarem, zahlungsfähigem Ersatz zu gleichen Bedingungen)</span></span>
-          </label>
+          <Checkbox
+            checked={a.ausserterminlich}
+            onChange={(v) => set('ausserterminlich', v)}
+            label={<><span>Ich gebe die Mietsache <strong>vorzeitig</strong> zurück und schlage eine:n Nachmieter:in vor
+                <span className="text-ink-500"> (Art. 264 OR — Befreiung nur bei zumutbarem, zahlungsfähigem Ersatz zu gleichen Bedingungen)</span></span></>} />
           {a.ausserterminlich && (
             <div className="space-y-3">
               <Field label="Nachmieter:in (Name)">
                 <input className={inputCls} value={a.nachmieterName} onChange={(e) => set('nachmieterName', e.target.value)} placeholder="Vorname Name" />
               </Field>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.nachmieterZahlungsfaehig}
-                  onChange={(e) => set('nachmieterZahlungsfaehig', e.target.checked)} />
-                <span>Zahlungsfähigkeit ist belegbar (Betreibungsauszug, Lohnnachweis)</span>
-              </label>
-              <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                <input type="checkbox" className="mt-0.5" checked={a.uebernahmeGleicheBedingungen}
-                  onChange={(e) => set('uebernahmeGleicheBedingungen', e.target.checked)} />
-                <span>Übernahme zu den GLEICHEN Vertragsbedingungen ist zugesichert</span>
-              </label>
+              <Checkbox
+                checked={a.nachmieterZahlungsfaehig}
+                onChange={(v) => set('nachmieterZahlungsfaehig', v)}
+                label={<><span>Zahlungsfähigkeit ist belegbar (Betreibungsauszug, Lohnnachweis)</span></>} />
+              <Checkbox
+                checked={a.uebernahmeGleicheBedingungen}
+                onChange={(v) => set('uebernahmeGleicheBedingungen', v)}
+                label={<><span>Übernahme zu den GLEICHEN Vertragsbedingungen ist zugesichert</span></>} />
             </div>
           )}
           <Field label="Gewünschtes Rückgabedatum" optional hint="für die Übergabe-Bitte im Schreiben">

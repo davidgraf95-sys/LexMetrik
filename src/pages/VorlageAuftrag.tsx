@@ -5,7 +5,7 @@ import {
 import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -118,7 +118,6 @@ export function VorlageAuftrag() {
           <Field label="Beginn des Auftrags" optional>
             <DatumsFeld value={a.beginn} onChange={(v) => set('beginn', v)} className={inputCls} />
           </Field>
-
           <Field label="Vergütung">
             <div className="grid grid-cols-3 gap-2">
               {VERGUETUNG_OPTIONEN.map((v) => (
@@ -140,27 +139,22 @@ export function VorlageAuftrag() {
               <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.stundensatzCHF} onChange={(e) => set('stundensatzCHF', e.target.value)} placeholder="z. B. 250.00" />
             </Field>
           )}
-
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.auslagenErsatz}
-              onChange={(e) => set('auslagenErsatz', e.target.checked)} />
-            <span><strong>Auslagen- und Verwendungsersatz</strong> ausdrücklich aufnehmen <span className="text-ink-500">(gesetzliche Pflicht, Art. 402 Abs. 1 OR)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.weisungsKlausel}
-              onChange={(e) => set('weisungsKlausel', e.target.checked)} />
-            <span><strong>Weisungsbindung</strong> aufnehmen <span className="text-ink-500">(Art. 397 Abs. 1 OR)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.substitution}
-              onChange={(e) => set('substitution', e.target.checked)} />
-            <span>Beizug <strong>Dritter zur Ausführung</strong> zulassen <span className="text-ink-500">(sonst persönliche Besorgung, Art. 398 Abs. 3 OR)</span></span>
-          </label>
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.vollmachtErweitert}
-              onChange={(e) => set('vollmachtErweitert', e.target.checked)} />
-            <span><strong>Besondere Ermächtigung</strong> erteilen <span className="text-ink-500">(für Vergleich, Grundstücke usw. – Art. 396 Abs. 3 OR)</span></span>
-          </label>
+          <Checkbox
+            checked={a.auslagenErsatz}
+            onChange={(v) => set('auslagenErsatz', v)}
+            label={<><span><strong>Auslagen- und Verwendungsersatz</strong> ausdrücklich aufnehmen <span className="text-ink-500">(gesetzliche Pflicht, Art. 402 Abs. 1 OR)</span></span></>} />
+          <Checkbox
+            checked={a.weisungsKlausel}
+            onChange={(v) => set('weisungsKlausel', v)}
+            label={<><span><strong>Weisungsbindung</strong> aufnehmen <span className="text-ink-500">(Art. 397 Abs. 1 OR)</span></span></>} />
+          <Checkbox
+            checked={a.substitution}
+            onChange={(v) => set('substitution', v)}
+            label={<><span>Beizug <strong>Dritter zur Ausführung</strong> zulassen <span className="text-ink-500">(sonst persönliche Besorgung, Art. 398 Abs. 3 OR)</span></span></>} />
+          <Checkbox
+            checked={a.vollmachtErweitert}
+            onChange={(v) => set('vollmachtErweitert', v)}
+            label={<><span><strong>Besondere Ermächtigung</strong> erteilen <span className="text-ink-500">(für Vergleich, Grundstücke usw. – Art. 396 Abs. 3 OR)</span></span></>} />
         </div>
       );
 

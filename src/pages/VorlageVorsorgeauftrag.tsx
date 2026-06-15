@@ -5,7 +5,7 @@ import {
 } from '../lib/vorlagen/vorsorgeauftrag';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from '../components/vorlagen/wizard';
@@ -97,20 +97,22 @@ export function VorlageVorsorgeauftrag() {
         <div className="space-y-5">
           <div className="space-y-2">
             <GruppenTitel>Errichtungsvoraussetzungen (Art. 13 ZGB)</GruppenTitel>
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.volljaehrig} onChange={(e) => set('volljaehrig', e.target.checked)} />
-              Ich bin volljährig (Art. 14 ZGB)
-            </label>
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.urteilsfaehigBestaetigt} onChange={(e) => set('urteilsfaehigBestaetigt', e.target.checked)} />
-              Ich bin urteilsfähig (Art. 16 ZGB) – bei hohem Alter wird ein ärztliches Zeugnis zur Urteilsfähigkeit empfohlen
-            </label>
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.keineUmfassendeBeistandschaft} onChange={(e) => set('keineUmfassendeBeistandschaft', e.target.checked)} />
-              Ich stehe nicht unter umfassender Beistandschaft (Art. 398 ZGB)
-            </label>
+            <Checkbox
+              checked={a.volljaehrig}
+              onChange={(v) => set('volljaehrig', v)}
+              label={<>Ich bin volljährig (Art. 14 ZGB)
+                            </>} />
+            <Checkbox
+              checked={a.urteilsfaehigBestaetigt}
+              onChange={(v) => set('urteilsfaehigBestaetigt', v)}
+              label={<>Ich bin urteilsfähig (Art. 16 ZGB) – bei hohem Alter wird ein ärztliches Zeugnis zur Urteilsfähigkeit empfohlen
+                            </>} />
+            <Checkbox
+              checked={a.keineUmfassendeBeistandschaft}
+              onChange={(v) => set('keineUmfassendeBeistandschaft', v)}
+              label={<>Ich stehe nicht unter umfassender Beistandschaft (Art. 398 ZGB)
+                            </>} />
           </div>
-
           <div className="space-y-2">
             <GruppenTitel>Form (Art. 361 ZGB)</GruppenTitel>
             <SelectionGrid
@@ -225,10 +227,10 @@ export function VorlageVorsorgeauftrag() {
                 </button>
               </div>
               {VA_MODULE[ber.id].map((m) => (
-                <label key={m.id} className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" className="mt-0.5" checked={a.module[ber.id].includes(m.id)} onChange={() => toggleModul(ber.id, m.id)} />
-                  {m.label}
-                </label>
+                <Checkbox
+                  checked={a.module[ber.id].includes(m.id)}
+                  onChange={() => toggleModul(ber.id, m.id)}
+                  label={<>{m.label}</>} />
               ))}
             </div>
           ))}
@@ -245,20 +247,18 @@ export function VorlageVorsorgeauftrag() {
         <div className="space-y-5">
           <div className="space-y-2">
             <GruppenTitel>Sondervollmachten</GruppenTitel>
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.schenkungenErlaubt} onChange={(e) => set('schenkungenErlaubt', e.target.checked)} />
-              <span>Übliche Gelegenheitsgeschenke erlauben <span className="text-ink-500">(Schranke: Art. 240 Abs. 2 OR)</span></span>
-            </label>
-            <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-              <input type="checkbox" className="mt-0.5" checked={a.besondereGeschaefte} onChange={(e) => set('besondereGeschaefte', e.target.checked)} />
-              <span>Besondere Geschäfte ausdrücklich ermächtigen: Vergleich, Schiedsvereinbarung, Wechsel <span className="text-ink-500">(Art. 396 Abs. 3 OR)</span></span>
-            </label>
+            <Checkbox
+              checked={a.schenkungenErlaubt}
+              onChange={(v) => set('schenkungenErlaubt', v)}
+              label={<><span>Übliche Gelegenheitsgeschenke erlauben <span className="text-ink-500">(Schranke: Art. 240 Abs. 2 OR)</span></span></>} />
+            <Checkbox
+              checked={a.besondereGeschaefte}
+              onChange={(v) => set('besondereGeschaefte', v)}
+              label={<><span>Besondere Geschäfte ausdrücklich ermächtigen: Vergleich, Schiedsvereinbarung, Wechsel <span className="text-ink-500">(Art. 396 Abs. 3 OR)</span></span></>} />
           </div>
-
           <Field label="Weisungen für die Erfüllung der Aufgaben" optional hint="Art. 360 Abs. 2 ZGB – z. B. Anlagegrundsätze, Wohnwünsche">
             <textarea className={inputCls} rows={3} value={a.weisungen ?? ''} onChange={(e) => set('weisungen', e.target.value)} />
           </Field>
-
           <div className="space-y-2">
             <GruppenTitel>Entschädigung (Art. 366 ZGB)</GruppenTitel>
             <div className="flex flex-wrap gap-1.5" role="group" aria-label="Entschädigung">
@@ -289,19 +289,19 @@ export function VorlageVorsorgeauftrag() {
 
       case 'abschluss': return (
         <div className="space-y-4">
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.pvVorhanden} onChange={(e) => set('pvVorhanden', e.target.checked)} />
-            <span>Auf meine separate Patientenverfügung verweisen <span className="text-ink-500">(geht bei medizinischen Massnahmen vor)</span></span>
-          </label>
+          <Checkbox
+            checked={a.pvVorhanden}
+            onChange={(v) => set('pvVorhanden', v)}
+            label={<><span>Auf meine separate Patientenverfügung verweisen <span className="text-ink-500">(geht bei medizinischen Massnahmen vor)</span></span></>} />
           {a.pvVorhanden && (
             <Field label="Hinterlegungsort der Patientenverfügung" optional>
               <input className={inputCls} value={a.pvHinterlegung ?? ''} onChange={(e) => set('pvHinterlegung', e.target.value)} placeholder="z. B. Hausarztpraxis Dr. X" />
             </Field>
           )}
-          <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-            <input type="checkbox" className="mt-0.5" checked={a.ersetztFruehere} onChange={(e) => set('ersetztFruehere', e.target.checked)} />
-            <span>Frühere Vorsorgeaufträge ersetzen <span className="text-ink-500">(Art. 362 Abs. 3 ZGB)</span></span>
-          </label>
+          <Checkbox
+            checked={a.ersetztFruehere}
+            onChange={(v) => set('ersetztFruehere', v)}
+            label={<><span>Frühere Vorsorgeaufträge ersetzen <span className="text-ink-500">(Art. 362 Abs. 3 ZGB)</span></span></>} />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Ort" optional><input className={inputCls} value={a.ort ?? ''} onChange={(e) => set('ort', e.target.value)} placeholder="z. B. Basel" /></Field>
             {eigenhaendig ? (
