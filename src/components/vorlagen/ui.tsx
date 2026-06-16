@@ -189,7 +189,7 @@ export function NormLink({ artikel, title, bemerkung }: { artikel: string; title
 // bewusst nur den Dialog-Inhalt (lc-card), nicht das Overlay — beides stellt
 // dieser Rahmen: zentriert, Klick auf den Backdrop schliesst. Rein
 // clientseitig gerendert (nur wenn offen, also nie im SSR/Prerender).
-function NormPopoverOverlay({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
+export function NormPopoverOverlay({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-ink-900/40 p-4"
@@ -205,7 +205,7 @@ function NormPopoverOverlay({ children, onClose }: { children: React.ReactNode; 
 
 // Lade-/Fallback-Inhalt, wenn (noch) kein Snapshot vorliegt. Esc + Fokus wie im
 // NormPopover; bei 'fehlt' der sichtbare Live-Link (§8) statt Volltext.
-function NormPopoverHuelle({ zustand, url, artikel, onClose }: {
+export function NormPopoverHuelle({ zustand, url, artikel, onClose }: {
   zustand: 'laedt' | 'fehlt'; url: string; artikel: string; onClose: () => void;
 }) {
   const schliessRef = useRef<HTMLButtonElement>(null);
