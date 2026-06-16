@@ -99,23 +99,31 @@ export function GruppenTitel({ children }: { children: React.ReactNode }) {
 //    nie doppelt geöffnet/navigiert.
 // SSR/Prerender: offen=false initial, kein Effekt läuft, der erste Render ist
 // byte-identisch zum heutigen <a> (Golden unverändert).
-export function NormLink({ artikel, title, bemerkung }: { artikel: string; title?: string; bemerkung?: string }) {
+export function NormChip({ artikel, anzeige, hrefOverride, title }: {
+  /** Norm-Text für die Snapshot-Auflösung (bundSnapshotRef) + Fallback-URL. */
+  artikel: string;
+  /** Anzeigetext im Chip (Default: artikel). */
+  anzeige?: React.ReactNode;
+  /** Bereits aufgelöste/lokalisierte Fallback-URL; wenn gesetzt, exakt diese
+   *  nutzen (z. B. wenn die Strecke n.url aus den Schema-Daten kennt). */
+  hrefOverride?: string;
+  /** title-Attribut — NUR rendern, wenn gesetzt (SSR-Byte-Gleichheit der
+   *  title-losen Einbaustellen). */
+  title?: string;
+}) {
   const { locale } = useLocale();
-  const roh = fedlexLinkFuerArtikel(artikel);
-  const url = roh ? fedlexLokalisiert(roh, locale) : null;
-  const inhalt = (
-    <>
-      {artikel}
-      {bemerkung && <span className="opacity-70"> · {bemerkung}</span>}
-    </>
-  );
+  const inhalt = anzeige ?? artikel;
+  // Fallback-URL: explizite Override hat Vorrang, sonst aus dem Artikel
+  // ableiten (wie das heutige NormLink).
+  const roh = hrefOverride ? null : fedlexLinkFuerArtikel(artikel);
+  const url = hrefOverride ?? (roh ? fedlexLokalisiert(roh, locale) : null);
 
   const triggerRef = useRef<HTMLAnchorElement>(null);
   const [offen, setOffen] = useState(false);
   // 'laedt' | NormSnapshot (geladen) | null (Snapshot nicht verfügbar)
   const [snapshot, setSnapshot] = useState<NormSnapshot | 'laedt' | null>('laedt');
 
-  // Kein Snapshot-Bezug → exakt das heutige Verhalten (Fallback).
+  // Keine Fallback-URL → exakt das heutige Verhalten (reiner span-Chip).
   if (!url) return <span className="lc-chip" title={title}>{inhalt}</span>;
 
   const ref = bundSnapshotRef(artikel);
@@ -140,7 +148,7 @@ export function NormLink({ artikel, title, bemerkung }: { artikel: string; title
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        title={title ?? `${artikel} auf Fedlex öffnen`}
+        {...(title ? { title } : {})}
         className="lc-chip no-underline hover:text-brass-700"
         onClick={beimKlick}
       >
@@ -154,6 +162,26 @@ export function NormLink({ artikel, title, bemerkung }: { artikel: string; title
         </NormPopoverOverlay>
       )}
     </>
+  );
+}
+
+/** Dünner Wrapper auf NormChip — bewahrt das heutige NormLink-Markup
+ *  byte-genau: der Default-title («… auf Fedlex öffnen») gilt nur, wenn der
+ *  Chip wirklich als Link rendert; im span-Fallback (unbekanntes Gesetz) bleibt
+ *  der title roh wie bisher (undefined → kein Attribut). */
+export function NormLink({ artikel, title, bemerkung }: { artikel: string; title?: string; bemerkung?: string }) {
+  const istLink = fedlexLinkFuerArtikel(artikel) !== null;
+  return (
+    <NormChip
+      artikel={artikel}
+      title={istLink ? (title ?? `${artikel} auf Fedlex öffnen`) : title}
+      anzeige={
+        <>
+          {artikel}
+          {bemerkung && <span className="opacity-70"> · {bemerkung}</span>}
+        </>
+      }
+    />
   );
 }
 
