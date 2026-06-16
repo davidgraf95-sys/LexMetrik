@@ -1,0 +1,82 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/211.11/art_4",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Gebührenverordnung des Obergerichts (GebV OG) (LS 211.11)",
+      "artikel": "4",
+      "artikelLabel": "§ 4 Abs. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühren betragen: StreitwertGrundgebühr (in Franken)(in Franken) bis1000 25% des Streitwertes, mind. Fr. 150 über1000 bis5000250 zuzügl.20%des Fr.1000übersteigenden Streitwertes über5000 bis200001050 zuzügl.14%des Fr.5000übersteigenden Streitwertes über20000 bis800003150 zuzügl.8%des Fr.20000übersteigenden Streitwertes über80000 bis3000007950 zuzügl.4%des Fr.80000übersteigenden Streitwertes über300000 bis1 Mio.16750 zuzügl.2%des Fr. 300000übersteigenden Streitwertes über1 Mio. bis10 Mio.30750 zuzügl.1%des Fr.1 Mio. übersteigenden Streitwertes über10 Mio.120750 zuzügl.0,5%des Fr.10 Mio. übersteigenden Streitwertes"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Grundgebühr kann unter Berücksichtigung des Zeitaufwandes des Gerichts und der Schwierigkeit des Falls ermässigt oder um bis zu einem Drittel, in Ausnahmefällen bis auf das Doppelte, erhöht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Streitigkeiten über wiederkehrende Nutzungen oder Leistungen gemäss Art. 92 ZPO wird die Grundgebühr in der Regel ermässigt."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "24e0de26cdb7479d88659182d197356d220bc504f8bdd29056935c9d7a7da0c7",
+      "sha": "bc0a7c30329c21ff251c152a986796e9d10310791455f509dce52c4a47f1b88d"
+    },
+    {
+      "id": "kanton/ZH/211.11/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Gebührenverordnung des Obergerichts (GebV OG) (LS 211.11)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei vermögensrechtlichen Streitigkeiten beträgt die Gebühr für das Schlichtungsverfahren: StreitwertGebühr (in Franken)(in Franken) bis100065–250 über1000bis10000250–420 über10000bis100000420–615 über100000615–1240"
+        },
+        {
+          "absatz": "2",
+          "text": "Bei nicht vermögensrechtlichen Streitigkeiten beträgt die Gebühr Fr. 100 bis Fr. 850."
+        },
+        {
+          "absatz": "3",
+          "text": "Entscheidet die Schlichtungsbehörde die Streitigkeit oder unterbreitet sie den Parteien einen Urteilsvorschlag, kann sie die Gebühr bis um die Hälfte erhöhen."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "24e0de26cdb7479d88659182d197356d220bc504f8bdd29056935c9d7a7da0c7",
+      "sha": "06382c101f99099a93c55ee588349b7a18e41e60c98c17c95cef5e964e0a5a03"
+    },
+    {
+      "id": "kanton/ZH/211.11/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Gebührenverordnung des Obergerichts (GebV OG) (LS 211.11)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei nicht vermögensrechtlichen Streitigkeiten wird die Gebühr nach dem tatsächlichen Streitinteresse, dem Zeitaufwand des Gerichts und der Schwierigkeit des Falles bemessen. Sie beträgt in der Regel Fr. 300 bis Fr. 13 000."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist im Rahmen von nicht vermögensrechtlichen Streitigkeiten auch über vermögensrechtliche Rechtsbegehren zu entscheiden, die das Verfahren aufwendig gestalten, kann die Gebühr bis zum Betrag erhöht werden, der für den Entscheid über die vermögensrechtlichen Rechtsbegehren allein zu erheben wäre."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "24e0de26cdb7479d88659182d197356d220bc504f8bdd29056935c9d7a7da0c7",
+      "sha": "1c97561f86827b7e07f98e977fd18e17439e170e712cd32362151c94af0c94c1"
+    }
+  ]
+}
