@@ -128,11 +128,17 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
     regel: { typ: 'rahmen', vonChf: 50, bisChf: 500 },
   },
   SH: {
-    kanton: 'SH', erlassName: 'Zivilprozessordnung für den Kanton Schaffhausen', erlassNr: 'SHR 273.100',
-    artikel: 'Art. 109', stand: '3.9.1951 (geltende Fassung)', verifiziert: 'doppelt',
-    quelleUrl: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/273.100',
-    hinweis: 'Friedensrichteramt: Vorstand CHF 50–100, je Vorladung +20, Weisung 50, Verfügungen 50–300.',
-    regel: { typ: 'rahmen', vonChf: 50, bisChf: 300 },
+    // Korrektur 16.6.2026 (§7, fachl. freigegeben David): bisher zitierte
+    // kantonale ZPO «SHR 273.100 Art. 109» (1951) wurde am 1.1.2011 mit der
+    // eidg. ZPO aufgehoben (totes Recht, LexWork-API 404). Geltend ist Art. 82
+    // Justizgesetz (JG): «Im Schlichtungsverfahren beträgt die Pauschalgebühr
+    // Fr. 100.00 bis Fr. 1'000.00, wenn das Verfahren nicht kostenlos ist.»
+    // Quelle: rechtsbuch.sh.ch JG 173.200, version_uid ce466f93…, i.K. 1.5.2026.
+    kanton: 'SH', erlassName: 'Justizgesetz (JG)', erlassNr: 'SHR 173.200',
+    artikel: 'Art. 82', stand: '1.5.2026', verifiziert: 'doppelt',
+    quelleUrl: 'https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200',
+    hinweis: 'Pauschalgebühr Schlichtungsverfahren (Art. 82 JG); entfällt, wenn das Verfahren kostenlos ist (Art. 113 Abs. 2 ZPO).',
+    regel: { typ: 'rahmen', vonChf: 100, bisChf: 1000 },
   },
   AR: {
     kanton: 'AR', erlassName: 'Gebührenordnung (Rechtskosten Zivil-/Strafrechtspflege)', erlassNr: 'bGS 233.3',

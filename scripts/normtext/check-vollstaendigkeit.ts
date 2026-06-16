@@ -114,12 +114,8 @@ const BEKANNTE_LUECKEN: BekannteLuecke[] = [
     notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
 
-  // ── SH/273.100: API-404 (Erlass nicht in LexWork gesnapshottet)
-  {
-    snapshotId: 'kanton/SH/273.100/art_109',
-    grund: 'fetch-404',
-    notiz: 'SH-273.100 LexWork-API liefert 404 (Stand 16.6.2026).',
-  },
+  // (SH/273.100 entfernt 16.6.2026: ZPO 1951 am 1.1.2011 aufgehoben; SH-Schlichtung
+  //  zitiert neu Art. 82 JG SHR 173.200, das via LexWork sauber snapshottet — kein 404 mehr.)
 
   // ── OW/210.32: nurPdf
   {
