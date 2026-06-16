@@ -3,8 +3,46 @@ import { describe, expect, it, vi, afterEach } from 'vitest';
 import {
   extrahiereLexWorkArtikel,
   holeLexWork,
+  inKraftSeit,
 } from '../../scripts/normtext/adapter-lexwork';
 import { LEXWORK_XHTML_BEISPIEL } from './fixtures/lexwork-beispiel';
+
+describe('inKraftSeit — reines Parsing ohne Netz', () => {
+  it('extrahiert «in Kraft seit: DD.MM.YYYY» aus echtem LexWork-String und liefert ISO', () => {
+    expect(
+      inKraftSeit(
+        'Aktuelle Version in Kraft seit: 01.01.2026 (Beschlussdatum: 26.11.2025)',
+        '2012-01-01',
+      ),
+    ).toBe('2026-01-01');
+  });
+
+  it('verarbeitet «In Kraft seit:» (Grossbuchstabe)', () => {
+    expect(inKraftSeit('In Kraft seit: 15.03.2025', '2010-06-01')).toBe('2025-03-15');
+  });
+
+  it('liefert enactment als Fallback wenn kein «in Kraft seit» vorhanden', () => {
+    expect(inKraftSeit('Keine Datumsinfo', '2012-01-01')).toBe('2012-01-01');
+  });
+
+  it('liefert enactment als Fallback bei leerem versionDatesStr', () => {
+    expect(inKraftSeit('', '2012-01-01')).toBe('2012-01-01');
+  });
+
+  it('liefert enactment als Fallback bei undefined versionDatesStr', () => {
+    expect(inKraftSeit(undefined, '2012-01-01')).toBe('2012-01-01');
+  });
+
+  it('liefert leeren String wenn beide leer/undefined', () => {
+    expect(inKraftSeit(undefined, undefined)).toBe('');
+    expect(inKraftSeit('', '')).toBe('');
+    expect(inKraftSeit(undefined, '')).toBe('');
+  });
+
+  it('liefert leeren String wenn versionDatesStr fehlt und enactment kein ISO-Format hat', () => {
+    expect(inKraftSeit(undefined, 'falsch')).toBe('');
+  });
+});
 
 describe('extrahiereLexWorkArtikel — gegen echte ZG-Fixture', () => {
   it('extrahiert § 1 (ein Absatz)', () => {
@@ -95,7 +133,7 @@ describe('holeLexWork — mit gemocktem fetch', () => {
       titel: 'Kostenverordnung',
       abkuerzung: 'KoV OG',
       versionUid: 'abc123',
-      stand: '2012-01-01',
+      stand: '2026-01-01',
       pdfUrl: 'https://bgs.zg.ch/api/de/versions/2963/pdf_file',
       nurPdf: false,
     });

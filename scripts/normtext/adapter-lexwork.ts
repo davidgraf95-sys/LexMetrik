@@ -135,13 +135,39 @@ function parseSegment(segment: string): LexArtikel {
   return { bloecke };
 }
 
-/** ISO-Datum (YYYY-MM-DD) aus version_dates_str «… in Kraft seit: DD.MM.YYYY …»
- *  ziehen, falls vorhanden. Sonst null. */
-function inkraftAusDatesStr(s: string | undefined | null): string | null {
-  if (!s) return null;
-  const m = s.match(/(\d{2})\.(\d{2})\.(\d{4})/);
-  if (!m) return null;
-  return `${m[3]}-${m[2]}-${m[1]}`;
+/**
+ * Leitet das In-Kraft-Datum der geltenden Fassung aus `versionDatesStr` ab.
+ *
+ * Primat: Datum nach «in Kraft seit:» (oder «In Kraft seit:») in DD.MM.YYYY
+ * → konvertiert zu ISO YYYY-MM-DD.
+ * Fallback: `enactment` (ISO), falls kein «in Kraft seit»-Datum parsebar ist.
+ * Beide leer/undefined → ''.
+ *
+ * Wird für kantonale Snapshots verwendet. Bund-Stand bleibt unverändert
+ * (Fedlex-Konsolidierungsdatum ist bereits das korrekte In-Kraft-Datum).
+ *
+ * @example
+ * inKraftSeit("Aktuelle Version in Kraft seit: 01.01.2026 (Beschlussdatum: 26.11.2025)", "2012-01-01")
+ * // → "2026-01-01"
+ */
+export function inKraftSeit(
+  versionDatesStr: string | undefined,
+  enactment: string | undefined,
+): string {
+  if (versionDatesStr) {
+    // Suche explizit nach «in Kraft seit:» gefolgt von DD.MM.YYYY
+    const m = versionDatesStr.match(
+      /[Ii]n\s+[Kk]raft\s+seit\s*:\s*(\d{2})\.(\d{2})\.(\d{4})/,
+    );
+    if (m) {
+      return `${m[3]}-${m[2]}-${m[1]}`;
+    }
+  }
+  // Fallback: enactment (bereits ISO), sofern gültig
+  if (enactment && /^\d{4}-\d{2}-\d{2}$/.test(enactment)) {
+    return enactment;
+  }
+  return '';
 }
 
 /**
@@ -149,7 +175,8 @@ function inkraftAusDatesStr(s: string | undefined | null): string | null {
  *
  * - structured_document_id null/fehlt ODER xhtml_tol falsy → meta.nurPdf=true,
  *   artikel={} (kein Crash; Alt-Erlass nur als PDF).
- * - stand: ISO aus enactment, sonst aus current_version.version_dates_str.
+ * - stand: In-Kraft-Datum aus current_version.version_dates_str (DD.MM.YYYY nach «in Kraft seit:»),
+ *   Fallback selected_version.version_dates_str, Endfallback enactment (Erlass-Datum).
  * - versionUid: text_of_law.version_uid (Drift-Token).
  *
  * Reine Netz-Hülle; die Parser-Logik bleibt in extrahiereLexWorkArtikel testbar.
@@ -179,6 +206,7 @@ export async function holeLexWork(
         xhtml_tol?: string | null;
         pdf_link_tol?: string | null;
         structured_document_id?: number | null;
+        version_dates_str?: string;
       } | null;
     };
   };
@@ -195,12 +223,13 @@ export async function holeLexWork(
   const xhtml = sel?.xhtml_tol ?? null;
   const nurPdf = structuredId == null || !xhtml;
 
-  const stand =
-    (tol.enactment && /^\d{4}-\d{2}-\d{2}$/.test(tol.enactment)
-      ? tol.enactment
-      : null) ??
-    inkraftAusDatesStr(cur?.version_dates_str) ??
-    '';
+  // Primat: version_dates_str der current_version (enthält «in Kraft seit: DD.MM.YYYY»)
+  // Sekundär: selected_version.version_dates_str (Fallback für ältere LexWork-Antworten)
+  // Endfallback: enactment (Erlass-Datum als Notlösung)
+  const stand = inKraftSeit(
+    cur?.version_dates_str ?? sel?.version_dates_str,
+    tol.enactment,
+  );
 
   const meta: LexWorkErgebnis['meta'] = {
     titel: tol.title ?? '',
