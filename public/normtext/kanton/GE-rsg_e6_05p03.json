@@ -11,107 +11,61 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "en matière immobilière"
+          "text": "en matière immobilière",
+          "items": [
+            {
+              "marke": "7‰",
+              "text": "jusqu’à 200 000 francs, au minimum 200 francs"
+            },
+            {
+              "marke": "6‰",
+              "text": "de 200 001 francs à 400 000 francs"
+            },
+            {
+              "marke": "4,5‰",
+              "text": "de 400 001 francs à 800 000 francs"
+            },
+            {
+              "marke": "4‰",
+              "text": "de 800 001 francs à 1 000 000 de francs"
+            },
+            {
+              "marke": "3,5‰",
+              "text": "de 1 000 001 francs à 1 500 000 francs"
+            },
+            {
+              "marke": "3‰",
+              "text": "de 1 500 001 francs à 2 000 000 de francs"
+            },
+            {
+              "marke": "2,5‰",
+              "text": "de 2 000 001 francs à 3 500 000 francs"
+            },
+            {
+              "marke": "2‰",
+              "text": "de 3 500 001 francs à 5 000 000 de francs"
+            },
+            {
+              "marke": "1,5‰",
+              "text": "de 5 000 001 francs à 7 500 000 francs"
+            },
+            {
+              "marke": "1‰",
+              "text": "de 7 500 001 francs à 10 000 000 de francs"
+            },
+            {
+              "marke": "0,75‰",
+              "text": "de 10 000 001 francs à 20 000 000 de francs"
+            },
+            {
+              "marke": "0,5‰",
+              "text": "au-dessus de 20 000 000 de francs."
+            }
+          ]
         },
         {
           "absatz": "1",
           "text": "Pour les actes translatifs de propriété, tels que vente, échange, donation et droit de superficie distinct et permanent, l’émolument est fixé selon la valeur énoncée dans l’acte, ou retenue par l’enregistrement, soit :"
-        },
-        {
-          "absatz": null,
-          "text": "7‰"
-        },
-        {
-          "absatz": null,
-          "text": "jusqu’à 200 000 francs, au minimum 200 francs"
-        },
-        {
-          "absatz": null,
-          "text": "6‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 200 001 francs à 400 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "4,5‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 400 001 francs à 800 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "4‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 800 001 francs à 1 000 000 de francs"
-        },
-        {
-          "absatz": null,
-          "text": "3,5‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 1 000 001 francs à 1 500 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "3‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 1 500 001 francs à 2 000 000 de francs"
-        },
-        {
-          "absatz": null,
-          "text": "2,5‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 2 000 001 francs à 3 500 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "2‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 3 500 001 francs à 5 000 000 de francs"
-        },
-        {
-          "absatz": null,
-          "text": "1,5‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 5 000 001 francs à 7 500 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "1‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 7 500 001 francs à 10 000 000 de francs"
-        },
-        {
-          "absatz": null,
-          "text": "0,75‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 10 000 001 francs à 20 000 000 de francs"
-        },
-        {
-          "absatz": null,
-          "text": "0,5‰"
-        },
-        {
-          "absatz": null,
-          "text": "au-dessus de 20 000 000 de francs."
         },
         {
           "absatz": "2",
@@ -129,8 +83,8 @@
       "stand": "2015-04-30",
       "quelleUrl": "https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "fa4ffa8181afd04e0d2166b75ccd0df676a056231bb77bf3e76e084a278276c6",
-      "sha": "858af43ae4399485ac9d7827f91c2020e114a115dfd6b01b848e2a54ae30433f"
+      "fassungsToken": "7cedbe71d910107a3ffb6e10ad8611f78e5fd42157a57f3f94182646380a556e",
+      "sha": "e7f012898bb6f86fa9d58dfcec1b8f712590c481a020526354688c2f321ae4a5"
     },
     {
       "id": "kanton/GE/rsg_e6_05p03/art_12",
@@ -152,7 +106,7 @@
       "stand": "2015-04-30",
       "quelleUrl": "https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "fa4ffa8181afd04e0d2166b75ccd0df676a056231bb77bf3e76e084a278276c6",
+      "fassungsToken": "7cedbe71d910107a3ffb6e10ad8611f78e5fd42157a57f3f94182646380a556e",
       "sha": "1163791a7234c2aa8a89f017615e56da141918d1b7debfa063fdc52b0e1ed058"
     },
     {
@@ -171,7 +125,7 @@
       "stand": "2015-04-30",
       "quelleUrl": "https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "fa4ffa8181afd04e0d2166b75ccd0df676a056231bb77bf3e76e084a278276c6",
+      "fassungsToken": "7cedbe71d910107a3ffb6e10ad8611f78e5fd42157a57f3f94182646380a556e",
       "sha": "631ce5352e6cd00d55ef817952ce602477aaf886184ebcde25eb02205d5d7c28"
     },
     {
@@ -184,47 +138,29 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Pour constituer ou augmenter des gages immobiliers, l’émolument est fixé d’après le montant du gage ou de son augmentation, soit :"
-        },
-        {
-          "absatz": null,
-          "text": "5‰"
-        },
-        {
-          "absatz": null,
-          "text": "jusqu’à 200 000 francs, mais au minimum 100 francs"
-        },
-        {
-          "absatz": null,
-          "text": "4‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 200 001 francs à 500 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "3‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 500 001 francs à 2 000 000 de francs"
-        },
-        {
-          "absatz": null,
-          "text": "2‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 2 000 001 francs à 5 000 000 de francs"
-        },
-        {
-          "absatz": null,
-          "text": "1‰"
-        },
-        {
-          "absatz": null,
-          "text": "au-dessus de 5 000 000 de francs."
+          "text": "Pour constituer ou augmenter des gages immobiliers, l’émolument est fixé d’après le montant du gage ou de son augmentation, soit :",
+          "items": [
+            {
+              "marke": "5‰",
+              "text": "jusqu’à 200 000 francs, mais au minimum 100 francs"
+            },
+            {
+              "marke": "4‰",
+              "text": "de 200 001 francs à 500 000 francs"
+            },
+            {
+              "marke": "3‰",
+              "text": "de 500 001 francs à 2 000 000 de francs"
+            },
+            {
+              "marke": "2‰",
+              "text": "de 2 000 001 francs à 5 000 000 de francs"
+            },
+            {
+              "marke": "1‰",
+              "text": "au-dessus de 5 000 000 de francs."
+            }
+          ]
         },
         {
           "absatz": null,
@@ -254,8 +190,8 @@
       "stand": "2015-04-30",
       "quelleUrl": "https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "fa4ffa8181afd04e0d2166b75ccd0df676a056231bb77bf3e76e084a278276c6",
-      "sha": "84b942b91d814dda7a253b367cd45192b8e63915aecbb17979a63094743f0789"
+      "fassungsToken": "7cedbe71d910107a3ffb6e10ad8611f78e5fd42157a57f3f94182646380a556e",
+      "sha": "6b49539ffb3a8fdf06b520a917bac239d839f64aa2cd477aa2c53504f53de9c5"
     },
     {
       "id": "kanton/GE/rsg_e6_05p03/art_18",
@@ -277,7 +213,7 @@
       "stand": "2015-04-30",
       "quelleUrl": "https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "fa4ffa8181afd04e0d2166b75ccd0df676a056231bb77bf3e76e084a278276c6",
+      "fassungsToken": "7cedbe71d910107a3ffb6e10ad8611f78e5fd42157a57f3f94182646380a556e",
       "sha": "4882be436cfcecde3453a7e9d9065346202de0148a688b02bc65daae39f78b40"
     },
     {
@@ -290,75 +226,45 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "L'émolument relatif aux actes constitutifs est de 500 francs à 2 000 francs. Pour les fondations de sociétés unipersonnelles, l'émolument maximum est de 1 000 francs."
+          "text": "L'émolument relatif aux actes constitutifs est de 500 francs à 2 000 francs. Pour les fondations de sociétés unipersonnelles, l'émolument maximum est de 1 000 francs.",
+          "items": [
+            {
+              "marke": "7‰",
+              "text": "jusqu’à 50 000 francs"
+            },
+            {
+              "marke": "6‰",
+              "text": "de 50 001 francs à 100 000 francs"
+            },
+            {
+              "marke": "5‰",
+              "text": "de 100 001 francs à 200 000 francs"
+            },
+            {
+              "marke": "4‰",
+              "text": "de 200 001 francs à 300 000 francs"
+            },
+            {
+              "marke": "3‰",
+              "text": "de 300 001 francs à 400 000 francs"
+            },
+            {
+              "marke": "2‰",
+              "text": "de 400 001 francs à 500 000 francs"
+            },
+            {
+              "marke": "1‰",
+              "text": "de 500 001 francs à 10 000 000 de francs"
+            },
+            {
+              "marke": "0,5‰",
+              "text": "au-dessus de 10 000 000 de francs."
+            }
+          ]
         },
         {
           "absatz": "2",
           "text": "En outre, un émolument proportionnel au capital de fondation ou de dotation, ou d’augmentation, est perçu; il est de :"
-        },
-        {
-          "absatz": null,
-          "text": "7‰"
-        },
-        {
-          "absatz": null,
-          "text": "jusqu’à 50 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "6‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 50 001 francs à 100 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "5‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 100 001 francs à 200 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "4‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 200 001 francs à 300 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "3‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 300 001 francs à 400 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "2‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 400 001 francs à 500 000 francs"
-        },
-        {
-          "absatz": null,
-          "text": "1‰"
-        },
-        {
-          "absatz": null,
-          "text": "de 500 001 francs à 10 000 000 de francs"
-        },
-        {
-          "absatz": null,
-          "text": "0,5‰"
-        },
-        {
-          "absatz": null,
-          "text": "au-dessus de 10 000 000 de francs."
         },
         {
           "absatz": "3",
@@ -384,8 +290,8 @@
       "stand": "2015-04-30",
       "quelleUrl": "https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "fa4ffa8181afd04e0d2166b75ccd0df676a056231bb77bf3e76e084a278276c6",
-      "sha": "fbf704c6c9e6c430aa6bc9a820456b5cb0b7c376694adcb21872776c6c127d68"
+      "fassungsToken": "7cedbe71d910107a3ffb6e10ad8611f78e5fd42157a57f3f94182646380a556e",
+      "sha": "06f63c1192190f638042996ddf9172dafd766be027ee8c622b5017bd288199ee"
     },
     {
       "id": "kanton/GE/rsg_e6_05p03/art_26",
@@ -403,7 +309,7 @@
       "stand": "2015-04-30",
       "quelleUrl": "https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "fa4ffa8181afd04e0d2166b75ccd0df676a056231bb77bf3e76e084a278276c6",
+      "fassungsToken": "7cedbe71d910107a3ffb6e10ad8611f78e5fd42157a57f3f94182646380a556e",
       "sha": "7b922f5d738ec7a46c6e4bf005192bbebcbe14b6aa1aa4fafb624567ae2316ac"
     },
     {
@@ -422,7 +328,7 @@
       "stand": "2015-04-30",
       "quelleUrl": "https://silgeneve.ch/legis/program/books/rsg/htm/rsg_e6_05p03.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "fa4ffa8181afd04e0d2166b75ccd0df676a056231bb77bf3e76e084a278276c6",
+      "fassungsToken": "7cedbe71d910107a3ffb6e10ad8611f78e5fd42157a57f3f94182646380a556e",
       "sha": "33c768087da7277a5e256025411fecded7c1d70f49469d6e65380b7e1c7d837e"
     }
   ]

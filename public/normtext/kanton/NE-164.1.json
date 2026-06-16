@@ -11,7 +11,41 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Dans les affaires soumises à la procédure ordinaire ou à la procédure simplifiée, l'émolument forfaitaire de décision est fixé selon le tarif suivant : Fr. · Fr. · Fr. — - jusqu’à · 2'000.– · 500.– 900.– 1'000.– 1'200.– 13% de la valeur litigieuse — - de · 2'001.– · à · 5’000.– — - de · 5'001.– · à · 8’000.– — - de · 8'001.– · à · 10’000.– — - de · 10'001.– · à · 30’000.– — - de · 30'001.– · à · 100’000.– · 4'000.– + 3% de la valeur litigieuse supérieure à 30'000.– — - de · 100'001.– · à · 1'000’000.– · 6'500.– + 3% de la valeur litigieuse supérieure à 100'000.– — - en-dessus de · 1'000'000.– · 4% (jusqu’à 300'000.–)"
+          "text": "Dans les affaires soumises à la procédure ordinaire ou à la procédure simplifiée, l'émolument forfaitaire de décision est fixé selon le tarif suivant :",
+          "items": [
+            {
+              "marke": "- jusqu’à 2'000.–",
+              "text": "500.–"
+            },
+            {
+              "marke": "- de 2'001.– à 5’000.–",
+              "text": "900.–"
+            },
+            {
+              "marke": "- de 5'001.– à 8’000.–",
+              "text": "1'000.–"
+            },
+            {
+              "marke": "- de 8'001.– à 10’000.–",
+              "text": "1'200.–"
+            },
+            {
+              "marke": "- de 10'001.– à 30’000.–",
+              "text": "13% de la valeur litigieuse"
+            },
+            {
+              "marke": "- de 30'001.– à 100’000.–",
+              "text": "4'000.– + 3% de la valeur litigieuse supérieure à 30'000.–"
+            },
+            {
+              "marke": "- de 100'001.– à 1'000’000.–",
+              "text": "6'500.– + 3% de la valeur litigieuse supérieure à 100'000.–"
+            },
+            {
+              "marke": "- en-dessus de 1'000'000.–",
+              "text": "4% (jusqu’à 300'000.–)"
+            }
+          ]
         },
         {
           "absatz": null,
@@ -33,8 +67,8 @@
       "stand": "2023-04-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2024/20245/htm/164.1.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "5ee95f4a0688403f938189d5d20644e70ccf465bb7d1a6bfc5ac4f6c6f54ec14",
-      "sha": "bda2a3a05c8ce1504c29a8aee208f85f828d7a450541798830f901d355f1aef6"
+      "fassungsToken": "a111a54c8c2fe1d038fea2869a5a7dfd95af2aabbe00a9e77e4f26a2ae7ed0d9",
+      "sha": "d6995086818fb98a30d7aff9edaba952cf313fed1fd2cb062458a6d0ce995a68"
     },
     {
       "id": "kanton/NE/164.1/art_11",
@@ -46,7 +80,41 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "L'émolument forfaitaire de conciliation est fixé selon le tarif suivant : Fr. · Fr. — - jusqu'à 2'000.- · 300.- — - de 2'001.- à 5'000.- · 400.- — - de 5'001.- à 8'000.- · 500.- — - de 8'001.- à 10'000.- · 6 00.- — - de 10'001.- à 30'000.- · 1'000.- — - de 30'001.- à 100'000.- · 1'300.- — - de 100'001.- à 500'000.- · 1'900.- — - en-dessus de 500'000.- · 2'500.-"
+          "text": "L'émolument forfaitaire de conciliation est fixé selon le tarif suivant :",
+          "items": [
+            {
+              "marke": "- jusqu'à 2'000.-",
+              "text": "300.-"
+            },
+            {
+              "marke": "- de 2'001.- à 5'000.-",
+              "text": "400.-"
+            },
+            {
+              "marke": "- de 5'001.- à 8'000.-",
+              "text": "500.-"
+            },
+            {
+              "marke": "- de 8'001.- à 10'000.-",
+              "text": "6 00.-"
+            },
+            {
+              "marke": "- de 10'001.- à 30'000.-",
+              "text": "1'000.-"
+            },
+            {
+              "marke": "- de 30'001.- à 100'000.-",
+              "text": "1'300.-"
+            },
+            {
+              "marke": "- de 100'001.- à 500'000.-",
+              "text": "1'900.-"
+            },
+            {
+              "marke": "- en-dessus de 500'000.-",
+              "text": "2'500.-"
+            }
+          ]
         },
         {
           "absatz": "1bis",
@@ -64,8 +132,8 @@
       "stand": "2023-04-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2024/20245/htm/164.1.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "5ee95f4a0688403f938189d5d20644e70ccf465bb7d1a6bfc5ac4f6c6f54ec14",
-      "sha": "f241d04f92e0c7798f4daa8d9a57f7b6503ceb31e6c22456bc5607baf2e6080a"
+      "fassungsToken": "a111a54c8c2fe1d038fea2869a5a7dfd95af2aabbe00a9e77e4f26a2ae7ed0d9",
+      "sha": "27b186634da0a9202e0fe4d35b0bcc12447743dd8b7faed0a205554d0c6ae66d"
     },
     {
       "id": "kanton/NE/164.1/art_58",
@@ -87,7 +155,7 @@
       "stand": "2023-04-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2024/20245/htm/164.1.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "5ee95f4a0688403f938189d5d20644e70ccf465bb7d1a6bfc5ac4f6c6f54ec14",
+      "fassungsToken": "a111a54c8c2fe1d038fea2869a5a7dfd95af2aabbe00a9e77e4f26a2ae7ed0d9",
       "sha": "16240ab965a0a3609d563231b28d71d5b1c9d57283f1e3b77d52afb042e6435a"
     },
     {
@@ -100,7 +168,45 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Les honoraires, taxe sur la valeur ajoutée (TVA) non comprise, sont fixés selon le tarif suivant : Fr. · Fr. · Fr. — - jusqu’à · 8'000.– · jusqu'à · 2'500.– — - de · 8'001.– · à · 20'000,– · jusqu'à · 5'000.– — - de · 20'001.– · à · 50'000.– · jusqu'à · 10'000.– — - de · 50'001.– · à · 100'000.– · jusqu'à · 15'000.– — - de · 100'001.– · à · 200'000.– · jusqu'à · 25'000.– — - de · 200'001.– · à · 500'000.– · jusqu'à · 35'000.– — - de · 500'001.– · à · 1'000'000.– · jusqu'à · 45'000.– — - de · 1'000'001.– · à · 2'000'000.– · jusqu'à · 55'000.– — - en-dessus de · 2'000'000.– · jusqu'à · 3%"
+          "text": "Les honoraires, taxe sur la valeur ajoutée (TVA) non comprise, sont fixés selon le tarif suivant :",
+          "items": [
+            {
+              "marke": "- jusqu’à 8'000.– jusqu'à",
+              "text": "2'500.–"
+            },
+            {
+              "marke": "- de 8'001.– à 20'000,– jusqu'à",
+              "text": "5'000.–"
+            },
+            {
+              "marke": "- de 20'001.– à 50'000.– jusqu'à",
+              "text": "10'000.–"
+            },
+            {
+              "marke": "- de 50'001.– à 100'000.– jusqu'à",
+              "text": "15'000.–"
+            },
+            {
+              "marke": "- de 100'001.– à 200'000.– jusqu'à",
+              "text": "25'000.–"
+            },
+            {
+              "marke": "- de 200'001.– à 500'000.– jusqu'à",
+              "text": "35'000.–"
+            },
+            {
+              "marke": "- de 500'001.– à 1'000'000.– jusqu'à",
+              "text": "45'000.–"
+            },
+            {
+              "marke": "- de 1'000'001.– à 2'000'000.– jusqu'à",
+              "text": "55'000.–"
+            },
+            {
+              "marke": "- en-dessus de 2'000'000.– jusqu'à",
+              "text": "3%"
+            }
+          ]
         },
         {
           "absatz": "2",
@@ -110,8 +216,8 @@
       "stand": "2023-04-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2024/20245/htm/164.1.htm",
       "abgerufen": "2026-06-16",
-      "fassungsToken": "5ee95f4a0688403f938189d5d20644e70ccf465bb7d1a6bfc5ac4f6c6f54ec14",
-      "sha": "b634e19e5f418c46a5b97de7fdf5a7bfebc035f217e116f19756adb5262665de"
+      "fassungsToken": "a111a54c8c2fe1d038fea2869a5a7dfd95af2aabbe00a9e77e4f26a2ae7ed0d9",
+      "sha": "9d8a21b2b8a8e6a97b449d3be0e23899df35a1b06b0d6658efa561c9fc4c58a6"
     }
   ]
 }
