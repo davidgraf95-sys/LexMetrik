@@ -107,6 +107,76 @@ describe('staffel_sockel_prozent – Charakterisierung gegen ZH GebV OG § 4 Abs
   });
 });
 
+describe('staffel_sockel_prozent – ehrliche Spanne (§8): Rahmen unter der Schwelle', () => {
+  // BS Notariatstarif Ziff. 33 lit. a (AG/GmbH-Gründung): Kapital < CHF 100'000
+  // → Ermessens-Rahmen 750–2000; ab 100'000 fix 2000 + marginal (degressiv).
+  const bs: TarifRegel = {
+    typ: 'staffel_sockel_prozent',
+    baender: [
+      { bisChf: 200_000, sockelChf: 2_000, abChf: 100_000, prozent: 0.24, minChf: 750, maxChf: 50_000, unterAbRahmen: true },
+      { bisChf: 1_000_000, sockelChf: 2_240, abChf: 200_000, prozent: 0.22, minChf: 750, maxChf: 50_000 },
+    ],
+  };
+  it('liefert unter der Schwelle die Spanne [minChf, sockelChf] statt eines Punktwerts', () => {
+    const e = auswertenTarif(bs, 50_000);
+    expect(e.deterministisch).toBe(false);
+    if (!e.deterministisch) { expect(e.vonChf).toBe(750); expect(e.bisChf).toBe(2_000); }
+  });
+  it('an der Schwelle (100k) deterministisch der Sockel, nicht die Spanne', () => {
+    expect(betrag(bs, 100_000)).toBe(2_000);
+  });
+  it('über der Schwelle deterministisch Sockel + Marginalzuschlag', () => {
+    expect(betrag(bs, 150_000)).toBe(2_120); // 2000 + 0,24 % von 50'000
+  });
+});
+
+describe('staffel_sockel_prozent – ehrliche Spanne (§8): regel-weiter Ermessens-Aufschlag', () => {
+  // BS Stiftung Ziff. 1: Grundgebühr-Rahmen 400–2000 (Untergrenze = sockelChf 400,
+  // Aufschlag bis +1600), ab 500k zusätzlich 0,15 % marginal.
+  const stiftung: TarifRegel = {
+    typ: 'staffel_sockel_prozent', aufschlagVonChf: 0, aufschlagBisChf: 1_600,
+    baender: [{ bisChf: Infinity, sockelChf: 400, abChf: 500_000, prozent: 0.15, maxChf: 50_000 }],
+  };
+  it('unter der Schwelle die reine Grundgebühr-Spanne', () => {
+    const e = auswertenTarif(stiftung, 300_000);
+    expect(e.deterministisch).toBe(false);
+    if (!e.deterministisch) { expect(e.vonChf).toBe(400); expect(e.bisChf).toBe(2_000); }
+  });
+  it('über der Schwelle: deterministischer Marginalanteil verschiebt beide Ränder', () => {
+    const e = auswertenTarif(stiftung, 700_000); // det 400 + 0,15 % von 200'000 = 700
+    if (!e.deterministisch) { expect(e.vonChf).toBe(700); expect(e.bisChf).toBe(2_300); }
+  });
+
+  // NW Kapitalerhöhung § 37: § 36-Wertstaffel (VR-Beschluss) + § 40-Rahmen
+  // 300–2000 (GV-Beschluss) als additiver Aufschlag (aufVon 300, aufBis 2000).
+  const nw: TarifRegel = {
+    typ: 'staffel_sockel_prozent', aufschlagVonChf: 300, aufschlagBisChf: 2_000,
+    baender: [
+      { bisChf: 500_000, sockelChf: 1_000, abChf: 200_000, prozent: 0.3, minChf: 1_000 },
+      { bisChf: Infinity, sockelChf: 1_900, abChf: 500_000, prozent: 0.2, minChf: 1_000 },
+    ],
+  };
+  it('reproduziert § 36-Staffel + § 40-Rahmen [300, 2000] als Spanne', () => {
+    const e100 = auswertenTarif(nw, 100_000); // §36=1000 → [1300, 3000]
+    if (!e100.deterministisch) { expect(e100.vonChf).toBe(1_300); expect(e100.bisChf).toBe(3_000); }
+    const e300 = auswertenTarif(nw, 300_000); // §36=1300 → [1600, 3300]
+    if (!e300.deterministisch) { expect(e300.vonChf).toBe(1_600); expect(e300.bisChf).toBe(3_300); }
+    const e1m = auswertenTarif(nw, 1_000_000); // §36=2900 → [3200, 4900]
+    if (!e1m.deterministisch) { expect(e1m.vonChf).toBe(3_200); expect(e1m.bisChf).toBe(4_900); }
+  });
+
+  // GE Art. 25 REmNot: émolument de base 500–2000 (sockelChf 500, aufBis 1500)
+  // PLUS émolument proportionnel al. 2 (im Sockel kumuliert).
+  it('GE-Typ Grundgebühr-Rahmen über Wertstaffel: Spanne wandert mit dem Wertanteil', () => {
+    const ge: TarifRegel = {
+      typ: 'staffel_sockel_prozent', aufschlagBisChf: 1_500,
+      baender: [{ bisChf: 50_000, sockelChf: 500, abChf: 0, prozent: 0.7 }, { bisChf: Infinity, sockelChf: 850, abChf: 50_000, prozent: 0.6 }],
+    };
+    const e = auswertenTarif(ge, 50_000); // det 500 + 0,7 % × 50'000 = 850
+    if (!e.deterministisch) { expect(e.vonChf).toBe(850); expect(e.bisChf).toBe(2_350); }
+  });
+});
+
 describe('staffel_voll_prozent – Charakterisierung gegen AG GebührD § 7 Abs. 1', () => {
   const ag: TarifRegel = {
     typ: 'staffel_voll_prozent',

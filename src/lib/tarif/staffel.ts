@@ -62,6 +62,14 @@ export interface SockelProzentBand {
   minChf?: number;
   /** Höchstbetrag des Bandes (Deckel), z. B. NE >1 Mio: 4 %, max CHF 300'000. */
   maxChf?: number;
+  /** §8 ehrliche Spanne, Variante (a) «Rahmen unter der Schwelle»: Unterhalb von
+   *  `abChf` ist die Grundgebühr ein behördlicher Ermessens-RAHMEN
+   *  [minChf, sockelChf] statt des Punktwerts sockelChf; an UND über der Schwelle
+   *  deterministisch (der Rahmen «kollabiert» auf sockelChf, zzgl. Marginal).
+   *  Strikt «basisChf < abChf» → an der Schwelle selbst deterministisch. Z. B. BS
+   *  Notariatstarif Ziff. 33 lit. a: Kapital < CHF 100'000 → Rahmen 750–2000, ab
+   *  CHF 100'000 fix 2000 + marginaler Zuschlag. */
+  unterAbRahmen?: boolean;
 }
 
 /** Ein Band einer Fix+Prozent-vom-Gesamtwert-Staffel: bis zur Grenze gilt
@@ -88,7 +96,15 @@ export type TarifRegel =
   | { typ: 'staffel_inklusiv'; baender: StaffelBand[] }
   | { typ: 'staffel_exklusiv'; baender: StaffelBand[] }
   /** Mehrbandige Sockel+Prozent-Tabelle (deterministische Grundgebühr). */
-  | { typ: 'staffel_sockel_prozent'; baender: SockelProzentBand[] }
+  /** Mehrbandige Sockel+Prozent-Tabelle. Optionaler regel-weiter ERMESSENS-
+   *  AUFSCHLAG (§8): liegt eine behördliche Ermessens-Spanne über dem ganzen
+   *  Tarif (z. B. Grundgebühren-Rahmen, dessen Untergrenze als sockelChf kodiert
+   *  ist, oder eine additive Rahmen-Komponente wie NW § 40), so wird das Ergebnis
+   *  zur Spanne [Betrag + aufschlagVonChf, Betrag + aufschlagBisChf] (aufschlagVon
+   *  default 0). Beispiele: GE Art. 25 (Basis 500–2000 → aufBis 1500), VD Art. 26
+   *  (200–2000 → 1800), OW Art. 10 (500–1800 → 1300), NW § 37/§ 40 (aufVon 300,
+   *  aufBis 2000), BS Stiftung (400–2000 → aufBis 1600). */
+  | { typ: 'staffel_sockel_prozent'; baender: SockelProzentBand[]; aufschlagVonChf?: number; aufschlagBisChf?: number }
   /** Fix + Prozent vom Gesamtwert je Band (deterministisch). */
   | { typ: 'staffel_voll_prozent'; baender: VollProzentBand[] }
   /** Bracket-Staffel, deren Bänder einen Gebühren-RAHMEN statt eines
@@ -197,11 +213,39 @@ export function auswertenTarif(regel: TarifRegel, basisChf: number): TarifErgebn
       const b = regel.baender.find((x) => basisChf <= x.bisChf);
       if (!b) throw new RangeError(`Sockel-Prozent-Staffel deckt ${chf(basisChf)} nicht (letztes Band braucht bisChf: Infinity).`);
       const ueberschuss = Math.max(0, basisChf - b.abChf);
+
+      // (a) Rahmen unter der Schwelle: ehrliche Spanne [minChf, sockelChf] statt
+      // des erfundenen Punktwerts sockelChf (§8). Nur strikt unterhalb abChf.
+      if (b.unterAbRahmen && basisChf < b.abChf && b.minChf != null) {
+        return {
+          deterministisch: false,
+          vonChf: round2(b.minChf),
+          bisChf: round2(b.sockelChf),
+          hinweis: `Gebührenrahmen ${chf(b.minChf)}–${chf(b.sockelChf)} (Geschäftswert unter ${chf(b.abChf)}); Festsetzung im Ermessen der Behörde.`,
+        };
+      }
+
       const schritte: string[] = [];
       if (b.sockelChf > 0) schritte.push(`Sockel ${chf(b.sockelChf)}`);
       schritte.push(`${b.prozent} % auf ${chf(ueberschuss)}${b.abChf > 0 ? ` (Überschuss über ${chf(b.abChf)})` : ''} = ${chf((ueberschuss * b.prozent) / 100)}`);
       const roh = round2(b.sockelChf + (ueberschuss * b.prozent) / 100);
-      return { deterministisch: true, betragChf: klammere(roh, b.minChf, b.maxChf, schritte), schritte };
+      const det = klammere(roh, b.minChf, b.maxChf, schritte);
+
+      // (b) Regel-weiter Ermessens-Aufschlag: über dem deterministischen Betrag
+      // liegt ein behördlicher Rahmen → ehrliche Spanne [det + von, det + bis] (§8).
+      if (regel.aufschlagBisChf != null) {
+        const von = round2(det + (regel.aufschlagVonChf ?? 0));
+        const bis = round2(det + regel.aufschlagBisChf);
+        const zusatz = ueberschuss > 0 ? ` (deterministischer Wertanteil ${chf(det)})` : '';
+        return {
+          deterministisch: false,
+          vonChf: von,
+          bisChf: bis,
+          hinweis: `Gebührenrahmen ${chf(von)}–${chf(bis)}${zusatz}; Festsetzung im Ermessen der Behörde.`,
+        };
+      }
+
+      return { deterministisch: true, betragChf: det, schritte };
     }
 
     case 'staffel_voll_prozent': {

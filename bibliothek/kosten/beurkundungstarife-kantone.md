@@ -150,7 +150,7 @@
 | verpfruendung | Staffel(marginal) 2.5‰/2‰/1.5‰/1‰/0.5‰ | NG 268.12 § 35 i.V.m. § 20 | 01.01.2016 |
 | ag_gruendung | Staffel(marginal) 3‰/2‰/1‰/0.5‰ | NG 268.12 § 36 Ziff. 1 | 01.01.2016 |
 | gmbh_gruendung | Staffel(marginal) 3‰/2‰/1‰/0.5‰ | NG 268.12 § 41 Abs. 1 i.V.m. § 36 | 01.01.2016 |
-| kapitalerhoehung | Staffel(marginal) 3‰/2‰/1‰/0.5‰ | NG 268.12 § 37 (AG) / § 41 Abs. 1 i.V.m. § 37 (GmbH) | 01.01.2016 |
+| kapitalerhoehung | **Spanne** = § 36-Staffel (VR) + § 40-Rahmen 300–2000 (GV); s. Korrektur unten | NG 268.12 § 37 (AG) / § 41 Abs. 1 i.V.m. § 37 (GmbH) | 01.01.2016 |
 | kapitalherabsetzung | Rahmen 400–3000 | NG 268.12 § 38 (AG) / § 41 Abs. 1 i.V.m. § 38 (GmbH) | 01.01.2016 |
 | stiftung | Rahmen 250–3000 | NG 268.12 § 14 | 01.01.2016 |
 | buergschaft | 1.5‰ min 250 max 1000 | NG 268.12 § 34 Abs. 1 | 01.01.2016 |
@@ -531,6 +531,64 @@
 | buergschaft | 1‰ min 10 max 200 | RSJU 189.61 Art. 11 al. 1 | 16.6.2026 |
 | schuldanerkennung | Nach Zeitaufwand. Reine Schuldanerkennun | RSJU 189.61 Art. 6 al. 1 (i.V.m. Art. 3) | 16.6.2026 |
 | vollmacht | Nach Zeitaufwand. Eine eigentliche Vollm | RSJU 189.61 Art. 6 al. 1 (Mindestbetrag Art. 18 al. 1) | 16.6.2026 |
+
+---
+
+## Korrektur 16.6.2026 — Bug-Klasse «Ermessens-Spanne → Punktwert» BEHOBEN (14 Tarife)
+
+Audit der Beurkundungs-/Grundbuch-Schicht (`src/data/tarif/**` über `auswertenTarif`) auf Tarife,
+die einen gesetzlichen **Ermessens-Rahmen auf einen Punktwert plattdrücken** (Anlass: David fand
+BS AG-Gründung < 100'000 = Rahmen 750–2000, Engine zeigte flach 2000). Verstoss gegen §8.
+**Status: BEHOBEN, Gate grün, doppelt verifiziert; Davids fachliche Abnahme ausstehend (§7).**
+
+**Zwei Ausprägungen, zwei explizite Engine-Mechanismen (`src/lib/tarif/staffel.ts`):**
+- **(a) `unterAbRahmen`** (Band-Flag): unter `abChf` gilt der Rahmen `[minChf, sockelChf]`, ab der
+  Schwelle deterministisch. Für BS Ziff. 33 (Rahmen *unter* der Schwelle, oberer Rand wurde gezeigt).
+- **(b) `aufschlagVonChf`/`aufschlagBisChf`** (regel-weit): Ergebnis = Spanne
+  `[Betrag + aufVon, Betrag + aufBis]`. Für Grundgebühren-Rahmen, deren Untergrenze als `sockelChf`
+  kodiert ist (unterer Rand wurde gezeigt), und additive Rahmen-Komponenten (NW § 40).
+
+**Behobene Tarife (14):**
+
+| Kt | Arten | Gesetzl. Rahmen | Erlass | Mechanismus |
+|---|---|---|---|---|
+| BS | ag, gmbh | < 100k **750–2000**; ab 100k 2000 + marginal | § 11 Ziff. 33 lit. a SG 292.400 | unterAbRahmen |
+| BS | stiftung | **400–2000** + 0,15 % > 500k | § 11 Ziff. 1 | aufBis 1600 |
+| NW | kapitalerhöhung | § 36-Staffel + § 40-GV-Rahmen **300–2000** | NG 268.12 § 37/§ 40 | aufVon 300/aufBis 2000 |
+| GE | ag, gmbh, stiftung | émolument de base **500–2000** + al. 2 proportional | Art. 25 REmNot RSG E 6 05.03 | aufBis 1500 |
+| VD | ag, gmbh, kapitalerhöhung, stiftung | base **200–2000** + al. 2/3 proportional | Art. 26/9 TNo BLV 178.11.2 | aufBis 1800 |
+| OW | testament, erbvertrag, stiftung | Grundgebühr **500–1800** + 1 ‰ | Art. 10 Ziff. 2/9/10 GDB 210.32 | aufBis 1300 |
+
+Querbezug: das ALTE `src/lib/notariatsgebuehrenGruendung.ts` gibt BS korrekt als `rahmen 750–2000` —
+die Migration war hier eine **Regression** (P1-Drift, Memory `lexmetrik-engine-synergien`).
+
+**Verifikation je Quelle (doppelt, Daueranweisung):**
+- **NW §37/§40** (geteilte Gebühr GV §40 [300–2000] + VR §36): ① amtl. API gesetze.nw.ch/…/268.12
+  wörtlich · ② unabhängig Renggli-Notariat-Preisliste · ③ Cross-Check §38 = 400–3000 deckt sich
+  mit bereits verifiziertem `kapitalherabsetzung/NW`.
+- **GE Art. 25 al. 1**: amtl. silgeneve.ch wörtlich *«L'émolument relatif aux actes constitutifs est
+  de 500 francs à 2 000 francs. Pour les fondations de sociétés unipersonnelles, l'émolument maximum
+  est de 1 000 francs.»* (Einpersonen-Sub-Fall 500–1000 im Hinweis vermerkt, nicht separat modelliert) + al. 2 proportional.
+- **VD Art. 26**: Preisüberwacher-Studie wörtlich *«émolument de base variant entre CHF 200.- et
+  CHF 2'000.- … déterminé entre les minima et maxima»* → echter Ermessensrahmen (NICHT Min/Max-Klammer).
+- **OW Art. 10**: GDB-210.32-PDF lokal extrahiert *«500.– bis 1 800.– zuzüglich 1 ‰ des
+  Verfügungswerts»* (Ziff. 2/9/10). testament/OW hatte keinen Hinweis → vom ersten Scan verpasst,
+  über Signatur-Zähldifferenz gefunden.
+
+**Permanentes Gate (`tarifInvarianten.test.ts`, neu):** (1) struktureller Verdacht (Erstband abChf>0,
+minChf<sockelChf) muss ein Spannen-Flag tragen; (2) jeder Tarif, dessen Hinweis Rahmen-Sprache nennt
+(«Grundgebühr-Rahmen» / «émolument de base» / «de N à M francs»), muss `aufschlag`/`unterAbRahmen`
+führen; (3) explizit verflaggte Regeln liefern unter der Schwelle keinen Punktwert. Golden byte-gleich
+(diese Outputs sind nicht in der Golden-Suite); Sweep/Zitate grün.
+
+**Methodik-Lektion:** Die enge Signatur des Erst-Audits (`abChf>0 & minChf<sockelChf`) verpasste die
+**`abChf=0`-Variante** (Untergrenze als sockelChf). Erst der breite **Hinweis-Sprach-Scan** (Davids
+«auch logik check») deckte GE/VD/OW auf. Bei kantonalen Rahmen-Tarifen reicht die strukturelle
+Signatur nicht — die Hinweis-Sprache («base … à …») gehört in den Audit.
+
+**False Positives (korrekt, keine Änderung):** VS vorkaufsrecht/schuldbrief/stiftung (Wert unter
+Schwelle echter Festbetrag, `min = sockel`); NW ag/gmbh_gruendung < 200k echte Fixgebühr 1000;
+JU «Sockel 300 bis 100'000 Kapital» (Kapitalschwelle, kein Gebührenrahmen).
 
 ---
 **Abnahme-Status:** Erstrecherche, 4-fach verifiziert; Davids Abnahme ausstehend.
