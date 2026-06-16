@@ -7,6 +7,7 @@ import { ladeSnapshot } from '../../lib/normtext/laden';
 import { naechsterFokus } from '../../lib/normtext/fokus';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { NormPopover } from '../NormPopover';
+import { NormText } from '../NormText';
 
 // Geteilte UI-Bausteine der Vorlagen-Wizards (Testament, Patientenverfügung, …).
 
@@ -38,7 +39,7 @@ export function Field({ label, children, hint, optional }: {
         {label}{optional && <span className="text-ink-500 font-normal"> · optional</span>}
       </label>
       {control}
-      {hint && <p className="text-xs text-ink-500">{hint}</p>}
+      {hint && <p className="text-xs text-ink-500"><NormText text={hint} /></p>}
     </div>
   );
 }
@@ -392,7 +393,7 @@ export function FehlerBox({ fehler }: { fehler: string[] }) {
   return (
     <div role="alert" className="rounded-lg border border-line bg-danger-bg p-4 space-y-1">
       <p className="text-xs font-semibold text-danger-700 uppercase tracking-wide mb-1">Eingabefehler</p>
-      {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
+      {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={f} /></p>)}
     </div>
   );
 }
