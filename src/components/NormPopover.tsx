@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import type { NormSnapshot } from '../lib/normtext/typen';
 import { textFragment } from '../lib/normtext/passus';
+import { istSchliessTaste } from '../lib/normtext/tasten';
 
 // Norm-Vorschau-Popover (§7 Zitat-Ausnahme): zeigt den Volltext des zitierten
 // Artikels aus einem Snapshot, die zitierte Stelle hervorgehoben, mit Stand +
@@ -8,12 +9,8 @@ import { textFragment } from '../lib/normtext/passus';
 // Disclaimer. Reine Darstellung (§3) — kein Normtext wird hier erzeugt, alles
 // kommt aus dem übergebenen Snapshot. Rein clientseitig; window-/document-
 // Zugriffe sind in useEffect gekapselt, damit Prerender/SSR nicht bricht.
-
-/** Reiner Helfer: true für die Schliess-Taste (Esc). Ausgelagert, damit die
- *  Schliesslogik ohne DOM testbar ist (node-Test-Env ohne jsdom). */
-export function istSchliessTaste(e: { key: string }): boolean {
-  return e.key === 'Escape' || e.key === 'Esc';
-}
+// Esc-Helfer in lib/normtext/tasten.ts (eslint: Komponenten-Datei exportiert
+// nur Komponenten).
 
 export function NormPopover({ snapshot, passus, onClose }: {
   snapshot: NormSnapshot;

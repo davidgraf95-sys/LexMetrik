@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { renderToString } from 'react-dom/server';
-import { NormPopover, istSchliessTaste } from '../components/NormPopover';
+import { NormPopover } from '../components/NormPopover';
+import { istSchliessTaste } from '../lib/normtext/tasten';
 import type { NormSnapshot } from '../lib/normtext/typen';
 
 // Norm-Vorschau-Popover. Testtechnik wie im Repo üblich (node-Env, kein jsdom):
