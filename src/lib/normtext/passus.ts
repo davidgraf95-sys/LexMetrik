@@ -1,10 +1,15 @@
 // Zitat-Zerlegung. Das Artikel-Token folgt dem Fedlex-Anker-Format
 // (335c → 335_c, 334bis → 334_bis), kongruent zu src/lib/fedlex.ts.
 const ART = /(?:Art\.?|§)\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)/i;
-const ABS = /Abs\.?\s*(\d+[a-z]?)/i;
+// Lat. Suffixe (bis/ter/…) wie bei ART zuerst, sonst verstümmelt «Abs. 1bis»
+// zu «1b» (B2). Reihenfolge: Suffix vor optionalem Einzel-Buchstaben.
+const ABS = /Abs\.?\s*(\d+(?:bis|ter|quater|quinquies)?[a-z]?)/i;
 // lit./Bst. b  →  Buchstaben-Punkt; Ziff./Ziffer 17  →  Ziffern-Punkt.
-const LIT = /(?:lit\.?|Bst\.?)\s*([a-z](?:bis|ter)?)/i;
-const ZIFF = /(?:Ziff\.?|Ziffer)\s*(\d+[a-z]?)/i;
+// Schlüsselwort mit Punkt ODER Wortgrenze, damit «litera a» NICHT als
+// «lit» + «e» (Match mitten im Wort «litera») fehlinterpretiert wird (B3):
+// nach «lit»/«Bst» muss ein Punkt oder eine Wortgrenze (\b) folgen.
+const LIT = /(?:lit\.|Bst\.|\blit\b|\bBst\b)\s*([a-z](?:bis|ter)?)\b/i;
+const ZIFF = /(?:Ziff\.|Ziffer|\bZiff\b)\s*(\d+[a-z]?)/i;
 const SUFFIX = /^(\d+)([a-z])?(bis|ter|quater|quinquies)?$/;
 
 /**
@@ -30,6 +35,10 @@ export function parsePassus(zitat: string): Passus | null {
   if (lit) passus.lit = lit[1].toLowerCase();
   const ziff = zitat.match(ZIFF);
   if (ziff) passus.ziff = ziff[1].toLowerCase();
+  // Bewusst First-Match: bei verketteten Zitaten («… i.V.m. Ziff. X») wird die
+  // ERSTE genannte lit/Ziff übernommen. Das ist gewollt (das Popover hebt die
+  // primär zitierte Stelle hervor); die Wortgrenze in LIT/ZIFF stellt nur
+  // sicher, dass keine Marke mitten aus einem Wort gegriffen wird (B3).
   return passus;
 }
 

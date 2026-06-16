@@ -229,6 +229,41 @@ describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanto
     expect(out).not.toContain('data-passus-item="true"');
   });
 
+  // B1: Nennt das Zitat eine Marke (ziff/lit) aber KEINEN Absatz und kommt die
+  // Marke in mehreren Blöcken vor, darf nur GENAU EIN Item markiert werden (das
+  // erste in Dokumentreihenfolge), nicht alle gleichnamigen.
+  it('Marke ohne Absatz, dieselbe Marke in zwei Blöcken → genau EIN Item markiert (B1)', () => {
+    const SNAP_MARKE_DOPPELT: NormSnapshot = {
+      ...SNAP,
+      ebene: 'kanton',
+      bloecke: [
+        {
+          absatz: '1',
+          text: 'Erster Absatz:',
+          items: [
+            { marke: '1', text: 'erste Ziffer im ersten Absatz;' },
+            { marke: '2', text: 'zweite Ziffer im ersten Absatz;' },
+          ],
+        },
+        {
+          absatz: '2',
+          text: 'Zweiter Absatz:',
+          items: [
+            { marke: '1', text: 'erste Ziffer im zweiten Absatz;' },
+            { marke: '2', text: 'zweite Ziffer im zweiten Absatz;' },
+          ],
+        },
+      ],
+    };
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_MARKE_DOPPELT} passus={{ absatz: null, ziff: '1' }} onClose={() => {}} />,
+    );
+    expect(out.match(/data-passus-item="true"/g)!.length).toBe(1);
+    // markiert ist das ERSTE «1» (erster Absatz), nicht das im zweiten
+    const seg = out.split('data-passus-item="true"')[1];
+    expect(seg).toContain('erste Ziffer im ersten Absatz');
+  });
+
   it('Live-Link-Fragment springt auf den Item-Text, wenn ein Item zitiert ist', () => {
     const out = renderToString(
       <NormPopover snapshot={SNAP_ZIFF} passus={{ absatz: null, ziff: '17' }} onClose={() => {}} />,

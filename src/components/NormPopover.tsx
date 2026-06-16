@@ -63,8 +63,24 @@ export function NormPopover({ snapshot, passus, onClose }: {
   const hervorBlock = passus.absatz != null
     ? snapshot.bloecke.find((b) => b.absatz === passus.absatz)
     : undefined;
-  const hervorItem = passusMarke != null
-    ? (hervorBlock ?? snapshot.bloecke[0])?.items?.find((it) => markeNorm(it.marke) === passusMarke)
+  // GENAU EIN Item-Treffer (B1): der erste in Dokumentreihenfolge, dessen Block
+  // als Ziel gilt UND dessen Marke passt. Ist ein Absatz zitiert, beschränkt
+  // sich die Suche auf diesen Block; sonst (Marke ohne Absatz, typisch Kanton-§)
+  // wird über alle Blöcke gesucht — aber nur der ERSTE Treffer markiert, nicht
+  // jeder gleichnamige in mehreren Blöcken.
+  const zielItemKey = (() => {
+    if (passusMarke == null) return null;
+    for (let bi = 0; bi < snapshot.bloecke.length; bi++) {
+      const b = snapshot.bloecke[bi];
+      const istZielBlock = passus.absatz == null || b.absatz === passus.absatz;
+      if (!istZielBlock || b.items == null) continue;
+      const ji = b.items.findIndex((it) => markeNorm(it.marke) === passusMarke);
+      if (ji >= 0) return { bi, ji };
+    }
+    return null;
+  })();
+  const hervorItem = zielItemKey != null
+    ? snapshot.bloecke[zielItemKey.bi].items![zielItemKey.ji]
     : undefined;
   const fragmentText = hervorItem?.text
     ?? (hervorBlock ?? snapshot.bloecke[0])?.text
@@ -120,11 +136,6 @@ export function NormPopover({ snapshot, passus, onClose }: {
       <div className="px-5 py-4 space-y-2.5">
         {snapshot.bloecke.map((b, i) => {
           const istAbsatzZitiert = passus.absatz != null && b.absatz === passus.absatz;
-          // Ziel-Block für die Item-Markierung: der zitierte Absatz, ODER — wenn
-          // das Zitat keinen Absatz nennt (typisch Kanton-§ ohne Absatz-Ebene) —
-          // jeder Block (die Marke des Items grenzt dann allein ein, welcher Block
-          // tatsächlich getroffen wird).
-          const istZielBlock = passus.absatz == null || istAbsatzZitiert;
           // Starke Block-Hervorhebung nur, wenn KEIN Item zitiert ist; bei
           // zitiertem Item wird der Block dezent umrandet, das Item trägt die
           // starke Markierung.
@@ -160,9 +171,11 @@ export function NormPopover({ snapshot, passus, onClose }: {
               {b.items != null && b.items.length > 0 && (
                 <ul className="mt-1.5 space-y-1 pl-1">
                   {b.items.map((it, j) => {
-                    const istItemZitiert = istZielBlock
-                      && passusMarke != null
-                      && markeNorm(it.marke) === passusMarke;
+                    // GENAU der eine global bestimmte (Block,Item)-Treffer (B1):
+                    // bei gleicher Marke in mehreren Blöcken nur der erste.
+                    const istItemZitiert = zielItemKey != null
+                      && zielItemKey.bi === i
+                      && zielItemKey.ji === j;
                     return (
                       <li
                         key={j}
