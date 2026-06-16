@@ -162,11 +162,14 @@ describe('Beurkundung — AG-Gründung-Parität: allg. System vs. Spezial-Engine
     return { kind: 'offen' }; // 'formel_extern'/Aufwand → nicht beziffert
   };
 
-  // Konvergierte Kantone: identische Auslegung in beiden Systemen — dicht verifiziert
-  // (0 Abweichungen über 0–3 Mio in 25k-Schritten + grosse Werte). Tripwire gegen
-  // jede künftige einseitige Tarif-Änderung.
-  it('ZH/LU/BS/AG sind über dichten Kapital-Sweep deckungsgleich', () => {
-    for (const k of ['ZH', 'LU', 'BS', 'AG'] as KantonCode[]) {
+  // Konvergenz beider Systeme — dicht verifiziert (0 Abweichungen). Fix 16.6.2026:
+  // SG floored auf ganze Tranchen (GebT Nr. 60.13 «je weitere VOLLE 100 000»; das
+  // allg. System rechnete zuvor kontinuierlich 0,08‰ und widersprach seinem eigenen
+  // Hinweis), BE liest jetzt die kapitalspezifische Anhang-4-Stufe (GebVN Art. 21)
+  // statt einer flachen Gesamtspanne. Beide Encodings sind damit angeglichen.
+  // Tripwire gegen jede künftige einseitige Tarif-Änderung in EINEM der Systeme.
+  it('ZH/LU/BS/AG/SG: deckungsgleich über dichten Kapital-Sweep', () => {
+    for (const k of ['ZH', 'LU', 'BS', 'AG', 'SG'] as KantonCode[]) {
       for (let w = 0; w <= 3_000_000; w += 25_000) {
         expect(kanonAllg(k, w), `${k} @ ${w}`).toEqual(kanonSpezial(k, w));
       }
@@ -176,39 +179,13 @@ describe('Beurkundung — AG-Gründung-Parität: allg. System vs. Spezial-Engine
     }
   });
 
-  // ── Bekannte, normbelegte Divergenzen — Reconciliation durch David ausstehend (§1/§7) ──
-  // Tripwire-Politik (vgl. e2e BEKANNTE_BEFUNDE): solange ungelöst hier fixiert, damit der
-  // Drift sichtbar bleibt UND die Suite grün ist. Sobald eine Lesart gewinnt und beide
-  // Systeme angeglichen werden, bricht die jeweilige Assertion → Eintrag entfernen.
-
-  it('TRIPWIRE SG — Tranchen-Auslegung divergiert (floor vs. kontinuierlich)', () => {
-    // GebT SG (sGS 821.5) Nr. 60.13: «385 für die ersten 100 000, je weitere VOLLE
-    // 100 000 → 80». Die Spezial-Engine floored (nur ganze Tranchen, Auslegung 7.6.2026,
-    // systematisch via Nr. 52.03 «ganze oder angebrochene»); das allg. System rechnet
-    // kontinuierlich 0,08‰ und WIDERSPRICHT damit seinem eigenen Hinweis «nur ganze
-    // Tranchen». An runden 100k-Vielfachen identisch, bei nicht-runden Kapitalien Drift:
-    expect(kanonSpezial('SG', 150_000)).toEqual({ kind: 'betrag', chf: 385 });
-    expect(kanonAllg('SG', 150_000)).toEqual({ kind: 'betrag', chf: 425 });
-    expect(kanonSpezial('SG', 250_000)).toEqual({ kind: 'betrag', chf: 465 });
-    expect(kanonAllg('SG', 250_000)).toEqual({ kind: 'betrag', chf: 505 });
-    expect(kanonAllg('SG', 1_000_000)).toEqual(kanonSpezial('SG', 1_000_000)); // rund → deckungsgleich
-  });
-
-  it('TRIPWIRE BE — Präzision divergiert (Anhang-4-Stufe vs. flache Gesamtspanne)', () => {
-    // GebVN BE (BSG 169.81) Art. 21 + Anhang 4: kapitalspezifische Lookup-Stufe
-    // [Min/Mittel/Max]. Die Spezial-Engine liest die Stufe (1 Mio → 2200–3600); das
-    // allg. System (regel-typ 'rahmen') gibt nur die flache Gesamttabellen-Spanne.
-    expect(kanonSpezial('BE', 1_000_000)).toEqual({ kind: 'rahmen', von: 2200, bis: 3600 });
-    expect(kanonAllg('BE', 1_000_000)).toEqual({ kind: 'rahmen', von: 1000, bis: 27350 });
-    // Schwache Konsistenz-Invariante: die präzise Spezial-Spanne liegt INNERHALB der
-    // groben allg. Spanne (kein Widerspruch, nur Präzisionsverlust).
-    for (const w of [100_000, 500_000, 1_000_000, 5_000_000, 20_000_000]) {
-      const s = kanonSpezial('BE', w);
-      const a = kanonAllg('BE', w);
-      if (s.kind === 'rahmen' && a.kind === 'rahmen') {
-        expect(s.von, `BE @ ${w} von ⊆`).toBeGreaterThanOrEqual(a.von);
-        expect(s.bis, `BE @ ${w} bis ⊆`).toBeLessThanOrEqual(a.bis);
-      }
+  it('BE: Anhang-4-Stufe deckungsgleich (bis CHF 20 Mio.; Anhang endet dort)', () => {
+    // GebVN BE Art. 21 + Anhang 4: kapitalspezifische Lookup-Stufe [Min..Max]. Beide
+    // Systeme lesen nun dieselbe Stufe. Oberhalb CHF 20 Mio. endet Anhang 4 →
+    // Spezial-Engine 'offen' (nicht verglichen), allg. nutzt die 20-Mio.-Stufe.
+    for (const w of [0, 100_000, 150_000, 250_000, 500_000, 1_000_000, 2_000_000, 5_000_000, 10_000_000, 20_000_000]) {
+      expect(kanonAllg('BE', w), `BE @ ${w}`).toEqual(kanonSpezial('BE', w));
     }
+    expect(kanonSpezial('BE', 1_000_000)).toEqual({ kind: 'rahmen', von: 2200, bis: 3600 });
   });
 });
