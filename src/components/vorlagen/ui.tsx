@@ -4,6 +4,7 @@ import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { bundSnapshotRef } from '../../lib/normtext/bundRef';
 import { ladeSnapshot } from '../../lib/normtext/laden';
+import { naechsterFokus } from '../../lib/normtext/fokus';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { NormPopover } from '../NormPopover';
 
@@ -195,7 +196,55 @@ export function NormLink({ artikel, title, bemerkung }: { artikel: string; title
 // steht teils in einem <p> (z. B. die Tarif-Quelle-Zeile). Würde das Overlay
 // inline gerendert, läge der Dialog-<div>/<p>/<h2> IM <p> → ungültiges HTML +
 // Hydration-Fehler. Der Portal hängt das Overlay ans body, ausserhalb des <p>.
+//
+// A11y (16.6.2026): Da der Dialog aria-modal="true" trägt, erwartet assistive
+// Technik eine Fokus-Falle UND einen ruhenden Hintergrund. Beides wird hier
+// verdrahtet — am gemeinsamen Overlay, das sowohl NormPopover als auch
+// NormPopoverHuelle umschliesst:
+//  (1) Fokus-Falle: Tab/Shift+Tab zyklisch zwischen erstem und letztem
+//      fokussierbaren Element des Dialogs (reine Index-Logik in
+//      lib/normtext/fokus.ts, hier nur die DOM-Verdrahtung).
+//  (2) Body-Scroll-Lock: document.body overflow:hidden, solange offen; beim
+//      Schliessen/Unmount exakt der vorherige Inline-Wert wiederhergestellt.
+// Beides nur im useEffect (window/document) → SSR/Prerender unberührt; der
+// Erst-Render bleibt byte-gleich (Overlay rendert ohnehin nur clientseitig).
+// Der Fokus-Rückgabe auf den Trigger bleibt beim Aufrufer (triggerRef).
 export function NormPopoverOverlay({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
+  const dialogContainerRef = useRef<HTMLDivElement>(null);
+
+  // Fokus-Falle: hält Tab/Shift+Tab innerhalb des Dialogs (zyklisch). Die reine
+  // Index-Berechnung liegt in naechsterFokus (testbar); hier nur DOM-Zugriff.
+  useEffect(() => {
+    const wurzel = dialogContainerRef.current;
+    if (wurzel == null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      // Bei jedem Tab frisch einsammeln (Inhalt kann nachladen: Hülle → Volltext).
+      const fokussierbar = Array.from(
+        wurzel.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((el) => el.offsetParent !== null || el === document.activeElement);
+      if (fokussierbar.length === 0) return;
+      const aktiv = fokussierbar.indexOf(document.activeElement as HTMLElement);
+      const ziel = naechsterFokus(fokussierbar.length, aktiv, e.shiftKey);
+      if (ziel < 0) return;
+      e.preventDefault();
+      fokussierbar[ziel].focus();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  // Body-Scroll-Lock: Hintergrund ruhig stellen, solange das Overlay offen ist.
+  // Der vorherige Inline-Wert wird gemerkt und beim Unmount exakt zurückgesetzt
+  // (mehrere Overlays gleichzeitig sind nicht möglich — eins pro Chip).
+  useEffect(() => {
+    const vorher = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = vorher; };
+  }, []);
+
   if (typeof document === 'undefined') return null; // SSR/Prerender: kein Overlay
   return createPortal(
     <div
@@ -203,7 +252,7 @@ export function NormPopoverOverlay({ children, onClose }: { children: React.Reac
       onClick={onClose}
     >
       {/* Klicks im Dialog dürfen nicht zum Backdrop durchschlagen. */}
-      <div onClick={(e) => e.stopPropagation()} className="w-full max-w-xl">
+      <div ref={dialogContainerRef} onClick={(e) => e.stopPropagation()} className="w-full max-w-xl">
         {children}
       </div>
     </div>,
