@@ -7,11 +7,13 @@ import { describe, it, expect } from 'vitest';
 import {
   fehlendeBundArtikel,
   unerwarteteKantonLuecken,
+  unerwarteteKantonLueckenMitQuelleUrl,
   pruefeInhaltsSanity,
   pruefeManifestKonsistenz,
 } from '../../scripts/normtext/vollstaendigkeit-logik.ts';
 import type {
   BekannteLuecke,
+  KantonInventarGruppeRef,
   SnapshotEintrag,
 } from '../../scripts/normtext/vollstaendigkeit-logik.ts';
 
@@ -133,6 +135,148 @@ describe('unerwarteteKantonLuecken', () => {
 
   it('leere Zitate-Liste → keine Lücken', () => {
     const result = unerwarteteKantonLuecken([], new Set(), []);
+    expect(result).toHaveLength(0);
+  });
+});
+
+// ─── unerwarteteKantonLueckenMitQuelleUrl ─────────────────────────────────────
+// BUG A3 Fix: Laufzeit-Auflösung über quelleUrl+artikel statt ID-String-Vergleich.
+// Snapshot-IDs mit Suffixen (-de/-fr/III%20B_7_1) müssen als ABGEDECKT gelten,
+// wenn ihre quelleUrl im Manifest steht und der Eintrag artikel === token hat.
+
+describe('unerwarteteKantonLueckenMitQuelleUrl', () => {
+  // Synthetisches Setup: FR/130.11 bilingualer Erlass mit Suffix-ID im Snapshot.
+  // Der Snapshot trägt id='kanton/FR/130.11-de/art_18', quelleUrl='…/de/…/130.11'
+  // und artikel='18'. Das Inventar produziert lawId='130.11', token='18'.
+  const frDeUrl = 'https://bdlf.fr.ch/app/de/texts_of_law/130.11';
+  const frFrUrl = 'https://bdlf.fr.ch/app/fr/texts_of_law/130.11';
+
+  const manifestMap = new Map<string, string>([
+    [frDeUrl, 'FR-130.11-de.json'],
+    [frFrUrl, 'FR-130.11-fr.json'],
+    ['https://www.belex.sites.be.ch/app/de/texts_of_law/161.12', 'BE-161.12.json'],
+  ]);
+
+  // Map quelleUrl → Set<artikel> — simuliert geladene Snapshot-Einträge.
+  const artikelNachUrl = new Map<string, Set<string>>([
+    [frDeUrl, new Set(['18', '20', '64'])],   // Suffix-ID-Snapshot mit artikel-Werten
+    [frFrUrl, new Set(['20', '64'])],
+    ['https://www.belex.sites.be.ch/app/de/texts_of_law/161.12', new Set(['36', '4'])],
+  ]);
+
+  it('Snapshot mit Suffix-ID gilt als ABGEDECKT wenn quelleUrl+token matcht', () => {
+    // FR/130.11 de — Inventar-Token '18' → quelleUrl=frDeUrl → artikelNachUrl hat '18'
+    const gruppen: KantonInventarGruppeRef[] = [
+      {
+        kanton: 'FR',
+        lawId: '130.11',
+        quelleUrl: frDeUrl,
+        artikel: [{ token: '18' }, { token: '20' }, { token: '64' }],
+      },
+    ];
+    const result = unerwarteteKantonLueckenMitQuelleUrl(
+      gruppen,
+      manifestMap,
+      artikelNachUrl,
+      [],
+    );
+    // Alle drei Tokens sind abgedeckt → keine Lücken (NICHT als Lücke gemeld wie bei A3-Bug)
+    expect(result).toHaveLength(0);
+  });
+
+  it('FR fr-Zitat via fr-quelleUrl abgedeckt (beide Sprachen unabhängig aufgelöst)', () => {
+    const gruppen: KantonInventarGruppeRef[] = [
+      {
+        kanton: 'FR',
+        lawId: '130.11',
+        quelleUrl: frFrUrl,
+        artikel: [{ token: '20' }, { token: '64' }],
+      },
+    ];
+    const result = unerwarteteKantonLueckenMitQuelleUrl(
+      gruppen,
+      manifestMap,
+      artikelNachUrl,
+      [],
+    );
+    expect(result).toHaveLength(0);
+  });
+
+  it('echte Lücke: quelleUrl im Manifest, aber token fehlt in Snapshot-Einträgen', () => {
+    const gruppen: KantonInventarGruppeRef[] = [
+      {
+        kanton: 'FR',
+        lawId: '130.11',
+        quelleUrl: frDeUrl,
+        artikel: [{ token: '99' }], // token '99' nicht in artikelNachUrl
+      },
+    ];
+    const result = unerwarteteKantonLueckenMitQuelleUrl(
+      gruppen,
+      manifestMap,
+      artikelNachUrl,
+      [],
+    );
+    expect(result).toHaveLength(1);
+    expect(result[0].snapshotId).toBe('kanton/FR/130.11/art_99');
+  });
+
+  it('echte Lücke: quelleUrl fehlt im Manifest (Datei nie erzeugt)', () => {
+    const gruppen: KantonInventarGruppeRef[] = [
+      {
+        kanton: 'SG',
+        lawId: '941.12',
+        quelleUrl: 'https://gesetzessammlungen.sg.ch/app/de/texts_of_law/941.12',
+        artikel: [{ token: '8' }],
+      },
+    ];
+    // manifestMap hat diesen URL nicht → gilt als Loch
+    const result = unerwarteteKantonLueckenMitQuelleUrl(
+      gruppen,
+      manifestMap,
+      artikelNachUrl,
+      [],
+    );
+    expect(result).toHaveLength(1);
+    expect(result[0].snapshotId).toBe('kanton/SG/941.12/art_8');
+  });
+
+  it('bekannte Lücke via kanonischer snapshotId maskiert das Loch', () => {
+    const bekannteLuecken: BekannteLuecke[] = [
+      { snapshotId: 'kanton/SG/941.12/art_8', grund: 'nurPdf' },
+    ];
+    const gruppen: KantonInventarGruppeRef[] = [
+      {
+        kanton: 'SG',
+        lawId: '941.12',
+        quelleUrl: 'https://gesetzessammlungen.sg.ch/app/de/texts_of_law/941.12',
+        artikel: [{ token: '8' }],
+      },
+    ];
+    const result = unerwarteteKantonLueckenMitQuelleUrl(
+      gruppen,
+      manifestMap,
+      artikelNachUrl,
+      bekannteLuecken,
+    );
+    expect(result).toHaveLength(0);
+  });
+
+  it('normales Zitat (BE/161.12) ohne Suffix-Problematik bleibt abgedeckt', () => {
+    const gruppen: KantonInventarGruppeRef[] = [
+      {
+        kanton: 'BE',
+        lawId: '161.12',
+        quelleUrl: 'https://www.belex.sites.be.ch/app/de/texts_of_law/161.12',
+        artikel: [{ token: '36' }, { token: '4' }],
+      },
+    ];
+    const result = unerwarteteKantonLueckenMitQuelleUrl(
+      gruppen,
+      manifestMap,
+      artikelNachUrl,
+      [],
+    );
     expect(result).toHaveLength(0);
   });
 });

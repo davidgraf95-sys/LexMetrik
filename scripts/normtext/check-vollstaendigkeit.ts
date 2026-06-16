@@ -26,7 +26,7 @@ import { sammleKantonInventar } from './inventar-kanton.ts';
 import { alleArtikelTokens } from './extrahiere-fedlex.ts';
 import {
   fehlendeBundArtikel,
-  unerwarteteKantonLuecken,
+  unerwarteteKantonLueckenMitQuelleUrl,
   pruefeInhaltsSanity,
   pruefeManifestKonsistenz,
 } from './vollstaendigkeit-logik.ts';
@@ -58,148 +58,100 @@ const BEKANNTE_LUECKEN: BekannteLuecke[] = [
     notiz: 'LexWork OW-134.15 liefert art_7 nicht; Snapshot enthält art_8, art_35, art_12.',
   },
 
-  // ── FR/130.11: kein Snapshot (LexWork fr, bilingualer Erlass — nur fr-Version verfügbar,
-  //    de-Zitate aus anderen Quellen)
-  {
-    snapshotId: 'kanton/FR/130.11/art_18',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'FR-130.11 de-Snapshot fehlt; bilinguales Erlass, LexWork liefert nur fr-Version für diese lawId.',
-  },
-  {
-    snapshotId: 'kanton/FR/130.11/art_20',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'FR-130.11 de-Snapshot fehlt; bilinguales Erlass, LexWork liefert nur fr-Version für diese lawId.',
-  },
-  {
-    snapshotId: 'kanton/FR/130.11/art_64',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'FR-130.11 de-Snapshot fehlt; bilinguales Erlass, LexWork liefert nur fr-Version für diese lawId.',
-  },
-
-  // ── SG/941.12: kein Snapshot
+  // ── SG/941.12: kein Snapshot (nurPdf-Erlass)
   {
     snapshotId: 'kanton/SG/941.12/art_8',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-941.12 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-941.12 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
   {
     snapshotId: 'kanton/SG/941.12/art_10',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-941.12 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-941.12 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
 
-  // ── SG/914.5: kein Snapshot
+  // ── SG/914.5: kein Snapshot (nurPdf-Erlass)
   {
     snapshotId: 'kanton/SG/914.5/art_8',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-914.5 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
   {
     snapshotId: 'kanton/SG/914.5/art_10',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-914.5 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
   {
     snapshotId: 'kanton/SG/914.5/art_11',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-914.5 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
   {
     snapshotId: 'kanton/SG/914.5/art_13',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-914.5 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
   {
     snapshotId: 'kanton/SG/914.5/art_15',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-914.5 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
   {
     snapshotId: 'kanton/SG/914.5/art_16',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-914.5 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
   {
     snapshotId: 'kanton/SG/914.5/art_17',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-914.5 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
   {
     snapshotId: 'kanton/SG/914.5/art_22',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SG-914.5 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'SG-914.5 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
 
-  // ── VS/173.8: kein Snapshot (de-Variante nicht vorhanden für diese Artikel)
-  {
-    snapshotId: 'kanton/VS/173.8/art_15',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'VS-173.8 de-Snapshot fehlt für diese Artikel (Stand 16.6.2026).',
-  },
-  {
-    snapshotId: 'kanton/VS/173.8/art_16',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'VS-173.8 de-Snapshot fehlt für diese Artikel (Stand 16.6.2026).',
-  },
-  {
-    snapshotId: 'kanton/VS/173.8/art_17',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'VS-173.8 de-Snapshot fehlt für diese Artikel (Stand 16.6.2026).',
-  },
-  {
-    snapshotId: 'kanton/VS/173.8/art_32',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'VS-173.8 de-Snapshot fehlt für diese Artikel (Stand 16.6.2026).',
-  },
-  {
-    snapshotId: 'kanton/VS/173.8/art_34',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'VS-173.8 de-Snapshot fehlt für diese Artikel (Stand 16.6.2026).',
-  },
-
-  // ── SH/273.100: kein Snapshot
+  // ── SH/273.100: API-404 (Erlass nicht in LexWork gesnapshottet)
   {
     snapshotId: 'kanton/SH/273.100/art_109',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'SH-273.100 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'fetch-404',
+    notiz: 'SH-273.100 LexWork-API liefert 404 (Stand 16.6.2026).',
   },
 
-  // ── OW/210.32: kein Snapshot
+  // ── OW/210.32: nurPdf
   {
     snapshotId: 'kanton/OW/210.32/art_10',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'OW-210.32 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'OW-210.32 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
 
-  // ── AR/153.2: kein Snapshot
+  // ── AR/153.2: nurPdf
   {
     snapshotId: 'kanton/AR/153.2/art_12',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'AR-153.2 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nurPdf',
+    notiz: 'AR-153.2 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
 
-  // ── LU/228: art_29 nicht im LexWork-Erlass
+  // ── LU/228: art_29 nicht im LexWork-Erlass (§29 existiert nicht im Erlass)
   {
     snapshotId: 'kanton/LU/228/art_29',
     grund: 'token-nicht-im-Erlass',
-    notiz: 'LU-228 LexWork liefert art_29 nicht.',
+    notiz: 'LU-228 LexWork liefert art_29 nicht; §29 existiert nicht im Erlass.',
   },
 
-  // ── GL/III%20B/7/1: URL-Encoding-Variante; Snapshot existiert unter der
-  //    voll-encodierten ID kanton/GL/III%20B%2F7%2F1/art_13 (§8: transparent).
-  {
-    snapshotId: 'kanton/GL/III%20B/7/1/art_13',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'GL-lawId «III%20B/7/1» hat URL-Encoding-Variante; Snapshot unter III%20B%2F7%2F1/art_13.',
-  },
-
-  // ── NW/265.51: kein Snapshot
+  // ── NW/265.51: keine LexWork-Quelle verfügbar
   {
     snapshotId: 'kanton/NW/265.51/art_28',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'NW-265.51 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
+    grund: 'nicht-LexWork',
+    notiz: 'NW-265.51 nicht über LexWork verfügbar (Stand 16.6.2026).',
   },
 ];
+// Entfernt (16.6.2026): FR/130.11 (art_18/20/64), VS/173.8 (art_15/16/17/32/34),
+// GL/III%20B/7/1 (art_13) — diese Snapshots existieren unter ihren quelleUrls und
+// werden via Laufzeit-Auflösung (unerwarteteKantonLueckenMitQuelleUrl) korrekt
+// als ABGEDECKT erkannt. ID-Suffixe (-de/-fr/III%20B_7_1) in Snapshot-Dateien
+// sind kein Loch, sondern ein Auflösungsartefakt (BUG A3).
 
 // ─── Hilfsfunktionen ──────────────────────────────────────────────────────────
 
@@ -343,18 +295,38 @@ async function main(): Promise<void> {
     `\nBund: ${bundHtmlGeprüft} Gesetze geprüft, ${bundSnapshots.length} Snapshots, fehlend: ${bundStatus}${bundSkipTotal > 0 ? `, ${bundSkipTotal} leere-Artikel-Skips` : ''}`,
   );
 
-  // ─── Prüfung 2: Kanton-Zitat-Abdeckung ──────────────────────────────────────
-  console.log('\n── Prüfung 2: Kanton-Zitat-Abdeckung ────────────────────────────────────');
+  // ─── Prüfung 2: Kanton-Zitat-Abdeckung (via Laufzeit-Auflösung) ─────────────
+  // Auflösung: quelleUrl (aus dem Inventar) → Manifest → Snapshot-Datei → Eintrag
+  // mit artikel === token. So werden Suffixe (-de/-fr) und URL-Encoding-Varianten
+  // (III%20B_7_1) transparent, da der Eintrag explizit seine quelleUrl trägt.
+  // Ein echtes Loch liegt nur vor, wenn die Auflösung fehlschlägt (BUG A3 Fix).
+  console.log('\n── Prüfung 2: Kanton-Zitat-Abdeckung (via Laufzeit-Auflösung) ────────────');
 
   const gruppen = sammleKantonInventar();
-  const zitierte: Array<{ kanton: string; lawId: string; artikelToken: string }> = [];
-  for (const g of gruppen) {
-    for (const a of g.artikel) {
-      zitierte.push({ kanton: g.kanton, lawId: g.lawId, artikelToken: a.token });
+
+  // Bilde Map quelleUrl → Set<artikel-String> aus den geladenen Snapshot-Einträgen.
+  // Der `artikel`-Feld im Snapshot (z.B. '18', '20', '64') entspricht dem Token
+  // aus parsePassus, der im Inventar als artikelToken steht.
+  const artikelNachUrl = new Map<string, Set<string>>();
+  for (const eintrag of kantonSnapshots) {
+    const url = (eintrag as { quelleUrl?: string }).quelleUrl;
+    const art = (eintrag as { artikel?: string }).artikel;
+    if (url && art) {
+      let s = artikelNachUrl.get(url);
+      if (!s) {
+        s = new Set<string>();
+        artikelNachUrl.set(url, s);
+      }
+      s.add(art);
     }
   }
 
-  const unerwartet = unerwarteteKantonLuecken(zitierte, kantonSnapshotIds, BEKANNTE_LUECKEN);
+  const unerwartet = unerwarteteKantonLueckenMitQuelleUrl(
+    gruppen,
+    manifestMap,
+    artikelNachUrl,
+    BEKANNTE_LUECKEN,
+  );
 
   if (unerwartet.length > 0) {
     console.error(`  FEHLER: ${unerwartet.length} unerwartete Kanton-Zitat-Lücken (nicht in bekannteLuecken):`);
@@ -364,12 +336,15 @@ async function main(): Promise<void> {
     exitCode = 1;
   }
 
-  // Bekannte Lücken als Klartext ausgeben (§8-Transparenz)
-  const abgedeckt = BEKANNTE_LUECKEN.filter((l) =>
-    zitierte.some(
-      (z) => `kanton/${z.kanton}/${z.lawId}/art_${z.artikelToken}` === l.snapshotId,
-    ),
-  );
+  // Bekannte Lücken: zeige nur jene, die tatsächlich in einem Inventar-Zitat auftauchen
+  // (kanonische snapshotId-Form: kanton/${kanton}/${lawId}/art_${token}).
+  const zitierteIds = new Set<string>();
+  for (const g of gruppen) {
+    for (const a of g.artikel) {
+      zitierteIds.add(`kanton/${g.kanton}/${g.lawId}/art_${a.token}`);
+    }
+  }
+  const abgedeckt = BEKANNTE_LUECKEN.filter((l) => zitierteIds.has(l.snapshotId));
   if (abgedeckt.length > 0) {
     console.log(`  Bekannte Lücken (${abgedeckt.length}, akzeptiert mit Grund):`);
     for (const l of abgedeckt) {
@@ -377,9 +352,10 @@ async function main(): Promise<void> {
     }
   }
 
+  const zitierteAnzahl = [...gruppen].reduce((s, g) => s + g.artikel.length, 0);
   const kantonStatus = unerwartet.length === 0 ? 'ok' : `${unerwartet.length} unerwartet`;
   console.log(
-    `\nKanton: ${zitierte.length} Zitat-Tripel geprüft, ${kantonSnapshotIds.size} Snapshot-IDs, bekannte Lücken: ${abgedeckt.length}, unerwartet: ${kantonStatus}`,
+    `\nKanton: ${zitierteAnzahl} Zitat-Tripel geprüft (via quelleUrl-Auflösung), ${kantonSnapshotIds.size} Snapshot-IDs, bekannte Lücken: ${abgedeckt.length}, unerwartet: ${kantonStatus}`,
   );
 
   // ─── Prüfung 3: Inhalts-Sanity ───────────────────────────────────────────────

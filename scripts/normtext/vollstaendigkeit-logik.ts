@@ -102,10 +102,15 @@ export function fehlendeBundArtikel(
 /**
  * Prüft, welche Kanton-Zitat-Tokens keinen Snapshot haben, ohne in bekannteLuecken zu stehen.
  *
+ * Einfache ID-String-Variante: nützlich für Einheits-Tests und Fälle, bei denen
+ * Snapshot-IDs direkt aus (kanton, lawId, token) ableitbar sind (Normalfall ohne
+ * Sprach-Suffix oder URL-Encoding-Varianten). Für die vollständige Laufzeit-Prüfung
+ * mit Manifest-Auflösung → `unerwarteteKantonLueckenMitQuelleUrl`.
+ *
  * @param zitierte    - Alle zitierten (kanton, lawId, artikelToken)-Tripel aus dem Inventar
  * @param snapshotIds - Set aller vorhandenen Kanton-Snapshot-IDs (z.B. 'kanton/BE/161.12/art_4')
  * @param bekannteLuecken - Liste bekannter, akzeptierter Lücken mit Grund
- * @returns Unerwartete Lücken (nicht in HTML, nicht erklärt) → FEHLER
+ * @returns Unerwartete Lücken (nicht im Snapshot, nicht erklärt) → FEHLER
  */
 export function unerwarteteKantonLuecken(
   zitierte: ReadonlyArray<{ kanton: string; lawId: string; artikelToken: string }>,
@@ -119,6 +124,69 @@ export function unerwarteteKantonLuecken(
     const snapshotId = `kanton/${kanton}/${lawId}/art_${artikelToken}`;
     if (!snapshotIds.has(snapshotId) && !bekannteIds.has(snapshotId)) {
       unerwartet.push({ kanton, lawId, artikelToken, snapshotId });
+    }
+  }
+
+  return unerwartet;
+}
+
+/**
+ * Zitat-Inventar-Gruppe mit quelleUrl — wie von sammleKantonInventar() geliefert.
+ * Nur die Felder, die die Manifest-Auflösung braucht.
+ */
+export interface KantonInventarGruppeRef {
+  kanton: string;
+  lawId: string;
+  quelleUrl: string;
+  artikel: ReadonlyArray<{ token: string }>;
+}
+
+/**
+ * Vollständigkeitsprüfung via Laufzeit-Auflösung (quelleUrl + artikel-Token).
+ *
+ * Löst EXAKT so auf wie das Laufzeit-Chip: Manifest (quelleUrl → Datei) →
+ * Snapshot-Einträge der Datei → Eintrag mit `artikel === token`. Diese Auflösung
+ * ist robust gegen Snapshot-ID-Suffixe (z.B. '130.11-de', '173.8-fr', 'III%20B_7_1'),
+ * die entstehen wenn mehrsprachige Erlasse oder URL-kodierte lawIds verschiedene
+ * Dateinamen/IDs tragen als die kanonische `kanton/${k}/${lawId}/art_${t}`-Form.
+ *
+ * Ein echtes Loch liegt NUR vor, wenn:
+ *   (a) die quelleUrl nicht im Manifest steht, ODER
+ *   (b) die Snapshot-Datei keinen Eintrag mit `artikel === token` enthält.
+ *
+ * @param gruppen         - Inventar-Gruppen mit quelleUrl + artikel-Tokens
+ * @param manifestMap     - Map quelleUrl → Dateiname (aus public/normtext/kanton/index.json)
+ * @param artikelNachUrl  - Map quelleUrl → Set<string> der `artikel`-Werte in der Snapshot-Datei
+ * @param bekannteLuecken - Bekannte, akzeptierte Lücken (mit Grund); identifiziert über
+ *                          kanonische snapshotId `kanton/${kanton}/${lawId}/art_${token}`
+ * @returns Unerwartete Lücken → FEHLER
+ */
+export function unerwarteteKantonLueckenMitQuelleUrl(
+  gruppen: ReadonlyArray<KantonInventarGruppeRef>,
+  manifestMap: ReadonlyMap<string, string>,
+  artikelNachUrl: ReadonlyMap<string, Set<string>>,
+  bekannteLuecken: ReadonlyArray<BekannteLuecke>,
+): KantonZitatLuecke[] {
+  const bekannteIds = new Set(bekannteLuecken.map((l) => l.snapshotId));
+  const unerwartet: KantonZitatLuecke[] = [];
+
+  for (const gruppe of gruppen) {
+    const { kanton, lawId, quelleUrl, artikel } = gruppe;
+    // Hat die quelleUrl keinen Manifest-Eintrag, fehlt die Datei vollständig.
+    const dateiVorhanden = manifestMap.has(quelleUrl);
+    // Artikel-Set der Snapshot-Datei (leer wenn Datei fehlt oder kein Eintrag).
+    const vorhandeneArtikel = dateiVorhanden
+      ? (artikelNachUrl.get(quelleUrl) ?? new Set<string>())
+      : new Set<string>();
+
+    for (const { token } of artikel) {
+      // Kanonische ID — für Abgleich mit bekannteLuecken und für Fehlermeldungen.
+      const snapshotId = `kanton/${kanton}/${lawId}/art_${token}`;
+      // Abgedeckt: Snapshot-Datei hat einen Eintrag mit artikel === token.
+      const abgedeckt = vorhandeneArtikel.has(token);
+      if (!abgedeckt && !bekannteIds.has(snapshotId)) {
+        unerwartet.push({ kanton, lawId, artikelToken: token, snapshotId });
+      }
     }
   }
 
