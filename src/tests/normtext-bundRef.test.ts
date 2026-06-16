@@ -47,4 +47,17 @@ describe('bundSnapshotRef', () => {
   it('kein Artikel im Text → null', () => {
     expect(bundSnapshotRef('siehe oben OR')).toBeNull();
   });
+
+  // StGB/StG erschlossen (16.6.2026): FEDLEX-Key → Snapshot-quelle gemappt.
+  it('Art. 97 StGB → quelle STGB (nicht STG)', () => {
+    expect(bundSnapshotRef('Art. 97 StGB')).toEqual({ quelle: 'STGB', token: '97', absatz: null });
+  });
+
+  it('Art. 8 StG → quelle STG (Stempelabgaben, nicht STGB)', () => {
+    expect(bundSnapshotRef('Art. 8 StG')).toEqual({ quelle: 'STG', token: '8', absatz: null });
+  });
+
+  it('Art. 8 GebVHReg → quelle GEBV_HREG', () => {
+    expect(bundSnapshotRef('Art. 8 GebVHReg')).toEqual({ quelle: 'GEBV_HREG', token: '8', absatz: null });
+  });
 });

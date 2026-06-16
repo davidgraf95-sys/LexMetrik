@@ -30,6 +30,9 @@ const SNAPSHOT_QUELLE: Partial<Record<FedlexGesetz, string>> = {
   HRegV: 'HREGV',
   KVG: 'KVG',
   KVV: 'KVV',
+  StGB: 'STGB',
+  StG: 'STG',
+  GebVHReg: 'GEBV_HREG',
 };
 
 export function bundSnapshotRef(

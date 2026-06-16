@@ -60,6 +60,20 @@ export const FEDLEX = {
   // formen: Wechsel nur auf Jahresende, Art. 94 Abs. 2 / 100 Abs. 3 KVV,
   // Fassung AS 2024 697).
   KVV:   'https://www.fedlex.admin.ch/eli/cc/1995/3867_3867_3867/de',
+  // StGB SR 311.0 — Cache gepinnt (fedlex-cache.sh, Konsolidierung 20260612);
+  // Anker art_30/97/98/101/109/333/389 (Antrag/Verjährung) extrahiert. Bisher
+  // unerreichbar: Snapshot STGB.json existierte (Vollabdeckung), aber StGB war
+  // nicht in FEDLEX → erkenneFedlexGesetz lieferte null. Kollisionsfrei zu StG:
+  // Regex `(^|\s)KEY$` matcht «Art. 97 StGB» nur auf StGB (StGB endet nicht auf
+  // « StG»). Reiner Screen-Pfad — der PDF-Erlasskatalog (pdf/normLinks.ts) ist
+  // unberührt (eigene ERLASSE-Liste), Golden bleibt byte-gleich.
+  StGB:  'https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de',
+  // StG SR 641.10 (Stempelabgaben) — Cache gepinnt (Konsolidierung 20240101);
+  // Anker art_5/6/8 extrahiert. «Art. 8 StG» → 'StG' (nicht 'StGB').
+  StG:   'https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de',
+  // GebV-HReg SR 221.411.1 — Cache gepinnt (Konsolidierung 20210101); Anker
+  // art_3/4/8 extrahiert (Handelsregister-Gebühren).
+  GebVHReg: 'https://www.fedlex.admin.ch/eli/cc/2020/180/de',
 } as const;
 
 export type FedlexGesetz = keyof typeof FEDLEX;

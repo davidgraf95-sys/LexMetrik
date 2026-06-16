@@ -74,6 +74,26 @@ describe('erkenneFedlexGesetz (wiederverwendbarer Helfer)', () => {
     expect(erkenneFedlexGesetz('Art. 8 ATSG')).toBeNull();
     expect(erkenneFedlexGesetz('siehe oben')).toBeNull();
   });
+  // StGB/StG erschlossen (16.6.2026): die Snapshots STGB.json/STG.json waren
+  // vorhanden, aber unerreichbar, weil die Gesetze nicht in FEDLEX standen.
+  // Kollisionscheck: «StGB» endet nicht auf « StG» (Regex `(^|\s)KEY$`), darum
+  // löst «Art. 97 StGB» auf 'StGB' und «Art. 8 StG» auf 'StG' auf.
+  it('StGB/StG kollisionsfrei (StGB ≠ StG trotz gemeinsamem Präfix)', () => {
+    expect(erkenneFedlexGesetz('Art. 97 StGB')).toBe('StGB');
+    expect(erkenneFedlexGesetz('Art. 30 StGB')).toBe('StGB');
+    expect(erkenneFedlexGesetz('Art. 8 StG')).toBe('StG');
+    expect(erkenneFedlexGesetz('Art. 8 GebVHReg')).toBe('GebVHReg');
+  });
+});
+
+describe('StGB/StG-Links (Screen-Pfad; PDF unberührt, eigene ERLASSE-Liste)', () => {
+  it('Art. 97 StGB → StGB-Basis + #art_97 (nicht StG)', () => {
+    expect(fedlexLinkFuerArtikel('Art. 97 StGB')).toBe(`${FEDLEX.StGB}#art_97`);
+    expect(fedlexLinkFuerArtikel('Art. 30 Abs. 1 StGB')).toBe(`${FEDLEX.StGB}#art_30`);
+  });
+  it('Art. 8 StG → StG-Basis (Stempelabgaben, nicht StGB)', () => {
+    expect(fedlexLinkFuerArtikel('Art. 8 StG')).toBe(`${FEDLEX.StG}#art_8`);
+  });
 });
 
 describe('Audit 5.6.2026 – Kombi-Anker Buchstabe+Suffix', () => {
