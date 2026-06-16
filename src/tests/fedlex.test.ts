@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel } from '../lib/fedlex';
+import { FEDLEX, fedlexUrl, fedlexLinkFuerArtikel, erkenneFedlexGesetz } from '../lib/fedlex';
 
 describe('fedlexUrl', () => {
   it('Zahl-Artikel', () => {
@@ -58,6 +58,21 @@ describe('fedlexLinkFuerArtikel', () => {
     expect(fedlexLinkFuerArtikel('Art. 48 GebV SchKG')).toBe(`${FEDLEX.GebVSchKG}#art_48`);
     // Haupt-SchKG bleibt unberührt
     expect(fedlexLinkFuerArtikel('Art. 16 SchKG')).toBe(`${FEDLEX.SchKG}#art_16`);
+  });
+});
+
+describe('erkenneFedlexGesetz (wiederverwendbarer Helfer)', () => {
+  it('erkennt das Gesetz am letzten Token', () => {
+    expect(erkenneFedlexGesetz('Art. 335c Abs. 1 OR')).toBe('OR');
+    expect(erkenneFedlexGesetz('Art. 96 ZPO')).toBe('ZPO');
+  });
+  it('Mehrwort-Alias hat Vorrang vor dem Token-Match', () => {
+    expect(erkenneFedlexGesetz('Art. 16 GebV SchKG')).toBe('GebVSchKG');
+    expect(erkenneFedlexGesetz('Art. 16 SchKG')).toBe('SchKG');
+  });
+  it('unbekanntes Gesetz → null', () => {
+    expect(erkenneFedlexGesetz('Art. 8 ATSG')).toBeNull();
+    expect(erkenneFedlexGesetz('siehe oben')).toBeNull();
   });
 });
 

@@ -88,6 +88,20 @@ const MEHRWORT_ALIAS: ReadonlyArray<[string, FedlexGesetz]> = [
   ['GebV SchKG', 'GebVSchKG'],
 ];
 
+// Erkennt das Gesetz eines Normverweis-Texts ('Art. 16 GebV SchKG' → 'GebVSchKG').
+// Aliase werden VOR dem generischen Token-Match geprüft (Mehrwort-Namen, deren
+// letztes Token sonst ein anderes Gesetz träfe). Unbekanntes Gesetz → null.
+// Reiner Helfer (§5): einzige Quelle der Gesetz-Erkennung; von
+// fedlexLinkFuerArtikel UND vom Norm-Snapshot-Resolver (normtext/bundRef)
+// wiederverwendet — die Matching-Logik wird nicht dupliziert.
+export function erkenneFedlexGesetz(text: string): FedlexGesetz | null {
+  const bereinigt = text.trim();
+  const alias = MEHRWORT_ALIAS.find(([name]) => bereinigt.endsWith(name));
+  return alias?.[1]
+    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(bereinigt))
+    ?? null;
+}
+
 // Direktlink aus einem Normverweis-Text, z. B. 'Art. 335c Abs. 1 OR' →
 // OR-Basis + #art_335_c. Absatz-/Ziffer-Angaben ändern den Anker nicht;
 // massgeblich ist der führende Artikel.
@@ -97,10 +111,7 @@ const MEHRWORT_ALIAS: ReadonlyArray<[string, FedlexGesetz]> = [
 //   Gesetzes-Seite ohne Anker.
 // - Unbekanntes Gesetz → null (kein Link).
 export function fedlexLinkFuerArtikel(text: string): string | null {
-  const bereinigt = text.trim();
-  const alias = MEHRWORT_ALIAS.find(([name]) => bereinigt.endsWith(name));
-  const gesetz = alias?.[1]
-    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g}$`).test(bereinigt));
+  const gesetz = erkenneFedlexGesetz(text);
   if (!gesetz) return null;
   if (/\bSchlT\b/.test(text)) return FEDLEX[gesetz];
   // Bug-Check 10.6.2026 (NIEDRIG): Buchstabe UND lat. Suffix kombinierbar
