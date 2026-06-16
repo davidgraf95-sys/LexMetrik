@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls, NormLink } from '../vorlagen/ui';
 import { Link } from 'react-router-dom';
 import { bgerRechtswegLink } from '../../lib/rechnerPermalinks';
 import { ErgebnisBlock } from '../ErgebnisBlock';
@@ -263,7 +263,7 @@ export function StrafZustaendigkeitTeil() {
         {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s">{w}</div>)}
 
         <div className="flex flex-wrap gap-1.5">
-          {r.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}{n.bemerkung ? ` · ${n.bemerkung}` : ''}</span>)}
+          {r.normverweise.map((n, i) => <NormLink key={i} artikel={n.artikel} bemerkung={n.bemerkung} />)}
         </div>
 
         {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +
@@ -530,7 +530,7 @@ function StrafRechtsmittelTeil() {
         </div>
 
         <div className="flex flex-wrap gap-1.5">
-          {r.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}{n.bemerkung ? ` · ${n.bemerkung}` : ''}</span>)}
+          {r.normverweise.map((n, i) => <NormLink key={i} artikel={n.artikel} bemerkung={n.bemerkung} />)}
         </div>
 
         {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026). */}

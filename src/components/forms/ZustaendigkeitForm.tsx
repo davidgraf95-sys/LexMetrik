@@ -8,6 +8,7 @@ import {
   Field,
   GruppenTitel,
   inputCls,
+  NormLink,
   Stepper,
 } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
@@ -1022,7 +1023,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
             <div className="lc-notice text-body-s">{rechtsmittel.fristHinweis}</div>
             <div className="flex flex-wrap gap-1.5">
-              {rechtsmittel.normverweise.map((n, i) => <span key={i} className="lc-chip">{n.artikel}</span>)}
+              {rechtsmittel.normverweise.map((n, i) => <NormLink key={i} artikel={n.artikel} />)}
             </div>
 
             {/* Mandatstauglicher Output (G3.1 / M-8, 10.6.2026): Aktenzeichen +
