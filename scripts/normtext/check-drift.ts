@@ -32,6 +32,8 @@ import type { NormSnapshot } from './drift-logik.ts';
 
 // lawIdSafe für HTM-Quellen (kongruent zu normtext-snapshot.ts).
 function htmLawIdSafe(url: string): string {
+  const ti = url.match(/\/pdfatto\/atto\/(\d+)$/i);
+  if (ti) return `ti-${ti[1]}`;
   const letzter = url.split('/').pop() ?? url;
   return letzter.replace(/\.html?$/i, '');
 }
@@ -193,7 +195,7 @@ async function main(): Promise<void> {
 
       try {
         // Nur Meta benötigt; leere Token-Liste reicht
-        const ergebnis = await holeLexWork(gruppe.host, gruppe.lang, gruppe.lawId, []);
+        const ergebnis = await holeLexWork(gruppe.host, gruppe.lang, gruppe.lawId);
 
         if (ergebnis.meta.nurPdf) {
           // nurPdf-Erlass → überspringen
@@ -238,7 +240,7 @@ async function main(): Promise<void> {
       if (snapshotToken === undefined) continue; // kein Snapshot → überspringen
 
       try {
-        const ergebnis = await holeHtm(g.quelleUrl, g.profil, []);
+        const ergebnis = await holeHtm(g.quelleUrl, g.profil);
         htmGeprüft++;
         const neuerHash = ergebnis.meta.quelleHash;
         if (neuerHash && neuerHash !== snapshotToken) {
@@ -273,7 +275,7 @@ async function main(): Promise<void> {
       const snapshotToken = kantonTokens.get(key);
       if (snapshotToken === undefined) continue;
       try {
-        const ergebnis = await holeZhPdf(g.quelleUrl, []);
+        const ergebnis = await holeZhPdf(g.quelleUrl);
         zhGeprüft++;
         const neuerHash = ergebnis.meta.quelleHash;
         if (neuerHash && neuerHash !== snapshotToken) {
@@ -308,7 +310,7 @@ async function main(): Promise<void> {
       const snapshotToken = kantonTokens.get(key);
       if (snapshotToken === undefined) continue;
       try {
-        const ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil], []);
+        const ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil]);
         pdfGeprüft++;
         const neuerHash = ergebnis.meta.quelleHash;
         if (neuerHash && neuerHash !== snapshotToken) {

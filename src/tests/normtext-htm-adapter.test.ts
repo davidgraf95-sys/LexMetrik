@@ -9,9 +9,12 @@ import {
   extrahiereHtmArtikel,
   extrahiereAlleHtmArtikel,
   berechneQuelleHash,
+  tiHtmlUrlAusQuelle,
+  leseTiStand,
 } from '../../scripts/normtext/adapter-htm.ts';
 import { GE_RTFMC_HTM } from './fixtures/htm-ge-rtfmc.ts';
 import { NE_LTFRAIS_HTM } from './fixtures/htm-ne-ltfrais.ts';
+import { TI_LTG_HTML } from './fixtures/htm-ti-ltg.ts';
 
 describe('HTM-Adapter — GE (silgeneve)', () => {
   it('extrahiert Art. 1 (ein Absatz, Sachtitel verworfen, é dekodiert)', () => {
@@ -144,5 +147,71 @@ describe('HTM-Adapter — quelleHash (Drift-Token)', () => {
       '999': { bloecke: [{ absatz: null, text: 'Neuer Artikel' }] },
     });
     expect(verändert).not.toBe(original);
+  });
+});
+
+// ─── TI-Profil (m3.ti.ch, server-gerendertes HTML, italienisch) ──────────────
+describe('HTM-Adapter — TI (m3.ti.ch)', () => {
+  it('leitet die HTML-URL aus der pdfatto/atto-quelleUrl ab (legge/num)', () => {
+    expect(
+      tiHtmlUrlAusQuelle(
+        'https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/137',
+      ),
+    ).toBe(
+      'https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/legge/num/137',
+    );
+    // Wird die HTML-Seite bereits zitiert, bleibt sie unverändert.
+    expect(
+      tiHtmlUrlAusQuelle(
+        'https://m3.ti.ch/CAN/RLeggi/public/raccolta-leggi/legge/num/148',
+      ),
+    ).toBe('https://m3.ti.ch/CAN/RLeggi/public/raccolta-leggi/legge/num/148');
+  });
+
+  it('liest den Stand aus «in vigore dal D.M.YYYY»', () => {
+    expect(leseTiStand('Articolo modificato; in vigore dal 10.2.2015 - BU 2015, 38.')).toBe(
+      '2015-02-10',
+    );
+    // it. Monatsname-Form «in vigore: 1° luglio 2015» (atto 148).
+    expect(leseTiStand('in vigore: 1° luglio 2015 - BU 2015, 169.')).toBe('2015-07-01');
+  });
+
+  it('extrahiert Art. 1 (zerstückelter «Art.»·« »·«1»-Kopf, zwei Absätze, it. Akzente)', () => {
+    const a = extrahiereHtmArtikel(TI_LTG_HTML, '1', 'ti');
+    expect(a).not.toBeNull();
+    expect(a!.bloecke.map((b) => b.absatz)).toEqual(['1', '2']);
+    // §7-Beleg: Art. 1 LTG — italienischer Originaltext sauber, Akzent «’».
+    expect(a!.bloecke[0].text).toBe(
+      'La presente legge stabilisce la tariffa delle spese processuali per l’amministrazione della giustizia civile e penale.',
+    );
+    expect(a!.bloecke[1].text).toBe('Sono riservate le leggi speciali.');
+  });
+
+  it('extrahiert Art. 9 und verwirft den Fussnoten-Verweis [3]', () => {
+    const a = extrahiereHtmArtikel(TI_LTG_HTML, '9', 'ti');
+    expect(a).not.toBeNull();
+    expect(a!.bloecke.map((b) => b.absatz)).toEqual(['1', '2']);
+    expect(a!.bloecke[0].text).not.toContain('[3]');
+    expect(a!.bloecke[0].text).toContain('procedura sommaria');
+  });
+
+  it('Sachtitel («Oggetto»/«Procedura …») erscheint NICHT als Normtext', () => {
+    const alle = extrahiereAlleHtmArtikel(TI_LTG_HTML, 'ti');
+    for (const art of Object.values(alle.artikel)) {
+      for (const b of art.bloecke) {
+        expect(b.text).not.toBe('Oggetto');
+        expect(b.text).not.toBe('Procedura semplificata');
+        expect(b.text).not.toBe('Procedura sommaria');
+      }
+    }
+  });
+
+  it('Label einheitlich «Art. N»; Stand aus «in vigore dal»', () => {
+    const alle = extrahiereAlleHtmArtikel(TI_LTG_HTML, 'ti');
+    expect(Object.keys(alle.artikel).sort()).toEqual(['1', '8', '9']);
+    expect(alle.labels['1']).toBe('Art. 1');
+    expect(alle.labels['8']).toBe('Art. 8');
+    expect(alle.meta.stand).toBe('2015-02-10');
+    expect(alle.meta.quelleHash).toMatch(/^[0-9a-f]{64}$/);
   });
 });

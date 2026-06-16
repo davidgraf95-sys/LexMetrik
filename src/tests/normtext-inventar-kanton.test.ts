@@ -12,6 +12,7 @@ import {
   sammleKantonInventar,
   sammleFallback,
   sammlePdfInventar,
+  sammleHtmInventar,
 } from '../../scripts/normtext/inventar-kanton';
 
 describe('sammleKantonInventar', () => {
@@ -111,14 +112,18 @@ describe('sammleFallback', () => {
   });
 });
 
-describe('sammlePdfInventar (SZ/TI/VD/JU)', () => {
+// Fachliche Änderung (16.6.2026, Auftrag David): TI ist NICHT mehr ein PDF-
+// Profil, sondern wird als strukturiertes HTML (m3.ti.ch …/legge/num) über den
+// HTM/TI-Profil erschlossen. Die PDF-Kantone sind jetzt SZ/VD/JU.
+describe('sammlePdfInventar (SZ/VD/JU)', () => {
   const pdf = sammlePdfInventar();
 
-  it('erfasst genau die vier PDF-Kantone mit dem richtigen Profil', () => {
+  it('erfasst genau die drei PDF-Kantone mit dem richtigen Profil (TI nicht mehr)', () => {
     const kantone = new Set(pdf.map((g) => g.kanton));
-    expect([...kantone].sort()).toEqual(['JU', 'SZ', 'TI', 'VD']);
+    expect([...kantone].sort()).toEqual(['JU', 'SZ', 'VD']);
+    expect(kantone.has('TI')).toBe(false);
     for (const g of pdf) {
-      const erwartet = { SZ: 'sz', TI: 'ti', VD: 'vd', JU: 'ju' }[g.kanton];
+      const erwartet = { SZ: 'sz', VD: 'vd', JU: 'ju' }[g.kanton];
       expect(g.profil).toBe(erwartet);
       expect(g.artikel.length).toBeGreaterThan(0);
     }
@@ -134,9 +139,29 @@ describe('sammlePdfInventar (SZ/TI/VD/JU)', () => {
   it('jede Gruppe trägt eine quelleUrl, die zum Profil-Host passt', () => {
     for (const g of pdf) {
       if (g.profil === 'sz') expect(g.quelleUrl).toMatch(/www\.sz\.ch/);
-      if (g.profil === 'ti') expect(g.quelleUrl).toMatch(/m3\.ti\.ch/);
       if (g.profil === 'vd') expect(g.quelleUrl).toMatch(/lexfind\.ch\/tolv/);
       if (g.profil === 'ju') expect(g.quelleUrl).toMatch(/rsju\.jura\.ch/);
+    }
+  });
+});
+
+describe('sammleHtmInventar (NE/GE/TI)', () => {
+  const htm = sammleHtmInventar();
+
+  it('erfasst TI über den HTM/TI-Profil (m3.ti.ch pdfatto/atto-quelleUrl)', () => {
+    const ti = htm.filter((g) => g.profil === 'ti');
+    expect(ti.length).toBeGreaterThan(0);
+    for (const g of ti) {
+      expect(g.kanton).toBe('TI');
+      // Manifest-Key bleibt die EXAKTE Tarif-quelleUrl (pdfatto/atto).
+      expect(g.quelleUrl).toMatch(/m3\.ti\.ch\/.*\/pdfatto\/atto\/\d+$/);
+      expect(g.artikel.length).toBeGreaterThan(0);
+    }
+  });
+
+  it('nur NE/GE/TI als HTM-Profile', () => {
+    for (const g of htm) {
+      expect(['ne', 'ge', 'ti']).toContain(g.profil);
     }
   });
 });

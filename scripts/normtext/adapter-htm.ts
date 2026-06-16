@@ -33,7 +33,23 @@
  *       Text an den vorangehenden Absatz gehängt (Zelle · Zelle — Zeile).
  *   - Stand: <p class=xEdition>État au<br>1er avril 2023</p>.
  *
- * Mehrsprachigkeit: die Erlasse sind französisch — Texte werden so übernommen.
+ * TI — m3.ti.ch (Profil 'ti', italienisch, server-gerendertes HTML, KEIN SPA):
+ *   - URL: …/raccolta-leggi/legge/num/{N} (utf-8). Die Tarif-quelleUrl zitiert TI
+ *     teils als …/pdfatto/atto/{N} (PDF) — die HTML-URL …/legge/num/{N} wird
+ *     daraus abgeleitet (tiHtmlUrlAusQuelle).
+ *   - Artikel-Kopf: fettes <span style="…font-weight:bold…">Art. N</span> (die
+ *     Aweber-Word→HTML-Ausgabe zerlegt «Art. N» teils in mehrere fette Spans
+ *     «Art.»·« »·«N» — sie werden vor dem Split zu EINEM Span verschmolzen).
+ *   - Absätze: kleine Spans «font-size:8pt; vertical-align:2pt» mit nacktem
+ *     Ziffern-Inhalt (1, 2, 3) am <p>-Anfang = Absatznummer; Folgespans = Text.
+ *   - Sachtitel/Marginalie: fettes <span> mit Text (kein «Art. N») in einem
+ *     eigenen <p> VOR dem Artikel → redaktionell, ignoriert.
+ *   - Fussnoten: <a href="#_ftn…"><span …>[N]</span></a> bzw. hochgestellte
+ *     «font-size:6.67pt; vertical-align:super»-Spans «[N]» → entfernt.
+ *   - Eingebettete Tabellen (Gebührenstaffeln) → an den vorangehenden Absatz.
+ *   - Stand: jüngstes «in vigore dal D.M.YYYY» → ISO.
+ *
+ * Mehrsprachigkeit: NE/GE französisch, TI italienisch — Texte unverändert.
  *
  * Drift-Token (§7 d): es gibt keine version_uid. quelleHash = sha256 des
  * normalisierten extrahierten Volltexts (alle Artikel + items, stabil sortiert)
@@ -48,7 +64,7 @@
 import { createHash } from 'node:crypto';
 import { dekodiereEntities } from './html-entities.ts';
 
-export type HtmProfil = 'ne' | 'ge';
+export type HtmProfil = 'ne' | 'ge' | 'ti';
 
 export interface HtmBlock {
   absatz: string | null;
@@ -67,6 +83,8 @@ export interface HtmErgebnis {
     quelleHash: string;
   };
   artikel: Record<string, HtmArtikel>; // token → Artikel
+  /** Einheitliches Label je token: «Art. N» (NE/GE sind «Art.»-Erlasse). */
+  labels: Record<string, string>;
 }
 
 // ── latin-1/windows-1252 → JS-String ────────────────────────────────────────
@@ -590,6 +608,209 @@ function neTitel(segmente: PSegment[]): string {
   return s ? bereinige(s.inner) : '';
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// TI-Profil (m3.ti.ch, server-gerendertes HTML, italienisch)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Leitet die TI-HTML-URL (…/legge/num/{N}) aus der Tarif-quelleUrl ab. Die
+ * Tarif-Daten zitieren TI als …/pdfatto/atto/{N} (PDF) ODER bereits als
+ * …/legge/num/{N} (HTML). Manifest-Key bleibt aber die EXAKTE Tarif-quelleUrl —
+ * diese Funktion liefert nur die zu fetchende HTML-Adresse.
+ */
+export function tiHtmlUrlAusQuelle(quelleUrl: string): string {
+  const m = quelleUrl.match(
+    /^(https:\/\/m3\.ti\.ch\/CAN\/RLeggi\/public\/(?:index\.php\/)?raccolta-leggi)\/pdfatto\/atto\/(\d+)$/i,
+  );
+  if (m) return `${m[1]}/legge/num/${m[2]}`;
+  return quelleUrl;
+}
+
+/** Italienische Monatsnamen → MM (für «in vigore: 1° luglio 2015»). */
+const IT_MONATE: Record<string, string> = {
+  gennaio: '01', febbraio: '02', marzo: '03', aprile: '04', maggio: '05',
+  giugno: '06', luglio: '07', agosto: '08', settembre: '09', ottobre: '10',
+  novembre: '11', dicembre: '12',
+};
+
+/**
+ * TI-Stand: jüngstes In-Kraft-Datum aus den Fussnoten-Anmerkungen. Zwei reale
+ * Formen (§7, live geprüft an atto 137 LTG + atto 148 tariffa notarile):
+ *   (a) «in vigore dal D.M.YYYY»            (numerisch — neuere Erlasse, LTG)
+ *   (b) «in vigore: D° mese YYYY»           (it. Monatsname — ältere, Notariat)
+ * Das jüngste gefundene Datum ist der Erlass-Stand. Tags werden vorher gestrippt,
+ * weil Tag/«°»/Monat in der TI-Ausgabe in getrennten Spans stehen.
+ */
+export function leseTiStand(html: string): string {
+  const text = html.replace(/<[^>]+>/g, ' ').replace(/&deg;/gi, '°');
+  const daten: string[] = [];
+  // (a) numerisch
+  for (const m of text.matchAll(/in\s+vigore\s+dal\s+(\d{1,2})\.(\d{1,2})\.(\d{4})/gi)) {
+    daten.push(`${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`);
+  }
+  // (b) it. Monatsname («in vigore: 1° luglio 2015»; «°» und «dal» optional)
+  for (const m of text.matchAll(
+    /in\s+vigore\s*(?:dal)?\s*:?\s*(\d{1,2})\s*°?\s+([a-zà-ù]+)\s+(\d{4})/gi,
+  )) {
+    const mon = IT_MONATE[m[2].toLowerCase()];
+    if (mon) daten.push(`${m[3]}-${mon}-${m[1].padStart(2, '0')}`);
+  }
+  if (daten.length === 0) return '';
+  daten.sort();
+  return daten[daten.length - 1];
+}
+
+/** TI-Titel: erstes <h1>/<title>-naher Erlasstitel. Best effort (rein
+ *  informativ; der Erlass-Name kommt im Snapshot aus den Tarif-Daten). */
+function tiTitel(html: string): string {
+  const m = html.match(/<title>([\s\S]*?)<\/title>/i);
+  return m ? bereinige(m[1]) : '';
+}
+
+// Fettes <span …font-weight:bold…> mit Art.-Kopf. Die Aweber-Word→HTML-Ausgabe
+// zerlegt «Art. N» teils in mehrere unmittelbar aufeinanderfolgende fette Spans
+// («Art.»·« »·«N»). Vor dem Split verschmelzen wir benachbarte fette Spans.
+const TI_BOLD_SPAN = /<span\b[^>]*font-weight:\s*bold[^>]*>([\s\S]*?)<\/span>/gi;
+
+/** Verschmilzt unmittelbar aufeinanderfolgende fette Spans zu EINEM fetten Span,
+ *  damit ein zerstückeltes «Art.»·« »·«1» als «Art. 1» erkannt wird. */
+function verschmelzeBoldSpans(html: string): string {
+  // Zwischen zwei fetten Spans dürfen nur Whitespace stehen → zusammenfassen.
+  let out = html;
+  let prev: string;
+  do {
+    prev = out;
+    out = out.replace(
+      /(<span\b[^>]*font-weight:\s*bold[^>]*>)([\s\S]*?)(<\/span>)\s*(<span\b[^>]*font-weight:\s*bold[^>]*>)([\s\S]*?)(<\/span>)/i,
+      (_voll, open1, inner1, _close1, _open2, inner2, close2) =>
+        `${open1}${inner1}${inner2}${close2}`,
+    );
+  } while (out !== prev);
+  return out;
+}
+
+/** Strippt Fussnoten-Anker (<a href="#_ftn…"> Verweis und <a href="#_ftnref…">
+ *  Rückverweis, je …>[N]</a>) und hochgestellte «[N]»-Verweis-Spans (font-size
+ *  klein + vertical-align:super), damit sie nicht als Absatznummer/Text
+ *  durchschlagen. */
+function tiOhneFootnotes(html: string): string {
+  let s = html.replace(/<a\b[^>]*href=["']#_ftn(?:ref)?[^>]*>[\s\S]*?<\/a>/gi, '');
+  // Hochgestellte Verweis-Spans «[N]» (auch ohne <a>-Hülle).
+  s = s.replace(
+    /<span\b[^>]*vertical-align:\s*super[^>]*>\s*\[?\d+\]?\s*<\/span>/gi,
+    '',
+  );
+  // Leere Anker (Verweis-Ziele).
+  s = s.replace(/<a\b[^>]*name=["']_ftn(?:ref)?\d+["'][^>]*>\s*<\/a>/gi, '');
+  return s;
+}
+
+/** true, wenn ein <p>-inner (VOR dem Footnote-Stripping) eine Fussnoten-Definition
+ *  ist: er beginnt mit dem Rückverweis-Anker <a href="#_ftnref…">. Diese Absätze
+ *  («Cpv. modificato …; in vigore dal …») stehen am Dokumentende und sind KEIN
+ *  Normtext → übersprungen, damit sie nicht dem letzten Artikel zugeschlagen
+ *  werden. */
+function istTiFootnoteDef(inner: string): boolean {
+  return /^\s*<a\b[^>]*href=["']#_ftnref/i.test(inner);
+}
+
+// Absatznummer-Span: «font-size:8pt; vertical-align:2pt» mit nacktem Ziffern-
+// Inhalt (1, 2, 3 …). Steht am <p>-Anfang nach dem Art.-Kopf bzw. allein.
+const TI_ABSATZ_SPAN =
+  /<span\b[^>]*font-size:\s*8(?:\.0)?pt[^>]*vertical-align:\s*2pt[^>]*>\s*(\d+(?:bis|ter)?)\s*<\/span>/i;
+
+/**
+ * Extrahiert ALLE TI-Artikel aus dem server-gerenderten HTML. Jeder Artikel
+ * besteht aus einem oder mehreren <p>, das erste mit dem fetten «Art. N»-Kopf,
+ * Folge-<p> tragen weitere Absatznummern. Tabellen werden an den vorangehenden
+ * Absatz gehängt (analog NE/GE).
+ */
+function tiExtrahiere(html: string): Record<string, HtmArtikel> {
+  const artikel: Record<string, HtmArtikel> = {};
+  let aktiv: { token: string; bloecke: HtmBlock[] } | null = null;
+
+  const speichere = (): void => {
+    if (aktiv && aktiv.bloecke.length > 0 && !(aktiv.token in artikel)) {
+      artikel[aktiv.token] = { bloecke: aktiv.bloecke };
+    }
+  };
+
+  // <p>…</p> / <table>…</table> der Reihe nach aus dem ROHEN HTML (damit
+  // istTiFootnoteDef den unveränderten <p>-Anfang sieht); je Knoten danach die
+  // Fussnoten-Anker entfernen und fette Spans verschmelzen.
+  const knoten = [
+    ...html.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>|<table\b[^>]*>([\s\S]*?)<\/table>/gi),
+  ];
+
+  for (const m of knoten) {
+    if (m[2] !== undefined) {
+      // Tabelle → an den vorangehenden Absatz als items.
+      if (!aktiv || aktiv.bloecke.length === 0) continue;
+      const tabItems = tabelleZuItems(m[2]);
+      if (tabItems.length === 0) continue;
+      (aktiv.bloecke[aktiv.bloecke.length - 1].items ??= []).push(...tabItems);
+      continue;
+    }
+    // Fussnoten-Definition (steht am Dokumentende, beginnt mit #_ftnref-Anker)
+    // → kein Normtext, überspringen (sonst würde sie dem letzten Artikel
+    // zugeschlagen).
+    if (istTiFootnoteDef(m[1])) continue;
+    const inner = verschmelzeBoldSpans(tiOhneFootnotes(m[1]));
+
+    // Art.-Kopf? Fetter Span «Art. N» (nach Verschmelzung). Wir suchen den
+    // ERSTEN fetten Span und prüfen, ob er mit «Art. N» beginnt.
+    TI_BOLD_SPAN.lastIndex = 0;
+    const boldM = TI_BOLD_SPAN.exec(inner);
+    const boldText = boldM ? bereinige(boldM[1]) : '';
+    const artM = boldText.match(/^Art\.?\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)\b/i);
+
+    if (artM) {
+      speichere();
+      const token = normalisiereToken(artM[1]);
+      aktiv = { token, bloecke: [] };
+      // Nach dem Art.-Kopf: Absatznummer + Text im selben <p>. Den Kopf-Span aus
+      // dem inner entfernen, dann wie einen Folge-Absatz behandeln.
+      const nachKopf = inner.slice(boldM!.index + boldM![0].length);
+      tiFuegeAbsatz(aktiv.bloecke, nachKopf);
+      continue;
+    }
+
+    // Kein Art.-Kopf. Ist es ein Folge-Absatz des aktiven Artikels (beginnt mit
+    // einer Absatznummer ODER trägt Fliesstext)? Oder eine Marginalie/Gliederung
+    // (fetter Sachtitel-Span ohne «Art.») → beendet NICHT zwingend, aber liefert
+    // keinen Normtext.
+    if (!aktiv) continue;
+    // Marginalie: ein <p>, dessen GANZER (bereinigter) Inhalt fett ist (Sachtitel)
+    // → kein Normtext. Heuristik: enthält einen fetten Span UND der Gesamttext ==
+    // dem fetten Text (kein zusätzlicher Fliesstext).
+    const ganz = bereinige(inner);
+    if (ganz === '' ) continue;
+    if (boldText && ganz === boldText) {
+      // reiner Sachtitel (z.B. «Procedura ordinaria») → überspringen
+      continue;
+    }
+    tiFuegeAbsatz(aktiv.bloecke, inner);
+  }
+
+  speichere();
+  return artikel;
+}
+
+/** Hängt einen TI-Absatz (inner eines <p> ohne Art.-Kopf) an die Blockliste.
+ *  Führende Absatznummer (8pt/2pt-Span) wird gelesen; der Rest ist Text. */
+function tiFuegeAbsatz(bloecke: HtmBlock[], inner: string): void {
+  let absatz: string | null = null;
+  let rest = inner;
+  const absM = inner.match(TI_ABSATZ_SPAN);
+  // Nur als Absatznummer werten, wenn der Span am ANFANG steht (vor Fliesstext).
+  if (absM && inner.slice(0, absM.index!).replace(/<[^>]+>|\s|&nbsp;/gi, '') === '') {
+    absatz = absM[1].toLowerCase();
+    rest = inner.slice(absM.index! + absM[0].length);
+  }
+  const text = bereinige(rest);
+  if (text) bloecke.push({ absatz, text });
+}
+
 // ── Französisches Monatsdatum «1er avril 2023» / «1er juillet 2025» → ISO ─────
 const FR_MONATE: Record<string, string> = {
   janvier: '01', février: '02', fevrier: '02', mars: '03', avril: '04',
@@ -617,6 +838,12 @@ function normalisiereToken(roh: string): string {
   return roh
     .toLowerCase()
     .replace(TOKEN_SUFFIX, (_, n, b, suf) => [n, b, suf].filter(Boolean).join('_'));
+}
+
+/** Token → lesbare Nummer (Umkehrung von normalisiereToken): «1_a»→«1a»,
+ *  «335_bis»→«335bis», «4»→«4». Für das einheitliche Artikel-Label. */
+export function tokenZuNummer(token: string): string {
+  return token.replace(/_/g, '');
 }
 
 // ── quelleHash über die extrahierten Artikel (Drift-Token) ───────────────────
@@ -660,18 +887,27 @@ export function extrahiereHtmArtikel(
 export function extrahiereAlleHtmArtikel(
   html: string,
   profil: HtmProfil,
-): { meta: { titel: string; stand: string; quelleHash: string }; artikel: Record<string, HtmArtikel> } {
-  const segmente = leseParagraphen(html);
+): {
+  meta: { titel: string; stand: string; quelleHash: string };
+  artikel: Record<string, HtmArtikel>;
+  labels: Record<string, string>;
+} {
   let artikel: Record<string, HtmArtikel>;
   let titel: string;
   let stand: string;
   if (profil === 'ge') {
+    const segmente = leseParagraphen(html);
     artikel = geExtrahiere(segmente);
     titel = geTitel(segmente);
     stand = geStand(html);
     // GE: Tarif-Tabellen als gepaarte Band↔Wert-items an die Einleitungsabsätze.
     geHängeTabellen(segmente, html, artikel);
+  } else if (profil === 'ti') {
+    artikel = tiExtrahiere(html);
+    titel = tiTitel(html);
+    stand = leseTiStand(html);
   } else {
+    const segmente = leseParagraphen(html);
     artikel = neExtrahiere(segmente);
     titel = neTitel(segmente);
     stand = neStand(html);
@@ -681,7 +917,13 @@ export function extrahiereAlleHtmArtikel(
     }
   }
   const quelleHash = berechneQuelleHash(artikel);
-  return { meta: { titel, stand, quelleHash }, artikel };
+  // Einheitliches Label: NE/GE «Art.»-Erlasse (französisch), TI «Art.»-Erlass
+  // (italienisch) → «Art. N».
+  const labels: Record<string, string> = {};
+  for (const token of Object.keys(artikel)) {
+    labels[token] = `Art. ${tokenZuNummer(token)}`;
+  }
+  return { meta: { titel, stand, quelleHash }, artikel, labels };
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -689,31 +931,27 @@ export function extrahiereAlleHtmArtikel(
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Holt eine .htm-Quelle, dekodiert latin-1, extrahiert ALLE Artikel und gibt
- * die angeforderten Tokens zurück. meta trägt titel/stand/quelleHash.
- *
- * `tokens` filtert die Rückgabe (nur die zitierten Artikel ins Snapshot); der
- * quelleHash deckt aber den GANZEN extrahierten Volltext ab (stabiler Drift-
- * Token, unabhängig davon, welche Tokens gerade zitiert sind).
+ * Holt eine HTM/HTML-Quelle (NE/GE latin-1, TI utf-8), extrahiert ALLE Artikel
+ * und gibt sie samt einheitlichen Labels zurück (Vollabdeckung §7). meta trägt
+ * titel/stand/quelleHash; der quelleHash deckt den GANZEN extrahierten Volltext ab.
  */
 export async function holeHtm(
   url: string,
   profil: HtmProfil,
-  tokens: string[],
 ): Promise<HtmErgebnis> {
-  const res = await fetch(url);
+  // TI: …/pdfatto/atto/{N} (PDF-Zitat) → HTML-Seite …/legge/num/{N} ableiten.
+  // NE/GE: die quelleUrl IST schon die .htm-Adresse.
+  const fetchUrl = profil === 'ti' ? tiHtmlUrlAusQuelle(url) : url;
+  const res = await fetch(fetchUrl);
   if (!res.ok) {
-    throw new Error(`HTM ${url}: HTTP ${res.status}`);
+    throw new Error(`HTM ${fetchUrl}: HTTP ${res.status}`);
   }
   const buf = new Uint8Array(await res.arrayBuffer());
-  const html = dekodiereLatin1(buf);
-  const { meta, artikel } = extrahiereAlleHtmArtikel(html, profil);
-
-  // Nur die zitierten Tokens zurückgeben (kleinere Snapshots), aber quelleHash
-  // bleibt über den Gesamttext.
-  const gefiltert: Record<string, HtmArtikel> = {};
-  for (const t of tokens) {
-    if (t in artikel) gefiltert[t] = artikel[t];
-  }
-  return { meta, artikel: gefiltert };
+  // TI ist utf-8 (server-gerendert), NE/GE sind windows-1252/latin-1 (Word-Export).
+  const html =
+    profil === 'ti' ? new TextDecoder('utf-8').decode(buf) : dekodiereLatin1(buf);
+  // Vollabdeckung (§7): ALLE extrahierten Artikel zurückgeben, nicht nur die
+  // zitierten. Der quelleHash deckt ohnehin den Gesamttext ab.
+  const { meta, artikel, labels } = extrahiereAlleHtmArtikel(html, profil);
+  return { meta, artikel, labels };
 }

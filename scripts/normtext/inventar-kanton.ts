@@ -70,9 +70,9 @@ export interface FallbackEintrag {
 /** Eine HTM-Erlassquelle (NE rsn.ne.ch / GE silgeneve.ch) mit den zitierten
  *  Artikel-Tokens. Eine Gruppe = ein .htm (= ein Erlass). */
 export interface HtmInventarGruppe {
-  kanton: string; // 'NE' | 'GE'
-  profil: 'ne' | 'ge';
-  quelleUrl: string; // die exakte .htm-URL (Manifest-Key)
+  kanton: string; // 'NE' | 'GE' | 'TI'
+  profil: 'ne' | 'ge' | 'ti';
+  quelleUrl: string; // die exakte Quell-URL (Manifest-Key; TI: pdfatto/atto-URL)
   erlassName: string;
   erlassNr: string;
   artikel: KantonInventarArtikel[];
@@ -116,7 +116,10 @@ export interface PdfInventarGruppe {
  */
 function pdfProfil(kanton: string, url: string): 'sz' | 'ti' | 'vd' | 'ju' | null {
   if (kanton === 'SZ' && /^https:\/\/www\.sz\.ch\/.*\.pdf$/i.test(url)) return 'sz';
-  if (kanton === 'TI' && /^https:\/\/m3\.ti\.ch\/.*\/pdfatto\/atto\/\d+$/i.test(url)) return 'ti';
+  // TI: NICHT mehr über den PDF-Adapter — TI wird jetzt über den HTM/TI-Profil
+  // (m3.ti.ch …/legge/num) als strukturiertes HTML erschlossen (Auftrag David
+  // 16.6.2026). pdfatto/atto-URLs werden in tiHtmlUrlAusQuelle zur HTML-Seite
+  // abgeleitet; Manifest-Key bleibt die exakte Tarif-quelleUrl.
   if (kanton === 'VD' && /^https:\/\/www\.lexfind\.ch\/tolv\/\d+\/[a-z]{2}$/i.test(url)) return 'vd';
   if (kanton === 'JU' && /^https:\/\/rsju\.jura\.ch\/.*viewdocument\.html\?/i.test(url)) return 'ju';
   return null;
@@ -125,16 +128,21 @@ function pdfProfil(kanton: string, url: string): 'sz' | 'ti' | 'vd' | 'ju' | nul
 /** /app/(de|fr)/texts_of_law/<lawId> — Host + Sprache + lawId. */
 const LEXWORK = /^https:\/\/([^/]+)\/app\/(de|fr)\/texts_of_law\/(.+)$/;
 
-/** Statische .htm-Erlasssammlungen mit strukturiertem Word-Export, je Profil:
- *   NE: rsn.ne.ch …/htm/*.htm   ·   GE: silgeneve.ch …/*.htm
- *  (lexfind.ch, m3.ti u.a. bleiben echter Fallback — kein eigener Adapter.) */
-const HTM_QUELLEN: Array<{ muster: RegExp; profil: 'ne' | 'ge' }> = [
+/** Strukturiert erschlossene HTML/HTM-Erlassquellen, je Profil:
+ *   NE: rsn.ne.ch …/htm/*.htm        (Word-Export, latin-1)
+ *   GE: silgeneve.ch …/*.htm         (Word-Export, latin-1)
+ *   TI: m3.ti.ch …/pdfatto/atto/{N}  (server-gerendertes HTML, utf-8; die HTML-
+ *       Seite …/legge/num/{N} wird im Adapter abgeleitet, Manifest-Key bleibt
+ *       die exakte pdfatto-quelleUrl).
+ *  (übrige lexfind.ch u.a. bleiben echter Fallback — kein eigener Adapter.) */
+const HTM_QUELLEN: Array<{ muster: RegExp; profil: 'ne' | 'ge' | 'ti' }> = [
   { muster: /^https:\/\/rsn\.ne\.ch\/.*\.htm$/i, profil: 'ne' },
   { muster: /^https:\/\/silgeneve\.ch\/.*\.htm$/i, profil: 'ge' },
+  { muster: /^https:\/\/m3\.ti\.ch\/.*\/pdfatto\/atto\/\d+$/i, profil: 'ti' },
 ];
 
 /** Liefert das HTM-Profil einer URL oder null (kein HTM-Adapter zuständig). */
-function htmProfil(url: string): 'ne' | 'ge' | null {
+function htmProfil(url: string): 'ne' | 'ge' | 'ti' | null {
   for (const q of HTM_QUELLEN) if (q.muster.test(url)) return q.profil;
   return null;
 }
