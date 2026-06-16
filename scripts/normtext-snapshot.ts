@@ -138,6 +138,23 @@ async function erzeugeKantonsSnapshots(
     fetchFehler: [],
   };
 
+  // §8 (kein stilles Überschreiben): zweisprachige Kantone zitieren denselben
+  // Erlass über die de- UND die fr-LexWork-URL — verschiedene Sprachfassungen,
+  // also verschiedene Gruppen. Damit ihre Dateinamen/ids nicht kollidieren,
+  // wird der Sprach-Suffix '-<lang>' angehängt, sobald eine (kanton,lawId)-
+  // Kombination in mehr als einer Sprache vorkommt. Einsprachige Erlasse
+  // bleiben unverändert (stabile ids).
+  const sprachen = new Map<string, Set<string>>();
+  for (const g of inventar) {
+    const k = `${g.kanton}|${g.lawId}`;
+    if (!sprachen.has(k)) sprachen.set(k, new Set());
+    sprachen.get(k)!.add(g.lang);
+  }
+  const mehrsprachig = (g: { kanton: string; lawId: string }): boolean =>
+    (sprachen.get(`${g.kanton}|${g.lawId}`)?.size ?? 0) > 1;
+  const lawSchluessel = (g: { kanton: string; lawId: string; lang: 'de' | 'fr' }): string =>
+    mehrsprachig(g) ? `${lawIdSafe(g.lawId)}-${g.lang}` : lawIdSafe(g.lawId);
+
   for (const g of inventar) {
     const tokens = g.artikel.map((a) => a.token);
     let ergebnis;
@@ -161,6 +178,7 @@ async function erzeugeKantonsSnapshots(
 
     const erlass = erlassBezeichnung(ergebnis.meta.abkuerzung, g.erlassName, g.erlassNr);
     const snapshotListe: NormSnapshot[] = [];
+    const schluessel = lawSchluessel(g); // filesafe, mit '-de'/'-fr' nur wenn zweisprachig
 
     for (const art of g.artikel) {
       const treffer = ergebnis.artikel[art.token];
@@ -173,7 +191,7 @@ async function erzeugeKantonsSnapshots(
         });
         continue;
       }
-      const id = `kanton/${g.kanton}/${g.lawId}/art_${art.token}`;
+      const id = `kanton/${g.kanton}/${schluessel}/art_${art.token}`;
       const snapshot: NormSnapshot = {
         id,
         ebene: 'kanton',
@@ -194,12 +212,12 @@ async function erzeugeKantonsSnapshots(
     }
 
     const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
-    const ausgabePfad = `${ausgangsDir}/${g.kanton}-${lawIdSafe(g.lawId)}.json`;
+    const ausgabePfad = `${ausgangsDir}/${g.kanton}-${schluessel}.json`;
     writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
 
     cov.totalSnapshots += snapshotListe.length;
     cov.reportZeilen.push(
-      `  ${g.kanton}-${lawIdSafe(g.lawId).padEnd(14)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`,
+      `  ${g.kanton}-${schluessel.padEnd(14)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`,
     );
   }
 
