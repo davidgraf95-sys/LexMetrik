@@ -17,9 +17,11 @@ import {
   sammleKantonInventar,
   sammleFallback,
   sammleHtmInventar,
+  sammleZhPdfInventar,
 } from './normtext/inventar-kanton.ts';
 import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import { holeHtm } from './normtext/adapter-htm.ts';
+import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
 
@@ -355,6 +357,81 @@ async function erzeugeHtmSnapshots(
   return cov;
 }
 
+// lawIdSafe für ZH aus der zhlex-Registry-URL: …/erlass-211_11-… → «211.11».
+function zhLawIdSafe(url: string): string {
+  const m = url.match(/\/erlass-([^-]+)-/);
+  return m ? m[1].replace(/_/g, '.') : url.replace(/[^a-z0-9.]+/gi, '_');
+}
+
+// ── ZH-Snapshots (zhlex Text-PDF via pdfjs) erzeugen ─────────────────────────
+// Spiegelt die HTM-Phase: Inventar → holeZhPdf (Registry→notes.zh.ch-PDF) →
+// NormSnapshot. quelleUrl = zhlex-Registry-URL (= Manifest-Key). Drift via
+// quelleHash (kein version_uid), §7 d.
+async function erzeugeZhPdfSnapshots(
+  abgerufen: string,
+  goldenIndex: Record<string, string>,
+): Promise<HtmCoverage> {
+  const inventar = sammleZhPdfInventar();
+  const ausgangsDir = 'public/normtext/kanton';
+  mkdirSync(ausgangsDir, { recursive: true });
+
+  const cov: HtmCoverage = { totalSnapshots: 0, reportZeilen: [], tokenFehlt: [], fetchFehler: [] };
+
+  for (const g of inventar) {
+    const tokens = g.artikel.map((a) => a.token);
+    const safe = zhLawIdSafe(g.quelleUrl);
+    let ergebnis;
+    try {
+      ergebnis = await holeZhPdf(g.quelleUrl, tokens);
+    } catch (e) {
+      const fehler = e instanceof Error ? e.message : String(e);
+      cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
+      continue;
+    }
+
+    const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
+    const snapshotListe: NormSnapshot[] = [];
+
+    for (const art of g.artikel) {
+      const treffer = ergebnis.artikel[art.token];
+      if (!treffer || treffer.bloecke.length === 0) {
+        cov.tokenFehlt.push({ kanton: g.kanton, lawIdSafe: safe, token: art.token, label: art.label });
+        continue;
+      }
+      const id = `kanton/${g.kanton}/${safe}/art_${art.token}`;
+      const snapshot: NormSnapshot = {
+        id,
+        ebene: 'kanton',
+        quelle: g.kanton,
+        erlass,
+        artikel: art.token,
+        artikelLabel: art.label,
+        bloecke: treffer.bloecke,
+        stand: ergebnis.meta.stand,
+        quelleUrl: g.quelleUrl,
+        abgerufen,
+        fassungsToken: ergebnis.meta.quelleHash,
+        sha: sha256Bloecke(treffer.bloecke),
+      };
+      snapshotListe.push(snapshot);
+      goldenIndex[id] = snapshot.sha;
+    }
+
+    if (snapshotListe.length === 0) {
+      cov.reportZeilen.push(`  ${g.kanton}-${safe.padEnd(16)} 0 Snapshots → keine Datei (alle Tokens nicht im Erlass)`);
+      continue;
+    }
+
+    const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
+    const ausgabePfad = `${ausgangsDir}/${g.kanton}-${safe}.json`;
+    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+    cov.totalSnapshots += snapshotListe.length;
+    cov.reportZeilen.push(`  ${g.kanton}-${safe.padEnd(16)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`);
+  }
+
+  return cov;
+}
+
 // ── Hauptprogramm ─────────────────────────────────────────────────────────────
 async function main(): Promise<void> {
   const abgerufen = leseDatum();
@@ -489,6 +566,17 @@ async function main(): Promise<void> {
   for (const t of htmCov.tokenFehlt) console.log(`  ${t.kanton} ${t.lawIdSafe} art_${t.token} (${t.label})`);
   console.log(`fetch-Fehler (HTM): ${htmCov.fetchFehler.length}`);
   for (const f of htmCov.fetchFehler) console.log(`  ${f.kanton} ${f.url}: ${f.fehler}`);
+
+  // ── ZH-Phase (zhlex Text-PDF via pdfjs) ──────────────────────────────────
+  console.log('\n[Normtext-Snapshot] ZH-Phase (zhlex Text-PDF) …');
+  const zhCov = await erzeugeZhPdfSnapshots(abgerufen, goldenIndex);
+  console.log('\n── ZH-Snapshots (zhlex PDF) ──────────────────────────────────');
+  for (const z of zhCov.reportZeilen) console.log(z);
+  console.log(`\nGesamt ZH: ${zhCov.totalSnapshots} Snapshots in ${zhCov.reportZeilen.length} Zeile(n)`);
+  console.log(`Token nicht im Erlass (ZH): ${zhCov.tokenFehlt.length}`);
+  for (const t of zhCov.tokenFehlt) console.log(`  ${t.kanton} ${t.lawIdSafe} art_${t.token} (${t.label})`);
+  console.log(`fetch-Fehler (ZH): ${zhCov.fetchFehler.length}`);
+  for (const f of zhCov.fetchFehler) console.log(`  ${f.kanton} ${f.url}: ${f.fehler}`);
 
   // ── Kanton-Manifest (quelleUrl → Dateiname) aktualisieren ────────────────
   const kantonManifest = baueManifest('public/normtext/kanton');

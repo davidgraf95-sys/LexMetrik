@@ -78,6 +78,22 @@ export interface HtmInventarGruppe {
   artikel: KantonInventarArtikel[];
 }
 
+/** Eine ZH-zhlex-PDF-Erlassquelle mit den zitierten §-Tokens. Eine Gruppe = eine
+ *  zhlex-Registry-URL (= ein Erlass; Manifest-Key). Der ZH-PDF-Adapter löst die
+ *  Registry-Seite → notes.zh.ch-PDF (JS-Redirect) auf und extrahiert den Volltext. */
+export interface ZhPdfInventarGruppe {
+  kanton: string; // 'ZH'
+  quelleUrl: string; // die exakte zhlex-Registry-URL (Manifest-Key)
+  erlassName: string;
+  erlassNr: string;
+  artikel: KantonInventarArtikel[];
+}
+
+/** ZH-zhlex-Registry-Erlassseite (Einzelerlass): zh.ch/.../zhlex-ls/erlass-…html.
+ *  NUR die erlass-…-Einzelseiten (nicht die Sammlungs-Übersicht …/gesetzessammlung.html),
+ *  weil nur die Einzelseite einen OpenAttachment-PDF-Link trägt. */
+const ZH_PDF_QUELLE = /^https:\/\/www\.zh\.ch\/.*\/zhlex-ls\/erlass-[^/]*\.html$/i;
+
 /** /app/(de|fr)/texts_of_law/<lawId> — Host + Sprache + lawId. */
 const LEXWORK = /^https:\/\/([^/]+)\/app\/(de|fr)\/texts_of_law\/(.+)$/;
 
@@ -250,9 +266,50 @@ export function sammleHtmInventar(): HtmInventarGruppe[] {
   return [...gruppen.values()].filter((g) => g.artikel.length > 0);
 }
 
+/**
+ * Gruppiert die ZH-zhlex-PDF-Tarifquellen nach quelleUrl (= eine zhlex-Registry-
+ * Seite = ein Erlass) und merged die §-Tokens (dedupe). Nur Einträge mit einer
+ * ZH_PDF_QUELLE-URL und einem parsebaren §-Token werden aufgenommen; Einträge mit
+ * «Anhang Ziff.»-Referenzen (NotGebV) bleiben in sammleFallback().
+ */
+export function sammleZhPdfInventar(): ZhPdfInventarGruppe[] {
+  const eintraege = alleTarifEintraege();
+  const gruppen = new Map<string, ZhPdfInventarGruppe>();
+
+  for (const e of eintraege) {
+    if (!ZH_PDF_QUELLE.test(e.quelleUrl)) continue;
+
+    const passus = parsePassus(e.artikel);
+    if (!passus) continue; // «Anhang Ziff.» → kein §-Token → Fallback
+
+    let gruppe = gruppen.get(e.quelleUrl);
+    if (!gruppe) {
+      gruppe = {
+        kanton: e.kanton,
+        quelleUrl: e.quelleUrl,
+        erlassName: e.erlassName,
+        erlassNr: e.erlassNr,
+        artikel: [],
+      };
+      gruppen.set(e.quelleUrl, gruppe);
+    }
+
+    if (!gruppe.artikel.some((a) => a.token === passus.artikelToken)) {
+      gruppe.artikel.push({
+        token: passus.artikelToken,
+        label: e.artikel,
+        absatz: passus.absatz,
+      });
+    }
+  }
+
+  return [...gruppen.values()].filter((g) => g.artikel.length > 0);
+}
+
 /** Alle kantonalen Tarifquellen, die WEDER über LexWork NOCH über den HTM-
- *  Adapter (NE/GE) erschlossen sind (PDF, zhlex-HTML, lexfind, m3.ti, …) —
- *  dedupliziert nach (kanton, quelleUrl). */
+ *  Adapter (NE/GE) NOCH über den ZH-PDF-Adapter erschlossen sind (PDF,
+ *  zhlex-HTML ohne §-Token, lexfind, m3.ti, …) — dedupliziert nach
+ *  (kanton, quelleUrl). */
 export function sammleFallback(): FallbackEintrag[] {
   const eintraege = alleTarifEintraege();
   const gesehen = new Set<string>();
@@ -261,6 +318,8 @@ export function sammleFallback(): FallbackEintrag[] {
   for (const e of eintraege) {
     if (LEXWORK.test(e.quelleUrl)) continue;
     if (htmProfil(e.quelleUrl)) continue; // jetzt über HTM-Adapter erschlossen
+    // ZH-PDF-Quellen mit §-Token: über ZH-PDF-Adapter erschlossen.
+    if (ZH_PDF_QUELLE.test(e.quelleUrl) && parsePassus(e.artikel)) continue;
     const schluessel = `${e.kanton}|${e.quelleUrl}`;
     if (gesehen.has(schluessel)) continue;
     gesehen.add(schluessel);

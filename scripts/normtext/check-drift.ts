@@ -17,9 +17,10 @@
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
-import { sammleKantonInventar, sammleHtmInventar } from './inventar-kanton.ts';
+import { sammleKantonInventar, sammleHtmInventar, sammleZhPdfInventar } from './inventar-kanton.ts';
 import { holeLexWork } from './adapter-lexwork.ts';
 import { holeHtm } from './adapter-htm.ts';
+import { holeZhPdf } from './adapter-zh-pdf.ts';
 import { pruefeBundFassung, pruefeBundVollstaendigkeit } from './drift-logik.ts';
 import type { NormSnapshot } from './drift-logik.ts';
 
@@ -27,6 +28,12 @@ import type { NormSnapshot } from './drift-logik.ts';
 function htmLawIdSafe(url: string): string {
   const letzter = url.split('/').pop() ?? url;
   return letzter.replace(/\.html?$/i, '');
+}
+
+// lawIdSafe für ZH (kongruent zu normtext-snapshot.ts): …/erlass-211_11-… → «211.11».
+function zhLawIdSafe(url: string): string {
+  const m = url.match(/\/erlass-([^-]+)-/);
+  return m ? m[1].replace(/_/g, '.') : url.replace(/[^a-z0-9.]+/gi, '_');
 }
 
 interface SnapshotDatei {
@@ -221,6 +228,41 @@ async function main(): Promise<void> {
 
     console.log(
       `check:normtext-netz: ${htmGeprüft} HTM-Gruppen geprüft — Drift: ${htmDrift}, Netz-Warnungen: ${htmWarnungen}`,
+    );
+
+    // ─── Prüfung 5: ZH-Drift (NETZ) — quelleHash (zhlex Text-PDF) ────────────
+    // ZH-PDF-Quellen haben kein version_uid → quelleHash des extrahierten
+    // Volltexts als Drift-Token (§7 d). Re-fetch + Vergleich.
+    console.log('\ncheck:normtext-netz: ZH-Drift (zhlex PDF) prüfen …');
+    const zhGruppen = sammleZhPdfInventar();
+    let zhGeprüft = 0;
+    let zhDrift = 0;
+    let zhWarnungen = 0;
+
+    for (const g of zhGruppen) {
+      const key = `${g.kanton}/${zhLawIdSafe(g.quelleUrl)}`;
+      const snapshotToken = kantonTokens.get(key);
+      if (snapshotToken === undefined) continue;
+      try {
+        const ergebnis = await holeZhPdf(g.quelleUrl, []);
+        zhGeprüft++;
+        const neuerHash = ergebnis.meta.quelleHash;
+        if (neuerHash && neuerHash !== snapshotToken) {
+          console.error(
+            `FEHLER ZH-Drift: ${g.kanton} ${zhLawIdSafe(g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
+          );
+          zhDrift++;
+          exitCode = 1;
+        }
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.warn(`WARNUNG ZH-Netz: ${g.kanton} ${g.quelleUrl}: ${msg}`);
+        zhWarnungen++;
+      }
+    }
+
+    console.log(
+      `check:normtext-netz: ${zhGeprüft} ZH-Gruppen geprüft — Drift: ${zhDrift}, Netz-Warnungen: ${zhWarnungen}`,
     );
   }
 
