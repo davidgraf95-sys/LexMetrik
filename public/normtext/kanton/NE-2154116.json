@@ -7,7 +7,7 @@
       "quelle": "NE",
       "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
       "artikel": "9",
-      "artikelLabel": "Art. 9 al. 2",
+      "artikelLabel": "Art. 9",
       "bloecke": [
         {
           "absatz": "1",
@@ -54,6 +54,87 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
       "sha": "50f51e43e04ed2a49e9afefe9a2ea7f4e8838abfb2a18e3978f03c76fd242f33"
+    },
+    {
+      "id": "kanton/NE/2154116/art_11",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "En cas d'augmentation du capital d'un gage immobilier, l'émolument dû est égal à la différence entre l'émolument calculé sur le montant après l'augmentation et celui payé antérieurement."
+        },
+        {
+          "absatz": "2",
+          "text": "Cet émolument est au minimum de 30 francs."
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "e5ebfe5968b8a83324b084ac2dd272dfc326630ef6272fbbad67fab0d605340d"
+    },
+    {
+      "id": "kanton/NE/2154116/art_12",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sont abrogées toutes les dispositions contraires à la présente loi."
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "06c7d7267089cad394f8e61b21632682a980e1ea1934060138e4aa2a597c5b40"
+    },
+    {
+      "id": "kanton/NE/2154116/art_13",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La présente loi est soumise au référendum facultatif."
+        },
+        {
+          "absatz": "2",
+          "text": "L'approbation du Conseil fédéral sera requise."
+        },
+        {
+          "absatz": "3",
+          "text": "Le Conseil d'Etat pourvoit, s'il y a lieu, à la promulgation et à l'exécution de la présente loi dont il fixe la date d'entrée en vigueur."
+        },
+        {
+          "absatz": null,
+          "text": "Loi approuvée par le Conseil fédéral le 2 mars 1988."
+        },
+        {
+          "absatz": null,
+          "text": "Loi promulguée par le Conseil d'Etat le 21 mars 1988."
+        },
+        {
+          "absatz": null,
+          "text": "L'entrée en vigueur est fixée avec effet au 1er avril 1988."
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "b0faca4d736afb09b58bdab47c15b67d8277cd77d2b0a914a508f98d96c201f6"
     }
   ]
 }
