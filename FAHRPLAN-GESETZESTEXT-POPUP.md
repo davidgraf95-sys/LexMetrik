@@ -604,3 +604,36 @@ markiert (Item via `passus.lit`/`passus.ziff`, sonst Absatz); aufgehobene Stelle
 **Pflege:** Bei Rechtsänderung melden die Drift-Checks rot → `npm run normtext`
 neu laufen, Caches/Pins in `scripts/fedlex-cache.sh` + `quellen-register.md`
 nachführen (§11).
+
+---
+
+## OFFEN (nächste Session) — Inline-Norm-Auto-Linker «NormText» (Auftrag David 17.6.2026)
+
+**Befund David:** «es sind noch immer viele genannte Artikel nicht verlinkt.»
+Richtig — das Popover greift bisher nur an STRUKTURIERTEN Chip-Stellen. Artikel,
+die im FLIESSTEXT genannt werden (Begründungen, Hinweise, Tarif-`hinweis`-Felder,
+Ergebnis-/Gates-Warnungen), sind reiner Text. Kartierung (Explore 17.6.2026):
+
+- **Umfang:** ~2093 «Art. N [GESETZ]»-Nennungen in den Datenquellen (Tarif-`hinweis`
+  ~718, Vorlagen-`begruendung`/`hinweis` ~725, Engine-`hinweise`/`warnungen` ~78 …).
+- **Auflösbarkeit:** ~40 % sind FEDERAL («Art. N OR/ZPO/…», via `fedlexLinkFuerArtikel`
+  /`bundSnapshotRef` sofort auflösbar). ~60 % kantonal ohne Erlass-Kontext («§ 4»,
+  «Art. 10 GebVN») — NICHT ohne zusätzliche Kanton-Metadaten auflösbar.
+- **Muster existiert:** `RechtsprechungText` (src/components/RechtsprechungLink.tsx:26)
+  macht genau das für BGE/BGer (Regex-Split + Wrap). Vorlage 1:1 übernehmbar.
+
+**Plan:**
+1. **`src/components/NormText.tsx` (NEU)** — `({text}) → JSX`: matcht alle
+   «Art. N[suffix] GESETZ»-Vorkommen, wrappt jedes via `<NormChip artikel={match} />`
+   (Popover), Rest plain. `fedlexLinkFuerArtikel` bleibt Single Source; nicht-
+   auflösbare Treffer bleiben Text (kein toter Link). Test wie RechtsprechungText.
+2. **Einbau (ersetzt heutiges plain `{text}`/`{h}`/`{w}`):** Rechner-Hinweise in den
+   8 Formularen (BeurkundungForm:200, GrundbuchEintragForm:140, NotariatGrundbuchForm:178,
+   ProzesskostenForm:275/356/431/445, AllgemeineFristForm:197, EreignisFristen:361,
+   Schkg/StrafZustaendigkeitTeil:464/263/517); Vorlagen-Protokoll `wizard.tsx:383/384`
+   (begruendung/hinweis); Gates `VorlagenSeite.tsx:106–110`. Eine Komponente deckt alle ab.
+3. **Tor:** `npm run golden:vergleich` byte-gleich (NormText ist screen-only; PDF/SSR
+   unberührt — die Hinweis-Texte selbst ändern sich nicht, nur ihr Inline-Rendering).
+4. **Phase 2 (später):** kantonaler Inline-Resolver — die Tarif-`quelle` kennt den
+   Kanton/Erlass bereits; «§ N» im zugehörigen Hinweis könnte über den Erlass der
+   Quelle aufgelöst werden (Kanton-Kontext an den Hinweis-Renderer übergeben).

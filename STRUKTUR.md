@@ -61,6 +61,10 @@ norm-vorschau-snapshot-system.md` + `kantonale-tarif-zitat-befunde.md`.
   Markierung, Lückentor). Gate **voll grün**, golden byte-gleich, Drift 0, ~70
   Commits. **Browser-Smoke aller 26 Kantone** durchgeführt (0 Console-Fehler).
   **Push/Deploy + fachliche Abnahme offen (§9 / David selbst).**
+- **OFFEN nächste Session (David 17.6.):** «viele genannte Artikel im FLIESSTEXT
+  noch nicht verlinkt» (Hinweise/Begründungen/Tarif-`hinweis`) — Inline-Auto-Linker
+  `NormText` (~2093 Nennungen, ~40 % federal sofort auflösbar). Plan + Einbaupunkte
+  am Ende von `FAHRPLAN-GESETZESTEXT-POPUP.md`.
 
 ## Session 16.6.2026 — BEURKUNDUNGS-AUSBAU: 3-fach-Verifikation + Gesamtkosten + UI-Fix
 
