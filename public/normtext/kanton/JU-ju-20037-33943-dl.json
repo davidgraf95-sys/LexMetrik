@@ -1,0 +1,34 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/JU/ju-20037-33943-dl/art_6",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Loi sur les droits de mutation et les gages (LDMG) (RSJU 215.326.2)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour les mutations, le droit est de :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "2,5 % lorsque la contre-prestation est inférieure ou égale à un million de francs, mais dans tous les cas 30 francs au moins;"
+            },
+            {
+              "marke": "b",
+              "text": "3,2 % pour la partie de la contre-prestation supérieure à un million de francs. 2"
+            }
+          ]
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20037&id=33943&download=1",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "1c7747f5e48a11485907a70006fa652f1006a2f241a8d10f4a058fe31974f012",
+      "sha": "88331d6ae59d1ebdd659857084ea8e7b50625c10b325197f2e1b307bb7422fc1"
+    }
+  ]
+}

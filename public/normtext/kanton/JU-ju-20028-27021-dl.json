@@ -1,0 +1,38 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/JU/ju-20028-27021-dl/art_7",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des dépens (RSJU 188.61)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le tarif horaire est le suivant :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour l'activité d'un avocat indépendant et d'un collaborateur de l'étude titulaire du brevet d'avocat : 270 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "pour l'activité d'un avocat stagiaire : 100 francs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "La taxe sur la valeur ajoutée (TVA) est comptée en sus."
+        }
+      ],
+      "stand": "2005-04-19",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20028&id=27021&download=1",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "73127c848d97f635591a9e8f29513ba20c96a3f5a482cfe8a04bc8b388534def",
+      "sha": "bb23241cc6568a2de9bcdb15ffce6483ba52ee2a31d6713b2b66f952e22616e0"
+    }
+  ]
+}

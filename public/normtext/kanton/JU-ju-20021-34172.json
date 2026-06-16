@@ -1,0 +1,91 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/JU/ju-20021-34172/art_21",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments judiciaires (RSJU 176.511)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'autorité de première instance perçoit en matière civile l'émolument suivant :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour une décision en procédure sommaire : de 200 à 4 000 points;"
+            },
+            {
+              "marke": "b",
+              "text": "pour une procédure de conciliation : de 200 à 1 000 points;"
+            },
+            {
+              "marke": "c",
+              "text": "pour une décision en matière d'assistance judiciaire, si la personne a agi de mauvaise foi ou de manière téméraire : de 50 à 500 points;"
+            },
+            {
+              "marke": "d",
+              "text": "pour une décision de récusation, de relevé du défaut, sur prise à partie et sur requête en révision, par requérant : de 100 à 1 200 points;"
+            },
+            {
+              "marke": "e",
+              "text": "pour les ordonnances et mesures prises sur simple requête, permis de défense et ordonnances en procédure d'exécution : de 50 à 1 500 points;"
+            },
+            {
+              "marke": "f",
+              "text": "pour traiter les demandes d'entraide judiciaire : de 30 à 200 points;"
+            },
+            {
+              "marke": "g",
+              "text": "pour la réception, la conservation et la restitution de dépôts : de 15 à 150 points."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque l'affaire est portée devant la Cour civile en tant qu'instance cantonale unique, les émoluments prévus à l'alinéa 1 sont applicables à raison de 150 %."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "a4ab77189a2c52c9a619c3189bc0dfb4daaaffc8df92d2d87ac03732c8af6489"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172/art_20",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments judiciaires (RSJU 176.511)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque la valeur litigieuse n'est pas susceptible d'évaluation, l'autorité de première instance perçoit l'émolument suivant :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "juge civil : de 300 à 6 000 points;"
+            },
+            {
+              "marke": "b",
+              "text": "Tribunal des baux à loyer et à ferme et Conseil de prud'hommes : de 120 à 2 200 points;"
+            },
+            {
+              "marke": "c",
+              "text": "Cour civile : de 1 500 à 36 000 points."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "f27b8c01dba9399c6d763024372f8d4bde7da82c922e981deba9fc36168b64a9"
+    }
+  ]
+}
