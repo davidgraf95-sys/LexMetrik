@@ -49,6 +49,8 @@ import type {
 //     nicht gesnapshottet, OW/210.32 nicht gesnapshottet).
 //
 // Verifikation: Stand 16.6.2026 — alle Einträge empirisch geprüft.
+// Entfernt (16.6.2026): LU/228/art_29 — §29 existiert in SRL 258, nicht 228; quelleUrl in
+//   notariat-grundbuch.ts (GRUNDPFAND LU) auf 258 korrigiert; Snapshot via 258 abgedeckt.
 //
 const BEKANNTE_LUECKEN: BekannteLuecke[] = [
   // ── OW/134.15: art_7 fehlt im Snapshot (Datei existiert mit art_8, art_35, art_12)
@@ -131,13 +133,6 @@ const BEKANNTE_LUECKEN: BekannteLuecke[] = [
     snapshotId: 'kanton/AR/153.2/art_12',
     grund: 'nurPdf',
     notiz: 'AR-153.2 nicht über LexWork verfügbar (Stand 16.6.2026).',
-  },
-
-  // ── LU/228: art_29 nicht im LexWork-Erlass (§29 existiert nicht im Erlass)
-  {
-    snapshotId: 'kanton/LU/228/art_29',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'LU-228 LexWork liefert art_29 nicht; §29 existiert nicht im Erlass.',
   },
 
   // ── NW/265.51: keine LexWork-Quelle verfügbar
