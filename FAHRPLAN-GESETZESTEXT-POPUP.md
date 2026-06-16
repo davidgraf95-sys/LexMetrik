@@ -563,3 +563,44 @@ gesetzessammlung, AR clex, ZG bgs):**
 - **„relevanter Artikel + Wörter, die auf den Passus zeigen"** → `parsePassus` + In-Popover-Highlight (zuverlässig) + `#:~:text=` extern (best effort). ✓
 - **§7-Konflikt** → Task 0.1 + Drift-Check Q.1 + sichtbarer Stand/Live-Link lösen ihn regelkonform. ✓
 - **Null-Regression** → progressive enhancement (2.3), Golden byte-gleich, PDF unberührt. ✓
+
+---
+
+## Betrieb & Build-Regel (verbindlich ab 16.6.2026 — Auftrag David)
+
+**Generator:** `npm run normtext -- --datum=$(date +%F)` erzeugt ALLE Snapshots
+unter `public/normtext/{bund,kanton}/` + das Kanton-Manifest `index.json`. Nie
+von Hand editieren. Voraussetzung Bund: `bash scripts/fedlex-cache.sh` (lädt die
+gepinnten Konsolidierungen nach /tmp).
+
+**Verbindliches Muster (auch für neue Norm-Quellen):**
+1. **Vollabdeckung** — alle Artikel je Erlass (Bund: jedes `<article id="art_*">`
+   der Konsolidierung; Kanton: jeder Artikel des LexWork-Erlasses), nicht nur die
+   zitierten. (Bund-Stand 16.6.2026: 5760 Artikel/18 Gesetze.)
+2. **Aufzählungen vollständig** — lit. (Bund, `<dl><dt>/<dd>`) und Ziff. (Kanton,
+   `enumeration_item`-Tabellen ODER inline `1. …`) als `items: {marke,text}[]` je
+   Absatz. Nichts abschneiden.
+3. **Geltende Fassung** — Bund: gepinnte Fedlex-Konsolidierung, durch
+   `check:fedlex-versionen` (SPARQL) als „aktuell" bestätigt; künftige Fassungen
+   NICHT pinnen. Kanton: `current_version` der LexWork-API (`/api/{de|fr}/texts_of_law/{id}`),
+   `version_uid` = Drift-Token, `stand` = „in Kraft seit"-Datum aus `version_dates_str`.
+4. **Provenienz** je Eintrag: `stand`, `quelleUrl`, `fassungsToken`, `sha`
+   (Text + items) — §7-Zitat-Ausnahme.
+5. **Drift-Tor:** `check:normtext` (offline: Fassung == Konsolidierung,
+   Vollständigkeit) + `check:normtext-netz` (live: version_uid/Konsolidierung) —
+   in `check`/`check:netz` verdrahtet, müssen grün sein.
+
+**Neue Norm-Quelle anbinden:** browserloser Adapter (Fetch + strukturierte
+Extraktion + Drift-Token), kein Headless-Browser, kein Pro-Kanton-Scraping.
+LexWork deckt 18+ Kantone über EINEN Adapter; Nicht-LexWork (zhlex, lexfind-PDF,
+TI/VD/NE/GE/JU) bleibt ehrlicher Fallback (Live-Link, kein Volltext, §8) bis ein
+Adapter existiert.
+
+**Darstellung (einheitlich Bund/Kanton):** ein `NormPopover` für beide Ebenen;
+Absätze + `items` (lit./Ziff.) gleich gerendert; die zitierte Stelle wird präzise
+markiert (Item via `passus.lit`/`passus.ziff`, sonst Absatz); aufgehobene Stellen
+(„…") erscheinen als „aufgehoben". Live-Link im Fuss, Label „In Kraft seit".
+
+**Pflege:** Bei Rechtsänderung melden die Drift-Checks rot → `npm run normtext`
+neu laufen, Caches/Pins in `scripts/fedlex-cache.sh` + `quellen-register.md`
+nachführen (§11).
