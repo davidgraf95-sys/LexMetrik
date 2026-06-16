@@ -1,0 +1,59 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/NE/2154116/art_9",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9 al. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les inscriptions relatives au droit de propriété sont soumises aux émoluments suivants:"
+        },
+        {
+          "absatz": "2",
+          "text": "En cas de vente, échange, donation, fusion de sociétés, apport en société, modification dans la composition d'une société simple, etc., soit pour tout transfert entre vifs, ainsi qu'en cas de transfert résultant de l'ouverture d'une succession, partage successoral ou autre, dévolution d'un legs, il est perçu un émolument calculé sur la valeur de l'immeuble, soit:"
+        },
+        {
+          "absatz": "3",
+          "text": "La valeur du mobilier ou des accessoires n'est pas déduite."
+        },
+        {
+          "absatz": "4",
+          "text": "En cas d'échange, l'émolument est calculé sur la valeur de chaque immeuble."
+        },
+        {
+          "absatz": "5",
+          "text": "A défaut de prix de vente ou d'indication de valeur dans l'acte, le conservateur perçoit l'émolument en se fondant sur l'estimation cadastrale si la base de calcul prise en considération par le service des droits de mutation et du timbre pour la perception des lods n'est pas encore connue."
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "419d340e45b830d95b5643f868182e881fcb5f6557e4339d1bc83cbe624974bb"
+    },
+    {
+      "id": "kanton/NE/2154116/art_10",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour toute inscription et augmentation de gage immobilier (hypothèque, cédule hypothécaire, cédule hypothécaire de registre et hypothèque légale), il est dû un émolument calculé sur le montant de la somme garantie dont l'inscription est requise, soit:"
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "50f51e43e04ed2a49e9afefe9a2ea7f4e8838abfb2a18e3978f03c76fd242f33"
+    }
+  ]
+}
