@@ -46,10 +46,15 @@ Bug-Check» → «alles doppelt verifizieren von Anfang an». Detail: `FAHRPLAN-
   Browser-Smoke (prozesskosten 9 Inline-Links + Popover «Art. 95 ZPO» öffnet, arbeitsvertrag 8,
   vollmacht 2; 0 nested `<a>`, 0 Console-Fehler über 9 Seiten). Stale-`dist`-Fehlmessung
   (alter preview-Prozess :4173) erkannt + nach Neubau widerlegt.
-- **OFFEN:** Phase 2 (kantonale «§ N ERLASS» über Quelle-Kontext) + Phase 3 (~616 STATISCHE
-  Prosa-Literale «Art. N GESETZ» in 57 Seiten, die NormText als Variablen-Linker nicht
-  erreicht — geteilte Display-Primitive als Hebel). **Push/Deploy + fachliche Abnahme offen
-  (§9 / David selbst).**
+- **Phase 3 (Bund-Prosa) ERLEDIGT 17.6.:** (3a) Field-hint + FehlerBox zentral durch NormText
+  (deckt alle Hinweise/Eingabefehler an EINER Stelle); (3b) 156 statische «Art. N GESETZ»-
+  Nennungen in JSX-Fliesstext (Vorlagen-/Rechner-Prosa) inline verlinkt — nur reine einzeilige
+  Text-Knoten; Entity-Knoten/mehrzeilig/Choice-Labels/Placeholder bewusst aus. Gate grün
+  (golden byte-gleich), Browser-Smoke 0 nested `<a>`/0 Console-Fehler. Commits a5a00a4
+  (Phase 1), ff71685 (3a), 385bbf6 (3b).
+- **OFFEN:** Phase 2 (kantonale «§ N ERLASS» über Quelle-Kontext); Rest-Prosa (3 Entity-
+  Knoten &gt;/&amp;, mehrzeilige Text-Knoten, prop-geroutete Choice-Labels). **Push/Deploy +
+  fachliche Abnahme offen (§9 / David selbst).**
 
 ## Session 16./17.6.2026 — NORM-VORSCHAU-POPOVER (Volltext Bund+Kantone) GEBAUT (Branch feat/normtext-popup, ungepusht)
 
