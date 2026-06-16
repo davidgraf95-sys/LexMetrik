@@ -29,6 +29,8 @@
  * Regex-Interna dürfen sich anpassen, wenn LexWork das Markup ändert (§7).
  */
 
+import { dekodiereEntities } from './html-entities.ts';
+
 export interface LexArtikel {
   bloecke: Array<{ absatz: string | null; text: string }>;
 }
@@ -54,45 +56,6 @@ function bereinige(roh: string): string {
   const ohneMarker = roh.replace(/<strong>\s*\*\s*<\/strong>/gi, '');
   const ohneTags = ohneMarker.replace(/<[^>]+>/g, '');
   return dekodiereEntities(ohneTags).replace(/\s+/g, ' ').trim();
-}
-
-/** Dekodiert die in LexWork-xhtml_tol auftretenden HTML-Entities. */
-function dekodiereEntities(text: string): string {
-  const named: Record<string, string> = {
-    '&sect;': '§',
-    '&nbsp;': ' ',
-    '&amp;': '&',
-    '&lt;': '<',
-    '&gt;': '>',
-    '&quot;': '"',
-    '&apos;': "'",
-    '&ndash;': '–',
-    '&mdash;': '—',
-    '&auml;': 'ä',
-    '&ouml;': 'ö',
-    '&uuml;': 'ü',
-    '&Auml;': 'Ä',
-    '&Ouml;': 'Ö',
-    '&Uuml;': 'Ü',
-    '&szlig;': 'ß',
-    '&laquo;': '«',
-    '&raquo;': '»',
-    '&agrave;': 'à',
-    '&egrave;': 'è',
-    '&eacute;': 'é',
-    '&ecirc;': 'ê',
-    '&ccedil;': 'ç',
-  };
-  let out = text;
-  for (const [ent, ch] of Object.entries(named)) {
-    out = out.split(ent).join(ch);
-  }
-  // Numerische Entities (&#123; / &#x1F;).
-  out = out.replace(/&#x([0-9a-fA-F]+);/g, (_m, hex) =>
-    String.fromCodePoint(parseInt(hex, 16)),
-  );
-  out = out.replace(/&#(\d+);/g, (_m, dec) => String.fromCodePoint(parseInt(dec, 10)));
-  return out;
 }
 
 /** Liest den ersten .number-Span aus einem .article_number-Block. */

@@ -17,6 +17,8 @@ export interface ArtikelText {
   bloecke: Array<{ absatz: string | null; text: string }>;
 }
 
+import { dekodiereEntities } from './html-entities.ts';
+
 /**
  * Extrahiert einen einzelnen Artikel aus einem Fedlex-Filestore-HTML.
  *
@@ -82,19 +84,13 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
 }
 
 /**
- * Entfernt alle HTML-Tags und normalisiert Whitespace und einfache HTML-Entities.
+ * Entfernt alle HTML-Tags, dekodiert HTML-Entities (via dekodiereEntities)
+ * und normalisiert Whitespace.
  * Fussnoten-Nummern in <sup><a>…</a></sup> werden durch diese Funktion ebenfalls
  * entfernt, weil der <sup>-Tag als solcher wegfällt.
  */
 function entferneTags(s: string): string {
-  return s
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&apos;/g, "'")
-    .replace(/&quot;/g, '"')
+  return dekodiereEntities(s.replace(/<[^>]+>/g, ' '))
     .replace(/\s+/g, ' ')
     .trim();
 }
