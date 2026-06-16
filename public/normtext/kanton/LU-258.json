@@ -53,6 +53,67 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
       "sha": "95203ea66e4a0a51451ba7d8c13c72588c0e6b9476d74658b35a9b34f4aa1ca6"
+    },
+    {
+      "id": "kanton/LU/258/art_29",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "29",
+      "artikelLabel": "§ 29 / § 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Errichtung eines Grundpfandes (Art. 799 ZGB) beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "2 ‰ der Pfandsumme bis Fr. 500 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "plus 1,25 ‰ vom Mehrbetrag über Fr. 500 000.– bis Fr. 1 000 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "plus 0,75 ‰ vom Mehrbetrag über Fr. 1 000 000.– bis Fr. 5 000 000.–"
+            },
+            {
+              "marke": "d",
+              "text": "plus 0,5 ‰ vom Mehrbetrag über Fr. 5 000 000.– bis Fr. 10 000 000.–"
+            },
+            {
+              "marke": "e",
+              "text": "von der 10 Mio. Fr. übersteigenden Pfandsumme wird keine Gebühr erhoben"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Werden in der gleichen öffentlichen Urkunde mehrere Pfandrechte errichtet, so berechnet sich die Gebühr vom Gesamtbetrag der Pfandsummen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Erhöhung der Pfandsumme berechnet sich die Gebühr vom erhöhten Betrag nach den Ansätzen von Absatz 1 und 2."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Umwandlung, Aufteilung und Verlegung von Pfandrechten und bei der Pfandrechtserneuerung beträgt die Gebühr die Hälfte der Ansätze von Absatz 1 und 2, mindestens Fr. 300.–."
+        },
+        {
+          "absatz": "5",
+          "text": "Werden in der gleichen öffentlichen Urkunde die Pfandsumme erhöht und das Pfandrecht mit der erhöhten Pfandsumme umgewandelt, aufgeteilt oder verlegt, berechnet sich die Gebühr nach den Ansätzen von Absatz 3 oder 4, wobei die höhere Gebühr berechnet wird."
+        },
+        {
+          "absatz": "6",
+          "text": "Bei anderen Änderungen beträgt die Gebühr Fr. 200.– bis Fr. 500.–, sofern nicht gleichzeitig Gebühren nach den Ansätzen von Absatz 1 bis 5 erhoben werden."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "6036f0b80927ab33549ce8dc2d3a59b0ff8a91c569b9fcbaca676920cbd06a7d"
     }
   ]
 }
