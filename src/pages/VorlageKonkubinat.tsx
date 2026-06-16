@@ -133,7 +133,7 @@ export function VorlageKonkubinat() {
           <Checkbox
             checked={a.einfacheGesellschaft}
             onChange={(v) => set('einfacheGesellschaft', v)}
-            label={<><span><strong>Einfache Gesellschaft</strong> für einen gemeinsamen Zweck <span className="text-ink-500">(z. B. gemeinsames Bauvorhaben, Art. 530 OR)</span></span></>} />
+            label={<><span><strong>Einfache Gesellschaft</strong> für einen gemeinsamen Zweck <span className="text-ink-500"><NormText text={`(z. B. gemeinsames Bauvorhaben, Art. 530 OR)`} /></span></span></>} />
           {a.einfacheGesellschaft && (
             <Field label="Gemeinsamer Zweck">
               <input className={inputCls} value={a.einfacheGesellschaftZweck} onChange={(e) => set('einfacheGesellschaftZweck', e.target.value)} placeholder="z. B. Erwerb und Umbau der Liegenschaft …" />
@@ -167,7 +167,7 @@ export function VorlageKonkubinat() {
             <p className="lc-overline text-brass-700">Damit der Vertrag trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Kein gesetzliches Konkubinatsrecht</strong> – nur das ausdrücklich Geregelte gilt.</li>
-              <li><strong>Inventarliste</strong> beilegen – sie trennt Allein- von Miteigentum (Art. 646 ZGB).</li>
+              <li><strong>Inventarliste</strong><NormText text={` beilegen – sie trennt Allein- von Miteigentum (Art. 646 ZGB).`} /></li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />

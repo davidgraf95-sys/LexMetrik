@@ -193,7 +193,7 @@ export function VorlageTestament() {
             <button type="button"
               onClick={() => set('erben', [...a.erben, { name: '', angaben: '', quoteProzent: a.erben.length === 0 ? 100 : 0 } as TestamentErbe])}
               className="lc-btn-outline">+ Erbin/Erben hinzufügen</button>
-            <p className="text-xs text-ink-500">Tipp: Decken Sie den ganzen Nachlass ab (100 %) – der nicht verfügte Teil fällt an die gesetzlichen Erben (Art. 481 ZGB).</p>
+            <p className="text-xs text-ink-500"><NormText text={`Tipp: Decken Sie den ganzen Nachlass ab (100 %) – der nicht verfügte Teil fällt an die gesetzlichen Erben (Art. 481 ZGB).`} /></p>
           </div>
         </div>
       );
@@ -284,12 +284,12 @@ export function VorlageTestament() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate – damit Ihr Testament gültig wird</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Vollständig von Hand abschreiben.</strong> Der ganze Text – einschliesslich Datum – muss eigenhändig geschrieben sein (Art. 505 Abs. 1 ZGB). Ein Ausdruck, auch unterschrieben, ist anfechtbar/ungültig.</li>
+              <li><strong>Vollständig von Hand abschreiben.</strong><NormText text={` Der ganze Text – einschliesslich Datum – muss eigenhändig geschrieben sein (Art. 505 Abs. 1 ZGB). Ein Ausdruck, auch unterschrieben, ist anfechtbar/ungültig.`} /></li>
               <li><strong>Mit Jahr, Monat und Tag datieren.</strong></li>
               <li><strong>Am Schluss eigenhändig unterschreiben</strong> (BGE 135 III 206).</li>
               <li><strong>Allein verfassen.</strong> Gemeinschaftliche Testamente von Ehegatten in einem Dokument sind unzulässig – jede Person errichtet ihr eigenes Testament; für gegenseitige Bindung dient der Erbvertrag (Art. 512 ff. ZGB).</li>
-              <li><strong>Spätere Änderungen</strong> erneut datieren und unterschreiben; Streichungen sind heikel – im Zweifel ein neues Testament errichten und das alte vernichten (Art. 510 ZGB).</li>
-              <li><strong>Aufbewahrung:</strong> Die handschriftliche Fassung kann freiwillig bei der kantonalen Amtsstelle hinterlegt werden (Art. 505 Abs. 2 ZGB; Gebühr je nach Kanton).</li>
+              <li><strong>Spätere Änderungen</strong><NormText text={` erneut datieren und unterschreiben; Streichungen sind heikel – im Zweifel ein neues Testament errichten und das alte vernichten (Art. 510 ZGB).`} /></li>
+              <li><strong>Aufbewahrung:</strong><NormText text={` Die handschriftliche Fassung kann freiwillig bei der kantonalen Amtsstelle hinterlegt werden (Art. 505 Abs. 2 ZGB; Gebühr je nach Kanton).`} /></li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
@@ -314,7 +314,7 @@ export function VorlageTestament() {
   // Pflichtteils-Panel (Live, aus der Erbteilungs-Engine) – vorlagenspezifisch
   const pflichtteilePanel = pflichtteile && (a.hatNachkommen || verheiratet) ? (
     <section className="lc-card p-4 space-y-2">
-      <GruppenTitel>Pflichtteile (Art. 471 ZGB) – zur Kontrolle</GruppenTitel>
+      <GruppenTitel><NormText text={`Pflichtteile (Art. 471 ZGB) – zur Kontrolle`} /></GruppenTitel>
       <ul className="text-body-s text-ink-700 space-y-0.5">
         {pflichtteile.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => (
           <li key={e.bezeichnung} className="flex justify-between gap-3">

@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   SG_DEFAULTS, SG_PERSON_NATUERLICH, SG_SCHWELLEN, SG_OFFENE_VERIFIKATIONEN, SG_KANTONALE_ERLASSE,
   sgZusammenstellen, sgMaengel, sgHinweise, sgRouting, sgStreitwert, sgPrefillLesen, sgPrefillOrt, fmtCHF,
@@ -273,7 +274,7 @@ export function VorlageSchlichtungsgesuchBs() {
               <Checkbox
                 checked={a.ausnahmeArt198}
                 onChange={(v) => set('ausnahmeArt198', v)}
-                label={<><span>Es liegt eine Ausnahme nach Art. 198 ZPO vor <span className="text-ink-500">(z. B. summarisches Verfahren, Scheidung, bestimmte SchKG-Klagen, Widerklage, einzige kantonale Instanz)</span></span></>} />
+                label={<><span><NormText text={`Es liegt eine Ausnahme nach Art. 198 ZPO vor `} /><span className="text-ink-500">(z. B. summarisches Verfahren, Scheidung, bestimmte SchKG-Klagen, Widerklage, einzige kantonale Instanz)</span></span></>} />
               <p className="text-xs text-ink-500">
                 Dieses Werkzeug stellt das Gesuch zusammen; die örtliche und sachliche Zuständigkeit
                 prüfen Sie selbst (massgebliche Gerichtsstände u. a. Art. 10, 31, 33, 34, 35 ZPO;
@@ -376,7 +377,7 @@ export function VorlageSchlichtungsgesuchBs() {
                     <Checkbox
                       checked={!!a.geld?.zins}
                       onChange={(v) => set('geld', { ...(a.geld ?? { betrag: '' }), zins: v ? { satz: '5', abDatum: '' } : undefined })}
-                      label={<><span>nebst Zins <span className="text-ink-500">(Verzugszins 5 %, Art. 104 OR)</span></span></>} />
+                      label={<><span>nebst Zins <span className="text-ink-500"><NormText text={`(Verzugszins 5 %, Art. 104 OR)`} /></span></span></>} />
                     {a.geld?.zins && (
                       <div className="grid grid-cols-[6rem_1fr] gap-3">
                         <Field label="Satz (%)"><input className={inputCls} inputMode="decimal" value={a.geld.zins.satz} onChange={(e) => set('geld', { ...a.geld!, zins: { ...a.geld!.zins!, satz: e.target.value } })} /></Field>
@@ -448,7 +449,7 @@ export function VorlageSchlichtungsgesuchBs() {
           <Checkbox
             checked={a.begruendungPlatzhalter ?? false}
             onChange={(v) => set('begruendungPlatzhalter', v || undefined)}
-            label={<><span>Begründung später ausfüllen <span className="text-ink-500">(das Gesuch erhält einen Platzhalter-Block; eine Begründung ist nicht erforderlich, Art. 202 ZPO)</span></span></>} />
+            label={<><span>Begründung später ausfüllen <span className="text-ink-500"><NormText text={`(das Gesuch erhält einen Platzhalter-Block; eine Begründung ist nicht erforderlich, Art. 202 ZPO)`} /></span></span></>} />
           {a.begruendungPlatzhalter ? (
             <p className="lc-notice-warn text-body-s">
               Das Gesuch enthält unter «Begründung» Platzhalter-Linien («________») zum Handausfüllen.
@@ -476,7 +477,7 @@ export function VorlageSchlichtungsgesuchBs() {
             <Checkbox
               checked={a.antragMediation}
               onChange={(v) => set('antragMediation', v)}
-              label={<><span>Antrag auf Mediation (Art. 213 ZPO) <span className="text-ink-500">— setzt Zustimmung der Gegenpartei voraus; kann auch erst an der Verhandlung gestellt werden</span></span></>} />
+              label={<><span><NormText text={`Antrag auf Mediation (Art. 213 ZPO) `} /><span className="text-ink-500">— setzt Zustimmung der Gegenpartei voraus; kann auch erst an der Verhandlung gestellt werden</span></span></>} />
           </div>
           <div className="space-y-2">
             <GruppenTitel>Beilagen</GruppenTitel>
@@ -525,8 +526,8 @@ export function VorlageSchlichtungsgesuchBs() {
             <section className="lc-highlight space-y-3">
               <p className="lc-overline text-brass-700">Form-Gate – Einreichung & Verfahren</p>
               <ul className="lc-list space-y-2 text-body-s text-ink-700">
-                <li><strong>Form:</strong> schriftlich in Papierform, eigenhändig unterzeichnet (Art. 130 ZPO) – von der klagenden Partei, der Vertretung bzw. der zeichnungsberechtigten Person. Elektronisch nur mit anerkannter qualifizierter Signatur; gewöhnliche E-Mail genügt nicht.</li>
-                <li><strong>Exemplare:</strong> Gesuch, Beilagenverzeichnis und Beilagen in je einem Exemplar für die Behörde und jede Gegenpartei (Art. 131 ZPO) – hier: <span className="num font-semibold">{ergebnis.exemplare}</span> Exemplare.</li>
+                <li><strong>Form:</strong><NormText text={` schriftlich in Papierform, eigenhändig unterzeichnet (Art. 130 ZPO) – von der klagenden Partei, der Vertretung bzw. der zeichnungsberechtigten Person. Elektronisch nur mit anerkannter qualifizierter Signatur; gewöhnliche E-Mail genügt nicht.`} /></li>
+                <li><strong>Exemplare:</strong><NormText text={` Gesuch, Beilagenverzeichnis und Beilagen in je einem Exemplar für die Behörde und jede Gegenpartei (Art. 131 ZPO) – hier: `} /><span className="num font-semibold">{ergebnis.exemplare}</span> Exemplare.</li>
                 {a.vertretung?.bezeichnung && <li><strong>Vollmacht</strong> beilegen.</li>}
                 <li><strong>Persönliches Erscheinen</strong> an der Verhandlung (Art. 204 ZPO); Dispens u. a. bei ausserkantonalem/ausländischem Wohnsitz oder Streitwert bis CHF {fmtCHF(String(SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS))} (Abs. 3). Säumnis der klagenden Partei: Gesuch gilt als zurückgezogen; Ordnungsbusse bis CHF {fmtCHF(String(SG_SCHWELLEN.ORDNUNGSBUSSE_MAX))} möglich (Art. 206 Abs. 4 ZPO).</li>
                 <li><strong>Klagebewilligung:</strong> bei Nichteinigung {routing?.dokument && routing.behoerdeTyp === 'paritaetisch_miete'
@@ -537,7 +538,7 @@ export function VorlageSchlichtungsgesuchBs() {
                 ) : (
                   <li><strong>Kosten:</strong> Gebühr ab CHF 100 bis max. 30 % der Gerichtsgebühr (GGR BS, SG 154.810 – §-Nummer zu verifizieren); grundsätzlich keine Parteientschädigung.{a.streitgegenstandTyp === 'arbeitsrecht' && sw !== null && sw <= SG_SCHWELLEN.ARBEITSRECHT_KOSTENLOS && <> <strong>Hier: kostenlos</strong> (arbeitsrechtlich bis CHF 30'000, Art. 113 f. ZPO).</>}</li>
                 )}
-                <li><strong>Fristen:</strong> Im Schlichtungsverfahren gelten keine Gerichtsferien (Art. 145 Abs. 2 lit. a ZPO); die anschliessende Klagefrist gehört zum Entscheidverfahren – dort gelten sie (BGE 138 III 615 – zu verifizieren).</li>
+                <li><strong>Fristen:</strong><NormText text={` Im Schlichtungsverfahren gelten keine Gerichtsferien (Art. 145 Abs. 2 lit. a ZPO); die anschliessende Klagefrist gehört zum Entscheidverfahren – dort gelten sie (BGE 138 III 615 – zu verifizieren).`} /></li>
               </ul>
             </section>
           )}
@@ -583,7 +584,7 @@ export function VorlageSchlichtungsgesuchBs() {
       weiterDeaktiviert={stopp}
       inhalt={inhalt()}
       vorschau={stopp
-        ? <div className="lc-card p-5 text-body-s text-ink-600">Kein Dokument – siehe Stopp-Hinweis: In diesem Fall findet kein Schlichtungsverfahren statt — die Klage geht direkt ans Gericht (Art. 198 ZPO).</div>
+        ? <div className="lc-card p-5 text-body-s text-ink-600"><NormText text={`Kein Dokument – siehe Stopp-Hinweis: In diesem Fall findet kein Schlichtungsverfahren statt — die Klage geht direkt ans Gericht (Art. 198 ZPO).`} /></div>
         : <VorschauPanel ergebnis={ergebnis} kompakt nichtAufgenommen={ergebnis.nichtAufgenommen} direktExport={{
           pdf: { label: 'PDF', banner: BANNER_SG, dateiName: `${dateiBasis}.pdf` },
           docx: card?.modus === 'vorlage' && card.output?.includes('docx') ? { label: 'DOCX', banner: BANNER_SG, dateiName: `${dateiBasis}.docx` } : undefined,

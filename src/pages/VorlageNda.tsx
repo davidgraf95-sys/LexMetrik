@@ -121,7 +121,7 @@ export function VorlageNda() {
           <Checkbox
             checked={a.konventionalstrafe}
             onChange={(v) => set('konventionalstrafe', v)}
-            label={<><span><strong>Konventionalstrafe</strong> vereinbaren <span className="text-ink-500">(verfällt auch ohne Schaden; übermässige setzt der Richter herab, Art. 163 Abs. 3 OR)</span></span></>} />
+            label={<><span><strong>Konventionalstrafe</strong> vereinbaren <span className="text-ink-500"><NormText text={`(verfällt auch ohne Schaden; übermässige setzt der Richter herab, Art. 163 Abs. 3 OR)`} /></span></span></>} />
           {a.konventionalstrafe && (
             <Field label="Konventionalstrafe je Verletzung (CHF)">
               <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.strafeCHF} onChange={(e) => set('strafeCHF', e.target.value)} placeholder="z. B. 20000.00" />
@@ -147,7 +147,7 @@ export function VorlageNda() {
             <p className="lc-overline text-brass-700">Damit die NDA trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Zweckbindung</strong> – die Informationen dürfen nur für den genannten Zweck verwendet werden.</li>
-              <li><strong>Konventionalstrafe</strong> – beweiserleichternd, aber bei Übermass richterlich herabsetzbar (Art. 163 Abs. 3 OR).</li>
+              <li><strong>Konventionalstrafe</strong><NormText text={` – beweiserleichternd, aber bei Übermass richterlich herabsetzbar (Art. 163 Abs. 3 OR).`} /></li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />

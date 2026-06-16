@@ -164,7 +164,7 @@ export function VorlageFristerstreckung() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Damit das Gesuch trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Vor Fristablauf einreichen</strong> (Art. 144 Abs. 2 ZPO) – spätestens am letzten Tag beim Gericht einreichen oder der Schweizerischen Post übergeben (Art. 143 Abs. 1 ZPO).</li>
+              <li><strong>Vor Fristablauf einreichen</strong><NormText text={` (Art. 144 Abs. 2 ZPO) – spätestens am letzten Tag beim Gericht einreichen oder der Schweizerischen Post übergeben (Art. 143 Abs. 1 ZPO).`} /></li>
               <li><strong>Unterschreiben</strong> – das Gesuch geht als unterzeichnete Eingabe an das Gericht.</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

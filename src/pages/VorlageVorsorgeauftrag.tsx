@@ -97,7 +97,7 @@ export function VorlageVorsorgeauftrag() {
       case 'voraussetzungen': return (
         <div className="space-y-5">
           <div className="space-y-2">
-            <GruppenTitel>Errichtungsvoraussetzungen (Art. 13 ZGB)</GruppenTitel>
+            <GruppenTitel><NormText text={`Errichtungsvoraussetzungen (Art. 13 ZGB)`} /></GruppenTitel>
             <Checkbox
               checked={a.volljaehrig}
               onChange={(v) => set('volljaehrig', v)}
@@ -115,7 +115,7 @@ export function VorlageVorsorgeauftrag() {
                             </>} />
           </div>
           <div className="space-y-2">
-            <GruppenTitel>Form (Art. 361 ZGB)</GruppenTitel>
+            <GruppenTitel><NormText text={`Form (Art. 361 ZGB)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -190,7 +190,7 @@ export function VorlageVorsorgeauftrag() {
           </div>
 
           <div className="space-y-2">
-            <GruppenTitel>Ersatzpersonen (Art. 360 Abs. 3 ZGB)</GruppenTitel>
+            <GruppenTitel><NormText text={`Ersatzpersonen (Art. 360 Abs. 3 ZGB)`} /></GruppenTitel>
             {a.ersatzpersonen.map((e, i) => (
               <div key={i} className="flex flex-wrap items-end gap-2">
                 <span className="num text-body-s text-ink-500 pb-2.5">{i + 1}.</span>
@@ -251,17 +251,17 @@ export function VorlageVorsorgeauftrag() {
             <Checkbox
               checked={a.schenkungenErlaubt}
               onChange={(v) => set('schenkungenErlaubt', v)}
-              label={<><span>Übliche Gelegenheitsgeschenke erlauben <span className="text-ink-500">(Schranke: Art. 240 Abs. 2 OR)</span></span></>} />
+              label={<><span>Übliche Gelegenheitsgeschenke erlauben <span className="text-ink-500"><NormText text={`(Schranke: Art. 240 Abs. 2 OR)`} /></span></span></>} />
             <Checkbox
               checked={a.besondereGeschaefte}
               onChange={(v) => set('besondereGeschaefte', v)}
-              label={<><span>Besondere Geschäfte ausdrücklich ermächtigen: Vergleich, Schiedsvereinbarung, Wechsel <span className="text-ink-500">(Art. 396 Abs. 3 OR)</span></span></>} />
+              label={<><span>Besondere Geschäfte ausdrücklich ermächtigen: Vergleich, Schiedsvereinbarung, Wechsel <span className="text-ink-500"><NormText text={`(Art. 396 Abs. 3 OR)`} /></span></span></>} />
           </div>
           <Field label="Weisungen für die Erfüllung der Aufgaben" optional hint="Art. 360 Abs. 2 ZGB – z. B. Anlagegrundsätze, Wohnwünsche">
             <textarea className={inputCls} rows={3} value={a.weisungen ?? ''} onChange={(e) => set('weisungen', e.target.value)} />
           </Field>
           <div className="space-y-2">
-            <GruppenTitel>Entschädigung (Art. 366 ZGB)</GruppenTitel>
+            <GruppenTitel><NormText text={`Entschädigung (Art. 366 ZGB)`} /></GruppenTitel>
             <div className="flex flex-wrap gap-1.5" role="group" aria-label="Entschädigung">
               {([
                 ['keine_angabe', 'keine Regelung (KESB legt fest)'],
@@ -302,7 +302,7 @@ export function VorlageVorsorgeauftrag() {
           <Checkbox
             checked={a.ersetztFruehere}
             onChange={(v) => set('ersetztFruehere', v)}
-            label={<><span>Frühere Vorsorgeaufträge ersetzen <span className="text-ink-500">(Art. 362 Abs. 3 ZGB)</span></span></>} />
+            label={<><span>Frühere Vorsorgeaufträge ersetzen <span className="text-ink-500"><NormText text={`(Art. 362 Abs. 3 ZGB)`} /></span></span></>} />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Ort" optional><input className={inputCls} value={a.ort ?? ''} onChange={(e) => set('ort', e.target.value)} placeholder="z. B. Basel" /></Field>
             {eigenhaendig ? (
@@ -335,8 +335,8 @@ export function VorlageVorsorgeauftrag() {
             <p className="lc-overline text-brass-700">Form-Gate – damit Ihr Vorsorgeauftrag gültig wird</p>
             {eigenhaendig ? (
               <ul className="lc-list space-y-2 text-body-s text-ink-700">
-                <li><strong>Vollständig von Hand abschreiben:</strong> Der ganze Text – einschliesslich Ort, Datum und Unterschrift – muss eigenhändig geschrieben sein (Art. 361 Abs. 2 ZGB). Ein am Computer erstellter und nur unterschriebener Text ist UNGÜLTIG; auch eine bloss beglaubigte Unterschrift genügt nicht.</li>
-                <li><strong>Alternative:</strong> öffentliche Beurkundung bei der Urkundsperson (Art. 361 Abs. 1 ZGB).</li>
+                <li><strong>Vollständig von Hand abschreiben:</strong><NormText text={` Der ganze Text – einschliesslich Ort, Datum und Unterschrift – muss eigenhändig geschrieben sein (Art. 361 Abs. 2 ZGB). Ein am Computer erstellter und nur unterschriebener Text ist UNGÜLTIG; auch eine bloss beglaubigte Unterschrift genügt nicht.`} /></li>
+                <li><strong>Alternative:</strong><NormText text={` öffentliche Beurkundung bei der Urkundsperson (Art. 361 Abs. 1 ZGB).`} /></li>
               </ul>
             ) : (
               <ul className="lc-list space-y-2 text-body-s text-ink-700">
@@ -344,9 +344,9 @@ export function VorlageVorsorgeauftrag() {
               </ul>
             )}
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Wirksamkeit:</strong> Der Vorsorgeauftrag wird erst wirksam, wenn die KESB ihn bei eingetretener Urteilsunfähigkeit validiert (Art. 363 ZGB).</li>
-              <li><strong>Auffindbarkeit:</strong> Errichtung und Hinterlegungsort beim Zivilstandsamt eintragen lassen (Art. 361 Abs. 3 ZGB; Gebühr CHF 75, Bestätigung +CHF 30 – Richtwerte). Die KESB anerkennt nur das Original; beauftragte Person informieren und Aufbewahrungsort mitteilen (nicht ins alleinige Bankschliessfach).</li>
-              <li><strong>Widerruf:</strong> jederzeit in einer Errichtungsform oder durch Vernichtung der Urkunde (Art. 362 ZGB).</li>
+              <li><strong>Wirksamkeit:</strong><NormText text={` Der Vorsorgeauftrag wird erst wirksam, wenn die KESB ihn bei eingetretener Urteilsunfähigkeit validiert (Art. 363 ZGB).`} /></li>
+              <li><strong>Auffindbarkeit:</strong><NormText text={` Errichtung und Hinterlegungsort beim Zivilstandsamt eintragen lassen (Art. 361 Abs. 3 ZGB; Gebühr CHF 75, Bestätigung +CHF 30 – Richtwerte). Die KESB anerkennt nur das Original; beauftragte Person informieren und Aufbewahrungsort mitteilen (nicht ins alleinige Bankschliessfach).`} /></li>
+              <li><strong>Widerruf:</strong><NormText text={` jederzeit in einer Errichtungsform oder durch Vernichtung der Urkunde (Art. 362 ZGB).`} /></li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />

@@ -498,7 +498,7 @@ function StrafRechtsmittelTeil() {
 
         {r.fristen.length > 0 && (
           <div className="lc-card p-5 space-y-2.5">
-            <GruppenTitel>Fristen — kein Stillstand (Art. 89 Abs. 2 StPO)</GruppenTitel>
+            <GruppenTitel><NormText text={`Fristen — kein Stillstand (Art. 89 Abs. 2 StPO)`} /></GruppenTitel>
             {r.fristen.map((f) => (
               <p key={f.label} className="text-body-s text-ink-800">
                 {f.kritisch && <span className="lc-badge lc-badge-danger mr-1.5">Verwirkung</span>}

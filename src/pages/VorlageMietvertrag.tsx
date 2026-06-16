@@ -326,7 +326,7 @@ export function VorlageMietvertrag() {
             )}
           </div>
           <div className="space-y-2">
-            <GruppenTitel>Nebenkosten (Art. 257a OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Nebenkosten (Art. 257a OR)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -410,7 +410,7 @@ export function VorlageMietvertrag() {
           )}
           {a.detailgrad === 'experte' && (
             <div className="space-y-3 pt-1">
-              <GruppenTitel>Mietzinsvorbehalt (Art. 18 VMWG)</GruppenTitel>
+              <GruppenTitel><NormText text={`Mietzinsvorbehalt (Art. 18 VMWG)`} /></GruppenTitel>
               <Checkbox
                 checked={a.mietzinsvorbehalt ?? false}
                 onChange={(v) => set('mietzinsvorbehalt', v || undefined)}
@@ -457,10 +457,10 @@ export function VorlageMietvertrag() {
             <p className="lc-overline text-brass-700">Form-Gate – damit der Vertrag trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Beidseitig unterzeichnen</strong> – erfüllt die Schriftform von Index-/Staffelmiete.</li>
-              <li><strong>Elektronisch nur mit QES:</strong> Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) – einfache E-Signatur oder eingescannte Unterschrift genügen nicht.</li>
-              {wohnung && <li><strong>Formularpflicht prüfen:</strong> In BS, BE, FR, GE, LU, NE*, VD*, ZG und ZH ist der Anfangsmietzins mit dem amtlichen Formular mitzuteilen – sonst ist die Mietzinsabrede nichtig (Art. 270 Abs. 2 OR; Stand 4.2.2026, dynamisch).</li>}
+              <li><strong>Elektronisch nur mit QES:</strong><NormText text={` Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) – einfache E-Signatur oder eingescannte Unterschrift genügen nicht.`} /></li>
+              {wohnung && <li><strong>Formularpflicht prüfen:</strong><NormText text={` In BS, BE, FR, GE, LU, NE*, VD*, ZG und ZH ist der Anfangsmietzins mit dem amtlichen Formular mitzuteilen – sonst ist die Mietzinsabrede nichtig (Art. 270 Abs. 2 OR; Stand 4.2.2026, dynamisch).`} /></li>}
               <li><strong>Übergabeprotokoll</strong> bei Einzug gemeinsam erstellen (Beweissicherung).</li>
-              <li><strong>Kaution</strong> auf ein Sperrkonto auf den Namen des Mieters einzahlen (Art. 257e OR).</li>
+              <li><strong>Kaution</strong><NormText text={` auf ein Sperrkonto auf den Namen des Mieters einzahlen (Art. 257e OR).`} /></li>
               {!wohnung && <li><strong>MWST-Option:</strong> Rechnungsanforderungen (Art. 26 MWSTG) für den Vorsteuerabzug beachten.</li>}
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

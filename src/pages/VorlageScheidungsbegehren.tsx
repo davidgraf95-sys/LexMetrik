@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   SB_DEFAULTS, sbZusammenstellen, sbMaengel, sbHinweise, type SbAntworten,
 } from '../lib/vorlagen/scheidungsbegehren';
@@ -158,7 +159,7 @@ export function VorlageScheidungsbegehren() {
           <Checkbox
             checked={a.kinderErfassen}
             onChange={(v) => set('kinderErfassen', v)}
-            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(gemeinsame Anträge sind Mindestinhalt, Art. 285 lit. d ZPO)</span></span></>} />
+            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500"><NormText text={`(gemeinsame Anträge sind Mindestinhalt, Art. 285 lit. d ZPO)`} /></span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
               {a.kinder.map((k, i) => (
@@ -224,7 +225,7 @@ export function VorlageScheidungsbegehren() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Vor der Einreichung</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>BEIDE Ehegatten unterzeichnen</strong> die Eingabe (Art. 285 lit. f ZPO).</li>
+              <li><strong>BEIDE Ehegatten unterzeichnen</strong><NormText text={` die Eingabe (Art. 285 lit. f ZPO).`} /></li>
               <li><strong>Beilegen:</strong> {a.einigung === 'voll' ? 'vollständige Vereinbarung' : 'Teilvereinbarung'} samt Belegen, Familienausweis{a.kinderErfassen ? ', Geburtsurkunden' : ''} (Art. 285 lit. c/e ZPO).</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

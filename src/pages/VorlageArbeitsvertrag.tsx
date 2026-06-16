@@ -191,7 +191,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
               // Kündigung – abweichende Frist zurücksetzen (Review-Befund B1).
               if (v) { set('kuendigungsfrist', 'gesetzlich'); set('kuendigungsfristMonate', undefined); }
             }}
-            label={<><span>Befristetes Arbeitsverhältnis <span className="text-ink-500">(endet ohne Kündigung, Art. 334 OR)</span></span></>} />
+            label={<><span>Befristetes Arbeitsverhältnis <span className="text-ink-500"><NormText text={`(endet ohne Kündigung, Art. 334 OR)`} /></span></span></>} />
           {a.befristet && (
             <Field label="Befristet bis">
               <DatumsFeld value={a.befristetBis ?? ''} onChange={(v) => set('befristetBis', v || undefined)} className={inputCls} />
@@ -200,7 +200,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           {/* Probezeit ist auch beim befristeten Verhältnis vereinbar */}
           {(
             <div className="space-y-3 pt-1">
-              <GruppenTitel>Probezeit (Art. 335b OR)</GruppenTitel>
+              <GruppenTitel><NormText text={`Probezeit (Art. 335b OR)`} /></GruppenTitel>
               <SelectionGrid
                 className="grid grid-cols-1 sm:grid-cols-3 gap-2"
                 items={([
@@ -246,7 +246,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           <Checkbox
             checked={a.gratifikation}
             onChange={(v) => set('gratifikation', v)}
-            label={<><span>Freiwillige Gratifikation vorsehen <span className="text-ink-500">(Vorbehalts-Klausel wird automatisch aufgenommen, Art. 322d OR)</span></span></>} />
+            label={<><span>Freiwillige Gratifikation vorsehen <span className="text-ink-500"><NormText text={`(Vorbehalts-Klausel wird automatisch aufgenommen, Art. 322d OR)`} /></span></span></>} />
           {a.lohnModell === 'stundenlohn' && (
             <Checkbox
               checked={a.ferienzuschlagSeparat ?? false}
@@ -269,7 +269,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
             </Field>
           </div>
           <div className="space-y-2">
-            <GruppenTitel>Überstunden (Art. 321c OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Überstunden (Art. 321c OR)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -294,7 +294,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
           </Field>
           {!a.befristet && (
             <div className="space-y-2 pt-1">
-              <GruppenTitel>Kündigungsfrist nach der Probezeit (Art. 335c OR)</GruppenTitel>
+              <GruppenTitel><NormText text={`Kündigungsfrist nach der Probezeit (Art. 335c OR)`} /></GruppenTitel>
               <SelectionGrid
                 className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 items={([
@@ -318,7 +318,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
       case 'absicherung': return (
         <div className="space-y-4">
           <div className="space-y-2">
-            <GruppenTitel>Lohnfortzahlung bei Krankheit (Art. 324a OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Lohnfortzahlung bei Krankheit (Art. 324a OR)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -345,7 +345,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
             )}
           </div>
           <div className="space-y-2">
-            <GruppenTitel>Spesen (Art. 327a OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Spesen (Art. 327a OR)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -416,15 +416,15 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
               <Checkbox
                 checked={a.kvRealerfuellung ?? false}
                 onChange={(v) => set('kvRealerfuellung', v)}
-                label={<><span>Realerfüllung vorbehalten <span className="text-ink-500">(Beseitigung des vertragswidrigen Zustands, Art. 340b Abs. 3 OR – «besonders schriftlich verabredet»)</span></span></>} />
+                label={<><span>Realerfüllung vorbehalten <span className="text-ink-500"><NormText text={`(Beseitigung des vertragswidrigen Zustands, Art. 340b Abs. 3 OR – «besonders schriftlich verabredet»)`} /></span></span></>} />
               <Checkbox
                 checked={a.kvStrafeBefreitNicht ?? false}
                 onChange={(v) => set('kvStrafeBefreitNicht', v)}
-                label={<><span>Zahlung der Konventionalstrafe befreit <strong>nicht</strong> vom Verbot <span className="text-ink-500">(abweichende Abrede, Art. 340b Abs. 2 OR)</span></span></>} />
+                label={<><span>Zahlung der Konventionalstrafe befreit <strong>nicht</strong> vom Verbot <span className="text-ink-500"><NormText text={`(abweichende Abrede, Art. 340b Abs. 2 OR)`} /></span></span></>} />
               <Checkbox
                 checked={a.kvKarenz ?? false}
                 onChange={(v) => set('kvKarenz', v)}
-                label={<><span><strong>Karenzentschädigung</strong> vereinbaren <span className="text-ink-500">(gesetzlich nicht vorgeschrieben; erlaubt ein weitergehendes Verbot, Art. 340a Abs. 2 OR)</span></span></>} />
+                label={<><span><strong>Karenzentschädigung</strong> vereinbaren <span className="text-ink-500"><NormText text={`(gesetzlich nicht vorgeschrieben; erlaubt ein weitergehendes Verbot, Art. 340a Abs. 2 OR)`} /></span></span></>} />
               {a.kvKarenz && (
                 <div className="pl-6 space-y-3">
                   <Field label="Karenzentschädigung (CHF pro Monat)">
@@ -477,7 +477,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
             <p className="lc-overline text-brass-700">Form-Gate – damit der Vertrag trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>Beidseitig unterzeichnen</strong> – erst die Unterschriften beider Parteien erfüllen die Schriftform der formbedürftigen Klauseln (Konkurrenzverbot, Wegbedingungen, abweichende Fristen).</li>
-              <li><strong>Elektronisch nur mit QES:</strong> Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) – einfache E-Signatur oder eingescannte Unterschrift genügen nicht.</li>
+              <li><strong>Elektronisch nur mit QES:</strong><NormText text={` Die Schriftform erfüllt elektronisch nur die qualifizierte elektronische Signatur mit qualifiziertem Zeitstempel (Art. 14 Abs. 2bis OR) – einfache E-Signatur oder eingescannte Unterschrift genügen nicht.`} /></li>
               <li><strong>GAV/NAV prüfen:</strong> Anwendbare Mindeststandards gehen diesem Vertrag vor (Art. 357/360a OR).</li>
               <li><strong>Mindestlohn prüfen</strong> bei Arbeitsort in GE, BS, NE, JU, TI (jährlich indexiert; ab 2026 auch Stadt Luzern).</li>
               <li><strong>Sozialversicherungen anmelden</strong> (AHV/ALV/BVG/UVG) – nicht Gegenstand dieser Vorlage.</li>

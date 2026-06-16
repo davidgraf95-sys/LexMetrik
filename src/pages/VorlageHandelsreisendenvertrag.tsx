@@ -91,7 +91,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
             onChange={(v) => set('ausschliesslich', v)}
             label={<><span>Gebiet/Kundenkreis <strong>ausschliesslich</strong> zugewiesen <span className="text-ink-500">(Provision dann auf allen Geschäften im Gebiet, Art. 349/349b OR)</span></span></>} />
           <div className="space-y-2">
-            <GruppenTitel>Vollmacht (Art. 348b OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Vollmacht (Art. 348b OR)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -109,7 +109,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
       case 'lohn': return (
         <div className="space-y-4">
           <div className="space-y-2">
-            <GruppenTitel>Lohnmodell (Art. 349a OR)</GruppenTitel>
+            <GruppenTitel><NormText text={`Lohnmodell (Art. 349a OR)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-3 gap-2"
               items={([
@@ -133,7 +133,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
             )}
           </div>
           <div className="space-y-2">
-            <GruppenTitel>Auslagenersatz (Art. 349d OR – stets gesondert)</GruppenTitel>
+            <GruppenTitel><NormText text={`Auslagenersatz (Art. 349d OR – stets gesondert)`} /></GruppenTitel>
             <SelectionGrid
               className="grid grid-cols-1 sm:grid-cols-2 gap-2"
               items={([
@@ -150,12 +150,12 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
           <Checkbox
             checked={a.saisonschwankung}
             onChange={(v) => set('saisonschwankung', v)}
-            label={<><span>Provision unterliegt erheblichen <strong>saisonalen Schwankungen</strong> <span className="text-ink-500">(Sonder-Kündigungsregel, Art. 350 OR)</span></span></>} />
+            label={<><span>Provision unterliegt erheblichen <strong>saisonalen Schwankungen</strong> <span className="text-ink-500"><NormText text={`(Sonder-Kündigungsregel, Art. 350 OR)`} /></span></span></>} />
           {a.detailgrad === 'experte' && (
             <div className="lc-card p-4 space-y-3">
               <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium">
                 <input type="checkbox" className="mt-0.5" checked={a.delkredere} onChange={(e) => set('delkredere', e.target.checked)} />
-                <span><strong>Delkredere</strong> vereinbaren <span className="text-ink-500">(nur Privatkunden, höchstens ¼, Art. 348a OR)</span></span>
+                <span><strong>Delkredere</strong> vereinbaren <span className="text-ink-500"><NormText text={`(nur Privatkunden, höchstens ¼, Art. 348a OR)`} /></span></span>
               </label>
               {a.delkredere && (
                 <Field label="Delkredere-Provision (%)" hint="ohne angemessene Provision ist die Haftungsabrede nichtig (Art. 348a Abs. 2 OR)">
@@ -188,7 +188,7 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form-Gate</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Schriftlich regeln</strong> (Art. 347a OR): Soweit nicht schriftlich, gelten Gesetz und übliche Bedingungen.</li>
+              <li><strong>Schriftlich regeln</strong><NormText text={` (Art. 347a OR): Soweit nicht schriftlich, gelten Gesetz und übliche Bedingungen.`} /></li>
               <li><strong>Beidseitig unterzeichnen.</strong> Anwendbare GAV/NAV gehen vor.</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

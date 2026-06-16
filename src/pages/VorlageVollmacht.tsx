@@ -181,7 +181,7 @@ export function VorlageVollmacht() {
 
           {a.bevollmaechtigte.filter((b) => b.name.trim()).length > 1 && (
             <div className="space-y-2">
-              <GruppenTitel>Mehrere Bevollmächtigte (Art. 33 Abs. 2 OR)</GruppenTitel>
+              <GruppenTitel><NormText text={`Mehrere Bevollmächtigte (Art. 33 Abs. 2 OR)`} /></GruppenTitel>
               <SelectionGrid
                 className="grid grid-cols-1 sm:grid-cols-2 gap-2"
                 items={([
@@ -218,11 +218,11 @@ export function VorlageVollmacht() {
                   placeholder="z. B. Forderung aus Werkvertrag gegen X AG" />
               </Field>
               <div className="space-y-2">
-                <GruppenTitel>Besondere Prozessbefugnisse (Art. 396 Abs. 3 OR)</GruppenTitel>
+                <GruppenTitel><NormText text={`Besondere Prozessbefugnisse (Art. 396 Abs. 3 OR)`} /></GruppenTitel>
                 <Checkbox
                   checked={a.prozessbefugnisse}
                   onChange={(v) => set('prozessbefugnisse', v)}
-                  label={<><span>Vergleich abschliessen, Klage anerkennen und zurückziehen <span className="text-ink-500">(materielle Verfügungshandlungen – ausdrücklich, Art. 241 ZPO)</span></span></>} />
+                  label={<><span>Vergleich abschliessen, Klage anerkennen und zurückziehen <span className="text-ink-500"><NormText text={`(materielle Verfügungshandlungen – ausdrücklich, Art. 241 ZPO)`} /></span></span></>} />
                 <Checkbox
                   checked={a.geheimnisentbindung}
                   onChange={(v) => set('geheimnisentbindung', v)}
@@ -287,7 +287,7 @@ export function VorlageVollmacht() {
             <Checkbox
               checked={a.buergschaft}
               onChange={(v) => set('buergschaft', v)}
-              label={<><span>Eingehung von Bürgschaften <span className="text-danger-700">(Form-Gate: Art. 493 Abs. 6 OR – sperrt den Export, Notariat erforderlich)</span></span></>} />
+              label={<><span>Eingehung von Bürgschaften <span className="text-danger-700"><NormText text={`(Form-Gate: Art. 493 Abs. 6 OR – sperrt den Export, Notariat erforderlich)`} /></span></span></>} />
             {a.buergschaft && (
               <div className="lc-notice-danger">
                 <p className="text-body-s text-danger-700">
@@ -309,7 +309,7 @@ export function VorlageVollmacht() {
           <Checkbox
             checked={a.fortgeltungTod}
             onChange={(v) => set('fortgeltungTod', v)}
-            label={<><span>Fortgeltung über Tod und Verlust der Handlungsfähigkeit hinaus <span className="text-ink-500">(Art. 35 Abs. 1 OR, dispositiv)</span></span></>} />
+            label={<><span>Fortgeltung über Tod und Verlust der Handlungsfähigkeit hinaus <span className="text-ink-500"><NormText text={`(Art. 35 Abs. 1 OR, dispositiv)`} /></span></span></>} />
           {a.fortgeltungTod && (
             <p className="lc-notice-warn text-body-s">
               Eine Dauervollmacht deckt den Vorsorgefall nur unvollkommen – Banken und Behörden akzeptieren
@@ -344,9 +344,9 @@ export function VorlageVollmacht() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Form – damit Ihre Vollmacht wirkt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Unterschreiben:</strong> Die Vollmacht ist formfrei gültig (Art. 11 OR); als Ausweis gegenüber Banken, Behörden und Gerichten dient die <strong>unterzeichnete</strong> schriftliche Fassung (Art. 33 Abs. 3 OR). Nach dem Ausdruck datieren und unterschreiben.</li>
+              <li><strong>Unterschreiben:</strong><NormText text={` Die Vollmacht ist formfrei gültig (Art. 11 OR); als Ausweis gegenüber Banken, Behörden und Gerichten dient die `} /><strong>unterzeichnete</strong><NormText text={` schriftliche Fassung (Art. 33 Abs. 3 OR). Nach dem Ausdruck datieren und unterschreiben.`} /></li>
               <li><strong>Beglaubigung (Usanz):</strong> Für Grundbuch-, Handelsregister- oder Bankgebrauch sowie im Auslandsverkehr die Unterschrift beglaubigen lassen (kantonal: Notariat, teilweise Gemeinde).</li>
-              <li><strong>Widerruf:</strong> jederzeit möglich (Art. 34 Abs. 1 OR); kundgegebenen Dritten den Widerruf mitteilen (Art. 34 Abs. 3 OR) und die Urkunde zurückverlangen (Art. 36 OR).</li>
+              <li><strong>Widerruf:</strong><NormText text={` jederzeit möglich (Art. 34 Abs. 1 OR); kundgegebenen Dritten den Widerruf mitteilen (Art. 34 Abs. 3 OR) und die Urkunde zurückverlangen (Art. 36 OR).`} /></li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />

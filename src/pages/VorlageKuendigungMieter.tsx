@@ -150,7 +150,7 @@ export function VorlageKuendigungMieter() {
             checked={a.familienwohnung}
             onChange={(v) => set('familienwohnung', v)}
             label={<><span>Die Mietsache dient als <strong>Wohnung der Familie</strong>
-                <span className="text-ink-500"> (verheiratet oder in eingetragener Partnerschaft, gemeinsame Wohnung — Art. 266m OR)</span></span></>} />
+                <span className="text-ink-500"><NormText text={` (verheiratet oder in eingetragener Partnerschaft, gemeinsame Wohnung — Art. 266m OR)`} /></span></span></>} />
           {a.familienwohnung && (
             <div className="space-y-3">
               <Checkbox
@@ -227,7 +227,7 @@ export function VorlageKuendigungMieter() {
             checked={a.ausserterminlich}
             onChange={(v) => set('ausserterminlich', v)}
             label={<><span>Ich gebe die Mietsache <strong>vorzeitig</strong> zurück und schlage eine:n Nachmieter:in vor
-                <span className="text-ink-500"> (Art. 264 OR — Befreiung nur bei zumutbarem, zahlungsfähigem Ersatz zu gleichen Bedingungen)</span></span></>} />
+                <span className="text-ink-500"><NormText text={` (Art. 264 OR — Befreiung nur bei zumutbarem, zahlungsfähigem Ersatz zu gleichen Bedingungen)`} /></span></span></>} />
           {a.ausserterminlich && (
             <div className="space-y-3">
               <Field label="Nachmieter:in (Name)">

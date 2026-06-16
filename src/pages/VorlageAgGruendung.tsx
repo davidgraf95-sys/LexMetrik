@@ -596,7 +596,7 @@ export function VorlageAgGruendung() {
       {/* Stufe 2 P2: Inhaberaktien-Voraussetzung (Art. 622 Abs. 1bis OR) */}
       {inhaberaktien && (
         <div className="rounded-md border border-line p-3 space-y-3">
-          <p className="text-body-s font-medium text-ink-900">Inhaberaktien — Zulässigkeits-Voraussetzung (Art. 622 Abs. 1bis OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Inhaberaktien — Zulässigkeits-Voraussetzung (Art. 622 Abs. 1bis OR)`} /></p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Voraussetzung">
               <select className={inputCls} value={inhaberKotiert ? 'kotiert' : 'bucheffekten'}
@@ -741,7 +741,7 @@ export function VorlageAgGruendung() {
       {/* Etappe 2: Sacheinlagen (Art. 634 OR) */}
       {(einlageArt === 'sacheinlage' || einlageArt === 'gemischt') && (
         <div className="space-y-3">
-          <p className="text-body-s font-medium text-ink-900">Sacheinlagen (Art. 634 OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Sacheinlagen (Art. 634 OR)`} /></p>
           <p className="text-body-s text-ink-500 max-w-reading">
             Deckungs-Voraussetzungen (Art. 634 Abs. 1 OR): als Aktiven bilanzierbar, übertragbar,
             nach dem Eintrag sofort frei verfügbar (bei Grundstücken: bedingungsloser
@@ -838,7 +838,7 @@ export function VorlageAgGruendung() {
       {/* Etappe 2: Verrechnungsliberierung (Art. 634a OR) */}
       {(einlageArt === 'verrechnung' || einlageArt === 'gemischt') && (
         <div className="space-y-2">
-          <p className="text-body-s font-medium text-ink-900">Verrechnungsliberierung (Art. 634a OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Verrechnungsliberierung (Art. 634a OR)`} /></p>
           {verrechnungen.map((v) => (
             <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
               <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr_auto] gap-2 items-end">
@@ -873,7 +873,7 @@ export function VorlageAgGruendung() {
       {/* Etappe 2: Besondere Vorteile (Art. 636 OR) */}
       {besondereVorteile && (
         <div className="space-y-2">
-          <p className="text-body-s font-medium text-ink-900">Besondere Vorteile (Art. 636 OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Besondere Vorteile (Art. 636 OR)`} /></p>
           {vorteile.map((v) => (
             <div key={v.key} className="rounded-md border border-line p-3 space-y-2">
               <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_auto] gap-2 items-end">

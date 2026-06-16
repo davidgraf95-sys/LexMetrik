@@ -125,15 +125,15 @@ export function VorlageKuendigungVertrag() {
               <Checkbox
                 checked={a.vertragsdauerUeber3Jahre}
                 onChange={(v) => set('vertragsdauerUeber3Jahre', v)}
-                label={<><span>Der Vertrag läuft bereits im dritten Jahr oder länger <span className="text-ink-500">(Voraussetzung der ordentlichen Kündigung, Art. 35a Abs. 1 VVG)</span></span></>} />
+                label={<><span>Der Vertrag läuft bereits im dritten Jahr oder länger <span className="text-ink-500"><NormText text={`(Voraussetzung der ordentlichen Kündigung, Art. 35a Abs. 1 VVG)`} /></span></span></>} />
               <Checkbox
                 checked={a.lebensversicherung}
                 onChange={(v) => set('lebensversicherung', v)}
-                label={<><span>Es handelt sich um eine Lebensversicherung <span className="text-warn-700">(vom ordentlichen Kündigungsrecht ausgenommen, Art. 35a Abs. 3 VVG)</span></span></>} />
+                label={<><span>Es handelt sich um eine Lebensversicherung <span className="text-warn-700"><NormText text={`(vom ordentlichen Kündigungsrecht ausgenommen, Art. 35a Abs. 3 VVG)`} /></span></span></>} />
               <Checkbox
                 checked={a.krankenzusatz}
                 onChange={(v) => set('krankenzusatz', v)}
-                label={<><span>Zusatzversicherung zur Krankenversicherung <span className="text-ink-500">(Kündigungsrecht nur Versicherungsnehmer:in, Art. 35a Abs. 4 VVG)</span></span></>} />
+                label={<><span>Zusatzversicherung zur Krankenversicherung <span className="text-ink-500"><NormText text={`(Kündigungsrecht nur Versicherungsnehmer:in, Art. 35a Abs. 4 VVG)`} /></span></span></>} />
             </div>
           )}
           {a.preset === 'krankenkasse' && (
@@ -155,11 +155,11 @@ export function VorlageKuendigungVertrag() {
               <Checkbox
                 checked={a.kkBesondereForm}
                 onChange={(v) => set('kkBesondereForm', v)}
-                label={<><span>Besondere Versicherungsform <span className="text-ink-500">(wählbare Franchise, HMO/Hausarzt/Telmed — ordentlicher Wechsel nur auf Jahresende, Art. 94 Abs. 2 KVV)</span></span></>} />
+                label={<><span>Besondere Versicherungsform <span className="text-ink-500"><NormText text={`(wählbare Franchise, HMO/Hausarzt/Telmed — ordentlicher Wechsel nur auf Jahresende, Art. 94 Abs. 2 KVV)`} /></span></span></>} />
               <Checkbox
                 checked={a.kkAusstaende}
                 onChange={(v) => set('kkAusstaende', v)}
-                label={<><span>Es bestehen offene Prämien, Kostenbeteiligungen oder Betreibungskosten <span className="text-warn-700">(Wechselsperre, Art. 64a Abs. 6 KVG)</span></span></>} />
+                label={<><span>Es bestehen offene Prämien, Kostenbeteiligungen oder Betreibungskosten <span className="text-warn-700"><NormText text={`(Wechselsperre, Art. 64a Abs. 6 KVG)`} /></span></span></>} />
             </div>
           )}
           {a.preset === 'darlehen' && (
@@ -171,7 +171,7 @@ export function VorlageKuendigungVertrag() {
             <div className="lc-tile">
               <GruppenTitel>Rückzahlung bis</GruppenTitel>
               <p className="text-h2 font-display font-semibold text-ink-900 leading-none num">{rueckzahlungBis}</p>
-              <p className="text-body-s text-ink-600 mt-1.5">Sechs Wochen ab Aufforderung (Art. 318 OR) — reine Datums-Addition, vertragliche Regelungen gehen vor.</p>
+              <p className="text-body-s text-ink-600 mt-1.5"><NormText text={`Sechs Wochen ab Aufforderung (Art. 318 OR) — reine Datums-Addition, vertragliche Regelungen gehen vor.`} /></p>
             </div>
           )}
         </div>

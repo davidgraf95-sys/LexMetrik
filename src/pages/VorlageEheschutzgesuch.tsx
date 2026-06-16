@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   EG_DEFAULTS, egZusammenstellen, egMaengel, egHinweise, type EgAntworten,
 } from '../lib/vorlagen/eheschutzgesuch';
@@ -127,7 +128,7 @@ export function VorlageEheschutzgesuch() {
           <Checkbox
             checked={a.kinderErfassen}
             onChange={(v) => set('kinderErfassen', v)}
-            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(Massnahmen nach Kindesrecht, Art. 176 Abs. 3 ZGB)</span></span></>} />
+            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500"><NormText text={`(Massnahmen nach Kindesrecht, Art. 176 Abs. 3 ZGB)`} /></span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
               {a.kinder.map((k, i) => (
@@ -238,16 +239,16 @@ export function VorlageEheschutzgesuch() {
             <Checkbox
               checked={a.rueckwirkung}
               onChange={(v) => set('rueckwirkung', v)}
-              label={<><span>Rückwirkend auch für das <strong>Jahr vor Einreichung</strong> fordern <span className="text-ink-500">(Art. 173 Abs. 3 ZGB — weiter zurück nicht möglich)</span></span></>} />
+              label={<><span>Rückwirkend auch für das <strong>Jahr vor Einreichung</strong> fordern <span className="text-ink-500"><NormText text={`(Art. 173 Abs. 3 ZGB — weiter zurück nicht möglich)`} /></span></span></>} />
           )}
           <Checkbox
             checked={a.gueterTrennung}
             onChange={(v) => set('gueterTrennung', v)}
-            label={<><span>Gütertrennung beantragen <span className="text-ink-500">(Art. 176 Abs. 1 Ziff. 3 ZGB — nur «wenn es die Umstände rechtfertigen»)</span></span></>} />
+            label={<><span>Gütertrennung beantragen <span className="text-ink-500"><NormText text={`(Art. 176 Abs. 1 Ziff. 3 ZGB — nur «wenn es die Umstände rechtfertigen»)`} /></span></span></>} />
           <Checkbox
             checked={a.schuldneranweisung}
             onChange={(v) => set('schuldneranweisung', v)}
-            label={<><span>Schuldneranweisung beantragen <span className="text-ink-500">(Art. 177 ZGB — bei Nichterfüllung der Unterhaltspflicht)</span></span></>} />
+            label={<><span>Schuldneranweisung beantragen <span className="text-ink-500"><NormText text={`(Art. 177 ZGB — bei Nichterfüllung der Unterhaltspflicht)`} /></span></span></>} />
           {a.schuldneranweisung && (
             <Field label="Arbeitgeberin / Schuldner der Gegenpartei">
               <input className={inputCls} value={a.arbeitgeberName} onChange={(e) => set('arbeitgeberName', e.target.value)} placeholder="z. B. Muster AG, Zürich" />
@@ -256,7 +257,7 @@ export function VorlageEheschutzgesuch() {
           <Checkbox
             checked={a.verfuegungsbeschraenkung}
             onChange={(v) => set('verfuegungsbeschraenkung', v)}
-            label={<><span>Verfügungsbeschränkung beantragen <span className="text-ink-500">(Art. 178 ZGB — Vermögenswert individuell bezeichnen)</span></span></>} />
+            label={<><span>Verfügungsbeschränkung beantragen <span className="text-ink-500"><NormText text={`(Art. 178 ZGB — Vermögenswert individuell bezeichnen)`} /></span></span></>} />
           {a.verfuegungsbeschraenkung && (
             <Field label="Vermögenswert (individuell)" hint="z. B. Grundstück mit Grundbuchblatt-Nr., Konto mit IBAN — keine Gesamtsperre">
               <input className={inputCls} value={a.vermoegenswert} onChange={(e) => set('vermoegenswert', e.target.value)} />
@@ -283,7 +284,7 @@ export function VorlageEheschutzgesuch() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Vor der Einreichung</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Unterschreiben und im Doppel einreichen</strong> (Art. 131 ZPO).</li>
+              <li><strong>Unterschreiben und im Doppel einreichen</strong><NormText text={` (Art. 131 ZPO).`} /></li>
               <li><strong>Glaubhaft machen:</strong> Einkommens-, Wohnkosten- und Kinderbelege beilegen — im Summarverfahren zählen die Urkunden.</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

@@ -176,8 +176,8 @@ export function VorlageWerkvertrag() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Damit der Werkvertrag trägt</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Mängel rechtzeitig rügen</strong> – beim unbeweglichen Werk gilt zwingend die 60-Tage-Frist (Art. 367 Abs. 1bis OR); sonst gilt das Werk als genehmigt.</li>
-              <li><strong>Verjährung</strong> – 2 Jahre (beweglich) bzw. 5 Jahre (unbeweglich) ab Abnahme (Art. 371 OR).</li>
+              <li><strong>Mängel rechtzeitig rügen</strong><NormText text={` – beim unbeweglichen Werk gilt zwingend die 60-Tage-Frist (Art. 367 Abs. 1bis OR); sonst gilt das Werk als genehmigt.`} /></li>
+              <li><strong>Verjährung</strong><NormText text={` – 2 Jahre (beweglich) bzw. 5 Jahre (unbeweglich) ab Abnahme (Art. 371 OR).`} /></li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />

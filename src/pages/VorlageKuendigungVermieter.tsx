@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { NormText } from '../components/NormText';
 import { Link } from 'react-router-dom';
 import { berechneMietkuendigung } from '../lib/mietrecht';
 import type { Mietobjekt } from '../types/mietrecht';
@@ -125,12 +126,12 @@ export function VorlageKuendigungVermieter() {
             <div className="lc-tile">
               <p className="lc-overline mb-1">Anfechtung möglich bis</p>
               <p className="num text-body-l text-ink-900">{auskunft.anfechtungBis ?? '–'}</p>
-              <p className="text-xs text-ink-500 mt-1">30 Tage ab Empfang (Art. 273 Abs. 1 OR)</p>
+              <p className="text-xs text-ink-500 mt-1"><NormText text={`30 Tage ab Empfang (Art. 273 Abs. 1 OR)`} /></p>
             </div>
             <div className="lc-tile">
               <p className="lc-overline mb-1">Erstreckungsbegehren bis</p>
               <p className="num text-body-l text-ink-900">{auskunft.erstreckungBis ?? '–'}</p>
-              <p className="text-xs text-ink-500 mt-1">Art. 273 Abs. 2 lit. a OR</p>
+              <p className="text-xs text-ink-500 mt-1"><NormText text={`Art. 273 Abs. 2 lit. a OR`} /></p>
             </div>
           </div>
         )}

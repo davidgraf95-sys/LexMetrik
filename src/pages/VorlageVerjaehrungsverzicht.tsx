@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { NormText } from '../components/NormText';
 import {
   VV_DEFAULTS, vvZusammenstellen, pruefeVvGates, type VvAntworten,
 } from '../lib/vorlagen/verjaehrungsverzicht';
@@ -77,7 +78,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<VvAntworten>, schritt: number) {
         <Checkbox
           checked={a.keineAnerkennung}
           onChange={(v) => set('keineAnerkennung', v)}
-          label={<><span>Klarstellung: <strong>keine Anerkennung</strong> der Forderung (Art. 135 Ziff. 1 OR) <span className="text-ink-500">(Praxis-Standard)</span></span></>} />
+          label={<><span>Klarstellung: <strong>keine Anerkennung</strong><NormText text={` der Forderung (Art. 135 Ziff. 1 OR) `} /><span className="text-ink-500">(Praxis-Standard)</span></span></>} />
         <div className="lc-notice text-body-s">
           Läuft die Frist bald ab? Verjährung samt Unterbrechungs-Folgen rechnen: {' '}
           <Link to="/rechner/verjaehrung" className="text-brass-700 underline">Verjährungs-Rechner</Link>.
@@ -124,7 +125,7 @@ const CONFIG: VorlagenSeitenConfig<VvAntworten> = {
     <>
       <p className="lc-overline text-brass-700">Damit der Verzicht trägt</p>
       <ul className="lc-list space-y-2 text-body-s text-ink-700">
-        <li><strong>Schriftform ist zwingend</strong> (Art. 141 Abs. 1bis OR) – drucken und von der Schuldnerseite unterschreiben lassen.</li>
+        <li><strong>Schriftform ist zwingend</strong><NormText text={` (Art. 141 Abs. 1bis OR) – drucken und von der Schuldnerseite unterschreiben lassen.`} /></li>
         <li><strong>Zustellung nachweisen</strong> – {KDG_ZUGANGS_HINWEIS}</li>
       </ul>
     </>

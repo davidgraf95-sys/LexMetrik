@@ -1,4 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
+import { NormText } from '../NormText';
 import { BeispielChips, Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
@@ -214,7 +215,7 @@ export function VerjaehrungForm() {
 
       {/* Unterbrechungen */}
       <div className="space-y-2">
-        <GruppenTitel>Unterbrechungen (Art. 135 OR) – Frist beginnt neu</GruppenTitel>
+        <GruppenTitel><NormText text={`Unterbrechungen (Art. 135 OR) – Frist beginnt neu`} /></GruppenTitel>
         {unterbrechungen.map((u, i) => (
           <div key={i} className="flex flex-wrap items-center gap-2 pl-1">
             <select value={u.typ} onChange={(e) => setU(i, { typ: e.target.value as UnterbrechungsTyp })} className={inputCls + ' sm:max-w-xs'}>
@@ -244,7 +245,7 @@ export function VerjaehrungForm() {
 
       {/* Stillstand */}
       <div className="space-y-2">
-        <GruppenTitel>Stillstand / Hemmung (Art. 134 OR) – Uhr pausiert</GruppenTitel>
+        <GruppenTitel><NormText text={`Stillstand / Hemmung (Art. 134 OR) – Uhr pausiert`} /></GruppenTitel>
         {stillstaende.map((s, i) => (
           <div key={i} className="flex flex-wrap items-center gap-2 pl-1">
             <select value={s.grund ?? STILLSTAND_GRUENDE[0]} onChange={(e) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, grund: e.target.value } : x)))} className={inputCls + ' sm:max-w-xs'}>
@@ -305,7 +306,7 @@ export function VerjaehrungForm() {
                 {ergebnis.status !== 'ok'
                   ? <span className="text-ink-500">Eingaben unvollständig</span>
                   : ergebnis.verjaehrtAmStichtag
-                    ? <span className="text-danger-700">verjährt (Einrede, Art. 142 OR)</span>
+                    ? <span className="text-danger-700"><NormText text={`verjährt (Einrede, Art. 142 OR)`} /></span>
                     : <span className="text-sage-700">nicht verjährt</span>}
               </p>
             </div>

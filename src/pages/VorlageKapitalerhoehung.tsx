@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState } from 'react';
+import { NormText } from '../components/NormText';
 import { Link } from 'react-router-dom';
 import { Field, GruppenTitel, inputCls, NormChip } from '../components/vorlagen/ui';
 import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
@@ -191,7 +192,7 @@ export function VorlageKapitalerhoehung() {
 
         {/* Zeichner */}
         <div className="space-y-2">
-          <p className="text-body-s font-medium text-ink-900">Zeichner:innen (Zeichnungsschein je Person, Art. 652 OR)</p>
+          <p className="text-body-s font-medium text-ink-900"><NormText text={`Zeichner:innen (Zeichnungsschein je Person, Art. 652 OR)`} /></p>
           {zeichner.map((z) => (
             <div key={z.key} className="grid grid-cols-1 sm:grid-cols-[2fr_3fr_1fr_auto_auto] gap-2 items-end">
               <Field label="Name">

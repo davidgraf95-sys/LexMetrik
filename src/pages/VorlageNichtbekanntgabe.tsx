@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { NormText } from '../components/NormText';
 import {
   NB_DEFAULTS, nbZusammenstellen, pruefeNbGates, nbFruehesterGesuchstag, type NbAntworten,
 } from '../lib/vorlagen/nichtbekanntgabe';
@@ -125,7 +126,7 @@ const CONFIG: VorlagenSeitenConfig<NbAntworten> = {
     <>
       <p className="lc-overline text-brass-700">Damit das Gesuch trägt</p>
       <ul className="lc-list space-y-2 text-body-s text-ink-700">
-        <li><strong>Frühestens drei Monate nach Zustellung</strong> des Zahlungsbefehls einreichen (Art. 8a Abs. 3 lit. d SchKG).</li>
+        <li><strong>Frühestens drei Monate nach Zustellung</strong><NormText text={` des Zahlungsbefehls einreichen (Art. 8a Abs. 3 lit. d SchKG).`} /></li>
         <li><strong>Unterschreiben</strong> – das Gesuch geht als unterzeichnete Eingabe an das Betreibungsamt.</li>
       </ul>
     </>

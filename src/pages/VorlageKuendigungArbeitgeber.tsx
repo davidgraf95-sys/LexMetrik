@@ -217,7 +217,7 @@ export function VorlageKuendigungArbeitgeber() {
           <Checkbox
             checked={a.kuendigungsterminMonatsende}
             onChange={(v) => set('kuendigungsterminMonatsende', v)}
-            label={<><span>Kündigungstermin ist das Monatsende <span className="text-ink-500">(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)</span></span></>} />
+            label={<><span>Kündigungstermin ist das Monatsende <span className="text-ink-500"><NormText text={`(gesetzlicher Regelfall, Art. 335c Abs. 1 OR)`} /></span></span></>} />
           <Field label="Nicht bezogene Tage Urlaub des andern Elternteils" optional hint="Art. 335c Abs. 3 i.V.m. Art. 329g OR (vormals Vaterschaftsurlaub), verlängern die Frist taggenau">
             <input type="number" min={0} className={inputCls + ' num sm:max-w-[9rem]'} value={a.vaterschaftsurlaubResttage}
               onChange={(e) => set('vaterschaftsurlaubResttage', Math.max(0, Number(e.target.value)))} />
@@ -233,7 +233,7 @@ export function VorlageKuendigungArbeitgeber() {
             checked={a.begruendungAufnehmen}
             onChange={(v) => set('begruendungAufnehmen', v)}
             label={<><span>Begründung ins Schreiben aufnehmen
-                <span className="text-warn-700"> — rechtlich nur auf Verlangen geschuldet (Art. 335 Abs. 2 OR); frühe Festlegung kann die Verteidigung gegen einen Missbrauchsvorwurf erschweren</span></span></>} />
+                <span className="text-warn-700"><NormText text={` — rechtlich nur auf Verlangen geschuldet (Art. 335 Abs. 2 OR); frühe Festlegung kann die Verteidigung gegen einen Missbrauchsvorwurf erschweren`} /></span></span></>} />
           {a.begruendungAufnehmen && (
             <Field label="Begründung (Freitext)" hint="Würdigung des Einzelfalls — LexMetrik formuliert hier bewusst nicht vor">
               <textarea className={inputCls + ' min-h-[6rem]'} value={a.begruendungText}
@@ -243,7 +243,7 @@ export function VorlageKuendigungArbeitgeber() {
           <Checkbox
             checked={a.freistellung}
             onChange={(v) => set('freistellung', v)}
-            label={<><span>Freistellung bis zum Austritt aussprechen <span className="text-ink-500">(Lohn läuft weiter; anderweitiger Erwerb wird angerechnet, Art. 324 OR)</span></span></>} />
+            label={<><span>Freistellung bis zum Austritt aussprechen <span className="text-ink-500"><NormText text={`(Lohn läuft weiter; anderweitiger Erwerb wird angerechnet, Art. 324 OR)`} /></span></span></>} />
           {a.freistellung && (
             <Field label="Freistellung ab">
               <DatumsFeld value={a.freistellungAb} onChange={(v) => set('freistellungAb', v)} className={inputCls} />
@@ -279,7 +279,7 @@ export function VorlageKuendigungArbeitgeber() {
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
               <li><strong>An die Wohnadresse zustellen</strong> — eingeschrieben und zusätzlich per A-Post; der Zugang dort entscheidet über Frist UND Sperrfristen.</li>
               <li><strong>Sperrfristen erneut bedenken:</strong> Erkrankt die Person VOR dem Zugang, kann die Kündigung trotz heutiger Prüfung nichtig werden — im Zweifel Zugang dokumentieren.</li>
-              <li><strong>Begründung nur auf Verlangen</strong> schriftlich nachliefern (Art. 335 Abs. 2 OR).</li>
+              <li><strong>Begründung nur auf Verlangen</strong><NormText text={` schriftlich nachliefern (Art. 335 Abs. 2 OR).`} /></li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">
               <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />

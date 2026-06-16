@@ -1,4 +1,5 @@
 import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
@@ -200,7 +201,7 @@ export function ErbteilungForm() {
 
       {/* 1. Parentel */}
       <div className="space-y-3">
-        <GruppenTitel>1. Parentel – Nachkommen (Art. 457 ZGB)</GruppenTitel>
+        <GruppenTitel><NormText text={`1. Parentel – Nachkommen (Art. 457 ZGB)`} /></GruppenTitel>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label="Lebende Kinder (Anzahl)">
             <input type="number" inputMode="decimal" min={0} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls + ' w-28'} />
@@ -230,7 +231,7 @@ export function ErbteilungForm() {
       {/* 2./3. Parentel – nur relevant ohne Nachkommen */}
       {!hatErste && (
         <div className="space-y-3">
-          <GruppenTitel>2. Parentel – elterlicher Stamm (Art. 458 ZGB)</GruppenTitel>
+          <GruppenTitel><NormText text={`2. Parentel – elterlicher Stamm (Art. 458 ZGB)`} /></GruppenTitel>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Field label="Vater">
               <select value={vater} onChange={(e) => setVater(e.target.value as ElternStatus)} className={inputCls}>

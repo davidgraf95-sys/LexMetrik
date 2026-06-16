@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   SK_DEFAULTS, skZusammenstellen, skMaengel, skWarnungen, skHinweise,
   type SkAntworten,
@@ -148,7 +149,7 @@ export function VorlageScheidungsklage() {
           <Checkbox
             checked={a.kinderErfassen}
             onChange={(v) => set('kinderErfassen', v)}
-            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500">(Rechtsbegehren zu den Kindern sind dann Mindestinhalt, Art. 290 lit. d ZPO)</span></span></>} />
+            label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500"><NormText text={`(Rechtsbegehren zu den Kindern sind dann Mindestinhalt, Art. 290 lit. d ZPO)`} /></span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
               {a.kinder.map((k, i) => (
@@ -253,7 +254,7 @@ export function VorlageScheidungsklage() {
           <section className="lc-highlight space-y-3">
             <p className="lc-overline text-brass-700">Vor der Einreichung</p>
             <ul className="lc-list space-y-2 text-body-s text-ink-700">
-              <li><strong>Unterschreiben und im Doppel einreichen</strong> (Art. 131 ZPO) — beim Gericht am Wohnsitz einer Partei.</li>
+              <li><strong>Unterschreiben und im Doppel einreichen</strong><NormText text={` (Art. 131 ZPO) — beim Gericht am Wohnsitz einer Partei.`} /></li>
               <li><strong>Belege beilegen</strong> (Art. 290 lit. e ZPO): Familienausweis/Eheurkunde{a.kinderErfassen ? ', Geburtsurkunden der Kinder' : ''}.</li>
             </ul>
             <label className="flex items-start gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-900 font-medium pt-1">

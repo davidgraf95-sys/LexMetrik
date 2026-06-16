@@ -436,7 +436,7 @@ export function ProzesskostenForm() {
 
           {kaution && sicherheit && (
             <div className="mt-4 rounded-xl border border-line bg-surface p-4">
-              <p className="lc-overline text-ink-500">Sicherheit für die Parteientschädigung (Art. 99 ZPO)</p>
+              <p className="lc-overline text-ink-500"><NormText text={`Sicherheit für die Parteientschädigung (Art. 99 ZPO)`} /></p>
               {sicherheit.moeglich ? (
                 <p className="mt-2 num text-body-l font-semibold text-ink-900">{sicherheit.spanne ? spanneText(sicherheit.spanne) : 'nicht beziffert'}</p>
               ) : (

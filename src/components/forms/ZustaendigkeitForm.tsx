@@ -789,19 +789,19 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               <Checkbox
                 checked={f.konsumentenvertrag}
                 onChange={(v) => set('konsumentenvertrag', v)}
-                label={<><span>Konsumentenvertrag <span className="text-ink-500">(Leistung des üblichen Verbrauchs für persönliche/familiäre Bedürfnisse, Art. 32 ZPO)</span></span></>} />
+                label={<><span>Konsumentenvertrag <span className="text-ink-500"><NormText text={`(Leistung des üblichen Verbrauchs für persönliche/familiäre Bedürfnisse, Art. 32 ZPO)`} /></span></span></>} />
             )}
             {istGeld && !f.konsumentenvertrag && (
               <Checkbox
                 checked={f.ausVertrag}
                 onChange={(v) => set('ausVertrag', v)}
-                label={<><span>Forderung aus Vertrag <span className="text-ink-500">(zusätzliches Forum am Ort der charakteristischen Leistung — der vertragstypprägenden, i. d. R. nicht der Geldleistung, Art. 31 ZPO)</span></span></>} />
+                label={<><span>Forderung aus Vertrag <span className="text-ink-500"><NormText text={`(zusätzliches Forum am Ort der charakteristischen Leistung — der vertragstypprägenden, i. d. R. nicht der Geldleistung, Art. 31 ZPO)`} /></span></span></>} />
             )}
             {istArbeit && (
               <Checkbox
                 checked={f.avgVerleih}
                 onChange={(v) => set('avgVerleih', v)}
-                label={<><span>Personalverleih/-vermittlung (AVG) <span className="text-ink-500">(zusätzliches Forum am Ort der Geschäftsniederlassung der verleihenden Person, Art. 34 Abs. 2 ZPO)</span></span></>} />
+                label={<><span>Personalverleih/-vermittlung (AVG) <span className="text-ink-500"><NormText text={`(zusätzliches Forum am Ort der Geschäftsniederlassung der verleihenden Person, Art. 34 Abs. 2 ZPO)`} /></span></span></>} />
             )}
             <Checkbox
               checked={f.gerichtsstandsvereinbarung}
@@ -824,7 +824,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             <Checkbox
               checked={f.beklagteAuslandOderUnbekannt}
               onChange={(v) => set('beklagteAuslandOderUnbekannt', v)}
-              label={<><span>Beklagte Partei mit Sitz/Wohnsitz im Ausland oder Aufenthalt unbekannt <span className="text-ink-500">(einseitiger Schlichtungsverzicht, Art. 199 Abs. 2 ZPO)</span></span></>} />
+              label={<><span>Beklagte Partei mit Sitz/Wohnsitz im Ausland oder Aufenthalt unbekannt <span className="text-ink-500"><NormText text={`(einseitiger Schlichtungsverzicht, Art. 199 Abs. 2 ZPO)`} /></span></span></>} />
             <Checkbox
               checked={f.widerklageOderGerichtlicheFrist}
               onChange={(v) => set('widerklageOderGerichtlicheFrist', v)}
@@ -832,7 +832,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
             {istGeld && (
               <details className="lc-card p-4">
                 <summary className="cursor-pointer text-body-s font-medium text-ink-700">
-                  Handelsgerichts-Konstellation <span className="text-ink-500 font-normal">(nur Kantone mit Handelsgericht: ZH/BE/AG/SG; Art. 6 ZPO)</span>
+                  Handelsgerichts-Konstellation <span className="text-ink-500 font-normal"><NormText text={`(nur Kantone mit Handelsgericht: ZH/BE/AG/SG; Art. 6 ZPO)`} /></span>
                 </summary>
                 <div className="mt-3 space-y-2">
                   <Checkbox
@@ -1223,7 +1223,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
               <div className="lc-card p-4 space-y-3">
                 <GruppenTitel>Zuständige Schlichtungsstelle ({f.kanton})</GruppenTitel>
                 {recherche.glgFallback && (
-                  <p className="text-xs text-ink-500">Keine eigene paritätische Stelle hinterlegt — angezeigt wird die ordentliche Schlichtungsbehörde; die paritätische Besetzung (Art. 200 ZPO) stellt der Kanton sicher.</p>
+                  <p className="text-xs text-ink-500"><NormText text={`Keine eigene paritätische Stelle hinterlegt — angezeigt wird die ordentliche Schlichtungsbehörde; die paritätische Besetzung (Art. 200 ZPO) stellt der Kanton sicher.`} /></p>
                 )}
                 {recherche.aufloesung.modus === 'zentral' && (
                   <div>
