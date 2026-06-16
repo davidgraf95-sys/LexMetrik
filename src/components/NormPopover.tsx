@@ -12,9 +12,25 @@ import { istSchliessTaste } from '../lib/normtext/tasten';
 // Esc-Helfer in lib/normtext/tasten.ts (eslint: Komponenten-Datei exportiert
 // nur Komponenten).
 
+// Vergleichs-Normalisierung für lit/Ziff-Marken: case-insensitive, ohne
+// umschliessende Punkte/Klammern/Leerzeichen ('a)', '(a)', '17.', ' b ' → 'a',
+// '17', 'b'). Innere Suffixe (z.B. '5a', '20a', 'bis') bleiben erhalten — die
+// Marke wird nur an den Rändern gesäubert, damit lit/Ziff aus dem Zitat exakt
+// gegen die Snapshot-Marke matcht (einheitlich Bund-lit ↔ Kanton-Ziff).
+function markeNorm(s: string): string {
+  return s.trim().replace(/^[.()\s]+|[.()\s]+$/g, '').toLowerCase();
+}
+
+// «aufgehoben»: faithful-Snapshot trägt für aufgehobene Stellen (§7) nur das
+// Auslassungszeichen «…» (ggf. mit Punkten/Whitespace). Rein Darstellung (§3):
+// gedämpftes «aufgehoben» statt des nackten «…»; gilt für Absätze UND Items.
+function istAufgehoben(text: string): boolean {
+  return /^[….\s]*$/.test(text) && text.trim() !== '';
+}
+
 export function NormPopover({ snapshot, passus, onClose }: {
   snapshot: NormSnapshot;
-  passus: { absatz: string | null };
+  passus: { absatz: string | null; lit?: string; ziff?: string };
   onClose: () => void;
 }) {
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -30,13 +46,29 @@ export function NormPopover({ snapshot, passus, onClose }: {
     return () => window.removeEventListener('keydown', onKey);
   }, [onClose]);
 
+  // Präzise lit/Ziff-Markierung: ist ein lit/ziff zitiert, wird GENAU das Item
+  // markiert; das umschliessende Absatz wird dezent gekennzeichnet. Sonst (nur
+  // Absatz zitiert) wird der ganze Absatz-Block hervorgehoben (wie bisher).
+  // Bund (lit) und Kanton (ziff) laufen über dieselbe Marke — eine normalisierte
+  // Vergleichs-Marke, ein Render-Pfad (Einheitlichkeit §3/§5).
+  const passusMarke = passus.lit != null
+    ? markeNorm(passus.lit)
+    : passus.ziff != null ? markeNorm(passus.ziff) : null;
+
   // Der hervorgehobene Block bestimmt das Text-Fragment des Live-Links; ohne
-  // Hervorhebung der erste Block. So springt der amtliche Link genau zur
-  // zitierten Stelle (Chromium hebt hervor, andere ignorieren das Fragment).
-  const hervor = passus.absatz != null
+  // Hervorhebung der erste Block. Ist ein konkretes Item zitiert, springt das
+  // Fragment auf den Item-Text (sonst auf den Absatz-Einleitungstext). So
+  // springt der amtliche Link genau zur zitierten Stelle (Chromium hebt hervor,
+  // andere ignorieren das Fragment).
+  const hervorBlock = passus.absatz != null
     ? snapshot.bloecke.find((b) => b.absatz === passus.absatz)
     : undefined;
-  const fragmentText = (hervor ?? snapshot.bloecke[0])?.text ?? '';
+  const hervorItem = passusMarke != null
+    ? (hervorBlock ?? snapshot.bloecke[0])?.items?.find((it) => markeNorm(it.marke) === passusMarke)
+    : undefined;
+  const fragmentText = hervorItem?.text
+    ?? (hervorBlock ?? snapshot.bloecke[0])?.text
+    ?? '';
   // textFragment liefert '#:~:text=…'. Hat die Quelle-URL schon einen Anker
   // (…#art_335_c), teilen sich Anker und Text-Fragment EIN # (das führende #
   // des Fragments entfällt) → '…#art_335_c:~:text=…'. So bleibt der Artikel-
@@ -76,31 +108,83 @@ export function NormPopover({ snapshot, passus, onClose }: {
       </div>
 
       {/* Body: alle Blöcke in Reihenfolge, Fedlex-Stil mit hochgestellter
-          Absatznummer; der zitierte Block hervorgehoben. */}
+          Absatznummer; die zitierte Stelle hervorgehoben. Markierungs-Logik
+          (EINHEITLICH Bund-lit ↔ Kanton-Ziff, ein Pfad):
+          - lit/ziff zitiert (passusMarke gesetzt): der Absatz-Block wird nur
+            DEZENT umrandet, GENAU das passende Item stark hervorgehoben
+            (data-passus-item="true").
+          - sonst nur Absatz zitiert: der ganze Absatz-Block stark hervorgehoben
+            (data-passus="true", wie bisher).
+          Aufgehobene Stellen («…») erscheinen gedämpft als «aufgehoben» — für
+          Absatz-Einleitung UND Items gleichermassen. */}
       <div className="px-5 py-4 space-y-2.5">
         {snapshot.bloecke.map((b, i) => {
-          const istPassus = passus.absatz != null && b.absatz === passus.absatz;
+          const istAbsatzZitiert = passus.absatz != null && b.absatz === passus.absatz;
+          // Ziel-Block für die Item-Markierung: der zitierte Absatz, ODER — wenn
+          // das Zitat keinen Absatz nennt (typisch Kanton-§ ohne Absatz-Ebene) —
+          // jeder Block (die Marke des Items grenzt dann allein ein, welcher Block
+          // tatsächlich getroffen wird).
+          const istZielBlock = passus.absatz == null || istAbsatzZitiert;
+          // Starke Block-Hervorhebung nur, wenn KEIN Item zitiert ist; bei
+          // zitiertem Item wird der Block dezent umrandet, das Item trägt die
+          // starke Markierung.
+          const blockStark = istAbsatzZitiert && passusMarke == null;
+          const blockDezent = istAbsatzZitiert && passusMarke != null;
           return (
-            <p
+            <div
               key={i}
-              data-passus={istPassus ? 'true' : 'false'}
+              data-passus={blockStark ? 'true' : 'false'}
               className={`text-body-s leading-relaxed ${
-                istPassus
+                blockStark
                   ? 'rounded-md border-l-4 border-brass-500 bg-brass-100 px-3 py-2 text-ink-900'
-                  : 'text-ink-700'
+                  : blockDezent
+                    ? 'rounded-md border-l-2 border-brass-300 bg-brass-50 px-3 py-2 text-ink-800'
+                    : 'text-ink-700'
               }`}
             >
-              {b.absatz != null && (
-                <sup className="num mr-1 font-semibold text-ink-500">{b.absatz}</sup>
+              <p>
+                {b.absatz != null && (
+                  <sup className="num mr-1 font-semibold text-ink-500">{b.absatz}</sup>
+                )}
+                {/* Aufgehobene Absätze tragen im Snapshot (faithful, §7) nur das
+                    Auslassungszeichen «…». Statt des nackten «…» zeigen wir
+                    «aufgehoben» (rein Darstellung, §3 — Daten unverändert). Die
+                    Absatznummer-<sup> bleibt davor → liest sich «² aufgehoben». */}
+                {istAufgehoben(b.text)
+                  ? <span className="italic text-ink-400">aufgehoben</span>
+                  : b.text}
+              </p>
+              {/* Aufzählungs-Items (lit. bei Bund, Ziff. bei Kanton). EINHEITLICH:
+                  identisches Markup/Styling, nur die Marke unterscheidet sich
+                  (Daten). Das zitierte Item wird stark hervorgehoben. */}
+              {b.items != null && b.items.length > 0 && (
+                <ul className="mt-1.5 space-y-1 pl-1">
+                  {b.items.map((it, j) => {
+                    const istItemZitiert = istZielBlock
+                      && passusMarke != null
+                      && markeNorm(it.marke) === passusMarke;
+                    return (
+                      <li
+                        key={j}
+                        {...(istItemZitiert ? { 'data-passus-item': 'true' } : {})}
+                        className={`flex gap-2 rounded-md px-2 py-1 ${
+                          istItemZitiert
+                            ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
+                            : 'text-ink-700'
+                        }`}
+                      >
+                        <span className="num shrink-0 font-semibold text-ink-500">{`${it.marke}.`}</span>
+                        <span>
+                          {istAufgehoben(it.text)
+                            ? <span className="italic text-ink-400">aufgehoben</span>
+                            : it.text}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
               )}
-              {/* Aufgehobene Absätze tragen im Snapshot (faithful, §7) nur das
-                  Auslassungszeichen «…». Statt des nackten «…» zeigen wir
-                  «aufgehoben» (rein Darstellung, §3 — Daten unverändert). Die
-                  Absatznummer-<sup> bleibt davor → liest sich «² aufgehoben». */}
-              {/^[….\s]*$/.test(b.text) && b.text.trim() !== ''
-                ? <span className="italic text-ink-400">aufgehoben</span>
-                : b.text}
-            </p>
+            </div>
           );
         })}
       </div>

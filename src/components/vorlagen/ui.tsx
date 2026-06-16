@@ -158,7 +158,7 @@ export function NormChip({ artikel, anzeige, hrefOverride, title }: {
       {offen && (
         <NormPopoverOverlay onClose={schliessen}>
           {snapshot && snapshot !== 'laedt'
-            ? <NormPopover snapshot={snapshot} passus={{ absatz: ref?.absatz ?? null }} onClose={schliessen} />
+            ? <NormPopover snapshot={snapshot} passus={{ absatz: ref?.absatz ?? null, lit: ref?.lit, ziff: ref?.ziff }} onClose={schliessen} />
             : <NormPopoverHuelle zustand={snapshot === 'laedt' ? 'laedt' : 'fehlt'} url={url} artikel={artikel} onClose={schliessen} />}
         </NormPopoverOverlay>
       )}

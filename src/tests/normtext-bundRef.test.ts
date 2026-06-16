@@ -22,6 +22,24 @@ describe('bundSnapshotRef', () => {
     expect(bundSnapshotRef('Art. 96 ZPO')).toEqual({ quelle: 'ZPO', token: '96', absatz: null });
   });
 
+  it('lit. aus dem Zitat wird mitgeliefert (für präzise Item-Markierung)', () => {
+    expect(bundSnapshotRef('Art. 336 Abs. 1 lit. a OR')).toEqual({
+      quelle: 'OR', token: '336', absatz: '1', lit: 'a',
+    });
+  });
+
+  it('Ziff. aus dem Zitat wird mitgeliefert', () => {
+    expect(bundSnapshotRef('Art. 337 Ziff. 2 OR')).toEqual({
+      quelle: 'OR', token: '337', absatz: null, ziff: '2',
+    });
+  });
+
+  it('ohne lit/ziff bleiben die Felder weg (Bestandszitate unverändert)', () => {
+    const r = bundSnapshotRef('Art. 335c Abs. 1 OR');
+    expect('lit' in r!).toBe(false);
+    expect('ziff' in r!).toBe(false);
+  });
+
   it('unbekanntes Gesetz → null', () => {
     expect(bundSnapshotRef('Art. 8 ATSG')).toBeNull();
   });

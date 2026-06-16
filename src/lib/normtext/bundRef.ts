@@ -34,12 +34,20 @@ const SNAPSHOT_QUELLE: Partial<Record<FedlexGesetz, string>> = {
 
 export function bundSnapshotRef(
   zitat: string,
-): { quelle: string; token: string; absatz: string | null } | null {
+): { quelle: string; token: string; absatz: string | null; lit?: string; ziff?: string } | null {
   const gesetz = erkenneFedlexGesetz(zitat);
   if (!gesetz) return null;
   const quelle = SNAPSHOT_QUELLE[gesetz];
   if (!quelle) return null;
   const passus = parsePassus(zitat);
   if (!passus) return null;
-  return { quelle, token: passus.artikelToken, absatz: passus.absatz };
+  // lit/ziff aus dem Zitat mitliefern (nur wenn genannt), damit das Popover
+  // GENAU das zitierte Aufzählungs-Item markieren kann (einheitlich mit Kanton).
+  return {
+    quelle,
+    token: passus.artikelToken,
+    absatz: passus.absatz,
+    ...(passus.lit != null ? { lit: passus.lit } : {}),
+    ...(passus.ziff != null ? { ziff: passus.ziff } : {}),
+  };
 }

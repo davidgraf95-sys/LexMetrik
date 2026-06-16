@@ -30,7 +30,7 @@ const SNAP: NormSnapshot = {
   sha: 'abc',
 };
 
-const html = (passus: { absatz: string | null }) =>
+const html = (passus: { absatz: string | null; lit?: string; ziff?: string }) =>
   renderToString(<NormPopover snapshot={SNAP} passus={passus} onClose={() => {}} />);
 
 describe('NormPopover — Render', () => {
@@ -148,6 +148,118 @@ describe('NormPopover — aufgehobene Absätze (David 16.6.2026)', () => {
     );
     expect(out).toContain('Text mit … Auslassung im Satz.');
     expect(out).not.toContain('aufgehoben');
+  });
+});
+
+describe('NormPopover — Aufzählungs-Items (lit./Ziff., einheitlich Bund/Kanton)', () => {
+  // Bund-Beispiel: OR 336 mit lit. a–c. Kanton-Beispiel: §11 mit Ziffern.
+  // Beide laufen über DENSELBEN NormPopover — gleiches Markup, nur die Marke
+  // (Buchstabe bei Bund, Zahl bei Kanton) unterscheidet sich (Daten).
+  const SNAP_LIT: NormSnapshot = {
+    ...SNAP,
+    bloecke: [
+      {
+        absatz: '1',
+        text: 'Die Kündigung ist missbräuchlich, wenn eine Partei sie ausspricht:',
+        items: [
+          { marke: 'a', text: 'wegen einer Eigenschaft der anderen Partei;' },
+          { marke: 'b', text: 'weil die andere Partei ein verfassungsmässiges Recht ausübt;' },
+          { marke: 'c', text: 'ausschliesslich um die Entstehung von Ansprüchen zu vereiteln;' },
+        ],
+      },
+    ],
+  };
+  const SNAP_ZIFF: NormSnapshot = {
+    ...SNAP,
+    ebene: 'kanton',
+    bloecke: [
+      {
+        absatz: null,
+        text: 'Die Gebühr beträgt:',
+        items: [
+          { marke: '16', text: 'für die Beurkundung eines Testaments 200 Franken;' },
+          { marke: '17', text: 'für die Beurkundung eines Erbvertrags 300 Franken;' },
+          { marke: '18', text: 'für eine Bürgschaft 150 Franken.' },
+        ],
+      },
+    ],
+  };
+
+  it('rendert alle Item-Marken + Texte (Bund lit.)', () => {
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_LIT} passus={{ absatz: null }} onClose={() => {}} />,
+    );
+    for (const it of SNAP_LIT.bloecke[0].items!) {
+      expect(out).toContain(it.marke + '.');
+      expect(out).toContain(it.text.split(' ').slice(0, 4).join(' '));
+    }
+    // Einleitungstext des Absatzes bleibt sichtbar
+    expect(out).toContain('Die Kündigung ist missbräuchlich');
+  });
+
+  it('passus.lit="b" → genau Item «b» trägt data-passus-item="true», andere nicht', () => {
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_LIT} passus={{ absatz: '1', lit: 'b' }} onClose={() => {}} />,
+    );
+    expect(out.match(/data-passus-item="true"/g)!.length).toBe(1);
+    // das markierte Item trägt den b-Text
+    const seg = out.split('data-passus-item="true"')[1];
+    expect(seg).toContain('verfassungsmässiges Recht');
+    // der Absatz-Block ist nur DEZENT (kein starkes data-passus="true")
+    expect(out).not.toContain('data-passus="true"');
+  });
+
+  it('passus.ziff="17" → genau Item «17» trägt data-passus-item="true», andere nicht (Kanton)', () => {
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_ZIFF} passus={{ absatz: null, ziff: '17' }} onClose={() => {}} />,
+    );
+    expect(out.match(/data-passus-item="true"/g)!.length).toBe(1);
+    const seg = out.split('data-passus-item="true"')[1];
+    expect(seg).toContain('Erbvertrags');
+    // Item 16 und 18 sind NICHT markiert
+    const seg16 = out.split('16.')[1];
+    expect(seg16.startsWith(' ') || seg16.includes('Testaments')).toBe(true);
+  });
+
+  it('ohne lit/ziff → Absatz-Markierung wie bisher (data-passus="true», kein Item-Mark)', () => {
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_LIT} passus={{ absatz: '1' }} onClose={() => {}} />,
+    );
+    expect(out.match(/data-passus="true"/g)!.length).toBe(1);
+    expect(out).not.toContain('data-passus-item="true"');
+  });
+
+  it('Live-Link-Fragment springt auf den Item-Text, wenn ein Item zitiert ist', () => {
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_ZIFF} passus={{ absatz: null, ziff: '17' }} onClose={() => {}} />,
+    );
+    const href = out.match(/href="([^"]*:~:text=[^"]*)"/)![1];
+    // Fragment stammt aus dem Item-17-Text («für die Beurkundung eines Erbvertrags …»)
+    expect(href).toContain(encodeURIComponent('Erbvertrags'));
+  });
+
+  it('aufgehobenes Item («…») rendert «aufgehoben», nicht das nackte «…»', () => {
+    const SNAP_ITEM_AUFGEHOBEN: NormSnapshot = {
+      ...SNAP,
+      bloecke: [
+        {
+          absatz: '1',
+          text: 'Einleitung des Absatzes.',
+          items: [
+            { marke: 'a', text: 'Gültiger Buchstabe a mit Inhalt.' },
+            { marke: 'b', text: '…' },
+          ],
+        },
+      ],
+    };
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_ITEM_AUFGEHOBEN} passus={{ absatz: null }} onClose={() => {}} />,
+    );
+    expect(out).toContain('aufgehoben');
+    expect(out).toContain('Gültiger Buchstabe a');
+    // im Item-b-Segment steht «aufgehoben», nicht das nackte «…»
+    const segB = out.split('>b.<')[1] ?? out.split('b.')[1];
+    expect(segB).toContain('aufgehoben');
   });
 });
 
