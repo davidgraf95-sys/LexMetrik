@@ -4,7 +4,7 @@ import { berechneMietkuendigung } from '../lib/mietrecht';
 import type { Mietobjekt } from '../types/mietrecht';
 import type { Kanton } from '../types/legal';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormChip, NormLink } from '../components/vorlagen/ui';
 import { KANTONE } from '../lib/kantone';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
@@ -60,7 +60,7 @@ export function VorlageKuendigungVermieter() {
         </p>
         <div className="flex flex-wrap items-center gap-1.5">
           {(card?.norms ?? []).map((n) => (
-            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
+            <NormChip key={n.label} artikel={n.label} hrefOverride={fedlexLokalisiert(n.url, locale)} />
           ))}
           <span className="lc-badge lc-badge-warn">Checkliste — kein Export</span>
         </div>

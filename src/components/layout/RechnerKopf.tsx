@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Calculator } from '../../lib/calculators';
-import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { sansAmp } from '../typografie';
-import { useLocale, fedlexLokalisiert } from '../locale';
+import { NormChip } from '../vorlagen/ui';
 
 // Gemeinsamer Rechner-Kopf (Vorlage Abschnitt 4): Zurück-Pfeil, Breadcrumb,
 // Overline, H1, Einleitung, Chips.
@@ -17,7 +16,6 @@ export function RechnerKopf({ calc, titelOverride, kategorieOverride, kurzbeschr
   kurzbeschriebOverride?: string;
   normenOverride?: string[];
 }) {
-  const { locale } = useLocale();
   const titel = titelOverride ?? calc.titel;
   const kategorie = kategorieOverride ?? calc.kategorie;
   const kurzbeschrieb = kurzbeschriebOverride ?? calc.kurzbeschrieb;
@@ -43,19 +41,11 @@ export function RechnerKopf({ calc, titelOverride, kategorieOverride, kurzbeschr
       <h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">{sansAmp(titel)}</h1>
       <p className="text-body-l text-ink-600 max-w-reading">{kurzbeschrieb}</p>
       <div className="flex flex-wrap gap-1.5">
-        {/* Norm-Chips mit Fedlex-Direktlink (Spannen/ff. → führender Artikel) */}
-        {normen.map((n) => {
-          const roh = fedlexLinkFuerArtikel(n);
-          const url = roh ? fedlexLokalisiert(roh, locale) : null;
-          return url ? (
-            <a key={n} href={url} target="_blank" rel="noopener noreferrer"
-              className="lc-chip no-underline hover:text-brass-700" title={`${n} auf Fedlex öffnen`}>
-              {n}
-            </a>
-          ) : (
-            <span key={n} className="lc-chip">{n}</span>
-          );
-        })}
+        {/* Norm-Chips mit Fedlex-Direktlink + Volltext-Popover (Spannen/ff. →
+            führender Artikel; NormChip leitet URL/Snapshot aus dem Artikel ab). */}
+        {normen.map((n) => (
+          <NormChip key={n} artikel={n} title={`${n} auf Fedlex öffnen`} />
+        ))}
       </div>
     </div>
   );

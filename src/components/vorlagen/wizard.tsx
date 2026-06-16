@@ -1,6 +1,6 @@
 import { useState, type Dispatch, type ReactNode, type SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
-import { FehlerBox, NormLink, Stepper } from './ui';
+import { FehlerBox, NormChip, NormLink, Stepper } from './ui';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { dokumentAlsText } from '../../lib/vorlagen/vorlagenText';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
@@ -81,7 +81,7 @@ export function VorlagenWizardRahmen({
         <p className="text-body-l text-ink-600 max-w-reading">{intro}</p>
         <div className="flex flex-wrap items-center gap-1.5">
           {norms.map((n) => (
-            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
+            <NormChip key={n.label} artikel={n.label} hrefOverride={fedlexLokalisiert(n.url, locale)} />
           ))}
           <span className="lc-badge lc-badge-warn">{badge}</span>
         </div>

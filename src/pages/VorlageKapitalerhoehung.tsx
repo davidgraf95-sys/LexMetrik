@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Field, GruppenTitel, inputCls, NormChip } from '../components/vorlagen/ui';
 import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import {
@@ -112,7 +112,7 @@ export function VorlageKapitalerhoehung() {
         </p>
         <div className="flex flex-wrap items-center gap-1.5">
           {(card?.norms ?? []).map((n) => (
-            <a key={n.label} href={fedlexLokalisiert(n.url, locale)} target="_blank" rel="noopener noreferrer" className="lc-chip no-underline hover:text-brass-700">{n.label}</a>
+            <NormChip key={n.label} artikel={n.label} hrefOverride={fedlexLokalisiert(n.url, locale)} />
           ))}
           <span className="lc-badge lc-badge-warn">Beschluss-Urkunden als Entwurf</span>
         </div>
