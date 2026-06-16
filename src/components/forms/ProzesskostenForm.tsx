@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { KantonQuelleLink } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { BetragsFeld } from '../BetragsFeld';
@@ -81,7 +82,7 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
         {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
         {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
         {' · '}
-        <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a>
+        <KantonQuelleLink quelle={q} className="underline hover:text-ink-800" />
       </p>
       {q.hinweis && <p className="mt-1 text-xs text-ink-500">{q.hinweis}</p>}
     </div>

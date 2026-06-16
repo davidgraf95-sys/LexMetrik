@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { KantonQuelleLink } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { BetragsFeld } from '../BetragsFeld';
@@ -83,7 +84,7 @@ function PostenAnzeige({ ergebnis }: { ergebnis: BeurkundungErgebnis }) {
       <p className="mt-2 text-xs text-ink-500">
         {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
         {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
-        {q.quelleUrl ? <> · <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
+        {q.quelleUrl ? <> · <KantonQuelleLink quelle={q} className="underline hover:text-ink-800" /></> : null}
       </p>
     </div>
   );
