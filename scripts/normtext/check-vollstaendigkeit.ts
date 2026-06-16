@@ -164,30 +164,11 @@ const BEKANNTE_LUECKEN: BekannteLuecke[] = [
     notiz: 'SH-273.100 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
   },
 
-  // ── BE/169.81: art_1_a und art_8_a nicht im LexWork-Erlass
-  {
-    snapshotId: 'kanton/BE/169.81/art_1_a',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'BE-169.81 LexWork liefert art_1_a nicht; bisacodes-freier a-Paragraph.',
-  },
-  {
-    snapshotId: 'kanton/BE/169.81/art_8_a',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'BE-169.81 LexWork liefert art_8_a nicht; bisacodes-freier a-Paragraph.',
-  },
-
   // ── OW/210.32: kein Snapshot
   {
     snapshotId: 'kanton/OW/210.32/art_10',
     grund: 'token-nicht-im-Erlass',
     notiz: 'OW-210.32 nicht in LexWork gesnapshottet (Stand 16.6.2026).',
-  },
-
-  // ── NW/268.12: art_17_a nicht im LexWork-Erlass
-  {
-    snapshotId: 'kanton/NW/268.12/art_17_a',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'NW-268.12 LexWork liefert art_17_a nicht.',
   },
 
   // ── AR/153.2: kein Snapshot

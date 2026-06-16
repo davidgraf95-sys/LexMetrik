@@ -54,10 +54,19 @@ export interface LexWorkErgebnis {
 /** Strippt HTML-Tags, dekodiert die in LexWork vorkommenden Entities und
  *  normalisiert Whitespace zu einfachen Leerzeichen. */
 function bereinige(roh: string): string {
+  // Fussnoten-Anker «<a class="footnote" …>[8]</a>» (bzw. «8») sind redaktionelle
+  // Verweis-Marker, KEIN Normtext → komplett (inkl. Inhalt) entfernen, BEVOR der
+  // generische Tag-Strip läuft (analog zur <sup><a>-Fussnoten-Behandlung im
+  // Fedlex-Extraktor). Sonst bliebe der Anker-Inhalt «[8]»/«8» als Streustelle
+  // im Text stehen (§7 Treue, GL III B/7/1 «…Fusionsgesetz[8]:»).
+  const ohneFootnotes = roh.replace(
+    /<a\b[^>]*class=["']footnote["'][^>]*>[\s\S]*?<\/a>/gi,
+    '',
+  );
   // LexWork-Änderungsmarker «<strong>*</strong>» sind redaktionelle Annotationen
   // (markieren geänderte Stellen), KEIN Normtext → vor dem Strip entfernen, damit
   // kein loses «*» im Text verbleibt.
-  const ohneMarker = roh.replace(/<strong>\s*\*\s*<\/strong>/gi, '');
+  const ohneMarker = ohneFootnotes.replace(/<strong>\s*\*\s*<\/strong>/gi, '');
   const ohneTags = ohneMarker.replace(/<[^>]+>/g, '');
   return dekodiereEntities(ohneTags).replace(/\s+/g, ' ').trim();
 }
@@ -86,11 +95,17 @@ export function extrahiereLexWorkArtikel(
 ): LexArtikel | null {
   // In Artikel-Segmente zerlegen: alles ab einem <div class='article'> bis kurz
   // vor dem nächsten. Das erste Teilstück (vor dem ersten Artikel) wird verworfen.
+  // Token aus dem Inventar stammt aus parsePassus ('Art. 1a' → '1_a', Unterstrich),
+  // die Live-Artikelnummer liest sich aber als '1a' (ohne Unterstrich). Beide
+  // Seiten beim Vergleich normalisieren (Unterstriche entfernen), sonst bleibt
+  // ein real existierender a-Artikel (BE 169.81 art_1a/8a, NW 268.12 art_17a)
+  // fälschlich ungefunden. artikelLabel/id bleiben unverändert.
+  const tokenNorm = token.replace(/_/g, '');
   const teile = xhtml.split(/(?=<div\s+class='article'>)/i);
   for (const segment of teile) {
     if (!/^\s*<div\s+class='article'>/i.test(segment)) continue;
     const nummer = leseArtikelNummer(segment);
-    if (nummer !== token) continue;
+    if (nummer === null || nummer.replace(/_/g, '') !== tokenNorm) continue;
     return parseSegment(segment);
   }
   return null;
@@ -140,19 +155,60 @@ function spaltInline(spans: string[]): {
   };
 }
 
+/**
+ * Wandelt eine Gebühren-/Staffel-Tabelle (<table class='enumeration_tabular'>,
+ * z.B. ZG 161.7 § 11) in lesbaren Text. Die Tabelle hat eine Kopfzeile (<th>)
+ * mit Spaltenbeschriftungen und Datenzeilen (<td>). Je Datenzeile werden die
+ * nicht-leeren Zellen mit ihrer Spaltenbeschriftung versehen («Spalte: Wert»)
+ * und mit « · » getrennt; die Zeilen werden mit « — » verkettet. So bleiben die
+ * Zellen sauber getrennt (kein zusammengeklebter Text) und der Bezug Wert↔Spalte
+ * geht nicht verloren. Ohne Kopfzeile werden die Zellen ohne Beschriftung
+ * verkettet. Liefert '' bei leerer Tabelle.
+ */
+function tabelleZuText(tabellenInner: string): string {
+  const zeilen = [...tabellenInner.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map(
+    (r) => r[1],
+  );
+  let kopf: string[] = [];
+  const zeilenTexte: string[] = [];
+  for (const zeile of zeilen) {
+    const ths = [...zeile.matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gi)].map((c) =>
+      bereinige(c[1]),
+    );
+    if (ths.length > 0) {
+      kopf = ths;
+      continue;
+    }
+    const tds = [...zeile.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((c) =>
+      bereinige(c[1]),
+    );
+    const zellen = tds
+      .map((wert, i) => {
+        if (!wert) return '';
+        const label = kopf[i];
+        return label ? `${label}: ${wert}` : wert;
+      })
+      .filter(Boolean);
+    if (zellen.length > 0) zeilenTexte.push(zellen.join(' · '));
+  }
+  return zeilenTexte.join(' — ');
+}
+
 /** Wandelt ein Artikel-Segment (Kopf + folgende paragraph/enumeration-Geschwister)
- *  in die Absatz-Blöcke um. Zwei reale Aufzählungs-Formen (Spike 16.6.2026):
+ *  in die Absatz-Blöcke um. Reale Aufzählungs-/Tabellen-Formen (Spike 16.6.2026):
  *   (1) enumeration_item-Tabelle  → je Tabelle ein item, an den vorigen Absatz.
  *   (2) INLINE im Absatz (BS §11) → ein paragraph mit vielen text_content-Spans,
- *       deren Marken «N.»/«a)» die items abgrenzen. */
+ *       deren Marken «N.»/«a)» die items abgrenzen.
+ *   (3) enumeration_tabular (ZG §11) → Gebühren-/Staffeltabelle; ihre Zeilen
+ *       werden als lesbarer Text an den vorangehenden Einleitungs-Absatz gehängt. */
 function parseSegment(segment: string): LexArtikel {
   const bloecke: LexArtikel['bloecke'] = [];
 
   // paragraph-Blöcke (bis zum schliessenden </p></div>, das den GANZEN Absatz
-  // inkl. mehrerer <p> umschliesst) und enumeration_item-Tabellen in
-  // Dokumentreihenfolge — beides sind Geschwister.
+  // inkl. mehrerer <p> umschliesst), enumeration_item-Tabellen und
+  // enumeration_tabular-Gebührentabellen in Dokumentreihenfolge — alles Geschwister.
   for (const m of segment.matchAll(
-    /<div\s+class='paragraph'>([\s\S]*?)<\/p>\s*<\/div>|<table\s+class='enumeration_item'>([\s\S]*?)<\/table>/gi,
+    /<div\s+class='paragraph'>([\s\S]*?)<\/p>\s*<\/div>|<table\s+class='enumeration_item'>([\s\S]*?)<\/table>|<table\s+class='enumeration_tabular'>([\s\S]*?)<\/table>/gi,
   )) {
     if (m[1] !== undefined) {
       // paragraph: Nummer aus erstem .number-Span; ALLE text_content-Spans lesen
@@ -197,6 +253,20 @@ function parseSegment(segment: string): LexArtikel {
           bloecke.push({ absatz: null, text: '', items: [item] });
         }
       }
+    } else if (m[3] !== undefined) {
+      // enumeration_tabular: Gebühren-/Staffeltabelle. Ihre Zeilen werden als
+      // lesbarer Text an den vorangehenden Einleitungs-Absatz («… beträgt die
+      // Entscheidgebühr:») gehängt, damit die Bestimmung nicht unvollständig wirkt.
+      const tabelleText = tabelleZuText(m[3]);
+      if (tabelleText) {
+        if (bloecke.length > 0) {
+          const last = bloecke[bloecke.length - 1];
+          last.text = last.text ? `${last.text} ${tabelleText}` : tabelleText;
+        } else {
+          // Tabelle ohne vorangehenden Absatz (selten) → eigener Block.
+          bloecke.push({ absatz: null, text: tabelleText });
+        }
+      }
     }
   }
 
@@ -223,9 +293,12 @@ export function inKraftSeit(
   enactment: string | undefined,
 ): string {
   if (versionDatesStr) {
-    // Suche explizit nach «in Kraft seit:» gefolgt von DD.MM.YYYY
+    // Suche explizit nach «in Kraft seit» gefolgt von DD.MM.YYYY. Der Doppelpunkt
+    // ist OPTIONAL: zweisprachige/FR-Erlasse (FR 130.11) liefern «… in Kraft seit
+    // 01.12.2025 …» OHNE «:», deutschsprachige meist «in Kraft seit: 01.01.2026».
+    // Ohne diese Toleranz fiele der Stand fälschlich auf enactment (2011) zurück.
     const m = versionDatesStr.match(
-      /[Ii]n\s+[Kk]raft\s+seit\s*:\s*(\d{2})\.(\d{2})\.(\d{4})/,
+      /[Ii]n\s+[Kk]raft\s+seit\s*:?\s*(\d{2})\.(\d{2})\.(\d{4})/,
     );
     if (m) {
       return `${m[3]}-${m[2]}-${m[1]}`;

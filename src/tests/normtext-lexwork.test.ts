@@ -7,6 +7,11 @@ import {
 } from '../../scripts/normtext/adapter-lexwork';
 import { LEXWORK_XHTML_BEISPIEL } from './fixtures/lexwork-beispiel';
 import { LEXWORK_BS_292400_XHTML } from './fixtures/lexwork-bs292400';
+import {
+  LEXWORK_ZG1617_TABELLE_XHTML,
+  LEXWORK_GL_FUSSNOTE_XHTML,
+  LEXWORK_BE_ART1A_XHTML,
+} from './fixtures/lexwork-zg1617-tabelle';
 
 describe('inKraftSeit — reines Parsing ohne Netz', () => {
   it('extrahiert «in Kraft seit: DD.MM.YYYY» aus echtem LexWork-String und liefert ISO', () => {
@@ -42,6 +47,17 @@ describe('inKraftSeit — reines Parsing ohne Netz', () => {
 
   it('liefert leeren String wenn versionDatesStr fehlt und enactment kein ISO-Format hat', () => {
     expect(inKraftSeit(undefined, 'falsch')).toBe('');
+  });
+
+  // BUG A4: FR/zweisprachige Erlasse liefern «in Kraft seit 01.12.2025» OHNE
+  // Doppelpunkt → früher fiel inKraftSeit auf enactment (2011) zurück.
+  it('verarbeitet «in Kraft seit DD.MM.YYYY» OHNE Doppelpunkt (FR 130.11)', () => {
+    expect(
+      inKraftSeit(
+        'Aktuelle Version in Kraft seit 01.12.2025 (Beschluss: 10.11.2025)',
+        '2011-01-01',
+      ),
+    ).toBe('2025-12-01');
   });
 });
 
@@ -144,6 +160,49 @@ describe('extrahiereLexWorkArtikel — INLINE-Aufzählung (BS 292.400 §11, kein
     const marken = a!.bloecke[0].items!.map((i) => i.marke);
     expect(marken).toContain('a');
     expect(marken).toContain('b');
+  });
+});
+
+describe('BUG A1 — Fussnoten-Anker werden inkl. Inhalt entfernt (§7 Treue)', () => {
+  it('lässt keinen «[8]»/«8»-Rest aus <a class="footnote"> im Normtext', () => {
+    const a = extrahiereLexWorkArtikel(LEXWORK_GL_FUSSNOTE_XHTML, '5');
+    expect(a).not.toBeNull();
+    const text = a!.bloecke[0].text;
+    expect(text).toBe('Vermögensübertragung nach Fusionsgesetz:');
+    expect(text).not.toContain('[8]');
+    expect(text).not.toMatch(/Fusionsgesetz\s*8/);
+  });
+});
+
+describe('BUG A2 — Token «1_a» findet Artikelnummer «1a»', () => {
+  it('normalisiert Unterstriche beim Matching und findet den Artikel', () => {
+    const a = extrahiereLexWorkArtikel(LEXWORK_BE_ART1A_XHTML, '1_a');
+    expect(a).not.toBeNull();
+    expect(a!.bloecke[0].text).toContain('Schlichtungsverfahren');
+  });
+
+  it('matcht weiterhin schlichte Token ohne Unterstrich', () => {
+    expect(extrahiereLexWorkArtikel(LEXWORK_XHTML_BEISPIEL, '1')).not.toBeNull();
+  });
+});
+
+describe('TABELLEN — enumeration_tabular wird als lesbarer Text erfasst', () => {
+  it('hängt die Staffel-Zeilen mit getrennten Zellen an den Einleitungs-Absatz', () => {
+    const a = extrahiereLexWorkArtikel(LEXWORK_ZG1617_TABELLE_XHTML, '11');
+    expect(a).not.toBeNull();
+    expect(a!.bloecke).toHaveLength(1);
+    const text = a!.bloecke[0].text;
+    // Einleitungssatz bleibt erhalten.
+    expect(text).toContain('beträgt die Entscheidgebühr:');
+    // Staffel-Zeilen mit Spaltenbeschriftung, Zellen sauber getrennt.
+    expect(text).toContain('Streitwert in Franken: bis 1000');
+    expect(text).toContain('Gebühr in Franken: von 100 bis 200');
+    expect(text).toContain('über 1000 bis 3000');
+    expect(text).toContain('von 220 bis 540');
+    expect(text).toContain('jedoch höchstens % des Streitwerts: 22');
+    // Kein zusammengeklebter Text (Zellen nicht direkt aneinander).
+    expect(text).not.toContain('bis 1000von');
+    expect(text).not.toContain('200über');
   });
 });
 

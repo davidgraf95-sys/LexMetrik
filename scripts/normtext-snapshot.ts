@@ -228,6 +228,19 @@ async function erzeugeKantonsSnapshots(
       goldenIndex[id] = snapshot.sha;
     }
 
+    // Gruppe ohne einen einzigen extrahierten Artikel (alle Tokens nicht im
+    // LexWork-Erlass gefunden) → KEINE Datei schreiben. Sonst entstünde eine
+    // leere Snapshot-Datei ohne quelleUrl, die nicht ins Manifest aufgenommen
+    // wird (baueManifest überspringt eintragslose Dateien) → Manifest-
+    // Inkonsistenz. Der token-nicht-gefunden-Fall ist bereits über cov.tokenFehlt
+    // (und die BEKANNTE_LUECKEN-Liste) sichtbar gemacht (§8).
+    if (snapshotListe.length === 0) {
+      cov.reportZeilen.push(
+        `  ${g.kanton}-${schluessel.padEnd(14)} 0 Snapshots → keine Datei (alle Tokens nicht im Erlass)`,
+      );
+      continue;
+    }
+
     const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
     const ausgabePfad = `${ausgangsDir}/${g.kanton}-${schluessel}.json`;
     writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
