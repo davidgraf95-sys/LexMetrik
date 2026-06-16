@@ -136,11 +136,12 @@ export function sammleKantonInventar(): KantonInventarGruppe[] {
   for (const e of eintraege) {
     const m = e.quelleUrl.match(LEXWORK);
     if (!m) continue; // Nicht-LexWork → Fallback (separat)
-    // Führendes 'www.' strippen: die LexWork-API wird unter dem nackten Host
-    // ausgeliefert (Spike-Vertrag), während die Seiten-URL teils mit 'www.'
-    // verlinkt. Der Host steuert nur die API-Abfrage; die Live-quelleUrl bleibt
-    // im Orchestrator die originale /app/-URL (unverändert).
-    const host = m[1].replace(/^www\./, '');
+    // §7 «Realität gewinnt»: der Host wird UNVERÄNDERT übernommen (inkl. evtl.
+    // führendem 'www.'). Empirisch (16.6.2026) liefern mehrere LexWork-Hosts
+    // — belex.sites.be.ch, gesetzessammlung.sg.ch, rechtsbuch.tg.ch — die API
+    // NUR unter der www-Variante (nackter Host → fetch failed). Die Seiten-URL
+    // in den Tarif-Daten trägt das www. korrekt; daran halten wir uns.
+    const host = m[1];
     const lang = m[2] as 'de' | 'fr';
     const lawId = m[3];
 

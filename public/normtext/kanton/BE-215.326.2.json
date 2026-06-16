@@ -1,0 +1,32 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/BE/215.326.2/art_11",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "HStG (BSG 215.326.2)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11 Abs. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Handänderungssteuer beträgt 1,8 Prozent."
+        },
+        {
+          "absatz": "2",
+          "text": "&hellip;"
+        },
+        {
+          "absatz": "3",
+          "text": "Steuern unter 100 Franken werden nicht erhoben."
+        }
+      ],
+      "stand": "1992-10-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/215.326.2",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "719c0064432739eecc3943438e5ca40b",
+      "sha": "b5ff06349ed1738b2983146c331be3dd0ef058e5cdc0e2a77a29027af168d6e9"
+    }
+  ]
+}

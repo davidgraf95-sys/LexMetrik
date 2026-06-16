@@ -1,0 +1,28 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/AR/621.11/art_238",
+      "ebene": "kanton",
+      "quelle": "AR",
+      "erlass": "Steuergesetz (bGS 621.11)",
+      "artikel": "238",
+      "artikelLabel": "Art. 238",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Steuersatz beträgt 2 Prozent. Die Gemeinden können einen tieferen Steuersatz festlegen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Steuersatz beträgt die Hälfte bei Handänderungen von Eltern zu Nachkommen, einschliesslich Stief- und Pflegekinder."
+        }
+      ],
+      "stand": "2001-01-01",
+      "quelleUrl": "https://ar.clex.ch/app/de/texts_of_law/621.11",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "0b8a1fe74097552c4bb6bbfa311a2d87",
+      "sha": "b7dbb81ac1d24db8a645cf80140c51d8d5a247145375cc695307faa67dfd7813"
+    }
+  ]
+}

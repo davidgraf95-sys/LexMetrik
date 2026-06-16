@@ -1,0 +1,59 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/GL/III-A.5/art_3",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Gerichtsverfahren beträgt die Pauschalgebühr vor jeder Instanz: a. Streitwert bis 30'000 Franken 200 bis 5000 Franken; b. Streitwert bis 100'000 Franken 500 bis 10'000 Franken; c. Streitwert bis 500'000 Franken 1000 bis 25'000 Franken; d. Streitwert bis 1'000'000 Franken 2000 bis 40'000 Franken; e. Streitwert über 1'000'000 Franken 4000 bis 4% des Streitwertes."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei nicht vermögensrechtlichen Streitigkeiten beträgt die Gebühr höchstens 20'000 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Im summarischen Verfahren beträgt die Gebühr höchstens die Hälfte des Betrages, der sich in Anwendung von Absatz 1 ergibt."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird das Verfahren ohne Anspruchsprüfung erledigt und ist dem Gericht bis dahin noch kein wesentlicher Aufwand erwachsen, kann die Pauschalgebühr unter den jeweiligen Mindestbetrag herabgesetzt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Wird der Entscheid ohne schriftliche Begründung eröffnet und ist diese in der Folge nicht nachzuliefern, ist die Gebühr angemessen zu ermässigen. Die gleichzeitig festzusetzende volle Gebühr darf höchstens das Doppelte der einfachen Gebühr betragen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "9b9ea018e7e3f778ad2031f392ad7a0277930d30e7b02108d66558b929fa9e58"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_2",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Schlichtungsverfahren beträgt die Pauschalgebühr 100 bis 800 Franken."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "6e262bc7f1322a959a2c4690fcff942b91b89eb9c9fef770808262ca1aadee24"
+    }
+  ]
+}

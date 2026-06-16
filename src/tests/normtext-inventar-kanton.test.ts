@@ -35,7 +35,9 @@ describe('sammleKantonInventar', () => {
       (g) => g.kanton === 'BE' && g.lawId === '161.12',
     );
     expect(be).toBeDefined();
-    expect(be!.host).toBe('belex.sites.be.ch');
+    // §7 «Realität gewinnt»: der LexWork-Host wird unverändert übernommen; BE
+    // liefert die API empirisch NUR unter der www-Variante (siehe Adapter-Run).
+    expect(be!.host).toContain('belex.sites.be.ch');
     expect(be!.lang).toBe('de');
     expect(be!.artikel.map((a) => a.token)).toContain('36');
   });

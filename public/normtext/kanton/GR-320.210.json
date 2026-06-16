@@ -1,0 +1,55 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/GR/320.210/art_3",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Angelegenheiten, welche im ordentlichen Verfahren beurteilt werden, erhebt das Gericht eine Entscheidgebühr von 3000 bis 30 000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In besonders aufwendigen Verfahren kann eine Entscheidgebühr bis 100 000 Franken erhoben werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "ba2d847d2a03f07936662c51ea8ccf7107a9aed23195a686946c555eeb57361b"
+    },
+    {
+      "id": "kanton/GR/320.210/art_2",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Schlichtungsverfahren beträgt die Gebühr 100 bis 500 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Fällt die Schlichtungsbehörde einen Entscheid gemäss Artikel 212 der Zivilprozessordnung[5] oder unterbreitet sie in vermögensrechtlichen Streitigkeiten gemäss Artikel 210 Absatz 1 Litera c der Zivilprozessordnung einen Vorschlag, beträgt die Gebühr 300 bis 3000 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "In besonders aufwendigen Verfahren kann die Gebühr bis zum Zweifachen der Höchstgebühr erhöht werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "c45b4f0490e191a0f77dc76bf025ae3999897ef37c1fe05a130a1f4b3a794df1"
+    }
+  ]
+}

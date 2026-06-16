@@ -13,6 +13,11 @@ import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { parseFedlexCacheEintraege } from './normtext/inventar-bund.ts';
 import { extrahiereArtikel } from './normtext/extrahiere-fedlex.ts';
+import {
+  sammleKantonInventar,
+  sammleFallback,
+} from './normtext/inventar-kanton.ts';
+import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
 
 // ── Argument --datum= auslesen ────────────────────────────────────────────────
@@ -96,8 +101,113 @@ function sicherstelleCaches(eintraege: Array<{ name: string }>): void {
   }
 }
 
+// ── lawId → dateisicher ('III B/7/1' → 'III B_7_1') ──────────────────────────
+function lawIdSafe(lawId: string): string {
+  return lawId.replace(/\//g, '_');
+}
+
+// ── Erlass-Bezeichnung lesbar: 'GebV OG (LS 211.11)' ─────────────────────────
+function erlassBezeichnung(abkuerzung: string, erlassName: string, erlassNr: string): string {
+  const basis = abkuerzung.trim() || erlassName.trim();
+  return erlassNr.trim() ? `${basis} (${erlassNr.trim()})` : basis;
+}
+
+// ── Coverage-Befunde der Kantons-Phase ───────────────────────────────────────
+interface KantonCoverage {
+  totalSnapshots: number;
+  reportZeilen: string[];
+  nurPdf: Array<{ kanton: string; erlass: string; lawId: string }>;
+  tokenFehlt: Array<{ kanton: string; lawId: string; token: string; label: string }>;
+  fetchFehler: Array<{ kanton: string; lawId: string; fehler: string }>;
+}
+
+// ── Kantons-Snapshots (LexWork) erzeugen ─────────────────────────────────────
+async function erzeugeKantonsSnapshots(
+  abgerufen: string,
+  goldenIndex: Record<string, string>,
+): Promise<KantonCoverage> {
+  const inventar = sammleKantonInventar();
+  const ausgangsDir = 'public/normtext/kanton';
+  mkdirSync(ausgangsDir, { recursive: true });
+
+  const cov: KantonCoverage = {
+    totalSnapshots: 0,
+    reportZeilen: [],
+    nurPdf: [],
+    tokenFehlt: [],
+    fetchFehler: [],
+  };
+
+  for (const g of inventar) {
+    const tokens = g.artikel.map((a) => a.token);
+    let ergebnis;
+    try {
+      ergebnis = await holeLexWork(g.host, g.lang, g.lawId, tokens);
+    } catch (e) {
+      // §8: Netzfehler pro Gruppe abfangen, nicht crashen, weiter zur nächsten.
+      const fehler = e instanceof Error ? e.message : String(e);
+      cov.fetchFehler.push({ kanton: g.kanton, lawId: g.lawId, fehler });
+      continue;
+    }
+
+    if (ergebnis.meta.nurPdf) {
+      cov.nurPdf.push({
+        kanton: g.kanton,
+        erlass: erlassBezeichnung(ergebnis.meta.abkuerzung, g.erlassName, g.erlassNr),
+        lawId: g.lawId,
+      });
+      continue;
+    }
+
+    const erlass = erlassBezeichnung(ergebnis.meta.abkuerzung, g.erlassName, g.erlassNr);
+    const snapshotListe: NormSnapshot[] = [];
+
+    for (const art of g.artikel) {
+      const treffer = ergebnis.artikel[art.token];
+      if (!treffer || treffer.bloecke.length === 0) {
+        cov.tokenFehlt.push({
+          kanton: g.kanton,
+          lawId: g.lawId,
+          token: art.token,
+          label: art.label,
+        });
+        continue;
+      }
+      const id = `kanton/${g.kanton}/${g.lawId}/art_${art.token}`;
+      const snapshot: NormSnapshot = {
+        id,
+        ebene: 'kanton',
+        quelle: g.kanton,
+        erlass,
+        artikel: art.token,
+        artikelLabel: art.label,
+        bloecke: treffer.bloecke,
+        stand: ergebnis.meta.stand,
+        // LexWork hat keinen Artikel-Anker → Gesetzes-Seite (originale /app/-URL).
+        quelleUrl: g.quelleUrl,
+        abgerufen,
+        fassungsToken: ergebnis.meta.versionUid,
+        sha: sha256Bloecke(treffer.bloecke),
+      };
+      snapshotListe.push(snapshot);
+      goldenIndex[id] = snapshot.sha;
+    }
+
+    const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
+    const ausgabePfad = `${ausgangsDir}/${g.kanton}-${lawIdSafe(g.lawId)}.json`;
+    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+
+    cov.totalSnapshots += snapshotListe.length;
+    cov.reportZeilen.push(
+      `  ${g.kanton}-${lawIdSafe(g.lawId).padEnd(14)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`,
+    );
+  }
+
+  return cov;
+}
+
 // ── Hauptprogramm ─────────────────────────────────────────────────────────────
-function main(): void {
+async function main(): Promise<void> {
   const abgerufen = leseDatum();
   const shellQuelle = readFileSync('scripts/fedlex-cache.sh', 'utf8');
   const eintraege = parseFedlexCacheEintraege(shellQuelle);
@@ -201,6 +311,26 @@ function main(): void {
     console.log('\nKeine Anker übersprungen.');
   }
 
+  // ── Kantons-Phase (LexWork) ────────────────────────────────────────────────
+  console.log('\n[Normtext-Snapshot] Kantons-Phase (LexWork) …');
+  const cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex);
+  const fallback = sammleFallback();
+  const fallbackKantone = [...new Set(fallback.map((f) => f.kanton))].sort();
+
+  console.log('\n── Kantons-Snapshots ─────────────────────────────────────────');
+  for (const z of cov.reportZeilen) console.log(z);
+  console.log(`\nGesamt Kantone: ${cov.totalSnapshots} Snapshots in ${cov.reportZeilen.length} Datei(en)`);
+
+  console.log('\n── Coverage-Report (Kantone) ─────────────────────────────────');
+  console.log(`nurPdf (kein Snapshot): ${cov.nurPdf.length}`);
+  for (const p of cov.nurPdf) console.log(`  ${p.kanton} ${p.erlass} [${p.lawId}]`);
+  console.log(`Token nicht gefunden: ${cov.tokenFehlt.length}`);
+  for (const t of cov.tokenFehlt) console.log(`  ${t.kanton} ${t.lawId} art_${t.token} (${t.label})`);
+  console.log(`fetch-Fehler: ${cov.fetchFehler.length}`);
+  for (const f of cov.fetchFehler) console.log(`  ${f.kanton} ${f.lawId}: ${f.fehler}`);
+  console.log(`Fallback-Quellen (Nicht-LexWork, kein Snapshot): ${fallback.length} in ${fallbackKantone.length} Kantonen`);
+  console.log(`  Kantone: ${fallbackKantone.join(', ')}`);
+
   // Golden-Index schreiben (sortiert)
   const goldenSortiert: Record<string, string> = {};
   for (const k of Object.keys(goldenIndex).sort()) {
@@ -211,4 +341,7 @@ function main(): void {
   console.log(`\nGolden-Index: golden/normtext-snapshot.json (${Object.keys(goldenSortiert).length} Einträge)`);
 }
 
-main();
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

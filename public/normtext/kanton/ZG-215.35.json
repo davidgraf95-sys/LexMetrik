@@ -1,0 +1,67 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/ZG/215.35/art_13",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "Grundbuchgebührentarif (BGS 215.35)",
+      "artikel": "13",
+      "artikelLabel": "§ 13 / § 14 Abs. 1 Bst. a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren bemessen sich nach dem Zeitaufwand für die Beratung, die Kontrolle und den grundbuchlichen Vollzug des Geschäfts."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Stundenansatz beträgt Fr. 180.–. Die Gebühr ist für jede angebrochene Viertel Stunde geschuldet."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat kann die Gebühren und den Stundenansatz der Teuerung anpassen."
+        }
+      ],
+      "stand": "2007-12-22",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/215.35",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "92e7cc11396ba0c33528a88118ae7d50",
+      "sha": "022d80e625b2874cb3eaf52626da2628dcb775e9f7bcfab6bd7c76c37ae2d2ef"
+    },
+    {
+      "id": "kanton/ZG/215.35/art_14",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "Grundbuchgebührentarif (BGS 215.35)",
+      "artikel": "14",
+      "artikelLabel": "Ziff. 89bis / § 14 Abs. 1 Bst. e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bedeutung des Geschäfts wird durch Multiplikation der Gebühr gemäss § 13 mit folgenden Faktoren Rechnung getragen: a) mit Faktor 4 bei Eigentumsübergängen an Grundstücken bis zu einer Grenze von Fr. 6000.–; b) mit Faktor 4 bei Grundstücksteilungen und -vereinigungen bis zu einer Grenze von Fr. 17 000.–; c) mit Faktor 4 bei Stockwerkeigentumsbegründungen bis zu einer Grenze von Fr. 13 500.–; d) mit Faktor 4 bei Begründung selbständiger und dauernder Baurechte bis zu einer Grenze von Fr. 7200.–; e) mit Faktor 3 bei Pfanderrichtungen und Pfanderhöhungen bis zu einer Grenze von Fr. 4500.–; f) mit Faktor 3 bei Vormerkung eines Kaufs-, Vorkaufs- oder Rückkaufsrechts bis zu einer Grenze von Fr. 2700.–; g) mit Faktor 2 bei Begründung einer Dienstbarkeit oder Grundlast bis zu einer Grenze von Fr. 3000.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Umfasst ein Geschäft mehrere grundbuchliche Tätigkeiten gemäss Abs. 1, wird die Gebühr gemäss § 13 mit dem höchsten Faktor multipliziert."
+        },
+        {
+          "absatz": "3",
+          "text": "Übersteigt die Gebühr die jeweilige Grenze von Abs. 1, entfällt die Faktorgewichtung für den die Grenze übersteigenden Betrag."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei allen übrigen Geschäften und bei gemeinnützigen Institutionen, die nach kantonalem Recht steuerbefreit sind, sowie bei Umstrukturierungen nach dem Bundesgesetz über Fusion, Spaltung, Umwandlung und Vermögensübertragung vom 3. Oktober 2003 (SR 212.301) berechnet sich die Gebühr nach § 13."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Regierungsrat kann die in Abs. 1 festgelegten Grenzwerte der Teuerung anpassen."
+        }
+      ],
+      "stand": "2007-12-22",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/215.35",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "92e7cc11396ba0c33528a88118ae7d50",
+      "sha": "0b26ac9b6f1436ca3d598f1d65d43d115c837d88a42f121e40d44d9773706e3c"
+    }
+  ]
+}

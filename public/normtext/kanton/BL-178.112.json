@@ -1,0 +1,55 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/BL/178.112/art_7",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Tarifordnung für die Anwältinnen und Anwälte (SGS 178.112)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Grundhonorar berechnet sich für das Verfahren vor 1. Instanz nach folgenden Ansätzen, in welchen eine Hauptverhandlung und zusätzlich entweder im mündlichen Verfahren eine Einleitungsverhandlung oder im schriftlichen Verfahren eine Rechtsschrift inbegriffen sind: a. Streitwert bis CHF 2'000.–: min. CHF 350.–, max. CHF 750.–; b. Streitwert CHF 2'000–5'000.–: min. CHF 675.–, max. CHF 1'500.–; c. Streitwert CHF 5'000–10'000.–: min. CHF 1'500.–, max. CHF 2'400.–; d. Streitwert CHF 10'000–20'000: min. CHF 2'250.–, max. CHF 3'600.–; e. Streitwert CHF 20'000–50'000.–: min. CHF 3'300.–, max. CHF 6'450.–; f. Streitwert CHF 50'000–100'000.–: min. CHF 6'000.–, max. CHF 10'500.–; g. Streitwert CHF 100'000–200'000.–: min. CHF 9'750.–, max. CHF 17'250.–; h. Streitwert CHF 200'000–500'000.–: min. CHF 16'500.–, max. CHF 34'500.–; i. Streitwert CHF 500'000–1'000'000.–: min. CHF 33'000.–, max. CHF 55'500.–; j. Streitwert CHF 1'000'000–2'000'000.–: min. CHF 52'500.–, max. CHF 82'500.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Widerklagen wird das Grundhonorar von der Summe der beidseitigen Streitwerte berechnet."
+        }
+      ],
+      "stand": "2004-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/178.112",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "3e4216315c1c9c09714af97fa7f77fa9",
+      "sha": "e9816f6ed0a5d63ed1b3c29759e6a7d69fe3ed7388fbc82d2929992bad5a295b"
+    },
+    {
+      "id": "kanton/BL/178.112/art_2",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Tarifordnung für die Anwältinnen und Anwälte (SGS 178.112)",
+      "artikel": "2",
+      "artikelLabel": "§ 2/§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Prozessen mit unbestimmtem Streitwert, in familienrechtlichen Streitigkeiten, in Sozialversicherungs- und Enteignungsprozessen, in Strafsachen auch betreffend Zivilansprüche, in Beschwerde- und Rekurssachen, in Verfahren betreffend Anordnung einer vorsorglichen Expertise, vorsorglichen Verfügungen oder provisorischen Handwerkerpfandrechten und bei Festsetzung des Honorars für unentgeltliche Verbeiständung ist die Berechnung nach dem Zeitaufwand anwendbar (§ 3 ff.)."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei den übrigen Prozessen mit bestimmtem Streitwert erfolgt die Berechnung des Honorars nach dem Streitwert (§ 6 ff.)."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden in Verfahren mit bestimmtem Streitwert zugleich Ansprüche von unbestimmtem Streitwert beurteilt, so berechnet sich das Honorar nach dem Streitwert, sofern nicht die Berechnung nach den Zeitaufwand ein höheres Honorar ergibt."
+        }
+      ],
+      "stand": "2004-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/178.112",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "3e4216315c1c9c09714af97fa7f77fa9",
+      "sha": "a4553c84e2cc5532184a3e3d7965c2f4a9a94db8270cbf5bd3479441fe200d8b"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/GR/720.200/art_12",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12 Abs. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde legt den Steuersatz in einem formellen Gesetz fest. Dieser beträgt maximal zwei Prozent."
+        },
+        {
+          "absatz": "2",
+          "text": "Bemessungsgrundlage ist der Verkehrswert des übertragenen Grundstücks."
+        },
+        {
+          "absatz": "3",
+          "text": "Beim Kauf gilt als Verkehrswert der Kaufpreis mit allen weiteren Leistungen des Erwerbers. Ist kein Kaufpreis vereinbart oder liegt dieser offensichtlich unter dem Verkehrswert, wird die Handänderungssteuer auf dem Verkehrswert erhoben."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird ein Baurecht übertragen, sind die vom Erwerber zu übernehmenden wiederkehrenden Baurechtszinsen vom Verkehrswert in Abzug zu bringen."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei Tauschgrundstücken ist die halbe Steuer vom Verkehrswert aller Tauschgrundstücke plus die halbe Steuer auf einem allfälligen Aufgeld zu erheben."
+        }
+      ],
+      "stand": "2007-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "9a661087f4f81ef2d71abf6ec8f567821d3bed90fd2c27b0487905fb061c0305"
+    }
+  ]
+}

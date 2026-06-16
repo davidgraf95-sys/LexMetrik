@@ -1,0 +1,28 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/AI/640.000/art_119",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "StG (GS 640.000)",
+      "artikel": "119",
+      "artikelLabel": "Art. 119 Abs. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Steuersatz beträgt ein Prozent."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Steuerertrag fällt 70 Prozent der Staatskasse und je zehn Prozent den Bezirken, Kirch- und Schulgemeinden zu, in denen die Grundstücke liegen."
+        }
+      ],
+      "stand": "2001-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/640.000",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "78bdf1539d7a5fcf71311361754628c5",
+      "sha": "21574b9ebcef33323c16dc3cfe8668ac523778db17b2dc906e688e8475520d9b"
+    }
+  ]
+}

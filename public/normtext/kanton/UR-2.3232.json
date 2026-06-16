@@ -1,0 +1,101 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/UR/2.3232/art_5",
+      "ebene": "kanton",
+      "quelle": "UR",
+      "erlass": "Gerichtsgebührenreglement, GGebR (RB 2.3232)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5/6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In nicht vermögensrechtlichen Streitigkeiten beträgt die Gerichtsgebühr 200 Franken bis 10'000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In vermögensrechtlichen Streitigkeiten beträgt die Gebühr bei einem Streitwert von: a) über 30'000 Franken bis 100'000 Franken: 2'000 Franken bis 12'000 Franken b) über 100'000 Franken bis 500'000 Franken: 4'000 Franken bis 30'000 Franken c) über 500'000 Franken bis 1'000'000 Franken: 10'000 Franken bis 40'000 Franken d) über 1'000'000 Franken: 1 bis 4% des Streitwerts, mindestens 20'000 Franken"
+        }
+      ],
+      "stand": "2022-10-01",
+      "quelleUrl": "https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "3232bc1659e5cd8a07d06bc5e3d0a554",
+      "sha": "d070b6cf5c96f38bd8e2278a2de260e2690438973865c225d3ae3b91897f79bc"
+    },
+    {
+      "id": "kanton/UR/2.3232/art_4",
+      "ebene": "kanton",
+      "quelle": "UR",
+      "erlass": "Gerichtsgebührenreglement, GGebR (RB 2.3232)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In kostenpflichtigen Verfahren vor der Schlichtungsbehörde beträgt die Gebühr 200 Franken bis 2'000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Für einen Entscheid nach Artikel 212 Zivilprozessordnung (SR 272) oder einen Urteilsvorschlag nach Artikel 210 f. Zivilprozessordnung kann die Gebühr gemäss Absatz 1 angemessen erhöht werden."
+        }
+      ],
+      "stand": "2022-10-01",
+      "quelleUrl": "https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "3232bc1659e5cd8a07d06bc5e3d0a554",
+      "sha": "3d1ef9e04d745213a9e45d50eca6e31e0aca80e401ee5bdb9144f4ad5e828ac6"
+    },
+    {
+      "id": "kanton/UR/2.3232/art_30",
+      "ebene": "kanton",
+      "quelle": "UR",
+      "erlass": "Gerichtsgebührenreglement, GGebR (RB 2.3232)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30 (i.V.m. Art. 31 ff.)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Strafverfahren beträgt die Anwaltsentschädigung: a) vor der Staatsanwaltschaft und der Jugendanwaltschaft: 500 Franken bis 20'000 Franken b) vor dem Landgerichtspräsidium und dem Jugendgericht: 500 Franken bis 20'000 Franken c) vor dem Landgericht: 1'000 Franken bis 50'000 Franken"
+        }
+      ],
+      "stand": "2022-10-01",
+      "quelleUrl": "https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "3232bc1659e5cd8a07d06bc5e3d0a554",
+      "sha": "9f6a6a72513db5f322901684e138641ebac2850068d5afde11b2a00965f3a464"
+    },
+    {
+      "id": "kanton/UR/2.3232/art_28",
+      "ebene": "kanton",
+      "quelle": "UR",
+      "erlass": "Gerichtsgebührenreglement, GGebR (RB 2.3232)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Zivilverfahren vor erster oder einziger Instanz beträgt die Anwaltsentschädigung bei bestimmbarem Streitwert: a) bis 5'000 Franken: 500 Franken bis 2'500 Franken b) über 5'000 Franken bis 20'000 Franken: 1'000 Franken bis 6'000 Franken c) über 20'000 Franken bis 50'000 Franken: 3'000 Franken bis 10'000 Franken d) über 50'000 Franken bis 100'000 Franken: 3'500 Franken bis 15'000 Franken e) über 100'000 Franken bis 500'000 Franken: 5'000 Franken bis 30'000 Franken f) über 500'000 Franken: 1.5 bis zu 4% des Streitwerts"
+        },
+        {
+          "absatz": "2",
+          "text": "In Angelegenheiten ohne bestimmbaren Streitwert beträgt die Anwaltsentschädigung 500 Franken bis 15'000 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "In familienrechtlichen Verfahren, einschliesslich familienrechtlichen Summarverfahren, beträgt die Anwaltsentschädigung 1'000 Franken bis 10'000 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "In den übrigen summarischen Verfahren beträgt die Anwaltsentschädigung maximal 50 Prozent des Maximalansatzes gemäss den Absätzen 1 und 2."
+        }
+      ],
+      "stand": "2022-10-01",
+      "quelleUrl": "https://rechtsbuch.ur.ch/app/de/texts_of_law/2.3232",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "3232bc1659e5cd8a07d06bc5e3d0a554",
+      "sha": "0a4af342290ae3d8d4e1b8a93ef06edf679863a0db1c1656ece82979605f69d6"
+    }
+  ]
+}

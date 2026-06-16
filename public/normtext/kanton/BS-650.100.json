@@ -1,0 +1,36 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "kanton/BS/650.100/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Handänderungssteuergesetz (SG 650.100)",
+      "artikel": "1",
+      "artikelLabel": "§ 1 Abs. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Handänderungssteuer unterliegen die zivilrechtlichen und die in diesem Gesetz aufgeführten wirtschaftlichen Handänderungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Steuersatz beträgt 3 Prozent."
+        },
+        {
+          "absatz": "3",
+          "text": "Steuerpflichtig ist, soweit dieses Gesetz nichts anderes vorsieht, der Erwerber oder die Erwerberin."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Steuer wird nach der vereinbarten Gegenleistung berechnet, mindestens aber vom Steuerwert des Grundstücks."
+        }
+      ],
+      "stand": "1996-08-11",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/650.100",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "658233882e2194f118433ddb02415b5e",
+      "sha": "c80b681ebb990a306ee1dd28e71dcc07c7707c7e6bfa94f7d3896e775730f195"
+    }
+  ]
+}
