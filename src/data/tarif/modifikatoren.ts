@@ -25,11 +25,11 @@
 //  · KORRIGIERT (gegenbestätigt durch AI/SG, gleiche Ostschweizer Tarif-Familie):
 //    AR summarisch-pe 0.1–0.5 (HonO bGS 145.53 Art.10) und Rechtsmittel-pe 0.2–0.75
 //    (Art.20) — war fälschlich 1/1 (überzeichnete die Parteientschädigung).
-//  · UNBESTÄTIGT am Wortlaut (Reconciliation David): BE Rechtsmittel-gk-Zuschlag
-//    bis 1.5 und TG Rechtsmittel-gk 1.1–1.5 — beide Erlasse (VKD BSG 161.12;
-//    VGG RB 638.1) bemessen Rechtsmittelgebühren über eigene absolute Rahmen, kein
-//    1.x-Multiplikator. Werte hier bewusst UNVERÄNDERT gelassen (kein einseitiger
-//    Tarif-Eingriff, §1/§7) — bis David entscheidet.
+//  · KORRIGIERT (am Wortlaut bestimmt): BE/TG Rechtsmittel-gk auf 1.0 neutralisiert
+//    — VKD (BSG 161.12, Berufung Art.44/Beschwerde Art.46) und VGG (RB 638.1)
+//    bemessen die Rechtsmittel-Gerichtsgebühr über EIGENE absolute Rahmen, NICHT als
+//    1.x-Multiplikator der erstinstanzlichen Gebühr; der frühere Zuschlag bis 1.5
+//    war im Wortlaut unbelegt. PE-Faktoren unverändert (wörtlich belegt).
 //  · Bestätigt: GL/SH summ-gk «höchstens ½» (0–0.5); LU pe 75–150% (§31 Abs.1) und
 //    Rechtsmittel-pe 0.5–1.2 (§31 Abs.2); GR pe «alle 1.0» (rein aufwandbasierte HV
 //    BR 310.250, keine Multiplikatoren); SO/AR keine gk-Faktoren. Detail-Provenance:
@@ -51,7 +51,7 @@ const EINS = f(1, 1, 1, 1);
 
 export const MODIFIKATOREN: Record<KantonCode, KantonModifikatoren> = {
   ZH: { vereinfacht: EINS, summarisch: f(0.5, 0.75, 0.2, 0.6667), rechtsmittel: f(0.33, 1, 0.2, 1), artikel: 'GebV OG § 8/§ 12; AnwGebV § 9/§ 13', verifiziert: 'recherche' },
-  BE: { vereinfacht: EINS, summarisch: f(0.1, 1, 0.3, 0.6), rechtsmittel: f(1, 1.5, 0.2, 0.5), artikel: 'VKD (BSG 161.12); PKV (BSG 168.811)', verifiziert: 'recherche' },
+  BE: { vereinfacht: EINS, summarisch: f(0.1, 1, 0.3, 0.6), rechtsmittel: f(1, 1, 0.2, 0.5), artikel: 'VKD (BSG 161.12) — Berufung/Beschwerde eigene Taxpunkt-Bänder (kein Zuschlag); PKV (BSG 168.811) Art. 5 Abs. 3 (summ. 30–60%) / Art. 7 (RM bis 50%, Beschwerde bis 20%)', verifiziert: 'recherche' },
   LU: { vereinfacht: f(0.3, 0.6, 0.75, 1.5), summarisch: f(0.2, 0.5, 0.75, 1.5), rechtsmittel: f(1, 1, 0.5, 1.2), artikel: 'JusKV (SRL 265) §§ 4–8, § 31', verifiziert: 'recherche' },
   UR: { vereinfacht: f(0.5, 0.83, 1, 1), summarisch: f(1, 1, 0.1, 0.5), rechtsmittel: f(1, 1, 0.2, 0.6), artikel: 'GGebR (RB 2.3232) Art. 5–6, 28 ff.', verifiziert: 'recherche' },
   SZ: { vereinfacht: EINS, summarisch: f(1, 1, 0.2, 0.6), rechtsmittel: f(1, 1, 0.2, 0.6), artikel: 'GebO (SRSZ 173.111); GebT (SRSZ 280.411)', verifiziert: 'recherche' },
@@ -69,7 +69,7 @@ export const MODIFIKATOREN: Record<KantonCode, KantonModifikatoren> = {
   SG: { vereinfacht: EINS, summarisch: f(1, 1, 0.1, 0.6), rechtsmittel: f(1, 1, 0.2, 0.75), artikel: 'GKV (sGS 941.12); HonO (sGS 963.75) Art. 16', verifiziert: 'recherche' },
   GR: { vereinfacht: EINS, summarisch: EINS, rechtsmittel: EINS, artikel: 'VGZ (BR 320.210) Pauschale «vor jeder Instanz»; HV (BR 310.250) aufwandbasiert', verifiziert: 'recherche' },
   AG: { vereinfacht: EINS, summarisch: f(1, 1, 0.25, 1), rechtsmittel: f(1, 1, 0.5, 1), artikel: 'GebührD (SAR 662.110); AnwT (SAR 291.150) § 3', verifiziert: 'recherche' },
-  TG: { vereinfacht: EINS, summarisch: f(1, 1, 0.1, 0.6), rechtsmittel: f(1.1, 1.5, 0.333, 0.667), artikel: 'VGG (RB 638.1); Honorartarif (RB 176.31)', verifiziert: 'recherche' },
+  TG: { vereinfacht: EINS, summarisch: f(1, 1, 0.1, 0.6), rechtsmittel: f(1, 1, 0.333, 0.667), artikel: 'VGG (RB 638.1) — Obergericht eigene absolute Rahmen (kein Multiplikator); AnwT (RB 176.31) § 6 (summ. 10–60%) / § 11 Abs. 2 (RM: Berufung ½ bzw. ⅔, Beschwerde ⅓–½)', verifiziert: 'recherche' },
   TI: { vereinfacht: EINS, summarisch: f(0.5, 0.5, 1, 1), rechtsmittel: f(1, 1, 0.3, 0.6), artikel: 'LTG (RL 178.200); Tariffa onorari (RL 178.310) Art. 11 II', verifiziert: 'recherche' },
   VD: { vereinfacht: f(0.55, 0.75, 0.5, 0.7), summarisch: f(0.15, 0.8, 0.2, 0.45), rechtsmittel: f(0.2, 0.55, 0.5, 0.5), artikel: 'TFJC (BLV 270.11.5); TDC (BLV 270.11.6)', verifiziert: 'recherche' },
   VS: { vereinfacht: EINS, summarisch: EINS, rechtsmittel: f(0.6, 1, 0.6, 0.6), artikel: 'GTar/LTar (SR 173.8) Art. 16/32', verifiziert: 'recherche' },
