@@ -25,6 +25,29 @@
       "sha": "46cf111a2a42d499cfc5d37cba07cbdd42e358c9b6fdafc7da569154ef8c98c0"
     },
     {
+      "id": "kanton/BE/169.81/art_1_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "1_a",
+      "artikelLabel": "Art. 1a Abs. 2 i.V.m. Art. 3a Abs. 1 GebVN (BSG 169.81); ggf. Art. 13 Abs. 1 i.V.m. Anhang 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Errichtung öffentlicher Urkunden über Geschäfte mit Geschäftswert bestimmt sich die Gebühr nach einem gestaffelten Rahmentarif (Anhänge 1, 2 und 4)."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Errichtung öffentlicher Urkunden über Grundpfandrechte sowie über Geschäfte ohne Geschäftswert wird die Gebühr nach gebotenem Zeitaufwand gekoppelt mit einer Minimalgebühr bemessen."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "2f501cf01e7d9ce94a79800e3748ae99f5f938bbd264e1243c75642c892782be"
+    },
+    {
       "id": "kanton/BE/169.81/art_17",
       "ebene": "kanton",
       "quelle": "BE",
@@ -84,6 +107,25 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
       "sha": "be107b05830310d2ee07ba034feadbfc8abd85e7ffd6582e20a9a9e21af198ab"
+    },
+    {
+      "id": "kanton/BE/169.81/art_8_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a Abs. 1 i.V.m. Art. 1a Abs. 2, Art. 3a Abs. 1 GebVN (BSG 169.81)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung eines Vorsorgeauftrags beträgt mindestens 300 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "f88bf53c1b3382cab637ee22686b6dddd4148db066bc33d329deeb60377f631b"
     },
     {
       "id": "kanton/BE/169.81/art_20",
