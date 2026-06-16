@@ -16,8 +16,10 @@ import { extrahiereArtikel, alleArtikelTokens } from './normtext/extrahiere-fedl
 import {
   sammleKantonInventar,
   sammleFallback,
+  sammleHtmInventar,
 } from './normtext/inventar-kanton.ts';
 import { holeLexWork } from './normtext/adapter-lexwork.ts';
+import { holeHtm } from './normtext/adapter-htm.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
 
@@ -254,6 +256,105 @@ async function erzeugeKantonsSnapshots(
   return cov;
 }
 
+// ── lawIdSafe für HTM-Quellen: letzter Pfadteil ohne .htm ────────────────────
+// 'https://silgeneve.ch/legis/data/rsg_e1_05p10.htm' → 'rsg_e1_05p10'
+// 'https://rsn.ne.ch/DATA/.../htm/164.1.htm'          → '164.1'
+function htmLawIdSafe(url: string): string {
+  const letzter = url.split('/').pop() ?? url;
+  return letzter.replace(/\.html?$/i, '');
+}
+
+// ── HTM-Befunde (NE/GE) ──────────────────────────────────────────────────────
+interface HtmCoverage {
+  totalSnapshots: number;
+  reportZeilen: string[];
+  tokenFehlt: Array<{ kanton: string; lawIdSafe: string; token: string; label: string }>;
+  fetchFehler: Array<{ kanton: string; url: string; fehler: string }>;
+}
+
+// ── HTM-Snapshots (NE/GE, Word-Export-HTM) erzeugen ──────────────────────────
+async function erzeugeHtmSnapshots(
+  abgerufen: string,
+  goldenIndex: Record<string, string>,
+): Promise<HtmCoverage> {
+  const inventar = sammleHtmInventar();
+  const ausgangsDir = 'public/normtext/kanton';
+  mkdirSync(ausgangsDir, { recursive: true });
+
+  const cov: HtmCoverage = {
+    totalSnapshots: 0,
+    reportZeilen: [],
+    tokenFehlt: [],
+    fetchFehler: [],
+  };
+
+  for (const g of inventar) {
+    const tokens = g.artikel.map((a) => a.token);
+    const safe = htmLawIdSafe(g.quelleUrl);
+    let ergebnis;
+    try {
+      ergebnis = await holeHtm(g.quelleUrl, g.profil, tokens);
+    } catch (e) {
+      const fehler = e instanceof Error ? e.message : String(e);
+      cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
+      continue;
+    }
+
+    const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
+    const snapshotListe: NormSnapshot[] = [];
+
+    for (const art of g.artikel) {
+      const treffer = ergebnis.artikel[art.token];
+      if (!treffer || treffer.bloecke.length === 0) {
+        cov.tokenFehlt.push({
+          kanton: g.kanton,
+          lawIdSafe: safe,
+          token: art.token,
+          label: art.label,
+        });
+        continue;
+      }
+      const id = `kanton/${g.kanton}/${safe}/art_${art.token}`;
+      const snapshot: NormSnapshot = {
+        id,
+        ebene: 'kanton',
+        quelle: g.kanton,
+        erlass,
+        artikel: art.token,
+        artikelLabel: art.label,
+        bloecke: treffer.bloecke,
+        stand: ergebnis.meta.stand,
+        // HTM-Quelle: die exakte .htm-URL (= Manifest-Key, wie im Tarif-Eintrag).
+        quelleUrl: g.quelleUrl,
+        abgerufen,
+        // Drift-Token (§7 d): kein version_uid → quelleHash des Volltexts.
+        fassungsToken: ergebnis.meta.quelleHash,
+        sha: sha256Bloecke(treffer.bloecke),
+      };
+      snapshotListe.push(snapshot);
+      goldenIndex[id] = snapshot.sha;
+    }
+
+    if (snapshotListe.length === 0) {
+      cov.reportZeilen.push(
+        `  ${g.kanton}-${safe.padEnd(16)} 0 Snapshots → keine Datei (alle Tokens nicht im Erlass)`,
+      );
+      continue;
+    }
+
+    const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
+    const ausgabePfad = `${ausgangsDir}/${g.kanton}-${safe}.json`;
+    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+
+    cov.totalSnapshots += snapshotListe.length;
+    cov.reportZeilen.push(
+      `  ${g.kanton}-${safe.padEnd(16)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`,
+    );
+  }
+
+  return cov;
+}
+
 // ── Hauptprogramm ─────────────────────────────────────────────────────────────
 async function main(): Promise<void> {
   const abgerufen = leseDatum();
@@ -374,8 +475,20 @@ async function main(): Promise<void> {
   for (const t of cov.tokenFehlt) console.log(`  ${t.kanton} ${t.lawId} art_${t.token} (${t.label})`);
   console.log(`fetch-Fehler: ${cov.fetchFehler.length}`);
   for (const f of cov.fetchFehler) console.log(`  ${f.kanton} ${f.lawId}: ${f.fehler}`);
-  console.log(`Fallback-Quellen (Nicht-LexWork, kein Snapshot): ${fallback.length} in ${fallbackKantone.length} Kantonen`);
+  console.log(`Fallback-Quellen (Nicht-LexWork/Nicht-HTM, kein Snapshot): ${fallback.length} in ${fallbackKantone.length} Kantonen`);
   console.log(`  Kantone: ${fallbackKantone.join(', ')}`);
+
+  // ── HTM-Phase (NE/GE, Word-Export-HTM) ───────────────────────────────────
+  console.log('\n[Normtext-Snapshot] HTM-Phase (NE/GE, Word-Export) …');
+  const htmCov = await erzeugeHtmSnapshots(abgerufen, goldenIndex);
+
+  console.log('\n── HTM-Snapshots (NE/GE) ─────────────────────────────────────');
+  for (const z of htmCov.reportZeilen) console.log(z);
+  console.log(`\nGesamt HTM: ${htmCov.totalSnapshots} Snapshots in ${htmCov.reportZeilen.length} Zeile(n)`);
+  console.log(`Token nicht im Erlass (HTM): ${htmCov.tokenFehlt.length}`);
+  for (const t of htmCov.tokenFehlt) console.log(`  ${t.kanton} ${t.lawIdSafe} art_${t.token} (${t.label})`);
+  console.log(`fetch-Fehler (HTM): ${htmCov.fetchFehler.length}`);
+  for (const f of htmCov.fetchFehler) console.log(`  ${f.kanton} ${f.url}: ${f.fehler}`);
 
   // ── Kanton-Manifest (quelleUrl → Dateiname) aktualisieren ────────────────
   const kantonManifest = baueManifest('public/normtext/kanton');

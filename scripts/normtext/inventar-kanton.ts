@@ -67,8 +67,33 @@ export interface FallbackEintrag {
   quelleUrl: string;
 }
 
+/** Eine HTM-Erlassquelle (NE rsn.ne.ch / GE silgeneve.ch) mit den zitierten
+ *  Artikel-Tokens. Eine Gruppe = ein .htm (= ein Erlass). */
+export interface HtmInventarGruppe {
+  kanton: string; // 'NE' | 'GE'
+  profil: 'ne' | 'ge';
+  quelleUrl: string; // die exakte .htm-URL (Manifest-Key)
+  erlassName: string;
+  erlassNr: string;
+  artikel: KantonInventarArtikel[];
+}
+
 /** /app/(de|fr)/texts_of_law/<lawId> — Host + Sprache + lawId. */
 const LEXWORK = /^https:\/\/([^/]+)\/app\/(de|fr)\/texts_of_law\/(.+)$/;
+
+/** Statische .htm-Erlasssammlungen mit strukturiertem Word-Export, je Profil:
+ *   NE: rsn.ne.ch …/htm/*.htm   ·   GE: silgeneve.ch …/*.htm
+ *  (lexfind.ch, m3.ti u.a. bleiben echter Fallback — kein eigener Adapter.) */
+const HTM_QUELLEN: Array<{ muster: RegExp; profil: 'ne' | 'ge' }> = [
+  { muster: /^https:\/\/rsn\.ne\.ch\/.*\.htm$/i, profil: 'ne' },
+  { muster: /^https:\/\/silgeneve\.ch\/.*\.htm$/i, profil: 'ge' },
+];
+
+/** Liefert das HTM-Profil einer URL oder null (kein HTM-Adapter zuständig). */
+function htmProfil(url: string): 'ne' | 'ge' | null {
+  for (const q of HTM_QUELLEN) if (q.muster.test(url)) return q.profil;
+  return null;
+}
 
 /** true, wenn der Wert die fünf string-Felder eines Tarif-Eintrags trägt. */
 function istTarifEintrag(v: unknown): v is TarifEintrag {
@@ -178,9 +203,56 @@ export function sammleKantonInventar(): KantonInventarGruppe[] {
   return [...gruppen.values()].filter((g) => g.artikel.length > 0);
 }
 
-/** Alle kantonalen Tarifquellen, die NICHT über LexWork erreichbar sind
- *  (PDF, zhlex-HTML, lexfind, silgeneve, rsn, m3.ti, …) — dedupliziert nach
- *  (kanton, quelleUrl). */
+/**
+ * Gruppiert die NE/GE-HTM-Tarifquellen nach quelleUrl (= ein .htm = ein Erlass)
+ * und merged die Artikel-Tokens (dedupe). Verkettete Zitate («Art. 16 / Art. 4
+ * al. 6 / Art. 84») werden über parsePassus zerlegt — parsePassus liefert nur
+ * das ERSTE Artikel-Token; weitere Tokens im selben artikel-String werden hier
+ * zusätzlich gesammelt, damit alle zitierten Artikel snapshotten.
+ */
+export function sammleHtmInventar(): HtmInventarGruppe[] {
+  const eintraege = alleTarifEintraege();
+  const gruppen = new Map<string, HtmInventarGruppe>();
+
+  for (const e of eintraege) {
+    const profil = htmProfil(e.quelleUrl);
+    if (!profil) continue;
+
+    let gruppe = gruppen.get(e.quelleUrl);
+    if (!gruppe) {
+      gruppe = {
+        kanton: e.kanton,
+        profil,
+        quelleUrl: e.quelleUrl,
+        erlassName: e.erlassName,
+        erlassNr: e.erlassNr,
+        artikel: [],
+      };
+      gruppen.set(e.quelleUrl, gruppe);
+    }
+
+    // Alle in diesem Zitat genannten «Art. N» einzeln zerlegen (verkettete
+    // Zitate wie «Art. 16 / Art. 4 al. 6 / Art. 84»). Je Teilzitat parsePassus.
+    const teile = e.artikel.split('/');
+    for (const teil of teile) {
+      const passus = parsePassus(teil);
+      if (!passus) continue;
+      if (!gruppe.artikel.some((a) => a.token === passus.artikelToken)) {
+        gruppe.artikel.push({
+          token: passus.artikelToken,
+          label: teil.trim(),
+          absatz: passus.absatz,
+        });
+      }
+    }
+  }
+
+  return [...gruppen.values()].filter((g) => g.artikel.length > 0);
+}
+
+/** Alle kantonalen Tarifquellen, die WEDER über LexWork NOCH über den HTM-
+ *  Adapter (NE/GE) erschlossen sind (PDF, zhlex-HTML, lexfind, m3.ti, …) —
+ *  dedupliziert nach (kanton, quelleUrl). */
 export function sammleFallback(): FallbackEintrag[] {
   const eintraege = alleTarifEintraege();
   const gesehen = new Set<string>();
@@ -188,6 +260,7 @@ export function sammleFallback(): FallbackEintrag[] {
 
   for (const e of eintraege) {
     if (LEXWORK.test(e.quelleUrl)) continue;
+    if (htmProfil(e.quelleUrl)) continue; // jetzt über HTM-Adapter erschlossen
     const schluessel = `${e.kanton}|${e.quelleUrl}`;
     if (gesehen.has(schluessel)) continue;
     gesehen.add(schluessel);

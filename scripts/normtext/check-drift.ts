@@ -17,10 +17,17 @@
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
-import { sammleKantonInventar } from './inventar-kanton.ts';
+import { sammleKantonInventar, sammleHtmInventar } from './inventar-kanton.ts';
 import { holeLexWork } from './adapter-lexwork.ts';
+import { holeHtm } from './adapter-htm.ts';
 import { pruefeBundFassung, pruefeBundVollstaendigkeit } from './drift-logik.ts';
 import type { NormSnapshot } from './drift-logik.ts';
+
+// lawIdSafe für HTM-Quellen (kongruent zu normtext-snapshot.ts).
+function htmLawIdSafe(url: string): string {
+  const letzter = url.split('/').pop() ?? url;
+  return letzter.replace(/\.html?$/i, '');
+}
 
 interface SnapshotDatei {
   erzeugt: string;
@@ -177,6 +184,43 @@ async function main(): Promise<void> {
 
     console.log(
       `check:normtext-netz: ${kantonGeprüft} Kanton-Gruppen geprüft — Drift: ${kantonDrift}, Netz-Warnungen: ${kantonWarnungen}`,
+    );
+
+    // ─── Prüfung 4: HTM-Drift (NETZ) — quelleHash statt version_uid ──────────
+    // NE/GE-HTM-Quellen haben kein version_uid. Drift-Token ist der quelleHash
+    // des extrahierten Volltexts (fassungsToken im Snapshot). Re-fetch +
+    // quelleHash-Vergleich erkennt jede inhaltliche Quellen-Änderung (§7 d).
+    console.log('\ncheck:normtext-netz: HTM-Drift (NE/GE) prüfen …');
+    const htmGruppen = sammleHtmInventar();
+    let htmGeprüft = 0;
+    let htmDrift = 0;
+    let htmWarnungen = 0;
+
+    for (const g of htmGruppen) {
+      const key = `${g.kanton}/${htmLawIdSafe(g.quelleUrl)}`;
+      const snapshotToken = kantonTokens.get(key);
+      if (snapshotToken === undefined) continue; // kein Snapshot → überspringen
+
+      try {
+        const ergebnis = await holeHtm(g.quelleUrl, g.profil, []);
+        htmGeprüft++;
+        const neuerHash = ergebnis.meta.quelleHash;
+        if (neuerHash && neuerHash !== snapshotToken) {
+          console.error(
+            `FEHLER HTM-Drift: ${g.kanton} ${htmLawIdSafe(g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
+          );
+          htmDrift++;
+          exitCode = 1;
+        }
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.warn(`WARNUNG HTM-Netz: ${g.kanton} ${g.quelleUrl}: ${msg}`);
+        htmWarnungen++;
+      }
+    }
+
+    console.log(
+      `check:normtext-netz: ${htmGeprüft} HTM-Gruppen geprüft — Drift: ${htmDrift}, Netz-Warnungen: ${htmWarnungen}`,
     );
   }
 
