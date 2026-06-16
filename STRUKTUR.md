@@ -22,6 +22,46 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 16./17.6.2026 — NORM-VORSCHAU-POPOVER (Volltext Bund+Kantone) GEBAUT (Branch feat/normtext-popup, ungepusht)
+
+**Auftrag David:** «Popup mit Gesetzestext statt Weiterleitung, insbesondere
+kantonal, relevante Stelle markiert» → iterativ stark ausgebaut («weiter»,
+«mach was du für richtig hältst», «du kennst das Endziel», «so wie Basel-Stadt
+ist super»). Fahrplan `FAHRPLAN-GESETZESTEXT-POPUP.md`; Build-Regel in **CLAUDE.md
+§7** (Zitat-Ausnahme + Snapshot-Build-Muster); Dossiers `bibliothek/normen/
+norm-vorschau-snapshot-system.md` + `kantonale-tarif-zitat-befunde.md`.
+
+- **Was:** Klick auf einen Norm-Verweis öffnet ein Popover mit dem Artikel-
+  **Volltext** (statt sofort extern); zitierte Stelle (Abs./lit./Ziff.) markiert
+  + eingescrollt; Fuss «In Kraft seit» + Live-Link; aufgehobene Stellen als
+  «aufgehoben». Progressive Enhancement: ohne Snapshot ehrlicher Link-Fallback,
+  PDF/Golden/Prerender unverändert. A11y (Fokus-Falle, Scroll-Lock, Esc).
+- **Architektur:** Build-time-Snapshots `public/normtext/{bund,kanton}/` (Generator
+  `npm run normtext`, NIE von Hand), Client-Loader lazy je Datei (Manifest
+  quelleUrl→Datei), ein `NormPopover` für alle Tiers. **Ganze Gesetze gespeichert**
+  (alle Artikel je Erlass, kantonal wie Bund; einheitliches Label § N / Art. N).
+- **Abdeckung:** Bund **5760 Art./18 Gesetze** (Fedlex-Cache, inkl. StGB/StG +
+  Zuständigkeits-Verweise klickbar). Kanton **~5700 Art./103 Erlasse** über
+  **vier Adapter-Tiers, beste Quelle je Kanton:** LexWork-JSON (19 Kt.) · Word-HTM
+  (NE/GE/**TI**) · ZH-PDF (zhlex→notes.zh.ch via JS-Redirect, pdfjs build-time) ·
+  generisches PDF (SZ/VD/JU). Aufzählungen vollständig, Tarif-Tabellen als gepaarte
+  Items, präzise lit/Ziff-Markierung. Ehrlicher Fallback nur wo nichts
+  Strukturiertes existiert (VD-HTML ist SPA/API-gated → begründet PDF).
+- **Korrektheit/Pflege:** «aktuell in Kraft»-Garantie über alle Tiers (Bund
+  Konsolidierung; LexWork version_uid; HTM/ZH/PDF quelleHash) — Drift-Tore
+  `check:normtext`(-netz) + Vollständigkeitstest `check:vollstaendigkeit`. Bei
+  Rechtsänderung: Drift rot → `npm run normtext` neu.
+- **Fachliche Tarif-Korrekturen (durch den Vollständigkeitstest ans Licht):**
+  **SH** Schlichtung totes ZPO-273.100 → JG 173.200 Art. 82 (Werte 50–300→100–1000,
+  David-Ja); **OW** GK Art. 7 aufgehoben → Art. 12 GebOR (selbst bestimmt am GOG);
+  **LU** quelleUrl 228→258; 5 NE/GE-Zitate (Art. 14 ch., LERF Art. 10, GE-Erlasse)
+  — alle live-verifiziert, Status `recherche` (Abnahme David offen).
+- **Verifikation:** 2 unabhängige Bug-Check-Runden + Einheitlichkeitscheck, alle
+  Befunde behoben (ZH-Stand=Inkraft, einheitl. Label, Tabellen-Kopplung, FR-
+  Markierung, Lückentor). Gate **voll grün**, golden byte-gleich, Drift 0, ~70
+  Commits. **Browser-Smoke aller 26 Kantone** durchgeführt (0 Console-Fehler).
+  **Push/Deploy + fachliche Abnahme offen (§9 / David selbst).**
+
 ## Session 16.6.2026 — BEURKUNDUNGS-AUSBAU: 3-fach-Verifikation + Gesamtkosten + UI-Fix
 
 **Auftrag David:** «verifiziere das alles / führe nochmals Recherche durch» + «sind
