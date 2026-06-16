@@ -24,7 +24,7 @@ const chf = (n: number): string => `CHF ${Math.round(n).toLocaleString('de-CH')}
 const zahl = (roh: string): number | undefined => {
   if (roh.trim() === '') return undefined;
   const n = Number(roh);
-  return Number.isFinite(n) ? n : undefined;
+  return Number.isFinite(n) && n >= 0 ? n : undefined;
 };
 
 const GB_LINK_SPEC: PermalinkSpec<Record<string, unknown>> = {

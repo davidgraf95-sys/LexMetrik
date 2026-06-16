@@ -51,3 +51,19 @@ describe('weitereKosten — Zusammensetzung je Geschäftsart/Kanton', () => {
     expect(FREIES_NOTARIAT.has('GE')).toBe(true);
   });
 });
+
+describe('Pfandrechtssteuer (Schuldbrief) — kantonale Sätze und Freigrenze', () => {
+  const pfand = (k: 'VD' | 'FR', wert: number) =>
+    weitereKosten('schuldbrief', k, wert, null).posten.find((p) => p.label.startsWith('Pfandrechtssteuer'));
+
+  it('VD: Freigrenze ≤ CHF 5 000 steuerbefreit (LTim Art. 3 al. 3), darüber 2 ‰', () => {
+    expect(pfand('VD', 3_000)?.von).toBe(0);     // unter Freigrenze
+    expect(pfand('VD', 5_000)?.von).toBe(0);     // exakt Freigrenze: bis UND mit → befreit
+    expect(pfand('VD', 5_001)?.von).toBe(10);    // knapp darüber: 5001 × 0,2 % = 10
+    expect(pfand('VD', 500_000)?.von).toBe(1_000);
+  });
+
+  it('FR: keine Freigrenze — Satz greift ab dem ersten Franken', () => {
+    expect(pfand('FR', 3_000)?.von).toBe(23);    // 3000 × 0,75 % = 22,5 → 23
+  });
+});

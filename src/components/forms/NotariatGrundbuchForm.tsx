@@ -38,7 +38,7 @@ const spanneText = (s: Spanne | null): string =>
 const zahl = (roh: string): number | undefined => {
   if (roh.trim() === '') return undefined;
   const n = Number(roh);
-  return Number.isFinite(n) ? n : undefined;
+  return Number.isFinite(n) && n >= 0 ? n : undefined;
 };
 
 // Sortier-Untergrenze (günstigste zuoberst); nicht bezifferbar → ans Ende.
