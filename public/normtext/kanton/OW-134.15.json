@@ -2,6 +2,47 @@
   "erzeugt": "2026-06-16",
   "eintraege": [
     {
+      "id": "kanton/OW/134.15/art_12",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "GebOR (GDB 134.15)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12 (Kantonsgericht; bis 30 000 Art. 9 Kantonsgerichtspräsidium)",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Verfahren vor dem Kantonsgericht (Art. 35 GOG) beträgt die Gerichtsgebühr (Beträge in Fr.): bei einem Streitwert von",
+          "items": [
+            {
+              "marke": "1",
+              "text": "über 30 000.– bis 50 000.– 1 500.– bis 5 000.–"
+            },
+            {
+              "marke": "2",
+              "text": "über 50 000.– bis 100 000.– 2 000.– bis 6 000.–"
+            },
+            {
+              "marke": "3",
+              "text": "über 100 000.– bis 350 000.– 2 500.– bis 10 500.–"
+            },
+            {
+              "marke": "4",
+              "text": "über 350 000.– 3 000.– bis 3 % des Streitwerts"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Streitigkeiten ohne Vermögensinteressen sowie bei familienrechtlichen Streitigkeiten beträgt die Gerichtsgebühr Fr. 800.– bis Fr. 10 000.–. Sind güterrechtliche Ansprüche über Fr. 50 000.– strittig, so können die Ansätze von Absatz 1 hinzugerechnet werden."
+        }
+      ],
+      "stand": "2015-03-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/134.15",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "4ad430f16d7a642be719285a40930816",
+      "sha": "95fc239b2416a865994931547d9990a537044a95af370e1fa4dd70e4622c1659"
+    },
+    {
       "id": "kanton/OW/134.15/art_8",
       "ebene": "kanton",
       "quelle": "OW",
@@ -72,47 +113,6 @@
       "abgerufen": "2026-06-16",
       "fassungsToken": "4ad430f16d7a642be719285a40930816",
       "sha": "d13bd0daad0ac20a4113a140f3e24d10e90356c9544f0ae73633696050a02505"
-    },
-    {
-      "id": "kanton/OW/134.15/art_12",
-      "ebene": "kanton",
-      "quelle": "OW",
-      "erlass": "GebOR (GDB 134.15)",
-      "artikel": "12",
-      "artikelLabel": "Art. 12 Abs. 2",
-      "bloecke": [
-        {
-          "absatz": "1",
-          "text": "Im Verfahren vor dem Kantonsgericht (Art. 35 GOG) beträgt die Gerichtsgebühr (Beträge in Fr.): bei einem Streitwert von",
-          "items": [
-            {
-              "marke": "1",
-              "text": "über 30 000.– bis 50 000.– 1 500.– bis 5 000.–"
-            },
-            {
-              "marke": "2",
-              "text": "über 50 000.– bis 100 000.– 2 000.– bis 6 000.–"
-            },
-            {
-              "marke": "3",
-              "text": "über 100 000.– bis 350 000.– 2 500.– bis 10 500.–"
-            },
-            {
-              "marke": "4",
-              "text": "über 350 000.– 3 000.– bis 3 % des Streitwerts"
-            }
-          ]
-        },
-        {
-          "absatz": "2",
-          "text": "Bei Streitigkeiten ohne Vermögensinteressen sowie bei familienrechtlichen Streitigkeiten beträgt die Gerichtsgebühr Fr. 800.– bis Fr. 10 000.–. Sind güterrechtliche Ansprüche über Fr. 50 000.– strittig, so können die Ansätze von Absatz 1 hinzugerechnet werden."
-        }
-      ],
-      "stand": "2015-03-01",
-      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/134.15",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "4ad430f16d7a642be719285a40930816",
-      "sha": "95fc239b2416a865994931547d9990a537044a95af370e1fa4dd70e4622c1659"
     }
   ]
 }
