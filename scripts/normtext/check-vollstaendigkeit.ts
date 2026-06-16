@@ -165,20 +165,27 @@ const BEKANNTE_LUECKEN_HTMZH: BekannteLuecke[] = [
   { snapshotId: 'kanton/NE/2154116/art_20', grund: 'token-nicht-im-Erlass', notiz: 'Arrêté RSN 215.411.60 Art. 20 — im LERF-htm nicht enthalten (anderer Erlass).' },
   { snapshotId: 'kanton/NE/2154116/art_21', grund: 'token-nicht-im-Erlass', notiz: 'Arrêté RSN 215.411.60 Art. 21 — im LERF-htm nicht enthalten (anderer Erlass).' },
   { snapshotId: 'kanton/NE/2154116/art_27', grund: 'token-nicht-im-Erlass', notiz: 'Arrêté RSN 215.411.60 Art. 27 — im LERF-htm nicht enthalten (anderer Erlass).' },
-  { snapshotId: 'kanton/NE/2154116/art_44', grund: 'token-nicht-im-Erlass', notiz: 'Tarif notaires RSN 166.31 Art. 44 — nicht im LERF-htm (anderer Erlass, mitzitiert).' },
+  // Entfernt (17.6.2026): kanton/NE/2154116/art_44 — die GRUNDPFAND-NE-Zitatkorrektur
+  // (notariat-grundbuch.ts) führt das LERF-Zitat jetzt auf den existierenden Art. 10
+  // (Eintrag 2‰); die Beurkundung (RSN 166.31 Art. 14 ch. 44 «gage immobilier») steht
+  // im Hinweis, nicht mehr als toter Art.-44-Token gegen die LERF-quelleUrl.
 
-  // ── NE/16631 (Tarif notaires RSN 166.31, htm): mitzitierte Fremdartikel ───
-  // Art. 54 / Art. 81 sind im 166.31-htm-Extrakt nicht als eigene Artikel
-  // auffindbar (Tarif-Struktur abweichend; teils Verweis-Zitate). Stand 16.6.2026.
-  { snapshotId: 'kanton/NE/16631/art_54', grund: 'token-nicht-im-Erlass', notiz: 'RSN 166.31 Art. 54 — im htm-Extrakt nicht als eigener Artikel auffindbar (Stand 16.6.2026).' },
-  { snapshotId: 'kanton/NE/16631/art_81', grund: 'token-nicht-im-Erlass', notiz: 'RSN 166.31 Art. 81 — im htm-Extrakt nicht als eigener Artikel auffindbar (Stand 16.6.2026).' },
+  // ── NE/16631 (Tarif notaires RSN 166.31, htm): vormals tote Verweis-Zitate ─
+  // Entfernt (17.6.2026): art_54 (war «Art. 54» → korrigiert zu «Art. 14 ch. 54»,
+  //   Vente immobilière) und art_81 (war «Art. 81 lit. B/C» → «Art. 14 ch. 81 lit. B/C»,
+  //   Société anonyme). Beide lösen jetzt auf Art. 14 auf (live an rsn.ne.ch/16631.htm
+  //   verifiziert: RSN 166.31 endet bei Art. 17; die Gebühren-Chiffres 1–82 stehen in
+  //   Art. 14). Snapshot NE-16631.json deckt art_14 ab.
 
-  // ── GE/rsg_e1_50p06 (silgeneve, htm): mitzitierte Fremdartikel ────────────
-  // Art. 16 / Art. 84 sind im Word-Export-htm nicht als eigene Artikel
-  // extrahierbar (verkettetes Zitat «Art. 16 / Art. 4 al. 6 / Art. 84»; nur
-  // der primäre Artikel des Erlasses wird sauber erfasst). Stand 16.6.2026.
-  { snapshotId: 'kanton/GE/rsg_e1_50p06/art_16', grund: 'token-nicht-im-Erlass', notiz: 'GE rsg_e1_50p06 Art. 16 — im htm-Extrakt nicht auffindbar (verkettetes Zitat, Stand 16.6.2026).' },
-  { snapshotId: 'kanton/GE/rsg_e1_50p06/art_84', grund: 'token-nicht-im-Erlass', notiz: 'GE rsg_e1_50p06 Art. 84 — im htm-Extrakt nicht auffindbar (verkettetes Zitat, Stand 16.6.2026).' },
+  // ── GE/rsg_e1_50p06: vormals tote Fremdartikel-Tokens ─────────────────────
+  // Entfernt (17.6.2026): art_16 (war REmNot-Beurkundung «Art. 16» → gehört zu RSG
+  //   E 6 05.03, nicht E 1 50.06) und art_84 (war LDE-Steuer «Art. 84» → gehört zu RSG
+  //   D 3 30). Das verkettete GRUNDPFAND-GE-Zitat führt jetzt auf den existierenden
+  //   Art. 4 (REmORFDIT, Eintrag 0,085 %) der quelleUrl; die Beurkundung (E 6 05.03
+  //   Art. 16) und Registrierungssteuer (D 3 30 Art. 84) stehen im Hinweis. Live
+  //   verifiziert (17.6.2026): rsg_e1_50p06 endet bei Art. 13, Art. 16/84 dort nie
+  //   vorhanden. (Der Bug-Check-Verdacht «RTFMC rsg_e1_05p10» war falsch: RTFMC Art. 16
+  //   = Schlichtungspauschale, Art. 84 = Parteientschädigung — beide kein Grundpfand.)
 
   // ── SZ/280.411 (Gebührentarif Rechtsanwälte): tote PDF-URL (assets/4837) ───
   // Das nicht-vermögensrechtliche Zitat «§ 9» trägt die quelleUrl
