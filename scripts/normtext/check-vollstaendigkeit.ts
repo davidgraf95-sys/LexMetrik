@@ -26,6 +26,7 @@ import {
   sammleKantonInventar,
   sammleHtmInventar,
   sammleZhPdfInventar,
+  sammlePdfInventar,
 } from './inventar-kanton.ts';
 import { alleArtikelTokens } from './extrahiere-fedlex.ts';
 import {
@@ -178,6 +179,21 @@ const BEKANNTE_LUECKEN_HTMZH: BekannteLuecke[] = [
   // der primäre Artikel des Erlasses wird sauber erfasst). Stand 16.6.2026.
   { snapshotId: 'kanton/GE/rsg_e1_50p06/art_16', grund: 'token-nicht-im-Erlass', notiz: 'GE rsg_e1_50p06 Art. 16 — im htm-Extrakt nicht auffindbar (verkettetes Zitat, Stand 16.6.2026).' },
   { snapshotId: 'kanton/GE/rsg_e1_50p06/art_84', grund: 'token-nicht-im-Erlass', notiz: 'GE rsg_e1_50p06 Art. 84 — im htm-Extrakt nicht auffindbar (verkettetes Zitat, Stand 16.6.2026).' },
+
+  // ── SZ/280.411 (Gebührentarif Rechtsanwälte): tote PDF-URL (assets/4837) ───
+  // Das nicht-vermögensrechtliche Zitat «§ 9» trägt die quelleUrl
+  // …/assets/4837/280_411.pdf, die jetzt 404 liefert (der Tarif-Eintrag in
+  // notariat/grundbuch nutzt die funktionierende …/assets/5862/-Variante; nur
+  // die 4837-Variante in nicht-vermoegensrechtlich.ts ist veraltet). Kein
+  // Volltext-Snapshot über die 4837-URL → bekannte Lücke (§8); Korrektur der
+  // Daten-URL ist eine eigene fachliche Änderung. Stand 16.6.2026.
+  { snapshotId: 'kanton/SZ/280.411/art_9', grund: 'nicht-LexWork', notiz: 'SZ-280.411 PDF-URL assets/4837 liefert 404 (funktionierende 5862-Variante in anderem Tarif-Eintrag). Stand 16.6.2026.' },
+
+  // ── JU/37773 (Décret tarifaire): Art. 13 existiert nicht im Erlass ─────────
+  // Das Décret (idn=20021&id=37773) umfasst Art. 1–12 (letzter Artikel: «Le
+  // Gouvernement fixe l'entrée en vigueur»). Das Zitat «Art. 13» verweist auf
+  // einen nicht vorhandenen Artikel (Mis-/Fremdzitat) → token-nicht-im-Erlass.
+  { snapshotId: 'kanton/JU/ju-20021-37773-dl/art_13', grund: 'token-nicht-im-Erlass', notiz: 'JU Décret 37773 hat nur Art. 1–12; Art. 13 nicht vorhanden. Stand 16.6.2026.' },
 ];
 
 // ─── HTM/ZH-lawIdSafe (kongruent zum Orchestrator) ───────────────────────────
@@ -188,6 +204,27 @@ function htmLawIdSafe(url: string): string {
 function zhLawIdSafe(url: string): string {
   const m = url.match(/\/erlass-([^-]+)-/);
   return m ? m[1].replace(/_/g, '.') : url.replace(/[^a-z0-9.]+/gi, '_');
+}
+function pdfLawIdSafe(profil: 'sz' | 'ti' | 'vd' | 'ju', url: string): string {
+  if (profil === 'sz') {
+    const m = url.match(/\/(\d+_\d+)\.pdf$/i);
+    if (m) return m[1].replace(/_/g, '.');
+  }
+  if (profil === 'ti') {
+    const m = url.match(/\/pdfatto\/atto\/(\d+)/i);
+    if (m) return `ti-${m[1]}`;
+  }
+  if (profil === 'vd') {
+    const m = url.match(/\/tolv\/(\d+)\//i);
+    if (m) return `vd-${m[1]}`;
+  }
+  if (profil === 'ju') {
+    const idn = url.match(/[?&]idn=(\d+)/i);
+    const id = url.match(/[?&]id=(\d+)/i);
+    const dl = /[?&]download=1/i.test(url) ? '-dl' : '';
+    if (idn && id) return `ju-${idn[1]}-${id[1]}${dl}`;
+  }
+  return url.replace(/[^a-z0-9.]+/gi, '_');
 }
 
 // ─── Hilfsfunktionen ──────────────────────────────────────────────────────────
@@ -389,8 +426,14 @@ async function main(): Promise<void> {
     quelleUrl: g.quelleUrl,
     artikel: g.artikel,
   }));
+  const pdfGruppen = sammlePdfInventar().map((g) => ({
+    kanton: g.kanton,
+    lawId: pdfLawIdSafe(g.profil, g.quelleUrl),
+    quelleUrl: g.quelleUrl,
+    artikel: g.artikel,
+  }));
   const unerwartetHtmZh = unerwarteteKantonLueckenMitQuelleUrl(
-    [...htmGruppen, ...zhGruppen],
+    [...htmGruppen, ...zhGruppen, ...pdfGruppen],
     manifestMap,
     artikelNachUrl,
     BEKANNTE_LUECKEN_HTMZH,
@@ -404,9 +447,9 @@ async function main(): Promise<void> {
     exitCode = 1;
   }
 
-  const htmZhZitate = [...htmGruppen, ...zhGruppen].reduce((s, g) => s + g.artikel.length, 0);
+  const htmZhZitate = [...htmGruppen, ...zhGruppen, ...pdfGruppen].reduce((s, g) => s + g.artikel.length, 0);
   console.log(
-    `  HTM/ZH: ${htmZhZitate} Zitat-Tripel geprüft (via quelleUrl-Auflösung), bekannte Lücken: ${BEKANNTE_LUECKEN_HTMZH.length}, unerwartet: ${unerwartetHtmZh.length === 0 ? 'ok' : unerwartetHtmZh.length}`,
+    `  HTM/ZH/PDF: ${htmZhZitate} Zitat-Tripel geprüft (via quelleUrl-Auflösung), bekannte Lücken: ${BEKANNTE_LUECKEN_HTMZH.length}, unerwartet: ${unerwartetHtmZh.length === 0 ? 'ok' : unerwartetHtmZh.length}`,
   );
 
   // Bekannte Lücken: zeige nur jene, die tatsächlich in einem Inventar-Zitat auftauchen

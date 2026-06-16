@@ -17,10 +17,16 @@
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
-import { sammleKantonInventar, sammleHtmInventar, sammleZhPdfInventar } from './inventar-kanton.ts';
+import {
+  sammleKantonInventar,
+  sammleHtmInventar,
+  sammleZhPdfInventar,
+  sammlePdfInventar,
+} from './inventar-kanton.ts';
 import { holeLexWork } from './adapter-lexwork.ts';
 import { holeHtm } from './adapter-htm.ts';
 import { holeZhPdf } from './adapter-zh-pdf.ts';
+import { holePdf, PDF_PROFILE } from './adapter-pdf.ts';
 import { pruefeBundFassung, pruefeBundVollstaendigkeit } from './drift-logik.ts';
 import type { NormSnapshot } from './drift-logik.ts';
 
@@ -34,6 +40,29 @@ function htmLawIdSafe(url: string): string {
 function zhLawIdSafe(url: string): string {
   const m = url.match(/\/erlass-([^-]+)-/);
   return m ? m[1].replace(/_/g, '.') : url.replace(/[^a-z0-9.]+/gi, '_');
+}
+
+// lawIdSafe für die generischen PDF-Quellen (kongruent zu normtext-snapshot.ts).
+function pdfLawIdSafe(profil: 'sz' | 'ti' | 'vd' | 'ju', url: string): string {
+  if (profil === 'sz') {
+    const m = url.match(/\/(\d+_\d+)\.pdf$/i);
+    if (m) return m[1].replace(/_/g, '.');
+  }
+  if (profil === 'ti') {
+    const m = url.match(/\/pdfatto\/atto\/(\d+)/i);
+    if (m) return `ti-${m[1]}`;
+  }
+  if (profil === 'vd') {
+    const m = url.match(/\/tolv\/(\d+)\//i);
+    if (m) return `vd-${m[1]}`;
+  }
+  if (profil === 'ju') {
+    const idn = url.match(/[?&]idn=(\d+)/i);
+    const id = url.match(/[?&]id=(\d+)/i);
+    const dl = /[?&]download=1/i.test(url) ? '-dl' : '';
+    if (idn && id) return `ju-${idn[1]}-${id[1]}${dl}`;
+  }
+  return url.replace(/[^a-z0-9.]+/gi, '_');
 }
 
 interface SnapshotDatei {
@@ -263,6 +292,41 @@ async function main(): Promise<void> {
 
     console.log(
       `check:normtext-netz: ${zhGeprüft} ZH-Gruppen geprüft — Drift: ${zhDrift}, Netz-Warnungen: ${zhWarnungen}`,
+    );
+
+    // ─── Prüfung 6: PDF-Drift (NETZ) — quelleHash (SZ/TI/VD/JU Text-PDF) ──────
+    // Generische PDF-Quellen haben kein version_uid → quelleHash des extrahierten
+    // Volltexts als Drift-Token (§7 d). Re-fetch + Vergleich.
+    console.log('\ncheck:normtext-netz: PDF-Drift (SZ/TI/VD/JU) prüfen …');
+    const pdfGruppen = sammlePdfInventar();
+    let pdfGeprüft = 0;
+    let pdfDrift = 0;
+    let pdfWarnungen = 0;
+
+    for (const g of pdfGruppen) {
+      const key = `${g.kanton}/${pdfLawIdSafe(g.profil, g.quelleUrl)}`;
+      const snapshotToken = kantonTokens.get(key);
+      if (snapshotToken === undefined) continue;
+      try {
+        const ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil], []);
+        pdfGeprüft++;
+        const neuerHash = ergebnis.meta.quelleHash;
+        if (neuerHash && neuerHash !== snapshotToken) {
+          console.error(
+            `FEHLER PDF-Drift: ${g.kanton} ${pdfLawIdSafe(g.profil, g.quelleUrl)}: quelleHash "${neuerHash.slice(0, 12)}…" ≠ Snapshot "${snapshotToken.slice(0, 12)}…" — Snapshot neu erzeugen`,
+          );
+          pdfDrift++;
+          exitCode = 1;
+        }
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.warn(`WARNUNG PDF-Netz: ${g.kanton} ${g.quelleUrl}: ${msg}`);
+        pdfWarnungen++;
+      }
+    }
+
+    console.log(
+      `check:normtext-netz: ${pdfGeprüft} PDF-Gruppen geprüft — Drift: ${pdfDrift}, Netz-Warnungen: ${pdfWarnungen}`,
     );
   }
 

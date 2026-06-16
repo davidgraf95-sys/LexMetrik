@@ -11,6 +11,7 @@ import { describe, it, expect } from 'vitest';
 import {
   sammleKantonInventar,
   sammleFallback,
+  sammlePdfInventar,
 } from '../../scripts/normtext/inventar-kanton';
 
 describe('sammleKantonInventar', () => {
@@ -66,11 +67,18 @@ describe('sammleKantonInventar', () => {
 describe('sammleFallback', () => {
   const fallback = sammleFallback();
 
-  it('enthält SZ (PDF-Quelle)', () => {
-    const sz = fallback.find(
-      (f) => f.kanton === 'SZ' && /\.pdf/i.test(f.quelleUrl),
+  // Fachliche Änderung (16.6.2026, PDF-Adapter SZ/TI/VD/JU): die SZ-Text-PDF
+  // (sz.ch …/*.pdf) sind jetzt über den generischen PDF-Adapter als Volltext
+  // erschlossen — sie sind darum NICHT mehr Fallback, sondern im PDF-Inventar.
+  it('SZ-Text-PDF (sz.ch) ist NICHT mehr Fallback, sondern im PDF-Inventar', () => {
+    const szPdfFallback = fallback.find(
+      (f) => f.kanton === 'SZ' && /sz\.ch.*\.pdf$/i.test(f.quelleUrl),
     );
-    expect(sz).toBeDefined();
+    expect(szPdfFallback).toBeUndefined();
+    const szPdf = sammlePdfInventar().find(
+      (g) => g.kanton === 'SZ' && g.profil === 'sz',
+    );
+    expect(szPdf).toBeDefined();
   });
 
   it('enthält ZH (zhlex-html, kein LexWork)', () => {
@@ -85,6 +93,50 @@ describe('sammleFallback', () => {
       expect(f.quelleUrl).not.toMatch(
         /^https:\/\/[^/]+\/app\/(de|fr)\/texts_of_law\//,
       );
+    }
+  });
+
+  it('keine PDF-Quelle, die im PDF-Inventar erschlossen ist, ist noch Fallback', () => {
+    // Jede (kanton, quelleUrl)-Kombination, die das PDF-Inventar erschliesst,
+    // darf NICHT mehr in der Fallback-Liste stehen (sonst doppelte Zuordnung,
+    // §8). Quellen ohne parsebaren Artikel-Token (z.B. TI atto/181 «Keine
+    // separate Handänderungssteuer») bleiben legitim Fallback — sie tauchen
+    // gar nicht erst im PDF-Inventar auf.
+    const erschlossen = new Set(
+      sammlePdfInventar().map((g) => `${g.kanton}|${g.quelleUrl}`),
+    );
+    for (const f of fallback) {
+      expect(erschlossen.has(`${f.kanton}|${f.quelleUrl}`)).toBe(false);
+    }
+  });
+});
+
+describe('sammlePdfInventar (SZ/TI/VD/JU)', () => {
+  const pdf = sammlePdfInventar();
+
+  it('erfasst genau die vier PDF-Kantone mit dem richtigen Profil', () => {
+    const kantone = new Set(pdf.map((g) => g.kanton));
+    expect([...kantone].sort()).toEqual(['JU', 'SZ', 'TI', 'VD']);
+    for (const g of pdf) {
+      const erwartet = { SZ: 'sz', TI: 'ti', VD: 'vd', JU: 'ju' }[g.kanton];
+      expect(g.profil).toBe(erwartet);
+      expect(g.artikel.length).toBeGreaterThan(0);
+    }
+  });
+
+  it('lexfind nur für VD (GE/TI/VS-lexfind bleiben Fallback)', () => {
+    const lexfindNichtVd = pdf.find(
+      (g) => /lexfind\.ch/i.test(g.quelleUrl) && g.kanton !== 'VD',
+    );
+    expect(lexfindNichtVd).toBeUndefined();
+  });
+
+  it('jede Gruppe trägt eine quelleUrl, die zum Profil-Host passt', () => {
+    for (const g of pdf) {
+      if (g.profil === 'sz') expect(g.quelleUrl).toMatch(/www\.sz\.ch/);
+      if (g.profil === 'ti') expect(g.quelleUrl).toMatch(/m3\.ti\.ch/);
+      if (g.profil === 'vd') expect(g.quelleUrl).toMatch(/lexfind\.ch\/tolv/);
+      if (g.profil === 'ju') expect(g.quelleUrl).toMatch(/rsju\.jura\.ch/);
     }
   });
 });

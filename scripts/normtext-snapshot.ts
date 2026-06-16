@@ -18,10 +18,12 @@ import {
   sammleFallback,
   sammleHtmInventar,
   sammleZhPdfInventar,
+  sammlePdfInventar,
 } from './normtext/inventar-kanton.ts';
 import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
+import { holePdf, PDF_PROFILE } from './normtext/adapter-pdf.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
 import { artikelLabelKurz } from '../src/lib/normtext/passus.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
@@ -433,6 +435,134 @@ async function erzeugeZhPdfSnapshots(
   return cov;
 }
 
+// lawIdSafe für die generischen PDF-Quellen (SZ/TI/VD/JU): ein stabiler,
+// dateisicherer Schlüssel je quelleUrl.
+//   SZ  …/assets/<n>/173_111.pdf          → «173.111»
+//   TI  …/pdfatto/atto/137                → «ti-137»
+//   VD  …/tolv/105539/fr                  → «vd-105539»
+//   JU  …viewdocument.html?idn=20021&id=34172… → «ju-20021-34172»
+function pdfLawIdSafe(profil: 'sz' | 'ti' | 'vd' | 'ju', url: string): string {
+  if (profil === 'sz') {
+    const m = url.match(/\/(\d+_\d+)\.pdf$/i);
+    if (m) return m[1].replace(/_/g, '.');
+  }
+  if (profil === 'ti') {
+    const m = url.match(/\/pdfatto\/atto\/(\d+)/i);
+    if (m) return `ti-${m[1]}`;
+  }
+  if (profil === 'vd') {
+    const m = url.match(/\/tolv\/(\d+)\//i);
+    if (m) return `vd-${m[1]}`;
+  }
+  if (profil === 'ju') {
+    const idn = url.match(/[?&]idn=(\d+)/i);
+    const id = url.match(/[?&]id=(\d+)/i);
+    // Die Download-Variante (…&download=1) ist eine EIGENE Tarif-quelleUrl (=
+    // eigener Manifest-Key) — sie bekommt einen eigenen safe-Dateinamen, damit
+    // sie die Nicht-Download-Variante NICHT überschreibt (beide Keys müssen ins
+    // Manifest; identischer Inhalt, aber distinct quelleUrl).
+    const dl = /[?&]download=1/i.test(url) ? '-dl' : '';
+    if (idn && id) return `ju-${idn[1]}-${id[1]}${dl}`;
+  }
+  return url.replace(/[^a-z0-9.]+/gi, '_');
+}
+
+// ── PDF-Snapshots (SZ/TI/VD/JU, generischer Einzelspalten-PDF-Adapter) ────────
+// Spiegelt die ZH-Phase: Inventar → holePdf (quelleUrl je Profil → PDF) →
+// NormSnapshot. quelleUrl = Tarif-quelleUrl (= Manifest-Key). Drift via
+// quelleHash (kein version_uid), §7 d.
+async function erzeugePdfSnapshots(
+  abgerufen: string,
+  goldenIndex: Record<string, string>,
+): Promise<HtmCoverage> {
+  const inventar = sammlePdfInventar();
+  const ausgangsDir = 'public/normtext/kanton';
+  mkdirSync(ausgangsDir, { recursive: true });
+
+  const cov: HtmCoverage = { totalSnapshots: 0, reportZeilen: [], tokenFehlt: [], fetchFehler: [] };
+
+  // §8 (kein stilles Überschreiben): mehrere Tarif-quelleUrls können DENSELBEN
+  // Erlass meinen (JU: «…&download=1» vs. ohne) → gleicher pdfLawIdSafe → gleiche
+  // Datei. Statt der zweiten Gruppe die erste zu überschreiben (und ihre Artikel
+  // + Manifest-Key zu verlieren), gruppieren wir nach safe-Dateinamen und führen
+  // die Gruppen zusammen: ein Fetch je quelleUrl, je Artikel ein Snapshot, dessen
+  // quelleUrl die ORIGINALE Tarif-quelleUrl trägt (→ baueManifest legt für jede
+  // distinct quelleUrl einen Manifest-Eintrag auf dieselbe Datei an).
+  const nachDatei = new Map<string, typeof inventar>();
+  for (const g of inventar) {
+    const safe = `${g.kanton}-${pdfLawIdSafe(g.profil, g.quelleUrl)}`;
+    let liste = nachDatei.get(safe);
+    if (!liste) {
+      liste = [];
+      nachDatei.set(safe, liste);
+    }
+    liste.push(g);
+  }
+
+  for (const [dateiBasis, gruppen] of nachDatei) {
+    const safe = dateiBasis.replace(/^[A-Z]{2}-/, '');
+    const kanton = gruppen[0].kanton;
+    const snapshotListe: NormSnapshot[] = [];
+    const gesehenTokens = new Set<string>();
+
+    for (const g of gruppen) {
+      const tokens = g.artikel.map((a) => a.token);
+      let ergebnis;
+      try {
+        ergebnis = await holePdf(g.quelleUrl, PDF_PROFILE[g.profil], tokens);
+      } catch (e) {
+        const fehler = e instanceof Error ? e.message : String(e);
+        cov.fetchFehler.push({ kanton: g.kanton, url: g.quelleUrl, fehler });
+        continue;
+      }
+      const erlass = erlassBezeichnung('', g.erlassName, g.erlassNr);
+      for (const art of g.artikel) {
+        const treffer = ergebnis.artikel[art.token];
+        if (!treffer || treffer.bloecke.length === 0) {
+          cov.tokenFehlt.push({ kanton: g.kanton, lawIdSafe: safe, token: art.token, label: art.label });
+          continue;
+        }
+        // Pro (Datei, token, quelleUrl) genau ein Eintrag. Verschiedene quelleUrls
+        // zum selben token (Download-Variante) erzeugen je einen Manifest-fähigen
+        // Eintrag; identische (quelleUrl, token) werden entdoppelt.
+        const dedupeKey = `${g.quelleUrl} ${art.token}`;
+        if (gesehenTokens.has(dedupeKey)) continue;
+        gesehenTokens.add(dedupeKey);
+        const id = `kanton/${g.kanton}/${safe}/art_${art.token}`;
+        const snapshot: NormSnapshot = {
+          id,
+          ebene: 'kanton',
+          quelle: g.kanton,
+          erlass,
+          artikel: art.token,
+          artikelLabel: artikelLabelKurz(art.label),
+          bloecke: treffer.bloecke,
+          stand: ergebnis.meta.stand,
+          quelleUrl: g.quelleUrl,
+          abgerufen,
+          fassungsToken: ergebnis.meta.quelleHash,
+          sha: sha256Bloecke(treffer.bloecke),
+        };
+        snapshotListe.push(snapshot);
+        goldenIndex[id] = snapshot.sha;
+      }
+    }
+
+    if (snapshotListe.length === 0) {
+      cov.reportZeilen.push(`  ${kanton}-${safe.padEnd(16)} 0 Snapshots → keine Datei (alle Tokens nicht im Erlass / Fetch-Fehler)`);
+      continue;
+    }
+
+    const datei: NormSnapshotDatei = { erzeugt: abgerufen, eintraege: snapshotListe };
+    const ausgabePfad = `${ausgangsDir}/${kanton}-${safe}.json`;
+    writeFileSync(ausgabePfad, stabelesJson(datei), 'utf8');
+    cov.totalSnapshots += snapshotListe.length;
+    cov.reportZeilen.push(`  ${kanton}-${safe.padEnd(16)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`);
+  }
+
+  return cov;
+}
+
 // ── Hauptprogramm ─────────────────────────────────────────────────────────────
 async function main(): Promise<void> {
   const abgerufen = leseDatum();
@@ -578,6 +708,17 @@ async function main(): Promise<void> {
   for (const t of zhCov.tokenFehlt) console.log(`  ${t.kanton} ${t.lawIdSafe} art_${t.token} (${t.label})`);
   console.log(`fetch-Fehler (ZH): ${zhCov.fetchFehler.length}`);
   for (const f of zhCov.fetchFehler) console.log(`  ${f.kanton} ${f.url}: ${f.fehler}`);
+
+  // ── PDF-Phase (SZ/TI/VD/JU, generischer Einzelspalten-PDF-Adapter) ───────
+  console.log('\n[Normtext-Snapshot] PDF-Phase (SZ/TI/VD/JU Text-PDF) …');
+  const pdfCov = await erzeugePdfSnapshots(abgerufen, goldenIndex);
+  console.log('\n── PDF-Snapshots (SZ/TI/VD/JU) ───────────────────────────────');
+  for (const z of pdfCov.reportZeilen) console.log(z);
+  console.log(`\nGesamt PDF: ${pdfCov.totalSnapshots} Snapshots in ${pdfCov.reportZeilen.length} Zeile(n)`);
+  console.log(`Token nicht im Erlass (PDF): ${pdfCov.tokenFehlt.length}`);
+  for (const t of pdfCov.tokenFehlt) console.log(`  ${t.kanton} ${t.lawIdSafe} art_${t.token} (${t.label})`);
+  console.log(`fetch-Fehler (PDF): ${pdfCov.fetchFehler.length}`);
+  for (const f of pdfCov.fetchFehler) console.log(`  ${f.kanton} ${f.url}: ${f.fehler}`);
 
   // ── Kanton-Manifest (quelleUrl → Dateiname) aktualisieren ────────────────
   const kantonManifest = baueManifest('public/normtext/kanton');

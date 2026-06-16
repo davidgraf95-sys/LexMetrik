@@ -94,6 +94,34 @@ export interface ZhPdfInventarGruppe {
  *  weil nur die Einzelseite einen OpenAttachment-PDF-Link trägt. */
 const ZH_PDF_QUELLE = /^https:\/\/www\.zh\.ch\/.*\/zhlex-ls\/erlass-[^/]*\.html$/i;
 
+/** Eine Einzelspalten-PDF-Erlassquelle (SZ/TI/VD/JU) mit den zitierten Tokens.
+ *  Eine Gruppe = eine PDF-quelleUrl (= ein Erlass; Manifest-Key). Der generische
+ *  PDF-Adapter (adapter-pdf.ts) löst die quelleUrl je Profil zur PDF auf und
+ *  extrahiert den Volltext. */
+export interface PdfInventarGruppe {
+  kanton: string; // 'SZ' | 'TI' | 'VD' | 'JU'
+  profil: 'sz' | 'ti' | 'vd' | 'ju';
+  quelleUrl: string; // die exakte Tarif-quelleUrl (Manifest-Key)
+  erlassName: string;
+  erlassNr: string;
+  artikel: KantonInventarArtikel[];
+}
+
+/**
+ * PDF-Profil einer (kanton, url)-Kombination oder null. Bewusst NACH dem Kanton
+ * UND dem Host-Muster gescoped: lexfind.ch dient mehreren Kantonen (GE/SZ/TI/VS),
+ * aber nur die VD-lexfind-Erlasse sind als Volltext erschlossen (die übrigen
+ * lexfind-Quellen bleiben Fallback, §8). SZ via sz.ch, TI via m3.ti.ch, JU via
+ * rsju.jura.ch. So aktiviert kein fremder Kanton versehentlich ein Profil.
+ */
+function pdfProfil(kanton: string, url: string): 'sz' | 'ti' | 'vd' | 'ju' | null {
+  if (kanton === 'SZ' && /^https:\/\/www\.sz\.ch\/.*\.pdf$/i.test(url)) return 'sz';
+  if (kanton === 'TI' && /^https:\/\/m3\.ti\.ch\/.*\/pdfatto\/atto\/\d+$/i.test(url)) return 'ti';
+  if (kanton === 'VD' && /^https:\/\/www\.lexfind\.ch\/tolv\/\d+\/[a-z]{2}$/i.test(url)) return 'vd';
+  if (kanton === 'JU' && /^https:\/\/rsju\.jura\.ch\/.*viewdocument\.html\?/i.test(url)) return 'ju';
+  return null;
+}
+
 /** /app/(de|fr)/texts_of_law/<lawId> — Host + Sprache + lawId. */
 const LEXWORK = /^https:\/\/([^/]+)\/app\/(de|fr)\/texts_of_law\/(.+)$/;
 
@@ -306,20 +334,75 @@ export function sammleZhPdfInventar(): ZhPdfInventarGruppe[] {
   return [...gruppen.values()].filter((g) => g.artikel.length > 0);
 }
 
+/**
+ * Gruppiert die SZ/TI/VD/JU-PDF-Tarifquellen nach quelleUrl (= eine PDF = ein
+ * Erlass) und merged die §/Art.-Tokens (dedupe). Nur Einträge mit aktivem
+ * pdfProfil(kanton,url) und einem parsebaren Token werden aufgenommen; verkettete
+ * Zitate («Art. 16 / Art. 84») werden über '/' zerlegt (wie HTM). Einträge ohne
+ * Token (z.B. «Anhang Ziff.») bleiben in sammleFallback().
+ */
+export function sammlePdfInventar(): PdfInventarGruppe[] {
+  const eintraege = alleTarifEintraege();
+  const gruppen = new Map<string, PdfInventarGruppe>();
+
+  for (const e of eintraege) {
+    const profil = pdfProfil(e.kanton, e.quelleUrl);
+    if (!profil) continue;
+
+    let gruppe = gruppen.get(e.quelleUrl);
+    if (!gruppe) {
+      gruppe = {
+        kanton: e.kanton,
+        profil,
+        quelleUrl: e.quelleUrl,
+        erlassName: e.erlassName,
+        erlassNr: e.erlassNr,
+        artikel: [],
+      };
+      gruppen.set(e.quelleUrl, gruppe);
+    }
+
+    for (const teil of e.artikel.split('/')) {
+      const passus = parsePassus(teil);
+      if (!passus) continue;
+      if (!gruppe.artikel.some((a) => a.token === passus.artikelToken)) {
+        gruppe.artikel.push({
+          token: passus.artikelToken,
+          label: teil.trim(),
+          absatz: passus.absatz,
+        });
+      }
+    }
+  }
+
+  return [...gruppen.values()].filter((g) => g.artikel.length > 0);
+}
+
 /** Alle kantonalen Tarifquellen, die WEDER über LexWork NOCH über den HTM-
- *  Adapter (NE/GE) NOCH über den ZH-PDF-Adapter erschlossen sind (PDF,
- *  zhlex-HTML ohne §-Token, lexfind, m3.ti, …) — dedupliziert nach
- *  (kanton, quelleUrl). */
+ *  Adapter (NE/GE) NOCH über den ZH-PDF-Adapter NOCH über den generischen
+ *  PDF-Adapter (SZ/TI/VD/JU) erschlossen sind (übrige lexfind-/PDF-Quellen,
+ *  zhlex-HTML ohne §-Token, …) — dedupliziert nach (kanton, quelleUrl). */
 export function sammleFallback(): FallbackEintrag[] {
   const eintraege = alleTarifEintraege();
   const gesehen = new Set<string>();
   const fallback: FallbackEintrag[] = [];
+
+  // (kanton, quelleUrl)-Kombinationen, die der generische PDF-Adapter bereits
+  // erschliesst (mind. EIN Zitat dieser Quelle hat ein parsebares Token). Eine
+  // SOLCHE Quelle darf NICHT zusätzlich als Fallback geführt werden, auch wenn
+  // ein ANDERES Zitat derselben Quelle keinen Token trägt (sonst doppelte
+  // Zuordnung, §8). Analog deckt der ZH-Block unten je Eintrag ab.
+  const pdfErschlossen = new Set(
+    sammlePdfInventar().map((g) => `${g.kanton}|${g.quelleUrl}`),
+  );
 
   for (const e of eintraege) {
     if (LEXWORK.test(e.quelleUrl)) continue;
     if (htmProfil(e.quelleUrl)) continue; // jetzt über HTM-Adapter erschlossen
     // ZH-PDF-Quellen mit §-Token: über ZH-PDF-Adapter erschlossen.
     if (ZH_PDF_QUELLE.test(e.quelleUrl) && parsePassus(e.artikel)) continue;
+    // SZ/TI/VD/JU-PDF-Quellen, die das PDF-Inventar erschliesst (URL-genau).
+    if (pdfErschlossen.has(`${e.kanton}|${e.quelleUrl}`)) continue;
     const schluessel = `${e.kanton}|${e.quelleUrl}`;
     if (gesehen.has(schluessel)) continue;
     gesehen.add(schluessel);
