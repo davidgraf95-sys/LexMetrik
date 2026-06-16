@@ -6,6 +6,7 @@ import {
   inKraftSeit,
 } from '../../scripts/normtext/adapter-lexwork';
 import { LEXWORK_XHTML_BEISPIEL } from './fixtures/lexwork-beispiel';
+import { LEXWORK_BS_292400_XHTML } from './fixtures/lexwork-bs292400';
 
 describe('inKraftSeit — reines Parsing ohne Netz', () => {
   it('extrahiert «in Kraft seit: DD.MM.YYYY» aus echtem LexWork-String und liefert ISO', () => {
@@ -71,20 +72,21 @@ describe('extrahiereLexWorkArtikel — gegen echte ZG-Fixture', () => {
     });
   });
 
-  it('hängt enumeration_item-Buchstaben an den vorangehenden Absatz', () => {
+  it('erfasst enumeration_item-Buchstaben als items am vorangehenden Absatz', () => {
     const a = extrahiereLexWorkArtikel(LEXWORK_XHTML_BEISPIEL, '3');
     expect(a).not.toBeNull();
     expect(a!.bloecke).toHaveLength(2);
-    // § 3 Abs. 1 + drei Buchstaben a)–c).
+    // § 3 Abs. 1: Einleitungstext + drei Buchstaben-items a)–c).
     expect(a!.bloecke[0].absatz).toBe('1');
-    expect(a!.bloecke[0].text).toBe(
-      'Grundlage für die Festsetzung der Gebühr bilden: ' +
-        'a) der Streitwert bzw. das tatsächliche Streitinteresse in Zivilverfahren; ' +
-        'b) die Bedeutung des Falls; ' +
-        'c) der Zeitaufwand und die Schwierigkeit des Falls.',
-    );
-    // Der Folge-Absatz 2 hängt NICHT die Aufzählung dran.
+    expect(a!.bloecke[0].text).toBe('Grundlage für die Festsetzung der Gebühr bilden:');
+    expect(a!.bloecke[0].items).toEqual([
+      { marke: 'a', text: 'der Streitwert bzw. das tatsächliche Streitinteresse in Zivilverfahren;' },
+      { marke: 'b', text: 'die Bedeutung des Falls;' },
+      { marke: 'c', text: 'der Zeitaufwand und die Schwierigkeit des Falls.' },
+    ]);
+    // Der Folge-Absatz 2 hat KEINE items.
     expect(a!.bloecke[1].absatz).toBe('2');
+    expect(a!.bloecke[1].items).toBeUndefined();
     expect(a!.bloecke[1].text).toBe(
       'Der Streitwert gemäss Abs. 1 Bst. a wird nach Art. 91 – 94 ZPO bestimmt.',
     );
@@ -92,6 +94,56 @@ describe('extrahiereLexWorkArtikel — gegen echte ZG-Fixture', () => {
 
   it('liefert null für einen fehlenden Token', () => {
     expect(extrahiereLexWorkArtikel(LEXWORK_XHTML_BEISPIEL, '99')).toBeNull();
+  });
+});
+
+describe('extrahiereLexWorkArtikel — INLINE-Aufzählung (BS 292.400 §11, kein enumeration_item)', () => {
+  it('erfasst § 11 als EINEN Absatz mit Ziffern-items', () => {
+    const a = extrahiereLexWorkArtikel(LEXWORK_BS_292400_XHTML, '11');
+    expect(a).not.toBeNull();
+    // BS §11 = ein <div class='paragraph'> (Absatz «1»).
+    expect(a!.bloecke).toHaveLength(1);
+    expect(a!.bloecke[0].absatz).toBe('1');
+    expect(a!.bloecke[0].items).toBeDefined();
+  });
+
+  it('erfasst Ziff. 1 (Stiftung) inkl. Folge-Tarifzeilen', () => {
+    const a = extrahiereLexWorkArtikel(LEXWORK_BS_292400_XHTML, '11');
+    const items = a!.bloecke[0].items!;
+    const z1 = items.find((i) => i.marke === '1');
+    expect(z1).toBeDefined();
+    expect(z1!.text).toContain('Stiftung:');
+    // Folge-Spans ohne Marke sind an Ziff. 1 angehängt.
+    expect(z1!.text).toContain('Errichtung durch lebzeitiges Geschäft');
+    expect(z1!.text).toContain('zusätzlich 0,15%.');
+  });
+
+  it('erfasst die zitierte Ziff. 17 (Übertragung von Grundeigentum) vollständig', () => {
+    const a = extrahiereLexWorkArtikel(LEXWORK_BS_292400_XHTML, '11');
+    const items = a!.bloecke[0].items!;
+    const z17 = items.find((i) => i.marke === '17');
+    expect(z17).toBeDefined();
+    expect(z17!.text).toContain('Übertragung von Grundeigentum:');
+    expect(z17!.text).toContain('bei Werten bis zu CHF 2 Mio. 0,25%');
+    expect(z17!.text).toContain('höchstens jedoch CHF 50’000.');
+  });
+
+  it('lässt leere/aufgehobene Ziffern (13.–15.) weg, behält die echten', () => {
+    const a = extrahiereLexWorkArtikel(LEXWORK_BS_292400_XHTML, '11');
+    const marken = a!.bloecke[0].items!.map((i) => i.marke);
+    // 13/14/15 sind leere Marken → nicht als items.
+    expect(marken).not.toContain('13');
+    expect(marken).not.toContain('14');
+    expect(marken).not.toContain('15');
+    // Die echten Ziffern sind da.
+    expect(marken).toEqual(expect.arrayContaining(['1', '16', '17', '20']));
+  });
+
+  it('erfasst Unterpunkte a)/b) (Ziff. 20) als eigene items', () => {
+    const a = extrahiereLexWorkArtikel(LEXWORK_BS_292400_XHTML, '11');
+    const marken = a!.bloecke[0].items!.map((i) => i.marke);
+    expect(marken).toContain('a');
+    expect(marken).toContain('b');
   });
 });
 

@@ -32,7 +32,11 @@
 import { dekodiereEntities } from './html-entities.ts';
 
 export interface LexArtikel {
-  bloecke: Array<{ absatz: string | null; text: string }>;
+  bloecke: Array<{
+    absatz: string | null;
+    text: string;
+    items?: Array<{ marke: string; text: string }>;
+  }>;
 }
 
 export interface LexWorkErgebnis {
@@ -92,41 +96,105 @@ export function extrahiereLexWorkArtikel(
   return null;
 }
 
+// Aufzählungs-Marke am Anfang eines text_content-Spans:
+//   «1. », «17. », «5a. », «36a. »  → Ziffern-Punkt (Bemerkung: a/b/c als
+//   GANZE Marke nur in Klammer-Form «a) », nie «a. » — der reine «a.» kommt in
+//   LexWork-Tarifen nicht als Aufzählungsmarke vor und würde sonst Satzanfänge
+//   zerschneiden). Klammer-Form «a) », «b) » → Buchstaben-Unterpunkt.
+const INLINE_MARKE = /^\s*(\d+[a-z]?)\.\s+|^\s*([a-z])\)\s+/;
+
+/**
+ * Zerlegt einen Absatz mit mehreren text_content-Spans in Einleitung + items,
+ * wenn die Spans eine INLINE-Aufzählung bilden (BS 292.400 §11-Stil:
+ * «1. Stiftung:», «17. Übertragung …», Unterpunkte «a) …»). Spans VOR der
+ * ersten Marke bilden den Einleitungstext; ab der ersten Marke beginnt je
+ * Marke ein item, Folge-Spans ohne Marke werden an das laufende item gehängt.
+ *
+ * Hat KEIN Span eine Marke, gibt es keine Aufzählung → items leer, der ganze
+ * Absatztext steht in `text` (Normalfall einfacher Absätze).
+ */
+function spaltInline(spans: string[]): {
+  text: string;
+  items: Array<{ marke: string; text: string }>;
+} {
+  const intro: string[] = [];
+  const items: Array<{ marke: string; text: string }> = [];
+  for (const roh of spans) {
+    const m = roh.match(INLINE_MARKE);
+    if (m) {
+      const marke = (m[1] ?? m[2]).toLowerCase();
+      const rest = roh.slice(m[0].length);
+      items.push({ marke, text: rest });
+    } else if (items.length > 0) {
+      // Folge-Span ohne Marke → an das laufende item anhängen.
+      items[items.length - 1].text = `${items[items.length - 1].text} ${roh}`.trim();
+    } else {
+      intro.push(roh);
+    }
+  }
+  return {
+    text: intro.join(' ').trim(),
+    // Leere Marken-Punkte (z.B. aufgehobene Ziff. 13–15: «13.») wegfiltern,
+    // aber die Marke behalten, falls Text vorhanden.
+    items: items.filter((i) => i.text !== ''),
+  };
+}
+
 /** Wandelt ein Artikel-Segment (Kopf + folgende paragraph/enumeration-Geschwister)
- *  in die Absatz-Blöcke um. enumeration_item-Zeilen werden an den jeweils
- *  vorangehenden Absatz angehängt. */
+ *  in die Absatz-Blöcke um. Zwei reale Aufzählungs-Formen (Spike 16.6.2026):
+ *   (1) enumeration_item-Tabelle  → je Tabelle ein item, an den vorigen Absatz.
+ *   (2) INLINE im Absatz (BS §11) → ein paragraph mit vielen text_content-Spans,
+ *       deren Marken «N.»/«a)» die items abgrenzen. */
 function parseSegment(segment: string): LexArtikel {
   const bloecke: LexArtikel['bloecke'] = [];
 
-  // paragraph-Blöcke (bis zum schliessenden </p></div>) und enumeration_item-
-  // Tabellen in Dokumentreihenfolge durchlaufen — beides sind Geschwister.
+  // paragraph-Blöcke (bis zum schliessenden </p></div>, das den GANZEN Absatz
+  // inkl. mehrerer <p> umschliesst) und enumeration_item-Tabellen in
+  // Dokumentreihenfolge — beides sind Geschwister.
   for (const m of segment.matchAll(
     /<div\s+class='paragraph'>([\s\S]*?)<\/p>\s*<\/div>|<table\s+class='enumeration_item'>([\s\S]*?)<\/table>/gi,
   )) {
     if (m[1] !== undefined) {
-      // paragraph: Nummer aus erstem .number-Span, Text aus .text_content (oder <p>).
+      // paragraph: Nummer aus erstem .number-Span; ALLE text_content-Spans lesen
+      // (BS §11 hat viele pro Absatz). Kein text_content → ganzer <p>-Inhalt.
       const inner = m[1];
       const numMatch = inner.match(/<span\s+class='number'>([\s\S]*?)<\/span>/i);
       const absatz = numMatch ? bereinige(numMatch[1]) || null : null;
-      const txtMatch = inner.match(
-        /<span\s+class='text_content'>([\s\S]*?)<\/span>/i,
-      );
-      const text = bereinige(txtMatch ? txtMatch[1] : inner.replace(/<span\s+class='number'>[\s\S]*?<\/span>/i, ''));
-      bloecke.push({ absatz, text });
+      const ohneNummer = inner.replace(/<span\s+class='number'>[\s\S]*?<\/span>/i, '');
+      const spans = [
+        ...ohneNummer.matchAll(/<span\s+class='text_content'>([\s\S]*?)<\/span>/gi),
+      ].map((s) => bereinige(s[1]));
+      if (spans.length === 0) {
+        const text = bereinige(ohneNummer);
+        bloecke.push({ absatz, text });
+      } else {
+        const { text, items } = spaltInline(spans);
+        const block: LexArtikel['bloecke'][number] = { absatz, text };
+        if (items.length > 0) block.items = items;
+        bloecke.push(block);
+      }
     } else if (m[2] !== undefined) {
-      // enumeration_item: an den vorigen Absatz anhängen (Nummer + Text).
+      // enumeration_item: Marke aus td.number, Text aus den übrigen td → ein item
+      // am vorigen Absatz.
       const inner = m[2];
-      const cells = [...inner.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi)].map((c) =>
-        bereinige(c[1]),
-      );
-      const zeile = cells.filter(Boolean).join(' ').trim();
-      if (zeile) {
+      const numCell = inner.match(/<td[^>]*\bclass='[^']*\bnumber\b[^']*'[^>]*>([\s\S]*?)<\/td>/i);
+      const markeRoh = numCell ? bereinige(numCell[1]) : '';
+      const marke = (markeRoh.match(/^([0-9]+[a-z]?|[a-z])/i)?.[1] ?? markeRoh)
+        .toLowerCase();
+      // alle NICHT-number-td als Text
+      const textZellen = [...inner.matchAll(/<td([^>]*)>([\s\S]*?)<\/td>/gi)]
+        .filter((c) => !/\bclass='[^']*\bnumber\b[^']*'/i.test(c[1]))
+        .map((c) => bereinige(c[2]))
+        .filter(Boolean);
+      const text = textZellen.join(' ').trim();
+      if (marke && text) {
+        const item = { marke, text };
         if (bloecke.length > 0) {
-          bloecke[bloecke.length - 1].text =
-            `${bloecke[bloecke.length - 1].text} ${zeile}`.trim();
+          const last = bloecke[bloecke.length - 1];
+          (last.items ??= []).push(item);
         } else {
           // Aufzählung ohne vorangehenden Absatz (selten) → eigener Block.
-          bloecke.push({ absatz: null, text: zeile });
+          bloecke.push({ absatz: null, text: '', items: [item] });
         }
       }
     }

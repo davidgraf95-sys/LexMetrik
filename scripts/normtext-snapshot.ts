@@ -69,9 +69,25 @@ function artikelLabel(token: string): string {
   return 'Art. ' + token.replace(/_/g, '');
 }
 
-// ── SHA256 des Block-Texts ────────────────────────────────────────────────────
-function sha256Bloecke(bloecke: Array<{ absatz: string | null; text: string }>): string {
-  const zusammen = bloecke.map((b) => b.text).join('\n');
+// ── SHA256 des Block-Texts INKL. Aufzählungs-Items ───────────────────────────
+// Der sha muss auch die items abdecken, sonst erkennt der Drift-Check
+// Inhaltsänderungen in den lit./Ziff.-Punkten nicht. marke + text je item
+// fliessen ein (Reihenfolge stabil).
+function sha256Bloecke(
+  bloecke: Array<{
+    absatz: string | null;
+    text: string;
+    items?: Array<{ marke: string; text: string }>;
+  }>,
+): string {
+  const zusammen = bloecke
+    .map((b) => {
+      const itemTeil = (b.items ?? [])
+        .map((i) => `${i.marke}\t${i.text}`)
+        .join('\n');
+      return itemTeil ? `${b.text}\n${itemTeil}` : b.text;
+    })
+    .join('\n');
   return createHash('sha256').update(zusammen, 'utf8').digest('hex');
 }
 

@@ -24,8 +24,14 @@ const OR_ART_335_C = `<article id="art_335_c"><a name="a335c"></a><h6 class="hea
 // Echter Ausschnitt aus /tmp/zpo.html (Konsolidierung 20250101)
 const ZPO_ART_96 = `<article id="art_96"><a name="a96"></a><h6 class="heading" role="heading"><span class="display-icon"></span><span class="external-link-icon"></span><a href="#art_96"><b>Art.&nbsp;96</b></a><sup><a href="#fn-d8e2374" id="fnbck-d8e2374">59</a></sup><a href="#art_96"> Tarife und Anspruch der Vertretung auf Parteientschädigung</a></h6><div class="collapseable"> <p class="absatz "><sup>1</sup>&nbsp;Die Kantone setzen die Tarife für die Prozesskosten fest. Vorbehalten bleibt die Gebührenregelung nach Artikel 16 Absatz 1 SchKG<sup><a href="#fn-d8e2396" id="fnbck-d8e2396">60</a></sup>. </p><p class="absatz "><sup>2</sup>&nbsp;Die Kantone können vorsehen, dass die Anwältin oder der Anwalt einen ausschliesslichen Anspruch auf die Honorare und Auslagen hat, die als Parteientschädigung gewährt werden.</p><div class="footnotes"><p id="fn-d8e2374"><sup><a href="#fnbck-d8e2374">59</a></sup><sup></sup> Fassung gemäss Ziff. I des BG vom 17. März 2023.</p><p id="fn-d8e2396"><sup><a href="#fnbck-d8e2396">60</a></sup><sup></sup> SR 281.1</p></div></div></article>`;
 
+// ── Fixture 4: OR Art. 336 (lit.-Aufzählungen a–e in Abs. 1, a–c in Abs. 2) ──
+// Echter Ausschnitt aus /tmp/or.html (Konsolidierung 20260101). Belegt die
+// reale <dl><dt>a. </dt><dd>…</dd>-Struktur, mit Fussnoten-<sup> in einzelnen
+// <dt> (e.<sup><a>199</a></sup>) und <dd> (Abs. 2 lit. c).
+const OR_ART_336 = `<article id="art_336"><a name="a336"></a><h6 class="heading " role="heading"><span class="display-icon"></span><span class="external-link-icon"></span><a href="#art_336"><b>Art. 336</b></a><sup><a href="#fn-d7e12013" id="fnbck-d7e12013">198</a></sup></h6><div class="collapseable"><p class="absatz man-space-before-4 "><sup>1</sup>&nbsp;Die Kündigung eines Arbeitsverhältnisses ist missbräuchlich, wenn eine Partei sie ausspricht:</p><dl class="man-space-after-0 "><dt class="man-space-before-4  ">a. </dt><dd class="man-space-before-4  ">wegen einer Eigenschaft, die der anderen Partei kraft ihrer Persönlichkeit zusteht, es sei denn, diese Eigenschaft stehe in einem Zusammenhang mit dem Arbeitsverhältnis oder beeinträchtige wesentlich die Zusammenarbeit im Betrieb;</dd><dt class="man-space-before-4  ">b. </dt><dd class="man-space-before-4  ">weil die andere Partei ein verfassungsmässiges Recht ausübt, es sei denn, die Rechtsausübung verletze eine Pflicht aus dem Arbeitsverhältnis oder beeinträchtige wesentlich die Zusammenarbeit im Betrieb;</dd><dt class="man-space-before-4  ">c. </dt><dd class="man-space-before-4  ">ausschliesslich um die Entstehung von Ansprüchen der anderen Partei aus dem Arbeitsverhältnis zu vereiteln;</dd><dt class="man-space-before-4  ">d. </dt><dd class="man-space-before-4  ">weil die andere Partei nach Treu und Glauben Ansprüche aus dem Arbeitsverhältnis geltend macht;</dd><dt class="man-space-before-4  ">e.<sup><a href="#fn-d7e12060" id="fnbck-d7e12060">199</a></sup> </dt><dd class="man-space-before-4  ">weil die andere Partei schweizerischen obligatorischen Militär- oder Schutzdienst oder schweizerischen Zivildienst leistet oder eine nicht freiwillig übernommene gesetzliche Pflicht erfüllt.</dd></dl><p class="absatz man-space-before-4 "><sup>2</sup>&nbsp;Die Kündigung des Arbeitsverhältnisses durch den Arbeitgeber ist im Weiteren missbräuchlich, wenn sie ausgesprochen wird:</p><dl class="man-space-after-0 "><dt class="man-space-before-4  ">a. </dt><dd class="man-space-before-4  ">weil der Arbeitnehmer einem Arbeitnehmerverband angehört oder nicht angehört oder weil er eine gewerkschaftliche Tätigkeit rechtmässig ausübt;</dd><dt class="man-space-before-4  ">b. </dt><dd class="man-space-before-4  ">während der Arbeitnehmer gewählter Arbeitnehmervertreter in einer betrieblichen oder in einer dem Unternehmen angeschlossenen Einrichtung ist, und der Arbeitgeber nicht beweisen kann, dass er einen begründeten Anlass zur Kündigung hatte;</dd><dt class="man-space-before-4  ">c.<sup><a href="#fn-d7e12098" id="fnbck-d7e12098">200</a></sup> </dt><dd class="man-space-before-4  ">im Rahmen einer Massenentlassung, ohne dass die Arbeitnehmervertretung oder, falls es keine solche gibt, die Arbeitnehmer, konsultiert worden sind (Art. 335<i>f</i>).</dd></dl><p class="absatz man-space-before-4 "><sup>3</sup>&nbsp;Der Schutz eines Arbeitnehmervertreters nach Absatz&nbsp;2 Buchstabe&nbsp;b, dessen Mandat infolge Übergangs des Arbeitsverhältnisses endet (Art.&nbsp;333), besteht so lange weiter, als das Mandat gedauert hätte, falls das Arbeitsverhältnis nicht übertragen worden wäre.<sup><a href="#fn-d7e12124" id="fnbck-d7e12124">201</a></sup></p></div></article>`;
+
 // ── HTML-Dokumente für die Tests (Artikel eingebettet in umgebende Struktur) ──
-const HTML_OR = `<html><body>${OR_ART_77}${OR_ART_335_C}</body></html>`;
+const HTML_OR = `<html><body>${OR_ART_77}${OR_ART_335_C}${OR_ART_336}</body></html>`;
 const HTML_ZPO = `<html><body>${ZPO_ART_96}</body></html>`;
 
 describe('extrahiereArtikel', () => {
@@ -59,6 +65,15 @@ describe('extrahiereArtikel', () => {
       expect(result!.bloecke[3].absatz).toBe('3');
       expect(result!.bloecke[3].text).toMatch(/^Soll die Erfüllung innerhalb/);
     });
+
+    it('Abs. 1 erfasst die Ziffern-Aufzählung 1.–3. als items', () => {
+      const result = extrahiereArtikel(HTML_OR, '77');
+      const items = result!.bloecke[0].items;
+      expect(items).toBeDefined();
+      expect(items!.map((i) => i.marke)).toEqual(['1', '2', '3']);
+      expect(items![0].text).toMatch(/^wenn die Frist nach Tagen/);
+      expect(items![2].text).toMatch(/letzten Tag dieses Monates\.$/);
+    });
   });
 
   describe('OR Art. 335_c — Buchstaben-Artikel mit Fussnoten-<sup> in Abs. 3', () => {
@@ -86,6 +101,39 @@ describe('extrahiereArtikel', () => {
       const result = extrahiereArtikel(HTML_OR, '335_c');
       const text = result!.bloecke[2].text;
       expect(text.trim()).not.toMatch(/\d{3}$/);
+    });
+  });
+
+  describe('OR Art. 336 — lit.-Aufzählungen (a–e / a–c) als items', () => {
+    it('Abs. 1 hat lit. a–e vollständig als items', () => {
+      const result = extrahiereArtikel(HTML_OR, '336');
+      expect(result).not.toBeNull();
+      const abs1 = result!.bloecke[0];
+      expect(abs1.absatz).toBe('1');
+      expect(abs1.text).toMatch(/missbräuchlich, wenn eine Partei sie ausspricht:$/);
+      expect(abs1.items).toBeDefined();
+      expect(abs1.items!.map((i) => i.marke)).toEqual(['a', 'b', 'c', 'd', 'e']);
+      expect(abs1.items![0].text).toMatch(/^wegen einer Eigenschaft/);
+      // lit. e trägt einen Fussnoten-<sup> in der <dt>-Marke → Marke bleibt 'e',
+      // die Fussnoten-Zahl (199) erscheint NICHT im Text.
+      expect(abs1.items![4].text).toMatch(/^weil die andere Partei schweizerischen/);
+      expect(abs1.items![4].text).not.toMatch(/\b199\b/);
+    });
+
+    it('Abs. 2 hat lit. a–c, lit. c ohne Fussnoten-Zahl', () => {
+      const result = extrahiereArtikel(HTML_OR, '336');
+      const abs2 = result!.bloecke[1];
+      expect(abs2.absatz).toBe('2');
+      expect(abs2.items!.map((i) => i.marke)).toEqual(['a', 'b', 'c']);
+      expect(abs2.items![2].text).toMatch(/^im Rahmen einer Massenentlassung/);
+      expect(abs2.items![2].text).not.toMatch(/\b200\b/);
+    });
+
+    it('Abs. 3 (ohne Aufzählung) hat keine items', () => {
+      const result = extrahiereArtikel(HTML_OR, '336');
+      const abs3 = result!.bloecke[2];
+      expect(abs3.absatz).toBe('3');
+      expect(abs3.items).toBeUndefined();
     });
   });
 

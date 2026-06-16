@@ -14,7 +14,11 @@
  */
 
 export interface ArtikelText {
-  bloecke: Array<{ absatz: string | null; text: string }>;
+  bloecke: Array<{
+    absatz: string | null;
+    text: string;
+    items?: Array<{ marke: string; text: string }>;
+  }>;
 }
 
 import { dekodiereEntities } from './html-entities.ts';
@@ -38,38 +42,56 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
 
   const inner = articleMatch[1];
 
-  // Alle <p class="...absatz..."> extrahieren
-  const absatzRe = /<p[^>]*\bclass="[^"]*\babsatz\b[^"]*"[^>]*>([\s\S]*?)<\/p>/gi;
+  // <p class="...absatz..."> UND <dl>-Aufzählungen in DOKUMENTREIHENFOLGE
+  // durchlaufen (Geschwister im collapseable-div). Eine <dl> gehört inhaltlich
+  // zum vorausgehenden Absatz (dessen Einleitungssatz auf «:» endet) → ihre
+  // <dt>/<dd>-Paare werden als items an den letzten Block gehängt.
+  const bloeckeUndListenRe =
+    /<p[^>]*\bclass="[^"]*\babsatz\b[^"]*"[^>]*>([\s\S]*?)<\/p>|<dl[^>]*>([\s\S]*?)<\/dl>/gi;
   const bloecke: ArtikelText['bloecke'] = [];
 
-  for (const match of inner.matchAll(absatzRe)) {
-    const roh = match[1];
+  for (const match of inner.matchAll(bloeckeUndListenRe)) {
+    if (match[1] !== undefined) {
+      // ── Absatz (<p class="absatz">) ──────────────────────────────────────
+      const roh = match[1];
 
-    // Absatznummer: erstes <sup>, das KEIN <a>-Kind enthält und nur Ziffern/[a-z] enthält.
-    // Fussnoten-<sup> sehen so aus: <sup><a href="...">188</a></sup> → verwerfen.
-    const supMatch = roh.match(/^(?:\s|&nbsp;)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
-    let absatz: string | null = null;
-    if (supMatch) {
-      const supInhalt = supMatch[1];
-      // Nur akzeptieren wenn kein <a>-Tag drin steckt und der Text nur Ziffern/[a-z] ist
-      if (!/<a[\s>]/i.test(supInhalt) && /^\d+[a-z]?$/.test(supInhalt.trim())) {
-        absatz = supInhalt.trim();
+      // Absatznummer: erstes <sup>, das KEIN <a>-Kind enthält und nur Ziffern/[a-z] enthält.
+      // Fussnoten-<sup> sehen so aus: <sup><a href="...">188</a></sup> → verwerfen.
+      const supMatch = roh.match(/^(?:\s|&nbsp;)*<sup(?:[^>]*)>([\s\S]*?)<\/sup>/i);
+      let absatz: string | null = null;
+      if (supMatch) {
+        const supInhalt = supMatch[1];
+        // Nur akzeptieren wenn kein <a>-Tag drin steckt und der Text nur Ziffern/[a-z] ist
+        if (!/<a[\s>]/i.test(supInhalt) && /^\d+[a-z]?$/.test(supInhalt.trim())) {
+          absatz = supInhalt.trim();
+        }
       }
-    }
 
-    // Fussnoten-<sup><a ...>…</a></sup> entfernen, BEVOR entferneTags läuft —
-    // sonst bleibt die Zahl (z.B. «188») als Text stehen.
-    const ohneFootnotes = roh.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
+      // Fussnoten-<sup><a ...>…</a></sup> entfernen, BEVOR entferneTags läuft —
+      // sonst bleibt die Zahl (z.B. «188») als Text stehen.
+      const ohneFootnotes = roh.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
 
-    // Absatznummer-<sup> (gesetzt falls absatz != null) aus dem Roh-Text entfernen,
-    // damit die Ziffer nicht in den sichtbaren Text einfließt.
-    const ohneAbsatzNr = absatz
-      ? ohneFootnotes.replace(/^(?:\s|&nbsp;)*<sup[^>]*>\d+[a-z]?<\/sup>(?:&nbsp;|\s)*/i, '')
-      : ohneFootnotes;
+      // Absatznummer-<sup> (gesetzt falls absatz != null) aus dem Roh-Text entfernen,
+      // damit die Ziffer nicht in den sichtbaren Text einfließt.
+      const ohneAbsatzNr = absatz
+        ? ohneFootnotes.replace(/^(?:\s|&nbsp;)*<sup[^>]*>\d+[a-z]?<\/sup>(?:&nbsp;|\s)*/i, '')
+        : ohneFootnotes;
 
-    const text = entferneTags(ohneAbsatzNr).trim();
-    if (text) {
-      bloecke.push({ absatz, text });
+      const text = entferneTags(ohneAbsatzNr).trim();
+      if (text) {
+        bloecke.push({ absatz, text });
+      }
+    } else if (match[2] !== undefined) {
+      // ── Aufzählung (<dl><dt>marke.</dt><dd>text</dd>…</dl>) ───────────────
+      const items = parseDefinitionsListe(match[2]);
+      if (items.length > 0) {
+        if (bloecke.length > 0) {
+          bloecke[bloecke.length - 1].items = items;
+        } else {
+          // Liste ohne vorangehenden Absatz (selten) → eigener Block.
+          bloecke.push({ absatz: null, text: '', items });
+        }
+      }
     }
   }
 
@@ -81,6 +103,37 @@ export function extrahiereArtikel(html: string, token: string): ArtikelText | nu
   }
 
   return { bloecke };
+}
+
+/**
+ * Zerlegt eine Fedlex-<dl>-Aufzählung in lit./Ziff.-Items.
+ *
+ * Reale Struktur (SPIKE 16.6.2026, OR art_336/art_77):
+ *   <dl><dt>a. </dt><dd>…Text;</dd><dt>b. </dt><dd>…</dd>…</dl>
+ * Die <dt>-Marke ist «a. », «1. » o.ä.; einzelne <dt> tragen einen
+ * Fussnoten-<sup><a>…</a></sup> (z.B. «e.<sup><a>199</a></sup> »).
+ *
+ * marke = Buchstabe/Ziffer OHNE Punkt und ohne Fussnote ('a','b','17').
+ * text  = bereinigter <dd>-Inhalt (Fussnoten-<sup> entfernt, Entities dekodiert).
+ */
+function parseDefinitionsListe(dlInner: string): Array<{ marke: string; text: string }> {
+  const items: Array<{ marke: string; text: string }> = [];
+  const paarRe =
+    /<dt[^>]*>([\s\S]*?)<\/dt>\s*<dd[^>]*>([\s\S]*?)<\/dd>/gi;
+  for (const m of dlInner.matchAll(paarRe)) {
+    // Fussnoten-<sup><a>…</a></sup> aus der <dt>-Marke und dem <dd>-Text tilgen.
+    const dtOhneFn = m[1].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
+    const ddOhneFn = m[2].replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
+    const markeRoh = entferneTags(dtOhneFn);
+    // «a.» / «17.» / «a)» → nackte Marke ohne Punkt/Klammer.
+    const markeMatch = markeRoh.match(/^([0-9]+[a-z]?|[a-z])\s*[.)]?/i);
+    const marke = markeMatch ? markeMatch[1].toLowerCase() : markeRoh.replace(/[.)]\s*$/, '');
+    const text = entferneTags(ddOhneFn);
+    if (marke && text) {
+      items.push({ marke, text });
+    }
+  }
+  return items;
 }
 
 /**
