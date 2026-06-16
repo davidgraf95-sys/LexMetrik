@@ -1,0 +1,367 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "bund/ZPO/art_4",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Recht regelt die sachliche und funktionelle Zuständigkeit der Gerichte, soweit das Gesetz nichts anderes bestimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Hängt die sachliche Zuständigkeit vom Streitwert ab, so erfolgt dessen Berechnung nach diesem Gesetz."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_4",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "035ee99da751e8e4199e95fcfa57bc40dfbb79ce4fbfef910ee77eb20c218ebb"
+    },
+    {
+      "id": "bund/ZPO/art_6",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kantone können ein Fachgericht bezeichnen, welches als einzige kantonale Instanz für handelsrechtliche Streitigkeiten zuständig ist (Handelsgericht)."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Streitigkeit gilt als handelsrechtlich, wenn:"
+        },
+        {
+          "absatz": "3",
+          "text": "Ist nur die beklagte Partei als Rechtseinheit im schweizerischen Handelsregister oder in einem vergleichbaren ausländischen Register eingetragen, sind aber die übrigen Voraussetzungen erfüllt, so kann die klagende Partei zwischen dem Handelsgericht und dem ordentlichen Gericht wählen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kantone können das Handelsgericht ausserdem zuständig erklären für:"
+        },
+        {
+          "absatz": "5",
+          "text": "Das Handelsgericht ist auch für die Anordnung vorsorglicher Massnahmen vor Eintritt der Rechtshängigkeit einer Klage zuständig."
+        },
+        {
+          "absatz": "6",
+          "text": "Betreffen Klagen Streitgenossen, die nicht alle als Rechtseinheiten im schweizerischen Handelsregister oder in einem vergleichbaren ausländischen Register eingetragen sind, so ist das Handelsgericht nur zuständig, wenn alle Klagen in seine Zuständigkeit fallen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_6",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "e7f68e5bf3bada11c3706453d241c7c0ca4492c4a47de7d1f8dd25ccd7e0baf8"
+    },
+    {
+      "id": "bund/ZPO/art_68",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede prozessfähige Partei kann sich im Prozess vertreten lassen."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur berufsmässigen Vertretung sind befugt:"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vertreterin oder der Vertreter hat sich durch eine Vollmacht auszuweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Gericht kann das persönliche Erscheinen einer vertretenen Partei anordnen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_68",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "a8cbcf79dcf028b3d3770839d773718fbe7c67f3f6ff66ffd1f7aa1638846226"
+    },
+    {
+      "id": "bund/ZPO/art_145",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "145",
+      "artikelLabel": "Art. 145",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gesetzliche und gerichtliche Fristen stehen still:"
+        },
+        {
+          "absatz": "2",
+          "text": "Dieser Fristenstillstand gilt nicht für:"
+        },
+        {
+          "absatz": "3",
+          "text": "Die Parteien sind auf die Ausnahmen nach Absatz 2 hinzuweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bestimmungen dieses Gesetzes über den Stillstand der Fristen sind für alle Klagen nach dem SchKG, die vor einem Gericht einzureichen sind, anwendbar. Sie sind für die Beschwerde vor der Aufsichtsbehörde nicht anwendbar."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_145",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "b845d476ae4c05c8f6960268ea82794796e04d42e92e5b911043bb736c5ebf14"
+    },
+    {
+      "id": "bund/ZPO/art_197",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "197",
+      "artikelLabel": "Art. 197",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dem Entscheidverfahren geht ein Schlichtungsversuch vor einer Schlichtungsbehörde voraus."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_197",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "e4afe6489e9d41faee4751e6883e4ca271fa4a8c5f45c321766e37263611ce1d"
+    },
+    {
+      "id": "bund/ZPO/art_198",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "198",
+      "artikelLabel": "Art. 198",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Schlichtungsverfahren entfällt:"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_198",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "8f0a2648c7676ae6ed98ae77863afa49fcff5ef215d0fafaf2220f63aa081be4"
+    },
+    {
+      "id": "bund/ZPO/art_199",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "199",
+      "artikelLabel": "Art. 199",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei vermögensrechtlichen Streitigkeiten mit einem Streitwert von mindestens 100 000 Franken können die Parteien gemeinsam auf die Durchführung des Schlichtungsverfahrens verzichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die klagende Partei kann einseitig auf das Schlichtungsverfahren verzichten, wenn:"
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Streitigkeiten, für die nach den Artikeln 5, 6 und 8 eine einzige kantonale Instanz zuständig ist, kann die klagende Partei die Klage direkt beim Gericht einreichen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_199",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "b8cbd8878a37944c5807f35925b7c46480d1196767d7d003b66216e8685e007e"
+    },
+    {
+      "id": "bund/ZPO/art_210",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "210",
+      "artikelLabel": "Art. 210",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schlichtungsbehörde kann den Parteien einen Entscheidvorschlag unterbreiten in:"
+        },
+        {
+          "absatz": "2",
+          "text": "Der Entscheidvorschlag kann eine kurze Begründung enthalten; im Übrigen gilt Artikel 238 sinngemäss."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_210",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "e7b30b20d09b1eb03eb2d8ae86baf07e52e35b226d3177437bf468c390ded372"
+    },
+    {
+      "id": "bund/ZPO/art_212",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "212",
+      "artikelLabel": "Art. 212",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vermögensrechtliche Streitigkeiten bis zu einem Streitwert von 2000 Franken kann die Schlichtungsbehörde entscheiden, sofern die klagende Partei einen entsprechenden Antrag stellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verfahren ist mündlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei einem Entscheid gemäss Absatz 1 legt die Schlichtungsbehörde die Gerichtskosten und die Parteientschädigung fest."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_212",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "56b846588e9b81970747dea2aad0261c144c2903ca42f4497ad966a933dbcb05"
+    },
+    {
+      "id": "bund/ZPO/art_243",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "243",
+      "artikelLabel": "Art. 243",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das vereinfachte Verfahren gilt für vermögensrechtliche Streitigkeiten bis zu einem Streitwert von 30 000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Es gilt ohne Rücksicht auf den Streitwert bei Streitigkeiten:"
+        },
+        {
+          "absatz": "3",
+          "text": "Es findet keine Anwendung in Streitigkeiten vor der einzigen kantonalen Instanz nach den Artikeln 5 und 8 und vor dem Handelsgericht nach Artikel 6."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_243",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "1d57c339a39bba54af8cd56ecfa76ed961f7fed4379062706c2194b7a77d9683"
+    },
+    {
+      "id": "bund/ZPO/art_308",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "308",
+      "artikelLabel": "Art. 308",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Berufung sind anfechtbar:"
+        },
+        {
+          "absatz": "2",
+          "text": "In vermögensrechtlichen Angelegenheiten ist die Berufung nur zulässig, wenn der Streitwert der zuletzt aufrechterhaltenen Rechtsbegehren mindestens 10 000 Franken beträgt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_308",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "217aea7557a3f9d18f24c2c6734c6a6b33139d3bfbf50bf2fba9161dfcf7fb0d"
+    },
+    {
+      "id": "bund/ZPO/art_314",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "314",
+      "artikelLabel": "Art. 314",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen einen im summarischen Verfahren ergangenen Entscheid beträgt die Frist zur Einreichung der Berufung und zur Berufungsantwort je zehn Tage. Die Anschlussberufung ist unzulässig."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei familienrechtlichen Streitigkeiten nach den Artikeln 271, 276, 302 und 305 beträgt die Frist zur Einreichung der Berufung und der Berufungsantwort je 30 Tage. Die Anschlussberufung ist zulässig."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_314",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "65f3bd5ed15178e03f9311a613fd581aa858773e5e965cb32aded99ae4326d10"
+    },
+    {
+      "id": "bund/ZPO/art_319",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "319",
+      "artikelLabel": "Art. 319",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mit Beschwerde sind anfechtbar:"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_319",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "cd2e846998261dd959b8a7bf201d33b6f76140ebea3d5c870f15ca08130a9f29"
+    },
+    {
+      "id": "bund/ZPO/art_321",
+      "ebene": "bund",
+      "quelle": "ZPO",
+      "erlass": "ZPO",
+      "artikel": "321",
+      "artikelLabel": "Art. 321",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beschwerde ist bei der Rechtsmittelinstanz innert 30 Tagen seit der Zustellung des begründeten Entscheides oder seit der nachträglichen Zustellung der Entscheidbegründung (Art. 239) schriftlich und begründet einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein im summarischen Verfahren ergangener Entscheid oder werden andere erstinstanzliche Entscheide und prozessleitende Verfügungen angefochten, so beträgt die Beschwerdefrist zehn Tage, sofern das Gesetz nichts anderes bestimmt."
+        },
+        {
+          "absatz": "3",
+          "text": "Der angefochtene Entscheid oder die angefochtene prozessleitende Verfügung ist beizulegen, soweit die Partei sie in Händen hat."
+        },
+        {
+          "absatz": "4",
+          "text": "Gegen Rechtsverzögerung kann jederzeit Beschwerde eingereicht werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/262/de#art_321",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "b5cd5543ffe4b76ecf6cbacd3980ad4e35fca02414291cff60478be3a061c55b"
+    }
+  ]
+}

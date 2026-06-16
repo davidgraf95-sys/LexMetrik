@@ -1,0 +1,78 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "bund/STG/art_5",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegenstand der Abgabe sind:"
+        },
+        {
+          "absatz": "2",
+          "text": "Der Begründung von Beteiligungsrechten im Sinne von Absatz 1 Buchstabe a sind gleichgestellt:"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_5",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "2e920c7e34d66151bbf2707b3e4adcddf86c500e3785a60073db93c91c8cf52d"
+    },
+    {
+      "id": "bund/STG/art_6",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Abgabe sind ausgenommen:"
+        },
+        {
+          "absatz": "2",
+          "text": "Fallen die Voraussetzungen der Abgabebefreiung dahin, so ist auf den noch bestehenden Beteiligungsrechten die Abgabe zu entrichten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_6",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "69efdf117e1d0d387b77228cebfdef2e0fcd47ad33715c0999d1430f47bafe1c"
+    },
+    {
+      "id": "bund/STG/art_8",
+      "ebene": "bund",
+      "quelle": "STG",
+      "erlass": "StG",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abgabe auf Beteiligungsrechten beträgt 1 Prozent und wird berechnet:"
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Sachen und Rechte sind zum Verkehrswert im Zeitpunkt ihrer Einbringung zu bewerten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_8",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20240101",
+      "sha": "3a2e96826062e25caacf58cec8376e0343da2606854401db791f4fbec1cf41ae"
+    }
+  ]
+}

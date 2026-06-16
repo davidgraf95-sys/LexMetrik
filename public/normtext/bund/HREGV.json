@@ -1,0 +1,337 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "bund/HREGV/art_18",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit die Gesetzgebung nichts anderes bestimmt, muss die Anmeldung von den Personen nach Artikel 17 unterzeichnet sein."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anmeldung auf Papier ist beim Handelsregisteramt zu unterzeichnen oder mit den beglaubigten Unterschriften einzureichen. Keiner Beglaubigung bedürfen Unterschriften bevollmächtigter Dritter und Unterschriften, die schon früher in beglaubigter Form für die gleiche Rechtseinheit eingereicht wurden. Bestehen begründete Zweifel an der Echtheit einer Unterschrift, so kann das Handelsregisteramt eine Beglaubigung verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Unterzeichnen die anmeldenden Personen die Anmeldung beim Handelsregisteramt, so haben sie ihre Identität durch einen gültigen Pass oder eine gültige Identitätskarte oder einen gültigen schweizerischen Ausländerausweis nachzuweisen."
+        },
+        {
+          "absatz": "4",
+          "text": "Elektronische Anmeldungen müssen mit einer qualifizierten elektronischen Signatur mit qualifiziertem elektronischem Zeitstempel nach Artikel 2 Buchstaben e und j ZertES unterzeichnet sein. Unter Vorbehalt von Artikel 21 müssen die eigenhändigen Unterschriften der Personen, welche die Anmeldung unterzeichnen, nicht hinterlegt werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_18",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "74da3431bc01c29a30741608d99efb87cbfeb89ad0d8a18b08dac6b52c6951b2"
+    },
+    {
+      "id": "bund/HREGV/art_20",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Belege sind im Original oder in beglaubigter Kopie auf Papier oder in elektronischer Form einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Belege müssen rechtskonform unterzeichnet sein. Belege in elektronischer Form müssen mit einer qualifizierten elektronischen Signatur mit qualifiziertem elektronischem Zeitstempel nach Artikel 2 Buchstaben e und j ZertES unterzeichnet sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Elektronische öffentliche Urkunden und elektronische Beglaubigungen sowie beglaubigte Papierausdrucke elektronischer Dokumente müssen den Anforderungen der EÖBV entsprechen."
+        },
+        {
+          "absatz": "4",
+          "text": "Werden Belege in einer Sprache eingereicht, die nicht als Amtssprache des Kantons gilt, so kann das Handelsregisteramt eine Übersetzung verlangen, sofern dies für die Prüfung oder für die Einsichtnahme durch Dritte erforderlich ist. Soweit nötig, kann es die Übersetzerin oder den Übersetzer bezeichnen. Die Übersetzung gilt diesfalls ebenfalls als Beleg."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_20",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "4d38ced2d2468bd412da413f9bd69e55335ad86c9a4d3df6400971ac56a53d72"
+    },
+    {
+      "id": "bund/HREGV/art_21",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird eine zeichnungsberechtigte Person zur Eintragung in das Handelsregister angemeldet, so muss sie ihre eigenhändige Unterschrift nach Massgabe einer der nachfolgenden Modalitäten beim Handelsregisteramt hinterlegen:"
+        },
+        {
+          "absatz": "2",
+          "text": "Zeichnet sie die Unterschrift beim Handelsregisteramt, so muss sie ihre Identität durch einen gültigen Pass oder eine gültige Identitätskarte oder einen gültigen schweizerischen Ausländerausweis nachweisen. Das Handelsregisteramt beglaubigt die Unterschrift."
+        },
+        {
+          "absatz": "3",
+          "text": "Um die elektronisch eingelesene Unterschrift selbst zu bestätigen, versieht die zeichnungsberechtigte Person diese mit einer Erklärung, dass sie diese als ihre eigene anerkennt, und signiert sie mit einer qualifizierten elektronischen Signatur mit qualifiziertem elektronischem Zeitstempel nach Artikel 2 Buchstaben e und j ZertES."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_21",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "50c93f467449234902e9c320f042bacbfea60bebce536af9961edb8b4aae46fc"
+    },
+    {
+      "id": "bund/HREGV/art_22",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ins Handelsregister wird als Datum der Statuten der Tag eingetragen, an dem:"
+        },
+        {
+          "absatz": "2",
+          "text": "Ins Handelsregister wird als Datum der Stiftungsurkunde der Tag eingetragen, an dem:"
+        },
+        {
+          "absatz": "3",
+          "text": "Werden die Statuten oder die Stiftungsurkunde geändert oder angepasst, so muss dem Handelsregisteramt eine vollständige neue Fassung der Statuten oder der Stiftungsurkunde eingereicht werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die folgenden Dokumente müssen von einer Urkundsperson beglaubigt werden:"
+        },
+        {
+          "absatz": "5",
+          "text": "Die Statuten von Vereinen müssen von einem Mitglied des Vorstandes unterzeichnet sein."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_22",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "6a778c6de030643927b91429aa9afc48e34702aa262ce115d70c7c7acb205774"
+    },
+    {
+      "id": "bund/HREGV/art_23",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beruhen einzutragende Tatsachen auf Beschlüssen oder Wahlen von Organen einer juristischen Person und bedarf der Beschluss nicht der öffentlichen Beurkundung, so muss das Protokoll beziehungsweise ein Protokollauszug über die Beschlussfassung oder ein Zirkularbeschluss als Beleg eingereicht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Protokolle oder Protokollauszüge müssen von der Protokollführerin oder vom Protokollführer sowie von der Vorsitzenden oder vom Vorsitzenden des beschliessenden Organs unterzeichnet werden, Zirkularbeschlüsse von allen Personen, die dem Organ angehören."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein Protokoll oder ein Protokollauszug des obersten Leitungs- oder Verwaltungsorgans ist nicht erforderlich, sofern die Anmeldung an das Handelsregisteramt von sämtlichen Mitgliedern dieses Organs unterzeichnet ist. Ein Protokoll oder ein Protokollauszug der Gesellschafterversammlung von Gesellschaften mit beschränkter Haftung ist ebenfalls nicht erforderlich, sofern die Anmeldung an das Handelsregisteramt von sämtlichen im Handelsregister eingetragenen Gesellschaftern unterzeichnet ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_23",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "5e3a3fa58247a0b0a97139a61dde0b77c2144cfc747791a1c72a11b956bff199"
+    },
+    {
+      "id": "bund/HREGV/art_24_a",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "24_a",
+      "artikelLabel": "Art. 24a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Identität der im Handelsregister eingetragenen natürlichen Personen muss auf der Grundlage eines gültigen Passes, einer gültigen Identitätskarte oder eines gültigen schweizerischen Ausländerausweises oder auf der Grundlage einer Kopie eines gültigen Passes, einer gültigen Identitätskarte oder eines gültigen schweizerischen Ausländerausweises geprüft werden. Das Handelsregisteramt darf zur Erfassung der für die Identifikation der Person erforderlichen Angaben nach Artikel 24 b eine Kopie des vorgelegten Dokuments erstellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Nachweis der Identität von natürlichen Personen kann auch in einer öffentlichen Urkunde oder in einer Unterschriftsbeglaubigung erbracht werden, sofern diese die Angaben nach Artikel 24 b enthält."
+        },
+        {
+          "absatz": "3",
+          "text": "Allfällig erstellte Kopien von Ausweisdokumenten werden bei den Korrespondenzakten aufbewahrt. Sie können vernichtet werden, sobald der Tagesregistereintrag über die Eintragung der natürlichen Person rechtswirksam geworden ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_24_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "9920af45c8376fbf381c3affed07c5ee453a27b835dcad5825c4bd33d7e5a964"
+    },
+    {
+      "id": "bund/HREGV/art_43",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit der Anmeldung zur Eintragung der Gründung einer Aktiengesellschaft müssen dem Handelsregisteramt folgende Belege eingereicht werden:"
+        },
+        {
+          "absatz": "2",
+          "text": "Für Angaben, die bereits im Errichtungsakt festgehalten sind, ist kein zusätzlicher Beleg erforderlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Bestehen Sacheinlagen, Verrechnungstatbestände oder besondere Vorteile, so müssen zusätzlich folgende Belege eingereicht werden:"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_43",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "1bcc79e66c73f4ede177e03e7affeca56eed0e59199442b09f6a3de8e9968700"
+    },
+    {
+      "id": "bund/HREGV/art_44",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die öffentliche Urkunde über den Errichtungsakt muss enthalten:"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_44",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "4c96daba60cce207668677eb9f272448fcbcab4f8dedb37b1f84a02657519815"
+    },
+    {
+      "id": "bund/HREGV/art_45",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Aktiengesellschaften müssen ins Handelsregister eingetragen werden:"
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehen Sacheinlagen, Verrechnungstatbestände oder besondere Vorteile, so sind zusätzlich folgende Tatsachen einzutragen:"
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_45",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "9eabdd882528a5d571a2bf1234e7b33743e93372673112f562803bfbb604bd59"
+    },
+    {
+      "id": "bund/HREGV/art_71",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit der Anmeldung zur Eintragung der Gründung einer Gesellschaft mit beschränkter Haftung müssen dem Handelsregisteramt folgende Belege eingereicht werden:"
+        },
+        {
+          "absatz": "2",
+          "text": "Für Angaben, die bereits in der öffentlichen Urkunde über den Errichtungsakt festgehalten sind, ist kein zusätzlicher Beleg erforderlich."
+        },
+        {
+          "absatz": "3",
+          "text": "Bestehen Sacheinlagen, Verrechnungstatbestände oder besondere Vorteile, so gilt Artikel 43 Absatz 3 sinngemäss."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_71",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "76a36bbe24ff163ccc6e9c496d95d329d6f6c096efb3500b0a31974aec436315"
+    },
+    {
+      "id": "bund/HREGV/art_72",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die öffentliche Urkunde über den Errichtungsakt muss folgende Angaben enthalten:"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_72",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "c53b6785a282c3f9d1c1a569c6943a173e62cc28ab02d6c5669eafcb721bb778"
+    },
+    {
+      "id": "bund/HREGV/art_117",
+      "ebene": "bund",
+      "quelle": "HREGV",
+      "erlass": "HRegV",
+      "artikel": "117",
+      "artikelLabel": "Art. 117",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Sitz wird der Name der politischen Gemeinde eingetragen."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Rechtsdomizil eingetragen wird die Adresse, unter der die Rechtseinheit an ihrem Sitz erreicht werden kann, mit folgenden Angaben: Strasse, Hausnummer, Postleitzahl und Ortsname. Es kann die eigene Adresse der Rechtseinheit oder die eines anderen (c/o-Adresse) sein."
+        },
+        {
+          "absatz": "3",
+          "text": "Verfügt eine Rechtseinheit über eine c/o-Adresse als Rechtsdomizil, so ist mit der Anmeldung zur Eintragung eine Erklärung der Domizilhalterin oder des Domizilhalters als Beleg einzureichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Liegen Umstände vor, die den Anschein erwecken, dass die als Rechtsdomizil angemeldete Adresse eine c/o-Adresse ist, ohne dass sie als solche deklariert wurde, so fordert das Handelsregisteramt die Rechtseinheit auf, entweder die Erklärung nach Absatz 3 oder Belege für eine eigene Adresse, insbesondere Mietverträge oder Grundbuchauszüge, einzureichen."
+        },
+        {
+          "absatz": "5",
+          "text": "Neben der Angabe von Sitz und Rechtsdomizil kann jede Rechtseinheit weitere in der Schweiz gelegene Adressen, insbesondere eine Liquidations- oder eine Postfachadresse, ins Handelsregister ihres Sitzes eintragen lassen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2007/686/de#art_117",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250101",
+      "sha": "8e611a0334a40a7f5b19195db1c18b5f2b53f7dcacbcee15e98c271415df29d7"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "bund/STPO/art_31",
+      "ebene": "bund",
+      "quelle": "STPO",
+      "erlass": "StPO",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Verfolgung und Beurteilung einer Straftat sind die Behörden des Ortes zuständig, an dem die Tat verübt worden ist. Liegt nur der Ort, an dem der Erfolg der Straftat eingetreten ist, in der Schweiz, so sind die Behörden dieses Ortes zuständig."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Straftat an mehreren Orten verübt worden oder ist der Erfolg an mehreren Orten eingetreten, so sind die Behörden des Ortes zuständig, an dem zuerst Verfolgungshandlungen vorgenommen worden sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Hat eine beschuldigte Person am selben Ort mehrere Verbrechen, Vergehen oder Übertretungen verübt, so werden die Verfahren vereint."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_31",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250401",
+      "sha": "842ad99a8298299704cce256bb14f1f5088e15e84b505c2f523392a018fc2d28"
+    },
+    {
+      "id": "bund/STPO/art_129",
+      "ebene": "bund",
+      "quelle": "STPO",
+      "erlass": "StPO",
+      "artikel": "129",
+      "artikelLabel": "Art. 129",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die beschuldigte Person ist berechtigt, in jedem Strafverfahren und auf jeder Verfahrensstufe einen Rechtsbeistand im Sinne von Artikel 127 Absatz 5 mit ihrer Verteidigung zu betrauen (Wahlverteidigung) oder, unter Vorbehalt von Artikel 130, sich selber zu verteidigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Ausübung der Wahlverteidigung setzt eine schriftliche Vollmacht oder eine protokollierte Erklärung der beschuldigten Person voraus."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_129",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250401",
+      "sha": "6fda2f4d59ebf0f6b9f2c3e5ba2c9387aef2ce9ffca46fbac285451e59c1f4e7"
+    },
+    {
+      "id": "bund/STPO/art_301",
+      "ebene": "bund",
+      "quelle": "STPO",
+      "erlass": "StPO",
+      "artikel": "301",
+      "artikelLabel": "Art. 301",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jede Person ist berechtigt, Straftaten bei einer Strafverfolgungsbehörde schriftlich oder mündlich anzuzeigen."
+        },
+        {
+          "absatz": null,
+          "text": "1bis Die anzeigende Person kann von der Strafverfolgungsbehörde eine Bestätigung der mündlich zu Protokoll gegebenen Anzeige verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Strafverfolgungsbehörde teilt der anzeigenden Person auf deren Anfrage mit, ob ein Strafverfahren eingeleitet und wie es erledigt wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Der anzeigenden Person, die weder geschädigt noch Privatklägerin oder Privatkläger ist, stehen keine weitergehenden Verfahrensrechte zu."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_301",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250401",
+      "sha": "0680993ee76d2ea1c417aedd15b6fbfe9f67a734f9e59271915e6d6c4bba5c86"
+    },
+    {
+      "id": "bund/STPO/art_379",
+      "ebene": "bund",
+      "quelle": "STPO",
+      "erlass": "StPO",
+      "artikel": "379",
+      "artikelLabel": "Art. 379",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Rechtsmittelverfahren richtet sich sinngemäss nach den allgemeinen Bestimmungen dieses Gesetzes, soweit dieser Titel keine besonderen Bestimmungen enthält."
+        }
+      ],
+      "stand": "2025-04-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/267/de#art_379",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20250401",
+      "sha": "4c6651c44880a942e578c3b880bf78a529397a2b3130ec0d7b66e2367fad57d8"
+    }
+  ]
+}

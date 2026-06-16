@@ -1,0 +1,71 @@
+{
+  "erzeugt": "2026-06-16",
+  "eintraege": [
+    {
+      "id": "bund/GEBV_SCHKG/art_16",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Erlass, die doppelte Ausfertigung, die Eintragung und die Zustellung des Zahlungsbefehls bemisst sich nach der Forderung und beträgt:"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für jede weitere doppelte Ausfertigung beträgt die Hälfte der Gebühr nach Absatz 1."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr für jeden Zustellungsversuch beträgt 7 Franken je Zahlungsbefehl."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gebühr für die Eintragung eines vor Ausfertigung des Zahlungsbefehls zurückgezogenen Betreibungsbegehrens beträgt, ohne Rücksicht auf die Höhe der Forderung, 5 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_16",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "57484565807243216d3e58ba13f9cc5803b200dc0e9693a7edd8cf75b6daa398"
+    },
+    {
+      "id": "bund/GEBV_SCHKG/art_15_a",
+      "ebene": "bund",
+      "quelle": "GEBV_SCHKG",
+      "erlass": "GebV SchKG",
+      "artikel": "15_a",
+      "artikelLabel": "Art. 15a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird in einer geschlossenen Benutzergruppe nach Artikel 14 Absatz 1 der Verordnung vom 18. Juni 2010 über die elektronische Übermittlung im Rahmen von Zivil- und Strafprozessen sowie von Schuldbetreibungs- und Konkursverfahren (eSchKG-Verbund) ein Betreibungsbegehren oder ein Begehren für einen Auszug aus dem Betreibungsregister eingereicht, so erhebt das Bundesamt für Justiz (BJ) vom betroffenen Betreibungsamt eine Gebühr von 60 Rappen pro Begehren."
+        },
+        {
+          "absatz": "2",
+          "text": "Betreibt ein Kanton eine zentrale Applikation für alle Betreibungsämter und können die Gebühren gemäss Absatz 1 in einer Rechnung gestellt werden, so wird für deren Berechnung die Summe aller Begehren aller Betreibungsämter herangezogen."
+        },
+        {
+          "absatz": "3",
+          "text": "Erfordert die Rechnungsstellung ausserordentlichen Aufwand, so beträgt die Gebühr 40 Franken. Übersteigt der Zeitaufwand eine halbe Stunde, so erhöht sich die Gebühr um 40 Franken für jede weitere halbe Stunde."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Erhebung dieser Gebühren ist das BJ oder eine von ihm beauftragte Stelle zuständig."
+        },
+        {
+          "absatz": "5",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1996/2937_2937_2937/de#art_15_a",
+      "abgerufen": "2026-06-16",
+      "fassungsToken": "20260101",
+      "sha": "45bef5a2be5c150eb47e0db93bd91f6193df57ee453241419e0825734b09d69b"
+    }
+  ]
+}
