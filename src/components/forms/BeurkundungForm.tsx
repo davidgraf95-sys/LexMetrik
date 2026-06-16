@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
@@ -181,7 +182,7 @@ function AllgemeineBeurkundung({ art, startKanton, startWert }: { art: Geschaeft
               </ul>
               {zusatz.posten.some((p) => p.hinweis) && (
                 <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
-                  {zusatz.posten.filter((p) => p.hinweis).map((p, i) => <li key={i}>{p.hinweis}</li>)}
+                  {zusatz.posten.filter((p) => p.hinweis).map((p, i) => <li key={i}><NormText text={p.hinweis ?? ''} /></li>)}
                 </ul>
               )}
             </div>
@@ -197,7 +198,7 @@ function AllgemeineBeurkundung({ art, startKanton, startWert }: { art: Geschaeft
           )}
 
           <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
-            {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+            {ergebnis.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
           </ul>
 
           <div className="mt-4 flex flex-wrap items-center gap-3">

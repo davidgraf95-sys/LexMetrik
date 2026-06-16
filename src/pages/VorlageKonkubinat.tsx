@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   KK_DEFAULTS, kkZusammenstellen, pruefeKkGates, type KkAntworten, type KkKostenschluessel,
 } from '../lib/vorlagen/konkubinat';
@@ -152,7 +153,7 @@ export function VorlageKonkubinat() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
 
           <Field label="Ort und Datum der Unterzeichnung">

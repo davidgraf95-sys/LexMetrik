@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
@@ -70,7 +71,7 @@ function PostenKarte({ titel, posten, akzent }: { titel: string; posten: NgPoste
       )}
       {q.hinweis && (
         <p className="mt-1 text-xs text-ink-500">
-          {q.hinweis}
+          <NormText text={q.hinweis} />
           {entfaellt && q.quelleUrl ? <> · <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
         </p>
       )}
@@ -175,7 +176,7 @@ export function NotariatGrundbuchForm() {
           </div>
 
           <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
-            {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+            {ergebnis.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
           </ul>
 
           <div className="mt-4 flex flex-wrap items-center gap-3">

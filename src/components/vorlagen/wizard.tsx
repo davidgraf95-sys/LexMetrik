@@ -1,6 +1,7 @@
 import { useState, type Dispatch, type ReactNode, type SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
 import { FehlerBox, NormChip, NormLink, Stepper } from './ui';
+import { NormText } from '../NormText';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { dokumentAlsText } from '../../lib/vorlagen/vorlagenText';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
@@ -380,8 +381,8 @@ export function VorschauPanel({ ergebnis, kompakt, extra, nichtAufgenommen, dire
         <ul className="mt-3 space-y-2.5">
           {ergebnis.protokoll.map((p) => (
             <li key={p.bausteinId} className="text-body-s text-ink-600 space-y-1">
-              <p><span className="num text-ink-500">{p.bausteinId}</span> – {p.begruendung}</p>
-              {p.hinweis && <p className="text-xs text-warn-700">⚠ {p.hinweis}</p>}
+              <p><span className="num text-ink-500">{p.bausteinId}</span> – <NormText text={p.begruendung} /></p>
+              {p.hinweis && <p className="text-xs text-warn-700">⚠ <NormText text={p.hinweis} /></p>}
               {p.norm && <p><NormLink artikel={p.norm} /></p>}
             </li>
           ))}

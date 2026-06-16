@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { VorschauPanel, ExportLeiste } from './wizard';
+import { NormText } from '../NormText';
 import { BANNER_MAPPE_FERTIG, type PdfBanner } from '../../lib/vorlagen/banner';
 import type { AssembleErgebnis } from '../../lib/vorlagen/engine';
 import { NOTARIATE, NOTARIAT_SYSTEM_LABEL, NOTARIAT_FREIZUEGIGKEIT } from '../../lib/notariate';
@@ -25,7 +26,7 @@ export function NotariatsHinweis({ kanton }: { kanton: string }) {
         <a href={n.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:text-brass-600">{n.stelle}</a>
         {!n.urlBelegt && <span className="text-warn-700"> (Angabe ohne Gewähr)</span>}
       </p>
-      {n.hinweis && <p className="text-xs text-warn-700">{n.hinweis}</p>}
+      {n.hinweis && <p className="text-xs text-warn-700"><NormText text={n.hinweis} /></p>}
       <p className="text-xs text-ink-500">{NOTARIAT_FREIZUEGIGKEIT}</p>
     </div>
   );
@@ -43,7 +44,7 @@ export function HrAmtHinweis({ kanton }: { kanton: string }) {
         <a href={a.url} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:text-brass-600">{a.name}</a>
         {`, ${a.strasse}, ${a.plzOrt} · ${a.telefon}`}
       </p>
-      {a.hinweis && <p className="text-xs text-ink-500">{a.hinweis}</p>}
+      {a.hinweis && <p className="text-xs text-ink-500"><NormText text={a.hinweis} /></p>}
       <p className="text-xs text-ink-500">
         {`Massgeblich ist der SITZ-Kanton der Gesellschaft (Art. 927 OR). Stand ${HR_AEMTER_STAND} (amtliche Kantonsseiten; zefix-Abgleich offen) – Erstrecherche, vor Einreichung kurz gegenprüfen.`}
       </p>
@@ -57,11 +58,11 @@ export function MappenGates({ gates }: { gates: { blocker: string[]; warnungen: 
     <>
       {gates.blocker.length > 0 && (
         <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
-          {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
+          {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
         </div>
       )}
       {gates.warnungen.map((w, i) => (
-        <div key={i} className="lc-notice-warn"><p className="text-body-s">{w}</p></div>
+        <div key={i} className="lc-notice-warn"><p className="text-body-s"><NormText text={w} /></p></div>
       ))}
     </>
   );

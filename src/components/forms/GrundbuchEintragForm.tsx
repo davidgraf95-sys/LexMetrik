@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Field, inputCls } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { BetragsFeld } from '../BetragsFeld';
@@ -137,7 +138,7 @@ export function GrundbuchEintragForm() {
           )}
 
           <ul className="mt-3 space-y-1 text-xs text-ink-500 list-disc pl-5">
-            {ergebnis.hinweise.map((h, i) => <li key={i}>{h}</li>)}
+            {ergebnis.hinweise.map((h, i) => <li key={i}><NormText text={h} /></li>)}
           </ul>
 
           <div className="mt-4 flex flex-wrap items-center gap-3">

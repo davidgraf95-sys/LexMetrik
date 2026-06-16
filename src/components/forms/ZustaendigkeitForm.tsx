@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { NormText } from '../NormText';
 import {
   BeruehrtRahmen,
   Checkbox,
@@ -910,7 +911,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                     <p className="text-body-s text-ink-900 whitespace-pre-line">
                       {obereInstanz!.name}{'\n'}{obereInstanz!.strasse}{'\n'}{obereInstanz!.plzOrt}
                     </p>
-                    {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1">{obereInstanz!.hinweis}.</p>}
+                    {obereInstanz!.hinweis && <p className="text-xs text-ink-500 mt-1"><NormText text={obereInstanz!.hinweis} />.</p>}
                     {obereInstanz!.quelleSpruchkoerper && (
                       <p className="text-xs text-ink-500 mt-1">Spruchkörper: {obereInstanz!.quelleSpruchkoerper} — Erstrecherche, fachliche Abnahme ausstehend.</p>
                     )}
@@ -1018,7 +1019,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
             {/* Offene Rechtsfragen-Weichen (§8: ehrlich ausweisen) */}
             {rechtsmittel.weichen.map((w, i) => (
-              <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+              <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
             ))}
 
             <div className="lc-notice text-body-s">{rechtsmittel.fristHinweis}</div>
@@ -1238,7 +1239,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {'\n'}{recherche.aufloesung.stelle.strasse}{'\n'}{recherche.aufloesung.stelle.plzOrt}
                     </p>
                     {recherche.aufloesung.stelle.hinweis && (
-                      <p className="text-xs text-warn-700 mt-1">⚠ {recherche.aufloesung.stelle.hinweis}</p>
+                      <p className="text-xs text-warn-700 mt-1">⚠ <NormText text={recherche.aufloesung.stelle.hinweis} /></p>
                     )}
                   </div>
                 )}
@@ -1269,7 +1270,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         </ul>
                       </div>
                     )}
-                    {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500">{recherche.aufloesung.hinweis} — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
+                    {recherche.aufloesung.hinweis && <p className="text-xs text-ink-500"><NormText text={recherche.aufloesung.hinweis} /> — massgeblich: {ORT_LABEL[f.streitsache]}.</p>}
                     {/* VD (11.6.2026): konkrete Instanz aus PLZ/Gemeinde + Streit-
                         wert-Stufe (Art. 41 CDPJ-VD) — die Liste darunter bleibt
                         als Übersicht aller Stellen der Stufe stehen. */}
@@ -1296,7 +1297,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                           )}
                           {s.zustaendigFuer && <span className="text-ink-500"> — {s.zustaendigFuer}</span>}
                           <br />{s.strasse}, {s.plzOrt}
-                          {s.hinweis && <span className="block text-xs text-warn-700">⚠ {s.hinweis}</span>}
+                          {s.hinweis && <span className="block text-xs text-warn-700">⚠ <NormText text={s.hinweis} /></span>}
                         </li>
                       ))}
                     </ul>
@@ -1464,7 +1465,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                         {f.kanton !== '' ? (
                           <a href={ERLASS_LINKS[f.kanton].schlichtung} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.schlichtung.erlass} ↗</a>
                         ) : kosten.schlichtung.erlass})</span>
-                      {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ {kosten.schlichtung.hinweis}</span>}
+                      {kosten.schlichtung.hinweis && <span className="block text-xs text-warn-700">⚠ <NormText text={kosten.schlichtung.hinweis} /></span>}
                     </p>
                   ) : (
                     <p className="text-body-s text-ink-600">Schlichtungsgebühr: kantonaler Rahmen — Kanton wählen.</p>
@@ -1480,7 +1481,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
                         <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.nichtVermoegensrechtlich.erlass} ↗</a>
                       ) : kosten.nichtVermoegensrechtlich.erlass})</span>
-                    {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500">{kosten.nichtVermoegensrechtlich.hinweis}</span>}
+                    {kosten.nichtVermoegensrechtlich.hinweis && <span className="block text-xs text-ink-500"><NormText text={kosten.nichtVermoegensrechtlich.hinweis} /></span>}
                   </p>
                 ) : kosten && (
                   <p className="text-body-s text-ink-800">
@@ -1489,14 +1490,14 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
                       {f.kanton !== '' && ERLASS_LINKS[f.kanton].gericht ? (
                         <a href={ERLASS_LINKS[f.kanton].gericht!} target="_blank" rel="noreferrer" className="underline hover:text-brass-700">{kosten.gericht.erlass} ↗</a>
                       ) : kosten.gericht.erlass})</span>
-                    {kosten.gericht.hinweis && <span className="block text-xs text-ink-500">{kosten.gericht.hinweis}</span>}
+                    {kosten.gericht.hinweis && <span className="block text-xs text-ink-500"><NormText text={kosten.gericht.hinweis} /></span>}
                   </p>
                 )}
                 {kosten && f.streitsache === 'scheidung' && kosten.familie && (
                   <p className="text-body-s text-ink-800">
                     <span className="font-medium text-ink-900">Familien-/Scheidungsrahmen: {/^[A-Za-zÜü(0-9]/.test(kosten.familie.text) && !/^\d/.test(kosten.familie.text) ? '' : 'CHF '}{kosten.familie.text}.</span>{' '}
                     <span className="text-ink-500">({kosten.familie.erlass})</span>
-                    {kosten.familie.hinweis && <span className="block text-xs text-ink-500">{kosten.familie.hinweis}</span>}
+                    {kosten.familie.hinweis && <span className="block text-xs text-ink-500"><NormText text={kosten.familie.hinweis} /></span>}
                   </p>
                 )}
                 <p className="text-xs text-ink-500">
@@ -1520,7 +1521,7 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl }: {
 
             {r.weichen.length > 0 && (
               <div className="space-y-1.5">
-                {r.weichen.map((w, i) => <p key={i} className="lc-notice text-body-s">{w}</p>)}
+                {r.weichen.map((w, i) => <p key={i} className="lc-notice text-body-s"><NormText text={w} /></p>)}
               </div>
             )}
 

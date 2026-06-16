@@ -1,4 +1,5 @@
 import { useMemo, type ReactNode } from 'react';
+import { NormText } from '../components/NormText';
 import {
   HR_DEFAULTS, hrZusammenstellen, pruefeHrGates, type HrAntworten,
 } from '../lib/vorlagen/handelsreisendenvertrag';
@@ -171,11 +172,11 @@ export function VorlageHandelsreisendenvertrag({ kopf }: { kopf: ReactNode }) {
           {gates.blocker.length > 0 && (
             <div className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Vor der Ausgabe zu beheben</p>
-              {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• {b}</p>)}
+              {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
           )}
-          {gates.warnungen.map((w, i) => <div key={i} className="lc-notice-warn text-body-s">{w}</div>)}
-          {gates.hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s">{h}</div>)}
+          {gates.warnungen.map((w, i) => <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>)}
+          {gates.hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>)}
 
           <Field label="Ort und Datum des Vertragsschlusses">
             <div className="grid grid-cols-[1fr_11rem] gap-3">

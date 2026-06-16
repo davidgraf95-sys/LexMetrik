@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls, NormLink } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { Link } from 'react-router-dom';
 import { bgerRechtswegLink } from '../../lib/rechnerPermalinks';
 import { ErgebnisBlock } from '../ErgebnisBlock';
@@ -188,13 +189,13 @@ export function StrafZustaendigkeitTeil() {
             <div className="border-t border-line pt-3">
               <p className="lc-overline mb-1.5">Bundesanwaltschaft (bei Bundesgerichtsbarkeit)</p>
               <p className="text-body-s text-ink-900 whitespace-pre-line">{BUNDESANWALTSCHAFT.name}{'\n'}{BUNDESANWALTSCHAFT.strasse}{'\n'}{BUNDESANWALTSCHAFT.plzOrt}</p>
-              <p className="text-xs text-ink-500 mt-1">{BUNDESANWALTSCHAFT.hinweis}.</p>
+              <p className="text-xs text-ink-500 mt-1"><NormText text={BUNDESANWALTSCHAFT.hinweis ?? ''} />.</p>
             </div>
           ) : sta ? (
             <div className="border-t border-line pt-3">
               <p className="lc-overline mb-1.5">Zentrale Staatsanwaltschaft ({kanton})</p>
               <p className="text-body-s text-ink-900 whitespace-pre-line">{sta.name}{'\n'}{sta.strasse}{'\n'}{sta.plzOrt}</p>
-              {sta.hinweis && <p className="text-xs text-ink-500 mt-1">{sta.hinweis}.</p>}
+              {sta.hinweis && <p className="text-xs text-ink-500 mt-1"><NormText text={sta.hinweis} />.</p>}
               <p className="text-xs text-ink-500 mt-1.5">Quelle: zweifach geprüftes Strafbehörden-Dossier (Stand 5.6.2026) — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.</p>
             </div>
           ) : (
@@ -259,8 +260,8 @@ export function StrafZustaendigkeitTeil() {
           <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist} />
         </div>
 
-        {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s">{w}</div>)}
-        {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s">{w}</div>)}
+        {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s"><NormText text={w} /></div>)}
+        {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s"><NormText text={w} /></div>)}
 
         <div className="flex flex-wrap gap-1.5">
           {r.normverweise.map((n, i) => <NormLink key={i} artikel={n.artikel} bemerkung={n.bemerkung} />)}
@@ -325,7 +326,7 @@ function GerichtBlock({ titel, g, system }: { titel: string; g: StrafGerichtAdre
       <p className="text-body-s text-ink-900 whitespace-pre-line">
         {g.name}{g.strasse ? `\n${g.strasse}` : ''}{g.plzOrt ? `\n${g.plzOrt}` : ''}
       </p>
-      {g.hinweis && <p className="text-xs text-warn-700 mt-1">⚠ {g.hinweis}</p>}
+      {g.hinweis && <p className="text-xs text-warn-700 mt-1">⚠ <NormText text={g.hinweis} /></p>}
     </div>
   );
 }
@@ -488,7 +489,7 @@ function StrafRechtsmittelTeil() {
           <div className="lc-card p-5 space-y-2">
             <GruppenTitel>Konkrete Instanz</GruppenTitel>
             <GerichtBlock titel={adresse.titel} g={adresse.g} />
-            {adresse.hinweis && <p className="text-xs text-ink-500">{adresse.hinweis}</p>}
+            {adresse.hinweis && <p className="text-xs text-ink-500"><NormText text={adresse.hinweis} /></p>}
             <p className="text-xs text-ink-500 pt-2 border-t border-line">
               Quelle: Strafgerichts-Dossier bzw. Strafbehörden-Dossier (Erstrecherche) — fachliche Abnahme ausstehend; Adresse vor Einreichung kurz gegenprüfen.
             </p>
@@ -513,8 +514,8 @@ function StrafRechtsmittelTeil() {
           <EckdatenKachel label="Kritische Fristen" wert={String(r.fristen.filter((f) => f.kritisch).length)} sub={r.fristen.find((f) => f.kritisch)?.frist.split(' — ')[0]} />
         </div>
 
-        {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s">{w}</div>)}
-        {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s">{w}</div>)}
+        {r.weichen.map((w) => <div key={w} className="lc-notice text-body-s"><NormText text={w} /></div>)}
+        {r.warnungen.map((w) => <div key={w} className="lc-notice-warn text-body-s"><NormText text={w} /></div>)}
 
         <div className="lc-card p-5 space-y-2">
           <GruppenTitel>Weiterzug ans Bundesgericht</GruppenTitel>

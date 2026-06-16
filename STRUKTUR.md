@@ -22,6 +22,35 @@ Sessions (älter als ~2 Arbeitstage) wandern darum BYTE-GENAU nach
 der Verweis-Abschnitt. Offene Abnahmen sind davon unberührt (Spiegel:
 `HANDLUNGSPLAN.md`).
 
+## Session 17.6.2026 — INLINE-NORM-AUTO-LINKER «NormText» Phase 1 (Bund) GEBAUT + VERIFIZIERT (Branch feat/normtext-popup, ungepusht)
+
+**Auftrag David:** «kannst du an der Gesetzesverlinkung weiterarbeiten» → «jede Norm die
+genannt wird soll verlinkt sein» → «weiterarbeiten bis Ziel erreicht» → «verifizieren und
+Bug-Check» → «alles doppelt verifizieren von Anfang an». Detail: `FAHRPLAN-GESETZESTEXT-POPUP.md`
+(ERLEDIGT-Abschnitt 17.6.).
+
+- **Was:** Im FLIESSTEXT genannte Bundes-Normen («Art. N … GESETZ») werden zum Popover-
+  Trigger (bisher nur an strukturierten Chip-Stellen). Neue Komponente `NormText` (universell:
+  Normen via `NormChip`-Popover UND Rechtsprechung via `RechtsprechungText`); `NORM_IM_TEXT`-
+  Regex in `fedlex.ts` (Gesetz-Namen aus FEDLEX-Keys + «GebV SchKG»-Alias, single source;
+  KEIN blinder `§`-Regex). `NormChip` um `linkClass` erweitert (Default = heutige Pillen-Klasse,
+  SSR byte-gleich). Nicht-auflösbare Nennungen bleiben Text (kein toter Link, §8).
+- **Eingebaut (~90 Stellen, screen-only):** `ErgebnisAnzeige` (Warnungen+Annahmen ALLER
+  Rechner — ersetzt das frühere `RechtsprechungText`), Wizard-Bausteinprotokoll,
+  `VorlagenSeite`-Gates, 11 Formulare, 18 Vorlagen-Seiten (warnungen/hinweise/blocker),
+  `Dokumentmappe`, `KvGerichtWahl`. Logikschicht unberührt (§3); Hinweis-Texte selbst
+  unverändert, nur Inline-Rendering.
+- **Verifikation (doppelt):** `npm run gate` voll grün (tsc/vitest/**golden byte-gleich**/lint/
+  check), 13 neue Tests; 2 unabhängige adversariale Reviews (Regex/Komponente + Integration)
+  ohne echten Bug (kein ReDoS, keine nested `<a>`, keine Key-Kollision, SSR effect-only);
+  Browser-Smoke (prozesskosten 9 Inline-Links + Popover «Art. 95 ZPO» öffnet, arbeitsvertrag 8,
+  vollmacht 2; 0 nested `<a>`, 0 Console-Fehler über 9 Seiten). Stale-`dist`-Fehlmessung
+  (alter preview-Prozess :4173) erkannt + nach Neubau widerlegt.
+- **OFFEN:** Phase 2 (kantonale «§ N ERLASS» über Quelle-Kontext) + Phase 3 (~616 STATISCHE
+  Prosa-Literale «Art. N GESETZ» in 57 Seiten, die NormText als Variablen-Linker nicht
+  erreicht — geteilte Display-Primitive als Hebel). **Push/Deploy + fachliche Abnahme offen
+  (§9 / David selbst).**
+
 ## Session 16./17.6.2026 — NORM-VORSCHAU-POPOVER (Volltext Bund+Kantone) GEBAUT (Branch feat/normtext-popup, ungepusht)
 
 **Auftrag David:** «Popup mit Gesetzestext statt Weiterleitung, insbesondere

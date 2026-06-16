@@ -134,3 +134,32 @@ export function fedlexLinkFuerArtikel(text: string): string | null {
   const m = text.match(/^Art\.\s*(\d+[a-z]?(?:bis|ter|quater|quinquies)?)\b/);
   return m ? fedlexUrl(gesetz, m[1]) : FEDLEX[gesetz];
 }
+
+// ─── Bund-Normverweise im Fliesstext finden (Inline-Auto-Linker) ───────────
+//
+// Globale Regex, die «Art. N[suffix] [Abs./lit./Ziff./Satz …] GESETZ»-Zitate in
+// einem Anzeigetext findet — Schwester von RECHTSPRECHUNG_IM_TEXT (bge.ts) für
+// Normen. Die Gesetzes-Namen kommen aus DIESER Datei (FEDLEX-Keys + Mehrwort-
+// Alias), damit die Gesetz-Erkennung nicht dupliziert wird (§5): genau die
+// Tokens, die erkenneFedlexGesetz am Zitat-Ende akzeptiert.
+//
+// Bewusst nur «Art.» (Bund), NICHT «§» — das kantonale «§ N» ist ohne Erlass-
+// Kontext mehrdeutig und trifft im Code zahllose Nicht-Normen (CLAUDE.md-§-
+// Prinzipien); kantonale Inline-Auflösung läuft über den Quelle-Kontext, nicht
+// über einen blinden §-Regex.
+//
+// Die Passus-Kette (Abs./lit./Bst./Ziff./Satz) zwischen Artikel und Gesetz ist
+// auf bekannte Zitat-Tokens beschränkt — so läuft der Match nie über einen
+// Satz oder ein zweites «Art.» hinaus. Jeder Treffer wird vor dem Verlinken
+// zusätzlich gegen fedlexLinkFuerArtikel validiert (kein toter Link).
+const NORM_NAMEN_ESC = (['GebV SchKG', ...Object.keys(FEDLEX)] as string[])
+  // Längste zuerst: «GebV SchKG» vor «SchKG», «StGB» vor «StG» (Suffix-Kollision).
+  .sort((a, b) => b.length - a.length)
+  .map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+
+export const NORM_IM_TEXT = new RegExp(
+  'Art\\.\\s*\\d+[a-z]?(?:bis|ter|quater|quinquies)?' +
+    '(?:\\s+(?:Abs\\.|lit\\.|Bst\\.|Ziff\\.|Ziffer|Satz)\\s*(?:\\d+[a-z]?(?:bis|ter|quater|quinquies)?|[a-z]))*' +
+    '\\s+(?:' + NORM_NAMEN_ESC.join('|') + ')\\b',
+  'g',
+);

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { agGruendungsunterlagen, type EinlageArt, type Phase , finmaBegriffsTreffer } from '../lib/gruendungsunterlagen';
 import { Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { NormText } from '../components/NormText';
 import { VorlagenWizardRahmen, VorschauPanel } from '../components/vorlagen/wizard';
 import { MappenAnsicht, MappenGates, NotariatsHinweis, HrAmtHinweis } from '../components/vorlagen/Dokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
@@ -534,7 +535,7 @@ export function VorlageAgGruendung() {
       {checkliste.blocker.map((b) => (
         <div key={b} className="lc-notice-warn">
           <p className="text-body-s font-medium">Eintragungshindernis</p>
-          <p className="text-body-s">{b}</p>
+          <p className="text-body-s"><NormText text={b} /></p>
         </div>
       ))}
     </div>
@@ -1367,7 +1368,7 @@ export function VorlageAgGruendung() {
           Die Vorschau erscheint, sobald die Pflichtangaben vollständig sind:
         </p>
         <ul className="lc-list space-y-1 text-xs text-ink-600">
-          {mappe.gates.blocker.slice(0, 8).map((b) => <li key={b}>{b}</li>)}
+          {mappe.gates.blocker.slice(0, 8).map((b) => <li key={b}><NormText text={b} /></li>)}
         </ul>
       </div>
     );

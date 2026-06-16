@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   AF_DEFAULTS, afZusammenstellen, pruefeAfGates, type AfAntworten, type AfMandatstyp, type AfVerguetung,
 } from '../lib/vorlagen/auftrag';
@@ -161,7 +162,7 @@ export function VorlageAuftrag() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
 
           <Field label="Ort und Datum der Unterzeichnung">

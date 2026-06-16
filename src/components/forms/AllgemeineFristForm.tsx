@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { NormText } from '../NormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { Link } from 'react-router-dom';
@@ -194,7 +195,7 @@ export function AllgemeineFristForm() {
             </div>
             {zustell && (
               <div className="mt-3 space-y-1.5">
-                {zustell.hinweise.map((h, i) => <p key={i} className="text-body-s text-ink-600">{h}</p>)}
+                {zustell.hinweise.map((h, i) => <p key={i} className="text-body-s text-ink-600"><NormText text={h} /></p>)}
               </div>
             )}
           </details>

@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   KAN_DEFAULTS, kanZusammenstellen, pruefeKanGates, type KanAntworten, type KanProbezeit,
 } from '../lib/vorlagen/kuendigungArbeitnehmer';
@@ -163,10 +164,10 @@ export function VorlageKuendigungArbeitnehmer() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
           ))}
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
 
           <Field label="Ort und Datum der Erklärung">

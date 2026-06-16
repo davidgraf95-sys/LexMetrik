@@ -7,6 +7,7 @@ import {
   type Phase,
 } from '../lib/gruendungsunterlagen';
 import { Field, GruppenTitel, inputCls, NormChip, NormLink } from '../components/vorlagen/ui';
+import { NormText } from '../components/NormText';
 import { GmbhDokumentmappe } from '../components/vorlagen/GmbhDokumentmappe';
 import { PflichtDisclaimer } from '../components/PflichtDisclaimer';
 import { useLocale, fedlexLokalisiert } from '../components/locale';
@@ -159,7 +160,7 @@ export function VorlageGmbhGruendung() {
       {ergebnis.blocker.map((b) => (
         <div key={b} className="lc-notice-warn">
           <p className="text-body-s font-medium">Eintragungshindernis</p>
-          <p className="text-body-s">{b}</p>
+          <p className="text-body-s"><NormText text={b} /></p>
         </div>
       ))}
 

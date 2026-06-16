@@ -1,4 +1,5 @@
 import { useMemo, type ReactNode } from 'react';
+import { NormText } from '../components/NormText';
 import {
   HA_DEFAULTS, haZusammenstellen, pruefeHaGates, type HaAntworten,
 } from '../lib/vorlagen/heimarbeitsvertrag';
@@ -121,8 +122,8 @@ export function VorlageHeimarbeitsvertrag({ kopf }: { kopf: ReactNode }) {
 
       case 'pruefen': return (
         <div className="space-y-5">
-          {gates.warnungen.map((w, i) => <div key={i} className="lc-notice-warn text-body-s">{w}</div>)}
-          {gates.hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s">{h}</div>)}
+          {gates.warnungen.map((w, i) => <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>)}
+          {gates.hinweise.map((h, i) => <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>)}
 
           <Field label="Ort und Datum des Vertragsschlusses">
             <div className="grid grid-cols-[1fr_11rem] gap-3">

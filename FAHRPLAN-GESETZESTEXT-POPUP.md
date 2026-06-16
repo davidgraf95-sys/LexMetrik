@@ -607,7 +607,42 @@ nachführen (§11).
 
 ---
 
-## OFFEN (nächste Session) — Inline-Norm-Auto-Linker «NormText» (Auftrag David 17.6.2026)
+## ERLEDIGT 17.6.2026 — Inline-Norm-Auto-Linker «NormText» Phase 1 (Bund) gebaut + verifiziert
+
+**Stand:** Branch `feat/normtext-popup`, ungepusht (Push/Abnahme offen, §9). Phase 1
+(bundesrechtliche Inline-Verweise) ist gebaut, getestet, gate-grün, browser-verifiziert.
+
+- **Gebaut:** `NORM_IM_TEXT`-Regex in `fedlex.ts` (Gesetzes-Namen aus den FEDLEX-Keys +
+  Alias «GebV SchKG», single source; bewusst KEIN blinder `§`-Regex — kantonal mehrdeutig,
+  träfe die CLAUDE.md-§-Prinzipien). `src/components/NormText.tsx` = **universeller**
+  Inline-Linker: Normen via `NormChip`-Popover UND Rechtsprechung (threading durch
+  `RechtsprechungText`); ersetzt das frühere blosse `<RechtsprechungText>` in `ErgebnisAnzeige`.
+  `NormChip` um `linkClass` erweitert (Default = heutige Pillen-Klasse → SSR byte-gleich;
+  Inline-Stil nur via NormText). Nicht-auflösbare Nennungen bleiben Text (kein toter Link, §8).
+- **Eingebaut (~90 Stellen, screen-only):** `ErgebnisAnzeige` (Warnungen + Annahmen ALLER
+  Rechner), Wizard-Bausteinprotokoll, `VorlagenSeite`-Gates, 11 Formular-Dateien
+  (hinweise/weichen/warnungen), 18 Vorlagen-Seiten (gates warnungen/hinweise/blocker),
+  `Dokumentmappe`, `KvGerichtWahl`.
+- **Verifikation:** `npm run gate` voll grün (tsc/vitest/**golden byte-gleich**/lint/check);
+  13 neue Tests; 2 unabhängige adversariale Reviews (Regex/Komponente + Integration) ohne
+  echten Bug; Browser-Smoke (prozesskosten 9 Inline-Links + Popover «Art. 95 ZPO» öffnet,
+  arbeitsvertrag 8, vollmacht 2; 0 nested `<a>`, 0 Console-Fehler über 9 Seiten). Eine
+  zwischenzeitliche «keine Links»-Beobachtung war ein **stale-`dist`** (alter preview-Prozess
+  auf :4173), kein Code-Fehler — nach Neubau verifiziert.
+
+### OFFEN — Phase 2 (kantonal) + Phase 3 (Prosa-Literale)
+
+- **Phase 2 — kantonale Inline-Verweise:** «§ N ERLASS» in Hinweisen über den Kanton/Erlass-
+  Kontext der zugehörigen Quelle auflösen (nicht über blinden §-Regex). Die Tarif-`quelle`
+  kennt Kanton/Erlass bereits; Kontext an den Hinweis-Renderer übergeben.
+- **Phase 3 — Prosa-Literale (~616 Funde, 57 Dateien):** «Art. N GESETZ» steht in vielen
+  Vorlagen-/Rechner-Seiten als STATISCHER JSX-Text (z. B. `…eigenhändig (Art. 505 Abs. 1
+  ZGB)…`), den NormText (nur Variablen) nicht erreicht. Heterogen (Prosa, Option-Labels,
+  Placeholder [NICHT verlinken!], Field-hints, Validierungstexte). Hoher Hebel: geteilte
+  Display-Primitive (Field-hint, FehlerBox) durch NormText führen statt 616 Einzel-Edits;
+  reine `<p>`-Prosa separat. Bewusst von Phase 1 getrennt (anderes Risikoprofil).
+
+## OFFEN (Plan-Notiz) — Inline-Norm-Auto-Linker «NormText» (Auftrag David 17.6.2026)
 
 **Befund David:** «es sind noch immer viele genannte Artikel nicht verlinkt.»
 Richtig — das Popover greift bisher nur an STRUKTURIERTEN Chip-Stellen. Artikel,

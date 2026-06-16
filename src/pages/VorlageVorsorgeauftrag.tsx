@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NormText } from '../components/NormText';
 import {
   VA_DEFAULTS, VA_BEREICHE, VA_MODULE, vaZusammenstellen, pruefeVaGates, beurkundungsHinweis,
   type VaAntworten, type VaBereich, type VaBeauftragte, type VaFormMode,
@@ -319,14 +320,14 @@ export function VorlageVorsorgeauftrag() {
         <div className="space-y-5">
           {gates.blocker.map((b, i) => (
             <div key={i} className="lc-notice-danger">
-              <p className="text-body-s text-danger-700">{b}</p>
+              <p className="text-body-s text-danger-700"><NormText text={b} /></p>
             </div>
           ))}
           {gates.warnungen.map((w, i) => (
-            <div key={i} className="lc-notice-warn text-body-s">{w}</div>
+            <div key={i} className="lc-notice-warn text-body-s"><NormText text={w} /></div>
           ))}
           {gates.hinweise.map((h, i) => (
-            <div key={i} className="lc-notice text-body-s">{h}</div>
+            <div key={i} className="lc-notice text-body-s"><NormText text={h} /></div>
           ))}
 
           {/* Form-Gate: nicht überspringbar, variantenabhängig */}

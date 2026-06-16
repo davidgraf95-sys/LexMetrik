@@ -101,7 +101,13 @@ export function GruppenTitel({ children }: { children: React.ReactNode }) {
 //    nie doppelt geöffnet/navigiert.
 // SSR/Prerender: offen=false initial, kein Effekt läuft, der erste Render ist
 // byte-identisch zum heutigen <a> (Golden unverändert).
-export function NormChip({ artikel, anzeige, hrefOverride, title }: {
+// Default-Styling des Chip-Links — der heutige Pillen-Look. Als Default-Wert von
+// linkClass ausgelagert, damit alle Bestands-Aufrufe (ohne linkClass) SSR-byte-
+// identisch bleiben (§6) und nur der Inline-Auto-Linker (NormText) ein anderes,
+// fliesstext-taugliches Styling übergibt.
+const CHIP_LINK_CLASS = 'lc-chip no-underline hover:text-brass-700';
+
+export function NormChip({ artikel, anzeige, hrefOverride, title, linkClass = CHIP_LINK_CLASS }: {
   /** Norm-Text für die Snapshot-Auflösung (bundSnapshotRef) + Fallback-URL. */
   artikel: string;
   /** Anzeigetext im Chip (Default: artikel). */
@@ -112,6 +118,9 @@ export function NormChip({ artikel, anzeige, hrefOverride, title }: {
   /** title-Attribut — NUR rendern, wenn gesetzt (SSR-Byte-Gleichheit der
    *  title-losen Einbaustellen). */
   title?: string;
+  /** className des Link-<a>. Default = Pillen-Chip; NormText übergibt einen
+   *  dezenten Inline-Stil (gleiche Popover-Logik, andere Darstellung). */
+  linkClass?: string;
 }) {
   const { locale } = useLocale();
   const inhalt = anzeige ?? artikel;
@@ -151,7 +160,7 @@ export function NormChip({ artikel, anzeige, hrefOverride, title }: {
         target="_blank"
         rel="noopener noreferrer"
         {...(title ? { title } : {})}
-        className="lc-chip no-underline hover:text-brass-700"
+        className={linkClass}
         onClick={beimKlick}
       >
         {inhalt}
