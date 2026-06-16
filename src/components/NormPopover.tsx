@@ -21,6 +21,14 @@ function markeNorm(s: string): string {
   return s.trim().replace(/^[.()\s]+|[.()\s]+$/g, '').toLowerCase();
 }
 
+// Absatz-Vergleichs-Normalisierung: nachgestellte Punkte/Whitespace strippen.
+// Manche Snapshots tragen den Absatz als «1.» (z.B. FR-261.16), das Zitat aber
+// als «1» — ohne Normalisierung matchten sie nicht und die Hervorhebung griffe
+// nicht. Innere Form bleibt unangetastet (nur die Ränder rechts werden gesäubert).
+function absatzNorm(a: string | null): string | null {
+  return a?.replace(/[.\s]+$/, '') ?? null;
+}
+
 // «aufgehoben»: faithful-Snapshot trägt für aufgehobene Stellen (§7) nur das
 // Auslassungszeichen «…» (ggf. mit Punkten/Whitespace). Rein Darstellung (§3):
 // gedämpftes «aufgehoben» statt des nackten «…»; gilt für Absätze UND Items.
@@ -72,7 +80,7 @@ export function NormPopover({ snapshot, passus, onClose }: {
   // springt der amtliche Link genau zur zitierten Stelle (Chromium hebt hervor,
   // andere ignorieren das Fragment).
   const hervorBlock = passus.absatz != null
-    ? snapshot.bloecke.find((b) => b.absatz === passus.absatz)
+    ? snapshot.bloecke.find((b) => absatzNorm(b.absatz) === absatzNorm(passus.absatz))
     : undefined;
   // GENAU EIN Item-Treffer (B1): der erste in Dokumentreihenfolge, dessen Block
   // als Ziel gilt UND dessen Marke passt. Ist ein Absatz zitiert, beschränkt
@@ -83,7 +91,7 @@ export function NormPopover({ snapshot, passus, onClose }: {
     if (passusMarke == null) return null;
     for (let bi = 0; bi < snapshot.bloecke.length; bi++) {
       const b = snapshot.bloecke[bi];
-      const istZielBlock = passus.absatz == null || b.absatz === passus.absatz;
+      const istZielBlock = passus.absatz == null || absatzNorm(b.absatz) === absatzNorm(passus.absatz);
       if (!istZielBlock || b.items == null) continue;
       const ji = b.items.findIndex((it) => markeNorm(it.marke) === passusMarke);
       if (ji >= 0) return { bi, ji };
@@ -146,7 +154,7 @@ export function NormPopover({ snapshot, passus, onClose }: {
           Absatz-Einleitung UND Items gleichermassen. */}
       <div className="px-5 py-4 space-y-2.5">
         {snapshot.bloecke.map((b, i) => {
-          const istAbsatzZitiert = passus.absatz != null && b.absatz === passus.absatz;
+          const istAbsatzZitiert = passus.absatz != null && absatzNorm(b.absatz) === absatzNorm(passus.absatz);
           // Starke Block-Hervorhebung nur, wenn KEIN Item zitiert ist; bei
           // zitiertem Item wird der Block dezent umrandet, das Item trägt die
           // starke Markierung.

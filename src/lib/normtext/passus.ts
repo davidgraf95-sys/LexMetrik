@@ -42,6 +42,27 @@ export function parsePassus(zitat: string): Passus | null {
   return passus;
 }
 
+// Führender Artikel-Designator eines (oft aufgeblähten) kantonalen Roh-Zitats:
+// das ERSTE «Art. N[a-z]*» bzw. «§ N[a-z]*» (lat. Suffixe bis/ter/… mitnehmen),
+// OHNE Abs./Ziff./lit./Klammer-Verweise/Erlass-Nr. So wird der Popover-Titel
+// schlank und einheitlich wie bei Bund («Art. 335c»):
+//   «§ 13 Abs. 1 Ziff. 1»               → «§ 13»
+//   «Art. 36 (Art. 38 vereinfacht)»     → «Art. 36»
+//   «§ 24 Abs. 1 lit. a GT (BGS 615.11)»→ «§ 24»
+//   «211.433 § 15 Abs. 1 Ziff. 1»       → «§ 15»
+// Die zitierte Abs./Ziff./lit. geht NICHT verloren: sie steckt in `passus`
+// (Trigger) und treibt die Markierung; nur der Titel wird gekürzt.
+// Ohne matchbaren Designator → Roh-String zurück (defensiv).
+const DESIGNATOR = /(Art\.?|§)\s*(\d+(?:bis|ter|quater|quinquies)?[a-z]?)/i;
+
+export function artikelLabelKurz(rohArtikel: string): string {
+  const m = rohArtikel.match(DESIGNATOR);
+  if (!m) return rohArtikel;
+  // «Art.» / «art» → kanonisch «Art.»; «§» bleibt «§».
+  const designator = m[1].startsWith('§') ? '§' : 'Art.';
+  return `${designator} ${m[2]}`;
+}
+
 // Text-Fragment für externe Links (Chromium hebt hervor, andere ignorieren).
 // Erste 6 Wörter genügen für eine eindeutige Sprungmarke.
 export function textFragment(text: string): string {

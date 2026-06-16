@@ -22,7 +22,11 @@
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
-import { sammleKantonInventar } from './inventar-kanton.ts';
+import {
+  sammleKantonInventar,
+  sammleHtmInventar,
+  sammleZhPdfInventar,
+} from './inventar-kanton.ts';
 import { alleArtikelTokens } from './extrahiere-fedlex.ts';
 import {
   fehlendeBundArtikel,
@@ -138,6 +142,53 @@ const BEKANNTE_LUECKEN: BekannteLuecke[] = [
 // werden via Laufzeit-Auflösung (unerwarteteKantonLueckenMitQuelleUrl) korrekt
 // als ABGEDECKT erkannt. ID-Suffixe (-de/-fr/III%20B_7_1) in Snapshot-Dateien
 // sind kein Loch, sondern ein Auflösungsartefakt (BUG A3).
+
+// ─── Bekannte HTM/ZH-Lücken (dokumentiert mit Grund) ─────────────────────────
+//
+// Wie BEKANNTE_LUECKEN, aber für die HTM- (NE/GE) und ZH-Tiers. snapshotId ist
+// die kanonische Form `kanton/${kanton}/${safeLawId}/art_${token}` (safeLawId =
+// htmLawIdSafe bzw. zhLawIdSafe der quelleUrl). Lücken, die NICHT hier stehen,
+// führen zu einem FEHLER (§8).
+//
+// Verifikation: Stand 16.6.2026 — alle Einträge empirisch geprüft.
+const BEKANNTE_LUECKEN_HTMZH: BekannteLuecke[] = [
+  // ── NE/2154116 (LERF, htm): Arrêté-Artikel liegen NICHT im LERF-htm ───────
+  // Die festen Emolument-Tarife stehen im Arrêté RSN 215.411.60 (eigener Erlass,
+  // nicht als htm erschlossen). Das LERF-htm (2154116.htm) enthält nur die
+  // LERF-Artikel selbst (Art. 9–13 werden sauber gesnapshottet). Die «Arrêté
+  // Art. …»-Zitate teilen sich die LERF-quelleUrl (gemeinsamer Tarif-Eintrag)
+  // → im LERF-htm nicht auffindbar. Bekannt (Stand 16.6.2026): 14, 18, 20, 21,
+  // 27 (Arrêté) sowie 44 (Tarif notaires RSN 166.31, mitzitiert).
+  { snapshotId: 'kanton/NE/2154116/art_14', grund: 'token-nicht-im-Erlass', notiz: 'Arrêté RSN 215.411.60 Art. 14 — im LERF-htm nicht enthalten (anderer Erlass).' },
+  { snapshotId: 'kanton/NE/2154116/art_18', grund: 'token-nicht-im-Erlass', notiz: 'Arrêté RSN 215.411.60 Art. 18 — im LERF-htm nicht enthalten (anderer Erlass).' },
+  { snapshotId: 'kanton/NE/2154116/art_20', grund: 'token-nicht-im-Erlass', notiz: 'Arrêté RSN 215.411.60 Art. 20 — im LERF-htm nicht enthalten (anderer Erlass).' },
+  { snapshotId: 'kanton/NE/2154116/art_21', grund: 'token-nicht-im-Erlass', notiz: 'Arrêté RSN 215.411.60 Art. 21 — im LERF-htm nicht enthalten (anderer Erlass).' },
+  { snapshotId: 'kanton/NE/2154116/art_27', grund: 'token-nicht-im-Erlass', notiz: 'Arrêté RSN 215.411.60 Art. 27 — im LERF-htm nicht enthalten (anderer Erlass).' },
+  { snapshotId: 'kanton/NE/2154116/art_44', grund: 'token-nicht-im-Erlass', notiz: 'Tarif notaires RSN 166.31 Art. 44 — nicht im LERF-htm (anderer Erlass, mitzitiert).' },
+
+  // ── NE/16631 (Tarif notaires RSN 166.31, htm): mitzitierte Fremdartikel ───
+  // Art. 54 / Art. 81 sind im 166.31-htm-Extrakt nicht als eigene Artikel
+  // auffindbar (Tarif-Struktur abweichend; teils Verweis-Zitate). Stand 16.6.2026.
+  { snapshotId: 'kanton/NE/16631/art_54', grund: 'token-nicht-im-Erlass', notiz: 'RSN 166.31 Art. 54 — im htm-Extrakt nicht als eigener Artikel auffindbar (Stand 16.6.2026).' },
+  { snapshotId: 'kanton/NE/16631/art_81', grund: 'token-nicht-im-Erlass', notiz: 'RSN 166.31 Art. 81 — im htm-Extrakt nicht als eigener Artikel auffindbar (Stand 16.6.2026).' },
+
+  // ── GE/rsg_e1_50p06 (silgeneve, htm): mitzitierte Fremdartikel ────────────
+  // Art. 16 / Art. 84 sind im Word-Export-htm nicht als eigene Artikel
+  // extrahierbar (verkettetes Zitat «Art. 16 / Art. 4 al. 6 / Art. 84»; nur
+  // der primäre Artikel des Erlasses wird sauber erfasst). Stand 16.6.2026.
+  { snapshotId: 'kanton/GE/rsg_e1_50p06/art_16', grund: 'token-nicht-im-Erlass', notiz: 'GE rsg_e1_50p06 Art. 16 — im htm-Extrakt nicht auffindbar (verkettetes Zitat, Stand 16.6.2026).' },
+  { snapshotId: 'kanton/GE/rsg_e1_50p06/art_84', grund: 'token-nicht-im-Erlass', notiz: 'GE rsg_e1_50p06 Art. 84 — im htm-Extrakt nicht auffindbar (verkettetes Zitat, Stand 16.6.2026).' },
+];
+
+// ─── HTM/ZH-lawIdSafe (kongruent zum Orchestrator) ───────────────────────────
+function htmLawIdSafe(url: string): string {
+  const letzter = url.split('/').pop() ?? url;
+  return letzter.replace(/\.html?$/i, '');
+}
+function zhLawIdSafe(url: string): string {
+  const m = url.match(/\/erlass-([^-]+)-/);
+  return m ? m[1].replace(/_/g, '.') : url.replace(/[^a-z0-9.]+/gi, '_');
+}
 
 // ─── Hilfsfunktionen ──────────────────────────────────────────────────────────
 
@@ -315,12 +366,48 @@ async function main(): Promise<void> {
   );
 
   if (unerwartet.length > 0) {
-    console.error(`  FEHLER: ${unerwartet.length} unerwartete Kanton-Zitat-Lücken (nicht in bekannteLuecken):`);
+    console.error(`  FEHLER: ${unerwartet.length} unerwartete Kanton-Zitat-Lücken (LexWork, nicht in bekannteLuecken):`);
     for (const l of unerwartet) {
       console.error(`    ${l.snapshotId}`);
     }
     exitCode = 1;
   }
+
+  // ── HTM (NE/GE) + ZH-Tier: gleiche quelleUrl-Auflösung, eigene Lücken-Liste ──
+  // Diese Tiers liefen bisher NICHT durch das Tor (BUG3) — eine künftige HTM/ZH-
+  // Lücke lief still durch. Jetzt: jede HTM/ZH-Inventar-Gruppe wird gegen ihre
+  // Snapshots via quelleUrl-Auflösung geprüft (kanton/${kanton}/${safeLawId}/…).
+  const htmGruppen = sammleHtmInventar().map((g) => ({
+    kanton: g.kanton,
+    lawId: htmLawIdSafe(g.quelleUrl),
+    quelleUrl: g.quelleUrl,
+    artikel: g.artikel,
+  }));
+  const zhGruppen = sammleZhPdfInventar().map((g) => ({
+    kanton: g.kanton,
+    lawId: zhLawIdSafe(g.quelleUrl),
+    quelleUrl: g.quelleUrl,
+    artikel: g.artikel,
+  }));
+  const unerwartetHtmZh = unerwarteteKantonLueckenMitQuelleUrl(
+    [...htmGruppen, ...zhGruppen],
+    manifestMap,
+    artikelNachUrl,
+    BEKANNTE_LUECKEN_HTMZH,
+  );
+
+  if (unerwartetHtmZh.length > 0) {
+    console.error(`  FEHLER: ${unerwartetHtmZh.length} unerwartete Kanton-Zitat-Lücken (HTM/ZH, nicht in bekannteLuecken):`);
+    for (const l of unerwartetHtmZh) {
+      console.error(`    ${l.snapshotId}`);
+    }
+    exitCode = 1;
+  }
+
+  const htmZhZitate = [...htmGruppen, ...zhGruppen].reduce((s, g) => s + g.artikel.length, 0);
+  console.log(
+    `  HTM/ZH: ${htmZhZitate} Zitat-Tripel geprüft (via quelleUrl-Auflösung), bekannte Lücken: ${BEKANNTE_LUECKEN_HTMZH.length}, unerwartet: ${unerwartetHtmZh.length === 0 ? 'ok' : unerwartetHtmZh.length}`,
+  );
 
   // Bekannte Lücken: zeige nur jene, die tatsächlich in einem Inventar-Zitat auftauchen
   // (kanonische snapshotId-Form: kanton/${kanton}/${lawId}/art_${token}).

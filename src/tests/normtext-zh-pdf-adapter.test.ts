@@ -13,6 +13,7 @@ import {
   extrahiereAlleZhParagraphen,
   berechneZhQuelleHash,
   leseZhStand,
+  leseZhStandAusUrl,
   leseAttachmentUrl,
   loeseRedirect,
 } from '../../scripts/normtext/adapter-zh-pdf.ts';
@@ -102,6 +103,20 @@ describe('ZH-PDF-Adapter — Stand', () => {
 
   it('liefert "" ohne Marker', () => {
     expect(leseZhStand('Gebührenverordnung des Obergerichts')).toBe('');
+  });
+
+  // FIX 1: stand = In-Kraft-Datum aus dem Registry-URL-Slug (zweites Tripel),
+  // NICHT der Loseblatt-Druckstand aus dem PDF-Fussband.
+  it('leseZhStandAusUrl: ZH-211.11 → 2011-01-01 (zweites Datum-Tripel = Inkrafttreten)', () => {
+    expect(
+      leseZhStandAusUrl(
+        'https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-211_11-2010_09_08-2011_01_01-087.html',
+      ),
+    ).toBe('2011-01-01');
+  });
+
+  it('leseZhStandAusUrl: liefert "" wenn das Slug-Muster nicht matcht (defensiv)', () => {
+    expect(leseZhStandAusUrl('https://www.zh.ch/de/.../uebersicht.html')).toBe('');
   });
 });
 

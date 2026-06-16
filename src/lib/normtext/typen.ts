@@ -30,7 +30,10 @@ export interface NormSnapshot {
   quelleUrl: string;
   /** Abrufdatum des Snapshots (ISO). */
   abgerufen: string;
-  /** Drift-Token: Bund=Konsolidierung 'YYYYMMDD'; LexWork=versions/{id}. */
+  /**
+   * Drift-Token (§7 d): Bund=Konsolidierung 'YYYYMMDD'; LexWork=version_uid
+   * (MD5); HTM/ZH=quelleHash (sha256 des extrahierten Volltexts).
+   */
   fassungsToken: string;
   /** sha256 des extrahierten Volltexts — Regressions-/Drift-Anker. */
   sha: string;

@@ -112,6 +112,29 @@ describe('NormPopover — Render', () => {
   });
 });
 
+describe('NormPopover — Absatz-Vergleich normalisiert (FIX 3)', () => {
+  // FR-261.16 trägt den Absatz im Snapshot als «1.» (mit Punkt), das Zitat
+  // aber als «1». Ohne Normalisierung der Vergleichsränder griffe die
+  // Hervorhebung nicht. absatzNorm strippt nachgestellte Punkte/Whitespace.
+  const SNAP_PUNKT: NormSnapshot = {
+    ...SNAP,
+    ebene: 'kanton',
+    bloecke: [
+      { absatz: '1.', text: 'Der erste Absatz, im Snapshot mit nachgestelltem Punkt.' },
+      { absatz: '2.', text: 'Der zweite Absatz, ebenfalls mit Punkt.' },
+    ],
+  };
+
+  it('Block-Absatz «1.» wird von passus.absatz «1» markiert (data-passus="true")', () => {
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_PUNKT} passus={{ absatz: '1' }} onClose={() => {}} />,
+    );
+    expect(out.match(/data-passus="true"/g)!.length).toBe(1);
+    const seg = out.split('data-passus="true"')[1];
+    expect(seg).toContain('Der erste Absatz');
+  });
+});
+
 describe('NormPopover — aufgehobene Absätze (David 16.6.2026)', () => {
   // Aufgehobene Absätze tragen im Snapshot (faithful, §7) nur «…»; das Popover
   // zeigt statt des nackten «…» die Kennzeichnung «aufgehoben» (Darstellung,

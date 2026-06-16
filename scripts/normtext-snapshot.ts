@@ -23,6 +23,7 @@ import { holeLexWork } from './normtext/adapter-lexwork.ts';
 import { holeHtm } from './normtext/adapter-htm.ts';
 import { holeZhPdf } from './normtext/adapter-zh-pdf.ts';
 import { baueManifest } from './normtext/kanton-manifest.ts';
+import { artikelLabelKurz } from '../src/lib/normtext/passus.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
 
 // ── Argument --datum= auslesen ────────────────────────────────────────────────
@@ -219,7 +220,7 @@ async function erzeugeKantonsSnapshots(
         quelle: g.kanton,
         erlass,
         artikel: art.token,
-        artikelLabel: art.label,
+        artikelLabel: artikelLabelKurz(art.label),
         bloecke: treffer.bloecke,
         stand: ergebnis.meta.stand,
         // LexWork hat keinen Artikel-Anker → Gesetzes-Seite (originale /app/-URL).
@@ -323,7 +324,7 @@ async function erzeugeHtmSnapshots(
         quelle: g.kanton,
         erlass,
         artikel: art.token,
-        artikelLabel: art.label,
+        artikelLabel: artikelLabelKurz(art.label),
         bloecke: treffer.bloecke,
         stand: ergebnis.meta.stand,
         // HTM-Quelle: die exakte .htm-URL (= Manifest-Key, wie im Tarif-Eintrag).
@@ -405,7 +406,7 @@ async function erzeugeZhPdfSnapshots(
         quelle: g.kanton,
         erlass,
         artikel: art.token,
-        artikelLabel: art.label,
+        artikelLabel: artikelLabelKurz(art.label),
         bloecke: treffer.bloecke,
         stand: ergebnis.meta.stand,
         quelleUrl: g.quelleUrl,

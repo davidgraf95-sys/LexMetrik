@@ -437,6 +437,24 @@ export function leseZhStand(kopfText: string): string {
   return `${jahr}-${monat}-${tag}`;
 }
 
+/**
+ * Liest das In-Kraft-Datum aus dem zhlex-Registry-URL-Slug. Die Registry-URL
+ * trägt zwei Datum-Tripel: das ERSTE ist das Beschluss-/Erlassdatum, das ZWEITE
+ * das Inkrafttreten. Beispiel:
+ *   …/erlass-211_11-2010_09_08-2011_01_01-087.html
+ *                    ^Beschluss   ^Inkraft (= stand)
+ * → ISO «2011-01-01». Das ist das massgebliche In-Kraft-Datum (§7/§8), NICHT der
+ * Loseblatt-Nachtrag-Druckstand «1. 1. 15 - 87» aus dem PDF-Fussband (leseZhStand,
+ * nur noch Fallback). Liefert '' wenn das Muster nicht matcht (defensiv).
+ */
+export function leseZhStandAusUrl(registryUrl: string): string {
+  const m = registryUrl.match(
+    /erlass-[^-]+-\d{4}_\d{2}_\d{2}-(\d{4})_(\d{2})_(\d{2})-/,
+  );
+  if (!m) return '';
+  return `${m[1]}-${m[2]}-${m[3]}`;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Netz-Hülle: Registry-HTML → Redirect → PDF → Extraktion
 // ─────────────────────────────────────────────────────────────────────────────
@@ -502,9 +520,14 @@ export async function holeZhPdf(
   const textbasis = serialisiereZhZeilen(zeilen);
   const artikel = extrahiereAlleZhParagraphen(textbasis);
 
-  // Stand aus dem PDF-Kopf-Marker «1. 1. 15 - 87» (im verworfenen Rand-Band);
-  // Fallback: aus dem Registry-HTML.
-  const stand = leseZhStand(randText) || leseZhStand(regHtml) || '';
+  // Stand = In-Kraft-Datum aus dem Registry-URL-Slug (zweites Datum-Tripel, §7/§8).
+  // Der PDF-Fussband-Marker «1. 1. 15 - 87» ist der Loseblatt-Nachtrag-Druckstand,
+  // NICHT das Inkrafttreten → nur noch Fallback.
+  const stand =
+    leseZhStandAusUrl(registryUrl) ||
+    leseZhStand(randText) ||
+    leseZhStand(regHtml) ||
+    '';
   // Titel: erste Body-Zeile.
   const titel = zeilen.length > 0 ? zeilen[0].text : '';
 

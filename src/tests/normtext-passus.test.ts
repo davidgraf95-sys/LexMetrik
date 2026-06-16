@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parsePassus, textFragment } from '../lib/normtext/passus';
+import { parsePassus, textFragment, artikelLabelKurz } from '../lib/normtext/passus';
 
 describe('parsePassus', () => {
   it('liest Artikel-Token und Absatz aus einem OR-Zitat', () => {
@@ -45,6 +45,33 @@ describe('parsePassus', () => {
   });
   it('kein Artikel im Text → null', () => {
     expect(parsePassus('siehe oben')).toBeNull();
+  });
+});
+
+describe('artikelLabelKurz', () => {
+  it('§ mit Abs./Ziff. → nur «§ N» (FIX 2)', () => {
+    expect(artikelLabelKurz('§ 13 Abs. 1 Ziff. 1')).toBe('§ 13');
+  });
+  it('Art. mit Klammer-Verweis → nur «Art. N»', () => {
+    expect(artikelLabelKurz('Art. 36 (Art. 38 vereinfacht)')).toBe('Art. 36');
+  });
+  it('§ mit Abs./lit./Erlass-Klammer → nur «§ N»', () => {
+    expect(artikelLabelKurz('§ 24 Abs. 1 lit. a GT (BGS 615.11)')).toBe('§ 24');
+  });
+  it('führende Erlass-Nr. vor dem § ignoriert → «§ N»', () => {
+    expect(artikelLabelKurz('211.433 § 15 Abs. 1 Ziff. 1')).toBe('§ 15');
+  });
+  it('schlankes Bund-Label bleibt unverändert', () => {
+    expect(artikelLabelKurz('Art. 335c')).toBe('Art. 335c');
+  });
+  it('lat. Suffix (bis/ter) wird mitgenommen', () => {
+    expect(artikelLabelKurz('Art. 334bis Abs. 2 OR')).toBe('Art. 334bis');
+  });
+  it('kleingeschriebenes «art» → kanonisch «Art.»', () => {
+    expect(artikelLabelKurz('art 9 al. 2')).toBe('Art. 9');
+  });
+  it('ohne matchbaren Designator → roh zurück (defensiv)', () => {
+    expect(artikelLabelKurz('Anhang Ziff. 3')).toBe('Anhang Ziff. 3');
   });
 });
 
