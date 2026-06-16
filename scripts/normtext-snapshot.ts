@@ -18,6 +18,7 @@ import {
   sammleFallback,
 } from './normtext/inventar-kanton.ts';
 import { holeLexWork } from './normtext/adapter-lexwork.ts';
+import { baueManifest } from './normtext/kanton-manifest.ts';
 import type { NormSnapshot, NormSnapshotDatei } from '../src/lib/normtext/typen.ts';
 
 // ── Argument --datum= auslesen ────────────────────────────────────────────────
@@ -348,6 +349,21 @@ async function main(): Promise<void> {
   for (const f of cov.fetchFehler) console.log(`  ${f.kanton} ${f.lawId}: ${f.fehler}`);
   console.log(`Fallback-Quellen (Nicht-LexWork, kein Snapshot): ${fallback.length} in ${fallbackKantone.length} Kantonen`);
   console.log(`  Kantone: ${fallbackKantone.join(', ')}`);
+
+  // ── Kanton-Manifest (quelleUrl → Dateiname) aktualisieren ────────────────
+  const kantonManifest = baueManifest('public/normtext/kanton');
+  const kantonManifestSortiert: Record<string, string> = {};
+  for (const k of Object.keys(kantonManifest).sort()) {
+    kantonManifestSortiert[k] = kantonManifest[k];
+  }
+  writeFileSync(
+    'public/normtext/kanton/index.json',
+    stabelesJson(kantonManifestSortiert),
+    'utf8',
+  );
+  console.log(
+    `\nKanton-Manifest: public/normtext/kanton/index.json (${Object.keys(kantonManifestSortiert).length} Einträge)`,
+  );
 
   // Golden-Index schreiben (sortiert)
   const goldenSortiert: Record<string, string> = {};
