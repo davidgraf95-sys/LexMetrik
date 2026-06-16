@@ -93,16 +93,22 @@ export function NormPopover({ snapshot, passus, onClose }: {
               {b.absatz != null && (
                 <sup className="num mr-1 font-semibold text-ink-500">{b.absatz}</sup>
               )}
-              {b.text}
+              {/* Aufgehobene Absätze tragen im Snapshot (faithful, §7) nur das
+                  Auslassungszeichen «…». Statt des nackten «…» zeigen wir
+                  «aufgehoben» (rein Darstellung, §3 — Daten unverändert). Die
+                  Absatznummer-<sup> bleibt davor → liest sich «² aufgehoben». */}
+              {/^[….\s]*$/.test(b.text) && b.text.trim() !== ''
+                ? <span className="italic text-ink-400">aufgehoben</span>
+                : b.text}
             </p>
           );
         })}
       </div>
 
-      {/* Fuss: Stand · Live-Link zur geltenden Fassung · Disclaimer (§8). */}
+      {/* Fuss: In Kraft seit · Live-Link zur geltenden Fassung · Disclaimer (§8). */}
       <div className="border-t border-line px-5 py-3 space-y-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="text-xs text-ink-500">Stand: <span className="num">{snapshot.stand}</span></span>
+          <span className="text-xs text-ink-500">In Kraft seit: <span className="num">{snapshot.stand}</span></span>
           <a
             href={liveUrl}
             target="_blank"

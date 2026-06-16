@@ -94,10 +94,12 @@ describe('NormPopover — Render', () => {
     expect((href.match(/#/g) ?? []).length).toBe(1);
   });
 
-  it('Stand-Text sichtbar', () => {
+  it('«In Kraft seit»-Text sichtbar (David 16.6.2026: Label statt «Stand»)', () => {
     const out = html({ absatz: '1' });
-    expect(out).toContain('Stand:');
+    expect(out).toContain('In Kraft seit:');
     expect(out).toContain('2026-01-01');
+    // bewusste Umbenennung: das alte nackte «Stand:»-Label gibt es nicht mehr
+    expect(out).not.toContain('>Stand: ');
   });
 
   it('A11y: role=dialog, aria-modal, Schliess-Button, Disclaimer', () => {
@@ -107,6 +109,45 @@ describe('NormPopover — Render', () => {
     expect(out).toMatch(/aria-label="[^"]*Schliessen[^"]*"/);
     // Disclaimer (§8): Snapshot ist nicht massgeblich
     expect(out.toLowerCase()).toContain('massgeblich');
+  });
+});
+
+describe('NormPopover — aufgehobene Absätze (David 16.6.2026)', () => {
+  // Aufgehobene Absätze tragen im Snapshot (faithful, §7) nur «…»; das Popover
+  // zeigt statt des nackten «…» die Kennzeichnung «aufgehoben» (Darstellung,
+  // §3 — die Daten bleiben «…»).
+  const SNAP_AUFGEHOBEN: NormSnapshot = {
+    ...SNAP,
+    bloecke: [
+      { absatz: '1', text: 'Erster, gültiger Absatz mit Inhalt.' },
+      { absatz: '2', text: '…' },
+    ],
+  };
+
+  it('Block mit nur «…» rendert «aufgehoben», nicht das nackte «…»', () => {
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_AUFGEHOBEN} passus={{ absatz: null }} onClose={() => {}} />,
+    );
+    expect(out).toContain('aufgehoben');
+    // der gültige Absatz bleibt unverändert sichtbar
+    expect(out).toContain('Erster, gültiger Absatz');
+    // im Absatz-2-Segment steht «aufgehoben», nicht das nackte «…»
+    const sup2 = out.split('<sup');
+    const ab2 = sup2[sup2.length - 1];
+    expect(ab2).toContain('aufgehoben');
+    expect(ab2).not.toContain('>…<');
+  });
+
+  it('gültiger «…»-Inhalt mit weiterem Text bleibt unberührt', () => {
+    const SNAP_MIT_PUNKTEN: NormSnapshot = {
+      ...SNAP,
+      bloecke: [{ absatz: '1', text: 'Text mit … Auslassung im Satz.' }],
+    };
+    const out = renderToString(
+      <NormPopover snapshot={SNAP_MIT_PUNKTEN} passus={{ absatz: null }} onClose={() => {}} />,
+    );
+    expect(out).toContain('Text mit … Auslassung im Satz.');
+    expect(out).not.toContain('aufgehoben');
   });
 });
 
