@@ -33,10 +33,13 @@ const html = (passus: { absatz: string | null }) =>
   renderToString(<NormPopover snapshot={SNAP} passus={passus} onClose={() => {}} />);
 
 describe('NormPopover — Render', () => {
-  it('zeigt artikelLabel und erlass im Kopf', () => {
+  it('zeigt artikelLabel und erlass im Kopf — ohne Mittelpunkt (David 16.6.2026)', () => {
     const out = html({ absatz: '2' });
     expect(out).toContain('Art. 335c');
     expect(out).toContain('OR');
+    // Titel ist «Art. 335c OR», kein «·» dazwischen.
+    expect(out).toContain('aria-label="Art. 335c OR"');
+    expect(out).not.toContain('·');
   });
 
   it('rendert alle Blöcke (jeder Text vorhanden)', () => {
@@ -66,11 +69,16 @@ describe('NormPopover — Render', () => {
 
   it('Fuss: Live-Link mit Text-Fragment auf den hervorgehobenen Block', () => {
     const out = html({ absatz: '2' });
-    const m = out.match(/href="([^"]*#:~:text=[^"]*)"/);
-    expect(m, 'Live-Link mit #:~:text= muss vorhanden sein').not.toBeNull();
+    const m = out.match(/href="([^"]*:~:text=[^"]*)"/);
+    expect(m, 'Live-Link mit :~:text= muss vorhanden sein').not.toBeNull();
     const href = m![1].replace(/&amp;/g, '&').replace(/&#x27;/g, "'");
     expect(href.startsWith(SNAP.quelleUrl)).toBe(true);
-    expect(href).toContain('#:~:text=');
+    expect(href).toContain(':~:text=');
+    // EIN Fragment: der Artikel-Anker und das Text-Fragment teilen sich das #
+    // (…#art_335_c:~:text=… — kein doppeltes #, damit der Anker auch ohne
+    // Text-Fragment-Unterstützung greift).
+    expect(href).toContain('#art_335_c:~:text=');
+    expect((href.match(/#/g) ?? []).length).toBe(1);
     // Fragment-Text stammt aus dem hervorgehobenen Abs-2-Block
     expect(href).toContain(encodeURIComponent('Diese'));
     // Sicherheits-Attribute
@@ -80,8 +88,9 @@ describe('NormPopover — Render', () => {
 
   it('ohne Hervorhebung: Text-Fragment auf den ersten Block', () => {
     const out = html({ absatz: null });
-    const href = out.match(/href="([^"]*#:~:text=[^"]*)"/)![1];
+    const href = out.match(/href="([^"]*:~:text=[^"]*)"/)![1];
     expect(href).toContain(encodeURIComponent('Das'));
+    expect((href.match(/#/g) ?? []).length).toBe(1);
   });
 
   it('Stand-Text sichtbar', () => {

@@ -40,8 +40,15 @@ export function NormPopover({ snapshot, passus, onClose }: {
     ? snapshot.bloecke.find((b) => b.absatz === passus.absatz)
     : undefined;
   const fragmentText = (hervor ?? snapshot.bloecke[0])?.text ?? '';
-  const liveUrl = snapshot.quelleUrl + textFragment(fragmentText);
-  const titel = `${snapshot.artikelLabel} · ${snapshot.erlass}`;
+  // textFragment liefert '#:~:text=…'. Hat die Quelle-URL schon einen Anker
+  // (…#art_335_c), teilen sich Anker und Text-Fragment EIN # (das führende #
+  // des Fragments entfällt) → '…#art_335_c:~:text=…'. So bleibt der Artikel-
+  // Anker auch ohne Text-Fragment-Unterstützung gültig (kein doppeltes #).
+  const frag = textFragment(fragmentText);
+  const liveUrl = snapshot.quelleUrl.includes('#')
+    ? snapshot.quelleUrl + frag.slice(1)
+    : snapshot.quelleUrl + frag;
+  const titel = `${snapshot.artikelLabel} ${snapshot.erlass}`;
 
   return (
     <div
@@ -57,7 +64,7 @@ export function NormPopover({ snapshot, passus, onClose }: {
         <div className="min-w-0">
           <p className="lc-overline text-brass-700">Norm-Vorschau</p>
           <h2 className="text-body-l font-semibold text-ink-900 truncate">
-            {snapshot.artikelLabel} <span className="text-ink-500 font-normal">· {snapshot.erlass}</span>
+            {snapshot.artikelLabel} <span className="text-ink-500 font-normal">{snapshot.erlass}</span>
           </h2>
         </div>
         <button
