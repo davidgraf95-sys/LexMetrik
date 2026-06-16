@@ -41,6 +41,26 @@ describe('HTM-Adapter — GE (silgeneve)', () => {
     expect(a!.bloecke[0].text).toContain('valeur litigieuse');
   });
 
+  it('extrahiert Art. 17 (Tarif-Tabelle als gepaarte Band↔Wert-items, Zellen NICHT als Einzelblöcke)', () => {
+    const a = extrahiereHtmArtikel(GE_RTFMC_HTM, '17', 'ge');
+    expect(a).not.toBeNull();
+    // Nur der Einleitungssatz bleibt als Block — die Tabellenzellen leaken NICHT
+    // mehr als eigene absatz:null-Blöcke (Bug-Fix 16.6.2026).
+    expect(a!.bloecke).toHaveLength(1);
+    expect(a!.bloecke[0].text).toContain('fixé comme suit');
+    const items = a!.bloecke[0].items ?? [];
+    // 3 Bänder (Kopfzeile «Valeur litigieuse | Emolument» übersprungen).
+    expect(items).toHaveLength(3);
+    // Band ↔ Emolument gepaart; Revisionsmarke (1) entfernt.
+    expect(items[0].marke).toContain("jusqu'à 10 000 fr.");
+    expect(items[0].text).toBe('de 200 fr. à 2 000 fr.');
+    expect(items[0].text).not.toContain('(1)');
+    expect(items[1].marke).toContain('10 001 fr. à 30 000 fr.');
+    expect(items[1].text).toBe('de 1 000 fr. à 3 000 fr.');
+    expect(items[2].marke).toContain('dès 1 000 001 fr.');
+    expect(items[2].text).toBe('de 100 000 fr. à 200 000 fr.');
+  });
+
   it('Stand = jüngstes Tvigueur-Datum (01.07.2025)', () => {
     const { meta } = extrahiereAlleHtmArtikel(GE_RTFMC_HTM, 'ge');
     expect(meta.stand).toBe('2025-07-01');
@@ -75,14 +95,30 @@ describe('HTM-Adapter — NE (rsn)', () => {
     expect(abs3.items![1].text).toContain("Conseil d'État");
   });
 
-  it('extrahiert Art. 11 (sup 1, 1bis, 2; Tabelle an Absatz 1 gehängt)', () => {
+  it('extrahiert Art. 11 (sup 1, 1bis, 2; Gebührenstaffel als gepaarte Band↔Wert-items, rowspan)', () => {
     const a = extrahiereHtmArtikel(NE_LTFRAIS_HTM, '11', 'ne');
     expect(a).not.toBeNull();
     expect(a!.bloecke.map((b) => b.absatz)).toEqual(['1', '1bis', '2']);
-    // Gebührenstaffel-Tabelle ist an den Einleitungsabsatz gehängt.
+    // Einleitungstext bleibt Prosa.
     expect(a!.bloecke[0].text).toContain("L'émolument forfaitaire de conciliation");
-    expect(a!.bloecke[0].text).toContain("jusqu'à 2'000.-");
-    expect(a!.bloecke[0].text).toContain('300.-');
+    // Bug-Fix 16.6.2026: Tabelle wird NICHT mehr flach an den Text geklebt,
+    // sondern als gepaarte items angehängt — jedes Band trägt SEINEN Wert.
+    const items = a!.bloecke[0].items ?? [];
+    expect(items).toHaveLength(3);
+    // Band «jusqu'à 2'000» ↔ 300; NICHT alle Werte am ersten Band.
+    expect(items[0].marke).toContain("jusqu’à 2'000.-");
+    expect(items[0].text).toBe('300.-');
+    expect(items[0].text).not.toContain('400'); // kein Werte-Klumpen
+    // rowspan: zweites Band «2'001 à 5'000» ↔ 400 (2. Absatz der rowspan-Zelle).
+    expect(items[1].marke).toContain("2'001.-");
+    expect(items[1].marke).toContain("5'000.-");
+    expect(items[1].text).toBe('400.-');
+    // drittes Band «5'001 à 8'000» ↔ 500 (eigene Wertzelle).
+    expect(items[2].marke).toContain("5'001.-");
+    expect(items[2].marke).toContain("8'000.-");
+    expect(items[2].text).toBe('500.-');
+    // Werte stehen nicht (mehr) im Prosa-Text.
+    expect(a!.bloecke[0].text).not.toContain("jusqu'à 2'000.-");
     expect(a!.bloecke[1].text).toContain('non patrimoniale');
   });
 

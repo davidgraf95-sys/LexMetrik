@@ -91,4 +91,31 @@ tribunal informe la partie qui n'est pas assistée d'un avocat sur le montant
 probable des frais (frais judiciaires et dépens) et sur l'institution de
 l'assistance juridique.</span></p>
 
+<p class=retour2>&nbsp;</p>
+
+<p class=article>Art. 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Causes pécuniaires</p>
+
+<p class=TexteTL><span lang=FR style='font-family:"Arial",sans-serif'>L'émolument
+forfaitaire de décision est fixé comme suit&nbsp;:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td><p class=TexteTL><b><span lang=FR>Valeur litigieuse</span></b></p></td>
+  <td><p class=TexteTL><b><span lang=FR>Emolument</span></b></p></td>
+ </tr>
+ <tr>
+  <td><p class=TexteTL><span lang=FR>- jusqu'à 10&nbsp;000&nbsp;fr.</span></p></td>
+  <td><p class=TexteTL><span lang=FR>de 200&nbsp;fr.</span><sup><span
+  lang=FR style='font-size:7.0pt'>(1)</span></sup><span lang=FR> à 2&nbsp;000&nbsp;fr.</span></p></td>
+ </tr>
+ <tr>
+  <td><p class=TexteTL><span lang=FR>- de 10&nbsp;001&nbsp;fr. à 30&nbsp;000&nbsp;fr.</span></p></td>
+  <td><p class=TexteTL><span lang=FR>de 1&nbsp;000&nbsp;fr. à 3&nbsp;000&nbsp;fr.</span></p></td>
+ </tr>
+ <tr>
+  <td><p class=TexteTL><span lang=FR>- dès 1&nbsp;000&nbsp;001&nbsp;fr.</span></p></td>
+  <td><p class=TexteTL><span lang=FR>de 100&nbsp;000&nbsp;fr. à 200&nbsp;000&nbsp;fr.</span></p></td>
+ </tr>
+</table>
+
 <p class=retour2>&nbsp;</p>`;

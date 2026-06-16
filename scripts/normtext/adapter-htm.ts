@@ -112,18 +112,39 @@ function bereinige(roh: string): string {
 interface PSegment {
   klasse: string;
   inner: string;
+  /** Byte-Offset des <p> im Quell-HTML (für Tabellen-Zuordnung GE). */
+  index: number;
+  /** true, wenn dieses <p> innerhalb eines <table> liegt (Tabellenzelle). Solche
+   *  Zellen werden NICHT als eigene Blöcke ausgegeben — die Tabelle wird als
+   *  gepaarte Band↔Wert-`items` separat angehängt (tabelleZuItems). */
+  inTabelle: boolean;
+}
+
+/** Liefert die [start,ende)-Byte-Ranges aller <table>…</table> im HTML. */
+function tabellenRanges(html: string): Array<[number, number]> {
+  const ranges: Array<[number, number]> = [];
+  const re = /<table\b[^>]*>[\s\S]*?<\/table>/gi;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    ranges.push([m.index, m.index + m[0].length]);
+  }
+  return ranges;
 }
 
 /** Zerlegt das HTML in <p class=…>…</p>-Segmente (Word exportiert sauber
- *  geschlossene <p>; verschachtelte Tabellen bleiben im inner erhalten). */
+ *  geschlossene <p>; verschachtelte Tabellen bleiben im inner erhalten).
+ *  inTabelle markiert Zellen-<p> (liegen in einer <table>-Range). */
 function leseParagraphen(html: string): PSegment[] {
+  const ranges = tabellenRanges(html);
   const segmente: PSegment[] = [];
   // class= mit/ohne Quotes (GE: class=article, NE: class=xNormal). Bis zum
   // nächsten </p>. Word verschachtelt keine <p> ineinander.
   const re = /<p\b[^>]*\bclass=["']?([\w-]+)["']?[^>]*>([\s\S]*?)<\/p>/gi;
   let m: RegExpExecArray | null;
   while ((m = re.exec(html)) !== null) {
-    segmente.push({ klasse: m[1], inner: m[2] });
+    const index = m.index;
+    const inTabelle = ranges.some(([a, b]) => index >= a && index < b);
+    segmente.push({ klasse: m[1], inner: m[2], index, inTabelle });
   }
   return segmente;
 }
@@ -202,21 +223,120 @@ function leseLitMarke(inner: string): { marke: string; rest: string } | null {
   return { marke: m[1].toLowerCase(), rest: text.slice(m[0].length).trim() };
 }
 
-// ── Word-Tabelle (NE Gebührenstaffel) → lesbarer Text ────────────────────────
-/** Wandelt eine Word-Tabelle in lesbaren Text: je Zeile die nicht-leeren Zellen
- *  mit « · » verbunden, Zeilen mit « — » verkettet. Liefert '' bei leer. */
-function tabelleZuText(tabellenHtml: string): string {
+// ── Word-Tarif-Tabelle → gepaarte Band↔Wert-`items` ──────────────────────────
+/**
+ * Wandelt eine Word-Tarif-Tabelle (Gebührenstaffel) in gepaarte `items`: je
+ * TABELLENZEILE EIN item `{ marke: <Band/Bedingung>, text: <Gebühr/Wert> }`, so
+ * dass im Popover Band UND Wert beieinander stehen (wie bei den BS-Ziffern) statt
+ * alle Werte als Klumpen am ersten Band (Bug-Befund 16.6.2026).
+ *
+ * Reale Struktur (§7, live geprüft an NE 164.1 art_12 + GE rsg_e1_05p10 art_17):
+ *   - 1. Spalte = Band/Bedingung (z.B. «- jusqu'à», «- de»). Folgespalten bis VOR
+ *     die Wertspalte tragen die Grenzen («2'001.– · à · 5'000.–») und werden zum
+ *     Band-Label verkettet.
+ *   - Letzte gefüllte Spalte = Wert (Gebühr/Prozentsatz).
+ *   - rowspan (NE art_12): die Wertzelle der ersten 5 Bänder ist EINE Zelle mit
+ *     rowspan=5, die FÜNF <p>-Absätze enthält — einer je Band. Word legt sie nur
+ *     in der HTML der ersten Zeile ab; die Folgezeilen tragen keine eigene
+ *     Wertzelle. → die n Wert-Absätze werden den n folgenden Band-Zeilen
+ *     einzeln zugeordnet.
+ *   - reine Kopfzeilen (nur «Fr.»-Überschriften, kein Band) → übersprungen.
+ *
+ * Liefert [] bei leerer/nicht paarbarer Tabelle (§8: kein stiller Crash, dann
+ * fällt der Aufrufer auf den unveränderten Prosa-Pfad zurück).
+ */
+function tabelleZuItems(tabellenHtml: string): Array<{ marke: string; text: string }> {
   const zeilen = [...tabellenHtml.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)].map(
     (r) => r[1],
   );
-  const zeilenTexte: string[] = [];
-  for (const zeile of zeilen) {
-    const zellen = [...zeile.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)]
-      .map((c) => bereinige(c[1]))
-      .filter(Boolean);
-    if (zellen.length > 0) zeilenTexte.push(zellen.join(' · '));
+  // Zellen je Zeile mit ihren <p>-Werten und rowspan auslesen.
+  interface Zelle {
+    text: string; // ganze Zelle bereinigt (für Band-Verkettung)
+    absaetze: string[]; // einzelne <p>-Absätze (für rowspan-Verteilung)
+    rowspan: number;
   }
-  return zeilenTexte.join(' — ');
+  const matrix: Zelle[][] = zeilen.map((zeile) => {
+    return [...zeile.matchAll(/<td\b([^>]*)>([\s\S]*?)<\/td>/gi)].map((c) => {
+      const attr = c[1];
+      const inhalt = c[2];
+      const rsM = attr.match(/\browspan=["']?(\d+)/i);
+      const absaetze = [...inhalt.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)]
+        .map((p) => bereinige(p[1]))
+        .filter(Boolean);
+      // Falls keine <p> (nur nackter Text in der Zelle): ganze Zelle als ein Absatz.
+      if (absaetze.length === 0) {
+        const roh = bereinige(inhalt);
+        if (roh) absaetze.push(roh);
+      }
+      return {
+        text: absaetze.join(' '),
+        absaetze,
+        rowspan: rsM ? Math.max(1, parseInt(rsM[1], 10)) : 1,
+      };
+    });
+  });
+
+  // rowspan-Wertzellen: eine Zelle mit rowspan>1, deren Absätze sich auf die
+  // Folgezeilen verteilen. Wir merken pro rowspan-Wertzelle die Absatz-Queue und
+  // die Restzeilen, und ziehen je nachfolgender Band-Zeile einen Absatz.
+  interface Pending {
+    absaetze: string[];
+    rest: number; // verbleibende Zeilen inkl. der aktuellen
+  }
+  let pending: Pending | null = null;
+
+  const items: Array<{ marke: string; text: string }> = [];
+
+  for (const zellen of matrix) {
+    const gefuellt = zellen.filter((z) => z.text !== '');
+    // Kopfzeile / Leerzeile (keine echten Zellen) → überspringen, aber pending
+    // NICHT verbrauchen (Word stellt Leerzeilen mit height=0 ans Tabellenende).
+    if (gefuellt.length === 0) continue;
+
+    // Band-Label = alle gefüllten Zellen AUSSER der letzten (Wert), verkettet.
+    // Sonderfall rowspan-aktiv: dann steht in dieser Zeile KEINE eigene Wertzelle
+    // (sie ist von der vorigen rowspan-Zelle überdeckt) → alle gefüllten Zellen
+    // bilden das Band.
+    let bandZellen: Zelle[];
+    let wertText: string;
+
+    // Enthält diese Zeile selbst eine rowspan>1-Zelle? Dann ist deren letzter
+    // Eintrag die mehrzeilige Wertzelle.
+    const rowspanZelle = zellen.find((z) => z.rowspan > 1 && z.text !== '');
+
+    if (pending && pending.rest > 0) {
+      // Wert kommt aus der laufenden rowspan-Queue; alle gefüllten Zellen = Band.
+      bandZellen = gefuellt;
+      wertText = pending.absaetze.shift() ?? '';
+      pending.rest -= 1;
+      if (pending.rest === 0) pending = null;
+    } else if (rowspanZelle) {
+      // Neue rowspan-Wertzelle: ihr erster Absatz gehört zu DIESER Zeile, die
+      // restlichen zu den folgenden (rowspan-1) Zeilen.
+      bandZellen = gefuellt.filter((z) => z !== rowspanZelle);
+      const queue = [...rowspanZelle.absaetze];
+      wertText = queue.shift() ?? rowspanZelle.text;
+      if (queue.length > 0) {
+        pending = { absaetze: queue, rest: rowspanZelle.rowspan - 1 };
+      }
+    } else {
+      // Normale Zeile: letzte gefüllte Zelle = Wert, Rest = Band.
+      wertText = gefuellt[gefuellt.length - 1].text;
+      bandZellen = gefuellt.slice(0, -1);
+    }
+
+    const band = bandZellen.map((z) => z.text).filter(Boolean).join(' ');
+    // Reine Kopfzeile (z.B. NE «Fr.»-Überschriften, GE «Valeur litigieuse |
+    // Emolument»): weder Band noch Wert enthalten eine Ziffer → übersprungen.
+    const KOPF = /^(?:fr\.?|emolument|émolument|valeur litigieuse|\s|&nbsp;)*$/i;
+    if (!/\d/.test(band) && !/\d/.test(wertText) && KOPF.test(band) && KOPF.test(wertText)) {
+      continue;
+    }
+    const marke = band || wertText;
+    const text = band ? wertText : '';
+    items.push({ marke, text });
+  }
+  return items;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -262,6 +382,10 @@ function geExtrahiere(segmente: PSegment[]): Record<string, HtmArtikel> {
       continue;
     }
     if (!aktiv) continue;
+    // Tabellenzellen-<p> NICHT als eigene Blöcke ausgeben — die Tabelle wird als
+    // gepaarte Band↔Wert-items separat angehängt (geHängeTabellen). Sonst
+    // zerfällt die Tarif-Tabelle in Label-/Wert-Einzelblöcke (Bug 16.6.2026).
+    if (seg.inTabelle) continue;
     // Absatz-Paragraph (TexteTL u.ä.). Leerzeilen (retour…) ignorieren.
     if (/^retour/i.test(seg.klasse) || seg.klasse === 'xLigneBlanche') continue;
     const sup = leseSupNummer(seg.inner);
@@ -271,6 +395,44 @@ function geExtrahiere(segmente: PSegment[]): Record<string, HtmArtikel> {
   }
   speichere();
   return artikel;
+}
+
+/** GE: eingebettete Word-Tarif-Tabellen als gepaarte Band↔Wert-`items` an den
+ *  Einleitungsabsatz des Artikels hängen (analog NE). Eine Tabelle wird dem
+ *  Artikel zugeordnet, in dessen Roh-Abschnitt (zwischen seinem <p class=article>
+ *  und dem nächsten Gliederungs-/Artikel-<p>) sie liegt. */
+function geHängeTabellen(segmente: PSegment[], html: string, artikel: Record<string, HtmArtikel>): void {
+  // Artikel-Köpfe mit ihrem Token + Byte-Index sammeln (in HTML-Reihenfolge).
+  const koepfe: Array<{ token: string; index: number }> = [];
+  for (const seg of segmente) {
+    if (seg.klasse === 'article') {
+      const token = geArtikelNummer(seg.inner);
+      if (token) koepfe.push({ token, index: seg.index });
+    }
+  }
+  if (koepfe.length === 0) return;
+  // Gliederungs-Grenzen: jeder Artikel reicht bis zum nächsten Artikel-Kopf.
+  for (let i = 0; i < koepfe.length; i++) {
+    const { token, index } = koepfe[i];
+    const ende = i + 1 < koepfe.length ? koepfe[i + 1].index : html.length;
+    const abschnitt = html.slice(index, ende);
+    const tabellen = [...abschnitt.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi)];
+    if (tabellen.length === 0) continue;
+    const tabItems = tabellen.flatMap((t) => tabelleZuItems(t[1]));
+    if (tabItems.length === 0) continue;
+    // Falls der Artikel KEINEN Prosa-Block hat — entweder weil sein gesamter
+    // Inhalt in der Tabelle steckt (z.B. GE rsg_e1_50p06 Art. 6, dann fehlt er
+    // ganz in `artikel`, da geExtrahiere nur blockhaltige Artikel speichert),
+    // oder weil der Träger-Block leer ist —, legen wir einen leeren Träger-Block
+    // an, damit die Tabellen-items nicht verloren gehen.
+    let art = artikel[token];
+    if (!art) {
+      art = { bloecke: [] };
+      artikel[token] = art;
+    }
+    if (art.bloecke.length === 0) art.bloecke.push({ absatz: null, text: '' });
+    (art.bloecke[0].items ??= []).push(...tabItems);
+  }
 }
 
 /** GE-Stand: jüngstes Tvigueur-Datum; Fallback Kopf «Dernières modifications au». */
@@ -387,7 +549,8 @@ function neExtrahiere(segmente: PSegment[]): Record<string, HtmArtikel> {
   return artikel;
 }
 
-/** NE: eingebettete Word-Tabellen an den vorangehenden Absatz hängen.
+/** NE: eingebettete Word-Tarif-Tabellen als gepaarte Band↔Wert-`items` an den
+ *  Einleitungsabsatz hängen (Bug-Fix 16.6.2026 — vorher flacher Text-Klumpen).
  *  Wird NACH neExtrahiere separat aufgerufen, weil die Tabellen zwischen den
  *  xNormal-Absätzen stehen. Wir scannen den Artikel-Bereich erneut roh. */
 function neHängeTabellen(html: string, token: string, art: HtmArtikel): void {
@@ -404,11 +567,12 @@ function neHängeTabellen(html: string, token: string, art: HtmArtikel): void {
     ...abschnitt.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/gi),
   ];
   if (tabellen.length === 0) return;
-  const tabText = tabellen.map((t) => tabelleZuText(t[1])).filter(Boolean).join(' — ');
-  if (!tabText) return;
-  // An den ersten Absatz hängen (die GE/NE-Staffeln gehören zum Einleitungsabsatz).
+  const tabItems = tabellen.flatMap((t) => tabelleZuItems(t[1]));
+  if (tabItems.length === 0) return;
+  // An den ersten Absatz als items hängen (die Staffel gehört zum Einleitungs-
+  // absatz). Falls dieser schon items hat (NE: keine, GE: lit.), anhängen.
   const ziel = art.bloecke[0];
-  if (ziel) ziel.text = ziel.text ? `${ziel.text} ${tabText}` : tabText;
+  if (ziel) (ziel.items ??= []).push(...tabItems);
 }
 
 /** NE-Stand: <p class=xEdition>État au<br>1er avril 2023</p>. */
@@ -505,6 +669,8 @@ export function extrahiereAlleHtmArtikel(
     artikel = geExtrahiere(segmente);
     titel = geTitel(segmente);
     stand = geStand(html);
+    // GE: Tarif-Tabellen als gepaarte Band↔Wert-items an die Einleitungsabsätze.
+    geHängeTabellen(segmente, html, artikel);
   } else {
     artikel = neExtrahiere(segmente);
     titel = neTitel(segmente);

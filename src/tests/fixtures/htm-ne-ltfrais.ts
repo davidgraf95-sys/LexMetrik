@@ -73,12 +73,26 @@ suivant : </p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0>
  <tr>
-  <td><p class=MsoNormal>jusqu'à 2'000.-</p></td>
-  <td><p class=MsoNormal align=right>300.-</p></td>
+  <td><p class=MsoNormal>-    jusqu’à</p></td>
+  <td><p class=MsoNormal align=right>2'000.-</p></td>
+  <td><p class=MsoNormal>&nbsp;</p></td>
+  <td colspan=2 rowspan=2 valign=top>
+   <p class=MsoNormal align=right>300.-</p>
+   <p class=MsoNormal align=right>400.-</p>
+  </td>
  </tr>
  <tr>
-  <td><p class=MsoNormal>de 2'001.- à 5'000.-</p></td>
-  <td><p class=MsoNormal align=right>400.-</p></td>
+  <td><p class=MsoNormal>-    de</p></td>
+  <td><p class=MsoNormal align=right>2'001.-</p></td>
+  <td><p class=MsoNormal align=center>à</p></td>
+  <td><p class=MsoNormal align=right>5'000.-</p></td>
+ </tr>
+ <tr>
+  <td><p class=MsoNormal>-    de</p></td>
+  <td><p class=MsoNormal align=right>5'001.-</p></td>
+  <td><p class=MsoNormal align=center>à</p></td>
+  <td><p class=MsoNormal align=right>8'000.-</p></td>
+  <td colspan=2><p class=MsoNormal align=right>500.-</p></td>
  </tr>
 </table>
 

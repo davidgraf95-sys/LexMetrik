@@ -249,6 +249,41 @@ function normalisiereToken(roh: string): string {
     );
 }
 
+/**
+ * Entkleben der ZH-Gebührentabellen-Fragmente (Bug-Fix 16.6.2026). In der PDF-
+ * Extraktion stehen die Tabellenspalten (Streitwert | Grundgebühr) als getrennte
+ * Fragmente am gleichen y und werden ohne Leerzeichen aneinandergeklebt
+ * («bis1000 25%des», «zuzügl.20%des», «Fr.1000übersteigenden»). Wir trennen NUR
+ * an eindeutigen Tarif-Tabellen-Grenzen, die in korrekter ZH-Rechtsprosa NICHT
+ * vorkommen (empirisch geprüft an allen ZH-Snapshots, §7) — sonst unverändert:
+ *   - Schlüsselwort «bis/über/dès» direkt vor Ziffer:  «bis1000»  → «bis 1000»
+ *   - Ziffer direkt vor «bis/über/dès»:                «1000über» → «1000 über»
+ *   - «Fr.»/«Mio.» direkt vor Ziffer:                  «Fr.1000»  → «Fr. 1000»
+ *   - «zuzügl.» vor Ziffer:                            «zuzügl.20»→ «zuzügl. 20»
+ *   - «%» direkt vor Buchstabe:                        «20%des»   → «20% des»
+ *   - «)(» (zwei Spaltenköpfe):                        «)(in»     → «) (in»
+ *   - camelCase-Spaltenkopf «StreitwertGebühr/Grund…»: Kleinbuchst.→Grossbuchst.
+ * Die reinen Spalten-Zahlenketten (z.B. «5000250») bleiben unangetastet — ihre
+ * Spaltentrennung ist ohne Layout-Information nicht eindeutig rekonstruierbar.
+ */
+function entglueZhTarif(text: string): string {
+  // Hinweis: \b ist hier untauglich — ü/ö/ä sind im JS-Standard-Regex KEINE
+  // Wortzeichen, darum greift \b an «über»/«dès» nicht. Wir verankern die
+  // Schlüsselwörter daher an Leerzeichen/Wortgrenze bzw. Zeilenanfang explizit.
+  return text
+    // Schlüsselwort (Wortanfang) direkt vor Ziffer: «bis1000»/«über1000».
+    .replace(/(^|[\s(])(bis|über|dès)(\d)/gi, '$1$2 $3')
+    // Ziffer direkt vor Schlüsselwort/«übersteigenden» («1000über 5000»,
+    // «Fr.1000übersteigenden» → «Fr. 1000 übersteigenden»). In den ZH-Tarifen
+    // sind die EINZIGEN Ziffer→Buchstabe-Klebungen genau diese Fälle (§7-Scan),
+    // darum hier gezielt ohne generelle Ziffer↔Buchstabe-Trennung.
+    .replace(/(\d)(bis|über)/gi, '$1 $2')
+    .replace(/\b(Fr|Mio|zuzügl)\.(\d)/g, '$1. $2')
+    .replace(/(%)([A-Za-zÄÖÜäöü])/g, '$1 $2')
+    .replace(/\)\(/g, ') (')
+    .replace(/([a-zäöü])([A-ZÄÖÜ])/g, '$1 $2');
+}
+
 /** Silbentrennung am Zeilenende zusammenfügen: «…wer-» + «den.» → «…werden.».
  *  Nur wenn die Zeile auf «-» endet und die nächste mit Kleinbuchstabe beginnt
  *  (echte Worttrennung; ein «-» vor Grossbuchstabe/Ziffer bleibt erhalten). */
@@ -264,7 +299,7 @@ function fuegeZeilen(roh: string[]): string {
       out += zeile + (i < roh.length - 1 ? ' ' : '');
     }
   }
-  return out.replace(/\s+/g, ' ').trim();
+  return entglueZhTarif(out.replace(/\s+/g, ' ').trim());
 }
 
 /** Block-Sammler: Absätze + lit.-items eines Artikels aus seinen Zeilen. */

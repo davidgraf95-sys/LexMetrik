@@ -73,6 +73,17 @@ describe('ZH-PDF-Adapter — §-Parser (GebV OG, LS 211.11)', () => {
     // Gebührentabelle bleibt im Text (Inhalt vorhanden, wenn auch Zahlen-eng).
     expect(a!.bloecke[0].text).toContain('25% des Streitwertes');
     expect(a!.bloecke[0].text).toContain('120750');
+    // Entkleben (Bug-Fix 16.6.2026): Tarif-Tabellen-Fragmente werden an
+    // eindeutigen Grenzen getrennt — «bis1000» → «bis 1000», «zuzügl.20%des»
+    // → «zuzügl. 20% des», «Fr.1000» → «Fr. 1000», «)(» → «) (», Spaltenkopf
+    // «StreitwertGrundgebühr» → «Streitwert Grundgebühr».
+    expect(a!.bloecke[0].text).toContain('bis 1000');
+    expect(a!.bloecke[0].text).not.toContain('bis1000');
+    expect(a!.bloecke[0].text).toContain('über 1000');
+    expect(a!.bloecke[0].text).toContain('zuzügl. 20% des');
+    expect(a!.bloecke[0].text).toContain('Fr. 1000 übersteigenden');
+    expect(a!.bloecke[0].text).toContain('Streitwert Grundgebühr');
+    expect(a!.bloecke[0].text).toContain('(in Franken) (in Franken)');
     // Absatz 2: Silbentrennung «Zeitaufwan-\ndes» → «Zeitaufwandes».
     expect(a!.bloecke[1].text).toContain('Zeitaufwandes des Gerichts');
     expect(a!.bloecke[2].text).toContain('wiederkehrende Nutzungen');
