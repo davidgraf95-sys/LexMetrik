@@ -1,4 +1,5 @@
 import { cloneElement, createContext, isValidElement, useContext, useEffect, useId, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { fedlexLinkFuerArtikel } from '../../lib/fedlex';
 import { useLocale, fedlexLokalisiert } from '../locale';
 import { bundSnapshotRef } from '../../lib/normtext/bundRef';
@@ -189,8 +190,14 @@ export function NormLink({ artikel, title, bemerkung }: { artikel: string; title
 // bewusst nur den Dialog-Inhalt (lc-card), nicht das Overlay — beides stellt
 // dieser Rahmen: zentriert, Klick auf den Backdrop schliesst. Rein
 // clientseitig gerendert (nur wenn offen, also nie im SSR/Prerender).
+//
+// PORTAL an document.body: Der Auslöser (Norm-Chip / «amtliche Quelle»-Link)
+// steht teils in einem <p> (z. B. die Tarif-Quelle-Zeile). Würde das Overlay
+// inline gerendert, läge der Dialog-<div>/<p>/<h2> IM <p> → ungültiges HTML +
+// Hydration-Fehler. Der Portal hängt das Overlay ans body, ausserhalb des <p>.
 export function NormPopoverOverlay({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
-  return (
+  if (typeof document === 'undefined') return null; // SSR/Prerender: kein Overlay
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-ink-900/40 p-4"
       onClick={onClose}
@@ -199,7 +206,8 @@ export function NormPopoverOverlay({ children, onClose }: { children: React.Reac
       <div onClick={(e) => e.stopPropagation()} className="w-full max-w-xl">
         {children}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 
