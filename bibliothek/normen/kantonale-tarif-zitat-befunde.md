@@ -23,18 +23,31 @@
 
 ---
 
-## Befund 2 — OW gerichtskosten.ts (OFFEN, fachlich — Entscheid David)
+## Befund 2 — OW gerichtskosten.ts (BEHOBEN 16.6.2026 — Art. 12)
 
-**Datei:** `src/data/tarif/gerichtskosten.ts`, OW-Eintrag (~Z. 45 ff., `artikel: 'Art. 7'`)  
-**Erlass:** GDB 134.15 (Dekret über Gerichtsgebühren OW)  
-**Befund:** Zitierter `Art. 7` in GDB 134.15 ist **aufgehoben** (als Einzelartikel). Das Snapshot-File `public/normtext/kanton/OW-134.15.json` enthält `art_8`, `art_35`, `art_12`, aber NICHT `art_7` — weil LexWork ihn nicht liefert; entsprechend in `BEKANNTE_LUECKEN` als `token-nicht-im-Erlass`.  
-**Geltende Zivil-Entscheidgebühr OW:**
-- **Art. 9** GDB 134.15: Einzelgericht / Kantonsgerichtspräsidium (Art. 34/80 GOG OW) — erstes Gebührenband
-- **Art. 12** GDB 134.15: Kantonsgericht (Art. 35 GOG OW) — höhere Bänder  
+**Datei:** `src/data/tarif/gerichtskosten.ts`, OW-Eintrag  
+**Erlass:** GebOR (GDB 134.15), geltende Fassung in Kraft seit **1.3.2015** (Beschluss 4.12.2014, version_uid 4ad430f1…)  
+**Befund:** Zitierter `Art. 7` GebOR ist in der geltenden Fassung **aufgehoben**. Die kodierte `regel` mischte das erste Band aus Art. 9 (Kantonsgerichtspräsidium) mit den höheren Bändern aus Art. 12 (Kantonsgericht).
 
-Die kodierte `regel` mischt aktuell Bänder aus Art. 9 (erstes Band) + Art. 12 (Rest). Ob das sachlich zutrifft (gleiche Instanz / Kombination), ist fachlich zu klären.  
-**Entscheid David nötig:** Welche Instanz(en) soll der OW-Eintrag abbilden? Band-Werte gegen Art. 9 bzw. Art. 12 prüfen. `artikel: 'Art. 7'` ist in jedem Fall zu ersetzen.  
-**Keine Code-Änderung** ohne Davids Abnahme.
+**Fachliche Bestimmung (delegiert, «finde es selbst heraus»):**
+Der Prozesskosten-Rechner bildet die **erstinstanzliche Entscheidgebühr im ordentlichen vermögensrechtlichen Zivilverfahren** ab (Verfahrensart-Modifikatoren liegen separat). Massgebend ist daher **Art. 12 GebOR (Kantonsgericht als Kollegialgericht)**:
+- **Art. 35 GOG OW** (GDB 134.1, Stand 1.4.2022): «Das Kantonsgericht beurteilt als erste Instanz die Zivilstreitigkeiten, die nicht dem Kantonsgerichtspräsidium oder dem Obergericht zugewiesen sind» → ordentliches Verfahren.
+- **Art. 34 GOG OW** weist dem Kantonsgerichtspräsidium (Einzelrichter) das **vereinfachte und summarische Verfahren** zu. Das vereinfachte Verfahren gilt nach **Art. 243 ZPO** bis Streitwert 30'000 → Gebühr **Art. 9** GebOR.
+- Folge: Art. 12 Abs. 1 GebOR kennt **kein Band unter 30'000** (beginnt bei «über 30 000.– bis 50 000.–»). Das Band 0–30'000 ist materiell das vereinfachte Verfahren vor dem Präsidium → Art. 9 Ziff. 2 lit. a (100–3'000). Der Tarif-Eintrag bildet daher Art. 12 (ab >30'000) mit dem Art.-9-Band für ≤30'000 ab.
+
+**Verifizierter Wortlaut Art. 12 Abs. 1 GebOR** (LexWork gdb.ow.ch/api/de/texts_of_law/134.15, Abruf 16.6.2026; doppelt geholt, byte-gleich):
+1. über 30 000.– bis 50 000.–: **1 500.– bis 5 000.–**
+2. über 50 000.– bis 100 000.–: **2 000.– bis 6 000.–**
+3. über 100 000.– bis 350 000.–: **2 500.– bis 10 500.–**
+4. über 350 000.–: **3 000.– bis 3 % des Streitwerts**
+
+**Fix:**
+- `artikel`: `'Art. 7'` → `'Art. 12 (Kantonsgericht; bis 30 000 Art. 9 Kantonsgerichtspräsidium)'`
+- `stand`: `'1.1.2011'` → `'1.3.2015'` (geltendes Inkrafttreten)
+- `regel`: Bänder ≥30'000 unverändert (sie entsprachen bereits Art. 12). EINE Wertänderung: das oberste Band trug zuvor den Platzhalter `maxChf: null` («oberer Rahmen nach Tarif, nicht abschliessend erhoben») → ersetzt durch den verifizierten %-Tail **`maxProzent: 3`** (Art. 12 Abs. 1 Ziff. 4: «3 000.– bis 3 % des Streitwerts»). `minChf: 3000` bleibt. Erstes Band (100–3'000) als Art. 9 Ziff. 2 lit. a kommentiert.
+- `BEKANNTE_LUECKEN`-Eintrag `kanton/OW/134.15/art_7` entfernt (Art. 7 wird nicht mehr zitiert).
+
+**Beleg / Snapshot:** `public/normtext/kanton/OW-134.15.json` enthält `art_12` mit der vollständigen Staffel (stand 2015-03-01), `artikelLabel` neu. Engine-Stützpunkte (`berechneProzesskosten` OW, phase entscheid): 20'000→100–3'000; 50'000→1'500–5'000; 100'000→2'000–6'000; 350'000→2'500–10'500; 500'000→3'000–15'000; 1'000'000→3'000–30'000 — deckt sich exakt mit Art. 12 / Art. 9.
 
 ---
 
@@ -62,5 +75,5 @@ Dies ist eine fachliche Änderung am Rechenergebnis — Schlichtungsgebühren SH
 | Befund | Datei | Status | Aktion |
 |--------|-------|--------|--------|
 | LU GRUNDPFAND quelleUrl 228→258 | notariat-grundbuch.ts:138 | **BEHOBEN 16.6.** | wertneutral; Snapshot LU-258 art_29 erzeugt |
-| OW gerichtskosten Art. 7 aufgehoben | gerichtskosten.ts | **OFFEN** | Entscheid David: Instanz + Art. 9/12 + Bandwerte |
+| OW gerichtskosten Art. 7 aufgehoben | gerichtskosten.ts | **BEHOBEN 16.6.** | Art. 12 (Kantonsgericht, ordentl. Verf.); ≤30'000 Art. 9; stand 1.3.2015; %-Tail 3 % statt Platzhalter; Snapshot art_12 |
 | SH schlichtung/nv Art. 109 totes Recht | schlichtung.ts:131, nicht-vermoegensrechtlich.ts:104 | **OFFEN** | Entscheid David: Art. 82 JG (CHF 100–1000 statt 50–300) |

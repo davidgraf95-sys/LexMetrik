@@ -81,16 +81,29 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 100000 },
   },
   OW: {
-    kanton: 'OW', erlassName: 'Gebührenordnung (GebOR)', erlassNr: 'GDB 134.15',
-    artikel: 'Art. 7', stand: '1.1.2011', verifiziert: 'doppelt',
+    // §7: Art. 7 GebOR ist in der geltenden Fassung (in Kraft seit 1.3.2015,
+    // version_uid 4ad430f1…) aufgehoben. Erstinstanzliche Entscheidgebühr im
+    // ordentlichen vermögensrechtlichen Zivilverfahren: Art. 12 (Kantonsgericht
+    // als Kollegialgericht, Art. 35 GOG — erste Instanz für Zivilstreitigkeiten,
+    // die nicht dem Präsidium/Obergericht zugewiesen sind). Das ordentliche
+    // Verfahren greift erst ab Streitwert >30'000 (bis 30'000 vereinfachtes
+    // Verfahren, Art. 243 ZPO → Einzelrichter = Kantonsgerichtspräsidium, Art. 34
+    // GOG → Gebühr Art. 9 Ziff. 2 lit. a: 100–3'000). Art. 12 Abs. 1 kennt darum
+    // KEIN Band unter 30'000; das erste Band hier ist daher materiell Art. 9.
+    // Verifiziert am Volltext (LexWork gdb.ow.ch/api/de/texts_of_law/134.15,
+    // Abruf 16.6.2026): Art. 12 Abs. 1: über 30'000–50'000 → 1'500–5'000; über
+    // 50'000–100'000 → 2'000–6'000; über 100'000–350'000 → 2'500–10'500; über
+    // 350'000 → 3'000 bis 3 % des Streitwerts.
+    kanton: 'OW', erlassName: 'Gebührenordnung für die Rechtspflege (GebOR)', erlassNr: 'GDB 134.15',
+    artikel: 'Art. 12 (Kantonsgericht; bis 30 000 Art. 9 Kantonsgerichtspräsidium)', stand: '1.3.2015', verifiziert: 'doppelt',
     quelleUrl: 'https://gdb.ow.ch/app/de/texts_of_law/134.15',
-    hinweis: 'Rahmen je Band; über 350 000 oberer Rahmen nach Tarif (exakter Höchstwert nicht abschliessend erhoben).',
+    hinweis: 'Rahmen je Band. Bis Streitwert 30 000 vereinfachtes Verfahren vor dem Kantonsgerichtspräsidium (Art. 9 Ziff. 2 lit. a); ab über 30 000 ordentliches Verfahren vor dem Kantonsgericht (Art. 12). Über 350 000: 3 000 bis 3 % des Streitwerts (Art. 12 Abs. 1 Ziff. 4).',
     regel: { typ: 'staffel_rahmen', baender: [
-      { grenzeChf: 30000, minChf: 100, maxChf: 3000 },
-      { grenzeChf: 50000, minChf: 1500, maxChf: 5000 },
-      { grenzeChf: 100000, minChf: 2000, maxChf: 6000 },
-      { grenzeChf: 350000, minChf: 2500, maxChf: 10500 },
-      { grenzeChf: INF, minChf: 3000, maxChf: null, hinweis: 'über 350 000: oberer Rahmen nach Tarif (nicht abschliessend erhoben)' },
+      { grenzeChf: 30000, minChf: 100, maxChf: 3000 },   // Art. 9 Ziff. 2 lit. a (Präsidium / vereinfachtes Verfahren)
+      { grenzeChf: 50000, minChf: 1500, maxChf: 5000 },  // Art. 12 Abs. 1 Ziff. 1
+      { grenzeChf: 100000, minChf: 2000, maxChf: 6000 }, // Art. 12 Abs. 1 Ziff. 2
+      { grenzeChf: 350000, minChf: 2500, maxChf: 10500 },// Art. 12 Abs. 1 Ziff. 3
+      { grenzeChf: INF, minChf: 3000, maxProzent: 3 }, // Art. 12 Abs. 1 Ziff. 4: 3'000 bis 3 % SW
     ] },
   },
   NW: {

@@ -51,15 +51,10 @@ import type {
 // Verifikation: Stand 16.6.2026 — alle Einträge empirisch geprüft.
 // Entfernt (16.6.2026): LU/228/art_29 — §29 existiert in SRL 258, nicht 228; quelleUrl in
 //   notariat-grundbuch.ts (GRUNDPFAND LU) auf 258 korrigiert; Snapshot via 258 abgedeckt.
+// Entfernt (16.6.2026): OW/134.15/art_7 — Art. 7 GebOR aufgehoben; Gerichtskosten OW zitieren
+//   jetzt Art. 12 (Kantonsgericht; bis 30 000 Art. 9). Snapshot deckt art_12 (und art_9) ab.
 //
 const BEKANNTE_LUECKEN: BekannteLuecke[] = [
-  // ── OW/134.15: art_7 fehlt im Snapshot (Datei existiert mit art_8, art_35, art_12)
-  {
-    snapshotId: 'kanton/OW/134.15/art_7',
-    grund: 'token-nicht-im-Erlass',
-    notiz: 'LexWork OW-134.15 liefert art_7 nicht; Snapshot enthält art_8, art_35, art_12.',
-  },
-
   // ── SG/941.12: kein Snapshot (nurPdf-Erlass)
   {
     snapshotId: 'kanton/SG/941.12/art_8',
