@@ -1,6 +1,943 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/BE/161.12/art_1",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtsbehörden und die Staatsanwaltschaft erheben für ihre Tätigkeit und die damit verbundenen Kanzleiarbeiten die in diesem Dekret festgesetzten Verfahrenskosten und Verwaltungsgebühren, sofern weder das kantonale Recht noch das Bundesrecht noch interkantonale oder internationale Verträge etwas anderes vorsehen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "8239ac573b7d90fa95fd1f57291f5bd616b3429490afe159ef364f3a0ce38a37"
+    },
+    {
+      "id": "kanton/BE/161.12/art_2",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfahrenskosten setzen sich zusammen aus den Gebühren und den Auslagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren werden in Form von Pauschalen für den gesamten im jeweiligen Verfahren anfallenden Aufwand erhoben."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "7ab49588ff76fa27e9025f6598409da6fddfdb957955e20882133ef3783967da"
+    },
+    {
+      "id": "kanton/BE/161.12/art_3",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für besondere administrative Dienstleistungen werden die in diesem Dekret vorgesehenen Verwaltungsgebühren erhoben."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "19d6cf26b6f15a1ea62374e21b7eaa9306ece86d2a446c4f3c79e90366234bc9"
+    },
+    {
+      "id": "kanton/BE/161.12/art_4",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfahrenskosten und Verwaltungsgebühren werden grundsätzlich nach Taxpunkten festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Wert des Taxpunktes beträgt einen Franken. Der Regierungsrat kann zum Ausgleich der Teuerungsentwicklung für jene Tarifbeträge, die nicht an einen Streitwert gekoppelt sind, einen anderen Wert des Taxpunktes festlegen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Betrag in Franken berechnet sich durch Multiplikation der Anzahl Taxpunkte mit dem Wert des Taxpunktes."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "b87ab285bca45850d798e81ecf71e1ee3f4123425874d226949359941dba934b"
+    },
+    {
+      "id": "kanton/BE/161.12/art_5",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wo das Dekret einen Rahmen festlegt, bemessen sich die Verfahrenskosten und Verwaltungsgebühren nach dem gesamten Zeit- und Arbeitsaufwand, der Bedeutung des Geschäfts sowie der wirtschaftlichen Leistungsfähigkeit der Kostenpflichtigen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "dd5bddf3edf21d4c89d6851d6b053bf98f9418e8e2d6b6fe46dbdb22137a967c"
+    },
+    {
+      "id": "kanton/BE/161.12/art_6",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In besonders umfangreichen und zeitraubenden Geschäften, bei querulatorischer Prozessführung, in Geschäften mit sehr hohem Streitwert sowie bei Verwendung der englischen Sprache in internationalen handelsrechtlichen Streitigkeiten nach Artikel 6 Absatz 4 Buchstabe c der Schweizerischen Zivilprozessordnung vom 19. Dezember 2008 (Zivilprozessordnung, ZPO) kann eine Gebühr bis zum doppelten Betrag des Höchstansatzes erhoben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "In Verfahren mit mehreren Beteiligten können die Höchstansätze überschritten werden. Die Gebühr darf aber für die einzelne Person das Doppelte der ordentlichen Höchstgebühr nicht überschreiten."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "bb2948b546c4848b64e36751a1ce34cd7f12cb19e9d7b3ae248034b9b46cccfb"
+    },
+    {
+      "id": "kanton/BE/161.12/art_7",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Verfahren gegenstandslos oder durch Vergleich, Rückzug, Abstand oder Nichteintreten erledigt, so kann die Mindestgebühr unterschritten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "In Geschäften mit besonders geringem Aufwand kann die Gebühr bis auf die Hälfte der Mindestgebühr herabgesetzt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit es das übergeordnete Recht zulässt, kann bei besonderen Umständen auf die Erhebung der Gebühr ganz verzichtet werden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "3457c0a6360252ce7dbd1b7e5e69259bb6d93aa64b3dd76dba8d318751687b65"
+    },
+    {
+      "id": "kanton/BE/161.12/art_8",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Entscheiden, die nicht von Amtes wegen schriftlich zu begründen sind, setzt die Behörde gesondert fest:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Gebühr, in der das nachträgliche Abfassen der schriftlichen Begründung eingeschlossen ist, und"
+            },
+            {
+              "marke": "b",
+              "text": "eine reduzierte Gebühr, die erhoben wird, wenn keine schriftliche Begründung erfolgt."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "f434a4f1377ed3021e5873b15c7328b9b2d91f62e385e178029e81668975fe4d"
+    },
+    {
+      "id": "kanton/BE/161.12/art_9",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfahrenskosten werden durch die jeweils in der Sache zuständige Gerichtsbehörde oder Staatsanwaltschaft erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Bezug auf dem Wege der Schuldbetreibung erfolgt durch die Stabsstelle für Ressourcen der Justizverwaltungsleitung. Das Obergericht und das Verwaltungsgericht können mit der Finanzdirektion vereinbaren, dass diese Aufgabe durch deren zuständige Stelle erfüllt wird."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "13e49f25e28a2d5a6713fde25b4253e6e8fe69499492733bd0367a1f2f00e151"
+    },
+    {
+      "id": "kanton/BE/161.12/art_10",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die auferlegten Verfahrenskosten können von der jeweils zuständigen Gerichtsbehörde oder Staatsanwaltschaft ganz oder teilweise erlassen oder gestundet werden, sofern",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bezahlung für die Pflichtigen eine unzumutbare Härte darstellt oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Uneinbringlichkeit feststeht oder anzunehmen ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Rechtsschutz gegen Entscheide über ein Erlass- oder Stundungsgesuch richtet sich nach den allgemeinen Bestimmungen der in der Sache anwendbaren Prozessordnung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "16bbe79637da248c63833beeb85326bdafc1bd8c47a747c176a1f776cf819dcf"
+    },
+    {
+      "id": "kanton/BE/161.12/art_11",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für administrative Dienstleistungen der Gerichtsbehörden und der Staatsanwaltschaft können erhoben werden",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Abschriften, Auszüge und dergleichen für jede ganze oder angefangene Seite (Normalformat A4): 5 bis 20 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "für Schwarz-Weiss-Fotokopien pro Seite: 0,4 bis 2 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "für Farbfotokopien pro Seite: 0,8 bis 3 Taxpunkte"
+            },
+            {
+              "marke": "d",
+              "text": "für besondere Schreiben und Bescheinigungen (einschliesslich Rechtskraftbescheinigungen): 10 bis 20 Taxpunkte"
+            },
+            {
+              "marke": "e",
+              "text": "für Auskunftserteilung und Herausgabe von Akten an Versicherungsgesellschaften: 10 bis 200 Taxpunkte"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "50315e37d3ad92f7ae080b86083de249bddcea5c63b8cf4266dd659b1a53debb"
+    },
+    {
+      "id": "kanton/BE/161.12/art_12",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Mahnungen beim Inkasso der Verfahrens- Taxpunkte kosten und Verwaltungsgebühren können erhoben werden: 20 bis 50 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "31e88333499ac5b35c1bd012c49c65584efde7269419ea3857e4207da68a6afd"
+    },
+    {
+      "id": "kanton/BE/161.12/art_13",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Beschlüsse, Verfügungen oder Entscheide Taxpunkte über Gesuche um Einsicht in Akten von rechtskräftig abgeschlossenen Verfahren können bei besonderem Aufwand erhoben werden: 20 bis 500 Taxpunkte."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Erhebung von Gebühren für die Einsichtnahme in eigene Daten richtet sich nach dem Datenschutzgesetz vom 19. Februar 1986 (KDSG)."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "2aa6283e2373f3b16190adf8504b37c8b35de41ad51c3b735c840e69e16bcb14"
+    },
+    {
+      "id": "kanton/BE/161.12/art_14",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In den folgenden Strafsachen werden keine Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "erstinstanzliche Entscheide, mit denen einem Antrag nach Artikel 36 Absatz 3 des Schweizerischen Strafgesetzbuchs vom 21. Dezember 1937 (StGB) stattgegeben wird,"
+            },
+            {
+              "marke": "b",
+              "text": "Entscheide über nationale Rechtshilfegesuche und die Durchführung von nationalen Rechtshilfemassnahmen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für den Entscheid über ein Gesuch der Privatklägerschaft um unentgeltliche Rechtspflege werden nur Kosten erhoben, wenn das Verfahren bös- oder mutwillig angestrengt worden ist."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "36728d1ca0881c7979276dd205f86e00e247e14b835532df02b89545ebd89af7"
+    },
+    {
+      "id": "kanton/BE/161.12/art_15",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Durchführung einer Untersuchung durch die regionale Staatsanwaltschaft, eingeschlossen das Verfahren vor dem regionalen Zwangsmassnahmengericht und das Gerichtsstandsverfahren, werden erhoben: 200 bis 15'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "e179de464d2df1587a2400366c249eecf468f181b1a9a7c62d99d099a9049aa8"
+    },
+    {
+      "id": "kanton/BE/161.12/art_16",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Durchführung einer Untersuchung durch die kantonale Staatsanwaltschaft, eingeschlossen das Verfahren vor dem kantonalen Zwangsmassnahmengericht und das Gerichtsstandsverfahren, werden erhoben: 500 bis 33'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "1536cb887a205432bc3af6095acec53f742eab43b97d8ab8fdd2d20b0cc81704"
+    },
+    {
+      "id": "kanton/BE/161.12/art_17",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Untersuchungen, in denen Revisorinnen oder Revisoren einer kantonalen Staatsanwaltschaft mitwirken, werden höchstens erhoben: 50'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "326f7c54ba8e6cea32871a1d143dc95683457722e077e6fcac80df1b3676d80c"
+    },
+    {
+      "id": "kanton/BE/161.12/art_18",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide eines Zwangsmassnahmengerichts im Fall von Bundesgerichtsbarkeit werden erhoben: 200 bis 5'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "8984d9f0d39497ceb5740099b57954cc3fc7a8b0212a0f5b8a27d1e9e1571d51"
+    },
+    {
+      "id": "kanton/BE/161.12/art_19",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Strafbefehlsverfahren werden zuzüglich allfälliger Gebühren für die Untersuchung erhoben: 50 bis 1500 Taxpunkte."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird aufgrund einer Einsprache ein Beweisverfahren durchgeführt, so werden höchstens erhoben: 3'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "5487c7099da7de1bbbc3d3eb9ff0644da8b23cc6de96cee16611bb90e06c41fd"
+    },
+    {
+      "id": "kanton/BE/161.12/art_20",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide, welche die Staatsanwaltschaft nachträglich oder in einem selbstständigen Verfahren trifft, werden erhoben: 50 bis 1'500 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "9a3c5ad980af9a305e4656c5286154838d3d7c46dd1bf3b98b3d671239afe0cc"
+    },
+    {
+      "id": "kanton/BE/161.12/art_21",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Führen der Anklage vor der ersten oder oberen Instanz werden erhoben",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei persönlicher Teilnahme der Staatsanwaltschaft an der Verhandlung pro Halbtag: 300 bis 1'000 Taxpunkte."
+            },
+            {
+              "marke": "b",
+              "text": "bei schriftlicher Antragstellung: 100 bis 1'000 Taxpunkte."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "9c3f10583e44032dea49d53a63113708a2f4cf52f5e6cbd36f671388225f27b2"
+    },
+    {
+      "id": "kanton/BE/161.12/art_22",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Erledigung durch Endentscheid in der Hauptsache beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Fällen des Regionalgerichts in Einerbesetzung: 250 bis 5'000 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "in Fällen des Regionalgerichts in Dreierbesetzung: 500 bis 15'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "in Fällen des Regionalgerichts in Fünferbesetzung: 1'000 bis 20'000 Taxpunkte"
+            },
+            {
+              "marke": "d",
+              "text": "in Fällen des Wirtschaftsstrafgerichts in Einerbesetzung: 1'000 bis 15'000 Taxpunkte"
+            },
+            {
+              "marke": "e",
+              "text": "in Fällen des Wirtschaftsstrafgerichts in Dreierbesetzung: 3'000 bis 30'000 Taxpunkte"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "dcffc44cd004405681bd47e254f308680e4594f8e6fb39765cbd4f614e6a41a8"
+    },
+    {
+      "id": "kanton/BE/161.12/art_23",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mindestgebühr nach Artikel 22 kann unterschritten werden",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erledigung der Hauptsache durch instanzabschliessenden Vor- oder Zwischenentscheid,"
+            },
+            {
+              "marke": "b",
+              "text": "bei Durchführung eines abgekürzten Verfahrens nach den Artikeln 358 bis 362 der Schweizerischen Strafprozessordnung vom 5. Oktober 2007 (StPO),"
+            },
+            {
+              "marke": "c",
+              "text": "bei selbstständigen nachträglichen Entscheiden (Art. 363 bis 365 StPO),"
+            },
+            {
+              "marke": "d",
+              "text": "bei Entscheiden, die im selbstständigen Massnahmeverfahren getroffen wurden (Art. 372 bis 378 StPO)."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "1cd57ca30561aa329a9cec8f840cd1e95c1bd7b135eeddd970d7e2d4ecbc2471"
+    },
+    {
+      "id": "kanton/BE/161.12/art_24",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide im Berufungsverfahren werden erhoben",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn als Vorinstanz das Einzelgericht entschieden hat: 100 bis 5'000 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "wenn als Vorinstanz das Kollegialgericht entschieden hat: 200 bis 20'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "wenn als Vorinstanz das Wirtschaftsstrafgericht entschieden hat: 200 bis 30'000 Taxpunkte"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "d01baa2a5d2edab388d101d13ff9ed22cd42733b8c38aa73a1fcb1b149b0bb2d"
+    },
+    {
+      "id": "kanton/BE/161.12/art_25",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide über Revisionsgesuche werden erhoben",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn das Gesuch einen Entscheid der Staatsanwaltschaft oder des Einzelgerichts betrifft: 100 bis 1'000 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "wenn das Gesuch einen Entscheid des Kollegialgerichts betrifft: 100 bis 3'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "wenn das Gesuch einen Entscheid des Wirtschaftsstrafgerichts betrifft: 600 bis 6'000 Taxpunkte"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "2db90442806160ebfe272e6e155888baa525782ec9f7c1172c2a8a316315d7f3"
+    },
+    {
+      "id": "kanton/BE/161.12/art_26",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei instanzabschliessenden Vor- oder Zwischenentscheiden kann die jeweilige Mindestgebühr unterschritten werden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "96ee329a2feeb362bc0144f103317b84a3cc8adb957f7ebfcd91b51eed9c00c4"
+    },
+    {
+      "id": "kanton/BE/161.12/art_27",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide in Verfahren um neue Beurteilung werden erhoben",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Fällen des Einzelgerichts: 100 bis 1'000 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "in Fällen des Kollegialgerichts: 100 bis 3'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "in Fällen des Wirtschaftsstrafgerichts: 600 bis 6'000 Taxpunkte"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "daa03a7679f798670faa63feabe81e332e7a16edca9e4143307ca16b5f0cf61c"
+    },
+    {
+      "id": "kanton/BE/161.12/art_28",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide über Beschwerden nach den Artikeln 393 ff. StPO werden erhoben: 300 bis 3'000 Taxpunkte."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf Beschwerdeverfahren, die sich nach den Bestimmungen des Gesetzes vom 23. Mai 1989 über die Verwaltungsrechtspflege (VRPG) richten, findet der Tarif von Artikel 51 sinngemäss Anwendung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "679c9a95c3246c8bae48763afb5ac1169aee178df5ef5522877e45ddb68d6476"
+    },
+    {
+      "id": "kanton/BE/161.12/art_29",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide, mit denen ein Gesuch um Erläuterung oder Berichtigung abgewiesen wird, können erhoben werden: 100 bis 500 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "fd8bcf112716214ee6cccd68657c957844e363e7b0278679be73799f513a1558"
+    },
+    {
+      "id": "kanton/BE/161.12/art_30",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Durchführung einer Untersuchung durch die Jugendanwaltschaft, eingeschlossen das Verfahren vor dem regionalen oder kantonalen Zwangsmassnahmengericht, werden erhoben: 100 bis 1'200 Taxpunkte."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Auslagen gemäss Artikel 422 Absatz 2 Buchstabe e StPO werden höchstens erhoben: 200 Taxpunkte."
+        },
+        {
+          "absatz": "3",
+          "text": "Auslagen gemäss Artikel 422 Absatz 2 Buchstaben b bis d StPO werden vom Kanton getragen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "fcd0f064bd628bc2b168eca1579b53ad52d06313b1b3b9d8d4a0056f5b7b0eb1"
+    },
+    {
+      "id": "kanton/BE/161.12/art_31",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Strafbefehlsverfahren werden zuzüglich allfälliger Gebühren für die Untersuchung erhoben",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in schriftlichen Verfahren: 50 bis 100 Taxpunkte."
+            },
+            {
+              "marke": "b",
+              "text": "in mündlichen Verfahren: 50 bis 250 Taxpunkte."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "7a037d5dca51ca44b77831db38e522da4d30cc37781365860f5a7dd37182b4d2"
+    },
+    {
+      "id": "kanton/BE/161.12/art_32",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Verfahren nach Artikel 34 der Schweizerischen Jugendstrafprozessordnung vom 20. März 2009 (JStPO): 150 bis 800 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "in Verfahren um neue Beurteilung gemäss Artikel 368 ff. StPO: 150 bis 800 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "in Revisionsverfahren nach Artikel 41 JStPO: 150 bis 300 Taxpunkte"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "cf4a50ce4c37632326e0c61838d91378a5cbcfa6ffd82f900bc42244bece0e12"
+    },
+    {
+      "id": "kanton/BE/161.12/art_33",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide im Berufungs- und Beschwerdeverfahren werden erhoben: 150 bis 800 Taxpunkte"
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "a2f2bfbc7429c8eeea38b6ee53dfc15571b63dfd8c48d1d1dc81ec831236f6a8"
+    },
+    {
+      "id": "kanton/BE/161.12/art_34",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In nachträglichen richterlichen Entscheiden und Vollzugsentscheiden werden erhoben",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in schriftlichen Verfahren vor der Jugendanwaltschaft: 50 bis 150 Taxpunkte."
+            },
+            {
+              "marke": "b",
+              "text": "in mündlichen Verfahren vor der Jugendanwaltschaft: 50 bis 200 Taxpunkte."
+            },
+            {
+              "marke": "c",
+              "text": "in Verfahren vor dem Jugendgericht: 100 bis 400 Taxpunkte."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In den folgenden Angelegenheiten werden keine Verfahrenskosten erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Fortsetzung der Schutzmassnahme gemäss Artikel 19 Absatz 1 des Bundesgesetzes vom 20. Juni 2003 über das Jugendstrafrecht (Jugendstrafgesetz, JStG),"
+            },
+            {
+              "marke": "b",
+              "text": "Aufhebung einer Schutzmassnahme (Art. 19 Abs. 1 JStG) oder Weisung (Art. 12 Abs. 1, Art. 13 Abs. 2, Art. 29 Abs. 2 JStG) bei Zweckerreichung oder Erreichen der Altersgrenze (Art. 19 Abs. 2 JStG),"
+            },
+            {
+              "marke": "c",
+              "text": "Umwandlung von Strafen auf Gesuch hin (Art. 24 Abs. 3 und Art. 26 JStG),"
+            },
+            {
+              "marke": "d",
+              "text": "Herabsetzung der Busse (Art. 24 Abs. 4 JStG),"
+            },
+            {
+              "marke": "e",
+              "text": "Bedingte Entlassung aus dem Freiheitsentzug (Art. 28 Abs. 1 JStG),"
+            },
+            {
+              "marke": "f",
+              "text": "Verzicht auf den nachträglichen Vollzug des Freiheitsentzugs gemäss Artikel 32 Absatz 2 JStG."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "56cbaeff5f0cafe0341f8b2fe46f4652865049a34762861791f50e39f636c047"
+    },
+    {
+      "id": "kanton/BE/161.12/art_35",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Schlichtungsverfahren beträgt die Gebühr 100 bis 1'000 Taxpunkte."
+        },
+        {
+          "absatz": "2",
+          "text": "Rechtsberatungen im Sinne von Artikel 10 Absatz 2 EG ZSJ sind unentgeltlich."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "3cf6503ba71daa3ce3f2be0b4aa78256e7abbdf4dffc3a317ad83b7e3fb49286"
+    },
     {
       "id": "kanton/BE/161.12/art_36",
       "ebene": "kanton",
@@ -46,32 +983,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9564625753e0643aee776c1979bffd63",
       "sha": "b34ab98bfb69a0a5a666db3759455f4779ffb9280d7952f46b1a0dc75ea8f2cf"
-    },
-    {
-      "id": "kanton/BE/161.12/art_35",
-      "ebene": "kanton",
-      "quelle": "BE",
-      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
-      "artikel": "35",
-      "artikelLabel": "Art. 35",
-      "bloecke": [
-        {
-          "absatz": "1",
-          "text": "In Schlichtungsverfahren beträgt die Gebühr 100 bis 1'000 Taxpunkte."
-        },
-        {
-          "absatz": "2",
-          "text": "Rechtsberatungen im Sinne von Artikel 10 Absatz 2 EG ZSJ sind unentgeltlich."
-        }
-      ],
-      "stand": "2026-05-01",
-      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "9564625753e0643aee776c1979bffd63",
-      "sha": "3cf6503ba71daa3ce3f2be0b4aa78256e7abbdf4dffc3a317ad83b7e3fb49286"
     },
     {
       "id": "kanton/BE/161.12/art_37",
@@ -88,9 +1002,771 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9564625753e0643aee776c1979bffd63",
       "sha": "e9f06f240d2b651e8e8a2125d92c918ce1e8ff923b76da521be3eac309396c78"
+    },
+    {
+      "id": "kanton/BE/161.12/art_38",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im vereinfachten Verfahren beträgt die Gebühr in vermögensrechtlichen Streitigkeiten bei einem Streitwert von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "weniger als 10'000 Franken: 300 bis 2'500 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "10'000 bis 30'000 Franken: 900 bis 7'500 Taxpunkte"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "bb0759b71325649be6163fbdd4fd6c19ef309a91bbed8151b97cef9fca5d6e72"
+    },
+    {
+      "id": "kanton/BE/161.12/art_39",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In nichtvermögensrechtlichen Streitigkeiten beträgt die Gebühr 200 bis 7'500 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "e9bf035fbdec25a0d305658aa504c45c6ff0ee304904bc25e94c764ddfa44cb1"
+    },
+    {
+      "id": "kanton/BE/161.12/art_40",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im summarischen Verfahren beträgt die Gebühr 100 bis 20'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "c4aff0f080cd58b8bb1b50abc43c156ad3007f82e25405a5f5554b6d914c9645"
+    },
+    {
+      "id": "kanton/BE/161.12/art_41",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Scheidungsverfahren beträgt die Gebühr 600 bis 12'000 Taxpunkte."
+        },
+        {
+          "absatz": "2",
+          "text": "Absatz 1 gilt auch für Verfahren, in denen nach den Vorschriften der ZPO die Bestimmungen über das Scheidungsverfahren sinngemäss anwendbar sind."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "36d2501e13e40ef0df65c335fd6aebc7f597a3a6a0dd56d930ddcd030cf6fcd1"
+    },
+    {
+      "id": "kanton/BE/161.12/art_42",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Streitigkeiten, die dem Handelsgericht als einziger kantonaler Instanz zugewiesen sind, beträgt die Gebühr bei einem Streitwert von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "weniger als 50'000 Franken: 1'000 bis 15'000 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "50'000 bis 100'000 Franken: 2'000 bis 22'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "100'000 bis 500'000 Franken: 5'000 bis 40'000 Taxpunkte"
+            },
+            {
+              "marke": "d",
+              "text": "500'000 bis eine Million Franken: 9'000 bis 70'000"
+            },
+            {
+              "marke": "e",
+              "text": "eine Million bis zwei Millionen Franken: 13'000 bis 140'000 Taxpunkte"
+            },
+            {
+              "marke": "f",
+              "text": "zwei Millionen Franken und mehr: 0,6 bis 8 Prozent des Streitwerts"
+            },
+            {
+              "marke": "g",
+              "text": "bei einem nicht schätzbaren Streitwert: 2'000 bis 50'000 Taxpunkte"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Anordnung vorsorglicher Massnahmen vor Eintritt der Rechtshängigkeit einer Klage kann die jeweilige Mindestgebühr unterschritten werden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "6b32c1a615ea904af1ca7f757b3096186150b6ad3d2100b310e8d1f3bac40c02"
+    },
+    {
+      "id": "kanton/BE/161.12/art_43",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Streitigkeiten, in denen das Obergericht gestützt auf Artikel 8 ZPO als einzige kantonale Instanz angerufen wird, beträgt die Gebühr bei einem Streitwert von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "100'000 bis 500'000 Franken: 5'000 bis 40'000 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "500'000 bis eine Million Franken: 9'000 bis 70'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "eine Million bis zwei Millionen Franken: 13'000 bis 140'000 Taxpunkte"
+            },
+            {
+              "marke": "d",
+              "text": "zwei Millionen Franken und mehr: 0,6 bis 8 Prozent des Streitwerts"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Streitigkeiten, in denen das Obergericht gestützt auf Artikel 5 Absatz 1 Buchstabe e ZPO entscheidet, beträgt die Gebühr 2000 bis 140'000 Taxpunkte."
+        },
+        {
+          "absatz": "3",
+          "text": "Auf Streitigkeiten, in denen das Obergericht gestützt auf kantonales öffentliches Recht als einzige kantonale Instanz entscheidet, findet der Tarif von Artikel 51 sinngemäss Anwendung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "085f581d79410ea523319d63ae12559a6dd86dac3c71f68129b9737dd97a7529"
+    },
+    {
+      "id": "kanton/BE/161.12/art_44",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für vermögensrechtliche Streitigkeiten beträgt die Gebühr im Berufungsverfahren bei einem Streitwert von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "10'000 bis 30'000 Franken 900 bis 7'500 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "30'000 bis 100'000 Franken 1'500 bis 20'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "100'000 bis 500'000 Franken 6'000 bis 40'000 Taxpunkte"
+            },
+            {
+              "marke": "d",
+              "text": "500'000 bis eine Million Franken 8'000 bis 60'000 Taxpunkte"
+            },
+            {
+              "marke": "e",
+              "text": "eine Million bis zwei Millionen Franken 12'000 bis 120'000 Taxpunkte"
+            },
+            {
+              "marke": "f",
+              "text": "zwei Millionen Franken und mehr 0,5 bis 7 Prozent des Streitwerts"
+            },
+            {
+              "marke": "g",
+              "text": "bei einem nicht schätzbaren Streitwert 1'000 bis 40'000 Taxpunkte"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In miet- und in arbeitsrechtlichen Streitigkeiten kann die Mindestgebühr unterschritten werden, wenn der Streitwert nach Artikel 92 Absatz 2 ZPO ermittelt wurde."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "ead1cc48a72a36aecde5bd3fe35e304930f6be573cd751fa4581554057d2e8e3"
+    },
+    {
+      "id": "kanton/BE/161.12/art_45",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In nichtvermögensrechtlichen Streitigkeiten beträgt die Gebühr 200 bis 12'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "1b980be40e4ac13263953c4079707d1b46538fe0f3186283169c9310d08e702c"
+    },
+    {
+      "id": "kanton/BE/161.12/art_46",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide über Beschwerden nach den Artikeln 319 ff. ZPO werden erhoben: 300 bis 7'500 Taxpunkte."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Entscheide über Beschwerden in Angelegenheiten des Kindes- und Erwachsenenschutzes sowie auf Beschwerdeverfahren, in denen das Obergericht in Anwendung des VRPG entscheidet, findet der Tarif von Artikel 51 sinngemäss Anwendung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "e92f54ba8b334dd78bbd29e1599fe19c16f9c3cf9bc541dca8751f9a82e78649"
+    },
+    {
+      "id": "kanton/BE/161.12/art_47",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide über Revisionsgesuche werden erhoben: 200 bis 3'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "0a184ff6e8fe9b0cf153ab53079773c7ad74813941db4bc2e22c51f766c699fc"
+    },
+    {
+      "id": "kanton/BE/161.12/art_48",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide, mit denen ein Gesuch um Erläuterung oder Berichtigung abgewiesen wird, können erhoben werden: 100 bis 500 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "fd8bcf112716214ee6cccd68657c957844e363e7b0278679be73799f513a1558"
+    },
+    {
+      "id": "kanton/BE/161.12/art_49",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide über Beschwerden und Revisionsgesuche (Art. 356 Abs. 1 Bst. a ZPO) werden erhoben: 500 bis 10'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "6fc03967e1e46e6c3832a2dedf84f4737704f29a42434e5e5b465c120232229c"
+    },
+    {
+      "id": "kanton/BE/161.12/art_50",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide in Angelegenheiten nach Artikel 356 Absatz 2 ZPO werden erhoben: 500 bis 5'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "1e5439b5f0545520bc6b0a2aaf84e894826c9a38154f293507ed346a6bdeb3a6"
+    },
+    {
+      "id": "kanton/BE/161.12/art_51",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Beurteilung von Streitigkeiten durch das Verwaltungsgericht betragen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Beschwerden: 300 bis 15'000 Taxpunkte."
+            },
+            {
+              "marke": "b",
+              "text": "bei Klagen und Appellationen: 300 bis 25'000 Taxpunkte."
+            },
+            {
+              "marke": "c",
+              "text": "bei Zwischenverfügungen und instanzabschliessenden Entscheiden über Gesuche: 300 bis 2'500 Taxpunkte."
+            },
+            {
+              "marke": "d",
+              "text": "bei einzelrichterlicher Streiterledigung: 200 bis 2'500 Taxpunkte."
+            },
+            {
+              "marke": "e",
+              "text": "auf dem Gebiet des Sozialversicherungsrechts: 200 bis 2'500 Taxpunkte."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "60a063417d8cbd213c298808d4c6acd95d84b64e6a56a8a08b3063c4a0373193"
+    },
+    {
+      "id": "kanton/BE/161.12/art_52",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Beurteilung von Streitigkeiten durch das kantonale Schiedsgericht in Sozialversicherungsstreitigkeiten betragen: 200 bis 10'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "ee82a6a74f146561b925f14d51e867744689dc4140b746d2a10635291cc6e9b0"
+    },
+    {
+      "id": "kanton/BE/161.12/art_53",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Beurteilung von Streitigkeiten durch die Steuerrekurskommission betragen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Entscheiden der Einzelrichterin oder des Einzelrichters: 100 bis 2'500 Taxpunkte."
+            },
+            {
+              "marke": "b",
+              "text": "bei Entscheiden der Kammer: 100 bis 6'000 Taxpunkte."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "63b793aa5619224bc687759f4ed07829c4ad78f2859c878873e7b785bcdbea70"
+    },
+    {
+      "id": "kanton/BE/161.12/art_54",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Beurteilung von Streitigkeiten mit Schätzungswert betragen bei einem Schätzungswert von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "50 bis 5'000 Franken 10 bis 200 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "5'000 bis 20'000 Franken 100 bis 1'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "20'000 bis 500'000 Franken 500 bis 3'000 Taxpunkte"
+            },
+            {
+              "marke": "d",
+              "text": "500'000 bis eine Million Franken 2'000 bis 10'000 Taxpunkte"
+            },
+            {
+              "marke": "e",
+              "text": "über eine Million Franken 7'000 bis 20'000 Taxpunkte"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren für die Beurteilung von Streitigkeiten ohne Schätzungswert betragen 100 bis 600 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "828748f5eec3770f294164967303b05f645b0c3fd35feccbfe6e614c63efeba6"
+    },
+    {
+      "id": "kanton/BE/161.12/art_55",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Beurteilung von Streitigkeiten durch die Rekurskommission für Massnahmen gegenüber Fahrzeugführerinnen und Fahrzeugführern betragen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Beschwerden von Motorfahrzeuglenkerinnen und -lenkern: 300 bis 2'500 Taxpunkte"
+            },
+            {
+              "marke": "b",
+              "text": "bei Beschwerden von Motorfahrradlenkerinnen und -lenkern: 250 bis 1'000 Taxpunkte"
+            },
+            {
+              "marke": "c",
+              "text": "bei Beschwerden von Radfahrerinnen und Radfahrern: 150 bis 500 Taxpunkte"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "1be92abed2637018512b135bb6888775197bc32b42edcbc1e267c7d5973f5f50"
+    },
+    {
+      "id": "kanton/BE/161.12/art_56",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Beurteilung von Streitigkeiten durch die kantonale Bodenverbesserungskommission betragen 300 bis 5'000 Taxpunkte."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "65ae5d33ab697eca24728c56e6c6881848703d40bde7e4e411d7a6ce6e28b666"
+    },
+    {
+      "id": "kanton/BE/161.12/art_57",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zeuginnen und Zeugen ist eine nach den folgenden Grundsätzen zu bestimmende Entschädigung auszurichten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zeugengeld: 10 bis 25 Taxpunkte, wenn die gesamte Inanspruchnahme nicht länger als einen halben Tag dauert; 25 bis 50 Taxpunkte, wenn sie länger als einen halben Tag dauert."
+            },
+            {
+              "marke": "b",
+              "text": "Erwerbsausfall: 25 bis 150 Taxpunkte pro Stunde."
+            },
+            {
+              "marke": "c",
+              "text": "Reise- und Verpflegungsentschädigung:"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entschädigungen gemäss Absatz 1 Buchstabe c gelten auch für in amtlichem Auftrag handelnde Mitarbeiterinnen und Mitarbeiter des Kantons, die als Zeuginnen oder Zeugen, sachverständige Personen oder als Übersetzerinnen oder Übersetzer vorgeladen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Begleiterinnen und Begleiter von Kindern und von kranken, alten oder gebrechlichen Zeuginnen oder Zeugen erhalten die gleiche Entschädigung wie eine Zeugin oder ein Zeuge."
+        },
+        {
+          "absatz": "4",
+          "text": "Der vorgeladenen Beiständin oder dem vorgeladenen Beistand einer unbemittelten angeschuldigten Person kann die gleiche Entschädigung wie einer Zeugin oder einem Zeugen ausgerichtet werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Unbemittelten Zeuginnen und Zeugen kann die Reise- und Verpflegungsentschädigung vorgeschossen werden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "e453bf0905e66ca54c1456fff5b93c412a27e4695b5830f364390f5d6c96e47f"
+    },
+    {
+      "id": "kanton/BE/161.12/art_58",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von den Gerichtsbehörden oder der Staatsanwaltschaft beauftragte Sachverständige werden nach Zeitaufwand entschädigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Ansatz richtet sich nach den erforderlichen Fachkenntnissen und der Schwierigkeit der Leistung, bei freiberuflich tätigen Sachverständigen in der Regel nach den branchenüblichen Ansätzen oder nach Vereinbarung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Entschädigung wird in der Regel aufgrund der von der sachverständigen Person eingereichten Honorarnote festgesetzt."
+        },
+        {
+          "absatz": "4",
+          "text": "Besteht eine Steuerpflicht, so wird die Mehrwertsteuer zusätzlich zur Entschädigung vergütet."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Behörde kann vor der Erteilung eines Gutachterauftrags einen Kostenvoranschlag verlangen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "b27fca7e59ad704a1c489850ce76a05aad920e419543c6f30d9faad25e266a40"
+    },
+    {
+      "id": "kanton/BE/161.12/art_59",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entschädigung für Dolmetschereinsätze richtet sich nach dem Zeitaufwand. Der Stundenansatz beträgt je nach Schwierigkeit des Auftrags 80 bis 140 Taxpunkte."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entschädigung für schriftliche Übersetzungen richtet sich nach dem Umfang der Übersetzung. Der Ansatz beträgt je nach Schwierigkeit des Ausgangstextes 90 bis 120 Taxpunkte pro übersetzte Seite (DIN A4-Seite, 1800 Zeichen einschliesslich Leerzeichen pro Seite)."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei besonders seltenen Sprachen oder Grossaufträgen können abweichende Ansätze vereinbart werden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "d8c9f9a151831a5cc70388200461d9122b7ac5fb533843d48dab7f342dad871c"
+    },
+    {
+      "id": "kanton/BE/161.12/art_60",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Reise- und Verpflegungsentschädigungen sowie weitere Zuschläge der sachverständigen Personen sowie Dolmetscherinnen und Dolmetscher gelten die Ansätze gemäss Artikel 57."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "f8aaec43293c8469fe4f913bcb96f5b0bae125b4ce87b82584030e12ccd0c122"
+    },
+    {
+      "id": "kanton/BE/161.12/art_61",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorschriften dieses Dekrets betreffend die Verfahrenskosten in Strafsachen sind anwendbar, soweit im jeweiligen Verfahren die StPO zur Anwendung gelangt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vorschriften dieses Dekrets betreffend die Verfahrenskosten in der Jugendrechtspflege sind anwendbar, soweit im jeweiligen Verfahren die JStPO zur Anwendung gelangt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Vorschriften dieses Dekrets betreffend die Verfahrenskosten in Zivilsachen sind anwendbar, soweit im jeweiligen Verfahren die ZPO zur Anwendung gelangt."
+        },
+        {
+          "absatz": "4",
+          "text": "Auf Verfahren in öffentlich-rechtlichen Angelegenheiten, die bei Inkrafttreten dieses Dekrets hängig sind, sind die Vorschriften des bisherigen Rechts anwendbar."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "5a6547e871678b80cb698ea4c900b983f0d28af73b17ccc21d289fdabea8b159"
+    },
+    {
+      "id": "kanton/BE/161.12/art_62",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Erlasse werden aufgehoben.",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Dekret vom 17. November 1997 über die Gebühren des Verwaltungsgerichts und verwaltungsunabhängiger Verwaltungsjustizbehörden (GebD VJB) (BSG 155.261),"
+            },
+            {
+              "marke": "2",
+              "text": "Dekret vom 7. November 1996 über die Gebühren der Zivilgerichte (GebDZiv) (BSG 278.1),"
+            },
+            {
+              "marke": "3",
+              "text": "Dekret vom 7. November 1996 betreffend die Gebühren in Strafsachen (GebDStr) (BSG 328.1),"
+            },
+            {
+              "marke": "4",
+              "text": "Dekret vom 4. September 1997 über die Gebühren in der Jugendrechtspflege (GebDJRP) (BSG 328.2)."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "d0096b9353db02d438601dbafa4fb6fd3bfb748de22447bb78dddfa04ad616c1"
+    },
+    {
+      "id": "kanton/BE/161.12/art_63",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Verfahrenskostendekret, VKD (BSG 161.12)",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat bestimmt den Zeitpunkt des Inkrafttretens."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/161.12",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9564625753e0643aee776c1979bffd63",
+      "sha": "fb452d4321a33ecf3f2bf707eaa1568a56323ef192950a9c6261614e09de9435"
     }
   ]
 }

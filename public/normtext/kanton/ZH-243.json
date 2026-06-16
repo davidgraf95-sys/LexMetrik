@@ -1,36 +1,76 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
     {
-      "id": "kanton/ZH/243/art_8",
+      "id": "kanton/ZH/243/art_1",
       "ebene": "kanton",
       "quelle": "ZH",
       "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
-      "artikel": "8",
-      "artikelLabel": "§ 8",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
       "bloecke": [
         {
           "absatz": null,
-          "text": "Berechnet sich eine Gebühr nach dem Arbeitsaufwand, beträgt der Stundenansatz Fr. 180, soweit nicht im Anhang für einzelne Amtshandlungen andere Ansätze festgelegt sind."
-        },
-        {
-          "absatz": "2",
-          "text": "Erfolgt eine Beurkundung auf Veranlassung der Parteien ausserhalb des Amtslokals des Notariats, gilt auch die Reisezeit als Arbeits-"
-        },
-        {
-          "absatz": "14",
-          "text": "aufwand. Der Stundenansatz beträgt Fr. 180."
-        },
-        {
-          "absatz": "3",
-          "text": "Die Finanzdirektion passt die Stundenansätze der Teuerung an, wenn sich der Landesindex der Konsumentenpreise seit der letzten Anpassung um mindestens 7% erhöht hat. Die Beträge werden aufoder abgerundet."
+          "text": "Die Notariate und Grundbuchämter erheben für ihre Verrichtungen die Gebühren gemäss Anhang."
         }
       ],
       "stand": "2009-07-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
-      "sha": "d1a2351b7e7e3f37ac17fb5aa2b7dd173db2de2e4661521df4fdf2da1e94d21e"
+      "sha": "232a60de5471f6de812f5c941b0d40c12318bde0c5db33027d275dac7f99a880"
+    },
+    {
+      "id": "kanton/ZH/243/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Mehrwertsteuer wird zusätzlich zur Gebühr in Rechnung gestellt. Die Finanzdirektion kann Ausnahmen bezeichnen."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "2d8d464f8c6c6d94e4eb2fc49de9b744f724079b8cf629a83393d1b62850f4ca"
+    },
+    {
+      "id": "kanton/ZH/243/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In den Gebühren für ein Rechtsgeschäft oder Verfahren sind die folgenden damit verbundenen Nebenleistungen enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mündliche Auskünfte und Nachschlagungen, vorbehalten bleibt Ziff. 7 des Anhangs,"
+            },
+            {
+              "marke": "b",
+              "text": "Zuschriften, Vollmachten, Vorladungen, Gesuche, Anzeigen,"
+            },
+            {
+              "marke": "c",
+              "text": "Ausfertigungen, auf die jede Partei Anspruch hat, und Anmeldungszeugnisse."
+            }
+          ]
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "d4040258f4e36c713926fb1ce824e5256f26e491045e76b27362d9a2824ccc32"
     },
     {
       "id": "kanton/ZH/243/art_4",
@@ -83,9 +123,499 @@
       ],
       "stand": "2009-07-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
       "sha": "0805aa4c5bc68a120c8b1f9be5b9e8aab1eeeee482a42e0c1392aa0f69924498"
+    },
+    {
+      "id": "kanton/ZH/243/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lässt sich das von den Parteien angestrebte Ziel auf rechtlich verschiedenen Wegen erreichen, werden für die grundbuchlich einfachere Abwicklung keine höheren Notariats- und Grundbuchgebühren geschuldet als für einen aufwendigeren Vollzug."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "df32a60ae0c307f9963afd4220d95d7097d848fb49d4c1dd032a689b8163e25c"
+    },
+    {
+      "id": "kanton/ZH/243/art_6",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Notariat setzt den Verkehrswert fest, wenn die Gebühr nach diesem zu berechnen ist und die Parteien ihn nicht oder offensichtlich zu tief angeben."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "f5e8e6c041ac2bc065f6983afbcae95d4f6436541d2c6c6c8b76b5cfa5a98cd7"
+    },
+    {
+      "id": "kanton/ZH/243/art_7",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist für eine Gebühr ein Mindest- und ein Höchstbetrag angegeben, wird sie nach Arbeitsaufwand und Bedeutung des Geschäfts festgesetzt, sofern keine andere Berechnungsgrundlage angegeben ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Finanzdirektion sorgt durch Dienstanweisungen für eine gleichmässige Gebührenfestsetzung."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "30e24644119bbf34562c6af0c6d078a7536d70b39a39054903c4c342c862aba7"
+    },
+    {
+      "id": "kanton/ZH/243/art_8",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Berechnet sich eine Gebühr nach dem Arbeitsaufwand, beträgt der Stundenansatz Fr. 180, soweit nicht im Anhang für einzelne Amtshandlungen andere Ansätze festgelegt sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Erfolgt eine Beurkundung auf Veranlassung der Parteien ausserhalb des Amtslokals des Notariats, gilt auch die Reisezeit als Arbeits-"
+        },
+        {
+          "absatz": "14",
+          "text": "aufwand. Der Stundenansatz beträgt Fr. 180."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Finanzdirektion passt die Stundenansätze der Teuerung an, wenn sich der Landesindex der Konsumentenpreise seit der letzten Anpassung um mindestens 7% erhöht hat. Die Beträge werden aufoder abgerundet."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "d1a2351b7e7e3f37ac17fb5aa2b7dd173db2de2e4661521df4fdf2da1e94d21e"
+    },
+    {
+      "id": "kanton/ZH/243/art_8_a",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "8_a",
+      "artikelLabel": "§ 8a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Erfolgt eine Beurkundung werktags nach 18.30 Uhr oder an Samstagen, Sonn- und allgemeinen Feiertagen, erhöht sich die Beurkundungsgebühr um Fr. 100."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "f21837f35bcbe36b940f85dd0edcec0a59d8d53ab84886ef3cd4580a0b9ddf41"
+    },
+    {
+      "id": "kanton/ZH/243/art_9",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bezieht sich eine Grundbuchanmeldung auf Grundstücke in mehr als einem zürcherischen Grundbuchamtskreis, erhebt jenes Amt die Gebühren, das die Anmeldung entgegennimmt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Mindest- und Höchstansätze werden für jeden Grundbuchamtskreis berücksichtigt, sofern das Rechtsgeschäft nicht zwingend bei nur einem Amt angemeldet werden muss."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "597e6890341992af034acf43fc6760829cea355a51ea5aded769d45ee12e4015"
+    },
+    {
+      "id": "kanton/ZH/243/art_10",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Kosten einer Sühnverhandlung gemäss Ziff. 2.8.2 des Anhangs werden den Parteien nach den Bestimmungen für das Sühnverfahren vor der Friedensrichterin oder dem Friedensrichter auferlegt."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "ba2d358645af477f890863aba21b995010f748b64e8f8a7d7215c4032e9569bd"
+    },
+    {
+      "id": "kanton/ZH/243/art_11",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auf Gesuch erlässt das Notariat die Gebühren",
+          "items": [
+            {
+              "marke": "a",
+              "text": "juristischen Personen, die wegen Gemeinnützigkeit von der Steuerpflicht im Kanton Zürich befreit sind, zur Hälfte,"
+            },
+            {
+              "marke": "b",
+              "text": "offensichtlich bedürftigen, natürlichen Personen ganz oder teilweise."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Durch Parteivereinbarungen gemäss §29 Abs. 3 des Notariats-"
+        },
+        {
+          "absatz": "4",
+          "text": "gesetzesübernommene Gebühren werden nicht erlassen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Erlassgesuch muss innerhalb eines Jahres seit der gebührenpflichtigen Verrichtung gestellt werden."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "5c107abe80e4af746e2d4a5422f105437f37765da801f5d9e4f21b5bf8a41e61"
+    },
+    {
+      "id": "kanton/ZH/243/art_12",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ist bei der Abwicklung eines Geschäftes mit einer Person mit einer Behinderung im Sinne des Behindertengleichstellungsgeset-"
+        },
+        {
+          "absatz": "6",
+          "text": "zesder Beizug einer Hilfsperson erforderlich, trägt der Staat die dafür erforderlichen Kosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Beizug der Hilfsperson erfolgt im Einvernehmen mit dem Notariat."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "86c1a49499e03f83592e83e669b4bdf47109934151ceee14a61cf1be90542172"
+    },
+    {
+      "id": "kanton/ZH/243/art_13",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Porti, Telefontaxen und weitere Auslagen sind dem Notariat auch bei ganzem oder teilweisem Gebührenerlass zu ersetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Staat trägt die Kosten der öffentlichen Bekanntmachung bei der Einführung des eidgenössischen Grundbuchs."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Aufwand für die Einrichtung und Anpassung des elektronischen Zugriffs auf das Grundbuch für das Abrufverfahren gemäss Ziff. 13 des Anhangs wird getrennt in Rechnung gestellt."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "4f458b66908a7a8c7ea0e3864f3500db4bb5edfd28eede0da0d8a5ea7123592a"
+    },
+    {
+      "id": "kanton/ZH/243/art_14",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Notariat kann die verlangte Amtshandlung von der Bezahlung oder Sicherstellung der Gebühren und Auslagen abhängig machen, wenn vorauszusehen ist, dass",
+          "items": [
+            {
+              "marke": "a",
+              "text": "diese nicht erhältlich sind oder"
+            },
+            {
+              "marke": "b",
+              "text": "ihr Inkasso mit Schwierigkeiten verbunden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten für die Durchführung von Verfahren nach Ziff.3 des Anhangs sind dem Notariat von der Person, die das Begehren stellt, auf Verlangen vorzuschiessen."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "8b118f7459620fdcc796059ca6408795992551d42f6f05e605c705b8ce323338"
+    },
+    {
+      "id": "kanton/ZH/243/art_15",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das Notariat stellt die Gebühren und Auslagen mit Abschluss der Amtshandlung in Rechnung. Für Beträge bis zu Fr. 500 kann Barzahlung verlangt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Es mahnt die Schuldnerin oder den Schuldner nach Ablauf der Zahlungsfrist von 30 Tagen. Ab Datum der Mahnung wird Verzugszins von 5% geschuldet."
+        },
+        {
+          "absatz": "3",
+          "text": "Zu viel bezahlte Beträge werden mit dem gleichen Zins zurückerstattet."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "477a403828e23ccee0d0140f11eaa3034c99aa19e6a0488226f3a8451ca78337"
+    },
+    {
+      "id": "kanton/ZH/243/art_16",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Rechtskräftige Rechnungen über die Notariats- und Grundbuchgebühren sowie den Auslagenersatz sind vollstreckbaren gericht-"
+        },
+        {
+          "absatz": "9",
+          "text": "lichen Urteilen gleichgestellt (Art. 80 Abs. 2 Sch KG)."
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "a1c88445a68bb2f8e94f101dbcb40132190b58e5e0e7bd60b14ef17de9466508"
+    },
+    {
+      "id": "kanton/ZH/243/art_17",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Notariatsgebührenverordnung (NotGebV) (LS 243)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Regierungsrat bestimmt den Zeitpunkt des Inkrafttretens."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf den gleichen Zeitpunkt wird die Verordnung des Kantonsrates über die Notariats- und Grundbuchgebühren vom 7. November 1988 aufgehoben."
+        },
+        {
+          "absatz": "1",
+          "text": "OS 64, 280; Inkrafttreten: 1. Juli 2009."
+        },
+        {
+          "absatz": "2",
+          "text": "ABl 2008, 1188."
+        },
+        {
+          "absatz": "3",
+          "text": "ABl 2009, 4."
+        },
+        {
+          "absatz": "4",
+          "text": "LS 242."
+        },
+        {
+          "absatz": "5",
+          "text": "LS 813.20."
+        },
+        {
+          "absatz": "6",
+          "text": "SR 151.3."
+        },
+        {
+          "absatz": "7",
+          "text": "SR 210."
+        },
+        {
+          "absatz": "8",
+          "text": "SR 220."
+        },
+        {
+          "absatz": "9",
+          "text": "SR 281.1."
+        },
+        {
+          "absatz": "10",
+          "text": "Eingefügt durch B vom 24. September 2012 (OS 68, 65;ABl 2011, 3128). In Kraft seit 1. März 2013."
+        },
+        {
+          "absatz": "11",
+          "text": "Eingefügt durch B vom 20. Oktober 2014 (OS 69, 507;ABl 2013-12-06). In Kraft seit 1. Januar 2015."
+        },
+        {
+          "absatz": "12",
+          "text": "Fassung gemäss B vom 20. Oktober 2014 (OS 69, 507;ABl 2013-12-06). In Kraft seit 1. Januar 2015."
+        },
+        {
+          "absatz": "13",
+          "text": "Fassung gemäss B vom 6. Juli 2015 (OS 71, 399;ABl 2015-03-06). In Kraft seit 1. Januar 2017 (ABl 2016-07-01)."
+        },
+        {
+          "absatz": "14",
+          "text": "Eingefügt durch B vom 27. März 2023 (OS 78, 389;ABl 2022-12-01). In Kraft seit 1. Januar 2024."
+        },
+        {
+          "absatz": "15",
+          "text": "Fassung gemäss B vom 27. März 2023 (OS 78, 389;ABl 2022-12-01). In Kraft seit 1. Januar 2024. Anhang: Gebührentarif (§1) Ansatz/Fr.Grundbuchgebühren siehe Ziff.: 1Beurkundungsgebühren Enthält ein zu beurkundendes Rechtsgeschäft weitere damit im Zusammenhang stehende beurkundungspflichtige Tatbestände, vermindert sich die Beurkundungsgebühr auf die Hälfte der dafür festgesetzten Ansätze. Die Gebühren dieser Ziffer sind auch für Verträge über ausserhalb des Kantons (auch im Ausland) gelegene Grundstücke geschuldet. 1.1Verträge auf Eigentumsübertragung 1.1.1Im Allgemeinen (auch Vorvertrag, Vertragsübertragung, Begrün-2.2.1, 2.2.2, dung und Übertragung von Kaufs-, Rückkaufs-2.2.4, 2.2.9, und limitierten Vorkaufsrechten, Sacheinlage2.5.1 und Vermögensübertragung) vom Verkehrswert des Grundstücks bzw. von dem von der Eigentumsänderung betroffenen Wertanteil bei einer Gesamthandschaft1‰ mindestens100 1.1.2Eigentumsänderungen an Strassen 1.1.2.1 Unentgeltliche Abtretung von Flurwegen2.2.3.1 und Privatstrassen pro Grundstück50 1.1.2.2 Abtretung an öffentliches Strassengebiet2.2.3.2 pro Abtretungsobjekt50"
+        },
+        {
+          "absatz": "11",
+          "text": "1.1.3Steuerbefreite Eigentumsänderung bei2.2.9 Vermögensübertragungen und Sacheinlagen pro Stunde120 Ansatz/Fr.Grundbuchgebühren siehe Ziff.: 1.2Grundpfandrechte 1.2.1Errichtung und Erhöhung2.3.1 von der Pfandsumme oder vom Erhöhungsbetrag 1‰ mindestens100 1.2.2Errichtung und Erhöhung von Pfandrechten2.3.2 bei gleichzeitiger Löschung oder Teillöschung solcher Rechte zulasten des gleichen Pfandes –vom Betrag, um den der neue Gesamtbetrag der Pfandsumme den bisherigen übersteigt1‰ pro neues Pfandrecht mindestens100 –wenn die neue Pfandsumme die bisherige nicht übersteigt, pro neues Pfandrecht100 1.2.3Pfandrechtserneuerung2.3.5.4 von der Pfandsumme0,5‰ mindestens100 1.2.4Pfandeinsetzung, pro Pfandrecht2.3.3 vom Verkehrswert des einzusetzenden Pfandes0,5‰ mindestens50 jedoch höchstens 1‰ der Pfandsumme 1.2.5Festsetzung oder Erhöhung des Maximal-2.3.5.1 zinsfusses sofern nicht gleichzeitig Gebühren nach den Ziff. 1.2.1, 1.2.2 oder 1.2.3 geschuldet werden50 1.2.6Umwandlung eines Schuldbriefs502.3.5.3 1.3Begründung von Stockwerkeigentum pro Einheit50–1002.1 pro aufgeteiltes Grundstück mindestens1000 Ansatz/Fr.Grundbuchgebühren siehe Ziff.: 1.4Einräumung und Änderung anderer dinglicher oder persönlicher Rechte 1.4.1Dienstbarkeiten und Grundlasten2.1, 2.4 1.4.1.1 Begründung und Ausdehnung –vom Wert der Gegenleistung (bei wiederkehrenden Leistungen höchstens vom 20-fachen Wert der Jahresleistung)1‰ mindestens150 –beim Fehlen einer Gegenleistung150–1000 1.4.1.2 Änderung150–1000 1.4.2Aufhebung und Änderung privatrechtlicher Eigentumsbeschränkungen 1.4.2.1 Dienstbarkeiten2.4 –vom Wert der Gegenleistung (bei wiederkehrenden Leistungen höchstens vom 20-fachen Wert der Jahresleistung)1‰ mindestens150 –beim Fehlen einer Gegenleistung150–1000 1.4.2.2 Übrige2.5.6 wie Änderung gesetzlicher Vorkaufsrechte und Ausschluss des Aufhebungsanspruches bei Miteigentum pro Grundstück50 im Rahmen von100–300 1.4.3Nachrückungsrecht2.5.4 von der Pfandsumme0,1‰ im Rahmen von50–200 1.5Änderung beurkundeter Rechtsgeschäfte ohne Erhöhung der Gegenleistung100–1500 1.6Öffentliche Beurkundung von Rechtsgeschäften, die mit einem Grundstücksgeschäft zusammenhängen und in Ziff. 1 nicht genannt sind (Fahrnis, Werkvertrag usw.) zusätzlich zur Gebühr nach den Ziff. 1.1 bis 1.5 vom Wert der zusätzlichen Vermögenswerte0,5‰ höchstens2500 Ansatz/Fr.Beurkundungsgebühren siehe Ziff.: 2Grundbuchgebühren 2.1Aufnahme eines Grundstücks (Liegenschaft, selbstständiges und dauerndes1.3, Recht, Bergwerk, Miteigentumsanteil, Stock-1.4.1 werkeigentumsanteil, Wasserrechtskonzession, Teilrechte an Korporationen) pro Grundstück50–500 bei Korporationen pro Blatt20 2.2Eigentum"
+        },
+        {
+          "absatz": "13",
+          "text": "2.2.1Eigentumsänderung im Allgemeinen1.1.1, vom Verkehrswert1‰4.1, 4.4.2 mindestens100 2.2.2Eigentumsänderung im Quartierplanverfahren1.1.1 oder in einem nicht grundsteuerpflichtigen quartierplanähnlichen Verfahren pro altes und neues Grundstück100–200 unter Berücksichtigung der zu bereinigenden Anmerkungen, Vormerkungen, Dienstbarkeiten, Grundlasten und Pfandrechte 2.2.3Eigentumsänderung an Strassen 2.2.3.1 Unentgeltliche Abtretung von Flurwegen1.1.2.1 und Privatstrassen pro Grundstück100 2.2.3.2 Abtretung an öffentliches Strassengebiet1.1.2.2 pro Abtretungsobjekt50"
+        },
+        {
+          "absatz": "13",
+          "text": "2.2.4Eigentumsänderung an Bauten als Folge1.1.1 der Aufnahme eines Baurechts oder der Löschung eines aufgenommenen Baurechts vom Verkehrswert1‰ mindestens100 2.2.5Erbfolge pro Grundstück50 im Rahmen von100–300 Ansatz/Fr.Beurkundungsgebühren siehe Ziff.: 2.2.6Eigentumsänderung infolge Begründung oder Aufhebung der Gütergemeinschaft unter Zuweisung an einen Ehegatten pro Grundstück50 im Rahmen von100–300"
+        },
+        {
+          "absatz": "13",
+          "text": "2.2.7Eigentumsänderung infolge Einbringen eines Grundstücks in ein Gesamthandverhältnis, Übernahme eines Grundstücks durch einen Beteiligten einer Gesamthandschaft, Ein- oder Austritt eines Gesamthänders vom Verkehrswert1‰ berechnet von dem von der Eigentumsänderung betroffenen Wertanteil mindestens100 2.2.8Umwandlung eines Gesamthandverhältnisses in ein anderes ohne Veränderung im Personenbestand (Erbengemeinschaft, einfache Gesellschaft, Kollektivgesellschaft, Kommanditgesellschaft, Gütergemeinschaft) pro Grundstück50 im Rahmen von100–300"
+        },
+        {
+          "absatz": "12",
+          "text": "2.2.9Steuerbefreite Eigentumsänderung durch Fusion,1.1.3, Spaltung, Vermögensübertragung oder Sach-4.4.3.2 einlage oder infolge entsprechender Tatbestände nach öffentlichem Recht pro Grundstück –bis fünf Grundstücke250 –jedes weitere Grundstück100 mindestens500 2.2.10Eigentumsänderung durch Zusammenschluss oder Bildung von Gemeinden pro Grundstück50 höchstens1000 Ansatz/Fr.Beurkundungsgebühren siehe Ziff.: 2.2.11Namensänderung einer Eigentümerin oder eines Eigentümers (Firmaänderung, Umwandlung von Gesellschaften, Verheiratung, Adoption usw.) pro Grundstück50 –bei natürlichen Personen höchstens200 –bei den übrigen Eigentümerinnen oder Eigentümern im Rahmen von100–300 2.3Grundpfandrechte"
+        },
+        {
+          "absatz": "13",
+          "text": "2.3.1Eintragung und Erhöhung eines Grundpfandrechts1.2.1 jeder Art von der Pfandsumme1‰ mindestens100"
+        },
+        {
+          "absatz": "13",
+          "text": "2.3.2Errichtung und Erhöhung von Pfandrechten bei1.2.2 gleichzeitiger Löschung oder Teillöschung solcher Rechte zulasten des gleichen Pfandes –vom Betrag, um den der neue Gesamtbetrag der Pfandsumme den bisherigen übersteigt1‰ pro neues Pfandrecht mindestens100 –wenn die neue Pfandsumme die bisherige nicht übersteigt pro neues Pfandrecht100"
+        },
+        {
+          "absatz": "13",
+          "text": "2.3.3Pfandeinsetzung, pro Pfandrecht1.2.4 vom Verkehrswert des einzusetzenden Pfandes0,75‰ mindestens50 höchstens 1‰ der Pfandsumme 2.3.4Pfandänderung bei Pfandentlassung, Teilung des Pfandobjektes oder Verlegung auf Mit- oder Stockwerkeigentumseinheiten oder Baurechte pro Pfandrecht und Grundstück20 2.3.5Pfandrechtsänderungen 2.3.5.1 Änderung der Zins- und Zahlungsbestimmungen,1.2.5 sofern nicht gleichzeitig Gebühren nach den Ziff. 2.3.1 oder 2.3.2 geschuldet werden50 Ansatz/Fr.Beurkundungsgebühren siehe Ziff.: 2.3.5.2 Änderung der Pfandstelle, sofern nicht gleichzeitig ein Pfandrecht errichtet oder gelöscht wird pro Pfandrecht50 2.3.5.3 Umwandlung eines Schuldbriefs501.2.6 2.3.5.4 Vormerknahme einer Pfandrechtserneuerung501.2.3 2.3.6Ausstellung und Änderung der Pfandtitel 2.3.6.1 Ausstellung des Pfandtitels pro Grundstück50 im Rahmen von200–500 2.3.6.2 Änderung des Pfandtitels infolge Erhöhung, Herabsetzung, Pfandentlassung, Eintragung oder Änderung vorgehender Rechte, Änderung der Zins- und Zahlungsbestimmung, Rangänderung und Änderung des Pfandbeschriebs oder Neuausstellung des Pfandtitels pro Pfandtitel20 2.3.6.3 Pfandneubeschrieb im Pfandtitel pro Grundstück20 pro Pfandtitel höchstens200 2.3.7Vormerknahme von Gläubigerrechten pro Pfandrecht50 2.3.8Leere Pfandstelle, vorbehaltener Vorgang von der Summe0,1‰ im Rahmen von50–200 2.4Dienstbarkeiten und Grundlasten1.4.1, 1.4.2 2.4.1Eintragung (auch Ausdehnung) –vom Wert der Gegenleistung (bei wiederkehrenden Leistungen höchstens vom 20-fachen Wert der Jahresleistung)1‰ pro beteiligtes Grundstück mindestens50 je Dienstbarkeit mindestens150 –beim Fehlen einer Gegenleistung pro Grundstück50 im Rahmen von150–1000 Ansatz/Fr.Beurkundungsgebühren siehe Ziff.: 2.4.2Änderung (ausgenommen Änderungen nach den Ziff. 2.2.2 und 2.6.1) pro beteiligtes Grundstück25 im Rahmen von75–500 2.5Vormerkungen 2.5.1Kaufs-, Vorkaufs- oder Rückkaufsrecht1.1.1 von der Kaufs- oder Rückkaufssumme, beim Vorkaufsrecht vom Verkehrswert0,5‰ bei einer Vormerkungsdauer von –höchstens 1 Jahr im Rahmen von100–1000 –mehr als 1 Jahr bis zu 5 Jahren im Rahmen von100–1500 –mehr als 5 Jahren im Rahmen von100–2500 2.5.2Miete und Pacht von der Summe des in der Vormerkungszeit zu bezahlenden Miet- oder Pachtzinses0,5‰ im Rahmen von100–1000 2.5.3Verfügungsbeschränkungen 2.5.3.1 zwangsvollstreckungsrechtliche pro Grundstück20 im Rahmen von50–200 2.5.3.2 übrige pro Grundstück50 im Rahmen von100–300 2.5.4Nachrückungsrecht1.4.3 pro Grundstück50 höchstens200 Ansatz/Fr.Beurkundungsgebühren siehe Ziff.: 2.5.5Vorläufige Eintragungen 2.5.5.1 Bauhandwerker- und andere Pfandrechte –von der Pfandsumme0,5‰ im Rahmen von50–300 –bei Fehlen einer Pfandsumme (Sicherstellung des Gewinnanspruchs) pro Grundstück50 im Rahmen von100–300 2.5.5.2 übrige pro Grundstück50 im Rahmen von100–300 2.5.6Übrige Vormerkungen1.4.2.2 pro Grundstück50 im Rahmen von100–500 2.6Grundstücksbeschreibung 2.6.1Mutationen (ohne Quartierpläne) pro altes und neues Grundstück, unter Berücksichtigung der zu bereinigenden Anmerkungen, Vormerkungen, Dienstbarkeiten und Grundlasten 50–200 2.6.2Änderung des Beschriebs bei Stockwerkeigentum pro Grundstück50–200 2.7Anmerkungen 2.7.1Zugehör pro Grundstück50–250 2.7.2aus landwirtschaftlichem Bodenrecht pro Grundstück20 pro Anmerkung höchstens100 2.7.3Übrige Anmerkungen pro Grundstück50 im Rahmen von100–500 2.7.4Änderung von Anmerkungen die Hälfte der Gebühr für die Anmerkung Ansatz/Fr.Beurkundungsgebühren siehe Ziff.: 2.8Einführung des Grundbuchs 2.8.1Bereinigung der Rechtsverhältnisse, sofern damit eine Neufassung von Dienstbarkeiten, Grundlasten und angemerkten Rechtsverhältnissen oder die Eintragung bereits bestehender"
+        },
+        {
+          "absatz": "7",
+          "text": "dinglicher Rechte (Art. 43 Schl T ZGB) verbunden ist, inbegriffen die Einvernahme der Grundeigentümerin oder des Grundeigentümers und die Protokollführung pro Grundstück50–250 2.8.2Sühnverhandlung inbegriffen Protokollführung, Weisung und Amtsbericht oder Ausarbeitung eines Vergleichs. Es wird die gleiche Gebühr wie im Sühnverfahren vor der Friedensrichterin oder dem Friedensrichter erhoben. 2.9Selbstständiger besonderer Eintrag wofür keine andere Gebühr vorgesehen ist (sofern nicht §3 oder §4 Anwendung findet) pro Grundstück50 im Rahmen von100–300 2.10Abweisung der Anmeldung wenn sie rechtskräftig wird die Hälfte der für den Vollzug der Anmeldung vorgesehenen Gebühr im Rahmen von100–500 Ansatz/Fr. 3Inventare, Erbschaftsverwaltung, Erbenvertretung, Mitwirkung bei Teilung oder Losbildung, amtliche Liquidation und ähnliche Verrichtungen im Auftrag von Behörden 3.1Allgemeine Tätigkeiten für Inventur, Erhebungen über Aktiven und Passiven, Besprechungen, Aktensichten, Zusammenstellung und Reinschrift des Inventars, Veröffentlichungen, Protokollführung, Zuschriften, Auslieferung des Vermögens usw. – ohne Verwaltungs- und Verwertungstätigkeit nach Zeitaufwand: –Inventaraufnahme von Fahrhabe vor Ort pro Stunde80 –übrige Tätigkeiten in Inventaren und Erbschaftsverwaltungen pro Stunde120 –in den übrigen Geschäften gemäss Ziff. 3 pro Stunde180 3.2Verwahrung und Verwaltung von Vermögen (ausgenommen Grundstücke) vom Inventarwert aller Aktiven, pro angefangenen oder ganzen Monat –durch das Amt allein0,2‰ –Vermögenswert im Banksafe oder Depot0,15‰ –bei Delegation an Dritte0,1‰ pro Geschäft pro ganzes oder angefangenes Jahr insgesamt mindestens100 Ansatz/Fr. 3.3Verwaltung eines Grundstücks 3.3.1durch das Amt allein –vom erzielten oder erzielbaren Mietoder Pachtzins5% –bei Beträgen über Fr. 200 000 pro Jahr und Gebäude3–5% auf das Jahr gerechnet mindestens10 000 –bei nicht vermietbaren Objekten pro Stunde180 3.3.2unter Mitwirkung von Dritten –vom erzielten oder erzielbaren Mietoder Pachtzins1% –bei Beträgen über Fr. 200 000 pro Jahr und Gebäude0,5–1% auf das Jahr gerechnet mindestens2000"
+        },
+        {
+          "absatz": "12",
+          "text": "3.4Verwertungen von den Bruttoerlösen –der Grundstücke1‰ –der Fahrhabe1% mindestens50 –der Wertschriften1‰ –der Guthaben und sonstigen Ansprüche0,5% pro Inventarposition mindestens20 Erfordert die Verwertung, gemessen am Erlös, erhebliche Umtriebe, wird die Hälfte des Zeitaufwands zusätzlich verrechnet. 3.5Besondere Entschädigung in Fällen, die durch die Ziff. 3.1–3.4 nicht erfassbar sind Festsetzung durch das Notariat pro Fall bis 2000 Soll die Gebühr höher angesetzt werden, setzt sie die auftraggebende Behörde auf Antrag des Notariates fest. Ansatz/Fr. 4Öffentliche Beurkundungen ausserhalb des Sachenrechts und andere notarielle Verrichtungen 4.1Personenrecht Stiftung –bei Grundstücken, vom Verkehrswert1‰ –vom übrigen Vermögen1‰ mindestens300 4.2Familien-und Partnerschaftsrecht"
+        },
+        {
+          "absatz": "15",
+          "text": "4.2.1Ehevertrag, Vermögensvertrag200–4000 4.2.2Inventar mit Urkunde über die Vermögenswerte der Ehegatten bzw. der eingetragenen Partnerinnen oder Partner150–1000"
+        },
+        {
+          "absatz": "11",
+          "text": "4.2.3Vorsorgeauftrag (Beratung, Errichtung, Widerruf) pro Stunde180 4.3Erbrecht"
+        },
+        {
+          "absatz": "15",
+          "text": "4.3.1Testamentsentwurf, inbegriffen die Beratung50–2000"
+        },
+        {
+          "absatz": "15",
+          "text": "4.3.2Öffentliche letztwillige Verfügung200–4000"
+        },
+        {
+          "absatz": "15",
+          "text": "4.3.3Erbvertrag300–6000 4.3.4Deposition einer Verfügung von Todes wegen 4.3.4.1 Deposition150 4.3.4.2 Periodische Revision10 4.4Obligationenrecht 4.4.1Bürgschaft, pro Beurkundungsakt vom verbürgten Höchstbetrag0,5‰ im Rahmen von100–500 4.4.2Verpfründungsvertrag Grundgebühr300–500 –für Grundstücke zusätzlich die Gebühr nach Ziff. 1.1.1 –für übriges Vermögen zusätzlich1‰ Ansatz/Fr. 4.4.3Gesellschaftsrechtliche Beurkundungen"
+        },
+        {
+          "absatz": "15",
+          "text": "4.4.3.1Gründung oder Kapitalerhöhung einer AG oder Gmb H vom Kapital oder vom Erhöhungsbetrag1‰ –für Publikumsgesellschaften gemäss"
+        },
+        {
+          "absatz": "8",
+          "text": "Art. 727 Abs. 1 Ziff. 1 OR im Rahmen von500–12 000 –für grössere Unternehmen gemäss Art. 727 Abs. 1 Ziff. 2 und 3 OR im Rahmen von500–8000 –für die übrigen Gesellschaften im Rahmen von500–4000"
+        },
+        {
+          "absatz": "15",
+          "text": "4.4.3.2Übrige gesellschaftsrechtliche Urkunden, wie Statutenänderung, Feststellungen usw., vom Kapital0,2–0,5‰ –Publikumsgesellschaften gemäss Art. 727 Abs. 1 Ziff. 1 OR im Rahmen von250–6000 –für grössere Unternehmen gemäss Art. 727 Abs. 1 Ziff. 2 und 3 OR im Rahmen von250–4000 –für die übrigen Gesellschaften im Rahmen von250–2000 Für Geschäfte mit geringerer Bedeutung setzt die Finanzdirektion die Höchstbeträge bis auf 40% herab. 4.4.4Wechselprotest 4.4.4.1Einschreiben des Wechsels30 4.4.4.2Vorweisung des Wechsels von der Wechselsumme0,5‰ im Rahmen von50–500 4.5Beglaubigungen 4.5.1Beglaubigung einer Unterschrift oder eines Handzeichens20–250 4.5.2Beglaubigung einer Abschrift, einer Fotokopie oder eines Auszuges pro ganze oder angefangene Seite3–5 mindestens20 Ansatz/Fr. 4.5.3Zusätzliche Feststellungen rechtlicher oder tatsächlicher Verhältnisse im Zusammenhang mit einer Beglaubigung zusätzlich zur Gebühr nach den Ziff. 4.5.1 oder 4.5.210–300 4.6Öffentliche Beurkundung von Willenserklärungen, die in Ziff. 4 nicht genannt sind, von der Gegenleistung oder vom betroffenen Vermögenswert1‰ im Rahmen von200–15 000 4.7Öffentliche Beurkundung von Wissenserklärungen, Urkunden über Tatbestände, Hergänge und rechtliche Verhältnisse, die in Ziff. 4 nicht genannt sind, wie Eidesstattliche Erklärung, Entkräftung eines Schuldscheins, Verlosung, Wettbewerb usw.100–10 000 Ansatz/Fr. 5Auszüge und Zeugnisse die nicht unter §3 fallen 5.1Schriftliche Eigentümerauskünfte –pro Eigentümerin oder Eigentümer erste Seite20 jede weitere Seite5 –nach Grundstücken erstes Grundstück20 für jedes weitere Grundstück5 5.2Auszüge und Zeugnisse –für die erste ganze oder angefangene Seite30 –für jede weitere ganze oder angefangene Seite bis 10 Seiten10 ab der 11. Seite5 –für die Wiedergabe der vollständigen Wortlaute, Pläne der dinglichen Rechte, Anmerkungen und Vormerkungen pro Seite2 –für weitere Ausfertigungen pro ganze oder angefangene Seite2 6Schriftliche Auskunft die nicht unter §3 fällt pro Stunde180"
+        },
+        {
+          "absatz": "12",
+          "text": "7Mündliche Auskunft die nicht unter §3 fällt und für die nicht eine Gebühr nach Ziff. 4.3.1 (Testamentsentwurf) oder Ziff. 4.2.3 (Vorsorgeauftrag) erhoben wird, samt den dafür nötigen Nachschlagungen die erste halbe Stunde ist unentgeltlich für jede weitere Stunde90 Ansatz/Fr. 8Urkundsausfertigungen und-kopien die nicht unter §3 fallen, pro ganze oder angefangene Seite2 zusätzlich für die Nachforschungen, soweit sie mehr als eine halbe Stunde erfordern für jede weitere Stunde90 9Fotokopien (durch das Amt für Dritte hergestellt), die nicht nach Ziff. 5 oder 8 in Rechnung gestellt werden können oder unter §3 fallen pro Seite die Gebühr nach der Weisung der Finanzdirektion 10Ausarbeitung eines nicht beurkundungsbedürftigen Rechtsgrundausweises wie für Erbteilung, Dienstbarkeit, Eigentümerpfandrecht die Hälfte der Gebühr, die für die öffentliche Beurkundung des gleichen Geschäftes geschuldet wäre, wobei Ziff. 1 Abs. 1 nicht anwendbar ist, im Rahmen von100–5000 11Vom Amt ganz oder teilweise vorbereitetes Geschäft, das nicht zustande kommt die Hälfte der für den Abschluss oder Vollzug des Geschäftes geschuldeten Gebühr, wobei Ziff. 1 Abs. 1 nicht anwendbar ist im Rahmen von100–2000 Ansatz/Fr. 12Ablösung grundversicherter Schulden, Ausrichtung von Enteignungsentschädigungen nach kantonalem Recht, Wechselzahlungen usw. von der Summe0,5‰ im Rahmen von100–500 13Elektronischer Grundbuchzugriff im Abrufverfahren pro abgerufenes Grundstück die Gebühr nach der Weisung der Finanzdirektion 14Weitere Dienstleistungen auf Verlangen der Kundin oder des Kunden Werden im Zusammenhang mit Verrichtungen auf Verlangen einer Kundin oder eines Kunden weitere Dienstleistungen erbracht, wird der Zeitaufwand in Rechnung gestellt. Die erste halbe Stunde ist unentgeltlich für jede weitere Stunde180"
+        }
+      ],
+      "stand": "2009-07-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-243-2009_03_09-2009_07_01-123.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2052cd41d09d19f796e59b953e4e4ef4cd4472a1dc79dcb0c5510108ceb6a94e",
+      "sha": "1f605ddc7e1725e473db39876ab19935b6a91a3e9f2b2e804edbdd41aceffe74"
     }
   ]
 }

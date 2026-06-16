@@ -1,6 +1,132 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/LU/265/art_1",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Innerhalb des vorgegebenen Rahmens bemisst sich die Gebühr nach Umfang, Bedeutung und Schwierigkeit der Streitsache, nach dem Umfang der Prozesshandlungen, nach dem Zeitaufwand für die Verfahrenserledigung und den Interessen an der Beurteilung der Streitsache."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei besonderen Umständen kann die Gebühr ohne Bindung an den vorgegebenen Rahmen erhöht werden, insbesondere bei ausserordentlichem Umfang, grosser Bedeutung oder besonderer Schwierigkeit der Streitsache, bei ausserordentlichem Zeitaufwand für die Verfahrenserledigung oder bei Mitbeurteilung von Zivilforderungen im Strafverfahren."
+        },
+        {
+          "absatz": "3",
+          "text": "In besonders einfachen Fällen, bei vorzeitigem Dahinfallen des Verfahrens oder bei besonderen Umständen kann die Gebühr ohne Bindung an den vorgegebenen Rahmen ermässigt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Entscheiden, die nach Artikel 239 Absatz 1 der Schweizerischen Zivilprozessordnung vom 19. Dezember 2008 (ZPO) und Artikel 82 Absatz 1 der Schweizerischen Strafprozessordnung vom 5. Oktober 2007 (StPO) ohne schriftliche Begründung eröffnet werden, kann die ordentliche Gebühr um höchstens die Hälfte herabgesetzt werden. Bei Entscheiden, die nach § 111 Absatz 1 des Gesetzes über die Verwaltungsrechtspflege vom 3. Juli 1972 (VRG) ohne schriftliche Begründung eröffnet werden, kann auf die Erhebung von Gebühren ganz oder teilweise verzichtet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "827f6eaebb5cf39b5453580a55281657b9d2d626d23ebf5dbef547f36da5e434"
+    },
+    {
+      "id": "kanton/LU/265/art_2",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Innerhalb des vorgegebenen Rahmens bemisst sich die Gebühr nach Umfang, Bedeutung und Schwierigkeit der Streitsache, nach der Art der Vertretung sowie nach dem sachlich gebotenen Zeitaufwand für die Verfahrensführung."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Das Kantonsgericht regelt den für den Zeitaufwand massgeblichen Referenzwert durch Weisung."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei besonderen Umständen kann die Gebühr ohne Bindung an den vorgegebenen Rahmen erhöht werden, insbesondere bei ausserordentlichem Umfang, grosser Bedeutung oder besonderer Schwierigkeit der Streitsache, bei Mitbeurteilung von Zivilforderungen im Strafverfahren oder wenn die Prozessführung einen ausserordentlichen Zeitaufwand erforderte."
+        },
+        {
+          "absatz": "3",
+          "text": "In besonders einfachen Fällen, bei vorzeitigem Dahinfallen des Verfahrens oder bei vorzeitiger Beendigung des Mandats sowie bei offenbarem Missverhältnis zwischen dem Streitwert und dem Interesse der Partei am Verfahren kann die Gebühr ohne Bindung an den vorgegebenen Rahmen ermässigt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Macht eine Partei deutlich übersetzte Ansprüche geltend, bemisst sich die Gebühr ihres Vertreters oder ihrer Vertreterin nach dem Betrag, der in guten Treuen hätte eingeklagt werden dürfen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "c64cf0cd56d69ae38ac54cc02ebf79425586967d38363f6581308e171e754247"
+    },
+    {
+      "id": "kanton/LU/265/art_3",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der für den Gebührenrahmen massgebende Streitwert bestimmt sich grundsätzlich nach den Artikeln 91–94 ZPO."
+        },
+        {
+          "absatz": "2",
+          "text": "Verrechnungsforderungen werden mit der Klageforderung zusammengerechnet, soweit sie beurteilt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Rechtsmittelverfahren gilt in Streitsachen mit Vermögensinteresse der in zweiter Instanz noch streitige Betrag als Streitwert."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "70daed8f84669567da8dccd5fe92443e5423677e3daa9549471c0406a9bacb3f"
+    },
+    {
+      "id": "kanton/LU/265/art_4",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Schlichtungsversuch beträgt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in nichtvermögensrechtlichen Streitigkeiten Fr. 200.– bis Fr. 600.–"
+            },
+            {
+              "marke": "b",
+              "text": "in vermögensrechtlichen Streitigkeiten bei einem Streitwert"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für einen Entscheid nach Artikel 212 ZPO oder einen Urteilsvorschlag nach den Artikeln 210 f. ZPO kann ein Zuschlag von 100 bis 500 Franken erhoben werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "b7a213f47eb9a4fd890d4ea506d27bca59090a6d2373bd4a3fc8bdaefa343050"
+    },
     {
       "id": "kanton/LU/265/art_5",
       "ebene": "kanton",
@@ -54,42 +180,705 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
       "sha": "5262428ead37efc963abb40f5fefeab2070b8fe11bbaffb533a89b56fdb6f8a7"
     },
     {
-      "id": "kanton/LU/265/art_4",
+      "id": "kanton/LU/265/art_6",
       "ebene": "kanton",
       "quelle": "LU",
       "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
-      "artikel": "4",
-      "artikelLabel": "§ 4",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr für den Schlichtungsversuch beträgt",
+          "text": "In nicht vermögensrechtlichen Streitigkeiten beträgt die Gebühr 500 bis 5000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In vermögensrechtlichen Streitigkeiten beträgt die Gebühr bei einem Streitwert",
           "items": [
             {
               "marke": "a",
-              "text": "in nichtvermögensrechtlichen Streitigkeiten Fr. 200.– bis Fr. 600.–"
+              "text": "bis Fr. 30 000.– Fr. 500.– bis Fr. 3000.–"
             },
             {
               "marke": "b",
-              "text": "in vermögensrechtlichen Streitigkeiten bei einem Streitwert"
+              "text": "über Fr. 30 000.– bis Fr. 50 000.– Fr. 1000.– bis Fr. 3500.–"
+            },
+            {
+              "marke": "c",
+              "text": "über Fr. 50 000.– bis Fr. 100 000.– Fr. 2000.– bis Fr. 5000.–"
+            },
+            {
+              "marke": "d",
+              "text": "über Fr. 100 000.– bis Fr. 200 000.– Fr. 2500.– bis Fr. 8000.–"
+            },
+            {
+              "marke": "e",
+              "text": "über Fr. 200 000.– Fr. 3000.– bis Fr. 10 000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "8201e5f60ccee18329ab146055ffce9714a4a4265850ebe5ef37f67263daa8b0"
+    },
+    {
+      "id": "kanton/LU/265/art_7",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In nicht vermögensrechtlichen Streitigkeiten beträgt die Gebühr 300 bis 4000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In vermögensrechtlichen Streitigkeiten beträgt die Gebühr bei einem Streitwert",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bis Fr. 100 000.– Fr. 300.– bis Fr. 5000.–"
+            },
+            {
+              "marke": "b",
+              "text": "über Fr. 100 000.– Fr. 2000.– bis Fr. 10 000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "41a8737efc52a21c6d841710ac31e4ef5ed785c703563f0a4a779163d5b2d19a"
+    },
+    {
+      "id": "kanton/LU/265/art_8",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Scheidungsverfahren nach den Artikeln 274–294 ZPO und im Verfahren betreffend Auflösung und Ungültigkeit der eingetragenen Partnerschaft nach Artikel 307 ZPO beträgt die Gebühr 1000 bis 10 000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden im Scheidungsverfahren güterrechtliche Ansprüche oder im Verfahren betreffend Auflösung und Ungültigkeit der eingetragenen Partnerschaft vermögensrechtliche Ansprüche über 100 000 Franken geltend gemacht, kommen die Ansätze von § 5 Absatz 2c–h zur Anwendung."
+        },
+        {
+          "absatz": "3",
+          "text": "In Verfahren nach den Artikeln 295–301 ZPO und den Artikeln 303 und 304 ZPO beträgt die Gebühr 500 bis 5000 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Entscheiden im summarischen Verfahren kommen die Ansätze von § 7 zur Anwendung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "c652d7b52417bbb21c93af1dfd7a4846bdccf5501c842566aaa9a92ef0b16e8f"
+    },
+    {
+      "id": "kanton/LU/265/art_9",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Berufungsverfahren gilt der gleiche Gebührenrahmen wie in der Vorinstanz."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "b01b2af8dcac3c210790ea7f1b2063ca05af61ca6bc6511443ac74c01b8654a6"
+    },
+    {
+      "id": "kanton/LU/265/art_10",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Beschwerdeverfahren gilt der gleiche Gebührenrahmen wie in der Vorinstanz."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "889413762b14fc67c59052f10d9d53b894d3759546247cc3bf53e63d13bf4303"
+    },
+    {
+      "id": "kanton/LU/265/art_11",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Entscheid über das Revisionsgesuch beträgt 1000 bis 5000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Entscheidet die Revisionsinstanz in der Sache neu, gelten die Ansätze des ursprünglichen Verfahrens."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "298124f81ec4741669c074a3d6fb1d16709149caadb4ecb4f47b7e2fb6e9954e"
+    },
+    {
+      "id": "kanton/LU/265/art_12",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In den übrigen Verfahren beträgt die Gebühr 300 bis 5000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "0f82f4d28afdc11b0e396809e73981fee59d3f05f60460b4ba0aa62c240f690d"
+    },
+    {
+      "id": "kanton/LU/265/art_13",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In erstinstanzlichen Verfahren beträgt die Gebühr 300 bis 4000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In Verfahren vor der Schätzungskommission gemäss Enteignungsgesetz beträgt die Gebühr 300 bis 20 000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "07506549e0d34d6e4a69c9c2cb285d3fd25fdf7874af2fe219f8e873135e4f50"
+    },
+    {
+      "id": "kanton/LU/265/art_14",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilungen des Kantonsgerichtes legen die Gebühren für ihre Rechtsgebiete innerhalb der Bandbreite von 100 bis 20 000 Franken fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein Entscheid der Aufsichtsbehörde über die Urkundspersonen über die streitige Vergütung angefochten, gelten die Ansätze von § 5 Absatz 2."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "5cc0b3617d7ea50ab16bc0a878b89bc50a9c40280dc35c6b6cb48d4fe5b784ff"
+    },
+    {
+      "id": "kanton/LU/265/art_15",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren der Staatsanwaltschaft im Erwachsenenstrafrecht betragen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für ein Vorverfahren ohne Untersuchungshandlungen Fr. 50.– bis Fr. 1000.–"
+            },
+            {
+              "marke": "b",
+              "text": "für ein Vorverfahren mit Untersuchungshandlungen Fr. 200.– bis Fr. 20 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "für ein Verfahren betreffend Friedensbürgschaft Fr. 200.– bis Fr. 2000.–"
+            },
+            {
+              "marke": "d",
+              "text": "für nachträgliche Entscheide Fr. 100.– bis Fr. 1000.–"
+            },
+            {
+              "marke": "e",
+              "text": "für selbständige Einziehungsverfahren Fr. 100.– bis Fr. 4000.–"
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Für einen Entscheid nach Artikel 212 ZPO oder einen Urteilsvorschlag nach den Artikeln 210 f. ZPO kann ein Zuschlag von 100 bis 500 Franken erhoben werden."
+          "text": "Die Gebühren der Staatsanwaltschaft im Jugendstrafrecht betragen 50 bis 2000 Franken."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
-      "sha": "b7a213f47eb9a4fd890d4ea506d27bca59090a6d2373bd4a3fc8bdaefa343050"
+      "sha": "873b79431a414565e7b3ec01b9b7cd5695446e9de2144ff9e222674cf1d20e77"
+    },
+    {
+      "id": "kanton/LU/265/art_16",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Oberstaatsanwaltschaft bezieht für Entscheide eine Gebühr von 200 bis 2000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "f97a325afdec0f42798ceaf1297ae71fa14c7c93f98f187d20def21ea10681b9"
+    },
+    {
+      "id": "kanton/LU/265/art_17",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Verfahren vor Jugendgericht beträgt die Gerichtsgebühr 300 bis 2000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "f0dd67287d194a85fffe5c8883200ddaa77cefd01a10b47067a11de58943156a"
+    },
+    {
+      "id": "kanton/LU/265/art_18",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Verfahren vor Bezirksgericht beträgt die Gerichtsgebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor dem Einzelrichter Fr. 500.– bis Fr. 3000.–"
+            },
+            {
+              "marke": "b",
+              "text": "in den übrigen Verfahren Fr. 500.– bis Fr. 4000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "0370004b8e8799a19dedae7348ec3954eaf736e525d65c8442d4cc9c93ef6356"
+    },
+    {
+      "id": "kanton/LU/265/art_19",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Verfahren vor Kriminalgericht beträgt die Gerichtsgebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor dem Einzelrichter Fr. 500.– bis Fr. 6000.–"
+            },
+            {
+              "marke": "b",
+              "text": "in den übrigen Verfahren Fr. 1000.– bis Fr. 20 000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "dc655b49de33dfe1076f2b8f2becfe0da09499780b8d77eb2fb86597d1f1d4a9"
+    },
+    {
+      "id": "kanton/LU/265/art_20",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Verfahren vor dem Zwangsmassnahmengericht beträgt die Gerichtsgebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Jugendstrafsachen Fr. 300.– bis Fr. 1000.–"
+            },
+            {
+              "marke": "b",
+              "text": "in den übrigen Verfahren Fr. 300.– bis Fr. 4000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "dafb8443443df21b96a633b28ba57e40592f24078db7f8465dcd7957062d9a86"
+    },
+    {
+      "id": "kanton/LU/265/art_21",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor Kantonsgericht beträgt die Gerichtsgebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Berufungsverfahren Fr. 1000.– bis Fr. 25 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "im Beschwerdeverfahren Fr. 500.– bis Fr. 5000.–"
+            },
+            {
+              "marke": "c",
+              "text": "im Revisionsverfahren Fr. 500.– bis Fr. 5000.–"
+            },
+            {
+              "marke": "d",
+              "text": "in Jugendstrafsachen Fr. 300.– bis Fr. 1000.–"
+            },
+            {
+              "marke": "e",
+              "text": "in den übrigen Verfahren Fr. 300.– bis Fr. 5000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "ff6c8ed5e5b8d659157dd411f939202759c4afe399ec2f9d36896ef3001fbebb"
+    },
+    {
+      "id": "kanton/LU/265/art_22",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der amtliche Verteidiger oder die amtliche Verteidigerin hat Anspruch auf ein Honorar und auf den Ersatz der Auslagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Honorar beträgt 85 Prozent der nach § 30 und § 32 festgesetzten Gebühr. Sofern die beschuldigte Person keine Kosten trägt, beträgt das Honorar 100 Prozent dieser Gebühr."
+        },
+        {
+          "absatz": "3",
+          "text": "Für den notwendigen Zeitaufwand zwischen 20.00 Uhr und 7.00 Uhr sowie am Sonntag kann ein Nacht- beziehungsweise Sonntagszuschlag von maximal 100 Franken pro Stunde zugesprochen werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "b03986641c6efbed1a685e8e764159c62d1bedd3062c39a0e3ef199a72adeb2c"
+    },
+    {
+      "id": "kanton/LU/265/art_23",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zeuginnen und Zeugen haben für jedes Erscheinen Anspruch auf ein Zeugengeld und auf Ersatz der belegten notwendigen Auslagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Zeugengeld beträgt 30 bis 100 Franken. Es kann bei erheblicher zeitlicher Inanspruchnahme des Zeugen oder der Zeugin angemessen erhöht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Zeuginnen und Zeugen erhalten zusätzlich für den Erwerbsausfall eine Stundenentschädigung von 25 bis 150 Franken. Wenn besondere Verhältnisse es rechtfertigen, kann der tatsächliche Erwerbsausfall entschädigt werden. Ausserordentlich hoher Erwerbsausfall wird nicht berücksichtigt."
+        },
+        {
+          "absatz": "4",
+          "text": "Zeuginnen und Zeugen werden für Reisen die Fahrtkosten öffentlicher Verkehrsmittel ersetzt. Wenn kein öffentliches Verkehrsmittel zur Verfügung steht oder dessen Verwendung nicht zumutbar oder nicht zweckmässig ist, werden bei Verwendung eines eigenen Motorfahrzeugs eine Kilometerentschädigung nach dem Ansatz für die Mitglieder staatlicher Kommissionen, in den übrigen Fällen die tatsächlichen Transportkosten ersetzt."
+        },
+        {
+          "absatz": "5",
+          "text": "Für Auskunftspersonen gelten diese Bestimmungen sinngemäss."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "720c2279471ac8107d8f107d432078dce4bc5b8eb4ddc4aa11bb0b77e7cabe0a"
+    },
+    {
+      "id": "kanton/LU/265/art_24",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Drittpersonen, die zur Mitwirkung verpflichtet sind, haben Anspruch auf eine angemessene Entschädigung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "eb31cd317ea4ac4353fa245cc711e16c1d9f1bdeee39548ea3f58c440b968983"
+    },
+    {
+      "id": "kanton/LU/265/art_25",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sachverständige werden nach Aufwand entschädigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Ansatz richtet sich nach den erforderlichen Fachkenntnissen und der Schwierigkeit der Leistung, bei freiberuflich tätigen Sachverständigen in der Regel nach den branchenüblichen Ansätzen oder nach Vereinbarung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Entschädigung wird aufgrund der von dem oder der Sachverständigen eingereichten und auf ihre Angemessenheit überprüften Honorar- und Auslagenrechnung festgesetzt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "6435542140c1616d9b3d6907e8dbaccae366e530177663b0740b58993963805a"
+    },
+    {
+      "id": "kanton/LU/265/art_26",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Übersetzerinnen und Übersetzer erhalten in der Regel eine Stundenentschädigung von 70 bis 100 Franken. Der Ansatz richtet sich nach der Ausbildung und der beruflichen Erfahrung. In besonderen Fällen kann der Ansatz angemessen erhöht werden. Zusätzlich werden die Auslagen ersetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Übersetzungen von Schriftstücken können nach den branchenüblichen Ansätzen entschädigt werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "16724e04d6edd155867275ae7d5c2ae796b462a752d64edee708ab1e3f3b4de5"
+    },
+    {
+      "id": "kanton/LU/265/art_27",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entschädigung für den Vertreter oder die Vertreterin des Kindes nach Artikel 299 f. ZPO beträgt 100 bis 3000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "45e6f949d3f17021df0ace536a9ecedd95664ff3466a2aa318d86489fdd916e4"
+    },
+    {
+      "id": "kanton/LU/265/art_28",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die nach Artikel 218 Absatz 2 ZPO oder nach Artikel 17 der Schweizerischen Jugendstrafprozessordnung vom 20. März 2009 (JStPO) eingesetzten Mediatorinnen und Mediatoren werden in analoger Anwendung von § 25 entschädigt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "6e121580f3bb3419702dd1443468f9bf96340563c7646ccbcfb140cbcf307a56"
+    },
+    {
+      "id": "kanton/LU/265/art_29",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit es das Gesetz vorsieht, wird eine angemessene Umtriebsentschädigung entrichtet. Sie beträgt in der Regel zwischen 100 und 1000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Handelt ein Anwalt in eigener Sache oder für seinen Arbeitgeber, beträgt die Umtriebsentschädigung maximal die Hälfte der Gebühr nach § 31 oder § 32."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist eine Partei in Streitsachen des Bundessozialversicherungsrechts nicht berufsmässig vertreten, ist eine Umtriebsentschädigung geschuldet, wenn die Vertretung notwendig war und anzunehmen ist, dass sie entgeltlich erfolgte. Die Umtriebsentschädigung beträgt in diesem Fall 100 bis 1000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "3fc879dd50f162fb20ab0078106b3662ee57a39b57fec418444e5709178b487c"
+    },
+    {
+      "id": "kanton/LU/265/art_30",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr entschädigt den berufsmässigen Vertreter oder die berufsmässige Vertreterin für die unmittelbar mit der Vertretung der Partei im Verfahren zusammenhängenden Bemühungen, namentlich für die Instruktion, das Studium der Akten und der Rechtsfragen, das Erstellen der Rechtsschriften, die Teilnahme an Gerichtsverhandlungen, das Studium der Entscheide und die mit diesen Bemühungen verbundenen Kanzleiarbeiten. Abgegolten sind zudem die geschäftlichen Grundkosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Rechnungsstellung kann keine Gebühr beansprucht werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "dffb339c1cf26f71ffd4070744bb04d8b9e772b8e418f05641581f45b5f4f530"
+    },
+    {
+      "id": "kanton/LU/265/art_30_a",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "30_a",
+      "artikelLabel": "§ 30a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entschädigung für die amtliche Verteidigung oder die unentgeltliche Rechtsverbeiständung wird am Ende des Verfahrens festgelegt. Hat ein Mandat im Rahmen der amtlichen Verteidigung oder der unentgeltlichen Rechtsverbeiständung eine Dauer von zwölf Monaten überschritten und steht das Verfahren nicht vor dem Abschluss, so können auf Gesuch hin Akontozahlungen gewährt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entscheidung über die Auszahlung von Akontozahlungen obliegt der Verfahrensleitung."
+        },
+        {
+          "absatz": "3",
+          "text": "In Ausnahmefällen, insbesondere wenn für die amtliche Verteidigung oder die unentgeltliche Rechtsverbeiständung bereits innerhalb eines kürzeren Zeitraums ein erheblicher Aufwand erforderlich war, kann die Verfahrensleitung auf Gesuch hin unabhängig von der genannten Dauer eine Akontozahlung anordnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Eine geleistete Akontozahlung ist zurückzuerstatten, wenn der unentgeltlich vertretenen Partei eine Parteientschädigung zugesprochen wird. Etwas anderes gilt, wenn die Parteientschädigung bei der Gegenpartei nicht oder voraussichtlich nicht einbringlich ist und der Rechtsbeistand durch den Kanton entschädigt wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "2366cfe509ae921b81c973a5f9d0f961dd8506365f0c6b315766b7f0b579d457"
     },
     {
       "id": "kanton/LU/265/art_31",
@@ -114,9 +903,274 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
       "sha": "5bfbd4b5233a8e75a9285e284c0bd1c65dbfbdbb89b39b2c6b0608fc594ab83a"
+    },
+    {
+      "id": "kanton/LU/265/art_32",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im polizeilichen Ermittlungsverfahren ohne Berichterstattung an die Staatsanwaltschaft beträgt die ordentliche Gebühr 200 bis 500 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Verfahren vor der Staatsanwaltschaft und im erstinstanzlichen Gerichtsverfahren beträgt die ordentliche Gebühr 75 bis 150 Prozent der Gebühr nach den §§ 15–20."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Rechtsmittelverfahren beträgt die ordentliche Gebühr 50 bis 120 Prozent der Gebühr nach § 21."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Jugendstrafverfahren beträgt die ordentliche Gebühr 200 bis 4000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "426a8856d29151eb1133871845fbebcbb771e45233141f5aed07205c1cb08fa7"
+    },
+    {
+      "id": "kanton/LU/265/art_33",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ersetzt werden die für die Prozessführung notwendigen Auslagen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Auslagen gemäss Absatz 1 können pauschal mit 3 Prozent des (amtlichen) Honorars verrechnet werden. Die maximale Pauschale beträgt vor der ersten Instanz 500 Franken, vor der Rechtsmittelinstanz 300 Franken und in Verfahren nach VRG 200 Franken. Die Abrechnung der effektiven Auslagen nach Absatz 3 bleibt vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden die effektiven Auslagen geltend gemacht, sind diese nach ihrer Art getrennt auszuweisen. Fehlt eine ausreichende, nachvollziehbare Aufstellung, wird der pauschale Auslagenersatz nach Absatz 2 zugesprochen.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Für Fahrtkosten gilt § 23 Absatz 4."
+            },
+            {
+              "marke": "b",
+              "text": "Fotokopien werden mit 30 Rappen pro Stück vergütet. Das Kopieren der eigenen Akten (Rechtsschriften, Korrespondenzen u.Ä.) wird nicht entschädigt; bei berufsmässigen Vertreterinnen und Vertretern zählt dies zu den Kanzleiarbeiten im Sinn von § 30 Absatz 1."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "21343f4e3c43c4156b567c4dbaf04a732a5a40e874ec9eef528df550699161f1"
+    },
+    {
+      "id": "kanton/LU/265/art_34",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht und die ihm unterstellten Gerichte und Dienststellen stellen für ihre Amtshandlungen sowie für die Inanspruchnahme ihrer Einrichtungen Gebühren und Auslagen in Rechnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Von kantonalen und kommunalen Behörden werden in der Regel keine Gebühren verlangt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "c54f6a586084e9204367b71ca3cf428eb8558cdbf9339feb3be11b986305ec4f"
+    },
+    {
+      "id": "kanton/LU/265/art_35",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Behörde kann von Amtes wegen oder auf Gesuch hin Gebühren und Auslagen stunden oder auf ihre Erhebung ganz oder teilweise verzichten, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die gebührenpflichtige Person ein Härtefall vorliegt oder"
+            },
+            {
+              "marke": "b",
+              "text": "die Amtshandlung oder die Benützung von öffentlichen Einrichtungen im öffentlichen Interesse liegt und keine wirtschaftlichen Interessen verfolgt werden oder"
+            },
+            {
+              "marke": "c",
+              "text": "besondere Gründe vorliegen."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "7bbfc8c82cc3a2d98c6b116631958d468838caff8a73e6fcb620f73d60d21d66"
+    },
+    {
+      "id": "kanton/LU/265/art_36",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es werden folgende Gebühren verrechnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "nachträgliche Akteneinsicht Fr. 20.– bis Fr. 100.–"
+            },
+            {
+              "marke": "b",
+              "text": "Abgabe eines anonymisierten Urteils/Entscheids"
+            },
+            {
+              "marke": "c",
+              "text": "Abgabe eines nicht anonymisierten Urteils/Entscheids"
+            },
+            {
+              "marke": "d",
+              "text": "Rechtskrafts- bzw. Vollstreckbarkeitsbescheinigungen (mehr als 3 Monate nach Zustellung Urteil/Entscheid) Fr. 20.– bis Fr. 50.–"
+            },
+            {
+              "marke": "e",
+              "text": "Kopieren von Schriftstücken"
+            },
+            {
+              "marke": "f",
+              "text": "andere Vervielfältigungen effektive Kosten"
+            },
+            {
+              "marke": "g",
+              "text": "andere Dienstleistungen Fr. 20.– bis Fr. 500.–"
+            },
+            {
+              "marke": "h",
+              "text": "Zugang zu amtlichen Informationen gemäss Öffentlichkeitsprinzip nach Zeitaufwand von mehr als einer Stunde Fr. 85.– bis Fr. 275.– pro Stunde"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr kann bis zu 50 Prozent erhöht werden, wenn die Dienstleistung auf Ersuchen hin dringlich verrichtet wird."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "51df29d8e3c40a7c309f86b848d2cb6607222667cb0e25019e7aacf030d22199"
+    },
+    {
+      "id": "kanton/LU/265/art_37",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es werden die effektiven Auslagen in Rechnung gestellt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "370c74a4ab8036d70192d888775e90b31e45ab9e779bc084fbaae61b8dd8ecff"
+    },
+    {
+      "id": "kanton/LU/265/art_38",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung des Obergerichts über die Verfahrens- und Verwaltungskosten (Kostenverordnung Obergericht) vom 17. Dezember 2010 und die Kostenverordnung für das Verwaltungsgericht und die seiner Aufsicht unterstellten Instanzen vom 14. September 1976 werden aufgehoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "e6161e91c4be3dcbe948d3c7ea150c490ff82769297ea59b8e4ed7f1580a49be"
+    },
+    {
+      "id": "kanton/LU/265/art_39",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das neue Recht findet grundsätzlich auf alle Verfahren Anwendung, die im Zeitpunkt des Inkrafttretens rechtshängig sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit nach den Artikeln 404 ff. ZPO und 448 ff. StPO auf das Verfahren weiterhin das kantonale Prozessrecht anwendbar ist, ist die bis zum 31. Dezember 2010 geltende Fassung der Verordnung des Obergerichts über die Kosten in Zivil- und Strafverfahren sowie in weiteren Verfahren (Kostenverordnung) vom 6. November 2003 anwendbar."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "7bf4f4802891f04a60ba3d7bbb9e346f4644ed8ac74883c7560616bb2a6bfcd7"
+    },
+    {
+      "id": "kanton/LU/265/art_40",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "Justiz-Kostenverordnung, JusKV (SRL Nr. 265)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung tritt am 1. Juni 2013 in Kraft. Sie ist zu veröffentlichen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/265",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "2aa177649f831cf95054a6fefc7b8083",
+      "sha": "79744221888b1385c0f99ad6cd730d91fe56e46f6c7833fa9bcfa486c91b3276"
     }
   ]
 }

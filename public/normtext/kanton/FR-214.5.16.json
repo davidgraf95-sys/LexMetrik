@@ -1,6 +1,29 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/FR/214.5.16/art_1",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "Tarif des émoluments fixes du registre foncier (RSF 214.5.16)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les Registres fonciers prélèvent les émoluments fixes arrêtés dans le présent tarif."
+        },
+        {
+          "absatz": "2",
+          "text": "Les émoluments sont dus par la personne qui bénéficie du service ou de l'opération au registre foncier."
+        }
+      ],
+      "stand": "2018-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "77a9eb7c7fbaed8897acafb1a3d1b3e2",
+      "sha": "b48ad1914be6a1a3b32b007a4c875cb0f2b99a02991cd4098548a8ccc9157756"
+    },
     {
       "id": "kanton/FR/214.5.16/art_2",
       "ebene": "kanton",
@@ -98,9 +121,133 @@
       ],
       "stand": "2018-12-01",
       "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "77a9eb7c7fbaed8897acafb1a3d1b3e2",
       "sha": "0da667872955d22d0730e30420462670bd1dfadea4e9dbab2912fefa8436b3dd"
+    },
+    {
+      "id": "kanton/FR/214.5.16/art_3",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "Tarif des émoluments fixes du registre foncier (RSF 214.5.16)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'article 2 est applicable par analogie aux cas non expressément prévus."
+        }
+      ],
+      "stand": "2018-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "77a9eb7c7fbaed8897acafb1a3d1b3e2",
+      "sha": "599309119ac74f1abaf51bfc6b4fa6fcba1ea0e25f049101a4ddabe6e86b6d9d"
+    },
+    {
+      "id": "kanton/FR/214.5.16/art_4",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "Tarif des émoluments fixes du registre foncier (RSF 214.5.16)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsque des opérations concernent des immeubles situés dans plusieurs arrondissements, le Registre foncier requis perçoit l'émolument."
+        }
+      ],
+      "stand": "2018-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "77a9eb7c7fbaed8897acafb1a3d1b3e2",
+      "sha": "b9dbc2f12690cc84040265cd1772a073b587340f9dfa50693283d42d96927390"
+    },
+    {
+      "id": "kanton/FR/214.5.16/art_5",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "Tarif des émoluments fixes du registre foncier (RSF 214.5.16)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Aucun émolument n'est perçu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "lorsque les frais de l'opération sont à la charge de l'Etat de Fribourg et ne sont pas répercutés;"
+            },
+            {
+              "marke": "b",
+              "text": "dans les cas expressément prévus par d'autres dispositions légales."
+            }
+          ]
+        }
+      ],
+      "stand": "2018-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "77a9eb7c7fbaed8897acafb1a3d1b3e2",
+      "sha": "550eb12d01e4f2cd04e149746aa606b0903d42256b297f810eb5bf611ed89b13"
+    },
+    {
+      "id": "kanton/FR/214.5.16/art_6",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "Tarif des émoluments fixes du registre foncier (RSF 214.5.16)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le tarif du 26 octobre 2010 des émoluments fixes du registre foncier (RSF 214.5.16) est abrogé."
+        }
+      ],
+      "stand": "2018-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "77a9eb7c7fbaed8897acafb1a3d1b3e2",
+      "sha": "13b4f30129a1fd83fb08056bc0284ec862488c8f525af1a21aeb6d360d14d352"
+    },
+    {
+      "id": "kanton/FR/214.5.16/art_7",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "Tarif des émoluments fixes du registre foncier (RSF 214.5.16)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le règlement du 9 décembre 1986 d'exécution de la loi sur le registre foncier (RSF 214.5.11) est modifié comme il suit: ..."
+        }
+      ],
+      "stand": "2018-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "77a9eb7c7fbaed8897acafb1a3d1b3e2",
+      "sha": "1eecd0f2ffca1374578fecae800f8c0135a83b6b4f832c348c06edf07aeecce3"
+    },
+    {
+      "id": "kanton/FR/214.5.16/art_8",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "Tarif des émoluments fixes du registre foncier (RSF 214.5.16)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le présent tarif entre en vigueur le 1er décembre 2018."
+        }
+      ],
+      "stand": "2018-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/214.5.16",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "77a9eb7c7fbaed8897acafb1a3d1b3e2",
+      "sha": "06060f4f343ee0c32480cfdf400a57497e84c521425b257b833eebb3687d170d"
     }
   ]
 }

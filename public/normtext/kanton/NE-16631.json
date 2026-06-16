@@ -1,6 +1,299 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/NE/16631/art_1",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le notaire ou la notaire a droit :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "à des émoluments pour les actes authentiques qu'il ou elle instrumente;"
+            },
+            {
+              "marke": "b",
+              "text": "à des honoraires pour les démarches, opérations et formalités préparatoires ou subséquentes exigées par la passation des actes et qui ne sont pas déjà couvertes par l'émolument ou pour toutes autres activités;"
+            },
+            {
+              "marke": "c",
+              "text": "au remboursement de ses débours."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "La créance de la notaire ou du notaire se compose des émoluments, des honoraires ainsi que des débours."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "48bb5dfa5ae1c6056cc639531f3192594f15f74eda74187b28d4bc46ddc24ff4"
+    },
+    {
+      "id": "kanton/NE/16631/art_2",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les parties à l'acte, de même que les personnes qui en requièrent l'instrumentation, répondent solidairement envers le notaire ou la notaire du paiement des émoluments, des honoraires et des débours, nonobstant toute convention contraire entre celles-ci."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "051862eeca8a2230deec5516b6d5606c9aea6f87f6e9a0d6e3408e88609892b1"
+    },
+    {
+      "id": "kanton/NE/16631/art_3",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La notaire ou le notaire demande aux parties à l'acte une provision suffisante qui doit être versée avant la stipulation de l’acte."
+        },
+        {
+          "absatz": "2",
+          "text": "Cette provision est destinée à la couverture des émoluments, des honoraires et des débours."
+        },
+        {
+          "absatz": "3",
+          "text": "A défaut de versement de la provision, la notaire ou le notaire n’instrumente pas l’acte, sauf circonstances exceptionnelles."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "a178363be0a7ab789fcd31999a2771e859f3cc9028329ce487a2c32e919e8a95"
+    },
+    {
+      "id": "kanton/NE/16631/art_4",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument d’un acte comprend :"
+        },
+        {
+          "absatz": "2",
+          "text": "Le Conseil notarial définit par directives les démarches que la préparation de l'acte recouvre."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "185c94d3d712c3df11f2516c04608e7038dbc16c112fb85f37f42697e80690ad"
+    },
+    {
+      "id": "kanton/NE/16631/art_5",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument est exigible dès que l'acte qui le concerne a été instrumenté."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "2d323f5a6ae71cb56f86b756877a6d69699f53bb24d7c34519d71d001b45edf0"
+    },
+    {
+      "id": "kanton/NE/16631/art_6",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Il est interdit au notaire ou à la notaire, directement ou indirectement:"
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "ef9ec59ea401d1f5733877cdcf4b22ebbcd9465d4c0dd320e8cc62cd9f03a2c5"
+    },
+    {
+      "id": "kanton/NE/16631/art_7",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument d'un acte est fondé sur la somme qui est énoncée comme prix, capital ou valeur."
+        },
+        {
+          "absatz": "2",
+          "text": "A défaut d'énonciation d'un prix, capital ou valeur, l'émolument est fondé:"
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "716e67c4e950fba9b302e7e83799682d970ac2a0aab9fd2aa59b5a72e2e8723a"
+    },
+    {
+      "id": "kanton/NE/16631/art_8",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque le présent tarif laisse une marge d'appréciation, l'émolument est fixé en tenant compte du temps consacré à l'acte, à sa nature, à son importance, à sa difficulté et à la responsabilité encourue."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "8fc0acdfd189ed0ed23316aee30565a57ee825bcdc15430317d0218cf87ea964"
+    },
+    {
+      "id": "kanton/NE/16631/art_9",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsqu'un acte rédigé n'est pas instrumenté, le notaire ou la notaire a droit à la moitié de l'émolument prévu pour cet acte."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "77dd86628d74bb67fb08e25fa62d2f35e61bee14114fc58d1ea5355df700e78f"
+    },
+    {
+      "id": "kanton/NE/16631/art_10",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Tout acte qui n'est pas spécialement mentionné donne droit à un émolument qui est fixé par analogie à ceux prévus au présent tarif."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "17d52abd3a63e9a89c4de9c45f57366abdc19e0e7088cc9693434d7a1ac112f2"
+    },
+    {
+      "id": "kanton/NE/16631/art_11",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument d'un acte dont le texte excède notablement l'étendue ordinaire peut être augmenté dans une mesure équitable."
+        },
+        {
+          "absatz": "2",
+          "text": "Il en est de même si l'acte présente des difficultés spéciales, est particulièrement complexe ou s'il s'agit d'un acte collectif."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "77df8a6df143bf91f9306ac7bf4f684693329f7d7ccbcbe566a79655202eb34a"
+    },
+    {
+      "id": "kanton/NE/16631/art_12",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le notaire ou la notaire a droit à des honoraires pour les démarches, opérations et formalités préparatoires ou subséquentes exigées par la passation des actes, ou pour toutes autres activités, y compris ses déplacements."
+        },
+        {
+          "absatz": "2",
+          "text": "Les honoraires sont dus même si l'acte auquel ils se rapportent n'a pas été instrumenté."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "07734a611e1a04a04a19040368eca83f41ddd8610bdbf9a1f857ebaf9b905cd8"
+    },
+    {
+      "id": "kanton/NE/16631/art_13",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les honoraires sont régis par les règles du mandat prévues aux articles 394 et suivants du code des obligations, auxquelles il est renvoyé à titre de droit supplétif."
+        },
+        {
+          "absatz": "2",
+          "text": "Ils sont fixés en tenant compte du temps nécessaire à l'affaire, de sa nature et de sa difficulté, de l'importance des vacations du notaire ou de la notaire et de la responsabilité qu'il ou elle encoure."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "20d4d109f38d7697ee94893c2fa519ad6f842d4402e34e12e8f0e6d8c536fc13"
+    },
     {
       "id": "kanton/NE/16631/art_14",
       "ebene": "kanton",
@@ -798,51 +1091,74 @@
       ],
       "stand": "2015-05-13",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
       "sha": "88b415268f17d160be7cd9b1b0b156fb245842549c1e68da25d969fa6c8a3db6"
     },
     {
-      "id": "kanton/NE/16631/art_7",
+      "id": "kanton/NE/16631/art_15",
       "ebene": "kanton",
       "quelle": "NE",
       "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
-      "artikel": "7",
-      "artikelLabel": "Art. 7",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "L'émolument d'un acte est fondé sur la somme qui est énoncée comme prix, capital ou valeur."
+          "text": "Sous réserve de l'alinéa 2, la date de la signature de l'acte est déterminante pour la fixation des émoluments."
         },
         {
           "absatz": "2",
-          "text": "A défaut d'énonciation d'un prix, capital ou valeur, l'émolument est fondé:"
+          "text": "L'émolument d'une vente immobilière exécutant une promesse conclue avant l'entrée en vigueur du présent tarif est celui fixé au chapitre VII chiffre 54."
         }
       ],
       "stand": "2015-05-13",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
-      "sha": "716e67c4e950fba9b302e7e83799682d970ac2a0aab9fd2aa59b5a72e2e8723a"
+      "sha": "62104d0be27f37d71f11de22784eb432638c22bf5136dd05596d4cb23e9bbdc4"
     },
     {
-      "id": "kanton/NE/16631/art_10",
+      "id": "kanton/NE/16631/art_16",
       "ebene": "kanton",
       "quelle": "NE",
       "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
-      "artikel": "10",
-      "artikelLabel": "Art. 10",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
       "bloecke": [
         {
           "absatz": null,
-          "text": "Tout acte qui n'est pas spécialement mentionné donne droit à un émolument qui est fixé par analogie à ceux prévus au présent tarif."
+          "text": "L'arrêté fixant le tarif des émoluments des notaires, du 20 janvier 1982 est abrogé."
         }
       ],
       "stand": "2015-05-13",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
-      "sha": "17d52abd3a63e9a89c4de9c45f57366abdc19e0e7088cc9693434d7a1ac112f2"
+      "sha": "5070453a56e305bbb27cb518e047f7d5cfea598c661a46d072641e6e0a75cd64"
+    },
+    {
+      "id": "kanton/NE/16631/art_17",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Arrêté tarif des émoluments des notaires (RSN 166.31)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le présent arrêté entre en vigueur le 1er juillet 2012."
+        },
+        {
+          "absatz": "2",
+          "text": "Il sera publié dans la Feuille officielle et inséré au Recueil de la législation neuchâteloise."
+        }
+      ],
+      "stand": "2015-05-13",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20154/htm/16631.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e9135c4470b4fbf2e710cee6139b451bfcd8a4f9443a692039d62de3a09f9ee3",
+      "sha": "14438ddc2f5c7fc55fe3257cbf0a9353f0fc769fa6d7ac922fdb22c87b8d784f"
     }
   ]
 }

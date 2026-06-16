@@ -1,6 +1,82 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/BE/168.811/art_1",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Bemessung des Parteikostenersatzes durch die Gerichte und Verwaltungsjustizbehörden."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "5c281fab91cc25e062b1e0937250f92261b2b73d328600d3eb45842c002d6033"
+    },
+    {
+      "id": "kanton/BE/168.811/art_2",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Parteikostenersatz besteht aus dem Honorar und den notwendigen Auslagen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "3dfefa51bc99747dcf3962c25219f0f7b7f9ec02a8408c96674bcb395659a671"
+    },
+    {
+      "id": "kanton/BE/168.811/art_3",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Streitwert wird nach den Regeln der Artikel 91 bis 94 der Schweizerischen Zivilprozessordnung vom 19. Dezember 2008 (ZPO) ermittelt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "3ee67536ff1209e0f4268a4d97e450340d86f42d393bd226084fe77235003a36"
+    },
+    {
+      "id": "kanton/BE/168.811/art_4",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat passt die Honorartarife auf Vorschlag des Bernischen Anwaltsverbandes periodisch der Teuerung an."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "d443a83b1403ce2b37e02ec0bdabfc22f8b9e1113d855284cf667cc12db2ad9c"
+    },
     {
       "id": "kanton/BE/168.811/art_5",
       "ebene": "kanton",
@@ -24,9 +100,367 @@
       ],
       "stand": "2012-01-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
       "sha": "afc9ad862b92f910e6f457b58a0018e8b46a39b38751cf9a4e4be18a8d0437c8"
+    },
+    {
+      "id": "kanton/BE/168.811/art_6",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für vorsorgliche Beweisführungen (Art. 158 ZPO) beträgt das Honorar 30 bis 60 Prozent des Honorars gemäss Artikel 5."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "4d20499e8ce7c2d49f317861437b3f4d1516134a4470480e3d71f1e7887a263f"
+    },
+    {
+      "id": "kanton/BE/168.811/art_7",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Rechtsmittelverfahren (Art. 308 bis 334 ZPO), soweit sie von der bisherigen Anwältin oder vom bisherigen Anwalt geführt werden, beträgt das Honorar bis zu 50 Prozent des Honorars gemäss Artikel 5; in Beschwerdeverfahren (Art. 319 bis 327 ZPO) mit geringem Aufwand bis zu 20 Prozent des Honorars."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "446757461f9e8ecb17f2c99492e0c5168b1635fa33dec8820f7afb97a743afd5"
+    },
+    {
+      "id": "kanton/BE/168.811/art_8",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Erledigung des Rechtsstreits ohne Urteil (Vergleich, Abstand, Klagerückzug usw.) beträgt das Honorar 25 bis 100 Prozent des Honorars gemäss Artikel 5 bzw. gemäss Artikel 7."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "8ddd5f41eca6bbc0e29a5480aa2552fd0d325e3d1fe8b71db956ec13c1fc9dee"
+    },
+    {
+      "id": "kanton/BE/168.811/art_9",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Zuschlag von bis zu 100 Prozent auf das Honorar wird gewährt bei Verfahren, die besonders viel Zeit und Arbeit beanspruchen, wie namentlich bei schwieriger und zeitraubender Sammlung oder Zusammenstellung des Beweismaterials, bei grossem Aktenmaterial oder umfangreichem Briefwechsel, wenn ein wesentlicher Teil des Aktenmaterials oder des Briefwechsels in einer anderen als der Gerichtssprache vorliegt, oder bei besonders komplexen tatsächlichen oder rechtlichen Verhältnissen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "a1b2da1c7e4c5e6b13e7382f8f36af6d559f98fead54523fa9e730a5f4c81d8d"
+    },
+    {
+      "id": "kanton/BE/168.811/art_10",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für einen ganzen Reisetag wird ein Honorarzuschlag von 300 Franken gewährt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "a210a47676792d991cb38e1c421e69c91694a20951a972e253dbdee0277d865d"
+    },
+    {
+      "id": "kanton/BE/168.811/art_11",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Beschwerdeverfahren beträgt das Honorar 400 bis 11 800 Franken pro Instanz."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind bedeutende vermögensrechtliche Interessen zu wahren, wird auf dem Honorar ein Zuschlag von bis zu 200 Prozent gewährt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "2b7ed44b9e4d58e0ea3379550d7a06f732410f5544831849bb4e3f2e3ae5f7e3"
+    },
+    {
+      "id": "kanton/BE/168.811/art_12",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Klageverfahren mit bestimmtem Streitwert bemisst sich das Honorar nach Artikel 5 Absatz 1 und Artikel 7. Bei Enteignungsverfahren ist die untere Grenze der Ansätze nicht verbindlich."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann der Streitwert zahlenmässig nicht bestimmt werden, beträgt das Honorar 400 bis 11 800 Franken. Sind bedeutende vermögensrechtliche Interessen zu wahren, wird auf dem Honorar ein Zuschlag von bis zu 200 Prozent gewährt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "721c25a25f9e8e6d19c165072de625bf11f23bdf3ba558386a083b71a6680004"
+    },
+    {
+      "id": "kanton/BE/168.811/art_13",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In sozialversicherungsrechtlichen Klage- und Beschwerdeverfahren beträgt das Honorar 400 bis 11 800 Franken pro Instanz."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "523ab600a13528a81a2afc9dc3008274e229ab5db6669b233dc285f86397ad31"
+    },
+    {
+      "id": "kanton/BE/168.811/art_14",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für vorsorgliche Beweisführungen beträgt das Honorar 30 bis 60 Prozent des Honorars gemäss den Artikeln 11, 12 oder 13."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "0e7d20c63dd9c0a6d4a0465e461ecab89a94e4cf3c92d47ff5cae7e990e526ab"
+    },
+    {
+      "id": "kanton/BE/168.811/art_15",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Erledigung des Rechtsstreits ohne Urteil (Vergleich, Abstand, Klagerückzug usw.) beträgt das Honorar 25 bis 100 Prozent des Honorars gemäss den Artikeln 11, 12 oder 13."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "7fe4b538b7658276424ba0cd4d712bd5caaa79f56f2e0b648e9ff5a96d8a2739"
+    },
+    {
+      "id": "kanton/BE/168.811/art_16",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Verwaltungsrechtssachen sind die Artikel 9 und 10 anwendbar."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "f60a397e09193d3f089833a61b8c3eec0e246ec367742dcd9728fbd91f9a7775"
+    },
+    {
+      "id": "kanton/BE/168.811/art_17",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Strafrechtssachen wird das Honorar wie folgt bemessen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Strafbefehlsverfahren 500 bis 5 000 Franken,"
+            },
+            {
+              "marke": "b",
+              "text": "in Verfahren vor dem Einzelgericht des Regionalgerichts 500 bis 25 000 Franken,"
+            },
+            {
+              "marke": "c",
+              "text": "in Verfahren vor dem Kollegialgericht des Regionalgerichts 2 000 bis 50 000 Franken,"
+            },
+            {
+              "marke": "d",
+              "text": "in Verfahren vor dem Wirtschaftsstrafgericht 2 000 bis 80 000 Franken,"
+            },
+            {
+              "marke": "e",
+              "text": "in Verfahren, die mit der Einstellung durch die Staatsanwaltschaft oder das erstinstanzliche Gericht erledigt werden, 25 bis 100 Prozent des Honorars gemäss den Buchstaben a bis d,"
+            },
+            {
+              "marke": "f",
+              "text": "in Rechtsmittelverfahren (Art. 379 bis 415 der Schweizerischen Strafprozessordnung vom 5. Oktober 2007 [StPO]), mit Ausnahme der Beschwerdeverfahren gemäss Buchstabe g, 10 bis 50 Prozent des Honorars gemäss den Buchstaben b bis e,"
+            },
+            {
+              "marke": "g",
+              "text": "500 bis 5 000 Franken in Verfahren der Beschwerdekammer des Obergerichts ohne Rechtsmittelcharakter sowie in Beschwerdeverfahren (Art. 393 bis 397 StPO) betreffend"
+            },
+            {
+              "marke": "h",
+              "text": "für selbstständige nachträgliche Entscheide gemäss Artikel 363 ff. StPO 10 bis 40 Prozent des Honorars gemäss den Buchstaben a bis d sowie f."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Honorar gemäss Absatz 1 Buchstaben a bis e umfasst auch die Abgeltung des Aufwandes für das Vorverfahren."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "6cff0ee5fdbfbb4afeb10506bde386101c1833d5869229c8677d57b120e5beca"
+    },
+    {
+      "id": "kanton/BE/168.811/art_18",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Strafrechtssachen sind die Artikel 9 und 10 anwendbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann der Zeit- und Arbeitsaufwand auch unter Anwendung von Artikel 9 nicht angemessen entschädigt werden, kann der Zuschlag höher als 75 Prozent sein."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "5ff0e8934d02cf4a90fdfd33b5b21c257c10cdac921c98e7a6c8c6766e39441a"
+    },
+    {
+      "id": "kanton/BE/168.811/art_19",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Aufwand, den die Anwältinnen und Anwälte vor Inkrafttreten dieser Verordnung geleistet haben, wird der Parteikostenersatz nach bisherigem Recht bemessen."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "d7dd072deaa8fb561d81deb47f774c01e1960869766bbcf081c15404b580e993"
+    },
+    {
+      "id": "kanton/BE/168.811/art_20",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt zusammen mit dem Kantonalen Anwaltsgesetz in Kraft."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "c228d01e54273936d60d8083981f39a67b9e05e55f53906495703007d768ec2d"
+    },
+    {
+      "id": "kanton/BE/168.811/art_t1-1",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "Parteikostenverordnung, PKV (BSG 168.811)",
+      "artikel": "t1-1",
+      "artikelLabel": "Art. T1-1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das neue Recht ist anwendbar, wenn im betreffenden Verfahren die ZPO oder die StPO zur Anwendung gelangt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das bisherige Recht ist anwendbar, wenn im betreffenden Verfahren das Gesetz vom 7. Juli 1918 über die Zivilprozessordnung (ZPO) oder das Gesetz vom 15. März 1995 über das Strafverfahren (StrV) zur Anwendung gelangt."
+        }
+      ],
+      "stand": "2012-01-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/168.811",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "098df6d95ea32c44c4f7b9e7a5c119ee",
+      "sha": "98c6a60ca6da2775b2d8c40be13aad57936ef882f3ea09138cffabbd8eb2cd86"
     }
   ]
 }

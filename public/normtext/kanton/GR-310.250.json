@@ -1,6 +1,33 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/GR/310.250/art_1",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Honorarverordnung, HV (BR 310.250)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Parteientschädigung für die Kosten der anwaltlichen Vertretung in Verfahren vor Gerichten und kantonalen Verwaltungsbehörden sowie das Honorar für die unentgeltliche Rechtsvertretung und die amtliche Verteidigung."
+        },
+        {
+          "absatz": "2",
+          "text": "Spezialgesetzliche Regelungen bleiben vorbehalten."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Verhältnis zur Klientschaft bestimmt sich das Honorar der Anwältin oder der Anwaltes nach der Vereinbarung im konkreten Fall oder nach den üblichen Ansätzen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
+      "sha": "0c83f31f8b13cbbe9ff0b76ce4dd790fb1a1b6dca937758ae3156f043d7250e5"
+    },
     {
       "id": "kanton/GR/310.250/art_2",
       "ebene": "kanton",
@@ -34,7 +61,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "4823d57f0e63eda087145ac35f41cb147087111a3dac0b99556be7d5ecc58c5f"
     },
@@ -75,9 +102,120 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
       "sha": "f83eb894ece8dd729b5cc57243900c1ef3d0aaa54b97b42f3719efdfc52e47bd"
+    },
+    {
+      "id": "kanton/GR/310.250/art_4",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Honorarverordnung, HV (BR 310.250)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Parteien haben zu Beginn des Verfahrens eine vollständige, unterschriebene Honorarvereinbarung einzureichen. Unterlassen sie dies, kann die urteilende Instanz davon absehen, für die Festsetzung der Parteientschädigung die Anwaltsrechnung beizuziehen."
+        },
+        {
+          "absatz": "2",
+          "text": "Änderungen der Honorarvereinbarung werden in der Regel erst ab ihrer Einreichung bei der urteilenden Instanz anerkannt, und nur dann, wenn sie nicht darauf hinauslaufen, eine Prozessituation auszunützen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Abschluss geheimer Honorarabsprachen neben der eingereichten Honorarvereinbarung ist unzulässig. Verstösse sind der Aufsichtskommission über die Rechtsanwältinnen und Rechtsanwälte zu melden."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
+      "sha": "c5560a21aa5ea4e8dbe597ee0ab867729bed0f623a7263e15df0050da6aa322b"
+    },
+    {
+      "id": "kanton/GR/310.250/art_5",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Honorarverordnung, HV (BR 310.250)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den berechtigten Aufwand der unentgeltlichen Vertretung und der amtlichen Verteidigung wird der Rechtsanwältin oder dem Rechtsanwalt ein Honorar von 200 Franken pro Stunde zuzüglich notwendige Barauslagen und Mehrwertsteuer ausgerichtet. Zuschläge werden keine gewährt. Die Regierung passt den Stundenansatz periodisch der Teuerung an."
+        },
+        {
+          "absatz": "2",
+          "text": "Reicht die amtliche Verteidigerin oder der amtliche Verteidiger keine Honorarnote ein, die eine umfassende Überprüfung der Aufwendungen erlaubt, wird die Entschädigung nach Ermessen festgesetzt."
+        },
+        {
+          "absatz": "3",
+          "text": "Ergänzend gelten die spezialgesetzlichen Regelungen in der Gesetzgebung über die Zivil-, die Straf- und die Verwaltungsrechtspflege."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
+      "sha": "445f18a5bf82e6dbe5411adaa90dd96d471317755eda7a6f66fecf37545e617c"
+    },
+    {
+      "id": "kanton/GR/310.250/art_6",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Honorarverordnung, HV (BR 310.250)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Honorar für Rechtspraktikantinnen und Rechtspraktikanten beträgt 75 Prozent des Ansatzes für Rechtsanwältinnen und Rechtsanwälte."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
+      "sha": "7fe82e401a5d2e8d09424ca8033c317caaf4d2f5ed931f6b95e6e8813d33bf14"
+    },
+    {
+      "id": "kanton/GR/310.250/art_7",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Honorarverordnung, HV (BR 310.250)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für ein im Zeitpunkt des Inkrafttretens dieser Verordnung vor einer Instanz hängiges Verfahren gilt bis zum Abschluss vor dieser Instanz das bisherige Recht."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
+      "sha": "ac44775a54cd858110f6aee6fcb59e81cee8929d0820ad020ac549ecebab3791"
+    },
+    {
+      "id": "kanton/GR/310.250/art_9",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Honorarverordnung, HV (BR 310.250)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung wird von der Regierung in Kraft gesetzt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/310.250",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "117b5cba277b28004a6a84a4a8a925a2",
+      "sha": "29d57ab6ab70b0f38f3df04e2502b63a16e0bc40fe6abdd7d97698a863516c81"
     }
   ]
 }

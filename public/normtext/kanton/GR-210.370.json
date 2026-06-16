@@ -1,6 +1,419 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/GR/210.370/art_1",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Notariatspersonen gemäss Artikel 1 Absatz 1 des Notariatsgesetzes sind verpflichtet, für ihre Amtsverrichtungen die in dieser Verordnung festgesetzten Gebühren zu beziehen. Sie können ausserdem Ersatz der notwendigen Auslagen und der Mehrwertsteuer, die offen auszuweisen ist, beanspruchen."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Gebührenrechnung ist auf die angewendeten Bestimmungen dieser Verordnung hinzuweisen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Notariatsperson kann ihre Gebührenrechnungen in Form von beschwerdefähigen Verfügungen erlassen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "362d03d586591323ebef76281e3a7ee06d08bd1d78d51958c6bd24f30b936d3c"
+    },
+    {
+      "id": "kanton/GR/210.370/art_2",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen die Gebührenverfügung der Notariatsperson kann jede zahlungspflichtige Partei innert 30 Tagen seit Erhalt der Verfügung bei der Notariatskommission Beschwerde führen."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf Verlangen der Notariatsperson und der zahlungspflichtigen Partei setzt der Präsident der Notariatskommission die Gebühr abschliessend fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Verfahren gemäss Absatz 1 und 2 ist das Gesetz über die Verwaltungsrechtspflege sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "ac9600c1ec9ed2a351febbe47e8c65e3da9ec132a36f83d27a2b1b48a53f49f6"
+    },
+    {
+      "id": "kanton/GR/210.370/art_3",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Notariatsperson kann zur Sicherstellung ihrer Gebühren und Auslagen Vorschüsse verlangen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "5c53039324984a3139772c7ca593b31ebd20126de1915c7899d0e88272cf102d"
+    },
+    {
+      "id": "kanton/GR/210.370/art_4",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn die Urkundsparteien nichts anderes vereinbaren, schulden sie die Gebühren solidarisch."
+        },
+        {
+          "absatz": "2",
+          "text": "Gelangt das Geschäft nicht zur Beurkundung, werden die Gebühren bei denjenigen Personen erhoben, die die Notariatsperson um die Einleitung des Beurkundungsverfahrens ersuchten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "82c0a9f06ea919908a0bea40538b3d3da5f013eacac3c48843b69dbf3d3051c0"
+    },
+    {
+      "id": "kanton/GR/210.370/art_5",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren stellen, sofern in dieser Verordnung nichts anderes bestimmt wird, das Entgelt dar für die Instruktionsbesprechung, die Ausarbeitung der Urkunde, die Beurkundung und die Ausfertigung der Urkunde in der nötigen Anzahl."
+        },
+        {
+          "absatz": "2",
+          "text": "Gehen der Errichtung und Beurkundung Abklärungen, Beratungen, Verhandlungen oder andere Vorbereitungshandlungen voraus, die einen den Rahmen des üblichen übersteigenden Aufwand erfordern, oder folgen ihr Vollzugshandlungen solcher Art, so können diese nach den in Artikel 7 Absatz 1 enthaltenen Grundsätzen besonders berechnet werden. Das Gleiche gilt bei erheblichem Mehraufwand infolge Beurkundung ausserhalb des Amtslokals oder fremdsprachiger Urkunden."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird der Notariatsperson bei einem Geschäft gemäss Artikel 16 eine ausgearbeitete Urkunde vorgelegt, kann sie für die Überprüfung, Änderung oder Ergänzung derselben einen Zuschlag zur Gebühr für die Beurkundung nach den Richtlinien des Artikel 7 Absatz 1 erheben."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "25064d04d9961aba4fdbb7c4384c5821163048f69706f65e2c4aa88e127761bf"
+    },
+    {
+      "id": "kanton/GR/210.370/art_6",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden mehrere Rechtsgeschäfte, die der öffentlichen Beurkundung bedürfen, in einer einzigen Urkunde behandelt, sind die Gebühren für jedes einzelne Rechtsgeschäft zu berechnen, soweit diese Verordnung nicht etwas anderes bestimmt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "e3a229998056e12508acf287219bf1425ebbe0c77cbca91e7e9b5d1490c636b8"
+    },
+    {
+      "id": "kanton/GR/210.370/art_7",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sind für die Errichtung und Beurkundung eines Geschäftes in dieser Verordnung keine Gebühren vorgesehen, bemessen sich die Gebühren nach der Bedeutung und Schwierigkeit des Geschäftes sowie dem Arbeitsaufwand und der zeitlichen Inanspruchnahme der Notariatsperson."
+        },
+        {
+          "absatz": "2",
+          "text": "Diese Bemessungsfaktoren sind auch anwendbar, wo die Verordnung einen Gebührenrahmen festlegt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "290f0ee6b30669862f26f9b750f89f8d4b9a0b8526de48d3945d902e6223beca"
+    },
+    {
+      "id": "kanton/GR/210.370/art_8",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gelangt ein Geschäft nach dessen Vorbereitung nicht zur Beurkundung, so ist der für die Errichtung der Urkunde vorgesehene Gebührenanteil in Rechnung zu stellen. Fehlt in dieser Verordnung eine besondere Gebühr für die Errichtung, ist gemäss Artikel 7 Absatz 1 zu verfahren."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "bb6a1d5f619ff879536bf60eaa36f338f2723ffcf04f2390fa9baa76ba750d38"
+    },
+    {
+      "id": "kanton/GR/210.370/art_9",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bedürftigen sowie gemeinnützigen oder wohltätigen Institutionen oder aus Billigkeitsgründen können die Gebühren ermässigt oder ganz erlassen werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "c3a5e8914f0da9c285c65a48bf3e07a48548d87ad228bf8a09fd6cf74d9545ed"
+    },
+    {
+      "id": "kanton/GR/210.370/art_10",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beglaubigungen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beglaubigung einer Unterschrift oder eines Handzeichens: Fr. 30.–, nebst Zuschlag von: Fr. 10.– für jede weitere Unterschrift (Handzeichen) auf dem gleichen Akt"
+            },
+            {
+              "marke": "b",
+              "text": "Beglaubigung der Übereinstimmung einer Abschrift oder eines Auszuges (Buch-, Protokollauszug usw.) oder einer anderen Wiedergabe (Fotokopie usw.) mit einer Urkunde für die erste Seite: Fr. 20.–, für jede weitere Seite: Fr. 5.–"
+            },
+            {
+              "marke": "c",
+              "text": "Beglaubigung einer Übersetzung für jede Seite: Fr. 30.– bis 100.–"
+            },
+            {
+              "marke": "d",
+              "text": "Beglaubigung der Sicherung eines Datums: Fr. 30.–"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sind Beglaubigungen von Urkunden in fremden Sprachen vorzunehmen, sind Zeugen oder Übersetzer beizuziehen, oder ist eine besondere Form zu beachten, kann die Gebühr bis auf den doppelten Betrag erhöht werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "14780acb0b2c02c367dc1480fdf36e44ed21e2ca8c9d6cb98c1ed885edf72952"
+    },
+    {
+      "id": "kanton/GR/210.370/art_11",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Errichtung von Stiftungen unter Lebenden: Fr. 500.– bis 1000.–, bei einem Stiftungswert über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰"
+            },
+            {
+              "marke": "b",
+              "text": "Wird das Stiftungskapital durch periodische Leistungen geäufnet, ist der Stiftungswert der zwanzigfache Betrag der Jahresleistung."
+            },
+            {
+              "marke": "c",
+              "text": "Abänderung einer Stiftungsurkunde: Fr. 500.– bis 1000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "da1754b9ff8f2bdab89e3d8afb30e1f78d440b892783d05d755874bd805142f8"
+    },
+    {
+      "id": "kanton/GR/210.370/art_12",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Abschluss, Abänderung oder Aufhebung eines Ehevertrages: Fr. 500.–, bei einem vom Vertrag erfassten Vermögen der Ehegatten über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰, höchstens: Fr. 15 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "Aufnahme eines Inventars mit oder ohne Schätzung der Vermögenswerte der Ehegatten: Fr. 300.–, bei einem Inventarwert über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰, höchstens: Fr. 15 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "Abschluss oder Abänderung eines Gemeinderschaftsvertrages: Fr. 500.–, bei einem Vertragswert über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰, höchstens: Fr. 15 000.–"
+            },
+            {
+              "marke": "d",
+              "text": "Errichtung oder Widerruf eines Vorsorgeauftrages: Fr. 200.–, bei besonderem Aufwand für Beratung und Errichtung erfolgt ein Zuschlag gemäss Zeitaufwand."
+            },
+            {
+              "marke": "e",
+              "text": "Litera a und b gelten für die eingetragene Partnerschaft sinngemäss."
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "bb4b4bacf3c297a06fa4629a254dcbc639273532c75c90b0580b9ba9208a36fd"
+    },
+    {
+      "id": "kanton/GR/210.370/art_13",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Errichtung oder Widerruf einer öffentlichen letztwilligen Verfügung: Fr. 300.–, bei einem Verfügungswert über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰, höchstens: Fr. 15 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "Errichtung oder Abänderung eines Erbvertrages: Fr. 500.–, bei einem Vertragswert über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰, höchstens: Fr. 15 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "Einseitige Aufhebung eines Erbvertrages: Fr. 500.– bis 1000.–"
+            },
+            {
+              "marke": "d",
+              "text": "Aufnahme und öffentliche Beurkundung eines Sicherungsinventars pro Arbeitsstunde: Fr. 100.– bis 200.–. Bei einem Wert der Hinterlassenschaft von über 100 000 Franken kann neben dem Honorar nach Zeitaufwand ein Zuschlag von 1‰ vom Mehrwert höchstens aber Fr. 15 000.– berechnet werden."
+            },
+            {
+              "marke": "e",
+              "text": "Aufnahme und öffentliche Beurkundung eines öffentlichen Inventars: gleiche Gebühr wie Litera d"
+            },
+            {
+              "marke": "f",
+              "text": "Errichtung eines Erbverpfründungsvertrages: Fr. 500.–, bei einem Vertragswert über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰, höchstens: Fr. 15 000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "dd157a8b51a1d5d0f45dd93a9dde20da90f89976ae4dd70135d188763b8bfd36"
+    },
+    {
+      "id": "kanton/GR/210.370/art_14",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren sind, soweit nachstehend keine Abweichungen festgelegt werden, nach den Vertragssummen zu berechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden keine Vertragssummen festgelegt, so ist der für die Gebührenerhebung festzulegende Wert in Absprache mit den Parteien zu ermitteln. Kommt keine Einigung zustande, haben die Parteien auf ihre Kosten eine aktuelle amtliche Verkehrswertbewertung beizubringen."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird ein Grundstück gestützt auf einen bundesrechtlich festgesetzten Anspruch zum Ertragswert übertragen, ist die Gebühr nach diesem Wert zu erheben."
+        },
+        {
+          "absatz": "4",
+          "text": "Ist ein Werkvertrag zwischen den gleichen Vertragsparteien Bestandteil der Urkunde, so ist die Gebühr auch für die Gegenleistung jenes Rechtsgeschäftes zu erheben."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "c6885d9d86e21618ec757ee39d3aa107b3939fc415440bd2108c47deb1c1a769"
+    },
+    {
+      "id": "kanton/GR/210.370/art_15",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Errichten der Urkunden werden die gleichen Gebühren wie für die Beurkundung gemäss Artikel 16 dieser Verordnung erhoben."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "955df91193e257d5f7d00f8c362bcf91134f7cec49daca01dd4a7ac98a492137"
+    },
     {
       "id": "kanton/GR/210.370/art_16",
       "ebene": "kanton",
@@ -82,9 +495,290 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
       "sha": "37d31aee3b252fe45ce2baa62f03625b8e55fd4f28d71cb020b38aec0829a401"
+    },
+    {
+      "id": "kanton/GR/210.370/art_17",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Öffentliche Urkunde über die Errichtung einer Aktiengesellschaft (auch Kommanditaktiengesellschaft): Fr. 1000.–, bei einem Aktienkapital über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰"
+            },
+            {
+              "marke": "b",
+              "text": "Errichtung und Beurkundung eines Sacheinlagevertrages: gleiche Gebühr wie Artikel 15 und 16 Litera a dieser Verordnung"
+            },
+            {
+              "marke": "c",
+              "text": "Öffentliche Urkunden betreffend die Beschlüsse der Generalversammlung und des Verwaltungsrates über die Erhöhung des Gesellschaftskapitals von Aktiengesellschaften je: Fr. 500.–, bei einer Erhöhung über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich je: 1‰"
+            },
+            {
+              "marke": "d",
+              "text": "Öffentliche Urkunden über die Herabsetzung des Gesellschaftskapitals von Aktiengesellschaften: gleiche Gebühr wie für die Beschlüsse gemäss Litera c. Bei Herabsetzung und gleichzeitiger Wiedererhöhung des Aktienkapitals ist die Gebühr nur einmal, allenfalls vom höheren Betrag, zu berechnen."
+            },
+            {
+              "marke": "e",
+              "text": "Feststellungsurkunde über das durchgeführte Verfahren betreffend die Aufforderung an die Gläubiger bei Kapitalherabsetzung: Fr. 500.– bis 2000.–"
+            },
+            {
+              "marke": "f",
+              "text": "Öffentliche Urkunde über Beschlüsse einer Aktiengesellschaft (Statutenrevision, Nachliberierung Auflösung usw.), sofern nicht Litera a, c, d oder h zur Anwendung kommen: Fr. 500.– bis 2000.–"
+            },
+            {
+              "marke": "g",
+              "text": "…"
+            },
+            {
+              "marke": "h",
+              "text": "…"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "a9ed0a3a46716aca1f5797c54863dff29b5f903097db163f0304fd0c9f093857"
+    },
+    {
+      "id": "kanton/GR/210.370/art_18",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Öffentliche Urkunde über die Gründung einer Gesellschaft mit beschränkter Haftung: Fr. 500.–, bei einem Stammkapital über 100 000 Franken vom Mehrwert über 100 000 Franken zusätzlich: 1‰"
+            },
+            {
+              "marke": "b",
+              "text": "Errichtung und Beurkundung eines Sacheinlagevertrages: gleiche Gebühr wie Artikel 15 und 16 Litera a dieser Verordnung"
+            },
+            {
+              "marke": "c",
+              "text": "Öffentliche Urkunde über die Erhöhung oder Herabsetzung des Stammkapitals einer Gesellschaft mit beschränkter Haftung: Gebühr gemäss Litera a"
+            },
+            {
+              "marke": "d",
+              "text": "Feststellungsurkunde über das durchgeführte Verfahren betreffend die Aufforderung an die Gläubiger bei Kapitalherabsetzung: Fr. 500.– bis 1000.–"
+            },
+            {
+              "marke": "e",
+              "text": "Öffentliche Urkunde über Beschlüsse einer Gesellschaft mit beschränkter Haftung (Statutenrevision, Auflösung usw.), sofern nicht Litera a, c oder g zur Anwendung kommen: Fr. 500.– bis 1000.–"
+            },
+            {
+              "marke": "f",
+              "text": "…"
+            },
+            {
+              "marke": "g",
+              "text": "…"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "b12a448e22d5e0b81fea6724296a67e4242f7830efa6cddac32b0931d347a8ae"
+    },
+    {
+      "id": "kanton/GR/210.370/art_18_a",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "18_a",
+      "artikelLabel": "Art. 18a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Öffentliche Urkunde über einen Fusionsbeschluss: Fr. 500.– bis 2000.–"
+            },
+            {
+              "marke": "b",
+              "text": "Öffentliche Urkunde über einen Spaltungsbeschluss: Fr. 500.– bis 2000.–"
+            },
+            {
+              "marke": "c",
+              "text": "Öffentliche Urkunde über einen Umwandlungsbeschluss: Fr. 500.– bis 2000.–"
+            },
+            {
+              "marke": "d",
+              "text": "Errichtung und Beurkundung eines Vermögensübertragungsvertrags: gleiche Gebühr wie Artikel 15 und 16 Litera a dieser Verordnung, Minimum: Fr. 500.–"
+            },
+            {
+              "marke": "e",
+              "text": "Öffentliche Urkunde über den Fusionsvertrag von Familien- und kirchlichen Stiftungen: Fr. 500.– bis 1000.–, bei einem Stiftungswert über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰"
+            },
+            {
+              "marke": "f",
+              "text": "Öffentliche Urkunde über die Feststellung betreffend einer Grundstücksübertragung: Fr. 200.– bis 2000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "b2aa1bcd2201045fb6fcb7fe7990baadfe7cd81c77fac7e24e0f75cba5517e15"
+    },
+    {
+      "id": "kanton/GR/210.370/art_18_b",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "18_b",
+      "artikelLabel": "Art. 18b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Öffentliche Urkunde über die Errichtung einer Genossenschaft: Fr. 1000.–"
+            },
+            {
+              "marke": "b",
+              "text": "Errichtung und Beurkundung eines Sacheinlagevertrages: gleiche Gebühr wie Artikel 15 und Artikel 16 Litera a"
+            },
+            {
+              "marke": "c",
+              "text": "Öffentliche Urkunde über einen Statutenänderungsbeschluss: Fr. 500.– bis Fr. 2000.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "618b734a58a31e81b26c0958ada0ad96cdead2f2cae20772a4724a5fc2bee93d"
+    },
+    {
+      "id": "kanton/GR/210.370/art_19",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Beurkundung der Ersetzung einer Unterschrift nach Artikel 15 Obligationenrecht: Fr. 100.– bis 300.–"
+            },
+            {
+              "marke": "b",
+              "text": "Beurkundung einer Erklärung nach Artikel 90 Obligationenrecht: Fr. 100.– bis 300.–"
+            },
+            {
+              "marke": "c",
+              "text": "Beurkundung von Bürgschaftserklärungen, Vollmacht zur Eingehung einer Bürgschaft, Erhöhung der Haftungssumme, Umwandlung einer einfachen in eine Solidarbürgschaft: Fr. 100.–; bei einem Haftungsbetrag über 50 000 Franken vom Mehrwert über 50 000 Franken zusätzlich: 1‰, höchstens: Fr. 5000.–; sind getrennt abgegebene Bürgschaftserklärungen zweier oder mehrerer für dieselbe Schuld einstehender Bürgen einzeln durch dieselbe Urkundsperson zu beurkunden, wird für die zweite und jede weitere Beurkundung ein Zuschlag von je 10 Prozent zur Gebühr erhoben: mindestens Fr. 100.–, höchstens Fr. 1000.–"
+            },
+            {
+              "marke": "d",
+              "text": "Errichtung eines Verpfründungsvertrages: Fr. 500.–, bei einem Vertragswert über 200 000 Franken vom Mehrwert über 200 000 Franken zusätzlich: 1‰, höchstens: Fr. 15 000.–"
+            },
+            {
+              "marke": "e",
+              "text": "Protest beim Wechsel oder Check für die Abfassung der Urkunde: Fr. 200.–, bei einem Wechsel- oder Checkwert über 100 000 Franken vom Mehrwert über 100 000 Franken zusätzlich: 1‰, höchstens Fr. 1000.–, für die Vorweisung des Wechsels oder Checks ohne Protestausfertigung: Fr. 100.–, muss der Wechsel bei mehr als einer Person vorgewiesen werden, so beträgt die Gebühr für jede weitere am gleichen Ort wohnhafte Person 50 Prozent obiger Ansätze. Wenn der Wechsel oder Check ausserhalb des Ortsrayons vorgewiesen werden muss, können eine Wegentschädigung von Franken 5.– je Kilometer oder die Taxispesen berechnet werden."
+            },
+            {
+              "marke": "f",
+              "text": "Beurkundung einer Verlosung: Fr. 100.– bis 1000.–"
+            },
+            {
+              "marke": "g",
+              "text": "Beurkundung einer eidesstattlichen Erklärung: Fr. 100.– bis 300.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "f3ad643b945e8dc60e2fc9923dc6beee43ed0429df5d9eab68a3cc6d06476b55"
+    },
+    {
+      "id": "kanton/GR/210.370/art_19_a",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "19_a",
+      "artikelLabel": "Art. 19a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Errichtung einer vollstreckbaren öffentlichen Urkunde: Fr. 200.–"
+            },
+            {
+              "marke": "b",
+              "text": "Zustellung einer vollstreckbaren öffentlichen Urkunde, einschliesslich deren Beglaubigung, durch die Notariatsperson, welche die zuzustellende vollstreckbare öffentliche Urkunde errichtet hat: Fr. 100.–"
+            },
+            {
+              "marke": "c",
+              "text": "Zustellung einer vollstreckbaren öffentlichen Urkunde durch eine Notariatsperson, welche die zuzustellende vollstreckbare öffentliche Urkunde nicht errichtet hat: Fr. 100.– bis 200.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "f1f4493a8d6146faff9e30c06cfc1d644f0c6a326949e3885032e27390efff82"
+    },
+    {
+      "id": "kanton/GR/210.370/art_20",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "NotGebV (BR 210.370)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. Januar 2001 in Kraft. Auf diesen Zeitpunkt wird die Verordnung über die Notariatsgebühren vom 8. Februar 1982 aufgehoben."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/210.370",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "43dc40e5015acde165f1033deeb5b7b6",
+      "sha": "87194a13de4800e22214e2a2130eb31f614ad91540eb687e34f050c0038a79e0"
     }
   ]
 }

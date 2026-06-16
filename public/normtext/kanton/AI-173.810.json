@@ -1,38 +1,151 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
     {
-      "id": "kanton/AI/173.810/art_11",
+      "id": "kanton/AI/173.810/art_1",
       "ebene": "kanton",
       "quelle": "AI",
       "erlass": "GGV (GS 173.810)",
-      "artikel": "11",
-      "artikelLabel": "Art. 11",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "",
-          "items": [
-            {
-              "marke": "a",
-              "text": "Endentscheid und Zwischenentscheid: 500.-- bis 6'000.--"
-            },
-            {
-              "marke": "b",
-              "text": "Prozessleitende Verfügung (Kollegialgericht): 300.-- bis 3'000.--"
-            },
-            {
-              "marke": "c",
-              "text": "Prozessleitende Verfügung, vorsorgliche Massnahmen (Verfahrensleitung): 200.-- bis 2'000.--"
-            }
-          ]
+          "absatz": "1",
+          "text": "Dieser Tarif gilt für die amtlichen Kosten des Verfahrens vor Vermittler, Schlichtungsstellen und Gerichten."
+        },
+        {
+          "absatz": "2",
+          "text": "Er regelt die Entschädigung an Dritte."
+        },
+        {
+          "absatz": "3",
+          "text": "Durch die Bundesgesetzgebung festgesetzte Gebühren bleiben vorbehalten."
+        },
+        {
+          "absatz": "4",
+          "text": "Die in diesem Tarif genannten Beträge lauten auf Schweizer Franken."
         }
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
-      "sha": "e241e6104ca00761a35c16cfedff29c5feb3daa34777b1c48544a0e15c52abdf"
+      "sha": "9af77c4a7f68682d4731dde15fdcc56b1384ccbfcba1939a26db560e2d5a6ead"
+    },
+    {
+      "id": "kanton/AI/173.810/art_2",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Enthält dieser Tarif einen Mindest- und einen Höchstansatz, so werden bei der Bestimmung der Gebühr die Art des Falls, die finanziellen Interessen der Beteiligten, die Umtriebe, die Vermögensverhältnisse des Kostenpflichtigen und die Art der Prozessführung der Beteiligten berücksichtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn der Aufwand mit der Bearbeitung oder die Schwierigkeiten des Falls aussergewöhnlich gross sind, kann die Gebühr innerhalb des Rahmens von Art. 45 des Gerichtsorganisationsgesetzes vom 25. April 2010 (GOG) bis auf das Vierfache erhöht werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "3cdb0cef3f4f970c13a18b128f22037e6ebb3bcee6496d839ede4f7d0f838d1e"
+    },
+    {
+      "id": "kanton/AI/173.810/art_3",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die mutmasslichen amtlichen Kosten sind durch die Partei, welche eine Prozesshandlung anbegehrt, zu bevorschussen. Der Kostenvorschuss darf die Streitwertgrenze nicht überschreiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kosten eines allfälligen Beweisverfahrens hat der Beweisführer vorzuschiessen."
+        },
+        {
+          "absatz": "3",
+          "text": "Im erstinstanzlichen Strafprozess finden Abs. 1 und 2 grundsätzlich keine Anwendung."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "dab9b071b6b6d78e80d93c7464342b4442a886771e655cafc57a6e717833fe87"
+    },
+    {
+      "id": "kanton/AI/173.810/art_4",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kostenspruch ist Bestandteil einer Verfügung oder eines Entscheids und umfasst die Entscheidgebühr und allfällige zusätzliche Gerichtskosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden einem am Verfahren nicht beteiligten Dritten Kosten auferlegt oder eine beanspruchte Entschädigung verweigert, so ist ihm vor Erlass des Kostenspruchs Gelegenheit zur Stellungnahme zu geben."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "be9dd0e718d02da799d4e4c8234979c7c7421d4b575c1d27b52246b97053e0d8"
+    },
+    {
+      "id": "kanton/AI/173.810/art_5",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten werden mit Rechtskraft des zugrundeliegenden Entscheids fällig."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein allfälliger Überschuss aus dem geleisteten Kostenvorschuss wird nach Rechtskraft des zugrundeliegenden Entscheides zurückerstattet."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "9af155d202006af3d3392d94c0f751c57d9b601ab559f2d62ca32bb08517f9a0"
+    },
+    {
+      "id": "kanton/AI/173.810/art_6",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für amtliche Kosten nach diesem Tarif, die aufgrund eines rechtskräftigen Entscheids geschuldet werden, wird im Betreibungsfall zusätzlich ein Verzugszins von 5% ab Fälligkeit berechnet."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "8d261095fa92b002eb5c9e9a0df4221e21bc7f747fb018d2d4d34eaddb5b79b4"
     },
     {
       "id": "kanton/AI/173.810/art_7",
@@ -67,9 +180,555 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
       "sha": "2c695bade8551b4e8514a6ed62848a00b5f0cf8650b20a78cdc7d099525c908a"
+    },
+    {
+      "id": "kanton/AI/173.810/art_9",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entscheidgebühr wird für schriftlich eröffnete Entscheide erhoben."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "947b236e3235e9152243da973a70c912eb8518c3592b2b0d3e83772adc2f5d6b"
+    },
+    {
+      "id": "kanton/AI/173.810/art_10",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Endentscheid und Zwischenentscheid: 300.-- bis 5'000.--"
+            },
+            {
+              "marke": "b",
+              "text": "Prozessleitende Verfügung und Summarentscheid: 200.-- bis 3'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "e48298e738959bc0f9cc1c8a000f2bc92cac405de167e8f4a0f63054c90bfc01"
+    },
+    {
+      "id": "kanton/AI/173.810/art_11",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Endentscheid und Zwischenentscheid: 500.-- bis 6'000.--"
+            },
+            {
+              "marke": "b",
+              "text": "Prozessleitende Verfügung (Kollegialgericht): 300.-- bis 3'000.--"
+            },
+            {
+              "marke": "c",
+              "text": "Prozessleitende Verfügung, vorsorgliche Massnahmen (Verfahrensleitung): 200.-- bis 2'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "e241e6104ca00761a35c16cfedff29c5feb3daa34777b1c48544a0e15c52abdf"
+    },
+    {
+      "id": "kanton/AI/173.810/art_11_bis",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "11_bis",
+      "artikelLabel": "Art. 11bis",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Urteil: 500.-- bis 15'000.--"
+            },
+            {
+              "marke": "b",
+              "text": "Beschluss: 500.-- bis 5'000.--"
+            },
+            {
+              "marke": "c",
+              "text": "Verfügung (Verfahrensleitung): 200.-- bis 2'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "1b3d22ac68a75666fa83d8f4d3c2c52192ca9e056ae67c3157e47560fa0201a1"
+    },
+    {
+      "id": "kanton/AI/173.810/art_12",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Endentscheid und Zwischenentscheid: 300.-- bis 5'000.--"
+            },
+            {
+              "marke": "b",
+              "text": "Prozessleitende Verfügung, vorsorgliche Massnahmen: 200.-- bis 3'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "bf9bbbd42f128014ed9a4e544a81b0eca799d69dd7114955dce66aac2b53d1ae"
+    },
+    {
+      "id": "kanton/AI/173.810/art_13",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Endentscheid und Zwischenentscheid: 800.-- bis 8'000.--"
+            },
+            {
+              "marke": "b",
+              "text": "Prozessleitende Verfügung (Kollegialgericht): 400.-- bis 4'000.--"
+            },
+            {
+              "marke": "c",
+              "text": "Prozessleitende Verfügung, vorsorgliche Massnahmen (Verfahrensleitung): 200.-- bis 2'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "d5f8dfa9fa55e4b3a3ab51b709e5c6edb2b72b0bc2af697ecca0f424e26ba6a5"
+    },
+    {
+      "id": "kanton/AI/173.810/art_13_bis",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "13_bis",
+      "artikelLabel": "Art. 13bis",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Urteil: 500.-- bis 15'000.--"
+            },
+            {
+              "marke": "b",
+              "text": "Beschluss: 500.-- bis 5'000.--"
+            },
+            {
+              "marke": "c",
+              "text": "Verfügung (Verfahrensleitung): 200.-- bis 2'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "1b3d22ac68a75666fa83d8f4d3c2c52192ca9e056ae67c3157e47560fa0201a1"
+    },
+    {
+      "id": "kanton/AI/173.810/art_13_ter",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "13_ter",
+      "artikelLabel": "Art. 13ter",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Endentscheid: 500.-- bis 15'000.--"
+            },
+            {
+              "marke": "b",
+              "text": "Zwischenentscheid, verfahrensleitende Verfügung: 300.-- bis 3'000.--"
+            },
+            {
+              "marke": "c",
+              "text": "Zwischenentscheid, verfahrensleitende Verfügung, Abschreibungsverfügung (Verfahrensleitung): 200.-- bis 2'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "9590d96c3e28446da3a8998d107f39fc02a0d91a2afa1fdf3ff5891ecc946d98"
+    },
+    {
+      "id": "kanton/AI/173.810/art_15",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Zwischen- und Endentscheide werden abhängig vom Streitwert innerhalb des Rahmens von Art. 45 GOG wie folgt erhöht:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei einem Streitwert über 50'000.-- bis 100'000.-- auf höchstens 200%"
+            },
+            {
+              "marke": "b",
+              "text": "bei einem Streitwert über 100'000.-- bis 250'000.-- auf höchstens 300%"
+            },
+            {
+              "marke": "c",
+              "text": "bei einem Streitwert von je weiteren 250'000.-- je weitere 100%"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Eine weitere Erhöhung nach Art. 2 Abs. 2 bleibt vorbehalten."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "a3b35e247446185d0c1fb6c33a7c51536d272e4fb4d32711c038001fc9c798d3"
+    },
+    {
+      "id": "kanton/AI/173.810/art_16",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die amtlichen Kosten werden grundsätzlich um einen Drittel ermässigt, wenn bei Entscheiden keine Begründung erfolgt. In Ausnahmefällen, namentlich dann, wenn die Begründung einen ausserordentlich grossen Aufwand verursachen würde, kann die Kostenermässigung über den Drittel hinaus erhöht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn die Umstände es rechtfertigen, kann auf das Erheben von Kosten verzichtet werden."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "8104819f4245055e0034f50cfce4c55e363c26628bb6d4eadc682f0d9747f6d6"
+    },
+    {
+      "id": "kanton/AI/173.810/art_17",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Leichtsinnige oder mutwillige Prozessführung: 100.-- bis 2'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "25f09ff6687968b96d3b53a7ff13ef7968fdab0fd8e8942fc6cf03df8fcef8aa"
+    },
+    {
+      "id": "kanton/AI/173.810/art_18",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten für mitwirkende Dritte werden entsprechend den nachfolgenden Bestimmungen tatsächlich ausgerichteten Entschädigungen belastet."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "585ef4923f9ba0d9606cb6f9edb61abda31b40490930c998438d1d760d3ef625"
+    },
+    {
+      "id": "kanton/AI/173.810/art_19",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zeitaufwand:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bis vier Stunden: bis 160.--"
+            },
+            {
+              "marke": "b",
+              "text": "über vier Stunden: bis 320.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entschädigung kann bis zur Höhe des Verdienstausfalls erhöht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für ausgewiesene Spesen wird das Reglement über Spesen und weitere Vergütungen vom 21. November 2017 sachgemäss angewendet."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "b2d82fbee1bbc163cc80fa44a74621f31b9f82b7dd9c3fbe6ae5b0f15ea153b7"
+    },
+    {
+      "id": "kanton/AI/173.810/art_20",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sachverständige sowie Übersetzer werden grundsätzlich nach branchenüblichen Tarifen entschädigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Spesen werden wie bei den Zeugen entschädigt."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "d6e72a8bd17898f9e733997d5c6fea3413a56da8b7060c0ac8b8ebba68f322d6"
+    },
+    {
+      "id": "kanton/AI/173.810/art_22",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dritte, die auf Anordnung des Richters am Verfahren mitwirken, erhalten die gleiche Entschädigung wie Zeugen."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "fe195c680b78ad4d26bc7d5364b24ab8aa539cb00c4ec1ae9ffe7c3bbbde99e9"
+    },
+    {
+      "id": "kanton/AI/173.810/art_24",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten der amtlichen Veröffentlichung werden nach dem Insertionstarif des Publikationsorgans berechnet."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "82fe56302af5d2e7ca1e54c612a71e76fa5c8c49cfa78798777ae9555cc15370"
+    },
+    {
+      "id": "kanton/AI/173.810/art_25",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanzleigebühren werden für Leistungen erhoben, die nicht Bestandteil des ordentlichen Geschäftsganges eines Verfahrens sind."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "3ec44901129bab94b9d878bcb2dab3604f6e2ff4d11b0be811a9cd27f5f67f4b"
+    },
+    {
+      "id": "kanton/AI/173.810/art_26",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Vollstreckbarkeitsbescheinigung: 25.--"
+            },
+            {
+              "marke": "b",
+              "text": "Weitere Bescheinigungen: 10.-- bis 100.--"
+            },
+            {
+              "marke": "c",
+              "text": "Ausfertigung, Abschrift oder Auszug von Schriftstücken pro Seite: 5.--"
+            },
+            {
+              "marke": "d",
+              "text": "Kopien"
+            },
+            {
+              "marke": "e",
+              "text": "Einsichtgabe in Akten an Gesuchsteller ohne Parteistellung: 50.-- bis 500.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "dd83b1a39373a5ef8407c2f145c56b7bb74fd87f966905eb150e9e7e95fa8886"
+    },
+    {
+      "id": "kanton/AI/173.810/art_27_bis",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "27_bis",
+      "artikelLabel": "Art. 27bis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf Verfahren, die im Zeitpunkt des Inkrafttretens der Revision dieser Verordnung vom 23. Oktober 2023 vor einer Gerichtsinstanz hängig sind, wird vor dieser Gerichtsinstanz die vor dem Inkrafttreten der Änderung gültige Fassung dieser Verordnung angewendet."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "e1e92da4ec5fa96b1013f4fce2d1bb62859e373dea0f914a215897f4eb1268ae"
+    },
+    {
+      "id": "kanton/AI/173.810/art_28",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GGV (GS 173.810)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt nach Annahme durch den Grossen Rat in Kraft."
+        }
+      ],
+      "stand": "2024-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/173.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b447ca274ee70f25b6d91cb0952f4676",
+      "sha": "65e8303bfabcacd2de79a6990d5dd23b73222ef2f81c5bd15442461d20ed0d4b"
     }
   ]
 }

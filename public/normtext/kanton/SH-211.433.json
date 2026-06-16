@@ -1,6 +1,266 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/SH/211.433/art_1",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Grundbuchamt erhebt für seine Amtshandlungen Gebühren. Ausgenommen davon sind Änderungen von geringfügiger Bedeutung, wie zum Beispiel Gebäudemutationen, Flächenkorrekturen, Gläubigervormerk-Löschungen, Löschungen von Amtes wegen usw. sowie EDV-bedingte Eintragungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wo diese Verordnung keine bestimmte Gebühr vorsieht, ist eine solche dem Arbeitsaufwand entsprechend festzusetzen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "9279743a05cc259e47dd40b8fbadabc270acbfb3446221810573fe367e5b21d9"
+    },
+    {
+      "id": "kanton/SH/211.433/art_2",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Auslagen sind zu ersetzen. Davon ausgenommen sind Porto- und Telefonauslagen im üblichen Rahmen sowie Auslagen im Sinne des Bundesgesetzes über die Beseitigung von Benachteiligungen von Menschen mit Behinderungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei auswärtigen Amtshandlungen ist die Wegentschädigung als Auslage zu ersetzen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "ae715ee9c36337e38226eb8db5db5d435bbcce49ca4645550ac1cc990cfeb462"
+    },
+    {
+      "id": "kanton/SH/211.433/art_3",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unterliegen gebührenpflichtige Amtshandlungen der Mehrwertsteuer, wird diese zusätzlich in Rechnung gestellt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "449044a81a2fd0bf6ee79a4cf66d6a46eb37f0a480c53d5e297e04552577463f"
+    },
+    {
+      "id": "kanton/SH/211.433/art_4",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beteiligten haften für Gebühren und Auslagenersatz solidarisch. Wer eine Anmeldung kraft öffentlich-rechtlicher Befugnis vornimmt, gilt ebenfalls als Beteiligter oder Beteiligte."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "4cca651dbd9b27019070361a91cfd4156229f9c3048bff5bee08f300a36f48c0"
+    },
+    {
+      "id": "kanton/SH/211.433/art_5",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Amtshandlung kann von der Leistung eines Kostenvorschusses abhängig gemacht werden."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "2b9845fdbedf76c0089e43684abd92c2ef8433d340837346e9f44017bcb72aaf"
+    },
+    {
+      "id": "kanton/SH/211.433/art_6",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen die Berechnung der Gebühren und Auslagen kann innert 20 Tagen nach erfolgter Rechnungstellung beim Regierungsrat Rekurs erhoben werden."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "2ee0d6593d66fad916e00ffc2be277b0b825e39ccb2a83dedc6ab5b498bbe682"
+    },
+    {
+      "id": "kanton/SH/211.433/art_7",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Juristische Personen, die gemeinnützige Zwecke verfolgen und deren Gewinn und Kapital gemäss Gesetz über die direkten Steuern von der Steuerpflicht im Kanton Schaffhausen befreit sind, bezahlen die Hälfte der Gebühren."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "fdb420679a529fa6db136f3141541a5e83ff7b34140a4f6ebc2912d6c896b6f9"
+    },
+    {
+      "id": "kanton/SH/211.433/art_8",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Grundbuchamt ist berechtigt, die Gebühren zu ermässigen, sofern auf seine Empfehlung die Geschäftsabwicklung oder die Grundbuchführung vereinfacht werden können."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "6904bde3e70cb82e84f60864af45a8a978fe5ba233f66d819c11655e8ffa9338"
+    },
+    {
+      "id": "kanton/SH/211.433/art_9",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat kann auf Gesuch des oder der Gebührenpflichtigen in besonderen Fällen die Gebühren ermässigen oder ganz erlassen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "f842a562f097f95fecbe4a636db3b78405fa826fe20e01a98e695c87455148ae"
+    },
+    {
+      "id": "kanton/SH/211.433/art_10",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Vertragssumme im Sinne dieser Verordnung gilt für die Beurkundungsgebühren die im Vertrag aufgenommene Gesamtentschädigung. Für die Berechnung der Eintragungsgebühren ist die aus der Übertragung von Grundeigentum resultierende Entschädigung massgebend."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Tauschverträgen gilt der Gesamtwert sämtlicher vom Vertrag erfassten Grundstücke."
+        },
+        {
+          "absatz": "3",
+          "text": "Hinzuzurechnen sind allfällige durch die Erwerbspartei über die Vertragssumme hinaus zur Bezahlung übernommenen Steuern und weitere Gegenleistungen."
+        },
+        {
+          "absatz": "4",
+          "text": "Wird das Handänderungsobjekt unter dem Steuer- oder Ertragswert veräussert, so gilt dieser als Berechnungsgrundlage."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei Zwangsversteigerung ist der Zuschlagspreis die Berechnungsgrundlage."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "fd27d808ca5ad85ffa5cdd3de0ca4379bfd6f337ce37aaaffa9f55020e776d1b"
+    },
+    {
+      "id": "kanton/SH/211.433/art_11",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird mit dem Kaufvertrag über das Grundstück ein Werkvertrag über ein darauf zu erstellendes Gebäude abgeschlossen und ist als Vertragssumme nicht die Gesamtentschädigung enthalten, so ist für die Berechnung der Beurkundungsgebühren der Preis für das schlüsselfertige Gebäude zum Grundstückpreis hinzuzurechnen, sofern Grundstückveräusserer und Werkersteller tatsächlich oder wirtschaftlich identisch sind oder der Grundstückpreis infolge Mischrechnung für Grundstück und projektierte Baute offensichtlich zu niedrig ist. Beim Kaufvertrag über das Grundstück mit angefangener Baute ist der Preis für das schlüsselfertige Gebäude immer hinzuzurechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Berechnung der Eintragungsgebühren gilt die Entschädigung für den tatsächlich übertragenen Grundstückwert."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Übertragung von Stockwerkeigentum vor Erstellung des Gebäudes gilt für die Berechnung der Beurkundungs- und Eintragungsgebühren immer der Gesamtpreis als Grundlage."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "a6bf13339d7968213b2b381946d9f9c4713aacef8c3d5e0daf7863427507be5f"
+    },
+    {
+      "id": "kanton/SH/211.433/art_12",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Rechtsgeschäfte, durch welche Baurechte für bereits bestehende Gebäude begründet oder gelöscht werden, sind für die Gebührenberechnung den Handänderungen gleichgestellt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "7e6298c919e22c81e704d8a22c6a5dee8da1a9366608255a14504e7d76eb1f1b"
+    },
     {
       "id": "kanton/SH/211.433/art_13",
       "ebene": "kanton",
@@ -54,7 +314,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
       "sha": "86008775aa44b10e89ca6c6a310f396b3fa3bb0c5def69dba97af308efd39e63"
     },
@@ -103,7 +363,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
       "sha": "a64ba8e6cbde03329f9aeb6a33ac5950d8a91cdc14047a22948a7f2b6b4f686e"
     },
@@ -148,7 +408,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
       "sha": "ec1c8b98bb894807c6f28d66d1d05673d43f2d1b1af4e55551450c4e4859e210"
     },
@@ -217,7 +477,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
       "sha": "2515fb03eccda5e23fa57b3326a0300f702b73d19f5772cd2096a9d0a7b82b29"
     },
@@ -306,7 +566,7 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
       "sha": "835ab30ab04e59919352f2528a29d7b51b34acd3baf70eb7a45a1f9201907fa8"
     },
@@ -351,9 +611,120 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
       "sha": "0548ed9e1e812a9956d499ad125a2b5a78d0db575be07efb674c4280f2a0c745"
+    },
+    {
+      "id": "kanton/SH/211.433/art_19",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr beträgt für:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Grundbuchauszug, pro Seite: Fr. 10.00, mindestens Fr. 20.00"
+            },
+            {
+              "marke": "2",
+              "text": "Eigentümerliste, pro Grundstück: Fr. 2.00, pro Fall mindestens Fr. 10.00"
+            },
+            {
+              "marke": "3",
+              "text": "Ausfertigung Schriftstück, pro Seite: Fr. 10.00 bis Fr. 20.00"
+            },
+            {
+              "marke": "4",
+              "text": "Schuldübernahme- bzw. Schuldübergangs-Anzeige: Fr. 20.00"
+            },
+            {
+              "marke": "5",
+              "text": "Änderungs-Nachtrag im Pfandtitel usw.: Fr. 10.00 bis Fr. 50.00"
+            },
+            {
+              "marke": "6",
+              "text": "Kopie, pro Seite: Fr. 1.00"
+            },
+            {
+              "marke": "7",
+              "text": "Amtliche Beglaubigung: Fr. 15.00 bis Fr. 500.00"
+            },
+            {
+              "marke": "8",
+              "text": "Veröffentlichung des Eigentumserwerbs am Grundstück (inkl. Publikationsauslagen): Fr. 30.00 bis Fr. 100.00"
+            },
+            {
+              "marke": "9",
+              "text": "Vorbereitung eines Rechtsgeschäftes, das nicht zustande kommt (zusätzlich Gebühr nach Ziff. 3 und allfällige Auslagen): Fr. 50.00 bis Fr. 500.00"
+            },
+            {
+              "marke": "10",
+              "text": "Abweisung einer Anmeldung oder andere Verfügung: Fr. 50.00 bis Fr. 500.00"
+            },
+            {
+              "marke": "11",
+              "text": "Auskünfte, Beratungen oder andere Verrichtungen, die nicht zu einem gebührenpflichtigen Geschäft führen: Fr. 10.00 bis Fr. 500.00"
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "9bb1405ac8fdaf7d038f4d4b572dcfcb9f54482c9a58aceced02e727e88b5b79"
+    },
+    {
+      "id": "kanton/SH/211.433/art_20",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gelangt ein Rechtsgeschäft, das vor dem Inkrafttreten dieser Verordnung öffentlich beurkundet worden ist, zur Grundbuchanmeldung, so sind die Beurkundungsgebühren nach der bisherigen Verordnung zu berechnen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "20b2d8a49a49dbdfc3db198d175421dfceb7fab4f29fb46691cea0df67e598af"
+    },
+    {
+      "id": "kanton/SH/211.433/art_21",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "Grundbuchgebührenverordnung (SHR 211.433)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. Juli 2000 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist im Amtsblatt zu veröffentlichen und in die kantonale Gesetzessammlung aufzunehmen."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie ersetzt die Verordnung über die Grundbuchgebühren vom 27. Mai 1969."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/211.433",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a108a250c63ed8b04ff1b37a4654e75b",
+      "sha": "d7921c9388f84f965f1d8109d1c2137a2a2d98a137e7ebce8c759f9e86c32ed0"
     }
   ]
 }

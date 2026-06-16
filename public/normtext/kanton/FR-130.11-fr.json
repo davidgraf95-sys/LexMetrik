@@ -1,6 +1,542 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/FR/130.11-fr/art_1",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le présent règlement a pour objet l'exécution de la loi sur la justice et les tarifs des procédures."
+        },
+        {
+          "absatz": "2",
+          "text": "La médiation est réglée par une ordonnance séparée."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "5a55505fdccde9e6f5be2f28cafa777b308959a85ccfbd0dc5134b2e577edf5f"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_2",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont chargés d'exercer les fonctions que la loi sur la justice confie aux officiers et officières de police judiciaire:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "le commandant ou la commandante de la Police cantonale et son adjoint ou adjointe;"
+            },
+            {
+              "marke": "b",
+              "text": "le ou la chef-fe et les officiers et officières de la gendarmerie;"
+            },
+            {
+              "marke": "c",
+              "text": "le ou la chef-fe et les commissaires de la police de sûreté;"
+            },
+            {
+              "marke": "d",
+              "text": "le ou la chef-fe et les officiers et officières des services généraux."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "4ed9883d8f9c8e47d1cee08c4d6a557c64013ebf5cca7e2333d84f6bee70344e"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_3",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La Direction de la sécurité, de la justice et du sport prend toute mesure qui lui paraît adéquate, après avoir entendu le Ministère public, pour protéger des personnes qui restent menacées au terme d'une procédure. Elle peut au besoin requérir la collaboration de la police."
+        },
+        {
+          "absatz": "2",
+          "text": "Le Ministère public informe immédiatement la Direction de la nécessité de prendre des mesures de protection."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "cc8e31530cb4ad3db08d136509134a0a7c89a2a05b95dafe4b944f985bb34e44"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_4",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Service cantonal des contributions met à la disposition des autorités judiciaires pénales compétentes, par voie d'appel, l'avis de taxation notifié des contribuables soupçonnés d'avoir commis des infractions pénales."
+        },
+        {
+          "absatz": "2",
+          "text": "Les présidents ou présidentes des autorités judiciaires et les procureur-e-s ont accès à ces données. Ils peuvent aussi désigner à cet effet une personne de confiance expérimentée; ils en communiquent le nom au Service cantonal des contributions."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "b5b9dd8f0d6f454f42e88951c197e17823b7b2117f00be943af9e5c19cc591fc"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_5",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les avis de taxation contenus dans les dossiers judiciaires ne peuvent être consultés que par le ou la prévenu-e et son ou sa mandataire."
+        },
+        {
+          "absatz": "2",
+          "text": "Les dispositions de la procédure pénale concernant la conservation, la destruction et l'archivage s'appliquent pour le surplus."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "215151157a47f4122318c2d2d17d6ec8d2583e84d5c4c17bf8f32d3b6078f18b"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_6",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Service cantonal des contributions établit un règlement d'utilisation et le soumet pour approbation au Conseil d'Etat."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "5af8dbb58e5baebbc01b17025226dd006ffc44d8042c61d002d3bd604986da99"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_7",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le montant de la récompense accordée en cas de participation du public aux recherches est fixé entre 100 et 5000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Si des circonstances exceptionnelles le justifient et avec l'accord de la Direction de la sécurité, de la justice et du sport, un montant supérieur peut être octroyé. Ce montant ne doit toutefois pas excéder le double du maximum ordinaire."
+        },
+        {
+          "absatz": "3",
+          "text": "La décision sur l'octroi et le montant de la récompense n'est pas sujette à recours."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "05929244f61041925df6925dc829f7661538f32df50561dc3cf3c17b861261b8"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_8",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La personne qui dirige la procédure communique sa décision au Service de la justice, qui est chargé de verser la récompense."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "21541591f6ef3c9adc00a2ee2ba97b7eef3445a98f88314d68530ac246c2888b"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_8_a",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "8_a",
+      "artikelLabel": "Art. 8a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Si une personne est en détention pour des motifs de sûreté ou en exécution anticipée de peine:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "le Ministère public et les tribunaux transmettent immédiatement à l'autorité d'application des sanctions pénales le dispositif de la décision ou du jugement de condamnation à une peine privative de liberté sans sursis, avec sursis partiel ou après révocation d'un sursis ou à une mesure au sens de l'alinéa 3; ils en font de même une fois que la décision ou le jugement est entièrement motivé;"
+            },
+            {
+              "marke": "b",
+              "text": "le Tribunal cantonal informe immédiatement l'autorité d'application des sanctions pénales en cas de recours ou d'appel devant lui ou en cas de recours au Tribunal fédéral; il transmet à ladite autorité une copie de son arrêt et de celui qui a été rendu par le Tribunal fédéral."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Si la personne jugée est en liberté, sa condamnation à une peine privative de liberté sans sursis ou avec sursis partiel, à un travail d'intérêt général sans sursis, après révocation d'un sursis, à une peine privative de liberté de substitution ou à une mesure au sens de l'alinéa 3 est transmise à l'autorité d'application des sanctions pénales immédiatement après l'entrée en force de la décision ou du jugement."
+        },
+        {
+          "absatz": "3",
+          "text": "Dans tous les cas, lorsqu'une mesure pénale au sens des articles 59, 60, 61, 63 ou 64 du code pénal suisse est prononcée, une copie de l'expertise psychiatrique, ainsi que tout autre document important relatif à l'exécution de la mesure, est communiquée immédiatement à l'autorité d'application des sanctions pénales."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "eae950eb7fc40c20e23409036471477f8c7e44a23f61d193c1f767bbd04e15d7"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_10",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les dispositions suivantes déterminent les frais judiciaires (art. 95 al. 2 CPC) qui peuvent être mis à la charge des justiciables pour les affaires civiles traitées par les autorités judiciaires du canton de Fribourg ou pour les prestations requises des greffes."
+        },
+        {
+          "absatz": "2",
+          "text": "Ces frais judiciaires comprennent:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les émoluments de justice, notamment l'émolument forfaitaire de conciliation et de décision;"
+            },
+            {
+              "marke": "b",
+              "text": "les frais d'administration des preuves;"
+            },
+            {
+              "marke": "c",
+              "text": "les frais de traduction;"
+            },
+            {
+              "marke": "d",
+              "text": "les frais de représentation de l'enfant (art. 299 et 300 CPC);"
+            },
+            {
+              "marke": "e",
+              "text": "les droits dus à l'Etat et fixés par les lois spéciales."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Les dispositions du droit fédéral ou des conventions intercantonales en matière de tarifs sont réservées, de même que les dispositions de la législation cantonale spéciale."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "c8bae61c2bc6004a2136fe6137dbd299265ca5e955dff423a6c96946ced26a56"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_11",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les émoluments de justice sont des taxes dues pour les opérations accomplies par le ou la juge civil-e."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque le tarif prévoit un émolument global variable, le montant en est arrêté par le ou la juge saisi-e, eu égard notamment à la valeur litigieuse, à la complexité de la procédure et à la situation économique de la partie amenée à payer les frais."
+        },
+        {
+          "absatz": "3",
+          "text": "Les émoluments de justice sont acquis à l'Etat."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "6c9f07e5f7a2d973fc3d2523d87cedd7959db29f2035f809e7f80283f56eb8ee"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_12",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les frais d'administration des preuves comprennent, outre les indemnités versées aux juges et aux collaborateurs et collaboratrices de l'ordre judiciaire selon les articles 79a et suivants, tous les montants payés par le greffe, notamment les indemnités de témoins, les honoraires et frais d'experts et expertes ainsi que ceux de traducteurs et traductrices et d'interprètes."
+        },
+        {
+          "absatz": "2",
+          "text": "Les frais et honoraires des experts et expertes, des traducteurs et traductrices et des interprètes sont fixés par le président ou la présidente du tribunal, sur la base de la facture présentée et des normes usuellement admises pour la profession. Les intéressé-e-s peuvent être requis de fournir une note détaillée de leurs opérations, déplacements et débours."
+        },
+        {
+          "absatz": "3",
+          "text": "Les indemnités de témoins sont fixées de manière équitable par le président ou la présidente du tribunal. Elles comprennent notamment les frais de déplacement et la compensation d'une éventuelle perte de gain."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "93f6b0c83d50b248a22054d047dfd9e498553e8c09b5f0c92beb741aacad2d1f"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_12_a",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "12_a",
+      "artikelLabel": "Art. 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les frais de représentation de l'enfant dans une procédure matrimoniale (art. 299 et 300 CPC) ou dans une procédure de protection de l'enfant (art. 314abis CC) comprennent les débours et l'indemnité du curateur ou de la curatrice ainsi que les frais de procédure."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque le curateur ou la curatrice de l'enfant est un avocat ou une avocate ou s'il ou si elle est appelé-e à fournir des services propres à son activité professionnelle, il ou elle est indemnisé-e selon la rémunération usuelle dans la profession."
+        },
+        {
+          "absatz": "3",
+          "text": "La représentation de l'enfant n'est pas soumise à une avance de frais."
+        },
+        {
+          "absatz": "4",
+          "text": "Les frais de représentation de l'enfant sont mis à la charge de ses parents, conformément aux règles de répartition prévues aux articles 106 et suivants du code de procédure civile."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "f9f01f246dbc77ec7d6a2a9d178fac868bb69dbd4e18a4fd0557d80e72fc7e66"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_13",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La liste des frais judiciaires est arrêtée à la fin de chaque litige ou procédure et versée au dossier judiciaire."
+        },
+        {
+          "absatz": "2",
+          "text": "Les frais judiciaires sont portés au compte de la partie qui les a occasionnés par ses réquisitions. Si l'acte qui les a provoqués a été requis par les parties d'un commun accord, ils sont répartis, par parts égales, entre les parties."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "9811c54dfe3299f502221fcb2386f74e3e85f9cd00e2cd987622e6e8d9b86197"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_14",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "S'il y a jugement, le montant total de la liste de chaque partie est incorporé au dispositif."
+        },
+        {
+          "absatz": "2",
+          "text": "Dans les autres cas, la liste est signée par le président ou la présidente de l'autorité saisie et le greffier ou la greffière."
+        },
+        {
+          "absatz": "3",
+          "text": "Le greffier ou la greffière attaché-e à chaque autorité judiciaire est chargé-e de l'encaissement du montant de la liste."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "a27936cc55c760b667ba17d85983e6b8e7b1273956aebb76a809866868499bb0"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_15",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La personne qui conteste le principe, la quotité ou la répartition des frais judiciaires (art. 13 al. 2) peut déposer un recours au Tribunal cantonal, conformément aux articles 110 et 319 et suivants du code de procédure civile."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "1a69101c2a7ef28be4b4dfe5a93edca1a53f070add02fa7b854756d910a43bc4"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_16",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Tribunal cantonal a le pouvoir de contrôler la fixation des frais judiciaires prévus à la présente section, indépendamment des recours qui lui sont soumis."
+        },
+        {
+          "absatz": "2",
+          "text": "Il peut se faire produire aussi souvent qu'il le juge convenable l'état des frais de justice civile et les dossiers correspondants."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "846d8becf9c9ef2f9653acbe3c6d1d715809da023e637af678849ed549168197"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_17",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les émoluments du greffe sont des taxes perçues pour des opérations requises:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en dehors de toute procédure;"
+            },
+            {
+              "marke": "b",
+              "text": "en cours de procédure, mais qui ne sont ni prévues par la loi, ni ordonnées par le ou la juge."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ils sont fixés, conformément à la présente section, par le greffe et doivent, en règle générale, être acquittés immédiatement par les requérants et requérantes; ceux-ci peuvent demander que le montant en soit inscrit sur l'acte."
+        },
+        {
+          "absatz": "3",
+          "text": "Les émoluments encaissés par les greffes sont acquis à l'Etat."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "83f71b62645ecbba0e58b702929dcf5d298251b9937d81c9bc7590fcd68357c8"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_18",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'autorité judiciaire saisie perçoit un émolument de conciliation de 50 à 10'000 francs."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "7a05a3ca092019126dddb5cbebe40454253c9ef25709d112c4e1f3624af9444e"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_19",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Tribunal cantonal ou l'une de ses Cours perçoit pour chaque cause un émolument de 100 à 200'000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Le maximum peut être porté à 1'000'000 de francs lorsqu'il s'agit d'affaires traitées en instance cantonale unique ou d'affaires particulièrement importantes."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "8385cf80160e4ef88e8be12b9776aa89e368c6949d5c46deb7316031bd581df8"
+    },
     {
       "id": "kanton/FR/130.11-fr/art_20",
       "ebene": "kanton",
@@ -20,9 +556,1040 @@
       ],
       "stand": "2025-12-01",
       "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "854728daef0b152c366617ce09e282ad",
       "sha": "fa2756e397d814f79b2e0d32cce29c129764e5375abf8399b46503fdc3df7d7e"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_21",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour des contestations portant sur des affaires pécuniaires, le Tribunal cantonal établit l'échelle des émoluments en fonction de la valeur litigieuse."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "c298bb0e5fb3840a952c8c0d1cd1da5fbbb97ae2e9203cc8f8be8556bfc6b1ed"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_22",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsque la valeur litigieuse est supérieure à 30'000 francs, mais ne dépasse pas 100'000 francs, le tribunal des prud'hommes ou son président ou sa présidente fixe un émolument de 50 à 3000 francs. En cas de difficultés spéciales, cet émolument peut être augmenté jusqu'au double du maximum prévu."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour les affaires dont la valeur litigieuse dépasse 100'000 francs, l'émolument est fixé conformément à l'article 20 du présent règlement."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "1a7405b36904455aa03467629521310ee86ae0ccfb908b6db7d49cc2b672abef"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_23",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le président ou la présidente du tribunal civil perçoit, dans les affaires de sa compétence, l'émolument prévu à l'article 20 al. 1 du présent règlement."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "7325429b0667fb604663950ff752134fce867b86362ad175403edcb5e1a30563"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_24",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "En matière de consignation, le président ou la présidente perçoit un émolument calculé en pour-cent de la valeur du bien consigné; l'émolument est de 1 %, avec un minimum de 30 francs et un maximum de 1000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "L'émolument est payé par la personne qui retire le bien consigné."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "b7ae8313218bd6abd5ec214b962dab48d77c17d5dd16729ae6822295a30e26fb"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_25",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les greffiers et greffières des tribunaux perçoivent à titre d'émoluments un montant de 10 francs:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "par page de lettre, extrait, attestation, copie ou autre communication;"
+            },
+            {
+              "marke": "b",
+              "text": "par renseignement exigeant une recherche dont la durée n'excède pas un quart d'heure, et pour chaque quart d'heure en plus;"
+            },
+            {
+              "marke": "c",
+              "text": "par légalisation;"
+            },
+            {
+              "marke": "d",
+              "text": "pour enregistrer un dépôt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Il est perçu 40 centimes par photocopie isolée; lorsque de nombreuses photocopies pouvaient être réalisées ensemble, ce montant par copie peut être réduit."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "5f493ac08a8e1e2458ff444dd774745827cfa7a1a451de18326017b25e6114fd"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_26",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les opérations relatives aux bénéfices d'inventaires, aux liquidations officielles et aux enchères, les émoluments sont calculés conformément aux dispositions prévues, pour des opérations analogues, par le tarif des frais applicable à la loi fédérale sur la poursuite pour dettes et la faillite."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "8f788ac7286181aaaaff953b0d9edf20c8bb64c0a4c1f350f58037fe56f72634"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_27",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le ou la juge de paix perçoit pour chaque cause un émolument de 50 à 2000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "En cas de difficultés spéciales, cet émolument peut être augmenté jusqu'au double du maximum prévu."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "b7a80b356a165e00e42b48af0eb87d3aad8d9d8c9ad93fce6fad59ca8f3406a2"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_28",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La justice de paix perçoit un émolument de 70 à 7000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "En cas de difficultés spéciales, ou si la valeur litigieuse est élevée, cet émolument peut être augmenté jusqu'au double du maximum prévu."
+        },
+        {
+          "absatz": "3",
+          "text": "Lorsqu'elle intervient en qualité d'autorité de protection de l'enfant et de l'adulte, la justice de paix perçoit un émolument de 70 à 5000 francs."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "9403b9a847665ab8b713335cf9b3e88544928bc1e1d1aa4a2a79c4ca5dee454c"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_29",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour l'établissement d'un inventaire selon le code civil, avec estimation, il est perçu un émolument proportionnel à la valeur des biens mobiliers, soit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "1,5 ‰ pour la valeur des biens mobiliers allant jusqu'à 100'000 francs, avec un minimum de 50 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "0,75 ‰ pour la valeur des biens mobiliers qui dépasse 100'000 francs, avec un maximum de 3000 francs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Pour l'examen et l'approbation d'un compte de tutelle ou de curatelle, quel que soit le nombre des audiences, il est perçu un émolument proportionnel à la fortune, soit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "1,5 ‰ pour la partie de la fortune allant jusqu'à 30'000 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "0,75 ‰ pour la partie de la fortune allant de 30'000 à 100'000 francs;"
+            },
+            {
+              "marke": "c",
+              "text": "0,35 ‰ pour la partie de la fortune qui dépasse 100'000 francs, avec un maximum de 250 francs."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Si la fortune nette de l'intéressé-e est inférieure à 10'000 francs et si son revenu est modeste, il n'est perçu aucun émolument pour l'examen et l'approbation des comptes de curatelle."
+        },
+        {
+          "absatz": "4",
+          "text": "Pour les décisions de contrôle judiciaire de l'article 3 al. 2 LPEA, il est perçu un émolument de 30 à 1000 francs."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "d8e830aec0e33f46893e732f9e7cfc9e8f8b52f2cfece8db6b76b31b647e31f9"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_30",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Si l'équité ou des circonstances spéciales l'exigent, le juge de paix ou la justice de paix peut, par décision motivée, renoncer à tout émolument."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "e28136d76174d81a4951be35a47ca0032b14b13d55f326c715ed8a6891c9290c"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_31",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les greffiers et greffières des justices de paix perçoivent à titre d'émoluments un montant de 10 francs:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "par page de lettre, extrait, attestation, copie ou autre communication;"
+            },
+            {
+              "marke": "b",
+              "text": "par renseignement exigeant une recherche dont la durée n'excède pas un quart d'heure, et pour chaque quart d'heure en plus;"
+            },
+            {
+              "marke": "c",
+              "text": "pour la transcription de toute opération dans un protocole ou un registre, par demi-page."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Il est perçu 40 centimes par photocopie isolée; lorsque de nombreuses photocopies pouvaient être réalisées ensemble, ce montant par copie peut être réduit."
+        },
+        {
+          "absatz": "3",
+          "text": "Pour l'inscription et la conservation de titres et valeurs, il est perçu un émolument de 1/2 ‰ par titre ou valeur et par année."
+        },
+        {
+          "absatz": "4",
+          "text": "Pour toute autre opération, selon son importance et sa durée, il est perçu un émolument de 15 à 40 francs."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "5c2df944438a640553fd444555e06e2dc958854d777d59b2f90ad1bb11f9bd20"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_33",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les dispositions suivantes déterminent les frais qui peuvent être mis à la charge des justiciables pour les affaires pénales traitées par les autorités judiciaires du canton de Fribourg et pour les prestations requises des greffes de ces autorités."
+        },
+        {
+          "absatz": "2",
+          "text": "Ces frais comprennent:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les émoluments de justice;"
+            },
+            {
+              "marke": "b",
+              "text": "les débours."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Les dispositions du droit fédéral ou des conventions intercantonales en matière de tarifs sont réservées, de même que les dispositions de la législation cantonale spéciale."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "98ca326945b0fa6e9fda88796dcc9e7e825a28751486c8ddc4921bfdb0d49a20"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_34",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les émoluments de justice sont dus pour les opérations accomplies ou ordonnées par le ou la juge pénal-e."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "cd8234c32e012a36dcdd63186d23e465e7202c8bfcdc5f62bed3f9497e5b56b6"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_35",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les débours comprennent les montants payés par le greffe, notamment les frais imputables à la défense d'office et à l'assistance judiciaire gratuite, les frais de traduction, les frais d'expertise, les frais de participation d'autres autorités ainsi qu'un forfait pour les frais de port et de téléphone et des autres frais analogues, conformément à l'article 422 CPP."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "762c87c2debc2802d0c5520a2da78977cc9c9e1f399ab730fda7c4a200bde9f0"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_36",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'autorité pénale fixe les frais dans la décision finale."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "d8dead7aa27caa83e4ed84ee49bb75a867250f71e747f4f91dace93314cc2a3e"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_37",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'exactitude des postes de la liste de frais et leur conformité à la présente section peuvent être contestées conformément au code de procédure pénale."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "368661d2c3662a3226959f3a7436d7484c298b0db8ad1c04abaab0889b9bb849"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_38",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le greffier ou la greffière attaché-e à l'autorité judiciaire qui a fixé les frais pénaux est chargé-e de leur encaissement. Toutefois, les frais fixés par la Chambre pénale sont inscrits dans la liste des frais à encaisser par le greffier ou la greffière de l'autorité judiciaire concernée, sauf s'il s'agit d'une procédure qui s'est déroulée uniquement devant la Chambre pénale."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsqu'une cause est déférée à un ou une autre juge, le greffier ou la greffière attaché-e à cette autorité rembourse immédiatement les débours du premier juge ou de la première juge saisi-e."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "00e204dee1ba9b59667a7eec37a87ec0cbf6dc4ef525d28c3b534b6ad18ccf32"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_39",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les émoluments du greffe sont perçus pour des opérations requises:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en dehors de toute procédure;"
+            },
+            {
+              "marke": "b",
+              "text": "en cours de procédure, mais qui ne sont ni prévues par la loi, ni ordonnées par le ou la juge."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ces émoluments sont fixés par le greffier ou la greffière."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "d33cad2008cb2797b1ac435f5dab5f8ec2c6fd1872d77ef20aa213e552282ff6"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_40",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Il est perçu, à titre d'émoluments, par cause liquidée définitivement:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "par le Ministère public de Fr. 25 à 30'000"
+            },
+            {
+              "marke": "b",
+              "text": "par le ou la juge des mineurs de Fr. 20 à 1000"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "bb3a67d9b6f149a8f089fdd7ee9c04557d63915e924b219c0bd16bebb45dfd26"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_41",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Tribunal des mesures de contrainte perçoit, par cause, un émolument de 20 à 1000 francs."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "79e080cee63d0a3ff2ae5c9a350de83e3c145ac31969120c2c1ea6a393741fb3"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_42",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Il est perçu, à titre d'émoluments, par cause jugée:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "par le Tribunal pénal économique de Fr. 250 à 100'000"
+            },
+            {
+              "marke": "b",
+              "text": "par le Tribunal pénal d'arrondissement de Fr. 150 à 50'000"
+            },
+            {
+              "marke": "c",
+              "text": "par le Tribunal pénal des mineurs de Fr. 25 à 1500"
+            },
+            {
+              "marke": "d",
+              "text": "par le ou la juge de police de Fr. 20 à 10'000"
+            },
+            {
+              "marke": "e",
+              "text": "par l'autorité pénale compétente en matière de contravention de Fr. 20 à 1500"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "213e1e4a97544ec0f806e39fe990bd6b6427c3e4649453ba9193c227d0bea3a5"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_43",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Il est perçu, à titre d'émoluments, par le Tribunal cantonal ou l'une de ses Cours, par cause jugée, un montant de 100 à 10'000 francs."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "ebcfb46b5e441cda0dd3b8ed896d736eb2630bb79710f7ddd3838843806228fb"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_44",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'autorité judiciaire n'est pas liée par les maxima fixés aux articles 40 à 43 du présent règlement:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dans les causes particulièrement importantes ou présentant des difficultés spéciales;"
+            },
+            {
+              "marke": "b",
+              "text": "dans les procédures concernant plusieurs prévenu-e-s."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "L'émolument ne doit cependant jamais excéder, pour chaque prévenu-e, le double du maximum ordinaire."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "d7a3896b68c4329ccbabdb551f927618540afbdb69d40a72d131261e13d4c188"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_45",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le dénonciateur ou la dénonciatrice, le plaignant ou la plaignante, l'interprète et le témoin cités en justice ainsi que l'expert ou l'experte qui le requièrent reçoivent une indemnité équitable, compte tenu notamment de leur perte de salaire et de leurs frais de subsistance et de déplacement."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour l'expert ou l'experte et pour l'interprète, il sera en outre tenu compte de l'importance et de la difficulté du travail."
+        },
+        {
+          "absatz": "3",
+          "text": "En règle générale, les frais de déplacement sont calculés conformément à l'article 47 du présent règlement."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "1514ea8ca3a38561f15264c3ee23ab0721b9c0c56c3b4ca7305f04a6a6f67bab"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_46",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La police judiciaire établit, le cas échéant, sa note de frais conformément aux tarifs qui la concernent."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "ef2bc4b41156e69a806006010eeebf26fa52e020e44b51bab8e7115837f2d724"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_47",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les juges et les collaborateurs et collaboratrices de l'ordre judiciaire ont droit, pour tout déplacement effectué dans le cadre d'une affaire pénale, à des indemnités de transport calculées conformément au règlement sur le personnel de l'Etat."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsqu'ils effectuent des déplacements en dehors des heures ordinaires de travail, ils ont droit à une indemnité forfaitaire supplémentaire:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "de 25 francs pour les déplacements entrepris entre 19 et 22 heures ou un samedi;"
+            },
+            {
+              "marke": "b",
+              "text": "de 65 francs pour les déplacements entrepris entre 22 et 7 heures ou un dimanche ou un jour férié."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Cette indemnité ne peut pas être cumulée avec celle qui est prévue pour une séance du soir par l'article 79a."
+        },
+        {
+          "absatz": "4",
+          "text": "L'indemnité de subsistance des juges et des collaborateurs et collaboratrices de l'ordre judiciaire, en cas de déplacement en cours de procédure, est de 23 francs par repas. Cette indemnité ne peut pas être cumulée avec celles qui sont prévues à l'article 79c."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "fd0fe7498acf246c755387e4c6846c0384978184fe65ab152b9c3b52f2b012cb"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_48",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsque les indemnités prévues ne couvrent pas les frais de subsistance et de logement, les frais effectifs peuvent être facturés en lieu et place de ces indemnités."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "93e465fa2d1def3a70352e4faf4cc1cd9b0dc918be67281fed82f2dd3c5e053c"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_49",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les indemnités et frais prévus aux articles 45 à 48 du présent règlement ou alloués à toute autre personne requise sont fixés par le ou la juge ou par le président ou la présidente de l'autorité judiciaire saisie."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "e175c4b6867a2c75e5ecd1a576956773a7439baef9ee24ac976e1106eeda9a0d"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_50",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les indemnités allouées au défenseur-e d'office sont fixées conformément à la loi sur la justice et aux articles 56 et suivants du présent règlement."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "bade4cdd1d258c2e9fb92e51f4a32a0c281dc6ac9e8fec13e74b7dcea3fa4828"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_51",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les greffes perçoivent, à titre d'émolument, un montant de 10 francs:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "par page de lettre, extrait, attestation, copie ou autre communication;"
+            },
+            {
+              "marke": "b",
+              "text": "par renseignement exigeant une recherche dont la durée n'excède pas un quart d'heure, et par chaque quart d'heure en plus."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Il est perçu 40 centimes par photocopie isolée; lorsque de nombreuses photocopies pouvaient être réalisées ensemble, ce montant par copie peut être réduit."
+        },
+        {
+          "absatz": "3",
+          "text": "Pour la consultation par un tiers, au greffe, d'un dossier pénal, il est perçu un émolument de 10 francs; l'émolument est de 50 francs si cette consultation a lieu hors du greffe."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "9815f2734ffc9f1f91a1183914ea829203c03045a975629225db7c46fc7fe141"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_56",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les dispositions suivantes règlent le tarif en matière d'assistance judiciaire au civil et au pénal et d'aide aux victimes d'infractions."
+        },
+        {
+          "absatz": "2",
+          "text": "L'assistance judiciaire en matière administrative est réglée par le code de procédure et de juridiction administrative."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "c640daed03accd2e884db10abd0da7e3d4f62626351b55ffb63caeb62fe5ac63"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_57",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'indemnité équitable allouée au défenseur-e d'office en matière civile et pénale est fixée compte tenu du travail requis ainsi que de l'importance et de la difficulté de l'affaire."
+        },
+        {
+          "absatz": "2",
+          "text": "En cas de fixation sur la base d'une liste de frais détaillée, l'indemnité horaire est de 180 francs. Si l'affaire a été essentiellement traitée par un ou une stagiaire, les opérations qu'il ou elle a menées sont rémunérées sur la base d'une indemnité horaire de 120 francs; la liste de frais indique quelles opérations ont été menées par des stagiaires."
+        },
+        {
+          "absatz": "3",
+          "text": "En matière civile, l'indemnité est fixée par le président ou la présidente de l'autorité saisie ou par un ou une juge délégué-e. En matière pénale, elle est fixée par l'autorité saisie en même temps que celle-ci statue sur le fond, conformément à l'article 135 al. 2 CPP."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "a227f91dd5dda237c814202e7d8ca3ab7c082aba4e6654565026dd4aee25b432"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_58",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les débours nécessaires à la conduite du procès sont remboursés au prix coûtant, sous réserve de ce qui suit."
+        },
+        {
+          "absatz": "2",
+          "text": "L'autorité fixe forfaitairement les frais de copie, de port et de téléphone à 5 % de l'indemnité de base."
+        },
+        {
+          "absatz": "3",
+          "text": "Les indemnités de déplacement, englobant tous les frais (transport, repas, etc.) ainsi que le temps y consacré, sont fixées conformément aux articles 76 et suivants du présent règlement."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "29e369a979c718a41ce30e19df8b423c9d0b7270e0c99d9b0b34878cf5a73797"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_59",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Service de la justice est compétent pour exiger le remboursement de l'assistance judiciaire."
+        },
+        {
+          "absatz": "2",
+          "text": "Il peut exiger tous les documents nécessaires à l'établissement de la situation financière de la personne tenue de rembourser."
+        },
+        {
+          "absatz": "3",
+          "text": "En cas de contestation, il rend une décision conformément au code de procédure et de juridiction administrative."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "3c2cfe3ad4a163d4cd849ea9458c00332233ca0cc4ef239771655ccaab4e4b11"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_60",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'avocat ou l'avocate qui assume le service de permanence doit être joignable et pouvoir intervenir sans délai."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsqu'il ou elle doit intervenir durant le service de permanence, l'avocat ou l'avocate a droit à une indemnité supplémentaire d'un montant de 60 francs par heure."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "8f716660112295af9daf549f94c1c0453f69dbd8ada469b7745a5ccc5b88b291"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_61",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les articles 57 et 58 du présent règlement sont applicables à la fixation des équitables indemnités allouées par l'Etat aux avocats et avocates conformément aux articles 3 et 4 LAVI."
+        },
+        {
+          "absatz": "2",
+          "text": "L'indemnité globale équitable est fixée sur présentation d'une liste détaillée des opérations de l'avocat ou de l'avocate."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "8cc36c06926b898460ff021d5d760471af9349489834dbe01ce532b8976c8c52"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_61_a",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "61_a",
+      "artikelLabel": "Art. 61a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les décisions de fixation sont susceptibles de recours au Tribunal cantonal, conformément aux codes de procédure civile et de procédure pénale."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "46b01b8b5b9420ac52872f5a295fbc4891304f912473a9bf3c87f959888cbda1"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_62",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les dispositions suivantes règlent la fixation des honoraires et débours d'avocat dus à titre de dépens en matière civile."
+        },
+        {
+          "absatz": "2",
+          "text": "Elles sont applicables par analogie en matière de protection de l'enfant et de l'adulte."
+        },
+        {
+          "absatz": "3",
+          "text": "Elles sont également applicables par analogie aux dépens alloués par les organes de la justice civile statuant sur des litiges relevant du droit de la poursuite; les tarifs spéciaux sont réservés."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "5e86d4d254772958b9b3cbb47f9b1ea2d2276e0152983d00068ae6075ac79ad3"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_63",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les honoraires de l'avocat ou de l'avocate dus à titre de dépens sont fixés de manière globale (art. 64) ou de manière détaillée (art. 65)."
+        },
+        {
+          "absatz": "2",
+          "text": "En cas de fixation globale, l'autorité tiendra compte notamment de la nature, de la difficulté et de l'ampleur de la procédure et du travail nécessaire de l'avocat ou de l'avocate ainsi que de l'intérêt et de la situation économiques des parties."
+        },
+        {
+          "absatz": "3",
+          "text": "En cas de fixation détaillée, l'autorité tiendra compte notamment du temps nécessaire à la conduite du procès dans des circonstances ordinaires ainsi que des intérêts en jeu."
+        },
+        {
+          "absatz": "4",
+          "text": "Les montants mentionnés dans la présente section ne comprennent pas la taxe sur la valeur ajoutée; celle-ci sera indiquée séparément dans la liste présentée par l'avocat ou l'avocate et dans la décision de fixation."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "24113b9392d88d7aba1666cf5ad1c2d290bd48f4b4fd84f5a8b1b78bca033be6"
     },
     {
       "id": "kanton/FR/130.11-fr/art_64",
@@ -77,9 +1644,867 @@
       ],
       "stand": "2025-12-01",
       "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "854728daef0b152c366617ce09e282ad",
       "sha": "52cb342f214c12c70e18096d63853f441cedd416cf7060e56fdd61f5fd12d936"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_65",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dans les causes autres que celles qui sont visées à l'article 64 du présent règlement, la fixation des honoraires dus à titre de dépens a lieu sur la base d'un tarif horaire de 250 francs. L'article 66 ci-après est réservé."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "a3d9d32b159d28b5835011b3d5c3ce0fcd9cb65f345b9506a5a920017d856faa"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_66",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Un supplément équitable peut être alloué lorsque des circonstances particulières, qui n'ont pas influé sur le nombre d'heures de travail fourni, le justifient. L'indemnité globale ne peut toutefois être supérieure au double du montant des honoraires fixés selon l'article 65 du présent règlement."
+        },
+        {
+          "absatz": "2",
+          "text": "Dans les causes de nature pécuniaire, les honoraires fixés conformément à l'article 65 sont majorés jusqu'à un maximum de 350 %, selon l'échelle suivante:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "15 % pour une valeur déterminante de 42'000 francs, taux qui progresse selon l'annexe 2 par tranches de 1000 francs supplémentaires jusqu'à 140'000 francs; la valeur déterminante est arrondie aux 1000 francs inférieurs;"
+            },
+            {
+              "marke": "b",
+              "text": "50 % pour une valeur déterminante de 140'000 francs, taux qui progresse selon l'annexe 2 par tranches de 5000 francs supplémentaires jusqu'à 700'000 francs; la valeur déterminante est arrondie aux 5000 francs inférieurs;"
+            },
+            {
+              "marke": "c",
+              "text": "150 % pour une valeur déterminante de 700'000 francs, taux qui progresse selon l'annexe 2 par tranches de 100'000 francs supplémentaires jusqu'à 3'000'000 de francs; la valeur déterminante est arrondie aux 100'000 francs inférieurs;"
+            },
+            {
+              "marke": "d",
+              "text": "250 % pour une valeur déterminante de 3'000'000 de francs, taux qui progresse selon l'annexe 2 par tranches de 500'000 francs supplémentaires jusqu'à 17'000'000 de francs; la valeur déterminante est arrondie aux 500'000 francs inférieurs;"
+            },
+            {
+              "marke": "e",
+              "text": "350 % pour une valeur déterminante de 17'000'000 de francs et au-delà."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "La valeur déterminante au sens de l'alinéa 2 est la valeur litigieuse calculée conformément aux articles 91 et suivants du code de procédure civile."
+        },
+        {
+          "absatz": "4",
+          "text": "Lorsque, dans un procès entre époux, des prétentions litigieuses relatives au régime matrimonial ont fait l'objet de la procédure probatoire, l'autorité fixe équitablement le travail spécifique à ces conclusions et alloue la moitié du supplément correspondant à la valeur déterminante de ces conclusions. Cette disposition est applicable par analogie aux procès entre partenaires enregistrés lorsque les partenaires ont conclu une convention sur les biens au sens de l'article 25 de la loi fédérale du 18 juin 2004 sur le partenariat enregistré entre personnes du même sexe."
+        },
+        {
+          "absatz": "5",
+          "text": "La modification de la valeur litigieuse entraîne la modification de la valeur déterminante dès le moment où la valeur litigieuse a été valablement modifiée en procédure."
+        },
+        {
+          "absatz": "6",
+          "text": "Le supplément peut être réduit jusqu'à la moitié du montant fixé selon l'alinéa 2, lorsque le procès se termine sans jugement, lorsque la partie condamnée aux dépens était défaillante, lorsque la procédure a été particulièrement brève ou lorsqu'il y a une disproportion manifeste entre la valeur litigieuse et l'intérêt des parties au procès."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "003bc27dcbbbf91a122d94e76ce13e05f48ac01d678cb95f53d1a9f62de20f58"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_67",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La correspondance et les communications téléphoniques nécessaires à la conduite du procès mais qui ne sortent pas du cadre d'une simple gestion administrative du dossier, notamment les lettres de transmission et les requêtes de prolongation de délai ou de renvoi d'audience, donnent exclusivement droit à un paiement forfaitaire, à titre d'honoraires, de 500 francs au maximum."
+        },
+        {
+          "absatz": "2",
+          "text": "Exceptionnellement, l'autorité de fixation peut aller jusqu'à un maximum de 700 francs, notamment lorsque la cause a nécessité une correspondance d'une ampleur extraordinaire."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "f77e26ea3beec179dbedc3393b48f0452457ad3c0a6712e7968c0b3fbdb4b133"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_68",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les débours nécessaires à la conduite du procès sont remboursés au prix coûtant, sous réserve de ce qui suit."
+        },
+        {
+          "absatz": "2",
+          "text": "L'autorité fixe forfaitairement les frais de copie, de port et de téléphone à 5 % de l'indemnité de base sans majoration."
+        },
+        {
+          "absatz": "3",
+          "text": "Les indemnités de déplacement, englobant tous les frais (transport, repas, etc.) ainsi que le temps y consacré, sont fixées par les articles 76 et suivants du présent règlement."
+        },
+        {
+          "absatz": "4",
+          "text": "En cas de fixation globale sans dépôt de liste, l'autorité tient équitablement compte des débours lors de la fixation de l'indemnité."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "0dd5cd658fd305ada2a9cf4187580be2e6914c8797b0960c16c661c0f505ecb9"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_69",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les honoraires et débours d'avocat requis à titre de dépens sont présentés sous la forme d'une liste détaillée signée par l'avocat ou l'avocate de l'ayant droit."
+        },
+        {
+          "absatz": "2",
+          "text": "Toutefois, en cas de fixation globale, l'avocat ou l'avocate peut présenter une liste détaillée."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "8dd6904219fac5fd221212be685c29bf073fcd128668c46e20f734f102ce9eb6"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_70",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La liste indique, dans l'ordre chronologique, les prestations effectuées par l'avocat ou l'avocate, leur objet et leur durée; elle comprend également l'indication du montant des honoraires et des débours correspondant à chaque prestation."
+        },
+        {
+          "absatz": "2",
+          "text": "La liste peut être remplacée par une copie de la fiche comptable comprenant toutes ces indications."
+        },
+        {
+          "absatz": "3",
+          "text": "La liste mentionnera en outre, après le détail des prestations, le total des honoraires, celui des indemnités de route et celui des autres débours."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "20672723ce4211a4ef3a5fab16984ab1a13354a1356206636622a18a9d2ab23b"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_71",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La liste détaillée doit être remise à l'autorité de fixation dans un délai fixé par le président ou la présidente, ou par le ou la juge délégué-e."
+        },
+        {
+          "absatz": "2",
+          "text": "A l'expiration du délai, l'autorité procède d'office à la fixation conformément à l'article 73 al. 2."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "3201f96887af63168e938f8d36bbf7ab187e5cb91fa7adb5fcdc9c68df11d0ba"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_72",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'autorité de fixation est celle qui a alloué définitivement les dépens."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "a64089e9175b179c3dcaaa39ef5c0d1f5ba8fef47a89409b37a1f10e707c542d"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_73",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'autorité de fixation rend sa décision sur le vu du dossier judiciaire et, le cas échéant, de la liste détaillée. Elle vérifie la réalité des opérations et leur nécessité pour la conduite du procès; elle provoque, au besoin, des explications contradictoires."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque la liste détaillée n'a pas été présentée conformément aux exigences des articles 69 à 71 du présent règlement, l'autorité de fixation statue d'office sur la base du dossier judiciaire et des pièces produites."
+        },
+        {
+          "absatz": "3",
+          "text": "En cas de fixation détaillée, la décision de fixation est, en principe, portée directement sur la liste par l'indication du total de la somme allouée ainsi que de l'état des dépens qui en résulte; l'autorité de fixation indique, en outre, sur la liste la mesure dans laquelle elle a décidé de ne pas admettre des débours ou des honoraires."
+        },
+        {
+          "absatz": "4",
+          "text": "La décision de fixation des dépens figure dans la décision finale, laquelle indique la voie et le délai de recours."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "e178b89e6cce3cc284b63868ad0fc174d732dd1a9a2d047414782385468d1f44"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_75",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La procédure est réglée par le code de procédure civile."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "a4c59deed3ca9a70f1209c1c0cca40fffab6ed812d1cdfa2908b23e776915843"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_75_a",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "75_a",
+      "artikelLabel": "Art. 75a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'Etat prend en charge les frais de défense du ou de la prévenu-e, aux conditions prévues aux articles 429 al. 1 let. a et 430 CPP."
+        },
+        {
+          "absatz": "2",
+          "text": "La fixation des honoraires et débours d'avocat et d'avocate dus au titre d'indemnité a lieu sur la base d'un tarif horaire de 250 francs. Toutefois, dans les cas particulièrement complexes ou nécessitant des connaissances spécifiques, le tarif horaire peut être augmenté jusqu'à 350 francs."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "85ed1614c1ee050332bf24d512d18661515b835c14d7d7a6d034952309fafb8c"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_76",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les indemnités de déplacement des avocats et avocates ou de leurs stagiaires hors de la localité où ils ont leur étude sont fixées conformément aux dispositions de la présente section et englobent tous les frais (transport, repas, perte de temps, etc.)."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "72a2d26b5fd7a418ef428f26997c67c4b74cd34bc907eda36b2ee604dc50bd0e"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_77",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les déplacements à l'intérieur du canton, les avocats et avocates ou leurs stagiaires ont droit à une indemnité de 2 fr. 50 par kilomètre parcouru."
+        },
+        {
+          "absatz": "2",
+          "text": "La distance est calculée d'après le trajet routier le plus court, sur la base du tableau des distances de l'annexe 1 du présent règlement."
+        },
+        {
+          "absatz": "3",
+          "text": "Pour les déplacements hors du canton, l'indemnité est fixée conformément à l'alinéa 1."
+        },
+        {
+          "absatz": "4",
+          "text": "Pour les déplacements à l'intérieur de la localité où est située l'étude, l'indemnité aller-retour est fixée forfaitairement à 30 francs."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "c4f27bb3f22f459c6c3b22f7e86f34b1da8ffd106f1547909870d6df37f8fdde"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_78",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsque l'Etat indemnise un ou une défenseur-e d'office, l'article 77 du présent règlement est applicable. Toutefois, lors de déplacements hors du canton, dès le 61e kilomètre, l'indemnité correspond au prix du billet de chemin de fer de première classe, plus un montant de 160 francs par demi-journée et de 90 francs par nuit."
+        },
+        {
+          "absatz": "2",
+          "text": "L'autorité chargée du paiement rectifie d'office les indemnités qui ne sont pas calculées conformément à cet article."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "c8eea8f03cf8b1cf1854be1e885b1c9d500a526380ae1c772d8fa1d4491850c9"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_79",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les indemnités de déplacement allouées à des avocats et avocates domiciliés hors du canton sont celles qui sont fixées à l'article 77 du présent règlement."
+        },
+        {
+          "absatz": "2",
+          "text": "Elles restent à la charge du client ou de la cliente, à moins que le ou la juge ne décide expressément, dans le cadre des articles 104 et suivants du code de procédure civile, de les mettre partiellement ou totalement à la charge de la partie adverse."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "d8c00eb5047759d24749870eb8c5b1bac1d4eca2a032edb30c4714fd8af72272"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_79_a",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "79_a",
+      "artikelLabel": "Art. 79a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les juges non professionnels perçoivent une indemnité de séance de 190 francs par journée et de 125 francs par demi-journée."
+        },
+        {
+          "absatz": "2",
+          "text": "Le montant de l'indemnité est calculé sur une journée si la séance dure quatre heures et plus et sur une demi-journée si la séance dure moins de quatre heures mais deux heures ou plus; il est de 60 francs si la séance dure moins de deux heures."
+        },
+        {
+          "absatz": "3",
+          "text": "La participation aux séances qui débutent après 17 heures est indemnisée selon les mêmes modalités; toutefois, même si la séance dure moins de deux heures, elle est indemnisée pour une demi-journée."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "50b0e43494f9ac153b683104ce9b24ac01d876810f55f563a0e591c372c175df"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_79_b",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "79_b",
+      "artikelLabel": "Art. 79b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les juges suppléants du Tribunal cantonal reçoivent un forfait horaire pour la préparation des séances et la rédaction de rapports. Celui-ci s'élève à 180 francs s'ils exercent une activité lucrative indépendante et à 110 francs s'ils sont salariés."
+        },
+        {
+          "absatz": "2",
+          "text": "L'alinéa 1 s'applique par analogie aux juges arbitres siégeant aux tribunaux arbitraux en assurances sociales."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "f64e73e8c0f66a5006f88f1eca809ab5bdb52f1a58b3531660e5bae571332dfd"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_79_c",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "79_c",
+      "artikelLabel": "Art. 79c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les juges professionnels et les collaborateurs et collaboratrices de l'ordre judiciaire n'ont droit à une indemnité de séance que pour les séances fixées après 17 heures."
+        },
+        {
+          "absatz": "2",
+          "text": "La participation à ces séances est indemnisée conformément à l'article 79a."
+        },
+        {
+          "absatz": "3",
+          "text": "La même indemnité est accordée pour les séances fixées le samedi, le dimanche et les jours fériés."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "899766fd62cadb7ea540775c6fb49d0fefd6f3809a04f12762540187ce20b607"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_79_d",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "79_d",
+      "artikelLabel": "Art. 79d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les dispositions du règlement du personnel de l'Etat s'appliquent par analogie aux indemnités de subsistance, aux indemnités de déplacement et aux indemnités en cas de dommages."
+        },
+        {
+          "absatz": "2",
+          "text": "Toutefois, pour les juges du Tribunal cantonal, les indemnités de déplacement sont calculées à raison de 74 centimes par kilomètre parcouru par le trajet le plus direct si l'intéressé-e utilise son véhicule privé ou selon les frais effectifs s'il utilise un autre moyen de transport."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "ab388f66b8fd7045fc829c29c58cc5d6625eed1e79f68a6552edfed0ae7e4efd"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_79_e",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "79_e",
+      "artikelLabel": "Art. 79e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les indemnités dues en vertu de la section 2 sont versées par le Service du personnel et d'organisation, sur la base d'un décompte mensuel adressé par les autorités concernées au Service de la justice."
+        },
+        {
+          "absatz": "2",
+          "text": "La Direction de la sécurité, de la justice et du sport adapte les indemnités à l'évolution de l'indice des prix à la consommation. Cette adaptation est calculée à la fin d'une législature, en novembre (indice de base: décembre 2014 = 100 pts); elle prend effet pour la législature suivante."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "77ad06ea0bbefb2187fe279ebcf5204530b8d62d0b96d19d6bb6fa75a3090f9e"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_80",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La rémunération des assesseur-e-s et assesseur-e-s suppléants des Cours spéciales du Tribunal cantonal est fixée par les articles 2 et 2bis de l'arrêté du 5 décembre 1977 fixant les indemnités des membres des autorités judiciaires."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "0fd7849787409a2137f49e999d916660dbf8c8e57201bd23eb21a9599672b3e8"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_81",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sont abrogés:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "l'ordonnance du 16 décembre 2003 sur la médiation dans la juridiction pénale des mineurs (OMJPM) (RSF 132.62);"
+            },
+            {
+              "marke": "b",
+              "text": "le tarif du 6 septembre 1966 des frais judiciaires en matière civile (RSF 135.11);"
+            },
+            {
+              "marke": "c",
+              "text": "le tarif du 12 décembre 1969 des frais judiciaires en matière pénale (RSF 135.61);"
+            },
+            {
+              "marke": "d",
+              "text": "le tarif du 14 juin 2000 concernant les indemnités allouées aux défenseurs en matière d'assistance judiciaire au civil et au pénal et d'aide aux victimes d'infractions (RSF 136.12);"
+            },
+            {
+              "marke": "e",
+              "text": "le tarif du 28 juin 1988 des honoraires et débours d'avocat dus à titre de dépens en matière civile (RSF 137.21);"
+            },
+            {
+              "marke": "f",
+              "text": "l'arrêté du 4 juin 1974 fixant les indemnités de déplacement des avocats (RSF 137.25);"
+            },
+            {
+              "marke": "g",
+              "text": "l'arrêté du 9 juillet 1996 d'exécution de la loi fédérale sur l'égalité entre femmes et hommes (RSF 222.5.21);"
+            },
+            {
+              "marke": "h",
+              "text": "l'arrêté du 23 novembre 1998 désignant les officiers de la Police cantonale chargés d'exercer les fonctions d'officiers de police judiciaire (RSF 32.15);"
+            },
+            {
+              "marke": "i",
+              "text": "le tarif du 16 novembre 1998 des indemnités de partie en matière pénale (RSF 32.16);"
+            },
+            {
+              "marke": "j",
+              "text": "l'ordonnance du 27 janvier 2009 concernant l'accès des autorités judiciaires, par voie d'appel, aux données du Service cantonal des contributions (RSF 32.17);"
+            },
+            {
+              "marke": "k",
+              "text": "l'ordonnance du 21 décembre 2004 concernant l'investigation secrète (RSF 32.71);"
+            },
+            {
+              "marke": "l",
+              "text": "l'arrêté du 4 septembre 1920 ordonnant des mesures pour assurer le maintien de la tranquillité et de l'ordre (RSF 550.14);"
+            },
+            {
+              "marke": "m",
+              "text": "l'ordonnance du 31 mars 2008 concernant la surveillance de la correspondance par télécommunication pour retrouver une personne disparue (RSF 551.42);"
+            },
+            {
+              "marke": "n",
+              "text": "l'arrêté du 16 août 1995 introduisant une procédure simple et rapide pour les contestations relatives aux assurances complémentaires à l'assurance-maladie sociale (RSF 842.1.19)."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "a94c76dfe744586aab99b5825b843265b6c7480ca12909b06f2f4d9170c43fca"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_82",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les actes réglementaires suivants sont modifiés selon les dispositions figurant dans l'annexe modificatrice, qui fait partie intégrante du présent règlement:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "le règlement du 8 avril 1997 concernant la détention en matière de droit des étrangers (RSF 114.22.13);"
+            },
+            {
+              "marke": "2",
+              "text": "l'ordonnance du 18 décembre 2007 relative à la lutte contre la traite des êtres humains (RSF 114.22.14);"
+            },
+            {
+              "marke": "3",
+              "text": "l'ordonnance du 12 mars 2002 fixant les attributions des Directions du Conseil d'Etat et de la Chancellerie d'Etat (OADir) (RSF 122.0.12);"
+            },
+            {
+              "marke": "4",
+              "text": "l'ordonnance du 9 juillet 2002 désignant les unités administratives des Directions du Conseil d'Etat et de la Chancellerie d'Etat (RSF 122.0.13);"
+            },
+            {
+              "marke": "5",
+              "text": "le règlement du 17 décembre 2002 du personnel de l'Etat (RPers) (RSF 122.70.11);"
+            },
+            {
+              "marke": "6",
+              "text": "l'arrêté du 19 novembre 1990 concernant la classification des fonctions du personnel de l'Etat (RSF 122.72.21);"
+            },
+            {
+              "marke": "7",
+              "text": "le tarif du 9 janvier 1968 des émoluments administratifs (RSF 126.21);"
+            },
+            {
+              "marke": "8",
+              "text": "l'arrêté du 8 octobre 1832 fixant le rang des autorités subalternes dans les cérémonies publiques (RSF 129.3.21);"
+            },
+            {
+              "marke": "9",
+              "text": "l'arrêté du 8 juillet 1986 concernant les cartes de légitimation pour magistrats et collaborateurs de l'Etat (RSF 129.4.11);"
+            },
+            {
+              "marke": "10",
+              "text": "l'arrêté du 5 décembre 1977 fixant les indemnités des membres des autorités judiciaires (RSF 131.0.16);"
+            },
+            {
+              "marke": "11",
+              "text": "le tarif du 17 décembre 1991 des frais de procédure et des indemnités en matière de juridiction administrative (RSF 150.12);"
+            },
+            {
+              "marke": "12",
+              "text": "l'arrêté du 16 août 1989 sur le placement d'enfants (RSF 212.3.85);"
+            },
+            {
+              "marke": "13",
+              "text": "l'arrêté du 14 juin 2000 relatif à l'assistance judiciaire en matière de privation de liberté à des fins d'assistance (RSF 212.5.52);"
+            },
+            {
+              "marke": "14",
+              "text": "le règlement du 9 décembre 1986 d'exécution de la loi sur le registre foncier (RSF 214.5.11);"
+            },
+            {
+              "marke": "15",
+              "text": "l'arrêté du 26 septembre 1988 établissant le contrat-type de travail dans l'agriculture (RSF 222.5.92);"
+            },
+            {
+              "marke": "16",
+              "text": "l'arrêté du 25 avril 1972 concernant les personnes compétentes pour former opposition à l'encontre des commandements de payer notifiés à l'Etat, conformément à l'article 65 de la loi fédérale du 11 avril 1889 sur la poursuite pour dettes et la faillite (RSF 28.17);"
+            },
+            {
+              "marke": "17",
+              "text": "l'ordonnance du 12 décembre 2006 concernant la Commission consultative de libération conditionnelle et d'examen de la dangerosité (RSF 340.32);"
+            },
+            {
+              "marke": "18",
+              "text": "l'arrêté du 18 novembre 1986 fixant le statut des visiteurs des détenus (RSF 340.43);"
+            },
+            {
+              "marke": "19",
+              "text": "le règlement du 12 décembre 2006 des prisons (RSF 341.2.11);"
+            },
+            {
+              "marke": "20",
+              "text": "le règlement du 23 juin 2004 sur la protection civile (RPCi) (RSF 52.11);"
+            },
+            {
+              "marke": "21",
+              "text": "l'ordonnance du 13 mai 2003 concernant l'avancement et la promotion des agents et agentes de la Police cantonale (RSF 551.13);"
+            },
+            {
+              "marke": "22",
+              "text": "l'ordonnance du 12 décembre 2005 concernant les profils d'ADN (RSF 551.17);"
+            },
+            {
+              "marke": "23",
+              "text": "le règlement du 20 décembre 1983 relatif à la retraite des agents de la Police cantonale (RSF 551.33);"
+            },
+            {
+              "marke": "24",
+              "text": "l'arrêté du 15 décembre 1998 d'exécution du concordat sur les entreprises de sécurité (RSF 559.61);"
+            },
+            {
+              "marke": "25",
+              "text": "le règlement du 22 août 2000 sur les subventions (RSub) (RSF 616.11);"
+            },
+            {
+              "marke": "26",
+              "text": "l'arrêté du 13 février 2001 concernant l'échéance et la perception des créances fiscales (RSF 631.13);"
+            },
+            {
+              "marke": "27",
+              "text": "l'arrêté du 5 janvier 1995 d'exécution de la loi fédérale sur l'impôt fédéral direct (RSF 634.1.11);"
+            },
+            {
+              "marke": "28",
+              "text": "l'arrêté du 12 mars 1973 concernant la protection de la faune et de la flore fribourgeoise (RSF 721.1.11);"
+            },
+            {
+              "marke": "29",
+              "text": "l'arrêté du 24 mars 1981 relatif à la protection des escargots (RSF 721.1.21);"
+            },
+            {
+              "marke": "30",
+              "text": "l'arrêté du 9 juin 1998 concernant la cueillette des champignons (RSF 721.1.51);"
+            },
+            {
+              "marke": "31",
+              "text": "l'ordonnance du 14 décembre 2009 concernant la réserve mycologique La Chanéaz, sur le territoire de la commune de Montagny, forêt domaniale de la Chanéaz (RSF 721.1.52);"
+            },
+            {
+              "marke": "32",
+              "text": "l'arrêté du 12 octobre 1999 concernant la réserve mycologique Moosboden, sur le territoire de la commune de Cerniat, forêt domaniale du Höllbach (RSF 721.1.53);"
+            },
+            {
+              "marke": "33",
+              "text": "le règlement du 31 mai 1983 concernant la réserve naturelle du lac de Pérolles (RSF 721.2.31);"
+            },
+            {
+              "marke": "34",
+              "text": "le règlement du 11 janvier 1983 concernant la protection de la réserve du Vanil-Noir (RSF 721.2.51);"
+            },
+            {
+              "marke": "35",
+              "text": "l'arrêté du 19 avril 1995 concernant la réserve forestière des Vanils du Paradis et de la Fayère, sur le territoire de la commune d'Estavannens (RSF 721.3.12);"
+            },
+            {
+              "marke": "36",
+              "text": "le règlement du 14 novembre 1966 d'exécution de la loi du 6 mai 1965 sur l'assurance des b&acirc;timents contre l'incendie et les autres dommages (RSF 732.1.11);"
+            },
+            {
+              "marke": "37",
+              "text": "le règlement du 24 août 1982 concernant la Commission des mesures administratives en matière de circulation routière (RSF 781.12);"
+            },
+            {
+              "marke": "38",
+              "text": "l'arrêté du 4 juin 1973 d'exécution de la loi fédérale du 21 mars 1969 sur le commerce des toxiques (loi sur les toxiques) (RSF 818.11);"
+            },
+            {
+              "marke": "39",
+              "text": "l'arrêté du 5 décembre 2000 sur les sépultures (RSF 821.5.11);"
+            },
+            {
+              "marke": "40",
+              "text": "l'arrêté du 3 octobre 1983 concernant la mise en vigueur et l'introduction de la loi fédérale du 25 juin 1982 sur la prévoyance professionnelle vieillesse, survivants et invalidité (LPP) (RSF 841.4.12);"
+            },
+            {
+              "marke": "41",
+              "text": "le règlement du 5 février 1990 d'exécution de la loi instituant un Office de conciliation en matière de conflits collectifs de travail (RSF 862.21);"
+            },
+            {
+              "marke": "42",
+              "text": "l'arrêté du 22 octobre 1880 réglant l'application des différentes lois sur la sanctification des dimanches et fêtes (RSF 865.11);"
+            },
+            {
+              "marke": "43",
+              "text": "l'ordonnance du 2 juin 2004 sur les mesures d'accompagnement à la libre circulation des personnes (OMA) (RSF 866.0.31);"
+            },
+            {
+              "marke": "44",
+              "text": "l'arrêté du 9 février 1971 d'application de la législation fédérale sur les épizooties (AAE) (RSF 914.10.11);"
+            },
+            {
+              "marke": "45",
+              "text": "l'arrêté du 24 octobre 1938 concernant l'exécution de la loi du 2 décembre 1899 sur le commerce du bétail, révisée partiellement par les lois des 11 mars 1921 et 17 novembre 1923 (RSF 914.3.21);"
+            },
+            {
+              "marke": "46",
+              "text": "le règlement du 11 décembre 2001 sur les forêts et la protection contre les catastrophes naturelles (RFCN) (RSF 921.11);"
+            },
+            {
+              "marke": "47",
+              "text": "l'ordonnance du 16 décembre 2003 sur la surveillance de la faune et de la flore, de la chasse et de la pêche (OSurv) (RSF 922.21);"
+            },
+            {
+              "marke": "48",
+              "text": "le règlement du 24 novembre 2009 concernant l'exercice de la pêche concédé par permis en 2010, 2011 et 2012 (RSF 923.12);"
+            },
+            {
+              "marke": "49",
+              "text": "l'arrêté du 23 septembre 1996 sur le contrôle des prix (RSF 942.11);"
+            },
+            {
+              "marke": "50",
+              "text": "le règlement du 27 novembre 1978 d'exécution de la loi du 15 novembre 1977 sur les cinémas et les thé&acirc;tres (RSF 953.11)."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Au surplus, les organes chargés des publications officielles adaptent les actes réglementaires qui ne sont pas modifiés par le présent règlement, notamment pour y introduire la formule standard renvoyant à la loi sur la justice. Si l'adaptation se fait après la publication de l'acte dans le Recueil officiel fribourgeois, un avis est publié dans ce dernier."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "96d1fc02660ee9dab5a817d4e6e12ea61d5523562ef34d64158993b53e1b0693"
+    },
+    {
+      "id": "kanton/FR/130.11-fr/art_83",
+      "ebene": "kanton",
+      "quelle": "FR",
+      "erlass": "RJ (RSF 130.11)",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le présent règlement entre en vigueur le 1er janvier 2011."
+        }
+      ],
+      "stand": "2025-12-01",
+      "quelleUrl": "https://bdlf.fr.ch/app/fr/texts_of_law/130.11",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "854728daef0b152c366617ce09e282ad",
+      "sha": "b218972de40686363623bb81783f20ce8a778e2ea8b431b14f7366c0d660a3c8"
     }
   ]
 }

@@ -1,6 +1,154 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/NE/2154116/art_1",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La présente loi a pour but de fixer les émoluments proportionnels perçus par les bureaux du registre foncier."
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "34f0e1549a96e962877141b561c9eb67b95d114496ca45324c63224f3ca54aa8"
+    },
+    {
+      "id": "kanton/NE/2154116/art_2",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les opérations et les services requis des autorités du registre foncier donnent lieu à la perception des émoluments fixés par la présente loi et par arrêté du Conseil d'Etat."
+        },
+        {
+          "absatz": "2",
+          "text": "Les émoluments et les débours sont dus par le requérant."
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "f234c27c05d34d47a1dc771d0a01aea2d59a19bd14390d922f605377805958ac"
+    },
+    {
+      "id": "kanton/NE/2154116/art_3",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les émoluments perçus par les bureaux du registre foncier sont fixes et proportionnels. Ils sont arrondis au franc supérieur."
+        },
+        {
+          "absatz": "2",
+          "text": "Le montant sur lequel est perçu l'émolument est arrondi à la tranche de 1000 francs supérieure."
+        },
+        {
+          "absatz": "3",
+          "text": "Si un acte entraîne plusieurs opérations soumises chacune à un émolument ou si un acte tombe sous le coup de plusieurs dispositions du présent tarif, il y a cumul des différents émoluments."
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "8881f8b74eade38d3856e9ce3f45a288d08286c94f9c938723418cb033c5e0f9"
+    },
+    {
+      "id": "kanton/NE/2154116/art_4",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le Conseil d'Etat est compétent pour arrêter les émoluments fixes."
+        },
+        {
+          "absatz": null,
+          "text": "Art. 5"
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "ebaea4a3486df48fbc7e6cb09826f756024d466e6a83a63a4950c794cd081051"
+    },
+    {
+      "id": "kanton/NE/2154116/art_7",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aucun émolument n'est perçu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour les inscriptions, radiations, ou reports déterminés par les améliorations du sol ou par des échanges de terrains en vue d'arrondir une exploitation agricole (art. 954, al. 2, CCS);"
+            },
+            {
+              "marke": "b",
+              "text": "pour les extraits délivrés pour de telles opérations;"
+            },
+            {
+              "marke": "c",
+              "text": "pour les attestations relatives à des réquisitions faites conformément à l'article 56 de la loi sur les améliorations foncières, du 17 décembre 1980;"
+            },
+            {
+              "marke": "d",
+              "text": "lorsque les frais sont à la charge de l'Etat."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "d670ce4c31ea7360cc4b209f63d62bfbcc87553646ebf48468a303c4a84bbdd7"
+    },
+    {
+      "id": "kanton/NE/2154116/art_8",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur l’émolument du registre foncier (LERF) (RSN 215.411.6)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Toute décision prise en application de la présente loi peut faire l'objet d'un recours au Département du développement territorial et de l'environnement, puis au Tribunal cantonal, conformément à la loi sur l'organisation du Conseil d'Etat et de l'administration cantonale (LCE), du 22 mars 1983, et à la loi sur la procédure et la juridiction administratives (LPJA), du 27 juin 1979."
+        }
+      ],
+      "stand": "2013-08-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
+      "sha": "fa5b2e6bcb7b89bb892e55767b1b579378059bd6c0e8ea8d7088e7bedab9c9c2"
+    },
     {
       "id": "kanton/NE/2154116/art_9",
       "ebene": "kanton",
@@ -32,7 +180,7 @@
       ],
       "stand": "2013-08-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
       "sha": "419d340e45b830d95b5643f868182e881fcb5f6557e4339d1bc83cbe624974bb"
     },
@@ -51,7 +199,7 @@
       ],
       "stand": "2013-08-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
       "sha": "50f51e43e04ed2a49e9afefe9a2ea7f4e8838abfb2a18e3978f03c76fd242f33"
     },
@@ -74,7 +222,7 @@
       ],
       "stand": "2013-08-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
       "sha": "e5ebfe5968b8a83324b084ac2dd272dfc326630ef6272fbbad67fab0d605340d"
     },
@@ -93,7 +241,7 @@
       ],
       "stand": "2013-08-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
       "sha": "06c7d7267089cad394f8e61b21632682a980e1ea1934060138e4aa2a597c5b40"
     },
@@ -132,7 +280,7 @@
       ],
       "stand": "2013-08-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/2154116.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "54a3b6365c62a29c4afca0f29b82f18429ba7d2bb98b4854294073a3fa535629",
       "sha": "b0faca4d736afb09b58bdab47c15b67d8277cd77d2b0a914a508f98d96c201f6"
     }

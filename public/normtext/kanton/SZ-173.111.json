@@ -1,24 +1,777 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
     {
-      "id": "kanton/SZ/173.111/art_33",
+      "id": "kanton/SZ/173.111/art_1",
       "ebene": "kanton",
       "quelle": "SZ",
       "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
-      "artikel": "33",
-      "artikelLabel": "§ 33",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "Einzelrichter und Bezirksgericht 4 Behandlung durch den Einzelrichter und Entscheid des Einzelrichters 100.-- bis 50 000.-- 4a in nichtstreitigen Erbschaftsangelegenheiten nach Interessewert und Zeitaufwand des Gerichtes 100.-- bis 5 000.-- 5 Prüfung und Unterzeichnung von Gülten und Schuldbriefen: bis zum Wert von Fr. 100 000.-- 10.-- von Fr. 100 001.-- bis Fr. 2 000 000.--, pro Fr. 10 000.-- 1.-- über Fr. 2 000 000.-- 200.-- 6 Behandlung durch das Bezirksgericht und Entscheid des Bezirksgerichtes 100.-- bis100 000.--"
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Gebühren für die Verwaltung des Kantons, der Bezirke und der Gemeinden und für die Rechtspflege, soweit nicht durch Bundesrecht, Staatsverträge oder besondere Erlasse des Kantons und, im Rahmen ihrer Autonomie, der Bezirke und der Gemeinden eine abweichende Regelung gilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat erlässt einen Gebühren-Tarif."
         }
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
-      "sha": "849b45d34b6e329e602968a3e87d08af331fa5c53098965639e3e2e60daee69a"
+      "sha": "ab01b6bbd0e6c1cfb1a1c1f8bae1175b03fac9387b548131e5f5173ff1daeffa"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_2",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Benützungs-, Verwaltungs- und Gerichtsgebühren dürfen nur erhoben werden, soweit sie in dieser Verordnung oder in einem andern gesetzlichen Erlass oder im Gebühren-Tarif vorgesehen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Amtshandlungen, für welche in den nachstehenden Bestimmungen und in andern Erlassen keine besonderen Gebühren bezeichnet sind, kann eine Gebühr von Fr. 30.-- bis Fr. 5000.-- erhoben werden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "849a152819cf29063c42882b9f154c7373729b53fcc0219dc6cbf10dca3c2472"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_3",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verwaltungs- und Gerichtsgebühren sowie die Entschädigungen sind unter Vorbehalt von Abs. 3 gemäss den gesetzlichen Ansätzen festzusetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht ein Mindest- und Höchstansatz, so ist die Gebühr für den Einzelfall nach der Bedeutung der Sache und nach Zeitaufwand festzusetzen. Dabei darf für die Berechnung des Zeitaufwandes ein Ansatz von Fr. 180.-- für die Stunde nicht überschritten werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Höchstansatz darf ausnahmsweise um bis zu 50 Prozent überschritten werden, wenn eine Amtshandlung einen so grossen Aufwand erfordert, dass der Höchstansatz dazu in einem offensichtlichen Missverhältnis steht."
+        },
+        {
+          "absatz": "4",
+          "text": "Gebühren und Auslagen können für Rechtsmittelverfahren als Pauschalbetrag festgesetzt werden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "3c0c9013cd3f71675ebddd06a543178efd9dd5371164a7d3d433735e0c5c53fc"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_4",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Barauslagen und Entschädigungen sind zu den Gebühren hinzuzurechnen, ausgenommen Kanzleigebühren, die in der Gebühr enthalten sein können."
+        },
+        {
+          "absatz": "2",
+          "text": "Allfällige Mehrwertsteuern werden zu den Gebührenansätzen hinzugerechnet."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "ee95b014bd85d12d8de87f2fdf74786db243118be10d6cfae18f12a73fb51dfe"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_5",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr trägt, wer die öffentliche Sache oder Anstalt beansprucht oder eine Amtshandlung veranlasst hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Gebühren für verfahrensleitende Verfügungen können mit der Verfügung selbst oder mit dem Entscheid auferlegt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Haben mehrere Personen für eine Gebühr aufzukommen, so haften sie mangels anderer Vorschriften solidarisch."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "d669b5b2b9f8100cf9a5a58e085f0f9e5532480ab3e4d796aee443a4162800de"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_6",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Benützungsgebühren fallen in die Staats-, Bezirks- oder Gemeindekasse."
+        },
+        {
+          "absatz": "2",
+          "text": "Verwaltungsgebühren kantonaler Behörden und Amtsstellen fallen in die Staatskasse."
+        },
+        {
+          "absatz": "3",
+          "text": "Verwaltungsgebühren von Behörden und Amtsstellen der Bezirke und Gemeinden fallen in die Bezirks- oder Gemeindekasse, sofern die Bezirke und Gemeinden keine andere Regelung getroffen haben."
+        },
+        {
+          "absatz": "4",
+          "text": "Gerichtsgebühren fallen in die Gerichtskasse; Abs. 3 ist sinngemäss anwendbar."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Gebühren können, sofern sie Fr. 1000.-- nicht übersteigen, durch Nachnahme erhoben werden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "d0853bd7233d9854a129869962a09c10df146aee5e4e986239338b69376c4375"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_7",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren, Entschädigungen und Barauslagen sind auf den Ausfertigungen vorzumerken, sofern nicht gesondert Rechnung gestellt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gebührenpflichtige kann innert 20 Tagen seit Zustellung der Rechnung eine anfechtbare Kostenverfügung mit detaillierter Abrechnung verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die zuständige Behörde oder Amtsstelle erlässt von Amtes wegen eine anfechtbare Kostenverfügung, wenn die Rechnung nicht beglichen wird und noch kein Vollstreckungstitel vorliegt."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "8fbe474e162af38919754d8f3fe90c4cc40892581dfed8c5f38c6084b3d355d8"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_8",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kostenrechnung ist grundsätzlich mit der Hauptsache anfechtbar."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen Kostenverfügungen sind die Rechtsmittel nach Massgabe der Schweizerischen Prozessordnungen und des kantonalen Verfahrensrechts zulässig."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "f66e44a053cbb94b5d2df11c21c4ed574c05be61c38e94171b8eb200538b4dc3"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_9",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Unrichtige oder unangemessene Kostenbemessungen, welche die Aufsichtsbehörde bei Ausübung ihrer Tätigkeit feststellt, sind von Amtes wegen zu rügen und zu berichtigen. II. Allgemeine Gerichts- und Verwaltungsgebühren sowie Entschädigungen"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "83e4203633a0854de945207a590663ad7f13171edab9af5f62fbce3203d50de6"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_10",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Kanzleigebühren"
+        },
+        {
+          "absatz": "1",
+          "text": "Es werden folgende Kanzleigebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ausfertigung von Verfügung oder Entscheiden, je angefangene Seite Fr. 15.--"
+            },
+            {
+              "marke": "b",
+              "text": "für das erstmalige Kopieren des Originals, je Seite Fr. 1.-- für die weiteren Kopien, je Seite Fr. --.30"
+            },
+            {
+              "marke": "c",
+              "text": "für Vorladungen, Anzeigen und Schreiben Fr. 10.-- bis 40.--"
+            },
+            {
+              "marke": "d",
+              "text": "Zustellgebühr exklusive Porti, Zustellung von Beschlüssen, Urteilen, Verfügungen Fr. 20.-- bis 50.--"
+            },
+            {
+              "marke": "e",
+              "text": "Zustellgebühr für die kostenpflichtige Zustellung von Beglaubigungen, Nachdrucken von Gesetzeserlassen Fr. 8.-- bis 20.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Bescheinigungen beträgt die Gebühr Fr. 15.-- bis 200.--"
+        },
+        {
+          "absatz": "3",
+          "text": "Ausfertigungen, die von Amtes wegen einer Behörde oder einer Amtsstelle zuzustellen sind, sind gebührenfrei."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "2e55ef877ff477cbd21ba2d8d38ccbc95cf2f3f7f8d319b34e5d11280f53b754"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_11",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Beglaubigungen Für die Beglaubigung einer Unterschrift oder eines Handzeichens beträgt die Gebühr Fr. 25.--. Sind mehrere Unterschriften auf dem gleichen Aktenstück zu beglaubigen, so beträgt die Gebühr für jede weitere Unterschrift zusätzlich Fr. 10.--. Für die Beglaubigung der Richtigkeit eines Auszuges, einer Abschrift, einer Fotokopie und dergleichen beträgt die Gebühr Fr. 10.-- je Seite."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "2c43adb2b3625a584c3b880d4e30b79d77a70265087f710b3f58cd9717f6a6e4"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_12",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dienstleistungen, Auskünfte"
+        },
+        {
+          "absatz": "1",
+          "text": "Für Dienstleistungen und Auskünfte, die vorwiegend im privaten Interesse erbracht werden und einen erheblichen Zeitaufwand verursachen, kann nach dem Stundenansatz gemäss § 3 Abs. 2 eine Gebühr erhoben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Dienstleistungen und Auskünfte an Behörden und Amtsstellen werden in der Regel keine Gebühren erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Bereich der Strassenverwaltung kann für Dienstleistungen und Auskünfte (wie Beratungen, Augenscheine und Stellungnahmen), die im Aufwand über eine Kurzberatung hinausgehen, nach dem Stundenansatz gemäss § 3 Abs. 2 bzw. gemäss Gebührentarif (Tiefbauamt, Stundenansätze Dienstleistungen der Strassenverwaltung) eine Gebühr erhoben werden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "a5ee750e59696225988a6c4e8af5ecb1c77ed2862eac0fc5f7318a768f9476fb"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_12_a",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "12_a",
+      "artikelLabel": "§ 12a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gesuche nach dem Gesetz über die Öffentlichkeit der Verwaltung und den Datenschutz"
+        },
+        {
+          "absatz": "1",
+          "text": "Die Bearbeitung von Gesuchen, welche die eigenen Personendaten betreffen, ist gebührenfrei."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bearbeitung von andern Gesuchen nach dem Gesetz über die Öffentlichkeit der Verwaltung und den Datenschutz ist gebührenfrei, wenn die nach §§ 10 und 12 berechnete Gebühr den Betrag von Fr. 40.-- nicht erreicht."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "377876971cbac3d8fed9b7a7b97caa0720200304ec35569a953c01d7b74a99fb"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_13",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Entschädigungen an Zeugen und Auskunftspersonen"
+        },
+        {
+          "absatz": "1",
+          "text": "Zeugen, die einen Verdienstausfall nachweisen oder glaubhaft machen, erhalten eine Entschädigung von Fr. 40.-- bis Fr. 200.-- pro Stunde. Für andere Zeugen beträgt das Zeugengeld je nach Zeitaufwand Fr. 20.-- bis Fr. 300.--."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Zeit für die Hin- und Rückfahrt vom Wohn- und Arbeitsort ist in Anrechnung zu bringen."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Auskünfte von Drittpersonen können die gleichen Entschädigungen wie für Zeugen ausgerichtet werden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "751bbe9902b02c32c6157d2b2e6fe879d502c9b139443ef79789c4261f8fc09f"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_14",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Entschädigung an Sachverständige und Übersetzer Die Entschädigung des Sachverständigen und des Übersetzers wird von der Behörde, welche die Begutachtung veranlasst oder den Übersetzer beigezogen hat, nach Ermessen festgesetzt. § 8 ist sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "75029aa39488a79c494e10351c7f96f6937f8878feec7b53d1acb3161f36dee7"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_15",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Reise-, Verpflegungs- und Nachtquartierentschädigungen Für Einzelbehörden, Zeugen, Auskunftspersonen, Sachverständige und Übersetzer darf eine Reise-, Verpflegungs- und Nachtquartierentschädigung gemäss den Bestimmungen über die Personal- und Besoldungsverordnung belastet werden. III. Gebühren für die Verwaltungsrechtspflege und die allgemeine Staats- und Gemeindeverwaltung Nr. Fr."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "d0eb0203c3a258c1939293216b5c07e055a7c9fc7a9f463b694a9cb5254f99be"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_16",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gemeindekanzlei 1 Abfassung und Beurkundung einer öffentlichen letztwilligen Verfügung oder eines Vorsorgeauftrages 60.-- bis 800.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "6639f992abbce97dc57fc244178986e8a126b063ecfa531d25aa93e3ca72c4e7"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_16_a",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "16_a",
+      "artikelLabel": "§ 16a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Einwohneramt 1a Anmeldegebühr für erwachsene Person (Schweizer und Ausländer) 20.-- 1b Anmeldegebühr für Familie und Ehepaar (Schweizer und Ausländer) 30.-- 1c Anmeldegebühr für Wochenaufenthalte (Schweizer und Ausländer) 50.--/Jahr 1d Heimatausweis 1 Jahr 20.-- 2 Jahre 30.-- 1e Erteilung von Auskünften an Private 10.-- 1f Wohnsitzbescheinigung 10.-- Wohnsitzbescheinigung (Fremdsprache) 20.-- Wohnsitzbescheinigung (manuell erstellt) 20.-- 1g Lebensbescheinigung 10.-- 1h Bestätigung für Verkehrsamt 10.-- 1i Bearbeitung Verpflichtungserklärung 20.-- 1j Hinterlegung und Änderung der Registrierung einer 40.-- letztwilligen Verfügung sowie Nachsendung derselben In diesen Gebühren sind allfällige Spesen (Portoauslagen, Telefonspesen, Kosten von Publikationen usw.) nicht inbegriffen."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "e94bea8a3674095b202eab7adb435eca8c7be37d95b8eb89833f6325bbc557e6"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_17",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gemeindepräsidium 2 Amtliche Verfügungen 30.-- bis 500.-- 3 Amtliche Leitung von öffentlichen Versteigerungen, von Gründungsversammlungen und ähnlichen Veranstaltungen 110.-- bis 600.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "88bae16f3dc8e985978909f1cfcfec912c5e1fab236f92ae4849678382bbe397"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_18",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gemeinderat und andere kommunale Behörden 4 Konzessionen für die Beanspruchung von Gemeindegut: Die einmalige und jährliche Gebühr richtet sich nach der Bedeutung der Anlage. 5 Erlass von Verfügungen 60.-- bis 20 000.-- 6 Behandlung anderer Geschäfte 60.-- bis 4 000.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "2060a1e0e7a305e261e0224b07d528d24ace8a91aed1cdd165931e06a6e4f4ed"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_19",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Betreibungsamt 7 Für die Aufnahme und Ausfertigung von Wechselprotesten sind die Ansätze der Pfändung im Betreibungsverfahren sinngemäss anzuwenden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "b0606490b9ddbce6840be6dc6dcc7eb72308628a463828c02dafefe367ec81ed"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_20",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Erbschaftsamt 8 Erbenermittlung und Erlass von Verfügungen 60.-- bis 1 000.-- 9 Sicherungsmassregeln nach Art. 551 ZGB: je angebrochene halbe Stunde 40.-- 10 Mitwirkung bei Erbteilung, Losbildung oder Versteigerung: je angebrochene halbe Stunde 40.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "9675fad3b818706cef6c35ecf7404be9f02eb4122d160943f7bb7d934bdcba23"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_21",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bezirksbehörden 11 Die Gebührenansätze der Gemeinden sind sinngemäss für die Amtshandlungen der Bezirksbehörden anzuwenden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "c401f56a059b950773c89b7ebca9bb118fb945f87d8011b404b86538d5c5f2f7"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_22",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Steuerkommission 12 Behandlung und Entscheid im Einspracheverfahren 50.-- bis 3000.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "65972da7e16ef456cf7ae3d0298f1b8df26f466a896fca2c2b396b03943000f0"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_23",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Departemente des Regierungsrates und kantonale Amtsstellen 13 Erlass von Verfügungen 50.-- bis 20 000.-- 14 Behandlung anderer Geschäfte 50.-- bis 10 000.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "625d947ac108674044f91e4d47c69a710224dc87f2d66cc454e02c54c3f7d049"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_23_a",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "23_a",
+      "artikelLabel": "§ 23a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Kindes- und Erwachsenenschutzbehörden 15 Bestellung eines Beistandes und andere Verfügungen 160.-- bis 3 000.-- 15a Abnahme des Eingangsinventars über das Vermögen des Schutzbefohlenen: ½ Promille des reinen Vermögens ab Fr. 100 000.-- höchstens 5 000.-- Die gleiche Gebühr wird erhoben beim endgültigen Rückzug des Vermögens. 15b Prüfung und Vormerkung des Berichtes des überlebenden Ehegatten über das Kindsvermögen: ½ Promille des reinen Vermögens höchstens 2 500.-- 16 Entscheide betreffend zustimmungsbedürftige Geschäfte nach Aufwand bei einem Stundenansatz von Fr. 160.-- (Art. 416 und 417 ZGB) 160.-- bis 3 000.-- 17 Prüfung Vorsorgeauftrag und Auftragseinweisung nach Aufwand bei einem Stundenansatz von Fr. 160.-- (Art. 363 ff. ZGB) 160.-- bis 3 000.-- 17a Einschreiten bei Patientenverfügung und Vorsorgeauftrag nach Aufwand bei einem Stundenansatz von Fr. 160.-- (Art. 368 und 373 ZGB) 160.-- bis 3 000.-- 18 Einvernahmen: je angebrochene halbe Stunde 90.-- 19 Abnahme und Prüfung der Verwaltungsrechnung 50.-- bis 5 000.-- und des Berichtes des Beistandes 19a Entschädigung des Mandatsträgers für ordentliche bis 30 000.-- Berichtsperiode 20 Behandlung anderer Geschäfte 50.-- bis 5 000.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "98c9abbac454ba750429e2f34bd2cf978970ae5d940152559f7c81dc5411e003"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_24",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Regierungsrat 23 Konzessionen für die Beanspruchung von Staatsgut: Die einmalige und jährliche Gebühr ist nach der Bedeutung der Anlage festzulegen. 24 Erlass von Verfügungen 50.-- bis 20 000.-- 25 Behandlung anderer Geschäfte 50.-- bis 10 000.-- 26 Für die Verwaltungsrechtssprechung gelten die Ansätze des Verwaltungsgerichtes."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "32202e22f24c7a91b0b99c5577977fd4ad1846bf8cd7c5d237912990c7cfa803"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_25",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Verwaltungsgericht 27 Behandlung und Entscheid einer Vor- oder Zwischenfrage, wenn sie nicht mit der Hauptsache entschieden wird 60.-- bis 700.-- 28 Einzelrichterentscheide 60.-- bis 2 000.-- 29 Behandlung und Entscheid einer Beschwerde oder einer Revision 100.-- bis 20 000.-- 30 Behandlung und Entscheid einer Klage 100.-- bis 20 000.-- 31 Erläuterung eines Entscheides 40.-- bis 500.-- 32 Wird ein Verfahren abgeschrieben, so kann die Gebühr erlassen oder unter den Mindestansatz herabgesetzt werden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "e5b8127c1e06f7ac9ced6a9593c53928dc2b7456c8dfe2dadaab10b2453df8f2"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_25_a",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "25_a",
+      "artikelLabel": "§ 25a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Zwangsmassnahmengericht 33 Behandlung und Entscheid einer Beschwerde 60.-- bis 2 000.-- gegen Polizeigewahrsam aufgrund von Gewalt anlässlich von Sportveranstaltungen. IV. Gebühren für die Strafrechtspflege Nr. Fr."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "7cbb4c17a9832bd86837a642ecc57810067a051e4e720fb9a754a25f7c8c6984"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_26",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Strafverfolgungsbehörden 1 Amtshandlungen der gerichtlichen Polizei (Tatbestandesaufnahmen, Einvernahmen, Ermittlungen, Hausdurchsuchungen, Blut- und Urinproben, Spurenauswertungen, Aktenauswertungen, erkennungsdienstliche Erfassungen, Beizug von polizeilichen Spezialisten, Erstellen von Akten, Anzeigeerstattungen, usw.) je angebrochene halbe Stunde 60.-- 2 Durchführung des Vorverfahrens (Beweis- 60.-- bis100 000.-- erhebungen, Einvernahmen, Aktenstudium usw.) 3 Verfügung, Entscheid oder Antrag, wenn 50.-- bis 3 000.-- keine andere Gebühr festgesetzt ist 4 Nichtanhandnahmeverfügung 100.-- bis 1 000.-- 5 Sistierungsverfügung 100.-- bis 1 000.-- 6 Vergleichsverhandlung 100.-- bis 1 000.-- 7 Einstellungsverfügung 100.-- bis 5 000.-- 8 Strafbefehl 100.-- bis 2 000.-- 9 Anklage / Überweisung Strafbefehl 300.-- bis 3 000.-- 10 Schlussbericht 300.-- bis 3 000.-- 11 Vertretung (schriftlich oder mündlich) der Anklage vor Gerichtsinstanzen 300.-- bis 10 000.-- 12 Vernehmlassung in Beschwerdeverfahren 100.-- bis 2 000.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "b808627e1008ffdff30f5fcaf1561a804f08bf4b3f18dfb56e82e8085dc923f4"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_27",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gerichte 13 Verhandlung vor Einzelrichter und Entscheid 100.-- bis 5 000.-- inklusive Vorbereitung und Beweisaufnahmen 14 Richterliche Verfügungen 30.-- bis 600.-- 15 Behandlung und Entscheid einer selbständigen 30.-- bis 800.-- Vor- oder Zwischenfrage 16 Verhandlung vor Gericht und Entscheid 100.-- bis 50 000.-- inklusive Vorbereitung und Beweisaufnahmen 17 Behandlung und Entscheid einer Revision 90.-- bis 4 000.-- 18 Redaktion eines Entscheides 100.-- bis 6 000.-- 19 Erläuterung eines Entscheides 100.-- bis 900.-- 20 Entscheid über Anordnung, Verlängerung und Aufhebung der Untersuchungs- oder Sicherheitshaft; Anordnung oder Genehmigung von Zwangsmassnahmen; Behandlung von Beschwerden gegen Zwangsmassnahmen 60.-- bis 900.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "df9f8c02bec26af5c54b2bf906a7b80a82117f6ece6db00d732f2526a28a33b6"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_28",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Verfahren gegen Jugendliche 20a In Verfahren gegen Jugendliche können die Gebühren zur Hälfte erlassen werden."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "ce1bbd4a815e1f2c82a47020c5ae85c3ae0e2ee79bec963d78df64fad1cba801"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_29",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Begnadigung 21 Behandlung und Beurteilung eines Begnadigungsgesuches 100.-- bis 1 000.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "725f8242bd6290376357f18f897acaf4f04f76883761151835008dc12699e55b"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_30",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gerichtspolizeiliche Tätigkeiten Die Kantonspolizei weist die kostenpflichtigen gerichtspolizeilichen Amtshandlungen und Auslagen in einer fallbezogenen Leistungsaufstellung zuhanden der Staatsanwaltschaft aus. V. Gebühren für die Zivilrechtspflege Nr. Fr."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "bb4e651bad8a43acdf6995c17cc42f8f542732ea7864e8b523ff664c31b5f3bd"
     },
     {
       "id": "kanton/SZ/173.111/art_31",
@@ -35,9 +788,108 @@
       ],
       "stand": "2026-02-01",
       "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
       "sha": "a69abd6969e6b96a1307126eafc53bbdcb4e602f112a2eda2b8909dce51d37f3"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_32",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gerichtskanzleien 2 Anlage des Aktenheftes, Protokoll- und Buchführung 40.-- bis 400.-- 3 Redaktion eines Entscheides 100.-- bis 6 000.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "069acfa76ccd21a4de485bd728f98028e8fa04dc996e79bf999ede0c2e0a86f9"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_33",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Einzelrichter und Bezirksgericht 4 Behandlung durch den Einzelrichter und Entscheid des Einzelrichters 100.-- bis 50 000.-- 4a in nichtstreitigen Erbschaftsangelegenheiten nach Interessewert und Zeitaufwand des Gerichtes 100.-- bis 5 000.-- 5 Prüfung und Unterzeichnung von Gülten und Schuldbriefen: bis zum Wert von Fr. 100 000.-- 10.-- von Fr. 100 001.-- bis Fr. 2 000 000.--, pro Fr. 10 000.-- 1.-- über Fr. 2 000 000.-- 200.-- 6 Behandlung durch das Bezirksgericht und Entscheid des Bezirksgerichtes 100.-- bis100 000.--"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "849b45d34b6e329e602968a3e87d08af331fa5c53098965639e3e2e60daee69a"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_34",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Kantonsgericht 7 Behandlung und Entscheid einer Berufung, einer Beschwerde oder einer Revision 500.-- bis100 000.-- 8 Verfügungen des Präsidenten 100.-- bis 10 000.-- Ist das Kantonsgericht erste Instanz, so gelten die Ansätze des Bezirksgerichtes."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "d9fc73369286f0a5c171e31f5486ee6b338c4361723c2f636a5b03e4c5b11144"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_35",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Gemeinsame Bestimmungen für Einzelrichter, Bezirksgericht und Kantonsgericht 9 Erläuterung eines Entscheides 100.-- bis 900.— 10 Beweismassnahmen ausserhalb eines Verfahrens des betreffenden Gerichtes 60.-- bis 1 500.-- 11 Wird ein Verfahren abgeschrieben, so kann die Gebühr unter den Mindestansatz herabgesetzt werden. 12 Für Hinterlegungen gilt der Tarif für Notare und Grundbuchverwalter. VI. Schlussbestimmung"
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "07018ab4c857e8444e53ad81f4b3d0f085a6152cbcf90524341a5c1d24ad64b3"
+    },
+    {
+      "id": "kanton/SZ/173.111/art_36",
+      "ebene": "kanton",
+      "quelle": "SZ",
+      "erlass": "Gebührenordnung (GebO) (SRSZ 173.111)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung wird im Amtsblatt veröffentlicht und in die Gesetzsammlung aufgenommen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie tritt mit der Veröffentlichung in Kraft."
+        }
+      ],
+      "stand": "2026-02-01",
+      "quelleUrl": "https://www.sz.ch/public/upload/assets/32452/173_111.pdf",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "15b721d10155516b97ad3c56359367332dde8e50bcb11f7daa3eeb09d802b9a7",
+      "sha": "6e65ab0595976577476bfb86a296b909122a4488e727e09ece8ae2dd72979426"
     }
   ]
 }

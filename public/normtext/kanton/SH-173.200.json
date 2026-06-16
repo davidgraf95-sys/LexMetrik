@@ -1,6 +1,2654 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/SH/173.200/art_1",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt Organisation und Zuständigkeit der kantonalen Justiz- und Strafverfolgungsbehörden und enthält die ergänzenden Vorschriften zur Schweizerischen Strafprozessordnung, zur Schweizerischen Jugendstrafprozessordnung und zur Schweizerischen Zivilprozessordnung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "18192865e1afae8914cdb14fb4b0a029833f4ec1cc38cc0d28b3cb6fa7f2e6b3"
+    },
+    {
+      "id": "kanton/SH/173.200/art_2",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat wählt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Präsidentin oder den Präsidenten, die Vizepräsidentin oder den Vizepräsidenten sowie die weiteren Mitglieder und die Ersatzmitglieder des Obergerichts und des Kantonsgerichts"
+            },
+            {
+              "marke": "b",
+              "text": "die Friedensrichterinnen und Friedensrichter"
+            },
+            {
+              "marke": "c",
+              "text": "die Präsidentin oder den Präsidenten sowie die weiteren Mitglieder und die Ersatzmitglieder der Rechtspflegekommission für die Justizverwaltung"
+            },
+            {
+              "marke": "d",
+              "text": "die Erste Staatsanwältin oder den Ersten Staatsanwalt sowie die weiteren Staatsanwältinnen und Staatsanwälte"
+            },
+            {
+              "marke": "e",
+              "text": "die Präsidentin oder den Präsidenten sowie die weiteren Mitglieder und die Ersatzmitglieder der Kindes- und Erwachsenenschutzbehörde"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht wählt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Präsidentin oder den Präsidenten sowie die weiteren Mitglieder und die stellvertretenden Mitglieder der besonderen Schlichtungsbehörden in Zivilsachen"
+            },
+            {
+              "marke": "b",
+              "text": "die Präsidentin oder den Präsidenten sowie die weiteren Mitglieder und die Ersatzmitglieder der weiteren Rechtspflegebehörden gemäss Kapitel 6 dieses Gesetzes"
+            },
+            {
+              "marke": "c",
+              "text": "die Betreibungsbeamtinnen und Betreibungsbeamten sowie die Konkursbeamtin oder den Konkursbeamten"
+            },
+            {
+              "marke": "d",
+              "text": "die administrative Leiterin oder den administrativen Leiter des Friedensrichteramtes"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Kann ein Gericht oder eine andere Behörde wegen Ausstands oder anderer Hinderungsgründe nicht genügend besetzt werden, so bezeichnet die Wahlbehörde die erforderlichen ausserordentlichen Mitglieder. Ausserordentliche Staatsanwältinnen oder Staatsanwälte ernennt der Regierungsrat, ausserordentliche Friedensrichterinnen oder Friedensrichter das Obergericht."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "53cb84ab449c07794d5a9a073ad6713c70aa56592a76b09851867eb9bb07b012"
+    },
+    {
+      "id": "kanton/SH/173.200/art_3",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem Kantonsrat obliegende Wahlen bereitet die Wahlvorbereitungskommission vor. Sie steht unter dem Vorsitz der Präsidentin oder des Präsidenten der Justizkommission und setzt sich aus folgenden Personen zusammen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Mitglieder der Justizkommission"
+            },
+            {
+              "marke": "b",
+              "text": "Vorsteherin oder Vorsteher des zuständigen Departements"
+            },
+            {
+              "marke": "c",
+              "text": "Vertretung des Obergerichts"
+            },
+            {
+              "marke": "d",
+              "text": "Vertretung des Kantonsgerichts"
+            },
+            {
+              "marke": "e",
+              "text": "Vertretung der Staatsanwaltschaft"
+            },
+            {
+              "marke": "f",
+              "text": "Vertretung der Schaffhauser Anwaltskammer"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie unterbreitet dem Kantonsrat Wahlvorschläge. Die Mitglieder der Justizkommission sind stimmberechtigt."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "fbac7da5197606b5f56ad0d3d3127caf5d48530d07db9694d88f157502e5d10c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_4",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht und das Kantonsgericht stellen ihre juristischen und administrativen Mitarbeitenden an."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht stellt die erforderlichen zusätzlichen Mitarbeitenden der Schlichtungsbehörden in Zivilsachen, der weiteren Rechtspflegebehörden gemäss Kapitel 6 dieses Gesetzes sowie der Betreibungsämter und des Konkursamts an. Es kann die Anstellungsbefugnis delegieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Rechtspflegekommission für die Justizverwaltung stellt das juristische Sekretariat und die erforderlichen Mitarbeitenden der Kommission an."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "e5018679b73cf3ae828f633c45e5d337ad42df36c2837a634cf7dc0c5e22cfe1"
+    },
+    {
+      "id": "kanton/SH/173.200/art_5",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Antritt des Amts haben das Amtsgelübde abzulegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Präsidentin oder der Präsident des Obergerichts, des Kantonsgerichts und der Rechtspflegekommission für die Justizverwaltung sowie die Erste Staatsanwältin oder der Erste Staatsanwalt vor dem Kantonsrat"
+            },
+            {
+              "marke": "b",
+              "text": "die weiteren Mitglieder der Gerichte und der Rechtspflegekommission für die Justizverwaltung vor der jeweiligen Präsidentin oder dem Präsidenten"
+            },
+            {
+              "marke": "c",
+              "text": "die weiteren Staatsanwältinnen und Staatsanwälte vor der Ersten Staatsanwältin oder dem Ersten Staatsanwalt"
+            },
+            {
+              "marke": "d",
+              "text": "die Mitglieder der Schlichtungsbehörden in Zivilsachen und der weiteren Rechtspflegebehörden gemäss Kapitel 6 dieses Gesetzes, die Betreibungsbeamtinnen und Betreibungsbeamten sowie die Konkursbeamtin oder der Konkursbeamte vor der Präsidentin oder dem Präsidenten des Obergerichts"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Person, die das Gelübde zu leisten hat, wird folgende Formel vorgelesen: «Sie geloben, Ihr Amt nach bestem Wissen und Gewissen zu führen, dabei die Verfassung und die Gesetze zu beachten und nicht die Person, sondern die Sache im Auge zu haben.» Das Gelübde wird durch Sprechen der Worte «ich gelobe es» geleistet."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "da040e23a058ae172d8ba6376e6da2f038228dc2fe00ba9db737f380b48d901b"
+    },
+    {
+      "id": "kanton/SH/173.200/art_6",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem Obergericht obliegt die Aufsicht über das Kantonsgericht, die Schlichtungsbehörden in Zivilsachen, die weiteren Rechtspflegebehörden gemäss Kapitel 6 dieses Gesetzes sowie die Betreibungsämter und das Konkursamt."
+        },
+        {
+          "absatz": "2",
+          "text": "Dem Regierungsrat obliegt die Aufsicht über die Staatsanwaltschaft."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Obergericht und der Regierungsrat überwachen die Geschäftsführung der ihrer Aufsicht unterstehenden Behörden. Sie erstatten hierüber dem Kantonsrat als Oberaufsichtsbehörde Bericht. Das Obergericht orientiert den Kantonsrat in seinem Amtsbericht auch über seine eigene Tätigkeit."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Rechtspflegekommission für die Justizverwaltung steht unter der Oberaufsicht des Kantonsrats. Sie erstattet ihm über ihre Geschäftsführung Bericht."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "9ccc58c500e45df2a51f63da89f5fa06836ed89a97ce62c4f23dde010a0c80da"
+    },
+    {
+      "id": "kanton/SH/173.200/art_7",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wegen ungebührlicher Behandlung durch eine Justiz- oder Strafverfolgungsbehörde oder deren Mitglieder und Mitarbeitende kann bei der Aufsichtsbehörde schriftlich Beschwerde erhoben werden. Richtet sich die Beschwerde gegen eine bestimmte Amtshandlung, ist sie innert zehn Tagen seit Kenntnisnahme einzureichen. Im Übrigen kann Beschwerde geführt werden, solange die Beschwerdeführerin oder der Beschwerdeführer damit ein rechtliches Interesse wahrt."
+        },
+        {
+          "absatz": "2",
+          "text": "Jedermann kann der Aufsichtsbehörde jederzeit Tatsachen anzeigen, die ein aufsichtsrechtliches Einschreiten gegen eine Justiz- oder Strafverfolgungsbehörde erfordern. Die Anzeigerin oder der Anzeiger hat keine Parteirechte. Die Art der Erledigung ist ihr oder ihm mitzuteilen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aufsichtsbehörde trifft die nötigen Abklärungen und sorgt für die Behebung des Beschwerdegrunds. Personalrechtliche Massnahmen zur Sicherung des Aufgabenvollzugs und die Einleitung eines Strafverfahrens bleiben vorbehalten."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei mutwilliger oder leichtsinniger Einreichung einer Aufsichtsbeschwerde oder einer Aufsichtsanzeige können der Beschwerdeführerin bzw. dem Beschwerdeführer oder der Anzeigerin bzw. dem Anzeiger Kosten auferlegt werden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "3c8c1ac2e1b1c7ec5a7c68ebca7ed219a72acb8246f02ce1af2b337bab83e26c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_8",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Amtssitz der kantonalen Justizbehörden ist Schaffhausen, soweit nichts anderes bestimmt wird."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "e5ffd5dc87bb24e21090ced02f8401792350ec9187f42e478607e88cfcad49b0"
+    },
+    {
+      "id": "kanton/SH/173.200/art_9",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Friedensrichteramt ist die für den ganzen Kanton zuständige Schlichtungsbehörde bei streitigen Zivilsachen, soweit hierfür nicht eine besondere Schlichtungsbehörde besteht."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kantonsrat bestimmt drei bis vier Friedensrichterinnen und Friedensrichter und legt nach Anhörung des Obergerichts das Gesamtpensum des Friedensrichteramtes fest."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Friedensrichteramt behandelt die Fälle in Einerbesetzung. Die administrative Leiterin oder der administrative Leiter des Friedensrichteramtes ist für die Fallzuteilung zuständig. Das Friedensrichteramt organisiert sich im Übrigen selbst."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "aa2c3a9c9ab3158c5fbbe8160ba6daf556eebd28467b50d5ba09dddb4f4bfbd9"
+    },
+    {
+      "id": "kanton/SH/173.200/art_10",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schlichtungsstelle für Mietsachen ist die für den ganzen Kanton zuständige Schlichtungsbehörde bei Streitigkeiten aus Miete und Pacht von Wohn- und Geschäftsräumen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie besteht aus der Präsidentin oder dem Präsidenten sowie je einer Vertretung der Mieter und Vermieter. Sie haben je eine Stellvertretung."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Präsidium und seine Stellvertretung dürfen keiner Mieter- oder Vermieterorganisation angehören. Für die Wahl der weiteren Mitglieder der Schlichtungsstelle und deren Stellvertretung holt das Obergericht Vorschläge von Mieter- und Vermieterorganisationen ein."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "7598417d2fb834c02ceac2a37bf51dee39fdbd2705c8e851524fa977209bd694"
+    },
+    {
+      "id": "kanton/SH/173.200/art_11",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schlichtungsstelle bei Diskriminierungen im Erwerbsleben ist die für den ganzen Kanton zuständige Schlichtungsbehörde bei Streitigkeiten nach dem Gleichstellungsgesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie besteht aus der Präsidentin oder dem Präsidenten und vier weiteren Mitgliedern und tagt in Dreierbesetzung gemäss jeweils massgebenden bundesrechtlichen Paritäten."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "e7820db0b3864f54e8ca54efacdd6c13a0f3ce2db9e8e68a5812fca365b9ad11"
+    },
+    {
+      "id": "kanton/SH/173.200/art_12",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Friedensrichteramt besorgt seine Kanzleigeschäfte selber."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kanzlei des Kantonsgerichts besorgt die Kanzleigeschäfte der Schlichtungsstelle für Mietsachen und der Schlichtungsstelle bei Diskriminierungen im Erwerbsleben."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "853cef5df33820dfd304b6d636ba06cafef851a8372f556610ff36733280b83a"
+    },
+    {
+      "id": "kanton/SH/173.200/art_13",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die polizeilichen Aufgaben im Dienst der Strafrechtspflege werden in erster Linie von der Schaffhauser Polizei ausgeübt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die übrigen Polizeiorgane des Kantons und der Gemeinden haben nur auf ihrem besonderen Tätigkeitsgebiet polizeiliche Strafverfolgungsbefugnisse gemäss gesetzlichen Bestimmungen und Dienstvorschriften. Sie sind verpflichtet, die Schaffhauser Polizei und die Staatsanwaltschaft bei der Erfüllung ihrer Aufgaben zu unterstützen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "101f77be80b693752b79a0a91f697b62311d48dbdd8afe5213b05fbdec291389"
+    },
+    {
+      "id": "kanton/SH/173.200/art_14",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verwaltungsrecht regelt die Organisation der Polizei und die rechtliche Stellung ihrer Mitarbeitenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Strafverfolgungstätigkeit der Polizeiorgane richtet sich nach der Schweizerischen Strafprozessordnung und diesem Gesetz."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "419f8d03d864ef9e8d11da3f9a37c57434f3c206238ba5b95282bbafb0918a6c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_15",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwaltschaft ist für die Strafverfolgung verantwortlich, soweit nach dem Einführungsgesetz zum Schweizerischen Strafgesetzbuch nicht eine Verwaltungsbehörde zuständig ist."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "2660e27dcd98ebd48c3b6e58c2615a01aab5345f1f806bf0a1776215b2199d6b"
+    },
+    {
+      "id": "kanton/SH/173.200/art_16",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwaltschaft besteht aus der Ersten Staatsanwältin oder dem Ersten Staatsanwalt, der Allgemeinen Abteilung, der Verkehrsabteilung, der Abteilung Jugendanwaltschaft sowie aus dem Fach- und Kanzleipersonal."
+        },
+        {
+          "absatz": "2",
+          "text": "Jeder Abteilung steht eine Leitende Staatsanwältin oder ein Leitender Staatsanwalt vor. Der Regierungsrat bestimmt diese aus den Reihen der Staatsanwältinnen und Staatsanwälte."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt und die Leitenden Staatsanwältinnen und Staatsanwälte bilden zusammen die Geschäftsleitung."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt bestimmt aus den Leitenden Staatsanwältinnen und Staatsanwälten ihre oder seine Stellvertretung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "250a0f645f8b7140cf0b38a6e6f0878ca3c8e34653e7cbff7552b1370ffe12b4"
+    },
+    {
+      "id": "kanton/SH/173.200/art_17",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Allgemeine Abteilung führt die Fälle, bei denen keine andere Zuständigkeit gegeben ist."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "6f48d9bdd066f0a2f0e8ddec179d65767f0404ba6f2b4e8171d1c75cdd701124"
+    },
+    {
+      "id": "kanton/SH/173.200/art_18",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verkehrsabteilung führt die Fälle aus dem Verkehr zu Land, zu Wasser oder in der Luft."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verkehrsabteilung kann einzelne andere strafbare Handlungen mitverfolgen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verkehrsabteilung ist erstinstanzliche Verwaltungsbehörde für Administrativmassnahmen im Strassenverkehr. Das Verfahren richtet sich nach dem Verwaltungsrechtspflegegesetz."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "00542d7349349063595fa7a180f98edfeeed4fe10e18eb0b09e1c12935baeeaa"
+    },
+    {
+      "id": "kanton/SH/173.200/art_19",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Jugendanwaltschaft führt die Fälle nach der Schweizerischen Jugendstrafprozessordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Übertretungen nach kantonalem und kommunalem Recht, die durch Jugendliche begangen wurden, werden von den Verwaltungsbehörden verfolgt und beurteilt. Die Verwaltungsbehörde kann den Fall der Jugendanwaltschaft überweisen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "dbbb35d5d5d5d3fed42226c358133098385589442a7c773cc152fd6a1e2051cd"
+    },
+    {
+      "id": "kanton/SH/173.200/art_20",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt leitet die Staatsanwaltschaft und ist dabei insbesondere zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Vertretung der Staatsanwaltschaft nach aussen"
+            },
+            {
+              "marke": "b",
+              "text": "die Berichterstattung an die Aufsichtsbehörde"
+            },
+            {
+              "marke": "c",
+              "text": "die Ausbildung der Staatsanwältinnen und Staatsanwälte"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Im Übrigen nimmt die Erste Staatsanwältin oder der Erste Staatsanwalt die Aufgaben der Staatsanwaltschaft wahr, welche nicht ausdrücklich einer anderen Stelle zugeteilt sind."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "524771d834e72d12e541d22ca629d6cf2e5c1eb767c2e93e9a8dded4902fb7b6"
+    },
+    {
+      "id": "kanton/SH/173.200/art_21",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "überwacht die Fälle der Leitenden Staatsanwältinnen und Staatsanwälte und hat gegenüber den Verfahrensleiterinnen und Verfahrensleitern ein fallbezogenes Weisungsrecht"
+            },
+            {
+              "marke": "b",
+              "text": "vertritt die Anklage vor Bundesgericht, wobei die Anklagevertretung delegiert werden kann"
+            },
+            {
+              "marke": "c",
+              "text": "vertritt in Absprache mit den Leitenden Staatsanwältinnen und Staatsanwälten in Einzelfällen auch die Anklage vor Kantonsgericht und Obergericht"
+            },
+            {
+              "marke": "d",
+              "text": "hat in allen Fällen das Recht, die Berufung anzumelden, die schriftliche Berufungserklärung einzureichen sowie die Beschwerde ans Obergericht und ans Bundesgericht zu erheben"
+            },
+            {
+              "marke": "e",
+              "text": "trifft die notwendigen Massnahmen zum Schutz von Personen ausserhalb eines Verfahrens"
+            },
+            {
+              "marke": "f",
+              "text": "führt Gerichtsstandsstreitigkeiten vor eidgenössischen Gerichten"
+            },
+            {
+              "marke": "g",
+              "text": "entscheidet innerkantonale Zuständigkeitskonflikte im Bereich der Strafverfolgung"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt führt im Übrigen eigene Fälle."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "a803f0bd4863b08299e0fbdb96d362116b94a38cb6bc71b6e2415d30359c85fe"
+    },
+    {
+      "id": "kanton/SH/173.200/art_22",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Geschäftsleitung ist für die einheitliche fachliche Führung der Staatsanwaltschaft verantwortlich. Sie sorgt für die gleichmässige Durchsetzung des staatlichen Strafanspruchs im Kanton und unterstützt die Erste Staatsanwältin oder den Ersten Staatsanwalt in der Leitung der Staatsanwaltschaft."
+        },
+        {
+          "absatz": "2",
+          "text": "Zu diesem Zweck erlässt sie allgemeine Weisungen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "cf745d29e6999b5279fb7547f831c306d5e82a982639cfd5ab6353d2e455eb51"
+    },
+    {
+      "id": "kanton/SH/173.200/art_23",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Leitenden Staatsanwältinnen und Staatsanwälte sind in ihrer Abteilung insbesondere zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Geschäftszuteilung"
+            },
+            {
+              "marke": "b",
+              "text": "die Ausbildung des Fach- und Kanzleipersonals"
+            },
+            {
+              "marke": "c",
+              "text": "die Fallüberwachung mit fallbezogenem Weisungsrecht"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führen im Übrigen eigene Fälle."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "7024195f55c774acc5e901961fbb271150e046ba82862bc28f875be033a81e61"
+    },
+    {
+      "id": "kanton/SH/173.200/art_24",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwältinnen und Staatsanwälte führen die ihnen zugewiesenen Fälle bis zum rechtskräftigen Abschluss selbständig. Sie können auch Verfahren gegen Jugendliche führen."
+        },
+        {
+          "absatz": "2",
+          "text": "Dazu gehört insbesondere auch:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Verfassen von Anklageschriften"
+            },
+            {
+              "marke": "b",
+              "text": "die Vertretung der Anklage unter Vorbehalt von Art. 21 Abs. 1 lit. b und c dieses Gesetzes"
+            },
+            {
+              "marke": "c",
+              "text": "das Recht, die Berufung anzumelden, die schriftliche Berufungserklärung einzureichen sowie die Beschwerde ans Obergericht zu erheben"
+            },
+            {
+              "marke": "d",
+              "text": "das Führen nichtstreitiger Gerichtsstandsverfahren"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Sie sind weiter zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Gewährung nationaler und internationaler Rechtshilfe"
+            },
+            {
+              "marke": "b",
+              "text": "die Gewährung von Rechtshilfe für Straftaten des kantonalen Rechts unter Vorbehalt des Gegenrechts"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "849efcfc1814ff72e53f112ccb61b195dcc23e7dbacfa19d45f56a416ebf529c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_25",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwältinnen und Staatsanwälte der Jugendanwaltschaft üben die Funktionen aus, die von Bundesrechts wegen den Jugendanwältinnen und Jugendanwälten zustehen. Sie unterzeichnen in den Jugendstrafsachen als Jugendanwältin bzw. als Jugendanwalt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie vollziehen die Entscheide gegen Jugendliche."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie können auch Verfahren gegen Erwachsene führen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "a70ba1d97395aac675f33486ce47d7de67434a32924a567b08e4b8a4ee41c1ee"
+    },
+    {
+      "id": "kanton/SH/173.200/art_26",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht besteht aus der Präsidentin oder dem Präsidenten, der Vizepräsidentin oder dem Vizepräsidenten und drei bis fünf weiteren Mitgliedern sowie mindestens drei Ersatzmitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kantonsrat legt nach Anhörung des Kantonsgerichts und des Obergerichts die Stellenprozente des Gesamtgerichts fest."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "5b32693f068c9ec463f45271f871d6322d5e6d0631d58ac05662f2b8edeb75ef"
+    },
+    {
+      "id": "kanton/SH/173.200/art_27",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht organisiert sich selbst."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentin oder der Präsident vertritt das Kantonsgericht nach aussen, besorgt die Geschäftsleitung des Gerichts und steht dem Gesamtgericht vor."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Kantonsgericht spricht Recht in Kammern mit Dreierbesetzung sowie durch Einzelrichterinnen und Einzelrichter."
+        },
+        {
+          "absatz": "4",
+          "text": "Verwaltungsgeschäfte obliegen dem Gesamtgericht. Dieses ist beschlussfähig, wenn die absolute Mehrheit der Gerichtsmitglieder mitwirkt. Bei Stimmengleichheit entscheidet die oder der Vorsitzende."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Gesamtgericht kann zur Erledigung von Verwaltungsgeschäften eine Kommission einsetzen und bestimmte Geschäfte einem Mitglied übertragen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "e325968b12c2c31d665d00c7972c64eb602224f90d4d816f1a77bda0c2d47ab6"
+    },
+    {
+      "id": "kanton/SH/173.200/art_28",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht behandelt als erste Instanz zivilrechtliche Angelegenheiten, soweit nicht das Obergericht als einzige kantonale Instanz zuständig ist."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "3d368e1aedf0ceef790b4d8bdd164449c27790758ab9bf2db2b6a5c585ba6ff3"
+    },
+    {
+      "id": "kanton/SH/173.200/art_29",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht beurteilt durch Einzelrichterinnen oder Einzelrichter:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "familienrechtliche Verfahren"
+            },
+            {
+              "marke": "b",
+              "text": "Fälle, die im vereinfachten und im summarischen Verfahren zu behandeln sind"
+            },
+            {
+              "marke": "c",
+              "text": "im summarischen Verfahren folgende weitere nichtstreitige Angelegenheiten:"
+            },
+            {
+              "marke": "d",
+              "text": "die Vollstreckung von Entscheiden und öffentlichen Urkunden"
+            },
+            {
+              "marke": "e",
+              "text": "Revisionsgesuche, wenn schon der frühere Entscheid von einer Einzelrichterin oder einem Einzelrichter beurteilt worden ist"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die übrigen Zivilfälle beurteilt das Kantonsgericht in Kammern. Diese behandeln ungeachtet des Streitwerts auch Klagen, die ihnen wegen des sachlichen Zusammenhangs mit bei ihnen hängigen Klagen überwiesen werden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "f139f47ce39af6ced4697b75a022d5676b5eebe7c069c371efc4bb0af51b85aa"
+    },
+    {
+      "id": "kanton/SH/173.200/art_30",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Präsidentin oder der Präsident des Kantonsgerichts oder im Hinderungsfall deren Stellvertretung entscheidet über strittige Ausstandsgesuche gegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Mitglieder und Ersatzmitglieder sowie die Gerichtsschreiberinnen und Gerichtsschreiber des Kantonsgerichts in Zivilverfahren"
+            },
+            {
+              "marke": "b",
+              "text": "die Mitglieder und Ersatzmitglieder einer Schlichtungsbehörde in Zivilsachen"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "943e1ce4a88c16c296e2daa77ecde71bf67b2072ad7f5b5cc73609f3ad8655d0"
+    },
+    {
+      "id": "kanton/SH/173.200/art_31",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einzelrichterin oder der Einzelrichter des Kantonsgerichts ist im Rahmen der nationalen und internationalen Schiedsgerichtsbarkeit zuständig für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ernennung, Ablehnung, Abberufung und Ersetzung der Schiedsrichterinnen und Schiedsrichter"
+            },
+            {
+              "marke": "b",
+              "text": "die Verlängerung der Amtsdauer des Schiedsgerichts"
+            },
+            {
+              "marke": "c",
+              "text": "die Unterstützung des Schiedsgerichts bei den Verfahrenshandlungen"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "5932815c4dfa6bcd889e4aadbec153cb79d4edc76ccda2083175a4f50cb2a1bf"
+    },
+    {
+      "id": "kanton/SH/173.200/art_32",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einzelrichterin oder der Einzelrichter des Kantonsgerichts leistet unter Vorbehalt anderer Regelung nationale und internationale Rechtshilfe in Zivilsachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie oder er kann die Besorgung der Rechtshilfeersuchen, einschliesslich der Einvernahme von Personen, unter ihrer oder seiner Verantwortung einer Gerichtsschreiberin oder einem Gerichtsschreiber übertragen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "32cdec13654af8081fa51269f9b7916e2cc39d12eaaecc77c5fef45934d7dc56"
+    },
+    {
+      "id": "kanton/SH/173.200/art_33",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht ist erstinstanzliches Gericht in Strafsachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es beurteilt durch Einzelrichterinnen oder Einzelrichter:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Übertretungen"
+            },
+            {
+              "marke": "b",
+              "text": "Verbrechen und Vergehen, soweit nicht gemäss Abs. 3 eine Kammer zuständig ist"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Es beurteilt in Kammern folgende Verbrechen und Vergehen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Tötungsdelikte"
+            },
+            {
+              "marke": "b",
+              "text": "Straftaten, bei denen nach den Umständen eine Freiheitsstrafe von mehr als einem Jahr, eine Geldstrafe von mehr als 360 Tagessätzen, eine stationäre therapeutische Massnahme nach Art. 59–61 StGB, eine Verwahrung nach Art. 64 StGB oder, bei gleichzeitig zu widerrufenden bedingten Sanktionen, ein Freiheitsentzug von mehr als einem Jahr oder eine Geldstrafe von mehr als 360 Tagessätzen in Frage steht"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "bb1fea993721a42116d65edd11574016686698ce53e2cc7b857e65f178652441"
+    },
+    {
+      "id": "kanton/SH/173.200/art_34",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht ist Jugendgericht."
+        },
+        {
+          "absatz": "2",
+          "text": "Anklagen im Anschluss an Einsprachen gegen Strafbefehle, welche Übertretungen zum Gegenstand haben, beurteilt die oder der Vorsitzende."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "76e35a59bb3d85040dabfce05845b1d0009c950a6c09928df78fb5e14ace7644"
+    },
+    {
+      "id": "kanton/SH/173.200/art_35",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einzelrichterin oder der Einzelrichter des Kantonsgerichts ist Zwangsmassnahmengericht in der allgemeinen Strafrechtspflege und in Jugendstrafsachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Zwangsmassnahmengericht ist auch zuständiges Gericht zur Leitung der Aussonderung von Informationen gemäss Art. 271 Abs. 1 der Schweizerischen Strafprozessordnung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "8e72e84074583f917ea5d055f6ca46e573459d785bce59a81725812491bb5b75"
+    },
+    {
+      "id": "kanton/SH/173.200/art_36",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einzelrichterin oder der Einzelrichter des Kantonsgerichts ist die richterliche Behörde gemäss Bundesgesetz über die Ausländerinnen und Ausländer."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "d499bf12eccfa0d77bc7afd0470bd57a072580c8abcefd626815ac48e1a49fe3"
+    },
+    {
+      "id": "kanton/SH/173.200/art_37",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Einzelrichterin oder der Einzelrichter des Kantonsgerichts ist die richterliche Behörde zur Überprüfung polizeilicher Zwangsmassnahmen, wenn die Spezialgesetzgebung die direkte Anrufung einer richterlichen Behörde vorsieht."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "3a7e7af90650263f1b27cf75263aed8cede1e8f33f8e3c2e2c112577b23e5324"
+    },
+    {
+      "id": "kanton/SH/173.200/art_38",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht besteht aus der Präsidentin oder dem Präsidenten, der Vizepräsidentin oder dem Vizepräsidenten und drei bis fünf weiteren Mitgliedern sowie mindestens drei Ersatzmitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Kantonsrat legt nach Anhörung des Obergerichts die Stellenprozente des Gesamtgerichts fest."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "398f8b526662ebc5c5041924a768f185175c02795a3572190fd71eb8c13f26f6"
+    },
+    {
+      "id": "kanton/SH/173.200/art_39",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht organisiert sich selbst."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentin oder der Präsident vertritt das Obergericht und die gesamte Justiz nach aussen, besorgt die Geschäftsleitung des Obergerichts und steht dem Gesamtgericht vor."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Obergericht spricht Recht in Kammern mit Dreierbesetzung sowie durch Einzelrichterinnen und Einzelrichter. Auf Antrag der Einzelrichterin oder des Einzelrichters bzw. der Kammer, welche für die Beurteilung zuständig wäre, können Rechtsfälle von grundsätzlicher Bedeutung oder besonderer Tragweite vom Gesamtgericht beurteilt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Gesamtgericht behandelt Gesuche um Überprüfung verwaltungsrechtlicher Vorschriften (abstrakte Normenkontrolle). Dabei beurteilt es auch Verwaltungsgerichtsbeschwerden, die zusammen mit dem Normenkontrollgesuch zur gleichen Sache erhoben werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Dem Gesamtgericht obliegen die Verwaltungsgeschäfte, insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Wahlen und weiteren personalrechtlichen Entscheide"
+            },
+            {
+              "marke": "b",
+              "text": "die Angelegenheiten, welche die Organisation und Verwaltung der Gerichte und der unterstellten Behörden betreffen"
+            },
+            {
+              "marke": "c",
+              "text": "die allgemeine Aufsicht über die unterstellten Gerichte und weiteren Behörden mit Ausnahme der Beschwerdefälle"
+            },
+            {
+              "marke": "d",
+              "text": "die Anordnung und Durchführung von Verfahren zur Sicherstellung des Aufgabenvollzugs"
+            },
+            {
+              "marke": "e",
+              "text": "der Erlass von Verordnungen und Weisungen"
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Das Gesamtgericht ist bei der Behandlung von Verwaltungsgeschäften beschlussfähig, wenn die absolute Mehrheit der Gerichtsmitglieder mitwirkt. Bei Stimmengleichheit entscheidet die oder der Vorsitzende."
+        },
+        {
+          "absatz": "7",
+          "text": "Das Gesamtgericht kann zur Erledigung von Verwaltungsgeschäften eine Kommission einsetzen und bestimmte Geschäfte einem Mitglied übertragen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "19b8c911dd75f6afb29bb99a07f2f3f72b5cd768e6ddbf09a6709f3fa1d14c8d"
+    },
+    {
+      "id": "kanton/SH/173.200/art_40",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht beurteilt die zivilrechtlichen Angelegenheiten, für die eine einzige kantonale Instanz zuständig ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind diese Fälle im summarischen Verfahren zu beurteilen, so ist für die Behandlung eine Einzelrichterin oder ein Einzelrichter zuständig. Jede Partei kann die Behandlung durch eine Kammer verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die übrigen Fälle beurteilt das Obergericht in Kammern."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "12a96c4c26805b71157862d23959354b575c2c9081503d1b11ecc70cdd389af7"
+    },
+    {
+      "id": "kanton/SH/173.200/art_41",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht ist Berufungs- und Beschwerdeinstanz in der Zivilrechtspflege (einschliesslich Kindes- und Erwachsenenschutzrecht)."
+        },
+        {
+          "absatz": "2",
+          "text": "Im summarischen Verfahren werden die Rechtsmittel von einer Einzelrichterin oder einem Einzelrichter behandelt. Jede Partei kann die Behandlung durch eine Kammer verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Über ein Revisionsgesuch entscheidet eine Einzelrichterin oder ein Einzelrichter, wenn schon der frühere Entscheid von einer Einzelrichterin oder einem Einzelrichter beurteilt worden ist."
+        },
+        {
+          "absatz": "4",
+          "text": "Die übrigen Fälle beurteilt das Obergericht in Kammern."
+        },
+        {
+          "absatz": "5",
+          "text": "Ist in der Hauptsache eine Kammer zuständig, so entscheidet die oder der Vorsitzende über die Bewilligung der vorzeitigen Vollstreckung oder den Aufschub der Vollstreckung des angefochtenen Entscheids und ordnet nötigenfalls sichernde Massnahmen oder eine Sicherheitsleistung an."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "1eb652630d788d43b015ff8e64780e092440a48aec59f44957487bc47e43b417"
+    },
+    {
+      "id": "kanton/SH/173.200/art_42",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht ist Beschwerde- und Revisionsinstanz in der nationalen Schiedsgerichtsbarkeit. Es behandelt die Fälle in Kammern."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentin oder der Präsident des Obergerichts ist zuständig für die Entgegennahme des Schiedsspruchs zur Hinterlegung und für die Bescheinigung der Vollstreckbarkeit."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "b0564aebcbaa26bb80285c49d22c37e99cd90e8b6a96cce774bda83145f0a5c1"
+    },
+    {
+      "id": "kanton/SH/173.200/art_43",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht ist Berufungsgericht und Beschwerdeinstanz in der allgemeinen Strafrechtspflege und in Jugendstrafsachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es entscheidet durch eine Einzelrichterin oder einen Einzelrichter:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Berufungsgericht, wenn nur Übertretungen oder wirtschaftliche Nebenfolgen von höchstens Fr. 5'000.00 streitig sind, wobei die Parteien die Behandlung durch eine Kammer verlangen können"
+            },
+            {
+              "marke": "b",
+              "text": "als Beschwerdeinstanz bei Beschwerden gegen Einstellungsverfügungen, in Rechtshilfesachen und in den vom Bundesrecht vorgegebenen Fällen"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die übrigen Fälle beurteilt es in Kammern."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "f6cf47b69d2d7516201dd93e9bfe8779a590703d7e2c4e9f524a31606c9a4283"
+    },
+    {
+      "id": "kanton/SH/173.200/art_44",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht behandelt Verwaltungsgerichtsbeschwerden gegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "letztinstanzliche Entscheide kantonaler Verwaltungsbehörden"
+            },
+            {
+              "marke": "b",
+              "text": "verwaltungsrechtliche Entscheide der ihm unterstellten Rechtspflegebehörden"
+            },
+            {
+              "marke": "c",
+              "text": "letztinstanzliche Entscheide anerkannter Kirchen"
+            },
+            {
+              "marke": "d",
+              "text": "Entscheide des Kantonsrats, soweit das Bundesrecht einen gerichtlichen Rechtsschutz auf kantonaler Ebene vorschreibt"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht behandelt als kantonales Versicherungsgericht Beschwerden und Klagen auf dem gesamten Gebiet des eidgenössischen und kantonalen Sozialversicherungsrechts sowie der Zusatzversicherungen zur sozialen Krankenversicherung."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Obergericht behandelt als kantonale Steuerrekursbehörde Rekurse und Beschwerden auf dem Gebiet der direkten Steuern von Bund und Kanton. Vorbehalten bleiben abweichende Vorschriften."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Obergericht beurteilt Verwaltungssachen, bei denen das Bundesrecht eine einzige kantonale richterliche Behörde vorschreibt, wie Beschwerden über die Entschädigung und Genugtuung gemäss Opferhilfegesetz."
+        },
+        {
+          "absatz": "5",
+          "text": "Weitere Aufgaben des Obergerichts als Verwaltungsgericht aufgrund der Spezialgesetzgebung bleiben vorbehalten."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "0db281d9b6af686e811c5f264ea8a91d4518a36c1cdf91d932d7f8ab572710fd"
+    },
+    {
+      "id": "kanton/SH/173.200/art_45",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ein Mitglied des Obergerichts führt den Vorsitz des kantonalen Schiedsgerichts in Sozialversicherungssachen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es setzt den Parteien Frist zur Ernennung einer Vertretung an. Im Säumnisfall ernennt es die Schiedsrichterinnen und Schiedsrichter selber."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "a49579ab35cb50c725250c9ba829817cf7879a4c5af1fc8672077cd6780b69db"
+    },
+    {
+      "id": "kanton/SH/173.200/art_46",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht überprüft Vorschriften verwaltungsrechtlicher Natur in Erlassen des Kantons, mit Ausnahme der Gesetze, und in Erlassen der Gemeinden, öffentlich-rechtlichen Körperschaften und Anstalten auf ihre Verfassungs- und Gesetzmässigkeit."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "f05e8aecebd8f34fc87dbe3bc202805d850c130814447c69122dd11d2ad43bc2"
+    },
+    {
+      "id": "kanton/SH/173.200/art_47",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht entscheidet in hängigen Verfahren oder auf Anrufung durch eine betroffene Behörde über Zuständigkeitskonflikte zwischen Verwaltungs- und Rechtspflegebehörden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "5001fb0ac219a0c2c15020ae8b1ca37692e18c842b4caf590dd013c4897aea5c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_48",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht beurteilt die verwaltungsgerichtlichen Angelegenheiten in Kammern. Die besonderen Bestimmungen über das Gesamtgericht und das Schiedsgericht in Sozialversicherungssachen bleiben vorbehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Verfahren richtet sich nach Art. 35 ff. des Verwaltungsrechtspflegegesetzes. Besondere Verfahrensbestimmungen in der Spezialgesetzgebung bleiben vorbehalten."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "e03bffaeffbb7df02699d6a06be1ae4a6679368624901eca464fb8bb476de3dd"
+    },
+    {
+      "id": "kanton/SH/173.200/art_49",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht behandelt als Aufsichtsbehörde im Schuldbetreibungs- und Konkurswesen Beschwerden gemäss Art. 17 des Bundesgesetzes über Schuldbetreibung und Konkurs."
+        },
+        {
+          "absatz": "2",
+          "text": "Es behandelt durch eine Einzelrichterin oder einen Einzelrichter Beschwerden bis zu einem Streitwert von Fr. 5'000.00. Die übrigen Fälle beurteilt es in Kammern."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit das Bundesrecht nichts anderes bestimmt, richtet sich das Beschwerdeverfahren sinngemäss nach Art. 35 ff. des Verwaltungsrechtspflegegesetzes."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "c8bd92e77d12d5eb14bfc02313993984d5d3e339885575344995eb5512e20d7d"
+    },
+    {
+      "id": "kanton/SH/173.200/art_50",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Präsidentin oder der Präsident des Obergerichts oder im Hinderungsfall deren Stellvertretung entscheidet über strittige Ausstandsgesuche gegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Mitglieder und Ersatzmitglieder sowie die Gerichtsschreiberinnen und Gerichtsschreiber des Obergerichts"
+            },
+            {
+              "marke": "b",
+              "text": "die Staatsanwältinnen und Staatsanwälte, die Mitglieder und Ersatzmitglieder sowie die Gerichtsschreiberinnen und Gerichtsschreiber des Kantonsgerichts in Strafverfahren"
+            },
+            {
+              "marke": "c",
+              "text": "die Mitglieder und Ersatzmitglieder sowie das juristische Sekretariat der weiteren Rechtspflegebehörden gemäss Kapitel 6 dieses Gesetzes"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "3598b49dd8012962335ee60f021b2e8c3930cd657f2b9420467e8988dc6d3b9f"
+    },
+    {
+      "id": "kanton/SH/173.200/art_51",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtsschreiberinnen und Gerichtsschreiber des Kantonsgerichts und des Obergerichts wirken bei der Instruktion der Fälle und bei der Entscheidfindung mit; sie haben beratende Stimme."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie führen in der Regel das Verhandlungsprotokoll."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie erarbeiten unter der Verantwortung einer Richterin oder eines Richters Referate und redigieren die Gerichtsentscheide."
+        },
+        {
+          "absatz": "4",
+          "text": "Sie können im Auftrag der Verfahrensleitung Vermittlungsverhandlungen durchführen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "fd7086c9f4da9eaf99568a0173e9995d5e11fe97a97015d7e93dc1589aa2d392"
+    },
+    {
+      "id": "kanton/SH/173.200/art_52",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Kantonsgericht und das Obergericht haben je eine eigene Gerichtskanzlei mit dem erforderlichen administrativen Personal."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gerichte beauftragen eine Gerichtsschreiberin oder einen Gerichtsschreiber der jeweiligen Instanz mit der Leitung der Gerichtskanzlei und bezeichnen eine Stellvertretung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "61e1bd76a2a2a0d350787ea33c89c5969d37199bf3ad33f99624ab1e98044b3b"
+    },
+    {
+      "id": "kanton/SH/173.200/art_53",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist für die Beurteilung einer hängigen Sache das Gesamtgericht oder eine Kammer zuständig, so kann die bzw. der Vorsitzende oder die Instruktionsrichterin bzw. der Instruktionsrichter die notwendigen verfahrensleitenden Entscheide treffen, einschliesslich derjenigen über vorsorgliche Massnahmen und über die unentgeltliche Rechtspflege."
+        },
+        {
+          "absatz": "2",
+          "text": "Das verfahrensleitende Gerichtsmitglied kann auch den prozesserledigenden Abschreibungsentscheid bei Rückzug oder Anerkennung der Klage, Vergleich der Parteien, Gegenstandslosigkeit des Verfahrens, Rückzug eines Rechtsmittels oder einer Einsprache sowie den Nichteintretensentscheid bei Säumnis einer Partei oder bei einem offensichtlich unzulässigen Rechtsmittel treffen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "862dc8e7daa85bcd5c61b232f3c0adc4fd46117c50d4c25304e642105564f89d"
+    },
+    {
+      "id": "kanton/SH/173.200/art_54",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Schriftlich ausgefertigte Entscheide werden von der Verfahrensleitung und von der mitwirkenden Gerichtsschreiberin oder vom Gerichtsschreiber unterzeichnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei prozessleitenden Entscheiden und bei prozesserledigenden Entscheiden, in denen nicht über die Sache befunden wird, genügt in Zivilsachen die Unterschrift der Verfahrensleitung oder der mitwirkenden Gerichtsschreiberin oder des Gerichtsschreibers."
+        },
+        {
+          "absatz": "3",
+          "text": "Protokolle werden von der protokollführenden Person unterzeichnet."
+        },
+        {
+          "absatz": "4",
+          "text": "Einfache verfahrensleitende Anordnungen und Vorladungen werden von der Verfahrensleitung oder unter deren Verantwortung von der Gerichtsschreiberin bzw. vom Gerichtsschreiber oder von einer administrativen Mitarbeiterin bzw. einem Mitarbeiter der Gerichtskanzlei unterzeichnet."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "72bc7fc7dc08f63eb4c15c649980f6cd22f38c4bfa5f53659518b55247d92a4c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_54_a",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "54_a",
+      "artikelLabel": "Art. 54a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird eine Akte elektronisch geführt, erfolgt die Authentifizierung mit einem elektronischen Siegel oder einer qualifizierten elektronischen Signatur nach dem Bundesgesetz vom 18. März 2016 über die elektronische Signatur (ZertES)."
+        },
+        {
+          "absatz": "2",
+          "text": "Zudem kann das Gericht in Abweichung von Art. 54 dem Papierausdruck eine Bestätigung beifügen, dass dieser den Inhalt des elektronischen Originals korrekt wiedergibt. Die Bestätigung ist von der Gerichtsschreiberin bzw. vom Gerichtsschreiber oder von einer administrativen Mitarbeiterin bzw. einem Mitarbeiter der Gerichtskanzlei zu unterzeichnen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "351b0e2d65028ba1cbb9b3713f97f5943867c763d91404432b36a7a09dcaea8d"
+    },
+    {
+      "id": "kanton/SH/173.200/art_55",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtsminderheit darf ihre abweichende Meinung im Entscheid wiedergeben."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "11d9ad0ef3ac5b8d3a3aeb41131cfce529931c688643694e57a639ac5142025a"
+    },
+    {
+      "id": "kanton/SH/173.200/art_56",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Rechtspflegekommission für die Justizverwaltung besteht aus einer Präsidentin oder einem Präsidenten, zwei weiteren Mitgliedern, drei Ersatzmitgliedern und dem juristischen Sekretariat."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Mitglieder der Kommission werden bei Bedarf für den Rest der Amtsdauer gewählt."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "709444e15db7a7c041c35186efc75e7721bbf0d0a4409d9b6afbe04bda48f8b1"
+    },
+    {
+      "id": "kanton/SH/173.200/art_57",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Rechtspflegekommission für die Justizverwaltung behandelt Verwaltungsgerichtsbeschwerden gegen erstinstanzliche Verwaltungsentscheide des Obergerichts sowie andere verwaltungsgerichtliche Rechtsmittel gegen Anordnungen des Obergerichts."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Präsidium oder bei dessen Verhinderung ein anderes Mitglied der Kommission entscheidet über strittige Ausstandsgesuche gegen Mitglieder, Ersatzmitglieder oder das juristische Sekretariat der Kommission."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Verfahren vor der Kommission richtet sich nach Art. 35 ff. des Verwaltungsrechtspflegegesetzes."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "1d038da5c135116cc85bc9dd9b08c044e20d9696ca30b8151edc6e78a011173b"
+    },
+    {
+      "id": "kanton/SH/173.200/art_57_a",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "57_a",
+      "artikelLabel": "Art. 57a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton führt eine Kindes- und Erwachsenenschutzbehörde mit Sitz in Schaffhausen. In den Fällen von Art. 25 Abs. 2 und Art. 26 ZGB gilt als Sitz die Gemeinde, in der die betroffene Person Wohnsitz hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie behandelt die der Kindesschutzbehörde und der Erwachsenenschutzbehörde zugewiesenen Aufgaben, ist gerichtliche Beschwerdeinstanz gemäss Art. 439 ZGB und nimmt gegenüber den Berufsbeistandschaften und den privaten Beiständen die fachliche Aufsicht wahr."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie ist interdisziplinär zusammengesetzt und besteht aus der Präsidentin oder dem Präsidenten sowie mindestens drei weiteren Mitgliedern und mindestens drei Ersatzmitgliedern. Der Kantonsrat legt nach Anhörung der Kindes- und Erwachsenenschutzbehörde und des Obergerichts die Stellenprozente der Gesamtbehörde fest."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kindes- und Erwachsenenschutzbehörde hat ein Fachsekretariat."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "83296c06f0d10b0f45f82963a92be660d425faa0c02cb8b74c9b68b09fe4b1e7"
+    },
+    {
+      "id": "kanton/SH/173.200/art_57_b",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "57_b",
+      "artikelLabel": "Art. 57b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kindes- und Erwachsenenschutzbehörde organisiert sich selbst."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Präsidentin oder der Präsident vertritt die Kindes- und Erwachsenenschutzbehörde nach aussen, besorgt die Geschäftsleitung der Behörde und steht der Gesamtbehörde vor."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kindes- und Erwachsenenschutzbehörde entscheidet in Kammern mit Dreierbesetzung sowie in Einzelzuständigkeit."
+        },
+        {
+          "absatz": "4",
+          "text": "Verwaltungsgeschäfte, welche die Behörde betreffen, obliegen der Gesamtbehörde. Sie ist beschlussfähig, wenn die absolute Mehrheit der Behördenmitglieder mitwirkt. Bei Stimmengleichheit entscheidet die oder der Vorsitzende."
+        },
+        {
+          "absatz": "5",
+          "text": "Sie kann zur Erledigung von internen Verwaltungsgeschäften eine Kommission einsetzen und bestimmte Geschäfte einem Mitglied übertragen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "0c59c50f2d8ee4e011c7e090fd20eec53aa49ecc647a9f9cabf1a7ad6c8e8112"
+    },
+    {
+      "id": "kanton/SH/173.200/art_57_c",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "57_c",
+      "artikelLabel": "Art. 57c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kindes- und Erwachsenenschutzbehörde behandelt die ihr zugewiesenen Aufgaben in Kammern mit Dreierbesetzung, sofern das Gesetz keine Ausnahme vorsieht."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "a4ba328733ae5fd43b9818fa5b78d660373a7aaddd4841304627e52776c7400c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_57_d",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "57_d",
+      "artikelLabel": "Art. 57d",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kindes- und Erwachsenenschutzbehörde behandelt folgende ihr zugewiesenen Aufgaben durch ein Mitglied der Behörde:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Beantragung und Neuregelung der elterlichen Sorge (Art. 134 Abs. 1 und 3 ZGB)"
+            },
+            {
+              "marke": "2",
+              "text": "Antrag zur Anordnung einer Vertretung des Kindes (Art. 299 Abs. 2 lit. b ZPO)"
+            },
+            {
+              "marke": "3",
+              "text": "Entgegennahme der Zustimmungserklärung und des Widerrufs bei der Adoptionserklärung (Art. 265a Abs. 2, 265b Abs. 2 ZGB)"
+            },
+            {
+              "marke": "4",
+              "text": "Genehmigung von Unterhaltsverträgen sowie der Nichtabänderbarkeit derselben (Art. 287 Abs. 1 und 2 ZGB)"
+            },
+            {
+              "marke": "5",
+              "text": "Übertragung der elterlichen Sorge (Art. 298 Abs. 3 und Art. 298a Abs. 1 ZGB)"
+            },
+            {
+              "marke": "6",
+              "text": "Ernennung des Beistandes zur Vaterschaftsabklärung (Art. 309 Abs. 1 ZGB)"
+            },
+            {
+              "marke": "7",
+              "text": "Abklärung und Bewilligung eines Pflegeverhältnisses sowie Ausübung der Aufsicht, sofern nicht mehr als vier Pflegekinder aufgenommen und keine Adoption bezweckt wird (Art. 316 Abs. 1 ZGB)"
+            },
+            {
+              "marke": "8",
+              "text": "Massnahmen zum Schutz und Bewilligung von Anzehrung des Kindesvermögens (Art. 318 Abs. 3, Art. 320 Abs. 2 und Art. 322 Abs. 2 ZGB)"
+            },
+            {
+              "marke": "9",
+              "text": "Erkundigung beim Zivilstandsamt (Art. 363 Abs. 1 ZGB)"
+            },
+            {
+              "marke": "10",
+              "text": "Auslegung und Ergänzung eines Vorsorgeauftrages (Art. 364 ZGB)"
+            },
+            {
+              "marke": "11",
+              "text": "Prüfung der Kündigung eines Vorsorgeauftrages (Art. 367 Abs. 1 ZGB)"
+            },
+            {
+              "marke": "12",
+              "text": "Zustimmung für Rechtshandlungen im Rahmen der ausserordentlichen Vermögensverwaltung (Art. 374 Abs. 3 ZGB)"
+            },
+            {
+              "marke": "13",
+              "text": "Einschreiten der Kindes- und Erwachsenenschutzbehörde im Zusammenhang mit der Vertretung bei medizinischen Massnahmen (Art. 381 ZGB)"
+            },
+            {
+              "marke": "14",
+              "text": "Inventaraufnahme und Anordnung der Aufnahme eines öffentlichen Inventars (Art. 405 Abs. 2 und 3 ZGB)"
+            },
+            {
+              "marke": "15",
+              "text": "Prüfung der Rechnung und des Berichts (Art. 415 Abs. 1 und Abs. 2 ZGB)"
+            },
+            {
+              "marke": "16",
+              "text": "Einleitung des Übertragungsverfahrens bei Wohnsitzwechsel (Art. 442 Abs. 5 ZGB)"
+            },
+            {
+              "marke": "17",
+              "text": "Prüfung und Entscheid über die Akteneinsicht (Art. 449b ZGB)"
+            },
+            {
+              "marke": "18",
+              "text": "Mitteilung an das Zivilstandsamt (Art. 449c ZGB)"
+            },
+            {
+              "marke": "19",
+              "text": "Vollstreckungsverfügung (Art. 450g ZGB)"
+            },
+            {
+              "marke": "20",
+              "text": "Erteilung von Auskunft über das Vorliegen und die Wirkungen einer Massnahme (Art. 451 Abs. 2 ZGB)"
+            },
+            {
+              "marke": "21",
+              "text": "Mitteilung an Schuldner (Art. 452 Abs. 2 ZGB)"
+            },
+            {
+              "marke": "22",
+              "text": "Anordnung einer Vertretungsbeistandschaft für das ungeborene Kind zur Wahrung erbrechtlicher Ansprüche (Art. 544 Abs. 1bis ZGB)"
+            },
+            {
+              "marke": "23",
+              "text": "Antrag auf Aufnahme eines Erbschaftsinventars (Art. 553 Abs. 1 Ziff. 3 ZGB)"
+            },
+            {
+              "marke": "24",
+              "text": "Aufgaben der Zentralen Behörde gestützt auf das Bundesgesetz über internationale Kindesentführungen (Art. 2 BG-KKE)"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ebenso behandelt sie die weiteren Angelegenheiten im Bereich des Kindes- und Erwachsenenschutzrechts, für die keine andere kantonale Zuständigkeit gegeben ist, in Einzelzuständigkeit."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "96f8afd00ab461400032f9968eba33ad32ba614ca45dda830be4da24fc5e0c23"
+    },
+    {
+      "id": "kanton/SH/173.200/art_57_e",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "57_e",
+      "artikelLabel": "Art. 57e",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verfahren richtet sich nach Art. 46 des Gesetzes über die Einführung des Schweizerischen Zivilgesetzbuches."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "6a53bdec0aa04d8702edab19d098c595a71543c2c9dea10880d2e23a7d141276"
+    },
+    {
+      "id": "kanton/SH/173.200/art_58",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Kommission für Enteignungen, Gebäudeversicherung und Brandschutz besteht aus einer Präsidentin oder einem Präsidenten, fünf weiteren Mitgliedern und dem juristischen Sekretariat."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kommission behandelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "als Schätzungskommission Forderungen und Begehren, die gestützt auf die Bestimmungen des Enteignungsgesetzes oder anderer auf das Enteignungsgesetz bezugnehmender Erlasse gestellt werden"
+            },
+            {
+              "marke": "b",
+              "text": "Rekurse gegen Entscheide der Gebäudeversicherung"
+            },
+            {
+              "marke": "c",
+              "text": "Rekurse gegen Entscheide der kantonalen Feuerpolizei"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kommission entscheidet in Dreierbesetzung."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Verfahren richtet sich sinngemäss nach Art. 35 ff., für die Kosten- und Entschädigungsfolge nach Art. 27 und Art. 28 des Verwaltungsrechtspflegegesetzes. In Enteignungssachen sind die besonderen Verfahrensbestimmungen des Enteignungsgesetzes ergänzend anwendbar."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "6ff38c9657c79a766753d1d7a07295075599af077a5d5589a4948d7e87ef6fc0"
+    },
+    {
+      "id": "kanton/SH/173.200/art_59",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Schätzungskommission für Wildschäden besteht aus einer Präsidentin oder einem Präsidenten und vier weiteren Mitgliedern."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Kanzlei des Kantonsgerichts führt das Sekretariat der Kommission."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kommission entscheidet über die Entschädigungspflicht der Jagdgesellschaften und des Kantons gemäss Art. 28 und Art. 29 des kantonalen Jagdgesetzes."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kommission entscheidet in Dreierbesetzung. Bei einem Streitwert bis Fr. 1'000.00 entscheidet die Präsidentin oder der Präsident allein."
+        },
+        {
+          "absatz": "5",
+          "text": "Das Verfahren richtet sich sinngemäss nach Art. 35 ff. des Verwaltungsrechtspflegegesetzes."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "4366b57016fb0628aa837b0a7f0698eb81200f43a2677a2bba90d6700de5ee9d"
+    },
+    {
+      "id": "kanton/SH/173.200/art_60",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kantonale Aufsichtsbehörde über das Anwaltswesen besteht aus einer Präsidentin oder einem Präsidenten, zwei weiteren Mitgliedern, drei Ersatzmitgliedern und dem juristischen Sekretariat. In der Aufsichtsbehörde sind Gerichte und Anwaltschaft vertreten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Aufsichtsbehörde:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "führt das kantonale Anwaltsregister und die Liste der Anwältinnen und Anwälte aus Mitgliedstaaten der EU oder der EFTA mit einer Geschäftsadresse im Kanton Schaffhausen, die in der Schweiz ständig Parteien vor Gericht vertreten dürfen, und trifft die hiefür erforderlichen Entscheide"
+            },
+            {
+              "marke": "b",
+              "text": "entscheidet über die Zulassung zur Anwaltsprüfung, führt diese durch und erteilt oder verweigert das Anwaltspatent"
+            },
+            {
+              "marke": "c",
+              "text": "entzieht das Anwaltspatent und entscheidet über dessen Wiedererteilung"
+            },
+            {
+              "marke": "d",
+              "text": "entscheidet über die Zulassung von Anwältinnen und Anwälten aus Mitgliedstaaten der EU oder der EFTA zur Eignungsprüfung oder zum Gespräch zur Prüfung der beruflichen Fähigkeiten und führt diese durch"
+            },
+            {
+              "marke": "e",
+              "text": "übt die Aufsicht über die eingetragenen Anwältinnen und Anwälte aus"
+            },
+            {
+              "marke": "f",
+              "text": "entscheidet über Gesuche um Entbindung der Anwältinnen und Anwälte vom Berufsgeheimnis"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Aufsichtsbehörde kann untergeordnete Geschäfte an das Präsidium, einzelne Mitglieder oder das Sekretariat delegieren."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Verfahren vor der Aufsichtsbehörde richtet sich nach Art. 9 ff. des Anwaltsgesetzes und sinngemäss nach Art. 35 ff. des Verwaltungsrechtspflegegesetzes."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "138b7cd6c504039a670d8854b2d6a4fe19958f3a03cd9d67a679933456de2eb6"
+    },
+    {
+      "id": "kanton/SH/173.200/art_61",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Landwirtschaftliche Schiedsgericht besteht aus einer Präsidentin oder einem Präsidenten, zwei weiteren Mitgliedern, zwei Ersatzmitgliedern und dem juristischen Sekretariat."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Schiedsgericht wird eingesetzt und seine Mitglieder werden gewählt, wenn im Kanton Schaffhausen ein Bodenverbesserungsunternehmen zustande kommt. Es bleibt bis zu dessen Abschluss bestehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Schiedsgericht behandelt Beschwerden gegen Verfügungen im Rahmen der Güterzusammenlegung."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Verfahren vor dem Schiedsgericht richtet sich nach Art. 25 Abs. 2 und Abs. 3 des kantonalen Landwirtschaftsgesetzes."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "f20a99b3b42af61521c302fae7655b3d9924df76117da5cda6e17bd1968d15a7"
+    },
+    {
+      "id": "kanton/SH/173.200/art_62",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfahrenssprache ist Deutsch."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "eadd3c67c052435fd304a751fe857e9a96ebda485a64b42f623c76c284c09328"
+    },
+    {
+      "id": "kanton/SH/173.200/art_63",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wer im Kanton Schaffhausen zur Erfüllung öffentlicher Aufgaben angestellt ist und über die erforderliche Sachkunde verfügt, darf die Ernennung zur oder zum Sachverständigen nur aus wichtigen Gründen ablehnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Sachverständigen werden auf Antrag die Entscheide der Verfahren mitgeteilt, an denen sie beteiligt waren."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "ce18f35cc42ebaa5491e9fa3baa92e1b2174bffbf48ecdc90009c3223916b8f5"
+    },
+    {
+      "id": "kanton/SH/173.200/art_64",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Staatsanwaltschaft und die Justizbehörden können in allen Verfahren jederzeit die Hilfe der Polizei beanspruchen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "bd4e09e86ca2e509b7328d628b00dfc6a74172cf09a253012916552e9048c951"
+    },
+    {
+      "id": "kanton/SH/173.200/art_65",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Öffentliche Bekanntmachungen werden im Amtsblatt für den Kanton Schaffhausen vorgenommen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "751c9d06919e72778f1178a20613d2900b6688f0ad44e828b39703e7c5dae08b"
+    },
+    {
+      "id": "kanton/SH/173.200/art_66",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht und für die bei der Staatsanwaltschaft abgeschlossenen Verfahren der Regierungsrat regeln die Archivierung der Akten endgültig abgeschlossener Verfahren."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "9bdf36b7be42e03ae7206799328017ca67327e411813b3afb931498fa81e555f"
+    },
+    {
+      "id": "kanton/SH/173.200/art_66_a",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "66_a",
+      "artikelLabel": "Art. 66a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Justizbehörden führen ihre Akten elektronisch oder in Papierform."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht und für ihre Verfahren die Staatsanwaltschaft regeln die Aktenführung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "ba56103aa3b396112f22e13b057dbd1d5b1ead1ffa7b31d180c6cbf07c4286a4"
+    },
+    {
+      "id": "kanton/SH/173.200/art_66_b",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "66_b",
+      "artikelLabel": "Art. 66b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Physisch eingereichte Dokumente werden in elektronisch geführten Verfahren elektronisch eingelesen. Ausgenommen sind Dokumente, die sich aus technischen Gründen nicht dafür eignen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die elektronischen Dokumente gelten im Verfahren als massgebliche Version."
+        },
+        {
+          "absatz": "3",
+          "text": "Physisch eingereichte Dokumente können nach der Digitalisierung vernichtet werden, sofern die einreichende Partei nicht innert angesetzter Frist deren Rücksendung verlangt. Vorbehalten bleiben anderslautende bundesrechtliche Regelungen."
+        },
+        {
+          "absatz": "4",
+          "text": "Das Obergericht und für ihre Verfahren die Staatsanwaltschaft regeln das Digitalisierungsverfahren."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "a95d7736dbd1f35cb602faff84ccc88d6b8148fe7694d012356728b774767e50"
+    },
+    {
+      "id": "kanton/SH/173.200/art_67",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Obergericht regelt die Gerichtsberichterstattung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "ad65d6f442a4cd274d40ce0b3ca9fe87d21df77d320af1083781af8a70ef3492"
+    },
+    {
+      "id": "kanton/SH/173.200/art_68",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In miet- und arbeitsrechtlichen Angelegenheiten sind Berufs- und Arbeitersekretärinnen oder ‑sekretäre sowie Personen in ähnlicher Stellung zur berufsmässigen Prozessvertretung von Unselbständigerwerbenden bzw. von Mieterinnen oder Mietern befugt."
+        },
+        {
+          "absatz": "2",
+          "text": "In mietrechtlichen Angelegenheiten sind Liegenschaftsverwalterinnen oder ‑verwalter zur berufsmässigen Prozessvertretung von Vermieterinnen oder Vermietern befugt."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Gericht kann in diesen Fällen Personen von der Vertretung ausschliessen, wenn es zur gehörigen Wahrung der Interessen der Partei erforderlich erscheint."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "6c659e62b2f60822e1138fd36412f21b9468ca44bf737569345cd0bcbb2462c1"
+    },
+    {
+      "id": "kanton/SH/173.200/art_69",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Urteilsberatung ist nicht öffentlich."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "80b93fe5c2675de6c0569307547086488a7a309d5572e54242d7d84e453f753c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_70",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Behörden und ihre Mitarbeitenden im Sinn von Art. 302 Abs. 2 der Schweizerischen Strafprozessordnung sind zur Strafanzeige verpflichtet, wenn ihnen in ihrer amtlichen Stellung eine schwerwiegende Straftat bekannt wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Von dieser Pflicht ausgenommen, aber zur Anzeige berechtigt sind Amtspersonen, deren Aufgaben ein besonderes Vertrauensverhältnis zu einem Beteiligten voraussetzen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "fd5e5daf5239995f06570d1081e36d71ac95f2391d6177068fbaeb1cd37c8e77"
+    },
+    {
+      "id": "kanton/SH/173.200/art_71",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bezirksärztinnen und ‑ärzte sind verpflichtet, aussergewöhnliche Todesfälle der Schaffhauser Polizei zu melden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "27a054b0d883a5858cf13870268e4a6bf0173724d161fff9df0a44abbd3435eb"
+    },
+    {
+      "id": "kanton/SH/173.200/art_72",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zur Stellung des Strafantrags wegen Vernachlässigung von Unterhaltspflichten im Sinn von Art. 217 des Schweizerischen Strafgesetzbuchs befugt sind neben den Antragsberechtigten gemäss Bundesrecht auch die zur Betreuung der unterhaltsberechtigten Person zuständigen Vormundschafts- oder Sozialhilfebehörden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "5aab14fe63f79b7b52558bbc1696a2046132267faf070b9572fd1ef556c78b72"
+    },
+    {
+      "id": "kanton/SH/173.200/art_73",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Durchführung eines Strafverfahrens gegen Mitglieder des Regierungsrats und des Obergerichts wegen im Amt begangener Verbrechen oder Vergehen bedarf der Ermächtigung durch den Kantonsrat. Ausgenommen sind Widerhandlungen im Strassenverkehr."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Strafanzeigen und Rapporte sind beim Büro des Kantonsrats einzureichen. Dieses nimmt die notwendigen Erhebungen selbst vor oder lässt sie durch eine ausserordentliche Staatsanwältin oder einen ausserordentlichen Staatsanwalt vornehmen und unterbreitet dem Kantonsrat Bericht und Antrag."
+        },
+        {
+          "absatz": "3",
+          "text": "Die strafrechtliche Verantwortlichkeit für Äusserungen im Kantonsrat und in dessen Kommissionen richtet sich nach dem Gesetz über den Kantonsrat."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "96fb071d304ee5808339aad28d1e09570da3f61067d8f0dc414e1bccb17f56b5"
+    },
+    {
+      "id": "kanton/SH/173.200/art_74",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter Vorbehalt abweichender Gesetzesbestimmungen haben die übrigen Behörden des Kantons und der Gemeinden sowie die Verwaltungen öffentlicher Anstalten und Betriebe den Strafbehörden die für das Strafverfahren benötigten Auskünfte zu erteilen und nötigenfalls Akteneinsicht zu gewähren. Die Bestimmungen über das Auskunftsverweigerungsrecht zur Wahrung des Amtsgeheimnisses gelten dabei sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Strafbehörden haben die zuständigen Verwaltungsbehörden zu benachrichtigen und ihnen zweckdienliche Unterlagen zu übermitteln, wenn sich in einem Strafverfahren begründeter Anlass zur Prüfung ausserstrafrechtlicher Massnahmen ergibt."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "8f76d01a2372c99312bcf1da38a8ce6743b1c33a0a68f2adc21ee9973892046e"
+    },
+    {
+      "id": "kanton/SH/173.200/art_75",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die verfahrensleitenden Staatsanwältinnen und Staatsanwälte können an die Mitarbeitenden der Staatsanwaltschaft delegieren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Beweiserhebung in einfachen Fällen"
+            },
+            {
+              "marke": "b",
+              "text": "einzelne Untersuchungshandlungen in allen Fällen"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Verantwortung bleibt bei der Verfahrensleitung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "be6cfee091a21577a8bcb688bf451790de424d0d027abf395b4e5914acf49da0"
+    },
+    {
+      "id": "kanton/SH/173.200/art_76",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kann nach den gesetzlichen Bestimmungen eine Zwangsmassnahme durch die Polizei vorgenommen werden, so sind zur Anordnung die Offiziere der Schaffhauser Polizei zuständig."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Polizeikommando kann weitere Mitarbeitende als zuständig erklären."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "7957f5e159fdff8773b4d1776dedd3ab77e69bb7c7c8d6a4cc76fb239be75570"
+    },
+    {
+      "id": "kanton/SH/173.200/art_77",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Erlass eines Strafbefehls obliegt den verfahrensleitenden Staatsanwältinnen und Staatsanwälten."
+        },
+        {
+          "absatz": "2",
+          "text": "Mitarbeitende der Staatsanwaltschaft können, gestützt auf ihre persönlichen Pflichtenhefte sowie unter der Verantwortung der Verfahrensleitung, Strafbefehle für Übertretungen erlassen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "79d9b46e3ab920d0feb1c1adfca1dd847883bc3fdb2edf883ed0f88548ae0300"
+    },
+    {
+      "id": "kanton/SH/173.200/art_78",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verfahrensleitung kann Belohnungen für die erfolgreiche Mithilfe der Öffentlichkeit bei der Fahndung aussetzen."
+        },
+        {
+          "absatz": "2",
+          "text": "Soll die Belohnung höher ausfallen als Fr. 10'000.00, so bedarf ihre Aussetzung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "durch die Staatsanwaltschaft der Bewilligung des Regierungsrats"
+            },
+            {
+              "marke": "b",
+              "text": "durch ein Gericht der Bewilligung der Präsidentin oder des Präsidenten des Obergerichts"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Über die Auszahlung entscheidet die Verfahrensleitung."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "ee4417bea762f82ca6655ddde8600401ab60cd85ba78777badde8c5d41d62f0c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_79",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter Vorbehalt des übergeordneten Rechts und der nachfolgenden Bestimmungen gelten die Bestimmungen des Abschnitts über das allgemeine Strafrecht."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "eee33637299ec83f84629d49b380d1cfde68c684459bc05da3202a376511e82a"
+    },
+    {
+      "id": "kanton/SH/173.200/art_80",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die polizeiliche Ermittlung beschränkt sich auf jene Massnahmen, die nötig sind, um die Spuren und Merkmale begangener strafbarer Handlungen unverändert zu erhalten und die ohne offensichtliche Nachteile für das Verfahren nicht verschoben werden können. Weitere Ermittlungen werden nur im Auftrag der Jugendanwältin oder des Jugendanwalts vorgenommen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Amtshandlungen gegen Kinder und Jugendliche sind Angehörige der Polizei einzusetzen, die für diesen Dienst geeignet sind."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "e0b4469c6448001d1028da5aba214936e72983efd316718d58e8289ad6283eb1"
+    },
+    {
+      "id": "kanton/SH/173.200/art_81",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grundlage für die Festsetzung der Gebühren bilden der Streitwert, der Aufwand der Justizbehörden und die Schwierigkeit des Falls."
+        },
+        {
+          "absatz": "2",
+          "text": "In nicht vermögensrechtlichen Angelegenheiten wird für die Festsetzung der Gebühren vom tatsächlichen Streitinteresse ausgegangen. Dieses wird nach Ermessen bestimmt. Die Vorschriften über den Streitwert gelten dabei sinngemäss."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "e5ac53bbca2d06d233e29d775738fe7b4d54646486bc1e3d4d18885e684c0345"
+    },
+    {
+      "id": "kanton/SH/173.200/art_82",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Schlichtungsverfahren beträgt die Pauschalgebühr Fr. 100.00 bis Fr. 1'000.00, wenn das Verfahren nicht kostenlos ist."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "6f9f688119593af0606e9d8b6efe8271401a0b1327368266a1d0804e76ba2f4b"
+    },
     {
       "id": "kanton/SH/173.200/art_83",
       "ebene": "kanton",
@@ -54,28 +2702,55 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
       "sha": "65401dcb377cb153373d469ebff6a7ef548fa99c87f3a7f4a677d3ea5251fd4b"
     },
     {
-      "id": "kanton/SH/173.200/art_82",
+      "id": "kanton/SH/173.200/art_84",
       "ebene": "kanton",
       "quelle": "SH",
       "erlass": "JG (SHR 173.200)",
-      "artikel": "82",
-      "artikelLabel": "Art. 82",
+      "artikel": "84",
+      "artikelLabel": "Art. 84",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im Schlichtungsverfahren beträgt die Pauschalgebühr Fr. 100.00 bis Fr. 1'000.00, wenn das Verfahren nicht kostenlos ist."
+          "text": "Für die Einreichung und Hinterlegung einer Schutzschrift beträgt die Gebühr Fr. 100.00 bis Fr. 1'000.00."
+        },
+        {
+          "absatz": "2",
+          "text": "Leitet die Gegenpartei innert sechs Monaten das entsprechende Verfahren ein, wird die Gebühr für die Schutzschrift an die Pauschalgebühr für das Verfahren angerechnet."
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
-      "sha": "6f9f688119593af0606e9d8b6efe8271401a0b1327368266a1d0804e76ba2f4b"
+      "sha": "68410d8ebf8878c678e64d5ffc423df43b31cd403ff0aea75c548020dcce4464"
+    },
+    {
+      "id": "kanton/SH/173.200/art_85",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird das staatliche Gericht um Mitwirkung in einer Schiedssache ersucht, beträgt die Gebühr Fr. 500.00 bis Fr. 20'000.00."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Rechtsmittelverfahren gegen Schiedsurteile, bei vorsorglichen und sichernden Massnahmen nach Art. 183 Abs. 2 des Bundesgesetzes über das Internationale Privatrecht sowie im Anerkennungs- und Vollstreckungsverfahren nach dem New Yorker Übereinkommen über die Anerkennung und Vollstreckung ausländischer Schiedssprüche gelten die ordentlichen Pauschalgebühren für das gerichtliche Verfahren."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "32d1499787932ca7c5cdaf4daa276c18cf86e39677b59ac82ddfb7e57edd3911"
     },
     {
       "id": "kanton/SH/173.200/art_86",
@@ -126,32 +2801,675 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
       "sha": "5cfbd431beb3871428a72733ddb72670908800c941a6a2cafe349e96cb33c969"
     },
     {
-      "id": "kanton/SH/173.200/art_81",
+      "id": "kanton/SH/173.200/art_87",
       "ebene": "kanton",
       "quelle": "SH",
       "erlass": "JG (SHR 173.200)",
-      "artikel": "81",
-      "artikelLabel": "Art. 81",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Grundlage für die Festsetzung der Gebühren bilden der Streitwert, der Aufwand der Justizbehörden und die Schwierigkeit des Falls."
+          "text": "Die Bestimmungen über die Bemessung der Parteientschädigung für anwaltliche Vertretung gelten sinngemäss auch bei anderer berufsmässiger Vertretung."
         },
         {
           "absatz": "2",
-          "text": "In nicht vermögensrechtlichen Angelegenheiten wird für die Festsetzung der Gebühren vom tatsächlichen Streitinteresse ausgegangen. Dieses wird nach Ermessen bestimmt. Die Vorschriften über den Streitwert gelten dabei sinngemäss."
+          "text": "Das Obergericht kann nötigenfalls für gewisse Berufsgruppen nähere Bestimmungen erlassen."
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
-      "sha": "e5ac53bbca2d06d233e29d775738fe7b4d54646486bc1e3d4d18885e684c0345"
+      "sha": "4ac6245fd99b83bcc4c2473d04ed2cda3924bcfa058090434bf85b9876045d66"
+    },
+    {
+      "id": "kanton/SH/173.200/art_88",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren werden unter Berücksichtigung des Aufwands und der wirtschaftlichen Verhältnisse der kostenpflichtigen Person im Rahmen nachstehender Beträge festgesetzt."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "3135b2e9d8267225a32a76727067d4001f93759ddc6310b14f506124df5834dc"
+    },
+    {
+      "id": "kanton/SH/173.200/art_89",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für das Vorverfahren betragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erledigung ohne Untersuchungsverfahren:"
+            },
+            {
+              "marke": "b",
+              "text": "bei Abschluss des Untersuchungsverfahrens:"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren für das Hauptverfahren betragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erledigung ohne Urteil:"
+            },
+            {
+              "marke": "b",
+              "text": "bei Erledigung mit Urteil:"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühren für das Berufungsverfahren betragen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erledigung ohne Urteil:"
+            },
+            {
+              "marke": "b",
+              "text": "bei Erledigung mit Urteil:"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "In Fällen besonderen Umfangs, namentlich bei Straftaten mit einem Deliktsbetrag von mehr als Fr. 2'000'000.00, können die vorstehenden Ansätze angemessen erhöht werden. Die Obergrenze soll in der Regel 5% der Deliktsumme nicht übersteigen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "909c55890f81f998c01b596f2107c664d2c349685e5778f6aaa7d4291d9a5be1"
+    },
+    {
+      "id": "kanton/SH/173.200/art_90",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "90",
+      "artikelLabel": "Art. 90",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für andere Entscheide von Strafbehörden, insbesondere für nachträgliche richterliche Anordnungen, selbständige Entscheide über Nebenpunkte, sitzungspolizeiliche Massnahmen sowie für Entscheide im Beschwerde- oder Revisionsverfahren, beträgt die Gebühr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Verfügungen: Fr. 250.00–Fr. 2'000.00"
+            },
+            {
+              "marke": "b",
+              "text": "bei Gerichtsbeschlüssen: Fr. 300.00–Fr. 10'000.00"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "85a8883650260a11b7fcfb18b84d7121cc33316e5ea69c4baf43c57d00a0ef0f"
+    },
+    {
+      "id": "kanton/SH/173.200/art_91",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "91",
+      "artikelLabel": "Art. 91",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Verfahren in Jugendstrafsachen beträgt die Gebühr Fr. 50.00 bis Fr. 3'000.00."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "03aa0a7f6eb872c4d44057432e3f5e2f5e5976f47017a11a49403ec6a2a256d0"
+    },
+    {
+      "id": "kanton/SH/173.200/art_92",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "92",
+      "artikelLabel": "Art. 92",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem Kanton Schaffhausen werden keine Gerichtskosten auferlegt."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "0871605528d8a1e454b0b62586ce6d2a6e864c399abc0c24485620e6e95cc1bc"
+    },
+    {
+      "id": "kanton/SH/173.200/art_93",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "93",
+      "artikelLabel": "Art. 93",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den berechtigten Aufwand der unentgeltlichen Vertretung und der amtlichen Verteidigung wird der Rechtsanwältin oder dem Rechtsanwalt aus der Staatskasse ein Honorar ausgerichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht regelt das Nähere."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "36e209b970751af23b909a388f858645f922de82ac0edd83fbdfe46a9c186498"
+    },
+    {
+      "id": "kanton/SH/173.200/art_94",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "94",
+      "artikelLabel": "Art. 94",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt das Inkasso der Verfahrenskosten."
+        },
+        {
+          "absatz": "2",
+          "text": "Die zuständige Vollzugsbehörde bestimmt über Stundung und Teilzahlung der Kostenforderungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Das zuständige Departement kann der kostenpflichtigen Person die Bezahlung der auferlegten Kosten bei dauernder Mittellosigkeit ganz oder teilweise erlassen. Die Kosten können nachträglich eingefordert werden, wenn der kostenpflichtigen Person die Zahlung später zugemutet werden kann."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "d9474f9fd10025722be864870d12b83b71e1ee5409dc88a92295615f2ec3b805"
+    },
+    {
+      "id": "kanton/SH/173.200/art_95",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "95",
+      "artikelLabel": "Art. 95",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt den Vollzug von Polizei-, Untersuchungs- und Sicherheitshaft sowie von Strafen und Massnahmen."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann Vereinbarungen über die Mitbenützung ausserkantonaler Anstalten treffen und Private mit Vollzugsaufgaben betrauen."
+        },
+        {
+          "absatz": "3",
+          "text": "Unter Vorbehalt besonderer Gesetzesbestimmungen bezeichnet er die zuständigen Vollzugsbehörden und erlässt die weiteren Vorschriften zur Gewährleistung des Vollzugs, insbesondere die näheren Vorschriften über die Rechte und Pflichten der eingewiesenen Personen, die Disziplinarmassnahmen sowie über die Aufsicht."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "72b65574bb9b78e5756c1ef8286ccaaa03216db8c0acc256bdb52d4cbc06042e"
+    },
+    {
+      "id": "kanton/SH/173.200/art_95_bis",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "95_bis",
+      "artikelLabel": "Art. 95bis",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vollzugsbehörde kann in folgenden Fällen Sicherheitshaft anordnen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "zur Rückversetzung einer bedingt entlassenen Person in den Straf- oder Massnahmenvollzug"
+            },
+            {
+              "marke": "b",
+              "text": "bei Aufhebung einer Massnahme, sofern die Freiheitsstrafe noch nicht verbüsst ist oder die Vollzugsbehörde eine andere Massnahme als angezeigt erachtet"
+            },
+            {
+              "marke": "c",
+              "text": "bei vorübergehender Undurchführbarkeit einer freiheitsentziehenden Massnahme"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Sicherheitshaft muss im überwiegenden öffentlichen Interesse liegen. Sie darf in den Fällen von Abs. 1 lit. a und b für längstens 48 Stunden angeordnet werden. Im Fall von Abs. 1 lit. c darf sie für längstens 5 Tage angeordnet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Über die Fortdauer der Sicherheitshaft entscheidet das Gericht (Art. 363 ff. und Art. 440 StPO)."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "0d3c1ee92a4870a38fafc6e576cbcac30c948b8f7d8fa4c0e20651eef82348cb"
+    },
+    {
+      "id": "kanton/SH/173.200/art_96",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "96",
+      "artikelLabel": "Art. 96",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat regelt die Bewährungshilfe sowie die soziale Betreuung für die Dauer des Strafverfahrens und des Vollzugs."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "e889cc5084ecba98ed2e55eda0e972d06a6e7dd729285216882b6cf1a3a3ce0f"
+    },
+    {
+      "id": "kanton/SH/173.200/art_97",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "97",
+      "artikelLabel": "Art. 97",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die verurteilte Person wird nach Art. 380 Abs. 2 des Schweizerischen Strafgesetzbuchs an den Vollzugskosten beteiligt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt das Inkasso und bestimmt die zuständigen Behörden."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "a83d05136bac89a8f878e9ff45a23cbfa5980fe82a5d54b3667b0dcd7985923c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_98",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "98",
+      "artikelLabel": "Art. 98",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Verfahren bei Vollzugsanordnungen der Verwaltungsbehörden richtet sich nach dem Verwaltungsrechtspflegegesetz."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Erste Staatsanwältin oder der Erste Staatsanwalt kann gegen Justizvollzugsentscheide von Verwaltungsbehörden Rechtsmittel ergreifen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "1a8b66bb5c41bbcae5e61849cf1a104fa31259529e7a2198c97d95594c9a04b3"
+    },
+    {
+      "id": "kanton/SH/173.200/art_99",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "99",
+      "artikelLabel": "Art. 99",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kantonsrat kann durch Begnadigung alle rechtskräftig ausgesprochenen Strafen ganz oder teilweise erlassen oder in mildere Strafarten umwandeln."
+        },
+        {
+          "absatz": "2",
+          "text": "Strafrechtliche Massnahmen sowie Entscheide über Zivilansprüche und Verfahrenskosten sind nicht Gegenstand der Begnadigung."
+        },
+        {
+          "absatz": "3",
+          "text": "Ein Rechtsanspruch auf Begnadigung besteht nicht."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "5fc582835577fa06893fe6e2d45aa5a7d9532f194e439f8007554e480d7634a7"
+    },
+    {
+      "id": "kanton/SH/173.200/art_100",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "100",
+      "artikelLabel": "Art. 100",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Begnadigungsgesuch ist schriftlich und begründet dem Kantonsrat einzureichen. Es hat keine aufschiebende Wirkung, sofern nicht die zuständige Vollzugsbehörde etwas anderes verfügt."
+        },
+        {
+          "absatz": "2",
+          "text": "Das zuständige Organ des Kantonsrats zieht die Strafakten bei. Es kann eine Vernehmlassung des zuständigen Departements und der urteilenden Behörde sowie weitere Berichte zur verurteilten Person einholen."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Entscheid des Kantonsrats wird der gesuchstellenden Person, der urteilenden Behörde und der Vollzugsbehörde mit kurzer schriftlicher Begründung mitgeteilt."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "08b1abad4f5250c6ec221508ec01275af1b131fb7996e6e0fdd003330ec16b60"
+    },
+    {
+      "id": "kanton/SH/173.200/art_101",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "101",
+      "artikelLabel": "Art. 101",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Begnadigung kann auch bedingt ausgesprochen werden; der Kantonsrat setzt dabei der verurteilten Person eine Probezeit. Mit der bedingten Begnadigung können Bewährungshilfe und Weisungen verbunden werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Begeht die bedingt begnadigte Person während der Probezeit ein Verbrechen oder ein Vergehen, handelt sie trotz förmlicher Mahnung durch die Vollzugsbehörde einer ihr erteilten Weisung zuwider oder entzieht sie sich beharrlich der Bewährungshilfe, so kann der Kantonsrat die Begnadigung widerrufen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "cefb9d5170b64473f4f8c218aa90d6b1da036f550f8e4409c0f8f41d988cf0f3"
+    },
+    {
+      "id": "kanton/SH/173.200/art_102",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "102",
+      "artikelLabel": "Art. 102",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt die Bestimmungen über das Strafregister."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "3822e272d6094c75a321e12779ecd8bf8b71c06396bc2a316de43ae2480f2010"
+    },
+    {
+      "id": "kanton/SH/173.200/art_103",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "103",
+      "artikelLabel": "Art. 103",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton Schaffhausen besteht aus höchstens vier Betreibungskreisen mit je einem Betreibungsamt. Dieses hat seinen Sitz am Kreishauptort."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat setzt nach Anhörung des Obergerichts die Kreise fest, bestimmt deren Hauptorte und weist ihnen die einzelnen Gemeinden zu."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Betreibungsämter bestehen aus einer Betreibungsbeamtin oder einem Betreibungsbeamten und dem erforderlichen weiteren Personal. Die Stellvertretung der Betreibungsbeamtin oder des Betreibungsbeamten kann einer amtsinternen Mitarbeiterin bzw. einem Mitarbeiter oder der Betreibungsbeamtin bzw. dem Betreibungsbeamten eines andern Kreises übertragen werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Kreishauptorte haben den Betreibungsämtern geeignete Amtslokale und die erforderlichen Archivräume zur Verfügung zu stellen sowie auf ihre Kosten für das nötige Mobiliar und für Heizung und Beleuchtung zu sorgen. Der Kanton liefert die Bürogeräte und das Büromaterial."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "a13ac4fb555f0a1176642a2d3c4e1a111a3eacdb9f03ec75068bde615f378b8c"
+    },
+    {
+      "id": "kanton/SH/173.200/art_104",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "104",
+      "artikelLabel": "Art. 104",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das ganze Kantonsgebiet besteht ein Konkursamt."
+        },
+        {
+          "absatz": "2",
+          "text": "Es besteht aus einer Konkursbeamtin oder einem Konkursbeamten, einer Stellvertretung und dem erforderlichen weiteren Personal."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "f80ef966f649d978fd5950fdffa00ab2d528a6368b38af3592abb5df0a72c542"
+    },
+    {
+      "id": "kanton/SH/173.200/art_105",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "105",
+      "artikelLabel": "Art. 105",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitarbeitenden der Betreibungsämter und des Konkursamts dürfen weder Inhaber noch Angestellte einer Geschäftsagentur oder eines Geldgeschäfts noch Mitglieder des Vorstands oder Verwaltungsrats von Geldinstituten sein."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "393d2cbfcb2d425ca87a7789c9b42b8611e793c7cf518cb0e2a2fbdc494149b2"
+    },
+    {
+      "id": "kanton/SH/173.200/art_106",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "106",
+      "artikelLabel": "Art. 106",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit das Bundesgesetz über Schuldbetreibung und Konkurs nichts anderes bestimmt, richtet sich die Haftung für die Tätigkeit der in dessen Art. 5 genannten Organe nach dem kantonalen Haftungsgesetz."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "3832b44d0d3c43a09ec43aa9096327125289153a0aec64b51598bbd3f51300c6"
+    },
+    {
+      "id": "kanton/SH/173.200/art_107",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "107",
+      "artikelLabel": "Art. 107",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die gewerbsmässige Vertretung der Beteiligten in Schuldbetreibungs- und Konkurssachen bedarf keiner Bewilligung."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht kann einer Person die Vertretungstätigkeit verbieten, wenn ihr die berufliche Fähigkeit oder Ehrenhaftigkeit abgeht, insbesondere wegen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "strafrechtlicher Verurteilung für Handlungen, die mit der Vertretungstätigkeit nicht zu vereinbaren sind"
+            },
+            {
+              "marke": "b",
+              "text": "fruchtloser Pfändungen oder Konkurses"
+            },
+            {
+              "marke": "c",
+              "text": "wiederholter mutwilliger oder leichtfertiger Beschwerdeführung"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Bestimmungen über die Vertretung im gerichtlichen Verfahren bleiben vorbehalten."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "35ef3141c5c03f013dab5d5d41c3455e7fa40e6a5fb5fd9fb98b608051a8b00d"
+    },
+    {
+      "id": "kanton/SH/173.200/art_108",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "108",
+      "artikelLabel": "Art. 108",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Depositenanstalt im Sinn von Art. 24 des Bundesgesetzes über Schuldbetreibung und Konkurs ist die Schaffhauser Kantonalbank."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "c509175163426e8632c48040b12cb68e9c4b800a9e6435a5b232b583f6c2c098"
+    },
+    {
+      "id": "kanton/SH/173.200/art_110",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "110",
+      "artikelLabel": "Art. 110",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Beurkundungs- und Verwaltungsverfahren gelten die Art. 404–407 der Schweizerischen Zivilprozessordnung sinngemäss."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "fa5263884302da6de3fe6fcb3e7ed384db6b7e4ab8fe6cbddf3645d5959cb520"
+    },
+    {
+      "id": "kanton/SH/173.200/art_110_a",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "110_a",
+      "artikelLabel": "Art. 110a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für im Zeitpunkt der Inkraftsetzung dieser Bestimmungen hängige Verfahren gilt das neue Recht."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "00fcc4bcffa4889f4a156a563870a08ee5ad2e1284bc29080997b91da1640ac5"
+    },
+    {
+      "id": "kanton/SH/173.200/art_111",
+      "ebene": "kanton",
+      "quelle": "SH",
+      "erlass": "JG (SHR 173.200)",
+      "artikel": "111",
+      "artikelLabel": "Art. 111",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat bestimmt das Inkrafttreten."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Gesetz ist im Amtsblatt zu veröffentlichen und in die kantonale Gesetzessammlung aufzunehmen."
+        }
+      ],
+      "stand": "2026-05-01",
+      "quelleUrl": "https://rechtsbuch.sh.ch/app/de/texts_of_law/173.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ce466f93eb00d53edde9aa0d5f76998c",
+      "sha": "9600326ed233f584e4c5eea5dc3927fd131dafc3706b6ad06f8595310f73b116"
     }
   ]
 }

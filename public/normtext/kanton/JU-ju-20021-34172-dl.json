@@ -1,6 +1,458 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_1",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le présent décret fixe les émoluments perçus et certaines indemnités versées par les autorités judiciaires ou arbitrales en matière civile, pénale et administrative, ainsi que par la Commission cantonale des recours en matière d'impôts (dénommées ci-après : \"les autorités judiciaires\")."
+        },
+        {
+          "absatz": "2",
+          "text": "Les dispositions du droit fédéral et intercantonal, ainsi que les dispositions de procédure relatives aux frais, sont réservées."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "c2da648c086825d7b3465a0515f5e858cc5ba2baddae54dfe8698ef60997cb7c"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_2",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les termes utilisés dans le présent décret pour désigner des personnes s'appliquent indifféremment aux femmes et aux hommes."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "72b94609c108941941d270f4c9bec211d235570a48bf1d52edbb7be98e1647f7"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_3",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les autorités judiciaires perçoivent les émoluments fixés par le présent décret."
+        },
+        {
+          "absatz": "2",
+          "text": "Elles perçoivent, en plus, leurs débours qui doivent figurer dans leurs actes et états de frais."
+        },
+        {
+          "absatz": "3",
+          "text": "Leur secrétariat tient les états de frais."
+        },
+        {
+          "absatz": "4",
+          "text": "Pour le surplus, la procédure de perception est régie par une ordonnance du Gouvernement."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "0bd343e306e2dfd26b4360d294f77c00ae50b189fbff6e03f05d54ec5f50c1a4"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_4",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dans les cas où l'émolument comprend un minimum et un maximum, l'autorité judiciaire fixe le montant conformément aux articles 10 à 12 de la loi sur les émoluments ."
+        },
+        {
+          "absatz": "2",
+          "text": "En particulier, elle tient compte du temps et du travail requis, de l'importance de l'affaire, notamment de sa valeur litigieuse, de l'intérêt que présente l'opération pour le redevable ainsi que de la façon de procéder et de la capacité financière de celui-ci."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "ad8daf7064c21932626f7b4c654cda2f6433495b1579bedd67fda32b38af4d59"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_5",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'autorité peut majorer jusqu'à la moitié le montant des émoluments prévus par le présent décret pour les affaires nécessitant un travail d'une importance particulière, notamment lorsqu'elles prennent beaucoup de temps ou sont complexes, ainsi que dans les cas où l'intéressé viole des règles de procédure ou agit de manière téméraire ou abusive."
+        },
+        {
+          "absatz": "2",
+          "text": "Elle peut le majorer jusqu'au double dans les cas exceptionnels."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "6a97fd82482a6ab0adfc293e2c6b0a1423c5334a42623e977c539a9b6bb565c4"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_6",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'autorité peut réduire jusqu'à la moitié le montant des émoluments prévus par le présent décret lorsque la procédure :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "se termine sans jugement, par transaction, par désistement, par acquiescement, par retrait du recours ou d'une autre manière; ou"
+            },
+            {
+              "marke": "b",
+              "text": "s'est révélée brève et simple et n'a occasionné que de faibles frais."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Dans des cas exceptionnels au sens de l'alinéa 1, lettre b, elle peut le réduire davantage ou ne pas en percevoir."
+        },
+        {
+          "absatz": "3",
+          "text": "Les dispositions spéciales de procédure sont réservées."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "24d29c7f733a57b819b472608648e3ac8f39c26ca2327774d2a0d2ec3bc71c08"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_7",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour des extraits, expéditions et autres actes semblables, l'émolument est de 4 à 10 points par page."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "4f98240be58c709384caf012be07acf859a773241e90de3cef75f857986d7d9f"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_8",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour les demandes de renseignements et la communication du dossier à des tiers, en particulier aux sociétés d'assurances, l'émolument est de 20 à 100 points."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "de96fb2072a19637350fb8112f61b88f1c363ca1483007adca2a1f5a79172b64"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_9",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les dispositions du décret fixant les émoluments de l'administration cantonale s'appliquent pour le surplus, en particulier les chapitres premier et V. SECTION 1 : Juge administratif"
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "14a034bed077ea21a868c8e50ad4240c0bd15df041c0b0e473f28d8d8ff9b5db"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_10",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le juge administratif perçoit l'émolument suivant pour les décisions rendues en première instance :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en général : de 30 à 1 500 points;"
+            },
+            {
+              "marke": "b",
+              "text": "pour les décisions incidentes et préjudicielles : de 30 à 500 points;"
+            },
+            {
+              "marke": "c",
+              "text": "pour statuer sur une demande d'assistance judiciaire : de 50 à 500 points;"
+            },
+            {
+              "marke": "d",
+              "text": "pour les décisions relatives au genre et au montant de l'indemnité d'expropriation, aux demandes ultérieures d'indemnité, aux montants de l'indemnité en cas de renonciation à l'expropriation, au droit à la rétrocession et aux demandes qui en découlent, ainsi qu'aux indemnités en raison du ban d'expropriation : pour une valeur litigieuse allant : de 50 à 5 000 francs : de 15 à 300 points; de 5 001 à 30 000 francs : de 150 à 2 000 points; de 30 001 à 500 000 francs : de 1 000 à 4 500 points; de 500 001 à 1 000 000 francs : de 3 000 à 15 000 points; de 1 000 001 francs et plus : de 10 000 à 30 000 points;"
+            },
+            {
+              "marke": "e",
+              "text": "en matière d’expropriation, pour les autres décisions et les audiences de conciliation : de 150 à 800 points."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "e3ba2183574bae98d47b193eccc9f8b32378a33613232148888ff08c5633af8d"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_11",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le juge administratif perçoit un émolument de 50 à 2 000 points pour les décisions rendues sur recours et révision."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "a9c916327cd9c54c144aa2e3dcf402e5da5e2a408a1ef8dfb7de618b8fb51ea5"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_12",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour les décisions rendues sur action de droit administratif, le juge administratif perçoit un émolument en fonction de la valeur litigieuse, conformément au barème de l'article 10, lettre d. SECTION 2 : Cour administrative"
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "adb812d2f3e4d2ecdb8179224de3ad7c4a919502a488729580f593af125f8d3b"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_13",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La Cour administrative perçoit un émolument de 100 à 6 000 points pour les décisions rendues sur recours."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "94eac83a62f1e496d3f2ca0c79b89c8400df78c64185bca6cd280ddc8861c7c9"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_14",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque la Cour administrative statue sur une action de droit administratif ou sur un recours dirigé contre une décision de première instance rendue dans le cadre d'une action de droit administratif, ainsi qu'en matière d'expropriation, elle perçoit un émolument en fonction de la valeur litigieuse, conformément au barème de l'article 10, lettre d."
+        },
+        {
+          "absatz": "2",
+          "text": "En matière de marchés publics (y compris les décisions incidentes et préjudicielles rendues par le juge unique), la Cour administrative perçoit un émolument selon le barème prévu à l'article 19, alinéa 1."
+        },
+        {
+          "absatz": "3",
+          "text": "Elle perçoit un émolument de 50 à 1 000 points dans les affaires traitées :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "par le juge unique;"
+            },
+            {
+              "marke": "b",
+              "text": "sur recours pour déni de justice;"
+            },
+            {
+              "marke": "c",
+              "text": "sur requête en révision;"
+            },
+            {
+              "marke": "d",
+              "text": "à titre incident ou préjudiciel."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Elle perçoit un émolument de 50 à 500 points pour les décisions en matière de protection de l'enfant et de l'adulte, de bourses et d'assistance judiciaire gratuite."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "60564a501205c8e6a9e302b246c2f871cc17b9cf8f110b913f4fac4538bd777b"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_15",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La procédure devant la Cour des assurances est en principe gratuite. Le droit fédéral est réservé."
+        },
+        {
+          "absatz": "2",
+          "text": "Un émolument de 50 à 800 points et les débours peuvent être mis à la charge de la partie qui agit de manière téméraire ou qui témoigne de légèreté."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "e79b82e9816173f587e6e85f5127e5972cd1576667f76e760d9b55ce333ab824"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_16",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La procédure devant la Cour constitutionnelle est en principe gratuite."
+        },
+        {
+          "absatz": "2",
+          "text": "En matière de droits politiques, la Cour constitutionnelle perçoit un émolument de 100 à 2 000 points."
+        },
+        {
+          "absatz": "3",
+          "text": "Au surplus, l'article 15, alinéa 2, s'applique. SECTION 3 : Commission cantonale des recours en matière d'impôts"
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "d7342c4afe7d8b26ceb0f3894ea5f5623ede001bc43a8bdd67e781d1a67c65e3"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_17",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La Commission cantonale des recours en matière d’impôts perçoit un émolument de 100 à 4 000 points par décision qu’elle rend."
+        },
+        {
+          "absatz": "2",
+          "text": "L’article 14, alinéas 3 et 4, s’applique par analogie. SECTION 4 : Tribunaux arbitraux en matière d'assurance-accidents et d'assurance-maladie"
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "85f012370bfc3989f2649ecd99b9a3f8686424fae0f0a21b55330dbe270e5cb1"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_18",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les tribunaux arbitraux en matière d’assurance-accidents et d'assurance-maladie perçoivent un émolument de 50 à 2'000 points par décision qu’ils rendent."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "a09a5333616a9496f50d5fa697b2f9d7440e1e6fa02c3d06d3259ab2e77a694b"
+    },
     {
       "id": "kanton/JU/ju-20021-34172-dl/art_19",
       "ebene": "kanton",
@@ -32,9 +484,502 @@
       ],
       "stand": "2010-03-24",
       "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
       "sha": "620976cda580c68cd3bd654c6a5c4b5f0862181df870e51afa6a9941aeaebae7"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_20",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque la valeur litigieuse n'est pas susceptible d'évaluation, l'autorité de première instance perçoit l'émolument suivant :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "juge civil : de 300 à 6 000 points;"
+            },
+            {
+              "marke": "b",
+              "text": "Tribunal des baux à loyer et à ferme et Conseil de prud'hommes : de 120 à 2 200 points;"
+            },
+            {
+              "marke": "c",
+              "text": "Cour civile : de 1 500 à 36 000 points."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "f27b8c01dba9399c6d763024372f8d4bde7da82c922e981deba9fc36168b64a9"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_21",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'autorité de première instance perçoit en matière civile l'émolument suivant :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour une décision en procédure sommaire : de 200 à 4 000 points;"
+            },
+            {
+              "marke": "b",
+              "text": "pour une procédure de conciliation : de 200 à 1 000 points;"
+            },
+            {
+              "marke": "c",
+              "text": "pour une décision en matière d'assistance judiciaire, si la personne a agi de mauvaise foi ou de manière téméraire : de 50 à 500 points;"
+            },
+            {
+              "marke": "d",
+              "text": "pour une décision de récusation, de relevé du défaut, sur prise à partie et sur requête en révision, par requérant : de 100 à 1 200 points;"
+            },
+            {
+              "marke": "e",
+              "text": "pour les ordonnances et mesures prises sur simple requête, permis de défense et ordonnances en procédure d'exécution : de 50 à 1 500 points;"
+            },
+            {
+              "marke": "f",
+              "text": "pour traiter les demandes d'entraide judiciaire : de 30 à 200 points;"
+            },
+            {
+              "marke": "g",
+              "text": "pour la réception, la conservation et la restitution de dépôts : de 15 à 150 points."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque l'affaire est portée devant la Cour civile en tant qu'instance cantonale unique, les émoluments prévus à l'alinéa 1 sont applicables à raison de 150 %."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "a4ab77189a2c52c9a619c3189bc0dfb4daaaffc8df92d2d87ac03732c8af6489"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_22",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sur appel ou recours en matière civile, l'autorité perçoit un émolument allant 30 % à 150 % du barème applicable en première instance."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "3047958d40507347b86ecdacacd503912d1776233f15f8da28a5753533fc0383"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_23",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'autorité perçoit, de la partie requérante ou recourante, un émolument de 100 à 5 000 points pour traiter les affaires en procédure d'arbitrage."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "c4e08ad01e308e12704d75ba6da3338450ca3ecb445ba78da6d02e38248732f0"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_24",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour débattre et juger au fond, l'émolument est le suivant dans les affaires pénales :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "de la compétence d'un magistrat : de 150 à 3 000 points;"
+            },
+            {
+              "marke": "b",
+              "text": "de la compétence d'un tribunal collégial : de 300 à 15 000 points;"
+            },
+            {
+              "marke": "c",
+              "text": "sur recours : de 150 à 6 000 points."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "292a60ee066ab695a3e818518a296704a9890bf0fce84ad54b11d041d7226b06"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_25",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dans les procédures suivantes :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ordonnance pénale ou de condamnation;"
+            },
+            {
+              "marke": "b",
+              "text": "procédure orale, jugement immédiat ou procédure simplifiée;"
+            },
+            {
+              "marke": "c",
+              "text": "décision incidente ou préjudicielle;"
+            },
+            {
+              "marke": "d",
+              "text": "décision relative à une demande de relevé du défaut;"
+            },
+            {
+              "marke": "e",
+              "text": "procédure de révocation de sursis;"
+            },
+            {
+              "marke": "f",
+              "text": "décision ne relevant pas d'une autre disposition du présent chapitre; l'émolument est le suivant dans les affaires de la compétence :  d'un magistrat : de 20 à 500 points;  d'un tribunal collégial : de 50 à 1 200 points."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "En première instance, il n'est perçu aucun émolument pour le prononcé des peines privatives de liberté de substitution pour des amendes ou des peines pécuniaires prononcées par une autorité administrative (art. 36, al. 2, et 106, al. 5, CP)."
+        },
+        {
+          "absatz": "3",
+          "text": "Sur demande en révision, l'article 24, alinéa 1, lettre c, s'applique; en cas de renvoi pour nouveau jugement, les lettres a et b de cette disposition s'appliquent."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "2d17238e7a801ef848bbe1599fd4a47f7234dfacfa5acb58d67cdb6e638bf83d"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_26",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour la conduite d'une instruction, l'émolument est de 250 à 6 000 points."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "e75bb8a7e2bb50748a597d64c4729bd4dbce9e8bee24009b910dea37d5687429"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_27",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dans les procédures pénales dirigées contre des personnes mineures, un émolument de 20 à 500 points peut être prélevé :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour l'activité du Tribunal ou du juge des mineurs en procédure d'instruction et des débats;"
+            },
+            {
+              "marke": "b",
+              "text": "pour les décisions du juge des mineurs dans le cadre de l'exécution des jugements;"
+            },
+            {
+              "marke": "c",
+              "text": "pour les décisions sur recours."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "La législation relative à la justice pénale des mineurs est réservée."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "7ee5a65113ec5b575ad52b52cdcb72fd3991b3d664f4728d5e67778417a2bfac"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_28",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "En cas de pluralité de prévenus, les émoluments du présent décret sont comptés par prévenu si les circonstances le justifient. En outre, l'article 5 est réservé."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "2e7189a34808ac9d481c5ce1ac1cf01a42c4bc1473972f22c3d26f44b3d45770"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_29",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le Gouvernement fixe, sous réserve du droit intercantonal, les frais de la détention préventive. d'expert"
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "0d2c23546f42ff8113ba3bf9979d4be93c81ca0fa506fbc9c7979eac8b133d03"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_30",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le témoin reçoit une indemnité fixée selon les principes suivants :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Indemnité de comparution :  12 à 25 points si le témoin n'a pas été retenu en tout plus d'un demi-jour;  25 à 40 points s'il a été retenu plus longtemps. Les enfants de moins de quinze ans n'ont droit qu'au minimum des indemnités."
+            },
+            {
+              "marke": "b",
+              "text": "Perte de gain : 270 points par jour au maximum; dans les cas exceptionnels, ce montant peut être majoré jusqu'à 1 000 points."
+            },
+            {
+              "marke": "c",
+              "text": "Indemnité de déplacement et de subsistance :  remboursement des frais en cas d'utilisation d'un moyen de transport public (chemin de fer : 2 classe);  l'indemnité kilométrique est celle fixée par l'ordonnance concernant le remboursement des dépenses du personnel de l'Etat , lorsqu'aucun moyen de transport public ne peut être utilisé ou lorsque les horaires sont défavorables; l'indemnité est calculée pour le trajet le plus court;  indemnité pour un repas principal : 25 à 30 points;  indemnité pour la nuitée, petit déjeuner compris : 50 à 200 points;  si, pour cause de maladie, d'infirmité, de vieillesse ou d'autres circonstances, le témoin a dû faire usage d'un moyen de transport particulier, les dépenses nécessaires de ce chef lui sont remboursées."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "La personne qui accompagne un enfant, un malade, un témoin âgé ou infirme, touche la même indemnité qu'un témoin."
+        },
+        {
+          "absatz": "3",
+          "text": "Le tuteur ou le curateur cité d'un prévenu indigent peut recevoir la même indemnité qu'un témoin.5)"
+        },
+        {
+          "absatz": "4",
+          "text": "Pour les auditions faites par une autorité judiciaire hors du Canton, le présent tarif peut être appliqué par analogie, à moins que le témoin ne réclame l'application du tarif en vigueur à l'endroit de l'audition; en ce cas, ce dernier tarif s'applique."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "83aa14e9f4e52d9fffe8be4d15f95fb6505469115eb9a38ac223c4197795d246"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_31",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les honoraires d'experts sont fixés en tenant compte du temps utilisé et des difficultés du travail. L'autorité s'inspire dans la mesure du possible des tarifs applicables dans le domaine d'activité de l'expert."
+        },
+        {
+          "absatz": "2",
+          "text": "Ces honoraires comprennent également l'indemnité due pour un rapport écrit."
+        },
+        {
+          "absatz": "3",
+          "text": "L'expert a droit, en plus, aux mêmes indemnités de déplacement et de subsistance que le témoin."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "011b58f2f2cdc5c6672d44b7c7e5888b328b53dd37f286f6470e07ad1ee696ef"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_32",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le traducteur reçoit, pro rata temporis, une indemnité allant de 50 à 300 points par demi-journée d'activité ainsi que les indemnités au sens de l'article 30, alinéa 1, lettre c. L'indemnité peut être majorée d'un quart dans des circonstances exceptionnelles."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour une traduction écrite, il reçoit en plus une indemnité de 8 points par page."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "07756ca07cd60fe1d107f0b3eb7f83d1839e977071ef011e4319b25a6cad435d"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_33",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'agent public cité en qualité de témoin, d'expert ou de traducteur a droit aux indemnités au sens de l'article 30, alinéa 1, lettre c."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "414aa58ec8734c68ae6cd968c1f4995ad3aba3e6459db6d5bad00c9de58e37f1"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_34",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les dispositions du présent décret sont applicables aux affaires en cours au moment de leur entrée en vigueur."
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "8f59469c3a12f40e2572b5654044908a91b1c48dc981407ea38f63b01a24bac2"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_35",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sont abrogés :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "le décret du 4 décembre 1986 fixant les émoluments judiciaires en matière de juridiction civile et d'arbitrage;"
+            },
+            {
+              "marke": "b",
+              "text": "le décret du 4 décembre 1986 fixant les émoluments en matière de juridiction administrative et constitutionnelle;"
+            },
+            {
+              "marke": "c",
+              "text": "le décret du 4 décembre 1986 fixant les émoluments et autres indemnités en matière de juridiction pénale;"
+            },
+            {
+              "marke": "d",
+              "text": "le décret du 6 décembre 1978 fixant les émoluments de la Commission cantonale des recours en matière d'impôts."
+            }
+          ]
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "44ccb60d4d108c88bbd255d1dab55c80dc9429e45449336cf20ead26d81a198e"
+    },
+    {
+      "id": "kanton/JU/ju-20021-34172-dl/art_36",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant le tarif des frais judiciaires (RSJU 176.511)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le Gouvernement fixe l'entrée en vigueur du présent décret. Delémont, le 24 mars 2010 AU NOM DU PARLEMENT DE LA REPUBLIQUE ET CANTON DU JURA Le président : Michel Juillard Le secrétaire : Jean-Baptiste Maître"
+        }
+      ],
+      "stand": "2010-03-24",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=34172&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "e3067468393e2e25da80ef2cf185d533905f68d9bd9d2286b23b876ec8b23023",
+      "sha": "b35129af7af22228e2248813b7ffad4b4e37ebb493ec25b76498e12a872bfc13"
     }
   ]
 }

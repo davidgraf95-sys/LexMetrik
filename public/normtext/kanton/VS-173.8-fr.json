@@ -1,6 +1,921 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/VS/173.8-fr/art_1",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La présente loi fixe le tarif des frais et dépens dans les causes civiles, pénales et administratives portées devant une autorité judiciaire ou administrative."
+        },
+        {
+          "absatz": "2",
+          "text": "La définition des frais et dépens, leur charge, leur répartition, le sursis et la remise, les avances, la fourniture de sûretés, la décision sur les frais et le recours sont, en principe, réglés:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dans les causes civiles, par le code de procédure civile suisse;"
+            },
+            {
+              "marke": "b",
+              "text": "dans les causes relevant de la protection de l'enfant et de l'adulte, par le code civil suisse (CC);"
+            },
+            {
+              "marke": "c",
+              "text": "dans les causes pénales de droit fédéral et de droit cantonal, par le code de procédure pénale suisse;"
+            },
+            {
+              "marke": "d",
+              "text": "dans les causes administratives, par les articles 3 à 6 qui suivent et la loi sur la procédure et la juridiction administratives."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Demeurent réservées:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les dispositions de la législation spéciale;"
+            },
+            {
+              "marke": "b",
+              "text": "toute convention de procédure dérogeant à la présente loi, les parties ne pouvant toutefois pas déroger aux dispositions fixant les débours et l'émolument."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "8b7b28316c870f0ea05ac6265a1e8e624c502af9ee90488583c81bb5b800e662"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_2",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dans la présente loi, toute désignation de personne, de statut ou de fonction vise indifféremment l'homme ou la femme."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "ddafbcae50b6b95b0c68924034717ac448d6eb1c86da3622887d44fc5856e886"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_3",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les frais comprennent les débours de l'autorité (al. 2) et l'émolument de justice (al. 3)."
+        },
+        {
+          "absatz": "2",
+          "text": "Les débours de l'autorité comprennent les honoraires des experts, interprètes et traducteurs, les indemnités de déplacement et de présence et les autres dépenses nécessitées par la procédure engagée."
+        },
+        {
+          "absatz": "3",
+          "text": "L'émolument de justice (ci-après: émolument) est la taxe perçue en contrepartie de l'intervention de l'autorité saisie de la cause, couvrant en outre, forfaitairement, les frais de chancellerie et autres frais analogues."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "52d32499c1e2e8a6f85f473f4ab3594d9a767501222263e66c7799f61555eeb3"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_4",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les dépens comprennent l'indemnité à la partie pouvant y prétendre (al. 2) et ses frais de conseil juridique (al. 3). Ils couvrent, en principe, les frais indispensables occasionnés par le litige. La décision fixant les dépens ne lie pas le conseil juridique et son client dans leurs relations internes."
+        },
+        {
+          "absatz": "2",
+          "text": "L'indemnité allouée à la partie comprend le remboursement de ses débours et, lorsque des circonstances particulières le justifient, un dédommagement pour la perte de temps ou de gain."
+        },
+        {
+          "absatz": "3",
+          "text": "Les frais du conseil juridique comprennent les honoraires, calculés selon les articles 27 et suivants de la présente loi, auxquels s'ajoutent les débours."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "6a4444de3b282df8864cf43a01a1ec8d4adc189006ae7b05987a8991143ea682"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_5",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La décision de l'autorité sur le montant des débours, des émoluments ou l'ampleur et le sort des dépens est fixée dans le dispositif de toute décision et de tout jugement. Si les circonstances le justifient, l'autorité peut renvoyer sa décision sur les dépens à fin de cause."
+        },
+        {
+          "absatz": "2",
+          "text": "Jusqu'aux débats, jusqu'à la décision finale, ou dans le délai assigné par l'autorité, la partie peut déposer un décompte présentant:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ses débours (art. 4 al. 2);"
+            },
+            {
+              "marke": "b",
+              "text": "l'indemnité (art. 4 al. 2);"
+            },
+            {
+              "marke": "c",
+              "text": "les honoraires et débours du conseil juridique (art. 4 al. 3)."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "97944698a7ae0a43787f718e02d1f5f650bb66b031c70c5af83666c013227cf7"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_6",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le recours dirigé contre la seule décision en matière de frais et dépens s'exerce, en procédure administrative, par la voie du recours administratif ou de droit administratif."
+        },
+        {
+          "absatz": "2",
+          "text": "En cas de recours dirigé exclusivement contre une décision en matière de frais et dépens, les frais et dépens finalement arrêtés portent intérêt à cinq pour cent dès le trentième jour à compter du jugement ou de la décision objet du recours."
+        },
+        {
+          "absatz": "3",
+          "text": "L'entrée en force de la décision ou du jugement au fond n'est pas affectée par le recours dirigé exclusivement contre les frais et dépens."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "53fd63fd25d9127d10785654ee508102b681ff9971f60cd6db73fa253e0ea453"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_7",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'autorité fixe les honoraires alloués aux experts, interprètes et traducteurs, le cas échéant sur la base d'un devis, en tenant compte:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "de l'importance et de la difficulté du travail;"
+            },
+            {
+              "marke": "b",
+              "text": "du tarif en usage dans la profession."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Les parties peuvent être entendues."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "774322216f5465d7ee43cb2f930408097f208e3afb745a6767d4bf90b0439f94"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_8",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les témoins reçoivent:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "une indemnité de déplacement selon l'article 9;"
+            },
+            {
+              "marke": "b",
+              "text": "une indemnité de présence de 50 francs;"
+            },
+            {
+              "marke": "c",
+              "text": "une indemnité de 120 francs par nuit s'ils ne peuvent regagner leur domicile."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Selon les circonstances, ces indemnités peuvent être majorées."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "413796c70572783f1476f28f9f2bd1b046a40f3e1ceff4ba571bd594c908697d"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_9",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les experts, interprètes, traducteurs et témoins reçoivent pour leurs déplacements une indemnité de 0.60 franc par kilomètre effectif parcouru."
+        },
+        {
+          "absatz": "2",
+          "text": "Les frais de déplacement alloués aux juges, procureurs, greffiers et fonctionnaires sont arrêtés par le règlement du Conseil d'Etat sur les indemnités de déplacement, faute de dispositions spéciales du Tribunal cantonal, du ministère public ou du conseil municipal."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "deb25bf15b0f2cc623275683b2cf2c89e8c75ffcb1bc5709f8ab5b7c725ecd87"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_10",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'intervention de fonctionnaires de police sur délégation de l'autorité occasionne les dépenses suivantes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "une indemnité kilométrique de 0.60 franc par véhicule utilisé;"
+            },
+            {
+              "marke": "b",
+              "text": "un émolument de 20 à 1'000 francs par opération, tel que rapport, graphique, dossier photographique, expertise ou autre intervention;"
+            },
+            {
+              "marke": "c",
+              "text": "le remboursement des indemnités allouées aux agents selon la législation spéciale."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Pour les services d'un huissier judiciaire, il est perçu 25 francs par séance."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "36270123616143d6686a98637ab484c415d69e911efab3e2857ec7a4d43b2ba8"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_11",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les autres débours nécessités par la procédure sont portés en compte à leur montant effectif. Dans la mesure où ils n'excèdent pas le montant de 200 francs, ils peuvent être remplacés par un montant forfaitaire."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "9755e19b9d1ed6c2df2173964effa7fc94f4d3136ec714ec9b8510829bd70517"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_12",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "A titre exceptionnel, il peut être renoncé partiellement ou totalement à percevoir les débours de l'autorité."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "f00b04587cc8601c6c628bb4c89b693c68c824d0ab5aea549b5ce4d868d9c376"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_13",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument est fixé en fonction de la valeur litigieuse, de l'ampleur et de la difficulté de la cause, de la façon de procéder des parties, ainsi que de leur situation financière. Lorsque la valeur litigieuse ne peut être exprimée en chiffres, l'émolument est fixé d'après les autres éléments d'appréciation."
+        },
+        {
+          "absatz": "2",
+          "text": "Il oscille entre un minimum et un maximum arrêtés eu égard aux principes de la couverture des frais et de l'équivalence des prestations."
+        },
+        {
+          "absatz": "3",
+          "text": "Lorsque des circonstances particulières le justifient, l'autorité peut majorer ces limites jusqu'au double et en matière pénale et en matière de droit public jusqu'au quintuple."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "f1101676f5a11a78b58263b17064db3bd333d2cedfe4b02a929836e6d2cbed9d"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_14",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsque la cause n'est pas conduite jusqu'à son terme, l'émolument est réduit proportionnellement. Il en va de même en cas de jugement sur le fond préjudiciel ou partiel, de jugement par défaut ou sans motivation."
+        },
+        {
+          "absatz": "2",
+          "text": "L'autorité peut renoncer, à titre exceptionnel, à percevoir tout ou partie de l'émolument."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "967f8bd823e62d3bed0364ae882608a172f9ef5fa68cd283ca516c60ad716bb0"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_15",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Il est perçu un émolument:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "de 50 à 100 francs pour la citation en conciliation, selon le nombre de défendeurs;"
+            },
+            {
+              "marke": "b",
+              "text": "de 120 à 250 francs pour la tenue de la séance de conciliation."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Pour les litiges patrimoniaux dont la valeur litigieuse ne dépasse pas 2'000 francs et pour les propositions de décision, il est perçu un émolument de 60 à 500 francs."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "009983edb1e433be4859b667e37340a4208495f1e9a81c01c49e40a52e7bf49d"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_16",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les contestations civiles de nature pécuniaire, soumises à la procédure ordinaire ou simplifiée, et tranchées en première ou unique instance, l'émolument est calculé d'après le barème suivant: Pour une valeur litigieuse: jusqu'à 2'000 francs · L'émolument est fixé dans les limites: de 180 à 1'200 francs — Pour une valeur litigieuse: de 2'001 à 8'000 francs · L'émolument est fixé dans les limites: de 650 à 1'800 francs — Pour une valeur litigieuse: de 8'001 à 20'000 francs · L'émolument est fixé dans les limites: de 900 à 3'600 francs — Pour une valeur litigieuse: de 20'001 à 50'000 francs · L'émolument est fixé dans les limites: de 1'800 à 6'000 francs — Pour une valeur litigieuse: de 50'001 à 100'000 francs · L'émolument est fixé dans les limites: de 2'700 à 9'600 francs — Pour une valeur litigieuse: de 100'001 à 200'000 francs · L'émolument est fixé dans les limites: de 4'500 à 18'000 francs — Pour une valeur litigieuse: de 200'001 à 500'000 francs · L'émolument est fixé dans les limites: de 9'000 à 42'000 francs — Pour une valeur litigieuse: de 500'001 à 1'000'000 francs · L'émolument est fixé dans les limites: de 18'000 à 60'000 francs — Pour une valeur litigieuse: au-dessus de 1'000'000 francs · L'émolument est fixé dans les limites: de 27'000 à 120'000 francs"
+        },
+        {
+          "absatz": "2",
+          "text": "Les principes déterminant la valeur litigieuse à considérer pour le calcul des dépens (art. 28) s'appliquent par analogie."
+        },
+        {
+          "absatz": "3",
+          "text": "Le barème du présent article s'applique également aux procédures sommaires portant sur une contestation de nature pécuniaire et conduisant au prononcé d'un jugement à caractère final."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "714ff2723030808b05c4dccaf8dc000446faeb5dd92ebd92baa184a579e1c42b"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_17",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les contestations non pécuniaires soumises à la procédure ordinaire ou simplifiée, l'émolument est de 280 à 9'600 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "L'émolument prévu à l'alinéa 1 s'applique également aux procédures en modification du jugement de divorce, de séparation de corps, de contribution d'entretien ou de dissolution du partenariat enregistré."
+        },
+        {
+          "absatz": "3",
+          "text": "Si, dans un procès en divorce, en séparation de corps ou en dissolution du partenariat enregistré, la contestation porte également sur la liquidation des rapports patrimoniaux, il est perçu, en sus, l'émolument prévu à l'article 16."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "07f53dc69cda325ec5e6457c8dcd27bc5ff206080e0157a434deb681fb32e66d"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_18",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument est de 90 à 4'800 francs pour les autres procédures, en particulier pour les affaires relevant de la protection de l'enfant et de l'adulte, les affaires non contentieuses, les causes soumises à une procédure sommaire, les procédures de recours limités au droit, de révision, d'interprétation et de rectification ainsi que pour les incidents de procédure."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "86c56af1e9dea9e8317b795e910b3d02b8f02eb4d44a9c66dee9571d7d96c84f"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_19",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument est calculé par référence au barème applicable en première instance et peut tenir compte d'un coefficient de réduction de 60 pour cent."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "d1afec89242df75075746d596558318aaa26b93df6848b74f96576c541c85649"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_20",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les causes de la compétence du tribunal de police, il est perçu un émolument de 50 à 500 francs."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "8f4c696bb0d63b3fd56347210561d742d6e725c1ce73e12c41f6de12ff125110"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_21",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsque les circonstances justifient de mettre tout ou partie des frais à la charge du mineur ou de ses parents, il est perçu un émolument de:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "20 à 500 francs pour l'instruction de la cause;"
+            },
+            {
+              "marke": "b",
+              "text": "40 à 500 francs pour la procédure devant le juge des mineurs;"
+            },
+            {
+              "marke": "c",
+              "text": "90 à 1'000 francs pour la procédure devant le tribunal des mineurs;"
+            },
+            {
+              "marke": "d",
+              "text": "90 à 500 Francs pour la procédure d'appel devant le tribunal des mineurs;"
+            },
+            {
+              "marke": "e",
+              "text": "90 à 1'000 francs pour la procédure d'appel devant le Tribunal cantonal."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "9d3bef26877ab486aed113fc70d59b7c04f5964ec0c7bebb74d793f23aac3cac"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_22",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les autres causes pénales, il est perçu un émolument de:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "40 à 1'200 francs pour la procédure de conciliation devant le ministère public;"
+            },
+            {
+              "marke": "b",
+              "text": "90 à 6'000 francs pour les autres procédures devant le ministère public;"
+            },
+            {
+              "marke": "c",
+              "text": "90 à 2'400 francs pour la procédure devant le tribunal de district;"
+            },
+            {
+              "marke": "d",
+              "text": "190 à 6'000 francs pour la procédure devant le tribunal d'arrondissement;"
+            },
+            {
+              "marke": "e",
+              "text": "90 à 1'200 francs pour la procédure devant le tribunal des mesures de contrainte;"
+            },
+            {
+              "marke": "f",
+              "text": "380 à 6'000 francs pour la procédure d'appel ou de révision devant le Tribunal cantonal;"
+            },
+            {
+              "marke": "g",
+              "text": "90 à 2'400 francs pour la procédure de recours devant la chambre pénale du Tribunal cantonal ou un juge du Tribunal cantonal et jusqu'à 6'600 francs en matière d'entraide judiciaire internationale;"
+            },
+            {
+              "marke": "h",
+              "text": "90 à 1'200 francs pour la procédure devant le tribunal de l'application des peines et mesures et dans les procédures d'autres affaires judiciaires pénales au sens de la loi d'application du code pénal suisse."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "6e18b4ed0573f294deb9338c850be1edb3119b23d3387cad050bb89f084cafdb"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_23",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dans les affaires non pécuniaires, les autorités administratives perçoivent l'émolument suivant:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "commune, districts, organes de l'administration cantonale, corporations et établissements de droit public de 90 à 1'000 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "département de 90 à 1'650 francs;"
+            },
+            {
+              "marke": "c",
+              "text": "Conseil d’Etat, autorité cantonale de surveillance des avocats et commission d’estimation en matière d’expropriation de 90 à 1'800 francs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Dans les affaires pécuniaires, l'émolument peut atteindre le triple de ces montants."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "ca67b2da6087099af86e1a89f03a81f98881aba90a094ea315936bd2d2adcd60"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_24",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "En cas d'action portée devant le Tribunal cantonal, l'émolument est calculé d'après le barème suivant:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en conformité de l'article 18 pour les procédures sommaires, pour les procédures incidentes, ainsi que pour les procédures de révision et d'interprétation;"
+            },
+            {
+              "marke": "b",
+              "text": "en conformité de l'article 16 pour les procédures ordinaires dans les affaires pécuniaires;"
+            },
+            {
+              "marke": "c",
+              "text": "entre un minimum de 280 francs et un maximum de 8'000 francs pour les procédures ordinaires dans les affaires non pécuniaires."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "a57180d24dcdb5b9e6906e10a8d4bd7e00c9d9fb451fcb417d19846b6eda1724"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_25",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dans les procédures de recours de droit administratif, il est perçu un émolument de 280 à 5'000 francs."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "678774ddf0389995250d45f2734f5e8db94f1383564568e3d529001f2febc6c6"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_26",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Sauf disposition contraire du droit fédéral, les procédures devant la cour des assurances sociales du Tribunal cantonal sont soumises à un émolument de 280 à 5'000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Le tribunal arbitral au sens de la loi fédérale sur l'assurance maladie perçoit un émolument de 470 à 20'000 francs."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "cf8343b09bdceab6e3caf1662e483ce67705e68547484ef123b9a006c3b3d8ad"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_27",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les honoraires sont fixés entre un minimum et un maximum prévus par le présent chapitre, d'après la nature et l'importance de la cause, ses difficultés, l'ampleur du travail, le temps utilement consacré par le conseil juridique, et la situation financière de la partie."
+        },
+        {
+          "absatz": "2",
+          "text": "Les honoraires sont, en règle générale, proportionnels à la valeur litigieuse."
+        },
+        {
+          "absatz": "3",
+          "text": "Lorsque la valeur litigieuse ne peut être chiffrée, les honoraires sont fixés d'après les éléments d'appréciation mentionnés à l'alinéa 1."
+        },
+        {
+          "absatz": "4",
+          "text": "L'autorité fixe les honoraires en chiffres ronds en se conformant, pour le surplus, aux dispositions spéciales des diverses lois de procédure."
+        },
+        {
+          "absatz": "5",
+          "text": "Les dépens s'entendent TVA comprise. Si le taux de TVA existant au moment de l'entrée en vigueur de la présente loi est modifié, le Conseil d'Etat procède par voie réglementaire à l'adaptation des honoraires prévus dans la présente loi."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "49cb8f34259868d35321eb58c71559ec646f63f7bed97ae4fc79fcf8ddc93299"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_28",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La valeur litigieuse se détermine conformément aux dispositions du code de procédure civile suisse."
+        },
+        {
+          "absatz": "2",
+          "text": "Si les conclusions d'une partie sont manifestement exagérées, les honoraires sont fixés d'après les conclusions qu'elle eût dû prendre de bonne foi."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "af6b15b783edd68844fd4b7be406c564259850e1a335accee01da4a1750cedfa"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_29",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dans les causes qui ont nécessité un travail particulier, notamment lorsque le mandat a dû être exécuté en partie en dehors des heures de travail, que les moyens de preuve ont été longs et difficiles à réunir ou coordonner, que le dossier de la procédure probatoire a pris une ampleur considérable, que les questions de fait ou de droit ont été spécialement compliquées, que le conseil juridique représente plusieurs parties ou que son client est opposé à plusieurs parties, l'autorité peut accorder des honoraires d'un montant supérieur à celui prévu par le tarif."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsqu'il y a une disproportion manifeste entre la valeur litigieuse et l'intérêt des parties au procès ou entre la rémunération due d'après le présent tarif et le travail effectif du conseil juridique, l'autorité peut ramener les honoraires au-dessous du minimum prévu."
+        },
+        {
+          "absatz": "3",
+          "text": "En cas de désistement, de retrait du recours, de jugement par défaut, de transaction, d'irrecevabilité et, d'une manière générale, lorsque la cause ne se termine pas par un jugement au fond, les honoraires peuvent être réduits en conséquence."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "2072417293577d8f143054a2c091a97031db1abd14e47580ab96cc64fde1f62a"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_30",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le conseil juridique habilité à se faire indemniser en vertu des dispositions en matière d'assistance judiciaire perçoit, en sus du remboursement de ses débours justifiés, des honoraires correspondant au 70 pour cent des honoraires prévus aux articles 31 à 40, mais au moins à une rémunération équitable telle que définie par la jurisprudence du Tribunal fédéral."
+        },
+        {
+          "absatz": "2",
+          "text": "Est rémunéré au plein tarif par le département dont relèvent les finances:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "le conseil juridique commis d'office au sens de l'article 132 alinéa 1 lettre a CPP (défense obligatoire);"
+            },
+            {
+              "marke": "b",
+              "text": "le conseil juridique commis d'office au sens de l'article 132 alinéa 1 lettre b CPP, lorsque le prévenu est au bénéfice d'une ordonnance de classement ou est acquitté."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "La procédure d'indemnisation du conseil juridique commis d'office et de recouvrement des prestations versées sont réglementées par le code de procédure pénale suisse, le code de procédure civile suisse, la loi sur l'assistance judiciaire (LAJ) et son ordonnance."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "cf232bd8f030fd4d59075556d2dfcda7c3f674deb80ef71350fd55f32fb4b6e8"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_31",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Devant le juge de commune, les honoraires sont fixés comme il suit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour la proposition de décision de 60 à 250 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "pour la procédure de décision de 250 à 900 francs."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Pour la procédure de révision, d'interprétation et de rectification, les honoraires oscillent entre 250 et 900 francs."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "05fd4c5ec35af8c9b96b585d43fb84acb9f98aa98587455a641afb9b4e0e4938"
+    },
     {
       "id": "kanton/VS/173.8-fr/art_32",
       "ebene": "kanton",
@@ -20,9 +935,454 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
       "sha": "704053a4925ca2d425a09ef5086a26b30faf5c034602a25515efb523ff89aff0"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_33",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les affaires judiciaires de la LP donnant lieu à l'octroi de dépens en matière de poursuite et de faillite, ceux-ci sont fixés entre 250 et 3'300 francs."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "d7de9f29341f7e7613b8c9a689012f6113d69fe81a9488a49970a306b6f47808"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_34",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dans les autres contestations et affaires civiles, les honoraires sont fixés de 1'100 à 11'000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Les honoraires prévus à l'alinéa 1 s'appliquent également aux procédures en modification du jugement de divorce, de séparation de corps, de contribution d'entretien ou de dissolution du partenariat enregistré."
+        },
+        {
+          "absatz": "3",
+          "text": "Si, dans un procès en divorce, en séparation de corps ou en dissolution du partenariat enregistré, la contestation porte également sur la liquidation des rapports patrimoniaux, des honoraires proportionnels sont fixés en sus."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "71ac7ba229556674825134383099090e0cb2af28c79528a5297690f5db7492b1"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_35",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les honoraires sont calculés par référence au barème applicable en première instance, compte tenu d'un coefficient de réduction de 60 pour cent:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en procédure d'appel au Tribunal cantonal;"
+            },
+            {
+              "marke": "b",
+              "text": "en matière de protection de l'enfant et de l'adulte, en procédure de recours au Tribunal cantonal."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Les honoraires sont fixés entre 550 et 8'800 francs:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "pour les procédures de recours limité au droit;"
+            },
+            {
+              "marke": "b",
+              "text": "en matière de protection de l'enfant et de l'adulte, pour les procédures de recours à l'autorité de protection et d'appel au juge;"
+            },
+            {
+              "marke": "c",
+              "text": "pour les procédures de révision, d'interprétation et de rectification."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "6feec6aecfdb183e68578c8dc849742640b2a092e05acd5d672cbdb12a5fc6ab"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_36",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "En cas de procédure devant l'autorité pénale, les honoraires sont fixé comme il suit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "devant le tribunal de police de 250 à 650 francs;"
+            },
+            {
+              "marke": "b",
+              "text": "devant la police, dans la procédure d'investigation (avocat de la première heure) de 250 à 1'600 francs;"
+            },
+            {
+              "marke": "c",
+              "text": "devant le ministère public comme autorité de conciliation de 60 à 1'100 francs;"
+            },
+            {
+              "marke": "d",
+              "text": "devant le ministère public pour les autres procédures de 550 à 5'500 francs,"
+            },
+            {
+              "marke": "e",
+              "text": "devant le tribunal des mesures de contrainte de 550 à 3'300 francs;"
+            },
+            {
+              "marke": "f",
+              "text": "devant le tribunal de district de 550 à 3'300 francs;"
+            },
+            {
+              "marke": "g",
+              "text": "devant le tribunal d'arrondissement de 1'100 à 8'800 francs;"
+            },
+            {
+              "marke": "h",
+              "text": "devant le juge ou le tribunal des mineurs, en première instance de 550 à 3'300 francs;"
+            },
+            {
+              "marke": "i",
+              "text": "devant le tribunal des mineurs, en appel de 550 à 5'500 francs;"
+            },
+            {
+              "marke": "j",
+              "text": "devant le Tribunal cantonal, en appel et en révision de 1'100 à 8'800 francs;"
+            },
+            {
+              "marke": "k",
+              "text": "devant un juge du Tribunal cantonal ou la chambre pénale, en recours de 300 à 2'200 francs;"
+            },
+            {
+              "marke": "l",
+              "text": "devant le tribunal de l'application des peines et mesures et dans les procédures d'autres affaires judiciaires pénales au sens de la loi d'application code pénal suisse de 300 à 2'200 francs."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "0b83e7efeedce0f72b62e726bb1025c49d3a125f8345a8ac818bce51bc106bbf"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_37",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les parties n'ont, en principe, pas droit à des dépens pour la procédure conduite devant une autorité administrative statuant en première instance."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour la procédure de recours administratif, les honoraires sont fixés entre 550 et 8'800 francs."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "d8a2a8727a3562f537f3afa4b458be7de52fd8277cb43abaeb1010bf2f065766"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_38",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "En cas d'action portée devant le Tribunal cantonal, les honoraires sont fixés comme il suit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "entre 550 et 3'300 francs pour les causes soumises à une procédure sommaire et pour les procédures incidentes;"
+            },
+            {
+              "marke": "b",
+              "text": "en conformité avec l'article 32 pour les procédures ordinaires dans les affaires pécuniaires;"
+            },
+            {
+              "marke": "c",
+              "text": "entre 1'100 et 11'000 francs pour les procédures ordinaires dans les affaires non pécuniaires."
+            }
+          ]
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "138c3964a00d9e2f242af669a8d079325861f65d051478058bfe07e579ec1dd5"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_39",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour la procédure de recours de droit administratif, les honoraires sont fixés entre 1'100 et 11'000 francs."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "3eff191178325abe2858d36a5acc14aee18cdbac289f62cf240fc8068ce041c2"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_40",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour la procédure devant la cour des assurances sociales du Tribunal cantonal et le tribunal arbitral au sens de la loi fédérale sur l'assurance maladie, les honoraires sont fixés entre 550 et 11'000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Les honoraires fixés à l'article 32 s'appliquent aux procédures fondées sur l'article 52 de la loi fédérale sur la prévoyance professionnelle vieillesse, survivants et invalidité ainsi que sur l'article 52 de la loi fédérale sur l'assurance-vieillesse et survivants."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "8f74ed7d2e500fb31844643b209e0081f517b8ff53fe17e7230b6d544782088a"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_41",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les avances, les sûretés et les frais au sens de l'article 3 de la présente loi, du code de procédure pénale suisse et du code de procédure civile suisse, ne peuvent être encaissés par voie de rembours postal."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque les modalités d'une avance ne sont pas régies par la loi de procédure, l'autorité peut exiger que l'avance soit fournie au plus tard le jour de l'audience ou du prononcé de la décision, à peine d'irrecevabilité de la requête."
+        },
+        {
+          "absatz": "3",
+          "text": "L'avance exigée d'une seule partie, en raison d'un acte de procédure particulier qu'elle requiert, fait l'objet d'une comptabilisation spéciale à boucler sans délai dès l'aboutissement dudit acte de procédure."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "29111310210a251c3ee744ab0ee66ce53458b3e683189d7d87ac5d949413f091"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_42",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Toutes les pièces de procédure civile, pénale ou administrative, ainsi que les copies de pièces destinées à être produites dans le cadre d'une procédure devant le juge ou l'autorité, sont rédigées sur papier libre."
+        },
+        {
+          "absatz": "2",
+          "text": "Les jugements, décisions, transactions judiciaires, acquiescements et désistements comportant l'obligation de payer une somme sont exemptés du timbre proportionnel."
+        },
+        {
+          "absatz": "3",
+          "text": "Sont affranchis du droit spécial perçu en application de la loi sur la santé les séances devant le juge de commune ou une autorité judiciaire, ainsi que les jugements et décisions des autorités judiciaires."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "bf31fe4fb5c902e3c1800fb65e40713dac2b050f582b2b9981537bd786de7b2f"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_43",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Grand Conseil peut adapter, par voie de décision, les montants des frais, des émoluments et des honoraires du conseil juridique calculés sans référence à la valeur litigieuse chaque fois que l'indice suisse des prix à la consommation subit une variation de cinq points comptés dès l'entrée en vigueur de la présente loi."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "8afa9436990d29a7d94574ccc77366b8cac831003c6b494e620abf732a6d8e3a"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_44",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La loi fixant le tarif des frais et dépens devant les autorités judiciaires ou administratives du 14 mai 1998 est abrogée."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "6ddc75fac92e6860c9dde855816ed0ddc1e462fc3f2514e9a5002a5c9b3e3a9b"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_45",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'article 13a du règlement d'exécution de la loi concernant la protection des données à caractère personnel du 26 février 1986 est modifié."
+        },
+        {
+          "absatz": "2",
+          "text": "Le troisième considérant de l'arrêté fixant la part des frais administratifs mis à la charge du débiteur dans le cadre de la procédure d'encaissement du 11 février 1987 est modifié."
+        },
+        {
+          "absatz": "3",
+          "text": "Le troisième considérant de l'arrêté fixant le tarif des émoluments en matière de registres d'impôts du 27 novembre 2001 est modifié."
+        },
+        {
+          "absatz": "4",
+          "text": "L'article 240 alinéa 2 de la loi sur les routes du 3 septembre 1965 est modifié."
+        },
+        {
+          "absatz": "5",
+          "text": "L'article 1er alinéa 2 du règlement sur les taxes et émoluments perçus en application de la loi sur les routes du 29 avril 2003 est modifié"
+        },
+        {
+          "absatz": "6",
+          "text": "L'article 1er alinéa 2 de l'arrêté sur les frais et émoluments relatifs à l'application de la loi sur la santé du 26 mars 1997 est modifié."
+        },
+        {
+          "absatz": "7",
+          "text": "L'article 5 alinéa 1 de l'arrêté fixant les frais et émoluments pour les interventions en matière d'environnement du 28 novembre 1990 est modifié."
+        },
+        {
+          "absatz": "8",
+          "text": "Le quatrième considérant de l'arrêté fixant les émoluments à percevoir en matière d'aide au logement du 23 février 1994 est modifié."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "8681bb73a1a2401feb7ca610ff72468442e72c8b733f1cdc06d5a2c140614cc2"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_46",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'ancien droit reste applicable lorsqu'il a été statué définitivement sur les frais avant l'entrée en vigueur de la présente loi."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour le surplus, la présente loi s'applique aux procédures pendantes lors de son entrée en vigueur, en tenant compte des avances faites sur la base de l'ancien droit."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "c5fcf791ed4005f9e13997dab3813ca9f2386a3be4262f10622be3990198272f"
+    },
+    {
+      "id": "kanton/VS/173.8-fr/art_47",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "LTar (SR 173.8)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La présente loi est soumise au référendum facultatif."
+        },
+        {
+          "absatz": "2",
+          "text": "Le Conseil d'Etat fixe la date de son entrée en vigueur."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/fr/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "8e090f0b14c8625503fa344c8befed82a65239db2ec9a7580cf79fd83b17e764"
     }
   ]
 }

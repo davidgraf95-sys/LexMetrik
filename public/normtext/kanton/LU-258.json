@@ -1,6 +1,565 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/LU/258/art_1",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Urkundspersonen beziehen für die öffentlichen Beurkundungen die in dieser Verordnung festgesetzten Gebühren."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "88c831ea4c9a7a34b585b18f535eb137f2483750734208f7200efb49233454cc"
+    },
+    {
+      "id": "kanton/LU/258/art_2",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Legt diese Verordnung einen Gebührenrahmen fest, bemisst sich die Gebühr nach dem gebotenen Zeitaufwand."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Stundenansatz der Urkundsperson beträgt Fr. 180.– bis Fr. 300.–. Für die Bemessung ist insbesondere die Bedeutung und Schwierigkeit der Sache sowie die übernommene Verantwortung massgebend."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Sekretariatsarbeiten sind im Grundansatz inbegriffen. Der Stundenansatz für die Tätigkeit von Notariatsangestellten (Sachbearbeiter, juristischer Mitarbeiter) beträgt Fr. 70.– bis Fr. 160.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "b73a29ce4079b0bfdef1c0d45c225b91ef9bf4729e985d47e4edc690b10225fe"
+    },
+    {
+      "id": "kanton/LU/258/art_3",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr ist das Entgelt für die Vorbereitungsarbeiten (Feststellen der Identität, Ermitteln des Parteiwillens, Entwerfen und Ausfertigen der Urkunde in Exemplaren für die Urkundsparteien, die Amtsstellen und den Notar, Prüfen eines dem Notar vorgelegten Entwurfes), für den eigentlichen Beurkundungsakt und die Anmeldung eintragungsbedürftiger Rechtsgeschäfte."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Gebühr nicht inbegriffen sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "das Entgelt für weitere Vorbereitungsarbeiten, wie Parzellierungen (einschliesslich Bereinigung von Dienstbarkeiten), Pfandentlassungen, Baulandumlegungen durch privatrechtliche Vereinbarung, Verfassen von Nutzungs- und Verwaltungsordnungen für Stockwerk- oder Miteigentümergemeinschaften, Gesellschaftsstatuten, Sacheinlage- und Fusionsverträgen;"
+            },
+            {
+              "marke": "b",
+              "text": "das Entgelt für Folgearbeiten, wie Ermitteln der vorkaufsberechtigten Personen und Mitteilung des Vorkaufsfalles, Einreichen einer Verfügung von Todes wegen zur amtlichen Aufbewahrung, Abklärungen im Hinblick auf Wertgrenzen und die Zustimmungsbedürftigkeit eines Rechtsgeschäftes, Einholen von Zustimmungserklärungen, Gesuche um Genehmigung eines Rechtsgeschäftes oder um Feststellung einer Behörde im Hinblick auf die Genehmigungsbedürftigkeit eines Rechtsgeschäftes, Gesuch um Schatzungsverteilung, Treuhandfunktionen beim Vollzug beurkundeter Geschäfte."
+            }
+          ]
+        },
+        {
+          "absatz": "2bis",
+          "text": "Die nicht in der Gebühr inbegriffenen Arbeiten nach Absatz 2 werden nach dem gebotenen Zeitaufwand entschädigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beurkundung aufgrund einer dem Notar in Reinschrift vorgelegten Urkunde hat keine Ermässigung der Gebühr zur Folge."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "725f840592eea0cae8368b40adf1541fad82b1bd2982ebe42ad98d778a25eea6"
+    },
+    {
+      "id": "kanton/LU/258/art_4",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr darf angemessen erhöht werden,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn mit einer Beurkundung wiederholte Verhandlungen oder ein aussergewöhnlicher Zeitaufwand verbunden sind;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn die Urkundsperson ausserhalb der üblichen Geschäftszeit oder ausserhalb des Büros beansprucht wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "809d9c8a50d4d39d38d0829e7e1c6a25b350554645a95cc044f3de827ee0f756"
+    },
+    {
+      "id": "kanton/LU/258/art_5",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr ist angemessen herabzusetzen,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn die öffentliche Beurkundung nicht zum Abschluss gelangt;"
+            },
+            {
+              "marke": "b",
+              "text": "wenn ein Notar im gleichen Sachzusammenhang zahlreiche gleichartige Rechtsgeschäfte zu beurkunden hat."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Gebühren, die sich nach einem Gebührenrahmen richten, kann in Ausnahmefällen, insbesondere in Fällen gemäss Absatz 1b, die Mindestgebühr unterschritten werden."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "6fb1755e8811b4d29ff34645b668e3b5c09298821e168525cfb1e715aedcd60b"
+    },
+    {
+      "id": "kanton/LU/258/art_6",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Beurkundung eines Vorvertrags richtet sich nach derjenigen für den Hauptvertrag. Wird dieser vom gleichen Notar beurkundet, so beträgt die Gebühr für den Hauptvertrag die Hälfte."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "6a4ba7032c190d2909c5f23d72f576ef6ba2caab6c918f5db0194773fca91e3e"
+    },
+    {
+      "id": "kanton/LU/258/art_7",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Verlängerung eines zeitlich befristeten Vertrags beträgt die Gebühr Fr. 100.– bis Fr. 1000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "f296d308de224ea01af1c978562fd50ae4e53b3b1866d7945f8849cd3cd0484d"
+    },
+    {
+      "id": "kanton/LU/258/art_8",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beurkundung mehrerer Rechtsgeschäfte in der gleichen Urkunde wird die Gebühr von jedem Rechtsgeschäft gesondert berechnet, soweit diese Verordnung keine abweichende Regelung vorsieht. Eine gesonderte Berechnung unterbleibt jedoch bei der gleichzeitigen Beurkundung nicht beurkundungsbedürftiger Rechtsgeschäfte, wie etwa bei der Begründung von beschränkten dinglichen Rechten in einem Grundstückkaufvertrag."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleibt § 29 Absatz 2."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "ae7422a20f345534e97e5184f91daf087aa206afb426791760f8c54cc856e0ad"
+    },
+    {
+      "id": "kanton/LU/258/art_9",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ausser der Gebühr hat die Urkundsperson Anspruch auf den Ersatz der notwendigen Auslagen (Porti, Telefontaxen, Reisespesen usw.) und der von ihr auf Honorar und Auslagen zu entrichtenden Mehrwertsteuer, soweit sie mehrwertsteuerpflichtig ist."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "1363f94ad157259c4cb49f844643921c1500d6688ac83c1c11f19a7b96041631"
+    },
+    {
+      "id": "kanton/LU/258/art_10",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die in dieser Verordnung festgelegten Gebühren dürfen in der Regel weder erhöht noch unterschritten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Ausnahmsweise darf die Urkundsperson aus triftigen Gründen, die sie in ihrem Protokollbuch ausdrücklich zu nennen hat, ganz oder teilweise auf die Vergütung verzichten."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "49f903fe777e28197732b988a4dfae0788871e070b5933f1a934dd5b0ebb57cb"
+    },
+    {
+      "id": "kanton/LU/258/art_11",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beglaubigung einer Unterschrift beträgt die Gebühr Fr. 30.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei gleichzeitiger Beglaubigung mehrerer Unterschriften auf demselben Schriftstück beträgt die Gebühr für die zweite und jede weitere Unterschrift Fr. 10.–."
+        },
+        {
+          "absatz": "3",
+          "text": "Dasselbe gilt bei der Beglaubigung von Handzeichen."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "5545bf666c0853d7cda2aaf6b6aa7d14bf7469e1407b336d3deccff9a458049e"
+    },
+    {
+      "id": "kanton/LU/258/art_12",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beglaubigung von Kopien, Abschriften, Auszügen und dergleichen, welche der Urkundsperson vorgelegt werden, beträgt die Gebühr Fr. 20.– für die erste und Fr. 5.– für jede weitere Seite."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "05a7cc1348300eff5fbe1e03b423aaa3e8946a199d223052317090d7ba0a7a40"
+    },
+    {
+      "id": "kanton/LU/258/art_13",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beglaubigung von Kopien, Abschriften, Auszügen und dergleichen, welche die Urkundsperson selbst hergestellt hat, beträgt die Gebühr Fr. 10.– für die erste und Fr. 2.– für jede weitere Seite."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Erstellen der Kopien und dergleichen ist in dieser Gebühr nicht enthalten."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "f69cc33b23b6e6b44804c5ba1fac396b8d5d74fba42e45401ae375f490b81c03"
+    },
+    {
+      "id": "kanton/LU/258/art_14",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beglaubigung einer Übersetzung beträgt die Gebühr Fr. 30.– für die erste und Fr. 15.– für jede weitere Seite."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Bei der Beglaubigung einer Übersetzung, für deren Richtigkeit ein Übersetzer mit seiner Unterschrift bürgt, beträgt die Gebühr Fr. 30.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Stammt die Übersetzung von der Urkundsperson selber, so kann hiefür ein Zuschlag nach Zeitaufwand und Schwierigkeit berechnet werden."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "c569e34ed3944be0452abe78b242dc6a886d31bba1e4713cfe56582fde932ef1"
+    },
+    {
+      "id": "kanton/LU/258/art_15",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Errichtung einer Stiftung unter Lebenden (Art. 81 ZGB) beträgt die Gebühr Fr. 500.– bis Fr. 3000.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Abänderung einer Stiftungsurkunde beträgt die Gebühr Fr. 100.– bis Fr. 1000.– ."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "a31363265c753d7d3a07e618d6cac2beb07aa667699c9f8ebf73ee308c584ff1"
+    },
+    {
+      "id": "kanton/LU/258/art_16",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Abschluss, Abänderung oder Aufhebung eines Ehevertrages (Art. 184 ZGB) oder eines Vermögensvertrages (Art. 25 PartG) beträgt die Gebühr Fr. 500.– bis Fr. 3000.–. Sind Grundstücke davon betroffen, kann die Hälfte der Gebühr gemäss § 21 berechnet werden, sofern dieser Betrag höher als Fr. 3000.– ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist mit dem Abschluss oder der Abänderung des Ehevertrages oder des Vermögensvertrages ein Inventar (Art. 195a ZGB) verbunden, so bezieht der Notar überdies die Gebühr nach § 17."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "eae4cfbfc3855cc57f2a4b34e4ab6b8c7787c9782deb1bdd8ec171b22572bf16"
+    },
+    {
+      "id": "kanton/LU/258/art_17",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Aufnahme eines Inventars (Art. 195a ZGB) beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "2 ‰ vom Inventarwert bis Fr. 200 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "plus 1,5 ‰ vom Mehrbetrag über Fr. 200 000.– bis Fr. 500 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "plus 1 ‰ vom Mehrbetrag über Fr. 500 000.– bis Fr. 1 500 000.–"
+            },
+            {
+              "marke": "d",
+              "text": "von dem 1,5 Mio. Fr. überschreitenden Inventarwert wird keine Gebühr erhoben"
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "2646ea98a7f0c1071b72572bd4aa050ae60191711b28a3edfeba9da8b1872786"
+    },
+    {
+      "id": "kanton/LU/258/art_18",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Gemeinderschaftsvertrag (Art. 336 ZGB) berechnet sich die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Begründung nach den Ansätzen des § 21;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Abänderung auf Fr. 150.– bis 450.–;"
+            },
+            {
+              "marke": "c",
+              "text": "für die Aufhebung auf Fr. 100.– bis Fr. 200.–."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "9d49e791704c5e80ba075be07137d4a3d515e7f8434a55394c2ae34aa3ac2558"
+    },
+    {
+      "id": "kanton/LU/258/art_18_a",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "18_a",
+      "artikelLabel": "§ 18a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Errichtung und der Abänderung eines Vorsorgeauftrages (Art. 361 ZGB) beträgt die Gebühr Fr. 100.– bis Fr. 3000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "41f79369aaec46df7489bd8f9d8e815133be594767084abf137b864301f9988a"
+    },
+    {
+      "id": "kanton/LU/258/art_19",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Errichtung einer öffentlichen letztwilligen Verfügung (Art. 499 ZGB) oder eines Erbvertrages (Art. 512 ZGB) beträgt die Gebühr Fr. 500.– bis Fr. 5000.–.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            },
+            {
+              "marke": "d",
+              "text": "…"
+            },
+            {
+              "marke": "e",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Abänderung beträgt die Gebühr Fr. 150.– bis Fr. 2000.–."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Aufhebung beträgt die Gebühr Fr. 150.– bis Fr. 300.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "6cce8a247800cb2f5d9ff528cda75cfc0c99970e95fd79d1c7e643cb2a1f287f"
+    },
+    {
+      "id": "kanton/LU/258/art_20",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Vereinbarung über den Ausschluss der Aufhebung von Miteigentum (Art. 650 Abs. 2 ZGB) beträgt die Gebühr Fr. 200.– bis Fr. 500.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "be43034bd46cc2cbf8c0172564a18137ba6f5cc000c7b2af805a099a8da519fd"
+    },
     {
       "id": "kanton/LU/258/art_21",
       "ebene": "kanton",
@@ -50,9 +609,138 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
       "sha": "95203ea66e4a0a51451ba7d8c13c72588c0e6b9476d74658b35a9b34f4aa1ca6"
+    },
+    {
+      "id": "kanton/LU/258/art_23",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Vereinbarung über die Aufhebung oder Änderung des Vorkaufsrechts im Mit-eigentums- oder im Baurechtsverhältnis (Art. 682 Abs. 3 ZGB) beträgt die Gebühr Fr. 200.– bis Fr. 500.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "87abe8644568729328ed5a93a78c8c839af4c7be08208b01eb71a254b887c133"
+    },
+    {
+      "id": "kanton/LU/258/art_24",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Begründung von Stockwerkeigentum (Art. 712d ZGB) beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "3 ‰ des Bodenwertes und der Baukosten bis Fr. 500 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "plus 2,5 ‰ vom Mehrbetrag über Fr. 500 000.– bis Fr. 1 000 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "plus 2 ‰ vom Mehrbetrag über Fr. 1 000 000.– bis Fr. 5 000 000.–"
+            },
+            {
+              "marke": "d",
+              "text": "plus 1 ‰ vom Mehrbetrag über Fr. 5 000 000.– bis Fr. 10 000 000.–"
+            },
+            {
+              "marke": "e",
+              "text": "vom Bodenwert und von den Baukosten, die 10 Mio. Fr. übersteigen, wird keine Gebühr erhoben"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Änderung und der Aufhebung von Stockwerkeigentum beträgt die Gebühr Fr. 200.– bis Fr. 5000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "cc4ea70894acde7114fcb202c8c999b16ac934066c24e5a36fe0cac47a56e5a8"
+    },
+    {
+      "id": "kanton/LU/258/art_26",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Errichtung, Änderung oder Aufhebung einer Dienstbarkeit, ausgenommen bei selbständigen und dauernden Baurechten, beträgt die Gebühr Fr. 200.– bis Fr. 5000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "8f190da9d8dfaa4d08cb3f6bd8d7b29bd849c0978cf160bc85648677cba7c6ff"
+    },
+    {
+      "id": "kanton/LU/258/art_27",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Begründung eines selbständigen und dauernden Baurechts nach Artikel 779a ZGB berechnet sich die Gebühr nach den Ansätzen des § 21."
+        },
+        {
+          "absatz": "2",
+          "text": "Als Vertragssumme gilt die Leistung des Bauberechtigten. Ist der Bauberechtigte zu periodischen Leistungen während bestimmter Zeit verpflichtet, höchstens aber 20 Jahre lang, so ist die Summe der Leistungen massgebend. Ist der Bauberechtigte zu periodischen Leistungen während unbestimmter Zeit oder länger als 20 Jahre verpflichtet, so ist der zwanzigfache Betrag der einzelnen Leistung massgebend."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Änderung eines selbständigen und dauernden Baurechts beträgt die Gebühr Fr. 200.– bis Fr. 5000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "6c4216236f2a0acd88fa785f489a70164bc706a6445b6cf337260676952fa80a"
+    },
+    {
+      "id": "kanton/LU/258/art_28",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Errichtung einer Grundlast (Art. 783 ZGB) berechnet sich die Gebühr wie beim Grundpfand (§ 29), wobei auf den Gesamtwert abgestellt wird."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "a1aa2729ab0b771b88b0b4216d9a34d734af4de5bc4b5e945eef7bd3428b58b0"
     },
     {
       "id": "kanton/LU/258/art_29",
@@ -111,9 +799,636 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
       "sha": "6036f0b80927ab33549ce8dc2d3a59b0ff8a91c569b9fcbaca676920cbd06a7d"
+    },
+    {
+      "id": "kanton/LU/258/art_30",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beurkundung als Ersatz der Unterschrift (Art. 15 OR) beträgt die Gebühr Fr. 100.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "9530701297cfc790c02878e30f370b12ae7976e63952a76fa840c025ec629cc5"
+    },
+    {
+      "id": "kanton/LU/258/art_31",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beurkundung einer Erklärung nach Artikel 90 OR beträgt die Gebühr Fr. 100.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "c21a4c1a326a7d626e2aa81dd8735816e18c8da0ca60ea9b62b09bb2a163cbcd"
+    },
+    {
+      "id": "kanton/LU/258/art_32",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Begründung oder Übertragung eines Kaufs-, Rückkaufs- oder limitierten Vorkaufsrechts berechnet sich die Gebühr nach den Ansätzen von § 21 (Übertragung von Grundeigentum)."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "26307cd040ad6ac73877b262350b7932845dd961c19af0f2d410308b48347139"
+    },
+    {
+      "id": "kanton/LU/258/art_33",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Schenkung dinglicher Rechte an Grundstücken (Art. 243 Abs. 2 OR) beträgt die Gebühr, soweit nicht die §§ 21, 28 und 29 anwendbar sind, Fr. 200.– bis Fr. 500.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "acf6cd644d0bb73ddf450ca642dfb5c0fe5af13044c3e92077c91764ce4329df"
+    },
+    {
+      "id": "kanton/LU/258/art_34",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Schenkung auf den Todesfall (Art. 245 Abs. 2 OR) berechnet sich die Gebühr nach den Ansätzen von § 19."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "b3b4eaf89499cf2322bf0c99962a0261087bb7cc1f43b3b530f485e957861b4e"
+    },
+    {
+      "id": "kanton/LU/258/art_35",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Errichtung einer Bürgschaft (Art. 493 Abs. 1 OR), bei der Erhöhung der Haftungssumme sowie bei der Umwandlung einer einfachen in eine Solidarbürgschaft (Art. 493 Abs. 5 OR) beträgt die Gebühr 2 ‰ des Haftungsbetrages, mindestens Fr. 300.–, höchstens Fr. 1000.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind vom gleichen Notar für dieselbe Schuld getrennt abgegebene Bürgschaftserklärungen einzeln zu beurkunden, so wird von der zweiten Beurkundung an für jede weitere zur Gebühr nach Absatz 1 ein Zuschlag von 25 %, mindestens Fr. 50.– erhoben. Der Gesamtbetrag der Zuschläge darf 100 % der Grundgebühr nicht übersteigen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr für eine Beurkundung nach Artikel 493 Absatz 6 OR beträgt Fr. 300.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "97b2c35ac0b0a1fd2ae3507cdfd3d909d269d3a0f28fefd753842fb7e716c732"
+    },
+    {
+      "id": "kanton/LU/258/art_36",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Errichtung eines Verpfründungsvertrags (Art. 522 OR) wird die Gebühr vom Vermögenswert nach den Ansätzen von § 21 berechnet."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "dc8e95b9d85b30e28df9e945d3dda7705f93a880cb9c373a66c832818c3204bb"
+    },
+    {
+      "id": "kanton/LU/258/art_37",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Gründung einer Aktiengesellschaft (Art. 629 OR) oder einer Kommanditaktiengesellschaft beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "3 ‰ vom Grundkapital bis Fr. 500 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "plus 2,5 ‰ vom Mehrbetrag über Fr. 500 000.– bis Fr. 1 000 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "plus 2 ‰ vom Mehrbetrag über Fr. 1 000 000.– bis Fr. 2 000 000.–"
+            },
+            {
+              "marke": "d",
+              "text": "plus 1,5 ‰ vom Mehrbetrag über Fr. 2 000 000.– bis Fr. 5 000 000.–"
+            },
+            {
+              "marke": "e",
+              "text": "plus 0,5 ‰ vom Mehrbetrag über Fr. 5 000 000.– bis Fr. 10 000 000.–"
+            },
+            {
+              "marke": "f",
+              "text": "von dem 10 Mio. Fr. übersteigenden Grundkapital wird keine Gebühr erhoben"
+            }
+          ]
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "e22c680d26a2dd80815b82db0b3d9d2ef41f4ea38bd1074f8f86db9bb63cd923"
+    },
+    {
+      "id": "kanton/LU/258/art_38",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Erhöhung des Aktienkapitals berechnet sich die Gebühr für die Beurkundung des Generalversammlungsbeschlusses nach den Ansätzen von § 37 und beträgt mindestens Fr. 500.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Beurkundung des Feststellungsbeschlusses des Verwaltungsrates beträgt die Gebühr Fr. 300.– bis Fr. 2000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "67b2160728c09732d0c51ce1aff49ed46bd4303d7bf5d5f0ddfd39adcf7c1b60"
+    },
+    {
+      "id": "kanton/LU/258/art_39",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Herabsetzung des Grundkapitals beträgt die Gebühr für die Beurkundung betreffend Beschlussfassung und Statutenänderung (Art. 732 OR) Fr. 500.– bis Fr. 3000.–. Ist die Herabsetzung mit gleichzeitigem Ersatz durch neues Kapital verbunden, so bemisst sich die Gebühr nach den Ansätzen von § 38."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "b2ffad65097f83999f882033721b366be76c4b78163ff7c70d37874168b9c3bd"
+    },
+    {
+      "id": "kanton/LU/258/art_41",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "41",
+      "artikelLabel": "§ 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Beschlüssen einer Aktiengesellschaft oder Kommanditaktiengesellschaft, auf welche die §§ 37–39 nicht anwendbar sind, beträgt die Gebühr Fr. 300.– bis Fr. 5000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "7e3d863ad8ba73e903a82b2ab1c3e4caa7b45e44d7e1f5dcb75d6433f1834a91"
+    },
+    {
+      "id": "kanton/LU/258/art_42",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "42",
+      "artikelLabel": "§ 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Gründung einer Gesellschaft mit beschränkter Haftung (Art. 777 OR) und bei der Erhöhung ihres Stammkapitals (Art. 781 OR) berechnet sich die Gebühr nach den Ansätzen von § 37 und bei der Herabsetzung des Stammkapitals (Art. 782 OR) nach den Ansätzen von § 39."
+        },
+        {
+          "absatz": "2",
+          "text": "..."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Abtretung oder Teilung eines Stammanteils sowie bei der Verpflichtung zur Abtretung beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "2 ‰ der Vertragssumme oder beim Fehlen einer solchen des mutmasslichen Interessenwertes bis Fr. 200 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "plus 1,5 ‰ vom Mehrbetrag über Fr. 200 000.– bis Fr. 500 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "plus 1 ‰ vom Mehrbetrag über Fr. 500 000.– bis Fr. 2 500 000.–"
+            },
+            {
+              "marke": "d",
+              "text": "plus 0,3 ‰ vom Mehrbetrag über Fr. 2 500 000.– bis Fr. 5 000 000.–"
+            },
+            {
+              "marke": "e",
+              "text": "plus 0,2 ‰ vom Mehrbetrag über Fr. 5 000 000.– bis Fr. 10 000 000.–"
+            },
+            {
+              "marke": "f",
+              "text": "von der 10 Mio. Fr. übersteigenden Vertragssumme wird keine Gebühr erhoben"
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Umwandlung einer Aktiengesellschaft in eine Gesellschaft mit beschränkter Haftung berechnet sich die Gebühr vom neuen Kapital nach den Ansätzen von § 37."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei anderen Beschlüssen beträgt die Gebühr Fr. 300.– bis Fr. 2000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "e880aa7c1068a87ffeafaa5c2fdcfff4777bb67956536b82d4cea04927feabbd"
+    },
+    {
+      "id": "kanton/LU/258/art_43",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "43",
+      "artikelLabel": "§ 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Beurkundung gesellschaftsrechtlicher Feststellungen (Art. 734, 764 Abs. 2, 782 Abs. 4 und 874 Abs. 2 OR) beträgt Fr. 200.– bis Fr. 1000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "3743d092c9f8857f6eed60434fa0d6ae9afcb2f67ed1ce65e631241d6a8faa04"
+    },
+    {
+      "id": "kanton/LU/258/art_44",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "44",
+      "artikelLabel": "§ 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Protest eines Wechsels oder Checks beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Abfassung der Urkunde (Art. 1037 OR), inbegriffen Abschrift und deren Aufbewahrung nach Artikel 1040 OR, 2 ‰ der Wechsel oder Checksumme, mindestens Fr. 50.–;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Vorweisung ohne Protestausfertigung bei einer Person Fr. 20.–, bei weiteren am gleichen Ort wohnhaften Personen je Fr. 10.–."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Darüber hinaus kann, wenn der Wechsel oder Check mehr als einen Kilometer vom Büro entfernt vorgewiesen werden muss, für den Hin- und Rückweg eine Wegentschädigung von 50 Rappen je Kilometer berechnet werden."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "9ed280f1f9e6cf7df0b1d2d17e1793be7713fc66a8b696c3fe1ca916f052783b"
+    },
+    {
+      "id": "kanton/LU/258/art_45",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "45",
+      "artikelLabel": "§ 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Versammlungsbeschlüssen der Gläubiger von Anleihensobligationen (Art. 6 Verordnung über die Gläubigergemeinschaft bei Anleihensobligationen) beträgt die Gebühr Fr. 500.– bis Fr. 3000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "1ba3669c018a2c71f3ac08d878d8e15f8cee6c3ffab16d0e3483fdc7d724e45d"
+    },
+    {
+      "id": "kanton/LU/258/art_45_a",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "45_a",
+      "artikelLabel": "§ 45a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Auflösungsbeschluss berechnet sich nach den Ansätzen von § 37."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für den Kapitalherabsetzungsbeschluss berechnet sich nach den Ansätzen von § 39."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Beschlüssen nach dem Fusionsgesetz, auf welche die Absätze 1 und 2 nicht anwendbar sind, berechnet sich die Gebühr nach den Ansätzen von § 41."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Beurkundung mehrerer beurkundungsbedürftiger Rechtsgeschäfte in der gleichen öffentlichen Urkunde berechnet sich die Gebühr nach den Ansätzen von Absatz 1, 2 oder 3, wobei die höchste Gebühr massgebend ist."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "0214cb9a6cd56769c9e8df3f1e744d467e1f00f3fea54f646d22e755e8b88f30"
+    },
+    {
+      "id": "kanton/LU/258/art_45_b",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "45_b",
+      "artikelLabel": "§ 45b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Gründung einer neuen Gesellschaft berechnet sich nach den Ansätzen von § 37."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Kapitalerhöhung berechnet sich die Gebühr nach den Ansätzen von § 38."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Beschlüssen nach dem Fusionsgesetz, auf welche die Absätze 1 und 2 nicht anwendbar sind, berechnet sich die Gebühr nach den Ansätzen von § 41."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei der Beurkundung mehrerer beurkundungsbedürftiger Rechtsgeschäfte in der gleichen öffentlichen Urkunde berechnet sich die Gebühr nach den Ansätzen von Absatz 1, 2 oder 3, wobei die höchste Gebühr massgebend ist."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "ccfb6484e5cbed9ecee9bf63420feef54a4c43c5ea433aea42047ee2435f5aef"
+    },
+    {
+      "id": "kanton/LU/258/art_45_c",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "45_c",
+      "artikelLabel": "§ 45c",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beurkundung eines Übertragungsvertrages gemäss Artikel 70 Absatz 2 des Fusionsgesetzes berechnet sich die Gebühr nach den Ansätzen von § 21."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Beurkundung eines Fusionsvertrages bei Familienstiftungen und kirchlichen Stiftungen gemäss Artikel 79 Absatz 3 des Fusionsgesetzes beträgt die Gebühr Fr. 500.– bis Fr. 2000.–."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr für eine öffentliche Urkunde über die Feststellung betreffend eine Grundstücksübertragung gemäss Artikel 104 Absatz 3 des Fusionsgesetzes beträgt Fr. 500.– bis Fr. 2000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "1a94e19e18a97702ad97fdcb2d59341a9a89b275644e85490d3c39b5093c1d6c"
+    },
+    {
+      "id": "kanton/LU/258/art_46",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "46",
+      "artikelLabel": "§ 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für eine öffentliche Urkunde über die Ziehung von Prämienobligationen und Lotterien, über andere Auslosungen und über Wettbewerbe beträgt Fr. 150.– bis Fr. 1000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "15ec3497c1102b79ccd124a0c6f002d10950cec1d1b56b869bb72ca703e0c53f"
+    },
+    {
+      "id": "kanton/LU/258/art_47",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "47",
+      "artikelLabel": "§ 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Beurkundung der Eidesabnahme oder der Erklärung an Eidesstatt beträgt Fr. 100.– bis Fr. 1000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "67b4d46da318928b7d255475b875b78b558d055d67309d5c15dea29a433b42d6"
+    },
+    {
+      "id": "kanton/LU/258/art_48",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "48",
+      "artikelLabel": "§ 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Sachbeurkundung gemäss § 2 Absatz 1f des Beurkundungsgesetzes beträgt die Gebühr Fr. 100.– bis Fr. 1000. –."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "c4e9f00e65a0f5d4f73dec1adcd6920e31b126c5214ba07481863f607928a52a"
+    },
+    {
+      "id": "kanton/LU/258/art_49",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "49",
+      "artikelLabel": "§ 49",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Beurkundung von beurkundungsbedürftigen Geschäften, für die keine andere Gebühr vorgesehen ist, beträgt die Gebühr Fr. 100.– bis Fr. 1000.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "fdba8c0b0c96a0f8e2486b2b762699eeb39289bce0f1787e211170d9ac71b2a7"
+    },
+    {
+      "id": "kanton/LU/258/art_50",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "50",
+      "artikelLabel": "§ 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei einer von den Parteien verlangten Beurkundung nicht beurkundungsbedürftiger Rechtsgeschäfte beträgt die Gebühr",
+          "items": [
+            {
+              "marke": "a",
+              "text": "2 ‰ der Vertragssumme oder beim Fehlen einer solchen des mutmasslichen Interessenwertes bis Fr. 200 000.–"
+            },
+            {
+              "marke": "b",
+              "text": "plus 1,5 ‰ vom Mehrbetrag über Fr. 200 000.– bis Fr. 500 000.–"
+            },
+            {
+              "marke": "c",
+              "text": "plus 1 ‰ vom Mehrbetrag über Fr. 500 000.– bis Fr. 2 500 000.–"
+            },
+            {
+              "marke": "d",
+              "text": "plus 0,3 ‰ vom Mehrbetrag über Fr. 2 500 000.– bis Fr. 5 000 000.–"
+            },
+            {
+              "marke": "e",
+              "text": "von der Vertragssumme oder beim Fehlen einer solchen vom mutmasslichen Interessenwert wird für die 5 Mio. Fr. übersteigende Vertragssumme oder für den 5 Mio. Fr. übersteigenden Interessenwert keine Gebühr erhoben"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Besteht kein mutmasslicher Interessenwert, sind für die Berechnung der Gebühr die Bedeutung und Schwierigkeit der Sache, der Arbeitsaufwand und die Zeitdauer der Inanspruchnahme massgebend."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "e96b169f2c8d2796e57f8dabc620eac9b945c1962e0837dd6000fe2a2afbc9c4"
+    },
+    {
+      "id": "kanton/LU/258/art_51",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "51",
+      "artikelLabel": "§ 51",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit dem Inkrafttreten dieser Verordnung wird die Verordnung über die Beurkundungsgebühren vom 16. Dezember 1964 mit Änderungen vom 3. Mai 1967 und 10. Juli 1972 aufgehoben."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "b232c3a60bd0c0c439fd25e50dc1f51279c4b7751d30105f7597fe9e275eb0a7"
+    },
+    {
+      "id": "kanton/LU/258/art_52",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "BeurkGebV (SRL Nr. 258)",
+      "artikel": "52",
+      "artikelLabel": "§ 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung tritt am 1. Januar 1974 in Kraft. Sie ist zu veröffentlichen."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/258",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf9c19537845d20e05c8ec151c2995cf",
+      "sha": "d2c04b2d24de94de6525e30f09803325da3f0af3d19f66502d7c73eda714371d"
     }
   ]
 }

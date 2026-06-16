@@ -1,6 +1,82 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/NE/6350/art_2",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Constitue un transfert, au sens de la présente loi, l'exécution de tout acte juridique ou combinaison d'actes juridiques, quelle qu'en soit la forme, ayant pour effet de conférer la propriété à un tiers, juridiquement ou économiquement."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "33a86e9f7f53023b5db3c45ffaff577f9d838d74eb25ee3e901789fb85f9a440"
+    },
+    {
+      "id": "kanton/NE/6350/art_3",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les transferts sont immobiliers lorsqu'ils ont pour objets des immeubles ou des droits sur des immeubles au sens du droit civil (bien-fonds, droits distincts et permanents immatriculés au registre foncier, mines, part de copropriété d'un immeuble)."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "3da573a81dd1814e1b4f5c6e2e910ee906c7c4685c1665706a3d9f7252068871"
+    },
+    {
+      "id": "kanton/NE/6350/art_4",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sauf convention contraire, les lods sont dus par l'acquéreur."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "e6c7ce81ca772086e4095559e3cb8080707b13df7890c45f6a1570ad7d72617b"
+    },
+    {
+      "id": "kanton/NE/6350/art_5",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les lods sont calculés sur l'ensemble des prestations auxquelles l'acquéreur s'oblige à l'égard de l'aliénateur ou de tiers, lors de la stipulation de l'acte, pour l'immeuble ou le droit transféré, y compris les accessoires immobiliers."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "7badbc59de3dcf5cffaac91a2a9083a751f0c35d933188dface6c3b1d56cf8fd"
+    },
     {
       "id": "kanton/NE/6350/art_6",
       "ebene": "kanton",
@@ -16,9 +92,475 @@
       ],
       "stand": "2013-02-01",
       "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
       "sha": "5ac217e983f7ac3583785adba1ff2d2747f270ecab180fb4c661d3b809409b34"
+    },
+    {
+      "id": "kanton/NE/6350/art_7",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Tous les transferts immobiliers soumis aux lods doivent être relatés à l'autorité de taxation."
+        },
+        {
+          "absatz": "2",
+          "text": "La relation incombe:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "au notaire, pour les actes authentiques;"
+            },
+            {
+              "marke": "b",
+              "text": "au préposé à l'office des poursuites et des faillites, pour les adjudications en enchères publiques;"
+            },
+            {
+              "marke": "c",
+              "text": "au conservateur du registre foncier, pour les transferts opérés en vertu d'une décision judiciaire ou par convention ou réquisition sous seing privé;"
+            },
+            {
+              "marke": "d",
+              "text": "au préposé au registre du commerce, pour les mutations qu'il enregistre dans la composition des sociétés et de leurs organes."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Elle doit être faite:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "dans le délai prescrit pour la réquisition de l'inscription au registre foncier, si elle incombe au notaire;"
+            },
+            {
+              "marke": "b",
+              "text": "dans un délai de vingt jours à compter de l'adjudication, de la réquisition ou de la demande d'inscription, dans les autres cas."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Lors de contrats de vente au sens de l’article 5a, la relation indique le montant du contrat d’entreprise."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "1aa07aebc6721378cbdf2f3068b5ef5dae50d24fb5bcdba0807f1d0dfb12166b"
+    },
+    {
+      "id": "kanton/NE/6350/art_8",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ne sont pas soumis aux lods:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les acquisitions de la Confédération et des établissements de droit public fédéral, dans les limites fixées par le droit fédéral;"
+            },
+            {
+              "marke": "b",
+              "text": "les acquisitions de l'Etat;"
+            },
+            {
+              "marke": "c",
+              "text": "les remaniements parcellaires subventionnées;"
+            },
+            {
+              "marke": "d",
+              "text": "les acquisitions par voie successorale ou résultant du partage d'une communauté héréditaire;"
+            },
+            {
+              "marke": "e",
+              "text": "les attributions consécutives à la dissolution du régime matrimonial ou à la dissolution du partenariat enregistré fédéral;"
+            },
+            {
+              "marke": "f",
+              "text": "les transferts entre époux, entre partenaires enregistrés au sens de la loi fédérale sur le partenariat, ou entre parents en ligne directe;"
+            },
+            {
+              "marke": "g",
+              "text": "les transferts entre partenaires enregistrés au sens de la loi cantonale sur le partenariat, dès que leur partenariat a duré au moins deux ans;"
+            },
+            {
+              "marke": "h",
+              "text": "les transferts d'immeubles d'exploitation ou de parts d'immeubles d'exploitation, en cas de restructuration d'entreprises au sens des articles 8, alinéa 3, et 24, alinéas 3 et 3quater, de la loi fédérale du 14 décembre 1990 sur l'harmonisation des impôts directs des cantons et des communes. Les émoluments couvrant les frais occasionnés sont réservés."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Lors d'une restructuration au sens de l'alinéa 1, lettre h, le transfert d'immeuble fait l'objet d'un rappel d'impôt, dans la mesure où, dans les cinq ans qui suivent la restructuration, l'immeuble transféré est aliéné. Les sociétés de capitaux et les sociétés coopératives suisses réunies sous direction unique au moment de la violation du délai de blocage répondent solidairement du rappel d'impôt."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "207432e08dae314173e18f4e5c0d5349a9a62fff2f5c9b3d61b6552b6bf5a9c8"
+    },
+    {
+      "id": "kanton/NE/6350/art_9",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "En cas d'aliénation d'un immeuble nouvellement construit et destiné à l'habitation, dans les quatre ans à compter de l'octroi du permis de construire définitif, les lods sont perçus au taux de 2,2%."
+        },
+        {
+          "absatz": "2",
+          "text": "Un immeuble ne peut être mis qu'une seule fois au bénéfice des lods au taux de 2,2%, même s'il fait l'objet de plusieurs aliénations dans le délai de quatre ans prévu à l'alinéa précédent."
+        },
+        {
+          "absatz": "3",
+          "text": "Si l'immeuble nouvellement construit est soumis au régime de la propriété par étages, les parts de copropriété aliénées dans le délai de quatre ans sont seules au bénéfice des lods au taux de 2,2%."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "f5bb74b85ee814bc50c7edb5aafa2b25d5429dac7780929dc80385bf1c1bda73"
+    },
+    {
+      "id": "kanton/NE/6350/art_12",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le département désigné par le Conseil d'Etat exonère des lods les acquisitions faites par les communes dans l'intérêt public et qui ne poursuivent aucun but lucratif."
+        },
+        {
+          "absatz": "2",
+          "text": "Aux mêmes conditions, il peut exonérer des lods les acquisitions des institutions reconnues d'utilité publique."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "05ff16d6a0adf134b5faddfc853b706514ad0f4349943617aab550cde8ceb5f8"
+    },
+    {
+      "id": "kanton/NE/6350/art_14",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'autorité de taxation fixe le montant des lods à payer."
+        },
+        {
+          "absatz": "2",
+          "text": "Elle vérifie les relations qui lui sont adressées et procède, s'il y a lieu, aux investigations nécessaires."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "a085d0d00f4a62a65680f6f9e76da0d4a6c9021220475c337925d09914687b15"
+    },
+    {
+      "id": "kanton/NE/6350/art_15",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La décision de taxation est notifiée au contribuable sous la forme d'un bordereau."
+        },
+        {
+          "absatz": "2",
+          "text": "Le bordereau indique le montant des lods et leur échéance, ainsi que le droit de réclamation du contribuable et le délai à observer à cet effet."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "8d4758b89074f5ec4b4731fe033734a6f685ed596f502a50d2fd30171ef49415"
+    },
+    {
+      "id": "kanton/NE/6350/art_18",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les lods doivent être acquittés dans les trente jours dès la notification de la décision de taxation."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque les circonstances le justifient, l'autorité de perception peut prolonger ce délai ou autoriser un paiement par acomptes. Elle peut alors exiger des sûretés."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "52c898baf94abab498304193a7db68bb739bc738c4626a0a5b1903aa85e15095"
+    },
+    {
+      "id": "kanton/NE/6350/art_19",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les lods qui ne sont pas acquittés dans le délai légal portent intérêt au taux fixé par le Conseil d'Etat."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "c9d8f452266dc35063dc7b8d80861a535b6caca7c2cb40c143347935f3806eac"
+    },
+    {
+      "id": "kanton/NE/6350/art_21",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Tout acte accompli en fraude des lods donne lieu à la perception des lods soustraits, ainsi qu'à une amende pouvant s'élever à cinq fois leur montant."
+        },
+        {
+          "absatz": "2",
+          "text": "Sont notamment considérés comme accomplis en fraude des lods:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les actes dans lesquels les parties indiquent un prix inférieur à celui dont elles sont réellement convenues;"
+            },
+            {
+              "marke": "b",
+              "text": "les actes qui ont pour but de dissimuler un acte assujetti aux lods."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "62820208205890c734b96b084d925a1d0d7a093a2ad6a1ce0da0380b59f8fb25"
+    },
+    {
+      "id": "kanton/NE/6350/art_22",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le montant des lods soustrait et celui de l'amende sont fixés par le département désigné par le Conseil d'Etat."
+        },
+        {
+          "absatz": "2",
+          "text": "Ils sont dus par l'acquéreur; les autres parties à l'acte sont toutefois solidairement responsables de leur paiement."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "6692462bf5c1b7cab70e5767702e44b2b1def63d1ef5a1d6e910b3479a451342"
+    },
+    {
+      "id": "kanton/NE/6350/art_23",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les amendes auxquelles donnent lieu les actes accomplis en fraude des lods sont garanties par une hypothèque légale, aux mêmes conditions que les lods."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "d1b8a34b1073a433fed67875e0f2db1d35c5a0e3000d9dc60dea59417d702ec1"
+    },
+    {
+      "id": "kanton/NE/6350/art_25",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le Conseil d'Etat arrête les mesures nécessaires à l'exécution de la présente loi."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "d03578facdae2aeb34314c92d4325f6a6811bfb1d6f1f7f29829b32b17d0e533"
+    },
+    {
+      "id": "kanton/NE/6350/art_27",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'article 99, alinéa 1, chiffre 1, de la loi concernant l'introduction du code civil suisse, du 22 mars 1910, est abrogé et remplacé par la disposition suivante:"
+        },
+        {
+          "absatz": "2",
+          "text": "L'article 99 de la loi concernant l'introduction du code civil suisse, du 22 mars 1910, est complété par l'alinéa suivant."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "aae7ff7b735fc01d17107d155d0882efdb266970acbdc3980420bce7468e1bb0"
+    },
+    {
+      "id": "kanton/NE/6350/art_28",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sont abrogés dès l'entrée en vigueur de la présente loi:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "le code des lods, de 1842;"
+            },
+            {
+              "marke": "b",
+              "text": "le décret exemptant des lods le transfert des actions de sociétés anonymes ayant pour objet la construction d'immeubles, du 25 novembre 1856;"
+            },
+            {
+              "marke": "c",
+              "text": "la loi exemptant du droit de mutation les échanges de terrain arrondissant la propriété foncière, du 14 février 1883;"
+            },
+            {
+              "marke": "d",
+              "text": "le décret portant réduction des lods en cas d'aliénation d'un immeuble nouvellement construit, du 15 février 1966;"
+            },
+            {
+              "marke": "e",
+              "text": "le décret concernant l'exonération des lods en cas de fusion d'entreprises ou d'une opération analogue, du 11 octobre 1978."
+            }
+          ]
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "b87848deb1f49a98f18b059fb2fb1b0f46cee6528d890e1ac00751bf81966ff5"
+    },
+    {
+      "id": "kanton/NE/6350/art_29",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La présente loi est soumise au référendum facultatif."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "589c3b8a148ebf2877c630ed3d509849e6927583d657f5ab2c1981a11fb8ccec"
+    },
+    {
+      "id": "kanton/NE/6350/art_30",
+      "ebene": "kanton",
+      "quelle": "NE",
+      "erlass": "Loi sur les lods et droits de mutation immobilière (LDMI) (RSN 635.0)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Conseil d'Etat pourvoit, s'il y a lieu, à la promulgation et à l'exécution de la présente loi."
+        },
+        {
+          "absatz": "2",
+          "text": "Il fixe la date de son entrée en vigueur."
+        },
+        {
+          "absatz": null,
+          "text": "Disposition transitoire à la modification du 27 janvier 2010"
+        },
+        {
+          "absatz": null,
+          "text": "Les recours pendant devant le département au moment de l'entrée en vigueur de la modification du 27 janvier 2010 sont transmis d'office, en l'état et sans délai, au Tribunal cantonal."
+        },
+        {
+          "absatz": null,
+          "text": "Loi promulguée par le Conseil d'Etat le 15 janvier 1992. L'entrée en vigueur est fixée au 1er janvier 1992."
+        }
+      ],
+      "stand": "2013-02-01",
+      "quelleUrl": "https://rsn.ne.ch/DATA/program/books/RSN2015/20155/htm/6350.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5a73da7f12b8f9418454b62c2ec64d2c005c8a4dcbfb6f482382bf926a092791",
+      "sha": "3dfcc7521dce5807026222381c7e3d4039ffe80784abccee10f9d6602171f5ad"
     }
   ]
 }

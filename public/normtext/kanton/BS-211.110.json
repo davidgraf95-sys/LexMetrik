@@ -1,6 +1,247 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/BS/211.110/art_1",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die in dieser Verordnung aufgestellten Gebühren haftet, wer die Tätigkeit der Behörde, welche die Gebührenerhebung zur Folge hat, veranlasst."
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehen für ein Geschäft Minimal- und Maximalgebühren, so wird die Gebühr je nach der Inanspruchnahme der Behörde, der Wichtigkeit des Geschäfts und der finanziellen Leistungsfähigkeit des Pflichtigen festgesetzt."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Erhebung der Gebühren werden die tatsächlichen Auslagen für Frankatur, für Stempel und andere gesetzliche Taxen, für Honorare von Sachverständigen und für Veröffentlichungen, wo nichts Abweichendes vorgeschrieben ist, besonders berechnet. Für den mutmasslichen Betrag der Gebühren und der Auslagen kann Kostenvorschuss verlangt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Wenn der Pflichtige unvermögend ist oder die Erhebung der Gebühr im einzelnen Fall eine besondere Härte darstellt, so kann der Vorsteher der zuständigen Verwaltungsabteilung die Gebühr ermässigen oder gänzlich erlassen. Über derartige Verfügungen ist monatlich dem Departement Bericht zu erstatten."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "e6329d2eb8d318d7d17d5b9efd653d000c7877207d8cb653dadc9f1e8d45d886"
+    },
+    {
+      "id": "kanton/BS/211.110/art_30_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "30_a",
+      "artikelLabel": "§ 30a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Anordnung der erforderlichen Schutzmassregeln gemäss § 71 des Gesetzes ist das Justiz- und Sicherheitsdepartement zuständig."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "faddaaa601f144fcbd2ace6d40af594f97b1cb39d127387781aa982feb19d5ac"
+    },
+    {
+      "id": "kanton/BS/211.110/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Erbanfällen an Personen, für die bei der Kindes- und Erwachsenenschutzbehörde Basel-Stadt (KESB) eine Beistandschaft oder Vormundschaft geführt wird, oder für die die Errichtung einer solchen Massnahme zu prüfen ist, hat das Erbschaftsamt oder die beurkundete Notarin bzw. der beurkundete Notar der KESB unentgeltlich eine Inventarabschrift zuzustellen."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "a63649bcdd50a4c899facbed4024d94343e05fc613f6d09e1153ea62cc36b2f2"
+    },
+    {
+      "id": "kanton/BS/211.110/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für behördliche Tätigkeiten in Angelegenheiten des Personen- und Familienrechts werden folgende Gebühren erhoben:"
+        },
+        {
+          "absatz": "1. I",
+          "text": "I. Gebühren der Vormundschaftsbehörde"
+        },
+        {
+          "absatz": "1. II",
+          "text": "II. Gebühren des Justiz- und Sicherheitsdepartements CHF 35 bis CHF 850 werden erhoben für:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "…"
+            },
+            {
+              "marke": "10",
+              "text": "Ermächtigung zur Aufhebung einer altrechtlichen Kindesannahme ZGB Art. alt 269, EG § alt 44"
+            }
+          ]
+        },
+        {
+          "absatz": "1. IIa",
+          "text": "IIa. Gebühren des Erziehungsdepartements CHF 35 bis CHF 850 werden erhoben für:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Adoptionsverfügung ZGB Art. 268, EG § 43"
+            }
+          ]
+        },
+        {
+          "absatz": "1. III",
+          "text": "III. Gebühren des Departements für Wirtschaft, Soziales und Umwelt"
+        },
+        {
+          "absatz": "1. IV",
+          "text": "IV. Gebühren des Regierungsrates CHF 200 bis CHF 2’000 werden erhoben für:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Entscheide betreffend Änderung des Stiftungszweckes oder der Stiftungsorganisation sowie Zusammenlegung und Aufhebung mit und ohne Liquidation der Stiftung ZGB Art. 83, 84, 85, 86, 88, EG § 17-19"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "fcb7bbe17452e22fe65194cc0a2d0cb5d721c558b76ca71d9bc911d94bd186e7"
+    },
+    {
+      "id": "kanton/BS/211.110/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "An dem rechten noch unüberbauten Rheinufer zwischen Verbindungsbahn und Grenzacherhorn dürfen am Terrain keine Veränderungen oder Verwendungen vorgenommen werden, welche den dortigen Pflanzenwuchs zu schädigen geeignet sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben die für den Uferschutz notwendigen Vorkehren und, soweit sie nach den §§ 42ff. gestattet sind, Überbauungen oder Benützungen für Rheinschifffahrtszwecke."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "497fe1f5b5b21e18ec8653e70e0d72b5c43beed2c8b34f6810295050137ad548"
+    },
+    {
+      "id": "kanton/BS/211.110/art_41",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "41",
+      "artikelLabel": "§ 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zum Schutze besonders schöner Bäume kann der Regierungsrat die geeigneten Massnahmen ergreifen; er ist befugt, ihre Beseitigung, Verstümmelung oder sonstige Beeinträchtigung zu untersagen. Vorbehalten bleiben Überbauungen, soweit sie nach den §§ 42ff. gestattet sind."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "9712d68ef7ec414f42d85ae7efb1620e27a78361e03f07c73342d56a66012484"
+    },
+    {
+      "id": "kanton/BS/211.110/art_47",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "47",
+      "artikelLabel": "§ 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zuständig für die Überwachung und Auslobung der Tilgung der Anleihensobligationen mit Gültsicherung und bei Seriengülten ist das Justiz- und Sicherheitsdepartement."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "e48ff46c3d9040e0ff23be5a41b95d93b83b14df0cfe6d07fec7009ccabb07c8"
+    },
+    {
+      "id": "kanton/BS/211.110/art_48",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "48",
+      "artikelLabel": "§ 48",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entstehung, der Untergang und die Änderung von Eigentum an Grundstücken (ZGB Art. 655, 943, 944) ist von der Grundbuchverwaltung im Kantonsblatt auszugsweise zu veröffentlichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Veröffentlichung ist gebührenfrei."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "a8abf4a634c42f9b353c6669fdd91aa2efa2c0a35f563d28af97fbe3f49b2c27"
+    },
+    {
+      "id": "kanton/BS/211.110/art_50",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "50",
+      "artikelLabel": "§ 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Grundbuch- und Vermessungsamt wird zweimal im Jahr, und zwar das eine Mal durch die Vorsteherin oder den Vorsteher des Bau- und Verkehrsdepartements, das andere Mal durch ein Mitglied der Grundbuch- und Vermessungskommission, inspiziert."
+        },
+        {
+          "absatz": "2",
+          "text": "Beschwerden wegen der Amtsführung des Grundbuch- und Vermessungsamts sind dem Bau- und Verkehrsdepartement schriftlich einzureichen. Sie werden gebührenfrei erledigt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Oberaufsicht des Bundes bleibt vorbehalten. Das Beschwerdeverfahren bei Abweisungsverfügungen richtet sich nach Bundesrecht."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "d2958dcad6059e1f87ac8a6b40186715b343d5eb509754f0506c487e55360acb"
+    },
     {
       "id": "kanton/BS/211.110/art_51",
       "ebene": "kanton",
@@ -200,9 +441,257 @@
       ],
       "stand": "2025-05-01",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
       "sha": "22851f7d5838f7fb813a832d473a040767915aeb8945c0c9e8a391d92337d1e8"
+    },
+    {
+      "id": "kanton/BS/211.110/art_52",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "52",
+      "artikelLabel": "§ 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Grundbuch- und Vermessungsamt bezieht folgende Gebühren:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Absteckungen und Vermarkungen"
+            },
+            {
+              "marke": "a",
+              "text": "Absteckung von Bau- und Strassenlinien, Baufluchten und gesetzlich vorgesehenen Linien wie Grenzen, Servitutlinien,"
+            },
+            {
+              "marke": "b",
+              "text": "Absteckung von Grenz- bzw. Servitutpunkten"
+            },
+            {
+              "marke": "c",
+              "text": "Setzen und Einbetonieren eines Grenzsteins CHF 150"
+            },
+            {
+              "marke": "d",
+              "text": "Setzen eines Grenzbolzens CHF 75"
+            },
+            {
+              "marke": "e",
+              "text": "Entheben eines Grenzsteins oder Grenzbolzens CHF 50"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "",
+          "items": [
+            {
+              "marke": "2",
+              "text": "Aus- und Weitergabe von Plänen Die Gebühr für die Aufbereitung von Standard-Planauszügen beträgt:"
+            },
+            {
+              "marke": "a",
+              "text": "Format A4 und A3 CHF 40"
+            },
+            {
+              "marke": "b",
+              "text": "Format A2 bis A0 CHF 80"
+            },
+            {
+              "marke": "c",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "",
+          "items": [
+            {
+              "marke": "3",
+              "text": "Berechnen und Erstellen von Mutationsplänen sowie deren Eintragung in die Datenbestände"
+            },
+            {
+              "marke": "a",
+              "text": "Festlegen und Berechnen der Grenzen und Flächenabschnitte"
+            },
+            {
+              "marke": "b",
+              "text": "Festlegen und Berechnen von Servitutlinien und Flächenabschnitten"
+            },
+            {
+              "marke": "c",
+              "text": "Löschen von Grenzen und Servitutlinien bzw. Servitutflächen"
+            },
+            {
+              "marke": "d",
+              "text": "Für das Anfertigen von Plänen für Parzellierungen wird eine Grundgebühr von CHF 600, für Servitut- und Parzellenvereinigungspläne eine solche von CHF 300 verrechnet. Für die erschwerte Festlegung der Linien und Flächen sowie für Abklärungen erfolgt ein Zuschlag, der nach dem Zeitaufwand berechnet wird."
+            },
+            {
+              "marke": "e",
+              "text": "Eintragen bzw. Löschen der rechtsgültigen Linien und Flächen in der amtlichen Vermessung"
+            },
+            {
+              "marke": "f",
+              "text": "Gebührenreduktion: Bei der Änderung von Grenzen und Servitutlinien zur Anpassung an bestehende Bauten oder Nutzungen sowie bei geringfügigen Flächen- oder Linienänderungen kann eine angemessene Reduktion der Gebühr gewährt werden. Bei Nichtvollziehbarkeit eines Mutations- oder Servitutplanes infolge öffentlich-rechtlicher Hindernisse können die vorstehenden Gebühren ebenfalls angemessen reduziert werden."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "",
+          "items": [
+            {
+              "marke": "4",
+              "text": "Nachführungsvermessung von Neubauten und von Um- und Anbauten"
+            },
+            {
+              "marke": "a",
+              "text": "Neubauten: Für die Feldaufnahme, die Eintragungen in der amtlichen Vermessung und in die Register, werden folgende Gebühren nach dem Gebäudewert erhoben:"
+            },
+            {
+              "marke": "b",
+              "text": "Um- und Anbauten: Die Gebühren für die Nachführung von Um- und Anbauten werden nach den Baukosten berechnet. Die vorstehenden Ansätze können angemessen reduziert werden, sofern sich die Baukosten nicht ausschliesslich auf die vom Grundbuch- und Vermessungsamt nachzuführenden Aufnahmebestandteile beziehen."
+            },
+            {
+              "marke": "c",
+              "text": "Bei schwer zugänglichen Bauten oder anderen erschwerten Aufnahmebedingungen können die Ansätze gemäss lit. a und b, entsprechend dem grösseren Zeitaufwand, gemäss Ziff. 5b erhöht werden."
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "",
+          "items": [
+            {
+              "marke": "5",
+              "text": "Gebührenrechnung"
+            },
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "Für in dieser Gebührenordnung nicht besonders aufgeführte Arbeiten wird die Gebühr nach der Zeit gemäss den Weisungen des Bundesamtes für Landestopographie berechnet. Bei Änderungen der Stundenansätze bestimmt das Bau- und Verkehrsdepartement den Zeitpunkt ihres Inkrafttretens."
+            },
+            {
+              "marke": "c",
+              "text": "Die Gebührensätze berücksichtigen keine Mehrwertsteuer. Untersteht eine Leistung der Mehrwertsteuer, so wird diese zum massgebenden Rechnungsbetrag hinzugezählt. Ebenso werden die Kosten für Porti, Verpackung und andere Auslagen hinzugerechnet."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "",
+          "items": [
+            {
+              "marke": "6",
+              "text": "Die Gebühren der Ziff. 1 und 4 werden von Grundeigentümerinnen und Grundeigentümern bzw. Baurechtsberechtigten auch dann geschuldet, wenn die Ausführung der Arbeiten von Amtes wegen angeordnet wird."
+            }
+          ]
+        },
+        {
+          "absatz": "7",
+          "text": "",
+          "items": [
+            {
+              "marke": "7",
+              "text": "Die angrenzenden Grundeigentümerinnen und Grundeigentümer bzw. Baurechtsberechtigten haften in den Fällen der Ziff. 1 anteilsmässig für die Gebühr. Der Inhaber der Allmend gilt in dieser Hinsicht als Eigentümer. Wird die gebührenpflichtige Verrichtung durch das Verhalten eines einzelnen Grundeigentümers bzw. Baurechtsberechtigten, oder durch den Zustand einer Liegenschaft veranlasst, so hat die betreffende Eigentümerin oder der betreffende Eigentümer bzw. Baurechtsberechtigte die Gebühr allein zu tragen."
+            }
+          ]
+        },
+        {
+          "absatz": "8",
+          "text": "",
+          "items": [
+            {
+              "marke": "8",
+              "text": "Zahlungsfristen Die Zahlungsfrist von Gebühren beträgt 30 Tage. Nach Ablauf der Zahlungsfrist kann ein Verzugszins von 5% erhoben werden. Für nicht rechtzeitig bezahlte Gebühren können Mahngebühren und Umtriebsgebühren für Inkassomassnahmen erhoben werden. Diese betragen:"
+            },
+            {
+              "marke": "a",
+              "text": "erste Mahnung gratis"
+            },
+            {
+              "marke": "b",
+              "text": "Mahngebühren ab zweiter Mahnung je CHF 40"
+            },
+            {
+              "marke": "c",
+              "text": "Umtriebsgebühr für Inkassomassnahmen CHF 50"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "1c9b6ea6078edce8dd653f9765189440c2b726b04a2eb70c6bae25fb275b1ce4"
+    },
+    {
+      "id": "kanton/BS/211.110/art_53_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "53_a",
+      "artikelLabel": "§ 53a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Departement für Wirtschaft, Soziales und Umwelt ist das für die Bewilligung und Aufsicht über die berufsmässige Ehe- oder Partnerschaftsvermittlung von Personen oder an Personen aus dem Ausland zuständige Departement. Ihm steht zur Erfüllung der Aufgaben das Amt für Wirtschaft und Arbeit zur Verfügung."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "a91ff6efe5a076224ba6aebaf7028c457856db15b2c6a650afc65e9bcd0e9f66"
+    },
+    {
+      "id": "kanton/BS/211.110/art_53_b",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "53_b",
+      "artikelLabel": "§ 53b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufsicht über das Handelsregisteramt obliegt dem Justiz- und Sicherheitsdepartement."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Entscheid über Beschwerden gegen Verfügungen des Handelsregisteramts obliegt dem Appellationsgericht als Verwaltungsgericht."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "ea3463c90b0c0dc78f6a263be9c87f36622b24f4e5a9fc90b9d4a73732224c88"
+    },
+    {
+      "id": "kanton/BS/211.110/art_54",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Verordnung zum EG ZGB (SG 211.110)",
+      "artikel": "54",
+      "artikelLabel": "§ 54",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für notarialische Beglaubigungen wird durch das Notariatsgesetz bestimmt."
+        }
+      ],
+      "stand": "2025-05-01",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/211.110",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "12f6b7161d6b97e3f17a2a2dbc0a2809",
+      "sha": "113f8f77302483fc84c54fe5529bff85d511878ee3fb59778534897872059495"
     }
   ]
 }

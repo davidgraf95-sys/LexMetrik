@@ -1,6 +1,740 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/VD/vd-210360/art_1",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Objet et terminologie La présente loi fixe les modalités d'application des dispositions du Code civil relatives au registre foncier qui relèvent de la compétence du canton."
+        },
+        {
+          "absatz": "2",
+          "text": "Toute désignation de personne, de statut ou de fonction dans la présente loi vise indifféremment un homme ou une femme. Code civil suisse du 10 décembre 1907, RS 210"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "4e2fd1fc5c35aa0cd3b3a8dfd795edf59e0aaaea4b907e86417a3acf3213b432"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_2",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Autorité cantonale Le département en charge du registre foncier (ci-après : le département) est l'autorité cantonale de surveillance du registre foncier."
+        },
+        {
+          "absatz": "2",
+          "text": "Il exerce son action par l'intermédiaire de l'Inspectorat du registre foncier (ci-après : l'inspectorat). Voir l'organigramme de l'Etat de Vaud"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "0caebe04e4a10a8f6a119d226cbb3b3e9a3645ef663620b35f18f8b1ca5de26c"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_3",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Arrondissements du registre foncier districts formant des arrondissements fixés par le Conseil d'Etat."
+        },
+        {
+          "absatz": "2",
+          "text": "Le Conseil d'Etat peut décider la création de bureaux décentralisés au sein de l'arrondissement."
+        },
+        {
+          "absatz": "3",
+          "text": "L'information relative à la propriété foncière et aux droits qui s'y rapportent est disponible dans chaque office ou bureau du registre foncier."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "d0b105a92ce6ddfb0933a2084506760b8de559b0d6f23d6a6d5f8ba1f67d338e"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_4",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Tenue du registre foncier La tenue et l'organisation du registre foncier sont définis par le Code civil , l'ordonnance fédérale du 23 septembre 2011 sur le registre foncier (ci-après : ORF) et la présente loi."
+        },
+        {
+          "absatz": "2",
+          "text": "Le registre foncier est tenu en français sur tout le territoire du Canton de Vaud."
+        },
+        {
+          "absatz": "3",
+          "text": "Le département élabore les directives d'application. Code civil suisse du 10 décembre 1907, RS 210 Ordonnance fédérale du 22.09.2011 sur le registre foncier (RS 211.432.1)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "ad1c762f7b94a64813e52be9c199527c3183c0cbcd5d26923489d3f843bd9b5a"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_5",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Registre foncier informatisé"
+        },
+        {
+          "absatz": "1",
+          "text": "Le registre foncier est tenu par traitement informatique conformément à l'ORF. Le Conseil d'Etat fixe dans un règlement , les modalités d'un tel traitement et conçoit un système pour assurer la sécurité des données en application de la législation fédérale et cantonale en la matière. Règlement du 17.12.1993 fixant le tarif des émoluments du registre foncier (BLV 211.61.1)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "77b1795939891bd6884e870305ddb57bcaed14211fdd2f3374edd7109034fdf1"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_6",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Publicité"
+        },
+        {
+          "absatz": "1",
+          "text": "L'ORF règle l'obtention d'extraits du registre foncier ainsi que de renseignements en relation avec un immeuble déterminé."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "7c4dba8a742ac07092fc7fc1f2d11e7df07ba653cfcc4eb657230a5f6543005c"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_7",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Archives"
+        },
+        {
+          "absatz": "1",
+          "text": "Les registres, les plans et les pièces justificatives caducs sont conservés aux archives du registre foncier, puis aux archives cantonales en application de la loi du 14 juin 2011 sur l'archivage . Loi du 14.06.2011 sur l'archivage (BLV 432.11)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "36199f7b14f711f84962122cb91643c663b8047208fb6c4309b82ce044a291d9"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_8",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Responsabilité"
+        },
+        {
+          "absatz": "1",
+          "text": "L'Etat est responsable de tout dommage résultant de la tenue du registre foncier, conformément à l'article 955 du Code civil . Code civil suisse du 10 décembre 1907, RS 210 Loi du 16.05.1961 sur la responsabilité de l'État, des communes et de leurs agents (BLV 170.11)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "bec17c5ff036ef400ae5a347d7729a968df9476dd9f27c3c1b6b5b7e8b6e0ca9"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_9",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Conservateur"
+        },
+        {
+          "absatz": "1",
+          "text": "L'Office du registre foncier est dirigé par un conservateur du registre foncier (ci-après : le conservateur)."
+        },
+        {
+          "absatz": "2",
+          "text": "Il exerce les attributions qui lui sont conférées par la législation fédérale et cantonale, ainsi que par les directives du département."
+        },
+        {
+          "absatz": "3",
+          "text": "Le Conseil d'Etat est l'autorité d'engagement du conservateur au sens de la loi du 12 novembre 2001 sur le personnel de l'Etat de Vaud . Il peut déléguer tout ou partie de ses compétences au chef de service auquel l'office est rattaché. Le chef de service peut à son tour déléguer tout ou partie de ses compétences au chef d'office."
+        },
+        {
+          "absatz": "4",
+          "text": "L'engagement ne peut avoir lieu que si les conditions d'accès à la fonction, fixées par le Conseil d'Etat, sont remplies. Sont dispensés de l'examen les candidats qui possèdent un master en droit, un acte de capacité pour l'exercice du notariat et ceux qui ont déjà occupé un poste de conservateur ou de conservateur adjoint du registre foncier. Loi du 12.11.2001 sur le personnel de l'Etat de Vaud (BLV 172.31)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "af57d0d7f70ea0e7c0a440cbbcecd3ddd93af7f9073553178eab595184f19cf7"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_10",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Signature"
+        },
+        {
+          "absatz": "1",
+          "text": "Le conservateur, le conservateur adjoint, le substitut ou, à défaut, une autre personne autorisée par le conservateur ont seuls qualité pour signer des actes, des extraits ou des déclarations officiels."
+        },
+        {
+          "absatz": "2",
+          "text": "Le département décide, dans le cadre des prescriptions fédérales, du mode de communication électronique du registre foncier et de la plate-forme de messagerie utile, comme du moment de l'introduction de la réquisition et des pièces justificatives électroniques."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "05d209208ec600467cf656b3309e412be82355bd3efa4f4d7b2bb08c09d43a3c"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_11",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Rôle du conservateur"
+        },
+        {
+          "absatz": "1",
+          "text": "Le conservateur reçoit les réquisitions d'inscription, les porte au journal dès qu'elles sont parvenues à l'Office du registre foncier et se détermine sur leur recevabilité."
+        },
+        {
+          "absatz": "2",
+          "text": "Il fait procéder aux inscriptions voulues au grand livre et vérifie que les mutations opérées correspondent aux réquisitions reçues."
+        },
+        {
+          "absatz": "3",
+          "text": "Il est responsable des documents qui lui sont confiés, de leur archivage et en assure l'intégrité."
+        },
+        {
+          "absatz": "4",
+          "text": "Il ne se dessaisit d'aucune pièce principale ou originale, sauf ordre écrit du juge ou de l'inspectorat."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "2889a66e6be441024404ed309d775b4a30b2d4f8498ac1c0f7002d1e8f71be5e"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_12",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Réquisition pour le registre foncier"
+        },
+        {
+          "absatz": "1",
+          "text": "Toutes les réquisitions et justificatifs relatifs au titre présentés au registre foncier sont rédigés en français."
+        },
+        {
+          "absatz": "2",
+          "text": "Les annexes peuvent être rédigées en une autre langue nationale au besoin. Le conservateur du registre foncier peut exiger une traduction."
+        },
+        {
+          "absatz": "3",
+          "text": "La réquisition indique de façon exacte et complète l'inscription requise, ainsi que toutes les données nécessaires ; elle porte la signature du requérant ou de son mandataire."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "a32f28fd8401f98f3d36e92da2bc2518a37d477639114a0c3e21924485fa07c1"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_13",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Attestations et légalisations"
+        },
+        {
+          "absatz": "1",
+          "text": "Les actes sous seing privé sont annexés en original à la réquisition du registre foncier."
+        },
+        {
+          "absatz": "2",
+          "text": "Les notaires sont autorisés à déposer une copie vidimée de leur minute, des pièces justificatives et des annexes."
+        },
+        {
+          "absatz": "3",
+          "text": "Les signatures apposées sur un acte sous seing privé sont légalisées, à moins qu'elles ne soient connues du conservateur ou apposées en sa présence."
+        },
+        {
+          "absatz": "4",
+          "text": "Les notaires, les ingénieurs géomètres inscrits au registre des géomètres et les communes qui présentent un acte sous seing privé sont dispensés de la légalisation, mais sont responsables de l'authenticité des signatures et de l'identité des signataires."
+        },
+        {
+          "absatz": "5",
+          "text": "La légalisation électronique des signatures doit s'opérer en conformité avec les règles de l'ordonnance fédérale du 23 septembre 2011 sur l'acte authentique électronique et avec la loi du 29 juin 2004 sur le notariat ."
+        },
+        {
+          "absatz": "6",
+          "text": "Les actes émanant d'une autorité ou d'un officier public sont attestés conformes par les signatures et les sceaux officiels. Ordonnance du 23.09.2011 sur l'acte authentique électronique (RS 943.033) Loi du 29.06.2004 sur le notariat (BLV 178.11)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "1052b445f587bf905c9ce8c5318d4a50cf2310078e722912f3785c65e5723892"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_14",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Compétences spéciales"
+        },
+        {
+          "absatz": "1",
+          "text": "Les ingénieurs géomètres inscrits au registre des géomètres sont également compétents pour établir des actes ayant valeur d'actes authentiques au sens du Code civil , dans les cas suivants :"
+        },
+        {
+          "absatz": "2",
+          "text": "La procédure d'instrumentation appliquée aux ingénieurs géomètres inscrits au registre des géomètres doit suivre les prescriptions imposées aux articles 47 et suivants de la loi du 29 juin 2004 sur le notariat sous peine de nullité ou d'annulation de l'acte (art. 69, al. 1 à 3 LNo)."
+        },
+        {
+          "absatz": "3",
+          "text": "L'acte est instrumenté en brevet. Loi du 29.06.2004 sur le notariat (BLV 178.11)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "c5bd686ab69b72cfdad81e1a37a34728e91fc435dd7d877ec6ac87fc4165e40c"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_15",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Plan de servitude"
+        },
+        {
+          "absatz": "1",
+          "text": "L'acte constitutif de servitude dont l'exercice ne concerne qu'une partie de l'immeuble est accompagné d'un croquis figurant la localisation exacte de l'assiette de la servitude sur un extrait de plan du registre foncier au sens de l'ordonnance fédérale du 18 novembre 1992 sur la mensuration officielle ."
+        },
+        {
+          "absatz": "2",
+          "text": "Si la localisation n'est possible qu'ultérieurement, les propriétaires de l'immeuble concerné et, le cas échéant, les bénéficiaires de la servitude, doivent produire le plan complémentaire signé par eux tous immédiatement après la réalisation de l'ouvrage. Ordonnance du 18.11.1992 sur la mensuration officielle (RS 211.432.2)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "47316dd6f059c5c05cbdfae5c5c776d51b0ade38698345a530a644b9494f12e3"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_16",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Division de bien-fonds"
+        },
+        {
+          "absatz": "1",
+          "text": "La réquisition de division de bien-fonds est accompagnée des documents de mutation établis par un ingénieur géomètre inscrit au registre des géomètres."
+        },
+        {
+          "absatz": "2",
+          "text": "La réquisition précise le report des droits et charges sur les nouveaux biens-fonds."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "79521098ca33c33580a60046835ef323f2571699719b3853b5543fe3a777caf1"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_17",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Délai de présentation"
+        },
+        {
+          "absatz": "1",
+          "text": "Les réquisitions d'inscription fondées sur des actes soumis à la forme authentique doivent être remises au conservateur dans les quatorze jours dès la date de leur instrumentation par l'officier public."
+        },
+        {
+          "absatz": "2",
+          "text": "Ce délai peut être prolongé à trente jours par les parties au contrat en cas de circonstances particulières."
+        },
+        {
+          "absatz": "3",
+          "text": "Passés les délais mentionnés aux alinéas précédents, seules les parties à l'acte sont compétentes pour présenter la réquisition au registre foncier."
+        },
+        {
+          "absatz": "4",
+          "text": "Pour les actes soumis à condition, à ratification ou à autorisation, le délai légal court dès le jour de la réalisation de la condition, de la notification de la ratification ou de l'autorisation."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "9ae7145f6d65c043edaa1b7e4e7c796f60563534cf883ff97953ed74a92998c2"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_18",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Ajournement de l'inscription"
+        },
+        {
+          "absatz": "1",
+          "text": "En cas d'ajournement de l'inscription jusqu'à l'obtention d'une autorisation, le conservateur du registre foncier procède à l'inscription d'une mention \"suspens\" sur le feuillet concerné."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "950702215a6da8d8352bae5b914959008b5ed020c625f91c0e94c8a80c5c7a63"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_19",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Enquête publique lors d'un remaniement parcellaire"
+        },
+        {
+          "absatz": "1",
+          "text": "Lorsque la procédure d'inscription du nouvel état d'un remaniement parcellaire effectuée en application de loi du 29 novembre 1961 sur les améliorations foncières est terminée, le feuillet et les pièces justificatives font l'objet d'une enquête publique de dix jours ouvrables au registre foncier."
+        },
+        {
+          "absatz": "2",
+          "text": "Le dossier du nouvel état est tenu à disposition à titre de justificatif des opérations entreprises par le registre foncier."
+        },
+        {
+          "absatz": "4",
+          "text": "Les créanciers hypothécaires sont invités à produire leurs titres pour mise à jour."
+        },
+        {
+          "absatz": "5",
+          "text": "Après l'enquête, le conservateur instruit chaque opposition, au besoin contradictoirement avec les tiers intéressés, et statue."
+        },
+        {
+          "absatz": "6",
+          "text": "Il notifie sa décision à chaque intéressé, avec l'indication des voies et délai de recours, en application de l'article 25 de la présente loi. Loi du 29.11.1961 sur les améliorations foncières (BLV 913.11)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "932f63f81a3d33a6dd2d92a53e247ff136bc5d5c61adfbee97006dad5bb64964"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_20",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Domaine public"
+        },
+        {
+          "absatz": "1",
+          "text": "Le conservateur est compétent pour inscrire l'immatriculation ou la décadastration du domaine public cantonal ou communal."
+        },
+        {
+          "absatz": "2",
+          "text": "Le conservateur contrôle en particulier que la création d'un droit réel limité privé sur le domaine public ou le passage de ce dernier au domaine privé ait été régulièrement précédé d'une enquête publique de 30 jours avant la décision, la législation sur les routes étant applicable directement ou par analogie. Loi du 10.12.1991 sur les routes (BLV 725.01)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "a882d8442e7b9e08d01890291f43cde9205fe6cbec616c6151bceb5436a1c21e"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_21",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Mentions de restriction de droit public"
+        },
+        {
+          "absatz": "1",
+          "text": "La collectivité publique ou toute entité qui accomplit une tâche d'intérêt public doit faire mentionner au registre foncier toute restriction découlant du droit public ayant pour effet d'entraver l'utilisation, de restreindre le pouvoir de disposition ou de créer une obligation liée à un immeuble à la charge du propriétaire foncier."
+        },
+        {
+          "absatz": "2",
+          "text": "Les bénéficiaires sont tenus de faire radier les restrictions à la propriété devenues caduques."
+        },
+        {
+          "absatz": "3",
+          "text": "Le département établit la liste des mentions prévues par le droit public cantonal et la communique à l'Office fédéral du registre foncier (OFRF)."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "7e076f923b38c78e774b64497c9720128ab9a30e8d7c12f4f6f86bbde65cb2f3"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_22",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Publications Le conservateur est chargé des publications prévues par l'article 970a du Code civil . Elles interviennent, en principe dans un délai de deux mois, dès le dépôt de la réquisition d'inscription au registre foncier."
+        },
+        {
+          "absatz": "2",
+          "text": "Ne sont pas publiées : Code civil suisse du 10 décembre 1907, RS 210 Loi fédérale du 04.10.1991 sur le droit foncier rural (RS 211.412.11)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "4e4b2ed3d94246144ed04f91407502883f148f3dc81d885ba927d41106e398be"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_23",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Rectifications, modifications de limites et attribution de minime importance"
+        },
+        {
+          "absatz": "1",
+          "text": "Les rectifications, modifications de limites ou d'inscriptions de minime importance, effectuées selon la volonté concordante de tous les intéressés, sont réglées par la loi du 8 mai 2012 sur la géoinformation . Loi fédérale du 05.10.2007 sur la géoinformation (RS 510.62)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "ddb22e1eee29b88c0cd74651c470f148bfe09c7e7744c019dec867d7cd9ef3ce"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_24",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Rectifications judiciaires En cas de rectification judiciaire découlant de l'article 977 CC , le juge compétent en raison du lieu de situation de l'immeuble objet de la requête statue dans les formes de la procédure sommaire du code de droit privé judiciaire vaudois du 12 janvier 2010 , l'article 109 de ce code étant applicable. Code civil suisse du 10 décembre 1907, RS 210 Code de droit privé judiciaire vaudois du 12.01.2010 (BLV 211.02)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "b9dcf394c32de616fd999b8b44befb0f5d4981dae79e0fb9db3a2ff08becf04a"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_25",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Rejet de réquisition et recours"
+        },
+        {
+          "absatz": "1",
+          "text": "Les décisions du conservateur rejetant une réquisition en appplication de l'ORF sont notifiées aux intéressés par pli recommandé avec l'indication des motifs, des voies de droit et du délai de recours."
+        },
+        {
+          "absatz": "2",
+          "text": "Toutes les décisions du conservateur peuvent faire l'objet d'un recours au département. Les dispositions de la loi du 28 octobre 2008 sur la procédure administrative sont applicables."
+        },
+        {
+          "absatz": "3",
+          "text": "Le conservateur du registre foncier peut procéder à l'inscription d'une mention \"recours\" sur le feuillet concerné. Loi du 28.10.2008 sur la procédure administrative ( BLV 173.36)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "bc2d64eb195b8fcffd6854b3e84837c60dbff98d7c8429173b9b65c1db851f8c"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_26",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Propriété"
+        },
+        {
+          "absatz": "1",
+          "text": "Toute inscription relative à la propriété d'un immeuble est soumise à un émolument de 1,5‰ du prix ou de la valeur fixé dans l'acte ou, à défaut, du montant de l'estimation fiscale."
+        },
+        {
+          "absatz": "2",
+          "text": "La valeur du mobilier ou des accessoires n'est pas déduite."
+        },
+        {
+          "absatz": "3",
+          "text": "En cas d'échange, l'émolument est calculé sur l'objet ayant la plus grande valeur."
+        },
+        {
+          "absatz": "5",
+          "text": "L'émolument s'élève toutefois au minimum à CHF 100.- et au maximum à CHF 20'000.- par opération."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "0bb4caa72a06dbe3d176985a6d4d9c6be9365ed3e124e3f64810b8aead72a2da"
+    },
     {
       "id": "kanton/VD/vd-210360/art_27",
       "ebene": "kanton",
@@ -28,7 +762,7 @@
       ],
       "stand": "2018-01-01",
       "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
       "sha": "32328ae7daac986bd6e48885f375c267dcf8125053078a997865a34b85b91d28"
     },
@@ -55,59 +789,151 @@
       ],
       "stand": "2018-01-01",
       "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
       "sha": "2c89d317d0994587359d6dc51f0d2b74305c70850b195fd00964a74e4f2ee4c3"
     },
     {
-      "id": "kanton/VD/vd-210360/art_4",
+      "id": "kanton/VD/vd-210360/art_29",
       "ebene": "kanton",
       "quelle": "VD",
       "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
-      "artikel": "4",
-      "artikelLabel": "Art. 4",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
       "bloecke": [
         {
           "absatz": null,
-          "text": "Tenue du registre foncier La tenue et l'organisation du registre foncier sont définis par le Code civil , l'ordonnance fédérale du 23 septembre 2011 sur le registre foncier (ci-après : ORF) et la présente loi."
+          "text": "Autres opérations"
         },
         {
-          "absatz": "2",
-          "text": "Le registre foncier est tenu en français sur tout le territoire du Canton de Vaud."
-        },
-        {
-          "absatz": "3",
-          "text": "Le département élabore les directives d'application. Code civil suisse du 10 décembre 1907, RS 210 Ordonnance fédérale du 22.09.2011 sur le registre foncier (RS 211.432.1)"
+          "absatz": "1",
+          "text": "Les autres opérations du registre foncier sont facturées aux requérants sur la base d'un règlement sur le tarif des émoluments du registre foncier arrêté par le Conseil d'Etat. Règlement du 17.12.1993 fixant le tarif des émoluments du registre foncier (BLV 211.61.1)"
         }
       ],
       "stand": "2018-01-01",
       "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
-      "sha": "ad1c762f7b94a64813e52be9c199527c3183c0cbcd5d26923489d3f843bd9b5a"
+      "sha": "571325d40067f2badda7eef68ac24629591da6d63d309a3b1d8e0e8bc24b2754"
     },
     {
-      "id": "kanton/VD/vd-210360/art_2",
+      "id": "kanton/VD/vd-210360/art_29_a",
       "ebene": "kanton",
       "quelle": "VD",
       "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
-      "artikel": "2",
-      "artikelLabel": "Art. 2",
+      "artikel": "29_a",
+      "artikelLabel": "Art. 29a",
       "bloecke": [
         {
           "absatz": null,
-          "text": "Autorité cantonale Le département en charge du registre foncier (ci-après : le département) est l'autorité cantonale de surveillance du registre foncier."
+          "text": "Réduction d'émolument"
         },
         {
-          "absatz": "2",
-          "text": "Il exerce son action par l'intermédiaire de l'Inspectorat du registre foncier (ci-après : l'inspectorat). Voir l'organigramme de l'Etat de Vaud"
+          "absatz": "1",
+          "text": "L'Inspectorat est compétent pour accorder une réduction de 75% de l'émolument :"
         }
       ],
       "stand": "2018-01-01",
       "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
-      "sha": "0caebe04e4a10a8f6a119d226cbb3b3e9a3645ef663620b35f18f8b1ca5de26c"
+      "sha": "ff3acafe037a8704a0d83330ec28d50ccd594e4a6dbdddf47014818260b2e2c2"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_30",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Garantie des frais"
+        },
+        {
+          "absatz": "1",
+          "text": "Dans les hypothèses visées par les articles 27 à 30 de la présente loi, le recouvrement des frais est garanti par une charge foncière de droit public d'une durée de deux ans en faveur du canton. Cette charge prime toutes les autres charges dont les immeubles peuvent être grevés. La durée de deux ans est comptée dès le jour de l'exigibilité de la créance."
+        },
+        {
+          "absatz": "2",
+          "text": "Le département est compétent pour requérir l'inscription ou la radiation de cette charge foncière. Les articles 87 et suivants du code de droit privé judiciaire vaudois du 12 janvier 2010 sont applicables pour le surplus. Code de droit privé judiciaire vaudois du 12.01.2010 (BLV 211.02)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "96518add1d34e8ba807eb9d2239ab15894c23d7bddf8c1c80effea81d3ea4025"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_31",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Prescriptions techniques"
+        },
+        {
+          "absatz": "1",
+          "text": "Le département édicte les prescriptions techniques laissées à l'appréciation des cantons par l'ordonnance fédérale du 23 septembre 2011 sur le registre foncier , par voie d'instruction ou de circulaire. Ordonnance fédérale du 22.09.2011 sur le registre foncier (RS 211.432.1)"
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "2fcae48fc4cc8ed5fd5b8bb7b97ebf34d531fef67f8656bc721a0fda9a0c6872"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_32",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Abrogation"
+        },
+        {
+          "absatz": "1",
+          "text": "La loi du 23 mai 1972 sur le registre foncier, le cadastre et le système d'information du territoire est abrogée."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "9eb4b9c6183b3e28473accc46e0afe84a05e8d4bf79dae34acfab9da20e517c5"
+    },
+    {
+      "id": "kanton/VD/vd-210360/art_33",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi du 9 octobre 2012 sur le registre foncier (LRF), Chapitre V Emoluments (art. 26-29), en lien avec le Règlement du 2 juillet 2014 fixant le tarif des émoluments du registre foncier (RE-RF) (BLV 211.61 (LRF) / BLV 211.61.1 (RE-RF))",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Entrée en vigueur"
+        },
+        {
+          "absatz": "1",
+          "text": "Le Conseil d'Etat est chargé de l'exécution de la présente loi. Il en publiera le texte conformément à l'article 84, alinéa 1, lettre a) de la Constitution cantonale et en fixera, par voie d'arrêté, la date d'entrée en vigueur."
+        }
+      ],
+      "stand": "2018-01-01",
+      "quelleUrl": "https://www.lexfind.ch/tolv/210360/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "da64c9063864f9ed00a917c74262a211345227d7da26f8c82ec69dcef223fcd4",
+      "sha": "b209676b375d4abd97d2ce8c72fa1de9f17310c9bfa823b480e59dac40becf2a"
     }
   ]
 }

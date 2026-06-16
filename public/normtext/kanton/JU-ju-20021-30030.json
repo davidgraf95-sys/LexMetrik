@@ -1,6 +1,128 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/JU/ju-20021-30030/art_1",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La présente loi s'applique à la perception des émoluments, des taxes d'utilisation et des débours."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "97b82810e0a9a3b6ae5893d9e2a0f1cee255b00fc45a228f6dc80d8796e01fe4"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_1_a",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "1_a",
+      "artikelLabel": "Art. 1a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les termes utilisés dans la présente loi pour désigner des personnes s'appliquent indifféremment aux femmes et aux hommes."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "d9034c47f41593b3b8e8caea375dca7f05042ee90b305a90a0bed5d522f38a13"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_2",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les autorités communales, intercommunales et cantonales peuvent percevoir des émoluments et des taxes d'utilisation en contrepartie de leurs prestations et interventions. Elles ont droit, en outre, au remboursement de leurs débours."
+        },
+        {
+          "absatz": "2",
+          "text": "La prestation ou l'intervention de l'autorité peut notamment consister dans l'édiction d'un acte administratif, l'octroi d'un avantage ou dans le prononcé d'un jugement."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "ae857f1ccec50e9f1303b3767ab154f0095e7badfa574f36d128f06cdd35ac3e"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_3",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument, la taxe d'utilisation et les débours sont dus par qui a sollicité ou provoqué la prestation ou l'intervention de l'autorité."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "4891f9ef9c8b9763a60e1d4f02b535b131174c9fa6cb50352515ec55447c9fc3"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_4",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le paiement d'émoluments et de débours ne peut être exigé de la Confédération et du canton, ni non plus des organismes publics qui en dépendent, à moins que des circonstances particulières ne le justifient."
+        },
+        {
+          "absatz": "2",
+          "text": "Les dispositions des lois spéciales, en particulier des codes de procédure, relatives aux frais sont réservées. des débours"
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "9e45584795d0fc63d255193674bc77ac4a9e795fec2e53455d783e0f3eea0871"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_5",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument administratif est la contribution perçue pour rémunérer une prestation ou une intervention des autorités administratives."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "1652b71710ba531387e1fab383a8fe08df2115dd4ee4afced9d6b16869b3e36a"
+    },
     {
       "id": "kanton/JU/ju-20021-30030/art_6",
       "ebene": "kanton",
@@ -20,9 +142,631 @@
       ],
       "stand": "1978-11-09",
       "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
       "sha": "dc66b80d557fbce1cf2daf4ebdf291f8dfdc4013dd22fa21e36bca1bd13b12e9"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_7",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument judiciaire est la contribution perçue pour rémunérer une activité juridictionnelle sollicitée ou provoquée par le justiciable."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "00389f15dfff9c0e2a2638a4c906360f66a9afb656212537b38dd5b8c9006997"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_8",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument correspondant à l'utilisation particulière d'un service public communal, intercommunal et cantonal est une taxe d'utilisation."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "41f49341a84771eaeb76cf9a8c349a518a5ba9a81ed64ace5a873fb12d3a647c"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_9",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les débours sont les frais occasionnés à l'autorité par l'accomplissement de sa prestation."
+        },
+        {
+          "absatz": "2",
+          "text": "Font notamment partie des débours, les indemnités de déplacement et de subsistance, les indemnités de témoins, les honoraires d'experts, les frais de traduction et de publication, les taxes postales, télégraphiques et téléphoniques."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "7f4d2916992fb4721b92ca9fc2c9212e8b42c9f3239c2bbaf0fe27d8c75c1f7c"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_10",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le montant des émoluments et des taxes d'utilisation se calcule conformément aux principes de l'égalité de traitement et de la proportionnalité."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "3dbce858a3ad925e7a5c6f27928b29568b1a7941dd5c0fad739fd9ea78a3f334"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_11",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le produit total des émoluments administratifs ou judiciaires ne peut, en principe, dépasser le montant total des charges de la branche administrative ou judiciaire concernée. Celui-ci est constitué par la somme des dépenses et frais généraux débours déduits, engagés aux fins de procéder aux opérations rémunérées par un émolument."
+        },
+        {
+          "absatz": "2",
+          "text": "Le montant de l'émolument perçu dans un cas d'espèce doit correspondre dans la mesure du possible au coût de la prestation ou de l'intervention de l'autorité."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "844d8f09684ce80f95f682c512c9fa99b079c59e9f6e259ecd16cc6278fc3252"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_12",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dans les limites des principes énoncés aux articles 10 et 11 et des tarifs édictés, le montant de l'émolument administratif ou judiciaire peut se calculer en fonction de l'intérêt économique du redevable à la prestation fournie. Il peut également être tenu compte de la capacité financière de ce dernier."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque le domicile du redevable est extérieur au canton ou à la commune et qu'il en résulte un surcroît de frais, le montant de l'émolument peut être majoré conformément au principe de la couverture des frais."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "06b10e4d3dbe316e5a2f6042ff8372b28766f462c15cfb045358f69a45d689c0"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_13",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le montant de la taxe d'utilisation doit correspondre à la valeur économique de l'avantage procuré par le service public."
+        },
+        {
+          "absatz": "2",
+          "text": "Le montant de la taxe d'utilisation peut être majoré à charge de l'usager domicilié hors du canton ou de la commune :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "lorsqu'il en résulte un surcroît de frais;"
+            },
+            {
+              "marke": "b",
+              "text": "ou que cet usager recourt à un service public institué grâce au produit des impôts généraux perçus par la collectivité dont ce service dépend."
+            }
+          ]
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "c0b1a64ebb5ab8cb956681ec88128cced23bd91dc2f130b90f8f7d6fd73c4bc6"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_13_a",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "13_a",
+      "artikelLabel": "Art. 13a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'autorité peut majorer jusqu'au quart le montant des émoluments administratifs et judiciaires fixés par la législation cantonale pour les affaires nécessitant un travail d'une importance particulière, notamment lorsqu'elles prennent beaucoup de temps ou sont complexes, ainsi que dans les cas où l'intéressé viole des règles de procédure ou agit de manière téméraire ou abusive."
+        },
+        {
+          "absatz": "2",
+          "text": "La législation spéciale peut exceptionnellement prévoir une majoration supérieure ou une diminution."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "584f093358e80d7b643fc4509ddd9b2838784bf909a6450cd05056acb3643f87"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_14",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La Chancellerie d'Etat perçoit les émoluments et taxes d'utilisation correspondant aux prestations et interventions du Parlement, du Gouvernement et de la Chancellerie."
+        },
+        {
+          "absatz": "2",
+          "text": "Dans les autres cas, les autorités cantonales, communales et intercommunales perçoivent elles-mêmes les émoluments et les taxes d'utilisation correspondant à leurs prestations ou interventions."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "ddd6fdaf75e8e4b547adadcc160298cfb732da3a5ac032ebcfe849f197de58be"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_15",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsqu'une même opération donne lieu à plusieurs émoluments, ceux-ci sont additionnés et perçus en une seule fois."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "96116fec5194cfd6ff814d250a6d1afb1ca80433d04a6546e29341322aa1be1d"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_16",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument, la taxe d'utilisation et les débours sont exigibles dès l'accomplissement de la prestation ou de l'intervention de l'autorité. Ils portent intérêts à 5 % par an dès sommation."
+        },
+        {
+          "absatz": "2",
+          "text": "Tout redevable peut cependant être tenu de verser une avance ou de fournir des sûretés sur l'émolument, la taxe d'utilisation et les débours."
+        },
+        {
+          "absatz": "3",
+          "text": "Les dispositions légales spéciales sont réservées."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "40d05445d3a7b125a66b2db4dde82ac128f758b29ca3bafaa140d55fd80828b3"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_17",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque plusieurs personnes sollicitent ou provoquent ensemble une prestation ou une intervention de l'autorité, l'émolument, la taxe d'utilisation et les débours qui en résultent sont équitablement répartis entre elles; sauf prescription légale ou décision contraire, elles en répondent solidairement, si elles sont liées entre elles par un rapport de droits ou d'obligations communs."
+        },
+        {
+          "absatz": "2",
+          "text": "Les dispositions des codes de procédure et autres lois relatives aux frais et dépens sont réservées."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "e61b6703dbb338e25c3ac7ddbe9f0f291af5c33bf5697403d4a85ea16a5d04f5"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_18",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'autorité peut, sur demande, renoncer, totalement ou partiellement, à la perception de l'émolument, de la taxe d'utilisation et des débours :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "si elle donne lieu à une rigueur excessive;"
+            },
+            {
+              "marke": "b",
+              "text": "si la prestation ou l'intervention est accomplie en faveur de collectivités publiques, non exemptées par l'article 4, ainsi que d'organismes d'utilité publique ou de bienfaisance."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "L'autorité peut, d'office ou sur demande, accorder une remise dans la mesure où sa prestation ou son intervention est principalement destinée à satisfaire :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "un intérêt public;"
+            },
+            {
+              "marke": "b",
+              "text": "l'intérêt d'une personne ou d'un groupement de personnes qui n'a pas de but lucratif et qui organise une manifestation publique. Les dispositions spéciales sont réservées."
+            }
+          ]
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "48cded116a93d9aa6e9f675872d033f8bee8fa7806afe7ba81cde747ebb225ce"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_18_a",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "18_a",
+      "artikelLabel": "Art. 18a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Une remise de 50 % du montant total de l'émolument est octroyée pour les autorisations concernant les manifestations et les compétitions, même pédestres, sur et hors de la voie publique (art. 6 de la loi sur la circulation routière et l'imposition des véhicules routiers et des bateaux )."
+        },
+        {
+          "absatz": "2",
+          "text": "Cette remise ne s'applique qu'aux demandes d'autorisation déposées par :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "des personnes morales exonérées de l'impôt en application de l'article 69, alinéa 1, lettres h et h , de la loi d'impôt"
+            },
+            {
+              "marke": "b",
+              "text": "des personnes morales poursuivant des buts idéaux qui sont exonérées de l'impôt sur le bénéfice (art. 76a LI ) et qui ne sont pas imposées sur leur capital."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Lors du dépôt de la demande d'autorisation, une attestation fiscale ou la dernière décision de taxation est remise à l'autorité compétente."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "6afa60b24a35ab50142baa3457a4c3f7e729855a96ea44da2cc84f0835f47e84"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_19",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque la procédure devient sans objet par suite notamment de retrait ou de désistement, l'émolument ou la taxe d'utilisation n'est perçue que partiellement conformément aux articles 10 à 13."
+        },
+        {
+          "absatz": "2",
+          "text": "Les mêmes règles s'appliquent lorsque le redevable renonce après coup à la prestation obtenue."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "8a2bed8a2e962b910794351df01723e4ca94772b30a9446c3f36d28ce3408e9c"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_20",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'autorité restitue spontanément l'émolument, la taxe d'utilisation et les débours qui n'étaient pas dus ou qui ont été versés en trop."
+        },
+        {
+          "absatz": "2",
+          "text": "La demande de restitution et les contestations qui en résultent sont réglées conformément aux dispositions du Code de procédure administrative et aux autres prescriptions y relatives."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "d781586dc6d24d98f6b5db7c19e5e6876c687f4747b83a7aa936e5019c94bafd"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_21",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sous réserve de dispositions spéciales, l'émolument, la taxe d'utilisation et les débours se prescrivent dans le délai de cinq ans à compter de leur exigibilité."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "25ca83ea365152168d1d0c3af562dba9dc66610b42bbe1c8b135d22dd477f468"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_22",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le Parlement peut arrêter des dispositions légales complémentaires concernant notamment l'assujettissement, la garantie, la restitution, la perception, la mise en compte et la remise des émoluments, taxes d'utilisation et débours."
+        },
+        {
+          "absatz": "2",
+          "text": "Dans les limites des lois et décrets, le Gouvernement peut, au besoin, arrêter d'autres prescriptions complémentaires."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "5b478033284655639309a638328727c886d61d2bb4076874c01d19e53b4f729c"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_23",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dans les limites des principes énoncés par la présente loi, le Parlement arrête, par voie de décret, le montant maximal des émoluments du Gouvernement, des départements, de la Chancellerie et des instances auxquelles la loi confère des attributions judiciaires. Il édicte en outre ses propres tarifs."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Il arrête également, par voie de décret, un émolument relatif aux opérations ou décisions pour lesquelles un émolument n'est pas expressément prévu par la législation."
+        },
+        {
+          "absatz": "2",
+          "text": "Dans les limites des décrets du Parlement, le Gouvernement édicte ses propres tarifs d'émoluments et débours ainsi que ceux des autorités citées à l'alinéa 1. …"
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "0881c3334a05b045a0b3e1035ecfa94c38a7581a1abeb39dab37d88b2e3a7c74"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_23_a",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "23_a",
+      "artikelLabel": "Art. 23a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le tarif indique le montant des émoluments en points."
+        },
+        {
+          "absatz": "2",
+          "text": "Le Parlement fixe, par voie de décret, la valeur initiale du point."
+        },
+        {
+          "absatz": "3",
+          "text": "Le Gouvernement examine annuellement la valeur du point. Il l'adapte, par voie d'arrêté, lorsque l'indice suisse des prix à la consommation a varié de plus de cinq points par rapport à la dernière indexation."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "7d009977effed86fafae0282e87b59ac8a85957202b2a7551ea88accf46e5f68"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_24",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les tarifs des taxes d'utilisation sont édictés dans les limites de la présente loi, par les autorités désignées par la législation spéciale."
+        },
+        {
+          "absatz": "2",
+          "text": "Les tarifs édictés par les autorités communales et intercommunales, ainsi que par les organes des établissements publics, sont soumis à l'approbation du Gouvernement."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "dadeda2d948111f95b5440409f05aea143e83fce4d7d5a79881c34eeb85d135d"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_25_a",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le Gouvernement peut régler, par voie d'ordonnance, les dispositions d'exécution, notamment celles relatives à la perception des émoluments."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "6f22ac6da93bd73bcb484018e7d7b7876d978f880aaa2d973aa3b10f682c90fd"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_26",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La décision concernant l'assujettissement, ainsi que le montant des émoluments, des taxes d'utilisation et des débours, peut être attaquée selon les voies de droit prévues par le Code de procédure administrative, lorsqu'elle est prise par une autorité administrative ou par une instance de la juridiction administrative."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "0699d2c2cb263f839f629f5d83141195e7e40d4f2985765d2b49edeb65835d06"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_27",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque la décision est prise par une instance judiciaire autre qu'administrative, elle peut être attaquée selon la voie de droit prévue pour recourir contre le jugement ayant donné lieu aux émoluments et débours."
+        },
+        {
+          "absatz": "2",
+          "text": "Les dispositions spéciales des codes de procédure sont réservées."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "7b4af2cd4adc2d8b2678c03ec177d2b7f16a304266d075374112132b5b08b51b"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_27_a",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "27_a",
+      "artikelLabel": "Art. 27a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les décisions fixant un émolument ou une sûreté sont assimilées à un jugement exécutoire au sens de l'article 80 de la loi sur la poursuite pour dettes et la faillite ."
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "6f5085bdec03e2bc00badbe03667ca75cd8801eee00519b245d71e978f7a136a"
+    },
+    {
+      "id": "kanton/JU/ju-20021-30030/art_28",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Ordonnance fixant les honoraires (RSJU 188.61)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour l'indexation (art. 23a, al. 3), les émoluments dont la législation cantonale fixe le montant en francs sont réputés fixés en un nombre de points équivalant à leur valeur au moment de l'entrée en vigueur de la présente disposition."
+        },
+        {
+          "absatz": "2",
+          "text": "L'alinéa 1 s'applique en particulier aux émolument communaux fixés en francs par la législation cantonale. RSJU 175.1 Introduit par le ch. l de la loi du 4 décembre 1986, en vigueur depuis le 1 mars 1987 Nouvelle teneur selon le ch. l de la loi du 4 décembre 1986, en vigueur depuis le 1 mars 1987 1 janvier 1979 Introduit par le ch. I de la loi du 24 mars 2010 modifiant des actes législatifs liés à la révision de la législation sur les émoluments, en vigueur depuis le 1 janvier 2011 Nouvelle teneur selon le ch. I de la loi du 24 mars 2010 modifiant des actes législatifs liés à la révision de la législation sur les émoluments, en vigueur depuis le 1 janvier 2011 Abrogé par le ch. I de la loi du 24 mars 2010 modifiant des actes législatifs liés à la révision de la législation sur les émoluments, en vigueur depuis le 1 janvier 2011 RS 281.1 Nouvelle teneur selon le ch. I de la loi du 22 juin 2016, en vigueur depuis le 1 janvier 2017 Nouvelle teneur du titre selon le ch. I de la loi du 26 mai 2021, en vigueur depuis le 1 janvier 2022 Introduit par le ch. I de la loi du 26 mai 2021, en vigueur depuis le 1 janvier 2022 RSJU 741.11 RSJU 641.11"
+        }
+      ],
+      "stand": "1978-11-09",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20021&id=30030",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "db7b44edb594c682814febd158799d4ae30d274d300eb3a058fa6981b273a988",
+      "sha": "6d6f8350fc959bda668b78404b16a99df284ee28fa40784a9d315c941a63c757"
     }
   ]
 }

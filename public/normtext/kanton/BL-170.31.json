@@ -1,6 +1,314 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/BL/170.31/art_1",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Bestimmungen dieser Verordnung gelten für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Friedensrichterinnen und Friedensrichter;"
+            },
+            {
+              "marke": "b",
+              "text": "die Zivilkreisgerichte;"
+            },
+            {
+              "marke": "c",
+              "text": "das Strafgericht;"
+            },
+            {
+              "marke": "d",
+              "text": "das Jugendgericht;"
+            },
+            {
+              "marke": "e",
+              "text": "das Zwangsmassnahmengericht;"
+            },
+            {
+              "marke": "f",
+              "text": "das Steuer- und Enteignungsgericht;"
+            },
+            {
+              "marke": "g",
+              "text": "das Kantonsgericht."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "e2bc0c83487d063c4f43e53c7d17306c2fbc2fa38db9697cdbcc8ad7d20edf18"
+    },
+    {
+      "id": "kanton/BL/170.31/art_2",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für richterliche Entscheide und für die übrigen amtlichen Verrichtungen werden vom dafür zuständigen Gericht festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein gerichtliches Verfahren ohne Sachentscheid abgeschlossen, so wird die Abschreibungsgebühr durch das Gericht festgesetzt, wenn die Erledigung durch dieses erfolgt, in allen anderen Fällen durch das Gerichtspräsidium."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "15e62d6c1b4ff977ac7c97805294f7c18a933d1d3986cf79b5d1032f926dc8fc"
+    },
+    {
+      "id": "kanton/BL/170.31/art_3",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wo ein Gebührenrahmen mit einem Mindest- und einem Höchstbetrag vorgesehen ist, setzt das zuständige Gericht die Gebühr im konkreten Fall nach dem Streitwert und der Bedeutung der Streitsache fest. Es berücksichtigt ferner die Schwierigkeit des Falles sowie den Arbeits- und Zeitaufwand."
+        },
+        {
+          "absatz": "2",
+          "text": "In Verfahren mit umfangreichem Aktenmaterial, mit komplizierten rechtlichen oder tatsächlichen Verhältnissen, in solchen mit besonders hohem Streitwert und in Strafsachen mit zivilen Adhäsionsklagen können die Gebühren bis auf das Doppelte des ordentlichen Ansatzes, in Ausnahmefällen bis auf die in § 52 Abs. 3 des Gesetzes vom 22. Februar 2001 über die Organisation der Gerichte vorgesehene Maximalgebühr erhöht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "In den Gebühren sind die Auslagen wie der Kanzleiaufwand, die Post- und Telekommunikationsspesen sowie die Publikationskosten pauschal eingeschlossen."
+        },
+        {
+          "absatz": "4",
+          "text": "Weitere Auslagen wie insbesondere Übersetzungskosten und Beweiskosten werden zusätzlich zu den Pauschalgebühren verlegt."
+        },
+        {
+          "absatz": "5",
+          "text": "Diese Grundsätze gelten, sofern die anwendbaren Verfahrensbestimmungen nichts anderes vorsehen."
+        },
+        {
+          "absatz": "6",
+          "text": "Werden die Auslagen nicht in die Gebühr eingeschlossen, so können der Kanzleiaufwand, die Post- und Telekommunikationsspesen, sowie die Publikationskosten mit einer Pauschale bis CHF 400.–, in Fällen mit erheblichem Aufwand mit einer Pauschale bis CHF 600.– abgerechnet werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "f652c4906f588094d74d994974c7118660795b7f4669599b75fba032dc861060"
+    },
+    {
+      "id": "kanton/BL/170.31/art_4",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die ordentlichen Entscheidgebühren können bis zur Hälfte ermässigt werden, wenn keine schriftliche Begründung erfolgt."
+        },
+        {
+          "absatz": "2",
+          "text": "In besonderen Fällen kann das zuständige Gericht bei der Festsetzung der Gebühr die nachfolgend verankerten Mindestbeträge unterschreiten oder von der Erhebung einer Gebühr gänzlich absehen."
+        },
+        {
+          "absatz": "3",
+          "text": "Überdies kann das zuständige Gericht von einer Kostenauflage ganz oder teilweise absehen, wenn Gründe der Billigkeit oder die Erreichung des Strafzweckes dies erfordern, die Einbringlichkeit von Verfahrenskosten von vornherein ausserhalb jeglicher Möglichkeit liegt oder ein Härtefall nach § 5 Abs. 2 dieser Verordnung gegeben ist."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "97df0328c198d72d7c06c9f8f02ebaf10b9d1a6f240fda65a7dedc475c50dd17"
+    },
+    {
+      "id": "kanton/BL/170.31/art_5",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Härtefällen können bereits festgesetzte und einer Partei auferlegte Verfahrenskosten auf begründetes Gesuch hin ganz oder teilweise erlassen oder gestundet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Ein Härtefall liegt vor, wenn die gesuchstellende Person ihre Bedürftigkeit nachweist und im Zeitpunkt des Kostenerlassgesuchs bereits feststeht, dass diese nicht bloss vorübergehender Natur ist. Die Bedürftigkeit richtet sich nach den Kriterien, die zur Gewährung der unentgeltlichen Rechtspflege im Zivilprozess relevant sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Zudem können die Verfahrenskosten ganz oder teilweise erlassen oder gestundet werden, wenn Gründe der Billigkeit oder die Erreichung des Strafzweckes dies erfordern."
+        },
+        {
+          "absatz": "4",
+          "text": "Der nachträgliche Erlass von Verfahrenskosten ist ausgeschlossen, wenn die unentgeltliche Prozessführung wegen Aussichtslosigkeit verweigert wurde oder mit Sicherheit verweigert worden wäre."
+        },
+        {
+          "absatz": "5",
+          "text": "Über Kostenerlassgesuche entscheidet das Präsidium des Gerichts, welches den Entscheid gefällt hat. Erfolgt der Kosteneinzug durch die Gerichtsverwaltung, so ist diese für die Bewilligung der Stundung und von Ratenzahlungen zuständig."
+        },
+        {
+          "absatz": "6",
+          "text": "Gegen den Entscheid über die Abweisung des Kostenerlassgesuchs kann die kostenpflichtige Person innert 10 Tagen seit Zustellung schriftlich und begründet Beschwerde erheben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Zivilsachen gegen Entscheide der Präsidien der Zivilkreisgerichte beim Präsidium des Kantonsgerichts, Abteilung Zivilrecht;"
+            },
+            {
+              "marke": "b",
+              "text": "in Zivilsachen gegen Entscheide des Präsidiums des Kantonsgerichts bei der Dreierkammer des Kantonsgerichts, Abteilung Zivilrecht;"
+            },
+            {
+              "marke": "c",
+              "text": "in Strafsachen beim Präsidium oder bei der Dreierkammer des Kantonsgerichts, Abteilung Strafrecht;"
+            },
+            {
+              "marke": "d",
+              "text": "in Verfassungs- und Verwaltungssachen beim Kantonsgericht, Abteilung Verfassungs- und Verwaltungsrecht;"
+            },
+            {
+              "marke": "e",
+              "text": "in Sozialversicherungssachen beim Kantonsgericht, Abteilung Sozialversicherungsrecht."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "c926f2bd110088d3180fbeb7dff0b9d4a1939429a40b27953c100f30ce97ff77"
+    },
+    {
+      "id": "kanton/BL/170.31/art_6",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Kanzleitätigkeiten können von den Gerichten folgende Gebühren erhoben werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für das Kopieren von Akten pro Seite: CHF 1–2.–; bei Massenkopien pro Seite: CHF 0.50."
+            },
+            {
+              "marke": "b",
+              "text": "für Vollstreckbarkeits- und Rechtskraftbescheinigungen: CHF 20.–."
+            },
+            {
+              "marke": "c",
+              "text": "für andere Bescheinigungen und Beurkundungen: CHF 20–50.–."
+            },
+            {
+              "marke": "d",
+              "text": "für die Gewährung von Akteneinsicht: CHF 20–1'000.–."
+            },
+            {
+              "marke": "e",
+              "text": "für das Erstellen oder die Abschrift von Protokollauszügen pro Seite: CHF 10.–."
+            },
+            {
+              "marke": "f",
+              "text": "für Mahnschreiben: CHF 20–50.–."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Verwahrung von Geld, Wertpapieren und Sachen bis CHF 5'000.– wird für jedes angefangene Jahr eine Gebühr von 1 % des hinterlegten Wertes erhoben, mindestens aber CHF 20.– sowie 1/2 % vom CHF 5'000.– übersteigenden Wert, mindestens aber CHF 50.–. Die Hinterlage haftet für Gebühren und Auslagen."
+        },
+        {
+          "absatz": "3",
+          "text": "Hinterlegte Geldsummen ab CHF 5'000.– sind vom 3. Monat an zu dem jeweils bei der Basellandschaftlichen Kantonalbank gültigen Kontokorrent-Zinssatz zu verzinsen."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die übrigen Verrichtungen der Kanzlei kann eine Gebühr von CHF 20–1'000.– erhoben werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "14c7e9c9c69625cdf326d02f459cc153d606d2a9303d8e0b7ba17c66a0cb9673"
+    },
+    {
+      "id": "kanton/BL/170.31/art_6_a",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "6_a",
+      "artikelLabel": "§ 6a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Falle von Akteneinsichtsgesuchen Dritter während hängiger Verfahren kann das zuständige Gericht, insbesondere für Schutzvorkehrungen zugunsten von Verfahrensbeteiligten sowie von berechtigten öffentlichen und privaten Interessen, Gebühren von CHF 20–2'000.– erheben."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "945c052e93caed838f3b6435944e5a9fbb2da1d3127b6ab18a2ab1ca852d2d41"
+    },
+    {
+      "id": "kanton/BL/170.31/art_7",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von den Friedensrichterinnen und Friedensrichtern werden folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Abschreibung eines Verfahrens zufolge Klagrückzugs, Klaganerkennung oder aus anderen Gründen sowie für das Ausstellen einer Klagebewilligung, sofern in diesen Fällen keine Verhandlung durchgeführt wurde: CHF 50–300.–."
+            },
+            {
+              "marke": "b",
+              "text": "in allen übrigen Fällen, namentlich für einen Entscheid, einen Urteilsvorschlag, sowie für das Ausstellen einer Klagebewilligung oder bei Abschreibung eines Verfahrens zufolge Vergleichs, Klagrückzugs bzw. Klaganerkennung, wenn zuvor eine Verhandlung durchgeführt wurde: CHF 100–500.–."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Durchführung weiterer Verhandlungen kann die Gebühr um die Hälfte erhöht werden."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "9bbe446df7dfb2cd9cc6ed5153b7a039ffd48c7df64e430125a1b6014be94244"
+    },
     {
       "id": "kanton/BL/170.31/art_8",
       "ebene": "kanton",
@@ -118,42 +426,421 @@
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
       "sha": "38333bd01f2f33142ee1475b1785f7f96fdac5bf3b8caa401455f50f42ad915e"
     },
     {
-      "id": "kanton/BL/170.31/art_7",
+      "id": "kanton/BL/170.31/art_9",
       "ebene": "kanton",
       "quelle": "BL",
       "erlass": "Gebührentarif, GebT (SGS 170.31)",
-      "artikel": "7",
-      "artikelLabel": "§ 7",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Von den Friedensrichterinnen und Friedensrichtern werden folgende Gebühren erhoben:",
+          "text": "Für die Beurteilung von Berufungen oder Streitsachen, die dem Präsidium oder der Dreierkammer der Abteilung Zivilrecht als einzige Instanz unterbreitet werden, gelten die Bestimmungen von § 8 sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Kantonsgericht, Abteilung Zivilrecht, erhebt ferner die folgenden Gebühren:",
           "items": [
             {
               "marke": "a",
-              "text": "für die Abschreibung eines Verfahrens zufolge Klagrückzugs, Klaganerkennung oder aus anderen Gründen sowie für das Ausstellen einer Klagebewilligung, sofern in diesen Fällen keine Verhandlung durchgeführt wurde: CHF 50–300.–."
+              "text": "für die Beurteilung von Beschwerden: CHF 200–10'000.–."
             },
             {
               "marke": "b",
-              "text": "in allen übrigen Fällen, namentlich für einen Entscheid, einen Urteilsvorschlag, sowie für das Ausstellen einer Klagebewilligung oder bei Abschreibung eines Verfahrens zufolge Vergleichs, Klagrückzugs bzw. Klaganerkennung, wenn zuvor eine Verhandlung durchgeführt wurde: CHF 100–500.–."
+              "text": "für Verfügungen und Entscheide des Präsidiums: CHF 200–10'000.–."
+            },
+            {
+              "marke": "c",
+              "text": "für Verfügungen und Entscheide im Bereiche der Schiedsgerichtsbarkeit: CHF 500–10'000.–."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "e7d418421d8c4ebcc5bb899e960ae01e3d900b5586159bf26a790f52f8a6b28c"
+    },
+    {
+      "id": "kanton/BL/170.31/art_10",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vom Präsidium, der Dreierkammer und der Fünferkammer des Strafgerichts und des Jugendgerichts für Endentscheide festzulegende Gebühr beträgt CHF 100–30'000.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei selbständigen nachträglichen Entscheiden sowie selbständigen Massnahmeverfahren beträgt die Gebühr CHF 300–10'000.–."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Durchführung des abgekürzten Verfahrens kann eine Reduktion bis zur Hälfte der Gebühr des Endentscheids erfolgen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Verfahrenseinstellung zufolge Abschlusses eines Vergleiches kann die Gebühr nach Ermessen reduziert, oder es kann von der Erhebung einer Gebühr gänzlich abgesehen werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Bleibt eine ordnungsgemäss vorgeladene beschuldigte Person der Hauptverhandlung fern und muss das Gericht deshalb eine neue Verhandlung ansetzen, so kann die Hälfte der Gebühr erhoben werden, welche bei Durchführung der Hauptverhandlung verlegt worden wäre."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "da8cb0ec416b82378f694e1ffc5ad234324530a4c01f1e94d68c39b202370969"
+    },
+    {
+      "id": "kanton/BL/170.31/art_11",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vom Zwangsmassnahmengericht für Entscheide festzulegende Gebühr beträgt CHF 100–10'000.–."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "a76cbc3589bfc0c4ca6c417b3fdbf356e12843fac5500e0cd97cbf04d9fe17e6"
+    },
+    {
+      "id": "kanton/BL/170.31/art_12",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die von der Dreierkammer des Kantonsgerichts, Abteilung Strafrecht, für Endentscheide festzulegende Gebühr beträgt CHF 1'000–30'000.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Die von der Fünferkammer des Kantonsgerichts, Abteilung Strafrecht, für Endentscheide festzulegende Gebühr beträgt CHF 2'000–30'000.–."
+        },
+        {
+          "absatz": "3",
+          "text": "Die für das Nichteintreten auf ein Revisionsgesuch festzulegende Gebühr beträgt CHF 500–3'000.–."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "c97375df677477f858a315d29c3cf4b34677b6ca78779756cee16deac9aafcad"
+    },
+    {
+      "id": "kanton/BL/170.31/art_13",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die von der Dreierkammer des Kantonsgerichts, Abteilung Strafrecht, für Entscheide festzulegende Gebühr beträgt CHF 500–20'000.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird die Beschwerde durch die Verfahrensleitung alleine beurteilt, so beträgt die festzulegende Gebühr CHF 300–10'000.–."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "cb7b6603abaf65724efd81901b568aaf7a48d1c88ecdc633aeb39a321c023fb3"
+    },
+    {
+      "id": "kanton/BL/170.31/art_14",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfahrensleitende Anordnungen, Zwischenentscheide und andere Verfügungen führen zu keiner separaten Gebühr, werden jedoch bei der Gebührenfestlegung des Endentscheids angemessen berücksichtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Gebühr bis zur Hälfte der Gebühr des Endentscheids wird erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Abschreibungsbeschlüsse und Verfahrenseinstellungen;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Verschiebung einer bereits festgelegten Verhandlung auf Begehren einer Partei, sofern kein anderer Fall während dieser Zeit geladen werden kann."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühr beträgt CHF 200–3'000.–:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Abweisung von Gesuchen um Erläuterung oder Berichtigung von Entscheiden;"
+            },
+            {
+              "marke": "b",
+              "text": "für die Abweisung von Gesuchen um Wiederherstellung einer Frist oder eines Termins;"
+            },
+            {
+              "marke": "c",
+              "text": "für die Abweisung von Gesuchen um Wiederaufnahme des Verfahrens;"
+            },
+            {
+              "marke": "d",
+              "text": "für die Abweisung von Gesuchen um neue Beurteilung nach einem Abwesenheitsurteil."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "c786e4b48fe5768ce525b0bc9d31411748b5fd4c90f8953e2373fc6f7b1531de"
+    },
+    {
+      "id": "kanton/BL/170.31/art_15",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kostenlos sind:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Beurteilung eines Kostenerlassgesuchs gemäss Art. 425 StPO;"
+            },
+            {
+              "marke": "b",
+              "text": "die Beurteilung von Gesuchen um Anordnung der amtlichen Verteidigung;"
+            },
+            {
+              "marke": "c",
+              "text": "die Beurteilung von Gesuchen um Gewährung der unentgeltlichen Rechtspflege für die Privatklägerschaft."
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Bei der Durchführung weiterer Verhandlungen kann die Gebühr um die Hälfte erhöht werden."
+          "text": "Die Kostenlosigkeit erstreckt sich nicht auf das Rechtsmittelverfahren."
         }
       ],
       "stand": "2021-01-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
-      "sha": "9bbe446df7dfb2cd9cc6ed5153b7a039ffd48c7df64e430125a1b6014be94244"
+      "sha": "f2ebc5a3d798ad002fbc253545fc119296ce013b039a60eb64c0d0a8ac63485e"
+    },
+    {
+      "id": "kanton/BL/170.31/art_16",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verfahrensleitende Anordnungen, Zwischenentscheide und andere Verfügungen führen zu keiner separaten Gebühr, werden jedoch bei der Gebührenfestlegung des Endentscheids angemessen berücksichtigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Beurteilung von Gesuchen um unentgeltliche Rechtspflege ist kostenlos. Die Kostenlosigkeit erstreckt sich nicht auf das Einspracheverfahren."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "534d000cb1bdebf9630bc25b4f1acd2cf3b807165588e4c2be186bf1fecd5181"
+    },
+    {
+      "id": "kanton/BL/170.31/art_17",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Steuer- und Enteignungsgericht erhebt folgende Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für einen Endentscheid des Präsidiums: CHF 100–1'000.–."
+            },
+            {
+              "marke": "b",
+              "text": "für einen Endentscheid der Dreierkammer: CHF 400–2'000.–."
+            },
+            {
+              "marke": "c",
+              "text": "für einen Endentscheid der Fünferkammer: CHF 500–5'000.–."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "3faa5baec40d01f6150f6e08a8104aa798ff33134cd9941013fc88b4d4701b82"
+    },
+    {
+      "id": "kanton/BL/170.31/art_18",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Verfassungs- und Verwaltungsrecht erhebt folgende Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für einen Endentscheid des Präsidiums: CHF 100–1'000.–."
+            },
+            {
+              "marke": "b",
+              "text": "für einen Endentscheid der Fünferkammer: CHF 500–30'000.–."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "40e77a632f36ce7bec6b94ed690f4b5f7d67a30dde096f44b586945d57faccbd"
+    },
+    {
+      "id": "kanton/BL/170.31/art_19",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Abteilung Sozialversicherungsrecht erhebt folgende Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Streitigkeiten um die Bewilligung oder die Verweigerung von Leistungen des Bundesgesetzes vom 19. Juni 1959 über die Invalidenversicherung: CHF 200–1'000.–."
+            },
+            {
+              "marke": "b",
+              "text": "in allen übrigen Verfahren bei leichtsinniger oder mutwilliger Prozessführung: CHF 100–3'000.–."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "907795bf07858d6b3f83a160d66ec0b6b799076a4c987af4e015fff1db2cd340"
+    },
+    {
+      "id": "kanton/BL/170.31/art_19_a",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "19_a",
+      "artikelLabel": "§ 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vom Schiedsgericht erhobene Entscheidgebühr beträgt CHF 200–30'000.–."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "6f7631faa520f019e3297ad211ad72e130953ce908f40d5b360187506a22737c"
+    },
+    {
+      "id": "kanton/BL/170.31/art_20",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung vom 3. Mai 2004 über die Gebühren der Gerichte und der Strafverfolgungsbehörden wird aufgehoben."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "1e22269718adfa5e267d066e662f09cdc44d0676fc4e71cf6c1424481f1c0fb3"
+    },
+    {
+      "id": "kanton/BL/170.31/art_21",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "Gebührentarif, GebT (SGS 170.31)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. Januar 2011 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie ist auf alle an diesem Datum noch nicht abgeschlossenen Verfahren anzuwenden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Entscheide des Verfahrensgerichts in Strafsachen bleibt der Gebührentarif vom 3. Mai 2004 anwendbar."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/170.31",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ba6dd07a9ce9907b23051c9b4842a05f",
+      "sha": "60cce13612fab3a78738e0935ccad7e08e7d702e37908ced30bed1a225e2e3c3"
     }
   ]
 }

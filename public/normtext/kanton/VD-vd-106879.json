@@ -1,6 +1,347 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/VD/vd-106879/art_1",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'Etat perçoit, en se conformant aux dispositions de la présente loi :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "un droit de mutation sur les transferts immobiliers entre vifs à titre onéreux ;"
+            },
+            {
+              "marke": "b",
+              "text": "un impôt sur les successions et sur les donations. Sont réservées, dans les relations intercantonales, les règles découlant de l'interdiction de la double imposition et, dans les relations internationales, les conventions tendant à éviter la double imposition . ONÉREUX"
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "7af5c52520f5629371d794c54dcb9c46c11eaa08369e4e5209791b86cd216a6e"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_2",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Objet du droit",
+          "items": [
+            {
+              "marke": "a",
+              "text": "principe"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "Le droit de mutation est perçu en cas de transfert entre vifs à titre onéreux de la propriété d'un immeuble ou d'une part d'immeuble situé dans le canton."
+        },
+        {
+          "absatz": "2",
+          "text": "Est également considérée comme un transfert immobilier soumis au droit de mutation la cession du droit d'acquérir un immeuble ou une part d'immeuble situé dans le canton. Il en va de même de la renonciation à ce droit, lorsqu'elle a fait l'objet d'une contre-prestation en faveur du renonçant."
+        },
+        {
+          "absatz": "3",
+          "text": "Le droit de mutation est perçu en outre sur les actes suivants, lorsqu'ils interviennent à titre onéreux:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en cas de constitution, de transfert ou d'extinction d'un droit réel restreint (droit de superficie, servitude, usufruit, droit d'habitation, charge foncière, droit à une source, etc.), à l'exception du gage immobilier;"
+            },
+            {
+              "marke": "b",
+              "text": "s'agissant d'un immeuble en propriété commune, en cas de changement dans la composition des propriétaires ou de modification dans la répartition de leurs quotes-parts;"
+            },
+            {
+              "marke": "c",
+              "text": "en cas de partage d'un immeuble en propriété commune, sur le montant de la part attribuée aux copartageants qui excède la quote-part de chacun d'eux dans la propriété de l'immeuble;"
+            },
+            {
+              "marke": "d",
+              "text": "lorsque le propriétaire d'un fonds concède à un tiers le droit d'en exploiter la substance (carrière, gravière, tourbière et fonds semblables)."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "fa580ee2c187903ec8ea329a68e792bac6179e34158ae96dfc190291c3901ee3"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_3",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le droit de mutation n'est pas perçu :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sur les transferts immobiliers à la Confédération et aux établissements de droit public fédéral, dans les limites fixées par la législation fédérale ; abis. sur les transferts immobiliers à l'Etat de Vaud, aux communes, aux associations de communes, aux fédérations de communes et aux agglomérations vaudoises ;"
+            },
+            {
+              "marke": "b",
+              "text": "sur les transferts immobiliers aux personnes morales de droit public cantonal, pour les immeubles directement affectés à des services publics improductifs ; bbis. sur les transferts immobiliers aux entreprises de transport et d'infrastructure au sens de l'article 90, alinéa 2 de la loi du 4 juillet 2000 sur les impôts directs cantonaux, pour les immeubles acquis en vue de faire durablement partie de l'exploitation principale"
+            },
+            {
+              "marke": "c",
+              "text": "sur les transferts immobiliers aux Eglises reconnues de droit public (art. 170, al. 1 Cst-VD ), aux paroisses et aux personnes juridiques à but non lucratif qui, à des fins désintéressées, aident les Eglises dans l'accomplissement de leurs tâches, aux communautés religieuses reconnues d'intérêt public (art. 171 Cst-VD), à des institutions ayant leur siège dans le canton qui se vouent, d'une manière désintéressée, à la bienfaisance, à l'éducation, à l'instruction ou à d'autres buts de pure utilité publique, ou à des entreprises d'intérêt public à caractère improductif, pour les immeubles directement affectés au but poursuivi ; s'agissant d'immeubles de placement, le droit peut, selon les circonstances, être réduit ou supprimé ;"
+            },
+            {
+              "marke": "d",
+              "text": "sur les échanges de parcelles qui s'effectuent en exécution de la législation relative à la police des constructions , aux améliorations foncières , ainsi que sur les autres échanges de terrains non bâtis réalisés dans un but analogue ; la soulte éventuelle est toutefois imposée ;"
+            },
+            {
+              "marke": "e",
+              "text": "en cas de constitution d'un droit réel restreint selon l'article 612a CCS , ainsi que sur le partage d'immeubles en propriété commune et sur les cessions entre indivis de parts d'immeubles, lorsque les immeubles ont été acquis par succession et donation ; la plus-value réalisée depuis l'acquisition est toutefois imposée, sous réserve de la disposition de l'article 2, alinéa 3, lettre c, si son application est plus favorable au contribuable ;"
+            },
+            {
+              "marke": "f",
+              "text": "sur les transferts immobiliers entre époux et entre partenaires enregistrés ou entre ex-époux et entre ex-partenaires enregistrés et résultant des effets accessoires du divorce ou de la séparation ; fbis. en cas de constitution d'un droit réel restreint selon les articles 219 et 244 CCS, ainsi que sur les transferts d'immeubles en faveur du conjoint survivant en paiement de la part au bénéfice qui lui revient à la liquidation du régimematrimonial, et cela jusqu'à concurrence du montant de cette part. Il en va de mêmepour l'un des partenaires enregistrés au partage ensuite du décès de l'autre, en cas de convention sur les biens (art 25 LPart) fter. sur les transferts d'immeubles en faveur du conjoint survivant en paiement de la contribution extraordinaire de l'article 165 CCS, et cela jusqu'à concurrence de son montant net non encore prescrit"
+            },
+            {
+              "marke": "g",
+              "text": "..."
+            },
+            {
+              "marke": "h",
+              "text": "en cas de donation immobilière pour les dettes en relation directe avec l'immeuble qui sont reprises par le donataire. Font partie des dettes en relation directe avec l'immeuble celles garanties par un gage immobilier, sans égard à leur date de constitution ;"
+            },
+            {
+              "marke": "i",
+              "text": "sur les transferts d'immeubles lors de restructurations au sens des articles 22, alinéas 1 et 3 et 97, alinéas 1 et 3 de la loi du 4 juillet 2000 sur les impôts directs cantonaux. Le droit de mutation est cependant perçu en cas de rappel d'impôt au sens des articles 22, alinéa 2 et 97, alinéa 2 de la loi du 4 juillet 2000 sur les impôts directes cantonaux ."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "a00696688c108cf95dc9347867363bdd9d0c5dca97b95a49172767dd7f0f8739"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_4",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Contribuables"
+        },
+        {
+          "absatz": "1",
+          "text": "Les parties à l'acte imposable sont solidairement responsables du paiement du droit de mutation."
+        },
+        {
+          "absatz": "2",
+          "text": "Sauf convention contraire, le droit de mutation est dû :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "par l'acquéreur de la propriété d'un immeuble ou d'une part d'immeuble ;"
+            },
+            {
+              "marke": "b",
+              "text": "par la personne au profit de laquelle une servitude, un autre droit réel restreint ou un droit d'exploiter la substance d'un fonds est constitué, transféré ou abandonné ; solidaire prévue à l'alinéa premier, ait cependant dû acquitter le droit, il est subrogé aux droits conférés à l'Etat et à la ou les communes par l'hypothèque légale (art. 62)."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "0162683eb4c64c8c47585fd18cdf7d9c1ce96c2926536db83272f19dff5c8917"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_5",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsqu'un associé d'une société de personnes transfère à celle-ci un immeuble dont il est propriétaire, le droit est dû par ses coassociés en proportion de leur part aux actifs sociaux. Pour le calcul du droit de mutation, les associés sont présumés avoir des parts égales, sauf preuve du contraire."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "a8c58d92929a0e310b927752cd6b2be7445541ea8235a71e8f01304717a0cee1"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_6",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bases de calcul",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en général Le droit de mutation se calcule sur la valeur de l'immeuble y compris les accessoires (art. 644 CCS) , ou sur celle du droit constitué, transféré ou éteint."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Les parties ont l'obligation d'indiquer dans l'acte le prix réellement convenu; celui-ci est présumé représenter la valeur de l'immeuble ou du droit."
+        },
+        {
+          "absatz": "2bis",
+          "text": "La création, le transfert ou l'extinction d'un droit de superficie est soumis au droit de mutation sur toutes les prestations convenues ; la redevance périodique capitalisée n'est cependant imposée que lors de la constitution du droit."
+        },
+        {
+          "absatz": "3",
+          "text": "Les prestations accessoires mises à la charge de l'acquéreur s'ajoutent au prix d'achat, sauf si elles ont déjà donné lieu à la perception d'un droit de mutation."
+        },
+        {
+          "absatz": "4",
+          "text": "Au cas où un immeuble est vendu en même temps que le commerce ou l'industrie qui y est exploité, le contrat de vente doit porter à la fois sur l'immeuble, le mobilier de l'entreprise et les valeurs immatérielles de celle-ci. L'ensemble de ces éléments est soumis au droit sans déduction."
+        },
+        {
+          "absatz": "5",
+          "text": "Si la valeur de l'immeuble ou du droit n'est pas déterminée, ou si le prix convenu paraît inférieur à la valeur réelle, l'autorité de taxation l'apprécie sur la base des données qu'elle peut réunir."
+        },
+        {
+          "absatz": "6",
+          "text": "Les dispositions qui précèdent s'appliquent, par analogie, en cas d'acquisition d'un immeuble ou d'une part d'immeuble aux enchères publiques."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "1385d6851410b2f884c6f7a0b4a483c45d4ce9fe13dab5beacff0d6962b2eece"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_7",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "b",
+              "text": "donation mixte"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "En cas de transfert d'un immeuble par donation mixte (art. 15), le droit de mutation se calcule sur la valeur des prestations échangées à titre onéreux."
+        },
+        {
+          "absatz": "2",
+          "text": "Le droit est réduit de moitié sur le montant correspondant aux dettes en relation directe avec l'immeuble qui sont reprises par le donataire."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "f83b75c37b06b19f182786a33c200e3c19d3e36237d6a067f4b53a7ea73f40a9"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_8",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "c",
+              "text": "échange, cession ou renonciation"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "En cas d'échange d'immeubles, un droit réduit de moitié est dû par chacune des parties sur la valeur égale des immeubles, un droit entier étant prélevé sur la soulte éventuelle."
+        },
+        {
+          "absatz": "2",
+          "text": "Le droit de mutation afférent à la cession du droit d'acquérir un immeuble ou à la renonciation à ce droit (art. 2, al. 2) se calcule sur la moitié du prix convenu entre le vendeur et le cédant ou le renonçant."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b3b87f12d8fc6a06eb63101573e269e0bd03d1d18e715cdef8a691ef32b06d40"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_9",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "d",
+              "text": "prestations périodiques"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "Les rentes, pensions, usufruits ou autres droits à des prestations périodiques qui interviennent dans le calcul du droit de mutation à titre de prix ou d'objet sont estimés pour leur valeur capitalisée selon un barème adapté aux normes usuelles des compagnies d'assurance. Ce barème est arrêté par le Conseil d'Etat ."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "f25832a32c066e0fcb73122ebfee34e4f958f681f30799336d6187acba57644c"
+    },
     {
       "id": "kanton/VD/vd-106879/art_10",
       "ebene": "kanton",
@@ -20,9 +361,2503 @@
       ],
       "stand": "",
       "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
       "sha": "1e5fcc5e69a574863001bf19b19dcd84c8ade1526271cf108a5f1530dff96372"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_11",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Objet de l'impôt sur les successions"
+        },
+        {
+          "absatz": "1",
+          "text": "L'impôt est perçu sur l'acquisition par succession:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "d'immeubles ou de parts d'immeubles situés dans le canton, de droits réels grevant des immeubles situés dans le canton, quel que soit le lieu d'ouverture de la succession;"
+            },
+            {
+              "marke": "b",
+              "text": "de tous biens mobiliers compris dans une succession ouverte dans le canton, où qu'ils soient situés;"
+            },
+            {
+              "marke": "c",
+              "text": "de tous biens mobiliers compris dans une succession ouverte hors de Suisse, lorsqu'une convention internationale en matière de double imposition attribue le pouvoir d'imposer à la Suisse."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "",
+          "items": [
+            {
+              "marke": "c",
+              "text": "les prestations versées ensuite de décès provenant d'assurances de capitaux privées susceptibles de rachat ainsi que d'assurances de rentes viagères relevant de la prévoyance individuelle libre."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "e6d5310d8f4ce56eebd984fc196c626097ec1b79d3bada1ac5a281e88ca05cf6"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_12",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Objet de l'impôt sur les donations"
+        },
+        {
+          "absatz": "1",
+          "text": "L'impôt sur les donations est perçu sur l'acquisition entre vifs et à titre gratuit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "d'immeubles ou de parts d'immeubles situés dans le canton, de droits réels grevant des immeubles situés dans le canton, quel que soit le domicile du donateur ou du donataire;"
+            },
+            {
+              "marke": "b",
+              "text": "de tous les biens mobiliers, pour autant que le donateur soit domicilié dans le canton."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "L'impôt est également perçu:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en cas d'affectation de biens à la création d'une fondation, par acte entre vifs;"
+            },
+            {
+              "marke": "b",
+              "text": "en cas d'avancement d'hoirie, qu'il soit sujet au rapport ou non;"
+            },
+            {
+              "marke": "c",
+              "text": "en cas de conclusion d'un pacte successoral de renonciation à titre onéreux (art. 495 CCS) pour les prestations qui en résultent;"
+            },
+            {
+              "marke": "d",
+              "text": "en cas de remise de dette en faveur d'un débiteur solvable."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "1b3c2e805a00609efbfafdadc2c30d01f7ae530af1ddeebed342b9ef9abc5b01"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_13",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_14",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_15",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Donation mixte"
+        },
+        {
+          "absatz": "1",
+          "text": "Les actes juridiques dans lesquels la prestation de l'une des parties est en disproportion manifeste avec celle de l'autre partie sont assimilés à une donation pour la différence de valeur entre les deux prestations, calculée selon les règles d'évaluation de la présente loi, à moins que les parties ne démontrent qu'elles n'ont pas entendu faire une libéralité."
+        },
+        {
+          "absatz": "2",
+          "text": "Il n'y a pas donation mixte au sens de l'alinéa 1er lorsque les seules prestations à titre onéreux consistent en la reprise par le donataire des dettes en relation directe avec l'immeuble donné."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "25fcb7c36d82c5026bf732e1f5360fef415a5b206a0a2a21db9e938eee540bd3"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_16",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Prestations exonérées"
+        },
+        {
+          "absatz": "1",
+          "text": "L'impôt sur les donations n'est pas perçu :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "sur les prestations à des parents en ligne directe et à des frères et soeurs, nécessaires à l'éducation ou à la formation professionnelle du bénéficiaire, ou effectuées en vertu d'un devoir d'assistance ;"
+            },
+            {
+              "marke": "b",
+              "text": "sur les prestations à des parents en ligne directe et à des frères et soeurs, effectuées à titre de dot ou de paiement de frais d'établissement jusqu'à concurrence de 10'000 francs ;"
+            },
+            {
+              "marke": "c",
+              "text": "sur les donations inférieures à 10'000 francs par bénéficiaire dans le courant de la même année; cbis. sur les donations inférieures à 50'000 francs par enfant dans la ligne directe descendante dans le courant de la même année;"
+            },
+            {
+              "marke": "d",
+              "text": "sur les indemnités prévues aux articles 334 ss CCS et sur les prestations et libéralités d'un employeur à ses employés ensuite d'un rapport de service, lorsqu'elles sont imposables comme revenu;"
+            },
+            {
+              "marke": "e",
+              "text": "sur les biens faisant retour au donateur, lorsque la clause de retour a été stipulée par le donateur en cas de prédécès du donataire (art. 247 CO) ."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "97621654c1e3e01aeaa50ac2046cabdf21da0bdabda185125bde825eafedf831"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_17",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'affectation irrévocable de biens par un employeur à la création d'une institution de prévoyance en faveur de son personnel, constituée en personne morale, ainsi que les prestations subséquentes de cet employeur à l'institution, sont exonérées de l'impôt prévu aux articles 11, alinéa 2, lettre a, et 12, alinéa 2, lettre a."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "1119467c653d38d4c18d29f6faea8c135dd9f5e29d759ce4f3b7fe952d7847d4"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_18",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Contribuables"
+        },
+        {
+          "absatz": "1",
+          "text": "L'impôt sur les successions est dû par les héritiers ou par les bénéficiaires des prestations désignées à l'article 11, alinéa 2, qui en répondent solidairement entre eux. Les héritiers sont tenus de payer l'impôt sur les legs, sauf à eux de se le faire restituer par les légataires."
+        },
+        {
+          "absatz": "2",
+          "text": "L'impôt sur les donations est dû par le donataire."
+        },
+        {
+          "absatz": "3",
+          "text": "Le légataire et le donateur sont solidairement responsables pour le paiement de l'impôt dû."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "af383aa4b64665c9113e52013e20e18caeff725c00b1916cf3bff17e06270639"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_19",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'impôt sur les biens grevés d'usufruit, calculé conformément à l'article 32, est dû par le nu-propriétaire solidairement avec l'usufruitier; sauf convention contraire entre le nu-propriétaire et l'usufruitier, il est prélevé sur la substance des biens"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "a7679d8640b83906545d4e810b41c4f47313fc0cd90ff33afc6ea12b2014dec8"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_20",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Exemptions Sont exemptés de l'impôt sur les successions et sur les donations :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "la Confédération et les établissements de droit public fédéral, dans les limites fixées par la législation fédérale ;"
+            },
+            {
+              "marke": "b",
+              "text": "l'Etat de Vaud et les communes vaudoises ;"
+            },
+            {
+              "marke": "c",
+              "text": "les personnes morales de droit public cantonal pour les biens qui sont affectés à des services publics ; cbis. les Eglises reconnues de droit public (art. 170, al. 1 Cst-VD ), les paroisses et les personnes juridiques à but non lucratif qui, à des fins désintéressées, aident les Eglises dans l'accomplissement de leurs tâches, et les communautés religieuses reconnues d'intérêt public (art. 171Cst-VD) ;"
+            },
+            {
+              "marke": "d",
+              "text": "les institutions ayant leur siège dans le canton qui se vouent, d'une manière désintéressée, à la bienfaisance, à l'éducation, à l'instruction ou à d'autres buts de pure utilité publique ;"
+            },
+            {
+              "marke": "e",
+              "text": "le conjoint ou le partenaire enregistré du défunt ou du donateur."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Les autres cantons suisses, leurs communes ainsi que les personnes morales domiciliées dans ces cantons et qui ont un but de pure utilité publique, peuvent être exonérés de l'impôt sur les successions et sur les donations à condition que ces cantons garantissent la réciprocité. Le Conseil d'Etat est compétent pour conclure des accords de réciprocité ."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "cc6ff8113b87bb769626106746397e5a8097fb25eade879f9cb6d04a4f999ad1"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_21",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Evaluation des biens, principe"
+        },
+        {
+          "absatz": "1",
+          "text": "Pour le calcul de l'impôt sur les successions et sur les donations, les biens sont estimés, sauf disposition contraire de la présente loi, à leur valeur vénale:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en cas de succession, au moment où elle s'ouvre;"
+            },
+            {
+              "marke": "b",
+              "text": "en cas de donation, lorsque la libéralité devient effective;"
+            },
+            {
+              "marke": "c",
+              "text": "en cas de libéralité soumise à condition suspensive, au moment où la condition se réalise."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "cf26afa519be851ec29a7de942ef7b2f24c901453aaccfbd06af51e14f0469f9"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_22",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'estimation du mobilier de ménage, des machines, du matériel et du mobilier d'exploitation est présumée correspondre à 50 % de leur valeur d'assurance contre l'incendie."
+        },
+        {
+          "absatz": "2",
+          "text": "Les héritiers ou donataires et l'autorité de taxation peuvent demander une estimation de ces biens à leur valeur vénale."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "f94de86486d37ada7765b0ca194f2ac97ef55990df9d4b794217808f149632a2"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_23",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Immeubles",
+          "items": [
+            {
+              "marke": "a",
+              "text": "en général"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "Les immeubles sont comptés pour 80 % du montant de leur estimation fiscale."
+        },
+        {
+          "absatz": "2",
+          "text": "L'autorité fiscale peut demander la révision de cette estimation ; dans cette éventualité, c'est le 80% du montant de la nouvelle estimation qui est déterminant pour le calcul de l'impôt."
+        },
+        {
+          "absatz": "3",
+          "text": "Les parties disposent du même droit jusqu'à l'entrée en force de la taxation."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "f988867ef6a067de0dcf66bb36d169d244992036efb7d65287d2060e6f1644d1"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_24",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "b",
+              "text": "agricoles"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "Si, lors du partage, un immeuble rural est attribué pour une valeur inférieure à 80 % de l'estimation fiscale (art. 617 et 620 CCS) , l'estimation faite en vertu de l'article 23 est ramenée à la valeur d'attribution et l'impôt restitué pour la différence."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque, dans les quinze ans après l'attribution, l'héritier aliène l'immeuble pour un prix supérieur à celui pour lequel il l'a obtenu, un impôt complémentaire lui est réclamé sur la différence entre la valeur d'attribution lors du partage et 80 % de l'estimation fiscale déterminée conformément à l'article 23."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "4a534bb1f6179b561240eb088011e4b7f987f05476c7684c71d25122d75de1e8"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_25",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_25_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "25_a",
+      "artikelLabel": "Art. 25a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Assurances"
+        },
+        {
+          "absatz": "1",
+          "text": "Les prestations d'assurance imposables en vertu de l'article 11, alinéa 2, lettre c), sont estimées, s'agissant des assurances de capitaux privées susceptibles de rachat, au montant de la somme acquise par le bénéficiaire et, s'agissant des contrats d'assurance de rentes viagères, à 60% de la somme acquise par le bénéficiaire ou à 60% de la valeur capitalisée des rentes obtenues, calculées selon le barème prévu à l'article 9."
+        },
+        {
+          "absatz": "2",
+          "text": "Les assurances dévolues gratuitement, qui ne sont pas échues au décès du défunt ou lors de leur donation, sont estimées à leur valeur de rachat."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "79f32da2380a0b6a9d18d5bdcda1e77f201c475e6ac5e41a989d33a870312184"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_26",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Prestations périodiques viagères"
+        },
+        {
+          "absatz": "1",
+          "text": "Les rentes, pensions et autres prestations périodiques viagères, créées par donation entre vifs ou par disposition pour cause de mort, sont estimées à leur valeur capitalisée, calculée selon le barème prévu à l'article 9."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "8ae12abb846bae344b6a84442c0bb6c809777fe5d54372a7fc87835b3d9c4c76"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_27",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Déductions"
+        },
+        {
+          "absatz": "1",
+          "text": "Lorsque les biens dévolus par donation ou succession sont grevés d'une charge (usufruit, rente, droit d'habitation, etc.), l'estimation en est faite sans déduction de la valeur de cette charge, sauf si la constitution de celle-ci donne ou a donné lieu, directement ou indirectement, à perception d'un droit de mutation ou d'un impôt sur les successions ou les donations."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "d64dfdbe07b474653d5eaf44b8317c767564d97355f09d8edf86235c6d9cf712"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_28",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "b",
+              "text": "en cas de succession"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "Sont déduits de l'actif brut de la succession :",
+          "items": [
+            {
+              "marke": "a",
+              "text": "les dettes dont le défunt répondait personnellement à l'ouverture de sa succession ;"
+            },
+            {
+              "marke": "b",
+              "text": "les frais funéraires usuels, les frais de l'office du juge de paix, les frais relatifs à l'établissement de l'inventaire au sens de l'arrêté du 19 juillet 1963 d'application de la loi du 27 février 1963 concernant le droit de mutation sur les transferts immobiliers et l'impôt sur les successions et donations , l'entretien pendant un mois des héritiers qui faisaient ménage commun avec le défunt (art. 606 CCS ), les honoraires de l'exécuteur testamentaire (art. 517, al. 3 CCS), ainsi que les frais engagés par la succession pour faire valoir ses droits ;"
+            },
+            {
+              "marke": "c",
+              "text": "les indemnités prévues aux articles 334 ss CCS et les prestations et libéralités d'un employeur à ses employés ensuite d'un rapport de service, lorsqu'elles sont imposables comme revenu;"
+            },
+            {
+              "marke": "d",
+              "text": "les indemnités prélevées par les enfants du défunt en application de l'article 631, alinéa 2 CCS, à concurrence d'un montant équitable qui ne peut dépasser toutefois 10'000 francs pour les enfants qui ne sont pas élevés au moment du décès et 20'000 francs pour ceux qui sont infirmes ; dbis. ..."
+            },
+            {
+              "marke": "e",
+              "text": "l'impôt étranger sur les successions en cas de double imposition effective."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "2ed057816d70656f7a238eecdbf7b70dda8e7be2ce582ce7672eeb13da30d4fa"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_29",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "c",
+              "text": "en cas de donation"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "Les dettes du donateur mises à la charge du donataire par l'acte de donation sont déduites de la valeur, au sens de la présente loi, des biens donnés."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "68681dbc2a6ba61cc2010853f5d6c8847398ee44a8f57d83589f4e0a02c3d949"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_29_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "29_a",
+      "artikelLabel": "Art. 29a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "d",
+              "text": "en cas de succession et donation d'entreprises"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "Est déduit de la valeur de la libéralité le 50 pour cent de la fortune commerciale nette pour les transferts par succession et donation, entre descendants en ligne directe, d'entreprises de personnes situées dans le canton. L'héritier ou le donataire doit occuper une fonction dirigeante au sein de l'entreprise et en détenir au minimum 33%."
+        },
+        {
+          "absatz": "2",
+          "text": "L'abattement de 50% au sens de l'alinéa 1 est également accordé pour les transferts d'une participation dans une société de capitaux ou une société coopérative, si cette société a une exploitation commerciale et le siège dans le canton et si l'héritier ou le donataire occupe une fonction dirigeante en tant qu'employé de l'entreprise et qu'il est domicilié dans le Canton de Vaud au regard du droit fiscal."
+        },
+        {
+          "absatz": "3",
+          "text": "La même réduction est consentie pour les participations à une holding. L'abattement ne porte toutefois que sur la valeur de l'entreprise détenue par la société holding, aux conditions prévues à l'alinéa 2."
+        },
+        {
+          "absatz": "4",
+          "text": "Il y a participation lorsque les droits de participation représentent au moins 40 pour cent du capital-actions ou du capital social libéré ou que l'héritier ou le donataire dispose d'au moins 40 pour cent des droits de vote dans la société."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "bbd245ab6775e19d0adb6633377c15201e8e8c807bc55baee98764198f928f7b"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_29_b",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "29_b",
+      "artikelLabel": "Art. 29b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Suppression de la réduction"
+        },
+        {
+          "absatz": "1",
+          "text": "La réduction est supprimée si, dans les cinq ans suivant le transfert imposé, les conditions prévues à l'article 29a, alinéa 1 ne sont plus remplies. Dans ce cas, un impôt complémentaire est perçu."
+        },
+        {
+          "absatz": "2",
+          "text": "La réduction au sens de l'article 29a, alinéas 2 et 3 est supprimée si la participation est aliénée à titre onéreux dans les cinq ans suivant le transfert imposé, si elle est cédée à une personne qui ne remplit pas les conditions donnant droit à la réduction, si la hauteur de la participation passe en-dessous de 40 pour cent, si l'héritier ou le donataire cesse d'occuper une fonction dirigeante dans la société de capitaux ou la société coopérative, ou qu'il transfère son domicile hors du canton. Dans ce cas, un impôt complémentaire est perçu."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "f3a49f35948fc4cfc0410f3a656d786fc3c5f6d7ef705072e5990985510813ac"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_30",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Calcul de l'impôt"
+        },
+        {
+          "absatz": "1",
+          "text": "L'impôt se calcule d'après la valeur nette des biens dévolus à chaque souche héréditaire dans la première parentèle et à chaque héritier, légataire ou donataire dans les autres cas."
+        },
+        {
+          "absatz": "2",
+          "text": "Les legs en faveur d'un héritier s'ajoutent à la part de cet héritier pour le calcul de l'impôt."
+        },
+        {
+          "absatz": "3",
+          "text": "Lorsque le même donateur a fait deux ou plusieurs donations successives au même donataire, l'impôt sur les donations postérieures se calcule en tenant compte des donations antérieures, y compris les donations exonérées de l'impôt conformément aux dispositions de l'article 16, lettres a et b, pour fixer le taux d'imposition. le calcul du taux d'imposition sur la succession ou le legs et, le cas échéant, pour le dégrèvement."
+        },
+        {
+          "absatz": "5",
+          "text": "Il est également tenu compte, pour la détermination du taux d'imposition et du dégrèvement afférents à la part d'un héritier, des montants déduits de l'actif brut de la succession, en application de l'article 28, lettre d, que cet héritier a prélevés à titre d'indemnité."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "d3a2756717d69012b1bba9bbb03a279e34148f9e3ccc168cc9a1c731742ebe89"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_31",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Montant exonéré"
+        },
+        {
+          "absatz": "1",
+          "text": "Pour le calcul de l'impôt successoral, il est déduit 250'000 francs du montant net de la part revenant à chaque souche héréditaire de la première parentèle, lorsque cette part n'atteint pas 251'000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Si la part atteint 251'000 francs, la déduction est réduite de 1/250e par tranche de mille francs à partir de 251'000 francs."
+        },
+        {
+          "absatz": "3",
+          "text": "Il est tenu compte des dégrèvements prévus aux alinéas 1 et 2 dans un barème spécial."
+        },
+        {
+          "absatz": "4",
+          "text": "Les parts revenant aux autres héritiers et aux légataires sont exonérées si elles sont inférieures à 10'000 francs par bénéficiaire."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "01a451767059795e1a719c887eccf96846ee63ac5d347d1aeda2873b50f9d8bc"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_32",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Usufruit"
+        },
+        {
+          "absatz": "1",
+          "text": "En cas d'usufruit, l'impôt est perçu, d'une part, sur la valeur capitalisée de l'usufruit - au taux correspondant au degré de parenté entre le défunt ou le donateur et l'usufruitier - et, d'autre part, sur la différence entre le montant du capital grevé et ladite valeur capitalisée, au taux correspondant au degré de parenté entre le défunt ou le donateur et le nu-propriétaire."
+        },
+        {
+          "absatz": "2",
+          "text": "Il n'est pas prélevé d'impôt lors de l'extinction de l'usufruit."
+        },
+        {
+          "absatz": "3",
+          "text": "La détermination de la valeur capitalisée de l'usufruit s'opère d'après le barème prévu à l'article 9. Le Conseil d'Etat fixera, en outre, des règles permettant de faciliter le calcul du rendement moyen supputé des biens grevés ."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "7777efd03405366ea673d612e91b3f937183a238a06870389faf301a310f1bbb"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_33",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Substitution fidéicommissaire ordinaire"
+        },
+        {
+          "absatz": "1",
+          "text": "En cas de substitution fidéicommissaire, le montant net des biens dévolus au grevé est frappé de l'impôt le plus élevé calculé d'après le degré de parenté entre le disposant, d'une part, le grevé ou l'appelé, d'autre part."
+        },
+        {
+          "absatz": "2",
+          "text": "Si la substitution ne s'ouvre pas, il est, le cas échéant, restitué avec intérêt un montant correspondant à la différence entre l'impôt payé et l'impôt calculé d'après le degré de parenté entre le disposant et le grevé. Le taux d'intérêt est fixé par le Conseil d'Etat ."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "07c7daa2579b86231fbc21a832bc8e50bed1ee2f2f9c36c96dc839b7408751c6"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_33_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "33_a",
+      "artikelLabel": "Art. 33a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Substitution fidéicommissaire sur les biens résiduels"
+        },
+        {
+          "absatz": "1",
+          "text": "La substitution fidéicommissaire sur les biens résiduels est assimilée à deux successions consécutives."
+        },
+        {
+          "absatz": "2",
+          "text": "En dérogation aux règles ordinaires, la substitution s'ouvre au for du décès du disposant et le taux de l'impôt dû par l'appelé se détermine selon son degré de parenté avec le disposant."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "9e9b5da101c63e33b6a7f935bd2c9bd57b2c360a3daf1d2b6b71fc69b2aeff4a"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_34",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Montant de l'impôt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "généralités"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "L'impôt sur les successions ou sur les donations est perçu d'après les barèmes annexés à la présente loi."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsqu'une partie seulement de la succession ou de la donation est imposable dans le canton, l'impôt se calcule au taux applicable à la valeur nette totale des biens dévolus.",
+          "items": [
+            {
+              "marke": "b",
+              "text": "alliés, enfant naturel, adopté"
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "3f90c4216d0b94e69c7593157a83c74774870957214c91174e9841ce85a4d591"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_35",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour le calcul de l'impôt, les alliés du défunt ou du donateur qui sont ou étaient également parents de son conjoint ou de son partenaire enregistré - hormis les descendants de ces derniers - sont assimilés à des parents. Les autres alliés, à l'exception du conjoint ou du partenaire enregistré, du gendre et de la bru, sont considérés comme non-parents."
+        },
+        {
+          "absatz": "2",
+          "text": "L'enfant naturel dont la filiation est établie conformément au droit civil est assimilé à l'enfant légitime et réciproquement l'héritier, le légataire ou le donataire dudit enfant naturel est assimilé à l'héritier, au légataire ou au donataire de l'enfant légitime."
+        },
+        {
+          "absatz": "3",
+          "text": "Les dispositions de l'alinéa 2 s'appliquent également pour l'adopté et ses descendants, ainsi que pour l'adoptant et ses ascendants."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "be596208a5f47b7e64221f1f930a586f7df1cbcaec07074b8ec099e148a3f40c"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_36",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "c",
+              "text": "réduction pour les étrangers"
+            }
+          ]
+        },
+        {
+          "absatz": "1",
+          "text": "L'impôt sur les successions d'étrangers ouvertes dans le canton est réduit de moitié."
+        },
+        {
+          "absatz": "2",
+          "text": "La même réduction est accordée pour les donations faites par des étrangers domiciliés dans le canton."
+        },
+        {
+          "absatz": "3",
+          "text": "La présente disposition vise les étrangers à la Suisse qui n'y exercent et n'y ont jamais exercé d'activité lucrative, et pour la part de la masse successorale qui est entièrement imposable dans le canton de Vaud, sans participation étrangère due à l'application d'une convention de double imposition."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "658515a6725c483efebf151470142aea8277f6ab52bedbc5c8c0834b7309a7a9"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_37",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les notaires, les préposés aux poursuites et faillites, les greffiers des tribunaux et le juge de paix, ainsi que les préposés aux impôts remettent au conservateur du registre foncier de leur district, dans les dix premiers jours de chaque mois, en deux exemplaires, la désignation de tous actes, ordonnances et jugements qu'ils auront instrumentés ou enregistrés dans le mois précédent et se rapportant à une opération imposable en vertu de la présente loi."
+        },
+        {
+          "absatz": "2",
+          "text": "Le conservateur vérifie et complète, s'il y a lieu, les désignations puis en transmet, pour le 20 de chaque mois, un exemplaire à l'Administration cantonale des impôts et un exemplaire au préposé aux impôts de son district."
+        },
+        {
+          "absatz": "3",
+          "text": "En outre, le conservateur désigne à l'Administration cantonale des impôts et au préposé aux impôts de son district les transferts d'immeubles provenant de successions ouvertes hors du canton ainsi que les actes sous seing privé se rapportant à une opération imposable en vertu de la présente loi."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "7e62ee5d1c63ad534e70c66305a35defa6eb5baf981c4488336e19837e714681"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_38",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les actes sous seing privé qui entraînent la perception d'un droit de mutation doivent être déclarés par les parties au préposé aux impôts du district de situation de l'immeuble dans les trente jours dès la date de l'acte."
+        },
+        {
+          "absatz": "2",
+          "text": "Les donations imposables qui ne font pas l'objet d'un acte authentique doivent être déclarées par les parties à l'Administration cantonale des impôts dans les trente jours qui suivent l'entrée en possession des biens par le donataire ou, au plus tard, au moment du dépôt de la prochaine déclaration d'impôt."
+        },
+        {
+          "absatz": "3",
+          "text": "Le préposé désigne les actes mentionnés à l'alinéa 1 et les donations imposables dont il a connaissance à l'Administration cantonale des impôts."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "99ed0587dcd1f02ed2cdd13d7296acc5e95d4edfb9f72a5d516b627ac6b973cb"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_39",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le Conseil d'Etat arrête les dispositions d'application relatives à la désignation des actes de transfert et opérations qui leur sont assimilées ."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b8afceb1cefb9c24d4e2810f738a76c9efd10a6f676490d3022bef23c997de26"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_40",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Annonce du décès et mesures conservatoires"
+        },
+        {
+          "absatz": "1",
+          "text": "L'officier de l'état civil informe immédiatement le préposé aux impôts et le juge de paix compétents, ainsi que l'Administration cantonale des impôts, de tout décès survenu dans son arrondissement."
+        },
+        {
+          "absatz": "2",
+          "text": "Un représentant de l'Administration cantonale des impôts prend contact avec le juge de paix qui le renseigne sur les constatations faites et sur les mesures conservatoires prises en application de la loi civile ."
+        },
+        {
+          "absatz": "3",
+          "text": "Un représentant de l'Administration cantonale des impôts peut assister aux séances de mesures conservatoires."
+        },
+        {
+          "absatz": "4",
+          "text": "L'Administration cantonale des impôts peut, de son côté, requérir du juge de paix des mesures conservatoires dans les cas où elles ne sont pas prescrites par la loi civile, notamment le report de la délivrance aux héritiers des pièces justificatives de leur qualité, ou l'interdiction de disposer des avoirs de la succession (art. 45), lorsque ces mesures se justifient pour l'application de la présente loi. Ces mesures peuvent être maintenues jusqu'à la clôture de l'inventaire prévu à l'article 41."
+        },
+        {
+          "absatz": "5",
+          "text": "Les mesures prévues à l'alinéa 4 peuvent également être requises par le notaire chargé de l'inventaire. Celui-ci peut toutefois se dessaisir du dossier. L'article 41, alinéa 4 est alors applicable."
+        },
+        {
+          "absatz": "6",
+          "text": "Le juge de paix envoie d'office à l'Administration cantonale des impôts le testament et la liste des héritiers et légataires."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "f66e68673bdab333b904f02892b89f5ec59ed3caf56deebbf2782fb22e513373"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_41",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Inventaire"
+        },
+        {
+          "absatz": "1",
+          "text": "L'Administration cantonale des impôts établit un inventaire fiscal, sauf s'il s'agit d'une personne notoirement sans ressource ou si l'actif net est manifestement absorbé par les dégrèvements prévus à l'article 31."
+        },
+        {
+          "absatz": "2",
+          "text": "L'administration cantonale des impôts commet un notaire, avec mission de liquider le régime matrimonial sur le plan fiscal, de dresser l'inventaire des actifs et des passifs du défunt et de son conjoint, comprenant les dettes mentionnées à l'article 28 et les biens inventoriés qui sont revendiqués par le conjoint survivant, les héritiers, les parents du défunt ou des tiers. Les règles de la loi sur le notariat concernant la récusation sont applicables par analogie."
+        },
+        {
+          "absatz": "3",
+          "text": "L'Administration cantonale des impôts communique au notaire chargé de l'inventaire fiscal toutes les informations dont elle dispose et qui sont nécessaires à l'accomplissement de sa tâche."
+        },
+        {
+          "absatz": "4",
+          "text": "Lorsque le notaire est empêché dans l'accomplissement de son mandat, il en avise immédiatement l'Administration cantonale des impôts et lui transmet les renseignements déjà obtenus, sauf refus des héritiers. L'autorité applique les mesures prévues à l'article 60 et délie le notaire de ses obligations."
+        },
+        {
+          "absatz": "5",
+          "text": "Lorsque la loi civile prévoit un inventaire civil, celui-ci sert de base à l'établissement de l'inventaire fiscal."
+        },
+        {
+          "absatz": "7",
+          "text": "Dans les cas prévus aux alinéas 4 et 5, l'Administration cantonale des impôts peut établir elle-même l'inventaire fiscal."
+        },
+        {
+          "absatz": "8",
+          "text": "La forme de l'inventaire est régie par les règles du code de droit privé judiciaire vaudois."
+        },
+        {
+          "absatz": "9",
+          "text": "Un émolument est perçu auprès des héritiers pour couvrir les frais de l'inventaire."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "345c51b8fb9c9147302dbf53d5bf873c99ce7b10ced252d5636f039990c0dcde"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_42",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Objet de l'inventaire{6}{7}"
+        },
+        {
+          "absatz": "1",
+          "text": "L'inventaire comprend l'ensemble des biens du défunt et de son conjoint."
+        },
+        {
+          "absatz": "2",
+          "text": "L'inventaire comprend également les biens qui doivent être revendiqués auprès de tiers ainsi que les biens revendiqués par des tiers."
+        },
+        {
+          "absatz": "3",
+          "text": "Le notaire chargé de l'inventaire ou l'Administration cantonale des impôts procède à toutes investigations et recherches ; il prend toutes mesures utiles pour s'assurer de l'état véritable de la succession. Un expert peut être désigné ; l'assistance du juge de paix peut également être requise."
+        },
+        {
+          "absatz": "4",
+          "text": "L'Administration cantonale des impôts complète l'inventaire si elle apprend l'existence d'éléments nouveaux qui n'ont pas été annoncés ou dont les héritiers ont nié l'existence ou la valeur lorsque l'inventaire a été établi. L'article 41, alinéas 1 et 2 est applicable."
+        },
+        {
+          "absatz": "5",
+          "text": "Les biens sont évalués conformément aux dispositions de la présente loi."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "5942da662b117e474987aff9a3a0f32aa999a89a6ba4bf067405a5e095459692"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_43",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Obligations des héritiers et du notaire"
+        },
+        {
+          "absatz": "1",
+          "text": "Les héritiers, leurs représentants légaux et l'exécuteur testamentaire sont tenus de renseigner le notaire chargé de l'inventaire fiscal et l'Administration cantonale des impôts sur tous faits et circonstances utiles pour établir l'inventaire et, si elle le demande, d'ouvrir tous locaux et meubles et de produire tous livres, documents et pièces justificatives, quel qu'en soit le support."
+        },
+        {
+          "absatz": "2",
+          "text": "Si, malgré sommation du notaire chargé de l'inventaire fiscal ou de l'Administration cantonale des impôts, les héritiers, leurs représentants légaux et l'exécuteur testamentaire ne s'acquittent pas des obligations prévues au premier alinéa, l'article 72 est applicable. Le notaire peut se dessaisir de l'inventaire."
+        },
+        {
+          "absatz": "3",
+          "text": "Le notaire qui est définitivement empêché d'établir l'inventaire doit communiquer à l'Administration cantonale des impôts les informations qu'il a obtenues dans le cadre de son mandat, sauf refus des héritiers."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "d29c9e18fe54282b4abbe8ed10a3b35666d971ebd7255b2a16a73e4742d6c201"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_44",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Successions ouvertes hors du canton"
+        },
+        {
+          "absatz": "1",
+          "text": "L'héritier ou le légataire d'une succession ouverte hors du canton, auquel sont attribués des immeubles situés dans le canton, ou des biens mobiliers dans les cas prévus à l'article 11, alinéa 1, lettre c doit produire à l'Administration cantonale des impôts les titres et pièces justificatives de sa qualité."
+        },
+        {
+          "absatz": "2",
+          "text": "Les biens sont inventoriés conformément aux dispositions de la présente loi."
+        },
+        {
+          "absatz": "3",
+          "text": "Si les biens de la succession, imposables dans le canton, sont exclusivement des immeubles, l'héritier ou le légataire a la faculté, au lieu d'avoir recours à la procédure des alinéas 1 et 2, de demander à un notaire du district de situation des immeubles d'en requérir directement le transfert au registre foncier. Dans ce cas, le notaire désigne le transfert à l'autorité fiscale."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b5b6bfeb300aee8e5a0bf6071cf6753ddc44a7a0d57f7a29d3ed2e7ec548a3f0"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_45",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Défense de disposer des biens successoraux"
+        },
+        {
+          "absatz": "1",
+          "text": "Les héritiers, leurs représentants légaux et l'exécuteur testamentaire ainsi que les tiers qui avaient la garde ou l'administration de biens du défunt ne peuvent disposer de ces biens ni s'en dessaisir tant qu'ils n'ont pas été inventoriés. L'article 60 est réservé."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "158f92b4b28bff0eb8e70950dd2965455252e201340a11600e35158764d3d558"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_46",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Clôture de l'inventaire"
+        },
+        {
+          "absatz": "1",
+          "text": "La justice de paix avise sous pli recommandé les héritiers et l'Administration cantonale des impôts de la clôture de l'inventaire et joint à son avis un résumé récapitulatif de l'inventaire."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "327c85b50ddd6e7fa67e94cc4c3f5638b9acbed7dca8432c94db1b9e288a76d8"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_47",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_48",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Transfert de valeurs mobilières"
+        },
+        {
+          "absatz": "1",
+          "text": "Les notaires ne peuvent délivrer aucune attestation de transfert de valeurs mobilières résultant de successions ou en opérer et recevoir le partage entre les ayants droit qu'après s'être assurés que ces valeurs ont été portées à l'inventaire de la succession de laquelle résulte le transfert et avoir requis, le cas échéant, un inventaire complémentaire."
+        },
+        {
+          "absatz": "2",
+          "text": "La présente disposition s'applique également à la justice de paix dans la mesure où elle la concerne."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "160b70886f27067a85f087d60c6b70f900f34c673cfb8c22309d4478899ef819"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_48_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "48_a",
+      "artikelLabel": "Art. 48a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Comm. A :Voir arrêté du 01.06.2005 d’application de la loi du 27.02.1963 concernant le droit de mutation sur les transferts immobiliers et l’impôt sur les successions et donations ( RSV 648.11.1)"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "8d5b2e8bc2df78f233569c51a1e09908d3a2e6b442b5a065ce37f2e8ea69761e"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_49",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Taxation"
+        },
+        {
+          "absatz": "1",
+          "text": "L'autorité fiscale arrête le montant du droit de mutation et celui de l'impôt sur les successions et les donations."
+        },
+        {
+          "absatz": "2",
+          "text": "L'Administration cantonale des impôts notifie l'inventaire fiscal aux héritiers ou à leur représentant en même temps que la décision relative à l'impôt sur les successions."
+        },
+        {
+          "absatz": "3",
+          "text": "A cet effet, elle vérifie les actes, désignations ou déclarations et procède à toutes les investigations nécessaires."
+        },
+        {
+          "absatz": "4",
+          "text": "Elle notifie la taxation au contribuable sous forme d'un bordereau ou, s'il y a lieu, d'un avis de taxation motivé. Les dispositions générales de la loi sur les impôts directs cantonaux concernant les procédures de taxation et de réclamation sont applicables par analogie. Pour le surplus, la loi sur la procédure administrative est applicable."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "270b53e56ddfe01510081c073afe2927e49333b0f154eca14d36a645cdfb0ad3"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_49_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "49_a",
+      "artikelLabel": "Art. 49a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Secret fiscal"
+        },
+        {
+          "absatz": "1",
+          "text": "Les personnes chargées de l'application de la présente loi ou qui y collaborent doivent garder le secret sur les faits dont elles ont connaissance dans l'exercice de leurs fonctions ainsi que sur les délibérations des autorités et refuser aux tiers la consultation des dossiers fiscaux. Les dispositions de la loi cantonale du 12 novembre 2001 sur le personnel de l'Etat de Vaud et celles du Code pénal suisse sont applicables."
+        },
+        {
+          "absatz": "2",
+          "text": "Des renseignements peuvent être communiqués dans la mesure où une base légale fédérale ou cantonale le prévoit expressément."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "fe4f50585e7aab9f76895706aa2edfad7dc4ac651408c50f355f32e42890fd83"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_50",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Réclamation"
+        },
+        {
+          "absatz": "1",
+          "text": "Le contribuable peut former une réclamation contre la décision de l'autorité de taxation."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Les dispositions de la loi sur les impôts directs cantonaux relatives à la procédure de réclamation s'appliquent par analogie (art. 185 à 188 LI ). Pour le surplus, la loi sur la procédure administrative est applicable."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "a783368b1dca2fe927e755d1c5437324816e1be801d2dd9758b3700e5549d91a"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_51",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Effet suspensif"
+        },
+        {
+          "absatz": "1",
+          "text": "En cas de réclamation, l'impôt est dû sur les éléments admis par le contribuable."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "ba52f434836767536d05b16cc8307a5393acd647474f62eb38bd9075a349da50"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_52",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Autorité"
+        },
+        {
+          "absatz": "1",
+          "text": "L'Administration cantonale des impôts prend une décision sur la réclamation."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "8c9de3279ddc2d6874e216488e3e49f7c207006b00f68864f2730e830798544e"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_53",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Recours Les dispositions de la loi sur les impôts directs cantonaux relatives au droit de recours s'appliquent par analogie au recours contre les décisions sur réclamation. Pour le surplus, la loi sur la procédure administrative est applicable."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "En cas de recours, l'impôt est dû sur les éléments admis par le contribuable."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "2cbeb358fe948bf87dc63b2cba1e7edbfc88cb32d295321e3b93d37543613a60"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_54",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Révision à la demande du contribuable"
+        },
+        {
+          "absatz": "1",
+          "text": "La taxation définitive peut être révisée sur demande du contribuable:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "lorsque l'autorité de taxation ou de recours n'a pas tenu compte de faits importants qui ressortent du dossier;"
+            },
+            {
+              "marke": "b",
+              "text": "lorsque la décision a été prise en violation des règles essentielles de la procédure;"
+            },
+            {
+              "marke": "c",
+              "text": "lorsque le requérant découvre des faits nouveaux importants ou des preuves qu'il n'avait pu invoquer dans la procédure de taxation ou de recours."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Cette révision peut intervenir dans les trois mois dès la découverte du motif de révision, mais au plus tard, pour les cas visés sous lettres a et b, dans les quatre ans dès la communication de la décision attaquée et, pour le cas prévu sous lettre c, dans les dix ans dès ladite communication."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "f0954cace2e1b6924dd2eaeb3e8ec3d21ccacdc7d3bb876a66191b7a61c84e88"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_55",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Succession d'un absent Les délais de péremption prévus par l'article précédent ne s'appliquent pas à la demande de révision de l'impôt perçu sur la dévolution des biens d'un absent."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "e7b5d0e91c6f29fa407ba413725bb513638717fdcc33d4bf7146af2abd14d2bd"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_56",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Procédure"
+        },
+        {
+          "absatz": "1",
+          "text": "La demande de révision est adressée à l'autorité qui a pris la décision. Le requérant doit indiquer le motif de la révision et ses conclusions."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque l'autorité admet la révision, elle annule sa décision et statue à nouveau."
+        },
+        {
+          "absatz": "3",
+          "text": "La décision sur demande de révision peut être attaquée par les mêmes voies de droit que la décision dont la révision est requise."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b6a19f9073efa958dedb4adcfc1762ef8c70fa53f0e8261386b1a763d0d02950"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_57",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Révision par l'autorité fiscale"
+        },
+        {
+          "absatz": "1",
+          "text": "L'autorité de taxation peut également réviser la taxation définitive dans les trois mois dès la découverte du motif de révision, mais au plus tard dans les dix ans dès la communication de la décision en cause lorsqu'elle découvre des faits nouveaux importants ou des preuves qu'elle n'avait pu invoquer dans la procédure de taxation, de réclamation ou de recours."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque le contribuable conteste la nouvelle décision, il dispose du même droit de réclamation que contre la décision initiale."
+        },
+        {
+          "absatz": "3",
+          "text": "L'article 24, alinéa 2, est réservé."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "08300f71b527e244a52a741deddcefc71b940fdd2843568b742ab86456738059"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_58",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Exigibilité"
+        },
+        {
+          "absatz": "1",
+          "text": "Le droit de mutation et l'impôt sur les successions et donations devront être acquittés dans les trente jours dès la notification du bordereau provisoire ou définitif."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque les circonstances le justifient, l'autorité de perception peut prolonger le délai de paiement ou autoriser un paiement par acomptes. Elle peut alors exiger des sûretés. Le Conseil d'Etat fixe le taux de l'intérêt à bonifier pour le droit ou l'impôt payé avant la notification du bordereau et le taux de l'intérêt de retard dû dès l'exigibilité."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "bcaccd936b6a394cc4b7a1944ce7daf08426db8fed5b3758d7015c17c1775de1"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_58_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "58_a",
+      "artikelLabel": "Art. 58a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Echéance"
+        },
+        {
+          "absatz": "1",
+          "text": "L'impôt sur les successions échoit au plus tard quatre mois après la date du décès ou de la déclaration d'absence."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b397730c21bfb9a1852bb969da60347b0f50ee26bd2252cbb58111f8a07df09d"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_58_b",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "58_b",
+      "artikelLabel": "Art. 58b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Intérêt compensatoire"
+        },
+        {
+          "absatz": "1",
+          "text": "Un intérêt compensatoire en faveur de l'Etat est dû dès l'échéance par les héritiers, sur les montants d'impôt encore impayés."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "8dc4abfb9a98409c3f3008607ef1e1726ec02224301b531207cf86bfdbd1e0d3"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_59",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bordereau provisoire"
+        },
+        {
+          "absatz": "1",
+          "text": "L'autorité de perception établit et envoie un bordereau provisoire lorsque la taxation ne peut être définitivement arrêtée dans les six mois après que les conditions d'assujettissement prévues par la présente loi aient été réalisées."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "d34342f44b6052415cfcf93eb7e60afcefc6fd2413076454cc120e3b8018c5cf"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_60",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sûretés"
+        },
+        {
+          "absatz": "1",
+          "text": "Si le donataire ou l'héritier n'a pas de domicile en Suisse ou si les droits de l'Etat sont en péril, l'autorité fiscale peut exiger des sûretés même avant la fixation définitive du montant de droit de mutation ou de l'impôt sur les successions et les donations. La demande de sûretés indique le montant à garantir. Elle est immédiatement exécutoire, même en cas de recours. Dans la procédure de poursuite, elle est assimilée à un jugement exécutoire au sens de l'article 80 de la loi fédérale du 11 avril 1889 sur la poursuite pour dettes et la faillite (LP) ."
+        },
+        {
+          "absatz": "2",
+          "text": "Sur réquisition de l'Administration cantonale des impôts, le juge compétent diffère la délivrance aux héritiers des pièces justificatives de leur qualité, ainsi que les titres et autres valeurs de la succession, jusqu'au moment où ils auront fourni les garanties prévues par le présent article."
+        },
+        {
+          "absatz": "3",
+          "text": "Les décisions rendues par l'Administration cantonale des impôts en vertu de l'alinéa 1er peuvent faire l'objet d'un recours au Tribunal cantonal."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "798769a435647c0575dba1c299bce4b0481a80eb950bf1476ddfdfdb886cdd9e"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_61",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_62",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Hypothèque légale privilégiée"
+        },
+        {
+          "absatz": "1",
+          "text": "Le paiement du droit de mutation ou de l'impôt sur les successions et les donations, dans la mesure où la contribution se rapporte à des immeubles, est garanti par une hypothèque légale privilégiée, conformément au code de droit privé judiciaire vaudois ."
+        },
+        {
+          "absatz": "2",
+          "text": "L'hypothèque d'un montant supérieur à 1'000 francs est inscrite au registre foncier sur la réquisition de l'autorité fiscale indiquant le nom du débiteur, les immeubles grevés et la durée de la garantie. La réquisition est accompagnée d'une copie du bordereau certifiée conforme à l'original, ainsi que, le cas échéant, des décisions prises par l'autorité de réclamation ou de recours."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "47c4f525f4facd3ce74a6c00609ed3456e8fe9f9d5039cb6cb46051260db8c66"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_62_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "62_a",
+      "artikelLabel": "Art. 62a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lors des opérations visées à l'article 2 LMSD, donnant lieu à la perception d'un droit de mutation, les parties doivent consigner le 2,2% du prix de vente indiqué dans l'acte authentique, augmenté de la part communale (art. 23 LICom ), auprès d'un officier public ou d'un établissement reconnu à cet effet."
+        },
+        {
+          "absatz": "2",
+          "text": "Cette consignation est libératoire de la solidarité entre parties et de l'hypothèque légale privilégiée (art. 62) à concurrence du montant consigné."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "945725be061a3fee8282e380a3a4d1055eb4aba96c4eb0d6a1dde3bbf9e0c06b"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_63",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Exécution forcée"
+        },
+        {
+          "absatz": "1",
+          "text": "Les bordereaux du droit de mutation ou d'impôt, les prononcés sur réclamation ou sur recours, les prononcés d'amende et les listes de frais de recouvrement qui sont entrés en force, ainsi que les demandes de sûretés (art. 60), ont force exécutoire, au sens de l'article 80 de la loi fédérale du 11 avril 1889 sur la poursuite pour dettes et la faillite ."
+        },
+        {
+          "absatz": "2",
+          "text": "Les autorités fiscales sont dispensées de produire leurs créances dans les inventaires officiels et les appels aux créanciers."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "c8dd5e2b3e55947029234389910ab79594fb4eb893e554a054af75e0b2705143"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_64",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Remise"
+        },
+        {
+          "absatz": "1",
+          "text": "L'Administration cantonale des impôts peut accorder une remise totale ou partielle du droit de mutation, de l'impôt sur les successions et sur les donations et de l'intérêt de retard dus, lorsque la perception intégrale de ces contributions aurait, en raison de circonstances exceptionnelles, des conséquences trop rigoureuses."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "f2d4086fca6ca5f5fd5161e7d4be51ce8598fc9f645250d33caa5491eb73e5df"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_65",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Répétition de l'indu"
+        },
+        {
+          "absatz": "1",
+          "text": "Le contribuable peut demander la restitution d'un droit de mutation, d'un impôt sur les successions et sur les donations, ou d'une amende payée par lui:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "lorsque, par erreur, il a payé ce qu'il ne devait pas ou plus qu'il ne devait;"
+            },
+            {
+              "marke": "b",
+              "text": "lorsque la décision en vertu de laquelle il a payé est annulée ou modifiée par suite de recours ou de révision;"
+            },
+            {
+              "marke": "c",
+              "text": "dans le cas de l'article 86 de la loi fédérale sur la poursuite pour dettes et la faillite ."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "La restitution se fait avec intérêt. Le droit à la restitution se prescrit par un an à dater du moment où le contribuable a connaissance de son droit à la restitution et, au plus tard, par cinq ans après le paiement."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "bd4533af3905f469db2247ed78d0529bff12aa40ab0c7219fa846f95cbbc90bd"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_66",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La demande de restitution doit être adressée à l'Administration cantonale des impôts."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "99f184b024b57d981e88b6e29342792f080438ba29af9c8e6ebd6bc6c6e3f9db"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_67",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Erreurs de calcul"
+        },
+        {
+          "absatz": "1",
+          "text": "Les erreurs de calcul ou de transcription peuvent être corrigées dans les trois ans dès la notification du bordereau au contribuable."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "05b416cb413843eea41c4005b03ae104a8fab24e739fcbba15c0015a837cc51f"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_67_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "67_a",
+      "artikelLabel": "Art. 67a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dation en paiement"
+        },
+        {
+          "absatz": "1",
+          "text": "Exceptionnellement, l'impôt sur les successions et sur les donations peut être acquitté au moyen de biens culturels d'importance majeure , moyennant l'accord du contribuable et de l'Etat."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "7d78ebd130e0e8b961bcc9b847e278c3b367190e017205198ed9941f492d4c25"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_67_b",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "67_b",
+      "artikelLabel": "Art. 67b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Réclamation"
+        },
+        {
+          "absatz": "1",
+          "text": "A l’exception des décisions rendues en application des articles 60 et 67a, les décisions rendues en application du présent chapitre peuvent faire l’objet d’une réclamation. L'autorité statue dans un délai d'une année dès le dépôt de la réclamation."
+        },
+        {
+          "absatz": "2",
+          "text": "Les articles 50 à 52 s’appliquent par analogie."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "11e11be89e7002a425a9cf5336b3f52b22f16a48cceb4bdee0632946115830e9"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_68",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Principes généraux"
+        },
+        {
+          "absatz": "1",
+          "text": "Toute personne qui se soustrait au droit de mutation ou à l'impôt sur les successions et sur les donations en éludant intentionnellement ou par négligence les obligations qui lui incombent en vertu de la présente loi commet une contravention."
+        },
+        {
+          "absatz": "2",
+          "text": "Cette contravention est réprimée par une amende pouvant atteindre cinq fois le montant du droit ou de l'impôt soustrait, indépendamment de celui-ci."
+        },
+        {
+          "absatz": "3",
+          "text": "Le montant de l'amende est fixé d'après le degré de la faute du contrevenant. L'amende est réduite notamment en cas de déclaration du contrevenant ou de ses héritiers avant que l'infraction ait été constatée par l'autorité fiscale."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "5d5b2ce1252bd7cf350e43c53a4df55f354226795d1bde3edd14f5dc0db51831"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_69",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Responsabilité du représentant"
+        },
+        {
+          "absatz": "1",
+          "text": "Si l'infraction a été commise par le représentant légal d'une personne physique, cette dernière ne doit que le montant soustrait et l'intérêt de retard. Le représentant légal est frappé de la peine prévue à l'article 68, alinéa 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Si l'infraction a été commise par un représentant contractuel, elle est imputée à la personne représentée, à moins que celle-ci ne prouve qu'elle n'aurait pas été en mesure d'empêcher l'infraction ou d'en faire disparaître les effets. Dans ce cas, le représentant est frappé de la peine prévue à l'article 68, alinéa 2. Le représenté doit, en tout état de cause, le montant soustrait et l'intérêt de retard."
+        },
+        {
+          "absatz": "3",
+          "text": "Si l'infraction a été commise dans la gestion ou la représentation d'une personne morale, la peine prévue à l'article 68, alinéa 2, est prononcée contre la ou les personnes physiques qui ont agi ou auraient dû agir comme organes de la personne morale. Celle-ci doit, dans tous les cas, le montant soustrait et l'intérêt de retard. Elle répond, en outre, solidairement du paiement de l'amende."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "624c470d37514a737b98e82414d8851c7c952fc7f92dae99abfe28f385291972"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_70",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "70",
+      "artikelLabel": "Art. 70",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Participation et infraction à l'inventaire"
+        },
+        {
+          "absatz": "1",
+          "text": "L'instigateur et le complice sont passibles de la peine prévue à l'article 68."
+        },
+        {
+          "absatz": "2",
+          "text": "Le notaire chargé de l'inventaire qui enfreint intentionnellement ou par négligence des dispositions de la présente loi est frappé d'une amende pouvant atteindre cinq fois le montant du droit ou de l'impôt soustrait."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "c035f32739f6c70e23e1ad112490145cf4f96265610ce12086a624c03cf91524"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_71",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Procédure en cas d'infraction"
+        },
+        {
+          "absatz": "1",
+          "text": "Lorsque le préposé aux impôts constate ou présume une soustraction du droit de mutation au sens des articles 68 à 70, il transmet le dossier avec ses observations à l'Administration cantonale des impôts."
+        },
+        {
+          "absatz": "2",
+          "text": "Celle-ci procède aux investigations nécessaires et fait rapport au Département des finances, qui prononce l'amende."
+        },
+        {
+          "absatz": "3",
+          "text": "L'alinéa 2 s'applique également lorsque l'Administration cantonale des impôts présume une soustraction de l'impôt sur les successions et sur les donations au sens des articles 68 à 70."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "3020f5abedac79ad1c2f46132772fdf7c568d6e62996de091b753fb2129cc756"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_72",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "72",
+      "artikelLabel": "Art. 72",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Autres infractions"
+        },
+        {
+          "absatz": "1",
+          "text": "Celui qui, sans que soit posé l'état de fait des articles 68 à 70, enfreint intentionnellement ou par négligence les dispositions de procédure de la présente loi, est frappé d'une amende de 10 à 5'000 francs, prononcée par l'Administration cantonale des impôts."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "a1518a782d7373265394f16c8653408fcfb88da6addb5c6e177aff68c2deeba6"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_73",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Réclamation et recours"
+        },
+        {
+          "absatz": "1",
+          "text": "Les prononcés d'amende rendus par l'Administration cantonale des impôts peuvent faire l'objet d'une réclamation. Les articles 50 à 53 sont applicables."
+        },
+        {
+          "absatz": "2",
+          "text": "Les prononcés d'amende du département en charge des finances peuvent faire l'objet d'un recours, conformément à la loi sur la procédure administrative ."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "4354429f5b135fed6f5c317794948920ea97c638b13d973618309a650a32176c"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_74",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "…"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_75",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Solidarité des contrevenants"
+        },
+        {
+          "absatz": "1",
+          "text": "Les héritiers et légataires répondent solidairement du paiement des rappels d'impôts sur les successions. Il en est de même des donataires ayant reçu les biens donnés en propriété commune pour les rappels d'impôts sur les donations."
+        },
+        {
+          "absatz": "2",
+          "text": "La responsabilité du légataire est toutefois limitée à son enrichissement."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "b8e6f4c75713def0ef219618501779852822765f6c5b7751855c3ea34b13e0a1"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_76",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Décès du contrevenant"
+        },
+        {
+          "absatz": "1",
+          "text": "Au décès du contrevenant, l'obligation de payer le droit ou l'impôt soustrait, les intérêts et l'amende passe à ses héritiers; cette obligation ne peut excéder le montant de leur part héréditaire."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "cbc9edd2d917240aafeff0d12279f262ee34b2a08e80e9c8f0c7322848efe736"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_77",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Extinction du droit d'introduire les procédures"
+        },
+        {
+          "absatz": "1",
+          "text": "Les procédures de taxation, de rappel du droit de mutation ou de l'impôt sur les successions et sur les donations doivent être introduites dans les dix ans dès la fin de l'année au cours de laquelle a eu lieu le transfert immobilier ou l'acte qui lui est assimilé, l'ouverture de la succession ou l'exécution de la donation."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour les transferts d'immeubles résultant d'une succession ouverte hors du canton, le délai mentionné à l'alinéa précédent commence à courir du jour où l'autorité de taxation a eu connaissance du transfert."
+        },
+        {
+          "absatz": "3",
+          "text": "L'action pénale se prescrit par dix ans dès le jour où la contravention a été commise."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "c751e5f8824801d9a327136cdcd3ec5cbdd7493342aa34e3b4f3db93c715f84f"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_78",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Prescription"
+        },
+        {
+          "absatz": "1",
+          "text": "Les créances découlant de la présente loi se prescrivent par cinq ans dès leur exigibilité. L'article 170, alinéas 2 et 3 LI est applicable."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "99b2ac9899e830cee41d8fe2535d75a55e8a629a9dfbd6088ddd1df9826c3091"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_79",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Loi applicable"
+        },
+        {
+          "absatz": "1",
+          "text": "Le droit de mutation et l'impôt sur les successions et donations est perçu en conformité des dispositions de la présente loi, dès que l'événement qui donne naissance à la créance fiscale se produit postérieurement à l'entrée en vigueur de la loi."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "56606fa6ad69deeab285a984c5bfcd7317c64e28791e8c7c123108f1ac6d2104"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_79_a",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "79_a",
+      "artikelLabel": "Art. 79a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'article 78, alinéa 2 dans sa teneur au 1er janvier 2005, est applicable à toutes les créances qui, selon l'ancienne teneur de cet alinéa, ne sont pas prescrites au 31 décembre 2004."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "1f60a997f7ab938f7f057eaa4d129477006c34a1816b9e873522b59727c2a55c"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_79_b",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "79_b",
+      "artikelLabel": "Art. 79b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'article 33a ne s'applique pas aux substitutions sur les biens résiduels imposées selon l'article 33."
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "bee93ea51863d336fbaa7dd1c3f193afd470b5321bfbe94050de627c1f80b8d8"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_80",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Dispositions abrogatoires"
+        },
+        {
+          "absatz": "1",
+          "text": "Sont abrogées:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "la loi du 27 décembre 1911 sur la perception du droit de mutation, modifiée le 1er décembre 1919, le 1er septembre 1925, le 27 novembre 1928, le 11 mars 1931, le 15 décembre 1936, le 3 septembre 1945, le 18 mai 1948, le 12 décembre 1949;"
+            },
+            {
+              "marke": "b",
+              "text": "toute disposition contraire à la présente loi."
+            }
+          ]
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "e4a730375497f097bec954dd04730f65063f544b15e9e20fd7a74b904bf8705d"
+    },
+    {
+      "id": "kanton/VD/vd-106879/art_81",
+      "ebene": "kanton",
+      "quelle": "VD",
+      "erlass": "Loi sur les droits de mutation (LMSD) (BLV 648.11)",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Exécution"
+        },
+        {
+          "absatz": "1",
+          "text": "Le Conseil d'Etat est chargé de la publication et de l'exécution de la présente loi. Entrée en vigueur : 01.07.1963 (art. 31, al. 1 à 3) - valable dès le 1er janvier 2005 Le montant imposable est arrondi aux mille francs inférieurs. I. BAREME SPECIAL DE L'IMPOT SUR LES SUCCESSIONS 250’000251’000252’000253’000254’000255’000256’000257’000258’000259’000260’000261’000262’000263’000264’000265’000266’000267’000268’000269’000270’000271’000272’000273’000274’000275’000276’000277’000278’000279’000280’000281’000282’000283’000284’000285’000286’000287’000288’000289’000290’000 Montant 373’000374’000375’000376’000377’000378’000379’000380’000381’000382’000383’000384’000385’000386’000387’000388’000389’000390’000391’000392’000393’000394’000395’000396’000397’000398’000399’000400’000401’000402’000403’000404’000405’000406’000407’000408’000409’000410’000411’000412’000413’000 Montant 496’000497’000498’000499’000500’000 Montant SUR LES SUCCESSIONS ET DONATIONS Le montant imposable est arrondi aux mille francs inférieurs. 648.11 Loi concernant le droit de mutation sur les transferts immobiliers et l'impôt sur les successions et donations (LMSD) du 27.02.1963 ev le 01.07.1963 648.11-01 modif. en ev le 01.01.1988 bloc le 08.12.1987"
+        },
+        {
+          "absatz": "31",
+          "text": "648.11-02 modif. en ev le 01.07.1991 bloc le 18.12.1989"
+        },
+        {
+          "absatz": "62",
+          "text": "648.11-03 modif. en ev le 26.02.1997 bloc le 26.02.1997 648.11-04 modif. en ev le 01.01.1999 bloc le 10.11.1998 648.11-05 modif. en ev le 01.01.2001 bloc le 04.07.2000"
+        },
+        {
+          "absatz": "62",
+          "text": "648.11-06 modif. en ev le 01.10.2004 bloc le 05.12.2001"
+        },
+        {
+          "absatz": "47",
+          "text": "648.11-07 modif. en ev le 01.01.2005 bloc le 02.03.2004"
+        },
+        {
+          "absatz": "13",
+          "text": "648.11-08 modif. en ev le 01.01.2005 bloc le 21.12.2004"
+        },
+        {
+          "absatz": "71",
+          "text": "648.11-09 modif. en ev le 01.07.2005 bloc le 03.05.2005 648.11-10 modif. en ev le 01.01.2006 bloc le 27.09.2005 648.11-11 modif. en ev le 01.01.2006 bloc le 14.12.2005"
+        },
+        {
+          "absatz": "37",
+          "text": "648.11-12 modif. en ev le 01.01.2007 bloc le 19.12.2006"
+        },
+        {
+          "absatz": "25",
+          "text": "648.11-13 modif. en ev le 01.01.2007 bloc le 19.12.2006 648.11-14 modif. en ev le 01.01.2007 bloc le 09.01.2007"
+        },
+        {
+          "absatz": "20",
+          "text": "648.11-15 modif. en ev le 01.01.2008 bloc le 12.06.2007 648.11-16 modif. en ev le 01.01.2009 bloc le 06.05.2008 648.11-17 modif. en ev le 01.01.2009 648.11-18 modif. en ev le 01.01.2009 bloc le 28.10.2008"
+        },
+        {
+          "absatz": "49",
+          "text": "648.11-19 modif. en ev le 01.07.2009 bloc le 17.12.2008"
+        },
+        {
+          "absatz": "3",
+          "text": "648.11-20 modif. en ev le 01.01.2010 bloc le 09.12.2009"
+        },
+        {
+          "absatz": "64",
+          "text": "648.11-21 modif. en ev le 01.01.2011 bloc le 16.12.2009 648.11-22 modif. en ev le 01.01.2011 bloc le 14.12.2010 648.11-23 modif. en ev le 01.01.2012 bloc le 11.10.2011 648.11 Loi concernant le droit de mutation sur les transferts immobiliers et l'impôt sur les successions et donations (LMSD) du 27.02.1963"
+        }
+      ],
+      "stand": "",
+      "quelleUrl": "https://www.lexfind.ch/tolv/106879/fr",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ff9a8df22fc65f03b143b7c3ad9c6226610c5436de835d8585a71196f94e408d",
+      "sha": "a5265c41315a71fb50c1d6da9e070d2d1d0254fe0a69fffcdbf1503d986debac"
     }
   ]
 }

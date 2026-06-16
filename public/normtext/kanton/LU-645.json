@@ -1,6 +1,167 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/LU/645/art_1",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Staat Luzern und die Einwohnergemeinden erheben nach Massgabe dieses Gesetzes eine Handänderungssteuer."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "5bd4acee2d8b167f08394392e7c536b478d19a0f2efe203a9452af493ba2df0e"
+    },
+    {
+      "id": "kanton/LU/645/art_2",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Handänderungen, die der Handänderungssteuer unterliegen, gelten:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Übergang des Eigentums an einem Grundstück im Sinn von Artikel 655 Absatz 2 ZGB,"
+            },
+            {
+              "marke": "2",
+              "text": "die Änderung im Personenbestand von Gesamthandverhältnissen, die Veränderung der Anteilsrechte sowie die Aufhebung des Gesamteigentums,"
+            },
+            {
+              "marke": "3",
+              "text": "der Übergang der wirtschaftlichen Verfügungsmacht über ein Grundstück, namentlich durch:"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "184ec6f7f21b662461562f5fc8cc7d743e438b7e18268783073fc51332bdedea"
+    },
+    {
+      "id": "kanton/LU/645/art_3",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Steuerfreie Handänderungen sind:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "der Übergang eines Grundstücks im Zusammenhang mit Landumlegungen und Grenzregulierungen nach den Bestimmungen des Planungs- und Baugesetzes und im Zusammenhang mit Güterzusammenlegungen nach den Bestimmungen des Gesetzes über die Unterstützung der Bodenverbesserungen, des Gesetzes betreffend Güterzusammenlegungen und Siedlungen und des Forstgesetzes."
+            },
+            {
+              "marke": "2",
+              "text": "Rechtsgeschäfte zwischen Ehegatten, auch als Folge der güterrechtlichen Auseinandersetzung, zwischen eingetragenen Partnern, zwischen Lebenspartnern, die während mindestens zwei Jahren in einer eheähnlichen Beziehung zusammengelebt haben, sowie zwischen Verwandten in auf- und absteigender Linie einschliesslich ihrer Partner (Ehegatten, eingetragene Partner oder Lebenspartner),"
+            },
+            {
+              "marke": "3",
+              "text": "der Erbgang (Erbfolge, Erbteilung, Vermächtnis),"
+            },
+            {
+              "marke": "4",
+              "text": "die Umwandlung von Gesamteigentum in Miteigentum und umgekehrt, soweit die Beteiligungsverhältnisse nicht ändern, sowie die Realteilung von Gemeinschaftsgut, soweit die zugeteilten Grundstücke den bisherigen Anteilen entsprechen. Vorbehalten bleiben die Fälle, wo die Umwandlung oder Realteilung im Rahmen einer Erbteilung erfolgt,"
+            },
+            {
+              "marke": "5",
+              "text": "der Übergang eines Grundstücks bei Umstrukturierungen im Sinn der §§ 26 und 75 des Steuergesetzes,"
+            },
+            {
+              "marke": "6",
+              "text": "Rechtsgeschäfte mit einem Handänderungswert von weniger als Fr. 20 000.–."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "0bb0677a40aa1f2353457454136b44331e9daf7c55938d3e7a2fc49bfcb115b5"
+    },
+    {
+      "id": "kanton/LU/645/art_4",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Steuerpflichtig ist der Erwerber. In den Fällen von § 2 Ziffer 3b wird der aus dem Kaufrechts-, Kauf- oder Kaufvorvertrag Berechtigte erst dann steuerpflichtig, wenn er das Kaufrecht auf einen Dritten überträgt bzw. einen Dritten in den Kauf- oder Kaufvorvertrag eintreten lässt oder wenn er auf die Ausübung eines solchen Rechts verzichtet."
+        },
+        {
+          "absatz": "2",
+          "text": "Mehrere Erwerber haften bei gemeinschaftlichem Erwerb solidarisch. Solidarisch mit dem Erwerber haftet auch die Kapitalgesellschaft oder Genossenschaft, von der Anteilsrechte im Sinn von § 2 Ziffer 3a veräussert werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "cd1722582d5cc3b65ba77170f994a9845899467cdff0ec034c17037d718d82ef"
+    },
+    {
+      "id": "kanton/LU/645/art_5",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Handänderungssteuer sind befreit:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die Eidgenossenschaft nach Massgabe der Bundesgesetzgebung,"
+            },
+            {
+              "marke": "2",
+              "text": "der Staat Luzern,"
+            },
+            {
+              "marke": "3",
+              "text": "die luzernischen Einwohner- und Kirchgemeinden, sofern das Grundstück innerhalb der betreffenden oder einer angrenzenden Gemeinde liegt,"
+            },
+            {
+              "marke": "4",
+              "text": "die kirchlichen und gemeinnützigen Institutionen mit Sitz im Kanton Luzern, sofern sie Einwohnern des Kantons Luzern erhebliche Leistungen zugute kommen lassen. Der Regierungsrat kann die Steuerfreiheit auch Institutionen mit Sitz oder Tätigkeit ausserhalb des Kantons bewilligen, sofern luzernischen Organisationen oder Einwohnern des Kantons Luzern erhebliche Leistungen zugute kommen, oder wenn der Sitzkanton Gegenrecht gewährt,"
+            },
+            {
+              "marke": "5",
+              "text": "die Organisationen und Träger des gemeinnützigen Wohnungsbaus nach den Vorschriften von Bund und Kanton über die Wohnbauförderung."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "220c56c0e5896b4db432d76bda909db69f3d4c512bebe35782b564a5cb80a678"
+    },
     {
       "id": "kanton/LU/645/art_6",
       "ebene": "kanton",
@@ -16,9 +177,610 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
       "sha": "37deaaa21133e116d7d0d3aada87302e94ad983630d0360246fc5d3d7b05f43e"
+    },
+    {
+      "id": "kanton/LU/645/art_7",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Handänderungswert besteht aus sämtlichen Leistungen des Erwerbers."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist der Erwerbspreis nicht feststellbar, zum Beispiel bei Tausch, Schenkung oder Erbgang, ist die Steuer bei Grundstücken mit einer land- oder forstwirtschaftlichen Ertragswertschatzung von dem um 200 Prozent erhöhten Katasterwert, bei den übrigen Grundstücken vom Katasterwert zu berechnen. Das gleiche gilt, wenn der unter nahestehenden Personen vereinbarte Erwerbspreis diese Werte nicht erreicht. Liegt das Grundstück, das eine landwirtschaftliche Ertragswertschatzung aufweist, in der Bauzone, ist die Steuer vom Verkehrswert zu ermitteln."
+        },
+        {
+          "absatz": "3",
+          "text": "Übernimmt ein Erbe ein landwirtschaftliches Grundstück im Sinn von Artikel 620 ZGB, so ist die Handänderungssteuer vom zivilrechtlichen Anrechnungswert zu berechnen. Vorbehalten bleibt § 3 Ziffer 2."
+        },
+        {
+          "absatz": "4",
+          "text": "Neben dem Erwerbspreis zu erbringende Sachleistungen sind zum Verkehrswert, wiederkehrende Leistungen zum Barwert anzurechnen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "0ab6908667535f1ffadb02e5eaa62d702e6915de39cc61258a982a43ff5f7ad8"
+    },
+    {
+      "id": "kanton/LU/645/art_8",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Tauschverträgen ist die Steuer für jedes beteiligte Grundstück gesondert zu berechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Erfolgt ein Tausch ohne Aufzahlung, so gilt als Handänderungswert für beide Grundstücke der höhere, nach § 7 Absatz 2 berechnete Ersatzwert."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird eine Aufzahlung geleistet, so gilt je als Handänderungswert der nach § 7 Absatz 2 berechnete Wert des in Tausch gegebenen Grundstücks, zuzüglich eine geleistete oder abzüglich eine empfangene Aufzahlung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "e7d7adfe01d1cd10e139ceada32b156981e3b4676028e77f4af47bc9c0054e21"
+    },
+    {
+      "id": "kanton/LU/645/art_9",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Handänderungen gemäss § 2 Ziffer 3b ist die Steuer vom vereinbarten Erwerbspreis zuzüglich einer allfälligen Entschädigung zu erheben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "c8d84cc0c8cd7b70aecfd68eb0199451a8b56163afc87cfd59b9f1b9b2a459ac"
+    },
+    {
+      "id": "kanton/LU/645/art_10",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Handänderungssteuer veranlagt jene Gemeinde, in der das Grundstück liegt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bilden Grundstücke, die in verschiedenen Gemeinden liegen, Gegenstand einer Handänderung, sind Veranlagung und Bezug der Steuer von der Veranlagungsbehörde jener Gemeinde vorzunehmen, in welcher der wertmässig grössere Teil liegt. Der Steuerertrag wird im Verhältnis der auf die einzelnen Grundstücke entfallenden Steuern verteilt. Die Verteilung des Steuerertrags kann von den übrigen Gemeinden innert 30 Tagen mittels Einsprache angefochten werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gemeinde kann zur Erfüllung von Aufgaben, die ihr übertragen werden, eine Verwaltungsstelle bezeichnen. Mehrere Gemeinden können eine gemeinsame Verwaltungsstelle bezeichnen."
+        },
+        {
+          "absatz": "4",
+          "text": "Sofern dieses Gesetz und die rechtsetzenden Erlasse der Gemeinde nichts anderes regeln, ist die für die Handänderungssteuer zuständige Stelle der Gemeinde der Gemeinderat."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die Geheimhaltungspflicht, die Amtshilfe und die Mitwirkungspflichten der steuerpflichtigen Person sowie für die Bescheinigungs-, Auskunfts- und Meldepflicht Dritter gelten zusätzlich die Bestimmungen des Steuergesetzes sinngemäss."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "1d8a1a4783e6bdc7e0295a5ba68ee2a84ab15befa12cb96ddf4b268fbffaddb1"
+    },
+    {
+      "id": "kanton/LU/645/art_11",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundbuchämter melden die Handänderungen der Veranlagungsbehörde und der Dienststelle Steuern des Kantons."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Steuerpflichtigen haben bei Handänderungen, die ohne Grundbucheintrag erfolgen, der Veranlagungsbehörde der Gemeinde, in welcher das Grundstück liegt, den Abgabetatbestand innert 30 Tagen seit der Handänderung zu melden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Steuerpflichtigen haben die für die Veranlagung erforderlichen Unterlagen einzureichen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Handänderungen nach § 2 Ziffer 3a unterliegen auch die Organe der betroffenen juristischen Person den Melde- und Mitwirkungspflichten gemäss den Absätzen 2 und 3."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "31f2ce353394f0cd5a3a5513c306aff53804b350733d6140c6caa68c6bebd63e"
+    },
+    {
+      "id": "kanton/LU/645/art_12",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Revision sind die Bestimmungen des Steuergesetzes sinngemäss anzuwenden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "4d0992220339016c97c1431c0f1e18c6bb6a235937b6f670c82df697b6798eda"
+    },
+    {
+      "id": "kanton/LU/645/art_12_a",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "12_a",
+      "artikelLabel": "§ 12a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Rechnungsfehler und Schreibversehen in rechtskräftigen Entscheiden können innert fünf Jahren nach der Eröffnung auf Antrag oder von Amtes wegen von der Behörde berichtigt werden, der sie unterlaufen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen die Berichtigung oder ihre Ablehnung können die gleichen Rechtsmittel wie gegen den Entscheid ergriffen werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "b406fd90f16dcd32d6091b9e48ba95e8e3299370c1be9c56ae53b8120397d703"
+    },
+    {
+      "id": "kanton/LU/645/art_12_b",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "12_b",
+      "artikelLabel": "§ 12b",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Nachsteuer sind die Bestimmungen des Steuergesetzes anzuwenden. Zuständig ist die Veranlagungsbehörde."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Recht, ein Nachsteuerverfahren einzuleiten, erlischt zehn Jahre nach erfolgter Handänderung, für welche eine Veranlagung zu Unrecht unterblieben ist oder keine vollständige rechtskräftige Veranlagung vorgenommen wurde."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Recht, die Nachsteuer festzusetzen, erlischt fünfzehn Jahre nach erfolgter Handänderung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "60ea088374f4f678ef1d6a26c4d42fc62432f61a1f2fdb4eed5c74d5301c7f4f"
+    },
+    {
+      "id": "kanton/LU/645/art_13",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Recht auf Steuerfestsetzung erlischt fünf Jahre nach der Handänderung. § 12b Absätze 2 und 3 bleiben vorbehalten."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Beginn, Stillstand und Unterbrechung der Verjährung gelten die Bestimmungen des Steuergesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Das Recht, die Steuer zu veranlagen, ist fünfzehn Jahre, nachdem die Handänderung stattfand, auf jeden Fall verjährt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "1a038a88a0c2991d398759d74cc255636b11e8fe8ec03f9c12e674ba36278fb9"
+    },
+    {
+      "id": "kanton/LU/645/art_14",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Steuerstrafrecht sind die Bestimmungen des Steuergesetzes anzuwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Busse wird von der Veranlagungsbehörde oder der Beschwerdeinstanz ausgesprochen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Strafverfolgung wegen vollendeter Steuerhinterziehung verjährt zehn Jahre nach der steuerbegründenden Handänderung, für welche die Steuer nicht oder unvollständig veranlagt wurde, oder zehn Jahre nachdem eine unrechtmässige Rückerstattung oder ein ungerechtfertigter Erlass erwirkt wurde."
+        },
+        {
+          "absatz": "4",
+          "text": "Für den Bezug gelten die §§ 19–21."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "a29bd28e21dcc2eab5ef6d879a346d531ce8a93a300e12b56a5365c04d6eab47"
+    },
+    {
+      "id": "kanton/LU/645/art_18",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen Entscheide der Veranlagungsbehörde ist die Einsprache im Sinn des Verwaltungsrechtspflegegesetzes und gegen Einspracheentscheide die Verwaltungsgerichtsbeschwerde zulässig. Dem Kantonsgericht steht auch die Ermessenskontrolle zu."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Erwerber und die Dienststelle Steuern des Kantons sind zur Einsprache und zur Verwaltungsgerichtsbeschwerde befugt."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Rechtsmittelfristen betragen 30 Tage."
+        },
+        {
+          "absatz": "4",
+          "text": "Wenn im Beschwerdeverfahren der Kanton und die veranlagende Gemeinde unterliegen, so haben sie grundsätzlich die Verfahrenskosten zu tragen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "ed71770eb57af2ba48ef7029b63d68747d130becd24ea616be58545750ddb624"
+    },
+    {
+      "id": "kanton/LU/645/art_19",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuer wird mit der Rechtskraftbeschreitung der Veranlagung fällig."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Nach Ablauf der Einsprachefrist ist der Steuerbetrag nach einem vom Regierungsrat festzusetzenden Zinssatz zu verzinsen. Einsprache und Verwaltungsgerichtsbeschwerde hemmen den Zinsenlauf nicht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "5529a63d0fe4571a6e73145bfc8d38599a97893b1d7f182b3cea4ed4b10e6a81"
+    },
+    {
+      "id": "kanton/LU/645/art_19_a",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "19_a",
+      "artikelLabel": "§ 19a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Steuerforderung besteht ein den übrigen Pfandrechten im Rang vorgehendes gesetzliches Pfandrecht für die Dauer von zwei Jahren seit Fälligkeit."
+        },
+        {
+          "absatz": "2",
+          "text": "Wer ein konkretes Kaufinteresse an einem Grundstück nachweist, kann von der Veranlagungsbehörde Auskunft über den Bestand und die mutmassliche Höhe der auf dem Grundstück haftenden Pfandrechte für Handänderungssteuerforderungen verlangen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "588e93cc69bd60380dc89cc6c65414aff6f61d9b1f8522b786abc912b81ced84"
+    },
+    {
+      "id": "kanton/LU/645/art_20",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steuerforderung verjährt fünf Jahre nach ihrer rechtskräftigen Veranlagung."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Beginn, Stillstand und Unterbruch gelten die Bestimmungen des Steuergesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Verjährung tritt in jedem Fall zehn Jahre, nachdem die Steuer rechtskräftig festgesetzt worden ist, ein."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "1b88649648794d33e439286c3fb8e4822f450ddfc0de3a37881ef021d35eef7e"
+    },
+    {
+      "id": "kanton/LU/645/art_21",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Zahlungserleichterungen und Erlass sind die Bestimmungen des Steuergesetzes sinngemäss anzuwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Gesuche um Zahlungserleichterungen oder Erlass sind bei der Gemeinde einzureichen. Sie entscheidet endgültig über die Gewährung von Zahlungserleichterungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gemeinde kann für den Gemeinde- und den Staatsanteil bis zu einem vom Regierungsrat festgesetzten Betrag teilweisen oder vollen Erlass gewähren. Der Regierungsrat regelt auch die Zuständigkeit in den übrigen Fällen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "85cca2b8be90880d11ce04dc6235e103631ed9167b45e981d00f8895dab0a919"
+    },
+    {
+      "id": "kanton/LU/645/art_22",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Steuerertrag, einschliesslich der Bussen, wird wie folgt aufgeteilt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "30 Prozent an die Einwohnergemeinde, in welcher das Grundstück liegt,"
+            },
+            {
+              "marke": "b",
+              "text": "70 Prozent an den Kanton, nach Abzug einer vom Regierungsrat festzulegenden Veranlagungs- und Inkassoprovision."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "b3fff4bb24ffe2d9108787765794acf0de22c5436d9f8b02c0774568ff3e5a49"
+    },
+    {
+      "id": "kanton/LU/645/art_24",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden sind dem Staat für den richtigen Bezug und die rechtzeitige Ablieferung der Steuern verantwortlich. Sie haften unmittelbar für Handlungen und Unterlassungen der damit beauftragten Gemeindeorgane."
+        },
+        {
+          "absatz": "2",
+          "text": "Der am Monatsende bestehende Saldo der Steuerbeträge ist innert 15 Tagen an den Kanton zu überweisen. Bei verspäteter Ablieferung wird ein vom Regierungsrat festgelegter Zins erhoben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "810320b404430ec01bf7d1c8de0f398150071038f69f92c9ba905e88a62bd218"
+    },
+    {
+      "id": "kanton/LU/645/art_25",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden haben jeweils am Schluss des Jahres der Dienststelle Steuern des Kantons eine Abrechnung über die veranlagten Handänderungssteuern einzusenden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "f75dc525744fb8b6e7e721db8a7c78463c34e5b1596a95cebb543f2b79f979e2"
+    },
+    {
+      "id": "kanton/LU/645/art_26",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Dienststelle Steuern des Kantons leitet den Vollzug dieses Gesetzes und übt die unmittelbare Aufsicht über das Handänderungssteuerwesen aus."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie erlässt die für dessen richtige und einheitliche Anwendung erforderlichen Weisungen und Anordnungen. Sie regelt insbesondere die elektronische Erfassung und Verarbeitung von Daten sowie deren Austausch mit den Gemeinden und den Steuerpflichtigen und bestimmt die Steuerformulare."
+        },
+        {
+          "absatz": "3",
+          "text": "Sie kann für die Veranlagungsbehörde verbindliche Vorbescheide erlassen. Die Veranlagungsbehörde ist in der Regel vorher anzuhören."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "d884cbed17adf6736217ead24ec08a7912c0d744621a4f470564706cadbdf86a"
+    },
+    {
+      "id": "kanton/LU/645/art_27",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vor Inkrafttreten dieses Gesetzes erfolgten Handänderungen werden ohne Rücksicht auf den Zeitpunkt der Steuerfestsetzung nach dem bisherigen Recht besteuert. Für das Verfahren gelten die neuen Bestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Anwendung von § 7 Absatz 2 ist auf die nach dem Schatzungsgesetz vom 27. Juni 1961, in der Fassung vom 21. Juni 1988, neu ermittelten Katasterwerte beschränkt. Bei den übrigen Katasterwerten wird die Steuer nach dem bisherigen Recht berechnet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "36dc8e9964c3886740622fb6dce88bb9060055b498fdd35f30bd32190c5d24db"
+    },
+    {
+      "id": "kanton/LU/645/art_28",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Inkrafttreten dieses Gesetzes werden aufgehoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gesetz betreffend die Handänderungsgebühren vom 30. November 1897,"
+            },
+            {
+              "marke": "b",
+              "text": "Verordnung über den Bezug der Handänderungsgebühren vom 11. Februar 1898."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "8e454d623ee0b2e9350c05ccfd9c6237a724a1088c170c59cf8152fc2eaf3984"
+    },
+    {
+      "id": "kanton/LU/645/art_29_a",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "29_a",
+      "artikelLabel": "§ 29a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die vor Inkrafttreten dieser Änderung erfolgten Handänderungen werden ohne Rücksicht auf den Zeitpunkt der Veranlagung nach dem bisherigen Recht besteuert. Stichtag ist der Tag der Anmeldung beim Grundbuch oder der Tag des jeweiligen Vertragsabschlusses, sofern kein Grundbucheintrag erfolgt. Für das Verfahren gelten die neuen Bestimmungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Nachsteuern werden für Handänderungen, welche vor dem 1. Januar 2001 erfolgen, nach altem Recht festgesetzt. Für das Verfahren gilt neues Recht, ebenso für die Verjährung, wenn sie am 1. Januar 2001 nach altem Recht noch nicht eingetreten ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Bussen nach § 14 werden für Handänderungen, die vor dem 1. Januar 2001 erfolgen, nach altem Recht ausgesprochen, sofern das neue Recht für die betroffene Person nicht milder ist. Für das Verfahren gilt neues Recht, ebenso für die Verjährung, wenn sie am 1. Januar 2001 noch nicht eingetreten ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "ef31adf01c99aa8363b3ab8a525f41aad30979797a2b936da97383311cfd1272"
+    },
+    {
+      "id": "kanton/LU/645/art_30",
+      "ebene": "kanton",
+      "quelle": "LU",
+      "erlass": "HStG (SRL Nr. 645)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz tritt am 1. Januar 1984 in Kraft. Es ist zu veröffentlichen und unterliegt dem fakultativen Referendum."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://srl.lu.ch/app/de/texts_of_law/645",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f0e7b4d8ce79a7241d3b16f9ba9afe66",
+      "sha": "f25f879377ce8be25512431afb90826fad43170be0f23d20abe99f99d846988e"
     }
   ]
 }

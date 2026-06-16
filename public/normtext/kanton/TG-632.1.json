@@ -1,6 +1,292 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/TG/632.1/art_1",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundbuchämter und Notariate erheben nach Massgabe dieses Gesetzes Beurkundungs-, Grundbuch-, Notariats- und Kanzleigebühren, die auch als Gemengsteuern ausgestaltet sein können. Ausserdem werden Auslagen in Rechnung gestellt."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "d3b7407e9fc755d8c6d82fed0422ac1ad098acd8f14c5be91085a4632a2582e6"
+    },
+    {
+      "id": "kanton/TG/632.1/art_2",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Kanzleigebühren können für Aufwand wie Auszüge, Vertragsvorbereitungen, Auskünfte oder Beratungen in Rechnung gestellt werden, soweit keine Beurkundungs-, Grundbuch- oder Notariatsgebühren zu entrichten sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Auslagen umfassen insbesondere Kosten für Registerauszüge, Expertisen, Übersetzungen oder Zeugenentschädigungen."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "d9b813092a89bcb13fccbf8667605563daa23bbc5f970a35a1c96d9156fd2145"
+    },
+    {
+      "id": "kanton/TG/632.1/art_3",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Gebühren und Auslagen haften die Beteiligten solidarisch."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "05ee26ec3e43ec582e669fda1d98661f9375bcf1c1393bc924b8e156a79e0a45"
+    },
+    {
+      "id": "kanton/TG/632.1/art_4",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In begründeten Fällen kann der festgesetzte Gebührenrahmen überschritten werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "ee2c5f4d45e45be65c3f45299fc741fc49f436ee4001ce0b89ba389c0e050722"
+    },
+    {
+      "id": "kanton/TG/632.1/art_5",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Gebühren kann ein angemessener Vorschuss oder eine Sicherstellung verlangt werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "f6070016002e7e1ae3159b01605d4f52bb64bca9239c862ae969d9e716694d6a"
+    },
+    {
+      "id": "kanton/TG/632.1/art_6",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Rechtskräftig festgesetzte Gebühren können vom zuständigen Departement erlassen oder gestundet werden, soweit ihre Bezahlung für den Schuldner unmöglich ist oder eine grosse Härte bedeuten würde."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "9a828571d6a664f22dd27cb353174d86a29f7f875980df533eb6c32a37114765"
+    },
+    {
+      "id": "kanton/TG/632.1/art_7",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat legt die Kanzleigebühren fest."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "a62dde64f898b2998d1c28064332540ad10494d1bcdf2db918c67dbb9c8220cd"
+    },
+    {
+      "id": "kanton/TG/632.1/art_8",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren werden in der Regel bei Abschluss eines Grundbuch- oder Notariatsgeschäftes für alle Verrichtungen gesamthaft festgelegt."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "2a2539f4a5339acb1ba566dea434f30f59a4a31d9e2c5e0bdd8f1440a253c5ce"
+    },
+    {
+      "id": "kanton/TG/632.1/art_10",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren werden aufgrund der Vertragssumme berechnet. Als Vertragssumme gilt der Gesamtbetrag aller dem Veräusserer aus Grundeigentum zufliessenden oder zu seinen Gunsten vom Erwerber an Dritte zu erbringenden Leistungen. Inbegriffen sind sämtliche mit der Handänderung verbundenen Sonderentschädigungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Kann nicht auf eine Vertragssumme abgestellt werden oder liegt dieser Wert wesentlich unter dem Verkehrswert des Grundstücks, wird der Gebührenberechnung der Steuerwert zu Grunde gelegt."
+        },
+        {
+          "absatz": "3",
+          "text": "Fehlt auch ein Steuerwert, ist die Gebühr entsprechend dem Umfang und der Bedeutung des Rechtsgeschäftes festzulegen."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Tauschgeschäften werden die Gebühren aufgrund des Wertes sämtlicher beteiligter Grundstücke erhoben."
+        },
+        {
+          "absatz": "5",
+          "text": "Bei freiwilligen Versteigerungen oder bei Zwangsvollstreckungen erfolgt die Berechnung aufgrund des Zuschlagspreises."
+        },
+        {
+          "absatz": "6",
+          "text": "Erfasst eine öffentliche Urkunde mehrere Rechtsgeschäfte, bemisst sich die Beurkundungsgebühr nach dem Hauptgeschäft."
+        },
+        {
+          "absatz": "7",
+          "text": "Bei richterlichem Urteil sind die darin festgesetzten Bewertungen und Gegenleistungen für die Gebührenberechnung massgebend."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "65d6f2ed4197c54919eabb480921407452d6683fd251c47adf375a83630ff4e5"
+    },
+    {
+      "id": "kanton/TG/632.1/art_11",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren sind nach dem Gesamtwert des Bodens und aller Bauten zu berechnen, soweit keine Trennung zwischen Boden und Bauten durch Baurecht nachgewiesen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Führt die Aufnahme oder Löschung eines Baurechtes zur Eigentumsänderung an Bauten, ist diese der Handänderung gleichgestellt."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird vor oder mit dem Kauf des Landes ein Werkvertrag über ein darauf zu erstellendes schlüsselfertiges Gebäude abgeschlossen, werden die Gebühren vom Gesamtwert erhoben, sofern der Verkäufer des Bodens der Unternehmer aus dem Werkvertrag ist."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "dc481041791ae868204558430b5090800b156a0fe4e53c50012de1167db99fb7"
+    },
+    {
+      "id": "kanton/TG/632.1/art_12",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Treffen die Parteien keine Vereinbarung, sind die Gebühren vom Erwerber zu bezahlen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Pfandschuldner bezahlt die Gebühren für die Errichtung oder Änderung eines Grundpfandrechtes."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "a755ead964223dc30aaed5907af3ae142d8c609589e468019e06aa31c2b6bc98"
+    },
+    {
+      "id": "kanton/TG/632.1/art_13",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In folgenden Fällen wird keine Handänderungsgebühr erhoben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "...;"
+            },
+            {
+              "marke": "2",
+              "text": "Bodenverbesserungen gemäss Meliorationsgesetz;"
+            },
+            {
+              "marke": "3",
+              "text": "Tauschgeschäfte zur Arrondierung oder Strukturverbesserung landwirtschaftlicher Heimwesen, soweit keine Aufgelder bezahlt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Vom Kanton werden keine Gebühren erhoben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "5b034206940db017fcba36d508781ea4ba794ce3074ef6cf5792e03437e35efa"
+    },
     {
       "id": "kanton/TG/632.1/art_14",
       "ebene": "kanton",
@@ -118,9 +404,203 @@
       ],
       "stand": "2016-01-01",
       "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
       "sha": "4ed103eabad726eae5a9ac3abd40de520f4de4f6729c731efe66a6e7f53673cd"
+    },
+    {
+      "id": "kanton/TG/632.1/art_16",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für öffentliche Beurkundungen werden Gebühren von mindestens Fr. 200 bis höchstens Fr. 10'000 pro Geschäft erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren werden innerhalb dieses Rahmens nach Arbeits- und Zeitaufwand sowie nach der Bedeutung des Geschäfts bemessen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist mit dem Geschäft eine besondere Verantwortung verbunden, können die Gebühren angemessen erhöht werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "8458af6a634be0d3d882ec5fc11d5277c4860f1d0e3806a507c771f8c031f752"
+    },
+    {
+      "id": "kanton/TG/632.1/art_17",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Kassengeschäfte und die Aufbewahrung von Wertsachen wird eine Gebühr von 1 ‰ des Wertes erhoben, mindestens Fr. 200, höchstens Fr. 2'000."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "fb828f5dcf3f3d50de251fb2e419751f445ab40e8b3c784f3f27b8c7918cc2d1"
+    },
+    {
+      "id": "kanton/TG/632.1/art_18",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Aufnahme von öffentlichen Inventaren wird eine Gebühr nach Zeitaufwand im Rahmen von Fr. 1'000 bis Fr. 10'000 erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Aufnahme von amtlichen Inventaren wird eine Gebühr nach Zeitaufwand im Rahmen von Fr. 500 bis Fr. 5'000 erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Durchführung von Erbteilungen, amtlichen Teilungen und amtlichen Liquidationen werden Gebühren von mindestens Fr. 2'000 bis höchstens Fr. 40'000 wie folgt erhoben: - 1 % der Nachlassaktiven, jedoch - mindestens Fr. 200 bis höchstens Fr. 400 pro aufgewendeter Stunde."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Erbschaftsverwaltungen werden Gebühren von mindestens Fr. 1'000 bis höchstens Fr. 20'000 wie folgt erhoben: - 0.5 % der Nachlassaktiven, jedoch - mindestens Fr. 200 bis höchstens Fr. 400 pro aufgewendeter Stunde."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die einfache Mitwirkung bei der Teilung, für einfache Teilungsvorschläge, für einfache Erbschaftsverwaltungen sowie für Siegelungen der Erbschaft werden Gebühren nach dem Zeitaufwand im Rahmen von Fr. 500 bis Fr. 5'000 erhoben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "c3749c7386499be7c30fcef4fa4a0a00c6ad16982c23a1718ea1642729eb6536"
+    },
+    {
+      "id": "kanton/TG/632.1/art_18_a",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "18_a",
+      "artikelLabel": "§ 18a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Durchführung von Versteigerungen wird eine Gebühr nach Zeitaufwand im Rahmen von Fr. 1'000 bis Fr. 10'000 erhoben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "45fce4117f4cb7f584da7b816edccbd967ad1553fff617fc49c8940769992a1a"
+    },
+    {
+      "id": "kanton/TG/632.1/art_19",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat legt die Gebühren für weitere Notariatsgeschäfte fest. Diese dürfen Fr. 2'000 je Geschäft nicht überschreiten."
+        },
+        {
+          "absatz": "2",
+          "text": "Er legt Stundenansätze fest."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "8bc845d3d0e003e172e0e3ae58024133df79ea5963c562e16a77be13b12a78d8"
+    },
+    {
+      "id": "kanton/TG/632.1/art_20",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mit Busse wird bestraft, wer vorsätzlich oder fahrlässig",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bewirkt, dass eine Gebührenerhebung ganz oder teilweise zu Unrecht unterbleibt;"
+            },
+            {
+              "marke": "2",
+              "text": "einen ungerechtfertigten Gebührenerlass erwirkt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Busse entspricht in der Regel der hinterzogenen Gebühr. Sie kann bei leichtem Verschulden bis auf einen Drittel ermässigt, bei schwerem Verschulden bis auf das Dreifache erhöht werden."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "38988ddc9a7b925d71e70c5180f782637c28b64c44092e50e8bccaa0ddc737c2"
+    },
+    {
+      "id": "kanton/TG/632.1/art_21",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "§ 14 bis § 27 der Verordnung des Grossen Rates über die Gebühren der kantonalen Verwaltungsbehörden vom 16. Dezember 1992 werden aufgehoben."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "0f54039f35d721290afbe39e85033db71dc8da0bccaa5d1260a12f0e84f90dc7"
+    },
+    {
+      "id": "kanton/TG/632.1/art_22",
+      "ebene": "kanton",
+      "quelle": "TG",
+      "erlass": "GGG (RB 632.1)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz tritt auf einen durch den Regierungsrat zu bestimmenden Zeitpunkt in Kraft."
+        }
+      ],
+      "stand": "2016-01-01",
+      "quelleUrl": "https://www.rechtsbuch.tg.ch/app/de/texts_of_law/632.1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "a732ad83861462f7a2494c164f7893ae",
+      "sha": "fb0ccfcf7c88867eab6fbac1d1ff9db6e2f4da9a6af134bf4e2822c0aa5dd8bc"
     }
   ]
 }

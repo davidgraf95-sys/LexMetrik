@@ -1,6 +1,97 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/ZH/215.3/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung regelt die von den Justizbehörden festzusetzenden Vergütungen für die Parteivertretung durch Anwältinnen und Anwälte vor den Schlichtungsbehörden, den Zivilgerichten und den Strafbehörden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vergütung setzt sich aus der Gebühr und den notwendigen Auslagen zusammen."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "065ad35414338444dd823392bb58957bb095aa457e2302cfd5b03934a4e3f5ce"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Grundlage für die Festsetzung der Gebühr bilden",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Zivilprozess: Streitwert bzw. Interessewert,"
+            },
+            {
+              "marke": "b",
+              "text": "im Strafprozess: Bedeutung des Falls,"
+            },
+            {
+              "marke": "c",
+              "text": "die Verantwortung der Anwältin oder des Anwalts,"
+            },
+            {
+              "marke": "d",
+              "text": "notwendiger Zeitaufwand der Anwältin oder des Anwalts,"
+            },
+            {
+              "marke": "e",
+              "text": "Schwierigkeit des Falls."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei einem offensichtlichen Missverhältnis zwischen dem Streitwert und dem notwendigen Zeitaufwand der Vertretung wird die gemäss Verordnung berechnete Gebühr entsprechend erhöht oder herabgesetzt."
+        },
+        {
+          "absatz": "3",
+          "text": "In Strafverfahren gilt die Regel von Abs. 2 sinngemäss."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "126cbe8b8650473a025a22c487ae6a60d8e71529882a2f398e9b2ec8c3d38c1f"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Richtet sich die Gebühr nach dem Zeitaufwand, beträgt sie in der Regel Fr. 150 bis Fr. 350 pro Stunde, für unentgeltliche oder amtliche Rechtsvertretungen in der Regel Fr. 220 pro Stunde."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "244d8fdc85151e1d0929798510057205ad29134a6a5f76b1847b13cbdc7eb895"
+    },
     {
       "id": "kanton/ZH/215.3/art_4",
       "ebene": "kanton",
@@ -24,9 +115,570 @@
       ],
       "stand": "2011-01-01",
       "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
       "sha": "692061f091813a67af152fd97a7c30d3d66c8542d450821f9035b584a2719417"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei nicht vermögensrechtlichen Streitigkeiten wird die Grundgebühr nach der Verantwortung und dem notwendigen Zeitaufwand der Anwältin oder des Anwalts und nach der Schwierigkeit des Falls festgesetzt. Sie beträgt in der Regel Fr. 1400 bis Fr. 16 000."
+        },
+        {
+          "absatz": "2",
+          "text": "Ist im Rahmen von nicht vermögensrechtlichen Streitigkeiten auch über vermögensrechtliche Rechtsbegehren zu entscheiden, die das Verfahren aufwendig gestalten, kann die Grundgebühr bis zum Betrag erhöht werden, der für den Entscheid über die vermögensrechtlichen Rechtsbegehren allein zu erheben wäre."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "f8a76ca96e0519dab3af0d6ae9f200ee861e74c085d72399601144f32d7667f5"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_6",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In Scheidungsverfahren nach Art.274–294 ZPO wird die Grundgebühr gemäss §5 festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die vorprozessualen Bemühungen werden angemessen berücksichtigt."
+        },
+        {
+          "absatz": "3",
+          "text": "In Eheschutzsachen kann die nach Abs. 1 und 2 bestimmte Gebühr in der Regel auf einen Drittel bis zwei Drittel ermässigt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Abs. 1–3 gelten sinngemäss für Prozesse über eingetragene Partnerschaften."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "0aeb585a46bc50b5630b34438027371492b2317579c264bf229a3c513df54656"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_7",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Grundgebühr für die Vertretung im Verfahren der fürsorgerischen Freiheitsentziehung beträgt in der Regel Fr. 100 bis Fr. 2000."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "6c99195252ed1db50523dbb94e603c1ad9bcede4fcda6c2cd726e21accfb93a8"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_8",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Vertretung mehrerer Klientinnen und Klienten im gleichen Verfahren wird die Gebühr entsprechend der dadurch verursachten Mehrarbeit erhöht."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "47958c9043f65a435db3a8e70d084711678fddaf2d3df38b1cb4661037445eef"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_9",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im summarischen Verfahren wird die Gebühr in der Regel auf zwei Drittel bis einen Fünftel ermässigt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "e9a57a46bd78280d05434e0f75420107b4ed2bde60c0f5868d85f609d5a26fd0"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_10",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr wird in der Regel auf zwei Drittel bis einen Fünftel ermässigt für:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zwischenentscheide im Sinne von Art. 237 ZPO,"
+            },
+            {
+              "marke": "b",
+              "text": "prozessleitende Verfügungen, für die Gerichtsgebühren festgesetzt werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Ablehnungsverfahren, Berichtigungs- und Erläuterungsbegehren beträgt die Gebühr Fr. 200 bis Fr. 10 000."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "5da7102391bf6b17b66cd5c49856e43778eb7453ae0b38606c6c742f4a1427e2"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_11",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Anspruch auf die Gebühr entsteht mit der Erarbeitung der Begründung oder Beantwortung der Klage oder des Rechtsmittels. Die Gebühr deckt auch den Aufwand für die Teilnahme an der Hauptverhandlung ab."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Teilnahme an zusätzlichen Verhandlungen und für weitere notwendige Rechtsschriften wird ein Einzelzuschlag von je höchstens der Hälfte der Gebühr nach Abs.1 bzw. nach §13 oder ein Pauschalzuschlag berechnet."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Summe der Einzelzuschläge bzw. der Pauschalzuschlag beträgt"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "5489b0af6227b4321b3498d16fa226670071431c0c530cae58cb4e65be9c6884"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_12",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Bei Beendigung der Parteivertretung während des hängigen Verfahrens gilt §11 sinngemäss."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Übernahme der Vertretung nach Einleitung des Verfahrens ist die Gebühr entsprechend der Verminderung des Zeitbedarfs herabzusetzen."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Vertretung erst vor einer Rechtsmittelinstanz übernommen, kann von der Gebührenherabsetzung nach §13 Abs. 1 und 2 abgesehen werden."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "f3c4d770730bd8bb86cb274556484fecacc32d1e515b500faf09101cb3dc028d"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_13",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "4",
+          "text": "Hat eine Partei ihre Vertretung eingehend über den Fall informiert (Instruktion) und wird der Prozess in der Folge durch Vergleich, Rückzug oder Anerkennung erledigt, wird die Gebühr auf die Hälfte bis einen Viertel herabgesetzt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "58584f5cc765c155cf4ad7d9c7b848387acb43075f1fa7cf5b6576702129f273"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_14",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Entscheidet die Revisionsinstanz in der Sache neu, gelten die Ansätze des ursprünglichen Verfahrens."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein Revisionsbegehren abgewiesen, wird die Gebühr auf einen bis zwei Drittel herabgesetzt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "620ef932e80c73b63af07c6cc2148e6ecb96b0332a3a462c36f81c20cd80ce6a"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_15",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In Gerichtsverfahren, bei denen das staatliche Gericht in einer Schiedssache mitwirkt, beträgt die Grundgebühr in der Regel Fr. 50 bis Fr. 16 000."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr wird auf zwei Drittel bis einen Fünftel herabgesetzt",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei vorsorglichen und sichernden Massnahmen nach Art. 374 ZPO und Art. 183 Abs. 2 des Bundesgesetzes vom 17. September 1987"
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "über das Internationale Privatrecht,",
+          "items": [
+            {
+              "marke": "b",
+              "text": "für Anerkennungs- und Vollstreckungsverfahren nach dem Übereinkommen vom 10. Juni 1958 über die Anerkennung und Vollstreckung ausländischer Schiedssprüche (New Yorker Abkommen)."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "In Rechtsmittelverfahren gegen Schiedsurteile richtet sich die Grundgebühr nach §§4 oder 5."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "6ac2ef7817873f2a9fc2cde9c2ffa57a4b828127598bb6ae71081483aafceb9d"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_16",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Vorverfahren nach Art.299 ff. St PObemisst sich die Gebühr nach dem notwendigen Zeitaufwand der Vertretung. Es gelten"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "619c58208b706f9b6900e278089d1d89c2fb6c959b2781a92fab8b1ee0435825"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_17",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für die Führung eines Strafprozesses einschliesslich Vorbereitung des Parteivortrags und Teilnahme an der Hauptverhandlung beträgt die Grundgebühr in der Regel:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor den Einzelgerichten Fr. 600 bis Fr. 8000,"
+            },
+            {
+              "marke": "b",
+              "text": "vor den Bezirksgerichten Fr. 1000 bis Fr. 28 000."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Grundgebühr werden Zuschläge berechnet:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für jede zusätzliche Verhandlung (Vorverhandlung, Vergleichsverhandlung, vorgängige Beweiserhebung),"
+            },
+            {
+              "marke": "b",
+              "text": "für jede weitere notwendige Rechtsschrift,"
+            },
+            {
+              "marke": "c",
+              "text": "für über den ersten Tag hinausgehende Verhandlungstage, wie Ergänzungs- oder Beweisverhandlungen."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "§11 Abs. 2 und 3 sind analog anwendbar."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "5b7600e19f1c19bb4ca5723ab5c709c249b782705c7eaf4f6e599eb770504eec"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_18",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Berufungsverfahren wird die Gebühr grundsätzlich nach den für die Vorinstanz geltenden Regeln bemessen. Dabei wird auch berücksichtigt, ob das Urteil vollumfänglich oder nur teilweise angefochten worden ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind im Berufungsverfahren nur privatrechtliche Ansprüche strittig, die adhäsionsweise geltend gemacht worden sind, richtet sich die"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "2316029d848f9473da359f76fc0fbca6d75a8573e27ef5526c062e55f476332b"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_19",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Beschwerdeverfahren beträgt die Gebühr Fr. 300 bis Fr. 12 000."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind Kostenauflage, Entschädigungsansprüche oder die Einziehung verwertbarer Sach- oder Barwerte Gegenstand der Beschwerde,"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "7fcb7da7219103ebdb65abd94ef43156df63871ebbeb98db2cfe5b0795b99df1"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_20",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Im Revisionsverfahren beträgt die Gebühr Fr. 300 bis Fr. 12 000."
+        },
+        {
+          "absatz": "2",
+          "text": "Entscheidet die Revisionsinstanz in der Sache neu, gelten die Ansätze für das ursprüngliche Verfahren."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "4490eacb1ac0d74ae49f4d5a5baf23c0678e87e36c290be089a1888e56ee6cd1"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_21",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In Verfahren der Justizverwaltung bemisst sich die Gebühr nach dem notwendigen Zeitaufwand der Vertretung. Es gelten die"
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "12f88caa35a4657d58019218f65f0552d4497486a05fe28786ef26508ab6adfb"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_22",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Notwendige Auslagen sind namentlich bezahlte Gerichtskosten, Reisespesen, Porti, Kosten für Telekommunikation und Fotokopien."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Rechnungsstellung wird nicht entschädigt."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "0b8dc29d5d2c2bc6a34c47185cbb9e5e51ef429f22f803e47244bcc18d93ca75"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_23",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Gebühr für die unentgeltliche Rechtsbeiständin oder den unentgeltlichen Rechtsbeistand oder die amtliche Verteidigung berechnet sich nach dieser Verordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie wird festgesetzt, nachdem die Anwältin oder der Anwalt dem Gericht oder der Strafverfolgungsbehörde eine Aufstellung über den Zeitaufwand und die Auslagen vorgelegt hat. Mit dieser Aufstellung kann ein Antrag zur Höhe der beanspruchten Vergütung verbunden werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Akontozahlungen können in begründeten Fällen ausgerichtet werden."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "a73b5b3eb2d844a192644ab8702bf099bf910105ed6c08dda03ac633787932d1"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_24",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Verordnung über die Anwaltsgebühren vom 21.Juni 2006 wird unter Vorbehalt von §25 aufgehoben."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "bba71fdd7aaeebffc6ae6f7afe08978bd907d6507c3505956e53b52d8012d99c"
+    },
+    {
+      "id": "kanton/ZH/215.3/art_25",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Anwaltsgebühren (AnwGebV) (LS 215.3)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Finden auf ein Verfahren weiterhin die Bestimmungen des kantonalen Prozessrechts Anwendung, gilt die bisherige Anwaltsgebührenverordnung. Übergangsbestimmung zur Änderung vom 4. Dezember 2013 (OS 69, 473) Der Stundenansatz gemäss § 3 zweiter Halbsatz gilt für Aufwendungen, die nach dem Inkrafttreten der Verordnungsänderung erfolgen."
+        },
+        {
+          "absatz": "1",
+          "text": "OS 65, 898; Begründung siehe ABl 2010, 2007."
+        },
+        {
+          "absatz": "2",
+          "text": "Inkrafttreten: 1. Januar 2011."
+        },
+        {
+          "absatz": "3",
+          "text": "LS 215.1."
+        },
+        {
+          "absatz": "4",
+          "text": "SR 272."
+        },
+        {
+          "absatz": "5",
+          "text": "SR 291."
+        },
+        {
+          "absatz": "6",
+          "text": "SR 312.0."
+        },
+        {
+          "absatz": "7",
+          "text": "SR 0.277.12."
+        },
+        {
+          "absatz": "8",
+          "text": "Fassung gemäss B vom 4.Dezember 2013 (OS 69, 473;ABl 2013-12-20). In Kraft seit 1. Januar 2015."
+        }
+      ],
+      "stand": "2011-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-215_3-2010_09_08-2011_01_01-087.html",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "beb8803af02d48acc1871201da6445cc8e8f089031936b47346235d3ca24cb29",
+      "sha": "34e6ee69f4e36fbb2d26b9398b71923f7c6aa5f056b1fef19fedd062b554b25b"
     }
   ]
 }

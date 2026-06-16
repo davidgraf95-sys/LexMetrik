@@ -1,28 +1,36 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
     {
-      "id": "kanton/GR/320.210/art_3",
+      "id": "kanton/GR/320.210/art_1",
       "ebene": "kanton",
       "quelle": "GR",
       "erlass": "VGZ (BR 320.210)",
-      "artikel": "3",
-      "artikelLabel": "Art. 3",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "In Angelegenheiten, welche im ordentlichen Verfahren beurteilt werden, erhebt das Gericht eine Entscheidgebühr von 3000 bis 30 000 Franken."
+          "text": "Die Beanspruchung der richterlichen Behörde wird durch eine Pauschale gemäss dieser Verordnung abgegolten. Hinzu kommen die Kosten für die Beweisführung, für Übersetzungen und für die Vertretung des Kindes."
         },
         {
           "absatz": "2",
-          "text": "In besonders aufwendigen Verfahren kann eine Entscheidgebühr bis 100 000 Franken erhoben werden."
+          "text": "In Verfahren mit besonders geringem Aufwand können die richterlichen Behörden eine reduzierte Gebühr erheben oder auf die Erhebung einer Gebühr verzichten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kostenpflicht für Übersetzungen zwischen mehreren Amtssprachen einer richterlichen Behörde richtet sich nach den Bestimmungen des Sprachengesetzes des Kantons Graubünden."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Aufwendungen nach Abschluss des Verfahrens gilt Artikel 12 der Verordnung über die Kosten in Verwaltungsverfahren."
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "b75e59824b1880c545046bfee4830b10",
-      "sha": "ba2d847d2a03f07936662c51ea8ccf7107a9aed23195a686946c555eeb57361b"
+      "sha": "3d09fd030b53d503016735daaee15170b264f36e358f75f85dcff95a720d9c31"
     },
     {
       "id": "kanton/GR/320.210/art_2",
@@ -47,9 +55,400 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "b75e59824b1880c545046bfee4830b10",
       "sha": "f7888b437972d5b1d0e1565a7efeb5e29777a6c476e980b87b69baddb54be981"
+    },
+    {
+      "id": "kanton/GR/320.210/art_3",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Angelegenheiten, welche im ordentlichen Verfahren beurteilt werden, erhebt das Gericht eine Entscheidgebühr von 3000 bis 30 000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In besonders aufwendigen Verfahren kann eine Entscheidgebühr bis 100 000 Franken erhoben werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "ba2d847d2a03f07936662c51ea8ccf7107a9aed23195a686946c555eeb57361b"
+    },
+    {
+      "id": "kanton/GR/320.210/art_4",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Angelegenheiten, welche von der Einzelrichterin oder dem Einzelrichter im vereinfachten Verfahren beurteilt werden, beträgt die Entscheidgebühr 1000 bis 8000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Erfolgt in Angelegenheiten des vereinfachten Verfahrens die Beurteilung durch das Kollegialgericht, beträgt die Entscheidgebühr 3000 bis 8000 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "In besonders aufwendigen Verfahren kann die Entscheidgebühr bis zum Zweifachen der Höchstgebühr erhöht werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "cee3ea7ed0c1a0a67299271e2bee293070fcd36354dba4ef306266c71efd7bb9"
+    },
+    {
+      "id": "kanton/GR/320.210/art_5",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In summarischen Verfahren vor der Einzelrichterin oder dem Einzelrichter beträgt die Entscheidgebühr 100 bis 5000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In besonders aufwendigen Verfahren kann die Gebühr bis zum Zweifachen der Höchstgebühr erhöht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben die Bestimmungen der Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "233d7ecaee72b7932a5e41f24842e7e66212b2cd68505e3cc7307cdcd9bfb4f7"
+    },
+    {
+      "id": "kanton/GR/320.210/art_6",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei besonderen eherechtlichen Verfahren, Kinderbelangen in familienrechtlichen Angelegenheiten und Verfahren bei eingetragener Partnerschaft erhebt die Einzelrichterin oder der Einzelrichter eine Entscheidgebühr von 1000 bis 5000 Franken. Davon ausgenommen sind die summarischen Verfahren."
+        },
+        {
+          "absatz": "2",
+          "text": "Erfolgt die Beurteilung durch das Kollegialgericht, beträgt die Entscheidgebühr 3000 bis 8000 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "In besonders aufwendigen Verfahren kann die Gebühr bis zum Zweifachen der Höchstgebühr erhöht werden."
+        },
+        {
+          "absatz": "4",
+          "text": "In Verfahren wegen Widerhandlungen gegen gerichtliche Verbote beträgt die Entscheidgebühr 100 bis 1000 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "79882fdc3560173023dda767d700d485136ca687a83cb5b29a0daba7aae8f735"
+    },
+    {
+      "id": "kanton/GR/320.210/art_7",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Verfahren durch Vergleich, Anerkennung oder Rückzug beendet oder wird es aus anderen Gründen gegenstandslos, wird eine reduzierte Entscheidgebühr erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entscheidgebühr wird um höchstens die Hälfte ermässigt, wenn die Parteien nach Eröffnung des Entscheids im Dispositiv keine Begründung verlangen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "ab6f59c3b1078f5d8acccdfd5c9f309c0d5f287da8dd06f605db8345ed87cfb2"
+    },
+    {
+      "id": "kanton/GR/320.210/art_8",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Erledigung gemäss Artikel 70 Absatz 3 des Gerichtsorganisationsgesetzes kann die Entscheidgebühr herabgesetzt werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "7d8316c87ddf40b759a5c93c2cf0e0b2060f47e70c2f6f70d26e750200fdfa32"
+    },
+    {
+      "id": "kanton/GR/320.210/art_9",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für prozessleitende Verfügungen und vorsorgliche Massnahmen mit Kostenauflage beträgt die Entscheidgebühr 100 bis 5000 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "eaa3dde1b87ec8d80da83a0cf9771b659746408bbe49129918cd6057bb8fcb88"
+    },
+    {
+      "id": "kanton/GR/320.210/art_10",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Angelegenheiten, in denen das Obergericht als einzige kantonale Instanz entscheidet, beträgt die Entscheidgebühr 1000 bis 30 000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In Fällen mit einzelrichterlicher Kompetenz beträgt die Entscheidgebühr 1000 bis 15 000 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "42842f6eb0c67d0b3da2bf09c152e034c17cdff798724422bb7e09075481adb1"
+    },
+    {
+      "id": "kanton/GR/320.210/art_11",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entscheidet das Obergericht als Kollegialgericht in Berufungsverfahren, erhebt es eine Entscheidgebühr von 1000 bis 30 000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In Fällen mit einzelrichterlicher Kompetenz beträgt die Entscheidgebühr 1000 bis 15 000 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "e7cea8aab62613555db57cf4de5b355547ba003ec0619d6aa4f8e5d075b82ae4"
+    },
+    {
+      "id": "kanton/GR/320.210/art_12",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entscheidet das Obergericht als Kollegialgericht in Beschwerdeverfahren, beträgt die Entscheidgebühr 500 bis 8000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "In Fällen mit einzelrichterlicher Kompetenz beträgt die Entscheidgebühr 500 bis 4000 Franken."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben die Bestimmungen der Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "8713831876631a2dccb840ebebd51bcf66a8ffcfe6386a4d7a9347f8858eb964"
+    },
+    {
+      "id": "kanton/GR/320.210/art_13",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In besonders aufwendigen Verfahren kann eine Entscheidgebühr bis 100 000 Franken erhoben werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "1ac45a497e2bf5988dcfe190124e01841ab744dba12e4a920140721add2602b1"
+    },
+    {
+      "id": "kanton/GR/320.210/art_14",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird ein Verfahren durch Vergleich, Anerkennung oder Rückzug beendet oder wird es aus anderen Gründen gegenstandslos, wird eine reduzierte Entscheidgebühr erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entscheidgebühr wird um höchstens die Hälfte ermässigt, wenn die Parteien nach Eröffnung des Entscheids im Dispositiv keine Begründung verlangen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "ab6f59c3b1078f5d8acccdfd5c9f309c0d5f287da8dd06f605db8345ed87cfb2"
+    },
+    {
+      "id": "kanton/GR/320.210/art_15",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Erledigung des Falles im Verfahren gemäss Artikel 38 Absatz 3 des Gerichtsorganisationsgesetzes kann die Entscheidgebühr herabgesetzt werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "ba8aa84c5e3a8e10f4161411e2bdea3079e62a27e8fd61240879d892ee30d2b0"
+    },
+    {
+      "id": "kanton/GR/320.210/art_16",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für prozessleitende Verfügungen und vorsorgliche Massnahmen mit Kostenauflage beträgt die Entscheidgebühr 100 bis 5000 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "eaa3dde1b87ec8d80da83a0cf9771b659746408bbe49129918cd6057bb8fcb88"
+    },
+    {
+      "id": "kanton/GR/320.210/art_17",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Revisionsverfahren werden Entscheidgebühren innerhalb jenes Rahmens erhoben, welcher für den zu revidierenden Entscheid gilt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "bf5dc1b53b8aecf8283e721e44a304cf52cc8bfda1640a8e9643d07cc311c8fe"
+    },
+    {
+      "id": "kanton/GR/320.210/art_18",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Behandlung unbegründeter Erläuterungs- und Berichtigungsgesuche beträgt die Entscheidgebühr 300 bis 2000 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "9d172154c9771956d755221c95f02fee18a213d79d987854945d8b6866fbe741"
+    },
+    {
+      "id": "kanton/GR/320.210/art_19",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "VGZ (BR 320.210)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zeuginnen und Zeugen werden für ihre Einvernahme einschliesslich Hin- und Rückfahrt mit 30 Franken pro Stunde entschädigt."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird ein höherer Erwerbsausfall geltend gemacht, ist dieser von der Zeugin oder vom Zeugen nachzuweisen. Die Entschädigung beträgt höchstens 500 Franken pro Tag."
+        },
+        {
+          "absatz": "3",
+          "text": "Die gleichen Ansätze gelten für schriftliche Auskünfte von Privatpersonen gemäss Artikel 190 der Zivilprozessordnung."
+        },
+        {
+          "absatz": "4",
+          "text": "Den Zeuginnen und Zeugen werden auf Verlangen Spesen gemäss kantonalem Personalrecht ausgerichtet."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/320.210",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "b75e59824b1880c545046bfee4830b10",
+      "sha": "ef73dc466a1b25b1f9905e1c3c6034fcfb4c1644c64240dd8bdebcd5de2deb89"
     }
   ]
 }

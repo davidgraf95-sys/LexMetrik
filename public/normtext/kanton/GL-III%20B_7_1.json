@@ -1,6 +1,402 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/GL/III%20B_7_1/art_1",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt die Grundsätze der Gebührenerhebung sowie die Höhe der Gebühren für Amtshandlungen, Dienstleistungen und Entscheide durch kantonale Behörden, wie sie im schweizerischen und kantonalen Zivilrecht vorgesehen sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren richten sich unter Vorbehalt besonderer Bestimmungen nach dieser Verordnung."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit diese Verordnung keine Regelung enthält, gelten die Bestimmungen der Kostenverordnung und der Personalverordnung sinngemäss."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "eaf4f0bc8ad3690c188532a40fb0698692e486553c42f9a6e7da8e9949e79c74"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_2",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gebühren entrichtet, wer eine amtliche Verrichtung veranlasst oder verursacht hat, eine öffentliche Sache oder Einrichtung benützt oder in einem Erlass als gebührenpflichtig bezeichnet wird."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind für die gleiche amtliche Verrichtung mehrere Personen gebührenpflichtig, haften sie für die Gebühren solidarisch."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "b8b039ca8f501475a5fad3f09afa28341cf86407c7163b64323cedb24448f127"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_3",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Besteht für Gebühren ein Rahmen, werden sie, soweit nicht anders bestimmt, nach dem Arbeits- und Zeitaufwand, der Bedeutung und der Schwierigkeit der Sache sowie nach den in der Angelegenheit auf dem Spiel stehenden vermögensrechtlichen oder sonstigen Interessen bemessen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr darf ausnahmsweise bis auf das Doppelte des jeweils anwendbaren ordentlichen Höchstansatzes erhöht werden, wenn der Aufwand für die gebührenpflichtige Verrichtung besonders gross ist, sie besondere Schwierigkeiten bietet, dringlich ist oder ausserhalb der üblichen Arbeitszeit oder an einem anderen als dem üblichen Ort vorgenommen wird. Die Überschreitung wird begründet."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird die Gebührenhöhe nach festgelegten Grössen berechnet, beispielsweise in Promille eines Ausgangswerts bestimmt, ist die Gebühr herabzusetzen, wenn sie nicht in einem vernünftigen Verhältnis zum Wert der gebührenpflichtigen Leistung steht."
+        },
+        {
+          "absatz": "4",
+          "text": "Gebühren nach Aufwand richten sich nach dem Zeitaufwand und einem Stundenansatz. Ist nichts anderes bestimmt, beträgt der Stundenansatz 120 Franken und ist auch der Einsatz von Gerätschaften und Verbrauchsmaterial abgegolten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "4f177a1fa879b84df5971b8049cd53ea40bb46121d9288991d0d682e0965009f"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_4",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Entstehen der Behörde bei amtlichen Verrichtungen Barauslagen, können sie zusätzlich zu den Gebühren auf die Gebührenpflichtigen überwälzt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Barauslagen umfassen insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Zustellungskosten;"
+            },
+            {
+              "marke": "b",
+              "text": "Kosten für den Beizug verwaltungsexterner Personen wie Sachverständige oder Übersetzerinnen und Übersetzer;"
+            },
+            {
+              "marke": "c",
+              "text": "Entschädigungen für Zeuginnen und Zeugen oder Auskunftspersonen;"
+            },
+            {
+              "marke": "d",
+              "text": "Taggelder und Spesenentschädigungen für Angestellte und für Behördenmitglieder."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Allfällige Mehrwertsteuern werden zu den Gebühren hinzugerechnet."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "15e2da66c1b5d80efc14300bddbd97443275b997311cc07783011145df2fc089"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_5",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gebühren und Barauslagen sind sofort zu bezahlen oder sicherzustellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Behörde kann einen Kostenvorschuss verlangen."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden die Gebühren oder Barauslagen nicht sofort bezahlt oder sichergestellt oder wird der verlangte Kostenvorschuss nicht innert Frist geleistet, so kann die Behörde die Vornahme der Amtshandlung verweigern. Vorbehalten bleiben die unentgeltliche Rechtspflege sowie die Bestimmungen des Verwaltungsrechtspflegegesetzes, der Schweizerischen Strafprozessordnung und der Schweizerischen Zivilprozessordnung."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Bezahlung durch Rechnung tritt die Fälligkeit mit Zustellung der Rechnung ein. Die Zahlungsfrist beträgt 30 Tage."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "0859b09d44b8bfd2cea9faa583732075530747fd1fb19a646879d6459ff95368"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_6",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Rechnung gestellte, nicht bezahlte Beträge werden zum Verzugszinssatz für kantonale Steuern verzinst, auch wenn die Rechnung angefochten ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Verzugszins wird vom Tage nach Ablauf der Zahlungsfrist bis zum Tage des Zahlungseinganges berechnet."
+        },
+        {
+          "absatz": "3",
+          "text": "Geht die Zahlung innert zehn Tagen nach Ablauf der Zahlungsfrist ein oder übersteigt der Verzugszins den Betrag von 20 Franken nicht, wird kein Verzugszins erhoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "50733a9deb94d5d559edd1ec0053e9c32ad5178eb8bd7a8693def816e1488535"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_7",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Rechnung gestellte, zu viel bezahlte Beträge werden zum Vergütungszinssatz für kantonale Steuern verzinst. Kostenvorschüsse werden nicht verzinst."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Vergütungszins wird vom Tage des Zahlungseinganges bis zum Tage der Auszahlung berechnet."
+        },
+        {
+          "absatz": "3",
+          "text": "Eine Zinsvergütung wird nur ausgerichtet, wenn sie zwei Franken übersteigt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "b38778d41196ee5c1e58a1537cf881aca1916b7b0a7dada7adfd7da8b685a5f3"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_8",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf die Erhebung von Gebühren und Barauslagen kann ganz oder teilweise verzichtet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn sie gesamthaft höchstens zehn Franken betragen;"
+            },
+            {
+              "marke": "b",
+              "text": "in Verfahren vor der Kindes- und Erwachsenenschutzbehörde, namentlich aufgrund der wirtschaftlichen Verhältnisse oder in Kindesschutzverfahren."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Zahlung einer verfügten Gebühr innert der vorgeschriebenen Frist für die gebührenpflichtige Person mit einer erheblichen Härte verbunden, können Zahlungserleichterungen gewährt und diese an Bedingungen geknüpft und mit Auflagen verbunden werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Zahlungserleichterungen bestehen in der Stundung des geschuldeten Betrages oder in der Bewilligung von Teilzahlungen. Gebühren können in der Regel auf längstens zwei Jahre gestundet werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Illiquidität können längere Stundungen gewährt und die pfandrechtliche Sicherung angeordnet werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Zahlungserleichterungen können von einer angemessenen Sicherheitsleistung abhängig gemacht werden."
+        },
+        {
+          "absatz": "6",
+          "text": "Gewährte Zahlungserleichterungen werden widerrufen, wenn ihre Voraussetzungen wegfallen oder wenn Bedingungen, an die sie geknüpft sind, nicht erfüllt werden."
+        },
+        {
+          "absatz": "7",
+          "text": "Die verfügten Gebühren können nachträglich ganz oder teilweise erlassen werden, wenn besondere Umstände dies rechtfertigen, namentlich wenn die gebührenpflichtige Person sich in einer Notlage befindet oder die Bezahlung der Gebühr für sie eine grosse Härte bedeuten würde. Erlassgesuche sind schriftlich und begründet einzureichen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "fd6b7f1c0edb4e2149cab3572bcf128756ce52a7dde0415c81b24ce7934c350a"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_9",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Behörde, die Gebühren oder Barauslagen erhebt, stellt Rechnung. Für die Begleichung wird eine Frist gesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Staatskasse ist für das anschliessende Inkasso zuständig."
+        },
+        {
+          "absatz": "3",
+          "text": "Nach Ablauf der Zahlungsfrist werden die Gebührenpflichtigen gemahnt. Die erste Mahnung ist unentgeltlich. Ab der zweiten Mahnung können Mahngebühren erhoben werden. Die Mahngebühren betragen zwischen zehn und 100 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "Für weitere Inkassomassnahmen betragen die Gebühren 20 bis 500 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "3ef16a88ee970ffa3ace2139a48431762bf59087972af001fbb0de9be4ce11da"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_10",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung einer Namensänderung oder einer Adoption beträgt 200 bis 1000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "bc8a4b718871b407b07cd8beed6c905c73d2861531a8158657016dfcef0a6a07"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_11",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Kindes- und Erwachsenenschutz betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Entscheide, je Erlass: 100 bis 300 Fr."
+            },
+            {
+              "marke": "b",
+              "text": "Anhörungen und Augenscheine durch die KESB, je Anhörung oder Augenschein: 100 bis 300 Fr."
+            },
+            {
+              "marke": "c",
+              "text": "Abklärungen durch KESB-Mitglieder oder unterstützende Dienste, je Stunde: 80 Fr."
+            },
+            {
+              "marke": "d",
+              "text": "Prüfung und Abnahme von Inventaren, Rechenschaftsberichten und Rechnungen: 100 bis 5000 Fr."
+            },
+            {
+              "marke": "e",
+              "text": "Ausfertigung von Bescheinigungen, namentlich ​Amtsausweisen und Handlungsfähigkeitszeugnissen, je Exemplar: 30 Fr."
+            },
+            {
+              "marke": "f",
+              "text": "Hinterlegung von Vorsorgeaufträgen, je Person: 50 Fr."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Innerhalb eines Gebührenrahmens richtet sich die Gebühr nach dem Umfang und dem Schwierigkeitsgrad der Verrichtung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "ea674fd583436f58499ce6cfceee3b5fe856f7a32da11b62f2cc9a5f8c4ac68c"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_12",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Erbschaftswesen betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Entscheide, je Erlass: 200 Fr."
+            },
+            {
+              "marke": "b",
+              "text": "Abklärungen, namentlich Nachlasssicherung und Erbenermittlung, je Stunde: 80 Fr."
+            },
+            {
+              "marke": "c",
+              "text": "Ausfertigung von Bescheinigungen, je Exemplar: 30 Fr."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "7fa0c4feebc8640154b712b244c248140391cb8f4d59cf0ebae1fb90bc8b11e2"
+    },
     {
       "id": "kanton/GL/III%20B_7_1/art_13",
       "ebene": "kanton",
@@ -192,9 +588,46 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
       "sha": "51bafda8b93a539f0c6de4eac24a9de0d65052221014d01d4ade567a34886dcc"
+    },
+    {
+      "id": "kanton/GL/III%20B_7_1/art_14",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Gebührentarif ZGB, GebT ZGB (GS III B/7/1)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Beglaubigungen und Bescheinigungen der Staatskanzlei betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Ausstellung einer Überbeglaubigung (Apostille): 35 Fr."
+            },
+            {
+              "marke": "a",
+              "text": "Ausstellung einer Überbeglaubigung (Legalisation): 30 Fr."
+            },
+            {
+              "marke": "a",
+              "text": "Ausstellung einer einfachen Beglaubigung: 25 Fr."
+            },
+            {
+              "marke": "b",
+              "text": "andere Bescheinigungen und Bestätigungen: 20 bis 100 Fr."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III%20B/7/1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "3211018abb5bc64942db2d9391a7a3d9",
+      "sha": "b27d325efaf70e3d25c7885f4c59181c375d70974a16317e7a692a0d8f61a978"
     }
   ]
 }

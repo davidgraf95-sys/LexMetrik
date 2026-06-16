@@ -1,6 +1,48 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/GL/III-A.5/art_1",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten für das Schlichtungsverfahren und den Entscheid (Entscheidgebühr) bemessen sich nach dem Streitwert oder dem sonstigen Interesse der Parteien an der Beurteilung der Angelegenheit sowie nach dem erforderlichen Zeit- und Verwaltungsaufwand."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie werden in Form von Pauschalen festgesetzt, mit Ausnahme der Kosten der Beweisführung, der Übersetzung und der Vertretung des Kindes gemäss den Artikeln 299 f. ZPO."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "91f27f50f94475908f36f340f1957aa748b9760ab67942b3fa2e587f3e083c8d"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_2",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Schlichtungsverfahren beträgt die Pauschalgebühr 100 bis 800 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "6e262bc7f1322a959a2c4690fcff942b91b89eb9c9fef770808262ca1aadee24"
+    },
     {
       "id": "kanton/GL/III-A.5/art_3",
       "ebene": "kanton",
@@ -54,28 +96,330 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
       "sha": "0d36defec2a6c907ffdcbe40b8ffa15143ae303f802d68d63d0aa3c20eaebb0a"
     },
     {
-      "id": "kanton/GL/III-A.5/art_2",
+      "id": "kanton/GL/III-A.5/art_4",
       "ebene": "kanton",
       "quelle": "GL",
       "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
-      "artikel": "2",
-      "artikelLabel": "Art. 2",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Im Schlichtungsverfahren beträgt die Pauschalgebühr 100 bis 800 Franken."
+          "text": "Für die Einreichung und Hinterlegung einer Schutzschrift beträgt die Pauschalgebühr 100 bis 1000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Leitet die Gegenpartei innert sechs Monaten das entsprechende Verfahren ein, wird die Gebühr für die Schutzschrift an die Pauschalgebühr für das Verfahren angerechnet."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
-      "sha": "6e262bc7f1322a959a2c4690fcff942b91b89eb9c9fef770808262ca1aadee24"
+      "sha": "0d81a79bfb1f6359e852ec1ffcdd8881148e737919af0d49fe8ee94000904587"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_5",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtsgebühr für die Mitwirkung in Schiedssachen beträgt pauschal 500 bis 20'000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Rechtsmittelverfahren gegen Schiedsurteile, bei vorsorglichen und sichernden Massnahmen nach Artikel 183 Absatz 2 des Bundesgesetzes über das Internationale Privatrecht sowie im Anerkennungs- und Vollstreckungsverfahren nach dem New Yorker Übereinkommen über die Anerkennung und Vollstreckung ausländischer Schiedssprüche gelten die ordentlichen Pauschalgebühren für das gerichtliche Verfahren."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "00a1bde6bb4239185fc89a01c40f5018be559d2c8ed17ddbc961f5a32d901fae"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_6",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kosten werden unter Berücksichtigung des Zeit- und des Verwaltungsaufwands und der wirtschaftlichen Verhältnisse der kostenpflichtigen Person im Rahmen nachstehender Beträge festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Für einfache Fälle können Pauschalgebühren festgelegt werden, die auch die Auslagen abgelten."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "19c389e565582946aeca8e5ceda19695778b34b66712f8d5564a0ddb833dba72"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_7",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Strafuntersuchungsverfahren betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erledigung ohne Untersuchungsverfahren:"
+            },
+            {
+              "marke": "b",
+              "text": "bei Durchführung des Untersuchungsverfahrens:"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "1a95d58636abc7fd862004357a8850604457d359a6cdb35cb6d29fa24c3dffb4"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_8",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im erstinstanzlichen Gerichtsverfahren und im Berufungsverfahren vor Obergericht betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erledigung ohne Urteil 100 bis 5000 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Erledigung mit Urteil"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Im Beschwerde- oder Revisionsverfahren vor Obergericht betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Erledigung durch das Gerichtspräsidium 100 bis 5000 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Erledigung in der Besetzung mit mehreren Richtern 300 bis 100'000 Franken."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Im Verfahren vor dem Zwangsmassnahmegericht beträgt die Gebühr 50 bis 5000 Franken."
+        },
+        {
+          "absatz": "4",
+          "text": "Im Verfahren in Jugendstrafsachen beträgt die Gebühr 20 bis 3000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "a6a554d1b7dd147bee4baea51110f39a51a69885810ab0ebba0197942fe19917"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_9",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für andere Entscheide, insbesondere für nachträgliche richterliche Anordnungen, selbstständige Entscheide über Nebenpunkte, sitzungspolizeiliche Massnahmen sowie für besondere Bemühungen, namentlich die Vorlegung oder Zustellung von Akten an private Dritte, beträgt die Gebühr 50 bis 1000 Franken."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "fff111015c09751dbc64d2e637ccf58d3e6f4068e74329cbcd01e81a67a80ac9"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_10",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Voraussetzungen und die Bemessung der Parteientschädigung sowie der unentgeltlichen Rechtspflege richten sich für das Gerichtsverfahren und das Verfahren der Strafverfolgung nach den Verfahrensordnungen des Bundes und den kantonalen Vollzugsbestimmungen hierzu (Art. 76 f. GOG und Art. 20 EG ZPO)."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "692ae174a18d28b9938f5f8e1c85bbd08f4a49cc4ea54d2be4c9bcfc46684de3"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_11",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entschädigung von Zeugen sowie sonstigen Dritten im Gerichtsverfahren richtet sich nach Artikel 75 GOG sowie dem von der Verwaltungskommission der Gerichte erlassenen Zeugentarif."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Regierungsrat regelt die Entschädigung gemäss Absatz 1 im Verfahren der Strafverfolgung; er kann die Tarife der Verwaltungskommission der Gerichte für anwendbar erklären."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "fb46b3a426723c4e917786f91d0074c769d14710bd6a8b6e39dfb084545934de"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_12",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtskasse betreut das Rechnungswesen und vollstreckt alle von den Gerichten auferlegten Prozesskosten (Art. 54 Abs. 2 GOG i. V. m. Art. 19 Abs. 1 EG ZPO)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Schlichtungsbehörden besorgen das Rechnungswesen und die Vollstreckung der von ihnen auferlegten Prozesskosten selbst (Art. 19 Abs. 2 EG ZPO)."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat bestimmt die zuständigen Stellen für das Rechnungswesen und für die Vollstreckung der im Zusammenhang mit der Tätigkeit der Strafverfolgungsbehörden stehenden finanziellen Leistungen (Verfahrenskosten, Geldstrafen, Bussen usw.); er kann diese Aufgabe der Gerichtskasse übertragen (Art. 54 Abs. 2 GOG i. V. m. Art. 22 EG StPO)."
+        },
+        {
+          "absatz": "4",
+          "text": "Die für die Vollstreckung zuständige Stelle kann der kostenpflichtigen Person die Bezahlung der auferlegten Kosten bei dauernder Mittellosigkeit ganz oder teilweise erlassen bzw. stunden; die Kosten können nachträglich eingefordert werden, wenn der kostenpflichtigen Person später die Zahlung zugemutet werden kann."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "eeb5bd9f48d0cbce55a8ca5f5c4add80633220bbec80feceaa8050356a2efdb9"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_13",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die kostenpflichtige Person hat die ihr auferlegten Kosten innert 30 Tagen nach Erhalt der Rechnung zu bezahlen."
+        },
+        {
+          "absatz": "2",
+          "text": "Erfolgt innert dieser Frist keine Zahlung, so setzt die Behörde der säumigen Partei eine Nachfrist von 14 Tagen an, nach deren Ablauf ein Verzugszins von 5 Prozent zu entrichten ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "466217b4915c3f33b6bbe1d2a5e5dd7736fdc86ce5c3d8bd8ff16a500a848571"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_14",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. Januar 2011 in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "3093539823f4b8fc3a48e8c4e551452d98fb0308a0e585d8f2d74e1f4f0f09df"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_15",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Übergangsbestimmungen der Verfahrensordnungen des Bundes (Art. 448 ff. StPO und Art. 404 ff. ZPO) kommen bei der Anwendung dieser Verordnung auf im Zeitpunkt des Inkrafttretens rechtshängige Verfahren sinngemäss zur Anwendung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "ff6992c74134cfcc6e942280971d79e14da4c2c90c0f26ef6bbea3e0c56b5e23"
+    },
+    {
+      "id": "kanton/GL/III-A.5/art_16",
+      "ebene": "kanton",
+      "quelle": "GL",
+      "erlass": "Zivil- und Strafprozesskostenverordnung (GS III A/5)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung vom 12. Februar 1992 über die amtlichen Kosten im Zivil- und Strafprozess wird mit dem Inkrafttreten dieser Verordnung aufgehoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://gesetze.gl.ch/app/de/texts_of_law/III-A.5",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4a9384f7a3fe41cae32e4c3c69a2f24b",
+      "sha": "0c6d70ef56bb4dec54bf3a447e97c507dd75ace49cc20e49bb98b9fe68cd761e"
     }
   ]
 }

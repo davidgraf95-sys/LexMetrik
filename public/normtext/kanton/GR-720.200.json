@@ -1,6 +1,419 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/GR/720.200/art_1",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz regelt die Steuererhebung der politischen Gemeinden sowie der Landeskirchen und deren Kirchgemeinden."
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit dieses Gesetz keine abweichende Regelung enthält, finden die Bestimmungen des kantonalen Steuergesetzes sinngemäss Anwendung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "cdf9f1d3a328c178e55125965d0c94ac955d6698ff053481d4e7b6d6d0514abd"
+    },
+    {
+      "id": "kanton/GR/720.200/art_2",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde erhebt nach den Bestimmungen dieses Gesetzes:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Einkommens- und Vermögenssteuer;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Grundstückgewinnsteuer;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Nach- und Strafsteuer sowie Ordnungsbussen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinde kann nach den Bestimmungen dieses Gesetzes folgende Steuern erheben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Handänderungssteuer;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Liegenschaftensteuer;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Erbschafts- und eine Schenkungssteuer."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gemeinde kann weitere Steuern erheben, wie insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "eine Gästetaxe oder eine Beherbergungsabgabe;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Tourismusförderungsabgabe."
+            }
+          ]
+        },
+        {
+          "absatz": "4",
+          "text": "Die Erhebung einer Quellensteuer und die Besteuerung der juristischen Personen für Gewinn und Kapital steht einzig dem Kanton zu."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "c2606380b05cba48a0b682a2adfa6c4605f3b13be1f202543b36e5b753a9232a"
+    },
+    {
+      "id": "kanton/GR/720.200/art_3",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Landeskirchen und ihre Kirchgemeinden können nach den Bestimmungen dieses Gesetzes eine Einkommens- und Vermögenssteuer in Prozenten der einfachen Kantonssteuer sowie Nach- und Strafsteuern erheben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Erhebung weiterer Steuern ist nicht zulässig."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "9120edb9ae72470c98cafc2d1712d19a0a9863fdc80d5f87f556f6e4528d9292"
+    },
+    {
+      "id": "kanton/GR/720.200/art_4",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde erhebt eine Einkommens- und Vermögenssteuer in Prozenten der einfachen Kantonssteuer. Die Gemeinde legt den Steuerfuss für das nachfolgende Steuerjahr spätestens im Dezember fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Steuersubjekt, Steuerobjekt, Steuersatz und Bemessung der Steuer richten sich nach den Bestimmungen des kantonalen Steuergesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Veranlagung erfolgt zusammen mit der Kantonssteuer durch die Behörden nach kantonalem Steuergesetz. Gleiches gilt für Einsprache-, Rechtsmittel- und weitere Entscheide. Vorbehalten bleiben jene Fälle, in denen lediglich eine kommunale Veranlagung erfolgt."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Steuerbezug fällt in die Zuständigkeit der Gemeinde."
+        },
+        {
+          "absatz": "5",
+          "text": "Veranlagung und Bezug der Aufwandsteuer der Gemeinden fallen in die Zuständigkeit des Kantons."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "59b015d7803867685a016812be456a7a8394eb454367372158c9b7ad063bac4b"
+    },
+    {
+      "id": "kanton/GR/720.200/art_5",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "…"
+        },
+        {
+          "absatz": "2",
+          "text": "Bestehende Fraktionen mit Gebietskörperschaft, die am 1. Januar 2009 eine Einkommens- und Vermögenssteuer erheben, können dies für die Dauer von zehn Jahren weiterhin tun."
+        },
+        {
+          "absatz": "3",
+          "text": "Artikel 4 findet sinngemäss Anwendung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "37520ae04e11158591d9d926b46db6619464b33f25756245a72de3b2259119c6"
+    },
+    {
+      "id": "kanton/GR/720.200/art_6",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde erhebt eine Grundstückgewinnsteuer in der Höhe der Kantonssteuer."
+        },
+        {
+          "absatz": "2",
+          "text": "Steuersubjekt, Steuerobjekt, Steuersatz und Bemessung der Steuer richten sich nach den Bestimmungen des kantonalen Steuergesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Verlustverrechnung und Satzbestimmung sind auf das Gemeindegebiet begrenzt."
+        },
+        {
+          "absatz": "4",
+          "text": "Veranlagung und Steuerbezug erfolgen zusammen mit der kantonalen Grundstückgewinnsteuer durch die Kantonale Steuerverwaltung. Gleiches gilt für Einsprache-, Rechtsmittel- und weitere Entscheide."
+        },
+        {
+          "absatz": "5",
+          "text": "Über Erlassgesuche und administrative Abschreibungen entscheidet die Gemeinde."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "bc9b06705326290f40e2ea298b666196ac6d55c320b08e2d9750b60351165931"
+    },
+    {
+      "id": "kanton/GR/720.200/art_7",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde erhebt eine Handänderungssteuer nach den Bestimmungen dieses Gesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Handänderungssteuer wird erhoben bei Handänderung eines in der Gemeinde gelegenen Grundstücks oder Grundstückanteils."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "e697b1311d8d2dd1a810c9019fa1dbb5faa8097970e2a398444032fe55420c39"
+    },
+    {
+      "id": "kanton/GR/720.200/art_8",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Als Handänderung gilt jede Übertragung der tatsächlichen und wirtschaftlichen Verfügungsgewalt über ein Grundstück."
+        },
+        {
+          "absatz": "2",
+          "text": "Als wirtschaftliche Handänderung gilt insbesondere:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Ausübung des Substitutionsrechts aus einem Kauf- oder Kaufrechtsvertrag, wenn eine Eigentumsübertragung stattfindet;"
+            },
+            {
+              "marke": "b",
+              "text": "die Übertragung von Beteiligungsrechten an einer Immobiliengesellschaft, wenn dadurch der Erwerber allein oder zusammen mit seinem Ehegatten und den minderjährigen Kindern eine Mehrheit der Stimmen erlangt;"
+            },
+            {
+              "marke": "c",
+              "text": "die entgeltliche Belastung von Grundstücken mit privatrechtlichen Dienstbarkeiten oder öffentlich-rechtlichen Eigentumsbeschränkungen, wenn diese den Veräusserungswert der Grundstücke dauernd und wesentlich beeinträchtigen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Einräumung eines Baurechts gegen Einmalentschädigung."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Einbringung eines Grundstücks in eine Personengesellschaft unterliegt der Handänderungssteuer nur insoweit, als die wirtschaftliche Berechtigung ändert."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "befafcf46f95dad48cd148c45f2b602effb71616088177df89665a73286b582f"
+    },
+    {
+      "id": "kanton/GR/720.200/art_9",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Handänderungssteuer sind befreit:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Handänderungen zufolge Erbfolge, Erbteilung, Vermächtnisses, Erbvorbezuges und Schenkung;"
+            },
+            {
+              "marke": "b",
+              "text": "Handänderungen zwischen Eltern und Nachkommen beziehungsweise Schwiegereltern und Schwiegerkindern. Stiefkinder und Pflegekinder sind den leiblichen Kindern gleichgestellt;"
+            },
+            {
+              "marke": "c",
+              "text": "Handänderungen zwischen Ehegatten und zwischen eingetragenen Partnerinnen beziehungsweise Partnern sowie aufgrund güterrechtlicher Auseinandersetzungen;"
+            },
+            {
+              "marke": "d",
+              "text": "Handänderungen zum Zwecke der Güterzusammenlegung, der Abrundung, der rationelleren Bewirtschaftung landwirtschaftlicher Gewerbe, der Quartierplanung, der Grenzbereinigung oder der Umlegung von Bauland;"
+            },
+            {
+              "marke": "e",
+              "text": "Handänderungen zufolge Enteignung oder freiwilliger Abtretung von Grundstücken, an denen ein Enteignungsrecht besteht;"
+            },
+            {
+              "marke": "f",
+              "text": "Handänderungen bei Überbauungen, wenn ein Handwerker Grundeigentum übernehmen muss, welches er innert zwei Jahren seit Abschluss des Kaufvertrages weiterverkauft, ohne es vorher genutzt zu haben;"
+            },
+            {
+              "marke": "g",
+              "text": "Handänderungen, welche beim Erwerb des Grundstücks durch den Pfandgläubiger, den Pfandbürgen oder den Solidarschuldner zu einem Verlust führen;"
+            },
+            {
+              "marke": "h",
+              "text": "Handänderungen bei einer Umstrukturierung, die gemäss kantonalem Steuergesetz einen Steueraufschubtatbestand darstellt."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "0a3a817b365a6472320548bd97a376618986bcd257c346542ba5d2fa3b4710cb"
+    },
+    {
+      "id": "kanton/GR/720.200/art_10",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Steuerpflichtig ist der Erwerber des Grundstücks."
+        },
+        {
+          "absatz": "2",
+          "text": "Beim Tausch von Grundstücken ist jede Vertragspartei für das von ihr erworbene Tauschobjekt steuerpflichtig. Ein allfälliges Aufgeld ist vom Erwerber des wertvolleren Grundstückes zu versteuern."
+        },
+        {
+          "absatz": "3",
+          "text": "Abweichende vertragliche Vereinbarungen werden berücksichtigt, soweit der Veräusserer nicht subjektiv steuerbefreit ist."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "6896999ea1b8f5b7a151d07ae53888f6cc143e9ae2da7447099f9e50d5b95d63"
+    },
+    {
+      "id": "kanton/GR/720.200/art_11",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Von der Handänderungssteuer befreit sind",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Eidgenossenschaft und ihre Anstalten, soweit das Bundesrecht dies vorsieht;"
+            },
+            {
+              "marke": "b",
+              "text": "der Kanton und seine unselbständigen Anstalten;"
+            },
+            {
+              "marke": "c",
+              "text": "die selbständigen kantonalen Anstalten für Grundstücke, die unmittelbar öffentlichen Zwecken dienen;"
+            },
+            {
+              "marke": "d",
+              "text": "die Regionen, die Gemeinden (mit deren Anstalten) und die Bürgergemeinden für Grundstücke im eigenen Gebiet;"
+            },
+            {
+              "marke": "e",
+              "text": "die Landeskirchen und ihre Kirchgemeinden sowie die kirchlichen Stiftungen für Grundstücke im eigenen Gebiet, die unmittelbar kirchlichen Zwecken dienen sowie für die Pfarrhäuser;"
+            },
+            {
+              "marke": "f",
+              "text": "die juristischen Personen, die gestützt auf Artikel 78 Absatz 1 Litera f des kantonalen Steuergesetzes von der Steuerpflicht befreit sind, für Grundstücke, die unmittelbar, ausschliesslich und unwiderruflich dem steuerbefreienden Zweck dienen;"
+            },
+            {
+              "marke": "g",
+              "text": "die Verkehrs- und Infrastrukturunternehmen im Sinne von Artikel 78 Absatz 1 Litera k des kantonalen Steuergesetzes für Liegenschaften, welche der konzessionierten Tätigkeit dienen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "8b6b6e6f9e75c472efbc3938545f736f9ab7b280f17436dcf7d1263652b28fa6"
+    },
     {
       "id": "kanton/GR/720.200/art_12",
       "ebene": "kanton",
@@ -32,9 +445,676 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
       "sha": "9a661087f4f81ef2d71abf6ec8f567821d3bed90fd2c27b0487905fb061c0305"
+    },
+    {
+      "id": "kanton/GR/720.200/art_13",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Erfolgt die Handänderung ohne Grundbucheintrag, hat sie die steuerpflichtige Person dem Gemeindesteueramt innert 30 Tagen mitzuteilen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "61613b2460d0103989db8a2ae7276f8f5d6e0c549e5a7161319449b1cc0f45b1"
+    },
+    {
+      "id": "kanton/GR/720.200/art_14",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Handänderungssteuer wird mittels Veranlagungsverfügung durch die Gemeinde eröffnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Steueranspruch entsteht mit der Handänderung und wird mit der Rechnungstellung fällig."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Steuerbezug fällt in die Zuständigkeit der Gemeinde."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Steuer ist innert 90 Tagen seit Rechnungstellung zu bezahlen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "739838951233b6bddd53a338c019e7fcee30164fe925bc005e042e91a4ef5e4e"
+    },
+    {
+      "id": "kanton/GR/720.200/art_15",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Handänderungssteuer ist gemäss Einführungsgesetz zum Schweizerischen Zivilgesetzbuch grundpfandgesichert."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "e8e479f67cee788b43387bfaef260e737705a43b3f82d30dcaf18f97fa451331"
+    },
+    {
+      "id": "kanton/GR/720.200/art_16",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde erhebt auf den in der Gemeinde gelegenen Grundstücken eine Liegenschaftensteuer nach den Bestimmungen dieses Gesetzes."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "8c3d246a17cb04df824c6f624e885d45107c427ca17a7f02904e660caea37d47"
+    },
+    {
+      "id": "kanton/GR/720.200/art_17",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Steuerpflichtig sind die natürlichen und juristischen Personen, die am Ende des Kalenderjahres Eigentümer oder Nutzungsberechtigte des Grundstücks sind."
+        },
+        {
+          "absatz": "2",
+          "text": "Erbengemeinschaften, einfache Gesellschaften, Kollektiv- und Kommanditgesellschaften sowie andere Personengemeinschaften ohne juristische Persönlichkeit können selbständig besteuert werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Es besteht eine Solidarhaftung des Eigentümers für den Nutzungsberechtigten sowie der Personenunternehmer untereinander."
+        },
+        {
+          "absatz": "4",
+          "text": "Die subjektive Steuerbefreiung richtet sich nach den Bestimmungen über die Handänderungssteuer (Art. 11)."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "76d11e1a919a1471aed9a40a0ff1eeca8f8adff365d5ca20829b48671e37cc17"
+    },
+    {
+      "id": "kanton/GR/720.200/art_18",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde legt den Steuersatz in einem formellen Gesetz fest. Dieser beträgt maximal zwei Promille des Vermögenssteuerwerts am Ende des Kalenderjahres."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "67705343eec8eef11300eb696a0d77688e292a53f55aa2d6b84ba7b98e3bf493"
+    },
+    {
+      "id": "kanton/GR/720.200/art_19",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Liegenschaftensteuer wird zusammen mit der Einkommens- und Vermögenssteuer der Gemeinde beziehungsweise der Gewinn- und Kapitalsteuer von der nach Steuergesetz für die direkten Steuern zuständigen Behörde veranlagt. Die Gemeinde kann im Gemeindesteuergesetz eine abweichende Regelung treffen."
+        },
+        {
+          "absatz": "2",
+          "text": "Wo keine direkten kantonalen oder kommunalen Steuern erhoben werden, erfolgt die Veranlagung durch die Gemeinde."
+        },
+        {
+          "absatz": "3",
+          "text": "Der Steuerbezug fällt in die Zuständigkeit der Gemeinde."
+        },
+        {
+          "absatz": "4",
+          "text": "Fälligkeit und Zahlbarkeit richten sich nach den direkten Steuern, wenn die Liegenschaftensteuer mit diesen erhoben wird. Wird die Liegenschaftensteuer separat erhoben, wird sie mit der Veranlagung und Rechnungstellung fällig und ist innert 30 Tagen zu bezahlen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "081956672360c227bf0806ba31c2ca0b11c0047f8403b2e8bb5b99ccf48bb7d1"
+    },
+    {
+      "id": "kanton/GR/720.200/art_20",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Liegenschaftensteuer ist gemäss Einführungsgesetz zum Schweizerischen Zivilgesetzbuch grundpfandgesichert."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "2b4c7a3f95d2ee4e6b1f5966ac72c8dc5a87d48e44e5d41dbdcfdd697bbfbe80"
+    },
+    {
+      "id": "kanton/GR/720.200/art_21",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde kann eine Erbschafts- und eine Schenkungssteuer erheben."
+        },
+        {
+          "absatz": "2",
+          "text": "Steuersubjekt, Steuerbefreiung, Steuerobjekt, Steueranspruch und Steuerbemessung, Bezug und Haftung der Erbschafts- und der Schenkungssteuer richten sich nach den Bestimmungen des kantonalen Steuergesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        },
+        {
+          "absatz": "4",
+          "text": "Die Bestimmungen des kantonalen Steuergesetzes über die Steuerpflicht finden analoge Anwendung. Für Preise und Ehrengaben des Kantons liegt die Steuerhoheit bei der Wohnsitzgemeinde des Empfängers. Hat dieser seinen Wohnsitz ausserhalb des Kantons, fällt der Steuerertrag an die Stadt Chur."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Gemeinde legt die Steuersätze in einem formellen Gesetz fest. Diese betragen maximal:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "5 Prozent: für den elterlichen Stamm;"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            },
+            {
+              "marke": "c",
+              "text": "25 Prozent: für die übrigen Begünstigten."
+            }
+          ]
+        },
+        {
+          "absatz": "6",
+          "text": "Veranlagung und Steuerbezug erfolgen zusammen mit der kantonalen Erbschaftssteuer und der kantonalen Schenkungssteuer durch die kantonale Steuerverwaltung. Gleiches gilt für Einsprache-, Rechtsmittel- und weitere Entscheide."
+        },
+        {
+          "absatz": "7",
+          "text": "Über Erlassgesuche und administrative Abschreibungen entscheidet die Gemeinde."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "feac0a9ec7698cea4095f474c0e7406f489af26687e7cbe9866c4b02da20c6c9"
+    },
+    {
+      "id": "kanton/GR/720.200/art_22",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde kann eine Gästetaxe erheben."
+        },
+        {
+          "absatz": "2",
+          "text": "Steuerobjekt ist die Übernachtung, Steuersubjekt der übernachtende Gast. Dem übernachtenden Gast gleichgestellt sind Personen, die in der betreffenden Gemeinde unbeschränkt steuerpflichtig sind und dort über eine selbst genutzte Ferienliegenschaft verfügen, es sei denn, die Gemeinde leistet aus den Einkommens- und Vermögenssteuern der unbeschränkt steuerpflichtigen Personen einen wesentlichen Beitrag an die Tourismusentwicklung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Erträge aus der Gästetaxe müssen zur Finanzierung von touristischen Einrichtungen und Veranstaltungen verwendet werden. Sie dürfen nicht für die Finanzierung ordentlicher Gemeindeaufgaben eingesetzt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Erhebung, Bezug und Verwendung der Gästetaxe können an eine kommunale oder regionale Tourismusorganisation delegiert werden. Für Einsprachen muss jedenfalls ein Gemeindeorgan bestimmt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Gemeinden beziehungsweise die Tourismusorganisationen sind verpflichtet, die Mittelverwendung detailliert offenzulegen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "80a6f2a7534bc07cfdf80942ea578a9b507787c5df239ea4c958a9e90e42c45f"
+    },
+    {
+      "id": "kanton/GR/720.200/art_22_a",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "22_a",
+      "artikelLabel": "Art. 22a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde kann eine Beherbergungsabgabe erheben."
+        },
+        {
+          "absatz": "2",
+          "text": "Steuersubjekt sind der Beherberger und der Eigennutzer. Als Eigennutzer gilt auch, wer in der betreffenden Gemeinde unbeschränkt steuerpflichtig ist und dort über eine selbst genutzte Ferienliegenschaft verfügt, es sei denn, die Gemeinde leistet aus den Einkommens- und Vermögenssteuern der unbeschränkt steuerpflichtigen Personen einen wesentlichen Beitrag an die Tourismusentwicklung. Der Dauermieter ist dem Eigennutzer gleichgestellt."
+        },
+        {
+          "absatz": "3",
+          "text": "Von der Abgabe ausgenommen ist, wer in der betreffenden Gemeinde unbeschränkt steuerpflichtig ist und dort nicht über eine selbst genutzte Ferienliegenschaft verfügt."
+        },
+        {
+          "absatz": "4",
+          "text": "Steuerobjekt ist der direkte oder indirekte Tourismusnutzen."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Bemessung erfolgt aufgrund der vorhandenen Kapazitäten."
+        },
+        {
+          "absatz": "6",
+          "text": "Die Erträge aus der Beherbergungsabgabe müssen zur Finanzierung von Ausgaben im Interesse und zum Nutzen der Abgabepflichtigen verwendet werden. Sie dürfen nicht für die Finanzierung traditioneller Gemeindeaufgaben verwendet werden."
+        },
+        {
+          "absatz": "7",
+          "text": "Erhebung, Bezug und Verwendung der Beherbergungsabgabe können an eine kommunale oder regionale Tourismusorganisation delegiert werden. Für Einsprachen muss jedenfalls ein Gemeindeorgan bestimmt werden."
+        },
+        {
+          "absatz": "8",
+          "text": "Die Gemeinden beziehungsweise die Tourismusorganisationen sind verpflichtet, die Mittelverwendung detailliert offenzulegen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "6ca0c4704e0a15f337d362387b6aae50ad3b3ad80dd4a4b85d2ba63919a729b4"
+    },
+    {
+      "id": "kanton/GR/720.200/art_23",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde kann eine Tourismusförderungsabgabe erheben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Tourismusförderungsabgabe wird von den natürlichen und juristischen Personen erhoben, die auf Gemeindegebiet tätig sind und vom Tourismus profitieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Erträge sind im Interesse der steuerpflichtigen Personen und insbesondere für eine wirksame Marktbearbeitung sowie für Anlässe zu verwenden. Sie dürfen nicht für die Finanzierung ordentlicher Gemeindeaufgaben eingesetzt werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Erhebung, Bezug und Verwendung der Tourismusförderungsabgabe können an eine kommunale oder regionale Tourismusorganisation delegiert werden. Für Einsprachen muss jedenfalls ein Gemeindeorgan bestimmt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Gemeinden beziehungsweise die Tourismusorganisationen sind verpflichtet, die Mittelverwendung detailliert offenzulegen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "8f73a8abdb450847c4e4a2b25f3c165c35ed93a8edae7e6580d8ce68e3bb6400"
+    },
+    {
+      "id": "kanton/GR/720.200/art_24",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Landeskirchen und ihre Kirchgemeinden können eine Einkommens- und Vermögenssteuer in Prozenten der einfachen Kantonssteuer erheben. Die Landeskirche beziehungsweise die Kirchgemeinde legt den Steuerfuss für das nachfolgende Jahr spätestens im Dezember fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Steuerpflicht richtet sich nach der Kirchenzugehörigkeit der einzelnen Steuerpflichtigen am Ende der Steuerperiode oder der Steuerpflicht und nach den Bestimmungen des kantonalen Steuergesetzes. In konfessionell gemischten Ehen sind die Gesamtfaktoren hälftig auf die beiden Ehegatten aufzuteilen."
+        },
+        {
+          "absatz": "3",
+          "text": "Steuerobjekt, Steuersatz und Bemessung der Steuer richten sich nach den Bestimmungen des kantonalen Steuergesetzes. Der allgemeine Fälligkeitstermin entspricht demjenigen der Gemeindesteuern."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Veranlagung erfolgt zusammen mit der Gemeindesteuer durch die dafür zuständige Behörde. Gleiches gilt für Einsprache-, Rechtsmittel- und weitere Entscheide."
+        },
+        {
+          "absatz": "5",
+          "text": "Für die Beurteilung der subjektiven Steuerpflicht ist die Kirchgemeinde zuständig."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Steuerbezug fällt in die Zuständigkeit der Gemeinde."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "499458cbc1a2f79479feedf9c7f63c041b40d690c8d90912c046ed14a5bc8c79"
+    },
+    {
+      "id": "kanton/GR/720.200/art_25",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden sowie die Landeskirchen und ihre Kirchgemeinden erheben eine Nach- und Strafsteuer nach den Bestimmungen des kantonalen Steuergesetzes."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gemeinden erheben bei Steuerarten, welche sie selber veranlagen, Ordnungsbussen nach den Bestimmungen des kantonalen Steuergesetzes."
+        },
+        {
+          "absatz": "3",
+          "text": "Veranlagung und Bezug fallen in den Zuständigkeitsbereich der für den Vollzug der betreffenden Steuerart zuständigen Behörde."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Veranlagung der Nach- und Strafsteuern betreffend Einkommens- und Vermögenssteuern fällt in den Kompetenzbereich der kantonalen Behörde."
+        },
+        {
+          "absatz": "5",
+          "text": "Wo die Veranlagung zusammen mit der Kantonssteuer erfolgt, werden die Nach- und Strafsteuerverfahren zusammengelegt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "2dc4bc33b5e1e044b000bc4f72b88e3c197528808a127d5db198408c33c6b361"
+    },
+    {
+      "id": "kanton/GR/720.200/art_26",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden regeln die Grundzüge der Steuererhebung für die Steuern nach Artikel 2, die Zuständigkeiten und die Fälligkeit der Steuern in einem Gesetz im formellen Sinn."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Landeskirchen und ihre Kirchgemeinden regeln die Steuererhebung und die Zuständigkeiten in einem Gesetz im formellen Sinn."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gesetze nach den Absätzen 1 und 2 sind von der Regierung mit konstitutiver Wirkung zu genehmigen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "e9da641dcce3814fdf779170c39106506aec989a6c12270c97b2855978cec591"
+    },
+    {
+      "id": "kanton/GR/720.200/art_27",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinde bestimmt die Vollzugsbehörden."
+        },
+        {
+          "absatz": "2",
+          "text": "Eine Delegation der Veranlagung bedarf einer ausdrücklichen gesetzlichen Regelung."
+        },
+        {
+          "absatz": "3",
+          "text": "Einsprachebehörde ist die Veranlagungsbehörde. Wird die Veranlagung delegiert, ist eine kommunale Behörde als Einsprachebehörde zu bestimmen."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Exekutive der Gemeinde ist zuständig für Steuererleichterungen. Sie kann weder als Veranlagungs- noch als Einsprachebehörde bestimmt werden."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Gemeinde bestimmt eine Behörde für den Entscheid über Steuererlass und administrative Abschreibung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "d95c802206cd2c70d8d7edd2f960a88e9a93f266f7ea745a5a15787b9516f389"
+    },
+    {
+      "id": "kanton/GR/720.200/art_28",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Landeskirchen und deren Kirchgemeinden bestimmen eine Behörde für die Festlegung des Steuerfusses sowie für die Beurteilung der subjektiven Steuerpflicht."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "63515887ff5f1e0587550a08b50782712bc705798516f2cb3dce52ea9e060784"
+    },
+    {
+      "id": "kanton/GR/720.200/art_29",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gegen Verfügungen kann die steuerpflichtige Person innert 30 Tagen seit Zustellung bei der Veranlagungsbehörde schriftlich Einsprache erheben."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen Einsprache- und Revisionsentscheide kann die steuerpflichtige Person innert 30 Tagen seit Zustellung beim Obergericht schriftlich Beschwerde erheben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "98ab3d9a5a54dcd3c44c58f7412537fa7dd23b387b288ea9346cd6716d559884"
+    },
+    {
+      "id": "kanton/GR/720.200/art_30",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden entschädigen die Kantonale Steuerverwaltung für die Veranlagung der Grundstückgewinnsteuer mit einer Fallpauschale. Die Regierung legt deren Höhe fest."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Landeskirchen und Kirchgemeinden entschädigen die Kantonale Steuerverwaltung mit eins Prozent und die Gemeinde mit maximal zwei Prozent der bezogenen Steuern."
+        },
+        {
+          "absatz": "3",
+          "text": "Bestehen in derselben politischen Gemeinde mehrere Kirchgemeinden, haben diese die Kantonale Steuerverwaltung mit 1.5 Prozent und die Gemeinde mit maximal 2.5 Prozent der bezogenen Steuern zu entschädigen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "a1cc63a5b645ed0f4f279ed3ae1fbbb9faca87dd037ce849d302374d3e66a390"
+    },
+    {
+      "id": "kanton/GR/720.200/art_31",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gemeinden, Landeskirchen und Kirchgemeinden passen ihre Gesetze an das kantonale Recht an und reichen die Totalrevision bis spätestens am 31. Juli 2008 der Regierung zur Genehmigung ein."
+        },
+        {
+          "absatz": "2",
+          "text": "Ab dem 1. Januar 2009 finden die Bestimmungen dieses Gesetzes direkte Anwendung und derogieren abweichende Regelungen der Gemeinden, Landeskirchen und Kirchgemeinden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gesetze über die Kurtaxe, die Tourismusförderungsabgabe sowie die Sondersteuern der Zollausschlussgebiete, die bereits von der Regierung genehmigt worden sind, bedürfen keiner Revision und keiner erneuten Genehmigung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "3a2fd064626ec59d422cfbafb51580b0c89a8fcf3368e0108202005d2e29ac9b"
+    },
+    {
+      "id": "kanton/GR/720.200/art_33",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Noch nicht besteuerte Erbvorbezüge an Ehegatten sowie an direkte Nachkommen werden per 1. Januar 2008 besteuert. Für die Besteuerung des Vorempfanges sind die Verhältnisse im Zeitpunkt der Ausrichtung massgebend."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "9815e4cab6befb2f838f82566b1dceb05723f152e1e59b8b7f84d321d4bcae1a"
+    },
+    {
+      "id": "kanton/GR/720.200/art_33_a",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "33_a",
+      "artikelLabel": "Art. 33a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Änderungen des Artikels 2 und des Artikels 21 finden direkt Anwendung und treten mit dem Inkrafttreten der Teilrevision des kantonalen Steuergesetzes vom 12. Februar 2019 in Kraft."
+        },
+        {
+          "absatz": "2",
+          "text": "Die im Gemeindesteuergesetz normierten Steuersätze für den elterlichen und den grosselterlichen Stamm sowie für die übrigen Begünstigten finden bis zu deren Änderung Anwendung, soweit sie die neuen Maximalsätze nicht übersteigen. Andernfalls gelten die Maximalsätze nach Artikel 21 Absatz 5."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die zeitliche Abgrenzung dieser Gesetzesänderung ist der Zeitpunkt massgebend, in welchem der steuerbegründende Tatbestand verwirklicht wurde. Altrechtliche Steuertatbestände werden weiterhin von der Gemeinde veranlagt und bezogen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "272e6f09a71c1e7324e9dde0d3ebd1167b0b477b189666e8e4a15d8e40b25c28"
+    },
+    {
+      "id": "kanton/GR/720.200/art_34",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "GKStG (BR 720.200)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieses Gesetz untersteht dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Es tritt auf den 1. Januar 2007 in Kraft und findet unter Vorbehalt von Absatz 3 per 1. Januar 2009 Anwendung."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Befreiung der Ehegatten und der direkten Nachkommen gemäss Artikel 21 Absatz 2 und 3 von der Erbschafts- und Schenkungssteuer gilt bereits ab 1. Januar 2008 für alle Gemeinden zwingend."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/720.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ddecf2c3abfb7d2fa245bcc0afa442e6",
+      "sha": "0a566e95c701b7479fa0167d257ab17222d73d6df61fe5248a82844d18d7e9fb"
     }
   ]
 }

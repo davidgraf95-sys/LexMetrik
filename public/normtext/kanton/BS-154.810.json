@@ -1,32 +1,95 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
     {
-      "id": "kanton/BS/154.810/art_5",
+      "id": "kanton/BS/154.810/art_1",
       "ebene": "kanton",
       "quelle": "BS",
       "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
-      "artikel": "5",
-      "artikelLabel": "§ 5",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Grundgebühr bemisst sich bei vermögensrechtlichen Streitigkeiten wie folgt. Sie wird innerhalb des angegebenen Rahmens unter Berücksichtigung der tatsächlichen und rechtlichen Komplexität festgesetzt. Streitwert (Fr.): bis 10'000 · Grundgebühr (Fr.): 200 bis 1'000 — Streitwert (Fr.): über 10'000 bis 30'000 · Grundgebühr (Fr.): 1'000 bis 3'000 — Streitwert (Fr.): über 30'000 bis 100'000 · Grundgebühr (Fr.): 3'000 bis 6'000 — Streitwert (Fr.): über 100'000 bis 500'000 · Grundgebühr (Fr.): 6'000 bis 20'000 — Streitwert (Fr.): über 500'000 bis 1'000'000 · Grundgebühr (Fr.): 20'000 bis 30'000 — Streitwert (Fr.): über 1'000'000 bis 5'000'000 · Grundgebühr (Fr.): 30'000 bis 60'000 — Streitwert (Fr.): über 5'000'000 · Grundgebühr (Fr.): 0.5 % bis 1.5 % mind. 60'000"
-        },
-        {
-          "absatz": "2",
-          "text": "Bei Teilklagen im vereinfachten Verfahren, wenn die Gesamtforderung Fr. 30'000 übersteigt, kann die Grundgebühr bis Fr. 6'000 betragen."
-        },
-        {
-          "absatz": "3",
-          "text": "Bei nichtvermögensrechtlichen Streitigkeiten beträgt die Grundgebühr Fr. 200 bis Fr. 250'000."
+          "text": "Dieses Reglement regelt die Gebühren",
+          "items": [
+            {
+              "marke": "a",
+              "text": "im Schlichtungsverfahren (§ 3),"
+            },
+            {
+              "marke": "b",
+              "text": "der Gerichte in Zivilsachen (§§ 4 bis 18),"
+            },
+            {
+              "marke": "c",
+              "text": "der Gerichte in Strafsachen (§§19 bis 22),"
+            },
+            {
+              "marke": "d",
+              "text": "des Verwaltungsgerichts und des Verfassungsgerichts (§§ 23 bis 25),"
+            },
+            {
+              "marke": "e",
+              "text": "des Sozialversicherungsgerichts (§ 26),"
+            },
+            {
+              "marke": "f",
+              "text": "des Gerichts für fürsorgerische Unterbringungen (§ 27),"
+            },
+            {
+              "marke": "g",
+              "text": "der Aufsichtskommission über die Anwältinnen und Anwälte (§ 28),"
+            },
+            {
+              "marke": "h",
+              "text": "des Erbschaftsamts und der Aufsichtsbehörde über das Erbschaftsamt (§ 29, 30)."
+            }
+          ]
         }
       ],
       "stand": "2021-06-03",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
-      "sha": "f87c89cae922801cf75a8e8a9df727e1805e3365386011f8b004a0016918a1c0"
+      "sha": "1f80a23aa468b1288d8cdb5a18b8b33ddb244c616334d00855f9b7899ce0d875"
+    },
+    {
+      "id": "kanton/BS/154.810/art_2",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Grundlage für die Bemessung der Gebühr innerhalb des von diesem Reglement vorgegebenen Rahmens bilden",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bedeutung des Falles,"
+            },
+            {
+              "marke": "b",
+              "text": "der Zeitaufwand des Gerichts,"
+            },
+            {
+              "marke": "c",
+              "text": "die tatsächliche und rechtliche Komplexität des Falles sowie"
+            },
+            {
+              "marke": "d",
+              "text": "in Zivilsachen und Verwaltungsgerichtssachen vorwiegend vermögensrechtlicher Natur: der Streitwert bzw. das tatsächliche Streitinteresse."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "6eaedc044652f9f0fa85d871353850667993f7db20409a501697a4009787283a"
     },
     {
       "id": "kanton/BS/154.810/art_3",
@@ -51,9 +114,994 @@
       ],
       "stand": "2021-06-03",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "bf950ab89533e58cc1c974931d913313",
       "sha": "d19e67e843cf85d213c5a72fa936bb2d9ad21a8a71c50b4dda7fc318ff6e5921"
+    },
+    {
+      "id": "kanton/BS/154.810/art_4",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren nach §§ 5 bis 18 umfassen alle Amtshandlungen des Gerichts und der Kanzlei. Vorbehalten bleiben die Kosten gemäss Art. 95 Abs. 2 lit. c bis e ZPO, die zusätzlich zur Gebühr erhoben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Entscheidgebühr besteht aus einer Grundgebühr nach den §§ 5 bis 14, die nach Massgabe der §§ 15 bis 17 erhöht oder ermässigt werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Vorbehalten bleiben Verfahren, deren Gebühr sich nach der Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs (GebV SchKG) vom 23. September 1996 bemisst."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gebühren für Verfahren in Zivilsachen gelten auch für Verfahren nach dem Haftungsgesetz."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "542441738770c3d96e44b5d616649af112b74c84d9f81dfe0c1f1489fb0eb583"
+    },
+    {
+      "id": "kanton/BS/154.810/art_5",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundgebühr bemisst sich bei vermögensrechtlichen Streitigkeiten wie folgt. Sie wird innerhalb des angegebenen Rahmens unter Berücksichtigung der tatsächlichen und rechtlichen Komplexität festgesetzt. Streitwert (Fr.): bis 10'000 · Grundgebühr (Fr.): 200 bis 1'000 — Streitwert (Fr.): über 10'000 bis 30'000 · Grundgebühr (Fr.): 1'000 bis 3'000 — Streitwert (Fr.): über 30'000 bis 100'000 · Grundgebühr (Fr.): 3'000 bis 6'000 — Streitwert (Fr.): über 100'000 bis 500'000 · Grundgebühr (Fr.): 6'000 bis 20'000 — Streitwert (Fr.): über 500'000 bis 1'000'000 · Grundgebühr (Fr.): 20'000 bis 30'000 — Streitwert (Fr.): über 1'000'000 bis 5'000'000 · Grundgebühr (Fr.): 30'000 bis 60'000 — Streitwert (Fr.): über 5'000'000 · Grundgebühr (Fr.): 0.5 % bis 1.5 % mind. 60'000"
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Teilklagen im vereinfachten Verfahren, wenn die Gesamtforderung Fr. 30'000 übersteigt, kann die Grundgebühr bis Fr. 6'000 betragen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei nichtvermögensrechtlichen Streitigkeiten beträgt die Grundgebühr Fr. 200 bis Fr. 250'000."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "f87c89cae922801cf75a8e8a9df727e1805e3365386011f8b004a0016918a1c0"
+    },
+    {
+      "id": "kanton/BS/154.810/art_6",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei mietrechtlichen Streitigkeiten ist für die Festlegung der Gerichtsgebühr § 2a des Gesetzes über die Gerichtsgebühren massgebend.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Soweit nicht § 2a des Gesetzes über die Gerichtsgebühren zur Anwendung gelangt, gilt in mietrechtlichen Kündigungs- oder Erstreckungsverfahren sowie bei Streitigkeiten über die Missbräuchlichkeit von Mietzinsen folgende Grundgebühr:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Bei Wohnräumen Fr. 750 bis max. 30 % der Grundgebühr gemäss § 5,"
+            },
+            {
+              "marke": "b",
+              "text": "bei Geschäftsräumen Fr. 1'500 bis max. 30 % der Grundgebühr gemäss § 5."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "In den übrigen Fällen richtet sich die Grundgebühr nach § 5 dieses Reglements."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "2c9fa8d7253245a6cd1b55a01da39ff5c1f44a49022aa8a84f1d31a9114fb227"
+    },
+    {
+      "id": "kanton/BS/154.810/art_7",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Scheidungsprozess und im Verfahren um Auflösung einer eingetragenen Partnerschaft beträgt die Grundgebühr in der Regel zwei Fünftel des monatlichen Nettolohnes (inklusive auf den Monat umgerechnete Jahreszulagen) der alleinverdienenden Ehegattin oder des alleinverdienenden Ehegatten oder eingetragenen Partnerin oder Partners bzw. einen Drittel der monatlichen Nettolöhne beider Parteien, falls dieser Betrag höher ist als zwei Fünftel des Monatslohnes der mehrverdienenden Partei. Bei Vermögen von über Fr. 120'000 wird ein Zuschlag von 2,5 bis 5‰ des Nettovermögens berechnet. Die Mindestgebühr beträgt Fr. 500."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Scheidungen gemäss Art. 285 ZPO beträgt die Grundgebühr zwei Fünftel der nach den vorstehenden Grundsätzen errechneten Gebühr, unter Ausschluss weiterer Ermässigungen nach § 16, mindestens aber Fr. 500 und maximal Fr. 5'000."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "4247ff92a39d1fba1dda32029a92b380377372961275ff56895a140deeaaaea8"
+    },
+    {
+      "id": "kanton/BS/154.810/art_8",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundgebühr in Verfahren über Festsetzung, Änderung oder Aufhebung von Unterhaltspflichten wird grundsätzlich nach Streitwert berechnet (§ 5 Abs. 1). Die Obergrenze bildet jedoch die nach den Grundsätzen von § 7 Abs. 1 berechnete Gebühr für einen vergleichbaren strittigen Scheidungsprozess."
+        },
+        {
+          "absatz": "2",
+          "text": "Dasselbe gilt für die güterrechtliche Auseinandersetzung, die in einem separaten Verfahren vorgenommen wird (Art. 283 Abs. 2 ZPO), sowie die Abänderung oder Ergänzung von Scheidungsurteilen."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "b9e657f7ef58b47e7f145edae341ce4b129fc848bc9657f36b4777e2df98f635"
+    },
+    {
+      "id": "kanton/BS/154.810/art_9",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Vaterschaftsklagen, Anfechtung der Vaterschaftsvermutung, Anfechtung der Anerkennung oder Anfechtung der Adoption beträgt die Grundgebühr Fr. 500 bis Fr. 5'000."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird mit der Statusklage eine Unterhaltsklage verbunden, beträgt die Grundgebühr für die Unterhaltsklage Fr. 500 bis maximal einen Drittel des Monatseinkommens des Kindsvaters."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "55fa8b53901f24e91d36e60fa1212826d7630f8a1bb3788209914966a8576a0b"
+    },
+    {
+      "id": "kanton/BS/154.810/art_10",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In summarischen Verfahren beträgt die Grundgebühr Fr. 200 bis Fr. 20'000, soweit sie nicht vom Bundesrecht oder nachfolgend besonders geregelt ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Grundgebühr beträgt 1 · Verfahren: in Eheschutzverfahren · Gebühr: Fr. 300 bis Fr. 2'000 — 1.1. · Verfahren: in aufwendigen Fällen · Gebühr: bis Fr. 10'000 — 2. · Verfahren: Drittschuldneranweisungen · Gebühr: Fr. 200 bis Fr. 1'000 — 3. · Verfahren: Annäherungs- und Kontaktverbote · Gebühr: Fr. 200 bis Fr. 1'000 — 4. · Verfahren: Berichtigung von Zivilstandsregistereinträgen · Gebühr: Fr. 500 bis Fr. 2'000 — 5. · Verfahren: Verschollenheitssachen · Gebühr: Fr. 500 bis Fr. 2'000 — 6. · Verfahren: Kraftloserklärungen · Gebühr: Fr. 500 bis Fr. 2'000 — 7. · Verfahren: Provisorische Eintragung eines Bauhandwerkerpfandrechts oder eines Pfandrechts für Stockwerkeigentümerbeiträge — 7.1 · Verfahren: bis Fr. 2'000 · Gebühr: Fr. 600 — 7.2 · Verfahren: bis Fr. 10'000 · Gebühr: Fr. 800 — 7.3 · Verfahren: bis Fr. 50'000 · Gebühr: Fr. 1'100 — 7.4 · Verfahren: bis Fr. 200'000 · Gebühr: Fr. 1'900 — 7.5 · Verfahren: bis Fr. 300'000 · Gebühr: Fr. 2'400 — 7.6 · Verfahren: bis Fr. 400'000 · Gebühr: Fr. 2'800 — 7.7 · Verfahren: bis Fr. 500'000 · Gebühr: Fr. 3'200 — 7.8 · Verfahren: darüber · Gebühr: bis Fr. 5'000 — 8. · Verfahren: Gerichtliche Verbote · Gebühr: Fr. 1'000 — 9. · Verfahren: Vollstreckbarerklärung ausländischer Entscheide · Gebühr: Fr. 400 bis Fr. 1'000 — 10. · Verfahren: Verfahren um Rechtsschutz in klaren Fällen · Gebühr: Fr. 200 bis Fr. 5'000 — 11. · Verfahren: Ausweisungsverfahren (Rechtsschutz in klaren Fällen) · Gebühr: Fr. 600"
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "6aa6605dae0b9ed521e2be17f40f4e7903f70a39b23171d91bca4d2079f6accd"
+    },
+    {
+      "id": "kanton/BS/154.810/art_11",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundgebühr des Appellationsgerichts als einzige kantonale Instanz in Zivilsachen gemäss Art. 5 und 8 ZPO beträgt das Ein- bis Anderthalbfache der Ansätze nach §§ 5 bis 10."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "0e2999e4f956f6125897fa400f9c18c5231874f66616d4a7202aa000c58531df"
+    },
+    {
+      "id": "kanton/BS/154.810/art_12",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Berufungsverfahren in Zivilsachen berechnet sich die Grundgebühr gemäss den Ansätzen nach §§ 5 bis 10."
+        },
+        {
+          "absatz": "2",
+          "text": "Verringert sich der Streitwert vor zweiter Instanz, so ist die Grundgebühr auf der Grundlage des noch strittigen Betrages festzusetzen."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "406e161e0ced02164d25d8534b8a217d2b0d9a03480a90e864c691bae68656a8"
+    },
+    {
+      "id": "kanton/BS/154.810/art_13",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Beschwerdeverfahren in Zivilsachen gemäss Art. 319 lit. a ZPO beträgt die Grundgebühr das Ein- bis Anderthalbfache der Ansätze nach §§ 5 bis 10."
+        },
+        {
+          "absatz": "2",
+          "text": "In den übrigen Fällen beträgt sie Fr. 200 bis Fr. 10'000. In aussergewöhnlichen Fällen kann sie bis Fr. 30'000 erhöht werden."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "9aec23b73e5329f5b54cb20051ac297cb6cee643a4f29deb99af1db96aa2865d"
+    },
+    {
+      "id": "kanton/BS/154.810/art_14",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundgebühr für den Entscheid über Revisionsgründe in Zivilsachen (Entscheid über das Revisionsgesuch) beträgt Fr. 200 bis Fr. 10'000."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Gutheissung des Revisionsgesuchs wird zusätzlich zu den Gerichtskosten des aufgehobenen Entscheids eine Gebühr für den neuen Entscheid festgesetzt. Die Gebühr bemisst sich nach den §§ 5 bis 13 und §§ 15 bis 16."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "fb30bc6ce981a74e09126ad99b1ac9c7bb10ed4ace3755f05c91484c896edf9a"
+    },
+    {
+      "id": "kanton/BS/154.810/art_15",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundgebühr nach §§ 5 bis 14 kann in folgenden Fällen wie folgt erhöht werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Instruktionsverhandlungen, Zwischenentscheiden, Augenscheinen, Anordnung von Expertisen, vorsorglichen Massnahmen im laufenden Verfahren, Anordnungen gemäss Art. 276 ZPO im laufenden Verfahren: um je bis 30 %,"
+            },
+            {
+              "marke": "b",
+              "text": "bei amtlichen Erkundigungen, Rechtshilfeersuchen an auswärtige Behörden, Befragungen von Zeuginnen und Zeugen ausserhalb des Gerichtsgebäudes: um je bis 10 %,"
+            },
+            {
+              "marke": "c",
+              "text": "in Prozessen, in denen die tatsächlichen oder die rechtlichen Verhältnisse besonders kompliziert oder die von sonst weitläufiger Art sind: bis auf das Doppelte der maximalen Grundgebühr,"
+            },
+            {
+              "marke": "d",
+              "text": "wenn die Zuständigkeit des Gerichts nur auf Vereinbarung beruht und keine der Parteien im Kanton Basel-Stadt ihren Wohnsitz bzw. Sitz hat: bis auf das Doppelte der maximalen Grundgebühr."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "1f8ef06001ec96dc1997c169504499fcbd901378ac398c7c2ea08f3e52e2a506"
+    },
+    {
+      "id": "kanton/BS/154.810/art_16",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Grundgebühr nach §§ 5 bis 14 kann bis auf die Hälfte ermässigt werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "wenn in einem Prozess die tatsächlichen oder die rechtlichen Verhältnisse besonders einfach sind,"
+            },
+            {
+              "marke": "b",
+              "text": "bei Nichteintretensentscheiden wegen fehlender Prozessvoraussetzung,"
+            },
+            {
+              "marke": "c",
+              "text": "bei Beschränkung des Verfahrens auf einzelne Streitpunkte,"
+            },
+            {
+              "marke": "d",
+              "text": "wenn über eine Klage entschieden wird, die von der beklagten Partei nicht beantwortet worden ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Ist die Inanspruchnahme des Gerichts besonders gering, so kann die Grundgebühr bis auf einen Zehntel ermässigt werden."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "58d7bb1aa5d96cf9875b827ac1890075e340580060acfa45ab80499f590971e9"
+    },
+    {
+      "id": "kanton/BS/154.810/art_17",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei vollständiger Erledigung eines Prozesses ohne Entscheid (Art. 241 f. ZPO) kann die Grundgebühr bis auf einen Viertel ermässigt werden. Ist die Inanspruchnahme des Gerichts besonders gering, so kann die Grundgebühr bis auf einen Zehntel ermässigt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei bloss teilweiser Erledigung ohne Entscheid gilt für die Berechnung der Gebühr der noch verbleibende streitige Betrag als Streitwert, von dem die Gebühr erhoben wird, während vom anderen Betrag (über den z.B. ein Rückzug, eine Anerkennung, ein Vergleich vorliegt) die Gebühr gemäss dem vorstehenden Absatz berechnet wird."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "5860e5be0be20f16d48c6aef2fde38fdb29aeadee590ccec9df5991e60845249"
+    },
+    {
+      "id": "kanton/BS/154.810/art_18",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für weitere Verrichtungen, Verfügungen und Entscheide werden folgende Gebühren erhoben. 1. · Gegenstand: Entgegennahme und Aufbewahrung von Schutzschriften · Gebühr: Fr. 500 — 2. · Gegenstand: Verwahrungen von Geld, Wertpapieren und Sachen für jedes angefangene Jahr bis auf Fr. 10'000 · Gebühr: 1 % mind. aber Fr. 50 — 2.1. · Gegenstand: vom Mehrbetrag bis auf Fr. 150'000 · Gebühr: ½ % — 2.2. · Gegenstand: vom Mehrbetrag über Fr. 150'000 · Gebühr: ¼ % — 2.3. · Gegenstand: werden besondere Aufbewahrungs- oder Verwaltungsmassnahmen erforderlich, so kann die Gebühr verdoppelt werden. — 2.4. · Gegenstand: Die Hinterlage haftet für Gebühr und Auslagen. — 2.5. · Gegenstand: Hinterlegte Geldsummen ab Fr. 10'000 sind vom dritten Monat an zu dem jeweils bei der Basler Kantonalbank gültigen Kontokorrent-Zinssatz zu verzinsen. — 3. · Gegenstand: Verfügungen und Entscheide in Verfahren betreffend die Schiedsgerichtsbarkeit · Gebühr: Fr. 200 bis Fr. 2'000 — 3.1. · Gegenstand: in aussergewöhnlichen Fällen · Gebühr: bis Fr. 12'000"
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "aadcc54ce40427ffee20a49ba84d9a125ac0a0ed236b118edfa661b69ae8852b"
+    },
+    {
+      "id": "kanton/BS/154.810/art_19",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Strafgericht erhebt nachfolgende Gebühren. Zulasten des Staates werden keine Gebühren erhoben. 1. · Verfahren: Abstandsgebühr bei Rückzug eines Strafantrags oder einer Einsprache gegen einen Strafbefehl · Gebühr: Fr. 100 bis Fr. 2'000 — 1.1. · Verfahren: in aussergewöhnlichen Fällen · Gebühr: bis Fr. 5'000 — 2. · Verfahren: Einstellung eines Strafverfahrens, wenn einer oder einem Privaten die Kosten auferlegt werden · Gebühr: Fr. 100 bis Fr. 2'000 — 2.1. · Verfahren: in aussergewöhnlichen Fällen · Gebühr: bis Fr. 5'000 — 3.1 · Verfahren: Entscheid-/Beschlussgebühr für jede Beurteilte oder jeden Beurteilten im Verfahren vor: — a) · Verfahren: dem Einzelgericht · Gebühr: Fr. 100 bis Fr. 2'500 — b) · Verfahren: dem Dreiergericht · Gebühr: Fr. 150 bis Fr. 5'000 — c) · Verfahren: der Kammer · Gebühr: Fr. 200 bis Fr. 10'000 — 3.2. · Verfahren: In aussergewöhnlichen Fällen von Ziff. 3.1 lit. a-c, bei Zweiteilung der Hauptverhandlung und bei mehrtägigen Verhandlungen · Gebühr: bis Fr. 100'000 — 3.3. · Verfahren: Dieselben Ansätze können Anwendung finden: — a) · Verfahren: bei Freispruch der angeschuldigten Person, wenn die Kosten einer oder einem Privaten auferlegt werden; — b) · Verfahren: bei Abweisung einer Zivilklage im Strafverfahren oder bei Verweisung auf den Zivilweg; — c) · Verfahren: bei Abweisung eines Entschädigungsbegehrens wegen ungerechtfertigter Strafverfolgung; — d) · Verfahren: bei Beschlüssen über den Vollzug aufgeschobener Strafen; — e) · Verfahren: bei Beschlüssen über die Umwandlung von Geldstrafen und Bussen gemäss Art. 36 Abs. 2 des Schweizerischen Strafgesetzbuches vom 21. Dezember 1937 (StGB); — f) · Verfahren: bei selbständigen nachträglichen Entscheiden gemäss Art. 363 der Schweizerischen Strafprozessordnung (Strafprozessordnung, StPO) vom 5. Oktober 2007."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "68412092ec68ee6d1c142c41fe3d1e29c8306ea1367e9a6d2d10a505f6321901"
+    },
+    {
+      "id": "kanton/BS/154.810/art_20",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Jugendgericht erhebt nachfolgende Gebühren. Zulasten des Staates werden keine Gebühren erhoben. 1. · Verfahren: Abstandsgebühr bei Rückzug eines Strafantrags oder einer Einsprache gegen einen Strafbefehl · Gebühr: Fr. 50 bis Fr. 1'000 — 2. · Verfahren: Einstellung eines Strafverfahrens, wenn einer oder einem Privaten die Kosten auferlegt werden · Gebühr: Fr. 50 bis Fr. 1'000 — 3.1. · Verfahren: Entscheid- / Beschlussgebühr für jede Beurteilte oder jeden Beurteilten im Verfahren vor: — a) · Verfahren: dem Einzelgericht · Gebühr: Fr. 50 bis Fr. 1'000 — b) · Verfahren: dem Dreiergericht · Gebühr: Fr. 50 bis Fr. 5'000 — c) · Verfahren: bei Zirkulationsentscheiden · Gebühr: Fr. 50 bis Fr. 1'000 — d) · Verfahren: bei Präsidialentscheiden · Gebühr: Fr. 50 bis Fr. 1'000 — 3.2. · Verfahren: Entscheid-/Beschlussgebühr in Vollzugsverfahren sowie in Verfahren gemäss § 20 des Gesetzes über den Vollzug von jugendstrafrechtlichen Sanktionen (Jugendstrafvollzugsgesetzes, JStVG) vom 13. Oktober 2010 durch: — a) · Verfahren: das Einzelgericht · Gebühr: Fr. 50 bis Fr. 1'000 — b) · Verfahren: das Dreiergericht · Gebühr: Fr. 50 bis Fr. 5'000 — c) · Verfahren: bei Zirkulationsentscheiden · Gebühr: Fr. 50 bis Fr. 1'000 — d) · Verfahren: bei Präsidialentscheiden · Gebühr: Fr. 50 bis Fr. 1'000 — 3.3. · Verfahren: Dieselben Ansätze können Anwendung finden: — a) · Verfahren: bei Freispruch der angeschuldigten Person, wenn die Kosten einer oder einem Privaten auferlegt werden; — b) · Verfahren: bei Abweisung einer Zivilklage im Strafverfahren oder bei Verweisung auf den Zivilweg; — c) · Verfahren: bei Abweisung eines Entschädigungsbegehrens wegen ungerechtfertigter Strafverfolgung; — d) · Verfahren: bei Beschlüssen über den Vollzug aufgeschobener Strafen; — e) · Verfahren: bei Beschlüssen über die Umwandung von Geldstrafen und Bussen gemäss Art. 36 Abs. 2 StGB; — f) · Verfahren: bei selbstständigen nachträglichen Entscheiden gemäss Art. 363 StPO."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "2cdd88c2779d46e43b5a16d7fbbfa6c567c5acd44d0052143402c198f3ea3d1a"
+    },
+    {
+      "id": "kanton/BS/154.810/art_21",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Entscheid- oder Beschlussgebühr in Strafsachen beträgt vor Appellationsgericht für jede Beurteilte oder jeden Beurteilten oder Privatklägerin oder Privatkläger Fr. 200 bis Fr. 20'000. In aussergewöhnlichen Fällen im Anwendungsbereich der StPO beträgt die Gebühr bis Fr. 80'000."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Beschwerdeverfahren in Strafsachen beträgt die Entscheidgebühr Fr. 200 bis Fr. 10'000. In aussergewöhnlichen Fällen kann sie bis Fr. 30'000 erhöht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei vollständiger Erledigung des Prozesses ohne Entscheid (durch Rückzug des Rechtsmittels, Vergleich, Anerkennung und andere Gründe) kann die Gebühr bis auf Fr. 200 ermässigt werden."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "4d733f4cd904c2061581cceea793fab2a54a39effac3afbe8a06cded5cf0f0a0"
+    },
+    {
+      "id": "kanton/BS/154.810/art_22",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Entscheide über Revisionsbegehren beträgt Fr. 200 bis Fr. 10'000 im Bereich der StPO und Fr. 200 bis Fr. 5'000 im Bereich der Schweizerischen Jugendstrafprozessordnung (Jugendstrafprozessordnung, JStPO) vom 20. März 2009."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Gutheissung des Revisionsgesuchs bemisst sich die Gebühr für den neuen Entscheid nach Massgabe der §§ 19 bis 21."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "dcc80711a20b747ccf1b027011d502b2c113affa89e260272370c17d1c4f6ff5"
+    },
+    {
+      "id": "kanton/BS/154.810/art_23",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Entscheide gemäss dem Gesetz über die Verfassungs- und Verwaltungsrechtspflege (VRPG) vom 14. Juni 1928 beträgt bei Verfahren betreffend Ausländerrecht, Sozialhilfe und Opferhilfe, Straf- und Massnahmenvollzug, Kindes- und Erwachsenenschutz, Schul- und Bildungsrecht sowie Administrativmassnahmen gemäss dem Strassenverkehrsgesetz (SVG) vom 19. Dezember 1958 Fr. 200 bis Fr. 3'000."
+        },
+        {
+          "absatz": "2",
+          "text": "In den anderen Verfahren beträgt die Gebühr Fr. 200 bis Fr. 20'000."
+        },
+        {
+          "absatz": "3",
+          "text": "In Verfahren mit umfangreichem Aktenmaterial, mit komplizierten rechtlichen oder tatsächlichen Verhältnissen sowie in solchen mit besonders hohem Streitwert resp. Streitinteresse beträgt die Gebühr bis Fr. 80'000."
+        },
+        {
+          "absatz": "4",
+          "text": "Bei Verfahren betreffend öffentlich-rechtliche Arbeitsverhältnisse werden in analoger Anwendung von Art. 114 lit. c ZPO bis zu einem Streitwert von Fr. 30'000 keine Entscheidgebühren erhoben, soweit das Verfahren nicht ohnehin gemäss § 40 Abs. 4 des Personalgesetzes vom 17. November 1999 kostenlos ist."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "6c0863bfa16c3de6053ed814b911cf988ce76af6ea2fa01c98c25930baf41821"
+    },
+    {
+      "id": "kanton/BS/154.810/art_24",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr beträgt Fr. 200 bis Fr. 20'000."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "526960140802220d30ce4898e5d1acfc42b9a3a04ecaf3f018bbed90fe5a9ff3"
+    },
+    {
+      "id": "kanton/BS/154.810/art_25",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Entscheide über Revisionsbegehren beträgt Fr. 200 bis Fr. 10'000."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Gutheissung des Revisionsgesuchs bemisst sich die Gebühr für den neuen Entscheid nach Massgabe der §§ 23 und 24."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "f2164d37edc61aca96d301dea26b18c64a60603a8fb846e6d6fb2120c073c61d"
+    },
+    {
+      "id": "kanton/BS/154.810/art_26",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren des Sozialversicherungsgerichts richten sich nach Bundesrecht oder nach § 16 des Gesetzes über das Sozialversicherungsgericht des Kantons Basel-Stadt und über das Schiedsgericht in Sozialversicherungssachen (Sozialversicherungsgerichtsgesetz, SVGG) vom 9. Mai 2001."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei leichtsinniger oder mutwilliger Prozessführung im Sinne von § 16 SVGG kann eine Gebühr von Fr. 200 bis Fr. 3'000 auferlegt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Gebühren in Verfahren vor dem Schiedsgericht in Sozialversicherungssachen wird auf das Reglement des Sozialversicherungsgerichts und des Schiedsgerichts in Sozialversicherungssachen vom 31. Juli 2016/18. Mai 2017 verwiesen."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "ba609692e67f22a6990d8dbfa40a4f29720488356320e8b9e9d165d8f679476a"
+    },
+    {
+      "id": "kanton/BS/154.810/art_27",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei offensichtlich mutwilliger Prozessführung im Sinne von § 19 Abs. 2 des Kindes- und Erwachsenenschutzgesetzes (KESG) vom 12. September 2012 beträgt die Gebühr Fr. 200 bis Fr. 3'000."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "d45611c330987cafd09fc26226a00de6e019a60573074d5bbfdd70e0025d41ca"
+    },
+    {
+      "id": "kanton/BS/154.810/art_28",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Entscheide der Aufsichtskommission beträgt Fr. 200 bis Fr. 3'000."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "671e214c2ee5dc765a7ae7e97a5e010dc8b383f376bdd238c7f81189664ab6cd"
+    },
+    {
+      "id": "kanton/BS/154.810/art_29",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "29",
+      "artikelLabel": "§ 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Verrichtungen des Erbschaftsamtes werden folgende Gebühren erhoben. 1. · Gegenstand: Auskündungen (Rechnungsruf und dergleichen) · Gebühren: Fr. 25 — 2. · Gegenstand: Einschreibung einer Gläubigerin oder eines Gläubigers beim öffentlichen Inventar und bei der amtlichen Liquidation · Gebühren: Fr. 6 — 3. · Gegenstand: Vorladungen und Anzeigen · Gebühren: Fr. 6 — 4.a) · Gegenstand: Auskunfts- und Erkundigungsschreiben, Korrespondenz, Vernehmlassungen, Berichte und Begutachtungen, Abfragen im Internet · Gebühren: Fr. 20 bis Fr. 600 — b) · Gegenstand: Einfache Erbgangs- und Teilungsbeurkundungen sowie Bescheinigungen · Gebühren: Fr. 50 bis Fr. 300 — c) · Gegenstand: Komplizierte Erbgangs- und Teilungsbeurkundungen sowie Bescheinigungen insbesondere mit Liegenschaften und Verschollenheitsgesuche · Gebühren: Fr. 100 bis Fr. 1'000 — d) · Gegenstand: Ermittlung der Erbinnen und Erben, je halbe Stunde · Gebühren: Fr. 15 bis Fr. 50 — 5. · Gegenstand: Protokoll der Ausschlagerklärungen, Konkursprotokoll · Gebühren: Fr. 20 bis Fr. 120 — 6. · Gegenstand: Publikationen zur Ermittlung der Erbinnen und Erben (Erbenruf) · Gebühren: Fr. 30 bis Fr. 350 — 7. · Gegenstand: Registrierung und Bescheinigung der Hinterlegung einer letztwilligen Verfügung oder eines Ehe- und/oder Erbvertrages bzw. Vermögensvertrages · Gebühren: Fr. 40 bis Fr. 100 — 8. · Gegenstand: Auswechseln einer Verfügung oder von Beilagen sowie Deponierung von weiteren Verfügungen oder Beilagen · Gebühren: Fr. 20 bis Fr. 100 — 9. · Gegenstand: Entgegennahme einer von den Zeuginnen und Zeugen in Schrift verfassten mündlichen letztwilligen Verfügung und der darauf bezüglichen Erklärung der Zeuginnen und Zeugen; Protokollierung einer solchen letztwilligen Verfügung und der Erklärungen der Zeuginnen und Zeugen · Gebühren: Fr. 50 bis Fr. 350 — 10. · Gegenstand: Eröffnung einer letztwilligen Verfügung (inbegriffen Eröffnungsbescheinigung) · Gebühren: Fr. 50 bis Fr. 350 — 11. · Gegenstand: Öffentliche Anzeige der erfolgten Eröffnung einer letztwilligen Verfügung · Gebühren: Fr. 20 bis Fr. 60 — 12. · Gegenstand: Öffnung und Weiterleitung von letztwilligen Verfügungen auswärtiger Erblasserinnen und Erblasser · Gebühren: Fr. 20 bis Fr. 350 — 13. · Gegenstand: Eintragung einer letztwilligen Verfügung in das Testamentenprotokoll · Gebühren: Fr. 8 — 14. · Gegenstand: Abschriften und Auszüge von Inventaren, letztwilligen Verfügungen, Teilungen und Abrechnungen, für die angefangene Seite · Gebühren: Fr. 3 — 15. · Gegenstand: Requisitionen: Auftragserteilung an oder Erledigung für auswärtige Behörden · Gebühren: Fr. 50 bis Fr. 350 — 16. · Gegenstand: Ansetzung von Fristen und Fristverlängerungen. Die Ansetzung einer Frist ist nicht zu berechnen, wenn sie bei einer Massnahme erfolgt, für die ein besonderer Gebührensatz besteht · Gebühren: Fr. 20 bis Fr. 60 — 17. · Gegenstand: Siegelung einer Erbschaft, Anordnung anderweitiger Sicherungsmassnahmen, Entscheidung über Fortführung eines Geschäftes · Gebühren: Fr. 50 bis Fr. 1'200 — 18. · Gegenstand: Inventarisierung und Schätzung in Erb- und Ehegüterrechtssachen: — a) · Gegenstand: für Liegenschaften sowie Schenkungen und Vorempfänge an die gleiche Empfängerin oder den gleichen Empfänger · Gebühren: Fr. 50 bis Fr. 1'200 — b) · Gegenstand: für Einzelinventur von Mobiliar, wo sich ein besonderer Ansatz wegen des Umfanges der Bemühungen rechtfertigt · Gebühren: 1 bis 2 ‰ — c) · Gegenstand: für die übrigen inventierten Aktiven: — ca) · Gegenstand: bis Fr. 100'000 · Gebühren: 3 ‰ — cb) · Gegenstand: von Fr. 100'001 bis Fr. 5'000'000 · Gebühren: 2 ‰ — cc) · Gegenstand: von Fr. 5'000'001 bis Fr. 10'000'000 · Gebühren: 1 ‰ — cd) · Gegenstand: über Fr. 10'000'000 · Gebühren: ½ ‰ höchstens Fr. 30'000 — Gegenstand: Die Gebühren für inventierte Aktiven von mehr als Fr. 5'000'000 verstehen sich für einen durchschnittlichen Aufwand für die Inventarisierung. — Gegenstand: Ist der Aufwand des Erbschaftsamtes gering, so ist die Gebühr um bis zu einem Drittel zu ermässigen; bei einem grossen Aufwand um bis zu einem Drittel zu erhöhen, höchstens aber bis auf Fr. 30'000. — d) · Gegenstand: Güterrechtliche Inventare: — da) · Gegenstand: vom Wert der inventierten Fahrnis und Guthaben bis Fr. 50'000 · Gebühren: 3 ‰ — db) · Gegenstand: vom Mehrbetrag · Gebühren: 2 ‰ — dc) · Gegenstand: pro inventierte Liegenschaft · Gebühren: Fr. 20 bis Fr. 600 — 19. · Gegenstand: Erbschaftsverwaltung und amtliche Verwaltung des Erbteils einer Verschollenen oder eines Verschollenen: — a) · Gegenstand: vom Wert der Aktiven für das Halbjahr Ein angefangenes Halbjahr wird als voll berechnet · Gebühren: 3 ‰ mind. aber Fr. 30 — b) · Gegenstand: Ist mit der Erbschaftsverwaltung eine Liegenschaftsverwaltung verbunden, so bezieht das Amt ausserdem von den Bruttoeinnahmen eine spezielle Gebühr für Liegenschaftsverwaltung in der Höhe von · Gebühren: 5 % — 20. · Gegenstand: Amtliche und dem Erbschaftsamt freiwillig übertragene Liquidationen vom Werte der liquidierten Aktiven · Gebühren: ½ bis 3 % — a) · Gegenstand: Amtliche und dem Erbschaftsamt freiwillig übertragene Teilungen und Vermögens-auseinandersetzungen durch die Zivilgerichtsschreiberei vom Werte der zu teilenden Aktiven · Gebühren: ½ bis 3 % — b) · Gegenstand: Ist das Amt, ohne dass ein Liquidations- und Teilungsauftrag vorliegt, von Beteiligten mit einer speziellen Aufgabe betraut worden, so kann für diese Tätigkeit je nach dem Umfang der Bemühungen des Amtes eine Gebühr vom Werte dieser Aktiven von ½ bis 3 % erhoben werden. — Gegenstand: Bei Rückzug des Auftrages kann für die schon aufgewendete Arbeit eine Gebühr von höchstens drei Viertel der vorgenannten Ansätze erhoben werden. — 21. · Gegenstand: Wird eine Notarin oder ein Notar vom Erbschaftsamt oder von der Zivilgerichtsschreiberei mit einer Inventarisation irgendwelcher Art betraut oder mit einer Erbschaftsverwaltung oder mit einer amtlichen Liquidation, so bezieht sie oder er die in den Ziff. 19–21 erwähnten Gebühren. — Gegenstand: Für Kontrolle ist zu entrichten · Gebühren: Fr. 50 bis Fr. 1'200 — Gegenstand: In ausserordentlichen Fällen kann die Gebühr für die Kontrolltätigkeit bei Erbschaftsverwaltungen oder amtlichen Liquidationen bis auf Fr. 2'000 erhöht werden. — 22. · Gegenstand: Gesetzlich vorgeschriebene Mitwirkung bei einer Teilung: vom Wert des Erbteils · Gebühren: ½ bis 3 % — 23. · Gegenstand: Behandlung eines Gesuchs um Bestellung einer Vertreterin oder eines Vertreters der Erbengemeinschaft · Gebühren: Fr. 100 bis Fr. 1'200 — 24. · Gegenstand: Wo keine Inventurgebühr erhoben wird und keine der vorstehenden Gebühren anwendbar ist, gelten die folgenden Aufwandgebühren pro Stunde: — a) · Gegenstand: Vorsteherin oder Vorsteher · Gebühren: Fr. 150 — b) · Gegenstand: Inventurbeamtin oder Inventurbeamter · Gebühren: Fr. 120 — c) · Gegenstand: Sachbearbeiterin oder Sachbearbeiter · Gebühren: Fr. 100"
+        },
+        {
+          "absatz": "2",
+          "text": "In tatsächlich oder rechtlich verwickelten und sonst ungewöhnlich zeitaufwändigen Fällen können die Gebühren des Erbschaftsamtes bis auf das Doppelte der Maxima erhöht werden. Wo ihre Erhebung mit Rücksicht auf den Wert eines Nachlasses oder eines Erbteils oder auf die finanzielle Lage der oder des Pflichtigen zu grosser Unbilligkeit führen würde, können die Gebühren von der Vorsteherin oder vom Vorsteher des Erbschaftsamtes ermässigt oder erlassen werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Geringfügige Auf- und Abrundungen sind zulässig."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Erbinnen und Erben haften für die Gebühren und Auslagen des Erbschaftsamtes solidarisch."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "7164f251a6e54110a2d4c671326cdbb4e57df1192098e61eeecbe65c068663c7"
+    },
+    {
+      "id": "kanton/BS/154.810/art_30",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "30",
+      "artikelLabel": "§ 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Entscheide der Aufsichtsbehörde über das Erbschaftsamt beträgt im Falle der Abweisung der Beschwerde Fr. 200 bis Fr. 5'000."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "f000c33faa2706e53e778fc9034e1d7df13583c4d13542d953b5d4bbe30ae7b7"
+    },
+    {
+      "id": "kanton/BS/154.810/art_31",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "31",
+      "artikelLabel": "§ 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Eröffnung des Entscheides ohne schriftliche Begründung wird die Gebühr für den Fall, dass keine schriftliche Begründung verlangt wird, um wenigstens einen Viertel und höchstens die Hälfte ermässigt. Neben der ermässigten Gebühr ist im Entscheid die höhere Gebühr festzusetzen, die bei nachträglicher schriftlicher Begründung an Stelle der ermässigten zu entrichten ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Vorbehalten bleiben Verfahren, deren Gebühren sich nach der Gebührenverordnung zum Bundesgesetz über Schuldbetreibung und Konkurs bemessen."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "f96702c91c4ea735397ddfc028387b0d23131f5302f19a11fb0e8a8aeb6ae26b"
+    },
+    {
+      "id": "kanton/BS/154.810/art_32",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "32",
+      "artikelLabel": "§ 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Entscheid über ein Erläuterungs- oder Berichtigungsbegehren beträgt Fr. 200 bis Fr. 3'000. Sie wird nur verlegt, wenn das Begehren abgewiesen oder nicht darauf eingetreten wird."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "9bfe6efa082291b45c5f355cc85405ade5a24827b367a79215ee87e9721bd6bd"
+    },
+    {
+      "id": "kanton/BS/154.810/art_33",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "33",
+      "artikelLabel": "§ 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Entscheid über ein Ausstandsbegehren beträgt Fr. 200 bis Fr. 3'000. Sie wird nur verlegt, wenn das Ausstandsbegehren abgewiesen oder nicht darauf eingetreten wird."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "3d7ad9faf171fcc3a00aaf688e7824adf28a4aaf4c73a0a05b15e132ae6951dc"
+    },
+    {
+      "id": "kanton/BS/154.810/art_34",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "34",
+      "artikelLabel": "§ 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für den Entscheid über ein Begehren um Wiederherstellung beträgt Fr. 200 bis Fr. 3'000."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "42babd9fb7e8a52abbe89f7311bb0c4639388e73cb88ec4c705fe536ecad1415"
+    },
+    {
+      "id": "kanton/BS/154.810/art_35",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "35",
+      "artikelLabel": "§ 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Entscheide über Beanstandungen des Protokolls beträgt Fr. 100 bis Fr. 500. Sie wird nur verlegt, wenn die Berichtigung abgelehnt wird."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "df7ecbf93b1708e6f5a9349570d9491741801f1d0448e88f34d38618be7106c9"
+    },
+    {
+      "id": "kanton/BS/154.810/art_36",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "36",
+      "artikelLabel": "§ 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Bescheinigung der Rechtskraft und Vollstreckbarkeit eines Entscheides, Urteils oder Beschlusses kann eine Gebühr bis Fr. 100 erhoben werden."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "720d3235391785654d862834a65841a16319e8bc5650b817ddeb1c2f7dd7c216"
+    },
+    {
+      "id": "kanton/BS/154.810/art_37",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "37",
+      "artikelLabel": "§ 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Erledigung auswärtiger Rechtshilfeersuchen beträgt Fr. 100 bis Fr. 500."
+        },
+        {
+          "absatz": "2",
+          "text": "In aussergewöhnlich weitläufigen Fällen kann die Gebühr bis Fr. 12'000 und, wenn das Ersuchen nicht in deutscher Sprache gestellt ist, bis um die Hälfte erhöht werden. Vorbehalten bleiben allfällige Staatsverträge."
+        },
+        {
+          "absatz": "3",
+          "text": "In Fällen der Rechtshilfe zugunsten schweizerischer Gerichte werden lediglich die Auslagen in Rechnung gestellt."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "8b9de983c140ca63c81936f0510cd6fd6d8c13750f572a0149aeecb11ab5e111"
+    },
+    {
+      "id": "kanton/BS/154.810/art_37_a",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "37_a",
+      "artikelLabel": "§ 37a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Entscheide über Gesuche um Akteneinsicht oder um Zugang zu Information, soweit sie nicht von Prozessparteien in einem laufenden Verfahren verlangt werden, kann unter Vorbehalt von § 36 Abs. 1 des Gesetzes über die Information und den Datenschutz (Informations- und Datenschutzgesetz, IDG) vom 9. Juni 2010 eine Gebühr von Fr. 50 bis Fr. 1'000 erhoben werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Bescheinigungen und Beurkundungen wird eine Gebühr von Fr. 20 bis Fr. 100 erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Wenn in diesem Reglement die Gebührenbemessung für eine Verrichtung, eine Verfügung oder einen Entscheid nicht eigens geregelt ist, kann unter Beachtung der Grundsätze von § 2 Abs. 1 eine Gebühr von Fr. 50 bis Fr. 5'000 erhoben werden."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "6848eb688aeb52a1abaa68d2d0375f8f34fe06cdd52dae09fd3d5b7f2d60016b"
+    },
+    {
+      "id": "kanton/BS/154.810/art_38",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "38",
+      "artikelLabel": "§ 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Soweit die Akteneinsicht nicht von Prozessparteien in einem laufenden Verfahren verlangt werden, werden für die Reproduktion von Akten folgende Gebühren erhoben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für die Herstellung von Fotokopien pro Seite Fr. 1, ab der 40. Seite pro Seite Fr. 0.50,"
+            },
+            {
+              "marke": "b",
+              "text": "für elektronische Kopien auf maschinenlesbarem Datenträger Fr. 20,"
+            },
+            {
+              "marke": "c",
+              "text": "Für die Herstellung von Tonträgern von Audioprotokollen der Verhandlungen Fr. 20."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Dieselben Gebühren können verlangt werden, wenn von Prozessparteien oder Dritten in einem laufenden Verfahren Kopien verlangt werden, wenn die entsprechende Leistung nicht dem ordentlichen Gang des Verfahrens entspricht.",
+          "items": [
+            {
+              "marke": "a",
+              "text": "…"
+            },
+            {
+              "marke": "b",
+              "text": "…"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "…"
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "341b5c49cbee4f9358c4db21ca5b105fabff4efe31c65596e179f440bb3dd0cf"
+    },
+    {
+      "id": "kanton/BS/154.810/art_39",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "39",
+      "artikelLabel": "§ 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird die Gebühr nicht innert der Zahlungsfrist bezahlt, wird nach Ablauf der Zahlungsfrist eine Zahlungserinnerung (erste Mahnung) verschickt. Diese erste Mahnung ist gebührenfrei."
+        },
+        {
+          "absatz": "2",
+          "text": "Bleibt die Zahlungserinnerung ohne Wirkung oder läuft eine erstreckte Frist unbenutzt ab, so wird die zahlungspflichtige Person gemahnt. Für jede Mahnung wird eine Mahngebühr von Fr. 40 erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Bleiben die Mahnungen ohne Wirkung und muss gegen die zahlungspflichtige Person die Betreibung eingeleitet werden, wird hierfür eine Umtriebsgebühr von Fr. 50 erhoben."
+        },
+        {
+          "absatz": "4",
+          "text": "Ab Zustellung der Zahlungserinnerung wird ein Verzugszins von 5 % erhoben."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "81a05cbc9335b3597df3b98ba51688f55ec8f1892bd9a3b3b31794ce4553caae"
+    },
+    {
+      "id": "kanton/BS/154.810/art_40",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "40",
+      "artikelLabel": "§ 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In begründeten Fällen kann auf die Erhebung von Gebühren nach diesem Reglement verzichtet werden."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "888284a3f0180cdea353da2043265060278175fa679a83dd8706a3a8ac8b26c6"
+    },
+    {
+      "id": "kanton/BS/154.810/art_41",
+      "ebene": "kanton",
+      "quelle": "BS",
+      "erlass": "Gerichtsgebührenreglement, GGR (SG 154.810)",
+      "artikel": "41",
+      "artikelLabel": "§ 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Verfahren, die bei Inkrafttreten dieses Reglements rechtshängig sind, gilt die bisher geltende Verordnung über die Gerichtsgebühren vom 4. März 1975 bis zum Abschluss vor der betroffenen Instanz."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Rechtsmittelverfahren gilt das Recht, das bei der Eröffnung des Entscheids in Kraft ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Revision von Entscheiden, die nach der bisher geltenden Verordnung über die Gerichtsgebühren eröffnet worden sind, gilt das neue Reglement über die Gerichtsgebühren."
+        }
+      ],
+      "stand": "2021-06-03",
+      "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "bf950ab89533e58cc1c974931d913313",
+      "sha": "bc4ade2c3ffa2b6e3004d47d8845dd83cfc81a5a4745b16260886aa40e902fe9"
     }
   ]
 }

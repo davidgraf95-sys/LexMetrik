@@ -1,32 +1,415 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
     {
-      "id": "kanton/VS/173.8-de/art_16",
+      "id": "kanton/VS/173.8-de/art_1",
       "ebene": "kanton",
       "quelle": "VS",
       "erlass": "GTar (SR 173.8)",
-      "artikel": "16",
-      "artikelLabel": "Art. 16",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für geldwerte Streitigkeiten des Zivilrechts, die im ordentlichen oder vereinfachten Verfahren vor erster oder einziger Instanz entschieden werden, wird die Gebühr gemäss folgender Tabelle festgesetzt: Für den Streitwert: bis 2'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 180 bis 1'200 Franken — Für den Streitwert: von 2'001 bis 8'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 650 bis 1'800 Franken — Für den Streitwert: von 8'001 bis 20'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 900 bis 3'600 Franken — Für den Streitwert: von 20'001 bis 50'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 1'800 bis 6'000 Franken — Für den Streitwert: von 50'001 bis 100'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 2'700 bis 9'600 Franken — Für den Streitwert: von 100'001 bis 200'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 4'500 bis 18'000 Franken — Für den Streitwert: von 200'001 bis 500'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 9'000 bis 42'000 Franken — Für den Streitwert: von 500'001 bis 1'000'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 18'000 bis 60'000 Franken — Für den Streitwert: mehr als 1'000'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 27'000 bis 120'000 Franken"
+          "text": "Das vorliegende Gesetz regelt den Tarif der Kosten und Entschädigungen vor Gerichts- und Verwaltungsbehörden in Zivil-, Straf- und Verwaltungssachen."
         },
         {
           "absatz": "2",
-          "text": "Die Grundsätze für die Bestimmungen des Streitwertes (Art. 28) gelten analog."
+          "text": "Die Umschreibung der Kosten und Parteientschädigungen, die Kostentragung, die Verteilung, die Stundung und der Erlass, die Kostenvorschüsse, die Sicherheitsleistung, der Kostenentscheid und das Rechtsmittel sind grundsätzlich wie folgt geregelt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Zivilsachen in der Schweizerischen Zivilprozessordnung;"
+            },
+            {
+              "marke": "b",
+              "text": "in Angelegenheiten betreffend den Kindes- und Erwachsenenschutz im Schweizerischen Zivilgesetzbuch (ZGB);"
+            },
+            {
+              "marke": "c",
+              "text": "in Strafsachen des Bundes und in kantonalen Strafsachen in der Schweizerischen Strafprozessordnung;"
+            },
+            {
+              "marke": "d",
+              "text": "in Verwaltungssachen in den folgenden Artikeln 3 bis 6 und im Gesetz über das Verwaltungsverfahren und die Verwaltungsrechtspflege."
+            }
+          ]
         },
         {
           "absatz": "3",
-          "text": "Die Tabelle dieses Artikels kommt ebenfalls im summarischen Verfahren zur Anwendung, das sich auf geldwerte Streitigkeiten bezieht und zu einem Endurteil führt."
+          "text": "Vorbehalten bleiben:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Bestimmungen der Spezialgesetzgebung;"
+            },
+            {
+              "marke": "b",
+              "text": "jede von diesem Gesetz abweichende Verfahrensvereinbarung, wobei jedoch die Parteien nicht von den Bestimmungen über die Auslagen und Gebühren abweichen dürfen."
+            }
+          ]
         }
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
-      "sha": "614050e5e6c8d249300dee6176f874a8649182e2b6fab831a9cd66f1aad522c9"
+      "sha": "17b4395773edddd972eec45892eab069b428c447b1d6dbe4dadce2c86c5ea8a5"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_2",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im vorliegenden Gesetz gilt jede Bezeichnung der Person, des Statuts oder der Funktion in gleicher Weise für Mann oder Frau."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "34e2269192df74b47150f99ed2957501e18170e81ed37131c9696db044901a23"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_3",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter Kosten versteht man die Auslagen der Behörde (Abs. 2) und die Gerichtsgebühren (Abs. 3)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Auslagen der Behörde beinhalten das Honorar der Sachverständigen, Dolmetscher und Übersetzer, die Entschädigung für Reisen und Präsenz sowie die anderen im hängigen Verfahren nötigen Ausgaben."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gerichtsgebühr (nachstehend: Gebühr) ist eine Abgabe als Gegenleistung für die Intervention der mit dem Fall befassten Behörde, die zudem global die Kosten der Kanzlei und andere ähnliche Kosten deckt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "7432ef9e14e5fcb6f9f7e0efd0b5991c6dba54a62a7821858d0377cf33e68e02"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_4",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Parteientschädigung umfasst die Entschädigung an die berechtigte Partei (Abs. 2) und die Kosten des Rechtsbeistands (Abs. 3). Sie deckt grundsätzlich die durch den Rechtsstreit verursachten notwendigen Kosten. Der Entscheid, der die Parteientschädigung festsetzt, hat keinen Einfluss auf das interne Verhältnis zwischen Rechtsbeistand und Klient."
+        },
+        {
+          "absatz": "2",
+          "text": "Die einer Partei gewährte Entschädigung umfasst die Rückerstattung ihrer Auslagen und, falls es die besonderen Umstände rechtfertigen, eine Abgeltung für Zeitverlust und entgangenen Gewinn."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Kosten des Rechtsbeistands umfassen das Honorar, welches sich nach den Artikeln 27 und folgende des vorliegenden Gesetzes berechnet, und weitere Auslagen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "6a3cbc5b4994b56472227d9290df68c861ac4e4242f1b9fe1dd8f69d8ca69579"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_5",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Entscheid der Behörde über den Betrag der Kosten, der Gebühren oder den Umfang und das Schicksal der Parteientschädigung wird im Dispositiv jedes Entscheides und Urteils festgesetzt. Wenn es die Umstände rechtfertigen, kann die Behörde ihren Entscheid über die Entschädigung auf den Schluss des Verfahrens verschieben."
+        },
+        {
+          "absatz": "2",
+          "text": "Bis zu den Verhandlungen, bis zum Schlussentscheid oder innert einer von der Behörde angesetzten Frist kann die Partei eine Abrechnung hinterlegen, die Folgendes enthält:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "ihre Auslagen (Art. 4 Abs.2);"
+            },
+            {
+              "marke": "b",
+              "text": "die Entschädigung (Art. 4 Abs. 2);"
+            },
+            {
+              "marke": "c",
+              "text": "das Honorar und die Auslagen des Rechtsbeistands (Art. 4 Abs. 3)."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "8c2e6b94145492357b689f0e9279dafe50af99c23992baf47b3f9df51d3af002"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_6",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die alleinige Anfechtung des Kosten- und Entschädigungsentscheides erfolgt im Verwaltungsverfahren mit Verwaltungs- oder Verwaltungsgerichtsbeschwerde."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Fall der alleinigen Anfechtung des Kosten- und Entschädigungsentscheides werden die endgültig festgesetzten Kosten, Gebühren oder Entschädigungen mit fünf Prozent verzinst. Dabei berechnet sich der Zins ab dem dreissigsten Tag seit dem Erlass des Gegenstand der Anfechtung bildenden Urteils oder Entscheides."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Rechtskraft des Entscheides in der Sache selbst wird durch die alleinige Anfechtung des Kosten- und Entschädigungsentscheides nicht berührt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "92bc34b0120b3363e10055adfa0254816fa471da012df43c10557eb5eed1dbfe"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_7",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Behörde setzt das Honorar für Sachverständige, Dolmetscher und Übersetzer fest, gegebenenfalls aufgrund eines Voranschlags und in Berücksichtigung:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der Bedeutung und Schwierigkeit der Arbeit;"
+            },
+            {
+              "marke": "b",
+              "text": "des üblichen Tarifs für diesen Beruf."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Parteien können angehört werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "0ce7809d760a68e659f21669c0d580e46971ba451b1887980ccfba6147a6be35"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_8",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zeugen erhalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Reiseentschädigung gemäss Artikel 9;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Präsenzentschädigung von 50 Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "eine Entschädigung von 120 Franken pro Nacht, wenn sie ihren Wohnort nicht mehr erreichen können."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Je nach den Umständen können diese Entschädigungen erhöht werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "54f7c80b339a44a3ab03bcb5d886179de2d33301c89c65d2f2ca399197fad0a2"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_9",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Sachverständigen, Dolmetscher, Übersetzer und Zeugen erhalten eine Reiseentschädigung von 0.60 Franken für jeden gefahrenen Kilometer."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Reiseentschädigung für Richter, Staatsanwälte, Gerichtsschreiber und Beamte wird, mangels spezieller Bestimmungen des Kantonsgerichtes, der Staatsanwaltschaft oder des Gemeinderates, vom Staatsrat in einem Spesenreglement festgesetzt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "6226ecf0635e9d595841cd4452d2f4427db334f08b4d3f7609494d7de8fd1db4"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_10",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die von der Behörde angeordnete Intervention von Polizeibeamten führt zu folgenden Auslagen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Kilometerentschädigung von 0.60 Franken für jedes benützte Fahrzeug;"
+            },
+            {
+              "marke": "b",
+              "text": "eine Gebühr von 20 bis 1'000 Franken für jeden Vorgang, wie Bericht, Grafik, Fotodossier, Gutachten oder andere Interventionen;"
+            },
+            {
+              "marke": "c",
+              "text": "die Rückerstattung der den Polizeiagenten gemäss spezieller Gesetzgebung gewährten Entschädigung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Dienste des Gerichtsweibels werden 25 Franken pro Sitzung in Rechnung gestellt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "c0c1bd6166200f2ac577d49c8838fb89028695a503194c1396b3db4fa017281f"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_11",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die anderen durch das Verfahren verursachten Auslagen werden mit ihrem effektiven Betrag in Rechnung gestellt. Soweit sie 200 Franken nicht übersteigen, können sie durch einen Pauschalbetrag ersetzt werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "eadc49fe0278bde63e732b7055092e6709e24bee62b982bb0fea5ea1e360065d"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_12",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ausnahmsweise kann auf die Erhebung von Auslagen der Behörde ganz oder teilweise verzichtet werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "d46e7f83aa190ccac901273a7209c42c6bcebfb50018615fbdd1719561eeb928"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_13",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gerichtsgebühr wird aufgrund des Streitwertes, des Umfangs und der Schwierigkeit des Falls, der Art von Prozessführung der Parteien sowie ihrer finanziellen Situation festgesetzt. Wenn der Streitwert nicht in Zahlen ausgedrückt werden kann, wird die Gebühr nach den anderen Beurteilungselementen festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie bewegt sich zwischen einem Minimum und einem Maximum, welche nach dem Kostendeckungs- und Äquivalenzprinzip festgesetzt werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Wenn es besondere Umstände rechtfertigen, kann die Behörde diese Grenzwerte verdoppeln oder im Strafbereich und im öffentlichen Bereich verfünffachen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "ef1cc36d15aa9bf371e55f70984649d03ebfa3c8cd24b0b03c9bcba1268c2eb2"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_14",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn ein Verfahren nicht bis zu Ende geführt wird, reduziert sich die Gebühr verhältnismässig; gleich verhält es sich bei einem Vor-, Teil- oder Säumnisurteil sowie einem Urteil ohne Begründung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Behörde kann ausnahmsweise auf eine Gebühr ganz oder teilweise verzichten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "3ea9213ff8e4b47823e8c2492fa104e088a34a2eee2ab8cded712b9c036118b3"
     },
     {
       "id": "kanton/VS/173.8-de/art_15",
@@ -57,9 +440,36 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
       "sha": "131e338658b42bf00b2abcc0fa408a16c7d561d026c640382fdca1d229361915"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_16",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für geldwerte Streitigkeiten des Zivilrechts, die im ordentlichen oder vereinfachten Verfahren vor erster oder einziger Instanz entschieden werden, wird die Gebühr gemäss folgender Tabelle festgesetzt: Für den Streitwert: bis 2'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 180 bis 1'200 Franken — Für den Streitwert: von 2'001 bis 8'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 650 bis 1'800 Franken — Für den Streitwert: von 8'001 bis 20'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 900 bis 3'600 Franken — Für den Streitwert: von 20'001 bis 50'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 1'800 bis 6'000 Franken — Für den Streitwert: von 50'001 bis 100'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 2'700 bis 9'600 Franken — Für den Streitwert: von 100'001 bis 200'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 4'500 bis 18'000 Franken — Für den Streitwert: von 200'001 bis 500'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 9'000 bis 42'000 Franken — Für den Streitwert: von 500'001 bis 1'000'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 18'000 bis 60'000 Franken — Für den Streitwert: mehr als 1'000'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 27'000 bis 120'000 Franken"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Grundsätze für die Bestimmungen des Streitwertes (Art. 28) gelten analog."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Tabelle dieses Artikels kommt ebenfalls im summarischen Verfahren zur Anwendung, das sich auf geldwerte Streitigkeiten bezieht und zu einem Endurteil führt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "614050e5e6c8d249300dee6176f874a8649182e2b6fab831a9cd66f1aad522c9"
     },
     {
       "id": "kanton/VS/173.8-de/art_17",
@@ -84,9 +494,469 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
       "sha": "5d649dfde1bd6add3c750ae16149167997b5830ffa0054b81f4e7fbdae6cfcc7"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_18",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für andere Verfahren wird eine Gebühr von 90 bis 4'800 Franken erhoben, insbesondere bei Fällen des Kindes- und Erwachsenenschutzes, bei nicht streitiger Gerichtsbarkeit, im summarischen Verfahren, bei auf das Recht beschränkten Beschwerdeverfahren, im Revisions-, Erläuterungs- und Berichtigungsverfahren sowie bei Prozesseinreden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "7b50acc8ca375ad04e7039094b969a36497d4968bf105f915c3b4e1a3bd939bb"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_19",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr wird entsprechend der für Fälle erster Instanz geltenden Tabelle festgelegt und kann einen Reduktions-Koeffizienten von 60 Prozent berücksichtigen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "98525666e5977ad9e5bd7031624ff78e94987308f4b095de034e38b9eb5624b2"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_20",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Fälle, die in die Kompetenz des Polizeigerichts fallen, wird eine Gebühr von 50 bis 500 Franken erhoben"
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "505d3cfd98fe0d5e88059fa0d5714393da45d85ba980926bac76cf54b0ef8df9"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_21",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn es die Umstände rechtfertigen, die Kosten ganz oder teilweise dem Minderjährigen oder seinen Eltern aufzuerlegen, wird eine Gebühr erhoben von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "20 bis 500 Franken für die Instruktion des Falles;"
+            },
+            {
+              "marke": "b",
+              "text": "40 bis 500 Franken für das Verfahren vor dem Jugendrichter;"
+            },
+            {
+              "marke": "c",
+              "text": "90 bis 1'000 Franken für das Verfahren vor dem Jugendgericht;"
+            },
+            {
+              "marke": "d",
+              "text": "90 bis 500 Franken für das Berufungsverfahren vor dem Jugendgericht;"
+            },
+            {
+              "marke": "e",
+              "text": "90 bis 1'000 Franken für das Berufungsverfahren vor dem Kantonsgericht."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "b28810265c89b250b0d94bfda7bbc12d0ec1b4cd0b370311094fb2570db738f6"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_22",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für andere Strafverfahren wird eine Gebühr erhoben von:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "40 bis 1'200 Franken für das Versöhnungsverfahren vor dem Staatsanwalt;"
+            },
+            {
+              "marke": "b",
+              "text": "90 bis 6'000 Franken für die anderen Verfahren vor dem Staatsanwalt;"
+            },
+            {
+              "marke": "c",
+              "text": "90 bis 2'400 Franken für das Verfahren vor dem Bezirksgericht;"
+            },
+            {
+              "marke": "d",
+              "text": "190 bis 6'000 Franken für das Verfahren vor dem Kreisgericht;"
+            },
+            {
+              "marke": "e",
+              "text": "90 bis 1'200 Franken für das Verfahren vor dem Zwangsmassnahmengericht;"
+            },
+            {
+              "marke": "f",
+              "text": "380 bis 6'000 Franken für das Berufungs- oder Revisionsverfahren vor dem Kantonsgericht;"
+            },
+            {
+              "marke": "g",
+              "text": "90 bis 2'400 Franken für das Beschwerdeverfahren vor der Strafkammer des Kantonsgerichts oder einem Richter des Kantonsgerichts und bis 6'600 Franken bei internationalen Rechtshilfegesuchen;"
+            },
+            {
+              "marke": "h",
+              "text": "90 bis 1'200 Franken für Verfahren vor dem Straf- und Massnahmen-vollzugsgericht und in anderen Strafgerichtsverfahren im Sinne des Einführungsgesetzes zum Schweizerischen Strafgesetzbuch."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "4a1af3ab73fa6051c38308c88f994b6320b4a180894531ea823555e15ba2b06d"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_23",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei nicht geldwerten Fällen erheben die Verwaltungsbehörden folgende Gebühren:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Gemeinden, Bezirke, Organe der Kantonsverwaltung, Körperschaften und öffentlich-rechtliche Anstalten von 90 bis 1'000 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "Departemente 90 bis 1'650 Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "Staatsrat, kantonale Aufsichtsbehörde der Anwälte und Schätzungskommission in Enteignungssachen 90 bis 1'800 Franken."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "In geldwerten Fällen kann die Gebühr das Dreifache dieser Beträge erreichen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "00dbc926dd50d74ba9d608dedd5a74b5c2412ba66ab57e71c0b27f6688af949f"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_24",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der direkten Klage vor dem Kantonsgericht wird die Gebühr gemäss folgender Tabelle festgesetzt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "in Übereinstimmung mit Artikel 18 für das summarische Verfahren, das Zwischenverfahren sowie das Revisions- und Erläuterungsverfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "in Übereinstimmung mit Artikel 16 für das ordentliche Verfahren bei geldwerten Fällen;"
+            },
+            {
+              "marke": "c",
+              "text": "zwischen einem Minimum von 280 Franken und einem Maximum von 8'000 Franken für ordentliche Verfahren bei nicht geldwerten Fällen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "6afd36f4ac696e6a8839487c60f3ccd2bcf34a6d88e4fd923b782eeac8294697"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_25",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Verfahren bei einer Verwaltungsgerichtsbeschwerde wird eine Gebühr von 280 bis 5'000 Franken erhoben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "3dc4f98bf4e334bfd7a403e57aa118924ce9829fcd402d8a985d7377d281bd57"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_26",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Unter Vorbehalt gegensätzlicher Bestimmungen des Bundesrechts wird für die Verfahren vor der Sozialversicherungsabteilung des Kantonsgerichts eine Gebühr von 280 bis 5'000 Franken erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Schiedsgericht im Sinne des Bundesgesetzes über die Krankenversicherung erhebt eine Gebühr von 470 bis 20'000 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "5222e5b23b452065dc329029056fe52b2cca3fc039ecde388287354b8735dfad"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_27",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Honorar hält sich zwischen einem in diesem Kapitel vorgesehenen Minimum und Maximum; berücksichtigt wird die Natur und Bedeutung des Falls, die Schwierigkeit, der Umfang, die vom Rechtsbeistand nützlich aufgewandte Zeit und die finanzielle Situation der Partei."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Honorar richtet sich in der Regel nach dem Streitwert."
+        },
+        {
+          "absatz": "3",
+          "text": "Lässt sich der Streitwert nicht beziffern, so wird das Honorar nach den in Absatz 1 genannten Bemessungselementen bestimmt."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Behörde setzt das Honorar in runden Zahlen fest, indem sie zudem den Sonderbestimmungen in den verschiedenen Prozessordnungen nachkommt."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Entschädigungen verstehen sich inklusive Mehrwertsteuer. Wenn der Mehrwertsteuersatz im Zeitpunkt des Inkrafttretens des vorliegenden Gesetzes geändert wurde, passt der Staatsrat auf dem reglementarischen Weg die im vorliegenden Gesetz vorgesehenen Honorare an."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "a4e38f06ec88d5716658037099efc84b963953dca39d1c412d35adb7af3d8051"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_28",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Streitwert beurteilt sich nach den Bestimmungen der Schweizerischen Zivilprozessordnung."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn die Begehren einer Partei offensichtlich übersetzt sind, wird das Honorar festgesetzt aufgrund der Begehren, die sie in guten Treuen hätte stellen sollen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "de1f3c8055d8a8711c46bd390d4686caf5861575816740ddfa786e747991c7e5"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_29",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Fällen, die eine aussergewöhnliche Arbeit erforderten, insbesondere wenn sie teilweise ausserhalb der ordentlichen Arbeitsstunden ausgeführt werden musste, wenn die Beweismittel zahlreich und schwierig beizubringen oder zu koordinieren waren, das Dossier des Beweisverfahrens einen ganz besonderen Umfang annahm, die Rechts- und Sachverhaltsfragen heikel waren, der Rechtsbeistand mehrere Parteien vertreten musste oder sein Klient mehreren Parteien gegenüberstand, kann die Behörde als Honorar einen höheren Betrag gewähren, als im Tarif vorgesehen ist."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn ein offensichtliches Missverhältnis zwischen Streitwert und Prozessinteresse der Parteien oder zwischen der Entschädigung gemäss vorliegendem Tarif und der effektiven Arbeit des Rechtsbeistands besteht, kann die Behörde das Honorar unter das erwähnte Minimum senken."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Falle des Prozessabstandes, des Beschwerderückzuges, des Säumnisurteils, des Vergleichs, des Nichteintretens und allgemein, wenn der Fall nicht durch ein Sachurteil endet, können die Honorare entsprechend gekürzt werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "113d2e2ae2c63edaa5b69d371b12c63afee23c34a30df8e953915d2f78f73c4d"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_30",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Rechtsbeistand, welcher gestützt auf die Bestimmungen über die unentgeltliche Rechtspflege ernannt wurde, bezieht über die Rückzahlung der berechtigten Auslagen hinaus ein Honorar, welches 70 Prozent des in den Artikeln 31 bis 40 vorgesehenen Pauschalhonorars entspricht, im Minimum aber eine angemessene Entschädigung gemäss der durch das Bundesgericht festgelegten Rechtsprechung."
+        },
+        {
+          "absatz": "2",
+          "text": "Vom Departement, welchem die Finanzen unterstellt sind, wird zum vollen Tarif entschädigt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "der unentgeltliche Rechtsbeistand im Sinne des Artikels 132 Absatz 1 Buchstabe a StPO (notwendige Verteidigung);"
+            },
+            {
+              "marke": "b",
+              "text": "der unentgeltliche Rechtsbeistand im Sinne des Artikels 132 Absatz 1 Buchstabe b StPO, wenn die beschuldigte Person im Besitze einer Einstellungsverfügung ist oder freigesprochen wurde."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Das Entschädigungsverfahren für den amtlich eingesetzten Rechtsbeistand und die Rückerstattung der überwiesenen Leistungen sind in der Schweizerischen Strafprozessordnung, der Schweizerischen Zivilprozessordnung und im Gesetz über die unentgeltliche Rechtspflege (GUR) und seiner Verordnung geregelt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "cc1b12f1fa942ed65f78d597168212ba570a595cf237987354695482b7c0560f"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_31",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vor dem Gemeinderichter wird das Honorar wie folgt festgesetzt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für den Entscheidvorschlag 60 bis 250 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "für das Entscheidverfahren 250 bis 900 Franken."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für Revisions-, Erläuterungs- und Berichtigungsverfahren hält sich das Honorar zwischen 250 und 900 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "313bc84cdd4fa5debc785c698ae53a552aa9901e7879b7bf1f4eaca193303b7c"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_32",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Streitigkeiten und Zivilsachen geldwerter Natur im ordentlichen oder vereinfachten Verfahren, das in erster oder einziger Instanz entschieden wird, ist das Honorar wie folgt festgesetzt: Für den Streitwert: bis 2'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 550 bis 1'400 Franken — Für den Streitwert: von 2'001 bis 10'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 1'500 bis 2'500 Franken — Für den Streitwert: von 10'001 bis 15'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 2'300 bis 3'300 Franken — Für den Streitwert: von 15'001 bis 20'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 2'900 bis 4'000 Franken — Für den Streitwert: von 20'001 bis 30'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 3'600 bis 5'400 Franken — Für den Streitwert: von 30'001 bis 40'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 4'700 bis 6'800 Franken — Für den Streitwert: von 40'001 bis 50'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 5'800 bis 8'200 Franken — Für den Streitwert: von 50'001 bis 60'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 6'800 bis 9'200 Franken — Für den Streitwert: von 60'001 bis 70'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 7'600 bis 10'200 Franken — Für den Streitwert: von 70'001 bis 80'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 8'400 bis 11'300 Franken — Für den Streitwert: von 80'001 bis 90'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 9'100 bis 12'300 Franken — Für den Streitwert: von 90'001 bis 100'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 9'900 bis 13'300 Franken — Für den Streitwert: von 100'001 bis 150'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 11'100 bis 15'400 Franken — Für den Streitwert: von 150'001 bis 200'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 12'800 bis 17'600 Franken — Für den Streitwert: von 200'001 bis 250'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 14'400 bis 19'700 Franken — Für den Streitwert: von 250'001 bis 300'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 16'100 bis 21'900 Franken — Für den Streitwert: von 300'001 bis 350'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 17'700 bis 24'000 Franken — Für den Streitwert: von 350'001 bis 400'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 19'400 bis 26'200 Franken — Für den Streitwert: von 400'001 bis 450'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 21'000 bis 28'300 Franken — Für den Streitwert: von 450'001 bis 500'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 22'700 bis 30'500 Franken — Für den Streitwert: von 500'001 bis 600'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 24'500 bis 30'800 Franken — Für den Streitwert: von 600'001 bis 700'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 26'700 bis 33'400 Franken — Für den Streitwert: von 700'001 bis 800'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 28'900 bis 36'100 Franken — Für den Streitwert: von 800'001 bis 900'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 31'100 bis 38'500 Franken — Für den Streitwert: von 900'001 bis 1'000'000 Franken · Wird die Gebühr wie folgt festgesetzt: von 33'100 bis 41'200 Franken — Für den Streitwert: über einer 1'000'000 Franken · Wird die Gebühr wie folgt festgesetzt: 3.3 Prozent ohne 140'000 Franken zu überschreiten"
+        },
+        {
+          "absatz": "2",
+          "text": "Die Tabelle dieses Artikels wird ebenfalls auf das summarische Verfahren bei einer Streitigkeit geldwerter Natur, das zu einem Endurteil führt, angewandt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "bb1882f903a8404a5f62c5299f1740c1cf3356c9200f193fc638710f85a2724f"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_33",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Streitigkeiten, die im Bereich des SchKG zu einer Entschädigung berechtigen, wird das Honorar auf 250 bis 3'300 Franken festgesetzt."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "4e6feeaaba7944f8201c3179d0276035c64ef4526e7c5dcfb7b559d70574a195"
     },
     {
       "id": "kanton/VS/173.8-de/art_34",
@@ -111,9 +981,408 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
       "sha": "1e0e0427fc2c630da576322ee3eeeeed5a787a1de8b7789a72089a7f0d616611"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_35",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Honorar wird entsprechend der für Fälle vor erster Instanz massgebenden Tabelle in Berücksichtigung eines Reduktions-Koeffizienten von 60 Prozent festgesetzt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für das Berufungsverfahren vor dem Kantonsgericht;"
+            },
+            {
+              "marke": "b",
+              "text": "in Sachen Kindes- und Erwachsenenschutzrecht, für das Beschwerdeverfahren vor dem Kantonsgericht."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Das Honorar wird festgesetzt zwischen 550 und 8'880 Franken:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für das Beschwerdeverfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "in Sachen Kindes- und Erwachsenenschutzrecht für das Beschwerdeverfahren an die Kindes- und Erwachsenenschutzbehörde und das Berufungsverfahren an den Richter;"
+            },
+            {
+              "marke": "c",
+              "text": "für die Revisions-, Erläuterungs- und Berichtigungsverfahren."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "77d4b9a0ce20721e3cd3889152d4f0dc8a646517171e49c736d3bc9bbca44264"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_36",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Verfahren vor der Strafbehörde wird das Honorar wie folgt festgesetzt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "vor dem Polizeigericht 250 bis 650 Franken;"
+            },
+            {
+              "marke": "b",
+              "text": "vor der Polizei, im Untersuchungsverfahren (Anwalt der ersten Stunde) 250 bis 1'600 Franken;"
+            },
+            {
+              "marke": "c",
+              "text": "vor der Staatsanwaltschaft als Schlichtungsbehörde 60 bis 1'100 Franken;"
+            },
+            {
+              "marke": "d",
+              "text": "vor der Staatsanwaltschaft für die übrigen Verfahren 550 bis 5'500 Franken;"
+            },
+            {
+              "marke": "e",
+              "text": "vor dem Zwangsmassnahmengericht 550 bis 3'300 Franken;"
+            },
+            {
+              "marke": "f",
+              "text": "vor dem Bezirksgericht 550 bis 3'300 Franken;"
+            },
+            {
+              "marke": "g",
+              "text": "vor dem Kreisgericht 1'100 bis 8'800 Franken;"
+            },
+            {
+              "marke": "h",
+              "text": "vor dem Richter oder Jugendgericht in erster Instanz 550 bis 3'300 Franken;"
+            },
+            {
+              "marke": "i",
+              "text": "vor dem Jugendgericht im Berufungsverfahren 550 bis 5'500 Franken;"
+            },
+            {
+              "marke": "j",
+              "text": "vor dem Kantonsgericht im Berufungs- und Revisionsverfahren 1'100 bis 8'800 Franken;"
+            },
+            {
+              "marke": "k",
+              "text": "vor einem Richter des Kantonsgerichts oder der Strafkammer im Beschwerdeverfahren 300 bis 2'200 Franken;"
+            },
+            {
+              "marke": "l",
+              "text": "vor dem Straf- und Massnahmenvollzugsrichter und in den anderen Strafgerichtsverfahren im Sinne des EGStGB 300 bis 2'200 Franken."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "a90b82fada9ddbc1903df0d9af6248108752153dd7df986a87092c9e7d726c2b"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_37",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Parteien haben grundsätzlich keinen Anspruch auf Entschädigung für das Verfahren vor einer Verwaltungsbehörde, die in erster Instanz entscheidet."
+        },
+        {
+          "absatz": "2",
+          "text": "Für das Verfahren bei einer Verwaltungsbeschwerde wird das Honorar festgesetzt auf 550 bis 8'800 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "bc93db57ea948b61bcc41edaa1540196f0ab2c42541d42d05b21e1e05d23c6aa"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_38",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Klage vor dem Kantonsgericht wird das Honorar festgesetzt wie folgt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "550 bis 3'300 Franken für Fälle im summarischen Verfahren und für Zwischenverfahren;"
+            },
+            {
+              "marke": "b",
+              "text": "in Übereinstimmung mit Artikel 32 für ordentliche Verfahren bei geldwerten Fällen;"
+            },
+            {
+              "marke": "c",
+              "text": "1'100 bis 11'000 Franken für ordentliche Verfahren bei nicht geldwerten Fällen."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "bd9302349575a006a0832d188cff3e9e03e8b8121d764d6708319ba2b0c6ce86"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_39",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Verfahren bei einer Verwaltungsgerichtsbeschwerde wird das Honorar festgesetzt auf 1'100 bis 11'000 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "f95ce32367c4735be6d8e456086f231f6dfa0d546b42ec4ee47d8046ed2cc5df"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_40",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Verfahren vor der Sozialversicherungsabteilung des Kantonsgerichts und dem Schiedsgericht im Sinne des Bundesgesetzes über die Krankenversicherung wird das Pauschalhonorar festgesetzt auf 550 bis 11'000 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Das in Artikel 32 festgesetzte Honorar ist auch auf die Verfahren anwendbar, die sich auf Artikel 52 des Bundesgesetzes über die berufliche Alters- Hinterlassenen- und Invalidenvorsorge sowie auf Artikel 52 des Bundesgesetzes über die Alters- und Hinterlassenenversicherung stützen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "150dc8ff8596b7f04c880d1ab30066661b69c1bde4ce059c17d6dc3babd08a7f"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_41",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Vorschüsse, die Sicherheiten und die Kosten im Sinne von Artikel 3 des vorliegenden Gesetzes und der Schweizerischen Strafprozessordnung und der Schweizerischen Zivilprozessordnung können nicht mittels Nachnahme einkassiert werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Wenn die Modalitäten eines Vorschusses nicht durch das Verfahrensgesetz geregelt werden, kann die Behörde verlangen, dass der Vorschuss, unter Strafe der Unzulässigkeit des Gesuches, spätestens am Tag der Verhandlung oder der Ausfällung des Entscheides geleistet wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Der nur von einer Partei aufgrund einer von ihr beantragten besonderen Prozesshandlung verlangte Vorschuss bildet Gegenstand einer speziellen Verbuchung unmittelbar nach Abschluss der Prozesshandlung."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "ddea31496fa11e6e59a1db9c3cad8f09ed2caf85f2c2994a6d7a9582303d6931"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_42",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Alle Akten im Zivil-, Straf- und Verwaltungsverfahren sowie die Kopien von Akten zum Zweck der Hinterlegung in einem Verfahren vor dem Richter oder der Behörde werden auf freiem Papier geschrieben."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Urteile, Entscheide, gerichtlichen Vergleiche, Klageabstand und Klageanerkennung, welche die Verpflichtung zur Zahlung einer Summe enthalten, sind vom Wertstempel befreit."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Sitzungen vor dem Gemeinderichter oder einer Gerichtsbehörde sowie die Urteile und Entscheide der Gerichtsbehörden sind von der Erhebung einer Spezialgebühr gemäss Gesundheitsgesetz befreit."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "6353e63be6259ec6bfc97eb6302bf20ab31f88371c2d6b3e303c5c2720416dd2"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_43",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Grosse Rat passt auf dem Beschlussweg die Beträge der Kosten, der Gebühren und des Honorars des Rechtsbeistands ohne Bezugnahme auf den Streitwert an, wenn der Index der Konsumentenpreise ab Inkrafttreten dieses Gesetzes eine Änderung von fünf Punkten erfahren hat."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "7354ccc4c34add2fcf8e664c31bf4835ccc86721a817657bedab464fea6eab65"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_44",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesetz betreffend den Tarif der Kosten und Entschädigungen vor den Gerichts- und Verwaltungsbehörden vom 14. Mai 1998 ist aufgehoben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "74f8d18ffbe55819b444e60d49636391c2befd9a6757b027815ca8dac21bb745"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_45",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "45",
+      "artikelLabel": "Art. 45",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Artikel 13a des Ausführungsreglements zum Gesetz über den Schutz von Personendaten vom 26. Februar 1986 wird geändert."
+        },
+        {
+          "absatz": "2",
+          "text": "Die dritte Erwägung des Beschlusses betreffend den vom Schuldner im Rahmen des Bezugsverfahrens zu tragenden Anteil an den Verwaltungskosten vom 11. Februar 1987 wird geändert."
+        },
+        {
+          "absatz": "3",
+          "text": "Die dritte Erwägung im Beschluss über die Festsetzung der Tarife betreffend die Gebühren der Steuerregisterhalter vom 27. November 2001 wird geändert."
+        },
+        {
+          "absatz": "4",
+          "text": "Der Artikel 240 Absatz 2 des Strassengesetzes vom 3. September 1965 wird geändert."
+        },
+        {
+          "absatz": "5",
+          "text": "Der Artikel 1 Absatz 2 des Reglements über die Gebühren und Entschädigungen, die beim Vollzug des Strassengesetzes erhoben werden vom 29. April 2003 wird geändert."
+        },
+        {
+          "absatz": "6",
+          "text": "Der Artikel 1 Absatz 2 des Beschlusses betreffend die beim Vollzug des Gesundheitsgesetzes anfallenden Kosten und Gebühren vom 2 März 1997 wird geändert."
+        },
+        {
+          "absatz": "7",
+          "text": "Artikel 5 Absatz 1 des Beschlusses über die Kosten und Gebühren für Verrichtungen im Umweltbereich vom 28. November 1990 wird abgeändert."
+        },
+        {
+          "absatz": "8",
+          "text": "Die vierte Erwägung im Beschluss zur Festsetzung der Gebühren in der Wohnbauförderung vom 23. Februar 1994 wird geändert."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "0965c5fbc50e81b9541c3dcc98ced686c3154b27e1690aa3fdfc0009524b22f6"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_46",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "46",
+      "artikelLabel": "Art. 46",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das alte Recht bleibt anwendbar, wenn über die Kosten vor Inkrafttreten dieses Gesetzes endgültig entschieden wurde."
+        },
+        {
+          "absatz": "2",
+          "text": "Im Übrigen ist das vorliegende Gesetz anwendbar auf Verfahren, die bei seinem Inkrafttreten hängig sind, wobei die nach altem Recht erfolgten Vorschüsse zu berücksichtigen sind."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "03e17b3dfa274d02258ce62b50bb38a756f08ca0e3339299d7e322f1288ac06a"
+    },
+    {
+      "id": "kanton/VS/173.8-de/art_47",
+      "ebene": "kanton",
+      "quelle": "VS",
+      "erlass": "GTar (SR 173.8)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das vorliegende Gesetz unterliegt dem fakultativen Referendum."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Staatsrat setzt das Datum des Inkrafttretens fest."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://lex.vs.ch/app/de/texts_of_law/173.8",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "90b2506b085dbe17880e22c4cff9a449",
+      "sha": "a1283028336e2586530a01b9bfb69fe31aa481e6655d5fd5fe1150db4f915846"
     }
   ]
 }

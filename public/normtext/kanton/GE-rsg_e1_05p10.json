@@ -1,6 +1,348 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_1",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le présent règlement fixe le tarif des frais, soit des frais judiciaires et des dépens, applicable aux affaires civiles contentieuses et gracieuses, à moins que le droit cantonal, le droit fédéral ou des conventions intercantonales ou internationales n'en disposent autrement."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "a1099727d4500d625b16b714afebb7e0154eb02cb3029cdf2bce7315b46e4357"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_2",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La juridiction peut exiger du demandeur une avance de frais, conformément à l'article 19 de la loi d'application du code civil."
+        },
+        {
+          "absatz": "2",
+          "text": "En cours de procédure, la juridiction peut exiger un complément d'avance de frais lorsque celle-ci paraît insuffisante."
+        },
+        {
+          "absatz": "3",
+          "text": "Elle impartit un délai pour la fourniture des avances."
+        },
+        {
+          "absatz": "4",
+          "text": "En cas d'irrecevabilité de la cause pour défaut de paiement de l'avance, un émolument de décision de 100 francs à 200 francs peut être perçu."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "bc9c446606e3006852801c3efbae21a08f6a4a7c5fc455a40545084efde5c2e5"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_3",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les parties doivent indiquer la valeur litigieuse en première et deuxième instances."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "78655f0ead11f93aea42100bcbae167ebe044cba0c4f5a910afe457b66c323d5"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_4",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le tribunal informe la partie qui n'est pas assistée d'un avocat sur le montant probable des frais (frais judiciaires et dépens) et sur l'institution de l'assistance juridique."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "5157994f16b7d4ab6cb29da0172d6376b25d2aa6bb719a8e0b15f0ed06a8a51a"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_5",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque le présent règlement fixe un barème-cadre, les émoluments et les dépens sont arrêtés compte tenu, notamment, des intérêts en jeu, de la complexité de la cause, de l'ampleur de la procédure ou de l'importance du travail qu'elle a impliqué."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "0b82157a17eabb3e8c6c6b5ca37c4827fa32fd0bb8c8c9cc68d3be1b83f2a795"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_6",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Si des circonstances particulières le justifient, l'émolument peut être majoré jusqu'à concurrence du double du montant maximal. Tel est notamment le cas lorsque la cause a impliqué un travail particulièrement important, lorsque la valeur litigieuse est très élevée, lorsqu'une partie a formé des prétentions ou usé de moyens de défense manifestement excessifs ou encore lorsqu'elle a, de par son attitude, compliqué la procédure."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "8a7c69f12ed1ae287f97717060bb1ed4c05c6610391e47877f546a06a266900e"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_7",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsqu'une cause est retirée, transigée, déclarée irrecevable, jointe à une autre cause ou lorsque l'équité le justifie, l'émolument minimal peut être réduit, au maximum à concurrence des 3/4, mais, en principe, pas en deçà d'un solde de 1 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque des circonstances particulières le justifient, il peut être entièrement renoncé à la fixation d'un émolument."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "349287980b9b4c032d527bc1e7447468d21efd8c5bab46b53ba80c84c6f3ad6a"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_8",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque le tribunal communique sa décision sans motivation écrite, il fixe séparément :"
+        },
+        {
+          "absatz": null,
+          "text": "a) un émolument qui tient compte de la rédaction ultérieure de la motivation;"
+        },
+        {
+          "absatz": null,
+          "text": "b) un émolument réduit, perçu en l'absence de motivation écrite ultérieure."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "8bc6f8a44d32118ce7474f0a60950b6a333c4fbc2bdaef2a1d8b526b9a04b1a0"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_9",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour les causes ou opérations non prévues par le présent règlement, le tribunal applique celui-ci par analogie. Il motive brièvement sa décision. Il est lié par les maxima du tarif."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "f99b21ffd8b9fd1bce3925ed7089adff77d7d8023ad90b3506e065521b5d7b38"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_10",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Un état comptable est tenu pour chaque procédure. Il peut être consulté par les parties."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "5ae33039fb223a3f1d9838c6e5c80ec6353c99fcfb91cad3c98e2ec98527b0de"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_11",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les services financiers du pouvoir judiciaire procèdent au recouvrement."
+        },
+        {
+          "absatz": "2",
+          "text": "Ils peuvent, dans une convention, confier cette tâche à un autre service de l'Etat."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "6da2c92c86d745ab87a4331e90aa12efb70704a734558439c0982596a152b74c"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_12",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsque une action est formée sur la base d'une clause attributive de for et qu'aucune des parties n'est domiciliée en Suisse, les émoluments sont doublés."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "ad391c64622a9907dee3c6ac9d71ce9f599597755a1f08e51602d1de949e6022"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_13",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "En cas de pluralité de demandeurs ou de défendeurs, les émoluments sont majorés de 20%."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "01d43614c452fbec4ac5810c16738eee91db948f216fa694cc9c3c80fbfeaee2"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_14",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'amplification d'une demande, une demande additionnelle ou une demande reconventionnelle donne lieu à un émolument au même titre qu'une demande principale."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "25e37150d853bfa29ca97d841e013645bcc710cfa8727faf2daa31c5a149cb12"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_15",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de conciliation est fixé comme suit :",
+          "items": [
+            {
+              "marke": "- jusqu'à 30 000 francs",
+              "text": "100 francs"
+            },
+            {
+              "marke": "- au-delà de 30 000 francs",
+              "text": "200 francs"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "e92b8125cf75ace4db25bceb8b07af3f0304c9b4a40173d46f8f4705551ff16c"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_16",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de conciliation est fixé entre 100 francs et 200 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "d93dd6fe92f364ec14d356b527087956b98e743bb62dd078120ed496aca754ff"
+    },
     {
       "id": "kanton/GE/rsg_e1_05p10/art_17",
       "ebene": "kanton",
@@ -42,9 +384,1363 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
       "sha": "53384be039ce583dd956aa0e51e62e01088630e19821559fe4c38f03aa839677"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_18",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 200 francs et 50 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "10769dd8caa6edfcd04ff037dcc9202cc0a6c0a7c99a8d11ec2a59772948fad6"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_19",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire pour une décision d'irrecevabilité ou de rejet d'une requête en récusation est fixé entre 300 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "8ae3713ce9bf89ee567af230d3230617668fdbde856ff82dbf0ad4771b161774"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_20",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire pour une décision sur la recevabilité d'une requête en intervention ou d'appel en cause est fixé entre 300 francs et 2 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "En cas d'admission de la requête, l'émolument forfaitaire de décision est égal à la moitié de l'émolument dû selon les dispositions des articles 17 et 18."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "5b68eee3de0b87ed055656d11782ccf5894b67e1ebcb11964627de62e093f491"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_21",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire pour une décision relative aux sûretés en garantie des dépens est fixé entre 300 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "293652dfbdba95997df0f1c133ff77c647a29d04221976c9bf3ccda1e2c464e4"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_22",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire pour une décision relative à la simplification du procès, à la suspension de la procédure ou au renvoi pour cause de connexité est fixé entre 300 francs et 2 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque le juge agit d'office, il peut renoncer à percevoir un émolument."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "3f207c8c7ed1248f5003a6141a34026fbdeaedaeb57ea1d697f936b256a9bfa1"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_23",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 300 francs et 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "c5b63cc2f10d76735ca1b853dce7e917e8b502347387adf2f5a7a2ab20465edf"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_24",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les autres décisions et les ordonnances d'instruction peuvent donner lieu à un émolument de décision fixé entre 300 francs et 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "01c150bc118498ab5048253a5bc8e2143990fef2c227f60cea0e2d84eb01c771"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_25",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire pour une décision de restitution en cas de défaut est fixé entre 300 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "33aaa5e5d66ccc87d4d0b4e463e5a72c4b025b96e2d14a6dc4d6614dc4c71534"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_26",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 150 francs et 10 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "7382a01e284ef561d10f9e72f94b8411d463a88dec875fe5b53ed5143d86e61a"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_27",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire pour le dépôt d'un mémoire préventif est fixé entre 100 francs et 500 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "9646937b94dfc9084195a2359ebc49d9748e7c8bd46b4d772196f1f59fdeeaec"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_28",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les dispositions de la section 1 ainsi que l'article 27 sont applicables par analogie aux procédures de droit matrimonial."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b5b25b649fc7f17c33257134e47518f17540271bf9e562fc436d026ba443a5d4"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_29",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé à 600 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "53467da5cd553b1348806626cdcd41b875a4f878e5917b6d0d406aab799f4401"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_30",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire de décision pour une requête avec accord partiel ou une demande unilatérale est fixé entre 1 000 francs et 3 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Ce montant, au vu des critères de l'article 5 du présent règlement, peut être augmenté :"
+        },
+        {
+          "absatz": null,
+          "text": "a) jusqu'à 6 000 francs au plus si l'un au moins des montants figurant dans les conclusions ou fixé par convention ou alloué par jugement dépasse 2 500 francs par mois pour les contributions en faveur d'une partie ou d'un enfant ou 150 000 francs pour une prétention en capital ou en nature;"
+        },
+        {
+          "absatz": null,
+          "text": "b) jusqu'à 20 000 francs au plus si l'un au moins des montants figurant dans les conclusions ou fixé par convention ou alloué par jugement dépasse 5 000 francs par mois pour les contributions en faveur d'une partie ou d'un enfant ou 400 000 francs pour une prétention en capital ou en nature;"
+        },
+        {
+          "absatz": null,
+          "text": "c) jusqu'à 40 000 francs au plus si l'un au moins des montants figurant dans les conclusions ou fixé par convention ou alloué par jugement dépasse 10 000 francs par mois pour les contributions en faveur d'une partie ou d'un enfant ou 1 000 000 de francs pour une prétention en capital ou en nature."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "9537e649f5c9c67da715c2d325be459ba7f9f14351a87fdbc70fbd01d5aef5b9"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_31",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 150 francs et 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "7fd97e4d8859eadd433a8471e20ff94d26a9c13043ef3d41a514cfae9b3e003e"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_32",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de conciliation est fixé entre 100 francs et 200 francs et l'émolument forfaitaire de décision entre 300 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "8752295003ddcd6480104f9f50fce419687c614f1f157e4b8a6e396b907fa1bb"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_33",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 150 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "28221bcac32a5de3468ebdb03b090df302769b880d191f4266dbcb1345ac404f"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_34",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire d'une décision sur la représentation de l'enfant est fixé entre 100 francs et 500 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "2e785a4c157841048f5e872064616494b065d38fc4dd0d6560331ec3d48945be"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_35",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est calculé selon les dispositions applicables aux procédures de première instance."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b7ce7b94c939ff8925605446b0f85d306300a71ca4ae7f64803e0f4896cf784f"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_36",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 300 francs et 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "c5b63cc2f10d76735ca1b853dce7e917e8b502347387adf2f5a7a2ab20465edf"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_37",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "37",
+      "artikelLabel": "Art. 37",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est calculé selon les dispositions applicables aux procédures de première instance."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b7ce7b94c939ff8925605446b0f85d306300a71ca4ae7f64803e0f4896cf784f"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_38",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "38",
+      "artikelLabel": "Art. 38",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est calculé selon les dispositions applicables aux procédures de première instance."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b7ce7b94c939ff8925605446b0f85d306300a71ca4ae7f64803e0f4896cf784f"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_39",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "39",
+      "artikelLabel": "Art. 39",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 300 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "264bd1426d13c87ef8ed0a99e30e649346ac502a97197b046c792d3a75b7bc8c"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_40",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "40",
+      "artikelLabel": "Art. 40",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est calculé selon les dispositions applicables aux procédures de première instance."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b7ce7b94c939ff8925605446b0f85d306300a71ca4ae7f64803e0f4896cf784f"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_41",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "41",
+      "artikelLabel": "Art. 41",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 300 francs et 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "c5b63cc2f10d76735ca1b853dce7e917e8b502347387adf2f5a7a2ab20465edf"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_42",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "42",
+      "artikelLabel": "Art. 42",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 300 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "264bd1426d13c87ef8ed0a99e30e649346ac502a97197b046c792d3a75b7bc8c"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_43",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "43",
+      "artikelLabel": "Art. 43",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision pour la révision est fixé entre 500 francs et 10 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "436a9967e45f5520eee62e4541344c8d57e0379cc52d0d6572a2f245d7da6e41"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_44",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "44",
+      "artikelLabel": "Art. 44",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire de décision est fixé entre 200 francs et 2 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Il n'est pas dû d'émolument lorsque le juge agit d'office."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "c8ad3a7775306ce0b504861af9589595f008335a6b83701af27e9b8bfaf2724a"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_47",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "47",
+      "artikelLabel": "Art. 47",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 500 francs et 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b0beb09901a1972d3c19ac8db1aa7baa7521bd9ac9149beba2f23e7e24a57327"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_48",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "48",
+      "artikelLabel": "Art. 48",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 500 francs et 10 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "46c37947ea9f8f4f9456d9cc65f0ed75ed50653e65669f9979f0e40ab67181ea"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_49",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "49",
+      "artikelLabel": "Art. 49",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est calculé selon les dispositions de la section 4 du chapitre III du présent titre relatives aux voies de recours contre les décisions de première instance."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "998327bff19ed2569911f6cb099a2cf8f1f420bad42af34220aa42f267590bca"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_50",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "50",
+      "artikelLabel": "Art. 50",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument pour le dépôt d'une sentence arbitrale est fixé entre 200 francs et 500 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Si aucune des parties n'est domiciliée en Suisse, l'émolument est doublé."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "2b4b3b2530fa6ccba154d70383ea2b69d7153ae16cfff766461f85d48b4493be"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_51",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "51",
+      "artikelLabel": "Art. 51",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire pour une décision d'irrecevabilité ou de rejet d'une requête en récusation est fixé entre 200 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "e49fca63ccea966676bd4ef5fcd903243fd38e3303ce41194b70776357f9b8d3"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_52",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "52",
+      "artikelLabel": "Art. 52",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire de décision dans le cadre de mesures personnelles anticipées et de mesures appliquées de plein droit est fixé entre 200 francs et 1 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "L'émolument forfaitaire de décision de mesures prises aux fins de garantir l'assistance et la protection de la personne qui a besoin d'aide est fixé entre 200 francs et 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "376b4eed5d9f50849f5a2188a21f17f0990f2c1f3e16c8e0ebd1582f524b89af"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_53",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "53",
+      "artikelLabel": "Art. 53",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire de décisions pour l'examen des comptes de curatelle est fixé à 100 francs, majoré d'un émolument complémentaire égal à 2‰ de la valeur nette de la fortune si elle dépasse 50 000 francs et de 3‰ si elle dépasse 300 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "La personne concernée insolvable ou sans revenu peut être exemptée d'émolument."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "f55e890eb2c870787f6b7987d677f10b9ed56a4291ad4b9d589ca7460055aedd"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_54",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "54",
+      "artikelLabel": "Art. 54",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 300 francs et 3 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "6c07fac71dd7277bc800ab5824825e68ea4ca1f4af3ca240cde91b24b5c66a06"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_55",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "55",
+      "artikelLabel": "Art. 55",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 200 francs et 2 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "ceffab185b225638aac1f85940743e119e2515d6a173c511466e3505c8f8348a"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_56",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "56",
+      "artikelLabel": "Art. 56",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les actes non visés par les dispositions de la présente section peuvent donner lieu à un émolument forfaitaire de décision n'excédant pas 10 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "99bdf64403a350a60b43ae84ddead63216bfe64ef9d5799b437a89f4f9679531"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_57",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "57",
+      "artikelLabel": "Art. 57",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire pour l'établissement d'un procès-verbal d'apposition ou de levée des scellés est de 200 francs à 500 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Le greffier délégué pour dresser un inventaire ou pour toutes opérations relatives aux scellés perçoit en outre, pour ses frais de déplacement, par kilomètre, aller et retour, tous frais compris, un émolument de 1 franc."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "9b9b62b161ab34c415cf6c546e4120d85138723a8b8cad6aafe89911e3e46e1f"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_58",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "58",
+      "artikelLabel": "Art. 58",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision désignant un notaire aux fins de tout inventaire est de 80 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "88a1cba877e601149bf7a5d28568f9e462eca93ff70f639b3cc39ff61fe737a9"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_59",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "59",
+      "artikelLabel": "Art. 59",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire de décision ordonnant une administration d'office est de 250 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "L'émolument forfaitaire de décision ordonnant l'envoi en possession est de 300 francs, majoré de 5‰ de la valeur des biens excédant 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "ca88a734031694f0211aaf28575a3735ccbe7854d5e7cd7897c7fb908f7f426e"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_60",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "60",
+      "artikelLabel": "Art. 60",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le dépôt de dispositions testamentaires donne lieu aux émoluments suivants :",
+          "items": [
+            {
+              "marke": "a) testament ou pacte successoral",
+              "text": "250 francs"
+            },
+            {
+              "marke": "b) codicille",
+              "text": "100 francs"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "L'émolument peut être réduit ou supprimé si la succession est insolvable ou si le testament est caduc, révoqué ou sans objet."
+        },
+        {
+          "absatz": "3",
+          "text": "Un avis à un exécuteur testamentaire ou une communication de dispositions testamentaires, en vertu des articles 517 et 558 du code civil suisse, donne lieu à un émolument de 50 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "ddc56a4f225390c5a498916c6e140388325acf80b18fdfabc739026043925fec"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_61",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "61",
+      "artikelLabel": "Art. 61",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La délivrance d'un certificat d'héritier donne lieu à un émolument de 200 francs à 350 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "d5772e84fa1e093083d9148257d7a9e1f4548741f7fea3f76a63fc38fba97ee0"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_62",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "62",
+      "artikelLabel": "Art. 62",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision relative au bénéfice d'inventaire est fixé entre 300 francs et 3 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "2b818ed2e54a7036f79adb895cdea14ae46948fad483186d60bbd123f78a2975"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_63",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "63",
+      "artikelLabel": "Art. 63",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé entre 300 francs et 3 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "6c07fac71dd7277bc800ab5824825e68ea4ca1f4af3ca240cde91b24b5c66a06"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_64",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "64",
+      "artikelLabel": "Art. 64",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision désignant un représentant de la communauté héréditaire est fixé entre 500 francs et 1 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "e94909fcb3cfd0497e116381c02c18fb12cadefc04db462bb254f379a9bb9c97"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_65",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "65",
+      "artikelLabel": "Art. 65",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Si l'importance des biens de la succession ou les démarches nécessitées par son règlement le justifient, l'émolument peut être majoré jusqu'à 10 000 francs au maximum."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "0654e6ec41170c8952d3980c56a6a566c19703ea3738a1a992fc51b521a6de28"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_66",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "66",
+      "artikelLabel": "Art. 66",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La communication par écrit de renseignements relatifs à une succession peut donner lieu à un émolument entre 10 francs et 20 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b6b3717f520139c866d2d1ac7ebfa940922190bde07f83ec1cb8b6bd35b2fbef"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_67",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "67",
+      "artikelLabel": "Art. 67",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "L'émolument forfaitaire pour les décisions et actes non visés par les dispositions de la présente section s'élève entre 250 francs et 10 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Sont exemptées d'émolument les répudiations de successions et les renonciations à une communauté ou à un legs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "92f584ad295f0c55606034758ca2be447c480868452b24a45709e778e8245f12"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_67_a",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "67_a",
+      "artikelLabel": "Art. 67a",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les décisions en matière non contentieuse peuvent donner lieu à un émolument forfaitaire de décision de 300 francs à 3 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b5d88baec1e0606f5c4d20cee503aa1dc8d204485b8aa14f8587902a4f868a53"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_67_b",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "67_b",
+      "artikelLabel": "Art. 67b",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les décisions sur recours ou appel peuvent donner lieu à un émolument forfaitaire de décision de 300 francs à 5 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "94175df8f289fdbce56f65d80d410dbb571360456ee8fce050d87540a08ac0f6"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_68",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "68",
+      "artikelLabel": "Art. 68",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les dispositions de la 2e partie, titre I, chapitres I et III, section 1, sont applicables par analogie; les émoluments sont diminués de moitié."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "fac18133073d212fd9707e46a5a27f7caf895f6ce209f448554ddc7c60f5efba"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_69",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "69",
+      "artikelLabel": "Art. 69",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé comme suit :",
+          "items": [
+            {
+              "marke": "- de 75 001 fr. à 100 000 fr.",
+              "text": "de 200 fr. à 2 000 fr."
+            },
+            {
+              "marke": "- de 100 001 fr. à 300 000 fr.",
+              "text": "de 1 000 fr. à 3 000 fr."
+            },
+            {
+              "marke": "- de 300 001 fr. à 1 000 000 fr.",
+              "text": "de 2 000 fr. à 8 000 fr."
+            },
+            {
+              "marke": "- dès 1 000 001 fr.",
+              "text": "10 000 fr."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "7932c570e2286b1af35fd8c0a4559b556ca4301f2b2e5d162fa17a654bf48898"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_71",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "71",
+      "artikelLabel": "Art. 71",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L'émolument forfaitaire de décision est fixé comme suit :",
+          "items": [
+            {
+              "marke": "- de 50 001 fr. à 100 000 fr.",
+              "text": "de 200 fr. à 2 000 fr."
+            },
+            {
+              "marke": "- de 100 001 fr. à 300 000 fr.",
+              "text": "de 1 000 fr. à 3 000 fr."
+            },
+            {
+              "marke": "- de 300 001 fr. à 1 000 000 fr.",
+              "text": "de 2 000 fr. à 8 000 fr."
+            },
+            {
+              "marke": "- dès 1 000 001 fr.",
+              "text": "10 000 fr."
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "cff9b1e53747965ff7e6702d925eb4fbd783644fe7d16c17c98b4a3d12131095"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_73",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "73",
+      "artikelLabel": "Art. 73",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les émoluments judiciaires énumérés dans la 2e partie du présent règlement ne comprennent pas les frais d'administration des preuves."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "7878a5ca10b908941251a4333b3b44333353114eb363293af2c4cc58cbe51a28"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_74",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "74",
+      "artikelLabel": "Art. 74",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les témoins sont dédommagés de leurs frais de déplacement."
+        },
+        {
+          "absatz": "2",
+          "text": "Ils ont droit à une indemnité fixée par le juge pour autant qu'ils subissent une perte de gain en raison de leur audition."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "93bf864d923712de831e7f5f45ea5e23ead1a1a08d67d7517b3b4b9240e33c4b"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_75",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "75",
+      "artikelLabel": "Art. 75",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Lorsque la production d'un titre par un tiers occasionne à celui-ci des frais, le tribunal peut lui allouer une indemnité dont il arrête le montant."
+        },
+        {
+          "absatz": "2",
+          "text": "Il en est de même de l'indemnité pour perte de temps et, le cas échéant, des frais liés à l'audience fixée pour statuer sur le refus du tiers de produire un titre si le refus est admis."
+        },
+        {
+          "absatz": "3",
+          "text": "L'indemnité fixée selon les alinéas précédents, de même que les frais perçus par des services officiels requis de produire des renseignements écrits, constituent des frais d'administration des preuves."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "2ee502949938e91e47eba032f9a860fa453328297efeb6f0898407f3439a1e28"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_76",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "76",
+      "artikelLabel": "Art. 76",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les inspections qui ont lieu hors du canton donnent lieu à une indemnité de déplacement et de transport du tribunal."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "82a780b7c4de48a02f5dd251d31b625ba1c098a82e74b69798e3f48de6e5b5e0"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_77",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "77",
+      "artikelLabel": "Art. 77",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le tribunal arrête le montant des honoraires de l'expert dont il requiert le concours en appliquant, le cas échéant, les tarifs officiels ou usuels. L'expert peut être requis de fournir une note détaillée de ses opérations, déplacements et débours."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b33c2544fa115a9ed2f0cbe4a31f4de9969aba9fd9f414c756c117e9f26738bd"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_78",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "78",
+      "artikelLabel": "Art. 78",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le tribunal arrête le montant des honoraires des traducteurs et des interprètes dont il requiert le concours en appliquant, le cas échéant, les tarifs officiels ou usuels."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "009a3bc269040c9db0ee6f053f300918381a87566d443c97c2521f52906a3545"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_79",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "79",
+      "artikelLabel": "Art. 79",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les frais perçus par l'autorité extérieure au canton, requise d'exécuter une mesure d'entraide, constituent des frais d'administration des preuves."
+        },
+        {
+          "absatz": "2",
+          "text": "L'exécution d'une commission rogatoire émanant d'une autorité étrangère donne lieu à un émolument de 500 francs à 10 000 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "0b25d699bd2e0f62cc390aa3082e711ecadef082c03724358c1974786f8b66cc"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_80",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "80",
+      "artikelLabel": "Art. 80",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les émoluments judiciaires fixés dans la 2e partie du présent règlement ne comprennent pas, sauf disposition expresse, les émoluments de chancellerie et les débours du tribunal."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "5874694d34bd1e4fd7df60f870714b72d8928ce82a7c57c80f5bb620270c034d"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_81",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "81",
+      "artikelLabel": "Art. 81",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La délivrance d'une attestation du caractère exécutoire, d'une copie certifiée conforme, d'un certificat ou d'une autre attestation donne lieu à un émolument de 30 francs à 300 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "0e1fce9001465d990a153a0d74690e8584d94ebd99ced67043b4494aa1da5104"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_82",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "82",
+      "artikelLabel": "Art. 82",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La délivrance de copies non certifiées conformes ou d'actes (papier ou numérique) ou l'impression d'actes transmis par voie électronique peuvent donner lieu à un émolument."
+        },
+        {
+          "absatz": "2",
+          "text": "L'émolument est de 1 franc par page jusqu'au format A3 inclus, quels que soient le support et le mode de transmission utilisés."
+        },
+        {
+          "absatz": "3",
+          "text": "L'émolument est de 5 à 250 francs par page pour le format supérieur au format A3, quels que soient le support et le mode de transmission utilisés."
+        },
+        {
+          "absatz": "4",
+          "text": "En cas de remise de données sur un support électronique, s'ajoute le coût de ce dernier."
+        },
+        {
+          "absatz": "5",
+          "text": "En cas de délivrance simultanée d'un support électronique de contenu identique à plusieurs parties, l'émolument est réparti entre elles. Si la délivrance n'est pas simultanée, l'émolument est réduit de 50%."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "5e663d2039b1ea87f458ad2196b181fbeb0d25ae2c10bc968ff90733983fc8e8"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_83",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "83",
+      "artikelLabel": "Art. 83",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La préparation d'une insertion dans la Feuille d'avis officielle ou dans la Feuille officielle suisse du commerce donne lieu, en sus des frais d'insertion, à un émolument de 50 francs."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "58ac2feeab0bc461c88324d65667104f71e63bed58eb7d105a981da7fa0c75ff"
     },
     {
       "id": "kanton/GE/rsg_e1_05p10/art_84",
@@ -61,9 +1757,280 @@
       ],
       "stand": "2025-07-01",
       "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
       "sha": "3d4a98a06f26965e1e3e6d18a13b65385c125848596c0b5cc51c150a8abdb441"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_85",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "85",
+      "artikelLabel": "Art. 85",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Pour les affaires pécuniaires, le défraiement prend pour base le tarif ci‑dessous. Sans préjudice de l'article 23 de la loi d'application du code civil, il peut s'en écarter de plus ou moins 10% pour tenir compte des éléments rappelés à l'article 84.",
+          "items": [
+            {
+              "marke": "Valeur litigieuse",
+              "text": "Défraiement"
+            },
+            {
+              "marke": "- jusqu'à 5 000 fr.",
+              "text": "25% de la valeur litigieuse mais au moins 100 fr."
+            },
+            {
+              "marke": "- au-delà de 5 000 fr. et jusqu'à 10 000 fr.",
+              "text": "1 250 fr. plus 23% de la valeur litigieuse dépassant 5 000 fr."
+            },
+            {
+              "marke": "- au-delà de 10 000 fr. et jusqu'à 20 000 fr.",
+              "text": "2 400 fr. plus 15% de la valeur litigieuse dépassant 10 000 fr."
+            },
+            {
+              "marke": "- au-delà de 20 000 fr. et jusqu'à 40 000 fr.",
+              "text": "3 900 fr. plus 11% de la valeur litigieuse dépassant 20 000 fr."
+            },
+            {
+              "marke": "- au-delà de 40 000 fr. et jusqu'à 80 000 fr.",
+              "text": "6 100 fr. plus 9% de la valeur litigieuse dépassant 40 000 fr."
+            },
+            {
+              "marke": "- au-delà de 80 000 fr. et jusqu'à 160 000 fr.",
+              "text": "9 700 fr. plus 6% de la valeur litigieuse dépassant 80 000 fr."
+            },
+            {
+              "marke": "- au-delà de 160 000 fr. et jusqu'à 300 000 fr.",
+              "text": "14 500 fr. plus 3,5% de la valeur litigieuse dépassant 160 000 fr."
+            },
+            {
+              "marke": "- au-delà de 300 000 fr. et jusqu'à 600 000 fr.",
+              "text": "19 400 fr. plus 2% de la valeur litigieuse dépassant 300 000 fr."
+            },
+            {
+              "marke": "- au-delà de 600 000 fr. et jusqu'à 1 million de fr.",
+              "text": "25 400 fr. plus 1,5% de la valeur litigieuse dépassant 600 000 fr."
+            },
+            {
+              "marke": "- au-delà de 1 million de fr. et jusqu'à 4 millions de fr.",
+              "text": "31 400 fr. plus 1% de la valeur litigieuse dépassant 1 million de fr."
+            },
+            {
+              "marke": "- au-delà de 4 millions de fr. et jusqu'à 10 millions de fr.",
+              "text": "61 400 fr. plus 0,75% de la valeur litigieuse dépassant 4 millions de fr."
+            },
+            {
+              "marke": "- au-delà de 10 millions de fr.",
+              "text": "106 400 fr. plus 0,5% de la valeur litigieuse dépassant 10 millions de fr."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque la valeur litigieuse ne peut être chiffrée, le défraiement est fixé librement d'après les éléments d'appréciations fixés à l'article 84."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "279f0c5e20c0f9b8e0542943b0d1122187c8c00e5efb69e1c756fa5b0c0b3020"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_86",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "86",
+      "artikelLabel": "Art. 86",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Si la contestation porte sur des affaires non pécuniaires, le défraiement est de 600 francs à 18 000 francs en fonction de l'importance et de la difficulté de la cause ainsi que selon le travail effectué."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "daf0ce8d651dfd436618df6dbb716d9869e8d694e19fa8cf8cf1e420d96359b6"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_87",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "87",
+      "artikelLabel": "Art. 87",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour les procédures ne conduisant pas au prononcé d'un jugement à caractère final, le défraiement est, dans la règle, réduit à deux tiers et au plus à un cinquième du tarif de l'article 85."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "1cfc2ffece7fbbba95720e5114d2754411778b308e405378381fa22e0a10bd5f"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_88",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "88",
+      "artikelLabel": "Art. 88",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour les procédures sommaires, le défraiement est, dans la règle, réduit à deux tiers et au plus à un cinquième du tarif de l'article 85."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "4d08addeb4c0f77a375e54bc318192e0f126e52659927851701d09559096c3c3"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_89",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "89",
+      "artikelLabel": "Art. 89",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour les affaires judiciaires relevant de la loi fédérale sur la poursuite pour dettes et la faillite, du 11 avril 1889, le défraiement est, dans la règle, réduit à deux tiers et au plus à un cinquième du tarif de l'article 85."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "b858c18d0fa66f74a3e15e8206dee75657704f927fc18397a7818fe488037ff9"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_90",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "90",
+      "artikelLabel": "Art. 90",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le défraiement est réduit dans la règle d'un à deux tiers par rapport au tarif de l'article 85 dans les procédures d'appel et de recours."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "3c9aca03ebb59631ee2d6682514fea10dadf7b67a32df9fbff3a62998b4a361f"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_91",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "91",
+      "artikelLabel": "Art. 91",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le règlement fixant le tarif des greffes en matière civile, du 9 avril 1997, est abrogé."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "adbd437425d8f348c670ce061ae9baed6bc524c896bf4858fb3b085ee9b8b8c6"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_92",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "92",
+      "artikelLabel": "Art. 92",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Les procédures en cours à l'entrée en vigueur du présent règlement restent soumises au règlement fixant le tarif des greffes en matière civile, du 9 avril 1997, jusqu'à la clôture de l'instance."
+        },
+        {
+          "absatz": "2",
+          "text": "Toutefois, les voies de recours et d'exécution régies par le code de procédure civile, du 19 décembre 2008, sont soumises au présent règlement."
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "6c53b9087c2a883bd387822ed28043bb646e336886ffa8cc0cfe5f7c80adb616"
+    },
+    {
+      "id": "kanton/GE/rsg_e1_05p10/art_93",
+      "ebene": "kanton",
+      "quelle": "GE",
+      "erlass": "Règlement fixant le tarif des frais en matière civile (RTFMC) (rsGE E 1 05.10)",
+      "artikel": "93",
+      "artikelLabel": "Art. 93",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le présent règlement entre en vigueur le 1er janvier 2011.",
+          "items": [
+            {
+              "marke": "RSG Intitulé Date d'adoption",
+              "text": "Entrée en vigueur"
+            },
+            {
+              "marke": "E 1 05.10 R fixant le tarif des frais en matière civile 22.12.2010",
+              "text": "01.01.2011"
+            },
+            {
+              "marke": "Modifications :",
+              "text": ""
+            },
+            {
+              "marke": "1. n.t. : 17, 18, 69, 71; a. : 70, 72 (Arrêt TF 2C_122/2011) 07.06.2012",
+              "text": "07.06.2012"
+            },
+            {
+              "marke": "2. n. : chap. IV du titre II de la 2e partie, 67A, 67B; n.t. : titre II de la 2e partie, chap. II du titre II de la 2e partie, 52, 53, 54, 55, chap. III du titre II de la 2e partie; a. : sous-section 4 de la section 4 du chap. III du titre I de la 2e partie, 45, 46 16.01.2013",
+              "text": "01.01.2013"
+            },
+            {
+              "marke": "3. n.t. : rectification selon 7C/1, B 2 05 (2°cons., 85/1) 09.09.2013",
+              "text": "09.09.2013"
+            },
+            {
+              "marke": "4. n.t. : 85/1 16.09.2015",
+              "text": "23.09.2015"
+            },
+            {
+              "marke": "5. n.t. : 82 30.10.2024",
+              "text": "01.01.2025"
+            },
+            {
+              "marke": "6. n.t. : 2/1, 2/2, 2/3, 3 02.07.2025",
+              "text": "01.07.2025"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-07-01",
+      "quelleUrl": "https://silgeneve.ch/legis/data/rsg_e1_05p10.htm",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "03e5ee0180ba40886fe94382d8dfad8b5e05fbb4bb621ba832a79abbfb67110a",
+      "sha": "bbcf87e92805300fc7dfada7792404a57c9d2b9cce82b2bc4be9c8259f0b0659"
     }
   ]
 }

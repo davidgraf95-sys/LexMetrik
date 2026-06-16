@@ -1,6 +1,186 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/TI/ti-148/art_1",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "La presente legge stabilisce gli onorari, le indennità e le spese per gli atti e le funzioni dei pubblici notai."
+        },
+        {
+          "absatz": "2",
+          "text": "Gli onorari comprendono l’informazione alle parti, la preparazione di un progetto e la pubblicazione dell’atto."
+        },
+        {
+          "absatz": "3",
+          "text": "Gli onorari di un atto includono pure le copie per le parti e gli uffici, fatti salvi gli emolumenti di cui all’articolo 10."
+        },
+        {
+          "absatz": "4",
+          "text": "Non sono comprese nell’onorario lo studio e la preparazione di atti, nonché altre prestazioni che esulano da quelle di cui al cpv. 2, segnatamente la stesura di procure, l’epurazione e la modifica di servitù, svincoli di pegni, dichiarazioni di subingresso, redazione di regolamenti per la comproprietà o PPP, elaborazione di statuti societari o contratti di conferimento, richieste per il rilascio di autorizzazioni, traduzioni, incassi, pagamenti del prezzo, eccetera."
+        },
+        {
+          "absatz": "5",
+          "text": "Il notaio è autorizzato ad applicare onorari e percepire indennità inferiori a quelli massimi stabiliti dalla presente tariffa."
+        },
+        {
+          "absatz": "6",
+          "text": "Laddove si fa riferimento alla tariffa oraria, essa ammonta al massimo a fr. 300.–."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO II"
+        },
+        {
+          "absatz": null,
+          "text": "Capitolo primo"
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "10c737224b4e59df1d7ef8e91bb8e655ffe78f167da097128796c6db16e39a6b"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_2",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per gli istromenti e i brevetti di valore determinabile, gli onorari sono stabiliti in base al valore dell’atto."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "7bf050de9561b641849a9794fa20953483ebf3093a55864737bdef0385215cbe"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_3",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Il valore dell’atto si determina come segue:"
+        },
+        {
+          "absatz": null,
+          "text": "a)in tutti gli atti in cui sono contemplati prezzi singoli e valori determinati o determinabili, il valore è costituito dalla somma complessiva;"
+        },
+        {
+          "absatz": null,
+          "text": "b)nelle donazioni, il valore è quello complessivo dei beni oggetto dell’atto; valore determinante per i beni immobili è la stima ufficiale;"
+        },
+        {
+          "absatz": null,
+          "text": "c)per la costituzione della proprietà per piani, su edifici esistenti valore determinante è il valore di stima ufficiale del fondo nello stato in cui si trova a quel momento; se l’immobile da trasformare in proprietà per piani non è ancora terminato, o se la stima non è ancora stata aggiornata a seguito della costruzione, fa stato la media tra il valore di stima ufficiale del fondo e il valore venale complessivo delle singole unità di PPP terminate;"
+        },
+        {
+          "absatz": null,
+          "text": "d)in caso di successiva modifica di una proprietà per piani comportante un cambiamento dei millesimi, fa stato la variazione complessiva di questi ultimi riferita al valore di cui alla lettera c);"
+        },
+        {
+          "absatz": null,
+          "text": "e)per i contratti di proroga dei diritti di compera, il valore determinante è pari a un terzo del valore dell’atto;"
+        },
+        {
+          "absatz": null,
+          "text": "f)per i contratti di cessione di diritti di compera, il valore determinante è dato dal prezzo d’acquisto e da quello della cessione;"
+        },
+        {
+          "absatz": null,
+          "text": "g)nei contratti di vitalizio e di rendita, il valore si desume dalla somma capitale espressa nell’atto di costituzione; se non è prevista una somma capitale, esso si determina cumulando dieci annualità. Se trattasi di rendita per un lasso di tempo inferiore a 10 anni, si addizionano tutte le annualità;"
+        },
+        {
+          "absatz": null,
+          "text": "h)nei contratti di costituzione di usufrutto, di diritto di superficie, di uso o di abitazione, il valore determinante corrisponde alla metà di quello dei beni che ne formano oggetto; per i beni immobili, fa stato la metà della stima ufficiale;"
+        },
+        {
+          "absatz": null,
+          "text": "i)nei contratti di costituzione di pegno, il valore si desume dalla somma del credito garantito;"
+        },
+        {
+          "absatz": null,
+          "text": "j)negli inventari, il valore è dato dallo stato del solo attivo lordo;"
+        },
+        {
+          "absatz": null,
+          "text": "k)negli istromenti di permuta, il valore dell’atto è pari alla somma dei valori di stima dei fondi;"
+        },
+        {
+          "absatz": null,
+          "text": "l)per gli istromenti concernenti società di capitale, il valore dell’atto è pari all’ammontare del capitale in caso di costituzione o trasformazione (modifica della forma giuridica), a quello dell’incremento in caso di aumento di capitale e a quello della riduzione in caso di riduzione del capitale; se i beni apportati hanno un valore superiore, fa stato quest’ultimo;"
+        },
+        {
+          "absatz": null,
+          "text": "m)per istromenti relativi a contratti di trasferimento di patrimonio, in applicazione della legge sulla fusione, si applica la lettera a) limitatamente agli attivi lordi."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "c0300dd87ca9c03463eaed27bbdba4daa11b1672a3dffabe38ae3991f1e26d94"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_4",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Se in un solo atto sono stipulati più contratti di diversa natura, i valori dei diversi contratti vengono cumulati."
+        },
+        {
+          "absatz": "2",
+          "text": "Non si dà luogo a cumulo nei seguenti casi:"
+        },
+        {
+          "absatz": null,
+          "text": "–donazione con riserva di usufrutto o di diritto di abitazione;"
+        },
+        {
+          "absatz": null,
+          "text": "–mutuo con ipoteca;"
+        },
+        {
+          "absatz": null,
+          "text": "–fideiussione con mutuo o con ipoteca;"
+        },
+        {
+          "absatz": null,
+          "text": "–riduzione con aumento di capitale."
+        },
+        {
+          "absatz": null,
+          "text": "In questi casi fa stato il valore dell’atto che comporta l’onorario maggiore."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "d2cb3be1155727d8353b7d049123c7d2a2fec1401c70615a02490ff91c55c0c8"
+    },
     {
       "id": "kanton/TI/ti-148/art_5",
       "ebene": "kanton",
@@ -10,82 +190,55 @@
       "artikelLabel": "Art. 5",
       "bloecke": [
         {
-          "absatz": null,
-          "text": "L’onorario massimo del notaio per gli istromenti di valore determinato o determinabile è stabilito come segue; riservate le disposizioni degli articoli successivi: – per un valore da fr. 1.– a fr. 250’000.–: 5‰, ritenuto un minimo di fr. 500.–; – per la frazione da fr. 250’000.– a fr. 500’000.–: 4‰; – per la frazione da fr. 500’000.– a fr. 750’000.–: 3.5‰; – per la frazione da fr. 750’000.– a fr. 1’000’000.–: 3‰; – per la frazione da fr. 1’000’000.– a fr. 2’000’000.–: 2.5‰; – per la frazione da fr. 2’000’000.– a fr. 5’000’000.–: 2‰; – per la frazione da fr. 5’000’000.– a fr. 10’000’000.–: 1‰; – per la frazione da fr. 10’000’000.– a fr. 50’000’000.–: 0.5‰; – valori superiori a fr. 50’000’000.– non vengono più considerati. Per le vendite al Cantone, ai Comuni o ad altri enti di diritto pubblico cantonale o comunale, nonché per atti di costituzione o di aumento di capitale di società ove il Cantone ed i Comuni partecipano in misura superiore al 50%, l’onorario massimo sarà pari alla metà di quello previsto al capoverso 1, per la parte di valore dell’atto eccedente i fr. 500’000.–.",
-          "items": [
-            {
-              "marke": "b",
-              "text": "pegni immobiliari e fideiussioni"
-            }
-          ]
-        }
-      ],
-      "stand": "2013-11-26",
-      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "ec5ac44f24c4bc78a2c9105f79233e219a556cf32f7deb100dd9a95837997a4e",
-      "sha": "6ee8080394f4571db0017265bff5c336884184f4b41a866f79ee0a45ee6b7827"
-    },
-    {
-      "id": "kanton/TI/ti-148/art_9",
-      "ebene": "kanton",
-      "quelle": "TI",
-      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
-      "artikel": "9",
-      "artikelLabel": "Art. 9",
-      "bloecke": [
+          "absatz": "1",
+          "text": "L’onorario massimo del notaio per gli istromenti di valore determinato o determinabile è stabilito come segue; riservate le disposizioni degli articoli successivi:"
+        },
         {
           "absatz": null,
-          "text": "L’onorario massimo per gli istromenti e i brevetti il cui valore non è determinabile viene fissato come segue, tenendo conto dell’importanza economica dell’atto e delle circostanze particolari, segnatamente il dispendio di tempo:",
-          "items": [
-            {
-              "marke": "a",
-              "text": "per le convenzioni matrimoniali, i contratti successori e i testamenti pubblici: fr. 10’000.–;"
-            },
-            {
-              "marke": "b",
-              "text": "per un atto di deposito di testamento olografo, di riconsegna di un testamento olografo e di revoca o di distruzione di testamento pubblico: fr. 500.–;"
-            },
-            {
-              "marke": "c",
-              "text": "per la pubblicazione di un testamento pubblico od olografo: fr. 2’000.–. Se con un solo istromento vengono pubblicati più testamenti, per ogni ulteriore testamento fr. 100.–;"
-            },
-            {
-              "marke": "d",
-              "text": "per un atto di modifica di proprietà per piani non implicante variazioni di millesimi: fr. 3’000.–;"
-            },
-            {
-              "marke": "e",
-              "text": "per la costituzione, modificazione e soppressione di servitù ed oneri fondiari: fr. 2’000.–;"
-            },
-            {
-              "marke": "f",
-              "text": "per un atto di deposito: fr. 3’000.–;"
-            },
-            {
-              "marke": "g",
-              "text": "per un’attestazione: fr. 500.–;"
-            },
-            {
-              "marke": "h",
-              "text": "per un atto di mandato o di procura: fr. 500.–;"
-            },
-            {
-              "marke": "i",
-              "text": "per un atto di costituzione di associazione, di fondazione o di società a capitale indeterminato, di modifica di statuti di società o di associazioni non implicanti variazioni di capitale, di decisioni assembleari in applicazione della Legge federale sulla fusione, non implicanti variazioni di capitale o apporti/conferimenti/trasferimenti, nonché di scioglimento e di liquidazione di società: fr. 3’000.–;"
-            },
-            {
-              "marke": "j",
-              "text": "per qualsiasi altro atto di valore indeterminabile: fr. 3’000.–. Copie di atti Scritturazioni e copie di prima edizione"
-            }
-          ]
+          "text": "–per un valore da fr. 1.– a fr. 250’000.–:5‰, ritenuto un minimo di fr. 500.–;"
+        },
+        {
+          "absatz": null,
+          "text": "–per la frazione da fr. 250’000.–a fr. 500’000.–:4‰;"
+        },
+        {
+          "absatz": null,
+          "text": "–per la frazione da fr. 500’000.–a fr. 750’000.–:3.5‰;"
+        },
+        {
+          "absatz": null,
+          "text": "–per la frazione da fr. 750’000.–a fr. 1’000’000.–:3‰;"
+        },
+        {
+          "absatz": null,
+          "text": "–per la frazione da fr. 1’000’000.–a fr. 2’000’000.–:2.5‰;"
+        },
+        {
+          "absatz": null,
+          "text": "–per la frazione da fr. 2’000’000.–a fr. 5’000’000.–:2‰;"
+        },
+        {
+          "absatz": null,
+          "text": "–per la frazione da fr. 5’000’000.–a fr.10’000’000.–:1‰;"
+        },
+        {
+          "absatz": null,
+          "text": "–per la frazione da fr. 10’000’000.–a fr.50’000’000.–:0.5‰;"
+        },
+        {
+          "absatz": null,
+          "text": "–valori superiori a fr. 50’000’000.– non vengono più considerati."
+        },
+        {
+          "absatz": "2",
+          "text": "Per le vendite al Cantone, ai Comuni o ad altri enti di diritto pubblico cantonale o comunale, nonché per atti di costituzione o di aumento di capitale di società ove il Cantone ed i Comuni partecipano in misura superiore al 50%, l’onorario massimo sarà pari alla metà di quello previsto al capoverso 1, per la parte di valore dell’atto eccedente i fr. 500’000.–."
         }
       ],
-      "stand": "2013-11-26",
+      "stand": "2015-07-01",
       "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "ec5ac44f24c4bc78a2c9105f79233e219a556cf32f7deb100dd9a95837997a4e",
-      "sha": "9fe29bfe6176eeaaa871854c3321a0ca268ef7223721839da8b6e98a4dd1181e"
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "a5600d5708e2d8d6d932447abdc23e08b77bd867941f108954c391452c52c1aa"
     },
     {
       "id": "kanton/TI/ti-148/art_6",
@@ -97,20 +250,559 @@
       "bloecke": [
         {
           "absatz": null,
-          "text": "L’onorario massimo per gli istromenti di costituzione di ipoteche e di cartelle ipotecarie o per la trasformazione di ipoteche in cartelle ipotecarie e quello per atti relativi a fidejussioni è pari alla metà di quello previsto all’articolo 5 capoverso 1 a partire da un valore di fr. 100’000.–.",
-          "items": [
-            {
-              "marke": "c",
-              "text": "brevetti"
-            }
-          ]
+          "text": "L’onorario massimo per gli istromenti di costituzione di ipoteche e di cartelle ipotecarie o per la trasformazione di ipoteche in cartelle ipotecarie e quello per atti relativi a fidejussioni è pari alla metà di quello previsto all’articolo 5 capoverso 1 a partire da un valore di fr. 100’000.–."
         }
       ],
-      "stand": "2013-11-26",
+      "stand": "2015-07-01",
       "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "ec5ac44f24c4bc78a2c9105f79233e219a556cf32f7deb100dd9a95837997a4e",
-      "sha": "d4c3ae1ffd5c2e5b6789327766cc29dbc28c80aa96e8b972a4062982a8ec3183"
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "f00716f80ed47a9ed7bdc5674099bc7ca7d7dca942a4414a5d7d2d7dde98294d"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_7",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per tutti gli atti stesi nella forma del brevetto, l’onorario massimo sarà la metà di quello previsto dall’articolo 5 capoverso 1 a partire da un valore di fr. 100’000.–."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "4f0f73a9b9b342b6e5de7b65be728c1e8b8986c5cf9c6d84b50e639e5fe2979a"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_8",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L’onorario massimo per l’allestimento e la presentazione all’Ufficio dei registri di istanze d’iscrizione, di annotazione, di menzione e di certificati ipotecari speciali relativi a iscrizioni nel registro dei pegni immobiliari e nel registro delle mutazioni e servitù, ammonta a fr. 100.–."
+        },
+        {
+          "absatz": null,
+          "text": "Capitolo secondo"
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "9346f6d26d8f5c02d02924bab5c9fa56a74b95708e77138f8dcde309e424cffc"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_9",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "L’onorario massimo per gli istromenti e i brevetti il cui valore non è determinabile viene fissato come segue, tenendo conto dell’importanza economica dell’atto e delle circostanze particolari, segnatamente il dispendio di tempo:"
+        },
+        {
+          "absatz": null,
+          "text": "a)per le convenzioni matrimoniali, i contratti successori e i testamenti pubblici: fr. 10’000.–;"
+        },
+        {
+          "absatz": null,
+          "text": "b)per un atto di deposito di testamento olografo, di riconsegna di un testamento olografo e di revoca o di distruzione di testamento pubblico: fr. 500.–;"
+        },
+        {
+          "absatz": null,
+          "text": "c)per la pubblicazione di un testamento pubblico od olografo: fr. 2’000.–. Se con un solo istromento vengono pubblicati più testamenti, per ogni ulteriore testamento fr. 100.–;"
+        },
+        {
+          "absatz": null,
+          "text": "d)per un atto di modifica di proprietà per piani non implicante variazioni di millesimi: fr. 3’000.–;"
+        },
+        {
+          "absatz": null,
+          "text": "e)per la costituzione, modificazione e soppressione di servitù ed oneri fondiari: fr. 2’000.–;"
+        },
+        {
+          "absatz": null,
+          "text": "f)per un atto di deposito: fr. 3’000.–;"
+        },
+        {
+          "absatz": null,
+          "text": "g)per un’attestazione: fr. 500.–;"
+        },
+        {
+          "absatz": null,
+          "text": "h)per un atto di mandato o di procura: fr. 500.–;"
+        },
+        {
+          "absatz": null,
+          "text": "i)per un atto di costituzione di associazione, di fondazione o di società a capitale indeterminato, di modifica di statuti di società o di associazioni non implicanti variazioni di capitale, di decisioni assembleari in applicazione della Legge federale sulla fusione, non implicanti variazioni di capitale o apporti/conferimenti/trasferimenti, nonché di scioglimento e di liquidazione di società: fr. 3’000.–;"
+        },
+        {
+          "absatz": null,
+          "text": "j)per qualsiasi altro atto di valore indeterminabile: fr. 3’000.–."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO III"
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "166f7ac646118a773844ecb764e20f05ffa665ce8d0775472b09943924a1ac1d"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_10",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per la stesura dell’originale o delle copie autentiche di prima edizione destinate alle parti, all’archivio notarile e agli altri uffici, il notaio ha diritto al massimo a fr. 5.– per ogni pagina di scritturazione o parte di essa."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "e634f6ef92b084d3c4cdea7468ae29709df333593a0739c7cef595f4e38bb53e"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_11",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per le copie autentiche di ulteriore edizione, nonché per gli estratti parziali di un atto, il notaio avrà diritto, oltre a quanto sopra, a un onorario massimo di fr. 200.–."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO IV"
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "104158808dcca0a622d8aa15c7821c80e5e33e0d2f1812b19872ac2db8ca6506"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_12",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per l’erezione di un protesto di cambiale o di qualsiasi altro titolo affine protestabile, si applica un terzo dell’onorario di cui all’articolo 5, ritenuto un massimo di fr. 10’000.–."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "e082e7e9e67da778ba5743f41d6a313be109a1f2bf83c675605089c3136420b0"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_13",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per gli atti di offerta di pagamento, l’onorario massimo è pari a quello stabilito per i protesti."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "ed4ac87ac88be3e708fe8f65a745956bd24e18fff3699ab6fe723beacd146dbd"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_14",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Per la confezione di qualsiasi inventario, si applica l’onorario massimo di cui all’articolo 7."
+        },
+        {
+          "absatz": "2",
+          "text": "Occorrendo per la compilazione l’impiego di oltre una giornata, si aggiungerà un onorario basato sulla tariffa oraria."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "d5a2aaed0a3d614f9a8a7e2dd1f794de4414e9ebfb068b6c05cb7a8a13cc42df"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_15",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per la consegna, nei casi previsti dalla legge, di un originale di rogito, previa riproduzione a termini della legge notarile, l’onorario massimo è di fr. 100.–."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "08ba3c3138e5ced53559dffd7e779925ba767dfb29b4dff1ee6d9bcf3b7665e0"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_16",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per l’ostensione di un atto qualunque esistente nello studio notarile, è dovuto un onorario massimo di fr. 50.–."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "caffaba8d779b3ac899d6dd2f7a8640d8551456ced0e06fd04fae018ec3cb44e"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_17",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per l’autenticazione di firme l’onorario massimo è di fr. 30.–; quando le firme da autenticare sono più di due, per ogni firma in più il notaio percepirà al massimo fr. 20.–."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "53a49275af83fcfead3d4053a4c64f98aba79611ea05edaa0996ff6c2d36eff9"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_18",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Per l’autenticazione di atti, copie o scritti non costituenti rogiti, previa la debita collazione, l’onorario massimo è di fr. 30.– per la prima pagina, e fr. 5.– per ogni pagina ulteriore."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "ed5c2c1e472162408660baf47b85fb5b6b19935cf141d3c84f27b2d2d7b9288b"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_19",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La ricerca eredi può esser fatturata in base alla tariffa oraria."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO V"
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "2ba0bb6adbcbc45554bfd2263876508388fc365260c8da5b13c04d0c90cf0617"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_20",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le prestazioni connesse alla rogazione di cui all’articolo 1 capoverso 4, e non comprese nella tariffa, vanno rimunerate in base alla tariffa oraria."
+        },
+        {
+          "absatz": "2",
+          "text": "La preparazione di un atto che in seguito non viene rogato, va rimunerata in base alla tariffa oraria."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "7d1e1584f4b57df173e15336b47bd9cec131ab10b9027f0076dfb0f2ba7f89b0"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_21",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Al notaio vanno corrisposte tutte le spese, le tasse e le imposte."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "dd67fae5aaa4db61002c14a78b6014313ad7ad57a31d3f1a531b2164e9de103f"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_22",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Per l’accesso al domicilio delle parti nel Comune di residenza, il notaio ha diritto a un’indennità massima di fr. 50.–. Questa indennità è triplicata se l’accesso avviene di notte."
+        },
+        {
+          "absatz": "2",
+          "text": "Se l’accesso avviene in un Comune fuori dalla residenza, il notaio riceverà, oltre all’indennità di cui al capoverso 1, un’indennità massima di fr. 1.– per ogni chilometro percorso."
+        },
+        {
+          "absatz": "3",
+          "text": "Non sono dovute indennità di accesso, né rimborsi spese per la presentazione di atti o di copie all’Ufficio dei registri o ad altri pubblici uffici nel luogo di residenza notarile."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "5d12fb6e1b4eb32692d387186313c1149dcfffaca285b0a7f2e5c99f99b3ee61"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_23",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Sono riconosciute inoltre le seguenti indennità massime per:"
+        },
+        {
+          "absatz": null,
+          "text": "–apertura incarto: fr. 100.–;"
+        },
+        {
+          "absatz": null,
+          "text": "–scritturazioni, posta elettronica e fax: fr. 10.–;"
+        },
+        {
+          "absatz": null,
+          "text": "–fotocopie: fr. 2.– per copia;"
+        },
+        {
+          "absatz": null,
+          "text": "–accessi informatici: importo forfettario di fr. 30.–."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "d8caaa5216fef996689dcf036ed801403436a491186f8df9626de251255f09f1"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_24",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Le parcelle notarili devono essere recapitate per lettera raccomandata, con l’avvertenza del diritto e del modo di contestazione, nonché delle conseguenze in caso di mancata impugnazione; quest’ultima deve essere presentata, motivata per iscritto, al notaio o direttamente alla Commissione di disciplina notarile entro il termine di trenta giorni dalla notificazione; le parcelle così intimate e cresciute in giudicato, sono parificate alle sentenze esecutive ai sensi dell’articolo 80 della Legge federale dell’11 aprile 1889 sull’esecuzione e sul fallimento."
+        },
+        {
+          "absatz": "2",
+          "text": "Ove venissero eccepite per arbitrarie o eccessive nei confronti del notaio, entro il termine di cui al capoverso 1, questi può chiederne l’approvazione alla Commissione di disciplina notarile."
+        },
+        {
+          "absatz": "3",
+          "text": "Esse sono solidalmente dovute dai contraenti e richiedenti, riservato il diritto di regresso fra di loro."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "97c64b5bf5cc0cb81ddb659f25abea9930e051a49a4811464f8cff9743c44bf7"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_25",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Il notaio può, sin dall’assunzione del mandato, chiedere alle parti anticipi per le sue presumibili spese e competenze, oltre all’imposta di bollo e alle tasse dei registri."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "e915cea2314e4d43b6a751f58f453b8e2b213a9063bb4c6f80c53c24d9a7d67e"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_26",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Nei casi non indicati specificamente nei precedenti articoli, gli onorari e le indennità massimi sono stabiliti in analogia ai casi indicati nella presente legge."
+        },
+        {
+          "absatz": null,
+          "text": "TITOLO VI"
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "3f01ab17bb95f19a70fa95b436e9dffc32a0052529ba938c221d48302b4b219b"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_27",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La presente legge si applica agli atti e agli interventi del notaio effettuati dopo la sua entrata in vigore."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "4f56972f56a2801de1b45eb13d04fa4fbe8daa15d557f351900c5b49e6563a48"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_28",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "La Legge del 23 febbraio 1983 sulla tariffa notarile è abrogata."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "50e4d5313ed18e825030cf8f2d8007f4f65c0f9b66f4e06201b8c2f26736ee7f"
+    },
+    {
+      "id": "kanton/TI/ti-148/art_29",
+      "ebene": "kanton",
+      "quelle": "TI",
+      "erlass": "Legge sulla tariffa notarile (RL 952.300)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Trascorsi i termini per l’esercizio del diritto di referendum, la presente legge è pubblicata nel Bollettino ufficiale delle leggi e degli atti esecutivi."
+        },
+        {
+          "absatz": "2",
+          "text": "Il Consiglio di Stato fissa la data dell’entrata in vigore."
+        },
+        {
+          "absatz": null,
+          "text": "Pubblicata nel BU 2015, 169."
+        }
+      ],
+      "stand": "2015-07-01",
+      "quelleUrl": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/148",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "f98f310cad696218432c85045b5035a9a7f9d3767da1d2d75a648300607620ce",
+      "sha": "7d149517e6c98649d17d40f2a769070183c2edb5c0412c02f72508663d595736"
     }
   ]
 }

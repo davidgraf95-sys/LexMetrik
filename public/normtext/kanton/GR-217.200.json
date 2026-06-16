@@ -1,6 +1,300 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/GR/217.200/art_1",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Eintragung in das Grundbuch sowie für weitere Dienstleistungen und Aufwendungen erheben die Grundbuchämter Gebühren."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren für die Amtsverrichtungen des Grundbuchverwalters als Notariatsperson richten sich nach der Verordnung über die Notariatsgebühren."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "c4f215167fbf2058fbc6394f399d7136caa6294649dde303febf9ba963135994"
+    },
+    {
+      "id": "kanton/GR/217.200/art_2",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Jeder Grundbuchkreis ist buchführungspflichtig."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren fallen den Grundbuchkreisen zu. Betrifft ein Rechtsgeschäft mehrere Grundbuchkreise, wird die Gebühr getrennt nach Absprache unter den Grundbuchverwaltern berechnet."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Grundbuchkreise können die Grundbuchverwalter fest besolden oder ihnen als Entgelt für ihre Amtshandlungen die Gebühren überlassen (Sportelnsystem)."
+        },
+        {
+          "absatz": "4",
+          "text": "Übersteigen die Gebühren für das Errichten, für die öffentliche Beurkundung und für die Eintragung eines Grundbuchgeschäftes zusammen den Betrag von 1000 Franken, so hat der im Sportelnsystem tätige Grundbuchverwalter den Mehrbetrag dem Grundbuchkreis zu erstatten."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "ac196071cccabb5f193959e4451c277f0b796b8ee3b4c15e3fee29635849c324"
+    },
+    {
+      "id": "kanton/GR/217.200/art_3",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Grundbuchverwalter kann zur Sicherstellung seiner Gebühren und Auslagen Vorschüsse verlangen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "b5723394f7c830c51d214a1a1b88ec5686dbcecde0075aa33848313e87f4248a"
+    },
+    {
+      "id": "kanton/GR/217.200/art_4",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In den Gebührenrechnungen ist auf die angewendeten Bestimmungen dieser Verordnung hinzuweisen."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Grundbuchverwalter kann seine Gebührenrechnungen in Form von anfechtbaren Verfügungen erlassen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "b0f5fa20483bd034776aab2be157fedc2944141b47764b89750058b762aa26fb"
+    },
+    {
+      "id": "kanton/GR/217.200/art_5",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Berichte an vorgesetzte Amtsstellen sind gebührenfrei zu erstatten."
+        },
+        {
+          "absatz": "2",
+          "text": "Bedürftigen sowie gemeinnützigen oder wohltätigen Institutionen oder aus Billigkeitsgründen können die Gebühren ermässigt oder ganz erlassen werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "6b08bbe0b2188457ab3b026b090746d5f15a4addcc56a2b2cff619874c6278f7"
+    },
+    {
+      "id": "kanton/GR/217.200/art_6",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wenn die Parteien keine andere Vereinbarung getroffen haben, schulden sie die Gebühren solidarisch."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Eintragungen, die von Amtsstellen angeordnet werden, sind die Gebühren vom Eigentümer zu erheben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "27ea7393b6f5242adbb06fbecbe16b2c3bc92170aa10f1a72d120a03738c0651"
+    },
+    {
+      "id": "kanton/GR/217.200/art_7",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beschwerden gegen Rechnungsverfügungen betreffend Grundbuchgebühren sind innert 30 Tagen an das Departement für Volkswirtschaft und Soziales zu richten."
+        },
+        {
+          "absatz": "2",
+          "text": "Gegen den Entscheid des Departementes kann innert 30 Tagen beim Obergericht Beschwerde erhoben werden."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "0e8ee7b7f9bcf58748b90873d3b87fa578a9d336ed88cc60d713839c43471f78"
+    },
+    {
+      "id": "kanton/GR/217.200/art_8",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Mehrere in einem Vertrag enthaltene Rechtsgeschäfte, die verschiedene Eintragungen, Vormerkungen, Anmerkungen und Löschungen erfordern, sind als separate Grundbuchgeschäfte zu behandeln."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "57680ee5c7edd53fe08cff318ec16e03a33b06a4df852e1393e74a24549da1dc"
+    },
+    {
+      "id": "kanton/GR/217.200/art_9",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren sind, soweit nachstehend keine Abweichungen festgelegt werden, nach den Vertragssummen zu berechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden keine Vertragssummen festgelegt, so ist der für die Gebührenerhebung festzulegende Wert in Absprache mit den Parteien zu ermitteln. Kommt keine Einigung zustande, haben die Parteien zu ihren Lasten eine aktuelle amtliche Verkehrswertbewertung beizubringen, nach welcher die Gebühr zu erheben ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Wird ein Grundstück gestützt auf einen bundesrechtlich festgesetzten Anspruch zum Ertragswert übertragen, ist die Gebühr nach diesem Wert zu erheben."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "2b039cc2b37004b4b7b95f37bc2e32071a89d1292bc6e93c197cb8a004059bd6"
+    },
+    {
+      "id": "kanton/GR/217.200/art_10",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Fehlt in dieser Verordnung ein Gebührenansatz, so werden die Gebühren für die tatsächlich erbrachten Leistungen nach der aufgewendeten Zeit (Art. 18 lit. d) und der Bedeutung des Geschäfts beim Auftraggeber erhoben. Die Mindestgebühr beträgt 30 Franken."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "176d3b168d27bc1eec8cbd8f42cc529ea7bbede45e3ad5082bb827a5a67f3d52"
+    },
+    {
+      "id": "kanton/GR/217.200/art_11",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für das Errichten nicht beurkundungspflichtiger Dokumente sind, soweit nachstehend keine besonderen Ansätze festgelegt werden und unter Vorbehalt von Absatz 2, die gleichen Gebühren wie für den grundbuchlichen Vollzug der darin begründeten Rechte zu erheben. Die Minimalgebühr in diesen Fällen beträgt 100 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind nachstehend keine besonderen Ansätze festgelegt und bestimmen sich die entsprechenden Eintragungsgebühren nach der Anzahl vorzunehmender Buchungen, ist die Gebühr für das Errichten der erforderlichen schriftlichen Dokumente nach Artikel 10 zu erheben."
+        },
+        {
+          "absatz": "3",
+          "text": "Gelangt ein fertig vorbereitetes Geschäft nicht zur Unterzeichnung, so ist die für das Verfassen des Geschäfts vorgesehene Gebühr beim Auftraggeber in Rechnung zu stellen."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "7e69ae0b836373549dcd9f2fa3bdc7d8e93291a728899ea2ce9f68d4a67c7f96"
+    },
+    {
+      "id": "kanton/GR/217.200/art_12",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Reglement zu Stockwerkeigentum und Nutzungsordnung bei Mieteigentum sowie Nachträge dazu, in Berücksichtigung von Umfang und Bedeutung"
+            },
+            {
+              "marke": "b",
+              "text": "Pfandbeschrieb zu einem Grundpfandrecht (von der Pfandsumme): 0,5‰"
+            },
+            {
+              "marke": "c",
+              "text": "Schuldbrief (Titel-Ausfertigung): 1‰"
+            },
+            {
+              "marke": "d",
+              "text": "Nicht preislich limitierte Vorkaufsrechte: 1‰"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "ca4a88b79eed939e4fa65ae315bec95bd62087b03690bf29d47afb3395953866"
+    },
     {
       "id": "kanton/GR/217.200/art_13",
       "ebene": "kanton",
@@ -86,7 +380,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
       "sha": "a6bb05f2eb97f9b19f65fe86bbb3876c4c71c892ed95de9c7bc942ed37192353"
     },
@@ -115,7 +409,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
       "sha": "a5563e24aa5a49ad9f1ca70667a7a533ede094bf7140acc2f2100b85da010961"
     },
@@ -144,7 +438,7 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
       "sha": "d17163a47a960f398fc38c40ca3343b052a2a260256af0feec80467d6ea065ac"
     },
@@ -163,9 +457,106 @@
       ],
       "stand": "2025-01-01",
       "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
       "sha": "75b18a45ba846887be938c517c05d9801e66bdaef1899aae8d1c920e31c7ce21"
+    },
+    {
+      "id": "kanton/GR/217.200/art_17",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gläubigerwechsel (pro Pfandrecht)",
+          "items": [
+            {
+              "marke": "a",
+              "text": "je Blatt Fr. 10.–"
+            },
+            {
+              "marke": "b",
+              "text": "Minimum Fr. 20.–"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "6a90d14ee0b92e394c5436798fa7b6ce393f3c802558a266b8083d6187d6c355"
+    },
+    {
+      "id": "kanton/GR/217.200/art_18",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Auszug aus dem elektronischen Auskunftsportal (Grundbuchgebühr exklusive externe Transaktionskosten)"
+            },
+            {
+              "marke": "a",
+              "text": "Auszug in Form einer Fotokopie des Hauptbuchblattes aus dem Papier-Grundbuch"
+            },
+            {
+              "marke": "b",
+              "text": "Handänderungsanzeige"
+            },
+            {
+              "marke": "c",
+              "text": "Nachführen von Schuldbriefen (inkl. Neuausstellung)"
+            },
+            {
+              "marke": "d",
+              "text": "Abweisung einer Grundbuchanmelung, Zeitaufwand für zur Prüfung entgegengenommene Entwürfe sowie Zeitaufwand für Auskünfte, Nachforschungen und Verrichtungen, die in diesem Tarif nicht aufgeführt sind: gemäss dem für die 20. Gehaltsklasse festgelegten kantonalen Verrechungsansatz pro Stunde"
+            },
+            {
+              "marke": "e",
+              "text": "Porto, Telefonauslagen, Büralkosten, sowie Fahrspesen (letztere gemäss kantonalen Entschädigungsansätzen): werden gesondert berechnet"
+            },
+            {
+              "marke": "f",
+              "text": "Korrespondenz: gemäss Stundenansatz (Art. 18 lit. d)"
+            }
+          ]
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "01664e586e7787aefb75e630be00d85d56902a16a539ce21aa455e5e72253c08"
+    },
+    {
+      "id": "kanton/GR/217.200/art_19",
+      "ebene": "kanton",
+      "quelle": "GR",
+      "erlass": "Verordnung über die Gebühren der Grundbuchämter (BR 217.200)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. Januar 2001 in Kraft und ersetzt die Gebührenverordnung der Regierung vom 28. Mai 1984."
+        }
+      ],
+      "stand": "2025-01-01",
+      "quelleUrl": "https://www.gr-lex.gr.ch/app/de/texts_of_law/217.200",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "5c459f13fac0347b9f6567d9874dfd38",
+      "sha": "721908ae61fa526206440cce485c409add02118d56750d31cd32cc1fbd705452"
     }
   ]
 }

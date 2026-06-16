@@ -1,6 +1,182 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_1",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le présent décret est applicable aux émoluments des notaires concernant la passation d’actes publics, aux honoraires pour leur activité accessoire, et leurs débours."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "46b2a945c59af9e4039de3d24be8036f8686dd83c7b639612016f7d05c6b5b73"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_2",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les émoluments compris dans le tarif comprennent la préparation de l’acte, la passation de l’acte et une expédition."
+        },
+        {
+          "absatz": "2",
+          "text": "Les émoluments pour les éclaircissements préalables, les conseils et les délibérations, de même que les actes d’exécution découlant de l’acte, sont fixés selon l’article 6, alinéa 1."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "f63f55a3b22423beec9779cb960b53f0f3283bd70dbfeaa3d542f2f389810963"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_3",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Lorsqu’un acte instrumentaire n’est pas compris dans le tarif, on applique la position du tarif qui correspond le mieux à l’acte en question; si le tarif ne contient aucune position applicable par analogie, I’émolument sera fixé conformément à l’article 6, alinéa 1."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "00ca17fdd0c8bbee0bfa558ef817b880c05a63a0fbe9aed13e38f9a18a70e750"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_4",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Si un acte concernant une affaire juridique doit être dressé séparément pour chacune des parties, il sera compté un supplément, proportionnel au temps employé, sauf disposition contraire du décret."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque l’acte instrumentaire concernant une affaire juridique n’est pas valable pour vices de consentement ou manque d’autorisation nécessaire, il n’est dû que la moitié de I’émolument."
+        },
+        {
+          "absatz": "3",
+          "text": "Si, après un mandat donné, il ne peut être dressé d’acte, I’émolument sera calculé selon l’article 6, alinéa 1."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "3a0a4e7839e5e035bb5fd1dc3042cadb76fe8284a03ee1088f4b80eecb59edf6"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_5",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Si l’on dresse un seul acte pour plusieurs opérations juridiques, I’émolument sera calculé pour chaque opération particulière, sauf disposition contraire du présent décret."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "2ec36ad9cd47afaed4fe90339aa89afa2cbc02a869698ddfbfa6a111c2942131"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_6",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les honoraires concernant une activité accessoire sont fixés selon l’importance de l’affaire, la responsabilité assumée par le notaire et le temps employé, compte tenu de la situation de revenu et de fortune du client."
+        },
+        {
+          "absatz": "2",
+          "text": "Sont réservées les conventions particulières entre notaire et client relativement au montant des honoraires."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "3e118a981f8381929999751ecaf1c325e5d77df03a39cf27e1c42ff187eac31d"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_7",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Si un client se trouve dans des conditions économiques modestes, les émoluments et honoraires seront ramenés à un taux qu’il puisse supporter."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "e79bd18eb64abc18fb4563d77f1e76bef77b2d1c7d6eaa5bf0c04e61e4e1fe5d"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_8",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les opérations terminées, le notaire présente au client sa note d’émoluments, d’honoraires et de débours."
+        },
+        {
+          "absatz": "2",
+          "text": "Emoluments et honoraires seront réunis en un montant forfaitaire; les actes instrumentaires seront mentionnés dans le texte de la note."
+        },
+        {
+          "absatz": "3",
+          "text": "Les débours de moindre importance seront réunis, les plus importants seront détaillés séparément. SECTION 2 : Tarif des émoluments"
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "a54d99e2000951c918382665be8dc0375cdc492e0e5488c42d720d15feeeb70c"
+    },
     {
       "id": "kanton/JU/ju-20029-37829-dl/art_9",
       "ebene": "kanton",
@@ -32,32 +208,9 @@
       ],
       "stand": "1978-12-06",
       "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
       "sha": "8c1d1aa3f2950f6ff962f775238042b1c7022a8c0ef496ea6855ec2fdcd38bc5"
-    },
-    {
-      "id": "kanton/JU/ju-20029-37829-dl/art_6",
-      "ebene": "kanton",
-      "quelle": "JU",
-      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
-      "artikel": "6",
-      "artikelLabel": "Art. 6",
-      "bloecke": [
-        {
-          "absatz": null,
-          "text": "Les honoraires concernant une activité accessoire sont fixés selon l’importance de l’affaire, la responsabilité assumée par le notaire et le temps employé, compte tenu de la situation de revenu et de fortune du client."
-        },
-        {
-          "absatz": "2",
-          "text": "Sont réservées les conventions particulières entre notaire et client relativement au montant des honoraires."
-        }
-      ],
-      "stand": "1978-12-06",
-      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
-      "sha": "3e118a981f8381929999751ecaf1c325e5d77df03a39cf27e1c42ff187eac31d"
     },
     {
       "id": "kanton/JU/ju-20029-37829-dl/art_10",
@@ -90,63 +243,9 @@
       ],
       "stand": "1978-12-06",
       "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
       "sha": "74e1a4dfbf809ef44dd01b7c5e1c06ee97f7d12ed2ada507873aaed73ee2cb9e"
-    },
-    {
-      "id": "kanton/JU/ju-20029-37829-dl/art_12",
-      "ebene": "kanton",
-      "quelle": "JU",
-      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
-      "artikel": "12",
-      "artikelLabel": "Art. 12",
-      "bloecke": [
-        {
-          "absatz": null,
-          "text": "Les émoluments pour les contrats de mariage ou les conventions sur les biens conclues par des partenaires enregistrés, l’établissement de dispositions pour cause de mort et de pactes successoraux, seront calculés sur la fortune brute : 3 ‰ des premiers 100 000 francs; 2 ‰ de 100 001 à 500 000 francs; 1 ‰ de tout montant dépassant 500 000 francs. Le minimum des honoraires est de 200 francs, le maximum de 2 000 francs."
-        },
-        {
-          "absatz": "2",
-          "text": "Par fortune brute il faut entendre : pour les contrats de mariage : la fortune des époux comprise dans le contrat de mariage; pour les conventions sur les biens conclues par des partenaires enregistrés : la fortune de ceux-ci comprise dans la convention; pour les institutions d’héritier : le montant de la part héréditaire au moment de la passation de l’acte; pour les legs : leur valeur courante au moment de la passation; pour les contrats d’entretien viager : la valeur de tous les revenus du bénéficiaire."
-        },
-        {
-          "absatz": "3",
-          "text": "Si le contrat de mariage ne modifie que l’affectation du bénéfice, les émoluments sont fixés de 100 à 1 000 francs."
-        }
-      ],
-      "stand": "1978-12-06",
-      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
-      "sha": "da1db28892d180c652bc67294bf69ee17dd2ee9a25a0d9b0eca6ebe87972e65b"
-    },
-    {
-      "id": "kanton/JU/ju-20029-37829-dl/art_16",
-      "ebene": "kanton",
-      "quelle": "JU",
-      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
-      "artikel": "16",
-      "artikelLabel": "Art. 16",
-      "bloecke": [
-        {
-          "absatz": null,
-          "text": "Pour la passation de l’acte de fondation d’une société anonyme ou d’une société à responsabilité limitée, ou la création d’une fondation, les émoluments sont fixés d’après le capital de la société ou de la fondation : 300 francs pour les premiers 100 000 francs; 2 ‰ pour les 400 000 francs suivants; 1,5 ‰ du montant dépassant 500 000 francs."
-        },
-        {
-          "absatz": "2",
-          "text": "Lors d’augmentation ou de réduction du capital, les mêmes émoluments sont perçus, d’après le montant de l’augmentation ou de la réduction."
-        },
-        {
-          "absatz": "3",
-          "text": "Lors d’une fusion, les émoluments sont fixés d’après le nouveau capital-actions de la société qui admet, ou d’après le capital de la nouvelle société."
-        }
-      ],
-      "stand": "1978-12-06",
-      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
-      "sha": "ee9aa18dbefc2fa73d8799bb8986d160701e10d145784cb3434a471bedd00140"
     },
     {
       "id": "kanton/JU/ju-20029-37829-dl/art_11",
@@ -171,9 +270,259 @@
       ],
       "stand": "1978-12-06",
       "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
       "sha": "f5a663bddab1d87e6d9d407b7667388c98524c0fac779c2f19f9ad808134140e"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_12",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les émoluments pour les contrats de mariage ou les conventions sur les biens conclues par des partenaires enregistrés, l’établissement de dispositions pour cause de mort et de pactes successoraux, seront calculés sur la fortune brute : 3 ‰ des premiers 100 000 francs; 2 ‰ de 100 001 à 500 000 francs; 1 ‰ de tout montant dépassant 500 000 francs. Le minimum des honoraires est de 200 francs, le maximum de 2 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Par fortune brute il faut entendre : pour les contrats de mariage : la fortune des époux comprise dans le contrat de mariage; pour les conventions sur les biens conclues par des partenaires enregistrés : la fortune de ceux-ci comprise dans la convention; pour les institutions d’héritier : le montant de la part héréditaire au moment de la passation de l’acte; pour les legs : leur valeur courante au moment de la passation; pour les contrats d’entretien viager : la valeur de tous les revenus du bénéficiaire."
+        },
+        {
+          "absatz": "3",
+          "text": "Si le contrat de mariage ne modifie que l’affectation du bénéfice, les émoluments sont fixés de 100 à 1 000 francs."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "da1db28892d180c652bc67294bf69ee17dd2ee9a25a0d9b0eca6ebe87972e65b"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_13",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour l’établissement d’un inventaire, les honoraires sont fixés d’après la fortune brute portée à l’inventaire. Ils sont de : 4 ‰ des premiers 200 000 francs, au minimum de 100 francs; 3 ‰ des 800 000 francs suivants; 2 ‰ de la part de la fortune dépassant 1 000 000 de francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Par fortune brute, il faut entendre l’ensemble des biens de tout genre que le notaire a dû prendre en considération lors de l’établissement de I’inventaire, tels que les apports, les biens réservés, la fortune acquise pendant l’union conjugale, les prestations d’assurance de toute nature, la fortune des enfants sur laquelle les parents disposent d’un droit de jouissance, les biens en usufruit, les avancements d’hoirie, les donations et les rentes viagères avec remboursement du capital."
+        },
+        {
+          "absatz": "3",
+          "text": "Pour l’inventaire dressé à la charge de I’Etat suivant les dispositions de la législation fiscale, I’émolument du notaire est fixé à 100 francs."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "2de14cd9e31256707553ea0d1e8688b522951e7be69bde0ab81f259aebeb3e80"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_14",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour les certificats d’hérédité dressés en actes individuels ou portés à la suite sur un acte, les émoluments sont calculés d’après le montant de la fortune : 4 ‰ des premiers 100 000 francs; 3 ‰ des 400 000 francs suivants; 2 ‰ du montant dépassant 500 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour les immeubles est déterminante la valeur sur laquelle a été perçu le droit de mutation, pour les papiers-valeurs cotés, d’après la valeur courante, pour les autres papiers-valeurs ou toutes autres prétentions, d’après la valeur vénale, cependant au minimum d’après la valeur nominale."
+        },
+        {
+          "absatz": "3",
+          "text": "Pour le calcul des émoluments, on additionnera tous les biens de la succession pour lesquels des certificats d’hérédité sont nécessaires."
+        },
+        {
+          "absatz": "4",
+          "text": "Lorsque ces biens forment les éléments d’un partage auquel le notaire doit procéder, il est perçu la moitié des émoluments."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "6f2b1aaad1da76067fcb33b5120428d650f1eb5fa9dc411dbe1fcc0838ac3fd6"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_15",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour instrumenter les contrats de vente ou de partage, notamment les actes de partage et les conventions sur parts héréditaires, les émoluments sont calculés d’après la fortune brute à partager ou le montant qui fait l’objet de la renonciation : 8 ‰ des premiers 200 000 francs; 7 ‰ des 800 000 francs suivants; 6 ‰ du montant dépassant 1 000 000 de francs."
+        },
+        {
+          "absatz": "2",
+          "text": "II est dû les mêmes émoluments, calculés d’après la valeur officielle, pour la transformation de la propriété individuelle, de la propriété commune ou de la copropriété ordinaire en propriété par étages. Les émoluments comprennent l’épuration des servitudes et des droits de gage, exigée par la transformation. Pour la constitution de la propriété par étages avant la construction de l’édifice, les émoluments sont fixés conformément à l’article 6, alinéa 1."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "1ba64c350fc6c8eb0a9b48cda4bc6ffc4567453f6e483f216cd3a238619922fb"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_16",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour la passation de l’acte de fondation d’une société anonyme ou d’une société à responsabilité limitée, ou la création d’une fondation, les émoluments sont fixés d’après le capital de la société ou de la fondation : 300 francs pour les premiers 100 000 francs; 2 ‰ pour les 400 000 francs suivants; 1,5 ‰ du montant dépassant 500 000 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Lors d’augmentation ou de réduction du capital, les mêmes émoluments sont perçus, d’après le montant de l’augmentation ou de la réduction."
+        },
+        {
+          "absatz": "3",
+          "text": "Lors d’une fusion, les émoluments sont fixés d’après le nouveau capital-actions de la société qui admet, ou d’après le capital de la nouvelle société."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "ee9aa18dbefc2fa73d8799bb8986d160701e10d145784cb3434a471bedd00140"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_17",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Pour dresser protêt d’un effet de change, les émoluments sont fixés à : 10 francs pour la valeur de l’effet jusqu’à 500 francs; 30 francs lorsque la valeur de l’effet dépasse 500 francs."
+        },
+        {
+          "absatz": "2",
+          "text": "Pour la simple présentation d’un effet de change, les émoluments sont fixés à la moitié de ceux mentionnés à l’alinéa 1."
+        },
+        {
+          "absatz": "3",
+          "text": "Un supplément est calculé selon la distance."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "ec9baee447b4aece1f5ca762d81c10ee7313b81495a6f7f05f3d1c2b2e4dabee"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_18",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Les émoluments sont fixés au minimum à : 10 francs pour la légalisation d’une signature ou pour une copie et pour l’attestation de la date (date certaine); 50 francs pour les attestations de fait (constats), pour autant qu’une autre position du tarif ne leur soit pas applicable; 50 francs pour un acte de déclaration sous serment."
+        },
+        {
+          "absatz": "2",
+          "text": "En cas de participation d’autres personnes il est compté un supplément approprié. SECTION 3 : Taxe officielle des émoluments, honoraires et débours des notaires"
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "e96841c18baea45104506b68996e0d00f40d2f1c685726e4aaa7b6ced8162b6e"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_19",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le notaire et le client peuvent faire taxer officiellement les émoluments, honoraires et débours par le Département de la Justice Les dispositions du Code de procédure administrative , en ce qui concerne la demande, sont applicables à la procédure."
+        },
+        {
+          "absatz": "3",
+          "text": "Le juge décide de l’obligation de payer du client et tranche les contestations relatives au montant des honoraires convenu par contrat."
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "dac12824061406bb25a516bed253232930c216847943afe1d0f57093ec431a52"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_20",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Si le client désire recourir à cette procédure, il est tenu de demander une note détaillée au notaire, dans les trente jours dès réception de la note forfaitaire. Le notaire a l’obligation de l’établir immédiatement. Dans les trente jours dès réception de cette note détaillée, le client la transmet avec l’exposé de sa demande au Département de la Justice . S’il a payé la note sans faire de réserve, il ne peut plus requérir la taxe officielle."
+        },
+        {
+          "absatz": "2",
+          "text": "Lorsque le client conteste tout ou partie de la note, le notaire peut requérir en tout temps la taxe officielle en remettant sa note détaillée. SECTION 4 : Dispositions finales"
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "8666518200129159aeee36576947851957e65c51da3839c974c9ca165304cbaf"
+    },
+    {
+      "id": "kanton/JU/ju-20029-37829-dl/art_21",
+      "ebene": "kanton",
+      "quelle": "JU",
+      "erlass": "Décret fixant les émoluments des notaires (RSJU 189.61)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Le Gouvernement fixe la date de l’entrée en vigueur du présent décret. Celui-ci s’applique à toutes les opérations professionnelles dès cette date. Les procédures déjà engagées concernant la taxe officielle des RSJU 101 RSJU 189.11 Nouvelle teneur selon le ch. I du décret du 14 septembre 1994, en vigueur depuis le 1 octobre 1994. Nouvelle dénomination selon le décret d’organisation du Gouvernement et de l’administration cantonale du 25 octobre 1990, en vigueur depuis le 15 janvier 1991 (RSJU 172.111) RSJU 175.1 1 janvier 1979 Nouvelle teneur selon le ch. I du décret du 14 septembre 1994, en vigueur depuis le 1 octobre 1994. Nouvelle teneur selon le ch. l du décret du 22 septembre 2004, en vigueur depuis le 1 janvier 2005 Nouvelle teneur selon le ch. XlV de l'annexe à la loi du 22 novembre 2006 portant application de la loi fédérale sur le partenariat enregistré entre personnes du même sexe (RSJU 211.2), en vigueur depuis le 1 janvier 2007"
+        }
+      ],
+      "stand": "1978-12-06",
+      "quelleUrl": "https://rsju.jura.ch/fr/viewdocument.html?idn=20029&id=37829&download=1",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "0a9d48f863d49f49046d7127aadf1691b64ef8b4adecd7d47516a109e38a00d3",
+      "sha": "ea70735bdbc797dc2b52ad5d1a9c8e5d1af684a8085b2b8e0ad15aaafbef0411"
     }
   ]
 }

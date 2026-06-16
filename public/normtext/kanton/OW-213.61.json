@@ -1,6 +1,117 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/OW/213.61/art_1",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Amtshandlungen des Grundbuchamts sind im Rahmen des allgemeinen Gebührengesetzes und dieser Verordnung Gebühren zu entrichten."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "4dba2d0ec69f32cb0c38537fcb24a79615fbc275c001f448eb0bf5d52535dab7"
+    },
+    {
+      "id": "kanton/OW/213.61/art_2",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Gebührenpflichtig sind bei Handänderungen die veräussernde und die erwerbende Person zu gleichen Teilen, bei Grundpfanderrichtungen die Pfandbestellerin oder der Pfandbesteller, bei Dienstbarkeitsbegründungen die berechtigte Person, und in den übrigen Fällen die Person, welche die Amtshandlung veranlasst. Vorbehalten bleiben anderslautende Vereinbarungen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Parteien haften für die Gebühren solidarisch. Für die gemäss Art. 18 Abs. 2 dieser Verordnung von den Gebühren befreite Partei entfällt die Solidarhaftung."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "39ba2dd5238726f8d3383f3442f3b42cf71e7e6c4bfb9b010210ad9416305ee9"
+    },
+    {
+      "id": "kanton/OW/213.61/art_3",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In den Gebühren ist die Entschädigung für die mit den betreffenden Geschäften ordentlicherweise verbundene amtliche Tätigkeit, einschliesslich übliche Vorbereitungsarbeiten, Papier, Formulare, Bescheinigungen und Stempelung, inbegriffen."
+        },
+        {
+          "absatz": "2",
+          "text": "Direkte Auslagen, wie Porti, Telefongebühren, Kopien, Publikationen usw. sind besonders zu vergüten."
+        },
+        {
+          "absatz": "3",
+          "text": "Für amtliche Tätigkeiten, die im vorliegenden Tarif nicht aufgeführt sind, z.B. Vorprüfungen, Abweisungen, Nachforschungen, ist eine Gebühr zum Stundenansatz von Fr. 80.– bis Fr. 200.– zu berechnen."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "8b32f658a9a5ea1bf0876cbb6dd186152a9b472ce67a52b0418529b57c269654"
+    },
+    {
+      "id": "kanton/OW/213.61/art_4",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Regierungsrat erlässt Vorschriften über die Rechnungsführung und die Rechnungsstellung."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "3654e6e43f854bcb4ae9eff4fc14cf8f5cba2bcfa30b62ac81c91cf5f30f09cd"
+    },
+    {
+      "id": "kanton/OW/213.61/art_5",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Gebührenberechnung nach dem Wert gilt als Vertragssumme der Gesamtbetrag aller der veräussernden oder belasteten Person zufliessenden oder von der erwerbenden oder berechtigten Person zu erbringenden Leistungen (ohne den Wert der Fahrnis). Enthält der Rechtsgrundausweis darüber keine Angaben oder liegt der Wert unterhalb des Nettosteuerwerts bei nichtlandwirtschaftlichen oder des Ertragswerts bei landwirtschaftlichen Grundstücken, so gilt der Nettosteuerwert bzw. Ertragswert als Vertragssumme."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei periodischen Vertragsleistungen gilt als Grundlage der Gebührenberechnung der zwanzigfache Betrag der Jahresleistung."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "5759b2d15511a2e072f42665f572977cb733db6229ade505ddb570f4b0972391"
+    },
     {
       "id": "kanton/OW/213.61/art_6",
       "ebene": "kanton",
@@ -36,9 +147,152 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
       "sha": "3cb7d0b729f0da2a676cd1ab2a561660c79a77d4d4657a1262474c94181b5a8e"
+    },
+    {
+      "id": "kanton/OW/213.61/art_7",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Begründung von Stockwerkeigentum beträgt die Gebühr 0,5 ‰ des Nettosteuerwerts der Liegenschaft oder des Baurechtsgrundstücks, mindestens aber Fr. 200.– und höchstens Fr. 15 000.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Gebäude, die sich noch im Bau befinden, errechnet sich der massgebende Wert aus dem Nettosteuerwert der Liegenschaft oder des Baurechtsgrundstücks und 80 % des Gebäudewerts gemäss Baukostenvoranschlag."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Änderung eines Stockwerkeigentumsverhältnisses beträgt die Gebühr Fr. 200.–."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Löschung eines Stockwerkeigentumsverhältnisses beträgt die Gebühr Fr. 100.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "c8284c4d2fc89fe2ef77e454b14cb65dd30dd0ec991df58ac5094fd6a9a80345"
+    },
+    {
+      "id": "kanton/OW/213.61/art_8",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Begründung von Miteigentum und die Änderung eines Miteigentumsverhältnisses beträgt die Gebühr Fr. 200.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Löschung eines Miteigentumsverhältnisses beträgt die Gebühr Fr. 100.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "1bf9d0e5ac33337c62e0f3d875ac1bd20630d5dd49e5ebfe7229fc3cd877f672"
+    },
+    {
+      "id": "kanton/OW/213.61/art_9",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Eintragung einer Wasserrechtskonzession oder eines Bergwerks beträgt die Gebühr Fr. 200.– bis Fr. 1 500.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Übertragung eines in Absatz 1 genannten Rechts wird die Gebühr gemäss Art. 6 dieser Verordnung erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Löschung einer Wasserrechtskonzession oder eines Bergwerks beträgt die Gebühr Fr. 100.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "eedd88ffa00748a1abf55a0c374b497f8d6833d870b122f689a4d23ec2354ff0"
+    },
+    {
+      "id": "kanton/OW/213.61/art_10",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Eintragung einer Grunddienstbarkeit beträgt die Gebühr Fr. 80.– pro Recht."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Eintragung einer Personaldienstbarkeit beträgt die Gebühr Fr. 80.– pro Grundstück."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Eintragung einer Grundlast beträgt die Gebühr 2 ‰ des Gesamtwerts, mindestens aber Fr. 80.–."
+        },
+        {
+          "absatz": "4",
+          "text": "Für die Änderung einer Dienstbarkeit oder Grundlast beträgt die Gebühr Fr. 40.–."
+        },
+        {
+          "absatz": "5",
+          "text": "Die Löschung einer Dienstbarkeit oder einer Grundlast ist gebührenfrei."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "77bd192198d98ae15bd680f0c7c5eb79fd81b5540e9c1b7f5db1bb16e6bcbf22"
+    },
+    {
+      "id": "kanton/OW/213.61/art_11",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Eintragung eines selbstständigen und dauernden Rechts wird die Gebühr gemäss Art. 6 Abs. 1 dieser Verordnung erhoben, mindestens aber Fr. 100.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Verlängerung oder Änderung eines selbstständigen und dauernden Rechts beträgt die Gebühr Fr. 200.–."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Löschung eines selbstständigen und dauernden Rechts beträgt die Gebühr Fr. 100.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "747ae76d96d72bd41bcb7c80c92cab332f88cd7f948c9cd36ca133ac05aa36e7"
     },
     {
       "id": "kanton/OW/213.61/art_12",
@@ -103,71 +357,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
       "sha": "af96d415aa3925aea68d6facd203d9a3e89b4c3a4db736d2d94b67aa0fa08342"
-    },
-    {
-      "id": "kanton/OW/213.61/art_10",
-      "ebene": "kanton",
-      "quelle": "OW",
-      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
-      "artikel": "10",
-      "artikelLabel": "Art. 10",
-      "bloecke": [
-        {
-          "absatz": "1",
-          "text": "Für die Eintragung einer Grunddienstbarkeit beträgt die Gebühr Fr. 80.– pro Recht."
-        },
-        {
-          "absatz": "2",
-          "text": "Für die Eintragung einer Personaldienstbarkeit beträgt die Gebühr Fr. 80.– pro Grundstück."
-        },
-        {
-          "absatz": "3",
-          "text": "Für die Eintragung einer Grundlast beträgt die Gebühr 2 ‰ des Gesamtwerts, mindestens aber Fr. 80.–."
-        },
-        {
-          "absatz": "4",
-          "text": "Für die Änderung einer Dienstbarkeit oder Grundlast beträgt die Gebühr Fr. 40.–."
-        },
-        {
-          "absatz": "5",
-          "text": "Die Löschung einer Dienstbarkeit oder einer Grundlast ist gebührenfrei."
-        }
-      ],
-      "stand": "2022-01-01",
-      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
-      "sha": "77bd192198d98ae15bd680f0c7c5eb79fd81b5540e9c1b7f5db1bb16e6bcbf22"
-    },
-    {
-      "id": "kanton/OW/213.61/art_11",
-      "ebene": "kanton",
-      "quelle": "OW",
-      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
-      "artikel": "11",
-      "artikelLabel": "Art. 11",
-      "bloecke": [
-        {
-          "absatz": "1",
-          "text": "Für die Eintragung eines selbstständigen und dauernden Rechts wird die Gebühr gemäss Art. 6 Abs. 1 dieser Verordnung erhoben, mindestens aber Fr. 100.–."
-        },
-        {
-          "absatz": "2",
-          "text": "Für die Verlängerung oder Änderung eines selbstständigen und dauernden Rechts beträgt die Gebühr Fr. 200.–."
-        },
-        {
-          "absatz": "3",
-          "text": "Für die Löschung eines selbstständigen und dauernden Rechts beträgt die Gebühr Fr. 100.–."
-        }
-      ],
-      "stand": "2022-01-01",
-      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
-      "sha": "747ae76d96d72bd41bcb7c80c92cab332f88cd7f948c9cd36ca133ac05aa36e7"
     },
     {
       "id": "kanton/OW/213.61/art_13",
@@ -204,40 +396,9 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
       "sha": "6db59c2da45c83142fda5c64b7f078030b04dc9341dfa082c4c1ede7f09659d4"
-    },
-    {
-      "id": "kanton/OW/213.61/art_7",
-      "ebene": "kanton",
-      "quelle": "OW",
-      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
-      "artikel": "7",
-      "artikelLabel": "Art. 7",
-      "bloecke": [
-        {
-          "absatz": "1",
-          "text": "Für die Begründung von Stockwerkeigentum beträgt die Gebühr 0,5 ‰ des Nettosteuerwerts der Liegenschaft oder des Baurechtsgrundstücks, mindestens aber Fr. 200.– und höchstens Fr. 15 000.–."
-        },
-        {
-          "absatz": "2",
-          "text": "Für Gebäude, die sich noch im Bau befinden, errechnet sich der massgebende Wert aus dem Nettosteuerwert der Liegenschaft oder des Baurechtsgrundstücks und 80 % des Gebäudewerts gemäss Baukostenvoranschlag."
-        },
-        {
-          "absatz": "3",
-          "text": "Für die Änderung eines Stockwerkeigentumsverhältnisses beträgt die Gebühr Fr. 200.–."
-        },
-        {
-          "absatz": "4",
-          "text": "Für die Löschung eines Stockwerkeigentumsverhältnisses beträgt die Gebühr Fr. 100.–."
-        }
-      ],
-      "stand": "2022-01-01",
-      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
-      "sha": "c8284c4d2fc89fe2ef77e454b14cb65dd30dd0ec991df58ac5094fd6a9a80345"
     },
     {
       "id": "kanton/OW/213.61/art_14",
@@ -266,9 +427,135 @@
       ],
       "stand": "2022-01-01",
       "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
       "sha": "4fc26a9e343cf0260898a30bd883b7adf879894066a4d2093abc1490c0c6c60b"
+    },
+    {
+      "id": "kanton/OW/213.61/art_15",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Eröffnung und die Schliessung eines Hauptbuchblatts beträgt die Gebühr Fr. 50.–."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Bereinigung von Dienstbarkeiten, Grundlasten, Vormerkungen und Anmerkungen beträgt die Gebühr für jeden Eintrag auf jedem Grundstück, welches Fläche abgibt, Fr. 10.–."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "e8f3c9dfa39043c4ae9b3c84b90e670d5096b2a656387d29af12c6afb1f526c0"
+    },
+    {
+      "id": "kanton/OW/213.61/art_16",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die mündliche Auskunftserteilung ist in der Regel unentgeltlich. Dauert sie länger als eine halbe Stunde, so ist entsprechend der erforderlichen Sachkenntnis eine Gebühr zum Stundenansatz von Fr. 80.– bis Fr. 200.– zu berechnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Für vollständige Grundbuchauszüge beträgt die Gebühr pro Auszug Fr. 50.–. Wird der Auszug für mehr als ein Grundstück ausgefertigt, beträgt der Zuschlag für jedes weitere Grundstück Fr. 10.–."
+        },
+        {
+          "absatz": "3",
+          "text": "Für Teilauszüge beträgt die Gebühr Fr. 30.–. Wird der Teilauszug für mehr als ein Grundstück ausgefertigt, beträgt der Zuschlag für jedes weitere Grundstück Fr. 10.–."
+        },
+        {
+          "absatz": "4",
+          "text": "Für Eigentümerverzeichnisse beträgt die Gebühr Fr. 20.–."
+        },
+        {
+          "absatz": "5",
+          "text": "Auskünfte und Grundbuchauszüge, welche die kantonalen Amtsstellen und die Gemeinden für die Erledigung ihrer Aufgaben benötigen, sind gebührenfrei."
+        },
+        {
+          "absatz": "6",
+          "text": "Für den Versand von Auszügen und Eigentümerverzeichnissen sind keine Auslagen gemäss Art. 3 Abs. 2 dieser Verordnung zu vergüten."
+        },
+        {
+          "absatz": "7",
+          "text": "Für interne Beglaubigungen beträgt die Gebühr Fr. 20.–."
+        },
+        {
+          "absatz": "8",
+          "text": "Für die Erhebung von Gebühren für den Zugang zu den Daten des informatisierten Grundbuchs erlässt der Regierungsrat Ausführungsbestimmungen."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "4c3b6c0921f01a59075e897c598adae3e88a16a39aab9e1b1f1c677a734b220d"
+    },
+    {
+      "id": "kanton/OW/213.61/art_17",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Einzug oder die Aufbewahrung von Grundpfandtiteln und Inhaberobligationen beträgt die Gebühr Fr. 40.–. Bei Titellöschung entfällt die Gebühr."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "3ab9b525cba94412cd871bd3ae4fb18f7f3a757f33cfb1d1777a525a15b59562"
+    },
+    {
+      "id": "kanton/OW/213.61/art_18",
+      "ebene": "kanton",
+      "quelle": "OW",
+      "erlass": "Grundbuchgebührentarif (GDB 213.61)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Folgende Amtshandlungen sind gebührenfrei:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Eintragungen, die mit Bodenverbesserungen oder mit Bodenaustausch zur Abrundung landwirtschaftlicher Betriebe zusammenhängen und für Eintragungen von Grundpfandrechten zur Sicherung von Investitionskrediten sowie Betriebshilfedarlehen;"
+            },
+            {
+              "marke": "b",
+              "text": "Eintragungen, die infolge einer Kantons- oder Gemeindegrenzenregulierung notwendig werden."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Vom Kanton und von den Gemeinden werden keine Gebühren erhoben. Die andere Partei, die die Gebührenfreiheit nicht beanspruchen kann, schuldet ihren Gebührenanteil in der Regel auch bei anderslautender Abrede."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Enteignung nach eidgenössischem Recht dürfen für den Eigentumsübergang gemäss Art. 92 des Bundesgesetzes über die Enteignung (EntG) nur Kanzleigebühren erhoben werden. Der Begriff der Kanzleigebühr richtet sich nach Art. 3 des Allgemeinen Gebührengesetzes."
+        }
+      ],
+      "stand": "2022-01-01",
+      "quelleUrl": "https://gdb.ow.ch/app/de/texts_of_law/213.61",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "ec7b8f2184fbb2789ec3bf3a927b6ba2",
+      "sha": "f3dce18cf525270a619bc77436ded50de77dfc72908b722f8e2debdb48b78397"
     }
   ]
 }

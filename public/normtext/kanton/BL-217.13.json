@@ -1,6 +1,202 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/BL/217.13/art_1",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufwandgebühr ist das Entgelt für die öffentliche Beurkundung einschliesslich deren Vor- und Nachbearbeitung sowie für alle damit zusammenhängenden Beratungen, Abklärungen, Anmeldungen, Zusatz- und Nebenbelege (Statuten, Fusionsverträge, Sacheinlageverträge usw.), Bescheinigungen, Aufbereitungen von Publikationen und andere Zusatztätigkeiten für die Kundschaft."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Grundbuchgeschäften wird die Abwicklung des Geldverkehrs (Bezug und Auszahlung von Darlehenskapitalien und Kaufpreisen, Sicherstellung von Steuer- und Gebührenbeträgen, Abrechnungen etc.) separat berechnet."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "6409eb4488141f0d537332e7009136a10f42f4150f0632caadecd21897066c31"
+    },
+    {
+      "id": "kanton/BL/217.13/art_2",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufwandgebühr ist auch geschuldet",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Rückzug eines ganz oder teilweise vorbereiteten Geschäftes;"
+            },
+            {
+              "marke": "b",
+              "text": "bei Nichtzustandekommen eines Geschäftes."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "b46128fa8e8bcbbbf3717b78c7aafb3010b83064c11a82c5edb1cbe467570812"
+    },
+    {
+      "id": "kanton/BL/217.13/art_3",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren und Auslagen werden der anmeldenden Partei in Rechnung gestellt. Bei mehreren Anmeldenden kann die ganze Rechnung einem der Anmeldenden auferlegt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Vertragsparteien haben die Gebühren je zu gleichen Teilen zu entrichten, sofern im Vertrag nichts anderes bestimmt ist."
+        },
+        {
+          "absatz": "3",
+          "text": "Mehrere Partner einer Vertragspartei haften solidarisch für die in Rechnung gestellten Gebühren und Auslagen."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "45209eaa62efe5f05fdfffb91924fa3f88133a1daf9eef86b7705fcf184a8aa1"
+    },
+    {
+      "id": "kanton/BL/217.13/art_4",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Kundin oder der Kunde kann einen ungefähren Kostenrahmen, eine detaillierte Offerte oder eine Offerte mit Kostendach verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Es kann ein Kostenvorschuss bis zur Höhe der voraussichtlichen Gebühr verlangt werden."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "1017327115bb783cc5e83f16f4e60c317440fb66fa7fe83979f339d02ff6f5ae"
+    },
+    {
+      "id": "kanton/BL/217.13/art_5",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren inklusive Auslagen werden mit Abschluss der Amtstätigkeit in Rechnung gestellt. Vorbehalten ist § 4 Absatz 2."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "9711c5a0b8a16b2dd53667c71996133948b1aca6e5c0e636b41539ba6f26a8db"
+    },
+    {
+      "id": "kanton/BL/217.13/art_6",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Zahlungsfrist für rechtskräftig verfügte Gebühren beträgt 30 Tage."
+        },
+        {
+          "absatz": "2",
+          "text": "Nach Ablauf der Zahlungsfrist kann ein Verzugszins in Höhe von maximal dem für die Staatssteuer geltenden Zinssatz verlangt werden."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "23a605a64ac16e40edcc3478bc784df1468f00b7f7c56c7854c948ac96c3228e"
+    },
+    {
+      "id": "kanton/BL/217.13/art_7",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das Gesuch um Gebührenermässigung ist in der Regel anlässlich der ersten Instruktion, spätestens aber vor der Beurkundung zu stellen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Gesuch um vollständigen Gebührenerlass kann in jedem Stadium des Verfahrens, muss aber in jedem Fall vor Einleitung einer Betreibung gestellt werden."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "1dd2dfa25c9eaa16d1a368d251dfc03ee93a85ec6178eb45cf1a59baec61e1fc"
+    },
+    {
+      "id": "kanton/BL/217.13/art_8",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wo keine festen Gebührenansätze festgelegt sind, gilt ein Stundenansatz von",
+          "items": [
+            {
+              "marke": "a",
+              "text": "180.00 Fr. bis 260.00 Fr. für die Tätigkeit der Notarin oder des Notars, je nach Schwierigkeit und Bedeutung der Sache, der damit verbundenen Verantwortung und der persönlichen und finanziellen Verhältnisse der zahlungspflichtigen oder der auftraggebenden Person;"
+            },
+            {
+              "marke": "b",
+              "text": "60.00 Fr. bis 180.00 Fr. für die Tätigkeit von Notariatsangestellten (Sekretariat, Sachbearbeiterin oder Sachbearbeiter, juristische Mitarbeiterin oder juristischer Mitarbeiter), je nach deren Qualifikationsstufe."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "fa61c152e65334bb3d2827b52022130919825c264484be896f532f519cce311f"
+    },
     {
       "id": "kanton/BL/217.13/art_9",
       "ebene": "kanton",
@@ -54,61 +250,186 @@
       ],
       "stand": "2012-11-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
       "sha": "a829ea4a513cfe9758a2ded7daaad991319b8de9867aa6e2cb06b04a5159036a"
     },
     {
-      "id": "kanton/BL/217.13/art_8",
+      "id": "kanton/BL/217.13/art_10",
       "ebene": "kanton",
       "quelle": "BL",
       "erlass": "NotGebV (SGS 217.13)",
-      "artikel": "8",
-      "artikelLabel": "§ 8",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Wo keine festen Gebührenansätze festgelegt sind, gilt ein Stundenansatz von",
+          "text": "Feste Gebühren werden erhoben für:",
           "items": [
             {
               "marke": "a",
-              "text": "180.00 Fr. bis 260.00 Fr. für die Tätigkeit der Notarin oder des Notars, je nach Schwierigkeit und Bedeutung der Sache, der damit verbundenen Verantwortung und der persönlichen und finanziellen Verhältnisse der zahlungspflichtigen oder der auftraggebenden Person;"
+              "text": "Ersatz einer Unterschrift (OR 15): 100.00 Fr."
             },
             {
               "marke": "b",
-              "text": "60.00 Fr. bis 180.00 Fr. für die Tätigkeit von Notariatsangestellten (Sekretariat, Sachbearbeiterin oder Sachbearbeiter, juristische Mitarbeiterin oder juristischer Mitarbeiter), je nach deren Qualifikationsstufe."
+              "text": "Bürgschaftserklärung für Ausbildungsdarlehen (OR 493): 250.00 Fr."
+            },
+            {
+              "marke": "c",
+              "text": "Einfache Beglaubigung einer Unterschrift oder eines Handzeichens in deutscher Sprache durch Stempelabdruck oder ähnliche Verfahren: 20.00 Fr."
+            },
+            {
+              "marke": "d",
+              "text": "Beglaubigung einer einseitigen Fotokopie in deutscher Sprache: 10.00 Fr."
+            },
+            {
+              "marke": "e",
+              "text": "Beglaubigung einer mehrseitigen Fotokopie in deutscher Sprache, mit technischem Mehraufwand zur Erstellung der untrennbaren Verbindung (Heftung, Klebung, Mehrfachstempelung), bis drei Seiten im Format A4: 40.00 Fr."
+            },
+            {
+              "marke": "f",
+              "text": "Zeugengeld bei erbrechtlichen Vorgängen, pro Zeugin oder Zeuge: 20.00 Fr."
             }
           ]
         }
       ],
       "stand": "2012-11-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
-      "sha": "fa61c152e65334bb3d2827b52022130919825c264484be896f532f519cce311f"
+      "sha": "54ca4bffefbd304098d142337ca264416721b45d172d3b71755fda6762926c75"
     },
     {
-      "id": "kanton/BL/217.13/art_1",
+      "id": "kanton/BL/217.13/art_11",
       "ebene": "kanton",
       "quelle": "BL",
       "erlass": "NotGebV (SGS 217.13)",
-      "artikel": "1",
-      "artikelLabel": "§ 1",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Aufwandgebühr ist das Entgelt für die öffentliche Beurkundung einschliesslich deren Vor- und Nachbearbeitung sowie für alle damit zusammenhängenden Beratungen, Abklärungen, Anmeldungen, Zusatz- und Nebenbelege (Statuten, Fusionsverträge, Sacheinlageverträge usw.), Bescheinigungen, Aufbereitungen von Publikationen und andere Zusatztätigkeiten für die Kundschaft."
+          "text": "Zum Stundenansatz und zu allen festen Gebührenansätzen wird die Mehrwertsteuer hinzugerechnet."
         },
         {
           "absatz": "2",
-          "text": "Bei Grundbuchgeschäften wird die Abwicklung des Geldverkehrs (Bezug und Auszahlung von Darlehenskapitalien und Kaufpreisen, Sicherstellung von Steuer- und Gebührenbeträgen, Abrechnungen etc.) separat berechnet."
+          "text": "In der Gebührenrechnung ist die Mehrwertsteuer gesondert auszuweisen."
         }
       ],
       "stand": "2012-11-01",
       "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
-      "sha": "6409eb4488141f0d537332e7009136a10f42f4150f0632caadecd21897066c31"
+      "sha": "45be61a02866fc017ec81cbe4294031e6682505a861cfd4665ebde16880f7492"
+    },
+    {
+      "id": "kanton/BL/217.13/art_12",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Einhaltung der Bestimmungen der Verordnung über die Bekanntgabe von Preisen (Preisbekanntgabeverordnung, PBV) vom 11. Dezember 1978 ist jede Basellandschaftliche Notarin und jeder Basellandschaftliche Notar verantwortlich."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "a7f45455cb780cb80427f0db86d86ccceeffc4ff7f3d0672294d695a69cf4019"
+    },
+    {
+      "id": "kanton/BL/217.13/art_13",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auslagen für Erhebungen (Vorprüfungen, Registerauszüge, Gutachten, Sachverständigenberichte usw.), Fahrtkosten (Tram-, Bus- und Bahnbillets, Kilometerentschädigungen, Parkierungskosten usw.), Veröffentlichungen, Porti, Telefongespräche usw. werden in ihrer tatsächlichen Höhe und gesondert ausgewiesen in Rechnung gestellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Für Kopien können pro Seite erhoben werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "für Schwarzweisskopien 0,20 Fr."
+            },
+            {
+              "marke": "b",
+              "text": "für Farbkopien 0,70 Fr."
+            }
+          ]
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "a091afc661e67c704a45ced153a56fc64663040357bd3d624b69ead672988791"
+    },
+    {
+      "id": "kanton/BL/217.13/art_14",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Gebühren der Notariate der Bezirksschreibereien gilt bis zum 31. Dezember 2013 § 14 der Verordnung vom 8. Januar 1991 über die Gebühren zum Zivilrecht (GebV)."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "9aad4621e9d10e31c7d918cbaa6fe4c4a9315df8efa72b279fd926b2a2f25a94"
+    },
+    {
+      "id": "kanton/BL/217.13/art_15",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Verordnung vom 26. Juni 2007 über die Gebühren der privaten Notariate wird aufgehoben."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "d2d1e665354326c92cfcb59976d033aed0615c6200fa5c268f7f32c66553baf9"
+    },
+    {
+      "id": "kanton/BL/217.13/art_16",
+      "ebene": "kanton",
+      "quelle": "BL",
+      "erlass": "NotGebV (SGS 217.13)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt am 1. November 2012 in Kraft."
+        }
+      ],
+      "stand": "2012-11-01",
+      "quelleUrl": "https://bl.clex.ch/app/de/texts_of_law/217.13",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "acdf13d08f91fc4d60d98e745b41f47e",
+      "sha": "f441477a9facf0ac32ab657f9d2df5a82ebc22c21c6e315ae823239920994a90"
     }
   ]
 }

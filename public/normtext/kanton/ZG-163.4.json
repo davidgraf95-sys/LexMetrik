@@ -1,6 +1,58 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/ZG/163.4/art_1",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung regelt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "die von den Justizbehörden festzulegenden Honorare für die Parteivertretung durch Rechtsanwälte und Rechtsanwältinnen vor den Zivil- und Strafgerichten, Schlichtungs-, Strafverfolgungs- und Justizverwaltungsbehörden des Kantons Zug;"
+            },
+            {
+              "marke": "2",
+              "text": "die Gebühr der zur öffentlichen Beurkundung ermächtigten Rechtsanwälte und Rechtsanwältinnen für deren Tätigkeit als Urkundspersonen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen über die Honorare gemäss Abs. 1 Ziff. 1 gelten auch für das interne Verhältnis zwischen Rechtsanwalt bzw. Rechtsanwältin und Klientschaft, sofern nichts anderes vereinbart ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "a8902017d4722765860319de82db9dc6db960cf5594ee598da806e563ca638ed"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_2",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Innerhalb der in diesem Tarif festgelegten Grenzen sind die Honorare bzw. Gebühren nach der Schwierigkeit des Falls sowie nach dem Umfang und der Art der angemessenen Bemühungen festzulegen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "6a0ce562c75a2ded727e87ac5f54bd57070bbd3099d62592b238e0b36c86a8b9"
+    },
     {
       "id": "kanton/ZG/163.4/art_3",
       "ebene": "kanton",
@@ -32,7 +84,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
       "sha": "7299e594aef153f1f2d51ced4f6df4d3d3b36ff305db156f004481c75e78dcb2"
     },
@@ -59,9 +111,650 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
       "sha": "45fef3151df6b6fd11600332663018659d9e58b5bdc9eaed12e14769d7b8eb8b"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_5",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Zum Grundhonorar dürfen Zuschläge berechnet werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Wenn das Hauptverfahren mehrere Verhandlungen erforderte: für jede weitere Verhandlung;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn nach der Einreichung der Klageantwort ein weiterer Schriftenwechsel stattfand: für jede zusätzliche Rechtsschrift;"
+            },
+            {
+              "marke": "3",
+              "text": "in Rechnungsprozessen, Prozessen mit unverhältnismässig grossem oder fremdsprachigem Aktenmaterial, mit Studium fremden Rechts, mit umfangreicher Korrespondenz oder sonst bei komplizierten Prozessen."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Treffen mehrere dieser Voraussetzungen zu, so kann mit Rücksicht auf jede derselben ein besonderer Zuschlag berechnet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Der einzelne Zuschlag darf bis 50 % des Grundhonorars, alle Zuschläge zusammen sollen in der Regel nicht mehr als das Grundhonorar betragen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "7dd8c5f480c5793131aee344a05f8096624c8bd2a60780d03da897e5fabafb9f"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_6",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im summarischen Verfahren wird das Grundhonorar in der Regel auf die Hälfte bis einen Fünftel, in besonderen eherechtlichen Verfahren und bei Kinderbelangen in familienrechtlichen Angelegenheiten und bei eingetragener Partnerschaft auf drei Viertel bis einen Viertel herabgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "§ 5 ist sinngemäss anwendbar."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "2be6ba98c927481b3e1d9cee3bb976bc00089366b6ec6c5a3dc0b309dedf9d24"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_6_a",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "6_a",
+      "artikelLabel": "§ 6a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird das Schlichtungsverfahren durch angenommenen Entscheidvorschlag oder durch Entscheid erledigt, wird das Grundhonorar in der Regel auf die Hälfte bis einen Fünftel herabgesetzt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "945f0e9fbdd4f5f396b14b1d88a6c2a032cf922d749cbea510f0cc911949c8f1"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_7",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf die Schuldbetreibungs- und Konkurssachen finden – soweit das Bundesrecht nichts anderes bestimmt – die Bestimmungen dieser Verordnung entsprechende Anwendung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "dc5784d23ec4b97954e6483a5bc0b01dfcfb0b481a6dd75abd11d2f8cd469013"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_8",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Rechtsmittelverfahren wird das Grundhonorar nach den für die Vorinstanz geltenden Ansätzen und Bemessungsgrundsätzen festgesetzt. Davon dürfen ein bis zwei Drittel berechnet werden, bei vermögensrechtlichen Streitigkeiten unter Berücksichtigung des noch in Betracht kommenden Streitwerts. In besonderen Fällen darf ausnahmsweise das volle Grundhonorar berechnet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Bezüglich der Zuschläge findet § 5 entsprechende Anwendung. Für ihre Berechnung ist das unverkürzte Grundhonorar massgebend, das sich unter Berücksichtigung des noch in Betracht kommenden Streitwerts ergibt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "c40e762503996655717437db7c6b0af480ba985b925b8f8b3d6b5044c77b39d8"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_9",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei Abschluss eines Vergleichs nach Übertragung des Prozessmandats und nach Instruktion, bei Klageanerkennung, Klagerückzug oder Gegenstandslosigkeit aus anderen Gründen nach dem Schlichtungsverfahren, jedoch vor Klageeinreichung beim Gericht, werden in der Regel 10 bis 30 %, nach Klageeinreichung bis zur ersten Verhandlung 30 bis 75 %, nachher 75 bis 100 % des Grundhonorars und der Zuschläge nach § 5 berechnet."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "70cbd5c1eca3a02caf18667e44de24a992df4a5b93be77a9c9f775fb05db1df9"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_10",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Hört die Vertretung während des Rechtsstreits auf, so ist § 9 entsprechend anzuwenden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "db246124997a6966be889e6f94388b1b71f552c72a44f493e6dd8cede81c6d4a"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_11",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Rechtsanwälte und Rechtsanwältinnen, die nach Beginn des Prozesses in einer Instanz zugezogen werden, haben sich vom vollen Honorar für die Vertretung in dieser Instanz einen Betrag abziehen zu lassen, der ihren Minderbemühungen entspricht."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden sie erst in einer höheren Instanz zugezogen, können sie ihre Vergütung für die Vertretung in dieser Instanz in Abweichung von § 8 Abs. 1 aufgrund des unverkürzten Honorars berechnen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "0950f3cf5b785eaa2e594db169c775245354ba231848316858bf3bbe6107b85d"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_12",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Vertritt ein Rechtsanwalt oder eine Rechtsanwältin im gleichen Verfahren mehrere Parteien, so findet eine der Mehrarbeit entsprechende Erhöhung des Grundhonorars und eine angemessene Verteilung des Gesamtbetrags auf die vertretenen Parteien statt."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "27994dac29c69a9247f04b92c477c5fa919559c074e609ece44d7bff9dbdde8e"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_13",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für ausserordentliche Bemühungen bei der Vorbereitung eines Prozesses, wie Reisen zur Besichtigung eines Streitorts oder Streitgegenstands oder sonstige Instruktionen für den Prozess, kann zusätzlich zum Anwaltshonorar eine dem Zeitaufwand entsprechende besondere Entschädigung verrechnet werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Sie beläuft sich auf Franken 240 für eine Stunde."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "4f7ea3406f509a84b6330f2090dacbf4dfb93629462abfcdcbe0a2ac6059dd11"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_14",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Obsiegt die unentgeltlich vertretene Partei, berechnet sich die Parteientschädigung nach den selben Grundsätzen wie das Honorar bei einer entgeltlichen Rechtsvertretung."
+        },
+        {
+          "absatz": "2",
+          "text": "Wird der unentgeltlich vertretenen Partei eine Parteientschädigung nicht zugesprochen oder ist sie von der Gegenpartei nicht erhältlich, werden dem Rechtsbeistand oder der Rechtsbeiständin eine nach dem Zeitaufwand zu bemessende Entschädigung für seine bzw. ihre notwendigen Bemühungen und eine Auslagenvergütung zu Lasten der Gerichtskasse zugesprochen. In diesen Fällen beträgt der Stundenansatz Franken 240. Für Substituten und Substitutinnen beträgt der Stundenansatz Franken 150."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Entschädigung wird festgesetzt, nachdem der Rechtsbeistand oder die Rechtsbeiständin eine spezifizierte Aufstellung über seine bzw. ihre Tätigkeit sowie die Barauslagen (§ 25) und die Mehrwertsteuer (§ 25a) vorgelegt hat. Wird die spezifizierte Rechnung nicht rechtzeitig vor der Fällung des Entscheids eingereicht, kann das Gericht die Entschädigung nach Ermessen festsetzen."
+        },
+        {
+          "absatz": "4",
+          "text": "In begründeten Fällen können Akontozahlungen ausgerichtet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "0f5aa6b1fa2e8a8a2188974ddafffa3d9a6c204235bc0ba8ffbbbd4e77dce1b9"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_15",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Strafsachen bemisst sich das Honorar der Verteidigung sowie der Vertretung der Privatklägerschaft und der anderen Verfahrensbeteiligten nach dem angemessenen Zeitaufwand. Es wird nach den Regeln von § 14 Abs. 3 festgesetzt."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Stundenansatz beträgt Franken 240. Für Substituten und Substitutinnen beträgt der Stundenansatz Franken 150."
+        },
+        {
+          "absatz": "3",
+          "text": "In begründeten Fällen können Akontozahlungen ausgerichtet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "7eadb55a14b8d605e71593e6c96c1b3158e6ab3545180217345c3937fea05b60"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_17",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr ist das Entgelt der Urkundsperson für die notwendigerweise mit der Beurkundung verbundenen Tätigkeiten, namentlich für das Ermitteln des Parteiwillens, das Ausfertigen der Urkunde, das Feststellen der Identität, die Rechtsbelehrung und für den Beurkundungsakt."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Gebühr nicht enthalten ist die Entschädigung für die mit der Beurkundung allenfalls verbundenen Nebenleistungen, namentlich für die Beratung und für rechtliche und tatbeständliche Abklärungen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "888a2cabdf09a2fcab332f213ad7c504ff8f547445a75f8c49e31fe30fe62f63"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_18",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Urkundspersonen sind berechtigt, für die Beurkundungstätigkeit im Sinne von § 17 Abs. 1 folgende Gebühren (in Franken) zu erheben:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Stiftungen (Art. 81 und 335 ZGB): ein Promille des Stiftungsvermögens, aber mindestens 500 und höchstens 10'000;"
+            },
+            {
+              "marke": "2",
+              "text": "Eheverträge (Art. 184 ZGB): ein Promille des Vermögens, aber mindestens 500 und höchstens 10'000;"
+            },
+            {
+              "marke": "3",
+              "text": "Aufnahme eines Inventars der Vermögenswerte der Ehegatten (Art. 195a ZGB): ein Promille der Vermögenswerte, aber mindestens 500 und höchstens 5000;"
+            },
+            {
+              "marke": "4",
+              "text": "Begründung einer Gemeinderschaft (Art. 337 ZGB): ein Promille des Vermögens, aber mindestens 500 und höchstens 5000;"
+            },
+            {
+              "marke": "4",
+              "text": "Errichtung, Abänderung oder Widerruf eines Vorsorgeauftrags (Art. 361 f. ZGB): 300 bis 2000"
+            },
+            {
+              "marke": "5",
+              "text": "Öffentliche letztwillige Verfügungen (Art. 498 ff. ZGB) und Erbverträge (Art. 512 ZGB): ein Promille des Vermögens, über das verfügt wird, aber mindestens 500 und höchstens 15'000;"
+            },
+            {
+              "marke": "6",
+              "text": "Ersatz der Unterschrift (Art. 15 OR): 100 bis 300;"
+            },
+            {
+              "marke": "7",
+              "text": "Beurkundung aufgrund vertraglicher Abmachung (Art. 16 OR): gemäss Parteivereinbarung, aber mindestens 300;"
+            },
+            {
+              "marke": "8",
+              "text": "Entkräftung eines Schuldscheins und Tilgung einer Schuld (Art. 90 OR): 100 bis 300;"
+            },
+            {
+              "marke": "9",
+              "text": "Bürgschaftserklärung (Art. 493 OR): ein Promille der Bürgschaftssumme, aber mindestens 300 und höchstens 1000;"
+            },
+            {
+              "marke": "10",
+              "text": "Verpfründungsvertrag (Art. 522 OR): ein Promille der Vermögenswerte, aber mindestens 500 und höchstens 5000;"
+            },
+            {
+              "marke": "11",
+              "text": "Gründung einer AG oder einer GmbH (Art. 629 und Art. 777 OR): zwei Promille des Grundkapitals, aber mindestens 1000 und höchstens 20'000;"
+            },
+            {
+              "marke": "12",
+              "text": "Kapitalerhöhungsbeschlüsse der Generalversammlung der AG (Art. 650 OR) und diesbezügliche Feststellungsbeschlüsse des Verwaltungsrats der AG (Art. 652g OR): ein Promille des Erhöhungskapitals, aber mindestens 500 und höchstens 10'000;"
+            },
+            {
+              "marke": "13",
+              "text": "Kapitalerhöhungsbeschlüsse der Gesellschafterversammlung der GmbH und diesbezügliche Feststellungsbeschlüsse der Geschäftsführer der GmbH (Art. 781 OR): ein Promille des Erhöhungskapitals, aber mindestens 500 und höchstens Fr. 10'000;"
+            },
+            {
+              "marke": "14",
+              "text": "Beschlüsse der Generalversammlung über die Herabsetzung des Aktienkapitals einer AG (Art. 653n OR) oder Beschlüsse der Gesellschafterversammlung über die Herabsetzung des Stammkapitals einer GmbH (Art. 782 OR) und diesbezügliche Feststellungsbeschlüsse des Verwaltungsrats der AG (Art. 653o OR) bzw. der Geschäftsführer der GmbH (Art. 782 OR): ein Promille des Herabsetzungskapitals, aber mindestens 500 und höchstens 7500; erfolgt die Kapitalherabsetzung zur Beseitigung einer Unterbilanz, beträgt die Gebühr die Hälfte;"
+            },
+            {
+              "marke": "14",
+              "text": "Beurkundungen nach FusG: gemäss den Ansätzen von Ziff. 1 und 11 – 14 (sinngemäss);"
+            },
+            {
+              "marke": "15",
+              "text": "…"
+            },
+            {
+              "marke": "16",
+              "text": "Anderweitige Versammlungsbeschlüsse, insbesondere Beschlüsse über Statutenänderungen und Auflösung einer AG oder einer GmbH: 500 bis 7500;"
+            },
+            {
+              "marke": "17",
+              "text": "Beurkundung von Willenserklärungen, die in dieser Verordnung nicht genannt sind, sowie von ausländischen Rechtsgeschäften wie Verträgen über dingliche Rechte an Grundstücken im Ausland oder über Anteile an ausländischen Gesellschaften: ein Promille der Gegenleistung oder des betroffenen Vermögenswerts, aber mindestens 500 und höchstens 20'000;"
+            },
+            {
+              "marke": "18",
+              "text": "Beurkundung von Wissenserklärungen sowie Urkunden über Tatbestände, Vorgänge und rechtliche Verhältnisse, die in dieser Verordnung nicht genannt sind, wie Verlosung, Wettbewerb usw.: nach Vereinbarung, aber mindestens 300 und höchstens 10'000."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Urkundsperson darf tiefere Gebühren erheben, soweit diese kostendeckend und nicht unangemessen tief sind."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "518a9a8150ea54b35057192e7c5c6e250ca4e84a7c4649b4be8a8b364592569b"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_19",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr gemäss § 18 darf angemessen erhöht werden:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "wenn die Beurkundung in einer Fremdsprache vorzunehmen ist;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn die Urkundsperson ausserhalb der üblichen Geschäftszeit beansprucht wird."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "fdeca87e336254177825f19d507ea0d40c6fb6fe7540e35704ecdf3eb1739da1"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_20",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr gemäss § 18 ist angemessen herabzusetzen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Wenn die öffentliche Beurkundung nicht zum Abschluss gelangt;"
+            },
+            {
+              "marke": "2",
+              "text": "wenn die Urkundsperson im gleichen Sachzusammenhang zahlreiche gleichartige Rechtsgeschäfte zu beurkunden hat;"
+            },
+            {
+              "marke": "3",
+              "text": "wenn die Gebühr nach Tarif dem Aufwand krass widerspricht oder zu einer unbilligen Härte für die Klientschaft führen würde."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "b7519f59a46db371bd90e4ac79abf372688f9ca0bb700f7a94b3df0cf3398195"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_21",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Werden in einer Urkunde mehrere Rechtsgeschäfte beurkundet, ist die Gebühr für jedes Rechtsgeschäft zu berechnen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "83147327da3a41f1ec6e0049e42d7872163a2f7f135b838ef871b2aa85d34ae6"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_22",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Beglaubigungen bemisst sich nach dem Zeitaufwand, beträgt aber mindestens Franken 30."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Stundenansatz beträgt Franken 240 bis 300."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "209be18f7e384f7f71baa439a8c33f5dcb6d72126efa09fc3c7c3278b4456ea9"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_23",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Ist die Höhe der Gebühr streitig, kann die Urkundsperson oder die Klientschaft das Obergericht um deren Festsetzung ersuchen."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht setzt die Gebühr endgültig fest, entscheidet aber nicht über den Bestand der Forderung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "5cd2ea9a72b5a771df827367576c3cb91d474dac2b02040e8dd72023830ccf94"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_24",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Klientschaft hat das Gesuch um Festsetzung der Gebühr innert 60 Tagen seit Erhalt der detaillierten Rechnung einzureichen. Hat sie die Rechnung vorbehaltlos bezahlt, kann sie die amtliche Festsetzung nicht mehr verlangen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Urkundsperson kann die amtliche Festsetzung jederzeit unter Vorlage ihrer Rechnung verlangen, wenn die Klientschaft die Höhe der Rechnung ganz oder teilweise bestreitet."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "6ba452a3f8a6afc3996dea4f0cf687a94ed14e6be1c84d36fe4c64d686248b12"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_25",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei allen Geschäften haben die Rechtsanwälte und Rechtsanwältinnen Anspruch auf Ersatz ihrer notwendigen Barauslagen (bezahlte Gerichtskosten, Reisespesen, Porto und Telefonauslagen, Fotokopien usw.)."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Ersatz notwendiger Auslagen kann pauschal mit 3 % des Honorars, höchstens Franken 1000, berechnet werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Reichen die Rechtsanwälte und Rechtsanwältinnen in Zivilverfahren keine detaillierte Abrechnung ein oder überlassen sie die Festsetzung des Honorars dem Ermessen des Gerichts, wird der Auslagenersatz pauschal mit 3 % des Honorars, höchstens Franken 1000, berechnet."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "5325b54b2157a24dc46327d6dadd94ba0fb434ebe80147fe7c80a51a035c446b"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_25_a",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "25_a",
+      "artikelLabel": "§ 25a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mehrwertsteuer wird auf entsprechenden Antrag zum Honorar und zu den Auslagen hinzugerechnet."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Obergericht regelt das Nähere in einer Weisung."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "e9ad8aee79a45fdc861bad6917d646ebe85cb79ea73114d4ffa811490236c466"
+    },
+    {
+      "id": "kanton/ZG/163.4/art_26",
+      "ebene": "kanton",
+      "quelle": "ZG",
+      "erlass": "AnwT (BGS 163.4)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In hängigen Prozessen ist für das ganze Verfahren vor der Instanz, bei der sie im Zeitpunkt des Inkrafttretens dieser Verordnung hängig sind, grundsätzlich der neue Tarif anzuwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Anwendbarkeit der geänderten Stundenansätze gemäss § 13 Abs. 2, § 14 Abs. 2 und § 15 Abs. 2 ist der Zeitpunkt der Tätigkeit massgebend."
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Anwendbarkeit der geänderten Gebühren gemäss § 18 und § 22 ist der Zeitpunkt der Beurkundung bzw. der Beglaubigung massgebend."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://bgs.zg.ch/app/de/texts_of_law/163.4",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "4e025783f8615446db76c3b3feed0b57",
+      "sha": "8023cb56c5fdb8dcca66c1fddb45fc2e2351a88f80373eb05f341d067e5a5fc0"
     }
   ]
 }

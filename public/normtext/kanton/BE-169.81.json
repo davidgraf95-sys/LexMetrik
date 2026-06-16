@@ -1,28 +1,32 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
     {
-      "id": "kanton/BE/169.81/art_13",
+      "id": "kanton/BE/169.81/art_1",
       "ebene": "kanton",
       "quelle": "BE",
       "erlass": "GebVN (BSG 169.81)",
-      "artikel": "13",
-      "artikelLabel": "Art. 13",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr für die Beurkundung eines Vertrags zur Übertragung von Grundstücken, eines Kaufrechtsvertrags, eines Vorvertrags, einer Grundstücksversteigerung und der Errichtung eines selbstständigen und dauernden Baurechts bemisst sich nach dem Vertragswert und richtet sich nach dem Tarif im Anhang 1."
+          "text": "Mit dieser Verordnung werden die Gebühren festgesetzt, die der Notarin oder dem Notar als öffentlicher Urkundsperson geschuldet werden."
         },
         {
           "absatz": "2",
-          "text": "Bei fehlendem Vertragswert ist jener Betrag massgebend, von dem die Handänderungssteuer erhoben wird oder erhoben würde, wenn die Übertragung nicht abgabefrei wäre, mindestens jedoch der amtliche Wert."
+          "text": "Die Auslagen sind der Notarin oder dem Notar zusätzlich zu den Gebühren zu erstatten."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Mehrwertsteuer ist in der Gebühr nicht enthalten."
         }
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
-      "sha": "46cf111a2a42d499cfc5d37cba07cbdd42e358c9b6fdafc7da569154ef8c98c0"
+      "sha": "d66dff016ecec6a5dfefb5a9aecc65d2986d255958c431bf67aea8c6a7d48193"
     },
     {
       "id": "kanton/BE/169.81/art_1_a",
@@ -43,47 +47,322 @@
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
       "sha": "2f501cf01e7d9ce94a79800e3748ae99f5f938bbd264e1243c75642c892782be"
     },
     {
-      "id": "kanton/BE/169.81/art_17",
+      "id": "kanton/BE/169.81/art_2",
       "ebene": "kanton",
       "quelle": "BE",
       "erlass": "GebVN (BSG 169.81)",
-      "artikel": "17",
-      "artikelLabel": "Art. 17",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Errichtung, Änderung oder Aufhebung einer Dienstbarkeit oder Grundlast und die Änderung oder Aufhebung einer gesetzlichen Eigentumsbeschränkung beträgt mindestens 100 Franken."
+          "text": "Die Gebühr bemisst sich innerhalb eines gestaffelten Rahmentarifs nach dem Arbeitsaufwand, nach der Bedeutung des Geschäfts und nach der von der Notarin oder vom Notar übernommenen Verantwortung."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand bemisst sich innerhalb der Bandbreiten der Stundenansätze gemäss Artikel 3a nach der Bedeutung des Geschäfts und der von der Notarin oder vom Notar übernommenen Verantwortung."
+        },
+        {
+          "absatz": "3",
+          "text": "Soweit diese Verordnung keine Ausnahme vorsieht, ist die Einhaltung der Rahmentarife und der Bandbreiten der Stundenansätze für die Notarin oder den Notar verbindlich."
         }
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
-      "sha": "18bea26b02554c5815f57dcced31c23fc9ba3e472f22ad522ed948b473f9e09c"
+      "sha": "825fcb1cb2963fe84def882753f92297879ff3a43cc265db238c087f242dbbda"
     },
     {
-      "id": "kanton/BE/169.81/art_9",
+      "id": "kanton/BE/169.81/art_3",
       "ebene": "kanton",
       "quelle": "BE",
       "erlass": "GebVN (BSG 169.81)",
-      "artikel": "9",
-      "artikelLabel": "Art. 9",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung einer letztwilligen Verfügung oder eines Erbvertrags beträgt mindestens 500 Franken."
+          "text": "Die tarifierte Gebühr umfasst",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Entgegennahme der Rogation,"
+            },
+            {
+              "marke": "b",
+              "text": "die Prüfung der Voraussetzungen für das Erstellen einer öffentlichen Urkunde,"
+            },
+            {
+              "marke": "c",
+              "text": "die Vorbereitung der Urkunde,"
+            },
+            {
+              "marke": "d",
+              "text": "die Durchführung des Beurkundungsverfahrens,"
+            },
+            {
+              "marke": "e",
+              "text": "die Registrierung und Aufbewahrung der Urschrift,"
+            },
+            {
+              "marke": "f",
+              "text": "das Erstellen und die Herausgabe von Ausfertigungen,"
+            },
+            {
+              "marke": "g",
+              "text": "die Abschlussarbeiten, einschliesslich Aufbewahrung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "…"
         }
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
-      "sha": "24e74548a8c0f511e231f35f887585c889b477eff0331fbee9fdef39f96eea4b"
+      "sha": "938d5eb874deefafcf112403ef5718a2bbde0f7e6670ac92aca0e700fdcda017"
+    },
+    {
+      "id": "kanton/BE/169.81/art_3_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "3_a",
+      "artikelLabel": "Art. 3a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Notarin oder der Notar kann für den eigenen Zeitaufwand einen Stundenansatz zwischen 250 und 400 Franken anwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die folgenden Personalkategorien können folgende Stundenansätze angewendet werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Diplomierte Notariatsfachangestellte oder Angestellte mit ähnlichen Fachausweisen sowie Notariatspraktikantinnen und -Praktikanten ein Stundenansatz zwischen 130 und 180 Franken,"
+            },
+            {
+              "marke": "b",
+              "text": "Übriges Kanzleipersonal ein Stundenansatz zwischen 80 und 120 Franken,"
+            },
+            {
+              "marke": "c",
+              "text": "Auszubildende ein Stundensatz zwischen 50 und 70 Franken."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Der Regierungsrat passt die Stundenansätze nach Anhörung des Berufsverbands der bernischen Notarinnen und Notare periodisch der Teuerung an."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "220dbbeda39f8c0ebeabf585b10118ddd961d2496dbc73cf75944327d8a0eae2"
+    },
+    {
+      "id": "kanton/BE/169.81/art_4",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird das beurkundete Rechtsgeschäft nicht rechtsgültig oder kommt es nach der Rogation nicht zur Errichtung einer öffentlichen Urkunde, sind die effektiv geleisteten Arbeiten nach dem gebotenen Zeitaufwand ohne Beachtung der jeweiligen Minimalgebühr abzugelten."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden in einer Urkunde mehrere tarifierte Rechtsgeschäfte beurkundet, ist die Gebühr für jedes Rechtsgeschäft einzeln zu berechnen."
+        },
+        {
+          "absatz": "3",
+          "text": "Ist eine Beurkundung oder Leistung nicht tarifiert, beträgt die Gebühr nach gebotenem Zeitaufwand mindestens 300 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "f773a5363b07e11adca76d22c66e8aee4646603d1d1e411ff50f14749b17c73b"
+    },
+    {
+      "id": "kanton/BE/169.81/art_4_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "4_a",
+      "artikelLabel": "Art. 4a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Notarin oder der Notar darf den minimalen Stundenansatz bei der Gebühr nach gebotenem Zeitaufwand oder die Minimalgebühr bei den gestaffelten Rahmentarifen und der Gebühr nach gebotenem Zeitaufwand unterschreiten, wenn",
+          "items": [
+            {
+              "marke": "a",
+              "text": "eine Person Sozialhilfe bezieht,"
+            },
+            {
+              "marke": "b",
+              "text": "eine Person Leistungen gestützt auf das Bundesgesetz vom 6. Oktober 2006 über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG) bezieht,"
+            },
+            {
+              "marke": "c",
+              "text": "ein Verein, eine Stiftung oder eine andere juristische Person von den zuständigen Behörden als gemeinnützig anerkannt ist."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Unterschreitung ist bei der Rechnungsstellung zu begründen."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "a10d69548f7c5ce31cf8c8714006fdc5541685e2764fe081da05536abf7ad276"
+    },
+    {
+      "id": "kanton/BE/169.81/art_5",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Notarin oder der Notar orientiert die Klientschaft bei Entgegennahme der Rogation über die Grundsätze der Gebührenordnung sowie über die voraussichtlichen Gebühren des Geschäfts."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "c46753ad5cc4faf3f070e5ffa1649697d9a152efcfd58265c14d9cc0cb3dc313"
+    },
+    {
+      "id": "kanton/BE/169.81/art_6",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach Abschluss des Geschäfts stellt die Notarin oder der Notar der Klientschaft Rechnung für ihre oder seine Gebühren und Auslagen."
+        },
+        {
+          "absatz": "2",
+          "text": "In der Rechnung sind Gebühren und Honorare getrennt aufzuführen."
+        },
+        {
+          "absatz": "3",
+          "text": "Kleinere Auslagen sind zusammenzufassen, grössere Auslagen einzeln aufzuführen."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        },
+        {
+          "absatz": "5",
+          "text": "Die Rechnung enthält eine Rechtsmittelbelehrung mit dem Hinweis an die Klientin oder den Klienten, innert 30 Tagen eine detaillierte Rechnung verlangen zu können."
+        },
+        {
+          "absatz": "6",
+          "text": "Die detaillierte Rechnung enthält eine Rechtsmittelbelehrung mit dem Hinweis an die Klientin oder den Klienten, innert 30 Tagen bei der Aufsichtsbehörde ein Gesuch um amtliche Festsetzung der Notariatsgebühren stellen zu können."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "e8ca56d3c11597b2a5967a670aae50749fedd02bc472f08ffed706713a72c1f4"
+    },
+    {
+      "id": "kanton/BE/169.81/art_6_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "6_a",
+      "artikelLabel": "Art. 6a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Bei der Rechnungsstellung mit Rahmentarif sind einzeln aufzuführen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "die Art der öffentlichen Beurkundung,"
+            },
+            {
+              "marke": "b",
+              "text": "die massgebliche Bemessungsgrundlage und die entsprechende Gebühr,"
+            },
+            {
+              "marke": "c",
+              "text": "allenfalls die Abweichung vom Mittelwert der Gebühr gemäss den Anhängen 1, 2 und 4 mit Bezifferung in Franken und Begründung."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Bei der Rechnungsstellung für die Gebühr nach gebotenem Zeitaufwand sind die ausgeführten Arbeiten in geeigneter Form aufzuführen",
+          "items": [
+            {
+              "marke": "a",
+              "text": "mit dem gebotenen Zeitaufwand,"
+            },
+            {
+              "marke": "b",
+              "text": "mit Angabe der Personenkategorie nach Artikel 3a, welche die Arbeit ausgeführt hat,"
+            },
+            {
+              "marke": "c",
+              "text": "mit dem angewandten Stundenansatz pro Personenkategorie."
+            }
+          ]
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "717f6dcbcfdef5bf4975da0a94011ae805b32c54ebd5d44d3c9138d0ccf78444"
+    },
+    {
+      "id": "kanton/BE/169.81/art_7",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Beurkundung der Errichtung einer Stiftung bemisst sich nach der Höhe der übertragenen Aktiven und richtet sich nach dem Tarif im Anhang 1."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "3541314f7ce0d729c6866be691433639fa7a2cff6cc97ddce9b0559b66033347"
     },
     {
       "id": "kanton/BE/169.81/art_8",
@@ -104,7 +383,7 @@
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
       "sha": "be107b05830310d2ee07ba034feadbfc8abd85e7ffd6582e20a9a9e21af198ab"
     },
@@ -123,9 +402,265 @@
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
       "sha": "f88bf53c1b3382cab637ee22686b6dddd4148db066bc33d329deeb60377f631b"
+    },
+    {
+      "id": "kanton/BE/169.81/art_9",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung einer letztwilligen Verfügung oder eines Erbvertrags beträgt mindestens 500 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "24e74548a8c0f511e231f35f887585c889b477eff0331fbee9fdef39f96eea4b"
+    },
+    {
+      "id": "kanton/BE/169.81/art_10",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Errichtung eines Steuer-, Erbschafts- oder öffentlichen Inventars richtet sich nach dem Tarif im Anhang 2."
+        },
+        {
+          "absatz": "2",
+          "text": "Bemessungsgrundlage ist das inventarisierte Rohvermögen. Dieses umfasst das gesamte Vermögen jeder Art, mit dem sich die Notarin oder der Notar bei der Errichtung des Inventars auseinander zu setzen hat."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "1a7f2e1447a5541e44dd8a4ba68c3863ce0fbb9f0ddfe43b456601ff8a8c09c8"
+    },
+    {
+      "id": "kanton/BE/169.81/art_11",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Eröffnung einer Verfügung von Todes wegen beträgt mindestens 300 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "162c890b6e68d85400cd9713b09672b944d6ad61863cff409e7f4e7df70b8738"
+    },
+    {
+      "id": "kanton/BE/169.81/art_12",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung eines Erbenscheins beträgt mindestens 200 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "Sind in einem einzelnen Todesfall mehrere Erbenscheine zu beurkunden, so ist für die Bemessung des gebotenen Zeitaufwands die Erstellung aller nötigen Erbenscheine massgebend. Die Minimalgebühr ist hierfür nur einmal zu berücksichtigen."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "24583f0b20720b8cfd5e29a22b71b2ff56ec319df3f6625560ce4fdc6c07155b"
+    },
+    {
+      "id": "kanton/BE/169.81/art_13",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Beurkundung eines Vertrags zur Übertragung von Grundstücken, eines Kaufrechtsvertrags, eines Vorvertrags, einer Grundstücksversteigerung und der Errichtung eines selbstständigen und dauernden Baurechts bemisst sich nach dem Vertragswert und richtet sich nach dem Tarif im Anhang 1."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei fehlendem Vertragswert ist jener Betrag massgebend, von dem die Handänderungssteuer erhoben wird oder erhoben würde, wenn die Übertragung nicht abgabefrei wäre, mindestens jedoch der amtliche Wert."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "46cf111a2a42d499cfc5d37cba07cbdd42e358c9b6fdafc7da569154ef8c98c0"
+    },
+    {
+      "id": "kanton/BE/169.81/art_14",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "14",
+      "artikelLabel": "Art. 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung einer Planänderung von Grundstücken beträgt mindestens 500 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "79d71bef742858114f614309166b63c821283b541244549d321411c190d7ca2e"
+    },
+    {
+      "id": "kanton/BE/169.81/art_15",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung im vereinfachten Verfahren beträgt mindestens 500 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "873e2613ef2ba65e0601cd0f43a146b82f0629997722d17b745ab29829a67f23"
+    },
+    {
+      "id": "kanton/BE/169.81/art_15_a",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "15_a",
+      "artikelLabel": "Art. 15a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Begründung, Änderung und Aufhebung von Miteigentum oder Gesamteigentum beträgt mindestens 100 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "ac8d53eea4ae0b1be1f36b08e3a1d801580f04083152caa8cd6c588ab4de4919"
+    },
+    {
+      "id": "kanton/BE/169.81/art_16",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Begründung von Stockwerkeigentum bemisst sich nach den Anlagekosten der Stockwerkeinheiten oder, wenn diese nicht bekannt sind, nach deren amtlichem Wert. Sie richtet sich nach dem Tarif im Anhang 2. In besonders aufwändigen Fällen beträgt die Höchstgebühr das Doppelte des oberen Tarifrahmens."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Änderung und Aufhebung von Stockwerkeigentum beträgt mindestens 100 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "1b3ed41886db467a4524501785a5756b67cd6e689ed7e7666757f1f86f8b5e5d"
+    },
+    {
+      "id": "kanton/BE/169.81/art_17",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Errichtung, Änderung oder Aufhebung einer Dienstbarkeit oder Grundlast und die Änderung oder Aufhebung einer gesetzlichen Eigentumsbeschränkung beträgt mindestens 100 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "18bea26b02554c5815f57dcced31c23fc9ba3e472f22ad522ed948b473f9e09c"
+    },
+    {
+      "id": "kanton/BE/169.81/art_18",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung eines Grundpfandvertrags, für die Umwandlung eines bestehenden Grundpfandrechts in eine andere Grundpfandart und für die Beurkundung der Errichtung oder Erhöhung eines Eigentümer- oder Inhaberschuldbriefs beträgt mindestens 200 Franken."
+        },
+        {
+          "absatz": "2",
+          "text": "…"
+        },
+        {
+          "absatz": "3",
+          "text": "Für die Anmeldung eines gesetzlichen Grundpfandrechts in dem ihm zugrunde liegenden Rechtsgeschäft wird keine zusätzliche Gebühr geschuldet, sofern für das Hauptgeschäft die Gebühr nach einem Rahmentarif bemessen wird."
+        },
+        {
+          "absatz": "4",
+          "text": "…"
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "2d5b74891adbe51f713d027e6681446316d2975fd22c5835aa4b499b702b454b"
+    },
+    {
+      "id": "kanton/BE/169.81/art_19",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung einer Bürgschaft oder eines Bürgschaftsversprechens beträgt mindestens 100 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "39313f78068de47141d0a6bd78bf15e64bf023d2defd749a2af44472c8bda962"
     },
     {
       "id": "kanton/BE/169.81/art_20",
@@ -142,7 +677,7 @@
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
       "sha": "690e1f9ea339cc97044f451a5a9679803e49ea77e569b8b565b927fcb26beda7"
     },
@@ -181,93 +716,47 @@
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
       "sha": "7948e732cfa42ab9e8e9a98762eb20fa569a00c7c2757c77b809a1c22aa7f6ab"
     },
     {
-      "id": "kanton/BE/169.81/art_7",
+      "id": "kanton/BE/169.81/art_22",
       "ebene": "kanton",
       "quelle": "BE",
       "erlass": "GebVN (BSG 169.81)",
-      "artikel": "7",
-      "artikelLabel": "Art. 7",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr für die Beurkundung der Errichtung einer Stiftung bemisst sich nach der Höhe der übertragenen Aktiven und richtet sich nach dem Tarif im Anhang 1."
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung der Abtretung eines Gesellschaftsanteils an einer Gesellschaft mit beschränkter Haftung beträgt mindestens 200 Franken."
         }
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
-      "sha": "3541314f7ce0d729c6866be691433639fa7a2cff6cc97ddce9b0559b66033347"
+      "sha": "4f972ae9264ae9e0d6818e086a0becd892eaf59c0db6bbc9f76e093952b6de77"
     },
     {
-      "id": "kanton/BE/169.81/art_19",
+      "id": "kanton/BE/169.81/art_23",
       "ebene": "kanton",
       "quelle": "BE",
       "erlass": "GebVN (BSG 169.81)",
-      "artikel": "19",
-      "artikelLabel": "Art. 19",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung einer Bürgschaft oder eines Bürgschaftsversprechens beträgt mindestens 100 Franken."
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Aufnahme eines Wechselprotests beträgt mindestens 200 Franken."
         }
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
-      "sha": "39313f78068de47141d0a6bd78bf15e64bf023d2defd749a2af44472c8bda962"
-    },
-    {
-      "id": "kanton/BE/169.81/art_4",
-      "ebene": "kanton",
-      "quelle": "BE",
-      "erlass": "GebVN (BSG 169.81)",
-      "artikel": "4",
-      "artikelLabel": "Art. 4",
-      "bloecke": [
-        {
-          "absatz": "1",
-          "text": "Wird das beurkundete Rechtsgeschäft nicht rechtsgültig oder kommt es nach der Rogation nicht zur Errichtung einer öffentlichen Urkunde, sind die effektiv geleisteten Arbeiten nach dem gebotenen Zeitaufwand ohne Beachtung der jeweiligen Minimalgebühr abzugelten."
-        },
-        {
-          "absatz": "2",
-          "text": "Werden in einer Urkunde mehrere tarifierte Rechtsgeschäfte beurkundet, ist die Gebühr für jedes Rechtsgeschäft einzeln zu berechnen."
-        },
-        {
-          "absatz": "3",
-          "text": "Ist eine Beurkundung oder Leistung nicht tarifiert, beträgt die Gebühr nach gebotenem Zeitaufwand mindestens 300 Franken."
-        }
-      ],
-      "stand": "2022-03-01",
-      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
-      "sha": "f773a5363b07e11adca76d22c66e8aee4646603d1d1e411ff50f14749b17c73b"
-    },
-    {
-      "id": "kanton/BE/169.81/art_26",
-      "ebene": "kanton",
-      "quelle": "BE",
-      "erlass": "GebVN (BSG 169.81)",
-      "artikel": "26",
-      "artikelLabel": "Art. 26",
-      "bloecke": [
-        {
-          "absatz": "1",
-          "text": "Die Gebühr nach gebotenem Zeitaufwand für die übrigen Feststellungsurkunden beträgt mindestens 50 Franken."
-        }
-      ],
-      "stand": "2022-03-01",
-      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
-      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
-      "sha": "85ad329ddd9146ef712635e15617e6cfa98dd5495b09545c72f7c0992f2f25f0"
+      "sha": "05be7d5ac83dabbcaef0308d3592e633d30b1618394d0d7ace7713995814f41c"
     },
     {
       "id": "kanton/BE/169.81/art_24",
@@ -300,40 +789,173 @@
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
       "sha": "4acad4cea1d67679bd48beccf6fa32871354a2d5ddf38c8033163bf8427dc459"
     },
     {
-      "id": "kanton/BE/169.81/art_18",
+      "id": "kanton/BE/169.81/art_25",
       "ebene": "kanton",
       "quelle": "BE",
       "erlass": "GebVN (BSG 169.81)",
-      "artikel": "18",
-      "artikelLabel": "Art. 18",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beurkundung eines Grundpfandvertrags, für die Umwandlung eines bestehenden Grundpfandrechts in eine andere Grundpfandart und für die Beurkundung der Errichtung oder Erhöhung eines Eigentümer- oder Inhaberschuldbriefs beträgt mindestens 200 Franken."
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Feststellung der Übertragung eines Grundstücks beträgt mindestens 200 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "6922df1eaeb773377c56d9bdb63b067e44c4bab4568ecef720fc27a8fb4e824b"
+    },
+    {
+      "id": "kanton/BE/169.81/art_26",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die übrigen Feststellungsurkunden beträgt mindestens 50 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "85ad329ddd9146ef712635e15617e6cfa98dd5495b09545c72f7c0992f2f25f0"
+    },
+    {
+      "id": "kanton/BE/169.81/art_27",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die Beglaubigung einer Unterschrift, einer Kopie oder eines Datums beträgt mindestens 20 Franken."
         },
         {
           "absatz": "2",
-          "text": "…"
+          "text": "Sofern im Rahmen einer Rogation mehrfach Unterschriften, Kopien oder Daten beglaubigt werden müssen, ist der gebotene Zeitaufwand aller notwendigen Beglaubigungen massgebend. Die Minimalgebühr ist nur einmal zu berücksichtigen."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "fd5def4fc54b69dd831cf93223e7fd5e334697284e08153b46cfa857d4062e51"
+    },
+    {
+      "id": "kanton/BE/169.81/art_28",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für die eidesstattliche Erklärung und das Gelübde beträgt mindestens 200 Franken."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "5a71789bb54eb26ea58dd4f23dce978ff2093bb55cfc2b25cf6b854f94b0e1ef"
+    },
+    {
+      "id": "kanton/BE/169.81/art_29",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr nach gebotenem Zeitaufwand für weitere und neue Ausfertigungen beträgt mindestens 20 Franken."
         },
         {
-          "absatz": "3",
-          "text": "Für die Anmeldung eines gesetzlichen Grundpfandrechts in dem ihm zugrunde liegenden Rechtsgeschäft wird keine zusätzliche Gebühr geschuldet, sofern für das Hauptgeschäft die Gebühr nach einem Rahmentarif bemessen wird."
+          "absatz": "2",
+          "text": "Bei mehrfacher Ausfertigung einer Urschrift ist der gebotene Zeitaufwand aller Ausfertigungen massgebend. Die Minimalgebühr ist nur einmal zu berücksichtigen."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "17d553c8e41cc15470babd87d7ea0b942ec5930c9a880e065d8a8ab2a1ecbc06"
+    },
+    {
+      "id": "kanton/BE/169.81/art_30",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die öffentliche Beurkundung von Rechtsgeschäften, die einer solchen nicht bedürfen, beträgt die Gebühr nach gebotenem Zeitaufwand mindestens 300 Franken."
         },
         {
-          "absatz": "4",
+          "absatz": "2–3",
           "text": "…"
         }
       ],
       "stand": "2022-03-01",
       "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
-      "sha": "2d5b74891adbe51f713d027e6681446316d2975fd22c5835aa4b499b702b454b"
+      "sha": "0dd2e32691d5fda020cf79f9a589421424a35ae9d82c6156c341e133f3dafcce"
+    },
+    {
+      "id": "kanton/BE/169.81/art_31",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die Erfüllung weiterer gesetzlicher Verpflichtungen der Notarin oder des Notars bemisst sich die Gebühr nach gebotenem Zeitaufwand ohne Minimalgebühr."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "ded1702dcaf758ec9cde7b982a2a31cb4f8fdf269a9f1c3729c8e7c09696dc52"
+    },
+    {
+      "id": "kanton/BE/169.81/art_32",
+      "ebene": "kanton",
+      "quelle": "BE",
+      "erlass": "GebVN (BSG 169.81)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Diese Verordnung tritt zusammen mit dem Notariatsgesetz vom 22. November 2005 (NG) in Kraft."
+        }
+      ],
+      "stand": "2022-03-01",
+      "quelleUrl": "https://www.belex.sites.be.ch/app/de/texts_of_law/169.81",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "9a0654f8e0fb535d332aba6a6a9e0034",
+      "sha": "58ccf003a071d630f29020ca949c0c53512f8fb398ab3d904705187134290bea"
     }
   ]
 }

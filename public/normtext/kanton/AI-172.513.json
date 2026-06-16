@@ -1,6 +1,533 @@
 {
-  "erzeugt": "2026-06-16",
+  "erzeugt": "2026-06-17",
   "eintraege": [
+    {
+      "id": "kanton/AI/172.513/art_1",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "1",
+      "artikelLabel": "Art. 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Beträge dieses Erlasses sind Frankenbeträge."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "284f8efcc77afae2479b263e663240042ce23b41a2ea7ed029c3c5113a896ba0"
+    },
+    {
+      "id": "kanton/AI/172.513/art_2",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "2",
+      "artikelLabel": "Art. 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Wird eine Gebühr nach Aufwand erhoben, beträgt der Stundenansatz 180.--, soweit kein andererer Ansatz vorgesehen ist."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "225ecebdfcfd78218a07300c652f85e90fddbeda466b88822f457ed6bea0a815"
+    },
+    {
+      "id": "kanton/AI/172.513/art_3",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "3",
+      "artikelLabel": "Art. 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Auf die Erhebung von Gebühren und Barauslagen kann verzichtet werden, wenn sie gesamthaft höchstens 10.-- betragen."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "de760ded1a8833257a8538e161ceb7e2198acd916b28384831be1a815ae4acbb"
+    },
+    {
+      "id": "kanton/AI/172.513/art_4",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "4",
+      "artikelLabel": "Art. 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mahngebühr beträgt 30.--."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "3fa19771c0f2d1171124006c0c37479d92eb0bdfd9b68c7e697e01caed1c3508"
+    },
+    {
+      "id": "kanton/AI/172.513/art_5",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "5",
+      "artikelLabel": "Art. 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Bescheinigungen betragen, soweit dieser Erlass keine andere Vorschrift enthält, zwischen 5.-- und 50.--."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "4365698b185ffd7a5b5e75a192d550525c5be7b910d7af41223a831a7f119046"
+    },
+    {
+      "id": "kanton/AI/172.513/art_6",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "6",
+      "artikelLabel": "Art. 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Beglaubigungen (Art. 1e Verordnung über die öffentliche Beurkundung) betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Beglaubigung einer Unterschrift 20.--"
+            },
+            {
+              "marke": "2",
+              "text": "Beglaubigung einer Fotokopie, je Kopie 10.--"
+            },
+            {
+              "marke": "3",
+              "text": "Apostillen und andere Überbeglaubigungen 40.--"
+            },
+            {
+              "marke": "4",
+              "text": "Handelsregistersachen"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "4ce58e743d8af9edac56a9800c6f665f54b189ebefb97e0e77101e6b30aa9ccb"
+    },
+    {
+      "id": "kanton/AI/172.513/art_7",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "7",
+      "artikelLabel": "Art. 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Fotokopien betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "elektronische Kopien oder schwarz-weisse Papierkopien"
+            },
+            {
+              "marke": "2",
+              "text": "Farbkopien auf Papier"
+            },
+            {
+              "marke": "3",
+              "text": "Kopien von Dokumenten grösser als Format DIN A3 nach Aufwand"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "6e0eb2feee53729b8a081e253537d534234951f105a165deb2edece3c1ccad1c"
+    },
+    {
+      "id": "kanton/AI/172.513/art_8",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "8",
+      "artikelLabel": "Art. 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Namensänderung (Art. 30 ZGB) 60.-- bis 360.--"
+            },
+            {
+              "marke": "2",
+              "text": "Prüfung von Stiftungsrechnungen (Art. 84 ZGB), Verfügungen der Stiftungsaufsicht 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "3",
+              "text": "Bewilligung der Adoption (Art. 268 ZGB) 300.-- bis 3'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "03960ea8f98af178ce929221276f52a0d306dbed7297738057ec57e7a7710c5f"
+    },
+    {
+      "id": "kanton/AI/172.513/art_9",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "9",
+      "artikelLabel": "Art. 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Beim Kindes- und Erwachsenenschutz betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Zustimmung zu Rechtsgeschäften 60.-- bis 1'000.--"
+            },
+            {
+              "marke": "2",
+              "text": "Entscheid über die Aufhebung der elterlichen Obhut, Entziehung oder Wiederherstellung der elterlichen Sorge, Anordnung von Kindesschutzmassnahmen (Art. 310 bis 314 ZGB) 100.-- bis 1'000.--"
+            },
+            {
+              "marke": "3",
+              "text": "Genehmigung von Pflegeverträgen (Art. 316 ZGB) und andere Amtshandlungen im Zusammenhang mit Pflegekindern 60.-- bis 500.--"
+            },
+            {
+              "marke": "4",
+              "text": "Vorsorgeauftrag"
+            },
+            {
+              "marke": "5",
+              "text": "Beschluss über Anordnung oder Aufhebung einer Beistandschaft, fürsorgerische Unterbringung, Anordnung oder Aufhebung einer Nachbetreuung gemäss Art. 437 ZGB, vorsorgliche Massnahme gemäss Art. 445 ZGB 60.-- bis 2'000.--"
+            },
+            {
+              "marke": "6",
+              "text": "Inventaraufnahme (Art. 405 ZGB): pro Stunde 60.-- bis 120.--"
+            },
+            {
+              "marke": "7",
+              "text": "Verwaltung von Vermögen für Personen unbekannten Aufenthalts: pro Jahr 60.-- bis 500.--"
+            },
+            {
+              "marke": "8",
+              "text": "Prüfung der Rechnung (Art. 415 ZGB): pro Stunde 60.-- bis 120.--"
+            },
+            {
+              "marke": "9",
+              "text": "Handlungsfähigkeitszeugnis 30.-- bis 50.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "e9d460ee7bdfcf46eda10a31911355bdaae607f8303379e609c13b4756c9bd0a"
+    },
+    {
+      "id": "kanton/AI/172.513/art_10",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "10",
+      "artikelLabel": "Art. 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Im Erbschaftswesen betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Erbenermittlung"
+            },
+            {
+              "marke": "2",
+              "text": "öffentlicher Erbenaufruf: pro Publikationsorgan 100.--, zuzüglich Inseratekosten"
+            },
+            {
+              "marke": "3",
+              "text": "Eröffnungsverfügungen und Teilungsverträge pro Seite 75.--"
+            },
+            {
+              "marke": "4",
+              "text": "Annahme- und Ausschlagungserklärungen und Vollmachten pro Seite 30.--"
+            },
+            {
+              "marke": "5",
+              "text": "Bewilligung eines öffentlichen Inventars, einer Erbschaftsverwaltung oder einer Erbenvertretung 200.-- bis 1'000.--"
+            },
+            {
+              "marke": "6",
+              "text": "Amtliche Liquidation"
+            },
+            {
+              "marke": "7",
+              "text": "Entgegennahme, Registrierung, Aufbewahrung und Herausgabe letztwilliger Verfügungen und Erbverträge inkl. Bescheinigung, einmalige Gebühr pro Stück 100.--"
+            },
+            {
+              "marke": "8",
+              "text": "Willensvollstreckerbescheinigung pro Seite 75.--"
+            },
+            {
+              "marke": "9",
+              "text": "Ausfertigung einer Erbbescheinigung pro Seite 75.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Gebühren nach Aufwand werden erhoben für:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Inventaraufnahme"
+            },
+            {
+              "marke": "2",
+              "text": "Siegelung der Erbschaft"
+            },
+            {
+              "marke": "3",
+              "text": "Testamentseröffnungen"
+            },
+            {
+              "marke": "4",
+              "text": "Erbenversammlungen"
+            },
+            {
+              "marke": "5",
+              "text": "Mitwirkung bei und Durchführung der amtlichen Teilung"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Bei der Erhebung der Gebühren nach Aufwand im Erbschaftswesen beträgt der Stundenansatz 180.--."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "7c6baa63ce768386dc44d0da7a632a77ea6de0f17c8c0e30a35271ee0c865b6c"
+    },
+    {
+      "id": "kanton/AI/172.513/art_11",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "11",
+      "artikelLabel": "Art. 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für Eintragungen in das Grundbuch betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Handänderung infolge Kauf, Tausch, Schenkung, freiwilliger Versteigerung, Urteil oder einer anderen Erwerbsart (ausgenommen Ersitzung und erbrechtliche Übernahme)"
+            },
+            {
+              "marke": "2",
+              "text": "Handänderung infolge Erbgang oder Ersitzung 100.--"
+            },
+            {
+              "marke": "3",
+              "text": "Handänderung infolge Erbteilung: vom Handänderungswert 2‰, mind. 200.--"
+            },
+            {
+              "marke": "4",
+              "text": "Berichtigung einer Eintragung zufolge Ein- und Austritts von Mitgliedern einer Gesellschaft oder einer Gemeinschaft zur gesamten Hand oder wegen Änderungen der Gesellschaftsform oder des Firmennamens oder in anderen Fällen der Gesamtnachfolge 100.-- bis 500.--"
+            },
+            {
+              "marke": "5",
+              "text": "Eigentumsübertragungen aufgrund des Fusionsgesetzes: vom Handänderungswert 2‰, mind. 200.--"
+            },
+            {
+              "marke": "6",
+              "text": "Errichtung von Grundpfandrechten (bei Neuerrichtung von Grundpfandrechten unter gleichzeitiger Löschung bestehender Grundpfandrechte ist die Gebühr auf die Differenz zwischen der bisherigen und der neuen Belastung zu erheben; sie beträgt jedoch mind. 50.--, sofern eine öffentliche Beurkundung erforderlich oder mind. 100.-- sofern keine öffentliche Beurkundung erforderlich ist):"
+            },
+            {
+              "marke": "7",
+              "text": "…"
+            },
+            {
+              "marke": "8",
+              "text": "Erhöhung der Pfandsumme, je Grundpfandrecht: von der Differenz der Pfandsummen 1‰ , mind. 50.--, höchst. 2'000.--"
+            },
+            {
+              "marke": "9",
+              "text": "Herabsetzung der Pfandsumme, je Grundpfandrecht 40.--"
+            },
+            {
+              "marke": "10",
+              "text": "Rang- und Vorgangsänderung, je Grundpfandrecht 20.--"
+            },
+            {
+              "marke": "11",
+              "text": "Pfandvermehrungen oder Pfandentlassungen"
+            },
+            {
+              "marke": "12",
+              "text": "Umwandlung, je Grundpfandrecht 150.--"
+            },
+            {
+              "marke": "13",
+              "text": "Gläubigerregistereintrag 10.--"
+            },
+            {
+              "marke": "14",
+              "text": "Löschungen von Grundpfandrechten"
+            },
+            {
+              "marke": "15",
+              "text": "Dienstbarkeiten und Grundlasten, je Recht 100.-- bis 1000.--"
+            },
+            {
+              "marke": "16",
+              "text": "Textliche Änderungen bestehender Dienstbarkeiten oder Nachträge zu solchen, je Dienstbarkeit 100.-- bis 400.--"
+            },
+            {
+              "marke": "17",
+              "text": "Prüfung und Bereinigung eingetragener Rechtsverhältnisse bei Grenzmutationen 10.--"
+            },
+            {
+              "marke": "18",
+              "text": "Löschung, je Dienstbarkeit oder Grundlast 10.--"
+            },
+            {
+              "marke": "19",
+              "text": "Vormerkungen"
+            },
+            {
+              "marke": "20",
+              "text": "Anmerkungen"
+            },
+            {
+              "marke": "21",
+              "text": "Miteintragungen"
+            },
+            {
+              "marke": "22",
+              "text": "Mit- und Stockwerkeigentum"
+            },
+            {
+              "marke": "23",
+              "text": "Übrige Verrichtungen:'"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Gebühren für Beurkundungen und Beglaubigungen werden zusätzlich zu den Gebühren für die Eintragungen erhoben."
+        },
+        {
+          "absatz": "3",
+          "text": "Für hiervor nicht ausgeführte grundbuchliche Verrichtungen werden Gebühren nach Aufwand erhoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "1547e0427f1df8d783aed69f2926a25a6f815ec82e37d31fe004c2bd5e480f6d"
+    },
+    {
+      "id": "kanton/AI/172.513/art_12",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "12",
+      "artikelLabel": "Art. 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für die Bewilligung des Erwerbs von Grundstücken durch Personen im Ausland beträgt 0.5‰ des Kaufpreises, mindestens aber 400.--. Liegt der Kaufpreis über 2'000'000.-- beträgt die Gebühr 1'000.-- zuzüglich 0.1‰ der Differenz zwischen dem Kaufpreis und 2'000’000.--."
+        },
+        {
+          "absatz": "2",
+          "text": "Für weitere Verfügungen beim Vollzug des Bewilligungsgesetzes (BewG, SR 211.412.41), insbesondere Feststellungsverfügungen nach Art. 18 BewG, betragen die Gebühren 100.-- bis 1'000.--."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "6a990ca2a9e19129b754cba587854d22992cf5992b611f1aa2f656315cf59133"
+    },
+    {
+      "id": "kanton/AI/172.513/art_13",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "13",
+      "artikelLabel": "Art. 13",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "In Handelsregistersachen betragen die Gebühren:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Prüfen von Belegen und Entwürfen nach Aufwand"
+            },
+            {
+              "marke": "2",
+              "text": "Abklärungen nach Aufwand"
+            },
+            {
+              "marke": "3",
+              "text": "Aufforderungen in amtlichen Verfahren 50.-- bis 200.--"
+            },
+            {
+              "marke": "4",
+              "text": "Verfügungen 200.-- bis 2'000.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Gebühren für Beglaubigungen werden zusätzlich erhoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "d8a65b1a678f338d8985f5caed51d2ba064a8952f33af56fb208e360b10d3485"
+    },
     {
       "id": "kanton/AI/172.513/art_14",
       "ebene": "kanton",
@@ -160,130 +687,985 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
       "sha": "a172741c55fb30e4121da299293f101db29cdb9196f154550f92fe240121d601"
     },
     {
-      "id": "kanton/AI/172.513/art_11",
+      "id": "kanton/AI/172.513/art_15",
       "ebene": "kanton",
       "quelle": "AI",
       "erlass": "GebT (GS 172.513)",
-      "artikel": "11",
-      "artikelLabel": "Art. 11",
+      "artikel": "15",
+      "artikelLabel": "Art. 15",
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Für Eintragungen in das Grundbuch betragen die Gebühren:",
+          "text": "Die Gebühren der Polizei betragen:",
           "items": [
             {
               "marke": "1",
-              "text": "Handänderung infolge Kauf, Tausch, Schenkung, freiwilliger Versteigerung, Urteil oder einer anderen Erwerbsart (ausgenommen Ersitzung und erbrechtliche Übernahme)"
+              "text": "Tatbestandsrapporte"
             },
             {
               "marke": "2",
-              "text": "Handänderung infolge Erbgang oder Ersitzung 100.--"
+              "text": "Kriminalpolizei, kriminaltechnische Dienste und Testverfahren"
             },
             {
               "marke": "3",
-              "text": "Handänderung infolge Erbteilung: vom Handänderungswert 2‰, mind. 200.--"
+              "text": "Interventionen bei häuslicher Gewalt"
             },
             {
               "marke": "4",
-              "text": "Berichtigung einer Eintragung zufolge Ein- und Austritts von Mitgliedern einer Gesellschaft oder einer Gemeinschaft zur gesamten Hand oder wegen Änderungen der Gesellschaftsform oder des Firmennamens oder in anderen Fällen der Gesamtnachfolge 100.-- bis 500.--"
+              "text": "Polizeilicher Gewahrsam"
             },
             {
               "marke": "5",
-              "text": "Eigentumsübertragungen aufgrund des Fusionsgesetzes: vom Handänderungswert 2‰, mind. 200.--"
+              "text": "Verwaltungsaufträge"
             },
             {
               "marke": "6",
-              "text": "Errichtung von Grundpfandrechten (bei Neuerrichtung von Grundpfandrechten unter gleichzeitiger Löschung bestehender Grundpfandrechte ist die Gebühr auf die Differenz zwischen der bisherigen und der neuen Belastung zu erheben; sie beträgt jedoch mind. 50.--, sofern eine öffentliche Beurkundung erforderlich oder mind. 100.-- sofern keine öffentliche Beurkundung erforderlich ist):"
+              "text": "Bergrettung und Dienstleistungen im überwiegenden Interesse Privater (Ordnungsdienst, Transport- oder Rennbegleitungen, besonderer Schutz Privater)"
             },
             {
               "marke": "7",
-              "text": "…"
+              "text": "Polizeieinsatz ohne Erstattung von Rapporten"
             },
             {
               "marke": "8",
-              "text": "Erhöhung der Pfandsumme, je Grundpfandrecht: von der Differenz der Pfandsummen 1‰ , mind. 50.--, höchst. 2'000.--"
+              "text": "Beizug auswärtiger Dienste nach Aufwand"
             },
             {
               "marke": "9",
-              "text": "Herabsetzung der Pfandsumme, je Grundpfandrecht 40.--"
+              "text": "Kosten für Dolmetscherinnen und Dolmetscher nach Aufwand"
             },
             {
               "marke": "10",
-              "text": "Rang- und Vorgangsänderung, je Grundpfandrecht 20.--"
+              "text": "Kosten für Transportmittel, Kommunikation und Verbrauchsmaterial"
             },
             {
               "marke": "11",
-              "text": "Pfandvermehrungen oder Pfandentlassungen"
+              "text": "Fundbüro, Alarmanlagen, weitere Dienstleistungen"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "bb8986e1ec25a8ddd9f02c93ec504ad35ca43f4654904bb780db6ceca2a83e77"
+    },
+    {
+      "id": "kanton/AI/172.513/art_16",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "16",
+      "artikelLabel": "Art. 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren der Staatsanwaltschaft und der Jugendanwaltschaft betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Allgemeine Gebühren"
             },
             {
-              "marke": "12",
-              "text": "Umwandlung, je Grundpfandrecht 150.--"
+              "marke": "2",
+              "text": "Erledigung des Verfahrens, Verfahren vor Gericht, Rechtsmittel"
             },
             {
-              "marke": "13",
-              "text": "Gläubigerregistereintrag 10.--"
+              "marke": "3",
+              "text": "Haftkosten pro inhaftierte Person und Tag 150.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "3a1465f4f3af41fcd7624f4ada628ebb55bdbf9b7d528cffcd6271f9dd733918"
+    },
+    {
+      "id": "kanton/AI/172.513/art_17",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "17",
+      "artikelLabel": "Art. 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Verfügungen beim Strafvollzug und bei der Bewährungshilfe betragen bis 250.--."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "da5ccb0f34765034ed4b77ea21349098309dc8cb970a81796a4e2b9e4f577755"
+    },
+    {
+      "id": "kanton/AI/172.513/art_18",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "18",
+      "artikelLabel": "Art. 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren der Einwohnerkontrolle betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Heimatausweis"
             },
             {
-              "marke": "14",
-              "text": "Löschungen von Grundpfandrechten"
+              "marke": "2",
+              "text": "Wohnsitzbescheinigung 20.--"
             },
             {
-              "marke": "15",
-              "text": "Dienstbarkeiten und Grundlasten, je Recht 100.-- bis 1000.--"
+              "marke": "3",
+              "text": "Anmeldung zur Wohnsitznahme"
             },
             {
-              "marke": "16",
-              "text": "Textliche Änderungen bestehender Dienstbarkeiten oder Nachträge zu solchen, je Dienstbarkeit 100.-- bis 400.--"
+              "marke": "4",
+              "text": "Anmeldung für Wochenaufenthalter und Grenzgänger"
             },
             {
-              "marke": "17",
-              "text": "Prüfung und Bereinigung eingetragener Rechtsverhältnisse bei Grenzmutationen 10.--"
+              "marke": "5",
+              "text": "Zivilstandsänderung, Adressänderung, Umregistrierung 10.--"
             },
             {
-              "marke": "18",
-              "text": "Löschung, je Dienstbarkeit oder Grundlast 10.--"
+              "marke": "6",
+              "text": "Adressauskünfte, Überprüfen der Personalien, Bestätigungen, pro Adresse 10.--"
             },
             {
-              "marke": "19",
-              "text": "Vormerkungen"
+              "marke": "7",
+              "text": "Lebensbescheinigung 10.--"
             },
             {
-              "marke": "20",
-              "text": "Anmerkungen"
+              "marke": "8",
+              "text": "umfangreiche Abklärungen nach Aufwand"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "fb1cc995c5819f853ea43108bc686fb1ca5f864e1ba250a2d61dbb238d82b8c9"
+    },
+    {
+      "id": "kanton/AI/172.513/art_18_a",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "18_a",
+      "artikelLabel": "Art. 18a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Kanton erhebt die Höchstbeträge nach der eidg. Verordnung über die Gebühren zum Ausländer- und Integrationsgesetz, soweit dieser Beschluss nichts anderes vorsieht."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "3212a05ce7cafc220c754b266a0833484ab73663816e1555a41166c11d185984"
+    },
+    {
+      "id": "kanton/AI/172.513/art_19",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "19",
+      "artikelLabel": "Art. 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Bewilligungen und andere Verfügungen über den Aufenthalt von ausländischen Personen betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Provisorische Bewilligung 20.-- bis 70.--"
             },
             {
-              "marke": "21",
-              "text": "Miteintragungen"
+              "marke": "2",
+              "text": "Androhung der Ausweisung 100.-- bis 1000.--"
             },
             {
-              "marke": "22",
-              "text": "Mit- und Stockwerkeigentum"
+              "marke": "3",
+              "text": "Androhung der Wegweisung 60.-- bis 500.--"
             },
             {
-              "marke": "23",
-              "text": "Übrige Verrichtungen:'"
+              "marke": "4",
+              "text": "Vorübergehende Einstellung oder Aufhebung 20.-- bis 100.--"
+            },
+            {
+              "marke": "5",
+              "text": "Erstreckung einer Ausreisefrist 20.-- bis 70.--"
+            },
+            {
+              "marke": "6",
+              "text": "Verwarnung bis 250.--"
+            },
+            {
+              "marke": "7",
+              "text": "andere Verfügung 60.-- bis 1'000.--"
+            },
+            {
+              "marke": "8",
+              "text": "Eintrag einer Anmeldung, Zivilstands- oder Adressänderung 10.-- bis 20.--"
+            },
+            {
+              "marke": "9",
+              "text": "Bestätigungen, Prüfung Verpflichtungserklärung 20.-- bis 70.--"
+            },
+            {
+              "marke": "10",
+              "text": "Erteilung von schriftlichen Auskünften 10.-- bis 70.--"
+            },
+            {
+              "marke": "10a",
+              "text": "Verlängerung Ausweis N (Asylsuchende) und S (Schutzbedürftige), sofern ein Familienmitglied erwerbstätig ist 40.--"
+            },
+            {
+              "marke": "11",
+              "text": "Umfangreiche Abklärungen nach Aufwand"
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Gebühren für Beurkundungen und Beglaubigungen werden zusätzlich zu den Gebühren für die Eintragungen erhoben."
-        },
-        {
-          "absatz": "3",
-          "text": "Für hiervor nicht ausgeführte grundbuchliche Verrichtungen werden Gebühren nach Aufwand erhoben."
+          "text": "Für besonders aufwändige Verrichtungen kann die Gebühr angemessen erhöht werden."
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
-      "abgerufen": "2026-06-16",
+      "abgerufen": "2026-06-17",
       "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
-      "sha": "1547e0427f1df8d783aed69f2926a25a6f815ec82e37d31fe004c2bd5e480f6d"
+      "sha": "69ddcfb188b0113b83fb86fa6b5b50b9029c5cf9b24d163c932bdb05ae062580"
+    },
+    {
+      "id": "kanton/AI/172.513/art_20",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "20",
+      "artikelLabel": "Art. 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Arbeitsbewilligungen von ausländischen Personen (Ausländerverordnung) betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Jahresaufenthaltsbewilligung (pro Einheit) 150.--"
+            },
+            {
+              "marke": "2",
+              "text": "Praktikantinnen und Praktikanten, Aupairs, andere Kurzaufenthaltsbewilligungen 60.-- bis 150.--"
+            },
+            {
+              "marke": "3",
+              "text": "4-Monats-Bewilligungen 35.-- bis 70.--"
+            },
+            {
+              "marke": "4",
+              "text": "Bewilligungen für Grenzgängerinnen und Grenzgänger 35.-- bis 70.--"
+            },
+            {
+              "marke": "5",
+              "text": "Ersatzgesuche 35.-- bis 70.--"
+            },
+            {
+              "marke": "6",
+              "text": "Bewilligung zum Stellenantritt oder -wechsel 95.--"
+            },
+            {
+              "marke": "7",
+              "text": "Umfangreiche Abklärungen nach Aufwand"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Für besonders aufwändige Verrichtungen kann die Gebühr angemessen erhöht werden."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühren werden unabhängig davon erhoben, ob eine Bewilligung erteilt wird oder nicht. Bei ablehnendem Entscheid wird die Gebühr in der Regel um 50% ermässigt."
+        },
+        {
+          "absatz": "4",
+          "text": "Gebührenpflichtig ist ausschliesslich die Arbeitgeberin oder der Arbeitgeber."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "f28eb46641138d5697644dcb9cf5b479cd0ee97665ca1189abb36e61ff27244b"
+    },
+    {
+      "id": "kanton/AI/172.513/art_21",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "21",
+      "artikelLabel": "Art. 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für Grundstückschätzungen (Verordnung über die Grundstückschätzungen) beträgt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Erstmalige Schätzungen eines Grundstücks einschliesslich Erlass von Anzeigen und Mitteilungen: 1‰ des Verkehrswerts des Schätzobjekts bis 700'000.-- zuzüglich 0,2‰ des darüberliegenden Verkehrswerts, mindestens 60.-- höchstens 1'000.--;"
+            },
+            {
+              "marke": "2",
+              "text": "Nachschätzungen von Um- oder Erweiterungsbauten oder Neuschätzung auf Begehren der Eigentümerin oder des Eigentümers: 1‰ der Differenz bis 700'000.-- zuzüglich 0,2‰ des darüberliegenden Betrags, mindestens 60.--, höchstens 1'000.--;"
+            },
+            {
+              "marke": "3",
+              "text": "Neuüberprüfung von Schätzungen von Amtes wegen, wenn die in diesem Artikel aufgeführten Gründe nicht zutreffen 10.-- bis 300.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für schriftliche Auskünfte oder Auszüge aus dem Schätzungskataster beträgt 10.-- bis 30.--."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "105ac27c965e019463a8acfc94ff2fd3c1d68f121aebdc539e8d8fffdedf96fa"
+    },
+    {
+      "id": "kanton/AI/172.513/art_22",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "22",
+      "artikelLabel": "Art. 22",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühr für das unentschuldigte Nichterscheinen zu Abklärungen, Therapien, Förderlektionen oder zu Besprechungen bei der Berufsberatung, beim Schulpsychologischen Dienst oder einer eingesetzten Fachkraft beträgt 20.-- bis 200.--."
+        },
+        {
+          "absatz": "2",
+          "text": "Gebührenpflichtig ist, wer die elterliche Sorge innehat."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "e02eb6f17f86fdf3f501ed6c3bcf1fd5bfa39c5fd59ba6b613a8727d046cc966"
+    },
+    {
+      "id": "kanton/AI/172.513/art_23",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "23",
+      "artikelLabel": "Art. 23",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Verfügungen über Schutzräume (Art. 6 EG ZGB) betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Dispensation von der Erstellung von Schutzräumen 60.-- bis 1'000.--"
+            },
+            {
+              "marke": "2",
+              "text": "Anordnung der Erstellung von Schutzräumen mit Planbewilligung 100.-- bis 2'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "271bec51403aa6af86cc7684501e6c6759918517777a343eeaf798c928c1d4f7"
+    },
+    {
+      "id": "kanton/AI/172.513/art_24",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "24",
+      "artikelLabel": "Art. 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren nach der Baugesetzgebung betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Ausnahmebewilligungen (Art. 77 BauG 60.-- bis 2'000.--"
+            },
+            {
+              "marke": "2",
+              "text": "andere Entscheide, Verfügungen und Bewilligungen in Bausachen (Art. 90 BauG) 60.-- bis 5'000.--"
+            },
+            {
+              "marke": "3",
+              "text": "Abklärungen, die infolge besonderer Verhältnisse wie Grossbauten oder ungenügender Baueingaben erforderlich sind nach Aufwand"
+            },
+            {
+              "marke": "4",
+              "text": "Umweltverträglichkeitsprüfungen und -berichte, Augenscheine, Baukontrollen, Erstellung von Gutachten, Expertisen und dergleichen durch Amtsstellen oder Beauftragte nach Aufwand"
+            },
+            {
+              "marke": "5",
+              "text": "Fachkommission Heimatschutz und Fachkommission Denkmalpflege (Art. 65 Abs. 7 BauG)"
+            },
+            {
+              "marke": "6",
+              "text": "Schätzungen der Schätzungskommission für die Bestimmung des Marktwerts des gesetzlichen Kaufsrechts (Art. 7a und 87 BauV) 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "7",
+              "text": "Aussenreklamen (StKB über Aussenreklamen und Anschlagstellen)"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "4a8ff28eb3f3397d2cc0fc70261a1c3ced1ffb7f7654e64eab70248e535d284b"
+    },
+    {
+      "id": "kanton/AI/172.513/art_24_a",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "24_a",
+      "artikelLabel": "Art. 24a",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für die ordentliche Feuerungskontrolle von messpflichtigen Öl-, Gas- und Holzfeuerungen wird eine pauschale Grundgebühr von Fr. 35.– bei der Anlageeigentümerin oder bei dem Anlageeigentümer erhoben."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei den der privaten Kontrolle unterstellten Anlagen wird die Grundgebühr beim privaten Kontrolleur erhoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "807c36504964277b4a4af9973d14f5ff4d4bce5480c8fa168140f274cff481d6"
+    },
+    {
+      "id": "kanton/AI/172.513/art_25",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "25",
+      "artikelLabel": "Art. 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Bewilligungen und andere Verfügungen nach der Gesetzgebung über den öffentlichen Verkehr betragen 100.-- bis 1'000.--."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "5598ad657e99918bb21ea6f461de31c786dbba01f91039f3ce6057e6bc56aabb"
+    },
+    {
+      "id": "kanton/AI/172.513/art_26",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "26",
+      "artikelLabel": "Art. 26",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für Signalisationen (Art. 1 EG SVG) betragen 60.-- bis 300.--."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "1dbec7a94ff741af53ab6150929079ae76c8ed1b533eebd1a29512c3faa59f95"
+    },
+    {
+      "id": "kanton/AI/172.513/art_27",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "27",
+      "artikelLabel": "Art. 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren beim Vollzug des Gesundheitsgesetzes und der Ausführungserlasse dazu betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Behandlung von Gesuchen um Berufsausübungsbewilligungen, ohne Inspektion"
+            },
+            {
+              "marke": "2",
+              "text": "Behandlung von Gesuchen um Bewilligungen zum Betrieb privater Einrichtungen der Gesundheitsversorgung und von Wohn- und Pflegeeinrichtungen, ohne Inspektion 500.-- bis 2'500.--"
+            },
+            {
+              "marke": "3",
+              "text": "Inspektion der Praxen und der Infrastruktur bewilligungspflichtiger Gesundheitsfachpersonen und Betriebe 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "4",
+              "text": "Verlängerung von befristeten Bewilligungen und Änderung von Betriebsbewilligungen aufgrund von veränderten räumlichen oder betrieblichen Verhältnissen 50.-- bis 1'500.--"
+            },
+            {
+              "marke": "5",
+              "text": "Verfügungen über Disziplinarmassnahmen 200.-- bis 2'000.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühr für die Aufbewahrung von Krankengeschichten durch den Kanton oder von ihm Beauftragte beträgt:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bei Personen mit Berufsausübungsbewilligung bis 5'000.--;"
+            },
+            {
+              "marke": "2",
+              "text": "bei Einrichtungen des Gesundheitswesens bis 50'000.--."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die Gebühren für Verfügungen der Berufsverbände über den ambulanten Notfalldienst (Art. 16a GesG) betragen 100.-- bis 500.--."
+        },
+        {
+          "absatz": "4",
+          "text": "Die Gebühren für Bewilligungen und Kontrollen nach der Gesetzgebung über die Heilmittel (Art. 35 GesG) und über die Betäubungsmittel betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Behandlung von Gesuchen um Bewilligungen zur Führung einer Apotheke, einer Drogerie oder einer Privatapotheke einer Medizinalperson 250.-- bis 2'500.--"
+            },
+            {
+              "marke": "2",
+              "text": "Inspektionen in Apotheken, Drogerien, Privatapotheken von Medizinalpersonen und in anderen Detailhandelsbetrieben, die Arzneimittel abgeben"
+            },
+            {
+              "marke": "3",
+              "text": "Bewilligung für die Abgabe von Arzneimitteln und Tierarzneimitteln im Detailhandel und im Rahmen der Berufsausübung 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "4",
+              "text": "Bewilligung zur Lagerung von Blut oder Blutprodukten 200.-- bis 1'000.--"
+            },
+            {
+              "marke": "5",
+              "text": "Bewilligung zum Inverkehrbringen von durch den Bundesrat als bewilligungspflichtig erklärten Medizinprodukten 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "6",
+              "text": "Bewilligung gestützt auf das Betäubungsmittelgesetz 150.-- bis 1'000.--"
+            }
+          ]
+        },
+        {
+          "absatz": "5",
+          "text": "Die Gebühren für den Vollzug der Krankenversicherungsgesetzgebung betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Entscheid über Zulassung von Leistungserbringenden zur Tätigkeit zu Lasten der obligatorischen Krankenpflegeversicherung 200.-- bis 2'000.--"
+            },
+            {
+              "marke": "2",
+              "text": "Inspektionen 200.-- bis 3'000.--"
+            },
+            {
+              "marke": "3",
+              "text": "Bestätigung über die Erfüllung der gesetzlichen Voraussetzungen für die Tätigkeit zu Lasten der obligatorischen Krankenpflegeversicherung für angestellte Personen 100.-- bis 500.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "a1462ff1c263b42725ebe6d7c67931773cf7fe3a598d57293db1f14ca7e1ceec"
+    },
+    {
+      "id": "kanton/AI/172.513/art_28",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "28",
+      "artikelLabel": "Art. 28",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren beim Vollzug des Arbeitsgesetzes (Art. 1 Vollzugsverordnung zum Arbeitsgesetz) betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "für Plangenehmigungen bei einem umbauten Raum (Volumen in Kubikmetern)"
+            },
+            {
+              "marke": "2",
+              "text": "für Betriebsbewilligungen 75.-- bis 2'000.--"
+            },
+            {
+              "marke": "3",
+              "text": "für Arbeitsbewilligungen"
+            },
+            {
+              "marke": "4",
+              "text": "für andere Verwaltungsmassnahmen nach der Bundesgesetzgebung über die Arbeit oder die Unfallverhütung wie Planbegutachtungen 100.-- bis 1'000.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "82554790ba456c7f021f42ea694b49adb8a82051628cc7d66b6bb92ebc9847ec"
+    },
+    {
+      "id": "kanton/AI/172.513/art_29",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "29",
+      "artikelLabel": "Art. 29",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren beim Vollzug der Gesetzgebung über die Landwirtschaft (Art. 32 LaG) und das bäuerliche Bodenrecht (Art. 10 EG BGBB) betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Vollzug der Gesetzgebung über die Direktzahlungen (DZV)"
+            },
+            {
+              "marke": "2",
+              "text": "Milchwirtschaft: Kontroll- und Laborkosten (Hemmstoffe) gebührenfrei"
+            },
+            {
+              "marke": "3",
+              "text": "Bodenrechtskommission"
+            },
+            {
+              "marke": "4",
+              "text": "Landwirtschaftliche Beratung, pro Stunde 70.--"
+            },
+            {
+              "marke": "5",
+              "text": "Pachtrecht"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "a8dea4ff941c97b058739cc78588a4e8032f786499f9ebec5b18f3b7c6303021"
+    },
+    {
+      "id": "kanton/AI/172.513/art_30",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "30",
+      "artikelLabel": "Art. 30",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Für den Vollzug der Alpgesetzgebung (Art. 13 Alpbüchlein):",
+          "items": [
+            {
+              "marke": "1",
+              "text": "beträgt die Einschreibetaxe pro Stoss 12.-- bis 50.--"
+            },
+            {
+              "marke": "2",
+              "text": "richtet sich der Hüttenzins nach dem Ertragswert und den Vorschriften der eidgenössischen Pachtzinsverordnung."
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "350e26724e544038ea603603807563c3ed2f9e6d574cb1f28b90e0a066d3edb4"
+    },
+    {
+      "id": "kanton/AI/172.513/art_31",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "31",
+      "artikelLabel": "Art. 31",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren beim Vollzug der Waldgesetzgebung (Art. 46 VEGWaG) betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Schlaganzeichnung, pro Festmeter 2.--"
+            },
+            {
+              "marke": "2",
+              "text": "Holzeinmessung und Sortierung, pro Kubikmeter 2.--"
+            },
+            {
+              "marke": "3",
+              "text": "Rodungsbewilligung, pro Quadratmeter 1.-- bis 50.--"
+            },
+            {
+              "marke": "4",
+              "text": "Erstellung forstlicher Betriebspläne, pro Plan 1'000.-- bis 3'500.--"
+            },
+            {
+              "marke": "5",
+              "text": "Aufsicht über forstliche Projekte, von den Gesamtkosten 5‰ bis 8‰"
+            },
+            {
+              "marke": "6",
+              "text": "Verfügungen bis 500.--"
+            }
+          ]
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "872f300c5518679c7d107900b38e6afcfef769542bcde24a629a8d8241e22c73"
+    },
+    {
+      "id": "kanton/AI/172.513/art_32",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "32",
+      "artikelLabel": "Art. 32",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren beim Vollzug der Jagdgesetzgebung betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Patenttaxen, Bewilligungen und andere Verfügungen, sofern die Jagdvorschriften der Standeskommission (Art. 5 Abs. 5 JaG) keine Regelung enthalten 60.-- bis 500.--"
+            },
+            {
+              "marke": "2",
+              "text": "Einschreibegebühr (Art. 12 JaV) 200.--"
+            },
+            {
+              "marke": "3",
+              "text": "Spezialeinsätze nach Aufwand"
+            },
+            {
+              "marke": "4",
+              "text": "Jagdprüfung"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren der Jagdprüfung sind mit der Anmeldung bei der Landesbuchhaltung einzuzahlen. Sie können Kandidatinnen oder Kandidaten, die nicht zur Prüfung zugelassen werden oder aus entschuldbaren Gründen nicht zur Prüfung antreten, auf Gesuch ganz oder teilweise rückerstattet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "0ca86b9ad8e30fc0eb07571cfcef8370d1295942c90eefc9a8869403acfe2c6f"
+    },
+    {
+      "id": "kanton/AI/172.513/art_33",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "33",
+      "artikelLabel": "Art. 33",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren beim Vollzug der Gesetzgebung über die Fischerei betragen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "Patenttaxen, Bewilligungen und andere Verfügungen, sofern die Fischereivorschriften der Standeskommission (Art. 4 FischG,; Art. 25 FischV) keine Regelung enthalten 60.-- bis 500.--"
+            },
+            {
+              "marke": "2",
+              "text": "Einsatz Fischfanggeräte nach Aufwand"
+            },
+            {
+              "marke": "3",
+              "text": "Kanzleigebühr zur Patenttaxe (Art. 26 FischV) 5.--"
+            },
+            {
+              "marke": "4",
+              "text": "Prüfung zum Erwerb des Fähigkeitsausweises zur Ausübung der Fischerei 20.-- bis 100.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die Gebühren der Prüfung sind mit der Anmeldung bei der Landesbuchhaltung einzuzahlen. Sie kann Kandidatinnen oder Kandidaten, die nicht zur Prüfung zugelassen werden oder aus entschuldbaren Gründen nicht zur Prüfung antreten, auf Gesuch ganz oder teilweise rückerstattet werden."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "4439e33da72c9d7a35fa32ef075f3673757b155c5a15f95e4845c06229dc1a12"
+    },
+    {
+      "id": "kanton/AI/172.513/art_34",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "34",
+      "artikelLabel": "Art. 34",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Gebühren für die Bewilligung einer Lotterie oder Tombola betragen 2% der Lossumme."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "24cbbaf0b5e1dfd3042e1cae017beac02f214bd8f3899c7c9612c988635ab8cb"
+    },
+    {
+      "id": "kanton/AI/172.513/art_35",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "35",
+      "artikelLabel": "Art. 35",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die amtlichen Reiseauslagen werden pauschal entschädigt (Art. 6 EichgebV) bei Eichungen und Kontrollen:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "von Tanksäulen"
+            },
+            {
+              "marke": "2",
+              "text": "von Abgasmessgeräten"
+            },
+            {
+              "marke": "3",
+              "text": "von anderen Messmitteln: je Betrieb mit 15.--"
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Die amtlichen Auslagen im Eichwesen für die Reise und für den Transport von Gewichten zur Eichung und die Kontrollen von Waagen mit einer Wiegefähigkeit bis 2000 kg werden pauschal entschädigt. Sind in einem Betrieb mehrere Waagen zu eichen, wird die Pauschale für die Waage mit der höchsten Wiegefähigkeit erhoben und für jede weitere Waage ein Zuschlag von 10% der für sie gültigen Pauschale. Die Pauschale beträgt bei Wiegefähigkeit:",
+          "items": [
+            {
+              "marke": "1",
+              "text": "bis 20 kg 22.--"
+            },
+            {
+              "marke": "2",
+              "text": "20 kg bis 50 kg 28.--"
+            },
+            {
+              "marke": "3",
+              "text": "50 kg bis 100 kg 37.--"
+            },
+            {
+              "marke": "4",
+              "text": "100 kg bis 200 kg 52.--"
+            },
+            {
+              "marke": "5",
+              "text": "200 kg bis 500 kg 60.--"
+            },
+            {
+              "marke": "6",
+              "text": "500 kg bis 1000 kg 96.--"
+            },
+            {
+              "marke": "7",
+              "text": "1000 kg bis 1500 kg 113.--"
+            },
+            {
+              "marke": "8",
+              "text": "1500 kg bis 2000 kg 137.--"
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Die übrigen amtlichen Auslagen im Eichwesen werden nach Aufwand erhoben."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "ab20d33e1d6d8b5c10964d49b0cccbf44a81628727106a74c7f2da6a541f7ae5"
+    },
+    {
+      "id": "kanton/AI/172.513/art_36",
+      "ebene": "kanton",
+      "quelle": "AI",
+      "erlass": "GebT (GS 172.513)",
+      "artikel": "36",
+      "artikelLabel": "Art. 36",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dieser Standeskommissionsbeschluss tritt am 1. Januar 2020 in Kraft."
+        }
+      ],
+      "stand": "2026-01-01",
+      "quelleUrl": "https://ai.clex.ch/app/de/texts_of_law/172.513",
+      "abgerufen": "2026-06-17",
+      "fassungsToken": "54dcf00387cc9ea539d484244a6f0256",
+      "sha": "07e091f6662ae179910efc742cb5eec08152ddb940828863793051f761b25b04"
     }
   ]
 }
