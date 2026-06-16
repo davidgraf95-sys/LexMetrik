@@ -94,3 +94,27 @@ function entferneTags(s: string): string {
     .replace(/\s+/g, ' ')
     .trim();
 }
+
+/**
+ * Extrahiert alle Artikel-Token aus einem Fedlex-Filestore-HTML in HTML-Reihenfolge.
+ *
+ * Matcht: id="art_<TOKEN>" wobei TOKEN mit einer Ziffer beginnt (strukturelle
+ * Nicht-Artikel-Anker wie «art_SchlusstitelUebergang» werden ausgeschlossen).
+ * Tokens werden dedupliziert (erster Vorkommen gewinnt), Reihenfolge wie im HTML.
+ *
+ * @param html - Volltext des Fedlex-Filestore-HTML
+ * @returns Array der Token-Strings (ohne «art_»-Präfix), z.B. ['1','2','335_c']
+ */
+export function alleArtikelTokens(html: string): string[] {
+  const re = /id="art_(\d[\w]*)"/g;
+  const seen = new Set<string>();
+  const tokens: string[] = [];
+  for (const m of html.matchAll(re)) {
+    const token = m[1];
+    if (!seen.has(token)) {
+      seen.add(token);
+      tokens.push(token);
+    }
+  }
+  return tokens;
+}

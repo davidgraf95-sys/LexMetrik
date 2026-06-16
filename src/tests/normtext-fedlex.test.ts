@@ -10,7 +10,7 @@
  *   - Absätze ohne führendes <sup> (Unterparagraphen) erhalten absatz: null
  */
 import { describe, it, expect } from 'vitest';
-import { extrahiereArtikel } from '../../scripts/normtext/extrahiere-fedlex';
+import { extrahiereArtikel, alleArtikelTokens } from '../../scripts/normtext/extrahiere-fedlex';
 
 // ── Fixture 1: OR Art. 77 (3 nummerierte Absätze + 1 Unterabsatz ohne Nummer) ──
 // Echter Ausschnitt aus /tmp/or.html (Konsolidierung 20260101)
@@ -121,5 +121,59 @@ describe('extrahiereArtikel', () => {
     it('HTML ohne article-Tag → null', () => {
       expect(extrahiereArtikel('<html><body><p>kein Artikel</p></body></html>', '77')).toBeNull();
     });
+  });
+});
+
+describe('alleArtikelTokens', () => {
+  // Mini-HTML mit 3 Artikeln: numerisch, Buchstaben-Suffix, 2-stufig
+  const MINI_HTML = `
+    <html><body>
+      <article id="art_1"><p class="absatz "><sup>1</sup>&nbsp;Erster Artikel.</p></article>
+      <article id="art_2_a"><p class="absatz "><sup>1</sup>&nbsp;Zweiter Artikel (Buchstaben-Token).</p></article>
+      <article id="art_335_c"><p class="absatz "><sup>1</sup>&nbsp;Dritter Artikel.</p></article>
+    </body></html>
+  `;
+
+  // Struktureller Nicht-Artikel-Anker (keine führende Ziffer) — muss AUSGESCHLOSSEN werden
+  const HTML_MIT_NICHTARTIKEL = `
+    <html><body>
+      <article id="art_1"><p class="absatz ">Text.</p></article>
+      <div id="art_SchlusstitelUebergang">Nicht ein Artikel</div>
+      <article id="art_2"><p class="absatz ">Text.</p></article>
+    </body></html>
+  `;
+
+  // Duplikate im HTML (sollte dedupliziert werden)
+  const HTML_MIT_DUPLIKATEN = `
+    <html><body>
+      <article id="art_1"><p class="absatz ">Erster Vorkommen.</p></article>
+      <article id="art_1"><p class="absatz ">Zweites Vorkommen (Duplikat).</p></article>
+      <article id="art_2"><p class="absatz ">Text.</p></article>
+    </body></html>
+  `;
+
+  it('extrahiert 3 Tokens in HTML-Reihenfolge', () => {
+    const tokens = alleArtikelTokens(MINI_HTML);
+    expect(tokens).toEqual(['1', '2_a', '335_c']);
+  });
+
+  it('schliesst Tokens ohne führende Ziffer aus', () => {
+    const tokens = alleArtikelTokens(HTML_MIT_NICHTARTIKEL);
+    expect(tokens).toEqual(['1', '2']);
+    expect(tokens).not.toContain('SchlusstitelUebergang');
+  });
+
+  it('dedupliziert Tokens (nur erster Vorkommen)', () => {
+    const tokens = alleArtikelTokens(HTML_MIT_DUPLIKATEN);
+    expect(tokens).toEqual(['1', '2']);
+    expect(tokens).toHaveLength(2);
+  });
+
+  it('liefert leeres Array bei leerem HTML', () => {
+    expect(alleArtikelTokens('')).toEqual([]);
+  });
+
+  it('liefert leeres Array wenn keine art_-Anker vorhanden', () => {
+    expect(alleArtikelTokens('<html><body><p>kein Artikel</p></body></html>')).toEqual([]);
   });
 });

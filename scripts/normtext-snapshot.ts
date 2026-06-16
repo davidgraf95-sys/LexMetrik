@@ -12,7 +12,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { parseFedlexCacheEintraege } from './normtext/inventar-bund.ts';
-import { extrahiereArtikel } from './normtext/extrahiere-fedlex.ts';
+import { extrahiereArtikel, alleArtikelTokens } from './normtext/extrahiere-fedlex.ts';
 import {
   sammleKantonInventar,
   sammleFallback,
@@ -243,15 +243,15 @@ async function main(): Promise<void> {
   // Golden-Index
   const goldenIndex: Record<string, string> = {};
 
-  // Übersprungene Anker (gesetz → anker[])
-  const uebersprungen: Array<{ gesetz: string; anker: string }> = [];
+  // Übersprungene Token (gesetz → token)
+  const uebersprungen: Array<{ gesetz: string; token: string }> = [];
 
   // Report-Zeilen
   const reportZeilen: string[] = [];
   let totalSnapshots = 0;
 
   for (const eintrag of eintraege) {
-    const { name, eli, konsolidierung, anker } = eintrag;
+    const { name, eli, konsolidierung } = eintrag;
     const gesetzKey = name.toUpperCase();
     const erlass = ERLASS_MAP[name] ?? gesetzKey;
     const stand = konsZuIso(konsolidierung);
@@ -262,24 +262,22 @@ async function main(): Promise<void> {
       html = readFileSync(htmlPfad, 'utf8');
     } catch {
       console.error(`[FEHLER] Kann ${htmlPfad} nicht lesen — überspringe ${gesetzKey}`);
-      uebersprungen.push(...anker.map((a) => ({ gesetz: gesetzKey, anker: a })));
+      // Überspringe alle Tokens für dieses Gesetz
+      uebersprungen.push({ gesetz: gesetzKey, token: '(alle — HTML fehlt)' });
       continue;
     }
 
+    // Alle Artikel-Token aus dem HTML extrahieren (führende Ziffer = Pflicht)
+    const tokens = alleArtikelTokens(html);
     const snapshotListe: NormSnapshot[] = [];
 
-    for (const ankerVoll of anker) {
-      // ankerVoll = 'art_335_c', token = '335_c'
-      if (!ankerVoll.startsWith('art_')) {
-        console.warn(`[WARN] Unbekanntes Anker-Format: ${ankerVoll} (${gesetzKey}) — überspringe`);
-        uebersprungen.push({ gesetz: gesetzKey, anker: ankerVoll });
-        continue;
-      }
-      const token = ankerVoll.slice('art_'.length);
+    for (const token of tokens) {
+      const ankerVoll = `art_${token}`;
       const extrakt = extrahiereArtikel(html, token);
 
       if (extrakt === null || extrakt.bloecke.length === 0) {
-        uebersprungen.push({ gesetz: gesetzKey, anker: ankerVoll });
+        // Kein extrahierbarer Inhalt → überspringen (kein leerer Snapshot)
+        uebersprungen.push({ gesetz: gesetzKey, token: ankerVoll });
         continue;
       }
 
@@ -321,13 +319,13 @@ async function main(): Promise<void> {
   console.log(`\nGesamt: ${eintraege.length} Gesetze, ${totalSnapshots} Snapshots`);
 
   if (uebersprungen.length > 0) {
-    console.log('\n── Übersprungene Anker (Anker im HTML nicht gefunden) ────────');
+    console.log('\n── Übersprungene Token (kein extrahierbarer Inhalt) ──────────');
     for (const u of uebersprungen) {
-      console.log(`  ${u.gesetz.padEnd(12)} ${u.anker}`);
+      console.log(`  ${u.gesetz.padEnd(12)} ${u.token}`);
     }
     console.log(`\nTotal übersprungen: ${uebersprungen.length}`);
   } else {
-    console.log('\nKeine Anker übersprungen.');
+    console.log('\nKeine Token übersprungen.');
   }
 
   // ── Kantons-Phase (LexWork) ────────────────────────────────────────────────
