@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Field, inputCls } from '../vorlagen/ui';
-import { KantonQuelleLink } from '../KantonQuelleLink';
+import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { BetragsFeld } from '../BetragsFeld';
 import { LinkTeilenButton } from '../LinkTeilenButton';
@@ -129,9 +129,9 @@ export function GrundbuchEintragForm() {
               <p key={ngPostenText(ergebnis.posten)} className="lc-wert-puls text-body-l font-semibold text-ink-900 num">{ngPostenText(ergebnis.posten)}</p>
               {!ergebnis.posten.ergebnis.deterministisch && <p className="mt-1 text-body-s text-ink-600">Rahmen/aufwandabhängig – konkrete Festsetzung im Einzelfall.</p>}
               <p className="mt-2 text-xs text-ink-500">
-                {ergebnis.posten.quelle.erlassName} ({ergebnis.posten.quelle.erlassNr}), {ergebnis.posten.quelle.artikel} · Stand {ergebnis.posten.quelle.stand}
+                {ergebnis.posten.quelle.erlassName} ({ergebnis.posten.quelle.erlassNr}), <KantonArtikelTrigger quelle={ergebnis.posten.quelle} /> · Stand {ergebnis.posten.quelle.stand}
                 {ergebnis.posten.quelle.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
-                {ergebnis.posten.quelle.quelleUrl ? <> · <KantonQuelleLink quelle={ergebnis.posten.quelle} className="underline hover:text-ink-800" /></> : null}
+                {ergebnis.posten.quelle.quelleUrl ? <> · <a href={ergebnis.posten.quelle.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a></> : null}
               </p>
             </div>
           )}

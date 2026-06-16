@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BeruehrtRahmen, Field, inputCls } from '../vorlagen/ui';
-import { KantonQuelleLink } from '../KantonQuelleLink';
+import { KantonArtikelTrigger } from '../KantonQuelleLink';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { BetragsFeld } from '../BetragsFeld';
@@ -79,10 +79,10 @@ function PostenKarte({ titel, posten }: { titel: string; posten: PostenErgebnis 
             ? <p className="mt-1 text-body-s text-ink-600">Ermessensrahmen – konkrete Festsetzung durch die Behörde.</p>
             : null}
       <p className="mt-2 text-xs text-ink-500">
-        {q.erlassName} ({q.erlassNr}), {q.artikel} · Stand {q.stand}
+        {q.erlassName} ({q.erlassNr}), <KantonArtikelTrigger quelle={q} /> · Stand {q.stand}
         {q.verifiziert === 'recherche' ? ' · Erstrecherche' : ''}
         {' · '}
-        <KantonQuelleLink quelle={q} className="underline hover:text-ink-800" />
+        <a href={q.quelleUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink-800">amtliche Quelle ↗</a>
       </p>
       {q.hinweis && <p className="mt-1 text-xs text-ink-500">{q.hinweis}</p>}
     </div>

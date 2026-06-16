@@ -26,9 +26,13 @@ import { NormPopoverOverlay, NormPopoverHuelle } from './vorlagen/ui';
 
 const DEFAULT_CLASS = 'underline hover:text-ink-800';
 
-export function KantonQuelleLink({ quelle, className }: {
+export function KantonQuelleLink({ quelle, className, children }: {
   quelle: { quelleUrl: string; artikel: string; erlassName?: string; erlassNr?: string };
   className?: string;
+  // Optionaler Trigger-Inhalt. Ohne children bleibt der Default «amtliche
+  // Quelle ↗» (byte-identischer Erst-Render wie bisher). Mit children wird die
+  // konkrete Artikel-Angabe selbst zum Popover-Trigger (David 16.6.2026).
+  children?: React.ReactNode;
 }) {
   const triggerRef = useRef<HTMLAnchorElement>(null);
   const [offen, setOffen] = useState(false);
@@ -61,7 +65,7 @@ export function KantonQuelleLink({ quelle, className }: {
         className={className ?? DEFAULT_CLASS}
         onClick={beimKlick}
       >
-        amtliche Quelle ↗
+        {children ?? 'amtliche Quelle ↗'}
       </a>
       {offen && (
         <NormPopoverOverlay onClose={schliessen}>
@@ -71,5 +75,28 @@ export function KantonQuelleLink({ quelle, className }: {
         </NormPopoverOverlay>
       )}
     </>
+  );
+}
+
+// Dezenter Stil für die als Popover-Trigger klickbare Artikel-Angabe.
+const ARTIKEL_TRIGGER_CLASS = 'underline decoration-dotted hover:text-ink-800 cursor-pointer';
+
+// Macht die KONKRETE Artikel-Angabe (z. B. «§ 4 Abs. 1») selbst zum Popover-
+// Trigger (David 16.6.2026). Lässt sich parsePassus(quelle.artikel) NICHT
+// auflösen, bleibt der Artikel-Text unverlinkt (kein toter Trigger) — und auch
+// ohne quelleUrl. So entscheidet diese eine Stelle (§5/§10), wann der Artikel
+// klickbar ist; die Einbaustellen rendern nur noch <KantonArtikelTrigger>.
+export function KantonArtikelTrigger({ quelle }: {
+  quelle: { quelleUrl?: string; artikel: string; erlassName?: string; erlassNr?: string };
+}) {
+  const klickbar = quelle.quelleUrl && parsePassus(quelle.artikel) !== null;
+  if (!klickbar) return <>{quelle.artikel}</>;
+  return (
+    <KantonQuelleLink
+      quelle={quelle as { quelleUrl: string; artikel: string; erlassName?: string; erlassNr?: string }}
+      className={ARTIKEL_TRIGGER_CLASS}
+    >
+      {quelle.artikel}
+    </KantonQuelleLink>
   );
 }
